@@ -2451,7 +2451,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Implementation Science Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; Implementation Science Volume 8 ; 8 >
       au < crawling ; exists ; 2014 ; Implementation Science Volume 9 ; 9 >
-      au < testing ; exists ; 2015 ; Implementation Science Volume 10 ; 10 >
+      au < ready ; exists ; 2015 ; Implementation Science Volume 10 ; 10 >
 
     }
 
@@ -2476,7 +2476,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < finished ; crawling ; 2012 ; Infectious Agents and Cancer Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; Infectious Agents and Cancer Volume 8 ; 8 >
       au < crawling ; exists ; 2014 ; Infectious Agents and Cancer Volume 9 ; 9 >
-      au < testing ; exists ; 2015 ; Infectious Agents and Cancer Volume 10 ; 10 >
+      au < ready ; exists ; 2015 ; Infectious Agents and Cancer Volume 10 ; 10 >
 
     }
 
@@ -2564,7 +2564,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; International Journal for Equity in Health Volume 11 ; 11 >
       au < crawling ; exists ; 2013 ; International Journal for Equity in Health Volume 12 ; 12 >
       au < crawling ; exists ; 2014 ; International Journal for Equity in Health Volume 13 ; 13 >
-      au < testing ; exists ; 2015 ; International Journal for Equity in Health Volume 14 ; 14 >
+      au < ready ; exists ; 2015 ; International Journal for Equity in Health Volume 14 ; 14 >
 
     }
 
@@ -2589,7 +2589,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; International Journal of Behavioral Nutrition and Physical Activity Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; International Journal of Behavioral Nutrition and Physical Activity Volume 10 ; 10 >
       au < crawling ; exists ; 2014 ; International Journal of Behavioral Nutrition and Physical Activity Volume 11 ; 11 >
-      au < testing ; exists ; 2015 ; International Journal of Behavioral Nutrition and Physical Activity Volume 12 ; 12 >
+      au < ready ; exists ; 2015 ; International Journal of Behavioral Nutrition and Physical Activity Volume 12 ; 12 >
 
     }
 
@@ -2640,7 +2640,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; International Journal of Mental Health Systems Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; International Journal of Mental Health Systems Volume 7 ; 7 >
       au < crawling ; exists ; 2014 ; International Journal of Mental Health Systems Volume 8 ; 8 >
-      au < testing ; exists ; 2015 ; International Journal of Mental Health Systems Volume 9 ; 9 >
+      au < ready ; exists ; 2015 ; International Journal of Mental Health Systems Volume 9 ; 9 >
 
     }
 
@@ -2704,7 +2704,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Investigative Genetics Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; Investigative Genetics Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; Investigative Genetics Volume 5 ; 5 >
-      au < testing ; exists ; 2015 ; Investigative Genetics Volume 6 ; 6 >
+      au < ready ; exists ; 2015 ; Investigative Genetics Volume 6 ; 6 >
 
     }
 
@@ -2744,7 +2744,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
         au < crawling ; exists ; 2013 ; Journal of Environmental Health Science & Engineering Volume 11 ; 11 >
         au < crawling ; exists ; 2014 ; Journal of Environmental Health Science & Engineering Volume 12 ; 12 >
-        au < testing ; exists ; 2015 ; Journal of Environmental Health Science & Engineering Volume 13 ; 13 >
+        au < ready ; exists ; 2015 ; Journal of Environmental Health Science & Engineering Volume 13 ; 13 >
     }
 
     {
@@ -2769,7 +2769,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Irish Veterinary Journal Volume 65 ; 65 >
       au < crawling ; exists ; 2013 ; Irish Veterinary Journal Volume 66 ; 66 >
       au < crawling ; exists ; 2014 ; Irish Veterinary Journal Volume 67 ; 67 >
-      au < testing ; exists ; 2015 ; Irish Veterinary Journal Volume 68 ; 68 >
+      au < ready ; exists ; 2015 ; Irish Veterinary Journal Volume 68 ; 68 >
 
     }
 
@@ -2809,8 +2809,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2011 ; Italian Journal of Pediatrics Volume 37 ; 37 >
       au < crawling ; exists ; 2012 ; Italian Journal of Pediatrics Volume 38 ; 38 >
       au < crawling ; exists ; 2013 ; Italian Journal of Pediatrics Volume 39 ; 39 >
-      au < notReady ; exists ; 2014 ; Italian Journal of Pediatrics Volume 40 ; 40 >
-      au < testing ; exists ; 2015 ; Italian Journal of Pediatrics Volume 41 ; 41 >
+      au < manifest ; exists ; 2014 ; Italian Journal of Pediatrics Volume 40 ; 40 >
+      au < ready ; exists ; 2015 ; Italian Journal of Pediatrics Volume 41 ; 41 >
 
     }
 
@@ -2902,7 +2902,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Journal of Biological Engineering Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; Journal of Biological Engineering Volume 7 ; 7 >
       au < crawling ; exists ; 2014 ; Journal of Biological Engineering Volume 8 ; 8 >
-      au < testing ; exists ; 2015 ; Journal of Biological Engineering Volume 9 ; 9 >
+      au < ready ; exists ; 2015 ; Journal of Biological Engineering Volume 9 ; 9 >
 
     }
 
@@ -2918,7 +2918,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2241-5793
 
       au < crawling ; exists ; 2014 ; Journal of Biological Research-Thessaloniki Volume 21 ; 21 >
-      au < testing ; exists ; 2015 ; Journal of Biological Research-Thessaloniki Volume 22 ; 22 >
+      au < ready ; exists ; 2015 ; Journal of Biological Research-Thessaloniki Volume 22 ; 22 >
 
     }
 
@@ -2981,7 +2981,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Journal of Biomedical Science Volume 19 ; 19 >
       au < crawling ; exists ; 2013 ; Journal of Biomedical Science Volume 20 ; 20 >
       au < crawling ; exists ; 2014 ; Journal of Biomedical Science Volume 21 ; 21 >
-      au < testing ; exists ; 2015 ; Journal of Biomedical Science Volume 22 ; 22 >
+      au < ready ; exists ; 2015 ; Journal of Biomedical Science Volume 22 ; 22 >
 
     }
 
@@ -3048,7 +3048,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Journal of Cardiothoracic Surgery Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; Journal of Cardiothoracic Surgery Volume 8 ; 8 >
       au < crawling ; exists ; 2014 ; Journal of Cardiothoracic Surgery Volume 9 ; 9 >
-      au < testing ; exists ; 2015 ; Journal of Cardiothoracic Surgery Volume 10 ; 10 >
+      au < ready ; exists ; 2015 ; Journal of Cardiothoracic Surgery Volume 10 ; 10 >
 
     }
 
@@ -3124,7 +3124,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Journal of Clinical Bioinformatics Volume 2 ; 2 >
       au < crawling ; exists ; 2013 ; Journal of Clinical Bioinformatics Volume 3 ; 3 >
       au < crawling ; exists ; 2014 ; Journal of Clinical Bioinformatics Volume 4 ; 4 >
-      au < testing ; exists ; 2015 ; Journal of Clinical Bioinformatics Volume 5 ; 5 >
+      au < ready ; exists ; 2015 ; Journal of Clinical Bioinformatics Volume 5 ; 5 >
 
     }
 
@@ -3244,7 +3244,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Journal of Hematology & Oncology Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; Journal of Hematology & Oncology Volume 6 ; 6 >
       au < crawling ; exists ; 2014 ; Journal of Hematology & Oncology Volume 7 ; 7 >
-      au < manifest ; exists ; 2015 ; Journal of Hematology & Oncology Volume 8 ; 8 >
+      au < testing ; exists ; 2015 ; Journal of Hematology & Oncology Volume 8 ; 8 >
 
     }
 
@@ -3293,7 +3293,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Journal of Inflammation Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; Journal of Inflammation Volume 10 ; 10 >
       au < crawling ; exists ; 2014 ; Journal of Inflammation Volume 11 ; 11 >
-      au < manifest ; exists ; 2015 ; Journal of Inflammation Volume 12 ; 12 >
+      au < testing ; exists ; 2015 ; Journal of Inflammation Volume 12 ; 12 >
       
     }
 
@@ -3309,7 +3309,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < crawling ; exists ; 2013 ; Journal of Intensive Care Volume 1 ; 1 >
       au < crawling ; exists ; 2014 ; Journal of Intensive Care Volume 2 ; 2 >
-      au < manifest ; exists ; 2015 ; Journal of Intensive Care Volume 3 ; 3 >
+      au < testing ; exists ; 2015 ; Journal of Intensive Care Volume 3 ; 3 >
       
     }
 
@@ -3331,7 +3331,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Journal of Medical Case Reports Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; Journal of Medical Case Reports Volume 7 ; 7 >
       au < crawling ; exists ; 2014 ; Journal of Medical Case Reports Volume 8 ; 8 >
-      au < manifest ; exists ; 2015 ; Journal of Medical Case Reports Volume 9 ; 9 >
+      au < testing ; exists ; 2015 ; Journal of Medical Case Reports Volume 9 ; 9 >
 
     }
 
@@ -3423,7 +3423,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Journal of Negative Results in Biomedicine Volume 11 ; 11 >
       au < crawling ; exists ; 2013 ; Journal of Negative Results in BioMedicine Volume 12 ; 12 >
       au < crawling ; exists ; 2014 ; Journal of Negative Results in BioMedicine Volume 13 ; 13 >
-      au < manifest ; exists ; 2015 ; Journal of Negative Results in BioMedicine Volume 14 ; 14 >
+      au < testing ; exists ; 2015 ; Journal of Negative Results in BioMedicine Volume 14 ; 14 >
 
     }
 
@@ -3442,7 +3442,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Journal of Neurodevelopmental Disorders Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; Journal of Neurodevelopmental Disorders Volume 5 ; 5 >
       au < crawling ; exists ; 2014 ; Journal of Neurodevelopmental Disorders Volume 6 ; 6 >
-      au < manifest ; exists ; 2015 ; Journal of Neurodevelopmental Disorders Volume 7 ; 7 >
+      au < testing ; exists ; 2015 ; Journal of Neurodevelopmental Disorders Volume 7 ; 7 >
 
     }
 
@@ -3467,7 +3467,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Journal of NeuroEngineering and Rehabilitation Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; Journal of NeuroEngineering and Rehabilitation Volume 10 ; 10 >
       au < crawling ; exists ; 2014 ; Journal of NeuroEngineering and Rehabilitation Volume 11 ; 11 >
-      au < manifest ; exists ; 2015 ; Journal of NeuroEngineering and Rehabilitation Volume 12 ; 12 >
+      au < testing ; exists ; 2015 ; Journal of NeuroEngineering and Rehabilitation Volume 12 ; 12 >
 
     }
 
@@ -3492,7 +3492,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Journal of Neuroinflammation Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; Journal of Neuroinflammation Volume 10 ; 10 >
       au < crawling ; exists ; 2014 ; Journal of Neuroinflammation Volume 11 ; 11 >
-      au < manifest ; exists ; 2015 ; Journal of Neuroinflammation Volume 12 ; 12 >
+      au < testing ; exists ; 2015 ; Journal of Neuroinflammation Volume 12 ; 12 >
 
     }
 
