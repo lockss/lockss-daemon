@@ -159,14 +159,16 @@ public class RisMetadataExtractor implements FileMetadataExtractor {
           while(refType == null && (line = bReader.readLine()) != null) {
             if(line.trim().toUpperCase().startsWith("TY") && line.contains(delimiter) && !line.endsWith(delimiter)) {
               value = line.substring(line.indexOf(delimiter) + 1).trim().toUpperCase();
-              if(value.contentEquals("JOUR")) {
-                refType = REFTYPE_JOURNAL;
-              }
-              else if(value.contains("BOOK") || value.contains("CHAP")) {
-                refType = REFTYPE_BOOK;
-              }
-              else {
-                refType = REFTYPE_OTHER;
+              switch (value) {
+                case "JOUR":
+                  refType = REFTYPE_JOURNAL;
+                  break;
+                case "BOOK": case "CHAP": case "EBOOK": case "ECHAP": case "EDBOOK":
+                  refType = REFTYPE_BOOK;
+                  break;
+                default:
+                  refType = REFTYPE_OTHER;
+                  break;
               }
             }
           }
