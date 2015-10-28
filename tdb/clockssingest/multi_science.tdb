@@ -190,9 +190,9 @@
     param[journal_id] = ijai
 
     au < crawling ; exists ; 2009 ; International Journal of Aerospace Innovations Volume 1 ; 1 >
-    au < ready ; exists ; 2010 ; International Journal of Aerospace Innovations Volume 2 ; 2 >
+    au < crawling ; exists ; 2010 ; International Journal of Aerospace Innovations Volume 2 ; 2 >
     au < ready ; exists ; 2011 ; International Journal of Aerospace Innovations Volume 3 ; 3 >
-    au < ready ; exists ; 2012 ; International Journal of Aerospace Innovations Volume 4 ; 4 >
+    au < crawling ; exists ; 2012 ; International Journal of Aerospace Innovations Volume 4 ; 4 >
     au < crawling ; exists ; 2013 ; International Journal of Aerospace Innovations Volume 5 ; 5 >
     au < expected ; exists ; 2014 ; International Journal of Aerospace Innovations Volume 6 ; 6 >
     au < expected ; exists ; 2015 ; International Journal of Aerospace Innovations Volume 7 ; 7 >
@@ -236,7 +236,7 @@
     param[journal_id] = ijemf
 
     au < crawling ; exists ; 2009 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 1 ; 1 >
-    au < ready ; exists ; 2010 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 2 ; 2 >
+    au < crawling ; exists ; 2010 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 2 ; 2 >
     au < crawling ; exists ; 2011-2012 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 3 ; 3 >
 
   }
@@ -252,8 +252,8 @@
     param[journal_id] = ijfc
 
     au < crawling ; exists ; 2009 ; International Journal of Flow Control Volume 1 ; 1 >
-    au < ready ; exists ; 2010 ; International Journal of Flow Control Volume 2 ; 2 >
-    au < ready ; exists ; 2011 ; International Journal of Flow Control Volume 3 ; 3 >
+    au < crawling ; exists ; 2010 ; International Journal of Flow Control Volume 2 ; 2 >
+    au < crawling ; exists ; 2011 ; International Journal of Flow Control Volume 3 ; 3 >
     au < crawling ; exists ; 2012 ; International Journal of Flow Control Volume 4 ; 4 >
     au < crawling ; exists ; 2013 ; International Journal of Flow Control Volume 5 ; 5 >
     au < finished ; crawling ; 2014 ; International Journal of Flow Control Volume 6 ; 6 >
@@ -304,9 +304,9 @@
     param[journal_id] = ijis
 
     au < crawling ; exists ; 2009 ; International Journal of Innovation Science Volume 1 ; 1 >
-    au < ready ; exists ; 2010 ; International Journal of Innovation Science Volume 2 ; 2 >
-    au < ready ; exists ; 2011 ; International Journal of Innovation Science Volume 3 ; 3 >
-    au < ready ; exists ; 2012 ; International Journal of Innovation Science Volume 4 ; 4 >
+    au < crawling ; exists ; 2010 ; International Journal of Innovation Science Volume 2 ; 2 >
+    au < crawling ; exists ; 2011 ; International Journal of Innovation Science Volume 3 ; 3 >
+    au < crawling ; exists ; 2012 ; International Journal of Innovation Science Volume 4 ; 4 >
     au < crawling ; exists ; 2013 ; International Journal of Innovation Science Volume 5 ; 5 >
     au < finished ; crawling ; 2014 ; International Journal of Innovation Science Volume 6 ; 6 >
     au < crawling ; exists ; 2015 ; International Journal of Innovation Science Volume 7 ; 7 >
@@ -343,9 +343,9 @@
 
     param[journal_id] = ijmnst
 
-    au < ready ; exists ; 2010 ; International Journal of Micro-Nano Scale Transport Volume 1 ; 1 >
+    au < crawling ; exists ; 2010 ; International Journal of Micro-Nano Scale Transport Volume 1 ; 1 >
     au < ready ; exists ; 2011 ; International Journal of Micro-Nano Scale Transport Volume 2 ; 2 >
-    au < ready ; exists ; 2012 ; International Journal of Micro-Nano Scale Transport Volume 3 ; 3 >
+    au < crawling ; exists ; 2012 ; International Journal of Micro-Nano Scale Transport Volume 3 ; 3 >
     au < crawling ; exists ; 2013 ; International Journal of Micro-Nano Scale Transport Volume 4 ; 4 >
     au < finished ; crawling ; 2014 ; International Journal of Micro-Nano Scale Transport Volume 5 ; 5 >
     au < expected ; exists ; 2015 ; International Journal of Micro-Nano Scale Transport Volume 6 ; 6 >
@@ -492,8 +492,8 @@
 
     param[journal_id] = jhe
 
-    au < ready ; exists ; 2010 ; Journal of Healthcare Engineering Volume 1 ; 1 >
-    au < ready ; exists ; 2011 ; Journal of Healthcare Engineering Volume 2 ; 2 >
+    au < crawling ; exists ; 2010 ; Journal of Healthcare Engineering Volume 1 ; 1 >
+    au < crawling ; exists ; 2011 ; Journal of Healthcare Engineering Volume 2 ; 2 >
     au < ready ; exists ; 2012 ; Journal of Healthcare Engineering Volume 3 ; 3 >
     au < crawling ; exists ; 2013 ; Journal of Healthcare Engineering Volume 4 ; 4 >
     au < finished ; finished ; 2014 ; Journal of Healthcare Engineering Volume 5 ; 5 >
@@ -512,7 +512,7 @@
     param[journal_id] = jsfe
 
     au < ready ; exists ; 2010 ; Journal of Structural Fire Engineering Volume 1 ; 1 >
-    au < ready ; exists ; 2011 ; Journal of Structural Fire Engineering Volume 2 ; 2 >
+    au < crawling ; exists ; 2011 ; Journal of Structural Fire Engineering Volume 2 ; 2 >
     au < ready ; exists ; 2012 ; Journal of Structural Fire Engineering Volume 3 ; 3 >
     au < crawling ; exists ; 2013 ; Journal of Structural Fire Engineering Volume 4 ; 4 >
     au < finished ; crawling ; 2014 ; Journal of Structural Fire Engineering Volume 5 ; 5 >
@@ -586,7 +586,7 @@
     au < crawling ; exists ; 2008 ; Noise Notes Volume 7 ; 7 >
     au < crawling ; exists ; 2009 ; Noise Notes Volume 8 ; 8 >
     au < crawling ; exists ; 2010 ; Noise Notes Volume 9 ; 9 >
-    au < ready ; exists ; 2011 ; Noise Notes Volume 10 ; 10 >
+    au < crawling ; exists ; 2011 ; Noise Notes Volume 10 ; 10 >
     au < crawling ; exists ; 2012 ; Noise Notes Volume 11 ; 11 >
     au < crawling ; exists ; 2013 ; Noise Notes Volume 12 ; 12 >
     au < finished ; finished ; 2014 ; Noise Notes Volume 13 ; 13 >
