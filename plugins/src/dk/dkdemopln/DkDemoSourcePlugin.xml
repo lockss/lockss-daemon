@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -63,9 +63,9 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://%s.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
-      <string>4,"^%s%s/%s/", base_url, dir_name, journal_id</string>
+      <string>4,"^%s%s/%s", base_url, dir_name, journal_id</string>
       <string>2,"^%s[^?]*\?[CO]=", base_url, dir_name, journal_id</string>
-      <string>1,"^%s%s/%s/%d/", base_url, dir_name, journal_id, year</string>
+      <string>1,"^%s%s/%s/%d($|/)", base_url, dir_name, journal_id, year</string>
     </list>
   </entry>
   <entry>
