@@ -60,8 +60,8 @@
       au < doNotProcess ; exists ; 2008 ; Asia Pacific Family Medicine Volume 7 ; 7 >
       au < doNotProcess ; exists ; 2009 ; Asia Pacific Family Medicine Volume 8 ; 8 >
       au < doNotProcess ; exists ; 2010 ; Asia Pacific Family Medicine Volume 9 ; 9 >
-      au < doNotProcess ; crawling ; 2011 ; Asia Pacific Family Medicine Volume 10 ; 10 >
-      au < doNotProcess ; crawling ; 2012 ; Asia Pacific Family Medicine Volume 11 ; 11 >
+      au < doNotProcess ; exists ; 2011 ; Asia Pacific Family Medicine Volume 10 ; 10 >
+      au < doNotProcess ; exists ; 2012 ; Asia Pacific Family Medicine Volume 11 ; 11 >
       au < doNotProcess ; exists ; 2013 ; Asia Pacific Family Medicine Volume 12 ; 12 >
       au < doNotProcess ; exists ; 2014 ; Asia Pacific Family Medicine Volume 13 ; 13 >
       au < doNotProcess ; exists ; 2015 ; Asia Pacific Family Medicine Volume 14 ; 14 >
@@ -113,13 +113,13 @@
       au < exists ; exists ; 2005 ; Behavioral and Brain Functions Volume 1 ; 1 >
       au < exists ; exists ; 2006 ; Behavioral and Brain Functions Volume 2 ; 2 >
       au < exists ; exists ; 2007 ; Behavioral and Brain Functions Volume 3 ; 3 >
-      au < doNotProcess ; crawling ; 2008 ; Behavioral and Brain Functions Volume 4 ; 4 >
+      au < doNotProcess ; exists ; 2008 ; Behavioral and Brain Functions Volume 4 ; 4 >
       au < doNotProcess ; exists ; 2009 ; Behavioral and Brain Functions Volume 5 ; 5 >
-      au < doNotProcess ; crawling ; 2010 ; Behavioral and Brain Functions Volume 6 ; 6 >
-      au < doNotProcess ; crawling ; 2011 ; Behavioral and Brain Functions Volume 7 ; 7 >
-      au < doNotProcess ; crawling ; 2012 ; Behavioral and Brain Functions Volume 8 ; 8 >
+      au < doNotProcess ; exists ; 2010 ; Behavioral and Brain Functions Volume 6 ; 6 >
+      au < doNotProcess ; exists ; 2011 ; Behavioral and Brain Functions Volume 7 ; 7 >
+      au < doNotProcess ; exists ; 2012 ; Behavioral and Brain Functions Volume 8 ; 8 >
       au < doNotProcess ; exists ; 2013 ; Behavioral and Brain Functions Volume 9 ; 9 >
-      au < doNotProcess ; crawling ; 2014 ; Behavioral and Brain Functions Volume 10 ; 10 >
+      au < doNotProcess ; exists ; 2014 ; Behavioral and Brain Functions Volume 10 ; 10 >
       au < exists ; exists ; 2015 ; Behavioral and Brain Functions Volume 11 ; 11 >
 
     }
@@ -137,7 +137,7 @@
       #journal_id = biomarkerres
 
       au < doNotProcess ; exists ; 2013 ; Biomarker Research Volume 1 ; 1 >
-      au < doNotProcess ; crawling ; 2014 ; Biomarker Research Volume 2 ; 2 >
+      au < doNotProcess ; exists ; 2014 ; Biomarker Research Volume 2 ; 2 >
       au < exists ; exists ; 2015 ; Biomarker Research Volume 3 ; 3 >
 
     }
@@ -169,7 +169,7 @@
       param[journal_issn] = 2052-6687
       #jounral_id = cgejournal
 
-      au < doNotProcess ; crawling ; 2014 ; Canine Genetics and Epidemiology Volume 1 ; 1 >
+      au < doNotProcess ; exists ; 2014 ; Canine Genetics and Epidemiology Volume 1 ; 1 >
       au < exists ; exists ; 2015 ; Canine Genetics and Epidemiology Volume 2 ; 2 >
       
     }
@@ -187,10 +187,10 @@
 
       au < exists ; exists ; 2006 ; Cell Division Volume 1 ; 1 >
       au < exists ; exists ; 2007 ; Cell Division Volume 2 ; 2 >
-      au < doNotProcess ; crawling ; 2008 ; Cell Division Volume 3 ; 3 >
+      au < doNotProcess ; exists ; 2008 ; Cell Division Volume 3 ; 3 >
       au < doNotProcess ; exists ; 2009 ; Cell Division Volume 4 ; 4 >
-      au < doNotProcess ; crawling ; 2010 ; Cell Division Volume 5 ; 5 >
-      au < doNotProcess ; crawling ; 2011 ; Cell Division Volume 6 ; 6 >
+      au < doNotProcess ; exists ; 2010 ; Cell Division Volume 5 ; 5 >
+      au < doNotProcess ; exists ; 2011 ; Cell Division Volume 6 ; 6 >
       au < doNotProcess ; exists ; 2012 ; Cell Division Volume 7 ; 7 >
       au < doNotProcess ; exists ; 2013 ; Cell Division Volume 8 ; 8 >
       au < doNotProcess ; exists ; 2014 ; Cell Division Volume 9 ; 9 >
@@ -414,7 +414,7 @@
       param[journal_issn] = 2055-0391
       #journal_id = janimscitechnol
 
-      au < doNotProcess ; finished ; 2014 ; Journal of Animal Science and Technology Volume 56 ; 56 >
+      au < doNotProcess ; doNotProcess ; 2014 ; Journal of Animal Science and Technology Volume 56 ; 56 >
       au < exists ; exists ; 2015 ; Journal of Animal Science and Technology Volume 57 ; 57 >
 
     }
@@ -527,7 +527,7 @@
 
       au < doNotProcess ; exists ; 2008 ; Journal of Ovarian Research Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2009 ; Journal of Ovarian Research Volume 2 ; 2 >
-      au < doNotProcess ; crawling ; 2010 ; Journal of Ovarian Research Volume 3 ; 3 >
+      au < doNotProcess ; exists ; 2010 ; Journal of Ovarian Research Volume 3 ; 3 >
       au < doNotProcess ; exists ; 2011 ; Journal of Ovarian Research Volume 4 ; 4 >
       au < doNotProcess ; exists ; 2012 ; Journal of Ovarian Research Volume 5 ; 5 >
       au < doNotProcess ; exists ; 2013 ; Journal of Ovarian Research Volume 6 ; 6 >
@@ -555,8 +555,8 @@
       au < exists ; exists ; 2007 ; Molecular Cancer Volume 6 ; 6 >
       au < doNotProcess ; exists ; 2008 ; Molecular Cancer Volume 7 ; 7 >
       au < doNotProcess ; exists ; 2009 ; Molecular Cancer Volume 8 ; 8 >
-      au < doNotProcess ; crawling ; 2010 ; Molecular Cancer Volume 9 ; 9 >
-      au < doNotProcess ; crawling ; 2011 ; Molecular Cancer Volume 10 ; 10 >
+      au < doNotProcess ; exists ; 2010 ; Molecular Cancer Volume 9 ; 9 >
+      au < doNotProcess ; exists ; 2011 ; Molecular Cancer Volume 10 ; 10 >
       au < doNotProcess ; exists ; 2012 ; Molecular Cancer Volume 11 ; 11 >
       au < doNotProcess ; exists ; 2013 ; Molecular Cancer Volume 12 ; 12 >
       au < doNotProcess ; exists ; 2014 ; Molecular Cancer Volume 13 ; 13 >
@@ -581,8 +581,8 @@
       au < exists ; exists ; 2007 ; Particle and Fibre Toxicology Volume 4 ; 4 >
       au < doNotProcess ; exists ; 2008 ; Particle and Fibre Toxicology Volume 5 ; 5 >
       au < doNotProcess ; exists ; 2009 ; Particle and Fibre Toxicology Volume 6 ; 6 >
-      au < doNotProcess ; crawling ; 2010 ; Particle and Fibre Toxicology Volume 7 ; 7 >
-      au < doNotProcess ; crawling ; 2011 ; Particle and Fibre Toxicology Volume 8 ; 8 >
+      au < doNotProcess ; exists ; 2010 ; Particle and Fibre Toxicology Volume 7 ; 7 >
+      au < doNotProcess ; exists ; 2011 ; Particle and Fibre Toxicology Volume 8 ; 8 >
       au < doNotProcess ; exists ; 2012 ; Particle and Fibre Toxicology Volume 9 ; 9 >
       au < doNotProcess ; exists ; 2013 ; Particle and Fibre Toxicology Volume 10 ; 10 >
       au < doNotProcess ; exists ; 2014 ; Particle and Fibre Toxicology Volume 11 ; 11 >
@@ -639,7 +639,7 @@
       au < doNotProcess ; exists ; 2008 ; Substance Abuse Treatment, Prevention, and Policy Volume 3 ; 3 >
       au < doNotProcess ; exists ; 2009 ; Substance Abuse Treatment, Prevention, and Policy Volume 4 ; 4 >
       au < doNotProcess ; exists ; 2010 ; Substance Abuse Treatment, Prevention, and Policy Volume 5 ; 5 >
-      au < doNotProcess ; crawling ; 2011 ; Substance Abuse Treatment, Prevention, and Policy Volume 6 ; 6 >
+      au < doNotProcess ; exists ; 2011 ; Substance Abuse Treatment, Prevention, and Policy Volume 6 ; 6 >
       au < doNotProcess ; exists ; 2012 ; Substance Abuse Treatment, Prevention, and Policy Volume 7 ; 7 >
       au < doNotProcess ; exists ; 2013 ; Substance Abuse Treatment, Prevention, and Policy Volume 8 ; 8 >
       au < doNotProcess ; exists ; 2014 ; Substance Abuse Treatment, Prevention, and Policy Volume 9 ; 9 >
@@ -681,7 +681,7 @@
       au < doNotProcess ; exists ; 2008 ; World Journal of Surgical Oncology Volume 6 ; 6 >
       au < doNotProcess ; exists ; 2009 ; World Journal of Surgical Oncology Volume 7 ; 7 >
       au < doNotProcess ; exists ; 2010 ; World Journal of Surgical Oncology Volume 8 ; 8 >
-      au < doNotProcess ; crawling ; 2011 ; World Journal of Surgical Oncology Volume 9 ; 9 >
+      au < doNotProcess ; exists ; 2011 ; World Journal of Surgical Oncology Volume 9 ; 9 >
       au < doNotProcess ; exists ; 2012 ; World Journal of Surgical Oncology Volume 10 ; 10 >
       au < doNotProcess ; exists ; 2013 ; World Journal of Surgical Oncology Volume 11 ; 11 >
       au < doNotProcess ; exists ; 2014 ; World Journal of Surgical Oncology Volume 12 ; 12 >
