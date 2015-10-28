@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>18</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -43,6 +43,10 @@
   <entry>
     <string>au_start_url</string>
     <string>"%sproducts/ejournals/issues/%s/%s", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%slockss.txt", base_url</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
