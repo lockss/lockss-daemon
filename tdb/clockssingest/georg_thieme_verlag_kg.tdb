@@ -1062,7 +1062,7 @@
    au < doNotProcess ; exists ; 2008 ; 2008 ; Deutsche Zeitschrift für Osteopathie Volume 2008 ; 6 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Deutsche Zeitschrift für Osteopathie Volume 2009 ; 7 >
    au < testing ; exists ; 2010 ; 2010 ; Deutsche Zeitschrift für Osteopathie Volume 2010 ; 8 >
-   au < testing ; exists ; 2011 ; 2011 ; Deutsche Zeitschrift für Osteopathie Volume 2011 ; 9 >
+   au < ready ; exists ; 2011 ; 2011 ; Deutsche Zeitschrift für Osteopathie Volume 2011 ; 9 >
    au < crawling ; exists ; 2012 ; 2012 ; Deutsche Zeitschrift für Osteopathie Volume 2012 ; 10 >
    au < crawling ; exists ; 2013 ; 2013 ; Deutsche Zeitschrift für Osteopathie Volume 2013 ; 11 >
    au < crawling ; exists ; 2014 ; 2014 ; Deutsche Zeitschrift für Osteopathie Volume 2014 ; 12 >
@@ -1085,8 +1085,8 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Endo-Praxis Volume 2007 ; 23 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Endo-Praxis Volume 2008 ; 24 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Endo-Praxis Volume 2009 ; 25 >
-   au < testing ; exists ; 2010 ; 2010 ; Endo-Praxis Volume 2010 ; 26 >
-   au < testing ; exists ; 2011 ; 2011 ; Endo-Praxis Volume 2011 ; 27 >
+   au < ready ; exists ; 2010 ; 2010 ; Endo-Praxis Volume 2010 ; 26 >
+   au < ready ; exists ; 2011 ; 2011 ; Endo-Praxis Volume 2011 ; 27 >
    au < crawling ; exists ; 2012 ; 2012 ; Endo-Praxis Volume 2012 ; 28 >
    au < crawling ; exists ; 2013 ; 2013 ; Endo-Praxis Volume 2013 ; 29 >
    au < crawling ; exists ; 2014 ; 2014 ; Endo-Praxis Volume 2014 ; 30 >
@@ -1191,7 +1191,7 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Endoscopy heute Volume 2007 ; 20 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Endoscopy heute Volume 2008 ; 21 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Endoscopy heute Volume 2009 ; 22 >
-   au < testing ; exists ; 2010 ; 2010 ; Endoscopy heute Volume 2010 ; 23 >
+   au < ready ; exists ; 2010 ; 2010 ; Endoscopy heute Volume 2010 ; 23 >
    au < testing ; exists ; 2011 ; 2011 ; Endoscopy heute Volume 2011 ; 24 >
    au < crawling ; exists ; 2012 ; 2012 ; Endoscopy heute Volume 2012 ; 25 >
    au < crawling ; exists ; 2013 ; 2013 ; Endoscopy heute Volume 2013 ; 26 >
@@ -1245,7 +1245,7 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; Ergopraxis Volume 2009 ; 2 >
    au < testing ; exists ; 2010 ; 2010 ; Ergopraxis Volume 2010 ; 3 >
    au < testing ; exists ; 2011 ; 2011 ; Ergopraxis Volume 2011 ; 4 >
-   au < testing ; exists ; 2012 ; 2012 ; Ergopraxis Volume 2012 ; 5 >
+   au < ready ; exists ; 2012 ; 2012 ; Ergopraxis Volume 2012 ; 5 >
    au < crawling ; exists ; 2013 ; 2013 ; Ergopraxis Volume 2013 ; 6 >
    au < finished ; finished ; 2014 ; 2014 ; Ergopraxis Volume 2014 ; 7 >
    au < crawling ; exists ; 2015 ; 2015 ; Ergopraxis Volume 2015 ; 8 >
@@ -1267,7 +1267,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Ergoscience Volume 2 ; 2 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Ergoscience Volume 3 ; 3 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Ergoscience Volume 4 ; 4 >
-    au < testing ; exists ; 2010 ; 2010 ; Ergoscience Volume 5 ; 5 >
+    au < ready ; exists ; 2010 ; 2010 ; Ergoscience Volume 5 ; 5 >
 
   }
 
@@ -1393,8 +1393,8 @@
    au < testing ; exists ; 2010 ; 2010 ; Evidence-Based Spine-Care Journal Volume 2010 ; 1 >
    au < testing ; exists ; 2011 ; 2011 ; Evidence-Based Spine-Care Journal Volume 2011 ; 2 >
    au < testing ; exists ; 2012 ; 2012 ; Evidence-Based Spine-Care Journal Volume 2012 ; 3 >
-   au < testing ; exists ; 2013 ; 2013 ; Evidence-Based Spine-Care Journal Volume 2013 ; 4 >
-   au < testing ; exists ; 2014 ; 2014 ; Evidence-Based Spine-Care Journal Volume 2014 ; 5 >
+   au < ready ; exists ; 2013 ; 2013 ; Evidence-Based Spine-Care Journal Volume 2013 ; 4 >
+   au < ready ; exists ; 2014 ; 2014 ; Evidence-Based Spine-Care Journal Volume 2014 ; 5 >
    au < expected ; exists ; 2015 ; 2015 ; Evidence-Based Spine-Care Journal Volume 2015 ; 6 >
 
   }
@@ -1437,9 +1437,9 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Experimental and Clinical Endocrinology & Diabetes Volume 2007 ; 115 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Experimental and Clinical Endocrinology & Diabetes Volume 2008 ; 116 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Experimental and Clinical Endocrinology & Diabetes Volume 2009 ; 117 >
-   au < testing ; exists ; 2010 ; 2010 ; Experimental and Clinical Endocrinology & Diabetes Volume 2010 ; 118 >
-   au < testing ; exists ; 2011 ; 2011 ; Experimental and Clinical Endocrinology & Diabetes Volume 2011 ; 119 >
-   au < testing ; exists ; 2012 ; 2012 ; Experimental and Clinical Endocrinology & Diabetes Volume 2012 ; 120 >
+   au < ready ; exists ; 2010 ; 2010 ; Experimental and Clinical Endocrinology & Diabetes Volume 2010 ; 118 >
+   au < ready ; exists ; 2011 ; 2011 ; Experimental and Clinical Endocrinology & Diabetes Volume 2011 ; 119 >
+   au < ready ; exists ; 2012 ; 2012 ; Experimental and Clinical Endocrinology & Diabetes Volume 2012 ; 120 >
    au < crawling ; exists ; 2013 ; 2013 ; Experimental and Clinical Endocrinology & Diabetes Volume 2013 ; 121 >
    au < crawling ; exists ; 2014 ; 2014 ; Experimental and Clinical Endocrinology & Diabetes Volume 2014 ; 122 >
    au < crawling ; exists ; 2015 ; 2015 ; Experimental and Clinical Endocrinology & Diabetes Volume 2015 ; 123 >
@@ -1500,7 +1500,7 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Facial Plastic Surgery Volume 2007 ; 23 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Facial Plastic Surgery Volume 2008 ; 24 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Facial Plastic Surgery Volume 2009 ; 25 >
-   au < testing ; exists ; 2010 ; 2010 ; Facial Plastic Surgery Volume 2010 ; 26 >
+   au < ready ; exists ; 2010 ; 2010 ; Facial Plastic Surgery Volume 2010 ; 26 >
    au < testing ; exists ; 2011 ; 2011 ; Facial Plastic Surgery Volume 2011 ; 27 >
    au < testing ; exists ; 2012 ; 2012 ; Facial Plastic Surgery Volume 2012 ; 28 >
    au < crawling ; exists ; 2013 ; 2013 ; Facial Plastic Surgery Volume 2013 ; 29 >
@@ -1749,7 +1749,7 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; Gesundheitswesen Das Volume 2009 ; 73 >
    au < testing ; exists ; 2010 ; 2010 ; Gesundheitswesen Das Volume 2010 ; 74 >
    au < testing ; exists ; 2011 ; 2011 ; Gesundheitswesen Das Volume 2011 ; 75 >
-   au < testing ; exists ; 2012 ; 2012 ; Gesundheitswesen Das Volume 2012 ; 76 >
+   au < ready ; exists ; 2012 ; 2012 ; Gesundheitswesen Das Volume 2012 ; 76 >
    au < crawling ; exists ; 2013 ; 2013 ; Gesundheitswesen Das Volume 2013 ; 75 >
    au < crawling ; exists ; 2014 ; 2014 ; Gesundheitswesen Das Volume 2014 ; 76 >
    au < crawling ; exists ; 2015 ; 2015 ; Gesundheitswesen Das Volume 2015 ; 77 >
@@ -1768,8 +1768,8 @@
     param[journal_id] = 10.1055/s-00000177
     comment[years] = 2011-current
 
-   au < manifest ; exists ; 2011 ; 2011 ; Global Spine Journal Volume 2011 ; 1 >
-   au < manifest ; exists ; 2012 ; 2012 ; Global Spine Journal Volume 2012 ; 2 >
+   au < testing ; exists ; 2011 ; 2011 ; Global Spine Journal Volume 2011 ; 1 >
+   au < testing ; exists ; 2012 ; 2012 ; Global Spine Journal Volume 2012 ; 2 >
    au < crawling ; exists ; 2013 ; 2013 ; Global Spine Journal Volume 2013 ; 3 >
    au < crawling ; exists ; 2014 ; 2014 ; Global Spine Journal Volume 2014 ; 4 >
    au < crawling ; exists ; 2015 ; 2015 ; Global Spine Journal Volume 2015 ; 5 >
@@ -1798,9 +1798,9 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2007 ; 39 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2008 ; 40 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2009 ; 41 >
-   au < manifest ; exists ; 2010 ; 2010 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2010 ; 42 >
-   au < manifest ; exists ; 2011 ; 2011 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2011 ; 43 >
-   au < manifest ; exists ; 2012 ; 2012 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2012 ; 44 >
+   au < testing ; exists ; 2010 ; 2010 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2010 ; 42 >
+   au < testing ; exists ; 2011 ; 2011 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2011 ; 43 >
+   au < testing ; exists ; 2012 ; 2012 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2012 ; 44 >
    au < crawling ; exists ; 2013 ; 2013 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2013 ; 45 >
    au < crawling ; exists ; 2014 ; 2014 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2014 ; 46 >
    au < crawling ; exists ; 2015 ; 2015 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2015 ; 47 >
@@ -1842,9 +1842,9 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Hebamme Die Volume 2007 ; 20 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Hebamme Die Volume 2008 ; 21 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Hebamme Die Volume 2009 ; 22 >
-   au < manifest ; exists ; 2010 ; 2010 ; Hebamme Die Volume 2010 ; 23 >
-   au < manifest ; exists ; 2011 ; 2011 ; Hebamme Die Volume 2011 ; 24 >
-   au < manifest ; exists ; 2012 ; 2012 ; Hebamme Die Volume 2012 ; 25 >
+   au < testing ; exists ; 2010 ; 2010 ; Hebamme Die Volume 2010 ; 23 >
+   au < testing ; exists ; 2011 ; 2011 ; Hebamme Die Volume 2011 ; 24 >
+   au < testing ; exists ; 2012 ; 2012 ; Hebamme Die Volume 2012 ; 25 >
    au < crawling ; exists ; 2013 ; 2013 ; Hebamme Die Volume 2013 ; 26 >
    au < crawling ; exists ; 2014 ; 2014 ; Hebamme Die Volume 2014 ; 27 >
    au < crawling ; exists ; 2015 ; 2015 ; Hebamme Die Volume 2015 ; 28 >
@@ -1882,9 +1882,9 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Homoeopathic Links Volume 2007 ; 20 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Homoeopathic Links Volume 2008 ; 21 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Homoeopathic Links Volume 2009 ; 22 >
-   au < manifest ; exists ; 2010 ; 2010 ; Homoeopathic Links Volume 2010 ; 23 >
-   au < manifest ; exists ; 2011 ; 2011 ; Homoeopathic Links Volume 2011 ; 24 >
-   au < manifest ; exists ; 2012 ; 2012 ; Homoeopathic Links Volume 2012 ; 25 >
+   au < testing ; exists ; 2010 ; 2010 ; Homoeopathic Links Volume 2010 ; 23 >
+   au < testing ; exists ; 2011 ; 2011 ; Homoeopathic Links Volume 2011 ; 24 >
+   au < testing ; exists ; 2012 ; 2012 ; Homoeopathic Links Volume 2012 ; 25 >
    au < crawling ; exists ; 2013 ; 2013 ; Homoeopathic Links Volume 2013 ; 26 >
    au < crawling ; exists ; 2014 ; 2014 ; Homoeopathic Links Volume 2014 ; 27 >
    au < crawling ; exists ; 2015 ; 2015 ; Homoeopathic Links Volume 2015 ; 28 >
@@ -1944,9 +1944,9 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Hormone and Metabolic Research Volume 2007 ; 39 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Hormone and Metabolic Research Volume 2008 ; 40 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Hormone and Metabolic Research Volume 2009 ; 41 >
-   au < manifest ; exists ; 2010 ; 2010 ; Hormone and Metabolic Research Volume 2010 ; 42 >
-   au < manifest ; exists ; 2011 ; 2011 ; Hormone and Metabolic Research Volume 2011 ; 43 >
-   au < manifest ; exists ; 2012 ; 2012 ; Hormone and Metabolic Research Volume 2012 ; 44 >
+   au < testing ; exists ; 2010 ; 2010 ; Hormone and Metabolic Research Volume 2010 ; 42 >
+   au < testing ; exists ; 2011 ; 2011 ; Hormone and Metabolic Research Volume 2011 ; 43 >
+   au < testing ; exists ; 2012 ; 2012 ; Hormone and Metabolic Research Volume 2012 ; 44 >
    au < crawling ; exists ; 2013 ; 2013 ; Hormone and Metabolic Research Volume 2013 ; 45 >
    au < crawling ; exists ; 2014 ; 2014 ; Hormone and Metabolic Research Volume 2014 ; 46 >
    au < crawling ; exists ; 2015 ; 2015 ; Hormone and Metabolic Research Volume 2015 ; 47 >
@@ -1964,8 +1964,8 @@
     param[journal_id] = 10.1055/s-00000166
     comment[years] = 2011-current
 
-   au < manifest ; exists ; 2011 ; 2011 ; Im OP Volume 2011 ; 1  >
-   au < manifest ; exists ; 2012 ; 2012 ; Im OP Volume 2012 ; 2 >
+   au < testing ; exists ; 2011 ; 2011 ; Im OP Volume 2011 ; 1  >
+   au < testing ; exists ; 2012 ; 2012 ; Im OP Volume 2012 ; 2 >
    au < crawling ; exists ; 2013 ; 2013 ; Im OP Volume 2013 ; 3 >
    au < crawling ; exists ; 2014 ; 2014 ; Im OP Volume 2014 ; 4 >
    au < crawling ; exists ; 2015 ; 2015 ; Im OP Volume 2015 ; 5 >
@@ -2007,9 +2007,9 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2007 ; 39 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2008 ; 40 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2009 ; 41 >
-   au < manifest ; exists ; 2010 ; 2010 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2010 ; 42 >
-   au < manifest ; exists ; 2011 ; 2011 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2011 ; 43 >
-   au < manifest ; exists ; 2012 ; 2012 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2012 ; 44 >
+   au < testing ; exists ; 2010 ; 2010 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2010 ; 42 >
+   au < testing ; exists ; 2011 ; 2011 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2011 ; 43 >
+   au < testing ; exists ; 2012 ; 2012 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2012 ; 44 >
    au < crawling ; exists ; 2013 ; 2013 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2013 ; 45 >
    au < crawling ; exists ; 2014 ; 2014 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2014 ; 46 >
    au < crawling ; exists ; 2015 ; 2015 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2015 ; 47 >
@@ -5668,8 +5668,8 @@
     au < ready ; exists ; 2011 ; 2011 ; Zeitschrift für Sexualforschung Volume 2011 ; 24 >
     au < ready ; exists ; 2012 ; 2012 ; Zeitschrift für Sexualforschung Volume 2012 ; 25 >
     au < ready ; exists ; 2013 ; 2013 ; Zeitschrift für Sexualforschung Volume 2013 ; 26 >
-    au < testing ; exists ; 2014 ; 2014 ; Zeitschrift für Sexualforschung Volume 2014 ; 27 >
-    au < testing ; exists ; 2015 ; 2015 ; Zeitschrift für Sexualforschung Volume 2015 ; 28 >
+    au < ready ; exists ; 2014 ; 2014 ; Zeitschrift für Sexualforschung Volume 2014 ; 27 >
+    au < ready ; exists ; 2015 ; 2015 ; Zeitschrift für Sexualforschung Volume 2015 ; 28 >
 
   }
 
@@ -5695,12 +5695,12 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Zeitschrift für Chirurgie Volume 2007 ; 132 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Zeitschrift für Chirurgie Volume 2008 ; 133 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Zeitschrift für Chirurgie Volume 2009 ; 134 >
-    au < testing ; exists ; 2010 ; 2010 ; Zeitschrift für Chirurgie Volume 2010 ; 135 >
+    au < ready ; exists ; 2010 ; 2010 ; Zeitschrift für Chirurgie Volume 2010 ; 135 >
     au < testing ; exists ; 2011 ; 2011 ; Zeitschrift für Chirurgie Volume 2011 ; 136 >
     au < ready ; exists ; 2012 ; 2012 ; Zeitschrift für Chirurgie Volume 2012 ; 137 >
     au < ready ; exists ; 2013 ; 2013 ; Zeitschrift für Chirurgie Volume 2013 ; 138 >
     au < ready ; exists ; 2014 ; 2014 ; Zeitschrift für Chirurgie Volume 2014 ; 139 >
-    au < testing ; exists ; 2015 ; 2015 ; Zeitschrift für Chirurgie Volume 2015 ; 140 >
+    au < ready ; exists ; 2015 ; 2015 ; Zeitschrift für Chirurgie Volume 2015 ; 140 >
 
   }
 
@@ -5813,8 +5813,8 @@
     au < ready ; exists ; 2010 ; 2010 ; ZWR - Das Deutsche Zahnärzteblatt Volume 2010 ; 119 >
     au < ready ; exists ; 2011 ; 2011 ; ZWR - Das Deutsche Zahnärzteblatt Volume 2011 ; 120 >
     au < ready ; exists ; 2012 ; 2012 ; ZWR - Das Deutsche Zahnärzteblatt Volume 2012 ; 121 >
-    au < testing ; exists ; 2013 ; 2013 ; ZWR - Das Deutsche Zahnärzteblatt Volume 2013 ; 122 >
-    au < testing ; exists ; 2014 ; 2014 ; ZWR - Das Deutsche Zahnärzteblatt Volume 2014 ; 123 >
+    au < ready ; exists ; 2013 ; 2013 ; ZWR - Das Deutsche Zahnärzteblatt Volume 2013 ; 122 >
+    au < ready ; exists ; 2014 ; 2014 ; ZWR - Das Deutsche Zahnärzteblatt Volume 2014 ; 123 >
     au < crawling ; exists ; 2015 ; 2015 ; ZWR - Das Deutsche Zahnärzteblatt Volume 2015 ; 124 >
 
   }
