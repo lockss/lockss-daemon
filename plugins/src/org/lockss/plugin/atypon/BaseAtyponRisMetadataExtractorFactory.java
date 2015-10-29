@@ -47,7 +47,7 @@ import org.lockss.util.Logger;
  *  Y1 usually is the same as DA, but not always, use DA if it's there
  *  DO NOT pick up the "UR" because it often points to dx.doi.org stable URL which 
  *  will not exist in the AU.  We must manually set the access_url
-TY  - JOUR/BOOK/CHAP
+TY  - JOUR/BOOK/CHAP/ECHAP/EBOOK/EDBOOK
 T1  - <article title>
 AU  - <author>
 AU  - <other author>
@@ -130,10 +130,11 @@ implements FileMetadataExtractorFactory {
           ris_type = "BOOK"; //it could be a chapter but until TY is passed through...
         }
       }
-      if ( ("CHAP".equals(ris_type)) || ("BOOK".equals(ris_type)) ) {
+      if ( ris_type.contains("BOOK") || ris_type.contains("CHAP") ) {
+        // could be CHAP, BOOK, EBOOK, ECHAP, or EDBOOK according to RIS spec
       //START TODO1.69 REPLACEMENT BIT -replace the above best guess chunk with this 
       //    if( ((ris_type = am.getRaw("TY"))!= null) && 
-      //    ( ("CHAP".equals(ris_type)) || ("BOOK".equals(ris_type)) )) {
+      //    ( ris_type.contains("BOOK") || ris_type.contains("CHAP")) ) {
       //END TODO1.69 REPLACEMENT BIT
 
         //BOOK in some form
@@ -147,7 +148,7 @@ implements FileMetadataExtractorFactory {
           }
         }
 
-        if ("CHAP".equals(ris_type)) {
+        if (ris_type.contains("CHAP")) {
           // just one chapter - set the article type correctly
           am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKCHAPTER);
           if ((am.get(MetadataField.FIELD_PUBLICATION_TITLE) == null) && (am.getRaw("T2") != null)) {
