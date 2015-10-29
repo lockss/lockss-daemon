@@ -79,8 +79,7 @@ public class GeorgThiemeVerlagHtmlMetadataExtractorFactory implements FileMetada
       //<meta name="citation_journal_title" content="Aktuelle Dermatologie" />
       tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
       //<meta name="citation_publisher" content="..."/> 
-      // FIELD_PUBLISHER value will be replaced (PD-440)
-      tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
+      // TDB publisher value will be used by default for citation_publisher (PD-440)
       //<meta name="citation_language" content="de" />
       tagMap.put("citation_language", MetadataField.FIELD_LANGUAGE);
     }
@@ -90,7 +89,9 @@ public class GeorgThiemeVerlagHtmlMetadataExtractorFactory implements FileMetada
       ArticleMetadata am = new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       am.cook(tagMap);
       // PD-440 hardcode publisher value
-      // am.replace(MetadataField.FIELD_PUBLISHER, "Georg Thieme Verlag KG");
+      if (cu.getArchivalUnit().getTitleConfig() == null) {
+        am.replace(MetadataField.FIELD_PUBLISHER, "Georg Thieme Verlag KG");
+      }
       emitter.emitMetadata(cu, am);
     }
     
