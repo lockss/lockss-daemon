@@ -91,6 +91,8 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tag("noscript"),
     // <div class="ui-dialog ui-widget had id changes in inner div
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ui-widget"),
+    // exclude dryad sections as they appear after the fact
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "-dryad"),
   };
   
   // HTML transform to convert all remaining nodes to plaintext nodes

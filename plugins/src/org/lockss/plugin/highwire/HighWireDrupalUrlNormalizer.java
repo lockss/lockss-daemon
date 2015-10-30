@@ -70,6 +70,7 @@ public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
   protected static final String IJKEY_PARAM = "?ijkey=";
   protected static final String ELTR_PARAM = ".e-letters?";
   protected static final String EXPAND_PARAM = "/expansion?";
+  protected static final String ITOK_PARAM = "?itok=";
   
   
   @Override
@@ -139,7 +140,8 @@ public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
     if (url.contains(RSS_PARAM) ||
         url.contains(IJKEY_PARAM) ||
         url.contains(ELTR_PARAM) || 
-        url.contains(EXPAND_PARAM)) {
+        url.contains(EXPAND_PARAM) ||
+        url.contains(ITOK_PARAM)) {
       url = url.replaceFirst("[?].+$", "");
     }
     
