@@ -117,7 +117,7 @@
       <string>2,"(?:[^?]+([?](sort|tab|form)|[.]index-by-author|most-(cited|read)|featured(_article|-podcasts)|(back-matter|ed-board)[.]pdf)|content/(by/|early/|[^{]+[{]))"</string>
       <string>2,"^https?://(?!elife)%s/content/(?!%s/)[0-9]+/[^/.?]+([.]toc)?$", url_host(base_url), volume_name</string>
       <!-- otherwise, all content from CDN -->
-      <string>1,"^https?://(.+[.]cloudfront[.]net|cdn[.]mathjax[.]org|cdn[^.]*[.]elifesciences[.]org|.+[.]googleapis[.]com|static[^/]*[.]bmj[.]com||.+[.]gstatic[.]com)/."</string>
+      <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn[.]mathjax[.]org|[^.]+\.cloudfront\.net|cdn[^.]*[.]elifesciences[.]org|static[^.]*[.]bmj[.]com)/."</string>
       <!-- no gifs from other volumes (use au_exclude_urls_from_poll_results_pattern if needed)
       <string>2,"^%scontent/(?!([^0-9][^/]+/)?(%s|suppl)/)[^?]*[.]gif", base_url, volume_name</string> -->
       <!-- all fonts, images, resources, css, js, etc. -->
@@ -230,7 +230,7 @@
     <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
          org.lockss.crawler.allowedPluginPermittedHosts -->
     <string>au_permitted_host_pattern</string>
-    <string>.+[.]cloudfront[.]net|cdn[.]mathjax[.]org|cdn[^.]*[.]elifesciences[.]org|.+[.]googleapis[.]com|static[^/]*[.]bmj[.]com|.+[.]gstatic[.]com</string>
+    <string>[^.]+\.(googleapis|gstatic)\.com|cdn[.]mathjax[.]org|[^.]+\.cloudfront\.net|cdn[^.]*[.]elifesciences[.]org|static[^.]*[.]bmj[.]com</string>
   </entry>
   <entry>
     <!-- APS & OUP use cdn -->
