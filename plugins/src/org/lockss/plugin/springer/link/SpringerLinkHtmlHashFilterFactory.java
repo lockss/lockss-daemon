@@ -59,7 +59,7 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
 
           //footer
           HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
-
+          
           //more links to pdf and article
           HtmlNodeFilters.tagWithAttribute("div", "class", "bar-dock"),
 
@@ -87,6 +87,9 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
           HtmlNodeFilters.tagWithAttribute("div", "id", "cboxOverlay"),
           HtmlNodeFilters.tagWithAttribute("div", "id", "gimme-satisfaction"),
           HtmlNodeFilters.tagWithAttribute("div", "class", "crossmark-tooltip"),
+          
+          //CSS links in body
+          HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
                                                  
         };
         

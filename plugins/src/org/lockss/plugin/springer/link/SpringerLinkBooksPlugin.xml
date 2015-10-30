@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -89,7 +89,7 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://(%s|%s|static-content.springer.com)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url), url_host(download_url)</string>
+      <string>1,"^https?://(%s|%s|static-content.springer.com|rd.springer.com)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)?(\?config=[^/]*)$", url_host(base_url), url_host(download_url)</string>
       <string>2,"^%scontent/pdf/(bbm|bfm)", base_url</string>
       <string>1,"^%sdownload/epub/", base_url</string>
       <string>1,"^%s(content|chapter|book|article)/", base_url</string>
@@ -159,7 +159,7 @@
     <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
          org.lockss.crawler.allowedPluginPermittedHosts -->
     <string>au_permitted_host_pattern</string>
-    <string>static-content\.springer\.com</string>
+    <string>static-content\.springer\.com|rd\.springer\.com</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>

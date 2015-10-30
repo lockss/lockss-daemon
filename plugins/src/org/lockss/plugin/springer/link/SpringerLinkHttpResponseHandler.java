@@ -56,6 +56,9 @@ public class SpringerLinkHttpResponseHandler implements CacheResultHandler {
     switch (responseCode) {
       case 404:
         logger.debug3("404");
+        if(url.contains("MediaObjects")) {
+        	return new SpringerLinkRetryDeadLinkException("404 Not Found");
+        }
         return new CacheException.RetryDeadLinkException("404 Not Found");
       case 500:
         logger.debug2("500");
@@ -74,5 +77,19 @@ public class SpringerLinkHttpResponseHandler implements CacheResultHandler {
     logger.warning("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
     throw new UnsupportedOperationException("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
   }
+  
+  class SpringerLinkRetryDeadLinkException extends CacheException.RetryDeadLinkException {
+	  public SpringerLinkRetryDeadLinkException() {
+	      super();
+	  }
 
+	  public SpringerLinkRetryDeadLinkException(String message) {
+	      super(message);
+	  }
+	  
+	  public int getRetryCount() {
+	      return 7;
+	  }
+  }
+  
 }
