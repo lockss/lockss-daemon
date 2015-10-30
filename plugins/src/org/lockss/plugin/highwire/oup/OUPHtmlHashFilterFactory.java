@@ -56,7 +56,7 @@ public class OUPHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFactory {
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "content-header"),
     // do not hash citing and related section, nor keywords, by author, and eletters sections
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(citing|related)-articles?"),
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "-(keywords|by-author|eletters)"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "-(keywords|by-author|eletters|challenge)"),
     HtmlNodeFilters.tagWithAttribute("div", "class", "panel-separator"),
     // OUP author section kept changing formating and spacing
     HtmlNodeFilters.allExceptSubtree(
