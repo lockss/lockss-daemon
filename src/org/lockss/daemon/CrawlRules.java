@@ -180,9 +180,14 @@ public class CrawlRules {
       return false;
     }
 
+    protected String subToString() {
+      return "";
+    }
+
     public String toString() {
       return "[" + StringUtil.shortName(getClass()) + ": " +
-	actionString() + ", '" + regexp.getPattern() + "']";
+	actionString() + ", '" + regexp.getPattern() + "'" +
+	subToString() + "]";
     }
 
     private String actionString() {
@@ -354,6 +359,18 @@ public class CrawlRules {
       }
       return false;
     }
+
+    protected String subToString() {
+      switch (mode) {
+      case LONG:
+	return " In_Num_Range " + minLong + "-" + maxLong;
+      case COMP:
+	return " In_Alpha_Range " + minComp + "-" + maxComp;
+      case COMP_IGN_CASE:
+	return " In_CI_Alpha_Range " + minComp + "-" + maxComp;
+      }
+      return "";
+    }
   }
 
   /**
@@ -436,6 +453,16 @@ public class CrawlRules {
 	return mode.equals(ore.mode) && set.equals(ore.set);
       }
       return false;
+    }
+
+    protected String subToString() {
+      switch (mode) {
+      case IGN_CASE:
+	return " In_CI_Set " + new TreeSet(set);
+      case EQUAL:
+	return " In_Set " + new TreeSet(set);
+      }
+      return "";
     }
   }
 
