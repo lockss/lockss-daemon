@@ -160,6 +160,57 @@ public class TestAlert extends LockssTestCase {
     assertEquals("unknown", a1.getSeverityString());
   }
 
+  public void testIsSimilarTo() {
+    MockPlugin mp1 = new MockPlugin().setPluginId("mp1");
+    MockPlugin mp2 = new MockPlugin().setPluginId("mp2");
+
+    MockArchivalUnit mau1 = new MockArchivalUnit(mp1, "auid1");
+    MockArchivalUnit mau2 = new MockArchivalUnit(mp2, "auid22");
+    MockArchivalUnit mau3 = new MockArchivalUnit(mp1, "auid333");
+
+    Alert fin1 = Alert.auAlert(Alert.CRAWL_FINISHED, mau1);
+    Alert fin2 = Alert.auAlert(Alert.CRAWL_FINISHED, mau2);
+    Alert fin3 = Alert.auAlert(Alert.CRAWL_FINISHED, mau3);
+    Alert fail1 = Alert.auAlert(Alert.CRAWL_FAILED, mau1);
+    Alert fail2 = Alert.auAlert(Alert.CRAWL_FAILED, mau2);
+    Alert fail3 = Alert.auAlert(Alert.CRAWL_FAILED, mau3);
+    Alert other = Alert.auAlert(Alert.CRAWL_EXCLUDED_URL, mau2);
+
+    assertTrue(fin1.isSimilarTo(fin1));
+    assertTrue(fin1.isSimilarTo(fin2));
+    assertTrue(fin1.isSimilarTo(fail1));
+    assertTrue(fin1.isSimilarTo(fail2));
+
+    assertFalse(fin1.isSimilarTo(other));
+    assertTrue(other.isSimilarTo(other));
+
+    assertEquals(fin1.getGroupKey(), fin2.getGroupKey());
+    assertEquals(fin1.getGroupKey(), fail1.getGroupKey());
+    assertEquals(fin1.similarityHash(), fin1.similarityHash());
+    assertEquals(fin1.similarityHash(), fin2.similarityHash());
+    assertEquals(fin1.similarityHash(), fail1.similarityHash());
+    assertEquals(fin1.similarityHash(), fail2.similarityHash());
+
+    ConfigurationUtil.addFromArgs(Alert.PARAM_SPECIAL_GROUPS,
+				  "CrawlFinished,au:foo;CrawlFailed,au:foo");
+
+    assertNotEquals(fin1.getGroupKey(), fin2.getGroupKey());
+    assertEquals(fin1.getGroupKey(), fail1.getGroupKey());
+    assertNotEquals(fin1.getGroupKey(), fail3.getGroupKey());
+    assertEquals(fin1.similarityHash(), fin1.similarityHash());
+    assertNotEquals(fin1.similarityHash(), fin2.similarityHash());
+    assertEquals(fin1.similarityHash(), fail1.similarityHash());
+    assertNotEquals(fin1.similarityHash(), fail2.similarityHash());
+
+    ConfigurationUtil.addFromArgs(Alert.PARAM_SPECIAL_GROUPS,
+				  "CrawlFinished,plugin:bar;CrawlFailed,plugin:bar");
+
+    assertEquals(fin1.getGroupKey(), fin3.getGroupKey());
+    assertEquals(fin1.getGroupKey(), fail3.getGroupKey());
+    assertNotEquals(fin1.similarityHash(), fin2.similarityHash());
+    assertEquals(fin1.similarityHash(), fail3.similarityHash());
+  }
+
   public void testGroupHash() {
     Map map = new org.apache.commons.collections.map.MultiValueMap();
     Alert a1 = new Alert("Name1")

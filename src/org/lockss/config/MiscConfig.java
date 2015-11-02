@@ -64,6 +64,7 @@ public class MiscConfig {
 	  AuHealthMetric.setConfig(config, oldConfig, diffs);
 	  HtmlKbartExporter.setConfig(config, oldConfig, diffs);
 	  CreativeCommonsPermissionChecker.setConfig(config, oldConfig, diffs);
+	  org.lockss.alert.Alert.setConfig(config, oldConfig, diffs);
 	}
       };
   }

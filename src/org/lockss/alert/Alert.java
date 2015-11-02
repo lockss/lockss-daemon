@@ -45,6 +45,18 @@ import org.lockss.plugin.*;
 public class Alert {
   private static final Logger log = Logger.getLogger(Alert.class);
 
+  /** List of comma-separated pairs: <i>AlertName</i>,<i>GroupName</i> ;
+   * alerts with same group are considered similar for purposes of grouping
+   * into a single action (e.g., email).  If <i>GroupName</i> startts with
+   * <tt>AU:</tt> then the alerts are similar only if they have the same
+   * AU.  If <i>GroupName</i> startts with <tt>PLUGIN:</tt> then the alerts
+   * are similar only if they have AUs with the same plugin */
+  public static final String PARAM_SPECIAL_GROUPS =
+    AlertManager.PREFIX + "specialGroups";
+  public static final List DEFAULT_SPECIAL_GROUPS =
+    ListUtil.list("CrawlFinished,CrawlEnd", "CrawlFailed,CrawlEnd");
+
+
   // Attribute names
   public static final String ATTR_NAME = "name";
   public static final String ATTR_DATE = "date";
@@ -55,6 +67,7 @@ public class Alert {
   public static final String ATTR_AUID = "auid";
   public static final String ATTR_AU_NAME = "au_name";
   public static final String ATTR_AU_TITLE = "au_title";
+  public static final String ATTR_PLUGIN_NAME = "plugin_name";
   public static final String ATTR_IS_CONTENT = "is_content";
   public static final String ATTR_IS_CACHE = "is_cache";
   /** If true, prevents delayed notification */
@@ -245,6 +258,7 @@ public class Alert {
     if (au != null) {
       res.setAttribute(ATTR_AUID, au.getAuId());
       res.setAttribute(ATTR_AU_NAME, au.getName());
+      res.setAttribute(ATTR_PLUGIN_NAME, au.getPlugin().getPluginId());
 //     res.setAttribute(ATTR_AU_TITLE, au.getJournalTitle());
     }
     return res;
@@ -392,8 +406,27 @@ public class Alert {
     return new GroupKey(this);
   }
 
+  private String specialGroup() {
+    return specialGroups.get(getName());
+  }
+
   /** Multiple similar alerts may be combined into a single report */
   public boolean isSimilarTo(Alert other) {
+    String group = specialGroup();
+    if (!StringUtil.isNullString(group) &&
+	group.equals(other.specialGroup())) {
+      if (StringUtil.startsWithIgnoreCase(group, "au:") &&
+	  getBool(ATTR_IS_CONTENT)) {
+	return StringUtil.equalStrings((String)getAttribute(ATTR_AUID),
+				       (String)other.getAttribute(ATTR_AUID));
+      }
+      if (StringUtil.startsWithIgnoreCase(group, "plugin:") &&
+	  getBool(ATTR_IS_CONTENT)) {
+	return StringUtil.equalStrings((String)getAttribute(ATTR_PLUGIN_NAME),
+				       (String)other.getAttribute(ATTR_PLUGIN_NAME));
+      }
+      return true;
+    }
     return
       equalAttrs(ATTR_NAME, other) &&
       (getBool(ATTR_IS_CONTENT) ? equalAttrs(ATTR_AUID, other) : true);
@@ -401,11 +434,24 @@ public class Alert {
 
   public int similarityHash() {
     int hash = 'A' << 24 | 'l' << 16 | 'r' << 8 | 't';
-    hash = (hash << 1) | getName().hashCode();
-    if (getBool(ATTR_IS_CONTENT)) {
-      hash = (hash << 1) | getAttribute(ATTR_AUID).hashCode();
+    String group = specialGroup();
+    if (!StringUtil.isNullString(group)) {
+      if (StringUtil.startsWithIgnoreCase(group, "au:") &&
+	  getBool(ATTR_IS_CONTENT)) {
+	hash = (hash << 1) | getAttribute(ATTR_AUID).hashCode();
+      }
+      if (StringUtil.startsWithIgnoreCase(group, "plugin:") &&
+	  getBool(ATTR_IS_CONTENT)) {
+	hash = (hash << 1) | getAttribute(ATTR_PLUGIN_NAME).hashCode();
+      }
+      hash = (hash << 1) | group.hashCode();
     } else {
-      hash = (hash << 1) | 47;
+      hash = (hash << 1) | getName().hashCode();
+      if (getBool(ATTR_IS_CONTENT)) {
+	hash = (hash << 1) | getAttribute(ATTR_AUID).hashCode();
+      } else {
+	hash = (hash << 1) | 47;
+      }
     }
     return hash;
   }
@@ -508,4 +554,49 @@ public class Alert {
 
   }
 
+  private static Map<String,String> specialGroups =
+    installSpecialGroups(DEFAULT_SPECIAL_GROUPS);
+
+  /** Called by org.lockss.config.MiscConfig
+   */
+  public static void setConfig(Configuration config,
+                               Configuration oldConfig,
+                               Configuration.Differences diffs) {
+    if (diffs.contains(PARAM_SPECIAL_GROUPS)) {
+      installSpecialGroups(config.getList(PARAM_SPECIAL_GROUPS,
+					  DEFAULT_SPECIAL_GROUPS));
+    }
+  }
+
+  private static Map<String,String> installSpecialGroups(List<String> pairs)  {
+    if (pairs == null) {
+      log.debug2("Installing empty special groups map");
+      specialGroups = Collections.emptyMap();
+    } else {
+      try {
+	Map<String,String> map = new HashMap<String,String>();
+	for (String pair : pairs) {
+	  int pos = pair.indexOf(',');
+	  if (pos < 0) {
+	    throw new IllegalArgumentException("Marformed Alert_name,Group pair; no comma: "
+						 + pair);
+	  }
+	  String alertName = pair.substring(0, pos);
+	  String group = pair.substring(pos + 1);
+	  if (!StringUtil.isNullString(alertName) &&
+	      !StringUtil.isNullString(group)) {
+	    map.put(alertName, group);
+	  }
+	}
+	specialGroups = map;
+	log.debug("Installing special groups map: " + specialGroups);
+      } catch (IllegalArgumentException e) {
+	log.error("Illegal special groups map, ignoring", e);
+	log.error("Special groups map unchanged, still: " +
+		     specialGroups);
+      }
+    }
+    return specialGroups;
+  }
+  
 }
