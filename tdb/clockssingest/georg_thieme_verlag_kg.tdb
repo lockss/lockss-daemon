@@ -2435,6 +2435,24 @@
   {
 
     title <
+      name = Journal of Reconstructive Microsurgery Open ;
+      issn =  2377-0813 ;
+      eissn =  2377-0821 ;
+      doi =  10.1055/s-00029352
+    >
+  
+
+    param[journal_id] = 10.1055/s-00029352 
+    comment[0] = https://www.thieme-connect.de/products/ejournals/journal/10.1055/s-00029352   Journal of Reconstructive Microsurgery Open
+    comment[1] = First issue online will be available soon.
+
+    au < expected ; exists ; 2015 ; 2015 ; Journal of Reconstructive Microsurgery Open Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
       name = Journal of Wrist Surgery ;
       issn = 2163-3916 ;
       eissn = 2163-3924 ;
@@ -4943,6 +4961,22 @@
    au < crawling ; exists ; 2013 ; 2013 ; team-konkret Volume 2013 ; 9 >
    au < crawling ; exists ; 2014 ; 2014 ; team-konkret Volume 2014 ; 10 >
    au < crawling ; exists ; 2015 ; 2015 ; team-konkret Volume 2015 ; 11 >
+
+  }
+
+  {
+
+    title <
+      name = The Surgery Journal ;
+      issn = 2378-5128 ;
+      eissn = 2378-5136 ;
+      doi = 10.1055/s-00028781
+
+    >
+    param[journal_id] = 10.1055/s-00028781
+    comment[0] = Currently only eFirst is online
+
+    au < expected ; exists ; 2015 ; 2015 ; The Surgery Journal Volume 1 ; 1 >
 
   }
 
