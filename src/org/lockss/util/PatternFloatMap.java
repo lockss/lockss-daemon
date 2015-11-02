@@ -61,7 +61,7 @@ public class PatternFloatMap {
   }
 
   /** Create a PatternFloatMap from a string of the form
-   * <code><i>RE</i>,<i>int</i>[;<i>RE</i>,<i>int</i> ...]</code> */
+   * <code><i>RE</i>,<i>float</i>[;<i>RE</i>,<i>float</i> ...]</code> */
   public PatternFloatMap(String spec)
       throws IllegalArgumentException {
     makePatternMap(StringUtil.breakAt(spec, ";", -1, true, true));
@@ -75,7 +75,7 @@ public class PatternFloatMap {
 	// Find the last occurrence of comma to avoid regexp quoting
 	int pos = pair.lastIndexOf(',');
 	if (pos < 0) {
-	  throw new IllegalArgumentException("Marformed pattern,int pair; no comma: "
+	  throw new IllegalArgumentException("Malformed pattern,float pair; no comma: "
 					     + pair);
 	}
 	String regexp = pair.substring(0, pos);
@@ -124,6 +124,10 @@ public class PatternFloatMap {
     }
     log.debug2("getMatch(" + str + "): default: " + dfault);
     return dfault;
+  }
+
+  public boolean isEmpty() {
+    return patternMap.isEmpty();
   }
 
   public String toString() {

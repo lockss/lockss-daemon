@@ -123,6 +123,10 @@ public class PatternIntMap {
     return dfault;
   }
 
+  public boolean isEmpty() {
+    return patternMap.isEmpty();
+  }
+
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("[pm: ");

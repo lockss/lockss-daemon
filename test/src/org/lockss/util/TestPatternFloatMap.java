@@ -67,6 +67,12 @@ public class TestPatternFloatMap extends LockssTestCase {
     assertEquals("[pm: EMPTY]", ppm.toString());
   }
 
+  public void testIsEmpty() {
+    assertTrue(PatternIntMap.EMPTY.isEmpty());
+    assertTrue(new PatternIntMap("").isEmpty());
+    assertFalse(new PatternIntMap("a.*b,2;ccc,-4").isEmpty());
+  }
+
   public void testIll() {
     try {
       PatternFloatMap ppm1 = new PatternFloatMap("a[)2");
