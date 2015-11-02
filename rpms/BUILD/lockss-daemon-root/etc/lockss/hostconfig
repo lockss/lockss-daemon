@@ -216,6 +216,7 @@ init_one_dir() {
             if [ "X${CONFIG_USER}" != "X${2}" ] ; then
                 chown ${2} "${DIR}"
             fi
+            chmod 750 "${DIR}"
             if check_writable "${DIR}" ${2} ; then
                 return 0
             else
@@ -440,9 +441,9 @@ build_config_file () {
             done
             ask_for_input_shadow "Password for web UI administration (again)" ""
             if [ "X${ANS}" = "X${P1}" ]; then
-                SHA1=`echo -n "${P1}" | ${SHA1SUM}`
-                SHA1=`echo ${SHA1} | sed 's/ .*$//'`
-                LOCKSS_ADMIN_PASSWD="SHA1:${SHA1}"
+                SHA256=`echo -n "${P1}" | ${SHA256SUM}`
+                SHA256=`echo ${SHA256} | sed 's/ .*$//'`
+                LOCKSS_ADMIN_PASSWD="SHA-256:${SHA256}"
             fi
         done
         TMP_CONFIG=/tmp/lockss.dat$$
@@ -565,29 +566,29 @@ SunOS)
     LOCKSS_HOME=/opt/lockss
     PATH=/usr/ucb:/sbin:$PATH
     LOCAL_IPADDR=`ifconfig -a | grep 'inet ' | grep -v 127.0.0.1 | tail -1 | sed 's/.*inet \(.*\) netmask.*/\1/'`
-    export SHA1SUM
-    for A in sha1sum digest
+    export SHA256SUM
+    for A in sha256sum digest
     do
         WHICH=`which $A | sed "s/.*\///"`
         if [ "X${A}" = "X${WHICH}" ]
         then
-            SHA1SUM=$A
+            SHA256SUM=$A
             break
         fi
     done
-    case "X${SHA1SUM}" in
+    case "X${SHA256SUM}" in
     Xdigest)
-        SHA1SUM="digest -a sha1"
+        SHA256SUM="digest -a sha256"
         ;;
     X)
-        echo "Can't find a SHA1 command"
+        echo "Can't find a SHA25656 command"
         exit
         ;;
     esac
     ;;
 Linux)
     LOCKSS_HOME=
-    SHA1SUM=sha1sum
+    SHA256SUM=sha256sum
     LOCAL_IPADDR=`ifconfig eth0 | grep 'inet addr:' | grep -v 127.0.0.1 | tail -1 | sed 's/.*inet addr:\(.*\)  Mask.*/\1/'`
     ;;
 *)
