@@ -1122,9 +1122,18 @@ public class RemoteApi
 	sb.append("Conflict:<br>");
         for (Iterator iter = diffKeys.iterator(); iter.hasNext(); ) {
           String key = (String)iter.next();
-          String foo = "Key: " + key + ", current=" + normOld.get(key) +
-                       ", file=" + normNew.get(key) + "<br>";
-          sb.append(foo);
+	  ConfigParamDescr descr =
+	    (au == null) ? null : au.getPlugin().findAuConfigDescr(key);
+	  String foo;
+	  if (descr != null &&
+	      descr.getType() == ConfigParamDescr.TYPE_USER_PASSWD) {
+	    foo = "Key: " + key + ", current=****:****" +
+	      ", file=****:****" + "<br>";
+	  } else {
+	    foo = "Key: " + key + ", current=" + normOld.get(key) +
+	      ", file=" + normNew.get(key) + "<br>";
+	  }
+	  sb.append(foo);
         }
 	stat.setExplanation(sb.toString());
       }
