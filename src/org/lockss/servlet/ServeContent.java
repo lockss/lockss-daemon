@@ -69,8 +69,23 @@ import org.lockss.util.urlconn.*;
 import org.mortbay.html.*;
 import org.mortbay.http.*;
 
-/** ServeContent servlet displays cached content with links
- *  rewritten.
+/** ServeContent servlet displays cached content with links rewritten.
+ */
+
+/* PathInfo option not fully implemented.
+
+ * Links can be rewritten (i.e., original URLs can be embedded in
+ * ServeContent URLs) in two ways:<ul>
+ * 
+ * <li>http://.../ServeContent?url=<i>url-encoded-original-url</i></li>
+ * <li>http://.../ServeContent/<i>original-url</i></li>
+ * </ul>
+ *
+ * The first is always used when additional arguments (<i>eg</i> auid,
+ * version) must be included.  The second (enabled by setting {@value
+ * PARAM_REWRITE_STYLE} to <tt>PathInfo</tt>) is needed for sites where
+ * rewritten URLs on the page are examined by code on the page (<i>eg</i>
+ * PDF.js, which looks for a "file" query arg in the iframe's URL).
  */
 @SuppressWarnings("serial")
 public class ServeContent extends LockssServlet {
@@ -141,6 +156,28 @@ public class ServeContent extends LockssServlet {
     AlwaysRedirect,
   }
 
+  /** Determines how original URLs are represented in ServeContent URLs.
+   */
+  public static enum RewriteStyle {
+    /** Encode the origianl URL as a query arg in the ServeContent URL */
+    QueryArg,
+    /** Append the origianl URL to the ServeContent URL as extra path info. */
+    PathInfo,
+  }
+
+  /** Determines how original URLs are represented in ServeContent URLs.
+   * Can be set to one of:
+   *  <ul>
+   *   <li><tt>QueryArg</tt>: The origianl URL is encoded as a query arg
+   *   in the ServeContent URL.</li>
+   *   <li><tt>PathInfo</tt>: The origianl URL is appended to the
+   *   ServeContent URL as extra path info.
+   */
+  public static final String PARAM_REWRITE_STYLE =
+      PREFIX + "rewriteStyle";
+  public static final RewriteStyle DEFAULT_REWRITE_STYLE =
+      RewriteStyle.QueryArg;
+
   /** If true, rewritten links will be absolute
    * (http://host:port/ServeContent?url=...).  If false, relative
    * (/ServeContent?url=...). */
@@ -210,6 +247,7 @@ public class ServeContent extends LockssServlet {
   private static MissingFileAction missingFileAction =
       DEFAULT_MISSING_FILE_ACTION;
   private static boolean absoluteLinks = DEFAULT_ABSOLUTE_LINKS;
+  private static RewriteStyle rewriteStyle = DEFAULT_REWRITE_STYLE;
   private static boolean rewriteMementoResponses = DEFAULT_REWRITE_MEMENTO_RESPONSES;
   private static boolean normalizeUrl = DEFAULT_NORMALIZE_URL_ARG;
   private static boolean minimallyEncodeUrl = DEFAULT_MINIMALLY_ENCODE_URLS;
@@ -291,6 +329,9 @@ public class ServeContent extends LockssServlet {
           DEFAULT_INCLUDE_INTERNAL_AUS);
       absoluteLinks = config.getBoolean(PARAM_ABSOLUTE_LINKS,
           DEFAULT_ABSOLUTE_LINKS);
+      rewriteStyle = (RewriteStyle)config.getEnum(RewriteStyle.class,
+						  PARAM_REWRITE_STYLE,
+						  DEFAULT_REWRITE_STYLE);
       normalizeUrl = config.getBoolean(PARAM_NORMALIZE_URL_ARG,
           DEFAULT_NORMALIZE_URL_ARG);
       minimallyEncodeUrl = config.getBoolean(PARAM_MINIMALLY_ENCODE_URLS,
@@ -395,8 +436,20 @@ public class ServeContent extends LockssServlet {
     enabledPluginsOnly =
         !"no".equalsIgnoreCase(getParameter("filterPlugins"));
 
-    url = getParameter("url");
-    String auid = getParameter("auid");
+    String auid = null;
+    String pathInfo = req.getPathInfo();
+
+    if (pathInfo != null && pathInfo.length() >= 1) {
+      String query = req.getQueryString();
+      if (query != null) {
+	url = pathInfo.substring(1) + "?" + query;
+      } else {
+	url = pathInfo.substring(1);
+      }
+    } else {
+      url = getParameter("url");
+      auid = getParameter("auid");
+    }
     versionStr = getParameter("version");
 
     au = explicitAu = null;		// redundant, just making sure
@@ -1302,28 +1355,12 @@ public class ServeContent extends LockssServlet {
       conn.setRequestProperty(HttpFields.__IfModifiedSince, ifModified);
     }
 
-    // If the Referer: is a ServeContent URL then the real referring page
-    // is in the url query arg.
     if (referer != null) {
-      try {
-        URI refUri = new URI(referer);
-        if (refUri.getPath().endsWith(myServletDescr().getPath())) {
-          String rawquery = refUri.getRawQuery();
-          if (log.isDebug3()) log.debug3("rawquery: " + rawquery);
-          if (!StringUtil.isNullString(rawquery))  {
-            Matcher m1 = URL_ARG_PAT.matcher(rawquery);
-            if (m1.find()) {
-              referer = UrlUtil.decodeUrl(m1.group(1));
-            }
-          }
-        }
-      } catch (URISyntaxException e) {
-        log.siteWarning("Can't perse Referer:, ignoring: " + referer);
-      }
-
+      referer = getRealReferer(referer);
       log.debug2("Sending referer: " + referer);
       conn.setRequestProperty(HttpFields.__Referer, referer);
     }
+
     // send address of original requester
     conn.addRequestProperty(HttpFields.__XForwardedFor,
         req.getRemoteAddr());
@@ -1338,6 +1375,38 @@ public class ServeContent extends LockssServlet {
     }
 
     return conn;
+  }
+
+  String getRealReferer(String referer) {
+    // If the Referer: is a ServeContent URL then the real referring page
+    // is in the url query arg.
+    if (referer != null) {
+      try {
+        URI refUri = new URI(referer);
+	String refPath = refUri.getPath();
+	String servletPath = myServletDescr().getPath();
+        if (refPath.endsWith(servletPath)) {
+          String rawquery = refUri.getRawQuery();
+          if (log.isDebug3()) log.debug3("rawquery: " + rawquery);
+          if (!StringUtil.isNullString(rawquery))  {
+            Matcher m1 = URL_ARG_PAT.matcher(rawquery);
+            if (m1.find()) {
+              referer = UrlUtil.decodeUrl(m1.group(1));
+            }
+          }
+        } else if (refPath.startsWith("/" + servletPath + "/")) {
+	  referer = refPath.substring(servletPath.length() + 2);
+          String rawquery = refUri.getRawQuery();
+          if (!StringUtil.isNullString(rawquery))  {
+	    referer = referer + "?" + rawquery;
+	  }
+	}
+      } catch (URISyntaxException e) {
+        log.siteWarning("Can't perse Referer:, ignoring: " + referer);
+      }
+
+    }
+    return referer;
   }
 
   LinkRewriterFactory getLinkRewriterFactory(String mimeType) {
@@ -1380,16 +1449,7 @@ public class ServeContent extends LockssServlet {
                   original,
                   charset,
                   url,
-                  new ServletUtil.LinkTransform() {
-                    public String rewrite(String url) {
-                      if (absoluteLinks) {
-                        return srvAbsURL(myServletDescr(),
-                            "url=" + url);
-                      } else {
-                        return srvURL(myServletDescr(),
-                            "url=" + url);
-                      }
-                    }});
+		  makeLinkTransform());
         } catch (PluginException e) {
           log.error("Can't create link rewriter, not rewriting", e);
         }
@@ -1423,6 +1483,35 @@ public class ServeContent extends LockssServlet {
       IOUtil.safeClose(rewritten);
     }
   }
+
+  ServletUtil.LinkTransform makeLinkTransform() {
+    switch (rewriteStyle) {
+    case QueryArg:
+    default:
+      return new ServletUtil.LinkTransform() {
+	public String rewrite(String url) {
+	  if (absoluteLinks) {
+	    return srvAbsURL(myServletDescr(),
+			     "url=" + url);
+	  } else {
+	    return srvURL(myServletDescr(),
+			  "url=" + url);
+	  }
+	}
+      };
+    case PathInfo:
+      return new ServletUtil.LinkTransform() {
+	public String rewrite(String url) {
+	  if (absoluteLinks) {
+	    return srvAbsURL(myServletDescr()) + "/" + url;
+	  } else {
+	    return srvURL(myServletDescr()) + "/" + url;
+	  }
+	}
+      };
+    }
+  }
+      
 
   private void setContentLength(long length) {
     if (length >= 0) {

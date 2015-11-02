@@ -603,6 +603,12 @@ public abstract class LockssServlet extends HttpServlet
     return srvURL(d, concatParams(params));
   }
 
+  /** Construct servlet absolute URL.
+   */
+  String srvAbsURL(ServletDescr d) {
+    return srvURL(getRequestHost(), d, null);
+  }
+
   /** Construct servlet absolute URL, with params as necessary.
    */
   String srvAbsURL(ServletDescr d, String params) {
