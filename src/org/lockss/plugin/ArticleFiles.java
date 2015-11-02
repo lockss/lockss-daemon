@@ -257,7 +257,7 @@ public class ArticleFiles {
     sb.append("[af: ft=");
     sb.append(getFullTextCu());
     sb.append(" map=");
-    sb.append(roles);
+    sb.append(new TreeMap(roles));
     sb.append("]");
     return sb.toString();
   }
