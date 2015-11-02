@@ -92,7 +92,8 @@ public class FollowLinkCrawler extends BaseCrawler {
   public static final String DEFAULT_CRAWL_END_REPORT_HASH_ALG = "SHA-1";
 
   /** If true, empty files will be refetched independent of depth unless
-   * the plugin declares that empty files shouldn't be reported. */
+   * the plugin declares that empty files shouldn't be reported by mapping
+   * ContentValidationException.EmptyFile to CacheSuccess. */
   public static final String PARAM_REFETCH_EMPTY_FILES =
     PREFIX + "refetchEmptyFiles";
   public static final boolean DEFAULT_REFETCH_EMPTY_FILES = false;
