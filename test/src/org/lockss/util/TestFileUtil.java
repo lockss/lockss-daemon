@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,6 +34,8 @@ package org.lockss.util;
 
 import java.io.*;
 import java.util.*;
+import java.nio.file.*;
+import java.nio.file.attribute.*;
 import org.apache.commons.collections.*;
 import org.lockss.test.*;
 
@@ -309,5 +311,18 @@ public class TestFileUtil extends LockssTestCase {
     assertFalse(f2.exists());
     assertFalse(FileUtil.safeDeleteFile(f2));
   }
+
+  public void testSetOwnerRWX() throws IOException {
+    File dir = getTempDir("setperm");
+    FileUtil.setOwnerRWX(dir);
+    assertEquals("Dir: " + dir,
+		 EnumSet.of(PosixFilePermission.OWNER_READ,
+			    PosixFilePermission.OWNER_WRITE,
+			    PosixFilePermission.OWNER_EXECUTE),
+		 Files.getPosixFilePermissions(dir.toPath()));
+  }
+
+
+
 }
 

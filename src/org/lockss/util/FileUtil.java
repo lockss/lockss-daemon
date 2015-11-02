@@ -31,6 +31,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.io.*;
+import java.nio.file.*;
+import java.nio.file.attribute.*;
 import java.util.*;
 import org.apache.oro.text.regex.*;
 
@@ -196,6 +198,31 @@ public class FileUtil {
       return true;
     } catch (IOException ioe) {
       return false;
+    }
+  }
+
+  private static EnumSet<PosixFilePermission> PERMS_OWNER_RW =
+    EnumSet.of(PosixFilePermission.OWNER_READ,
+	       PosixFilePermission.OWNER_WRITE);
+
+  private static EnumSet<PosixFilePermission> PERMS_OWNER_RWX =
+    EnumSet.of(PosixFilePermission.OWNER_READ,
+	       PosixFilePermission.OWNER_WRITE,
+	       PosixFilePermission.OWNER_EXECUTE);
+
+  public static void setOwnerRW(File file) {
+    try {
+      Files.setPosixFilePermissions(file.toPath(), PERMS_OWNER_RW);
+    } catch (Exception e) {
+      log.warning("setPosixFilePermissions(" + file + ")", e);
+    }
+  }
+
+  public static void setOwnerRWX(File file) {
+    try {
+      Files.setPosixFilePermissions(file.toPath(), PERMS_OWNER_RWX);
+    } catch (Exception e) {
+      log.warning("setPosixFilePermissions(" + file + ")", e);
     }
   }
 
