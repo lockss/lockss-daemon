@@ -100,8 +100,9 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
     return pluginId;
   }
 
-  public void setPluginId(String id) {
+  public MockPlugin setPluginId(String id) {
     pluginId = id;
+    return this;
   }
 
   public String getVersion() {
@@ -119,16 +120,19 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
     return featureVersion.get(feat);
   }
 
-  public void setVersion(String ver) {
+  public MockPlugin setVersion(String ver) {
     pluginVer = ver;
+    return this;
   }
 
-  public void setRequiredDaemonVersion(String ver) {
+  public MockPlugin setRequiredDaemonVersion(String ver) {
     requiredDaemonVersion = ver;
+    return this;
   }
 
-  public void setFeatureVersionMap(Map<Plugin.Feature,String> featureVersion) {
+  public MockPlugin setFeatureVersionMap(Map<Plugin.Feature,String> featureVersion) {
     this.featureVersion = featureVersion;
+    return this;
   }
 
   public String getPluginName() {
@@ -139,8 +143,9 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
     return pubPlatform;
   }
 
-  public void setPublishingPlatform(String pubPlatform) {
+  public MockPlugin setPublishingPlatform(String pubPlatform) {
     this.pubPlatform = pubPlatform;
+    return this;
   }
 
   public ArticleMetadataExtractor
@@ -149,16 +154,18 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
     return metadataExtractor;
   }
 
-  public void setArticleMetadataExtractor(ArticleMetadataExtractor me) {
+  public MockPlugin setArticleMetadataExtractor(ArticleMetadataExtractor me) {
     metadataExtractor = me;
+    return this;
   }
 
   public ArticleIteratorFactory getArticleIteratorFactory() {
     return articleIteratorFactory;
   }
 
-  public void setArticleIteratorFactory(ArticleIteratorFactory aif) {
+  public MockPlugin setArticleIteratorFactory(ArticleIteratorFactory aif) {
     articleIteratorFactory = aif;
+    return this;
   }
 
   /**
@@ -181,8 +188,9 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
     super.setTitleConfigMap(titleConfigMap, auidMap);
   }
 
-  public void setPluginName(String name) {
+  public MockPlugin setPluginName(String name) {
     this.pluginName = name;
+    return this;
   }
 
   /**
@@ -195,9 +203,10 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
     return auConfigDescrs;
   }
 
-  public void setAuConfigDescrs(List descrs) {
+  public MockPlugin setAuConfigDescrs(List descrs) {
     auConfigDescrs = descrs;
     allParamDescrs = null;		// clear cache
+    return this;
   }
 
   public AuParamFunctor getAuParamFunctor() {
@@ -208,8 +217,9 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
     }
   }
 
-  public void setAuParamFunctor(AuParamFunctor fn) {
+  public MockPlugin setAuParamFunctor(AuParamFunctor fn) {
     paramFunctor = fn;
+    return this;
   }
 
   /**
@@ -253,7 +263,8 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
 
   Map<String,RateLimiter> rateLimiterMap = new HashMap<String,RateLimiter>();
 
-  public void setFetchRateLimiter(String contentType, RateLimiter limit) {
+  public MockPlugin setFetchRateLimiter(String contentType, RateLimiter limit) {
     rateLimiterMap.put(contentType, limit);
+    return this;
   }
 }
