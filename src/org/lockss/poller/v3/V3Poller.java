@@ -336,6 +336,13 @@ public class V3Poller extends BasePoll {
   public static final long DEFAULT_TALLY_DURATION_PADDING =
     5 * Constants.MINUTE;
   
+  /** If true, and the plugin has an au_url_poll_result_weight, each URLs
+   * contribution to the total agreement percentage is weighted accoring to
+   * that map. */
+  public static final String PARAM_USE_POLL_RESULT_WEIGHTS =
+    PREFIX + "usePollResultWeights";
+  public static final boolean DEFAULT_USE_POLL_RESULT_WEIGHTS = true;
+
   /**
    * Extra time to allow for vote receipts (and repairs)?
    */
@@ -449,7 +456,7 @@ public class V3Poller extends BasePoll {
 
   /**
    * If requested, log extra information about the number of hashed
-   * versions which were unique.
+   * versions that were unique.
    */
   public static final String PARAM_LOG_UNIQUE_VERSIONS = 
     PREFIX + "logUniqueVersions";
@@ -537,6 +544,7 @@ public class V3Poller extends BasePoll {
   private SampledBlockHasher.FractionalInclusionPolicy inclusionPolicy = null;
   private int maxRepairs = DEFAULT_MAX_REPAIRS;
   private long voteDeadlinePadding = DEFAULT_VOTE_DURATION_PADDING;
+  private boolean usePollResultWeights = DEFAULT_USE_POLL_RESULT_WEIGHTS;
   private long hashBytesBeforeCheckpoint =
     DEFAULT_V3_HASH_BYTES_BEFORE_CHECKPOINT;
 
@@ -663,6 +671,12 @@ public class V3Poller extends BasePoll {
       log.warning("Error building repairFromPeerIfMissingUrlPatterns, disabling",
 		  e);
     }
+    try {
+      pollerState.setUrlResultWeightMap(getAu().makeUrlPollResultWeightMap());
+    } catch (ArchivalUnit.ConfigurationException e) {
+      log.warning("Error building urlResultWeightMap, disabling",
+		  e);
+    }
 
     this.inclusionPolicy = createInclusionPolicy();
 
@@ -716,6 +730,13 @@ public class V3Poller extends BasePoll {
     pollerState.setPollSpec(new PollSpec(cus, Poll.V3_POLL));
     this.inclusionPolicy = createInclusionPolicy();
 
+    try {
+      pollerState.setUrlResultWeightMap(getAu().makeUrlPollResultWeightMap());
+    } catch (ArchivalUnit.ConfigurationException e) {
+      log.warning("Error building urlResultWeightMap, disabling",
+		  e);
+    }
+
     // Restore the peers for this poll.
     try {
       restoreParticipants();
@@ -741,6 +762,8 @@ public class V3Poller extends BasePoll {
 				      DEFAULT_VOTE_DURATION_MULTIPLIER);
     voteDeadlinePadding = c.getTimeInterval(PARAM_VOTE_DURATION_PADDING,
                                             DEFAULT_VOTE_DURATION_PADDING);
+    usePollResultWeights = c.getBoolean(PARAM_USE_POLL_RESULT_WEIGHTS,
+					DEFAULT_USE_POLL_RESULT_WEIGHTS);
     timeBetweenInvitations =
       c.getTimeInterval(PARAM_TIME_BETWEEN_INVITATIONS,
                         DEFAULT_TIME_BETWEEN_INVITATIONS);
@@ -1178,7 +1201,7 @@ public class V3Poller extends BasePoll {
     sb.append("\n\n");
 
     if (!isLocalPoll()) {
-      sb.append(numOf(getTalliedUrls().size(), "URL"));
+      sb.append(numOf(getTalliedUrlCount(), "URL"));
       sb.append(" tallied");
       if (getStatus() == POLLER_STATUS_COMPLETE) {
 	sb.append(", ");
@@ -1248,7 +1271,7 @@ public class V3Poller extends BasePoll {
     sb.append("Poll did not achieve consensus on all files");
     sb.append("\n\n");
 
-    sb.append(numOf(getTalliedUrls().size(), "URL"));
+    sb.append(numOf(getTalliedUrlCount(), "URL"));
     sb.append(" tallied");
     sb.append(", ");
     DisplayConverter dispConverter = new DisplayConverter();
@@ -2582,7 +2605,7 @@ public class V3Poller extends BasePoll {
    */
   public float getPercentAgreement() {
     float agreeingUrls = (float)getAgreedUrls().size();
-    float talliedUrls = (float)getTalliedUrls().size();
+    float talliedUrls = (float)getTalliedUrlCount();
     log.debug2("Agree: " + agreeingUrls + ", tallied: " + talliedUrls);
     float agreement;
     if (talliedUrls > 0)
@@ -2590,6 +2613,15 @@ public class V3Poller extends BasePoll {
     else
       agreement = 0.0f;
     return agreement;
+  }
+
+  public float getWeightedPercentAgreement() {
+    PollerStateBean.TallyStatus ts = pollerState.getTallyStatus();
+    float wAgree = ts.getWeightedAgreedCount();
+    float wTallied = ts.getWeightedTalliedUrlCount();
+    log.debug2("aAgree: " + wAgree + ", wTallied: " + wTallied);
+    float agreement;
+    return wTallied > 0.0 ? wAgree / wTallied : 0.0f;
   }
 
   int eventualStatus = -1;
@@ -3732,6 +3764,10 @@ public class V3Poller extends BasePoll {
     allUrls.addAll(getTooCloseUrls());
     allUrls.addAll(getNoQuorumUrls());
     return allUrls;
+  }
+
+  public int getTalliedUrlCount() {
+    return pollerState.getTallyStatus().getTalliedUrlCount();
   }
 
   public Set getAgreedUrls() {

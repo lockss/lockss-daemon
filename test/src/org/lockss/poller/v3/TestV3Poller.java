@@ -1023,6 +1023,7 @@ public class TestV3Poller extends LockssTestCase {
 
   public void testTallyBlocksSucceedsOnExtraFileEdgeCase() throws Exception {
 
+    testau.setUrlPsllResultMap(new PatternFloatMap(".*foo2.*,0.5"));
     V3Poller v3Poller = makeV3Poller("testing poll key");
     
     PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
@@ -1114,6 +1115,9 @@ public class TestV3Poller extends LockssTestCase {
     // poller has foo2a.
     assertEquals("2/0/1/0/1/0",
 		 v3Poller.theParticipants.get(id3).getVoteCounts().votes());
+
+    assertEquals(0.66667, v3Poller.getPercentAgreement(), 0.001);
+    assertEquals(0.8, v3Poller.getWeightedPercentAgreement(), 0.001);
   }
   
   public void testTallyBlocksSucceedsWithNoVersionVote() throws Exception {
@@ -1225,6 +1229,9 @@ public class TestV3Poller extends LockssTestCase {
 		 v3Poller.theParticipants.get(id3).getVoteCounts().votes());
     assertEquals("1/1/1/1/0/0",
 		 v3Poller.theParticipants.get(id4).getVoteCounts().votes());
+
+    assertEquals(0.66667, v3Poller.getPercentAgreement(), 0.01);
+    assertEquals(0.66667, v3Poller.getWeightedPercentAgreement(), 0.01);
   }
   
   private Collection<String> publisherRepairUrls(V3Poller v3Poller) {

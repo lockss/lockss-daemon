@@ -88,6 +88,8 @@ public class PollerStateBean implements LockssSerializable {
   /* Non-serializable transient fields */
   private transient PollSpec spec;
   private transient CachedUrlSet cus;
+  private transient PatternFloatMap urlResultWeightMap;
+
 
   /** @deprecated
    * Left here only for deserialization compatibility.
@@ -303,6 +305,17 @@ public class PollerStateBean implements LockssSerializable {
     this.voteMargin = voteMargin;
   }
 
+  public void setUrlResultWeightMap(PatternFloatMap map) {
+    urlResultWeightMap = map;
+  }
+
+  public float getUrlResultWeight(String url) {
+    if (urlResultWeightMap == null || urlResultWeightMap.isEmpty()) {
+      return 1.0f;
+    }
+    return urlResultWeightMap.getMatch(url, 1.0f);
+  }
+
   public boolean hashStarted() {
     return hashStarted;
   }
@@ -461,12 +474,17 @@ public class PollerStateBean implements LockssSerializable {
   /**
    * Simple object to hold tally status.
    */
-  public static class TallyStatus implements LockssSerializable {
+  public class TallyStatus implements LockssSerializable {
     private Set agreedUrls;
     private Set disagreedUrls;
     private Set tooCloseUrls;
     private Set noQuorumUrls;
     private Map<String,String> errorUrls;
+    // weighted agree, etc., counts
+    private float wAgreedCount;
+    private float wDisagreedCount;
+    private float wTooCloseCount;
+    private float wNoQuorumCount;
 
     public TallyStatus() {
       agreedUrls = new HashSet();
@@ -479,21 +497,25 @@ public class PollerStateBean implements LockssSerializable {
     public synchronized void addAgreedUrl(String url) {
       removeUrl(url);
       agreedUrls.add(url);
+      wAgreedCount += getUrlResultWeight(url);
     }
 
     public synchronized void addDisagreedUrl(String url) {
       removeUrl(url);
       disagreedUrls.add(url);
+      wDisagreedCount += getUrlResultWeight(url);
     }
 
     public synchronized void addTooCloseUrl(String url) {
       removeUrl(url);
       tooCloseUrls.add(url);
+      wTooCloseCount += getUrlResultWeight(url);
     }
 
     public synchronized void addNoQuorumUrl(String url) {
       removeUrl(url);
       noQuorumUrls.add(url);
+      wNoQuorumCount += getUrlResultWeight(url);
     }
     
     public synchronized void addErrorUrl(String url, Throwable t) {
@@ -502,10 +524,11 @@ public class PollerStateBean implements LockssSerializable {
     }
 
     private synchronized void removeUrl(String url) {
-      agreedUrls.remove(url);
-      disagreedUrls.remove(url);
-      tooCloseUrls.remove(url);
-      noQuorumUrls.remove(url);
+      float weight = getUrlResultWeight(url);
+      if (agreedUrls.remove(url)) wAgreedCount -= weight;
+      if (disagreedUrls.remove(url)) wDisagreedCount -= weight;
+      if (tooCloseUrls.remove(url)) wTooCloseCount -= weight;
+      if (noQuorumUrls.remove(url)) wNoQuorumCount -= weight;
       errorUrls.remove(url);
     }
 
@@ -550,6 +573,54 @@ public class PollerStateBean implements LockssSerializable {
         return new HashMap(errorUrls);
       }
     }
+
+    public int getAgreedUrlCount() {
+      return agreedUrls == null ? 0 : agreedUrls.size();
+    }
+
+    public int getDisgreedUrlCount() {
+      return disagreedUrls == null ? 0 : disagreedUrls.size();
+    }
+
+    public int getTooCloseUrlCount() {
+      return tooCloseUrls == null ? 0 : tooCloseUrls.size();
+    }
+
+    public int getNoQuorumUrlCount() {
+      return noQuorumUrls == null ? 0 : noQuorumUrls.size();
+    }
+
+    public int getErrorUrlCount() {
+      return errorUrls == null ? 0 : errorUrls.size();
+    }
+
+    public int getTalliedUrlCount() {
+      return getAgreedUrlCount() + getDisgreedUrlCount() +
+	getTooCloseUrlCount() + getNoQuorumUrlCount();
+    }
+
+
+    public float getWeightedAgreedCount() {
+      return wAgreedCount;
+    }
+
+    public float getWeightedDisagreedCount() {
+      return wDisagreedCount;
+    }
+
+    public float getWeightedTooCloseCount() {
+      return wTooCloseCount;
+    }
+
+    public float getWeightedNoQuorumCount() {
+      return wNoQuorumCount;
+    }
+
+    public float getWeightedTalliedUrlCount() {
+      return wAgreedCount + wDisagreedCount + wTooCloseCount + wNoQuorumCount;
+    }
+
+
   }
 
   /**
