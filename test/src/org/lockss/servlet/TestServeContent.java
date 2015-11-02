@@ -142,6 +142,26 @@ public class TestServeContent extends LockssServletTestCase {
 		 sc.getMissingFileAction(PubState.Unknown));
   }  
 
+  public void testGetRealReferer() {
+    assertNull("http://pub.host/path/file.html", sc.getRealReferer(null));
+
+    assertEquals("http://pub.host/path/file.html",
+		 sc.getRealReferer("http://localhost:8081/ServeContent?url=" +
+				   "http%3A%2F%2Fpub.host%2Fpath%2Ffile.html"));
+    assertEquals("http://pub.host/path/file.html?arg1=val1&arg2=a%3Db",
+		 sc.getRealReferer("http://localhost:8081/ServeContent?url=" +
+				   "http%3A%2F%2Fpub.host%2Fpath%2Ffile.html%3Farg1%3Dval1%26arg2%3Da%253Db"));
+
+    assertEquals("http://pub.host/path/file2.html",
+		 sc.getRealReferer("http://localhost:8081/ServeContent/" +
+				   "http://pub.host/path/file2.html"));
+    assertEquals("http://pub.host/path/file3.html?arg1=val2&arg3=d%3Df",
+		 sc.getRealReferer("http://localhost:8081/ServeContent/" +
+				   "http://pub.host/path/file3.html?arg1=val2&arg3=d%3Df"));
+
+
+  }
+
   class MyServeContent extends ServeContent {
     boolean isNeverProxy = false;
     protected boolean isNeverProxy() {
@@ -149,6 +169,9 @@ public class TestServeContent extends LockssServletTestCase {
     }
     void setNeverProxy(boolean val) {
       isNeverProxy = val;
+    }
+    protected ServletDescr myServletDescr() {
+      return AdminServletManager.SERVLET_SERVE_CONTENT;
     }
   }
 
