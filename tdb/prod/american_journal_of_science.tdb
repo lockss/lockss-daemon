@@ -16,7 +16,6 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://www.ajsonline.org/
     implicit < status ; year ; name ; param[volume_name] >
-    comment[notReady] = no permission from publisher
 
     au < exists ; 1860 ; American Journal of Science Series 2 Volume 29 (1860) ; s2-29 >
     au < exists ; 1860 ; American Journal of Science Series 2 Volume 30 (1860) ; s2-30 >
@@ -254,6 +253,7 @@
     au < released ; 2012 ; American Journal of Science Volume 312 ; 312 >
     au < manifest ; 2013 ; American Journal of Science Volume 313 ; 313 >
     au < notReady ; 2014 ; American Journal of Science Volume 314 ; 314 >
+    #probe url, so no permission found
     au < manifest ; 2015 ; American Journal of Science Volume 315 ; 315 >
 
   }
