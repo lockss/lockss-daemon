@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,6 +37,8 @@ import org.lockss.account.UserAccount.IllegalPasswordChange;
 
 import junit.framework.TestCase;
 import java.io.*;
+import java.nio.file.*;
+import java.nio.file.attribute.*;
 import java.util.*;
 import java.lang.reflect.*;
 import org.lockss.util.*;
@@ -83,6 +85,16 @@ public class TestAccountManager extends LockssTestCase {
 		 a2.getLastUserPasswordChange());
 
     assertEquals(a1.isEnabled(), a2.isEnabled());
+  }
+
+  public void testAcctDir() throws IOException {
+    File f1 = acctMgr.getAcctDir();
+    assertTrue(f1.exists());
+    assertEquals("File: " + f1,
+		 EnumSet.of(PosixFilePermission.OWNER_READ,
+			    PosixFilePermission.OWNER_WRITE,
+			    PosixFilePermission.OWNER_EXECUTE),
+		 Files.getPosixFilePermissions(f1.toPath()));
   }
 
   public void testGetUserFactory() {
@@ -249,6 +261,10 @@ public class TestAccountManager extends LockssTestCase {
     acctMgr.addUser(acct1);
     File f1 = new File(acctMgr.getAcctDir(), "luser");
     assertTrue(f1.exists());
+    assertEquals("File: " + f1,
+		 EnumSet.of(PosixFilePermission.OWNER_READ,
+			    PosixFilePermission.OWNER_WRITE),
+		 Files.getPosixFilePermissions(f1.toPath()));
     UserAccount acct2 = makeUser("luser!");
     acct2.setPassword(PWD2, true);
     acctMgr.addUser(acct2);

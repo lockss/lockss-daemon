@@ -442,6 +442,7 @@ public class AccountManager
     if (acct.isChanged()) {
       if (log.isDebug2()) log.debug2("Storing account in " + file);
       makeObjectSerializer().serialize(file, acct);
+      FileUtil.setOwnerRW(file);
       acct.notChanged();
       return;
     }
@@ -513,16 +514,21 @@ public class AccountManager
   public File getAcctDir() {
     return new File(configMgr.getCacheConfigDir(), acctRelDir);
   }
-
+  
   File ensureAcctDir() {
     File acctDir = getAcctDir();
-    if ((!acctDir.exists() && !acctDir.mkdir()) ||
-	!acctDir.canWrite()) {
-      throw new IllegalArgumentException("Account data directory " +
-					 acctDir +
-					 " does not exist or cannot be " +
-					 "written to.");
+    if (!acctDir.exists()) {
+      if (!acctDir.mkdir()) {
+	throw new IllegalArgumentException("Account data directory " +
+					   acctDir + " cannot be created.");
+      }
+      FileUtil.setOwnerRWX(acctDir);
     }
+    if (!acctDir.canWrite()) {
+	throw new IllegalArgumentException("Account data directory " +
+					   acctDir + " is not writable.");
+    }
+    
     log.debug2("Account dir: " + acctDir);
     return acctDir;
   }
