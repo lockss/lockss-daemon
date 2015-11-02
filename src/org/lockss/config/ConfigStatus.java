@@ -51,6 +51,8 @@ public class ConfigStatus extends BaseLockssDaemonManager {
   static final String PARAM_MAX_DISPLAY_VAL_LEN = PREFIX + "maxDisplayValLen";
   static final int DEFAULT_MAX_DISPLAY_VAL_LEN = 1000;
 
+  ConfigManager configMgr;
+
   public ConfigStatus() {
   }
 
@@ -58,6 +60,7 @@ public class ConfigStatus extends BaseLockssDaemonManager {
     super.startService();
     StatusService statusServ = getDaemon().getStatusService();
     statusServ.registerStatusAccessor(CONFIG_STATUS_TABLE, new Status());
+    configMgr = getDaemon().getConfigManager();
   }
 
   public void stopService() {
@@ -65,7 +68,7 @@ public class ConfigStatus extends BaseLockssDaemonManager {
     statusServ.unregisterStatusAccessor(CONFIG_STATUS_TABLE);
   }
 
-  static class Status implements StatusAccessor.DebugOnly {
+  class Status implements StatusAccessor.DebugOnly {
 
     private final List colDescs =
       ListUtil.list(new ColumnDescriptor("name", "Name",
@@ -84,6 +87,7 @@ public class ConfigStatus extends BaseLockssDaemonManager {
 
     public void populateTable(StatusTable table) {
       table.setColumnDescriptors(colDescs);
+      table.setSummaryInfo(getSummaryInfo());
       table.setRows(getRows(table.getOptions()));
     }
 
@@ -106,6 +110,26 @@ public class ConfigStatus extends BaseLockssDaemonManager {
       return rows;
     }
     
+    void addSum(List lst, String head, String val) {
+      if (val != null) {
+	lst.add(new StatusTable.SummaryInfo(head,
+					    ColumnDescriptor.TYPE_STRING,
+					    val));
+      }
+    }
+
+    String seplist(Collection c) {
+      return StringUtil.separatedString(c, ", ");
+    }
+
+    private List getSummaryInfo() {
+      List res = new ArrayList();
+      res.add(new StatusTable.SummaryInfo("Last Reload",
+					  ColumnDescriptor.TYPE_DATE,
+					  configMgr.getLastUpdateTime()));
+      return res;
+    }
+
   }
 }
 

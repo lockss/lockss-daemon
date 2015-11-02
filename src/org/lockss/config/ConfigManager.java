@@ -964,7 +964,12 @@ public class ConfigManager implements LockssManager {
   private String sendVersionInfo;
   private long lastSendVersion;
   private long startUpdateTime;
+  private long lastUpdateTime;
   private long startCallbacksTime;
+
+  public long getLastUpdateTime() {
+    return lastUpdateTime;
+  }
 
   public boolean updateConfigOnce(List urls, boolean reload) {
     startUpdateTime = TimeBase.nowMs();
@@ -1001,6 +1006,9 @@ public class ConfigManager implements LockssManager {
     boolean did = installConfig(newConfig, gens);
     long tottime = TimeBase.msSince(startUpdateTime);
     long cbtime = TimeBase.msSince(startCallbacksTime);
+    if (did) {
+      lastUpdateTime = startUpdateTime;
+    }
     if (log.isDebug2() || tottime > Constants.SECOND) {
       if (did) {
 	log.debug("Reload time: "
