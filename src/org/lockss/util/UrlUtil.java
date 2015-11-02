@@ -542,6 +542,15 @@ public class UrlUtil {
     return url2.toString();
   }
 
+  public static List<String> getUrlPrefixes(List<String> urls)
+      throws MalformedURLException{
+    List<String> res = new ArrayList<String>();    
+    for (String s : urls) {
+      res.add(getUrlPrefix(s));
+    }
+    return res;
+  }
+
   /**
    * @param urlStr string representation of a url
    * @return the host portion of the url

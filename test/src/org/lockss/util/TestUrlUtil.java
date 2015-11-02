@@ -600,6 +600,12 @@ public class TestUrlUtil extends LockssTestCase {
     assertSame(root, UrlUtil.getUrlPrefix(root));
   }
 
+  public void testGetUrlPrefixes() throws MalformedURLException{
+    assertEquals(ListUtil.list("http://foo/", "https://bar.bar:23/"),
+		 UrlUtil.getUrlPrefixes(ListUtil.list("http://foo/xys/s",
+						      "https://bar.bar:23/1")));
+  }
+
   public void testGetHost() throws Exception {
     assertEquals("xx.foo.bar", UrlUtil.getHost("http://xx.foo.bar/123"));
     assertEquals("foo", UrlUtil.getHost("http://foo/123"));
