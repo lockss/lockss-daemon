@@ -191,7 +191,7 @@
 
     au < crawling ; exists ; 2009 ; International Journal of Aerospace Innovations Volume 1 ; 1 >
     au < crawling ; exists ; 2010 ; International Journal of Aerospace Innovations Volume 2 ; 2 >
-    au < ready ; exists ; 2011 ; International Journal of Aerospace Innovations Volume 3 ; 3 >
+    au < crawling ; exists ; 2011 ; International Journal of Aerospace Innovations Volume 3 ; 3 >
     au < crawling ; exists ; 2012 ; International Journal of Aerospace Innovations Volume 4 ; 4 >
     au < crawling ; exists ; 2013 ; International Journal of Aerospace Innovations Volume 5 ; 5 >
     au < expected ; exists ; 2014 ; International Journal of Aerospace Innovations Volume 6 ; 6 >
@@ -289,7 +289,7 @@
     param[journal_id] = ijh
 
     au < crawling ; exists ; 2010 ; International Journal of Hypersonics Volume 1 ; 1 >
-    au < ready ; exists ; 2011 ; International Journal of Hypersonics Volume 2 ; 2 >
+    au < crawling ; exists ; 2011 ; International Journal of Hypersonics Volume 2 ; 2 >
 
   }
 
@@ -344,7 +344,7 @@
     param[journal_id] = ijmnst
 
     au < crawling ; exists ; 2010 ; International Journal of Micro-Nano Scale Transport Volume 1 ; 1 >
-    au < ready ; exists ; 2011 ; International Journal of Micro-Nano Scale Transport Volume 2 ; 2 >
+    au < crawling ; exists ; 2011 ; International Journal of Micro-Nano Scale Transport Volume 2 ; 2 >
     au < crawling ; exists ; 2012 ; International Journal of Micro-Nano Scale Transport Volume 3 ; 3 >
     au < crawling ; exists ; 2013 ; International Journal of Micro-Nano Scale Transport Volume 4 ; 4 >
     au < finished ; crawling ; 2014 ; International Journal of Micro-Nano Scale Transport Volume 5 ; 5 >
@@ -494,7 +494,7 @@
 
     au < crawling ; exists ; 2010 ; Journal of Healthcare Engineering Volume 1 ; 1 >
     au < crawling ; exists ; 2011 ; Journal of Healthcare Engineering Volume 2 ; 2 >
-    au < ready ; exists ; 2012 ; Journal of Healthcare Engineering Volume 3 ; 3 >
+    au < crawling ; exists ; 2012 ; Journal of Healthcare Engineering Volume 3 ; 3 >
     au < crawling ; exists ; 2013 ; Journal of Healthcare Engineering Volume 4 ; 4 >
     au < finished ; finished ; 2014 ; Journal of Healthcare Engineering Volume 5 ; 5 >
     au < crawling ; exists ; 2015 ; Journal of Healthcare Engineering Volume 6 ; 6 >
@@ -511,9 +511,9 @@
 
     param[journal_id] = jsfe
 
-    au < ready ; exists ; 2010 ; Journal of Structural Fire Engineering Volume 1 ; 1 >
+    au < crawling ; exists ; 2010 ; Journal of Structural Fire Engineering Volume 1 ; 1 >
     au < crawling ; exists ; 2011 ; Journal of Structural Fire Engineering Volume 2 ; 2 >
-    au < ready ; exists ; 2012 ; Journal of Structural Fire Engineering Volume 3 ; 3 >
+    au < crawling ; exists ; 2012 ; Journal of Structural Fire Engineering Volume 3 ; 3 >
     au < crawling ; exists ; 2013 ; Journal of Structural Fire Engineering Volume 4 ; 4 >
     au < finished ; crawling ; 2014 ; Journal of Structural Fire Engineering Volume 5 ; 5 >
     au < crawling ; exists ; 2015 ; Journal of Structural Fire Engineering Volume 6 ; 6 >
