@@ -298,10 +298,11 @@ public class DefaultUrlCacher implements UrlCacher {
       os.close();
       CacheException vExp = validate(bytes);
       if (vExp != null) {
-	if (vExp instanceof CacheException.WarningOnly) {
-	  infoException = vExp;
-	} else {
+	if (vExp.isAttributeSet(CacheException.ATTRIBUTE_FAIL) ||
+	    vExp.isAttributeSet(CacheException.ATTRIBUTE_FATAL)) {
 	  throw vExp;
+	} else {
+	  infoException = vExp;
 	}
       }
       headers.setProperty(CachedUrl.PROPERTY_NODE_URL, url);
