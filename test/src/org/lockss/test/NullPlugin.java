@@ -520,6 +520,10 @@ public class NullPlugin {
       return null;
     }
 
+    public PatternFloatMap makeUrlPollResultWeightMap() {
+      return null;
+    }
+
     public List<Pattern> makeNonSubstanceUrlPatterns() {
       return null;
     }

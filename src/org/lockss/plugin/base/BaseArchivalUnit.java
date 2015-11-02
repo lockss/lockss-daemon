@@ -458,8 +458,9 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
                          ? aus.getCdnStems() : Collections.EMPTY_LIST);
         ArrayList<String> res = new ArrayList<String>(set.size() +
                                                       cdnStems.size());
+        set.addAll(cdnStems);
+        set.addAll(getAdditionalUrlStems());
         res.addAll(set);
-        res.addAll(cdnStems);
         urlStems = res;
       } catch (MalformedURLException e) {
         log.error("getUrlStems(" + getName() + ")", e);
@@ -472,6 +473,11 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       }
     }
     return urlStems;
+  }
+
+  protected Collection<String> getAdditionalUrlStems()
+      throws MalformedURLException {
+    return Collections.EMPTY_LIST;
   }
 
   /**
@@ -637,6 +643,11 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   public List<Pattern> makeExcludeUrlsFromPollsPatterns()
       throws ArchivalUnit.ConfigurationException {
     return null;
+  }
+
+  public PatternFloatMap makeUrlPollResultWeightMap()
+      throws ArchivalUnit.ConfigurationException {
+    return PatternFloatMap.EMPTY;
   }
 
   public List<Pattern> makeNonSubstanceUrlPatterns()

@@ -182,6 +182,7 @@ public final class PluginWellformednessTests extends LockssTestCase {
     au.getStartUrls();
     au.getPerHostPermissionPath();
     au.makeExcludeUrlsFromPollsPatterns();
+    au.makeUrlPollResultWeightMap();
     au.makeNonSubstanceUrlPatterns();
     au.makeSubstanceUrlPatterns();
     au.makeSubstancePredicate();

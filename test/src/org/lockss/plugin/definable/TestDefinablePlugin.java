@@ -397,6 +397,27 @@ public class TestDefinablePlugin extends LockssTestCase {
     assertFalse(map.containsKey("child_cancel"));
   }
 
+  public void testCorrectParentVersion() throws Exception {
+    ConfigurationUtil.addFromArgs(DefinablePlugin.PARAM_PARENT_VERSION_MISMATCH_ACTION, "Error");
+    String prefix = "org.lockss.plugin.definable.";
+    String extMapName = prefix + "ChildPlugin";
+    definablePlugin.initPlugin(daemon, extMapName);
+    assertEquals(prefix + "ChildPlugin", definablePlugin.getPluginId());
+  }
+
+  public void testWrongParentVersion() throws Exception {
+    ConfigurationUtil.addFromArgs(DefinablePlugin.PARAM_PARENT_VERSION_MISMATCH_ACTION, "Error");
+    String prefix = "org.lockss.plugin.definable.";
+    String extMapName = prefix + "ChildPluginWrongParentVersion";
+    try {
+      definablePlugin.initPlugin(daemon, extMapName);
+      fail("Wrong parent plugin version should throw");
+    } catch (PluginException.ParentVersionMismatch e) {
+      assertMatchesRE("GoodPlugin has version 17 expected 18",
+		      e.getMessage());
+    }
+  }
+
   public void testInheritWithOverride() throws Exception {
     ConfigurationUtil.addFromArgs("org.lockss.daemon.testingMode",
 				  "content-testing");

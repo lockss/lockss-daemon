@@ -39,7 +39,7 @@ import java.net.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.rewriter.*;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.Crawler.CrawlerFacade;
@@ -58,6 +58,18 @@ import org.lockss.plugin.wrapper.*;
  */
 
 public class DefinablePlugin extends BasePlugin {
+
+  enum ParentVersionMismatchAction {Ignore, Warning, Error}
+
+  /** If true, crawl rules in definable plugins are case-independent by
+   * default.  Can override per-plugin with
+   * <code>au_crawlrules_ignore_case</code> */
+  static final String PARAM_PARENT_VERSION_MISMATCH_ACTION =
+    Configuration.PREFIX + "plugin.parentVersionMismatchAction";
+  static final ParentVersionMismatchAction
+    DEFAULT_PARENT_VERSION_MISMATCH_ACTION = ParentVersionMismatchAction.Warning;
+
+
   // configuration map keys
   public static final String KEY_PLUGIN_IDENTIFIER = "plugin_identifier";
   public static final String KEY_PLUGIN_NAME = "plugin_name";
@@ -199,8 +211,15 @@ public class DefinablePlugin extends BasePlugin {
 
   private ExternalizableMap loadMap(String extMapName, ClassLoader loader)
       throws FileNotFoundException {
+    Configuration config = ConfigManager.getCurrentConfig();
+    ParentVersionMismatchAction parentVerAct =
+      (ParentVersionMismatchAction)
+      config.getEnum(ParentVersionMismatchAction.class,
+		     PARAM_PARENT_VERSION_MISMATCH_ACTION,
+		     DEFAULT_PARENT_VERSION_MISMATCH_ACTION);
     String first = null;
     String next = extMapName;
+    String nextParentVer = null;
     List<String> urls = new ArrayList<String>();
     ExternalizableMap res = null;
     while (next != null) {
@@ -223,6 +242,28 @@ public class DefinablePlugin extends BasePlugin {
 	}
 	throw e;
       }
+      if (nextParentVer != null) {
+
+	String parentVer = oneMap.getString(KEY_PLUGIN_VERSION, null);
+	if (!nextParentVer.equals(parentVer)) {
+	  switch (parentVerAct) {
+	  case Ignore:
+	    break;
+	  case Warning:
+	    log.warning("Wrong parent version, expected " + nextParentVer +
+			", was " + parentVer);
+	    break;
+	  case Error:
+	    log.error("Wrong parent version, expected " + nextParentVer +
+		      ", was " + parentVer);
+	    throw new
+	      PluginException.
+	      ParentVersionMismatch("Plugin " + next +
+				    " has version " + parentVer +
+				    " expected " + nextParentVer);
+	  }
+	}
+      }
       urls.add(url.toString());
       // apply overrides one plugin at a time in inheritance chain
       processOverrides(oneMap);
@@ -239,6 +280,7 @@ public class DefinablePlugin extends BasePlugin {
       }
       if (oneMap.containsKey(KEY_PLUGIN_PARENT)) {
 	next = oneMap.getString(KEY_PLUGIN_PARENT);
+	nextParentVer = oneMap.getString(KEY_PLUGIN_PARENT_VERSION, null);
       } else {
 	next = null;
       }
@@ -569,69 +611,88 @@ public class DefinablePlugin extends BasePlugin {
     return str.substring(0, str.length() - suffix.length());
   }
 
+  /** Given a key like "text/html_crawl_filter_factory", returns the MIME
+   * type iff the value is one that should be processed (a String or {@link
+   * org.lockss.util.None}) */
+  String getMimeFromCompoundKey(String key, Object val, String suffix) {
+    if (key.endsWith(suffix) &&
+	(val instanceof org.lockss.util.None ||
+	 val instanceof String)) {
+      return stripSuffix(key, suffix);
+    }
+    return null;
+  }
+
   protected void initMimeMap() throws PluginException.InvalidDefinition {
     for (Iterator iter = definitionMap.entrySet().iterator(); iter.hasNext();){
       Map.Entry ent = (Map.Entry)iter.next();
       String key = (String)ent.getKey();
       Object val = ent.getValue();
-      if (key.endsWith(DefinableArchivalUnit.SUFFIX_LINK_EXTRACTOR_FACTORY)) {
-	String mime =
-	  stripSuffix(key, DefinableArchivalUnit.SUFFIX_LINK_EXTRACTOR_FACTORY);
-	if (val instanceof String) {
+      String mime;
+
+      if ((mime = getMimeFromCompoundKey(key, val, DefinableArchivalUnit.SUFFIX_LINK_EXTRACTOR_FACTORY)) != null) {
+	MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
+	if (val instanceof org.lockss.util.None) {
+	  log.debug2(mime + " no link extractor");
+	  mti.setLinkExtractorFactory(null);
+	} else if (val instanceof String) {
 	  String factName = (String)val;
-	  log.debug(mime + " link extractor: " + factName);
-	  MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
+	  log.debug2(mime + " link extractor: " + factName);
 	  LinkExtractorFactory fact =
 	    (LinkExtractorFactory)newAuxClass(factName,
 					      LinkExtractorFactory.class);
 	  mti.setLinkExtractorFactory(fact);
 	}
-      } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY)) {
+      } else if ((mime = getMimeFromCompoundKey(key, val, DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY)) != null) {
 	// XXX This clause must precede the one for SUFFIX_HASH_FILTER_FACTORY
 	// XXX unless/until that key is changed to not be a terminal substring
 	// XXX of this one
-	String mime = stripSuffix(key,
-				  DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY);
-	if (val instanceof String) {
+	MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
+	if (val instanceof org.lockss.util.None) {
+	  log.debug2(mime + " no crawl filter");
+	  mti.setCrawlFilterFactory(null);
+	} else if (val instanceof String) {
 	  String factName = (String)val;
-	  log.debug(mime + " crawl filter: " + factName);
-	  MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
+	  log.debug2(mime + " crawl filter: " + factName);
 	  FilterFactory fact =
 	    (FilterFactory)newAuxClass(factName, FilterFactory.class);
 	  mti.setCrawlFilterFactory(fact);
 	}
-      } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY)) {
-	String mime = stripSuffix(key,
-				  DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY);
-	if (val instanceof String) {
+      } else if ((mime = getMimeFromCompoundKey(key, val, DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY)) != null) {
+	MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
+	if (val instanceof org.lockss.util.None) {
+	  log.debug2(mime + " no hash filter");
+	  mti.setHashFilterFactory(null);
+	} else if (val instanceof String) {
 	  String factName = (String)val;
-	  log.debug2(mime + " filter: " + factName);
-	  MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
+	  log.debug2(mime + " hash filter: " + factName);
 	  FilterFactory fact =
 	    (FilterFactory)newAuxClass(factName, FilterFactory.class);
 	  mti.setHashFilterFactory(fact);
 	}
-      } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_LINK_REWRITER_FACTORY)) {
-	String mime =
-	  stripSuffix(key, DefinableArchivalUnit.SUFFIX_LINK_REWRITER_FACTORY);
-	String factName = (String)val;
-	log.debug(mime + " link rewriter: " + factName);
+      } else if ((mime = getMimeFromCompoundKey(key, val, DefinableArchivalUnit.SUFFIX_LINK_REWRITER_FACTORY)) != null) {
 	MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
-	LinkRewriterFactory fact =
-	  (LinkRewriterFactory)newAuxClass(factName,
-					   LinkRewriterFactory.class);
-	mti.setLinkRewriterFactory(fact);
-      } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_METADATA_EXTRACTOR_FACTORY_MAP)) {
-	String mime =
-	  stripSuffix(key, DefinableArchivalUnit.SUFFIX_METADATA_EXTRACTOR_FACTORY_MAP);
+	if (val instanceof org.lockss.util.None) {
+	  log.debug2(mime + " no link rewriter");
+	  mti.setLinkRewriterFactory(null);
+	} else if (val instanceof String) {
+	  String factName = (String)val;
+	  log.debug2(mime + " link rewriter: " + factName);
+	  LinkRewriterFactory fact =
+	    (LinkRewriterFactory)newAuxClass(factName,
+					     LinkRewriterFactory.class);
+	  mti.setLinkRewriterFactory(fact);
+	}
+      } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_METADATA_EXTRACTOR_FACTORY_MAP) && ((mime = stripSuffix(key, DefinableArchivalUnit.SUFFIX_METADATA_EXTRACTOR_FACTORY_MAP)) != null)) {
+	// add None processing if/when default md extractors exist
+	MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
 	Map factNameMap = (Map)val;
 	Map factClassMap = new HashMap();
-	MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
 	for (Iterator it = factNameMap.keySet().iterator(); it.hasNext(); ) {
-          String mdTypes = (String)it.next();
+	  String mdTypes = (String)it.next();
 	  String factName = (String)factNameMap.get(mdTypes);
-	  log.debug(mime + " (" + mdTypes + ") metadata extractor: " +
-		    factName);
+	  log.debug2(mime + " (" + mdTypes + ") metadata extractor: " +
+		     factName);
 	  for (String mdType :
 		 (List<String>)StringUtil.breakAt(mdTypes, ";", true)) {
 	    setMdTypeFact(factClassMap, mdType, factName);

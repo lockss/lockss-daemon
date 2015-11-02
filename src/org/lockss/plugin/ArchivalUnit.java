@@ -248,6 +248,14 @@ public interface ArchivalUnit {
       throws ArchivalUnit.ConfigurationException;
 
   /**
+   * Construct the mapping from URL pattern to weight the URL should be
+   * assigned to contribute to the overall poll result agreement.  Values
+   * should be between 0.0 and 1.0
+   */
+  public PatternFloatMap makeUrlPollResultWeightMap()
+      throws ArchivalUnit.ConfigurationException;
+
+  /**
    * Construct a list of Patterns of non-substance URLs.  If all URLs in
    * the AU match one of these patterns the AU is considered to have no
    * substance.

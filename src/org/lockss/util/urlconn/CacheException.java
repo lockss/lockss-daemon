@@ -858,8 +858,9 @@ public class CacheException
     }
   }
 
-  /** Marker class returned from UrlCacher to indicate successful fetch
-   * that should record a warning */
+  /** Record a warning but otherwise proceed normally.  Use only in
+   * contexts where "proceed normally" makes sense, such as
+   * DefaultUrlCacher.validate() */
   public static class WarningOnly
       extends CacheException {
     public WarningOnly() {

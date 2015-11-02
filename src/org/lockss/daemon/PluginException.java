@@ -178,4 +178,25 @@ public class PluginException extends Exception {
     }
   }
 
+  /** Parent version mismatch. */
+  public static class ParentVersionMismatch extends InvalidDefinition {
+    private Throwable causeException;
+
+    public ParentVersionMismatch() {
+      super();
+    }
+
+    public ParentVersionMismatch(String msg) {
+      super(msg);
+    }
+
+    public ParentVersionMismatch(Throwable cause) {
+      super(cause);
+    }
+
+    public ParentVersionMismatch(String msg, Throwable cause) {
+      super(msg, cause);
+    }
+  }
+
 }

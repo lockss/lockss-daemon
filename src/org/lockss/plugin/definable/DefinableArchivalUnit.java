@@ -103,8 +103,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
 
   public static final String KEY_AU_EXCLUDE_URLS_FROM_POLLS_PATTERN =
     "au_exclude_urls_from_polls_pattern";
-  public static final String KEY_AU_EXCLUDE_URLS_FROM_POLL_RESULTS_PATTERN =
-    "au_exclude_urls_from_poll_results_pattern";
+  public static final String KEY_AU_URL_POLL_RESULT_WEIGHT =
+    "au_url_poll_result_weight";
   public static final String KEY_AU_SUBSTANCE_URL_PATTERN =
     "au_substance_url_pattern";
   public static final String KEY_AU_NON_SUBSTANCE_URL_PATTERN =
@@ -122,6 +122,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
     "au_mime_rate_limiter_map";
   public static final String KEY_AU_RATE_LIMITER_INFO =
     "au_rate_limiter_info";
+  public static final String KEY_AU_ADDITIONAL_URL_STEMS =
+    "au_additional_url_stems";
 
 
   /** Suffix for testing override submaps.  Values in a XXX_override map
@@ -176,13 +178,12 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
     printfKeysContext.put(KEY_AU_START_URL, PrintfContext.URL);
     printfKeysContext.put(KEY_AU_PERMISSION_URL, PrintfContext.URL);
     printfKeysContext.put(KEY_AU_START_URL, PrintfContext.URL);
+    printfKeysContext.put(KEY_AU_ADDITIONAL_URL_STEMS, PrintfContext.URL);
 
     printfKeysContext.put(KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN,
 			  PrintfContext.Regexp);
     printfKeysContext.put(KEY_AU_CRAWL_RULES, PrintfContext.Regexp);
     printfKeysContext.put(KEY_AU_EXCLUDE_URLS_FROM_POLLS_PATTERN,
-			  PrintfContext.Regexp);
-    printfKeysContext.put(KEY_AU_EXCLUDE_URLS_FROM_POLL_RESULTS_PATTERN,
 			  PrintfContext.Regexp);
     printfKeysContext.put(KEY_AU_SUBSTANCE_URL_PATTERN, PrintfContext.Regexp);
     printfKeysContext.put(KEY_AU_NON_SUBSTANCE_URL_PATTERN,
@@ -286,6 +287,17 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
     return res;
   }
 
+  @Override
+  protected Collection<String> getAdditionalUrlStems()
+      throws MalformedURLException {
+    List<String> res = convertUrlListList(KEY_AU_ADDITIONAL_URL_STEMS);
+    log.debug2("Setting start urls " + res);
+    if(res == null) {
+      res = Collections.emptyList();
+    }
+    return UrlUtil.getUrlPrefixes(res);
+  }
+
   protected void loadAuConfigDescrs(Configuration config) throws
       ConfigurationException {
     super.loadAuConfigDescrs(config);
@@ -358,11 +370,36 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
 			     RegexpContext.Url);
   }
 
-  public List<Pattern> makeExcludeUrlsFromPollResultsPatterns()
+  public PatternFloatMap makeUrlPollResultWeightMap()
       throws ArchivalUnit.ConfigurationException {
-    return compileRegexpList(KEY_AU_EXCLUDE_URLS_FROM_POLL_RESULTS_PATTERN,
-			     RegexpContext.Url);
+    List<String> resultWeightSpec =
+      getElementList(KEY_AU_URL_POLL_RESULT_WEIGHT, null);
+    if (resultWeightSpec != null) {
+      List<String> lst = new ArrayList<String>();
+      for (String pair : resultWeightSpec) {
+	// Separate printf from priority, process printf, reassemble for
+	// PatternFloatMap
+
+	// Find the last occurrence of comma to avoid regexp quoting
+	int pos = pair.lastIndexOf(',');
+	if (pos < 0) {
+	  throw new IllegalArgumentException("Malformed pattern,flost pair; no comma: "
+					     + pair);
+	}
+	String printf = pair.substring(0, pos);
+	String pri = pair.substring(pos + 1);
+	PrintfConverter.MatchPattern mp =
+	  convertVariableRegexpString(printf, RegexpContext.Url);
+	if (mp.getRegexp() != null) {
+	  lst.add(mp.getRegexp() + "," + pri);
+	}
+      }
+      return new PatternFloatMap(lst);
+    } else {
+      return null;
+    }
   }
+
 
   public List<Pattern> makeNonSubstanceUrlPatterns()
       throws ArchivalUnit.ConfigurationException {

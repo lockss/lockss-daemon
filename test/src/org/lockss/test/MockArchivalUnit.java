@@ -64,6 +64,8 @@ public class MockArchivalUnit implements ArchivalUnit {
   private List<Pattern> substanceUrlPatterns = null;
   private List<Pattern> permittedHostPatterns = null;
   private List<Pattern> repairFromPeerIfMissingUrlPatterns = null;
+  private PatternFloatMap urlPollResultMap = null;
+
   private SubstancePredicate substancePred = null;
   private CrawlWindow window;
   private int refetchDepth = 1;
@@ -196,6 +198,11 @@ public class MockArchivalUnit implements ArchivalUnit {
     return excludeUrlFromPollPatterns;
   }
 
+  public PatternFloatMap makeUrlPollResultWeightMap()
+      throws ArchivalUnit.ConfigurationException {
+    return urlPollResultMap;
+  }
+
   public List<Pattern> makeNonSubstanceUrlPatterns() {
     return nonSubstanceUrlPatterns;
   }
@@ -210,6 +217,10 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public void setExcludeUrlsFromPollsPatterns(List<Pattern> pats) {
     excludeUrlFromPollPatterns = pats;
+  }
+
+  public void setUrlPsllResultMap(PatternFloatMap map) {
+    urlPollResultMap = map;
   }
 
   public void setNonSubstanceUrlPatterns(List<Pattern> pats) {

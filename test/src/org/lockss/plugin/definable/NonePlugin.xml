@@ -1,0 +1,58 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.definable.NonePlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Good Plugin</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Good Plugin AU %s&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <list>
+     <string>&quot;%s&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <org.lockss.util.None/>
+  </entry>
+  <entry>
+    <string>text/css_link_extractor_factory</string>
+    <org.lockss.util.None/>
+  </entry>
+  <entry>
+    <string>text/xml_link_extractor_factory</string>
+    <org.lockss.util.None/>
+  </entry>
+  <entry>
+    <string>text/html_link_rewriter_factory</string>
+    <org.lockss.util.None/>
+  </entry>
+  <entry>
+    <string>text/css_link_rewriter_factory</string>
+    <org.lockss.util.None/>
+  </entry>
+  <entry>
+    <string>text/xml_link_extractor_factory</string>
+    <org.lockss.util.None/>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>

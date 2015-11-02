@@ -778,6 +778,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEmpty(au.getHttpRequestHeaders());
 
     assertNull(au.makeExcludeUrlsFromPollsPatterns());
+    assertNull(au.makeUrlPollResultWeightMap());
     assertNull(au.makeNonSubstanceUrlPatterns());
     assertNull(au.makeSubstanceUrlPatterns());
     assertNull(au.makeSubstancePredicate());
@@ -806,6 +807,22 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertNull(au.getTitleConfig());
 
     assertEmpty(au.getAuFeatureUrls("au_title"));
+  }
+
+  public void testNone() throws Exception {
+    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
+    // Load a plugin definition that sets a bunch of default factories to None
+    Plugin plug = loadPlugin("org.lockss.plugin.definable.NonePlugin");
+    Properties p = new Properties();
+    Configuration auConfig =
+      ConfigurationUtil.fromArgs("base_url", "http://base.foo/base_path/");
+    DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
+    assertNull(au.getLinkExtractor(Constants.MIME_TYPE_HTML));
+    assertNull(au.getLinkExtractor("text/css"));
+    assertNull(au.getLinkExtractor("text/xml"));
+    assertNull(au.getLinkRewriterFactory(Constants.MIME_TYPE_HTML));
+    assertNull(au.getLinkRewriterFactory("text/css"));
+    assertNull(au.getLinkRewriterFactory("text/xml"));
   }
 
   public void testObsolescentPluginFields() throws Exception {
@@ -1062,19 +1079,6 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertIsomorphic(ListUtil.list("vol125\\.unstable",
 				   "http\\:\\/\\/si\\.te\\/path\\//toc"),
 		     RegexpUtil.regexpCollection(cau.makeExcludeUrlsFromPollsPatterns()));
-  }
-
-  public void testMakeExcludeUrlsFromPollResultsPatterns() throws Exception {
-    defMap.putCollection(DefinableArchivalUnit.KEY_AU_EXCLUDE_URLS_FROM_POLL_RESULTS_PATTERN,
-			 ListUtil.list("\"vol%d\\.ancillary\",volume",
-				       "\"%s/toc\",base_url"));
-    additionalAuConfig.putInt("volume", 125);
-    additionalAuConfig.putString("base_url", "http://si.te/path/");
-    setupAu(additionalAuConfig);
-
-    assertIsomorphic(ListUtil.list("vol125\\.ancillary",
-				   "http\\:\\/\\/si\\.te\\/path\\//toc"),
-		     RegexpUtil.regexpCollection(cau.makeExcludeUrlsFromPollResultsPatterns()));
   }
 
   public void testMakeNonSubstanceUrlPatterns() throws Exception {
@@ -1398,7 +1402,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 					   "application/pdf"));
     FileMetadataExtractor ext =
       au.getFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
-    assertTrue(ext instanceof FileMetadataExtractorWrapper);
+    assertClass(FileMetadataExtractorWrapper.class, ext);
     assertTrue(""+WrapperUtil.unwrap(ext),
 	       WrapperUtil.unwrap(ext) instanceof MockFactories.XmlMetaExt);
 
@@ -1422,6 +1426,19 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
       mti.getFileMetadataExtractorFactory("DublinRind");
     assertTrue(""+WrapperUtil.unwrap(mfact3),
 	       WrapperUtil.unwrap(mfact3) instanceof MockFactories.XmlRindMetaExtFact);
+
+    // Compare with testNone()
+    assertClass(GoslingHtmlLinkExtractor.class,
+		au.getLinkExtractor(Constants.MIME_TYPE_HTML));
+    assertClass(RegexpCssLinkExtractor.class,
+		au.getLinkExtractor("text/css"));
+    assertClass(XmlLinkExtractor.class,
+		au.getLinkExtractor("text/xml"));
+    assertClass(NodeFilterHtmlLinkRewriterFactory.class,
+		au.getLinkRewriterFactory(Constants.MIME_TYPE_HTML));
+    assertClass(RegexpCssLinkRewriterFactory.class,
+		au.getLinkRewriterFactory("text/css"));
+    assertNull(au.getLinkRewriterFactory("text/xml"));
 
     CrawlWindow window = au.getCrawlWindow();
     CrawlWindows.Interval intr = (CrawlWindows.Interval)window;
@@ -1481,9 +1498,23 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 				   "http\\:\\/\\/base\\.foo\\/base_path\\/img/"),
 		 RegexpUtil.regexpCollection(au.makeRepairFromPeerIfMissingUrlPatterns()));
 
-    assertEquals(ListUtil.list("http://resolv.er/",
-			       "http://base.foo/"),
-		 au.getUrlStems());
+    assertSameElements(ListUtil.list("http://resolv.er/",
+				     "https://base.foo/",
+				     "http://base.foo/"),
+		       au.getUrlStems());
+
+
+    PatternFloatMap urlPollResults = au.makeUrlPollResultWeightMap();
+    assertNotNull(urlPollResults);
+    assertEquals(.5,
+		 urlPollResults.getMatch("http://base.foo/base_path/foo.css"),
+		 .0001);
+    assertEquals(0.0,
+		 urlPollResults.getMatch("http://base.foo/base_path/foo/rotating_ad/bar"),
+		 .0001);
+    assertEquals(1.0,
+		 urlPollResults.getMatch("http://base.foo/base_path/J47/xyz.html"),
+		 .0001);
   }
 
   public void testFeatureUrls() throws Exception {
