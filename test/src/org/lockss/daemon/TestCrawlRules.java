@@ -185,6 +185,40 @@ public class TestCrawlRules extends LockssTestCase {
     assertFalse(crf1.equals(crr1));
   }
 
+  public void testToString() throws LockssRegexpException {
+    CrawlRule cr1 = new CrawlRules.RE("blahblah.*",
+				      CrawlRules.RE.MATCH_INCLUDE);
+    assertEquals("[CrawlRules$RE: match_incl, 'blahblah.*']",
+		 cr1.toString());
+    CrawlRule crr1 = new CrawlRules.REMatchRange("blahblah.*",
+						 CrawlRules.RE.MATCH_INCLUDE,
+						 2, 7);
+    assertEquals("[CrawlRules$REMatchRange: match_incl, 'blahblah.*' In_Num_Range 2-7]",
+		 crr1.toString());
+    CrawlRule crr2 = new CrawlRules.REMatchRange("(.*)",
+						 CrawlRules.RE.MATCH_INCLUDE,
+						 "aaa", "bbb");
+    assertEquals("[CrawlRules$REMatchRange: match_incl, '(.*)' In_Alpha_Range aaa-bbb]",
+		 crr2.toString());
+    CrawlRule crr3 = new CrawlRules.REMatchRange("(.*)",
+						 true,
+						 CrawlRules.RE.MATCH_INCLUDE,
+						 "aaa", "bbb");
+    assertEquals("[CrawlRules$REMatchRange: match_incl, '(.*)' In_CI_Alpha_Range aaa-bbb]",
+		 crr3.toString());
+    CrawlRule crs1 = new CrawlRules.REMatchSet("blahblah.*",
+					       CrawlRules.RE.MATCH_INCLUDE,
+					       SetUtil.set(2, 4, 7));
+    assertEquals("[CrawlRules$REMatchSet: match_incl, 'blahblah.*' In_Set [2, 4, 7]]",
+		 crs1.toString());
+    CrawlRule crs2 = new CrawlRules.REMatchSet("blahblah.*",
+					       true,
+					       CrawlRules.RE.MATCH_INCLUDE,
+					       SetUtil.set("one", "seven", "two"));
+    assertEquals("[CrawlRules$REMatchSet: match_incl, 'blahblah.*' In_CI_Set [one, seven, two]]",
+		 crs2.toString());
+  }
+
   public void testMatchIncl() throws LockssRegexpException {
     CrawlRule cr = new CrawlRules.RE("blahblah.*",
 				     CrawlRules.RE.MATCH_INCLUDE);
