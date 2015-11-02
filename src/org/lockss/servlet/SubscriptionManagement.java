@@ -518,17 +518,12 @@ public class SubscriptionManagement extends LockssServlet {
    * @return a List<String> with the column headers of the tabbed content.
    */
   private List<String> getTabColumnHeaderNames() {
-    // Lazy loading.
-    if (tabColumnHeaderNames == null) {
-      tabColumnHeaderNames = (List<String>)ListUtil
+    return(List<String>)ListUtil
       .list("Publisher/Publication<br />Overall Subscription",
 	    "Subscribed<br />Publication Ranges&nbsp;"
 		+ addFootnote(rangesFootnote),
 	    "Unsubscribed<br />Publication Ranges&nbsp;"
 		+ addFootnote(rangesFootnote));
-    }
-
-    return tabColumnHeaderNames;
   }
 
   /**
