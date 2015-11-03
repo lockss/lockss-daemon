@@ -30,17 +30,29 @@
         name = Revista Ciência da Madeira ;
         eissn = 2177-6830
       >
-
+      
       comment[publisher] = Universidade Federal de Pelotas
+      {
+      param[base_url] = http://periodicos.ufpel.edu.br/ojs2/
+      param[journal_id] = cienciadamadeira
+
+      au < exists ; 2010 ; 1 ; Revista Ciência da Madeira Volume 1 ; 2010 ; >
+      au < exists ; 2011 ; 2 ; Revista Ciência da Madeira Volume 2 ; 2011 ; >
+      au < exists ; 2012 ; 3 ; Revista Ciência da Madeira Volume 3 ; 2012 ; >
+      au < exists ; 2013 ; 4 ; Revista Ciência da Madeira Volume 4 ; 2013 ; >
+      au < exists ; 2014 ; 5 ; Revista Ciência da Madeira Volume 5 ; 2014 ; >
+      au < exists ; 2015 ; 6 ; Revista Ciência da Madeira Volume 6 ; 2015 ; >
+      }
+      {
       param[base_url] = http://www2.ufpel.tche.br/revistas/
       param[journal_id] = cienciadamadeira
 
-      au < released ; 2010 ; 1 ; Revista Ciência da Madeira Volume 1 ; 2010 ; >
-      au < released ; 2011 ; 2 ; Revista Ciência da Madeira Volume 2 ; 2011 ; >
-      au < released ; 2012 ; 3 ; Revista Ciência da Madeira Volume 3 ; 2012 ; >
-      au < released ; 2013 ; 4 ; Revista Ciência da Madeira Volume 4 ; 2013 ; >
-      au < released ; 2014 ; 5 ; Revista Ciência da Madeira Volume 5 ; 2014 ; >
-
+      au < superseded ; 2010 ; 1 ; Revista Ciência da Madeira Volume 1 [superseded] ; 2010 ; >
+      au < superseded ; 2011 ; 2 ; Revista Ciência da Madeira Volume 2 [superseded] ; 2011 ; >
+      au < superseded ; 2012 ; 3 ; Revista Ciência da Madeira Volume 3 [superseded] ; 2012 ; >
+      au < superseded ; 2013 ; 4 ; Revista Ciência da Madeira Volume 4 [superseded] ; 2013 ; >
+      au < superseded ; 2014 ; 5 ; Revista Ciência da Madeira Volume 5 [superseded] ; 2014 ; >
+      }
   }
 
   {
