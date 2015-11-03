@@ -189,10 +189,10 @@
     param[journal_issn] = 1757-2258
 
     au < doNotProcess ; exists ; 2009 ; International Journal of Aerospace Innovations Volume 1 ; 1 >
-    au < down ; finished ; 2010 ; International Journal of Aerospace Innovations Volume 2 ; 2 >
-    au < down ; finished ; 2011 ; International Journal of Aerospace Innovations Volume 3 ; 3 >
-    au < down ; exists ; 2012 ; International Journal of Aerospace Innovations Volume 4 ; 4 >
-    au < down ; exists ; 2013 ; International Journal of Aerospace Innovations Volume 5 ; 5 >
+    au < superseded ; finished ; 2010 ; International Journal of Aerospace Innovations Volume 2 [superseded] ; 2 >
+    au < superseded ; finished ; 2011 ; International Journal of Aerospace Innovations Volume 3 [superseded] ; 3 >
+    au < superseded ; exists ; 2012 ; International Journal of Aerospace Innovations Volume 4 [superseded] ; 4 >
+    au < superseded ; exists ; 2013 ; International Journal of Aerospace Innovations Volume 5 [superseded] ; 5 >
 
   }
 
@@ -233,8 +233,8 @@
     param[journal_issn] = 1756-8315
 
     au < doNotProcess ; exists ; 2009 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 1 ; 1 >
-    au < down ; finished ; 2010 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 2 ; 2 >
-    au < down ; finished ; 2011-2012 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 3 ; 3 >
+    au < superseded ; down ; 2010 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 2 [superseded] ; 2 >
+    au < superseded ; down ; 2011-2012 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 3 [superseded] ; 3 >
 
   }
 
@@ -249,10 +249,10 @@
     param[journal_issn] = 1756-8250
 
     au < doNotProcess ; exists ; 2009 ; International Journal of Flow Control Volume 1 ; 1 >
-    au < down ; finished ; 2010 ; International Journal of Flow Control Volume 2 ; 2 >
-    au < down ; finished ; 2011 ; International Journal of Flow Control Volume 3 ; 3 >
-    au < down ; exists ; 2012 ; International Journal of Flow Control Volume 4 ; 4 >
-    au < down ; exists ; 2013 ; International Journal of Flow Control Volume 5 ; 5 >
+    au < superseded ; down ; 2010 ; International Journal of Flow Control Volume 2 [superseded] ; 2 >
+    au < superseded ; down ; 2011 ; International Journal of Flow Control Volume 3 [superseded] ; 3 >
+    au < superseded ; exists ; 2012 ; International Journal of Flow Control Volume 4 [superseded] ; 4 >
+    au < superseded ; exists ; 2013 ; International Journal of Flow Control Volume 5 [superseded] ; 5 >
     au < doNotProcess ; exists ; 2014 ; International Journal of Flow Control Volume 6 ; 6 >
     au < doNotProcess ; exists ; 2015 ; International Journal of Flow Control Volume 7 ; 7 >
 
@@ -268,8 +268,8 @@
 
     param[journal_issn] = 1759-3107
 
-    au < down ; finished ; 2010 ; International Journal of Hypersonics Volume 1 ; 1 >
-    au < down ; exists ; 2011 ; International Journal of Hypersonics Volume 2 ; 2 >
+    au < superseded ; down ; 2010 ; International Journal of Hypersonics Volume 1 [superseded]; 1 >
+    au < superseded ; exists ; 2011 ; International Journal of Hypersonics Volume 2 [superseded] ; 2 >
 
   }
 
@@ -284,10 +284,10 @@
     param[journal_issn] = 1757-2223
 
     au < doNotProcess ; exists ; 2009 ; International Journal of Innovation Science Volume 1 ; 1 >
-    au < down ; finished ; 2010 ; International Journal of Innovation Science Volume 2 ; 2 >
-    au < down ; finished ; 2011 ; International Journal of Innovation Science Volume 3 ; 3 >
-    au < down ; crawling ; 2012 ; International Journal of Innovation Science Volume 4 ; 4 >
-    au < down ; exists ; 2013 ; International Journal of Innovation Science Volume 5 ; 5 >
+    au < superseded ; down ; 2010 ; International Journal of Innovation Science Volume 2 [superseded] ; 2 >
+    au < superseded ; down ; 2011 ; International Journal of Innovation Science Volume 3 [superseded] ; 3 >
+    au < superseded ; down ; 2012 ; International Journal of Innovation Science Volume 4 [superseded] ; 4 >
+    au < superseded ; exists ; 2013 ; International Journal of Innovation Science Volume 5 [superseded] ; 5 >
 
   }
 
@@ -321,10 +321,10 @@
 
     param[journal_issn] = 1759-3093
 
-    au < down ; finished ; 2010 ; International Journal of Micro-Nano Scale Transport Volume 1 ; 1 >
-    au < down ; finished ; 2011 ; International Journal of Micro-Nano Scale Transport Volume 2 ; 2 >
-    au < down ; exists ; 2012 ; International Journal of Micro-Nano Scale Transport Volume 3 ; 3 >
-    au < down ; exists ; 2013 ; International Journal of Micro-Nano Scale Transport Volume 4 ; 4 >
+    au < superseded ; down ; 2010 ; International Journal of Micro-Nano Scale Transport Volume 1 [superseded] ; 1 >
+    au < superseded ; down ; 2011 ; International Journal of Micro-Nano Scale Transport Volume 2 [superseded] ; 2 >
+    au < superseded ; exists ; 2012 ; International Journal of Micro-Nano Scale Transport Volume 3 [superseded] ; 3 >
+    au < superseded ; exists ; 2013 ; International Journal of Micro-Nano Scale Transport Volume 4 [superseded] ; 4 >
 
   }
 
@@ -450,10 +450,10 @@
 
     param[journal_issn] = 2040-2295
 
-    au < down ; finished ; 2010 ; Journal of Healthcare Engineering Volume 1 ; 1 >
-    au < down ; finished ; 2011 ; Journal of Healthcare Engineering Volume 2 ; 2 >
-    au < down ; crawling ; 2012 ; Journal of Healthcare Engineering Volume 3 ; 3 >
-    au < down ; exists ; 2013 ; Journal of Healthcare Engineering Volume 4 ; 4 >
+    au < superseded ; down ; 2010 ; Journal of Healthcare Engineering Volume 1 [superseded] ; 1 >
+    au < superseded ; down ; 2011 ; Journal of Healthcare Engineering Volume 2 [superseded] ; 2 >
+    au < superseded ; down ; 2012 ; Journal of Healthcare Engineering Volume 3 [superseded] ; 3 >
+    au < superseded ; exists ; 2013 ; Journal of Healthcare Engineering Volume 4 [superseded] ; 4 >
 
   }
 
@@ -467,10 +467,10 @@
 
     param[journal_issn] = 2040-2317
 
-    au < down ; finished ; 2010 ; Journal of Structural Fire Engineering Volume 1 ; 1 >
-    au < down ; finished ; 2011 ; Journal of Structural Fire Engineering Volume 2 ; 2 >
-    au < down ; crawling ; 2012 ; Journal of Structural Fire Engineering Volume 3 ; 3 >
-    au < down ; exists ; 2013 ; Journal of Structural Fire Engineering Volume 4 ; 4 >
+    au < superseded ; down ; 2010 ; Journal of Structural Fire Engineering Volume 1 [superseded] ; 1 >
+    au < superseded ; down ; 2011 ; Journal of Structural Fire Engineering Volume 2 [superseded] ; 2 >
+    au < superseded ; down ; 2012 ; Journal of Structural Fire Engineering Volume 3 [superseded] ; 3 >
+    au < superseded ; exists ; 2013 ; Journal of Structural Fire Engineering Volume 4 [superseded] ; 4 >
 
   }
 
@@ -540,9 +540,9 @@
     au < doNotProcess ; exists ; 2008 ; Noise Notes Volume 7 ; 7 >
     au < doNotProcess ; exists ; 2009 ; Noise Notes Volume 8 ; 8 >
     au < doNotProcess ; exists ; 2010 ; Noise Notes Volume 9 ; 9 >
-    au < down ; exists ; 2011 ; Noise Notes Volume 10 ; 10 >
-    au < down ; exists ; 2012 ; Noise Notes Volume 11 ; 11 >
-    au < down ; exists ; 2013 ; Noise Notes Volume 12 ; 12 >
+    au < superseded ; exists ; 2011 ; Noise Notes Volume 10 [superseded] ; 10 >
+    au < superseded ; exists ; 2012 ; Noise Notes Volume 11 [superseded] ; 11 >
+    au < superseded ; exists ; 2013 ; Noise Notes Volume 12 [superseded] ; 12 >
     au < doNotProcess ; exists ; 2014 ; Noise Notes Volume 13 ; 13 >
     au < doNotProcess ; exists ; 2015 ; Noise Notes Volume 14 ; 14 >
 
