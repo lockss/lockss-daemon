@@ -1152,7 +1152,8 @@
 
   {
     title <
-      name = Endoscopy international open ;
+      name = Endoscopy International Open ;
+      issn = 2364-3722 ;
       eissn = 2196-9736 ;
       doi = 10.1055/s-00025476
 
@@ -1431,7 +1432,7 @@
    au < doNotProcess ; exists ; 2008 ; 2008 ; Experimental and Clinical Endocrinology & Diabetes Volume 2008 ; 116 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Experimental and Clinical Endocrinology & Diabetes Volume 2009 ; 117 >
    au < ready ; exists ; 2010 ; 2010 ; Experimental and Clinical Endocrinology & Diabetes Volume 2010 ; 118 >
-   au < ready ; exists ; 2011 ; 2011 ; Experimental and Clinical Endocrinology & Diabetes Volume 2011 ; 119 >
+   au < crawling ; exists ; 2011 ; 2011 ; Experimental and Clinical Endocrinology & Diabetes Volume 2011 ; 119 >
    au < crawling ; exists ; 2012 ; 2012 ; Experimental and Clinical Endocrinology & Diabetes Volume 2012 ; 120 >
    au < crawling ; exists ; 2013 ; 2013 ; Experimental and Clinical Endocrinology & Diabetes Volume 2013 ; 121 >
    au < crawling ; exists ; 2014 ; 2014 ; Experimental and Clinical Endocrinology & Diabetes Volume 2014 ; 122 >
@@ -1443,6 +1444,7 @@
 
     title <
       name = Experimental and Clinical Endocrinology & Diabetes Reports ;
+      issn = 0947-7349 ;
       eissn = 2196-7407 ;
       doi = 10.1055/s-00025479 
 
@@ -1450,7 +1452,8 @@
     param[journal_id] = 10.1055/s-00025479
     comment[years] = 2013
 
-    au < exists ; exists ; 2013 ; 2013 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 1 ; 1 >
+    au < exists ; exists ; 2015 ; 2015 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 1 ; 1 >
+    au < exists ; exists ; 2015 ; 2015 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 2 ; 2 >
 
   }
 
@@ -1835,7 +1838,7 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Hebamme Die Volume 2007 ; 20 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Hebamme Die Volume 2008 ; 21 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Hebamme Die Volume 2009 ; 22 >
-   au < ready ; exists ; 2010 ; 2010 ; Hebamme Die Volume 2010 ; 23 >
+   au < crawling ; exists ; 2010 ; 2010 ; Hebamme Die Volume 2010 ; 23 >
    au < ready ; exists ; 2011 ; 2011 ; Hebamme Die Volume 2011 ; 24 >
    au < ready ; exists ; 2012 ; 2012 ; Hebamme Die Volume 2012 ; 25 >
    au < crawling ; exists ; 2013 ; 2013 ; Hebamme Die Volume 2013 ; 26 >
@@ -2072,7 +2075,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Intensivmedizin up2date Volume 2007 ; 3 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Intensivmedizin up2date Volume 2008 ; 4 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Intensivmedizin up2date Volume 2009 ; 5 >
-    au < ready ; exists ; 2010 ; 2010 ; Intensivmedizin up2date Volume 2010 ; 6 >
+    au < crawling ; exists ; 2010 ; 2010 ; Intensivmedizin up2date Volume 2010 ; 6 >
     au < ready ; exists ; 2011 ; 2011 ; Intensivmedizin up2date Volume 2011 ; 7 >
     au < ready ; exists ; 2012 ; 2012 ; Intensivmedizin up2date Volume 2012 ; 8 >
     au < crawling ; exists ; 2013 ; 2013 ; Intensivmedizin up2date Volume 2013 ; 9 >
@@ -2289,6 +2292,24 @@
   {
 
     title <
+      name = Journal of Clinical & Academic Ophthalmology ;
+      issn = 2379-0539 ;
+      eissn = 2379-0555 ;
+      doi =  10.1055/s-00028776
+    >
+
+
+    param[journal_id] = 10.1055/s-00028776 
+    comment[0] = https://www.thieme-connect.com/products/ejournals/journal/10.1055/s-00028776   Journal of Clinical &amp\; Academic Ophthalmology
+    comment[1] = First issue online will be available soon.
+
+    au < expected ; exists ; 2015 ; 2015 ; Journal of Clinical & Academic Ophthalmology Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
       name = Journal of Knee Surgery ;
       issn = 1538-8506 ;
       eissn = 1938-2480 ;
@@ -2325,7 +2346,7 @@
     param[journal_id] = 10.1055/s-00025473
     comment[years] = 2013-current
 
-    au < exists ; exists ; 2013 ; 2013 ; Journal of Knee Surgery Reports Volume 1 ; 1 >
+    au < exists ; exists ; 2016 ; 2016 ; Journal of Knee Surgery Reports Volume 1 ; 1 >
 
   }
 
@@ -2509,7 +2530,7 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; Kardiologie up2date Volume 2009 ; 5 >
     au < ready ; exists ; 2010 ; 2010 ; Kardiologie up2date Volume 2010 ; 6 >
     au < ready ; exists ; 2011 ; 2011 ; Kardiologie up2date Volume 2011 ; 7 >
-    au < ready ; exists ; 2012 ; 2012 ; Kardiologie up2date Volume 2012 ; 8 >
+    au < crawling ; exists ; 2012 ; 2012 ; Kardiologie up2date Volume 2012 ; 8 >
     au < crawling ; exists ; 2013 ; 2013 ; Kardiologie up2date Volume 2013 ; 9 >
     au < crawling ; exists ; 2014 ; 2014 ; Kardiologie up2date Volume 2014 ; 10 >
     au < crawling ; exists ; 2015 ; 2015 ; Kardiologie up2date Volume 2015 ; 11 >
@@ -2878,7 +2899,7 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; manuelletherapie Volume 2008 ; 12 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; manuelletherapie Volume 2009 ; 13 >
     au < ready ; exists ; 2010 ; 2010 ; manuelletherapie Volume 2010 ; 14 >
-    au < ready ; exists ; 2011 ; 2011 ; manuelletherapie Volume 2011 ; 15 >
+    au < crawling ; exists ; 2011 ; 2011 ; manuelletherapie Volume 2011 ; 15 >
     au < ready ; exists ; 2012 ; 2012 ; manuelletherapie Volume 2012 ; 16 >
     au < crawling ; exists ; 2013 ; 2013 ; manuelletherapie Volume 2013 ;  17 >
     au < crawling ; exists ; 2014 ; 2014 ; manuelletherapie Volume 2014 ;  18 >
@@ -3197,7 +3218,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Notfallmedizin up2date Volume 2007 ; 2 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Notfallmedizin up2date Volume 2008 ; 3 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Notfallmedizin up2date Volume 2009 ; 4 >
-    au < ready ; exists ; 2010 ; 2010 ; Notfallmedizin up2date Volume 2010 ; 5 >
+    au < crawling ; exists ; 2010 ; 2010 ; Notfallmedizin up2date Volume 2010 ; 5 >
     au < ready ; exists ; 2011 ; 2011 ; Notfallmedizin up2date Volume 2011 ; 6 >
     au < ready ; exists ; 2012 ; 2012 ; Notfallmedizin up2date Volume 2012 ; 7 >
     au < crawling ; exists ; 2013 ; 2013 ; Notfallmedizin up2date Volume 2013 ; 8 >
@@ -3257,7 +3278,7 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; OP-Journal Volume 2009 ; 25 >
     au < ready ; exists ; 2010 ; 2010 ; OP-Journal Volume 2010 ; 26 >
     au < ready ; exists ; 2011 ; 2011 ; OP-Journal Volume 2011 ; 27 >
-    au < ready ; exists ; 2012 ; 2012 ; OP-Journal Volume 2012 ; 28 >
+    au < crawling ; exists ; 2012 ; 2012 ; OP-Journal Volume 2012 ; 28 >
     au < crawling ; exists ; 2013 ; 2013 ; OP-Journal Volume 2013 ; 29 >
     au < crawling ; exists ; 2014 ; 2014 ; OP-Journal Volume 2014 ; 30 >
     au < crawling ; exists ; 2015 ; 2015 ; OP-Journal Volume 2015 ; 31 >
@@ -3326,7 +3347,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Orthopedic Trauma Directions Volume 2007 ; 5 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Orthopedic Trauma Directions Volume 2008 ; 6 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Orthopedic Trauma Directions Volume 2009 ; 7 >
-    au < ready ; exists ; 2010 ; 2010 ; Orthopedic Trauma Directions Volume 2010 ; 8 >
+    au < crawling ; exists ; 2010 ; 2010 ; Orthopedic Trauma Directions Volume 2010 ; 8 >
     au < ready ; exists ; 2011 ; 2011 ; Orthopedic Trauma Directions Volume 2011 ; 9 >
 
   }
@@ -3512,7 +3533,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2007 ; 17 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2008 ; 18 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2009 ; 19 >
-    au < ready ; exists ; 2010 ; 2010 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2010 ; 20 >
+    au < crawling ; exists ; 2010 ; 2010 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2010 ; 20 >
     au < ready ; exists ; 2011 ; 2011 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2011 ; 21 >
     au < ready ; exists ; 2012 ; 2012 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2012 ; 22 >
     au < crawling ; exists ; 2013 ; 2013 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2013 ; 23 >
@@ -3561,7 +3582,7 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; physioscience Volume 2009 ; 5 >
     au < ready ; exists ; 2010 ; 2010 ; physioscience Volume 2010 ; 6 >
     au < ready ; exists ; 2011 ; 2011 ; physioscience Volume 2011 ; 7 >
-    au < ready ; exists ; 2012 ; 2012 ; physioscience Volume 2012 ; 8 >
+    au < crawling ; exists ; 2012 ; 2012 ; physioscience Volume 2012 ; 8 >
     au < crawling ; exists ; 2013 ; 2013 ; physioscience Volume 2013 ; 9 >
     au < crawling ; exists ; 2014 ; 2014 ; physioscience Volume 2014 ; 10 >
     au < crawling ; exists ; 2015 ; 2015 ; physioscience Volume 2015 ; 11 >
@@ -3816,7 +3837,7 @@
    au < doNotProcess ; exists ; 2008 ; 2008 ; Psych Pflege Heute Volume 2008 ; 14 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Psych Pflege Heute Volume 2009 ; 15 >
    au < ready ; exists ; 2010 ; 2010 ; Psych Pflege Heute Volume 2010 ; 16 >
-   au < ready ; exists ; 2011 ; 2011 ; Psych Pflege Heute Volume 2011 ; 17 >
+   au < crawling ; exists ; 2011 ; 2011 ; Psych Pflege Heute Volume 2011 ; 17 >
    au < ready ; exists ; 2012 ; 2012 ; Psych Pflege Heute Volume 2012 ; 18 >
    au < crawling ; exists ; 2013 ; 2013 ; Psych Pflege Heute Volume 2013 ; 19 >
    au < crawling ; exists ; 2014 ; 2014 ; Psych Pflege Heute Volume 2014 ; 20 >
@@ -3841,7 +3862,7 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; Psychiatrie und Psychotherapie up2date Volume 2009 ; 3 >
    au < ready ; exists ; 2010 ; 2010 ; Psychiatrie und Psychotherapie up2date Volume 2010 ; 4 >
    au < ready ; exists ; 2011 ; 2011 ; Psychiatrie und Psychotherapie up2date Volume 2011 ; 5 >
-   au < ready ; exists ; 2012 ; 2012 ; Psychiatrie und Psychotherapie up2date Volume 2012 ; 6 >
+   au < crawling ; exists ; 2012 ; 2012 ; Psychiatrie und Psychotherapie up2date Volume 2012 ; 6 >
 
   }
 
@@ -4184,7 +4205,7 @@
    au < doNotProcess ; exists ; 2008 ; 2008 ; Seminars in Interventional Radiology Volume 2008 ; 25 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Seminars in Interventional Radiology Volume 2009 ; 26 >
    au < testing ; exists ; 2010 ; 2010 ; Seminars in Interventional Radiology Volume 2010 ; 27 >
-   au < ready ; exists ; 2011 ; 2011 ; Seminars in Interventional Radiology Volume 2011 ; 28 >
+   au < crawling ; exists ; 2011 ; 2011 ; Seminars in Interventional Radiology Volume 2011 ; 28 >
    au < testing ; exists ; 2012 ; 2012 ; Seminars in Interventional Radiology Volume 2012 ; 29 >
    au < crawling ; exists ; 2013 ; 2013 ; Seminars in Interventional Radiology Volume 2013 ; 30 >
    au < crawling ; exists ; 2014 ; 2014 ; Seminars in Interventional Radiology Volume 2014 ; 31 >
@@ -4319,7 +4340,7 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; Seminars in Neurology Volume 2009 ; 29 >
    au < ready ; exists ; 2010 ; 2010 ; Seminars in Neurology Volume 2010 ; 30 >
    au < testing ; exists ; 2011 ; 2011 ; Seminars in Neurology Volume 2011 ; 31 >
-   au < ready ; exists ; 2012 ; 2012 ; Seminars in Neurology Volume 2012 ; 32 >
+   au < crawling ; exists ; 2012 ; 2012 ; Seminars in Neurology Volume 2012 ; 32 >
    au < crawling ; exists ; 2013 ; 2013 ; Seminars in Neurology Volume 2013 ; 33 >
    au < crawling ; exists ; 2014 ; 2014 ; Seminars in Neurology Volume 2014 ; 34 >
    au < crawling ; exists ; 2015 ; 2015 ; Seminars in Neurology Volume 2015 ; 35 >
@@ -4524,7 +4545,7 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; Seminars in Speech and Language Volume 2009 ; 30 >
     au < testing ; exists ; 2010 ; 2010 ; Seminars in Speech and Language Volume 2010 ; 31 >
     au < ready ; exists ; 2011 ; 2011 ; Seminars in Speech and Language Volume 2011 ; 32 >
-    au < ready ; exists ; 2012 ; 2012 ; Seminars in Speech and Language Volume 2012 ; 33 >
+    au < crawling ; exists ; 2012 ; 2012 ; Seminars in Speech and Language Volume 2012 ; 33 >
     au < crawling ; exists ; 2013 ; 2013 ; Seminars in Speech and Language Volume 2013 ; 34 >
     au < crawling ; exists ; 2014 ; 2014 ; Seminars in Speech and Language Volume 2014 ; 35 >
     au < crawling ; exists ; 2015 ; 2015 ; Seminars in Speech and Language Volume 2015 ; 36 >
@@ -5711,7 +5732,7 @@
     au < ready ; exists ; 2011 ; 2011 ; Zeitschrift für Chirurgie Volume 2011 ; 136 >
     au < ready ; exists ; 2012 ; 2012 ; Zeitschrift für Chirurgie Volume 2012 ; 137 >
     au < ready ; exists ; 2013 ; 2013 ; Zeitschrift für Chirurgie Volume 2013 ; 138 >
-    au < ready ; exists ; 2014 ; 2014 ; Zeitschrift für Chirurgie Volume 2014 ; 139 >
+    au < crawling ; exists ; 2014 ; 2014 ; Zeitschrift für Chirurgie Volume 2014 ; 139 >
     au < crawling ; exists ; 2015 ; 2015 ; Zeitschrift für Chirurgie Volume 2015 ; 140 >
 
   }

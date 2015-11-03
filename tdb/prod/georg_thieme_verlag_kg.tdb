@@ -1,8 +1,7 @@
 {
 
   publisher <
-    name = Georg Thieme Verlag KG ;
-    info[tester] = 5
+    name = Georg Thieme Verlag KG
   >
 
   param[base_url] = https://www.thieme-connect.de/
@@ -45,7 +44,7 @@
 
   {
     title <
-      name = Endoscopy international open ;
+      name = Endoscopy International Open ;
       issn = 2364-3722 ;
       eissn = 2196-9736 ;
       doi = 10.1055/s-00025476
@@ -114,7 +113,8 @@
     comment[0] = https://www.thieme-connect.com/products/ejournals/journal/10.1055/s-00025479   Experimental and Clinical Endocrinology &amp\; Diabetes Reports
     comment[1] = First issue online will be available soon.
 
-    au < exists ; 2014 ; 2014 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 1 ; 1 >
+    au < exists ; 2015 ; 2015 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 1 ; 1 >
+    au < exists ; 2015 ; 2015 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 2 ; 2 >
 
   }
 
@@ -224,7 +224,7 @@
     param[journal_id] = 10.1055/s-00025473
     comment[0] = Currently only eFirst is online
 
-    au < expected ; 2015 ; 2015 ; Journal of Knee Surgery Reports Volume 1 ; 1 >
+    au < expected ; 2016 ; 2016 ; Journal of Knee Surgery Reports Volume 1 ; 1 >
 
   }
 
