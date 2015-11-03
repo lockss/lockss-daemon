@@ -3515,7 +3515,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Journal of Occupational Medicine and Toxicology Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; Journal of Occupational Medicine and Toxicology Volume 8 ; 8 >
       au < crawling ; exists ; 2014 ; Journal of Occupational Medicine and Toxicology Volume 9 ; 9 >
-      au < boost ; exists ; 2015 ; Journal of Occupational Medicine and Toxicology Volume 10 ; 10 >
+      au < ready ; exists ; 2015 ; Journal of Occupational Medicine and Toxicology Volume 10 ; 10 >
 
     }
 
@@ -3555,7 +3555,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < crawling ; exists ; 2013 ; Journal of Otolaryngology - Head and Neck Surgery Volume 42 ; 42 >
       au < crawling ; exists ; 2014 ; Journal of Otolaryngology - Head and Neck Surgery Volume 43 ; 43 >
-      au < boost ; exists ; 2015 ; Journal of Otolaryngology - Head and Neck Surgery Volume 44 ; 44 >
+      au < ready ; exists ; 2015 ; Journal of Otolaryngology - Head and Neck Surgery Volume 44 ; 44 >
 
     }
 
@@ -3592,7 +3592,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < crawling ; exists ; 2013 ; Journal of Pharmaceutical Policy and Practice Volume 6 ; 6 >
       au < crawling ; exists ; 2014 ; Journal of Pharmaceutical Policy and Practice Volume 7 ; 7 >
-      au < boost ; exists ; 2015 ; Journal of Pharmaceutical Policy and Practice Volume 8 ; 8 >
+      au < ready ; exists ; 2015 ; Journal of Pharmaceutical Policy and Practice Volume 8 ; 8 >
 
     }
 
@@ -3715,7 +3715,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < crawling ; exists ; 2013 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 19 ; 19 >
       au < crawling ; exists ; 2014 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 20 ; 20 >
-      au < boost ; exists ; 2015 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 21 ; 21 >
+      au < ready ; exists ; 2015 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 21 ; 21 >
 
     }
 
@@ -3742,7 +3742,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Lipids in Health and Disease Volume 11 ; 11 >
       au < crawling ; exists ; 2013 ; Lipids in Health and Disease Volume 12 ; 12 >
       au < crawling ; exists ; 2014 ; Lipids in Health and Disease Volume 13 ; 13 >
-      au < boost ; exists ; 2015 ; Lipids in Health and Disease Volume 14 ; 14 >
+      au < ready ; exists ; 2015 ; Lipids in Health and Disease Volume 14 ; 14 >
 
     }
 
@@ -3754,12 +3754,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       
       param[base_url] = http://www.longevityandhealthspan.com/
       param[journal_issn] = 2046-2395
-      #stop publishing
+      #stopped publishing
 
       au < crawling ; exists ; 2012 ; Longevity & Healthspan Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; Longevity & Healthspan Volume 2 ; 2 >
       au < crawling ; exists ; 2014 ; Longevity & Healthspan Volume 3 ; 3 >
-      au < boost ; exists ; 2015 ; Longevity & Healthspan Volume 4 ; 4 >
 
     }
 
@@ -3804,7 +3803,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Medical Gas Research Volume 2 ; 2 >
       au < crawling ; exists ; 2013 ; Medical Gas Research Volume 3 ; 3 >
       au < crawling ; exists ; 2014 ; Medical Gas Research Volume 4 ; 4 >
-      au < boost ; exists ; 2015 ; Medical Gas Research Volume 5 ; 5 >
+      au < ready ; exists ; 2015 ; Medical Gas Research Volume 5 ; 5 >
 
     }
 
@@ -3831,7 +3830,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Microbial Cell Factories Volume 11 ; 11 >
       au < crawling ; exists ; 2013 ; Microbial Cell Factories Volume 12 ; 12 >
       au < crawling ; exists ; 2014 ; Microbial Cell Factories Volume 13 ; 13 >
-      au < boost ; exists ; 2015 ; Microbial Cell Factories Volume 14 ; 14 >
+      au < ready ; exists ; 2015 ; Microbial Cell Factories Volume 14 ; 14 >
 
     }
 
@@ -3844,13 +3843,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://www.microbialinformaticsj.com/
       param[journal_issn] = 2042-5783
-      #stop publishing
+      #stopped publishing
 
       au < finished ; crawling ; 2011 ; Microbial Informatics and Experimentation Volume 1 ; 1 >
       au < crawling ; exists ; 2012 ; Microbial Informatics and Experimentation Volume 2 ; 2 >
       au < crawling ; exists ; 2013 ; Microbial Informatics and Experimentation Volume 3 ; 3 >
       au < crawling ; exists ; 2014 ; Microbial Informatics and Experimentation Volume 4 ; 4 >
-      au < boost ; exists ; 2015 ; Microbial Informatics and Experimentation Volume 5 ; 5 >
 
     }
 
@@ -3866,7 +3864,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < crawling ; exists ; 2013 ; Microbiome Volume 1 ; 1 >
       au < crawling ; exists ; 2014 ; Microbiome Volume 2 ; 2 >
-      au < boost ; exists ; 2015 ; Microbiome Volume 3 ; 3 >
+      au < ready ; exists ; 2015 ; Microbiome Volume 3 ; 3 >
 
     }
 
@@ -3881,7 +3879,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2054-9369
 
       au < crawling ; exists ; 2014 ; Military Medical Research Volume 1 ; 1 >
-      au < boost ; exists ; 2015 ; Military Medical Research Volume 2 ; 2 >
+      au < ready ; exists ; 2015 ; Military Medical Research Volume 2 ; 2 >
 
     }
 
@@ -3900,7 +3898,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Mobile DNA Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; Mobile DNA Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; Mobile DNA Volume 5 ; 5 >
-      au < boost ; exists ; 2015 ; Mobile DNA Volume 6 ; 6 >
+      au < ready ; exists ; 2015 ; Mobile DNA Volume 6 ; 6 >
 
     }
 
@@ -3919,7 +3917,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Molecular Autism Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; Molecular Autism Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; Molecular Autism Volume 5 ; 5 >
-      au < boost ; exists ; 2015 ; Molecular Autism Volume 6 ; 6 >
+      au < ready ; exists ; 2015 ; Molecular Autism Volume 6 ; 6 >
 
     }
 
@@ -3935,7 +3933,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < crawling ; exists ; 2013 ; Molecular and Cellular Therapies Volume 1 ; 1 >
       au < crawling ; exists ; 2014 ; Molecular and Cellular Therapies Volume 2 ; 2 >
-      au < boost ; exists ; 2015 ; Molecular and Cellular Therapies Volume 3 ; 3 >
+      au < ready ; exists ; 2015 ; Molecular and Cellular Therapies Volume 3 ; 3 >
 
     }
 
@@ -3956,7 +3954,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Molecular Brain Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; Molecular Brain Volume 6 ; 6 >
       au < crawling ; exists ; 2014 ; Molecular Brain Volume 7 ; 7 >
-      au < manifest ; exists ; 2015 ; Molecular Brain Volume 8 ; 8 >
+      au < testing ; exists ; 2015 ; Molecular Brain Volume 8 ; 8 >
 
     }
 
@@ -4005,7 +4003,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Molecular Cytogenetics Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; Molecular Cytogenetics Volume 6 ; 6 >
       au < crawling ; exists ; 2014 ; Molecular Cytogenetics Volume 7 ; 7 >
-      au < manifest ; exists ; 2015 ; Molecular Cytogenetics Volume 8 ; 8 >
+      au < testing ; exists ; 2015 ; Molecular Cytogenetics Volume 8 ; 8 >
 
     }
 
@@ -4028,7 +4026,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Molecular Neurodegeneration Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; Molecular Neurodegeneration Volume 8 ; 8 >
       au < crawling ; exists ; 2014 ; Molecular Neurodegeneration Volume 9 ; 9 >
-      au < manifest ; exists ; 2015 ; Molecular Neurodegeneration Volume 10 ; 10 >
+      au < testing ; exists ; 2015 ; Molecular Neurodegeneration Volume 10 ; 10 >
       
     }
 
@@ -4052,7 +4050,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Molecular Pain Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; Molecular Pain Volume 9 ; 9 >
       au < crawling ; exists ; 2014 ; Molecular Pain Volume 10 ; 10 >
-      au < manifest ; exists ; 2015 ; Molecular Pain Volume 11 ; 11 >
+      au < testing ; exists ; 2015 ; Molecular Pain Volume 11 ; 11 >
 
     }
 
@@ -4068,7 +4066,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < crawling ; exists ; 2013 ; Movement Ecology Volume 1 ; 1 >
       au < crawling ; exists ; 2014 ; Movement Ecology Volume 2 ; 2 >
-      au < manifest ; exists ; 2015 ; Movement Ecology Volume 3 ; 3 >
+      au < testing ; exists ; 2015 ; Movement Ecology Volume 3 ; 3 >
 
     }
 
@@ -4087,7 +4085,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Multidisciplinary Respiratory Medicine Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; Multidisciplinary Respiratory Medicine Volume 8 ; 8 >
       au < crawling ; exists ; 2014 ; Multidisciplinary Respiratory Medicine Volume 9 ; 9 >
-      au < manifest ; exists ; 2015 ; Multidisciplinary Respiratory Medicine Volume 10 ; 10 >
+      au < testing ; exists ; 2015 ; Multidisciplinary Respiratory Medicine Volume 10 ; 10 >
 
     }
 
@@ -4110,7 +4108,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Neural Development Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; Neural Development Volume 8 ; 8 >
       au < crawling ; exists ; 2014 ; Neural Development Volume 9 ; 9 >
-      au < manifest ; exists ; 2015 ; Neural Development Volume 10 ; 10 >
+      au < testing ; exists ; 2015 ; Neural Development Volume 10 ; 10 >
 
     }
 
@@ -4182,7 +4180,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Nutrition Journal Volume 11 ; 11 >
       au < crawling ; exists ; 2013 ; Nutrition Journal Volume 12 ; 12 >
       au < crawling ; exists ; 2014 ; Nutrition Journal Volume 13 ; 13 >
-      au < manifest ; exists ; 2015 ; Nutrition Journal Volume 14 ; 14 >
+      au < testing ; exists ; 2015 ; Nutrition Journal Volume 14 ; 14 >
       
     }
 
@@ -4205,7 +4203,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Orphanet Journal of Rare Diseases Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; Orphanet Journal of Rare Diseases Volume 8 ; 8 >
       au < crawling ; exists ; 2014 ; Orphanet Journal of Rare Diseases Volume 9 ; 9 >
-      au < manifest ; exists ; 2015 ; Orphanet Journal of Rare Diseases Volume 10 ; 10 >
+      au < testing ; exists ; 2015 ; Orphanet Journal of Rare Diseases Volume 10 ; 10 >
 
     }
 
@@ -4245,7 +4243,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Parasites & Vectors Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; Parasites & Vectors Volume 6 ; 6 >
       au < crawling ; exists ; 2014 ; Parasites & Vectors Volume 7 ; 7 >
-      au < manifest ; exists ; 2015 ; Parasites & Vectors Volume 8 ; 8 >
+      au < testing ; exists ; 2015 ; Parasites & Vectors Volume 8 ; 8 >
 
     }
 
@@ -4293,7 +4291,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Patient Safety in Surgery Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; Patient Safety in Surgery Volume 7 ; 7 >
       au < crawling ; exists ; 2014 ; Patient Safety in Surgery Volume 8 ; 8 >
-      au < manifest ; exists ; 2015 ; Patient Safety in Surgery Volume 9 ; 9 >
+      au < testing ; exists ; 2015 ; Patient Safety in Surgery Volume 9 ; 9 >
 
     }
 
@@ -4319,7 +4317,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Pediatric Rheumatology Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; Pediatric Rheumatology Volume 11 ; 11 >
       au < crawling ; exists ; 2014 ; Pediatric Rheumatology Volume 12 ; 12 >
-      au < manifest ; exists ; 2015 ; Pediatric Rheumatology Volume 13 ; 13 >
+      au < testing ; exists ; 2015 ; Pediatric Rheumatology Volume 13 ; 13 >
 
     }
 
@@ -4337,7 +4335,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Perioperative Medicine Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; Perioperative Medicine Volume 2 ; 2 >
       au < crawling ; exists ; 2014 ; Perioperative Medicine Volume 3 ; 3 >
-      au < manifest ; exists ; 2015 ; Perioperative Medicine Volume 4 ; 4 >
+      au < testing ; exists ; 2015 ; Perioperative Medicine Volume 4 ; 4 >
 
     }
 
@@ -4360,7 +4358,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Philosophy, Ethics, and Humanities in Medicine Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; Philosophy, Ethics, and Humanities in Medicine Volume 8 ; 8 >
       au < crawling ; exists ; 2014 ; Philosophy, Ethics, and Humanities in Medicine Volume 9 ; 9 >
-      au < manifest ; exists ; 2015 ; Philosophy, Ethics, and Humanities in Medicine Volume 10 ; 10 >
+      au < testing ; exists ; 2015 ; Philosophy, Ethics, and Humanities in Medicine Volume 10 ; 10 >
 
     }
 
@@ -4384,7 +4382,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Plant Methods Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; Plant Methods Volume 9 ; 9 >
       au < crawling ; exists ; 2014 ; Plant Methods Volume 10 ; 10 >
-      au < manifest ; exists ; 2015 ; Plant Methods Volume 11 ; 11 >
+      au < testing ; exists ; 2015 ; Plant Methods Volume 11 ; 11 >
 
     }
 
@@ -4410,7 +4408,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Population Health Metrics Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; Population Health Metrics Volume 11 ; 11 >
       au < crawling ; exists ; 2014 ; Population Health Metrics Volume 12 ; 12 >
-      au < manifest ; exists ; 2015 ; Population Health Metrics Volume 13 ; 13 >
+      au < testing ; exists ; 2015 ; Population Health Metrics Volume 13 ; 13 >
 
     }
 
@@ -4436,7 +4434,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Proteome Science Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; Proteome Science Volume 11 ; 11 >
       au < crawling ; exists ; 2014 ; Proteome Science Volume 12 ; 12 >
-      au < manifest ; exists ; 2015 ; Proteome Science Volume 13 ; 13 >
+      au < testing ; exists ; 2015 ; Proteome Science Volume 13 ; 13 >
 
     }
 
@@ -4459,7 +4457,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Radiation Oncology Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; Radiation Oncology Volume 8 ; 8 >
       au < crawling ; exists ; 2014 ; Radiation Oncology Volume 9 ; 9 >
-      au < manifest ; exists ; 2015 ; Radiation Oncology Volume 10 ; 10 >
+      au < testing ; exists ; 2015 ; Radiation Oncology Volume 10 ; 10 >
 
     }
 
@@ -4502,7 +4500,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Reproductive Biology and Endocrinology Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; Reproductive Biology and Endocrinology Volume 11 ; 11 >
       au < crawling ; exists ; 2014 ; Reproductive Biology and Endocrinology Volume 12 ; 12 >
-      au < manifest ; exists ; 2015 ; Reproductive Biology and Endocrinology Volume 13 ; 13 >
+      au < testing ; exists ; 2015 ; Reproductive Biology and Endocrinology Volume 13 ; 13 >
 
     }
 
@@ -4527,7 +4525,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Reproductive Health Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; Reproductive Health Volume 10 ; 10 >
       au < crawling ; exists ; 2014 ; Reproductive Health Volume 11 ; 11 >
-      au < manifest ; exists ; 2015 ; Reproductive Health Volume 12 ; 12 >
+      au < testing ; exists ; 2015 ; Reproductive Health Volume 12 ; 12 >
 
     }
 

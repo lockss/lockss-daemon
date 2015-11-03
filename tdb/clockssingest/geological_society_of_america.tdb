@@ -23,11 +23,11 @@
 
       attr[au_coverage_depth] = abstracts
 
-      au < manifest ; exists ; 1918 ; Geological Society of America Bulletin Volume 29 [abstracts only] ; 29 >
-      au < manifest ; exists ; 1919 ; Geological Society of America Bulletin Volume 30 [abstracts only] ; 30 >
-      au < manifest ; exists ; 1920 ; Geological Society of America Bulletin Volume 31 [abstracts only] ; 31 >
-      au < manifest ; exists ; 1921 ; Geological Society of America Bulletin Volume 32 [abstracts only] ; 32 >
-      au < manifest ; exists ; 1922 ; Geological Society of America Bulletin Volume 33 [abstracts only] ; 33 >
+      au < doNotProcess ; exists ; 1918 ; Geological Society of America Bulletin Volume 29 [abstracts only] ; 29 >
+      au < doNotProcess ; exists ; 1919 ; Geological Society of America Bulletin Volume 30 [abstracts only] ; 30 >
+      au < doNotProcess ; exists ; 1920 ; Geological Society of America Bulletin Volume 31 [abstracts only] ; 31 >
+      au < doNotProcess ; exists ; 1921 ; Geological Society of America Bulletin Volume 32 [abstracts only] ; 32 >
+      au < doNotProcess ; exists ; 1922 ; Geological Society of America Bulletin Volume 33 [abstracts only] ; 33 >
     }
     {
       au < manifest ; exists ; 1923 ; Geological Society of America Bulletin Volume 34 ; 34 >
