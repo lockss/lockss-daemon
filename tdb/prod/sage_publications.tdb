@@ -32958,12 +32958,14 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://mmd.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+        
+        comment[moved] = moved to OJS http://mmd.iammonline.com/index.php/musmed/issue/archive
 
-        au < manifest ; 2009 ; Music and Medicine Volume 1 ; 1 >
-        au < released ; 2010 ; Music and Medicine Volume 2 ; 2 >
-        au < released ; 2011 ; Music and Medicine Volume 3 ; 3 >
-        au < released ; 2012 ; Music and Medicine Volume 4 ; 4 >
-        au < manifest ; 2013 ; Music and Medicine Volume 5 ; 5 >
+        au < doNotProcess ; 2009 ; Music and Medicine Volume 1 ; 1 >
+        au < down ; 2010 ; Music and Medicine Volume 2 ; 2 >
+        au < down ; 2011 ; Music and Medicine Volume 3 ; 3 >
+        au < down ; 2012 ; Music and Medicine Volume 4 ; 4 >
+        au < doNotProcess ; 2013 ; Music and Medicine Volume 5 ; 5 >
 
       }
 

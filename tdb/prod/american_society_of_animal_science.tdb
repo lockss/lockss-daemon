@@ -3,6 +3,8 @@
   publisher <
     name = American Society of Animal Science
   >
+  
+  comment[moved] = moved from HW to new platform
 
   {
 
@@ -18,10 +20,10 @@
     implicit < status ; year ; name ; param[volume_name] >
 
 
-    au < released ; 2011 ; Animal Frontiers Volume 1 ; 1 >
-    au < released ; 2012 ; Animal Frontiers Volume 2 ; 2 >
-    au < expected ; 2013 ; Animal Frontiers Volume 3 ; 3 >
-    au < expected ; 2014 ; Animal Frontiers Volume 4 ; 4 >
+    au < down ; 2011 ; Animal Frontiers Volume 1 ; 1 >
+    au < down ; 2012 ; Animal Frontiers Volume 2 ; 2 >
+    au < doNotProcess ; 2013 ; Animal Frontiers Volume 3 ; 3 >
+    au < doNotProcess ; 2014 ; Animal Frontiers Volume 4 ; 4 >
     
   }
   
@@ -139,9 +141,9 @@
       param[base_url] = http://www.journalofanimalscience.org/
       comment[notReady] = Appears to redirect to animalsciencepublications.org/publications/jas/ and does not have a manifest page
 
-      au < HighWirePressH20Plugin ; released ; 2013 ; Journal of Animal Science Volume 91 ; 91 >
-      au < HighWirePressH20Plugin ; notReady ; 2014 ; Journal of Animal Science Volume 92 ; 92 >
-      au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of Animal Science Volume 93 ; 93 >
+      au < HighWirePressH20Plugin ; down ; 2013 ; Journal of Animal Science Volume 91 ; 91 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Journal of Animal Science Volume 92 ; 92 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Journal of Animal Science Volume 93 ; 93 >
     
     }
     
