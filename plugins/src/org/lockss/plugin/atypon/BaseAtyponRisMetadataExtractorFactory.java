@@ -118,25 +118,74 @@ implements FileMetadataExtractorFactory {
         if (am.getRaw("Y1") != null) { // if DA wasn't there, use Y1
           am.put(MetadataField.FIELD_DATE, am.getRaw("Y1"));
         }
-      }      
+      }  
+      
+      
       /*
+       * Determine if this is a book item or a journal item.
        * set the appropriate article type once the daemon passes along the TY
        */
-      String ris_type;
-      // TODO1.69 - once 1.69 is generally available, use the commented out code instead...
-      if( ((ris_type = am.getRaw("TY")) == null) ) {
-        ris_type = "JOUR";
+      String ris_type = am.getRaw("TY");
+      if (ris_type == null) {
+        //pre 1.69, do an alternate check because TY wasn't passed through
+        ris_type = "JOUR"; //set a default
         if (am.get(MetadataField.FIELD_ISBN) != null) {
+          // it is a bad value, but it was recognized as an isbn because of TY type
           ris_type = "BOOK"; //it could be a chapter but until TY is passed through...
         }
-      }
-      if ( ris_type.contains("BOOK") || ris_type.contains("CHAP") ) {
-        // could be CHAP, BOOK, EBOOK, ECHAP, or EDBOOK according to RIS spec
-      //START TODO1.69 REPLACEMENT BIT -replace the above best guess chunk with this 
-      //    if( ((ris_type = am.getRaw("TY"))!= null) && 
-      //    ( ris_type.contains("BOOK") || ris_type.contains("CHAP")) ) {
-      //END TODO1.69 REPLACEMENT BIT
+      } 
 
+      // Modify or try alternate RIS tag values based after cooking
+      postCookProcess(cu,am,ris_type);
+      
+      
+      // Only emit if this item is likely to be from this AU
+      // protect against counting overcrawled articles by checking against
+      // values from the TDB file - differentiate between book items and journal itesm
+      ArchivalUnit au = cu.getArchivalUnit();
+      if ( ris_type.contains("BOOK") || ris_type.contains("CHAP") ) {
+        if (!BaseAtyponMetadataUtil.metadataMatchesBookTdb(au, am)) {
+          return;
+        }
+      } else {
+        // JOURNAL default is to assume it's a journal for backwards compatibility
+        if (!BaseAtyponMetadataUtil.metadataMatchesTdb(au, am)) {
+          return;
+        }
+      }
+
+      /*
+       * Fill in DOI, publisher, other information available from
+       * the URL or TDB 
+       * CORRECT the access.url if it is not in the AU
+       */
+      BaseAtyponMetadataUtil.completeMetadata(cu, am);
+      emitter.emitMetadata(cu, am);
+    }
+    
+    /*
+     * isolate the modifications done on the AM after the initial extraction
+     * in order to allow child plugins to do override this and do 
+     * additional work before calling the pre-emit checking...
+     * ArticleMetadata - passed in information from extract/cook
+     * ris_type - the TY value or its inferred type (basically, book or journal)
+     */
+    protected void postCookProcess(CachedUrl cu, ArticleMetadata am, String ris_type) {
+      /*
+       * RIS data can be variable.  We don't have any way to add priority to
+       * the cooking of data, so fallback to alternate values manually
+       */
+      if (am.get(MetadataField.FIELD_DATE) == null) {
+        if (am.getRaw("Y1") != null) { // if DA wasn't there, use Y1
+          am.put(MetadataField.FIELD_DATE, am.getRaw("Y1"));
+        }
+      }      
+
+      /*
+       * There are differences between books and journals, so fork for titles
+       * and metadata check
+       */ 
+      if ( ris_type.contains("BOOK") || ris_type.contains("CHAP") ) {
         //BOOK in some form
         // T1 is the primary title - of the chapter for a book chapter, or book for a complete book
         // T2 is the next title up - of the book for a chapter, of the series for a book
@@ -172,16 +221,8 @@ implements FileMetadataExtractorFactory {
             am.put(MetadataField.FIELD_SERIES_TITLE, am.getRaw("T2"));
           }
         }
-        // Only emit if this item is likely to be from this AU
-        // protect against counting overcrawled articles
-        ArchivalUnit au = cu.getArchivalUnit();
-        if (!BaseAtyponMetadataUtil.metadataMatchesBookTdb(au, am)) {
-          return;
-        }
-
       } else {
         // JOURNAL default is to assume it's a journal for backwards compatibility
-
         if (am.get(MetadataField.FIELD_PUBLICATION_TITLE) == null) {
           if (am.getRaw("T2") != null) {
             am.put(MetadataField.FIELD_PUBLICATION_TITLE, am.getRaw("T2"));
@@ -189,22 +230,7 @@ implements FileMetadataExtractorFactory {
             am.put(MetadataField.FIELD_PUBLICATION_TITLE, am.getRaw("JO")); // might be unabbreviated version
           }
         } 
-
-        // Only emit if this item is likely to be from this AU
-        // protect against counting overcrawled articles
-        ArchivalUnit au = cu.getArchivalUnit();
-        if (!BaseAtyponMetadataUtil.metadataMatchesTdb(au, am)) {
-          return;
-        }
       }
-
-      /*
-       * Fill in DOI, publisher, other information available from
-       * the URL or TDB 
-       * CORRECT the access.url if it is not in the AU
-       */
-      BaseAtyponMetadataUtil.completeMetadata(cu, am);
-      emitter.emitMetadata(cu, am);
     }
 
   }
