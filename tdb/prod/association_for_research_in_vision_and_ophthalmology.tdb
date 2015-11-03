@@ -19,7 +19,7 @@
     plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
     param[base_url] = http://iovs.arvojournals.org/
     implicit < status ; year ; name ; param[year] >
-    param[resource_id] = XXX
+    param[resource_id] = 169
 
     au < doNotProcess ; 2005 ; Investigative Ophthalmology & Visual Science Volume 46 ; 2005 >
     au < doNotProcess ; 2006 ; Investigative Ophthalmology & Visual Science Volume 47 ; 2006 >
