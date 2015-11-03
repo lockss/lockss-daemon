@@ -157,13 +157,14 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = entrelinhas
 
-      au < notReady ; 2005 ; 1 ; Entrelinhas Volume 2005 ; 2005 ; no articles >
-      au < notReady ; 2006 ; 2 ; Entrelinhas Volume 2006 ; 2006 ; no articles >
-      au < notReady ; 2007 ; 3 ; Entrelinhas Volume 2007 ; 2007 ; no articles >
-      au < released ; 2011 ; 7 ; Entrelinhas Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 8 ; Entrelinhas Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 9 ; Entrelinhas Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 10 ; Entrelinhas Volume 2014 ; 2014 ; >
+      au < notReady ; 2005 ; 2 ; Entrelinhas Volume 2005 ; 2005 ; no articles >
+      au < notReady ; 2006 ; 3 ; Entrelinhas Volume 2006 ; 2006 ; no articles >
+      au < notReady ; 2007 ; 4 ; Entrelinhas Volume 2007 ; 2007 ; no articles >
+      au < released ; 2011 ; 5 ; Entrelinhas Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 6 ; Entrelinhas Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 7 ; Entrelinhas Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 8 ; Entrelinhas Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 9 ; Entrelinhas Volume 2015 ; 2015 ; >
 
   }
 
