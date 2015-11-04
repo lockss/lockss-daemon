@@ -1247,7 +1247,6 @@
         au < released ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
         au < released ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 >
         au < released ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 >
-        au < manifest ; 2011 ; Chiropractic & Osteopathy Volume 19 ; 19 >
 
       }
 
@@ -1475,6 +1474,7 @@
 
       param[base_url] = http://www.coughjournal.com/
       param[journal_issn] = 1745-9974
+      # stopped publishing
 
       au < released ; 2005 ; Cough Volume 1 ; 1 >
       au < released ; 2006 ; Cough Volume 2 ; 2 >
@@ -1486,7 +1486,6 @@
       au < released ; 2012 ; Cough Volume 8 ; 8 >
       au < released ; 2013 ; Cough Volume 9 ; 9 >
       au < manifest ; 2014 ; Cough Volume 10 ; 10 >
-      au < manifest ; 2015 ; Cough Volume 11 ; 11 >
 
     }
 
@@ -2096,13 +2095,13 @@
 
       param[base_url] = http://www.genomeintegrity.com/
       param[journal_issn] = 2041-9414
+      #ceased June 2014. Moved to MedKnow publications.
 
       au < released ; 2010 ; Genome Integrity Volume 1 ; 1 >
       au < released ; 2011 ; Genome Integrity Volume 2 ; 2 >
       au < released ; 2012 ; Genome Integrity Volume 3 ; 3 >
       au < manifest ; 2013 ; Genome Integrity Volume 4 ; 4 >
       au < manifest ; 2014 ; Genome Integrity Volume 5 ; 5 >
-      au < manifest ; 2015 ; Genome Integrity Volume 6 ; 6 >
 
     }
 
@@ -2351,13 +2350,13 @@
 
       param[base_url] = http://www.herpesviridae.org/
       param[journal_issn] = 2042-4280
+      comment[0] = stopped publishing.
 
       au < manifest ; 2010 ; Herpesviridae Volume 1 ; 1 >
       au < manifest ; 2011 ; Herpesviridae Volume 2 ; 2 >
       au < manifest ; 2012 ; Herpesviridae Volume 3 ; 3 >
       au < manifest ; 2013 ; Herpesviridae Volume 4 ; 4 >
       au < manifest ; 2014 ; Herpesviridae Volume 5 ; 5 >
-      au < manifest ; 2015 ; Herpesviridae Volume 6 ; 6 >
 
     }
 
@@ -3781,11 +3780,11 @@
 
       param[base_url] = http://www.longevityandhealthspan.com/
       param[journal_issn] = 2046-2395
+      #stopped publishing
 
       au < manifest ; 2012 ; Longevity & Healthspan Volume 1 ; 1 >
       au < manifest ; 2013 ; Longevity & Healthspan Volume 2 ; 2 >
       au < manifest ; 2014 ; Longevity & Healthspan Volume 3 ; 3 >
-      au < manifest ; 2015 ; Longevity & Healthspan Volume 4 ; 4 >
 
     }
 
@@ -3870,12 +3869,12 @@
 
       param[base_url] = http://www.microbialinformaticsj.com/
       param[journal_issn] = 2042-5783
+      #stopped publishing
 
       au < released ; 2011 ; Microbial Informatics and Experimentation Volume 1 ; 1 >
       au < manifest ; 2012 ; Microbial Informatics and Experimentation Volume 2 ; 2 >
       au < manifest ; 2013 ; Microbial Informatics and Experimentation Volume 3 ; 3 >
       au < manifest ; 2014 ; Microbial Informatics and Experimentation Volume 4 ; 4 >
-      au < manifest ; 2015 ; Microbial Informatics and Experimentation Volume 5 ; 5 >
 
     }
 
@@ -4721,13 +4720,13 @@
 
       param[base_url] = http://www.silencejournal.com/
       param[journal_issn] = 1758-907X
+      #stop publishing
 
       au < manifest ; 2010 ; Silence Volume 1 ; 1 >
       au < manifest ; 2011 ; Silence Volume 2 ; 2 >
       au < manifest ; 2012 ; Silence Volume 3 ; 3 >
       au < manifest ; 2013 ; Silence Volume 4 ; 4 >
-      au < manifest ; 2014 ; Silence Volume 5 ; 5 >
-      au < manifest ; 2015 ; Silence Volume 6 ; 6 >
+      au < doNotProcess ; 2014 ; Silence Volume 5 ; 5 >
 
     }
 
