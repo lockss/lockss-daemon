@@ -38,6 +38,7 @@ import java.util.*;
 import java.util.Queue;
 
 import org.apache.commons.collections.map.LRUMap;
+import org.apache.commons.lang3.tuple.Pair;
 import org.lockss.alert.Alert;
 import org.lockss.config.*;
 import org.lockss.crawler.CrawlerStatus.ReferrerType;
@@ -115,6 +116,10 @@ public class FollowLinkCrawler extends BaseCrawler {
   public static final String PARAM_PARSE_ON_PERM_FAIL = PREFIX + "parseOnPermFail";
   public static final boolean DEFAULT_PARSE_ON_PERM_FAIL = true;
 
+  /** If true will CharsetUtil for charset determination */
+  public static final String PARAM_CHARSET_UTIL = PREFIX + "charsetUtil";
+  public static final boolean DEFAULT_CHARSET_UTIL = true;
+
   protected int maxDepth = DEFAULT_MAX_CRAWL_DEPTH;
 
   protected int hiDepth = 0;		// maximum depth seen
@@ -138,6 +143,7 @@ public class FollowLinkCrawler extends BaseCrawler {
   protected boolean isFullSubstanceCheck = false;
   protected boolean refindCdnStems   = false;
   protected boolean parseOnPermFail = DEFAULT_PARSE_ON_PERM_FAIL;
+  protected boolean charsetUtil = DEFAULT_CHARSET_UTIL;
 
   // Cache recent negative results from au.shouldBeCached().  This is set
   // to an LRUMsp when crawl is initialized, it's initialized here to a
@@ -236,6 +242,8 @@ public class FollowLinkCrawler extends BaseCrawler {
       config.getBoolean(PARAM_REFIND_CDN_STEMS, DEFAULT_REFIND_CDN_STEMS);
     parseOnPermFail =
         config.getBoolean(PARAM_PARSE_ON_PERM_FAIL, DEFAULT_PARSE_ON_PERM_FAIL);
+    charsetUtil =
+      config.getBoolean(PARAM_CHARSET_UTIL,DEFAULT_CHARSET_UTIL);
   }
  
 
@@ -643,7 +651,13 @@ public class FollowLinkCrawler extends BaseCrawler {
                   // Might be reparsing with new content (if depth reduced
                   // below refetch depth); clear any existing children
                   curl.clearChildren();
-                  String charset = getCharset(cu);
+                  String charset =
+                    HeaderUtil.getCharsetOrDefaultFromContentType(cu.getContentType());
+                  if (charsetUtil)  {
+                    Pair<InputStream, String> charPair = CharsetUtil.getCharsetStream(in, charset);
+                    charset = charPair.getRight();
+                    in = charPair.getLeft();
+                  }
                   in = FilterUtil.getCrawlFilteredStream(au, in, charset,
                       cu.getContentType());
                   extractor.extractUrls(au, in, charset,

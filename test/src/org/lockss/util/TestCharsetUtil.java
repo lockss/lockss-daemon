@@ -526,7 +526,7 @@ public class TestCharsetUtil extends LockssTestCase {
                                      String expectedCharset)
      throws IOException {
       Pair<Reader, String> p =
-        CharsetUtil.getCharsetReader(new ByteArrayInputStream(bytes));
+        CharsetUtil.getCharsetReader(new ByteArrayInputStream(bytes), expectedCharset);
       assertEquals(expectedCharset, p.getRight());
       StringBuilder sb = new StringBuilder();
       char[] buf = new char[1024];

@@ -58,10 +58,14 @@ public class HTTPConfigFile extends BaseConfigFile {
   public static final String PARAM_DATA_TIMEOUT = PREFIX + "timeout.data";
   public static final long DEFAULT_DATA_TIMEOUT = 10 * Constants.MINUTE;
 
+  public static final String PARAM_CHARSET_UTIL = PREFIX + "charset.util";
+  public static final boolean DEFAULT_CHARSET_UTIL = true;
+
   private String m_httpLastModifiedString = null;
 
   private LockssUrlConnectionPool m_connPool;
   private boolean checkAuth = false;
+  private boolean charsetUtil = true;
 
   public HTTPConfigFile(String url) {
     super(url);
@@ -219,8 +223,14 @@ public class HTTPConfigFile extends BaseConfigFile {
       }
       InputStream in = conn.getUncompressedResponseInputStream();
       String ctype = conn.getResponseContentType();
+      Reader rdr;
       String charset = HeaderUtil.getCharsetOrDefaultFromContentType(ctype);
-      Reader rdr = new InputStreamReader(in, charset);
+      if(charsetUtil) {
+         rdr = CharsetUtil.getCharsetReader(in, charset).getLeft();
+      }
+      else {
+        rdr = new InputStreamReader(in, charset);
+      }
       String body = StringUtil.fromReader(rdr, 10000);
       if (StringUtil.isNullString(body)) {
 	return msg;

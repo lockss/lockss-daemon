@@ -36,6 +36,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
+import org.apache.commons.lang3.tuple.Pair;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
 import org.lockss.crawler.*;
@@ -83,7 +84,12 @@ public class BaseUrlFetcher implements UrlFetcher {
     Configuration.PREFIX + "baseuc.stopWatchdogDuringPause";
   public static final boolean DEFAULT_STOP_WATCHDOG_DURING_PAUSE = false;
 
-  
+
+  /** If true will use CharsetUtil for charset determination */
+  public static final String PARAM_CHARSET_UTIL =
+    Configuration.PREFIX + "charsetUtil";
+  public static final boolean DEFAULT_CHARSET_UTIL = true;
+
 
   protected final String origUrl;	// URL with which I was created
   protected String fetchUrl;		// possibly affected by redirects
@@ -106,7 +112,8 @@ public class BaseUrlFetcher implements UrlFetcher {
   protected Crawler.CrawlerFacade crawlFacade;
   protected LockssWatchdog wdog;
   protected CrawlUrl curl;
-  
+  protected boolean charsetUtil = DEFAULT_CHARSET_UTIL;
+
   public BaseUrlFetcher(Crawler.CrawlerFacade crawlFacade, String url) {
     this.origUrl = url;
     this.fetchUrl = url;
@@ -522,9 +529,16 @@ public class BaseUrlFetcher implements UrlFetcher {
       }
       input.mark(CurrentConfig.getIntParam(PARAM_LOGIN_CHECKER_MARK_LIMIT,
 					   DEFAULT_LOGIN_CHECKER_MARK_LIMIT));
-      Reader reader =
-	new InputStreamReader(input,
-			      AuUtil.getCharsetOrDefault(uncachedProperties));
+      Reader reader;
+      String charset = AuUtil.getCharsetOrDefault(uncachedProperties);
+      if(charsetUtil) {
+        Pair<java.io.Reader,String> rpair =
+          CharsetUtil.getCharsetReader(input, charset);
+        reader = rpair.getLeft();
+      }
+      else {
+        reader = new InputStreamReader(input, charset);
+      }
       try {
         if (checker.isLoginPage(headers, reader)) {
           throw new CacheException.PermissionException("Found a login page");

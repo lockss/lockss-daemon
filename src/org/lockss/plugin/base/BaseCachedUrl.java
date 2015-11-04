@@ -38,6 +38,7 @@ import java.net.*;
 import de.schlichtherle.truezip.file.*;
 //import de.schlichtherle.truezip.fs.*;
 
+import org.apache.commons.lang3.tuple.Pair;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
@@ -77,6 +78,11 @@ public class BaseCachedUrl implements CachedUrl {
   static final boolean DEFAULT_INCLUDED_ONLY = true;
 
   public static final String DEFAULT_METADATA_CONTENT_TYPE = "text/html";
+
+  /** If true will use CharsetUtil for charset determination */
+  public static final String PARAM_CHARSET_UTIL = PREFIX + "charsetUtil";
+  public static final boolean DEFAULT_CHARSET_UTIL = true;
+
 
   public BaseCachedUrl(ArchivalUnit owner, String url) {
     this.au = owner;
@@ -253,9 +259,17 @@ public class BaseCachedUrl implements CachedUrl {
 
   public Reader openForReading() {
     try {
-      return
-	new BufferedReader(new InputStreamReader(getUnfilteredInputStream(),
-						 getEncoding()));
+      if (CurrentConfig.getBooleanParam(PARAM_CHARSET_UTIL,
+                                        DEFAULT_CHARSET_UTIL)) {
+        Pair<Reader,String> rpair =
+          CharsetUtil.getCharsetReader(getUnfilteredInputStream(),
+                                       HeaderUtil.getCharsetFromContentType(getContentType()));
+        return  rpair.getLeft();
+      }
+      else {
+        return new BufferedReader( new InputStreamReader(getUnfilteredInputStream(),
+                                                         getEncoding()));
+      }
     } catch (IOException e) {
       // XXX Wrong Exception.  Should this method be declared to throw
       // UnsupportedEncodingException?

@@ -40,12 +40,14 @@ import java.io.Reader;
 import java.util.Collection;
 import java.util.Iterator;
 
+import org.apache.commons.lang3.tuple.Pair;
 import org.lockss.crawler.PermissionRecord.PermissionStatus;
 import org.lockss.daemon.Crawler;
 import org.lockss.daemon.PermissionChecker;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.FetchedUrlData;
 import org.lockss.plugin.base.SimpleUrlConsumer;
+import org.lockss.util.CharsetUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StreamUtil;
 
@@ -114,9 +116,13 @@ public class PermissionUrlConsumer extends SimpleUrlConsumer {
 
       // XXX Some PermissionCheckers close their stream.  This is a
       // workaround until they're fixed.
-      Reader reader =
-	new InputStreamReader(new StreamUtil.IgnoreCloseInputStream(is),
-			      charset);
+
+      Reader reader;
+      // todo: wrap this in param check
+      Pair<InputStream,String> charPair = CharsetUtil.getCharsetStream(is, charset);
+      charset = charPair.getRight();
+      is = charPair.getLeft();
+    	reader =new InputStreamReader(new StreamUtil.IgnoreCloseInputStream(is), charset);
       boolean perm = checker.checkPermission(crawlFacade, reader, fud.fetchUrl);
       try {
         is.reset();
