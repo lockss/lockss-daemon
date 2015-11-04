@@ -31,6 +31,7 @@ package org.lockss.plugin.medknow;
 
 import java.io.*;
 
+import org.apache.commons.io.IOUtils;
 import org.lockss.util.*;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
@@ -48,8 +49,7 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
 
 
   private static final String citationCounts =
-      "<div><table><tr>" +
-          "<td class=\"articlepage\" >" +
+          "<table class=\"articlepage\" >" +
           "<font class=\"CorrsAdd\">" +
           "<img src=\"http://api.elsevier.com/content/abstract/citation-count?pubmed_id=2352505\">" +
           "<div style=\"float: left; border:1px solid #ddd;padding:4px;\">" +
@@ -87,8 +87,7 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
           "</table>" +
           "</div>" +
           "</font>" +
-          "</td>" +
-          "</tr></table></div>";
+          "</table>";
 
   private static final String  tocHtml = 
       "<table>" +
@@ -151,24 +150,331 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
 
 
   private static final String articleHtml = 
-      "<div><table><tr><td class=\"articlepage\" >" +
+      "<div><table><tr><td><table class=\"articlepage\" >" +
           "<div>"+
           "<font class=\"AuthorAff\">Foo, Blah, Blah</font>" +
           "</div>" +
-          "</td></tr></table></div>";
+          "</table></td></tr></table></div>";
 
   private static final String articleHtmlKept = 
-      "<td class=\"articlepage\" >" +
+      "<table class=\"articlepage\" >" +
           "<div></div>" +
-          "</td>";
+          "</table>";
 
-  private static final String onlyKept = "<td class=\"articlepage\" ></td>";
+  private static final String onlyKept = "<table class=\"articlepage\" ></table>";
 
+  private static final String bigTOC = "<body>" +
+      "<table border=\"0\" width=\"1000\" align=\"center\"  cellspacing=\"0\" cellpadding=\"0\" >" +
+      "<tr>" +
+      "<td width=\"78%\" valign=\"top\" height=\"5px\">" +
+      "</td>" +
+      "<td width=\"2%\" valign=\"top\" height=\"5px\">" +
+      "</td>" +
+      "<td width=\"20%\" valign=\"top\" height=\"5px\">" +
+      "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td valign=\"top\" class=\"empty\">   " +
+      "<form name=\'saf\' action=\'srchaction.asp\' method=\'post\'>" +
+      "<div id=\"exp1\" class=\"expdiv\">" +
+      "<div style=\'padding:5px;border:1px solid #ddd;background-color:#eaeaea\'>" +
+      "<b>Export selected to</b>" +
+      "</br>" +
+      "<div>" +
+      "<input type=\'radio\' value=\'1\' name=\'t\'>Endnote</div>" +
+      "<div>" +
+      "<input type=\'radio\' value=\'2\' name=\'t\'>Reference Manager</div>" +
+      "<div>" +
+      "<input type=\'radio\' value=\'3\' name=\'t\'>Procite</div>" +
+      "<div>" +
+      "<input type=\'radio\' value=\'4\' name=\'t\'>Medlars Format</div>" +
+      "<div>" +
+      "<input type=\'radio\' value=\'5\' name=\'t\'>RefWorks Format</div>" +
+      "<div>" +
+      "<input type=\'radio\' value=\'6\' name=\'t\'>BibTex Format</div>" +
+      "<div align=\'right\'>" +
+      "<input type=\'submit\' name=\'Apply\' value=\'Apply\'>" +
+      "</div>" +
+      "</div>" +
+      "</div>" +
+      "&nbsp;<font class=\"pageHead\"> <img src=\"images/aboutbul.gif\" alt=\"\">&nbsp;Table of Contents </font>" +
+      "<br>" +
+      "<table border=\"0\" width=\"100%\" cellspacing=\"0\" cellpadding=\"0\" class=\"articlepage\">" +
+      "<tr>" +
+      "<td width=\'20%\' valign=\'top\' align=\'left\'>" +
+      "<img alt=\'Coverpage\' border=\'0\'>" +
+      "</td>" +
+      "<td valign=\'top\' width=\'80%\'>" +
+      "<table width=\'100%\' cellpadding=\'0\' cellspacing=\'0\' border=\'0\' class=\'body\'>" +
+      "<tr>" +
+      "<td valign=\'top\' width=\'50%\'>" +
+      "<b>April-June&nbsp;2014</b>" +
+      "<br>Volume 11&nbsp;|&nbsp;Issue 2" +
+      "<br>Page Nos. 97-200<br>" +
+      "<br>Online since Tuesday, May 20, 2014<br>" +
+      "<br>" +
+      "Accessed 33,012 times." +
+      "<br>" +
+      "<br>" +
+      "<b>PDF access policy</b>" +
+      "<br>Full text access is free in HTML pages; however the journal allows PDF access only to subscribers." +
+      "<br>" +
+      "<br>" +
+      "<b>EPub access policy</b>" +
+      "<br>reserved only for the paid subscribers." +
+      "</td>" +
+      "<td width=\'50%\' valign=\'top\'>" +
+      "</td>" +
+      "</tr>" +
+      "</table>" +
+      "</tr>" +
+      "<tr>" +
+      "<td colspan=\'3\'height=\'10px\'>" +
+      "</td>" +
+      "</tr>" +
+      "</table>" +
+      "<input type=\'hidden\' name=\'__adm\' value=\'\'>" +
+      "</form>" +
+      "</td> " +
+      "<td width=\"2%\" valign=\"top\" class=\"empty\" >" +
+      "</td>" +
+      "<td width=\"20%\" valign=\"top\" class=\"empty\" >" +
+      "<br>" +
+      "</td>" +
+      "</table>" +
+  "</body>";
+  
+  private static String bigTOCFiltered = "";
+  
+  private static String bigAbs = "<body>" +
+      "<table border=\"0\" width=\"1000\" align=\"center\"  cellspacing=\"0\" cellpadding=\"0\">" +
+      "<tr>" +
+      "<td width=\"78%\" valign=\"top\" height=\"3\" class=\"empty\">" +
+      "<table border=\"0\" width=\"100%\" class=\"articlepage\">" +
+      "<tr>" +
+      "<td width=\"100%\" colspan=\"2\" height=\"15\">" +
+      "<font class=\"tocAT\">" +
+      "<b>ORIGINAL ARTICLE</b>" +
+      "</font>" +
+      "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"100%\" height=\"5\" colspan=\"2\">" +
+      "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"100%\" colspan=\"2\">" +
+      "<b>Year </b>: 2024&nbsp; |&nbsp; <b>Volume</b>" +
+      ": 11&nbsp;" +
+      "|&nbsp; <b>Issue</b> : 24&nbsp; |&nbsp; <b>Page</b> : 101-104</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"100%\" colspan=\"2\">" +
+      "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"100%\" colspan=\"2\">" +
+      "<P>" +
+      "<font class=\"sTitle\">Renal cell carcinoma in children and adolescence: Our experience</font>" +
+      "<br>" +
+      "<br>" +
+      "<font class=\"articleAuthor\">" +
+      "<a target=\'_blank\' href=\'/searchresult.asp?search=\'>FOO</a>" +
+      "<sup>1</sup>, <a target=\'_blank\' href=\'/searchresult.asp?search=\'>FOO</a>" +
+      "<sup>2</sup>, <a target=\'_blank\' href=\'/searchresult.asp?search=\'>FOO</a>" +
+      "<sup>2</sup>, <a target=\'_blank\' href=\'/searchresult.asp?search=\'>FOO</a>" +
+      "<sup>2</sup>, <a target=\'_blank\' href=\'/searchresult.asp?search=\'>FOO</a>" +
+      "<sup>2</sup>, <a target=\'_blank\' href=\'/searchresult.asp?search=\'>FOO</a>" +
+      "<sup>2</sup>" +
+      "</font>" +
+      "<br>" +
+      "<font class=\"AuthorAff\">" +
+      "<sup>1</sup>&nbsp;Department of Urology, BAR, <br/>" +
+      "<sup>2</sup>&nbsp;Department of Urology, PGIMER &amp; SSKM Hospital, Kolkata, West Bengal, India<br/>" +
+      "</font>" +
+      "</p>" +
+      "<p>" +
+      "<font class=\"CorrsAdd\">" +
+      "<b>Correspondence Address</b>:<br>" +
+      "FOO, <br>India<br>" +
+      "<a href=\'login.asp?rd=article.asp?issn=0189-6725;year=2024;volume=11;issue=24;spage=101;epage=104;aulast=FOO;type=0\'>" +
+      "<img border=\'0\' src=\"http://www.medknow.com/images/email.gif\" alt=\"Login to access the Email id\">" +
+      "</a>" +
+      "<p>" +
+      "<b>Source of Support:</b> None, <b>Conflict of Interest:</b> None</p>" +
+      "<div  style=\'overflow: hidden;float:left;width:100%;padding:10px;border:0px solid #ddd;\'>" +
+      "</div>" +
+      "<br>" +
+      "<p>" +
+      "<b>DOI:</b>&nbsp;10.4103/12345<br/>" +
+      "</p>" +
+      "<p>" +
+      "<a target=\'_blank\' href=\'http://www.copyright.com/ccc/openurl.do?sid=Medknow&issn=0189-6725&servicename=all&WT.mc_id=Medknow\'>" +
+      "<img border=\'0\' src=\'http://www.medknow.com/journals/images/gp.gif\' alt=\'Get Permissions\'>" +
+      "</a>" +
+      "</p>" +
+      "</font>" +
+      "</p>" +
+      "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"100%\" colspan=\"2\" height=\"10\">" +
+      "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"100%\" colspan=\"2\">" +
+      "<b>Background:</b> Literature on foo </td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"100%\" colspan=\"2\" height=\"10\">" +
+      "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"100%\" colspan=\"2\">" +
+      "<br>" +
+      "<br>" +
+      "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"100%\" colspan=\"2\" height=\"20\">" +
+      "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"100%\" colspan=\"2\">[<a href=\"article.asp?issn=0189-6725;year=2024;volume=11;issue=24;spage=101;epage=104;aulast=FOO\">FULL TEXT</a>] " +
+      "[<a href=\"article.asp?issn=0189-6725;year=2024;volume=11;issue=24;spage=101;epage=104;aulast=FOO;type=2\">PDF</a>]*</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"100%\" colspan=\"2\" height=\"15\">" +
+      "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"50%\">" +
+      "<a href=\"printarticle.asp?issn=0189-6725;year=2024;volume=11;issue=24;spage=101;epage=104;aulast=FOO;type=0\" target=\"_blank\">" +
+      "<img border=\"0\" src=\"templates/icon_print.gif\" alt=\"Print this article\">" +
+      "</a>&nbsp;&nbsp;&nbsp;&nbsp;" +
+      "<a href=\"emailArticle.asp?issn=0189-6725;year=2024;volume=11;issue=24;spage=101;epage=104;aulast=FOO;type=0\">" +
+      "<img border=\"0\" src=\"templates/icon_mail.gif\" alt=\"Email this article\">" +
+      "</a>" +
+      "</td>" +
+      "<td width=\"50%\">" +
+      "</td>" +
+      "</tr>" +
+      "</table>" +
+      "</td>" +
+      "</tr>" +
+      "</table>" +
+      "</body>";
+  
+  private static String bigAbsFiltered = 
+      "<table border=\"0\" width=\"100%\" class=\"articlepage\">" +
+      "<tr>" +
+      "<td width=\"100%\" colspan=\"2\" height=\"15\">" +
+      "<font class=\"tocAT\">" +
+      "<b>ORIGINAL ARTICLE</b>" +
+      "</font>" +
+      "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"100%\" height=\"5\" colspan=\"2\">" +
+      "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"100%\" colspan=\"2\">" +
+      "<b>Year </b>: 2024&nbsp; |&nbsp; <b>Volume</b>" +
+      ": 11&nbsp;" +
+      "|&nbsp; <b>Issue</b> : 24&nbsp; |&nbsp; <b>Page</b> : 101-104</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"100%\" colspan=\"2\">" +
+      "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"100%\" colspan=\"2\">" +
+      "<P>" +
+      "<font class=\"sTitle\">Renal cell carcinoma in children and adolescence: Our experience</font>" +
+      "<br>" +
+      "<br>" +
+      "<font class=\"articleAuthor\">" +
+      "<a target=\'_blank\' href=\'/searchresult.asp?search=\'>FOO</a>" +
+      "<sup>1</sup>, <a target=\'_blank\' href=\'/searchresult.asp?search=\'>FOO</a>" +
+      "<sup>2</sup>, <a target=\'_blank\' href=\'/searchresult.asp?search=\'>FOO</a>" +
+      "<sup>2</sup>, <a target=\'_blank\' href=\'/searchresult.asp?search=\'>FOO</a>" +
+      "<sup>2</sup>, <a target=\'_blank\' href=\'/searchresult.asp?search=\'>FOO</a>" +
+      "<sup>2</sup>, <a target=\'_blank\' href=\'/searchresult.asp?search=\'>FOO</a>" +
+      "<sup>2</sup>" +
+      "</font>" +
+      "<br>" +
+      "</p>" +
+      "<p>" +
+      "</p>" +
+      "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"100%\" colspan=\"2\" height=\"10\">" +
+      "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"100%\" colspan=\"2\">" +
+      "<b>Background:</b> Literature on foo </td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"100%\" colspan=\"2\" height=\"10\">" +
+      "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"100%\" colspan=\"2\">" +
+      "<br>" +
+      "<br>" +
+      "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"100%\" colspan=\"2\" height=\"20\">" +
+      "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"100%\" colspan=\"2\">[<a href=\"article.asp?issn=0189-6725;year=2024;volume=11;issue=24;spage=101;epage=104;aulast=FOO\">FULL TEXT</a>] " +
+      "[<a href=\"article.asp?issn=0189-6725;year=2024;volume=11;issue=24;spage=101;epage=104;aulast=FOO;type=2\">PDF</a>]*</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"100%\" colspan=\"2\" height=\"15\">" +
+      "</td>" +
+      "</tr>" +
+      "<tr>" +
+      "<td width=\"50%\">" +
+      "<a href=\"printarticle.asp?issn=0189-6725;year=2024;volume=11;issue=24;spage=101;epage=104;aulast=FOO;type=0\" target=\"_blank\">" +
+      "<img border=\"0\" src=\"templates/icon_print.gif\" alt=\"Print this article\">" +
+      "</a>&nbsp;&nbsp;&nbsp;&nbsp;" +
+      "<a href=\"emailArticle.asp?issn=0189-6725;year=2024;volume=11;issue=24;spage=101;epage=104;aulast=FOO;type=0\">" +
+      "<img border=\"0\" src=\"templates/icon_mail.gif\" alt=\"Email this article\">" +
+      "</a>" +
+      "</td>" +
+      "<td width=\"50%\">" +
+      "</td>" +
+      "</tr>" +
+      "</table>";
 
   /*
    *  Compare Html and HtmlHashFiltered
    */
+  
+  public void testBigTOC() throws Exception {
 
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(bigTOC),
+        Constants.DEFAULT_ENCODING);
+
+    assertEquals(bigTOCFiltered, StringUtil.fromInputStream(actIn));
+
+  }
+  public void testBigABS() throws Exception {
+
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(bigAbs),
+        Constants.DEFAULT_ENCODING);
+
+    assertEquals(bigAbsFiltered, StringUtil.fromInputStream(actIn));
+
+  }
   public void testAbstract() throws Exception {
 
     InputStream actIn = fact.createFilteredInputStream(mau,
@@ -193,7 +499,6 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
         Constants.DEFAULT_ENCODING);
     assertEquals(tocHtmlKept, StringUtil.fromInputStream(actIn));
   }
-
 
 
 }

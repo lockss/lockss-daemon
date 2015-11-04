@@ -32,20 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.medknow;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.InputStream;
-import java.util.Arrays;
-
-import org.apache.commons.io.IOUtils;
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
-import org.htmlparser.nodes.TagNode;
-import org.htmlparser.tags.CompositeTag;
-import org.htmlparser.tags.Div;
-import org.htmlparser.tags.ImageTag;
-import org.htmlparser.tags.LinkTag;
+import org.htmlparser.tags.TableTag;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -71,13 +62,23 @@ public class MedknowHtmlHashFilterFactory implements FilterFactory {
       InputStream in,
       String encoding)
           throws PluginException {
-
     HtmlFilterInputStream filtered = new HtmlFilterInputStream(
         in,
         encoding,
         new HtmlCompoundTransform(
             /*
              * KEEP: throw out everything but main content areas
+             * examples to look at -
+             * toc page
+             *   http://www.japtr.org/showbackIssue.asp?issn=2231-4040;year=2013;volume=4;issue=1 
+             * full-text page
+             *   http://www.japtr.org/article.asp?issn=2231-4040;year=2013;volume=4;issue=1;spage=4;epage=8;aulast=Chauhan
+             *   
+             * This is quite tricky because very little of the html is usefully labeled
+             * On the TOC, just get the article titles, authors and doi information
+             * On the article page, just get the main content box
+             *   being careful to differentiate the same name table on the TOC
+             *   And then within the article page, remove pieces that are going to change over time (citation information, etc)
              */
             HtmlNodeFilterTransform.include(new OrFilter(new NodeFilter[] {
                 // KEEP toc section titles [TOC]
@@ -86,9 +87,30 @@ public class MedknowHtmlHashFilterFactory implements FilterFactory {
                 HtmlNodeFilters.tagWithAttribute("td", "class", "articleTitle"),
                 // KEEP each toc article author/doi info [TOC]
                 HtmlNodeFilters.tagWithAttribute("td", "class", "sAuthor"),
-                // abstract page is harder - we have to take in <td class="articlepage" to get the content but must exclude LOTS
-                // KEEP page content portion of article page [abs, full, citation landing]
-                HtmlNodeFilters.tagWithAttribute("td", "class", "articlepage"),
+                // we have to include this one for the article pages
+                // but it means lots of exclusions in the next filter)
+                //HtmlNodeFilters.tagWithAttribute("table",  "class", "articlepage"),
+                // [ABSTRACT,FULL, TOC]
+                // we have to take in <table class="articlepage" to get the content 
+                // but don't want this table on the TOC
+                // identify the TOC version by finding the access policy text
+                new NodeFilter() {
+                  @Override
+                  public boolean accept(Node node) {
+                    if (node instanceof TableTag) {
+                      String tclass = ((TableTag) node).getAttribute("class");
+                      if(tclass != null && !tclass.isEmpty() && "articlepage".equals(tclass)) {
+                        String longContents = ((TableTag)node).getStringText();
+                        // the PDF access policy is stated on TOC
+                        if (!(longContents.toLowerCase().contains("pdf access policy"))) {
+                          return true;
+                        }
+                      }
+                    }
+                    return false;
+                  }
+                },
+                
             })),
             /*
              * DROP: filter remaining content areas
@@ -118,6 +140,7 @@ public class MedknowHtmlHashFilterFactory implements FilterFactory {
                 // in images.  This also takes out the "correspondence address" through
                 // the doi but it gets the job done - and the doi is also on the TOC
                 HtmlNodeFilters.tagWithAttribute("font", "class", "CorrsAdd"),
+                // do NOT take TOC per-article link sections - variable over time
 
             }))
             )
@@ -126,22 +149,6 @@ public class MedknowHtmlHashFilterFactory implements FilterFactory {
     return filtered;
 
   }
-
-  /*
-  public static void main(String[] args) throws Exception {
-    for (String file : Arrays.asList("/tmp/jpmg/toc1",
-                "/tmp/jpmg/toc2",
-                "/tmp/jpmg/abs1",
-                "/tmp/jpmg/abs2",
-                "/tmp/jpmg/full1",
-                "/tmp/jpmg/full2",
-                "/tmp/jpmg/cit2",
-                "/tmp/jpmg/cit1")) {
-      IOUtils.copy(new MedknowHtmlHashFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
-                   new FileOutputStream(file + ".out"));
-    }
-  }
-  */
 
 }
 
