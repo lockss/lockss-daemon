@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -140,6 +140,27 @@
       <entry>
         <string>*</string>
         <string>dk.dkdemopln.DkDemoSourceXmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%s%s/%s/", base_url, dir_name, journal_id</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>"%s%s/%s/%d/%s/", base_url, dir_name, journal_id, year, volume</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>"%s%s/%s/%d/%s/%s/", base_url, dir_name, journal_id, year, volume, issue</string>
+      </entry>
+      <entry>
+        <string>au_article</string>
+        <string>"%s%s/%s/%d/%s/%s/%s/", base_url, dir_name, journal_id, year, volume, issue, article</string>
       </entry>
     </map>
   </entry>
