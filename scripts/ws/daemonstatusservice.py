@@ -33,11 +33,12 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.3.2'
+__version__ = '0.3.3'
 
 import getpass
 import itertools
 import optparse
+import os.path
 import sys
 
 import DaemonStatusServiceImplService_client
@@ -308,9 +309,9 @@ class _DaemonStatusServiceOptions(object):
     super(_DaemonStatusServiceOptions, self).__init__()
     if len(args) > 0: parser.error('extraneous arguments: %s' % (' '.join(args)))
     if len(filter(None, [opts.get_au_status, opts.get_auids, opts.get_auids_names, opts.get_peer_agreements, opts.get_platform_configuration, opts.is_daemon_ready, opts.is_daemon_ready_quiet, opts.query_aus])) != 1:
-      parser.error('exactly one of --get-au-status, --get-auids, --get-auids-names, --get-peer-agreements, --get-platform-configuration, --is-daemon-ready, --is-daemon-ready-quiet, --query_aus is required')
-    if len(opts.auid) + len(opts.auids) > 0 and not any([opts.get_auids, opts.get_auids_names, opts.get_au_status]):
-      parser.error('--auid, --auids can only be applied to --get-auids, --get-auids-names, --get-au-status')
+      parser.error('exactly one of --get-au-status, --get-auids, --get-auids-names, --get-peer-agreements, --get-platform-configuration, --is-daemon-ready, --is-daemon-ready-quiet, --query-aus is required')
+    if len(opts.auid) + len(opts.auids) > 0 and not any([opts.get_au_status, opts.get_auids, opts.get_auids_names, opts.get_peer_agreements]):
+      parser.error('--auid, --auids can only be applied to --get-au-status, --get-auids, --get-auids-names, --get-peer-agreements')
     if opts.select and not any([opts.get_au_status, opts.get_platform_configuration, opts.query_aus]):
       parser.error('--select can only be applied to --get-au-status, --get-platform-configuration, --query-aus')
     if opts.where and not any([opts.query_aus]):
@@ -576,9 +577,9 @@ def _do_query_aus(options):
     data = dict([(((k[0],), (k[1], k[2])), v) for k, v in data.iteritems()])
     _output_table(options, data, ['AUID'], [sorted(options.hosts), [_QUERY_AUS[k][0] for k in options.select]])
 
-# Last modified 2015-08-10
+# Last modified 2015-08-31
 def _file_lines(fstr):
-  with open(fstr) as f: ret = filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f])
+  with open(os.path.expanduser(fstr)) as f: ret = filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f])
   if len(ret) == 0: sys.exit('Error: %s contains no meaningful lines' % (fstr,))
   return ret
 
