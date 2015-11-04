@@ -135,10 +135,14 @@ then
       if ! diff $tpath/done_cks.txt $tpath/done_gln.txt > $tpath/done_diff.txt
       then
         echo "***AU status diffs: mark ready in GLN***"
-        #cat $tpath/done_diff.txt
-        cat $tpath/done_diff.txt | grep "^< " | sed s/..// | head -n20
+        if [[ $opt_tdb_file == "" ]]
+        then
+          cat $tpath/done_diff.txt | grep "^< " | sed s/..// | head -n20
+        else
+          cat $tpath/done_diff.txt | grep "^< " | sed s/..//
+        fi
         linenumA=`cat $tpath/done_diff.txt | grep "^< " | wc -l`
-        if [ $linenumA -lt $maxnumAUsA ]
+        if [[ $linenumA -lt "$maxnumAUsA" || $opt_tdb_file != "" ]]
         then
            maxnumAUsA=$linenumA
         fi
@@ -151,3 +155,4 @@ then
 fi
 done
 exit 0
+
