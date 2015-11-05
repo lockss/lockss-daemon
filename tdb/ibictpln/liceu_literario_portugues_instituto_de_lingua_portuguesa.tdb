@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = Liceu Literário Português, Instituto de Língua Portuguesa
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
+
+  {
+
+      title <
+        name = Confluência  ;
+        eissn = 2317-4153
+      >
+
+      comment[publisher] = Liceu Literário Português, Instituto de Língua Portuguesa
+      param[base_url] = http://llp.bibliopolis.info/confluencia/rc/
+      param[journal_id] = rc
+
+      au < exists ; 2014 ; 1 ; Confluência  Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 2 ; Confluência  Volume 2015 ; 2015 ; >
+
+  }
+
+}

@@ -1,0 +1,28 @@
+{
+  publisher <
+    name = Pontifícia Universidade Católica de São Paulo e Associação Latino Americana de Literatura e Teologia
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
+
+  {
+
+      title <
+        name = Revista Brasileira de Literaturas e Teologias (Teoliterária) ;
+        eissn = 2236-9937
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo e Associação Latino Americana de Literatura e Teologia
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = teoliteraria
+
+      au < exists ; 2011 ; 1 ; Revista Brasileira de Literaturas e Teologias (Teoliterária) Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 2 ; Revista Brasileira de Literaturas e Teologias (Teoliterária) Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 3 ; Revista Brasileira de Literaturas e Teologias (Teoliterária) Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 4 ; Revista Brasileira de Literaturas e Teologias (Teoliterária) Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 5 ; Revista Brasileira de Literaturas e Teologias (Teoliterária) Volume 2015 ; 2015 ; >
+
+  }
+
+}

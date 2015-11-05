@@ -52,4 +52,38 @@
 
   }
 
+  {
+
+      title <
+        name = Veredas — Revista de Estudos Linguísticos ;
+        issn = 1415-2533 ;
+        eissn = 1982-2243
+      >
+
+      comment[publisher] = Universidade Federal de Juiz de Fora
+      param[base_url] = http://www.ufjf.br/
+      param[journal_id] = revistaveredas
+
+      au < exists ; 1997 ; 1 ; Veredas — Revista de Estudos Linguísticos Volume 1997 ; 1997 ; >
+      au < exists ; 1998 ; 2 ; Veredas — Revista de Estudos Linguísticos Volume 1998 ; 1998 ; >
+      au < exists ; 1999 ; 3 ; Veredas — Revista de Estudos Linguísticos Volume 1999 ; 1999 ; >
+      au < exists ; 2000 ; 4 ; Veredas — Revista de Estudos Linguísticos Volume 2000 ; 2000 ; >
+      au < exists ; 2001 ; 5 ; Veredas — Revista de Estudos Linguísticos Volume 2001 ; 2001 ; >
+      au < exists ; 2002 ; 6 ; Veredas — Revista de Estudos Linguísticos Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 7 ; Veredas — Revista de Estudos Linguísticos Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 8 ; Veredas — Revista de Estudos Linguísticos Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 9 ; Veredas — Revista de Estudos Linguísticos Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 10 ; Veredas — Revista de Estudos Linguísticos Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 11 ; Veredas — Revista de Estudos Linguísticos Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 12 ; Veredas — Revista de Estudos Linguísticos Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 13 ; Veredas — Revista de Estudos Linguísticos Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 14 ; Veredas — Revista de Estudos Linguísticos Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 15 ; Veredas — Revista de Estudos Linguísticos Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 16 ; Veredas — Revista de Estudos Linguísticos Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 17 ; Veredas — Revista de Estudos Linguísticos Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 18 ; Veredas — Revista de Estudos Linguísticos Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 19 ; Veredas — Revista de Estudos Linguísticos Volume 2015 ; 2015 ; >
+
+  }
+
 }

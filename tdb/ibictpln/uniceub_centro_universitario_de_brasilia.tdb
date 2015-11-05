@@ -1,0 +1,37 @@
+{
+  publisher <
+    name = UniCEUB, Centro Universitário de Brasília
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
+
+  {
+
+      title <
+        name = Universitas: Ciências da saúde ;
+        issn = 1678-5398 ;
+        eissn = 1981-9730
+      >
+
+      comment[publisher] = UniCEUB, Centro Universitário de Brasília
+      param[base_url] = http://www.publicacoes.uniceub.br/
+      param[journal_id] = cienciasaude
+
+      au < exists ; 2003 ; 1 ; Universitas: Ciências da saúde Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 2 ; Universitas: Ciências da saúde Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 3 ; Universitas: Ciências da saúde Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 4 ; Universitas: Ciências da saúde Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 5 ; Universitas: Ciências da saúde Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 6 ; Universitas: Ciências da saúde Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 7 ; Universitas: Ciências da saúde Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 8 ; Universitas: Ciências da saúde Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 9 ; Universitas: Ciências da saúde Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 10 ; Universitas: Ciências da saúde Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 11 ; Universitas: Ciências da saúde Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 12 ; Universitas: Ciências da saúde Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 13 ; Universitas: Ciências da saúde Volume 2015 ; 2015 ; >
+
+  }
+
+}

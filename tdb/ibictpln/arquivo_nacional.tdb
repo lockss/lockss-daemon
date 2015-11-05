@@ -1,0 +1,53 @@
+{
+  publisher <
+    name = Arquivo Nacional
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
+
+  {
+
+      title <
+        name = Revista Acervo ;
+        eissn = 2237-8723
+      >
+
+      comment[publisher] = Arquivo Nacional
+      param[base_url] = http://revista.arquivonacional.gov.br/
+      param[journal_id] = revistaacervo
+
+      au < exists ; 1986 ; 1 ; Revista Acervo Volume 1986 ; 1986 ; >
+      au < exists ; 1987 ; 2 ; Revista Acervo Volume 1987 ; 1987 ; >
+      au < exists ; 1988 ; 3 ; Revista Acervo Volume 1988 ; 1988 ; >
+      au < exists ; 1989 ; 4 ; Revista Acervo Volume 1989 ; 1989 ; >
+      au < exists ; 1990 ; 5 ; Revista Acervo Volume 1990 ; 1990 ; >
+      au < exists ; 1991 ; 6 ; Revista Acervo Volume 1991 ; 1991 ; >
+      au < exists ; 1992 ; 7 ; Revista Acervo Volume 1992 ; 1992 ; >
+      au < exists ; 1993 ; 8 ; Revista Acervo Volume 1993 ; 1993 ; >
+      au < exists ; 1994 ; 9 ; Revista Acervo Volume 1994 ; 1994 ; >
+      au < exists ; 1995 ; 10 ; Revista Acervo Volume 1995 ; 1995 ; >
+      au < exists ; 1996 ; 11 ; Revista Acervo Volume 1996 ; 1996 ; >
+      au < exists ; 1997 ; 12 ; Revista Acervo Volume 1997 ; 1997 ; >
+      au < exists ; 1998 ; 13 ; Revista Acervo Volume 1998 ; 1998 ; >
+      au < exists ; 1999 ; 14 ; Revista Acervo Volume 1999 ; 1999 ; >
+      au < exists ; 2000 ; 15 ; Revista Acervo Volume 2000 ; 2000 ; >
+      au < exists ; 2001 ; 16 ; Revista Acervo Volume 2001 ; 2001 ; >
+      au < exists ; 2002 ; 17 ; Revista Acervo Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 18 ; Revista Acervo Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 19 ; Revista Acervo Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 20 ; Revista Acervo Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 21 ; Revista Acervo Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 22 ; Revista Acervo Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 23 ; Revista Acervo Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 24 ; Revista Acervo Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 25 ; Revista Acervo Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 26 ; Revista Acervo Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 27 ; Revista Acervo Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 28 ; Revista Acervo Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 29 ; Revista Acervo Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 30 ; Revista Acervo Volume 2015 ; 2015 ; >
+
+  }
+
+}

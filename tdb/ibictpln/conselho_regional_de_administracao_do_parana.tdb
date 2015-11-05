@@ -1,0 +1,24 @@
+{
+  publisher <
+    name = Conselho Regional de Administração do Paraná
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
+
+  {
+
+      title <
+        name = Revista Eletrônica Científica do CRA-PR - RECC ;
+        eissn = 2358-7083
+      >
+
+      comment[publisher] = Conselho Regional de Administração do Paraná
+      param[base_url] = http://www.cra-pr.org.br/revista/
+      param[journal_id] = recc
+
+      au < expected ; 2015 ; 1 ; Revista Eletrônica Científica do CRA-PR - RECC Volume 2015 ; 2015 ; >
+
+  }
+
+}

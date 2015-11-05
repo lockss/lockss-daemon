@@ -1,0 +1,33 @@
+{
+  publisher <
+    name = Centro de Estudos e Pesquisas em Educação, Cultura e Ação Comunitária
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
+
+  {
+
+      title <
+        name = Cadernos Cenpec ;
+        eissn = 2237-9983
+      >
+
+      comment[publisher] = Centro de Estudos e Pesquisas em Educação, Cultura e Ação Comunitária
+      param[base_url] = http://cadernos.cenpec.org.br/cadernos/
+      param[journal_id] = cadernos
+
+      au < exists ; 2006 ; 1 ; Cadernos Cenpec Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 2 ; Cadernos Cenpec Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 3 ; Cadernos Cenpec Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 4 ; Cadernos Cenpec Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 5 ; Cadernos Cenpec Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 6 ; Cadernos Cenpec Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 7 ; Cadernos Cenpec Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 8 ; Cadernos Cenpec Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 9 ; Cadernos Cenpec Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 10 ; Cadernos Cenpec Volume 2015 ; 2015 ; >
+
+  }
+
+}
