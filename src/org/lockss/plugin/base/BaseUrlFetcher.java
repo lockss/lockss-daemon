@@ -36,7 +36,6 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
-import org.apache.commons.lang3.tuple.Pair;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
 import org.lockss.crawler.*;
@@ -85,12 +84,6 @@ public class BaseUrlFetcher implements UrlFetcher {
   public static final boolean DEFAULT_STOP_WATCHDOG_DURING_PAUSE = false;
 
 
-  /** If true will use CharsetUtil for charset determination */
-  public static final String PARAM_CHARSET_UTIL =
-    Configuration.PREFIX + "charsetUtil";
-  public static final boolean DEFAULT_CHARSET_UTIL = true;
-
-
   protected final String origUrl;	// URL with which I was created
   protected String fetchUrl;		// possibly affected by redirects
   protected RedirectScheme redirectScheme = REDIRECT_SCHEME_FOLLOW;
@@ -112,7 +105,6 @@ public class BaseUrlFetcher implements UrlFetcher {
   protected Crawler.CrawlerFacade crawlFacade;
   protected LockssWatchdog wdog;
   protected CrawlUrl curl;
-  protected boolean charsetUtil = DEFAULT_CHARSET_UTIL;
 
   public BaseUrlFetcher(Crawler.CrawlerFacade crawlFacade, String url) {
     this.origUrl = url;
@@ -531,10 +523,8 @@ public class BaseUrlFetcher implements UrlFetcher {
 					   DEFAULT_LOGIN_CHECKER_MARK_LIMIT));
       Reader reader;
       String charset = AuUtil.getCharsetOrDefault(uncachedProperties);
-      if(charsetUtil) {
-        Pair<java.io.Reader,String> rpair =
-          CharsetUtil.getCharsetReader(input, charset);
-        reader = rpair.getLeft();
+      if(CharsetUtil.inferCharset()) {
+        reader = CharsetUtil.getReader(input, charset);
       }
       else {
         reader = new InputStreamReader(input, charset);

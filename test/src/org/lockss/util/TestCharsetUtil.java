@@ -31,11 +31,9 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.util;
 
-import org.apache.commons.lang3.tuple.Pair;
 import org.lockss.test.LockssTestCase;
 
 import java.io.*;
-import java.net.URL;
 import java.nio.charset.Charset;
 
 /** 
@@ -525,12 +523,12 @@ public class TestCharsetUtil extends LockssTestCase {
    private static void assertCharset(String golden, byte[] bytes,
                                      String expectedCharset)
      throws IOException {
-      Pair<Reader, String> p =
-        CharsetUtil.getCharsetReader(new ByteArrayInputStream(bytes), expectedCharset);
-      assertEquals(expectedCharset, p.getRight());
+     InputStreamReader reader =
+        CharsetUtil.getReader(new ByteArrayInputStream(bytes), expectedCharset);
+      assertEquals(expectedCharset, Charset.forName(reader.getEncoding()).displayName());
       StringBuilder sb = new StringBuilder();
       char[] buf = new char[1024];
-      for (int n; (n = p.getLeft().read(buf)) > 0;) {
+      for (int n; (n = reader.read(buf)) > 0;) {
          sb.append(buf, 0, n);
       }
       assertEquals(golden, sb.toString());

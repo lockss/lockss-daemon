@@ -225,8 +225,8 @@ public class HTTPConfigFile extends BaseConfigFile {
       String ctype = conn.getResponseContentType();
       Reader rdr;
       String charset = HeaderUtil.getCharsetOrDefaultFromContentType(ctype);
-      if(charsetUtil) {
-         rdr = CharsetUtil.getCharsetReader(in, charset).getLeft();
+      if(CharsetUtil.inferCharset()) {
+         rdr = CharsetUtil.getReader(in, charset);
       }
       else {
         rdr = new InputStreamReader(in, charset);

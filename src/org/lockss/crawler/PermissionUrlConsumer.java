@@ -48,6 +48,7 @@ import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.FetchedUrlData;
 import org.lockss.plugin.base.SimpleUrlConsumer;
 import org.lockss.util.CharsetUtil;
+import org.lockss.util.CharsetUtil.InputStreamAndCharset;
 import org.lockss.util.Logger;
 import org.lockss.util.StreamUtil;
 
@@ -119,9 +120,11 @@ public class PermissionUrlConsumer extends SimpleUrlConsumer {
 
       Reader reader;
       // todo: wrap this in param check
-      Pair<InputStream,String> charPair = CharsetUtil.getCharsetStream(is, charset);
-      charset = charPair.getRight();
-      is = charPair.getLeft();
+      if(CharsetUtil.inferCharset()) {
+        InputStreamAndCharset isc = CharsetUtil.getCharsetStream(is, charset);
+        charset = isc.getCharset();
+        is = isc.getInStream();
+      }
     	reader =new InputStreamReader(new StreamUtil.IgnoreCloseInputStream(is), charset);
       boolean perm = checker.checkPermission(crawlFacade, reader, fud.fetchUrl);
       try {
