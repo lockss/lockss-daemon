@@ -1444,7 +1444,7 @@
 
     title <
       name = Experimental and Clinical Endocrinology & Diabetes Reports ;
-      issn = 2196-7407 ;
+      eissn = 2196-7407 ;
       doi = 10.1055/s-00025479 
 
     >
@@ -2355,10 +2355,10 @@
       name = Journal of Neurological Surgery Part A : Central European Neurosurgery ;
       issn = 2193-6315 ;
       eissn = 2193-6323 ;
-      doi = 10.500/s.00000180
+      doi = 10.1055/s-00000180
 
     >
-    param[journal_id] = 10.500/s.00000180
+    param[journal_id] = 10.1055/s-00000180
     comment[years] = 2012-current
     comment[0] = combines two earlier titles - Central European Surgery and Zentralblatt fur Neurochirurgie
     comment[1] = Minimally Invasive Neurosurgery was merged with this journal
@@ -2374,10 +2374,10 @@
       name = Journal of Neurological Surgery Part B : Skull Base ;
       issn = 2193-6331 ;
       eissn = 2193-634X ;
-      doi = 10.500/s.00000181
+      doi = 10.1055/s-00000181
 
     >
-    param[journal_id] = 10.500/s.00000181
+    param[journal_id] = 10.1055/s-00000181
     comment[years] = 2012-current
     comment[0] = under the umbrella title Journal of Neurological Surgery which combines several old titles
 
@@ -2477,10 +2477,10 @@
       name = Journal of Wrist Surgery ;
       issn = 2163-3916 ;
       eissn = 2163-3924 ;
-      doi = 10.500/s-00000183
+      doi = 10.1055/s-00000183
 
     >
-    param[journal_id] = 10.500/s-00000183
+    param[journal_id] = 10.1055/s-00000183
     comment[years] = 2012-current
 
     au < expected ; exists ; 2012 ; 2012 ; Journal of Wrist Surgery Volume 2012 ; 1 >
