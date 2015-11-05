@@ -1,0 +1,30 @@
+{
+
+  publisher <
+    name = Endocrine Society ;
+    info[contract] = 2012 ;
+    info[tester] = 8 ;
+    comment[platform] = Atypon 
+  >
+
+  plugin = org.lockss.plugin.atypon.endocrinesociety.ClockssEndocrineSocietyBooksPlugin
+  param[base_url] = http://press.endocrine.org/
+  implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_eisbn] ; name >  
+
+  {
+  
+    title <
+      name = Endocrine Society Books ;
+      type = bookSeries
+    >
+
+    au < testing ; exists ; 2015 ; 978-1-936704-82-8 ; 978-1-936704-84-2 ; 9781936704842 ; Molecular Nutrition: The Practical Guide > 
+    au < testing ; exists ; 2015 ; 978-1-936704-84-2 ; 978-1-936704-86-6 ; 9781936704866 ; A Clinical Approach to Endocrine & Metabolic Diseases, Volume 3 >
+    au < testing ; exists ; 2015 ; 978-1-936704-93-4 ; 978-1-936704-94-1 ; 9781936704941 ; 2015 Meet-The-Professor: Endocrine Case Management >
+    au < testing ; exists ; 2015 ; 978-1-936704-77-4 ; 978-1-936704-81-1 ; 9781936704811 ; Endocrine and Metabolic Medical Emergencies: A Clinician's Guide >
+    au < testing ; exists ; 2014 ; 978-1-936704-78-1 ; 978-1-936704-83-5 ; 9781936704835 ; 2014 Meet-The-Professor: Endocrine Case Management >
+    au < testing ; exists ; 2012 ; 978-1-936704-05-7 ; 978-1-936704-61-3 ; 9781936704613 ; A Clinical Approach to Endocrine & Metabolic Diseases, Volume 2 >
+    au < testing ; exists ; 2010 ; 978-1-879225-70-1 ; 978-1-936704-60-6 ; 9781936704606 ; A Clinical Approach to Endocrine & Metabolic Diseases, Volume 3 >
+    
+  }
+}
