@@ -2399,7 +2399,7 @@
     param[journal_id] = 10.1055/s-00000182
     comment[years] = 2012-current
 
-    au < testing ; exists ; 2012 ; 2012 ; Journal of Neurological Surgery Reports Volume 2012 ; 73 >
+    au < ready ; exists ; 2012 ; 2012 ; Journal of Neurological Surgery Reports Volume 2012 ; 73 >
     au < testing ; exists ; 2013 ; 2013 ; Journal of Neurological Surgery Reports Volume 2013 ; 74 >
     au < testing ; exists ; 2014 ; 2014 ; Journal of Neurological Surgery Reports Volume 2014 ; 75 >
     au < exists ; exists ; 2015 ; 2015 ; Journal of Neurological Surgery Reports Volume 2015 ; 76 >
@@ -3958,7 +3958,7 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; Radiologie up2date Volume 2009 ; 9 >
    au < ready ; exists ; 2010 ; 2010 ; Radiologie up2date Volume 2010 ; 10 >
    au < ready ; exists ; 2011 ; 2011 ; Radiologie up2date Volume 2011 ; 11 >
-   au < testing ; exists ; 2012 ; 2012 ; Radiologie up2date Volume 2012 ; 12 >
+   au < ready ; exists ; 2012 ; 2012 ; Radiologie up2date Volume 2012 ; 12 >
    au < crawling ; exists ; 2013 ; 2013 ; Radiologie up2date Volume 2013 ; 13 >
    au < crawling ; exists ; 2014 ; 2014 ; Radiologie up2date Volume 2014 ; 14 >
    au < crawling ; exists ; 2015 ; 2015 ; Radiologie up2date Volume 2015 ; 15 >
@@ -3978,7 +3978,7 @@
 
    au < doNotProcess ; exists ; 2008 ; 2008 ; Radiopraxis Volume 2008 ; 1 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Radiopraxis Volume 2009 ; 2 >
-   au < testing ; exists ; 2010 ; 2010 ; Radiopraxis Volume 2010 ; 3 >
+   au < ready ; exists ; 2010 ; 2010 ; Radiopraxis Volume 2010 ; 3 >
    au < ready ; exists ; 2011 ; 2011 ; Radiopraxis Volume 2011 ; 4 >
    au < ready ; exists ; 2012 ; 2012 ; Radiopraxis Volume 2012 ; 5 >
    au < crawling ; exists ; 2013 ; 2013 ; Radiopraxis Volume 2013 ; 6 >
@@ -4203,7 +4203,7 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Seminars in Interventional Radiology Volume 2007 ; 24 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Seminars in Interventional Radiology Volume 2008 ; 25 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Seminars in Interventional Radiology Volume 2009 ; 26 >
-   au < testing ; exists ; 2010 ; 2010 ; Seminars in Interventional Radiology Volume 2010 ; 27 >
+   au < ready ; exists ; 2010 ; 2010 ; Seminars in Interventional Radiology Volume 2010 ; 27 >
    au < crawling ; exists ; 2011 ; 2011 ; Seminars in Interventional Radiology Volume 2011 ; 28 >
    au < ready ; exists ; 2012 ; 2012 ; Seminars in Interventional Radiology Volume 2012 ; 29 >
    au < crawling ; exists ; 2013 ; 2013 ; Seminars in Interventional Radiology Volume 2013 ; 30 >
@@ -4253,7 +4253,7 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Seminars in Liver Disease Volume 2007 ; 27 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Seminars in Liver Disease Volume 2008 ; 28 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Seminars in Liver Disease Volume 2009 ; 29 >
-   au < testing ; exists ; 2010 ; 2010 ; Seminars in Liver Disease Volume 2010 ; 30 >
+   au < ready ; exists ; 2010 ; 2010 ; Seminars in Liver Disease Volume 2010 ; 30 >
    au < ready ; exists ; 2011 ; 2011 ; Seminars in Liver Disease Volume 2011 ; 31 >
    au < ready ; exists ; 2012 ; 2012 ; Seminars in Liver Disease Volume 2012 ; 32 >
    au < crawling ; exists ; 2013 ; 2013 ; Seminars in Liver Disease Volume 2013 ; 33 >
@@ -4289,7 +4289,7 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; Seminars in Musculoskeletal Radiology Volume 2009 ; 13 >
    au < ready ; exists ; 2010 ; 2010 ; Seminars in Musculoskeletal Radiology Volume 2010 ; 14 >
    au < ready ; exists ; 2011 ; 2011 ; Seminars in Musculoskeletal Radiology Volume 2011 ; 15 >
-   au < testing ; exists ; 2012 ; 2012 ; Seminars in Musculoskeletal Radiology Volume 2012 ; 16 >
+   au < ready ; exists ; 2012 ; 2012 ; Seminars in Musculoskeletal Radiology Volume 2012 ; 16 >
    au < crawling ; exists ; 2013 ; 2013 ; Seminars in Musculoskeletal Radiology Volume 2013 ; 17 >
    au < crawling ; exists ; 2014 ; 2014 ; Seminars in Musculoskeletal Radiology Volume 2014 ; 18 >
    au < crawling ; exists ; 2015 ; 2015 ; Seminars in Musculoskeletal Radiology Volume 2015 ; 19 >
@@ -4398,7 +4398,7 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; Seminars in Plastic Surgery Volume 2009 ; 23 >
    au < ready ; exists ; 2010 ; 2010 ; Seminars in Plastic Surgery Volume 2010 ; 24 >
    au < ready ; exists ; 2011 ; 2011 ; Seminars in Plastic Surgery Volume 2011 ; 25 >
-   au < testing ; exists ; 2012 ; 2012 ; Seminars in Plastic Surgery Volume 2012 ; 26 >
+   au < ready ; exists ; 2012 ; 2012 ; Seminars in Plastic Surgery Volume 2012 ; 26 >
    au < crawling ; exists ; 2013 ; 2013 ; Seminars in Plastic Surgery Volume 2013 ; 27 >
    au < crawling ; exists ; 2014 ; 2014 ; Seminars in Plastic Surgery Volume 2014 ; 28 >
    au < crawling ; exists ; 2015 ; 2015 ; Seminars in Plastic Surgery Volume 2015 ; 29 >
