@@ -64,7 +64,7 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
   public static final boolean DEFAULT_ENABLE_STATS = false;
   public static final String PARAM_PROCESS_FORMS =
       PREFIX + "process_forms";
-  public static final boolean DEFAULT_PROCESS_FORMS = true;
+  public static final boolean DEFAULT_PROCESS_FORMS = false;
 
   /**
    * the theLog for this class
