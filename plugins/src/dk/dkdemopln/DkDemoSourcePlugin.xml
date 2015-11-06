@@ -1,3 +1,6 @@
+<!--
+    This plugin requires org.lockss.plugin.clockss.* like a child plugin of org.lockss.plugin.clockss.ClockssSourcePlugin  
+-->
 <map>
   <entry>
     <string>plugin_status</string>
