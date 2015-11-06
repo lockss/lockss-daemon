@@ -88,7 +88,7 @@ public class ScHtmlLinkExtractorFactory implements LinkExtractorFactory {
 
   @Override
   public LinkExtractor createLinkExtractor(String mimeType) throws PluginException {
-    JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor();
+    JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor(false,false,null,null);
     registerExtractors(extractor);
     return extractor;
   }
