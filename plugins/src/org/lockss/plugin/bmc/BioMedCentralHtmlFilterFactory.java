@@ -49,16 +49,10 @@ import org.lockss.util.ReaderInputStream;
 public class BioMedCentralHtmlFilterFactory implements FilterFactory {
   
   protected static final NodeFilter[] filters = new NodeFilter[] {
-      // malformed html causing low agreement <div id="oas-
-      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "^oas-"),
       // head tag - Extreme Hash filtering!
       HtmlNodeFilters.tag("head"),
       // citation format changes or div id="topmatter" - Extreme Hash filtering!
       HtmlNodeFilters.tagWithAttribute("section", "class", "cit"),
-      // Contains variable code
-      HtmlNodeFilters.tag("script"),
-      // Contains variable alternatives to the code
-      HtmlNodeFilters.tag("noscript"),
       // remove all style tags!
       HtmlNodeFilters.tag("style"),
       // Contains ads
@@ -69,6 +63,8 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tag("link"),
       //filter out comments
       HtmlNodeFilters.comment(),
+      // malformed html causing low agreement <div id="oas-
+      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "^oas-"),
       // upper area above the article - Extreme Hash filtering!
       HtmlNodeFilters.tagWithAttribute("div", "id", "branding"),
       // left-hand area next to the article - Extreme Hash filtering!
@@ -77,6 +73,9 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "id", "article-navigation-bar"),
       // alert signup - Extreme Hash filtering!
       HtmlNodeFilters.tagWithAttribute("div", "class", "article-alert-signup-div"),
+      // Extreme Hash filtering!
+      HtmlNodeFilters.tagWithAttribute("div", "class", "wrap-nav"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "issuecover"),
       // Contains one-time names inside the page
       HtmlNodeFilters.tagWithAttribute("a", "name"),
       // Links to one-time names inside the page
@@ -125,12 +124,9 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
       // Springer branding below the footer
       HtmlNodeFilters.tagWithAttribute("div", "class", "springer"),
       
-      // Journal of Cheminformatics -  an "accesses" and/or "citations" block
-      // but the id is associated with the <h2>, not with the sibling <div>
-      
       // The text of this link changed from "About this article" to "Article metrics"
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about$"),
-      // removes mathml inline wierdnesses
+      // removes mathml inline weirdnesses
       HtmlNodeFilters.tagWithAttribute("p", "class", "inlinenumber"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "style", "display:inline$"),
       HtmlNodeFilters.tagWithAttribute("span", "class", "mathjax"),
@@ -145,6 +141,9 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
       // XXX remove temporarily as this filter is too aggressive, removes interesting info
       // XXX   like links to new aspects of articles
       // HtmlNodeFilters.tagWithAttribute("a", "onclick"),
+      
+      // Journal of Cheminformatics -  an "accesses" and/or "citations" block
+      // but the id is associated with the <h2>, not with the sibling <div>
       
       new NodeFilter() {
         @Override public boolean accept(Node node) {
@@ -179,11 +178,18 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
     }
   };
   
-  // remove div in head as it confuses html node filter
+  // HtmlNodeFilters.tag("head"),
+  // HtmlNodeFilters.tag("script"),
+  // HtmlNodeFilters.tag("noscript"),
+  // Contains variable alternatives to the code which confuse the html parser??
+  // in any case when tags are stripped in this way filtering is better
   private static final HtmlTagFilter.TagPair[] pairs = {
-      new HtmlTagFilter.TagPair("<div id=\"oas-", "</div>", true)
+      new HtmlTagFilter.TagPair("<head", "</head>"),
+      new HtmlTagFilter.TagPair("<script", "</script>"),
+      new HtmlTagFilter.TagPair("<noscript", "</noscript>"),
   };
   
+  @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
@@ -199,5 +205,5 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
     // added whitespace filter
     return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
   }
-
+  
 }
