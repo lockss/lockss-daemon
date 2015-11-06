@@ -47,11 +47,9 @@ import org.lockss.util.ListUtil;
 import org.lockss.util.ReaderInputStream;
 
 public class BMCPluginHtmlFilterFactory implements FilterFactory {
-
+  
   protected static final NodeFilter[] filters = new NodeFilter[] {
-      // malformed html causing low agreement <div id="oas-
-      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "^oas-"),
-      // head tag - Extreme Hash filtering!
+      // head tag - Extreme Hash filtering! the 3 following filters are now redundant
       HtmlNodeFilters.tag("head"),
       // Contains variable code
       HtmlNodeFilters.tag("script"),
@@ -67,6 +65,11 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tag("link"),
       //filter out comments
       HtmlNodeFilters.comment(),
+      // malformed html causing low agreement <div id="oas-
+      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "^oas-"),
+      // citation format changes and access changes - Extreme Hash filtering!
+      HtmlNodeFilters.tagWithAttribute("div", "id", "topmatter"),
+      HtmlNodeFilters.tagWithAttribute("section", "class", "cit"),
       // upper area above the article - Extreme Hash filtering!
       HtmlNodeFilters.tagWithAttribute("div", "id", "branding"),
       // left-hand area next to the article - Extreme Hash filtering!
@@ -116,6 +119,9 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about/access"),
       // A highly accessed link/glyph that may get added
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about/mostviewed"),
+      HtmlNodeFilters.tagWithAttributeRegex("a", "class", "(hidden|access)"),
+      // remove the mobile sidebar
+      HtmlNodeFilters.tagWithAttribute("div", "id", "mobile-sidebar"),
       // Institution-dependent image
       HtmlNodeFilters.tagWithAttributeRegex("img", "src", "^/sfx_links\\?"),
       // Institution-dependent link resolvers  v2 - added
@@ -127,7 +133,7 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
       
       // The text of this link changed from "About this article" to "Article metrics"
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about$"),
-      // removes mathml inline wierdnesses
+      // removes mathml inline weirdnesses
       HtmlNodeFilters.tagWithAttribute("p", "class", "inlinenumber"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "style", "display:inline$"),
       HtmlNodeFilters.tagWithAttribute("span", "class", "mathjax"),
@@ -140,7 +146,7 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
   };
   
   // HTML transform to convert all remaining nodes to plaintext nodes
-  // cannot keep up with all the continual changes to tags
+  // cannot keep up with all the frequent changes to tags
   
   protected static HtmlTransform xformAllTags = new HtmlTransform() {
     @Override
@@ -155,9 +161,15 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
     }
   };
   
-  // remove div in head as it confuses html node filter
+  // HtmlNodeFilters.tag("head"),
+  // HtmlNodeFilters.tag("script"),
+  // HtmlNodeFilters.tag("noscript"),
+  // Contains variable alternatives to the code which confuse the html parser??
+  // in any case when tags are stripped in this way filtering is better
   private static final HtmlTagFilter.TagPair[] pairs = {
-      new HtmlTagFilter.TagPair("<div id=\"oas-", "</div>", true)
+      new HtmlTagFilter.TagPair("<head", "</head>"),
+      new HtmlTagFilter.TagPair("<script", "</script>"),
+      new HtmlTagFilter.TagPair("<noscript", "</noscript>"),
   };
   
   @Override

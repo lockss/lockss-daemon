@@ -29,7 +29,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.bmc;
 
 //import java.io.File;
-import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

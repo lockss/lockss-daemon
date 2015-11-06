@@ -28,13 +28,11 @@
 
 package org.lockss.plugin.bmc;
 
-import java.io.*;
 import java.util.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.repository.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.iop.IOPScienceHtmlMetadataExtractorFactory;
@@ -158,7 +156,7 @@ public class TestBMCPluginMetadataExtractorFactory extends LockssTestCase {
     FileMetadataExtractor me = new BMCPluginHtmlMetadataExtractorFactory.BMCPluginHtmlMetadataExtractor();
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
@@ -169,7 +167,7 @@ public class TestBMCPluginMetadataExtractorFactory extends LockssTestCase {
    // assertEquals(Arrays.asList(goodAuthors), md.getList(MetadataField.FIELD_AUTHOR));
     assertEquals(goodAuthors[0], md.get(MetadataField.FIELD_AUTHOR));
     assertEquals(goodArticleTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
     
     assertEquals(goodISSN, md.get(MetadataField.FIELD_ISSN));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
@@ -197,7 +195,7 @@ public void testExtractFromBadContent() throws Exception {
   FileMetadataExtractor me = new IOPScienceHtmlMetadataExtractorFactory.IOPScienceHtmlMetadataExtractor();
   FileMetadataListExtractor mle =
     new FileMetadataListExtractor(me);
-  List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+  List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
   assertNotEmpty(mdlist);
   ArticleMetadata md = mdlist.get(0);
   assertNotNull(md);

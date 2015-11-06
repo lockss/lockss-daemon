@@ -35,7 +35,6 @@ package org.lockss.plugin.bmc;
 import java.io.*;
 
 import org.lockss.util.*;
-import org.lockss.daemon.PluginException;
 import org.lockss.test.*;
 
 public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
