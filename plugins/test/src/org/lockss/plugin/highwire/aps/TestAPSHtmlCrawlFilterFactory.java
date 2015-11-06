@@ -50,26 +50,6 @@ public class TestAPSHtmlCrawlFilterFactory extends LockssTestCase {
     mau = new MockArchivalUnit();
   }
   
-  private static final String withPager = "<div id=\"page\">" +
-      "<div class=\"panel-pane pane-highwire-node-pager\">\n" + 
-      "  <div class=\"pane-content\">\n" + 
-      "    <div class=\"pager highwire-pager pager-mini clearfix highwire-node-pager " +
-      "highwire-article-pager\">" +
-      "<span class=\"pager-prev\">" +
-      "<a class=\"pager-link-prev link-icon\" rel=\"prev\" title=\"receptor neurons\"" +
-      " href=\"/content/4/1/E1\">" +
-      "<i class=\"icon-circle-arrow-left\"></i> Previous</a></span>" +
-      "<span class=\"pager-next\">" +
-      "<a class=\"pager-link-next link-icon link-icon-right\" rel=\"next\" title=\"insulin\"" +
-      " href=\"/content/5/1/E1\">Next <i class=\"icon-circle-arrow-right\"></i></a></span>" +
-      "</div>  </div>\n" + 
-      "  </div>\n" +
-      "</div>";
-  
-  private static final String withoutPager = "<div id=\"page\">" +
-      "\n" +
-      "</div>";
-  
   private static final String withAuTT = "<div id=\"page\">\n" +
       "<div class=\"author-tooltip-name\">" +
       "<span class=\"nlm-given-names\">Nae</span>" +
@@ -92,12 +72,6 @@ public class TestAPSHtmlCrawlFilterFactory extends LockssTestCase {
   public void testFiltering() throws Exception {
     InputStream inA;
     String a;
-    
-    // node pager
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(withPager),
-        Constants.DEFAULT_ENCODING);
-    a = StringUtil.fromInputStream(inA);
-    assertEquals(withoutPager, a);
     
     // author tooltip
     inA = fact.createFilteredInputStream(mau, new StringInputStream(withAuTT),

@@ -46,8 +46,7 @@ public class APSHtmlCrawlFilterFactory extends HighWireDrupalHtmlCrawlFilterFact
   private static final Logger log = Logger.getLogger(APSHtmlCrawlFilterFactory.class);
   
   protected static NodeFilter[] filters = new NodeFilter[] {
-    // Do not crawl prev/next pager for links from APS
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-node-pager"),
+    // Because manifest pages can be incomplete, crawl pager links
     // author tool-tips changed for http://ajpheart.physiology.org/content/306/11/H1594.figures-only
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^author-tooltip"),
     // APS articles sometimes had view links, but not always
