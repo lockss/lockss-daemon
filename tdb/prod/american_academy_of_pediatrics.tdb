@@ -18,7 +18,7 @@
       param[base_url] = http://aapgrandrounds.aappublications.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; boost ; 1999 ; AAP Grand Rounds Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; down ; 1999 ; AAP Grand Rounds Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; down ; 1999 ; AAP Grand Rounds Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; down ; 2000 ; AAP Grand Rounds Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; down ; 2000 ; AAP Grand Rounds Volume 4 ; 4 >
