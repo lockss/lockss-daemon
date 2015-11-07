@@ -750,9 +750,9 @@
       au < zapped ; finished ; 2007 ; Aesthetic Surgery Journal Volume 27 ; 27 ; >
       au < zapped ; finished ; 2008 ; Aesthetic Surgery Journal Volume 28 ; 28 ; >
       au < zapped ; finished ; 2009 ; Aesthetic Surgery Journal Volume 29 ; 29 ; >
-      au < superseded ; frozen ; 2010 ; Aesthetic Surgery Journal Volume 30 [superseded] ; 30 ; >
-      au < superseded ; frozen ; 2011 ; Aesthetic Surgery Journal Volume 31 [superseded] ; 31 ; >
-      au < superseded ; frozen ; 2012 ; Aesthetic Surgery Journal Volume 32 [superseded] ; 32 ; >
+      au < superseded ; down ; 2010 ; Aesthetic Surgery Journal Volume 30 [superseded] ; 30 ; >
+      au < superseded ; down ; 2011 ; Aesthetic Surgery Journal Volume 31 [superseded] ; 31 ; >
+      au < superseded ; down ; 2012 ; Aesthetic Surgery Journal Volume 32 [superseded] ; 32 ; >
       au < superseded ; exists ; 2013 ; Aesthetic Surgery Journal Volume 33 [superseded] ; 33 ; >
       au < superseded ; exists ; 2014 ; Aesthetic Surgery Journal Volume 34 [superseded] ; 34 ; >
 
@@ -28346,15 +28346,15 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      comment[0] = Leaving Sage for Taylor & Francis in 2013.
+      comment[0] = Leaving Sage for Taylor & Francis in 2013. Backfiles available with Sage.
 
       au < manifest ; exists ; 2006 ; Management & Organizational History Volume 1 ; 1 ; >
       au < manifest ; exists ; 2007 ; Management & Organizational History Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Management & Organizational History Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Management & Organizational History Volume 4 ; 4 ; >
       au < zapped ; finished ; 2010 ; Management & Organizational History Volume 5 ; 5 ; >
-      au < finished ; crawling ; 2011 ; Management & Organizational History Volume 6 ; 6 ; >
-      au < finished ; finished ; 2012 ; Management & Organizational History Volume 7 ; 7 ; >
+      au < superseded ; down ; 2011 ; Management & Organizational History Volume 6 [superseded] ; 6 ; >
+      au < superseded ; down ; 2012 ; Management & Organizational History Volume 7 [superseded] ; 7 ; >
 
     }
 

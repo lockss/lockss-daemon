@@ -67,10 +67,10 @@
       au < finished ; finished ; 2006 ; Environment and Planning A Volume 38 ; 38 >
       au < finished ; frozen ; 2007 ; Environment and Planning A Volume 39 ; 39 >
       au < zapped ; finished ; 2008 ; Environment and Planning A Volume 40 ; 40 >
-      au < superseded ; crawling ; 2009 ; Environment and Planning A Volume 41 [superseded] ; 41 >
-      au < superseded ; crawling ; 2010 ; Environment and Planning A Volume 42 [superseded] ; 42 >
-      au < superseded ; frozen ; 2011 ; Environment and Planning A Volume 43 [superseded] ; 43 >
-      au < superseded ; crawling ; 2012 ; Environment and Planning A Volume 44 [superseded] ; 44 >
+      au < superseded ; down ; 2009 ; Environment and Planning A Volume 41 [superseded] ; 41 >
+      au < superseded ; down ; 2010 ; Environment and Planning A Volume 42 [superseded] ; 42 >
+      au < superseded ; down ; 2011 ; Environment and Planning A Volume 43 [superseded] ; 43 >
+      au < superseded ; down ; 2012 ; Environment and Planning A Volume 44 [superseded] ; 44 >
       au < superseded ; exists ; 2013 ; Environment and Planning A Volume 45 [superseded] ; 45 >
       au < doNotProcess ; exists ; 2014 ; Environment and Planning A Volume 46 ; 46 >
     
@@ -315,12 +315,12 @@
       au < finished ; crawling ; 2005 ; Perception Volume 34 ; 34 >
       au < frozen ; exists ; 2006 ; Perception Volume 35 ; 35 >
       au < frozen ; exists ; 2007 ; Perception Volume 36 ; 36 >
-      au < frozen ; exists ; 2008 ; Perception Volume 37 ; 37 >
-      au < frozen ; exists ; 2009 ; Perception Volume 38 ; 38 >
-      au < zapped ; finished ; 2010 ; Perception Volume 39 ; 39 >
-      au < finished ; frozen ; 2011 ; Perception Volume 40 ; 40 >
-      au < finished ; frozen ; 2012 ; Perception Volume 41 ; 41 >
-      au < frozen ; exists ; 2013 ; Perception Volume 42 ; 42 >
+      au < superseded ; exists ; 2008 ; Perception Volume 37 [superseded] ; 37 >
+      au < superseded ; exists ; 2009 ; Perception Volume 38 [superseded] ; 38 >
+      au < zapped ; superseded ; 2010 ; Perception Volume 39 [superseded] ; 39 >
+      au < superseded ; down ; 2011 ; Perception Volume 40 [superseded] ; 40 >
+      au < superseded ; down ; 2012 ; Perception Volume 41 [superseded] ; 41 >
+      au < superseded ; exists ; 2013 ; Perception Volume 42 [superseded] ; 42 >
       au < doNotProcess ; exists ; 2014 ; Perception Volume 43 ; 43 >
     
     }
