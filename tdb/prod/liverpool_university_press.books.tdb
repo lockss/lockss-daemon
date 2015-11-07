@@ -4,6 +4,10 @@
     name = Liverpool University Press
   >
   
+  plugin = org.lockss.plugin.atypon.liverpool.LiverpoolBooksPlugin
+  param[base_url] = http://online.liverpooluniversitypress.co.uk/
+  implicit < status ; year ; isbn ; eisbn ; param[book_eisbn] ; name >
+
   {
   
     title <
@@ -11,14 +15,68 @@
       type = bookSeries
     >
 
-    comment[moving] = from MetaPress to Atypon
-    comment[platform2] = params for journal are journal_issn and volume_name
-    
-    plugin = needs.plugin
-    param[base_url] = 
-    implicit < status ; year ; isbn ; name >
-
-    au < doNotProcess ; 2004 ; 9780853230397 ; The Acts of the Council of Chalcedon >
+    au < exists ; 1985 ; 978-0-85323-327-5 ; ; 9780853233275 ; Gregory of Tours: Life of the Fathers, Volume 1 >
+    au < exists ; 1989 ; 978-0-85323-376-3 ; ; 9780853233763 ; The Emperor Julian Panegyric and Polemic, Volume 2 >
+    au < exists ; 1987 ; 978-0-85323-076-2 ; ; 9780853230762 ; PACATUS Panegyric to the Emperor Theodosius, Volume 3 >
+    au < exists ; 1988 ; 978-0-85323-236-0 ; ; 9780853232360 ; Gregory of Tours: Glory of the Martyrs, Volume 4 >
+    au < exists ; 1988 ; 978-0-85323-226-1 ; ; 9780853232261 ; Gregory of Tours: Glory of the Confessors, Volume 5 >
+    au < exists ; 1989 ; 978-1-84631-476-6 ; ; 9781846314766 ; The Book of Pontiffs (Liber Pontificalis), Volume 6 >
+    au < exists ; 1989 ; 978-0-85323-096-0 ; ; 9780853230960 ; Chronicon Paschale 284-628 AD, Volume 7 >
+    au < exists ; 1989 ; 978-0-85323-326-8 ; ; 9780853233268 ; Iamblichus: On the Pythagorean Life, Volume 8 >
+    au < exists ; 1999 ; 978-0-85323-554-5 ; ; 9780853235545 ; Conquerors and Chroniclers of Early Medieval Spain, Volume 9 >
+    au < exists ; 1992 ; 978-0-85323-127-1 ; ; 9780853231271 ; Victor of Vita: History of the Vandal Persecution, Volume 10 >
+    au < exists ; 1991 ; 978-0-85323-426-5 ; ; 9780853234265 ; The Goths in the Fourth Century, Volume 11 >
+    au < exists ; 1992 ; 978-0-85323-436-4 ; ; 9780853234364 ; Selected Variae of Magnus Aurelius Cassiodorus Senator, Volume 12 >
+    au < exists ; 1992 ; 978-1-84631-154-3 ; ; 9781846311543 ; The Lives of the Eighth-Century Popes (Liber Pontificalis), Volume 13 >
+    au < exists ; 1993 ; 978-0-85323-208-7 ; ; 9780853232087 ; The Breviarium ab Urbe Condita of Eutropius, Volume 14 >
+    au < exists ; 1993 ; 978-0-85323-238-4 ; ; 9780853232384 ; The Seventh Century in the West-Syrian Chronicles, Volume 15 >
+    au < exists ; 1993 ; 978-0-85323-910-9 ; ; 9780853239109 ; Vegetius: Epitome of Military Science, Volume 16 >
+    au < exists ; 1994 ; 978-0-85323-218-6 ; ; 9780853232186 ; Aurelius Victor: De Caesaribus, Volume 17 >
+    au < exists ; 1994 ; 978-0-85323-378-7 ; ; 9780853233787 ; Bede: On the Tabernacle, Volume 18 >
+    au < exists ; 1994 ; 978-0-85323-368-8 ; ; 9780853233688 ; Caesarius of Arles: Life, Testament, Letters, Volume 19 >
+    au < exists ; 1995 ; 978-0-85323-479-1 ; ; 9780853234791 ; The Lives of the Ninth-Century Popes (Liber Pontificalis), Volume 20 >
+    au < exists ; 1995 ; 978-0-85323-049-6 ; ; 9780853230496 ; Bede: On the Temple, Volume 21 >
+    au < exists ; 1996 ; 978-0-85323-760-0 ; ; 9780853237600 ; Pseudo-Dionysius of Tel-Mahre Chronicle (Part III), Volume 22 >
+    au < exists ; 1995 ; 978-0-85323-179-0 ; ; 9780853231790 ; Venantius Fortunatus: Personal and Political Poems, Volume 23 >
+    au < exists ; 1996 ; 978-0-85323-931-4 ; ; 9780853239314 ; Donatist Martyr Stories, Volume 24 >
+    au < exists ; 1997 ; 978-0-85323-572-9 ; ; 9780853235729 ; Hilary of Poitiers, Volume 25 >
+    au < exists ; 1997 ; 978-0-85323-582-8 ; ; 9780853235828 ; Lives of the Visigothic Fathers, Volume 26 >
+    au < exists ; 1997 ; 978-0-85323-752-5 ; ; 9780853237525 ; Optatus: Against the Donatists, Volume 27 >
+    au < exists ; 1999 ; 978-0-85323-683-2 ; ; 9780853236832 ; Bede: A Biblical Miscellany, Volume 28 >
+    au < exists ; 1999 ; 978-0-85323-693-1 ; ; 9780853236931 ; Bede: The Reckoning of Time, Volume 29 >
+    au < exists ; 1999 ; 978-0-85323-703-7 ; ; 9780853237037 ; Ruricius of Limoges and Friends, Volume 30 >
+    au < exists ; 1999 ; 978-0-85323-564-4 ; ; 9780853235644 ; The Armenian History attributed to Sebeos, Volume 31 >
+    au < exists ; 2000 ; 978-0-85323-585-9 ; ; 9780853235859 ; The Chronicle of Pseudo-Joshua the Stylite, Volume 32 >
+    au < exists ; 2000 ; 978-0-85323-605-4 ; ; 9780853236054 ; The Ecclesiastical History of Evagrius Scholasticus, Volume 33 >
+    au < exists ; 2000 ; 978-0-85323-595-8 ; ; 9780853235958 ; Antioch as a Centre of Hellenic Culture as Observed by Libanius, Volume 34 >
+    au < exists ; 2000 ; 978-0-85323-615-3 ; ; 9780853236153 ; Neoplatonic Saints The Lives of Plotinus and Proclus by their Students, Volume 35 >
+    au < exists ; 2001 ; 978-0-85323-106-6 ; ; 9780853231066 ; Politics, Philosophy, and Empire in the Fourth Century, Volume 36 >
+    au < exists ; 2001 ; 978-0-85323-917-8 ; ; 9780853239178 ; A Christian's Guide to Greek Culture, Volume 37 >
+    au < exists ; 2002 ; 978-0-85323-588-0 ; ; 9780853235880 ; Avitus of Vienne, Volume 38 >
+    au < exists ; 2003 ; 978-0-85323-648-1 ; ; 9780853236481 ; Constantine and Christendom, Volume 39 >
+    au < exists ; 2003 ; 978-0-85323-988-8 ; ; 9780853239888 ; Lactantius, Volume 40 >
+    au < exists ; 2004 ; 978-0-85323-509-5 ; ; 9780853235095 ; Selected Letters of Libanius, Volume 41 >
+    au < exists ; 2004 ; 978-0-85323-998-7 ; ; 9780853239987 ; Cassiodorus, Volume 42 >
+    au < exists ; 2005 ; 978-0-85323-829-4 ; ; 9780853238294 ; Ambrose of Milan, Volume 43 >
+    au < exists ; 2006 ; 978-0-85323-959-8 ; ; 9780853239598 ; The Chronicle of Ireland, Volume 44 >
+    au < exists ; 2005 ; 978-0-85323-039-7 ; ; 9780853230397 ; The Acts of the Council of Chalcedon, volumes 1-3, Volume 45 >
+    au < exists ; 2008 ; 978-1-84631-159-8 ; ; 9781846311598 ; The Formularies of Angers and Marculf, Volume 46 >
+    au < exists ; 2006 ; 978-1-84631-001-0 ; ; 9781846310010 ; Bede: On Ezra and Nehemiah, Volume 47 >
+    au < exists ; 2008 ; 978-1-84631-088-1 ; ; 9781846310881 ; On Genesis, Volume 48 >
+    au < exists ; 2008 ; 978-1-84631-132-1 ; ; 9781846311321 ; Nemesius, Volume 49 >
+    au < exists ; 2008 ; 978-1-84631-161-1 ; ; 9781846311611 ; Sources for the History of the School of Nisibis, Volume 50 >
+    au < exists ; 2009 ; 978-1-84631-178-9 ; ; 9781846311789 ; The Acts of the Council of Constantinople of 553, Volume 51 >
+    au < exists ; 2009 ; 978-1-84631-209-0 ; ; 9781846312090 ; Three Political Voices from the Age of Justinian, Volume 52 >
+    au < exists ; 2010 ; 978-1-84631-216-8 ; ; 9781846312168 ; History and Hagiography from the Late Antique Sinai, Volume 53 >
+    au < exists ; 2010 ; 978-1-84631-473-5 ; ; 9781846314735 ; Orosius Seven Books of History against the Pagans, Volume 54 >
+    au < exists ; 2011 ; 978-1-84631-493-3 ; ; 9781846314933 ; The Chronicle of Pseudo-Zachariah Rhetor, Volume 55 >
+    au < exists ; 2010 ; 978-1-84631-495-7 ; ; 9781846314957 ; Bede On the Nature of Things and On Times, Volume 56 >
+    au < exists ; 2012 ; 978-1-84631-697-5 ; ; 9781846316975 ; Theophilus of Edessa's Chronicle and the Circulation of Historical Knowledge in Late Antiquity and Early Islam, Volume 57 >
+    au < exists ; 2013 ; 978-1-84631-844-3 ; ; 9781846318443 ; Bede: Commentary on Revelation, Volume 58 >
+    au < exists ; 2013 ; 978-1-84631-882-5 ; ; 9781846318825 ; Two Early Lives of Severos, Patriarch of Antioch, Volume 59 >
+    au < exists ; 2013 ; 978-1-84631-887-0 ; ; 9781846318870 ; The Funerary Speech for John Chrysostom, Volume 60 >
+    au < exists ; 2014 ; 978-1-78138-039-0 ; ; 9781781380390 ; The Acts of the Lateran Synod of 649, Volume 61 >
+    au < exists ; 2012 ; 978-1-84631-825-2 ; ; 9781846318252 ; Four Byzantine Novels, Volume 62 >
     
   }
 
