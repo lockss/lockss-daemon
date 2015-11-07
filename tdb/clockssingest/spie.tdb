@@ -26,7 +26,7 @@
     au < manifest ; exists ; 2012 ; Journal of Applied Remote Sensing Volume 6 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Applied Remote Sensing Volume 7 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Applied Remote Sensing Volume 8 ; 2014 >
-    au < ready ; exists ; 2015 ; Journal of Applied Remote Sensing Volume 9 ; 2015 >
+    au < crawling ; exists ; 2015 ; Journal of Applied Remote Sensing Volume 9 ; 2015 >
 
     }
 
@@ -40,7 +40,7 @@
     param[base_url] = http://astronomicaltelescopes.spiedigitallibrary.org/
     param[resource_id] = 166
 
-    au < ready ; exists ; 2015 ; Journal of Astronomical Telescopes, Instruments, and Systems Volume 1 ; 2015 >
+    au < crawling ; exists ; 2015 ; Journal of Astronomical Telescopes, Instruments, and Systems Volume 1 ; 2015 >
 
     }
 
@@ -190,7 +190,7 @@
     au < manifest ; exists ; 2012 ; Journal of Photonics for Energy Volume 2 ; 2012 >
     au < manifest ; exists ; 2013 ; Journal of Photonics for Energy Volume 3 ; 2013 >
     au < manifest ; exists ; 2014 ; Journal of Photonics for Energy Volume 4 ; 2014 >
-    au < ready ; exists ; 2015 ; Journal of Photonics for Energy Volume 5 ; 2015 >
+    au < crawling ; exists ; 2015 ; Journal of Photonics for Energy Volume 5 ; 2015 >
 
     }
 
