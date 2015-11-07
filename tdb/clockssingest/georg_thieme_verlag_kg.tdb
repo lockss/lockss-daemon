@@ -3006,7 +3006,7 @@
 
     au < ready ; exists ; 2013 ; 2013 ; Neonatologie Scan Volume 1 ; 1 >
     au < ready ; exists ; 2014 ; 2014 ; Neonatologie Scan Volume 2 ; 2 >
-    au < testing ; exists ; 2015 ; 2015 ; Neonatologie Scan Volume 3 ; 3 >
+    au < ready ; exists ; 2015 ; 2015 ; Neonatologie Scan Volume 3 ; 3 >
 
   }
 
@@ -4845,8 +4845,8 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; SYNFACTS Volume 2007 ; 3 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; SYNFACTS Volume 2008 ; 4 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; SYNFACTS Volume 2009 ; 5 >
-   au < testing ; exists ; 2010 ; 2010 ; SYNFACTS Volume 2010 ; 6 >
-   au < testing ; exists ; 2011 ; 2011 ; SYNFACTS Volume 2011 ; 7 >
+   au < ready ; exists ; 2010 ; 2010 ; SYNFACTS Volume 2010 ; 6 >
+   au < ready ; exists ; 2011 ; 2011 ; SYNFACTS Volume 2011 ; 7 >
    au < ready ; exists ; 2012 ; 2012 ; SYNFACTS Volume 2012 ; 8 >
    au < crawling ; exists ; 2013 ; 2013 ; SYNFACTS Volume 2013 ; 9 >
    au < crawling ; exists ; 2014 ; 2014 ; SYNFACTS Volume 2014 ; 10 >
@@ -4931,7 +4931,7 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; SYNTHESIS Volume 2009 ; 41 >
    au < testing ; exists ; 2010 ; 2010 ; SYNTHESIS Volume 2010 ; 42 >
    au < testing ; exists ; 2011 ; 2011 ; SYNTHESIS Volume 2011 ; 43 >
-   au < testing ; exists ; 2012 ; 2012 ; SYNTHESIS Volume 2012 ; 44 >
+   au < ready ; exists ; 2012 ; 2012 ; SYNTHESIS Volume 2012 ; 44 >
    au < crawling ; exists ; 2013 ; 2013 ; SYNTHESIS Volume 2013 ; 45 >
    au < testing ; exists ; 2014 ; 2014 ; SYNTHESIS Volume 2014 ; 46 >
    au < testing ; exists ; 2015 ; 2015 ; SYNTHESIS Volume 2015 ; 47 >
