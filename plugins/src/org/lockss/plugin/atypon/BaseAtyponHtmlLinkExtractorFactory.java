@@ -97,7 +97,7 @@ implements LinkExtractorFactory {
    */
   public LinkExtractor createLinkExtractor(String mimeType, Map<String, HtmlFormExtractor.FormFieldRestrictions> child_restrictor) {
     // set up the base link extractor to use specific includes and excludes
-    JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor();
+    JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor(false, true, null, null);
     setFormRestrictors(extractor, child_restrictor);
     registerExtractors(extractor);
     return extractor;
