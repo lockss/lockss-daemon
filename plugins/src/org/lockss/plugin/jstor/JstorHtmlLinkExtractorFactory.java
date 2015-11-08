@@ -31,6 +31,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.jstor;
 
+import java.util.Map;
+
 import org.lockss.extractor.HtmlFormExtractor;
 import org.lockss.extractor.JsoupHtmlLinkExtractor;
 import org.lockss.extractor.LinkExtractorFactory;
@@ -56,12 +58,25 @@ implements LinkExtractorFactory {
 
   public org.lockss.extractor.LinkExtractor createLinkExtractor(String mimeType) {
 
-    return new JstorHtmlLinkExtractor();
+    // must turnon form processng which is off by default
+    return new JstorHtmlLinkExtractor(false,true,null,null);
   }
 
   public static class JstorHtmlLinkExtractor extends JsoupHtmlLinkExtractor {
     
     private static Logger log = Logger.getLogger(JstorHtmlLinkExtractor.class);
+
+    
+    public JstorHtmlLinkExtractor(boolean enableStats, boolean processForms,
+                                Map<String,
+                                       HtmlFormExtractor
+                                           .FormFieldRestrictions> restrictors,
+                                Map<String, HtmlFormExtractor.FieldIterator>
+                                    generators) {
+      super(enableStats, processForms, restrictors, generators);
+      // TODO Auto-generated constructor stub
+    }
+
 
     @Override
     protected HtmlFormExtractor getFormExtractor(final ArchivalUnit au,
