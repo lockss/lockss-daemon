@@ -83,7 +83,8 @@ implements LinkExtractorFactory {
   @Override
   public LinkExtractor createLinkExtractor(String mimeType) {
     // set up the base link extractor to use specific includes and excludes
-    JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor();
+    // TURN on form extraction version of Jsoup for when the default is off
+    JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor(false, true, null, null);
     setFormRestrictors(extractor, null); // no additional child restrictors
     registerExtractors(extractor);
     return extractor;
@@ -171,8 +172,13 @@ implements LinkExtractorFactory {
 
 
   /*
-   * BaseAtypon form restrictors. Exclude "refworks" and "refworks-cn" from possible
-   * downloadable citation types  
+   * BaseAtypon form extraction 
+   *  INCLUDE only form name='fromCitmgr'
+   *  which live on the "action/showCitFormats?..." page
+   *    <form action="/action/downloadCitation" name="frmCitmgr" method="post" target="_self">
+   * Exclude 
+   *    "refworks" and "refworks-cn" from possible downloadable citation types  
+   * some child plugins will add additional restrictions
    */
   private Map<String, HtmlFormExtractor.FormFieldRestrictions> setUpBaseRestrictor() {
     Set<String> include = new HashSet<String>();
