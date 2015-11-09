@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2007-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2007-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -120,14 +120,14 @@ public abstract class Exploder {
       ExploderHelper helper) {
     archiveData = toExplode;
     this.crawlFacade = crawlFacade;
+    if(helper == null) {
+      helper = new DefaultExploderHelper(crawlFacade);
+    }
     this.helper = helper;
     au = crawlFacade.getAu();
     
     fetchUrl = toExplode.fetchUrl;
     origUrl = toExplode.origUrl;
-    if(helper == null) {
-      helper = new DefaultExploderHelper(crawlFacade);
-    }
     daemon = AuUtil.getDaemon(au);
     pluginMgr = daemon.getPluginManager();
     sleepAfter =
