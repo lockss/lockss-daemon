@@ -13,8 +13,7 @@
     {
       title <
         name = Acta Neuropathologica Communications ;
-        issn = 2051-5960 ;
-        issnl = 2051-5960
+        issn = 2051-5960 
       >
 
       param[base_url] = http://actaneurocomms.biomedcentral.com/
@@ -47,8 +46,7 @@
     {
       title <
         name = Asia Pacific Family Medicine ;
-        issn = 1447-056X ;
-        issnl = 1447-056X
+        issn = 1447-056X 
       >
 
       param[base_url] = http://apfmj.biomedcentral.com/
@@ -100,8 +98,7 @@
     {
       title <
         name = Behavioral and Brain Functions ;
-        eissn = 1744-9081 ;
-        issnl = 1744-9081
+        eissn = 1744-9081 
       >
 
       param[base_url] = http://behavioralandbrainfunctions.biomedcentral.com/
@@ -126,8 +123,7 @@
 
       title <
         name = Biomarker Research ;
-        issn = 2050-7771 ;
-        issnl = 2050-7771
+        issn = 2050-7771 
       >
 
       param[base_url] = http://biomarkerres.biomedcentral.com/
@@ -159,8 +155,7 @@
     {
       title <
         name = Canine Genetics and Epidemiology ;
-        eissn = 2052-6687 ;
-        issnl = 2052-6687
+        eissn = 2052-6687 
       >
 
       param[base_url] = http://cgejournal.biomedcentral.com/
@@ -175,8 +170,7 @@
     {
       title <
         name = Cell Division ;
-        eissn = 1747-1028 ;
-        issnl = 1747-1028
+        eissn = 1747-1028 
       >
 
       param[base_url] = http://celldiv.biomedcentral.com/
@@ -200,8 +194,7 @@
 
       title <
         name = Chinese Journal of Cancer ;
-        issn = 1000-467X ;
-        eissn = 1944-446X
+        issn = 1000-467X 
       >
 
       param[base_url] = http://cjcjournal.biomedcentral.com/
@@ -231,6 +224,21 @@
     {
 
       title <
+        name = Clinical Diabetes and Endocrinology ;
+        eissn = 2055-8260
+      >
+
+      param[base_url] = http://clindiabetesendo.biomedcentral.com/
+      param[journal_issn] = 2055-8260
+      #journal_id = clindiabetesendo
+
+      au < exists ; 2015 ; Clinical Diabetes and Endocrinology Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
         name = COPD Research and Practice ;
         eissn = 2054-9040 
       >
@@ -246,8 +254,7 @@
     {
       title <
         name = Cost Effectiveness and Resource Allocation ;
-        eissn = 1478-7547 ;
-        issnl = 1478-7547
+        eissn = 1478-7547 
       >
 
       param[base_url] = http://resource-allocation.biomedcentral.com/
@@ -274,8 +281,7 @@
 
       title <
         name = Environmental Evidence ;
-        issn = 2047-2382 ;
-        issnl = 2047-2382
+        issn = 2047-2382 
       >
 
       param[base_url] = http://environmentalevidencejournal.biomedcentral.com/
@@ -292,8 +298,7 @@
     {
       title <
         name = Experimental Hematology & Oncology ;
-        issn = 2162-3619 ;
-        issnl = 2162-3619
+        issn = 2162-3619 
       >
 
       param[base_url] = http://ehoonline.biomedcentral.com/
@@ -358,8 +363,7 @@
     {
       title <
         name = Health and Quality of Life Outcomes ;
-        eissn = 1477-7525 ;
-        issnl = 1477-7525
+        eissn = 1477-7525 
       >
 
       param[base_url] = http://hqlo.biomedcentral.com/
@@ -385,8 +389,7 @@
     {
       title <
         name = Journal of Animal Science and Biotechnology ;
-        issn = 2049-1891 ;
-        issnl = 2049-1891
+        issn = 2049-1891 
       >
 
       param[base_url] = http://jasbsci.biomedcentral.com/
@@ -404,8 +407,7 @@
       title <
         name = Journal of Animal Science and Technology ;
         issn = 1598-9429 ;
-        eissn = 2055-0391 ;
-        issnl = 2055-0391
+        eissn = 2055-0391 
       >
 
       param[base_url] = http://janimscitechnol.biomedcentral.com/
@@ -452,8 +454,7 @@
     {
       title <
         name = Journal of Experimental & Clinical Cancer Research ;
-        issn = 1756-9966 ;
-        issnl = 1756-9966
+        issn = 1756-9966 
       >
 
       param[base_url] = http://jeccr.biomedcentral.com/
@@ -474,8 +475,7 @@
     {
       title <
         name = Journal of Molecular Psychiatry ;
-        issn = 2049-9256 ;
-        issnl = 2049-9256
+        issn = 2049-9256 
       >
 
       param[base_url] = http://jmolecularpsychiatry.biomedcentral.com/
@@ -491,8 +491,7 @@
     {
       title <
         name = Journal of Orthopaedic Surgery and Research ;
-        eissn = 1749-799X ;
-        issnl = 1749-799X
+        eissn = 1749-799X 
       >
 
       param[base_url] = http://josr-online.biomedcentral.com/
@@ -515,8 +514,7 @@
     {
       title <
         name = Journal of Ovarian Research ;
-        issn = 1757-2215 ;
-        issnl = 1757-2215
+        issn = 1757-2215 
       >
 
       param[base_url] = http://ovarianresearch.biomedcentral.com/
@@ -537,8 +535,7 @@
     {
       title <
         name = Molecular Cancer ;
-        eissn = 1476-4598 ;
-        issnl = 1476-4598
+        eissn = 1476-4598 
       >
 
       param[base_url] = http://molecular-cancer.biomedcentral.com/
@@ -564,9 +561,22 @@
 
     {
       title <
+        name = Nutrire ;
+        eissn = 2316-7874
+      >
+
+      param[base_url] = http://nutrirejournal.biomedcentral.com/
+      param[journal_issn] = 2316-7874
+      #journal_id = nutrirejournal
+
+      au < expected ; 2016 ; Nutrire Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
         name = Particle and Fibre Toxicology ;
-        eissn = 1743-8977 ;
-        issnl = 1743-8977
+        eissn = 1743-8977
       >
 
       param[base_url] = http://particleandfibretoxicology.biomedcentral.com/
@@ -591,8 +601,7 @@
     {
       title <
         name = Regenerative Medicine Research ;
-        issn = 2050-490X ;
-        issnl = 2050-490X
+        issn = 2050-490X
       >
 
       param[base_url] = http://regenmedres.biomedcentral.com/
@@ -624,8 +633,7 @@
     {
       title <
         name = Substance Abuse Treatment, Prevention, and Policy ;
-        eissn = 1747-597X ;
-        issnl = 1747-597X
+        eissn = 1747-597X
       >
 
       param[base_url] = http://substanceabusepolicy.biomedcentral.com/
@@ -663,8 +671,7 @@
     {
       title <
         name = World Journal of Surgical Oncology ;
-        eissn = 1477-7819 ;
-        issnl = 1477-7819
+        eissn = 1477-7819
       >
 
       param[base_url] = http://wjso.biomedcentral.com/

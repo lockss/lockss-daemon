@@ -233,6 +233,21 @@
     {
 
       title <
+        name = Clinical Diabetes and Endocrinology ;
+        eissn = 2055-8260
+      >
+
+      param[base_url] = http://clindiabetesendo.biomedcentral.com/
+      param[journal_issn] = 2055-8260
+      #journal_id = clindiabetesendo
+
+      au < exists ; exists ; 2015 ; Clinical Diabetes and Endocrinology Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
         name = COPD Research and Practice ;
         eissn = 2054-9040 
       >
@@ -561,6 +576,21 @@
       au < doNotProcess ; exists ; 2013 ; Molecular Cancer Volume 12 ; 12 >
       au < doNotProcess ; exists ; 2014 ; Molecular Cancer Volume 13 ; 13 >
       au < exists ; exists ; 2015 ; Molecular Cancer Volume 14 ; 14 >
+
+    }
+
+    {
+      title <
+        name = Nutrire ;
+        eissn = 2316-7874 ;
+        issnl = 2316-7874
+      >
+
+      param[base_url] = http://nutrirejournal.biomedcentral.com/
+      param[journal_issn] = 2316-7874
+      #journal_id = nutrirejournal
+
+      au < expected ; exists ; 2016 ; Nutrire Volume 1 ; 1 >
 
     }
 
