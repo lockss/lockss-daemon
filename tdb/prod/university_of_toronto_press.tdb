@@ -385,6 +385,7 @@
     au < released ; 2006 ; Diaspora: A Journal of Transnational Studies Volume 15 ; 15 >
     au < released ; 2007 ; Diaspora: A Journal of Transnational Studies Volume 16 ; 16 >
     au < released ; 2008 ; Diaspora: A Journal of Transnational Studies Volume 17 ; 17 >
+    au < exists ; 2009 ; Diaspora: A Journal of Transnational Studies Volume 18 ; 18 >
 
   }
 
@@ -474,8 +475,8 @@
     attr[journal_id] = gsp
     comment[continues] = 1911-0359
 
-    au < released ; 2014 ; Genocide Studies International Volume 8 ; 8 >
-    au < manifest ; 2015 ; Genocide Studies International Volume 9 ; 9 >
+    au < down ; 2014 ; Genocide Studies International Volume 8 ; 8 >
+    #content not available
 
   }
 

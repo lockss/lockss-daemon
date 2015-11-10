@@ -20,6 +20,9 @@
     param[journal_dir] = comparative_drama
     attr[journal_id] = cdr
       
+    au < exists ; 2000 ; Comparative Drama Volume 34 ; 34 >
+    au < exists ; 2001 ; Comparative Drama Volume 35 ; 35 >
+    au < exists ; 2002 ; Comparative Drama Volume 36 ; 36 >
     au < released ; 2003 ; Comparative Drama Volume 37 ; 37 >
     au < released ; 2004 ; Comparative Drama Volume 38 ; 38 >
     au < released ; 2005 ; Comparative Drama Volume 39 ; 39 >

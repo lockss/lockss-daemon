@@ -545,7 +545,7 @@
     au < released ; 2012 ; diacritics Volume 40 ; 40 >
     au < released ; 2013 ; diacritics Volume 41 ; 41 >
     au < manifest ; 2014 ; diacritics Volume 42 ; 42 >
-    au < expected ; 2015 ; diacritics Volume 43 ; 43 >
+    au < exists ; 2015 ; diacritics Volume 43 ; 43 >
     
   }
 
@@ -725,6 +725,11 @@
     param[journal_dir] = historically_speaking
     attr[journal_id] = hsp
     
+    au < exists ; 1999-2000 ; Historically Speaking Volume 1 ; 1 >
+    au < exists ; 2000-2001 ; Historically Speaking Volume 2 ; 2 >
+    au < exists ; 2001-2002 ; Historically Speaking Volume 3 ; 3 >
+    au < exists ; 2002-2003 ; Historically Speaking Volume 4 ; 4 >
+    au < exists ; 2003-2004 ; Historically Speaking Volume 5 ; 5 >
     au < released ; 2004-2005 ; Historically Speaking Volume 6 ; 6 >
     au < released ; 2005-2006 ; Historically Speaking Volume 7 ; 7 >
     au < released ; 2006-2007 ; Historically Speaking Volume 8 ; 8 >
@@ -734,7 +739,6 @@
     au < released ; 2011 ; Historically Speaking Volume 12 ; 12 >
     au < released ; 2012 ; Historically Speaking Volume 13 ; 13 >
     au < released ; 2013 ; Historically Speaking Volume 14 ; 14 >
-    au < expected ; 2014 ; Historically Speaking Volume 15 ; 15 >
 
   }
 
