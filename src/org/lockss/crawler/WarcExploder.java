@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2007-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2007-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -171,7 +171,8 @@ public class WarcExploder extends Exploder {
             }
           } else {
             badEntries++;
-            logger.debug2("Can't map " + elementUrl + " from " + archiveUrl);
+            logger.debug2("Can't map " + elementUrl + " from "
+        	+ getArchiveUrl());
           }
         }
       }
@@ -194,12 +195,12 @@ public class WarcExploder extends Exploder {
         // URLs were added.
         for (Iterator it = touchedAus.iterator(); it.hasNext(); ) {
           ArchivalUnit au = (ArchivalUnit)it.next();
-          logger.debug3(archiveUrl + " touching " + au.toString());
+          logger.debug3(getArchiveUrl() + " touching " + au.toString());
           AuUtil.getDaemon(au).getNodeManager(au).newContentCrawlFinished();
         }
     } else {
       ArchivalUnit au = crawlFacade.getAu();
-      String msg = archiveUrl + ": " + badEntries + "/" +
+      String msg = getArchiveUrl() + ": " + badEntries + "/" +
         goodEntries + " bad entries";
       throw new CacheException.UnretryableException(msg);
     }
