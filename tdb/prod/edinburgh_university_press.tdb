@@ -16,35 +16,62 @@
     {
 
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = africa_the_journal_of_the_international_african_institute
       attr[journal_id] = afr
       implicit < status ; year ; name ; param[volume] >
       comment[doNotProcess] = move to Cambridge University Press
       comment[year2005] = Bibliography only
     
-      au < released ; 2005 ; Africa: The Journal of the International African Institute Bibliography 2005 ; 2005 >
-      au < released ; 2006 ; Africa: The Journal of the International African Institute Bibliography 2006 ; 2006 >
-      au < released ; 2007 ; Africa: The Journal of the International African Institute Bibliography 2007 ; 2007 >
-      au < released ; 2008 ; Africa: The Journal of the International African Institute Bibliography 2008 ; 2008 >
-      au < released ; 2009 ; Africa: The Journal of the International African Institute Bibliography 2009 ; 2009 >
+      {
 
-      au < doNotProcess ; 2000 ; Africa: The Journal of the International African Institute Volume 70 ; 70 >
-      au < doNotProcess ; 2001 ; Africa: The Journal of the International African Institute Volume 71 ; 71 >
-      au < doNotProcess ; 2002 ; Africa: The Journal of the International African Institute Volume 72 ; 72 >
-      au < doNotProcess ; 2003 ; Africa: The Journal of the International African Institute Volume 73 ; 73 >
-      au < doNotProcess ; 2004 ; Africa: The Journal of the International African Institute Volume 74 ; 74 >
-      au < doNotProcess ; 2005 ; Africa: The Journal of the International African Institute Volume 75 ; 75 >
-      au < released ; 2006 ; Africa: The Journal of the International African Institute Volume 76 ; 76 >
-      au < released ; 2007 ; Africa: The Journal of the International African Institute Volume 77 ; 77 >
-      au < released ; 2008 ; Africa: The Journal of the International African Institute Volume 78 ; 78 >
-      au < released ; 2009 ; Africa: The Journal of the International African Institute Volume 79 ; 79 >
-      au < released ; 2010 ; Africa: The Journal of the International African Institute Volume 80 ; 80 >
-      au < released ; 2011 ; Africa: The Journal of the International African Institute Volume 81 ; 81 >
-      au < released ; 2012 ; Africa: The Journal of the International African Institute Volume 82 ; 82 >
-      au < released ; 2013 ; Africa: The Journal of the International African Institute Volume 83 ; 83 >
-      au < manifest ; 2014 ; Africa: The Journal of the International African Institute Volume 84 ; 84 >
-      au < manifest ; 2015 ; Africa: The Journal of the International African Institute Volume 85 ; 85 >
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2005 ; Africa: The Journal of the International African Institute Bibliography 2005 ; 2005 >
+        au < released ; 2006 ; Africa: The Journal of the International African Institute Bibliography 2006 ; 2006 >
+        au < released ; 2007 ; Africa: The Journal of the International African Institute Bibliography 2007 ; 2007 >
+        au < released ; 2008 ; Africa: The Journal of the International African Institute Bibliography 2008 ; 2008 >
+        au < released ; 2009 ; Africa: The Journal of the International African Institute Bibliography 2009 ; 2009 >
+
+      }
+
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < doNotProcess ; 2000 ; Africa: The Journal of the International African Institute Volume 70 ; 70 >
+        au < doNotProcess ; 2001 ; Africa: The Journal of the International African Institute Volume 71 ; 71 >
+        au < doNotProcess ; 2002 ; Africa: The Journal of the International African Institute Volume 72 ; 72 >
+        au < doNotProcess ; 2003 ; Africa: The Journal of the International African Institute Volume 73 ; 73 >
+        au < doNotProcess ; 2004 ; Africa: The Journal of the International African Institute Volume 74 ; 74 >
+        au < doNotProcess ; 2005 ; Africa: The Journal of the International African Institute Volume 75 ; 75 >
+
+      }
+
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2006 ; Africa: The Journal of the International African Institute Volume 76 ; 76 >
+        au < released ; 2007 ; Africa: The Journal of the International African Institute Volume 77 ; 77 >
+        au < released ; 2008 ; Africa: The Journal of the International African Institute Volume 78 ; 78 >
+        au < released ; 2009 ; Africa: The Journal of the International African Institute Volume 79 ; 79 >
+        au < released ; 2010 ; Africa: The Journal of the International African Institute Volume 80 ; 80 >
+        au < released ; 2011 ; Africa: The Journal of the International African Institute Volume 81 ; 81 >
+        au < released ; 2012 ; Africa: The Journal of the International African Institute Volume 82 ; 82 >
+        au < released ; 2013 ; Africa: The Journal of the International African Institute Volume 83 ; 83 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < manifest ; 2014 ; Africa: The Journal of the International African Institute Volume 84 ; 84 >
+        au < manifest ; 2015 ; Africa: The Journal of the International African Institute Volume 85 ; 85 >
+
+      }
+
 
     }
 
@@ -257,15 +284,21 @@
     {
 
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = comparative_critical_studies
       attr[journal_id] = ccs
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2006 ; Comparative Critical Studies Volume 3 [Project MUSE] ; 3 >
-      au < released ; 2007 ; Comparative Critical Studies Volume 4 [Project MUSE] ; 4 >
-      au < released ; 2008 ; Comparative Critical Studies Volume 5 [Project MUSE] ; 5 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2006 ; Comparative Critical Studies Volume 3 [Project MUSE] ; 3 >
+        au < released ; 2007 ; Comparative Critical Studies Volume 4 [Project MUSE] ; 4 >
+        au < released ; 2008 ; Comparative Critical Studies Volume 5 [Project MUSE] ; 5 >
+
+      }
+
 
     }
 
@@ -340,15 +373,21 @@
     {
 
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = dance_research
       attr[journal_id] = dar
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2006 ; Dance Research Volume 24 [Project MUSE] ; 24 >
-      au < released ; 2007 ; Dance Research Volume 25 [Project MUSE] ; 25 >
-      au < released ; 2008 ; Dance Research Volume 26 [Project MUSE] ; 26 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2006 ; Dance Research Volume 24 [Project MUSE] ; 24 >
+        au < released ; 2007 ; Dance Research Volume 25 [Project MUSE] ; 25 >
+        au < released ; 2008 ; Dance Research Volume 26 [Project MUSE] ; 26 >
+
+      }
+
 
     }
 
@@ -478,15 +517,21 @@
     {
 
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = episteme
       attr[journal_id] = epi
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2006 ; Episteme: A Journal of Social Epistemology Volume 3 [Project MUSE] ; 3 >
-      au < released ; 2007 ; Episteme: A Journal of Social Epistemology Volume 4 [Project MUSE] ; 4 >
-      au < released ; 2008 ; Episteme: A Journal of Social Epistemology Volume 5 [Project MUSE] ; 5 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2006 ; Episteme: A Journal of Social Epistemology Volume 3 [Project MUSE] ; 3 >
+        au < released ; 2007 ; Episteme: A Journal of Social Epistemology Volume 4 [Project MUSE] ; 4 >
+        au < released ; 2008 ; Episteme: A Journal of Social Epistemology Volume 5 [Project MUSE] ; 5 >
+
+      }
+
 
     }
 
@@ -526,15 +571,21 @@
     {
 
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = holy_land_studies
       attr[journal_id] = hls
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2006 ; Holy Land Studies: A Multidisciplinary Journal Volume 5 [Project MUSE] ; 5 >
-      au < released ; 2007 ; Holy Land Studies: A Multidisciplinary Journal Volume 6 [Project MUSE] ; 6 >
-      au < released ; 2008 ; Holy Land Studies: A Multidisciplinary Journal Volume 7 [Project MUSE] ; 7 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2006 ; Holy Land Studies: A Multidisciplinary Journal Volume 5 [Project MUSE] ; 5 >
+        au < released ; 2007 ; Holy Land Studies: A Multidisciplinary Journal Volume 6 [Project MUSE] ; 6 >
+        au < released ; 2008 ; Holy Land Studies: A Multidisciplinary Journal Volume 7 [Project MUSE] ; 7 >
+
+      }
+
 
     }
 
@@ -574,14 +625,20 @@
     {
 
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = the_innes_review
       attr[journal_id] = inn
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2007 ; The Innes Review Volume 58 [Project MUSE] ; 58 >
-      au < released ; 2008 ; The Innes Review Volume 59 [Project MUSE] ; 59 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2007 ; The Innes Review Volume 58 [Project MUSE] ; 58 >
+        au < released ; 2008 ; The Innes Review Volume 59 [Project MUSE] ; 59 >
+
+      }
+
     
     }
     
@@ -961,16 +1018,22 @@
     {
 
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = journal_of_victorian_culture
       attr[journal_id] = jvc
       comment[change_publisher] = from 2010, published by Taylor and Francis.  
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2006 ; Journal of Victorian Culture Volume 11 [Project MUSE] ; 11 >
-      au < released ; 2007 ; Journal of Victorian Culture Volume 12 [Project MUSE] ; 12 >
-      au < released ; 2008 ; Journal of Victorian Culture Volume 13 [Project MUSE] ; 13 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2006 ; Journal of Victorian Culture Volume 11 [Project MUSE] ; 11 >
+        au < released ; 2007 ; Journal of Victorian Culture Volume 12 [Project MUSE] ; 12 >
+        au < released ; 2008 ; Journal of Victorian Culture Volume 13 [Project MUSE] ; 13 >
+
+      }
+
 
     }
 
@@ -1228,15 +1291,21 @@
     {
 
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = paragraph
       attr[journal_id] = prg
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2006 ; Paragraph Volume 29 [Project MUSE] ; 29 >
-      au < released ; 2007 ; Paragraph Volume 30 [Project MUSE] ; 30 >
-      au < released ; 2008 ; Paragraph Volume 31 [Project MUSE] ; 31 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2006 ; Paragraph Volume 29 [Project MUSE] ; 29 >
+        au < released ; 2007 ; Paragraph Volume 30 [Project MUSE] ; 30 >
+        au < released ; 2008 ; Paragraph Volume 31 [Project MUSE] ; 31 >
+
+      }
+
 
     }
 
@@ -1254,14 +1323,20 @@
     {
 
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = parliamentary_history
       attr[journal_id] = pah
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2006 ; Parliamentary History Volume 25 [Project MUSE] ; 25 >
-      au < released ; 2007 ; Parliamentary History Volume 26 [Project MUSE] ; 26 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2006 ; Parliamentary History Volume 25 [Project MUSE] ; 25 >
+        au < released ; 2007 ; Parliamentary History Volume 26 [Project MUSE] ; 26 >
+
+      }
+
 
     }
 
@@ -1342,15 +1417,21 @@
     {
 
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = romanticism
       attr[journal_id] = rom
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2006 ; Romanticism Volume 12 [Project MUSE] ; 12 >
-      au < released ; 2007 ; Romanticism Volume 13 [Project MUSE] ; 13 >
-      au < released ; 2008 ; Romanticism Volume 14 [Project MUSE] ; 14 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2006 ; Romanticism Volume 12 [Project MUSE] ; 12 >
+        au < released ; 2007 ; Romanticism Volume 13 [Project MUSE] ; 13 >
+        au < released ; 2008 ; Romanticism Volume 14 [Project MUSE] ; 14 >
+
+      }
+
 
     }
 
@@ -1579,15 +1660,21 @@
     {
 
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = scottish_historical_review
       attr[journal_id] = shr
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2006 ; Scottish Historical Review Volume 85 [Project MUSE] ; 85 >
-      au < released ; 2007 ; Scottish Historical Review Volume 86 [Project MUSE] ; 86 >
-      au < released ; 2008 ; Scottish Historical Review Volume 87 [Project MUSE] ; 87 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2006 ; Scottish Historical Review Volume 85 [Project MUSE] ; 85 >
+        au < released ; 2007 ; Scottish Historical Review Volume 86 [Project MUSE] ; 86 >
+        au < released ; 2008 ; Scottish Historical Review Volume 87 [Project MUSE] ; 87 >
+
+      }
+
 
     }
 
@@ -1630,15 +1717,21 @@
     {
 
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = studies_in_world_christianity
       attr[journal_id] = swc
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2006 ; Studies in World Christianity Volume 12 [Project MUSE] ; 12 >
-      au < released ; 2007 ; Studies in World Christianity Volume 13 [Project MUSE] ; 13 >
-      au < released ; 2008 ; Studies in World Christianity Volume 14 [Project MUSE] ; 14 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2006 ; Studies in World Christianity Volume 12 [Project MUSE] ; 12 >
+        au < released ; 2007 ; Studies in World Christianity Volume 13 [Project MUSE] ; 13 >
+        au < released ; 2008 ; Studies in World Christianity Volume 14 [Project MUSE] ; 14 >
+
+      }
+
 
     }
 
@@ -1680,15 +1773,21 @@
     {
 
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[base_url] = http://muse.jhu.edu/
       comment[platform] = This journal no longer contributes new issues to Muse
       param[journal_dir] = translation_and_literature
       attr[journal_id] = tal
       implicit < status ; year ; name ; param[volume] >
 
-      au < released ; 2006 ; Translation and Literature Volume 15 [Project MUSE] ; 15 >
-      au < released ; 2007 ; Translation and Literature Volume 16 [Project MUSE] ; 16 >
-      au < released ; 2008 ; Translation and Literature Volume 17 [Project MUSE] ; 17 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2006 ; Translation and Literature Volume 15 [Project MUSE] ; 15 >
+        au < released ; 2007 ; Translation and Literature Volume 16 [Project MUSE] ; 16 >
+        au < released ; 2008 ; Translation and Literature Volume 17 [Project MUSE] ; 17 >
+
+      }
+
     
     }
 

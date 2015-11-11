@@ -1130,27 +1130,40 @@
     {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = american_literary_history
     attr[journal_id] = jlh
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 2000 ; American Literary History Volume 12 [Project MUSE] ; 12 >
-    au < released ; 2001 ; American Literary History Volume 13 [Project MUSE] ; 13 >
-    au < released ; 2002 ; American Literary History Volume 14 [Project MUSE] ; 14 >
-    au < released ; 2003 ; American Literary History Volume 15 [Project MUSE] ; 15 >
-    au < released ; 2004 ; American Literary History Volume 16 [Project MUSE] ; 16 >
-    au < released ; 2005 ; American Literary History Volume 17 [Project MUSE] ; 17 >
-    au < released ; 2006 ; American Literary History Volume 18 [Project MUSE] ; 18 >
-    au < released ; 2007 ; American Literary History Volume 19 [Project MUSE] ; 19 >
-    au < released ; 2008 ; American Literary History Volume 20 [Project MUSE] ; 20 >
-    au < released ; 2009 ; American Literary History Volume 21 [Project MUSE] ; 21 >
-    au < released ; 2010 ; American Literary History Volume 22 [Project MUSE] ; 22 >
-    au < released ; 2011 ; American Literary History Volume 23 [Project MUSE] ; 23 >
-    au < released ; 2012 ; American Literary History Volume 24 [Project MUSE] ; 24 >
-    au < released ; 2013 ; American Literary History Volume 25 [Project MUSE] ; 25 >
-    au < manifest ; 2014 ; American Literary History Volume 26 [Project MUSE] ; 26 >
-    au < manifest ; 2015 ; American Literary History Volume 27 [Project MUSE] ; 27 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2000 ; American Literary History Volume 12 [Project MUSE] ; 12 >
+      au < released ; 2001 ; American Literary History Volume 13 [Project MUSE] ; 13 >
+      au < released ; 2002 ; American Literary History Volume 14 [Project MUSE] ; 14 >
+      au < released ; 2003 ; American Literary History Volume 15 [Project MUSE] ; 15 >
+      au < released ; 2004 ; American Literary History Volume 16 [Project MUSE] ; 16 >
+      au < released ; 2005 ; American Literary History Volume 17 [Project MUSE] ; 17 >
+      au < released ; 2006 ; American Literary History Volume 18 [Project MUSE] ; 18 >
+      au < released ; 2007 ; American Literary History Volume 19 [Project MUSE] ; 19 >
+      au < released ; 2008 ; American Literary History Volume 20 [Project MUSE] ; 20 >
+      au < released ; 2009 ; American Literary History Volume 21 [Project MUSE] ; 21 >
+      au < released ; 2010 ; American Literary History Volume 22 [Project MUSE] ; 22 >
+      au < released ; 2011 ; American Literary History Volume 23 [Project MUSE] ; 23 >
+      au < released ; 2012 ; American Literary History Volume 24 [Project MUSE] ; 24 >
+      au < released ; 2013 ; American Literary History Volume 25 [Project MUSE] ; 25 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; American Literary History Volume 26 [Project MUSE] ; 26 >
+      au < manifest ; 2015 ; American Literary History Volume 27 [Project MUSE] ; 27 >
+
+      }
+
 
     }
 
@@ -3639,21 +3652,34 @@
     {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = cambridge_quarterly
     attr[journal_id] = bcq
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 2006 ; The Cambridge Quarterly Volume 35 [Project MUSE] ; 35 >
-    au < released ; 2007 ; The Cambridge Quarterly Volume 36 [Project MUSE] ; 36 >
-    au < released ; 2008 ; The Cambridge Quarterly Volume 37 [Project MUSE] ; 37 >
-    au < released ; 2009 ; The Cambridge Quarterly Volume 38 [Project MUSE] ; 38 >
-    au < released ; 2010 ; The Cambridge Quarterly Volume 39 [Project MUSE] ; 39 >
-    au < released ; 2011 ; The Cambridge Quarterly Volume 40 [Project MUSE] ; 40 >
-    au < released ; 2012 ; The Cambridge Quarterly Volume 41 [Project MUSE] ; 41 >
-    au < released ; 2013 ; The Cambridge Quarterly Volume 42 [Project MUSE] ; 42 >
-    au < manifest ; 2014 ; The Cambridge Quarterly Volume 43 [Project MUSE] ; 43 >
-    au < manifest ; 2015 ; The Cambridge Quarterly Volume 44 [Project MUSE] ; 44 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2006 ; The Cambridge Quarterly Volume 35 [Project MUSE] ; 35 >
+      au < released ; 2007 ; The Cambridge Quarterly Volume 36 [Project MUSE] ; 36 >
+      au < released ; 2008 ; The Cambridge Quarterly Volume 37 [Project MUSE] ; 37 >
+      au < released ; 2009 ; The Cambridge Quarterly Volume 38 [Project MUSE] ; 38 >
+      au < released ; 2010 ; The Cambridge Quarterly Volume 39 [Project MUSE] ; 39 >
+      au < released ; 2011 ; The Cambridge Quarterly Volume 40 [Project MUSE] ; 40 >
+      au < released ; 2012 ; The Cambridge Quarterly Volume 41 [Project MUSE] ; 41 >
+      au < released ; 2013 ; The Cambridge Quarterly Volume 42 [Project MUSE] ; 42 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; The Cambridge Quarterly Volume 43 [Project MUSE] ; 43 >
+      au < manifest ; 2015 ; The Cambridge Quarterly Volume 44 [Project MUSE] ; 44 >
+
+      }
+
 
     }
 
@@ -4999,15 +5025,21 @@
     {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = early_music
     attr[journal_id] = emu
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 2004 ; Early Music Volume 32 [Project MUSE] ; 32 >
-    au < released ; 2005 ; Early Music Volume 33 [Project MUSE] ; 33 >
-    au < released ; 2006 ; Early Music Volume 34 [Project MUSE] ; 34 >
-    au < released ; 2007 ; Early Music Volume 35 [Project MUSE] ; 35 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2004 ; Early Music Volume 32 [Project MUSE] ; 32 >
+      au < released ; 2005 ; Early Music Volume 33 [Project MUSE] ; 33 >
+      au < released ; 2006 ; Early Music Volume 34 [Project MUSE] ; 34 >
+      au < released ; 2007 ; Early Music Volume 35 [Project MUSE] ; 35 >
+
+      }
+
 
     }
 
@@ -5484,24 +5516,37 @@
     {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = enterprise_and_society
     attr[journal_id] = ens
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 2003 ; Enterprise & Society Volume 4 [Project MUSE] ; 4 >
-    au < released ; 2004 ; Enterprise & Society Volume 5 [Project MUSE] ; 5 >
-    au < released ; 2005 ; Enterprise & Society Volume 6 [Project MUSE] ; 6 >
-    au < released ; 2006 ; Enterprise & Society Volume 7 [Project MUSE] ; 7 >
-    au < released ; 2007 ; Enterprise & Society Volume 8 [Project MUSE] ; 8 >
-    au < released ; 2008 ; Enterprise & Society Volume 9 [Project MUSE] ; 9 >
-    au < released ; 2009 ; Enterprise & Society Volume 10 [Project MUSE] ; 10 >
-    au < released ; 2010 ; Enterprise & Society Volume 11 [Project MUSE] ; 11 >
-    au < released ; 2011 ; Enterprise & Society Volume 12 [Project MUSE] ; 12 >
-    au < released ; 2012 ; Enterprise & Society Volume 13 [Project MUSE] ; 13 >
-    au < released ; 2013 ; Enterprise & Society Volume 14 [Project MUSE] ; 14 >
-    au < manifest ; 2014 ; Enterprise & Society Volume 15 [Project MUSE] ; 15 >
-    au < manifest ; 2015 ; Enterprise & Society Volume 16 [Project MUSE] ; 16 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2003 ; Enterprise & Society Volume 4 [Project MUSE] ; 4 >
+      au < released ; 2004 ; Enterprise & Society Volume 5 [Project MUSE] ; 5 >
+      au < released ; 2005 ; Enterprise & Society Volume 6 [Project MUSE] ; 6 >
+      au < released ; 2006 ; Enterprise & Society Volume 7 [Project MUSE] ; 7 >
+      au < released ; 2007 ; Enterprise & Society Volume 8 [Project MUSE] ; 8 >
+      au < released ; 2008 ; Enterprise & Society Volume 9 [Project MUSE] ; 9 >
+      au < released ; 2009 ; Enterprise & Society Volume 10 [Project MUSE] ; 10 >
+      au < released ; 2010 ; Enterprise & Society Volume 11 [Project MUSE] ; 11 >
+      au < released ; 2011 ; Enterprise & Society Volume 12 [Project MUSE] ; 12 >
+      au < released ; 2012 ; Enterprise & Society Volume 13 [Project MUSE] ; 13 >
+      au < released ; 2013 ; Enterprise & Society Volume 14 [Project MUSE] ; 14 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Enterprise & Society Volume 15 [Project MUSE] ; 15 >
+      au < manifest ; 2015 ; Enterprise & Society Volume 16 [Project MUSE] ; 16 >
+
+      }
+
 
     }
 
@@ -5825,13 +5870,19 @@
     {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = essays_in_criticism
     attr[journal_id] = eic
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 2006 ; Essays in Criticism Volume 56 [Project MUSE] ; 56 >
-    au < released ; 2007 ; Essays in Criticism Volume 57 [Project MUSE] ; 57 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2006 ; Essays in Criticism Volume 56 [Project MUSE] ; 56 >
+      au < released ; 2007 ; Essays in Criticism Volume 57 [Project MUSE] ; 57 >
+
+      }
+
 
     }
 
@@ -7543,21 +7594,34 @@
     {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = french_studies_a_quarterly_review
     attr[journal_id] = frs
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 2006 ; French Studies: A Quarterly Review Volume 60 [Project MUSE] ; 60 >
-    au < released ; 2007 ; French Studies: A Quarterly Review Volume 61 [Project MUSE] ; 61 >
-    au < released ; 2008 ; French Studies: A Quarterly Review Volume 62 [Project MUSE] ; 62 >
-    au < released ; 2009 ; French Studies: A Quarterly Review Volume 63 [Project MUSE] ; 63 >
-    au < released ; 2010 ; French Studies: A Quarterly Review Volume 64 [Project MUSE] ; 64 >
-    au < released ; 2011 ; French Studies: A Quarterly Review Volume 65 [Project MUSE] ; 65 >
-    au < released ; 2012 ; French Studies: A Quarterly Review Volume 66 [Project MUSE] ; 66 >
-    au < released ; 2013 ; French Studies: A Quarterly Review Volume 67 [Project MUSE] ; 67 >
-    au < manifest ; 2014 ; French Studies: A Quarterly Review Volume 68 [Project MUSE] ; 68 >
-    au < manifest ; 2015 ; French Studies: A Quarterly Review Volume 69 [Project MUSE] ; 69 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2006 ; French Studies: A Quarterly Review Volume 60 [Project MUSE] ; 60 >
+      au < released ; 2007 ; French Studies: A Quarterly Review Volume 61 [Project MUSE] ; 61 >
+      au < released ; 2008 ; French Studies: A Quarterly Review Volume 62 [Project MUSE] ; 62 >
+      au < released ; 2009 ; French Studies: A Quarterly Review Volume 63 [Project MUSE] ; 63 >
+      au < released ; 2010 ; French Studies: A Quarterly Review Volume 64 [Project MUSE] ; 64 >
+      au < released ; 2011 ; French Studies: A Quarterly Review Volume 65 [Project MUSE] ; 65 >
+      au < released ; 2012 ; French Studies: A Quarterly Review Volume 66 [Project MUSE] ; 66 >
+      au < released ; 2013 ; French Studies: A Quarterly Review Volume 67 [Project MUSE] ; 67 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; French Studies: A Quarterly Review Volume 68 [Project MUSE] ; 68 >
+      au < manifest ; 2015 ; French Studies: A Quarterly Review Volume 69 [Project MUSE] ; 69 >
+
+      }
+
 
     }
 
@@ -8454,35 +8518,48 @@
     {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = history_workshop_journal
     attr[journal_id] = hwj
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 2004 ; History Workshop Journal Volume 57 [Project MUSE] ; 57 >
-    au < released ; 2004 ; History Workshop Journal Volume 58 [Project MUSE] ; 58 >
-    au < released ; 2005 ; History Workshop Journal Volume 59 [Project MUSE] ; 59 >
-    au < released ; 2005 ; History Workshop Journal Volume 60 [Project MUSE] ; 60 >
-    au < released ; 2006 ; History Workshop Journal Volume 61 [Project MUSE] ; 61 >
-    au < released ; 2006 ; History Workshop Journal Volume 62 [Project MUSE] ; 62 >
-    au < released ; 2007 ; History Workshop Journal Volume 63 [Project MUSE] ; 63 >
-    au < released ; 2007 ; History Workshop Journal Issue 64 [Project MUSE] ; 64 >
-    au < released ; 2008 ; History Workshop Journal Issue 65 [Project MUSE] ; 65 >
-    au < released ; 2008 ; History Workshop Journal Issue 66 [Project MUSE] ; 66 >
-    au < released ; 2009 ; History Workshop Journal Issue 67 [Project MUSE] ; 67 >
-    au < released ; 2009 ; History Workshop Journal Issue 68 [Project MUSE] ; 68 >
-    au < released ; 2010 ; History Workshop Journal Issue 69 [Project MUSE] ; 69 >
-    au < released ; 2010 ; History Workshop Journal Issue 70 [Project MUSE] ; 70 >
-    au < released ; 2011 ; History Workshop Journal Issue 71 [Project MUSE] ; 71 >
-    au < released ; 2011 ; History Workshop Journal Issue 72 [Project MUSE] ; 72 >
-    au < released ; 2012 ; History Workshop Journal Issue 73 [Project MUSE] ; 73 >
-    au < released ; 2012 ; History Workshop Journal Issue 74 [Project MUSE] ; 74 >
-    au < released ; 2013 ; History Workshop Journal Issue 75 [Project MUSE] ; 75 >
-    au < released ; 2013 ; History Workshop Journal Issue 76 [Project MUSE] ; 76 >
-    au < manifest ; 2014 ; History Workshop Journal Issue 77 [Project MUSE] ; 77 >
-    au < manifest ; 2014 ; History Workshop Journal Issue 78 [Project MUSE] ; 78 >
-    au < manifest ; 2015 ; History Workshop Journal Issue 79 [Project MUSE] ; 79 >
-    au < exists ; 2015 ; History Workshop Journal Issue 80 [Project MUSE] ; 80 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2004 ; History Workshop Journal Volume 57 [Project MUSE] ; 57 >
+      au < released ; 2004 ; History Workshop Journal Volume 58 [Project MUSE] ; 58 >
+      au < released ; 2005 ; History Workshop Journal Volume 59 [Project MUSE] ; 59 >
+      au < released ; 2005 ; History Workshop Journal Volume 60 [Project MUSE] ; 60 >
+      au < released ; 2006 ; History Workshop Journal Volume 61 [Project MUSE] ; 61 >
+      au < released ; 2006 ; History Workshop Journal Volume 62 [Project MUSE] ; 62 >
+      au < released ; 2007 ; History Workshop Journal Volume 63 [Project MUSE] ; 63 >
+      au < released ; 2007 ; History Workshop Journal Issue 64 [Project MUSE] ; 64 >
+      au < released ; 2008 ; History Workshop Journal Issue 65 [Project MUSE] ; 65 >
+      au < released ; 2008 ; History Workshop Journal Issue 66 [Project MUSE] ; 66 >
+      au < released ; 2009 ; History Workshop Journal Issue 67 [Project MUSE] ; 67 >
+      au < released ; 2009 ; History Workshop Journal Issue 68 [Project MUSE] ; 68 >
+      au < released ; 2010 ; History Workshop Journal Issue 69 [Project MUSE] ; 69 >
+      au < released ; 2010 ; History Workshop Journal Issue 70 [Project MUSE] ; 70 >
+      au < released ; 2011 ; History Workshop Journal Issue 71 [Project MUSE] ; 71 >
+      au < released ; 2011 ; History Workshop Journal Issue 72 [Project MUSE] ; 72 >
+      au < released ; 2012 ; History Workshop Journal Issue 73 [Project MUSE] ; 73 >
+      au < released ; 2012 ; History Workshop Journal Issue 74 [Project MUSE] ; 74 >
+      au < released ; 2013 ; History Workshop Journal Issue 75 [Project MUSE] ; 75 >
+      au < released ; 2013 ; History Workshop Journal Issue 76 [Project MUSE] ; 76 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; History Workshop Journal Issue 77 [Project MUSE] ; 77 >
+      au < manifest ; 2014 ; History Workshop Journal Issue 78 [Project MUSE] ; 78 >
+      au < manifest ; 2015 ; History Workshop Journal Issue 79 [Project MUSE] ; 79 >
+      au < exists ; 2015 ; History Workshop Journal Issue 80 [Project MUSE] ; 80 >
+
+      }
+
 
     }
 
@@ -8539,24 +8616,37 @@
     {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = holocaust_and_genocide_studies
     attr[journal_id] = hgs
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 2003 ; Holocaust and Genocide Studies Volume 17 [Project MUSE] ; 17 >
-    au < released ; 2004 ; Holocaust and Genocide Studies Volume 18 [Project MUSE] ; 18 >
-    au < released ; 2005 ; Holocaust and Genocide Studies Volume 19 [Project MUSE] ; 19 >
-    au < released ; 2006 ; Holocaust and Genocide Studies Volume 20 [Project MUSE] ; 20 >
-    au < released ; 2007 ; Holocaust and Genocide Studies Volume 21 [Project MUSE] ; 21 >
-    au < released ; 2008 ; Holocaust and Genocide Studies Volume 22 [Project MUSE] ; 22 >
-    au < released ; 2009 ; Holocaust and Genocide Studies Volume 23 [Project MUSE] ; 23 >
-    au < released ; 2010 ; Holocaust and Genocide Studies Volume 24 [Project MUSE] ; 24 >
-    au < released ; 2011 ; Holocaust and Genocide Studies Volume 25 [Project MUSE] ; 25 >
-    au < released ; 2012 ; Holocaust and Genocide Studies Volume 26 [Project MUSE] ; 26 >
-    au < released ; 2013 ; Holocaust and Genocide Studies Volume 27 [Project MUSE] ; 27 >
-    au < manifest ; 2014 ; Holocaust and Genocide Studies Voluem 28 [Project MUSE] ; 28 >
-    au < manifest ; 2015 ; Holocaust and Genocide Studies Voluem 29 [Project MUSE] ; 29 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2003 ; Holocaust and Genocide Studies Volume 17 [Project MUSE] ; 17 >
+      au < released ; 2004 ; Holocaust and Genocide Studies Volume 18 [Project MUSE] ; 18 >
+      au < released ; 2005 ; Holocaust and Genocide Studies Volume 19 [Project MUSE] ; 19 >
+      au < released ; 2006 ; Holocaust and Genocide Studies Volume 20 [Project MUSE] ; 20 >
+      au < released ; 2007 ; Holocaust and Genocide Studies Volume 21 [Project MUSE] ; 21 >
+      au < released ; 2008 ; Holocaust and Genocide Studies Volume 22 [Project MUSE] ; 22 >
+      au < released ; 2009 ; Holocaust and Genocide Studies Volume 23 [Project MUSE] ; 23 >
+      au < released ; 2010 ; Holocaust and Genocide Studies Volume 24 [Project MUSE] ; 24 >
+      au < released ; 2011 ; Holocaust and Genocide Studies Volume 25 [Project MUSE] ; 25 >
+      au < released ; 2012 ; Holocaust and Genocide Studies Volume 26 [Project MUSE] ; 26 >
+      au < released ; 2013 ; Holocaust and Genocide Studies Volume 27 [Project MUSE] ; 27 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Holocaust and Genocide Studies Voluem 28 [Project MUSE] ; 28 >
+      au < manifest ; 2015 ; Holocaust and Genocide Studies Voluem 29 [Project MUSE] ; 29 >
+
+      }
+
 
     }
 
@@ -11022,13 +11112,19 @@
     {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = journal_of_the_american_academy_of_religion
     attr[journal_id] = aar
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 2006 ; Journal of the American Academy of Religion Volume 74 [Project MUSE] ; 74 >
-    au < released ; 2007 ; Journal of the American Academy of Religion Volume 75 [Project MUSE] ; 75 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2006 ; Journal of the American Academy of Religion Volume 74 [Project MUSE] ; 74 >
+      au < released ; 2007 ; Journal of the American Academy of Religion Volume 75 [Project MUSE] ; 75 >
+
+      }
+
 
     }
 
@@ -12964,27 +13060,40 @@
     {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = journal_of_the_history_of_medicine_and_allied_sciences
     attr[journal_id] = jhm
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 2000 ; Journal of the History of Medicine and Allied Sciences Volume 55 [Project MUSE] ; 55 >
-    au < released ; 2001 ; Journal of the History of Medicine and Allied Sciences Volume 56 [Project MUSE] ; 56 >
-    au < released ; 2002 ; Journal of the History of Medicine and Allied Sciences Volume 57 [Project MUSE] ; 57 >
-    au < released ; 2003 ; Journal of the History of Medicine and Allied Sciences Volume 58 [Project MUSE] ; 58 >
-    au < released ; 2004 ; Journal of the History of Medicine and Allied Sciences Volume 59 [Project MUSE] ; 59 >
-    au < released ; 2005 ; Journal of the History of Medicine and Allied Sciences Volume 60 [Project MUSE] ; 60 >
-    au < released ; 2006 ; Journal of the History of Medicine and Allied Sciences Volume 61 [Project MUSE] ; 61 >
-    au < released ; 2007 ; Journal of the History of Medicine and Allied Sciences Volume 62 [Project MUSE] ; 62 >
-    au < released ; 2008 ; Journal of the History of Medicine and Allied Sciences Volume 63 [Project MUSE] ; 63 >
-    au < released ; 2009 ; Journal of the History of Medicine and Allied Sciences Volume 64 [Project MUSE] ; 64 >
-    au < released ; 2010 ; Journal of the History of Medicine and Allied Sciences Volume 65 [Project MUSE] ; 65 >
-    au < released ; 2011 ; Journal of the History of Medicine and Allied Sciences Volume 66 [Project MUSE] ; 66 >
-    au < released ; 2012 ; Journal of the History of Medicine and Allied Sciences Volume 67 [Project MUSE] ; 67 >
-    au < released ; 2013 ; Journal of the History of Medicine and Allied Sciences Volume 68 [Project MUSE] ; 68 >
-    au < manifest ; 2014 ; Journal of the History of Medicine and Allied Sciences Volume 69 [Project MUSE] ; 69 >
-    au < manifest ; 2015 ; Journal of the History of Medicine and Allied Sciences Volume 70 [Project MUSE] ; 70 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2000 ; Journal of the History of Medicine and Allied Sciences Volume 55 [Project MUSE] ; 55 >
+      au < released ; 2001 ; Journal of the History of Medicine and Allied Sciences Volume 56 [Project MUSE] ; 56 >
+      au < released ; 2002 ; Journal of the History of Medicine and Allied Sciences Volume 57 [Project MUSE] ; 57 >
+      au < released ; 2003 ; Journal of the History of Medicine and Allied Sciences Volume 58 [Project MUSE] ; 58 >
+      au < released ; 2004 ; Journal of the History of Medicine and Allied Sciences Volume 59 [Project MUSE] ; 59 >
+      au < released ; 2005 ; Journal of the History of Medicine and Allied Sciences Volume 60 [Project MUSE] ; 60 >
+      au < released ; 2006 ; Journal of the History of Medicine and Allied Sciences Volume 61 [Project MUSE] ; 61 >
+      au < released ; 2007 ; Journal of the History of Medicine and Allied Sciences Volume 62 [Project MUSE] ; 62 >
+      au < released ; 2008 ; Journal of the History of Medicine and Allied Sciences Volume 63 [Project MUSE] ; 63 >
+      au < released ; 2009 ; Journal of the History of Medicine and Allied Sciences Volume 64 [Project MUSE] ; 64 >
+      au < released ; 2010 ; Journal of the History of Medicine and Allied Sciences Volume 65 [Project MUSE] ; 65 >
+      au < released ; 2011 ; Journal of the History of Medicine and Allied Sciences Volume 66 [Project MUSE] ; 66 >
+      au < released ; 2012 ; Journal of the History of Medicine and Allied Sciences Volume 67 [Project MUSE] ; 67 >
+      au < released ; 2013 ; Journal of the History of Medicine and Allied Sciences Volume 68 [Project MUSE] ; 68 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Journal of the History of Medicine and Allied Sciences Volume 69 [Project MUSE] ; 69 >
+      au < manifest ; 2015 ; Journal of the History of Medicine and Allied Sciences Volume 70 [Project MUSE] ; 70 >
+
+      }
+
 
     }
 
@@ -14804,15 +14913,21 @@
     {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = journal_of_the_royal_musical_association
     attr[journal_id] = rma
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 2005 ; Journal of the Royal Musical Association Volume 130 [Project MUSE] ; 130 >
-    au < released ; 2006 ; Journal of the Royal Musical Association Volume 131 [Project MUSE] ; 131 >
-    au < released ; 2007 ; Journal of the Royal Musical Association Volume 132 [Project MUSE] ; 132 >
-    au < released ; 2008 ; Journal of the Royal Musical Association Volume 133 [Project MUSE] ; 133 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2005 ; Journal of the Royal Musical Association Volume 130 [Project MUSE] ; 130 >
+      au < released ; 2006 ; Journal of the Royal Musical Association Volume 131 [Project MUSE] ; 131 >
+      au < released ; 2007 ; Journal of the Royal Musical Association Volume 132 [Project MUSE] ; 132 >
+      au < released ; 2008 ; Journal of the Royal Musical Association Volume 133 [Project MUSE] ; 133 >
+
+      }
+
 
     }
 
@@ -15670,21 +15785,34 @@
     {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = the_library_the_transactions_of_the_bibliographical_society
     attr[journal_id] = lbt
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 2006 ; The Library: The Transactions of the Bibliographical Society Volume 7 [Project MUSE] ; 7 >
-    au < released ; 2007 ; The Library: The Transactions of the Bibliographical Society Volume 8 [Project MUSE] ; 8 >
-    au < released ; 2008 ; The Library: The Transactions of the Bibliographical Society Volume 9 [Project MUSE] ; 9 >
-    au < released ; 2009 ; The Library: The Transactions of the Bibliographical Society Volume 10 [Project MUSE] ; 10 >
-    au < released ; 2010 ; The Library: The Transactions of the Bibliographical Society Volume 11 [Project MUSE] ; 11 >
-    au < released ; 2011 ; The Library: The Transactions of the Bibliographical Society Volume 12 [Project MUSE] ; 12 >
-    au < released ; 2012 ; The Library: The Transactions of the Bibliographical Society Volume 13 [Project MUSE] ; 13 >
-    au < released ; 2013 ; The Library: The Transactions of the Bibliographical Society Volume 14 [Project MUSE] ; 14 >
-    au < manifest ; 2014 ; The Library: The Transactions of the Bibliographical Society Volume 15 [Project MUSE] ; 15 >
-    au < manifest ; 2015 ; The Library: The Transactions of the Bibliographical Society Volume 16 [Project MUSE] ; 16 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2006 ; The Library: The Transactions of the Bibliographical Society Volume 7 [Project MUSE] ; 7 >
+      au < released ; 2007 ; The Library: The Transactions of the Bibliographical Society Volume 8 [Project MUSE] ; 8 >
+      au < released ; 2008 ; The Library: The Transactions of the Bibliographical Society Volume 9 [Project MUSE] ; 9 >
+      au < released ; 2009 ; The Library: The Transactions of the Bibliographical Society Volume 10 [Project MUSE] ; 10 >
+      au < released ; 2010 ; The Library: The Transactions of the Bibliographical Society Volume 11 [Project MUSE] ; 11 >
+      au < released ; 2011 ; The Library: The Transactions of the Bibliographical Society Volume 12 [Project MUSE] ; 12 >
+      au < released ; 2012 ; The Library: The Transactions of the Bibliographical Society Volume 13 [Project MUSE] ; 13 >
+      au < released ; 2013 ; The Library: The Transactions of the Bibliographical Society Volume 14 [Project MUSE] ; 14 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; The Library: The Transactions of the Bibliographical Society Volume 15 [Project MUSE] ; 15 >
+      au < manifest ; 2015 ; The Library: The Transactions of the Bibliographical Society Volume 16 [Project MUSE] ; 16 >
+
+      }
+
 
     }
 
@@ -16457,31 +16585,44 @@
     {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = modern_judaism
     attr[journal_id] = mj
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 1996 ; Modern Judaism Volume 16 [Project MUSE] ; 16 >
-    au < released ; 1997 ; Modern Judaism Volume 17 [Project MUSE] ; 17 >
-    au < released ; 1998 ; Modern Judaism Volume 18 [Project MUSE] ; 18 >
-    au < released ; 1999 ; Modern Judaism Volume 19 [Project MUSE] ; 19 >
-    au < released ; 2000 ; Modern Judaism Volume 20 [Project MUSE] ; 20 >
-    au < released ; 2001 ; Modern Judaism Volume 21 [Project MUSE] ; 21 >
-    au < released ; 2002 ; Modern Judaism Volume 22 [Project MUSE] ; 22 >
-    au < released ; 2003 ; Modern Judaism Volume 23 [Project MUSE] ; 23 >
-    au < released ; 2004 ; Modern Judaism Volume 24 [Project MUSE] ; 24 >
-    au < released ; 2005 ; Modern Judaism Volume 25 [Project MUSE] ; 25 >
-    au < released ; 2006 ; Modern Judaism Volume 26 [Project MUSE] ; 26 >
-    au < released ; 2007 ; Modern Judaism Volume 27 [Project MUSE] ; 27 >
-    au < released ; 2008 ; Modern Judaism Volume 28 [Project MUSE] ; 28 >
-    au < released ; 2009 ; Modern Judaism Volume 29 [Project MUSE] ; 29 >
-    au < released ; 2010 ; Modern Judaism Volume 30 [Project MUSE] ; 30 >
-    au < released ; 2011 ; Modern Judaism Volume 31 [Project MUSE] ; 31 >
-    au < released ; 2012 ; Modern Judaism Volume 32 [Project MUSE] ; 32 >
-    au < released ; 2013 ; Modern Judaism Volume 33 [Project MUSE] ; 33 >
-    au < manifest ; 2014 ; Modern Judaism Volume 34 [Project MUSE] ; 34 >
-    au < manifest ; 2015 ; Modern Judaism Volume 35 [Project MUSE] ; 35 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1996 ; Modern Judaism Volume 16 [Project MUSE] ; 16 >
+      au < released ; 1997 ; Modern Judaism Volume 17 [Project MUSE] ; 17 >
+      au < released ; 1998 ; Modern Judaism Volume 18 [Project MUSE] ; 18 >
+      au < released ; 1999 ; Modern Judaism Volume 19 [Project MUSE] ; 19 >
+      au < released ; 2000 ; Modern Judaism Volume 20 [Project MUSE] ; 20 >
+      au < released ; 2001 ; Modern Judaism Volume 21 [Project MUSE] ; 21 >
+      au < released ; 2002 ; Modern Judaism Volume 22 [Project MUSE] ; 22 >
+      au < released ; 2003 ; Modern Judaism Volume 23 [Project MUSE] ; 23 >
+      au < released ; 2004 ; Modern Judaism Volume 24 [Project MUSE] ; 24 >
+      au < released ; 2005 ; Modern Judaism Volume 25 [Project MUSE] ; 25 >
+      au < released ; 2006 ; Modern Judaism Volume 26 [Project MUSE] ; 26 >
+      au < released ; 2007 ; Modern Judaism Volume 27 [Project MUSE] ; 27 >
+      au < released ; 2008 ; Modern Judaism Volume 28 [Project MUSE] ; 28 >
+      au < released ; 2009 ; Modern Judaism Volume 29 [Project MUSE] ; 29 >
+      au < released ; 2010 ; Modern Judaism Volume 30 [Project MUSE] ; 30 >
+      au < released ; 2011 ; Modern Judaism Volume 31 [Project MUSE] ; 31 >
+      au < released ; 2012 ; Modern Judaism Volume 32 [Project MUSE] ; 32 >
+      au < released ; 2013 ; Modern Judaism Volume 33 [Project MUSE] ; 33 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Modern Judaism Volume 34 [Project MUSE] ; 34 >
+      au < manifest ; 2015 ; Modern Judaism Volume 35 [Project MUSE] ; 35 >
+
+      }
+
 
     }
 
@@ -17097,21 +17238,27 @@
     {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = music_and_letters
     attr[journal_id] = mal
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 2004 ; Music and Letters Volume 85 [Project MUSE] ; 85 >
-    au < released ; 2005 ; Music and Letters Volume 86 [Project MUSE] ; 86 >
-    au < released ; 2006 ; Music and Letters Volume 87 [Project MUSE] ; 87 >
-    au < released ; 2007 ; Music and Letters Volume 88 [Project MUSE] ; 88 >
-    au < released ; 2008 ; Music and Letters Volume 89 [Project MUSE] ; 89 >
-    au < released ; 2009 ; Music and Letters Volume 90 [Project MUSE] ; 90 >
-    au < released ; 2010 ; Music and Letters Volume 91 [Project MUSE] ; 91 >
-    au < released ; 2011 ; Music and Letters Volume 92 [Project MUSE] ; 92 >
-    au < released ; 2012 ; Music and Letters Volume 93 [Project MUSE] ; 93 >
-    au < released ; 2013 ; Music and Letters Volume 94 [Project MUSE] ; 94 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2004 ; Music and Letters Volume 85 [Project MUSE] ; 85 >
+      au < released ; 2005 ; Music and Letters Volume 86 [Project MUSE] ; 86 >
+      au < released ; 2006 ; Music and Letters Volume 87 [Project MUSE] ; 87 >
+      au < released ; 2007 ; Music and Letters Volume 88 [Project MUSE] ; 88 >
+      au < released ; 2008 ; Music and Letters Volume 89 [Project MUSE] ; 89 >
+      au < released ; 2009 ; Music and Letters Volume 90 [Project MUSE] ; 90 >
+      au < released ; 2010 ; Music and Letters Volume 91 [Project MUSE] ; 91 >
+      au < released ; 2011 ; Music and Letters Volume 92 [Project MUSE] ; 92 >
+      au < released ; 2012 ; Music and Letters Volume 93 [Project MUSE] ; 93 >
+      au < released ; 2013 ; Music and Letters Volume 94 [Project MUSE] ; 94 >
+
+      }
+
     }
 
   }
@@ -18388,25 +18535,38 @@
     {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = opera_quarterly
     attr[journal_id] = opq
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 2002 ; The Opera Quarterly Volume 18 [Project MUSE] ; 18 >
-    au < released ; 2003 ; The Opera Quarterly Volume 19 [Project MUSE] ; 19 >
-    au < released ; 2004 ; The Opera Quarterly Volume 20 [Project MUSE] ; 20 >
-    au < released ; 2005 ; The Opera Quarterly Volume 21 [Project MUSE] ; 21 >
-    au < released ; 2006 ; The Opera Quarterly Volume 22 [Project MUSE] ; 22 >
-    au < released ; 2007 ; The Opera Quarterly Volume 23 [Project MUSE] ; 23 >
-    au < released ; 2008 ; The Opera Quarterly Volume 24 [Project MUSE] ; 24 >
-    au < released ; 2009 ; The Opera Quarterly Volume 25 [Project MUSE] ; 25 >
-    au < released ; 2010 ; The Opera Quarterly Volume 26 [Project MUSE] ; 26 >
-    au < released ; 2011 ; The Opera Quarterly Volume 27 [Project MUSE] ; 27 >
-    au < released ; 2012 ; The Opera Quarterly Volume 28 [Project MUSE] ; 28 >
-    au < released ; 2013 ; The Opera Quarterly Volume 29 [Project MUSE] ; 29 >
-    au < manifest ; 2014 ; The Opera Quarterly Volume 30 [Project MUSE] ; 30 >
-    au < manifest ; 2015 ; The Opera Quarterly Volume 31 [Project MUSE] ; 31 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2002 ; The Opera Quarterly Volume 18 [Project MUSE] ; 18 >
+      au < released ; 2003 ; The Opera Quarterly Volume 19 [Project MUSE] ; 19 >
+      au < released ; 2004 ; The Opera Quarterly Volume 20 [Project MUSE] ; 20 >
+      au < released ; 2005 ; The Opera Quarterly Volume 21 [Project MUSE] ; 21 >
+      au < released ; 2006 ; The Opera Quarterly Volume 22 [Project MUSE] ; 22 >
+      au < released ; 2007 ; The Opera Quarterly Volume 23 [Project MUSE] ; 23 >
+      au < released ; 2008 ; The Opera Quarterly Volume 24 [Project MUSE] ; 24 >
+      au < released ; 2009 ; The Opera Quarterly Volume 25 [Project MUSE] ; 25 >
+      au < released ; 2010 ; The Opera Quarterly Volume 26 [Project MUSE] ; 26 >
+      au < released ; 2011 ; The Opera Quarterly Volume 27 [Project MUSE] ; 27 >
+      au < released ; 2012 ; The Opera Quarterly Volume 28 [Project MUSE] ; 28 >
+      au < released ; 2013 ; The Opera Quarterly Volume 29 [Project MUSE] ; 29 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; The Opera Quarterly Volume 30 [Project MUSE] ; 30 >
+      au < manifest ; 2015 ; The Opera Quarterly Volume 31 [Project MUSE] ; 31 >
+
+      }
+
 
     }
 
@@ -18475,19 +18635,32 @@
     {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = oral_history_review
     attr[journal_id] = ohr
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 2008 ; The Oral History Review Volume 35 [Project MUSE] ; 35 >
-    au < released ; 2009 ; The Oral History Review Volume 36 [Project MUSE] ; 36 >
-    au < released ; 2010 ; The Oral History Review Volume 37 [Project MUSE] ; 37 >
-    au < released ; 2011 ; The Oral History Review Volume 38 [Project MUSE] ; 38 >
-    au < released ; 2012 ; The Oral History Review Volume 39 [Project MUSE] ; 39 >
-    au < released ; 2013 ; The Oral History Review Volume 40 [Project MUSE] ; 40 >
-    au < manifest ; 2014 ; The Oral History Review Volume 41 [Project MUSE] ; 41 >
-    au < manifest ; 2015 ; The Oral History Review Volume 42 [Project MUSE] ; 42 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2008 ; The Oral History Review Volume 35 [Project MUSE] ; 35 >
+      au < released ; 2009 ; The Oral History Review Volume 36 [Project MUSE] ; 36 >
+      au < released ; 2010 ; The Oral History Review Volume 37 [Project MUSE] ; 37 >
+      au < released ; 2011 ; The Oral History Review Volume 38 [Project MUSE] ; 38 >
+      au < released ; 2012 ; The Oral History Review Volume 39 [Project MUSE] ; 39 >
+      au < released ; 2013 ; The Oral History Review Volume 40 [Project MUSE] ; 40 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; The Oral History Review Volume 41 [Project MUSE] ; 41 >
+      au < manifest ; 2015 ; The Oral History Review Volume 42 [Project MUSE] ; 42 >
+
+      }
+
 
     }
 
@@ -19220,25 +19393,52 @@
     {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = past_and_present
     attr[journal_id] = ptp
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 2005 ; Past & Present Volume 188 [Project MUSE] ; 188 >
-    au < released ; 2005 ; Past & Present Volume 189 [Project MUSE] ; 189 >
-    au < released ; 2006 ; Past & Present Volume 190 [Project MUSE] ; 190 >
-    au < released ; 2006 ; Past & Present Volume 191 [Project MUSE] ; 191 >
-    au < released ; 2006 ; Past & Present Volume 192 [Project MUSE] ; 192 >
-    au < released ; 2006 ; Past & Present Volume 193 [Project MUSE] ; 193 >
-    au < superseded ; 2006 ; Past & Present 2006 Supplement 1 [superseded] ; 1 >
-    au < manifest ; 2006 ; Past & Present 2006 Supplement 1 [Project MUSE] ; 2006 >
-    au < released ; 2007 ; Past & Present Number 194 [Project MUSE] ; 194 >
-    au < released ; 2007 ; Past & Present Number 195 [Project MUSE] ; 195 >
-    au < released ; 2007 ; Past & Present Number 196 [Project MUSE] ; 196 >
-    au < released ; 2007 ; Past & Present Number 197 [Project MUSE] ; 197 >
-    au < superseded ; 2007 ; Past & Present 2007 Supplement 2 [superseded] ; 2 >
-    au < manifest ; 2007 ; Past & Present 2007 Supplement 2 [Project MUSE] ; 2007 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2005 ; Past & Present Volume 188 [Project MUSE] ; 188 >
+      au < released ; 2005 ; Past & Present Volume 189 [Project MUSE] ; 189 >
+      au < released ; 2006 ; Past & Present Volume 190 [Project MUSE] ; 190 >
+      au < released ; 2006 ; Past & Present Volume 191 [Project MUSE] ; 191 >
+      au < released ; 2006 ; Past & Present Volume 192 [Project MUSE] ; 192 >
+      au < released ; 2006 ; Past & Present Volume 193 [Project MUSE] ; 193 >
+      au < superseded ; 2006 ; Past & Present 2006 Supplement 1 [superseded] ; 1 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2006 ; Past & Present 2006 Supplement 1 [Project MUSE] ; 2006 >
+
+      }
+
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2007 ; Past & Present Number 194 [Project MUSE] ; 194 >
+      au < released ; 2007 ; Past & Present Number 195 [Project MUSE] ; 195 >
+      au < released ; 2007 ; Past & Present Number 196 [Project MUSE] ; 196 >
+      au < released ; 2007 ; Past & Present Number 197 [Project MUSE] ; 197 >
+      au < superseded ; 2007 ; Past & Present 2007 Supplement 2 [superseded] ; 2 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2007 ; Past & Present 2007 Supplement 2 [Project MUSE] ; 2007 >
+
+      }
+
 
     }
 
@@ -21974,24 +22174,37 @@
     {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = social_politics
     attr[journal_id] = sop
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 2003 ; Social Politics: International Studies in Gender, State and Society Volume 10 [Project MUSE] ; 10 >
-    au < released ; 2004 ; Social Politics: International Studies in Gender, State and Society Volume 11 [Project MUSE] ; 11 >
-    au < released ; 2005 ; Social Politics: International Studies in Gender, State and Society Volume 12 [Project MUSE] ; 12 >
-    au < released ; 2006 ; Social Politics: International Studies in Gender, State and Society Volume 13 [Project MUSE] ; 13 >
-    au < released ; 2007 ; Social Politics: International Studies in Gender, State and Society Volume 14 [Project MUSE] ; 14 >
-    au < released ; 2008 ; Social Politics: International Studies in Gender, State and Society Volume 15 [Project MUSE] ; 15 >
-    au < released ; 2009 ; Social Politics: International Studies in Gender, State and Society Volume 16 [Project MUSE] ; 16 >
-    au < released ; 2010 ; Social Politics: International Studies in Gender, State and Society Volume 17 [Project MUSE] ; 17 >
-    au < released ; 2011 ; Social Politics: International Studies in Gender, State and Society Volume 18 [Project MUSE] ; 18 >
-    au < released ; 2012 ; Social Politics: International Studies in Gender, State and Society Volume 19 [Project MUSE] ; 19 >
-    au < released ; 2013 ; Social Politics: International Studies in Gender, State and Society Volume 20 [Project MUSE] ; 20 >
-    au < manifest ; 2014 ; Social Politics: International Studies in Gender, State and Society Volume 21 [Project MUSE] ; 21 >
-    au < manifest ; 2015 ; Social Politics: International Studies in Gender, State and Society Volume 22 [Project MUSE] ; 22 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2003 ; Social Politics: International Studies in Gender, State and Society Volume 10 [Project MUSE] ; 10 >
+      au < released ; 2004 ; Social Politics: International Studies in Gender, State and Society Volume 11 [Project MUSE] ; 11 >
+      au < released ; 2005 ; Social Politics: International Studies in Gender, State and Society Volume 12 [Project MUSE] ; 12 >
+      au < released ; 2006 ; Social Politics: International Studies in Gender, State and Society Volume 13 [Project MUSE] ; 13 >
+      au < released ; 2007 ; Social Politics: International Studies in Gender, State and Society Volume 14 [Project MUSE] ; 14 >
+      au < released ; 2008 ; Social Politics: International Studies in Gender, State and Society Volume 15 [Project MUSE] ; 15 >
+      au < released ; 2009 ; Social Politics: International Studies in Gender, State and Society Volume 16 [Project MUSE] ; 16 >
+      au < released ; 2010 ; Social Politics: International Studies in Gender, State and Society Volume 17 [Project MUSE] ; 17 >
+      au < released ; 2011 ; Social Politics: International Studies in Gender, State and Society Volume 18 [Project MUSE] ; 18 >
+      au < released ; 2012 ; Social Politics: International Studies in Gender, State and Society Volume 19 [Project MUSE] ; 19 >
+      au < released ; 2013 ; Social Politics: International Studies in Gender, State and Society Volume 20 [Project MUSE] ; 20 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Social Politics: International Studies in Gender, State and Society Volume 21 [Project MUSE] ; 21 >
+      au < manifest ; 2015 ; Social Politics: International Studies in Gender, State and Society Volume 22 [Project MUSE] ; 22 >
+
+      }
+
 
 
     }

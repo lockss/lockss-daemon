@@ -14,12 +14,18 @@
     {
       implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[base_url] = http://muse.jhu.edu/
     
       param[journal_dir] = hesperia
       attr[journal_id] = hes
     
-      au < released ; 2005 ; Hesperia Volume 74 ; 74 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2005 ; Hesperia Volume 74 ; 74 >
+
+      }
+
     }
     
     {
