@@ -6,7 +6,6 @@
   implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -19,22 +18,36 @@
     param[journal_dir] = the_americas
     attr[journal_id] = tam
 
-    au < released ; 2000-2001 ; The Americas Volume 57 ; 57 >
-    au < released ; 2001-2002 ; The Americas Volume 58 ; 58 >
-    au < released ; 2002-2003 ; The Americas Volume 59 ; 59 >
-    au < released ; 2003-2004 ; The Americas Volume 60 ; 60 >
-    au < released ; 2004-2005 ; The Americas Volume 61 ; 61 >
-    au < released ; 2005-2006 ; The Americas Volume 62 ; 62 >
-    au < released ; 2006-2007 ; The Americas Volume 63 ; 63 >
-    au < released ; 2007-2008 ; The Americas Volume 64 ; 64 >
-    au < released ; 2008-2009 ; The Americas Volume 65 ; 65 >
-    au < released ; 2009-2010 ; The Americas Volume 66 ; 66 >
-    au < released ; 2010-2011 ; The Americas Volume 67 ; 67 >
-    au < released ; 2011-2012 ; The Americas Volume 68 ; 68 >
-    au < released ; 2012-2013 ; The Americas Volume 69 ; 69 >
-    au < released ; 2013 ; The Americas Volume 70 ; 70 >
-    au < manifest ; 2014 ; The Americas Volume 71 ; 71 >
-    au < manifest ; 2015 ; The Americas Volume 72 ; 72 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2000-2001 ; The Americas Volume 57 ; 57 >
+      au < released ; 2001-2002 ; The Americas Volume 58 ; 58 >
+      au < released ; 2002-2003 ; The Americas Volume 59 ; 59 >
+      au < released ; 2003-2004 ; The Americas Volume 60 ; 60 >
+      au < released ; 2004-2005 ; The Americas Volume 61 ; 61 >
+      au < released ; 2005-2006 ; The Americas Volume 62 ; 62 >
+      au < released ; 2006-2007 ; The Americas Volume 63 ; 63 >
+      au < released ; 2007-2008 ; The Americas Volume 64 ; 64 >
+      au < released ; 2008-2009 ; The Americas Volume 65 ; 65 >
+      au < released ; 2009-2010 ; The Americas Volume 66 ; 66 >
+      au < released ; 2010-2011 ; The Americas Volume 67 ; 67 >
+      au < released ; 2011-2012 ; The Americas Volume 68 ; 68 >
+      au < released ; 2012-2013 ; The Americas Volume 69 ; 69 >
+      au < released ; 2013 ; The Americas Volume 70 ; 70 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; The Americas Volume 71 ; 71 >
+      au < manifest ; 2015 ; The Americas Volume 72 ; 72 >
+
+    }
+
 
   }
 

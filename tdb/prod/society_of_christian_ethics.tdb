@@ -6,7 +6,6 @@
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     implicit < status ; year ; name ; param[volume] >
-    param[base_url] = http://muse.jhu.edu/
 
     {
 
@@ -20,10 +19,24 @@
       param[journal_dir] = journal_of_the_society_of_christian_ethics
       attr[journal_id] = sce
 
-      au < released ; 2012 ; Journal of the Society of Christian Ethics Volume 32 ; 32 >
-      au < released ; 2013 ; Journal of the Society of Christian Ethics Volume 33 ; 33 >
-      au < manifest ; 2014 ; Journal of the Society of Christian Ethics Volume 34 ; 34 >
-      au < manifest ; 2015 ; Journal of the Society of Christian Ethics Volume 35 ; 35 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2012 ; Journal of the Society of Christian Ethics Volume 32 ; 32 >
+        au < released ; 2013 ; Journal of the Society of Christian Ethics Volume 33 ; 33 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+        au < manifest ; 2014 ; Journal of the Society of Christian Ethics Volume 34 ; 34 >
+        au < manifest ; 2015 ; Journal of the Society of Christian Ethics Volume 35 ; 35 >
+
+    }
+
 
     }
     

@@ -6,7 +6,6 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
 
   {
   
@@ -20,14 +19,35 @@
     param[journal_dir] = asian_bioethics_review
     attr[journal_id] = asb
 
-    au < exists ; 2008 ; Asian Bioethics Review Volume 0 ; 0 >
-    au < released ; 2009 ; Asian Bioethics Review Volume 1 ; 1 >
-    au < released ; 2010 ; Asian Bioethics Review Volume 2 ; 2 >
-    au < released ; 2011 ; Asian Bioethics Review Volume 3 ; 3 >
-    au < released ; 2012 ; Asian Bioethics Review Volume 4 ; 4 >
-    au < released ; 2013 ; Asian Bioethics Review Volume 5 ; 5 >
-    au < manifest ; 2014 ; Asian Bioethics Review Volume 6 ; 6 >
-    au < manifest ; 2015 ; Asian Bioethics Review Volume 7 ; 7 >
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 2008 ; Asian Bioethics Review Volume 0 ; 0 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2009 ; Asian Bioethics Review Volume 1 ; 1 >
+      au < released ; 2010 ; Asian Bioethics Review Volume 2 ; 2 >
+      au < released ; 2011 ; Asian Bioethics Review Volume 3 ; 3 >
+      au < released ; 2012 ; Asian Bioethics Review Volume 4 ; 4 >
+      au < released ; 2013 ; Asian Bioethics Review Volume 5 ; 5 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Asian Bioethics Review Volume 6 ; 6 >
+      au < manifest ; 2015 ; Asian Bioethics Review Volume 7 ; 7 >
+
+    }
+
 
   }
   
@@ -43,19 +63,33 @@
     param[journal_dir] = china
     attr[journal_id] = chn
 
-    au < released ; 2003 ; China: An International Journal Volume 1 ; 1 >
-    au < released ; 2004 ; China: An International Journal Volume 2 ; 2 >
-    au < released ; 2005 ; China: An International Journal Volume 3 ; 3 >
-    au < released ; 2006 ; China: An International Journal Volume 4 ; 4 >
-    au < released ; 2007 ; China: An International Journal Volume 5 ; 5 >
-    au < released ; 2008 ; China: An International Journal Volume 6 ; 6 >
-    au < released ; 2009 ; China: An International Journal Volume 7 ; 7 >
-    au < released ; 2010 ; China: An International Journal Volume 8 ; 8 >
-    au < released ; 2011 ; China: An International Journal Volume 9 ; 9 >
-    au < released ; 2012 ; China: An International Journal Volume 10 ; 10 >
-    au < released ; 2013 ; China: An International Journal Volume 11 ; 11 >
-    au < manifest ; 2014 ; China: An International Journal Volume 12 ; 12 >
-    au < manifest ; 2015 ; China: An International Journal Volume 13 ; 13 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2003 ; China: An International Journal Volume 1 ; 1 >
+      au < released ; 2004 ; China: An International Journal Volume 2 ; 2 >
+      au < released ; 2005 ; China: An International Journal Volume 3 ; 3 >
+      au < released ; 2006 ; China: An International Journal Volume 4 ; 4 >
+      au < released ; 2007 ; China: An International Journal Volume 5 ; 5 >
+      au < released ; 2008 ; China: An International Journal Volume 6 ; 6 >
+      au < released ; 2009 ; China: An International Journal Volume 7 ; 7 >
+      au < released ; 2010 ; China: An International Journal Volume 8 ; 8 >
+      au < released ; 2011 ; China: An International Journal Volume 9 ; 9 >
+      au < released ; 2012 ; China: An International Journal Volume 10 ; 10 >
+      au < released ; 2013 ; China: An International Journal Volume 11 ; 11 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; China: An International Journal Volume 12 ; 12 >
+      au < manifest ; 2015 ; China: An International Journal Volume 13 ; 13 >
+
+    }
+
 
   }
 
@@ -71,25 +105,39 @@
     param[journal_dir] = journal_of_burma_studies
     attr[journal_id] = jbs
 
-    au < released ; 1997 ; Journal of Burma Studies Volume 1 ; 1 >
-    au < released ; 1998 ; Journal of Burma Studies Volume 2 ; 2 >
-    au < released ; 1999 ; Journal of Burma Studies Volume 3 ; 3 >
-    au < released ; 2000 ; Journal of Burma Studies Volume 4 ; 4 >
-    au < released ; 2001 ; Journal of Burma Studies Volume 5 ; 5 >
-    au < released ; 2002 ; Journal of Burma Studies Volume 6 ; 6 >
-    au < released ; 2003 ; Journal of Burma Studies Volume 7 ; 7 >
-    au < released ; 2004 ; Journal of Burma Studies Volume 8 ; 8 >
-    au < released ; 2005 ; Journal of Burma Studies Volume 9 ; 9 >
-    au < released ; 2006 ; Journal of Burma Studies Volume 10 ; 10 >
-    au < released ; 2007 ; Journal of Burma Studies Volume 11 ; 11 >
-    au < released ; 2008 ; Journal of Burma Studies Volume 12 ; 12 >
-    au < released ; 2009 ; Journal of Burma Studies Volume 13 ; 13 >
-    au < released ; 2010 ; Journal of Burma Studies Volume 14 ; 14 >
-    au < released ; 2011 ; Journal of Burma Studies Volume 15 ; 15 >
-    au < released ; 2012 ; Journal of Burma Studies Volume 16 ; 16 >
-    au < released ; 2013 ; Journal of Burma Studies Volume 17 ; 17 >
-    au < manifest ; 2014 ; Journal of Burma Studies Volume 18 ; 18 >
-    au < manifest ; 2015 ; Journal of Burma Studies Volume 19 ; 19 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1997 ; Journal of Burma Studies Volume 1 ; 1 >
+      au < released ; 1998 ; Journal of Burma Studies Volume 2 ; 2 >
+      au < released ; 1999 ; Journal of Burma Studies Volume 3 ; 3 >
+      au < released ; 2000 ; Journal of Burma Studies Volume 4 ; 4 >
+      au < released ; 2001 ; Journal of Burma Studies Volume 5 ; 5 >
+      au < released ; 2002 ; Journal of Burma Studies Volume 6 ; 6 >
+      au < released ; 2003 ; Journal of Burma Studies Volume 7 ; 7 >
+      au < released ; 2004 ; Journal of Burma Studies Volume 8 ; 8 >
+      au < released ; 2005 ; Journal of Burma Studies Volume 9 ; 9 >
+      au < released ; 2006 ; Journal of Burma Studies Volume 10 ; 10 >
+      au < released ; 2007 ; Journal of Burma Studies Volume 11 ; 11 >
+      au < released ; 2008 ; Journal of Burma Studies Volume 12 ; 12 >
+      au < released ; 2009 ; Journal of Burma Studies Volume 13 ; 13 >
+      au < released ; 2010 ; Journal of Burma Studies Volume 14 ; 14 >
+      au < released ; 2011 ; Journal of Burma Studies Volume 15 ; 15 >
+      au < released ; 2012 ; Journal of Burma Studies Volume 16 ; 16 >
+      au < released ; 2013 ; Journal of Burma Studies Volume 17 ; 17 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Journal of Burma Studies Volume 18 ; 18 >
+      au < manifest ; 2015 ; Journal of Burma Studies Volume 19 ; 19 >
+
+    }
+
 
   }
 
@@ -105,10 +153,17 @@
     param[journal_dir] = journal_of_chinese_overseas
     attr[journal_id] = jco
 
-    au < released ; 2005 ; Journal of Chinese Overseas Volume 1 ; 1 >
-    au < released ; 2006 ; Journal of Chinese Overseas Volume 2 ; 2 >
-    au < released ; 2007 ; Journal of Chinese Overseas Volume 3 ; 3 >
-    au < released ; 2008 ; Journal of Chinese Overseas Volume 4 ; 4 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2005 ; Journal of Chinese Overseas Volume 1 ; 1 >
+      au < released ; 2006 ; Journal of Chinese Overseas Volume 2 ; 2 >
+      au < released ; 2007 ; Journal of Chinese Overseas Volume 3 ; 3 >
+      au < released ; 2008 ; Journal of Chinese Overseas Volume 4 ; 4 >
+
+    }
+
 
   }
 

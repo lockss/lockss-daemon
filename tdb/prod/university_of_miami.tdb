@@ -6,7 +6,6 @@
   implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -19,10 +18,17 @@
     param[journal_dir] = latin_american_politics_and_society
     attr[journal_id] = lap
 
-    au < released ; 2004 ; Latin American Politics & Society Volume 46 ; 46 >
-    au < released ; 2005 ; Latin American Politics & Society Volume 47 ; 47 >
-    au < released ; 2006 ; Latin American Politics & Society Volume 48 ; 48 >
-    au < released ; 2007 ; Latin American Politics & Society Volume 49 ; 49 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2004 ; Latin American Politics & Society Volume 46 ; 46 >
+      au < released ; 2005 ; Latin American Politics & Society Volume 47 ; 47 >
+      au < released ; 2006 ; Latin American Politics & Society Volume 48 ; 48 >
+      au < released ; 2007 ; Latin American Politics & Society Volume 49 ; 49 >
+
+    }
+
 
   }
 

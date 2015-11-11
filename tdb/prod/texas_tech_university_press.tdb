@@ -5,7 +5,6 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
   implicit < status ; year ; name ; param[volume] >
 
   {
@@ -20,13 +19,27 @@
     param[journal_dir] = conradiana
     attr[journal_id] = cnd
 
-    au < released ; 2007 ; Conradiana Volume 39 ; 39 >
-    au < released ; 2008 ; Conradiana Volume 40 ; 40 >
-    au < released ; 2009 ; Conradiana Volume 41 ; 41 >
-    au < released ; 2010 ; Conradiana Volume 42 ; 42 >
-    au < released ; 2011 ; Conradiana Volume 43 ; 43 >
-    au < released ; 2012 ; Conradiana Volume 44 ; 44 >
-    au < exists ; 2013 ; Conradiana Volume 45 ; 45 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2007 ; Conradiana Volume 39 ; 39 >
+      au < released ; 2008 ; Conradiana Volume 40 ; 40 >
+      au < released ; 2009 ; Conradiana Volume 41 ; 41 >
+      au < released ; 2010 ; Conradiana Volume 42 ; 42 >
+      au < released ; 2011 ; Conradiana Volume 43 ; 43 >
+      au < released ; 2012 ; Conradiana Volume 44 ; 44 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 2013 ; Conradiana Volume 45 ; 45 >
+
+    }
+
 
   }
 
@@ -42,15 +55,29 @@
     param[journal_dir] = helios
     attr[journal_id] = hel
 
-    au < released ; 2007 ; Helios Volume 34 ; 34 >
-    au < released ; 2008 ; Helios Volume 35 ; 35 >
-    au < released ; 2009 ; Helios Volume 36 ; 36 >
-    au < released ; 2010 ; Helios Volume 37 ; 37 >
-    au < released ; 2011 ; Helios Volume 38 ; 38 >
-    au < released ; 2012 ; Helios Volume 39 ; 39 >
-    au < released ; 2013 ; Helios Volume 40 ; 40 >
-    au < exists ; 2014 ; Helios Volume 41 ; 41 >
-    au < exists ; 2015 ; Helios Volume 42 ; 42 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2007 ; Helios Volume 34 ; 34 >
+      au < released ; 2008 ; Helios Volume 35 ; 35 >
+      au < released ; 2009 ; Helios Volume 36 ; 36 >
+      au < released ; 2010 ; Helios Volume 37 ; 37 >
+      au < released ; 2011 ; Helios Volume 38 ; 38 >
+      au < released ; 2012 ; Helios Volume 39 ; 39 >
+      au < released ; 2013 ; Helios Volume 40 ; 40 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 2014 ; Helios Volume 41 ; 41 >
+      au < exists ; 2015 ; Helios Volume 42 ; 42 >
+
+    }
+
     
   }
 
@@ -66,12 +93,26 @@
     param[journal_dir] = intertexts
     attr[journal_id] = itx
 
-    au < released ; 2009 ; Intertexts Volume 13 ; 13 >
-    au < released ; 2010 ; Intertexts Volume 14 ; 14 >
-    au < released ; 2011 ; Intertexts Volume 15 ; 15 >
-    au < released ; 2012 ; Intertexts Volume 16 ; 16 >
-    au < released ; 2013 ; Intertexts Volume 17 ; 17 >
-    au < exists ; 2014 ; Intertexts Volume 18 ; 18 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2009 ; Intertexts Volume 13 ; 13 >
+      au < released ; 2010 ; Intertexts Volume 14 ; 14 >
+      au < released ; 2011 ; Intertexts Volume 15 ; 15 >
+      au < released ; 2012 ; Intertexts Volume 16 ; 16 >
+      au < released ; 2013 ; Intertexts Volume 17 ; 17 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 2014 ; Intertexts Volume 18 ; 18 >
+
+    }
+
 
   }
 
@@ -87,12 +128,26 @@
     param[journal_dir] = william_carlos_williams_review
     attr[journal_id] = wcw
 
-    au < released ; 2006 ; William Carlos Williams Review Volume 26 ; 26 >
-    au < released ; 2007 ; William Carlos Williams Review Volume 27 ; 27 >
-    au < released ; 2008 ; William Carlos Williams Review Volume 28 ; 28 >
-    au < released ; 2009 ; William Carlos Williams Review Volume 29 ; 29 >
-    au < released ; 2013 ; William Carlos Williams Review Volume 30 ; 30 >
-    au < exists ; 2014 ; William Carlos Williams Review Volume 31 ; 31 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2006 ; William Carlos Williams Review Volume 26 ; 26 >
+      au < released ; 2007 ; William Carlos Williams Review Volume 27 ; 27 >
+      au < released ; 2008 ; William Carlos Williams Review Volume 28 ; 28 >
+      au < released ; 2009 ; William Carlos Williams Review Volume 29 ; 29 >
+      au < released ; 2013 ; William Carlos Williams Review Volume 30 ; 30 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 2014 ; William Carlos Williams Review Volume 31 ; 31 >
+
+    }
+
 
   }
 

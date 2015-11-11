@@ -5,7 +5,6 @@
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
 
-  param[base_url] = http://muse.jhu.edu/
   param[journal_dir] = journal_of_song_yuan_studies
   attr[journal_id] = sys
 
@@ -17,13 +16,27 @@
       issnl = 1059-3152
     >
 
-    au < released ; 2008 ; Journal of Song-Yuan Studies Volume 38 ; 38 >
-    au < released ; 2009 ; Journal of Song-Yuan Studies Volume 39 ; 39 >
-    au < released ; 2010 ; Journal of Song-Yuan Studies Volume 40 ; 40 >
-    au < released ; 2011 ; Journal of Song-Yuan Studies Volume 41 ; 41 >
-    au < released ; 2012 ; Journal of Song-Yuan Studies Volume 42 ; 42 >
-    au < manifest ; 2013 ; Journal of Song-Yuan Studies Volume 43 ; 43 >
-    au < expected ; 2014 ; Journal of Song-Yuan Studies Volume 44 ; 44 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2008 ; Journal of Song-Yuan Studies Volume 38 ; 38 >
+      au < released ; 2009 ; Journal of Song-Yuan Studies Volume 39 ; 39 >
+      au < released ; 2010 ; Journal of Song-Yuan Studies Volume 40 ; 40 >
+      au < released ; 2011 ; Journal of Song-Yuan Studies Volume 41 ; 41 >
+      au < released ; 2012 ; Journal of Song-Yuan Studies Volume 42 ; 42 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2013 ; Journal of Song-Yuan Studies Volume 43 ; 43 >
+      au < expected ; 2014 ; Journal of Song-Yuan Studies Volume 44 ; 44 >
+
+    }
+
 
   }
 

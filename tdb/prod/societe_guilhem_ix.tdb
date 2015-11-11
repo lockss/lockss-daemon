@@ -5,7 +5,6 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
   implicit < status ; year ; name ; param[volume] >
 
   {
@@ -20,17 +19,31 @@
     param[journal_dir] = tenso
     attr[journal_id] = ten
 
-    au < released ; 2005 ; Tenso Volume 20 ; 20 >
-    au < released ; 2006 ; Tenso Volume 21 ; 21 >
-    au < released ; 2007 ; Tenso Volume 22 ; 22 >
-    au < released ; 2008 ; Tenso Volume 23 ; 23 >
-    au < released ; 2009 ; Tenso Volume 24 ; 24 >
-    au < released ; 2010 ; Tenso Volume 25 ; 25 >
-    au < released ; 2011 ; Tenso Volume 26 ; 26 >
-    au < released ; 2012 ; Tenso Volume 27 ; 27 >
-    au < released ; 2013 ; Tenso Volume 28 ; 28 >
-    au < manifest ; 2014 ; Tenso Volume 29 ; 29 >
-    au < manifest ; 2015 ; Tenso Volume 30 ; 30 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2005 ; Tenso Volume 20 ; 20 >
+      au < released ; 2006 ; Tenso Volume 21 ; 21 >
+      au < released ; 2007 ; Tenso Volume 22 ; 22 >
+      au < released ; 2008 ; Tenso Volume 23 ; 23 >
+      au < released ; 2009 ; Tenso Volume 24 ; 24 >
+      au < released ; 2010 ; Tenso Volume 25 ; 25 >
+      au < released ; 2011 ; Tenso Volume 26 ; 26 >
+      au < released ; 2012 ; Tenso Volume 27 ; 27 >
+      au < released ; 2013 ; Tenso Volume 28 ; 28 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Tenso Volume 29 ; 29 >
+      au < manifest ; 2015 ; Tenso Volume 30 ; 30 >
+
+    }
+
 
   }
 

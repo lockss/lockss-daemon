@@ -5,7 +5,6 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -20,14 +19,28 @@
     
     comment[notReady] = volume 50 has XX on pdf. To be fixed in daemon 1.67.
 
-    au < released ; 2006-2007 ; James Joyce Quarterly Volume 44 ; 44 >
-    au < released ; 2007-2008 ; James Joyce Quarterly Volume 45 ; 45 >
-    au < released ; 2008-2009 ; James Joyce Quarterly Volume 46 ; 46 >
-    au < released ; 2009-2010 ; James Joyce Quarterly Volume 47 ; 47 >
-    au < released ; 2010 ; James Joyce Quarterly Volume 48 ; 48 >
-    au < released ; 2011 ; James Joyce Quarterly Volume 49 ; 49 >
-    au < notReady ; 2012-2013 ; James Joyce Quarterly Volume 50 ; 50 >
-    au < expected ; 2014 ; James Joyce Quarterly Volume 51 ; 51 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2006-2007 ; James Joyce Quarterly Volume 44 ; 44 >
+      au < released ; 2007-2008 ; James Joyce Quarterly Volume 45 ; 45 >
+      au < released ; 2008-2009 ; James Joyce Quarterly Volume 46 ; 46 >
+      au < released ; 2009-2010 ; James Joyce Quarterly Volume 47 ; 47 >
+      au < released ; 2010 ; James Joyce Quarterly Volume 48 ; 48 >
+      au < released ; 2011 ; James Joyce Quarterly Volume 49 ; 49 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < notReady ; 2012-2013 ; James Joyce Quarterly Volume 50 ; 50 >
+      au < expected ; 2014 ; James Joyce Quarterly Volume 51 ; 51 >
+
+    }
+
 
   }
 
@@ -42,15 +55,29 @@
     param[journal_dir] = tulsa_studies_in_womens_literature
     attr[journal_id] = tsw
 
-    au < released ; 2007 ; Tulsa Studies in Women's Literature Volume 26 ; 26 >
-    au < released ; 2008 ; Tulsa Studies in Women's Literature Volume 27 ; 27 >
-    au < released ; 2009 ; Tulsa Studies in Women's Literature Volume 28 ; 28 >
-    au < released ; 2010 ; Tulsa Studies in Women's Literature Volume 29 ; 29 >
-    au < released ; 2011 ; Tulsa Studies in Women's Literature Volume 30 ; 30 >
-    au < released ; 2012 ; Tulsa Studies in Women's Literature Volume 31 ; 31 >
-    au < released ; 2013 ; Tulsa Studies in Women's Literature Volume 32 ; 32 >
-    au < manifest ; 2014 ; Tulsa Studies in Women's Literature Volume 33 ; 33 >
-    au < manifest ; 2015 ; Tulsa Studies in Women's Literature Volume 34 ; 34 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2007 ; Tulsa Studies in Women's Literature Volume 26 ; 26 >
+      au < released ; 2008 ; Tulsa Studies in Women's Literature Volume 27 ; 27 >
+      au < released ; 2009 ; Tulsa Studies in Women's Literature Volume 28 ; 28 >
+      au < released ; 2010 ; Tulsa Studies in Women's Literature Volume 29 ; 29 >
+      au < released ; 2011 ; Tulsa Studies in Women's Literature Volume 30 ; 30 >
+      au < released ; 2012 ; Tulsa Studies in Women's Literature Volume 31 ; 31 >
+      au < released ; 2013 ; Tulsa Studies in Women's Literature Volume 32 ; 32 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Tulsa Studies in Women's Literature Volume 33 ; 33 >
+      au < manifest ; 2015 ; Tulsa Studies in Women's Literature Volume 34 ; 34 >
+
+    }
+
 
   }
 

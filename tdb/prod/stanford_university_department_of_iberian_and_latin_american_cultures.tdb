@@ -6,7 +6,6 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
 
   {
   
@@ -20,10 +19,17 @@
     param[journal_dir] = nuevo_texto_critico
     attr[journal_id] = ntc
 
-    au < released ; 2008 ; Nuevo Texto Crítico Volume 21 ; 21 >
-    au < released ; 2009 ; Nuevo Texto Crítico Volume 22 ; 22 >
-    au < released ; 2010 ; Nuevo Texto Crítico Volume 23 ; 23 >
-    au < released ; 2011-2012 ; Nuevo Texto Crítico Volume 24-25 ; 24 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2008 ; Nuevo Texto Crítico Volume 21 ; 21 >
+      au < released ; 2009 ; Nuevo Texto Crítico Volume 22 ; 22 >
+      au < released ; 2010 ; Nuevo Texto Crítico Volume 23 ; 23 >
+      au < released ; 2011-2012 ; Nuevo Texto Crítico Volume 24-25 ; 24 >
+
+    }
+
 
   }
 

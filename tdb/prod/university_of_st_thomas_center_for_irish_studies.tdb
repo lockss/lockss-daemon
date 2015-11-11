@@ -6,7 +6,6 @@
   implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -19,21 +18,35 @@
     param[journal_dir] = new_hibernia_review
     attr[journal_id] = nhr
 
-    au < released ; 2001 ; New Hibernia Review Volume 5 ; 5 >
-    au < released ; 2002 ; New Hibernia Review Volume 6 ; 6 >
-    au < released ; 2003 ; New Hibernia Review Volume 7 ; 7 >
-    au < released ; 2004 ; New Hibernia Review Volume 8 ; 8 >
-    au < released ; 2005 ; New Hibernia Review Volume 9 ; 9 >
-    au < released ; 2006 ; New Hibernia Review Volume 10 ; 10 >
-    au < released ; 2007 ; New Hibernia Review Volume 11 ; 11 >
-    au < released ; 2008 ; New Hibernia Review Volume 12 ; 12 >
-    au < released ; 2009 ; New Hibernia Review Volume 13 ; 13 >
-    au < released ; 2010 ; New Hibernia Review Volume 14 ; 14 >
-    au < released ; 2011 ; New Hibernia Review Volume 15 ; 15 >
-    au < released ; 2012 ; New Hibernia Review Volume 16 ; 16 >
-    au < released ; 2013 ; New Hibernia Review Volume 17 ; 17 >
-    au < manifest ; 2014 ; New Hibernia Review Volume 18 ; 18 >
-    au < manifest ; 2015 ; New Hibernia Review Volume 19 ; 19 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2001 ; New Hibernia Review Volume 5 ; 5 >
+      au < released ; 2002 ; New Hibernia Review Volume 6 ; 6 >
+      au < released ; 2003 ; New Hibernia Review Volume 7 ; 7 >
+      au < released ; 2004 ; New Hibernia Review Volume 8 ; 8 >
+      au < released ; 2005 ; New Hibernia Review Volume 9 ; 9 >
+      au < released ; 2006 ; New Hibernia Review Volume 10 ; 10 >
+      au < released ; 2007 ; New Hibernia Review Volume 11 ; 11 >
+      au < released ; 2008 ; New Hibernia Review Volume 12 ; 12 >
+      au < released ; 2009 ; New Hibernia Review Volume 13 ; 13 >
+      au < released ; 2010 ; New Hibernia Review Volume 14 ; 14 >
+      au < released ; 2011 ; New Hibernia Review Volume 15 ; 15 >
+      au < released ; 2012 ; New Hibernia Review Volume 16 ; 16 >
+      au < released ; 2013 ; New Hibernia Review Volume 17 ; 17 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; New Hibernia Review Volume 18 ; 18 >
+      au < manifest ; 2015 ; New Hibernia Review Volume 19 ; 19 >
+
+    }
+
 
   }
 

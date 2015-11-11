@@ -5,7 +5,6 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -18,26 +17,47 @@
     param[journal_dir] = american_annals_of_the_deaf
     attr[journal_id] = aad
 
-    au < manifest ; 1995 ; American Annals of the Deaf Volume 140 ; 140 >
-    au < manifest ; 1996 ; American Annals of the Deaf Volume 141 ; 141 >
-    au < manifest ; 1997 ; American Annals of the Deaf Volume 142 ; 142 >
-    au < manifest ; 1998 ; American Annals of the Deaf Volume 143 ; 143 >
-    au < manifest ; 1999 ; American Annals of the Deaf Volume 144 ; 144 >
-    au < manifest ; 2000 ; American Annals of the Deaf Volume 145 ; 145 >
-    au < manifest ; 2001 ; American Annals of the Deaf Volume 146 ; 146 >
-    au < manifest ; 2002 ; American Annals of the Deaf Volume 147 ; 147 >
-    au < released ; 2003-2004 ; American Annals of the Deaf Volume 148 ; 148 >
-    au < released ; 2004-2005 ; American Annals of the Deaf Volume 149 ; 149 >
-    au < released ; 2005-2006 ; American Annals of the Deaf Volume 150 ; 150 >
-    au < released ; 2006-2007 ; American Annals of the Deaf Volume 151 ; 151 >
-    au < released ; 2007-2008 ; American Annals of the Deaf Volume 152 ; 152 >
-    au < released ; 2008-2009 ; American Annals of the Deaf Volume 153 ; 153 >
-    au < released ; 2009-2010 ; American Annals of the Deaf Volume 154 ; 154 >
-    au < released ; 2010-2011 ; American Annals of the Deaf Volume 155 ; 155 >
-    au < released ; 2011-2012 ; American Annals of the Deaf Volume 156 ; 156 >
-    au < released ; 2012-2013 ; American Annals of the Deaf Volume 157 ; 157 >
-    au < released ; 2013-2014 ; American Annals of the Deaf Volume 158 ; 158 >
-    au < manifest ; 2014-2015 ; American Annals of the Deaf Volume 159 ; 159 >
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 1995 ; American Annals of the Deaf Volume 140 ; 140 >
+      au < manifest ; 1996 ; American Annals of the Deaf Volume 141 ; 141 >
+      au < manifest ; 1997 ; American Annals of the Deaf Volume 142 ; 142 >
+      au < manifest ; 1998 ; American Annals of the Deaf Volume 143 ; 143 >
+      au < manifest ; 1999 ; American Annals of the Deaf Volume 144 ; 144 >
+      au < manifest ; 2000 ; American Annals of the Deaf Volume 145 ; 145 >
+      au < manifest ; 2001 ; American Annals of the Deaf Volume 146 ; 146 >
+      au < manifest ; 2002 ; American Annals of the Deaf Volume 147 ; 147 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2003-2004 ; American Annals of the Deaf Volume 148 ; 148 >
+      au < released ; 2004-2005 ; American Annals of the Deaf Volume 149 ; 149 >
+      au < released ; 2005-2006 ; American Annals of the Deaf Volume 150 ; 150 >
+      au < released ; 2006-2007 ; American Annals of the Deaf Volume 151 ; 151 >
+      au < released ; 2007-2008 ; American Annals of the Deaf Volume 152 ; 152 >
+      au < released ; 2008-2009 ; American Annals of the Deaf Volume 153 ; 153 >
+      au < released ; 2009-2010 ; American Annals of the Deaf Volume 154 ; 154 >
+      au < released ; 2010-2011 ; American Annals of the Deaf Volume 155 ; 155 >
+      au < released ; 2011-2012 ; American Annals of the Deaf Volume 156 ; 156 >
+      au < released ; 2012-2013 ; American Annals of the Deaf Volume 157 ; 157 >
+      au < released ; 2013-2014 ; American Annals of the Deaf Volume 158 ; 158 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014-2015 ; American Annals of the Deaf Volume 159 ; 159 >
+
+    }
+
 
   }
 
@@ -52,21 +72,35 @@
     param[journal_dir] = sign_language_studies
     attr[journal_id] = sls
 
-    au < released ; 2000-2001 ; Sign Language Studies Volume 1 ; 1 >
-    au < released ; 2001-2002 ; Sign Language Studies Volume 2 ; 2 >
-    au < released ; 2002-2003 ; Sign Language Studies Volume 3 ; 3 >
-    au < released ; 2003-2004 ; Sign Language Studies Volume 4 ; 4 >
-    au < released ; 2004-2005 ; Sign Language Studies Volume 5 ; 5 >
-    au < released ; 2005-2006 ; Sign Language Studies Volume 6 ; 6 >
-    au < released ; 2006-2007 ; Sign Language Studies Volume 7 ; 7 >
-    au < released ; 2007-2008 ; Sign Language Studies Volume 8 ; 8 >
-    au < released ; 2008-2009 ; Sign Language Studies Volume 9 ; 9 >
-    au < released ; 2009-2010 ; Sign Language Studies Volume 10 ; 10 >
-    au < released ; 2010-2011 ; Sign Language Studies Volume 11 ; 11 >
-    au < released ; 2011-2012 ; Sign Language Studies Volume 12 ; 12 >
-    au < released ; 2012-2013 ; Sign Language Studies Volume 13 ; 13 >
-    au < released ; 2013-2014 ; Sign Language Studies Volume 14 ; 14 >
-    au < manifest ; 2014-2015 ; Sign Language Studies Volume 15 ; 15 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2000-2001 ; Sign Language Studies Volume 1 ; 1 >
+      au < released ; 2001-2002 ; Sign Language Studies Volume 2 ; 2 >
+      au < released ; 2002-2003 ; Sign Language Studies Volume 3 ; 3 >
+      au < released ; 2003-2004 ; Sign Language Studies Volume 4 ; 4 >
+      au < released ; 2004-2005 ; Sign Language Studies Volume 5 ; 5 >
+      au < released ; 2005-2006 ; Sign Language Studies Volume 6 ; 6 >
+      au < released ; 2006-2007 ; Sign Language Studies Volume 7 ; 7 >
+      au < released ; 2007-2008 ; Sign Language Studies Volume 8 ; 8 >
+      au < released ; 2008-2009 ; Sign Language Studies Volume 9 ; 9 >
+      au < released ; 2009-2010 ; Sign Language Studies Volume 10 ; 10 >
+      au < released ; 2010-2011 ; Sign Language Studies Volume 11 ; 11 >
+      au < released ; 2011-2012 ; Sign Language Studies Volume 12 ; 12 >
+      au < released ; 2012-2013 ; Sign Language Studies Volume 13 ; 13 >
+      au < released ; 2013-2014 ; Sign Language Studies Volume 14 ; 14 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014-2015 ; Sign Language Studies Volume 15 ; 15 >
+
+    }
+
 
   }
 

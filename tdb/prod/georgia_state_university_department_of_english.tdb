@@ -4,7 +4,6 @@
   >
 
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[base_url] = http://muse.jhu.edu/
       implicit < status ; year ; name ; param[volume] >
 
   {
@@ -19,13 +18,27 @@
     param[journal_dir] = eudora_welty_review
     attr[journal_id] = ewr
 
-    au < released ; 2009 ; Eudora Welty Review Volume 1 ; 1 >
-    au < released ; 2010 ; Eudora Welty Review Volume 2 ; 2 >
-    au < released ; 2011 ; Eudora Welty Review Volume 3 ; 3 >
-    au < released ; 2012 ; Eudora Welty Review Volume 4 ; 4 >
-    au < released ; 2013 ; Eudora Welty Review Volume 5 ; 5 >
-    au < manifest ; 2014 ; Eudora Welty Review Volume 6 ; 6 >
-    au < manifest ; 2015 ; Eudora Welty Review Volume 7 ; 7 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2009 ; Eudora Welty Review Volume 1 ; 1 >
+      au < released ; 2010 ; Eudora Welty Review Volume 2 ; 2 >
+      au < released ; 2011 ; Eudora Welty Review Volume 3 ; 3 >
+      au < released ; 2012 ; Eudora Welty Review Volume 4 ; 4 >
+      au < released ; 2013 ; Eudora Welty Review Volume 5 ; 5 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Eudora Welty Review Volume 6 ; 6 >
+      au < manifest ; 2015 ; Eudora Welty Review Volume 7 ; 7 >
+
+    }
+
 
   }
 
@@ -40,9 +53,23 @@
     param[journal_dir] = studies_in_the_literary_imagination
     attr[journal_id] = sli
     
-    au < released ; 2011 ; Studies in the Literary Imagination Volume 44 ; 44 >
-    au < released ; 2012 ; Studies in the Literary Imagination Volume 45 ; 45 >
-    au < manifest ; 2013 ; Studies in the Literary Imagination Volume 46 ; 46 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2011 ; Studies in the Literary Imagination Volume 44 ; 44 >
+      au < released ; 2012 ; Studies in the Literary Imagination Volume 45 ; 45 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2013 ; Studies in the Literary Imagination Volume 46 ; 46 >
+
+    }
+
 
   }
 

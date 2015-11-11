@@ -5,7 +5,6 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -18,13 +17,20 @@
     param[journal_dir] = hastings_center_report
     attr[journal_id] = hcr
 
-    au < released ; 2005 ; Hastings Center Report Volume 35 ; 35 >
-    au < released ; 2006 ; Hastings Center Report Volume 36 ; 36 >
-    au < released ; 2007 ; Hastings Center Report Volume 37 ; 37 >
-    au < released ; 2008 ; Hastings Center Report Volume 38 ; 38 >
-    au < released ; 2009 ; Hastings Center Report Volume 39 ; 39 >
-    au < released ; 2010 ; Hastings Center Report Volume 40 ; 40 >
-    au < released ; 2011 ; Hastings Center Report Volume 41 ; 41 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2005 ; Hastings Center Report Volume 35 ; 35 >
+      au < released ; 2006 ; Hastings Center Report Volume 36 ; 36 >
+      au < released ; 2007 ; Hastings Center Report Volume 37 ; 37 >
+      au < released ; 2008 ; Hastings Center Report Volume 38 ; 38 >
+      au < released ; 2009 ; Hastings Center Report Volume 39 ; 39 >
+      au < released ; 2010 ; Hastings Center Report Volume 40 ; 40 >
+      au < released ; 2011 ; Hastings Center Report Volume 41 ; 41 >
+
+    }
+
 
   }
 

@@ -6,7 +6,6 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
 
   {
 
@@ -20,22 +19,36 @@
     param[journal_dir] = la_coronica
     attr[journal_id] = cor
 
-    au < released ; 2000 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 29 ; 29 >
-    au < released ; 2001-2002 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 30 ; 30 >
-    au < released ; 2002-2003 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 31 ; 31 >
-    au < released ; 2003-2004 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 32 ; 32 >
-    au < released ; 2004-2005 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 33 ; 33 >
-    au < released ; 2005-2006 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 34 ; 34 >
-    au < released ; 2006-2007 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 35 ; 35 >
-    au < released ; 2008 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 36 ; 36 >
-    au < released ; 2008-2009 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 37 ; 37 >
-    au < released ; 2009-2010 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 38 ; 38 >
-    au < released ; 2010-2011 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 39 ; 39 >
-    au < released ; 2011-2012 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 40 ; 40 >
-    au < released ; 2012-2013 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 41 ; 41 >
-    au < released ; 2013-2014 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 42 ; 42 >
-    au < manifest ; 2014-2015 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 43 ; 43 >
-    au < expected ; 2015-2016 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 44 ; 44 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2000 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 29 ; 29 >
+      au < released ; 2001-2002 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 30 ; 30 >
+      au < released ; 2002-2003 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 31 ; 31 >
+      au < released ; 2003-2004 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 32 ; 32 >
+      au < released ; 2004-2005 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 33 ; 33 >
+      au < released ; 2005-2006 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 34 ; 34 >
+      au < released ; 2006-2007 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 35 ; 35 >
+      au < released ; 2008 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 36 ; 36 >
+      au < released ; 2008-2009 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 37 ; 37 >
+      au < released ; 2009-2010 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 38 ; 38 >
+      au < released ; 2010-2011 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 39 ; 39 >
+      au < released ; 2011-2012 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 40 ; 40 >
+      au < released ; 2012-2013 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 41 ; 41 >
+      au < released ; 2013-2014 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 42 ; 42 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014-2015 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 43 ; 43 >
+      au < expected ; 2015-2016 ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 44 ; 44 >
+
+    }
+
     
 
   }

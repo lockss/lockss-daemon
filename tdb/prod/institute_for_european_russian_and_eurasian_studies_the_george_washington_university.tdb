@@ -5,7 +5,6 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -18,7 +17,14 @@
     param[journal_dir] = demokratizatsiya
     attr[journal_id] = dmo
 
-    au < manifest ; 2015 ; Demokratizatsiya: The Journal of Post-Soviet Democratization Volume 23 ; 23 >
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2015 ; Demokratizatsiya: The Journal of Post-Soviet Democratization Volume 23 ; 23 >
+
+    }
+
 
   }
 

@@ -14,50 +14,56 @@
     >
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = hume_studies
     attr[journal_id] = hms
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 1975 ; Hume Studies Volume 1  ; 1  >
-    au < released ; 1976 ; Hume Studies Volume 2  ; 2  >
-    au < released ; 1977 ; Hume Studies Volume 3  ; 3  >
-    au < released ; 1978 ; Hume Studies Volume 4  ; 4  >
-    au < released ; 1979 ; Hume Studies Volume 5  ; 5  >
-    au < released ; 1980 ; Hume Studies Volume 6  ; 6  >
-    au < released ; 1981 ; Hume Studies Volume 7  ; 7  >
-    au < released ; 1982 ; Hume Studies Volume 8  ; 8  >
-    au < released ; 1983 ; Hume Studies Volume 9  ; 9  >
-    au < released ; 1984 ; Hume Studies Volume 10 ; 10 >
-    au < released ; 1985 ; Hume Studies Volume 11 ; 11 >
-    au < released ; 1986 ; Hume Studies Volume 12 ; 12 >
-    au < released ; 1987 ; Hume Studies Volume 13 ; 13 >
-    au < released ; 1988 ; Hume Studies Volume 14 ; 14 >
-    au < released ; 1989 ; Hume Studies Volume 15 ; 15 >
-    au < released ; 1990 ; Hume Studies Volume 16 ; 16 >
-    au < released ; 1991 ; Hume Studies Volume 17 ; 17 >
-    au < released ; 1992 ; Hume Studies Volume 18 ; 18 >
-    au < released ; 1993 ; Hume Studies Volume 19 ; 19 >
-    au < released ; 1994 ; Hume Studies Volume 20 ; 20 >
-    au < released ; 1995 ; Hume Studies Volume 21 ; 21 >
-    au < released ; 1996 ; Hume Studies Volume 22 ; 22 >
-    au < released ; 1997 ; Hume Studies Volume 23 ; 23 >
-    au < released ; 1998 ; Hume Studies Volume 24 ; 24 >
-    au < released ; 1999 ; Hume Studies Volume 25 ; 25 >
-    au < released ; 2000 ; Hume Studies Volume 26 ; 26 >
-    au < released ; 2001 ; Hume Studies Volume 27 ; 27 >
-    au < released ; 2002 ; Hume Studies Volume 28 ; 28 >
-    au < released ; 2003 ; Hume Studies Volume 29 ; 29 >
-    au < released ; 2004 ; Hume Studies Volume 30 ; 30 >
-    au < released ; 2005 ; Hume Studies Volume 31 ; 31 >
-    au < released ; 2006 ; Hume Studies Volume 32 ; 32 >
-    au < released ; 2007 ; Hume Studies Volume 33 ; 33 >
-    au < released ; 2008 ; Hume Studies Volume 34 ; 34 >
-    au < released ; 2009 ; Hume Studies Volume 35 ; 35 >
-    au < released ; 2010 ; Hume Studies Volume 36 ; 36 >
-    au < released ; 2011 ; Hume Studies Volume 37 ; 37 >
-    au < released ; 2012 ; Hume Studies Volume 38 ; 38 >
-    au < released ; 2013 ; Hume Studies Volume 39 ; 39 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1975 ; Hume Studies Volume 1  ; 1  >
+      au < released ; 1976 ; Hume Studies Volume 2  ; 2  >
+      au < released ; 1977 ; Hume Studies Volume 3  ; 3  >
+      au < released ; 1978 ; Hume Studies Volume 4  ; 4  >
+      au < released ; 1979 ; Hume Studies Volume 5  ; 5  >
+      au < released ; 1980 ; Hume Studies Volume 6  ; 6  >
+      au < released ; 1981 ; Hume Studies Volume 7  ; 7  >
+      au < released ; 1982 ; Hume Studies Volume 8  ; 8  >
+      au < released ; 1983 ; Hume Studies Volume 9  ; 9  >
+      au < released ; 1984 ; Hume Studies Volume 10 ; 10 >
+      au < released ; 1985 ; Hume Studies Volume 11 ; 11 >
+      au < released ; 1986 ; Hume Studies Volume 12 ; 12 >
+      au < released ; 1987 ; Hume Studies Volume 13 ; 13 >
+      au < released ; 1988 ; Hume Studies Volume 14 ; 14 >
+      au < released ; 1989 ; Hume Studies Volume 15 ; 15 >
+      au < released ; 1990 ; Hume Studies Volume 16 ; 16 >
+      au < released ; 1991 ; Hume Studies Volume 17 ; 17 >
+      au < released ; 1992 ; Hume Studies Volume 18 ; 18 >
+      au < released ; 1993 ; Hume Studies Volume 19 ; 19 >
+      au < released ; 1994 ; Hume Studies Volume 20 ; 20 >
+      au < released ; 1995 ; Hume Studies Volume 21 ; 21 >
+      au < released ; 1996 ; Hume Studies Volume 22 ; 22 >
+      au < released ; 1997 ; Hume Studies Volume 23 ; 23 >
+      au < released ; 1998 ; Hume Studies Volume 24 ; 24 >
+      au < released ; 1999 ; Hume Studies Volume 25 ; 25 >
+      au < released ; 2000 ; Hume Studies Volume 26 ; 26 >
+      au < released ; 2001 ; Hume Studies Volume 27 ; 27 >
+      au < released ; 2002 ; Hume Studies Volume 28 ; 28 >
+      au < released ; 2003 ; Hume Studies Volume 29 ; 29 >
+      au < released ; 2004 ; Hume Studies Volume 30 ; 30 >
+      au < released ; 2005 ; Hume Studies Volume 31 ; 31 >
+      au < released ; 2006 ; Hume Studies Volume 32 ; 32 >
+      au < released ; 2007 ; Hume Studies Volume 33 ; 33 >
+      au < released ; 2008 ; Hume Studies Volume 34 ; 34 >
+      au < released ; 2009 ; Hume Studies Volume 35 ; 35 >
+      au < released ; 2010 ; Hume Studies Volume 36 ; 36 >
+      au < released ; 2011 ; Hume Studies Volume 37 ; 37 >
+      au < released ; 2012 ; Hume Studies Volume 38 ; 38 >
+      au < released ; 2013 ; Hume Studies Volume 39 ; 39 >
+
+    }
+
 
   }
 

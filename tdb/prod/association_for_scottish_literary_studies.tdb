@@ -4,7 +4,6 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
   implicit < status ; year ; name ; param[volume] >
 
   {
@@ -16,9 +15,23 @@
     param[journal_dir] = scottish_literary_review
     attr[journal_id] = slr
 
-    au < released ; 2013 ; Scottish Literary Review Volume 5 ; 5 >
-    au < manifest ; 2014 ; Scottish Literary Review Volume 6 ; 6 >
-    au < manifest ; 2015 ; Scottish Literary Review Volume 7 ; 7 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2013 ; Scottish Literary Review Volume 5 ; 5 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Scottish Literary Review Volume 6 ; 6 >
+      au < manifest ; 2015 ; Scottish Literary Review Volume 7 ; 7 >
+
+    }
+
 
   }
   

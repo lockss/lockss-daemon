@@ -6,7 +6,6 @@
   implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -19,7 +18,14 @@
     param[journal_dir] = cervantes
     attr[journal_id] = cer
 
-    au < manifest ; 2014 ; Cervantes: Bulletin of the Cervantes Society of America Volume 34 ; 34 >
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Cervantes: Bulletin of the Cervantes Society of America Volume 34 ; 34 >
+
+    }
+
 
   }
 

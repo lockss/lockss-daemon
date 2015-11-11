@@ -5,7 +5,6 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
   implicit < status ; year ; name ; param[volume] >
 
   {
@@ -20,21 +19,35 @@
     param[journal_dir] = language
     attr[journal_id] = lan
 
-    au < released ; 2001 ; Language Volume 77 ; 77 >
-    au < released ; 2002 ; Language Volume 78 ; 78 >
-    au < released ; 2003 ; Language Volume 79 ; 79 >
-    au < released ; 2004 ; Language Volume 80 ; 80 >
-    au < released ; 2005 ; Language Volume 81 ; 81 >
-    au < released ; 2006 ; Language Volume 82 ; 82 >
-    au < released ; 2007 ; Language Volume 83 ; 83 >
-    au < released ; 2008 ; Language Volume 84 ; 84 >
-    au < released ; 2009 ; Language Volume 85 ; 85 >
-    au < released ; 2010 ; Language Volume 86 ; 86 >
-    au < released ; 2011 ; Language Volume 87 ; 87 >
-    au < released ; 2012 ; Language Volume 88 ; 88 >
-    au < released ; 2013 ; Language Volume 89 ; 89 >
-    au < manifest ; 2014 ; Language Volume 90 ; 90 >
-    au < manifest ; 2015 ; Language Volume 91 ; 91 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2001 ; Language Volume 77 ; 77 >
+      au < released ; 2002 ; Language Volume 78 ; 78 >
+      au < released ; 2003 ; Language Volume 79 ; 79 >
+      au < released ; 2004 ; Language Volume 80 ; 80 >
+      au < released ; 2005 ; Language Volume 81 ; 81 >
+      au < released ; 2006 ; Language Volume 82 ; 82 >
+      au < released ; 2007 ; Language Volume 83 ; 83 >
+      au < released ; 2008 ; Language Volume 84 ; 84 >
+      au < released ; 2009 ; Language Volume 85 ; 85 >
+      au < released ; 2010 ; Language Volume 86 ; 86 >
+      au < released ; 2011 ; Language Volume 87 ; 87 >
+      au < released ; 2012 ; Language Volume 88 ; 88 >
+      au < released ; 2013 ; Language Volume 89 ; 89 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Language Volume 90 ; 90 >
+      au < manifest ; 2015 ; Language Volume 91 ; 91 >
+
+    }
+
 
   }
 

@@ -5,7 +5,6 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
   implicit < status ; year ; name ; param[volume] >
 
   {
@@ -20,19 +19,33 @@
     param[journal_dir] = asean_economic_bulletin
     attr[journal_id] = ase
 
-    au < released ; 2003 ; ASEAN Economic Bulletin Volume 20 ; 20 >
-    au < released ; 2004 ; ASEAN Economic Bulletin Volume 21 ; 21 >
-    au < released ; 2005 ; ASEAN Economic Bulletin Volume 22 ; 22 >
-    au < released ; 2006 ; ASEAN Economic Bulletin Volume 23 ; 23 >
-    au < released ; 2007 ; ASEAN Economic Bulletin Volume 24 ; 24 >
-    au < released ; 2008 ; ASEAN Economic Bulletin Volume 25 ; 25 >
-    au < released ; 2009 ; ASEAN Economic Bulletin Volume 26 ; 26 >
-    au < released ; 2010 ; ASEAN Economic Bulletin Volume 27 ; 27 >
-    au < released ; 2011 ; ASEAN Economic Bulletin Volume 28 ; 28 >
-    au < released ; 2012 ; ASEAN Economic Bulletin Volume 29 ; 29 >
-    au < released ; 2013 ; ASEAN Economic Bulletin Volume 30 ; 30 >
-    au < manifest ; 2014 ; ASEAN Economic Bulletin Volume 31 ; 31 >
-    au < manifest ; 2015 ; ASEAN Economic Bulletin Volume 32 ; 32 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2003 ; ASEAN Economic Bulletin Volume 20 ; 20 >
+      au < released ; 2004 ; ASEAN Economic Bulletin Volume 21 ; 21 >
+      au < released ; 2005 ; ASEAN Economic Bulletin Volume 22 ; 22 >
+      au < released ; 2006 ; ASEAN Economic Bulletin Volume 23 ; 23 >
+      au < released ; 2007 ; ASEAN Economic Bulletin Volume 24 ; 24 >
+      au < released ; 2008 ; ASEAN Economic Bulletin Volume 25 ; 25 >
+      au < released ; 2009 ; ASEAN Economic Bulletin Volume 26 ; 26 >
+      au < released ; 2010 ; ASEAN Economic Bulletin Volume 27 ; 27 >
+      au < released ; 2011 ; ASEAN Economic Bulletin Volume 28 ; 28 >
+      au < released ; 2012 ; ASEAN Economic Bulletin Volume 29 ; 29 >
+      au < released ; 2013 ; ASEAN Economic Bulletin Volume 30 ; 30 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; ASEAN Economic Bulletin Volume 31 ; 31 >
+      au < manifest ; 2015 ; ASEAN Economic Bulletin Volume 32 ; 32 >
+
+    }
+
 
   }
 
@@ -48,19 +61,33 @@
     param[journal_dir] = contemporary_southeast_asia_a_journal_of_international_and_strategic_affairs
     attr[journal_id] = csa
 
-    au < released ; 2003 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 25 ; 25 >
-    au < released ; 2004 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 26 ; 26 >
-    au < released ; 2005 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 27 ; 27 >
-    au < released ; 2006 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 28 ; 28 >
-    au < released ; 2007 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 29 ; 29 >
-    au < released ; 2008 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 30 ; 30 >
-    au < released ; 2009 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 31 ; 31 >
-    au < released ; 2010 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 32 ; 32 >
-    au < released ; 2011 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 33 ; 33 >
-    au < released ; 2012 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 34 ; 34 >
-    au < released ; 2013 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 35 ; 35 >
-    au < manifest ; 2014 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 36 ; 36 >
-    au < manifest ; 2015 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 37 ; 37 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2003 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 25 ; 25 >
+      au < released ; 2004 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 26 ; 26 >
+      au < released ; 2005 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 27 ; 27 >
+      au < released ; 2006 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 28 ; 28 >
+      au < released ; 2007 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 29 ; 29 >
+      au < released ; 2008 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 30 ; 30 >
+      au < released ; 2009 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 31 ; 31 >
+      au < released ; 2010 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 32 ; 32 >
+      au < released ; 2011 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 33 ; 33 >
+      au < released ; 2012 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 34 ; 34 >
+      au < released ; 2013 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 35 ; 35 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 36 ; 36 >
+      au < manifest ; 2015 ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 37 ; 37 >
+
+    }
+
 
   }
 
@@ -76,19 +103,33 @@
     param[journal_dir] = sojourn_journal_of_social_issues_in_southeast_asia
     attr[journal_id] =  soj
 
-    au < released ; 2003 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 18 ; 18 >
-    au < released ; 2004 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 19 ; 19 >
-    au < released ; 2005 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 20 ; 20 >
-    au < released ; 2006 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 21 ; 21 >
-    au < released ; 2007 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 22 ; 22 >
-    au < released ; 2008 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 23 ; 23 >
-    au < released ; 2009 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 24 ; 24 >
-    au < released ; 2010 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 25 ; 25 >
-    au < released ; 2011 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 26 ; 26 >
-    au < released ; 2012 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 27 ; 27 >
-    au < released ; 2013 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 28 ; 28 >
-    au < manifest ; 2014 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 29 ; 29 >
-    au < manifest ; 2015 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 30 ; 30 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2003 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 18 ; 18 >
+      au < released ; 2004 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 19 ; 19 >
+      au < released ; 2005 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 20 ; 20 >
+      au < released ; 2006 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 21 ; 21 >
+      au < released ; 2007 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 22 ; 22 >
+      au < released ; 2008 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 23 ; 23 >
+      au < released ; 2009 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 24 ; 24 >
+      au < released ; 2010 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 25 ; 25 >
+      au < released ; 2011 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 26 ; 26 >
+      au < released ; 2012 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 27 ; 27 >
+      au < released ; 2013 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 28 ; 28 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 29 ; 29 >
+      au < manifest ; 2015 ; Sojourn: Journal of Social Issues in Southeast Asia Volume 30 ; 30 >
+
+    }
+
 
   }
 
@@ -103,19 +144,33 @@
     param[journal_dir] = southeast_asian_affairs
     attr[journal_id] = saa
 
-    au < released ; 2003 ; Southeast Asian Affairs Volume 2003 ; 2003 >
-    au < released ; 2004 ; Southeast Asian Affairs Volume 2004 ; 2004 >
-    au < released ; 2005 ; Southeast Asian Affairs Volume 2005 ; 2005 >
-    au < released ; 2006 ; Southeast Asian Affairs Volume 2006 ; 2006 >
-    au < released ; 2007 ; Southeast Asian Affairs Volume 2007 ; 2007 >
-    au < released ; 2008 ; Southeast Asian Affairs Volume 2008 ; 2008 >
-    au < released ; 2009 ; Southeast Asian Affairs Volume 2009 ; 2009 >
-    au < released ; 2010 ; Southeast Asian Affairs Volume 2010 ; 2010 >
-    au < released ; 2011 ; Southeast Asian Affairs Volume 2011 ; 2011 >
-    au < released ; 2012 ; Southeast Asian Affairs Volume 2012 ; 2012 >
-    au < released ; 2013 ; Southeast Asian Affairs Volume 2013 ; 2013 >
-    au < manifest ; 2014 ; Southeast Asian Affairs Volume 2014 ; 2014 >
-    au < manifest ; 2015 ; Southeast Asian Affairs Volume 2015 ; 2015 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2003 ; Southeast Asian Affairs Volume 2003 ; 2003 >
+      au < released ; 2004 ; Southeast Asian Affairs Volume 2004 ; 2004 >
+      au < released ; 2005 ; Southeast Asian Affairs Volume 2005 ; 2005 >
+      au < released ; 2006 ; Southeast Asian Affairs Volume 2006 ; 2006 >
+      au < released ; 2007 ; Southeast Asian Affairs Volume 2007 ; 2007 >
+      au < released ; 2008 ; Southeast Asian Affairs Volume 2008 ; 2008 >
+      au < released ; 2009 ; Southeast Asian Affairs Volume 2009 ; 2009 >
+      au < released ; 2010 ; Southeast Asian Affairs Volume 2010 ; 2010 >
+      au < released ; 2011 ; Southeast Asian Affairs Volume 2011 ; 2011 >
+      au < released ; 2012 ; Southeast Asian Affairs Volume 2012 ; 2012 >
+      au < released ; 2013 ; Southeast Asian Affairs Volume 2013 ; 2013 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Southeast Asian Affairs Volume 2014 ; 2014 >
+      au < manifest ; 2015 ; Southeast Asian Affairs Volume 2015 ; 2015 >
+
+    }
+
 
   }
 

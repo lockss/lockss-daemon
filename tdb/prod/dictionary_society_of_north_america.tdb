@@ -6,7 +6,6 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
 
   {
 
@@ -19,27 +18,41 @@
     param[journal_dir] = dictionaries
     attr[journal_id] = dic
 
-    au < released ; 1994 ; Dictionaries: Journal of the Dictionary Society of North America Volume 15 ; 15 >
-    au < released ; 1995 ; Dictionaries: Journal of the Dictionary Society of North America Volume 16 ; 16 >
-    au < released ; 1996 ; Dictionaries: Journal of the Dictionary Society of North America Volume 17 ; 17 >
-    au < released ; 1997 ; Dictionaries: Journal of the Dictionary Society of North America Volume 18 ; 18 >
-    au < released ; 1998 ; Dictionaries: Journal of the Dictionary Society of North America Volume 19 ; 19 >
-    au < released ; 1999 ; Dictionaries: Journal of the Dictionary Society of North America Volume 20 ; 20 >
-    au < released ; 2000 ; Dictionaries: Journal of the Dictionary Society of North America Volume 21 ; 21 >
-    au < released ; 2001 ; Dictionaries: Journal of the Dictionary Society of North America Volume 22 ; 22 >
-    au < released ; 2002 ; Dictionaries: Journal of the Dictionary Society of North America Volume 23 ; 23 >
-    au < released ; 2003 ; Dictionaries: Journal of the Dictionary Society of North America Volume 24 ; 24 >
-    au < released ; 2004 ; Dictionaries: Journal of the Dictionary Society of North America Volume 25 ; 25 >
-    au < released ; 2005 ; Dictionaries: Journal of the Dictionary Society of North America Volume 26 ; 26 >
-    au < released ; 2006 ; Dictionaries: Journal of the Dictionary Society of North America Volume 27 ; 27 >
-    au < released ; 2007 ; Dictionaries: Journal of the Dictionary Society of North America Volume 28 ; 28 >
-    au < released ; 2008 ; Dictionaries: Journal of the Dictionary Society of North America Volume 29 ; 29 >
-    au < released ; 2009 ; Dictionaries: Journal of the Dictionary Society of North America Volume 30 ; 30 >
-    au < released ; 2010 ; Dictionaries: Journal of the Dictionary Society of North America Volume 31 ; 31 >
-    au < released ; 2011 ; Dictionaries: Journal of the Dictionary Society of North America Volume 32 ; 32 >
-    au < released ; 2012 ; Dictionaries: Journal of the Dictionary Society of North America Volume 33 ; 33 >
-    au < released ; 2013 ; Dictionaries: Journal of the Dictionary Society of North America Volume 34 ; 34 >
-    au < manifest ; 2014 ; Dictionaries: Journal of the Dictionary Society of North America Volume 35 ; 35 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1994 ; Dictionaries: Journal of the Dictionary Society of North America Volume 15 ; 15 >
+      au < released ; 1995 ; Dictionaries: Journal of the Dictionary Society of North America Volume 16 ; 16 >
+      au < released ; 1996 ; Dictionaries: Journal of the Dictionary Society of North America Volume 17 ; 17 >
+      au < released ; 1997 ; Dictionaries: Journal of the Dictionary Society of North America Volume 18 ; 18 >
+      au < released ; 1998 ; Dictionaries: Journal of the Dictionary Society of North America Volume 19 ; 19 >
+      au < released ; 1999 ; Dictionaries: Journal of the Dictionary Society of North America Volume 20 ; 20 >
+      au < released ; 2000 ; Dictionaries: Journal of the Dictionary Society of North America Volume 21 ; 21 >
+      au < released ; 2001 ; Dictionaries: Journal of the Dictionary Society of North America Volume 22 ; 22 >
+      au < released ; 2002 ; Dictionaries: Journal of the Dictionary Society of North America Volume 23 ; 23 >
+      au < released ; 2003 ; Dictionaries: Journal of the Dictionary Society of North America Volume 24 ; 24 >
+      au < released ; 2004 ; Dictionaries: Journal of the Dictionary Society of North America Volume 25 ; 25 >
+      au < released ; 2005 ; Dictionaries: Journal of the Dictionary Society of North America Volume 26 ; 26 >
+      au < released ; 2006 ; Dictionaries: Journal of the Dictionary Society of North America Volume 27 ; 27 >
+      au < released ; 2007 ; Dictionaries: Journal of the Dictionary Society of North America Volume 28 ; 28 >
+      au < released ; 2008 ; Dictionaries: Journal of the Dictionary Society of North America Volume 29 ; 29 >
+      au < released ; 2009 ; Dictionaries: Journal of the Dictionary Society of North America Volume 30 ; 30 >
+      au < released ; 2010 ; Dictionaries: Journal of the Dictionary Society of North America Volume 31 ; 31 >
+      au < released ; 2011 ; Dictionaries: Journal of the Dictionary Society of North America Volume 32 ; 32 >
+      au < released ; 2012 ; Dictionaries: Journal of the Dictionary Society of North America Volume 33 ; 33 >
+      au < released ; 2013 ; Dictionaries: Journal of the Dictionary Society of North America Volume 34 ; 34 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Dictionaries: Journal of the Dictionary Society of North America Volume 35 ; 35 >
+
+    }
+
 
   }
 

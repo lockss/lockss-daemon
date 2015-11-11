@@ -7,7 +7,6 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
   implicit < status ; year ; volume ; name ; param[volume] >
 
   {
@@ -27,9 +26,16 @@
     param[journal_dir] = italian_culture
     attr[journal_id] = itc
 
-    au < released ; 2005 ; 23 ; Italian Culture Volume 23 ; 23 >
-    au < released ; 2006-2007 ; 24-25 ; Italian Culture Volume 24-25 ; 24 >
-    au < released ; 2008 ; 26 ; Italian Culture Volume 26 ; 26 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2005 ; 23 ; Italian Culture Volume 23 ; 23 >
+      au < released ; 2006-2007 ; 24-25 ; Italian Culture Volume 24-25 ; 24 >
+      au < released ; 2008 ; 26 ; Italian Culture Volume 26 ; 26 >
+
+    }
+
 
   }
 
@@ -50,9 +56,16 @@
     param[journal_dir] = twentiethcentury_china
     attr[journal_id] = tcc
 
-    au < released ; 2007 ; 33 ; Twentieth-Century China Volume 33 [Project MUSE] ; 33 >
-    au < released ; 2008 ; 34 ; Twentieth-Century China Volume 34 [Project MUSE] ; 34 >
-    au < released ; 2009 ; 35 ; Twentieth-Century China Volume 35 [Project MUSE] ; 35 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2007 ; 33 ; Twentieth-Century China Volume 33 [Project MUSE] ; 33 >
+      au < released ; 2008 ; 34 ; Twentieth-Century China Volume 34 [Project MUSE] ; 34 >
+      au < released ; 2009 ; 35 ; Twentieth-Century China Volume 35 [Project MUSE] ; 35 >
+
+    }
+
 
   }
 

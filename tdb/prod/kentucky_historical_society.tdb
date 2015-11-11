@@ -6,7 +6,6 @@
   implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -19,12 +18,26 @@
     param[journal_dir] = register_of_the_kentucky_historical_society
     attr[journal_id] = khs
 
-    au < released ; 2010 ; Register of the Kentucky Historical Society Volume 108 ; 108 >
-    au < released ; 2011 ; Register of the Kentucky Historical Society Volume 109 ; 109 >
-    au < released ; 2012 ; Register of the Kentucky Historical Society Volume 110 ; 110 >
-    au < released ; 2013 ; Register of the Kentucky Historical Society Volume 111 ; 111 >
-    au < manifest ; 2014 ; Register of the Kentucky Historical Society Volume 112 ; 112 >
-    au < manifest ; 2015 ; Register of the Kentucky Historical Society Volume 113 ; 113 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2010 ; Register of the Kentucky Historical Society Volume 108 ; 108 >
+      au < released ; 2011 ; Register of the Kentucky Historical Society Volume 109 ; 109 >
+      au < released ; 2012 ; Register of the Kentucky Historical Society Volume 110 ; 110 >
+      au < released ; 2013 ; Register of the Kentucky Historical Society Volume 111 ; 111 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Register of the Kentucky Historical Society Volume 112 ; 112 >
+      au < manifest ; 2015 ; Register of the Kentucky Historical Society Volume 113 ; 113 >
+
+    }
+
 
   }
   

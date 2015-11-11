@@ -5,7 +5,6 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -17,9 +16,16 @@
     param[journal_dir] = philosophical_topics
     attr[journal_id] = pht
 
-    au < released ; 2010 ; Philosophical Topics Volume 38 ; 38 >
-    au < released ; 2011 ; Philosophical Topics Volume 39 ; 39 >
-    au < released ; 2012 ; Philosophical Topics Volume 40 ; 40 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2010 ; Philosophical Topics Volume 38 ; 38 >
+      au < released ; 2011 ; Philosophical Topics Volume 39 ; 39 >
+      au < released ; 2012 ; Philosophical Topics Volume 40 ; 40 >
+
+    }
+
 
   }
 

@@ -5,7 +5,6 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -18,12 +17,26 @@
     param[journal_dir] = harvard_journal_of_asiatic_studies
     attr[journal_id] = jas
 
-    au < released ; 2009 ; Harvard Journal of Asiatic Studies Volume 69 ; 69 >
-    au < released ; 2010 ; Harvard Journal of Asiatic Studies Volume 70 ; 70 >
-    au < released ; 2011 ; Harvard Journal of Asiatic Studies Volume 71 ; 71 >
-    au < released ; 2012 ; Harvard Journal of Asiatic Studies Volume 72 ; 72 >
-    au < released ; 2013 ; Harvard Journal of Asiatic Studies Volume 73 ; 73 >
-    au < manifest ; 2014 ; Harvard Journal of Asiatic Studies Volume 74 ; 74 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2009 ; Harvard Journal of Asiatic Studies Volume 69 ; 69 >
+      au < released ; 2010 ; Harvard Journal of Asiatic Studies Volume 70 ; 70 >
+      au < released ; 2011 ; Harvard Journal of Asiatic Studies Volume 71 ; 71 >
+      au < released ; 2012 ; Harvard Journal of Asiatic Studies Volume 72 ; 72 >
+      au < released ; 2013 ; Harvard Journal of Asiatic Studies Volume 73 ; 73 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Harvard Journal of Asiatic Studies Volume 74 ; 74 >
+
+    }
+
 
   }
 

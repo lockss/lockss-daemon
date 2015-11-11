@@ -6,7 +6,6 @@
   implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -18,8 +17,22 @@
     attr[journal_id] = fmt
     param[journal_dir] = forum_modernes_theater
 
-    au < released ; 2010 ; Forum Modernes Theater Volume 25 ; 25 >
-    au < manifest ; 2011 ; Forum Modernes Theater Volume 26 ; 26 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2010 ; Forum Modernes Theater Volume 25 ; 25 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2011 ; Forum Modernes Theater Volume 26 ; 26 >
+
+    }
+
 
   }
 

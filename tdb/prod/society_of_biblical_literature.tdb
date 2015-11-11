@@ -6,7 +6,6 @@
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     implicit < status ; year ; name ; param[volume] >
-    param[base_url] = http://muse.jhu.edu/
 
     {
 
@@ -20,11 +19,25 @@
       param[journal_dir] = journal_of_biblical_literature
       attr[journal_id] = jbl
 
-      au < released ; 2011 ; Journal of Biblical Literature Volume 130 ; 130 >
-      au < released ; 2012 ; Journal of Biblical Literature Volume 131 ; 131 >
-      au < released ; 2013 ; Journal of Biblical Literature Volume 132 ; 132 >
-      au < manifest ; 2014 ; Journal of Biblical Literature Volume 133 ; 133 >
-      au < manifest ; 2015 ; Journal of Biblical Literature Volume 134 ; 134 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2011 ; Journal of Biblical Literature Volume 130 ; 130 >
+        au < released ; 2012 ; Journal of Biblical Literature Volume 131 ; 131 >
+        au < released ; 2013 ; Journal of Biblical Literature Volume 132 ; 132 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+        au < manifest ; 2014 ; Journal of Biblical Literature Volume 133 ; 133 >
+        au < manifest ; 2015 ; Journal of Biblical Literature Volume 134 ; 134 >
+
+    }
+
 
     }
     

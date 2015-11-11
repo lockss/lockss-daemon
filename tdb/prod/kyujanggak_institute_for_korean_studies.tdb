@@ -5,7 +5,6 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
   implicit < status ; year ; name ; param[volume] >
 
   {
@@ -18,9 +17,23 @@
       param[journal_dir] = seoul_journal_of_korean_studies
       attr[journal_id] = seo
       
-      au < released ; 2013 ; Seoul Journal of Korean Studies Volume 26 ; 26 >
-      au < manifest ; 2014 ; Seoul Journal of Korean Studies Volume 27 ; 27 >
-      au < manifest ; 2015 ; Seoul Journal of Korean Studies Volume 28 ; 28 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2013 ; Seoul Journal of Korean Studies Volume 26 ; 26 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+        au < manifest ; 2014 ; Seoul Journal of Korean Studies Volume 27 ; 27 >
+        au < manifest ; 2015 ; Seoul Journal of Korean Studies Volume 28 ; 28 >
+
+    }
+
 
   }
 

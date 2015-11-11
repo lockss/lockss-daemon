@@ -6,7 +6,6 @@
   implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -18,8 +17,15 @@
     param[journal_dir] = canadian_review_of_comparative_literature
     attr[journal_id] = crc
     
-    au < manifest ; 2014 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 41 ; 41 >
-    au < manifest ; 2015 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 42 ; 42 >
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 41 ; 41 >
+      au < manifest ; 2015 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 42 ; 42 >
+
+    }
+
   }
 
 }

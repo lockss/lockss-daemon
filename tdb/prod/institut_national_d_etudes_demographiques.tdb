@@ -13,19 +13,32 @@
     >
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = population
     attr[journal_id] = pop
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 2008 ; Population, English Edition Volume 63 ; 63 >
-    au < released ; 2009 ; Population, English Edition Volume 64 ; 64 >
-    au < released ; 2010 ; Population, English Edition Volume 65 ; 65 >
-    au < released ; 2011 ; Population, English Edition Volume 66 ; 66 >
-    au < released ; 2012 ; Population, English Edition Volume 67 ; 67 >
-    au < released ; 2013 ; Population, English Edition Volume 68 ; 68 >
-    au < manifest ; 2014 ; Population, English Edition Volume 69 ; 69 >
-    au < manifest ; 2013 ; Population, English Edition Volume 70 ; 70 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2008 ; Population, English Edition Volume 63 ; 63 >
+      au < released ; 2009 ; Population, English Edition Volume 64 ; 64 >
+      au < released ; 2010 ; Population, English Edition Volume 65 ; 65 >
+      au < released ; 2011 ; Population, English Edition Volume 66 ; 66 >
+      au < released ; 2012 ; Population, English Edition Volume 67 ; 67 >
+      au < released ; 2013 ; Population, English Edition Volume 68 ; 68 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Population, English Edition Volume 69 ; 69 >
+      au < manifest ; 2013 ; Population, English Edition Volume 70 ; 70 >
+
+    }
+
 
   }
 

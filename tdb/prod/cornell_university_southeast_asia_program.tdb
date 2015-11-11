@@ -14,20 +14,33 @@
 
 
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[base_url] = http://muse.jhu.edu/
       implicit < status ; year ; name ; param[volume] >
       
       param[journal_dir] = indonesia
       attr[journal_id] = ind
       
-      au < released ; 2012 ; Indonesia Volume 93 ; 93 >
-      au < released ; 2012 ; Indonesia Volume 94 ; 94 >
-      au < released ; 2013 ; Indonesia Volume 95 ; 95 >
-      au < released ; 2013 ; Indonesia Volume 96 ; 96 >
-      au < manifest ; 2014 ; Indonesia Volume 97 ; 97 >
-      au < manifest ; 2014 ; Indonesia Volume 98 ; 98 >
-      au < manifest ; 2015 ; Indonesia Volume 99 ; 99 >
-      au < expected ; 2015 ; Indonesia Volume 100 ; 100 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2012 ; Indonesia Volume 93 ; 93 >
+        au < released ; 2012 ; Indonesia Volume 94 ; 94 >
+        au < released ; 2013 ; Indonesia Volume 95 ; 95 >
+        au < released ; 2013 ; Indonesia Volume 96 ; 96 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+        au < manifest ; 2014 ; Indonesia Volume 97 ; 97 >
+        au < manifest ; 2014 ; Indonesia Volume 98 ; 98 >
+        au < manifest ; 2015 ; Indonesia Volume 99 ; 99 >
+        au < expected ; 2015 ; Indonesia Volume 100 ; 100 >
+
+    }
+
 
     }
 

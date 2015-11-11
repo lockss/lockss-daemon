@@ -6,7 +6,6 @@
   implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -18,21 +17,35 @@
     param[journal_dir] = advertising_and_society_review
     attr[journal_id] = asr
 
-    au < released ; 2000 ; Advertising & Society Review Volume 1 ; 1 >
-    au < released ; 2001 ; Advertising & Society Review Volume 2 ; 2 >
-    au < released ; 2002 ; Advertising & Society Review Volume 3 ; 3 >
-    au < released ; 2003 ; Advertising & Society Review Volume 4 ; 4 >
-    au < released ; 2004 ; Advertising & Society Review Volume 5 ; 5 >
-    au < released ; 2005 ; Advertising & Society Review Volume 6 ; 6 >
-    au < released ; 2006 ; Advertising & Society Review Volume 7 ; 7 >
-    au < released ; 2007 ; Advertising & Society Review Volume 8 ; 8 >
-    au < released ; 2008 ; Advertising & Society Review Volume 9 ; 9 >
-    au < released ; 2009 ; Advertising & Society Review Volume 10 ; 10 >
-    au < released ; 2010-2011 ; Advertising & Society Review Volume 11 ; 11 >
-    au < released ; 2011-2012 ; Advertising & Society Review Volume 12 ; 12 >
-    au < released ; 2012-2013 ; Advertising & Society Review Volume 13 ; 13 >
-    au < manifest ; 2013-2014 ; Advertising & Society Review Volume 14 ; 14 >
-    au < manifest ; 2014-2015 ; Advertising & Society Review Volume 15 ; 15 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2000 ; Advertising & Society Review Volume 1 ; 1 >
+      au < released ; 2001 ; Advertising & Society Review Volume 2 ; 2 >
+      au < released ; 2002 ; Advertising & Society Review Volume 3 ; 3 >
+      au < released ; 2003 ; Advertising & Society Review Volume 4 ; 4 >
+      au < released ; 2004 ; Advertising & Society Review Volume 5 ; 5 >
+      au < released ; 2005 ; Advertising & Society Review Volume 6 ; 6 >
+      au < released ; 2006 ; Advertising & Society Review Volume 7 ; 7 >
+      au < released ; 2007 ; Advertising & Society Review Volume 8 ; 8 >
+      au < released ; 2008 ; Advertising & Society Review Volume 9 ; 9 >
+      au < released ; 2009 ; Advertising & Society Review Volume 10 ; 10 >
+      au < released ; 2010-2011 ; Advertising & Society Review Volume 11 ; 11 >
+      au < released ; 2011-2012 ; Advertising & Society Review Volume 12 ; 12 >
+      au < released ; 2012-2013 ; Advertising & Society Review Volume 13 ; 13 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2013-2014 ; Advertising & Society Review Volume 14 ; 14 >
+      au < manifest ; 2014-2015 ; Advertising & Society Review Volume 15 ; 15 >
+
+    }
+
 
   }
 

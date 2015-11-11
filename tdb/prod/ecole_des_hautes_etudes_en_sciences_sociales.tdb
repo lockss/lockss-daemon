@@ -6,7 +6,6 @@
   implicit < status ; year; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -18,8 +17,15 @@
     param[journal_dir] = annales_histoire_sciences_sociales
     attr[journal_id] = ahs
     
-    au < manifest ; 2014 ; Annales Volume 69 ; 69 >
-    au < exists ; 2015 ; Annales Volume 70 ; 70 >
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Annales Volume 69 ; 69 >
+      au < exists ; 2015 ; Annales Volume 70 ; 70 >
+
+    }
+
 
   }
 

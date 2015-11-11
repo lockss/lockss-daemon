@@ -6,7 +6,6 @@
   implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -19,8 +18,15 @@
     param[journal_dir] = theory_into_practice
     attr[journal_id] = tip
 
-    au < released ; 2003 ; Theory Into Practice Volume 42 ; 42 >
-    au < released ; 2004 ; Theory Into Practice Volume 43 ; 43 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2003 ; Theory Into Practice Volume 42 ; 42 >
+      au < released ; 2004 ; Theory Into Practice Volume 43 ; 43 >
+
+    }
+
 
   }
 

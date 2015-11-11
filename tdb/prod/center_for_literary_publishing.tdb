@@ -5,7 +5,6 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
   implicit < status ; year ; name ; param[volume] >
 
   {
@@ -18,9 +17,23 @@
     param[journal_dir] = colorado_review
     attr[journal_id] = col
 
-    au < released ; 2013 ; Colorado Review Volume 40 ; 40 >
-    au < manifest ; 2014 ; Colorado Review Volume 41 ; 41 >
-    au < manifest ; 2015 ; Colorado Review Volume 42 ; 42 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2013 ; Colorado Review Volume 40 ; 40 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Colorado Review Volume 41 ; 41 >
+      au < manifest ; 2015 ; Colorado Review Volume 42 ; 42 >
+
+    }
+
 
   }
 

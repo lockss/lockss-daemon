@@ -16,16 +16,29 @@
     {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = american_catholic_studies
     attr[journal_id] = acs
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 2011 ; American Catholic Studies Volume 122 ; 122 >
-    au < released ; 2012 ; American Catholic Studies Volume 123 ; 123 >
-    au < released ; 2013 ; American Catholic Studies Volume 124 ; 124 >
-    au < manifest ; 2014 ; American Catholic Studies Volume 125 ; 125 >
-    au < manifest ; 2015 ; American Catholic Studies Volume 126 ; 126 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2011 ; American Catholic Studies Volume 122 ; 122 >
+      au < released ; 2012 ; American Catholic Studies Volume 123 ; 123 >
+      au < released ; 2013 ; American Catholic Studies Volume 124 ; 124 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; American Catholic Studies Volume 125 ; 125 >
+      au < manifest ; 2015 ; American Catholic Studies Volume 126 ; 126 >
+
+    }
+
 
     }
   

@@ -6,7 +6,6 @@
   implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
   
 
   {
@@ -20,17 +19,31 @@
     param[journal_dir] = african_studies_review
     attr[journal_id] = arw
 
-    au < released ; 2005 ; African Studies Review Volume 48 ; 48 >
-    au < released ; 2006 ; African Studies Review Volume 49 ; 49 >
-    au < released ; 2007 ; African Studies Review Volume 50 ; 50 >
-    au < released ; 2008 ; African Studies Review Volume 51 ; 51 >
-    au < released ; 2009 ; African Studies Review Volume 52 ; 52 >
-    au < released ; 2010 ; African Studies Review Volume 53 ; 53 >
-    au < released ; 2011 ; African Studies Review Volume 54 ; 54 >
-    au < released ; 2012 ; African Studies Review Volume 55 ; 55 >
-    au < released ; 2013 ; African Studies Review Volume 56 ; 56 >
-    au < manifest ; 2014 ; African Studies Review Volume 57 ; 57 >
-    au < manifest ; 2015 ; African Studies Review Volume 58 ; 58 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2005 ; African Studies Review Volume 48 ; 48 >
+      au < released ; 2006 ; African Studies Review Volume 49 ; 49 >
+      au < released ; 2007 ; African Studies Review Volume 50 ; 50 >
+      au < released ; 2008 ; African Studies Review Volume 51 ; 51 >
+      au < released ; 2009 ; African Studies Review Volume 52 ; 52 >
+      au < released ; 2010 ; African Studies Review Volume 53 ; 53 >
+      au < released ; 2011 ; African Studies Review Volume 54 ; 54 >
+      au < released ; 2012 ; African Studies Review Volume 55 ; 55 >
+      au < released ; 2013 ; African Studies Review Volume 56 ; 56 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; African Studies Review Volume 57 ; 57 >
+      au < manifest ; 2015 ; African Studies Review Volume 58 ; 58 >
+
+    }
+
 
   }
 
@@ -45,17 +58,31 @@
     param[journal_dir] = history_in_africa
     attr[journal_id] = hia
 
-    au < released ; 2005 ; History in Africa Volume 32 ; 32 >
-    au < released ; 2006 ; History in Africa Volume 33 ; 33 >
-    au < released ; 2007 ; History in Africa Volume 34 ; 34 >
-    au < released ; 2008 ; History in Africa Volume 35 ; 35 >
-    au < released ; 2009 ; History in Africa Volume 36 ; 36 >
-    au < released ; 2010 ; History in Africa Volume 37 ; 37 >
-    au < released ; 2011 ; History in Africa Volume 38 ; 38 >
-    au < released ; 2012 ; History in Africa Volume 39 ; 39 >
-    au < released ; 2013 ; History in Africa Volume 40 ; 40 >
-    au < manifest ; 2014 ; History in Africa Volume 41 ; 41 >
-    au < manifest ; 2015 ; History in Africa Volume 42 ; 42 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2005 ; History in Africa Volume 32 ; 32 >
+      au < released ; 2006 ; History in Africa Volume 33 ; 33 >
+      au < released ; 2007 ; History in Africa Volume 34 ; 34 >
+      au < released ; 2008 ; History in Africa Volume 35 ; 35 >
+      au < released ; 2009 ; History in Africa Volume 36 ; 36 >
+      au < released ; 2010 ; History in Africa Volume 37 ; 37 >
+      au < released ; 2011 ; History in Africa Volume 38 ; 38 >
+      au < released ; 2012 ; History in Africa Volume 39 ; 39 >
+      au < released ; 2013 ; History in Africa Volume 40 ; 40 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; History in Africa Volume 41 ; 41 >
+      au < manifest ; 2015 ; History in Africa Volume 42 ; 42 >
+
+    }
+
 
   }
 

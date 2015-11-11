@@ -6,7 +6,6 @@
   implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -19,13 +18,20 @@
     param[journal_dir] = journal_of_military_history
     attr[journal_id] = jmh
 
-    au < released ; 2003 ; The Journal of Military History Volume 67 ; 67 >
-    au < released ; 2004 ; The Journal of Military History Volume 68 ; 68 >
-    au < released ; 2005 ; The Journal of Military History Volume 69 ; 69 >
-    au < released ; 2006 ; The Journal of Military History Volume 70 ; 70 >
-    au < released ; 2007 ; The Journal of Military History Volume 71 ; 71 >
-    au < released ; 2008 ; The Journal of Military History Volume 72 ; 72 >
-    au < released ; 2009 ; The Journal of Military History Volume 73 ; 73 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2003 ; The Journal of Military History Volume 67 ; 67 >
+      au < released ; 2004 ; The Journal of Military History Volume 68 ; 68 >
+      au < released ; 2005 ; The Journal of Military History Volume 69 ; 69 >
+      au < released ; 2006 ; The Journal of Military History Volume 70 ; 70 >
+      au < released ; 2007 ; The Journal of Military History Volume 71 ; 71 >
+      au < released ; 2008 ; The Journal of Military History Volume 72 ; 72 >
+      au < released ; 2009 ; The Journal of Military History Volume 73 ; 73 >
+
+    }
+
 
   }
 

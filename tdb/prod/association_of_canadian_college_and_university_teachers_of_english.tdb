@@ -5,7 +5,6 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -18,17 +17,31 @@
     param[journal_dir] = esc_english_studies_in_canada
     attr[journal_id] = esc
 
-    au < released ; 2005 ; ESC: English Studies in Canada Volume 31 ; 31 >
-    au < released ; 2006 ; ESC: English Studies in Canada Volume 32 ; 32 >
-    au < released ; 2007 ; ESC: English Studies in Canada Volume 33 ; 33 >
-    au < released ; 2008 ; ESC: English Studies in Canada Volume 34 ; 34 >
-    au < released ; 2009 ; ESC: English Studies in Canada Volume 35 ; 35 >
-    au < released ; 2010 ; ESC: English Studies in Canada Volume 36 ; 36 >
-    au < released ; 2011 ; ESC: English Studies in Canada Volume 37 ; 37 >
-    au < released ; 2012 ; ESC: English Studies in Canada Volume 38 ; 38 >
-    au < released ; 2013 ; ESC: English Studies in Canada Volume 39 ; 39 >
-    au < manifest ; 2014 ; ESC: English Studies in Canada Volume 40 ; 40 >
-    au < manifest ; 2015 ; ESC: English Studies in Canada Volume 41 ; 41 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2005 ; ESC: English Studies in Canada Volume 31 ; 31 >
+      au < released ; 2006 ; ESC: English Studies in Canada Volume 32 ; 32 >
+      au < released ; 2007 ; ESC: English Studies in Canada Volume 33 ; 33 >
+      au < released ; 2008 ; ESC: English Studies in Canada Volume 34 ; 34 >
+      au < released ; 2009 ; ESC: English Studies in Canada Volume 35 ; 35 >
+      au < released ; 2010 ; ESC: English Studies in Canada Volume 36 ; 36 >
+      au < released ; 2011 ; ESC: English Studies in Canada Volume 37 ; 37 >
+      au < released ; 2012 ; ESC: English Studies in Canada Volume 38 ; 38 >
+      au < released ; 2013 ; ESC: English Studies in Canada Volume 39 ; 39 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; ESC: English Studies in Canada Volume 40 ; 40 >
+      au < manifest ; 2015 ; ESC: English Studies in Canada Volume 41 ; 41 >
+
+    }
+
 
   }
 

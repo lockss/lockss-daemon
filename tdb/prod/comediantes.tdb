@@ -7,7 +7,6 @@
   implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -20,18 +19,32 @@
     param[journal_dir] = bulletin_of_the_comediantes
     attr[journal_id] = boc
 
-    au < released ; 2004 ; Bulletin of the Comediantes Volume 56 ; 56 >
-    au < released ; 2005 ; Bulletin of the Comediantes Volume 57 ; 57 >
-    au < released ; 2006 ; Bulletin of the Comediantes Volume 58 ; 58 >
-    au < released ; 2007 ; Bulletin of the Comediantes Volume 59 ; 59 >
-    au < released ; 2008 ; Bulletin of the Comediantes Volume 60 ; 60 >
-    au < released ; 2009 ; Bulletin of the Comediantes Volume 61 ; 61 >
-    au < released ; 2010 ; Bulletin of the Comediantes Volume 62 ; 62 >
-    au < released ; 2011 ; Bulletin of the Comediantes Volume 63 ; 63 >
-    au < released ; 2012 ; Bulletin of the Comediantes Volume 64 ; 64 >
-    au < released ; 2013 ; Bulletin of the Comediantes Volume 65 ; 65 >
-    au < manifest ; 2014 ; Bulletin of the Comediantes Volume 66 ; 66 >
-    au < manifest ; 2015 ; Bulletin of the Comediantes Volume 67 ; 67 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2004 ; Bulletin of the Comediantes Volume 56 ; 56 >
+      au < released ; 2005 ; Bulletin of the Comediantes Volume 57 ; 57 >
+      au < released ; 2006 ; Bulletin of the Comediantes Volume 58 ; 58 >
+      au < released ; 2007 ; Bulletin of the Comediantes Volume 59 ; 59 >
+      au < released ; 2008 ; Bulletin of the Comediantes Volume 60 ; 60 >
+      au < released ; 2009 ; Bulletin of the Comediantes Volume 61 ; 61 >
+      au < released ; 2010 ; Bulletin of the Comediantes Volume 62 ; 62 >
+      au < released ; 2011 ; Bulletin of the Comediantes Volume 63 ; 63 >
+      au < released ; 2012 ; Bulletin of the Comediantes Volume 64 ; 64 >
+      au < released ; 2013 ; Bulletin of the Comediantes Volume 65 ; 65 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Bulletin of the Comediantes Volume 66 ; 66 >
+      au < manifest ; 2015 ; Bulletin of the Comediantes Volume 67 ; 67 >
+
+    }
+
 
   }
   

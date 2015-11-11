@@ -5,7 +5,6 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -18,18 +17,25 @@
     param[journal_dir] = nabokov_studies
     attr[journal_id] = nab
 
-    au < released ; 1994 ; Nabokov Studies Volume 1 ; 1 >
-    au < released ; 1995 ; Nabokov Studies Volume 2 ; 2 >
-    au < released ; 1996 ; Nabokov Studies Volume 3 ; 3 >
-    au < released ; 1997 ; Nabokov Studies Volume 4 ; 4 >
-    au < released ; 1998-1999 ; Nabokov Studies Volume 5 ; 5 >
-    au < released ; 2000-2001 ; Nabokov Studies Volume 6 ; 6 >
-    au < released ; 2002-2003 ; Nabokov Studies Volume 7 ; 7 >
-    au < released ; 2004 ; Nabokov Studies Volume 8 ; 8 >
-    au < released ; 2005 ; Nabokov Studies Volume 9 ; 9 >
-    au < released ; 2006 ; Nabokov Studies Volume 10 ; 10 >
-    au < released ; 2007-2008 ; Nabokov Studies Volume 11 ; 11 >
-    au < released ; 2009-2011 ; Nabokov Studies Volume 12 ; 12 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1994 ; Nabokov Studies Volume 1 ; 1 >
+      au < released ; 1995 ; Nabokov Studies Volume 2 ; 2 >
+      au < released ; 1996 ; Nabokov Studies Volume 3 ; 3 >
+      au < released ; 1997 ; Nabokov Studies Volume 4 ; 4 >
+      au < released ; 1998-1999 ; Nabokov Studies Volume 5 ; 5 >
+      au < released ; 2000-2001 ; Nabokov Studies Volume 6 ; 6 >
+      au < released ; 2002-2003 ; Nabokov Studies Volume 7 ; 7 >
+      au < released ; 2004 ; Nabokov Studies Volume 8 ; 8 >
+      au < released ; 2005 ; Nabokov Studies Volume 9 ; 9 >
+      au < released ; 2006 ; Nabokov Studies Volume 10 ; 10 >
+      au < released ; 2007-2008 ; Nabokov Studies Volume 11 ; 11 >
+      au < released ; 2009-2011 ; Nabokov Studies Volume 12 ; 12 >
+
+    }
+
 
   }
 

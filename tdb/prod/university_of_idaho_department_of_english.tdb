@@ -5,7 +5,6 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -18,21 +17,42 @@
     param[journal_dir] = hemingway_review
     attr[journal_id] = hem
 
-    au < exists ; 2000-2001 ; The Hemingway Review Volume 20 ; 20 >
-    au < exists ; 2001-2002 ; The Hemingway Review Volume 21 ; 21 >
-    au < exists ; 2002-2003 ; The Hemingway Review Volume 22 ; 22 >
-    au < released ; 2003-2004 ; The Hemingway Review Volume 23 ; 23 >
-    au < released ; 2004-2005 ; The Hemingway Review Volume 24 ; 24 >
-    au < released ; 2005-2006 ; The Hemingway Review Volume 25 ; 25 >
-    au < released ; 2006-2007 ; The Hemingway Review Volume 26 ; 26 >
-    au < released ; 2007-2008 ; The Hemingway Review Volume 27 ; 27 >
-    au < released ; 2008-2009 ; The Hemingway Review Volume 28 ; 28 >
-    au < released ; 2009-2010 ; The Hemingway Review Volume 29 ; 29 >
-    au < released ; 2010-2011 ; The Hemingway Review Volume 30 ; 30 >
-    au < released ; 2011-2012 ; The Hemingway Review Volume 31 ; 31 >
-    au < released ; 2012-2013 ; The Hemingway Review Volume 32 ; 32 >
-    au < manifest ; 2013-2014 ; The Hemingway Review Volume 33 ; 33 >
-    au < manifest ; 2014-2015 ; The Hemingway Review Volume 34 ; 34 >
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 2000-2001 ; The Hemingway Review Volume 20 ; 20 >
+      au < exists ; 2001-2002 ; The Hemingway Review Volume 21 ; 21 >
+      au < exists ; 2002-2003 ; The Hemingway Review Volume 22 ; 22 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2003-2004 ; The Hemingway Review Volume 23 ; 23 >
+      au < released ; 2004-2005 ; The Hemingway Review Volume 24 ; 24 >
+      au < released ; 2005-2006 ; The Hemingway Review Volume 25 ; 25 >
+      au < released ; 2006-2007 ; The Hemingway Review Volume 26 ; 26 >
+      au < released ; 2007-2008 ; The Hemingway Review Volume 27 ; 27 >
+      au < released ; 2008-2009 ; The Hemingway Review Volume 28 ; 28 >
+      au < released ; 2009-2010 ; The Hemingway Review Volume 29 ; 29 >
+      au < released ; 2010-2011 ; The Hemingway Review Volume 30 ; 30 >
+      au < released ; 2011-2012 ; The Hemingway Review Volume 31 ; 31 >
+      au < released ; 2012-2013 ; The Hemingway Review Volume 32 ; 32 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2013-2014 ; The Hemingway Review Volume 33 ; 33 >
+      au < manifest ; 2014-2015 ; The Hemingway Review Volume 34 ; 34 >
+
+    }
+
 
   }
 

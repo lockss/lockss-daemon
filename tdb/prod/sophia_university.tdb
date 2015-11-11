@@ -5,7 +5,6 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
   implicit < status ; year ; name ; param[volume] >
 
   {
@@ -20,17 +19,31 @@
     param[journal_dir] = monumenta_nipponica
     attr[journal_id] = mni
 
-    au < released ; 2005 ; Monumenta Nipponica Volume 60 ; 60 >
-    au < released ; 2006 ; Monumenta Nipponica Volume 61 ; 61 >
-    au < released ; 2007 ; Monumenta Nipponica Volume 62 ; 62 >
-    au < released ; 2008 ; Monumenta Nipponica Volume 63 ; 63 >
-    au < released ; 2009 ; Monumenta Nipponica Volume 64 ; 64 >
-    au < released ; 2010 ; Monumenta Nipponica Volume 65 ; 65 >
-    au < released ; 2011 ; Monumenta Nipponica Volume 66 ; 66 >
-    au < released ; 2012 ; Monumenta Nipponica Volume 67 ; 67 >
-    au < released ; 2013 ; Monumenta Nipponica Volume 68 ; 68 >
-    au < manifest ; 2014 ; Monumenta Nipponica Volume 69 ; 69 >
-    au < manifest ; 2015 ; Monumenta Nipponica Volume 70 ; 70 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2005 ; Monumenta Nipponica Volume 60 ; 60 >
+      au < released ; 2006 ; Monumenta Nipponica Volume 61 ; 61 >
+      au < released ; 2007 ; Monumenta Nipponica Volume 62 ; 62 >
+      au < released ; 2008 ; Monumenta Nipponica Volume 63 ; 63 >
+      au < released ; 2009 ; Monumenta Nipponica Volume 64 ; 64 >
+      au < released ; 2010 ; Monumenta Nipponica Volume 65 ; 65 >
+      au < released ; 2011 ; Monumenta Nipponica Volume 66 ; 66 >
+      au < released ; 2012 ; Monumenta Nipponica Volume 67 ; 67 >
+      au < released ; 2013 ; Monumenta Nipponica Volume 68 ; 68 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Monumenta Nipponica Volume 69 ; 69 >
+      au < manifest ; 2015 ; Monumenta Nipponica Volume 70 ; 70 >
+
+    }
+
 
   }
 

@@ -6,7 +6,6 @@
   implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -19,26 +18,40 @@
     param[journal_dir] = journal_of_korean_studies
     attr[journal_id] = jks
 
-    au < released ; 1969-1971 ; The Journal of Korean Studies Volume 1 ; 1 >
-    au < released ; 1980 ; The Journal of Korean Studies Volume 2 ; 2 >
-    au < released ; 1981 ; The Journal of Korean Studies Volume 3 ; 3 >
-    au < released ; 1982-1983 ; The Journal of Korean Studies Volume 4 ; 4 >
-    au < released ; 1984 ; The Journal of Korean Studies Volume 5 ; 5 >
-    au < released ; 1988-1989 ; The Journal of Korean Studies Volume 6 ; 6 >
-    au < released ; 1990 ; The Journal of Korean Studies Volume 7 ; 7 >
-    au < released ; 1992 ; The Journal of Korean Studies Volume 8 ; 8 >
-    au < released ; 2004 ; The Journal of Korean Studies Volume 9 ; 9 >
-    au < released ; 2005 ; The Journal of Korean Studies Volume 10 ; 10 >
-    au < released ; 2006 ; The Journal of Korean Studies Volume 11 ; 11 >
-    au < released ; 2007 ; The Journal of Korean Studies Volume 12 ; 12 >
-    au < released ; 2008 ; The Journal of Korean Studies Volume 13 ; 13 >
-    au < released ; 2009 ; The Journal of Korean Studies Volume 14 ; 14 >
-    au < released ; 2010 ; The Journal of Korean Studies Volume 15 ; 15 >
-    au < released ; 2011 ; The Journal of Korean Studies Volume 16 ; 16 >
-    au < released ; 2012 ; The Journal of Korean Studies Volume 17 ; 17 >
-    au < released ; 2013 ; The Journal of Korean Studies Volume 18 ; 18 >
-    au < manifest ; 2014 ; The Journal of Korean Studies Volume 19 ; 19 >
-    au < manifest ; 2015 ; The Journal of Korean Studies Volume 20 ; 20 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1969-1971 ; The Journal of Korean Studies Volume 1 ; 1 >
+      au < released ; 1980 ; The Journal of Korean Studies Volume 2 ; 2 >
+      au < released ; 1981 ; The Journal of Korean Studies Volume 3 ; 3 >
+      au < released ; 1982-1983 ; The Journal of Korean Studies Volume 4 ; 4 >
+      au < released ; 1984 ; The Journal of Korean Studies Volume 5 ; 5 >
+      au < released ; 1988-1989 ; The Journal of Korean Studies Volume 6 ; 6 >
+      au < released ; 1990 ; The Journal of Korean Studies Volume 7 ; 7 >
+      au < released ; 1992 ; The Journal of Korean Studies Volume 8 ; 8 >
+      au < released ; 2004 ; The Journal of Korean Studies Volume 9 ; 9 >
+      au < released ; 2005 ; The Journal of Korean Studies Volume 10 ; 10 >
+      au < released ; 2006 ; The Journal of Korean Studies Volume 11 ; 11 >
+      au < released ; 2007 ; The Journal of Korean Studies Volume 12 ; 12 >
+      au < released ; 2008 ; The Journal of Korean Studies Volume 13 ; 13 >
+      au < released ; 2009 ; The Journal of Korean Studies Volume 14 ; 14 >
+      au < released ; 2010 ; The Journal of Korean Studies Volume 15 ; 15 >
+      au < released ; 2011 ; The Journal of Korean Studies Volume 16 ; 16 >
+      au < released ; 2012 ; The Journal of Korean Studies Volume 17 ; 17 >
+      au < released ; 2013 ; The Journal of Korean Studies Volume 18 ; 18 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; The Journal of Korean Studies Volume 19 ; 19 >
+      au < manifest ; 2015 ; The Journal of Korean Studies Volume 20 ; 20 >
+
+    }
+
 
   }
 }

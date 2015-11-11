@@ -6,7 +6,6 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
 
   {
   
@@ -18,10 +17,24 @@
     param[journal_dir] = revista_de_estudios_hispanicos
     attr[journal_id] = rvs
     
-    au < released ; 2012 ; Revista de Estudios Hispánicos Volume 46 ; 46 >
-    au < released ; 2013 ; Revista de Estudios Hispánicos Volume 47 ; 47 >
-    au < manifest ; 2014 ; Revista de Estudios Hispánicos Volume 48 ; 48 >
-    au < manifest ; 2015 ; Revista de Estudios Hispánicos Volume 49 ; 49 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2012 ; Revista de Estudios Hispánicos Volume 46 ; 46 >
+      au < released ; 2013 ; Revista de Estudios Hispánicos Volume 47 ; 47 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Revista de Estudios Hispánicos Volume 48 ; 48 >
+      au < manifest ; 2015 ; Revista de Estudios Hispánicos Volume 49 ; 49 >
+
+    }
+
 
   }
 

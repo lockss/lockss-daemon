@@ -5,7 +5,6 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -18,14 +17,28 @@
     param[journal_dir] = restoration
     attr[journal_id] = rst
 
-    au < released ; 2008 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 32 ; 32 >
-    au < released ; 2009 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 33 ; 33 >
-    au < released ; 2010 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 34 ; 34 >
-    au < released ; 2011 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 35 ; 35 >
-    au < released ; 2012 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 36 ; 36 >
-    au < released ; 2013 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 37 ; 37 >
-    au < manifest ; 2014 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 38 ; 38 >
-    au < expected ; 2015 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 39 ; 39 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2008 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 32 ; 32 >
+      au < released ; 2009 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 33 ; 33 >
+      au < released ; 2010 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 34 ; 34 >
+      au < released ; 2011 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 35 ; 35 >
+      au < released ; 2012 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 36 ; 36 >
+      au < released ; 2013 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 37 ; 37 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 38 ; 38 >
+      au < expected ; 2015 ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 39 ; 39 >
+
+    }
+
 
   }
 

@@ -5,7 +5,6 @@
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
 
-  param[base_url] = http://muse.jhu.edu/
   param[journal_dir] = journal_of_shia_islamic_studies
   attr[journal_id] = isl
 
@@ -17,10 +16,24 @@
       issnl = 1748-9423
     >
 
-    au < released ; 2012 ; Journal of Shi'a Islamic Studies Volume 5 ; 5 >
-    au < released ; 2013 ; Journal of Shi'a Islamic Studies Volume 6 ; 6 >
-    au < manifest ; 2014 ; Journal of Shi'a Islamic Studies Volume 7 ; 7 >
-    au < manifest ; 2015 ; Journal of Shi'a Islamic Studies Volume 8 ; 8 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2012 ; Journal of Shi'a Islamic Studies Volume 5 ; 5 >
+      au < released ; 2013 ; Journal of Shi'a Islamic Studies Volume 6 ; 6 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Journal of Shi'a Islamic Studies Volume 7 ; 7 >
+      au < manifest ; 2015 ; Journal of Shi'a Islamic Studies Volume 8 ; 8 >
+
+    }
+
 
   }
 

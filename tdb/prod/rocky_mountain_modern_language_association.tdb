@@ -6,7 +6,6 @@
   implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -19,11 +18,25 @@
     param[journal_dir] = rocky_mountain_review
     attr[journal_id] = rmr
 
-    au < released ; 2011 ; Rocky Mountain Review Volume 65 ; 65 >
-    au < released ; 2012 ; Rocky Mountain Review Volume 66 ; 66 >
-    au < released ; 2013 ; Rocky Mountain Review Volume 67 ; 67 >
-    au < manifest ; 2014 ; Rocky Mountain Review Volume 68 ; 68 >
-    au < manifest ; 2015 ; Rocky Mountain Review Volume 69 ; 69 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2011 ; Rocky Mountain Review Volume 65 ; 65 >
+      au < released ; 2012 ; Rocky Mountain Review Volume 66 ; 66 >
+      au < released ; 2013 ; Rocky Mountain Review Volume 67 ; 67 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Rocky Mountain Review Volume 68 ; 68 >
+      au < manifest ; 2015 ; Rocky Mountain Review Volume 69 ; 69 >
+
+    }
+
 
   }
 

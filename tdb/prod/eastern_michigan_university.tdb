@@ -5,7 +5,6 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -18,18 +17,32 @@
     param[journal_dir] = journal_of_narrative_theory
     attr[journal_id] = jnt
 
-    au < released ; 2004 ; Journal of Narrative Theory Volume 34 ; 34 >
-    au < released ; 2005 ; Journal of Narrative Theory Volume 35 ; 35 >
-    au < released ; 2006 ; Journal of Narrative Theory Volume 36 ; 36 >
-    au < released ; 2007 ; Journal of Narrative Theory Volume 37 ; 37 >
-    au < released ; 2008 ; Journal of Narrative Theory Volume 38 ; 38 >
-    au < released ; 2009 ; Journal of Narrative Theory Volume 39 ; 39 >
-    au < released ; 2010 ; Journal of Narrative Theory Volume 40 ; 40 >
-    au < released ; 2011 ; Journal of Narrative Theory Volume 41 ; 41 >
-    au < released ; 2012 ; Journal of Narrative Theory Volume 42 ; 42 >
-    au < released ; 2013 ; Journal of Narrative Theory Volume 43 ; 43 >
-    au < manifest ; 2014 ; Journal of Narrative Theory Volume 44 ; 44 >
-    au < expected ; 2015 ; Journal of Narrative Theory Volume 45 ; 45 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2004 ; Journal of Narrative Theory Volume 34 ; 34 >
+      au < released ; 2005 ; Journal of Narrative Theory Volume 35 ; 35 >
+      au < released ; 2006 ; Journal of Narrative Theory Volume 36 ; 36 >
+      au < released ; 2007 ; Journal of Narrative Theory Volume 37 ; 37 >
+      au < released ; 2008 ; Journal of Narrative Theory Volume 38 ; 38 >
+      au < released ; 2009 ; Journal of Narrative Theory Volume 39 ; 39 >
+      au < released ; 2010 ; Journal of Narrative Theory Volume 40 ; 40 >
+      au < released ; 2011 ; Journal of Narrative Theory Volume 41 ; 41 >
+      au < released ; 2012 ; Journal of Narrative Theory Volume 42 ; 42 >
+      au < released ; 2013 ; Journal of Narrative Theory Volume 43 ; 43 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Journal of Narrative Theory Volume 44 ; 44 >
+      au < expected ; 2015 ; Journal of Narrative Theory Volume 45 ; 45 >
+
+    }
+
 
   }
 

@@ -6,7 +6,6 @@
   implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -20,15 +19,29 @@
     attr[journal_id] = ces
     comment[doesNotExist] = manifest page of volume 42 exists, but content is not available
 
-    au < released ; 2007 ; Canadian Ethnic Studies Volume 39 ; 39 >
-    au < released ; 2008 ; Canadian Ethnic Studies Volume 40 ; 40 >
-    au < released ; 2009 ; Canadian Ethnic Studies Volume 41 ; 41 >
-    au < doesNotExist ; 2010 ; Canadian Ethnic Studies Volume 42 ; 42 >
-    au < manifest ; 2011 ; Canadian Ethnic Studies Volume 43 ; 43 >
-    au < manifest ; 2012 ; Canadian Ethnic Studies Volume 44 ; 44 >
-    au < manifest ; 2013 ; Canadian Ethnic Studies Volume 45 ; 45 >
-    au < manifest ; 2014 ; Canadian Ethnic Studies Volume 46 ; 46 >
-    au < manifest ; 2015 ; Canadian Ethnic Studies Volume 47 ; 47 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2007 ; Canadian Ethnic Studies Volume 39 ; 39 >
+      au < released ; 2008 ; Canadian Ethnic Studies Volume 40 ; 40 >
+      au < released ; 2009 ; Canadian Ethnic Studies Volume 41 ; 41 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < doesNotExist ; 2010 ; Canadian Ethnic Studies Volume 42 ; 42 >
+      au < manifest ; 2011 ; Canadian Ethnic Studies Volume 43 ; 43 >
+      au < manifest ; 2012 ; Canadian Ethnic Studies Volume 44 ; 44 >
+      au < manifest ; 2013 ; Canadian Ethnic Studies Volume 45 ; 45 >
+      au < manifest ; 2014 ; Canadian Ethnic Studies Volume 46 ; 46 >
+      au < manifest ; 2015 ; Canadian Ethnic Studies Volume 47 ; 47 >
+
+    }
+
 
   }
 

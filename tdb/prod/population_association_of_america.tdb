@@ -5,7 +5,6 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
   implicit < status ; year ; name ; param[volume] >
 
   {
@@ -19,17 +18,24 @@
     param[journal_dir] = demography
     attr[journal_id] = dem
 
-    au < released ; 2000 ; Demography Volume 37 ; 37 >
-    au < released ; 2001 ; Demography Volume 38 ; 38 >
-    au < released ; 2002 ; Demography Volume 39 ; 39 >
-    au < released ; 2003 ; Demography Volume 40 ; 40 >
-    au < released ; 2004 ; Demography Volume 41 ; 41 >
-    au < released ; 2005 ; Demography Volume 42 ; 42 >
-    au < released ; 2006 ; Demography Volume 43 ; 43 >
-    au < released ; 2007 ; Demography Volume 44 ; 44 >
-    au < released ; 2008 ; Demography Volume 45 ; 45 >
-    au < released ; 2009 ; Demography Volume 46 ; 46 >
-    au < released ; 2010 ; Demography Volume 47 ; 47 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2000 ; Demography Volume 37 ; 37 >
+      au < released ; 2001 ; Demography Volume 38 ; 38 >
+      au < released ; 2002 ; Demography Volume 39 ; 39 >
+      au < released ; 2003 ; Demography Volume 40 ; 40 >
+      au < released ; 2004 ; Demography Volume 41 ; 41 >
+      au < released ; 2005 ; Demography Volume 42 ; 42 >
+      au < released ; 2006 ; Demography Volume 43 ; 43 >
+      au < released ; 2007 ; Demography Volume 44 ; 44 >
+      au < released ; 2008 ; Demography Volume 45 ; 45 >
+      au < released ; 2009 ; Demography Volume 46 ; 46 >
+      au < released ; 2010 ; Demography Volume 47 ; 47 >
+
+    }
+
 
   }
 

@@ -14,19 +14,32 @@
     >
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = ieee_annals_of_the_history_of_computing
     attr[journal_id] = ahc
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 2008 ; IEEE Annals of the History of Computing Volume 30 ; 30 >
-    au < released ; 2009 ; IEEE Annals of the History of Computing Volume 31 ; 31 >
-    au < released ; 2010 ; IEEE Annals of the History of Computing Volume 32 ; 32 >
-    au < released ; 2011 ; IEEE Annals of the History of Computing Volume 33 ; 33 >
-    au < released ; 2012 ; IEEE Annals of the History of Computing Volume 34 ; 34 >
-    au < released ; 2013 ; IEEE Annals of the History of Computing Volume 35 ; 35 >
-    au < manifest ; 2014 ; IEEE Annals of the History of Computing Volume 36 ; 36 >
-    au < manifest ; 2015 ; IEEE Annals of the History of Computing Volume 37 ; 37 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2008 ; IEEE Annals of the History of Computing Volume 30 ; 30 >
+      au < released ; 2009 ; IEEE Annals of the History of Computing Volume 31 ; 31 >
+      au < released ; 2010 ; IEEE Annals of the History of Computing Volume 32 ; 32 >
+      au < released ; 2011 ; IEEE Annals of the History of Computing Volume 33 ; 33 >
+      au < released ; 2012 ; IEEE Annals of the History of Computing Volume 34 ; 34 >
+      au < released ; 2013 ; IEEE Annals of the History of Computing Volume 35 ; 35 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; IEEE Annals of the History of Computing Volume 36 ; 36 >
+      au < manifest ; 2015 ; IEEE Annals of the History of Computing Volume 37 ; 37 >
+
+    }
+
 
   }
 

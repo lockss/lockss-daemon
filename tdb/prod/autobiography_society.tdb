@@ -5,7 +5,6 @@
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
 
-  param[base_url] = http://muse.jhu.edu/
   param[journal_dir] = ab_autobiography_studies
   attr[journal_id] = abs
 
@@ -19,15 +18,29 @@
     
     comment[v20_v23] = no content for manifest page.
 
-    au < doNotProcess ; 2005 ; Auto/Biography Studies Volume 20 ; 20 >
-    au < doNotProcess ; 2006 ; Auto/Biography Studies Volume 21 ; 21 >
-    au < doNotProcess ; 2007 ; Auto/Biography Studies Volume 22 ; 22 >
-    au < doNotProcess ; 2008 ; Auto/Biography Studies Volume 23 ; 23 >
-    au < released ; 2009 ; Auto/Biography Studies Volume 24 [BioOne] ; 24 >
-    au < released ; 2010 ; Auto/Biography Studies Volume 25 [BioOne] ; 25 >
-    au < released ; 2011 ; Auto/Biography Studies Volume 26 [BioOne] ; 26 >
-    au < released ; 2012 ; Auto/Biography Studies Volume 27 [BioOne] ; 27 >
-    au < released ; 2013 ; Auto/Biography Studies Volume 28 [BioOne] ; 28 >
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < doNotProcess ; 2005 ; Auto/Biography Studies Volume 20 ; 20 >
+      au < doNotProcess ; 2006 ; Auto/Biography Studies Volume 21 ; 21 >
+      au < doNotProcess ; 2007 ; Auto/Biography Studies Volume 22 ; 22 >
+      au < doNotProcess ; 2008 ; Auto/Biography Studies Volume 23 ; 23 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2009 ; Auto/Biography Studies Volume 24 [BioOne] ; 24 >
+      au < released ; 2010 ; Auto/Biography Studies Volume 25 [BioOne] ; 25 >
+      au < released ; 2011 ; Auto/Biography Studies Volume 26 [BioOne] ; 26 >
+      au < released ; 2012 ; Auto/Biography Studies Volume 27 [BioOne] ; 27 >
+      au < released ; 2013 ; Auto/Biography Studies Volume 28 [BioOne] ; 28 >
+
+    }
+
 
   }
 

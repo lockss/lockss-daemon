@@ -4,7 +4,6 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
   implicit < status ; year ; name ; param[volume] >
 
   {
@@ -17,11 +16,25 @@
     param[journal_dir] = philippine_studies
     attr[journal_id] = phs
 
-    au < released ; 2011 ; Philippine Studies: Historical and Ethnographic Viewpoints Volume 59 ; 59 >
-    au < released ; 2012 ; Philippine Studies: Historical and Ethnographic Viewpoints Volume 60 ; 60 >
-    au < released ; 2013 ; Philippine Studies: Historical and Ethnographic Viewpoints Volume 61 ; 61 >
-    au < manifest ; 2014 ; Philippine Studies: Historical and Ethnographic Viewpoints Volume 62 ; 62 >
-    au < manifest ; 2015 ; Philippine Studies: Historical and Ethnographic Viewpoints Volume 63 ; 63 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2011 ; Philippine Studies: Historical and Ethnographic Viewpoints Volume 59 ; 59 >
+      au < released ; 2012 ; Philippine Studies: Historical and Ethnographic Viewpoints Volume 60 ; 60 >
+      au < released ; 2013 ; Philippine Studies: Historical and Ethnographic Viewpoints Volume 61 ; 61 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Philippine Studies: Historical and Ethnographic Viewpoints Volume 62 ; 62 >
+      au < manifest ; 2015 ; Philippine Studies: Historical and Ethnographic Viewpoints Volume 63 ; 63 >
+
+    }
+
 
   }
   

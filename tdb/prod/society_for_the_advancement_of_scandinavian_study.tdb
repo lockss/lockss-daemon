@@ -6,7 +6,6 @@
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     implicit < status ; year ; name ; param[volume] >
-    param[base_url] = http://muse.jhu.edu/
 
     {
 
@@ -20,11 +19,25 @@
       param[journal_dir] = scandinavian_studies
       attr[journal_id] = scd
 
-      au < released ; 2011 ; Scandinavian Studies Volume 83 ; 83 >
-      au < released ; 2012 ; Scandinavian Studies Volume 84 ; 84 >
-      au < released ; 2013 ; Scandinavian Studies Volume 85 ; 85 >
-      au < manifest ; 2014 ; Scandinavian Studies Volume 86 ; 86 >
-      au < manifest ; 2015 ; Scandinavian Studies Volume 87 ; 87 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2011 ; Scandinavian Studies Volume 83 ; 83 >
+        au < released ; 2012 ; Scandinavian Studies Volume 84 ; 84 >
+        au < released ; 2013 ; Scandinavian Studies Volume 85 ; 85 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+        au < manifest ; 2014 ; Scandinavian Studies Volume 86 ; 86 >
+        au < manifest ; 2015 ; Scandinavian Studies Volume 87 ; 87 >
+
+    }
+
 
     }
     

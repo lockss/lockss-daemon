@@ -5,7 +5,6 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -18,14 +17,28 @@
     param[journal_dir] = wsq
     attr[journal_id] = wsq
 
-    au < released ; 2008 ; WSQ: Women's Studies Quarterly Volume 36 ; 36 >
-    au < released ; 2009 ; WSQ: Women's Studies Quarterly Volume 37 ; 37 >
-    au < released ; 2010 ; WSQ: Women's Studies Quarterly Volume 38 ; 38 >
-    au < released ; 2011 ; WSQ: Women's Studies Quarterly Volume 39 ; 39 >
-    au < released ; 2012 ; WSQ: Women's Studies Quarterly Volume 40 ; 40 >
-    au < released ; 2013 ; WSQ: Women's Studies Quarterly Volume 41 ; 41 >
-    au < manifest ; 2014 ; WSQ: Women's Studies Quarterly Volume 42 ; 42 >
-    au < manifest ; 2015 ; WSQ: Women's Studies Quarterly Volume 43 ; 43 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2008 ; WSQ: Women's Studies Quarterly Volume 36 ; 36 >
+      au < released ; 2009 ; WSQ: Women's Studies Quarterly Volume 37 ; 37 >
+      au < released ; 2010 ; WSQ: Women's Studies Quarterly Volume 38 ; 38 >
+      au < released ; 2011 ; WSQ: Women's Studies Quarterly Volume 39 ; 39 >
+      au < released ; 2012 ; WSQ: Women's Studies Quarterly Volume 40 ; 40 >
+      au < released ; 2013 ; WSQ: Women's Studies Quarterly Volume 41 ; 41 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; WSQ: Women's Studies Quarterly Volume 42 ; 42 >
+      au < manifest ; 2015 ; WSQ: Women's Studies Quarterly Volume 43 ; 43 >
+
+    }
+
 
   }
 

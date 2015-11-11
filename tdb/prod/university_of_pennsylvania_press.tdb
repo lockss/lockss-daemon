@@ -5,7 +5,6 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -18,11 +17,25 @@
     param[journal_dir] = change_over_time
     attr[journal_id] = cot
 
-    au < released ; 2011 ; Change Over Time Volume 1 ; 1 >
-    au < released ; 2012 ; Change Over Time Volume 2 ; 2 >
-    au < released ; 2013 ; Change Over Time Volume 3 ; 3 >
-    au < manifest ; 2014 ; Change Over Time Volume 4 ; 4 >
-    au < manifest ; 2015 ; Change Over Time Volume 5 ; 5 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2011 ; Change Over Time Volume 1 ; 1 >
+      au < released ; 2012 ; Change Over Time Volume 2 ; 2 >
+      au < released ; 2013 ; Change Over Time Volume 3 ; 3 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Change Over Time Volume 4 ; 4 >
+      au < manifest ; 2015 ; Change Over Time Volume 5 ; 5 >
+
+    }
+
 
   }
 
@@ -37,17 +50,31 @@
     param[journal_dir] = dissent
     attr[journal_id] = dss
 
-    au < released ; 2005 ; Dissent Volume 52 ; 52 >
-    au < released ; 2006 ; Dissent Volume 53 ; 53 >
-    au < released ; 2007 ; Dissent Volume 54 ; 54 >
-    au < released ; 2008 ; Dissent Volume 55 ; 55 >
-    au < released ; 2009 ; Dissent Volume 56 ; 56 >
-    au < released ; 2010 ; Dissent Volume 57 ; 57 >
-    au < released ; 2011 ; Dissent Volume 58 ; 58 >
-    au < released ; 2012 ; Dissent Volume 59 ; 59 >
-    au < released ; 2013 ; Dissent Volume 60 ; 60 >
-    au < manifest ; 2014 ; Dissent Volume 61 ; 61 >
-    au < manifest ; 2015 ; Dissent Volume 62 ; 62 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2005 ; Dissent Volume 52 ; 52 >
+      au < released ; 2006 ; Dissent Volume 53 ; 53 >
+      au < released ; 2007 ; Dissent Volume 54 ; 54 >
+      au < released ; 2008 ; Dissent Volume 55 ; 55 >
+      au < released ; 2009 ; Dissent Volume 56 ; 56 >
+      au < released ; 2010 ; Dissent Volume 57 ; 57 >
+      au < released ; 2011 ; Dissent Volume 58 ; 58 >
+      au < released ; 2012 ; Dissent Volume 59 ; 59 >
+      au < released ; 2013 ; Dissent Volume 60 ; 60 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Dissent Volume 61 ; 61 >
+      au < manifest ; 2015 ; Dissent Volume 62 ; 62 >
+
+    }
+
 
   }
 
@@ -62,19 +89,33 @@
     param[journal_dir] = early_american_studies_an_interdisciplinary_journal
     attr[journal_id] = eam
 
-    au < released ; 2003 ; Early American Studies: An Interdisciplinary Journal Volume 1 ; 1 >
-    au < released ; 2004 ; Early American Studies: An Interdisciplinary Journal Volume 2 ; 2 >
-    au < released ; 2005 ; Early American Studies: An Interdisciplinary Journal Volume 3 ; 3 >
-    au < released ; 2006 ; Early American Studies: An Interdisciplinary Journal Volume 4 ; 4 >
-    au < released ; 2007 ; Early American Studies: An Interdisciplinary Journal Volume 5 ; 5 >
-    au < released ; 2008 ; Early American Studies: An Interdisciplinary Journal Volume 6 ; 6 >
-    au < released ; 2009 ; Early American Studies: An Interdisciplinary Journal Volume 7 ; 7 >
-    au < released ; 2010 ; Early American Studies: An Interdisciplinary Journal Volume 8 ; 8 >
-    au < released ; 2011 ; Early American Studies: An Interdisciplinary Journal Volume 9 ; 9 >
-    au < released ; 2012 ; Early American Studies: An Interdisciplinary Journal Volume 10 ; 10 >
-    au < released ; 2013 ; Early American Studies: An Interdisciplinary Journal Volume 11 ; 11 >
-    au < manifest ; 2014 ; Early American Studies: An Interdisciplinary Journal Volume 12 ; 12 >
-    au < manifest ; 2015 ; Early American Studies: An Interdisciplinary Journal Volume 13 ; 13 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2003 ; Early American Studies: An Interdisciplinary Journal Volume 1 ; 1 >
+      au < released ; 2004 ; Early American Studies: An Interdisciplinary Journal Volume 2 ; 2 >
+      au < released ; 2005 ; Early American Studies: An Interdisciplinary Journal Volume 3 ; 3 >
+      au < released ; 2006 ; Early American Studies: An Interdisciplinary Journal Volume 4 ; 4 >
+      au < released ; 2007 ; Early American Studies: An Interdisciplinary Journal Volume 5 ; 5 >
+      au < released ; 2008 ; Early American Studies: An Interdisciplinary Journal Volume 6 ; 6 >
+      au < released ; 2009 ; Early American Studies: An Interdisciplinary Journal Volume 7 ; 7 >
+      au < released ; 2010 ; Early American Studies: An Interdisciplinary Journal Volume 8 ; 8 >
+      au < released ; 2011 ; Early American Studies: An Interdisciplinary Journal Volume 9 ; 9 >
+      au < released ; 2012 ; Early American Studies: An Interdisciplinary Journal Volume 10 ; 10 >
+      au < released ; 2013 ; Early American Studies: An Interdisciplinary Journal Volume 11 ; 11 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Early American Studies: An Interdisciplinary Journal Volume 12 ; 12 >
+      au < manifest ; 2015 ; Early American Studies: An Interdisciplinary Journal Volume 13 ; 13 >
+
+    }
+
 
   }
 
@@ -89,16 +130,30 @@
     param[journal_dir] = the_eighteenth_century
     attr[journal_id] = ecy
 
-    au < released ; 2006 ; The Eighteenth Century Volume 47 ; 47 >
-    au < released ; 2007 ; The Eighteenth Century Volume 48 ; 48 >
-    au < released ; 2008 ; The Eighteenth Century Volume 49 ; 49 >
-    au < released ; 2009 ; The Eighteenth Century Volume 50 ; 50 >
-    au < released ; 2010 ; The Eighteenth Century Volume 51 ; 51 >
-    au < released ; 2011 ; The Eighteenth Century Volume 52 ; 52 >
-    au < released ; 2012 ; The Eighteenth Century Volume 53 ; 53 >
-    au < released ; 2013 ; The Eighteenth Century Volume 54 ; 54 >
-    au < manifest ; 2014 ; The Eighteenth Century Volume 55 ; 55 >
-    au < manifest ; 2015 ; The Eighteenth Century Volume 56 ; 56 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2006 ; The Eighteenth Century Volume 47 ; 47 >
+      au < released ; 2007 ; The Eighteenth Century Volume 48 ; 48 >
+      au < released ; 2008 ; The Eighteenth Century Volume 49 ; 49 >
+      au < released ; 2009 ; The Eighteenth Century Volume 50 ; 50 >
+      au < released ; 2010 ; The Eighteenth Century Volume 51 ; 51 >
+      au < released ; 2011 ; The Eighteenth Century Volume 52 ; 52 >
+      au < released ; 2012 ; The Eighteenth Century Volume 53 ; 53 >
+      au < released ; 2013 ; The Eighteenth Century Volume 54 ; 54 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; The Eighteenth Century Volume 55 ; 55 >
+      au < manifest ; 2015 ; The Eighteenth Century Volume 56 ; 56 >
+
+    }
+
 
   }
 
@@ -113,17 +168,31 @@
     param[journal_dir] = hispanic_review
     attr[journal_id] = hir
 
-    au < released ; 2005 ; Hispanic Review Volume 73 ; 73 >
-    au < released ; 2006 ; Hispanic Review Volume 74 ; 74 >
-    au < released ; 2007 ; Hispanic Review Volume 75 ; 75 >
-    au < released ; 2008 ; Hispanic Review Volume 76 ; 76 >
-    au < released ; 2009 ; Hispanic Review Volume 77 ; 77 >
-    au < released ; 2010 ; Hispanic Review Volume 78 ; 78 >
-    au < released ; 2011 ; Hispanic Review Volume 79 ; 79 >
-    au < released ; 2012 ; Hispanic Review Volume 80 ; 80 >
-    au < released ; 2013 ; Hispanic Review Volume 81 ; 81 >
-    au < manifest ; 2014 ; Hispanic Review Volume 82 ; 82 >
-    au < manifest ; 2015 ; Hispanic Review Volume 83 ; 83 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2005 ; Hispanic Review Volume 73 ; 73 >
+      au < released ; 2006 ; Hispanic Review Volume 74 ; 74 >
+      au < released ; 2007 ; Hispanic Review Volume 75 ; 75 >
+      au < released ; 2008 ; Hispanic Review Volume 76 ; 76 >
+      au < released ; 2009 ; Hispanic Review Volume 77 ; 77 >
+      au < released ; 2010 ; Hispanic Review Volume 78 ; 78 >
+      au < released ; 2011 ; Hispanic Review Volume 79 ; 79 >
+      au < released ; 2012 ; Hispanic Review Volume 80 ; 80 >
+      au < released ; 2013 ; Hispanic Review Volume 81 ; 81 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Hispanic Review Volume 82 ; 82 >
+      au < manifest ; 2015 ; Hispanic Review Volume 83 ; 83 >
+
+    }
+
 
   }
 
@@ -138,12 +207,26 @@
     param[journal_dir] = humanity
     attr[journal_id] = hum
 
-    au < released ; 2010 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 1 ; 1 >
-    au < released ; 2011 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 2 ; 2 >
-    au < released ; 2012 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 3 ; 3 >
-    au < released ; 2013 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 4 ; 4 >
-    au < manifest ; 2014 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 5 ; 5 >
-    au < manifest ; 2015 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 6 ; 6 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2010 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 1 ; 1 >
+      au < released ; 2011 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 2 ; 2 >
+      au < released ; 2012 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 3 ; 3 >
+      au < released ; 2013 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 4 ; 4 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 5 ; 5 >
+      au < manifest ; 2015 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 6 ; 6 >
+
+    }
+
 
   }
 
@@ -159,9 +242,23 @@
     param[journal_dir] = the_journal_of_nineteenth_century_americanists
     attr[journal_id] = jnc
 
-    au < released ; 2013 ; J19: The Journal of Nineteenth-Century Americanists Volume 1 ; 1 >
-    au < manifest ; 2014 ; J19: The Journal of Nineteenth-Century Americanists Volume 2 ; 2 >
-    au < manifest ; 2015 ; J19: The Journal of Nineteenth-Century Americanists Volume 3 ; 3 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2013 ; J19: The Journal of Nineteenth-Century Americanists Volume 1 ; 1 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; J19: The Journal of Nineteenth-Century Americanists Volume 2 ; 2 >
+      au < manifest ; 2015 ; J19: The Journal of Nineteenth-Century Americanists Volume 3 ; 3 >
+
+    }
+
 
   }
 
@@ -176,17 +273,31 @@
     param[journal_dir] = jewish_quarterly_review
     attr[journal_id] = jqr
 
-    au < released ; 2005 ; Jewish Quarterly Review Volume 95 ; 95 >
-    au < released ; 2006 ; Jewish Quarterly Review Volume 96 ; 96 >
-    au < released ; 2007 ; Jewish Quarterly Review Volume 97 ; 97 >
-    au < released ; 2008 ; Jewish Quarterly Review Volume 98 ; 98 >
-    au < released ; 2009 ; Jewish Quarterly Review Volume 99 ; 99 >
-    au < released ; 2010 ; Jewish Quarterly Review Volume 100 ; 100 >
-    au < released ; 2011 ; Jewish Quarterly Review Volume 101 ; 101 >
-    au < released ; 2012 ; Jewish Quarterly Review Volume 102 ; 102 >
-    au < released ; 2013 ; Jewish Quarterly Review Volume 103 ; 103 >
-    au < manifest ; 2014 ; Jewish Quarterly Review Volume 104 ; 104 >
-    au < manifest ; 2015 ; Jewish Quarterly Review Volume 105 ; 105 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2005 ; Jewish Quarterly Review Volume 95 ; 95 >
+      au < released ; 2006 ; Jewish Quarterly Review Volume 96 ; 96 >
+      au < released ; 2007 ; Jewish Quarterly Review Volume 97 ; 97 >
+      au < released ; 2008 ; Jewish Quarterly Review Volume 98 ; 98 >
+      au < released ; 2009 ; Jewish Quarterly Review Volume 99 ; 99 >
+      au < released ; 2010 ; Jewish Quarterly Review Volume 100 ; 100 >
+      au < released ; 2011 ; Jewish Quarterly Review Volume 101 ; 101 >
+      au < released ; 2012 ; Jewish Quarterly Review Volume 102 ; 102 >
+      au < released ; 2013 ; Jewish Quarterly Review Volume 103 ; 103 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Jewish Quarterly Review Volume 104 ; 104 >
+      au < manifest ; 2015 ; Jewish Quarterly Review Volume 105 ; 105 >
+
+    }
+
 
   }
 
@@ -201,18 +312,32 @@
     param[journal_dir] = journal_for_early_modern_cultural_studies
     attr[journal_id] = jem
 
-    au < released ; 2004 ; Journal for Early Modern Cultural Studies Volume 4 ; 4 >
-    au < released ; 2005 ; Journal for Early Modern Cultural Studies Volume 5 ; 5 >
-    au < released ; 2006 ; Journal for Early Modern Cultural Studies Volume 6 ; 6 >
-    au < released ; 2007 ; Journal for Early Modern Cultural Studies Volume 7 ; 7 >
-    au < released ; 2008 ; Journal for Early Modern Cultural Studies Volume 8 ; 8 >
-    au < released ; 2009 ; Journal for Early Modern Cultural Studies Volume 9 ; 9 >
-    au < released ; 2010 ; Journal for Early Modern Cultural Studies Volume 10 ; 10 >
-    au < released ; 2011 ; Journal for Early Modern Cultural Studies Volume 11 ; 11 >
-    au < released ; 2012 ; Journal for Early Modern Cultural Studies Volume 12 ; 12 >
-    au < released ; 2013 ; Journal for Early Modern Cultural Studies Volume 13 ; 13 >
-    au < manifest ; 2014 ; Journal for Early Modern Cultural Studies Volume 14 ; 14 >
-    au < manifest ; 2015 ; Journal for Early Modern Cultural Studies Volume 15 ; 15 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2004 ; Journal for Early Modern Cultural Studies Volume 4 ; 4 >
+      au < released ; 2005 ; Journal for Early Modern Cultural Studies Volume 5 ; 5 >
+      au < released ; 2006 ; Journal for Early Modern Cultural Studies Volume 6 ; 6 >
+      au < released ; 2007 ; Journal for Early Modern Cultural Studies Volume 7 ; 7 >
+      au < released ; 2008 ; Journal for Early Modern Cultural Studies Volume 8 ; 8 >
+      au < released ; 2009 ; Journal for Early Modern Cultural Studies Volume 9 ; 9 >
+      au < released ; 2010 ; Journal for Early Modern Cultural Studies Volume 10 ; 10 >
+      au < released ; 2011 ; Journal for Early Modern Cultural Studies Volume 11 ; 11 >
+      au < released ; 2012 ; Journal for Early Modern Cultural Studies Volume 12 ; 12 >
+      au < released ; 2013 ; Journal for Early Modern Cultural Studies Volume 13 ; 13 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Journal for Early Modern Cultural Studies Volume 14 ; 14 >
+      au < manifest ; 2015 ; Journal for Early Modern Cultural Studies Volume 15 ; 15 >
+
+    }
+
 
   }
 
@@ -227,17 +352,31 @@
     param[journal_dir] = journal_of_the_early_republic
     attr[journal_id] = jer
 
-    au < released ; 2005 ; Journal of the Early Republic Volume 25 ; 25 >
-    au < released ; 2006 ; Journal of the Early Republic Volume 26 ; 26 >
-    au < released ; 2007 ; Journal of the Early Republic Volume 27 ; 27 >
-    au < released ; 2008 ; Journal of the Early Republic Volume 28 ; 28 >
-    au < released ; 2009 ; Journal of the Early Republic Volume 29 ; 29 >
-    au < released ; 2010 ; Journal of the Early Republic Volume 30 ; 30 >
-    au < released ; 2011 ; Journal of the Early Republic Volume 31 ; 31 >
-    au < released ; 2012 ; Journal of the Early Republic Volume 32 ; 32 >
-    au < released ; 2013 ; Journal of the Early Republic Volume 33 ; 33 >
-    au < manifest ; 2014 ; Journal of the Early Republic Volume 34 ; 34 >
-    au < manifest ; 2015 ; Journal of the Early Republic Volume 35 ; 35 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2005 ; Journal of the Early Republic Volume 25 ; 25 >
+      au < released ; 2006 ; Journal of the Early Republic Volume 26 ; 26 >
+      au < released ; 2007 ; Journal of the Early Republic Volume 27 ; 27 >
+      au < released ; 2008 ; Journal of the Early Republic Volume 28 ; 28 >
+      au < released ; 2009 ; Journal of the Early Republic Volume 29 ; 29 >
+      au < released ; 2010 ; Journal of the Early Republic Volume 30 ; 30 >
+      au < released ; 2011 ; Journal of the Early Republic Volume 31 ; 31 >
+      au < released ; 2012 ; Journal of the Early Republic Volume 32 ; 32 >
+      au < released ; 2013 ; Journal of the Early Republic Volume 33 ; 33 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Journal of the Early Republic Volume 34 ; 34 >
+      au < manifest ; 2015 ; Journal of the Early Republic Volume 35 ; 35 >
+
+    }
+
 
   }
 
@@ -252,26 +391,40 @@
     param[journal_dir] = journal_of_the_history_of_ideas
     attr[journal_id] = jhi
 
-    au < released ; 1996 ; Journal of the History of Ideas Volume 57 ; 57 >
-    au < released ; 1997 ; Journal of the History of Ideas Volume 58 ; 58 >
-    au < released ; 1998 ; Journal of the History of Ideas Volume 59 ; 59 >
-    au < released ; 1999 ; Journal of the History of Ideas Volume 60 ; 60 >
-    au < released ; 2000 ; Journal of the History of Ideas Volume 61 ; 61 >
-    au < released ; 2001 ; Journal of the History of Ideas Volume 62 ; 62 >
-    au < released ; 2002 ; Journal of the History of Ideas Volume 63 ; 63 >
-    au < released ; 2003 ; Journal of the History of Ideas Volume 64 ; 64 >
-    au < released ; 2004 ; Journal of the History of Ideas Volume 65 ; 65 >
-    au < released ; 2005 ; Journal of the History of Ideas Volume 66 ; 66 >
-    au < released ; 2006 ; Journal of the History of Ideas Volume 67 ; 67 >
-    au < released ; 2007 ; Journal of the History of Ideas Volume 68 ; 68 >
-    au < released ; 2008 ; Journal of the History of Ideas Volume 69 ; 69 >
-    au < released ; 2009 ; Journal of the History of Ideas Volume 70 ; 70 >
-    au < released ; 2010 ; Journal of the History of Ideas Volume 71 ; 71 >
-    au < released ; 2011 ; Journal of the History of Ideas Volume 72 ; 72 >
-    au < released ; 2012 ; Journal of the History of Ideas Volume 73 ; 73 >
-    au < released ; 2013 ; Journal of the History of Ideas Volume 74 ; 74 >
-    au < manifest ; 2014 ; Journal of the History of Ideas Volume 75 ; 75 >
-    au < manifest ; 2015 ; Journal of the History of Ideas Volume 76 ; 76 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1996 ; Journal of the History of Ideas Volume 57 ; 57 >
+      au < released ; 1997 ; Journal of the History of Ideas Volume 58 ; 58 >
+      au < released ; 1998 ; Journal of the History of Ideas Volume 59 ; 59 >
+      au < released ; 1999 ; Journal of the History of Ideas Volume 60 ; 60 >
+      au < released ; 2000 ; Journal of the History of Ideas Volume 61 ; 61 >
+      au < released ; 2001 ; Journal of the History of Ideas Volume 62 ; 62 >
+      au < released ; 2002 ; Journal of the History of Ideas Volume 63 ; 63 >
+      au < released ; 2003 ; Journal of the History of Ideas Volume 64 ; 64 >
+      au < released ; 2004 ; Journal of the History of Ideas Volume 65 ; 65 >
+      au < released ; 2005 ; Journal of the History of Ideas Volume 66 ; 66 >
+      au < released ; 2006 ; Journal of the History of Ideas Volume 67 ; 67 >
+      au < released ; 2007 ; Journal of the History of Ideas Volume 68 ; 68 >
+      au < released ; 2008 ; Journal of the History of Ideas Volume 69 ; 69 >
+      au < released ; 2009 ; Journal of the History of Ideas Volume 70 ; 70 >
+      au < released ; 2010 ; Journal of the History of Ideas Volume 71 ; 71 >
+      au < released ; 2011 ; Journal of the History of Ideas Volume 72 ; 72 >
+      au < released ; 2012 ; Journal of the History of Ideas Volume 73 ; 73 >
+      au < released ; 2013 ; Journal of the History of Ideas Volume 74 ; 74 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Journal of the History of Ideas Volume 75 ; 75 >
+      au < manifest ; 2015 ; Journal of the History of Ideas Volume 76 ; 76 >
+
+    }
+
 
   }
 
@@ -286,16 +439,30 @@
     param[journal_dir] = magic_ritual_and_witchcraft
     attr[journal_id] = mrw
 
-    au < released ; 2006 ; Magic, Ritual, and Witchcraft Volume 1 ; 1 >
-    au < released ; 2007 ; Magic, Ritual, and Witchcraft Volume 2 ; 2 >
-    au < released ; 2008 ; Magic, Ritual, and Witchcraft Volume 3 ; 3 >
-    au < released ; 2009 ; Magic, Ritual, and Witchcraft Volume 4 ; 4 >
-    au < released ; 2010 ; Magic, Ritual, and Witchcraft Volume 5 ; 5 >
-    au < released ; 2011 ; Magic, Ritual, and Witchcraft Volume 6 ; 6 >
-    au < released ; 2012 ; Magic, Ritual, and Witchcraft Volume 7 ; 7 >
-    au < released ; 2013 ; Magic, Ritual, and Witchcraft Volume 8 ; 8 >
-    au < manifest ; 2014 ; Magic, Ritual, and Witchcraft Volume 9 ; 9 >
-    au < manifest ; 2015 ; Magic, Ritual, and Witchcraft Volume 10 ; 10 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2006 ; Magic, Ritual, and Witchcraft Volume 1 ; 1 >
+      au < released ; 2007 ; Magic, Ritual, and Witchcraft Volume 2 ; 2 >
+      au < released ; 2008 ; Magic, Ritual, and Witchcraft Volume 3 ; 3 >
+      au < released ; 2009 ; Magic, Ritual, and Witchcraft Volume 4 ; 4 >
+      au < released ; 2010 ; Magic, Ritual, and Witchcraft Volume 5 ; 5 >
+      au < released ; 2011 ; Magic, Ritual, and Witchcraft Volume 6 ; 6 >
+      au < released ; 2012 ; Magic, Ritual, and Witchcraft Volume 7 ; 7 >
+      au < released ; 2013 ; Magic, Ritual, and Witchcraft Volume 8 ; 8 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Magic, Ritual, and Witchcraft Volume 9 ; 9 >
+      au < manifest ; 2015 ; Magic, Ritual, and Witchcraft Volume 10 ; 10 >
+
+    }
+
 
   }
 
@@ -310,15 +477,29 @@
     param[journal_dir] = revista_hispanica_moderna
     attr[journal_id]= rhm
 
-    au < released ; 2007 ; Revista Hispánica Moderna Volume 60 ; 60 >
-    au < released ; 2008 ; Revista Hispánica Moderna Volume 61 ; 61 >
-    au < released ; 2009 ; Revista Hispánica Moderna Volume 62 ; 62 >
-    au < released ; 2010 ; Revista Hispánica Moderna Volume 63 ; 63 >
-    au < released ; 2011 ; Revista Hispánica Moderna Volume 64 ; 64 >
-    au < released ; 2012 ; Revista Hispánica Moderna Volume 65 ; 65 >
-    au < released ; 2013 ; Revista Hispánica Moderna Volume 66 ; 66 >
-    au < manifest ; 2014 ; Revista Hispánica Moderna Volume 67 ; 67 >
-    au < manifest ; 2015 ; Revista Hispánica Moderna Volume 68 ; 68 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2007 ; Revista Hispánica Moderna Volume 60 ; 60 >
+      au < released ; 2008 ; Revista Hispánica Moderna Volume 61 ; 61 >
+      au < released ; 2009 ; Revista Hispánica Moderna Volume 62 ; 62 >
+      au < released ; 2010 ; Revista Hispánica Moderna Volume 63 ; 63 >
+      au < released ; 2011 ; Revista Hispánica Moderna Volume 64 ; 64 >
+      au < released ; 2012 ; Revista Hispánica Moderna Volume 65 ; 65 >
+      au < released ; 2013 ; Revista Hispánica Moderna Volume 66 ; 66 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Revista Hispánica Moderna Volume 67 ; 67 >
+      au < manifest ; 2015 ; Revista Hispánica Moderna Volume 68 ; 68 >
+
+    }
+
 
   }
 

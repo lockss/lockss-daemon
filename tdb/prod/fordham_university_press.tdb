@@ -5,7 +5,6 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -18,18 +17,32 @@
     param[journal_dir] = joyce_studies_annual
     attr[journal_id] = joy
 
-    au < released ; 2001 ; Joyce Studies Annual Volume 12 ; 12 >
-    au < released ; 2002 ; Joyce Studies Annual Volume 13 ; 13 >
-    au < released ; 2003 ; Joyce Studies Annual Volume 14 ; 14 >
-    au < released ; 2007 ; Joyce Studies Annual Volume 2007 ; 2007 >
-    au < released ; 2008 ; Joyce Studies Annual Volume 2008 ; 2008 >
-    au < released ; 2009 ; Joyce Studies Annual Volume 2009 ; 2009 >
-    au < released ; 2010 ; Joyce Studies Annual Volume 2010 ; 2010 >
-    au < released ; 2011 ; Joyce Studies Annual Volume 2011 ; 2011 >
-    au < released ; 2012 ; Joyce Studies Annual Volume 2012 ; 2012 >
-    au < released ; 2013 ; Joyce Studies Annual Volume 2013 ; 2013 >
-    au < manifest ; 2014 ; Joyce Studies Annual Volume 2014 ; 2014 >
-    au < expected ; 2015 ; Joyce Studies Annual Volume 2015 ; 2015 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2001 ; Joyce Studies Annual Volume 12 ; 12 >
+      au < released ; 2002 ; Joyce Studies Annual Volume 13 ; 13 >
+      au < released ; 2003 ; Joyce Studies Annual Volume 14 ; 14 >
+      au < released ; 2007 ; Joyce Studies Annual Volume 2007 ; 2007 >
+      au < released ; 2008 ; Joyce Studies Annual Volume 2008 ; 2008 >
+      au < released ; 2009 ; Joyce Studies Annual Volume 2009 ; 2009 >
+      au < released ; 2010 ; Joyce Studies Annual Volume 2010 ; 2010 >
+      au < released ; 2011 ; Joyce Studies Annual Volume 2011 ; 2011 >
+      au < released ; 2012 ; Joyce Studies Annual Volume 2012 ; 2012 >
+      au < released ; 2013 ; Joyce Studies Annual Volume 2013 ; 2013 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Joyce Studies Annual Volume 2014 ; 2014 >
+      au < expected ; 2015 ; Joyce Studies Annual Volume 2015 ; 2015 >
+
+    }
+
 
   }
 
@@ -42,20 +55,34 @@
     param[journal_dir] = traditio
     attr[journal_id] = trd
     
-    au < released ; 2002 ; Traditio Volume 57 ; 57 >
-    au < released ; 2003 ; Traditio Volume 58 ; 58 >
-    au < released ; 2004 ; Traditio Volume 59 ; 59 >
-    au < released ; 2005 ; Traditio Volume 60 ; 60 >
-    au < released ; 2006 ; Traditio Volume 61 ; 61 >
-    au < released ; 2007 ; Traditio Volume 62 ; 62 >
-    au < released ; 2008 ; Traditio Volume 63 ; 63 >
-    au < released ; 2009 ; Traditio Volume 64 ; 64 >
-    au < released ; 2010 ; Traditio Volume 65 ; 65 >
-    au < released ; 2011 ; Traditio Volume 66 ; 66 >
-    au < released ; 2012 ; Traditio Volume 67 ; 67 >
-    au < released ; 2013 ; Traditio Volume 68 ; 68 >
-    au < manifest ; 2014 ; Traditio Volume 69 ; 69 >
-    au < expected ; 2015 ; Traditio Volume 70 ; 70 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2002 ; Traditio Volume 57 ; 57 >
+      au < released ; 2003 ; Traditio Volume 58 ; 58 >
+      au < released ; 2004 ; Traditio Volume 59 ; 59 >
+      au < released ; 2005 ; Traditio Volume 60 ; 60 >
+      au < released ; 2006 ; Traditio Volume 61 ; 61 >
+      au < released ; 2007 ; Traditio Volume 62 ; 62 >
+      au < released ; 2008 ; Traditio Volume 63 ; 63 >
+      au < released ; 2009 ; Traditio Volume 64 ; 64 >
+      au < released ; 2010 ; Traditio Volume 65 ; 65 >
+      au < released ; 2011 ; Traditio Volume 66 ; 66 >
+      au < released ; 2012 ; Traditio Volume 67 ; 67 >
+      au < released ; 2013 ; Traditio Volume 68 ; 68 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Traditio Volume 69 ; 69 >
+      au < expected ; 2015 ; Traditio Volume 70 ; 70 >
+
+    }
+
     
   }
 

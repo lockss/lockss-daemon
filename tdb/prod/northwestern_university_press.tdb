@@ -6,7 +6,6 @@
   implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -19,7 +18,14 @@
     param[journal_dir] = islamic_africa
     attr[journal_id] = isa
 
-    au < manifest ; 2014 ; Islamic Africa Volume 5 ; 5 >
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Islamic Africa Volume 5 ; 5 >
+
+    }
+
 
   }
 
@@ -33,10 +39,24 @@
     param[journal_dir] = renaissance_drama
     attr[journal_id] = rnd
 
-    au < released ; 2010 ; Renaissance Drama Volume 38 ; 38 >
-    au < released ; 2011 ; Renaissance Drama Volume 39 ; 39 >
-    au < released ; 2012 ; Renaissance Drama Volume 40 ; 40 >
-    au < expected ; 2013 ; Renaissance Drama Volume 41 ; 41 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2010 ; Renaissance Drama Volume 38 ; 38 >
+      au < released ; 2011 ; Renaissance Drama Volume 39 ; 39 >
+      au < released ; 2012 ; Renaissance Drama Volume 40 ; 40 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < expected ; 2013 ; Renaissance Drama Volume 41 ; 41 >
+
+    }
+
 
   }
 

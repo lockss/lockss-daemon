@@ -5,7 +5,6 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
   implicit < status ; year ; name ; param[volume] >
 
   {
@@ -18,10 +17,24 @@
       param[journal_dir] = audem
       attr[journal_id] = aud
       
-      au < released ; 2010 ; AUDEM: The International Journal of Higher Education and Democracy Volume 1 ; 1 >
-      au < released ; 2011 ; AUDEM: The International Journal of Higher Education and Democracy Volume 2 ; 2 >
-      au < released ; 2012 ; AUDEM: The International Journal of Higher Education and Democracy Volume 3 ; 3 >
-      au < manifest ; 2013 ; AUDEM: The International Journal of Higher Education and Democracy Volume 4 ; 4 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2010 ; AUDEM: The International Journal of Higher Education and Democracy Volume 1 ; 1 >
+        au < released ; 2011 ; AUDEM: The International Journal of Higher Education and Democracy Volume 2 ; 2 >
+        au < released ; 2012 ; AUDEM: The International Journal of Higher Education and Democracy Volume 3 ; 3 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+        au < manifest ; 2013 ; AUDEM: The International Journal of Higher Education and Democracy Volume 4 ; 4 >
+
+    }
+
 
   }
 
@@ -37,9 +50,23 @@
     param[journal_dir] = journal_of_japanese_philosophy
     attr[journal_id] = jjp
     
-    au < released ; 2013 ; Journal of Japanese Philosophy Volume 1 ; 1 >
-    au < manifest ; 2014 ; Journal of Japanese Philosophy Volume 2 ; 2 >
-    au < expected ; 2015 ; Journal of Japanese Philosophy Volume 3 ; 3 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2013 ; Journal of Japanese Philosophy Volume 1 ; 1 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Journal of Japanese Philosophy Volume 2 ; 2 >
+      au < expected ; 2015 ; Journal of Japanese Philosophy Volume 3 ; 3 >
+
+    }
+
 
   }
 
@@ -56,10 +83,24 @@
     attr[journal_id] = mdi
     comment[notReady] = error in manifest page. Link does not go to content. http://muse.jhu.edu/journals/mediaevalia/v034/
     
-    au < released ; 2011 ; Medaevalia Volume 32 ; 32 >
-    au < released ; 2012 ; Medaevalia Volume 33 ; 33 >
-    au < notReady ; 2013 ; Medaevalia Volume 34 ; 34 >
-    au < manifest ; 2014 ; Medaevalia Volume 35 ; 35 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2011 ; Medaevalia Volume 32 ; 32 >
+      au < released ; 2012 ; Medaevalia Volume 33 ; 33 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < notReady ; 2013 ; Medaevalia Volume 34 ; 34 >
+      au < manifest ; 2014 ; Medaevalia Volume 35 ; 35 >
+
+    }
+
 
   }
 
@@ -75,10 +116,24 @@
     param[journal_dir] = palimpsest
     attr[journal_id] = pal
 
-    au < released ; 2012 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 1 ; 1 >
-    au < released ; 2013 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 2 ; 2 >
-    au < manifest ; 2014 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 3 ; 3 >
-    au < manifest ; 2015 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 4 ; 4 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2012 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 1 ; 1 >
+      au < released ; 2013 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 2 ; 2 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 3 ; 3 >
+      au < manifest ; 2015 ; Palimpsest: A Journal on Women, Gender, and the Black International Volume 4 ; 4 >
+
+    }
+
 
   }
 
@@ -94,11 +149,25 @@
     param[journal_dir] = philosophia
     attr[journal_id] = phi
 
-    au < released ; 2011 ; philoSOPHIA Volume 1 ; 1 >
-    au < released ; 2012 ; philoSOPHIA Volume 2 ; 2 >
-    au < released ; 2013 ; philoSOPHIA Volume 3 ; 3 >
-    au < manifest ; 2014 ; philoSOPHIA Volume 4 ; 4 >
-    au < manifest ; 2015 ; philoSOPHIA Volume 5 ; 5 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2011 ; philoSOPHIA Volume 1 ; 1 >
+      au < released ; 2012 ; philoSOPHIA Volume 2 ; 2 >
+      au < released ; 2013 ; philoSOPHIA Volume 3 ; 3 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; philoSOPHIA Volume 4 ; 4 >
+      au < manifest ; 2015 ; philoSOPHIA Volume 5 ; 5 >
+
+    }
+
 
   }
 

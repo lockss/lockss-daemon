@@ -5,7 +5,6 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -18,14 +17,28 @@
     param[journal_dir] = journal_of_jewish_identities
     attr[journal_id] = jji
 
-    au < released ; 2008 ; Journal of Jewish Identities Issue 1 ; 1 >
-    au < released ; 2009 ; Journal of Jewish Identities Issue 2 ; 2 >
-    au < released ; 2010 ; Journal of Jewish Identities Issue 3 ; 3 >
-    au < released ; 2011 ; Journal of Jewish Identities Issue 4 ; 4 >
-    au < released ; 2012 ; Journal of Jewish Identities Issue 5 ; 5 >
-    au < released ; 2013 ; Journal of Jewish Identities Issue 6 ; 6 >
-    au < manifest ; 2014 ; Journal of Jewish Identities Issue 7 ; 7 >
-    au < manifest ; 2015 ; Journal of Jewish Identities Issue 8 ; 8 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2008 ; Journal of Jewish Identities Issue 1 ; 1 >
+      au < released ; 2009 ; Journal of Jewish Identities Issue 2 ; 2 >
+      au < released ; 2010 ; Journal of Jewish Identities Issue 3 ; 3 >
+      au < released ; 2011 ; Journal of Jewish Identities Issue 4 ; 4 >
+      au < released ; 2012 ; Journal of Jewish Identities Issue 5 ; 5 >
+      au < released ; 2013 ; Journal of Jewish Identities Issue 6 ; 6 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Journal of Jewish Identities Issue 7 ; 7 >
+      au < manifest ; 2015 ; Journal of Jewish Identities Issue 8 ; 8 >
+
+    }
+
 
   }
 

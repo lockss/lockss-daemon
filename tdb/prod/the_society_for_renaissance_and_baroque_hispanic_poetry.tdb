@@ -6,7 +6,6 @@
   implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -18,7 +17,14 @@
     param[journal_dir] = caliope
     attr[journal_id] = clp
     
-    au < manifest ; 2015 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 20 ; 20 >
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2015 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 20 ; 20 >
+
+    }
+
   }
 
 }

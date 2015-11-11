@@ -5,7 +5,6 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
   implicit < status ; year ; name ; param[volume] >
 
   {
@@ -20,14 +19,28 @@
     param[journal_dir] = studies_in_the_age_of_chaucer
     attr[journal_id] = sac
 
-    au < released ; 2008 ; Studies in the Age of Chaucer Volume 30 ; 30 >
-    au < released ; 2009 ; Studies in the Age of Chaucer Volume 31 ; 31 >
-    au < released ; 2010 ; Studies in the Age of Chaucer Volume 32 ; 32 >
-    au < released ; 2011 ; Studies in the Age of Chaucer Volume 33 ; 33 >
-    au < released ; 2012 ; Studies in the Age of Chaucer Volume 34 ; 34 >
-    au < released ; 2013 ; Studies in the Age of Chaucer Volume 35 ; 35 >
-    au < manifest ; 2014 ; Studies in the Age of Chaucer Volume 36 ; 36 >
-    au < expected ; 2015 ; Studies in the Age of Chaucer Volume 37 ; 37 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2008 ; Studies in the Age of Chaucer Volume 30 ; 30 >
+      au < released ; 2009 ; Studies in the Age of Chaucer Volume 31 ; 31 >
+      au < released ; 2010 ; Studies in the Age of Chaucer Volume 32 ; 32 >
+      au < released ; 2011 ; Studies in the Age of Chaucer Volume 33 ; 33 >
+      au < released ; 2012 ; Studies in the Age of Chaucer Volume 34 ; 34 >
+      au < released ; 2013 ; Studies in the Age of Chaucer Volume 35 ; 35 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Studies in the Age of Chaucer Volume 36 ; 36 >
+      au < expected ; 2015 ; Studies in the Age of Chaucer Volume 37 ; 37 >
+
+    }
+
 
   }
 

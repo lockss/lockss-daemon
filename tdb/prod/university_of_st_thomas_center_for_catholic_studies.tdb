@@ -5,7 +5,6 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -18,22 +17,36 @@
     param[journal_dir] = logos
     attr[journal_id] = log
 
-    au < released ; 2000 ; Logos: A Journal of Catholic Thought and Culture Volume 3 ; 3 >
-    au < released ; 2001 ; Logos: A Journal of Catholic Thought and Culture Volume 4 ; 4 >
-    au < released ; 2002 ; Logos: A Journal of Catholic Thought and Culture Volume 5 ; 5 >
-    au < released ; 2003 ; Logos: A Journal of Catholic Thought and Culture Volume 6 ; 6 >
-    au < released ; 2004 ; Logos: A Journal of Catholic Thought and Culture Volume 7 ; 7 >
-    au < released ; 2005 ; Logos: A Journal of Catholic Thought and Culture Volume 8 ; 8 >
-    au < released ; 2006 ; Logos: A Journal of Catholic Thought and Culture Volume 9 ; 9 >
-    au < released ; 2007 ; Logos: A Journal of Catholic Thought and Culture Volume 10 ; 10 >
-    au < released ; 2008 ; Logos: A Journal of Catholic Thought and Culture Volume 11 ; 11 >
-    au < released ; 2009 ; Logos: A Journal of Catholic Thought and Culture Volume 12 ; 12 >
-    au < released ; 2010 ; Logos: A Journal of Catholic Thought and Culture Volume 13 ; 13 >
-    au < released ; 2011 ; Logos: A Journal of Catholic Thought and Culture Volume 14 ; 14 >
-    au < released ; 2012 ; Logos: A Journal of Catholic Thought and Culture Volume 15 ; 15 >
-    au < released ; 2013 ; Logos: A Journal of Catholic Thought and Culture Volume 16 ; 16 >
-    au < manifest ; 2014 ; Logos: A Journal of Catholic Thought and Culture Volume 17 ; 17 >
-    au < manifest ; 2015 ; Logos: A Journal of Catholic Thought and Culture Volume 18 ; 18 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2000 ; Logos: A Journal of Catholic Thought and Culture Volume 3 ; 3 >
+      au < released ; 2001 ; Logos: A Journal of Catholic Thought and Culture Volume 4 ; 4 >
+      au < released ; 2002 ; Logos: A Journal of Catholic Thought and Culture Volume 5 ; 5 >
+      au < released ; 2003 ; Logos: A Journal of Catholic Thought and Culture Volume 6 ; 6 >
+      au < released ; 2004 ; Logos: A Journal of Catholic Thought and Culture Volume 7 ; 7 >
+      au < released ; 2005 ; Logos: A Journal of Catholic Thought and Culture Volume 8 ; 8 >
+      au < released ; 2006 ; Logos: A Journal of Catholic Thought and Culture Volume 9 ; 9 >
+      au < released ; 2007 ; Logos: A Journal of Catholic Thought and Culture Volume 10 ; 10 >
+      au < released ; 2008 ; Logos: A Journal of Catholic Thought and Culture Volume 11 ; 11 >
+      au < released ; 2009 ; Logos: A Journal of Catholic Thought and Culture Volume 12 ; 12 >
+      au < released ; 2010 ; Logos: A Journal of Catholic Thought and Culture Volume 13 ; 13 >
+      au < released ; 2011 ; Logos: A Journal of Catholic Thought and Culture Volume 14 ; 14 >
+      au < released ; 2012 ; Logos: A Journal of Catholic Thought and Culture Volume 15 ; 15 >
+      au < released ; 2013 ; Logos: A Journal of Catholic Thought and Culture Volume 16 ; 16 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Logos: A Journal of Catholic Thought and Culture Volume 17 ; 17 >
+      au < manifest ; 2015 ; Logos: A Journal of Catholic Thought and Culture Volume 18 ; 18 >
+
+    }
+
     
   }
 

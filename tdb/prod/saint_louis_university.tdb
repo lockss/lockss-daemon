@@ -5,7 +5,6 @@
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
 
-  param[base_url] = http://muse.jhu.edu/
   param[journal_dir] = african_american_review
   attr[journal_id] = afa
 
@@ -17,12 +16,26 @@
       issnl = 1062-4783
     >
 
-    au < released ; 2009 ; African American Review Volume 43 ; 43 >
-    au < released ; 2011 ; African American Review Volume 44 ; 44 >
-    au < released ; 2012 ; African American Review Volume 45 ; 45 >
-    au < released ; 2013 ; African American Review Volume 46 ; 46 >
-    au < manifest ; 2014 ; African American Review Volume 47 ; 47 >
-    au < manifest ; 2015 ; African American Review Volume 48 ; 48 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2009 ; African American Review Volume 43 ; 43 >
+      au < released ; 2011 ; African American Review Volume 44 ; 44 >
+      au < released ; 2012 ; African American Review Volume 45 ; 45 >
+      au < released ; 2013 ; African American Review Volume 46 ; 46 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; African American Review Volume 47 ; 47 >
+      au < manifest ; 2015 ; African American Review Volume 48 ; 48 >
+
+    }
+
 
   }
 

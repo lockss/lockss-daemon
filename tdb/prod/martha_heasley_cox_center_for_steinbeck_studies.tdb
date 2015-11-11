@@ -6,7 +6,6 @@
   implicit < status ; year ; name ; param[volume] >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -19,8 +18,15 @@
     param[journal_dir] = steinbeck_studies
     attr[journal_id] = stn
 
-    au < released ; 2004 ; Steinbeck Studies Volume 15 ; 15 >
-    au < released ; 2005 ; Steinbeck Studies Volume 16 ; 16 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2004 ; Steinbeck Studies Volume 15 ; 15 >
+      au < released ; 2005 ; Steinbeck Studies Volume 16 ; 16 >
+
+    }
+
  
   }
 
@@ -36,11 +42,25 @@
     attr[journal_id] = str
     comment[0] = no issue from volume 5 to 9
 
-    au < released ; 2006 ; Steinbeck Review Volume 3 ; 3 >
-    au < released ; 2007 ; Steinbeck Review Volume 4 ; 4 >
-    au < manifest ; 2013 ; Steinbeck Review Volume 10 ; 10 >
-    au < manifest ; 2014 ; Steinbeck Review Volume 11 ; 11 >
-    au < manifest ; 2015 ; Steinbeck Review Volume 12 ; 12 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2006 ; Steinbeck Review Volume 3 ; 3 >
+      au < released ; 2007 ; Steinbeck Review Volume 4 ; 4 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2013 ; Steinbeck Review Volume 10 ; 10 >
+      au < manifest ; 2014 ; Steinbeck Review Volume 11 ; 11 >
+      au < manifest ; 2015 ; Steinbeck Review Volume 12 ; 12 >
+
+    }
+
 
   }
 

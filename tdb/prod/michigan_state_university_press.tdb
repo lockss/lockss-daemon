@@ -5,7 +5,6 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] ; volume >
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -18,21 +17,35 @@
     param[journal_dir] = new_centennial_review
     attr[journal_id] = ncr
 
-    au < released ; 2001 ; CR: The New Centennial Review Volume 1 ; 1 ; 1 >
-    au < released ; 2002 ; CR: The New Centennial Review Volume 2 ; 2 ; 2 >
-    au < released ; 2003 ; CR: The New Centennial Review Volume 3 ; 3 ; 3 >
-    au < released ; 2004 ; CR: The New Centennial Review Volume 4 ; 4 ; 4 >
-    au < released ; 2005 ; CR: The New Centennial Review Volume 5 ; 5 ; 5 >
-    au < released ; 2006 ; CR: The New Centennial Review Volume 6 ; 6 ; 6 >
-    au < released ; 2007 ; CR: The New Centennial Review Volume 7 ; 7 ; 7 >
-    au < released ; 2008 ; CR: The New Centennial Review Volume 8 ; 8 ; 8 >
-    au < released ; 2009 ; CR: The New Centennial Review Volume 9 ; 9 ; 9 >
-    au < released ; 2010 ; CR: The New Centennial Review Volume 10 ; 10 ; 10 >
-    au < released ; 2011 ; CR: The New Centennial Review Volume 11 ; 11 ; 11 >
-    au < released ; 2012 ; CR: The New Centennial Review Volume 12 ; 12 ; 12 >
-    au < released ; 2013 ; CR: The New Centennial Review Volume 13 ; 13 ; 13 >
-    au < manifest ; 2014 ; CR: The New Centennial Review Volume 14 ; 14 ; 14 >
-    au < manifest ; 2015 ; CR: The New Centennial Review Volume 15 ; 15 ; 15 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2001 ; CR: The New Centennial Review Volume 1 ; 1 ; 1 >
+      au < released ; 2002 ; CR: The New Centennial Review Volume 2 ; 2 ; 2 >
+      au < released ; 2003 ; CR: The New Centennial Review Volume 3 ; 3 ; 3 >
+      au < released ; 2004 ; CR: The New Centennial Review Volume 4 ; 4 ; 4 >
+      au < released ; 2005 ; CR: The New Centennial Review Volume 5 ; 5 ; 5 >
+      au < released ; 2006 ; CR: The New Centennial Review Volume 6 ; 6 ; 6 >
+      au < released ; 2007 ; CR: The New Centennial Review Volume 7 ; 7 ; 7 >
+      au < released ; 2008 ; CR: The New Centennial Review Volume 8 ; 8 ; 8 >
+      au < released ; 2009 ; CR: The New Centennial Review Volume 9 ; 9 ; 9 >
+      au < released ; 2010 ; CR: The New Centennial Review Volume 10 ; 10 ; 10 >
+      au < released ; 2011 ; CR: The New Centennial Review Volume 11 ; 11 ; 11 >
+      au < released ; 2012 ; CR: The New Centennial Review Volume 12 ; 12 ; 12 >
+      au < released ; 2013 ; CR: The New Centennial Review Volume 13 ; 13 ; 13 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; CR: The New Centennial Review Volume 14 ; 14 ; 14 >
+      au < manifest ; 2015 ; CR: The New Centennial Review Volume 15 ; 15 ; 15 >
+
+    }
+
 
   }
 
@@ -47,26 +60,47 @@
     param[journal_dir] = contagion
     attr[journal_id] = ctn
 
-    au < exists ; 1994 ; Contaigon: Journal of Violence, Mimesis, and Culture Volume 1 ; 1 ; 1 >
-    au < exists ; 1995 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 2 ; 2 ; 2 >
-    au < exists ; 1996 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 3 ; 3 ; 3 >
-    au < exists ; 1997 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 4 ; 4 ; 4 >
-    au < exists ; 1998 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 5 ; 5 ; 5 >
-    au < exists ; 1999 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 6 ; 6 ; 6 >
-    au < exists ; 2000 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 7 ; 7 ; 7 >
-    au < exists ; 2001 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 8 ; 8 ; 8 >
-    au < exists ; 2002 ; Contaigon: Journal of Violence, Mimesis, and Culture Volume 9 ; 9 ; 9 >
-    au < exists ; 2003 ; Contaigon: Journal of Violence, Mimesis, and Culture Volume 10 ; 10 ; 10 >
-    au < exists ; 2004 ; Contaigon: Journal of Violence, Mimesis, and Culture Volume 11 ; 11 ; 11 >
-    au < released ; 2005-2006 ; Contagion: Journal of Violence, Mimesis, and Culture Issue 12-13 ; 12 ; 12-13 >
-    au < released ; 2007 ; Contagion: Journal of Violence, Mimesis, and Culture Issue 14 ; 14 ; 14 >
-    au < released ; 2008-2009 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 15/16 ; 15 ; 15 >
-    au < released ; 2010 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 17 ; 17 ; 17 >
-    au < released ; 2011 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 18 ; 18 ; 18 >
-    au < released ; 2012 ; Contaigon: Journal of Violence, Mimesis, and Culture Volume 19 ; 19 ; 19 >
-    au < released ; 2013 ; Contaigon: Journal of Violence, Mimesis, and Culture Volume 20 ; 20 ; 20 >
-    au < manifest ; 2014 ; Contaigon: Journal of Violence, Mimesis, and Culture Volume 21 ; 21 ; 21 >
-    au < manifest ; 2015 ; Contaigon: Journal of Violence, Mimesis, and Culture Volume 22 ; 22 ; 22 >
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 1994 ; Contaigon: Journal of Violence, Mimesis, and Culture Volume 1 ; 1 ; 1 >
+      au < exists ; 1995 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 2 ; 2 ; 2 >
+      au < exists ; 1996 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 3 ; 3 ; 3 >
+      au < exists ; 1997 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 4 ; 4 ; 4 >
+      au < exists ; 1998 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 5 ; 5 ; 5 >
+      au < exists ; 1999 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 6 ; 6 ; 6 >
+      au < exists ; 2000 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 7 ; 7 ; 7 >
+      au < exists ; 2001 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 8 ; 8 ; 8 >
+      au < exists ; 2002 ; Contaigon: Journal of Violence, Mimesis, and Culture Volume 9 ; 9 ; 9 >
+      au < exists ; 2003 ; Contaigon: Journal of Violence, Mimesis, and Culture Volume 10 ; 10 ; 10 >
+      au < exists ; 2004 ; Contaigon: Journal of Violence, Mimesis, and Culture Volume 11 ; 11 ; 11 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2005-2006 ; Contagion: Journal of Violence, Mimesis, and Culture Issue 12-13 ; 12 ; 12-13 >
+      au < released ; 2007 ; Contagion: Journal of Violence, Mimesis, and Culture Issue 14 ; 14 ; 14 >
+      au < released ; 2008-2009 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 15/16 ; 15 ; 15 >
+      au < released ; 2010 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 17 ; 17 ; 17 >
+      au < released ; 2011 ; Contagion: Journal of Violence, Mimesis, and Culture Volume 18 ; 18 ; 18 >
+      au < released ; 2012 ; Contaigon: Journal of Violence, Mimesis, and Culture Volume 19 ; 19 ; 19 >
+      au < released ; 2013 ; Contaigon: Journal of Violence, Mimesis, and Culture Volume 20 ; 20 ; 20 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Contaigon: Journal of Violence, Mimesis, and Culture Volume 21 ; 21 ; 21 >
+      au < manifest ; 2015 ; Contaigon: Journal of Violence, Mimesis, and Culture Volume 22 ; 22 ; 22 >
+
+    }
+
 
   }
 
@@ -81,23 +115,37 @@
     param[journal_dir] = fourth_genre_explorations_in_nonfiction
     attr[journal_id] = fge
 
-    au < released ; 1999 ; Fourth Genre: Explorations in Nonfiction Volume 1 ; 1 ; 1 >
-    au < released ; 2000 ; Fourth Genre: Explorations in Nonfiction Volume 2 ; 2 ; 2 >
-    au < released ; 2001 ; Fourth Genre: Explorations in Nonfiction Volume 3 ; 3 ; 3 >
-    au < released ; 2002 ; Fourth Genre: Explorations in Nonfiction Volume 4 ; 4 ; 4 >
-    au < released ; 2003 ; Fourth Genre: Explorations in Nonfiction Volume 5 ; 5 ; 5 >
-    au < released ; 2004 ; Fourth Genre: Explorations in Nonfiction Volume 6 ; 6 ; 6 >
-    au < released ; 2005 ; Fourth Genre: Explorations in Nonfiction Volume 7 ; 7 ; 7 >
-    au < released ; 2006 ; Fourth Genre: Explorations in Nonfiction Volume 8 ; 8 ; 8 >
-    au < released ; 2007 ; Fourth Genre: Explorations in Nonfiction Volume 9 ; 9 ; 9 >
-    au < released ; 2008 ; Fourth Genre: Explorations in Nonfiction Volume 10 ; 10 ; 10 >
-    au < released ; 2009 ; Fourth Genre: Explorations in Nonfiction Volume 11 ; 11 ; 11 >
-    au < released ; 2010 ; Fourth Genre: Explorations in Nonfiction Volume 12 ; 12 ; 12 >
-    au < released ; 2011 ; Fourth Genre: Explorations in Nonfiction Volume 13 ; 13 ; 13 >
-    au < released ; 2012 ; Fourth Genre: Explorations in Nonfiction Volume 14 ; 14 ; 14 >
-    au < released ; 2013 ; Fourth Genre: Explorations in Nonfiction Volume 15 ; 15 ; 15 >
-    au < manifest ; 2014 ; Fourth Genre: Explorations in Nonfiction Volume 16 ; 16 ; 16 >
-    au < manifest ; 2015 ; Fourth Genre: Explorations in Nonfiction Volume 17 ; 17 ; 17 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1999 ; Fourth Genre: Explorations in Nonfiction Volume 1 ; 1 ; 1 >
+      au < released ; 2000 ; Fourth Genre: Explorations in Nonfiction Volume 2 ; 2 ; 2 >
+      au < released ; 2001 ; Fourth Genre: Explorations in Nonfiction Volume 3 ; 3 ; 3 >
+      au < released ; 2002 ; Fourth Genre: Explorations in Nonfiction Volume 4 ; 4 ; 4 >
+      au < released ; 2003 ; Fourth Genre: Explorations in Nonfiction Volume 5 ; 5 ; 5 >
+      au < released ; 2004 ; Fourth Genre: Explorations in Nonfiction Volume 6 ; 6 ; 6 >
+      au < released ; 2005 ; Fourth Genre: Explorations in Nonfiction Volume 7 ; 7 ; 7 >
+      au < released ; 2006 ; Fourth Genre: Explorations in Nonfiction Volume 8 ; 8 ; 8 >
+      au < released ; 2007 ; Fourth Genre: Explorations in Nonfiction Volume 9 ; 9 ; 9 >
+      au < released ; 2008 ; Fourth Genre: Explorations in Nonfiction Volume 10 ; 10 ; 10 >
+      au < released ; 2009 ; Fourth Genre: Explorations in Nonfiction Volume 11 ; 11 ; 11 >
+      au < released ; 2010 ; Fourth Genre: Explorations in Nonfiction Volume 12 ; 12 ; 12 >
+      au < released ; 2011 ; Fourth Genre: Explorations in Nonfiction Volume 13 ; 13 ; 13 >
+      au < released ; 2012 ; Fourth Genre: Explorations in Nonfiction Volume 14 ; 14 ; 14 >
+      au < released ; 2013 ; Fourth Genre: Explorations in Nonfiction Volume 15 ; 15 ; 15 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Fourth Genre: Explorations in Nonfiction Volume 16 ; 16 ; 16 >
+      au < manifest ; 2015 ; Fourth Genre: Explorations in Nonfiction Volume 17 ; 17 ; 17 >
+
+    }
+
 
   }
 
@@ -112,19 +160,33 @@
     param[journal_dir] = french_colonial_history
     attr[journal_id] = fch
 
-    au < released ; 2002 ; French Colonial History Volume 3 ; 3 ; 3 >
-    au < released ; 2003 ; French Colonial History Volume 4 ; 4 ; 4 >
-    au < released ; 2004 ; French Colonial History Volume 5 ; 5 ; 5 >
-    au < released ; 2005 ; French Colonial History Volume 6 ; 6 ; 6 >
-    au < released ; 2006 ; French Colonial History Volume 7 ; 7 ; 7 >
-    au < released ; 2007 ; French Colonial History Volume 8 ; 8 ; 8 >
-    au < released ; 2008 ; French Colonial History Volume 9 ; 9 ; 9 >
-    au < released ; 2009 ; French Colonial History Volume 10 ; 10 ; 10 >
-    au < released ; 2010 ; French Colonial History Volume 11 ; 11 ; 11 >
-    au < released ; 2011 ; French Colonial History Volume 12 ; 12 ; 12 >
-    au < released ; 2012 ; French Colonial History Volume 13 ; 13 ; 13 >
-    au < released ; 2013 ; French Colonial History Volume 14 ; 14 ; 14 >
-    au < manifest ; 2014 ; French Colonial History Volume 15 ; 15 ; 15 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2002 ; French Colonial History Volume 3 ; 3 ; 3 >
+      au < released ; 2003 ; French Colonial History Volume 4 ; 4 ; 4 >
+      au < released ; 2004 ; French Colonial History Volume 5 ; 5 ; 5 >
+      au < released ; 2005 ; French Colonial History Volume 6 ; 6 ; 6 >
+      au < released ; 2006 ; French Colonial History Volume 7 ; 7 ; 7 >
+      au < released ; 2007 ; French Colonial History Volume 8 ; 8 ; 8 >
+      au < released ; 2008 ; French Colonial History Volume 9 ; 9 ; 9 >
+      au < released ; 2009 ; French Colonial History Volume 10 ; 10 ; 10 >
+      au < released ; 2010 ; French Colonial History Volume 11 ; 11 ; 11 >
+      au < released ; 2011 ; French Colonial History Volume 12 ; 12 ; 12 >
+      au < released ; 2012 ; French Colonial History Volume 13 ; 13 ; 13 >
+      au < released ; 2013 ; French Colonial History Volume 14 ; 14 ; 14 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; French Colonial History Volume 15 ; 15 ; 15 >
+
+    }
+
 
   }
 
@@ -152,15 +214,29 @@
     param[journal_dir] = journal_for_the_study_of_radicalism
     attr[journal_id] = jsr
 
-    au < released ; 2007-2008 ; Journal for the Study of Radicalism Volume 1 ; 1 ; 1 >
-    au < released ; 2008-2009 ; Journal for the Study of Radicalism Volume 2 ; 2 ; 2 >
-    au < released ; 2009-2010 ; Journal for the Study of Radicalism Volume 3 ; 3 ; 3 >
-    au < released ; 2010-2011 ; Journal for the Study of Radicalism Volume 4 ; 4 ; 4 >
-    au < released ; 2011-2012 ; Journal for the Study of Radicalism Volume 5 ; 5 ; 5 >
-    au < released ; 2012 ; Journal for the Study of Radicalism Volume 6 ; 6 ; 6 >
-    au < released ; 2013 ; Journal for the Study of Radicalism Volume 7 ; 7 ; 7 >
-    au < manifest ; 2014 ; Journal for the Study of Radicalism Volume 8 ; 8 ; 8 >
-    au < manifest ; 2015 ; Journal for the Study of Radicalism Volume 9 ; 9 ; 9 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2007-2008 ; Journal for the Study of Radicalism Volume 1 ; 1 ; 1 >
+      au < released ; 2008-2009 ; Journal for the Study of Radicalism Volume 2 ; 2 ; 2 >
+      au < released ; 2009-2010 ; Journal for the Study of Radicalism Volume 3 ; 3 ; 3 >
+      au < released ; 2010-2011 ; Journal for the Study of Radicalism Volume 4 ; 4 ; 4 >
+      au < released ; 2011-2012 ; Journal for the Study of Radicalism Volume 5 ; 5 ; 5 >
+      au < released ; 2012 ; Journal for the Study of Radicalism Volume 6 ; 6 ; 6 >
+      au < released ; 2013 ; Journal for the Study of Radicalism Volume 7 ; 7 ; 7 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Journal for the Study of Radicalism Volume 8 ; 8 ; 8 >
+      au < manifest ; 2015 ; Journal for the Study of Radicalism Volume 9 ; 9 ; 9 >
+
+    }
+
 
   }
 
@@ -175,16 +251,30 @@
     param[journal_dir] = northeast_african_studies
     attr[journal_id] = nas
 
-    au < released ; 1999 ; Northeast African Studies Volume 6 ; 6 ; 6 >
-    au < released ; 2000 ; Northeast African Studies Volume 7 ; 7 ; 7 >
-    au < released ; 2001 ; Northeast African Studies Volume 8 ; 8 ; 8 >
-    au < released ; 2002 ; Northeast African Studies Volume 9 ; 9 ; 9 >
-    au < released ; 2003 ; Northeast African Studies Volume 10 ; 10 ; 10 >
-    au < released ; 2004-2011 ; Northeast African Studies Volume 11 ; 11 ; 11 >
-    au < released ; 2012 ; Northeast African Studies Volume 12 ; 12 ; 12 >
-    au < released ; 2013 ; Northeast African Studies Volume 13 ; 13 ; 13 >
-    au < manifest ; 2014 ; Northeast African Studies Volume 14 ; 14 ; 14 >
-    au < manifest ; 2015 ; Northeast African Studies Volume 15 ; 15 ; 15 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1999 ; Northeast African Studies Volume 6 ; 6 ; 6 >
+      au < released ; 2000 ; Northeast African Studies Volume 7 ; 7 ; 7 >
+      au < released ; 2001 ; Northeast African Studies Volume 8 ; 8 ; 8 >
+      au < released ; 2002 ; Northeast African Studies Volume 9 ; 9 ; 9 >
+      au < released ; 2003 ; Northeast African Studies Volume 10 ; 10 ; 10 >
+      au < released ; 2004-2011 ; Northeast African Studies Volume 11 ; 11 ; 11 >
+      au < released ; 2012 ; Northeast African Studies Volume 12 ; 12 ; 12 >
+      au < released ; 2013 ; Northeast African Studies Volume 13 ; 13 ; 13 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Northeast African Studies Volume 14 ; 14 ; 14 >
+      au < manifest ; 2015 ; Northeast African Studies Volume 15 ; 15 ; 15 >
+
+    }
+
 
   }
 
@@ -199,14 +289,21 @@
     param[journal_dir] = red_cedar_review
     attr[journal_id] = rcr
 
-    au < released ; 2005 ; Red Cedar Review Volume 40 ; 40 ; 40 >
-    au < released ; 2006 ; Red Cedar Review Volume 41 ; 41 ; 41 >
-    au < released ; 2007 ; Red Cedar Review Volume 42 ; 42 ; 42 >
-    au < released ; 2008 ; Red Cedar Review Volume 43 ; 43 ; 43 >
-    au < released ; 2009 ; Red Cedar Review Volume 44 ; 44 ; 44 >
-    au < released ; 2010 ; Red Cedar Review Volume 45 ; 45 ; 45 >
-    au < released ; 2011 ; Red Cedar Review Volume 46 ; 46 ; 46 >
-    au < released ; 2012 ; Red Cedar Review Volume 47 ; 47 ; 47 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2005 ; Red Cedar Review Volume 40 ; 40 ; 40 >
+      au < released ; 2006 ; Red Cedar Review Volume 41 ; 41 ; 41 >
+      au < released ; 2007 ; Red Cedar Review Volume 42 ; 42 ; 42 >
+      au < released ; 2008 ; Red Cedar Review Volume 43 ; 43 ; 43 >
+      au < released ; 2009 ; Red Cedar Review Volume 44 ; 44 ; 44 >
+      au < released ; 2010 ; Red Cedar Review Volume 45 ; 45 ; 45 >
+      au < released ; 2011 ; Red Cedar Review Volume 46 ; 46 ; 46 >
+      au < released ; 2012 ; Red Cedar Review Volume 47 ; 47 ; 47 >
+
+    }
+
 
 
   }
@@ -222,24 +319,38 @@
     param[journal_dir] = rhetoric_and_public_affairs
     attr[journal_id] = rap
 
-    au < released ; 1998 ; Rhetoric & Public Affairs Volume 1 ; 1 ; 1 >
-    au < released ; 1999 ; Rhetoric & Public Affairs Volume 2 ; 2 ; 2 >
-    au < released ; 2000 ; Rhetoric & Public Affairs Volume 3 ; 3 ; 3 >
-    au < released ; 2001 ; Rhetoric & Public Affairs Volume 4 ; 4 ; 4 >
-    au < released ; 2002 ; Rhetoric & Public Affairs Volume 5 ; 5 ; 5 >
-    au < released ; 2003 ; Rhetoric & Public Affairs Volume 6 ; 6 ; 6 >
-    au < released ; 2004 ; Rhetoric & Public Affairs Volume 7 ; 7 ; 7 >
-    au < released ; 2005 ; Rhetoric & Public Affairs Volume 8 ; 8 ; 8 >
-    au < released ; 2006 ; Rhetoric & Public Affairs Volume 9 ; 9 ; 9 >
-    au < released ; 2007 ; Rhetoric & Public Affairs Volume 10 ; 10 ; 10 >
-    au < released ; 2008 ; Rhetoric & Public Affairs Volume 11 ; 11 ; 11 >
-    au < released ; 2009 ; Rhetoric & Public Affairs Volume 12 ; 12 ; 12 >
-    au < released ; 2010 ; Rhetoric & Public Affairs Volume 13 ; 13 ; 13 >
-    au < released ; 2011 ; Rhetoric & Public Affairs Volume 14 ; 14 ; 14 >
-    au < released ; 2012 ; Rhetoric & Public Affairs Volume 15 ; 15 ; 15 >
-    au < released ; 2013 ; Rhetoric & Public Affairs Volume 16 ; 16 ; 16 >
-    au < manifest ; 2014 ; Rhetoric & Public Affairs Volume 17 ; 17 ; 17 >
-    au < manifest ; 2015 ; Rhetoric & Public Affairs Volume 18 ; 18 ; 18 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1998 ; Rhetoric & Public Affairs Volume 1 ; 1 ; 1 >
+      au < released ; 1999 ; Rhetoric & Public Affairs Volume 2 ; 2 ; 2 >
+      au < released ; 2000 ; Rhetoric & Public Affairs Volume 3 ; 3 ; 3 >
+      au < released ; 2001 ; Rhetoric & Public Affairs Volume 4 ; 4 ; 4 >
+      au < released ; 2002 ; Rhetoric & Public Affairs Volume 5 ; 5 ; 5 >
+      au < released ; 2003 ; Rhetoric & Public Affairs Volume 6 ; 6 ; 6 >
+      au < released ; 2004 ; Rhetoric & Public Affairs Volume 7 ; 7 ; 7 >
+      au < released ; 2005 ; Rhetoric & Public Affairs Volume 8 ; 8 ; 8 >
+      au < released ; 2006 ; Rhetoric & Public Affairs Volume 9 ; 9 ; 9 >
+      au < released ; 2007 ; Rhetoric & Public Affairs Volume 10 ; 10 ; 10 >
+      au < released ; 2008 ; Rhetoric & Public Affairs Volume 11 ; 11 ; 11 >
+      au < released ; 2009 ; Rhetoric & Public Affairs Volume 12 ; 12 ; 12 >
+      au < released ; 2010 ; Rhetoric & Public Affairs Volume 13 ; 13 ; 13 >
+      au < released ; 2011 ; Rhetoric & Public Affairs Volume 14 ; 14 ; 14 >
+      au < released ; 2012 ; Rhetoric & Public Affairs Volume 15 ; 15 ; 15 >
+      au < released ; 2013 ; Rhetoric & Public Affairs Volume 16 ; 16 ; 16 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Rhetoric & Public Affairs Volume 17 ; 17 ; 17 >
+      au < manifest ; 2015 ; Rhetoric & Public Affairs Volume 18 ; 18 ; 18 >
+
+    }
+
 
   }
 

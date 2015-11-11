@@ -5,7 +5,6 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
   implicit < status ; year ; name ; param[volume] >
 
   {
@@ -22,28 +21,49 @@
     
     comment[notReady] = volume 71 has XX on pdf. To be fixed in daemon 1.67.
 
-    au < manifest ; 1990 ; Franciscan Studies Volume 50 ; 50 >
-    au < manifest ; 1991 ; Franciscan Studies Volume 51 ; 51 >
-    au < manifest ; 1992 ; Franciscan Studies Volume 52 ; 52 >
-    au < manifest ; 1993 ; Franciscan Studies Volume 53 ; 53 >
-    au < manifest ; 1994-1997 ; Franciscan Studies Volume 54 ; 54 >
-    au < manifest ; 1998 ; Franciscan Studies Volume 55 ; 55 >
-    au < manifest ; 1998 ; Franciscan Studies Volume 56 ; 56 >
-    au < manifest ; 1999 ; Franciscan Studies Volume 57 ; 57 >
-    au < manifest ; 2000 ; Franciscan Studies Volume 58 ; 58 >
-    au < manifest ; 2001 ; Franciscan Studies Volume 59 ; 59 >
-    au < manifest ; 2002 ; Franciscan Studies Volume 60 ; 60 >
-    au < manifest ; 2003 ; Franciscan Studies Volume 61 ; 61 >
-    au < released ; 2004 ; Franciscan Studies Volume 62 ; 62 >
-    au < released ; 2005 ; Franciscan Studies Volume 63 ; 63 >
-    au < released ; 2006 ; Franciscan Studies Volume 64 ; 64 >
-    au < released ; 2007 ; Franciscan Studies Volume 65 ; 65 >
-    au < released ; 2008 ; Franciscan Studies Volume 66 ; 66 >
-    au < released ; 2009 ; Franciscan Studies Volume 67 ; 67 >
-    au < released ; 2010 ; Franciscan Studies Volume 68 ; 68 >
-    au < released ; 2011 ; Franciscan Studies Volume 69 ; 69 >
-    au < released ; 2012 ; Franciscan Studies Volume 70 ; 70 >
-    au < notReady ; 2013 ; Franciscan Studies Volume 71 ; 71 >
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 1990 ; Franciscan Studies Volume 50 ; 50 >
+      au < manifest ; 1991 ; Franciscan Studies Volume 51 ; 51 >
+      au < manifest ; 1992 ; Franciscan Studies Volume 52 ; 52 >
+      au < manifest ; 1993 ; Franciscan Studies Volume 53 ; 53 >
+      au < manifest ; 1994-1997 ; Franciscan Studies Volume 54 ; 54 >
+      au < manifest ; 1998 ; Franciscan Studies Volume 55 ; 55 >
+      au < manifest ; 1998 ; Franciscan Studies Volume 56 ; 56 >
+      au < manifest ; 1999 ; Franciscan Studies Volume 57 ; 57 >
+      au < manifest ; 2000 ; Franciscan Studies Volume 58 ; 58 >
+      au < manifest ; 2001 ; Franciscan Studies Volume 59 ; 59 >
+      au < manifest ; 2002 ; Franciscan Studies Volume 60 ; 60 >
+      au < manifest ; 2003 ; Franciscan Studies Volume 61 ; 61 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2004 ; Franciscan Studies Volume 62 ; 62 >
+      au < released ; 2005 ; Franciscan Studies Volume 63 ; 63 >
+      au < released ; 2006 ; Franciscan Studies Volume 64 ; 64 >
+      au < released ; 2007 ; Franciscan Studies Volume 65 ; 65 >
+      au < released ; 2008 ; Franciscan Studies Volume 66 ; 66 >
+      au < released ; 2009 ; Franciscan Studies Volume 67 ; 67 >
+      au < released ; 2010 ; Franciscan Studies Volume 68 ; 68 >
+      au < released ; 2011 ; Franciscan Studies Volume 69 ; 69 >
+      au < released ; 2012 ; Franciscan Studies Volume 70 ; 70 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < notReady ; 2013 ; Franciscan Studies Volume 71 ; 71 >
+
+    }
+
 
   }
 

@@ -5,7 +5,6 @@
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
 
-  param[base_url] = http://muse.jhu.edu/
   param[journal_dir] = dublin_james_joyce_journal
   attr[journal_id] = djj
 
@@ -17,12 +16,26 @@
       issnl = 2009-1850
     >
 
-    au < released ; 2008 ; Dublin James Joyce Journal Volume 1 ; 1 >
-    au < released ; 2009 ; Dublin James Joyce Journal Volume 2 ; 2 >
-    au < released ; 2010 ; Dublin James Joyce Journal Volume 3 ; 3 >
-    au < released ; 2011 ; Dublin James Joyce Journal Volume 4 ; 4 >
-    au < released ; 2012 ; Dublin James Joyce Journal Volume 5 ; 5 >
-    au < exists ; 2013-2014 ; Dublin James Joyce Journal Volume 6-7 ; 6-7 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2008 ; Dublin James Joyce Journal Volume 1 ; 1 >
+      au < released ; 2009 ; Dublin James Joyce Journal Volume 2 ; 2 >
+      au < released ; 2010 ; Dublin James Joyce Journal Volume 3 ; 3 >
+      au < released ; 2011 ; Dublin James Joyce Journal Volume 4 ; 4 >
+      au < released ; 2012 ; Dublin James Joyce Journal Volume 5 ; 5 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 2013-2014 ; Dublin James Joyce Journal Volume 6-7 ; 6-7 >
+
+    }
+
 
   }
 
