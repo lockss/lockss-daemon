@@ -29,6 +29,24 @@
     {
 
       title <
+        name = Agriculture & Food Security ;
+        eissn = 2048-7010 
+      >
+
+      param[base_url] = http://agricultureandfoodsecurity.biomedcentral.com/
+      param[journal_issn] = 2048-7010
+      #journal_id = agricultureandfoodsecurity
+
+      au < doNotProcess ; 2012 ; Agriculture & Food Security Volume 1 ; 1 >
+      au < exists ; 2013 ; Agriculture & Food Security Volume 2 ; 2 >
+      au < doNotProcess ; 2014 ; Agriculture & Food Security Volume 3 ; 3 >
+      au < exists ; 2015 ; Agriculture & Food Security Volume 4 ; 4 >
+
+    }
+
+    {
+
+      title <
         name = Annals of Occupational and Environmental Medicine ;
         eissn = 2052-4374
       >
@@ -120,6 +138,21 @@
     }
 
     {
+      title <
+        name = Biological Research ;
+        eissn = 0717-6287 
+      >
+
+      param[base_url] = http://biolres.biomedcentral.com/
+      param[journal_issn] = 0717-6287
+      #journal_id = biolres
+
+      au < exists ; 2014 ; Biological Research Volume 47 ; 47 >
+      au < exists ; 2015 ; Biological Research Volume 48 ; 48 >
+
+    }
+
+    {
 
       title <
         name = Biomarker Research ;
@@ -164,6 +197,24 @@
 
       au < doNotProcess ; 2014 ; Canine Genetics and Epidemiology Volume 1 ; 1 >
       au < exists ; 2015 ; Canine Genetics and Epidemiology Volume 2 ; 2 >
+
+    }
+
+    {
+      title <
+        name = Cell & Bioscience ;
+        eissn = 2045-3701 
+      >
+
+      param[base_url] = http://cellandbioscience.biomedcentral.com/
+      param[journal_issn] = 2045-3701
+      #jounral_id = cellandbioscience
+
+      au < doNotProcess ; 2011 ; Cell & Bioscience Volume 1 ; 1 >
+      au < doNotProcess ; 2012 ; Cell & Bioscience Volume 2 ; 2 >
+      au < doNotProcess ; 2013 ; Cell & Bioscience Volume 3 ; 3 >
+      au < exists ; 2014 ; Cell & Bioscience Volume 4 ; 4 >
+      au < exists ; 2015 ; Cell & Bioscience Volume 5 ; 5 >
 
     }
 
@@ -238,6 +289,26 @@
     }
 
     {
+      title <
+        name = Clinical Proteomics ;
+        issn = 1542-6416 ;
+        eissn = 1559-0275 
+      >
+
+      param[base_url] = http://clinicalproteomicsjournal.biomedcentral.com/
+      param[journal_issn] = 1542-6416
+      #journal_id = clinicalproteomicsjournal
+
+      au < doNotProcess ; 2010 ; Clinical Proteomics Volume 7 ; 7 >
+      au < exists ; 2011 ; Clinical Proteomics Volume 8 ; 8 >
+      au < doNotProcess ; 2012 ; Clinical Proteomics Volume 9 ; 9 >
+      au < doNotProcess ; 2013 ; Clinical Proteomics Volume 10 ; 10 >
+      au < exists ; 2014 ; Clinical Proteomics Volume 11 ; 11 >
+      au < exists ; 2015 ; Clinical Proteomics Volume 12 ; 12 >
+
+    }
+
+    {
 
       title <
         name = COPD Research and Practice ;
@@ -293,6 +364,25 @@
       au < exists ; 2013 ; Environmental Evidence Volume 2 ; 2 >
       au < exists ; 2014 ; Environmental Evidence Volume 3 ; 3 >
       au < exists ; 2015 ; Environmental Evidence Volume 4 ; 4 >
+
+    }
+
+    {
+      title <
+        name = EvoDevo ;
+        issn = 2041-9139 
+      >
+
+      param[base_url] = http://evodevojournal.biomedcentral.com/
+      param[journal_issn] = 2041-9139
+      #journal_id = evodevojournal
+
+      au < doNotProcess ; 2010 ; EvoDevo Volume 1 ; 1 >
+      au < doNotProcess ; 2011 ; EvoDevo Volume 2 ; 2 >
+      au < doNotProcess ; 2012 ; EvoDevo Volume 3 ; 3 >
+      au < exists ; 2013 ; EvoDevo Volume 4 ; 4 >
+      au < exists ; 2014 ; EvoDevo Volume 5 ; 5 >
+      au < exists ; 2015 ; EvoDevo Volume 6 ; 6 >
 
     }
 
@@ -475,6 +565,22 @@
 
     {
       title <
+        name = Journal of Intensive Care ;
+        issn = 2052-0492 
+      >
+
+      param[base_url] = http://jintensivecare.biomedcentral.com/
+      param[journal_issn] = 2052-0492
+      #journal_id = jintensivecare
+
+      au < exists ; 2013 ; Journal of Intensive Care Volume 1 ; 1 >
+      au < exists ; 2014 ; Journal of Intensive Care Volume 2 ; 2 >
+      au < exists ; 2015 ; Journal of Intensive Care Volume 3 ; 3 >
+
+    }
+
+    {
+      title <
         name = Journal of Molecular Psychiatry ;
         issn = 2049-9256 
       >
@@ -535,6 +641,46 @@
 
     {
       title <
+        name = Molecular Autism ;
+        issn = 2040-2392 
+      >
+
+      param[base_url] = http://molecularautism.biomedcentral.com/
+      param[journal_issn] = 2040-2392
+      #journal_id = molecularautism
+
+      au < exists ; 2010 ; Molecular Autism Volume 1 ; 1 >
+      au < exists ; 2011 ; Molecular Autism Volume 2 ; 2 >
+      au < exists ; 2012 ; Molecular Autism Volume 3 ; 3 >
+      au < exists ; 2013 ; Molecular Autism Volume 4 ; 4 >
+      au < exists ; 2014 ; Molecular Autism Volume 5 ; 5 >
+      au < exists ; 2015 ; Molecular Autism Volume 6 ; 6 >
+
+    }
+
+    {
+      title <
+        name = Molecular Brain ;
+        eissn = 1756-6606 
+      >
+
+      param[base_url] = http://molecularbrain.biomedcentral.com/
+      param[journal_issn] = 1756-6606
+      #journal_id = molecularbrain
+
+      au < doNotProcess ; 2008 ; Molecular Brain Volume 1 ; 1 >
+      au < doNotProcess ; 2009 ; Molecular Brain Volume 2 ; 2 >
+      au < doNotProcess ; 2010 ; Molecular Brain Volume 3 ; 3 >
+      au < doNotProcess ; 2011 ; Molecular Brain Volume 4 ; 4 >
+      au < exists ; 2012 ; Molecular Brain Volume 5 ; 5 >
+      au < exists ; 2013 ; Molecular Brain Volume 6 ; 6 >
+      au < exists ; 2014 ; Molecular Brain Volume 7 ; 7 >
+      au < exists ; 2015 ; Molecular Brain Volume 8 ; 8 >
+
+    }
+
+    {
+      title <
         name = Molecular Cancer ;
         eissn = 1476-4598 
       >
@@ -557,6 +703,29 @@
       au < exists ; 2013 ; Molecular Cancer Volume 12 ; 12 >
       au < exists ; 2014 ; Molecular Cancer Volume 13 ; 13 >
       au < exists ; 2015 ; Molecular Cancer Volume 14 ; 14 >
+
+    }
+
+    {
+      title <
+        name = Neural Development ;
+        eissn = 1749-8104 
+      >
+
+      param[base_url] = http://neuraldevelopment.biomedcentral.com/
+      param[journal_issn] = 1749-8104
+      #journal_id = neuraldevelopment
+
+      au < doNotProcess ; 2006 ; Neural Development Volume 1 ; 1 >
+      au < doNotProcess ; 2007 ; Neural Development Volume 2 ; 2 >
+      au < doNotProcess ; 2008 ; Neural Development Volume 3 ; 3 >
+      au < doNotProcess ; 2009 ; Neural Development Volume 4 ; 4 >
+      au < doNotProcess ; 2010 ; Neural Development Volume 5 ; 5 >
+      au < doNotProcess ; 2011 ; Neural Development Volume 6 ; 6 >
+      au < exists ; 2012 ; Neural Development Volume 7 ; 7 >
+      au < exists ; 2013 ; Neural Development Volume 8 ; 8 >
+      au < exists ; 2014 ; Neural Development Volume 9 ; 9 >
+      au < exists ; 2015 ; Neural Development Volume 10 ; 10 >
 
     }
 
@@ -596,6 +765,24 @@
       au < exists ; 2013 ; Particle and Fibre Toxicology Volume 10 ; 10 >
       au < exists ; 2014 ; Particle and Fibre Toxicology Volume 11 ; 11 >
       au < exists ; 2015 ; Particle and Fibre Toxicology Volume 12 ; 12 >
+
+    }
+
+    {
+
+      title <
+        name = Perioperative Medicine ;
+        issn = 2047-0525 
+      >
+
+      param[base_url] = http://perioperativemedicinejournal.biomedcentral.com/
+      param[journal_issn] = 2047-0525
+      #journal_id = perioperativemedicinejournal
+
+      au < exists ; 2012 ; Perioperative Medicine Volume 1 ; 1 >
+      au < exists ; 2013 ; Perioperative Medicine Volume 2 ; 2 >
+      au < exists ; 2014 ; Perioperative Medicine Volume 3 ; 3 >
+      au < exists ; 2015 ; Perioperative Medicine Volume 4 ; 4 >
 
     }
 
@@ -666,6 +853,26 @@
       #journal_id = tdtmvjournal
 
       au < exists ; 2015 ; Tropical Diseases, Travel Medicine and Vaccines Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
+        name = Vascular Cell ;
+        issn = 2045-824X 
+      >
+
+      param[base_url] = http://vascularcell.biomedcentral.com/
+      param[journal_issn] = 2045-824X
+      #journal_id = vascularcell
+
+      au < exists ; 2009 ; Vascular Cell Volume 1 ; 1 >
+      au < exists ; 2010 ; Vascular Cell Volume 2 ; 2 >
+      au < exists ; 2011 ; Vascular Cell Volume 3 ; 3 >
+      au < exists ; 2012 ; Vascular Cell Volume 4 ; 4 >
+      au < exists ; 2013 ; Vascular Cell Volume 5 ; 5 >
+      au < exists ; 2014 ; Vascular Cell Volume 6 ; 6 >
+      au < exists ; 2015 ; Vascular Cell Volume 7 ; 7 >
 
     }
 

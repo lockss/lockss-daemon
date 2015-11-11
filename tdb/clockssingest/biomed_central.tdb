@@ -15,8 +15,7 @@
     {
       title <
         name = Acta Neuropathologica Communications ;
-        issn = 2051-5960 ;
-        issnl = 2051-5960
+        issn = 2051-5960 
       >
 
       param[base_url] = http://actaneurocomms.biomedcentral.com/
@@ -26,6 +25,24 @@
       au < doNotProcess ; exists ; 2013 ; Acta Neuropathologica Communications Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2014 ; Acta Neuropathologica Communications Volume 2 ; 2 >
       au < exists ; exists ; 2015 ; Acta Neuropathologica Communications Volume 3 ; 3 >
+
+    }
+
+    {
+
+      title <
+        name = Agriculture & Food Security ;
+        eissn = 2048-7010 
+      >
+
+      param[base_url] = http://agricultureandfoodsecurity.biomedcentral.com/
+      param[journal_issn] = 2048-7010
+      #journal_id = agricultureandfoodsecurity
+
+      au < doNotProcess ; finished ; 2012 ; Agriculture & Food Security Volume 1 ; 1 >
+      au < doNotProcess ; exists ; 2013 ; Agriculture & Food Security Volume 2 ; 2 >
+      au < doNotProcess ; crawling ; 2014 ; Agriculture & Food Security Volume 3 ; 3 >
+      au < doNotProcess ; exists ; 2015 ; Agriculture & Food Security Volume 4 ; 4 >
 
     }
 
@@ -49,8 +66,7 @@
     {
       title <
         name = Asia Pacific Family Medicine ;
-        issn = 1447-056X ;
-        issnl = 1447-056X
+        issn = 1447-056X 
       >
 
       param[base_url] = http://apfmj.biomedcentral.com/
@@ -102,8 +118,7 @@
     {
       title <
         name = Behavioral and Brain Functions ;
-        eissn = 1744-9081 ;
-        issnl = 1744-9081
+        eissn = 1744-9081 
       >
 
       param[base_url] = http://behavioralandbrainfunctions.biomedcentral.com/
@@ -125,11 +140,25 @@
     }
 
     {
+      title <
+        name = Biological Research ;
+        eissn = 0717-6287 
+      >
+      
+      param[base_url] = http://biolres.biomedcentral.com/
+      param[journal_issn] = 0717-6287
+      #journal_id = biolres
+
+      au < doNotProcess ; exists ; 2014 ; Biological Research Volume 47 ; 47 >
+      au < doNotProcess ; exists ; 2015 ; Biological Research Volume 48 ; 48 >
+
+    }
+
+    {
 
       title <
         name = Biomarker Research ;
-        issn = 2050-7771 ;
-        issnl = 2050-7771
+        issn = 2050-7771 
       >
 
       param[base_url] = http://biomarkerres.biomedcentral.com/
@@ -161,8 +190,7 @@
     {
       title <
         name = Canine Genetics and Epidemiology ;
-        eissn = 2052-6687 ;
-        issnl = 2052-6687
+        eissn = 2052-6687 
       >
 
       param[base_url] = http://cgejournal.biomedcentral.com/
@@ -176,9 +204,26 @@
 
     {
       title <
+        name = Cell & Bioscience ;
+        eissn = 2045-3701 
+      >
+
+      param[base_url] = http://cellandbioscience.biomedcentral.com/
+      param[journal_issn] = 2045-3701
+      #jounral_id = cellandbioscience
+
+      au < doNotProcess ; exists ; 2011 ; Cell & Bioscience Volume 1 ; 1 >
+      au < doNotProcess ; exists ; 2012 ; Cell & Bioscience Volume 2 ; 2 >
+      au < doNotProcess ; exists ; 2013 ; Cell & Bioscience Volume 3 ; 3 >
+      au < doNotProcess ; exists ; 2014 ; Cell & Bioscience Volume 4 ; 4 >
+      au < doNotProcess ; exists ; 2015 ; Cell & Bioscience Volume 5 ; 5 >
+
+    }
+
+    {
+      title <
         name = Cell Division ;
-        eissn = 1747-1028 ;
-        issnl = 1747-1028
+        eissn = 1747-1028 
       >
 
       param[base_url] = http://celldiv.biomedcentral.com/
@@ -246,6 +291,26 @@
     }
 
     {
+      title <
+        name = Clinical Proteomics ;
+        issn = 1542-6416 ;
+        eissn = 1559-0275 
+      >
+
+      param[base_url] = http://clinicalproteomicsjournal.biomedcentral.com/
+      param[journal_issn] = 1542-6416
+      #journal_id = clinicalproteomicsjournal
+      
+      au < doNotProcess ; exists ; 2010 ; Clinical Proteomics Volume 7 ; 7 >
+      au < doNotProcess ; exists ; 2011 ; Clinical Proteomics Volume 8 ; 8 >
+      au < doNotProcess ; exists ; 2012 ; Clinical Proteomics Volume 9 ; 9 >
+      au < doNotProcess ; exists ; 2013 ; Clinical Proteomics Volume 10 ; 10 >
+      au < doNotProcess ; exists ; 2014 ; Clinical Proteomics Volume 11 ; 11 >
+      au < doNotProcess ; exists ; 2015 ; Clinical Proteomics Volume 12 ; 12 >
+
+    }
+
+    {
 
       title <
         name = COPD Research and Practice ;
@@ -263,8 +328,7 @@
     {
       title <
         name = Cost Effectiveness and Resource Allocation ;
-        eissn = 1478-7547 ;
-        issnl = 1478-7547
+        eissn = 1478-7547 
       >
 
       param[base_url] = http://resource-allocation.biomedcentral.com/
@@ -291,8 +355,7 @@
 
       title < 
         name = Environmental Evidence ;
-        issn = 2047-2382 ;
-        issnl = 2047-2382
+        issn = 2047-2382 
       >
 
       param[base_url] = http://environmentalevidencejournal.biomedcentral.com/
@@ -308,9 +371,28 @@
 
     {
       title <
+        name = EvoDevo ;
+        issn = 2041-9139 ;
+        issnl = 2041-9139
+      >
+      
+      param[base_url] = http://evodevojournal.biomedcentral.com/
+      param[journal_issn] = 2041-9139
+      #journal_id = evodevojournal
+
+      au < doNotProcess ; exists ; 2010 ; EvoDevo Volume 1 ; 1 >
+      au < doNotProcess ; exists ; 2011 ; EvoDevo Volume 2 ; 2 >
+      au < doNotProcess ; exists ; 2012 ; EvoDevo Volume 3 ; 3 >
+      au < doNotProcess ; exists ; 2013 ; EvoDevo Volume 4 ; 4 >
+      au < doNotProcess ; exists ; 2014 ; EvoDevo Volume 5 ; 5 >
+      au < exists ; exists ; 2015 ; EvoDevo Volume 6 ; 6 >
+
+    }
+
+    {
+      title <
         name = Experimental Hematology & Oncology ;
-        issn = 2162-3619 ;
-        issnl = 2162-3619
+        issn = 2162-3619 
       >
       
       param[base_url] = http://ehoonline.biomedcentral.com/
@@ -375,8 +457,7 @@
     {
       title <
         name = Health and Quality of Life Outcomes ;
-        eissn = 1477-7525 ;
-        issnl = 1477-7525
+        eissn = 1477-7525 
       >
 
       param[base_url] = http://hqlo.biomedcentral.com/
@@ -402,8 +483,7 @@
     {
       title <
         name = Journal of Animal Science and Biotechnology ;
-        issn = 2049-1891 ;
-        issnl = 2049-1891
+        issn = 2049-1891 
       >
 
       param[base_url] = http://jasbsci.biomedcentral.com/
@@ -421,8 +501,7 @@
       title <
         name = Journal of Animal Science and Technology ;
         issn = 1598-9429 ;
-        eissn = 2055-0391 ;
-        issnl = 2055-0391
+        eissn = 2055-0391 
       >
 
       param[base_url] = http://janimscitechnol.biomedcentral.com/
@@ -469,8 +548,7 @@
     {
       title <
         name = Journal of Experimental & Clinical Cancer Research ;
-        issn = 1756-9966 ;
-        issnl = 1756-9966
+        issn = 1756-9966 
       >
 
       param[base_url] = http://jeccr.biomedcentral.com/
@@ -490,9 +568,24 @@
 
     {
       title <
+        name = Journal of Intensive Care ;
+        issn = 2052-0492 
+      >
+
+      param[base_url] = http://jintensivecare.biomedcentral.com/
+      param[journal_issn] = 2052-0492
+      #journal_id = jintensivecare
+
+      au < doNotProcess ; exists ; 2013 ; Journal of Intensive Care Volume 1 ; 1 >
+      au < doNotProcess ; exists ; 2014 ; Journal of Intensive Care Volume 2 ; 2 >
+      au < doNotProcess ; exists ; 2015 ; Journal of Intensive Care Volume 3 ; 3 >
+      
+    }
+
+    {
+      title <
         name = Journal of Molecular Psychiatry ;
-        issn = 2049-9256 ;
-        issnl = 2049-9256
+        issn = 2049-9256 
       >
 
       param[base_url] = http://jmolecularpsychiatry.biomedcentral.com/
@@ -508,8 +601,7 @@
     {
       title <
         name = Journal of Orthopaedic Surgery and Research ;
-        eissn = 1749-799X ;
-        issnl = 1749-799X
+        eissn = 1749-799X 
       >
 
       param[base_url] = http://josr-online.biomedcentral.com/
@@ -532,8 +624,7 @@
     {
       title <
         name = Journal of Ovarian Research ;
-        issn = 1757-2215 ;
-        issnl = 1757-2215
+        issn = 1757-2215 
       >
 
       param[base_url] = http://ovarianresearch.biomedcentral.com/
@@ -553,9 +644,48 @@
 
     {
       title <
+        name = Molecular Autism ;
+        issn = 2040-2392 
+      >
+
+      param[base_url] = http://molecularautism.biomedcentral.com/
+      param[journal_issn] = 2040-2392
+      #journal_id = molecularautism
+
+      au < doNotProcess ; exists ; 2010 ; Molecular Autism Volume 1 ; 1 >
+      au < doNotProcess ; exists ; 2011 ; Molecular Autism Volume 2 ; 2 >
+      au < doNotProcess ; exists ; 2012 ; Molecular Autism Volume 3 ; 3 >
+      au < doNotProcess ; exists ; 2013 ; Molecular Autism Volume 4 ; 4 >
+      au < doNotProcess ; exists ; 2014 ; Molecular Autism Volume 5 ; 5 >
+      au < doNotProcess ; exists ; 2015 ; Molecular Autism Volume 6 ; 6 >
+
+    }
+
+    {
+      title <
+        name = Molecular Brain ;
+        eissn = 1756-6606 
+      >
+
+      param[base_url] = http://molecularbrain.biomedcentral.com/
+      param[journal_issn] = 1756-6606
+      #journal_id = molecularbrain
+
+      au < doNotProcess ; exists ; 2008 ; Molecular Brain Volume 1 ; 1 >
+      au < doNotProcess ; exists ; 2009 ; Molecular Brain Volume 2 ; 2 >
+      au < doNotProcess ; exists ; 2010 ; Molecular Brain Volume 3 ; 3 >
+      au < doNotProcess ; exists ; 2011 ; Molecular Brain Volume 4 ; 4 >
+      au < doNotProcess ; exists ; 2012 ; Molecular Brain Volume 5 ; 5 >
+      au < doNotProcess ; exists ; 2013 ; Molecular Brain Volume 6 ; 6 >
+      au < doNotProcess ; exists ; 2014 ; Molecular Brain Volume 7 ; 7 >
+      au < doNotProcess ; exists ; 2015 ; Molecular Brain Volume 8 ; 8 >
+
+    }
+
+    {
+      title <
         name = Molecular Cancer ;
-        eissn = 1476-4598 ;
-        issnl = 1476-4598
+        eissn = 1476-4598 
       >
 
       param[base_url] = http://molecular-cancer.biomedcentral.com/
@@ -581,9 +711,31 @@
 
     {
       title <
+        name = Neural Development ;
+        eissn = 1749-8104 
+      >
+
+      param[base_url] = http://neuraldevelopment.biomedcentral.com/
+      param[journal_issn] = 1749-8104
+      #journal_id = neuraldevelopment
+
+      au < exists ; exists ; 2006 ; Neural Development Volume 1 ; 1 >
+      au < exists ; exists ; 2007 ; Neural Development Volume 2 ; 2 >
+      au < doNotProcess ; exists ; 2008 ; Neural Development Volume 3 ; 3 >
+      au < doNotProcess ; exists ; 2009 ; Neural Development Volume 4 ; 4 >
+      au < doNotProcess ; exists ; 2010 ; Neural Development Volume 5 ; 5 >
+      au < doNotProcess ; exists ; 2011 ; Neural Development Volume 6 ; 6 >
+      au < doNotProcess ; exists ; 2012 ; Neural Development Volume 7 ; 7 >
+      au < doNotProcess ; exists ; 2013 ; Neural Development Volume 8 ; 8 >
+      au < doNotProcess ; exists ; 2014 ; Neural Development Volume 9 ; 9 >
+      au < doNotProcess ; exists ; 2015 ; Neural Development Volume 10 ; 10 >
+
+    }
+
+    {
+      title <
         name = Nutrire ;
-        eissn = 2316-7874 ;
-        issnl = 2316-7874
+        eissn = 2316-7874 
       >
 
       param[base_url] = http://nutrirejournal.biomedcentral.com/
@@ -597,8 +749,7 @@
     {
       title <
         name = Particle and Fibre Toxicology ;
-        eissn = 1743-8977 ;
-        issnl = 1743-8977
+        eissn = 1743-8977 
       >
 
       param[base_url] = http://particleandfibretoxicology.biomedcentral.com/
@@ -621,10 +772,27 @@
     }
 
     {
+
+      title <
+        name = Perioperative Medicine ;
+        issn = 2047-0525 
+      >
+
+      param[base_url] = http://perioperativemedicinejournal.biomedcentral.com/
+      param[journal_issn] = 2047-0525
+      #journal_id = perioperativemedicinejournal
+
+      au < doNotProcess ; exists ; 2012 ; Perioperative Medicine Volume 1 ; 1 >
+      au < doNotProcess ; exists ; 2013 ; Perioperative Medicine Volume 2 ; 2 >
+      au < doNotProcess ; exists ; 2014 ; Perioperative Medicine Volume 3 ; 3 >
+      au < exists ; exists ; 2015 ; Perioperative Medicine Volume 4 ; 4 >
+
+    }
+
+    {
       title <
         name = Regenerative Medicine Research ;
-        issn = 2050-490X ;
-        issnl = 2050-490X
+        issn = 2050-490X 
       >
 
       param[base_url] = http://regenmedres.biomedcentral.com/
@@ -656,8 +824,7 @@
     {
       title <
         name = Substance Abuse Treatment, Prevention, and Policy ;
-        eissn = 1747-597X ;
-        issnl = 1747-597X
+        eissn = 1747-597X 
       >
 
       param[base_url] = http://substanceabusepolicy.biomedcentral.com/
@@ -694,9 +861,28 @@
 
     {
       title <
+        name = Vascular Cell ;
+        issn = 2045-824X 
+      >
+      
+      param[base_url] = http://vascularcell.biomedcentral.com/
+      param[journal_issn] = 2045-824X
+      #journal_id = vascularcell
+
+      au < doNotProcess ; exists ; 2009 ; Vascular Cell Volume 1 ; 1 >
+      au < doNotProcess ; exists ; 2010 ; Vascular Cell Volume 2 ; 2 >
+      au < doNotProcess ; exists ; 2011 ; Vascular Cell Volume 3 ; 3 >
+      au < doNotProcess ; exists ; 2012 ; Vascular Cell Volume 4 ; 4 >
+      au < doNotProcess ; exists ; 2013 ; Vascular Cell Volume 5 ; 5 >
+      au < doNotProcess ; exists ; 2014 ; Vascular Cell Volume 6 ; 6 >
+      au < exists ; exists ; 2015 ; Vascular Cell Volume 7 ; 7 >
+
+    }
+
+    {
+      title <
         name = World Journal of Surgical Oncology ;
-        eissn = 1477-7819 ;
-        issnl = 1477-7819
+        eissn = 1477-7819 
       >
 
       param[base_url] = http://wjso.biomedcentral.com/
