@@ -4,7 +4,6 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMuseBooksPlugin
-  param[base_url] = http://muse.jhu.edu/
   implicit < status ; year ; isbn ; eisbn ; name ; param[eisbn] >
   
   comment[9781587294488] = hash errors for pdfs like http://muse.jhu.edu/books/9781587294488/9781587294488-1.pdf
@@ -12,10 +11,14 @@
   
   {
 
-      title <
-        name = Classics Archival Foundation Collection ;
-        type = bookSeries
-      >
+    title <
+      name = Classics Archival Foundation Collection ;
+      type = bookSeries
+    >
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
 
       au < released ; 1988 ; 9780299107642 ; 9780299107635 ; Euripides and the Tragic Tradition ; 9780299107635 >
       au < released ; 1990 ; 9780814321386 ; 9780814336564 ; Caesaris Augusti: Res Gestae et Fragmenta ; 9780814336564 >
@@ -127,14 +130,21 @@
       au < released ; 2012 ; 9781934536445 ; 9781934536551 ; The New Chronology of Iron Age Gordion: The Sanctuary's Imperial Architectural Development, Conflict with Christianity, and Final Days ; 9781934536551 >
       au < released ; 2012 ; 9780812222098 ; 9780812207699 ; The Satires of Horace ; 9780812207699 >
 
+    }
+
+
   }
 
   {
 
-      title <
-        name = Archive Classics Supplement ;
-        type = bookSeries
-      >
+    title <
+      name = Archive Classics Supplement ;
+      type = bookSeries
+    >
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
 
       au < released ; 1987 ;  ; 9780813555331 ; Black Athena: Afroasiatic Roots of Classical Civilization, Volume I: The Fabrication of Ancient Greece, 1785-1985 ; 9780813555331 >
       au < released ; 1998 ; 9780292728080 ; 9780292799110 ; Antiphon and Andocides ; 9780292799110 >
@@ -155,14 +165,21 @@
       au < released ; 2012 ; 9780813210216 ; 9780813220901 ; Christian and Pagan in the Roman Empire ; 9780813220901 >
       au < released ; 2012 ; 9780813214078 ; 9780813216386 ; Rhetoric in Antiquity ; 9780813216386 >
 
+    }
+
+
   }
 
   {
 
-      title <
-        name = History Archival Foundation Collection ;
-        type = bookSeries
-      >
+    title <
+      name = History Archival Foundation Collection ;
+      type = bookSeries
+    >
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
 
       au < released ; 1961 ; 9780299024246 ; 9780299024239 ; The Political Testament of Cardinal Richelieu: The Significant Chapters and Supporting Selections ; 9780299024239 >
       au < released ; 1965 ; 9780299036546 ; 9780299036539 ; The Story of My Boyhood and Youth ; 9780299036539 >
@@ -918,7 +935,21 @@
       au < released ; 2003 ; 9780472089062 ; 9780472024414 ; Lewd and Notorious: Female Transgression in the Eighteenth Century ; 9780472024414 >
       au < released ; 2003 ; 9780801887505 ; 9781421402758 ; Manufacturing Revolution: The Intellectual Origins of Early American Industry ; 9781421402758 >
       au < released ; 2003 ; 9781578066131 ; 9781604730517 ; Mass Media and the Shaping of American Feminism, 1963-1975 ; 9781604730517 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2003 ; 9780877458647 ; 9781587294488 ; Millennial Ecuador: Critical Essays on Cultural Transformations and Social Dynamics ; 9781587294488 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2003 ; 9780871545305 ; 9781610443487 ; Muslims in the United States: The State of Research ; 9781610443487 >
       au < released ; 2003 ;  ; 9780803203327 ; Myth and History in the Creation of Yellowstone National Park ; 9780803203327 >
       au < released ; 2003 ; 9780937058688 ; 9781935978374 ; Naked Before God: Uncovering the Body in Anglo-Saxon England ; 9781935978374 >
@@ -1226,7 +1257,21 @@
       au < released ; 2005 ; 9781578067855 ; 9781617030680 ; Can Anything Beat White?: A Black Family's Letters ; 9781617030680 >
       au < released ; 2005 ; 9780292709287 ; 9780292796904 ; Cañar: A Year in the Highlands of Ecuador ; 9780292796904 >
       au < released ; 2005 ; 9780813536866 ; 9780813537917 ; Cash For Your Trash: Scrap Recycling in America ; 9780813537917 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2005 ;  ; 9781587294235 ; Central Standard: A Time, a Place, a Family ; 9781587294235 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2005 ; 9780889204744 ; 9780889209121 ; Children's Health Issues in Historical Perspective ; 9780889209121 >
       au < released ; 2005 ; 9780791463192 ; 9780791483923 ; Chinese Discourses on the Peasant, 1900-1949 ; 9780791483923 >
       au < released ; 2005 ; 9780820326573 ; 9780820343969 ; Civil War Time: Temporality and Identity in America, 1861-1865 ; 9780820343969 >
@@ -1239,7 +1284,21 @@
       au < released ; 2005 ;  ; 9780803204942 ; Creeks and Southerners: Biculturalism on the Early American Frontier ; 9780803204942 >
       au < released ; 2005 ; 9780824828097 ; 9780824862039 ; Crisis in North Korea ; 9780824862039 >
       au < released ; 2005 ; 9780253346476 ; 9780253111487 ; Cross on the Star of David: The Christian World in Israel's Foreign Policy, 1948-1967 ; 9780253111487 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2005 ;  ; 9781587294259 ; Currency of the Heart: A Year of Investing, Death, Work, and Coins ; 9781587294259 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2005 ; 9780874176193 ; 9780874176537 ; Cutting The Wire: Gaming Prohibition And The Internet ; 9780874176537 >
       au < released ; 2005 ; 9781585444724 ; 9781603446082 ; Dat: Tackling Life and the NFL ; 9781603446082 >
       au < released ; 2005 ; 9781563682773 ; 9781563683336 ; Deaf Daughter, Hearing Father ; 9781563683336 >
@@ -1255,7 +1314,21 @@
       au < released ; 2005 ; 9780791460931 ; 9780791485064 ; Exquisite Rebel: The Essays of Voltairine de Cleyre -- Anarchist, Feminist, Genius ; 9780791485064 >
       au < released ; 2005 ;  ; 9780803204782 ; False Mystics: Deviant Orthodoxy in Colonial Mexico ; 9780803204782 >
       au < released ; 2005 ; 9780253346612 ; 9780253111548 ; Farmers and the State in Colonial Kano: Land Tenure and the Legal Imagination ; 9780253111548 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2005 ;  ; 9781587294426 ; Fauna and Flora, Earth and Sky: Brushes with Nature's Wisdom ; 9781587294426 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2005 ; 9780826336491 ; 9780826336507 ; Feast of Souls: Indians and Spaniards in the Seventeenth-Century Missions of Florida and New Mexico ; 9780826336507 >
       au < released ; 2005 ; 9780814727300 ; 9780814728390 ; Feeling Italian: The Art of Ethnicity in America ; 9780814728390 >
       au < released ; 2005 ; 9780826514943 ; 9780826591982 ; Felon for Peace: The Memoir of a Vietnam-Era Draft Resister ; 9780826591982 >
@@ -1263,7 +1336,21 @@
       au < released ; 2005 ; 9780823224685 ; 9780823247851 ; First among Equals: Abraham Lincoln's Reputation During His Administration ; 9780823247851 >
       au < released ; 2005 ;  ; 9780803205611 ; Flood Stage and Rising ; 9780803205611 >
       au < released ; 2005 ; 9780889204669 ; 9780889209169 ; Florence Nightingale on Women, Medicine, Midwifery and Prostitution: Collected Works of Florence Nightingale, Volume 8 ; 9780889209169 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2005 ;  ; 9781587294129 ; From Beacon Hill to the Crystal Palace: The 1851 Travel Diary of a Working-Class Woman ; 9781587294129 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2005 ; 9781585443963 ; 9781603445931 ; From Ethnic Conflict to Stillborn Reform: The Former Soviet Union and Yugoslavia ; 9781603445931 >
       au < released ; 2005 ; 9780791464052 ; 9780791483510 ; Gandhi's Pilgrimage of Faith: From Darkness to Light ; 9780791483510 >
       au < released ; 2005 ; 9780292705432 ; 9780292797307 ; Gender and the Boundaries of Dress in Contemporary Peru ; 9780292797307 >
@@ -1272,7 +1359,21 @@
       au < released ; 2005 ; 9780253345899 ; 9780253002532 ; Governing Soviet Journalism: The Press and the Socialist Person after Stalin ; 9780253002532 >
       au < released ; 2005 ; 9781585444885 ; 9781603445504 ; Greatest Generation Comes Home: The Veteran in American Society ; 9781603445504 >
       au < released ; 2005 ; 9780814782842 ; 9780814784396 ; Groundwork: Local Black Freedom Movements in America ; 9780814784396 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2005 ;  ; 9781587294150 ; Growing Up with the Town: Family and Community on the Great Plains ; 9781587294150 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2005 ; 9780824828851 ; 9780824862749 ; Handmade Culture: Raku Potters, Patrons, and Tea Practitioners in Japan ; 9780824862749 >
       au < released ; 2005 ; 9780826514929 ; 9780826591975 ; Hierarchy, Commerce, and Fraud in Bourbon Spanish America: A Postal Inspector's Exposé ; 9780826591975 >
       au < released ; 2005 ; 9780299214104 ; 9780299214135 ; Historical Evidence and Argument ; 9780299214135 >
@@ -1288,7 +1389,21 @@
       au < released ; 2005 ; 9780812219050 ; 9780812203301 ; Incest and Agency in Elizabeth's England ; 9780812203301 >
       au < released ; 2005 ; 9780791465059 ; 9780791483060 ; International Self, The: Psychoanalysis and the Search for Israeli-Palestinian Peace ; 9780791483060 >
       au < released ; 2005 ; 9781585443864 ; 9781603445979 ; Into the Wild Blue Yonder: My Life in the Air Force ; 9781603445979 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2005 ; 9780871546623 ; 9781610444453 ; Italians Then, Mexicans Now: Immigrant Origins and the Second-Generation Progress, 1890-2000 ; 9781610444453 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2005 ; 9780791464076 ; 9780791483497 ; Jakub's World: A Boy's Story of Loss and Survival in the Holocaust ; 9780791483497 >
       au < released ; 2005 ; 9780824828295 ; 9780824863142 ; Japan's Colonization of Korea: Discourse and Power ; 9780824863142 >
       au < released ; 2005 ; 9780814747803 ; 9780814748657 ; Jewish Girls Coming of Age in America, 1860-1920 ; 9780814748657 >
@@ -1558,7 +1673,21 @@
       au < released ; 2006 ; 9780253347589 ; 9780253112378 ; Negotiating with the Enemy: U.S.-China Talks during the Cold War, 1949-1972 ; 9780253112378 >
       au < released ; 2006 ; 9780791466797 ; 9780791482063 ; Nervous Conditions: Science and the Body Politic in Early Industrial Britain ; 9780791482063 >
       au < released ; 2006 ; 9780801884719 ; 9780801889226 ; Networked Machinists: High-Technology Industries in Antebellum America ; 9780801889226 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2006 ; 9780871549891 ; 9781610445719 ; New Destinations: Mexican Immigration in the United States ; 9781610445719 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2006 ; 9780299210847 ; 9780299210830 ; Nightmare's Fairy Tale: A Young Refugee's Home Fronts, 1938-1948 ; 9780299210830 >
       au < released ; 2006 ; 9780889204980 ; 9781554581344 ; No Insignificant Part: The Rhodesia Native Regiment and the East Africa Campaign of the First World War ; 9781554581344 >
       au < released ; 2006 ; 9781931968270 ; 9781935603740 ; Notorious Murders, Black Lanterns, and Moveable Goods: Transformation of Edinburgh's Underworld in the Early Nineteeth Century ; 9781935603740 >
@@ -1644,7 +1773,21 @@
       au < released ; 2006 ; 9780821416792 ; 9780821442098 ; The Wake of Wellington: Englishness in 1852 ; 9780821442098 >
       au < released ; 2006 ; 9780801884276 ; 9780801889448 ; Thinking with Objects: The Transformation of Mechanics in the Seventeenth Century ; 9780801889448 >
       au < released ; 2006 ; 9780813124032 ; 9780813171425 ; Through Mobility We Conquer: The Mechanization of U.S. Cavalry ; 9780813171425 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2006 ; 9781587294730 ; 9781587297298 ; Transatlantic Stowe: Harriet Beecher Stowe and European Culture ; 9781587297298 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2006 ; 9780791468012 ; 9780791481585 ; Transformation of Plantation Politics, The: Black Politics, Concentrated Poverty, and Social Capital in the Mississippi Delta ; 9780791481585 >
       au < released ; 2006 ; 9781585444786 ; 9781603445627 ; Traveling between Worlds: German-American Encounters ; 9781603445627 >
       au < released ; 2006 ; 9780253347954 ; 9780253112439 ; Troubled Hero: A Medal of Honor, Vietnam, and the War at Home ; 9780253112439 >
@@ -1665,7 +1808,21 @@
       au < released ; 2006 ; 9780299217846 ; 9780299217839 ; Women in Print: Essays on the Print Culture of American Women from the Nineteenth and Twentieth Centuries ; 9780299217839 >
       au < released ; 2006 ; 9780299213848 ; 9780299213831 ; Women's Organizations and Democracy in South Africa: Contesting Authority ; 9780299213831 >
       au < released ; 2006 ; 9780814719848 ; 9780814785454 ; Woodrow Wilson: Essential Writings and Speeches of the Scholar-President ; 9780814785454 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2006 ; 9781587295096 ; 9781587297304 ; Writing the Trail: Five Women's Frontier Narratives ; 9781587297304 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2006 ; 9781585444878 ; 9781603445672 ; Yankee Invasion of Texas ; 9781603445672 >
       au < released ; 2007 ; 9781554580095 ; 9781554580873 ; 163256: A Memoir of Resistance ; 9781554580873 >
       au < released ; 2007 ; 9780814333433 ; 9780814335536 ; A Badger Boy in Blue: The Civil War Letters of Chauncey H. Cooke ; 9780814335536 >
@@ -1737,7 +1894,21 @@
       au < released ; 2007 ; 9780826340665 ; 9780826340689 ; Discarded Pages: Araceli Cab Cumí, Maya Poet and Politician ; 9780826340689 >
       au < released ; 2007 ; 9780871546449 ; 9781610444194 ; Disease Prevention as Social Change: The State, Society, and Public Health in the United States, France, Great Britain, and Canada ; 9781610444194 >
       au < released ; 2007 ; 9780824829940 ; 9780824862251 ; Donors of Longmen: Faith, Politics, and Patronage in Medieval Chinese Buddhist Sculpture ; 9780824862251 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2007 ; 9780877459965 ; 9781587297168 ; Dream Not of Other Worlds: Teaching in a Segregated Elementary School,1970 ; 9781587297168 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2007 ; 9780253348616 ; 9780253116918 ; Dying in the Law of Moses: Crypto-Jewish Martyrdom in the Iberian World ; 9780253116918 >
       au < released ; 2007 ; 9780817315788 ; 9780817380328 ; Eagle Days: A Marine Legal/Infantry Officer in Vietnam ; 9780817380328 >
       au < released ; 2007 ; 9780824831813 ; 9780824862275 ; East-West Montage: Reflections on Asian Bodies in Diaspora ; 9780824862275 >
@@ -1793,7 +1964,21 @@
       au < released ; 2007 ; 9780268028862 ; 9780268079642 ; Ireland Now: Tales of Change from the Global Island ; 9780268079642 >
       au < released ; 2007 ; 9780812220100 ; 9780812200973 ; Irish Politics and Social Conflict in the Age of the American Revolution ; 9780812200973 >
       au < released ; 2007 ; 9780873515818 ; 9780873516747 ; Italian Voices: Making Minnesota Our Home ; 9780873516747 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2007 ; 9780877459996 ; 9781587297205 ; James Van Allen: The First Eight Billion Miles ; 9781587297205 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2007 ;  ; 9780803205635 ; Jean-Paul Sartre and The Jewish Question: Anti-antisemitism and the Politics of the French Intellectual ; 9780803205635 >
       au < released ; 2007 ;  ; 9780803205659 ; Jeb Stuart and the Confederate Defeat at Gettysburg ; 9780803205659 >
       au < released ; 2007 ; 9780814707203 ; 9780814707739 ; Jewish Women Pioneering the Frontier Trail: A History in the American West ; 9780814707739 >
@@ -1832,7 +2017,21 @@
       au < released ; 2007 ; 9780791472156 ; 9780791479520 ; Of Irony and Empire: Islam, the West, and the Transcultural Invention of Africa ; 9780791479520 >
       au < released ; 2007 ; 9780814775837 ; 9780814777497 ; Once You Go Black: Choice, Desire, and the Black American Intellectual ; 9780814777497 >
       au < released ; 2007 ; 9780889205055 ; 9781554581290 ; Onward to the Olympics: Historical Perspectives on the Olympic Games ; 9781554581290 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2007 ; 9781587296161 ; 9781587297502 ; Oppenheimer Is Watching Me: A Memoir ; 9781587297502 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2007 ; 9780791469576 ; 9780791480762 ; Paradoxes of Nationalism, The: The French Revolution and Its Meaning for Contemporary Nation Building ; 9780791480762 >
       au < released ; 2007 ; 9780268025915 ; 9780268077655 ; Pastoral Quechua: The History of Christian Translation in Colonial Peru, 1550-1650 ; 9780268077655 >
       au < released ; 2007 ; 9780824830731 ; 9780824863906 ; Pathways to the Present ; 9780824863906 >
@@ -2044,7 +2243,21 @@
       au < released ; 2008 ;  ; 9780803217812 ; Give Me Eighty Men: Women and the Myth of the Fetterman Fight ; 9780803217812 >
       au < released ; 2008 ; 9780791475515 ; 9780791477731 ; Global Neighborhoods: Jewish Quarters in Paris, London, and Berlin ; 9780791477731 >
       au < released ; 2008 ; 9780801888250 ; 9781421401669 ; God – or Gorilla: Images of Evolution in the Jazz Age ; 9781421401669 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2008 ; 9781603440387 ; 9781603444194 ; Gods of Diyala: Transfer of Command in Iraq ; 9781603444194 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2008 ;  ; 9780803217676 ; Good Neighbors, Bad Times: Echoes of My Father's German Village ; 9780803217676 >
       au < released ; 2008 ; 9780801889868 ; 9781421402031 ; Gustavus Vasa Fox of the Union Navy: A Biography ; 9781421402031 >
       au < released ; 2008 ; 9780824831196 ; 9780824862725 ; Haena: Through the Eyes of Ancestors ; 9780824862725 >
@@ -2078,7 +2291,21 @@
       au < released ; 2008 ; 9780870818868 ; 9781607320012 ; Invasion and Transformation: Interdisciplinary Perspectives on the Conquest of Mexico ; 9781607320012 >
       au < released ; 2008 ; 9780826343109 ; 9780826343123 ; Inventing the Fiesta City: Heritage and Carnival in San Antonio ; 9780826343123 >
       au < released ; 2008 ; 9780299223342 ; 9780299223335 ; Ireland's New Worlds: Immigrants, Politics, and Society in the United States and Australia, 1815-1922 ; 9780299223335 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2008 ; 9781603440684 ; 9781603444002 ; It's a Long Way from Llano: The Journey of a Wildlife Biologist ; 9781603444002 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2008 ; 9780823229796 ; 9780823248049 ; Jack Toffey's War: A Son's Memoir ; 9780823248049 >
       au < released ; 2008 ; 9780873516136 ; 9780873516754 ; Jacob's Well: A Case for Rethinking Family History ; 9780873516754 >
       au < released ; 2008 ; 9781558496491 ; 9781613761090 ; James Jesus Angleton, the CIA, and the Craft of Counterintelligence ; 9781613761090 >
@@ -2182,7 +2409,21 @@
       au < released ; 2008 ;  ; 9780803220423 ; The Lakota Ghost Dance of 1890 ; 9780803220423 >
       au < released ; 2008 ; 9780292717541 ; 9780292794627 ; The Los Angeles Plaza: Sacred and Contested Space ; 9780292794627 >
       au < released ; 2008 ; 9780801886935 ; 9780801893308 ; The Mantra of Efficiency: From Waterwheel to Social Control ; 9780801893308 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2008 ; 9780817316082 ; 9780817380373 ; The Metal Life Car: The Inventor, the Imposter, and the Business of Lifesaving ; 9780817380373 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2008 ;  ; 9780803248168 ; The Nebraska-Kansas Act of 1854 ; 9780803248168 >
       au < released ; 2008 ;  ; 9781592135776 ; The Origins of Capitalism and the "Rise of the West" ; 9781592135776 >
       au < released ; 2008 ; 9781558496859 ; 9781613761571 ; The Other Side of Grief: The Home Front and the Aftermath in American Narratives of the Vietnam War ; 9781613761571 >
@@ -2332,7 +2573,21 @@
       au < released ; 2009 ; 9780801891106 ; 9781421403236 ; Deliver Me from Pain: Anesthesia and Birth in America ; 9781421403236 >
       au < released ; 2009 ;  ; 9781592139200 ; DES Daughters, Embodied Knowledge, and the Transformation of Women's Health Politics in the Late Twentieth Century ; 9781592139200 >
       au < released ; 2009 ; 9789622095878 ; 9789888052219 ; Disease, Colonialism, and the State: Malaria in Modern East Asian History ; 9789888052219 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2009 ; 9780813927992 ; 9780813928180 ; Distant Revolutions: 1848 and the Challenge to American Exceptionalism ; 9780813928180 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2009 ; 9780292719095 ; 9780292793729 ; Dividing the Isthmus: Central American Transnational Histories, Literatures, and Cultures ; 9780292793729 >
       au < released ; 2009 ; 9780809329106 ; 9780809386499 ; Double Duty in the Civil War: The Letters of Sailor and Soldier Edward W. Bacon ; 9780809386499 >
       au < released ; 2009 ; 9780870819414 ; 9780870819735 ; Dr. Chales David Spivak: A Jewish Immigrant and the American Tuberculosis Movement ; 9780870819735 >
@@ -2362,7 +2617,21 @@
       au < released ; 2009 ; 9780292719149 ; 9780292795235 ; Future: A Recent History ; 9780292795235 >
       au < released ; 2009 ; 9780809329441 ; 9780809386550 ; George Washington's Enforcers: Policing the Continental Army ; 9780809386550 >
       au < released ; 2009 ; 9780472050659 ; 9780472026548 ; Grassroots at the Gateway: Class Politics and Black Freedom Struggle in St. Louis, 1936-75 ; 9780472026548 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2009 ; 9781603440967 ; 9781603443425 ; Guarding the Border: The Military Memoirs of the Ward Schrantz, 1912-1917 ; 9781603443425 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2009 ; 9780873389495 ; 9781612776071 ; Guerrilla Daughter ; 9781612776071 >
       au < released ; 2009 ; 9780253318138 ; 9780253002884 ; Habits of Whiteness: A Pragmatist Reconstruction ; 9780253002884 >
       au < released ; 2009 ; 9781557535108 ; 9781612490762 ; Habsburg Lemberg: Architecture, Public Space, and Politics in the Galician Capital, 1772-1914 ; 9781612490762 >
@@ -2398,7 +2667,21 @@
       au < released ; 2009 ; 9782760306905 ; 9782760317925 ; La Rénovation de l'héritage démocratique: Entre fondation et refondation ; 9782760317925 >
       au < released ; 2009 ; 9780812241495 ; 9780812206098 ; Language and History in Ancient Greek Culture ; 9780812206098 >
       au < released ; 2009 ; 9780253353016 ; 9780253002891 ; Language, Emotion, and Politics in South India: The Making of a Mother Tongue ; 9780253002891 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2009 ; 9781603441124 ; 9781603443517 ; Leadership of George Bush: An Insider's View of the Forty-first President ; 9781603443517 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2009 ; 9780823230969 ; 9780823248100 ; Letters to Lee: From Pearl Harbor to the War's Final Mission ; 9780823248100 >
       au < released ; 2009 ;  ; 9780803224704 ; Lev Shternberg: Anthropologist, Russian Socialist, Jewish Activist ; 9780803224704 >
       au < released ; 2009 ; 9789622099494 ; 9789888052516 ; Light and Shade: Sketches from an Uncommon Life ; 9789888052516 >
@@ -2590,7 +2873,21 @@
       au < released ; 2009 ; 9781604733709 ; 9781604731385 ; Thomas Jefferson on Wine ; 9781604731385 >
       au < released ; 2009 ; 9780813544311 ; 9780813546452 ; To Change the World: My Years in Cuba ; 9780813546452 >
       au < released ; 2009 ; 9780817353469 ; 9780817382902 ; To Command the Sky: The Battle for Air Superiority Over Germany, 1942-1944 ; 9780817382902 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2009 ; 9781603441117 ; 9781603443746 ; To Get a Better School System: One Hundred Years of Education Reform in Texas ; 9781603443746 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2009 ; 9789622099975 ; 9789888053629 ; To Serve and to Lead: A History of the Diocesan Boys' School in Hong Kong ; 9789888053629 >
       au < released ; 2009 ; 9780824831967 ; 9780824865238 ; Tonga: A New Bibliography ; 9780824865238 >
       au < released ; 2009 ; 9782760306943 ; 9782760317956 ; Tous les chemins mènent à Rome: Arts de vivre et de réussir à la cour pontificale au XVIe siècle ; 9782760317956 >
@@ -2609,7 +2906,21 @@
       au < released ; 2009 ; 9780292718883 ; 9780292793811 ; Vital Enemies: Slavery, Predation, and the Amerindian Political Economy of Life ; 9780292793811 >
       au < released ; 2009 ; 9781603441391 ; 9781603443791 ; Waiting: One Wife's Year of the Vietnam War ; 9781603443791 >
       au < released ; 2009 ; 9780814783139 ; 9780814733127 ; Want to Start a Revolution?: Radical Women in the Black Freedom Struggle ; 9780814733127 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2009 ; 9780821418055 ; 9780821443248 ; Wanted – Correspondence: Women's Letters to a Union Soldier ; 9780821443248 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2009 ; 9780813544380 ; 9780813546469 ; War and Disease: Biomedical Research on Malaria in the Twentieth Century ; 9780813546469 >
       au < released ; 2009 ; 9781603441155 ; 9781603443807 ; War and the Environment: Military Destruction in the Modern Age ; 9781603443807 >
       au < released ; 2009 ; 9780896802704 ; 9780896804715 ; Wartime in Burma: A Diary, January to June 1942 ; 9780896804715 >
@@ -2655,7 +2966,21 @@
       au < released ; 2010 ; 9780809329731 ; 9780809386062 ; Mother Jones: The Miner's Angel ; 9780809386062 >
       au < released ; 2010 ; 9780822960805 ; 9780822973812 ; Nature in the New World: From Christopher Columbus to Gonzalo Fernández de Oviedo ; 9780822973812 >
       au < released ; 2010 ; 9780271037295 ; 9780271053493 ; Opening Windows onto Hidden Lives: Women, Country Life, and Early Rural Sociological Research ; 9780271053493 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2010 ; 9781603441841 ; 9781603442510 ; Operation PLUM: The Ill-fated 27th Bombardment Group and the Fight for the Western Pacific ; 9781603442510 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2010 ; 9780817356453 ; 9780817385224 ; Paths to a Middle Ground: The Diplomacy of Natchez, Boukfouka, Nogales, and San Fernando de las Barrancas, 1791-1795 ; 9780817385224 >
       au < released ; 2010 ;  ; 9780803226951 ; Picture This: World War I Posters and Visual Culture ; 9780803226951 >
       au < released ; 2010 ; 9780814722336 ; 9780814722824 ; Plague Ports: The Global Urban Impact of Bubonic Plague, 1894-1901 ; 9780814722824 >
@@ -2740,14 +3065,21 @@
       au < released ; 2012 ; 9780295983592 ; 9780295801612 ; Voices From the Camps: Vietnamese Children Seeking Asylum ; 9780295801612 >
       au < released ; 2012 ; 9780870138058 ; 9781609170714 ; Watergate Prosecutor ; 9781609170714 >
 
+    }
+
+
   }
 
   {
 
-      title <
-        name = Archive History Supplement ;
-        type = bookSeries
-      >
+    title <
+      name = Archive History Supplement ;
+      type = bookSeries
+    >
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
 
       au < released ; 1972 ; 9780801892684 ; 9780801895210 ; Medical America in the Nineteenth Century: Readings from the Literature ; 9780801895210 >
       au < released ; 1974 ; 9780801817625 ; 9781421400570 ; Western Attitudes toward Death: From the Middle Ages to the Present ; 9781421400570 >
@@ -3286,14 +3618,21 @@
       au < released ; 2013 ; 9780813117676 ; 9780813143590 ; The Shadow of Death: The Holocaust in Lithuania ; 9780813143590 >
       au < released ; 2013 ; 9780813118024 ; 9780813144146 ; Voices From the Holocaust ; 9780813144146 >
 
+    }
+
+
   }
   
   {
 
-      title <
-        name = 2014 Literature Collection ;
-        type = bookSeries
-      >
+    title <
+      name = 2014 Literature Collection ;
+      type = bookSeries
+    >
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
 
       au < ready ; 2014 ; 9780814212561 ; 9780814271377 ; Transatlantic Correspondence: Modernity, Epistolarity, and Literature in Spain and Spanish America, 1898–1992 ; 9780814271377 >
       au < ready ; 2014 ;  ; 9780820346397 ; My Dear Boy: Carrie Hughes's Letters to Langston Hughes, 1926-1938 ; 9780820346397 >
@@ -3462,14 +3801,21 @@
       au < ready ; 2014 ; 9781421411293 ; 9781421411309 ; The Annals of Quintus Ennius and the Italic Tradition ; 9781421411309 >
       au < ready ; 2014 ; 9781933360805 ; 9781933360812 ; Superheroes in Crisis: Adjusting to Social Change in the 1960s and 1970s ; 9781933360812 >
 
+    }
+
+
   }
 
   {
 
-      title <
-        name = 2013 Literature Collection ;
-        type = bookSeries
-      >
+    title <
+      name = 2013 Literature Collection ;
+      type = bookSeries
+    >
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
 
       au < released ; 2013 ; 9781421409580 ; 9781421409597 ; Lure of the Arcane: The Literature of Cult and Conspiracy ; 9781421409597 >
       au < released ; 2013 ; 9780824836290 ; 9780824837761 ; An Edo Anthology: Literature from Japan's Mega-City, 1750-1850 ; 9780824837761 >
@@ -3704,7 +4050,21 @@
       au < released ; 2013 ; 9780813554624 ; 9780813554648 ; The Romance of Race: Incest, Miscegenation, and Multiculturalism in the United States, 1880-1930 ; 9780813554648 >
       au < released ; 2013 ; 9781421407210 ; 9781421408071 ; Imaginary Citizens: Child Readers and the Limits of American Independence, 1640–1868 ; 9781421408071 >
       au < released ; 2013 ; 9781611860634 ; 9781609173494 ; Flesh Becomes Word: A Lexicography of the Scapegoat or, the History of an Idea ; 9781609173494 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2013 ; 9780812244717 ; 9780812207613 ; Conversion and Narrative: Reading and Religious Authority in Medieval Polemic ; 9780812207613 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2013 ; 9781558499720 ; 9781613762196 ; Constituting Old Age in Early Modern English Literature, from Queen Elizabeth to King Lear ; 9781613762196 >
       au < released ; 2013 ; 9780813042404 ; 9780813042565 ; Joyce and Militarism ; 9780813042565 >
       au < released ; 2013 ; 9781557536266 ; 9781612492452 ; Miradas transatlánticas: El periodismo literario de Elena Poniatowska y Rosa Montero ; 9781612492452 >
@@ -3821,14 +4181,21 @@
       au < released ; 2013 ; 9780815633112 ; 9780815652045 ; Carmilla: A Critical Edition ; 9780815652045 >
       au < released ; 2013 ; 9781439910559 ; 9781439910573 ; Serial Fu Manchu: The Chinese Supervillain and the Spread of Yellow Peril Ideology ; 9781439910573 >
 
+    }
+
+
   }
 
   {
 
-      title <
-        name = 2012 Literature Collection ;
-        type = bookSeries
-      >
+    title <
+      name = 2012 Literature Collection ;
+      type = bookSeries
+    >
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
 
       au < released ; 2012 ; 9781617032950 ; 9781617032974 ; A Daring Life: A Biography of Eudora Welty ; 9781617032974 >
       au < released ; 2012 ; 9781554584284 ; 9781554584291 ; From Sugar to Revolution: Women’s Visions of Haiti, Cuba, and the Dominican Republic ; 9781554584291 >
@@ -4081,14 +4448,21 @@
       au < released ; 2012 ; 9781438443553 ; 9781438443560 ; The Teller's Tale: Lives of the Classic Fairy Tale Writers ; 9781438443560 >
       au < released ; 2012 ; 9781617036132 ; 9781621036180 ; Autobiographical Comics: Life Writing in Pictures ; 9781621036180 >
 
+    }
+
+
   }
   
   {
 
-      title <
-        name = 2012 Literature Supplement ;
-        type = bookSeries
-      >
+    title <
+      name = 2012 Literature Supplement ;
+      type = bookSeries
+    >
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
 
       au < ready ; 2012 ; 9780817317614 ; 9780817386382 ; Fitzgerald's Mentors: Edmund Wilson, H. L. Mencken, and Gerald Murphy ; 9780817386382 >
       au < ready ; 2012 ; 9780252036798 ; 9780252093906 ; How Did Poetry Survive?: The Making of Modern American Verse ; 9780252093906 >
@@ -4105,14 +4479,21 @@
       au < ready ; 2012 ; 9782760533387 ; 9782760533394 ; La pyramide des souffrances dans La Joie de vivre d'Émile Zola: Une structure schopenhauerienne ; 9782760533394 >
       au < ready ; 2012 ; 9782760532991 ; 9782760533004 ; Trois pour un: Une lecture évolutionniste de l'oeuvre de Martin Winckler ; 9782760533004 >
 
+    }
+
+
   }
 
   {
 
-      title <
-        name = 2012 Literature Supplement II ;
-        type = bookSeries
-      >
+    title <
+      name = 2012 Literature Supplement II ;
+      type = bookSeries
+    >
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
 
       au < ready ; 2012 ; 9780801450877 ; 9780801464010 ; Race, Rights, and Recognition: Jewish American Literature since 1969 ; 9780801464010 >
       au < ready ; 2012 ; 9780801451775 ; 9780801465659 ; Formative Fictions: Nationalism, Cosmopolitanism, and the "Bildungsroman" ; 9780801465659 >
@@ -4185,14 +4566,21 @@
       au < ready ; 2012 ; 9780875804644 ; 9781609090784 ; Inscrutable Malice: Theodicy, Eschatology, and the Biblical Sources of Moby Dick ; 9781609090784 >
       au < ready ; 2012 ; 9780814211717 ; 9780814270691 ; Collections in Context: The Organization of Knowledge and Community in Europe ; 9780814270691 >
 
+    }
+
+
   }
 
   {
 
-      title <
-        name = 2011 Literature Collection ;
-        type = bookSeries
-      >
+    title <
+      name = 2011 Literature Collection ;
+      type = bookSeries
+    >
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
 
       au < released ; 2011 ; 9780814752616 ; 9780814753293 ; Chicano Nations: The Hemispheric Origins of Mexican American Literature ; 9780814753293 >
       au < released ; 2011 ; 9780810128545 ; 9780810165588 ; Vladimir Nabokov and the Poetics of Liberalism ; 9780810165588 >
@@ -4409,14 +4797,21 @@
       au < released ; 2011 ; 9780814758441 ; 9780814758854 ; Ingratitude: The Debt-Bound Daughter in Asian American Literature ; 9780814758854 >
       au < released ; 2011 ; 9780814794760 ; 9780814795415 ; Empire's Proxy: American Literature and U.S. Imperialism in the Philippines ; 9780814795415 >
 
+    }
+
+
   }
 
   {
 
-      title <
-        name = 2011 Literature Supplement ;
-        type = bookSeries
-      >
+    title <
+      name = 2011 Literature Supplement ;
+      type = bookSeries
+    >
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
 
       au < ready ; 2011 ; 9780810127944 ; 9780810165717 ; The Word Unheard: Legacies of Anti-Semitism in German Literature and Culture ; 9780810165717 >
       au < ready ; 2011 ; 9780810126701 ; 9780810164529 ; Belmour: A Modern Edition ; 9780810164529 >
@@ -4468,14 +4863,21 @@
       au < ready ; 2011 ; 9781572337268 ; 9781572338012 ; New Essays on Phillis Wheatley ; 9781572338012 >
       au < ready ; 2011 ; 9780893573836 ; 9780893578831 ; Holy Foolishness in Russia: New Perspectives ; 9780893578831 >
 
+    }
+
+
   }
 
   {
 
-      title <
-        name = 2010 Literature Collection ;
-        type = bookSeries
-      >
+    title <
+      name = 2010 Literature Collection ;
+      type = bookSeries
+    >
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
 
       au < released ; 2010 ; 9780810126572 ; 9780810164369 ; Nikolai Klyuev: Time and Text, Place and Poet ; 9780810164369 >
       au < released ; 2010 ; 9780810126930 ; 9780810164796 ; Dostoevsky's Dialectics and the Problem of Sin ; 9780810164796 >
@@ -4501,7 +4903,21 @@
       au < released ; 2010 ; 9780813927954 ; 9780813930435 ; Written on the Water: British Romanticism and the Maritime Empire of Culture ; 9780813930435 >
       au < released ; 2010 ; 9780823232215 ; 9780823249022 ; Sodometries: Renaissance Texts, Modern Sexualities ; 9780823249022 >
       au < released ; 2010 ; 9781606350423 ; 9781612775050 ; Ernest Hemingway and the Geography of Memory ; 9781612775050 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2010 ; 9780823232987 ; 9780823249206 ; The Doppelganger: Literature's Philosophy ; 9780823249206 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2010 ; 9780823231140 ; 9780823248551 ; Tombeau of Ibn Arabi and White Traverses ; 9780823248551 >
       au < released ; 2010 ; 9780823231539 ; 9780823248414 ; Prophecies of Leviathan:: Reading Past Melville ; 9780823248414 >
       au < released ; 2010 ; 9780823229970 ; 9780823248353 ; Political Writings, 1953-1993 ; 9780823248353 >
@@ -4655,12 +5071,40 @@
       au < released ; 2010 ; 9781438429717 ; 9781438429724 ; Something Akin to Freedom: The Choice of Bondage in Narratives by African American Women ; 9781438429724 >
       au < released ; 2010 ; 9781438430331 ; 9781438430348 ; Representing Segregation: Toward an Aesthetics of Living Jim Crow, and Other Forms of Racial Division ; 9781438430348 >
       au < released ; 2010 ; 9781438429496 ; 9781438429519 ; Reading Derrida and Ricoeur: Improbable Encounters between Deconstruction and Hermeneutics ; 9781438429519 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2010 ; 9781438430355 ; 9781438430379 ; Passing of Postmodernism, The: A Spectroanalysis of the Contemporary ; 9781438430379 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2010 ; 9781438431673 ; 9781438431697 ; Native Authenticity: Transnational Perspectives on Native American Literary Studies ; 9781438431697 >
       au < released ; 2010 ; 9781602582552 ; 9781602584815 ; T.S. Eliot and the Essay ; 9781602584815 >
       au < released ; 2010 ; 9781438432175 ; 9781438432199 ; Interpretation and Literature in Early Medieval China ; 9781438432199 >
       au < released ; 2010 ; 9781438431932 ; 9781438431956 ; Ethics, Aesthetics, and the Beyond of Language ; 9781438431956 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2010 ; 9781438431994 ; 9781438432014 ; Colonizing the Realm of Words: The Transformation of Tamil Literature in Nineteenth-Century South India ; 9781438432014 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2010 ; 9781438429953 ; 9781438429977 ; By the Breath of Their Mouths: Narratives of Resistance in Italian America ; 9781438429977 >
       au < released ; 2010 ; 9780809329915 ; 9780809385904 ; Shadowed Cocktails: The Plays of Philip Barry from Paris Bound to The Philadelphia Story ; 9780809385904 >
       au < released ; 2010 ; 9780809329892 ; 9780809385874 ; Mentor and Muse: Essays from Poets to Poets ; 9780809385874 >
@@ -4682,14 +5126,21 @@
       au < released ; 2010 ; 9780814741306 ; 9780814741320 ; Bodies of Reform: The Rhetoric of Character in Gilded Age America ; 9780814741320 >
       au < released ; 2010 ; 9780814740941 ; 9780814741351 ; Extravagant Abjection: Blackness, Power, and Sexuality in the African American Literary Imagination ; 9780814741351 >
 
+    }
+
+
   }
 
   {
 
-      title <
-        name = Archive Literature Foundation ;
-        type = bookSeries
-      >
+    title <
+      name = Archive Literature Foundation ;
+      type = bookSeries
+    >
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
 
       au < released ; 1961 ; 9780299005450 ; 9780299005436 ; La vida de Lazarillo de Tormes y de sus fortunas y adversidades ; 9780299005436 >
       au < released ; 1961 ; 9780856560552 ; 9789882202467 ; The Poems of Sir Francis Hubert ; 9789882202467 >
@@ -4891,13 +5342,41 @@
       au < released ; 1999 ; 9780776605173 ; 9780776615950 ; From Arabye to Engelond: Medieval Studies in Honour of Mahmoud Manzalaoui ; 9780776615950 >
       au < released ; 1999 ; 9781557531353 ; 9781612491004 ; Gendered Lyric: Subjectivity and Difference in Nineteenth-Century French Poetry ; 9781612491004 >
       au < released ; 1999 ; 9781557531605 ; 9781612490984 ; Kingdom of Disorder: Theory of Tragedy in Classical France ; 9781612490984 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 1999 ; 9780877456902 ; 9781587292910 ; Literature and the Child: Romantic Continuations, Postmodern Contestations ; 9781587292910 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 1999 ; 9780824820121 ; 9780824863432 ; Mad Wives and Island Dreams: Shimao Toshio and the Margins of Japanese Literature ; 9780824863432 >
       au < released ; 1999 ; 9780889203334 ; 9780889205697 ; Marian Engels Notebooks: Ah, mon cahier, écoute... ; 9780889205697 >
       au < released ; 1999 ; 9780824820404 ; 9780824863760 ; Oe and Beyond: Fiction in Contemporary Japan ; 9780824863760 >
       au < released ; 1999 ; 9780812216837 ; 9780812200638 ; Postmodern Fairy Tales: Gender and Narrative Strategies ; 9780812200638 >
       au < released ; 1999 ; 9780819563682 ; 9780819571977 ; Shorter Views: Queer Thoughts & the Politics of the Paraliterary ; 9780819571977 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 1999 ; 9780877456896 ; 9781587292873 ; Soft Canons: American Women Writers and Masculine Tradition ; 9781587292873 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 1999 ; 9780814750742 ; 9780814765227 ; Telling Women's Lives: Subject/Narrator/Reader/Text ; 9780814765227 >
       au < released ; 1999 ; 9789622094642 ; 9789882200432 ; The Book of Literary Design ; 9789882200432 >
       au < released ; 1999 ; 9780299165543 ; 9780299165536 ; The Essential Aldo Leopold: Quotations and Commentaries ; 9780299165536 >
@@ -4920,7 +5399,21 @@
       au < released ; 2000 ; 9780820321875 ; 9780820343549 ; F. Scott Fitzgerald: New Perspectives ; 9780820343549 >
       au < released ; 2000 ; 9781578062492 ; 9781617030963 ; Faulkner on the Color Line: The Later Novels ; 9781617030963 >
       au < released ; 2000 ; 9780824821470 ; 9780824862510 ; Fictions of Desire: Narrative Forms in the Novels of Nagai Kafu ; 9780824862510 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2000 ; 9780877457039 ; 9781587292712 ; Genre Fission: A New Discourse Practice for Culture Studies ; 9781587292712 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2000 ;  ; 9781592139118 ; Hard-Boiled ; 9781592139118 >
       au < released ; 2000 ; 9780791446775 ; 9780791492079 ; Imagining Each Other: Blacks and Jews in Contemporary American Literature ; 9780791492079 >
       au < released ; 2000 ;  ; 9780803202276 ; Invisible Fences: Prose Poetry as a Genre in French and American Literature ; 9780803202276 >
@@ -5029,7 +5522,21 @@
       au < released ; 2002 ;  ; 9780803201019 ; Portraying the Lady: Technologies of Gender in the Short Stories of Henry James ; 9780803201019 >
       au < released ; 2002 ; 9780889204027 ; 9780889208292 ; Progressive Heritage: The Evolution of a Politically Radical Literary Tradition in Canada ; 9780889208292 >
       au < released ; 2002 ; 9780889203365 ; 9780889209480 ; Reading In: Alice Munros Archives ; 9780889209480 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2002 ;  ; 9781587293375 ; Reconstituting Authority: American Fiction in the Province of the Law, 1880-1920 ; 9781587293375 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2002 ; 9780889204089 ; 9780889209411 ; Repossessing the World: Reading Memoirs by Contemporary Women ; 9780889209411 >
       au < released ; 2002 ; 9780253341549 ; 9780253109590 ; Representing Animals ; 9780253109590 >
       au < released ; 2002 ; 9780791451595 ; 9780791489710 ; Rise of Surrealism, The: Cubism, Dada, and the Pursuit of the Marvelous ; 9780791489710 >
@@ -5043,7 +5550,21 @@
       au < released ; 2002 ; 9781563681271 ; 9781563681837 ; The Deaf Way II Anthology: A Literary Collection by Deaf and Hard of Hearing Writers ; 9781563681837 >
       au < released ; 2002 ; 9780292743434 ; 9780292796393 ; The Early Poetry of Robert Graves: The Goddess Beckons ; 9780292796393 >
       au < released ; 2002 ; 9780813921006 ; 9780813922003 ; The Flirt's Tragedy: Desire without End in Victorian and Edwardian Fiction ; 9780813922003 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2002 ; 9780877458036 ; 9781587294143 ; The Greening of Literary Scholarship: Literature, Theory, and the Environment ; 9781587294143 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2002 ; 9780299182144 ; 9780299182137 ; The Poem in the Story: Music, Poetry, and Narrative ; 9780299182137 >
       au < released ; 2002 ; 9781558493582 ; 9781613761700 ; Translation and Power ; 9781613761700 >
       au < released ; 2002 ; 9780791454671 ; 9780791488119 ; Traversing the Democratic Borders of the Essay ; 9780791488119 >
@@ -5200,8 +5721,22 @@
       au < released ; 2004 ; 9781574411836 ; 9781574414103 ; Slouching toward Zion and More Lies ; 9781574414103 >
       au < released ; 2004 ; 9780824828127 ; 9780824864330 ; Snakes' Legs: Sequels, Continuations, Rewritings, and Chinese Fiction ; 9780824864330 >
       au < released ; 2004 ; 9780817352783 ; 9780817381639 ; So Long! Walt Whitman's Poetry of Death ; 9780817381639 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2004 ; 9780877458869 ; 9781587294877 ; Soldiers Once and Still: Ernest Hemingway, James Salter, and Tim O'Brien ; 9781587294877 >
       au < notReady ; 2004 ; 9780877458814 ; 9781587294761 ; Something We Have That They Don't: British and American Poetic Relations since 1925 ; 9781587294761 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2004 ;  ; 9780803204256 ; Spaces of the Mind: Narrative and Community in the American West ; 9780803204256 >
       au < released ; 2004 ; 9780889204553 ; 9780889209329 ; Stranger at the Door: Writers and the Act of Writing ; 9780889209329 >
       au < released ; 2004 ; 9781557533883 ; 9781612490847 ; Subject of Desire: Petrarchan Poetics and the Female Voice in Louise Labe ; 9781612490847 >
@@ -5214,7 +5749,21 @@
       au < released ; 2004 ;  ; 9780803203396 ; The Imaginary Caribbean and Caribbean Imaginary ; 9780803203396 >
       au < released ; 2004 ; 9780817354671 ; 9780817380502 ; The Modernist Nation: Generation, Renaissance, and Twentieth-Century American Literature ; 9780817380502 >
       au < released ; 2004 ;  ; 9780803203419 ; The Modernist Traveler: French Detours, 1900-1930 ; 9780803203419 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2004 ; 9780877458807 ; 9781587294754 ; The Novel and the American Left: Critical Essays on Depression-Era Fiction ; 9781587294754 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2004 ; 9780874175899 ; 9780874176353 ; The Ox-Bow Man: A Biography Of Walter Van Tilburg Clark ; 9780874176353 >
       au < released ; 2004 ; 9780819566904 ; 9780819569950 ; The Self-Dismembered Man: Selected Later Poems of Guillaume Apollinaire ; 9780819569950 >
       au < released ; 2004 ; 9780824827618 ; 9780824865061 ; The Subject in Crisis in Contemporary Chinese Literature ; 9780824865061 >
@@ -5248,7 +5797,21 @@
       au < released ; 2005 ; 9780791464236 ; 9780791483473 ; Chinese Theories of Reading and Writing: A Route to Hermeneutics and Open Poetics ; 9780791483473 >
       au < released ; 2005 ; 9789622097476 ; 9789882200722 ; City Stage: Hong Kong Playwriting in English ; 9789882200722 >
       au < released ; 2005 ; 9780812238358 ; 9780812203684 ; Colonizing Nature: The Tropics in British Arts and Letters, 1760-1820 ; 9780812203684 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2005 ;  ; 9781587294280 ; Coloring Locals: Racial Formation in Katie Chopin's "Youth's Companion" Stories ; 9781587294280 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2005 ; 9780472068593 ; 9780472026241 ; Coming After: Essays on Poetry ; 9780472026241 >
       au < released ; 2005 ; 9781557533784 ; 9781612490212 ; Comparative Cultural Studies and Michael Ondaatje's Writing ; 9781612490212 >
       au < released ; 2005 ; 9780889204577 ; 9780889209275 ; Dante & the Unorthodox: The Aesthetics of Transgression ; 9780889209275 >
@@ -5261,7 +5824,21 @@
       au < released ; 2005 ; 9781578067329 ; 9781617031106 ; Faulkner: A Biography ; 9781617031106 >
       au < released ; 2005 ; 9780472069095 ; 9780472024681 ; Fractured Borders: Reading Women's Cancer Literature ; 9780472024681 >
       au < released ; 2005 ; 9780826514622 ; 9780826591845 ; Gertrude Stein and the Essence of What Happens ; 9780826591845 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2005 ;  ; 9781587294204 ; Gothic Passages: Racial Ambiguity and the American Gothic ; 9781587294204 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2005 ;  ; 9781587295942 ; Growing Up Ethnic: Nationalism and the Bildungsroman in African American and Jewish American Fiction ; 9781587295942 >
       au < released ; 2005 ; 9780826514981 ; 9780826592002 ; Hispanic Baroques: Reading Cultures in Context ; 9780826592002 >
       au < released ; 2005 ; 9780299209605 ; 9780299209636 ; Imagining Lives: Autobiographical Fiction of Yiddish Writers ; 9780299209636 >
@@ -5270,7 +5847,21 @@
       au < released ; 2005 ; 9780812238914 ; 9780812203776 ; Ingenuous Subjection: Compliance and Power in the Eighteenth-Century Domestic Novel ; 9780812203776 >
       au < released ; 2005 ; 9781574412024 ; 9781574414042 ; Inside the Classroom (And Out): How We Learn through Folklore ; 9781574414042 >
       au < released ; 2005 ; 9780791465233 ; 9780791482926 ; Jamaica Kincaid: Writing Memory, Writing Back to the Mother ; 9780791482926 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2005 ;  ; 9781587294051 ; Jazz Country: Ralph Ellison in America ; 9781587294051 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2005 ; 9780299211707 ; 9780299211738 ; Jewish Scholarship and Culture in Nineteenth-Century Germany: Between History and Faith ; 9780299211738 >
       au < released ; 2005 ; 9780299214401 ; 9780299214432 ; Jewish Writing and the Deep Places of the Imagination ; 9780299214432 >
       au < released ; 2005 ; 9780791464472 ; 9780791483237 ; King's English, The: Strategies of Translation in the Old English Boethius ; 9780791483237 >
@@ -5281,12 +5872,40 @@
       au < released ; 2005 ; 9780810122864 ; 9780810161832 ; Literary Animal: Evolution and the Nature of Narrative ; 9780810161832 >
       au < released ; 2005 ;  ; 9781592133666 ; Literary Gestures: The Aesthetic in Asian American Writing ; 9781592133666 >
       au < released ; 2005 ; 9780823225378 ; 9780823248124 ; Literature as Conduct: Speech Acts in Henry James ; 9780823248124 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2005 ;  ; 9781587294464 ; Lyric Interventions: Feminism, Experimental Poetry, and Contemporary Discourse ; 9781587294464 >
       au < notReady ; 2005 ;  ; 9781587294402 ; Male Sexuality under Surveillance: The Office in American Literature ; 9781587294402 >
       au < notReady ; 2005 ; 9780877459668 ; 9781587296413 ; Master Class: Lessons from Leading Writers ; 9781587296413 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2005 ; 9780820703619 ; 9780820705378 ; Milton and the Rhetoric of Zeal ; 9780820705378 >
       au < released ; 2005 ; 9780889204812 ; 9780889209145 ; Must Write: Edna Staeblers Diaries ; 9780889209145 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2005 ; 9780791465714 ; 9780791482711 ; My Beloved Toto: Letters from Juliette Drouet to Victor Hugo 1833-1882 ; 9780791482711 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2005 ; 9780253345455 ; 9780253003195 ; Our Mothers, Our Powers, Our Texts: Manifestations of ; 9780253003195 >
       au < released ; 2005 ; 9780817351939 ; 9780817381660 ; Our Sisters' Keepers: Nineteenth-Century Benevolence Literature by American Women ; 9780817381660 >
       au < released ; 2005 ; 9780472068739 ; 9780472026326 ; Outside the Lines: Talking with Contemporary Gay Poets ; 9780472026326 >
@@ -5320,9 +5939,37 @@
       au < released ; 2005 ; 9780253346575 ; 9780253111777 ; The History of King Richard the Third: A Reading Edition ; 9780253111777 >
       au < released ; 2005 ;  ; 9780803250727 ; The Human Family: Stories ; 9780803250727 >
       au < released ; 2005 ; 9780812238853 ; 9780812204797 ; The Kingdom of Sicily, 1100-1250: A Literary History ; 9780812204797 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2005 ;  ; 9781587294006 ; The Only Efficient Instrument: American Women Writers & The Periodical ; 9781587294006 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2005 ; 9781558494909 ; 9781613760970 ; The Poetry of Indifference: From the Romantics to the Rubaiyat ; 9781613760970 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2005 ;  ; 9781587294242 ; The Pragmatic Whitman: Reimaining American Democracy ; 9781587294242 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2005 ; 9780253345967 ; 9780253111425 ; The Slave's Rebellion: Literature, History, Orature ; 9780253111425 >
       au < released ; 2005 ; 9780810122246 ; 9780810165878 ; The Stony Dance: Unity and Gesture in Andrey Bely's Petersburg ; 9780810165878 >
       au < released ; 2005 ; 9780812238624 ; 9780812202090 ; The Trouble with Ownership: Literary Property and Authorial Liability in England, 1660-1730 ; 9780812202090 >
@@ -5332,14 +5979,56 @@
       au < released ; 2005 ; 9780791464212 ; 9780791483398 ; Through the Reading Glass: Women, Books, and Sex in the French Enlightenment ; 9780791483398 >
       au < released ; 2005 ; 9780820327617 ; 9780820330822 ; Tracing the Essay: Through Experience to Truth ; 9780820330822 >
       au < released ; 2005 ; 9780820327655 ; 9780820330860 ; Traveling South: Travel Narratives and the Construction of American Identity ; 9780820330860 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2005 ; 9780877459286 ; 9781587296024 ; Wallace Stevens and the Apocalyptic Mode ; 9781587296024 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2005 ; 9780299209308 ; 9780299209339 ; Western Law, Russian Justice: Dostoevsky, the Jury Trial, and the Law ; 9780299209339 >
       au < released ; 2005 ; 9781558494718 ; 9781613761762 ; Where The Wild Grape Grows: Selected Writings, 1930-1950 ; 9781613761762 >
       au < released ; 2005 ; 9780826514752 ; 9780826591890 ; Whitewashing Uncle Toms Cabin: Nineteenth-Century Women Novelists Respond to Stowe ; 9780826591890 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2005 ;  ; 9781587294211 ; Whitman East and West: New Contexts for Reading Walt Whitman ; 9781587294211 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2005 ; 9780817314361 ; 9780817382322 ; Willa Cather and Material Culture: Real-World Writing, Writing The Real World ; 9780817382322 >
       au < released ; 2005 ; 9780791464892 ; 9780791483084 ; Wind and the Source, The: In the Shadow of Mont Ventoux ; 9780791483084 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2005 ; 9780877459538 ; 9781587296505 ; Women, Money, and the Law: Nineteenth-Century Fiction, Gender, and the Courts ; 9781587296505 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2005 ; 9789622097216 ; 9789882203129 ; World Weavers: Globalization, Science Fiction, and the Cybernetic Revolution ; 9789882203129 >
       au < released ; 2005 ; 9780810120518 ; 9780810165861 ; Writing as Exorcism: The Personal Codes of Pushkin, Lermontov, and Gogol ; 9780810165861 >
       au < released ; 2005 ; 9780791463314 ; 9780791483893 ; Writing Environments ; 9780791483893 >
@@ -5409,7 +6098,21 @@
       au < released ; 2006 ; 9780292712843 ; 9780292794290 ; raúlrsalinas and the Jail Machine: My Weapon Is My Pen ; 9780292794290 >
       au < released ; 2006 ; 9780877459569 ; 9781587296673 ; Reading the Middle Generation Anew: Culture, Community, and Form in Twentieth-Century American Poetry ; 9781587296673 >
       au < released ; 2006 ; 9780820327969 ; 9780820336657 ; Reconnecting with John Muir: Essays in Post-Pastoral Practice ; 9780820336657 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2006 ; 9781587295041 ; 9781587297175 ; Reinventing the Peabody Sisters ; 9781587297175 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2006 ; 9780299212247 ; 9780299212230 ; Robert Louis Stevenson: Writer of Boundaries ; 9780299212230 >
       au < released ; 2006 ; 9780820328584 ; 9780820342894 ; Romancing the Vote: Feminist Activism in American Fiction, 1870-1920 ; 9780820342894 >
       au < released ; 2006 ; 9780791464571 ; 9780791483244 ; Romantic Poetry and the Fragmentary Imperative: Schlegel, Byron, Joyce, Blanchot ; 9780791483244 >
@@ -5449,7 +6152,21 @@
       au < released ; 2006 ; 9780874216349 ; 9780874215373 ; Voice in the Wilderness: Conversations with Terry Tempest Williams ; 9780874215373 >
       au < released ; 2006 ; 9780877459736 ; 9781587296703 ; Walt Whitman and the Class Struggle ; 9781587296703 >
       au < released ; 2006 ;  ; 9780803258587 ; When You Sing It Now, Just Like New: First Nations Poetics, Voices, and Representations ; 9780803258587 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2006 ; 9780299216344 ; 9780299216337 ; Wild Colonial Girl: Essays on Edna O'Brien ; 9780299216337 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2006 ; 9780292709713 ; 9780292796256 ; With Her Machete in Her Hand: Reading Chicana Lesbians ; 9780292796256 >
       au < released ; 2006 ; 9780824829582 ; 9780824865627 ; Woman Critiqued: Translated Essays on Japanese Women's Writing ; 9780824865627 >
       au < released ; 2006 ; 9780889204928 ; 9780889209084 ; Writing between the Lines: Portraits of Canadian Anglophone Translators ; 9780889209084 >
@@ -5506,7 +6223,21 @@
       au < released ; 2007 ; 9780791470411 ; 9780791480359 ; Hybridity: Limits, Transformations, Prospects ; 9780791480359 >
       au < released ; 2007 ; 9780268044107 ; 9780268096601 ; Iconic Spaces: The Dark Theology of Samuel Beckett's Drama ; 9780268096601 >
       au < released ; 2007 ; 9780823227693 ; 9780823247974 ; Idylls of the Wanderer: Outside in Literature and Theory ; 9780823247974 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2007 ; 9781587295249 ; 9781587297786 ; Images of Germany in American Literature ; 9781587297786 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2007 ; 9780299222307 ; 9780299222338 ; In Memory of Elaine Marks: Life Writing, Writing Death ; 9780299222338 >
       au < released ; 2007 ; 9780791471173 ; 9780791479988 ; Joining the Global Public: Word, Image, and City in Early Chinese Newspapers, 1870-1910 ; 9780791479988 >
       au < released ; 2007 ; 9780826342720 ; 9780826342737 ; Josefina Niggli, Mexican American Writer: A Critical Biography ; 9780826342737 >
@@ -5540,7 +6271,21 @@
       au < released ; 2007 ;  ; 9781592136261 ; Savoring the Salt: The Legacy of Toni Cade Bambara ; 9781592136261 >
       au < released ; 2007 ; 9780776606286 ; 9780776617664 ; Second Finding: A Poetics of Translation ; 9780776617664 >
       au < released ; 2007 ; 9781602583436 ; 9781602580862 ; Seeming Knowledge: Shakespeare and Skeptical Faith ; 9781602580862 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2007 ; 9780810124219 ; 9780810162198 ; Shakespeare and the Nature of Love: Literature, Culture, Evolution ; 9780810162198 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2007 ; 9780873515658 ; 9780873516983 ; Son of the Middle Border ; 9780873516983 >
       au < released ; 2007 ; 9780889205116 ; 9781554581467 ; Speaking in the Past Tense: Canadian Novelists on Writing Historical Fiction ; 9781554581467 >
       au < released ; 2007 ; 9780820703916 ; 9780820705309 ; Spiritual Architecture and Paradise Regained: Milton's Literary Ecclesiology ; 9780820705309 >
@@ -5561,12 +6306,40 @@
       au < released ; 2007 ; 9780820703954 ; 9780820705132 ; The Self in Early Modern Literature: For the Common Good ; 9780820705132 >
       au < released ; 2007 ; 9780801885044 ; 9780801893278 ; The Third Citizen: Shakespeare's Theater and the Early Modern House of Commons ; 9780801893278 >
       au < released ; 2007 ; 9780826328557 ; 9780826328564 ; The Will to Heal: Psychological Recovery in the Novels of Latina Writers ; 9780826328564 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2007 ; 9780817315818 ; 9780817380175 ; The World in Which We Occur: John Dewey, Pragmatist Ecology, and American Ecological Writing in the Twentieth Century ; 9780817380175 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2007 ; 9780820703909 ; 9780820705224 ; Tradition and Subversion in Renaissance Literature: Studies in Shakespeare, Spenser, Jonson, and Donne ; 9780820705224 >
       au < released ; 2007 ; 9780889205130 ; 9781554581030 ; Trans.Can.Lit: Resituating the Study of Canadian Literature ; 9781554581030 >
       au < released ; 2007 ;  ; 9780803256453 ; Transatlantic Voices: Interpretations of Native North American Literatures ; 9780803256453 >
       au < released ; 2007 ; 9780776606613 ; 9780776617855 ; Translating Canada ; 9780776617855 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2007 ; 9781587296222 ; 9781587297700 ; Twain, Alcott, and the Birth of the Adolescent Reform Novel ; 9781587297700 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2007 ; 9780889205093 ; 9781554581214 ; Unfitting Stories: Narrative Approaches to Disease, Disability, and Trauma ; 9781554581214 >
       au < released ; 2007 ; 9780889205079 ; 9781554580729 ; Unsettling Narratives: Postcolonial Readings of Childrens Literature ; 9781554580729 >
       au < released ; 2007 ; 9780791471197 ; 9780791479926 ; Virginia Woolf and the Nineteenth-Century Domestic Novel ; 9780791479926 >
@@ -5618,7 +6391,21 @@
       au < released ; 2008 ; 9781554580163 ; 9781554581221 ; Home Words: Discourses of Childrens Literature in Canada ; 9781554581221 >
       au < released ; 2008 ; 9780873389471 ; 9781612776118 ; Hunting the Unicorn: A Critical Biography of Ruth Pitter ; 9781612776118 >
       au < released ; 2008 ; 9780824833176 ; 9780824862916 ; Imagine What It's Like: A Literature and Medicine Anthology ; 9780824862916 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2008 ; 9789622099210 ; 9789888052417 ; Ink Dances in Limbo: Gao Xingjian's Writing as Cultural Translation ; 9789888052417 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2008 ; 9781558496798 ; 9781613761809 ; Inventing the Addict: Drugs, Race, and Sexuality in Nineteenth-Century British and American Literature ; 9781613761809 >
       au < released ; 2008 ; 9781587296963 ; 9781587297649 ; James Merrill, Postmodern Magus: Myth and Poetics ; 9781587297649 >
       au < released ; 2008 ; 9780823227662 ; 9780823247233 ; Lacan and the Limits of Language ; 9780823247233 >
@@ -5678,7 +6465,21 @@
       au < released ; 2008 ; 9780292718845 ; 9780292793835 ; Toward a Latina Feminism of the Americas: Repression and Resistance in Chicana and Mexicana Literature ; 9780292793835 >
       au < released ; 2008 ; 9780810152083 ; 9780810162532 ; Trace of Judaism: Dostoevsky, Babel, Mandelstam, Levinas ; 9780810162532 >
       au < released ; 2008 ;  ; 9780803218543 ; Tribal Theory in Native American Literature: Dakota and Haudenosaunee Writing and Indigenous Worldviews ; 9780803218543 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2008 ; 9781587296543 ; 9781587297311 ; Truth in Nonfiction: Essays ; 9781587297311 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2008 ; 9781558496835 ; 9781613760819 ; Trying to Think with Emily Dickinson ; 9781613760819 >
       au < released ; 2008 ; 9780299220044 ; 9780299220037 ; Ulysses in Black: Ralph Ellison, Classicism, and African American Literature ; 9780299220037 >
       au < released ; 2008 ; 9781557534842 ; 9781612491202 ; Utopian Dreams, Apocalyptic Nightmares: Globilization in Recent Mexican and Chicano Narrative ; 9781612491202 >
@@ -5690,7 +6491,21 @@
       au < released ; 2008 ; 9781557534859 ; 9781612491196 ; Writing Identity: The Politics of Contemporary Afro-Brazilian Literature ; 9781612491196 >
       au < released ; 2008 ; 9780295988245 ; 9780295800165 ; Writing Off the Hyphen: New Perspectives on the Literature of the Puerto Rican Diaspora ; 9780295800165 >
       au < released ; 2008 ; 9781587296895 ; 9781587297434 ; Writing the Lost Generation: Expatriate Autobiography and American Modernism ; 9781587297434 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2008 ; 9781587296314 ; 9781587297236 ; Writing Vietnam, Writing Life: Caputo, Heinemann, O'Brien, Butler ; 9781587297236 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2008 ; 9780813542911 ; 9780813545127 ; Zora Neale Hurston: Collected Plays ; 9780813545127 >
       au < released ; 2009 ; 9781558497061 ; 9781613761229 ; 'A Mirror for Magistrates' and the Politics of the English Reformation ; 9781613761229 >
       au < released ; 2009 ; 9780812220643 ; 9780812200348 ; 'Miscegenation': Making Race in America ; 9780812200348 >
@@ -5852,7 +6667,21 @@
       au < released ; 2009 ; 9780812220841 ; 9780812203448 ; Used Books: Marking Readers in Renaissance England ; 9780812203448 >
       au < released ; 2009 ; 9781554581498 ; 9781554581757 ; Veneration and Revolt: Hermann Hesse and Swabian Pietism ; 9781554581757 >
       au < released ; 2009 ;  ; 9780803226883 ; Violence in Francophone African and Caribbean Women's Literature ; 9780803226883 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2009 ; 9781587294518 ; 9781587295164 ; Walt Whitman and the Earth: A Study in Ecopoetics ; 9781587295164 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2009 ; 9780271035659 ; 9780271052588 ; Weaving Narrative: Clothing in Twelfth-Century French Romance ; 9780271052588 >
       au < released ; 2009 ; 9781421404004 ; 9781421403106 ; Why Do We Care about Literary Characters? ; 9781421403106 >
       au < released ; 2009 ; 9781554580323 ; 9781554580934 ; Wider Boundaries of Daring: The Modernist Impulse in Canadian Womens Poetry ; 9781554580934 >
@@ -5902,14 +6731,21 @@
       au < released ; 2012 ; 9780299225247 ; 9780299225230 ; Tourism, Landscape, and the Irish Character: British Travel Writers in Pre-Famine Ireland ; 9780299225230 >
       au < released ; 2012 ; 9780813926469 ; 9780813926728 ; Vulnerable States: Bodies of Memory in Contemporary Caribbean Fiction ; 9780813926728 >
 
+    }
+
+
   }
 
   {
 
-      title <
-        name = Archive Literature Supplement ;
-        type = bookSeries
-      >
+    title <
+      name = Archive Literature Supplement ;
+      type = bookSeries
+    >
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
 
       au < released ; 1968 ; 9780807101506 ; 9780807151440 ; Twelve Years A Slave ; 9780807151440 >
       au < released ; 1980 ; 9780807142455 ; 9780807142462 ; Flannery O'Connor's Dark Comedies: The Limits of Inference ; 9780807142462 >
@@ -6117,14 +6953,21 @@
       au < released ; 2012 ; 9780813213873 ; 9780813216546 ; The third spring: G.K. Chesterton, Graham Greene, Christopher Dawson, and David Jones ; 9780813216546 >
       au < released ; 2012 ; 9780812242201 ; 9780812207934 ; Theatrical Nation: Jews and Other Outlandish Englishmen in Georgian Britain ; 9780812207934 >
 
+    }
+
+
   }
 
   {
 
-      title <
-        name = Archive Literature Supplement II ;
-        type = bookSeries
-      >
+    title <
+      name = Archive Literature Supplement II ;
+      type = bookSeries
+    >
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
 
       au < released ; 1959 ; 9780299808952 ; 9780299808938 ; Classics in Translation, Volume I: Greek Literature ; 9780299808938 >
       au < released ; 1959 ; 9780299808969 ; 9780299808990 ; Classics in Translation, Volume II: Latin Literature ; 9780299808990 >
@@ -6220,7 +7063,21 @@
       au < released ; 2006 ; 9780809328673 ; 9780809387892 ; Action Writing: Jack Kerouac's Wild Form ; 9780809387892 >
       au < released ; 2006 ; 9780807856857 ; 9781469604916 ; Dred: A Tale of the Great Dismal Swamp ; 9781469604916 >
       au < released ; 2006 ; 9789637326578 ; 9786155211058 ; Imperfection and Defeat: The Role of Aesthetic Imagination in Human Society ; 9786155211058 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < notReady ; 2006 ; 9789058675781 ; 9789461660220 ; Textual Mobility and Cultural Transmission: Tekstmobiliteit en Culturele Overdracht ; 9789461660220 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2006 ; 9780520245112 ; 9780520938854 ; The Fire: Collected Essays of Robin Blaser ; 9780520938854 >
       au < released ; 2006 ; 9780801444081 ; 9780801460302 ; The Growth of the Medieval Icelandic Sagas (11801280) ; 9780801460302 >
       au < released ; 2006 ; 9780801444289 ; 9780801462269 ; Treason by Words: Literature, Law, and Rebellion in Shakespeare's England ; 9780801462269 >
@@ -6439,6 +7296,9 @@
       au < released ; 2013 ; 9780819568670 ; 9780819573919 ; Rhetorics of Fantasy ; 9780819573919 >
       au < released ; 2013 ; 9780879728168 ; 9780879728816 ; The Detective as Historian: History and Art in Historical Crime Fiction ; 9780879728816 >
       au < released ; 2013 ; 9780813190761 ; 9780813144085 ; Unchained Voices: An Anthology of Black Authors in the English-Speaking World of the Eighteenth Century ; 9780813144085 >
+
+    }
+
 
   }
 
