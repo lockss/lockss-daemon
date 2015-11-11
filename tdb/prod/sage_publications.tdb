@@ -5360,7 +5360,7 @@
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2015 ; Cardiovascular and Thoracic Open Volume 1 ; 1 >
+      au < manifest ; 2015 ; Cardiovascular and Thoracic Open Volume 1 ; 1 >
 
   }
 
@@ -24719,7 +24719,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         param[base_url] = http://jor.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2015 ; Journal of Feline Medicine and Surgery Open Reports Volume 1 ; 1 >
+      au < manifest ; 2015 ; Journal of Feline Medicine and Surgery Open Reports Volume 1 ; 1 >
 
       }
 
@@ -25321,7 +25321,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < exists ; 2012-2013 ; Journal of Historical Research in Music Education Volume 34 ; 34 >
       au < exists ; 2013-2014 ; Journal of Historical Research in Music Education Volume 35 ; 35 >
       au < exists ; 2014-2015 ; Journal of Historical Research in Music Education Volume 36 ; 36 >
-      au < exists ; 2015-2016 ; Journal of Historical Research in Music Education Volume 37 ; 37 >
+      au < manifest ; 2015-2016 ; Journal of Historical Research in Music Education Volume 37 ; 37 >
 
    }
 
@@ -29800,7 +29800,7 @@ comment[mpj] = now published by Brill
 
       au < exists ; 2010 ; Journal of Reproductive Biotechnology and Fertility Volume 1 ; 1 >
       au < exists ; 2011 ; Journal of Reproductive Biotechnology and Fertility Volume 2 ; 2 >
-      au < exists ; 2012 ; Journal of Reproductive Biotechnology and Fertility Volume 3 ; 3 >
+      au < manifest ; 2012 ; Journal of Reproductive Biotechnology and Fertility Volume 3 ; 3 >
 
   }
 
@@ -33561,7 +33561,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2015 ; National Institute Economic Review Volume 231 ; 231 >
         au < manifest ; 2015 ; National Institute Economic Review Volume 232 ; 232 >
         au < manifest ; 2015 ; National Institute Economic Review Volume 233 ; 233 >
-        au < expected ; 2015 ; National Institute Economic Review Volume 234 ; 234 >
+        au < manifest ; 2015 ; National Institute Economic Review Volume 234 ; 234 >
 
       }
 
@@ -36077,7 +36077,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 56 ; 56 >
         au < manifest ; 2013 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 57 ; 57 >
         au < manifest ; 2014 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 58 ; 58 >
-        au < expected ; 2015 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 59 ; 59 >
+        au < manifest ; 2015 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 59 ; 59 >
 
       }
 
@@ -39237,7 +39237,7 @@ comment[mpj] = now published by Brill
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2015 ; SAGE Open Nursing Volume 1 ; 1 >
+      au < manifest ; 2015 ; SAGE Open Nursing Volume 1 ; 1 >
 
   }
 
@@ -39343,7 +39343,7 @@ comment[mpj] = now published by Brill
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2015 ; Scars, Burns & Healing Volume 1 ; 1 >
+      au < manifest ; 2015 ; Scars, Burns & Healing Volume 1 ; 1 >
 
   }
 
@@ -49373,7 +49373,7 @@ comment[mpj] = now published by Brill
         comment[continues] = 2042-5333
 
         au < released ; 2014 ; JRSM Open Volume 5 ; 5 >
-        au < expected ; 2015 ; JRSM Open Volume 6 ; 6 >
+        au < manifest ; 2015 ; JRSM Open Volume 6 ; 6 >
 
     }
 
