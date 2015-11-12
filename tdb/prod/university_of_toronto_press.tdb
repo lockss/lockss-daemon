@@ -1105,13 +1105,12 @@
 
     param[journal_dir] = university_of_toronto_quarterly
     attr[journal_id] = utq
-    comment[v73] = malformed manifest page. No content.
 
     {
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < doNotProcess ; 2004 ; University of Toronto Quarterly Volume 73 ; 73 >
+      au < manifest ; 2004 ; University of Toronto Quarterly Volume 73 ; 73 >
 
     }
 
