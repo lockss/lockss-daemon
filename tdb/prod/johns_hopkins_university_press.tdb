@@ -791,11 +791,27 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < manifest ; 2014 ; diacritics Volume 42 ; 42 >
-      au < exists ; 2015 ; diacritics Volume 43 ; 43 >
+      au < manifest ; 2015 ; diacritics Volume 43 ; 43 >
 
     }
 
     
+  }
+
+  {
+    title <
+      name = Dickens Quarterly ;
+      issn = 0742-5473 ;
+      eissn = 2169-5377 ;
+      issnl = 0742-5473
+    >
+    
+      param[journal_dir] = dickens_quarterly
+      attr[journal_id] = dqt
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2015 ; Dickens Quarterly Volume 32 ; 32 >
   }
 
   {
