@@ -49,8 +49,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; American Imago Volume 71 ; 71 >
-      au < manifest ; 2015 ; American Imago Volume 72 ; 72 >
+      au < testing ; 2014 ; American Imago Volume 71 ; 71 >
+      au < testing ; 2015 ; American Imago Volume 72 ; 72 >
 
     }
 
@@ -94,8 +94,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; American Jewish History Volume 98 ; 98 >
-      au < manifest ; 2015 ; American Jewish History Volume 99 ; 99 >
+      au < testing ; 2014 ; American Jewish History Volume 98 ; 98 >
+      au < testing ; 2015 ; American Jewish History Volume 99 ; 99 >
 
     }
 
@@ -142,8 +142,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; American Journal of Mathematics Volume 136 ; 136 >
-      au < manifest ; 2015 ; American Journal of Mathematics Volume 137 ; 137 >
+      au < testing ; 2014 ; American Journal of Mathematics Volume 136 ; 136 >
+      au < testing ; 2015 ; American Journal of Mathematics Volume 137 ; 137 >
 
     }
 
@@ -286,12 +286,31 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Arethusa Volume 47 ; 47 >
-      au < manifest ; 2015 ; Arethusa Volume 48 ; 48 >
+      au < testing ; 2014 ; Arethusa Volume 47 ; 47 >
+      au < testing ; 2015 ; Arethusa Volume 48 ; 48 >
 
     }
 
     
+  }
+
+  {
+    title <
+      name = ariel: A Review of International English Literature ;
+      issn = 0004-1327 ;
+      eissn = 1920-1222 ;
+      issnl = 0004-1327
+    >
+
+      param[journal_dir] = ariel_a_review_of_international_english_literature
+      attr[journal_id] = ari
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < testing ; 2013 ; ariel: A Review of International English Literature Volume 44 ; 44 >
+      au < testing ; 2014 ; ariel: A Review of International English Literature Volume 45 ; 45 >
+      au < testing ; 2015 ; ariel: A Review of International English Literature Volume 46 ; 46 >
+
   }
 
   {
@@ -332,8 +351,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Book History Volume 17 ; 17 >
-      au < manifest ; 2015 ; Book History Volume 18 ; 18 >
+      au < testing ; 2014 ; Book History Volume 17 ; 17 >
+      au < testing ; 2015 ; Book History Volume 18 ; 18 >
 
     }
 
@@ -369,8 +388,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Bookbird: A Journal of International Children's Literature Volume 52 ; 52 >
-      au < manifest ; 2015 ; Bookbird: A Journal of International Children's Literature Volume 53 ; 53 >
+      au < testing ; 2014 ; Bookbird: A Journal of International Children's Literature Volume 52 ; 52 >
+      au < testing ; 2015 ; Bookbird: A Journal of International Children's Literature Volume 53 ; 53 >
 
     }
 
@@ -408,7 +427,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014-2015 ; Bulletin of the Center for Children's Books Volume 68 ; 68 >
+      au < testing ; 2014-2015 ; Bulletin of the Center for Children's Books Volume 68 ; 68 >
 
     }
 
@@ -455,8 +474,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Bulletin of the History of Medicine Volume 88 ; 88 >
-      au < manifest ; 2015 ; Bulletin of the History of Medicine Volume 89 ; 89 >
+      au < testing ; 2014 ; Bulletin of the History of Medicine Volume 88 ; 88 >
+      au < testing ; 2015 ; Bulletin of the History of Medicine Volume 89 ; 89 >
 
     }
 
@@ -504,8 +523,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Callaloo Volume 37 ; 37 >
-      au < manifest ; 2015 ; Callaloo Volume 38 ; 38 >
+      au < testing ; 2014 ; Callaloo Volume 37 ; 37 >
+      au < testing ; 2015 ; Callaloo Volume 38 ; 38 >
 
     }
 
@@ -534,8 +553,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; CEA Critic Volume 76 ; 76 >
-      au < manifest ; 2015 ; CEA Critic Volume 77 ; 77 >
+      au < testing ; 2014 ; CEA Critic Volume 76 ; 76 >
+      au < testing ; 2015 ; CEA Critic Volume 77 ; 77 >
 
     }
 
@@ -605,8 +624,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Children's Literature Volume 42 ; 42 >
-      au < manifest ; 2015 ; Children's Literature Volume 43 ; 43 >
+      au < testing ; 2014 ; Children's Literature Volume 42 ; 42 >
+      au < testing ; 2015 ; Children's Literature Volume 43 ; 43 >
 
     }
 
@@ -645,8 +664,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Children's Literature Association Quarterly Volume 39 ; 39 >
-      au < manifest ; 2015 ; Children's Literature Association Quarterly Volume 40 ; 40 >
+      au < testing ; 2014 ; Children's Literature Association Quarterly Volume 39 ; 39 >
+      au < testing ; 2015 ; Children's Literature Association Quarterly Volume 40 ; 40 >
 
     }
 
