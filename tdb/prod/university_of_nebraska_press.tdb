@@ -437,7 +437,29 @@
 
 
   }
+  {
+  
+    title <
+      name = Middle West Review ;
+      issn = 2372-5664 ; 
+      eissn = 2372-5672 ;
+      
+    >
 
+    param[journal_dir] = middle_west_review
+    attr[journal_id] = mwr
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Middle West Review 1 ; 1 >
+      au < manifest ; 2015 ; Middle West Review 2 ; 2 >
+
+    }
+
+    
+  }
   {
   
     title <
