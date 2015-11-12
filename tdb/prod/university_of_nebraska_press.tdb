@@ -262,6 +262,30 @@
   {
   
     title <
+      name = Great Plains Quarterly ;
+      issn = 1052-5165 ;
+      eissn = 2334-2463 ;
+      issnl = 2334-2463
+    >
+
+    param[journal_dir] = great_plains_quarterly
+    attr[journal_id] = gpq
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Great Plains Quarterly Volume 34 ; 34 >
+      au < manifest ; 2015 ; Great Plains Quarterly Volume 35 ; 35 >
+
+    }
+
+
+  }
+
+  {
+  
+    title <
       name = Great Plains Research ;
       issn = 1052-5165 ;
       eissn = 2334-2463 ;
