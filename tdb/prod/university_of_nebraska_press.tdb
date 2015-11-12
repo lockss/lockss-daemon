@@ -44,8 +44,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; The American Indian Quarterly Volume 38 ; 38 >
-      au < manifest ; 2015 ; The American Indian Quarterly Volume 39 ; 39 >
+      au < testing ; 2014 ; The American Indian Quarterly Volume 38 ; 38 >
+      au < testing ; 2015 ; The American Indian Quarterly Volume 39 ; 39 >
 
     }
 
@@ -103,7 +103,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Anthropological Linguistics Volume 56 ; 56 >
+      au < testing ; 2014 ; Anthropological Linguistics Volume 56 ; 56 >
       au < expected ; 2015 ; Anthropological Linguistics Volume 57 ; 57 >
 
     }
@@ -140,7 +140,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014-2015 ; Collaborative Anthropologies Volume 7 ; 7 >
+      au < testing ; 2014-2015 ; Collaborative Anthropologies Volume 7 ; 7 >
       au < expected ; 2015 ; Collaborative Anthropologies Volume 8 ; 8 >
 
     }
@@ -184,8 +184,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; French Forum Volume 39 ; 39 >
-      au < manifest ; 2015 ; French Forum Volume 40 ; 40 >
+      au < testing ; 2014 ; French Forum Volume 39 ; 39 >
+      au < testing ; 2015 ; French Forum Volume 40 ; 40 >
 
     }
 
@@ -228,11 +228,34 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Frontiers: A Journal of Women Studies Volume 35 ; 35 >
-      au < manifest ; 2015 ; Frontiers: A Journal of Women Studies Volume 36 ; 36 >
+      au < testing ; 2014 ; Frontiers: A Journal of Women Studies Volume 35 ; 35 >
+      au < testing ; 2015 ; Frontiers: A Journal of Women Studies Volume 36 ; 36 >
 
     }
 
+
+  }
+
+  {
+  
+    title <
+      name = Gettysburg Magazine ;
+      issn = 2372-6059 ;
+      eissn = 2377-0783 ;
+      issnl = 2372-6059
+    >
+
+    param[journal_dir] = gettysburg_magazine
+    attr[journal_id] = get
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < testing ; 2015 ; Gettysburg Magazine Volume 52 ; 52 >
+      au < testing ; 2015 ; Gettysburg Magazine Volume 53 ; 53 >
+
+    }
 
   }
 
@@ -252,8 +275,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Great Plains Research Volume 24 ; 24 >
-      au < manifest ; 2015 ; Great Plains Research Volume 25 ; 25 >
+      au < testing ; 2014 ; Great Plains Research Volume 24 ; 24 >
+      au < testing ; 2015 ; Great Plains Research Volume 25 ; 25 >
 
     }
 
@@ -437,12 +460,13 @@
 
 
   }
+
   {
   
     title <
       name = Middle West Review ;
       issn = 2372-5664 ; 
-      eissn = 2372-5672 ;
+      eissn = 2372-5672 
       
     >
 
@@ -460,6 +484,7 @@
 
     
   }
+
   {
   
     title <
