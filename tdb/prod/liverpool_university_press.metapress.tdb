@@ -302,16 +302,31 @@
       issnl = 1757-6822
     >
  
-    plugin = org.lockss.plugin.metapress.MetaPressPlugin
-    param[base_url] = http://liverpool.metapress.com/
-    implicit < status ; year ; name ; param[volume_name] >     
-    param[journal_issn] = 1757-6830     
+    {
+      plugin = org.lockss.plugin.metapress.MetaPressPlugin
+      param[base_url] = http://liverpool.metapress.com/
+      implicit < status ; year ; name ; param[volume_name] >     
+      param[journal_issn] = 1757-6830     
+      
+      au < down ; 2009 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 1 ; 1 >
+      au < down ; 2010 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 2 ; 2 >
+      au < down ; 2011 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 3 ; 3 >
+      au < down ; 2012 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 4 ; 4 >
+      au < doNotProcess ; 2013 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 5 ; 5 >
+    }
 
-    au < down ; 2009 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 1 ; 1 >
-    au < down ; 2010 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 2 ; 2 >
-    au < down ; 2011 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 3 ; 3 >
-    au < down ; 2012 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 4 ; 4 >
-    au < doNotProcess ; 2013 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 5 ; 5 >
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[journal_dir] = european_journal_of_language_policy
+      attr[journal_id] = ejl
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < testing ; 2014 ; European Journal of Language Policy Volume 6 [Project MUSE] ; 6 >
+        au < testing ; 2015 ; European Journal of Language Policy Volume 7 [Project MUSE] ; 7 >
+
+    }
 
   }
 
