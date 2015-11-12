@@ -247,7 +247,7 @@ public class DisplayContentTab extends LockssServlet {
                     allAus = DisplayContentTable.orderAusByPublisherAndTitle(filterAus(TdbUtil.getConfiguredAus(),
                             filterType), filterKey);
                 }
-        for (int i = start; i < end; i++) {
+        for (int i = start; i <= end; i++) {
             for (Map.Entry<String, TreeMap<String, TreeSet<ArchivalUnit>>> stringTreeSetEntry : allAus.entrySet()) {
                 Map.Entry<String, TreeMap<String, TreeSet<ArchivalUnit>>> pairs = (Map.Entry) stringTreeSetEntry;
                 String publisherName = pairs.getKey().toLowerCase();
