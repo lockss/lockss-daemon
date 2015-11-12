@@ -33,7 +33,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.3.3'
+__version__ = '0.3.4'
 
 import getpass
 import itertools
@@ -67,7 +67,7 @@ def get_au_status(host, auth, auid):
   - PluginName (string)
   - Publisher (string)
   - PublishingPlatform (string)
-  - RecentPollAgreement (numeric)
+  - RecentPollAgreement (floating point)
   - Repository (string)
   - Status (string)
   - SubscriptionStatus (string)
@@ -239,10 +239,10 @@ def query_aus(host, auth, select, where=None):
   - auth (ZSI authentication object): an authentication object
   - select (string or list of strings): if a list of strings, the field names to
   be used in the SELECT clause; if a string, the single field name to be used in
-  the SELECT clause; if the special value daemonstatusservice.STAR, all fields
+  the SELECT clause
   - where (string): optional statement for the WHERE clause (default: None)
   Raises:
-  - ValueError if select is not of the right types
+  - ValueError if select is not of the right type
   '''
   if type(select) is list: query = 'SELECT %s' % (', '.join(select))
   elif type(select) is str: query = 'SELECT %s' % (select,)
@@ -510,13 +510,16 @@ def _do_get_platform_configuration(options):
 
 def _do_is_daemon_ready(options):
   '''Outputs a table whose rows are target hosts and whose column is filled with
-  'True' is the host is ready or 'False' otherwise.
+  'True' is the host is ready or 'False' otherwise. (If there is a single target
+  host and single output is not disabled, only the word 'True' or 'False' is
+  displayed.)
   '''
-  if options.single_output():
+  # Special case
+  if len(options.hosts) == 1 and not options.no_single_output:
     print str(is_daemon_ready(options.hosts[0], options.auth))
     return
   for host in sorted(options.hosts):
-    _output_record([host, str(is_daemon_ready(host, options.auth))])
+    _output_record(options, [host, str(is_daemon_ready(host, options.auth))])
 
 def _do_is_daemon_ready_quiet(options):
   '''Outputs nothing; exits with 0 if all target hosts are ready, 1
