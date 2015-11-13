@@ -94,8 +94,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; American Jewish History Volume 98 ; 98 >
-      au < testing ; 2015 ; American Jewish History Volume 99 ; 99 >
+      au < ready ; 2014 ; American Jewish History Volume 98 ; 98 >
+      au < ready ; 2015 ; American Jewish History Volume 99 ; 99 >
 
     }
 
@@ -307,9 +307,9 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2013 ; ariel: A Review of International English Literature Volume 44 ; 44 >
-      au < testing ; 2014 ; ariel: A Review of International English Literature Volume 45 ; 45 >
-      au < testing ; 2015 ; ariel: A Review of International English Literature Volume 46 ; 46 >
+      au < ready ; 2013 ; ariel: A Review of International English Literature Volume 44 ; 44 >
+      au < ready ; 2014 ; ariel: A Review of International English Literature Volume 45 ; 45 >
+      au < ready ; 2015 ; ariel: A Review of International English Literature Volume 46 ; 46 >
 
   }
 
@@ -388,8 +388,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; Bookbird: A Journal of International Children's Literature Volume 52 ; 52 >
-      au < testing ; 2015 ; Bookbird: A Journal of International Children's Literature Volume 53 ; 53 >
+      au < ready ; 2014 ; Bookbird: A Journal of International Children's Literature Volume 52 ; 52 >
+      au < ready ; 2015 ; Bookbird: A Journal of International Children's Literature Volume 53 ; 53 >
 
     }
 
@@ -474,8 +474,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; Bulletin of the History of Medicine Volume 88 ; 88 >
-      au < testing ; 2015 ; Bulletin of the History of Medicine Volume 89 ; 89 >
+      au < ready ; 2014 ; Bulletin of the History of Medicine Volume 88 ; 88 >
+      au < ready ; 2015 ; Bulletin of the History of Medicine Volume 89 ; 89 >
 
     }
 
@@ -625,7 +625,7 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < testing ; 2014 ; Children's Literature Volume 42 ; 42 >
-      au < testing ; 2015 ; Children's Literature Volume 43 ; 43 >
+      au < ready ; 2015 ; Children's Literature Volume 43 ; 43 >
 
     }
 
@@ -664,7 +664,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; Children's Literature Association Quarterly Volume 39 ; 39 >
+      au < ready ; 2014 ; Children's Literature Association Quarterly Volume 39 ; 39 >
       au < testing ; 2015 ; Children's Literature Association Quarterly Volume 40 ; 40 >
 
     }
