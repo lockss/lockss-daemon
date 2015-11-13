@@ -905,6 +905,140 @@
 
     }
 
+    {
+      title <
+        name = Annals of Clinical Microbiology and Antimicrobials ;
+        eissn = 1476-0711 ;
+        issnl = 1476-0711
+      >
+    
+      param[base_url] = http://ann-clinmicrob.biomedcentral.com/
+      param[journal_issn] = 1476-0711
+
+      au < exists ; exists ; 2002 ; Annals of Clinical Microbiology and Antimicrobials Volume 1 ; 1 >
+      au < exists ; exists ; 2003 ; Annals of Clinical Microbiology and Antimicrobials Volume 2 ; 2 >
+      au < exists ; exists ; 2004 ; Annals of Clinical Microbiology and Antimicrobials Volume 3 ; 3 >
+      au < exists ; exists ; 2005 ; Annals of Clinical Microbiology and Antimicrobials Volume 4 ; 4 >
+      au < exists ; exists ; 2006 ; Annals of Clinical Microbiology and Antimicrobials Volume 5 ; 5 >
+      au < exists ; exists ; 2007 ; Annals of Clinical Microbiology and Antimicrobials Volume 6 ; 6 >
+      au < doNotProcess ; doNotProcess ; 2008 ; Annals of Clinical Microbiology and Antimicrobials Volume 7 ; 7 >
+      au < exists ; exists ; 2009 ; Annals of Clinical Microbiology and Antimicrobials Volume 8 ; 8 >
+      au < doNotProcess ; doNotProcess ; 2010 ; Annals of Clinical Microbiology and Antimicrobials Volume 9 ; 9 >
+      au < doNotProcess ; doNotProcess ; 2011 ; Annals of Clinical Microbiology and Antimicrobials Volume 10 ; 10 >
+      au < doNotProcess ; doNotProcess ; 2012 ; Annals of Clinical Microbiology and Antimicrobials Volume 11 ; 11 >
+      au < exists ; exists ; 2013 ; Annals of Clinical Microbiology and Antimicrobials Volume 12 ; 12 >
+      au < exists ; exists ; 2014 ; Annals of Clinical Microbiology and Antimicrobials Volume 13 ; 13 >
+      au < exists ; exists ; 2015 ; Annals of Clinical Microbiology and Antimicrobials Volume 14 ; 14 >
+
+    }
+
+    {
+      title <
+        name = BioPsychoSocial Medicine ;
+        eissn = 1751-0759 ;
+        issnl = 1751-0759
+      >
+
+      param[base_url] = http://biotechnologyforbiofuels.biomedcentral.com/ 
+      param[journal_issn] = 1751-0759
+
+      au < exists ; exists ; 2007 ; BioPsychoSocial Medicine Volume 1 ; 1 >
+      au < doNotProcess ; doNotProcess ; 2008 ; BioPsychoSocial Medicine Volume 2 ; 2 >
+      au < exists ; exists ; 2009 ; BioPsychoSocial Medicine Volume 3 ; 3 >
+      au < doNotProcess ; doNotProcess ; 2010 ; BioPsychoSocial Medicine Volume 4 ; 4 >
+      au < doNotProcess ; doNotProcess ; 2011 ; BioPsychoSocial Medicine Volume 5 ; 5 >
+      au < exists ; exists ; 2012 ; BioPsychoSocial Medicine Volume 6 ; 6 >
+      au < exists ; exists ; 2013 ; BioPsychoSocial Medicine Volume 7 ; 7 >
+      au < doNotProcess ; doNotProcess ; 2014 ; BioPsychoSocial Medicine Volume 8 ; 8 >
+      au < exists ; exists ; 2015 ; BioPsychoSocial Medicine Volume 9 ; 9 >
+      
+    }
+
+    {
+
+      title <
+        name = Cell Regeneration ;
+        issn = 2045-9769 ;
+        issnl = 2045-9769
+      >
+
+      param[base_url] = http://cellregenerationjournal.biomedcentral.com/
+      param[journal_issn] = 2045-9769
+
+      au < exists ; exists ; 2012 ; Cell Regeneration Volume 1 ; 1 >
+      au < exists ; exists ; 2013 ; Cell Regeneration Volume 2 ; 2 >
+      au < exists ; exists ; 2014 ; Cell Regeneration Volume 3 ; 3 >
+      au < exists ; exists ; 2015 ; Cell Regeneration Volume 4 ; 4 >
+
+    }
+
+    {
+      title <
+        name = Cerebellum & Ataxias ;
+        eissn = 2053-8871 ;
+        issnl = 2053-8871
+      >
+      
+      param[base_url] = http://cerebellumandataxias.biomedcentral.com/
+      param[journal_issn] = 2053-8871
+
+      au < doNotProcess ; doNotProcess ; 2014 ; Cerebellum & Ataxias Volume 1 ; 1 >
+      au < exists ; exists ; 2015 ; Cerebellum & Ataxias Volume 2 ; 2 >
+      
+    }
+
+    {
+      title <
+        name = Chinese Neurosurgical Journal ;
+        eissn = 2057-4967 ;
+        issnl = 2057-4967
+      >
+      
+      param[base_url] = http://cnjournal.biomedcentral.com/
+      param[journal_issn] = 2057-4967
+
+      au < exists ; exists ; 2014 ; Chinese Neurosurgical Journal Volume 1 ; 1 >
+      au < exists ; exists ; 2015 ; Chinese Neurosurgical Journal Volume 2 ; 2 >
+      
+    }
+
+    {
+      title <
+        name = Chiropractic & Manual Therapies ;
+        eissn = 2045-709X 
+      >
+      
+      comment[continues] = 1746-1340
+      param[journal_issn] = 2045-709X
+      param[base_url] = http://chiromt.biomedcentral.com/
+      
+      au < exists ; exists ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 >
+      au < exists ; exists ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
+      au < exists ; exists ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 >
+      au < doNotProcess ; doNotProcess ; 2014 ; Chiropractic & Manual Therapies Volume 22 ; 22 >
+      au < exists ; exists ; 2015 ; Chiropractic & Manual Therapies Volume 23 ; 23 >
+
+    }
+    
+    {
+
+      title <
+        name = Clinical Sarcoma Research ;
+        issn = 2045-3329 ;
+        issnl = 2045-3329
+      >
+
+      param[base_url] = http://clinicalsarcomaresearch.biomedcentral.com/ 
+      param[journal_issn] = 2045-3329
+
+      au < exists ; exists ; 2011 ; Clinical Sarcoma Research Volume 1 ; 1 >
+      au < exists ; exists ; 2012 ; Clinical Sarcoma Research Volume 2 ; 2 >
+      au < exists ; exists ; 2013 ; Clinical Sarcoma Research Volume 3 ; 3 >
+      au < doNotProcess ; doNotProcess ; 2014 ; Clinical Sarcoma Research Volume 4 ; 4 >
+      au < exists ; exists ; 2015 ; Clinical Sarcoma Research Volume 5 ; 5 >
+
+    }
+
   }
   
 }

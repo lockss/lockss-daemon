@@ -225,20 +225,20 @@
       param[base_url] = http://www.ann-clinmicrob.com/
       param[journal_issn] = 1476-0711
 
-      au < manifest ; exists ; 2002 ; Annals of Clinical Microbiology and Antimicrobials Volume 1 ; 1 >
-      au < manifest ; exists ; 2003 ; Annals of Clinical Microbiology and Antimicrobials Volume 2 ; 2 >
-      au < manifest ; exists ; 2004 ; Annals of Clinical Microbiology and Antimicrobials Volume 3 ; 3 >
-      au < manifest ; exists ; 2005 ; Annals of Clinical Microbiology and Antimicrobials Volume 4 ; 4 >
-      au < manifest ; exists ; 2006 ; Annals of Clinical Microbiology and Antimicrobials Volume 5 ; 5 >
-      au < manifest ; exists ; 2007 ; Annals of Clinical Microbiology and Antimicrobials Volume 6 ; 6 >
+      au < doNotProcess ; exists ; 2002 ; Annals of Clinical Microbiology and Antimicrobials Volume 1 ; 1 >
+      au < doNotProcess ; exists ; 2003 ; Annals of Clinical Microbiology and Antimicrobials Volume 2 ; 2 >
+      au < doNotProcess ; exists ; 2004 ; Annals of Clinical Microbiology and Antimicrobials Volume 3 ; 3 >
+      au < doNotProcess ; exists ; 2005 ; Annals of Clinical Microbiology and Antimicrobials Volume 4 ; 4 >
+      au < doNotProcess ; exists ; 2006 ; Annals of Clinical Microbiology and Antimicrobials Volume 5 ; 5 >
+      au < doNotProcess ; exists ; 2007 ; Annals of Clinical Microbiology and Antimicrobials Volume 6 ; 6 >
       au < finished ; crawling ; 2008 ; Annals of Clinical Microbiology and Antimicrobials Volume 7 ; 7 >
-      au < crawling ; exists ; 2009 ; Annals of Clinical Microbiology and Antimicrobials Volume 8 ; 8 >
+      au < down ; exists ; 2009 ; Annals of Clinical Microbiology and Antimicrobials Volume 8 ; 8 >
       au < finished ; crawling ; 2010 ; Annals of Clinical Microbiology and Antimicrobials Volume 9 ; 9 >
       au < finished ; crawling ; 2011 ; Annals of Clinical Microbiology and Antimicrobials Volume 10 ; 10 >
       au < finished ; crawling ; 2012 ; Annals of Clinical Microbiology and Antimicrobials Volume 11 ; 11 >
-      au < crawling ; exists ; 2013 ; Annals of Clinical Microbiology and Antimicrobials Volume 12 ; 12 >
-      au < crawling ; exists ; 2014 ; Annals of Clinical Microbiology and Antimicrobials Volume 13 ; 13 >
-      au < crawling ; exists ; 2015 ; Annals of Clinical Microbiology and Antimicrobials Volume 14 ; 14 >
+      au < down ; exists ; 2013 ; Annals of Clinical Microbiology and Antimicrobials Volume 12 ; 12 >
+      au < down ; exists ; 2014 ; Annals of Clinical Microbiology and Antimicrobials Volume 13 ; 13 >
+      au < down ; exists ; 2015 ; Annals of Clinical Microbiology and Antimicrobials Volume 14 ; 14 >
 
     }
 
@@ -731,15 +731,15 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.bpsmedicine.com/
       param[journal_issn] = 1751-0759
 
-      au < manifest ; exists ; 2007 ; BioPsychoSocial Medicine Volume 1 ; 1 >
+      au < doNotProcess ; exists ; 2007 ; BioPsychoSocial Medicine Volume 1 ; 1 >
       au < finished ; crawling ; 2008 ; BioPsychoSocial Medicine Volume 2 ; 2 >
-      au < crawling ; exists ; 2009 ; BioPsychoSocial Medicine Volume 3 ; 3 >
+      au < down ; exists ; 2009 ; BioPsychoSocial Medicine Volume 3 ; 3 >
       au < finished ; crawling ; 2010 ; BioPsychoSocial Medicine Volume 4 ; 4 >
       au < finished ; crawling ; 2011 ; BioPsychoSocial Medicine Volume 5 ; 5 >
-      au < crawling ; exists ; 2012 ; BioPsychoSocial Medicine Volume 6 ; 6 >
-      au < crawling ; exists ; 2013 ; BioPsychoSocial Medicine Volume 7 ; 7 >
+      au < down ; exists ; 2012 ; BioPsychoSocial Medicine Volume 6 ; 6 >
+      au < down ; exists ; 2013 ; BioPsychoSocial Medicine Volume 7 ; 7 >
       au < finished ; crawling ; 2014 ; BioPsychoSocial Medicine Volume 8 ; 8 >
-      au < crawling ; exists ; 2015 ; BioPsychoSocial Medicine Volume 9 ; 9 >
+      au < down ; exists ; 2015 ; BioPsychoSocial Medicine Volume 9 ; 9 >
       
     }
 
@@ -1080,10 +1080,10 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.cellregenerationjournal.com/
       param[journal_issn] = 2045-9769
 
-      au < crawling ; exists ; 2012 ; Cell Regeneration Volume 1 ; 1 >
-      au < crawling ; exists ; 2013 ; Cell Regeneration Volume 2 ; 2 >
-      au < crawling ; exists ; 2014 ; Cell Regeneration Volume 3 ; 3 >
-      au < crawling ; exists ; 2015 ; Cell Regeneration Volume 4 ; 4 >
+      au < down ; exists ; 2012 ; Cell Regeneration Volume 1 ; 1 >
+      au < down ; exists ; 2013 ; Cell Regeneration Volume 2 ; 2 >
+      au < down ; exists ; 2014 ; Cell Regeneration Volume 3 ; 3 >
+      au < down ; exists ; 2015 ; Cell Regeneration Volume 4 ; 4 >
 
     }
 
@@ -1098,7 +1098,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[journal_issn] = 2053-8871
 
       au < finished ; crawling ; 2014 ; Cerebellum & Ataxias Volume 1 ; 1 >
-      au < crawling ; exists ; 2015 ; Cerebellum & Ataxias Volume 2 ; 2 >
+      au < down ; exists ; 2015 ; Cerebellum & Ataxias Volume 2 ; 2 >
       
     }
 
@@ -1188,11 +1188,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       {
       param[base_url] = http://www.chiromt.com/
       
-      au < crawling ; exists ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 >
-      au < crawling ; exists ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
+      au < down ; exists ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 >
+      au < down ; exists ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
       au < frozen ; exists ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 >
       au < finished ; crawling ; 2014 ; Chiropractic & Manual Therapies Volume 22 ; 22 >
-      au < crawling ; exists ; 2015 ; Chiropractic & Manual Therapies Volume 23 ; 23 >
+      au < down ; exists ; 2015 ; Chiropractic & Manual Therapies Volume 23 ; 23 >
 
       }
     }
@@ -1356,11 +1356,11 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.clinicalsarcomaresearch.com/
       param[journal_issn] = 2045-3329
 
-      au < crawling ; exists ; 2011 ; Clinical Sarcoma Research Volume 1 ; 1 >
+      au < down ; exists ; 2011 ; Clinical Sarcoma Research Volume 1 ; 1 >
       au < frozen ; exists ; 2012 ; Clinical Sarcoma Research Volume 2 ; 2 >
-      au < crawling ; exists ; 2013 ; Clinical Sarcoma Research Volume 3 ; 3 >
+      au < down ; exists ; 2013 ; Clinical Sarcoma Research Volume 3 ; 3 >
       au < finished ; crawling ; 2014 ; Clinical Sarcoma Research Volume 4 ; 4 >
-      au < crawling ; exists ; 2015 ; Clinical Sarcoma Research Volume 5 ; 5 >
+      au < down ; exists ; 2015 ; Clinical Sarcoma Research Volume 5 ; 5 >
 
     }
 
