@@ -8,7 +8,6 @@
   
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     implicit < status ; year ; name ; param[volume] >
-    param[base_url] = http://muse.jhu.edu/
 
     {
       title <
@@ -21,12 +20,25 @@
       param[journal_dir] = american_journal_of_theology_and_philosophy
       attr[journal_id] = ajt
 
-      au < released ; 2010 ; American Journal of Theology & Philosophy Volume 31 ; 31 >
-      au < released ; 2011 ; American Journal of Theology & Philosophy Volume 32 ; 32 >
-      au < released ; 2012 ; American Journal of Theology & Philosophy Volume 33 ; 33 >
-      au < released ; 2013 ; American Journal of Theology & Philosophy Volume 34 ; 34 >
-      au < manifest ; 2014 ; American Journal of Theology & Philosophy Volume 35 ; 35 >
-      au < manifest ; 2015 ; American Journal of Theology & Philosophy Volume 36 ; 36 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2010 ; American Journal of Theology & Philosophy Volume 31 ; 31 >
+        au < released ; 2011 ; American Journal of Theology & Philosophy Volume 32 ; 32 >
+        au < released ; 2012 ; American Journal of Theology & Philosophy Volume 33 ; 33 >
+        au < released ; 2013 ; American Journal of Theology & Philosophy Volume 34 ; 34 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < manifest ; 2014 ; American Journal of Theology & Philosophy Volume 35 ; 35 >
+        au < manifest ; 2015 ; American Journal of Theology & Philosophy Volume 36 ; 36 >
+
+      }
 
     }
 
@@ -41,15 +53,28 @@
       param[journal_dir] = american_literary_realism
       attr[journal_id] = alr
 
-      au < released ; 2007-2008 ; American Literary Realism Volume 40 ; 40 >
-      au < released ; 2008-2009 ; American Literary Realism Volume 41 ; 41 >
-      au < released ; 2009-2010 ; American Literary Realism Volume 42 ; 42 >
-      au < released ; 2010-2011 ; American Literary Realism Volume 43 ; 43 >
-      au < released ; 2011-2012 ; American Literary Realism Volume 44 ; 44 >
-      au < released ; 2012-2013 ; American Literary Realism Volume 45 ; 45 >
-      au < manifest ; 2013-2014 ; American Literary Realism Volume 46 ; 46 >
-      au < manifest ; 2014-2015 ; American Literary Realism Volume 47 ; 47 >
-      au < manifest ; 2015-2016 ; American Literary Realism Volume 48 ; 48 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2007-2008 ; American Literary Realism Volume 40 ; 40 >
+        au < released ; 2008-2009 ; American Literary Realism Volume 41 ; 41 >
+        au < released ; 2009-2010 ; American Literary Realism Volume 42 ; 42 >
+        au < released ; 2010-2011 ; American Literary Realism Volume 43 ; 43 >
+        au < released ; 2011-2012 ; American Literary Realism Volume 44 ; 44 >
+        au < released ; 2012-2013 ; American Literary Realism Volume 45 ; 45 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < manifest ; 2013-2014 ; American Literary Realism Volume 46 ; 46 >
+        au < manifest ; 2014-2015 ; American Literary Realism Volume 47 ; 47 >
+        au < manifest ; 2015-2016 ; American Literary Realism Volume 48 ; 48 >
+
+      }
 
     }
 
@@ -64,13 +89,26 @@
       param[journal_dir] = american_music
       attr[journal_id] = amm
 
-      au < released ; 2009 ; American Music Volume 27 ; 27 >
-      au < released ; 2010 ; American Music Volume 28 ; 28 >
-      au < released ; 2011 ; American Music Volume 29 ; 29 >
-      au < released ; 2012 ; American Music Volume 30 ; 30 >
-      au < released ; 2013 ; American Music Volume 31 ; 31 >
-      au < manifest ; 2014 ; American Music Volume 32 ; 32 >
-      au < exists ; 2015 ; American Music Volume 33 ; 33 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2009 ; American Music Volume 27 ; 27 >
+        au < released ; 2010 ; American Music Volume 28 ; 28 >
+        au < released ; 2011 ; American Music Volume 29 ; 29 >
+        au < released ; 2012 ; American Music Volume 30 ; 30 >
+        au < released ; 2013 ; American Music Volume 31 ; 31 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < manifest ; 2014 ; American Music Volume 32 ; 32 >
+        au < exists ; 2015 ; American Music Volume 33 ; 33 >
+
+      }
 
     }
 
@@ -85,12 +123,25 @@
       param[journal_dir] = black_music_research_journal
       attr[journal_id] = bmr
 
-      au < released ; 2010 ; Black Music Research Journal Volume 30 ; 30 >
-      au < released ; 2011 ; Black Music Research Journal Volume 31 ; 31 >
-      au < released ; 2012 ; Black Music Research Journal Volume 32 ; 32 >
-      au < released ; 2013 ; Black Music Research Journal Volume 33 ; 33 >
-      au < manifest ; 2014 ; Black Music Research Journal Volume 34 ; 34 >
-      au < exists ; 2015 ; Black Music Research Journal Volume 35 ; 35 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+      
+        au < released ; 2010 ; Black Music Research Journal Volume 30 ; 30 >
+        au < released ; 2011 ; Black Music Research Journal Volume 31 ; 31 >
+        au < released ; 2012 ; Black Music Research Journal Volume 32 ; 32 >
+        au < released ; 2013 ; Black Music Research Journal Volume 33 ; 33 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < manifest ; 2014 ; Black Music Research Journal Volume 34 ; 34 >
+        au < exists ; 2015 ; Black Music Research Journal Volume 35 ; 35 >
+
+      }
 
     }
 
@@ -105,10 +156,16 @@
       param[journal_dir] = black_women_gender_and_families
       attr[journal_id] = bwg
 
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
       au < released ; 2009 ; Black Women, Gender & Families Volume 3 ; 3 >
       au < released ; 2010 ; Black Women, Gender & Families Volume 4 ; 4 >
       au < released ; 2011 ; Black Women, Gender & Families Volume 5 ; 5 >
       au < released ; 2012 ; Black Women, Gender & Families Volume 6 ; 6 >
+
+      }
 
     }
 
@@ -123,13 +180,26 @@
       param[journal_dir] = feminist_teacher
       attr[journal_id] = ftr
 
-      au < released ; 2007-2008 ; Feminist Teacher Volume 18 ; 18 >
-      au < released ; 2008-2009 ; Feminist Teacher Volume 19 ; 19 >
-      au < released ; 2009-2010 ; Feminist Teacher Volume 20 ; 20 >
-      au < released ; 2010-2011 ; Feminist Teacher Volume 21 ; 21 >
-      au < released ; 2011-2012 ; Feminist Teacher Volume 22 ; 22 >
-      au < released ; 2012-2013 ; Feminist Teacher Volume 23 ; 23 >
-      au < manifest ; 2014 ; Feminist Teacher Volume 24 ; 24 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2007-2008 ; Feminist Teacher Volume 18 ; 18 >
+        au < released ; 2008-2009 ; Feminist Teacher Volume 19 ; 19 >
+        au < released ; 2009-2010 ; Feminist Teacher Volume 20 ; 20 >
+        au < released ; 2010-2011 ; Feminist Teacher Volume 21 ; 21 >
+        au < released ; 2011-2012 ; Feminist Teacher Volume 22 ; 22 >
+        au < released ; 2012-2013 ; Feminist Teacher Volume 23 ; 23 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < manifest ; 2014 ; Feminist Teacher Volume 24 ; 24 >
+
+      }
  
     }
 
@@ -144,13 +214,26 @@
       param[journal_dir] = journal_of_english_and_germanic_philology
       attr[journal_id] = egp
 
-      au < released ; 2009 ; JEGP, Journal of English and Germanic Philology Volume 108 ; 108 >
-      au < released ; 2010 ; JEGP, Journal of English and Germanic Philology Volume 109 ; 109 >
-      au < released ; 2011 ; JEGP, Journal of English and Germanic Philology Volume 110 ; 110 >
-      au < released ; 2012 ; JEGP, Journal of English and Germanic Philology Volume 111 ; 111 >
-      au < released ; 2013 ; JEGP, Journal of English and Germanic Philology Volume 112 ; 112 >
-      au < manifest ; 2014 ; JEGP, Journal of English and Germanic Philology Volume 113 ; 113 >
-      au < manifest ; 2015 ; JEGP, Journal of English and Germanic Philology Volume 114 ; 114 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2009 ; JEGP, Journal of English and Germanic Philology Volume 108 ; 108 >
+        au < released ; 2010 ; JEGP, Journal of English and Germanic Philology Volume 109 ; 109 >
+        au < released ; 2011 ; JEGP, Journal of English and Germanic Philology Volume 110 ; 110 >
+        au < released ; 2012 ; JEGP, Journal of English and Germanic Philology Volume 111 ; 111 >
+        au < released ; 2013 ; JEGP, Journal of English and Germanic Philology Volume 112 ; 112 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < manifest ; 2014 ; JEGP, Journal of English and Germanic Philology Volume 113 ; 113 >
+        au < manifest ; 2015 ; JEGP, Journal of English and Germanic Philology Volume 114 ; 114 >
+
+      }
 
     }
 
@@ -165,19 +248,32 @@
       param[journal_dir] = the_journal_of_aesthetic_education
       attr[journal_id] = jae
 
-      au < released ; 2003 ; The Journal of Aesthetic Education Volume 37 ; 37 >
-      au < released ; 2004 ; The Journal of Aesthetic Education Volume 38 ; 38 >
-      au < released ; 2005 ; The Journal of Aesthetic Education Volume 39 ; 39 >
-      au < released ; 2006 ; The Journal of Aesthetic Education Volume 40 ; 40 >
-      au < released ; 2007 ; The Journal of Aesthetic Education Volume 41 ; 41 >
-      au < released ; 2008 ; The Journal of Aesthetic Education Volume 42 ; 42 >
-      au < released ; 2009 ; The Journal of Aesthetic Education Volume 43 ; 43 >
-      au < released ; 2010 ; The Journal of Aesthetic Education Volume 44 ; 44 >
-      au < released ; 2011 ; The Journal of Aesthetic Education Volume 45 ; 45 >
-      au < released ; 2012 ; The Journal of Aesthetic Education Volume 46 ; 46 >
-      au < released ; 2013 ; The Journal of Aesthetic Education Volume 47 ; 47 >
-      au < manifest ; 2014 ; The Journal of Aesthetic Education Volume 48 ; 48 >
-      au < manifest ; 2015 ; The Journal of Aesthetic Education Volume 49 ; 49 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2003 ; The Journal of Aesthetic Education Volume 37 ; 37 >
+        au < released ; 2004 ; The Journal of Aesthetic Education Volume 38 ; 38 >
+        au < released ; 2005 ; The Journal of Aesthetic Education Volume 39 ; 39 >
+        au < released ; 2006 ; The Journal of Aesthetic Education Volume 40 ; 40 >
+        au < released ; 2007 ; The Journal of Aesthetic Education Volume 41 ; 41 >
+        au < released ; 2008 ; The Journal of Aesthetic Education Volume 42 ; 42 >
+        au < released ; 2009 ; The Journal of Aesthetic Education Volume 43 ; 43 >
+        au < released ; 2010 ; The Journal of Aesthetic Education Volume 44 ; 44 >
+        au < released ; 2011 ; The Journal of Aesthetic Education Volume 45 ; 45 >
+        au < released ; 2012 ; The Journal of Aesthetic Education Volume 46 ; 46 >
+        au < released ; 2013 ; The Journal of Aesthetic Education Volume 47 ; 47 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < manifest ; 2014 ; The Journal of Aesthetic Education Volume 48 ; 48 >
+        au < manifest ; 2015 ; The Journal of Aesthetic Education Volume 49 ; 49 >
+
+      }
 
     }
 
@@ -192,13 +288,26 @@
       param[journal_dir] = journal_of_education_finance
       attr[journal_id] = jef
 
-      au < released ; 2009 ; Journal of Education Finance Volume 35 ; 35 >
-      au < released ; 2010 ; Journal of Education Finance Volume 36 ; 36 >
-      au < released ; 2011 ; Journal of Education Finance Volume 37 ; 37 >
-      au < released ; 2012 ; Journal of Education Finance Volume 38 ; 38 >
-      au < released ; 2013 ; Journal of Education Finance Volume 39 ; 39 >
-      au < manifest ; 2014 ; Journal of Education Finance Volume 40 ; 40 >
-      au < manifest ; 2015 ; Journal of Education Finance Volume 41 ; 41 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2009 ; Journal of Education Finance Volume 35 ; 35 >
+        au < released ; 2010 ; Journal of Education Finance Volume 36 ; 36 >
+        au < released ; 2011 ; Journal of Education Finance Volume 37 ; 37 >
+        au < released ; 2012 ; Journal of Education Finance Volume 38 ; 38 >
+        au < released ; 2013 ; Journal of Education Finance Volume 39 ; 39 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < manifest ; 2014 ; Journal of Education Finance Volume 40 ; 40 >
+        au < manifest ; 2015 ; Journal of Education Finance Volume 41 ; 41 >
+
+      }
 
     }
 
@@ -213,14 +322,27 @@
       param[journal_dir] = journal_of_film_and_video
       attr[journal_id] = jfv
 
-      au < released ; 2008 ; Journal of Film and Video Volume 60 ; 60 >
-      au < released ; 2009 ; Journal of Film and Video Volume 61 ; 61 >
-      au < released ; 2010 ; Journal of Film and Video Volume 62 ; 62 >
-      au < released ; 2011 ; Journal of Film and Video Volume 63 ; 63 >
-      au < released ; 2012 ; Journal of Film and Video Volume 64 ; 64 >
-      au < released ; 2013 ; Journal of Film and Video Volume 65 ; 65 >
-      au < manifest ; 2014 ; Journal of Film and Video Volume 66 ; 66 >
-      au < manifest ; 2015 ; Journal of Film and Video Volume 67 ; 67 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2008 ; Journal of Film and Video Volume 60 ; 60 >
+        au < released ; 2009 ; Journal of Film and Video Volume 61 ; 61 >
+        au < released ; 2010 ; Journal of Film and Video Volume 62 ; 62 >
+        au < released ; 2011 ; Journal of Film and Video Volume 63 ; 63 >
+        au < released ; 2012 ; Journal of Film and Video Volume 64 ; 64 >
+        au < released ; 2013 ; Journal of Film and Video Volume 65 ; 65 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < manifest ; 2014 ; Journal of Film and Video Volume 66 ; 66 >
+        au < manifest ; 2015 ; Journal of Film and Video Volume 67 ; 67 >
+
+      }
 
     }
 
@@ -234,6 +356,7 @@
 
       param[journal_dir] = music_and_the_moving_image
       attr[journal_id] = mmi
+      param[base_url] = https://muse.jhu.edu/
 
       au < manifest ; 2015 ; Music and the Moving Image Volume 8 ; 8 >
 
@@ -250,13 +373,26 @@
       param[journal_dir] = the_pluralist
       attr[journal_id] = plu
 
-      au < released ; 2009 ; The Pluralist Volume 4 ; 4 >
-      au < released ; 2010 ; The Pluralist Volume 5 ; 5 >
-      au < released ; 2011 ; The Pluralist Volume 6 ; 6 >
-      au < released ; 2012 ; The Pluralist Volume 7 ; 7 >
-      au < released ; 2013 ; The Pluralist Volume 8 ; 8 >
-      au < manifest ; 2014 ; The Pluralist Volume 9 ; 9 >
-      au < manifest ; 2015 ; The Pluralist Volume 10 ; 10 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2009 ; The Pluralist Volume 4 ; 4 >
+        au < released ; 2010 ; The Pluralist Volume 5 ; 5 >
+        au < released ; 2011 ; The Pluralist Volume 6 ; 6 >
+        au < released ; 2012 ; The Pluralist Volume 7 ; 7 >
+        au < released ; 2013 ; The Pluralist Volume 8 ; 8 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < manifest ; 2014 ; The Pluralist Volume 9 ; 9 >
+        au < manifest ; 2015 ; The Pluralist Volume 10 ; 10 >
+
+      }
 
     }
     
@@ -270,6 +406,7 @@
 
       param[journal_dir] = radical_teacher
       attr[journal_id] = rdt
+      param[base_url] = http://muse.jhu.edu/
 
       au < released ; 2008 ; Radical Teacher Number 81 ; 81 >
       au < released ; 2008 ; Radical Teacher Number 82 ; 82 >
@@ -286,8 +423,6 @@
       au < released ; 2012 ; Radical Teacher Number 93 ; 93 >
       au < released ; 2012 ; Radical Teacher Number 94 ; 94 >
       au < released ; 2013 ; Radical Teacher Number 95 ; 95 >
-      au < expected ; 2013 ; Radical Teacher Number 96 ; 96 >
-      au < expected ; 2014 ; Radical Teacher Number 97 ; 97 >
 
     }
 
@@ -302,12 +437,25 @@
       param[journal_dir] = visual_arts_research
       attr[journal_id] = var
 
-      au < released ; 2010 ; Visual Arts Research Volume 36 ; 36 >
-      au < released ; 2011 ; Visual Arts Research Volume 37 ; 37 >
-      au < released ; 2012 ; Visual Arts Research Volume 38 ; 38 >
-      au < released ; 2013 ; Visual Arts Research Volume 39 ; 39 >
-      au < manifest ; 2014 ; Visual Arts Research Volume 40 ; 40 >
-      au < manifest ; 2015 ; Visual Arts Research Volume 41 ; 41 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2010 ; Visual Arts Research Volume 36 ; 36 >
+        au < released ; 2011 ; Visual Arts Research Volume 37 ; 37 >
+        au < released ; 2012 ; Visual Arts Research Volume 38 ; 38 >
+        au < released ; 2013 ; Visual Arts Research Volume 39 ; 39 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < manifest ; 2014 ; Visual Arts Research Volume 40 ; 40 >
+        au < manifest ; 2015 ; Visual Arts Research Volume 41 ; 41 >
+
+      }
 
     }
   
@@ -322,9 +470,22 @@
       param[journal_dir] = women_gender_and_families_of_color
       attr[journal_id] = wgf
 
-      au < released ; 2013 ; Women, Gender, and Families of Color Volume 1 ; 1 >
-      au < manifest ; 2014 ; Women, Gender, and Families of Color Volume 2 ; 2 >
-      au < manifest ; 2015 ; Women, Gender, and Families of Color Volume 3 ; 3 >
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2013 ; Women, Gender, and Families of Color Volume 1 ; 1 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < manifest ; 2014 ; Women, Gender, and Families of Color Volume 2 ; 2 >
+        au < manifest ; 2015 ; Women, Gender, and Families of Color Volume 3 ; 3 >
+
+      }
 
     }
     
