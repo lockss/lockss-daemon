@@ -7,10 +7,8 @@
   
   rights = openaccess
   implicit < status ; status2 ; year ; name ; param[volume_name] >
-  
-  {
-    #BioMedCentral old platform
-    plugin = org.lockss.plugin.bmc.ClockssBioMedCentralPlugin
+  #BioMedCentral old platform
+  plugin = org.lockss.plugin.bmc.ClockssBioMedCentralPlugin
 
     {
       title <
@@ -219,23 +217,22 @@
         eissn = 1476-0711 ;
         issnl = 1476-0711
       >
-
-	  comment[ACMA11] = Journal manifest missing on 2011-04-21
-	  
+    
       param[base_url] = http://www.ann-clinmicrob.com/
       param[journal_issn] = 1476-0711
-
+      #new platform
+      
       au < doNotProcess ; exists ; 2002 ; Annals of Clinical Microbiology and Antimicrobials Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2003 ; Annals of Clinical Microbiology and Antimicrobials Volume 2 ; 2 >
       au < doNotProcess ; exists ; 2004 ; Annals of Clinical Microbiology and Antimicrobials Volume 3 ; 3 >
       au < doNotProcess ; exists ; 2005 ; Annals of Clinical Microbiology and Antimicrobials Volume 4 ; 4 >
       au < doNotProcess ; exists ; 2006 ; Annals of Clinical Microbiology and Antimicrobials Volume 5 ; 5 >
       au < doNotProcess ; exists ; 2007 ; Annals of Clinical Microbiology and Antimicrobials Volume 6 ; 6 >
-      au < finished ; crawling ; 2008 ; Annals of Clinical Microbiology and Antimicrobials Volume 7 ; 7 >
+      au < down ; crawling ; 2008 ; Annals of Clinical Microbiology and Antimicrobials Volume 7 ; 7 >
       au < down ; exists ; 2009 ; Annals of Clinical Microbiology and Antimicrobials Volume 8 ; 8 >
-      au < finished ; crawling ; 2010 ; Annals of Clinical Microbiology and Antimicrobials Volume 9 ; 9 >
-      au < finished ; crawling ; 2011 ; Annals of Clinical Microbiology and Antimicrobials Volume 10 ; 10 >
-      au < finished ; crawling ; 2012 ; Annals of Clinical Microbiology and Antimicrobials Volume 11 ; 11 >
+      au < down ; crawling ; 2010 ; Annals of Clinical Microbiology and Antimicrobials Volume 9 ; 9 >
+      au < down ; crawling ; 2011 ; Annals of Clinical Microbiology and Antimicrobials Volume 10 ; 10 >
+      au < down ; crawling ; 2012 ; Annals of Clinical Microbiology and Antimicrobials Volume 11 ; 11 >
       au < down ; exists ; 2013 ; Annals of Clinical Microbiology and Antimicrobials Volume 12 ; 12 >
       au < down ; exists ; 2014 ; Annals of Clinical Microbiology and Antimicrobials Volume 13 ; 13 >
       au < down ; exists ; 2015 ; Annals of Clinical Microbiology and Antimicrobials Volume 14 ; 14 >
@@ -730,12 +727,13 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://www.bpsmedicine.com/
       param[journal_issn] = 1751-0759
+      #new platform
 
       au < doNotProcess ; exists ; 2007 ; BioPsychoSocial Medicine Volume 1 ; 1 >
-      au < finished ; crawling ; 2008 ; BioPsychoSocial Medicine Volume 2 ; 2 >
+      au < down ; crawling ; 2008 ; BioPsychoSocial Medicine Volume 2 ; 2 >
       au < down ; exists ; 2009 ; BioPsychoSocial Medicine Volume 3 ; 3 >
-      au < finished ; crawling ; 2010 ; BioPsychoSocial Medicine Volume 4 ; 4 >
-      au < finished ; crawling ; 2011 ; BioPsychoSocial Medicine Volume 5 ; 5 >
+      au < down ; crawling ; 2010 ; BioPsychoSocial Medicine Volume 4 ; 4 >
+      au < down ; crawling ; 2011 ; BioPsychoSocial Medicine Volume 5 ; 5 >
       au < down ; exists ; 2012 ; BioPsychoSocial Medicine Volume 6 ; 6 >
       au < down ; exists ; 2013 ; BioPsychoSocial Medicine Volume 7 ; 7 >
       au < finished ; crawling ; 2014 ; BioPsychoSocial Medicine Volume 8 ; 8 >
@@ -752,15 +750,16 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       
       param[base_url] = http://www.biotechnologyforbiofuels.com/
       param[journal_issn] = 1754-6834
+      #new platform
 
-      au < finished ; frozen ; 2008 ; Biotechnology for Biofuels Volume 1 ; 1 >
-      au < crawling ; exists ; 2009 ; Biotechnology for Biofuels Volume 2 ; 2 >
-      au < finished ; crawling ; 2010 ; Biotechnology for Biofuels Volume 3 ; 3 >
-      au < crawling ; exists ; 2011 ; Biotechnology for Biofuels Volume 4 ; 4 >
-      au < crawling ; exists ; 2012 ; Biotechnology for Biofuels Volume 5 ; 5 >
-      au < crawling ; exists ; 2013 ; Biotechnology for Biofuels Volume 6 ; 6 >
-      au < crawling ; exists ; 2014 ; Biotechnology for Biofuels Volume 7 ; 7 >
-      au < crawling ; exists ; 2015 ; Biotechnology for Biofuels Volume 8 ; 8 >
+      au < down ; frozen ; 2008 ; Biotechnology for Biofuels Volume 1 ; 1 >
+      au < down ; exists ; 2009 ; Biotechnology for Biofuels Volume 2 ; 2 >
+      au < down ; crawling ; 2010 ; Biotechnology for Biofuels Volume 3 ; 3 >
+      au < down ; exists ; 2011 ; Biotechnology for Biofuels Volume 4 ; 4 >
+      au < down ; exists ; 2012 ; Biotechnology for Biofuels Volume 5 ; 5 >
+      au < down ; exists ; 2013 ; Biotechnology for Biofuels Volume 6 ; 6 >
+      au < down ; exists ; 2014 ; Biotechnology for Biofuels Volume 7 ; 7 >
+      au < down ; exists ; 2015 ; Biotechnology for Biofuels Volume 8 ; 8 >
       
     }
 
@@ -1079,6 +1078,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://www.cellregenerationjournal.com/
       param[journal_issn] = 2045-9769
+      #new platform
 
       au < down ; exists ; 2012 ; Cell Regeneration Volume 1 ; 1 >
       au < down ; exists ; 2013 ; Cell Regeneration Volume 2 ; 2 >
@@ -1674,7 +1674,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Environmental Health Volume 11 ; 11 >
       au < crawling ; exists ; 2013 ; Environmental Health Volume 12 ; 12 >
       au < crawling ; exists ; 2014 ; Environmental Health Volume 13 ; 13 >
-      au < testing ; exists ; 2015 ; Environmental Health Volume 14 ; 14 >
+      au < ready ; exists ; 2015 ; Environmental Health Volume 14 ; 14 >
 
     }
 
@@ -1859,7 +1859,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Fibrogenesis & Tissue Repair Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; Fibrogenesis & Tissue Repair Volume 6 ; 6 >
       au < crawling ; exists ; 2014 ; Fibrogenesis & Tissue Repair Volume 7 ; 7 >
-      au < testing ; exists ; 2015 ; Fibrogenesis & Tissue Repair Volume 8 ; 8 >
+      au < ready ; exists ; 2015 ; Fibrogenesis & Tissue Repair Volume 8 ; 8 >
 
     }
 
@@ -1876,7 +1876,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Flavour Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; Flavour Volume 2 ; 2 >
       au < crawling ; exists ; 2014 ; Flavour Volume 3 ; 3 >
-      au < testing ; exists ; 2015 ; Flavour Volume 4 ; 4 >
+      au < ready ; exists ; 2015 ; Flavour Volume 4 ; 4 >
 
     }
 
@@ -1895,7 +1895,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Fluids and Barriers of the CNS Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; Fluids and Barriers of the CNS Volume 10 ; 10 >
       au < crawling ; exists ; 2014 ; Fluids and Barriers of the CNS Volume 11 ; 11 >
-      au < testing ; exists ; 2015 ; Fluids and Barriers of the CNS Volume 12 ; 12 >
+      au < ready ; exists ; 2015 ; Fluids and Barriers of the CNS Volume 12 ; 12 >
 
     }
 
@@ -1920,7 +1920,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Frontiers in Zoology Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; Frontiers in Zoology Volume 10 ; 10 >
       au < crawling ; exists ; 2014 ; Frontiers in Zoology Volume 11 ; 11 >
-      au < testing ; exists ; 2015 ; Frontiers in Zoology Volume 12 ; 12 >
+      au < ready ; exists ; 2015 ; Frontiers in Zoology Volume 12 ; 12 >
       
     }
 
@@ -2147,7 +2147,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Globalization and Health Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; Globalization and Health Volume 9 ; 9 >
       au < crawling ; exists ; 2014 ; Globalization and Health Volume 10 ; 10 >
-      au < testing ; exists ; 2015 ; Globalization and Health Volume 11 ; 11 >
+      au < ready ; exists ; 2015 ; Globalization and Health Volume 11 ; 11 >
 
     }
 
@@ -3241,7 +3241,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Journal of Hematology & Oncology Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; Journal of Hematology & Oncology Volume 6 ; 6 >
       au < crawling ; exists ; 2014 ; Journal of Hematology & Oncology Volume 7 ; 7 >
-      au < testing ; exists ; 2015 ; Journal of Hematology & Oncology Volume 8 ; 8 >
+      au < ready ; exists ; 2015 ; Journal of Hematology & Oncology Volume 8 ; 8 >
 
     }
 
@@ -3290,7 +3290,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Journal of Inflammation Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; Journal of Inflammation Volume 10 ; 10 >
       au < crawling ; exists ; 2014 ; Journal of Inflammation Volume 11 ; 11 >
-      au < testing ; exists ; 2015 ; Journal of Inflammation Volume 12 ; 12 >
+      au < ready ; exists ; 2015 ; Journal of Inflammation Volume 12 ; 12 >
       
     }
 
@@ -3489,7 +3489,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < crawling ; exists ; 2012 ; Journal of Neuroinflammation Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; Journal of Neuroinflammation Volume 10 ; 10 >
       au < crawling ; exists ; 2014 ; Journal of Neuroinflammation Volume 11 ; 11 >
-      au < testing ; exists ; 2015 ; Journal of Neuroinflammation Volume 12 ; 12 >
+      au < ready ; exists ; 2015 ; Journal of Neuroinflammation Volume 12 ; 12 >
 
     }
 
@@ -5314,7 +5314,5 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < doNotProcess ; exists ; 2015 ; Standards in Genomic Sciences Volume 10 ; 10 >
 
     }
-
-  }
   
 }
