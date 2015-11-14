@@ -64,8 +64,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; The Catholic Historical Review Volume 100 ; 100 >
-      au < manifest ; 2015 ; The Catholic Historical Review Volume 101 ; 101 >
+      au < testing ; 2014 ; The Catholic Historical Review Volume 100 ; 100 >
+      au < testing ; 2015 ; The Catholic Historical Review Volume 101 ; 101 >
 
     }
 
@@ -101,8 +101,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; U.S. Catholic Historian Volume 32 ; 32 >
-      au < manifest ; 2015 ; U.S. Catholic Historian Volume 33 ; 33 >
+      au < testing ; 2014 ; U.S. Catholic Historian Volume 32 ; 32 >
+      au < testing ; 2015 ; U.S. Catholic Historian Volume 33 ; 33 >
 
     }
 
@@ -132,10 +132,10 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; The Jurist: Studies in Church Law and Ministry Volume 74 ; 74 >
+      au < testing ; 2014 ; The Jurist: Studies in Church Law and Ministry Volume 74 ; 74 >
+      au < testing ; 2015 ; The Jurist: Studies in Church Law and Ministry Volume 75 ; 75 >
 
     }
-
 
   }
 

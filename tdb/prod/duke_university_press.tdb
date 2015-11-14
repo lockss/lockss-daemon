@@ -46,8 +46,8 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < exists ; 2012 ; American Literary Scholarship 2012 [Project MUSE] ; 2012 >
-        au < exists ; 2013 ; American Literary Scholarship 2013 [Project MUSE] ; 2013 >
+        au < testing ; 2012 ; American Literary Scholarship 2012 [Project MUSE] ; 2012 >
+        au < testing ; 2013 ; American Literary Scholarship 2013 [Project MUSE] ; 2013 >
 
       }
 
@@ -433,8 +433,8 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; Common Knowledge Volume 20 [Project MUSE] ; 20 >
-        au < manifest ; 2015 ; Common Knowledge Volume 21 [Project MUSE] ; 21 >
+        au < testing ; 2014 ; Common Knowledge Volume 20 [Project MUSE] ; 20 >
+        au < testing ; 2015 ; Common Knowledge Volume 21 [Project MUSE] ; 21 >
 
       }
 
@@ -543,11 +543,10 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; Comparative Studies of South Asia, Africa and the Middle East Volume 34 [Project MUSE] ; 34 >
-        au < manifest ; 2015 ; Comparative Studies of South Asia, Africa and the Middle East Volume 35 [Project MUSE] ; 35 >
+        au < testing ; 2014 ; Comparative Studies of South Asia, Africa and the Middle East Volume 34 [Project MUSE] ; 34 >
+        au < testing ; 2015 ; Comparative Studies of South Asia, Africa and the Middle East Volume 35 [Project MUSE] ; 35 >
 
       }
-
 
     }
 
@@ -625,8 +624,8 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; Cultural Politics Volume 10 [Project MUSE] ; 10 >
-        au < manifest ; 2015 ; Cultural Politics Volume 11 [Project MUSE] ; 11 >
+        au < testing ; 2014 ; Cultural Politics Volume 10 [Project MUSE] ; 10 >
+        au < testing ; 2015 ; Cultural Politics Volume 11 [Project MUSE] ; 11 >
 
       }
 
@@ -929,11 +928,10 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; East Asian Science, Technology and Society: An International Journal Volume 8 [Project MUSE] ; 8 >
-        au < manifest ; 2015 ; East Asian Science, Technology and Society: An International Journal Volume 9 [Project MUSE] ; 9 >
+        au < testing ; 2014 ; East Asian Science, Technology and Society: An International Journal Volume 8 [Project MUSE] ; 8 >
+        au < testing ; 2015 ; East Asian Science, Technology and Society: An International Journal Volume 9 [Project MUSE] ; 9 >
 
       }
-
 
     }
 
@@ -1002,11 +1000,10 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; Eighteenth-Century Life Volume 38 [Project MUSE] ; 38 >
-        au < manifest ; 2015 ; Eighteenth-Century Life Volume 39 [Project MUSE] ; 39 >
+        au < testing ; 2014 ; Eighteenth-Century Life Volume 38 [Project MUSE] ; 38 >
+        au < testing ; 2015 ; Eighteenth-Century Life Volume 39 [Project MUSE] ; 39 >
 
       }
-
 
     }
 
@@ -1123,7 +1120,6 @@
 
       }
 
-
     }
 
     {
@@ -1229,11 +1225,10 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; GLQ: A Journal of Lesbian and Gay Studies Volume 20 [Project MUSE] ; 20 >
-        au < manifest ; 2015 ; GLQ: A Journal of Lesbian and Gay Studies Volume 21 [Project MUSE] ; 21 >
+        au < testing ; 2014 ; GLQ: A Journal of Lesbian and Gay Studies Volume 20 [Project MUSE] ; 20 >
+        au < testing ; 2015 ; GLQ: A Journal of Lesbian and Gay Studies Volume 21 [Project MUSE] ; 21 >
 
       }
-
 
     }
 
@@ -1355,7 +1350,6 @@
 
       }
 
-
     }
 
     {
@@ -1453,11 +1447,10 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; Journal of Chinese Literature and Culture Volume 1 ; 1 >
-        au < manifest ; 2015 ; Journal of Chinese Literature and Culture Volume 2 ; 2 >
+        au < testing ; 2014 ; Journal of Chinese Literature and Culture Volume 1 ; 1 >
+        au < testing ; 2015 ; Journal of Chinese Literature and Culture Volume 2 ; 2 >
 
       }
-
 
     }
 
@@ -1500,7 +1493,6 @@
         au < released ; 2004 ; Journal of Health Politics, Policy and Law Volume 29 [Project MUSE] ; 29 >
 
       }
-
 
      }
 
@@ -1651,7 +1643,6 @@
         au < released ; 2004 ; Journal of Medieval and Early Modern Studies Volume 34 [Project MUSE] ; 34 >
 
       }
-
 
     }
 
@@ -1850,11 +1841,10 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; Mediterranean Quarterly Volume 25 [Project MUSE] ; 25 >
-        au < manifest ; 2015 ; Mediterranean Quarterly Volume 26 [Project MUSE] ; 26 >
+        au < testing ; 2014 ; Mediterranean Quarterly Volume 25 [Project MUSE] ; 25 >
+        au < testing ; 2015 ; Mediterranean Quarterly Volume 26 [Project MUSE] ; 26 >
 
       }
-
 
     }
 
