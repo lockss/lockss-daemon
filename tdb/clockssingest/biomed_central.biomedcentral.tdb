@@ -1256,19 +1256,19 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.clinicalmolecularallergy.com/
       param[journal_issn] = 1476-7961
 
-      au < manifest ; exists ; 2003 ; Clinical and Molecular Allergy Volume 1 ; 1 >
-      au < manifest ; exists ; 2004 ; Clinical and Molecular Allergy Volume 2 ; 2 >
-      au < manifest ; exists ; 2005 ; Clinical and Molecular Allergy Volume 3 ; 3 >
-      au < manifest ; exists ; 2006 ; Clinical and Molecular Allergy Volume 4 ; 4 >
-      au < manifest ; exists ; 2007 ; Clinical and Molecular Allergy Volume 5 ; 5 >
-      au < crawling ; exists ; 2008 ; Clinical and Molecular Allergy Volume 6 ; 6 >
-      au < crawling ; exists ; 2009 ; Clinical and Molecular Allergy Volume 7 ; 7 >
+      au < doNotProcess ; exists ; 2003 ; Clinical and Molecular Allergy Volume 1 ; 1 >
+      au < doNotProcess ; exists ; 2004 ; Clinical and Molecular Allergy Volume 2 ; 2 >
+      au < doNotProcess ; exists ; 2005 ; Clinical and Molecular Allergy Volume 3 ; 3 >
+      au < doNotProcess ; exists ; 2006 ; Clinical and Molecular Allergy Volume 4 ; 4 >
+      au < doNotProcess ; exists ; 2007 ; Clinical and Molecular Allergy Volume 5 ; 5 >
+      au < down ; exists ; 2008 ; Clinical and Molecular Allergy Volume 6 ; 6 >
+      au < down ; exists ; 2009 ; Clinical and Molecular Allergy Volume 7 ; 7 >
       au < finished ; crawling ; 2010 ; Clinical and Molecular Allergy Volume 8 ; 8 >
       au < finished ; crawling ; 2011 ; Clinical and Molecular Allergy Volume 9 ; 9 >
-      au < crawling ; exists ; 2012 ; Clinical and Molecular Allergy Volume 10 ; 10 >
+      au < down ; exists ; 2012 ; Clinical and Molecular Allergy Volume 10 ; 10 >
       au < finished ; crawling ; 2013 ; Clinical and Molecular Allergy Volume 11 ; 11 >
       au < doesNotExist ; doesNotExist ; 0 ; Clinical and Molecular Allergy Volume 12 ; 12 >
-      au < crawling ; exists ; 2015 ; Clinical and Molecular Allergy Volume 13 ; 13 >
+      au < down ; exists ; 2015 ; Clinical and Molecular Allergy Volume 13 ; 13 >
       
     }
 
@@ -1617,18 +1617,18 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.ete-online.com/
       param[journal_issn] = 1742-7622
 
-      au < manifest ; exists ; 2004 ; Emerging Themes in Epidemiology Volume 1 ; 1 >
-      au < manifest ; exists ; 2005 ; Emerging Themes in Epidemiology Volume 2 ; 2 >
-      au < manifest ; exists ; 2006 ; Emerging Themes in Epidemiology Volume 3 ; 3 >
-      au < manifest ; exists ; 2007 ; Emerging Themes in Epidemiology Volume 4 ; 4 >
-      au < crawling ; exists ; 2008 ; Emerging Themes in Epidemiology Volume 5 ; 5 >
-      au < crawling ; exists ; 2009 ; Emerging Themes in Epidemiology Volume 6 ; 6 >
+      au < doNotProcess ; exists ; 2004 ; Emerging Themes in Epidemiology Volume 1 ; 1 >
+      au < doNotProcess ; exists ; 2005 ; Emerging Themes in Epidemiology Volume 2 ; 2 >
+      au < doNotProcess ; exists ; 2006 ; Emerging Themes in Epidemiology Volume 3 ; 3 >
+      au < doNotProcess ; exists ; 2007 ; Emerging Themes in Epidemiology Volume 4 ; 4 >
+      au < down ; exists ; 2008 ; Emerging Themes in Epidemiology Volume 5 ; 5 >
+      au < down ; exists ; 2009 ; Emerging Themes in Epidemiology Volume 6 ; 6 >
       au < finished ; crawling ; 2010 ; Emerging Themes in Epidemiology Volume 7 ; 7 >
-      au < crawling ; exists ; 2011 ; Emerging Themes in Epidemiology Volume 8 ; 8 >
-      au < crawling ; exists ; 2012 ; Emerging Themes in Epidemiology Volume 9 ; 9 >
-      au < crawling ; exists ; 2013 ; Emerging Themes in Epidemiology Volume 10 ; 10 >
-      au < crawling ; exists ; 2014 ; Emerging Themes in Epidemiology Volume 11 ; 11 >
-      au < crawling ; exists ; 2015 ; Emerging Themes in Epidemiology Volume 12 ; 12 >
+      au < down ; exists ; 2011 ; Emerging Themes in Epidemiology Volume 8 ; 8 >
+      au < down ; exists ; 2012 ; Emerging Themes in Epidemiology Volume 9 ; 9 >
+      au < down ; exists ; 2013 ; Emerging Themes in Epidemiology Volume 10 ; 10 >
+      au < down ; exists ; 2014 ; Emerging Themes in Epidemiology Volume 11 ; 11 >
+      au < down ; exists ; 2015 ; Emerging Themes in Epidemiology Volume 12 ; 12 >
 
     }
 
@@ -2161,13 +2161,13 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.gutpathogens.com/
       param[journal_issn] = 1757-4749
 
-      au < crawling ; exists ; 2009 ; Gut Pathogens Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; Gut Pathogens Volume 2 ; 2 >
-      au < crawling ; exists ; 2011 ; Gut Pathogens Volume 3 ; 3 >
-      au < crawling ; exists ; 2012 ; Gut Pathogens Volume 4 ; 4 >
-      au < crawling ; exists ; 2013 ; Gut Pathogens Volume 5 ; 5 >
+      au < down ; exists ; 2009 ; Gut Pathogens Volume 1 ; 1 >
+      au < down ; exists ; 2010 ; Gut Pathogens Volume 2 ; 2 >
+      au < down ; exists ; 2011 ; Gut Pathogens Volume 3 ; 3 >
+      au < down ; exists ; 2012 ; Gut Pathogens Volume 4 ; 4 >
+      au < down ; exists ; 2013 ; Gut Pathogens Volume 5 ; 5 >
       au < finished ; manifest ; 2014 ; Gut Pathogens Volume 6 ; 6 >
-      au < crawling ; exists ; 2015 ; Gut Pathogens Volume 7 ; 7 >
+      au < down ; exists ; 2015 ; Gut Pathogens Volume 7 ; 7 >
 
     }
 
@@ -2527,16 +2527,16 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.internationalbreastfeedingjournal.com/
       param[journal_issn] = 1746-4358
 
-      au < manifest ; exists ; 2006 ; International Breastfeeding Journal Volume 1 ; 1 >
-      au < manifest ; exists ; 2007 ; International Breastfeeding Journal Volume 2 ; 2 >
-      au < crawling ; exists ; 2008 ; International Breastfeeding Journal Volume 3 ; 3 >
-      au < crawling ; exists ; 2009 ; International Breastfeeding Journal Volume 4 ; 4 >
-      au < crawling ; exists ; 2010 ; International Breastfeeding Journal Volume 5 ; 5 >
-      au < crawling ; exists ; 2011 ; International Breastfeeding Journal Volume 6 ; 6 >
-      au < crawling ; exists ; 2012 ; International Breastfeeding Journal Volume 7 ; 7 >
-      au < crawling ; exists ; 2013 ; International Breastfeeding Journal Volume 8 ; 8 >
-      au < crawling ; exists ; 2014 ; International Breastfeeding Journal Volume 9 ; 9 >
-      au < crawling ; exists ; 2015 ; International Breastfeeding Journal Volume 10 ; 10 >
+      au < doNotProcess ; exists ; 2006 ; International Breastfeeding Journal Volume 1 ; 1 >
+      au < doNotProcess ; exists ; 2007 ; International Breastfeeding Journal Volume 2 ; 2 >
+      au < down ; exists ; 2008 ; International Breastfeeding Journal Volume 3 ; 3 >
+      au < down ; exists ; 2009 ; International Breastfeeding Journal Volume 4 ; 4 >
+      au < down ; exists ; 2010 ; International Breastfeeding Journal Volume 5 ; 5 >
+      au < down ; exists ; 2011 ; International Breastfeeding Journal Volume 6 ; 6 >
+      au < down ; exists ; 2012 ; International Breastfeeding Journal Volume 7 ; 7 >
+      au < down ; exists ; 2013 ; International Breastfeeding Journal Volume 8 ; 8 >
+      au < down ; exists ; 2014 ; International Breastfeeding Journal Volume 9 ; 9 >
+      au < down ; exists ; 2015 ; International Breastfeeding Journal Volume 10 ; 10 >
 
     }
 
@@ -2602,22 +2602,20 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.ij-healthgeographics.com/
       param[journal_issn] = 1476-072X
       
-      comment[v8] = notReady 500 Internal Server Error http://www.ij-healthgeographics.com/content/7/1/2/mathml/M2
-
-      au < manifest ; exists ; 2002 ; International Journal of Health Geographics Volume 1 ; 1 >
-      au < manifest ; exists ; 2003 ; International Journal of Health Geographics Volume 2 ; 2 >
-      au < manifest ; exists ; 2004 ; International Journal of Health Geographics Volume 3 ; 3 >
-      au < manifest ; exists ; 2005 ; International Journal of Health Geographics Volume 4 ; 4 >
-      au < manifest ; exists ; 2006 ; International Journal of Health Geographics Volume 5 ; 5 >
-      au < manifest ; exists ; 2007 ; International Journal of Health Geographics Volume 6 ; 6 >
-      au < ingNotReady ; exists ; 2008 ; International Journal of Health Geographics Volume 7 ; 7 >
-      au < crawling ; exists ; 2009 ; International Journal of Health Geographics Volume 8 ; 8 >
-      au < crawling ; exists ; 2010 ; International Journal of Health Geographics Volume 9 ; 9 >
-      au < crawling ; exists ; 2011 ; International Journal of Health Geographics Volume 10 ; 10 >
-      au < crawling ; exists ; 2012 ; International Journal of Health Geographics Volume 11 ; 11 >
-      au < crawling ; exists ; 2013 ; International Journal of Health Geographics Volume 12 ; 12 >
-      au < crawling ; exists ; 2014 ; International Journal of Health Geographics Volume 13 ; 13 >
-      au < crawling ; exists ; 2015 ; International Journal of Health Geographics Volume 14 ; 14 >
+      au < doNotProcess ; exists ; 2002 ; International Journal of Health Geographics Volume 1 ; 1 >
+      au < doNotProcess ; exists ; 2003 ; International Journal of Health Geographics Volume 2 ; 2 >
+      au < doNotProcess ; exists ; 2004 ; International Journal of Health Geographics Volume 3 ; 3 >
+      au < doNotProcess ; exists ; 2005 ; International Journal of Health Geographics Volume 4 ; 4 >
+      au < doNotProcess ; exists ; 2006 ; International Journal of Health Geographics Volume 5 ; 5 >
+      au < doNotProcess ; exists ; 2007 ; International Journal of Health Geographics Volume 6 ; 6 >
+      au < down ; exists ; 2008 ; International Journal of Health Geographics Volume 7 ; 7 >
+      au < down ; exists ; 2009 ; International Journal of Health Geographics Volume 8 ; 8 >
+      au < down ; exists ; 2010 ; International Journal of Health Geographics Volume 9 ; 9 >
+      au < down ; exists ; 2011 ; International Journal of Health Geographics Volume 10 ; 10 >
+      au < down ; exists ; 2012 ; International Journal of Health Geographics Volume 11 ; 11 >
+      au < down ; exists ; 2013 ; International Journal of Health Geographics Volume 12 ; 12 >
+      au < down ; exists ; 2014 ; International Journal of Health Geographics Volume 13 ; 13 >
+      au < down ; exists ; 2015 ; International Journal of Health Geographics Volume 14 ; 14 >
 
     }
 
@@ -2631,15 +2629,15 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.ijmhs.com/
       param[journal_issn] = 1752-4458
 
-      au < manifest ; exists ; 2007 ; International Journal of Mental Health Systems Volume 1 ; 1 >
-      au < crawling ; exists ; 2008 ; International Journal of Mental Health Systems Volume 2 ; 2 >
-      au < crawling ; exists ; 2009 ; International Journal of Mental Health Systems Volume 3 ; 3 >
-      au < crawling ; exists ; 2010 ; International Journal of Mental Health Systems Volume 4 ; 4 >
-      au < crawling ; exists ; 2011 ; International Journal of Mental Health Systems Volume 5 ; 5 >
-      au < crawling ; exists ; 2012 ; International Journal of Mental Health Systems Volume 6 ; 6 >
-      au < crawling ; exists ; 2013 ; International Journal of Mental Health Systems Volume 7 ; 7 >
-      au < crawling ; exists ; 2014 ; International Journal of Mental Health Systems Volume 8 ; 8 >
-      au < crawling ; exists ; 2015 ; International Journal of Mental Health Systems Volume 9 ; 9 >
+      au < doNotProcess ; exists ; 2007 ; International Journal of Mental Health Systems Volume 1 ; 1 >
+      au < down ; exists ; 2008 ; International Journal of Mental Health Systems Volume 2 ; 2 >
+      au < down ; exists ; 2009 ; International Journal of Mental Health Systems Volume 3 ; 3 >
+      au < down ; exists ; 2010 ; International Journal of Mental Health Systems Volume 4 ; 4 >
+      au < down ; exists ; 2011 ; International Journal of Mental Health Systems Volume 5 ; 5 >
+      au < down ; exists ; 2012 ; International Journal of Mental Health Systems Volume 6 ; 6 >
+      au < down ; exists ; 2013 ; International Journal of Mental Health Systems Volume 7 ; 7 >
+      au < down ; exists ; 2014 ; International Journal of Mental Health Systems Volume 8 ; 8 >
+      au < down ; exists ; 2015 ; International Journal of Mental Health Systems Volume 9 ; 9 >
 
     }
 
@@ -2698,12 +2696,12 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.investigativegenetics.com/
       param[journal_issn] = 2041-2223
 
-      au < crawling ; exists ; 2010 ; Investigative Genetics Volume 1 ; 1 >
-      au < crawling ; exists ; 2011 ; Investigative Genetics Volume 2 ; 2 >
-      au < crawling ; exists ; 2012 ; Investigative Genetics Volume 3 ; 3 >
-      au < crawling ; exists ; 2013 ; Investigative Genetics Volume 4 ; 4 >
-      au < crawling ; exists ; 2014 ; Investigative Genetics Volume 5 ; 5 >
-      au < crawling ; exists ; 2015 ; Investigative Genetics Volume 6 ; 6 >
+      au < down ; exists ; 2010 ; Investigative Genetics Volume 1 ; 1 >
+      au < down ; exists ; 2011 ; Investigative Genetics Volume 2 ; 2 >
+      au < down ; exists ; 2012 ; Investigative Genetics Volume 3 ; 3 >
+      au < down ; exists ; 2013 ; Investigative Genetics Volume 4 ; 4 >
+      au < down ; exists ; 2014 ; Investigative Genetics Volume 5 ; 5 >
+      au < down ; exists ; 2015 ; Investigative Genetics Volume 6 ; 6 >
 
     }
 
@@ -2783,10 +2781,10 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       param[base_url] = http://www.ijhpr.org/
       param[journal_issn] = 2045-4015
 
-      au < crawling ; exists ; 2012 ; Israel Journal of Health Policy Research Volume 1 ; 1 >
-      au < crawling ; exists ; 2013 ; Israel Journal of Health Policy Research Volume 2 ; 2 >
-      au < crawling ; exists ; 2014 ; Israel Journal of Health Policy Research Volume 3 ; 3 >
-      au < crawling ; exists ; 2015 ; Israel Journal of Health Policy Research Volume 4 ; 4 >
+      au < down ; exists ; 2012 ; Israel Journal of Health Policy Research Volume 1 ; 1 >
+      au < down ; exists ; 2013 ; Israel Journal of Health Policy Research Volume 2 ; 2 >
+      au < down ; exists ; 2014 ; Israel Journal of Health Policy Research Volume 3 ; 3 >
+      au < down ; exists ; 2015 ; Israel Journal of Health Policy Research Volume 4 ; 4 >
 
     }
 
