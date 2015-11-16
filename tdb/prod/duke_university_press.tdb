@@ -46,8 +46,8 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < testing ; 2012 ; American Literary Scholarship 2012 [Project MUSE] ; 2012 >
-        au < testing ; 2013 ; American Literary Scholarship 2013 [Project MUSE] ; 2013 >
+        au < ready ; 2012 ; American Literary Scholarship 2012 [Project MUSE] ; 2012 >
+        au < ready ; 2013 ; American Literary Scholarship 2013 [Project MUSE] ; 2013 >
 
       }
 
@@ -543,8 +543,8 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < testing ; 2014 ; Comparative Studies of South Asia, Africa and the Middle East Volume 34 [Project MUSE] ; 34 >
-        au < testing ; 2015 ; Comparative Studies of South Asia, Africa and the Middle East Volume 35 [Project MUSE] ; 35 >
+        au < ready ; 2014 ; Comparative Studies of South Asia, Africa and the Middle East Volume 34 [Project MUSE] ; 34 >
+        au < ready ; 2015 ; Comparative Studies of South Asia, Africa and the Middle East Volume 35 [Project MUSE] ; 35 >
 
       }
 
@@ -624,11 +624,10 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < testing ; 2014 ; Cultural Politics Volume 10 [Project MUSE] ; 10 >
+        au < ready ; 2014 ; Cultural Politics Volume 10 [Project MUSE] ; 10 >
         au < testing ; 2015 ; Cultural Politics Volume 11 [Project MUSE] ; 11 >
 
       }
-
 
     }
 
@@ -928,8 +927,8 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < testing ; 2014 ; East Asian Science, Technology and Society: An International Journal Volume 8 [Project MUSE] ; 8 >
-        au < testing ; 2015 ; East Asian Science, Technology and Society: An International Journal Volume 9 [Project MUSE] ; 9 >
+        au < ready ; 2014 ; East Asian Science, Technology and Society: An International Journal Volume 8 [Project MUSE] ; 8 >
+        au < ready ; 2015 ; East Asian Science, Technology and Society: An International Journal Volume 9 [Project MUSE] ; 9 >
 
       }
 
@@ -1448,7 +1447,7 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < testing ; 2014 ; Journal of Chinese Literature and Culture Volume 1 ; 1 >
-        au < testing ; 2015 ; Journal of Chinese Literature and Culture Volume 2 ; 2 >
+        au < ready ; 2015 ; Journal of Chinese Literature and Culture Volume 2 ; 2 >
 
       }
 
@@ -1841,8 +1840,8 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < testing ; 2014 ; Mediterranean Quarterly Volume 25 [Project MUSE] ; 25 >
-        au < testing ; 2015 ; Mediterranean Quarterly Volume 26 [Project MUSE] ; 26 >
+        au < ready ; 2014 ; Mediterranean Quarterly Volume 25 [Project MUSE] ; 25 >
+        au < ready ; 2015 ; Mediterranean Quarterly Volume 26 [Project MUSE] ; 26 >
 
       }
 
@@ -2268,7 +2267,7 @@
 
         au < testing ; 2014 ; Nka: Journal of Contemporary African Art Number 34 [Project MUSE] ; 34 >
         au < testing ; 2014 ; Nka: Journal of Contemporary African Art Number 35 [Project MUSE] ; 35 >
-        au < testing ; 2015 ; Nka: Journal of Contemporary African Art Number 36 [Project MUSE] ; 36 >
+        au < ready ; 2015 ; Nka: Journal of Contemporary African Art Number 36 [Project MUSE] ; 36 >
 
       }
 
@@ -2448,7 +2447,7 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < testing ; 2014 ; Pedagogy Volume 14 [Project MUSE] ; 14 >
-        au < testing ; 2015 ; Pedagogy Volume 15 [Project MUSE] ; 15 >
+        au < ready ; 2015 ; Pedagogy Volume 15 [Project MUSE] ; 15 >
 
       }
 
@@ -2890,8 +2889,8 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < testing ; 2014 ; Small Axe Volume 18 [Project MUSE] ; 18 >
-        au < testing ; 2015 ; Small Axe Volume 19 [Project MUSE] ; 19 >
+        au < ready ; 2014 ; Small Axe Volume 18 [Project MUSE] ; 18 >
+        au < ready ; 2015 ; Small Axe Volume 19 [Project MUSE] ; 19 >
 
       }
 
@@ -2966,7 +2965,7 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < testing ; 2014 ; Social Science History Volume 38 [Project MUSE] ; 38 >
+        au < ready ; 2014 ; Social Science History Volume 38 [Project MUSE] ; 38 >
 
       }
 
@@ -3306,7 +3305,7 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2015 ; Twentieth-Century Literature Volume 61 [Project MUSE] ; 61 >
+      au < ready ; 2015 ; Twentieth-Century Literature Volume 61 [Project MUSE] ; 61 >
 
       }
 
