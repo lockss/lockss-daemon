@@ -55,7 +55,7 @@
      -->
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://%s[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", base_url_host</string>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", base_url_host</string>
       <string>2,"^%sarticle.asp\?issn=%s;year=%d;volume=%s;issue=.*;type=[3-9]$",base_url, journal_issn, year, volume_name</string>
       <string>1,"^%s(article|citation|downloadpdf)\.asp\?issn=%s;year=%d;volume=%s;issue=",base_url, journal_issn, year, volume_name</string>
       <string>1,"^%sciteman.asp\?issn=%s;year=%d;volume=%s;issue=.*;t=2$",base_url, journal_issn, year, volume_name</string>

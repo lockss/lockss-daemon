@@ -29,7 +29,7 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://%s[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", base_url_host</string>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", base_url_host</string>
       <string>1,"%s%s/BAWOOD_%s_%s_[0-9]", base_url, journal_id, journal_id, volume_name</string>
     </list>
   </entry>
