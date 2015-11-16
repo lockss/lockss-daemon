@@ -6,6 +6,7 @@
   comment[0] = Do not add any titles with the DigitalCommons/BePress Plugin without Vicky's approval. Document Vicky's approval in PD-36.
 
   {
+  
     title <
       name = Comparative Drama ;
       issn = 0010-4078 ;
@@ -14,28 +15,47 @@
     >
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    implicit < status ; year ; name ; param[volume] >
-    param[base_url] = http://muse.jhu.edu/
-
     param[journal_dir] = comparative_drama
+    implicit < status ; year ; name ; param[volume] >
+
     attr[journal_id] = cdr
       
-    au < exists ; 2000 ; Comparative Drama Volume 34 ; 34 >
-    au < exists ; 2001 ; Comparative Drama Volume 35 ; 35 >
-    au < exists ; 2002 ; Comparative Drama Volume 36 ; 36 >
-    au < released ; 2003 ; Comparative Drama Volume 37 ; 37 >
-    au < released ; 2004 ; Comparative Drama Volume 38 ; 38 >
-    au < released ; 2005 ; Comparative Drama Volume 39 ; 39 >
-    au < released ; 2006-2007 ; Comparative Drama Volume 40 ; 40 >
-    au < released ; 2007 ; Comparative Drama Volume 41 ; 41 >
-    au < released ; 2008 ; Comparative Drama Volume 42 ; 42 >
-    au < released ; 2009 ; Comparative Drama Volume 43 ; 43 >
-    au < released ; 2010 ; Comparative Drama Volume 44 ; 44 >
-    au < released ; 2011 ; Comparative Drama Volume 45 ; 45 >
-    au < released ; 2012 ; Comparative Drama Volume 46 ; 46 >
-    au < released ; 2013 ; Comparative Drama Volume 47 ; 47 >
-    au < manifest ; 2014 ; Comparative Drama Volume 48 ; 48 >
-    au < manifest ; 2015 ; Comparative Drama Volume 49 ; 49 >
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 2000 ; Comparative Drama Volume 34 ; 34 >
+      au < exists ; 2001 ; Comparative Drama Volume 35 ; 35 >
+      au < exists ; 2002 ; Comparative Drama Volume 36 ; 36 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2003 ; Comparative Drama Volume 37 ; 37 >
+      au < released ; 2004 ; Comparative Drama Volume 38 ; 38 >
+      au < released ; 2005 ; Comparative Drama Volume 39 ; 39 >
+      au < released ; 2006-2007 ; Comparative Drama Volume 40 ; 40 >
+      au < released ; 2007 ; Comparative Drama Volume 41 ; 41 >
+      au < released ; 2008 ; Comparative Drama Volume 42 ; 42 >
+      au < released ; 2009 ; Comparative Drama Volume 43 ; 43 >
+      au < released ; 2010 ; Comparative Drama Volume 44 ; 44 >
+      au < released ; 2011 ; Comparative Drama Volume 45 ; 45 >
+      au < released ; 2012 ; Comparative Drama Volume 46 ; 46 >
+      au < released ; 2013 ; Comparative Drama Volume 47 ; 47 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Comparative Drama Volume 48 ; 48 >
+      au < manifest ; 2015 ; Comparative Drama Volume 49 ; 49 >
+
+    }
 
   }
 

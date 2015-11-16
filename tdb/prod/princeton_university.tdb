@@ -5,22 +5,23 @@
   >
   
   {
-  
+
+    title <
+      name = The Future of Children ;
+      issn = 1054-8289 ;
+      eissn = 1550-1558 ;
+      issnl = 1054-8289
+    >
+
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[journal_dir] = future_of_children
     implicit < status ; year ; name ; param[volume] >
-    param[base_url] = http://muse.jhu.edu/
+
+    attr[journal_id] = foc
 
     {
 
-      title <
-        name = The Future of Children ;
-        issn = 1054-8289 ;
-        eissn = 1550-1558 ;
-        issnl = 1054-8289
-      >
-
-      param[journal_dir] = future_of_children
-      attr[journal_id] = foc
+      param[base_url] = http://muse.jhu.edu/
 
       au < released ; 2005 ; The Future of Children Volume 15 ; 15 >
       au < released ; 2006 ; The Future of Children Volume 16 ; 16 >
@@ -31,27 +32,47 @@
       au < released ; 2011 ; The Future of Children Volume 21 ; 21 >
       au < released ; 2012 ; The Future of Children Volume 22 ; 22 >
       au < released ; 2013 ; The Future of Children Volume 23 ; 23 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
       au < manifest ; 2014 ; The Future of Children Volume 24 ; 24 >
 
     }
-  
-    {
-      title <
-        name = Philosophy & Public Affairs ;
-        issn = 0048-3915 ;
-        eissn = 1088-4963 ;
-        issnl = 0048-3915
-      >
 
-      param[journal_dir] = philosophy_and_public_affairs
-      attr[journal_id] = pap
+
+  }
+  
+  {
+  
+    title <
+      name = Philosophy & Public Affairs ;
+      issn = 0048-3915 ;
+      eissn = 1088-4963 ;
+      issnl = 0048-3915
+    >
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[journal_dir] = philosophy_and_public_affairs
+    implicit < status ; year ; name ; param[volume] >
+
+    attr[journal_id] = pap
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
 
       au < released ; 2001 ; Philosophy & Public Affairs Volume 30 ; 30 >
       au < released ; 2003 ; Philosophy & Public Affairs Volume 31 ; 31 >
 
     }
- }
- 
+
+
+  }
+
   {
   
     title <
@@ -63,7 +84,8 @@
     rights = openaccess
     plugin = org.lockss.plugin.prok.ProkPlugin
     implicit < status ; year ; name ; param[volume_name] >
-    comment[year] = listed copyright year from meta tag since volumes lack years
+
+    # year: listed copyright year from meta tag since volumes lack years
 
     {
     
@@ -78,12 +100,14 @@
     
       param[base_url] = http://www.princeton.edu/prok/
       
-      comment[0] = Plugin needs review.
+      # Plugin needs review.
       
       au < doNotProcess ; 2009 ; Princeton Report on Knowledge Volume 1 ; 1 >
       au < doNotProcess ; 2009 ; Princeton Report on Knowledge Volume 2 ; 2 >
       au < doNotProcess ; 2009 ; Princeton Report on Knowledge Volume 3 ; 3 >
       
     }
+
   }
+
 }

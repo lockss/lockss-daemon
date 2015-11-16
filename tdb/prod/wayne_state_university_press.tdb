@@ -14,26 +14,38 @@
     >
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     implicit < status ; year ; name ; param[volume] >
     param[journal_dir] = criticism
     attr[journal_id] = crt
 
-    au < released ; 2001 ; Criticism Volume 43 ; 43 >
-    au < released ; 2002 ; Criticism Volume 44 ; 44 >
-    au < released ; 2003 ; Criticism Volume 45 ; 45 >
-    au < released ; 2004 ; Criticism Volume 46 ; 46 >
-    au < released ; 2005 ; Criticism Volume 47 ; 47 >
-    au < released ; 2006 ; Criticism Volume 48 ; 48 >
-    au < released ; 2007 ; Criticism Volume 49 ; 49 >
-    au < released ; 2008 ; Criticism Volume 50 ; 50 >
-    au < released ; 2009 ; Criticism Volume 51 ; 51 >
-    au < released ; 2010 ; Criticism Volume 52 ; 52 >
-    au < released ; 2011 ; Criticism Volume 53 ; 53 >
-    au < released ; 2012 ; Criticism Volume 54 ; 54 >
-    au < released ; 2013 ; Criticism Volume 55 ; 55 >
-    au < manifest ; 2014 ; Criticism Volume 56 ; 56 >
-    au < manifest ; 2015 ; Criticism Volume 57 ; 57 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2001 ; Criticism Volume 43 ; 43 >
+      au < released ; 2002 ; Criticism Volume 44 ; 44 >
+      au < released ; 2003 ; Criticism Volume 45 ; 45 >
+      au < released ; 2004 ; Criticism Volume 46 ; 46 >
+      au < released ; 2005 ; Criticism Volume 47 ; 47 >
+      au < released ; 2006 ; Criticism Volume 48 ; 48 >
+      au < released ; 2007 ; Criticism Volume 49 ; 49 >
+      au < released ; 2008 ; Criticism Volume 50 ; 50 >
+      au < released ; 2009 ; Criticism Volume 51 ; 51 >
+      au < released ; 2010 ; Criticism Volume 52 ; 52 >
+      au < released ; 2011 ; Criticism Volume 53 ; 53 >
+      au < released ; 2012 ; Criticism Volume 54 ; 54 >
+      au < released ; 2013 ; Criticism Volume 55 ; 55 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Criticism Volume 56 ; 56 >
+      au < manifest ; 2015 ; Criticism Volume 57 ; 57 >
+
+    }
 
   }
 
@@ -47,27 +59,39 @@
     >
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     implicit < status ; year ; name ; param[volume] >
     param[journal_dir] = discourse
     attr[journal_id] = dis
     
-    au < released ; 2000 ; Discourse Volume 22 ; 22 >
-    au < released ; 2001 ; Discourse Volume 23 ; 23 >
-    au < released ; 2002 ; Discourse Volume 24 ; 24 >
-    au < released ; 2003 ; Discourse Volume 25 ; 25 >
-    au < released ; 2004 ; Discourse Volume 26 ; 26 >
-    au < released ; 2005 ; Discourse Volume 27 ; 27 >
-    au < released ; 2006 ; Discourse Volume 28 ; 28 >
-    au < released ; 2007 ; Discourse Volume 29 ; 29 >
-    au < released ; 2008 ; Discourse Volume 30 ; 30 >
-    au < released ; 2009 ; Discourse Volume 31 ; 31 >
-    au < released ; 2010 ; Discourse Volume 32 ; 32 >
-    au < released ; 2011 ; Discourse Volume 33 ; 33 >
-    au < released ; 2012 ; Discourse Volume 34 ; 34 >
-    au < released ; 2013 ; Discourse Volume 35 ; 35 >
-    au < manifest ; 2014 ; Discourse Volume 36 ; 36 >
-    au < manifest ; 2015 ; Discourse Volume 37 ; 37 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2000 ; Discourse Volume 22 ; 22 >
+      au < released ; 2001 ; Discourse Volume 23 ; 23 >
+      au < released ; 2002 ; Discourse Volume 24 ; 24 >
+      au < released ; 2003 ; Discourse Volume 25 ; 25 >
+      au < released ; 2004 ; Discourse Volume 26 ; 26 >
+      au < released ; 2005 ; Discourse Volume 27 ; 27 >
+      au < released ; 2006 ; Discourse Volume 28 ; 28 >
+      au < released ; 2007 ; Discourse Volume 29 ; 29 >
+      au < released ; 2008 ; Discourse Volume 30 ; 30 >
+      au < released ; 2009 ; Discourse Volume 31 ; 31 >
+      au < released ; 2010 ; Discourse Volume 32 ; 32 >
+      au < released ; 2011 ; Discourse Volume 33 ; 33 >
+      au < released ; 2012 ; Discourse Volume 34 ; 34 >
+      au < released ; 2013 ; Discourse Volume 35 ; 35 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Discourse Volume 36 ; 36 >
+      au < manifest ; 2015 ; Discourse Volume 37 ; 37 >
+
+    }
 
   }
 
@@ -81,21 +105,33 @@
     >
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     implicit < status ; year ; name ; param[volume] >
     param[journal_dir] = framework_the_journal_of_cinema_and_media
     attr[journal_id] = frm
     
-    au < released ; 2006 ; Framework: The Journal of Cinema and Media Volume 47 ; 47 >
-    au < released ; 2007 ; Framework: The Journal of Cinema and Media Volume 48 ; 48 >
-    au < released ; 2008 ; Framework: The Journal of Cinema and Media Volume 49 ; 49 >
-    au < released ; 2009 ; Framework: The Journal of Cinema and Media Volume 50 ; 50 >
-    au < released ; 2010 ; Framework: The Journal of Cinema and Media Volume 51 ; 51 >
-    au < released ; 2011 ; Framework: The Journal of Cinema and Media Volume 52 ; 52 >
-    au < released ; 2012 ; Framework: The Journal of Cinema and Media Volume 53 ; 53 >
-    au < released ; 2013 ; Framework: The Journal of Cinema and Media Volume 54 ; 54 >
-    au < manifest ; 2014 ; Framework: The Journal of Cinema and Media Volume 55 ; 55 >
-    au < manifest ; 2015 ; Framework: The Journal of Cinema and Media Volume 56 ; 56 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2006 ; Framework: The Journal of Cinema and Media Volume 47 ; 47 >
+      au < released ; 2007 ; Framework: The Journal of Cinema and Media Volume 48 ; 48 >
+      au < released ; 2008 ; Framework: The Journal of Cinema and Media Volume 49 ; 49 >
+      au < released ; 2009 ; Framework: The Journal of Cinema and Media Volume 50 ; 50 >
+      au < released ; 2010 ; Framework: The Journal of Cinema and Media Volume 51 ; 51 >
+      au < released ; 2011 ; Framework: The Journal of Cinema and Media Volume 52 ; 52 >
+      au < released ; 2012 ; Framework: The Journal of Cinema and Media Volume 53 ; 53 >
+      au < released ; 2013 ; Framework: The Journal of Cinema and Media Volume 54 ; 54 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Framework: The Journal of Cinema and Media Volume 55 ; 55 >
+      au < manifest ; 2015 ; Framework: The Journal of Cinema and Media Volume 56 ; 56 >
+
+    }
 
   }
 
@@ -144,7 +180,6 @@
 
       }
 
-
     }
 
     {
@@ -181,14 +216,19 @@
     >
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     implicit < status ; year ; name ; param[volume] >
     param[journal_dir] = jewish_film_new_media_an_international_journal
     attr[journal_id] = jfn
 
-    au < manifest ; 2013 ; Jewish Film & New Media: An International Journal Volume 1 ; 1 >
-    au < manifest ; 2014 ; Jewish Film & New Media: An International Journal Volume 2 ; 2 >
-    au < manifest ; 2015 ; Jewish Film & New Media: An International Journal Volume 3 ; 3 >
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2013 ; Jewish Film & New Media: An International Journal Volume 1 ; 1 >
+      au < manifest ; 2014 ; Jewish Film & New Media: An International Journal Volume 2 ; 2 >
+      au < manifest ; 2015 ; Jewish Film & New Media: An International Journal Volume 3 ; 3 >
+
+    }
 
   }
 
@@ -202,26 +242,38 @@
     >
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     implicit < status ; year ; name ; param[volume] >
     param[journal_dir] = marvels_and_tales
     attr[journal_id] = mat
 
-    au < released ; 2001 ; Marvels & Tales Volume 15 ; 15 >
-    au < released ; 2002 ; Marvels & Tales Volume 16 ; 16 >
-    au < released ; 2003 ; Marvels & Tales Volume 17 ; 17 >
-    au < released ; 2004 ; Marvels & Tales Volume 18 ; 18 >
-    au < released ; 2005 ; Marvels & Tales Volume 19 ; 19 >
-    au < released ; 2006 ; Marvels & Tales Volume 20 ; 20 >
-    au < released ; 2007 ; Marvels & Tales Volume 21 ; 21 >
-    au < released ; 2008 ; Marvels & Tales Volume 22 ; 22 >
-    au < released ; 2009 ; Marvels & Tales Volume 23 ; 23 >
-    au < released ; 2010 ; Marvels & Tales Volume 24 ; 24 >
-    au < released ; 2011 ; Marvels & Tales Volume 25 ; 25 >
-    au < released ; 2012 ; Marvels & Tales Volume 26 ; 26 >
-    au < released ; 2013 ; Marvels & Tales Volume 27 ; 27 >
-    au < manifest ; 2014 ; Marvels & Tales Volume 28 ; 28 >
-    au < manifest ; 2015 ; Marvels & Tales Volume 29 ; 29 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2001 ; Marvels & Tales Volume 15 ; 15 >
+      au < released ; 2002 ; Marvels & Tales Volume 16 ; 16 >
+      au < released ; 2003 ; Marvels & Tales Volume 17 ; 17 >
+      au < released ; 2004 ; Marvels & Tales Volume 18 ; 18 >
+      au < released ; 2005 ; Marvels & Tales Volume 19 ; 19 >
+      au < released ; 2006 ; Marvels & Tales Volume 20 ; 20 >
+      au < released ; 2007 ; Marvels & Tales Volume 21 ; 21 >
+      au < released ; 2008 ; Marvels & Tales Volume 22 ; 22 >
+      au < released ; 2009 ; Marvels & Tales Volume 23 ; 23 >
+      au < released ; 2010 ; Marvels & Tales Volume 24 ; 24 >
+      au < released ; 2011 ; Marvels & Tales Volume 25 ; 25 >
+      au < released ; 2012 ; Marvels & Tales Volume 26 ; 26 >
+      au < released ; 2013 ; Marvels & Tales Volume 27 ; 27 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Marvels & Tales Volume 28 ; 28 >
+      au < manifest ; 2015 ; Marvels & Tales Volume 29 ; 29 >
+
+    }
 
   }
 
@@ -235,26 +287,38 @@
     >
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     implicit < status ; year ; name ; param[volume] >
     param[journal_dir] = merrill-palmer_quarterly
     attr[journal_id] = mpq
     
-    au < released ; 2001 ; Merrill-Palmer Quarterly Volume 47 ; 47 >
-    au < released ; 2002 ; Merrill-Palmer Quarterly Volume 48 ; 48 >
-    au < released ; 2003 ; Merrill-Palmer Quarterly Volume 49 ; 49 >
-    au < released ; 2004 ; Merrill-Palmer Quarterly Volume 50 ; 50 >
-    au < released ; 2005 ; Merrill-Palmer Quarterly Volume 51 ; 51 >
-    au < released ; 2006 ; Merrill-Palmer Quarterly Volume 52 ; 52 >
-    au < released ; 2007 ; Merrill-Palmer Quarterly Volume 53 ; 53 >
-    au < released ; 2008 ; Merrill-Palmer Quarterly Volume 54 ; 54 >
-    au < released ; 2009 ; Merrill-Palmer Quarterly Volume 55 ; 55 >
-    au < released ; 2010 ; Merrill-Palmer Quarterly Volume 56 ; 56 >
-    au < released ; 2011 ; Merrill-Palmer Quarterly Volume 57 ; 57 >
-    au < released ; 2012 ; Merrill-Palmer Quarterly Volume 58 ; 58 >
-    au < released ; 2013 ; Merrill-Palmer Quarterly Volume 59 ; 59 >
-    au < manifest ; 2014 ; Merrill-Palmer Quarterly Volume 60 ; 60 >
-    au < manifest ; 2015 ; Merrill-Palmer Quarterly Volume 61 ; 61 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2001 ; Merrill-Palmer Quarterly Volume 47 ; 47 >
+      au < released ; 2002 ; Merrill-Palmer Quarterly Volume 48 ; 48 >
+      au < released ; 2003 ; Merrill-Palmer Quarterly Volume 49 ; 49 >
+      au < released ; 2004 ; Merrill-Palmer Quarterly Volume 50 ; 50 >
+      au < released ; 2005 ; Merrill-Palmer Quarterly Volume 51 ; 51 >
+      au < released ; 2006 ; Merrill-Palmer Quarterly Volume 52 ; 52 >
+      au < released ; 2007 ; Merrill-Palmer Quarterly Volume 53 ; 53 >
+      au < released ; 2008 ; Merrill-Palmer Quarterly Volume 54 ; 54 >
+      au < released ; 2009 ; Merrill-Palmer Quarterly Volume 55 ; 55 >
+      au < released ; 2010 ; Merrill-Palmer Quarterly Volume 56 ; 56 >
+      au < released ; 2011 ; Merrill-Palmer Quarterly Volume 57 ; 57 >
+      au < released ; 2012 ; Merrill-Palmer Quarterly Volume 58 ; 58 >
+      au < released ; 2013 ; Merrill-Palmer Quarterly Volume 59 ; 59 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Merrill-Palmer Quarterly Volume 60 ; 60 >
+      au < manifest ; 2015 ; Merrill-Palmer Quarterly Volume 61 ; 61 >
+
+    }
 
   }
 

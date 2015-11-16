@@ -6,30 +6,6 @@
 
     {
       title <
-        name = Syllecta Classica ;
-        issn = 1040-3612 ;
-        eissn = 2160-5157
-      >
-
-      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      implicit < status ; year ; name ; param[volume] >
-      param[base_url] = http://muse.jhu.edu/
-
-      param[journal_dir] = syllecta_classica
-      attr[journal_id] = syl
-
-      au < released ; 2009 ; Syllecta Classica Volume 20 ; 20 >
-      au < released ; 2010 ; Syllecta Classica Volume 21 ; 21 >
-      au < released ; 2011 ; Syllecta Classica Volume 22 ; 22 >
-      au < released ; 2012 ; Syllecta Classica Volume 23 ; 23 >
-      au < released ; 2013 ; Syllecta Classica Volume 24 ; 24 >
-      au < manifest ; 2014 ; Syllecta Classica Volume 25 ; 25 >
-      au < expected ; 2015 ; Syllecta Classica Volume 26 ; 26 >
-
-    }
-    
-    {
-      title <
         name = Annals at Iowa ;
         issn = 0003-4827
       >
@@ -406,6 +382,43 @@
       au < manifest ; 2015 ; Proceedings in Obstetrics and Gynecology Volume 5 ; 5 >
 
     }
+    
+  {
+  
+    title <
+      name = Syllecta Classica ;
+      issn = 1040-3612 ;
+      eissn = 2160-5157
+    >
+
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[journal_dir] = syllecta_classica
+    implicit < status ; year ; name ; param[volume] >
+
+    attr[journal_id] = syl
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2009 ; Syllecta Classica Volume 20 ; 20 >
+      au < released ; 2010 ; Syllecta Classica Volume 21 ; 21 >
+      au < released ; 2011 ; Syllecta Classica Volume 22 ; 22 >
+      au < released ; 2012 ; Syllecta Classica Volume 23 ; 23 >
+      au < released ; 2013 ; Syllecta Classica Volume 24 ; 24 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Syllecta Classica Volume 25 ; 25 >
+      au < expected ; 2015 ; Syllecta Classica Volume 26 ; 26 >
+
+    }
+
+  }
     
     {
       title <

@@ -129,7 +129,6 @@
     >
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = education_and_culture
     implicit < status ; year ; name ; param[volume] >
 
@@ -137,17 +136,37 @@
     
     # v21: malformed manifest page. No content.
 
-    au < doNotProcess ; 2005 ; Education and Culture Volume 21 ; 21 >
-    au < released ; 2006 ; Education and Culture Volume 22 ; 22 >
-    au < released ; 2007 ; Education and Culture Volume 23 ; 23 >
-    au < released ; 2008 ; Education and Culture Volume 24 ; 24 >
-    au < released ; 2009 ; Education and Culture Volume 25 ; 25 >
-    au < released ; 2010 ; Education and Culture Volume 26 ; 26 >
-    au < released ; 2011 ; Education and Culture Volume 27 ; 27 >
-    au < released ; 2012 ; Education and Culture Volume 28 ; 28 >
-    au < released ; 2013 ; Education and Culture Volume 29 ; 29 >
-    au < manifest ; 2014 ; Education and Culture Volume 30 ; 30 >
-    au < manifest ; 2015 ; Education and Culture Volume 31 ; 31 >
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < doNotProcess ; 2005 ; Education and Culture Volume 21 ; 21 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2006 ; Education and Culture Volume 22 ; 22 >
+      au < released ; 2007 ; Education and Culture Volume 23 ; 23 >
+      au < released ; 2008 ; Education and Culture Volume 24 ; 24 >
+      au < released ; 2009 ; Education and Culture Volume 25 ; 25 >
+      au < released ; 2010 ; Education and Culture Volume 26 ; 26 >
+      au < released ; 2011 ; Education and Culture Volume 27 ; 27 >
+      au < released ; 2012 ; Education and Culture Volume 28 ; 28 >
+      au < released ; 2013 ; Education and Culture Volume 29 ; 29 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Education and Culture Volume 30 ; 30 >
+      au < manifest ; 2015 ; Education and Culture Volume 31 ; 31 >
+
+    }
 
   }
 
@@ -197,23 +216,35 @@
     >
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = philip_roth_studies
     implicit < status ; year ; name ; param[volume] >
 
     attr[journal_id] = prs
     
-    au < released ; 2005 ; Philip Roth Studies Volume 1 ; 1 >
-    au < released ; 2006 ; Philip Roth Studies Volume 2 ; 2 >
-    au < released ; 2007 ; Philip Roth Studies Volume 3 ; 3 >
-    au < released ; 2008 ; Philip Roth Studies Volume 4 ; 4 >
-    au < released ; 2009 ; Philip Roth Studies Volume 5 ; 5 >
-    au < released ; 2010 ; Philip Roth Studies Volume 6 ; 6 >
-    au < released ; 2011 ; Philip Roth Studies Volume 7 ; 7 >
-    au < released ; 2012 ; Philip Roth Studies Volume 8 ; 8 >
-    au < released ; 2013 ; Philip Roth Studies Volume 9 ; 9 >
-    au < manifest ; 2014 ; Philip Roth Studies Volume 10 ; 10 >
-    au < manifest ; 2015 ; Philip Roth Studies Volume 11 ; 11 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2005 ; Philip Roth Studies Volume 1 ; 1 >
+      au < released ; 2006 ; Philip Roth Studies Volume 2 ; 2 >
+      au < released ; 2007 ; Philip Roth Studies Volume 3 ; 3 >
+      au < released ; 2008 ; Philip Roth Studies Volume 4 ; 4 >
+      au < released ; 2009 ; Philip Roth Studies Volume 5 ; 5 >
+      au < released ; 2010 ; Philip Roth Studies Volume 6 ; 6 >
+      au < released ; 2011 ; Philip Roth Studies Volume 7 ; 7 >
+      au < released ; 2012 ; Philip Roth Studies Volume 8 ; 8 >
+      au < released ; 2013 ; Philip Roth Studies Volume 9 ; 9 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Philip Roth Studies Volume 10 ; 10 >
+      au < manifest ; 2015 ; Philip Roth Studies Volume 11 ; 11 >
+
+    }
 
   }
 
@@ -227,27 +258,39 @@
     >
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = shofar
     implicit < status ; year ; name ; param[volume] >
 
     attr[journal_id] = sho
 
-    au < released ; 2001 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 19 ; 19 >
-    au < released ; 2001-2002 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 20 ; 20 >
-    au < released ; 2002-2003 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 21 ; 21 >
-    au < released ; 2003-2004 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 22 ; 22 >
-    au < released ; 2004-2005 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 23 ; 23 >
-    au < released ; 2005-2006 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 24 ; 24 >
-    au < released ; 2006-2007 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 25 ; 25 >
-    au < released ; 2007-2008 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 26 ; 26 >
-    au < released ; 2008-2009 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 27 ; 27 >
-    au < released ; 2009-2010 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 28 ; 28 >
-    au < released ; 2010-2011 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 29 ; 29 >
-    au < released ; 2011-2012 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 30 ; 30 >
-    au < released ; 2013-2014 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 31 ; 31 >
-    au < manifest ; 2014-2015 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 32 ; 32 >
-    au < manifest ; 2015-2016 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 33 ; 33 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2001 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 19 ; 19 >
+      au < released ; 2001-2002 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 20 ; 20 >
+      au < released ; 2002-2003 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 21 ; 21 >
+      au < released ; 2003-2004 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 22 ; 22 >
+      au < released ; 2004-2005 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 23 ; 23 >
+      au < released ; 2005-2006 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 24 ; 24 >
+      au < released ; 2006-2007 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 25 ; 25 >
+      au < released ; 2007-2008 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 26 ; 26 >
+      au < released ; 2008-2009 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 27 ; 27 >
+      au < released ; 2009-2010 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 28 ; 28 >
+      au < released ; 2010-2011 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 29 ; 29 >
+      au < released ; 2011-2012 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 30 ; 30 >
+      au < released ; 2013-2014 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 31 ; 31 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014-2015 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 32 ; 32 >
+      au < manifest ; 2015-2016 ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 33 ; 33 >
+
+    }
 
   }
 

@@ -1617,22 +1617,36 @@
     param[journal_dir] = journal_of_the_history_of_philosophy
     attr[journal_id] = hph
 
-    au < released ; 2000 ; Journal of the History of Philosophy Volume 38 ; 38 >
-    au < released ; 2001 ; Journal of the History of Philosophy Volume 39 ; 39 >
-    au < released ; 2002 ; Journal of the History of Philosophy Volume 40 ; 40 >
-    au < released ; 2003 ; Journal of the History of Philosophy Volume 41 ; 41 >
-    au < released ; 2004 ; Journal of the History of Philosophy Volume 42 ; 42 >
-    au < released ; 2005 ; Journal of the History of Philosophy Volume 43 ; 43 >
-    au < released ; 2006 ; Journal of the History of Philosophy Volume 44 ; 44 >
-    au < released ; 2007 ; Journal of the History of Philosophy Volume 45 ; 45 >
-    au < released ; 2008 ; Journal of the History of Philosophy Volume 46 ; 46 >
-    au < released ; 2009 ; Journal of the History of Philosophy Volume 47 ; 47 >
-    au < released ; 2010 ; Journal of the History of Philosophy Volume 48 ; 48 >
-    au < released ; 2011 ; Journal of the History of Philosophy Volume 49 ; 49 >
-    au < released ; 2012 ; Journal of the History of Philosophy Volume 50 ; 50 >
-    au < released ; 2013 ; Journal of the History of Philosophy Volume 51 ; 51 >
-    au < manifest ; 2014 ; Journal of the History of Philosophy Volume 52 ; 52 >
-    au < manifest ; 2015 ; Journal of the History of Philosophy Volume 53 ; 53 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2000 ; Journal of the History of Philosophy Volume 38 ; 38 >
+      au < released ; 2001 ; Journal of the History of Philosophy Volume 39 ; 39 >
+      au < released ; 2002 ; Journal of the History of Philosophy Volume 40 ; 40 >
+      au < released ; 2003 ; Journal of the History of Philosophy Volume 41 ; 41 >
+      au < released ; 2004 ; Journal of the History of Philosophy Volume 42 ; 42 >
+      au < released ; 2005 ; Journal of the History of Philosophy Volume 43 ; 43 >
+      au < released ; 2006 ; Journal of the History of Philosophy Volume 44 ; 44 >
+      au < released ; 2007 ; Journal of the History of Philosophy Volume 45 ; 45 >
+      au < released ; 2008 ; Journal of the History of Philosophy Volume 46 ; 46 >
+      au < released ; 2009 ; Journal of the History of Philosophy Volume 47 ; 47 >
+      au < released ; 2010 ; Journal of the History of Philosophy Volume 48 ; 48 >
+      au < released ; 2011 ; Journal of the History of Philosophy Volume 49 ; 49 >
+      au < released ; 2012 ; Journal of the History of Philosophy Volume 50 ; 50 >
+      au < released ; 2013 ; Journal of the History of Philosophy Volume 51 ; 51 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Journal of the History of Philosophy Volume 52 ; 52 >
+      au < manifest ; 2015 ; Journal of the History of Philosophy Volume 53 ; 53 >
+
+    }
+
     
   }
 
@@ -1647,23 +1661,37 @@
     param[journal_dir] = journal_of_womens_history
     attr[journal_id] = jowh
 
-    au < released ; 1999-2000 ; Journal of Women's History Volume 11 ; 11 >
-    au < released ; 2000-2001 ; Journal of Women's History Volume 12 ; 12 >
-    au < released ; 2001-2002 ; Journal of Women's History Volume 13 ; 13 >
-    au < released ; 2002-2003 ; Journal of Women's History Volume 14 ; 14 >
-    au < released ; 2003-2004 ; Journal of Women's History Volume 15 ; 15 >
-    au < released ; 2004 ; Journal of Women's History Volume 16 ; 16 >
-    au < released ; 2005 ; Journal of Women's History Volume 17 ; 17 >
-    au < released ; 2006 ; Journal of Women's History Volume 18 ; 18 >
-    au < released ; 2007 ; Journal of Women's History Volume 19 ; 19 >
-    au < released ; 2008 ; Journal of Women's History Volume 20 ; 20 >
-    au < released ; 2009 ; Journal of Women's History Volume 21 ; 21 >
-    au < released ; 2010 ; Journal of Women's History Volume 22 ; 22 >
-    au < released ; 2011 ; Journal of Women's History Volume 23 ; 23 >
-    au < released ; 2012 ; Journal of Women's History Volume 24 ; 24 >
-    au < released ; 2013 ; Journal of Women's History Volume 25 ; 25 >
-    au < manifest ; 2014 ; Journal of Women's History Volume 26 ; 26 >
-    au < manifest ; 2015 ; Journal of Women's History Volume 27 ; 27 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1999-2000 ; Journal of Women's History Volume 11 ; 11 >
+      au < released ; 2000-2001 ; Journal of Women's History Volume 12 ; 12 >
+      au < released ; 2001-2002 ; Journal of Women's History Volume 13 ; 13 >
+      au < released ; 2002-2003 ; Journal of Women's History Volume 14 ; 14 >
+      au < released ; 2003-2004 ; Journal of Women's History Volume 15 ; 15 >
+      au < released ; 2004 ; Journal of Women's History Volume 16 ; 16 >
+      au < released ; 2005 ; Journal of Women's History Volume 17 ; 17 >
+      au < released ; 2006 ; Journal of Women's History Volume 18 ; 18 >
+      au < released ; 2007 ; Journal of Women's History Volume 19 ; 19 >
+      au < released ; 2008 ; Journal of Women's History Volume 20 ; 20 >
+      au < released ; 2009 ; Journal of Women's History Volume 21 ; 21 >
+      au < released ; 2010 ; Journal of Women's History Volume 22 ; 22 >
+      au < released ; 2011 ; Journal of Women's History Volume 23 ; 23 >
+      au < released ; 2012 ; Journal of Women's History Volume 24 ; 24 >
+      au < released ; 2013 ; Journal of Women's History Volume 25 ; 25 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Journal of Women's History Volume 26 ; 26 >
+      au < manifest ; 2015 ; Journal of Women's History Volume 27 ; 27 >
+
+    }
+
 
   }
 
@@ -1678,26 +1706,40 @@
     param[journal_dir] = kennedy_institute_of_ethics_journal
     attr[journal_id] = ken
 
-    au < released ; 1996 ; Kennedy Institute of Ethics Journal Volume 6 ; 6 >
-    au < released ; 1997 ; Kennedy Institute of Ethics Journal Volume 7 ; 7 >
-    au < released ; 1998 ; Kennedy Institute of Ethics Journal Volume 8 ; 8 >
-    au < released ; 1999 ; Kennedy Institute of Ethics Journal Volume 9 ; 9 >
-    au < released ; 2000 ; Kennedy Institute of Ethics Journal Volume 10 ; 10 >
-    au < released ; 2001 ; Kennedy Institute of Ethics Journal Volume 11 ; 11 >
-    au < released ; 2002 ; Kennedy Institute of Ethics Journal Volume 12 ; 12 >
-    au < released ; 2003 ; Kennedy Institute of Ethics Journal Volume 13 ; 13 >
-    au < released ; 2004 ; Kennedy Institute of Ethics Journal Volume 14 ; 14 >
-    au < released ; 2005 ; Kennedy Institute of Ethics Journal Volume 15 ; 15 >
-    au < released ; 2006 ; Kennedy Institute of Ethics Journal Volume 16 ; 16 >
-    au < released ; 2007 ; Kennedy Institute of Ethics Journal Volume 17 ; 17 >
-    au < released ; 2008 ; Kennedy Institute of Ethics Journal Volume 18 ; 18 >
-    au < released ; 2009 ; Kennedy Institute of Ethics Journal Volume 19 ; 19 >
-    au < released ; 2010 ; Kennedy Institute of Ethics Journal Volume 20 ; 20 >
-    au < released ; 2011 ; Kennedy Institute of Ethics Journal Volume 21 ; 21 >
-    au < released ; 2012 ; Kennedy Institute of Ethics Journal Volume 22 ; 22 >
-    au < released ; 2013 ; Kennedy Institute of Ethics Journal Volume 23 ; 23 >
-    au < manifest ; 2014 ; Kennedy Institute of Ethics Journal Volume 24 ; 24 >
-    au < manifest ; 2015 ; Kennedy Institute of Ethics Journal Volume 25 ; 25 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1996 ; Kennedy Institute of Ethics Journal Volume 6 ; 6 >
+      au < released ; 1997 ; Kennedy Institute of Ethics Journal Volume 7 ; 7 >
+      au < released ; 1998 ; Kennedy Institute of Ethics Journal Volume 8 ; 8 >
+      au < released ; 1999 ; Kennedy Institute of Ethics Journal Volume 9 ; 9 >
+      au < released ; 2000 ; Kennedy Institute of Ethics Journal Volume 10 ; 10 >
+      au < released ; 2001 ; Kennedy Institute of Ethics Journal Volume 11 ; 11 >
+      au < released ; 2002 ; Kennedy Institute of Ethics Journal Volume 12 ; 12 >
+      au < released ; 2003 ; Kennedy Institute of Ethics Journal Volume 13 ; 13 >
+      au < released ; 2004 ; Kennedy Institute of Ethics Journal Volume 14 ; 14 >
+      au < released ; 2005 ; Kennedy Institute of Ethics Journal Volume 15 ; 15 >
+      au < released ; 2006 ; Kennedy Institute of Ethics Journal Volume 16 ; 16 >
+      au < released ; 2007 ; Kennedy Institute of Ethics Journal Volume 17 ; 17 >
+      au < released ; 2008 ; Kennedy Institute of Ethics Journal Volume 18 ; 18 >
+      au < released ; 2009 ; Kennedy Institute of Ethics Journal Volume 19 ; 19 >
+      au < released ; 2010 ; Kennedy Institute of Ethics Journal Volume 20 ; 20 >
+      au < released ; 2011 ; Kennedy Institute of Ethics Journal Volume 21 ; 21 >
+      au < released ; 2012 ; Kennedy Institute of Ethics Journal Volume 22 ; 22 >
+      au < released ; 2013 ; Kennedy Institute of Ethics Journal Volume 23 ; 23 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Kennedy Institute of Ethics Journal Volume 24 ; 24 >
+      au < manifest ; 2015 ; Kennedy Institute of Ethics Journal Volume 25 ; 25 >
+
+    }
+
 
   }
 
@@ -1712,26 +1754,40 @@
     param[journal_dir] = lesprit_createur
     attr[journal_id] = esp
 
-    au < released ; 1996 ; L'Esprit Créateur Volume 36 ; 36 >
-    au < released ; 1997 ; L'Esprit Créateur Volume 37 ; 37 >
-    au < released ; 1998 ; L'Esprit Créateur Volume 38 ; 38 >
-    au < released ; 1999 ; L'Esprit Créateur Volume 39 ; 39 >
-    au < released ; 2000 ; L'Esprit Créateur Volume 40 ; 40 >
-    au < released ; 2001 ; L'Esprit Créateur Volume 41 ; 41 >
-    au < released ; 2002 ; L'Esprit Créateur Volume 42 ; 42 >
-    au < released ; 2003 ; L'Esprit Créateur Volume 43 ; 43 >
-    au < released ; 2004 ; L'Esprit Créateur Volume 44 ; 44 >
-    au < released ; 2005 ; L'Esprit Créateur Volume 45 ; 45 >
-    au < released ; 2006 ; L'Esprit Créateur Volume 46 ; 46 >
-    au < released ; 2007 ; L'Esprit Créateur Volume 47 ; 47 >
-    au < released ; 2008 ; L'Esprit Créateur Volume 48 ; 48 >
-    au < released ; 2009 ; L'Esprit Créateur Volume 49 ; 49 >
-    au < released ; 2010 ; L'Esprit Créateur Volume 50 ; 50 >
-    au < released ; 2011 ; L'Esprit Créateur Volume 51 ; 51 >
-    au < released ; 2012 ; L'Esprit Créateur Volume 52 ; 52 >
-    au < released ; 2013 ; L'Esprit Créateur Volume 53 ; 53 >
-    au < manifest ; 2014 ; L'Esprit Créateur Volume 54 ; 54 >
-    au < manifest ; 2015 ; L'Esprit Créateur Volume 55 ; 55 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1996 ; L'Esprit Créateur Volume 36 ; 36 >
+      au < released ; 1997 ; L'Esprit Créateur Volume 37 ; 37 >
+      au < released ; 1998 ; L'Esprit Créateur Volume 38 ; 38 >
+      au < released ; 1999 ; L'Esprit Créateur Volume 39 ; 39 >
+      au < released ; 2000 ; L'Esprit Créateur Volume 40 ; 40 >
+      au < released ; 2001 ; L'Esprit Créateur Volume 41 ; 41 >
+      au < released ; 2002 ; L'Esprit Créateur Volume 42 ; 42 >
+      au < released ; 2003 ; L'Esprit Créateur Volume 43 ; 43 >
+      au < released ; 2004 ; L'Esprit Créateur Volume 44 ; 44 >
+      au < released ; 2005 ; L'Esprit Créateur Volume 45 ; 45 >
+      au < released ; 2006 ; L'Esprit Créateur Volume 46 ; 46 >
+      au < released ; 2007 ; L'Esprit Créateur Volume 47 ; 47 >
+      au < released ; 2008 ; L'Esprit Créateur Volume 48 ; 48 >
+      au < released ; 2009 ; L'Esprit Créateur Volume 49 ; 49 >
+      au < released ; 2010 ; L'Esprit Créateur Volume 50 ; 50 >
+      au < released ; 2011 ; L'Esprit Créateur Volume 51 ; 51 >
+      au < released ; 2012 ; L'Esprit Créateur Volume 52 ; 52 >
+      au < released ; 2013 ; L'Esprit Créateur Volume 53 ; 53 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; L'Esprit Créateur Volume 54 ; 54 >
+      au < manifest ; 2015 ; L'Esprit Créateur Volume 55 ; 55 >
+
+    }
+
 
   }
 
@@ -1746,26 +1802,40 @@
     param[journal_dir] = late_imperial_china
     attr[journal_id] = late
 
-    au < released ; 1996 ; Late Imperial China Volume 17 ; 17 >
-    au < released ; 1997 ; Late Imperial China Volume 18 ; 18 >
-    au < released ; 1998 ; Late Imperial China Volume 19 ; 19 >
-    au < released ; 1999 ; Late Imperial China Volume 20 ; 20 >
-    au < released ; 2000 ; Late Imperial China Volume 21 ; 21 >
-    au < released ; 2001 ; Late Imperial China Volume 22 ; 22 >
-    au < released ; 2002 ; Late Imperial China Volume 23 ; 23 >
-    au < released ; 2003 ; Late Imperial China Volume 24 ; 24 >
-    au < released ; 2004 ; Late Imperial China Volume 25 ; 25 >
-    au < released ; 2005 ; Late Imperial China Volume 26 ; 26 >
-    au < released ; 2006 ; Late Imperial China Volume 27 ; 27 >
-    au < released ; 2007 ; Late Imperial China Volume 28 ; 28 >
-    au < released ; 2008 ; Late Imperial China Volume 29 ; 29 >
-    au < released ; 2009 ; Late Imperial China Volume 30 ; 30 >
-    au < released ; 2010 ; Late Imperial China Volume 31 ; 31 >
-    au < released ; 2011 ; Late Imperial China Volume 32 ; 32 >
-    au < released ; 2012 ; Late Imperial China Volume 33 ; 33 >
-    au < released ; 2013 ; Late Imperial China Volume 34 ; 34 >
-    au < manifest ; 2014 ; Late Imperial China Volume 35 ; 35 >
-    au < manifest ; 2015 ; Late Imperial China Volume 36 ; 36 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1996 ; Late Imperial China Volume 17 ; 17 >
+      au < released ; 1997 ; Late Imperial China Volume 18 ; 18 >
+      au < released ; 1998 ; Late Imperial China Volume 19 ; 19 >
+      au < released ; 1999 ; Late Imperial China Volume 20 ; 20 >
+      au < released ; 2000 ; Late Imperial China Volume 21 ; 21 >
+      au < released ; 2001 ; Late Imperial China Volume 22 ; 22 >
+      au < released ; 2002 ; Late Imperial China Volume 23 ; 23 >
+      au < released ; 2003 ; Late Imperial China Volume 24 ; 24 >
+      au < released ; 2004 ; Late Imperial China Volume 25 ; 25 >
+      au < released ; 2005 ; Late Imperial China Volume 26 ; 26 >
+      au < released ; 2006 ; Late Imperial China Volume 27 ; 27 >
+      au < released ; 2007 ; Late Imperial China Volume 28 ; 28 >
+      au < released ; 2008 ; Late Imperial China Volume 29 ; 29 >
+      au < released ; 2009 ; Late Imperial China Volume 30 ; 30 >
+      au < released ; 2010 ; Late Imperial China Volume 31 ; 31 >
+      au < released ; 2011 ; Late Imperial China Volume 32 ; 32 >
+      au < released ; 2012 ; Late Imperial China Volume 33 ; 33 >
+      au < released ; 2013 ; Late Imperial China Volume 34 ; 34 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Late Imperial China Volume 35 ; 35 >
+      au < manifest ; 2015 ; Late Imperial China Volume 36 ; 36 >
+
+    }
+
 
   }
 
@@ -1780,23 +1850,37 @@
     param[journal_dir] = leviathan
     attr[journal_id] = lvn
     
-    au < released ; 1999 ; Leviathan Volume 1 ; 1 >
-    au < released ; 2000 ; Leviathan Volume 2 ; 2 >
-    au < released ; 2001 ; Leviathan Volume 3 ; 3 >
-    au < released ; 2002 ; Leviathan Volume 4 ; 4 >
-    au < released ; 2003 ; Leviathan Volume 5 ; 5 >
-    au < released ; 2004 ; Leviathan Volume 6 ; 6 >
-    au < released ; 2005 ; Leviathan Volume 7 ; 7 >
-    au < released ; 2006 ; Leviathan Volume 8 ; 8 >
-    au < released ; 2007 ; Leviathan Volume 9 ; 9 >
-    au < released ; 2008 ; Leviathan Volume 10 ; 10 >
-    au < released ; 2009 ; Leviathan Volume 11 ; 11 >
-    au < released ; 2010 ; Leviathan Volume 12 ; 12 >
-    au < released ; 2011 ; Leviathan Volume 13 ; 13 >
-    au < released ; 2012 ; Leviathan Volume 14 ; 14 >
-    au < released ; 2013 ; Leviathan Volume 15 ; 15 >
-    au < manifest ; 2014 ; Leviathan Volume 16 ; 16 >
-    au < manifest ; 2015 ; Leviathan Volume 17 ; 17 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1999 ; Leviathan Volume 1 ; 1 >
+      au < released ; 2000 ; Leviathan Volume 2 ; 2 >
+      au < released ; 2001 ; Leviathan Volume 3 ; 3 >
+      au < released ; 2002 ; Leviathan Volume 4 ; 4 >
+      au < released ; 2003 ; Leviathan Volume 5 ; 5 >
+      au < released ; 2004 ; Leviathan Volume 6 ; 6 >
+      au < released ; 2005 ; Leviathan Volume 7 ; 7 >
+      au < released ; 2006 ; Leviathan Volume 8 ; 8 >
+      au < released ; 2007 ; Leviathan Volume 9 ; 9 >
+      au < released ; 2008 ; Leviathan Volume 10 ; 10 >
+      au < released ; 2009 ; Leviathan Volume 11 ; 11 >
+      au < released ; 2010 ; Leviathan Volume 12 ; 12 >
+      au < released ; 2011 ; Leviathan Volume 13 ; 13 >
+      au < released ; 2012 ; Leviathan Volume 14 ; 14 >
+      au < released ; 2013 ; Leviathan Volume 15 ; 15 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Leviathan Volume 16 ; 16 >
+      au < manifest ; 2015 ; Leviathan Volume 17 ; 17 >
+
+    }
+
 
   }
 
@@ -1811,16 +1895,30 @@
     param[journal_dir] = library_trends
     attr[journal_id] = lib
 
-    au < released ; 2006 ; Library Trends Volume 54 ; 54 >
-    au < released ; 2007 ; Library Trends Volume 55 ; 55 >
-    au < released ; 2008 ; Library Trends Volume 56 ; 56 >
-    au < released ; 2009 ; Library Trends Volume 57 ; 57 >
-    au < released ; 2009 ; Library Trends Volume 58 ; 58 >
-    au < released ; 2010 ; Library Trends Volume 59 ; 59 >
-    au < released ; 2011-2012 ; Library Trends Volume 60 ; 60 >
-    au < released ; 2012-2013 ; Library Trends Volume 61 ; 61 >
-    au < released ; 2013-2014 ; Library Trends Volume 62 ; 62 >
-    au < manifest ; 2014-2015 ; Library Trends Volume 63 ; 63 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2006 ; Library Trends Volume 54 ; 54 >
+      au < released ; 2007 ; Library Trends Volume 55 ; 55 >
+      au < released ; 2008 ; Library Trends Volume 56 ; 56 >
+      au < released ; 2009 ; Library Trends Volume 57 ; 57 >
+      au < released ; 2009 ; Library Trends Volume 58 ; 58 >
+      au < released ; 2010 ; Library Trends Volume 59 ; 59 >
+      au < released ; 2011-2012 ; Library Trends Volume 60 ; 60 >
+      au < released ; 2012-2013 ; Library Trends Volume 61 ; 61 >
+      au < released ; 2013-2014 ; Library Trends Volume 62 ; 62 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014-2015 ; Library Trends Volume 63 ; 63 >
+
+    }
+
 
   }
 
@@ -1835,26 +1933,40 @@
     param[journal_dir] = literature_and_medicine
     attr[journal_id] = lm
 
-    au < released ; 1995 ; Literature and Medicine Volume 14 ; 14 >
-    au < released ; 1996 ; Literature and Medicine Volume 15 ; 15 >
-    au < released ; 1997 ; Literature and Medicine Volume 16 ; 16 >
-    au < released ; 1998 ; Literature and Medicine Volume 17 ; 17 >
-    au < released ; 1999 ; Literature and Medicine Volume 18 ; 18 >
-    au < released ; 2000 ; Literature and Medicine Volume 19 ; 19 >
-    au < released ; 2001 ; Literature and Medicine Volume 20 ; 20 >
-    au < released ; 2002 ; Literature and Medicine Volume 21 ; 21 >
-    au < released ; 2003 ; Literature and Medicine Volume 22 ; 22 >
-    au < released ; 2004 ; Literature and Medicine Volume 23 ; 23 >
-    au < released ; 2005 ; Literature and Medicine Volume 24 ; 24 >
-    au < released ; 2006 ; Literature and Medicine Volume 25 ; 25 >
-    au < released ; 2007 ; Literature and Medicine Volume 26 ; 26 >
-    au < released ; 2008 ; Literature and Medicine Volume 27 ; 27 >
-    au < released ; 2009 ; Literature and Medicine Volume 28 ; 28 >
-    au < released ; 2011 ; Literature and Medicine Volume 29 ; 29 >
-    au < released ; 2012 ; Literature and Medicine Volume 30 ; 30 >
-    au < released ; 2013 ; Literature and Medicine Volume 31 ; 31 >
-    au < manifest ; 2014 ; Literature and Medicine Volume 32 ; 32 >
-    au < manifest ; 2015 ; Literature and Medicine Volume 33 ; 33 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1995 ; Literature and Medicine Volume 14 ; 14 >
+      au < released ; 1996 ; Literature and Medicine Volume 15 ; 15 >
+      au < released ; 1997 ; Literature and Medicine Volume 16 ; 16 >
+      au < released ; 1998 ; Literature and Medicine Volume 17 ; 17 >
+      au < released ; 1999 ; Literature and Medicine Volume 18 ; 18 >
+      au < released ; 2000 ; Literature and Medicine Volume 19 ; 19 >
+      au < released ; 2001 ; Literature and Medicine Volume 20 ; 20 >
+      au < released ; 2002 ; Literature and Medicine Volume 21 ; 21 >
+      au < released ; 2003 ; Literature and Medicine Volume 22 ; 22 >
+      au < released ; 2004 ; Literature and Medicine Volume 23 ; 23 >
+      au < released ; 2005 ; Literature and Medicine Volume 24 ; 24 >
+      au < released ; 2006 ; Literature and Medicine Volume 25 ; 25 >
+      au < released ; 2007 ; Literature and Medicine Volume 26 ; 26 >
+      au < released ; 2008 ; Literature and Medicine Volume 27 ; 27 >
+      au < released ; 2009 ; Literature and Medicine Volume 28 ; 28 >
+      au < released ; 2011 ; Literature and Medicine Volume 29 ; 29 >
+      au < released ; 2012 ; Literature and Medicine Volume 30 ; 30 >
+      au < released ; 2013 ; Literature and Medicine Volume 31 ; 31 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Literature and Medicine Volume 32 ; 32 >
+      au < manifest ; 2015 ; Literature and Medicine Volume 33 ; 33 >
+
+    }
+
 
   }
 
@@ -1869,28 +1981,42 @@
     param[journal_dir] = modern_fiction_studies
     attr[journal_id] = mfs
 
-    au < released ; 1994 ; MFS Modern Fiction Studies Volume 40 ; 40 >
-    au < released ; 1995 ; MFS Modern Fiction Studies Volume 41 ; 41 >
-    au < released ; 1996 ; MFS Modern Fiction Studies Volume 42 ; 42 >
-    au < released ; 1997 ; MFS Modern Fiction Studies Volume 43 ; 43 >
-    au < released ; 1998 ; MFS Modern Fiction Studies Volume 44 ; 44 >
-    au < released ; 1999 ; MFS Modern Fiction Studies Volume 45 ; 45 >
-    au < released ; 2000 ; MFS Modern Fiction Studies Volume 46 ; 46 >
-    au < released ; 2001 ; MFS Modern Fiction Studies Volume 47 ; 47 >
-    au < released ; 2002 ; MFS Modern Fiction Studies Volume 48 ; 48 >
-    au < released ; 2003 ; MFS Modern Fiction Studies Volume 49 ; 49 >
-    au < released ; 2004 ; MFS Modern Fiction Studies Volume 50 ; 50 >
-    au < released ; 2005 ; MFS Modern Fiction Studies Volume 51 ; 51 >
-    au < released ; 2006 ; MFS Modern Fiction Studies Volume 52 ; 52 >
-    au < released ; 2007 ; MFS Modern Fiction Studies Volume 53 ; 53 >
-    au < released ; 2008 ; MFS Modern Fiction Studies Volume 54 ; 54 >
-    au < released ; 2009 ; MFS Modern Fiction Studies Volume 55 ; 55 >
-    au < released ; 2010 ; MFS Modern Fiction Studies Volume 56 ; 56 >
-    au < released ; 2011 ; MFS Modern Fiction Studies Volume 57 ; 57 >
-    au < released ; 2012 ; MFS Modern Fiction Studies Volume 58 ; 58 >
-    au < released ; 2013 ; MFS Modern Fiction Studies Volume 59 ; 59 >
-    au < manifest ; 2014 ; MFS Modern Fiction Studies Volume 60 ; 60 >
-    au < manifest ; 2015 ; MFS Modern Fiction Studies Volume 61 ; 61 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1994 ; MFS Modern Fiction Studies Volume 40 ; 40 >
+      au < released ; 1995 ; MFS Modern Fiction Studies Volume 41 ; 41 >
+      au < released ; 1996 ; MFS Modern Fiction Studies Volume 42 ; 42 >
+      au < released ; 1997 ; MFS Modern Fiction Studies Volume 43 ; 43 >
+      au < released ; 1998 ; MFS Modern Fiction Studies Volume 44 ; 44 >
+      au < released ; 1999 ; MFS Modern Fiction Studies Volume 45 ; 45 >
+      au < released ; 2000 ; MFS Modern Fiction Studies Volume 46 ; 46 >
+      au < released ; 2001 ; MFS Modern Fiction Studies Volume 47 ; 47 >
+      au < released ; 2002 ; MFS Modern Fiction Studies Volume 48 ; 48 >
+      au < released ; 2003 ; MFS Modern Fiction Studies Volume 49 ; 49 >
+      au < released ; 2004 ; MFS Modern Fiction Studies Volume 50 ; 50 >
+      au < released ; 2005 ; MFS Modern Fiction Studies Volume 51 ; 51 >
+      au < released ; 2006 ; MFS Modern Fiction Studies Volume 52 ; 52 >
+      au < released ; 2007 ; MFS Modern Fiction Studies Volume 53 ; 53 >
+      au < released ; 2008 ; MFS Modern Fiction Studies Volume 54 ; 54 >
+      au < released ; 2009 ; MFS Modern Fiction Studies Volume 55 ; 55 >
+      au < released ; 2010 ; MFS Modern Fiction Studies Volume 56 ; 56 >
+      au < released ; 2011 ; MFS Modern Fiction Studies Volume 57 ; 57 >
+      au < released ; 2012 ; MFS Modern Fiction Studies Volume 58 ; 58 >
+      au < released ; 2013 ; MFS Modern Fiction Studies Volume 59 ; 59 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; MFS Modern Fiction Studies Volume 60 ; 60 >
+      au < manifest ; 2015 ; MFS Modern Fiction Studies Volume 61 ; 61 >
+
+    }
+
 
   }
 
@@ -1906,10 +2032,17 @@
     attr[journal_id] = mq
     comment[0] = no issue after 2000
 
-    au < released ; 1997 ; Milton Quarterly Volume 31 ; 31 >
-    au < released ; 1998 ; Milton Quarterly Volume 32 ; 32 >
-    au < released ; 1999 ; Milton Quarterly Volume 33 ; 33 >
-    au < released ; 2000 ; Milton Quarterly Volume 34 ; 34 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1997 ; Milton Quarterly Volume 31 ; 31 >
+      au < released ; 1998 ; Milton Quarterly Volume 32 ; 32 >
+      au < released ; 1999 ; Milton Quarterly Volume 33 ; 33 >
+      au < released ; 2000 ; Milton Quarterly Volume 34 ; 34 >
+
+    }
+
 
   }
 
@@ -1924,27 +2057,41 @@
     param[journal_dir] = mln
     attr[journal_id] = mln
 
-    au < released ; 1995 ; MLN Volume 110 ; 110 >
-    au < released ; 1996 ; MLN Volume 111 ; 111 >
-    au < released ; 1997 ; MLN Volume 112 ; 112 >
-    au < released ; 1998 ; MLN Volume 113 ; 113 >
-    au < released ; 1999 ; MLN Volume 114 ; 114 >
-    au < released ; 2000 ; MLN Volume 115 ; 115 >
-    au < released ; 2001 ; MLN Volume 116 ; 116 >
-    au < released ; 2002 ; MLN Volume 117 ; 117 >
-    au < released ; 2003 ; MLN Volume 118 ; 118 >
-    au < released ; 2004 ; MLN Volume 119 ; 119 >
-    au < released ; 2005 ; MLN Volume 120 ; 120 >
-    au < released ; 2006 ; MLN Volume 121 ; 121 >
-    au < released ; 2007 ; MLN Volume 122 ; 122 >
-    au < released ; 2008 ; MLN Volume 123 ; 123 >
-    au < released ; 2009 ; MLN Volume 124 ; 124 >
-    au < released ; 2010 ; MLN Volume 125 ; 125 >
-    au < released ; 2011 ; MLN Volume 126 ; 126 >
-    au < released ; 2012 ; MLN Volume 127 ; 127 >
-    au < released ; 2013 ; MLN Volume 128 ; 128 >
-    au < manifest ; 2014 ; MLN Volume 129 ; 129 >
-    au < manifest ; 2015 ; MLN Volume 130 ; 130 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1995 ; MLN Volume 110 ; 110 >
+      au < released ; 1996 ; MLN Volume 111 ; 111 >
+      au < released ; 1997 ; MLN Volume 112 ; 112 >
+      au < released ; 1998 ; MLN Volume 113 ; 113 >
+      au < released ; 1999 ; MLN Volume 114 ; 114 >
+      au < released ; 2000 ; MLN Volume 115 ; 115 >
+      au < released ; 2001 ; MLN Volume 116 ; 116 >
+      au < released ; 2002 ; MLN Volume 117 ; 117 >
+      au < released ; 2003 ; MLN Volume 118 ; 118 >
+      au < released ; 2004 ; MLN Volume 119 ; 119 >
+      au < released ; 2005 ; MLN Volume 120 ; 120 >
+      au < released ; 2006 ; MLN Volume 121 ; 121 >
+      au < released ; 2007 ; MLN Volume 122 ; 122 >
+      au < released ; 2008 ; MLN Volume 123 ; 123 >
+      au < released ; 2009 ; MLN Volume 124 ; 124 >
+      au < released ; 2010 ; MLN Volume 125 ; 125 >
+      au < released ; 2011 ; MLN Volume 126 ; 126 >
+      au < released ; 2012 ; MLN Volume 127 ; 127 >
+      au < released ; 2013 ; MLN Volume 128 ; 128 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; MLN Volume 129 ; 129 >
+      au < manifest ; 2015 ; MLN Volume 130 ; 130 >
+
+    }
+
 
   }
 
@@ -1959,28 +2106,42 @@
     param[journal_dir] = modernism-modernity
     attr[journal_id] = mod
     
-    au < released ; 1994 ; Modernism/modernity Volume 1 ; 1 >
-    au < released ; 1995 ; Modernism/modernity Volume 2 ; 2 >
-    au < released ; 1996 ; Modernism/modernity Volume 3 ; 3 >
-    au < released ; 1997 ; Modernism/modernity Volume 4 ; 4 >
-    au < released ; 1998 ; Modernism/modernity Volume 5 ; 5 >
-    au < released ; 1999 ; Modernism/modernity Volume 6 ; 6 >
-    au < released ; 2000 ; Modernism/modernity Volume 7 ; 7 >
-    au < released ; 2001 ; Modernism/modernity Volume 8 ; 8 >
-    au < released ; 2002 ; Modernism/modernity Volume 9 ; 9 >
-    au < released ; 2003 ; Modernism/modernity Volume 10 ; 10 >
-    au < released ; 2004 ; Modernism/modernity Volume 11 ; 11 >
-    au < released ; 2005 ; Modernism/modernity Volume 12 ; 12 >
-    au < released ; 2006 ; Modernism/modernity Volume 13 ; 13 >
-    au < released ; 2007 ; Modernism/modernity Volume 14 ; 14 >
-    au < released ; 2008 ; Modernism/modernity Volume 15 ; 15 >
-    au < released ; 2009 ; Modernism/modernity Volume 16 ; 16 >
-    au < released ; 2010 ; Modernism/modernity Volume 17 ; 17 >
-    au < released ; 2011 ; Modernism/modernity Volume 18 ; 18 >
-    au < released ; 2012 ; Modernism/modernity Volume 19 ; 19 >
-    au < released ; 2013 ; Modernism/modernity Volume 20 ; 20 >
-    au < manifest ; 2014 ; Modernism/modernity Volume 21 ; 21 >
-    au < manifest ; 2015 ; Modernism/modernity Volume 22 ; 22 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1994 ; Modernism/modernity Volume 1 ; 1 >
+      au < released ; 1995 ; Modernism/modernity Volume 2 ; 2 >
+      au < released ; 1996 ; Modernism/modernity Volume 3 ; 3 >
+      au < released ; 1997 ; Modernism/modernity Volume 4 ; 4 >
+      au < released ; 1998 ; Modernism/modernity Volume 5 ; 5 >
+      au < released ; 1999 ; Modernism/modernity Volume 6 ; 6 >
+      au < released ; 2000 ; Modernism/modernity Volume 7 ; 7 >
+      au < released ; 2001 ; Modernism/modernity Volume 8 ; 8 >
+      au < released ; 2002 ; Modernism/modernity Volume 9 ; 9 >
+      au < released ; 2003 ; Modernism/modernity Volume 10 ; 10 >
+      au < released ; 2004 ; Modernism/modernity Volume 11 ; 11 >
+      au < released ; 2005 ; Modernism/modernity Volume 12 ; 12 >
+      au < released ; 2006 ; Modernism/modernity Volume 13 ; 13 >
+      au < released ; 2007 ; Modernism/modernity Volume 14 ; 14 >
+      au < released ; 2008 ; Modernism/modernity Volume 15 ; 15 >
+      au < released ; 2009 ; Modernism/modernity Volume 16 ; 16 >
+      au < released ; 2010 ; Modernism/modernity Volume 17 ; 17 >
+      au < released ; 2011 ; Modernism/modernity Volume 18 ; 18 >
+      au < released ; 2012 ; Modernism/modernity Volume 19 ; 19 >
+      au < released ; 2013 ; Modernism/modernity Volume 20 ; 20 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Modernism/modernity Volume 21 ; 21 >
+      au < manifest ; 2015 ; Modernism/modernity Volume 22 ; 22 >
+
+    }
+
 
   }
   
@@ -1995,11 +2156,25 @@
       param[journal_dir] = narrative_inquiry_in_bioethics
 	  attr[journal_id] = nib
   
-      au < released ; 2011 ; Narrative Inquiry in Bioethics Volume 1 ; 1 >
-      au < released ; 2012 ; Narrative Inquiry in Bioethics Volume 2 ; 2 >
-      au < released ; 2013 ; Narrative Inquiry in Bioethics Volume 3 ; 3 >
-      au < manifest ; 2014 ; Narrative Inquiry in Bioethics Volume 4 ; 4 >
-      au < manifest ; 2015 ; Narrative Inquiry in Bioethics Volume 5 ; 5 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2011 ; Narrative Inquiry in Bioethics Volume 1 ; 1 >
+        au < released ; 2012 ; Narrative Inquiry in Bioethics Volume 2 ; 2 >
+        au < released ; 2013 ; Narrative Inquiry in Bioethics Volume 3 ; 3 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+        au < manifest ; 2014 ; Narrative Inquiry in Bioethics Volume 4 ; 4 >
+        au < manifest ; 2015 ; Narrative Inquiry in Bioethics Volume 5 ; 5 >
+
+    }
+
       
   }
       
@@ -2014,27 +2189,41 @@
     param[journal_dir] = new_literary_history
     attr[journal_id] = nlh
 
-    au < released ; 1995 ; New Literary History Volume 26 ; 26 >
-    au < released ; 1996 ; New Literary History Volume 27 ; 27 >
-    au < released ; 1997 ; New Literary History Volume 28 ; 28 >
-    au < released ; 1998 ; New Literary History Volume 29 ; 29 >
-    au < released ; 1999 ; New Literary History Volume 30 ; 30 >
-    au < released ; 2000 ; New Literary History Volume 31 ; 31 >
-    au < released ; 2001 ; New Literary History Volume 32 ; 32 >
-    au < released ; 2002 ; New Literary History Volume 33 ; 33 >
-    au < released ; 2003 ; New Literary History Volume 34 ; 34 >
-    au < released ; 2004 ; New Literary History Volume 35 ; 35 >
-    au < released ; 2005 ; New Literary History Volume 36 ; 36 >
-    au < released ; 2006 ; New Literary History Volume 37 ; 37 >
-    au < released ; 2007 ; New Literary History Volume 38 ; 38 >
-    au < released ; 2008 ; New Literary History Volume 39 ; 39 >
-    au < released ; 2009 ; New Literary History Volume 40 ; 40 >
-    au < released ; 2010 ; New Literary History Volume 41 ; 41 >
-    au < released ; 2011 ; New Literary History Volume 42 ; 42 >
-    au < released ; 2012 ; New Literary History Volume 43 ; 43 >
-    au < released ; 2013 ; New Literary History Volume 44 ; 44 >
-    au < manifest ; 2014 ; New Literary History Volume 45 ; 45 >
-    au < manifest ; 2015 ; New Literary History Volume 46 ; 46 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1995 ; New Literary History Volume 26 ; 26 >
+      au < released ; 1996 ; New Literary History Volume 27 ; 27 >
+      au < released ; 1997 ; New Literary History Volume 28 ; 28 >
+      au < released ; 1998 ; New Literary History Volume 29 ; 29 >
+      au < released ; 1999 ; New Literary History Volume 30 ; 30 >
+      au < released ; 2000 ; New Literary History Volume 31 ; 31 >
+      au < released ; 2001 ; New Literary History Volume 32 ; 32 >
+      au < released ; 2002 ; New Literary History Volume 33 ; 33 >
+      au < released ; 2003 ; New Literary History Volume 34 ; 34 >
+      au < released ; 2004 ; New Literary History Volume 35 ; 35 >
+      au < released ; 2005 ; New Literary History Volume 36 ; 36 >
+      au < released ; 2006 ; New Literary History Volume 37 ; 37 >
+      au < released ; 2007 ; New Literary History Volume 38 ; 38 >
+      au < released ; 2008 ; New Literary History Volume 39 ; 39 >
+      au < released ; 2009 ; New Literary History Volume 40 ; 40 >
+      au < released ; 2010 ; New Literary History Volume 41 ; 41 >
+      au < released ; 2011 ; New Literary History Volume 42 ; 42 >
+      au < released ; 2012 ; New Literary History Volume 43 ; 43 >
+      au < released ; 2013 ; New Literary History Volume 44 ; 44 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; New Literary History Volume 45 ; 45 >
+      au < manifest ; 2015 ; New Literary History Volume 46 ; 46 >
+
+    }
+
 
   }
 
@@ -2052,17 +2241,24 @@
     param[journal_dir] = nwsa_journal
     attr[journal_id] = ff
 
-    au < released ; 1999 ; NWSA Journal Volume 11 ; 11 >
-    au < released ; 2000 ; NWSA Journal Volume 12 ; 12 >
-    au < released ; 2001 ; NWSA Journal Volume 13 ; 13 >
-    au < released ; 2002 ; NWSA Journal Volume 14 ; 14 >
-    au < released ; 2003 ; NWSA Journal Volume 15 ; 15 >
-    au < released ; 2004 ; NWSA Journal Volume 16 ; 16 >
-    au < released ; 2005 ; NWSA Journal Volume 17 ; 17 >
-    au < released ; 2006 ; NWSA Journal Volume 18 ; 18 >
-    au < released ; 2007 ; NWSA Journal Volume 19 ; 19 >
-    au < released ; 2008 ; NWSA Journal Volume 20 ; 20 >
-    au < released ; 2009 ; NWSA Journal Volume 21 ; 21 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1999 ; NWSA Journal Volume 11 ; 11 >
+      au < released ; 2000 ; NWSA Journal Volume 12 ; 12 >
+      au < released ; 2001 ; NWSA Journal Volume 13 ; 13 >
+      au < released ; 2002 ; NWSA Journal Volume 14 ; 14 >
+      au < released ; 2003 ; NWSA Journal Volume 15 ; 15 >
+      au < released ; 2004 ; NWSA Journal Volume 16 ; 16 >
+      au < released ; 2005 ; NWSA Journal Volume 17 ; 17 >
+      au < released ; 2006 ; NWSA Journal Volume 18 ; 18 >
+      au < released ; 2007 ; NWSA Journal Volume 19 ; 19 >
+      au < released ; 2008 ; NWSA Journal Volume 20 ; 20 >
+      au < released ; 2009 ; NWSA Journal Volume 21 ; 21 >
+
+    }
+
 
   }
   
@@ -2076,19 +2272,33 @@
     param[journal_dir] = partial_answers
     attr[journal_id] = pan
 
-    au < released ; 2003 ; Partial Answers: Journal of Literature and the History of Ideas Volume 1 ; 1 >
-    au < released ; 2004 ; Partial Answers: Journal of Literature and the History of Ideas Volume 2 ; 2 >
-    au < released ; 2005 ; Partial Answers: Journal of Literature and the History of Ideas Volume 3 ; 3 >
-    au < released ; 2006 ; Partial Answers: Journal of Literature and the History of Ideas Volume 4 ; 4 >
-    au < released ; 2007 ; Partial Answers: Journal of Literature and the History of Ideas Volume 5 ; 5 >
-    au < released ; 2008 ; Partial Answers: Journal of Literature and the History of Ideas Volume 6 ; 6 >
-    au < released ; 2009 ; Partial Answers: Journal of Literature and the History of Ideas Volume 7 ; 7 >
-    au < released ; 2010 ; Partial Answers: Journal of Literature and the History of Ideas Volume 8 ; 8 >
-    au < released ; 2011 ; Partial Answers: Journal of Literature and the History of Ideas Volume 9 ; 9 >
-    au < released ; 2012 ; Partial Answers: Journal of Literature and the History of Ideas Volume 10 ; 10 >
-    au < released ; 2013 ; Partial Answers: Journal of Literature and the History of Ideas Volume 11 ; 11 >
-    au < manifest ; 2014 ; Partial Answers: Journal of Literature and the History of Ideas Volume 12 ; 12 >
-    au < manifest ; 2015 ; Partial Answers: Journal of Literature and the History of Ideas Volume 13 ; 13 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2003 ; Partial Answers: Journal of Literature and the History of Ideas Volume 1 ; 1 >
+      au < released ; 2004 ; Partial Answers: Journal of Literature and the History of Ideas Volume 2 ; 2 >
+      au < released ; 2005 ; Partial Answers: Journal of Literature and the History of Ideas Volume 3 ; 3 >
+      au < released ; 2006 ; Partial Answers: Journal of Literature and the History of Ideas Volume 4 ; 4 >
+      au < released ; 2007 ; Partial Answers: Journal of Literature and the History of Ideas Volume 5 ; 5 >
+      au < released ; 2008 ; Partial Answers: Journal of Literature and the History of Ideas Volume 6 ; 6 >
+      au < released ; 2009 ; Partial Answers: Journal of Literature and the History of Ideas Volume 7 ; 7 >
+      au < released ; 2010 ; Partial Answers: Journal of Literature and the History of Ideas Volume 8 ; 8 >
+      au < released ; 2011 ; Partial Answers: Journal of Literature and the History of Ideas Volume 9 ; 9 >
+      au < released ; 2012 ; Partial Answers: Journal of Literature and the History of Ideas Volume 10 ; 10 >
+      au < released ; 2013 ; Partial Answers: Journal of Literature and the History of Ideas Volume 11 ; 11 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Partial Answers: Journal of Literature and the History of Ideas Volume 12 ; 12 >
+      au < manifest ; 2015 ; Partial Answers: Journal of Literature and the History of Ideas Volume 13 ; 13 >
+
+    }
+
 
   }
 
@@ -2103,22 +2313,36 @@
     param[journal_dir] = perspectives_in_biology_and_medicine
     attr[journal_id] = pbm
 
-    au < released ; 2000 ; Perspectives in Biology and Medicine Volume 43 ; 43 >
-    au < released ; 2001 ; Perspectives in Biology and Medicine Volume 44 ; 44 >
-    au < released ; 2002 ; Perspectives in Biology and Medicine Volume 45 ; 45 >
-    au < released ; 2003 ; Perspectives in Biology and Medicine Volume 46 ; 46 >
-    au < released ; 2004 ; Perspectives in Biology and Medicine Volume 47 ; 47 >
-    au < released ; 2005 ; Perspectives in Biology and Medicine Volume 48 ; 48 >
-    au < released ; 2006 ; Perspectives in Biology and Medicine Volume 49 ; 49 >
-    au < released ; 2007 ; Perspectives in Biology and Medicine Volume 50 ; 50 >
-    au < released ; 2008 ; Perspectives in Biology and Medicine Volume 51 ; 51 >
-    au < released ; 2009 ; Perspectives in Biology and Medicine Volume 52 ; 52 >
-    au < released ; 2010 ; Perspectives in Biology and Medicine Volume 53 ; 53 >
-    au < released ; 2011 ; Perspectives in Biology and Medicine Volume 54 ; 54 >
-    au < released ; 2012 ; Perspectives in Biology and Medicine Volume 55 ; 55 >
-    au < released ; 2013 ; Perspectives in Biology and Medicine Volume 56 ; 56 >
-    au < manifest ; 2014 ; Perspectives in Biology and Medicine Volume 57 ; 57 >
-    au < expected ; 2015 ; Perspectives in Biology and Medicine Volume 58 ; 58 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2000 ; Perspectives in Biology and Medicine Volume 43 ; 43 >
+      au < released ; 2001 ; Perspectives in Biology and Medicine Volume 44 ; 44 >
+      au < released ; 2002 ; Perspectives in Biology and Medicine Volume 45 ; 45 >
+      au < released ; 2003 ; Perspectives in Biology and Medicine Volume 46 ; 46 >
+      au < released ; 2004 ; Perspectives in Biology and Medicine Volume 47 ; 47 >
+      au < released ; 2005 ; Perspectives in Biology and Medicine Volume 48 ; 48 >
+      au < released ; 2006 ; Perspectives in Biology and Medicine Volume 49 ; 49 >
+      au < released ; 2007 ; Perspectives in Biology and Medicine Volume 50 ; 50 >
+      au < released ; 2008 ; Perspectives in Biology and Medicine Volume 51 ; 51 >
+      au < released ; 2009 ; Perspectives in Biology and Medicine Volume 52 ; 52 >
+      au < released ; 2010 ; Perspectives in Biology and Medicine Volume 53 ; 53 >
+      au < released ; 2011 ; Perspectives in Biology and Medicine Volume 54 ; 54 >
+      au < released ; 2012 ; Perspectives in Biology and Medicine Volume 55 ; 55 >
+      au < released ; 2013 ; Perspectives in Biology and Medicine Volume 56 ; 56 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Perspectives in Biology and Medicine Volume 57 ; 57 >
+      au < expected ; 2015 ; Perspectives in Biology and Medicine Volume 58 ; 58 >
+
+    }
+
 
   }
 
@@ -2133,27 +2357,41 @@
     param[journal_dir] = philosophy_and_literature
     attr[journal_id] = phl
 
-    au < released ; 1995 ; Philosophy and Literature Volume 19 ; 19 >
-    au < released ; 1996 ; Philosophy and Literature Volume 20 ; 20 >
-    au < released ; 1997 ; Philosophy and Literature Volume 21 ; 21 >
-    au < released ; 1998 ; Philosophy and Literature Volume 22 ; 22 >
-    au < released ; 1999 ; Philosophy and Literature Volume 23 ; 23 >
-    au < released ; 2000 ; Philosophy and Literature Volume 24 ; 24 >
-    au < released ; 2001 ; Philosophy and Literature Volume 25 ; 25 >
-    au < released ; 2002 ; Philosophy and Literature Volume 26 ; 26 >
-    au < released ; 2003 ; Philosophy and Literature Volume 27 ; 27 >
-    au < released ; 2004 ; Philosophy and Literature Volume 28 ; 28 >
-    au < released ; 2005 ; Philosophy and Literature Volume 29 ; 29 >
-    au < released ; 2006 ; Philosophy and Literature Volume 30 ; 30 >
-    au < released ; 2007 ; Philosophy and Literature Volume 31 ; 31 >
-    au < released ; 2008 ; Philosophy and Literature Volume 32 ; 32 >
-    au < released ; 2009 ; Philosophy and Literature Volume 33 ; 33 >
-    au < released ; 2010 ; Philosophy and Literature Volume 34 ; 34 >
-    au < released ; 2011 ; Philosophy and Literature Volume 35 ; 35 >
-    au < released ; 2012 ; Philosophy and Literature Volume 36 ; 36 >
-    au < released ; 2013 ; Philosophy and Literature Volume 37 ; 37 >
-    au < manifest ; 2014 ; Philosophy and Literature Volume 38 ; 38 >
-    au < manifest ; 2015 ; Philosophy and Literature Volume 39 ; 39 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1995 ; Philosophy and Literature Volume 19 ; 19 >
+      au < released ; 1996 ; Philosophy and Literature Volume 20 ; 20 >
+      au < released ; 1997 ; Philosophy and Literature Volume 21 ; 21 >
+      au < released ; 1998 ; Philosophy and Literature Volume 22 ; 22 >
+      au < released ; 1999 ; Philosophy and Literature Volume 23 ; 23 >
+      au < released ; 2000 ; Philosophy and Literature Volume 24 ; 24 >
+      au < released ; 2001 ; Philosophy and Literature Volume 25 ; 25 >
+      au < released ; 2002 ; Philosophy and Literature Volume 26 ; 26 >
+      au < released ; 2003 ; Philosophy and Literature Volume 27 ; 27 >
+      au < released ; 2004 ; Philosophy and Literature Volume 28 ; 28 >
+      au < released ; 2005 ; Philosophy and Literature Volume 29 ; 29 >
+      au < released ; 2006 ; Philosophy and Literature Volume 30 ; 30 >
+      au < released ; 2007 ; Philosophy and Literature Volume 31 ; 31 >
+      au < released ; 2008 ; Philosophy and Literature Volume 32 ; 32 >
+      au < released ; 2009 ; Philosophy and Literature Volume 33 ; 33 >
+      au < released ; 2010 ; Philosophy and Literature Volume 34 ; 34 >
+      au < released ; 2011 ; Philosophy and Literature Volume 35 ; 35 >
+      au < released ; 2012 ; Philosophy and Literature Volume 36 ; 36 >
+      au < released ; 2013 ; Philosophy and Literature Volume 37 ; 37 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Philosophy and Literature Volume 38 ; 38 >
+      au < manifest ; 2015 ; Philosophy and Literature Volume 39 ; 39 >
+
+    }
+
 
   }
 
@@ -2168,26 +2406,40 @@
     param[journal_dir] = philosophy_psychiatry_and_psychology
     attr[journal_id] = ppp
 
-    au < released ; 1996 ; Philosophy, Psychiatry, & Psychology Volume 3 ; 3 >
-    au < released ; 1997 ; Philosophy, Psychiatry, & Psychology Volume 4 ; 4 >
-    au < released ; 1998 ; Philosophy, Psychiatry, & Psychology Volume 5 ; 5 >
-    au < released ; 1999 ; Philosophy, Psychiatry, & Psychology Volume 6 ; 6 >
-    au < released ; 2000 ; Philosophy, Psychiatry, & Psychology Volume 7 ; 7 >
-    au < released ; 2001 ; Philosophy, Psychiatry, & Psychology Volume 8 ; 8 >
-    au < released ; 2002 ; Philosophy, Psychiatry, & Psychology Volume 9 ; 9 >
-    au < released ; 2003 ; Philosophy, Psychiatry, & Psychology Volume 10 ; 10 >
-    au < released ; 2004 ; Philosophy, Psychiatry, & Psychology Volume 11 ; 11 >
-    au < released ; 2005 ; Philosophy, Psychiatry, & Psychology Volume 12 ; 12 >
-    au < released ; 2006 ; Philosophy, Psychiatry, & Psychology Volume 13 ; 13 >
-    au < released ; 2007 ; Philosophy, Psychiatry, & Psychology Volume 14 ; 14 >
-    au < released ; 2008 ; Philosophy, Psychiatry, & Psychology Volume 15 ; 15 >
-    au < released ; 2009 ; Philosophy, Psychiatry, & Psychology Volume 16 ; 16 >
-    au < released ; 2010 ; Philosophy, Psychiatry, & Psychology Volume 17 ; 17 >
-    au < released ; 2011 ; Philosophy, Psychiatry, & Psychology Volume 18 ; 18 >
-    au < released ; 2012 ; Philosophy, Psychiatry, & Psychology Volume 19 ; 19 >
-    au < released ; 2013 ; Philosophy, Psychiatry, & Psychology Volume 20 ; 20 >
-    au < manifest ; 2014 ; Philosophy, Psychiatry, & Psychology Volume 21 ; 21 >
-    au < expected ; 2015 ; Philosophy, Psychiatry, & Psychology Volume 22 ; 22 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1996 ; Philosophy, Psychiatry, & Psychology Volume 3 ; 3 >
+      au < released ; 1997 ; Philosophy, Psychiatry, & Psychology Volume 4 ; 4 >
+      au < released ; 1998 ; Philosophy, Psychiatry, & Psychology Volume 5 ; 5 >
+      au < released ; 1999 ; Philosophy, Psychiatry, & Psychology Volume 6 ; 6 >
+      au < released ; 2000 ; Philosophy, Psychiatry, & Psychology Volume 7 ; 7 >
+      au < released ; 2001 ; Philosophy, Psychiatry, & Psychology Volume 8 ; 8 >
+      au < released ; 2002 ; Philosophy, Psychiatry, & Psychology Volume 9 ; 9 >
+      au < released ; 2003 ; Philosophy, Psychiatry, & Psychology Volume 10 ; 10 >
+      au < released ; 2004 ; Philosophy, Psychiatry, & Psychology Volume 11 ; 11 >
+      au < released ; 2005 ; Philosophy, Psychiatry, & Psychology Volume 12 ; 12 >
+      au < released ; 2006 ; Philosophy, Psychiatry, & Psychology Volume 13 ; 13 >
+      au < released ; 2007 ; Philosophy, Psychiatry, & Psychology Volume 14 ; 14 >
+      au < released ; 2008 ; Philosophy, Psychiatry, & Psychology Volume 15 ; 15 >
+      au < released ; 2009 ; Philosophy, Psychiatry, & Psychology Volume 16 ; 16 >
+      au < released ; 2010 ; Philosophy, Psychiatry, & Psychology Volume 17 ; 17 >
+      au < released ; 2011 ; Philosophy, Psychiatry, & Psychology Volume 18 ; 18 >
+      au < released ; 2012 ; Philosophy, Psychiatry, & Psychology Volume 19 ; 19 >
+      au < released ; 2013 ; Philosophy, Psychiatry, & Psychology Volume 20 ; 20 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Philosophy, Psychiatry, & Psychology Volume 21 ; 21 >
+      au < expected ; 2015 ; Philosophy, Psychiatry, & Psychology Volume 22 ; 22 >
+
+    }
+
 
   }
 
@@ -2202,21 +2454,49 @@
     param[journal_dir] = poe_studies
     attr[journal_id] = poe
     
-    au < released ; 2001 ; Poe Studies Volume 34 ; 34 >
-    au < released ; 2002 ; Poe Studies Volume 35 ; 35 >
-    au < released ; 2003 ; Poe Studies Volume 36 ; 36 >
-    au < released ; 2004 ; Poe Studies Volume 37 ; 37 >
-    au < released ; 2005 ; Poe Studies Volume 38 ; 38 >
-    au < released ; 2006 ; Poe Studies Volume 39 ; 39 >
-    au < exists ; 2007 ; Poe Studies Volume 40 ; 40 >
-    au < released ; 2008 ; Poe Studies Volume 41 ; 41 >
-    au < released ; 2009 ; Poe Studies Volume 42 ; 42 >
-    au < released ; 2010 ; Poe Studies Volume 43 ; 43 >
-    au < released ; 2011 ; Poe Studies Volume 44 ; 44 >
-    au < released ; 2012 ; Poe Studies Volume 45 ; 45 >
-    au < released ; 2013 ; Poe Studies Volume 46 ; 46 >
-    au < manifest ; 2014 ; Poe Studies Volume 47 ; 47 >
-    au < expected ; 2015 ; Poe Studies Volume 48 ; 48 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2001 ; Poe Studies Volume 34 ; 34 >
+      au < released ; 2002 ; Poe Studies Volume 35 ; 35 >
+      au < released ; 2003 ; Poe Studies Volume 36 ; 36 >
+      au < released ; 2004 ; Poe Studies Volume 37 ; 37 >
+      au < released ; 2005 ; Poe Studies Volume 38 ; 38 >
+      au < released ; 2006 ; Poe Studies Volume 39 ; 39 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 2007 ; Poe Studies Volume 40 ; 40 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2008 ; Poe Studies Volume 41 ; 41 >
+      au < released ; 2009 ; Poe Studies Volume 42 ; 42 >
+      au < released ; 2010 ; Poe Studies Volume 43 ; 43 >
+      au < released ; 2011 ; Poe Studies Volume 44 ; 44 >
+      au < released ; 2012 ; Poe Studies Volume 45 ; 45 >
+      au < released ; 2013 ; Poe Studies Volume 46 ; 46 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Poe Studies Volume 47 ; 47 >
+      au < expected ; 2015 ; Poe Studies Volume 48 ; 48 >
+
+    }
+
 
   }
 
@@ -2231,21 +2511,35 @@
     param[journal_dir] = portal_libraries_and_the_academy
     attr[journal_id] = pla
 
-    au < released ; 2001 ; portal: Libraries and the Academy Volume 1 ; 1 >
-    au < released ; 2002 ; portal: Libraries and the Academy Volume 2 ; 2 >
-    au < released ; 2003 ; portal: Libraries and the Academy Volume 3 ; 3 >
-    au < released ; 2004 ; portal: Libraries and the Academy Volume 4 ; 4 >
-    au < released ; 2005 ; portal: Libraries and the Academy Volume 5 ; 5 >
-    au < released ; 2006 ; portal: Libraries and the Academy Volume 6 ; 6 >
-    au < released ; 2007 ; portal: Libraries and the Academy Volume 7 ; 7 >
-    au < released ; 2008 ; portal: Libraries and the Academy Volume 8 ; 8 >
-    au < released ; 2009 ; portal: Libraries and the Academy Volume 9 ; 9 >
-    au < released ; 2010 ; portal: Libraries and the Academy Volume 10 ; 10 >
-    au < released ; 2011 ; portal: Libraries and the Academy Volume 11 ; 11 >
-    au < released ; 2012 ; portal: Libraries and the Academy Volume 12 ; 12 >
-    au < released ; 2013 ; portal: Libraries and the Academy Volume 13 ; 13 >
-    au < manifest ; 2014 ; portal: Libraries and the Academy Volume 14 ; 14 >
-    au < manifest ; 2015 ; portal: Libraries and the Academy Volume 15 ; 15 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2001 ; portal: Libraries and the Academy Volume 1 ; 1 >
+      au < released ; 2002 ; portal: Libraries and the Academy Volume 2 ; 2 >
+      au < released ; 2003 ; portal: Libraries and the Academy Volume 3 ; 3 >
+      au < released ; 2004 ; portal: Libraries and the Academy Volume 4 ; 4 >
+      au < released ; 2005 ; portal: Libraries and the Academy Volume 5 ; 5 >
+      au < released ; 2006 ; portal: Libraries and the Academy Volume 6 ; 6 >
+      au < released ; 2007 ; portal: Libraries and the Academy Volume 7 ; 7 >
+      au < released ; 2008 ; portal: Libraries and the Academy Volume 8 ; 8 >
+      au < released ; 2009 ; portal: Libraries and the Academy Volume 9 ; 9 >
+      au < released ; 2010 ; portal: Libraries and the Academy Volume 10 ; 10 >
+      au < released ; 2011 ; portal: Libraries and the Academy Volume 11 ; 11 >
+      au < released ; 2012 ; portal: Libraries and the Academy Volume 12 ; 12 >
+      au < released ; 2013 ; portal: Libraries and the Academy Volume 13 ; 13 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; portal: Libraries and the Academy Volume 14 ; 14 >
+      au < manifest ; 2015 ; portal: Libraries and the Academy Volume 15 ; 15 >
+
+    }
+
 
   }
 
@@ -2258,31 +2552,45 @@
     param[journal_dir] = postmodern_culture
     attr[journal_id] = pmc
 
-    au < released ; 1990-1991 ; Postmodern Culture Volume 1 ; 1 >
-    au < released ; 1991-1992 ; Postmodern Culture Volume 2 ; 2 >
-    au < released ; 1992-1993 ; Postmodern Culture Volume 3 ; 3 >
-    au < released ; 1993-1994 ; Postmodern Culture Volume 4 ; 4 >
-    au < released ; 1994-1995 ; Postmodern Culture Volume 5 ; 5 >
-    au < released ; 1995-1996 ; Postmodern Culture Volume 6 ; 6 >
-    au < released ; 1996-1997 ; Postmodern Culture Volume 7 ; 7 >
-    au < released ; 1997-1998 ; Postmodern Culture Volume 8 ; 8 >
-    au < released ; 1998-1999 ; Postmodern Culture Volume 9 ; 9 >
-    au < released ; 1999-2000 ; Postmodern Culture Volume 10 ; 10 >
-    au < released ; 2000-2001 ; Postmodern Culture Volume 11 ; 11 >
-    au < released ; 2001-2002 ; Postmodern Culture Volume 12 ; 12 >
-    au < released ; 2002-2003 ; Postmodern Culture Volume 13 ; 13 >
-    au < released ; 2003-2004 ; Postmodern Culture Volume 14 ; 14 >
-    au < released ; 2004-2005 ; Postmodern Culture Volume 15 ; 15 >
-    au < released ; 2005-2006 ; Postmodern Culture Volume 16 ; 16 >
-    au < released ; 2006-2007 ; Postmodern Culture Volume 17 ; 17 >
-    au < released ; 2008 ; Postmodern Culture Volume 18 ; 18 >
-    au < released ; 2008-2009 ; Postmodern Culture Volume 19 ; 19 >
-    au < released ; 2009-2010 ; Postmodern Culture Volume 20 ; 20 >
-    au < released ; 2010-2011 ; Postmodern Culture Volume 21 ; 21 >
-    au < released ; 2011-2012 ; Postmodern Culture Volume 22 ; 22 >
-    au < released ; 2012-2013 ; Postmodern Culture Volume 23 ; 23 >
-    au < manifest ; 2013-2014 ; Postmodern Culture Volume 24 ; 24 >
-    au < expected ; 2014-2015 ; Postmodern Culture Volume 25 ; 25 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1990-1991 ; Postmodern Culture Volume 1 ; 1 >
+      au < released ; 1991-1992 ; Postmodern Culture Volume 2 ; 2 >
+      au < released ; 1992-1993 ; Postmodern Culture Volume 3 ; 3 >
+      au < released ; 1993-1994 ; Postmodern Culture Volume 4 ; 4 >
+      au < released ; 1994-1995 ; Postmodern Culture Volume 5 ; 5 >
+      au < released ; 1995-1996 ; Postmodern Culture Volume 6 ; 6 >
+      au < released ; 1996-1997 ; Postmodern Culture Volume 7 ; 7 >
+      au < released ; 1997-1998 ; Postmodern Culture Volume 8 ; 8 >
+      au < released ; 1998-1999 ; Postmodern Culture Volume 9 ; 9 >
+      au < released ; 1999-2000 ; Postmodern Culture Volume 10 ; 10 >
+      au < released ; 2000-2001 ; Postmodern Culture Volume 11 ; 11 >
+      au < released ; 2001-2002 ; Postmodern Culture Volume 12 ; 12 >
+      au < released ; 2002-2003 ; Postmodern Culture Volume 13 ; 13 >
+      au < released ; 2003-2004 ; Postmodern Culture Volume 14 ; 14 >
+      au < released ; 2004-2005 ; Postmodern Culture Volume 15 ; 15 >
+      au < released ; 2005-2006 ; Postmodern Culture Volume 16 ; 16 >
+      au < released ; 2006-2007 ; Postmodern Culture Volume 17 ; 17 >
+      au < released ; 2008 ; Postmodern Culture Volume 18 ; 18 >
+      au < released ; 2008-2009 ; Postmodern Culture Volume 19 ; 19 >
+      au < released ; 2009-2010 ; Postmodern Culture Volume 20 ; 20 >
+      au < released ; 2010-2011 ; Postmodern Culture Volume 21 ; 21 >
+      au < released ; 2011-2012 ; Postmodern Culture Volume 22 ; 22 >
+      au < released ; 2012-2013 ; Postmodern Culture Volume 23 ; 23 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2013-2014 ; Postmodern Culture Volume 24 ; 24 >
+      au < expected ; 2014-2015 ; Postmodern Culture Volume 25 ; 25 >
+
+    }
+
 
   }
 
@@ -2297,15 +2605,29 @@
     param[journal_dir] = progress_in_community_health_partnerships_research_education_and_action
     attr[journal_id] = cpr
 
-    au < released ; 2007 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 1 ; 1 >
-    au < released ; 2008 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 2 ; 2 >
-    au < released ; 2009 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 3 ; 3 >
-    au < released ; 2010 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 4 ; 4 >
-    au < released ; 2011 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 5 ; 5 >
-    au < released ; 2012 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 6 ; 6 >
-    au < released ; 2013 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 7 ; 7 >
-    au < manifest ; 2014 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 8 ; 8 >
-    au < manifest ; 2015 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 9 ; 9 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2007 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 1 ; 1 >
+      au < released ; 2008 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 2 ; 2 >
+      au < released ; 2009 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 3 ; 3 >
+      au < released ; 2010 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 4 ; 4 >
+      au < released ; 2011 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 5 ; 5 >
+      au < released ; 2012 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 6 ; 6 >
+      au < released ; 2013 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 7 ; 7 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 8 ; 8 >
+      au < manifest ; 2015 ; Progress in Community Health Partnerships: Research, Education, and Action Volume 9 ; 9 >
+
+    }
+
 
   }
     
@@ -2320,27 +2642,41 @@
     param[journal_dir] = reviews_in_american_history
     attr[journal_id] = rah
 
-    au < released ; 1995 ; Reviews in American History Volume 23 ; 23 >
-    au < released ; 1996 ; Reviews in American History Volume 24 ; 24 >
-    au < released ; 1997 ; Reviews in American History Volume 25 ; 25 >
-    au < released ; 1998 ; Reviews in American History Volume 26 ; 26 >
-    au < released ; 1999 ; Reviews in American History Volume 27 ; 27 >
-    au < released ; 2000 ; Reviews in American History Volume 28 ; 28 >
-    au < released ; 2001 ; Reviews in American History Volume 29 ; 29 >
-    au < released ; 2002 ; Reviews in American History Volume 30 ; 30 >
-    au < released ; 2003 ; Reviews in American History Volume 31 ; 31 >
-    au < released ; 2004 ; Reviews in American History Volume 32 ; 32 >
-    au < released ; 2005 ; Reviews in American History Volume 33 ; 33 >
-    au < released ; 2006 ; Reviews in American History Volume 34 ; 34 >
-    au < released ; 2007 ; Reviews in American History Volume 35 ; 35 >
-    au < released ; 2008 ; Reviews in American History Volume 36 ; 36 >
-    au < released ; 2009 ; Reviews in American History Volume 37 ; 37 >
-    au < released ; 2010 ; Reviews in American History Volume 38 ; 38 >
-    au < released ; 2011 ; Reviews in American History Volume 39 ; 39 >
-    au < released ; 2012 ; Reviews in American History Volume 40 ; 40 >
-    au < released ; 2013 ; Reviews in American History Volume 41 ; 41 >
-    au < manifest ; 2014 ; Reviews in American History Volume 42 ; 42 >
-    au < manifest ; 2015 ; Reviews in American History Volume 43 ; 43 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1995 ; Reviews in American History Volume 23 ; 23 >
+      au < released ; 1996 ; Reviews in American History Volume 24 ; 24 >
+      au < released ; 1997 ; Reviews in American History Volume 25 ; 25 >
+      au < released ; 1998 ; Reviews in American History Volume 26 ; 26 >
+      au < released ; 1999 ; Reviews in American History Volume 27 ; 27 >
+      au < released ; 2000 ; Reviews in American History Volume 28 ; 28 >
+      au < released ; 2001 ; Reviews in American History Volume 29 ; 29 >
+      au < released ; 2002 ; Reviews in American History Volume 30 ; 30 >
+      au < released ; 2003 ; Reviews in American History Volume 31 ; 31 >
+      au < released ; 2004 ; Reviews in American History Volume 32 ; 32 >
+      au < released ; 2005 ; Reviews in American History Volume 33 ; 33 >
+      au < released ; 2006 ; Reviews in American History Volume 34 ; 34 >
+      au < released ; 2007 ; Reviews in American History Volume 35 ; 35 >
+      au < released ; 2008 ; Reviews in American History Volume 36 ; 36 >
+      au < released ; 2009 ; Reviews in American History Volume 37 ; 37 >
+      au < released ; 2010 ; Reviews in American History Volume 38 ; 38 >
+      au < released ; 2011 ; Reviews in American History Volume 39 ; 39 >
+      au < released ; 2012 ; Reviews in American History Volume 40 ; 40 >
+      au < released ; 2013 ; Reviews in American History Volume 41 ; 41 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Reviews in American History Volume 42 ; 42 >
+      au < manifest ; 2015 ; Reviews in American History Volume 43 ; 43 >
+
+    }
+
 
   }
 
@@ -2355,25 +2691,32 @@
     attr[journal_id] = sais
     comment[continue_by] = 1945-4716
 
-    au < released ; 1995 ; SAIS Review Volume 15 ; 15 >
-    au < released ; 1996 ; SAIS Review Volume 16 ; 16 >
-    au < released ; 1997 ; SAIS Review Volume 17 ; 17 >
-    au < released ; 1998 ; SAIS Review Volume 18 ; 18 >
-    au < released ; 1999 ; SAIS Review Volume 19 ; 19 >
-    au < released ; 2000 ; SAIS Review Volume 20 ; 20 >
-    au < released ; 2001 ; SAIS Review Volume 21 ; 21 >
-    au < released ; 2002 ; SAIS Review Volume 22 ; 22 >
-    au < released ; 2003 ; SAIS Review Volume 23 ; 23 >
-    au < released ; 2004 ; SAIS Review Volume 24 ; 24 >
-    au < released ; 2005 ; SAIS Review Volume 25 ; 25 >
-    au < released ; 2006 ; SAIS Review Volume 26 ; 26 >
-    au < released ; 2007 ; SAIS Review Volume 27 ; 27 >
-    au < released ; 2008 ; SAIS Review Volume 28 ; 28 >
-    au < released ; 2009 ; SAIS Review Volume 29 ; 29 >
-    au < released ; 2010 ; SAIS Review Volume 30 ; 30 >
-    au < released ; 2011 ; SAIS Review Volume 31 ; 31 >
-    au < released ; 2012 ; SAIS Review Volume 32 ; 32 >
-    au < released ; 2013 ; SAIS Review Volume 33 ; 33 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1995 ; SAIS Review Volume 15 ; 15 >
+      au < released ; 1996 ; SAIS Review Volume 16 ; 16 >
+      au < released ; 1997 ; SAIS Review Volume 17 ; 17 >
+      au < released ; 1998 ; SAIS Review Volume 18 ; 18 >
+      au < released ; 1999 ; SAIS Review Volume 19 ; 19 >
+      au < released ; 2000 ; SAIS Review Volume 20 ; 20 >
+      au < released ; 2001 ; SAIS Review Volume 21 ; 21 >
+      au < released ; 2002 ; SAIS Review Volume 22 ; 22 >
+      au < released ; 2003 ; SAIS Review Volume 23 ; 23 >
+      au < released ; 2004 ; SAIS Review Volume 24 ; 24 >
+      au < released ; 2005 ; SAIS Review Volume 25 ; 25 >
+      au < released ; 2006 ; SAIS Review Volume 26 ; 26 >
+      au < released ; 2007 ; SAIS Review Volume 27 ; 27 >
+      au < released ; 2008 ; SAIS Review Volume 28 ; 28 >
+      au < released ; 2009 ; SAIS Review Volume 29 ; 29 >
+      au < released ; 2010 ; SAIS Review Volume 30 ; 30 >
+      au < released ; 2011 ; SAIS Review Volume 31 ; 31 >
+      au < released ; 2012 ; SAIS Review Volume 32 ; 32 >
+      au < released ; 2013 ; SAIS Review Volume 33 ; 33 >
+
+    }
+
 
   }
 
@@ -2388,8 +2731,15 @@
     attr[journal_id] = sais
     comment[continues] = 0036-0775
 
-    au < manifest ; 2014 ; SAIS Review of International Affairs Volume 34 ; 34 >
-    au < manifest ; 2015 ; SAIS Review of International Affairs Volume 35 ; 35 >
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; SAIS Review of International Affairs Volume 34 ; 34 >
+      au < manifest ; 2015 ; SAIS Review of International Affairs Volume 35 ; 35 >
+
+    }
+
     
   }
 
@@ -2404,23 +2754,37 @@
     param[journal_dir] = studies_in_english_literature
     attr[journal_id] = sel
 
-    au < released ; 1999 ; SEL Studies in English Literature 1500-1900 Volume 39 ; 39 >
-    au < released ; 2000 ; SEL Studies in English Literature 1500-1900 Volume 40 ; 40 >
-    au < released ; 2001 ; SEL Studies in English Literature 1500-1900 Volume 41 ; 41 >
-    au < released ; 2002 ; SEL Studies in English Literature 1500-1900 Volume 42 ; 42 >
-    au < released ; 2003 ; SEL Studies in English Literature 1500-1900 Volume 43 ; 43 >
-    au < released ; 2004 ; SEL Studies in English Literature 1500-1900 Volume 44 ; 44 >
-    au < released ; 2005 ; SEL Studies in English Literature 1500-1900 Volume 45 ; 45 >
-    au < released ; 2006 ; SEL Studies in English Literature 1500-1900 Volume 46 ; 46 >
-    au < released ; 2007 ; SEL Studies in English Literature 1500-1900 Volume 47 ; 47 >
-    au < released ; 2008 ; SEL Studies in English Literature 1500-1900 Volume 48 ; 48 >
-    au < released ; 2009 ; SEL Studies in English Literature 1500-1900 Volume 49 ; 49 >
-    au < released ; 2010 ; SEL Studies in English Literature 1500-1900 Volume 50 ; 50 >
-    au < released ; 2011 ; SEL Studies in English Literature 1500-1900 Volume 51 ; 51 >
-    au < released ; 2012 ; SEL Studies in English Literature 1500-1900 Volume 52 ; 52 >
-    au < released ; 2013 ; SEL Studies in English Literature 1500-1900 Volume 53 ; 53 >
-    au < manifest ; 2014 ; SEL Studies in English Literature 1500-1900 Volume 54 ; 54 >
-    au < manifest ; 2015 ; SEL Studies in English Literature 1500-1900 Volume 55 ; 55 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1999 ; SEL Studies in English Literature 1500-1900 Volume 39 ; 39 >
+      au < released ; 2000 ; SEL Studies in English Literature 1500-1900 Volume 40 ; 40 >
+      au < released ; 2001 ; SEL Studies in English Literature 1500-1900 Volume 41 ; 41 >
+      au < released ; 2002 ; SEL Studies in English Literature 1500-1900 Volume 42 ; 42 >
+      au < released ; 2003 ; SEL Studies in English Literature 1500-1900 Volume 43 ; 43 >
+      au < released ; 2004 ; SEL Studies in English Literature 1500-1900 Volume 44 ; 44 >
+      au < released ; 2005 ; SEL Studies in English Literature 1500-1900 Volume 45 ; 45 >
+      au < released ; 2006 ; SEL Studies in English Literature 1500-1900 Volume 46 ; 46 >
+      au < released ; 2007 ; SEL Studies in English Literature 1500-1900 Volume 47 ; 47 >
+      au < released ; 2008 ; SEL Studies in English Literature 1500-1900 Volume 48 ; 48 >
+      au < released ; 2009 ; SEL Studies in English Literature 1500-1900 Volume 49 ; 49 >
+      au < released ; 2010 ; SEL Studies in English Literature 1500-1900 Volume 50 ; 50 >
+      au < released ; 2011 ; SEL Studies in English Literature 1500-1900 Volume 51 ; 51 >
+      au < released ; 2012 ; SEL Studies in English Literature 1500-1900 Volume 52 ; 52 >
+      au < released ; 2013 ; SEL Studies in English Literature 1500-1900 Volume 53 ; 53 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; SEL Studies in English Literature 1500-1900 Volume 54 ; 54 >
+      au < manifest ; 2015 ; SEL Studies in English Literature 1500-1900 Volume 55 ; 55 >
+
+    }
+
 
   }
 
@@ -2435,15 +2799,29 @@
     param[journal_dir] = sewanee_review
     attr[journal_id] = sew
 
-    au < released ; 2007 ; Sewanee Review Volume 115 ; 115 >
-    au < released ; 2008 ; Sewanee Review Volume 116 ; 116 >
-    au < released ; 2009 ; Sewanee Review Volume 117 ; 117 >
-    au < released ; 2010 ; Sewanee Review Volume 118 ; 118 >
-    au < released ; 2011 ; Sewanee Review Volume 119 ; 119 >
-    au < released ; 2012 ; Sewanee Review Volume 120 ; 120 >
-    au < released ; 2013 ; Sewanee Review Volume 121 ; 121 >
-    au < manifest ; 2014 ; Sewanee Review Volume 122 ; 122 >
-    au < manifest ; 2015 ; Sewanee Review Volume 123 ; 123 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2007 ; Sewanee Review Volume 115 ; 115 >
+      au < released ; 2008 ; Sewanee Review Volume 116 ; 116 >
+      au < released ; 2009 ; Sewanee Review Volume 117 ; 117 >
+      au < released ; 2010 ; Sewanee Review Volume 118 ; 118 >
+      au < released ; 2011 ; Sewanee Review Volume 119 ; 119 >
+      au < released ; 2012 ; Sewanee Review Volume 120 ; 120 >
+      au < released ; 2013 ; Sewanee Review Volume 121 ; 121 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Sewanee Review Volume 122 ; 122 >
+      au < manifest ; 2015 ; Sewanee Review Volume 123 ; 123 >
+
+    }
+
     
   }
 
@@ -2458,16 +2836,30 @@
     param[journal_dir] = shakespeare_bulletin
     attr[journal_id] = shb
 
-    au < released ; 2006 ; Shakespeare Bulletin Volume 24 ; 24 >
-    au < released ; 2007 ; Shakespeare Bulletin Volume 25 ; 25 >
-    au < released ; 2008 ; Shakespeare Bulletin Volume 26 ; 26 >
-    au < released ; 2009 ; Shakespeare Bulletin Volume 27 ; 27 >
-    au < released ; 2010 ; Shakespeare Bulletin Volume 28 ; 28 >
-    au < released ; 2011 ; Shakespeare Bulletin Volume 29 ; 29 >
-    au < released ; 2012 ; Shakespeare Bulletin Volume 30 ; 30 >
-    au < released ; 2013 ; Shakespeare Bulletin Volume 31 ; 31 >
-    au < manifest ; 2014 ; Shakespeare Bulletin Volume 32 ; 32 >
-    au < manifest ; 2015 ; Shakespeare Bulletin Volume 33 ; 33 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2006 ; Shakespeare Bulletin Volume 24 ; 24 >
+      au < released ; 2007 ; Shakespeare Bulletin Volume 25 ; 25 >
+      au < released ; 2008 ; Shakespeare Bulletin Volume 26 ; 26 >
+      au < released ; 2009 ; Shakespeare Bulletin Volume 27 ; 27 >
+      au < released ; 2010 ; Shakespeare Bulletin Volume 28 ; 28 >
+      au < released ; 2011 ; Shakespeare Bulletin Volume 29 ; 29 >
+      au < released ; 2012 ; Shakespeare Bulletin Volume 30 ; 30 >
+      au < released ; 2013 ; Shakespeare Bulletin Volume 31 ; 31 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Shakespeare Bulletin Volume 32 ; 32 >
+      au < manifest ; 2015 ; Shakespeare Bulletin Volume 33 ; 33 >
+
+    }
+
 
   }
 
@@ -2482,21 +2874,35 @@
     param[journal_dir] = shakespeare_quarterly
     attr[journal_id] = shq
 
-    au < released ; 2001 ; Shakespeare Quarterly Volume 52 ; 52 >
-    au < released ; 2002 ; Shakespeare Quarterly Volume 53 ; 53 >
-    au < released ; 2003 ; Shakespeare Quarterly Volume 54 ; 54 >
-    au < released ; 2004 ; Shakespeare Quarterly Volume 55 ; 55 >
-    au < released ; 2005 ; Shakespeare Quarterly Volume 56 ; 56 >
-    au < released ; 2006 ; Shakespeare Quarterly Volume 57 ; 57 >
-    au < released ; 2007 ; Shakespeare Quarterly Volume 58 ; 58 >
-    au < released ; 2008 ; Shakespeare Quarterly Volume 59 ; 59 >
-    au < released ; 2009 ; Shakespeare Quarterly Volume 60 ; 60 >
-    au < released ; 2010 ; Shakespeare Quarterly Volume 61 ; 61 >
-    au < released ; 2011 ; Shakespeare Quarterly Volume 62 ; 62 >
-    au < released ; 2012 ; Shakespeare Quarterly Volume 63 ; 63 >
-    au < released ; 2013 ; Shakespeare Quarterly Volume 64 ; 64 >
-    au < manifest ; 2014 ; Shakespeare Quarterly Volume 65 ; 65 >
-    au < manifest ; 2015 ; Shakespeare Quarterly Volume 66 ; 66 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2001 ; Shakespeare Quarterly Volume 52 ; 52 >
+      au < released ; 2002 ; Shakespeare Quarterly Volume 53 ; 53 >
+      au < released ; 2003 ; Shakespeare Quarterly Volume 54 ; 54 >
+      au < released ; 2004 ; Shakespeare Quarterly Volume 55 ; 55 >
+      au < released ; 2005 ; Shakespeare Quarterly Volume 56 ; 56 >
+      au < released ; 2006 ; Shakespeare Quarterly Volume 57 ; 57 >
+      au < released ; 2007 ; Shakespeare Quarterly Volume 58 ; 58 >
+      au < released ; 2008 ; Shakespeare Quarterly Volume 59 ; 59 >
+      au < released ; 2009 ; Shakespeare Quarterly Volume 60 ; 60 >
+      au < released ; 2010 ; Shakespeare Quarterly Volume 61 ; 61 >
+      au < released ; 2011 ; Shakespeare Quarterly Volume 62 ; 62 >
+      au < released ; 2012 ; Shakespeare Quarterly Volume 63 ; 63 >
+      au < released ; 2013 ; Shakespeare Quarterly Volume 64 ; 64 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Shakespeare Quarterly Volume 65 ; 65 >
+      au < manifest ; 2015 ; Shakespeare Quarterly Volume 66 ; 66 >
+
+    }
+
 
   }
 
@@ -2512,12 +2918,19 @@
     attr[journal_id] = sir
     comment[0] = no issue after 2010
 
-    au < released ; 2005 ; Sirena: poesia, arte y critica 2005 ; 2005 >
-    au < released  ;2006 ; Sirena: poesia, arte y critica 2006 ; 2006 >
-    au < released ; 2007 ; Sirena: poesia, arte y critica 2007 ; 2007 >
-    au < released ; 2008 ; Sirena: poesia, arte y critica 2008 ; 2008 >
-    au < released ; 2009 ; Sirena: poesia, arte y critica 2009 ; 2009 >
-    au < released ; 2010 ; Sirena: poesia, arte y critica 2010 ; 2010 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2005 ; Sirena: poesia, arte y critica 2005 ; 2005 >
+      au < released  ;2006 ; Sirena: poesia, arte y critica 2006 ; 2006 >
+      au < released ; 2007 ; Sirena: poesia, arte y critica 2007 ; 2007 >
+      au < released ; 2008 ; Sirena: poesia, arte y critica 2008 ; 2008 >
+      au < released ; 2009 ; Sirena: poesia, arte y critica 2009 ; 2009 >
+      au < released ; 2010 ; Sirena: poesia, arte y critica 2010 ; 2010 >
+
+    }
+
   
   }
 
@@ -2533,18 +2946,32 @@
     param[journal_dir] = south_central_review
     attr[journal_id] = scr
 
-    au < released ; 2004 ; South Central Review Volume 21 ; 21 >
-    au < released ; 2005 ; South Central Review Volume 22 ; 22 >
-    au < released ; 2006 ; South Central Review Volume 23 ; 23 >
-    au < released ; 2007 ; South Central Review Volume 24 ; 24 >
-    au < released ; 2008 ; South Central Review Volume 25 ; 25 >
-    au < released ; 2009 ; South Central Review Volume 26 ; 26 >
-    au < released ; 2010 ; South Central Review Volume 27 ; 27 >
-    au < released ; 2011 ; South Central Review Volume 28 ; 28 >
-    au < released ; 2012 ; South Central Review Volume 29 ; 29 >
-    au < released ; 2013 ; South Central Review Volume 30 ; 30 >
-    au < manifest ; 2014 ; South Central Review Volume 31 ; 31 >
-    au < manifest ; 2015 ; South Central Review Volume 32 ; 32 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2004 ; South Central Review Volume 21 ; 21 >
+      au < released ; 2005 ; South Central Review Volume 22 ; 22 >
+      au < released ; 2006 ; South Central Review Volume 23 ; 23 >
+      au < released ; 2007 ; South Central Review Volume 24 ; 24 >
+      au < released ; 2008 ; South Central Review Volume 25 ; 25 >
+      au < released ; 2009 ; South Central Review Volume 26 ; 26 >
+      au < released ; 2010 ; South Central Review Volume 27 ; 27 >
+      au < released ; 2011 ; South Central Review Volume 28 ; 28 >
+      au < released ; 2012 ; South Central Review Volume 29 ; 29 >
+      au < released ; 2013 ; South Central Review Volume 30 ; 30 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; South Central Review Volume 31 ; 31 >
+      au < manifest ; 2015 ; South Central Review Volume 32 ; 32 >
+
+    }
+
     
   }
 
@@ -2559,21 +2986,35 @@
     param[journal_dir] = spiritus
     attr[journal_id] = scs
 
-    au < released ; 2001 ; Spiritus: A Journal of Christian Spirituality Volume 1 ; 1 >
-    au < released ; 2002 ; Spiritus: A Journal of Christian Spirituality Volume 2 ; 2 >
-    au < released ; 2003 ; Spiritus: A Journal of Christian Spirituality Volume 3 ; 3 >
-    au < released ; 2004 ; Spiritus: A Journal of Christian Spirituality Volume 4 ; 4 >
-    au < released ; 2005 ; Spiritus: A Journal of Christian Spirituality Volume 5 ; 5 >
-    au < released ; 2006 ; Spiritus: A Journal of Christian Spirituality Volume 6 ; 6 >
-    au < released ; 2007 ; Spiritus: A Journal of Christian Spirituality Volume 7 ; 7 >
-    au < released ; 2008 ; Spiritus: A Journal of Christian Spirituality Volume 8 ; 8 >
-    au < released ; 2009 ; Spiritus: A Journal of Christian Spirituality Volume 9 ; 9 >
-    au < released ; 2010 ; Spiritus: A Journal of Christian Spirituality Volume 10 ; 10 >
-    au < released ; 2011 ; Spiritus: A Journal of Christian Spirituality Volume 11 ; 11 >
-    au < released ; 2012 ; Spiritus: A Journal of Christian Spirituality Volume 12 ; 12 >
-    au < released ; 2013 ; Spiritus: A Journal of Christian Spirituality Volume 13 ; 13 >
-    au < manifest ; 2014 ; Spiritus: A Journal of Christian Spirituality Volume 14 ; 14 >
-    au < manifest ; 2015 ; Spiritus: A Journal of Christian Spirituality Volume 15 ; 15 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2001 ; Spiritus: A Journal of Christian Spirituality Volume 1 ; 1 >
+      au < released ; 2002 ; Spiritus: A Journal of Christian Spirituality Volume 2 ; 2 >
+      au < released ; 2003 ; Spiritus: A Journal of Christian Spirituality Volume 3 ; 3 >
+      au < released ; 2004 ; Spiritus: A Journal of Christian Spirituality Volume 4 ; 4 >
+      au < released ; 2005 ; Spiritus: A Journal of Christian Spirituality Volume 5 ; 5 >
+      au < released ; 2006 ; Spiritus: A Journal of Christian Spirituality Volume 6 ; 6 >
+      au < released ; 2007 ; Spiritus: A Journal of Christian Spirituality Volume 7 ; 7 >
+      au < released ; 2008 ; Spiritus: A Journal of Christian Spirituality Volume 8 ; 8 >
+      au < released ; 2009 ; Spiritus: A Journal of Christian Spirituality Volume 9 ; 9 >
+      au < released ; 2010 ; Spiritus: A Journal of Christian Spirituality Volume 10 ; 10 >
+      au < released ; 2011 ; Spiritus: A Journal of Christian Spirituality Volume 11 ; 11 >
+      au < released ; 2012 ; Spiritus: A Journal of Christian Spirituality Volume 12 ; 12 >
+      au < released ; 2013 ; Spiritus: A Journal of Christian Spirituality Volume 13 ; 13 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Spiritus: A Journal of Christian Spirituality Volume 14 ; 14 >
+      au < manifest ; 2015 ; Spiritus: A Journal of Christian Spirituality Volume 15 ; 15 >
+
+    }
+
 
   }
 
@@ -2587,12 +3028,26 @@
      param[journal_dir] = studies_in_american_fiction
      attr[journal_id] = saf
 
-    au < released ; 2010 ; Studies in American Fiction Volume 37 ; 37 >
-    au < released ; 2011 ; Studies in American Fiction Volume 38 ; 38 >
-    au < released ; 2012 ; Studies in American Fiction Volume 39 ; 39 >
-    au < released ; 2013 ; Studies in American Fiction Volume 40 ; 40 >
-    au < manifest ; 2014 ; Studies in American Fiction Volume 41 ; 41 >
-    au < manifest ; 2015 ; Studies in American Fiction Volume 42 ; 42 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2010 ; Studies in American Fiction Volume 37 ; 37 >
+      au < released ; 2011 ; Studies in American Fiction Volume 38 ; 38 >
+      au < released ; 2012 ; Studies in American Fiction Volume 39 ; 39 >
+      au < released ; 2013 ; Studies in American Fiction Volume 40 ; 40 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Studies in American Fiction Volume 41 ; 41 >
+      au < manifest ; 2015 ; Studies in American Fiction Volume 42 ; 42 >
+
+    }
+
      
      
   }
@@ -2608,31 +3063,45 @@
     param[journal_dir] = studies_in_eighteenth_century_culture
     attr[journal_id] = sec
 
-    au < released ; 1991 ; Studies in Eighteenth-Century Culture Volume 20 ; 20 >
-    au < released ; 1992 ; Studies in Eighteenth-Century Culture Volume 21 ; 21 >
-    au < released ; 1993 ; Studies in Eighteenth-Century Culture Volume 22 ; 22 >
-    au < released ; 1994 ; Studies in Eighteenth-Century Culture Volume 23 ; 23 >
-    au < released ; 1995 ; Studies in Eighteenth-Century Culture Volume 24 ; 24 >
-    au < released ; 1996 ; Studies in Eighteenth-Century Culture Volume 25 ; 25 >
-    au < released ; 1997 ; Studies in Eighteenth-Century Culture Volume 26 ; 26 >
-    au < released ; 1998 ; Studies in Eighteenth-Century Culture Volume 27 ; 27 >
-    au < released ; 1999 ; Studies in Eighteenth-Century Culture Volume 28 ; 28 >
-    au < released ; 2000 ; Studies in Eighteenth-Century Culture Volume 29 ; 29 >
-    au < released ; 2001 ; Studies in Eighteenth-Century Culture Volume 30 ; 30 >
-    au < released ; 2002 ; Studies in Eighteenth-Century Culture Volume 31 ; 31 >
-    au < released ; 2003 ; Studies in Eighteenth-Century Culture Volume 32 ; 32 >
-    au < released ; 2004 ; Studies in Eighteenth-Century Culture Volume 33 ; 33 >
-    au < released ; 2005 ; Studies in Eighteenth-Century Culture Volume 34 ; 34 >
-    au < released ; 2006 ; Studies in Eighteenth-Century Culture Volume 35 ; 35 >
-    au < released ; 2007 ; Studies in Eighteenth-Century Culture Volume 36 ; 36 >
-    au < released ; 2008 ; Studies in Eighteenth-Century Culture Volume 37 ; 37 >
-    au < released ; 2009 ; Studies in Eighteenth-Century Culture Volume 38 ; 38 >
-    au < released ; 2010 ; Studies in Eighteenth-Century Culture Volume 39 ; 39 >
-    au < released ; 2011 ; Studies in Eighteenth-Century Culture Volume 40 ; 40 >
-    au < released ; 2012 ; Studies in Eighteenth-Century Culture Volume 41 ; 41 >
-    au < released ; 2013 ; Studies in Eighteenth-Century Culture Volume 42 ; 42 >
-    au < manifest ; 2014 ; Studies in Eighteenth-Century Culture Volume 43 ; 43 >
-    au < manifest ; 2015 ; Studies in Eighteenth-Century Culture Volume 44 ; 44 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1991 ; Studies in Eighteenth-Century Culture Volume 20 ; 20 >
+      au < released ; 1992 ; Studies in Eighteenth-Century Culture Volume 21 ; 21 >
+      au < released ; 1993 ; Studies in Eighteenth-Century Culture Volume 22 ; 22 >
+      au < released ; 1994 ; Studies in Eighteenth-Century Culture Volume 23 ; 23 >
+      au < released ; 1995 ; Studies in Eighteenth-Century Culture Volume 24 ; 24 >
+      au < released ; 1996 ; Studies in Eighteenth-Century Culture Volume 25 ; 25 >
+      au < released ; 1997 ; Studies in Eighteenth-Century Culture Volume 26 ; 26 >
+      au < released ; 1998 ; Studies in Eighteenth-Century Culture Volume 27 ; 27 >
+      au < released ; 1999 ; Studies in Eighteenth-Century Culture Volume 28 ; 28 >
+      au < released ; 2000 ; Studies in Eighteenth-Century Culture Volume 29 ; 29 >
+      au < released ; 2001 ; Studies in Eighteenth-Century Culture Volume 30 ; 30 >
+      au < released ; 2002 ; Studies in Eighteenth-Century Culture Volume 31 ; 31 >
+      au < released ; 2003 ; Studies in Eighteenth-Century Culture Volume 32 ; 32 >
+      au < released ; 2004 ; Studies in Eighteenth-Century Culture Volume 33 ; 33 >
+      au < released ; 2005 ; Studies in Eighteenth-Century Culture Volume 34 ; 34 >
+      au < released ; 2006 ; Studies in Eighteenth-Century Culture Volume 35 ; 35 >
+      au < released ; 2007 ; Studies in Eighteenth-Century Culture Volume 36 ; 36 >
+      au < released ; 2008 ; Studies in Eighteenth-Century Culture Volume 37 ; 37 >
+      au < released ; 2009 ; Studies in Eighteenth-Century Culture Volume 38 ; 38 >
+      au < released ; 2010 ; Studies in Eighteenth-Century Culture Volume 39 ; 39 >
+      au < released ; 2011 ; Studies in Eighteenth-Century Culture Volume 40 ; 40 >
+      au < released ; 2012 ; Studies in Eighteenth-Century Culture Volume 41 ; 41 >
+      au < released ; 2013 ; Studies in Eighteenth-Century Culture Volume 42 ; 42 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Studies in Eighteenth-Century Culture Volume 43 ; 43 >
+      au < manifest ; 2015 ; Studies in Eighteenth-Century Culture Volume 44 ; 44 >
+
+    }
+
 
   }
   
@@ -2647,24 +3116,38 @@
     param[journal_dir] = technology_and_culture
     attr[journal_id] = tech
 
-    au < released ; 1998 ; Technology and Culture Volume 39 ; 39 >
-    au < released ; 1999 ; Technology and Culture Volume 40 ; 40 >
-    au < released ; 2000 ; Technology and Culture Volume 41 ; 41 >
-    au < released ; 2001 ; Technology and Culture Volume 42 ; 42 >
-    au < released ; 2002 ; Technology and Culture Volume 43 ; 43 >
-    au < released ; 2003 ; Technology and Culture Volume 44 ; 44 >
-    au < released ; 2004 ; Technology and Culture Volume 45 ; 45 >
-    au < released ; 2005 ; Technology and Culture Volume 46 ; 46 >
-    au < released ; 2006 ; Technology and Culture Volume 47 ; 47 >
-    au < released ; 2007 ; Technology and Culture Volume 48 ; 48 >
-    au < released ; 2008 ; Technology and Culture Volume 49 ; 49 >
-    au < released ; 2009 ; Technology and Culture Volume 50 ; 50 >
-    au < released ; 2010 ; Technology and Culture Volume 51 ; 51 >
-    au < released ; 2011 ; Technology and Culture Volume 52 ; 52 >
-    au < released ; 2012 ; Technology and Culture Volume 53 ; 53 >
-    au < released ; 2013 ; Technology and Culture Volume 54 ; 54 >
-    au < manifest ; 2014 ; Technology and Culture Volume 55 ; 55 >
-    au < manifest ; 2015 ; Technology and Culture Volume 56 ; 56 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1998 ; Technology and Culture Volume 39 ; 39 >
+      au < released ; 1999 ; Technology and Culture Volume 40 ; 40 >
+      au < released ; 2000 ; Technology and Culture Volume 41 ; 41 >
+      au < released ; 2001 ; Technology and Culture Volume 42 ; 42 >
+      au < released ; 2002 ; Technology and Culture Volume 43 ; 43 >
+      au < released ; 2003 ; Technology and Culture Volume 44 ; 44 >
+      au < released ; 2004 ; Technology and Culture Volume 45 ; 45 >
+      au < released ; 2005 ; Technology and Culture Volume 46 ; 46 >
+      au < released ; 2006 ; Technology and Culture Volume 47 ; 47 >
+      au < released ; 2007 ; Technology and Culture Volume 48 ; 48 >
+      au < released ; 2008 ; Technology and Culture Volume 49 ; 49 >
+      au < released ; 2009 ; Technology and Culture Volume 50 ; 50 >
+      au < released ; 2010 ; Technology and Culture Volume 51 ; 51 >
+      au < released ; 2011 ; Technology and Culture Volume 52 ; 52 >
+      au < released ; 2012 ; Technology and Culture Volume 53 ; 53 >
+      au < released ; 2013 ; Technology and Culture Volume 54 ; 54 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Technology and Culture Volume 55 ; 55 >
+      au < manifest ; 2015 ; Technology and Culture Volume 56 ; 56 >
+
+    }
+
 
   }
 
@@ -2679,30 +3162,44 @@
     param[journal_dir] = emily_dickinson_journal
     attr[journal_id] = edj
 
-    au < released ; 1992 ; The Emily Dickinson Journal Volume 1 ; 1 >
-    au < released ; 1993 ; The Emily Dickinson Journal Volume 2 ; 2 >
-    au < released ; 1994 ; The Emily Dickinson Journal Volume 3 ; 3 >
-    au < released ; 1995 ; The Emily Dickinson Journal Volume 4 ; 4 >
-    au < released ; 1996 ; The Emily Dickinson Journal Volume 5 ; 5 >
-    au < released ; 1997 ; The Emily Dickinson Journal Volume 6 ; 6 >
-    au < released ; 1998 ; The Emily Dickinson Journal Volume 7 ; 7 >
-    au < released ; 1999 ; The Emily Dickinson Journal Volume 8 ; 8 >
-    au < released ; 2000 ; The Emily Dickinson Journal Volume 9 ; 9 >
-    au < released ; 2001 ; The Emily Dickinson Journal Volume 10 ; 10 >
-    au < released ; 2002 ; The Emily Dickinson Journal Volume 11 ; 11 >
-    au < released ; 2003 ; The Emily Dickinson Journal Volume 12 ; 12 >
-    au < released ; 2004 ; The Emily Dickinson Journal Volume 13 ; 13 >
-    au < released ; 2005 ; The Emily Dickinson Journal Volume 14 ; 14 >
-    au < released ; 2006 ; The Emily Dickinson Journal Volume 15 ; 15 >
-    au < released ; 2007 ; The Emily Dickinson Journal Volume 16 ; 16 >
-    au < released ; 2008 ; The Emily Dickinson Journal Volume 17 ; 17 >
-    au < released ; 2009 ; The Emily Dickinson Journal Volume 18 ; 18 >
-    au < released ; 2010 ; The Emily Dickinson Journal Volume 19 ; 19 >
-    au < released ; 2011 ; The Emily Dickinson Journal Volume 20 ; 20 >
-    au < released ; 2012 ; The Emily Dickinson Journal Volume 21 ; 21 >
-    au < released ; 2013 ; The Emily Dickinson Journal Volume 22 ; 22 >
-    au < manifest ; 2014 ; The Emily Dickinson Journal Volume 23 ; 23 >
-    au < manifest ; 2015 ; The Emily Dickinson Journal Volume 24 ; 24 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1992 ; The Emily Dickinson Journal Volume 1 ; 1 >
+      au < released ; 1993 ; The Emily Dickinson Journal Volume 2 ; 2 >
+      au < released ; 1994 ; The Emily Dickinson Journal Volume 3 ; 3 >
+      au < released ; 1995 ; The Emily Dickinson Journal Volume 4 ; 4 >
+      au < released ; 1996 ; The Emily Dickinson Journal Volume 5 ; 5 >
+      au < released ; 1997 ; The Emily Dickinson Journal Volume 6 ; 6 >
+      au < released ; 1998 ; The Emily Dickinson Journal Volume 7 ; 7 >
+      au < released ; 1999 ; The Emily Dickinson Journal Volume 8 ; 8 >
+      au < released ; 2000 ; The Emily Dickinson Journal Volume 9 ; 9 >
+      au < released ; 2001 ; The Emily Dickinson Journal Volume 10 ; 10 >
+      au < released ; 2002 ; The Emily Dickinson Journal Volume 11 ; 11 >
+      au < released ; 2003 ; The Emily Dickinson Journal Volume 12 ; 12 >
+      au < released ; 2004 ; The Emily Dickinson Journal Volume 13 ; 13 >
+      au < released ; 2005 ; The Emily Dickinson Journal Volume 14 ; 14 >
+      au < released ; 2006 ; The Emily Dickinson Journal Volume 15 ; 15 >
+      au < released ; 2007 ; The Emily Dickinson Journal Volume 16 ; 16 >
+      au < released ; 2008 ; The Emily Dickinson Journal Volume 17 ; 17 >
+      au < released ; 2009 ; The Emily Dickinson Journal Volume 18 ; 18 >
+      au < released ; 2010 ; The Emily Dickinson Journal Volume 19 ; 19 >
+      au < released ; 2011 ; The Emily Dickinson Journal Volume 20 ; 20 >
+      au < released ; 2012 ; The Emily Dickinson Journal Volume 21 ; 21 >
+      au < released ; 2013 ; The Emily Dickinson Journal Volume 22 ; 22 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; The Emily Dickinson Journal Volume 23 ; 23 >
+      au < manifest ; 2015 ; The Emily Dickinson Journal Volume 24 ; 24 >
+
+    }
+
 
   }
 
@@ -2717,27 +3214,41 @@
     param[journal_dir] = henry_james_review
     attr[journal_id] = hjr
 
-    au < released ; 1995 ; The Henry James Review Volume 16 ; 16 >
-    au < released ; 1996 ; The Henry James Review Volume 17 ; 17 >
-    au < released ; 1997 ; The Henry James Review Volume 18 ; 18 >
-    au < released ; 1998 ; The Henry James Review Volume 19 ; 19 >
-    au < released ; 1999 ; The Henry James Review Volume 20 ; 20 >
-    au < released ; 2000 ; The Henry James Review Volume 21 ; 21 >
-    au < released ; 2001 ; The Henry James Review Volume 22 ; 22 >
-    au < released ; 2002 ; The Henry James Review Volume 23 ; 23 >
-    au < released ; 2003 ; The Henry James Review Volume 24 ; 24 >
-    au < released ; 2004 ; The Henry James Review Volume 25 ; 25 >
-    au < released ; 2005 ; The Henry James Review Volume 26 ; 26 >
-    au < released ; 2006 ; The Henry James Review Volume 27 ; 27 >
-    au < released ; 2007 ; The Henry James Review Volume 28 ; 28 >
-    au < released ; 2008 ; The Henry James Review Volume 29 ; 29 >
-    au < released ; 2009 ; The Henry James Review Volume 30 ; 30 >
-    au < released ; 2010 ; The Henry James Review Volume 31 ; 31 >
-    au < released ; 2011 ; The Henry James Review Volume 32 ; 32 >
-    au < released ; 2012 ; The Henry James Review Volume 33 ; 33 >
-    au < released ; 2013 ; The Henry James Review Volume 34 ; 34 >
-    au < manifest ; 2014 ; The Henry James Review Volume 35 ; 35 >
-    au < manifest ; 2015 ; The Henry James Review Volume 36 ; 36 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1995 ; The Henry James Review Volume 16 ; 16 >
+      au < released ; 1996 ; The Henry James Review Volume 17 ; 17 >
+      au < released ; 1997 ; The Henry James Review Volume 18 ; 18 >
+      au < released ; 1998 ; The Henry James Review Volume 19 ; 19 >
+      au < released ; 1999 ; The Henry James Review Volume 20 ; 20 >
+      au < released ; 2000 ; The Henry James Review Volume 21 ; 21 >
+      au < released ; 2001 ; The Henry James Review Volume 22 ; 22 >
+      au < released ; 2002 ; The Henry James Review Volume 23 ; 23 >
+      au < released ; 2003 ; The Henry James Review Volume 24 ; 24 >
+      au < released ; 2004 ; The Henry James Review Volume 25 ; 25 >
+      au < released ; 2005 ; The Henry James Review Volume 26 ; 26 >
+      au < released ; 2006 ; The Henry James Review Volume 27 ; 27 >
+      au < released ; 2007 ; The Henry James Review Volume 28 ; 28 >
+      au < released ; 2008 ; The Henry James Review Volume 29 ; 29 >
+      au < released ; 2009 ; The Henry James Review Volume 30 ; 30 >
+      au < released ; 2010 ; The Henry James Review Volume 31 ; 31 >
+      au < released ; 2011 ; The Henry James Review Volume 32 ; 32 >
+      au < released ; 2012 ; The Henry James Review Volume 33 ; 33 >
+      au < released ; 2013 ; The Henry James Review Volume 34 ; 34 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; The Henry James Review Volume 35 ; 35 >
+      au < manifest ; 2015 ; The Henry James Review Volume 36 ; 36 >
+
+    }
+
 
   }
 
@@ -2752,27 +3263,41 @@
     param[journal_dir] = lion_and_the_unicorn
     attr[journal_id] = uni
 
-    au < released ; 1995 ; The Lion and the Unicorn Volume 19 ; 19 >
-    au < released ; 1996 ; The Lion and the Unicorn Volume 20 ; 20 >
-    au < released ; 1997 ; The Lion and the Unicorn Volume 21 ; 21 >
-    au < released ; 1998 ; The Lion and the Unicorn Volume 22 ; 22 >
-    au < released ; 1999 ; The Lion and the Unicorn Volume 23 ; 23 >
-    au < released ; 2000 ; The Lion and the Unicorn Volume 24 ; 24 >
-    au < released ; 2001 ; The Lion and the Unicorn Volume 25 ; 25 >
-    au < released ; 2002 ; The Lion and the Unicorn Volume 26 ; 26 >
-    au < released ; 2003 ; The Lion and the Unicorn Volume 27 ; 27 >
-    au < released ; 2004 ; The Lion and the Unicorn Volume 28 ; 28 >
-    au < released ; 2005 ; The Lion and the Unicorn Volume 29 ; 29 >
-    au < released ; 2006 ; The Lion and the Unicorn Volume 30 ; 30 >
-    au < released ; 2007 ; The Lion and the Unicorn Volume 31 ; 31 >
-    au < released ; 2008 ; The Lion and the Unicorn Volume 32 ; 32 >
-    au < released ; 2009 ; The Lion and the Unicorn Volume 33 ; 33 >
-    au < released ; 2010 ; The Lion and the Unicorn Volume 34 ; 34 >
-    au < released ; 2011 ; The Lion and the Unicorn Volume 35 ; 35 >
-    au < released ; 2012 ; The Lion and the Unicorn Volume 36 ; 36 >
-    au < released ; 2013 ; The Lion and the Unicorn Volume 37 ; 37 >
-    au < manifest ; 2014 ; The Lion and the Unicorn Volume 38 ; 38 >
-    au < manifest ; 2015 ; The Lion and the Unicorn Volume 39 ; 39 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1995 ; The Lion and the Unicorn Volume 19 ; 19 >
+      au < released ; 1996 ; The Lion and the Unicorn Volume 20 ; 20 >
+      au < released ; 1997 ; The Lion and the Unicorn Volume 21 ; 21 >
+      au < released ; 1998 ; The Lion and the Unicorn Volume 22 ; 22 >
+      au < released ; 1999 ; The Lion and the Unicorn Volume 23 ; 23 >
+      au < released ; 2000 ; The Lion and the Unicorn Volume 24 ; 24 >
+      au < released ; 2001 ; The Lion and the Unicorn Volume 25 ; 25 >
+      au < released ; 2002 ; The Lion and the Unicorn Volume 26 ; 26 >
+      au < released ; 2003 ; The Lion and the Unicorn Volume 27 ; 27 >
+      au < released ; 2004 ; The Lion and the Unicorn Volume 28 ; 28 >
+      au < released ; 2005 ; The Lion and the Unicorn Volume 29 ; 29 >
+      au < released ; 2006 ; The Lion and the Unicorn Volume 30 ; 30 >
+      au < released ; 2007 ; The Lion and the Unicorn Volume 31 ; 31 >
+      au < released ; 2008 ; The Lion and the Unicorn Volume 32 ; 32 >
+      au < released ; 2009 ; The Lion and the Unicorn Volume 33 ; 33 >
+      au < released ; 2010 ; The Lion and the Unicorn Volume 34 ; 34 >
+      au < released ; 2011 ; The Lion and the Unicorn Volume 35 ; 35 >
+      au < released ; 2012 ; The Lion and the Unicorn Volume 36 ; 36 >
+      au < released ; 2013 ; The Lion and the Unicorn Volume 37 ; 37 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; The Lion and the Unicorn Volume 38 ; 38 >
+      au < manifest ; 2015 ; The Lion and the Unicorn Volume 39 ; 39 >
+
+    }
+
 
   }
 
@@ -2787,25 +3312,39 @@
     param[journal_dir] = review_of_higher_education
     attr[journal_id] = rhe
 
-    au < released ; 1996-1997 ; The Review of Higher Education Volume 20 ; 20 >
-    au < released ; 1997-1998 ; The Review of Higher Education Volume 21 ; 21 >
-    au < released ; 1998-1999 ; The Review of Higher Education Volume 22 ; 22 >
-    au < released ; 1999-2000 ; The Review of Higher Education Volume 23 ; 23 >
-    au < released ; 2000-2001 ; The Review of Higher Education Volume 24 ; 24 >
-    au < released ; 2001-2002 ; The Review of Higher Education Volume 25 ; 25 >
-    au < released ; 2002-2003 ; The Review of Higher Education Volume 26 ; 26 >
-    au < released ; 2003-2004 ; The Review of Higher Education Volume 27 ; 27 >
-    au < released ; 2004-2005 ; The Review of Higher Education Volume 28 ; 28 >
-    au < released ; 2005-2006 ; The Review of Higher Education Volume 29 ; 29 >
-    au < released ; 2006-2007 ; The Review of Higher Education Volume 30 ; 30 >
-    au < released ; 2007-2008 ; The Review of Higher Education Volume 31 ; 31 >
-    au < released ; 2008-2009 ; The Review of Higher Education Volume 32 ; 32 >
-    au < released ; 2009-2010 ; The Review of Higher Education Volume 33 ; 33 >
-    au < released ; 2010-2011 ; The Review of Higher Education Volume 34 ; 34 >
-    au < released ; 2011-2012 ; The Review of Higher Education Volume 35 ; 35 >
-    au < released ; 2012-2013 ; The Review of Higher Education Volume 36 ; 36 >
-    au < released ; 2013-2014 ; The Review of Higher Education Volume 37 ; 37 >
-    au < manifest ; 2014-2015 ; The Review of Higher Education Volume 38 ; 38 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1996-1997 ; The Review of Higher Education Volume 20 ; 20 >
+      au < released ; 1997-1998 ; The Review of Higher Education Volume 21 ; 21 >
+      au < released ; 1998-1999 ; The Review of Higher Education Volume 22 ; 22 >
+      au < released ; 1999-2000 ; The Review of Higher Education Volume 23 ; 23 >
+      au < released ; 2000-2001 ; The Review of Higher Education Volume 24 ; 24 >
+      au < released ; 2001-2002 ; The Review of Higher Education Volume 25 ; 25 >
+      au < released ; 2002-2003 ; The Review of Higher Education Volume 26 ; 26 >
+      au < released ; 2003-2004 ; The Review of Higher Education Volume 27 ; 27 >
+      au < released ; 2004-2005 ; The Review of Higher Education Volume 28 ; 28 >
+      au < released ; 2005-2006 ; The Review of Higher Education Volume 29 ; 29 >
+      au < released ; 2006-2007 ; The Review of Higher Education Volume 30 ; 30 >
+      au < released ; 2007-2008 ; The Review of Higher Education Volume 31 ; 31 >
+      au < released ; 2008-2009 ; The Review of Higher Education Volume 32 ; 32 >
+      au < released ; 2009-2010 ; The Review of Higher Education Volume 33 ; 33 >
+      au < released ; 2010-2011 ; The Review of Higher Education Volume 34 ; 34 >
+      au < released ; 2011-2012 ; The Review of Higher Education Volume 35 ; 35 >
+      au < released ; 2012-2013 ; The Review of Higher Education Volume 36 ; 36 >
+      au < released ; 2013-2014 ; The Review of Higher Education Volume 37 ; 37 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014-2015 ; The Review of Higher Education Volume 38 ; 38 >
+
+    }
+
     
   }
 
@@ -2821,16 +3360,23 @@
     attr[journal_id] = yale
     comment[0] = no issue after 2005
 
-    au < released ; 1996 ; The Yale Journal of Criticism Volume 9 ; 9 >
-    au < released ; 1997 ; The Yale Journal of Criticism Volume 10 ; 10 >
-    au < released ; 1998 ; The Yale Journal of Criticism Volume 11 ; 11 >
-    au < released ; 1999 ; The Yale Journal of Criticism Volume 12 ; 12 >
-    au < released ; 2000 ; The Yale Journal of Criticism Volume 13 ; 13 >
-    au < released ; 2001 ; The Yale Journal of Criticism Volume 14 ; 14 >
-    au < released ; 2002 ; The Yale Journal of Criticism Volume 15 ; 15 >
-    au < released ; 2003 ; The Yale Journal of Criticism Volume 16 ; 16 >
-    au < released ; 2004 ; The Yale Journal of Criticism Volume 17 ; 17 >
-    au < released ; 2005 ; The Yale Journal of Criticism Volume 18 ; 18 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1996 ; The Yale Journal of Criticism Volume 9 ; 9 >
+      au < released ; 1997 ; The Yale Journal of Criticism Volume 10 ; 10 >
+      au < released ; 1998 ; The Yale Journal of Criticism Volume 11 ; 11 >
+      au < released ; 1999 ; The Yale Journal of Criticism Volume 12 ; 12 >
+      au < released ; 2000 ; The Yale Journal of Criticism Volume 13 ; 13 >
+      au < released ; 2001 ; The Yale Journal of Criticism Volume 14 ; 14 >
+      au < released ; 2002 ; The Yale Journal of Criticism Volume 15 ; 15 >
+      au < released ; 2003 ; The Yale Journal of Criticism Volume 16 ; 16 >
+      au < released ; 2004 ; The Yale Journal of Criticism Volume 17 ; 17 >
+      au < released ; 2005 ; The Yale Journal of Criticism Volume 18 ; 18 >
+
+    }
+
 
   }
 
@@ -2845,26 +3391,40 @@
     param[journal_dir] = theatre_journal
     attr[journal_id] = tj
 
-    au < released ; 1996 ; Theatre Journal Volume 48 ; 48 >
-    au < released ; 1997 ; Theatre Journal Volume 49 ; 49 >
-    au < released ; 1998 ; Theatre Journal Volume 50 ; 50 >
-    au < released ; 1999 ; Theatre Journal Volume 51 ; 51 >
-    au < released ; 2000 ; Theatre Journal Volume 52 ; 52 >
-    au < released ; 2001 ; Theatre Journal Volume 53 ; 53 >
-    au < released ; 2002 ; Theatre Journal Volume 54 ; 54 >
-    au < released ; 2003 ; Theatre Journal Volume 55 ; 55 >
-    au < released ; 2004 ; Theatre Journal Volume 56 ; 56 >
-    au < released ; 2005 ; Theatre Journal Volume 57 ; 57 >
-    au < released ; 2006 ; Theatre Journal Volume 58 ; 58 >
-    au < released ; 2007 ; Theatre Journal Volume 59 ; 59 >
-    au < released ; 2008 ; Theatre Journal Volume 60 ; 60 >
-    au < released ; 2009 ; Theatre Journal Volume 61 ; 61 >
-    au < released ; 2010 ; Theatre Journal Volume 62 ; 62 >
-    au < released ; 2011 ; Theatre Journal Volume 63 ; 63 >
-    au < released ; 2012 ; Theatre Journal Volume 64 ; 64 >
-    au < released ; 2013 ; Theatre Journal Volume 65 ; 65 >
-    au < manifest ; 2014 ; Theatre Journal Volume 66 ; 66 >
-    au < manifest ; 2015 ; Theatre Journal Volume 67 ; 67 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1996 ; Theatre Journal Volume 48 ; 48 >
+      au < released ; 1997 ; Theatre Journal Volume 49 ; 49 >
+      au < released ; 1998 ; Theatre Journal Volume 50 ; 50 >
+      au < released ; 1999 ; Theatre Journal Volume 51 ; 51 >
+      au < released ; 2000 ; Theatre Journal Volume 52 ; 52 >
+      au < released ; 2001 ; Theatre Journal Volume 53 ; 53 >
+      au < released ; 2002 ; Theatre Journal Volume 54 ; 54 >
+      au < released ; 2003 ; Theatre Journal Volume 55 ; 55 >
+      au < released ; 2004 ; Theatre Journal Volume 56 ; 56 >
+      au < released ; 2005 ; Theatre Journal Volume 57 ; 57 >
+      au < released ; 2006 ; Theatre Journal Volume 58 ; 58 >
+      au < released ; 2007 ; Theatre Journal Volume 59 ; 59 >
+      au < released ; 2008 ; Theatre Journal Volume 60 ; 60 >
+      au < released ; 2009 ; Theatre Journal Volume 61 ; 61 >
+      au < released ; 2010 ; Theatre Journal Volume 62 ; 62 >
+      au < released ; 2011 ; Theatre Journal Volume 63 ; 63 >
+      au < released ; 2012 ; Theatre Journal Volume 64 ; 64 >
+      au < released ; 2013 ; Theatre Journal Volume 65 ; 65 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Theatre Journal Volume 66 ; 66 >
+      au < manifest ; 2015 ; Theatre Journal Volume 67 ; 67 >
+
+    }
+
 
   }
 
@@ -2879,26 +3439,40 @@
     param[journal_dir] = theatre_topics
     attr[journal_id] = tt
 
-    au < released ; 1996 ; Theatre Topics Volume 6 ; 6 >
-    au < released ; 1997 ; Theatre Topics Volume 7 ; 7 >
-    au < released ; 1998 ; Theatre Topics Volume 8 ; 8 >
-    au < released ; 1999 ; Theatre Topics Volume 9 ; 9 >
-    au < released ; 2000 ; Theatre Topics Volume 10 ; 10 >
-    au < released ; 2001 ; Theatre Topics Volume 11 ; 11 >
-    au < released ; 2002 ; Theatre Topics Volume 12 ; 12 >
-    au < released ; 2003 ; Theatre Topics Volume 13 ; 13 >
-    au < released ; 2004 ; Theatre Topics Volume 14 ; 14 >
-    au < released ; 2005 ; Theatre Topics Volume 15 ; 15 >
-    au < released ; 2006 ; Theatre Topics Volume 16 ; 16 >
-    au < released ; 2007 ; Theatre Topics Volume 17 ; 17 >
-    au < released ; 2008 ; Theatre Topics Volume 18 ; 18 >
-    au < released ; 2009 ; Theatre Topics Volume 19 ; 19 >
-    au < released ; 2010 ; Theatre Topics Volume 20 ; 20 >
-    au < released ; 2011 ; Theatre Topics Volume 21 ; 21 >
-    au < released ; 2012 ; Theatre Topics Volume 22 ; 22 >
-    au < released ; 2013 ; Theatre Topics Volume 23 ; 23 >
-    au < manifest ; 2014 ; Theatre Topics Volume 24 ; 24 >
-    au < manifest ; 2015 ; Theatre Topics Volume 25 ; 25 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1996 ; Theatre Topics Volume 6 ; 6 >
+      au < released ; 1997 ; Theatre Topics Volume 7 ; 7 >
+      au < released ; 1998 ; Theatre Topics Volume 8 ; 8 >
+      au < released ; 1999 ; Theatre Topics Volume 9 ; 9 >
+      au < released ; 2000 ; Theatre Topics Volume 10 ; 10 >
+      au < released ; 2001 ; Theatre Topics Volume 11 ; 11 >
+      au < released ; 2002 ; Theatre Topics Volume 12 ; 12 >
+      au < released ; 2003 ; Theatre Topics Volume 13 ; 13 >
+      au < released ; 2004 ; Theatre Topics Volume 14 ; 14 >
+      au < released ; 2005 ; Theatre Topics Volume 15 ; 15 >
+      au < released ; 2006 ; Theatre Topics Volume 16 ; 16 >
+      au < released ; 2007 ; Theatre Topics Volume 17 ; 17 >
+      au < released ; 2008 ; Theatre Topics Volume 18 ; 18 >
+      au < released ; 2009 ; Theatre Topics Volume 19 ; 19 >
+      au < released ; 2010 ; Theatre Topics Volume 20 ; 20 >
+      au < released ; 2011 ; Theatre Topics Volume 21 ; 21 >
+      au < released ; 2012 ; Theatre Topics Volume 22 ; 22 >
+      au < released ; 2013 ; Theatre Topics Volume 23 ; 23 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Theatre Topics Volume 24 ; 24 >
+      au < manifest ; 2015 ; Theatre Topics Volume 25 ; 25 >
+
+    }
+
 
   }
 
@@ -2912,24 +3486,38 @@
     param[journal_dir] = theory_and_event
     attr[journal_id] = tae
 
-    au < released ; 1997 ; Theory & Event Volume 1 ; 1 >
-    au < released ; 1998 ; Theory & Event Volume 2 ; 2 >
-    au < released ; 1999 ; Theory & Event Volume 3 ; 3 >
-    au < released ; 2000 ; Theory & Event Volume 4 ; 4 >
-    au < released ; 2001 ; Theory & Event Volume 5 ; 5 >
-    au < released ; 2002 ; Theory & Event Volume 6 ; 6 >
-    au < released ; 2003-2005 ; Theory & Event Volume 7 ; 7 >
-    au < released ; 2005 ; Theory & Event Volume 8 ; 8 >
-    au < released ; 2006 ; Theory & Event Volume 9 ; 9 >
-    au < released ; 2007 ; Theory & Event Volume 10 ; 10 >
-    au < released ; 2008 ; Theory & Event Volume 11 ; 11 >
-    au < released ; 2009 ; Theory & Event Volume 12 ; 12 >
-    au < released ; 2010 ; Theory & Event Volume 13 ; 13 >
-    au < released ; 2011 ; Theory & Event Volume 14 ; 14 >
-    au < released ; 2012 ; Theory & Event Volume 15 ; 15 >
-    au < released ; 2013 ; Theory & Event Volume 16 ; 16 >
-    au < manifest ; 2014 ; Theory & Event Volume 17 ; 17 >
-    au < manifest ; 2015 ; Theory & Event Volume 18 ; 18 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1997 ; Theory & Event Volume 1 ; 1 >
+      au < released ; 1998 ; Theory & Event Volume 2 ; 2 >
+      au < released ; 1999 ; Theory & Event Volume 3 ; 3 >
+      au < released ; 2000 ; Theory & Event Volume 4 ; 4 >
+      au < released ; 2001 ; Theory & Event Volume 5 ; 5 >
+      au < released ; 2002 ; Theory & Event Volume 6 ; 6 >
+      au < released ; 2003-2005 ; Theory & Event Volume 7 ; 7 >
+      au < released ; 2005 ; Theory & Event Volume 8 ; 8 >
+      au < released ; 2006 ; Theory & Event Volume 9 ; 9 >
+      au < released ; 2007 ; Theory & Event Volume 10 ; 10 >
+      au < released ; 2008 ; Theory & Event Volume 11 ; 11 >
+      au < released ; 2009 ; Theory & Event Volume 12 ; 12 >
+      au < released ; 2010 ; Theory & Event Volume 13 ; 13 >
+      au < released ; 2011 ; Theory & Event Volume 14 ; 14 >
+      au < released ; 2012 ; Theory & Event Volume 15 ; 15 >
+      au < released ; 2013 ; Theory & Event Volume 16 ; 16 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Theory & Event Volume 17 ; 17 >
+      au < manifest ; 2015 ; Theory & Event Volume 18 ; 18 >
+
+    }
+
 
   }
 
@@ -2944,22 +3532,36 @@
     param[journal_dir] = transactions_of_the_american_philological_association
     attr[journal_id] = apa
 
-    au < released ; 2000 ; Transactions of the American Philological Association Volume 130 ; 130 >
-    au < released ; 2001 ; Transactions of the American Philological Association Volume 131 ; 131 >
-    au < released ; 2002 ; Transactions of the American Philological Association Volume 132 ; 132 >
-    au < released ; 2003 ; Transactions of the American Philological Association Volume 133 ; 133 >
-    au < released ; 2004 ; Transactions of the American Philological Association Volume 134 ; 134 >
-    au < released ; 2005 ; Transactions of the American Philological Association Volume 135 ; 135 >
-    au < released ; 2006 ; Transactions of the American Philological Association Volume 136 ; 136 >
-    au < released ; 2007 ; Transactions of the American Philological Association Volume 137 ; 137 >
-    au < released ; 2008 ; Transactions of the American Philological Association Volume 138 ; 138 >
-    au < released ; 2009 ; Transactions of the American Philological Association Volume 139 ; 139 >
-    au < released ; 2010 ; Transactions of the American Philological Association Volume 140 ; 140 >
-    au < released ; 2011 ; Transactions of the American Philological Association Volume 141 ; 141 >
-    au < released ; 2012 ; Transactions of the American Philological Association Volume 142 ; 142 >
-    au < released ; 2013 ; Transactions of the American Philological Association Volume 143 ; 143 >
-    au < manifest ; 2014 ; Transactions of the American Philological Association Volume 144 ; 144 >
-    au < manifest ; 2015 ; Transactions of the American Philological Association Volume 145 ; 145 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2000 ; Transactions of the American Philological Association Volume 130 ; 130 >
+      au < released ; 2001 ; Transactions of the American Philological Association Volume 131 ; 131 >
+      au < released ; 2002 ; Transactions of the American Philological Association Volume 132 ; 132 >
+      au < released ; 2003 ; Transactions of the American Philological Association Volume 133 ; 133 >
+      au < released ; 2004 ; Transactions of the American Philological Association Volume 134 ; 134 >
+      au < released ; 2005 ; Transactions of the American Philological Association Volume 135 ; 135 >
+      au < released ; 2006 ; Transactions of the American Philological Association Volume 136 ; 136 >
+      au < released ; 2007 ; Transactions of the American Philological Association Volume 137 ; 137 >
+      au < released ; 2008 ; Transactions of the American Philological Association Volume 138 ; 138 >
+      au < released ; 2009 ; Transactions of the American Philological Association Volume 139 ; 139 >
+      au < released ; 2010 ; Transactions of the American Philological Association Volume 140 ; 140 >
+      au < released ; 2011 ; Transactions of the American Philological Association Volume 141 ; 141 >
+      au < released ; 2012 ; Transactions of the American Philological Association Volume 142 ; 142 >
+      au < released ; 2013 ; Transactions of the American Philological Association Volume 143 ; 143 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Transactions of the American Philological Association Volume 144 ; 144 >
+      au < manifest ; 2015 ; Transactions of the American Philological Association Volume 145 ; 145 >
+
+    }
+
 
   }
   
@@ -2974,17 +3576,31 @@
     param[journal_dir] = victorian_periodicals_review
     attr[journal_id] = vpr
 
-    au < released ; 2005 ; Victorian Periodicals Review Volume 38 ; 38 >
-    au < released ; 2006 ; Victorian Periodicals Review Volume 39 ; 39 >
-    au < released ; 2007 ; Victorian Periodicals Review Volume 40 ; 40 >
-    au < released ; 2008 ; Victorian Periodicals Review Volume 41 ; 41 >
-    au < released ; 2009 ; Victorian Periodicals Review Volume 42 ; 42 >
-    au < released ; 2010 ; Victorian Periodicals Review Volume 43 ; 43 >
-    au < released ; 2011 ; Victorian Periodicals Review Volume 44 ; 44 >
-    au < released ; 2012 ; Victorian Periodicals Review Volume 45 ; 45 >
-    au < released ; 2013 ; Victorian Periodicals Review Volume 46 ; 46 >
-    au < manifest ; 2014 ; Victorian Periodicals Review Volume 47 ; 47 >
-    au < manifest ; 2015 ; Victorian Periodicals Review Volume 48 ; 48 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2005 ; Victorian Periodicals Review Volume 38 ; 38 >
+      au < released ; 2006 ; Victorian Periodicals Review Volume 39 ; 39 >
+      au < released ; 2007 ; Victorian Periodicals Review Volume 40 ; 40 >
+      au < released ; 2008 ; Victorian Periodicals Review Volume 41 ; 41 >
+      au < released ; 2009 ; Victorian Periodicals Review Volume 42 ; 42 >
+      au < released ; 2010 ; Victorian Periodicals Review Volume 43 ; 43 >
+      au < released ; 2011 ; Victorian Periodicals Review Volume 44 ; 44 >
+      au < released ; 2012 ; Victorian Periodicals Review Volume 45 ; 45 >
+      au < released ; 2013 ; Victorian Periodicals Review Volume 46 ; 46 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Victorian Periodicals Review Volume 47 ; 47 >
+      au < manifest ; 2015 ; Victorian Periodicals Review Volume 48 ; 48 >
+
+    }
+
 
   }
   
@@ -2999,11 +3615,25 @@
     param[journal_dir] = wallace_stevens_journal
     attr[journal_id] = wsj
 
-    au < released ; 2011 ; Wallace Stevens Journal Volume 35 ; 35 >
-    au < released ; 2012 ; Wallace Stevens Journal Volume 36 ; 36 >
-    au < released ; 2013 ; Wallace Stevens Journal Volume 37 ; 37 >
-    au < manifest ; 2014 ; Wallace Stevens Journal Volume 38 ; 38 >
-    au < manifest ; 2015 ; Wallace Stevens Journal Volume 39 ; 39 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 2011 ; Wallace Stevens Journal Volume 35 ; 35 >
+      au < released ; 2012 ; Wallace Stevens Journal Volume 36 ; 36 >
+      au < released ; 2013 ; Wallace Stevens Journal Volume 37 ; 37 >
+
+    }
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; Wallace Stevens Journal Volume 38 ; 38 >
+      au < manifest ; 2015 ; Wallace Stevens Journal Volume 39 ; 39 >
+
+    }
+
 
   }  
   
@@ -3019,10 +3649,17 @@
     attr[journal_id] = wan
     comment[0] = no issue after 1999
 
-    au < released ; 1996 ; Wide Angle Volume 18 ; 18 >
-    au < released ; 1997 ; Wide Angle Volume 19 ; 19 >
-    au < released ; 1998 ; Wide Angle Volume 20 ; 20 >
-    au < released ; 1999 ; Wide Angle Volume 21 ; 21 >
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
+      au < released ; 1996 ; Wide Angle Volume 18 ; 18 >
+      au < released ; 1997 ; Wide Angle Volume 19 ; 19 >
+      au < released ; 1998 ; Wide Angle Volume 20 ; 20 >
+      au < released ; 1999 ; Wide Angle Volume 21 ; 21 >
+
+    }
+
 
   }
 
