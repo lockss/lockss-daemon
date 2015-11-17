@@ -6,9 +6,9 @@
   
   comment[moving] = from MetaPress to Atypon, Allen Press
   
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.atypon.allenpress.AllenPressJournalsPlugin
   param[base_url] = http://familiesinsocietyjournal.org/
-  implicit < status ; year ; name ; param[volume_name] >  
+  implicit < status ; year ; name ; param[volume_name] >
   
   {
 
@@ -37,7 +37,8 @@
     au < exists ; 2011 ; Families in Society: The Journal of Contemporary Social Services Volume 92 ; 92 >
     au < exists ; 2012 ; Families in Society: The Journal of Contemporary Social Services Volume 93 ; 93 >
     au < exists ; 2013 ; Families in Society: The Journal of Contemporary Social Services Volume 94 ; 94 >
-    au < expected ; 2014 ; Families in Society: The Journal of Contemporary Social Services Volume 95 ; 95 >
+    au < exists ; 2014 ; Families in Society: The Journal of Contemporary Social Services Volume 95 ; 95 >
+    au < exists ; 2015 ; Families in Society: The Journal of Contemporary Social Services Volume 96 ; 96 >
    
   }
   
