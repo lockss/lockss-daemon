@@ -55,6 +55,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
   static final String JID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   static final String ROOT_URL = "http://www.BaseAtypon.com/"; //this is not a real url
+  static final String ROOT_HOST = "www.BaseAtypon.com"; //this is not a real url
 
   private static final Logger log = Logger.getLogger(TestBaseAtyponArchivalUnit.class);
 
@@ -114,6 +115,11 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     // images (etc.) but not as query arguments
     shouldCacheTest(ROOT_URL+"foo/bar/baz/qux.js", true, ABAu, cus);
     shouldCacheTest(ROOT_URL+"foo/bar/baz?url=qux.js", false, ABAu, cus);
+    // Taylor & Francis' use of fastly.net revealed missing slash in boilerplate rule
+    shouldCacheTest("http://" + ROOT_HOST + "/foo/bar/baz/qux.js", true, ABAu, cus);
+    shouldCacheTest("https://" + ROOT_HOST + "/foo/bar/baz/qux.js", true, ABAu, cus);
+    shouldCacheTest("http://" + ROOT_HOST + ".global.prod.fastly.net/foo/bar/baz/qux.js", false, ABAu, cus);
+    shouldCacheTest("https://" + ROOT_HOST + ".global.prod.fastly.net/foo/bar/baz/qux.js", false, ABAu, cus);
     // toc page for an issue
     shouldCacheTest(ROOT_URL+"toc/xxxx/123/5", true, ABAu, cus);
     // special issue
