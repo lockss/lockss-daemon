@@ -45,7 +45,7 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < ready ; 2014 ; The American Indian Quarterly Volume 38 ; 38 >
-      au < testing ; 2015 ; The American Indian Quarterly Volume 39 ; 39 >
+      au < ready ; 2015 ; The American Indian Quarterly Volume 39 ; 39 >
 
     }
 
@@ -103,11 +103,9 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; Anthropological Linguistics Volume 56 ; 56 >
-      au < expected ; 2015 ; Anthropological Linguistics Volume 57 ; 57 >
+      au < ready ; 2014 ; Anthropological Linguistics Volume 56 ; 56 >
 
     }
-
 
   }
 
@@ -140,8 +138,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014-2015 ; Collaborative Anthropologies Volume 7 ; 7 >
-      au < expected ; 2015 ; Collaborative Anthropologies Volume 8 ; 8 >
+      au < ready ; 2014-2015 ; Collaborative Anthropologies Volume 7 ; 7 >
 
     }
 
@@ -252,8 +249,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2015 ; Gettysburg Magazine Volume 52 ; 52 >
-      au < testing ; 2015 ; Gettysburg Magazine Volume 53 ; 53 >
+      au < ready ; 2015 ; Gettysburg Magazine Volume 52 ; 52 >
+      au < ready ; 2015 ; Gettysburg Magazine Volume 53 ; 53 >
 
     }
 
@@ -299,7 +296,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; Great Plains Research Volume 24 ; 24 >
+      au < ready ; 2014 ; Great Plains Research Volume 24 ; 24 >
       au < ready ; 2015 ; Great Plains Research Volume 25 ; 25 >
 
     }
