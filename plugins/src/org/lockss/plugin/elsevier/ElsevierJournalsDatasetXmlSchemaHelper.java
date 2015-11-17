@@ -47,28 +47,14 @@ import org.apache.commons.lang.StringUtils;
 import java.util.*;
 
 /**
- *  Elsevier DTD5 Metadata Extractor
- *  This is a little more complicated than other Clockss Source XML based plugins
- *  1. The deliveries are broken in to chunks. 
- *       CLKS000003A.tar, CLKS000003B.tar... combine to make directory CLKS000003/
- *       but we do not unpack the individual tars so we must figure out which tar
- *       contents live in
- *  2.  The A tarball, which contains a "dataset.xml" file describing
- *       all the contents for related tarballs as well as much of their metadata.
- *       This schema is used to parse the dataset.xml
- *  3. We need to open each article level "main.xml" file to get the article title and author information.
- *       The schema for that is ElsevierMainDTD5XmlSchemaHelper.
- *       
- *   The approach will be thus
- *       - use the dataset.xml to get the easy-to-get metadata for the delivery
- *       - use the article level main.xml files to get the rest of the metadata
- *       - use a custom data object attached to the ArticleFiles object to store data
- *       - use a custom emitter to bring together the two portions of the metadata for one article
+ *  Elsevier DTD5 Metadata Extractor JOURNAL DATASET SCHEMA
+ *  This is one of four related schema helpers to handle the extraction for Elsevier file-transfer content.
+ *  This is the schema definition the dataset.xml file for journals and book-series
  *  @author alexohlson
  */
-public class ElsevierDatasetXmlSchemaHelper
+public class ElsevierJournalsDatasetXmlSchemaHelper
 implements SourceXmlSchemaHelper {
-  static Logger log = Logger.getLogger(ElsevierDatasetXmlSchemaHelper.class);
+  static Logger log = Logger.getLogger(ElsevierJournalsDatasetXmlSchemaHelper.class);
 
   /*
    * XPATH DEFINITIONS WE CARE ABOUT
@@ -85,11 +71,14 @@ implements SourceXmlSchemaHelper {
   private static final String dataset_article_issn = "journal-item-unique-ids/jid-aid/issn";
   private static final String dataset_article_jid = "journal-item-unique-ids/jid-aid/jid";
   private static final String dataset_article_date = "journal-item-properties/online-publication-date";
-  public static final String dataset_article_metadata = "files-info/ml/pathname";
+  // get the journal title from the closest preceding journal-info node
+  private static final String dataset_journal_title = "preceding-sibling::journal-issue[1]/journal-issue-properties/collection-title";
+  // this will be there if part of a book series (which looks like a journal)
+  private static final String dataset_series_isbn = "preceding-sibling::journal-issue[1]/journal-issue-properties/isbn";
+  // these ones are the same for both JOURNALS and BOOKS so make them public      
+  public static final String dataset_metadata = "files-info/ml/pathname";
   public static final String dataset_dtd_metadata = "files-info/ml/dtd-version";
-  private static final String dataset_article_pdf = "files-info/web-pdf/pathname";
-  // get the journal title from the closest preceeding journal-info node
-  private static final String dataset_journal_title = "preceding-sibling::journal-issue[1]";
+  public static final String dataset_pdf = "files-info/web-pdf/pathname";
 
   /* 
    * Date values look like this: 2014-09-22T00:54:27Z
@@ -137,6 +126,7 @@ implements SourceXmlSchemaHelper {
       return null;
     }
   };
+  
 
   /* 1.  MAP associating xpath with value type with evaluator */
   static private final Map<String,XPathValue> articleMap = 
@@ -146,10 +136,12 @@ implements SourceXmlSchemaHelper {
     articleMap.put(dataset_article_issn, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(dataset_article_jid, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(dataset_article_date, DATE_VALUE);
-    articleMap.put(dataset_article_metadata, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(dataset_metadata, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(dataset_dtd_metadata, XmlDomMetadataExtractor.TEXT_VALUE);
-    articleMap.put(dataset_article_pdf, XmlDomMetadataExtractor.TEXT_VALUE);
-    articleMap.put(dataset_journal_title, JOURNAL_ISSUE_TITLE_VALUE);
+    articleMap.put(dataset_pdf, XmlDomMetadataExtractor.TEXT_VALUE);
+    //articleMap.put(dataset_journal_title, JOURNAL_ISSUE_TITLE_VALUE);
+    articleMap.put(dataset_journal_title, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(dataset_series_isbn, XmlDomMetadataExtractor.TEXT_VALUE);
   }
 
   /* 2. Each item for this initial metadata starts at "journal-item" */
@@ -167,6 +159,7 @@ implements SourceXmlSchemaHelper {
     cookMap.put(dataset_article_doi, MetadataField.FIELD_DOI);
     cookMap.put(dataset_article_issn, MetadataField.FIELD_ISSN);
     cookMap.put(dataset_journal_title, MetadataField.FIELD_PUBLICATION_TITLE);
+    cookMap.put(dataset_series_isbn, MetadataField.FIELD_ISBN);
     cookMap.put(dataset_article_date, MetadataField.FIELD_DATE);
   }
 
@@ -225,7 +218,7 @@ implements SourceXmlSchemaHelper {
    */
   @Override
   public String getFilenameXPathKey() {
-    return dataset_article_metadata;
+    return dataset_metadata;
   }
 
 }

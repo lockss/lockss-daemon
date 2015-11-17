@@ -41,6 +41,29 @@ import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
+/*
+ *  * The url structure is like this:
+ * 
+ * JOURNALS & BOOKS & BOOK-SERIES
+ * The deliveries are broken in to chunks. 
+ * CLKS000003A.tar, CLKS000003B.tar... combine to make directory CLKS000003/
+ * but we do not unpack the individual tars so we must find the needed XML files
+ * across the set of tar files.
+ * 
+ * JOURNALS & BOOK-SERIES
+ * individual journal article main.xml files live in each of the fooX.tar files at issn/volume-issue/article level directories
+ * fooA.tar!/foo/00121606/v395i2/S0012160614004424/main.xml
+ *     which is issn, vol-issue, article-number
+ *     
+ * BOOKS
+ * individual book chapter main.xml files live in each of the fooX.tar files at isbn/TYPE/doi2 level directories
+ * fooA.tar!/foo/9780444593788/BODY/B9780444593788000013/main.xml
+ *     which is isbn, item-type, chapter-id      
+ * 
+ *  but books ALSO have a main.xml that sits at the isbn level, eg
+ *  fooA.tar!/foo/9780444593788/main.xml
+ *  this one does not have corresponding PDF content nor a DOI and we won't be emitting anything for this...ignore it
+ */
 public class ElsevierDTD5XmlSourceArticleIteratorFactory
 implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 

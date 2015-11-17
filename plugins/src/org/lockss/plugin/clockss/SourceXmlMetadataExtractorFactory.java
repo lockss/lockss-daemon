@@ -269,8 +269,8 @@ implements FileMetadataExtractorFactory {
     
     // This version allows for decisions between schemas based on information
     // somewhere within the xml doc. 
-    // They can simply disregard the argument if there is only one schema
     // See ElsevierDTD5SourceXmlMetadataExtractor as an example.
+    // They can simply disregard the argument if there is only one schema
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu, Document doc) {
       return setUpSchema(cu);
     }

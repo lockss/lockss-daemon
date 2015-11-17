@@ -51,12 +51,22 @@ import org.lockss.util.Logger;
  * This ArticleMetadata extractor creates a custom emitter which allows deferring the emit
  * of individual ArticleMetadat objects. It collects up the AM objects in a structure that is 
  * stored on the ArticleFiles object until the stored AM object is determined to be 'complete'
- *  
+ * 
+ * We do this because the metadata for an Elsevier item is delivered in two different files.
+ * We first iterate over a dataset.xml file and create objects for the items defined
+ * Then we get to an item-level main.xml file and fill in the remaining information and check
+ * for the existence of the actual PDF of the item content.
+ * 
+ * We emit once we have complete information about an item and know we have its content
+ * 
  */
 public class ElsevierDeferredArticleMetadataExtractor extends BaseArticleMetadataExtractor{
   private static final String DATASET_FILENAME = "dataset.xml"; 
+
+  // dataset.xml in the first diretory after the tar OR
+  // main.xml in the in the fourth directory after the tar (tarnum/(isnb|issn)/(vol|type)/itemnum/main.xml
   final static Pattern XML_LOCATION_PATTERN = 
-      Pattern.compile("(.*/)[^/]+([A-Z])\\.tar!/([^/]+)/(dataset\\.xml|.*/main\\.xml)$", 
+      Pattern.compile("(.*/)[^/]+([A-Z])\\.tar!/([^/]+)/(dataset\\.xml|([^/]+)/([^/]+)/([^/]+)/main\\.xml)$", 
           Pattern.CASE_INSENSITIVE);
 
   private static final Logger log = Logger.getLogger(ElsevierDeferredArticleMetadataExtractor.class);
@@ -104,13 +114,13 @@ public class ElsevierDeferredArticleMetadataExtractor extends BaseArticleMetadat
     /*
      * emitMetadata is called once for each ArticleMetadata that is deemed 
      * ready to emit
-     * by the FILE level metadata extarctor. 
+     * by the ITEM level metadata extractor. 
      * We are either receiving an AM object filled in from parsing a 
      * dataset.xml file which 
      * contains much of the metadata for every article in the tar set or
      * an AM object filled in by parsing a main.xml file which contains the 
-     * article-specific 
-     * metadata associated with just the one article 
+     * item-specific 
+     * metadata associated with just the one item (article or chapter or book-series book) 
      * (article title, doi, author) 
      *
      * If we've never seen any metadata associated with the path to the 
@@ -118,23 +128,26 @@ public class ElsevierDeferredArticleMetadataExtractor extends BaseArticleMetadat
      * using the path to its "main.xml" as its key.
      * If the main.xml path already lives in the map, then we know we already 
      * saw the other half of this
-     * article's data and we add the info together and emit.
+     * item's data and we add the info together and emit.
      *
      */
     public void emitMetadata(CachedUrl cu, ArticleMetadata am) {
-  
       Matcher mat = XML_LOCATION_PATTERN.matcher(cu.getUrl());
       if (!(mat.matches())) {
         log.debug3("this url shouldn't have been in an AF metadata role");
         return;
       }
 
-      // (.*/)[^/]+([A-Z])\\.tar!/([^/]+)/(dataset\\.xml|.*/main\\.xml)$
+      // (.*/)[^/]+([A-Z])\\.tar!/([^/]+)/(dataset\\.xml|([^/]+)/([^/]+)/([^/]+)/main\\.xml)$
       // CLKS0000000000003A.tar!/CLKS0000000000003/dataset.xml
+      // journal article
       // CLKS0000000000003C.tar!/CLKS0000000000003/21735794/v89i9/S2173579414001674/main.xml
+      //chapter
+      // CLKSB000000000002D.tar!/CLKSB000000000002/9780080965321/FRONT/B9780080965321010566/main.xml
+
       String tar_letter = mat.group(2); //which letter of the tar set
       String tar_number = mat.group(3); //number of top directory in tar
-      String xml_path = mat.group(4); // path + xml filename
+      String xml_path = mat.group(4); // path below top directory + xml filename
 
       // The static class that holds the map of already stored AM objects lives on the AF
       ArticleMetadataDataClass deferInfoClass = ((ElsevierStoredDataArticleFiles)(af)).getDataClass();
@@ -143,7 +156,8 @@ public class ElsevierDeferredArticleMetadataExtractor extends BaseArticleMetadat
       log.debug3("sharedMap size: " + sharedMap.size());
       // dataset.xml always lives at the top level so path = filename by itself
       if (DATASET_FILENAME.equals(xml_path)) {
-        String main_xml_key = tar_number + "/" + am.getRaw(ElsevierDatasetXmlSchemaHelper.dataset_article_metadata);
+        //the dataset_metadata xpath is the same for both schema
+        String main_xml_key = tar_number + "/" + am.getRaw(ElsevierJournalsDatasetXmlSchemaHelper.dataset_metadata);
         log.debug3("emitMetadata: an AM object from dataset.xml - " + tar_number);
         ArticleMetadata mainAM = sharedMap.remove(main_xml_key);
         if (mainAM == null) {
@@ -152,6 +166,7 @@ public class ElsevierDeferredArticleMetadataExtractor extends BaseArticleMetadat
           sharedMap.put(main_xml_key, am);
           return; // continue on until we get the rest of its data
         } 
+        
         // we already had the other half of this article data, consolidate and emit
         log.debug3("record was already here - do a merge and emit");
         mergeAMData(am, mainAM);
@@ -182,32 +197,71 @@ public class ElsevierDeferredArticleMetadataExtractor extends BaseArticleMetadat
 
   /*
    *  merge FROM datasetMD TO articleMD
-   *    articleMD (from main.xml) has 
+   *  
+   *  
+   *  Journals/Book-Series  articleMD (from main.xml) has 
    *       FIELD_AUTHOR, FIELD_ARTICLE_TITLE, FIELD_ACCESS_URL
    *    from datasetMD (from dataset.xml) get
-   *       FIELD_DOI, FIELD_ISSN, FIELD_PUBLICATION_TITLE, FIELD_DATE
+   *       FIELD_DOI, FIELD_ISSN, FIELD_PUBLICATION_TITLE, FIELD_DATE, FIELD_ISBN (if book series)
    *    fallbacks to pick up from raw
    *       if FIELD_DATE is null, use raw "common_copyright" if available
    *       if FIELD_DOI is null, use raw "common_doi" if available
    *       if ARTICLE_TITLE is null, use "common_dochead" if available
+   *       
+   *  Books articleMD (from main.xml) has
+   *      FIELD_ISBN, FIELD_ISSN? (if series), FIELD_ARTICLE_TITLE, FIELD_AUTHOR, FIELD_ACCESS_URL
+   *    from datasetMD (from dataset.xml) get
+   *      FIELD_DOI, FIELD_PUBLICATION_TITLE, FIELD_DATE
+   *    fallbacks to pick up from raw       
+   *       if FIELD_DATE is null, use raw "common_copyright" if available
+   *       if FIELD_DOI is null, use raw "common_doi" if available
+   *       
+   *  ALSO - because this is a little complicated, this will also explicitly set the
+   *  PUBLICATION_TYPE and ARTICLE_TYPE based on the metadata.       
    */
   private static void mergeAMData(ArticleMetadata datasetMD, ArticleMetadata articleMD) {
     // using putIfBetter avoids copying over a null value, which otherwise fills field
     articleMD.putIfBetter(MetadataField.FIELD_DOI, datasetMD.get(MetadataField.FIELD_DOI));
-    articleMD.putIfBetter(MetadataField.FIELD_ISSN, datasetMD.get(MetadataField.FIELD_ISSN));
     articleMD.putIfBetter(MetadataField.FIELD_PUBLICATION_TITLE, datasetMD.get(MetadataField.FIELD_PUBLICATION_TITLE));
     articleMD.putIfBetter(MetadataField.FIELD_DATE, datasetMD.get(MetadataField.FIELD_DATE));
+    //books will not have this, but it won't hurt to do the call anyway to handle journals
+    articleMD.putIfBetter(MetadataField.FIELD_ISSN, datasetMD.get(MetadataField.FIELD_ISSN));
     // copy over any raw values from datasetMD to this one
     for (String key : datasetMD.rawKeySet()) {
       articleMD.putRaw(key, datasetMD.getRaw(key));
     }
+    
     // logic for getting fall-back values - we don't add from TDB in our emitter
     articleMD.putIfBetter(MetadataField.FIELD_PUBLISHER, "Elsevier");
     articleMD.putIfBetter(MetadataField.FIELD_PROVIDER, "Elsevier");
-    articleMD.putIfBetter(MetadataField.FIELD_DATE, articleMD.getRaw(ElsevierMainDTD5XmlSchemaHelper.common_copyright));
-    articleMD.putIfBetter(MetadataField.FIELD_DOI,articleMD.getRaw(ElsevierMainDTD5XmlSchemaHelper.common_doi));
-    //docheading, such as "Book Review" or "Index" or "Research Article"
-    articleMD.putIfBetter(MetadataField.FIELD_ARTICLE_TITLE, articleMD.getRaw(ElsevierMainDTD5XmlSchemaHelper.common_dochead));
+    // This section has to fork because dataset schema is different for books and journals
+    String dtd = datasetMD.getRaw(ElsevierJournalsDatasetXmlSchemaHelper.dataset_dtd_metadata);
+    if ((dtd != null) && dtd.startsWith("BOOK")) {
+      // BOOK CHAPTER
+      articleMD.putIfBetter(MetadataField.FIELD_DATE, articleMD.getRaw(ElsevierBooksMainDTD5XmlSchemaHelper.common_copyright));
+      articleMD.putIfBetter(MetadataField.FIELD_DOI,articleMD.getRaw(ElsevierBooksMainDTD5XmlSchemaHelper.common_doi));
+      // for now we only have the xpath to support chapters, which is what they are giving us
+      articleMD.put(MetadataField.FIELD_ARTICLE_TYPE,  MetadataField.ARTICLE_TYPE_BOOKCHAPTER);
+      articleMD.put(MetadataField.FIELD_PUBLICATION_TYPE,  MetadataField.PUBLICATION_TYPE_BOOK);
+    } else {
+      // JOURNAL or BOOK-SERIES
+      articleMD.putIfBetter(MetadataField.FIELD_DATE, articleMD.getRaw(ElsevierJournalsMainDTD5XmlSchemaHelper.common_copyright));
+      articleMD.putIfBetter(MetadataField.FIELD_DOI,articleMD.getRaw(ElsevierJournalsMainDTD5XmlSchemaHelper.common_doi));
+      //docheading, such as "Book Review" or "Index" or "Research Article"
+      articleMD.putIfBetter(MetadataField.FIELD_ARTICLE_TITLE, articleMD.getRaw(ElsevierJournalsMainDTD5XmlSchemaHelper.common_dochead));
+      // if the dataset had an ISBN then we know we're part of a book series
+      String isbn;
+      if ((isbn = datasetMD.get(MetadataField.FIELD_ISBN))!= null) {
+        // BOOK SERIES because it has an isbn
+        articleMD.putIfBetter(MetadataField.FIELD_ISBN, isbn);
+        articleMD.put(MetadataField.FIELD_ARTICLE_TYPE,  MetadataField.ARTICLE_TYPE_BOOKCHAPTER);
+        articleMD.put(MetadataField.FIELD_PUBLICATION_TYPE,  MetadataField.PUBLICATION_TYPE_BOOKSERIES);
+        articleMD.put(MetadataField.FIELD_SERIES_TITLE, datasetMD.get(MetadataField.FIELD_PUBLICATION_TITLE));
+      } else {
+        articleMD.put(MetadataField.FIELD_ARTICLE_TYPE,  MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
+        articleMD.put(MetadataField.FIELD_PUBLICATION_TYPE,  MetadataField.PUBLICATION_TYPE_JOURNAL);
+      }
+    }
   }
 
 

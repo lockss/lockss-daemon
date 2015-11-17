@@ -44,10 +44,15 @@ import org.w3c.dom.NodeList;
 
 import java.util.*;
 
-
-public class ElsevierMainDTD5XmlSchemaHelper
+/**
+ *  Elsevier DTD5 Metadata Extractor BOOKS MAIN SCHEMA
+ *  This is one of four related schema helpers to handle the extraction for Elsevier file-transfer content.
+ *  This is the schema definition the item-level main.xml file for book chapters
+ *  @author alexohlson
+ */
+public class ElsevierBooksMainDTD5XmlSchemaHelper
 implements SourceXmlSchemaHelper {
-  private static final Logger log = Logger.getLogger(ElsevierMainDTD5XmlSchemaHelper.class);
+  private static final Logger log = Logger.getLogger(ElsevierBooksMainDTD5XmlSchemaHelper.class);
 
   static final String AUTHOR_SEPARATOR = ",";
   static final String AUTHOR_SPLIT_CHAR = ";";
@@ -62,21 +67,21 @@ implements SourceXmlSchemaHelper {
    *  the remaining metadata from the article metadata file 
    */
 
-  private static final String top_node = "(/article | /simple-article | /converted-article | /exam | /book-review)";
+  private static final String top_node = 
+      "(/chapter | /simple-chapter | /fb-non-chapter | /introduction | /index | /glossary | /bibliography | /index | /examination)";
   
-  // relative to the top_node, these two nodes are siblings and contain all the info we need
-  private static final String top_head = "(head | simple-head | book-review-head)";
-  private static final String top_info = "item-info";
+  // info sits right at the top node
+  private static final String top_info = "info";
 
-
+  // these sit under info
   static public final String common_doi = top_info + "/doi";
+  static public final String common_isbn = top_info + "/isbn"; // should match that in the dataset
+  static public final String common_issn = top_info + "/issn"; // if this is part of a series
   static public final String common_copyright = top_info + "/copyright/@year";
   
-  static public final String common_title = top_head + "/title";
-  static public final String common_author_group = top_head + "/author-group";
-  static public final String common_dochead = top_head + "/dochead/textfn";
-  
-  
+  // these sit just under the top node
+  static public final String common_title = "title";
+  static public final String common_author_group = "author-group";
   
   /* "ce:blah" - the 'ce' portion would not be needed for xpath as it just 
    * defines a namespace. But since these are used for direct comparison within
@@ -186,9 +191,9 @@ implements SourceXmlSchemaHelper {
         if  (surName != null) {
           valbuilder.append(surName);
           if (givenName != null) {
-            valbuilder.append(ElsevierMainDTD5XmlSchemaHelper.AUTHOR_SEPARATOR +  " " + givenName);
+            valbuilder.append(ElsevierBooksMainDTD5XmlSchemaHelper.AUTHOR_SEPARATOR +  " " + givenName);
           }
-          valbuilder.append(ElsevierMainDTD5XmlSchemaHelper.AUTHOR_SPLIT_CHAR);
+          valbuilder.append(ElsevierBooksMainDTD5XmlSchemaHelper.AUTHOR_SPLIT_CHAR);
         }
       }
       int vlen;
@@ -205,11 +210,12 @@ implements SourceXmlSchemaHelper {
   static public final Map<String,XPathValue> articleMap = 
       new HashMap<String,XPathValue>();
   {
-    articleMap.put(ElsevierMainDTD5XmlSchemaHelper.common_doi, XmlDomMetadataExtractor.TEXT_VALUE);
-    articleMap.put(ElsevierMainDTD5XmlSchemaHelper.common_title, TITLE_VALUE);
-    articleMap.put(ElsevierMainDTD5XmlSchemaHelper.common_author_group, AUTHOR_VALUE);
-    articleMap.put(ElsevierMainDTD5XmlSchemaHelper.common_dochead, XmlDomMetadataExtractor.TEXT_VALUE);
-    articleMap.put(ElsevierMainDTD5XmlSchemaHelper.common_copyright, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(ElsevierBooksMainDTD5XmlSchemaHelper.common_doi, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(ElsevierBooksMainDTD5XmlSchemaHelper.common_isbn, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(ElsevierBooksMainDTD5XmlSchemaHelper.common_issn, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(ElsevierBooksMainDTD5XmlSchemaHelper.common_title, TITLE_VALUE);
+    articleMap.put(ElsevierBooksMainDTD5XmlSchemaHelper.common_author_group, AUTHOR_VALUE);
+    articleMap.put(ElsevierBooksMainDTD5XmlSchemaHelper.common_copyright, XmlDomMetadataExtractor.TEXT_VALUE);
   }
   
   
@@ -222,6 +228,8 @@ implements SourceXmlSchemaHelper {
   private static final MultiValueMap cookMap = new MultiValueMap();
   static {
     cookMap.put(common_title, MetadataField.FIELD_ARTICLE_TITLE);
+    cookMap.put(common_isbn, MetadataField.FIELD_ISBN);
+    cookMap.put(common_issn, MetadataField.FIELD_ISSN); // part of a series?
     cookMap.put(common_author_group, 
         new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(AUTHOR_SPLIT_CHAR)));
   }
