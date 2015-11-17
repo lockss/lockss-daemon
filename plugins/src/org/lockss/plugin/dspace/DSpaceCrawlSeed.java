@@ -25,10 +25,10 @@ import com.lyncode.xoai.services.api.MetadataSearch;
 
 
 public class DSpaceCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
-  public String DEFAULT_DATE_TAG = "dc.date.issued.none";
+  public String DEFAULT_DATE_TAG = "dc.date";
   protected Collection<String> startUrls;
   protected int year;
-  protected Pattern yearPattern = Pattern.compile("([0-9]{4})");
+  protected Pattern yearPattern = Pattern.compile("^([0-9]{4})$");
   
 
   public DSpaceCrawlSeed(CrawlerFacade cf) {
@@ -64,10 +64,10 @@ public class DSpaceCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
       try {
         year = Integer.parseInt(rule);
       } catch(NumberFormatException ex) {
-        throw new ConfigurationException("Must OAI date must be a 4 digit year");
+        throw new ConfigurationException("OAI date must be a 4 digit year");
       }
     } else {
-      throw new ConfigurationException("Must OAI date must be a 4 digit year");
+      throw new ConfigurationException("OAI date must be a 4 digit year");
     }
     
   }

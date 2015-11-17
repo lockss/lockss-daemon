@@ -38,16 +38,30 @@ import java.util.BitSet;
 
 import org.lockss.crawler.CrawlUrlData;
 import org.lockss.daemon.Crawler.CrawlerFacade;
+import org.lockss.daemon.LockssWatchdog;
+import org.lockss.plugin.FetchedUrlData;
 import org.lockss.plugin.UrlCacher;
+import org.lockss.plugin.UrlConsumer;
+import org.lockss.plugin.UrlConsumerFactory;
 import org.lockss.plugin.UrlFetcher;
+import org.lockss.plugin.UrlFetcher.FetchResult;
+import org.lockss.plugin.UrlFetcher.RedirectScheme;
+import org.lockss.plugin.base.PassiveUrlConsumerFactory.PassiveUrlConsumer;
+import org.lockss.util.Deadline;
+import org.lockss.util.IOUtil;
+import org.lockss.util.Logger;
+import org.lockss.util.StringUtil;
+import org.lockss.util.urlconn.CacheException;
 
 import com.lyncode.xoai.serviceprovider.client.OAIClient;
 import com.lyncode.xoai.serviceprovider.exceptions.HttpException;
 import com.lyncode.xoai.serviceprovider.parameters.Parameters;
 
-public class UrlFetcherOaiClient implements OAIClient {
+public class UrlFetcherOaiClient implements OAIClient{
+  private static final Logger log = Logger.getLogger(UrlFetcherOaiClient.class);
   protected CrawlerFacade facade;
   protected String baseUrl;
+  private InputStream content;
 
   public UrlFetcherOaiClient(String baseUrl, CrawlerFacade cf) {
     this.baseUrl = baseUrl;
@@ -56,19 +70,61 @@ public class UrlFetcherOaiClient implements OAIClient {
   
   @Override
   public InputStream execute(Parameters parameters) throws HttpException {
-    UrlFetcher uf = facade.makeUrlFetcher(baseUrl);
+	String url = parameters.toUrl(baseUrl);
+    UrlFetcher uf = facade.makeUrlFetcher(url);
     BitSet permFetchFlags = uf.getFetchFlags();
     permFetchFlags.set(UrlCacher.REFETCH_FLAG);
     uf.setFetchFlags(permFetchFlags);
-    InputStream content;
-    try {
-      content = uf.getUncachedInputStream();
-      if(content == null) {
-        throw new HttpException("UrlFetcher returned null imput stream");
+    
+    facade.getCrawlerStatus().addPendingUrl(url);
+    int retriesLeft = -1;
+    int totalRetries = -1;
+    while (true) {
+        try {
+          content = uf.getUncachedInputStream();
+          if(content == null) {
+        	  throw new HttpException("UrlFetcher returned null for an OAI response");
+          }
+          facade.getCrawlerStatus().removePendingUrl(url);
+          facade.getCrawlerStatus().signalUrlFetched(url);
+          return content;
+        } catch (CacheException e) {
+          if (!e.isAttributeSet(CacheException.ATTRIBUTE_RETRY)) {
+            throw new HttpException(e);
+          }
+          if (retriesLeft < 0) {
+            retriesLeft = facade.getRetryCount(e);
+            totalRetries = retriesLeft;
+          }
+          if (log.isDebug2()) {
+            log.debug("Retryable (" + retriesLeft + ") exception caching "
+  		       + url, e);
+          } else {
+            log.debug("Retryable (" + retriesLeft + ") exception caching "
+  		       + url + ": " + e.toString());
+          }
+          if (--retriesLeft > 0) {
+            long delayTime = facade.getRetryDelay(e);
+            Deadline wait = Deadline.in(delayTime);
+            log.debug3("Waiting " +
+  			StringUtil.timeIntervalToString(delayTime) +
+  			" before retry");
+            while (!wait.expired()) {
+              try {
+                wait.sleep();
+              } catch (InterruptedException ie) {
+                // no action
+              }
+            }
+            uf.reset();
+          } else {
+            log.warning("Failed to cache (" + totalRetries + "), skipping: "
+  			 + url);
+            throw new HttpException(e);
+          }
+        } catch(IOException e) {
+        	throw new HttpException(e);
+        }
       }
-    } catch(IOException e) {
-      throw new HttpException(e);
-    }
-    return content;
   }
 }

@@ -69,7 +69,7 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
   protected Map<String, Pattern> metadataRules;
   public static final String KEY_AU_OAI_FILTER_RULES = "au_oai_filter_rules";
   public static final String KEY_AU_OAI_DATE = "au_oai_date";
-  public static final String DEFAULT_FILTERING_METADATAPREFIX = "xoai";
+  public static final String DEFAULT_FILTERING_METADATAPREFIX = "oai_lockss";
 
   public RecordFilteringOaiPmhCrawlSeed(CrawlerFacade cf) {
     super(cf);
@@ -103,7 +103,7 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
   protected Context buildContext(String url) {
     Context con = super.buildContext(url);
 //    con.withMetadataTransformer("oai_dc", KnownTransformer.OAI_DC);
-//    con.withMetadataTransformer("oai_lockss", KnownTransformer.OAI_DC);
+    con.withMetadataTransformer("oai_lockss", KnownTransformer.OAI_DC);
     return con;
   }
 

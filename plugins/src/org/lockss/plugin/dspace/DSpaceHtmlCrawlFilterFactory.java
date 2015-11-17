@@ -49,6 +49,7 @@ public class DSpaceHtmlCrawlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
+      
       //footer
       HtmlNodeFilters.tagWithAttribute("div", "id", "ds-footer-wrapper"),
       // header
@@ -61,6 +62,11 @@ public class DSpaceHtmlCrawlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "id", "ds-options-wrapper"),
       //link to whole collection
       HtmlNodeFilters.tagWithAttribute("ul", "class", "ds-referenceSet-list"),
+      
+      /*Filters for Brazil DSpace*/
+      // links in metadata to outside au
+      HtmlNodeFilters.tagWithAttribute("td", "class", "metadataFieldValue"),
+      
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
