@@ -34,7 +34,7 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", base_url_host</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
       <string>1,"^%soai", base_url</string>
       <string>1,"^%s(xmlui/)?bitstream", base_url</string>
       <string>1,"^%s(xmlui/)?handle/[0-9]+/[0-9]+$", base_url</string>
@@ -90,5 +90,22 @@
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.dspace.DSpaceHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.dspace.DSpaceArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.dspace.DSpaceArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.dspace.DSpaceHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
 </map>
