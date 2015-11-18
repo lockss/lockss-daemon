@@ -32,10 +32,10 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; new formations: a journal of culture/theory/politics Volume 82 ; 82 >
-        au < manifest ; 2014 ; new formations: a journal of culture/theory/politics Volume 83 ; 83 >
-        au < expected ; 2015 ; new formations: a journal of culture/theory/politics Volume 84 ; 84 >
-        au < expected ; 2015 ; new formations: a journal of culture/theory/politics Volume 85 ; 85 >
+        au < testing ; 2014 ; new formations: a journal of culture/theory/politics Volume 82 ; 82 >
+        au < testing ; 2014 ; new formations: a journal of culture/theory/politics Volume 83 ; 83 >
+        au < testing ; 2015 ; new formations: a journal of culture/theory/politics Volume 84-85 ; 84 >
+        au < expected ; 2015 ; new formations: a journal of culture/theory/politics Volume 86 ; 86 >
 
     }
 
@@ -66,11 +66,11 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Soundings: A journal of politics and culture Volume 56 ; 56 >
-      au < manifest ; 2014 ; Soundings: A journal of politics and culture Volume 57 ; 57 >
-      au < manifest ; 2014-2015 ; Soundings: A journal of politics and culture Volume 58 ; 58 >
-      au < manifest ; 2015 ; Soundings: A journal of politics and culture Volume 59 ; 59 >
-      au < manifest ; 2015 ; Soundings: A journal of politics and culture Volume 60 ; 60 >
+      au < testing ; 2014 ; Soundings: A journal of politics and culture Volume 56 ; 56 >
+      au < testing ; 2014 ; Soundings: A journal of politics and culture Volume 57 ; 57 >
+      au < testing ; 2014-2015 ; Soundings: A journal of politics and culture Volume 58 ; 58 >
+      au < testing ; 2015 ; Soundings: A journal of politics and culture Volume 59 ; 59 >
+      au < testing ; 2015 ; Soundings: A journal of politics and culture Volume 60 ; 60 >
 
     }
 

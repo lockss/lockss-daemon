@@ -42,11 +42,10 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Civil War History Volume 60 ; 60 >
-      au < manifest ; 2015 ; Civil War History Volume 61 ; 61 >
+      au < testing ; 2014 ; Civil War History Volume 60 ; 60 >
+      au < testing ; 2015 ; Civil War History Volume 61 ; 61 >
 
     }
-
 
   }
 
@@ -79,11 +78,10 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Ohio History Volume 121 ; 121 >
-      au < manifest ; 2015 ; Ohio History Volume 122 ; 122 >
+      au < testing ; 2014 ; Ohio History Volume 121 ; 121 >
+      au < testing ; 2015 ; Ohio History Volume 122 ; 122 >
 
     }
-
 
   }
 
