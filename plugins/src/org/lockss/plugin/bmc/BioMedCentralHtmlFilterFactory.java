@@ -185,6 +185,7 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
   // in any case when tags are stripped in this way filtering is better
   private static final HtmlTagFilter.TagPair[] pairs = {
       new HtmlTagFilter.TagPair("<head", "</head>"),
+      new HtmlTagFilter.TagPair("document.write", ");"),
       new HtmlTagFilter.TagPair("<script", "</script>"),
       new HtmlTagFilter.TagPair("<noscript", "</noscript>"),
   };
