@@ -197,18 +197,26 @@ public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
     if (log.isDebug3()) log.debug3("checkAccessUrl("+af+", "+cu+", "+am+")");
 
     String access_val = am.get(MetadataField.FIELD_ACCESS_URL);
-    if (access_val == null) { 
+    if (access_val == null) {
+      access_val = af.getFullTextUrl();
+      if (access_val == null) {
+        access_val = cu.getUrl();
+      }
       // If no value was set, use the full_text_url; avoid checking the cached urls
-      am.put(MetadataField.FIELD_ACCESS_URL, af.getFullTextUrl());
-      if (log.isDebug3()) log.debug3("setting:"+af.getFullTextUrl());
+      am.put(MetadataField.FIELD_ACCESS_URL, access_val);
+      if (log.isDebug3()) log.debug3("setting:" + access_val);
       return;
     } 
     CachedUrl testCu = cu.getArchivalUnit().makeCachedUrl(access_val);
     if ((testCu == null) || (!testCu.hasContent())){
       // Check if the set value exists in the AU, if not replace it with 
       // the full text url
-      am.replace(MetadataField.FIELD_ACCESS_URL, af.getFullTextUrl());
-      if (log.isDebug3()) log.debug3("replacing:" + access_val + " with " +af.getFullTextUrl());
+      access_val = af.getFullTextUrl();
+      if (access_val == null) {
+        access_val = cu.getUrl();
+      }
+      am.replace(MetadataField.FIELD_ACCESS_URL, access_val);
+      if (log.isDebug3()) log.debug3("replacing:" + testCu.getUrl() + " with " + access_val);
       return;
     }
 
