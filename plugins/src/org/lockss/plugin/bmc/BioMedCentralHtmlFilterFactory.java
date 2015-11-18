@@ -102,7 +102,7 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about/access"),
       // A highly accessed link/glyph that may get added
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about/mostviewed"),
-      
+      HtmlNodeFilters.tagWithAttributeRegex("a", "class", "(hidden|access)"),
       // remove the mobile sidebar
       HtmlNodeFilters.tagWithAttribute("div", "id", "mobile-sidebar"),
       // Contains the institution name; once a 'class', now an 'id'
