@@ -17,7 +17,7 @@
       issnl = 1758-8685
     >
     
-      http://ercw.openlibrary.manchester.ac.uk/
+      param[base_url] = http://ercw.openlibrary.manchester.ac.uk/
       param[journal_id] = ercw
     
       au < exists ; exists ; 2009 ; 2009 ; Ethnicity and Race in a Changing World Volume 1 ; 1 >
@@ -36,7 +36,7 @@
       issnl = 1758-8685
     >
     
-      http://jbr.openlibrary.manchester.ac.uk/
+      param[base_url] = http://jbr.openlibrary.manchester.ac.uk/
       param[journal_id] = jbr
     
       au < exists ; exists ; 2015 ; 2015 ; James Baldwin Journal Volume 1 ; 1 >
