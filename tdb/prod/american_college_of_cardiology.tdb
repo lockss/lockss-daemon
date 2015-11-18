@@ -4,7 +4,7 @@
     name = American College of Cardiology
   >
 
-  comment[down] = publisher moved to Silverchair -- not collecting.
+  comment[down] = publisher moved to Silverchair. Moving back to HW.
 
   {
     title <
@@ -23,6 +23,7 @@
     au < down ; 2010 ; JACC: Cardiovascular Imaging Volume 3 ; 3 >
     au < down ; 2011 ; JACC: Cardiovascular Imaging Volume 4 ; 4 >
     au < down ; 2012 ; JACC: Cardiovascular Imaging Volume 5 ; 5 >
+    au < expected ; 2013 ; JACC: Cardiovascular Imaging Volume 6 ; 6 >
     }
 
   }
@@ -44,6 +45,7 @@
     au < down ; 2010 ; JACC: Cardiovascular Interventions Volume 3 ; 3 >
     au < down ; 2011 ; JACC: Cardiovascular Interventions Volume 4 ; 4 >
     au < down ; 2012 ; JACC: Cardiovascular Interventions Volume 5 ; 5 >
+    au < expected ; 2013 ; JACC: Cardiovascular Interventions Volume 6 ; 6 >
     }
 
   }
@@ -124,6 +126,7 @@
     au < down ; 2011 ; Journal of the American College of Cardiology Volume 57 ; 57 >
     au < down ; 2011 ; Journal of the American College of Cardiology Volume 58 ; 58 >
     au < down ; 2012 ; Journal of the American College of Cardiology Volume 59 ; 59 >
+    au < expected ; 2013 ; Journal of the American College of Cardiology Volume 60 ; 60 >
     }
 
   }
