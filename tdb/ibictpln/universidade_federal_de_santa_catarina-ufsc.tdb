@@ -117,7 +117,7 @@
       title <
         name = Brazilian Journal of Kinanthropometry and Human Performance ;
         issn = 1415-8426 ;
-        eissn = 1981-1322
+        eissn = 1980-0037
       >
 
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
@@ -340,8 +340,7 @@
 
       title <
         name = ILHA-Revista de Antropologia ;
-        issn = 1517-395X ;
-        eissn = 2175-8034
+        eissn = 1517-395X
       >
 
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
@@ -466,7 +465,8 @@
   {
 
       title <
-        name = Outra travessia
+        name = Outra travessia ;
+        eissn = 2176-8552
       >
 
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
@@ -490,7 +490,7 @@
 
       title <
         name = Política & Sociedade ;
-        eissn = 2176-8552
+        eissn = 2175-7984
       >
 
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
@@ -518,7 +518,7 @@
 
       title <
         name = Principia: an international journal of epistemology ;
-        eissn = 2175-8050
+        eissn = 1808-1711
       >
 
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
@@ -551,7 +551,7 @@
 
       title <
         name = Revemat: revista eletrônica de educação matemática ;
-        eissn = 1808-1711
+        eissn = 1981-1322
       >
 
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
@@ -574,7 +574,7 @@
   {
 
       title <
-        name = Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas ;
+        name = Cadernos de Pesquisa Interdisciplinar em Ciências Humanas ;
         issn = 1984-8951
       >
 
@@ -582,29 +582,29 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = cadernosdepesquisa
 
-      au < released ; 2000 ; 1 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2000 ; 2000 ; >
-      au < released ; 2001 ; 2 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2001 ; 2001 ; >
-      au < released ; 2002 ; 3 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2002 ; 2002 ; >
-      au < released ; 2003 ; 4 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2003 ; 2003 ; >
-      au < released ; 2004 ; 5 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2004 ; 2004 ; >
-      au < released ; 2005 ; 6 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 7 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 8 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 9 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 10 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 11 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 12 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 13 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 14 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 15 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2014 ; 2014 ; >
-      au < expected ; 2015 ; 16 ; Revista Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2015 ; 2015 ; >
+      au < released ; 2000 ; 1 ; Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 2 ; Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 3 ; Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 4 ; Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 5 ; Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 6 ; Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 7 ; Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 8 ; Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 9 ; Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 10 ; Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 11 ; Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 12 ; Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 13 ; Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 14 ; Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 15 ; Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 16 ; Cadernos de Pesquisa Interdisciplinar em Ciências Humanas Volume 2015 ; 2015 ; >
 
   }
 
   {
 
       title <
-        name = Revista Cadernos de Tradução ;
+        name = Cadernos de Tradução ;
         issn = 2175-7968
       >
 
@@ -612,26 +612,26 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = traducao
 
-      au < released ; 1996 ; 1 ; Revista Cadernos de Tradução Volume 1996 ; 1996 ; >
-      au < released ; 1997 ; 2 ; Revista Cadernos de Tradução Volume 1997 ; 1997 ; >
-      au < released ; 1998 ; 3 ; Revista Cadernos de Tradução Volume 1998 ; 1998 ; >
-      au < released ; 1999 ; 4 ; Revista Cadernos de Tradução Volume 1999 ; 1999 ; >
-      au < released ; 2000 ; 5 ; Revista Cadernos de Tradução Volume 2000 ; 2000 ; >
-      au < released ; 2001 ; 6 ; Revista Cadernos de Tradução Volume 2001 ; 2001 ; >
-      au < released ; 2002 ; 7 ; Revista Cadernos de Tradução Volume 2002 ; 2002 ; >
-      au < released ; 2003 ; 8 ; Revista Cadernos de Tradução Volume 2003 ; 2003 ; >
-      au < released ; 2004 ; 9 ; Revista Cadernos de Tradução Volume 2004 ; 2004 ; >
-      au < released ; 2005 ; 10 ; Revista Cadernos de Tradução Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 11 ; Revista Cadernos de Tradução Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 12 ; Revista Cadernos de Tradução Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 13 ; Revista Cadernos de Tradução Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 14 ; Revista Cadernos de Tradução Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 15 ; Revista Cadernos de Tradução Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 16 ; Revista Cadernos de Tradução Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 17 ; Revista Cadernos de Tradução Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 18 ; Revista Cadernos de Tradução Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 19 ; Revista Cadernos de Tradução Volume 2014 ; 2014 ; >
-      au < manifest ; 2015 ; 20 ; Revista Cadernos de Tradução Volume 2015 ; 2015 ; >
+      au < released ; 1996 ; 1 ; Cadernos de Tradução Volume 1996 ; 1996 ; >
+      au < released ; 1997 ; 2 ; Cadernos de Tradução Volume 1997 ; 1997 ; >
+      au < released ; 1998 ; 3 ; Cadernos de Tradução Volume 1998 ; 1998 ; >
+      au < released ; 1999 ; 4 ; Cadernos de Tradução Volume 1999 ; 1999 ; >
+      au < released ; 2000 ; 5 ; Cadernos de Tradução Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 6 ; Cadernos de Tradução Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 7 ; Cadernos de Tradução Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 8 ; Cadernos de Tradução Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 9 ; Cadernos de Tradução Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 10 ; Cadernos de Tradução Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 11 ; Cadernos de Tradução Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 12 ; Cadernos de Tradução Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 13 ; Cadernos de Tradução Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 14 ; Cadernos de Tradução Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 15 ; Cadernos de Tradução Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 16 ; Cadernos de Tradução Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 17 ; Cadernos de Tradução Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 18 ; Cadernos de Tradução Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 19 ; Cadernos de Tradução Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 20 ; Cadernos de Tradução Volume 2015 ; 2015 ; >
 
   }
 
@@ -640,7 +640,7 @@
       title <
         name = Revista Contemporânea de Contabilidade ;
         issn = 1807-1821 ;
-        eissn = 1980-0037
+        eissn = 2175-8069
       >
 
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
@@ -666,8 +666,7 @@
 
       title <
         name = Revista de Ciências da Administração ;
-        issn = 1516-3865 ;
-        eissn = 2175-8069
+        eissn = 2175-8077
       >
 
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
@@ -699,8 +698,7 @@
 
       title <
         name = Revista de Ciências Humanas [issn 0101-9589] ;
-        issn = 0101-9589 ;
-        eissn = 2175-8077
+        eissn = 0101-9589
       >
 
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
@@ -744,41 +742,41 @@
   {
 
       title <
-        name = revista eletrônica de biblioteconomia e ciência da informação ;
-        issn = 1518-2924
+        name = Encontros Bibli: Revista Eletrônica de Biblioteconomia e Ciência da Informação ;
+        eissn = 1518-2924
       >
 
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = eb
 
-      au < released ; 1996 ; 1 ; revista eletrônica de biblioteconomia e ciência da informação Volume 1996 ; 1996 ; >
-      au < released ; 1997 ; 2 ; revista eletrônica de biblioteconomia e ciência da informação Volume 1997 ; 1997 ; >
-      au < released ; 1998 ; 3 ; revista eletrônica de biblioteconomia e ciência da informação Volume 1998 ; 1998 ; >
-      au < released ; 1999 ; 4 ; revista eletrônica de biblioteconomia e ciência da informação Volume 1999 ; 1999 ; >
-      au < released ; 2000 ; 5 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2000 ; 2000 ; >
-      au < released ; 2001 ; 6 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2001 ; 2001 ; >
-      au < released ; 2002 ; 7 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2002 ; 2002 ; >
-      au < released ; 2003 ; 8 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2003 ; 2003 ; >
-      au < released ; 2004 ; 9 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2004 ; 2004 ; >
-      au < released ; 2005 ; 10 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 11 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 12 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 13 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 14 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 15 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 16 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 17 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 18 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 19 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2014 ; 2014 ; >
-      au < manifest ; 2015 ; 20 ; revista eletrônica de biblioteconomia e ciência da informação Volume 2015 ; 2015 ; >
+      au < released ; 1996 ; 1 ; Encontros Bibli: Revista Eletrônica de Biblioteconomia e Ciência da Informação Volume 1996 ; 1996 ; >
+      au < released ; 1997 ; 2 ; Encontros Bibli: Revista Eletrônica de Biblioteconomia e Ciência da Informação Volume 1997 ; 1997 ; >
+      au < released ; 1998 ; 3 ; Encontros Bibli: Revista Eletrônica de Biblioteconomia e Ciência da Informação Volume 1998 ; 1998 ; >
+      au < released ; 1999 ; 4 ; Encontros Bibli: Revista Eletrônica de Biblioteconomia e Ciência da Informação Volume 1999 ; 1999 ; >
+      au < released ; 2000 ; 5 ; Encontros Bibli: Revista Eletrônica de Biblioteconomia e Ciência da Informação Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 6 ; Encontros Bibli: Revista Eletrônica de Biblioteconomia e Ciência da Informação Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 7 ; Encontros Bibli: Revista Eletrônica de Biblioteconomia e Ciência da Informação Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 8 ; Encontros Bibli: Revista Eletrônica de Biblioteconomia e Ciência da Informação Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 9 ; Encontros Bibli: Revista Eletrônica de Biblioteconomia e Ciência da Informação Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 10 ; Encontros Bibli: Revista Eletrônica de Biblioteconomia e Ciência da Informação Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 11 ; Encontros Bibli: Revista Eletrônica de Biblioteconomia e Ciência da Informação Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 12 ; Encontros Bibli: Revista Eletrônica de Biblioteconomia e Ciência da Informação Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 13 ; Encontros Bibli: Revista Eletrônica de Biblioteconomia e Ciência da Informação Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 14 ; Encontros Bibli: Revista Eletrônica de Biblioteconomia e Ciência da Informação Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 15 ; Encontros Bibli: Revista Eletrônica de Biblioteconomia e Ciência da Informação Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 16 ; Encontros Bibli: Revista Eletrônica de Biblioteconomia e Ciência da Informação Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 17 ; Encontros Bibli: Revista Eletrônica de Biblioteconomia e Ciência da Informação Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 18 ; Encontros Bibli: Revista Eletrônica de Biblioteconomia e Ciência da Informação Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 19 ; Encontros Bibli: Revista Eletrônica de Biblioteconomia e Ciência da Informação Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 20 ; Encontros Bibli: Revista Eletrônica de Biblioteconomia e Ciência da Informação Volume 2015 ; 2015 ; >
 
   }
 
   {
 
       title <
-        name = Revista EM DEBATE ;
+        name = EM DEBATE ;
         eissn = 1980-3532
       >
 
@@ -786,21 +784,21 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = emdebate
 
-      au < released ; 1999 ; 1 ; Revista EM DEBATE Volume 1999 ; 1999 ; >
-      au < released ; 2006 ; 8 ; Revista EM DEBATE Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 9 ; Revista EM DEBATE Volume 2007 ; 2007 ; >
-      au < released ; 2010 ; 12 ; Revista EM DEBATE Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 13 ; Revista EM DEBATE Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 14 ; Revista EM DEBATE Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 15 ; Revista EM DEBATE Volume 2013 ; 2013 ; >
-      au < expected ; 2014 ; 16 ; Revista EM DEBATE Volume 2014 ; 2014 ; >
+      au < released ; 1999 ; 1 ; EM DEBATE Volume 1999 ; 1999 ; >
+      au < released ; 2006 ; 8 ; EM DEBATE Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 9 ; EM DEBATE Volume 2007 ; 2007 ; >
+      au < released ; 2010 ; 12 ; EM DEBATE Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 13 ; EM DEBATE Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 14 ; EM DEBATE Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 15 ; EM DEBATE Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 16 ; EM DEBATE Volume 2014 ; 2014 ; >
 
   }
 
   {
 
       title <
-        name = Revista Esboços ;
+        name = Esboços - Revista do Programa de Pós-Graduação em História da UFSC ;
         issn = 1414-722X ;
         eissn = 2175-7976
       >
@@ -809,34 +807,34 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = esbocos
 
-      au < released ; 1994 ; 1 ; Revista Esboços Volume 1994 ; 1994 ; >
-      au < released ; 1995 ; 2 ; Revista Esboços Volume 1995 ; 1995 ; >
-      au < released ; 1996 ; 3 ; Revista Esboços Volume 1996 ; 1996 ; >
-      au < released ; 1997 ; 4 ; Revista Esboços Volume 1997 ; 1997 ; >
-      au < released ; 1998 ; 5 ; Revista Esboços Volume 1998 ; 1998 ; >
-      au < released ; 1999 ; 6 ; Revista Esboços Volume 1999 ; 1999 ; >
-      au < released ; 2000 ; 7 ; Revista Esboços Volume 2000 ; 2000 ; >
-      au < released ; 2001 ; 8 ; Revista Esboços Volume 2001 ; 2001 ; >
-      au < released ; 2002 ; 9 ; Revista Esboços Volume 2002 ; 2002 ; >
-      au < released ; 2004 ; 11 ; Revista Esboços Volume 2004 ; 2004 ; >
-      au < released ; 2005 ; 12 ; Revista Esboços Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 13 ; Revista Esboços Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 14 ; Revista Esboços Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 15 ; Revista Esboços Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 16 ; Revista Esboços Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 17 ; Revista Esboços Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 18 ; Revista Esboços Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 19 ; Revista Esboços Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 20 ; Revista Esboços Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 21 ; Revista Esboços Volume 2014 ; 2014 ; >
-      au < expected ; 2015 ; 22 ; Revista Esboços Volume 2015 ; 2015 ; >
+      au < released ; 1994 ; 1 ; Esboços - Revista do Programa de Pós-Graduação em História da UFSC Volume 1994 ; 1994 ; >
+      au < released ; 1995 ; 2 ; Esboços - Revista do Programa de Pós-Graduação em História da UFSC Volume 1995 ; 1995 ; >
+      au < released ; 1996 ; 3 ; Esboços - Revista do Programa de Pós-Graduação em História da UFSC Volume 1996 ; 1996 ; >
+      au < released ; 1997 ; 4 ; Esboços - Revista do Programa de Pós-Graduação em História da UFSC Volume 1997 ; 1997 ; >
+      au < released ; 1998 ; 5 ; Esboços - Revista do Programa de Pós-Graduação em História da UFSC Volume 1998 ; 1998 ; >
+      au < released ; 1999 ; 6 ; Esboços - Revista do Programa de Pós-Graduação em História da UFSC Volume 1999 ; 1999 ; >
+      au < released ; 2000 ; 7 ; Esboços - Revista do Programa de Pós-Graduação em História da UFSC Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 8 ; Esboços - Revista do Programa de Pós-Graduação em História da UFSC Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 9 ; Esboços - Revista do Programa de Pós-Graduação em História da UFSC Volume 2002 ; 2002 ; >
+      au < released ; 2004 ; 11 ; Esboços - Revista do Programa de Pós-Graduação em História da UFSC Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 12 ; Esboços - Revista do Programa de Pós-Graduação em História da UFSC Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 13 ; Esboços - Revista do Programa de Pós-Graduação em História da UFSC Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 14 ; Esboços - Revista do Programa de Pós-Graduação em História da UFSC Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 15 ; Esboços - Revista do Programa de Pós-Graduação em História da UFSC Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 16 ; Esboços - Revista do Programa de Pós-Graduação em História da UFSC Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 17 ; Esboços - Revista do Programa de Pós-Graduação em História da UFSC Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 18 ; Esboços - Revista do Programa de Pós-Graduação em História da UFSC Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 19 ; Esboços - Revista do Programa de Pós-Graduação em História da UFSC Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 20 ; Esboços - Revista do Programa de Pós-Graduação em História da UFSC Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 21 ; Esboços - Revista do Programa de Pós-Graduação em História da UFSC Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 22 ; Esboços - Revista do Programa de Pós-Graduação em História da UFSC Volume 2015 ; 2015 ; >
 
   }
 
   {
 
       title <
-        name = Revista Extensio ;
+        name = Extensio: Revista Eletrônica de Extensão ;
         issn = 1807-0221
       >
 
@@ -844,63 +842,62 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = extensio
 
-      au < released ; 2004 ; 1 ; Revista Extensio Volume 2004 ; 2004 ; >
-      au < released ; 2005 ; 2 ; Revista Extensio Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 3 ; Revista Extensio Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 4 ; Revista Extensio Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 5 ; Revista Extensio Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 6 ; Revista Extensio Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 7 ; Revista Extensio Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 8 ; Revista Extensio Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 9 ; Revista Extensio Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 10 ; Revista Extensio Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 11 ; Revista Extensio Volume 2014 ; 2014 ; >
-      au < expected ; 2015 ; 12 ; Revista Extensio Volume 2015 ; 2015 ; >
+      au < released ; 2004 ; 1 ; Extensio: Revista Eletrônica de Extensão Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 2 ; Extensio: Revista Eletrônica de Extensão Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 3 ; Extensio: Revista Eletrônica de Extensão Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 4 ; Extensio: Revista Eletrônica de Extensão Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 5 ; Extensio: Revista Eletrônica de Extensão Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 6 ; Extensio: Revista Eletrônica de Extensão Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 7 ; Extensio: Revista Eletrônica de Extensão Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 8 ; Extensio: Revista Eletrônica de Extensão Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 9 ; Extensio: Revista Eletrônica de Extensão Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 10 ; Extensio: Revista Eletrônica de Extensão Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 11 ; Extensio: Revista Eletrônica de Extensão Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 12 ; Extensio: Revista Eletrônica de Extensão Volume 2015 ; 2015 ; >
 
   }
 
   {
 
       title <
-        name = Revista Fragmentos ;
-        eissn = 2175-7992
+        name = Fragmentos: Revista de Língua e Literatura Estrangeiras ;
+        eissn = 0103-1783
       >
 
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = fragmentos
 
-      au < released ; 1986 ; 1 ; Revista Fragmentos Volume 1986 ; 1986 ; >
-      au < released ; 1987 ; 2 ; Revista Fragmentos Volume 1987 ; 1987 ; >
-      au < released ; 1989 ; 4 ; Revista Fragmentos Volume 1989 ; 1989 ; >
-      au < released ; 1990 ; 5 ; Revista Fragmentos Volume 1990 ; 1990 ; >
-      au < released ; 1993 ; 8 ; Revista Fragmentos Volume 1993 ; 1993 ; >
-      au < released ; 1994 ; 9 ; Revista Fragmentos Volume 1994 ; 1994 ; >
-      au < released ; 1995 ; 10 ; Revista Fragmentos Volume 1995 ; 1995 ; >
-      au < released ; 1996 ; 11 ; Revista Fragmentos Volume 1996 ; 1996 ; >
-      au < released ; 1997 ; 12 ; Revista Fragmentos Volume 1997 ; 1997 ; >
-      au < released ; 1998 ; 13 ; Revista Fragmentos Volume 1998 ; 1998 ; >
-      au < released ; 1999 ; 14 ; Revista Fragmentos Volume 1999 ; 1999 ; >
-      au < released ; 2000 ; 15 ; Revista Fragmentos Volume 2000 ; 2000 ; >
-      au < released ; 2001 ; 16 ; Revista Fragmentos Volume 2001 ; 2001 ; >
-      au < released ; 2002 ; 17 ; Revista Fragmentos Volume 2002 ; 2002 ; >
-      au < released ; 2003 ; 18 ; Revista Fragmentos Volume 2003 ; 2003 ; >
-      au < released ; 2004 ; 19 ; Revista Fragmentos Volume 2004 ; 2004 ; >
-      au < released ; 2005 ; 20 ; Revista Fragmentos Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 21 ; Revista Fragmentos Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 22 ; Revista Fragmentos Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 23 ; Revista Fragmentos Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 24 ; Revista Fragmentos Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 25 ; Revista Fragmentos Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 26 ; Revista Fragmentos Volume 2011 ; 2011 ; >
+      au < released ; 1986 ; 1 ; Fragmentos: Revista de Língua e Literatura Estrangeiras Volume 1986 ; 1986 ; >
+      au < released ; 1987 ; 2 ; Fragmentos: Revista de Língua e Literatura Estrangeiras Volume 1987 ; 1987 ; >
+      au < released ; 1989 ; 4 ; Fragmentos: Revista de Língua e Literatura Estrangeiras Volume 1989 ; 1989 ; >
+      au < released ; 1990 ; 5 ; Fragmentos: Revista de Língua e Literatura Estrangeiras Volume 1990 ; 1990 ; >
+      au < released ; 1993 ; 8 ; Fragmentos: Revista de Língua e Literatura Estrangeiras Volume 1993 ; 1993 ; >
+      au < released ; 1994 ; 9 ; Fragmentos: Revista de Língua e Literatura Estrangeiras Volume 1994 ; 1994 ; >
+      au < released ; 1995 ; 10 ; Fragmentos: Revista de Língua e Literatura Estrangeiras Volume 1995 ; 1995 ; >
+      au < released ; 1996 ; 11 ; Fragmentos: Revista de Língua e Literatura Estrangeiras Volume 1996 ; 1996 ; >
+      au < released ; 1997 ; 12 ; Fragmentos: Revista de Língua e Literatura Estrangeiras Volume 1997 ; 1997 ; >
+      au < released ; 1998 ; 13 ; Fragmentos: Revista de Língua e Literatura Estrangeiras Volume 1998 ; 1998 ; >
+      au < released ; 1999 ; 14 ; Fragmentos: Revista de Língua e Literatura Estrangeiras Volume 1999 ; 1999 ; >
+      au < released ; 2000 ; 15 ; Fragmentos: Revista de Língua e Literatura Estrangeiras Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 16 ; Fragmentos: Revista de Língua e Literatura Estrangeiras Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 17 ; Fragmentos: Revista de Língua e Literatura Estrangeiras Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 18 ; Fragmentos: Revista de Língua e Literatura Estrangeiras Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 19 ; Fragmentos: Revista de Língua e Literatura Estrangeiras Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 20 ; Fragmentos: Revista de Língua e Literatura Estrangeiras Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 21 ; Fragmentos: Revista de Língua e Literatura Estrangeiras Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 22 ; Fragmentos: Revista de Língua e Literatura Estrangeiras Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 23 ; Fragmentos: Revista de Língua e Literatura Estrangeiras Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 24 ; Fragmentos: Revista de Língua e Literatura Estrangeiras Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 25 ; Fragmentos: Revista de Língua e Literatura Estrangeiras Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 26 ; Fragmentos: Revista de Língua e Literatura Estrangeiras Volume 2011 ; 2011 ; >
 
   }
 
   {
 
       title <
-        name = Revista GEOSUL ;
-        issn = 0103-3964 ;
+        name = GEOSUL ;
         eissn = 2177-5230
       >
 
@@ -908,36 +905,36 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = geosul
 
-      au < released ; 1986 ; 1 ; Revista GEOSUL Volume 1986 ; 1986 ; >
-      au < released ; 1987 ; 2 ; Revista GEOSUL Volume 1987 ; 1987 ; >
-      au < released ; 1988 ; 3 ; Revista GEOSUL Volume 1988 ; 1988 ; >
-      au < released ; 1989 ; 4 ; Revista GEOSUL Volume 1989 ; 1989 ; >
-      au < released ; 1990 ; 5 ; Revista GEOSUL Volume 1990 ; 1990 ; >
-      au < released ; 1991 ; 6 ; Revista GEOSUL Volume 1991 ; 1991 ; >
-      au < released ; 1992 ; 7 ; Revista GEOSUL Volume 1992 ; 1992 ; >
-      au < released ; 1993 ; 8 ; Revista GEOSUL Volume 1993 ; 1993 ; >
-      au < released ; 1994 ; 9 ; Revista GEOSUL Volume 1994 ; 1994 ; >
-      au < notReady ; 1995 ; 10 ; Revista GEOSUL Volume 1995 ; 1995 ; no substance on website >
-      au < notReady ; 1996 ; 11 ; Revista GEOSUL Volume 1996 ; 1996 ; no substance on website >
-      au < notReady ; 1997 ; 12 ; Revista GEOSUL Volume 1997 ; 1997 ; no substance on website >
-      au < notReady ; 1998 ; 13 ; Revista GEOSUL Volume 1998 ; 1998 ; no substance on website >
-      au < released ; 1999 ; 14 ; Revista GEOSUL Volume 1999 ; 1999 ; >
-      au < released ; 2000 ; 15 ; Revista GEOSUL Volume 2000 ; 2000 ; >
-      au < released ; 2001 ; 16 ; Revista GEOSUL Volume 2001 ; 2001 ; >
-      au < released ; 2002 ; 17 ; Revista GEOSUL Volume 2002 ; 2002 ; >
-      au < released ; 2003 ; 18 ; Revista GEOSUL Volume 2003 ; 2003 ; >
-      au < released ; 2004 ; 19 ; Revista GEOSUL Volume 2004 ; 2004 ; >
-      au < released ; 2005 ; 20 ; Revista GEOSUL Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 21 ; Revista GEOSUL Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 22 ; Revista GEOSUL Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 23 ; Revista GEOSUL Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 24 ; Revista GEOSUL Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 25 ; Revista GEOSUL Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 26 ; Revista GEOSUL Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 27 ; Revista GEOSUL Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 28 ; Revista GEOSUL Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 29 ; Revista GEOSUL Volume 2014 ; 2014 ; >
-      au < manifest ; 2015 ; 30 ; Revista GEOSUL Volume 2015 ; 2015 ; >
+      au < released ; 1986 ; 1 ; GEOSUL Volume 1986 ; 1986 ; >
+      au < released ; 1987 ; 2 ; GEOSUL Volume 1987 ; 1987 ; >
+      au < released ; 1988 ; 3 ; GEOSUL Volume 1988 ; 1988 ; >
+      au < released ; 1989 ; 4 ; GEOSUL Volume 1989 ; 1989 ; >
+      au < released ; 1990 ; 5 ; GEOSUL Volume 1990 ; 1990 ; >
+      au < released ; 1991 ; 6 ; GEOSUL Volume 1991 ; 1991 ; >
+      au < released ; 1992 ; 7 ; GEOSUL Volume 1992 ; 1992 ; >
+      au < released ; 1993 ; 8 ; GEOSUL Volume 1993 ; 1993 ; >
+      au < released ; 1994 ; 9 ; GEOSUL Volume 1994 ; 1994 ; >
+      au < notReady ; 1995 ; 10 ; GEOSUL Volume 1995 ; 1995 ; no substance on website >
+      au < notReady ; 1996 ; 11 ; GEOSUL Volume 1996 ; 1996 ; no substance on website >
+      au < notReady ; 1997 ; 12 ; GEOSUL Volume 1997 ; 1997 ; no substance on website >
+      au < notReady ; 1998 ; 13 ; GEOSUL Volume 1998 ; 1998 ; no substance on website >
+      au < released ; 1999 ; 14 ; GEOSUL Volume 1999 ; 1999 ; >
+      au < released ; 2000 ; 15 ; GEOSUL Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 16 ; GEOSUL Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 17 ; GEOSUL Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 18 ; GEOSUL Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 19 ; GEOSUL Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 20 ; GEOSUL Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 21 ; GEOSUL Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 22 ; GEOSUL Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 23 ; GEOSUL Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 24 ; GEOSUL Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 25 ; GEOSUL Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 26 ; GEOSUL Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 27 ; GEOSUL Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 28 ; GEOSUL Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 29 ; GEOSUL Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 30 ; GEOSUL Volume 2015 ; 2015 ; >
 
   }
 
@@ -966,50 +963,49 @@
   {
 
       title <
-        name = Revista Ilha do Desterro ;
-        issn = 0101-4846 ;
-        eissn = 2175-8026
+        name = Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies ;
+        eissn = 0101-4846
       >
 
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = desterro
 
-      au < released ; 1979 ; 1 ; Revista Ilha do Desterro Volume 1979 ; 1979 ; >
-      au < released ; 1980 ; 2 ; Revista Ilha do Desterro Volume 1980 ; 1980 ; >
-      au < released ; 1981 ; 3 ; Revista Ilha do Desterro Volume 1981 ; 1981 ; >
-      au < released ; 1982 ; 4 ; Revista Ilha do Desterro Volume 1982 ; 1982 ; >
-      au < released ; 1983 ; 5 ; Revista Ilha do Desterro Volume 1983 ; 1983 ; >
-      au < released ; 1984 ; 6 ; Revista Ilha do Desterro Volume 1984 ; 1984 ; >
-      au < released ; 1985 ; 7 ; Revista Ilha do Desterro Volume 1985 ; 1985 ; >
-      au < released ; 1986 ; 8 ; Revista Ilha do Desterro Volume 1986 ; 1986 ; >
-      au < released ; 1987 ; 9 ; Revista Ilha do Desterro Volume 1987 ; 1987 ; >
-      au < released ; 1988 ; 10 ; Revista Ilha do Desterro Volume 1988 ; 1988 ; >
-      au < released ; 1989 ; 11 ; Revista Ilha do Desterro Volume 1989 ; 1989 ; >
-      au < released ; 1990 ; 12 ; Revista Ilha do Desterro Volume 1990 ; 1990 ; >
-      au < released ; 1991 ; 13 ; Revista Ilha do Desterro Volume 1991 ; 1991 ; >
-      au < released ; 1992 ; 14 ; Revista Ilha do Desterro Volume 1992 ; 1992 ; >
-      au < released ; 1993 ; 15 ; Revista Ilha do Desterro Volume 1993 ; 1993 ; >
-      au < released ; 1994 ; 16 ; Revista Ilha do Desterro Volume 1994 ; 1994 ; >
-      au < released ; 1997 ; 19 ; Revista Ilha do Desterro Volume 1997 ; 1997 ; >
-      au < released ; 1998 ; 20 ; Revista Ilha do Desterro Volume 1998 ; 1998 ; >
-      au < released ; 1999 ; 21 ; Revista Ilha do Desterro Volume 1999 ; 1999 ; >
-      au < released ; 2000 ; 22 ; Revista Ilha do Desterro Volume 2000 ; 2000 ; >
-      au < released ; 2001 ; 23 ; Revista Ilha do Desterro Volume 2001 ; 2001 ; >
-      au < released ; 2002 ; 24 ; Revista Ilha do Desterro Volume 2002 ; 2002 ; >
-      au < released ; 2003 ; 25 ; Revista Ilha do Desterro Volume 2003 ; 2003 ; >
-      au < released ; 2004 ; 26 ; Revista Ilha do Desterro Volume 2004 ; 2004 ; >
-      au < released ; 2005 ; 27 ; Revista Ilha do Desterro Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 28 ; Revista Ilha do Desterro Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 29 ; Revista Ilha do Desterro Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 30 ; Revista Ilha do Desterro Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 31 ; Revista Ilha do Desterro Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 32 ; Revista Ilha do Desterro Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 33 ; Revista Ilha do Desterro Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 34 ; Revista Ilha do Desterro Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 35 ; Revista Ilha do Desterro Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 36 ; Revista Ilha do Desterro Volume 2014 ; 2014 ; >
-      au < manifest ; 2015 ; 37 ; Revista Ilha do Desterro Volume 2015 ; 2015 ; >
+      au < released ; 1979 ; 1 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 1979 ; 1979 ; >
+      au < released ; 1980 ; 2 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 1980 ; 1980 ; >
+      au < released ; 1981 ; 3 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 1981 ; 1981 ; >
+      au < released ; 1982 ; 4 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 1982 ; 1982 ; >
+      au < released ; 1983 ; 5 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 1983 ; 1983 ; >
+      au < released ; 1984 ; 6 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 1984 ; 1984 ; >
+      au < released ; 1985 ; 7 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 1985 ; 1985 ; >
+      au < released ; 1986 ; 8 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 1986 ; 1986 ; >
+      au < released ; 1987 ; 9 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 1987 ; 1987 ; >
+      au < released ; 1988 ; 10 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 1988 ; 1988 ; >
+      au < released ; 1989 ; 11 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 1989 ; 1989 ; >
+      au < released ; 1990 ; 12 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 1990 ; 1990 ; >
+      au < released ; 1991 ; 13 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 1991 ; 1991 ; >
+      au < released ; 1992 ; 14 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 1992 ; 1992 ; >
+      au < released ; 1993 ; 15 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 1993 ; 1993 ; >
+      au < released ; 1994 ; 16 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 1994 ; 1994 ; >
+      au < released ; 1997 ; 19 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 1997 ; 1997 ; >
+      au < released ; 1998 ; 20 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 1998 ; 1998 ; >
+      au < released ; 1999 ; 21 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 1999 ; 1999 ; >
+      au < released ; 2000 ; 22 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 23 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 24 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 25 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 26 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 27 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 28 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 29 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 30 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 31 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 32 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 33 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 34 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 35 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 36 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 37 ; Ilha do Desterro: Journal of English Language, Literatures in English and Cultural Studies Volume 2015 ; 2015 ; >
 
   }
 
@@ -1043,7 +1039,7 @@
 
       title <
         name = Revista Katálysis ;
-        eissn = 1982-0259
+        eissn = 1414-4980
       >
 
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
@@ -1074,44 +1070,43 @@
   {
 
       title <
-        name = Revista Mundos do Trabalho ;
-        issn = 1984-9222 ;
-        eissn = 2175-8042
+        name = Mundos do Trabalho ;
+        eissn = 1984-9222
       >
 
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = mundosdotrabalho
 
-      au < released ; 2009 ; 1 ; Revista Mundos do Trabalho Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 2 ; Revista Mundos do Trabalho Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 3 ; Revista Mundos do Trabalho Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 4 ; Revista Mundos do Trabalho Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 5 ; Revista Mundos do Trabalho Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 6 ; Revista Mundos do Trabalho Volume 2014 ; 2014 ; >
-      au < expected ; 2015 ; 7 ; Revista Mundos do Trabalho Volume 2015 ; 2015 ; >
+      au < released ; 2009 ; 1 ; Mundos do Trabalho Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 2 ; Mundos do Trabalho Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 3 ; Mundos do Trabalho Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 4 ; Mundos do Trabalho Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 5 ; Mundos do Trabalho Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 6 ; Mundos do Trabalho Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 7 ; Mundos do Trabalho Volume 2015 ; 2015 ; >
 
   }
 
   {
 
       title <
-        name = Revista Ponto de Vista ;
-        eissn = 2175-7984
+        name = Ponto de Vista ;
+        eissn = 2175-8050
       >
 
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = pontodevista
 
-      au < released ; 1999 ; 1 ; Revista Ponto de Vista Volume 1999 ; 1999 ; >
-      au < released ; 2000 ; 2 ; Revista Ponto de Vista Volume 2000 ; 2000 ; >
-      au < released ; 2002 ; 4 ; Revista Ponto de Vista Volume 2002 ; 2002 ; >
-      au < released ; 2003 ; 5 ; Revista Ponto de Vista Volume 2003 ; 2003 ; >
-      au < released ; 2005 ; 7 ; Revista Ponto de Vista Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 8 ; Revista Ponto de Vista Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 9 ; Revista Ponto de Vista Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 10 ; Revista Ponto de Vista Volume 2008 ; 2008 ; >
+      au < released ; 1999 ; 1 ; Ponto de Vista Volume 1999 ; 1999 ; >
+      au < released ; 2000 ; 2 ; Ponto de Vista Volume 2000 ; 2000 ; >
+      au < released ; 2002 ; 4 ; Ponto de Vista Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 5 ; Ponto de Vista Volume 2003 ; 2003 ; >
+      au < released ; 2005 ; 7 ; Ponto de Vista Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 8 ; Ponto de Vista Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 9 ; Ponto de Vista Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 10 ; Ponto de Vista Volume 2008 ; 2008 ; >
 
   }
 
@@ -1146,7 +1141,7 @@
   {
 
       title <
-        name = Revista Zero-a-seis ;
+        name = Zero-a-seis ;
         issn = 1980-4512
       >
 
@@ -1154,30 +1149,30 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = zeroseis
 
-      au < released ; 1999 ; 1 ; Revista Zero-a-seis Volume 1999 ; 1999 ; >
-      au < released ; 2000 ; 2 ; Revista Zero-a-seis Volume 2000 ; 2000 ; >
-      au < released ; 2001 ; 3 ; Revista Zero-a-seis Volume 2001 ; 2001 ; >
-      au < released ; 2002 ; 4 ; Revista Zero-a-seis Volume 2002 ; 2002 ; >
-      au < released ; 2003 ; 5 ; Revista Zero-a-seis Volume 2003 ; 2003 ; >
-      au < released ; 2004 ; 6 ; Revista Zero-a-seis Volume 2004 ; 2004 ; >
-      au < released ; 2005 ; 7 ; Revista Zero-a-seis Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 8 ; Revista Zero-a-seis Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 9 ; Revista Zero-a-seis Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 10 ; Revista Zero-a-seis Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 11 ; Revista Zero-a-seis Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 12 ; Revista Zero-a-seis Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 13 ; Revista Zero-a-seis Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 14 ; Revista Zero-a-seis Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 15 ; Revista Zero-a-seis Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 16 ; Revista Zero-a-seis Volume 2014 ; 2014 ; >
-      au < expected ; 2015 ; 17 ; Revista Zero-a-seis Volume 2015 ; 2015 ; >
+      au < released ; 1999 ; 1 ; Zero-a-seis Volume 1999 ; 1999 ; >
+      au < released ; 2000 ; 2 ; Zero-a-seis Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 3 ; Zero-a-seis Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 4 ; Zero-a-seis Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 5 ; Zero-a-seis Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 6 ; Zero-a-seis Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 7 ; Zero-a-seis Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 8 ; Zero-a-seis Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 9 ; Zero-a-seis Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 10 ; Zero-a-seis Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 11 ; Zero-a-seis Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 12 ; Zero-a-seis Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 13 ; Zero-a-seis Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 14 ; Zero-a-seis Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 15 ; Zero-a-seis Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 16 ; Zero-a-seis Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 17 ; Zero-a-seis Volume 2015 ; 2015 ; >
 
   }
 
   {
 
       title <
-        name = Revista Texto Digital ;
+        name = Texto Digital ;
         eissn = 1807-9288
       >
 
@@ -1185,17 +1180,17 @@
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = textodigital
 
-      au < released ; 2004 ; 1 ; Revista Texto Digital Volume 2004 ; 2004 ; >
-      au < released ; 2006 ; 3 ; Revista Texto Digital Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 4 ; Revista Texto Digital Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 5 ; Revista Texto Digital Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 6 ; Revista Texto Digital Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 7 ; Revista Texto Digital Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 8 ; Revista Texto Digital Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 9 ; Revista Texto Digital Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 10 ; Revista Texto Digital Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 11 ; Revista Texto Digital Volume 2014 ; 2014 ; >
-      au < manifest ; 2015 ; 12 ; Revista Texto Digital Volume 2015 ; 2015 ; >
+      au < released ; 2004 ; 1 ; Texto Digital Volume 2004 ; 2004 ; >
+      au < released ; 2006 ; 3 ; Texto Digital Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 4 ; Texto Digital Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 5 ; Texto Digital Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 6 ; Texto Digital Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 7 ; Texto Digital Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 8 ; Texto Digital Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 9 ; Texto Digital Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 10 ; Texto Digital Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 11 ; Texto Digital Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 12 ; Texto Digital Volume 2015 ; 2015 ; >
 
   }
 
