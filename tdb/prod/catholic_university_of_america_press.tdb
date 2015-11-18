@@ -139,4 +139,26 @@
 
   }
 
+  {
+    title <
+      name = Quaestiones Disputatae ;
+      issn = 2150-5756 ;
+      eissn = 2374-555X ;
+      issnl = 2150-5756
+    >
+
+    param[journal_dir] = quaestiones_disputatae 
+    attr[journal_id] = qud
+    
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < testing ; 2014-2015 ; Quaestiones Disputatae Volume 5 ; 5 >
+      au < manifest ; 2015-2016 ; Quaestiones Disputatae Volume 6 ; 6 >
+
+    }
+
+  }
+
 }

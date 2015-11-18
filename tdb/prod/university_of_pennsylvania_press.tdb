@@ -275,6 +275,16 @@
 
     {
 
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2001-2002 ; Jewish Quarterly Review Volume 92 ; 92 >
+      au < manifest ; 2002-2003 ; Jewish Quarterly Review Volume 93 ; 93 >
+      au < manifest ; 2004 ; Jewish Quarterly Review Volume 94 ; 94 >
+
+    }
+
+    {
+
       param[base_url] = http://muse.jhu.edu/
 
       au < released ; 2005 ; Jewish Quarterly Review Volume 95 ; 95 >
@@ -298,7 +308,6 @@
 
     }
 
-
   }
 
   {
@@ -311,6 +320,16 @@
 
     param[journal_dir] = journal_for_early_modern_cultural_studies
     attr[journal_id] = jem
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2001 ; Journal for Early Modern Cultural Studies Volume 1 ; 1 >
+      au < manifest ; 2002 ; Journal for Early Modern Cultural Studies Volume 2 ; 2 >
+      au < manifest ; 2003 ; Journal for Early Modern Cultural Studies Volume 3 ; 3 >
+
+    }
 
     {
 

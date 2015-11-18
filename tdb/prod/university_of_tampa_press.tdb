@@ -20,7 +20,7 @@
 
       param[base_url] = http://muse.jhu.edu/
 
-      au < released ; 2013 ; Tampa Review Volume 45 ; 45 >
+      au < released ; 2013 ; Tampa Review Volume 45-46 ; 45 >
 
     }
 
@@ -28,10 +28,11 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < expected ; 2014 ; Tampa Review Volume 46 ; 46 >
+      au < testing ; 2014 ; Tampa Review Volume 47-48 ; 47 >
+      au < testing ; 2014 ; Tampa Review Volume 49 ; 49 >
+      au < testing ; 2015 ; Tampa Review Volume 50 ; 50 >
 
     }
-
 
   }
 

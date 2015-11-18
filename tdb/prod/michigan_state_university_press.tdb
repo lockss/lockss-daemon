@@ -274,6 +274,27 @@
 
     }
 
+  }
+
+  {
+    title <
+      name = QED: A Journal in GLBTQ Worldmaking ;
+      issn = 2327-1574 ;
+      eissn = 2327-1590 ;
+      issnl = 2327-1574
+    >
+
+    param[journal_dir] = qed_a_journal_of_glbtq_worldmaking
+    attr[journal_id] = qed
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < testing ; 2013 ; QED: A Journal in GLBTQ Worldmaking Inaugural Issue ; 0 ; 0 >
+      au < testing ; 2014 ; QED: A Journal in GLBTQ Worldmaking Volume 1 ; 1 ; 1s >
+      au < testing ; 2015 ; QED: A Journal in GLBTQ Worldmaking Volume 2 ; 2 ; 2 >
+
+    }
 
   }
 

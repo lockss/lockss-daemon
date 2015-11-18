@@ -498,8 +498,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Middle West Review 1 ; 1 >
-      au < manifest ; 2015 ; Middle West Review 2 ; 2 >
+      au < testing ; 2014 ; Middle West Review 1 ; 1 >
+      au < testing ; 2015 ; Middle West Review 2 ; 2 >
 
     }
 
@@ -737,10 +737,32 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014-2015 ; Qui Parle: Critical Humanities and Social Sciences Volume 23 ; 23 >
+      au < testing ; 2014-2015 ; Qui Parle: Critical Humanities and Social Sciences Volume 23 ; 23 >
 
     }
 
+
+  }
+
+  {
+  
+    title <
+      name = Resilience: A Journal of the Environmental Humanities ;
+      eissn = 2330-8117 ;
+      issnl = 2330-8117
+    >
+
+    param[journal_dir] = resilience_a_journal_of_the_environmental_humanities
+    attr[journal_id] = res
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < testing ; 2013-2014 ; Resilience: A Journal of the Environmental Humanities Volume 1 ; 1 >
+      au < testing ; 2014-2015 ; Resilience: A Journal of the Environmental Humanities Volume 2 ; 2 >
+
+    }
 
   }
 
@@ -934,7 +956,27 @@
 
     }
 
+  }
 
+  {
+  
+    title <
+      name = The Undecidable Unconscious: A Journal of Deconstruction and Psychoanalysis ;
+      eissn = 2328-4048 ;
+      issnl = 2328-4048
+    >
+
+    param[journal_dir] = the_undecidable_unconscious_a_journal_of_deconstruction_and_psychoanalysis
+    attr[journal_id] = ujd
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014 ; The Undecidable Unconscious: A Journal of Deconstruction and Psychoanalysis Volume 1 ; 1 >
+      au < expected ; 2015 ; The Undecidable Unconscious: A Journal of Deconstruction and Psychoanalysis Volume 2 ; 2 >
+
+    }
   }
 
   {

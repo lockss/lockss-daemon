@@ -205,6 +205,27 @@
 
     {
       title <
+        name = Illinois Classical Studies ;
+        issn = 0363-1923 ;
+        eissn = 2328-5265 ;
+        issnl = 0363-1923
+      >
+
+      param[journal_dir] = illinois_classical_studies
+      attr[journal_id] = ics
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < manifest ; 2015 ; Illinois Classical Studies Volume 40 ; 40 >
+
+      }
+ 
+    }
+
+    {
+      title <
         name = JEGP, Journal of English and Germanic Philology ;
         issn = 0363-6941 ;
         eissn = 1945-662X ;

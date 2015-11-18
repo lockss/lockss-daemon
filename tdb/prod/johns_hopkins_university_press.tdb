@@ -2899,7 +2899,6 @@
 
     }
 
-
   }
 
   {
@@ -2919,11 +2918,47 @@
       param[base_url] = http://muse.jhu.edu/
 
       au < released ; 2005 ; Sirena: poesia, arte y critica 2005 ; 2005 >
-      au < released  ;2006 ; Sirena: poesia, arte y critica 2006 ; 2006 >
+      au < released ; 2006 ; Sirena: poesia, arte y critica 2006 ; 2006 >
       au < released ; 2007 ; Sirena: poesia, arte y critica 2007 ; 2007 >
       au < released ; 2008 ; Sirena: poesia, arte y critica 2008 ; 2008 >
       au < released ; 2009 ; Sirena: poesia, arte y critica 2009 ; 2009 >
       au < released ; 2010 ; Sirena: poesia, arte y critica 2010 ; 2010 >
+
+    }
+
+  
+  }
+
+  {
+    title <
+      name = Social Research: An International Quarterly ;
+      issn = 0037-783X ;
+      eissn = 1944-768X ;
+      issnl = 0037-783X
+    >
+   
+
+    param[journal_dir] = social_research
+    attr[journal_id] = sor
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2002 ; Social Research: An International Quarterly Volume 69 ; 69 >
+      au < manifest ; 2003 ; Social Research: An International Quarterly Volume 70 ; 70 >
+      au < manifest ; 2004 ; Social Research: An International Quarterly Volume 71 ; 71 >
+      au < manifest ; 2005 ; Social Research: An International Quarterly Volume 72 ; 72 >
+      au < manifest ; 2006 ; Social Research: An International Quarterly Volume 73 ; 73 >
+      au < manifest ; 2007 ; Social Research: An International Quarterly Volume 74 ; 74 >
+      au < manifest ; 2008 ; Social Research: An International Quarterly Volume 75 ; 75 >
+      au < manifest ; 2009 ; Social Research: An International Quarterly Volume 76 ; 76 >
+      au < testing ; 2010 ; Social Research: An International Quarterly Volume 77 ; 77 >
+      au < testing ; 2011 ; Social Research: An International Quarterly Volume 78 ; 78 >
+      au < testing ; 2012 ; Social Research: An International Quarterly Volume 79 ; 79 >
+      au < testing ; 2013 ; Social Research: An International Quarterly Volume 80 ; 80 >
+      au < testing ; 2014 ; Social Research: An International Quarterly Volume 81 ; 81 >
+      au < testing ; 2015 ; Social Research: An International Quarterly Volume 82 ; 82 >
 
     }
 

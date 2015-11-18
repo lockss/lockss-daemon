@@ -268,6 +268,32 @@
   {
   
     title <
+      name = The Cormac McCarthy Journal ;
+      issn = 2333-3073 ;
+      eissn = 2333-3065 ;
+      issnl = 2333-3073
+    >
+
+    {
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[journal_dir] = cormac_mccarthy_journal
+      attr[journal_id] = cmc
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < manifest ; 2015 ; The Cormac McCarthy Journal Volume 13 ; 13 >
+
+      }
+
+    }
+
+  }
+
+  {
+  
+    title <
       name = Critical Philosophy of Race ;
       issn = 2165-8684 ;
       eissn = 2165-8692 ;
