@@ -38,6 +38,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.lockss.daemon.PluginException;
+import org.lockss.daemon.ShouldNotHappenException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
 import org.lockss.extractor.MetadataField;
@@ -143,8 +144,7 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
      */
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
-      log.error("This version of the schema setup cannot be used for this plugin");
-      return null;
+      throw new ShouldNotHappenException("This version of the schema setup cannot be used for this plugin");
     }
 
     @Override
@@ -152,7 +152,7 @@ public class ElsevierDTD5XmlSourceMetadataExtractorFactory extends SourceXmlMeta
       String url = cu.getUrl();
 
       // Is this a "main.xml"
-      if ((url != null) && url.endsWith("main.xml")) {
+      if ((url != null) && url.endsWith("/main.xml")) {
         // We need to decide if this is a book's main.xml or a journal's main.xml
         if ((BOOK_MAIN_URL.matcher(url)).find()) {
           if(bookMainHelper == null) {
