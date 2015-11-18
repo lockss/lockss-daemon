@@ -1,0 +1,33 @@
+{
+  publisher <
+    name = University of Southern Mississippi
+  >
+
+  implicit < status ; year ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+
+  {
+    title <
+      name = The Southern Quarterly ;
+      issn = 0038-4496 ;
+      eissn = 2377-2050 ;
+      issnl = 0038-4496
+    >
+	
+    param[journal_dir] = southern_quarterly
+    attr[journal_id] = soq
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014-2015 ; The Southern Quarterly Volume 52 ; 52 >
+      au < expected ; 2015-2016 ; The Southern Quarterly Volume 53 ; 53 >
+
+    }
+
+
+  }
+}
+
