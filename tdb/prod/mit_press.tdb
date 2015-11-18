@@ -82,8 +82,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; Global Environmental Politics Volume 14 ; 14 >
-      au < testing ; 2015 ; Global Environmental Politics Volume 15 ; 15 >
+      au < ready ; 2014 ; Global Environmental Politics Volume 14 ; 14 >
+      au < ready ; 2015 ; Global Environmental Politics Volume 15 ; 15 >
 
     }
 
@@ -170,8 +170,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2013-2014 ; International Security Volume 38 ; 38 >
-      au < testing ; 2014-2015 ; International Security Volume 39 ; 39 >
+      au < ready ; 2013-2014 ; International Security Volume 38 ; 38 >
+      au < ready ; 2014-2015 ; International Security Volume 39 ; 39 >
       au < manifest ; 2015-2016 ; International Security Volume 40 ; 40 >
 
     }
@@ -216,8 +216,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; Journal of Cold War Studies Volume 16 ; 16 >
-      au < testing ; 2015 ; Journal of Cold War Studies Volume 17 ; 17 >
+      au < ready ; 2014 ; Journal of Cold War Studies Volume 16 ; 16 >
+      au < ready ; 2015 ; Journal of Cold War Studies Volume 17 ; 17 >
 
     }
 
@@ -261,7 +261,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014-2015 ; Journal of Interdisciplinary History Volume 45 ; 45 >
+      au < ready ; 2014-2015 ; Journal of Interdisciplinary History Volume 45 ; 45 >
       au < manifest ; 2015-2016 ; Journal of Interdisciplinary History Volume 46 ; 46 >
 
     }
@@ -304,8 +304,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; Leonardo Volume 47 ; 47 >
-      au < testing ; 2015 ; Leonardo Volume 48 ; 48 >
+      au < ready ; 2014 ; Leonardo Volume 47 ; 47 >
+      au < ready ; 2015 ; Leonardo Volume 48 ; 48 >
 
     }
 
@@ -348,7 +348,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; Leonardo Music Journal Volume 24 ; 24 >
+      au < ready ; 2014 ; Leonardo Music Journal Volume 24 ; 24 >
       au < expected ; 2015 ; Leonardo Music Journal Volume 25 ; 25 >
 
     }
@@ -392,8 +392,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; Linguistic Inquiry Volume 45 ; 45 >
-      au < testing ; 2015 ; Linguistic Inquiry Volume 46 ; 46 >
+      au < ready ; 2014 ; Linguistic Inquiry Volume 45 ; 45 >
+      au < ready ; 2015 ; Linguistic Inquiry Volume 46 ; 46 >
 
     }
 
@@ -440,8 +440,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; PAJ: A Journal of Performance and Art Volume 36 ; 36 >
-      au < testing ; 2015 ; PAJ: A Journal of Performance and Art Volume 37 ; 37 >
+      au < ready ; 2014 ; PAJ: A Journal of Performance and Art Volume 36 ; 36 >
+      au < ready ; 2015 ; PAJ: A Journal of Performance and Art Volume 37 ; 37 >
 
     }
 
@@ -487,7 +487,7 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < testing ; 2014 ; Perspectives on Science Volume 22 ; 22 >
-      au < testing ; 2015 ; Perspectives on Science Volume 23 ; 23 >
+      au < ready ; 2015 ; Perspectives on Science Volume 23 ; 23 >
 
     }
 

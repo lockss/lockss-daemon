@@ -42,7 +42,7 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < testing ; 2014 ; CR: The New Centennial Review Volume 14 ; 14 ; 14 >
-      au < testing ; 2015 ; CR: The New Centennial Review Volume 15 ; 15 ; 15 >
+      au < ready ; 2015 ; CR: The New Centennial Review Volume 15 ; 15 ; 15 >
 
     }
 
@@ -96,8 +96,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; Contaigon: Journal of Violence, Mimesis, and Culture Volume 21 ; 21 ; 21 >
-      au < testing ; 2015 ; Contaigon: Journal of Violence, Mimesis, and Culture Volume 22 ; 22 ; 22 >
+      au < ready ; 2014 ; Contaigon: Journal of Violence, Mimesis, and Culture Volume 21 ; 21 ; 21 >
+      au < ready ; 2015 ; Contaigon: Journal of Violence, Mimesis, and Culture Volume 22 ; 22 ; 22 >
 
     }
 
@@ -141,11 +141,10 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; Fourth Genre: Explorations in Nonfiction Volume 16 ; 16 ; 16 >
-      au < testing ; 2015 ; Fourth Genre: Explorations in Nonfiction Volume 17 ; 17 ; 17 >
+      au < ready ; 2014 ; Fourth Genre: Explorations in Nonfiction Volume 16 ; 16 ; 16 >
+      au < ready ; 2015 ; Fourth Genre: Explorations in Nonfiction Volume 17 ; 17 ; 17 >
 
     }
-
 
   }
 
@@ -183,7 +182,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; French Colonial History Volume 15 ; 15 ; 15 >
+      au < ready ; 2014 ; French Colonial History Volume 15 ; 15 ; 15 >
 
     }
 
@@ -232,8 +231,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; Journal for the Study of Radicalism Volume 8 ; 8 ; 8 >
-      au < testing ; 2015 ; Journal for the Study of Radicalism Volume 9 ; 9 ; 9 >
+      au < ready ; 2014 ; Journal for the Study of Radicalism Volume 8 ; 8 ; 8 >
+      au < ready ; 2015 ; Journal for the Study of Radicalism Volume 9 ; 9 ; 9 >
 
     }
 
@@ -270,8 +269,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; Northeast African Studies Volume 14 ; 14 ; 14 >
-      au < testing ; 2015 ; Northeast African Studies Volume 15 ; 15 ; 15 >
+      au < ready ; 2014 ; Northeast African Studies Volume 14 ; 14 ; 14 >
+      au < ready ; 2015 ; Northeast African Studies Volume 15 ; 15 ; 15 >
 
     }
 
@@ -346,11 +345,10 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; Rhetoric & Public Affairs Volume 17 ; 17 ; 17 >
+      au < ready ; 2014 ; Rhetoric & Public Affairs Volume 17 ; 17 ; 17 >
       au < testing ; 2015 ; Rhetoric & Public Affairs Volume 18 ; 18 ; 18 >
 
     }
-
 
   }
 
