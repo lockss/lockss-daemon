@@ -104,7 +104,11 @@ public class WageningenJournalsHtmlHashFilterFactory
         // abs - scattering - potentially generated code added (like
         // Endocrine Society)                                      
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "articleMetaDrop"),                                               
+                                              "articleMetaDrop"),
+       // abs, full, ref - any page with listed author links
+       // the href= a varying numletter sequence
+       HtmlNodeFilters.tagWithAttributeRegex("a", "class", "tooltipTrigger"),                                       
+       HtmlNodeFilters.tagWithAttribute("div", "class", "ui-helper-hidden-accessible"),                                       
        // abs - all right column except Citation Mgr (download citations)
        HtmlNodeFilters.allExceptSubtree(
            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleTools"),

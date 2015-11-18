@@ -172,8 +172,7 @@ public class TestWageningenJournalsHtmlFilterFactory extends LockssTestCase {
       "</div>";
   
   private static final String withArticleMetaDrop =
-      "<div class=\"block\">" +
-      "<div class=\"widget literatumPublicationContentWidget none  " +
+       "<div class=\"widget literatumPublicationContentWidget none  " +
       "widget-none\" id=\"1ca\">" +
       "<div class=\"articleMetaDrop publicationContentDropZone\" " +
       "data-pb-dropzone=\"articleMetaDropZone\">" +
@@ -211,6 +210,23 @@ public class TestWageningenJournalsHtmlFilterFactory extends LockssTestCase {
       "<li class=\"downloadCitations\">" +
       "<a href=\"/action/showCitFormats?doi=11.1111%jid.2013.2\">" +
       "Send to Citation Mgr</a></li></ul></div></section>";
+  
+  private static final String tooltipHtml =
+      "<div class=\"literatumPublicationContentWidget\">" +
+      "<a class=\"entryAuthor\" href=\"/author/Ya%2C+X\"> X. Ya</a>" +
+      "<a href=\"#d484e149\" class=\"tooltipTrigger infoIcon\">" +
+      "<span class=\"ui-helper-hidden-accessible\">Related information</span>" +
+      "</a><div id=\"d484e149\" class=\"ui-helper-hidden-accessible\">" +
+      "1Laboratory of Study, " +
+      "College of Study, " +
+      "China University, Beijing 100083, China P.R.<br></div>, " +
+      "</div>";
+  private static final String tooltipFiltered = 
+      "<div class=\"literatumPublicationContentWidget\">" +
+      "<a class=\"entryAuthor\" href=\"/author/Ya%2C+X\"> X. Ya</a>" +
+      ", " +
+      "</div>";
+  
 
 // ?? use this block when manifest pages are up  
 //    private static final String manifestList =
@@ -262,9 +278,9 @@ public class TestWageningenJournalsHtmlFilterFactory extends LockssTestCase {
     InputStream actIn; 
     actIn = fact.createFilteredInputStream(au, 
         new StringInputStream(nameToHash), Constants.DEFAULT_ENCODING);
-    // for debug
-    // String actualStr = StringUtil.fromInputStream(actIn);
-    // assertEquals(expectedStr, actualStr);
+    //for debug
+    //String actualStr = StringUtil.fromInputStream(actIn);
+    //assertEquals(expectedStr, actualStr);
     assertEquals(expectedStr, StringUtil.fromInputStream(actIn));
   }
   
@@ -309,6 +325,7 @@ public class TestWageningenJournalsHtmlFilterFactory extends LockssTestCase {
                    articleMetaDropFilteredStr);         
       doFilterTest(wau, variantFact, withArticleToolsExceptDownloadCitation2, 
                    articleToolsFilteredStr2);
+      doFilterTest(wau, variantFact, tooltipHtml, tooltipFiltered);
 //      doFilterTest(eau, variantFact, manifestList, 
 //                   manifestListFilteredStr);
 //      doFilterTest(eau, variantFact, nonManifestList1, 
