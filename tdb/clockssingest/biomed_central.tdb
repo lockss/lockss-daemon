@@ -6,7 +6,7 @@
   >
   
   rights = openaccess
-  plugin = org.lockss.plugin.springer.link.SpringerLinkJournalsPlugin
+  plugin = org.lockss.plugin.springer.link.ClockssSpringerLinkJournalsPlugin
   param[base_url] = http://link.springer.com/
   param[download_url] = http://download.springer.com/
   implicit < status ; status2 ; year ; name ; param[volume_name] >
@@ -5599,7 +5599,7 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
       param[journal_eissn] = 2052-9538
       comment[journal_code] = bmcobes
 
-      au < finished ; manifest ; 2014 ; BMC Obesity Volume 1 ; 1 >
+      au < doNotProcess ; doNotProcess ; 2014 ; BMC Obesity Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2015 ; BMC Obesity Volume 2 ; 2 >
 
     }
@@ -5725,11 +5725,6 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
       comment[journal_code] = bmcpharmacoltoxicol
       comment[0] = This journal and issn start at Volume 13 in 2012, other volumes use another issn
 
-      au < superseded ; exists ; 2007 ; BMC Pharmacology and Toxicology Volume 8 [to delete] ; 8 >
-      au < superseded ; exists ; 2008 ; BMC Pharmacology and Toxicology Volume 9 [to delete] ; 9 >
-      au < superseded ; exists ; 2009 ; BMC Pharmacology and Toxicology Volume 10 [to delete] ; 10 >
-      au < superseded ; exists ; 2010 ; BMC Pharmacology and Toxicology Volume 11 [to delete] ; 11 >
-      au < superseded ; exists ; 2011 ; BMC Pharmacology and Toxicology Volume 12 [to delete] ; 12 >
       au < doNotProcess ; doNotProcess ; 2012 ; BMC Pharmacology and Toxicology Volume 13 ; 13 >
       au < doNotProcess ; doNotProcess ; 2013 ; BMC Pharmacology and Toxicology Volume 14 ; 14 >
       au < doNotProcess ; doNotProcess ; 2014 ; BMC Pharmacology and Toxicology Volume 15 ; 15 >
