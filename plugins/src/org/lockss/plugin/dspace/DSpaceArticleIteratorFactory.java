@@ -62,8 +62,12 @@ implements ArticleIteratorFactory,
       throws PluginException {
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
 
-    final Pattern CONTENT_PATTERN = Pattern.compile(
-       "bitstream/([0-9]+/[0-9]+)(/.*\\.pdf)$",
+    //final Pattern CONTENT_PATTERN = Pattern.compile(
+    //   "bitstream/([0-9]+/[0-9]+)(/.*\\.pdf)$",
+    //   Pattern.CASE_INSENSITIVE);
+    
+    final Pattern ABSTRACT_PATTERN = Pattern.compile(
+       "handle/([0-9]+/[0-9]+)$",
        Pattern.CASE_INSENSITIVE);
     
     final String ABSTRACT_REPLACEMENT = "handle/$1";
@@ -73,12 +77,8 @@ implements ArticleIteratorFactory,
         ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
     
     builder.addAspect(
-    		CONTENT_PATTERN,
-            CONTENT_REPLACEMENT,
-            ArticleFiles.ROLE_FULL_TEXT_PDF);
-
-    builder.addAspect(
-        ABSTRACT_REPLACEMENT,
+    		ABSTRACT_PATTERN,
+            ABSTRACT_REPLACEMENT,
         ArticleFiles.ROLE_ABSTRACT, 
         ArticleFiles.ROLE_ARTICLE_METADATA);
 

@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -78,6 +78,14 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>au_exclude_urls_from_polls_pattern</string>
+    <string>"^%s.*/request?verb=GetRecord&amp;[^/]+$", base_url</string>
+  </entry>
+  <entry>
+    <string>au_exclude_urls_from_poll_results_pattern</string> 
+    <string>"^%s.*/request?verb=GetRecord&amp;[^/]+$", base_url</string>
   </entry>
   <entry>
     <string>plugin_crawl_seed_factory</string>
