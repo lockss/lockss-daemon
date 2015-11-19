@@ -5578,6 +5578,19 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
 
     {
       title <
+        name = BMC Nutrition ;
+        eissn = 2055-0928 ;
+        issnl = 2055-0928
+      >
+
+      param[journal_eissn] = 2055-0928
+
+      au < exists ; exists ; 2015 ; BMC Nutrition Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
         name = BMC Obesity ;
         eissn = 2052-9538 ;
         issnl = 2052-9538
