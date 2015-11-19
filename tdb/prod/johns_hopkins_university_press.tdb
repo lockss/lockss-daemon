@@ -645,6 +645,29 @@
 
     {
 
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 1990 ; Children's Literature Association Quarterly Volume 15 ; 15 >
+      au < manifest ; 1990 ; Children's Literature Association Quarterly 1990 Proceedings ; 1990 >
+      au < manifest ; 1991 ; Children's Literature Association Quarterly Volume 16 ; 16 >
+      au < manifest ; 1991 ; Children's Literature Association Quarterly 1991 Proceedings ; 1991 >
+      au < manifest ; 1992 ; Children's Literature Association Quarterly Volume 17 ; 17 >
+      au < manifest ; 1993 ; Children's Literature Association Quarterly Volume 18 ; 18 >
+      au < manifest ; 1994 ; Children's Literature Association Quarterly Volume 19 ; 19 >
+      au < manifest ; 1995 ; Children's Literature Association Quarterly Volume 20 ; 20 >
+      au < manifest ; 1996 ; Children's Literature Association Quarterly Volume 21 ; 21 >
+      au < manifest ; 1997 ; Children's Literature Association Quarterly Volume 22 ; 22 >
+      au < manifest ; 1998 ; Children's Literature Association Quarterly Volume 23 ; 23 >
+      au < manifest ; 1999 ; Children's Literature Association Quarterly Volume 24 ; 24 >
+      au < manifest ; 2000 ; Children's Literature Association Quarterly Volume 25 ; 25 >
+      au < manifest ; 2001 ; Children's Literature Association Quarterly Volume 26 ; 26 >
+      au < manifest ; 2002 ; Children's Literature Association Quarterly Volume 27 ; 27 >
+      au < manifest ; 2003 ; Children's Literature Association Quarterly Volume 28 ; 28 >
+
+    }
+
+    {
+
       param[base_url] = http://muse.jhu.edu/
 
       au < released ; 2004 ; Children's Literature Association Quarterly Volume 29 ; 29 >
@@ -668,7 +691,6 @@
       au < released ; 2015 ; Children's Literature Association Quarterly Volume 40 ; 40 >
 
     }
-
 
   }
 
@@ -1085,11 +1107,11 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < exists ; 1999-2000 ; Historically Speaking Volume 1 ; 1 >
-      au < exists ; 2000-2001 ; Historically Speaking Volume 2 ; 2 >
-      au < exists ; 2001-2002 ; Historically Speaking Volume 3 ; 3 >
-      au < exists ; 2002-2003 ; Historically Speaking Volume 4 ; 4 >
-      au < exists ; 2003-2004 ; Historically Speaking Volume 5 ; 5 >
+      au < manifest ; 1999-2000 ; Historically Speaking Volume 1 ; 1 >
+      au < manifest ; 2000-2001 ; Historically Speaking Volume 2 ; 2 >
+      au < manifest ; 2001-2002 ; Historically Speaking Volume 3 ; 3 >
+      au < manifest ; 2002-2003 ; Historically Speaking Volume 4 ; 4 >
+      au < manifest ; 2003-2004 ; Historically Speaking Volume 5 ; 5 >
 
     }
 
@@ -1838,6 +1860,25 @@
 
     param[journal_dir] = late_imperial_china
     attr[journal_id] = late
+    #Formerly called Ch'ing-shih wen-t'i through Volume 5 (Print ISSN: 0577-9235)
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 1985 ; Late Imperial China Volume 6 ; 6 >
+      au < manifest ; 1986 ; Late Imperial China Volume 7 ; 7 >
+      au < manifest ; 1987 ; Late Imperial China Volume 8 ; 8 >
+      au < manifest ; 1988 ; Late Imperial China Volume 9 ; 9 >
+      au < manifest ; 1989 ; Late Imperial China Volume 10 ; 10 >
+      au < manifest ; 1990 ; Late Imperial China Volume 11 ; 11 >
+      au < manifest ; 1991 ; Late Imperial China Volume 12 ; 12 >
+      au < manifest ; 1992 ; Late Imperial China Volume 13 ; 13 >
+      au < manifest ; 1993 ; Late Imperial China Volume 14 ; 14 >
+      au < manifest ; 1994 ; Late Imperial China Volume 15 ; 15 >
+      au < manifest ; 1995 ; Late Imperial China Volume 16 ; 16 >
+
+    }
 
     {
 
@@ -1872,7 +1913,6 @@
       au < released ; 2015 ; Late Imperial China Volume 36 ; 36 >
 
     }
-
 
   }
 
