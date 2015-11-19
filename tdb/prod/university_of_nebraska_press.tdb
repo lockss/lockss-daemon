@@ -368,6 +368,30 @@
   {
   
     title <
+      name = Journal of Black Sexuality and Relationships ;
+      issn = 2334-2668 ;
+      eissn = 2376-7510 ;
+      issnl = 2334-2668 
+    >
+
+    param[journal_dir] = journal_of_black_sexuality_and_relationships
+    attr[journal_id] = bsr
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2014-2015 ; Journal of Black Sexuality and Relationships Volume 1 ; 1 >
+      au < manifest ; 2015-2016 ; Journal of Black Sexuality and Relationships Volume 2 ; 2 >
+
+    }
+
+    
+  }
+
+  {
+  
+    title <
       name = Journal of Literature and Trauma Studies ;
       issn = 2162-3627 ;
       eissn = 2045-4740 ;

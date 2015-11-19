@@ -1340,6 +1340,18 @@
 
     {
 
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 1990 ; Journal of Democracy Volume 1 ; 1 >
+      au < manifest ; 1991 ; Journal of Democracy Volume 2 ; 2 >
+      au < manifest ; 1992 ; Journal of Democracy Volume 3 ; 3 >
+      au < manifest ; 1993 ; Journal of Democracy Volume 4 ; 4 >
+      au < manifest ; 1994 ; Journal of Democracy Volume 5 ; 5 >
+
+    }
+
+    {
+
       param[base_url] = http://muse.jhu.edu/
 
       au < released ; 1995 ; Journal of Democracy Volume 6 ; 6 >
@@ -1389,6 +1401,16 @@
 
     {
 
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 1993 ; Journal of Early Christian Studies Volume 1 ; 1 >
+      au < manifest ; 1994 ; Journal of Early Christian Studies Volume 2 ; 2 >
+      au < manifest ; 1995 ; Journal of Early Christian Studies Volume 3 ; 3 >
+
+    }
+
+    {
+
       param[base_url] = http://muse.jhu.edu/
 
       au < released ; 1996 ; Journal of Early Christian Studies Volume 4 ; 4 >
@@ -1421,7 +1443,6 @@
 
     }
 
-
   }
 
   {
@@ -1434,6 +1455,27 @@
 
     param[journal_dir] = journal_of_health_care_for_the_poor_and_underserved
     attr[journal_id] = hpu
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 1990-1991 ; Journal of Health Care for the Poor and Underserved Volume 1 ; 1 >
+      au < manifest ; 1991 ; Journal of Health Care for the Poor and Underserved Volume 2 ; 2 >
+      au < manifest ; 1992 ; Journal of Health Care for the Poor and Underserved Volume 3 ; 3 >
+      au < manifest ; 1993 ; Journal of Health Care for the Poor and Underserved Volume 4 ; 4 >
+      au < manifest ; 1994 ; Journal of Health Care for the Poor and Underserved Volume 5 ; 5 >
+      au < manifest ; 1995 ; Journal of Health Care for the Poor and Underserved Volume 6 ; 6 >
+      au < manifest ; 1996 ; Journal of Health Care for the Poor and Underserved Volume 7 ; 7 >
+      au < manifest ; 1997 ; Journal of Health Care for the Poor and Underserved Volume 8 ; 8 >
+      au < manifest ; 1998 ; Journal of Health Care for the Poor and Underserved Volume 9 ; 9 >
+      au < manifest ; 1999 ; Journal of Health Care for the Poor and Underserved Volume 10 ; 10 >
+      au < manifest ; 2000 ; Journal of Health Care for the Poor and Underserved Volume 11 ; 11 >
+      au < manifest ; 2001 ; Journal of Health Care for the Poor and Underserved Volume 12 ; 12 >
+      au < manifest ; 2002 ; Journal of Health Care for the Poor and Underserved Volume 13 ; 13 >
+      au < manifest ; 2003 ; Journal of Health Care for the Poor and Underserved Volume 14 ; 14 >
+
+    }
 
     {
 
@@ -1460,7 +1502,6 @@
       au < released ; 2015 ; Journal of Health Care for the Poor and Underserved Volume 26 ; 26 >
 
     }
-
 
   }
 

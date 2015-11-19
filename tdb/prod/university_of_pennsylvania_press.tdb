@@ -401,6 +401,28 @@
 
   {
     title <
+      name = Journal of Ecumenical Studies ;
+      issn = 0022-0558 ;
+      eissn = 2162-3937 ;
+      issnl = 0022-0558
+    >
+
+    param[journal_dir] = journal_of_ecumenical_studies
+    attr[journal_id] = ecu
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < manifest ; 2015 ; JJournal of Ecumenical Studies Volume 50 ; 50 >
+
+    }
+
+
+  }
+
+  {
+    title <
       name = Journal of the History of Ideas ;
       issn = 1086-3222 ;
       eissn = 0022-5037 ;
