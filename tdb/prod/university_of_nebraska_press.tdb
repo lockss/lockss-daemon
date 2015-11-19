@@ -522,8 +522,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; Middle West Review 1 ; 1 >
-      au < testing ; 2015 ; Middle West Review 2 ; 2 >
+      au < ready ; 2014 ; Middle West Review 1 ; 1 >
+      au < ready ; 2015 ; Middle West Review 2 ; 2 >
 
     }
 
@@ -761,7 +761,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014-2015 ; Qui Parle: Critical Humanities and Social Sciences Volume 23 ; 23 >
+      au < ready ; 2014-2015 ; Qui Parle: Critical Humanities and Social Sciences Volume 23 ; 23 >
 
     }
 
@@ -783,8 +783,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2013-2014 ; Resilience: A Journal of the Environmental Humanities Volume 1 ; 1 >
-      au < testing ; 2014-2015 ; Resilience: A Journal of the Environmental Humanities Volume 2 ; 2 >
+      au < ready ; 2013-2014 ; Resilience: A Journal of the Environmental Humanities Volume 1 ; 1 >
+      au < ready ; 2014-2015 ; Resilience: A Journal of the Environmental Humanities Volume 2 ; 2 >
 
     }
 
@@ -997,7 +997,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; The Undecidable Unconscious: A Journal of Deconstruction and Psychoanalysis Volume 1 ; 1 >
+      au < ready ; 2014 ; The Undecidable Unconscious: A Journal of Deconstruction and Psychoanalysis Volume 1 ; 1 >
       au < expected ; 2015 ; The Undecidable Unconscious: A Journal of Deconstruction and Psychoanalysis Volume 2 ; 2 >
 
     }

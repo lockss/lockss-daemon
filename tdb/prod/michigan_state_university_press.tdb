@@ -41,7 +41,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; CR: The New Centennial Review Volume 14 ; 14 ; 14 >
+      au < ready ; 2014 ; CR: The New Centennial Review Volume 14 ; 14 ; 14 >
       au < released ; 2015 ; CR: The New Centennial Review Volume 15 ; 15 ; 15 >
 
     }
@@ -290,9 +290,9 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2013 ; QED: A Journal in GLBTQ Worldmaking Inaugural Issue ; 0 ; 0 >
-      au < testing ; 2014 ; QED: A Journal in GLBTQ Worldmaking Volume 1 ; 1 ; 1s >
-      au < testing ; 2015 ; QED: A Journal in GLBTQ Worldmaking Volume 2 ; 2 ; 2 >
+      au < ready ; 2013 ; QED: A Journal in GLBTQ Worldmaking Inaugural Issue ; 0 ; 0 >
+      au < ready ; 2014 ; QED: A Journal in GLBTQ Worldmaking Volume 1 ; 1 ; 1s >
+      au < ready ; 2015 ; QED: A Journal in GLBTQ Worldmaking Volume 2 ; 2 ; 2 >
 
     }
 
@@ -367,7 +367,7 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < released ; 2014 ; Rhetoric & Public Affairs Volume 17 ; 17 ; 17 >
-      au < testing ; 2015 ; Rhetoric & Public Affairs Volume 18 ; 18 ; 18 >
+      au < ready ; 2015 ; Rhetoric & Public Affairs Volume 18 ; 18 ; 18 >
 
     }
 
