@@ -1026,7 +1026,7 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; DMW - Deutsche Medizinische Wochenschrift Volume 2007 ; 133 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; DMW - Deutsche Medizinische Wochenschrift Volume 2008 ; 134 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; DMW - Deutsche Medizinische Wochenschrift Volume 2009 ; 135 >
-   au < ready ; exists ; 2010 ; 2010 ; DMW - Deutsche Medizinische Wochenschrift Volume 2010 ; 136 >
+   au < crawling ; exists ; 2010 ; 2010 ; DMW - Deutsche Medizinische Wochenschrift Volume 2010 ; 136 >
    au < crawling ; exists ; 2011 ; 2011 ; DMW - Deutsche Medizinische Wochenschrift Volume 2011 ; 137 >
    au < crawling ; exists ; 2012 ; 2012 ; DMW - Deutsche Medizinische Wochenschrift Volume 2012 ; 138 >
    au < crawling ; exists ; 2013 ; 2013 ; DMW - Deutsche Medizinische Wochenschrift Volume 2013 ; 139 >
@@ -1237,9 +1237,9 @@
 
    au < doNotProcess ; exists ; 2008 ; 2008 ; Ergopraxis Volume 2008 ; 1 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Ergopraxis Volume 2009 ; 2 >
-   au < ready ; exists ; 2010 ; 2010 ; Ergopraxis Volume 2010 ; 3 >
+   au < crawling ; exists ; 2010 ; 2010 ; Ergopraxis Volume 2010 ; 3 >
    au < ready ; exists ; 2011 ; 2011 ; Ergopraxis Volume 2011 ; 4 >
-   au < ready ; exists ; 2012 ; 2012 ; Ergopraxis Volume 2012 ; 5 >
+   au < crawling ; exists ; 2012 ; 2012 ; Ergopraxis Volume 2012 ; 5 >
    au < crawling ; exists ; 2013 ; 2013 ; Ergopraxis Volume 2013 ; 6 >
    au < finished ; finished ; 2014 ; 2014 ; Ergopraxis Volume 2014 ; 7 >
    au < crawling ; exists ; 2015 ; 2015 ; Ergopraxis Volume 2015 ; 8 >
@@ -1327,7 +1327,7 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; European Journal of Pediatric Surgery Volume 2007 ; 17 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; European Journal of Pediatric Surgery Volume 2008 ; 18 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; European Journal of Pediatric Surgery Volume 2009 ; 19 >
-   au < ready ; exists ; 2010 ; 2010 ; European Journal of Pediatric Surgery Volume 2010 ; 20 >
+   au < crawling ; exists ; 2010 ; 2010 ; European Journal of Pediatric Surgery Volume 2010 ; 20 >
    au < ready ; exists ; 2011 ; 2011 ; European Journal of Pediatric Surgery Volume 2011 ; 21 >
    au < crawling ; exists ; 2012 ; 2012 ; European Journal of Pediatric Surgery Volume 2012 ; 22 >
    au < crawling ; exists ; 2013 ; 2013 ; European Journal of Pediatric Surgery Volume 2013 ; 23 >
@@ -1386,9 +1386,9 @@
 
    au < crawling ; exists ; 2010 ; 2010 ; Evidence-Based Spine-Care Journal Volume 2010 ; 1 >
    au < crawling ; exists ; 2011 ; 2011 ; Evidence-Based Spine-Care Journal Volume 2011 ; 2 >
-   au < ready ; exists ; 2012 ; 2012 ; Evidence-Based Spine-Care Journal Volume 2012 ; 3 >
+   au < crawling ; exists ; 2012 ; 2012 ; Evidence-Based Spine-Care Journal Volume 2012 ; 3 >
    au < ready ; exists ; 2013 ; 2013 ; Evidence-Based Spine-Care Journal Volume 2013 ; 4 >
-   au < ready ; exists ; 2014 ; 2014 ; Evidence-Based Spine-Care Journal Volume 2014 ; 5 >
+   au < crawling ; exists ; 2014 ; 2014 ; Evidence-Based Spine-Care Journal Volume 2014 ; 5 >
    au < expected ; exists ; 2015 ; 2015 ; Evidence-Based Spine-Care Journal Volume 2015 ; 6 >
 
   }
@@ -1519,7 +1519,7 @@
    au < doNotProcess ; exists ; 2008 ; 2008 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2008 ; 15 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2009 ; 16 >
    au < crawling ; exists ; 2010 ; 2010 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2010 ; 17 >
-   au < ready ; exists ; 2011 ; 2011 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2011 ; 18 >
+   au < crawling ; exists ; 2011 ; 2011 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2011 ; 18 >
    au < crawling ; exists ; 2012 ; 2012 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2012 ; 19 >
    au < crawling ; exists ; 2013 ; 2013 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2013 ; 20 >
    au < crawling ; exists ; 2014 ; 2014 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2014 ; 21 >
@@ -1571,7 +1571,7 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; Fortschritte der Neurologie - Psychiatrie Volume 2009 ; 77 >
    au < crawling ; exists ; 2010 ; 2010 ; Fortschritte der Neurologie - Psychiatrie Volume 2010 ; 78 >
    au < crawling ; exists ; 2011 ; 2011 ; Fortschritte der Neurologie - Psychiatrie Volume 2011 ; 79 >
-   au < ready ; exists ; 2012 ; 2012 ; Fortschritte der Neurologie - Psychiatrie Volume 2012 ; 80 >
+   au < crawling ; exists ; 2012 ; 2012 ; Fortschritte der Neurologie - Psychiatrie Volume 2012 ; 80 >
    au < finished ; finished ; 2013 ; 2013 ; Fortschritte der Neurologie - Psychiatrie Volume 2013 ; 81 >
    au < crawling ; exists ; 2014 ; 2014 ; Fortschritte der Neurologie - Psychiatrie Volume 2014 ; 82 >
    au < crawling ; exists ; 2015 ; 2015 ; Fortschritte der Neurologie - Psychiatrie Volume 2015 ; 83 >
@@ -1617,7 +1617,7 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Gastroenterologie up2dat Volume 2007 ; 3 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Gastroenterologie up2dat Volume 2008 ; 4 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Gastroenterologie up2dat Volume 2009 ; 5 >
-   au < ready ; exists ; 2010 ; 2010 ; Gastroenterologie up2dat Volume 2010 ; 6 >
+   au < crawling ; exists ; 2010 ; 2010 ; Gastroenterologie up2dat Volume 2010 ; 6 >
    au < crawling ; exists ; 2011 ; 2011 ; Gastroenterologie up2dat Volume 2011 ; 7 >
    au < crawling ; exists ; 2012 ; 2012 ; Gastroenterologie up2dat Volume 2012 ; 8 >
    au < crawling ; exists ; 2013 ; 2013 ; Gastroenterologie up2dat Volume 2013 ; 9 >
@@ -1877,7 +1877,7 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Homoeopathic Links Volume 2007 ; 20 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Homoeopathic Links Volume 2008 ; 21 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Homoeopathic Links Volume 2009 ; 22 >
-   au < ready ; exists ; 2010 ; 2010 ; Homoeopathic Links Volume 2010 ; 23 >
+   au < crawling ; exists ; 2010 ; 2010 ; Homoeopathic Links Volume 2010 ; 23 >
    au < crawling ; exists ; 2011 ; 2011 ; Homoeopathic Links Volume 2011 ; 24 >
    au < ready ; exists ; 2012 ; 2012 ; Homoeopathic Links Volume 2012 ; 25 >
    au < crawling ; exists ; 2013 ; 2013 ; Homoeopathic Links Volume 2013 ; 26 >
@@ -2183,7 +2183,7 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; International Journal of Sports Medicine Volume 2008 ; 29 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; International Journal of Sports Medicine Volume 2009 ; 30 >
     au < crawling ; exists ; 2010 ; 2010 ; International Journal of Sports Medicine Volume 2010 ; 31 >
-    au < ready ; exists ; 2011 ; 2011 ; International Journal of Sports Medicine Volume 2011 ; 32 >
+    au < crawling ; exists ; 2011 ; 2011 ; International Journal of Sports Medicine Volume 2011 ; 32 >
     au < crawling ; exists ; 2012 ; 2012 ; International Journal of Sports Medicine Volume 2012 ; 33 >
     au < crawling ; exists ; 2013 ; 2013 ; International Journal of Sports Medicine Volume 2013 ; 34 >
     au < crawling ; exists ; 2014 ; 2014 ; International Journal of Sports Medicine Volume 2014 ; 35 >
@@ -2578,8 +2578,8 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; Klinikarzt Der Volume 2008 ; 37 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Klinikarzt Der Volume 2009 ; 38 >
     au < crawling ; exists ; 2010 ; 2010 ; Klinikarzt Der Volume 2010 ; 39 >
-    au < ready ; exists ; 2011 ; 2011 ; Klinikarzt Der Volume 2011 ; 40 >
-    au < ready ; exists ; 2012 ; 2012 ; Klinikarzt Der Volume 2012 ; 41 >
+    au < crawling ; exists ; 2011 ; 2011 ; Klinikarzt Der Volume 2011 ; 40 >
+    au < crawling ; exists ; 2012 ; 2012 ; Klinikarzt Der Volume 2012 ; 41 >
     au < crawling ; exists ; 2013 ; 2013 ; Klinikarzt Der Volume 2013 ; 42 >
     au < crawling ; exists ; 2014 ; 2014 ; Klinikarzt Der Volume 2014 ; 43 >
     au < crawling ; exists ; 2015 ; 2015 ; Klinikarzt Der Volume 2015 ; 44 >
@@ -2873,7 +2873,7 @@
     comment[years] = 2011-current
 
     au < ready ; exists ; 2011 ; 2011 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2011 ; 1 >
-    au < ready ; exists ; 2012 ; 2012 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2012 ; 2 >
+    au < crawling ; exists ; 2012 ; 2012 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2012 ; 2 >
     au < crawling ; exists ; 2013 ; 2013 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2013 ; 3 >
     au < crawling ; exists ; 2014 ; 2014 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2014 ; 4 >
     au < crawling ; exists ; 2015 ; 2015 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2015 ; 5 >
@@ -2899,7 +2899,7 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; manuelletherapie Volume 2009 ; 13 >
     au < crawling ; exists ; 2010 ; 2010 ; manuelletherapie Volume 2010 ; 14 >
     au < crawling ; exists ; 2011 ; 2011 ; manuelletherapie Volume 2011 ; 15 >
-    au < ready ; exists ; 2012 ; 2012 ; manuelletherapie Volume 2012 ; 16 >
+    au < crawling ; exists ; 2012 ; 2012 ; manuelletherapie Volume 2012 ; 16 >
     au < crawling ; exists ; 2013 ; 2013 ; manuelletherapie Volume 2013 ;  17 >
     au < crawling ; exists ; 2014 ; 2014 ; manuelletherapie Volume 2014 ;  18 >
     au < crawling ; exists ; 2015 ; 2015 ; manuelletherapie Volume 2015 ;  19 >
@@ -3091,7 +3091,7 @@
     param[journal_id] = 10.1055/s-00000173
     comment[years] = 2011-current
 
-    au < ready ; exists ; 2011 ; 2011 ; Neuroradiologie Scan Volume 2011 ; 1 >
+    au < crawling ; exists ; 2011 ; 2011 ; Neuroradiologie Scan Volume 2011 ; 1 >
     au < ready ; exists ; 2012 ; 2012 ; Neuroradiologie Scan Volume 2012 ; 2 >
     au < crawling ; exists ; 2013 ; 2013 ; Neuroradiologie Scan Volume 2013 ; 3 >
     au < crawling ; exists ; 2014 ; 2014 ; Neuroradiologie Scan Volume 2014 ; 4 >
@@ -3111,7 +3111,7 @@
     comment[years] = 2009-current
 
     au < doNotProcess ; exists ; 2009 ; 2009 ; neuroreha Volume 2009 ; 1 >
-    au < ready ; exists ; 2010 ; 2010 ; neuroreha Volume 2010 ; 2 >
+    au < crawling ; exists ; 2010 ; 2010 ; neuroreha Volume 2010 ; 2 >
     au < ready ; exists ; 2011 ; 2011 ; neuroreha Volume 2011 ; 3 >
     au < crawling ; exists ; 2012 ; 2012 ; neuroreha Volume 2012 ; 4 >
     au < crawling ; exists ; 2013 ; 2013 ; neuroreha Volume 2013 ; 5 >
@@ -3275,7 +3275,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; OP-Journal Volume 2007 ; 23 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; OP-Journal Volume 2008 ; 24 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; OP-Journal Volume 2009 ; 25 >
-    au < ready ; exists ; 2010 ; 2010 ; OP-Journal Volume 2010 ; 26 >
+    au < crawling ; exists ; 2010 ; 2010 ; OP-Journal Volume 2010 ; 26 >
     au < ready ; exists ; 2011 ; 2011 ; OP-Journal Volume 2011 ; 27 >
     au < crawling ; exists ; 2012 ; 2012 ; OP-Journal Volume 2012 ; 28 >
     au < crawling ; exists ; 2013 ; 2013 ; OP-Journal Volume 2013 ; 29 >
@@ -3319,7 +3319,7 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; Orthopädie und Unfallchirurgie up2date Volume 2008 ; 03 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Orthopädie und Unfallchirurgie up2date Volume 2009 ; 04 >
     au < ready ; exists ; 2010 ; 2010 ; Orthopädie und Unfallchirurgie up2date Volume 2010 ; 05 >
-    au < ready ; exists ; 2011 ; 2011 ; Orthopädie und Unfallchirurgie up2date Volume 2011 ; 06 >
+    au < crawling ; exists ; 2011 ; 2011 ; Orthopädie und Unfallchirurgie up2date Volume 2011 ; 06 >
     au < crawling ; exists ; 2012 ; 2012 ; Orthopädie und Unfallchirurgie up2date Volume 2012 ; 07 >
     au < crawling ; exists ; 2013 ; 2013 ; Orthopädie und Unfallchirurgie up2date Volume 2013 ; 08 >
     au < crawling ; exists ; 2014 ; 2014 ; Orthopädie und Unfallchirurgie up2date Volume 2014 ; 07 >
@@ -3347,7 +3347,7 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; Orthopedic Trauma Directions Volume 2008 ; 6 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Orthopedic Trauma Directions Volume 2009 ; 7 >
     au < crawling ; exists ; 2010 ; 2010 ; Orthopedic Trauma Directions Volume 2010 ; 8 >
-    au < ready ; exists ; 2011 ; 2011 ; Orthopedic Trauma Directions Volume 2011 ; 9 >
+    au < crawling ; exists ; 2011 ; 2011 ; Orthopedic Trauma Directions Volume 2011 ; 9 >
 
   }
 
@@ -3494,7 +3494,7 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; Pharmacopsychiatry Volume 2008 ; 41 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Pharmacopsychiatry Volume 2009 ; 42 >
     au < ready ; exists ; 2010 ; 2010 ; Pharmacopsychiatry Volume 2010 ; 43 >
-    au < ready ; exists ; 2011 ; 2011 ; Pharmacopsychiatry Volume 2011 ; 44 >
+    au < crawling ; exists ; 2011 ; 2011 ; Pharmacopsychiatry Volume 2011 ; 44 >
     au < crawling ; exists ; 2012 ; 2012 ; Pharmacopsychiatry Volume 2012 ; 45 >
     au < crawling ; exists ; 2013 ; 2013 ; Pharmacopsychiatry Volume 2013 ; 46 >
     au < crawling ; exists ; 2014 ; 2014 ; Pharmacopsychiatry Volume 2014 ; 47 >
@@ -3610,7 +3610,7 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; PiD - Psychotherapie im Dialog Volume 2008 ; 9 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; PiD - Psychotherapie im Dialog Volume 2009 ; 10 >
     au < ready ; exists ; 2010 ; 2010 ; PiD - Psychotherapie im Dialog Volume 2010 ; 11 >
-    au < ready ; exists ; 2011 ; 2011 ; PiD - Psychotherapie im Dialog Volume 2011 ; 12 >
+    au < crawling ; exists ; 2011 ; 2011 ; PiD - Psychotherapie im Dialog Volume 2011 ; 12 >
     au < crawling ; exists ; 2012 ; 2012 ; PiD - Psychotherapie im Dialog Volume 2012 ; 13 >
     au < crawling ; exists ; 2013 ; 2013 ; PiD - Psychotherapie im Dialog Volume 2013 ; 14 >
     au < crawling ; exists ; 2014 ; 2014 ; PiD - Psychotherapie im Dialog Volume 2014 ; 15 >
@@ -3887,7 +3887,7 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; Psychiatrische Praxis Volume 2009 ; 36 >
    au < crawling ; exists ; 2010 ; 2010 ; Psychiatrische Praxis Volume 2010 ; 37 >
    au < crawling ; exists ; 2011 ; 2011 ; Psychiatrische Praxis Volume 2011 ; 38 >
-   au < ready ; exists ; 2012 ; 2012 ; Psychiatrische Praxis Volume 2012 ; 39 >
+   au < crawling ; exists ; 2012 ; 2012 ; Psychiatrische Praxis Volume 2012 ; 39 >
    au < crawling ; exists ; 2013 ; 2013 ; Psychiatrische Praxis Volume 2013 ; 40 >
    au < crawling ; exists ; 2014 ; 2014 ; Psychiatrische Praxis Volume 2014 ; 41 >
    au < crawling ; exists ; 2015 ; 2015 ; Psychiatrische Praxis Volume 2015 ; 42 >
@@ -4008,8 +4008,8 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Rehabilitation Die Volume 2007 ; 46 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Rehabilitation Die Volume 2008 ; 47 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Rehabilitation Die Volume 2009 ; 48 >
-   au < ready ; exists ; 2010 ; 2010 ; Rehabilitation Die Volume 2010 ; 49 >
-   au < ready ; exists ; 2011 ; 2011 ; Rehabilitation Die Volume 2011 ; 50 >
+   au < crawling ; exists ; 2010 ; 2010 ; Rehabilitation Die Volume 2010 ; 49 >
+   au < crawling ; exists ; 2011 ; 2011 ; Rehabilitation Die Volume 2011 ; 50 >
    au < ready ; exists ; 2012 ; 2012 ; Rehabilitation Die Volume 2012 ; 51 >
    au < crawling ; exists ; 2013 ; 2013 ; Rehabilitation Die Volume 2013 ; 52 >
    au < crawling ; exists ; 2014 ; 2014 ; Rehabilitation Die Volume 2014 ; 53 >
@@ -4459,7 +4459,7 @@
    au < doNotProcess ; exists ; 2008 ; 2008 ; Seminars in Reproductive Medicine Volume 2008 ; 26 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Seminars in Reproductive Medicine Volume 2009 ; 27 >
    au < crawling ; exists ; 2010 ; 2010 ; Seminars in Reproductive Medicine Volume 2010 ; 28 >
-   au < ready ; exists ; 2011 ; 2011 ; Seminars in Reproductive Medicine Volume 2011 ; 29 >
+   au < crawling ; exists ; 2011 ; 2011 ; Seminars in Reproductive Medicine Volume 2011 ; 29 >
    au < crawling ; exists ; 2012 ; 2012 ; Seminars in Reproductive Medicine Volume 2012 ; 30 >
    au < crawling ; exists ; 2013 ; 2013 ; Seminars in Reproductive Medicine Volume 2013 ; 31 >
    au < crawling ; exists ; 2014 ; 2014 ; Seminars in Reproductive Medicine Volume 2014 ; 32 >
@@ -4495,8 +4495,8 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Seminars in Respiratory and Critical Care Medicine Volume 2007 ; 28 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Seminars in Respiratory and Critical Care Medicine Volume 2008 ; 29 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Seminars in Respiratory and Critical Care Medicine Volume 2009 ; 30 >
-   au < ready ; exists ; 2010 ; 2010 ; Seminars in Respiratory and Critical Care Medicine Volume 2010 ; 31 >
-   au < ready ; exists ; 2011 ; 2011 ; Seminars in Respiratory and Critical Care Medicine Volume 2011 ; 32 >
+   au < crawling ; exists ; 2010 ; 2010 ; Seminars in Respiratory and Critical Care Medicine Volume 2010 ; 31 >
+   au < crawling ; exists ; 2011 ; 2011 ; Seminars in Respiratory and Critical Care Medicine Volume 2011 ; 32 >
    au < ready ; exists ; 2012 ; 2012 ; Seminars in Respiratory and Critical Care Medicine Volume 2012 ; 33 >
    au < crawling ; exists ; 2013 ; 2013  ; Seminars in Respiratory and Critical Care Medicine Volume 2013 ; 34 >
    au < crawling ; exists ; 2014 ; 2014  ; Seminars in Respiratory and Critical Care Medicine Volume 2014 ; 35 >
@@ -4601,7 +4601,7 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; Seminars in Thrombosis and Hemostasis Volume 2009 ; 35 >
     au < ready ; exists ; 2010 ; 2010 ; Seminars in Thrombosis and Hemostasis Volume 2010 ; 36 >
     au < ready ; exists ; 2011 ; 2011 ; Seminars in Thrombosis and Hemostasis Volume 2011 ; 37 >
-    au < ready ; exists ; 2012 ; 2012 ; Seminars in Thrombosis and Hemostasis Volume 2012 ; 38 >
+    au < crawling ; exists ; 2012 ; 2012 ; Seminars in Thrombosis and Hemostasis Volume 2012 ; 38 >
     au < crawling ; exists ; 2013 ; 2013 ; Seminars in Thrombosis and Hemostasis Volume 2013 ; 39 >
     au < crawling ; exists ; 2014 ; 2014 ; Seminars in Thrombosis and Hemostasis Volume 2014 ; 40 >
     au < crawling ; exists ; 2015 ; 2015 ; Seminars in Thrombosis and Hemostasis Volume 2015 ; 41 >
@@ -4627,7 +4627,7 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2008 ; 5 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2009 ; 6 >
     au < ready ; exists ; 2010 ; 2010 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2010 ; 7 >
-    au < ready ; exists ; 2011 ; 2011 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2011 ; 8 >
+    au < crawling ; exists ; 2011 ; 2011 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2011 ; 8 >
     au < ready ; exists ; 2012 ; 2012 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2012 ; 9 >
     au < crawling ; exists ; 2013 ; 2013 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2013 ; 10 >
     au < crawling ; exists ; 2014 ; 2014 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2014 ; 11 >
@@ -4789,7 +4789,7 @@
    au < doNotProcess ; exists ; 2008 ; 2008 ; Sprache Stimme Gehör Volume 2008 ; 32 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Sprache Stimme Gehör Volume 2009 ; 33 >
    au < crawling ; exists ; 2010 ; 2010 ; Sprache Stimme Gehör Volume 2010 ; 34 >
-   au < ready ; exists ; 2011 ; 2011 ; Sprache Stimme Gehör Volume 2011 ; 35 >
+   au < crawling ; exists ; 2011 ; 2011 ; Sprache Stimme Gehör Volume 2011 ; 35 >
    au < ready ; exists ; 2012 ; 2012 ; Sprache Stimme Gehör Volume 2012 ; 36 >
    au < crawling ; exists ; 2013 ; 2013 ; Sprache Stimme Gehör Volume 2013 ; 37 >
    au < crawling ; exists ; 2014 ; 2014 ; Sprache Stimme Gehör Volume 2014 ; 38 >
@@ -4847,7 +4847,7 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; SYNFACTS Volume 2009 ; 5 >
    au < ready ; exists ; 2010 ; 2010 ; SYNFACTS Volume 2010 ; 6 >
    au < ready ; exists ; 2011 ; 2011 ; SYNFACTS Volume 2011 ; 7 >
-   au < ready ; exists ; 2012 ; 2012 ; SYNFACTS Volume 2012 ; 8 >
+   au < crawling ; exists ; 2012 ; 2012 ; SYNFACTS Volume 2012 ; 8 >
    au < crawling ; exists ; 2013 ; 2013 ; SYNFACTS Volume 2013 ; 9 >
    au < crawling ; exists ; 2014 ; 2014 ; SYNFACTS Volume 2014 ; 10 >
    au < crawling ; exists ; 2015 ; 2015 ; SYNFACTS Volume 2015 ; 11 >
@@ -4887,7 +4887,7 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; SYNLETT Volume 2007 ; 18 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; SYNLETT Volume 2008 ; 19 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; SYNLETT Volume 2009 ; 20 >
-   au < ready ; exists ; 2010 ; 2010 ; SYNLETT Volume 2010 ; 21 >
+   au < crawling ; exists ; 2010 ; 2010 ; SYNLETT Volume 2010 ; 21 >
    au < testing ; exists ; 2011 ; 2011 ; SYNLETT Volume 2011 ; 22 >
    au < ready ; exists ; 2012 ; 2012 ; SYNLETT Volume 2012 ; 23 >
    au < crawling ; exists ; 2013 ; 2013 ; SYNLETT Volume 2013 ; 24 >
@@ -5668,8 +5668,8 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; Zeitschrift für Phytotherapie Volume 2009 ; 30 >
     au < crawling ; exists ; 2010 ; 2010 ; Zeitschrift für Phytotherapie Volume 2010 ; 31 >
     au < crawling ; exists ; 2011 ; 2011 ; Zeitschrift für Phytotherapie Volume 2011 ; 32 >
-    au < ready ; exists ; 2012 ; 2012 ; Zeitschrift für Phytotherapie Volume 2012 ; 33 >
-    au < ready ; exists ; 2013 ; 2013 ; Zeitschrift für Phytotherapie Volume 2013 ; 34 >
+    au < crawling ; exists ; 2012 ; 2012 ; Zeitschrift für Phytotherapie Volume 2012 ; 33 >
+    au < crawling ; exists ; 2013 ; 2013 ; Zeitschrift für Phytotherapie Volume 2013 ; 34 >
     au < crawling ; exists ; 2014 ; 2014 ; Zeitschrift für Phytotherapie Volume 2014 ; 35 >
     au < crawling ; exists ; 2015 ; 2015 ; Zeitschrift für Phytotherapie Volume 2015 ; 36 >
 
