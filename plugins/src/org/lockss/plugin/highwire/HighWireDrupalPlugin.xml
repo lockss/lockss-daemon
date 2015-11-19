@@ -25,7 +25,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>29</string>
+    <string>30</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -36,7 +36,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>17</string>
+        <string>18</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -116,13 +116,14 @@
       <string>2,"content/.+([.](print|explore|article-info)|/(article-info|rapid-responses|related|rr/|submit|peer-review))"</string>
       <string>2,"(?:[^?]+([?](sort|tab|form)|[.]index-by-author|most-(cited|read)|featured(_article|-podcasts)|(back-matter|ed-board)[.]pdf)|content/(by/|early/|[^{]+[{]))"</string>
       <string>2,"^https?://(?!elife)%s/content/(?!%s/)[0-9]+/[^/.?]+([.]toc)?$", url_host(base_url), volume_name</string>
+      <string>2,"\.medium\.gif[?](download|width)="</string>
       <!-- otherwise, all content from CDN -->
       <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn[.]mathjax[.]org|[^.]+\.cloudfront\.net|cdn[^.]*[.]elifesciences[.]org|static[^.]*[.]bmj[.]com)/."</string>
       <!-- no gifs from other volumes (use au_exclude_urls_from_poll_results_pattern if needed)
       <string>2,"^%scontent/(?!([^0-9][^/]+/)?(%s|suppl)/)[^?]*[.]gif", base_url, volume_name</string> -->
       <!-- all fonts, images, resources, css, js, etc. -->
       <string>1,"^https?://%s/[^?]*[.](?:bmp|gif|ico|jpe?g|png|tif?f|(css|js|eot|svg|ttf|woff)([?].*)?)$", url_host(base_url)</string>
-      <string>1,"^https?://%s[^?]*/highwire/jcore", url_host(base_url)</string>
+      <string>1,"^https?://%s/[^?]*highwire/jcore", url_host(base_url)</string>
       <!-- Do not crawl unless from base url -->
       <string>4,"^%s", base_url</string>
       <!-- Content from volume, suppl, or highwire(fs,mu,acp) trees  -->
