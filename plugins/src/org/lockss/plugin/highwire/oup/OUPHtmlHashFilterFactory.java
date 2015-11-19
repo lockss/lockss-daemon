@@ -58,6 +58,12 @@ public class OUPHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFactory {
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(citing|related)-articles?"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "-(keywords|by-author|eletters|challenge)"),
     HtmlNodeFilters.tagWithAttribute("div", "class", "panel-separator"),
+    HtmlNodeFilters.tagWithText("h3", "related data", true),
+    // tab text changes -- Information (& metrics)?
+    HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "-ajax-tab"),
+    // links appeared/disappeared http://nutritionreviews.oxfordjournals.org/content/67/4/222
+    HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "highwire-figure-links"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "highwire.+variants?-list"),
     // OUP author section kept changing formating and spacing
     HtmlNodeFilters.allExceptSubtree(
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "highwire-article-citation"),
