@@ -33,10 +33,16 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.medknow;
 
 import java.io.InputStream;
+import java.util.regex.Pattern;
+
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
+import org.htmlparser.tags.LinkTag;
+import org.htmlparser.tags.TableColumn;
 import org.htmlparser.tags.TableTag;
+import org.lockss.config.Configuration;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -51,6 +57,9 @@ import org.lockss.util.Logger;
  *    ABS - just the
  *    FULL TEXT
  *    CITATION LANDING
+ *    MANIFEST (backIssues.asp) includes all issus for all volumes and will increase
+ *             over time, so just include those "<td> bits that have the correct
+ *             volume 
  * EXCLUDE - from that informative set, exclude everything not-content
  */
 public class MedknowHtmlHashFilterFactory implements FilterFactory {
@@ -62,6 +71,10 @@ public class MedknowHtmlHashFilterFactory implements FilterFactory {
       InputStream in,
       String encoding)
           throws PluginException {
+    Configuration auConfig = au.getConfiguration();
+    String AuVol = auConfig.get(ConfigParamDescr.VOLUME_NAME.getKey());
+    String AuIssn = auConfig.get(ConfigParamDescr.JOURNAL_ISSN.getKey());
+    final Pattern THIS_VOL_ISSN_PAT = Pattern.compile(String.format("showBackIssue\\.asp\\?issn=%s;year=[0-9]{4};volume=%s;",AuIssn, AuVol),Pattern.CASE_INSENSITIVE);
     HtmlFilterInputStream filtered = new HtmlFilterInputStream(
         in,
         encoding,
@@ -104,6 +117,15 @@ public class MedknowHtmlHashFilterFactory implements FilterFactory {
                         // the PDF access policy is stated on TOC
                         if (!(longContents.toLowerCase().contains("pdf access policy"))) {
                           return true;
+                        }
+                      }
+                    } else if (node instanceof LinkTag) {
+                      String title = ((LinkTag) node).getAttribute("title");
+                      if(title != null && "Table of Contents".equalsIgnoreCase(title)) {
+                        // Is the link for this journal & volume
+                        String href = ((LinkTag) node).getAttribute("href");
+                        if (THIS_VOL_ISSN_PAT.matcher(href).find()) {
+                          return true; 
                         }
                       }
                     }

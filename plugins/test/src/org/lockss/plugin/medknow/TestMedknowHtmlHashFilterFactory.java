@@ -30,21 +30,40 @@
 package org.lockss.plugin.medknow;
 
 import java.io.*;
+import java.util.Properties;
 
-import org.apache.commons.io.IOUtils;
 import org.lockss.util.*;
+import org.lockss.config.Configuration;
+import org.lockss.daemon.ConfigParamDescr;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.definable.DefinableArchivalUnit;
+import org.lockss.plugin.definable.DefinablePlugin;
+import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
-import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.StringInputStream;
 
 
 public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
   private MedknowHtmlHashFilterFactory fact;
-  private MockArchivalUnit mau;
+  // medknow requires an AU config for its hash filtering
+  private ArchivalUnit mau;
+
 
   public void setUp() throws Exception {
     super.setUp();
     fact = new MedknowHtmlHashFilterFactory();
+    //the hash filter (for backIssues.asp) requires au information
+    Properties props = new Properties();
+    props.setProperty(ConfigParamDescr.VOLUME_NAME.getKey(), "8");
+    props.setProperty(ConfigParamDescr.JOURNAL_ISSN.getKey(), "1111-0000");
+    props.setProperty(ConfigParamDescr.YEAR.getKey(), "2015");
+    props.setProperty(ConfigParamDescr.BASE_URL.getKey(), "http://www.foo.com/");
+    Configuration config = ConfigurationUtil.fromProps(props);
+
+    DefinablePlugin ap = new DefinablePlugin();
+    ap.initPlugin(getMockLockssDaemon(),
+        "org.lockss.plugin.medknow.MedknowPlugin");
+    mau = (DefinableArchivalUnit)ap.createAu(config);
   }
 
 
@@ -452,7 +471,34 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
       "</td>" +
       "</tr>" +
       "</table>";
+  
+  private static final String backIssueHtml =
+      "<td>" +
+      "<a title=\"Table of Contents\" href=\"showBackIssue.asp?issn=1111-0000;year=2015;volume=8;issue=6;month=yin-yang\">" +
+      "Issue 6&nbsp;(Nov-Dec)</a>" +
+      "</td>" +
+      "<td>" +
+      "<a title=\"Table of Contents\" href=\"showBackIssue.asp?issn=1111-0000;year=2015;volume=8;issue=5;month=foo-blah\">" +
+      "Issue 6&nbsp;(Nov-Dec)</a>" +
+      "</td>" +
+      "<td>" +
+      "<a title=\"Table of Contents\" href=\"showBackIssue.asp?issn=1111-0000;year=2015;volume=4;issue=6;month=bread-butter\">" +
+      "Issue 6&nbsp;(Nov-Dec)</a>" +
+      "</td>" +
+      "<td>" +
+      "<a title=\"Table of Contents\" href=\"showBackIssue.asp?issn=1111-0000;year=2015;volume=8;issue=4;month=oil-water\">" +
+      "Issue 6&nbsp;(Nov-Dec)</a>" +
+      "</td>";
 
+  // only keep the link tags that are specific to the issues for this journals/volume
+  private static final String backIssueFiltered =
+      "<a title=\"Table of Contents\" href=\"showBackIssue.asp?issn=1111-0000;year=2015;volume=8;issue=6;month=yin-yang\">" +
+      "Issue 6&nbsp;(Nov-Dec)</a>" +
+      "<a title=\"Table of Contents\" href=\"showBackIssue.asp?issn=1111-0000;year=2015;volume=8;issue=5;month=foo-blah\">" +
+      "Issue 6&nbsp;(Nov-Dec)</a>" +
+      "<a title=\"Table of Contents\" href=\"showBackIssue.asp?issn=1111-0000;year=2015;volume=8;issue=4;month=oil-water\">" +
+      "Issue 6&nbsp;(Nov-Dec)</a>";
+      
   /*
    *  Compare Html and HtmlHashFiltered
    */
@@ -498,6 +544,14 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
         new StringInputStream(tocHtml),
         Constants.DEFAULT_ENCODING);
     assertEquals(tocHtmlKept, StringUtil.fromInputStream(actIn));
+  }
+  
+  //This test requires AU information
+  public void testBackIssueManifest() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(backIssueHtml),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(backIssueFiltered, StringUtil.fromInputStream(actIn));
   }
 
 
