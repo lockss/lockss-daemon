@@ -17,63 +17,63 @@
 
     # notReady = No articles in these years as of 11/19/2015
     
-    au < ready ; 1957 ; Livro Aberto 1957 ; 1957 >
+    au < releasing ; 1957 ; Livro Aberto 1957 ; 1957 >
     au < notReady ; 1958 ; Livro Aberto 1958 ; 1958 >
     au < notReady ; 1959 ; Livro Aberto 1959 ; 1959 >
-	au < ready ; 1960 ; Livro Aberto 1960 ; 1960 >
+	au < releasing ; 1960 ; Livro Aberto 1960 ; 1960 >
 	au < notReady ; 1961 ; Livro Aberto 1961 ; 1961 >
-	au < ready ; 1962 ; Livro Aberto 1962 ; 1962 >
+	au < releasing ; 1962 ; Livro Aberto 1962 ; 1962 >
 	au < notReady ; 1963 ; Livro Aberto 1963 ; 1963 >
 	au < notReady ; 1964 ; Livro Aberto 1964 ; 1964 >
 	au < notReady ; 1965 ; Livro Aberto 1965 ; 1965 >
 	au < notReady ; 1966 ; Livro Aberto 1966 ; 1966 >
-	au < ready ; 1967 ; Livro Aberto 1967 ; 1967 >
+	au < releasing ; 1967 ; Livro Aberto 1967 ; 1967 >
 	au < notReady ; 1968 ; Livro Aberto 1968 ; 1968 >
-    au < ready ; 1969 ; Livro Aberto 1969 ; 1969 >
+    au < releasing ; 1969 ; Livro Aberto 1969 ; 1969 >
     au < notReady ; 1970 ; Livro Aberto 1970 ; 1970 >
     au < notReady ; 1971 ; Livro Aberto 1971 ; 1971 >
-    au < ready ; 1972 ; Livro Aberto 1972 ; 1972 >
+    au < releasing ; 1972 ; Livro Aberto 1972 ; 1972 >
     au < notReady ; 1973 ; Livro Aberto 1973 ; 1973 >
     au < notReady ; 1974 ; Livro Aberto 1974 ; 1974 >
-    au < ready ; 1975 ; Livro Aberto 1975 ; 1975 >
+    au < releasing ; 1975 ; Livro Aberto 1975 ; 1975 >
     au < notReady ; 1976 ; Livro Aberto 1976 ; 1976 >
     au < notReady ; 1977 ; Livro Aberto 1977 ; 1977 >
-    au < ready ; 1978 ; Livro Aberto 1978 ; 1978 >
-    au < ready ; 1979 ; Livro Aberto 1979 ; 1979 >
+    au < releasing ; 1978 ; Livro Aberto 1978 ; 1978 >
+    au < releasing ; 1979 ; Livro Aberto 1979 ; 1979 >
     au < notReady ; 1980 ; Livro Aberto 1980 ; 1980 >
     au < notReady ; 1981 ; Livro Aberto 1981 ; 1981 >
-    au < ready ; 1982 ; Livro Aberto 1982 ; 1982 >
-    au < ready ; 1983 ; Livro Aberto 1983 ; 1983 >
-    au < ready ; 1984 ; Livro Aberto 1984 ; 1984 >
-    au < ready ; 1985 ; Livro Aberto 1985 ; 1985 >
-    au < ready ; 1986 ; Livro Aberto 1986 ; 1986 >
-    au < ready ; 1987 ; Livro Aberto 1987 ; 1987 >
-    au < ready ; 1988 ; Livro Aberto 1988 ; 1988 >
+    au < releasing ; 1982 ; Livro Aberto 1982 ; 1982 >
+    au < releasing ; 1983 ; Livro Aberto 1983 ; 1983 >
+    au < releasing ; 1984 ; Livro Aberto 1984 ; 1984 >
+    au < releasing ; 1985 ; Livro Aberto 1985 ; 1985 >
+    au < releasing ; 1986 ; Livro Aberto 1986 ; 1986 >
+    au < releasing ; 1987 ; Livro Aberto 1987 ; 1987 >
+    au < releasing ; 1988 ; Livro Aberto 1988 ; 1988 >
     au < notReady ; 1989 ; Livro Aberto 1989 ; 1989 >
-    au < ready ; 1990 ; Livro Aberto 1990 ; 1990 >
+    au < releasing ; 1990 ; Livro Aberto 1990 ; 1990 >
     au < notReady ; 1991 ; Livro Aberto 1991 ; 1991 >
-    au < ready ; 1992 ; Livro Aberto 1992 ; 1992 >
-    au < ready ; 1993 ; Livro Aberto 1993 ; 1993 >
-    au < ready ; 1994 ; Livro Aberto 1994 ; 1994 >
-    au < ready ; 1995 ; Livro Aberto 1995 ; 1995 >
-    au < ready ; 1996 ; Livro Aberto 1996 ; 1996 >
-    au < ready ; 1997 ; Livro Aberto 1997 ; 1997 >
-    au < ready ; 1998 ; Livro Aberto 1998 ; 1998 >
-    au < ready ; 1999 ; Livro Aberto 1999 ; 1999 >
-    au < ready ; 2000 ; Livro Aberto 2000 ; 2000 >
-    au < ready ; 2001 ; Livro Aberto 2001 ; 2001 >
-    au < ready ; 2002 ; Livro Aberto 2002 ; 2002 >
-    au < ready ; 2003 ; Livro Aberto 2003 ; 2003 >
-    au < ready ; 2004 ; Livro Aberto 2004 ; 2004 >
-    au < ready ; 2005 ; Livro Aberto 2005 ; 2005 >
-    au < ready ; 2006 ; Livro Aberto 2006 ; 2006 >
-    au < ready ; 2007 ; Livro Aberto 2007 ; 2007 >
-    au < ready ; 2008 ; Livro Aberto 2008 ; 2008 >
-    au < ready ; 2009 ; Livro Aberto 2009 ; 2009 >
-    au < ready ; 2010 ; Livro Aberto 2010 ; 2010 >
-    au < ready ; 2011 ; Livro Aberto 2011 ; 2011 >
-    au < ready ; 2012 ; Livro Aberto 2012 ; 2012 >
-    au < ready ; 2013 ; Livro Aberto 2013 ; 2013 >
+    au < releasing ; 1992 ; Livro Aberto 1992 ; 1992 >
+    au < releasing ; 1993 ; Livro Aberto 1993 ; 1993 >
+    au < releasing ; 1994 ; Livro Aberto 1994 ; 1994 >
+    au < releasing ; 1995 ; Livro Aberto 1995 ; 1995 >
+    au < releasing ; 1996 ; Livro Aberto 1996 ; 1996 >
+    au < releasing ; 1997 ; Livro Aberto 1997 ; 1997 >
+    au < releasing ; 1998 ; Livro Aberto 1998 ; 1998 >
+    au < releasing ; 1999 ; Livro Aberto 1999 ; 1999 >
+    au < releasing ; 2000 ; Livro Aberto 2000 ; 2000 >
+    au < releasing ; 2001 ; Livro Aberto 2001 ; 2001 >
+    au < releasing ; 2002 ; Livro Aberto 2002 ; 2002 >
+    au < releasing ; 2003 ; Livro Aberto 2003 ; 2003 >
+    au < releasing ; 2004 ; Livro Aberto 2004 ; 2004 >
+    au < releasing ; 2005 ; Livro Aberto 2005 ; 2005 >
+    au < releasing ; 2006 ; Livro Aberto 2006 ; 2006 >
+    au < releasing ; 2007 ; Livro Aberto 2007 ; 2007 >
+    au < releasing ; 2008 ; Livro Aberto 2008 ; 2008 >
+    au < releasing ; 2009 ; Livro Aberto 2009 ; 2009 >
+    au < releasing ; 2010 ; Livro Aberto 2010 ; 2010 >
+    au < releasing ; 2011 ; Livro Aberto 2011 ; 2011 >
+    au < releasing ; 2012 ; Livro Aberto 2012 ; 2012 >
+    au < releasing ; 2013 ; Livro Aberto 2013 ; 2013 >
     au < expected ; 2014 ; Livro Aberto 2014 ; 2014 >
     au < expected ; 2015 ; Livro Aberto 2015 ; 2015 >
 
