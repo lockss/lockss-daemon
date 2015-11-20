@@ -666,8 +666,6 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
         issnl = 1465-5411
       >
       param[journal_eissn] = 1465-5411
-
-      {
       comment[base_url] = http://breast-cancer-research.biomedcentral.com/
 
       au < exists ; exists ; 1999 ; Breast Cancer Research Volume 1 ; 1 >
@@ -687,7 +685,21 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
       au < exists ; exists ; 2013 ; Breast Cancer Research Volume 15 ; 15 >
       au < exists ; exists ; 2014 ; Breast Cancer Research Volume 16 ; 16 >
       au < exists ; exists ; 2015 ; Breast Cancer Research Volume 17 ; 17 >
-      }
+
+    }
+
+    {
+      title <
+        name = Burns & Trauma ;
+        eissn = 2321-3876 ;
+        issnl = 2321-3876
+      >
+      param[journal_eissn] = 2321-3876
+
+      au < exists ; exists ; 2013 ; Burns & Trauma Volume 1 ; 1 >
+      au < exists ; exists ; 2013 ; Burns & Trauma Volume 2 ; 2 >
+      au < exists ; exists ; 2013 ; Burns & Trauma Volume 3 ; 3 >
+
     }
 
     {
@@ -967,6 +979,19 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
 
     {
       title <
+        name = Chinese Neurosurgical Journal ;
+        eissn = 2057-4967 ;
+        issnl = 2057-4967
+      >
+
+      param[journal_eissn] = 2057-4967
+
+      au < exists ; exists ; 2015 ; Chinese Neurosurgical Journal Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
         name = Chiropractic & Manual Therapies ;
         eissn = 2045-709X 
       >
@@ -1044,6 +1069,20 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
       au < doNotProcess ; doNotProcess ; 2013 ; Clinical and Translational Allergy Volume 3 ; 3 >
       au < doNotProcess ; doNotProcess ; 2014 ; Clinical and Translational Allergy Volume 4 ; 4 >
       au < doNotProcess ; doNotProcess ; 2015 ; Clinical and Translational Allergy Volume 5 ; 5 >
+
+    }
+
+    {
+
+      title <
+        name = Clinical Diabetes and Endocrinology ;
+        eissn = 2055-8260 ;
+        issnl = 2055-8260
+      >
+
+      param[journal_eissn] = 2055-8260
+
+      au < exists ; exists ; 2015 ; Clinical Diabetes and Endocrinology Volume 1 ; 1 >
 
     }
 
@@ -1139,6 +1178,19 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
       au < doNotProcess ; doNotProcess ; 2013 ; Conflict and Health Volume 7 ; 7 >
       au < doNotProcess ; doNotProcess ; 2014 ; Conflict and Health Volume 8 ; 8 >
       au < doNotProcess ; doNotProcess ; 2015 ; Conflict and Health Volume 9 ; 9 >
+
+    }
+
+    {
+      title <
+        name = COPD Research and Practice ;
+        eissn = 2054-9040 ;
+        issnl = 2054-9040
+      >
+
+      param[journal_eissn] = 2054-9040
+
+      au < exists ; exists ; 2015 ; COPD Research and Practice Volume 1 ; 1 >
 
     }
 
