@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -81,11 +81,11 @@
   </entry>
   <entry>
     <string>au_exclude_urls_from_polls_pattern</string>
-    <string>"^%s.*/request?verb=GetRecord&amp;[^/]+$", base_url</string>
+    <string>"^%soai/request\?verb=GetRecord&amp;.+$", base_url</string>
   </entry>
   <entry>
     <string>au_exclude_urls_from_poll_results_pattern</string> 
-    <string>"^%s.*/request?verb=GetRecord&amp;[^/]+$", base_url</string>
+    <string>"^%soai/request\?verb=GetRecord&amp;.+$", base_url</string>
   </entry>
   <entry>
     <string>plugin_crawl_seed_factory</string>
