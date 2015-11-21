@@ -170,7 +170,7 @@
     au < manifest ; exists ; 2009 ; Journal of Nanophotonics Volume 3 ; 2009 >
     au < manifest ; exists ; 2010 ; Journal of Nanophotonics Volume 4 ; 2010 >
     au < manifest ; exists ; 2011 ; Journal of Nanophotonics Volume 5 ; 2011 >
-    au < testing ; exists ; 2012 ; Journal of Nanophotonics Volume 6 ; 2012 >
+    au < ready ; exists ; 2012 ; Journal of Nanophotonics Volume 6 ; 2012 >
     au < testing ; exists ; 2013 ; Journal of Nanophotonics Volume 7 ; 2013 >
     au < testing ; exists ; 2014 ; Journal of Nanophotonics Volume 8 ; 2014 >
     au < crawling ; exists ; 2015 ; Journal of Nanophotonics Volume 9 ; 2015 >
@@ -204,7 +204,7 @@
     param[base_url] = http://neurophotonics.spiedigitallibrary.org/
     param[resource_id] = 169
 
-    au < testing ; exists ; 2014 ; Neurophotonics Volume 1 ; 2014 >
+    au < ready ; exists ; 2014 ; Neurophotonics Volume 1 ; 2014 >
     au < crawling ; exists ; 2015 ; Neurophotonics Volume 2 ; 2015 >
 
     }
