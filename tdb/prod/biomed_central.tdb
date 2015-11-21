@@ -3664,6 +3664,7 @@
 
       comment[base_url] = http://medicalgasresearch.biomedcentral.com/
       param[journal_eissn] = 2045-9912
+      #moving to Wolters Kluwer Health 2016
 
       au < doNotProcess ; 2011 ; Medical Gas Research Volume 1 ; 1 >
       au < exists ; 2012 ; Medical Gas Research Volume 2 ; 2 >

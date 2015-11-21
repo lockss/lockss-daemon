@@ -3078,6 +3078,7 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
 
       comment[base_url] = http://medicalgasresearch.biomedcentral.com/
       param[journal_eissn] = 2045-9912
+      #moving to Wolters Kluwer Health 2016
 
       au < doNotProcess ; doNotProcess ; 2011 ; Medical Gas Research Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2012 ; Medical Gas Research Volume 2 ; 2 >

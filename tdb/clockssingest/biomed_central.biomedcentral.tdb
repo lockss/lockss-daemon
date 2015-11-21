@@ -3795,6 +3795,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       param[base_url] = http://www.medicalgasresearch.com/
       param[journal_issn] = 2045-9912
+      #moving to Wolters Kluwer Health 2016
 
       au < down ; crawling ; 2011 ; Medical Gas Research Volume 1 ; 1 >
       au < down ; exists ; 2012 ; Medical Gas Research Volume 2 ; 2 >
