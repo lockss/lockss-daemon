@@ -4438,6 +4438,35 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
   
     {
       title <
+        name = Nutrire ;
+        eissn = 2316-7874
+      >
+
+      param[base_url] = http://nutrirejournal.biomedcentral.com/
+      param[journal_issn] = 2316-7874
+      #journal_id = nutrirejournal
+
+      au < expected ; exists ; 2016 ; Nutrire Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
+        name = Tropical Diseases, Travel Medicine and Vaccines ;
+        eissn = 2055-0936 
+      >
+
+      param[base_url] = http://tdtmvjournal.biomedcentral.com/
+      param[journal_issn] = 2055-0936
+      #journal_id = tdtmvjournal
+
+      au < exists ; exists ; 2015 ; Tropical Diseases, Travel Medicine and Vaccines Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
         name = BMC Anesthesiology ;
         eissn = 1471-2253 ;
         issnl = 1471-2253
