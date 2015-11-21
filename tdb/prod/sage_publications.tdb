@@ -5202,14 +5202,32 @@
     title <
       name = Business Perspectives and Research ;
       issn = 2278-5337 ;
-      issnl = 2278-5337
+      eissn = 2394-9937
     >
 
       param[base_url] = http://bpr.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
+      au < exists ; 2012-2013 ; Business Perspectives and Research Volume 1 ; 1 >
+      au < exists ; 2013-2014 ; Business Perspectives and Research Volume 2 ; 2 >
       au < manifest ; 2015 ; Business Perspectives and Research Volume 3 ; 3 >
+  }
+
+  {
+
+    title <
+      name = Cahiers Élisabéthains: A Journal of English Renaissance Studies ;
+      issn = 0184-7678 ;
+      eissn = 2054-4715
+    >
+
+      param[base_url] = http://cae.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2015 ; Cahiers Élisabéthains: A Journal of English Renaissance Studies Volume 88 ; 88 >
+
   }
 
     {
@@ -8648,6 +8666,22 @@
       }
 
     }
+
+  {
+
+    title <
+      name = Critical Studies in Television ;
+      issn = 1749-6020 ;
+      eissn = 1749-6039
+    >
+
+      param[base_url] = http://cst.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2015 ; Critical Studies in Television Volume 10 ; 10 >
+
+  }
 
     {
 
@@ -20045,6 +20079,22 @@
 
     }
 
+  {
+
+      title <
+        name = Journal of Adult and Continuing Education ;
+        issn = 1477-9714 ;
+        eissn = 1479-7194
+      >
+
+      param[base_url] = http://adu.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2015 ; Journal of Adult and Continuing Education Volume 21 ; 21 >
+
+  }
+
     {
 
       title <
@@ -27533,6 +27583,23 @@ comment[mpj] = now published by Brill
       au < exists ; 2013 ; Journal of Pastoral Care & Counseling Volume 67 ; 67 >
       au < manifest ; 2014 ; Journal of Pastoral Care & Counseling Volume 68 ; 68 >
       au < manifest ; 2015 ; Journal of Pastoral Care & Counseling Volume 69 ; 69 >
+
+    }
+
+    {
+
+    title <
+      name = Journal of Patient Experience ;
+      issn = 2374-3735 ;
+      eissn = 2374-3743
+    >
+
+      param[base_url] = http://jpx.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2014 ; Journal of Patient Experience Volume 1 ; 1 >
+      au < exists ; 2015 ; Journal of Patient Experience Volume 2 ; 2 >
 
     }
 
