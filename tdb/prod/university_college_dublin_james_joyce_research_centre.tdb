@@ -5,9 +5,6 @@
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
 
-  param[journal_dir] = dublin_james_joyce_journal
-  attr[journal_id] = djj
-
   {
     title <
       name = Dublin James Joyce Journal ;
@@ -15,6 +12,9 @@
       eissn = 2009-4507 ;
       issnl = 2009-1850
     >
+
+    param[journal_dir] = dublin_james_joyce_journal
+    attr[journal_id] = djj
 
     {
 
@@ -32,7 +32,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < exists ; 2013-2014 ; Dublin James Joyce Journal Volume 6-7 ; 6-7 >
+      au < testing ; 2013-2014 ; Dublin James Joyce Journal Volume 6-7 ; 6-7 >
 
     }
 

@@ -36,8 +36,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Journal of Slavic Linguistics Volume 22 ; 22 >
-      au < manifest ; 2015 ; Journal of Slavic Linguistics Volume 23 ; 23 >
+      au < testing ; 2014 ; Journal of Slavic Linguistics Volume 22 ; 22 >
+      au < testing ; 2015 ; Journal of Slavic Linguistics Volume 23 ; 23 >
 
     }
 
@@ -81,8 +81,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Kritika: Explorations in Russian and Eurasian History Volume 15 ; 15 >
-      au < manifest ; 2015 ; Kritika: Explorations in Russian and Eurasian History Volume 16 ; 16 >
+      au < testing ; 2014 ; Kritika: Explorations in Russian and Eurasian History Volume 15 ; 15 >
+      au < testing ; 2015 ; Kritika: Explorations in Russian and Eurasian History Volume 16 ; 16 >
 
     }
 
@@ -104,8 +104,8 @@
 
       param[base_url] = http://muse.jhu.edu/
 
-      au < released ; 2012 ; Pushkin Review Volume 14 ; 14 >
-      au < released ; 2013 ; Pushkin Review Volume 15 ; 15 >
+      au < released ; 2011 ; Pushkin Review Volume 14 ; 14 >
+      au < released ; 2012 ; Pushkin Review Volume 15 ; 15 >
 
     }
 
@@ -113,8 +113,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Pushkin Review Volume 16 ; 16 >
-      au < expected ; 2015 ; Pushkin Review Volume 17 ; 17 >
+      au < testing ; 2013-2014 ; Pushkin Review Volume 16-17 ; 16 >
+      au < expected ; 2015 ; Pushkin Review Volume 18 ; 18 >
 
     }
 
@@ -146,8 +146,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 3 ; 3 >
-      au < manifest ; 2015 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 4 ; 4 >
+      au < testing ; 2014 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 3 ; 3 >
+      au < testing ; 2015 ; Region: Regional Studies of Russia, Eastern Europe, and Central Asia Volume 4 ; 4 >
 
     }
 
