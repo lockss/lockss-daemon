@@ -48,7 +48,7 @@
       au < manifest ; 2014 ; Abstracts in Anthropology Volume 68 ; 68 >
       au < manifest ; 2014 ; Abstracts in Anthropology Volume 69 ; 69 >
       au < manifest ; 2015 ; Abstracts in Anthropology Volume 70 ; 70 >
-      au < expected ; 2015 ; Abstracts in Anthropology Volume 71 ; 71 >
+      au < manifest ; 2015 ; Abstracts in Anthropology Volume 71 ; 71 >
 
   }
 
@@ -5226,7 +5226,7 @@
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2015 ; Cahiers Élisabéthains: A Journal of English Renaissance Studies Volume 88 ; 88 >
+      au < manifest ; 2015 ; Cahiers Élisabéthains: A Journal of English Renaissance Studies Volume 88 ; 88 >
 
   }
 
@@ -8679,7 +8679,7 @@
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2015 ; Critical Studies in Television Volume 10 ; 10 >
+      au < manifest ; 2015 ; Critical Studies in Television Volume 10 ; 10 >
 
   }
 
@@ -20091,7 +20091,7 @@
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2015 ; Journal of Adult and Continuing Education Volume 21 ; 21 >
+      au < manifest ; 2015 ; Journal of Adult and Continuing Education Volume 21 ; 21 >
 
   }
 
@@ -39946,7 +39946,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2005 ; Sexualities Volume 8 ; 8 >
         au < manifest ; 2006 ; Sexualities Volume 9 ; 9 >
         au < manifest ; 2007 ; Sexualities Volume 10 ; 10 >
-        au < exists ; 2008 ; Sexualities Volume 11 ; 11 >
+        au < manifest ; 2008 ; Sexualities Volume 11 ; 11 >
         au < released ; 2009 ; Sexualities Volume 12 ; 12 >
         au < released ; 2010 ; Sexualities Volume 13 ; 13 >
         au < released ; 2011 ; Sexualities Volume 14 ; 14 >
@@ -43434,7 +43434,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2015 ; Thesis Eleven Volume 128 ; 128 >
         au < manifest ; 2015 ; Thesis Eleven Volume 129 ; 129 >
         au < manifest ; 2015 ; Thesis Eleven Volume 130 ; 130 >
-        au < expected ; 2015 ; Thesis Eleven Volume 131 ; 131 >
+        au < manifest ; 2015 ; Thesis Eleven Volume 131 ; 131 >
 
       }
 
@@ -48722,7 +48722,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; released ; 2012 ; Health Services Management Research Volume 25 ; 25 >
         au < HighWirePressH20Plugin ; released ; 2013 ; Health Services Management Research Volume 26 ; 26 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Health Services Management Research Volume 27 ; 27 >
-        au < HighWirePressH20Plugin ; expected ; 2015 ; Health Services Management Research Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; manifest ; 2015 ; Health Services Management Research Volume 28 ; 28 >
 
       }
 
