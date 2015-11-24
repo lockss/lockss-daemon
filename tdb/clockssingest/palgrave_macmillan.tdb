@@ -8,7 +8,7 @@
     param[base_url] = http://www.palgrave-journals.com/
     implicit < status ; status2 ; year ; name ; param[year] ; param[volume_name] >
     
-    comment[0] = do not include: American Journal of Psychoanalysis, 0002-9548
+    comment[0] = do not include: American Journal of Psychoanalysis, 0002-9548, RT6770
     
     
     {
