@@ -7,15 +7,13 @@
 
   {
 
-  param[journal_dir] = cream_city_review
-  attr[journal_id] = ccr
-
-    {
-
     title <
       name = Cream City Review ;
       issn = 0884-3457 
     >
+
+    param[journal_dir] = cream_city_review
+    attr[journal_id] = ccr
 
     {
 
@@ -30,11 +28,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Cream City Review Volume 38 ; 38 >
-      au < manifest ; 2015 ; Cream City Review Volume 39 ; 39 >
-
-    }
-
+      au < testing ; 2014 ; Cream City Review Volume 38 ; 38 >
+      au < testing ; 2015 ; Cream City Review Volume 39 ; 39 >
 
     }
 

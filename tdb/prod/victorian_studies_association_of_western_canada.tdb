@@ -7,17 +7,15 @@
 
   {
 
-  param[journal_dir] = victorian_review
-  attr[journal_id] = vcr
-
-    {
-
     title <
       name = Victorian Review ;
       issn = 0848-1512 ;
       eissn = 1923-3280 ;
       issnl = 0848-1512
     >
+
+    param[journal_dir] = victorian_review
+    attr[journal_id] = vcr
 
     {
 
@@ -33,11 +31,9 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2012 ; Victorian Review Volume 38 ; 38 >
-      au < manifest ; 2013 ; Victorian Review Volume 39 ; 39 >
-      au < manifest ; 2014 ; Victorian Review Volume 40 ; 40 >
-
-    }
+      au < testing ; 2012 ; Victorian Review Volume 38 ; 38 >
+      au < testing ; 2013 ; Victorian Review Volume 39 ; 39 >
+      au < testing ; 2014 ; Victorian Review Volume 40 ; 40 >
 
     }
 
