@@ -5217,7 +5217,7 @@
   {
 
     title <
-      name = Cahiers Élisabéthains: A Journal of English Renaissance Studies ;
+      name = Cahiers Élisabéthains ;
       issn = 0184-7678 ;
       eissn = 2054-4715
     >
@@ -5226,7 +5226,7 @@
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 2015 ; Cahiers Élisabéthains: A Journal of English Renaissance Studies Volume 88 ; 88 >
+      au < manifest ; 2015 ; Cahiers Élisabéthains Volume 88 ; 88 >
 
   }
 
