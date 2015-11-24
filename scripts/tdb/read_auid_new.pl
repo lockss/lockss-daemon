@@ -365,7 +365,7 @@ while (my $line = <>) {
             $param{base_url}, $param{journal_id});
         $man_url_alt = uri_unescape($url_m_alt);
         my $req_m_alt = HTTP::Request->new(GET, $man_url_alt);
-        my $resp_m_alt = $ua->request($req_m_alt);
+        #my $resp_m_alt = $ua->request($req_m_alt);
         #Url with list of urls for issues
         $url_s = sprintf("%sindex.php/%s/gateway/lockss?year=%d", 
             $param{base_url}, $param{journal_id}, $param{year});
@@ -377,7 +377,7 @@ while (my $line = <>) {
         if (($resp_s->is_success) && ($resp_m->is_success)) {
             my $man_contents = $resp_m->content;
             my $start_contents = $resp_s->content;
-            if (($req_m->url ne $resp_m->request->uri) || ($req_s->url ne $resp_s->request->uri)) {
+            if ((($req_m->url ne $resp_m->request->uri) && ($req_m_alt->url ne $resp_m->request->uri)) || ($req_s->url ne $resp_s->request->uri)) {
                 $vol_title = $req_m->url . " NOT " . $resp_m->request->uri . " OR " . $req_s->url . " NOT " . $resp_s->request->uri;
                 $result = "Redirected";
             } elsif (defined($man_contents) && defined($start_contents) && (($man_contents =~ m/$clockss_tag/) || ($man_contents =~ m/$oa_tag/)) && (($start_contents =~ m/\($param{year}\)/) || ($start_contents =~ m/: $param{year}/))) {
