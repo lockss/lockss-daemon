@@ -5,9 +5,6 @@
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   implicit < status ; year ; name ; param[volume] >
 
-  param[journal_dir] = journal_of_song_yuan_studies
-  attr[journal_id] = sys
-
   {
     title <
       name = Journal of Song-Yuan Studies ;
@@ -15,6 +12,9 @@
       eissn = 2154-6665 ;
       issnl = 1059-3152
     >
+
+    param[journal_dir] = journal_of_song_yuan_studies
+    attr[journal_id] = sys
 
     {
 
@@ -32,7 +32,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2013 ; Journal of Song-Yuan Studies Volume 43 ; 43 >
+      au < ready ; 2013 ; Journal of Song-Yuan Studies Volume 43 ; 43 >
 
     }
 

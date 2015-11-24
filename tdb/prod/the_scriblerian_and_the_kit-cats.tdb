@@ -17,8 +17,6 @@
     param[journal_dir] = the_scriblerian_and_the_kit-cats
     attr[journal_id] = scb
     
-    comment[v43] = malformed manifest page. No content.
-    
     {
 
       param[base_url] = https://muse.jhu.edu/
@@ -41,7 +39,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; The Scriblerian and the Kit-Cats Volume 47 ; 47 >
+      au < ready ; 2014 ; The Scriblerian and the Kit-Cats Volume 47 ; 47 >
 
     }
 

@@ -18,8 +18,6 @@
 
     param[journal_dir] = franciscan_studies
     attr[journal_id] = frc
-    
-    comment[notReady] = volume 71 has XX on pdf. To be fixed in daemon 1.67.
 
     {
 
@@ -60,7 +58,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < notReady ; 2013 ; Franciscan Studies Volume 71 ; 71 >
+      au < ready ; 2013 ; Franciscan Studies Volume 71 ; 71 >
 
     }
 
