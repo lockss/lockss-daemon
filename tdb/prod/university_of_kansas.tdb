@@ -4,19 +4,18 @@
     name = University of Kansas
   >
 
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    implicit < status ; year ; name ; param[volume] >
+
   {
   
     title <
       name = Journal of Dramatic Theory and Criticism ;
       issn = 0888-3203 
     >
-    
-    {
 
-      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[journal_dir] = journal_of_dramatic_theory_and_criticism
       attr[journal_id] = dtc
-      implicit < status ; year ; name ; param[volume] >
 
     {
 
@@ -31,11 +30,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2013-2014 ; Journal of Dramatic Theory and Criticism Volume 28 ; 28 >
-        au < manifest ; 2014-2015 ; Journal of Dramatic Theory and Criticism Volume 29 ; 29 >
-
-    }
-
+        au < testing ; 2013-2014 ; Journal of Dramatic Theory and Criticism Volume 28 ; 28 >
+        au < testing ; 2014-2015 ; Journal of Dramatic Theory and Criticism Volume 29 ; 29 >
 
     }
 
@@ -48,12 +44,8 @@
       issn = 0023-8813 
     >
 
-    {
-
-      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[journal_dir] = latin_american_theatre_review  
       attr[journal_id] = ltr    
-      implicit < status ; year ; name ; param[volume] >
 
     {
 
@@ -74,11 +66,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2013-2014 ; Latin American Theatre Review Volume 47 ; 47 >
-        au < manifest ; 2014-2015 ; Latin American Theatre Review Volume 48 ; 48 >
-
-    }
-
+        au < testing ; 2013-2014 ; Latin American Theatre Review Volume 47 ; 47 >
+        au < testing ; 2014-2015 ; Latin American Theatre Review Volume 48 ; 48 >
 
     }
 

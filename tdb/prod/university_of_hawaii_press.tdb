@@ -35,10 +35,9 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; Archives of Asian Art Volume 64 ; 64 >
+        au < testing ; 2014 ; Archives of Asian Art Volume 64 ; 64 >
 
       }
-
 
     }
 
@@ -82,11 +81,10 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2013 ; Asian Perspectives Volume 52 ; 52 >
-        au < manifest ; 2014 ; Asian Perspectives Volume 53 ; 53 >
+        au < testing ; 2013 ; Asian Perspectives Volume 52 ; 52 >
+        au < testing ; 2014 ; Asian Perspectives Volume 53 ; 53 >
 
       }
-
 
     }
 
@@ -132,11 +130,10 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; Asian Theatre Journal Volume 31 ; 31 >
-        au < manifest ; 2015 ; Asian Theatre Journal Volume 32 ; 32 >
+        au < testing ; 2014 ; Asian Theatre Journal Volume 31 ; 31 >
+        au < testing ; 2015 ; Asian Theatre Journal Volume 32 ; 32 >
 
       }
-
 
     }
 
@@ -173,11 +170,10 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; Azalea: Journal of Korean Literature & Culture Volume 7 ; 7 >
-        au < manifest ; 2015 ; Azalea: Journal of Korean Literature & Culture Volume 8 ; 8 >
+        au < testing ; 2014 ; Azalea: Journal of Korean Literature & Culture Volume 7 ; 7 >
+        au < testing ; 2015 ; Azalea: Journal of Korean Literature & Culture Volume 8 ; 8 >
 
       }
-
 
     }
 
@@ -244,11 +240,10 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; Biography Volume 37 ; 37 >
-        au < manifest ; 2015 ; Biography Volume 38 ; 38 >
+        au < testing ; 2014 ; Biography Volume 37 ; 37 >
+        au < testing ; 2015 ; Biography Volume 38 ; 38 >
 
       }
-
 
     }
   }
@@ -293,10 +288,9 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; Buddhist-Christian Studies Volume 34 ; 34 >
+        au < testing ; 2014 ; Buddhist-Christian Studies Volume 34 ; 34 >
 
       }
-
 
     }
   }
@@ -384,11 +378,10 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; The Contemporary Pacific Volume 26 ; 26 >
-        au < manifest ; 2015 ; The Contemporary Pacific Volume 27 ; 27 >
+        au < testing ; 2014 ; The Contemporary Pacific Volume 26 ; 26 >
+        au < testing ; 2015 ; The Contemporary Pacific Volume 27 ; 27 >
 
       }
-
 
     }
   }
@@ -419,11 +412,10 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; Cross-Currents: East Asian History and Culture Review Volume 3 ; 3 >
-        au < manifest ; 2015 ; Cross-Currents: East Asian History and Culture Review Volume 4 ; 4 >
+        au < testing ; 2014 ; Cross-Currents: East Asian History and Culture Review Volume 3 ; 3 >
+        au < testing ; 2015 ; Cross-Currents: East Asian History and Culture Review Volume 4 ; 4 >
 
       }
-
 
     }
   }
@@ -455,11 +447,10 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; Journal of Korean Religions Volume 5 ; 5 >
-        au < manifest ; 2015 ; Journal of Korean Religions Volume 6 ; 6 >
+        au < testing ; 2014 ; Journal of Korean Religions Volume 5 ; 5 >
+        au < testing ; 2015 ; Journal of Korean Religions Volume 6 ; 6 >
 
       }
-
 
     }
   }
@@ -507,11 +498,10 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; Journal of World History Volume 25 ; 25 >
+        au < testing ; 2014 ; Journal of World History Volume 25 ; 25 >
         au < expected ; 2015 ; Journal of World History Volume 26 ; 26 >
 
       }
-
 
     }
   }
@@ -608,11 +598,10 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; Korean Studies Volume 38 ; 38 >
+        au < testing ; 2014 ; Korean Studies Volume 38 ; 38 >
         au < expected ; 2015 ; Korean Studies Volume 39 ; 39 >
 
       }
-
 
     }
   }
@@ -624,8 +613,6 @@
       eissn = 1527-943X ;
       issnl = 1045-7909
     >
-
-comment[mn20] = URL with 403 Forbidden error
 
     {
       implicit < status ; year ; name ; param[volume] >
@@ -659,11 +646,10 @@ comment[mn20] = URL with 403 Forbidden error
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; Manoa Volume 26 ; 26 >
-        au < manifest ; 2015 ; Manoa Volume 27 ; 27 >
+        au < testing ; 2014 ; Manoa Volume 26 ; 26 >
+        au < testing ; 2015 ; Manoa Volume 27 ; 27 >
 
       }
-
 
     }
   }
@@ -708,11 +694,10 @@ comment[mn20] = URL with 403 Forbidden error
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; Oceanic Linguistics Volume 53 ; 53 >
-        au < manifest ; 2015 ; Oceanic Linguistics Volume 54 ; 54 >
+        au < testing ; 2014 ; Oceanic Linguistics Volume 53 ; 53 >
+        au < testing ; 2015 ; Oceanic Linguistics Volume 54 ; 54 >
 
       }
-
 
     }
   }
@@ -767,8 +752,6 @@ comment[mn20] = URL with 403 Forbidden error
 
       }
 
-
-
     }
 
   }
@@ -812,11 +795,10 @@ comment[mn20] = URL with 403 Forbidden error
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; Philosophy East and West Volume 64 ; 64 >
-        au < manifest ; 2015 ; Philosophy East and West Volume 65 ; 65 >
+        au < testing ; 2014 ; Philosophy East and West Volume 64 ; 64 >
+        au < testing ; 2015 ; Philosophy East and West Volume 65 ; 65 >
 
       }
-
 
     }
   }
@@ -846,12 +828,9 @@ comment[mn20] = URL with 403 Forbidden error
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2013 ; Review of Japanese Culture and Society Volume 25 ; 25 >
-        au < expected ; 2014 ; Review of Japanese Culture and Society Volume 26 ; 26 >
-        au < expected ; 2015 ; Review of Japanese Culture and Society Volume 27 ; 27 >
+        au < testing ; 2013 ; Review of Japanese Culture and Society Volume 25 ; 25 >
 
       }
-
 
     }
   }
@@ -883,11 +862,10 @@ comment[mn20] = URL with 403 Forbidden error
         param[base_url] = https://muse.jhu.edu/
 
         au < doNotProcess ; 2013 ; U.S.-Japan Women's Journal Volume 45 ; 45 >
-        au < manifest ; 2014 ; U.S.-Japan Women's Journal Volume 46 ; 46 >
-        au < manifest ; 2015 ; U.S.-Japan Women's Journal Volume 47 ; 47 >
+        au < testing ; 2014 ; U.S.-Japan Women's Journal Volume 46 ; 46 >
+        au < testing ; 2014 ; U.S.-Japan Women's Journal Volume 47 ; 47 >
 
       }
-
 
     }
   }
@@ -937,11 +915,10 @@ comment[mn20] = URL with 403 Forbidden error
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; Yearbook of the Association of Pacific Coast Geographers Volume 76 ; 76 >
-        au < manifest ; 2015 ; Yearbook of the Association of Pacific Coast Geographers Volume 77 ; 77 >
+        au < testing ; 2014 ; Yearbook of the Association of Pacific Coast Geographers Volume 76 ; 76 >
+        au < testing ; 2015 ; Yearbook of the Association of Pacific Coast Geographers Volume 77 ; 77 >
 
       }
-
 
     }
 

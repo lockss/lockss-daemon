@@ -272,11 +272,10 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Great Plains Quarterly Volume 34 ; 34 >
-      au < manifest ; 2015 ; Great Plains Quarterly Volume 35 ; 35 >
+      au < testing ; 2014 ; Great Plains Quarterly Volume 34 ; 34 >
+      au < testing ; 2015 ; Great Plains Quarterly Volume 35 ; 35 >
 
     }
-
 
   }
 
@@ -300,7 +299,6 @@
       au < released ; 2015 ; Great Plains Research Volume 25 ; 25 >
 
     }
-
 
   }
 
@@ -330,7 +328,6 @@
 
     }
 
-
   }
 
   {
@@ -357,12 +354,11 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Journal of Austrian Studies Volume 47 ; 47 >
-      au < manifest ; 2015 ; Journal of Austrian Studies Volume 48 ; 48 >
+      au < testing ; 2014 ; Journal of Austrian Studies Volume 47 ; 47 >
+      au < testing ; 2015 ; Journal of Austrian Studies Volume 48 ; 48 >
 
     }
 
-    
   }
 
   {
@@ -381,12 +377,11 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014-2015 ; Journal of Black Sexuality and Relationships Volume 1 ; 1 >
+      au < testing ; 2014-2015 ; Journal of Black Sexuality and Relationships Volume 1 ; 1 >
       au < manifest ; 2015-2016 ; Journal of Black Sexuality and Relationships Volume 2 ; 2 >
 
     }
 
-    
   }
 
   {
@@ -414,7 +409,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Journal of Literature and Trauma Studies Volume 3 ; 3 >
+      au < testing ; 2014 ; Journal of Literature and Trauma Studies Volume 3 ; 3 >
       au < expected ; 2015 ; Journal of Literature and Trauma Studies Volume 4 ; 4 >
 
     }
@@ -453,11 +448,10 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Journal of Sports Media Volume 9 ; 9 >
-      au < manifest ; 2015 ; Journal of Sports Media Volume 10 ; 10 >
+      au < testing ; 2014 ; Journal of Sports Media Volume 9 ; 9 >
+      au < testing ; 2015 ; Journal of Sports Media Volume 10 ; 10 >
 
     }
-
 
   }
 
@@ -498,8 +492,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Legacy: A Journal of American Women Writers Volume 31 ; 31 >
-      au < manifest ; 2015 ; Legacy: A Journal of American Women Writers Volume 32 ; 32 >
+      au < testing ; 2014 ; Legacy: A Journal of American Women Writers Volume 31 ; 31 >
+      au < testing ; 2015 ; Legacy: A Journal of American Women Writers Volume 32 ; 32 >
 
     }
 
@@ -559,8 +553,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Native South Volume 7 ; 7 >
-      au < manifest ; 2015 ; Native South Volume 8 ; 8 >
+      au < testing ; 2014 ; Native South Volume 7 ; 7 >
+      au < testing ; 2015 ; Native South Volume 8 ; 8 >
 
     }
 
@@ -604,7 +598,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014-2015 ; NINE: A Journal of Baseball History and Culture Volume 23 ; 23 >
+      au < testing ; 2014-2015 ; NINE: A Journal of Baseball History and Culture Volume 23 ; 23 >
 
     }
 
@@ -649,7 +643,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014-2015 ; Nineteenth-Century French Studies Volume 43 ; 43 >
+      au < testing ; 2014-2015 ; Nineteenth-Century French Studies Volume 43 ; 43 >
 
     }
 
@@ -683,11 +677,10 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Nouvelles Études Francophones Volume 29 ; 29 >
-      au < manifest ; 2015 ; Nouvelles Études Francophones Volume 30 ; 30 >
+      au < testing ; 2014 ; Nouvelles Études Francophones Volume 29 ; 29 >
+      au < testing ; 2015 ; Nouvelles Études Francophones Volume 30 ; 30 >
 
     }
-
 
   }
 
@@ -725,11 +718,10 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Prairie Schooner Volume 88 ; 88 >
-      au < manifest ; 2015 ; Prairie Schooner Volume 89 ; 89 >
+      au < testing ; 2014 ; Prairie Schooner Volume 88 ; 88 >
+      au < testing ; 2015 ; Prairie Schooner Volume 89 ; 89 >
 
     }
-
 
   }
 
@@ -818,11 +810,10 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; StoryWorlds: A Journal of Narrative Studies Volume 6 ; 6 >
-      au < manifest ; 2015 ; StoryWorlds: A Journal of Narrative Studies Volume 7 ; 7 >
+      au < testing ; 2014 ; StoryWorlds: A Journal of Narrative Studies Volume 6 ; 6 >
+      au < testing ; 2015 ; StoryWorlds: A Journal of Narrative Studies Volume 7 ; 7 >
 
     }
-
 
   }
 
@@ -859,11 +850,10 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Studies in American Indian Literatures Volume 26 ; 26 >
-      au < manifest ; 2015 ; Studies in American Indian Literatures Volume 27 ; 27 >
+      au < testing ; 2014 ; Studies in American Indian Literatures Volume 26 ; 26 >
+      au < testing ; 2015 ; Studies in American Indian Literatures Volume 27 ; 27 >
 
     }
-
 
   }
 
@@ -895,11 +885,10 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Studies in American Naturalism Volume 9 ; 9 >
+      au < testing ; 2014 ; Studies in American Naturalism Volume 9 ; 9 >
       au < expected ; 2015 ; Studies in American Naturalism Volume 10 ; 10 >
 
     }
-
 
   }
 
@@ -914,7 +903,6 @@
 
     param[journal_dir] = symploke
     attr[journal_id] = sym
-    comment[notReady] = manifest page exists, but url is broken
 
     {
 
@@ -944,11 +932,10 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; symploke Volume 22 ; 22 >
+      au < testing ; 2014 ; symploke Volume 22 ; 22 >
       au < expected ; 2015 ; symploke Volume 23 ; 23 >
 
     }
-
 
   }
 
@@ -975,7 +962,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Theoretical & Applied Ethics Volume 3 ; 3 >
+      au < testing ; 2014 ; Theoretical & Applied Ethics Volume 3 ; 3 >
       au < expected ; 2015 ; Theoretical & Applied Ethics Volume 4 ; 4 >
 
     }
@@ -1036,11 +1023,10 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Women and Music: A Journal of Gender and Culture Volume 18 ; 18 >
-      au < manifest ; 2015 ; Women and Music: A Journal of Gender and Culture Volume 19 ; 19 >
+      au < testing ; 2014 ; Women and Music: A Journal of Gender and Culture Volume 18 ; 18 >
+      au < testing ; 2015 ; Women and Music: A Journal of Gender and Culture Volume 19 ; 19 >
 
     }
-
 
   }
 
@@ -1096,11 +1082,10 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 30 ; 30 >
+      au < testing ; 2014 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 30 ; 30 >
       au < expected ; 2015 ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 31 ; 31 >
 
     }
-
 
   }
 

@@ -3,6 +3,9 @@
     name = University of California, Los Angeles Center for Medieval and Renaissance Studies
   >
 
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    implicit < status ; year ; name ; param[volume] >
+
   {
     title <
       name = Comitatus: A Journal of Medieval and Renaissance Studies ;
@@ -13,10 +16,8 @@
 
     {
 
-      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[journal_dir] = comitatus
       attr[journal_id] = cjm
-      implicit < status ; year ; name ; param[volume] >
       
     {
 
@@ -28,10 +29,10 @@
         au < manifest ; 2005 ; Comitatus: A Journal of Medieval and Renaissance Studies Volume 36 ; 36 >
         au < manifest ; 2006 ; Comitatus: A Journal of Medieval and Renaissance Studies Volume 37 ; 37 >
         au < manifest ; 2007 ; Comitatus: A Journal of Medieval and Renaissance Studies Volume 38 ; 38 >
-        au < manifest ; 2008 ; Comitatus: A Journal of Medieval and Renaissance Studies Volume 39 ; 39 >
-        au < manifest ; 2009 ; Comitatus: A Journal of Medieval and Renaissance Studies Volume 40 ; 40 >
-        au < manifest ; 2010 ; Comitatus: A Journal of Medieval and Renaissance Studies Volume 41 ; 41 >
-        au < manifest ; 2011 ; Comitatus: A Journal of Medieval and Renaissance Studies Volume 42 ; 42 >
+        au < testing ; 2008 ; Comitatus: A Journal of Medieval and Renaissance Studies Volume 39 ; 39 >
+        au < testing ; 2009 ; Comitatus: A Journal of Medieval and Renaissance Studies Volume 40 ; 40 >
+        au < testing ; 2010 ; Comitatus: A Journal of Medieval and Renaissance Studies Volume 41 ; 41 >
+        au < testing ; 2011 ; Comitatus: A Journal of Medieval and Renaissance Studies Volume 42 ; 42 >
 
     }
 
@@ -48,12 +49,10 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; Comitatus: A Journal of Medieval and Renaissance Studies Volume 45 ; 45 >
-        au < manifest ; 2015 ; Comitatus: A Journal of Medieval and Renaissance Studies Volume 46 ; 46 >
+        au < testing ; 2014 ; Comitatus: A Journal of Medieval and Renaissance Studies Volume 45 ; 45 >
+        au < testing ; 2015 ; Comitatus: A Journal of Medieval and Renaissance Studies Volume 46 ; 46 >
 
     }
-
-      
 
     }
 
