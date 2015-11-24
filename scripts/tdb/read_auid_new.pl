@@ -372,7 +372,7 @@ while (my $line = <>) {
             my $man_contents = $resp_m->content;
             my $start_contents = $resp_s->content;
             if (($req_m->url ne $resp_m->request->uri) || ($req_s->url ne $resp_s->request->uri)) {
-                $vol_title = $resp_m->request->uri . " or " . $resp_s->request->uri;
+                $vol_title = $req_m->url . " NOT " . $resp_m->request->uri . " OR " . $req_s->url . " NOT " . $resp_s->request->uri;
                 $result = "Redirected";
             } elsif (defined($man_contents) && defined($start_contents) && (($man_contents =~ m/$clockss_tag/) || ($man_contents =~ m/$oa_tag/)) && (($start_contents =~ m/\($param{year}\)/) || ($start_contents =~ m/: $param{year}/))) {
                 $result = "Manifest"
