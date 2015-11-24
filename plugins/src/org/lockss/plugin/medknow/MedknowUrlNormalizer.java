@@ -70,9 +70,11 @@ public class MedknowUrlNormalizer implements UrlNormalizer {
        * but from the "next-TOC-prev" navigators on the article pages, they do not
        * http://www.jpgmonline.com/showbackIssue.asp?issn=0022-3859;year=2013;volume=59;issue=1
        * so normalize this unnecessary bit of info, off
+       * BUT - if it's a supplement issue, it will have a ";supp=Y" which we do need
+       * and which might come after the month...keep that bit
        * 
        */
-      url = url.replaceFirst(";month=.+$", "");
+      url = url.replaceFirst(";month=[^;]+", "");
     }
     // The citation landing page may have the "type" argument depending on which 
     // article aspect generated the link - normalize to the  no-type-argument url 

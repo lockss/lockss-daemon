@@ -51,6 +51,9 @@ public class TestMedknowUrlNormalizer extends LockssTestCase {
     // but it's okay if it doesn't have the month - do nothing
     assertEquals("http://www.jpgmonline.com/showBackIssue.asp?issn=0022-3859;year=2013;volume=59;issue=3",
         normalizer.normalizeUrl("http://www.jpgmonline.com/showBackIssue.asp?issn=0022-3859;year=2013;volume=59;issue=3", null));
+    // but be sure if there is a "supp=Y" that gets left
+    assertEquals("http://www.urologyannals.com/showBackIssue.asp?issn=0974-7796;year=2015;volume=7;issue=6;supp=Y",
+        normalizer.normalizeUrl("http://www.urologyannals.com/showBackIssue.asp?issn=0974-7796;year=2015;volume=7;issue=6;month=July;supp=Y", null));
     
     //having some trouble with the apostrophe in this URL...is it in the daemon or plugin
     assertEquals("http://www.jpgmonline.com/article.asp?issn=0022-3859;year=2013;volume=59;issue=1;spage=15;epage=20;aulast=D%27Souza;type=2",

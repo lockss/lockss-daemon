@@ -102,7 +102,11 @@ public class MedknowHtmlHashFilterFactory implements FilterFactory {
                 HtmlNodeFilters.tagWithAttribute("td", "class", "sAuthor"),
                 // we have to include this one for the article pages
                 // but it means lots of exclusions in the next filter)
-                //HtmlNodeFilters.tagWithAttribute("table",  "class", "articlepage"),
+                // [ABSTRACT,FULL - special case for main article content
+                // http://www.jpgmonline.com/article.asp?issn=0022-3859;year=2015;volume=61;issue=1;spage=15;epage=20;aulast=Shevra;type=0
+                // jpgmonline uses <td class="articlepage", not <table as the others do
+                // the [TOC] still uses the <table tag as the other journals do
+                HtmlNodeFilters.tagWithAttribute("td",  "class", "articlepage"),
                 // [ABSTRACT,FULL, TOC]
                 // we have to take in <table class="articlepage" to get the content 
                 // but don't want this table on the TOC
