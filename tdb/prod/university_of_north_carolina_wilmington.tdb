@@ -16,8 +16,6 @@
 
     param[journal_dir] = ecotone
     attr[journal_id] = ect
-    
-    comment[v8] = Manifest page in place, but does not link to content.
 
     {
 
@@ -37,9 +35,9 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < doNotProcess ; 2012-2013 ; Ecotone Volume 8 ; 8 >
+      au < ready ; 2012-2013 ; Ecotone Volume 8 ; 8 >
       au < testing ; 2013-2014 ; Ecotone Volume 9 ; 9 >
-      au < testing ; 2014-2015 ; Ecotone Volume 10 ; 10 >
+      au < ready ; 2014-2015 ; Ecotone Volume 10 ; 10 >
 
     }
 

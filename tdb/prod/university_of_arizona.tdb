@@ -16,8 +16,6 @@
 
     param[journal_dir] = arizona_journal_of_hispanic_cultural_studies
     attr[journal_id] = hcs
-    
-    comment[2013] = manifest page but no content as of 2014/8/19
 
     {
 
@@ -53,7 +51,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < notReady ; 2013 ; Arizona Journal of Hispanic Cultural Studies Volume 17 ; 17 >
+      au < ready ; 2013 ; Arizona Journal of Hispanic Cultural Studies Volume 17 ; 17 >
       au < testing ; 2014 ; Arizona Journal of Hispanic Cultural Studies Volume 18 ; 18 >
       au < expected ; 2015 ; Arizona Journal of Hispanic Cultural Studies Volume 19 ; 19 >
 
@@ -105,7 +103,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 70 ; 70 >
+      au < ready ; 2014 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 70 ; 70 >
       au < testing ; 2015 ; Arizona Quarterly: A Journal of American Literature, Culture, and Theory Volume 71 ; 71 >
 
     }
