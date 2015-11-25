@@ -49,9 +49,9 @@
       au < down ; 2010 ; Acta Veterinaria Scandinavica Volume 52 ; 52 >
       au < down ; 2011 ; Acta Veterinaria Scandinavica Volume 53 ; 53 >
       au < down ; 2012 ; Acta Veterinaria Scandinavica Volume 54 ; 54 >
-      au < manifest ; 2013 ; Acta Veterinaria Scandinavica Volume 55 ; 55 >
-      au < manifest ; 2014 ; Acta Veterinaria Scandinavica Volume 56 ; 56 >
-      au < manifest ; 2015 ; Acta Veterinaria Scandinavica Volume 57 ; 57 >
+      au < doNotProcess ; 2013 ; Acta Veterinaria Scandinavica Volume 55 ; 55 >
+      au < doNotProcess ; 2014 ; Acta Veterinaria Scandinavica Volume 56 ; 56 >
+      au < doNotProcess ; 2015 ; Acta Veterinaria Scandinavica Volume 57 ; 57 >
 
     }
 
@@ -68,9 +68,9 @@
       param[journal_issn] = 1940-0640
 
       au < down ; 2012 ; Addiction Science & Clinical Practice Volume 7 ; 7 >
-      au < manifest ; 2013 ; Addiction Science & Clinical Practice Volume 8 ; 8 >
+      au < doNotProcess ; 2013 ; Addiction Science & Clinical Practice Volume 8 ; 8 >
       au < down ; 2014 ; Addiction Science & Clinical Practice Volume 9 ; 9 >
-      au < manifest ; 2015 ; Addiction Science & Clinical Practice Volume 10 ; 10 >
+      au < doNotProcess ; 2015 ; Addiction Science & Clinical Practice Volume 10 ; 10 >
 
     }
 
@@ -113,9 +113,9 @@
       au < down ; 2010 ; AIDS Research and Therapy Volume 7 ; 7 >
       au < down ; 2011 ; AIDS Research and Therapy Volume 8 ; 8 >
       au < down ; 2012 ; AIDS Research and Therapy Volume 9 ; 9 >
-      au < manifest ; 2013 ; AIDS Research and Therapy Volume 10 ; 10 >
-      au < manifest ; 2014 ; AIDS Research and Therapy Volume 11 ; 11 >
-      au < manifest ; 2015 ; AIDS Research and Therapy Volume 12 ; 12 >
+      au < doNotProcess ; 2013 ; AIDS Research and Therapy Volume 10 ; 10 >
+      au < doNotProcess ; 2014 ; AIDS Research and Therapy Volume 11 ; 11 >
+      au < doNotProcess ; 2015 ; AIDS Research and Therapy Volume 12 ; 12 >
 
     }
 
@@ -136,9 +136,9 @@
       au < down ; 2010 ; Algorithms for Molecular Biology Volume 5 ; 5 >
       au < down ; 2011 ; Algorithms for Molecular Biology Volume 6 ; 6 >
       au < down ; 2012 ; Algorithms for Molecular Biology Volume 7 ; 7 >
-      au < manifest ; 2013 ; Algorithms for Molecular Biology Volume 8 ; 8 >
-      au < manifest ; 2014 ; Algorithms for Molecular Biology Volume 9 ; 9 >
-      au < manifest ; 2015 ; Algorithms for Molecular Biology Volume 10 ; 10 >
+      au < doNotProcess ; 2013 ; Algorithms for Molecular Biology Volume 8 ; 8 >
+      au < doNotProcess ; 2014 ; Algorithms for Molecular Biology Volume 9 ; 9 >
+      au < doNotProcess ; 2015 ; Algorithms for Molecular Biology Volume 10 ; 10 >
 
     }
 
@@ -160,9 +160,9 @@
       au < down ; 2010 ; Allergy, Asthma & Clinical Immunology Volume 6 ; 6 >
       au < down ; 2011 ; Allergy, Asthma & Clinical Immunology Volume 7 ; 7 >
       au < down ; 2012 ; Allergy, Asthma & Clinical Immunology Volume 8 ; 8 >
-      au < manifest ; 2013 ; Allergy, Asthma & Clinical Immunology Volume 9 ; 9 >
-      au < manifest ; 2014 ; Allergy, Asthma & Clinical Immunology Volume 10 ; 10 >
-      au < manifest ; 2015 ; Allergy, Asthma & Clinical Immunology Volume 11 ; 11 >
+      au < doNotProcess ; 2013 ; Allergy, Asthma & Clinical Immunology Volume 9 ; 9 >
+      au < doNotProcess ; 2014 ; Allergy, Asthma & Clinical Immunology Volume 10 ; 10 >
+      au < doNotProcess ; 2015 ; Allergy, Asthma & Clinical Immunology Volume 11 ; 11 >
 
     }
 
@@ -181,9 +181,9 @@
         au < doNotProcess ; 2010 ; Alzheimer's Research & Therapy Volume 2 ; 2 >
         au < doNotProcess ; 2011 ; Alzheimer's Research & Therapy Volume 3 ; 3 >
         au < doNotProcess ; 2012 ; Alzheimer's Research & Therapy Volume 4 ; 4 >
-        au < manifest ; 2013 ; Alzheimer's Research & Therapy Volume 5 ; 5 >
-        au < manifest ; 2014 ; Alzheimer's Research & Therapy Volume 6 ; 6 >
-        au < manifest ; 2015 ; Alzheimer's Research & Therapy Volume 7 ; 7 >
+        au < doNotProcess ; 2013 ; Alzheimer's Research & Therapy Volume 5 ; 5 >
+        au < doNotProcess ; 2014 ; Alzheimer's Research & Therapy Volume 6 ; 6 >
+        au < doNotProcess ; 2015 ; Alzheimer's Research & Therapy Volume 7 ; 7 >
 
       }
       {
@@ -210,9 +210,9 @@
       param[base_url] = http://www.animalbiotelemetry.com/
       param[journal_issn] = 2050-3385
 
-      au < manifest ; 2013 ; Animal Biotelemetry Volume 1 ; 1 >
+      au < doNotProcess ; 2013 ; Animal Biotelemetry Volume 1 ; 1 >
       au < down ; 2014 ; Animal Biotelemetry Volume 2 ; 2 >
-      au < manifest ; 2015 ; Animal Biotelemetry Volume 3 ; 3 >
+      au < doNotProcess ; 2015 ; Animal Biotelemetry Volume 3 ; 3 >
 
     }
 
@@ -239,9 +239,9 @@
       au < down ; 2010 ; Annals of Clinical Microbiology and Antimicrobials Volume 9 ; 9 >
       au < down ; 2011 ; Annals of Clinical Microbiology and Antimicrobials Volume 10 ; 10 >
       au < down ; 2012 ; Annals of Clinical Microbiology and Antimicrobials Volume 11 ; 11 >
-      au < manifest ; 2013 ; Annals of Clinical Microbiology and Antimicrobials Volume 12 ; 12 >
-      au < manifest ; 2014 ; Annals of Clinical Microbiology and Antimicrobials Volume 13 ; 13 >
-      au < manifest ; 2015 ; Annals of Clinical Microbiology and Antimicrobials Volume 14 ; 14 >
+      au < doNotProcess ; 2013 ; Annals of Clinical Microbiology and Antimicrobials Volume 12 ; 12 >
+      au < doNotProcess ; 2014 ; Annals of Clinical Microbiology and Antimicrobials Volume 13 ; 13 >
+      au < doNotProcess ; 2015 ; Annals of Clinical Microbiology and Antimicrobials Volume 14 ; 14 >
 
     }
 
@@ -266,9 +266,9 @@
       au < down ; 2010 ; Annals of General Psychiatry Volume 9 ; 9 >
       au < down ; 2011 ; Annals of General Psychiatry Volume 10 ; 10 >
       au < down ; 2012 ; Annals of General Psychiatry Volume 11 ; 11 >
-      au < manifest ; 2013 ; Annals of General Psychiatry Volume 12 ; 12 >
-      au < manifest ; 2014 ; Annals of General Psychiatry Volume 13 ; 13 >
-      au < manifest ; 2015 ; Annals of General Psychiatry Volume 14 ; 14 >
+      au < doNotProcess ; 2013 ; Annals of General Psychiatry Volume 12 ; 12 >
+      au < doNotProcess ; 2014 ; Annals of General Psychiatry Volume 13 ; 13 >
+      au < doNotProcess ; 2015 ; Annals of General Psychiatry Volume 14 ; 14 >
 
     }
 
@@ -288,9 +288,9 @@
       au < down ; 2010 ; Annals of Surgical Innovation and Research Volume 4 ; 4 >
       au < down ; 2011 ; Annals of Surgical Innovation and Research Volume 5 ; 5 >
       au < down ; 2012 ; Annals of Surgical Innovation and Research Volume 6 ; 6 >
-      au < manifest ; 2013 ; Annals of Surgical Innovation and Research Volume 7 ; 7 >
-      au < manifest ; 2014 ; Annals of Surgical Innovation and Research Volume 8 ; 8 >
-      au < manifest ; 2015 ; Annals of Surgical Innovation and Research Volume 9 ; 9 >
+      au < doNotProcess ; 2013 ; Annals of Surgical Innovation and Research Volume 7 ; 7 >
+      au < doNotProcess ; 2014 ; Annals of Surgical Innovation and Research Volume 8 ; 8 >
+      au < doNotProcess ; 2015 ; Annals of Surgical Innovation and Research Volume 9 ; 9 >
 
     }
 
@@ -306,9 +306,9 @@
       param[journal_issn] = 2047-2994
 
       au < down ; 2012 ; Antimicrobial Resistance and Infection Control Volume 1 ; 1 >
-      au < manifest ; 2013 ; Antimicrobial Resistance and Infection Control Volume 2 ; 2 >
+      au < doNotProcess ; 2013 ; Antimicrobial Resistance and Infection Control Volume 2 ; 2 >
       au < down ; 2014 ; Antimicrobial Resistance and Infection Control Volume 3 ; 3 >
-      au < manifest ; 2015 ; Antimicrobial Resistance and Infection Control Volume 4 ; 4 >
+      au < doNotProcess ; 2015 ; Antimicrobial Resistance and Infection Control Volume 4 ; 4 >
 
     }
 
@@ -326,9 +326,9 @@
       param[journal_issn] = 2046-9063
 
       au < down ; 2012 ; Aquatic Biosystems Volume 8 ; 8 >
-      au < manifest ; 2013 ; Aquatic Biosystems Volume 9 ; 9 >
+      au < doNotProcess ; 2013 ; Aquatic Biosystems Volume 9 ; 9 >
       au < down ; 2014 ; Aquatic Biosystems Volume 10 ; 10 >
-      au < manifest ; 2015 ; Aquatic Biosystems Volume 11 ; 11 >
+      au < doNotProcess ; 2015 ; Aquatic Biosystems Volume 11 ; 11 >
 
     }
 
@@ -347,9 +347,9 @@
       au < down ; 2010-2011 ; Archives of Public Health Volume 68 ; 68 >
       au < down ; 2011 ; Archives of Public Health Volume 69 ; 69 >
       au < down ; 2012 ; Archives of Public Health Volume 70 ; 70 >
-      au < manifest ; 2013 ; Archives of Public Health Volume 71 ; 71 >
+      au < doNotProcess ; 2013 ; Archives of Public Health Volume 71 ; 71 >
       au < down ; 2014 ; Archives of Public Health Volume 72 ; 72 >
-      au < manifest ; 2015 ; Archives of Public Health Volume 73 ; 73 >
+      au < doNotProcess ; 2015 ; Archives of Public Health Volume 73 ; 73 >
 
     }
 
@@ -382,9 +382,9 @@
       au < doNotProcess ; 2010 ; Arthritis Research & Therapy Volume 12 ; 12 >
       au < doNotProcess ; 2011 ; Arthritis Research & Therapy Volume 13 ; 13 >
       au < doNotProcess ; 2012 ; Arthritis Research & Therapy Volume 14 ; 14 >
-      au < manifest ; 2013 ; Arthritis Research & Therapy Volume 15 ; 15 >
-      au < manifest ; 2014 ; Arthritis Research & Therapy Volume 16 ; 16 >
-      au < manifest ; 2015 ; Arthritis Research & Therapy Volume 17 ; 17 >
+      au < doNotProcess ; 2013 ; Arthritis Research & Therapy Volume 15 ; 15 >
+      au < doNotProcess ; 2014 ; Arthritis Research & Therapy Volume 16 ; 16 >
+      au < doNotProcess ; 2015 ; Arthritis Research & Therapy Volume 17 ; 17 >
       }
       {
       param[base_url] = http://arthritis-research.com/
@@ -462,9 +462,9 @@
       param[base_url] = http://www.bacandrology.com/
       param[journal_issn] = 2051-4190
 
-      au < manifest ; 2013 ; Basic and Clinical Andrology Volume 23 ; 23 >
+      au < doNotProcess ; 2013 ; Basic and Clinical Andrology Volume 23 ; 23 >
       au < down ; 2014 ; Basic and Clinical Andrology Volume 24 ; 24 >
-      au < manifest ; 2015 ; Basic and Clinical Andrology Volume 25 ; 25 >
+      au < doNotProcess ; 2015 ; Basic and Clinical Andrology Volume 25 ; 25 >
 
     }
 
@@ -507,9 +507,9 @@
       au < down ; 2010 ; BioData Mining Volume 3 ; 3 >
       au < down ; 2011 ; BioData Mining Volume 4 ; 4 >
       au < down ; 2012 ; BioData Mining Volume 5 ; 5 >
-      au < manifest ; 2013 ; BioData Mining Volume 6 ; 6 >
-      au < manifest ; 2014 ; BioData Mining Volume 7 ; 7 >
-      au < manifest ; 2015 ; BioData Mining Volume 8 ; 8 >
+      au < doNotProcess ; 2013 ; BioData Mining Volume 6 ; 6 >
+      au < doNotProcess ; 2014 ; BioData Mining Volume 7 ; 7 >
+      au < doNotProcess ; 2015 ; BioData Mining Volume 8 ; 8 >
 
     }
 
@@ -527,9 +527,9 @@
       au < down ; 2009-2010 ; Biological Procedures Online Volume 12 ; 12 >
       au < down ; 2010-2011 ; Biological Procedures Online Volume 13 ; 13 >
       au < down ; 2012 ; Biological Procedures Online Volume 14 ; 14 >
-      au < manifest ; 2013 ; Biological Procedures Online Volume 15 ; 15 >
-      au < manifest ; 2014 ; Biological Procedures Online Volume 16 ; 16 >
-      au < manifest ; 2015 ; Biological Procedures Online Volume 17 ; 17 >
+      au < doNotProcess ; 2013 ; Biological Procedures Online Volume 15 ; 15 >
+      au < doNotProcess ; 2014 ; Biological Procedures Online Volume 16 ; 16 >
+      au < doNotProcess ; 2015 ; Biological Procedures Online Volume 17 ; 17 >
 
     }
 
@@ -578,12 +578,12 @@
       au < doNotProcess ; 2007 ; Biology Direct Volume 2 ; 2 >
       au < doNotProcess ; 2008 ; Biology Direct Volume 3 ; 3 >
       au < doNotProcess ; 2009 ; Biology Direct Volume 4 ; 4 >
-      au < manifest ; 2010 ; Biology Direct Volume 5 ; 5 >
+      au < doNotProcess ; 2010 ; Biology Direct Volume 5 ; 5 >
       au < doNotProcess ; 2011 ; Biology Direct Volume 6 ; 6 >
       au < doNotProcess ; 2012 ; Biology Direct Volume 7 ; 7 >
-      au < manifest ; 2013 ; Biology Direct Volume 8 ; 8 >
-      au < manifest ; 2014 ; Biology Direct Volume 9 ; 9 >
-      au < manifest ; 2015 ; Biology Direct Volume 10 ; 10 >
+      au < doNotProcess ; 2013 ; Biology Direct Volume 8 ; 8 >
+      au < doNotProcess ; 2014 ; Biology Direct Volume 9 ; 9 >
+      au < doNotProcess ; 2015 ; Biology Direct Volume 10 ; 10 >
 
       }
     }
@@ -601,9 +601,9 @@
 
       au < down ; 2011 ; Biology of Mood & Anxiety Disorders Volume 1 ; 1 >
       au < down ; 2012 ; Biology of Mood & Anxiety Disorders Volume 2 ; 2 >
-      au < manifest ; 2013 ; Biology of Mood & Anxiety Disorders Volume 3 ; 3 >
-      au < manifest ; 2014 ; Biology of Mood & Anxiety Disorders Volume 4 ; 4 >
-      au < manifest ; 2015 ; Biology of Mood & Anxiety Disorders Volume 5 ; 5 >
+      au < doNotProcess ; 2013 ; Biology of Mood & Anxiety Disorders Volume 3 ; 3 >
+      au < doNotProcess ; 2014 ; Biology of Mood & Anxiety Disorders Volume 4 ; 4 >
+      au < doNotProcess ; 2015 ; Biology of Mood & Anxiety Disorders Volume 5 ; 5 >
 
     }
 
@@ -621,9 +621,9 @@
       au < down ; 2010 ; Biology of Sex Differences Volume 1 ; 1 >
       au < down ; 2011 ; Biology of Sex Differences Volume 2 ; 2 >
       au < down ; 2012 ; Biology of Sex Differences Volume 3 ; 3 >
-      au < manifest ; 2013 ; Biology of Sex Differences Volume 4 ; 4 >
-      au < manifest ; 2014 ; Biology of Sex Differences Volume 5 ; 5 >
-      au < manifest ; 2015 ; Biology of Sex Differences Volume 6 ; 6 >
+      au < doNotProcess ; 2013 ; Biology of Sex Differences Volume 4 ; 4 >
+      au < doNotProcess ; 2014 ; Biology of Sex Differences Volume 5 ; 5 >
+      au < doNotProcess ; 2015 ; Biology of Sex Differences Volume 6 ; 6 >
 
     }
 
@@ -678,7 +678,7 @@
       param[journal_issn] = 2055-7124
 
       au < down ; 2014 ; Biomaterials Research Volume 18 ; 18 >
-      au < manifest ; 2015 ; Biomaterials Research Volume 19 ; 19 >
+      au < doNotProcess ; 2015 ; Biomaterials Research Volume 19 ; 19 >
 
     }
 
@@ -703,9 +703,9 @@
       au < down ; 2010 ; BioMedical Engineering OnLine Volume 9 ; 9 >
       au < down ; 2011 ; BioMedical Engineering OnLine Volume 10 ; 10 >
       au < down ; 2012 ; BioMedical Engineering OnLine Volume 11 ; 11 >
-      au < manifest ; 2013 ; BioMedical Engineering OnLine Volume 12 ; 12 >
-      au < manifest ; 2014 ; BioMedical Engineering OnLine Volume 13 ; 13 >
-      au < manifest ; 2015 ; BioMedical Engineering OnLine Volume 14 ; 14 >
+      au < doNotProcess ; 2013 ; BioMedical Engineering OnLine Volume 12 ; 12 >
+      au < doNotProcess ; 2014 ; BioMedical Engineering OnLine Volume 13 ; 13 >
+      au < doNotProcess ; 2015 ; BioMedical Engineering OnLine Volume 14 ; 14 >
 
     }
 
@@ -727,9 +727,9 @@
       au < down ; 2010 ; BioPsychoSocial Medicine Volume 4 ; 4 >
       au < down ; 2011 ; BioPsychoSocial Medicine Volume 5 ; 5 >
       au < down ; 2012 ; BioPsychoSocial Medicine Volume 6 ; 6 >
-      au < manifest ; 2013 ; BioPsychoSocial Medicine Volume 7 ; 7 >
+      au < doNotProcess ; 2013 ; BioPsychoSocial Medicine Volume 7 ; 7 >
       au < down ; 2014 ; BioPsychoSocial Medicine Volume 8 ; 8 >
-      au < manifest ; 2015 ; BioPsychoSocial Medicine Volume 9 ; 9 >
+      au < doNotProcess ; 2015 ; BioPsychoSocial Medicine Volume 9 ; 9 >
 
     }
 
@@ -750,9 +750,9 @@
       au < down ; 2010 ; Biotechnology for Biofuels Volume 3 ; 3 >
       au < down ; 2011 ; Biotechnology for Biofuels Volume 4 ; 4 >
       au < down ; 2012 ; Biotechnology for Biofuels Volume 5 ; 5 >
-      au < manifest ; 2013 ; Biotechnology for Biofuels Volume 6 ; 6 >
-      au < manifest ; 2014 ; Biotechnology for Biofuels Volume 7 ; 7 >
-      au < manifest ; 2015 ; Biotechnology for Biofuels Volume 8 ; 8 >
+      au < doNotProcess ; 2013 ; Biotechnology for Biofuels Volume 6 ; 6 >
+      au < doNotProcess ; 2014 ; Biotechnology for Biofuels Volume 7 ; 7 >
+      au < doNotProcess ; 2015 ; Biotechnology for Biofuels Volume 8 ; 8 >
 
     }
 
@@ -767,7 +767,7 @@
       param[journal_issn] = 2051-6673
 
       au < down ; 2014 ; Borderline Personality Disorder and Emotion Dysregulation Volume 1 ; 1 >
-      au < manifest ; 2015 ; Borderline Personality Disorder and Emotion Dysregulation Volume 2 ; 2 >
+      au < doNotProcess ; 2015 ; Borderline Personality Disorder and Emotion Dysregulation Volume 2 ; 2 >
 
     }
 
@@ -797,9 +797,9 @@
       au < doNotProcess ; 2010 ; Breast Cancer Research Volume 12 ; 12 >
       au < doNotProcess ; 2011 ; Breast Cancer Research Volume 13 ; 13 >
       au < doNotProcess ; 2012 ; Breast Cancer Research Volume 14 ; 14 >
-      au < manifest ; 2013 ; Breast Cancer Research Volume 15 ; 15 >
-      au < manifest ; 2014 ; Breast Cancer Research Volume 16 ; 16 >
-      au < manifest ; 2015 ; Breast Cancer Research Volume 17 ; 17 >
+      au < doNotProcess ; 2013 ; Breast Cancer Research Volume 15 ; 15 >
+      au < doNotProcess ; 2014 ; Breast Cancer Research Volume 16 ; 16 >
+      au < doNotProcess ; 2015 ; Breast Cancer Research Volume 17 ; 17 >
       }
       {
       param[base_url] = http://breast-cancer-research.com/
@@ -833,9 +833,9 @@
       param[base_url] = http://www.cancerandmetabolism.com/
       param[journal_issn] = 2049-3002
 
-      au < manifest ; 2013 ; Cancer & Metabolism Volume 1 ; 1 >
+      au < doNotProcess ; 2013 ; Cancer & Metabolism Volume 1 ; 1 >
       au < down ; 2014 ; Cancer & Metabolism Volume 2 ; 2 >
-      au < manifest ; 2015 ; Cancer & Metabolism Volume 3 ; 3 >
+      au < doNotProcess ; 2015 ; Cancer & Metabolism Volume 3 ; 3 >
 
     }
 
@@ -861,9 +861,9 @@
       au < down ; 2010 ; Cancer Cell International Volume 10 ; 10 >
       au < down ; 2011 ; Cancer Cell International Volume 11 ; 11 >
       au < down ; 2012 ; Cancer Cell International Volume 12 ; 12 >
-      au < manifest ; 2013 ; Cancer Cell International Volume 13 ; 13 >
-      au < manifest ; 2014 ; Cancer Cell International Volume 14 ; 14 >
-      au < manifest ; 2015 ; Cancer Cell International Volume 15 ; 15 >
+      au < doNotProcess ; 2013 ; Cancer Cell International Volume 13 ; 13 >
+      au < doNotProcess ; 2014 ; Cancer Cell International Volume 14 ; 14 >
+      au < doNotProcess ; 2015 ; Cancer Cell International Volume 15 ; 15 >
 
     }
 
@@ -878,7 +878,7 @@
       param[journal_issn] = 1470-7330
 
       au < down ; 2014 ; Cancer Imaging Volume 14 ; 14 >
-      au < manifest ; 2015 ; Cancer Imaging Volume 15 ; 15 >
+      au < doNotProcess ; 2015 ; Cancer Imaging Volume 15 ; 15 >
 
     }
 
@@ -918,7 +918,7 @@
       au < down ; 2012 ; Carbon Balance and Management Volume 7 ; 7 >
       au < down ; 2013 ; Carbon Balance and Management Volume 8 ; 8 >
       au < down ; 2014 ; Carbon Balance and Management Volume 9 ; 9 >
-      au < manifest ; 2015 ; Carbon Balance and Management Volume 10 ; 10 >
+      au < doNotProcess ; 2015 ; Carbon Balance and Management Volume 10 ; 10 >
 
     }
 
@@ -945,9 +945,9 @@
       au < down ; 2010 ; Cardiovascular Diabetology Volume 9 ; 9 >
       au < down ; 2011 ; Cardiovascular Diabetology Volume 10 ; 10 >
       au < down ; 2012 ; Cardiovascular Diabetology Volume 11 ; 11 >
-      au < manifest ; 2013 ; Cardiovascular Diabetology Volume 12 ; 12 >
-      au < manifest ; 2014 ; Cardiovascular Diabetology Volume 13 ; 13 >
-      au < manifest ; 2015 ; Cardiovascular Diabetology Volume 14 ; 14 >
+      au < doNotProcess ; 2013 ; Cardiovascular Diabetology Volume 12 ; 12 >
+      au < doNotProcess ; 2014 ; Cardiovascular Diabetology Volume 13 ; 13 >
+      au < doNotProcess ; 2015 ; Cardiovascular Diabetology Volume 14 ; 14 >
 
     }
 
@@ -973,9 +973,9 @@
       au < down ; 2010 ; Cardiovascular Ultrasound Volume 8 ; 8 >
       au < down ; 2011 ; Cardiovascular Ultrasound Volume 9 ; 9 >
       au < down ; 2012 ; Cardiovascular Ultrasound Volume 10 ; 10 >
-      au < manifest ; 2013 ; Cardiovascular Ultrasound Volume 11 ; 11 >
+      au < doNotProcess ; 2013 ; Cardiovascular Ultrasound Volume 11 ; 11 >
       au < down ; 2014 ; Cardiovascular Ultrasound Volume 12 ; 12 >
-      au < manifest ; 2015 ; Cardiovascular Ultrasound Volume 13 ; 13 >
+      au < doNotProcess ; 2015 ; Cardiovascular Ultrasound Volume 13 ; 13 >
 
     }
 
@@ -1038,9 +1038,9 @@
       au < down ; 2010 ; Cell Communication and Signaling Volume 8 ; 8 >
       au < down ; 2011 ; Cell Communication and Signaling Volume 9 ; 9 >
       au < down ; 2012 ; Cell Communication and Signaling Volume 10 ; 10 >
-      au < manifest ; 2013 ; Cell Communication and Signaling Volume 11 ; 11 >
+      au < doNotProcess ; 2013 ; Cell Communication and Signaling Volume 11 ; 11 >
       au < down ; 2014 ; Cell Communication and Signaling Volume 12 ; 12 >
-      au < manifest ; 2015 ; Cell Communication and Signaling Volume 13 ; 13 >
+      au < doNotProcess ; 2015 ; Cell Communication and Signaling Volume 13 ; 13 >
 
     }
 
@@ -1078,10 +1078,10 @@
       param[base_url] = http://www.cellregenerationjournal.com/
       param[journal_issn] = 2045-9769
 
-      au < manifest ; 2012 ; Cell Regeneration Volume 1 ; 1 >
-      au < manifest ; 2013 ; Cell Regeneration Volume 2 ; 2 >
-      au < manifest ; 2014 ; Cell Regeneration Volume 3 ; 3 >
-      au < manifest ; 2015 ; Cell Regeneration Volume 4 ; 4 >
+      au < doNotProcess ; 2012 ; Cell Regeneration Volume 1 ; 1 >
+      au < doNotProcess ; 2013 ; Cell Regeneration Volume 2 ; 2 >
+      au < doNotProcess ; 2014 ; Cell Regeneration Volume 3 ; 3 >
+      au < doNotProcess ; 2015 ; Cell Regeneration Volume 4 ; 4 >
 
     }
 
@@ -1096,7 +1096,7 @@
       param[base_url] = http://www.cerebellumandataxias.com/
 
       au < down ; 2014 ; Cerebellum & Ataxias Volume 1 ; 1 >
-      au < manifest ; 2015 ; Cerebellum & Ataxias Volume 2 ; 2 >
+      au < doNotProcess ; 2015 ; Cerebellum & Ataxias Volume 2 ; 2 >
 
     }
 
@@ -1157,7 +1157,7 @@
       au < down ; 2012 ; Child and Adolescent Psychiatry and Mental Health Volume 6 ; 6 >
       au < down ; 2013 ; Child and Adolescent Psychiatry and Mental Health Volume 7 ; 7 >
       au < down ; 2014 ; Child and Adolescent Psychiatry and Mental Health Volume 8 ; 8 >
-      au < manifest ; 2015 ; Child and Adolescent Psychiatry and Mental Health Volume 9 ; 9 >
+      au < doNotProcess ; 2015 ; Child and Adolescent Psychiatry and Mental Health Volume 9 ; 9 >
 
     }
 
@@ -1181,7 +1181,7 @@
       au < down ; 2012 ; Chinese Medicine Volume 7 ; 7 >
       au < down ; 2013 ; Chinese Medicine Volume 8 ; 8 >
       au < down ; 2014 ; Chinese Medicine Volume 9 ; 9 >
-      au < manifest ; 2015 ; Chinese Medicine Volume 10 ; 10 >
+      au < doNotProcess ; 2015 ; Chinese Medicine Volume 10 ; 10 >
 
     }
 
@@ -1211,7 +1211,7 @@
       au < down ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
       au < down ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 >
       au < down ; 2014 ; Chiropractic & Manual Therapies Volume 22 ; 22 >
-      au < manifest ; 2015 ; Chiropractic & Manual Therapies Volume 23 ; 23 >
+      au < doNotProcess ; 2015 ; Chiropractic & Manual Therapies Volume 23 ; 23 >
       }
     }
 
@@ -1266,7 +1266,7 @@
       au < down ; 2012 ; Cilia Volume 1 ; 1 >
       au < down ; 2013 ; Cilia Volume 2 ; 2 >
       au < down ; 2014 ; Cilia Volume 3 ; 3 >
-      au < manifest ; 2015 ; Cilia Volume 4 ; 4 >
+      au < doNotProcess ; 2015 ; Cilia Volume 4 ; 4 >
 
     }
 
@@ -1292,7 +1292,7 @@
       au < down ; 2012 ; Clinical and Molecular Allergy Volume 10 ; 10 >
       au < down ; 2013 ; Clinical and Molecular Allergy Volume 11 ; 11 >
       au < doesNotExist ; 0 ; Clinical and Molecular Allergy Volume 12 ; 12 >
-      au < manifest ; 2015 ; Clinical and Molecular Allergy Volume 13 ; 13 >
+      au < doNotProcess ; 2015 ; Clinical and Molecular Allergy Volume 13 ; 13 >
 
     }
 
@@ -1309,9 +1309,9 @@
 
       au < down ; 2011 ; Clinical and Translational Allergy Volume 1 ; 1 >
       au < down ; 2012 ; Clinical and Translational Allergy Volume 2 ; 2 >
-      au < manifest ; 2013 ; Clinical and Translational Allergy Volume 3 ; 3 >
+      au < doNotProcess ; 2013 ; Clinical and Translational Allergy Volume 3 ; 3 >
       au < down ; 2014 ; Clinical and Translational Allergy Volume 4 ; 4 >
-      au < manifest ; 2015 ; Clinical and Translational Allergy Volume 5 ; 5 >
+      au < doNotProcess ; 2015 ; Clinical and Translational Allergy Volume 5 ; 5 >
 
     }
 
@@ -1328,9 +1328,9 @@
 
       au < down ; 2011 ; Clinical Epigenetics Volume 3 ; 3 >
       au < down ; 2012 ; Clinical Epigenetics Volume 4 ; 4 >
-      au < manifest ; 2013 ; Clinical Epigenetics Volume 5 ; 5 >
+      au < doNotProcess ; 2013 ; Clinical Epigenetics Volume 5 ; 5 >
       au < down ; 2014 ; Clinical Epigenetics Volume 6 ; 6 >
-      au < manifest ; 2015 ; Clinical Epigenetics Volume 7 ; 7 >
+      au < doNotProcess ; 2015 ; Clinical Epigenetics Volume 7 ; 7 >
 
     }
 
@@ -1344,8 +1344,8 @@
       param[base_url] = http://www.clinicalhypertension.com/
       param[journal_issn] = 2056-5909
 
-      au < manifest ; 2014 ; Clinical Hypertension Volume 20 ; 20 >
-      au < manifest ; 2015 ; Clinical Hypertension Volume 21 ; 21 >
+      au < doNotProcess ; 2014 ; Clinical Hypertension Volume 20 ; 20 >
+      au < doNotProcess ; 2015 ; Clinical Hypertension Volume 21 ; 21 >
 
     }
 
@@ -1383,9 +1383,9 @@
 
       au < down ; 2011 ; Clinical Sarcoma Research Volume 1 ; 1 >
       au < down ; 2012 ; Clinical Sarcoma Research Volume 2 ; 2 >
-      au < manifest ; 2013 ; Clinical Sarcoma Research Volume 3 ; 3 >
+      au < doNotProcess ; 2013 ; Clinical Sarcoma Research Volume 3 ; 3 >
       au < down ; 2014 ; Clinical Sarcoma Research Volume 4 ; 4 >
-      au < manifest ; 2015 ; Clinical Sarcoma Research Volume 5 ; 5 >
+      au < doNotProcess ; 2015 ; Clinical Sarcoma Research Volume 5 ; 5 >
 
     }
 
@@ -1430,9 +1430,9 @@
       au < down ; 2010 ; Conflict and Health Volume 4 ; 4 >
       au < down ; 2011 ; Conflict and Health Volume 5 ; 5 >
       au < down ; 2012 ; Conflict and Health Volume 6 ; 6 >
-      au < manifest ; 2013 ; Conflict and Health Volume 7 ; 7 >
-      au < manifest ; 2014 ; Conflict and Health Volume 8 ; 8 >
-      au < manifest ; 2015 ; Conflict and Health Volume 9 ; 9 >
+      au < doNotProcess ; 2013 ; Conflict and Health Volume 7 ; 7 >
+      au < doNotProcess ; 2014 ; Conflict and Health Volume 8 ; 8 >
+      au < doNotProcess ; 2015 ; Conflict and Health Volume 9 ; 9 >
 
     }
 
@@ -1482,7 +1482,7 @@
       au < down ; 2011 ; Cough Volume 7 ; 7 >
       au < down ; 2012 ; Cough Volume 8 ; 8 >
       au < down ; 2013 ; Cough Volume 9 ; 9 >
-      au < manifest ; 2014 ; Cough Volume 10 ; 10 >
+      au < doNotProcess ; 2014 ; Cough Volume 10 ; 10 >
 
     }
 
@@ -1514,10 +1514,10 @@
       au < doNotProcess ; 2009 ; Critical Care Volume 13 (English) ; 13 >
       au < doNotProcess ; 2010 ; Critical Care Volume 14 (English) ; 14 >
       au < doNotProcess ; 2011 ; Critical Care Volume 15 (English) ; 15 >
-      au < manifest ; 2012 ; Critical Care Volume 16 (English) ; 16 >
-      au < manifest ; 2013 ; Critical Care Volume 17 (English) ; 17 >
-      au < manifest ; 2014 ; Critical Care Volume 18 (English) ; 18 >
-      au < manifest ; 2015 ; Critical Care Volume 19 (English) ; 19 >
+      au < doNotProcess ; 2012 ; Critical Care Volume 16 (English) ; 16 >
+      au < doNotProcess ; 2013 ; Critical Care Volume 17 (English) ; 17 >
+      au < doNotProcess ; 2014 ; Critical Care Volume 18 (English) ; 18 >
+      au < doNotProcess ; 2015 ; Critical Care Volume 19 (English) ; 19 >
       }
       {
       param[base_url] = http://ccforum.com/
@@ -1558,8 +1558,8 @@
 
       au < down ; 2012 ; DARU Journal of Pharmaceutical Sciences Volume 20 ; 20 >
       au < down ; 2013 ; DARU Journal of Pharmaceutical Sciences Volume 21 ; 21 >
-      au < manifest ; 2014 ; DARU Journal of Pharmaceutical Sciences Volume 22 ; 22 >
-      au < manifest ; 2015 ; DARU Journal of Pharmaceutical Sciences Volume 23 ; 23 >
+      au < doNotProcess ; 2014 ; DARU Journal of Pharmaceutical Sciences Volume 22 ; 22 >
+      au < doNotProcess ; 2015 ; DARU Journal of Pharmaceutical Sciences Volume 23 ; 23 >
 
     }
 
@@ -1579,8 +1579,8 @@
       au < down ; 2011 ; Diabetology & Metabolic Syndrome Volume 3 ; 3 >
       au < down ; 2012 ; Diabetology & Metabolic Syndrome Volume 4 ; 4 >
       au < down ; 2013 ; Diabetology & Metabolic Syndrome Volume 5 ; 5 >
-      au < manifest ; 2014 ; Diabetology & Metabolic Syndrome Volume 6 ; 6 >
-      au < manifest ; 2015 ; Diabetology & Metabolic Syndrome Volume 7 ; 7 >
+      au < doNotProcess ; 2014 ; Diabetology & Metabolic Syndrome Volume 6 ; 6 >
+      au < doNotProcess ; 2015 ; Diabetology & Metabolic Syndrome Volume 7 ; 7 >
 
     }
 
@@ -1600,10 +1600,10 @@
       au < down ; 2009 ; Diagnostic Pathology Volume 4 ; 4 >
       au < down ; 2010 ; Diagnostic Pathology Volume 5 ; 5 >
       au < down ; 2011 ; Diagnostic Pathology Volume 6 ; 6 >
-      au < manifest ; 2012 ; Diagnostic Pathology Volume 7 ; 7 >
-      au < manifest ; 2013 ; Diagnostic Pathology Volume 8 ; 8 >
-      au < manifest ; 2014 ; Diagnostic Pathology Volume 9 ; 9 >
-      au < manifest ; 2015 ; Diagnostic Pathology Volume 10 ; 10 >
+      au < doNotProcess ; 2012 ; Diagnostic Pathology Volume 7 ; 7 >
+      au < doNotProcess ; 2013 ; Diagnostic Pathology Volume 8 ; 8 >
+      au < doNotProcess ; 2014 ; Diagnostic Pathology Volume 9 ; 9 >
+      au < doNotProcess ; 2015 ; Diagnostic Pathology Volume 10 ; 10 >
 
     }
 
@@ -1651,9 +1651,9 @@
       au < down ; 2010 ; Emerging Themes in Epidemiology Volume 7 ; 7 >
       au < down ; 2011 ; Emerging Themes in Epidemiology Volume 8 ; 8 >
       au < down ; 2012 ; Emerging Themes in Epidemiology Volume 9 ; 9 >
-      au < manifest ; 2013 ; Emerging Themes in Epidemiology Volume 10 ; 10 >
-      au < manifest ; 2014 ; Emerging Themes in Epidemiology Volume 11 ; 11 >
-      au < manifest ; 2015 ; Emerging Themes in Epidemiology Volume 12 ; 12 >
+      au < doNotProcess ; 2013 ; Emerging Themes in Epidemiology Volume 10 ; 10 >
+      au < doNotProcess ; 2014 ; Emerging Themes in Epidemiology Volume 11 ; 11 >
+      au < doNotProcess ; 2015 ; Emerging Themes in Epidemiology Volume 12 ; 12 >
 
     }
 
@@ -1696,9 +1696,9 @@
       au < down ; 2010 ; Environmental Health Volume 9 ; 9 >
       au < down ; 2011 ; Environmental Health Volume 10 ; 10 >
       au < down ; 2012 ; Environmental Health Volume 11 ; 11 >
-      au < manifest ; 2013 ; Environmental Health Volume 12 ; 12 >
-      au < manifest ; 2014 ; Environmental Health Volume 13 ; 13 >
-      au < manifest ; 2015 ; Environmental Health Volume 14 ; 14 >
+      au < doNotProcess ; 2013 ; Environmental Health Volume 12 ; 12 >
+      au < doNotProcess ; 2014 ; Environmental Health Volume 13 ; 13 >
+      au < doNotProcess ; 2015 ; Environmental Health Volume 14 ; 14 >
 
     }
 
@@ -1743,9 +1743,9 @@
       au < down ; 2010 ; Epigenetics & Chromatin Volume 3 ; 3 >
       au < down ; 2011 ; Epigenetics & Chromatin Volume 4 ; 4 >
       au < down ; 2012 ; Epigenetics & Chromatin Volume 5 ; 5 >
-      au < manifest ; 2013 ; Epigenetics & Chromatin Volume 6 ; 6 >
-      au < manifest ; 2014 ; Epigenetics & Chromatin Volume 7 ; 7 >
-      au < manifest ; 2015 ; Epigenetics & Chromatin Volume 8 ; 8 >
+      au < doNotProcess ; 2013 ; Epigenetics & Chromatin Volume 6 ; 6 >
+      au < doNotProcess ; 2014 ; Epigenetics & Chromatin Volume 7 ; 7 >
+      au < doNotProcess ; 2015 ; Epigenetics & Chromatin Volume 8 ; 8 >
 
     }
 
@@ -1762,9 +1762,9 @@
       param[journal_issn] = 1878-5085
 
       au < down ; 2012 ; EPMA Journal Volume 3 ; 3 >
-      au < manifest ; 2013 ; EPMA Journal Volume 4 ; 4 >
-      au < manifest ; 2014 ; EPMA Journal Volume 5 ; 5 >
-      au < manifest ; 2015 ; EPMA Journal Volume 6 ; 6 >
+      au < doNotProcess ; 2013 ; EPMA Journal Volume 4 ; 4 >
+      au < doNotProcess ; 2014 ; EPMA Journal Volume 5 ; 5 >
+      au < doNotProcess ; 2015 ; EPMA Journal Volume 6 ; 6 >
 
     }
 
@@ -1782,9 +1782,9 @@
       au < down ; 2010 ; European Journal of Medical Research Volume 15 ; 15 >
       au < down ; 2011 ; European Journal of Medical Research Volume 16 ; 16 >
       au < down ; 2012 ; European Journal of Medical Research Volume 17 ; 17 >
-      au < manifest ; 2013 ; European Journal of Medical Research Volume 18 ; 18 >
-      au < manifest ; 2014 ; European Journal of Medical Research Volume 19 ; 19 >
-      au < manifest ; 2015 ; European Journal of Medical Research Volume 20 ; 20 >
+      au < doNotProcess ; 2013 ; European Journal of Medical Research Volume 18 ; 18 >
+      au < doNotProcess ; 2014 ; European Journal of Medical Research Volume 19 ; 19 >
+      au < doNotProcess ; 2015 ; European Journal of Medical Research Volume 20 ; 20 >
 
     }
 
@@ -1821,9 +1821,9 @@
       au < down ; 2010 ; Experimental & Translational Stroke Medicine Volume 2 ; 2 >
       au < down ; 2011 ; Experimental & Translational Stroke Medicine Volume 3 ; 3 >
       au < down ; 2012 ; Experimental & Translational Stroke Medicine Volume 4 ; 4 >
-      au < manifest ; 2013 ; Experimental & Translational Stroke Medicine Volume 5 ; 5 >
-      au < manifest ; 2014 ; Experimental & Translational Stroke Medicine Volume 6 ; 6 >
-      au < manifest ; 2015 ; Experimental & Translational Stroke Medicine Volume 7 ; 7 >
+      au < doNotProcess ; 2013 ; Experimental & Translational Stroke Medicine Volume 5 ; 5 >
+      au < doNotProcess ; 2014 ; Experimental & Translational Stroke Medicine Volume 6 ; 6 >
+      au < doNotProcess ; 2015 ; Experimental & Translational Stroke Medicine Volume 7 ; 7 >
 
     }
 
@@ -1855,9 +1855,9 @@
       param[journal_issn] = 2046-7648
 
       au < down ; 2012 ; Extreme Physiology & Medicine Volume 1 ; 1 >
-      au < manifest ; 2013 ; Extreme Physiology & Medicine Volume 2 ; 2 >
-      au < manifest ; 2014 ; Extreme Physiology & Medicine Volume 3 ; 3 >
-      au < manifest ; 2015 ; Extreme Physiology & Medicine Volume 4 ; 4 >
+      au < doNotProcess ; 2013 ; Extreme Physiology & Medicine Volume 2 ; 2 >
+      au < doNotProcess ; 2014 ; Extreme Physiology & Medicine Volume 3 ; 3 >
+      au < doNotProcess ; 2015 ; Extreme Physiology & Medicine Volume 4 ; 4 >
 
     }
 
@@ -1876,9 +1876,9 @@
       au < down ; 2010 ; Fibrogenesis & Tissue Repair Volume 3 ; 3 >
       au < down ; 2011 ; Fibrogenesis & Tissue Repair Volume 4 ; 4 >
       au < down ; 2012 ; Fibrogenesis & Tissue Repair Volume 5 ; 5 >
-      au < manifest ; 2013 ; Fibrogenesis & Tissue Repair Volume 6 ; 6 >
-      au < manifest ; 2014 ; Fibrogenesis & Tissue Repair Volume 7 ; 7 >
-      au < manifest ; 2015 ; Fibrogenesis & Tissue Repair Volume 8 ; 8 >
+      au < doNotProcess ; 2013 ; Fibrogenesis & Tissue Repair Volume 6 ; 6 >
+      au < doNotProcess ; 2014 ; Fibrogenesis & Tissue Repair Volume 7 ; 7 >
+      au < doNotProcess ; 2015 ; Fibrogenesis & Tissue Repair Volume 8 ; 8 >
 
     }
 
@@ -1893,9 +1893,9 @@
       param[journal_issn] = 2044-7248
 
       au < down ; 2012 ; Flavour Volume 1 ; 1 >
-      au < manifest ; 2013 ; Flavour Volume 2 ; 2 >
-      au < manifest ; 2014 ; Flavour Volume 3 ; 3 >
-      au < manifest ; 2015 ; Flavour Volume 4 ; 4 >
+      au < doNotProcess ; 2013 ; Flavour Volume 2 ; 2 >
+      au < doNotProcess ; 2014 ; Flavour Volume 3 ; 3 >
+      au < doNotProcess ; 2015 ; Flavour Volume 4 ; 4 >
 
     }
 
@@ -1913,9 +1913,9 @@
 
       au < down ; 2011 ; Fluids and Barriers of the CNS Volume 8 ; 8 >
       au < down ; 2012 ; Fluids and Barriers of the CNS Volume 9 ; 9 >
-      au < manifest ; 2013 ; Fluids and Barriers of the CNS Volume 10 ; 10 >
-      au < manifest ; 2014 ; Fluids and Barriers of the CNS Volume 11 ; 11 >
-      au < manifest ; 2015 ; Fluids and Barriers of the CNS Volume 12 ; 12 >
+      au < doNotProcess ; 2013 ; Fluids and Barriers of the CNS Volume 10 ; 10 >
+      au < doNotProcess ; 2014 ; Fluids and Barriers of the CNS Volume 11 ; 11 >
+      au < doNotProcess ; 2015 ; Fluids and Barriers of the CNS Volume 12 ; 12 >
 
     }
 
@@ -1938,9 +1938,9 @@
       au < down ; 2010 ; Frontiers in Zoology Volume 7 ; 7 >
       au < down ; 2011 ; Frontiers in Zoology Volume 8 ; 8 >
       au < down ; 2012 ; Frontiers in Zoology Volume 9 ; 9 >
-      au < manifest ; 2013 ; Frontiers in Zoology Volume 10 ; 10 >
-      au < manifest ; 2014 ; Frontiers in Zoology Volume 11 ; 11 >
-      au < manifest ; 2015 ; Frontiers in Zoology Volume 12 ; 12 >
+      au < doNotProcess ; 2013 ; Frontiers in Zoology Volume 10 ; 10 >
+      au < doNotProcess ; 2014 ; Frontiers in Zoology Volume 11 ; 11 >
+      au < doNotProcess ; 2015 ; Frontiers in Zoology Volume 12 ; 12 >
 
     }
 
@@ -1979,41 +1979,41 @@
       param[base_url] = http://www.gsejournal.org/
       param[journal_issn] = 1297-9686
 
-      au < manifest ; 1969 ; Genetics Selection Evolution Volume 1 ; 1 >
-      au < manifest ; 1970 ; Genetics Selection Evolution Volume 2 ; 2 >
-      au < manifest ; 1971 ; Genetics Selection Evolution Volume 3 ; 3 >
-      au < manifest ; 1972 ; Genetics Selection Evolution Volume 4 ; 4 >
-      au < manifest ; 1973 ; Genetics Selection Evolution Volume 5 ; 5 >
-      au < manifest ; 1974 ; Genetics Selection Evolution Volume 6 ; 6 >
-      au < manifest ; 1975 ; Genetics Selection Evolution Volume 7 ; 7 >
-      au < manifest ; 1976 ; Genetics Selection Evolution Volume 8 ; 8 >
-      au < manifest ; 1977 ; Genetics Selection Evolution Volume 9 ; 9 >
-      au < manifest ; 1978 ; Genetics Selection Evolution Volume 10 ; 10 >
-      au < manifest ; 1979 ; Genetics Selection Evolution Volume 11 ; 11 >
-      au < manifest ; 1980 ; Genetics Selection Evolution Volume 12 ; 12 >
-      au < manifest ; 1981 ; Genetics Selection Evolution Volume 13 ; 13 >
-      au < manifest ; 1982 ; Genetics Selection Evolution Volume 14 ; 14 >
-      au < manifest ; 1983 ; Genetics Selection Evolution Volume 15 ; 15 >
-      au < manifest ; 1984 ; Genetics Selection Evolution Volume 16 ; 16 >
-      au < manifest ; 1985 ; Genetics Selection Evolution Volume 17 ; 17 >
-      au < manifest ; 1986 ; Genetics Selection Evolution Volume 18 ; 18 >
-      au < manifest ; 1987 ; Genetics Selection Evolution Volume 19 ; 19 >
-      au < manifest ; 1988 ; Genetics Selection Evolution Volume 20 ; 20 >
-      au < manifest ; 1989 ; Genetics Selection Evolution Volume 21 ; 21 >
-      au < manifest ; 1990 ; Genetics Selection Evolution Volume 22 ; 22 >
-      au < manifest ; 1991 ; Genetics Selection Evolution Volume 23 ; 23 >
-      au < manifest ; 1992 ; Genetics Selection Evolution Volume 24 ; 24 >
-      au < manifest ; 1993 ; Genetics Selection Evolution Volume 25 ; 25 >
-      au < manifest ; 1994 ; Genetics Selection Evolution Volume 26 ; 26 >
-      au < manifest ; 1995 ; Genetics Selection Evolution Volume 27 ; 27 >
-      au < manifest ; 1996 ; Genetics Selection Evolution Volume 28 ; 28 >
-      au < manifest ; 1997 ; Genetics Selection Evolution Volume 29 ; 29 >
-      au < manifest ; 1998 ; Genetics Selection Evolution Volume 30 ; 30 >
-      au < manifest ; 1999 ; Genetics Selection Evolution Volume 31 ; 31 >
-      au < manifest ; 2000 ; Genetics Selection Evolution Volume 32 ; 32 >
-      au < manifest ; 2001 ; Genetics Selection Evolution Volume 33 ; 33 >
-      au < manifest ; 2002 ; Genetics Selection Evolution Volume 34 ; 34 >
-      au < manifest ; 2003 ; Genetics Selection Evolution Volume 35 ; 35 >
+      au < doNotProcess ; 1969 ; Genetics Selection Evolution Volume 1 ; 1 >
+      au < doNotProcess ; 1970 ; Genetics Selection Evolution Volume 2 ; 2 >
+      au < doNotProcess ; 1971 ; Genetics Selection Evolution Volume 3 ; 3 >
+      au < doNotProcess ; 1972 ; Genetics Selection Evolution Volume 4 ; 4 >
+      au < doNotProcess ; 1973 ; Genetics Selection Evolution Volume 5 ; 5 >
+      au < doNotProcess ; 1974 ; Genetics Selection Evolution Volume 6 ; 6 >
+      au < doNotProcess ; 1975 ; Genetics Selection Evolution Volume 7 ; 7 >
+      au < doNotProcess ; 1976 ; Genetics Selection Evolution Volume 8 ; 8 >
+      au < doNotProcess ; 1977 ; Genetics Selection Evolution Volume 9 ; 9 >
+      au < doNotProcess ; 1978 ; Genetics Selection Evolution Volume 10 ; 10 >
+      au < doNotProcess ; 1979 ; Genetics Selection Evolution Volume 11 ; 11 >
+      au < doNotProcess ; 1980 ; Genetics Selection Evolution Volume 12 ; 12 >
+      au < doNotProcess ; 1981 ; Genetics Selection Evolution Volume 13 ; 13 >
+      au < doNotProcess ; 1982 ; Genetics Selection Evolution Volume 14 ; 14 >
+      au < doNotProcess ; 1983 ; Genetics Selection Evolution Volume 15 ; 15 >
+      au < doNotProcess ; 1984 ; Genetics Selection Evolution Volume 16 ; 16 >
+      au < doNotProcess ; 1985 ; Genetics Selection Evolution Volume 17 ; 17 >
+      au < doNotProcess ; 1986 ; Genetics Selection Evolution Volume 18 ; 18 >
+      au < doNotProcess ; 1987 ; Genetics Selection Evolution Volume 19 ; 19 >
+      au < doNotProcess ; 1988 ; Genetics Selection Evolution Volume 20 ; 20 >
+      au < doNotProcess ; 1989 ; Genetics Selection Evolution Volume 21 ; 21 >
+      au < doNotProcess ; 1990 ; Genetics Selection Evolution Volume 22 ; 22 >
+      au < doNotProcess ; 1991 ; Genetics Selection Evolution Volume 23 ; 23 >
+      au < doNotProcess ; 1992 ; Genetics Selection Evolution Volume 24 ; 24 >
+      au < doNotProcess ; 1993 ; Genetics Selection Evolution Volume 25 ; 25 >
+      au < doNotProcess ; 1994 ; Genetics Selection Evolution Volume 26 ; 26 >
+      au < doNotProcess ; 1995 ; Genetics Selection Evolution Volume 27 ; 27 >
+      au < doNotProcess ; 1996 ; Genetics Selection Evolution Volume 28 ; 28 >
+      au < doNotProcess ; 1997 ; Genetics Selection Evolution Volume 29 ; 29 >
+      au < doNotProcess ; 1998 ; Genetics Selection Evolution Volume 30 ; 30 >
+      au < doNotProcess ; 1999 ; Genetics Selection Evolution Volume 31 ; 31 >
+      au < doNotProcess ; 2000 ; Genetics Selection Evolution Volume 32 ; 32 >
+      au < doNotProcess ; 2001 ; Genetics Selection Evolution Volume 33 ; 33 >
+      au < doNotProcess ; 2002 ; Genetics Selection Evolution Volume 34 ; 34 >
+      au < doNotProcess ; 2003 ; Genetics Selection Evolution Volume 35 ; 35 >
       au < down ; 2004 ; Genetics Selection Evolution Volume 36 ; 36 >
       au < down ; 2005 ; Genetics Selection Evolution Volume 37 ; 37 >
       au < down ; 2006 ; Genetics Selection Evolution Volume 38 ; 38 >
@@ -2023,9 +2023,9 @@
       au < down ; 2010 ; Genetics Selection Evolution Volume 42 ; 42 >
       au < down ; 2011 ; Genetics Selection Evolution Volume 43 ; 43 >
       au < down ; 2012 ; Genetics Selection Evolution Volume 44 ; 44 >
-      au < manifest ; 2013 ; Genetics Selection Evolution Volume 45 ; 45 >
-      au < manifest ; 2014 ; Genetics Selection Evolution Volume 46 ; 46 >
-      au < manifest ; 2015 ; Genetics Selection Evolution Volume 47 ; 47 >
+      au < doNotProcess ; 2013 ; Genetics Selection Evolution Volume 45 ; 45 >
+      au < doNotProcess ; 2014 ; Genetics Selection Evolution Volume 46 ; 46 >
+      au < doNotProcess ; 2015 ; Genetics Selection Evolution Volume 47 ; 47 >
 
     }
 
@@ -2054,10 +2054,10 @@
       au < doNotProcess ; 2009 ; Genome Biology Volume 10 ; 10 >
       au < doNotProcess ; 2010 ; Genome Biology Volume 11 ; 11 >
       au < doNotProcess ; 2011 ; Genome Biology Volume 12 ; 12 >
-      au < manifest ; 2012 ; Genome Biology Volume 13 ; 13 >
-      au < manifest ; 2013 ; Genome Biology Volume 14 ; 14 >
-      au < manifest ; 2014 ; Genome Biology Volume 15 ; 15 >
-      au < manifest ; 2015 ; Genome Biology Volume 16 ; 16 >
+      au < doNotProcess ; 2012 ; Genome Biology Volume 13 ; 13 >
+      au < doNotProcess ; 2013 ; Genome Biology Volume 14 ; 14 >
+      au < doNotProcess ; 2014 ; Genome Biology Volume 15 ; 15 >
+      au < doNotProcess ; 2015 ; Genome Biology Volume 16 ; 16 >
       }
       {
       param[base_url] = http://genomebiology.com/
@@ -2095,8 +2095,8 @@
       au < down ; 2010 ; Genome Integrity Volume 1 ; 1 >
       au < down ; 2011 ; Genome Integrity Volume 2 ; 2 >
       au < down ; 2012 ; Genome Integrity Volume 3 ; 3 >
-      au < manifest ; 2013 ; Genome Integrity Volume 4 ; 4 >
-      au < manifest ; 2014 ; Genome Integrity Volume 5 ; 5 >
+      au < doNotProcess ; 2013 ; Genome Integrity Volume 4 ; 4 >
+      au < doNotProcess ; 2014 ; Genome Integrity Volume 5 ; 5 >
 
     }
 
@@ -2113,13 +2113,13 @@
       param[base_url] = http://www.genomemedicine.com/
       comment[0] = base url changed to add www.
 
-      au < manifest ; 2009 ; Genome Medicine Volume 1 ; 1 >
-      au < manifest ; 2010 ; Genome Medicine Volume 2 ; 2 >
-      au < manifest ; 2011 ; Genome Medicine Volume 3 ; 3 >
-      au < manifest ; 2012 ; Genome Medicine Volume 4 ; 4 >
-      au < manifest ; 2013 ; Genome Medicine Volume 5 ; 5 >
-      au < manifest ; 2014 ; Genome Medicine Volume 6 ; 6 >
-      au < manifest ; 2015 ; Genome Medicine Volume 7 ; 7 >
+      au < doNotProcess ; 2009 ; Genome Medicine Volume 1 ; 1 >
+      au < doNotProcess ; 2010 ; Genome Medicine Volume 2 ; 2 >
+      au < doNotProcess ; 2011 ; Genome Medicine Volume 3 ; 3 >
+      au < doNotProcess ; 2012 ; Genome Medicine Volume 4 ; 4 >
+      au < doNotProcess ; 2013 ; Genome Medicine Volume 5 ; 5 >
+      au < doNotProcess ; 2014 ; Genome Medicine Volume 6 ; 6 >
+      au < doNotProcess ; 2015 ; Genome Medicine Volume 7 ; 7 >
       }
       {
       param[base_url] = http://genomemedicine.com/
@@ -2140,10 +2140,10 @@
       param[base_url] = http://www.gigasciencejournal.com/
       param[journal_issn] = 2047-217X
 
-      au < manifest ; 2012 ; GigaScience Volume 1 ; 1 >
-      au < manifest ; 2013 ; GigaScience Volume 2 ; 2 >
-      au < manifest ; 2014 ; GigaScience Volume 3 ; 3 >
-      au < manifest ; 2015 ; GigaScience Volume 4 ; 4 >
+      au < doNotProcess ; 2012 ; GigaScience Volume 1 ; 1 >
+      au < doNotProcess ; 2013 ; GigaScience Volume 2 ; 2 >
+      au < doNotProcess ; 2014 ; GigaScience Volume 3 ; 3 >
+      au < doNotProcess ; 2015 ; GigaScience Volume 4 ; 4 >
 
     }
 
@@ -2165,9 +2165,9 @@
       au < down ; 2010 ; Globalization and Health Volume 6 ; 6 >
       au < down ; 2011 ; Globalization and Health Volume 7 ; 7 >
       au < down ; 2012 ; Globalization and Health Volume 8 ; 8 >
-      au < manifest ; 2013 ; Globalization and Health Volume 9 ; 9 >
-      au < manifest ; 2014 ; Globalization and Health Volume 10 ; 10 >
-      au < manifest ; 2015 ; Globalization and Health Volume 11 ; 11 >
+      au < doNotProcess ; 2013 ; Globalization and Health Volume 9 ; 9 >
+      au < doNotProcess ; 2014 ; Globalization and Health Volume 10 ; 10 >
+      au < doNotProcess ; 2015 ; Globalization and Health Volume 11 ; 11 >
 
     }
 
@@ -2181,13 +2181,13 @@
       param[base_url] = http://www.gutpathogens.com/
       param[journal_issn] = 1757-4749
 
-      au < manifest ; 2009 ; Gut Pathogens Volume 1 ; 1 >
-      au < manifest ; 2010 ; Gut Pathogens Volume 2 ; 2 >
-      au < manifest ; 2011 ; Gut Pathogens Volume 3 ; 3 >
+      au < doNotProcess ; 2009 ; Gut Pathogens Volume 1 ; 1 >
+      au < doNotProcess ; 2010 ; Gut Pathogens Volume 2 ; 2 >
+      au < doNotProcess ; 2011 ; Gut Pathogens Volume 3 ; 3 >
       au < down ; 2012 ; Gut Pathogens Volume 4 ; 4 >
-      au < manifest ; 2013 ; Gut Pathogens Volume 5 ; 5 >
-      au < manifest ; 2014 ; Gut Pathogens Volume 6 ; 6 >
-      au < manifest ; 2015 ; Gut Pathogens Volume 7 ; 7 >
+      au < doNotProcess ; 2013 ; Gut Pathogens Volume 5 ; 5 >
+      au < doNotProcess ; 2014 ; Gut Pathogens Volume 6 ; 6 >
+      au < doNotProcess ; 2015 ; Gut Pathogens Volume 7 ; 7 >
 
     }
 
@@ -2210,9 +2210,9 @@
       au < down ; 2010 ; Harm Reduction Journal Volume 7 ; 7 >
       au < down ; 2011 ; Harm Reduction Journal Volume 8 ; 8 >
       au < down ; 2012 ; Harm Reduction Journal Volume 9 ; 9 >
-      au < manifest ; 2013 ; Harm Reduction Journal Volume 10 ; 10 >
-      au < manifest ; 2014 ; Harm Reduction Journal Volume 11 ; 11 >
-      au < manifest ; 2015 ; Harm Reduction Journal Volume 12 ; 12 >
+      au < doNotProcess ; 2013 ; Harm Reduction Journal Volume 10 ; 10 >
+      au < doNotProcess ; 2014 ; Harm Reduction Journal Volume 11 ; 11 >
+      au < doNotProcess ; 2015 ; Harm Reduction Journal Volume 12 ; 12 >
 
     }
 
@@ -2233,10 +2233,10 @@
       au < down ; 2009 ; Head & Face Medicine Volume 5 ; 5 >
       au < down ; 2010 ; Head & Face Medicine Volume 6 ; 6 >
       au < down ; 2011 ; Head & Face Medicine Volume 7 ; 7 >
-      au < manifest ; 2012 ; Head & Face Medicine Volume 8 ; 8 >
-      au < manifest ; 2013 ; Head & Face Medicine Volume 9 ; 9 >
-      au < manifest ; 2014 ; Head & Face Medicine Volume 10 ; 10 >
-      au < manifest ; 2015 ; Head & Face Medicine Volume 11 ; 11 >
+      au < doNotProcess ; 2012 ; Head & Face Medicine Volume 8 ; 8 >
+      au < doNotProcess ; 2013 ; Head & Face Medicine Volume 9 ; 9 >
+      au < doNotProcess ; 2014 ; Head & Face Medicine Volume 10 ; 10 >
+      au < doNotProcess ; 2015 ; Head & Face Medicine Volume 11 ; 11 >
 
     }
 
@@ -2276,9 +2276,9 @@
       param[base_url] = http://www.hissjournal.com/
       param[journal_issn] = 2047-2501
 
-      au < manifest ; 2013 ; Health Information Science and Systems Volume 1 ; 1 >
-      au < manifest ; 2014 ; Health Information Science and Systems Volume 2 ; 2 >
-      au < manifest ; 2015 ; Health Information Science and Systems Volume 3 ; 3 >
+      au < doNotProcess ; 2013 ; Health Information Science and Systems Volume 1 ; 1 >
+      au < doNotProcess ; 2014 ; Health Information Science and Systems Volume 2 ; 2 >
+      au < doNotProcess ; 2015 ; Health Information Science and Systems Volume 3 ; 3 >
 
     }
 
@@ -2303,10 +2303,10 @@
       au < down ; 2009 ; Health Research Policy and Systems Volume 7 ; 7 >
       au < down ; 2010 ; Health Research Policy and Systems Volume 8 ; 8 >
       au < down ; 2011 ; Health Research Policy and Systems Volume 9 ; 9 >
-      au < manifest ; 2012 ; Health Research Policy and Systems Volume 10 ; 10 >
-      au < manifest ; 2013 ; Health Research Policy and Systems Volume 11 ; 11 >
-      au < manifest ; 2014 ; Health Research Policy and Systems Volume 12 ; 12 >
-      au < manifest ; 2015 ; Health Research Policy and Systems Volume 13 ; 13 >
+      au < doNotProcess ; 2012 ; Health Research Policy and Systems Volume 10 ; 10 >
+      au < doNotProcess ; 2013 ; Health Research Policy and Systems Volume 11 ; 11 >
+      au < doNotProcess ; 2014 ; Health Research Policy and Systems Volume 12 ; 12 >
+      au < doNotProcess ; 2015 ; Health Research Policy and Systems Volume 13 ; 13 >
 
     }
 
@@ -2320,19 +2320,19 @@
       param[base_url] = http://www.hccpjournal.com/
       param[journal_issn] = 1897-4287
 
-      au < manifest ; 2003 ; Hereditary Cancer in Clinical Practice Volume 1 ; 1 >
-      au < manifest ; 2004 ; Hereditary Cancer in Clinical Practice Volume 2 ; 2 >
-      au < manifest ; 2005 ; Hereditary Cancer in Clinical Practice Volume 3 ; 3 >
-      au < manifest ; 2006 ; Hereditary Cancer in Clinical Practice Volume 4 ; 4 >
-      au < manifest ; 2007 ; Hereditary Cancer in Clinical Practice Volume 5 ; 5 >
-      au < manifest ; 2008 ; Hereditary Cancer in Clinical Practice Volume 6 ; 6 >
-      au < manifest ; 2009 ; Hereditary Cancer in Clinical Practice Volume 7 ; 7 >
-      au < manifest ; 2010 ; Hereditary Cancer in Clinical Practice Volume 8 ; 8 >
-      au < manifest ; 2011 ; Hereditary Cancer in Clinical Practice Volume 9 ; 9 >
-      au < manifest ; 2012 ; Hereditary Cancer in Clinical Practice Volume 10 ; 10 >
-      au < manifest ; 2013 ; Hereditary Cancer in Clinical Practice Volume 11 ; 11 >
-      au < manifest ; 2014 ; Hereditary Cancer in Clinical Practice Volume 12 ; 12 >
-      au < manifest ; 2015 ; Hereditary Cancer in Clinical Practice Volume 13 ; 13 >
+      au < doNotProcess ; 2003 ; Hereditary Cancer in Clinical Practice Volume 1 ; 1 >
+      au < doNotProcess ; 2004 ; Hereditary Cancer in Clinical Practice Volume 2 ; 2 >
+      au < doNotProcess ; 2005 ; Hereditary Cancer in Clinical Practice Volume 3 ; 3 >
+      au < doNotProcess ; 2006 ; Hereditary Cancer in Clinical Practice Volume 4 ; 4 >
+      au < doNotProcess ; 2007 ; Hereditary Cancer in Clinical Practice Volume 5 ; 5 >
+      au < doNotProcess ; 2008 ; Hereditary Cancer in Clinical Practice Volume 6 ; 6 >
+      au < doNotProcess ; 2009 ; Hereditary Cancer in Clinical Practice Volume 7 ; 7 >
+      au < doNotProcess ; 2010 ; Hereditary Cancer in Clinical Practice Volume 8 ; 8 >
+      au < doNotProcess ; 2011 ; Hereditary Cancer in Clinical Practice Volume 9 ; 9 >
+      au < doNotProcess ; 2012 ; Hereditary Cancer in Clinical Practice Volume 10 ; 10 >
+      au < doNotProcess ; 2013 ; Hereditary Cancer in Clinical Practice Volume 11 ; 11 >
+      au < doNotProcess ; 2014 ; Hereditary Cancer in Clinical Practice Volume 12 ; 12 >
+      au < doNotProcess ; 2015 ; Hereditary Cancer in Clinical Practice Volume 13 ; 13 >
 
     }
 
@@ -2347,11 +2347,11 @@
       param[journal_issn] = 2042-4280
       comment[0] = stopped publishing.
 
-      au < manifest ; 2010 ; Herpesviridae Volume 1 ; 1 >
-      au < manifest ; 2011 ; Herpesviridae Volume 2 ; 2 >
-      au < manifest ; 2012 ; Herpesviridae Volume 3 ; 3 >
-      au < manifest ; 2013 ; Herpesviridae Volume 4 ; 4 >
-      au < manifest ; 2014 ; Herpesviridae Volume 5 ; 5 >
+      au < doNotProcess ; 2010 ; Herpesviridae Volume 1 ; 1 >
+      au < doNotProcess ; 2011 ; Herpesviridae Volume 2 ; 2 >
+      au < doNotProcess ; 2012 ; Herpesviridae Volume 3 ; 3 >
+      au < doNotProcess ; 2013 ; Herpesviridae Volume 4 ; 4 >
+      au < doNotProcess ; 2014 ; Herpesviridae Volume 5 ; 5 >
 
     }
 
@@ -2366,15 +2366,15 @@
       param[base_url] = http://www.humgenomics.com/
       param[journal_issn] = 1479-7364
 
-      au < manifest ; 2003-2004 ; Human Genomics Volume 1 ; 1 >
-      au < manifest ; 2005-2006 ; Human Genomics Volume 2 ; 2 >
-      au < manifest ; 2008-2009 ; Human Genomics Volume 3 ; 3 >
-      au < manifest ; 2009-2010 ; Human Genomics Volume 4 ; 4 >
-      au < manifest ; 2010-2011 ; Human Genomics Volume 5 ; 5 >
-      au < manifest ; 2012 ; Human Genomics Volume 6 ; 6 >
-      au < manifest ; 2013 ; Human Genomics Volume 7 ; 7 >
-      au < manifest ; 2014 ; Human Genomics Volume 8 ; 8 >
-      au < manifest ; 2015 ; Human Genomics Volume 9 ; 9 >
+      au < doNotProcess ; 2003-2004 ; Human Genomics Volume 1 ; 1 >
+      au < doNotProcess ; 2005-2006 ; Human Genomics Volume 2 ; 2 >
+      au < doNotProcess ; 2008-2009 ; Human Genomics Volume 3 ; 3 >
+      au < doNotProcess ; 2009-2010 ; Human Genomics Volume 4 ; 4 >
+      au < doNotProcess ; 2010-2011 ; Human Genomics Volume 5 ; 5 >
+      au < doNotProcess ; 2012 ; Human Genomics Volume 6 ; 6 >
+      au < doNotProcess ; 2013 ; Human Genomics Volume 7 ; 7 >
+      au < doNotProcess ; 2014 ; Human Genomics Volume 8 ; 8 >
+      au < doNotProcess ; 2015 ; Human Genomics Volume 9 ; 9 >
 
     }
 
@@ -2397,10 +2397,10 @@
       au < down ; 2009 ; Human Resources for Health Volume 7 ; 7 >
       au < down ; 2010 ; Human Resources for Health Volume 8 ; 8 >
       au < down ; 2011 ; Human Resources for Health Volume 9 ; 9 >
-      au < manifest ; 2012 ; Human Resources for Health Volume 10 ; 10 >
-      au < manifest ; 2013 ; Human Resources for Health Volume 11 ; 11 >
-      au < manifest ; 2014 ; Human Resources for Health Volume 12 ; 12 >
-      au < manifest ; 2015 ; Human Resources for Health Volume 13 ; 13 >
+      au < doNotProcess ; 2012 ; Human Resources for Health Volume 10 ; 10 >
+      au < doNotProcess ; 2013 ; Human Resources for Health Volume 11 ; 11 >
+      au < doNotProcess ; 2014 ; Human Resources for Health Volume 12 ; 12 >
+      au < doNotProcess ; 2015 ; Human Resources for Health Volume 13 ; 13 >
 
     }
 
@@ -2422,10 +2422,10 @@
       au < down ; 2009 ; Immunity & Ageing Volume 6 ; 6 >
       au < down ; 2010 ; Immunity & Ageing Volume 7 ; 7 >
       au < down ; 2011 ; Immunity & Ageing Volume 8 ; 8 >
-      au < manifest ; 2012 ; Immunity & Ageing Volume 9 ; 9 >
-      au < manifest ; 2013 ; Immunity & Ageing Volume 10 ; 10 >
-      au < manifest ; 2014 ; Immunity & Ageing Volume 11 ; 11 >
-      au < manifest ; 2015 ; Immunity & Ageing Volume 12 ; 12 >
+      au < doNotProcess ; 2012 ; Immunity & Ageing Volume 9 ; 9 >
+      au < doNotProcess ; 2013 ; Immunity & Ageing Volume 10 ; 10 >
+      au < doNotProcess ; 2014 ; Immunity & Ageing Volume 11 ; 11 >
+      au < doNotProcess ; 2015 ; Immunity & Ageing Volume 12 ; 12 >
 
     }
 
@@ -2465,10 +2465,10 @@
       au < down ; 2009 ; Implementation Science Volume 4 ; 4 >
       au < down ; 2010 ; Implementation Science Volume 5 ; 5 >
       au < down ; 2011 ; Implementation Science Volume 6 ; 6 >
-      au < manifest ; 2012 ; Implementation Science Volume 7 ; 7 >
-      au < manifest ; 2013 ; Implementation Science Volume 8 ; 8 >
-      au < manifest ; 2014 ; Implementation Science Volume 9 ; 9 >
-      au < manifest ; 2015 ; Implementation Science Volume 10 ; 10 >
+      au < doNotProcess ; 2012 ; Implementation Science Volume 7 ; 7 >
+      au < doNotProcess ; 2013 ; Implementation Science Volume 8 ; 8 >
+      au < doNotProcess ; 2014 ; Implementation Science Volume 9 ; 9 >
+      au < doNotProcess ; 2015 ; Implementation Science Volume 10 ; 10 >
 
     }
 
@@ -2488,12 +2488,12 @@
       au < down ; 2007 ; Infectious Agents and Cancer Volume 2 ; 2 >
       au < down ; 2008 ; Infectious Agents and Cancer Volume 3 ; 3 >
       au < down ; 2009 ; Infectious Agents and Cancer Volume 4 ; 4 >
-      au < manifest ; 2010 ; Infectious Agents and Cancer Volume 5 ; 5 >
+      au < doNotProcess ; 2010 ; Infectious Agents and Cancer Volume 5 ; 5 >
       au < down ; 2011 ; Infectious Agents and Cancer Volume 6 ; 6 >
       au < down ; 2012 ; Infectious Agents and Cancer Volume 7 ; 7 >
-      au < manifest ; 2013 ; Infectious Agents and Cancer Volume 8 ; 8 >
-      au < manifest ; 2014 ; Infectious Agents and Cancer Volume 9 ; 9 >
-      au < manifest ; 2015 ; Infectious Agents and Cancer Volume 10 ; 10 >
+      au < doNotProcess ; 2013 ; Infectious Agents and Cancer Volume 8 ; 8 >
+      au < doNotProcess ; 2014 ; Infectious Agents and Cancer Volume 9 ; 9 >
+      au < doNotProcess ; 2015 ; Infectious Agents and Cancer Volume 10 ; 10 >
 
     }
 
@@ -2508,10 +2508,10 @@
       param[base_url] = http://www.idpjournal.com/
       param[journal_issn] = 2049-9957
 
-      au < manifest ; 2012 ; Infectious Diseases of Poverty Volume 1 ; 1 >
-      au < manifest ; 2013 ; Infectious Diseases of Poverty Volume 2 ; 2 >
-      au < manifest ; 2014 ; Infectious Diseases of Poverty Volume 3 ; 3 >
-      au < manifest ; 2015 ; Infectious Diseases of Poverty Volume 4 ; 4 >
+      au < doNotProcess ; 2012 ; Infectious Diseases of Poverty Volume 1 ; 1 >
+      au < doNotProcess ; 2013 ; Infectious Diseases of Poverty Volume 2 ; 2 >
+      au < doNotProcess ; 2014 ; Infectious Diseases of Poverty Volume 3 ; 3 >
+      au < doNotProcess ; 2015 ; Infectious Diseases of Poverty Volume 4 ; 4 >
 
     }
 
@@ -2551,10 +2551,10 @@
       au < down ; 2009 ; International Breastfeeding Journal Volume 4 ; 4 >
       au < down ; 2010 ; International Breastfeeding Journal Volume 5 ; 5 >
       au < down ; 2011 ; International Breastfeeding Journal Volume 6 ; 6 >
-      au < manifest ; 2012 ; International Breastfeeding Journal Volume 7 ; 7 >
-      au < manifest ; 2013 ; International Breastfeeding Journal Volume 8 ; 8 >
-      au < manifest ; 2014 ; International Breastfeeding Journal Volume 9 ; 9 >
-      au < manifest ; 2015 ; International Breastfeeding Journal Volume 10 ; 10 >
+      au < doNotProcess ; 2012 ; International Breastfeeding Journal Volume 7 ; 7 >
+      au < doNotProcess ; 2013 ; International Breastfeeding Journal Volume 8 ; 8 >
+      au < doNotProcess ; 2014 ; International Breastfeeding Journal Volume 9 ; 9 >
+      au < doNotProcess ; 2015 ; International Breastfeeding Journal Volume 10 ; 10 >
 
     }
 
@@ -2578,10 +2578,10 @@
       au < down ; 2009 ; International Journal for Equity in Health Volume 8 ; 8 >
       au < down ; 2010 ; International Journal for Equity in Health Volume 9 ; 9 >
       au < down ; 2011 ; International Journal for Equity in Health Volume 10 ; 10 >
-      au < manifest ; 2012 ; International Journal for Equity in Health Volume 11 ; 11 >
-      au < manifest ; 2013 ; International Journal for Equity in Health Volume 12 ; 12 >
-      au < manifest ; 2014 ; International Journal for Equity in Health Volume 13 ; 13 >
-      au < manifest ; 2015 ; International Journal for Equity in Health Volume 14 ; 14 >
+      au < doNotProcess ; 2012 ; International Journal for Equity in Health Volume 11 ; 11 >
+      au < doNotProcess ; 2013 ; International Journal for Equity in Health Volume 12 ; 12 >
+      au < doNotProcess ; 2014 ; International Journal for Equity in Health Volume 13 ; 13 >
+      au < doNotProcess ; 2015 ; International Journal for Equity in Health Volume 14 ; 14 >
 
     }
 
@@ -2603,10 +2603,10 @@
       au < down ; 2009 ; International Journal of Behavioral Nutrition and Physical Activity Volume 6 ; 6 >
       au < down ; 2010 ; International Journal of Behavioral Nutrition and Physical Activity Volume 7 ; 7 >
       au < down ; 2011 ; International Journal of Behavioral Nutrition and Physical Activity Volume 8 ; 8 >
-      au < manifest ; 2012 ; International Journal of Behavioral Nutrition and Physical Activity Volume 9 ; 9 >
-      au < manifest ; 2013 ; International Journal of Behavioral Nutrition and Physical Activity Volume 10 ; 10 >
-      au < manifest ; 2014 ; International Journal of Behavioral Nutrition and Physical Activity Volume 11 ; 11 >
-      au < manifest ; 2015 ; International Journal of Behavioral Nutrition and Physical Activity Volume 12 ; 12 >
+      au < doNotProcess ; 2012 ; International Journal of Behavioral Nutrition and Physical Activity Volume 9 ; 9 >
+      au < doNotProcess ; 2013 ; International Journal of Behavioral Nutrition and Physical Activity Volume 10 ; 10 >
+      au < doNotProcess ; 2014 ; International Journal of Behavioral Nutrition and Physical Activity Volume 11 ; 11 >
+      au < doNotProcess ; 2015 ; International Journal of Behavioral Nutrition and Physical Activity Volume 12 ; 12 >
 
     }
 
@@ -2632,10 +2632,10 @@
       au < down ; 2009 ; International Journal of Health Geographics Volume 8 ; 8 >
       au < down ; 2010 ; International Journal of Health Geographics Volume 9 ; 9 >
       au < down ; 2011 ; International Journal of Health Geographics Volume 10 ; 10 >
-      au < manifest ; 2012 ; International Journal of Health Geographics Volume 11 ; 11 >
-      au < manifest ; 2013 ; International Journal of Health Geographics Volume 12 ; 12 >
-      au < manifest ; 2014 ; International Journal of Health Geographics Volume 13 ; 13 >
-      au < manifest ; 2015 ; International Journal of Health Geographics Volume 14 ; 14 >
+      au < doNotProcess ; 2012 ; International Journal of Health Geographics Volume 11 ; 11 >
+      au < doNotProcess ; 2013 ; International Journal of Health Geographics Volume 12 ; 12 >
+      au < doNotProcess ; 2014 ; International Journal of Health Geographics Volume 13 ; 13 >
+      au < doNotProcess ; 2015 ; International Journal of Health Geographics Volume 14 ; 14 >
 
     }
 
@@ -2654,10 +2654,10 @@
       au < down ; 2009 ; International Journal of Mental Health Systems Volume 3 ; 3 >
       au < down ; 2010 ; International Journal of Mental Health Systems Volume 4 ; 4 >
       au < down ; 2011 ; International Journal of Mental Health Systems Volume 5 ; 5 >
-      au < manifest ; 2012 ; International Journal of Mental Health Systems Volume 6 ; 6 >
-      au < manifest ; 2013 ; International Journal of Mental Health Systems Volume 7 ; 7 >
-      au < manifest ; 2014 ; International Journal of Mental Health Systems Volume 8 ; 8 >
-      au < manifest ; 2015 ; International Journal of Mental Health Systems Volume 9 ; 9 >
+      au < doNotProcess ; 2012 ; International Journal of Mental Health Systems Volume 6 ; 6 >
+      au < doNotProcess ; 2013 ; International Journal of Mental Health Systems Volume 7 ; 7 >
+      au < doNotProcess ; 2014 ; International Journal of Mental Health Systems Volume 8 ; 8 >
+      au < doNotProcess ; 2015 ; International Journal of Mental Health Systems Volume 9 ; 9 >
 
     }
 
@@ -2679,10 +2679,10 @@
       au < down ; 2009 ; International Journal of Pediatric Endocrinology Volume 2009 ; 2009 >
       au < down ; 2010 ; International Journal of Pediatric Endocrinology Volume 2010 ; 2010 >
       au < down ; 2011 ; International Journal of Pediatric Endocrinology Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; International Journal of Pediatric Endocrinology Volume 2012 ; 2012 >
-      au < manifest ; 2013 ; International Journal of Pediatric Endocrinology Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; International Journal of Pediatric Endocrinology Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; International Journal of Pediatric Endocrinology Volume 2015 ; 2015 >
+      au < doNotProcess ; 2012 ; International Journal of Pediatric Endocrinology Volume 2012 ; 2012 >
+      au < doNotProcess ; 2013 ; International Journal of Pediatric Endocrinology Volume 2013 ; 2013 >
+      au < doNotProcess ; 2014 ; International Journal of Pediatric Endocrinology Volume 2014 ; 2014 >
+      au < doNotProcess ; 2015 ; International Journal of Pediatric Endocrinology Volume 2015 ; 2015 >
 
     }
 
@@ -2702,7 +2702,7 @@
       au < down ; 2007 ; International Seminars in Surgical Oncology Volume 4 ; 4 >
       au < down ; 2008 ; International Seminars in Surgical Oncology Volume 5 ; 5 >
       au < down ; 2009 ; International Seminars in Surgical Oncology Volume 6 ; 6 >
-      au < manifest ; 2010 ; International Seminars in Surgical Oncology Volume 7 ; 7 >
+      au < doNotProcess ; 2010 ; International Seminars in Surgical Oncology Volume 7 ; 7 >
 
     }
 
@@ -2716,12 +2716,12 @@
       param[base_url] = http://www.investigativegenetics.com/
       param[journal_issn] = 2041-2223
 
-      au < manifest ; 2010 ; Investigative Genetics Volume 1 ; 1 >
-      au < manifest ; 2011 ; Investigative Genetics Volume 2 ; 2 >
-      au < manifest ; 2012 ; Investigative Genetics Volume 3 ; 3 >
-      au < manifest ; 2013 ; Investigative Genetics Volume 4 ; 4 >
-      au < manifest ; 2014 ; Investigative Genetics Volume 5 ; 5 >
-      au < manifest ; 2015 ; Investigative Genetics Volume 6 ; 6 >
+      au < doNotProcess ; 2010 ; Investigative Genetics Volume 1 ; 1 >
+      au < doNotProcess ; 2011 ; Investigative Genetics Volume 2 ; 2 >
+      au < doNotProcess ; 2012 ; Investigative Genetics Volume 3 ; 3 >
+      au < doNotProcess ; 2013 ; Investigative Genetics Volume 4 ; 4 >
+      au < doNotProcess ; 2014 ; Investigative Genetics Volume 5 ; 5 >
+      au < doNotProcess ; 2015 ; Investigative Genetics Volume 6 ; 6 >
 
     }
 
@@ -2734,8 +2734,8 @@
       param[base_url] = http://www.ijehse.com/
       param[journal_issn] = 1735-1979
 
-      au < manifest ; 2012 ; Iranian Journal of Environmental Health Science & Engineering Volume 9 ; 9 >
-      au < manifest ; 2013 ; Iranian Journal of Environmental Health Science & Engineering Volume 10 ; 10 >
+      au < doNotProcess ; 2012 ; Iranian Journal of Environmental Health Science & Engineering Volume 9 ; 9 >
+      au < doNotProcess ; 2013 ; Iranian Journal of Environmental Health Science & Engineering Volume 10 ; 10 >
 
     }
 
@@ -2749,9 +2749,9 @@
         param[base_url] = http://www.ijehse.com/
         comment[continues] = 1735-1979
 
-        au < manifest ; 2013 ; Journal of Environmental Health Science & Engineering Volume 11 ; 11 >
-        au < manifest ; 2014 ; Journal of Environmental Health Science & Engineering Volume 12 ; 12 >
-        au < manifest ; 2015 ; Journal of Environmental Health Science & Engineering Volume 13 ; 13 >
+        au < doNotProcess ; 2013 ; Journal of Environmental Health Science & Engineering Volume 11 ; 11 >
+        au < doNotProcess ; 2014 ; Journal of Environmental Health Science & Engineering Volume 12 ; 12 >
+        au < doNotProcess ; 2015 ; Journal of Environmental Health Science & Engineering Volume 13 ; 13 >
     }
 
     {
@@ -2765,18 +2765,18 @@
       param[base_url] = http://www.irishvetjournal.org/
       param[journal_issn] = 0368-0762
 
-      au < manifest ; 2004 ; Irish Veterinary Journal Volume 57 ; 57 >
-      au < manifest ; 2005 ; Irish Veterinary Journal Volume 58 ; 58 >
-      au < manifest ; 2006 ; Irish Veterinary Journal Volume 59 ; 59 >
-      au < manifest ; 2007 ; Irish Veterinary Journal Volume 60 ; 60 >
-      au < manifest ; 2008 ; Irish Veterinary Journal Volume 61 ; 61 >
-      au < manifest ; 2009 ; Irish Veterinary Journal Volume 62 ; 62 >
-      au < manifest ; 2010 ; Irish Veterinary Journal Volume 63 ; 63 >
-      au < manifest ; 2011 ; Irish Veterinary Journal Volume 64 ; 64 >
-      au < manifest ; 2012 ; Irish Veterinary Journal Volume 65 ; 65 >
-      au < manifest ; 2013 ; Irish Veterinary Journal Volume 66 ; 66 >
-      au < manifest ; 2014 ; Irish Veterinary Journal Volume 67 ; 67 >
-      au < manifest ; 2015 ; Irish Veterinary Journal Volume 68 ; 68 >
+      au < doNotProcess ; 2004 ; Irish Veterinary Journal Volume 57 ; 57 >
+      au < doNotProcess ; 2005 ; Irish Veterinary Journal Volume 58 ; 58 >
+      au < doNotProcess ; 2006 ; Irish Veterinary Journal Volume 59 ; 59 >
+      au < doNotProcess ; 2007 ; Irish Veterinary Journal Volume 60 ; 60 >
+      au < doNotProcess ; 2008 ; Irish Veterinary Journal Volume 61 ; 61 >
+      au < doNotProcess ; 2009 ; Irish Veterinary Journal Volume 62 ; 62 >
+      au < doNotProcess ; 2010 ; Irish Veterinary Journal Volume 63 ; 63 >
+      au < doNotProcess ; 2011 ; Irish Veterinary Journal Volume 64 ; 64 >
+      au < doNotProcess ; 2012 ; Irish Veterinary Journal Volume 65 ; 65 >
+      au < doNotProcess ; 2013 ; Irish Veterinary Journal Volume 66 ; 66 >
+      au < doNotProcess ; 2014 ; Irish Veterinary Journal Volume 67 ; 67 >
+      au < doNotProcess ; 2015 ; Irish Veterinary Journal Volume 68 ; 68 >
 
     }
 
@@ -2791,10 +2791,10 @@
       param[base_url] = http://www.ijhpr.org/
       param[journal_issn] = 2045-4015
 
-      au < manifest ; 2012 ; Israel Journal of Health Policy Research Volume 1 ; 1 >
-      au < manifest ; 2013 ; Israel Journal of Health Policy Research Volume 2 ; 2 >
-      au < manifest ; 2014 ; Israel Journal of Health Policy Research Volume 3 ; 3 >
-      au < manifest ; 2015 ; Israel Journal of Health Policy Research Volume 4 ; 4 >
+      au < doNotProcess ; 2012 ; Israel Journal of Health Policy Research Volume 1 ; 1 >
+      au < doNotProcess ; 2013 ; Israel Journal of Health Policy Research Volume 2 ; 2 >
+      au < doNotProcess ; 2014 ; Israel Journal of Health Policy Research Volume 3 ; 3 >
+      au < doNotProcess ; 2015 ; Israel Journal of Health Policy Research Volume 4 ; 4 >
 
     }
 
@@ -2808,14 +2808,14 @@
       param[base_url] = http://www.ijponline.net/
       param[journal_issn] = 1824-7288
 
-      au < manifest ; 2008 ; Italian Journal of Pediatrics Volume 34 ; 34 >
-      au < manifest ; 2009 ; Italian Journal of Pediatrics Volume 35 ; 35 >
-      au < manifest ; 2010 ; Italian Journal of Pediatrics Volume 36 ; 36 >
-      au < manifest ; 2011 ; Italian Journal of Pediatrics Volume 37 ; 37 >
-      au < manifest ; 2012 ; Italian Journal of Pediatrics Volume 38 ; 38 >
-      au < manifest ; 2013 ; Italian Journal of Pediatrics Volume 39 ; 39 >
-      au < manifest ; 2014 ; Italian Journal of Pediatrics Volume 40 ; 40 >
-      au < manifest ; 2015 ; Italian Journal of Pediatrics Volume 41 ; 41 >
+      au < doNotProcess ; 2008 ; Italian Journal of Pediatrics Volume 34 ; 34 >
+      au < doNotProcess ; 2009 ; Italian Journal of Pediatrics Volume 35 ; 35 >
+      au < doNotProcess ; 2010 ; Italian Journal of Pediatrics Volume 36 ; 36 >
+      au < doNotProcess ; 2011 ; Italian Journal of Pediatrics Volume 37 ; 37 >
+      au < doNotProcess ; 2012 ; Italian Journal of Pediatrics Volume 38 ; 38 >
+      au < doNotProcess ; 2013 ; Italian Journal of Pediatrics Volume 39 ; 39 >
+      au < doNotProcess ; 2014 ; Italian Journal of Pediatrics Volume 40 ; 40 >
+      au < doNotProcess ; 2015 ; Italian Journal of Pediatrics Volume 41 ; 41 >
 
     }
 
@@ -2829,9 +2829,9 @@
       param[base_url] = http://www.immunotherapyofcancer.org/
       param[journal_issn] = 2051-1426
 
-      au < manifest ; 2013 ; Journal for ImmunoTherapy of Cancer Volume 1 ; 1 >
-      au < manifest ; 2014 ; Journal for ImmunoTherapy of Cancer Volume 2 ; 2 >
-      au < manifest ; 2015 ; Journal for ImmunoTherapy of Cancer Volume 3 ; 3 >
+      au < doNotProcess ; 2013 ; Journal for ImmunoTherapy of Cancer Volume 1 ; 1 >
+      au < doNotProcess ; 2014 ; Journal for ImmunoTherapy of Cancer Volume 2 ; 2 >
+      au < doNotProcess ; 2015 ; Journal for ImmunoTherapy of Cancer Volume 3 ; 3 >
 
     }
 
@@ -2883,7 +2883,7 @@
       au < down ; 2006 ; Journal of Autoimmune Diseases Volume 3 ; 3 >
       au < down ; 2007 ; Journal of Autoimmune Diseases Volume 4 ; 4 >
       au < down ; 2008 ; Journal of Autoimmune Diseases Volume 5 ; 5 >
-      au < manifest ; 2009 ; Journal of Autoimmune Diseases Volume 6 ; 6 >
+      au < doNotProcess ; 2009 ; Journal of Autoimmune Diseases Volume 6 ; 6 >
 
     }
 
@@ -2902,10 +2902,10 @@
       au < down ; 2009 ; Journal of Biological Engineering Volume 3 ; 3 >
       au < down ; 2010 ; Journal of Biological Engineering Volume 4 ; 4 >
       au < down ; 2011 ; Journal of Biological Engineering Volume 5 ; 5 >
-      au < manifest ; 2012 ; Journal of Biological Engineering Volume 6 ; 6 >
-      au < manifest ; 2013 ; Journal of Biological Engineering Volume 7 ; 7 >
-      au < manifest ; 2014 ; Journal of Biological Engineering Volume 8 ; 8 >
-      au < manifest ; 2015 ; Journal of Biological Engineering Volume 9 ; 9 >
+      au < doNotProcess ; 2012 ; Journal of Biological Engineering Volume 6 ; 6 >
+      au < doNotProcess ; 2013 ; Journal of Biological Engineering Volume 7 ; 7 >
+      au < doNotProcess ; 2014 ; Journal of Biological Engineering Volume 8 ; 8 >
+      au < doNotProcess ; 2015 ; Journal of Biological Engineering Volume 9 ; 9 >
 
     }
 
@@ -2920,8 +2920,8 @@
       param[base_url] = http://www.jbiolres.com/
       param[journal_issn] = 2241-5793
 
-      au < manifest ; 2014 ; Journal of Biological Research-Thessaloniki Volume 21 ; 21 >
-      au < manifest ; 2015 ; Journal of Biological Research-Thessaloniki Volume 22 ; 22 >
+      au < doNotProcess ; 2014 ; Journal of Biological Research-Thessaloniki Volume 21 ; 21 >
+      au < doNotProcess ; 2015 ; Journal of Biological Research-Thessaloniki Volume 22 ; 22 >
 
     }
 
@@ -2962,7 +2962,7 @@
       au < down ; 2006 ; Journal of Biomedical Discovery and Collaboration Volume 1 ; 1 >
       au < down ; 2007 ; Journal of Biomedical Discovery and Collaboration Volume 2 ; 2 >
       au < down ; 2008 ; Journal of Biomedical Discovery and Collaboration Volume 3 ; 3 >
-      au < manifest ; 2009 ; Journal of Biomedical Discovery and Collaboration Volume 4 ; 4 >
+      au < doNotProcess ; 2009 ; Journal of Biomedical Discovery and Collaboration Volume 4 ; 4 >
 
     }
 
@@ -2977,13 +2977,13 @@
       param[base_url] = http://www.jbiomedsci.com/
       param[journal_issn] = 1423-0127
 
-      au < manifest ; 2009 ; Journal of Biomedical Science Volume 16 ; 16 >
-      au < manifest ; 2010 ; Journal of Biomedical Science Volume 17 ; 17 >
-      au < manifest ; 2011 ; Journal of Biomedical Science Volume 18 ; 18 >
-      au < manifest ; 2012 ; Journal of Biomedical Science Volume 19 ; 19 >
-      au < manifest ; 2013 ; Journal of Biomedical Science Volume 20 ; 20 >
-      au < manifest ; 2014 ; Journal of Biomedical Science Volume 21 ; 21 >
-      au < manifest ; 2015 ; Journal of Biomedical Science Volume 22 ; 22 >
+      au < doNotProcess ; 2009 ; Journal of Biomedical Science Volume 16 ; 16 >
+      au < doNotProcess ; 2010 ; Journal of Biomedical Science Volume 17 ; 17 >
+      au < doNotProcess ; 2011 ; Journal of Biomedical Science Volume 18 ; 18 >
+      au < doNotProcess ; 2012 ; Journal of Biomedical Science Volume 19 ; 19 >
+      au < doNotProcess ; 2013 ; Journal of Biomedical Science Volume 20 ; 20 >
+      au < doNotProcess ; 2014 ; Journal of Biomedical Science Volume 21 ; 21 >
+      au < doNotProcess ; 2015 ; Journal of Biomedical Science Volume 22 ; 22 >
 
     }
 
@@ -2997,12 +2997,12 @@
       param[base_url] = http://www.jbiomedsem.com/
       param[journal_issn] = 2041-1480
 
-      au < manifest ; 2010 ; Journal of Biomedical Semantics Volume 1 ; 1 >
-      au < manifest ; 2011 ; Journal of Biomedical Semantics Volume 2 ; 2 >
-      au < manifest ; 2012 ; Journal of Biomedical Semantics Volume 3 ; 3 >
-      au < manifest ; 2013 ; Journal of Biomedical Semantics Volume 4 ; 4 >
-      au < manifest ; 2014 ; Journal of Biomedical Semantics Volume 5 ; 5 >
-      au < manifest ; 2015 ; Journal of Biomedical Semantics Volume 6 ; 6 >
+      au < doNotProcess ; 2010 ; Journal of Biomedical Semantics Volume 1 ; 1 >
+      au < doNotProcess ; 2011 ; Journal of Biomedical Semantics Volume 2 ; 2 >
+      au < doNotProcess ; 2012 ; Journal of Biomedical Semantics Volume 3 ; 3 >
+      au < doNotProcess ; 2013 ; Journal of Biomedical Semantics Volume 4 ; 4 >
+      au < doNotProcess ; 2014 ; Journal of Biomedical Semantics Volume 5 ; 5 >
+      au < doNotProcess ; 2015 ; Journal of Biomedical Semantics Volume 6 ; 6 >
 
     }
 
@@ -3047,10 +3047,10 @@
       au < down ; 2009 ; Journal of Cardiothoracic Surgery Volume 4 ; 4 >
       au < down ; 2010 ; Journal of Cardiothoracic Surgery Volume 5 ; 5 >
       au < down ; 2011 ; Journal of Cardiothoracic Surgery Volume 6 ; 6 >
-      au < manifest ; 2012 ; Journal of Cardiothoracic Surgery Volume 7 ; 7 >
-      au < manifest ; 2013 ; Journal of Cardiothoracic Surgery Volume 8 ; 8 >
-      au < manifest ; 2014 ; Journal of Cardiothoracic Surgery Volume 9 ; 9 >
-      au < manifest ; 2015 ; Journal of Cardiothoracic Surgery Volume 10 ; 10 >
+      au < doNotProcess ; 2012 ; Journal of Cardiothoracic Surgery Volume 7 ; 7 >
+      au < doNotProcess ; 2013 ; Journal of Cardiothoracic Surgery Volume 8 ; 8 >
+      au < doNotProcess ; 2014 ; Journal of Cardiothoracic Surgery Volume 9 ; 9 >
+      au < doNotProcess ; 2015 ; Journal of Cardiothoracic Surgery Volume 10 ; 10 >
 
     }
 
@@ -3087,23 +3087,23 @@
 
         param[base_url] = http://www.jcmr-online.com/
 
-        au < manifest ; 1999 ; Journal of Cardiovascular Magnetic Resonance Volume 1 ; 1 >
-        au < manifest ; 2000 ; Journal of Cardiovascular Magnetic Resonance Volume 2 ; 2 >
-        au < manifest ; 2001 ; Journal of Cardiovascular Magnetic Resonance Volume 3 ; 3 >
-        au < manifest ; 2002 ; Journal of Cardiovascular Magnetic Resonance Volume 4 ; 4 >
-        au < manifest ; 2003 ; Journal of Cardiovascular Magnetic Resonance Volume 5 ; 5 >
-        au < manifest ; 2004 ; Journal of Cardiovascular Magnetic Resonance Volume 6 ; 6 >
-        au < manifest ; 2005 ; Journal of Cardiovascular Magnetic Resonance Volume 7 ; 7 >
-        au < manifest ; 2006 ; Journal of Cardiovascular Magnetic Resonance Volume 8 ; 8 >
-        au < manifest ; 2007 ; Journal of Cardiovascular Magnetic Resonance Volume 9 ; 9 >
-        au < manifest ; 2008 ; Journal of Cardiovascular Magnetic Resonance Volume 10 ; 10 >
+        au < doNotProcess ; 1999 ; Journal of Cardiovascular Magnetic Resonance Volume 1 ; 1 >
+        au < doNotProcess ; 2000 ; Journal of Cardiovascular Magnetic Resonance Volume 2 ; 2 >
+        au < doNotProcess ; 2001 ; Journal of Cardiovascular Magnetic Resonance Volume 3 ; 3 >
+        au < doNotProcess ; 2002 ; Journal of Cardiovascular Magnetic Resonance Volume 4 ; 4 >
+        au < doNotProcess ; 2003 ; Journal of Cardiovascular Magnetic Resonance Volume 5 ; 5 >
+        au < doNotProcess ; 2004 ; Journal of Cardiovascular Magnetic Resonance Volume 6 ; 6 >
+        au < doNotProcess ; 2005 ; Journal of Cardiovascular Magnetic Resonance Volume 7 ; 7 >
+        au < doNotProcess ; 2006 ; Journal of Cardiovascular Magnetic Resonance Volume 8 ; 8 >
+        au < doNotProcess ; 2007 ; Journal of Cardiovascular Magnetic Resonance Volume 9 ; 9 >
+        au < doNotProcess ; 2008 ; Journal of Cardiovascular Magnetic Resonance Volume 10 ; 10 >
         au < down ; 2009 ; Journal of Cardiovascular Magnetic Resonance Volume 11 ; 11 >
-        au < manifest ; 2010 ; Journal of Cardiovascular Magnetic Resonance Volume 12 ; 12 >
+        au < doNotProcess ; 2010 ; Journal of Cardiovascular Magnetic Resonance Volume 12 ; 12 >
         au < down ; 2011 ; Journal of Cardiovascular Magnetic Resonance Volume 13 ; 13 >
-        au < manifest ; 2012 ; Journal of Cardiovascular Magnetic Resonance Volume 14 ; 14 >
-        au < manifest ; 2013 ; Journal of Cardiovascular Magnetic Resonance Volume 15 ; 15 >
-        au < manifest ; 2014 ; Journal of Cardiovascular Magnetic Resonance Volume 16 ; 16 >
-        au < manifest ; 2015 ; Journal of Cardiovascular Magnetic Resonance Volume 17 ; 17 >
+        au < doNotProcess ; 2012 ; Journal of Cardiovascular Magnetic Resonance Volume 14 ; 14 >
+        au < doNotProcess ; 2013 ; Journal of Cardiovascular Magnetic Resonance Volume 15 ; 15 >
+        au < doNotProcess ; 2014 ; Journal of Cardiovascular Magnetic Resonance Volume 16 ; 16 >
+        au < doNotProcess ; 2015 ; Journal of Cardiovascular Magnetic Resonance Volume 17 ; 17 >
 
       }
 
@@ -3146,10 +3146,10 @@
       param[journal_issn] = 2403-9113
 
       au < down ; 2011 ; Journal of Clinical Bioinformatics Volume 1 ; 1 >
-      au < manifest ; 2012 ; Journal of Clinical Bioinformatics Volume 2 ; 2 >
-      au < manifest ; 2013 ; Journal of Clinical Bioinformatics Volume 3 ; 3 >
-      au < manifest ; 2014 ; Journal of Clinical Bioinformatics Volume 4 ; 4 >
-      au < manifest ; 2015 ; Journal of Clinical Bioinformatics Volume 5 ; 5 >
+      au < doNotProcess ; 2012 ; Journal of Clinical Bioinformatics Volume 2 ; 2 >
+      au < doNotProcess ; 2013 ; Journal of Clinical Bioinformatics Volume 3 ; 3 >
+      au < doNotProcess ; 2014 ; Journal of Clinical Bioinformatics Volume 4 ; 4 >
+      au < doNotProcess ; 2015 ; Journal of Clinical Bioinformatics Volume 5 ; 5 >
 
     }
 
@@ -3162,10 +3162,10 @@
       param[base_url] = http://www.jdmdonline.com/
       param[journal_issn] = 2251-6581
 
-      au < manifest ; 2012 ; Journal of Diabetes & Metabolic Disorders Volume 11 ; 11 >
-      au < manifest ; 2013 ; Journal of Diabetes & Metabolic Disorders Volume 12 ; 12 >
-      au < manifest ; 2014 ; Journal of Diabetes & Metabolic Disorders Volume 13 ; 13 >
-      au < manifest ; 2015 ; Journal of Diabetes & Metabolic Disorders Volume 14 ; 14 >
+      au < doNotProcess ; 2012 ; Journal of Diabetes & Metabolic Disorders Volume 11 ; 11 >
+      au < doNotProcess ; 2013 ; Journal of Diabetes & Metabolic Disorders Volume 12 ; 12 >
+      au < doNotProcess ; 2014 ; Journal of Diabetes & Metabolic Disorders Volume 13 ; 13 >
+      au < doNotProcess ; 2015 ; Journal of Diabetes & Metabolic Disorders Volume 14 ; 14 >
 
     }
 
@@ -3179,9 +3179,9 @@
       param[base_url] = http://www.jeatdisord.com/
       param[journal_issn] = 2050-2974
 
-      au < manifest ; 2013 ; Journal of Eating Disorders Volume 1 ; 1 >
+      au < doNotProcess ; 2013 ; Journal of Eating Disorders Volume 1 ; 1 >
       au < down ; 2014 ; Journal of Eating Disorders Volume 2 ; 2 >
-      au < manifest ; 2015 ; Journal of Eating Disorders Volume 3 ; 3 >
+      au < doNotProcess ; 2015 ; Journal of Eating Disorders Volume 3 ; 3 >
 
     }
 
@@ -3202,10 +3202,10 @@
       au < down ; 2009 ; Journal of Ethnobiology and Ethnomedicine Volume 5 ; 5 >
       au < down ; 2010 ; Journal of Ethnobiology and Ethnomedicine Volume 6 ; 6 >
       au < down ; 2011 ; Journal of Ethnobiology and Ethnomedicine Volume 7 ; 7 >
-      au < manifest ; 2012 ; Journal of Ethnobiology and Ethnomedicine Volume 8 ; 8 >
-      au < manifest ; 2013 ; Journal of Ethnobiology and Ethnomedicine Volume 9 ; 9 >
-      au < manifest ; 2014 ; Journal of Ethnobiology and Ethnomedicine Volume 10 ; 10 >
-      au < manifest ; 2015 ; Journal of Ethnobiology and Ethnomedicine Volume 11 ; 11 >
+      au < doNotProcess ; 2012 ; Journal of Ethnobiology and Ethnomedicine Volume 8 ; 8 >
+      au < doNotProcess ; 2013 ; Journal of Ethnobiology and Ethnomedicine Volume 9 ; 9 >
+      au < doNotProcess ; 2014 ; Journal of Ethnobiology and Ethnomedicine Volume 10 ; 10 >
+      au < doNotProcess ; 2015 ; Journal of Ethnobiology and Ethnomedicine Volume 11 ; 11 >
 
     }
 
@@ -3240,14 +3240,14 @@
       param[base_url] = http://www.jfootankleres.com/
       param[journal_issn] = 1757-1146
 
-      au < manifest ; 2008 ; Journal of Foot and Ankle Research Volume 1 ; 1 >
-      au < manifest ; 2009 ; Journal of Foot and Ankle Research Volume 2 ; 2 >
-      au < manifest ; 2010 ; Journal of Foot and Ankle Research Volume 3 ; 3 >
-      au < manifest ; 2011 ; Journal of Foot and Ankle Research Volume 4 ; 4 >
-      au < manifest ; 2012 ; Journal of Foot and Ankle Research Volume 5 ; 5 >
-      au < manifest ; 2013 ; Journal of Foot and Ankle Research Volume 6 ; 6 >
-      au < manifest ; 2014 ; Journal of Foot and Ankle Research Volume 7 ; 7 >
-      au < manifest ; 2015 ; Journal of Foot and Ankle Research Volume 8 ; 8 >
+      au < doNotProcess ; 2008 ; Journal of Foot and Ankle Research Volume 1 ; 1 >
+      au < doNotProcess ; 2009 ; Journal of Foot and Ankle Research Volume 2 ; 2 >
+      au < doNotProcess ; 2010 ; Journal of Foot and Ankle Research Volume 3 ; 3 >
+      au < doNotProcess ; 2011 ; Journal of Foot and Ankle Research Volume 4 ; 4 >
+      au < doNotProcess ; 2012 ; Journal of Foot and Ankle Research Volume 5 ; 5 >
+      au < doNotProcess ; 2013 ; Journal of Foot and Ankle Research Volume 6 ; 6 >
+      au < doNotProcess ; 2014 ; Journal of Foot and Ankle Research Volume 7 ; 7 >
+      au < doNotProcess ; 2015 ; Journal of Foot and Ankle Research Volume 8 ; 8 >
 
     }
 
@@ -3265,10 +3265,10 @@
       au < down ; 2009 ; Journal of Hematology & Oncology Volume 2 ; 2 >
       au < down ; 2010 ; Journal of Hematology & Oncology Volume 3 ; 3 >
       au < down ; 2011 ; Journal of Hematology & Oncology Volume 4 ; 4 >
-      au < manifest ; 2012 ; Journal of Hematology & Oncology Volume 5 ; 5 >
-      au < manifest ; 2013 ; Journal of Hematology & Oncology Volume 6 ; 6 >
-      au < manifest ; 2014 ; Journal of Hematology & Oncology Volume 7 ; 7 >
-      au < manifest ; 2015 ; Journal of Hematology & Oncology Volume 8 ; 8 >
+      au < doNotProcess ; 2012 ; Journal of Hematology & Oncology Volume 5 ; 5 >
+      au < doNotProcess ; 2013 ; Journal of Hematology & Oncology Volume 6 ; 6 >
+      au < doNotProcess ; 2014 ; Journal of Hematology & Oncology Volume 7 ; 7 >
+      au < doNotProcess ; 2015 ; Journal of Hematology & Oncology Volume 8 ; 8 >
 
     }
 
@@ -3314,10 +3314,10 @@
       au < down ; 2009 ; Journal of Inflammation Volume 6 ; 6 >
       au < down ; 2010 ; Journal of Inflammation Volume 7 ; 7 >
       au < down ; 2011 ; Journal of Inflammation Volume 8 ; 8 >
-      au < manifest ; 2012 ; Journal of Inflammation Volume 9 ; 9 >
-      au < manifest ; 2013 ; Journal of Inflammation Volume 10 ; 10 >
-      au < manifest ; 2014 ; Journal of Inflammation Volume 11 ; 11 >
-      au < manifest ; 2015 ; Journal of Inflammation Volume 12 ; 12 >
+      au < doNotProcess ; 2012 ; Journal of Inflammation Volume 9 ; 9 >
+      au < doNotProcess ; 2013 ; Journal of Inflammation Volume 10 ; 10 >
+      au < doNotProcess ; 2014 ; Journal of Inflammation Volume 11 ; 11 >
+      au < doNotProcess ; 2015 ; Journal of Inflammation Volume 12 ; 12 >
 
     }
 
@@ -3347,15 +3347,15 @@
       param[base_url] = http://www.jmedicalcasereports.com/
       param[journal_issn] = 1752-1947
 
-      au < manifest ; 2007 ; Journal of Medical Case Reports Volume 1 ; 1 >
-      au < manifest ; 2008 ; Journal of Medical Case Reports Volume 2 ; 2 >
-      au < manifest ; 2009 ; Journal of Medical Case Reports Volume 3 ; 3 >
-      au < manifest ; 2010 ; Journal of Medical Case Reports Volume 4 ; 4 >
-      au < manifest ; 2011 ; Journal of Medical Case Reports Volume 5 ; 5 >
-      au < manifest ; 2012 ; Journal of Medical Case Reports Volume 6 ; 6 >
-      au < manifest ; 2013 ; Journal of Medical Case Reports Volume 7 ; 7 >
-      au < manifest ; 2014 ; Journal of Medical Case Reports Volume 8 ; 8 >
-      au < manifest ; 2015 ; Journal of Medical Case Reports Volume 9 ; 9 >
+      au < doNotProcess ; 2007 ; Journal of Medical Case Reports Volume 1 ; 1 >
+      au < doNotProcess ; 2008 ; Journal of Medical Case Reports Volume 2 ; 2 >
+      au < doNotProcess ; 2009 ; Journal of Medical Case Reports Volume 3 ; 3 >
+      au < doNotProcess ; 2010 ; Journal of Medical Case Reports Volume 4 ; 4 >
+      au < doNotProcess ; 2011 ; Journal of Medical Case Reports Volume 5 ; 5 >
+      au < doNotProcess ; 2012 ; Journal of Medical Case Reports Volume 6 ; 6 >
+      au < doNotProcess ; 2013 ; Journal of Medical Case Reports Volume 7 ; 7 >
+      au < doNotProcess ; 2014 ; Journal of Medical Case Reports Volume 8 ; 8 >
+      au < doNotProcess ; 2015 ; Journal of Medical Case Reports Volume 9 ; 9 >
 
     }
 
@@ -3416,10 +3416,10 @@
       au < down ; 2009 ; Journal of Nanobiotechnology Volume 7 ; 7 >
       au < down ; 2010 ; Journal of Nanobiotechnology Volume 8 ; 8 >
       au < down ; 2011 ; Journal of Nanobiotechnology Volume 9 ; 9 >
-      au < manifest ; 2012 ; Journal of Nanobiotechnology Volume 10 ; 10 >
-      au < manifest ; 2013 ; Journal of Nanobiotechnology Volume 11 ; 11 >
-      au < manifest ; 2014 ; Journal of Nanobiotechnology Volume 12 ; 12 >
-      au < manifest ; 2015 ; Journal of Nanobiotechnology Volume 13 ; 13 >
+      au < doNotProcess ; 2012 ; Journal of Nanobiotechnology Volume 10 ; 10 >
+      au < doNotProcess ; 2013 ; Journal of Nanobiotechnology Volume 11 ; 11 >
+      au < doNotProcess ; 2014 ; Journal of Nanobiotechnology Volume 12 ; 12 >
+      au < doNotProcess ; 2015 ; Journal of Nanobiotechnology Volume 13 ; 13 >
 
     }
 
@@ -3443,10 +3443,10 @@
       au < down ; 2009 ; Journal of Negative Results in BioMedicine Volume 8 ; 8 >
       au < down ; 2010 ; Journal of Negative Results in BioMedicine Volume 9 ; 9 >
       au < down ; 2011 ; Journal of Negative Results in BioMedicine Volume 10 ; 10 >
-      au < manifest ; 2012 ; Journal of Negative Results in BioMedicine Volume 11 ; 11 >
-      au < manifest ; 2013 ; Journal of Negative Results in BioMedicine Volume 12 ; 12 >
-      au < manifest ; 2014 ; Journal of Negative Results in BioMedicine Volume 13 ; 13 >
-      au < manifest ; 2015 ; Journal of Negative Results in BioMedicine Volume 14 ; 14 >
+      au < doNotProcess ; 2012 ; Journal of Negative Results in BioMedicine Volume 11 ; 11 >
+      au < doNotProcess ; 2013 ; Journal of Negative Results in BioMedicine Volume 12 ; 12 >
+      au < doNotProcess ; 2014 ; Journal of Negative Results in BioMedicine Volume 13 ; 13 >
+      au < doNotProcess ; 2015 ; Journal of Negative Results in BioMedicine Volume 14 ; 14 >
 
     }
 
@@ -3462,10 +3462,10 @@
       param[base_url] = http://www.jneurodevdisorders.com/
       param[journal_issn] = 1866-1955
 
-      au < manifest ; 2012 ; Journal of Neurodevelopmental Disorders Volume 4 ; 4 >
-      au < manifest ; 2013 ; Journal of Neurodevelopmental Disorders Volume 5 ; 5 >
-      au < manifest ; 2014 ; Journal of Neurodevelopmental Disorders Volume 6 ; 6 >
-      au < manifest ; 2015 ; Journal of Neurodevelopmental Disorders Volume 7 ; 7 >
+      au < doNotProcess ; 2012 ; Journal of Neurodevelopmental Disorders Volume 4 ; 4 >
+      au < doNotProcess ; 2013 ; Journal of Neurodevelopmental Disorders Volume 5 ; 5 >
+      au < doNotProcess ; 2014 ; Journal of Neurodevelopmental Disorders Volume 6 ; 6 >
+      au < doNotProcess ; 2015 ; Journal of Neurodevelopmental Disorders Volume 7 ; 7 >
 
     }
 
@@ -3487,10 +3487,10 @@
       au < down ; 2009 ; Journal of NeuroEngineering and Rehabilitation Volume 6 ; 6 >
       au < down ; 2010 ; Journal of NeuroEngineering and Rehabilitation Volume 7 ; 7 >
       au < down ; 2011 ; Journal of NeuroEngineering and Rehabilitation Volume 8 ; 8 >
-      au < manifest ; 2012 ; Journal of NeuroEngineering and Rehabilitation Volume 9 ; 9 >
-      au < manifest ; 2013 ; Journal of NeuroEngineering and Rehabilitation Volume 10 ; 10 >
-      au < manifest ; 2014 ; Journal of NeuroEngineering and Rehabilitation Volume 11 ; 11 >
-      au < manifest ; 2015 ; Journal of NeuroEngineering and Rehabilitation Volume 12 ; 12 >
+      au < doNotProcess ; 2012 ; Journal of NeuroEngineering and Rehabilitation Volume 9 ; 9 >
+      au < doNotProcess ; 2013 ; Journal of NeuroEngineering and Rehabilitation Volume 10 ; 10 >
+      au < doNotProcess ; 2014 ; Journal of NeuroEngineering and Rehabilitation Volume 11 ; 11 >
+      au < doNotProcess ; 2015 ; Journal of NeuroEngineering and Rehabilitation Volume 12 ; 12 >
 
     }
 
@@ -3512,10 +3512,10 @@
       au < down ; 2009 ; Journal of Neuroinflammation Volume 6 ; 6 >
       au < down ; 2010 ; Journal of Neuroinflammation Volume 7 ; 7 >
       au < down ; 2011 ; Journal of Neuroinflammation Volume 8 ; 8 >
-      au < manifest ; 2012 ; Journal of Neuroinflammation Volume 9 ; 9 >
-      au < manifest ; 2013 ; Journal of Neuroinflammation Volume 10 ; 10 >
-      au < manifest ; 2014 ; Journal of Neuroinflammation Volume 11 ; 11 >
-      au < manifest ; 2015 ; Journal of Neuroinflammation Volume 12 ; 12 >
+      au < doNotProcess ; 2012 ; Journal of Neuroinflammation Volume 9 ; 9 >
+      au < doNotProcess ; 2013 ; Journal of Neuroinflammation Volume 10 ; 10 >
+      au < doNotProcess ; 2014 ; Journal of Neuroinflammation Volume 11 ; 11 >
+      au < doNotProcess ; 2015 ; Journal of Neuroinflammation Volume 12 ; 12 >
 
     }
 
@@ -3535,10 +3535,10 @@
       au < down ; 2009 ; Journal of Occupational Medicine and Toxicology Volume 4 ; 4 >
       au < down ; 2010 ; Journal of Occupational Medicine and Toxicology Volume 5 ; 5 >
       au < down ; 2011 ; Journal of Occupational Medicine and Toxicology Volume 6 ; 6 >
-      au < manifest ; 2012 ; Journal of Occupational Medicine and Toxicology Volume 7 ; 7 >
-      au < manifest ; 2013 ; Journal of Occupational Medicine and Toxicology Volume 8 ; 8 >
-      au < manifest ; 2014 ; Journal of Occupational Medicine and Toxicology Volume 9 ; 9 >
-      au < manifest ; 2015 ; Journal of Occupational Medicine and Toxicology Volume 10 ; 10 >
+      au < doNotProcess ; 2012 ; Journal of Occupational Medicine and Toxicology Volume 7 ; 7 >
+      au < doNotProcess ; 2013 ; Journal of Occupational Medicine and Toxicology Volume 8 ; 8 >
+      au < doNotProcess ; 2014 ; Journal of Occupational Medicine and Toxicology Volume 9 ; 9 >
+      au < doNotProcess ; 2015 ; Journal of Occupational Medicine and Toxicology Volume 10 ; 10 >
 
     }
 
@@ -3575,9 +3575,9 @@
       param[base_url] = http://www.journalotohns.com/
       param[journal_issn] = 1916-0216
 
-      au < manifest ; 2013 ; Journal of Otolaryngology - Head and Neck Surgery Volume 42 ; 42 >
-      au < manifest ; 2014 ; Journal of Otolaryngology - Head and Neck Surgery Volume 43 ; 43 >
-      au < manifest ; 2015 ; Journal of Otolaryngology - Head and Neck Surgery Volume 44 ; 44 >
+      au < doNotProcess ; 2013 ; Journal of Otolaryngology - Head and Neck Surgery Volume 42 ; 42 >
+      au < doNotProcess ; 2014 ; Journal of Otolaryngology - Head and Neck Surgery Volume 43 ; 43 >
+      au < doNotProcess ; 2015 ; Journal of Otolaryngology - Head and Neck Surgery Volume 44 ; 44 >
 
     }
 
@@ -3611,9 +3611,9 @@
       param[base_url] = http://www.joppp.org/
       param[journal_issn] = 2052-3211
 
-      au < manifest ; 2013 ; Journal of Pharmaceutical Policy and Practice Volume 6 ; 6 >
-      au < manifest ; 2014 ; Journal of Pharmaceutical Policy and Practice Volume 7 ; 7 >
-      au < manifest ; 2015 ; Journal of Pharmaceutical Policy and Practice Volume 8 ; 8 >
+      au < doNotProcess ; 2013 ; Journal of Pharmaceutical Policy and Practice Volume 6 ; 6 >
+      au < doNotProcess ; 2014 ; Journal of Pharmaceutical Policy and Practice Volume 7 ; 7 >
+      au < doNotProcess ; 2015 ; Journal of Pharmaceutical Policy and Practice Volume 8 ; 8 >
 
     }
 
@@ -3628,10 +3628,10 @@
       param[base_url] = http://www.jphysiolanthropol.com/
       param[journal_issn] = 1880-6805
 
-      au < manifest ; 2012 ; Journal of Physiological Anthropology Volume 31 ; 31 >
-      au < manifest ; 2013 ; Journal of Physiological Anthropology Volume 32 ; 32 >
-      au < manifest ; 2014 ; Journal of Physiological Anthropology Volume 33 ; 33 >
-      au < manifest ; 2015 ; Journal of Physiological Anthropology Volume 34 ; 34 >
+      au < doNotProcess ; 2012 ; Journal of Physiological Anthropology Volume 31 ; 31 >
+      au < doNotProcess ; 2013 ; Journal of Physiological Anthropology Volume 32 ; 32 >
+      au < doNotProcess ; 2014 ; Journal of Physiological Anthropology Volume 33 ; 33 >
+      au < doNotProcess ; 2015 ; Journal of Physiological Anthropology Volume 34 ; 34 >
 
     }
 
@@ -3653,10 +3653,10 @@
       au < down ; 2009 ; Journal of the International Society of Sports Nutrition Volume 6 ; 6 >
       au < down ; 2010 ; Journal of the International Society of Sports Nutrition Volume 7 ; 7 >
       au < down ; 2011 ; Journal of the International Society of Sports Nutrition Volume 8 ; 8 >
-      au < manifest ; 2012 ; Journal of the International Society of Sports Nutrition Volume 9 ; 9 >
-      au < manifest ; 2013 ; Journal of the International Society of Sports Nutrition Volume 10 ; 10 >
-      au < manifest ; 2014 ; Journal of the International Society of Sports Nutrition Volume 11 ; 11 >
-      au < manifest ; 2015 ; Journal of the International Society of Sports Nutrition Volume 12 ; 12 >
+      au < doNotProcess ; 2012 ; Journal of the International Society of Sports Nutrition Volume 9 ; 9 >
+      au < doNotProcess ; 2013 ; Journal of the International Society of Sports Nutrition Volume 10 ; 10 >
+      au < doNotProcess ; 2014 ; Journal of the International Society of Sports Nutrition Volume 11 ; 11 >
+      au < doNotProcess ; 2015 ; Journal of the International Society of Sports Nutrition Volume 12 ; 12 >
 
     }
 
@@ -3670,9 +3670,9 @@
       param[base_url] = http://www.jtultrasound.com/
       param[journal_issn] = 2050-5736
 
-      au < manifest ; 2013 ; Journal of Therapeutic Ultrasound Volume 1 ; 1 >
-      au < manifest ; 2014 ; Journal of Therapeutic Ultrasound Volume 2 ; 2 >
-      au < manifest ; 2015 ; Journal of Therapeutic Ultrasound Volume 3 ; 3 >
+      au < doNotProcess ; 2013 ; Journal of Therapeutic Ultrasound Volume 1 ; 1 >
+      au < doNotProcess ; 2014 ; Journal of Therapeutic Ultrasound Volume 2 ; 2 >
+      au < doNotProcess ; 2015 ; Journal of Therapeutic Ultrasound Volume 3 ; 3 >
 
     }
 
@@ -3695,10 +3695,10 @@
       au < down ; 2009 ; Journal of Translational Medicine Volume 7 ; 7 >
       au < down ; 2010 ; Journal of Translational Medicine Volume 8 ; 8 >
       au < down ; 2011 ; Journal of Translational Medicine Volume 9 ; 9 >
-      au < manifest ; 2012 ; Journal of Translational Medicine Volume 10 ; 10 >
-      au < manifest ; 2013 ; Journal of Translational Medicine Volume 11 ; 11 >
-      au < manifest ; 2014 ; Journal of Translational Medicine Volume 12 ; 12 >
-      au < manifest ; 2015 ; Journal of Translational Medicine Volume 13 ; 13 >
+      au < doNotProcess ; 2012 ; Journal of Translational Medicine Volume 10 ; 10 >
+      au < doNotProcess ; 2013 ; Journal of Translational Medicine Volume 11 ; 11 >
+      au < doNotProcess ; 2014 ; Journal of Translational Medicine Volume 12 ; 12 >
+      au < doNotProcess ; 2015 ; Journal of Translational Medicine Volume 13 ; 13 >
 
     }
 
@@ -3717,10 +3717,10 @@
       au < down ; 2009 ; Journal of Trauma Management & Outcomes Volume 3 ; 3 >
       au < down ; 2010 ; Journal of Trauma Management & Outcomes Volume 4 ; 4 >
       au < down ; 2011 ; Journal of Trauma Management & Outcomes Volume 5 ; 5 >
-      au < manifest ; 2012 ; Journal of Trauma Management & Outcomes Volume 6 ; 6 >
-      au < manifest ; 2013 ; Journal of Trauma Management & Outcomes Volume 7 ; 7 >
-      au < manifest ; 2014 ; Journal of Trauma Management & Outcomes Volume 8 ; 8 >
-      au < manifest ; 2015 ; Journal of Trauma Management & Outcomes Volume 9 ; 9 >
+      au < doNotProcess ; 2012 ; Journal of Trauma Management & Outcomes Volume 6 ; 6 >
+      au < doNotProcess ; 2013 ; Journal of Trauma Management & Outcomes Volume 7 ; 7 >
+      au < doNotProcess ; 2014 ; Journal of Trauma Management & Outcomes Volume 8 ; 8 >
+      au < doNotProcess ; 2015 ; Journal of Trauma Management & Outcomes Volume 9 ; 9 >
 
     }
 
@@ -3734,9 +3734,9 @@
       param[base_url] = http://www.jvat.org/
       param[journal_issn] = 1678-9199
 
-      au < manifest ; 2013 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 19 ; 19 >
-      au < manifest ; 2014 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 20 ; 20 >
-      au < manifest ; 2015 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 21 ; 21 >
+      au < doNotProcess ; 2013 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 19 ; 19 >
+      au < doNotProcess ; 2014 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 20 ; 20 >
+      au < doNotProcess ; 2015 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 21 ; 21 >
 
     }
 
@@ -3760,10 +3760,10 @@
       au < down ; 2009 ; Lipids in Health and Disease Volume 8 ; 8 >
       au < down ; 2010 ; Lipids in Health and Disease Volume 9 ; 9 >
       au < down ; 2011 ; Lipids in Health and Disease Volume 10 ; 10 >
-      au < manifest ; 2012 ; Lipids in Health and Disease Volume 11 ; 11 >
-      au < manifest ; 2013 ; Lipids in Health and Disease Volume 12 ; 12 >
-      au < manifest ; 2014 ; Lipids in Health and Disease Volume 13 ; 13 >
-      au < manifest ; 2015 ; Lipids in Health and Disease Volume 14 ; 14 >
+      au < doNotProcess ; 2012 ; Lipids in Health and Disease Volume 11 ; 11 >
+      au < doNotProcess ; 2013 ; Lipids in Health and Disease Volume 12 ; 12 >
+      au < doNotProcess ; 2014 ; Lipids in Health and Disease Volume 13 ; 13 >
+      au < doNotProcess ; 2015 ; Lipids in Health and Disease Volume 14 ; 14 >
 
     }
 
@@ -3777,9 +3777,9 @@
       param[journal_issn] = 2046-2395
       #stopped publishing
 
-      au < manifest ; 2012 ; Longevity & Healthspan Volume 1 ; 1 >
-      au < manifest ; 2013 ; Longevity & Healthspan Volume 2 ; 2 >
-      au < manifest ; 2014 ; Longevity & Healthspan Volume 3 ; 3 >
+      au < doNotProcess ; 2012 ; Longevity & Healthspan Volume 1 ; 1 >
+      au < doNotProcess ; 2013 ; Longevity & Healthspan Volume 2 ; 2 >
+      au < doNotProcess ; 2014 ; Longevity & Healthspan Volume 3 ; 3 >
 
     }
 
@@ -3803,10 +3803,10 @@
       au < down ; 2009 ; Malaria Journal Volume 8 ; 8 >
       au < down ; 2010 ; Malaria Journal Volume 9 ; 9 >
       au < down ; 2011 ; Malaria Journal Volume 10 ; 10 >
-      au < manifest ; 2012 ; Malaria Journal Volume 11 ; 11 >
-      au < manifest ; 2013 ; Malaria Journal Volume 12 ; 12 >
-      au < manifest ; 2014 ; Malaria Journal Volume 13 ; 13 >
-      au < manifest ; 2015 ; Malaria Journal Volume 14 ; 14 >
+      au < doNotProcess ; 2012 ; Malaria Journal Volume 11 ; 11 >
+      au < doNotProcess ; 2013 ; Malaria Journal Volume 12 ; 12 >
+      au < doNotProcess ; 2014 ; Malaria Journal Volume 13 ; 13 >
+      au < doNotProcess ; 2015 ; Malaria Journal Volume 14 ; 14 >
 
     }
 
@@ -3822,10 +3822,10 @@
       #moving to Wolters Kluwer Health 2016
 
       au < down ; 2011 ; Medical Gas Research Volume 1 ; 1 >
-      au < manifest ; 2012 ; Medical Gas Research Volume 2 ; 2 >
-      au < manifest ; 2013 ; Medical Gas Research Volume 3 ; 3 >
-      au < manifest ; 2014 ; Medical Gas Research Volume 4 ; 4 >
-      au < manifest ; 2015 ; Medical Gas Research Volume 5 ; 5 >
+      au < doNotProcess ; 2012 ; Medical Gas Research Volume 2 ; 2 >
+      au < doNotProcess ; 2013 ; Medical Gas Research Volume 3 ; 3 >
+      au < doNotProcess ; 2014 ; Medical Gas Research Volume 4 ; 4 >
+      au < doNotProcess ; 2015 ; Medical Gas Research Volume 5 ; 5 >
 
     }
 
@@ -3849,10 +3849,10 @@
       au < down ; 2009 ; Microbial Cell Factories Volume 8 ; 8 >
       au < down ; 2010 ; Microbial Cell Factories Volume 9 ; 9 >
       au < down ; 2011 ; Microbial Cell Factories Volume 10 ; 10 >
-      au < manifest ; 2012 ; Microbial Cell Factories Volume 11 ; 11 >
-      au < manifest ; 2013 ; Microbial Cell Factories Volume 12 ; 12 >
-      au < manifest ; 2014 ; Microbial Cell Factories Volume 13 ; 13 >
-      au < manifest ; 2015 ; Microbial Cell Factories Volume 14 ; 14 >
+      au < doNotProcess ; 2012 ; Microbial Cell Factories Volume 11 ; 11 >
+      au < doNotProcess ; 2013 ; Microbial Cell Factories Volume 12 ; 12 >
+      au < doNotProcess ; 2014 ; Microbial Cell Factories Volume 13 ; 13 >
+      au < doNotProcess ; 2015 ; Microbial Cell Factories Volume 14 ; 14 >
 
     }
 
@@ -3868,9 +3868,9 @@
       #stopped publishing
 
       au < down ; 2011 ; Microbial Informatics and Experimentation Volume 1 ; 1 >
-      au < manifest ; 2012 ; Microbial Informatics and Experimentation Volume 2 ; 2 >
-      au < manifest ; 2013 ; Microbial Informatics and Experimentation Volume 3 ; 3 >
-      au < manifest ; 2014 ; Microbial Informatics and Experimentation Volume 4 ; 4 >
+      au < doNotProcess ; 2012 ; Microbial Informatics and Experimentation Volume 2 ; 2 >
+      au < doNotProcess ; 2013 ; Microbial Informatics and Experimentation Volume 3 ; 3 >
+      au < doNotProcess ; 2014 ; Microbial Informatics and Experimentation Volume 4 ; 4 >
 
     }
 
@@ -3884,9 +3884,9 @@
       param[base_url] = http://www.microbiomejournal.com/
       param[journal_issn] = 2049-2618
 
-      au < manifest ; 2013 ; Microbiome Volume 1 ; 1 >
-      au < manifest ; 2014 ; Microbiome Volume 2 ; 2 >
-      au < manifest ; 2015 ; Microbiome Volume 3 ; 3 >
+      au < doNotProcess ; 2013 ; Microbiome Volume 1 ; 1 >
+      au < doNotProcess ; 2014 ; Microbiome Volume 2 ; 2 >
+      au < doNotProcess ; 2015 ; Microbiome Volume 3 ; 3 >
 
     }
 
@@ -3900,8 +3900,8 @@
       param[base_url] = http://www.mmrjournal.org/
       param[journal_issn] = 2054-9369
 
-      au < manifest ; 2014 ; Military Medical Research Volume 1 ; 1 >
-      au < manifest ; 2015 ; Military Medical Research Volume 2 ; 2 >
+      au < doNotProcess ; 2014 ; Military Medical Research Volume 1 ; 1 >
+      au < doNotProcess ; 2015 ; Military Medical Research Volume 2 ; 2 >
 
     }
 
@@ -3915,12 +3915,12 @@
       param[base_url] = http://www.mobilednajournal.com/
       param[journal_issn] = 1759-8753
 
-      au < manifest ; 2010 ; Mobile DNA Volume 1 ; 1 >
-      au < manifest ; 2011 ; Mobile DNA Volume 2 ; 2 >
-      au < manifest ; 2012 ; Mobile DNA Volume 3 ; 3 >
-      au < manifest ; 2013 ; Mobile DNA Volume 4 ; 4 >
-      au < manifest ; 2014 ; Mobile DNA Volume 5 ; 5 >
-      au < manifest ; 2015 ; Mobile DNA Volume 6 ; 6 >
+      au < doNotProcess ; 2010 ; Mobile DNA Volume 1 ; 1 >
+      au < doNotProcess ; 2011 ; Mobile DNA Volume 2 ; 2 >
+      au < doNotProcess ; 2012 ; Mobile DNA Volume 3 ; 3 >
+      au < doNotProcess ; 2013 ; Mobile DNA Volume 4 ; 4 >
+      au < doNotProcess ; 2014 ; Mobile DNA Volume 5 ; 5 >
+      au < doNotProcess ; 2015 ; Mobile DNA Volume 6 ; 6 >
 
     }
 
@@ -3953,9 +3953,9 @@
       param[base_url] = http://www.molcelltherapies.com/
       param[journal_issn] = 2052-8426
 
-      au < manifest ; 2013 ; Molecular and Cellular Therapies Volume 1 ; 1 >
-      au < manifest ; 2014 ; Molecular and Cellular Therapies Volume 2 ; 2 >
-      au < manifest ; 2015 ; Molecular and Cellular Therapies Volume 3 ; 3 >
+      au < doNotProcess ; 2013 ; Molecular and Cellular Therapies Volume 1 ; 1 >
+      au < doNotProcess ; 2014 ; Molecular and Cellular Therapies Volume 2 ; 2 >
+      au < doNotProcess ; 2015 ; Molecular and Cellular Therapies Volume 3 ; 3 >
 
     }
 
@@ -4021,10 +4021,10 @@
       au < down ; 2009 ; Molecular Cytogenetics Volume 2 ; 2 >
       au < down ; 2010 ; Molecular Cytogenetics Volume 3 ; 3 >
       au < down ; 2011 ; Molecular Cytogenetics Volume 4 ; 4 >
-      au < manifest ; 2012 ; Molecular Cytogenetics Volume 5 ; 5 >
-      au < manifest ; 2013 ; Molecular Cytogenetics Volume 6 ; 6 >
-      au < manifest ; 2014 ; Molecular Cytogenetics Volume 7 ; 7 >
-      au < manifest ; 2015 ; Molecular Cytogenetics Volume 8 ; 8 >
+      au < doNotProcess ; 2012 ; Molecular Cytogenetics Volume 5 ; 5 >
+      au < doNotProcess ; 2013 ; Molecular Cytogenetics Volume 6 ; 6 >
+      au < doNotProcess ; 2014 ; Molecular Cytogenetics Volume 7 ; 7 >
+      au < doNotProcess ; 2015 ; Molecular Cytogenetics Volume 8 ; 8 >
 
     }
 
@@ -4044,10 +4044,10 @@
       au < down ; 2009 ; Molecular Neurodegeneration Volume 4 ; 4 >
       au < down ; 2010 ; Molecular Neurodegeneration Volume 5 ; 5 >
       au < down ; 2011 ; Molecular Neurodegeneration Volume 6 ; 6 >
-      au < manifest ; 2012 ; Molecular Neurodegeneration Volume 7 ; 7 >
-      au < manifest ; 2013 ; Molecular Neurodegeneration Volume 8 ; 8 >
-      au < manifest ; 2014 ; Molecular Neurodegeneration Volume 9 ; 9 >
-      au < manifest ; 2015 ; Molecular Neurodegeneration Volume 10 ; 10 >
+      au < doNotProcess ; 2012 ; Molecular Neurodegeneration Volume 7 ; 7 >
+      au < doNotProcess ; 2013 ; Molecular Neurodegeneration Volume 8 ; 8 >
+      au < doNotProcess ; 2014 ; Molecular Neurodegeneration Volume 9 ; 9 >
+      au < doNotProcess ; 2015 ; Molecular Neurodegeneration Volume 10 ; 10 >
 
     }
 
@@ -4068,10 +4068,10 @@
       au < down ; 2009 ; Molecular Pain Volume 5 ; 5 >
       au < down ; 2010 ; Molecular Pain Volume 6 ; 6 >
       au < down ; 2011 ; Molecular Pain Volume 7 ; 7 >
-      au < manifest ; 2012 ; Molecular Pain Volume 8 ; 8 >
-      au < manifest ; 2013 ; Molecular Pain Volume 9 ; 9 >
-      au < manifest ; 2014 ; Molecular Pain Volume 10 ; 10 >
-      au < manifest ; 2015 ; Molecular Pain Volume 11 ; 11 >
+      au < doNotProcess ; 2012 ; Molecular Pain Volume 8 ; 8 >
+      au < doNotProcess ; 2013 ; Molecular Pain Volume 9 ; 9 >
+      au < doNotProcess ; 2014 ; Molecular Pain Volume 10 ; 10 >
+      au < doNotProcess ; 2015 ; Molecular Pain Volume 11 ; 11 >
 
     }
 
@@ -4085,9 +4085,9 @@
       param[base_url] = http://www.movementecologyjournal.com/
       param[journal_issn] = 2051-3933
 
-      au < manifest ; 2013 ; Movement Ecology Volume 1 ; 1 >
-      au < manifest ; 2014 ; Movement Ecology Volume 2 ; 2 >
-      au < manifest ; 2015 ; Movement Ecology Volume 3 ; 3 >
+      au < doNotProcess ; 2013 ; Movement Ecology Volume 1 ; 1 >
+      au < doNotProcess ; 2014 ; Movement Ecology Volume 2 ; 2 >
+      au < doNotProcess ; 2015 ; Movement Ecology Volume 3 ; 3 >
 
     }
 
@@ -4103,10 +4103,10 @@
 
       au < down ; 2010 ; Multidisciplinary Respiratory Medicine Volume 5 ; 5 >
       au < down ; 2011 ; Multidisciplinary Respiratory Medicine Volume 6 ; 6 >
-      au < manifest ; 2012 ; Multidisciplinary Respiratory Medicine Volume 7 ; 7 >
-      au < manifest ; 2013 ; Multidisciplinary Respiratory Medicine Volume 8 ; 8 >
-      au < manifest ; 2014 ; Multidisciplinary Respiratory Medicine Volume 9 ; 9 >
-      au < manifest ; 2015 ; Multidisciplinary Respiratory Medicine Volume 10 ; 10 >
+      au < doNotProcess ; 2012 ; Multidisciplinary Respiratory Medicine Volume 7 ; 7 >
+      au < doNotProcess ; 2013 ; Multidisciplinary Respiratory Medicine Volume 8 ; 8 >
+      au < doNotProcess ; 2014 ; Multidisciplinary Respiratory Medicine Volume 9 ; 9 >
+      au < doNotProcess ; 2015 ; Multidisciplinary Respiratory Medicine Volume 10 ; 10 >
 
     }
 
@@ -4149,7 +4149,7 @@
       au < down ; 2009 ; Nonlinear Biomedical Physics Volume 3 ; 3 >
       au < down ; 2010 ; Nonlinear Biomedical Physics Volume 4 ; 4 >
       au < down ; 2011 ; Nonlinear Biomedical Physics Volume 5 ; 5 >
-      au < manifest ; 2012 ; Nonlinear Biomedical Physics Volume 6 ; 6 >
+      au < doNotProcess ; 2012 ; Nonlinear Biomedical Physics Volume 6 ; 6 >
 
     }
 
@@ -4171,10 +4171,10 @@
       au < down ; 2009 ; Nutrition & Metabolism Volume 6 ; 6 >
       au < down ; 2010 ; Nutrition & Metabolism Volume 7 ; 7 >
       au < down ; 2011 ; Nutrition & Metabolism Volume 8 ; 8 >
-      au < manifest ; 2012 ; Nutrition & Metabolism Volume 9 ; 9 >
-      au < manifest ; 2013 ; Nutrition & Metabolism Volume 10 ; 10 >
-      au < manifest ; 2014 ; Nutrition & Metabolism Volume 11 ; 11 >
-      au < manifest ; 2015 ; Nutrition & Metabolism Volume 12 ; 12 >
+      au < doNotProcess ; 2012 ; Nutrition & Metabolism Volume 9 ; 9 >
+      au < doNotProcess ; 2013 ; Nutrition & Metabolism Volume 10 ; 10 >
+      au < doNotProcess ; 2014 ; Nutrition & Metabolism Volume 11 ; 11 >
+      au < doNotProcess ; 2015 ; Nutrition & Metabolism Volume 12 ; 12 >
 
     }
 
@@ -4198,10 +4198,10 @@
       au < down ; 2009 ; Nutrition Journal Volume 8 ; 8 >
       au < down ; 2010 ; Nutrition Journal Volume 9 ; 9 >
       au < down ; 2011 ; Nutrition Journal Volume 10 ; 10 >
-      au < manifest ; 2012 ; Nutrition Journal Volume 11 ; 11 >
-      au < manifest ; 2013 ; Nutrition Journal Volume 12 ; 12 >
-      au < manifest ; 2014 ; Nutrition Journal Volume 13 ; 13 >
-      au < manifest ; 2015 ; Nutrition Journal Volume 14 ; 14 >
+      au < doNotProcess ; 2012 ; Nutrition Journal Volume 11 ; 11 >
+      au < doNotProcess ; 2013 ; Nutrition Journal Volume 12 ; 12 >
+      au < doNotProcess ; 2014 ; Nutrition Journal Volume 13 ; 13 >
+      au < doNotProcess ; 2015 ; Nutrition Journal Volume 14 ; 14 >
 
     }
 
@@ -4221,10 +4221,10 @@
       au < down ; 2009 ; Orphanet Journal of Rare Diseases Volume 4 ; 4 >
       au < down ; 2010 ; Orphanet Journal of Rare Diseases Volume 5 ; 5 >
       au < down ; 2011 ; Orphanet Journal of Rare Diseases Volume 6 ; 6 >
-      au < manifest ; 2012 ; Orphanet Journal of Rare Diseases Volume 7 ; 7 >
-      au < manifest ; 2013 ; Orphanet Journal of Rare Diseases Volume 8 ; 8 >
-      au < manifest ; 2014 ; Orphanet Journal of Rare Diseases Volume 9 ; 9 >
-      au < manifest ; 2015 ; Orphanet Journal of Rare Diseases Volume 10 ; 10 >
+      au < doNotProcess ; 2012 ; Orphanet Journal of Rare Diseases Volume 7 ; 7 >
+      au < doNotProcess ; 2013 ; Orphanet Journal of Rare Diseases Volume 8 ; 8 >
+      au < doNotProcess ; 2014 ; Orphanet Journal of Rare Diseases Volume 9 ; 9 >
+      au < doNotProcess ; 2015 ; Orphanet Journal of Rare Diseases Volume 10 ; 10 >
 
     }
 
@@ -4260,9 +4260,9 @@
       au < down ; 2010 ; Parasites & Vectors Volume 3 ; 3 >
       au < down ; 2011 ; Parasites & Vectors Volume 4 ; 4 >
       au < down ; 2012 ; Parasites & Vectors Volume 5 ; 5 >
-      au < manifest ; 2013 ; Parasites & Vectors Volume 6 ; 6 >
-      au < manifest ; 2014 ; Parasites & Vectors Volume 7 ; 7 >
-      au < manifest ; 2015 ; Parasites & Vectors Volume 8 ; 8 >
+      au < doNotProcess ; 2013 ; Parasites & Vectors Volume 6 ; 6 >
+      au < doNotProcess ; 2014 ; Parasites & Vectors Volume 7 ; 7 >
+      au < doNotProcess ; 2015 ; Parasites & Vectors Volume 8 ; 8 >
 
     }
 
@@ -4306,10 +4306,10 @@
       au < down ; 2009 ; Patient Safety in Surgery Volume 3 ; 3 >
       au < down ; 2010 ; Patient Safety in Surgery Volume 4 ; 4 >
       au < down ; 2011 ; Patient Safety in Surgery Volume 5 ; 5 >
-      au < manifest ; 2012 ; Patient Safety in Surgery Volume 6 ; 6 >
-      au < manifest ; 2013 ; Patient Safety in Surgery Volume 7 ; 7 >
-      au < manifest ; 2014 ; Patient Safety in Surgery Volume 8 ; 8 >
-      au < manifest ; 2015 ; Patient Safety in Surgery Volume 9 ; 9 >
+      au < doNotProcess ; 2012 ; Patient Safety in Surgery Volume 6 ; 6 >
+      au < doNotProcess ; 2013 ; Patient Safety in Surgery Volume 7 ; 7 >
+      au < doNotProcess ; 2014 ; Patient Safety in Surgery Volume 8 ; 8 >
+      au < doNotProcess ; 2015 ; Patient Safety in Surgery Volume 9 ; 9 >
 
     }
 
@@ -4334,10 +4334,10 @@
       au < down ; 2009 ; Pediatric Rheumatology Volume 7 ; 7 >
       au < down ; 2010 ; Pediatric Rheumatology Volume 8 ; 8 >
       au < down ; 2011 ; Pediatric Rheumatology Volume 9 ; 9 >
-      au < manifest ; 2012 ; Pediatric Rheumatology Volume 10 ; 10 >
-      au < manifest ; 2013 ; Pediatric Rheumatology Volume 11 ; 11 >
-      au < manifest ; 2014 ; Pediatric Rheumatology Volume 12 ; 12 >
-      au < manifest ; 2015 ; Pediatric Rheumatology Volume 13 ; 13 >
+      au < doNotProcess ; 2012 ; Pediatric Rheumatology Volume 10 ; 10 >
+      au < doNotProcess ; 2013 ; Pediatric Rheumatology Volume 11 ; 11 >
+      au < doNotProcess ; 2014 ; Pediatric Rheumatology Volume 12 ; 12 >
+      au < doNotProcess ; 2015 ; Pediatric Rheumatology Volume 13 ; 13 >
 
     }
 
@@ -4375,10 +4375,10 @@
       au < down ; 2009 ; Philosophy, Ethics, and Humanities in Medicine Volume 4 ; 4 >
       au < down ; 2010 ; Philosophy, Ethics, and Humanities in Medicine Volume 5 ; 5 >
       au < down ; 2011 ; Philosophy, Ethics, and Humanities in Medicine Volume 6 ; 6 >
-      au < manifest ; 2012 ; Philosophy, Ethics, and Humanities in Medicine Volume 7 ; 7 >
-      au < manifest ; 2013 ; Philosophy, Ethics, and Humanities in Medicine Volume 8 ; 8 >
-      au < manifest ; 2014 ; Philosophy, Ethics, and Humanities in Medicine Volume 9 ; 9 >
-      au < manifest ; 2015 ; Philosophy, Ethics, and Humanities in Medicine Volume 10 ; 10 >
+      au < doNotProcess ; 2012 ; Philosophy, Ethics, and Humanities in Medicine Volume 7 ; 7 >
+      au < doNotProcess ; 2013 ; Philosophy, Ethics, and Humanities in Medicine Volume 8 ; 8 >
+      au < doNotProcess ; 2014 ; Philosophy, Ethics, and Humanities in Medicine Volume 9 ; 9 >
+      au < doNotProcess ; 2015 ; Philosophy, Ethics, and Humanities in Medicine Volume 10 ; 10 >
 
     }
 
@@ -4399,10 +4399,10 @@
       au < down ; 2009 ; Plant Methods Volume 5 ; 5 >
       au < down ; 2010 ; Plant Methods Volume 6 ; 6 >
       au < down ; 2011 ; Plant Methods Volume 7 ; 7 >
-      au < manifest ; 2012 ; Plant Methods Volume 8 ; 8 >
-      au < manifest ; 2013 ; Plant Methods Volume 9 ; 9 >
-      au < manifest ; 2014 ; Plant Methods Volume 10 ; 10 >
-      au < manifest ; 2015 ; Plant Methods Volume 11 ; 11 >
+      au < doNotProcess ; 2012 ; Plant Methods Volume 8 ; 8 >
+      au < doNotProcess ; 2013 ; Plant Methods Volume 9 ; 9 >
+      au < doNotProcess ; 2014 ; Plant Methods Volume 10 ; 10 >
+      au < doNotProcess ; 2015 ; Plant Methods Volume 11 ; 11 >
 
     }
 
@@ -4425,12 +4425,12 @@
       au < down ; 2007 ; Population Health Metrics Volume 5 ; 5 >
       au < down ; 2008 ; Population Health Metrics Volume 6 ; 6 >
       au < down ; 2009 ; Population Health Metrics Volume 7 ; 7 >
-      au < manifest ; 2010 ; Population Health Metrics Volume 8 ; 8 >
+      au < doNotProcess ; 2010 ; Population Health Metrics Volume 8 ; 8 >
       au < down ; 2011 ; Population Health Metrics Volume 9 ; 9 >
-      au < manifest ; 2012 ; Population Health Metrics Volume 10 ; 10 >
-      au < manifest ; 2013 ; Population Health Metrics Volume 11 ; 11 >
-      au < manifest ; 2014 ; Population Health Metrics Volume 12 ; 12 >
-      au < manifest ; 2015 ; Population Health Metrics Volume 13 ; 13 >
+      au < doNotProcess ; 2012 ; Population Health Metrics Volume 10 ; 10 >
+      au < doNotProcess ; 2013 ; Population Health Metrics Volume 11 ; 11 >
+      au < doNotProcess ; 2014 ; Population Health Metrics Volume 12 ; 12 >
+      au < doNotProcess ; 2015 ; Population Health Metrics Volume 13 ; 13 >
 
     }
 
@@ -4453,10 +4453,10 @@
       au < down ; 2009 ; Proteome Science Volume 7 ; 7 >
       au < down ; 2010 ; Proteome Science Volume 8 ; 8 >
       au < down ; 2011 ; Proteome Science Volume 9 ; 9 >
-      au < manifest ; 2012 ; Proteome Science Volume 10 ; 10 >
-      au < manifest ; 2013 ; Proteome Science Volume 11 ; 11 >
-      au < manifest ; 2014 ; Proteome Science Volume 12 ; 12 >
-      au < manifest ; 2015 ; Proteome Science Volume 13 ; 13 >
+      au < doNotProcess ; 2012 ; Proteome Science Volume 10 ; 10 >
+      au < doNotProcess ; 2013 ; Proteome Science Volume 11 ; 11 >
+      au < doNotProcess ; 2014 ; Proteome Science Volume 12 ; 12 >
+      au < doNotProcess ; 2015 ; Proteome Science Volume 13 ; 13 >
 
     }
 
@@ -4476,10 +4476,10 @@
       au < down ; 2009 ; Radiation Oncology Volume 4 ; 4 >
       au < down ; 2010 ; Radiation Oncology Volume 5 ; 5 >
       au < down ; 2011 ; Radiation Oncology Volume 6 ; 6 >
-      au < manifest ; 2012 ; Radiation Oncology Volume 7 ; 7 >
-      au < manifest ; 2013 ; Radiation Oncology Volume 8 ; 8 >
-      au < manifest ; 2014 ; Radiation Oncology Volume 9 ; 9 >
-      au < manifest ; 2015 ; Radiation Oncology Volume 10 ; 10 >
+      au < doNotProcess ; 2012 ; Radiation Oncology Volume 7 ; 7 >
+      au < doNotProcess ; 2013 ; Radiation Oncology Volume 8 ; 8 >
+      au < doNotProcess ; 2014 ; Radiation Oncology Volume 9 ; 9 >
+      au < doNotProcess ; 2015 ; Radiation Oncology Volume 10 ; 10 >
 
     }
 
@@ -4518,10 +4518,10 @@
       au < down ; 2009 ; Reproductive Biology and Endocrinology Volume 7 ; 7 >
       au < down ; 2010 ; Reproductive Biology and Endocrinology Volume 8 ; 8 >
       au < down ; 2011 ; Reproductive Biology and Endocrinology Volume 9 ; 9 >
-      au < manifest ; 2012 ; Reproductive Biology and Endocrinology Volume 10 ; 10 >
-      au < manifest ; 2013 ; Reproductive Biology and Endocrinology Volume 11 ; 11 >
-      au < manifest ; 2014 ; Reproductive Biology and Endocrinology Volume 12 ; 12 >
-      au < manifest ; 2015 ; Reproductive Biology and Endocrinology Volume 13 ; 13 >
+      au < doNotProcess ; 2012 ; Reproductive Biology and Endocrinology Volume 10 ; 10 >
+      au < doNotProcess ; 2013 ; Reproductive Biology and Endocrinology Volume 11 ; 11 >
+      au < doNotProcess ; 2014 ; Reproductive Biology and Endocrinology Volume 12 ; 12 >
+      au < doNotProcess ; 2015 ; Reproductive Biology and Endocrinology Volume 13 ; 13 >
 
     }
 
@@ -4543,10 +4543,10 @@
       au < down ; 2009 ; Reproductive Health Volume 6 ; 6 >
       au < down ; 2010 ; Reproductive Health Volume 7 ; 7 >
       au < down ; 2011 ; Reproductive Health Volume 8 ; 8 >
-      au < manifest ; 2012 ; Reproductive Health Volume 9 ; 9 >
-      au < manifest ; 2013 ; Reproductive Health Volume 10 ; 10 >
-      au < manifest ; 2014 ; Reproductive Health Volume 11 ; 11 >
-      au < manifest ; 2015 ; Reproductive Health Volume 12 ; 12 >
+      au < doNotProcess ; 2012 ; Reproductive Health Volume 9 ; 9 >
+      au < doNotProcess ; 2013 ; Reproductive Health Volume 10 ; 10 >
+      au < doNotProcess ; 2014 ; Reproductive Health Volume 11 ; 11 >
+      au < doNotProcess ; 2015 ; Reproductive Health Volume 12 ; 12 >
 
     }
 
@@ -4564,22 +4564,22 @@
       param[base_url] = http://www.respiratory-research.com/
       comment[0] = base url changed to add www.
 
-      au < manifest ; 2000 ; Respiratory Research Volume 1 ; 1 >
-      au < manifest ; 2001 ; Respiratory Research Volume 2 ; 2 >
-      au < manifest ; 2002 ; Respiratory Research Volume 3 ; 3 >
-      au < manifest ; 2003 ; Respiratory Research Volume 4 ; 4 >
-      au < manifest ; 2004 ; Respiratory Research Volume 5 ; 5 >
-      au < manifest ; 2005 ; Respiratory Research Volume 6 ; 6 >
-      au < manifest ; 2006 ; Respiratory Research Volume 7 ; 7 >
-      au < manifest ; 2007 ; Respiratory Research Volume 8 ; 8 >
-      au < manifest ; 2008 ; Respiratory Research Volume 9 ; 9 >
-      au < manifest ; 2009 ; Respiratory Research Volume 10 ; 10 >
-      au < manifest ; 2010 ; Respiratory Research Volume 11 ; 11 >
-      au < manifest ; 2011 ; Respiratory Research Volume 12 ; 12 >
-      au < manifest ; 2012 ; Respiratory Research Volume 13 ; 13 >
-      au < manifest ; 2013 ; Respiratory Research Volume 14 ; 14 >
-      au < manifest ; 2014 ; Respiratory Research Volume 15 ; 15 >
-      au < manifest ; 2015 ; Respiratory Research Volume 16 ; 16 >
+      au < doNotProcess ; 2000 ; Respiratory Research Volume 1 ; 1 >
+      au < doNotProcess ; 2001 ; Respiratory Research Volume 2 ; 2 >
+      au < doNotProcess ; 2002 ; Respiratory Research Volume 3 ; 3 >
+      au < doNotProcess ; 2003 ; Respiratory Research Volume 4 ; 4 >
+      au < doNotProcess ; 2004 ; Respiratory Research Volume 5 ; 5 >
+      au < doNotProcess ; 2005 ; Respiratory Research Volume 6 ; 6 >
+      au < doNotProcess ; 2006 ; Respiratory Research Volume 7 ; 7 >
+      au < doNotProcess ; 2007 ; Respiratory Research Volume 8 ; 8 >
+      au < doNotProcess ; 2008 ; Respiratory Research Volume 9 ; 9 >
+      au < doNotProcess ; 2009 ; Respiratory Research Volume 10 ; 10 >
+      au < doNotProcess ; 2010 ; Respiratory Research Volume 11 ; 11 >
+      au < doNotProcess ; 2011 ; Respiratory Research Volume 12 ; 12 >
+      au < doNotProcess ; 2012 ; Respiratory Research Volume 13 ; 13 >
+      au < doNotProcess ; 2013 ; Respiratory Research Volume 14 ; 14 >
+      au < doNotProcess ; 2014 ; Respiratory Research Volume 15 ; 15 >
+      au < doNotProcess ; 2015 ; Respiratory Research Volume 16 ; 16 >
       }
       {
       param[base_url] = http://respiratory-research.com/
@@ -4612,10 +4612,10 @@
       au < down ; 2009 ; Retrovirology Volume 6 ; 6 >
       au < down ; 2010 ; Retrovirology Volume 7 ; 7 >
       au < down ; 2011 ; Retrovirology Volume 8 ; 8 >
-      au < manifest ; 2012 ; Retrovirology Volume 9 ; 9 >
-      au < manifest ; 2013 ; Retrovirology Volume 10 ; 10 >
-      au < manifest ; 2014 ; Retrovirology Volume 11 ; 11 >
-      au < manifest ; 2015 ; Retrovirology Volume 12 ; 12 >
+      au < doNotProcess ; 2012 ; Retrovirology Volume 9 ; 9 >
+      au < doNotProcess ; 2013 ; Retrovirology Volume 10 ; 10 >
+      au < doNotProcess ; 2014 ; Retrovirology Volume 11 ; 11 >
+      au < doNotProcess ; 2015 ; Retrovirology Volume 12 ; 12 >
 
     }
 
@@ -4646,13 +4646,13 @@
 
       param[base_url] = http://www.aquaticbiosystems.org/
 
-      au < manifest ; 2005 ; Saline Systems Volume 1 ; 1 >
-      au < manifest ; 2006 ; Saline Systems Volume 2 ; 2 >
-      au < manifest ; 2007 ; Saline Systems Volume 3 ; 3 >
-      au < manifest ; 2008 ; Saline Systems Volume 4 ; 4 >
-      au < manifest ; 2009 ; Saline Systems Volume 5 ; 5 >
-      au < manifest ; 2010 ; Saline Systems Volume 6 ; 6 >
-      au < manifest ; 2011 ; Saline Systems Volume 7 ; 7 >
+      au < doNotProcess ; 2005 ; Saline Systems Volume 1 ; 1 >
+      au < doNotProcess ; 2006 ; Saline Systems Volume 2 ; 2 >
+      au < doNotProcess ; 2007 ; Saline Systems Volume 3 ; 3 >
+      au < doNotProcess ; 2008 ; Saline Systems Volume 4 ; 4 >
+      au < doNotProcess ; 2009 ; Saline Systems Volume 5 ; 5 >
+      au < doNotProcess ; 2010 ; Saline Systems Volume 6 ; 6 >
+      au < doNotProcess ; 2011 ; Saline Systems Volume 7 ; 7 >
       au < doNotProcess ; 2012 ; Saline Systems Volume 8 ; 8 >
       au < doNotProcess ; 2013 ; Saline Systems Volume 9 ; 9 >
       au < doNotProcess ; 2014 ; Saline Systems Volume 10 ; 10 >
@@ -4672,14 +4672,14 @@
       param[base_url] = http://www.sjtrem.com/
       param[journal_issn] = 1757-7241
 
-      au < manifest ; 2008 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 16 ; 16 >
-      au < manifest ; 2009 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 17 ; 17 >
-      au < manifest ; 2010 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 18 ; 18 >
-      au < manifest ; 2011 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 19 ; 19 >
-      au < manifest ; 2012 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 20 ; 20 >
-      au < manifest ; 2013 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 21 ; 21 >
-      au < manifest ; 2014 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 22 ; 22 >
-      au < manifest ; 2015 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 23 ; 23 >
+      au < doNotProcess ; 2008 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 16 ; 16 >
+      au < doNotProcess ; 2009 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 17 ; 17 >
+      au < doNotProcess ; 2010 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 18 ; 18 >
+      au < doNotProcess ; 2011 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 19 ; 19 >
+      au < doNotProcess ; 2012 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 20 ; 20 >
+      au < doNotProcess ; 2013 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 21 ; 21 >
+      au < doNotProcess ; 2014 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 22 ; 22 >
+      au < doNotProcess ; 2015 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 23 ; 23 >
 
     }
 
@@ -4699,10 +4699,10 @@
       au < down ; 2009 ; Scoliosis Volume 4 ; 4 >
       au < down ; 2010 ; Scoliosis Volume 5 ; 5 >
       au < down ; 2011 ; Scoliosis Volume 6 ; 6 >
-      au < manifest ; 2012 ; Scoliosis Volume 7 ; 7 >
-      au < manifest ; 2013 ; Scoliosis Volume 8 ; 8 >
-      au < manifest ; 2014 ; Scoliosis Volume 9 ; 9 >
-      au < manifest ; 2015 ; Scoliosis Volume 10 ; 10 >
+      au < doNotProcess ; 2012 ; Scoliosis Volume 7 ; 7 >
+      au < doNotProcess ; 2013 ; Scoliosis Volume 8 ; 8 >
+      au < doNotProcess ; 2014 ; Scoliosis Volume 9 ; 9 >
+      au < doNotProcess ; 2015 ; Scoliosis Volume 10 ; 10 >
 
     }
 
@@ -4717,10 +4717,10 @@
       param[journal_issn] = 1758-907X
       #stop publishing
 
-      au < manifest ; 2010 ; Silence Volume 1 ; 1 >
-      au < manifest ; 2011 ; Silence Volume 2 ; 2 >
-      au < manifest ; 2012 ; Silence Volume 3 ; 3 >
-      au < manifest ; 2013 ; Silence Volume 4 ; 4 >
+      au < doNotProcess ; 2010 ; Silence Volume 1 ; 1 >
+      au < doNotProcess ; 2011 ; Silence Volume 2 ; 2 >
+      au < doNotProcess ; 2012 ; Silence Volume 3 ; 3 >
+      au < doNotProcess ; 2013 ; Silence Volume 4 ; 4 >
 
     }
 
@@ -4734,11 +4734,11 @@
       param[base_url] = http://www.skeletalmusclejournal.com/
       param[journal_issn] = 2044-5040
 
-      au < manifest ; 2011 ; Skeletal Muscle Volume 1 ; 1 >
-      au < manifest ; 2012 ; Skeletal Muscle Volume 2 ; 2 >
-      au < manifest ; 2013 ; Skeletal Muscle Volume 3 ; 3 >
-      au < manifest ; 2014 ; Skeletal Muscle Volume 4 ; 4 >
-      au < manifest ; 2015 ; Skeletal Muscle Volume 5 ; 5 >
+      au < doNotProcess ; 2011 ; Skeletal Muscle Volume 1 ; 1 >
+      au < doNotProcess ; 2012 ; Skeletal Muscle Volume 2 ; 2 >
+      au < doNotProcess ; 2013 ; Skeletal Muscle Volume 3 ; 3 >
+      au < doNotProcess ; 2014 ; Skeletal Muscle Volume 4 ; 4 >
+      au < doNotProcess ; 2015 ; Skeletal Muscle Volume 5 ; 5 >
 
     }
 
@@ -4758,10 +4758,10 @@
       au < down ; 2009 ; Source Code for Biology and Medicine Volume 4 ; 4 >
       au < down ; 2010 ; Source Code for Biology and Medicine Volume 5 ; 5 >
       au < down ; 2011 ; Source Code for Biology and Medicine Volume 6 ; 6 >
-      au < manifest ; 2012 ; Source Code for Biology and Medicine Volume 7 ; 7 >
-      au < manifest ; 2013 ; Source Code for Biology and Medicine Volume 8 ; 8 >
-      au < manifest ; 2014 ; Source Code for Biology and Medicine Volume 9 ; 9 >
-      au < manifest ; 2015 ; Source Code for Biology and Medicine Volume 10 ; 10 >
+      au < doNotProcess ; 2012 ; Source Code for Biology and Medicine Volume 7 ; 7 >
+      au < doNotProcess ; 2013 ; Source Code for Biology and Medicine Volume 8 ; 8 >
+      au < doNotProcess ; 2014 ; Source Code for Biology and Medicine Volume 9 ; 9 >
+      au < doNotProcess ; 2015 ; Source Code for Biology and Medicine Volume 10 ; 10 >
 
     }
 
@@ -4778,12 +4778,12 @@
       param[base_url] = http://www.stemcellres.com/
       comment[0] = base url changed to add www.
 
-      au < manifest ; 2010 ; Stem Cell Research & Therapy Volume 1 ; 1 >
-      au < manifest ; 2011 ; Stem Cell Research & Therapy Volume 2 ; 2 >
-      au < manifest ; 2012 ; Stem Cell Research & Therapy Volume 3 ; 3 >
-      au < manifest ; 2013 ; Stem Cell Research & Therapy Volume 4 ; 4 >
-      au < manifest ; 2014 ; Stem Cell Research & Therapy Volume 5 ; 5 >
-      au < manifest ; 2015 ; Stem Cell Research & Therapy Volume 6 ; 6 >
+      au < doNotProcess ; 2010 ; Stem Cell Research & Therapy Volume 1 ; 1 >
+      au < doNotProcess ; 2011 ; Stem Cell Research & Therapy Volume 2 ; 2 >
+      au < doNotProcess ; 2012 ; Stem Cell Research & Therapy Volume 3 ; 3 >
+      au < doNotProcess ; 2013 ; Stem Cell Research & Therapy Volume 4 ; 4 >
+      au < doNotProcess ; 2014 ; Stem Cell Research & Therapy Volume 5 ; 5 >
+      au < doNotProcess ; 2015 ; Stem Cell Research & Therapy Volume 6 ; 6 >
       }
       {
       param[base_url] = http://stemcellres.com/
@@ -4827,10 +4827,10 @@
       param[base_url] = http://www.systematicreviewsjournal.com/
       param[journal_issn] = 2046-4053
 
-      au < manifest ; 2012 ; Systematic Reviews Volume 1 ; 1 >
-      au < manifest ; 2013 ; Systematic Reviews Volume 2 ; 2 >
-      au < manifest ; 2014 ; Systematic Reviews Volume 3 ; 3 >
-      au < manifest ; 2015 ; Systematic Reviews Volume 4 ; 4 >
+      au < doNotProcess ; 2012 ; Systematic Reviews Volume 1 ; 1 >
+      au < doNotProcess ; 2013 ; Systematic Reviews Volume 2 ; 2 >
+      au < doNotProcess ; 2014 ; Systematic Reviews Volume 3 ; 3 >
+      au < doNotProcess ; 2015 ; Systematic Reviews Volume 4 ; 4 >
 
     }
 
@@ -4852,10 +4852,10 @@
       au < down ; 2009 ; Theoretical Biology and Medical Modelling Volume 6 ; 6 >
       au < down ; 2010 ; Theoretical Biology and Medical Modelling Volume 7 ; 7 >
       au < down ; 2011 ; Theoretical Biology and Medical Modelling Volume 8 ; 8 >
-      au < manifest ; 2012 ; Theoretical Biology and Medical Modelling Volume 9 ; 9 >
-      au < manifest ; 2013 ; Theoretical Biology and Medical Modelling Volume 10 ; 10 >
-      au < manifest ; 2014 ; Theoretical Biology and Medical Modelling Volume 11 ; 11 >
-      au < manifest ; 2015 ; Theoretical Biology and Medical Modelling Volume 12 ; 12 >
+      au < doNotProcess ; 2012 ; Theoretical Biology and Medical Modelling Volume 9 ; 9 >
+      au < doNotProcess ; 2013 ; Theoretical Biology and Medical Modelling Volume 10 ; 10 >
+      au < doNotProcess ; 2014 ; Theoretical Biology and Medical Modelling Volume 11 ; 11 >
+      au < doNotProcess ; 2015 ; Theoretical Biology and Medical Modelling Volume 12 ; 12 >
 
     }
 
@@ -4878,10 +4878,10 @@
       au < down ; 2009 ; Thrombosis Journal Volume 7 ; 7 >
       au < down ; 2010 ; Thrombosis Journal Volume 8 ; 8 >
       au < down ; 2011 ; Thrombosis Journal Volume 9 ; 9 >
-      au < manifest ; 2012 ; Thrombosis Journal Volume 10 ; 10 >
-      au < manifest ; 2013 ; Thrombosis Journal Volume 11 ; 11 >
-      au < manifest ; 2014 ; Thrombosis Journal Volume 12 ; 12 >
-      au < manifest ; 2015 ; Thrombosis Journal Volume 13 ; 13 >
+      au < doNotProcess ; 2012 ; Thrombosis Journal Volume 10 ; 10 >
+      au < doNotProcess ; 2013 ; Thrombosis Journal Volume 11 ; 11 >
+      au < doNotProcess ; 2014 ; Thrombosis Journal Volume 12 ; 12 >
+      au < doNotProcess ; 2015 ; Thrombosis Journal Volume 13 ; 13 >
 
     }
 
@@ -4895,14 +4895,14 @@
       param[base_url] = http://www.thyroidresearchjournal.com/
       param[journal_issn] = 1756-6614
 
-      au < manifest ; 2008 ; Thyroid Research Volume 1 ; 1 >
-      au < manifest ; 2009 ; Thyroid Research Volume 2 ; 2 >
-      au < manifest ; 2010 ; Thyroid Research Volume 3 ; 3 >
-      au < manifest ; 2011 ; Thyroid Research Volume 4 ; 4 >
-      au < manifest ; 2012 ; Thyroid Research Volume 5 ; 5 >
-      au < manifest ; 2013 ; Thyroid Research Volume 6 ; 6 >
-      au < manifest ; 2014 ; Thyroid Research Volume 7 ; 7 >
-      au < manifest ; 2015 ; Thyroid Research Volume 8 ; 8 >
+      au < doNotProcess ; 2008 ; Thyroid Research Volume 1 ; 1 >
+      au < doNotProcess ; 2009 ; Thyroid Research Volume 2 ; 2 >
+      au < doNotProcess ; 2010 ; Thyroid Research Volume 3 ; 3 >
+      au < doNotProcess ; 2011 ; Thyroid Research Volume 4 ; 4 >
+      au < doNotProcess ; 2012 ; Thyroid Research Volume 5 ; 5 >
+      au < doNotProcess ; 2013 ; Thyroid Research Volume 6 ; 6 >
+      au < doNotProcess ; 2014 ; Thyroid Research Volume 7 ; 7 >
+      au < doNotProcess ; 2015 ; Thyroid Research Volume 8 ; 8 >
 
     }
 
@@ -4916,19 +4916,19 @@
       param[base_url] = http://www.tobaccoinduceddiseases.com/
       param[journal_issn] = 1617-9625
 
-      au < manifest ; 2002-2003 ; Tobacco Induced Diseases Volume 1 ; 1 >
-      au < manifest ; 2004 ; Tobacco Induced Diseases Volume 2 ; 2 >
-      au < manifest ; 2005-2007 ; Tobacco Induced Diseases Volume 3 ; 3 >
-      au < manifest ; 2008 ; Tobacco Induced Diseases Volume 4 ; 4 >
-      au < manifest ; 2009 ; Tobacco Induced Diseases Volume 5 ; 5 >
+      au < doNotProcess ; 2002-2003 ; Tobacco Induced Diseases Volume 1 ; 1 >
+      au < doNotProcess ; 2004 ; Tobacco Induced Diseases Volume 2 ; 2 >
+      au < doNotProcess ; 2005-2007 ; Tobacco Induced Diseases Volume 3 ; 3 >
+      au < doNotProcess ; 2008 ; Tobacco Induced Diseases Volume 4 ; 4 >
+      au < doNotProcess ; 2009 ; Tobacco Induced Diseases Volume 5 ; 5 >
       au < doNotProcess ; 0 ; Tobacco Induced Diseases Volume 6 ; 6 > #malformed
       au < doNotProcess ; 0 ; Tobacco Induced Diseases Volume 7 ; 7 > #malformed
-      au < manifest ; 2010 ; Tobacco Induced Diseases Volume 8 ; 8 >
-      au < manifest ; 2011 ; Tobacco Induced Diseases Volume 9 ; 9 >
+      au < doNotProcess ; 2010 ; Tobacco Induced Diseases Volume 8 ; 8 >
+      au < doNotProcess ; 2011 ; Tobacco Induced Diseases Volume 9 ; 9 >
       au < down ; 2012 ; Tobacco Induced Diseases Volume 10 ; 10 >
-      au < manifest ; 2013 ; Tobacco Induced Diseases Volume 11 ; 11 >
-      au < manifest ; 2014 ; Tobacco Induced Diseases Volume 12 ; 12 >
-      au < manifest ; 2015 ; Tobacco Induced Diseases Volume 13 ; 13 >
+      au < doNotProcess ; 2013 ; Tobacco Induced Diseases Volume 11 ; 11 >
+      au < doNotProcess ; 2014 ; Tobacco Induced Diseases Volume 12 ; 12 >
+      au < doNotProcess ; 2015 ; Tobacco Induced Diseases Volume 13 ; 13 >
 
     }
 
@@ -4943,9 +4943,9 @@
       param[journal_issn] = 2047-9158
 
       au < down ; 2012 ; Translational Neurodegeneration Volume 1 ; 1 >
-      au < manifest ; 2013 ; Translational Neurodegeneration Volume 2 ; 2 >
-      au < manifest ; 2014 ; Translational Neurodegeneration Volume 3 ; 3 >
-      au < manifest ; 2015 ; Translational Neurodegeneration Volume 4 ; 4 >
+      au < doNotProcess ; 2013 ; Translational Neurodegeneration Volume 2 ; 2 >
+      au < doNotProcess ; 2014 ; Translational Neurodegeneration Volume 3 ; 3 >
+      au < doNotProcess ; 2015 ; Translational Neurodegeneration Volume 4 ; 4 >
 
     }
 
@@ -4960,10 +4960,10 @@
       param[base_url] = http://www.transplantationresearch.com/
       param[journal_issn] = 2047-1440
 
-      au < manifest ; 2012 ; Transplantation Research Volume 1 ; 1 >
-      au < manifest ; 2013 ; Transplantation Research Volume 2 ; 2 >
-      au < manifest ; 2014 ; Transplantation Research Volume 3 ; 3 >
-      au < manifest ; 2015 ; Transplantation Research Volume 4 ; 4 >
+      au < doNotProcess ; 2012 ; Transplantation Research Volume 1 ; 1 >
+      au < doNotProcess ; 2013 ; Transplantation Research Volume 2 ; 2 >
+      au < doNotProcess ; 2014 ; Transplantation Research Volume 3 ; 3 >
+      au < doNotProcess ; 2015 ; Transplantation Research Volume 4 ; 4 >
 
     }
 
@@ -4989,10 +4989,10 @@
       au < down ; 2009 ; Trials Volume 10 ; 10 >
       au < down ; 2010 ; Trials Volume 11 ; 11 >
       au < down ; 2011 ; Trials Volume 12 ; 12 >
-      au < manifest ; 2012 ; Trials Volume 13 ; 13 >
-      au < manifest ; 2013 ; Trials Volume 14 ; 14 >
-      au < manifest ; 2014 ; Trials Volume 15 ; 15 >
-      au < manifest ; 2015 ; Trials Volume 16 ; 16 >
+      au < doNotProcess ; 2012 ; Trials Volume 13 ; 13 >
+      au < doNotProcess ; 2013 ; Trials Volume 14 ; 14 >
+      au < doNotProcess ; 2014 ; Trials Volume 15 ; 15 >
+      au < doNotProcess ; 2015 ; Trials Volume 16 ; 16 >
 
     }
 
@@ -5027,10 +5027,10 @@
       param[journal_issn] = 1297-9716
 
       au < down ; 2011 ; Veterinary Research Volume 42 ; 42 >
-      au < manifest ; 2012 ; Veterinary Research Volume 43 ; 43 >
-      au < manifest ; 2013 ; Veterinary Research Volume 44 ; 44 >
-      au < manifest ; 2014 ; Veterinary Research Volume 45 ; 45 >
-      au < manifest ; 2015 ; Veterinary Research Volume 46 ; 46 >
+      au < doNotProcess ; 2012 ; Veterinary Research Volume 43 ; 43 >
+      au < doNotProcess ; 2013 ; Veterinary Research Volume 44 ; 44 >
+      au < doNotProcess ; 2014 ; Veterinary Research Volume 45 ; 45 >
+      au < doNotProcess ; 2015 ; Veterinary Research Volume 46 ; 46 >
 
     }
 
@@ -5052,10 +5052,10 @@
       au < down ; 2009 ; Virology Journal Volume 6 ; 6 >
       au < down ; 2010 ; Virology Journal Volume 7 ; 7 >
       au < down ; 2011 ; Virology Journal Volume 8 ; 8 >
-      au < manifest ; 2012 ; Virology Journal Volume 9 ; 9>
-      au < manifest ; 2013 ; Virology Journal Volume 10 ; 10 >
-      au < manifest ; 2014 ; Virology Journal Volume 11 ; 11 >
-      au < manifest ; 2015 ; Virology Journal Volume 12 ; 12 >
+      au < doNotProcess ; 2012 ; Virology Journal Volume 9 ; 9>
+      au < doNotProcess ; 2013 ; Virology Journal Volume 10 ; 10 >
+      au < doNotProcess ; 2014 ; Virology Journal Volume 11 ; 11 >
+      au < doNotProcess ; 2015 ; Virology Journal Volume 12 ; 12 >
 
     }
 
@@ -5069,14 +5069,14 @@
       param[base_url] = http://www.waojournal.org/
       param[journal_issn] = 1939-4551
 
-      au < manifest ; 2008 ; World Allergy Organization Journal Volume 1 ; 1 >
-      au < manifest ; 2009 ; World Allergy Organization Journal Volume 2 ; 2 >
-      au < manifest ; 2010 ; World Allergy Organization Journal Volume 3 ; 3 >
-      au < manifest ; 2011 ; World Allergy Organization Journal Volume 4 ; 4 >
-      au < manifest ; 2012 ; World Allergy Organization Journal Volume 5 ; 5 >
-      au < manifest ; 2013 ; World Allergy Organization Journal Volume 6 ; 6 >
-      au < manifest ; 2014 ; World Allergy Organization Journal Volume 7 ; 7 >
-      au < manifest ; 2015 ; World Allergy Organization Journal Volume 8 ; 8 >
+      au < doNotProcess ; 2008 ; World Allergy Organization Journal Volume 1 ; 1 >
+      au < doNotProcess ; 2009 ; World Allergy Organization Journal Volume 2 ; 2 >
+      au < doNotProcess ; 2010 ; World Allergy Organization Journal Volume 3 ; 3 >
+      au < doNotProcess ; 2011 ; World Allergy Organization Journal Volume 4 ; 4 >
+      au < doNotProcess ; 2012 ; World Allergy Organization Journal Volume 5 ; 5 >
+      au < doNotProcess ; 2013 ; World Allergy Organization Journal Volume 6 ; 6 >
+      au < doNotProcess ; 2014 ; World Allergy Organization Journal Volume 7 ; 7 >
+      au < doNotProcess ; 2015 ; World Allergy Organization Journal Volume 8 ; 8 >
 
     }
 
@@ -5096,10 +5096,10 @@
       au < down ; 2009 ; World Journal of Emergency Surgery Volume 4 ; 4 >
       au < down ; 2010 ; World Journal of Emergency Surgery Volume 5 ; 5 >
       au < down ; 2011 ; World Journal of Emergency Surgery Volume 6 ; 6 >
-      au < manifest ; 2012 ; World Journal of Emergency Surgery Volume 7 ; 7 >
-      au < manifest ; 2013 ; World Journal of Emergency Surgery Volume 8 ; 8 >
-      au < manifest ; 2014 ; World Journal of Emergency Surgery Volume 9 ; 9 >
-      au < manifest ; 2015 ; World Journal of Emergency Surgery Volume 10 ; 10 >
+      au < doNotProcess ; 2012 ; World Journal of Emergency Surgery Volume 7 ; 7 >
+      au < doNotProcess ; 2013 ; World Journal of Emergency Surgery Volume 8 ; 8 >
+      au < doNotProcess ; 2014 ; World Journal of Emergency Surgery Volume 9 ; 9 >
+      au < doNotProcess ; 2015 ; World Journal of Emergency Surgery Volume 10 ; 10 >
 
     }
 
