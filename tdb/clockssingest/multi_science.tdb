@@ -19,6 +19,7 @@
     >
 
     param[journal_id] = ast
+	# purchased by Sage 11/15
 
     au < crawling ; exists ; 2000 ; Adsorption Science & Technology Volume 18 ; 18 >
     au < crawling ; exists ; 2001 ; Adsorption Science & Technology Volume 19 ; 19 >
@@ -47,6 +48,7 @@
     >
 
     param[journal_id] = ase
+	# purchased by Sage 11/15
 
     au < crawling ; exists ; 2000 ; Advances in Structural Engineering Volume 3 ; 3 >
     au < crawling ; exists ; 2001 ; Advances in Structural Engineering Volume 4 ; 4 >
@@ -75,6 +77,7 @@
     >
 
     param[journal_id] = ba
+	# purchased by Sage 11/15
 
     au < crawling ; exists ; 1999 ; Building Acoustics Volume 6 ; 6 >
     au < crawling ; exists ; 2000 ; Building Acoustics Volume 7 ; 7 >
@@ -104,6 +107,7 @@
     >
 
     param[journal_id] = ee
+	# purchased by Sage 11/15
 
     au < crawling ; exists ; 1999 ; Energy & Environment Volume 10 ; 10 >
     au < crawling ; exists ; 2000 ; Energy & Environment Volume 11 ; 11 >
@@ -133,6 +137,7 @@
     >
 
     param[journal_id] = eee
+	# purchased by Sage 11/15
 
     au < crawling ; exists ; 2000 ; Energy, Exploration & Exploitation Volume 18 ; 18 >
     au < crawling ; exists ; 2001 ; Energy, Exploration & Exploitation Volume 19 ; 19 >
@@ -161,6 +166,7 @@
     >
 
     param[journal_id] = ija
+	# purchased by Sage 11/15
 
     au < crawling ; exists ; 2002 ; International Journal of Aeroacoustics Volume 1 ; 1 >
     au < crawling ; exists ; 2003 ; International Journal of Aeroacoustics Volume 2 ; 2 >
@@ -188,6 +194,7 @@
     >
 
     param[journal_id] = ijai
+    # triggering    
 
     au < crawling ; exists ; 2009 ; International Journal of Aerospace Innovations Volume 1 ; 1 >
     au < crawling ; exists ; 2010 ; International Journal of Aerospace Innovations Volume 2 ; 2 >
@@ -208,6 +215,7 @@
     >
 
     param[journal_id] = ijac
+	# purchased by Sage 11/15
 
     au < crawling ; exists ; 2003 ; International Journal of Architectural Computing Volume 1 ; 1 >
     au < crawling ; exists ; 2004 ; International Journal of Architectural Computing Volume 2 ; 2 >
@@ -234,6 +242,7 @@
     >
 
     param[journal_id] = ijemf
+    # triggering    
 
     au < crawling ; exists ; 2009 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 1 ; 1 >
     au < crawling ; exists ; 2010 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 2 ; 2 >
@@ -250,6 +259,7 @@
     >
 
     param[journal_id] = ijfc
+    # triggering    
 
     au < crawling ; exists ; 2009 ; International Journal of Flow Control Volume 1 ; 1 >
     au < crawling ; exists ; 2010 ; International Journal of Flow Control Volume 2 ; 2 >
@@ -270,6 +280,7 @@
     >
 
     param[journal_id] = ijhde
+	# purchased by Sage 11/15
 
     au < crawling ; exists ; 2012 ; International Journal of Heritage in the Digital Era Volume 1 ; 1 >
     au < finished ; finished ; 2013 ; International Journal of Heritage in the Digital Era Volume 2 ; 2 >
@@ -287,6 +298,7 @@
     >
 
     param[journal_id] = ijh
+    # triggering    
 
     au < crawling ; exists ; 2010 ; International Journal of Hypersonics Volume 1 ; 1 >
     au < crawling ; exists ; 2011 ; International Journal of Hypersonics Volume 2 ; 2 >
@@ -302,6 +314,7 @@
     >
 
     param[journal_id] = ijis
+    # triggering    
 
     au < crawling ; exists ; 2009 ; International Journal of Innovation Science Volume 1 ; 1 >
     au < crawling ; exists ; 2010 ; International Journal of Innovation Science Volume 2 ; 2 >
@@ -322,6 +335,7 @@
     >
 
     param[journal_id] = ijmav
+	# purchased by Sage 11/15
 
     au < crawling ; exists ; 2009 ; International Journal of Micro Air Vehicles Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Micro Air Vehicles Volume 2 ; 2 >
@@ -342,6 +356,7 @@
     >
 
     param[journal_id] = ijmnst
+    # triggering    
 
     au < crawling ; exists ; 2010 ; International Journal of Micro-Nano Scale Transport Volume 1 ; 1 >
     au < crawling ; exists ; 2011 ; International Journal of Micro-Nano Scale Transport Volume 2 ; 2 >
@@ -360,6 +375,7 @@
     >
 
     param[journal_id] = ijps
+	# purchased by Sage 11/15
 
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Protective Structures Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Protective Structures Volume 2 ; 2 >
@@ -379,6 +395,7 @@
     >
 
     param[journal_id] = ijss
+	# purchased by Sage 11/15
 
     au < crawling ; exists ; 1999 ; International Journal of Space Structures Volume 14 ; 14 >
     au < crawling ; exists ; 2000 ; International Journal of Space Structures Volume 15 ; 15 >
@@ -409,6 +426,7 @@
     >
 
     param[journal_id] = ijssc
+	# purchased by Sage 11/15
 
     au < crawling ; exists ; 2006 ; International Journal of Sports Science and Coaching Volume 1 ; 1 >
     au < crawling ; exists ; 2007 ; International Journal of Sports Science and Coaching Volume 2 ; 2 >
@@ -432,6 +450,7 @@
     >
 
     param[journal_id] = ijscd
+	# purchased by Sage 11/15
 
     au < crawling ; exists ; 2009 ; International Journal of Spray and Combustion Dynamics Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Spray and Combustion Dynamics Volume 2 ; 2 >
@@ -452,6 +471,7 @@
     >
 
     param[journal_id] = ijtst
+    # triggering    
 
     au < crawling ; exists ; 2012 ; International Journal of Transportation Science and Technology Volume 1 ; 1 >
     au < finished ; crawling ; 2013 ; International Journal of Transportation Science and Technology Volume 2 ; 2 >
@@ -469,6 +489,7 @@
     >
 
     param[journal_id] = jact
+	# purchased by Sage 11/15
 
     au < crawling ; exists ; 2007 ; Journal of Algorithms & Computational Technology Volume 1 ; 1 >
     au < crawling ; exists ; 2008 ; Journal of Algorithms & Computational Technology Volume 2 ; 2 >
@@ -491,6 +512,7 @@
     >
 
     param[journal_id] = jhe
+    # triggering    
 
     au < crawling ; exists ; 2010 ; Journal of Healthcare Engineering Volume 1 ; 1 >
     au < crawling ; exists ; 2011 ; Journal of Healthcare Engineering Volume 2 ; 2 >
@@ -510,6 +532,7 @@
     >
 
     param[journal_id] = jsfe
+    # triggering    
 
     au < crawling ; exists ; 2010 ; Journal of Structural Fire Engineering Volume 1 ; 1 >
     au < crawling ; exists ; 2011 ; Journal of Structural Fire Engineering Volume 2 ; 2 >
@@ -529,6 +552,7 @@
     >
 
     param[journal_id] = jlfnvac
+	# purchased by Sage 11/15
 
     au < crawling ; exists ; 2000 ; Low Frequency Noise, Vibration and Active Control Volume 19 ; 19 >
     au < crawling ; exists ; 2001 ; Low Frequency Noise, Vibration and Active Control Volume 20 ; 20 >
@@ -558,6 +582,7 @@
     >
 
     param[journal_id] = nvww
+	# purchased by Sage 11/15
 
     au < doNotProcess ; doNotProcess ; 2011 ; Noise & Vibration Worldwide Volume 42 ; 42 >
     au < doNotProcess ; doNotProcess ; 2012 ; Noise & Vibration Worldwide Volume 43 ; 43 >
@@ -576,6 +601,7 @@
     >
 
     param[journal_id] = nn
+    # triggering    
 
     au < crawling ; exists ; 2002 ; Noise Notes Volume 1 ; 1 >
     au < crawling ; exists ; 2003 ; Noise Notes Volume 2 ; 2 >
@@ -602,6 +628,7 @@
     >
 
     param[journal_id] = ijm
+    # triggering    
 
     au < crawling ; exists ; 2007 ; The International Journal of Multiphysics Volume 1 ; 1 >
     au < crawling ; exists ; 2008 ; The International Journal of Multiphysics Volume 2 ; 2 >
@@ -624,6 +651,7 @@
     >
 
     param[journal_id] = ijocs
+	# purchased by Sage 11/15
 
     au < doNotProcess ; doNotProcess ; 2010 ; The International Journal of Ocean and Climate Systems Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2011 ; The International Journal of Ocean and Climate Systems Volume 2 ; 2 >
@@ -643,6 +671,7 @@
     >
 
     param[journal_id] = jcmf
+	# purchased by Sage 11/15
 
     au < crawling ; exists ; 2009 ; The Journal of Computational Multiphase Flows Volume 1 ; 1 >
     au < doNotProcess ; doNotProcess ; 2010 ; The Journal of Computational Multiphase Flows Volume 2 ; 2 >
@@ -663,6 +692,7 @@
     >
 
     param[journal_id] = we
+	# purchased by Sage 11/15
 
     au < crawling ; exists ; 2000 ; Wind Engineering Volume 24 ; 24 >
     au < crawling ; exists ; 2001 ; Wind Engineering Volume 25 ; 25 >
@@ -691,6 +721,7 @@
     >
 
     param[journal_id] = wjoe
+    # triggering    
 
     au < doNotProcess ; doNotProcess ; 2011 ; World Journal of Engineering Volume 8 ; 8 >
     au < doNotProcess ; doNotProcess ; 2012 ; World Journal of Engineering Volume 9 ; 9 >
