@@ -17,7 +17,8 @@
       param[base_url] = http://www.cra-pr.org.br/revista/
       param[journal_id] = recc
 
-      au < expected ; 2015 ; 1 ; Revista Eletrônica Científica do CRA-PR - RECC Volume 2015 ; 2015 ; >
+      au < manifest ; 2014 ; 2 ; Revista Eletrônica Científica do CRA-PR - RECC Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 3 ; Revista Eletrônica Científica do CRA-PR - RECC Volume 2015 ; 2015 ; >
 
   }
 

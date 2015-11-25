@@ -295,6 +295,7 @@
       au < released ; 2012 ; 16 ; Arquivos do Museu Dinâmico Interdisciplinar Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 17 ; Arquivos do Museu Dinâmico Interdisciplinar Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 18 ; Arquivos do Museu Dinâmico Interdisciplinar Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 19 ; Arquivos do Museu Dinâmico Interdisciplinar Volume 2015 ; 2015 ; >
 
   }
 
@@ -389,6 +390,7 @@
       au < released ; 2012 ; 30 ; Boletim de Geografia Volume 2012 ; 2012 ; >
       au < notReady ; 2013 ; 31 ; Boletim de Geografia Volume 2013 ; 2013 ; java error >
       au < released ; 2014 ; 32 ; Boletim de Geografia Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 33 ; Boletim de Geografia Volume 2015 ; 2015 ; >
 
   }
 
@@ -518,32 +520,33 @@
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = RevEducFis
 
-      au < released ; 1989 ; 1 ; Revista da Educação Física/UEM Volume 1989 ; 1989 ; >
+      au < released ; 1989 ; 0 ; Revista da Educação Física/UEM Volume 1989 ; 1989 ; >
       au < released ; 1990 ; 2 ; Revista da Educação Física/UEM Volume 1990 ; 1990 ; >
-      au < released ; 1991 ; 3 ; Revista da Educação Física/UEM Volume 1991 ; 1991 ; >
-      au < released ; 1992 ; 4 ; Revista da Educação Física/UEM Volume 1992 ; 1992 ; >
-      au < released ; 1993 ; 5 ; Revista da Educação Física/UEM Volume 1993 ; 1993 ; >
-      au < released ; 1994 ; 6 ; Revista da Educação Física/UEM Volume 1994 ; 1994 ; >
-      au < released ; 1995 ; 7 ; Revista da Educação Física/UEM Volume 1995 ; 1995 ; >
-      au < released ; 1996 ; 8 ; Revista da Educação Física/UEM Volume 1996 ; 1996 ; >
-      au < released ; 1997 ; 9 ; Revista da Educação Física/UEM Volume 1997 ; 1997 ; >
-      au < released ; 1998 ; 10 ; Revista da Educação Física/UEM Volume 1998 ; 1998 ; >
-      au < released ; 1999 ; 11 ; Revista da Educação Física/UEM Volume 1999 ; 1999 ; >
-      au < released ; 2000 ; 12 ; Revista da Educação Física/UEM Volume 2000 ; 2000 ; >
-      au < released ; 2001 ; 13 ; Revista da Educação Física/UEM Volume 2001 ; 2001 ; >
-      au < released ; 2002 ; 14 ; Revista da Educação Física/UEM Volume 2002 ; 2002 ; >
-      au < released ; 2003 ; 15 ; Revista da Educação Física/UEM Volume 2003 ; 2003 ; >
-      au < released ; 2004 ; 16 ; Revista da Educação Física/UEM Volume 2004 ; 2004 ; >
-      au < released ; 2005 ; 17 ; Revista da Educação Física/UEM Volume 2005 ; 2005 ; >
-      au < released ; 2006 ; 18 ; Revista da Educação Física/UEM Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 19 ; Revista da Educação Física/UEM Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 20 ; Revista da Educação Física/UEM Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 21 ; Revista da Educação Física/UEM Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 22 ; Revista da Educação Física/UEM Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 23 ; Revista da Educação Física/UEM Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 24 ; Revista da Educação Física/UEM Volume 2012 ; 2012 ; >
-      au < expected ; 2013 ; 25 ; Revista da Educação Física/UEM Volume 2013 ; 2013 ; >
-      au < expected ; 2014 ; 26 ; Revista da Educação Física/UEM Volume 2014 ; 2014 ; >
+      au < released ; 1991 ; 2 ; Revista da Educação Física/UEM Volume 1991 ; 1991 ; >
+      au < released ; 1992 ; 3 ; Revista da Educação Física/UEM Volume 1992 ; 1992 ; >
+      au < released ; 1993 ; 4 ; Revista da Educação Física/UEM Volume 1993 ; 1993 ; >
+      au < released ; 1994 ; 5 ; Revista da Educação Física/UEM Volume 1994 ; 1994 ; >
+      au < released ; 1995 ; 6 ; Revista da Educação Física/UEM Volume 1995 ; 1995 ; >
+      au < released ; 1996 ; 7 ; Revista da Educação Física/UEM Volume 1996 ; 1996 ; >
+      au < released ; 1997 ; 8 ; Revista da Educação Física/UEM Volume 1997 ; 1997 ; >
+      au < released ; 1998 ; 9 ; Revista da Educação Física/UEM Volume 1998 ; 1998 ; >
+      au < released ; 1999 ; 10 ; Revista da Educação Física/UEM Volume 1999 ; 1999 ; >
+      au < released ; 2000 ; 11 ; Revista da Educação Física/UEM Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 12 ; Revista da Educação Física/UEM Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 13 ; Revista da Educação Física/UEM Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 14 ; Revista da Educação Física/UEM Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 15 ; Revista da Educação Física/UEM Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 16 ; Revista da Educação Física/UEM Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 17 ; Revista da Educação Física/UEM Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 18 ; Revista da Educação Física/UEM Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 29 ; Revista da Educação Física/UEM Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 20 ; Revista da Educação Física/UEM Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 21 ; Revista da Educação Física/UEM Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 22 ; Revista da Educação Física/UEM Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 23 ; Revista da Educação Física/UEM Volume 2012 ; 2012 ; >
+      au < manifest ; 2013 ; 24 ; Revista da Educação Física/UEM Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 25 ; Revista da Educação Física/UEM Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 26 ; Revista da Educação Física/UEM Volume 2015 ; 2015 ; >
 
   }
 
