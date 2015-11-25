@@ -2948,6 +2948,22 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
 
     {
       title <
+        name = Journal of Otolaryngology - Head & Neck Surgery ;
+        issn = 1916-0216 ;
+        issnl = 1916-0216
+      >
+
+      comment[base_url] = http://journalotohns.biomedcentral.com/
+      param[journal_issn] = 1916-0216
+
+      au < doNotProcess ; doNotProcess ; 2013 ; Journal of Otolaryngology - Head & Neck Surgery Volume 42 ; 42 >
+      au < doNotProcess ; doNotProcess ; 2014 ; Journal of Otolaryngology - Head & Neck Surgery Volume 43 ; 43 >
+      au < doNotProcess ; doNotProcess ; 2015 ; Journal of Otolaryngology - Head & Neck Surgery Volume 44 ; 44 >
+
+    }
+
+    {
+      title <
         name = Journal of Ovarian Research ;
         issn = 1757-2215 ;
         issnl = 1757-2215
@@ -2965,6 +2981,19 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Ovarian Research Volume 6 ; 6 >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Ovarian Research Volume 7 ; 7 >
       au < exists ; exists ; 2015 ; Journal of Ovarian Research Volume 8 ; 8 >
+
+    }
+
+    {
+      title <
+        name = Journal of Pharmaceutical Health Care and Sciences ;
+        eissn = 2055-0294 ;
+        issnl = 2055-0294
+      >
+
+      param[journal_eissn] = 2055-0294
+
+      au < exists ; exists ; 2015 ; Journal of Pharmaceutical Health Care and Sciences Volume 1 ; 1 >
 
     }
 
@@ -3157,6 +3186,19 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
       au < doNotProcess ; doNotProcess ; 2013 ; Malaria Journal Volume 12 ; 12 >
       au < doNotProcess ; doNotProcess ; 2014 ; Malaria Journal Volume 13 ; 13 >
       au < doNotProcess ; doNotProcess ; 2015 ; Malaria Journal Volume 14 ; 14 >
+
+    }
+
+    {
+      title <
+        name = Maternal Health, Neonatology and Perinatology ;
+        eissn = 2054-958X ;
+        issnl = 2054-958X
+      >
+
+      param[journal_eissn] = 2054-958X
+
+      au < exists ; exists ; 2015 ; Maternal Health, Neonatology and Perinatology Volume 1 ; 1 >
 
     }
 
@@ -3468,6 +3510,32 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
 
     {
       title <
+        name = Neuropsychiatric Electrophysiology ;
+        eissn = 2055-4788 ;
+        issnl = 2055-4788
+      >
+
+      param[journal_eissn] = 2055-4788
+
+      au < exists ; exists ; 2015 ; Neuropsychiatric Electrophysiology Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
+        name = Neurovascular Imaging ;
+        eissn = 2055-5792 ;
+        issnl = 2055-5792
+      >
+
+      param[journal_eissn] = 2055-5792
+
+      au < exists ; exists ; 2015 ; Neurovascular Imaging Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
         name = Nutrition & Metabolism ;
         eissn = 1743-7075 ;
         issnl = 1743-7075
@@ -3679,6 +3747,19 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
 
     {
       title <
+        name = Pilot and Feasibility Studies ;
+        eissn = 2055-5784 ;
+        issnl = 2055-5784
+      >
+
+      param[journal_eissn] = 2055-5784
+
+      au < exists ; exists ; 2015 ; Pilot and Feasibility Studies Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
         name = Plant Methods ;
         eissn = 1746-4811 ;
         issnl = 1746-4811
@@ -3724,6 +3805,19 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
       au < doNotProcess ; doNotProcess ; 2013 ; Population Health Metrics Volume 11 ; 11 >
       au < doNotProcess ; doNotProcess ; 2014 ; Population Health Metrics Volume 12 ; 12 >
       au < doNotProcess ; doNotProcess ; 2015 ; Population Health Metrics Volume 13 ; 13 >
+
+    }
+
+    {
+      title <
+        name = Porcine Health Management ;
+        eissn = 2055-5660 ;
+        issnl = 2055-5660
+      >
+
+      param[journal_eissn] = 2055-5660
+
+      au < exists ; exists ; 2015 ; Porcine Health Management Volume 1 ; 1 >
 
     }
 
@@ -3846,6 +3940,19 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
 
     {
       title <
+        name = Research Involvement and Engagement ;
+        eissn = 2056-7529 ;
+        issnl = 2056-7529
+      >
+
+      param[journal_eissn] = 2056-7529
+
+      au < exists ; exists ; 2015 ; Research Involvement and Engagement Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
         name = Respiratory Research ;
         issn = 1465-9921 ;
         eissn = 1465-993X ;
@@ -3898,6 +4005,19 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
       au < doNotProcess ; doNotProcess ; 2013 ; Retrovirology Volume 10 ; 10 >
       au < doNotProcess ; doNotProcess ; 2014 ; Retrovirology Volume 11 ; 11 >
       au < exists ; exists ; 2015 ; Retrovirology Volume 12 ; 12 >
+
+    }
+
+    {
+      title <
+        name = Safety in Health ;
+        eissn = 2056-5917 ;
+        issnl = 2056-5917
+      >
+
+      param[journal_eissn] = 2056-5917
+
+      au < exists ; exists ; 2015 ; Safety in Health Volume 1 ; 1 >
 
     }
 
@@ -4213,6 +4333,19 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
 
     {
       title <
+        name = Tropical Diseases, Travel Medicine and Vaccines ;
+        eissn = 2055-0936 ;
+        issnl = 2055-0936
+      >
+
+      param[journal_eissn] = 2055-0936
+      
+      au < exists ; exists ; 2015 ; Tropical Diseases, Travel Medicine and Vaccines Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
         name = Vascular Cell ;
         issn = 2045-824X ;
         issnl = 2045-824X
@@ -4271,6 +4404,19 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
       au < doNotProcess ; doNotProcess ; 2013 ; Virology Journal Volume 10 ; 10 >
       au < doNotProcess ; doNotProcess ; 2014 ; Virology Journal Volume 11 ; 11 >
       au < exists ; exists ; 2015 ; Virology Journal Volume 12 ; 12 >
+
+    }
+
+    {
+      title <
+        name = Women's Midlife Health ;
+        eissn = 2054-2690 ;
+        issnl = 2054-2690
+      >
+
+      param[journal_eissn] = 2054-2690
+
+      au < exists ; exists ; 2015 ; Women's Midlife Health Volume 1 ; 1 >
 
     }
 
@@ -4342,6 +4488,19 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
       au < doNotProcess ; doNotProcess ; 2013 ; World Journal of Surgical Oncology Volume 11 ; 11 >
       au < doNotProcess ; doNotProcess ; 2014 ; World Journal of Surgical Oncology Volume 12 ; 12 >
       au < exists ; exists ; 2015 ; World Journal of Surgical Oncology Volume 13 ; 13 >
+
+    }
+
+    {
+      title <
+        name = Zoological Letters ;
+        eissn = 2056-306X ;
+        issnl = 2056-306X
+      >
+
+      param[journal_eissn] = 2056-306X
+
+      au < exists ; exists ; 2015 ; Zoological Letters Volume 1 ; 1 >
 
     }
 
