@@ -2720,6 +2720,38 @@
     {
   
         title <
+          name = Burns & Trauma ;
+          eissn = 2321-3876
+        >
+  
+        param[base_url] = http://www.springer.com/41038/
+        param[journal_issn] = 2321-3876
+        comment[platform] = Springer
+  
+        au < exists ; exists ; 2013 ; Burns & Trauma Volume 1 ; 1 >
+        au < exists ; exists ; 2014 ; Burns & Trauma Volume 2 ; 2 >
+        au < exists ; exists ; 2015 ; Burns & Trauma Volume 3 ; 3 >
+  
+    }
+  
+    {
+  
+        title <
+          name = Chinese Neurosurgical Journal ;
+          eissn = 2057-4967
+        >
+  
+        param[base_url] = http://www.springer.com/41016/
+        param[journal_issn] = 2057-4967
+        comment[platform] = Springer
+  
+        au < exists ; exists ; 2015 ; Chinese Neurosurgical Journal Volume 1 ; 1 >
+  
+    }
+  
+    {
+  
+        title <
           name = Chinese Science Bulletin ;
           issn = 1001-6538 ;
           eissn = 1861-9541
@@ -3003,6 +3035,23 @@
 
     }
   
+    {
+  
+        title <
+          name = International Journal of Metalcasting ;
+          issn = 1939-5981 ;
+          eissn = 2163-3193
+        >
+  
+        param[base_url] = http://www.springer.com/40962/
+        param[journal_issn] = 1939-5981
+        comment[platform] = Springer
+  
+        au < exists ; exists ; 2007 ; International Journal of Metalcasting Volume 1 ; 1 >
+        au < exists ; exists ; 2008 ; International Journal of Metalcasting Volume 2 ; 2 >
+
+    }
+
     {
   
         title <
