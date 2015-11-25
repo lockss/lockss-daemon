@@ -7,6 +7,73 @@
     
   >
 
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
+
+  {
+  
+    title <
+      name = Cold Spring Harbor Molecular Case Studies ;
+      eissn = 2373-2873 ;
+      issnl = 2373-2873
+    >
+
+    {
+
+      param[base_url] = http://molecularcasestudies.cshlp.org/
+
+      au < exists ; exists ; 2015 ; Cold Spring Harbor Molecular Case Studies Volume 1 ; 1 >
+
+    }
+
+  }
+
+  {
+  
+    title <
+      name = Cold Spring Harbor Perspectives in Biology ;
+      eissn = 1943-0264 ;
+      issnl = 1943-0264
+    >
+
+    {
+
+      param[base_url] = http://cshperspectives.cshlp.org/
+
+      au < exists ; exists ; 2009 ; Cold Spring Harbor Perspectives in Biology Volume 1 ; 1 >
+      au < exists ; exists ; 2010 ; Cold Spring Harbor Perspectives in Biology Volume 2 ; 2 >
+      au < exists ; exists ; 2011 ; Cold Spring Harbor Perspectives in Biology Volume 3 ; 3 >
+      au < exists ; exists ; 2012 ; Cold Spring Harbor Perspectives in Biology Volume 4 ; 4 >
+      au < exists ; exists ; 2013 ; Cold Spring Harbor Perspectives in Biology Volume 5 ; 5 >
+      au < crawling ; exists ; 2014 ; Cold Spring Harbor Perspectives in Biology Volume 6 ; 6 >
+      au < crawling ; exists ; 2015 ; Cold Spring Harbor Perspectives in Biology Volume 7 ; 7 >
+
+    }
+    
+  }
+  
+  {
+  
+    title <
+      name = Cold Spring Harbor Perspectives in Medicine ;
+      eissn = 2157-1422 ;
+      issnl = 2157-1422
+    >
+
+    {
+
+      param[base_url] = http://perspectivesinmedicine.cshlp.org/
+
+      au < exists ; exists ; 2011 ; Cold Spring Harbor Perspectives in Medicine Volume 1 ; 1 >
+      au < exists ; exists ; 2012 ; Cold Spring Harbor Perspectives in Medicine Volume 2 ; 2 >
+      au < exists ; exists ; 2013 ; Cold Spring Harbor Perspectives in Medicine Volume 3 ; 3 >
+      au < finished ; crawling ; 2014 ; Cold Spring Harbor Perspectives in Medicine Volume 4 ; 4 >
+      au < crawling ; exists ; 2015 ; Cold Spring Harbor Perspectives in Medicine Volume 5 ; 5 >
+
+    }
+    
+  }
+  
   {
 
     title <
@@ -18,9 +85,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       param[base_url] = http://cshprotocols.cshlp.org/
-      implicit < status ; status2 ; year ; name ; param[volume_name] >
 
       au < exists ; exists ; 2006 ; Cold Spring Harbor Protocols Volume 2006 ; 2006 >
       au < exists ; exists ; 2007 ; Cold Spring Harbor Protocols Volume 2007 ; 2007 >
@@ -48,9 +113,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       param[base_url] = http://symposium.cshlp.org/
-      implicit < status ; status2 ; year ; name ; param[volume_name] >
       
       comment[publishing_date] = This journal is published in June of the following year.
 
@@ -150,9 +213,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       param[base_url] = http://genesdev.cshlp.org/
-      implicit < status ; status2 ; year ; name ; param[volume_name] >
 
       au < exists ; exists ; 1987 ; Genes & Development Volume 1 ; 1 >
       au < exists ; exists ; 1988 ; Genes & Development Volume 2 ; 2 >
@@ -199,9 +260,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       param[base_url] = http://genome.cshlp.org/
-      implicit < status ; status2 ; year ; name ; param[volume_name] >
 
       au < exists ; exists ; 1991-1992 ; Genome Research Volume 1 ; 1 >
       au < exists ; exists ; 1992-1993 ; Genome Research Volume 2 ; 2 >
@@ -244,9 +303,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       param[base_url] = http://learnmem.cshlp.org/
-      implicit < status ; status2 ; year ; name ; param[volume_name] >
 
       au < exists ; exists ; 1994 ; Learning & Memory Volume 1 ; 1 >
       au < exists ; exists ; 1995 ; Learning & Memory Volume 2 ; 2 >
@@ -278,56 +335,6 @@
   {
   
     title <
-      name = Cold Spring Harbor Perspectives in Biology ;
-      eissn = 1943-0264 ;
-      issnl = 1943-0264
-    >
-
-    {
-
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
-      param[base_url] = http://cshperspectives.cshlp.org/
-      implicit < status ; status2 ; year ; name ; param[volume_name] >
-
-      au < exists ; exists ; 2009 ; Cold Spring Harbor Perspectives in Biology Volume 1 ; 1 >
-      au < exists ; exists ; 2010 ; Cold Spring Harbor Perspectives in Biology Volume 2 ; 2 >
-      au < exists ; exists ; 2011 ; Cold Spring Harbor Perspectives in Biology Volume 3 ; 3 >
-      au < exists ; exists ; 2012 ; Cold Spring Harbor Perspectives in Biology Volume 4 ; 4 >
-      au < exists ; exists ; 2013 ; Cold Spring Harbor Perspectives in Biology Volume 5 ; 5 >
-      au < crawling ; exists ; 2014 ; Cold Spring Harbor Perspectives in Biology Volume 6 ; 6 >
-      au < crawling ; exists ; 2015 ; Cold Spring Harbor Perspectives in Biology Volume 7 ; 7 >
-
-    }
-    
-  }
-  
-  {
-  
-    title <
-      name = Cold Spring Harbor Perspectives in Medicine ;
-      eissn = 2157-1422 ;
-      issnl = 2157-1422
-    >
-
-    {
-
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
-      param[base_url] = http://perspectivesinmedicine.cshlp.org/
-      implicit < status ; status2 ; year ; name ; param[volume_name] >
-
-      au < exists ; exists ; 2011 ; Cold Spring Harbor Perspectives in Medicine Volume 1 ; 1 >
-      au < exists ; exists ; 2012 ; Cold Spring Harbor Perspectives in Medicine Volume 2 ; 2 >
-      au < exists ; exists ; 2013 ; Cold Spring Harbor Perspectives in Medicine Volume 3 ; 3 >
-      au < finished ; crawling ; 2014 ; Cold Spring Harbor Perspectives in Medicine Volume 4 ; 4 >
-      au < crawling ; exists ; 2015 ; Cold Spring Harbor Perspectives in Medicine Volume 5 ; 5 >
-
-    }
-    
-  }
-  
-  {
-  
-    title <
       name = RNA ;
       issn = 1355-8382 ;
       eissn = 1469-9001 ;
@@ -336,9 +343,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       param[base_url] = http://rnajournal.cshlp.org/
-      implicit < status ; status2 ; year ; name ; param[volume_name] >
 
       au < exists ; exists ; 1995 ; RNA Volume 1 ; 1 >
       au < exists ; exists ; 1996 ; RNA Volume 2 ; 2 >

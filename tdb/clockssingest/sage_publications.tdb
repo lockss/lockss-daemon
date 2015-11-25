@@ -19332,8 +19332,21 @@
 
       param[base_url] = http://jcb.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
+      #content available from 1981 volume 1 to 1999 volume 19
 
-      au < expected ; exists ; 2015 ; Journal of Cerebral Blood Flow & Metabolism Volume 1 ; 1 ; >
+      au < exists ; exists ; 2000 ; Journal of Cellular Plastics Volume 20 ; 20 ; >
+      au < exists ; exists ; 2001 ; Journal of Cellular Plastics Volume 21 ; 21 ; >
+      au < exists ; exists ; 2002 ; Journal of Cellular Plastics Volume 22 ; 22 ; >
+      au < exists ; exists ; 2003 ; Journal of Cellular Plastics Volume 23 ; 23 ; >
+      au < exists ; exists ; 2004 ; Journal of Cellular Plastics Volume 24 ; 24 ; >
+      au < exists ; exists ; 2005 ; Journal of Cellular Plastics Volume 25 ; 25 ; >
+      au < exists ; exists ; 2006 ; Journal of Cellular Plastics Volume 26 ; 26 ; >
+      au < exists ; exists ; 2007 ; Journal of Cellular Plastics Volume 27 ; 27 ; >
+      au < exists ; exists ; 2008 ; Journal of Cellular Plastics Volume 28 ; 28 ; >
+      au < exists ; exists ; 2009 ; Journal of Cellular Plastics Volume 29 ; 29 ; >
+      au < exists ; exists ; 2010 ; Journal of Cellular Plastics Volume 30 ; 30 ; >
+      au < exists ; exists ; 2011 ; Journal of Cellular Plastics Volume 31 ; 31 ; >
+      au < exists ; exists ; 2012 ; Journal of Cellular Plastics Volume 32 ; 32 ; >
 
   }
 

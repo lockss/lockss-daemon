@@ -3,6 +3,9 @@
     name = American Society of Clinical Oncology
   >
 
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
   {
     title <
       name = Journal of Clinical Oncology ;
@@ -12,10 +15,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://jco.ascopubs.org/
-      implicit < status ; year ; name ; param[volume_name] >
-      
 
       au < manifest ; 1983 ; Journal of Clinical Oncology Volume 1 ; 1 >
       au < manifest ; 1984 ; Journal of Clinical Oncology Volume 2 ; 2 >
@@ -57,6 +57,23 @@
 
   {
     title <
+      name = Journal of Global Oncology ;
+      eissn = 2378-9506 ;
+      issnl = 2378-9506
+    >
+
+    {
+
+      param[base_url] = http://jgo.ascopubs.org/ 
+
+      au < exists ; 2015 ; Journal of Global Oncology Volume 1 ; 1 >
+
+    }
+
+  }
+
+  {
+    title <
       name = Journal of Oncology Practice ;
       issn = 1554-7477 ;
       issnl = 1554-7477
@@ -64,9 +81,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://jop.ascopubs.org/ 
-      implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 2005 ; Journal of Oncology Practice Volume 1 ; 1 >
       au < released ; 2006 ; Journal of Oncology Practice Volume 2 ; 2 >

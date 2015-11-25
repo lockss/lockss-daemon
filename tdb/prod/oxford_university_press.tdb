@@ -1171,6 +1171,38 @@
   {
 
     title <
+      name = American Zoologist ;
+      issn = 0003-1569 ;
+      issnl = 0003-1569 
+    >
+
+    {
+
+    param[base_url] = http://az.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+    #content available from 1961 volume 1 to 1989 volume 29
+
+    au < exists ; 1990 ; American Zoologist Volume 30 ; 30 >
+    au < exists ; 1991 ; American Zoologist Volume 31 ; 31 >
+    au < exists ; 1992 ; American Zoologist Volume 32 ; 32 >
+    au < exists ; 1993 ; American Zoologist Volume 33 ; 33 >
+    au < exists ; 1994 ; American Zoologist Volume 34 ; 34 >
+    au < exists ; 1995 ; American Zoologist Volume 35 ; 35 >
+    au < exists ; 1996 ; American Zoologist Volume 36 ; 36 >
+    au < exists ; 1997 ; American Zoologist Volume 37 ; 37 >
+    au < exists ; 1998 ; American Zoologist Volume 38 ; 38 >
+    au < exists ; 1999 ; American Zoologist Volume 39 ; 39 >
+    au < exists ; 2000 ; American Zoologist Volume 40 ; 40 >
+    au < exists ; 2001 ; American Zoologist Volume 41 ; 41 >
+
+    }
+
+  }
+
+  {
+
+    title <
       name = Analysis ;
       issn = 0003-2638 ;
       eissn = 1467-8284 ;
@@ -13418,6 +13450,26 @@
     au < manifest ; 2013 ; Journal of Insect Science Volume 13 ; 13 >
     au < manifest ; 2014 ; Journal of Insect Science Volume 14 ; 14 >
     au < manifest ; 2015 ; Journal of Insect Science Volume 15 ; 15 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Integrable Systems ;
+      eissn = 2058-5985 ;
+      issnl = 2058-5985 
+    >
+
+    {
+
+    param[base_url] = http://integrablesystems.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2015 ; Journal of Integrable Systems Volume 1 ; 1 >
 
     }
 

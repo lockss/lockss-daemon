@@ -21803,7 +21803,21 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < expected ; 2015 ; Journal of Cerebral Blood Flow & Metabolism Volume 1 ; 1 >
+      #content available from 1981 volume 1 to 1999 volume 19
+
+      au < exists ; 2000 ; Journal of Cellular Plastics Volume 20 ; 20 >
+      au < exists ; 2001 ; Journal of Cellular Plastics Volume 21 ; 21 >
+      au < exists ; 2002 ; Journal of Cellular Plastics Volume 22 ; 22 >
+      au < exists ; 2003 ; Journal of Cellular Plastics Volume 23 ; 23 >
+      au < exists ; 2004 ; Journal of Cellular Plastics Volume 24 ; 24 >
+      au < exists ; 2005 ; Journal of Cellular Plastics Volume 25 ; 25 >
+      au < exists ; 2006 ; Journal of Cellular Plastics Volume 26 ; 26 >
+      au < exists ; 2007 ; Journal of Cellular Plastics Volume 27 ; 27 >
+      au < exists ; 2008 ; Journal of Cellular Plastics Volume 28 ; 28 >
+      au < exists ; 2009 ; Journal of Cellular Plastics Volume 29 ; 29 >
+      au < exists ; 2010 ; Journal of Cellular Plastics Volume 30 ; 30 >
+      au < exists ; 2011 ; Journal of Cellular Plastics Volume 31 ; 31 >
+      au < exists ; 2012 ; Journal of Cellular Plastics Volume 32 ; 32 >
 
   }
 
