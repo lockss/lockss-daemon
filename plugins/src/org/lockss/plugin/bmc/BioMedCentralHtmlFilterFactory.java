@@ -73,6 +73,7 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "id", "article-navigation-bar"),
       // alert signup - Extreme Hash filtering!
       HtmlNodeFilters.tagWithAttribute("div", "class", "article-alert-signup-div"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "primary-content hide-on-print"),
       // Extreme Hash filtering!
       HtmlNodeFilters.tagWithAttribute("div", "class", "wrap-nav"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "issuecover"),
@@ -115,12 +116,12 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "id", "newad"),
       // Contains copyright year; also now references Springer 
       HtmlNodeFilters.tagWithAttribute("table", "class", "footer2t"),
-      // Institution-dependent link resolvers
-      HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\?.*"),
       // Institution-dependent image
       HtmlNodeFilters.tagWithAttributeRegex("img", "src", "^/sfx_links\\?"),
       // Institution-dependent link resolvers  v2 - added
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\?"),
+      // Institution-dependent link resolvers   v1
+      HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\.asp"),
       // Springer branding below the footer
       HtmlNodeFilters.tagWithAttribute("div", "class", "springer"),
       

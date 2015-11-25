@@ -95,8 +95,9 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("a", "name"),
       // Links to one-time names inside the page
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^#"),
-      // Institution-dependent greeting
+      // Institution-dependent
       HtmlNodeFilters.tagWithAttribute("li", "class", "greeting"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "message"), 
       
       // Contains the menu  <ul class="primary-nav">
       HtmlNodeFilters.tagWithAttribute("ul", "class", "primary-nav"),
