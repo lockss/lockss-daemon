@@ -35,8 +35,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Education and Treatment of Children Volume 37 ; 37 >
-      au < manifest ; 2015 ; Education and Treatment of Children Volume 38 ; 38 >
+      au < testing ; 2014 ; Education and Treatment of Children Volume 37 ; 37 >
+      au < testing ; 2015 ; Education and Treatment of Children Volume 38 ; 38 >
 
     }
 
@@ -76,8 +76,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2013 ; Essays in Medieval Studies Volume 29 ; 29 >
-      au < manifest ; 2014 ; Essays in Medieval Studies Volume 30 ; 30 >
+      au < testing ; 2013 ; Essays in Medieval Studies Volume 29 ; 29 >
+      au < testing ; 2014 ; Essays in Medieval Studies Volume 30 ; 30 >
 
     }
 
@@ -106,7 +106,6 @@
       au < released ; 2006-2007 ; Labor Studies Journal Volume 31 ; 31 >
 
     }
-
 
   }
 
@@ -142,7 +141,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Tolkien Studies Volume 11 ; 11 >
+      au < testing ; 2014 ; Tolkien Studies Volume 11 ; 11 >
       au < expected ; 2015 ; Tolkien Studies Volume 12 ; 12 >
 
     }
@@ -186,11 +185,10 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; Victorian Poetry Volume 52 ; 52 >
-      au < manifest ; 2015 ; Victorian Poetry Volume 53 ; 53 >
+      au < testing ; 2014 ; Victorian Poetry Volume 52 ; 52 >
+      au < testing ; 2015 ; Victorian Poetry Volume 53 ; 53 >
 
     }
-
 
   }
 
@@ -223,11 +221,10 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2014 ; West Virginia History: A Journal of Regional Studies New Series, Volume 8 ; 8 >
-      au < manifest ; 2015 ; West Virginia History: A Journal of Regional Studies New Series, Volume 9 ; 9 >
+      au < testing ; 2014 ; West Virginia History: A Journal of Regional Studies New Series, Volume 8 ; 8 >
+      au < testing ; 2015 ; West Virginia History: A Journal of Regional Studies New Series, Volume 9 ; 9 >
 
     }
-
 
   }
 
