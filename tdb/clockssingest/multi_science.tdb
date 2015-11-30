@@ -314,7 +314,7 @@
     >
 
     param[journal_id] = ijis
-    # triggering
+    # transfering to Emerald Publishing
 
     au < crawling ; exists ; 2009 ; International Journal of Innovation Science Volume 1 ; 1 >
     au < crawling ; exists ; 2010 ; International Journal of Innovation Science Volume 2 ; 2 >
@@ -471,7 +471,7 @@
     >
 
     param[journal_id] = ijtst
-    # triggering
+    # transfering to Emerald Publishing
 
     au < crawling ; exists ; 2012 ; International Journal of Transportation Science and Technology Volume 1 ; 1 >
     au < finished ; crawling ; 2013 ; International Journal of Transportation Science and Technology Volume 2 ; 2 >
@@ -512,7 +512,7 @@
     >
 
     param[journal_id] = jhe
-    # triggering
+    # transfering to Hindawi Publishing
 
     au < crawling ; exists ; 2010 ; Journal of Healthcare Engineering Volume 1 ; 1 >
     au < crawling ; exists ; 2011 ; Journal of Healthcare Engineering Volume 2 ; 2 >
@@ -532,7 +532,7 @@
     >
 
     param[journal_id] = jsfe
-    # triggering
+    # transfering to Emerald Publishing
 
     au < crawling ; exists ; 2010 ; Journal of Structural Fire Engineering Volume 1 ; 1 >
     au < crawling ; exists ; 2011 ; Journal of Structural Fire Engineering Volume 2 ; 2 >
@@ -628,7 +628,7 @@
     >
 
     param[journal_id] = ijm
-    # triggering
+    # transfering to Institute of Multiphysics
 
     au < crawling ; exists ; 2007 ; The International Journal of Multiphysics Volume 1 ; 1 >
     au < crawling ; exists ; 2008 ; The International Journal of Multiphysics Volume 2 ; 2 >
@@ -721,7 +721,7 @@
     >
 
     param[journal_id] = wjoe
-    # triggering
+    # transfering to Emerald Publishing
 
     au < crawling ; exists ; 2011 ; World Journal of Engineering Volume 8 ; 8 >
     au < crawling ; exists ; 2012 ; World Journal of Engineering Volume 9 ; 9 >
