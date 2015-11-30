@@ -35,8 +35,8 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < testing ; 2014 ; American Journal of Theology & Philosophy Volume 35 ; 35 >
-        au < testing ; 2015 ; American Journal of Theology & Philosophy Volume 36 ; 36 >
+        au < ready ; 2014 ; American Journal of Theology & Philosophy Volume 35 ; 35 >
+        au < ready ; 2015 ; American Journal of Theology & Philosophy Volume 36 ; 36 >
 
       }
 
@@ -70,8 +70,8 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < testing ; 2013-2014 ; American Literary Realism Volume 46 ; 46 >
-        au < testing ; 2014-2015 ; American Literary Realism Volume 47 ; 47 >
+        au < ready ; 2013-2014 ; American Literary Realism Volume 46 ; 46 >
+        au < ready ; 2014-2015 ; American Literary Realism Volume 47 ; 47 >
         au < manifest ; 2015-2016 ; American Literary Realism Volume 48 ; 48 >
 
       }
@@ -105,7 +105,7 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < testing ; 2014 ; American Music Volume 32 ; 32 >
+        au < ready ; 2014 ; American Music Volume 32 ; 32 >
         au < ready ; 2015 ; American Music Volume 33 ; 33 >
 
       }
@@ -138,8 +138,8 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < testing ; 2014 ; Black Music Research Journal Volume 34 ; 34 >
-        au < testing ; 2015 ; Black Music Research Journal Volume 35 ; 35 >
+        au < ready ; 2014 ; Black Music Research Journal Volume 34 ; 34 >
+        au < ready ; 2015 ; Black Music Research Journal Volume 35 ; 35 >
 
       }
 
@@ -197,7 +197,7 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < testing ; 2014 ; Feminist Teacher Volume 24 ; 24 >
+        au < ready ; 2014 ; Feminist Teacher Volume 24 ; 24 >
 
       }
  
@@ -218,7 +218,7 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < testing ; 2015 ; Illinois Classical Studies Volume 40 ; 40 >
+        au < ready ; 2015 ; Illinois Classical Studies Volume 40 ; 40 >
 
       }
  
@@ -252,7 +252,7 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < ready ; 2014 ; JEGP, Journal of English and Germanic Philology Volume 113 ; 113 >
-        au < testing ; 2015 ; JEGP, Journal of English and Germanic Philology Volume 114 ; 114 >
+        au < ready ; 2015 ; JEGP, Journal of English and Germanic Philology Volume 114 ; 114 >
 
       }
 
@@ -291,7 +291,7 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < testing ; 2014 ; The Journal of Aesthetic Education Volume 48 ; 48 >
+        au < ready ; 2014 ; The Journal of Aesthetic Education Volume 48 ; 48 >
         au < ready ; 2015 ; The Journal of Aesthetic Education Volume 49 ; 49 >
 
       }
@@ -325,7 +325,7 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < testing ; 2014 ; Journal of Education Finance Volume 40 ; 40 >
+        au < ready ; 2014 ; Journal of Education Finance Volume 40 ; 40 >
         au < ready ; 2015 ; Journal of Education Finance Volume 41 ; 41 >
 
       }
@@ -361,7 +361,7 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < ready ; 2014 ; Journal of Film and Video Volume 66 ; 66 >
-        au < testing ; 2015 ; Journal of Film and Video Volume 67 ; 67 >
+        au < ready ; 2015 ; Journal of Film and Video Volume 67 ; 67 >
 
       }
 
@@ -379,7 +379,7 @@
       attr[journal_id] = mmi
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2015 ; Music and the Moving Image Volume 8 ; 8 >
+      au < ready ; 2015 ; Music and the Moving Image Volume 8 ; 8 >
 
     }
 
@@ -410,8 +410,8 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < testing ; 2014 ; The Pluralist Volume 9 ; 9 >
-        au < testing ; 2015 ; The Pluralist Volume 10 ; 10 >
+        au < ready ; 2014 ; The Pluralist Volume 9 ; 9 >
+        au < ready ; 2015 ; The Pluralist Volume 10 ; 10 >
 
       }
 
@@ -473,7 +473,7 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < testing ; 2014 ; Visual Arts Research Volume 40 ; 40 >
+        au < ready ; 2014 ; Visual Arts Research Volume 40 ; 40 >
         au < ready ; 2015 ; Visual Arts Research Volume 41 ; 41 >
 
       }
@@ -504,7 +504,7 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < ready ; 2014 ; Women, Gender, and Families of Color Volume 2 ; 2 >
-        au < testing ; 2015 ; Women, Gender, and Families of Color Volume 3 ; 3 >
+        au < ready ; 2015 ; Women, Gender, and Families of Color Volume 3 ; 3 >
 
       }
 

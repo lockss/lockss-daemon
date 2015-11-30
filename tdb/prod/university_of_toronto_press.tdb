@@ -220,7 +220,7 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < ready ; 2014 ; Canadian Journal of Law and Society Volume 29 ; 29 >
-      au < testing ; 2015 ; Canadian Journal of Law and Society Volume 30 ; 30 >
+      au < ready ; 2015 ; Canadian Journal of Law and Society Volume 30 ; 30 >
 
     }
 
@@ -570,7 +570,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2009 ; Diaspora: A Journal of Transnational Studies Volume 18 ; 18 >
+      au < ready ; 2009 ; Diaspora: A Journal of Transnational Studies Volume 18 ; 18 >
 
     }
 
@@ -735,7 +735,7 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < ready ; 2014 ; Histoire sociale / Social History Volume 47 ; 47 >
-      au < testing ; 2015 ; Histoire sociale / Social History Volume 48 ; 48 >
+      au < ready ; 2015 ; Histoire sociale / Social History Volume 48 ; 48 >
 
     }
 
@@ -765,8 +765,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; International Journal of Canadian Studies Volume 48 ; 48 >
-      au < testing ; 2015 ; International Journal of Canadian Studies Volume 49 ; 49 >
+      au < ready ; 2014 ; International Journal of Canadian Studies Volume 48 ; 48 >
+      au < ready ; 2015 ; International Journal of Canadian Studies Volume 49 ; 49 >
 
     }
 
@@ -804,7 +804,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 48 ; 48 >
+      au < ready ; 2014 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 48 ; 48 >
       au < expected ; 2015 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 49 ; 49 >
 
     }
@@ -835,7 +835,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2014 ; Journal of Religion and Popular Culture Volume 26 ; 26 >
+      au < ready ; 2014 ; Journal of Religion and Popular Culture Volume 26 ; 26 >
       au < ready ; 2015 ; Journal of Religion and Popular Culture Volume 27 ; 27 >
 
     }
@@ -1141,7 +1141,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 2012 ; The Yearbook of Comparative Literature Volume 58 ; 58 >
+      au < ready ; 2012 ; The Yearbook of Comparative Literature Volume 58 ; 58 >
 
     }
 
