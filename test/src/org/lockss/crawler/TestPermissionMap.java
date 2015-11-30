@@ -212,6 +212,22 @@ public class TestPermissionMap extends LockssTestCase {
     assertFalse(mcf.getCrawlerStatus().isCrawlError());
   }
 
+  public void testGloballyPermittedStartPage() throws Exception {
+    mcf.setGloballyPermittedHosts(ListUtil.list("www.contract-host.com"));
+    String contractUrl = "http://www.contract-host.com/start.html";
+    permUrls = ListUtil.list(contractUrl);
+    mau.setPermissionUrls(permUrls);
+    mau.setStartUrls(permUrls);
+    mau.addUrl(contractUrl);
+    PermissionMap map =
+      new PermissionMap(mcf, ListUtil.list(new MockPermissionChecker(999)),
+                        null, permUrls);
+    assertTrue(map.populate());
+    assertFalse(map.hasPermission("http://www.not-example.com/"));
+    assertTrue(map.hasPermission("http://www.contract-host.com/"));
+    assertFalse(mcf.getCrawlerStatus().isCrawlError());
+  }
+
   public void testPluginPermittedHostNot() throws Exception {
     mau.setPermittedHostPatterns(RegexpUtil.compileRegexps(ListUtil.list(".*")));
     PermissionMap map =

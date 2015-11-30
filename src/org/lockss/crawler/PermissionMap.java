@@ -99,6 +99,35 @@ public class PermissionMap {
     return rec;
   }
 
+  private PermissionRecord createOkRecord(String url)
+      throws MalformedURLException {
+    PermissionRecord res = createRecord(url);
+    res.setStatus(PermissionStatus.PERMISSION_OK);
+    return res;
+  }
+
+  // Return a PermissionRecord iff the host is globally allowed
+  private PermissionRecord checkGlobal(String url, String host)
+      throws MalformedURLException {
+    if (crawlFacade.isGloballyPermittedHost(host)) {
+      logger.debug2("Creating globally permitted host PermissionRecord: "
+		    + url);
+      return createOkRecord(url);
+    }
+    if (isPluginPermittedHost(host)) {
+      if (crawlFacade.isAllowedPluginPermittedHost(host)) {
+	logger.debug2("Creating plugin permitted host PermissionRecord: "
+		      + url);
+	return createOkRecord(url);
+      } else {
+	logger.warning("Plugin permitted host not allowed by " +
+		       CrawlManagerImpl.PARAM_ALLOWED_PLUGIN_PERMITTED_HOSTS +
+		       ": " + url);
+      }
+    }
+    return null;
+  }
+
   /**
    * Get the PermissionRecord for the URL's host
    *
@@ -110,26 +139,9 @@ public class PermissionMap {
     
     PermissionRecord res = permissionAtUrl.get(host);
     if (res == null) {
-      if (crawlFacade.isGloballyPermittedHost(host)) {
-	logger.debug2("Creating globally permitted host PermissionRecord: "
-		      + url);
-	res = createRecord(url);
-	res.setStatus(PermissionStatus.PERMISSION_OK);
-	return res;
-      }
-      if (isPluginPermittedHost(host)) {
-	if (crawlFacade.isAllowedPluginPermittedHost(host)) {
-	  logger.debug2("Creating plugin permitted host PermissionRecord: "
-			+ url);
-	  res = createRecord(url);
-	  res.setStatus(PermissionStatus.PERMISSION_OK);
-	  return res;
-	} else {
-	  logger.warning("Plugin permitted host not allowed by " +
-			 CrawlManagerImpl.PARAM_ALLOWED_PLUGIN_PERMITTED_HOSTS +
-			 ": " + url);
-	}
-      }
+      res = checkGlobal(url, host);
+    }
+    if (res == null) {
       String perHostPath;
       if ((perHostPath = getPerHostPermissionPath()) != null) {
 	// if no PermissionRecord for this host, but we have a permission
@@ -204,6 +216,10 @@ public class PermissionMap {
     for (String permissionPage : pUrls) {
       try {
         String host = UrlUtil.getHost(permissionPage).toLowerCase();
+	PermissionRecord rec = checkGlobal(permissionPage, host);
+	if (rec != null) {
+	  continue;
+	}
         if(!hostMap.containsKey(host)) {
           ArrayList<String> pageList = new ArrayList<String>();
           pageList.add(permissionPage);
