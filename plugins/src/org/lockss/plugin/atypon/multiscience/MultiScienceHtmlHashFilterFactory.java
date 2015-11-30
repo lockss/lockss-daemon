@@ -103,7 +103,10 @@ public class MultiScienceHtmlHashFilterFactory
         // http://multi-science.atypon.com/doi/abs/10.1260/1756-8250.6.1.43
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
                                               "articleMetaDrop"),                                                                                     
-                                                    
+       // abs, full, ref - any page with listed author links
+       // the href= a varying numletter sequence
+       HtmlNodeFilters.tagWithAttributeRegex("a", "class", "tooltipTrigger"),                                       
+       HtmlNodeFilters.tagWithAttribute("div", "class", "ui-helper-hidden-accessible"),                                                             
     };
     return super.createFilteredInputStream(au, in, encoding, 
                                            includeNodes, excludeNodes);
