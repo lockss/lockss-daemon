@@ -33,20 +33,20 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.util.*;
-import junit.framework.*;
-import org.lockss.app.*;
+
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.state.*;
-import org.lockss.repository.*;
 
 /**
  * Test class for org.lockss.plugin.RegistryArchivalUnit
  */
 public class TestRegistryArchivalUnit extends LockssTestCase {
-  static Logger log = Logger.getLogger("TestRegistryArchivalUnit");
+	
+  private static final Logger log = Logger.getLogger(TestRegistryArchivalUnit.class);
+  
   private RegistryPlugin regPlugin;
   private MockLockssDaemon daemon;
   private PluginManager pluginMgr;
@@ -202,7 +202,8 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
   }
 
   public void testRecomputeRegNameTitle() throws Exception {
-    Properties auProps = new Properties();
+	// Also test HTML escapes
+	Properties auProps = new Properties();
     auProps.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
     Configuration auConfig = ConfigurationUtil.fromProps(auProps);
     MyRegistryArchivalUnit au = new MyRegistryArchivalUnit(regPlugin);
@@ -210,11 +211,11 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
     PluginTestUtil.registerArchivalUnit(regPlugin, au);
     au.addContent(au.getStartUrls().iterator().next(),
 		  "<html><head><h2>foobar</h2>\n" +
-		  "<title>This Title No Verb</title></head></html>");
-    assertEquals("This Title No Verb", au.recomputeRegName());
+		  "<title>This Title &amp; Weird &aacute;s&ccedil;&icirc;&igrave;</title></head></html>");
+    assertEquals("This Title & Weird \u00e1s\u00e7\u00ee\u00ec", au.recomputeRegName());
   }
 
-  public void testRecomputeRegNameTowTitles() throws Exception {
+  public void testRecomputeRegNameTwoTitles() throws Exception {
     Properties auProps = new Properties();
     auProps.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
     Configuration auConfig = ConfigurationUtil.fromProps(auProps);

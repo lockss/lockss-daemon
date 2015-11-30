@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,21 +35,17 @@ package org.lockss.plugin;
 import java.io.FileNotFoundException;
 import java.net.*;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.htmlparser.*;
 import org.htmlparser.tags.TitleTag;
 import org.htmlparser.filters.NodeClassFilter;
 import org.htmlparser.util.*;
 import org.lockss.config.*;
-import org.lockss.crawler.BaseCrawlSeed;
-import org.lockss.crawler.CrawlSeed;
 import org.lockss.crawler.FollowLinkCrawler;
 import org.lockss.daemon.*;
-import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.base.BaseArchivalUnit;
-import org.lockss.plugin.definable.DefinableArchivalUnit;
 import org.lockss.state.*;
 import org.lockss.util.*;
 
@@ -61,7 +57,8 @@ import org.lockss.util.*;
  */
 
 public class RegistryArchivalUnit extends BaseArchivalUnit {
-  protected static final Logger log = Logger.getLogger("RegistryArchivalUnit");
+	
+  private static final Logger log = Logger.getLogger(RegistryArchivalUnit.class);
 
   /** The interval between recrawls of the loadable plugin
       registry AUs.  Changes take effect only when AU is started. */
@@ -177,7 +174,7 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
       // Get the first title found
       TitleTag tag = (TitleTag)nodes[0];
       if (tag == null) return null;
-      return tag.getTitle();
+      return StringEscapeUtils.unescapeHtml4(tag.getTitle());
     } catch (MalformedURLException e) {
       log.warning("recomputeRegName", e);
       return null;
