@@ -53,7 +53,8 @@ public abstract class JettyManager
   public static final String PARAM_NAMED_SERVER_PRIORITY =
     PREFIX + "<name>.priority";
 
-  /** The maximum form data size that Jetty will accept */
+  /** The maximum form data size that Jetty will accept.  Daemon restart
+   * required for changes to take effect. */
   public static final String PARAM_MAX_FORM_SIZE =
     PREFIX + "MaxFormSize";
 
