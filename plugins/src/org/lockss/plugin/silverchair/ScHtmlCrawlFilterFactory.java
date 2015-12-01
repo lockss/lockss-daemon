@@ -62,7 +62,7 @@ public class ScHtmlCrawlFilterFactory implements FilterFactory {
    * 2=figures
    * 3=tables
    * 5=multimedia
-   * 6=refrences
+   * 6=references
    *
    */
 

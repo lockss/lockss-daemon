@@ -55,7 +55,6 @@ public class ScUrlFetcher extends BaseUrlFetcher {
   protected static final Pattern PATTERN_POST =
     Pattern.compile("&post=json$",
                     Pattern.CASE_INSENSITIVE);
-
   private static final Logger log = Logger.getLogger("ScUrlFetcher");
 
 
@@ -72,7 +71,7 @@ public class ScUrlFetcher extends BaseUrlFetcher {
 
     Matcher postMatch = PATTERN_POST.matcher(url);
     if (postMatch.find()) {
-      log.debug("found post url:" + url);
+      log.debug3("found post url:" + url);
       res = makePostConnection(url, pool);
     }
     else {

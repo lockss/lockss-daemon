@@ -116,9 +116,11 @@ public class ScHtmlHashFilterFactory implements FilterFactory {
                                                           HtmlNodeFilters.tagWithAttributeRegex("span", "class", "^Table "))), // [AMA article/tables]
             HtmlNodeFilters.tagWithAttributeRegex("span", "class", "^Figure "), // freeform, e.g. http://jama.jamanetwork.com/article.aspx?articleid=1487499 [AMA]
             // DROP Letters(7), CME(8), Citing(9) & Responses(10) tabs and panels [AMA  article]
+            // DROP Figures(3),Tables(4) because they are in random order when presented outside
+            // of the Article(1) view
             // [SPIE]: has only (10) for now
-            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "tab(7|8|9|10)Div"),
-            HtmlNodeFilters.tagWithAttributeRegex("div", "id", "^tab(7|8|9|10)$"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "tab(3|4|7|8|9|10)Div"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "id", "^tab(3|4|7|8|9|10)$"),
             // DROP external links in References [AMA/SPIE article/references]
             HtmlNodeFilters.tagWithAttributeRegex("span", "class", "pubmedLink"), // [AMA article/references]
             HtmlNodeFilters.tagWithAttributeRegex("span", "class", "crossrefDoi"), // [AMA/SPIE article/references]
