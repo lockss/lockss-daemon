@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -128,7 +128,7 @@ public class AuNodeImpl extends RepositoryNodeImpl {
           // eventually be trimmed by the repository integrity checker
           // and the content will be replaced by a poll repair
           logger.error("Malformed url while creating top-level CUS: "+
-                       "protocol '"+protocolStr+"', url '"+urlStr+"'");
+                       "protocol '"+protocolStr+"', url '"+urlStr+"'", mue);
         }
       }
     }
