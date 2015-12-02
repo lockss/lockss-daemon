@@ -90,7 +90,7 @@
   {
 
       title <
-        name = Revista meuip Cronos ;
+        name = Cronos: Revista do Programa de Pós Graduaçáo em Ciências Sociais da UFRN  ;
         issn = 1518-0689 ;
         eissn = 1982-5560
       >
@@ -99,18 +99,18 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = cronos
 
-      au < released ; 2003 ; 1 ; Revista meuip Cronos Volume 2003 ; 2003 ; >
-      au < released ; 2004 ; 2 ; Revista meuip Cronos Volume 2004 ; 2004 ; >
-      au < released ; 2006 ; 4 ; Revista meuip Cronos Volume 2006 ; 2006 ; >
-      au < released ; 2007 ; 5 ; Revista meuip Cronos Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 6 ; Revista meuip Cronos Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 7 ; Revista meuip Cronos Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 8 ; Revista meuip Cronos Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 9 ; Revista meuip Cronos Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 10 ; Revista meuip Cronos Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 11 ; Revista meuip Cronos Volume 2013 ; 2013 ; >
-      au < manifest ; 2014 ; 12 ; Revista meuip Cronos Volume 2014 ; 2014 ; >
-      au < expected ; 2015 ; 13 ; Revista meuip Cronos Volume 2015 ; 2015 ; >
+      au < released ; 2003 ; 1 ; Cronos: Revista do Programa de Pós Graduaçáo em Ciências Sociais da UFRN Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 2 ; Cronos: Revista do Programa de Pós Graduaçáo em Ciências Sociais da UFRN Volume 2004 ; 2004 ; >
+      au < released ; 2006 ; 4 ; Cronos: Revista do Programa de Pós Graduaçáo em Ciências Sociais da UFRN Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 5 ; Cronos: Revista do Programa de Pós Graduaçáo em Ciências Sociais da UFRN Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 6 ; Cronos: Revista do Programa de Pós Graduaçáo em Ciências Sociais da UFRN Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 7 ; Cronos: Revista do Programa de Pós Graduaçáo em Ciências Sociais da UFRN Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 8 ; Cronos: Revista do Programa de Pós Graduaçáo em Ciências Sociais da UFRN Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 9 ; Cronos: Revista do Programa de Pós Graduaçáo em Ciências Sociais da UFRN Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 10 ; Cronos: Revista do Programa de Pós Graduaçáo em Ciências Sociais da UFRN Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 11 ; Cronos: Revista do Programa de Pós Graduaçáo em Ciências Sociais da UFRN Volume 2013 ; 2013 ; >
+      au < notReady ; 2014 ; 12 ; Cronos: Revista do Programa de Pós Graduaçáo em Ciências Sociais da UFRN Volume 2014 ; 2014 ; manifest page does not redirect to http://ufrn.emnuvens.com.br/cronos/gateway/lockss?year=2014>
+      au < expected ; 2015 ; 13 ; Cronos: Revista do Programa de Pós Graduaçáo em Ciências Sociais da UFRN Volume 2015 ; 2015 ; >
 
   }
 
@@ -189,7 +189,8 @@
       au < released ; 2011 ; 2 ; Imburana: revista do Núcleo Câmara Cascudo de Estudos Norte-Rio-Grandenses Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 3 ; Imburana: revista do Núcleo Câmara Cascudo de Estudos Norte-Rio-Grandenses Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 4 ; Imburana: revista do Núcleo Câmara Cascudo de Estudos Norte-Rio-Grandenses Volume 2013 ; 2013 ; >
-      au < manifest ; 2015 ; 5 ; Imburana: revista do Núcleo Câmara Cascudo de Estudos Norte-Rio-Grandenses Volume 2014 ; 2014 ; >
+      au < notReady ; 2014 ; 5 ; Imburana: revista do Núcleo Câmara Cascudo de Estudos Norte-Rio-Grandenses Volume 2014 ; 2014 ; manifest page does not redirect to http://ufrn.emnuvens.com.br/imburana/gateway/lockss?year=2014 >
+      au < expected ; 2015 ; 6 ; Imburana: revista do Núcleo Câmara Cascudo de Estudos Norte-Rio-Grandenses Volume 2015 ; 2015 ; >
 
   }
 
