@@ -352,7 +352,7 @@
     au < finished ; finished ; 2012 ; Cell Communication Insights Volume 4 ; 4 ; 2012 >
     au < crawling ; exists ; 2013 ; Cell Communication Insights Volume 5 ; 5 ; 2013 >
     au < finished ; finished ; 2014 ; Cell Communication Insights Volume 6 ; 6 ; 2014 >
-    au < testing ; exists ; 2015 ; Cell Communication Insights Volume 7 ; 7 ; 2015 >
+    au < ready ; exists ; 2015 ; Cell Communication Insights Volume 7 ; 7 ; 2015 >
 
   }
   
@@ -962,7 +962,7 @@
     au < finished ; crawling ; 2012 ; Genetics & Epigenetics Volume 4 ; 4 ; 2012 >
     au < finished ; finished ; 2013 ; Genetics & Epigenetics Volume 5 ; 5 ; 2013 >
     au < finished ; finished ; 2014 ; Genetics & Epigenetics Volume 6 ; 6 ; 2014 >
-    au < testing ; exists ; 2015 ; Genetics & Epigenetics Volume 7 ; 7 ; 2015 >
+    au < ready ; exists ; 2015 ; Genetics & Epigenetics Volume 7 ; 7 ; 2015 >
 
   }
   
@@ -983,7 +983,7 @@
     au < finished ; finished ; 2012 ; Genomics Insights Volume 5 ; 5 ; 2012 >
     au < crawling ; exists ; 2013 ; Genomics Insights Volume 6 ; 6 ; 2013 >
     au < finished ; finished ; 2014 ; Genomics Insights Volume 7 ; 7 ; 2014 >
-    au < testing ; exists ; 2015 ; Genomics Insights Volume 8 ; 8 ; 2015 >
+    au < ready ; exists ; 2015 ; Genomics Insights Volume 8 ; 8 ; 2015 >
 
   }
   
@@ -1163,7 +1163,7 @@
     au < finished ; finished ; 2012 ; Integrative Medicine Insights Volume 7 ; 7 ; 2012 >
     au < crawling ; exists ; 2013 ; Integrative Medicine Insights Volume 8 ; 8 ; 2013 >
     au < finished ; finished ; 2014 ; Integrative Medicine Insights Volume 9 ; 9 ; 2014 >
-    au < testing ; exists ; 2015 ; Integrative Medicine Insights Volume 10 ; 10 ; 2015 >
+    au < ready ; exists ; 2015 ; Integrative Medicine Insights Volume 10 ; 10 ; 2015 >
 
   }
   
@@ -1663,7 +1663,7 @@
     au < finished ; crawling ; 2012 ; Retrovirology: Research and Treatment Volume 4 ; 4 ; 2012 >
     au < crawling ; exists ; 2013 ; Retrovirology: Research and Treatment Volume 5 ; 5 ; 2013 >
     au < finished ; finished ; 2014 ; Retrovirology: Research and Treatment Volume 6 ; 6 ; 2014 >
-    au < testing ; exists ; 2015 ; Retrovirology: Research and Treatment Volume 7 ; 7 ; 2015 >
+    au < ready ; exists ; 2015 ; Retrovirology: Research and Treatment Volume 7 ; 7 ; 2015 >
     
   }
   
@@ -1681,7 +1681,7 @@
     au < manifest ; exists ; 2008 ; Signal Transduction Insights Volume 1 ; 1 ; 2008 >
     au < manifest ; exists ; 2010 ; Signal Transduction Insights Volume 2 ; 2 ; 2010 >
     au < finished ; finished ; 2014 ; Signal Transduction Insights Volume 3 ; 3 ; 2014 >
-    au < testing ; exists ; 2015 ; Signal Transduction Insights Volume 4 ; 4 ; 2015 >
+    au < ready ; exists ; 2015 ; Signal Transduction Insights Volume 4 ; 4 ; 2015 >
     
   }
   
@@ -1764,7 +1764,7 @@
     au < manifest ; exists ; 2010 ; Virology: Research and Treatment Volume 2 ; 2 ; 2010 >
     au < crawling ; exists ; 2013 ; Virology: Research and Treatment Volume 4 ; 4 ; 2013 >
     au < crawling ; exists ; 2014 ; Virology: Research and Treatment Volume 5 ; 5 ; 2014 >
-    au < testing ; exists ; 2015 ; Virology: Research and Treatment Volume 6 ; 6 ; 2015 >
+    au < ready ; exists ; 2015 ; Virology: Research and Treatment Volume 6 ; 6 ; 2015 >
     
   }
 
