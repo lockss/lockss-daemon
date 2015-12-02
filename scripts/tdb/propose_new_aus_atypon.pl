@@ -69,17 +69,17 @@ while (my $line = <>) {
 
 foreach my $base_url (sort(keys(%au_volume))) {
     for (my $x = $au_volume{$base_url}{min} - $opt_pre; $x < $au_volume{$base_url}{min}; ++$x) {
-      &print_au($au_volume{$base_url}{start_plugin}, $base_url, $x) if ($x > 0);
+      &print_au($au_volume{$base_url}{start_plugin}, $base_url, $journal_id, $x) if ($x > 0);
     }
     for (my $x = $au_volume{$base_url}{max} + 1; $x <= $au_volume{$base_url}{max} + $opt_post; ++$x) {
-      &print_au($au_volume{$base_url}{start_plugin}, $base_url, $x) if ($x > 0);
+      &print_au($au_volume{$base_url}{start_plugin}, $base_url, $journal_id, $x) if ($x > 0);
     }
 }
 
 exit(0);
 
 sub print_au {
-    my ($plugin, $base_url, $vol_num) = @_;
+    my ($plugin, $base_url, $journal_id, $vol_num) = @_;
     printf("%s|%s|%s|%s|%s\n", "org", "lockss", "plugin", "taylorandfrancis",
     "${plugin}\&base_url~${base_url}\&journal_id~${journal_id}\&volume_name~${vol_num}");
     return(1); 
