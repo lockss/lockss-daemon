@@ -82,6 +82,6 @@ sub print_au {
     my ($plugin, $base_url, $vol_num) = @_;
     printf("%s|%s|%s|%s|%s\n", "org", "lockss", "plugin", "taylorandfrancis",
     "${plugin}\&base_url~${base_url}\&journal_id~${journal_id}\&volume_name~${vol_num}");
-    return(1);
+    return(1); 
 }
 
