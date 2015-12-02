@@ -50,29 +50,29 @@ while (my $line = <>) {
         my $base_url = $2;
         my $journal_id = $3;
         my $vol_num  = $4;
-        if (! exists($au_volume{$base_url})) {
-          $au_volume{$base_url}{min} = $vol_num;
-          $au_volume{$base_url}{max} = $vol_num;
-          $au_volume{$base_url}{start_plugin} = $au_plugin
+        if (! exists($au_volume{$journal_id})) {
+          $au_volume{$journal_id}{min} = $vol_num;
+          $au_volume{$journal_id}{max} = $vol_num;
+          $au_volume{$journal_id}{d_base_url} = $base_url;
+          $au_volume{$journal_id}{d_plugin} = $au_plugin;
         } else {
-        if ($vol_num < $au_volume{$base_url}{min}) {
-          $au_volume{$base_url}{min} = $vol_num;
+        if ($vol_num < $au_volume{$journal_id}{min}) {
+          $au_volume{$journal_id}{min} = $vol_num;
         }
-        if ($vol_num > $au_volume{$base_url}{max}) {
-          $au_volume{$base_url}{max} = $vol_num;
-          $au_volume{$base_url}{start_plugin} = $au_plugin
+        if ($vol_num > $au_volume{$journal_id}{max}) {
+          $au_volume{$journal_id}{max} = $vol_num;
         }
       }
     }
   }
 }
 
-foreach my $base_url (sort(keys(%au_volume))) {
-    for (my $x = $au_volume{$base_url}{min} - $opt_pre; $x < $au_volume{$base_url}{min}; ++$x) {
-      &print_au($au_volume{$base_url}{start_plugin}, $base_url, $journal_id, $x) if ($x > 0);
+foreach my $journal_id (sort(keys(%au_volume))) {
+    for (my $x = $au_volume{$journal_id}{min} - $opt_pre; $x < $au_volume{$journal_id}{min}; ++$x) {
+      &print_au($au_volume{$journal_id}{d_plugin}, $au_volume{$journal_id}{d_base_url}, $journal_id, $x) if ($x > 0);
     }
-    for (my $x = $au_volume{$base_url}{max} + 1; $x <= $au_volume{$base_url}{max} + $opt_post; ++$x) {
-      &print_au($au_volume{$base_url}{start_plugin}, $base_url, $journal_id, $x) if ($x > 0);
+    for (my $x = $au_volume{$journal_id}{max} + 1; $x <= $au_volume{$journal_id}{max} + $opt_post; ++$x) {
+      &print_au($au_volume{$journal_id}{d_plugin}, $au_volume{$journal_id}{d_base_url}, $journal_id, $x) if ($x > 0);
     }
 }
 
