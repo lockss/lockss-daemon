@@ -3,24 +3,24 @@
   publisher <
     name = SPIE ;
     info[contract] = 2012 ;
-    info[tester] = 0
+    info[tester] = 5
   >
 
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.silverchair.ClockssSilverchairBooksPlugin
   implicit < status ; status2 ; year ; param[year] ; param[book_id] ; eisbn ; isbn ; name >
   param[base_url] = http://ebooks.spiedigitallibrary.org/
- 
+
   {
-    
-    title < 
+
+    title <
       name = SPIE Books ;
       type = bookSeries
     >
-    
+
     au < exists ; exists ; 1989 ; 1989 ; 209 ; 9780819481030 ; 9780819401304 ; The New Physical Optics Notebook: Tutorials in Fourier Optics >
     au < exists ; exists ; 1991 ; 1991 ; 207 ; 9780819478788 ; 9780819405364 ; Aberration Theory Made Simple >
     au < exists ; exists ; 1991 ; 1991 ; 208 ; 9780819478528 ; 9780819406484 ; Digital Image Compression Techniques >
-    au < exists ; exists ; 1992 ; 1992 ; 206 ; 9780819479013 ; 9780819407634 ; Optics in Photography >
+    au < testing ; exists ; 1992 ; 1992 ; 206 ; 9780819479013 ; 9780819407634 ; Optics in Photography >
     au < exists ; exists ; 1993 ; 1993 ; 205 ; 9780819480996 ; 9780819413772 ; Introduction to Optical Testing >
     au < exists ; exists ; 1994 ; 1994 ; 204 ; 9780819481238 ; 9780819416544 ; Soft X-Ray Optics >
     au < exists ; exists ; 1995 ; 1995 ; 202 ; 9780819481009 ; 9780819417015 ; Introduction to Wavefront Sensors >
@@ -33,7 +33,7 @@
     au < exists ; exists ; 1997 ; 1997 ; 197 ; 9780819486462 ; 9780819424617 ; Rotating-Mirror Streak and Framing Cameras >
     au < exists ; exists ; 1997 ; 1997 ; 198 ; 9780819478467 ; 9780819426161 ; Special Functions of Mathematics for Engineers >
     au < exists ; exists ; 1998 ; 1998 ; 191 ; 9780819478573 ; 9780819428066 ; Basic Electro-Optics for Electrical Engineers >
-    au < exists ; exists ; 1998 ; 1998 ; 192 ; 9780819478566 ; 9780819427588 ; Introduction to Radiometry >
+    au < testing ; exists ; 1998 ; 1998 ; 192 ; 9780819478566 ; 9780819427588 ; Introduction to Radiometry >
     au < exists ; exists ; 1998 ; 1998 ; 193 ; 9780819478795 ; 9780819425157 ; Optical Imaging and Aberrations: Part I. Ray Geometrical Optics >
     au < exists ; exists ; 1998 ; 1998 ; 194 ; 9780819478450 ; 9780819425133 ; Random Processes for Image and Signal Processing >
     au < exists ; exists ; 1999 ; 1999 ; 184 ; 9780819478498 ; 9780819434968 ; Contrast Sensitivity of the Human Eye and its Effects on Image Quality >
@@ -221,7 +221,6 @@
     au < exists ; exists ; 2014 ; 2014 ; 872 ; 9780819498229 ; 9780819498212 ; Solid State Lasers: Tunable Sources and Passive Q-Switching Elements >
     au < exists ; exists ; 2014 ; 2014 ; 868 ; 9780819498373 ; 9780819498366 ; Strength Properties of Glass and Ceramics >
     au < exists ; exists ; 2014 ; 2014 ; 874 ; 9781628410709 ; 9781628410686 ; Translational Research in Biophotonics: Four National Cancer Institute Case Studies >
-
     au < exists ; exists ; 2015 ; 2015 ; 1383 ; 9781628413731 ; 9781628413892 ; Applications of Dispersive Optical Spectroscopy Systems >
     au < exists ; exists ; 2015 ; 2015 ; 1269 ; 9781628413908 ; 9781628413892 ; Digital Converters for Image Sensors >
     au < exists ; exists ; 2015 ; 2015 ; 1324 ; 9781628415483 ; 9781628415476 ; Field Guide to Linear Systems in Optics >
@@ -233,8 +232,8 @@
     au < exists ; exists ; 2015 ; 2015 ; 1406 ; 9781628416718 ;  ; Optical Sensing: Microstructured Fibers, Fiber Micromachining, and Functional Coatings >
     au < exists ; exists ; 2015 ; 2015 ; 1408 ; 9781628416732 ;  ; Optimization Techniques for Diffraction Spectrometers >
     au < exists ; exists ; 2015 ; 2015 ; 1409 ; 9781628416749 ;  ; Femtosecond-Laser-Assisted LASIK Eye Surgery and Imaging >
-    au < exists ; exists ; 2015 ; 2015 ; 1608 ; 9781628411782 ; 9781628411775 ; Field Guide to Astronomical Instrumentation >
+    au < testing ; exists ; 2015 ; 2015 ; 1608 ; 9781628411782 ; 9781628411775 ; Field Guide to Astronomical Instrumentation >
 
     }
-   
+
 }
