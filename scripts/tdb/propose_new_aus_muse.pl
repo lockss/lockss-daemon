@@ -37,7 +37,7 @@ my $ret = GetOptions('help|h' => \$opt_help,
 #   $plugin = "ClockssProjectMusePlugin";
 #   } else {
    $plugin = "ProjectMusePlugin";
-   $base_url = "http://muse.jhu.edu/";
+   $base_url = "https://muse.jhu.edu/";
 #   }
 if ($ret != 1 || $opt_help || (int(@ARGV) < 1)) {
     &usage;
