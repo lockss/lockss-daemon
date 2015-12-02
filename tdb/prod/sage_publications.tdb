@@ -2928,6 +2928,8 @@
         au < exists ; 2013 ; The Antitrust Bulletin Volume 58 ; 58 >
         au < manifest ; 2014 ; The Antitrust Bulletin Volume 59 ; 59 >
         au < manifest ; 2015 ; The Antitrust Bulletin Volume 60 ; 60 >
+        au < expected ; 2016 ; The Antitrust Bulletin Volume 61 ; 61 >
+
     }
 
     {
@@ -5285,6 +5287,8 @@
       au < exists ; 2012-2013 ; Business Perspectives and Research Volume 1 ; 1 >
       au < exists ; 2013-2014 ; Business Perspectives and Research Volume 2 ; 2 >
       au < manifest ; 2015 ; Business Perspectives and Research Volume 3 ; 3 >
+      au < expected ; 2016 ; Business Perspectives and Research Volume 4 ; 4 >
+
   }
 
   {
@@ -5778,6 +5782,8 @@
 
         au < released ; 2014 ; Child Neurology Open Volume 1 ; 1 >
         au < manifest ; 2015 ; Child Neurology Open Volume 2 ; 2 >
+        au < expected ; 2016 ; Child Neurology Open Volume 3 ; 3 >
+
     }
 
     {
@@ -6091,6 +6097,7 @@
     au < released ; 2013-2014 ; Christianity & Literature Volume 63 ; 63 >
     au < released ; 2014-2015 ; Christianity & Literature Volume 64 ; 64 >
     au < expected ; 2015-2016 ; Christianity & Literature Volume 65 ; 65 >
+    au < expected ; 2016-2017 ; Christianity & Literature Volume 66 ; 66 >
 
   }
 
@@ -10791,6 +10798,7 @@
       au < exists ; 2013-2014 ; Educational Horizons Volume 92 ; 92 >
       au < released ; 2014-2015 ; Educational Horizons Volume 93 ; 93 >
       au < expected ; 2015-2016 ; Educational Horizons Volume 94 ; 94 >
+      au < expected ; 2016-2017 ; Educational Horizons Volume 95 ; 95 >
 
     }
 
@@ -12200,6 +12208,8 @@
       au < exists ; 2013 ; European Journal of Inflammation Volume 11 ; 11 >
       au < manifest ; 2014 ; European Journal of Inflammation Volume 12 ; 12 >
       au < manifest ; 2015 ; European Journal of Inflammation Volume 13 ; 13 >
+      au < expected ; 2016 ; European Journal of Inflammation Volume 14 ; 14 >
+
   }
 
     {
@@ -14161,6 +14171,8 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < expected ; 2015 ; Gerontology and Geriatric Medicine Volume 1 ; 1 >
+      au < expected ; 2016 ; Gerontology and Geriatric Medicine Volume 2 ; 2 >
+
   }
     {
 
@@ -15736,6 +15748,8 @@
       au < exists ; 2013 ; Healthcare Management Forum Volume 26 ; 26 >
       au < manifest ; 2014 ; Healthcare Management Forum Volume 27 ; 27 >
       au < manifest ; 2015 ; Healthcare Management Forum Volume 28 ; 28 >
+      au < expected ; 2016 ; Healthcare Management Forum Volume 29 ; 29 >
+
   }
 
   {
@@ -18516,6 +18530,8 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 2015 ; International Journal of Immunopathology and Pharmacology Volume 28 ; 28 >
+      au < expected ; 2016 ; International Journal of Immunopathology and Pharmacology Volume 29 ; 29 >
+
   }
 
     {
@@ -18597,6 +18613,8 @@
       au < exists ; 2013 ; International Journal of Mechanical Engineering Education Volume 41 ; 41 >
       au < manifest ; 2014 ; International Journal of Mechanical Engineering Education Volume 42 ; 42 >
       au < manifest ; 2015 ; International Journal of Mechanical Engineering Education Volume 43 ; 43 >
+      au < expected ; 2016 ; International Journal of Mechanical Engineering Education Volume 44 ; 44 >
+
   }
 
     {
@@ -18667,6 +18685,7 @@
         au < HighWirePressH20Plugin ; released ; 2013 ; International Journal of Music Education Volume 31 ; 31 >
         au < HighWirePressH20Plugin ; released ; 2014 ; International Journal of Music Education Volume 32 ; 32 >
         au < HighWirePressH20Plugin ; manifest ; 2015 ; International Journal of Music Education Volume 33 ; 33 >
+        au < HighWirePressH20Plugin ; expected ; 2016 ; International Journal of Music Education Volume 34 ; 34 >
 
       }
 
@@ -19238,6 +19257,7 @@
       au < manifest ; 2014 ; International Quarterly of Community Health Education Volume 34 ; 34 >
       au < manifest ; 2014-2015 ; International Quarterly of Community Health Education Volume 35 ; 35 >
       au < expected ; 2015-2016 ; International Quarterly of Community Health Education Volume 36 ; 36 >
+      au < expected ; 2016-2017 ; International Quarterly of Community Health Education Volume 37 ; 37 >
 
   }
 
@@ -23319,6 +23339,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < exists ; 2013 ; The Journal of Criminal Law Volume 77 ; 77 >
       au < released ; 2014 ; The Journal of Criminal Law Volume 78 ; 78 >
       au < manifest ; 2015 ; The Journal of Criminal Law Volume 79 ; 79 >
+      au < expected ; 2016 ; The Journal of Criminal Law Volume 80 ; 80 >
+
     }
 
     {
@@ -24139,6 +24161,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < manifest ; 2014 ; Journal of Educational Computing Research Volume 51 ; 51 >
       au < manifest ; 2015 ; Journal of Educational Computing Research Volume 52 ; 52 >
       au < manifest ; 2015 ; Journal of Educational Computing Research Volume 53 ; 53 >
+      au < expected ; 2016 ; Journal of Educational Computing Research Volume 54 ; 54 >
+
   }
 
   {
@@ -24710,6 +24734,8 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 2015 ; Journal of Entrepreneurship and Innovation in Emerging Economies Volume 1 ; 1 >
+      au < expected ; 2016 ; Journal of Entrepreneurship and Innovation in Emerging Economies Volume 2 ; 2 >
+
   }
 
     {
@@ -30542,6 +30568,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; released ; 2013 ; Perspectives in Public Health Volume 133 ; 133 >
         au < HighWirePressH20Plugin ; released ; 2014 ; Perspectives in Public Health Volume 134 ; 134 >
         au < HighWirePressH20Plugin ; manifest ; 2015 ; Perspectives in Public Health Volume 135 ; 135 >
+        au < HighWirePressH20Plugin ; expected ; 2016 ; Perspectives in Public Health Volume 136 ; 136 >
 
       }
 
@@ -30932,6 +30959,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Travel Research Volume 52 ; 52 >
         au < HighWirePressH20Plugin ; released ; 2014 ; Journal of Travel Research Volume 53 ; 53 >
         au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of Travel Research Volume 54 ; 54 >
+        au < HighWirePressH20Plugin ; expected ; 2016 ; Journal of Travel Research Volume 55 ; 55 >
 
       }
 
@@ -31524,6 +31552,7 @@ comment[mpj] = now published by Brill
       au < exists ; 2012 ; Justice Research and Policy Volume 14 ; 14 >
       au < manifest ; 2013 ; Justice Research and Policy Volume 15 ; 15 >
       au < manifest ; 2015 ; Justice Research and Policy Volume 16 ; 16 >
+      au < expected ; 2016 ; Justice Research and Policy Volume 17 ; 17 >
 
   }
 
@@ -34958,6 +34987,8 @@ comment[mpj] = now published by Brill
         au < released ; 2013 ; OTJR: Occupation, Participation and Health Volume 33 ; 33 >
         au < released ; 2014 ; OTJR: Occupation, Participation and Health Volume 34 ; 34 >
         au < manifest ; 2015 ; OTJR: Occupation, Participation and Health Volume 35 ; 35 >
+        au < expected ; 2016 ; OTJR: Occupation, Participation and Health Volume 36 ; 36 >
+
     }
 
     {
@@ -35368,6 +35399,8 @@ comment[mpj] = now published by Brill
 
       au < released ; 2014 ; Paradigm Volume 18 ; 18 >
       au < manifest ; 2015 ; Paradigm Volume 19 ; 19 >
+      au < expected ; 2016 ; Paradigm Volume 20 ; 20 >
+
     }
 
     {
@@ -35983,6 +36016,8 @@ comment[mpj] = now published by Brill
       au < exists ; 2013 ; The Police Journal: Theory, Practice and Principles Volume 86 ; 86 >
       au < released ; 2014 ; The Police Journal: Theory, Practice and Principles Volume 87 ; 87 >
       au < manifest ; 2015 ; The Police Journal: Theory, Practice and Principles Volume 88 ; 88 >
+      au < expected ; 2016 ; The Police Journal: Theory, Practice and Principles Volume 89 ; 89 >
+
   }
 
     {
@@ -36112,6 +36147,8 @@ comment[mpj] = now published by Brill
       au < released ; 2013 ; Policy Futures in Education Volume 11 ; 11 >
       au < released ; 2014 ; Policy Futures in Education Volume 12 ; 12 >
       au < manifest ; 2015 ; Policy Futures in Education Volume 13 ; 13 >
+      au < expected ; 2016 ; Policy Futures in Education Volume 14 ; 14 >
+
   }
 
   {
@@ -48813,6 +48850,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; released ; 2013 ; Annals of Clinical Biochemistry Volume 50 ; 50 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Annals of Clinical Biochemistry Volume 51 ; 51 >
         au < HighWirePressH20Plugin ; manifest ; 2015 ; Annals of Clinical Biochemistry Volume 52 ; 52 >
+        au < HighWirePressH20Plugin ; expected ; 2016 ; Annals of Clinical Biochemistry Volume 53 ; 53 >
 
       }
 
@@ -48860,6 +48898,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; released ; 2013 ; Clinical Ethics Volume 8 ; 8 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Clinical Ethics Volume 9 ; 9 >
         au < HighWirePressH20Plugin ; manifest ; 2015 ; Clinical Ethics Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; expected ; 2016 ; Clinical Ethics Volume 11 ; 11 >
 
       }
 
@@ -48917,6 +48956,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; released ; 2013 ; Clinical Risk Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; released ; 2014 ; Clinical Risk Volume 20 ; 20 >
         au < HighWirePressH20Plugin ; manifest ; 2015 ; Clinical Risk Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; expected ; 2016 ; Clinical Risk Volume 22 ; 22 >
 
       }
 
@@ -49477,6 +49517,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Hand Therapy Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Hand Therapy Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; manifest ; 2015 ; Hand Therapy Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; expected ; 2016 ; Hand Therapy Volume 21 ; 21 >
 
       }
 
@@ -49549,6 +49590,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; released ; 2013 ; Health Services Management Research Volume 26 ; 26 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Health Services Management Research Volume 27 ; 27 >
         au < HighWirePressH20Plugin ; manifest ; 2015 ; Health Services Management Research Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; expected ; 2016 ; Health Services Management Research Volume 29 ; 29 >
 
       }
 
@@ -49714,6 +49756,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; released ; 2013 ; International Journal of Green Nanotechnology Volume 1 ; 1 >
         au < HighWirePressH20Plugin ; released ; 2014 ; International Journal of Green Nanotechnology Volume 2 ; 2 >
         au < HighWirePressH20Plugin ; expected ; 2015 ; International Journal of Green Nanotechnology Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; expected ; 2016 ; International Journal of Green Nanotechnology Volume 4 ; 4 >
 
       }
 
@@ -49822,6 +49865,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; manifest ; 2013 ; International Journal of STD & AIDS Volume 24 ; 24 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; International Journal of STD & AIDS Volume 25 ; 25 >
         au < HighWirePressH20Plugin ; manifest ; 2015 ; International Journal of STD & AIDS Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; expected ; 2016 ; International Journal of STD & AIDS Volume 27 ; 27 >
 
       }
 
@@ -49860,6 +49904,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; released ; 2013 ; Journal of Health Services Research & Policy Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Health Services Research & Policy Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of Health Services Research & Policy Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; expected ; 2016 ; Journal of Health Services Research & Policy Volume 21 ; 21 >
 
       }
 
@@ -49892,6 +49937,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; released ; 2013 ; Journal of Medical Biography Volume 21 ; 21 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Medical Biography Volume 22 ; 22 >
         au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of Medical Biography Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; expected ; 2016 ; Journal of Medical Biography Volume 24 ; 24 >
 
       }
 
@@ -49935,6 +49981,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Medical Screening Volume 20 ; 20 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Medical Screening Volume 21 ; 21 >
         au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of Medical Screening Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; expected ; 2016 ; Journal of Medical Screening Volume 23 ; 23 >
 
       }
 
@@ -49978,6 +50025,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Telemedicine and Telecare Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Telemedicine and Telecare Volume 20 ; 20 >
         au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of Telemedicine and Telecare Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; expected ; 2016 ; Journal of Telemedicine and Telecare Volume 22 ; 22 >
 
       }
 
@@ -50199,6 +50247,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of the Royal Society of Medicine Volume 106 ; 106 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of the Royal Society of Medicine Volume 107 ; 107 >
         au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of the Royal Society of Medicine Volume 108 ; 108 >
+        au < HighWirePressH20Plugin ; expected ; 2016 ; Journal of the Royal Society of Medicine Volume 109 ; 109 >
 
       }
 
@@ -50392,6 +50441,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; released ; 2013 ; Laboratory Animals Volume 47 ; 47 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Laboratory Animals Volume 48 ; 48 >
         au < HighWirePressH20Plugin ; manifest ; 2015 ; Laboratory Animals Volume 49 ; 49 >
+        au < HighWirePressH20Plugin ; expected ; 2016 ; Laboratory Animals Volume 50 ; 50 >
 
       }
 
@@ -50557,6 +50607,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Obstetric Medicine Volume 6 ; 6 >
         au < HighWirePressH20Plugin ; released ; 2014 ; Obstetric Medicine Volume 7 ; 7 >
         au < HighWirePressH20Plugin ; manifest ; 2015 ; Obstetric Medicine Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; expected ; 2016 ; Obstetric Medicine Volume 9 ; 9 >
 
       }
 
@@ -50607,6 +50658,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Phlebology Volume 28 ; 28 >
         au < HighWirePressH20Plugin ; released ; 2014 ; Phlebology Volume 29 ; 29 >
         au < HighWirePressH20Plugin ; manifest ; 2015 ; Phlebology Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; expected ; 2016 ; Phlebology Volume 31 ; 31 >
 
       }
 
@@ -50697,6 +50749,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; released ; 2013 ; Tropical Doctor Volume 43 ; 43 >
         au < HighWirePressH20Plugin ; released ; 2014 ; Tropical Doctor Volume 44 ; 44 >
         au < HighWirePressH20Plugin ; manifest ; 2015 ; Tropical Doctor Volume 45 ; 45 >
+        au < HighWirePressH20Plugin ; expected ; 2016 ; Tropical Doctor Volume 46 ; 46 >
 
       }
 
