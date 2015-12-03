@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -18,7 +18,7 @@
       param[base_url] = http://www.esmarn.tjrn.jus.br/revistas/
       param[journal_id] = revista_da_esmarn
 
-      au < exists ; 2008 ; 7 ; Revista da ESMARN Volume 2008 ; 2008 >
+      au < exists ; 2008 ; 7 ; Revista da ESMARN Volume 2008 ; 2008 ; >
 
   }
 
@@ -35,17 +35,17 @@
       param[journal_id] = revista_direito_e_liberdade
       comment[notReady] = no permission from publisher
 
-      au < exists ; ; 1 ; Revista Direito e Liberdade Volume 1 ; 0001 >
-      au < exists ; ; 2-4 ; Revista Direito e Liberdade Volume 2 ; 0002 >
-      au < exists ; ; 5-7 ; Revista Direito e Liberdade Volume 3 ; 0003 >
-      au < exists ; ; 8-9 ; Revista Direito e Liberdade Volume 4 ; 0004 >
-      au < exists ; ; 10-11 ; Revista Direito e Liberdade Volume 5 ; 0005 >
-      au < exists ; ; 12 ; Revista Direito e Liberdade Volume 6 ; 0006 >
-      au < exists ; ; 13 ; Revista Direito e Liberdade Volume 7 ; 0007 >
-      au < exists ; ; 14 ; Revista Direito e Liberdade Volume 8 ; 0008 >
-      au < exists ; ; 15 ; Revista Direito e Liberdade Volume 9 ; 0009 >
-      au < exists ; ; 16 ; Revista Direito e Liberdade Volume 10 ; 0010 >
-      au < notReady ; ; 17 ; Revista Direito e Liberdade Volume 11 ; 0011 >
+      au < exists ; ; 1 ; Revista Direito e Liberdade Volume 1 ; 0001 ; >
+      au < exists ; ; 2-4 ; Revista Direito e Liberdade Volume 2 ; 0002 ; >
+      au < exists ; ; 5-7 ; Revista Direito e Liberdade Volume 3 ; 0003 ; >
+      au < exists ; ; 8-9 ; Revista Direito e Liberdade Volume 4 ; 0004 ; >
+      au < exists ; ; 10-11 ; Revista Direito e Liberdade Volume 5 ; 0005 ; >
+      au < exists ; ; 12 ; Revista Direito e Liberdade Volume 6 ; 0006 ; >
+      au < exists ; ; 13 ; Revista Direito e Liberdade Volume 7 ; 0007 ; >
+      au < exists ; ; 14 ; Revista Direito e Liberdade Volume 8 ; 0008 ; >
+      au < exists ; ; 15 ; Revista Direito e Liberdade Volume 9 ; 0009 ; >
+      au < exists ; ; 16 ; Revista Direito e Liberdade Volume 10 ; 0010 ; >
+      au < notReady ; ; 17 ; Revista Direito e Liberdade Volume 11 ; 0011 ; >
 
   }
 

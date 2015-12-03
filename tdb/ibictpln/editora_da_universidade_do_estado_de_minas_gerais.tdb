@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,14 +17,14 @@
       param[base_url] = http://www.uemg.br/openjournal/
       param[journal_id] = educacaoemfoco
 
-      au < released ; 2008 ; 1 ; Educação em Foco Volume 2008 ; 2008 >
-      au < released ; 2009 ; 2 ; Educação em Foco Volume 2009 ; 2009 >
-      au < released ; 2010 ; 3 ; Educação em Foco Volume 2010 ; 2010 >
-      au < released ; 2011 ; 4 ; Educação em Foco Volume 2011 ; 2011 >
-      au < released ; 2012 ; 5 ; Educação em Foco Volume 2012 ; 2012 >
-      au < released ; 2013 ; 6 ; Educação em Foco Volume 2013 ; 2013 >
-      au < released ; 2014 ; 7 ; Educação em Foco Volume 2014 ; 2014 >
-      au < expected ; 2015 ; 8 ; Educação em Foco Volume 2015 ; 2015 >
+      au < released ; 2008 ; 1 ; Educação em Foco Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 2 ; Educação em Foco Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 3 ; Educação em Foco Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 4 ; Educação em Foco Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 5 ; Educação em Foco Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 6 ; Educação em Foco Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 7 ; Educação em Foco Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 8 ; Educação em Foco Volume 2015 ; 2015 ; >
 
   }
 
@@ -40,14 +40,14 @@
       param[base_url] = http://www.uemg.br/openjournal/
       param[journal_id] = malestar
 
-      au < released ; 2008 ; 1 ; Mal-Estar e Sociedade Volume 2008 ; 2008 >
-      au < released ; 2009 ; 2 ; Mal-Estar e Sociedade Volume 2009 ; 2009 >
-      au < released ; 2010 ; 3 ; Mal-Estar e Sociedade Volume 2010 ; 2010 >
-      au < released ; 2011 ; 4 ; Mal-Estar e Sociedade Volume 2011 ; 2011 >
-      au < released ; 2012 ; 5 ; Mal-Estar e Sociedade Volume 2012 ; 2012 >
-      au < released ; 2013 ; 6 ; Mal-Estar e Sociedade Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 7 ; Mal-Estar e Sociedade Volume 2014 ; 2014 >
-      au < expected ; 2015 ; 8 ; Mal-Estar e Sociedade Volume 2015 ; 2015 >
+      au < released ; 2008 ; 1 ; Mal-Estar e Sociedade Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 2 ; Mal-Estar e Sociedade Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 3 ; Mal-Estar e Sociedade Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 4 ; Mal-Estar e Sociedade Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 5 ; Mal-Estar e Sociedade Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 6 ; Mal-Estar e Sociedade Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 7 ; Mal-Estar e Sociedade Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 8 ; Mal-Estar e Sociedade Volume 2015 ; 2015 ; >
 
   }
 

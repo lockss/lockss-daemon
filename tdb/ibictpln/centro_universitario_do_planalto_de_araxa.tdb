@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,17 +17,17 @@
       param[base_url] = http://www.uniaraxa.edu.br/ojs/
       param[journal_id] = evidencia
 
-      au < exists ; 2005 ; 1 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 2 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 3 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 4 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 5 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 6 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 7 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 8 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 10 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2014 ; 2014 >
-      au < expected ; 2015 ; 11 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2015 ; 2015 >
+      au < exists ; 2005 ; 1 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 2 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 3 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 4 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 5 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 6 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 7 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 8 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 9 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 10 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 11 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2015 ; 2015 ; >
 
   }
 
