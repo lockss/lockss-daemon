@@ -487,7 +487,13 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < released ; 2014 ; Canadian Theatre Review Issue 158 ; 158 >
-      au < released ; 2015 ; Canadian Theatre Review Issue 159 ; 159 >
+      au < released ; 2014 ; Canadian Theatre Review Issue 159 ; 159 >
+      au < expected ; 2014 ; Canadian Theatre Review Issue 160 ; 160 >
+      au < expected ; 2015 ; Canadian Theatre Review Issue 161 ; 161 >
+      au < expected ; 2015 ; Canadian Theatre Review Issue 162 ; 162 >
+      au < expected ; 2015 ; Canadian Theatre Review Issue 163 ; 163 >
+      au < expected ; 2015 ; Canadian Theatre Review Issue 164 ; 164 >
+      au < expected ; 2016 ; Canadian Theatre Review Issue 165 ; 165 >
 
     }
 
@@ -609,12 +615,12 @@
       au < released ; 2004-2005 ; Eighteenth-Century Fiction Volume 17 ; 17 >
       au < released ; 2005-2006 ; Eighteenth-Century Fiction Volume 18 ; 18 >
       au < released ; 2006-2007 ; Eighteenth-Century Fiction Volume 19 ; 19 >
-      au < released ; 2007-2008 ; Eighteenth-Century Fiction Volume 20 ; 20 >
-      au < released ; 2008-2009 ; Eighteenth-Century Fiction Volume 21 ; 21 >
-      au < released ; 2009-2010 ; Eighteenth-Century Fiction Volume 22 ; 22 >
-      au < released ; 2010-2011 ; Eighteenth-Century Fiction Volume 23 ; 23 >
-      au < released ; 2011-2012 ; Eighteenth-Century Fiction Volume 24 ; 24 >
-      au < released ; 2012-2013 ; Eighteenth-Century Fiction Volume 25 ; 25 >
+      au < released ; 2007 ; Eighteenth-Century Fiction Volume 20 ; 20 >
+      au < released ; 2008 ; Eighteenth-Century Fiction Volume 21 ; 21 >
+      au < released ; 2009 ; Eighteenth-Century Fiction Volume 22 ; 22 >
+      au < released ; 2010 ; Eighteenth-Century Fiction Volume 23 ; 23 >
+      au < released ; 2011 ; Eighteenth-Century Fiction Volume 24 ; 24 >
+      au < released ; 2012 ; Eighteenth-Century Fiction Volume 25 ; 25 >
 
     }
 
@@ -622,8 +628,9 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < released ; 2013-2014 ; Eighteenth-Century Fiction Volume 26 ; 26 >
-      au < released ; 2014-2015 ; Eighteenth-Century Fiction Volume 27 ; 27 >
+      au < released ; 2013 ; Eighteenth-Century Fiction Volume 26 ; 26 >
+      au < released ; 2014 ; Eighteenth-Century Fiction Volume 27 ; 27 >
+      au < expected ; 2015 ; Eighteenth-Century Fiction Volume 28 ; 28 >
 
     }
 
@@ -757,7 +764,7 @@
 
       param[base_url] = http://muse.jhu.edu/
 
-      au < released ; 2013 ; International Journal of Canadian Studies Volume 47 ; 47 >
+      au < released ; 2014 ; International Journal of Canadian Studies Volume 47 ; 47 >
 
     }
 
@@ -766,7 +773,9 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < released ; 2014 ; International Journal of Canadian Studies Volume 48 ; 48 >
-      au < released ; 2015 ; International Journal of Canadian Studies Volume 49 ; 49 >
+      au < released ; 2014 ; International Journal of Canadian Studies Volume 49 ; 49 >
+      au < expected ; 2014 ; International Journal of Canadian Studies Volume 50 ; 50 >
+      au < expected ; 2015 ; International Journal of Canadian Studies Volume 51 ; 51 >
 
     }
 
@@ -876,7 +885,8 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < released ; 2013-2014 ; Journal of Scholarly Publishing Volume 45 ; 45 >
-      au < released ; 2014-2015 ; Journal of Scholarly Publishing Volume 46 ; 46 >
+      au < released ; 2014 ; Journal of Scholarly Publishing Volume 46 ; 46 >
+      au < expected ; 2015 ; Journal of Scholarly Publishing Volume 47 ; 47 >
 
     }
 
