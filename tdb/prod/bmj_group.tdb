@@ -440,8 +440,8 @@
     au < bmj.BMJDrupalPlugin ; manifest ; 2014 ; BMJ Volume 347 ; 347 >
     au < bmj.BMJDrupalPlugin ; manifest ; 2014 ; BMJ Volume 348 ; 348 >
     au < bmj.BMJDrupalPlugin ; manifest ; 2014 ; BMJ Volume 349 ; 349 >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2015 ; BMJ Volume 350 ; 350 >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2015 ; BMJ Volume 351 ; 351 >
+    au < bmj.BMJDrupalPlugin ; testing ; 2015 ; BMJ Volume 350 ; 350 >
+    au < bmj.BMJDrupalPlugin ; testing ; 2015 ; BMJ Volume 351 ; 351 >
 
   }
 
@@ -953,7 +953,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Heart Asia Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Heart Asia Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Heart Asia Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 2015 ; Heart Asia Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; testing ; 2015 ; Heart Asia Volume 7 ; 7 >
 
   }
 
@@ -1257,7 +1257,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Heart Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Heart Volume 99 ; 99 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Heart Volume 100 ; 100 >
-    au < HighWirePressH20Plugin ; manifest ; 2015 ; Heart Volume 101 ; 101 >
+    au < HighWirePressH20Plugin ; testing ; 2015 ; Heart Volume 101 ; 101 >
 
   }
 
@@ -2246,7 +2246,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; down ; 2012 ; BMJ Quality & Safety Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; down ; 2013 ; BMJ Quality & Safety Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; down ; 2014 ; BMJ Quality & Safety Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; manifest ; 2015 ; BMJ Quality & Safety Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; testing ; 2015 ; BMJ Quality & Safety Volume 24 ; 24 >
       }
   }
 
@@ -2259,7 +2259,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://rmdopen.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 2015 ; RMD Open Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; testing ; 2015 ; RMD Open Volume 1 ; 1 >
 
   }
 
