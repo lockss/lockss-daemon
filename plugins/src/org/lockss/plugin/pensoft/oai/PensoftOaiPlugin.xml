@@ -1,0 +1,122 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.pensoft.oai.PensoftOaiPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Pensoft OAI Plugin</string>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.67.5</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Pensoft OAI Plugin, Base URL %s, OAI Set %s, OAI Date %s", base_url, au_oai_set, au_oai_date</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%s", base_url</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
+      <string>1,"^%sarticles.php\?id=[0-9]+$", base_url</string>
+      <string>1,"^%slib/ajax_srv/article_elements_srv.php\?action=download_pdf&amp;item_id=[0-9]+$", base_url</string>
+      <string>1,"^%slib/ajax_srv/generate_pdf.php\?document_id=[0-9]+&amp;(readonly_preview=1)?$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%sarticles.php\?id=[0-9]+$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>au_oai_set</key>
+        <displayName>OAI Set</displayName>
+        <description>OAI PMH set of this AU. [NONE] if you would like to include all sets</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>au_oai_date</key>
+        <displayName>OAI Date</displayName>
+        <description>Rules to filter records based upon metadata</description>
+        <type>1</type>
+        <size>128</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_exclude_urls_from_polls_pattern</string>
+    <string>"^%soai/request\?verb=GetRecord&amp;.+$", base_url</string>
+  </entry>
+  <entry>
+    <string>au_exclude_urls_from_poll_results_pattern</string> 
+    <string>"^%soai/request\?verb=GetRecord&amp;.+$", base_url</string>
+  </entry>
+  <entry>
+    <string>plugin_crawl_seed_factory</string>
+    <string>org.lockss.plugin.pensoft.oai.PensoftOaiCrawlSeedFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.pensoft.oai.PensoftOaiHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.pensoft.oai.PensoftOaiHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.pensoft.oai.PensoftOaiArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.pensoft.oai.PensoftOaiArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.pensoft.oai.PensoftOaiHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+</map>
