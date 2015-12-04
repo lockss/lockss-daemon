@@ -20,12 +20,12 @@
       param[base_url] = http://ercw.openlibrary.manchester.ac.uk/
       param[journal_id] = ercw
     
-      au < testing ; exists ; 2009 ; 2009 ; Ethnicity and Race in a Changing World Volume 1 ; 1 >
-      au < testing ; exists ; 2010 ; 2010 ; Ethnicity and Race in a Changing World Volume 2 ; 2 >
-      au < testing ; exists ; 2011 ; 2011 ; Ethnicity and Race in a Changing World Volume 3 ; 3 >
-      au < testing ; exists ; 2012 ; 2012 ; Ethnicity and Race in a Changing World Volume 4 ; 4 >
-      au < testing ; exists ; 2013 ; 2013 ; Ethnicity and Race in a Changing World Volume 5 ; 5 >
-      au < testing ; exists ; 2014 ; 2014 ; Ethnicity and Race in a Changing World Volume 6 ; 6 >
+      au < ready ; exists ; 2009 ; 2009 ; Ethnicity and Race in a Changing World Volume 1 ; 1 >
+      au < ready ; exists ; 2010 ; 2010 ; Ethnicity and Race in a Changing World Volume 2 ; 2 >
+      au < ready ; exists ; 2011 ; 2011 ; Ethnicity and Race in a Changing World Volume 3 ; 3 >
+      au < ready ; exists ; 2012 ; 2012 ; Ethnicity and Race in a Changing World Volume 4 ; 4 >
+      au < ready ; exists ; 2013 ; 2013 ; Ethnicity and Race in a Changing World Volume 5 ; 5 >
+      au < ready ; exists ; 2014 ; 2014 ; Ethnicity and Race in a Changing World Volume 6 ; 6 >
 
   }
 
@@ -39,7 +39,7 @@
       param[base_url] = http://jbr.openlibrary.manchester.ac.uk/
       param[journal_id] = jbr
     
-      au < testing ; exists ; 2015 ; 2015 ; James Baldwin Journal Volume 1 ; 1 >
+      au < ready ; exists ; 2015 ; 2015 ; James Baldwin Journal Volume 1 ; 1 >
 
   }
 
