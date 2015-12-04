@@ -933,43 +933,6 @@
 
     {
       title <
-        name = Cerebrospinal Fluid Research ;
-        eissn = 1743-8454 ;
-        issnl = 1743-8454
-      >
-
-      comment[continued_by] = 2045-8118
-      param[journal_eissn] = 1743-8454
-
-      {
-      comment[base_url] = http://cerebrospinalfluidresearch.biomedcentral.com/
-
-      au < doNotProcess ; 2004 ; Cerebrospinal Fluid Research Volume 1 [superseded] ; 1 >
-      au < doNotProcess ; 2005 ; Cerebrospinal Fluid Research Volume 2 [superseded] ; 2 >
-      au < doNotProcess ; 2006 ; Cerebrospinal Fluid Research Volume 3 [superseded] ; 3 >
-      au < doNotProcess ; 2007 ; Cerebrospinal Fluid Research Volume 4 [superseded] ; 4 >
-      au < doNotProcess ; 2008 ; Cerebrospinal Fluid Research Volume 5 [superseded] ; 5 >
-      au < doNotProcess ; 2009 ; Cerebrospinal Fluid Research Volume 6 [superseded] ; 6 >
-      au < doNotProcess ; 2010 ; Cerebrospinal Fluid Research Volume 7 [superseded] ; 7 >
-      }
-
-      {
-      comment[base_url] = http://fluidsbarrierscns.biomedcentral.com/
-
-      au < exists ; 2004 ; Cerebrospinal Fluid Research Volume 1 ; 1 >
-      au < exists ; 2005 ; Cerebrospinal Fluid Research Volume 2 ; 2 >
-      au < exists ; 2006 ; Cerebrospinal Fluid Research Volume 3 ; 3 >
-      au < exists ; 2007 ; Cerebrospinal Fluid Research Volume 4 ; 4 >
-      au < exists ; 2008 ; Cerebrospinal Fluid Research Volume 5 ; 5 >
-      au < exists ; 2009 ; Cerebrospinal Fluid Research Volume 6 ; 6 >
-      au < exists ; 2010 ; Cerebrospinal Fluid Research Volume 7 ; 7 >
-
-      }
-
-    }
-
-    {
-      title <
         name = Child and Adolescent Psychiatry and Mental Health ;
         eissn = 1753-2000 ;
         issnl = 1753-2000
@@ -1047,43 +1010,6 @@
       au < doNotProcess ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 >
       au < doNotProcess ; 2014 ; Chiropractic & Manual Therapies Volume 22 ; 22 >
       au < exists ; 2015 ; Chiropractic & Manual Therapies Volume 23 ; 23 >
-    }
-
-    {
-      title <
-        name = Chiropractic & Osteopathy ;
-        eissn = 1746-1340 ;
-        issnl = 1746-1340
-      >
-
-      param[journal_eissn] = 1746-1340
-
-      {
-
-        comment[base_url] = http://chiroandosteo.biomedcentral.com/
-
-        au < doNotProcess ; 2005 ; Chiropractic & Osteopathy Volume 13 [superseded] ; 13 >
-        au < doNotProcess ; 2006 ; Chiropractic & Osteopathy Volume 14 [superseded] ; 14 >
-        au < doNotProcess ; 2007 ; Chiropractic & Osteopathy Volume 15 [superseded] ; 15 >
-        au < doNotProcess ; 2008 ; Chiropractic & Osteopathy Volume 16 [superseded] ; 16 >
-        au < doNotProcess ; 2009 ; Chiropractic & Osteopathy Volume 17 [superseded] ; 17 >
-        au < doNotProcess ; 2010 ; Chiropractic & Osteopathy Volume 18 [superseded] ; 18 >
-
-      }
-
-      {
-
-        comment[base_url] = http://chiromt.biomedcentral.com/
-
-        au < doNotProcess ; 2005 ; Chiropractic & Osteopathy Volume 13 ; 13 >
-        au < doNotProcess ; 2006 ; Chiropractic & Osteopathy Volume 14 ; 14 >
-        au < doNotProcess ; 2007 ; Chiropractic & Osteopathy Volume 15 ; 15 >
-        au < doNotProcess ; 2008 ; Chiropractic & Osteopathy Volume 16 ; 16 >
-        au < doNotProcess ; 2009 ; Chiropractic & Osteopathy Volume 17 ; 17 >
-        au < doNotProcess ; 2010 ; Chiropractic & Osteopathy Volume 18 ; 18 >
-
-      }
-
     }
 
     {
@@ -1225,31 +1151,6 @@
 
     {
       title <
-        name = Comparative Hepatology ;
-        eissn = 1476-5926 ;
-        issnl = 1476-5926
-      >
-
-      comment[base_url] = http://comparative-hepatology.biomedcentral.com/
-      param[journal_eissn] = 1476-5926
-      comment[0] = no publication after 2012
-
-      au < doNotProcess ; 2002 ; Comparative Hepatology Volume 1 ; 1 >
-      au < doNotProcess ; 2003 ; Comparative Hepatology Volume 2 ; 2 >
-      au < doNotProcess ; 2004 ; Comparative Hepatology Volume 3 ; 3 >
-      au < doNotProcess ; 2005 ; Comparative Hepatology Volume 4 ; 4 >
-      au < doNotProcess ; 2006 ; Comparative Hepatology Volume 5 ; 5 >
-      au < doNotProcess ; 2007 ; Comparative Hepatology Volume 6 ; 6 >
-      au < doNotProcess ; 2008 ; Comparative Hepatology Volume 7 ; 7 >
-      au < doNotProcess ; 2009 ; Comparative Hepatology Volume 8 ; 8 >
-      au < doNotProcess ; 2010 ; Comparative Hepatology Volume 9 ; 9 >
-      au < doNotProcess ; 2011 ; Comparative Hepatology Volume 10 ; 10 >
-      au < doNotProcess ; 2012 ; Comparative Hepatology Volume 11 ; 11 >
-
-    }
-
-    {
-      title <
         name = Conflict and Health ;
         eissn = 1752-1505 ;
         issnl = 1752-1505
@@ -1293,30 +1194,6 @@
       au < exists ; 2013 ; Cost Effectiveness and Resource Allocation Volume 11 ; 11 >
       au < exists ; 2014 ; Cost Effectiveness and Resource Allocation Volume 12 ; 12 >
       au < exists ; 2015 ; Cost Effectiveness and Resource Allocation Volume 13 ; 13 >
-
-    }
-
-    {
-      title <
-        name = Cough ;
-        eissn = 1745-9974 ;
-        issnl = 1745-9974
-      >
-
-      comment[base_url] = http://coughjournal.biomedcentral.com/
-      param[journal_eissn] = 1745-9974
-      # stopped publishing
-
-      au < doNotProcess ; 2005 ; Cough Volume 1 ; 1 >
-      au < doNotProcess ; 2006 ; Cough Volume 2 ; 2 >
-      au < doNotProcess ; 2007 ; Cough Volume 3 ; 3 >
-      au < doNotProcess ; 2008 ; Cough Volume 4 ; 4 >
-      au < doNotProcess ; 2009 ; Cough Volume 5 ; 5 >
-      au < doNotProcess ; 2010 ; Cough Volume 6 ; 6 >
-      au < doNotProcess ; 2011 ; Cough Volume 7 ; 7 >
-      au < doNotProcess ; 2012 ; Cough Volume 8 ; 8 >
-      au < doNotProcess ; 2013 ; Cough Volume 9 ; 9 >
-      au < exists ; 2014 ; Cough Volume 10 ; 10 >
 
     }
 
@@ -1417,29 +1294,6 @@
 
     {
       title <
-        name = Dynamic Medicine ;
-        eissn = 1476-5918 ;
-        issnl = 1476-5918
-      >
-
-      comment[base_url] = http://dynamic-med.biomedcentral.com/
-      param[journal_eissn] = 1476-5918
-
-      comment[0] = This journal stopped publishing through BioMedCentral after 2009.
-
-      au < doNotProcess ; 2002 ; Dynamic Medicine Volume 1 ; 1 >
-      au < doNotProcess ; 2003 ; Dynamic Medicine Volume 2 ; 2 >
-      au < doNotProcess ; 2004 ; Dynamic Medicine Volume 3 ; 3 >
-      au < doNotProcess ; 2005 ; Dynamic Medicine Volume 4 ; 4 >
-      au < doNotProcess ; 2006 ; Dynamic Medicine Volume 5 ; 5 >
-      au < doNotProcess ; 2007 ; Dynamic Medicine Volume 6 ; 6 >
-      au < doNotProcess ; 2008 ; Dynamic Medicine Volume 7 ; 7 >
-      au < doNotProcess ; 2009 ; Dynamic Medicine Volume 8 ; 8 >
-
-    }
-
-    {
-      title <
         name = Emerging Themes in Epidemiology ;
         eissn = 1742-7622 ;
         issnl = 1742-7622
@@ -1505,31 +1359,6 @@
       au < exists ; 2013 ; Environmental Health Volume 12 ; 12 >
       au < exists ; 2014 ; Environmental Health Volume 13 ; 13 >
       au < exists ; 2015 ; Environmental Health Volume 14 ; 14 >
-
-    }
-
-    {
-      title <
-        name = Epidemiologic Perspectives & Innovations ;
-        eissn = 1742-5573 ;
-        issnl = 1742-5573
-      >
-
-      {
-
-        comment[base_url] = http://epi-perspectives.biomedcentral.com/
-        param[journal_eissn] = 1742-5573
-
-        au < doNotProcess ; 2004 ; Epidemiologic Perspectives & Innovations Volume 1 ; 1 >
-        au < doNotProcess ; 2005 ; Epidemiologic Perspectives & Innovations Volume 2 ; 2 >
-        au < doNotProcess ; 2006 ; Epidemiologic Perspectives & Innovations Volume 3 ; 3 >
-        au < doNotProcess ; 2007 ; Epidemiologic Perspectives & Innovations Volume 4 ; 4 >
-        au < doNotProcess ; 2008 ; Epidemiologic Perspectives & Innovations Volume 5 ; 5 >
-        au < doNotProcess ; 2009 ; Epidemiologic Perspectives & Innovations Volume 6 ; 6 >
-        au < doNotProcess ; 2010 ; Epidemiologic Perspectives & Innovations Volume 7 ; 7 >
-        au < doNotProcess ; 2011 ; Epidemiologic Perspectives & Innovations Volume 8 ; 8 >
-
-      }
 
     }
 
@@ -1752,30 +1581,6 @@
 
     {
       title <
-        name = Genetic Vaccines and Therapy ;
-        eissn = 1479-0556 ;
-        issnl = 1479-0556
-      >
-
-      comment[base_url] = http://gvt-journal.biomedcentral.com/
-      param[journal_eissn] = 1479-0556
-      comment[0] = no publication after 2012
-
-      au < doNotProcess ; 2003 ; Genetic Vaccines and Therapy Volume 1 ; 1 >
-      au < doNotProcess ; 2004 ; Genetic Vaccines and Therapy Volume 2 ; 2 >
-      au < doNotProcess ; 2005 ; Genetic Vaccines and Therapy Volume 3 ; 3 >
-      au < doNotProcess ; 2006 ; Genetic Vaccines and Therapy Volume 4 ; 4 >
-      au < doNotProcess ; 2007 ; Genetic Vaccines and Therapy Volume 5 ; 5 >
-      au < doNotProcess ; 2008 ; Genetic Vaccines and Therapy Volume 6 ; 6 >
-      au < doNotProcess ; 2009 ; Genetic Vaccines and Therapy Volume 7 ; 7 >
-      au < doNotProcess ; 2010 ; Genetic Vaccines and Therapy Volume 8 ; 8 >
-      au < doNotProcess ; 2011 ; Genetic Vaccines and Therapy Volume 9 ; 9 >
-      au < doNotProcess ; 2012 ; Genetic Vaccines and Therapy Volume 10 ; 10 >
-
-    }
-
-    {
-      title <
         name = Genetics Selection Evolution ;
         issn = 0999-193X ;
         eissn = 1297-9686 ;
@@ -1861,25 +1666,6 @@
       au < exists ; 2013 ; Genome Biology Volume 14 ; 14 >
       au < exists ; 2014 ; Genome Biology Volume 15 ; 15 >
       au < exists ; 2015 ; Genome Biology Volume 16 ; 16 >
-
-    }
-
-    {
-      title <
-        name = Genome Integrity ;
-        eissn = 2041-9414 ;
-        issnl = 2041-9414
-      >
-
-      comment[base_url] = http://genomeintegrity.biomedcentral.com/
-      param[journal_eissn] = 2041-9414
-      #ceased June 2014. Moved to MedKnow publications.
-
-      au < doNotProcess ; 2010 ; Genome Integrity Volume 1 ; 1 >
-      au < doNotProcess ; 2011 ; Genome Integrity Volume 2 ; 2 >
-      au < doNotProcess ; 2012 ; Genome Integrity Volume 3 ; 3 >
-      au < exists ; 2013 ; Genome Integrity Volume 4 ; 4 >
-      au < exists ; 2014 ; Genome Integrity Volume 5 ; 5 >
 
     }
 
@@ -2111,25 +1897,6 @@
 
     {
       title <
-        name = Herpesviridae ;
-        issn = 2042-4280 ;
-        issnl = 2042-4280
-      >
-
-      comment[base_url] = http://herpesviridae.biomedcentral.com/
-      param[journal_eissn] = 2042-4280
-      comment[0] = stopped publishing.
-
-      au < exists ; 2010 ; Herpesviridae Volume 1 ; 1 >
-      au < exists ; 2011 ; Herpesviridae Volume 2 ; 2 >
-      au < exists ; 2012 ; Herpesviridae Volume 3 ; 3 >
-      au < exists ; 2013 ; Herpesviridae Volume 4 ; 4 >
-      au < exists ; 2014 ; Herpesviridae Volume 5 ; 5 >
-
-    }
-
-    {
-      title <
         name = Human Genomics ;
         issn = 1473-9542 ;
         eissn = 1479-7364 ;
@@ -2204,26 +1971,6 @@
 
     {
       title <
-        name = Immunome Research ;
-        eissn = 1745-7580
-      >
-
-      comment[base_url] = http://immunome-research.biomedcentral.com/
-      param[journal_eissn] = 1745-7580
-
-      comment[0] = Moved to Springer
-
-      au < doNotProcess ; 2005 ; Immunome Research Volume 1 ; 1 >
-      au < doNotProcess ; 2006 ; Immunome Research Volume 2 ; 2 >
-      au < doNotProcess ; 2007 ; Immunome Research Volume 3 ; 3 >
-      au < doNotProcess ; 2008 ; Immunome Research Volume 4 ; 4 >
-      au < exists ; 2009 ; Immunome Research Volume 5 ; 5 >
-      au < exists ; 2010 ; Immunome Research Volume 6 ; 6 >
-
-    }
-
-    {
-      title <
         name = Implementation Science ;
         eissn = 1748-5908 ;
         issnl = 1748-5908
@@ -2285,26 +2032,6 @@
       au < exists ; 2013 ; Infectious Diseases of Poverty Volume 2 ; 2 >
       au < exists ; 2014 ; Infectious Diseases of Poverty Volume 3 ; 3 >
       au < exists ; 2015 ; Infectious Diseases of Poverty Volume 4 ; 4 >
-
-    }
-
-    {
-      title <
-        name = International Archives of Medicine ;
-        eissn = 1755-7682 ;
-        issnl = 1755-7682
-      >
-
-      comment[base_url] = http://intarchmed.biomedcentral.com/
-      param[journal_eissn] = 1755-7682
-      comment[0] = leaving to iMedPub on 2014-12-31
-
-      au < doNotProcess ; 2008 ; International Archives of Medicine Volume 1 ; 1 >
-      au < doNotProcess ; 2009 ; International Archives of Medicine Volume 2 ; 2 >
-      au < doNotProcess ; 2010 ; International Archives of Medicine Volume 3 ; 3 >
-      au < doNotProcess ; 2011 ; International Archives of Medicine Volume 4 ; 4 >
-      au < exists ; 2012 ; International Archives of Medicine Volume 5 ; 5 >
-      au < exists ; 2013 ; International Archives of Medicine Volume 6 ; 6 >
 
     }
 
@@ -2461,26 +2188,6 @@
 
     {
       title <
-        name = International Seminars in Surgical Oncology ;
-        eissn = 1477-7800 ;
-        issnl = 1477-7800
-      >
-
-      comment[base_url] = http://issoonline.biomedcentral.com/
-      param[journal_eissn] = 1477-7800
-
-      au < doNotProcess ; 2004 ; International Seminars in Surgical Oncology Volume 1 ; 1 >
-      au < doNotProcess ; 2005 ; International Seminars in Surgical Oncology Volume 2 ; 2 >
-      au < doNotProcess ; 2006 ; International Seminars in Surgical Oncology Volume 3 ; 3 >
-      au < doNotProcess ; 2007 ; International Seminars in Surgical Oncology Volume 4 ; 4 >
-      au < doNotProcess ; 2008 ; International Seminars in Surgical Oncology Volume 5 ; 5 >
-      au < doNotProcess ; 2009 ; International Seminars in Surgical Oncology Volume 6 ; 6 >
-      au < exists ; 2010 ; International Seminars in Surgical Oncology Volume 7 ; 7 >
-
-    }
-
-    {
-      title <
         name = Investigative Genetics ;
         issn = 2041-2223 ;
         issnl = 2041-2223
@@ -2496,35 +2203,6 @@
       au < exists ; 2014 ; Investigative Genetics Volume 5 ; 5 >
       au < exists ; 2015 ; Investigative Genetics Volume 6 ; 6 >
 
-    }
-
-    {
-      title <
-        name = Iranian Journal of Environmental Health Science & Engineering ;
-        eissn = 1735-1979
-      >
-
-      comment[base_url] = http://ijehse.biomedcentral.com/
-      param[journal_eissn] = 1735-1979
-
-      au < exists ; 2012 ; Iranian Journal of Environmental Health Science & Engineering Volume 9 ; 9 >
-      au < exists ; 2013 ; Iranian Journal of Environmental Health Science & Engineering Volume 10 ; 10 >
-
-    }
-
-    {
-      title <
-        name = Journal of Environmental Health Science & Engineering ;
-        eissn = 2052-336X
-      >
-
-        param[journal_eissn] = 2052-336X
-        comment[base_url] = http://ijehse.biomedcentral.com/
-        comment[continues] = 1735-1979
-
-        au < exists ; 2013 ; Journal of Environmental Health Science & Engineering Volume 11 ; 11 >
-        au < exists ; 2014 ; Journal of Environmental Health Science & Engineering Volume 12 ; 12 >
-        au < exists ; 2015 ; Journal of Environmental Health Science & Engineering Volume 13 ; 13 >
     }
 
     {
@@ -2643,25 +2321,6 @@
 
     {
       title <
-        name = Journal of Autoimmune Diseases ;
-        eissn = 1740-2557 ;
-        issnl = 1740-2557
-      >
-
-      comment[base_url] = http://jautoimdis.biomedcentral.com/
-      param[journal_eissn] = 1740-2557
-
-      au < doNotProcess ; 2004 ; Journal of Autoimmune Diseases Volume 1 ; 1 >
-      au < doNotProcess ; 2005 ; Journal of Autoimmune Diseases Volume 2 ; 2 >
-      au < doNotProcess ; 2006 ; Journal of Autoimmune Diseases Volume 3 ; 3 >
-      au < doNotProcess ; 2007 ; Journal of Autoimmune Diseases Volume 4 ; 4 >
-      au < doNotProcess ; 2008 ; Journal of Autoimmune Diseases Volume 5 ; 5 >
-      au < exists ; 2009 ; Journal of Autoimmune Diseases Volume 6 ; 6 >
-
-    }
-
-    {
-      title <
         name = Journal of Biological Engineering ;
         eissn = 1754-1611 ;
         issnl = 1754-1611
@@ -2695,47 +2354,6 @@
 
       au < exists ; 2014 ; Journal of Biological Research-Thessaloniki Volume 21 ; 21 >
       au < exists ; 2015 ; Journal of Biological Research-Thessaloniki Volume 22 ; 22 >
-
-    }
-
-    {
-      title <
-        name = Journal of Biology ;
-        issn = 1475-4924 ;
-        issnl = 1475-4924
-      >
-
-      comment[base_url] = http://jbiol.com/
-      param[journal_eissn] = 1475-4924
-      comment[continued_by] = BMC Biology
-      comment[0] = no publication after 2010. Journal archived and moved to http://jbiol.biomedcentral.com/
-
-      au < doNotProcess ; 2002 ; Journal of Biology Volume 1 ; 1 >
-      au < doNotProcess ; 2003 ; Journal of Biology Volume 2 ; 2 >
-      au < doNotProcess ; 2004 ; Journal of Biology Volume 3 ; 3 >
-      au < doNotProcess ; 2005 ; Journal of Biology Volume 4 ; 4 >
-      au < doNotProcess ; 2006 ; Journal of Biology Volume 5 ; 5 >
-      au < doNotProcess ; 2007 ; Journal of Biology Volume 6 ; 6 >
-      au < doNotProcess ; 2008 ; Journal of Biology Volume 7 ; 7 >
-      au < doNotProcess ; 2009 ; Journal of Biology Volume 8 ; 8 >
-      au < exists ; 2010 ; Journal of Biology Volume 9 ; 9 >
-
-    }
-
-    {
-      title <
-        name = Journal of Biomedical Discovery and Collaboration ;
-        issn = 1747-5333 ;
-        issnl = 1747-5333
-      >
-
-      comment[base_url] = http://j-biomed-discovery.biomedcentral.com/
-      param[journal_eissn] = 1747-5333
-
-      au < doNotProcess ; 2006 ; Journal of Biomedical Discovery and Collaboration Volume 1 ; 1 >
-      au < doNotProcess ; 2007 ; Journal of Biomedical Discovery and Collaboration Volume 2 ; 2 >
-      au < doNotProcess ; 2008 ; Journal of Biomedical Discovery and Collaboration Volume 3 ; 3 >
-      au < exists ; 2009 ; Journal of Biomedical Discovery and Collaboration Volume 4 ; 4 >
 
     }
 
@@ -2778,31 +2396,6 @@
       au < exists ; 2015 ; Journal of Biomedical Semantics Volume 6 ; 6 >
 
     }
-
-    {
-      title <
-        name = Journal of Brachial Plexus and Peripheral Nerve Injury ;
-        eissn = 1749-7221 ;
-        issnl = 1749-7221
-      >
-
-      comment[moved] = moved to Thieme.
-
-      comment[base_url] = http://jbppni.biomedcentral.com/
-      param[journal_eissn] = 1749-7221
-
-      au < doNotProcess ; 2006 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 1 ; 1 >
-      au < doNotProcess ; 2007 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2 ; 2 >
-      au < doNotProcess ; 2008 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 3 ; 3 >
-      au < doNotProcess ; 2009 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 4 ; 4 >
-      au < doNotProcess ; 2010 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 5 ; 5 >
-      au < doNotProcess ; 2011 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 6 ; 6 >
-      au < exists ; 2012 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 7 ; 7 >
-      au < exists ; 2013 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 8 ; 8 >
-      au < exists ; 2014 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 9 ; 9 >
-
-    }
-
 
     {
       title <
@@ -2998,30 +2591,6 @@
 
     {
       title <
-        name = Journal of Immune Based Therapies and Vaccines ;
-        eissn = 1476-8518 ;
-        issnl = 1476-8518
-      >
-
-      comment[base_url] = http://jibtherapies.biomedcentral.com/
-      param[journal_eissn] = 1476-8518
-
-      comment[moved] = as of 1/1/2012 this journal has moved platforms.
-
-      au < doNotProcess ; 2003 ; Journal of Immune Based Therapies and Vaccines Volume 1 ; 1 >
-      au < doNotProcess ; 2004 ; Journal of Immune Based Therapies and Vaccines Volume 2 ; 2 >
-      au < doNotProcess ; 2005 ; Journal of Immune Based Therapies and Vaccines Volume 3 ; 3 >
-      au < doNotProcess ; 2006 ; Journal of Immune Based Therapies and Vaccines Volume 4 ; 4 >
-      au < doNotProcess ; 2007 ; Journal of Immune Based Therapies and Vaccines Volume 5 ; 5 >
-      au < doNotProcess ; 2008 ; Journal of Immune Based Therapies and Vaccines Volume 6 ; 6 >
-      au < doNotProcess ; 2009 ; Journal of Immune Based Therapies and Vaccines Volume 7 ; 7 >
-      au < doNotProcess ; 2010 ; Journal of Immune Based Therapies and Vaccines Volume 8 ; 8 >
-      au < doNotProcess ; 2011 ; Journal of Immune Based Therapies and Vaccines Volume 9 ; 9 >
-
-    }
-
-    {
-      title <
         name = Journal of Inflammation ;
         eissn = 1476-9255 ;
         issnl = 1476-9255
@@ -3096,28 +2665,6 @@
       au < exists ; 2013 ; Journal of Molecular Psychiatry Volume 1 ; 1 >
       au < exists ; 2014 ; Journal of Molecular Psychiatry Volume 2 ; 2 >
       au < exists ; 2015 ; Journal of Molecular Psychiatry Volume 3 ; 3 >
-
-    }
-
-    {
-      title <
-        name = Journal of Molecular Signaling ;
-        eissn = 1750-2187 ;
-        issnl = 1750-2187
-      >
-
-      comment[base_url] = http://jmolecularsignaling.biomedcentral.com/
-      param[journal_eissn] = 1750-2187
-      comment[publisher] = Moved to Ubiquity Press
-
-      au < doNotProcess ; 2006 ; Journal of Molecular Signaling Volume 1 ; 1 >
-      au < doNotProcess ; 2007 ; Journal of Molecular Signaling Volume 2 ; 2 >
-      au < doNotProcess ; 2008 ; Journal of Molecular Signaling Volume 3 ; 3 >
-      au < doNotProcess ; 2009 ; Journal of Molecular Signaling Volume 4 ; 4 >
-      au < doNotProcess ; 2010 ; Journal of Molecular Signaling Volume 5 ; 5 >
-      au < doNotProcess ; 2011 ; Journal of Molecular Signaling Volume 6 ; 6 >
-      au < exists ; 2012 ; Journal of Molecular Signaling Volume 7 ; 7 >
-      au < exists ; 2013 ; Journal of Molecular Signaling Volume 8 ; 8 >
 
     }
 
@@ -3286,22 +2833,6 @@
       au < exists ; 2013 ; Journal of Orthopaedic Surgery and Research Volume 8 ; 8 >
       au < exists ; 2014 ; Journal of Orthopaedic Surgery and Research Volume 9 ; 9 >
       au < exists ; 2015 ; Journal of Orthopaedic Surgery and Research Volume 10 ; 10 >
-
-    }
-
-    {
-      title <
-        name = Journal of Otolaryngology - Head and Neck Surgery ;
-        issn = 1916-0216 ;
-        issnl = 1916-0216
-      >
-
-      comment[base_url] = http://journalotohns.biomedcentral.com/
-      param[journal_eissn] = 1916-0216
-
-      au < exists ; 2013 ; Journal of Otolaryngology - Head and Neck Surgery Volume 42 ; 42 >
-      au < exists ; 2014 ; Journal of Otolaryngology - Head and Neck Surgery Volume 43 ; 43 >
-      au < exists ; 2015 ; Journal of Otolaryngology - Head and Neck Surgery Volume 44 ; 44 >
 
     }
 
@@ -3493,22 +3024,6 @@
 
     {
       title <
-        name = Longevity & Healthspan ;
-        issn = 2046-2395
-      >
-
-      comment[base_url] = http://longevityandhealthspan.biomedcentral.com/
-      param[journal_eissn] = 2046-2395
-      #stopped publishing
-
-      au < exists ; 2012 ; Longevity & Healthspan Volume 1 ; 1 >
-      au < exists ; 2013 ; Longevity & Healthspan Volume 2 ; 2 >
-      au < exists ; 2014 ; Longevity & Healthspan Volume 3 ; 3 >
-
-    }
-
-    {
-      title <
         name = Malaria Journal ;
         eissn = 1475-2875 ;
         issnl = 1475-2875
@@ -3577,24 +3092,6 @@
       au < exists ; 2013 ; Microbial Cell Factories Volume 12 ; 12 >
       au < exists ; 2014 ; Microbial Cell Factories Volume 13 ; 13 >
       au < exists ; 2015 ; Microbial Cell Factories Volume 14 ; 14 >
-
-    }
-
-    {
-      title <
-        name = Microbial Informatics and Experimentation ;
-        eissn = 2042-5783 ;
-        issnl = 2042-5783
-      >
-
-      comment[base_url] = http://microbialinformaticsj.biomedcentral.com/
-      param[journal_eissn] = 2042-5783
-      #stopped publishing
-
-      au < doNotProcess ; 2011 ; Microbial Informatics and Experimentation Volume 1 ; 1 >
-      au < exists ; 2012 ; Microbial Informatics and Experimentation Volume 2 ; 2 >
-      au < exists ; 2013 ; Microbial Informatics and Experimentation Volume 3 ; 3 >
-      au < exists ; 2014 ; Microbial Informatics and Experimentation Volume 4 ; 4 >
 
     }
 
@@ -4916,8 +4413,8 @@
         eissn = 2055-8260
       >
 
-      param[base_url] = http://clindiabetesendo.biomedcentral.com/
-      param[journal_issn] = 2055-8260
+      comment[base_url] = http://clindiabetesendo.biomedcentral.com/
+      param[journal_eissn] = 2055-8260
       #journal_id = clindiabetesendo
 
       au < exists ; 2015 ; Clinical Diabetes and Endocrinology Volume 1 ; 1 >
@@ -4931,8 +4428,8 @@
         eissn = 2054-9040 
       >
 
-      param[base_url] = http://copdrp.biomedcentral.com/
-      param[journal_issn] = 2054-9040
+      comment[base_url] = http://copdrp.biomedcentral.com/
+      param[journal_eissn] = 2054-9040
       #journal_id = copdrp
 
       au < exists ; 2015 ; COPD Research and Practice Volume 1 ; 1 >
@@ -4946,7 +4443,7 @@
       >
 
       param[base_url] = http://nutrirejournal.biomedcentral.com/
-      param[journal_issn] = 2316-7874
+      param[journal_eissn] = 2316-7874
       #journal_id = nutrirejournal
 
       au < expected ; 2016 ; Nutrire Volume 1 ; 1 >
@@ -4961,10 +4458,247 @@
       >
 
       param[base_url] = http://tdtmvjournal.biomedcentral.com/
-      param[journal_issn] = 2055-0936
+      param[journal_eissn] = 2055-0936
       #journal_id = tdtmvjournal
 
       au < exists ; 2015 ; Tropical Diseases, Travel Medicine and Vaccines Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
+        name = Disaster and Military Medicine ;
+        eissn = 2054-314X ;
+        issnl = 2054-314X
+      >
+
+      param[journal_eissn] = 2054-314X
+
+      au < exists ; 2015 ; Disaster and Military Medicine Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
+        name = European Review of Aging and Physical Activity ;
+        issn = 1813-7253 ;
+        eissn = 1861-6909 ;
+        issnl = 1861-6909
+      >
+      
+      param[journal_eissn] = 1861-6909
+
+      au < exists ; 2006 ; European Review of Aging and Physical Activity Volume 3 ; 3 >
+      au < exists ; 2007 ; European Review of Aging and Physical Activity Volume 4 ; 4 >
+      au < exists ; 2008 ; European Review of Aging and Physical Activity Volume 5 ; 5 >
+      au < exists ; 2009 ; European Review of Aging and Physical Activity Volume 6 ; 6 >
+      au < exists ; 2010 ; European Review of Aging and Physical Activity Volume 7 ; 7 >
+      au < exists ; 2011 ; European Review of Aging and Physical Activity Volume 8 ; 8 >
+      au < exists ; 2012 ; European Review of Aging and Physical Activity Volume 9 ; 9 >
+      au < exists ; 2013 ; European Review of Aging and Physical Activity Volume 10 ; 10 >
+      au < exists ; 2014 ; European Review of Aging and Physical Activity Volume 11 ; 11 >
+      au < exists ; 2015 ; European Review of Aging and Physical Activity Volume 12 ; 12 >
+
+    }
+
+    {
+      title <
+        name = Fertility Research and Practice ;
+        eissn = 2054-7099
+      >
+      
+      param[journal_eissn] = 2054-7099
+
+      au < exists ; 2015 ; Fertility Research and Practice Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
+        name = International Journal of Retina and Vitreous ;
+        eissn = 2056-9920 ;
+        issnl = 2056-9920
+      >
+
+      param[journal_eissn] = 2056-9920
+
+      au < exists ; 2015 ; International Journal of Retina and Vitreous Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
+        name = Journal of Environmental Health Science and Engineering ;
+        eissn = 2052-336X ;
+        issnl = 2052-336X
+      >
+
+      param[journal_eissn] = 2052-336X
+
+      au < exists ; 2012 ; Journal of Environmental Health Science and Engineering Volume 9 ; 9 >
+      au < exists ; 2013 ; Journal of Environmental Health Science and Engineering Volume 10 ; 10 >
+      au < exists ; 2014 ; Journal of Environmental Health Science and Engineering Volume 11 ; 11 >
+      au < exists ; 2015 ; Journal of Environmental Health Science and Engineering Volume 12 ; 12 >
+
+    }
+
+    {
+      title <
+        name = Journal of Health, Population and Nutrition ;
+        eissn = 2072-1315 ;
+        issnl = 2072-1315
+      >
+
+      param[journal_eissn] = 2072-1315
+
+      au < exists ; 2015 ; Journal of Health, Population and Nutrition Volume 34 ; 34 >
+      au < exists ; 2015 ; Journal of Health, Population and Nutrition Volume 35 ; 35 >
+
+    }
+
+    {
+      title <
+        name = Journal of Otolaryngology - Head & Neck Surgery ;
+        issn = 1916-0216 ;
+        issnl = 1916-0216
+      >
+
+      comment[base_url] = http://journalotohns.biomedcentral.com/
+      param[journal_eissn] = 1916-0216
+
+      au < doNotProcess ; 2013 ; Journal of Otolaryngology - Head & Neck Surgery Volume 42 ; 42 >
+      au < doNotProcess ; 2014 ; Journal of Otolaryngology - Head & Neck Surgery Volume 43 ; 43 >
+      au < doNotProcess ; 2015 ; Journal of Otolaryngology - Head & Neck Surgery Volume 44 ; 44 >
+
+    }
+
+    {
+      title <
+        name = Journal of Pharmaceutical Health Care and Sciences ;
+        eissn = 2055-0294 ;
+        issnl = 2055-0294
+      >
+
+      param[journal_eissn] = 2055-0294
+
+      au < exists ; 2015 ; Journal of Pharmaceutical Health Care and Sciences Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
+        name = Maternal Health, Neonatology and Perinatology ;
+        eissn = 2054-958X ;
+        issnl = 2054-958X
+      >
+
+      param[journal_eissn] = 2054-958X
+
+      au < exists ; 2015 ; Maternal Health, Neonatology and Perinatology Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
+        name = Neuropsychiatric Electrophysiology ;
+        eissn = 2055-4788 ;
+        issnl = 2055-4788
+      >
+
+      param[journal_eissn] = 2055-4788
+
+      au < exists ; 2015 ; Neuropsychiatric Electrophysiology Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
+        name = Neurovascular Imaging ;
+        eissn = 2055-5792 ;
+        issnl = 2055-5792
+      >
+
+      param[journal_eissn] = 2055-5792
+
+      au < exists ; 2015 ; Neurovascular Imaging Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
+        name = Pilot and Feasibility Studies ;
+        eissn = 2055-5784 ;
+        issnl = 2055-5784
+      >
+
+      param[journal_eissn] = 2055-5784
+
+      au < exists ; 2015 ; Pilot and Feasibility Studies Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
+        name = Porcine Health Management ;
+        eissn = 2055-5660 ;
+        issnl = 2055-5660
+      >
+
+      param[journal_eissn] = 2055-5660
+
+      au < exists ; 2015 ; Porcine Health Management Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
+        name = Research Involvement and Engagement ;
+        eissn = 2056-7529 ;
+        issnl = 2056-7529
+      >
+
+      param[journal_eissn] = 2056-7529
+
+      au < exists ; 2015 ; Research Involvement and Engagement Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
+        name = Safety in Health ;
+        eissn = 2056-5917 ;
+        issnl = 2056-5917
+      >
+
+      param[journal_eissn] = 2056-5917
+
+      au < exists ; 2015 ; Safety in Health Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
+        name = Women's Midlife Health ;
+        eissn = 2054-2690 ;
+        issnl = 2054-2690
+      >
+
+      param[journal_eissn] = 2054-2690
+
+      au < exists ; 2015 ; Women's Midlife Health Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
+        name = Zoological Letters ;
+        eissn = 2056-306X ;
+        issnl = 2056-306X
+      >
+
+      param[journal_eissn] = 2056-306X
+
+      au < exists ; 2015 ; Zoological Letters Volume 1 ; 1 >
 
     }
 
@@ -4975,7 +4709,7 @@
         issnl = 1471-2253
       >
 
-      param[journal_issn] = 1471-2253
+      param[journal_eissn] = 1471-2253
       comment[journal_code] = bmcanesthesiol
 
       au < doNotProcess ; 2001 ; BMC Anesthesiology Volume 1 ; 1 >
@@ -5003,7 +4737,7 @@
         issnl = 1471-2091
       >
 
-      param[journal_issn] = 1471-2091
+      param[journal_eissn] = 1471-2091
       comment[journal_code] = bmcbiochem
 
       au < doNotProcess ; 2000 ; BMC Biochemistry Volume 1 ; 1 >
@@ -5032,7 +4766,7 @@
         issnl = 1471-2105
       >
 
-      param[journal_issn] = 1471-2105
+      param[journal_eissn] = 1471-2105
       comment[journal_code] = bmcbioinformatics
 
       au < doNotProcess ; 2000 ; BMC Bioinformatics Volume 1 ; 1 >
@@ -5061,7 +4795,7 @@
         issnl = 1741-7007
       >
 
-      param[journal_issn] = 1741-7007
+      param[journal_eissn] = 1741-7007
       comment[journal_code] = bmcbiol
 
       au < doNotProcess ; 2003 ; BMC Biology Volume 1 ; 1 >
@@ -5087,23 +4821,16 @@
         issnl = 2046-1682
       >
 
-      {
-
         comment[back_issues] = see physmath_central for volumes 1-3
 
-        param[journal_issn] = 2046-1682
+        param[journal_eissn] = 2046-1682
         comment[journal_code] = bmcbiophys
 
-        au < doNotProcess ; 2008 ; BMC Biophysics Volume 1 ; 1 >
-        au < doNotProcess ; 2009 ; BMC Biophysics Volume 2 ; 2 >
-        au < doNotProcess ; 2010 ; BMC Biophysics Volume 3 ; 3 >
         au < doNotProcess ; 2011 ; BMC Biophysics Volume 4 ; 4 >
         au < doNotProcess ; 2012 ; BMC Biophysics Volume 5 ; 5 >
         au < exists ; 2013 ; BMC Biophysics Volume 6 ; 6 >
         au < exists ; 2014 ; BMC Biophysics Volume 7 ; 7 >
         au < exists ; 2015 ; BMC Biophysics Volume 8 ; 8 >
-
-      }
 
     }
 
@@ -5114,7 +4841,7 @@
         issnl = 1472-6750
       >
 
-      param[journal_issn] = 1472-6750
+      param[journal_eissn] = 1472-6750
       comment[journal_code] = bmcbiotechnol
 
       au < doNotProcess ; 2001 ; BMC Biotechnology Volume 1 ; 1 >
@@ -5142,7 +4869,7 @@
         issnl = 2052-1839
       >
 
-      param[journal_issn] = 2052-1839
+      param[journal_eissn] = 2052-1839
       comment[journal_code] = bmchematol
       comment[continues] = 1471-2326
 
@@ -5159,7 +4886,7 @@
         issnl = 1471-2407
       >
 
-      param[journal_issn] = 1471-2407
+      param[journal_eissn] = 1471-2407
       comment[journal_code] = bmccancer
 
       au < doNotProcess ; 2001 ; BMC Cancer Volume 1 ; 1 >
@@ -5187,7 +4914,7 @@
         issnl = 1471-2261
       >
 
-      param[journal_issn] = 1471-2261
+      param[journal_eissn] = 1471-2261
       comment[journal_code] = bmccardiovascdisord
 
 
@@ -5216,7 +4943,7 @@
         issnl = 1471-2121
       >
 
-      param[journal_issn] = 1471-2121
+      param[journal_eissn] = 1471-2121
       comment[journal_code] = bmccellbiol
 
       au < doNotProcess ; 2000 ; BMC Cell Biology Volume 1 ; 1 >
@@ -5245,7 +4972,7 @@
         issnl = 1472-6890
       >
 
-      param[journal_issn] = 1472-6890
+      param[journal_eissn] = 1472-6890
       comment[journal_code] = bmcclinpathol
 
       au < doNotProcess ; 2001 ; BMC Clinical Pathology Volume 1 ; 1 >
@@ -5273,7 +5000,7 @@
         issnl = 1472-6882
       >
 
-      param[journal_issn] = 1472-6882
+      param[journal_eissn] = 1472-6882
       comment[journal_code] = bmccomplementalternmed
 
       au < doNotProcess ; 2001 ; BMC Complementary and Alternative Medicine Volume 1 ; 1 >
@@ -5301,7 +5028,7 @@
         issnl = 1471-5945
       >
 
-      param[journal_issn] = 1471-5945
+      param[journal_eissn] = 1471-5945
       comment[journal_code] = bmcdermatol
 
       au < doNotProcess ; 2001 ; BMC Dermatology Volume 1 ; 1 >
@@ -5329,7 +5056,7 @@
         issnl = 1471-213X
       >
 
-      param[journal_issn] = 1471-213X
+      param[journal_eissn] = 1471-213X
       comment[journal_code] = bmcdevbiol
 
       au < doNotProcess ; 2001 ; BMC Developmental Biology Volume 1 ; 1 >
@@ -5357,7 +5084,7 @@
         issnl = 1472-6815
       >
 
-      param[journal_issn] = 1472-6815
+      param[journal_eissn] = 1472-6815
       comment[journal_code] = bmcearnosethroatdisord
 
       au < doNotProcess ; 2001 ; BMC Ear, Nose and Throat Disorders Volume 1 ; 1 >
@@ -5385,7 +5112,7 @@
         issnl = 1472-6785
       >
 
-      param[journal_issn] = 1472-6785
+      param[journal_eissn] = 1472-6785
       comment[journal_code] = bmcecol
 
       au < doNotProcess ; 2001 ; BMC Ecology Volume 1 ; 1 >
@@ -5413,7 +5140,7 @@
         issnl = 1471-227X
       >
 
-      param[journal_issn] = 1471-227X
+      param[journal_eissn] = 1471-227X
       comment[journal_code] = bmcemergmed
 
       au < doNotProcess ; 2001 ; BMC Emergency Medicine Volume 1 ; 1 >
@@ -5441,7 +5168,7 @@
         issnl = 1472-6823
       >
 
-      param[journal_issn] = 1472-6823
+      param[journal_eissn] = 1472-6823
       comment[journal_code] = bmcendocrdisord
 
       au < doNotProcess ; 2001 ; BMC Endocrine Disorders Volume 1 ; 1 >
@@ -5469,7 +5196,7 @@
         issnl = 1471-2148
       >
 
-      param[journal_issn] = 1471-2148
+      param[journal_eissn] = 1471-2148
       comment[journal_code] = bmcevolbiol
 
       au < doNotProcess ; 2001 ; BMC Evolutionary Biology Volume 1 ; 1 >
@@ -5497,7 +5224,7 @@
         issnl = 1471-2296
       >
 
-      param[journal_issn] = 1471-2296
+      param[journal_eissn] = 1471-2296
       comment[journal_code] = bmcfampract
 
       au < doNotProcess ; 2000 ; BMC Family Practice Volume 1 ; 1 >
@@ -5526,7 +5253,7 @@
         issnl = 1471-230X
       >
 
-      param[journal_issn] = 1471-230X
+      param[journal_eissn] = 1471-230X
       comment[journal_code] = bmcgastroenterol
 
       au < doNotProcess ; 2001 ; BMC Gastroenterology Volume 1 ; 1 >
@@ -5554,7 +5281,7 @@
         issnl = 1471-2156
       >
 
-      param[journal_issn] = 1471-2156
+      param[journal_eissn] = 1471-2156
       comment[journal_code] = bmcgenet
 
       au < doNotProcess ; 2000 ; BMC Genetics Volume 1 ; 1 >
@@ -5583,7 +5310,7 @@
         issnl = 1471-2164
       >
 
-      param[journal_issn] = 1471-2164
+      param[journal_eissn] = 1471-2164
       comment[journal_code] = bmcgenomics
 
       au < doNotProcess ; 2000 ; BMC Genomics Volume 1 ; 1 >
@@ -5612,7 +5339,7 @@
         issnl = 1471-2318
       >
 
-      param[journal_issn] = 1471-2318
+      param[journal_eissn] = 1471-2318
       comment[journal_code] = bmcgeriatr
 
       au < doNotProcess ; 2001 ; BMC Geriatrics Volume 1 ; 1 >
@@ -5640,7 +5367,7 @@
         issnl = 1472-6963
       >
 
-      param[journal_issn] = 1472-6963
+      param[journal_eissn] = 1472-6963
       comment[journal_code] = bmchealthservres
 
       au < doNotProcess ; 2001 ; BMC Health Services Research Volume 1 ; 1 >
@@ -5668,7 +5395,7 @@
         issnl = 1471-2172
       >
 
-      param[journal_issn] = 1471-2172
+      param[journal_eissn] = 1471-2172
       comment[journal_code] = bmcimmunol
 
       au < doNotProcess ; 2000 ; BMC Immunology Volume 1 ; 1 >
@@ -5697,7 +5424,7 @@
         issnl = 1471-2334
       >
 
-      param[journal_issn] = 1471-2334
+      param[journal_eissn] = 1471-2334
       comment[journal_code] = bmcinfectdis
 
       au < doNotProcess ; 2001 ; BMC Infectious Diseases Volume 1 ; 1 >
@@ -5725,7 +5452,7 @@
         issnl = 1472-698X
       >
 
-      param[journal_issn] = 1472-698X
+      param[journal_eissn] = 1472-698X
       comment[journal_code] = bmcinthealthhumrights
 
       au < doNotProcess ; 2001 ; BMC International Health and Human Rights Volume 1 ; 1 >
@@ -5753,7 +5480,7 @@
         issnl = 1472-6920
       >
 
-      param[journal_issn] = 1472-6920
+      param[journal_eissn] = 1472-6920
       comment[journal_code] = bmcmededuc
 
       au < doNotProcess ; 2001 ; BMC Medical Education Volume 1 ; 1 >
@@ -5781,7 +5508,7 @@
         issnl = 1472-6939
       >
 
-      param[journal_issn] = 1472-6939
+      param[journal_eissn] = 1472-6939
       comment[journal_code] = bmcmedethics
 
       au < doNotProcess ; 2000 ; BMC Medical Ethics Volume 1 ; 1 >
@@ -5810,7 +5537,7 @@
         issnl = 1471-2350
       >
 
-      param[journal_issn] = 1471-2350
+      param[journal_eissn] = 1471-2350
       comment[journal_code] = bmcmedgenet
 
       au < doNotProcess ; 2000 ; BMC Medical Genetics Volume 1 ; 1 >
@@ -5839,7 +5566,7 @@
         issnl = 1755-8794
       >
 
-      param[journal_issn] = 1755-8794
+      param[journal_eissn] = 1755-8794
       comment[journal_code] = bmcmedgenomics
 
       au < exists ; 2008 ; BMC Medical Genomics Volume 1 ; 1 >
@@ -5860,7 +5587,7 @@
         issnl = 1471-2342
       >
 
-      param[journal_issn] = 1471-2342
+      param[journal_eissn] = 1471-2342
       comment[journal_code] = bmcmedimaging
 
       au < doNotProcess ; 2001 ; BMC Medical Imaging Volume 1 ; 1 >
@@ -5888,7 +5615,7 @@
         issnl = 1472-6947
       >
 
-      param[journal_issn] = 1472-6947
+      param[journal_eissn] = 1472-6947
       comment[journal_code] = bmcmedinformdecismak
 
       au < doNotProcess ; 2001 ; BMC Medical Informatics and Decision Making Volume 1 ; 1 >
@@ -5916,7 +5643,7 @@
         issnl = 1471-2288
       >
 
-      param[journal_issn] = 1471-2288
+      param[journal_eissn] = 1471-2288
       comment[journal_code] = bmcmedresmethodol
 
       au < doNotProcess ; 2001 ; BMC Medical Research Methodology Volume 1 ; 1 >
@@ -5944,7 +5671,7 @@
         issnl = 1741-7015
       >
 
-      param[journal_issn] = 1741-7015
+      param[journal_eissn] = 1741-7015
       comment[journal_code] = bmcmed
 
       au < doNotProcess ; 2003 ; BMC Medicine Volume 1 ; 1 >
@@ -5970,7 +5697,7 @@
         issnl = 1471-2180
       >
 
-      param[journal_issn] = 1471-2180
+      param[journal_eissn] = 1471-2180
       comment[journal_code] = bmcmicrobiol
 
       au < doNotProcess ; 2001 ; BMC Microbiology Volume 1 ; 1 >
@@ -5998,7 +5725,7 @@
         issnl = 1471-2199
       >
 
-      param[journal_issn] = 1471-2199
+      param[journal_eissn] = 1471-2199
       comment[journal_code] = bmcmolbiol
 
       au < doNotProcess ; 2000 ; BMC Molecular Biology Volume 1 ; 1 >
@@ -6027,7 +5754,7 @@
         issnl = 1471-2474
       >
 
-      param[journal_issn] = 1471-2474
+      param[journal_eissn] = 1471-2474
       comment[journal_code] = bmcmusculoskeletdisord
 
       au < doNotProcess ; 2000 ; BMC Musculoskeletal Disorders Volume 1 ; 1 >
@@ -6056,7 +5783,7 @@
         issnl = 1471-2369
       >
 
-      param[journal_issn] = 1471-2369
+      param[journal_eissn] = 1471-2369
       comment[journal_code] = bmcnephrol
 
       au < doNotProcess ; 2000 ; BMC Nephrology Volume 1 ; 1 >
@@ -6085,7 +5812,7 @@
         issnl = 1471-2377
       >
 
-      param[journal_issn] = 1471-2377
+      param[journal_eissn] = 1471-2377
       comment[journal_code] = bmcneurol
 
       au < doNotProcess ; 2001 ; BMC Neurology Volume 1 ; 1 >
@@ -6113,7 +5840,7 @@
         issnl = 1471-2202
       >
 
-      param[journal_issn] = 1471-2202
+      param[journal_eissn] = 1471-2202
       comment[journal_code] = bmcneurosci
 
       au < doNotProcess ; 2000 ; BMC Neuroscience Volume 1 ; 1 >
@@ -6142,7 +5869,7 @@
         issnl = 1472-6955
       >
 
-      param[journal_issn] = 1472-6955
+      param[journal_eissn] = 1472-6955
       comment[journal_code] = bmcnurs
 
       au < doNotProcess ; 2002 ; BMC Nursing Volume 1 ; 1 >
@@ -6182,7 +5909,7 @@
         issnl = 2052-9538
       >
 
-      param[journal_issn] = 2052-9538
+      param[journal_eissn] = 2052-9538
       comment[journal_code] = bmcobes
 
       au < exists ; 2014 ; BMC Obesity Volume 1 ; 1 >
@@ -6197,7 +5924,7 @@
         issnl = 1471-2415
       >
 
-      param[journal_issn] = 1471-2415
+      param[journal_eissn] = 1471-2415
       comment[journal_code] = bmcophthalmol
 
       au < doNotProcess ; 2001 ; BMC Ophthalmology Volume 1 ; 1 >
@@ -6225,7 +5952,7 @@
         issnl = 1472-6831
       >
 
-      param[journal_issn] = 1472-6831
+      param[journal_eissn] = 1472-6831
       comment[journal_code] = bmcoralhealth
 
       au < doNotProcess ; 2001 ; BMC Oral Health Volume 1 ; 1 >
@@ -6252,7 +5979,7 @@
         eissn = 1472-684X ;
         issnl = 1472-684X
       >
-      param[journal_issn] = 1472-684X
+      param[journal_eissn] = 1472-684X
       comment[journal_code] = bmcpalliatcare
 
       au < doNotProcess ; 2002 ; BMC Palliative Care Volume 1 ; 1 >
@@ -6279,7 +6006,7 @@
         issnl = 1471-2431
       >
 
-      param[journal_issn] = 1471-2431
+      param[journal_eissn] = 1471-2431
       comment[journal_code] = bmcpediatr
 
       au < doNotProcess ; 2001 ; BMC Pediatrics Volume 1 ; 1 >
@@ -6307,7 +6034,7 @@
         issnl = 2050-6511
       >
 
-      param[journal_issn] = 2050-6511
+      param[journal_eissn] = 2050-6511
       comment[journal_code] = bmcpharmacoltoxicol
       comment[0] = This journal and issn start at Volume 13 in 2012, other volumes use another issn
 
@@ -6325,7 +6052,7 @@
         issnl = 1472-6793
       >
 
-      param[journal_issn] = 1472-6793
+      param[journal_eissn] = 1472-6793
       comment[journal_code] = bmcphysiol
 
       au < doNotProcess ; 2001 ; BMC Physiology Volume 1 ; 1 >
@@ -6353,7 +6080,7 @@
         issnl = 1471-2229
       >
 
-      param[journal_issn] = 1471-2229
+      param[journal_eissn] = 1471-2229
       comment[journal_code] = bmcplantbiol
 
       au < doNotProcess ; 2001 ; BMC Plant Biology Volume 1 ; 1 >
@@ -6381,7 +6108,7 @@
         issnl = 1471-2393
       >
 
-      param[journal_issn] = 1471-2393
+      param[journal_eissn] = 1471-2393
       comment[journal_code] = bmcpregnancychildbirth
 
       au < doNotProcess ; 2001 ; BMC Pregnancy and Childbirth Volume 1 ; 1 >
@@ -6408,7 +6135,7 @@
         eissn = 1753-6561
       >
 
-      param[journal_issn] = 1753-6561
+      param[journal_eissn] = 1753-6561
       comment[journal_code] = bmcproc
 
       au < exists ; 2006 ; BMC Proceedings Volume 1 ; 1 >
@@ -6431,7 +6158,7 @@
         issnl = 1471-244X
       >
 
-      param[journal_issn] = 1471-244X
+      param[journal_eissn] = 1471-244X
       comment[journal_code] = bmcpsychiatry
 
       au < doNotProcess ; 2001 ; BMC Psychiatry Volume 1 ; 1 >
@@ -6459,7 +6186,7 @@
         issnl = 2050-7283
       >
 
-      param[journal_issn] = 2050-7283
+      param[journal_eissn] = 2050-7283
       comment[journal_code] = bmcpsychology
 
       au < exists ; 2013 ; BMC Psychology Volume 1 ; 1 >
@@ -6475,7 +6202,7 @@
         issnl = 1471-2458
       >
 
-      param[journal_issn] = 1471-2458
+      param[journal_eissn] = 1471-2458
       comment[journal_code] = bmcpublichealth
 
       au < doNotProcess ; 2001 ; BMC Public Health Volume 1 ; 1 >
@@ -6503,7 +6230,7 @@
         issnl = 1471-2466
       >
 
-      param[journal_issn] = 1471-2466
+      param[journal_eissn] = 1471-2466
       comment[journal_code] = bmcpulmmed
 
       au < doNotProcess ; 2001 ; BMC Pulmonary Medicine Volume 1 ; 1 >
@@ -6531,7 +6258,7 @@
         issnl = 1756-0500
       >
 
-      param[journal_issn] = 1756-0500
+      param[journal_eissn] = 1756-0500
       comment[journal_code] = bmcresnotes
 
       au < exists ; 2008 ; BMC Research Notes Volume 1 ; 1 >
@@ -6556,7 +6283,7 @@
 
       comment[journal_code] = bmcsportsscimedrehabil
       {
-        param[journal_issn] = 1758-2555
+        param[journal_eissn] = 1758-2555
 
         au < exists ; 2009 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 1 ; 1 >
         au < exists ; 2010 ; BMC Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 2 ; 2 >
@@ -6565,7 +6292,7 @@
       }
 
       {
-        param[journal_issn] = 2052-1847
+        param[journal_eissn] = 2052-1847
 
         au < exists ; 2013 ; BMC Sports Science, Medicine and Rehabilitation Volume 5 ; 5 >
         au < exists ; 2014 ; BMC Sports Science, Medicine and Rehabilitation Volume 6 ; 6 >
@@ -6580,7 +6307,7 @@
         issnl = 1472-6807
       >
 
-      param[journal_issn] = 1472-6807
+      param[journal_eissn] = 1472-6807
       comment[journal_code] = bmcstructbiol
 
       au < doNotProcess ; 2001 ; BMC Structural Biology Volume 1 ; 1 >
@@ -6608,7 +6335,7 @@
         issnl = 1471-2482
       >
 
-      param[journal_issn] = 1471-2482
+      param[journal_eissn] = 1471-2482
       comment[journal_code] = bmcsurg
 
       au < doNotProcess ; 2001 ; BMC Surgery Volume 1 ; 1 >
@@ -6636,7 +6363,7 @@
         issnl = 1752-0509
       >
 
-      param[journal_issn] = 1752-0509
+      param[journal_eissn] = 1752-0509
       comment[journal_code] = bmcsystbiol
 
       au < doNotProcess ; 2007 ; BMC Systems Biology Volume 1 ; 1 >
@@ -6658,7 +6385,7 @@
         issnl = 1471-2490
       >
 
-      param[journal_issn] = 1471-2490
+      param[journal_eissn] = 1471-2490
       comment[journal_code] = bmcurol
 
       au < doNotProcess ; 2001 ; BMC Urology Volume 1 ; 1 >
@@ -6686,7 +6413,7 @@
         issnl = 1746-6148
       >
 
-      param[journal_issn] = 1746-6148
+      param[journal_eissn] = 1746-6148
       comment[journal_code] = bmcvetres
 
       au < doNotProcess ; 2005 ; BMC Veterinary Research Volume 1 ; 1 >
@@ -6710,7 +6437,7 @@
         issnl = 1472-6874
       >
 
-      param[journal_issn] = 1472-6874
+      param[journal_eissn] = 1472-6874
       comment[journal_code] = bmcwomenshealth
 
       au < doNotProcess ; 2001 ; BMC Women's Health Volume 1 ; 1 >

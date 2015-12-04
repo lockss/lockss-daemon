@@ -2954,7 +2954,7 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
       >
 
       comment[base_url] = http://journalotohns.biomedcentral.com/
-      param[journal_issn] = 1916-0216
+      param[journal_eissn] = 1916-0216
 
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Otolaryngology - Head & Neck Surgery Volume 42 ; 42 >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Otolaryngology - Head & Neck Surgery Volume 43 ; 43 >
@@ -4681,7 +4681,7 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
       >
 
       param[base_url] = http://nutrirejournal.biomedcentral.com/
-      param[journal_issn] = 2316-7874
+      param[journal_eissn] = 2316-7874
       #journal_id = nutrirejournal
 
       au < expected ; exists ; 2016 ; Nutrire Volume 1 ; 1 >
@@ -4696,7 +4696,7 @@ comment[bdr5] = volume 5 has 500 error.  http://biology-direct.com/content/suppl
       >
 
       param[base_url] = http://tdtmvjournal.biomedcentral.com/
-      param[journal_issn] = 2055-0936
+      param[journal_eissn] = 2055-0936
       #journal_id = tdtmvjournal
 
       au < exists ; exists ; 2015 ; Tropical Diseases, Travel Medicine and Vaccines Volume 1 ; 1 >
