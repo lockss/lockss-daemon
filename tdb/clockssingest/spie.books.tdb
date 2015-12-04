@@ -7,7 +7,7 @@
   >
 
   plugin = org.lockss.plugin.silverchair.ClockssSilverchairBooksPlugin
-  implicit < status ; status2 ; year ; param[year] ; param[book_id] ; eisbn ; isbn ; name >
+  implicit < status ; status2 ; year ;  param[book_id] ; eisbn ; isbn ; name >
   param[base_url] = http://ebooks.spiedigitallibrary.org/
 
   {
@@ -17,222 +17,222 @@
       type = bookSeries
     >
 
-    au < exists ; exists ; 1989 ; 1989 ; 209 ; 9780819481030 ; 9780819401304 ; The New Physical Optics Notebook: Tutorials in Fourier Optics >
-    au < exists ; exists ; 1991 ; 1991 ; 207 ; 9780819478788 ; 9780819405364 ; Aberration Theory Made Simple >
-    au < exists ; exists ; 1991 ; 1991 ; 208 ; 9780819478528 ; 9780819406484 ; Digital Image Compression Techniques >
-    au < testing ; exists ; 1992 ; 1992 ; 206 ; 9780819479013 ; 9780819407634 ; Optics in Photography >
-    au < exists ; exists ; 1993 ; 1993 ; 205 ; 9780819480996 ; 9780819413772 ; Introduction to Optical Testing >
-    au < exists ; exists ; 1994 ; 1994 ; 204 ; 9780819481238 ; 9780819416544 ; Soft X-Ray Optics >
-    au < exists ; exists ; 1995 ; 1995 ; 202 ; 9780819481009 ; 9780819417015 ; Introduction to Wavefront Sensors >
-    au < exists ; exists ; 1995 ; 1995 ; 203 ; 9780819478443 ; 9780819477767 ; Optical Scattering: Measurement and Analysis >
-    au < exists ; exists ; 1996 ; 1996 ; 199 ; 9780819480439 ; 9780819421494 ; Fundamentals of Electronic Image Processing >
-    au < exists ; exists ; 1996 ; 1996 ; 200 ; 9780819478535 ; 9780819421067 ; Introduction to Infrared System Design >
-    au < exists ; exists ; 1996 ; 1996 ; 201 ; 9780819480446 ; 9780819465092 ; Optical Thin Films: User Handbook >
-    au < exists ; exists ; 1997 ; 1997 ; 195 ; 9780819478542 ; 9780819422606 ; Introduction to Imaging Spectrometers >
-    au < exists ; exists ; 1997 ; 1997 ; 196 ; 9780819480477 ; 9780819420237 ; Optical Communication Receiver Design >
-    au < exists ; exists ; 1997 ; 1997 ; 197 ; 9780819486462 ; 9780819424617 ; Rotating-Mirror Streak and Framing Cameras >
-    au < exists ; exists ; 1997 ; 1997 ; 198 ; 9780819478467 ; 9780819426161 ; Special Functions of Mathematics for Engineers >
-    au < exists ; exists ; 1998 ; 1998 ; 191 ; 9780819478573 ; 9780819428066 ; Basic Electro-Optics for Electrical Engineers >
-    au < testing ; exists ; 1998 ; 1998 ; 192 ; 9780819478566 ; 9780819427588 ; Introduction to Radiometry >
-    au < exists ; exists ; 1998 ; 1998 ; 193 ; 9780819478795 ; 9780819425157 ; Optical Imaging and Aberrations: Part I. Ray Geometrical Optics >
-    au < exists ; exists ; 1998 ; 1998 ; 194 ; 9780819478450 ; 9780819425133 ; Random Processes for Image and Signal Processing >
-    au < exists ; exists ; 1999 ; 1999 ; 184 ; 9780819478498 ; 9780819434968 ; Contrast Sensitivity of the Human Eye and its Effects on Image Quality >
-    au < exists ; exists ; 1999 ; 1999 ; 185 ; 9780819478597 ; 9780819435033 ; Fractal and Wavelet Image Compression Techniques >
-    au < exists ; exists ; 1999 ; 1999 ; 186 ; 9780819480224 ; 9780819433190 ; Infrared Design Examples >
-    au < exists ; exists ; 1999 ; 1999 ; 187 ; 9780819478481 ; 9780819432322 ; Integral Transforms for Engineers >
-    au < exists ; exists ; 1999 ; 1999 ; 188 ; 9780819478559 ; 9780819430526 ; Lithography Process Control >
-    au < exists ; exists ; 1999 ; 1999 ; 189 ; 9780819481016 ; 9780819459787 ; Materials for Infrared Windows and Domes: Properties and Performance >
-    au < exists ; exists ; 1999 ; 1999 ; 190 ; 9780819478474 ; 9780819432261 ; Optical Systems and Processes >
-    au < exists ; exists ; 2000 ; 2000 ; 177 ; 9780819478580 ; 9780819434890 ; Analysis of Sampled Imaging Systems >
-    au < exists ; exists ; 2000 ; 2000 ; 178 ; 9780819478610 ; 9780819438447 ; Fundamentals of Contamination Control >
-    au < exists ; exists ; 2000 ; 2000 ; 179 ; 9780819481184 ; 9780819477729 ; Handbook of Medical Imaging, Volume 1. Physics and Psychophysics >
-    au < exists ; exists ; 2000 ; 2000 ; 180 ; 9780819481191 ; 9780819477606 ; Handbook of Medical Imaging, Volume 2. Medical Image Processing and Analysis >
-    au < exists ; exists ; 2000 ; 2000 ; 181 ; 9780819481207 ; 9780819436238 ; Handbook of Medical Imaging, Volume 3. Display and PACS >
-    au < exists ; exists ; 2000 ; 2000 ; 182 ; 9780819478603 ; 9780819435118 ; Introduction to Adaptive Optics >
-    au < exists ; exists ; 2000 ; 2000 ; 183 ; 9780819478627 ; 9780819438867 ; Optical Design for Visual Systems >
-    au < exists ; exists ; 2001 ; 2001 ; 165 ; 9780819479143 ; 9780819441423 ; Alien Vision: Exploring the Electromagnetic Spectrum with Imaging Technology >
-    au < exists ; exists ; 2001 ; 2001 ; 166 ; 9780819478283 ; 9780819442345 ; Demystifying Electromagnetic Equations: A Complete Explanation of EM Unit Systems and Equation Transformations >
-    au < exists ; exists ; 2001 ; 2001 ; 167 ; 9780819478504 ; 9780819439154 ; Fundamental Optical Design >
-    au < exists ; exists ; 2001 ; 2001 ; 168 ; 9780819478887 ; 9780819441126 ; Fundamentals of Antennas: Concepts and Applications >
-    au < exists ; exists ; 2001 ; 2001 ; 169 ; 9780819478511 ; 9780819441034 ; Laser Beam Scintillation with Applications >
-    au < exists ; exists ; 2001 ; 2001 ; 170 ; 9780819480453 ; 9780819441430 ; Modulation Transfer Function in Optical and Electro-Optical Systems >
-    au < exists ; exists ; 2001 ; 2001 ; 171 ; 9780819480699 ; 9780819440518 ; Optical Design Fundamentals for Infrared Systems >
-    au < exists ; exists ; 2001 ; 2001 ; 172 ; 9780819478801 ; 9780819441355 ; Optical Imaging and Aberrations: Part II. Wave Diffraction Optics >
-    au < exists ; exists ; 2001 ; 2001 ; 173 ; 9780819478818 ; 9780819439956 ; Resolution Enhancement Techniques in Optical Lithography >
-    au < exists ; exists ; 2001 ; 2001 ; 174 ; 9780819480392 ; 9780819436986 ; Scientific Charge-Coupled Devices >
-    au < exists ; exists ; 2001 ; 2001 ; 175 ; 9780819478863 ; 9780819441041 ; The Basics of Spectroscopy >
-    au < exists ; exists ; 2001 ; 2001 ; 176 ; 9780819480484 ; 9780819441225 ; Uncooled Thermal Imaging Arrays, Systems, and Applications >
-    au < exists ; exists ; 2002 ; 2002 ; 161 ; 9780819479150 ; 9780819443373 ; Adaptive Beaming and Imaging in the Turbulent Atmosphere >
-    au < exists ; exists ; 2002 ; 2002 ; 162 ; 9780819478634 ; 9780819444974 ; An Engineering Introduction to Biotechnology >
-    au < exists ; exists ; 2002 ; 2002 ; 210 ; 9780819478658 ; 9780819446091 ; Integrated Optomechanical Analysis >
-    au < exists ; exists ; 2002 ; 2002 ; 163 ; 9780819480491 ; 9780819444400 ; Optoelectronics of Solar Cells >
-    au < exists ; exists ; 2002 ; 2002 ; 164 ; 9780819478641 ; 9780819445254 ; Thin-Film Design: Modulated Thickness and Other Stopband Design Methods >
-    au < exists ; exists ; 2003 ; 2003 ; 157 ; 9780819478870 ; 9780819451712 ; Diffractive Optics: Design, Fabrication, and Test >
-    au < exists ; exists ; 2003 ; 2003 ; 158 ; 9780819478672 ; 9780819451644 ; Fourier-Transform Spectroscopy Instrumentation Engineering >
-    au < exists ; exists ; 2003 ; 2003 ; 159 ; 9780819478665 ; 9780819447203 ; Hands-on Morphological Image Processing >
-    au < exists ; exists ; 2003 ; 2003 ; 160 ; 9780819480408 ; 9780819449474 ; Introduction to Complex Mediums for Optics and Electromagnetics >
-    au < exists ; exists ; 2003 ; 2003 ; 213 ; 9780819478290 ; ; Mathematical Techniques for Engineers and Scientists >
-    au < exists ; exists ; 2004 ; 2004 ; 145 ; 9780819478306 ; 9780819451903 ; Coherent Fields and Images in Remote Sensing >
-    au < exists ; exists ; 2004 ; 2004 ; 146 ; 9780819481122 ; 9780819452979 ; Electroactive Polymer (EAP) Actuators as Artificial Muscles: Reality, Potential, and Challenges, Second Edition >
-    au < exists ; exists ; 2004 ; 2004 ; 147 ; 9780819478184 ; 9780819453198 ; Field Guide to Adaptive Optics >
-    au < exists ; exists ; 2004 ; 2004 ; 148 ; 9780819478177 ; 9780819453181 ; Field Guide to Atmospheric Optics >
-    au < exists ; exists ; 2004 ; 2004 ; 149 ; 9780819478160 ; 9780819452948 ; Field Guide to Geometrical Optics >
-    au < exists ; exists ; 2004 ; 2004 ; 150 ; 9780819478191 ; 9780819456298 ; Field Guide to Visual and Ophthalmic Optics >
-    au < exists ; exists ; 2004 ; 2004 ; 151 ; 9780819478689 ; 9780819455239 ; Field Mathematics for Electromagnetics, Photonics, and Materials Science: A Guide for the Scientist and Engineer >
-    au < exists ; exists ; 2004 ; 2004 ; 152 ; 9780819481139 ; 9780819452184 ; Infrared Fibers and Their Applications >
-    au < exists ; exists ; 2004 ; 2004 ; 212 ;  ; 9780819452177 ; Intermediate Optical Design >
-    au < exists ; exists ; 2004 ; 2004 ; 153 ; 9780819478696 ; 9780819455765 ; Metrics for High-Quality Specular Surfaces >
-    au < exists ; exists ; 2004 ; 2004 ; 154 ; 9780819481023 ; 9780819453136 ; Optical Coating Technology >
-    au < exists ; exists ; 2004 ; 2004 ; 155 ; 9780819481115 ; 9780819454355 ; Sensor and Data Fusion: A Tool for Information Assessment and Decision Making >
-    au < exists ; exists ; 2004 ; 2004 ; 156 ; 9780819481146 ; 9780819451866 ; The Handbook of Nanotechnology. Nanometer Structures: Theory, Modeling, and Simulation >
-    au < exists ; exists ; 2005 ; 2005 ; 136 ; 9780819478726 ; 9780819459879 ; Artificial Neural Networks: An Introduction >
-    au < exists ; exists ; 2005 ; 2005 ; 137 ; 9780819478719 ; 9780819458698 ; Basics of Code Division Multiple Access (CDMA) >
-    au < exists ; exists ; 2005 ; 2005 ; 138 ; 9780819478207 ; 9780819458681 ; Field Guide to Polarization >
-    au < exists ; exists ; 2005 ; 2005 ; 139 ; 9780819481177 ; 9780819460431 ; Introduction to Confocal Fluorescence Microscopy, Second Edition >
-    au < exists ; exists ; 2005 ; 2005 ; 140 ; 9780819478320 ; 9780819459480 ; Laser Beam Propagation through Random Media >
-    au < exists ; exists ; 2005 ; 2005 ; 141 ; 9780819481108 ; 9780819460066 ; Optical Clearing of Tissues and Blood >
-    au < exists ; exists ; 2005 ; 2005 ; 142 ; 9780819478702 ; 9780819458292 ; Optical Imaging in Projection Microlithography >
-    au < exists ; exists ; 2005 ; 2005 ; 143 ; 9780819478832 ; 9780819456601 ; Principles of Lithography >
-    au < exists ; exists ; 2005 ; 2005 ; 144 ; 9780819480415 ; 9780819456069 ; Sculptured Thin Films: Nanoengineered Morphology and Optics >
-    au < exists ; exists ; 2006 ; 2006 ; 211 ; 9780819478351 ; ; Coherent-Mode Representations in Optics >
-    au < exists ; exists ; 2006 ; 2006 ; 122 ; 9780819481085 ; 9780819461193 ; Computational Color Technology >
-    au < exists ; exists ; 2006 ; 2006 ; 123 ; 9780819478344 ; 9780819461186 ; Confocal Microscopy and Multiphoton Excitation Microscopy: The Genesis of Live Cell Imaging >
-    au < exists ; exists ; 2006 ; 2006 ; 124 ; 9780819480712 ; 9780819458452 ; EUV Sources for Lithography >
-    au < exists ; exists ; 2006 ; 2006 ; 125 ; 9780819478245 ; 9780819463616 ; Field Guide to Infrared Systems >
-    au < exists ; exists ; 2006 ; 2006 ; 126 ; 9780819478252 ; 9780819465108 ; Field Guide to Interferometric Optical Testing >
-    au < exists ; exists ; 2006 ; 2006 ; 127 ; 9780819478214 ; 9780819462077 ; Field Guide to Optical Lithography >
-    au < exists ; exists ; 2006 ; 2006 ; 128 ; 9780819478221 ; 9780819462183 ; Field Guide to Optical Thin Films >
-    au < exists ; exists ; 2006 ; 2006 ; 129 ; 9780819478238 ; 9780819463524 ; Field Guide to Spectroscopy >
-    au < exists ; exists ; 2006 ; 2006 ; 130 ; 9780819478733 ; 9780819464347 ; Introduction to Image Stabilization >
-    au < exists ; exists ; 2006 ; 2006 ; 131 ; 9780819478337 ; 9780819460929 ; Local Approximation Techniques in Signal and Image Processing >
-    au < exists ; exists ; 2006 ; 2006 ; 132 ; 9780819479006 ; 9780819463432 ; Logic-based Nonlinear Image Processing >
-    au < exists ; exists ; 2006 ; 2006 ; 133 ; 9780819481092 ; 9780819460813 ; Recent Advances in Breast Imaging, Mammography, and Computer-Aided Diagnosis of Breast Cancer >
-    au < exists ; exists ; 2006 ; 2006 ; 134 ; 9780819480460 ; 9780819460943 ; The Physics and Engineering of Solid State Lasers >
-    au < exists ; exists ; 2006 ; 2006 ; 135 ; 9780819481160 ; 9780819460820 ; Thermal Infrared Characterization of Ground Targets and Backgrounds, Second Edition >
-    au < exists ; exists ; 2007 ; 2007 ; 111 ; 9780819478399 ; 9780819467287 ; Electromagnetic Wave Propagation in Turbulence: Evaluation and Application of Mellin Transforms >
-    au < exists ; exists ; 2007 ; 2007 ; 112 ; 9780819481221 ; 9780819467683 ; Field Guide to Illumination >
-    au < exists ; exists ; 2007 ; 2007 ; 113 ; 9780819478740 ; 9780819467317 ; Fundamentals of Infrared Detector Materials >
-    au < exists ; exists ; 2007 ; 2007 ; 114 ; 9780819478375 ; 9780819465351 ; High-Operating-Temperature Infrared Photodetectors >
-    au < exists ; exists ; 2007 ; 2007 ; 115 ; 9780819478757 ; 9780819467805 ; Matrix Methods for Optical Layout >
-    au < exists ; exists ; 2007 ; 2007 ; 116 ; 9780819478368 ; 9780819465344 ; Optical Correlation Techniques and Applications >
-    au < exists ; exists ; 2007 ; 2007 ; 117 ; 9780819478382 ; 9780819467225 ; Photon Transfer >
-    au < exists ; exists ; 2007 ; 2007 ; 118 ; 9780819479020 ; 9780819467232 ; Practical Applications of Infrared Thermal Sensing and Imaging Equipment >
-    au < exists ; exists ; 2007 ; 2007 ; 119 ; 9780819481153 ; 9780819467836 ; Radiation Thermometry: Fundamentals and Applications in the Petrochemical Industry >
-    au < exists ; exists ; 2007 ; 2007 ; 120 ; 9780819481078 ; 9780819462350 ; Remote Sensing from Air and Space >
-    au < exists ; exists ; 2007 ; 2007 ; 121 ; 9780819481061 ; 9780819464330 ; Tissue Optics: Light Scattering Methods and Instruments for Medical Diagnosis (2007) >
-    au < exists ; exists ; 2008 ; 2008 ; 100 ; 9780819478405 ; 9780819467492 ; Advanced Optics Using Aspherical Elements >
-    au < exists ; exists ; 2008 ; 2008 ; 101 ; 9780819481047 ; 9780819472342 ; Advances in Information Optics and Photonics >
-    au < exists ; exists ; 2008 ; 2008 ; 102 ; 9780819481054 ; 9780819467577 ; Digital and Analog Fiber Optic Communications for CATV and FTTx Applications >
-    au < exists ; exists ; 2008 ; 2008 ; 103 ; 9780819478429 ; 9780819471802 ; Engineering a High-Tech Business: Entrepreneurial Experiences and Insights >
-    au < exists ; exists ; 2008 ; 2008 ; 104 ; 9780819480705 ; 9780819469649 ; EUV Lithography >
-    au < exists ; exists ; 2008 ; 2008 ; 105 ; 9780819478276 ; 9780819472489 ; Field Guide to Laser Pulse Generation >
-    au < exists ; exists ; 2008 ; 2008 ; 106 ; 9780819478269 ; 9780819469618 ; Field Guide to Lasers >
-    au < exists ; exists ; 2008 ; 2008 ; 107 ; 9780819471284 ; 9780819471284 ; Fundamentals of Photonics >
-    au < exists ; exists ; 2008 ; 2008 ; 108 ; 9780819481214 ; 9780819471291 ; Mounting Optics in Optical Instruments >
-    au < exists ; exists ; 2008 ; 2008 ; 109 ; 9780819480941 ; 9780819467812 ; Polymer Photovoltaics: A Practical Approach >
-    au < exists ; exists ; 2008 ; 2008 ; 110 ; 9780819478412 ; 9780819469663 ; Wavefront Optics for Vision Correction >
-    au < exists ; exists ; 2009 ; 2009 ; 91 ; 9780819478436 ; 9780819475572 ; Advanced Processes for 193-nm Immersion Lithography >
-    au < exists ; exists ; 2009 ; 2009 ; 92 ; 9780819480422 ; 9780819475336 ; Computed Tomography, Second Edition: Principles, Design, Artifacts, and Recent Advances >
-    au < exists ; exists ; 2009 ; 2009 ; 93 ; 9780819478764 ; 9780819475343 ; Fundamentals of Polarimetric Remote Sensing >
-    au < exists ; exists ; 2009 ; 2009 ; 94 ; 9780819480927 ; 9780819476678 ; Infrared Optics and Zoom Lenses >
-    au < exists ; exists ; 2009 ; 2009 ; 95 ; 9780819478894 ; 9780819477996 ; Optical Design: Applying the Fundamentals >
-    au < exists ; exists ; 2009 ; 2009 ; 96 ; 9780819478771 ; 9780819475404 ; Optical Engineering Fundamentals >
-    au < exists ; exists ; 2009 ; 2009 ; 97 ; 9780819479167 ; 9780819472458 ; The Art of Radiometry >
-    au < exists ; exists ; 2009 ; 2009 ; 98 ; 9780819478894 ; 9780819472403 ; The Design of Plastic Optical Systems >
-    au < exists ; exists ; 2009 ; 2009 ; 99 ; 9780819480934 ; 9780819477736 ; Tutorials in Complex Photonic Media >
-    au < exists ; exists ; 2010 ; 2010 ; 75 ; 9780819480781 ; 9780819480774 ; Analysis and Evaluation of Sampled Imaging Systems >
-    au < exists ; exists ; 2010 ; 2010 ; 76 ; 9780819483331 ; 9780819483324 ; Applied Prismatic and Reflective Optics >
-    au < exists ; exists ; 2010 ; 2010 ; 77 ; 9780819482488 ; 9780819482471 ; Bioluminescence and Fluorescence for In Vivo Imaging >
-    au < exists ; exists ; 2010 ; 2010 ; 78 ; 9780819483997 ; 9780819475626 ; Chemistry and Lithography >
-    au < exists ; exists ; 2010 ; 2010 ; 79 ; 9780819480736 ; 9780819480729 ; Direct-Detection LADAR Systems >
-    au < exists ; exists ; 2010 ; 2010 ; 80 ; 9780819480811 ; 9780819480804 ; Field Guide to Infrared Systems, Detectors, and FPAs, Second Edition >
-    au < exists ; exists ; 2010 ; 2010 ; 81 ; 9780819478917 ; 9780819472465 ; Field Guide to Microscopy >
-    au < exists ; exists ; 2010 ; 2010 ; 82 ; 9780819480910 ; 9780819480903 ; Field Guide to Optical Fiber Technology >
-    au < exists ; exists ; 2010 ; 2010 ; 83 ; 9780819481832 ; 9780819476586 ; Light Propagation through Biological Tissue and Other Diffusive Media: Theory, Solutions, and Software >
-    au < exists ; exists ; 2010 ; 2010 ; 84 ; 9780819483362 ; 9780819483393 ; Modeling the Imaging Chain of Digital Cameras >
-    au < exists ; exists ; 2010 ; 2010 ; 85 ; 9780819480767 ; 9780819480750 ; Nanotechnology: A Crash Course >
-    au < exists ; exists ; 2010 ; 2010 ; 86 ; 9780819483270 ; 9780819483263 ; Numerical Simulation of Optical Wave Propagation with Examples in MATLAB >
-    au < exists ; exists ; 2010 ; 2010 ; 87 ; 9780819483706 ; 9780819483690 ; Optical Design for Biomedical Imaging >
-    au < exists ; exists ; 2010 ; 2010 ; 88 ; 9780819480965 ; 9780819480958 ; Optical Design of Microscopes >
-    au < exists ; exists ; 2010 ; 2010 ; 89 ; 9780819481825 ; 9780819475602 ; Optical Lithography : Here is Why >
-    au < exists ; exists ; 2010 ; 2010 ; 90 ; 9780819483256 ; 9780819483249 ; Principles of Lithography : Third Edition >
-    au < exists ; exists ; 2011 ; 2011 ; 58 ; 9780819480989 ; 9780819480972 ; 3D Video Technologies: An Overview of Research Trends >
-    au < exists ; exists ; 2011 ; 2011 ; 59 ; 9780819488268 ; 9780819488251 ; Aberration Theory Made Simple, Second Edition >
-    au < exists ; exists ; 2011 ; 2011 ; 60 ; 9780819485366 ; 9780819485359 ; Alien Vision: Exploring the Electromagnetic Spectrum with Imaging Technology, Second Edition >
-    au < exists ; exists ; 2011 ; 2011 ; 61 ; 9780819485656 ; 9780819485649 ; Color Image Processing with Biomedical Applications >
-    au < exists ; exists ; 2011 ; 2011 ; 62 ; 9780819483980 ; 9780819483973 ; Color Vision and Colorimetry: Theory and Applications, Second Edition >
-    au < exists ; exists ; 2011 ; 2011 ; 63 ; 9780819482051 ; 9780819482044 ; Computational Fourier Optics: A MATLAB® Tutorial >
-    au < exists ; exists ; 2011 ; 2011 ; 64 ; 9780819483591 ; 9780819483584 ; Enhanced Optical Filter Design >
-    au < exists ; exists ; 2011 ; 2011 ; 65 ; 9780819486509 ; 9780819486493 ; Field Guide to Binoculars and Scopes >
-    au < exists ; exists ; 2011 ; 2011 ; 66 ; 9780819486912 ; 9780819486905 ; Field Guide to Diffractive Optics >
-    au < exists ; exists ; 2011 ; 2011 ; 67 ; 9780819486776 ; 9780819486769 ; Field Guide to Optical Fabrication >
-    au < exists ; exists ; 2011 ; 2011 ; 68 ; 9780819488282 ; 9780819488275 ; Field Guide to Radiometry >
-    au < exists ; exists ; 2011 ; 2011 ; 69 ; 9780819485519 ; 9780819485502 ; Field Guide to Special Functions for Engineers >
-    au < exists ; exists ; 2011 ; 2011 ; 70 ; 9780819486486 ; 9780819486479 ; Hadamard Transforms >
-    au < exists ; exists ; 2011 ; 2011 ; 71 ; 9780819487001 ; 9780819486998 ; Optical Imaging and Aberrations, Part II. Wave Diffraction Optics, Second Edition >
-    au < exists ; exists ; 2011 ; 2011 ; 72 ; 9780819482167 ; 9780819482150 ; Polarization of Light with Applications in Optical Fibers >
-    au < exists ; exists ; 2011 ; 2011 ; 73 ; 9780819489722 ; 9780819489715 ; Problems and Answers in Wave Optics >
-    au < exists ; exists ; 2011 ; 2011 ; 74 ; 9780819488220 ; 9780819488213 ; Signal and Image Restoration: Information-Theoretic Approaches >
-    au < exists ; exists ; 2012 ; 2012 ; 216 ; 9780819483676 ; 9780819483669 ; Basic Optics for the Astronomical Sciences >
-    au < exists ; exists ; 2012 ; 2012 ; 51 ; 9780819487902 ; 9780819487896 ; Diagnostic and Therapeutic Applications of Breast Imaging >
-    au < exists ; exists ; 2012 ; 2012 ; 52 ; 9780819490186 ; 9780819490179 ; Field Guide to Adaptive Optics, Second Edition >
-    au < exists ; exists ; 2012 ; 2012 ; 53 ; 9780819490223 ; 9780819490216 ; Field Guide to Image Processing >
-    au < exists ; exists ; 2012 ; 2012 ; 489 ; 9780819491657 ; 9780819491640 ; Field Guide to Lens Design >
-    au < exists ; exists ; 2012 ; 2012 ; 224 ; 9780819491626 ; 9780819491619 ; Field Guide to Optomechanical Design and Analysis >
-    au < exists ; exists ; 2012 ; 2012 ; 54 ; 9780819487025 ; 9780819487018 ; Field Guide to Probability, Random Processes, and Random Data Analysis >
-    au < exists ; exists ; 2012 ; 2012 ; 217 ; 9780819491688 ; 9780819491671 ; Field Guide to Terahertz Sources, Detectors, and Optics >
-    au < exists ; exists ; 2012 ; 2012 ; 55 ; 9780819489777 ; 9780819489760 ; Formation of a Digital Image: The Imaging Chain Simplified >
-    au < exists ; exists ; 2012 ; 2012 ; 488 ; 9780819488312 ; 9780819488305 ; High Dynamic Range Imaging: Sensors and Architectures >
-    au < exists ; exists ; 2012 ; 2012 ; 56 ; 9780819487889 ; 9780819487872 ; Hyperspectral Remote Sensing >
-    au < exists ; exists ; 2012 ; 2012 ; 57 ; 9780819482037 ; 9780819482020 ; Image Acquisition and Preprocessing for Machine VisionSystems >
-    au < exists ; exists ; 2012 ; 2012 ; 472 ; 9780819492494 ; 9780819492487 ; Integrated Optomechanical Analysis, Second Edition >
-    au < exists ; exists ; 2012 ; 2012 ; 471 ; 9780819490933 ; 9780819490926 ; Introduction to Semiconductor Manufacturing Technology, Second Edition >
-    au < exists ; exists ; 2012 ; 2012 ; 473 ; 9780819494535 ; 9780819494528 ; Maxwell's Equations of Electrodynamics: An Explanation >
-    au < exists ; exists ; 2012 ; 2012 ; 225 ; 9780819492524 ; 9780819492517 ; Optical Scattering: Measurements and Analysis, Third Edition >
-    au < exists ; exists ; 2012 ; 2012 ; 469 ; 9780819491343 ; 9780819491336 ; Sensor and Data Fusion: A Tool for Information Assessment and Decision Making, Second Edition >
-    au < exists ; exists ; 2012 ; 2012 ; 470 ; 9780819492586 ; 9780819492579 ; Spectral Computed Tomography >
-    au < exists ; exists ; 2013 ; 2013 ; 560 ; 9780819495907 ; 9780819495891 ; Chemical Vapor Deposited Zinc Sulfide >
-    au < exists ; exists ; 2013 ; 2013 ; 492 ; 9780819494832 ; 9780819494825 ; Commercialization Basics for the Photonics Industry >
-    au < exists ; exists ; 2013 ; 2013 ; 695 ; 9780819497406 ; 9780819497390 ; Computer-Aided Cancer Detection and Diagnosis: Recent Advances >
-    au < exists ; exists ; 2013 ; 2013 ; 567 ; 9780819495709 ; 9780819495693 ; Electro-Optical System Analysis and Design: A Radiometry Perspective >
-    au < exists ; exists ; 2013 ; 2013 ; 651 ; 9780819496362 ; 9780819496355 ; Field Guide to Nonlinear Optics >
-    au < exists ; exists ; 2013 ; 2013 ; 566 ; 9780819485496 ; 9780819485489 ; Field Guide to Physical Optics >
-    au < exists ; exists ; 2013 ; 2013 ; 551 ; 9780819492982 ; 9780819492975 ; Laser Beam Quality Metrics >
-    au < exists ; exists ; 2013 ; 2013 ; 493 ; 9780819488206 ; 9780819488190 ; Laser Safety in the Lab >
-    au < exists ; exists ; 2013 ; 2013 ; 532 ; 9780819491565 ; 9780819491558 ; Military Displays Technology and Applications >
-    au < exists ; exists ; 2013 ; 2013 ; 494 ; 9780819492555 ; 9780819492548 ; Modeling the Optical and Visual Performance of the Human Eye >
-    au < exists ; exists ; 2013 ; 2013 ; 552 ; 9780819492951 ; 9780819492944 ; Multimodality Breast Imaging: Diagnosis and Treatment >
-    au < exists ; exists ; 2013 ; 2013 ; 652 ; 9780819496324 ; 9780819496317 ; Ocean Sensing and Monitoring: Optics and Other Methods >
-    au < exists ; exists ; 2013 ; 2013 ; 653 ; 9780819491121 ; 9780819491114 ; Optical Imaging and Aberrations, Part III: Wavefront Analysis >
-    au < exists ; exists ; 2013 ; 2013 ; 681 ; 9780819497888 ; 9780819497871 ; Optical Satellite Data Compression and Implementation >
-    au < exists ; exists ; 2013 ; 2013 ; 679 ; 9780819493293 ; 9780819493286 ; Optical Satellite Signal Processing and Enhancement >
-    au < exists ; exists ; 2013 ; 2013 ; 670 ; 9780819493323 ; 9780819493316 ; Pyroelectric Materials: Infrared Detectors, Particle Accelerators, and Energy Harvesters >
-    au < exists ; exists ; 2013 ; 2013 ; 553 ; 9780819493262 ; 9780819493255 ; Stray Light Analysis and Control >
-    au < exists ; exists ; 2013 ; 2013 ; 554 ; 9780819494580 ; 9780819494573 ; The Proper Care of Optics: Cleaning, Handling, Storage, and Shipping >
-    au < exists ; exists ; 2013 ; 2013 ; 680 ; 9780819496096 ; 9780819495969 ; The Wonder of Nanotechnology: Quantum Optoelectronic Devices and Applications >
-    au < exists ; exists ; 2013 ; 2013 ; 495 ; 9780819493231 ; 9780819493224 ; Value Metrics for Better Lighting >
-    au < exists ; exists ; 2013 ; 2013 ; 654 ; 9780819496430 ; 9780819496416 ; Windowed Fringe Pattern Analysis >
-    au < exists ; exists ; 2014 ; 2014 ; 840 ; 9780819498007 ; 9780819497994 ; Field Guide to Displacement Measuring Interferometry >
-    au < exists ; exists ; 2014 ; 2014 ; 841 ; 9780819499585 ; 9780819499578 ; Field Guide to Holography >
-    au < exists ; exists ; 2014 ; 2014 ; 875 ; 9780819498250 ; 9780819498243 ; Fundamentals of Dispersive Optical Spectroscopy Systems >
-    au < exists ; exists ; 2014 ; 2014 ; 873 ; 9780819499998 ; 9780819499981 ; Fundamentals of Geometrical Optics >
-    au < exists ; exists ; 2014 ; 2014 ; 869 ; 9780819491411 ; 9780819491404 ; Interferometry for Precision Measurement >
-    au < exists ; exists ; 2014 ; 2014 ; 968 ; 9781628412932 ; 9781628412925 ; Optical Glass >
-    au < exists ; exists ; 2014 ; 2014 ; 872 ; 9780819498229 ; 9780819498212 ; Solid State Lasers: Tunable Sources and Passive Q-Switching Elements >
-    au < exists ; exists ; 2014 ; 2014 ; 868 ; 9780819498373 ; 9780819498366 ; Strength Properties of Glass and Ceramics >
-    au < exists ; exists ; 2014 ; 2014 ; 874 ; 9781628410709 ; 9781628410686 ; Translational Research in Biophotonics: Four National Cancer Institute Case Studies >
-    au < exists ; exists ; 2015 ; 2015 ; 1383 ; 9781628413731 ; 9781628413892 ; Applications of Dispersive Optical Spectroscopy Systems >
-    au < exists ; exists ; 2015 ; 2015 ; 1269 ; 9781628413908 ; 9781628413892 ; Digital Converters for Image Sensors >
-    au < exists ; exists ; 2015 ; 2015 ; 1324 ; 9781628415483 ; 9781628415476 ; Field Guide to Linear Systems in Optics >
-    au < exists ; exists ; 2015 ; 2015 ; 1325 ; 9781628415179 ; 9781628415162 ; Tissue Optics: Light Scattering Methods and Instruments for Medical Diagnosis (2015) >
-    au < exists ; exists ; 2015 ; 2015 ; 1407 ; 9781628416725 ;  ; Carbon Nanoparticles in Photoacoustic Imaging >
-    au < exists ; exists ; 2015 ; 2015 ; 1389 ; 9781628416558 ; 9781628416541 ; Field Guide to Lidar >
-    au < exists ; exists ; 2015 ; 2015 ; 1405 ; 9781628416480 ;  ; How to Set Up a Laser Lab >
-    au < exists ; exists ; 2015 ; 2015 ; 1518 ; 9781628416459 ;  ; Image Resolution: Deconstructing Hollywood's Zoom and Enhance >
-    au < exists ; exists ; 2015 ; 2015 ; 1406 ; 9781628416718 ;  ; Optical Sensing: Microstructured Fibers, Fiber Micromachining, and Functional Coatings >
-    au < exists ; exists ; 2015 ; 2015 ; 1408 ; 9781628416732 ;  ; Optimization Techniques for Diffraction Spectrometers >
-    au < exists ; exists ; 2015 ; 2015 ; 1409 ; 9781628416749 ;  ; Femtosecond-Laser-Assisted LASIK Eye Surgery and Imaging >
-    au < testing ; exists ; 2015 ; 2015 ; 1608 ; 9781628411782 ; 9781628411775 ; Field Guide to Astronomical Instrumentation >
+    au < exists ; exists ; 1989 ; 209 ; 9780819481030 ; 9780819401304 ; The New Physical Optics Notebook: Tutorials in Fourier Optics >
+    au < exists ; exists ; 1991 ; 207 ; 9780819478788 ; 9780819405364 ; Aberration Theory Made Simple >
+    au < exists ; exists ; 1991 ; 208 ; 9780819478528 ; 9780819406484 ; Digital Image Compression Techniques >
+    au < exists ; exists ; 1992 ; 206 ; 9780819479013 ; 9780819407634 ; Optics in Photography >
+    au < exists ; exists ; 1993 ; 205 ; 9780819480996 ; 9780819413772 ; Introduction to Optical exists >
+    au < exists ; exists ; 1994 ; 204 ; 9780819481238 ; 9780819416544 ; Soft X-Ray Optics >
+    au < exists ; exists ; 1995 ; 202 ; 9780819481009 ; 9780819417015 ; Introduction to Wavefront Sensors >
+    au < exists ; exists ; 1995 ; 203 ; 9780819478443 ; 9780819477767 ; Optical Scattering: Measurement and Analysis >
+    au < exists ; exists ; 1996 ; 199 ; 9780819480439 ; 9780819421494 ; Fundamentals of Electronic Image Processing >
+    au < exists ; exists ; 1996 ; 200 ; 9780819478535 ; 9780819421067 ; Introduction to Infrared System Design >
+    au < exists ; exists ; 1996 ; 201 ; 9780819480446 ; 9780819465092 ; Optical Thin Films: User Handbook >
+    au < exists ; exists ; 1997 ; 195 ; 9780819478542 ; 9780819422606 ; Introduction to Imaging Spectrometers >
+    au < exists ; exists ; 1997 ; 196 ; 9780819480477 ; 9780819420237 ; Optical Communication Receiver Design >
+    au < exists ; exists ; 1997 ; 197 ; 9780819486462 ; 9780819424617 ; Rotating-Mirror Streak and Framing Cameras >
+    au < exists ; exists ; 1997 ; 198 ; 9780819478467 ; 9780819426161 ; Special Functions of Mathematics for Engineers >
+    au < exists ; exists ; 1998 ; 191 ; 9780819478573 ; 9780819428066 ; Basic Electro-Optics for Electrical Engineers >
+    au < exists ; exists ; 1998 ; 192 ; 9780819478566 ; 9780819427588 ; Introduction to Radiometry >
+    au < exists ; exists ; 1998 ; 193 ; 9780819478795 ; 9780819425157 ; Optical Imaging and Aberrations: Part I. Ray Geometrical Optics >
+    au < exists ; exists ; 1998 ; 194 ; 9780819478450 ; 9780819425133 ; Random Processes for Image and Signal Processing >
+    au < exists ; exists ; 1999 ; 184 ; 9780819478498 ; 9780819434968 ; Contrast Sensitivity of the Human Eye and its Effects on Image Quality >
+    au < exists ; exists ; 1999 ; 185 ; 9780819478597 ; 9780819435033 ; Fractal and Wavelet Image Compression Techniques >
+    au < exists ; exists ; 1999 ; 186 ; 9780819480224 ; 9780819433190 ; Infrared Design Examples >
+    au < exists ; exists ; 1999 ; 187 ; 9780819478481 ; 9780819432322 ; Integral Transforms for Engineers >
+    au < exists ; exists ; 1999 ; 188 ; 9780819478559 ; 9780819430526 ; Lithography Process Control >
+    au < exists ; exists ; 1999 ; 189 ; 9780819481016 ; 9780819459787 ; Materials for Infrared Windows and Domes: Properties and Performance >
+    au < exists ; exists ; 1999 ; 190 ; 9780819478474 ; 9780819432261 ; Optical Systems and Processes >
+    au < exists ; exists ; 2000 ; 177 ; 9780819478580 ; 9780819434890 ; Analysis of Sampled Imaging Systems >
+    au < exists ; exists ; 2000 ; 178 ; 9780819478610 ; 9780819438447 ; Fundamentals of Contamination Control >
+    au < exists ; exists ; 2000 ; 179 ; 9780819481184 ; 9780819477729 ; Handbook of Medical Imaging, Volume 1. Physics and Psychophysics >
+    au < exists ; exists ; 2000 ; 180 ; 9780819481191 ; 9780819477606 ; Handbook of Medical Imaging, Volume 2. Medical Image Processing and Analysis >
+    au < exists ; exists ; 2000 ; 181 ; 9780819481207 ; 9780819436238 ; Handbook of Medical Imaging, Volume 3. Display and PACS >
+    au < exists ; exists ; 2000 ; 182 ; 9780819478603 ; 9780819435118 ; Introduction to Adaptive Optics >
+    au < exists ; exists ; 2000 ; 183 ; 9780819478627 ; 9780819438867 ; Optical Design for Visual Systems >
+    au < exists ; exists ; 2001 ; 165 ; 9780819479143 ; 9780819441423 ; Alien Vision: Exploring the Electromagnetic Spectrum with Imaging Technology >
+    au < exists ; exists ; 2001 ; 166 ; 9780819478283 ; 9780819442345 ; Demystifying Electromagnetic Equations: A Complete Explanation of EM Unit Systems and Equation Transformations >
+    au < exists ; exists ; 2001 ; 167 ; 9780819478504 ; 9780819439154 ; Fundamental Optical Design >
+    au < exists ; exists ; 2001 ; 168 ; 9780819478887 ; 9780819441126 ; Fundamentals of Antennas: Concepts and Applications >
+    au < exists ; exists ; 2001 ; 169 ; 9780819478511 ; 9780819441034 ; Laser Beam Scintillation with Applications >
+    au < exists ; exists ; 2001 ; 170 ; 9780819480453 ; 9780819441430 ; Modulation Transfer Function in Optical and Electro-Optical Systems >
+    au < exists ; exists ; 2001 ; 171 ; 9780819480699 ; 9780819440518 ; Optical Design Fundamentals for Infrared Systems >
+    au < exists ; exists ; 2001 ; 172 ; 9780819478801 ; 9780819441355 ; Optical Imaging and Aberrations: Part II. Wave Diffraction Optics >
+    au < exists ; exists ; 2001 ; 173 ; 9780819478818 ; 9780819439956 ; Resolution Enhancement Techniques in Optical Lithography >
+    au < exists ; exists ; 2001 ; 174 ; 9780819480392 ; 9780819436986 ; Scientific Charge-Coupled Devices >
+    au < exists ; exists ; 2001 ; 175 ; 9780819478863 ; 9780819441041 ; The Basics of Spectroscopy >
+    au < exists ; exists ; 2001 ; 176 ; 9780819480484 ; 9780819441225 ; Uncooled Thermal Imaging Arrays, Systems, and Applications >
+    au < exists ; exists ; 2002 ; 161 ; 9780819479150 ; 9780819443373 ; Adaptive Beaming and Imaging in the Turbulent Atmosphere >
+    au < exists ; exists ; 2002 ; 162 ; 9780819478634 ; 9780819444974 ; An Engineering Introduction to Biotechnology >
+    au < exists ; exists ; 2002 ; 210 ; 9780819478658 ; 9780819446091 ; Integrated Optomechanical Analysis >
+    au < exists ; exists ; 2002 ; 163 ; 9780819480491 ; 9780819444400 ; Optoelectronics of Solar Cells >
+    au < exists ; exists ; 2002 ; 164 ; 9780819478641 ; 9780819445254 ; Thin-Film Design: Modulated Thickness and Other Stopband Design Methods >
+    au < exists ; exists ; 2003 ; 157 ; 9780819478870 ; 9780819451712 ; Diffractive Optics: Design, Fabrication, and Test >
+    au < exists ; exists ; 2003 ; 158 ; 9780819478672 ; 9780819451644 ; Fourier-Transform Spectroscopy Instrumentation Engineering >
+    au < exists ; exists ; 2003 ; 159 ; 9780819478665 ; 9780819447203 ; Hands-on Morphological Image Processing >
+    au < exists ; exists ; 2003 ; 160 ; 9780819480408 ; 9780819449474 ; Introduction to Complex Mediums for Optics and Electromagnetics >
+    au < exists ; exists ; 2003 ; 213 ; 9780819478290 ; ; Mathematical Techniques for Engineers and Scientists >
+    au < exists ; exists ; 2004 ; 145 ; 9780819478306 ; 9780819451903 ; Coherent Fields and Images in Remote Sensing >
+    au < exists ; exists ; 2004 ; 146 ; 9780819481122 ; 9780819452979 ; Electroactive Polymer (EAP) Actuators as Artificial Muscles: Reality, Potential, and Challenges, Second Edition >
+    au < exists ; exists ; 2004 ; 147 ; 9780819478184 ; 9780819453198 ; Field Guide to Adaptive Optics >
+    au < exists ; exists ; 2004 ; 148 ; 9780819478177 ; 9780819453181 ; Field Guide to Atmospheric Optics >
+    au < exists ; exists ; 2004 ; 149 ; 9780819478160 ; 9780819452948 ; Field Guide to Geometrical Optics >
+    au < exists ; exists ; 2004 ; 150 ; 9780819478191 ; 9780819456298 ; Field Guide to Visual and Ophthalmic Optics >
+    au < exists ; exists ; 2004 ; 151 ; 9780819478689 ; 9780819455239 ; Field Mathematics for Electromagnetics, Photonics, and Materials Science: A Guide for the Scientist and Engineer >
+    au < exists ; exists ; 2004 ; 152 ; 9780819481139 ; 9780819452184 ; Infrared Fibers and Their Applications >
+    au < exists ; exists ; 2004 ; 212 ;  ; 9780819452177 ; Intermediate Optical Design >
+    au < exists ; exists ; 2004 ; 153 ; 9780819478696 ; 9780819455765 ; Metrics for High-Quality Specular Surfaces >
+    au < exists ; exists ; 2004 ; 154 ; 9780819481023 ; 9780819453136 ; Optical Coating Technology >
+    au < exists ; exists ; 2004 ; 155 ; 9780819481115 ; 9780819454355 ; Sensor and Data Fusion: A Tool for Information Assessment and Decision Making >
+    au < exists ; exists ; 2004 ; 156 ; 9780819481146 ; 9780819451866 ; The Handbook of Nanotechnology. Nanometer Structures: Theory, Modeling, and Simulation >
+    au < exists ; exists ; 2005 ; 136 ; 9780819478726 ; 9780819459879 ; Artificial Neural Networks: An Introduction >
+    au < exists ; exists ; 2005 ; 137 ; 9780819478719 ; 9780819458698 ; Basics of Code Division Multiple Access (CDMA) >
+    au < exists ; exists ; 2005 ; 138 ; 9780819478207 ; 9780819458681 ; Field Guide to Polarization >
+    au < exists ; exists ; 2005 ; 139 ; 9780819481177 ; 9780819460431 ; Introduction to Confocal Fluorescence Microscopy, Second Edition >
+    au < exists ; exists ; 2005 ; 140 ; 9780819478320 ; 9780819459480 ; Laser Beam Propagation through Random Media >
+    au < exists ; exists ; 2005 ; 141 ; 9780819481108 ; 9780819460066 ; Optical Clearing of Tissues and Blood >
+    au < exists ; exists ; 2005 ; 142 ; 9780819478702 ; 9780819458292 ; Optical Imaging in Projection Microlithography >
+    au < exists ; exists ; 2005 ; 143 ; 9780819478832 ; 9780819456601 ; Principles of Lithography >
+    au < exists ; exists ; 2005 ; 144 ; 9780819480415 ; 9780819456069 ; Sculptured Thin Films: Nanoengineered Morphology and Optics >
+    au < exists ; exists ; 2006 ; 211 ; 9780819478351 ; ; Coherent-Mode Representations in Optics >
+    au < exists ; exists ; 2006 ; 122 ; 9780819481085 ; 9780819461193 ; Computational Color Technology >
+    au < exists ; exists ; 2006 ; 123 ; 9780819478344 ; 9780819461186 ; Confocal Microscopy and Multiphoton Excitation Microscopy: The Genesis of Live Cell Imaging >
+    au < exists ; exists ; 2006 ; 124 ; 9780819480712 ; 9780819458452 ; EUV Sources for Lithography >
+    au < exists ; exists ; 2006 ; 125 ; 9780819478245 ; 9780819463616 ; Field Guide to Infrared Systems >
+    au < exists ; exists ; 2006 ; 126 ; 9780819478252 ; 9780819465108 ; Field Guide to Interferometric Optical exists >
+    au < exists ; exists ; 2006 ; 127 ; 9780819478214 ; 9780819462077 ; Field Guide to Optical Lithography >
+    au < exists ; exists ; 2006 ; 128 ; 9780819478221 ; 9780819462183 ; Field Guide to Optical Thin Films >
+    au < exists ; exists ; 2006 ; 129 ; 9780819478238 ; 9780819463524 ; Field Guide to Spectroscopy >
+    au < exists ; exists ; 2006 ; 130 ; 9780819478733 ; 9780819464347 ; Introduction to Image Stabilization >
+    au < exists ; exists ; 2006 ; 131 ; 9780819478337 ; 9780819460929 ; Local Approximation Techniques in Signal and Image Processing >
+    au < exists ; exists ; 2006 ; 132 ; 9780819479006 ; 9780819463432 ; Logic-based Nonlinear Image Processing >
+    au < exists ; exists ; 2006 ; 133 ; 9780819481092 ; 9780819460813 ; Recent Advances in Breast Imaging, Mammography, and Computer-Aided Diagnosis of Breast Cancer >
+    au < exists ; exists ; 2006 ; 134 ; 9780819480460 ; 9780819460943 ; The Physics and Engineering of Solid State Lasers >
+    au < exists ; exists ; 2006 ; 135 ; 9780819481160 ; 9780819460820 ; Thermal Infrared Characterization of Ground Targets and Backgrounds, Second Edition >
+    au < exists ; exists ; 2007 ; 111 ; 9780819478399 ; 9780819467287 ; Electromagnetic Wave Propagation in Turbulence: Evaluation and Application of Mellin Transforms >
+    au < exists ; exists ; 2007 ; 112 ; 9780819481221 ; 9780819467683 ; Field Guide to Illumination >
+    au < exists ; exists ; 2007 ; 113 ; 9780819478740 ; 9780819467317 ; Fundamentals of Infrared Detector Materials >
+    au < exists ; exists ; 2007 ; 114 ; 9780819478375 ; 9780819465351 ; High-Operating-Temperature Infrared Photodetectors >
+    au < exists ; exists ; 2007 ; 115 ; 9780819478757 ; 9780819467805 ; Matrix Methods for Optical Layout >
+    au < exists ; exists ; 2007 ; 116 ; 9780819478368 ; 9780819465344 ; Optical Correlation Techniques and Applications >
+    au < exists ; exists ; 2007 ; 117 ; 9780819478382 ; 9780819467225 ; Photon Transfer >
+    au < exists ; exists ; 2007 ; 118 ; 9780819479020 ; 9780819467232 ; Practical Applications of Infrared Thermal Sensing and Imaging Equipment >
+    au < exists ; exists ; 2007 ; 119 ; 9780819481153 ; 9780819467836 ; Radiation Thermometry: Fundamentals and Applications in the Petrochemical Industry >
+    au < exists ; exists ; 2007 ; 120 ; 9780819481078 ; 9780819462350 ; Remote Sensing from Air and Space >
+    au < exists ; exists ; 2007 ; 121 ; 9780819481061 ; 9780819464330 ; Tissue Optics: Light Scattering Methods and Instruments for Medical Diagnosis (2007) >
+    au < exists ; exists ; 2008 ; 100 ; 9780819478405 ; 9780819467492 ; Advanced Optics Using Aspherical Elements >
+    au < exists ; exists ; 2008 ; 101 ; 9780819481047 ; 9780819472342 ; Advances in Information Optics and Photonics >
+    au < exists ; exists ; 2008 ; 102 ; 9780819481054 ; 9780819467577 ; Digital and Analog Fiber Optic Communications for CATV and FTTx Applications >
+    au < exists ; exists ; 2008 ; 103 ; 9780819478429 ; 9780819471802 ; Engineering a High-Tech Business: Entrepreneurial Experiences and Insights >
+    au < exists ; exists ; 2008 ; 104 ; 9780819480705 ; 9780819469649 ; EUV Lithography >
+    au < exists ; exists ; 2008 ; 105 ; 9780819478276 ; 9780819472489 ; Field Guide to Laser Pulse Generation >
+    au < exists ; exists ; 2008 ; 106 ; 9780819478269 ; 9780819469618 ; Field Guide to Lasers >
+    au < exists ; exists ; 2008 ; 107 ; 9780819471284 ; 9780819471284 ; Fundamentals of Photonics >
+    au < exists ; exists ; 2008 ; 108 ; 9780819481214 ; 9780819471291 ; Mounting Optics in Optical Instruments >
+    au < exists ; exists ; 2008 ; 109 ; 9780819480941 ; 9780819467812 ; Polymer Photovoltaics: A Practical Approach >
+    au < exists ; exists ; 2008 ; 110 ; 9780819478412 ; 9780819469663 ; Wavefront Optics for Vision Correction >
+    au < exists ; exists ; 2009 ; 91 ; 9780819478436 ; 9780819475572 ; Advanced Processes for 193-nm Immersion Lithography >
+    au < exists ; exists ; 2009 ; 92 ; 9780819480422 ; 9780819475336 ; Computed Tomography, Second Edition: Principles, Design, Artifacts, and Recent Advances >
+    au < exists ; exists ; 2009 ; 93 ; 9780819478764 ; 9780819475343 ; Fundamentals of Polarimetric Remote Sensing >
+    au < exists ; exists ; 2009 ; 94 ; 9780819480927 ; 9780819476678 ; Infrared Optics and Zoom Lenses >
+    au < exists ; exists ; 2009 ; 95 ; 9780819478894 ; 9780819477996 ; Optical Design: Applying the Fundamentals >
+    au < exists ; exists ; 2009 ; 96 ; 9780819478771 ; 9780819475404 ; Optical Engineering Fundamentals >
+    au < exists ; exists ; 2009 ; 97 ; 9780819479167 ; 9780819472458 ; The Art of Radiometry >
+    au < exists ; exists ; 2009 ; 98 ; 9780819478894 ; 9780819472403 ; The Design of Plastic Optical Systems >
+    au < exists ; exists ; 2009 ; 99 ; 9780819480934 ; 9780819477736 ; Tutorials in Complex Photonic Media >
+    au < exists ; exists ; 2010 ; 75 ; 9780819480781 ; 9780819480774 ; Analysis and Evaluation of Sampled Imaging Systems >
+    au < exists ; exists ; 2010 ; 76 ; 9780819483331 ; 9780819483324 ; Applied Prismatic and Reflective Optics >
+    au < exists ; exists ; 2010 ; 77 ; 9780819482488 ; 9780819482471 ; Bioluminescence and Fluorescence for In Vivo Imaging >
+    au < exists ; exists ; 2010 ; 78 ; 9780819483997 ; 9780819475626 ; Chemistry and Lithography >
+    au < exists ; exists ; 2010 ; 79 ; 9780819480736 ; 9780819480729 ; Direct-Detection LADAR Systems >
+    au < exists ; exists ; 2010 ; 80 ; 9780819480811 ; 9780819480804 ; Field Guide to Infrared Systems, Detectors, and FPAs, Second Edition >
+    au < exists ; exists ; 2010 ; 81 ; 9780819478917 ; 9780819472465 ; Field Guide to Microscopy >
+    au < exists ; exists ; 2010 ; 82 ; 9780819480910 ; 9780819480903 ; Field Guide to Optical Fiber Technology >
+    au < exists ; exists ; 2010 ; 83 ; 9780819481832 ; 9780819476586 ; Light Propagation through Biological Tissue and Other Diffusive Media: Theory, Solutions, and Software >
+    au < exists ; exists ; 2010 ; 84 ; 9780819483362 ; 9780819483393 ; Modeling the Imaging Chain of Digital Cameras >
+    au < exists ; exists ; 2010 ; 85 ; 9780819480767 ; 9780819480750 ; Nanotechnology: A Crash Course >
+    au < exists ; exists ; 2010 ; 86 ; 9780819483270 ; 9780819483263 ; Numerical Simulation of Optical Wave Propagation with Examples in MATLAB >
+    au < exists ; exists ; 2010 ; 87 ; 9780819483706 ; 9780819483690 ; Optical Design for Biomedical Imaging >
+    au < exists ; exists ; 2010 ; 88 ; 9780819480965 ; 9780819480958 ; Optical Design of Microscopes >
+    au < exists ; exists ; 2010 ; 89 ; 9780819481825 ; 9780819475602 ; Optical Lithography : Here is Why >
+    au < exists ; exists ; 2010 ; 90 ; 9780819483256 ; 9780819483249 ; Principles of Lithography : Third Edition >
+    au < exists ; exists ; 2011 ; 58 ; 9780819480989 ; 9780819480972 ; 3D Video Technologies: An Overview of Research Trends >
+    au < exists ; exists ; 2011 ; 59 ; 9780819488268 ; 9780819488251 ; Aberration Theory Made Simple, Second Edition >
+    au < exists ; exists ; 2011 ; 60 ; 9780819485366 ; 9780819485359 ; Alien Vision: Exploring the Electromagnetic Spectrum with Imaging Technology, Second Edition >
+    au < exists ; exists ; 2011 ; 61 ; 9780819485656 ; 9780819485649 ; Color Image Processing with Biomedical Applications >
+    au < exists ; exists ; 2011 ; 62 ; 9780819483980 ; 9780819483973 ; Color Vision and Colorimetry: Theory and Applications, Second Edition >
+    au < exists ; exists ; 2011 ; 63 ; 9780819482051 ; 9780819482044 ; Computational Fourier Optics: A MATLAB® Tutorial >
+    au < exists ; exists ; 2011 ; 64 ; 9780819483591 ; 9780819483584 ; Enhanced Optical Filter Design >
+    au < exists ; exists ; 2011 ; 65 ; 9780819486509 ; 9780819486493 ; Field Guide to Binoculars and Scopes >
+    au < exists ; exists ; 2011 ; 66 ; 9780819486912 ; 9780819486905 ; Field Guide to Diffractive Optics >
+    au < exists ; exists ; 2011 ; 67 ; 9780819486776 ; 9780819486769 ; Field Guide to Optical Fabrication >
+    au < exists ; exists ; 2011 ; 68 ; 9780819488282 ; 9780819488275 ; Field Guide to Radiometry >
+    au < exists ; exists ; 2011 ; 69 ; 9780819485519 ; 9780819485502 ; Field Guide to Special Functions for Engineers >
+    au < exists ; exists ; 2011 ; 70 ; 9780819486486 ; 9780819486479 ; Hadamard Transforms >
+    au < exists ; exists ; 2011 ; 71 ; 9780819487001 ; 9780819486998 ; Optical Imaging and Aberrations, Part II. Wave Diffraction Optics, Second Edition >
+    au < exists ; exists ; 2011 ; 72 ; 9780819482167 ; 9780819482150 ; Polarization of Light with Applications in Optical Fibers >
+    au < exists ; exists ; 2011 ; 73 ; 9780819489722 ; 9780819489715 ; Problems and Answers in Wave Optics >
+    au < exists ; exists ; 2011 ; 74 ; 9780819488220 ; 9780819488213 ; Signal and Image Restoration: Information-Theoretic Approaches >
+    au < exists ; exists ; 2012 ; 216 ; 9780819483676 ; 9780819483669 ; Basic Optics for the Astronomical Sciences >
+    au < exists ; exists ; 2012 ; 51 ; 9780819487902 ; 9780819487896 ; Diagnostic and Therapeutic Applications of Breast Imaging >
+    au < exists ; exists ; 2012 ; 52 ; 9780819490186 ; 9780819490179 ; Field Guide to Adaptive Optics, Second Edition >
+    au < exists ; exists ; 2012 ; 53 ; 9780819490223 ; 9780819490216 ; Field Guide to Image Processing >
+    au < exists ; exists ; 2012 ; 489 ; 9780819491657 ; 9780819491640 ; Field Guide to Lens Design >
+    au < exists ; exists ; 2012 ; 224 ; 9780819491626 ; 9780819491619 ; Field Guide to Optomechanical Design and Analysis >
+    au < exists ; exists ; 2012 ; 54 ; 9780819487025 ; 9780819487018 ; Field Guide to Probability, Random Processes, and Random Data Analysis >
+    au < exists ; exists ; 2012 ; 217 ; 9780819491688 ; 9780819491671 ; Field Guide to Terahertz Sources, Detectors, and Optics >
+    au < exists ; exists ; 2012 ; 55 ; 9780819489777 ; 9780819489760 ; Formation of a Digital Image: The Imaging Chain Simplified >
+    au < exists ; exists ; 2012 ; 488 ; 9780819488312 ; 9780819488305 ; High Dynamic Range Imaging: Sensors and Architectures >
+    au < exists ; exists ; 2012 ; 56 ; 9780819487889 ; 9780819487872 ; Hyperspectral Remote Sensing >
+    au < exists ; exists ; 2012 ; 57 ; 9780819482037 ; 9780819482020 ; Image Acquisition and Preprocessing for Machine VisionSystems >
+    au < exists ; exists ; 2012 ; 472 ; 9780819492494 ; 9780819492487 ; Integrated Optomechanical Analysis, Second Edition >
+    au < exists ; exists ; 2012 ; 471 ; 9780819490933 ; 9780819490926 ; Introduction to Semiconductor Manufacturing Technology, Second Edition >
+    au < exists ; exists ; 2012 ; 473 ; 9780819494535 ; 9780819494528 ; Maxwell's Equations of Electrodynamics: An Explanation >
+    au < exists ; exists ; 2012 ; 225 ; 9780819492524 ; 9780819492517 ; Optical Scattering: Measurements and Analysis, Third Edition >
+    au < exists ; exists ; 2012 ; 469 ; 9780819491343 ; 9780819491336 ; Sensor and Data Fusion: A Tool for Information Assessment and Decision Making, Second Edition >
+    au < exists ; exists ; 2012 ; 470 ; 9780819492586 ; 9780819492579 ; Spectral Computed Tomography >
+    au < exists ; exists ; 2013 ; 560 ; 9780819495907 ; 9780819495891 ; Chemical Vapor Deposited Zinc Sulfide >
+    au < exists ; exists ; 2013 ; 492 ; 9780819494832 ; 9780819494825 ; Commercialization Basics for the Photonics Industry >
+    au < exists ; exists ; 2013 ; 695 ; 9780819497406 ; 9780819497390 ; Computer-Aided Cancer Detection and Diagnosis: Recent Advances >
+    au < exists ; exists ; 2013 ; 567 ; 9780819495709 ; 9780819495693 ; Electro-Optical System Analysis and Design: A Radiometry Perspective >
+    au < exists ; exists ; 2013 ; 651 ; 9780819496362 ; 9780819496355 ; Field Guide to Nonlinear Optics >
+    au < exists ; exists ; 2013 ; 566 ; 9780819485496 ; 9780819485489 ; Field Guide to Physical Optics >
+    au < exists ; exists ; 2013 ; 551 ; 9780819492982 ; 9780819492975 ; Laser Beam Quality Metrics >
+    au < exists ; exists ; 2013 ; 493 ; 9780819488206 ; 9780819488190 ; Laser Safety in the Lab >
+    au < exists ; exists ; 2013 ; 532 ; 9780819491565 ; 9780819491558 ; Military Displays Technology and Applications >
+    au < exists ; exists ; 2013 ; 494 ; 9780819492555 ; 9780819492548 ; Modeling the Optical and Visual Performance of the Human Eye >
+    au < exists ; exists ; 2013 ; 552 ; 9780819492951 ; 9780819492944 ; Multimodality Breast Imaging: Diagnosis and Treatment >
+    au < exists ; exists ; 2013 ; 652 ; 9780819496324 ; 9780819496317 ; Ocean Sensing and Monitoring: Optics and Other Methods >
+    au < exists ; exists ; 2013 ; 653 ; 9780819491121 ; 9780819491114 ; Optical Imaging and Aberrations, Part III: Wavefront Analysis >
+    au < exists ; exists ; 2013 ; 681 ; 9780819497888 ; 9780819497871 ; Optical Satellite Data Compression and Implementation >
+    au < exists ; exists ; 2013 ; 679 ; 9780819493293 ; 9780819493286 ; Optical Satellite Signal Processing and Enhancement >
+    au < exists ; exists ; 2013 ; 670 ; 9780819493323 ; 9780819493316 ; Pyroelectric Materials: Infrared Detectors, Particle Accelerators, and Energy Harvesters >
+    au < exists ; exists ; 2013 ; 553 ; 9780819493262 ; 9780819493255 ; Stray Light Analysis and Control >
+    au < exists ; exists ; 2013 ; 554 ; 9780819494580 ; 9780819494573 ; The Proper Care of Optics: Cleaning, Handling, Storage, and Shipping >
+    au < exists ; exists ; 2013 ; 680 ; 9780819496096 ; 9780819495969 ; The Wonder of Nanotechnology: Quantum Optoelectronic Devices and Applications >
+    au < exists ; exists ; 2013 ; 495 ; 9780819493231 ; 9780819493224 ; Value Metrics for Better Lighting >
+    au < exists ; exists ; 2013 ; 654 ; 9780819496430 ; 9780819496416 ; Windowed Fringe Pattern Analysis >
+    au < exists ; exists ; 2014 ; 840 ; 9780819498007 ; 9780819497994 ; Field Guide to Displacement Measuring Interferometry >
+    au < exists ; exists ; 2014 ; 841 ; 9780819499585 ; 9780819499578 ; Field Guide to Holography >
+    au < exists ; exists ; 2014 ; 875 ; 9780819498250 ; 9780819498243 ; Fundamentals of Dispersive Optical Spectroscopy Systems >
+    au < exists ; exists ; 2014 ; 873 ; 9780819499998 ; 9780819499981 ; Fundamentals of Geometrical Optics >
+    au < exists ; exists ; 2014 ; 869 ; 9780819491411 ; 9780819491404 ; Interferometry for Precision Measurement >
+    au < exists ; exists ; 2014 ; 968 ; 9781628412932 ; 9781628412925 ; Optical Glass >
+    au < exists ; exists ; 2014 ; 872 ; 9780819498229 ; 9780819498212 ; Solid State Lasers: Tunable Sources and Passive Q-Switching Elements >
+    au < exists ; exists ; 2014 ; 868 ; 9780819498373 ; 9780819498366 ; Strength Properties of Glass and Ceramics >
+    au < exists ; exists ; 2014 ; 874 ; 9781628410709 ; 9781628410686 ; Translational Research in Biophotonics: Four National Cancer Institute Case Studies >
+    au < exists ; exists ; 2015 ; 1383 ; 9781628413731 ; 9781628413892 ; Applications of Dispersive Optical Spectroscopy Systems >
+    au < exists ; exists ; 2015 ; 1269 ; 9781628413908 ; 9781628413892 ; Digital Converters for Image Sensors >
+    au < exists ; exists ; 2015 ; 1324 ; 9781628415483 ; 9781628415476 ; Field Guide to Linear Systems in Optics >
+    au < exists ; exists ; 2015 ; 1325 ; 9781628415179 ; 9781628415162 ; Tissue Optics: Light Scattering Methods and Instruments for Medical Diagnosis (2015) >
+    au < exists ; exists ; 2015 ; 1407 ; 9781628416725 ;  ; Carbon Nanoparticles in Photoacoustic Imaging >
+    au < exists ; exists ; 2015 ; 1389 ; 9781628416558 ; 9781628416541 ; Field Guide to Lidar >
+    au < exists ; exists ; 2015 ; 1405 ; 9781628416480 ;  ; How to Set Up a Laser Lab >
+    au < exists ; exists ; 2015 ; 1518 ; 9781628416459 ;  ; Image Resolution: Deconstructing Hollywood's Zoom and Enhance >
+    au < exists ; exists ; 2015 ; 1406 ; 9781628416718 ;  ; Optical Sensing: Microstructured Fibers, Fiber Micromachining, and Functional Coatings >
+    au < exists ; exists ; 2015 ; 1408 ; 9781628416732 ;  ; Optimization Techniques for Diffraction Spectrometers >
+    au < exists ; exists ; 2015 ; 1409 ; 9781628416749 ;  ; Femtosecond-Laser-Assisted LASIK Eye Surgery and Imaging >
+    au < exists ; exists ; 2015 ; 1608 ; 9781628411782 ; 9781628411775 ; Field Guide to Astronomical Instrumentation >
 
     }
 

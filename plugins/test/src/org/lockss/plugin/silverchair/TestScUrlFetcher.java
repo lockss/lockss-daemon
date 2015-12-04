@@ -131,8 +131,28 @@ public class TestScUrlFetcher extends LockssTestCase {
     postMatch =ScUrlFetcher.PATTERN_POST.matcher(url_spie);
     assertTrue(postMatch.find());
 
+  }
+
+  public void testQueryToJsonString() throws Exception {
+    String base = "http://www.example.com/issue.aspx/SetArticlePDFLinkBasedOnAccess";
+    String expected = "{'iArticleID' : 202091958}";
+    // test JAMA
+    String jsonUrl = base +
+                     "?json=%7B%27iArticleID%27+%3A+202091958%7D&post=json";
+
+    String postData = fetcher.queryToJsonString(jsonUrl);
+    assertEquals(expected, postData);
+
+    //test SPIE
+    jsonUrl = base +
+      "?json=%7B%27resourceId%27+%3A+2136060%2C+%27resourceType%27+%3A+%27Article%27+%7D&post=json";
+    expected = "{'resourceId' : 2136060, 'resourceType' : 'Article' }";
+    postData = fetcher.queryToJsonString(jsonUrl);
+
+    assertEquals(expected, postData);
 
   }
+
 
   private class MyMockArchivalUnit extends MockArchivalUnit {
     boolean returnRealCachedUrl = false;

@@ -52,6 +52,8 @@ public class ScHtmlMetadataExtractorFactory implements FileMetadataExtractorFact
     // All below seen in ACCP, ACP, AMA, APA
     cookMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
     cookMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
+    // replacement tite for proceedings
+    cookMap.put("citation_conference_title", MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put("citation_journal_abbrev", FIELD_PUBLICATION_ABBREV);
     cookMap.put("citation_issn", MetadataField.FIELD_ISSN);
     cookMap.put("citation_volume", MetadataField.FIELD_VOLUME);
@@ -61,8 +63,12 @@ public class ScHtmlMetadataExtractorFactory implements FileMetadataExtractorFact
     cookMap.put("citation_doi", MetadataField.FIELD_DOI);
     cookMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
     cookMap.put("citation_date", MetadataField.FIELD_DATE);
+    // replacement date for proceedings
+    cookMap.put("citation_publication_date", MetadataField.FIELD_DATE);
     cookMap.put("citation_author", MetadataField.FIELD_AUTHOR);
     cookMap.put("citation_keyword", MetadataField.FIELD_KEYWORDS);
+    // addition for proceedings
+    cookMap.put("citation_pdf_url", MetadataField.DC_KEY_IDENTIFIER);
   }
   
   @Override
