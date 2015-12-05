@@ -350,7 +350,7 @@
 
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Adaptive and Innovative Systems Volume 1 ; 1 >
       au < finished ; finished ; 2014-2015 ; International Journal of Adaptive and Innovative Systems Volume 2 ; 2 >
-      au < expected ; exists ; 2015 ; International Journal of Adaptive and Innovative Systems Volume 3 ; 3 >
+      au < expected ; exists ; 2016 ; International Journal of Adaptive and Innovative Systems Volume 3 ; 3 >
 
     }
 
@@ -392,7 +392,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Advanced Mechatronic Systems Volume 4 ; 4 > 
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Advanced Mechatronic Systems Volume 5 ; 5 >
       au < crawling ; exists ; 2014-2015 ; International Journal of Advanced Mechatronic Systems Volume 6 ; 6 >
-      au < expected ; exists ; 2015 ; International Journal of Advanced Mechatronic Systems Volume 7 ; 7 >
+      au < expected ; exists ; 2016 ; International Journal of Advanced Mechatronic Systems Volume 7 ; 7 >
 
     }
 
@@ -466,7 +466,6 @@
       >
 
       param[journal_id] = ijaose
-      comment[0] = no issue in 2012
 
       au < doNotProcess ; exists ; 2007 ; International Journal of Agent-Oriented Software Engineering Volume 1 ; 1 >
       au < doNotProcess ; exists ; 2008 ; International Journal of Agent-Oriented Software Engineering Volume 2 ; 2 >
