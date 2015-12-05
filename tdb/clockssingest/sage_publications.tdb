@@ -16282,6 +16282,25 @@
   {
 
     title <
+      name = International Journal of Heritage in the Digital Era ;
+      issn = 2047-4970 ;
+      eissn = 2047-4989
+    >
+
+      param[base_url] = http://hde.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2012 ; International Journal of Heritage in the Digital Era Volume 1 ; 1 ; >
+      au < exists ; exists ; 2013 ; International Journal of Heritage in the Digital Era Volume 2 ; 2 ; >
+      au < exists ; exists ; 2014 ; International Journal of Heritage in the Digital Era Volume 3 ; 3 ; >
+      au < exists ; exists ; 2015 ; International Journal of Heritage in the Digital Era Volume 4 ; 4 ; >
+      au < expected ; exists ; 2016 ; International Journal of Heritage in the Digital Era Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+    title <
       name = International Journal of High Performance Computing Applications ;
       issn = 1094-3420 ;
       eissn = 1741-2846
@@ -16518,6 +16537,27 @@
   {
 
     title <
+      name = The International Journal of Ocean and Climate Systems ;
+      issn = 1759-3131 ;
+      eissn = 1759-314X
+    >
+
+      param[base_url] = http://ocs.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2010 ; The International Journal of Ocean and Climate Systems Volume 1 ; 1 ; >
+      au < exists ; exists ; 2011 ; The International Journal of Ocean and Climate Systems Volume 2 ; 2 ; >
+      au < exists ; exists ; 2012 ; The International Journal of Ocean and Climate Systems Volume 3 ; 3 ; >
+      au < exists ; exists ; 2013 ; The International Journal of Ocean and Climate Systems Volume 4 ; 4 ; >
+      au < exists ; exists ; 2014 ; The International Journal of Ocean and Climate Systems Volume 5 ; 5 ; >
+      au < exists ; exists ; 2015 ; The International Journal of Ocean and Climate Systems Volume 6 ; 6 ; >
+      au < expected ; exists ; 2016 ; The International Journal of Ocean and Climate Systems Volume 7 ; 7 ; >
+
+  }
+
+  {
+
+    title <
       name = International Journal of Offender Therapy and Comparative Criminology ;
       issn = 0306-624X ;
       eissn = 1552-6933
@@ -16673,6 +16713,27 @@
       au < expected ; exists ; 2016 ; The International Journal of Press/Politics Volume 21 ; 21 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Protective Structures ;
+      issn = 2041-4196 ;
+      eissn = 2041-420X
+    >
+
+      param[base_url] = http://prs.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2010 ; International Journal of Protective Structures Volume 1 ; 1 ; >
+      au < exists ; exists ; 2011 ; International Journal of Protective Structures Volume 2 ; 2 ; >
+      au < exists ; exists ; 2012 ; International Journal of Protective Structures Volume 3 ; 3 ; >
+      au < exists ; exists ; 2013 ; International Journal of Protective Structures Volume 4 ; 4 ; >
+      au < exists ; exists ; 2014 ; International Journal of Protective Structures Volume 5 ; 5 ; >
+      au < exists ; exists ; 2015 ; International Journal of Protective Structures Volume 6 ; 6 ; >
+      au < expected ; exists ; 2016 ; International Journal of Protective Structures Volume 7 ; 7 ; >
 
   }
 
@@ -16897,6 +16958,28 @@
       au < expected ; exists ; 2016 ; International Journal of Social Psychiatry Volume 62 ; 62 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Spray and Combustion Dynamics ;
+      issn = 1756-8277 ;
+      eissn = 1756-8285
+    >
+
+      param[base_url] = http://scd.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2009 ; International Journal of Spray and Combustion Dynamics Volume 1 ; 1 ; >
+      au < exists ; exists ; 2010 ; International Journal of Spray and Combustion Dynamics Volume 2 ; 2 ; >
+      au < exists ; exists ; 2011 ; International Journal of Spray and Combustion Dynamics Volume 3 ; 3 ; >
+      au < exists ; exists ; 2012 ; International Journal of Spray and Combustion Dynamics Volume 4 ; 4 ; >
+      au < exists ; exists ; 2013 ; International Journal of Spray and Combustion Dynamics Volume 5 ; 5 ; >
+      au < exists ; exists ; 2014 ; International Journal of Spray and Combustion Dynamics Volume 6 ; 6 ; >
+      au < exists ; exists ; 2015 ; International Journal of Spray and Combustion Dynamics Volume 7 ; 7 ; >
+      au < expected ; exists ; 2016 ; International Journal of Spray and Combustion Dynamics Volume 8 ; 8 ; >
 
   }
 
