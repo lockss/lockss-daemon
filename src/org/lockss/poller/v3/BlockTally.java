@@ -142,20 +142,26 @@ public class BlockTally implements VoteBlockTallier.VoteBlockTally {
 
   // Interface VoteBlockTally methods to springboard to our internal
   // methods.
-  @Override public void voteSpoiled(ParticipantUserData id) {}
-  @Override public void voteAgreed(ParticipantUserData id) {
+  @Override public void voteSpoiled(ParticipantUserData id,
+				    String url) {}
+  @Override public void voteAgreed(ParticipantUserData id,
+				   String url) {
     addAgreeVoter(id);
   }
-  @Override public void voteDisagreed(ParticipantUserData id) {
+  @Override public void voteDisagreed(ParticipantUserData id,
+				      String url) {
     addDisagreeVoter(id);
   }
-  @Override public void votePollerOnly(ParticipantUserData id) {
+  @Override public void votePollerOnly(ParticipantUserData id,
+				       String url) {
     addPollerOnlyVoter(id);
   }
-  @Override public void voteVoterOnly(ParticipantUserData id) {
+  @Override public void voteVoterOnly(ParticipantUserData id,
+				      String url) {
     addVoterOnlyVoter(id);
   }
-  @Override public void voteNeither(ParticipantUserData id) {
+  @Override public void voteNeither(ParticipantUserData id,
+				    String url) {
     // Leads to WON if a landslide of voters do not have the URL when
     // the poller also does not have it.
     addAgreeVoter(id);

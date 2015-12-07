@@ -594,9 +594,40 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     idmgr.signalPartialAgreement(peer2, mau, 0.95f);
     idmgr.signalPartialAgreement(peer3, mau, 1.00f);
     
+    idmgr.signalPartialAgreement(AgreementType.POP, peer1, mau, 0.1f);
+    idmgr.signalPartialAgreement(AgreementType.POP_HINT, peer1, mau, 0.2f);
+    idmgr.signalPartialAgreement(AgreementType.W_POR, peer1, mau, 0.3f);
+
+    idmgr.signalPartialAgreement(AgreementType.W_POR, peer1, mau, 0.25f);
+
     assertEquals(0.85f, idmgr.getPercentAgreement(peer1, mau), 0.001f);
     assertEquals(0.95f, idmgr.getPercentAgreement(peer2, mau), 0.001f);
     assertEquals(1.00f, idmgr.getPercentAgreement(peer3, mau), 0.001f);
+
+    assertEquals(0.85f,
+		 idmgr.getPercentAgreement(peer1, mau, AgreementType.POR),
+		 0.001f);
+    assertEquals(0.95f,
+		 idmgr.getPercentAgreement(peer2, mau, AgreementType.POR),
+		 0.001f);
+    assertEquals(-1.0f,
+		 idmgr.getPercentAgreement(peer2, mau, AgreementType.W_POR));
+
+    assertEquals(0.1f,
+		 idmgr.getPercentAgreement(peer1, mau, AgreementType.POP),
+		 0.01f);
+    assertEquals(0.2f,
+		 idmgr.getPercentAgreement(peer1, mau, AgreementType.POP_HINT),
+		 0.01f);
+    assertEquals(0.25f,
+		 idmgr.getPercentAgreement(peer1, mau, AgreementType.W_POR),
+		 0.01f);
+    assertEquals(0.3f,
+		 idmgr.getHighestPercentAgreement(peer1, mau, AgreementType.W_POR),
+		 0.01f);
+    assertEquals(-1.0f,
+		 idmgr.getPercentAgreement(peer1, mau, AgreementType.W_POP),
+		 0.01f);
   }
   
   public void testSignalPartialAgreementDisagreementThreshold()

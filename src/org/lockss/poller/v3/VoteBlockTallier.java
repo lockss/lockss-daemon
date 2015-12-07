@@ -50,12 +50,18 @@ public class VoteBlockTallier implements UrlTallier.VoteCallback {
   // todo(bhayes): There should be an enum of these things. But that
   // leads to EnumMap<Vote, Long> with boxed longs.
   interface VoteBlockTally {
-    public void voteAgreed(ParticipantUserData id);
-    public void voteDisagreed(ParticipantUserData id);
-    public void votePollerOnly(ParticipantUserData id);
-    public void voteVoterOnly(ParticipantUserData id);
-    public void voteNeither(ParticipantUserData id);
-    public void voteSpoiled(ParticipantUserData id);
+    public void voteAgreed(ParticipantUserData id,
+			   String url);
+    public void voteDisagreed(ParticipantUserData id,
+			      String url);
+    public void votePollerOnly(ParticipantUserData id,
+			       String url);
+    public void voteVoterOnly(ParticipantUserData id,
+			      String url);
+    public void voteNeither(ParticipantUserData id,
+			    String url);
+    public void voteSpoiled(ParticipantUserData id,
+			    String url);
   }
 
   /** A callback for when VoteBlockTallier.vote() is called. */
@@ -182,70 +188,77 @@ public class VoteBlockTallier implements UrlTallier.VoteCallback {
     if (pollerHas()) {
       VoteBlockComparer comparer = comparerFactory.forIndex(participantIndex);
       if (comparer.sharesVersion(voteBlock)) {
-	voteAgreed(id);
+	voteAgreed(id, voteBlock.getUrl());
       } else {
-	voteDisagreed(id);
+	voteDisagreed(id, voteBlock.getUrl());
       }
     } else {
-      voteVoterOnly(id);
+      voteVoterOnly(id, voteBlock.getUrl());
     }
   }
 
   /**
    * Vote that the URL is missing.
    */
-  public void voteMissing(ParticipantUserData id) {
+  public void voteMissing(ParticipantUserData id,
+			  String url) {
     votingStarted = true;
     if (pollerHas()) {
-      votePollerOnly(id);
+      votePollerOnly(id, url);
     } else {
-      voteNeither(id);
+      voteNeither(id, url);
     }
   }
 
   /**
    * The voter is unable to cast a meaningful vote.
    */
-  public void voteSpoiled(ParticipantUserData id) {
+  public void voteSpoiled(ParticipantUserData id,
+			  String url) {
     votingStarted = true;
     log.debug3(id+"  spoiled");
     for (VoteBlockTally tally: tallies) {
-      tally.voteSpoiled(id);
+      tally.voteSpoiled(id, url);
     }
   }
 
-  void voteAgreed(ParticipantUserData id) {
+  void voteAgreed(ParticipantUserData id,
+		  String url) {
     log.debug3(id+"  agreed");
     for (VoteBlockTally tally: tallies) {
-      tally.voteAgreed(id);
+      tally.voteAgreed(id, url);
     }
   }
 
-  void voteDisagreed(ParticipantUserData id) {
+  void voteDisagreed(ParticipantUserData id,
+		     String url) {
     log.debug3(id+"  disagreed");
     for (VoteBlockTally tally: tallies) {
-      tally.voteDisagreed(id);
+      tally.voteDisagreed(id, url);
     }
   }
 
-  void votePollerOnly(ParticipantUserData id) {
+  void votePollerOnly(ParticipantUserData id,
+		      String url) {
     log.debug3(id+"  didn't have");
     for (VoteBlockTally tally: tallies) {
-      tally.votePollerOnly(id);
+      tally.votePollerOnly(id, url);
     }
   }
 
-  void voteVoterOnly(ParticipantUserData id) {
+  void voteVoterOnly(ParticipantUserData id,
+		     String url) {
     log.debug3(id+"  voterOnly");
     for (VoteBlockTally tally: tallies) {
-      tally.voteVoterOnly(id);
+      tally.voteVoterOnly(id, url);
     }
   }
 
-  void voteNeither(ParticipantUserData id) {
+  void voteNeither(ParticipantUserData id,
+		   String url) {
     log.debug3(id+"  neither have");
     for (VoteBlockTally tally: tallies) {
-      tally.voteNeither(id);
+      tally.voteNeither(id, url);
     }
   }
 }

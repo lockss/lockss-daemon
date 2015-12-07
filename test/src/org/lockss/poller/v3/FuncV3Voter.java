@@ -271,17 +271,28 @@ public class FuncV3Voter extends LockssTestCase {
     V3LcapMessage vote = voter.getSentMessage();
     assertNotNull(vote);
     assertEquals(expOp, vote.getOpcode());
-    if (expOp == V3LcapMessage.MSG_POLL_ACK) {
-      assertEquals(expNak, vote.getNak());
+    assertEquals(expNak, vote.getNak());
+    if (expNak == null) {
+
+      /*
+	voter.handleMessage(msgRepairRequest);
+	voter.handleMessage(msgRepairRequest);
+	voter.handleMessage(msgRepairRequest);
+      */
+
+      msgReceipt.setAgreementHint(0.75);
+      msgReceipt.setWeightedAgreementHint(0.80);
+      voter.receiveMessage(msgReceipt);
+      voter.getPsmInterp().waitIdle(TIMEOUT_SHOULDNT);
+      assertEquals(0.75f,
+		   idmgr.getPercentAgreement(pollerId, mau,
+					     AgreementType.POR_HINT),
+		   0.01f);
+      assertEquals(-1.0f,
+		   idmgr.getPercentAgreement(pollerId, mau,
+					     AgreementType.W_POR_HINT),
+		   0.01f);
     }
-
-    /*
-    voter.handleMessage(msgRepairRequest);
-    voter.handleMessage(msgRepairRequest);
-    voter.handleMessage(msgRepairRequest);
-    */
-
-    voter.receiveMessage(msgReceipt);
   }
   
   public void testNonRepairPoll() throws Exception {

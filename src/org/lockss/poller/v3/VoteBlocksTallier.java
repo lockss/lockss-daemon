@@ -84,19 +84,19 @@ class VoteBlocksTallier {
    * Create a VoteBlocksTallier. Use the current configuration to
    * decide if Lists of URLs should be kept.
    */
-  public static VoteBlocksTallier make() {
+  public static VoteBlocksTallier make(V3Voter voter) {
     boolean keepUrlLists =
       CurrentConfig.getBooleanParam(PARAM_KEEP_URL_LISTS,
 				    DEFAULT_KEEP_URL_LISTS);
-    return make(keepUrlLists);
+    return make(voter, keepUrlLists);
   }
 
   // package, for testing.
-  static VoteBlocksTallier make(boolean keepUrlLists) {
+  static VoteBlocksTallier make(V3Voter voter, boolean keepUrlLists) {
     if (keepUrlLists) {
-      return new WithLists();
+      return new WithLists(voter);
     } else {
-      return new VoteBlocksTallier();
+      return new VoteBlocksTallier(voter);
     }
   }
 
@@ -111,7 +111,11 @@ class VoteBlocksTallier {
     private final Map<Category, List<String>> categoryMap =
       new EnumMap<Category, List<String>>(Category.class);
 
-    WithLists() {
+    WithLists(V3Voter voter) {
+      super(voter);
+    }
+
+    @Override protected void initCategoryMap() {
       for (Category category: Category.values()) {
 	categoryMap.put(category, new ArrayList<String>());
       }
@@ -135,9 +139,25 @@ class VoteBlocksTallier {
   private final AbstractMap<Category, Integer> categoryMap =
     new EnumMap<Category, Integer>(Category.class);
 
-  private VoteBlocksTallier() {
+  private final AbstractMap<Category, Float> weightedCategoryMap =
+    new EnumMap<Category, Float>(Category.class);
+
+  protected V3Voter voter;
+
+  private VoteBlocksTallier(V3Voter voter) {
+    this.voter = voter;
+    initCategoryMap();
+    initWeightedCategoryMap();
+  }
+
+  protected void initCategoryMap() {
     for (Category category: Category.values()) {
       categoryMap.put(category, 0);
+    }
+  }
+  protected void initWeightedCategoryMap() {
+    for (Category category: Category.values()) {
+      weightedCategoryMap.put(category, 0.0F);
     }
   }
 
@@ -150,6 +170,16 @@ class VoteBlocksTallier {
   protected void addUrl(Category category, String url) {
     log.debug3(url+" is: "+category);
     categoryMap.put(category, getCount(category)+1);
+    addWeightedUrl(category, url);
+  }
+
+  protected void addWeightedUrl(Category category, String url) {
+    weightedCategoryMap.put(category, (getWeightedCount(category) +
+				       getUrlResultWeight(url)));
+  }
+
+  float getUrlResultWeight(String url) {
+    return voter.getUrlResultWeight(url);
   }
 
   /**
@@ -157,7 +187,15 @@ class VoteBlocksTallier {
    * @return The number of URLs added which were classified into the category.
    */
   public int getCount(Category category) {
-      return categoryMap.get(category);
+    return categoryMap.get(category);
+  }
+
+  /**
+   * @param category The category of vote in question.
+   * @return The number of URLs added which were classified into the category.
+   */
+  public float getWeightedCount(Category category) {
+    return weightedCategoryMap.get(category);
   }
 
   /**
@@ -233,6 +271,22 @@ class VoteBlocksTallier {
     }
   }
 
+  int getTotalCount() {
+    return
+      getCount(Category.AGREE) +
+      getCount(Category.DISAGREE) +
+      getCount(Category.VOTER_ONLY) +
+      getCount(Category.POLLER_ONLY);
+  }
+
+  float getTotalWeight() {
+    return
+      getWeightedCount(Category.AGREE) +
+      getWeightedCount(Category.DISAGREE) +
+      getWeightedCount(Category.VOTER_ONLY) +
+      getWeightedCount(Category.POLLER_ONLY);
+  }
+
   /**
    * @return the percent for which the poller agrees with the us, the
    * voter.
@@ -241,10 +295,21 @@ class VoteBlocksTallier {
     // XXX Split into two numbers: the overall agreement (taking all URLs
     // into account) and the repairability metric proving possession
     // (taking only URLs we have into account)
-    int total = getCount(Category.AGREE) +
-      getCount(Category.DISAGREE) +
-      getCount(Category.VOTER_ONLY) +
-      getCount(Category.POLLER_ONLY);
-    return total == 0 ? 0.0f : ((float)getCount(Category.AGREE))/total;
+    int total = getTotalCount();
+    return total == 0 ? 0.0f
+      : ((float)getCount(Category.AGREE))/getTotalCount();
+  }
+
+  /**
+   * @return the weighted percent agreement for which the poller agrees
+   * with us.
+   */
+  public final float weightedPercentAgreement() {
+    // XXX Split into two numbers: the overall agreement (taking all URLs
+    // into account) and the repairability metric proving possession
+    // (taking only URLs we have into account)
+    int total = getTotalCount();
+    return total == 0 ? 0.0f
+      : getWeightedCount(Category.AGREE)/getTotalWeight();
   }
 }

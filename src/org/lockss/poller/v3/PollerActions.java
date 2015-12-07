@@ -330,6 +330,9 @@ public class PollerActions {
     V3LcapMessage msg = ud.makeMessage(V3LcapMessage.MSG_EVALUATION_RECEIPT);
     msg.setEffortProof(ud.getReceiptEffortProof());
     msg.setAgreementHint(ud.getPercentAgreement());
+    if (ud.getPoller().hasResultWeightMap()) {
+      msg.setWeightedAgreementHint(ud.getWeightedPercentAgreement());
+    }
     msg.setExpiration(ud.getPoller().getPollExpiration());
     msg.setRetryMax(1);
     if (ud.isSymmetricPoll() &&

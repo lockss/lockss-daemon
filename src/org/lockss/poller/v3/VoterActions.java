@@ -289,14 +289,21 @@ public class VoterActions {
     double agreementHint = msg.getAgreementHint();
     log.debug3("Receipt agreement " + agreementHint);
     ud.setAgreementHint(agreementHint);
+    double weightedAgreementHint = msg.getWeightedAgreementHint();
+    if (weightedAgreementHint >= 0.0) {
+      log.debug3("Receipt weightedAgreement " + weightedAgreementHint);
+      ud.setWeightedAgreementHint(weightedAgreementHint);
+    }
     // Remember the agreement hint in the agreement history for the AU
     PeerIdentity poller = ud.getPollerId();
-    IdentityManager idmgr = ud.getVoter().getIdentityManager();
     ArchivalUnit au = ud.getVoter().getAu();
-    idmgr.signalPartialAgreement((ud.getVoter().isSampledPoll()
-				  ? AgreementType.POP_HINT
-				  : AgreementType.POR_HINT),
-				 poller, au, (float) agreementHint);
+    signalPartialAgreement(ud,
+			   (ud.getVoter().isSampledPoll()
+			    ? AgreementType.POP_HINT
+			    : AgreementType.POR_HINT),
+			   poller, au,
+			   (float)agreementHint,
+			   (float)weightedAgreementHint);
     if (! ud.isSymmetricPoll()) {
       if (msg.getVoterNonce2() != null) {
 	log.error("Poller sent nonce2 outside of symmetric poll");
@@ -311,7 +318,7 @@ public class VoterActions {
 	  log.warning("Poller sent no vote blocks, so no symmetric result to record.");
 	  return V3Events.evtReceiptOk;
 	}	  
-	VoteBlocksTallier vbt = VoteBlocksTallier.make();
+	VoteBlocksTallier vbt = VoteBlocksTallier.make(ud.getVoter());
 	try {
 	  vbt.tallyVoteBlocks(ud.getSymmetricVoteBlocks(),
 			      msg.getVoteBlocks());
@@ -328,18 +335,44 @@ public class VoterActions {
 	ud.setNumVoterOnlyUrl(nVoterOnly);
 	int nPollerOnly = vbt.getCount(VoteBlocksTallier.Category.POLLER_ONLY);
 	ud.setNumPollerOnlyUrl(nPollerOnly);
+	float percentAgreement = vbt.percentAgreement();
+	ud.setSymmetricAgreement(percentAgreement);
+	float weightedPercentAgreement = vbt.weightedPercentAgreement();
+	if (ud.getVoter().hasResultWeightMap()) {
+	  ud.setSymmetricWeightedAgreement(weightedPercentAgreement);
+	}
 	log.debug("Symmetric poll result:" +
 		  " agree: " + nAgree +
 		  " disagree: " + nDisagree +
 		  " Voter only: " + nVoterOnly +
 		  " Poller only: " + nPollerOnly);
-	idmgr.signalPartialAgreement((ud.getVoter().isSampledPoll()
-				      ? AgreementType.SYMMETRIC_POP
-				      : AgreementType.SYMMETRIC_POR),
-				     poller, au, vbt.percentAgreement());
+	signalPartialAgreement(ud,
+			       (ud.getVoter().isSampledPoll()
+				? AgreementType.SYMMETRIC_POP
+				: AgreementType.SYMMETRIC_POR),
+			       poller, au, vbt.percentAgreement(),
+			       vbt.weightedPercentAgreement());
       }
     }
     return V3Events.evtReceiptOk;
+  }
+
+  private static void signalPartialAgreement(VoterUserData ud,
+					     AgreementType agreementType, 
+					     PeerIdentity pid, ArchivalUnit au,
+					     float agreement,
+					     float weightedAgreement) {
+    IdentityManager idmgr = ud.getVoter().getIdentityManager();
+    idmgr.signalPartialAgreement(agreementType,
+				 pid,
+				 au,
+				 agreement);
+    if (ud.getVoter().hasResultWeightMap()) {
+      idmgr.signalPartialAgreement(AgreementType.getWeightedType(agreementType),
+				   pid,
+				   au,
+				   weightedAgreement);
+    }
   }
 
   @ReturnEvents("evtOk")

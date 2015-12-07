@@ -603,6 +603,8 @@ public class V3Poller extends BasePoll {
 
   private List<Pattern> repairFromPeerIfMissingUrlPatterns;
 
+  PatternFloatMap resultWeightMap;
+
   // CR: Factor out common elements of the two constructors
   /**
    * <p>Create a new Poller to call a V3 Poll.</p>
@@ -672,7 +674,8 @@ public class V3Poller extends BasePoll {
 		  e);
     }
     try {
-      pollerState.setUrlResultWeightMap(getAu().makeUrlPollResultWeightMap());
+      resultWeightMap = getAu().makeUrlPollResultWeightMap();
+      pollerState.setUrlResultWeightMap(resultWeightMap);
     } catch (ArchivalUnit.ConfigurationException e) {
       log.warning("Error building urlResultWeightMap, disabling",
 		  e);
@@ -731,7 +734,8 @@ public class V3Poller extends BasePoll {
     this.inclusionPolicy = createInclusionPolicy();
 
     try {
-      pollerState.setUrlResultWeightMap(getAu().makeUrlPollResultWeightMap());
+      resultWeightMap = getAu().makeUrlPollResultWeightMap();
+      pollerState.setUrlResultWeightMap(resultWeightMap);
     } catch (ArchivalUnit.ConfigurationException e) {
       log.warning("Error building urlResultWeightMap, disabling",
 		  e);
@@ -835,6 +839,10 @@ public class V3Poller extends BasePoll {
       break;
     }
     return v;
+  }
+
+  boolean hasResultWeightMap() {
+    return resultWeightMap != null && !resultWeightMap.isEmpty();
   }
 
   /**
@@ -2583,11 +2591,12 @@ public class V3Poller extends BasePoll {
 	if (getPollVariant() == PollVariant.PoR) {
 	  getAuState().setNumAgreePeersLastPoR(numAgreePoRPeers);
 	}
-        idManager.signalPartialAgreement((isSampledPoll()
-					  ? AgreementType.POP
-					  : AgreementType.POR),
-					 ud.getVoterId(), getAu(), 
-					 ud.getPercentAgreement());
+	signalPartialAgreement((isSampledPoll()
+				? AgreementType.POP
+				: AgreementType.POR),
+			       ud.getVoterId(), getAu(), 
+			       ud.getPercentAgreement(),
+			       ud.getWeightedPercentAgreement());
       }
     }
     if (newRepairees > 0) {
@@ -2596,6 +2605,22 @@ public class V3Poller extends BasePoll {
 				 "new agreeing peers");
       log.info(info + " for " + getAu().getName());
       pollerState.setAdditionalInfo(info);
+    }
+  }
+
+  private void signalPartialAgreement(AgreementType agreementType, 
+				      PeerIdentity pid, ArchivalUnit au,
+				      float agreement,
+				      float weightedAgreement) {
+    idManager.signalPartialAgreement(agreementType,
+				     pid,
+				     au,
+				     agreement);
+    if (hasResultWeightMap()) {
+      idManager.signalPartialAgreement(AgreementType.getWeightedType(agreementType),
+				       pid,
+				       au,
+				       weightedAgreement);
     }
   }
 
@@ -2620,7 +2645,6 @@ public class V3Poller extends BasePoll {
     float wAgree = ts.getWeightedAgreedCount();
     float wTallied = ts.getWeightedTalliedUrlCount();
     log.debug2("aAgree: " + wAgree + ", wTallied: " + wTallied);
-    float agreement;
     return wTallied > 0.0 ? wAgree / wTallied : 0.0f;
   }
 

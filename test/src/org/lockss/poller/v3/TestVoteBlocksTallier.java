@@ -42,6 +42,8 @@ import org.lockss.protocol.*;
 
 public class TestVoteBlocksTallier extends LockssTestCase {
   List<VoteBlock> sharedVoteBlocks = new ArrayList<VoteBlock>();
+  MyV3Voter voter;
+
 
   public void setUp() throws Exception {
     super.setUp();
@@ -55,18 +57,39 @@ public class TestVoteBlocksTallier extends LockssTestCase {
    * tallies are as expected.
    */
   private void doTest(VoteBlocks vBlocks, VoteBlocks pBlocks,
-		     int agree, int disagree, int vOnly, int pOnly)
+		      int agree, int disagree, int vOnly, int pOnly)
       throws Exception {
-    VoteBlocksTallier vbt = VoteBlocksTallier.make();
+    doTest(vBlocks, pBlocks, agree, disagree, vOnly, pOnly,
+	   -1.0f, -1.0f);
+  }
+
+  private void doTest(VoteBlocks vBlocks, VoteBlocks pBlocks,
+		      int agree, int disagree, int vOnly, int pOnly,
+		      double pAgree, double wAgree)
+      throws Exception {
+    voter = new MyV3Voter();
+    if (wAgree >= 0.0) {
+      voter.setUrlPsllResultMap(new PatternFloatMap("01,0.5"));
+    }
+    VoteBlocksTallier vbt = VoteBlocksTallier.make(voter);
     vbt.tallyVoteBlocks(vBlocks, pBlocks);
-    assertEquals("AGREE is incorrect",
+    assertEquals("AGREE",
 		 agree, vbt.getCount(VoteBlocksTallier.Category.AGREE));
-    assertEquals("DISAGREE is incorrect",
+    assertEquals("DISAGREE",
 		 disagree, vbt.getCount(VoteBlocksTallier.Category.DISAGREE));
-    assertEquals("VOTER_ONLY is incorrect",
+    assertEquals("VOTER_ONLY",
 		 vOnly, vbt.getCount(VoteBlocksTallier.Category.VOTER_ONLY));
-    assertEquals("POLLER_ONLY is incorrect",
+    assertEquals("POLLER_ONLY",
 		 pOnly, vbt.getCount(VoteBlocksTallier.Category.POLLER_ONLY));
+    if (pAgree >= 0.0) {
+      assertEquals("AGREEMENT", pAgree, (double)vbt.percentAgreement(),
+		   0.0000001);
+    }
+    if (wAgree >= 0.0) {
+      assertEquals("WEIGHTED AGREEMENT",
+		   wAgree, (double)vbt.weightedPercentAgreement(),
+		   0.0000001);
+    }
   }
 
   /**
@@ -74,25 +97,34 @@ public class TestVoteBlocksTallier extends LockssTestCase {
    */
   public void testAllAgree() throws Exception {
     VoteBlocksBuilder builder;
-    for (int size = 0; size < 10; size++) {
+    builder = new VoteBlocksBuilder();
+    builder.addShared(0, 0);
+    doTest(builder.build(), builder.build(), 0, 0, 0, 0, 0.0, 0.0);
+    for (int size = 1; size < 10; size++) {
       builder = new VoteBlocksBuilder();
       builder.addShared(0, size);
-      doTest(builder.build(), builder.build(), size, 0, 0, 0);
+      doTest(builder.build(), builder.build(), size, 0, 0, 0, 1.0, 1.0);
     }
   }
   
+  double expWAgree(int size, int loc) {
+    return (loc == 1) ? 1.0 - 0.5 / (size - 0.5) : 1.0 - 1.0 / (size - 0.5);
+  }
+
   /**
    * Test same size, but one disagrees
    */
   public void testOneDisagree() throws Exception {
-    for (int size = 1; size < 4; size++) {
-      for (int loc = 0; loc < size-1; loc++) {
+    for (int size = 1; size <= 4; size++) {
+      for (int loc = 0; loc <= size-1; loc++) {
 	VoteBlocksBuilder builder = new VoteBlocksBuilder();
 	builder.addShared(0, size);
 	VoteBlocks vBlocks = builder.build();
 	builder.addUnshared(loc);
 	VoteBlocks pBlocks = builder.build();
-	doTest(vBlocks, pBlocks, size-1, 1, 0, 0);
+	doTest(vBlocks, pBlocks, size-1, 1, 0, 0,
+	       1.0 - 1.0 / size,
+	       expWAgree(size, loc));
       }
     }
   }
@@ -108,7 +140,9 @@ public class TestVoteBlocksTallier extends LockssTestCase {
 	VoteBlocks vBlocks = builder.build();
 	builder.remove(loc);
 	VoteBlocks pBlocks = builder.build();
-	doTest(vBlocks, pBlocks, size-1, 0, 1, 0);
+	doTest(vBlocks, pBlocks, size-1, 0, 1, 0,
+	       1.0 - 1.0 / size,
+	       expWAgree(size, loc));
       }
     }
   }
@@ -124,7 +158,9 @@ public class TestVoteBlocksTallier extends LockssTestCase {
 	VoteBlocks pBlocks = builder.build();
 	builder.remove(loc);
 	VoteBlocks vBlocks = builder.build();
-	doTest(vBlocks, pBlocks, size-1, 0, 0, 1);
+	doTest(vBlocks, pBlocks, size-1, 0, 0, 1,
+	       1.0 - 1.0 / size,
+	       expWAgree(size, loc));
       }
     }
   }
@@ -138,7 +174,7 @@ public class TestVoteBlocksTallier extends LockssTestCase {
       VoteBlocks pBlocks = builder.build();
       builder.addShared(0, size);
       VoteBlocks vBlocks = builder.build();
-      doTest(vBlocks, pBlocks, 0, 0, size, 0);
+      doTest(vBlocks, pBlocks, 0, 0, size, 0, 0.0, 0.0);
     }
   }
   
@@ -151,7 +187,7 @@ public class TestVoteBlocksTallier extends LockssTestCase {
       VoteBlocks vBlocks = builder.build();
       builder.addShared(0, size);
       VoteBlocks pBlocks = builder.build();
-      doTest(vBlocks, pBlocks, 0, 0, 0, size);
+      doTest(vBlocks, pBlocks, 0, 0, 0, size, 0.0, 0.0);
     }
   }
 
@@ -168,7 +204,7 @@ public class TestVoteBlocksTallier extends LockssTestCase {
 	  VoteBlocks pBlocks = builder.build();
 	  builder.remove(miss).addUnshared(diff);
 	  VoteBlocks vBlocks = builder.build();
-	  doTest(vBlocks, pBlocks, size-2, 1, 0, 1);
+	  doTest(vBlocks, pBlocks, size-2, 1, 0, 1, 1 - 2.0 / 5.0, -1.0);
 	}
       }
     }
@@ -187,7 +223,7 @@ public class TestVoteBlocksTallier extends LockssTestCase {
 	  VoteBlocks vBlocks = builder.build();
 	  builder.remove(miss).addUnshared(diff);
 	  VoteBlocks pBlocks = builder.build();
-	  doTest(vBlocks, pBlocks, size-2, 1, 1, 0);
+	  doTest(vBlocks, pBlocks, size-2, 1, 1, 0, 0.6, -1.0);
 	}
       }
     }
@@ -211,7 +247,7 @@ public class TestVoteBlocksTallier extends LockssTestCase {
 	    builder = new VoteBlocksBuilder();
 	    builder.addShared(0, size).remove(pMiss).addUnshared(diff);
 	    VoteBlocks pBlocks = builder.build();
-	    doTest(vBlocks, pBlocks, size-3, 1, 1, 1);
+	    doTest(vBlocks, pBlocks, size-3, 1, 1, 1, 0.4, -1.0);
 	  }
 	}
       }
@@ -244,7 +280,7 @@ public class TestVoteBlocksTallier extends LockssTestCase {
     }
     MyVoteBlocks vBlocks = new MyVoteBlocks(ListUtil.list(vVoteBlock));
     MyVoteBlocks pBlocks = new MyVoteBlocks(ListUtil.list(pVoteBlock));
-    doTest(vBlocks, pBlocks, 0, 1, 0, 0);
+    doTest(vBlocks, pBlocks, 0, 1, 0, 0, 0.0, 0.0);
   }
 
   /**
@@ -281,7 +317,7 @@ public class TestVoteBlocksTallier extends LockssTestCase {
       }
       MyVoteBlocks vBlocks = new MyVoteBlocks(ListUtil.list(vVoteBlock));
       MyVoteBlocks pBlocks = new MyVoteBlocks(ListUtil.list(pVoteBlock));
-      doTest(vBlocks, pBlocks, 1, 0, 0, 0);
+      doTest(vBlocks, pBlocks, 1, 0, 0, 0, 1.0, 1.0);
     }
   }
 
@@ -409,6 +445,16 @@ public class TestVoteBlocksTallier extends LockssTestCase {
     public VoteBlocksBuilder remove(int index) {
       checkArgs(index);
       return remove(index, index+1);
+    }
+
+  }
+
+  //      resultWeightMap = getAu().makeUrlPollResultWeightMap();
+
+
+  private class MyV3Voter extends V3Voter {
+    void setUrlPsllResultMap(PatternFloatMap pfm) {
+      resultWeightMap = pfm;
     }
 
   }

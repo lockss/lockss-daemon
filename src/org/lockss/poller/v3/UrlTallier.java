@@ -65,16 +65,21 @@ final class UrlTallier {
     public void vote(VoteBlock voteBlock, ParticipantUserData id,
 		     int participantIndex);
     /** The voter's iterator had no VoteBlock for the current URL. */
-    public void voteMissing(ParticipantUserData id);
+    public void voteMissing(ParticipantUserData id,
+			    String url);
     /** The voter's iterator has been found defective. */
-    public void voteSpoiled(ParticipantUserData id);
+    public void voteSpoiled(ParticipantUserData id,
+			    String url);
   }
 
   private static final VoteCallback NULL_CALLBACK = new VoteCallback() {
-      @Override public void vote(VoteBlock voteBlock, ParticipantUserData id,
+      @Override public void vote(VoteBlock voteBlock,
+				 ParticipantUserData id,
 				 int participantIndex) {}
-      @Override public void voteMissing(ParticipantUserData id) {}
-      @Override public void voteSpoiled(ParticipantUserData id) {}
+      @Override public void voteMissing(ParticipantUserData id,
+					String url) {}
+      @Override public void voteSpoiled(ParticipantUserData id,
+					String url) {}
     };
 
   /**
@@ -192,11 +197,11 @@ final class UrlTallier {
     int i = 0;
     for (ParticipantUserData participant: participants) {
       if (coordinator.isSpoiled(i)) {
-	voteCallback.voteSpoiled(participant);
+	voteCallback.voteSpoiled(participant, url);
       } else {
 	VoteBlock voteBlock = coordinator.getVoteBlock(url, i);
 	if (voteBlock == null) {
-	  voteCallback.voteMissing(participant);
+	  voteCallback.voteMissing(participant, url);
 	} else {
 	  voteCallback.vote(voteBlock, participant, i);
 	}

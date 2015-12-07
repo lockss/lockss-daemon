@@ -81,11 +81,17 @@ public class VoterUserData
   private String errorDetail;
   private boolean activePoll = true;
   private double agreementHint;
+  private double weightedAgreementHint;
+  private double symmetricAgreement;
+  private double symmetricWeightedAgreement;
   private int numAgreeUrl;
   private int numDisagreeUrl;
   private int numVoterOnlyUrl;
   private int numPollerOnlyUrl;
   private boolean hasReceivedHint = false;
+  private boolean hasReceivedWeightedHint = false;
+  private boolean hasReceivedSymmetricAgreement = false;
+  private boolean hasReceivedSymmetricWeightedAgreement = false;
   private SubstanceChecker.State subCheckerState;
   /** @deprecated 
    * Left here only for deserialization compatibility */
@@ -480,8 +486,47 @@ public class VoterUserData
     this.hasReceivedHint = true;
   }
 
+  public double getWeightedAgreementHint() {
+    return weightedAgreementHint;
+  }
+
+  public void setWeightedAgreementHint(double weightedAgreementHint) {
+    this.weightedAgreementHint = weightedAgreementHint;
+    this.hasReceivedWeightedHint = true;
+  }
+
   public boolean hasReceivedHint() {
     return hasReceivedHint;
+  }
+
+  public boolean hasReceivedWeightedHint() {
+    return hasReceivedWeightedHint;
+  }
+
+  public double getSymmetricAgreement() {
+    return symmetricAgreement;
+  }
+
+  public void setSymmetricAgreement(double symmetricAgreement) {
+    this.symmetricAgreement = symmetricAgreement;
+    this.hasReceivedSymmetricAgreement = true;
+  }
+
+  public double getSymmetricWeightedAgreement() {
+    return symmetricWeightedAgreement;
+  }
+
+  public void setSymmetricWeightedAgreement(double symmetricWeightedAgreement) {
+    this.symmetricWeightedAgreement = symmetricWeightedAgreement;
+    this.hasReceivedSymmetricWeightedAgreement = true;
+  }
+
+  public boolean hasReceivedSymmetricAgreement() {
+    return hasReceivedSymmetricAgreement;
+  }
+
+  public boolean hasReceivedSymmetricWeightedAgreement() {
+    return hasReceivedSymmetricWeightedAgreement;
   }
 
   public int getNumAgreeUrl() {

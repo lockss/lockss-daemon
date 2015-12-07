@@ -50,6 +50,26 @@ public class TestAgreementType extends LockssTestCase {
 		 AgreementType.getHintType(AgreementType.POP_HINT));
   }
 
+  public void testGetWeightedType() {
+    assertEquals(AgreementType.W_POR,
+		 AgreementType.getWeightedType(AgreementType.POR));
+    assertEquals(AgreementType.W_POP,
+		 AgreementType.getWeightedType(AgreementType.POP));
+    assertEquals(AgreementType.W_SYMMETRIC_POR,
+		 AgreementType.getWeightedType(AgreementType.SYMMETRIC_POR));
+    assertEquals(AgreementType.W_SYMMETRIC_POP,
+		 AgreementType.getWeightedType(AgreementType.SYMMETRIC_POP));
+
+    assertEquals(AgreementType.W_POR_HINT,
+		 AgreementType.getWeightedType(AgreementType.POR_HINT));
+    assertEquals(AgreementType.W_POP_HINT,
+		 AgreementType.getWeightedType(AgreementType.POP_HINT));
+    assertEquals(AgreementType.W_SYMMETRIC_POR_HINT,
+		 AgreementType.getWeightedType(AgreementType.SYMMETRIC_POR_HINT));
+    assertEquals(AgreementType.W_SYMMETRIC_POP_HINT,
+		 AgreementType.getWeightedType(AgreementType.SYMMETRIC_POP_HINT));
+  }
+
   public void testAllTypes() {
     assertEquals(new AgreementType[] {
 	AgreementType.POR,
@@ -60,6 +80,15 @@ public class TestAgreementType extends LockssTestCase {
 	AgreementType.POP_HINT,
 	AgreementType.SYMMETRIC_POR_HINT,
 	AgreementType.SYMMETRIC_POP_HINT,
+
+	AgreementType.W_POR,
+	AgreementType.W_POP,
+	AgreementType.W_SYMMETRIC_POR,
+	AgreementType.W_SYMMETRIC_POP,
+	AgreementType.W_POR_HINT,
+	AgreementType.W_POP_HINT,
+	AgreementType.W_SYMMETRIC_POR_HINT,
+	AgreementType.W_SYMMETRIC_POP_HINT,
       },
       AgreementType.allTypes());
   }

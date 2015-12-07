@@ -247,6 +247,7 @@ public class V3Voter extends BasePoll {
   private int blockErrorCount = 0;
   private int maxBlockErrorCount = V3Poller.DEFAULT_MAX_BLOCK_ERROR_COUNT;
   private SubstanceChecker subChecker;
+  PatternFloatMap resultWeightMap;
 
   // Task used to reserve time for hashing at the start of the poll.
   // This task is cancelled before the real hash is scheduled.
@@ -324,6 +325,10 @@ public class V3Voter extends BasePoll {
     } catch (IOException ex) {
       log.critical("IOException while trying to create VoterUserData: ", ex);
       stopPoll();
+    }
+    try {
+      resultWeightMap = getAu().makeUrlPollResultWeightMap();
+    } catch (ArchivalUnit.ConfigurationException e) {
     }
     this.idManager = theDaemon.getIdentityManager();
 
@@ -459,6 +464,17 @@ public class V3Voter extends BasePoll {
   
   public PsmInterp getPsmInterp() {
     return stateMachine;
+  }
+
+  boolean hasResultWeightMap() {
+    return resultWeightMap != null && !resultWeightMap.isEmpty();
+  }
+
+  protected float getUrlResultWeight(String url) {
+    if (resultWeightMap == null || resultWeightMap.isEmpty()) {
+      return 1.0f;
+    }
+    return resultWeightMap.getMatch(url, 1.0f);
   }
 
   /**

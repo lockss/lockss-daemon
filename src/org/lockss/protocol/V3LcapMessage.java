@@ -215,7 +215,13 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
    * A hint sent in the receipt for a poll indicating what level of agreement
    * the poller had with a participant.
    */
-  private double m_agreementHint;
+  private double m_agreementHint = -1.0;
+
+  /**
+   * A hint sent in the receipt for a poll indicating what level of
+   * weightedAgreement the poller had with a participant.
+   */
+  private double m_weightedAgreementHint = -1.0;
 
   // InputStream from which to read repair data when encoding this message.
   private transient InputStream m_repairDataInputStream;
@@ -462,6 +468,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_voteComplete = m_props.getBoolean("votecomplete", false);
     m_repairProps = m_props.getEncodedProperty("repairProps");
     m_agreementHint = m_props.getDouble("agreementHint", -1.0);
+    m_weightedAgreementHint = m_props.getDouble("weightedAgreementHint", -1.0);
     m_groups = m_props.getProperty("groups");
     m_modulus = m_props.getInt("modulus", 0);
     if (m_modulus != 0) {
@@ -663,6 +670,9 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     if (m_agreementHint >= 0.0) {
       m_props.putDouble("agreementHint", m_agreementHint);
     }
+    if (m_weightedAgreementHint >= 0.0) {
+      m_props.putDouble("weightedAgreementHint", m_weightedAgreementHint);
+    }
   }
 
   /**
@@ -797,8 +807,16 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     m_agreementHint = d;
   }
   
+  public void setWeightedAgreementHint(double d) {
+    m_weightedAgreementHint = d;
+  }
+  
   public double getAgreementHint() {
     return m_agreementHint;
+  }
+
+  public double getWeightedAgreementHint() {
+    return m_weightedAgreementHint;
   }
 
   public void setExpiration(long l) {
@@ -856,7 +874,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
         ((LockssDaemon)m_daemon).getPollManager().getStateDir(m_key);
       if (stateDir != null) {
 	m_voteBlocks = new DiskVoteBlocks(stateDir);
-      } else {
+      } else if (!Boolean.getBoolean("org.lockss.unitTesting")) {
 	// This happens in testing, shouldn't happen in a real poll
 	log.warning("No state dir, key: " + m_key);
       }

@@ -342,6 +342,35 @@ public class TestV3LcapMessage extends LockssTestCase {
 	       V3LcapMessage.EST_ENCODED_HEADER_LENGTH);
   }
   
+  public void testReceiptMessage() throws Exception {
+    V3LcapMessage msg = makeReceiptMessage();
+    assertEquals(-1.0, msg.getAgreementHint());
+    assertEquals(-1.0, msg.getWeightedAgreementHint());
+
+    InputStream fromMsg = msg.getInputStream();
+    V3LcapMessage msg2 = new V3LcapMessage(fromMsg, tempDir, theDaemon);
+    // now test to see if we got back what we started with
+    assertEquals(V3LcapMessage.MSG_EVALUATION_RECEIPT, msg.getOpcode());
+    assertEquals(-1.0, msg.getAgreementHint());
+    assertEquals(-1.0, msg.getWeightedAgreementHint());
+
+    msg.setAgreementHint(0.25);
+    assertEquals(0.25, msg.getAgreementHint());
+    assertEquals(-1.0, msg.getWeightedAgreementHint());
+    fromMsg = msg.getInputStream();
+    msg2 = new V3LcapMessage(fromMsg, tempDir, theDaemon);
+    assertEquals(0.25, msg.getAgreementHint());
+    assertEquals(-1.0, msg.getWeightedAgreementHint());
+
+    msg.setWeightedAgreementHint(0.75);
+    assertEquals(0.25, msg.getAgreementHint());
+    assertEquals(0.75, msg.getWeightedAgreementHint());
+    fromMsg = msg.getInputStream();
+    msg2 = new V3LcapMessage(fromMsg, tempDir, theDaemon);
+    assertEquals(0.25, msg.getAgreementHint());
+    assertEquals(0.75, msg.getWeightedAgreementHint());
+  }
+
   public void testDiskBasedStreamEncodingTest() throws Exception {
     // Make a list of vote blocks large enough to trigger on-disk
     // vote message creation.
@@ -448,6 +477,17 @@ public class TestV3LcapMessage extends LockssTestCase {
     msg.setPluginVersion("PlugVer42");
     return msg;
   }
+
+  private V3LcapMessage makeReceiptMessage() {
+    V3LcapMessage msg = new V3LcapMessage("ArchivalID_2", "key", "Plug42",
+					  m_testBytes,
+					  m_testBytes,
+					  V3LcapMessage.MSG_EVALUATION_RECEIPT,
+					  987654321, m_testID, tempDir,
+					  theDaemon);
+    return msg;
+  }
+
 
   static class MyV3LcapMessage extends V3LcapMessage {
     String testNak;

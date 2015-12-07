@@ -1244,6 +1244,26 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     return auAgreements.hasAgreed(pid, minPercentPartialAgreement);
   }
 
+  /** Convenience method returns agreement on AU au, of AgreementType type
+   * with peer pid.  Returns -1.0 if no agreement of the specified type has
+   * been recorded. */
+  public float getPercentAgreement(PeerIdentity pid,
+				   ArchivalUnit au,
+				   AgreementType type) {
+    PeerAgreement pa = findAuAgreements(au).findPeerAgreement(pid, type);
+    return pa.getPercentAgreement();
+  }
+
+  /** Convenience method returns highest agreement on AU au, of
+   * AgreementType type with peer pid.  Returns -1.0 if no agreement of the
+   * specified type has been recorded. */
+  public float getHighestPercentAgreement(PeerIdentity pid,
+					  ArchivalUnit au,
+					  AgreementType type) {
+    PeerAgreement pa = findAuAgreements(au).findPeerAgreement(pid, type);
+    return pa.getHighestPercentAgreement();
+  }
+
   /**
    * <p>Return map peer -> last agree time. Used for logging and
    * debugging.</p>

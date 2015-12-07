@@ -231,6 +231,20 @@ public class MockIdentityManager implements IdentityManager {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
+  public float getPercentAgreement(PeerIdentity pid,
+				   ArchivalUnit au,
+				   AgreementType type) {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
+  @Override
+  public float getHighestPercentAgreement(PeerIdentity pid,
+					  ArchivalUnit au,
+					  AgreementType type) {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
     throw new UnsupportedOperationException("not implemented");

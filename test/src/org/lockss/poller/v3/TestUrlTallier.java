@@ -471,11 +471,11 @@ public class TestUrlTallier extends LockssTestCase {
       VoteBlock expected = findExpected(participantIndex);
       assertEquals(expected, voteBlock);
     }
-    @Override public void voteMissing(ParticipantUserData id) {
+    @Override public void voteMissing(ParticipantUserData id, String url) {
       VoteBlock expected = findExpected(id);
       assertEquals(expected, missingBlock);
     }
-    @Override public void voteSpoiled(ParticipantUserData id) {
+    @Override public void voteSpoiled(ParticipantUserData id, String url) {
       VoteBlock expected = findExpected(id);
       assertEquals(expected, spoiledBlock);
     }

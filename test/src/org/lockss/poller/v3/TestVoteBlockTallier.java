@@ -49,6 +49,7 @@ import org.lockss.protocol.*;
 public class TestVoteBlockTallier extends LockssTestCase {
 
   MockLockssDaemon daemon;
+  private V3Poller poller;
   private ParticipantUserData[] testPeers;
   private File tempDir;
   String tempDirPath;
@@ -85,7 +86,7 @@ public class TestVoteBlockTallier extends LockssTestCase {
   
   private void setupPeers() throws Exception {
     testPeers = new ParticipantUserData[nonces.length];
-    V3Poller poller = makeV3Poller("pollkey");
+    poller = makeV3Poller("pollkey");
     for (int ix = 1; ix <= testPeers.length; ix++) {
       String id = String.format("TCP:[127.0.0.%d]:9729", ix);
       PeerIdentity pid = V3TestUtils.findPeerIdentity(daemon, id);
@@ -251,13 +252,13 @@ public class TestVoteBlockTallier extends LockssTestCase {
     voteBlockTallier = VoteBlockTallier.make(makeComparerFactory());
     tally = new BlockTally(5, 75);
     voteBlockTallier.addTally(tally);
-    voteBlockTallier.voteSpoiled(testPeers[0]);
+    voteBlockTallier.voteSpoiled(testPeers[0], "urlurl");
     assertEquals("0/0/0/0", tally.votes());
 
     voteBlockTallier = VoteBlockTallier.make(makeComparerFactory());
     tally = new BlockTally(5, 75);
     voteBlockTallier.addTally(tally);
-    voteBlockTallier.voteMissing(testPeers[0]);
+    voteBlockTallier.voteMissing(testPeers[0], "urlurl");
     assertEquals("0/1/1/0", tally.votes());
 
     voteBlockTallier = VoteBlockTallier.make(makeComparerFactory());
@@ -289,13 +290,13 @@ public class TestVoteBlockTallier extends LockssTestCase {
     voteBlockTallier = VoteBlockTallier.make();
     tally = new BlockTally(5, 75);
     voteBlockTallier.addTally(tally);
-    voteBlockTallier.voteSpoiled(testPeers[0]);
+    voteBlockTallier.voteSpoiled(testPeers[0], "urlurl");
     assertEquals("0/0/0/0", tally.votes());
 
     voteBlockTallier = VoteBlockTallier.make();
     tally = new BlockTally(5, 75);
     voteBlockTallier.addTally(tally);
-    voteBlockTallier.voteMissing(testPeers[0]);
+    voteBlockTallier.voteMissing(testPeers[0], "urlurl");
     // Both poller and voter missing is "agree"
     assertEquals("1/0/0/0", tally.votes());
 
@@ -324,13 +325,13 @@ public class TestVoteBlockTallier extends LockssTestCase {
     voteBlockTallier = VoteBlockTallier.make(makeComparerFactoryNoVersions());
     tally = new BlockTally(5, 75);
     voteBlockTallier.addTally(tally);
-    voteBlockTallier.voteSpoiled(testPeers[0]);
+    voteBlockTallier.voteSpoiled(testPeers[0], "urlurl");
     assertEquals("0/0/0/0", tally.votes());
 
     voteBlockTallier = VoteBlockTallier.make(makeComparerFactoryNoVersions());
     tally = new BlockTally(5, 75);
     voteBlockTallier.addTally(tally);
-    voteBlockTallier.voteMissing(testPeers[0]);
+    voteBlockTallier.voteMissing(testPeers[0], "urlurl");
     assertEquals("0/1/1/0", tally.votes());
 
     // The VoteBlock is disagree, if VoteBlock has versions.
@@ -374,6 +375,10 @@ public class TestVoteBlockTallier extends LockssTestCase {
     }
   }
 
+  ParticipantUserData makeSimplePUD() {
+    return new ParticipantUserData(null, poller, tempDir);
+  }
+
   public void testVoteCallback() throws Exception {
     ParticipantUserData voter;
     VoteBlock voteBlock = makeVoteBlock();
@@ -381,7 +386,7 @@ public class TestVoteBlockTallier extends LockssTestCase {
     OnceVoteCallback onceVoteCallback;
     VoteBlockTallier.VoteBlockTally tally;
 
-    voter = new ParticipantUserData();
+    voter = makeSimplePUD();
     onceVoteCallback = new OnceVoteCallback(voteBlock, voter);
     voteBlockTallier = VoteBlockTallier.make(makeComparerFactory(),
 					     onceVoteCallback);
@@ -391,7 +396,7 @@ public class TestVoteBlockTallier extends LockssTestCase {
     assertEquals("1/0/0/0/0/0", voter.getVoteCounts().votes());
     assertTrue(onceVoteCallback.called);
 
-    voter = new ParticipantUserData();
+    voter = makeSimplePUD();
     onceVoteCallback = new OnceVoteCallback(voteBlock, voter);
     voteBlockTallier = VoteBlockTallier.make(makeComparerFactory(),
 					     onceVoteCallback);
@@ -401,15 +406,15 @@ public class TestVoteBlockTallier extends LockssTestCase {
     assertEquals("0/1/0/0/0/0", voter.getVoteCounts().votes());
     assertTrue(onceVoteCallback.called);
 
-    voter = new ParticipantUserData();
+    voter = makeSimplePUD();
     voteBlockTallier = VoteBlockTallier.make(makeComparerFactory(),
 					     new FailVoteCallback());
     tally = ParticipantUserData.voteTally;
     voteBlockTallier.addTally(tally);
-    voteBlockTallier.voteMissing(voter);
+    voteBlockTallier.voteMissing(voter, "urlurl");
     assertEquals("0/0/1/0/0/0", voter.getVoteCounts().votes());
 
-    voter = new ParticipantUserData();
+    voter = makeSimplePUD();
     onceVoteCallback = new OnceVoteCallback(voteBlock, voter);
     voteBlockTallier = VoteBlockTallier.make(onceVoteCallback);
     tally = ParticipantUserData.voteTally;
@@ -420,10 +425,10 @@ public class TestVoteBlockTallier extends LockssTestCase {
 
     voteBlockTallier = VoteBlockTallier.make(makeComparerFactory(),
 					     new FailVoteCallback());
-    voter = new ParticipantUserData();
+    voter = makeSimplePUD();
     tally = ParticipantUserData.voteTally;
     voteBlockTallier.addTally(tally);
-    voteBlockTallier.voteSpoiled(voter);
+    voteBlockTallier.voteSpoiled(voter, "urlurl");
     assertEquals("0/0/0/0/0/1", voter.getVoteCounts().votes());
   }
 }

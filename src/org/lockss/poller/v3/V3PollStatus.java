@@ -584,14 +584,24 @@ public class V3PollStatus {
                                          ColumnDescriptor.TYPE_STRING),
                     new ColumnDescriptor("agreement", "Agreement",
                                          ColumnDescriptor.TYPE_AGREEMENT),
+                    new ColumnDescriptor("w.agreement", "WAgreement",
+                                         ColumnDescriptor.TYPE_AGREEMENT),
                     new ColumnDescriptor("numagree", "Agreeing URLs",
                                          ColumnDescriptor.TYPE_INT),
+                    new ColumnDescriptor("w.numagree", "WAgreeing URLs",
+                                         ColumnDescriptor.TYPE_FLOAT),
                     new ColumnDescriptor("numdisagree", "Disagreeing URLs",
                                          ColumnDescriptor.TYPE_INT),
+                    new ColumnDescriptor("w.numdisagree", "WDisagreeing URLs",
+                                         ColumnDescriptor.TYPE_FLOAT),
                     new ColumnDescriptor("numpolleronly", "Poller-only URLs",
                                          ColumnDescriptor.TYPE_INT),
+                    new ColumnDescriptor("w.numpolleronly", "WPoller-only URLs",
+                                         ColumnDescriptor.TYPE_FLOAT),
                     new ColumnDescriptor("numvoteronly", "Voter-only URLs",
                                          ColumnDescriptor.TYPE_INT),
+                    new ColumnDescriptor("w.numvoteronly", "WVoter-only URLs",
+                                         ColumnDescriptor.TYPE_FLOAT),
                     new ColumnDescriptor("byteshashed", "Bytes Hashed",
                                          ColumnDescriptor.TYPE_INT),
                     new ColumnDescriptor("bytesread", "Bytes Read",
@@ -605,10 +615,15 @@ public class V3PollStatus {
       ListUtil.list("identity",
 		    "peerStatus",
 		    "agreement",
+		    "w.agreement",
 		    "numagree",
+		    "w.numagree",
 		    "numdisagree",
+		    "w.numdisagree",
 		    "numpolleronly",
-		    "numvoteronly");
+		    "w.numpolleronly",
+		    "numvoteronly",
+		    "w.numvoteronly");
 
 
     public V3PollerStatusDetail(PollManager pollManager) {
@@ -636,8 +651,15 @@ public class V3PollStatus {
     }
 
     private List<String> getDefaultCols(StatusTable table, V3Poller poll) {
-      List<String> res = new ArrayList<String>();
+      List<String> res = new LinkedList<String>();
       res.addAll(defaultCols);
+      if (!poll.hasResultWeightMap()) {
+	for (ListIterator<String> iter = res.listIterator(); iter.hasNext();) {
+	  if (iter.next().startsWith("w.")) {
+	    iter.remove();
+	  }	    
+	}
+      }
       if (poll.isEnableHashStats()) {
 	res.add("byteshashed");
 	res.add("bytesread");
@@ -673,12 +695,19 @@ public class V3PollStatus {
       if (voter.hasVoted()) {
 	ParticipantUserData.VoteCounts voteCounts = voter.getVoteCounts();
 	row.put("agreement", voteCounts.getPercentAgreement());
-	row.put("numagree", voteCounts.agreedVotes);
-	row.put("numdisagree", voteCounts.disagreedVotes);
-	row.put("numpolleronly", voteCounts.pollerOnlyVotes);
-	row.put("numvoteronly", voteCounts.voterOnlyVotes);
+	row.put("numagree", voteCounts.getAgreedVotes());
+	row.put("numdisagree", voteCounts.getDisagreedVotes());
+	row.put("numpolleronly", voteCounts.getPollerOnlyVotes());
+	row.put("numvoteronly", voteCounts.getVoterOnlyVotes());
 	row.put("byteshashed", voter.getBytesHashed());
 	row.put("bytesread", voter.getBytesRead());
+	if (poll.hasResultWeightMap()) {
+	  row.put("w.agreement", voteCounts.getWeightedPercentAgreement());
+	  row.put("w.numagree", voteCounts.getWeightedAgreedVotes());
+	  row.put("w.numdisagree", voteCounts.getWeightedDisagreedVotes());
+	  row.put("w.numpolleronly", voteCounts.getWeightedPollerOnlyVotes());
+	  row.put("w.numvoteronly", voteCounts.getWeightedVoterOnlyVotes());
+	}
       }
       PsmInterp interp = voter.getPsmInterp();
       if (interp != null) {
@@ -718,6 +747,11 @@ public class V3PollStatus {
 	  summary.add(new SummaryInfo("Agreement",
 				      ColumnDescriptor.TYPE_AGREEMENT,
 				      poll.getPercentAgreement()));
+	  if (poll.hasResultWeightMap()) {
+	    summary.add(new SummaryInfo("Weighted Agreement",
+					ColumnDescriptor.TYPE_AGREEMENT,
+					poll.getWeightedPercentAgreement()));
+	  }
 	}
       }
       if (isDebug && pollerState.getAdditionalInfo() != null) {
@@ -1297,10 +1331,32 @@ public class V3PollStatus {
                                     ColumnDescriptor.TYPE_TIME_INTERVAL,
                                     new Long(remain)));
       }
-      if (voter.getStatus() == STATUS_COMPLETE && userData.hasReceivedHint()) {
-	summary.add(new SummaryInfo("Agreement",
+      if (voter.getStatus() == STATUS_COMPLETE) {
+	if (userData.hasReceivedHint()) {
+	  summary.add(new SummaryInfo("Agreement",
+				      ColumnDescriptor.TYPE_AGREEMENT,
+				      userData.getAgreementHint()));
+	}
+	if (userData.hasReceivedWeightedHint()) {
+	  summary.add(new SummaryInfo("Weighted esAgreement",
+				      ColumnDescriptor.TYPE_AGREEMENT,
+				      userData.getWeightedAgreementHint()));
+	}
+	if (userData.hasReceivedSymmetricAgreement()) {
+	  summary.add(new SummaryInfo("Symmetric Agreement",
+				      ColumnDescriptor.TYPE_AGREEMENT,
+				      userData.getSymmetricAgreement()));
+	}
+	if (userData.hasReceivedSymmetricWeightedAgreement()) {
+	  summary.add(new SummaryInfo("Symmetric Weighted Agreement",
+				      ColumnDescriptor.TYPE_AGREEMENT,
+				      userData.getSymmetricWeightedAgreement()));
+	}
+      }
+      if (voter.hasResultWeightMap()) {
+	summary.add(new SummaryInfo("Weighted Agreement",
 				    ColumnDescriptor.TYPE_AGREEMENT,
-				    userData.getAgreementHint()));
+				    userData.getWeightedAgreementHint()));
       }
       summary.add(new SummaryInfo("Poller Nonce",
                                   ColumnDescriptor.TYPE_STRING,

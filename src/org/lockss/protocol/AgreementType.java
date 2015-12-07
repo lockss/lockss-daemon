@@ -50,8 +50,7 @@ package org.lockss.protocol;
  */
 public enum AgreementType {
   /** A poll with all content hashed and tallied. Recorded by
-   * poller. 
-   */
+   * poller. */
   POR,
   /** A poll with a selection of the content hashed and
    * tallied. Recorded by poller. */
@@ -73,7 +72,34 @@ public enum AgreementType {
   SYMMETRIC_POR_HINT,
   /** The hint given a poller by a voter after a symmetric POP
    * poll. Recorded by poller. */
-  SYMMETRIC_POP_HINT;
+  SYMMETRIC_POP_HINT,
+
+  // Weighted results for each of the above poll types
+
+  /** Weighted result of poll with all content hashed and tallied. Recorded
+   * by poller. */
+  W_POR,
+  /** Weighted result of poll with a selection of the content hashed and
+   * tallied. Recorded by poller. */
+  W_POP,
+  /** Weighted result of POR poll where a voter has called for the poller's
+   * hashes. Recorded by voter. */
+  W_SYMMETRIC_POR,
+  /** Weighted result of POP poll where a voter has called for the poller's
+   * hashes. Recorded by voter. */
+  W_SYMMETRIC_POP,
+  /** The weighted hint given a voter by the poller after a POR
+   * poll. Recorded by voter. */
+  W_POR_HINT,
+  /** The weighted hint given a voter by the poller after a POP
+   * poll. Recorded by voter. */
+  W_POP_HINT,
+  /** The weighted hint given a poller by a voter after a symmetric POR
+   * poll. Recorded by poller. */
+  W_SYMMETRIC_POR_HINT,
+  /** The weighted hint given a poller by a voter after a symmetric POP
+   * poll. Recorded by poller. */
+  W_SYMMETRIC_POP_HINT;
 
   public static AgreementType[] allTypes() {
     return AgreementType.values();
@@ -89,6 +115,24 @@ public enum AgreementType {
     case POP: return AgreementType.POP_HINT;
     case SYMMETRIC_POR: return AgreementType.SYMMETRIC_POR_HINT;
     case SYMMETRIC_POP: return AgreementType.SYMMETRIC_POP_HINT;
+    case W_POR: return AgreementType.W_POR_HINT;
+    case W_POP: return AgreementType.W_POP_HINT;
+    case W_SYMMETRIC_POR: return AgreementType.W_SYMMETRIC_POR_HINT;
+    case W_SYMMETRIC_POP: return AgreementType.W_SYMMETRIC_POP_HINT;
+    }
+    return type;
+  }
+
+  public static AgreementType getWeightedType(AgreementType type) {
+    switch (type) {
+    case POR: return AgreementType.W_POR;
+    case POP: return AgreementType.W_POP;
+    case SYMMETRIC_POR: return AgreementType.W_SYMMETRIC_POR;
+    case SYMMETRIC_POP: return AgreementType.W_SYMMETRIC_POP;
+    case POR_HINT: return AgreementType.W_POR_HINT;
+    case POP_HINT: return AgreementType.W_POP_HINT;
+    case SYMMETRIC_POR_HINT: return AgreementType.W_SYMMETRIC_POR_HINT;
+    case SYMMETRIC_POP_HINT: return AgreementType.W_SYMMETRIC_POP_HINT;
     }
     return type;
   }

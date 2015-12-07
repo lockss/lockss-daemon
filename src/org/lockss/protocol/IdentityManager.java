@@ -507,6 +507,18 @@ public interface IdentityManager extends LockssManager {
 
   public boolean hasAgreed(PeerIdentity pid, ArchivalUnit au);
 
+  /** Convenience methods returns agreement on AU au, of AgreementType type
+   * with peer pid */
+  public float getPercentAgreement(PeerIdentity pid,
+				   ArchivalUnit au,
+				   AgreementType type);
+
+  /** Convenience methods returns agreement on AU au, of AgreementType type
+   * with peer pid */
+  public float getHighestPercentAgreement(PeerIdentity pid,
+					  ArchivalUnit au,
+					  AgreementType type);
+
   /**
    * <p>Return map peer -> last agree time. Used for logging and
    * debugging.</p>
