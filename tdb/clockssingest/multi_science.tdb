@@ -196,11 +196,11 @@
     param[journal_id] = ijai
     # triggering
 
-    au < frozen ; exists ; 2009 ; International Journal of Aerospace Innovations Volume 1 ; 1 >
-    au < finished ; exists ; 2010 ; International Journal of Aerospace Innovations Volume 2 ; 2 >
-    au < finished ; exists ; 2011 ; International Journal of Aerospace Innovations Volume 3 ; 3 >
-    au < finished ; exists ; 2012 ; International Journal of Aerospace Innovations Volume 4 ; 4 >
-    au < finished ; exists ; 2013 ; International Journal of Aerospace Innovations Volume 5 ; 5 >
+    au < finished ; manifest ; 2009 ; International Journal of Aerospace Innovations Volume 1 ; 1 >
+    au < finished ; manifest ; 2010 ; International Journal of Aerospace Innovations Volume 2 ; 2 >
+    au < finished ; manifest ; 2011 ; International Journal of Aerospace Innovations Volume 3 ; 3 >
+    au < finished ; manifest ; 2012 ; International Journal of Aerospace Innovations Volume 4 ; 4 >
+    au < finished ; manifest ; 2013 ; International Journal of Aerospace Innovations Volume 5 ; 5 >
 
   }
 
@@ -242,9 +242,9 @@
     param[journal_id] = ijemf
     # triggering
 
-    au < frozen ; exists ; 2009 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 1 ; 1 >
-    au < finished ; exists ; 2010 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 2 ; 2 >
-    au < finished ; exists ; 2011-2012 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 3 ; 3 >
+    au < finished ; manifest ; 2009 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 1 ; 1 >
+    au < finished ; manifest ; 2010 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 2 ; 2 >
+    au < finished ; manifest ; 2011-2012 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 3 ; 3 >
 
   }
 
@@ -259,11 +259,11 @@
     param[journal_id] = ijfc
     # triggering
 
-    au < frozen ; exists ; 2009 ; International Journal of Flow Control Volume 1 ; 1 >
-    au < finished ; exists ; 2010 ; International Journal of Flow Control Volume 2 ; 2 >
-    au < finished ; exists ; 2011 ; International Journal of Flow Control Volume 3 ; 3 >
-    au < finished ; exists ; 2012 ; International Journal of Flow Control Volume 4 ; 4 >
-    au < finished ; exists ; 2013 ; International Journal of Flow Control Volume 5 ; 5 >
+    au < finished ; manifest ; 2009 ; International Journal of Flow Control Volume 1 ; 1 >
+    au < finished ; manifest ; 2010 ; International Journal of Flow Control Volume 2 ; 2 >
+    au < finished ; manifest ; 2011 ; International Journal of Flow Control Volume 3 ; 3 >
+    au < finished ; manifest ; 2012 ; International Journal of Flow Control Volume 4 ; 4 >
+    au < finished ; manifest ; 2013 ; International Journal of Flow Control Volume 5 ; 5 >
     au < finished ; crawling ; 2014 ; International Journal of Flow Control Volume 6 ; 6 >
     au < crawling ; exists ; 2015 ; International Journal of Flow Control Volume 7 ; 7 >
 
@@ -299,8 +299,8 @@
     param[journal_id] = ijh
     # triggering
 
-    au < finished ; exists ; 2010 ; International Journal of Hypersonics Volume 1 ; 1 >
-    au < finished ; exists ; 2011 ; International Journal of Hypersonics Volume 2 ; 2 >
+    au < finished ; manifest ; 2010 ; International Journal of Hypersonics Volume 1 ; 1 >
+    au < finished ; manifest ; 2011 ; International Journal of Hypersonics Volume 2 ; 2 >
 
   }
 
@@ -357,10 +357,10 @@
     param[journal_id] = ijmnst
     # triggering
 
-    au < finished ; exists ; 2010 ; International Journal of Micro-Nano Scale Transport Volume 1 ; 1 >
-    au < finished ; exists ; 2011 ; International Journal of Micro-Nano Scale Transport Volume 2 ; 2 >
-    au < finished ; exists ; 2012 ; International Journal of Micro-Nano Scale Transport Volume 3 ; 3 >
-    au < finished ; exists ; 2013 ; International Journal of Micro-Nano Scale Transport Volume 4 ; 4 >
+    au < finished ; manifest ; 2010 ; International Journal of Micro-Nano Scale Transport Volume 1 ; 1 >
+    au < finished ; manifest ; 2011 ; International Journal of Micro-Nano Scale Transport Volume 2 ; 2 >
+    au < finished ; manifest ; 2012 ; International Journal of Micro-Nano Scale Transport Volume 3 ; 3 >
+    au < finished ; manifest ; 2013 ; International Journal of Micro-Nano Scale Transport Volume 4 ; 4 >
     au < finished ; crawling ; 2014 ; International Journal of Micro-Nano Scale Transport Volume 5 ; 5 >
 
   }
@@ -603,18 +603,18 @@
     param[journal_id] = nn
     # triggering
 
-    au < finished ; exists ; 2002 ; Noise Notes Volume 1 ; 1 >
-    au < finished ; exists ; 2003 ; Noise Notes Volume 2 ; 2 >
-    au < finished ; exists ; 2004 ; Noise Notes Volume 3 ; 3 >
-    au < finished ; exists ; 2005 ; Noise Notes Volume 4 ; 4 >
-    au < finished ; exists ; 2006 ; Noise Notes Volume 5 ; 5 >
-    au < finished ; exists ; 2007 ; Noise Notes Volume 6 ; 6 >
-    au < finished ; exists ; 2008 ; Noise Notes Volume 7 ; 7 >
-    au < finished ; exists ; 2009 ; Noise Notes Volume 8 ; 8 >
-    au < finished ; exists ; 2010 ; Noise Notes Volume 9 ; 9 >
-    au < frozen ; exists ; 2011 ; Noise Notes Volume 10 ; 10 >
-    au < frozen ; exists ; 2012 ; Noise Notes Volume 11 ; 11 >
-    au < finished ; exists ; 2013 ; Noise Notes Volume 12 ; 12 >
+    au < finished ; manifest ; 2002 ; Noise Notes Volume 1 ; 1 >
+    au < finished ; manifest ; 2003 ; Noise Notes Volume 2 ; 2 >
+    au < finished ; manifest ; 2004 ; Noise Notes Volume 3 ; 3 >
+    au < finished ; manifest ; 2005 ; Noise Notes Volume 4 ; 4 >
+    au < finished ; manifest ; 2006 ; Noise Notes Volume 5 ; 5 >
+    au < finished ; manifest ; 2007 ; Noise Notes Volume 6 ; 6 >
+    au < finished ; manifest ; 2008 ; Noise Notes Volume 7 ; 7 >
+    au < finished ; manifest ; 2009 ; Noise Notes Volume 8 ; 8 >
+    au < finished ; manifest ; 2010 ; Noise Notes Volume 9 ; 9 >
+    au < finished ; manifest ; 2011 ; Noise Notes Volume 10 ; 10 >
+    au < finished ; manifest ; 2012 ; Noise Notes Volume 11 ; 11 >
+    au < finished ; manifest ; 2013 ; Noise Notes Volume 12 ; 12 >
     au < finished ; finished ; 2014 ; Noise Notes Volume 13 ; 13 >
 
   }
