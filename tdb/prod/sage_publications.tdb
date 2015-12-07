@@ -14894,148 +14894,6 @@
     }
 
     {
-      title <
-        name = INQUIRY: The Journal of Health Care Organization, Provision, and Financing ;
-        issn = 0046-9580
-      >
-
-      pluginSuffix = HighWirePressH20Plugin
-      param[base_url] = http://inq.sagepub.com/
-      implicit < status ; year ; name ; param[volume_name] >
-
-      au < manifest ; 2001 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 38 ; 38 >
-      au < manifest ; 2002 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 39 ; 39 >
-      au < manifest ; 2003 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 40 ; 40 >
-      au < manifest ; 2004 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 41 ; 41 >
-      au < manifest ; 2005 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 42 ; 42 >
-      au < manifest ; 2006 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 43 ; 43 >
-      au < manifest ; 2007 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 44 ; 44 >
-      au < released ; 2008 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 45 ; 45 >
-      au < released ; 2009 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 46 ; 46 >
-      au < released ; 2010 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 47 ; 47 >
-      au < released ; 2011 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 48 ; 48 >
-      au < manifest ; 2012 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 49 ; 49 >
-      au < manifest ; 2013 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 50 ; 50 >
-
-    }
-
-    {
-      title <
-        name = International Journal of Bilingualism ;
-        issn = 1367-0069 ;
-        eissn = 1756-6878
-      >
-
-      {
-
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://ijb.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
-
-        au < manifest ; 1997 ; International Journal of Bilingualism Volume 1 ; 1 >
-        au < manifest ; 1998 ; International Journal of Bilingualism Volume 2 ; 2 >
-        au < manifest ; 1999 ; International Journal of Bilingualism Volume 3 ; 3 >
-        au < manifest ; 2000 ; International Journal of Bilingualism Volume 4 ; 4 >
-        au < manifest ; 2001 ; International Journal of Bilingualism Volume 5 ; 5 >
-        au < manifest ; 2002 ; International Journal of Bilingualism Volume 6 ; 6 >
-        au < manifest ; 2003 ; International Journal of Bilingualism Volume 7 ; 7 >
-        au < manifest ; 2004 ; International Journal of Bilingualism Volume 8 ; 8 >
-        au < manifest ; 2005 ; International Journal of Bilingualism Volume 9 ; 9 >
-        au < manifest ; 2006 ; International Journal of Bilingualism Volume 10 ; 10 >
-        au < manifest ; 2007 ; International Journal of Bilingualism Volume 11 ; 11 >
-        au < manifest ; 2008 ; International Journal of Bilingualism Volume 12 ; 12 >
-        au < manifest ; 2009 ; International Journal of Bilingualism Volume 13 ; 13 >
-        au < released ; 2010 ; International Journal of Bilingualism Volume 14 ; 14 >
-        au < released ; 2011 ; International Journal of Bilingualism Volume 15 ; 15 >
-        au < released ; 2012 ; International Journal of Bilingualism Volume 16 ; 16 >
-        au < released ; 2013 ; International Journal of Bilingualism Volume 17 ; 17 >
-        au < released ; 2014 ; International Journal of Bilingualism Volume 18 ; 18 >
-        au < manifest ; 2015 ; International Journal of Bilingualism Volume 19 ; 19 >
-        au < expected ; 2016 ; International Journal of Bilingualism Volume 20 ; 20 >
-
-      }
-
-    }
-
-  {
-
-    title <
-      name = International Journal of Christianity and Education ;
-      issn = 2056-9971 ;
-      eissn = 2056-998X ;
-      issnl = 2056-9971
-    >
-
-      param[base_url] = http://ice.sagepub.com/
-      pluginSuffix = HighWirePressH20Plugin
-      implicit < status ; year ; name ; param[volume_name] >
-      comment[merged_from] = 1366-5456 and 0021-9657
-      
-      au < manifest ; 2015 ; International Journal of Christianity and Education Volume 19 ; 19 >
-      au < expected ; 2016 ; International Journal of Christianity and Education Volume 20 ; 20 >
-      
-  }
-
-  {
-
-    title <
-      name = Journal of Education and Christian Belief ;
-      issn = 1366-5456 ;
-      issnl = 1366-5456
-    >
-
-      param[base_url] = http://ice.sagepub.com/
-      pluginSuffix = HighWirePressH20Plugin
-      implicit < status ; year ; name ; param[volume_name] >
-      comment[merged_into] = 2056-9971
-      
-      au < exists ; 2001 ; Journal of Education and Christian Belief Volume 5 ; 5 >
-      au < exists ; 2002 ; Journal of Education and Christian Belief Volume 6 ; 6 >
-      au < exists ; 2003 ; Journal of Education and Christian Belief Volume 7 ; 7 >
-      au < exists ; 2004 ; Journal of Education and Christian Belief Volume 8 ; 8 >
-      au < exists ; 2005 ; Journal of Education and Christian Belief Volume 9 ; 9 >
-      au < exists ; 2006 ; Journal of Education and Christian Belief Volume 10 ; 10 >
-      au < exists ; 2007 ; Journal of Education and Christian Belief Volume 11 ; 11 >
-      au < exists ; 2008 ; Journal of Education and Christian Belief Volume 12 ; 12 >
-      au < exists ; 2009 ; Journal of Education and Christian Belief Volume 13 ; 13 >
-      au < exists ; 2010 ; Journal of Education and Christian Belief Volume 14 ; 14 >
-      au < exists ; 2011 ; Journal of Education and Christian Belief Volume 15 ; 15 >
-      au < exists ; 2012 ; Journal of Education and Christian Belief Volume 16 ; 16 >
-      au < exists ; 2013 ; Journal of Education and Christian Belief Volume 17 ; 17 >
-      au < manifest ; 2014 ; Journal of Education and Christian Belief Volume 18 ; 18 >
-      
-  }
-
-  {
-
-    title <
-      name = Journal of Christian Education ;
-      issn = 0021-9657 ;
-      issnl = 0021-9657
-    >
-
-      param[base_url] = http://ice.sagepub.com/
-      pluginSuffix = HighWirePressH20Plugin
-      implicit < status ; year ; name ; param[volume_name] >
-      comment[merged_into] = 2056-9971
-      comment[0] = content available 1974 volume 17, missing content from 1975 to 2000
-      
-      au < exists ; 2001 ; Journal of Christian Education Volume 44 ; 44 >
-      au < exists ; 2002 ; Journal of Christian Education Volume 45 ; 45 >
-      au < exists ; 2003 ; Journal of Christian Education Volume 46 ; 46 >
-      au < exists ; 2004 ; Journal of Christian Education Volume 47 ; 47 >
-      au < exists ; 2005 ; Journal of Christian Education Volume 48 ; 48 >
-      au < exists ; 2006 ; Journal of Christian Education Volume 49 ; 49 >
-      au < exists ; 2007 ; Journal of Christian Education Volume 50 ; 50 >
-      au < exists ; 2008 ; Journal of Christian Education Volume 51 ; 51 >
-      au < exists ; 2009 ; Journal of Christian Education Volume 52 ; 52 >
-      au < exists ; 2010 ; Journal of Christian Education Volume 53 ; 53 >
-      au < exists ; 2011 ; Journal of Christian Education Volume 54 ; 54 >
-      au < exists ; 2012 ; Journal of Christian Education Volume 55 ; 55 >
-      
-  }
-
-    {
 
       title <
         name = The International Journal of Press/Politics ;
@@ -15162,7 +15020,22 @@
 
   }
 
-    {
+  {
+      title <
+        name = International Journal of Qualitative Methods ;
+        eissn = 1609-4069
+      >
+
+      pluginSuffix = HighWirePressH20Plugin
+      param[base_url] = http://ijq.sagepub.com/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2015 ; International Journal of Qualitative Methods Volume 14 ; 14 >
+      au < expected ; 2016 ; International Journal of Qualitative Methods Volume 15 ; 15 >
+
+  }
+
+  {
       title <
         name = International Journal of Toxicology ;
         issn = 1091-5818 ;
@@ -15322,6 +15195,54 @@
 
     }
 
+  {
+
+    title <
+      name = Irish Economic and Social History ;
+      issn = 0332-4893 ;
+      eissn = 2050-4918
+    >
+
+      param[base_url] = http://ies.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2007 ; Irish Economic and Social History Volume 34 ; 34 >
+      au < exists ; 2008 ; Irish Economic and Social History Volume 35 ; 35 >
+      au < exists ; 2009 ; Irish Economic and Social History Volume 36 ; 36 >
+      au < exists ; 2010 ; Irish Economic and Social History Volume 37 ; 37 >
+      au < exists ; 2011 ; Irish Economic and Social History Volume 38 ; 38 >
+      au < exists ; 2012 ; Irish Economic and Social History Volume 39 ; 39 >
+      au < exists ; 2013 ; Irish Economic and Social History Volume 40 ; 40 >
+      au < exists ; 2014 ; Irish Economic and Social History Volume 41 ; 41 >
+      au < expected ; 2015 ; Irish Economic and Social History Volume 42 ; 42 >
+      au < expected ; 2016 ; Irish Economic and Social History Volume 43 ; 43 >
+
+  }
+
+  {
+
+    title <
+      name = Irish Journal of Sociology ;
+      issn = 0791-6035 ;
+      eissn = 2050-5280
+    >
+
+      param[base_url] = http://irj.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2009 ; Irish Journal of Sociology Volume 17 ; 17 >
+      au < exists ; 2010 ; Irish Journal of Sociology Volume 18 ; 18 >
+      au < exists ; 2011 ; Irish Journal of Sociology Volume 19 ; 19 >
+      au < exists ; 2012 ; Irish Journal of Sociology Volume 20 ; 20 >
+      au < exists ; 2013 ; Irish Journal of Sociology Volume 21 ; 21 >
+      au < exists ; 2014 ; Irish Journal of Sociology Volume 22 ; 22 >
+      au < exists ; 2015 ; Irish Journal of Sociology Volume 23 ; 23 >
+      au < expected ; 2016 ; Irish Journal of Sociology Volume 24 ; 24 >
+
+  }
+
     {
 
       title <
@@ -15337,7 +15258,6 @@
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://heb.sagepub.com/
         implicit < status ; year ; name ; param[volume] >
-
 
         au < down ; 2006 ; Health Education & Behavior Volume 33 ; 33 >
 
@@ -17556,6 +17476,32 @@
 
     }
 
+    {
+      title <
+        name = INQUIRY: The Journal of Health Care Organization, Provision, and Financing ;
+        issn = 0046-9580
+      >
+
+      pluginSuffix = HighWirePressH20Plugin
+      param[base_url] = http://inq.sagepub.com/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < manifest ; 2001 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 38 ; 38 >
+      au < manifest ; 2002 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 39 ; 39 >
+      au < manifest ; 2003 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 40 ; 40 >
+      au < manifest ; 2004 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 41 ; 41 >
+      au < manifest ; 2005 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 42 ; 42 >
+      au < manifest ; 2006 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 43 ; 43 >
+      au < manifest ; 2007 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 44 ; 44 >
+      au < released ; 2008 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 45 ; 45 >
+      au < released ; 2009 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 46 ; 46 >
+      au < released ; 2010 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 47 ; 47 >
+      au < released ; 2011 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 48 ; 48 >
+      au < manifest ; 2012 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 49 ; 49 >
+      au < manifest ; 2013 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 50 ; 50 >
+
+    }
+
   {
 
     title <
@@ -18013,6 +17959,63 @@
       }
 
     }
+
+    {
+      title <
+        name = International Journal of Bilingualism ;
+        issn = 1367-0069 ;
+        eissn = 1756-6878
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ijb.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 1997 ; International Journal of Bilingualism Volume 1 ; 1 >
+        au < manifest ; 1998 ; International Journal of Bilingualism Volume 2 ; 2 >
+        au < manifest ; 1999 ; International Journal of Bilingualism Volume 3 ; 3 >
+        au < manifest ; 2000 ; International Journal of Bilingualism Volume 4 ; 4 >
+        au < manifest ; 2001 ; International Journal of Bilingualism Volume 5 ; 5 >
+        au < manifest ; 2002 ; International Journal of Bilingualism Volume 6 ; 6 >
+        au < manifest ; 2003 ; International Journal of Bilingualism Volume 7 ; 7 >
+        au < manifest ; 2004 ; International Journal of Bilingualism Volume 8 ; 8 >
+        au < manifest ; 2005 ; International Journal of Bilingualism Volume 9 ; 9 >
+        au < manifest ; 2006 ; International Journal of Bilingualism Volume 10 ; 10 >
+        au < manifest ; 2007 ; International Journal of Bilingualism Volume 11 ; 11 >
+        au < manifest ; 2008 ; International Journal of Bilingualism Volume 12 ; 12 >
+        au < manifest ; 2009 ; International Journal of Bilingualism Volume 13 ; 13 >
+        au < released ; 2010 ; International Journal of Bilingualism Volume 14 ; 14 >
+        au < released ; 2011 ; International Journal of Bilingualism Volume 15 ; 15 >
+        au < released ; 2012 ; International Journal of Bilingualism Volume 16 ; 16 >
+        au < released ; 2013 ; International Journal of Bilingualism Volume 17 ; 17 >
+        au < released ; 2014 ; International Journal of Bilingualism Volume 18 ; 18 >
+        au < manifest ; 2015 ; International Journal of Bilingualism Volume 19 ; 19 >
+        au < expected ; 2016 ; International Journal of Bilingualism Volume 20 ; 20 >
+
+      }
+
+    }
+
+  {
+
+    title <
+      name = International Journal of Christianity and Education ;
+      issn = 2056-9971 ;
+      eissn = 2056-998X ;
+      issnl = 2056-9971
+    >
+
+      param[base_url] = http://ice.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      comment[merged_from] = 1366-5456 and 0021-9657
+      
+      au < manifest ; 2015 ; International Journal of Christianity and Education Volume 19 ; 19 >
+      au < expected ; 2016 ; International Journal of Christianity and Education Volume 20 ; 20 >
+      
+  }
 
     {
 
@@ -22407,6 +22410,35 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     }
 
+  {
+
+    title <
+      name = Journal of Christian Education ;
+      issn = 0021-9657 ;
+      issnl = 0021-9657
+    >
+
+      param[base_url] = http://ice.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      comment[merged_into] = 2056-9971
+      comment[0] = content available 1974 volume 17, missing content from 1975 to 2000
+      
+      au < exists ; 2001 ; Journal of Christian Education Volume 44 ; 44 >
+      au < exists ; 2002 ; Journal of Christian Education Volume 45 ; 45 >
+      au < exists ; 2003 ; Journal of Christian Education Volume 46 ; 46 >
+      au < exists ; 2004 ; Journal of Christian Education Volume 47 ; 47 >
+      au < exists ; 2005 ; Journal of Christian Education Volume 48 ; 48 >
+      au < exists ; 2006 ; Journal of Christian Education Volume 49 ; 49 >
+      au < exists ; 2007 ; Journal of Christian Education Volume 50 ; 50 >
+      au < exists ; 2008 ; Journal of Christian Education Volume 51 ; 51 >
+      au < exists ; 2009 ; Journal of Christian Education Volume 52 ; 52 >
+      au < exists ; 2010 ; Journal of Christian Education Volume 53 ; 53 >
+      au < exists ; 2011 ; Journal of Christian Education Volume 54 ; 54 >
+      au < exists ; 2012 ; Journal of Christian Education Volume 55 ; 55 >
+      
+  }
+
     {
 
       title <
@@ -24086,6 +24118,36 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       }
 
     }
+
+  {
+
+    title <
+      name = Journal of Education and Christian Belief ;
+      issn = 1366-5456 ;
+      issnl = 1366-5456
+    >
+
+      param[base_url] = http://ice.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      comment[merged_into] = 2056-9971
+      
+      au < exists ; 2001 ; Journal of Education and Christian Belief Volume 5 ; 5 >
+      au < exists ; 2002 ; Journal of Education and Christian Belief Volume 6 ; 6 >
+      au < exists ; 2003 ; Journal of Education and Christian Belief Volume 7 ; 7 >
+      au < exists ; 2004 ; Journal of Education and Christian Belief Volume 8 ; 8 >
+      au < exists ; 2005 ; Journal of Education and Christian Belief Volume 9 ; 9 >
+      au < exists ; 2006 ; Journal of Education and Christian Belief Volume 10 ; 10 >
+      au < exists ; 2007 ; Journal of Education and Christian Belief Volume 11 ; 11 >
+      au < exists ; 2008 ; Journal of Education and Christian Belief Volume 12 ; 12 >
+      au < exists ; 2009 ; Journal of Education and Christian Belief Volume 13 ; 13 >
+      au < exists ; 2010 ; Journal of Education and Christian Belief Volume 14 ; 14 >
+      au < exists ; 2011 ; Journal of Education and Christian Belief Volume 15 ; 15 >
+      au < exists ; 2012 ; Journal of Education and Christian Belief Volume 16 ; 16 >
+      au < exists ; 2013 ; Journal of Education and Christian Belief Volume 17 ; 17 >
+      au < manifest ; 2014 ; Journal of Education and Christian Belief Volume 18 ; 18 >
+      
+  }
 
     {
 
@@ -30983,6 +31045,39 @@ comment[mpj] = now published by Brill
 
     }
 
+  {
+
+    title <
+      name = The Journal of Transport History ;
+      issn = 0022-5266 ;
+      eissn = 1759-3999
+    >
+
+      param[base_url] = http://jth.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 1999 ; The Journal of Transport History Volume 20 ; 20 >
+      au < exists ; 2000 ; The Journal of Transport History Volume 21 ; 21 >
+      au < exists ; 2001 ; The Journal of Transport History Volume 22 ; 22 >
+      au < exists ; 2002 ; The Journal of Transport History Volume 23 ; 23 >
+      au < exists ; 2003 ; The Journal of Transport History Volume 24 ; 24 >
+      au < exists ; 2004 ; The Journal of Transport History Volume 25 ; 25 >
+      au < exists ; 2005 ; The Journal of Transport History Volume 26 ; 26 >
+      au < exists ; 2006 ; The Journal of Transport History Volume 27 ; 27 >
+      au < exists ; 2007 ; The Journal of Transport History Volume 28 ; 28 >
+      au < exists ; 2008 ; The Journal of Transport History Volume 29 ; 29 >
+      au < exists ; 2009 ; The Journal of Transport History Volume 30 ; 30 >
+      au < exists ; 2010 ; The Journal of Transport History Volume 31 ; 31 >
+      au < exists ; 2011 ; The Journal of Transport History Volume 32 ; 32 >
+      au < exists ; 2012 ; The Journal of Transport History Volume 33 ; 33 >
+      au < exists ; 2013 ; The Journal of Transport History Volume 34 ; 34 >
+      au < exists ; 2014 ; The Journal of Transport History Volume 35 ; 35 >
+      au < exists ; 2015 ; The Journal of Transport History Volume 36 ; 36 >
+      au < expected ; 2016 ; The Journal of Transport History Volume 37 ; 37 >
+
+  }
+
     {
 
       title <
@@ -32220,6 +32315,28 @@ comment[mpj] = now published by Brill
       }
 
     }
+
+  {
+
+    title <
+      name = Literature & History ;
+      issn = 0306-1973 ;
+      eissn = 2050-4594
+    >
+
+    param[base_url] = http://lah.sagepub.com/
+
+    {
+
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2015 ; Literature & History Volume 24 ; 24 >
+      au < expected ; 2016 ; Literature & History Volume 25 ; 25 >
+
+    }
+
+  }
 
     {
       title <
@@ -34614,6 +34731,36 @@ comment[mpj] = now published by Brill
 
       au < manifest ; 2015 ; Newspaper Research Journal Volume 36 ; 36 >
       au < expected ; 2016 ; Newspaper Research Journal Volume 37 ; 37 >
+
+  }
+
+  {
+
+    title <
+      name = Nineteenth Century Theatre and Film ;
+      issn = 1748-3727 ;
+      eissn = 2048-2906
+    >
+
+      param[base_url] = http://nct.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2002 ; Nineteenth Century Theatre and Film Volume 29 ; 29 >
+      au < exists ; 2003 ; Nineteenth Century Theatre and Film Volume 30 ; 30 >
+      au < exists ; 2004 ; Nineteenth Century Theatre and Film Volume 31 ; 31 >
+      au < exists ; 2005 ; Nineteenth Century Theatre and Film Volume 32 ; 32 >
+      au < exists ; 2006 ; Nineteenth Century Theatre and Film Volume 33 ; 33 >
+      au < exists ; 2007 ; Nineteenth Century Theatre and Film Volume 34 ; 34 >
+      au < exists ; 2008 ; Nineteenth Century Theatre and Film Volume 35 ; 35 >
+      au < exists ; 2009 ; Nineteenth Century Theatre and Film Volume 36 ; 36 >
+      au < exists ; 2010 ; Nineteenth Century Theatre and Film Volume 37 ; 37 >
+      au < exists ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 >
+      au < exists ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 >
+      au < exists ; 2013 ; Nineteenth Century Theatre and Film Volume 40 ; 40 >
+      au < exists ; 2014 ; Nineteenth Century Theatre and Film Volume 41 ; 41 >
+      au < expected ; 2015 ; Nineteenth Century Theatre and Film Volume 42 ; 42 >
+      au < expected ; 2016 ; Nineteenth Century Theatre and Film Volume 43 ; 43 >
 
   }
 

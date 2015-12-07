@@ -13335,31 +13335,6 @@
 
   }
 
-    {
-      title <
-        name = INQUIRY: The Journal of Health Care Organization, Provision, and Financing ;
-        issn = 0046-9580
-      >
-
-      pluginSuffix = ClockssHighWirePressH20Plugin
-      param[base_url] = http://inq.sagepub.com/
-
-      au < manifest ; exists ; 2001 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 38 ; 38 ; >
-      au < manifest ; exists ; 2002 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 39 ; 39 ; >
-      au < manifest ; exists ; 2003 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 40 ; 40 ; >
-      au < manifest ; exists ; 2004 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 41 ; 41 ; >
-      au < manifest ; exists ; 2005 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 42 ; 42 ; >
-      au < manifest ; exists ; 2006 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 43 ; 43 ; >
-      au < manifest ; exists ; 2007 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 44 ; 44 ; >
-      au < finished ; finished ; 2008 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 45 ; 45 ; >
-      au < finished ; finished ; 2009 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 46 ; 46 ; >
-      au < finished ; finished ; 2010 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 47 ; 47 ; >
-      au < finished ; crawling ; 2011 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 48 ; 48 ; >
-      au < crawling ; exists ; 2012 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 49 ; 49 ; >
-      au < crawling ; exists ; 2013 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 50 ; 50 ; >
-
-    }
-
   {
 
     title <
@@ -15316,6 +15291,31 @@
 
   }
 
+    {
+      title <
+        name = INQUIRY: The Journal of Health Care Organization, Provision, and Financing ;
+        issn = 0046-9580
+      >
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://inq.sagepub.com/
+
+      au < manifest ; exists ; 2001 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2002 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2003 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2004 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2005 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2006 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2007 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 44 ; 44 ; >
+      au < finished ; finished ; 2008 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 45 ; 45 ; >
+      au < finished ; finished ; 2009 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 46 ; 46 ; >
+      au < finished ; finished ; 2010 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 47 ; 47 ; >
+      au < finished ; crawling ; 2011 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 48 ; 48 ; >
+      au < crawling ; exists ; 2012 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 49 ; 49 ; >
+      au < crawling ; exists ; 2013 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 50 ; 50 ; >
+
+    }
+
   {
 
     title <
@@ -16776,6 +16776,19 @@
   }
 
   {
+      title <
+        name = International Journal of Qualitative Methods ;
+        eissn = 1609-4069
+      >
+
+      param[base_url] = http://ijq.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2015 ; International Journal of Qualitative Methods Volume 14 ; 14 ; >
+      au < expected ; exists ; 2016 ; International Journal of Qualitative Methods Volume 15 ; 15 ; >
+
+  }
+  {
 
     title <
       name = The International Journal of Robotics Research ;
@@ -17995,6 +18008,52 @@
       au < crawling ; exists ; 2014 ; Interventional Neuroradiology Volume 20 ; 20 ; >
       au < crawling ; exists ; 2015 ; Interventional Neuroradiology Volume 21 ; 21 ; >
       au < expected ; exists ; 2016 ; Interventional Neuroradiology Volume 22 ; 22 ; >
+
+  }
+
+  {
+
+    title <
+      name = Irish Economic and Social History ;
+      issn = 0332-4893 ;
+      eissn = 2050-4918
+    >
+
+      param[base_url] = http://ies.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2007 ; Irish Economic and Social History Volume 34 ; 34 ; >
+      au < exists ; exists ; 2008 ; Irish Economic and Social History Volume 35 ; 35 ; >
+      au < exists ; exists ; 2009 ; Irish Economic and Social History Volume 36 ; 36 ; >
+      au < exists ; exists ; 2010 ; Irish Economic and Social History Volume 37 ; 37 ; >
+      au < exists ; exists ; 2011 ; Irish Economic and Social History Volume 38 ; 38 ; >
+      au < exists ; exists ; 2012 ; Irish Economic and Social History Volume 39 ; 39 ; >
+      au < exists ; exists ; 2013 ; Irish Economic and Social History Volume 40 ; 40 ; >
+      au < exists ; exists ; 2014 ; Irish Economic and Social History Volume 41 ; 41 ; >
+      au < expected ; exists ; 2015 ; Irish Economic and Social History Volume 42 ; 42 ; >
+      au < expected ; exists ; 2016 ; Irish Economic and Social History Volume 43 ; 43 ; >
+
+  }
+
+  {
+
+    title <
+      name = Irish Journal of Sociology ;
+      issn = 0791-6035 ;
+      eissn = 2050-5280
+    >
+
+      param[base_url] = http://irj.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2009 ; Irish Journal of Sociology Volume 17 ; 17 ; >
+      au < exists ; exists ; 2010 ; Irish Journal of Sociology Volume 18 ; 18 ; >
+      au < exists ; exists ; 2011 ; Irish Journal of Sociology Volume 19 ; 19 ; >
+      au < exists ; exists ; 2012 ; Irish Journal of Sociology Volume 20 ; 20 ; >
+      au < exists ; exists ; 2013 ; Irish Journal of Sociology Volume 21 ; 21 ; >
+      au < exists ; exists ; 2014 ; Irish Journal of Sociology Volume 22 ; 22 ; >
+      au < exists ; exists ; 2015 ; Irish Journal of Sociology Volume 23 ; 23 ; >
+      au < expected ; exists ; 2016 ; Irish Journal of Sociology Volume 24 ; 24 ; >
 
   }
 
@@ -27702,6 +27761,38 @@
   {
 
     title <
+      name = The Journal of Transport History ;
+      issn = 0022-5266 ;
+      eissn = 1759-3999
+    >
+
+      param[base_url] = http://jth.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 1999 ; The Journal of Transport History Volume 20 ; 20 ; >
+      au < exists ; exists ; 2000 ; The Journal of Transport History Volume 21 ; 21 ; >
+      au < exists ; exists ; 2001 ; The Journal of Transport History Volume 22 ; 22 ; >
+      au < exists ; exists ; 2002 ; The Journal of Transport History Volume 23 ; 23 ; >
+      au < exists ; exists ; 2003 ; The Journal of Transport History Volume 24 ; 24 ; >
+      au < exists ; exists ; 2004 ; The Journal of Transport History Volume 25 ; 25 ; >
+      au < exists ; exists ; 2005 ; The Journal of Transport History Volume 26 ; 26 ; >
+      au < exists ; exists ; 2006 ; The Journal of Transport History Volume 27 ; 27 ; >
+      au < exists ; exists ; 2007 ; The Journal of Transport History Volume 28 ; 28 ; >
+      au < exists ; exists ; 2008 ; The Journal of Transport History Volume 29 ; 29 ; >
+      au < exists ; exists ; 2009 ; The Journal of Transport History Volume 30 ; 30 ; >
+      au < exists ; exists ; 2010 ; The Journal of Transport History Volume 31 ; 31 ; >
+      au < exists ; exists ; 2011 ; The Journal of Transport History Volume 32 ; 32 ; >
+      au < exists ; exists ; 2012 ; The Journal of Transport History Volume 33 ; 33 ; >
+      au < exists ; exists ; 2013 ; The Journal of Transport History Volume 34 ; 34 ; >
+      au < exists ; exists ; 2014 ; The Journal of Transport History Volume 35 ; 35 ; >
+      au < exists ; exists ; 2015 ; The Journal of Transport History Volume 36 ; 36 ; >
+      au < expected ; exists ; 2016 ; The Journal of Transport History Volume 37 ; 37 ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Travel Research ;
       issn = 0047-2875 ;
       eissn = 1552-6763
@@ -28872,6 +28963,27 @@
       au < finished ; finished ; 2014 ; Lighting Research and Technology Volume 46 ; 46 ; >
       au < crawling ; exists ; 2015 ; Lighting Research and Technology Volume 47 ; 47 ; >
       au < expected ; exists ; 2016 ; Lighting Research and Technology Volume 48 ; 48 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Literature & History ;
+      issn = 0306-1973 ;
+      eissn = 2050-4594
+    >
+
+    param[base_url] = http://lah.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2015 ; Literature & History Volume 24 ; 24 ; >
+      au < expected ; exists ; 2016 ; Literature & History Volume 25 ; 25 ; >
 
     }
 
@@ -31215,6 +31327,35 @@
 
       au < crawling ; exists ; 2015 ; Newspaper Research Journal Volume 36 ; 36 ; >
       au < expected ; exists ; 2016 ; Newspaper Research Journal Volume 37 ; 37 ; >
+
+  }
+
+  {
+
+    title <
+      name = Nineteenth Century Theatre and Film ;
+      issn = 1748-3727 ;
+      eissn = 2048-2906
+    >
+
+      param[base_url] = http://nct.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2002 ; Nineteenth Century Theatre and Film Volume 29 ; 29 ; >
+      au < exists ; exists ; 2003 ; Nineteenth Century Theatre and Film Volume 30 ; 30 ; >
+      au < exists ; exists ; 2004 ; Nineteenth Century Theatre and Film Volume 31 ; 31 ; >
+      au < exists ; exists ; 2005 ; Nineteenth Century Theatre and Film Volume 32 ; 32 ; >
+      au < exists ; exists ; 2006 ; Nineteenth Century Theatre and Film Volume 33 ; 33 ; >
+      au < exists ; exists ; 2007 ; Nineteenth Century Theatre and Film Volume 34 ; 34 ; >
+      au < exists ; exists ; 2008 ; Nineteenth Century Theatre and Film Volume 35 ; 35 ; >
+      au < exists ; exists ; 2009 ; Nineteenth Century Theatre and Film Volume 36 ; 36 ; >
+      au < exists ; exists ; 2010 ; Nineteenth Century Theatre and Film Volume 37 ; 37 ; >
+      au < exists ; exists ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 ; >
+      au < exists ; exists ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 ; >
+      au < exists ; exists ; 2013 ; Nineteenth Century Theatre and Film Volume 40 ; 40 ; >
+      au < exists ; exists ; 2014 ; Nineteenth Century Theatre and Film Volume 41 ; 41 ; >
+      au < expected ; exists ; 2015 ; Nineteenth Century Theatre and Film Volume 42 ; 42 ; >
+      au < expected ; exists ; 2016 ; Nineteenth Century Theatre and Film Volume 43 ; 43 ; >
 
   }
 
