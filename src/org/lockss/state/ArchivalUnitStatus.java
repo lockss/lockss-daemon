@@ -1109,6 +1109,21 @@ public class ArchivalUnitStatus
 					    ColumnDescriptor.TYPE_STRING,
 					    crawlPool));
       }
+      CrawlManager crawlMgr = theDaemon.getCrawlManager();
+      int crawlPrio = crawlMgr.getAuPriority(au);
+      if (crawlPrio != 0) {
+	String val;
+	if (crawlPrio <= CrawlManagerImpl.ABORT_CRAWL_PRIORITY) {
+	  val = crawlPrio + ": DISABLED, ABORT";
+	} else if (crawlPrio <= CrawlManagerImpl.MIN_CRAWL_PRIORITY) {
+	  val = crawlPrio + ": DISABLED";
+	} else {
+	  val = Integer.toString(crawlPrio);
+	}
+	res.add(new StatusTable.SummaryInfo("Crawl Priority",
+					    ColumnDescriptor.TYPE_STRING,
+					    val));
+      }
       long lastCrawlAttempt = state.getLastCrawlAttempt();
       res.add(new StatusTable.SummaryInfo("Last Completed Crawl",
 					  ColumnDescriptor.TYPE_DATE,

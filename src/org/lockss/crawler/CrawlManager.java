@@ -96,6 +96,10 @@ public interface CrawlManager {
   /** Return the StatusSource */
   public StatusSource getStatusSource();
 
+  /** Return the AU's crawl priority as specified by {@value
+   * CrawlManagerImpl#PARAM_CRAWL_PRIORITY_AUID_MAP} */
+  public int getAuPriority(ArchivalUnit au);
+
   /** Hook to apply patterns to exclude recursive URLs, etc. */
   public boolean isGloballyExcludedUrl(ArchivalUnit au, String url);
 

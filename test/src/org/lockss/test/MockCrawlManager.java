@@ -56,6 +56,10 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
     scheduledCrawls = new HashMap();
   }
 
+  public int getAuPriority(ArchivalUnit au) {
+    return 0;
+  }
+
   public LockssApp getApp() {
     throw new UnsupportedOperationException("Not implemented");
   }

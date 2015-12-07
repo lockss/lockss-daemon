@@ -241,8 +241,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     PREFIX + "crawlPriorityAuidMap";
   static final List DEFAULT_CRAWL_PRIORITY_AUID_MAP = null;
 
-  static final int MIN_CRAWL_PRIORITY = -10000;
-  static final int ABORT_CRAWL_PRIORITY = -20000;
+  public static final int MIN_CRAWL_PRIORITY = -10000;
+  public static final int ABORT_CRAWL_PRIORITY = -20000;
 
   /** Map of concurrent pool name to pool size.  By default all pools are
    * of size 1; to enable 2 concurrent crawls in pool FOO, add FOO,2 to
@@ -1891,7 +1891,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
   }
 
-  int getAuPriority(ArchivalUnit au) {
+  public int getAuPriority(ArchivalUnit au) {
     Integer res = null;
     if (crawlPriorityAuidMap != null) {
       res = crawlPriorityAuidMap.getMatch(au.getAuId());
