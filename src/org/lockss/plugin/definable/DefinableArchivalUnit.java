@@ -387,11 +387,20 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
 					     + pair);
 	}
 	String printf = pair.substring(0, pos);
-	String pri = pair.substring(pos + 1);
+	String weight = pair.substring(pos + 1);
+	try {
+	  float w = Float.parseFloat(weight);
+	  if (w < 0.0 || w > 1.0) {
+	    throw new IllegalArgumentException("Illegal URL result weight, must be between 0.0 and 1.0: " + weight);
+	  }
+	} catch (NumberFormatException e) {
+	  throw new IllegalArgumentException("Illegal URL result weight: " +
+					     weight);
+	}
 	PrintfConverter.MatchPattern mp =
 	  convertVariableRegexpString(printf, RegexpContext.Url);
 	if (mp.getRegexp() != null) {
-	  lst.add(mp.getRegexp() + "," + pri);
+	  lst.add(mp.getRegexp() + "," + weight);
 	}
       }
       return new PatternFloatMap(lst);
