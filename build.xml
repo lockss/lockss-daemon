@@ -2794,7 +2794,10 @@ Test results in ${test.results}
            relative="true"
            parallel="true">
       <arg value="--noout"/>
-      <fileset dir="${basedir}" includes="plugins/**/*.xml"/>
+      <fileset dir="${basedir}" >
+	<include name="plugins/**/*.xml"/>
+	<exclude name="**/classes/**"/>
+      </fileset>
     </apply>
   </target>
 
