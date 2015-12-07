@@ -408,7 +408,7 @@ public abstract class BaseCrawler implements Crawler {
           " threw " + e.getMessage());
       setThrownStatus(e);
       throw e;
-    } catch (OutOfMemoryError e) {
+    } catch (Error e) {
       logger.error("doCrawl0()", e);
       setThrownStatus(e);
       throw e;
