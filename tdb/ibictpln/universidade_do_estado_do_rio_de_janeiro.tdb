@@ -122,13 +122,17 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = contemporanea
 
-      au < released ; 2009 ; 1 ; Revista Contemporânea Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 2 ; Revista Contemporânea Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 3 ; Revista Contemporânea Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 4 ; Revista Contemporânea Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 5 ; Revista Contemporânea Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 6 ; Revista Contemporânea Volume 2014 ; 2014 ; >
-      au < expected ; 2015 ; 7 ; Revista Contemporânea Volume 2015 ; 2015 ; >
+      au < exists ; 2005 ; 3 ; Revista Contemporânea Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 4 ; Revista Contemporânea Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 5 ; Revista Contemporânea Volume 2007 ; 2007 ; >
+      au < manifest ; 2008 ; 6 ; Revista Contemporânea Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 7 ; Revista Contemporânea Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 8 ; Revista Contemporânea Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 9 ; Revista Contemporânea Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 10 ; Revista Contemporânea Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 11 ; Revista Contemporânea Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 12 ; Revista Contemporânea Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 13 ; Revista Contemporânea Volume 2015 ; 2015 ; >
 
   }
 
