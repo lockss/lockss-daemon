@@ -184,22 +184,22 @@
     
       #plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     
-      au < ClockssHWDrupalH20Plugin ; manifest ; exists ; 2000 ; NeoReviews Volume 1 ; 1 >
-      au < ClockssHWDrupalH20Plugin ; manifest ; exists ; 2001 ; NeoReviews Volume 2 ; 2 >
-      au < ClockssHWDrupalH20Plugin ; manifest ; exists ; 2002 ; NeoReviews Volume 3 ; 3 >
-      au < ClockssHWDrupalH20Plugin ; manifest ; exists ; 2003 ; NeoReviews Volume 4 ; 4 >
-      au < ClockssHWDrupalH20Plugin ; manifest ; exists ; 2004 ; NeoReviews Volume 5 ; 5 >
-      au < ClockssHWDrupalH20Plugin ; manifest ; exists ; 2005 ; NeoReviews Volume 6 ; 6 >
-      au < ClockssHWDrupalH20Plugin ; manifest ; exists ; 2006 ; NeoReviews Volume 7 ; 7 >
-      au < ClockssHWDrupalH20Plugin ; manifest ; exists ; 2007 ; NeoReviews Volume 8 ; 8 >
-      au < ClockssHWDrupalH20Plugin ; finished ; finished ; 2008 ; NeoReviews Volume 9 ; 9 >
-      au < ClockssHWDrupalH20Plugin ; doNotProcess ; doNotProcess ; 2009 ; NeoReviews Volume 10 ; 10 >
-      au < ClockssHWDrupalH20Plugin ; doNotProcess ; doNotProcess ; 2010 ; NeoReviews Volume 11 ; 11 >
-      au < ClockssHWDrupalH20Plugin ; crawling ; crawling ; 2011 ; NeoReviews Volume 12 ; 12 >
-      au < ClockssHWDrupalH20Plugin ; finished ; frozen ; 2012 ; NeoReviews Volume 13 ; 13 >
-      au < ClockssHWDrupalH20Plugin ; crawling ; exists ; 2013 ; NeoReviews Volume 14 ; 14 >
-      au < ClockssHWDrupalH20Plugin ; crawling ; exists ; 2014 ; NeoReviews Volume 15 ; 15 >
-      au < ClockssHWDrupalH20Plugin ; crawling ; exists ; 2015 ; NeoReviews Volume 16 ; 16 >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2000 ; NeoReviews Volume 1 ; 1 >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2001 ; NeoReviews Volume 2 ; 2 >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2002 ; NeoReviews Volume 3 ; 3 >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2003 ; NeoReviews Volume 4 ; 4 >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2004 ; NeoReviews Volume 5 ; 5 >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2005 ; NeoReviews Volume 6 ; 6 >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2006 ; NeoReviews Volume 7 ; 7 >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2007 ; NeoReviews Volume 8 ; 8 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; NeoReviews Volume 9 ; 9 >
+      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; NeoReviews Volume 10 ; 10 >
+      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; NeoReviews Volume 11 ; 11 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; crawling ; 2011 ; NeoReviews Volume 12 ; 12 >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; NeoReviews Volume 13 ; 13 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; NeoReviews Volume 14 ; 14 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2014 ; NeoReviews Volume 15 ; 15 >
+      au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2015 ; NeoReviews Volume 16 ; 16 >
 
     }
   
