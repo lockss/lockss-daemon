@@ -160,7 +160,6 @@
       param[base_url] = http://www.euppublishing.com/
       param[journal_id] = anh
       implicit < status ; year ; name ; param[volume_name] >
-      comment[notReady] = 500 internal server error
 
       au < released ; 2003 ; Archives of Natural History Volume 30 ; 30 >
       au < released ; 2004 ; Archives of Natural History Volume 31 ; 31 >

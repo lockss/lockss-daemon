@@ -396,8 +396,8 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 1999 ; Ethics & the Environment Volume 4 ; 4 >
-        au < manifest ; 2000 ; Ethics & the Environment Volume 5 ; 5 >
+        au < testing ; 1999 ; Ethics & the Environment Volume 4 ; 4 >
+        au < testing ; 2000 ; Ethics & the Environment Volume 5 ; 5 >
 
       }
 
@@ -602,7 +602,7 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 1998 ; History & Memory Volume 10 ; 10 >
+        au < testing ; 1998 ; History & Memory Volume 10 ; 10 >
 
       }
 
@@ -947,7 +947,7 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < released ; 2013-2014 ; Jewish Social Studies Volume 20 ; 20 >
-        au < manifest ; 2015 ; Jewish Social Studies Volume 21 ; 21 > # Can't see in TOC, but can find manifest page.
+        au < testing ; 2015 ; Jewish Social Studies Volume 21 ; 21 > # Can't see in TOC, but can find manifest page.
 
       }
 
@@ -1287,9 +1287,9 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2001 ; Meridians: feminism, race, transnationalism Volume 1 ; 1 >
-        au < manifest ; 2001-2002 ; Meridians: feminism, race, transnationalism Volume 2 ; 2 >
-        au < manifest ; 2002-2003 ; Meridians: feminism, race, transnationalism Volume 3 ; 3 >
+        au < testing ; 2001 ; Meridians: feminism, race, transnationalism Volume 1 ; 1 >
+        au < testing ; 2001-2002 ; Meridians: feminism, race, transnationalism Volume 2 ; 2 >
+        au < testing ; 2002-2003 ; Meridians: feminism, race, transnationalism Volume 3 ; 3 >
 
       }
 
@@ -1384,7 +1384,7 @@
 
         au < released ; 2014 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 26 ; 26 >
         au < released ; 2014 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 27 ; 27 >
-        au < manifest ; 2015 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 28 ; 28 >
+        au < testing ; 2015 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 28 ; 28 >
 
       }
 
@@ -1803,7 +1803,7 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < manifest ; 2014 ; Textual Cultures: Texts, Contexts, Interpretation Volume 9 ; 9 >
+        au < testing ; 2014 ; Textual Cultures: Texts, Contexts, Interpretation Volume 9 ; 9 >
 
       }
 
@@ -1948,11 +1948,11 @@
 
         au < released ; 2014 ; Transition Issue 113 ; 113 >
         au < released ; 2014 ; Transition Issue 114 ; 114 >
-        au < manifest ; 2014 ; Transition Issue 115 ; 115 >
-        au < manifest ; 2014 ; Transition Issue 116 ; 116 >
-        au < manifest ; 2015 ; Transition Issue 117 ; 117 >
-        au < manifest ; 2015 ; Transition Issue 118 ; 118 >
-        au < exists ; 2015 ; Transition Issue 119 ; 119 >
+        au < testing ; 2014 ; Transition Issue 115 ; 115 >
+        au < testing ; 2014 ; Transition Issue 116 ; 116 >
+        au < testing ; 2015 ; Transition Issue 117 ; 117 >
+        au < testing ; 2015 ; Transition Issue 118 ; 118 >
+        au < expected ; 2015 ; Transition Issue 119 ; 119 >
 
       }
 

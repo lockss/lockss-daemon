@@ -24,9 +24,9 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2000 ; Comparative Drama Volume 34 ; 34 >
-      au < manifest ; 2001 ; Comparative Drama Volume 35 ; 35 >
-      au < manifest ; 2002 ; Comparative Drama Volume 36 ; 36 >
+      au < testing ; 2000 ; Comparative Drama Volume 34 ; 34 >
+      au < testing ; 2001 ; Comparative Drama Volume 35 ; 35 >
+      au < testing ; 2002 ; Comparative Drama Volume 36 ; 36 >
 
     }
 
@@ -71,7 +71,7 @@
     param[base_url] = http://scholarworks.wmich.edu/
     param[journal_abbr] = ojot
       
-    au < manifest ; 2012 ; Open Journal of Occupational Therapy Volume 1 ; 1 >
+    au < testing ; 2012 ; Open Journal of Occupational Therapy Volume 1 ; 1 >
     au < released ; 2014 ; Open Journal of Occupational Therapy Volume 2 ; 2 >
     au < manifest ; 2015 ; Open Journal of Occupational Therapy Volume 3 ; 3 >
 

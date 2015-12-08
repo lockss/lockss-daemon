@@ -488,11 +488,11 @@
 
       au < released ; 2014 ; Canadian Theatre Review Issue 158 ; 158 >
       au < released ; 2014 ; Canadian Theatre Review Issue 159 ; 159 >
-      au < manifest ; 2014 ; Canadian Theatre Review Issue 160 ; 160 >
-      au < manifest ; 2015 ; Canadian Theatre Review Issue 161 ; 161 >
-      au < manifest ; 2015 ; Canadian Theatre Review Issue 162 ; 162 >
-      au < manifest ; 2015 ; Canadian Theatre Review Issue 163 ; 163 >
-      au < manifest ; 2015 ; Canadian Theatre Review Issue 164 ; 164 >
+      au < testing ; 2014 ; Canadian Theatre Review Issue 160 ; 160 >
+      au < testing ; 2015 ; Canadian Theatre Review Issue 161 ; 161 >
+      au < testing ; 2015 ; Canadian Theatre Review Issue 162 ; 162 >
+      au < testing ; 2015 ; Canadian Theatre Review Issue 163 ; 163 >
+      au < testing ; 2015 ; Canadian Theatre Review Issue 164 ; 164 >
       au < expected ; 2016 ; Canadian Theatre Review Issue 165 ; 165 >
 
     }
@@ -545,17 +545,17 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 1991 ; Diaspora: A Journal of Transnational Studies Volume 1 ; 1 >
-      au < manifest ; 1992-1993 ; Diaspora: A Journal of Transnational Studies Volume 2 ; 2 >
-      au < manifest ; 1994 ; Diaspora: A Journal of Transnational Studies Volume 3 ; 3 >
-      au < manifest ; 1995 ; Diaspora: A Journal of Transnational Studies Volume 4 ; 4 >
-      au < manifest ; 1996 ; Diaspora: A Journal of Transnational Studies Volume 5 ; 5 >
-      au < manifest ; 1997 ; Diaspora: A Journal of Transnational Studies Volume 6 ; 6 >
-      au < manifest ; 1998 ; Diaspora: A Journal of Transnational Studies Volume 7 ; 7 >
-      au < manifest ; 1999 ; Diaspora: A Journal of Transnational Studies Volume 8 ; 8 >
-      au < manifest ; 2000 ; Diaspora: A Journal of Transnational Studies Volume 9 ; 9 >
-      au < manifest ; 2001 ; Diaspora: A Journal of Transnational Studies Volume 10 ; 10 >
-      au < manifest ; 2002 ; Diaspora: A Journal of Transnational Studies Volume 11 ; 11 >
+      au < testing ; 1991 ; Diaspora: A Journal of Transnational Studies Volume 1 ; 1 >
+      au < testing ; 1992-1993 ; Diaspora: A Journal of Transnational Studies Volume 2 ; 2 >
+      au < testing ; 1994 ; Diaspora: A Journal of Transnational Studies Volume 3 ; 3 >
+      au < testing ; 1995 ; Diaspora: A Journal of Transnational Studies Volume 4 ; 4 >
+      au < testing ; 1996 ; Diaspora: A Journal of Transnational Studies Volume 5 ; 5 >
+      au < testing ; 1997 ; Diaspora: A Journal of Transnational Studies Volume 6 ; 6 >
+      au < testing ; 1998 ; Diaspora: A Journal of Transnational Studies Volume 7 ; 7 >
+      au < testing ; 1999 ; Diaspora: A Journal of Transnational Studies Volume 8 ; 8 >
+      au < testing ; 2000 ; Diaspora: A Journal of Transnational Studies Volume 9 ; 9 >
+      au < testing ; 2001 ; Diaspora: A Journal of Transnational Studies Volume 10 ; 10 >
+      au < testing ; 2002 ; Diaspora: A Journal of Transnational Studies Volume 11 ; 11 >
 
     }
 
@@ -598,13 +598,13 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 1997-1998 ; Eighteenth-Century Fiction Volume 10 ; 10 >
-      au < manifest ; 1998-1999 ; Eighteenth-Century Fiction Volume 11 ; 11 >
-      au < manifest ; 1999-2000 ; Eighteenth-Century Fiction Volume 12 ; 12 >
-      au < manifest ; 2000-2001 ; Eighteenth-Century Fiction Volume 13 ; 13 >
-      au < manifest ; 2001-2002 ; Eighteenth-Century Fiction Volume 14 ; 14 >
-      au < manifest ; 2002-2003 ; Eighteenth-Century Fiction Volume 15 ; 15 >
-      au < manifest ; 2003-2004 ; Eighteenth-Century Fiction Volume 16 ; 16 >
+      au < testing ; 1997-1998 ; Eighteenth-Century Fiction Volume 10 ; 10 >
+      au < testing ; 1998-1999 ; Eighteenth-Century Fiction Volume 11 ; 11 >
+      au < testing ; 1999-2000 ; Eighteenth-Century Fiction Volume 12 ; 12 >
+      au < testing ; 2000-2001 ; Eighteenth-Century Fiction Volume 13 ; 13 >
+      au < testing ; 2001-2002 ; Eighteenth-Century Fiction Volume 14 ; 14 >
+      au < testing ; 2002-2003 ; Eighteenth-Century Fiction Volume 15 ; 15 >
+      au < testing ; 2003-2004 ; Eighteenth-Century Fiction Volume 16 ; 16 >
 
     }
 
@@ -630,7 +630,7 @@
 
       au < released ; 2013 ; Eighteenth-Century Fiction Volume 26 ; 26 >
       au < released ; 2014 ; Eighteenth-Century Fiction Volume 27 ; 27 >
-      au < manifest ; 2015 ; Eighteenth-Century Fiction Volume 28 ; 28 >
+      au < testing ; 2015 ; Eighteenth-Century Fiction Volume 28 ; 28 >
 
     }
 
@@ -774,8 +774,8 @@
 
       au < released ; 2014 ; International Journal of Canadian Studies Volume 48 ; 48 >
       au < released ; 2014 ; International Journal of Canadian Studies Volume 49 ; 49 >
-      au < manifest ; 2014 ; International Journal of Canadian Studies Volume 50 ; 50 >
-      au < manifest ; 2015 ; International Journal of Canadian Studies Volume 51 ; 51 >
+      au < testing ; 2014 ; International Journal of Canadian Studies Volume 50 ; 50 >
+      au < testing ; 2015 ; International Journal of Canadian Studies Volume 51 ; 51 >
 
     }
 
@@ -886,7 +886,7 @@
 
       au < released ; 2013-2014 ; Journal of Scholarly Publishing Volume 45 ; 45 >
       au < released ; 2014 ; Journal of Scholarly Publishing Volume 46 ; 46 >
-      au < manifest ; 2015 ; Journal of Scholarly Publishing Volume 47 ; 47 >
+      au < testing ; 2015 ; Journal of Scholarly Publishing Volume 47 ; 47 >
 
     }
 
@@ -1093,7 +1093,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < manifest ; 2004 ; University of Toronto Quarterly Volume 73 ; 73 >
+      au < testing ; 2004 ; University of Toronto Quarterly Volume 73 ; 73 >
 
     }
 
