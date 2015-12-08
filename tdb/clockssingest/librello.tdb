@@ -20,7 +20,7 @@
     
       au < finished ; crawling ; 2013 ; Challenges in Sustainability Volume 1 ; 1 ; 2013 >
       au < frozen ; exists ; 2014 ; Challenges in Sustainability Volume 2 ; 2 ; 2014 >
-      au < testing ; exists ; 2015 ; Challenges in Sustainability Volume 3 ; 3 ; 2015 >
+      au < ready ; exists ; 2015 ; Challenges in Sustainability Volume 3 ; 3 ; 2015 >
     
   }
 
@@ -34,7 +34,7 @@
 
       au < crawling ; exists ; 2013 ; Journal of Human Security Volume 9 ; 9 ; 2013 >
       au < crawling ; exists ; 2014 ; Journal of Human Security Volume 10 ; 10 ; 2014 >
-      au < testing ; exists ; 2015 ; Journal of Human Security Volume 11 ; 11 ; 2015 >
+      au < ready ; exists ; 2015 ; Journal of Human Security Volume 11 ; 11 ; 2015 >
 
   }
 
@@ -48,7 +48,7 @@
       comment[0] = content for 2014 moved to 2015.
 
       au < superseded ; exists ; 2014 ; Organic Farming Volume 1 [superseded] ; 1 ; 2014 >
-      au < testing ; exists ; 2015 ; Organic Farming Volume 1 ; 1 ; 2015 >
+      au < ready ; exists ; 2015 ; Organic Farming Volume 1 ; 1 ; 2015 >
 
   }
 
