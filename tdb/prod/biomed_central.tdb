@@ -4,7 +4,7 @@
   >
 
   rights = openaccess
-  plugin = org.lockss.plugin.springer.link.ClockssSpringerLinkJournalsPlugin
+  plugin = org.lockss.plugin.springer.link.SpringerLinkJournalsPlugin
   param[base_url] = http://link.springer.com/
   param[download_url] = http://download.springer.com/
   implicit < status ; year ; name ; param[volume_name] >
