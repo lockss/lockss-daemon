@@ -21656,14 +21656,14 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         param[base_url] = http://dbm.sagepub.com/
         rights = openaccess
         implicit < status ; year ; name ; param[volume_name] >
+        comment[0] = Triggered and moved to clockss.
 
-        au < released ; 2010 ; Journal of Dental Biomechanics Volume 1 ; 1 >
-        au < released ; 2011 ; Journal of Dental Biomechanics Volume 2 ; 2 >
-        au < released ; 2012 ; Journal of Dental Biomechanics Volume 3 ; 3 >
-        au < released ; 2013 ; Journal of Dental Biomechanics Volume 4 ; 4 >
-        au < released ; 2014 ; Journal of Dental Biomechanics Volume 5 ; 5 >
-        au < expected ; 2015 ; Journal of Dental Biomechanics Volume 6 ; 6 >
-        au < expected ; 2016 ; Journal of Dental Biomechanics Volume 7 ; 7 >
+        au < down ; 2010 ; Journal of Dental Biomechanics Volume 1 ; 1 >
+        au < down ; 2011 ; Journal of Dental Biomechanics Volume 2 ; 2 >
+        au < down ; 2012 ; Journal of Dental Biomechanics Volume 3 ; 3 >
+        au < down ; 2013 ; Journal of Dental Biomechanics Volume 4 ; 4 >
+        au < down ; 2014 ; Journal of Dental Biomechanics Volume 5 ; 5 >
+        au < doNotProcess ; 2015 ; Journal of Dental Biomechanics Volume 6 ; 6 >
 
       }
 
