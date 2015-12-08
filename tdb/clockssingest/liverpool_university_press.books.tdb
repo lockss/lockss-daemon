@@ -10,76 +10,1149 @@
   param[base_url] = http://online.liverpooluniversitypress.co.uk/
   implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_eisbn] ; name >
   
-  {
-  
-    title <
-      name = Translated Texts for Historians ;
-      type = bookSeries
-    >
+   {
 
-    au < manifest ; exists ; 1985 ; 978-0-85323-327-5 ; ; 9780853233275 ; Gregory of Tours: Life of the Fathers, Volume 1 >
-    au < manifest ; exists ; 1989 ; 978-0-85323-376-3 ; ; 9780853233763 ; The Emperor Julian Panegyric and Polemic, Volume 2 >
-    au < manifest ; exists ; 1987 ; 978-0-85323-076-2 ; ; 9780853230762 ; PACATUS Panegyric to the Emperor Theodosius, Volume 3 >
-    au < manifest ; exists ; 1988 ; 978-0-85323-236-0 ; ; 9780853232360 ; Gregory of Tours: Glory of the Martyrs, Volume 4 >
-    au < crawling ; exists ; 1988 ; 978-0-85323-226-1 ; ; 9780853232261 ; Gregory of Tours: Glory of the Confessors, Volume 5 >
-    au < manifest ; exists ; 1989 ; 978-1-84631-476-6 ; ; 9781846314766 ; The Book of Pontiffs (Liber Pontificalis), Volume 6 >
-    au < manifest ; exists ; 1989 ; 978-0-85323-096-0 ; ; 9780853230960 ; Chronicon Paschale 284-628 AD, Volume 7 >
-    au < manifest ; exists ; 1989 ; 978-0-85323-326-8 ; ; 9780853233268 ; Iamblichus: On the Pythagorean Life, Volume 8 >
-    au < manifest ; exists ; 1999 ; 978-0-85323-554-5 ; ; 9780853235545 ; Conquerors and Chroniclers of Early Medieval Spain, Volume 9 >
-    au < manifest ; exists ; 1992 ; 978-0-85323-127-1 ; ; 9780853231271 ; Victor of Vita: History of the Vandal Persecution, Volume 10 >
-    au < manifest ; exists ; 1991 ; 978-0-85323-426-5 ; ; 9780853234265 ; The Goths in the Fourth Century, Volume 11 >
-    au < manifest ; exists ; 1992 ; 978-0-85323-436-4 ; ; 9780853234364 ; Selected Variae of Magnus Aurelius Cassiodorus Senator, Volume 12 >
-    au < crawling ; exists ; 1992 ; 978-1-84631-154-3 ; ; 9781846311543 ; The Lives of the Eighth-Century Popes (Liber Pontificalis), Volume 13 >
-    au < manifest ; exists ; 1993 ; 978-0-85323-208-7 ; ; 9780853232087 ; The Breviarium ab Urbe Condita of Eutropius, Volume 14 >
-    au < manifest ; exists ; 1993 ; 978-0-85323-238-4 ; ; 9780853232384 ; The Seventh Century in the West-Syrian Chronicles, Volume 15 >
-    au < manifest ; exists ; 1993 ; 978-0-85323-910-9 ; ; 9780853239109 ; Vegetius: Epitome of Military Science, Volume 16 >
-    au < manifest ; exists ; 1994 ; 978-0-85323-218-6 ; ; 9780853232186 ; Aurelius Victor: De Caesaribus, Volume 17 >
-    au < manifest ; exists ; 1994 ; 978-0-85323-378-7 ; ; 9780853233787 ; Bede: On the Tabernacle, Volume 18 >
-    au < manifest ; exists ; 1994 ; 978-0-85323-368-8 ; ; 9780853233688 ; Caesarius of Arles: Life, Testament, Letters, Volume 19 >
-    au < manifest ; exists ; 1995 ; 978-0-85323-479-1 ; ; 9780853234791 ; The Lives of the Ninth-Century Popes (Liber Pontificalis), Volume 20 >
-    au < manifest ; exists ; 1995 ; 978-0-85323-049-6 ; ; 9780853230496 ; Bede: On the Temple, Volume 21 >
-    au < manifest ; exists ; 1996 ; 978-0-85323-760-0 ; ; 9780853237600 ; Pseudo-Dionysius of Tel-Mahre Chronicle (Part III), Volume 22 >
-    au < manifest ; exists ; 1995 ; 978-0-85323-179-0 ; ; 9780853231790 ; Venantius Fortunatus: Personal and Political Poems, Volume 23 >
-    au < manifest ; exists ; 1996 ; 978-0-85323-931-4 ; ; 9780853239314 ; Donatist Martyr Stories, Volume 24 >
-    au < manifest ; exists ; 1997 ; 978-0-85323-572-9 ; ; 9780853235729 ; Hilary of Poitiers, Volume 25 >
-    au < manifest ; exists ; 1997 ; 978-0-85323-582-8 ; ; 9780853235828 ; Lives of the Visigothic Fathers, Volume 26 >
-    au < manifest ; exists ; 1997 ; 978-0-85323-752-5 ; ; 9780853237525 ; Optatus: Against the Donatists, Volume 27 >
-    au < manifest ; exists ; 1999 ; 978-0-85323-683-2 ; ; 9780853236832 ; Bede: A Biblical Miscellany, Volume 28 >
-    au < manifest ; exists ; 1999 ; 978-0-85323-693-1 ; ; 9780853236931 ; Bede: The Reckoning of Time, Volume 29 >
-    au < manifest ; exists ; 1999 ; 978-0-85323-703-7 ; ; 9780853237037 ; Ruricius of Limoges and Friends, Volume 30 >
-    au < manifest ; exists ; 1999 ; 978-0-85323-564-4 ; ; 9780853235644 ; The Armenian History attributed to Sebeos, Volume 31 >
-    au < manifest ; exists ; 2000 ; 978-0-85323-585-9 ; ; 9780853235859 ; The Chronicle of Pseudo-Joshua the Stylite, Volume 32 >
-    au < manifest ; exists ; 2000 ; 978-0-85323-605-4 ; ; 9780853236054 ; The Ecclesiastical History of Evagrius Scholasticus, Volume 33 >
-    au < manifest ; exists ; 2000 ; 978-0-85323-595-8 ; ; 9780853235958 ; Antioch as a Centre of Hellenic Culture as Observed by Libanius, Volume 34 >
-    au < manifest ; exists ; 2000 ; 978-0-85323-615-3 ; ; 9780853236153 ; Neoplatonic Saints The Lives of Plotinus and Proclus by their Students, Volume 35 >
-    au < manifest ; exists ; 2001 ; 978-0-85323-106-6 ; ; 9780853231066 ; Politics, Philosophy, and Empire in the Fourth Century, Volume 36 >
-    au < manifest ; exists ; 2001 ; 978-0-85323-917-8 ; ; 9780853239178 ; A Christian's Guide to Greek Culture, Volume 37 >
-    au < manifest ; exists ; 2002 ; 978-0-85323-588-0 ; ; 9780853235880 ; Avitus of Vienne, Volume 38 >
-    au < manifest ; exists ; 2003 ; 978-0-85323-648-1 ; ; 9780853236481 ; Constantine and Christendom, Volume 39 >
-    au < manifest ; exists ; 2003 ; 978-0-85323-988-8 ; ; 9780853239888 ; Lactantius, Volume 40 >
-    au < manifest ; exists ; 2004 ; 978-0-85323-509-5 ; ; 9780853235095 ; Selected Letters of Libanius, Volume 41 >
-    au < manifest ; exists ; 2004 ; 978-0-85323-998-7 ; ; 9780853239987 ; Cassiodorus, Volume 42 >
-    au < manifest ; exists ; 2005 ; 978-0-85323-829-4 ; ; 9780853238294 ; Ambrose of Milan, Volume 43 >
-    au < manifest ; exists ; 2006 ; 978-0-85323-959-8 ; ; 9780853239598 ; The Chronicle of Ireland, Volume 44 >
-    au < manifest ; exists ; 2005 ; 978-0-85323-039-7 ; ; 9780853230397 ; The Acts of the Council of Chalcedon, volumes 1-3, Volume 45 >
-    au < manifest ; exists ; 2008 ; 978-1-84631-159-8 ; ; 9781846311598 ; The Formularies of Angers and Marculf, Volume 46 >
-    au < manifest ; exists ; 2006 ; 978-1-84631-001-0 ; ; 9781846310010 ; Bede: On Ezra and Nehemiah, Volume 47 >
-    au < manifest ; exists ; 2008 ; 978-1-84631-088-1 ; ; 9781846310881 ; On Genesis, Volume 48 >
-    au < manifest ; exists ; 2008 ; 978-1-84631-132-1 ; ; 9781846311321 ; Nemesius, Volume 49 >
-    au < manifest ; exists ; 2008 ; 978-1-84631-161-1 ; ; 9781846311611 ; Sources for the History of the School of Nisibis, Volume 50 >
-    au < manifest ; exists ; 2009 ; 978-1-84631-178-9 ; ; 9781846311789 ; The Acts of the Council of Constantinople of 553, Volume 51 >
-    au < manifest ; exists ; 2009 ; 978-1-84631-209-0 ; ; 9781846312090 ; Three Political Voices from the Age of Justinian, Volume 52 >
-    au < manifest ; exists ; 2010 ; 978-1-84631-216-8 ; ; 9781846312168 ; History and Hagiography from the Late Antique Sinai, Volume 53 >
-    au < manifest ; exists ; 2010 ; 978-1-84631-473-5 ; ; 9781846314735 ; Orosius Seven Books of History against the Pagans, Volume 54 >
-    au < manifest ; exists ; 2011 ; 978-1-84631-493-3 ; ; 9781846314933 ; The Chronicle of Pseudo-Zachariah Rhetor, Volume 55 >
-    au < manifest ; exists ; 2010 ; 978-1-84631-495-7 ; ; 9781846314957 ; Bede On the Nature of Things and On Times, Volume 56 >
-    au < manifest ; exists ; 2012 ; 978-1-84631-697-5 ; ; 9781846316975 ; Theophilus of Edessa's Chronicle and the Circulation of Historical Knowledge in Late Antiquity and Early Islam, Volume 57 >
-    au < manifest ; exists ; 2013 ; 978-1-84631-844-3 ; ; 9781846318443 ; Bede: Commentary on Revelation, Volume 58 >
-    au < manifest ; exists ; 2013 ; 978-1-84631-882-5 ; ; 9781846318825 ; Two Early Lives of Severos, Patriarch of Antioch, Volume 59 >
-    au < crawling ; exists ; 2013 ; 978-1-84631-887-0 ; ; 9781846318870 ; The Funerary Speech for John Chrysostom, Volume 60 >
-    au < crawling ; exists ; 2014 ; 978-1-78138-039-0 ; ; 9781781380390 ; The Acts of the Lateran Synod of 649, Volume 61 >
-    au < manifest ; exists ; 2012 ; 978-1-84631-825-2 ; ; 9781846318252 ; Four Byzantine Novels, Volume 62 >
-    
-  }
+      title <
+        name = Translated Texts for Historians ;
+        type = bookSeries
+      >
+
+    au < crawling ; exists ; 1988 ; 9780853232261 ;  ; 9780853232261 ; Gregory of Tours: Glory of the Confessors (9780853232261) >
+    au < exists ; exists ; 1988 ; 9780853232360 ;  ; 9780853232360 ; Gregory of Tours: Glory of the Martyrs (9780853232360) >
+    au < exists ; exists ; 1988 ; 9780853233275 ;  ; 9780853233275 ; Gregory of Tours: Life of the Fathers (9780853233275) >
+    au < exists ; exists ; 1989 ; 9780853230960 ;  ; 9780853230960 ; Chronicon Paschale 284-628 (9780853230960) >
+    au < exists ; exists ; 1989 ; 9780853233268 ;  ; 9780853233268 ; Iamblichus (9780853233268) >
+    au < exists ; exists ; 1989 ; 9780853233763 ;  ; 9780853233763 ; The Emperor Julian (9780853233763) >
+    au < exists ; exists ; 1991 ; 9780853234265 ;  ; 9780853234265 ; The Goths in the Fourth Century (9780853234265) >
+    au < exists ; exists ; 1992 ; 9780853234364 ;  ; 9780853234364 ; Cassiodorus: Variae (9780853234364) >
+    au < exists ; exists ; 1992 ; 9780853231271 ;  ; 9780853231271 ; Victor of Vita (9780853231271) >
+    au < exists ; exists ; 1993 ; 9780853232087 ;  ; 9780853232087 ; Eutropius Breviarium (9780853232087) >
+    au < exists ; exists ; 1993 ; 9780853232384 ;  ; 9780853232384 ; The Seventh Century in the West Syrian Chronicles (9780853232384) >
+    au < exists ; exists ; 1994 ; 9780853232186 ;  ; 9780853232186 ; Aurelius Victor (9780853232186) >
+    au < exists ; exists ; 1994 ; 9780853233787 ;  ; 9780853233787 ; Bede: On the Tabernacle (9780853233787) >
+    au < exists ; exists ; 1994 ; 9780853233688 ;  ; 9780853233688 ; Caesarius of Arles (9780853233688) >
+    au < exists ; exists ; 1995 ; 9780853230496 ;  ; 9780853230496 ; Bede: On the Temple (9780853230496) >
+    au < exists ; exists ; 1995 ; 9780853234791 ;  ; 9780853234791 ; The Lives of the Ninth-Century Popes (9780853234791) >
+    au < exists ; exists ; 1995 ; 9780853231790 ;  ; 9780853231790 ; Venantius Fortunatus (9780853231790) >
+    au < exists ; exists ; 1996 ; 9780853239314 ;  ; 9780853239314 ; Donatist Martyr Stories (9780853239314) >
+    au < exists ; exists ; 1996 ; 9780853237600 ;  ; 9780853237600 ; Pseudo-Dionysius of Tel-Mahre (9780853237600) >
+    au < exists ; exists ; 1996 ; 9780853239109 ;  ; 9780853239109 ; Vegetius (9780853239109) >
+    au < exists ; exists ; 1997 ; 9780853235729 ;  ; 9780853235729 ; Hilary of Poitiers (9780853235729) >
+    au < exists ; exists ; 1997 ; 9780853235828 ;  ; 9780853235828 ; Lives of the Visigothic Fathers (9780853235828) >
+    au < exists ; exists ; 1997 ; 9780853237525 ;  ; 9780853237525 ; Optatus (9780853237525) >
+    au < exists ; exists ; 1999 ; 9780853236832 ;  ; 9780853236832 ; Bede: A Biblical Miscellany (9780853236832) >
+    au < exists ; exists ; 1999 ; 9780853236931 ;  ; 9780853236931 ; Bede: The Reckoning of Time (9780853236931) >
+    au < exists ; exists ; 1999 ; 9780853235545 ;  ; 9780853235545 ; Conquerors and Chroniclers of Early Medieval Spain (9780853235545) >
+    au < exists ; exists ; 1999 ; 9780853237037 ;  ; 9780853237037 ; Ruricius of Limoges and Friends (9780853237037) >
+    au < exists ; exists ; 1999 ; 9780853235644 ;  ; 9780853235644 ; The Armenian History Attributed to Sebeos (9780853235644) >
+    au < exists ; exists ; 2000 ; 9780853235958 ;  ; 9780853235958 ; Antioch as a Centre of Hellenic Culture, as Observed by Libanius (9780853235958) >
+    au < exists ; exists ; 2000 ; 9780853235859 ;  ; 9780853235859 ; Chronicle of Pseudo-Joshua the Stylite (9780853235859) >
+    au < exists ; exists ; 2000 ; 9780853236153 ;  ; 9780853236153 ; Neoplatonic Saints (9780853236153) >
+    au < exists ; exists ; 2000 ; 9780853236054 ;  ; 9780853236054 ; The Ecclesiastical History of Evagrius Scholasticus (9780853236054) >
+    au < exists ; exists ; 2001 ; 9780853231066 ;  ; 9780853231066 ; Politics, Philosophy and Empire in the Fourth Century (9780853231066) >
+    au < exists ; exists ; 2001 ; 9780853239178 ;  ; 9780853239178 ; The Christian’s Guide to Greek Culture (9780853239178) >
+    au < exists ; exists ; 2003 ; 9780853236481 ;  ; 9780853236481 ; Constantine and Christendom (9780853236481) >
+    au < exists ; exists ; 2004 ; 9780853239987 ;  ; 9780853239987 ; Cassiodorus: Institutions of Divine and Secular Learning (9780853239987) >
+    au < exists ; exists ; 2004 ; 9780853239888 ;  ; 9780853239888 ; Lactantius (9780853239888) >
+    au < exists ; exists ; 2004 ; 9780853235095 ;  ; 9780853235095 ; Selected Letters of Libanius (9780853235095) >
+    au < exists ; exists ; 2005 ; 9780853238294 ;  ; 9780853238294 ; Ambrose of Milan (9780853238294) >
+    au < exists ; exists ; 2005 ; 9780853230397 ;  ; 9780853230397 ; The Acts of the Council of Chalcedon (9780853230397) >
+    au < exists ; exists ; 2006 ; 9781846310010 ;  ; 9781846310010 ; Bede: On Ezra and Nehemiah (9781846310010) >
+    au < exists ; exists ; 2006 ; 9780853239598 ;  ; 9780853239598 ; The Chronicle of Ireland (9780853239598) >
+    au < crawling ; exists ; 2007 ; 9781846311543 ;  ; 9781846311543 ; The Lives of the Eighth-Century Popes AD 715-817 (9781846311543) >
+    au < exists ; exists ; 2008 ; 9781846310881 ;  ; 9781846310881 ; Bede: On Genesis (9781846310881) >
+    au < exists ; exists ; 2008 ; 9781846311321 ;  ; 9781846311321 ; Nemesius (9781846311321) >
+    au < exists ; exists ; 2008 ; 9781846311611 ;  ; 9781846311611 ; Sources for the Study of the School of Nisibis (9781846311611) >
+    au < exists ; exists ; 2008 ; 9781846311598 ;  ; 9781846311598 ; The Formularies of Angers and Marculf (9781846311598) >
+    au < exists ; exists ; 2009 ; 9781846314766 ;  ; 9781846314766 ; Book of Pontiffs, The (9781846314766) >
+    au < exists ; exists ; 2009 ; 9781846312168 ;  ; 9781846312168 ; History and Hagiography from the Late Antique Sinai (9781846312168) >
+    au < exists ; exists ; 2009 ; 9781846311789 ;  ; 9781846311789 ; The Acts of the Council of Constantinople of 553 (9781846311789) >
+    au < exists ; exists ; 2009 ; 9781846312090 ;  ; 9781846312090 ; Three Political Voices from the Age of Justinian (9781846312090) >
+    au < exists ; exists ; 2010 ; 9781846314957 ;  ; 9781846314957 ; Bede: On the Nature of Things and On Times (9781846314957) >
+    au < exists ; exists ; 2010 ; 9781846312397 ;  ; 9781846312397 ; Orosius (9781846312397) >
+    au < exists ; exists ; 2010 ; 9781846314933 ;  ; 9781846314933 ; The Chronicle of Pseudo-Zachariah Rhetor (9781846314933) >
+    au < exists ; exists ; 2011 ; 9781846316975 ;  ; 9781846316975 ; Theophilus of Edessa’s Chronicle and the Circulation of Historical Knowledge in Late Antiquity and Early Islam (9781846316975) >
+    au < exists ; exists ; 2013 ; 9781846318443 ;  ; 9781846318443 ; Bede: Commentary on Revelation (9781846318443) >
+    au < crawling ; exists ; 2013 ; 9781846318870 ;  ; 9781846318870 ; Funerary Speech for John Chrysostom (9781846318870) >
+    au < exists ; exists ; 2013 ; 9781846318825 ;  ; 9781846318825 ; Two Early Lives of Severos, Patriarch of Antioch (9781846318825) >
+    au < crawling ; exists ; 2014 ; 9781781380390 ;  ; 9781781380390 ; The Acts of the Lateran Synod of 649 (9781781380390) >
+    au < exists ; exists ; 2015 ; 9781781381762 ;  ; 9781781381762 ; Jonas of Bobbio (9781781381762) >
+    au < exists ; exists ; 2015 ; 9781781381748 ;  ; 9781781381748 ; Khalifa ibn Khayyat's History on the Umayyad Dynasty (660–750) (9781781381748) >
+    au < exists ; exists ; 2015 ; 9781781381298 ;  ; 9781781381298 ; Macarius, Apocriticus (9781781381298) >
+    au < exists ; exists ; 2016 ; 9781781382523 ;  ; 9781781382523 ; Between City and School (9781781382523) >
+    au < exists ; exists ; 2016 ; 9781781382936 ;  ; 9781781382936 ; Isidore of Seville (9781781382936) >
+
+   }
+
+   {
+
+      title <
+        name = Liverpool Books ;
+        type = bookSeries
+      >
+
+    au < exists ; exists ; 1964 ; 9780853233107 ;  ; 9780853233107 ; Philosophy of Francis Bacon (9780853233107) >
+    au < exists ; exists ; 1975 ; 9780859890366 ;  ; 9780859890366 ; Aldred's Marginalia (9780859890366) >
+    au < exists ; exists ; 1976 ; 9780859890762 ;  ; 9780859890762 ; Aelfric's Lives Of Three English Saints (9780859890762) >
+    au < exists ; exists ; 1977 ; 9780859890663 ;  ; 9780859890663 ; Deor (9780859890663) >
+    au < exists ; exists ; 1977 ; 9780859890717 ;  ; 9780859890717 ; Sermo Lupi Ad Anglos (9780859890717) >
+    au < exists ; exists ; 1978 ; 9780859894210 ;  ; 9780859894210 ; Cynewulf's Juliana (9780859894210) >
+    au < exists ; exists ; 1978 ; 9780859890786 ;  ; 9780859890786 ; Three Northumbrian Poems (9780859890786) >
+    au < exists ; exists ; 1980 ; 9780859891127 ;  ; 9780859891127 ; Government, Party and People in Nazi Germany (9780859891127) >
+    au < exists ; exists ; 1982 ; 9780853233145 ;  ; 9780853233145 ; Hilbre (9780853233145) >
+    au < exists ; exists ; 1983 ; 9780859891790 ;  ; 9780859891790 ; Britain and Revolutionary France (9780859891790) >
+    au < exists ; exists ; 1983 ; 9780853234241 ;  ; 9780853234241 ; Memory and Writing from Wordsworth to Lawrence (9780853234241) >
+    au < exists ; exists ; 1985 ; 9780859892568 ;  ; 9780859892568 ; Ancrene Wisse (9780859892568) >
+    au < exists ; exists ; 1985 ; 9780859892254 ;  ; 9780859892254 ; Roman Political Life, 90BC-AD69 (9780859892254) >
+    au < exists ; exists ; 1985 ; 9780859892612 ;  ; 9780859892612 ; The Wanderer (9780859892612) >
+    au < exists ; exists ; 1986 ; 9780859892575 ;  ; 9780859892575 ; First Portuguese Colonial Empire (9780859892575) >
+    au < exists ; exists ; 1986 ; 9780859892674 ;  ; 9780859892674 ; King Arthur's Death (9780859892674) >
+    au < exists ; exists ; 1986 ; 9780859892285 ;  ; 9780859892285 ; Middle English Verse Romances (9780859892285) >
+    au < exists ; exists ; 1986 ; 9780859892728 ;  ; 9780859892728 ; The Inheritance of Historiography, 350-900 (9780859892728) >
+    au < exists ; exists ; 1987 ; 9780853231462 ;  ; 9780853231462 ; Ida Rubinstein 1885-1960 (9780853231462) >
+    au < exists ; exists ; 1987 ; 9780859892438 ;  ; 9780859892438 ; Intelligence and International Relations, 1900-1945 (9780859892438) >
+    au < exists ; exists ; 1987 ; 9780853230762 ;  ; 9780853230762 ; Pacatus (9780853230762) >
+    au < exists ; exists ; 1988 ; 9780859892049 ;  ; 9780859892049 ; Administration Of The Roman Empire (9780859892049) >
+    au < exists ; exists ; 1988 ; 9780853230267 ;  ; 9780853230267 ; Byron and the Limits of Fiction (9780853230267) >
+    au < exists ; exists ; 1988 ; 9780853232667 ;  ; 9780853232667 ; Coals on Rails, Or the Reason of my Wrighting (9780853232667) >
+    au < exists ; exists ; 1988 ; 9780859892841 ;  ; 9780859892841 ; Insects and Other Invertebrates in Classical Antiquity (9780859892841) >
+    au < exists ; exists ; 1988 ; 9780853231264 ; 9781846313752 ; 9781846313752 ; Pedro Calderón de la Barca (9781846313752) >
+    au < exists ; exists ; 1988 ; 9780859891844 ;  ; 9780859891844 ; Three Old English Elegies (9780859891844) >
+    au < exists ; exists ; 1989 ; 9780859893336 ;  ; 9780859893336 ; Littera Et Sensus (9780859893336) >
+    au < exists ; exists ; 1989 ; 9780859893312 ;  ; 9780859893312 ; Satire and Society in Ancient Rome (9780859893312) >
+    au < exists ; exists ; 1989 ; 9780859893305 ;  ; 9780859893305 ; Saxon Shore (9780859893305) >
+    au < exists ; exists ; 1989 ; 9780859892988 ;  ; 9780859892988 ; The Compromising of Louis XVI (9780859892988) >
+    au < exists ; exists ; 1989 ; 9780859892346 ;  ; 9780859892346 ; The Poems of Lawrence Minot (9780859892346) >
+    au < exists ; exists ; 1989 ; 9780859893299 ;  ; 9780859893299 ; The Poems of William Dunbar (9780859893299) >
+    au < exists ; exists ; 1989 ; 9780853234258 ;  ; 9780853234258 ; Urban Population Development in Western Europe from the Late Eighteenth to the Early Twentieth Century (9780853234258) >
+    au < exists ; exists ; 1990 ; 9780859893411 ;  ; 9780859893411 ; Ancrene Riwle (9780859893411) >
+    au < exists ; exists ; 1990 ; 9780859893121 ;  ; 9780859893121 ; British Privateering Enterprise in the Eighteenth Century (9780859893121) >
+    au < exists ; exists ; 1990 ; 9780853230274 ;  ; 9780853230274 ; Oliver Lodge and the Liverpool Physical Society (9780853230274) >
+    au < exists ; exists ; 1990 ; 9780859893428 ;  ; 9780859893428 ; The Phoenix (9780859893428) >
+    au < exists ; exists ; 1990 ; 9780853232476 ;  ; 9780853232476 ; Universities in the Middle Ages (9780853232476) >
+    au < exists ; exists ; 1991 ; 9780969588504 ;  ; 9780969588504 ; A Select Bibliography of British and Irish University Theses about Maritime History, 1792-1990 (9780969588504) >
+    au < exists ; exists ; 1991 ; 9780859890984 ;  ; 9780859890984 ; Aelfric's Colloquy (9780859890984) >
+    au < exists ; exists ; 1991 ; 9780859893565 ;  ; 9780859893565 ; Death of an Emperor (9780859893565) >
+    au < exists ; exists ; 1991 ; 9780853230977 ;  ; 9780853230977 ; Ideological Hesitancy in Spain 1700-1750 (9780853230977) >
+    au < exists ; exists ; 1992 ; 9780853234074 ;  ; 9780853234074 ; A History of Adult Education in Great Britain from the Middle Ages to the Twentieth Century (9780853234074) >
+    au < exists ; exists ; 1992 ; 9780853230786 ;  ; 9780853230786 ; Charity Rediscovered (9780853230786) >
+    au < exists ; exists ; 1992 ; 9780859893800 ;  ; 9780859893800 ; Culture in History (9780859893800) >
+    au < exists ; exists ; 1992 ; 9780859893824 ;  ; 9780859893824 ; English Medieval Religious Lyrics (9780859893824) >
+    au < exists ; exists ; 1992 ; 9780853230281 ;  ; 9780853230281 ; Evaluation of Museum and Gallery Displays (9780853230281) >
+    au < exists ; exists ; 1992 ; 9780969588511 ;  ; 9780969588511 ; From Wheel House to Counting House (9780969588511) >
+    au < exists ; exists ; 1992 ; 9780853234470 ;  ; 9780853234470 ; His Majesty’s Loyal Opposition (9780853234470) >
+    au < exists ; exists ; 1992 ; 9780853234579 ;  ; 9780853234579 ; La Primera version de ‘La vida es sueño’, de Calderón (9780853234579) >
+    au < exists ; exists ; 1992 ; 9780112905325 ;  ; 9780112905325 ; Lady Lever Art Gallery (9780112905325) >
+    au < exists ; exists ; 1992 ; 9780859893718 ;  ; 9780859893718 ; Mines of Flintshire and Denbighshire (9780859893718) >
+    au < exists ; exists ; 1992 ; 9780859893855 ;  ; 9780859893855 ; Parameters of British Naval Power, 1650-1850 (9780859893855) >
+    au < exists ; exists ; 1992 ; 9780969588528 ;  ; 9780969588528 ; People of the Northern Seas (9780969588528) >
+    au < exists ; exists ; 1992 ; 9780853234272 ;  ; 9780853234272 ; Popular Politics, Riot and Labour (9780853234272) >
+    au < exists ; exists ; 1992 ; 9780969588535 ;  ; 9780969588535 ; Shipbuilding in the United Kingdom in the Nineteenth Century (9780969588535) >
+    au < exists ; exists ; 1992 ; 9780859893756 ;  ; 9780859893756 ; Talking to Virgil (9780859893756) >
+    au < exists ; exists ; 1992 ; 9780859893572 ;  ; 9780859893572 ; The Civilian in War (9780859893572) >
+    au < exists ; exists ; 1993 ; 9780859894111 ;  ; 9780859894111 ; Amys and Amylion (9780859894111) >
+    au < exists ; exists ; 1993 ; 9780859893893 ;  ; 9780859893893 ; Domestic Wooden Artefacts (9780859893893) >
+    au < exists ; exists ; 1993 ; 9780853233473 ;  ; 9780853233473 ; La Escuela de Calderon (9780853233473) >
+    au < exists ; exists ; 1993 ; 9780859893817 ;  ; 9780859893817 ; Lies and Fiction in the Ancient World (9780859893817) >
+    au < exists ; exists ; 1993 ; 9780969588559 ;  ; 9780969588559 ; The Diary of John Holt (9780969588559) >
+    au < exists ; exists ; 1993 ; 9780859893923 ;  ; 9780859893923 ; The Rise of the Devon Seaside Resorts, 1750-1900 (9780859893923) >
+    au < exists ; exists ; 1993 ; 9780853232681 ;  ; 9780853232681 ; Thomas Gray (9780853232681) >
+    au < exists ; exists ; 1993 ; 9780853233671 ;  ; 9780853233671 ; Word from New Spain (9780853233671) >
+    au < exists ; exists ; 1993 ; 9780853232674 ;  ; 9780853232674 ; Yellow Jack and the Worm (9780853232674) >
+    au < exists ; exists ; 1994 ; 9780853232094 ;  ; 9780853232094 ; A Stone in Spain's Shoe (9780853232094) >
+    au < exists ; exists ; 1994 ; 9780853233770 ;  ; 9780853233770 ; Black Poor and White Philanthropists (9780853233770) >
+    au < exists ; exists ; 1994 ; 9780853233695 ;  ; 9780853233695 ; Culture, Tourism and Development (9780853233695) >
+    au < exists ; exists ; 1994 ; 9780853230199 ;  ; 9780853230199 ; Decade of Change (9780853230199) >
+    au < exists ; exists ; 1994 ; 9780859893831 ;  ; 9780859893831 ; Exodus (9780859893831) >
+    au < exists ; exists ; 1994 ; 9780906367711 ;  ; 9780906367711 ; Face to Face (9780906367711) >
+    au < exists ; exists ; 1994 ; 9780969588573 ;  ; 9780969588573 ; Guide to the Records of Merseyside Maritime Museum, Volume 1 (9780969588573) >
+    au < exists ; exists ; 1994 ; 9780859894227 ;  ; 9780859894227 ; Historiography and Imagination (9780859894227) >
+    au < exists ; exists ; 1994 ; 9780853234982 ;  ; 9780853234982 ; Is There a Universe? (9780853234982) >
+    au < exists ; exists ; 1994 ; 9780859893930 ;  ; 9780859893930 ; Man and the Maritime Environment (9780859893930) >
+    au < exists ; exists ; 1994 ; 9780969588542 ;  ; 9780969588542 ; Management, Finance and Industrial Relations in Maritime Industries (9780969588542) >
+    au < exists ; exists ; 1994 ; 9780859892193 ;  ; 9780859892193 ; Medieval and Renaissance Spanish Literature (9780859892193) >
+    au < exists ; exists ; 1994 ; 9780859894128 ;  ; 9780859894128 ; Medieval Translator IV (9780859894128) >
+    au < exists ; exists ; 1994 ; 9780853232483 ;  ; 9780853232483 ; Planning for Cities and Regions in Japan (9780853232483) >
+    au < exists ; exists ; 1994 ; 9780853233282 ;  ; 9780853233282 ; The European Peasant Family and Society (9780853233282) >
+    au < exists ; exists ; 1994 ; 9780969588566 ;  ; 9780969588566 ; The Market for Seamen in the Age of Sail (9780969588566) >
+    au < exists ; exists ; 1994 ; 9780853232797 ;  ; 9780853232797 ; Utopian and Science Fiction by Women (9780853232797) >
+    au < exists ; exists ; 1994 ; 9780112905431 ;  ; 9780112905431 ; Victorian and Edwardian Paintings in the Lady Lever Art Gallery (9780112905431) >
+    au < exists ; exists ; 1995 ; 9780853233480 ;  ; 9780853233480 ; Anticipations (9780853233480) >
+    au < exists ; exists ; 1995 ; 9780853235507 ;  ; 9780853235507 ; Antonio Machado’s Writings and the Spanish Civil War (9780853235507) >
+    au < exists ; exists ; 1995 ; 9780853234890 ;  ; 9780853234890 ; Charlotte Perkins Gilman (9780853234890) >
+    au < exists ; exists ; 1995 ; 9780906367780 ;  ; 9780906367780 ; Concise Illustrated Catalogue of British Paintings in the Walker Art Gallery and at Sudley (9780906367780) >
+    au < exists ; exists ; 1995 ; 9780853231196 ;  ; 9780853231196 ; El Teatro de Buero Vallejo (9780853231196) >
+    au < exists ; exists ; 1995 ; 9780853235804 ;  ; 9780853235804 ; Female Rule in Chinese and English Literary Utopias (9780853235804) >
+    au < exists ; exists ; 1995 ; 9780859894180 ;  ; 9780859894180 ; Food in Antiquity (9780859894180) >
+    au < exists ; exists ; 1995 ; 9780853235903 ;  ; 9780853235903 ; Irishmen or English Soldiers? (9780853235903) >
+    au < exists ; exists ; 1995 ; 9780859893862 ;  ; 9780859893862 ; Landscape and Settlement in Britain, AD 400-1066 (9780859893862) >
+    au < exists ; exists ; 1995 ; 9780853235002 ;  ; 9780853235002 ; Landscape, Heritage and Identity (9780853235002) >
+    au < exists ; exists ; 1995 ; 9780853239000 ;  ; 9780853239000 ; Malcolm MacDonald (9780853239000) >
+    au < exists ; exists ; 1995 ; 9780859894265 ;  ; 9780859894265 ; Manila Ransomed (9780859894265) >
+    au < exists ; exists ; 1995 ; 9780969588580 ;  ; 9780969588580 ; Maritime History at the Crossroads (9780969588580) >
+    au < exists ; exists ; 1995 ; 9780853238706 ;  ; 9780853238706 ; Mersey Estuary Management Plan (9780853238706) >
+    au < exists ; exists ; 1995 ; 9780853233886 ;  ; 9780853233886 ; Olaf Stapledon (9780853233886) >
+    au < exists ; exists ; 1995 ; 9780853230380 ;  ; 9780853230380 ; Reading Rochester (9780853230380) >
+    au < exists ; exists ; 1995 ; 9780859894753 ;  ; 9780859894753 ; Roman Public Buildings (9780859894753) >
+    au < exists ; exists ; 1995 ; 9780853234395 ;  ; 9780853234395 ; Shadows of the Future (9780853234395) >
+    au < exists ; exists ; 1995 ; 9780859894449 ;  ; 9780859894449 ; Shifting The Boundaries (9780859894449) >
+    au < exists ; exists ; 1995 ; 9780853233794 ;  ; 9780853233794 ; Statecraft and Diplomacy in the Twentieth Century (9780853233794) >
+    au < exists ; exists ; 1995 ; 9780853231998 ;  ; 9780853231998 ; The Day of the Hillsborough Disaster (9780853231998) >
+    au < exists ; exists ; 1995 ; 9780853232896 ;  ; 9780853232896 ; The Detached Retina (9780853232896) >
+    au < exists ; exists ; 1995 ; 9780853234692 ;  ; 9780853234692 ; The Tale of the Next Great War 1871-1914 (9780853234692) >
+    au < exists ; exists ; 1996 ; 9780853235026 ;  ; 9780853235026 ; Arts Letters Society (9780853235026) >
+    au < exists ; exists ; 1996 ; 9780853237709 ;  ; 9780853237709 ; Barbara Hepworth Reconsidered (9780853237709) >
+    au < exists ; exists ; 1996 ; 9780853239406 ;  ; 9780853239406 ; Beyond Suspicion (9780853239406) >
+    au < exists ; exists ; 1996 ; 9780859894678 ;  ; 9780859894678 ; Cathedrals under Siege (9780859894678) >
+    au < exists ; exists ; 1996 ; 9780853239017 ;  ; 9780853239017 ; Charles Reilly and the Liverpool School of Architecture, 1904-1933 (9780853239017) >
+    au < exists ; exists ; 1996 ; 9780859895088 ;  ; 9780859895088 ; Cynewulf's Elene (9780859895088) >
+    au < exists ; exists ; 1996 ; 9780853236405 ;  ; 9780853236405 ; From Hogarth to Rowlandson (9780853236405) >
+    au < exists ; exists ; 1996 ; 9780853236702 ;  ; 9780853236702 ; John Bull’s Other Homes (9780853236702) >
+    au < exists ; exists ; 1996 ; 9780853236719 ;  ; 9780853236719 ; Liverpool Accents (9780853236719) >
+    au < exists ; exists ; 1996 ; 9780853238201 ;  ; 9780853238201 ; Look at the Evidence (9780853238201) >
+    au < exists ; exists ; 1996 ; 9780853237006 ;  ; 9780853237006 ; Markets, Market Culture and Popular Protest in Eighteenth-Century Britain and Ireland (9780853237006) >
+    au < exists ; exists ; 1996 ; 9780859894715 ;  ; 9780859894715 ; Midwifery and Medicine in Early Modern France (9780859894715) >
+    au < exists ; exists ; 1996 ; 9780859894869 ;  ; 9780859894869 ; Modernising the Classics (9780859894869) >
+    au < exists ; exists ; 1996 ; 9780853238409 ;  ; 9780853238409 ; Nearly Too Much (9780853238409) >
+    au < exists ; exists ; 1996 ; 9780853239604 ;  ; 9780853239604 ; Outposts of Empire (9780853239604) >
+    au < exists ; exists ; 1996 ; 9780859894777 ;  ; 9780859894777 ; Practical Ethics for Roman Gentlemen (9780859894777) >
+    au < exists ; exists ; 1996 ; 9780859894159 ;  ; 9780859894159 ; Roman Domestic Buildings (9780859894159) >
+    au < exists ; exists ; 1996 ; 9780853239116 ;  ; 9780853239116 ; Sigmar Polke (9780853239116) >
+    au < exists ; exists ; 1996 ; 9780853237211 ;  ; 9780853237211 ; Signs and Meanings (9780853237211) >
+    au < exists ; exists ; 1996 ; 9780969588597 ;  ; 9780969588597 ; The Diary of a Maritimer, 1816-1901 (9780969588597) >
+    au < exists ; exists ; 1996 ; 9780853238003 ;  ; 9780853238003 ; The Disinherited Society (9780853238003) >
+    au < exists ; exists ; 1996 ; 9780859895033 ;  ; 9780859895033 ; The Dream of the Rood (9780859895033) >
+    au < exists ; exists ; 1996 ; 9780859894807 ;  ; 9780859894807 ; Trawling (9780859894807) >
+    au < exists ; exists ; 1996 ; 9780853236610 ;  ; 9780853236610 ; Victorian Chester (9780853236610) >
+    au < exists ; exists ; 1996 ; 9780853236115 ;  ; 9780853236115 ; Watching One’s Tongue (9780853236115) >
+    au < exists ; exists ; 1996 ; 9780853237105 ;  ; 9780853237105 ; Written with the Bayonet (9780853237105) >
+    au < exists ; exists ; 1997 ; 9780859895439 ;  ; 9780859895439 ; A Beowulf Handbook (9780859895439) >
+    au < exists ; exists ; 1997 ; 9780968128824 ;  ; 9780968128824 ; A Community Enterprise (9780968128824) >
+    au < exists ; exists ; 1997 ; 9780859895187 ;  ; 9780859895187 ; Beowulf (9780859895187) >
+    au < exists ; exists ; 1997 ; 9780859895262 ;  ; 9780859895262 ; Cockburn and the British Navy in Transition (9780859895262) >
+    au < exists ; exists ; 1997 ; 9780859895415 ;  ; 9780859895415 ; Deformed Discourse (9780859895415) >
+    au < exists ; exists ; 1997 ; 9780859895170 ;  ; 9780859895170 ; Figuring Out Roman Nobility (9780859895170) >
+    au < exists ; exists ; 1997 ; 9780853236122 ;  ; 9780853236122 ; Form and Fancy (9780853236122) >
+    au < exists ; exists ; 1997 ; 9780853238027 ;  ; 9780853238027 ; Hitos de la poesía peruana, siglo XX (9780853238027) >
+    au < exists ; exists ; 1997 ; 9780853239628 ;  ; 9780853239628 ; If the Irish Ran the World: Montserrat, 1630-1730 (9780853239628) >
+    au < exists ; exists ; 1997 ; 9780859895682 ;  ; 9780859895682 ; Judith (9780859895682) >
+    au < exists ; exists ; 1997 ; 9780853237426 ;  ; 9780853237426 ; Knight-Monks of Vichy France (9780853237426) >
+    au < exists ; exists ; 1997 ; 9780853239918 ;  ; 9780853239918 ; Life of the Ancient Egyptian (9780853239918) >
+    au < exists ; exists ; 1997 ; 9780853237907 ;  ; 9780853237907 ; Liverpool: City of the Sea (9780853237907) >
+    au < exists ; exists ; 1997 ; 9780853238126 ;  ; 9780853238126 ; Missing Headlines, The: Selected Speeches (9780853238126) >
+    au < exists ; exists ; 1997 ; 9780853237716 ;  ; 9780853237716 ; Narciso Hermético (9780853237716) >
+    au < exists ; exists ; 1997 ; 9780853235415 ;  ; 9780853235415 ; Outcasts from Eden (9780853235415) >
+    au < exists ; exists ; 1997 ; 9780859894258 ;  ; 9780859894258 ; Phlegon of Tralles' Book of Marvels (9780859894258) >
+    au < exists ; exists ; 1997 ; 9780859894814 ;  ; 9780859894814 ; Pirates and Privateers (9780859894814) >
+    au < exists ; exists ; 1997 ; 9780968128817 ;  ; 9780968128817 ; Prize and Prejudice (9780968128817) >
+    au < exists ; exists ; 1997 ; 9780853237013 ;  ; 9780853237013 ; Public Sculpture of Liverpool (9780853237013) >
+    au < exists ; exists ; 1997 ; 9780859895408 ;  ; 9780859895408 ; Recreation and the Sea (9780859895408) >
+    au < exists ; exists ; 1997 ; 9780853235224 ;  ; 9780853235224 ; Sea-Mark (9780853235224) >
+    au < exists ; exists ; 1997 ; 9780859895484 ;  ; 9780859895484 ; Sir John Norreys and the Elizabethan Military World (9780859895484) >
+    au < exists ; exists ; 1997 ; 9780853235927 ;  ; 9780853235927 ; Son of Andalusia (9780853235927) >
+    au < exists ; exists ; 1997 ; 9780853236603 ;  ; 9780853236603 ; Spain and its Literature (9780853236603) >
+    au < exists ; exists ; 1997 ; 9781873403563 ;  ; 9781873403563 ; The Companion to Hard Times (9781873403563) >
+    au < exists ; exists ; 1997 ; 9780853235019 ;  ; 9780853235019 ; The Erotics of Passage (9780853235019) >
+    au < exists ; exists ; 1997 ; 9780853236429 ;  ; 9780853236429 ; The Great War with Germany, 1890-1940 (9780853236429) >
+    au < exists ; exists ; 1997 ; 9780859895477 ;  ; 9780859895477 ; The Mary Play (9780859895477) >
+    au < exists ; exists ; 1997 ; 9780853238812 ;  ; 9780853238812 ; The Plays of Lord Byron (9780853238812) >
+    au < exists ; exists ; 1997 ; 9780853235217 ;  ; 9780853235217 ; The Quest for Home (9780853235217) >
+    au < exists ; exists ; 1997 ; 9780859895071 ;  ; 9780859895071 ; The Seafarer (9780859895071) >
+    au < exists ; exists ; 1997 ; 9780853237815 ;  ; 9780853237815 ; Un Texto inédito sobre la caballería del Renacimiento español (9780853237815) >
+    au < exists ; exists ; 1998 ; 9780853235910 ;  ; 9780853235910 ; A Very Different Story (9780853235910) >
+    au < exists ; exists ; 1998 ; 9780853237327 ;  ; 9780853237327 ; Behold the Hero (9780853237327) >
+    au < exists ; exists ; 1998 ; 9780853236528 ; 9781781386392 ; 9781781386392 ; Culture, Conflict and Migration (9781781386392) >
+    au < exists ; exists ; 1998 ; 9780853237136 ; 9781846312908 ; 9781846312908 ; Cutting the Clouds Towards (9781846312908) >
+    au < exists ; exists ; 1998 ; 9780853238737 ; 9781846312984 ; 9781846312984 ; Dr Macnamara 1861-1931 (9781846312984) >
+    au < exists ; exists ; 1998 ; 9780906367964 ;  ; 9780906367964 ; Earlier British Paintings in the Lady Lever Art Gallery (9780906367964) >
+    au < exists ; exists ; 1998 ; 9780853236535 ;  ; 9780853236535 ; Ecology and Landscape Development (9780853236535) >
+    au < exists ; exists ; 1998 ; 9780853239727 ;  ; 9780853239727 ; Edward Halliday Art for Life 1925-39 (9780853239727) >
+    au < exists ; exists ; 1998 ; 9780859895330 ;  ; 9780859895330 ; Exploiting the Sea (9780859895330) >
+    au < exists ; exists ; 1998 ; 9780968128848 ;  ; 9780968128848 ; Global Markets (9780968128848) >
+    au < exists ; exists ; 1998 ; 9780853239932 ;  ; 9780853239932 ; Gothic Feminism (9780853239932) >
+    au < exists ; exists ; 1998 ; 9780859894456 ;  ; 9780859894456 ; Guy of Warwick and Other Chapbook Romances (9780859894456) >
+    au < exists ; exists ; 1998 ; 9780968128862 ;  ; 9780968128862 ; Harbours and Havens (9780968128862) >
+    au < exists ; exists ; 1998 ; 9780853238621 ;  ; 9780853238621 ; Herbert Read Reassessed (9780853238621) >
+    au < exists ; exists ; 1998 ; 9780859894173 ;  ; 9780859894173 ; 'Into Another Mould' (9780859894173) >
+    au < exists ; exists ; 1998 ; 9780853237532 ;  ; 9780853237532 ; Jupiter's Children (9780853237532) >
+    au < exists ; exists ; 1998 ; 9780859895972 ;  ; 9780859895972 ; Life of Saint Wilfrid by Edmer (9780859895972) >
+    au < exists ; exists ; 1998 ; 9780853236726 ;  ; 9780853236726 ; Liverpool Academy and Other exhibitions of Contemporary Art in Liverpool, 1774-1867 (9780853236726) >
+    au < exists ; exists ; 1998 ; 9780968128855 ;  ; 9780968128855 ; Merchant Organization and Maritime Trade in the North Atlantic, 1660-1815 (9780968128855) >
+    au < exists ; exists ; 1998 ; 9780859895989 ;  ; 9780859895989 ; Nazism 1919–1945 Volume 1 (9780859895989) >
+    au < exists ; exists ; 1998 ; 9780859893114 ;  ; 9780859893114 ; Nazism 1919–1945 Volume 4 (9780859893114) >
+    au < exists ; exists ; 1998 ; 9780853239826 ;  ; 9780853239826 ; Patterns of Madness in the Eighteenth Century (9780853239826) >
+    au < exists ; exists ; 1998 ; 9780853236825 ;  ; 9780853236825 ; Public Sculpture of Birmingham (9780853236825) >
+    au < exists ; exists ; 1998 ; 9780859895606 ;  ; 9780859895606 ; Roman Drama and Roman History (9780859895606) >
+    au < exists ; exists ; 1998 ; 9780859895651 ;  ; 9780859895651 ; Roman Life (9780859895651) >
+    au < exists ; exists ; 1998 ; 9780853239123 ; 9781846314131 ; 9781846314131 ; Steel, Ships and Men (9781846314131) >
+    au < exists ; exists ; 1998 ; 9780853236139 ;  ; 9780853236139 ; Temptation of the Word (9780853236139) >
+    au < exists ; exists ; 1998 ; 9780853238218 ;  ; 9780853238218 ; The Angle Between Two Walls (9780853238218) >
+    au < exists ; exists ; 1998 ; 9780859895668 ;  ; 9780859895668 ; The Art of the Book (9780859895668) >
+    au < exists ; exists ; 1998 ; 9780853235620 ; 9781781386453 ; 9781781386453 ; The Economic Aspects of Spanish Imperialism in America, 1492-1810 (9781781386453) >
+    au < exists ; exists ; 1998 ; 9780853238324 ;  ; 9780853238324 ; The Ince Blundell Collection of Classical Sculpture (9780853238324) >
+    au < exists ; exists ; 1998 ; 9780853235606 ; 9781846313325 ; 9781846313325 ; The Inheritors (9781846313325) >
+    au < exists ; exists ; 1998 ; 9780853236634 ;  ; 9780853236634 ; The Language of the Senses (9780853236634) >
+    au < exists ; exists ; 1998 ; 9780853235637 ;  ; 9780853235637 ; The Mechanics of Wonder (9780853235637) >
+    au < exists ; exists ; 1998 ; 9780853237433 ; 9781781388105 ; 9781781388105 ; The Political Trajectory of J T Murphy (9781781388105) >
+    au < exists ; exists ; 1998 ; 9780853238423 ;  ; 9780853238423 ; Urban Mortality Change in Britain and Germany 1870-1913 (9780853238423) >
+    au < exists ; exists ; 1999 ; 9780853239536 ; 9781846313929 ; 9781846313929 ; A Retake Please (9781846313929) >
+    au < exists ; exists ; 1999 ; 9780853236344 ; 9781846314230 ; 9781846314230 ; A Thing of the Past? (9781846314230) >
+    au < exists ; exists ; 1999 ; 9780853235835 ; 9781781386170 ; 9781781386170 ; Back to Modern Reason (9781781386170) >
+    au < exists ; exists ; 1999 ; 9781902700045 ;  ; 9781902700045 ; Black Presence (9781902700045) >
+    au < exists ; exists ; 1999 ; 9780906367988 ;  ; 9780906367988 ; British Sculpture in the Lady Lever Art Gallery (9780906367988) >
+    au < exists ; exists ; 1999 ; 9780853237235 ; 9781781386248 ; 9781781386248 ; Business History in Latin America (9781781386248) >
+    au < exists ; exists ; 1999 ; 9780853238645 ;  ; 9780853238645 ; Culture, Religion, and Demographic Behaviour (9780853238645) >
+    au < exists ; exists ; 1999 ; 9780853237839 ; 9781846312915 ; 9781846312915 ; Deconstructing the Starships (9781846312915) >
+    au < exists ; exists ; 1999 ; 9780853236146 ; 9781846312939 ; 9781846312939 ; Demand My Writing (9781846312939) >
+    au < exists ; exists ; 1999 ; 9780853238843 ; 9781846312946 ; 9781846312946 ; Design Culture in Liverpool 1888-1914 (9781846312946) >
+    au < exists ; exists ; 1999 ; 9780853238935 ; 9781846312953 ; 9781846312953 ; Design Guidelines in American Cities (9781846312953) >
+    au < exists ; exists ; 1999 ; 9780853237921 ;  ; 9780853237921 ; Edward Carter Preston 1885-1965 (9780853237921) >
+    au < exists ; exists ; 1999 ; 9780853239239 ; 9781781386460 ; 9781781386460 ; Environmental Pollution Studies (9781781386460) >
+    au < exists ; exists ; 1999 ; 9780853238744 ;  ; 9780853238744 ; Gainsborough's Vision (9780853238744) >
+    au < exists ; exists ; 1999 ; 9780853238928 ; 9781781386675 ; 9781781386675 ; Gresford (9781781386675) >
+    au < exists ; exists ; 1999 ; 9780968128879 ;  ; 9780968128879 ; Guide to the Records of Merseyside Maritime Museum, Volume 2 (9780968128879) >
+    au < exists ; exists ; 1999 ; 9780853239147 ; 9781781386699 ; 9781781386699 ; Habsburg Peru (9781781386699) >
+    au < exists ; exists ; 1999 ; 9780853238614 ; 9781781386712 ; 9781781386712 ; Hervé Guibert (9781781386712) >
+    au < exists ; exists ; 1999 ; 9780853235248 ;  ; 9780853235248 ; In Search of Elegance (9780853235248) >
+    au < exists ; exists ; 1999 ; 9780853236542 ;  ; 9780853236542 ; Ionian Islands in the Bronze Age and Early Iron Age (9780853236542) >
+    au < exists ; exists ; 1999 ; 9780853239512 ;  ; 9780853239512 ; Irish Border (9780853239512) >
+    au < exists ; exists ; 1999 ; 9780853239642 ; 9781846313370 ; 9781846313370 ; James Thomson (9781846313370) >
+    au < exists ; exists ; 1999 ; 9780853235149 ;  ; 9780853235149 ; Joseph Brodsky and the Baroque (9780853235149) >
+    au < exists ; exists ; 1999 ; 9780859894203 ;  ; 9780859894203 ; Julian Of Norwich's A Revelation Of Love (revised) (9780859894203) >
+    au < exists ; exists ; 1999 ; 9780853236733 ;  ; 9780853236733 ; Little Slaves of the Harp (9780853236733) >
+    au < exists ; exists ; 1999 ; 9780853238430 ; 9781781387672 ; 9781781387672 ; Michel Tournier and the Metaphor of Fiction (9781781387672) >
+    au < exists ; exists ; 1999 ; 9780853237631 ; 9781781387696 ; 9781781387696 ; Millions Like Us? (9781781387696) >
+    au < exists ; exists ; 1999 ; 9780853235941 ; 9781846313622 ; 9781846313622 ; Narrating Utopia (9781846313622) >
+    au < exists ; exists ; 1999 ; 9780853235439 ; 9781846313714 ; 9781846313714 ; Passionate Intellect (9781846313714) >
+    au < exists ; exists ; 1999 ; 9780859895712 ;  ; 9780859895712 ; Power and Politics at the Seaside (9780859895712) >
+    au < exists ; exists ; 1999 ; 9780859896320 ;  ; 9780859896320 ; Provincial at Rome (9780859896320) >
+    au < exists ; exists ; 1999 ; 9780853238416 ;  ; 9780853238416 ; Reading Between the Lines (9780853238416) >
+    au < exists ; exists ; 1999 ; 9780853239031 ; 9781781388204 ; 9781781388204 ; Rebuilding Mostar (9781781388204) >
+    au < exists ; exists ; 1999 ; 9780853237945 ; 9781781388259 ; 9781781388259 ; Revisionary Gleam (9781781388259) >
+    au < exists ; exists ; 1999 ; 9780853235446 ;  ; 9780853235446 ; Romantic Aversions (9780853235446) >
+    au < exists ; exists ; 1999 ; 9780859896160 ;  ; 9780859896160 ; Shipping Movements in the Ports of the United Kingdom, 1871-1913 (9780859896160) >
+    au < exists ; exists ; 1999 ; 9780853238133 ; 9781781387795 ; 9781781387795 ; 'The New Poet' (9781781387795) >
+    au < exists ; exists ; 1999 ; 9780853237341 ;  ; 9780853237341 ; The Williams Dictionary of Biomaterials (9780853237341) >
+    au < exists ; exists ; 1999 ; 9780853236740 ; 9781781387863 ; 9781781387863 ; Translating Life (9781781387863) >
+    au < exists ; exists ; 1999 ; 9780853239321 ; 9781846314360 ; 9781846314360 ; View From Another Shore (9781846314360) >
+    au < exists ; exists ; 1999 ; 9780853235231 ; 9781846314452 ; 9781846314452 ; Work and Community Among West African Migrant Workers since the Nineteenth Century (9781846314452) >
+    au < exists ; exists ; 2000 ; 9780853235262 ; 9781781388372 ; 9781781388372 ; A Self-Conscious Art (9781781388372) >
+    au < exists ; exists ; 2000 ; 9780853238249 ; 9781846312533 ; 9781846312533 ; Alien Plots (9781846312533) >
+    au < exists ; exists ; 2000 ; 9780853236436 ; 9781846312564 ; 9781846312564 ; Anna Maria Falconbridge (9781846312564) >
+    au < exists ; exists ; 2000 ; 9780853235378 ; 9781781386125 ; 9781781386125 ; Annie Ernaux (9781781386125) >
+    au < exists ; exists ; 2000 ; 9780859896610 ;  ; 9780859896610 ; Athenaeus and his World (9780859896610) >
+    au < exists ; exists ; 2000 ; 9780853235354 ;  ; 9780853235354 ; Beyond the Prado (9780853235354) >
+    au < exists ; exists ; 2000 ; 9780853235453 ;  ; 9780853235453 ; Book of the Pontiffs (9780853235453) >
+    au < exists ; exists ; 2000 ; 9780853235200 ;  ; 9780853235200 ; Borderline Cases (9780853235200) >
+    au < exists ; exists ; 2000 ; 9780859896511 ;  ; 9780859896511 ; Cash Flow and Corporate Finance in Victorian Britain (9780859896511) >
+    au < exists ; exists ; 2000 ; 9780853239741 ; 9781846312779 ; 9781846312779 ; Catholicism, Politics and Society in Twentieth-Century France (9781846312779) >
+    au < exists ; exists ; 2000 ; 9780859896177 ;  ; 9780859896177 ; Coastal and River Trade in Pre-Industrial England (9780859896177) >
+    au < exists ; exists ; 2000 ; 9780853238867 ; 9781846312861 ; 9781846312861 ; Communities of the Heart (9781846312861) >
+    au < exists ; exists ; 2000 ; 9780853237358 ;  ; 9780853237358 ; Demography, State and Society (9780853237358) >
+    au < exists ; exists ; 2000 ; 9780853238058 ; 9781781386422 ; 9781781386422 ; Discourse and Knowledge (9781781386422) >
+    au < exists ; exists ; 2000 ; 9780853237853 ; 9781781386439 ; 9781781386439 ; Distant Voices Still Heard (9781781386439) >
+    au < exists ; exists ; 2000 ; 9780853233596 ;  ; 9780853233596 ; Documentation for Ancient Arabia (9780853233596) >
+    au < exists ; exists ; 2000 ; 9780853239154 ;  ; 9780853239154 ; Epigraphy of Death (9780853239154) >
+    au < exists ; exists ; 2000 ; 9780853239857 ; 9781781386484 ; 9781781386484 ; Europe or Africa? (9781781386484) >
+    au < exists ; exists ; 2000 ; 9780853235040 ; 9781781386507 ; 9781781386507 ; Extending Themselves (9781781386507) >
+    au < exists ; exists ; 2000 ; 9780853236566 ; 9781781386521 ; 9781781386521 ; Families and Social Workers (9781781386521) >
+    au < exists ; exists ; 2000 ; 9780853239253 ; 9781781386651 ; 9781781386651 ; Gladstone Centenary Essays (9781781386651) >
+    au < exists ; exists ; 2000 ; 9780859896528 ;  ; 9780859896528 ; Hen Domen, Montgomery (9780859896528) >
+    au < exists ; exists ; 2000 ; 9780859896832 ;  ; 9780859896832 ; Homer's Iliad (9780859896832) >
+    au < exists ; exists ; 2000 ; 9780853235057 ; 9781781386743 ; 9781781386743 ; Hyperscapes in the Poetry of Frank O’Hara (9781781386743) >
+    au < exists ; exists ; 2000 ; 9780853234586 ; 9781846313400 ; 9781846313400 ; Jules Verne (9781846313400) >
+    au < exists ; exists ; 2000 ; 9780853238164 ;  ; 9780853238164 ; La segunda versión de ‘La vida es sueño’, de Calderón (9780853238164) >
+    au < exists ; exists ; 2000 ; 9780853235743 ; 9781846313493 ; 9781846313493 ; Learning from Other Worlds (9781846313493) >
+    au < exists ; exists ; 2000 ; 9780853234098 ;  ; 9780853234098 ; Liverpool Park Estates (9780853234098) >
+    au < exists ; exists ; 2000 ; 9780968128886 ;  ; 9780968128886 ; Merchants and Mariners (9780968128886) >
+    au < exists ; exists ; 2000 ; 9780853239635 ; 9781781387689 ; 9781781387689 ; Migration, Mobility and Modernization (9781781387689) >
+    au < exists ; exists ; 2000 ; 9780853235552 ;  ; 9780853235552 ; Murder and Masculinity (9780853235552) >
+    au < exists ; exists ; 2000 ; 9780859895996 ;  ; 9780859895996 ; Nazism 1919–1945 Volume 2 (9780859895996) >
+    au < exists ; exists ; 2000 ; 9780853239413 ;  ; 9780853239413 ; Networking Europe (9780853239413) >
+    au < exists ; exists ; 2000 ; 9780859895798 ;  ; 9780859895798 ; New Reading the Landscape (9780859895798) >
+    au < exists ; exists ; 2000 ; 9780853237143 ; 9781781388051 ; 9781781388051 ; Planning Derry (9781781388051) >
+    au < exists ; exists ; 2000 ; 9780853235668 ; 9781781388136 ; 9781781388136 ; Postcolonial Perspectives on Latin American and Lusophone Cultures (9781781388136) >
+    au < exists ; exists ; 2000 ; 9780853236450 ;  ; 9780853236450 ; Public Sculpture of Leicestershire and Rutland (9780853236450) >
+    au < exists ; exists ; 2000 ; 9780853236252 ;  ; 9780853236252 ; Public Sculpture of North-East England (9780853236252) >
+    au < exists ; exists ; 2000 ; 9780853235460 ; 9781781388266 ; 9781781388266 ; Revisioning Duras (9781781388266) >
+    au < exists ; exists ; 2000 ; 9780853235866 ; 9781781388327 ; 9781781388327 ; Sceptres and Sciences in the Spains (9781781388327) >
+    au < exists ; exists ; 2000 ; 9780853239659 ; 9781781388440 ; 9781781388440 ; Social Theory after the Holocaust (9781781388440) >
+    au < exists ; exists ; 2000 ; 9780859896122 ;  ; 9780859896122 ; Spain and the Independence of Colombia, 1808-1825 (9780859896122) >
+    au < exists ; exists ; 2000 ; 9780853238348 ; 9781846314124 ; 9781846314124 ; Speaking Science Fiction (9781846314124) >
+    au < exists ; exists ; 2000 ; 9780853236238 ;  ; 9780853236238 ; Temple Festival Calendars (9780853236238) >
+    au < exists ; exists ; 2000 ; 9780853239048 ;  ; 9780853239048 ; Testing the Water (9780853239048) >
+    au < exists ; exists ; 2000 ; 9780853239246 ; 9781846312755 ; 9781846312755 ; The Cathedral Open and Free (9781846312755) >
+    au < exists ; exists ; 2000 ; 9781873403570 ;  ; 9781873403570 ; The Companion to Great Expectations (9781873403570) >
+    au < exists ; exists ; 2000 ; 9780853237556 ; 9781846313103 ; 9781846313103 ; The Eye Book (9781846313103) >
+    au < exists ; exists ; 2000 ; 9780973007336 ;  ; 9780973007336 ; The Globalisation of the Oceans (9780973007336) >
+    au < exists ; exists ; 2000 ; 9780853239444 ;  ; 9780853239444 ; The Lancashire Giant (9780853239444) >
+    au < exists ; exists ; 2000 ; 9780853238256 ; 9781781387757 ; 9781781387757 ; The Musical Work (9781781387757) >
+    au < exists ; exists ; 2000 ; 9780853239161 ; 9781781388013 ; 9781781388013 ; The Pataphysician’s Library (9781781388013) >
+    au < exists ; exists ; 2000 ; 9780853235156 ; 9781846314223 ; 9781846314223 ; The Thing About Roy Fisher (9781846314223) >
+    au < exists ; exists ; 2000 ; 9780853238553 ; 9781846314247 ; 9781846314247 ; The Time Machines (9781846314247) >
+    au < exists ; exists ; 2000 ; 9780968128893 ;  ; 9780968128893 ; The Trade Makers (9780968128893) >
+    au < exists ; exists ; 2000 ; 9780853236061 ; 9781781387894 ; 9781781387894 ; Trade and Traders in Mid-Victorian Liverpool (9781781387894) >
+    au < exists ; exists ; 2000 ; 9780853231097 ;  ; 9780853231097 ; Two Spanish Songbooks (9780853231097) >
+    au < exists ; exists ; 2000 ; 9780853236856 ;  ; 9780853236856 ; Urban Projects Manual (9780853236856) >
+    au < exists ; exists ; 2000 ; 9780853238850 ;  ; 9780853238850 ; War and Society in Medieval and Early Modern Britain (9780853238850) >
+    au < exists ; exists ; 2000 ; 9780853236955 ; 9781781386903 ; 9781781386903 ; War, Government and Power in Late Medieval France (9781781386903) >
+    au < exists ; exists ; 2000 ; 9780859893886 ;  ; 9780859893886 ; Witchcraft in Early Modern Scotland (9780859893886) >
+    au < exists ; exists ; 2001 ; 9780853239468 ; 9781781386446 ; 9781781386446 ; A Dreamer and a Visionary (9781781386446) >
+    au < exists ; exists ; 2001 ; 9780853237167 ; 9781781387788 ; 9781781387788 ; A New History of the Isle of Man, Vol. 5 (9781781387788) >
+    au < exists ; exists ; 2001 ; 9780853239475 ; 9781846313974 ; 9781846313974 ; A Runner Among Falling Leaves (9781846313974) >
+    au < exists ; exists ; 2001 ; 9780853238966 ;  ; 9780853238966 ; Between Literature and Science (9780853238966) >
+    au < exists ; exists ; 2001 ; 9780859896153 ;  ; 9780859896153 ; Britain and France at the Birth of America (9780859896153) >
+    au < exists ; exists ; 2001 ; 9780859896139 ;  ; 9780859896139 ; British Diplomats and Diplomacy, 1688-1800 (9780859896139) >
+    au < exists ; exists ; 2001 ; 9780853236764 ; 9781781386323 ; 9781781386323 ; Child Welfare and Social Action from the Nineteenth Century to the Present (9781781386323) >
+    au < exists ; exists ; 2001 ; 9780853238546 ;  ; 9780853238546 ; Coastal Dune Management (9780853238546) >
+    au < exists ; exists ; 2001 ; 9780853235071 ; 9781781386477 ; 9781781386477 ; Essaying Montaigne (9781781386477) >
+    au < exists ; exists ; 2001 ; 9780853239574 ; 9781846313189 ; 9781846313189 ; Getting There (9781846313189) >
+    au < exists ; exists ; 2001 ; 9780853237273 ; 9781781386644 ; 9781781386644 ; Gladsongs and Gatherings (9781781386644) >
+    au < exists ; exists ; 2001 ; 9780853238362 ; 9781781386835 ; 9781781386835 ; Juan Goytisolo and the Politics of Contagion (9781781386835) >
+    au < exists ; exists ; 2001 ; 9780853238775 ;  ; 9780853238775 ; Liverpool 8 (9780853238775) >
+    au < exists ; exists ; 2001 ; 9780853237563 ; 9781846313516 ; 9781846313516 ; Marketing Modernisms (9781846313516) >
+    au < exists ; exists ; 2001 ; 9780859897006 ;  ; 9780859897006 ; 'My Compleinte' and Other Poems (9780859897006) >
+    au < exists ; exists ; 2001 ; 9780853238454 ; 9781781387764 ; 9781781387764 ; National-Level Spatial Planning in Democratic Countries (9781781387764) >
+    au < exists ; exists ; 2001 ; 9780859896023 ;  ; 9780859896023 ; Nazism 1919–1945 Volume 3 (9780859896023) >
+    au < exists ; exists ; 2001 ; 9780973007305 ;  ; 9780973007305 ; Norwegian Whaling in Newfoundland (9780973007305) >
+    au < exists ; exists ; 2001 ; 9780853237778 ; 9781781387993 ; 9781781387993 ; Offshore Island Politics (9781781387993) >
+    au < exists ; exists ; 2001 ; 9780853235170 ; 9781781388006 ; 9781781388006 ; Paris 1918 (9781781388006) >
+    au < exists ; exists ; 2001 ; 9780853234357 ; 9781781388112 ; 9781781388112 ; Population and Society in Western European Port Cities, c 1650-1939 (9781781388112) >
+    au < exists ; exists ; 2001 ; 9780853235279 ;  ; 9780853235279 ; Public Art Collections in North-West England (9780853235279) >
+    au < exists ; exists ; 2001 ; 9780853237655 ; 9781846313899 ; 9781846313899 ; Ramsey Campbell and Modern Horror Fiction (9781846313899) >
+    au < exists ; exists ; 2001 ; 9780853238874 ;  ; 9780853238874 ; Reflections on the Battlefield (9780853238874) >
+    au < exists ; exists ; 2001 ; 9781873403846 ;  ; 9781873403846 ; The Companion to Martin Chuzzlewit (9781873403846) >
+    au < exists ; exists ; 2001 ; 9780973007312 ;  ; 9780973007312 ; The Exploited Seas (9780973007312) >
+    au < exists ; exists ; 2001 ; 9780859896894 ;  ; 9780859896894 ; The Glorious First of June 1794 (9780859896894) >
+    au < exists ; exists ; 2001 ; 9780853236467 ;  ; 9780853236467 ; The Mediterranean Passage (9780853236467) >
+    au < exists ; exists ; 2001 ; 9780853239567 ; 9781781387719 ; 9781781387719 ; The Moment (9781781387719) >
+    au < exists ; exists ; 2001 ; 9780859896900 ;  ; 9780859896900 ; The Owl and the Nightingale (9780859896900) >
+    au < exists ; exists ; 2001 ; 9780853239765 ; 9781781388150 ; 9781781388150 ; The Protestant Ethic Debate (9781781388150) >
+    au < exists ; exists ; 2001 ; 9780853237570 ; 9781781387856 ; 9781781387856 ; The Turnstone (9781781387856) >
+    au < exists ; exists ; 2001 ; 9780853236870 ; 9781781386873 ; 9781781386873 ; The World that is the Book (9781781386873) >
+    au < exists ; exists ; 2001 ; 9780853237372 ;  ; 9780853237372 ; The Yew Tree at the Head of the Strand (9780853237372) >
+    au < exists ; exists ; 2001 ; 9780853236672 ;  ; 9780853236672 ; Thomas Gray’s Journal of His Visit to the Lake District in 1769, with a Life, Commentary and Historical Background (9780853236672) >
+    au < exists ; exists ; 2001 ; 9780853235064 ; 9781781387900 ; 9781781387900 ; Tony Harrison and the Holocaust (9781781387900) >
+    au < exists ; exists ; 2001 ; 9780853236641 ;  ; 9780853236641 ; Urban Visions (9780853236641) >
+    au < exists ; exists ; 2002 ; 9781902700144 ;  ; 9781902700144 ; A Passion for Natural History (9781902700144) >
+    au < exists ; exists ; 2002 ; 9780853235880 ;  ; 9780853235880 ; Avitus of Vienne (9780853235880) >
+    au < exists ; exists ; 2002 ; 9780853239871 ; 9781781386224 ; 9781781386224 ; Breeding Superman (9781781386224) >
+    au < exists ; exists ; 2002 ; 9780859896061 ;  ; 9780859896061 ; British Shipbuilding and the State since 1918 (9780859896061) >
+    au < exists ; exists ; 2002 ; 9780853236962 ;  ; 9780853236962 ; Cannibal Hymn (9780853236962) >
+    au < exists ; exists ; 2002 ; 9780853238577 ; 9781846312854 ; 9781846312854 ; Claude Simon (9781846312854) >
+    au < exists ; exists ; 2002 ; 9780859897280 ;  ; 9780859897280 ; Ebb Tide in the British Maritime Industries (9780859897280) >
+    au < exists ; exists ; 2002 ; 9780859896337 ;  ; 9780859896337 ; English Poetry Before Chaucer (9780859896337) >
+    au < exists ; exists ; 2002 ; 9780853233367 ;  ; 9780853233367 ; Excavations on St. Patrick's Isle (9780853233367) >
+    au < exists ; exists ; 2002 ; 9780853235682 ; 9781781386729 ; 9781781386729 ; HIV Stories (9781781386729) >
+    au < exists ; exists ; 2002 ; 9780853236269 ; 9781781386767 ; 9781781386767 ; Identity Parades (9781781386767) >
+    au < exists ; exists ; 2002 ; 9780859896726 ;  ; 9780859896726 ; Old English Life of St Mary of Egypt (9780859896726) >
+    au < exists ; exists ; 2002 ; 9780859896535 ;  ; 9780859896535 ; Plato and the City (9780859896535) >
+    au < exists ; exists ; 2002 ; 9780859897204 ;  ; 9780859897204 ; Pliny's Statue (9780859897204) >
+    au < exists ; exists ; 2002 ; 9780853239277 ;  ; 9780853239277 ; Public Sculpture of Glasgow (9780853239277) >
+    au < exists ; exists ; 2002 ; 9780859897136 ;  ; 9780859897136 ; Reading Texts and Images (9780859897136) >
+    au < exists ; exists ; 2002 ; 9780973007329 ;  ; 9780973007329 ; Resources and Infrastructures in the Maritime Economy, 1500-2000 (9780973007329) >
+    au < exists ; exists ; 2002 ; 9780853235484 ; 9781781388297 ; 9781781388297 ; Role-Play and the World as Stage in the Comedia (9781781388297) >
+    au < exists ; exists ; 2002 ; 9780859896986 ;  ; 9780859896986 ; The Apocryphal Lives Of Adam And Eve (9780859896986) >
+    au < exists ; exists ; 2002 ; 9780853235286 ; 9781781386255 ; 9781781386255 ; The Business of Music (9781781386255) >
+    au < exists ; exists ; 2002 ; 9781903206140 ;  ; 9781903206140 ; The Companion to A Tale of Two Cities (9781903206140) >
+    au < exists ; exists ; 2002 ; 9780859896993 ;  ; 9780859896993 ; The Relations of History and Geography (9780859896993) >
+    au < exists ; exists ; 2002 ; 9780859896771 ;  ; 9780859896771 ; The Roman Alexander (9780859896771) >
+    au < exists ; exists ; 2002 ; 9780859896276 ;  ; 9780859896276 ; The Transformation of Rural England (9780859896276) >
+    au < exists ; exists ; 2002 ; 9780859896566 ;  ; 9780859896566 ; The Voyage of St Brendan (9780859896566) >
+    au < exists ; exists ; 2003 ; 9780853238188 ; 9781781386156 ; 9781781386156 ; Attending Daedalus (9781781386156) >
+    au < exists ; exists ; 2003 ; 9780853236597 ; 9781781386163 ; 9781781386163 ; Autobiography and Independence (9781781386163) >
+    au < exists ; exists ; 2003 ; 9780853239086 ; 9781781386217 ; 9781781386217 ; Bourbon Peru 1750-1824 (9781781386217) >
+    au < exists ; exists ; 2003 ; 9780973007343 ;  ; 9780973007343 ; British Tramp Shipping, 1750-1914 (9780973007343) >
+    au < exists ; exists ; 2003 ; 9780853235491 ;  ; 9780853235491 ; Celtic and Anglo-Saxon Art (9780853235491) >
+    au < exists ; exists ; 2003 ; 9781902700229 ;  ; 9781902700229 ; Charles Cooper (9781902700229) >
+    au < exists ; exists ; 2003 ; 9780853239581 ;  ; 9780853239581 ; Critical Perspectives on Contemporary Painting (9780853239581) >
+    au < exists ; exists ; 2003 ; 9781902700212 ;  ; 9781902700212 ; Foul Berths and French Spies (9781902700212) >
+    au < exists ; exists ; 2003 ; 9780853236580 ; 9781781386736 ; 9781781386736 ; How Many Miles to Babylon? (9781781386736) >
+    au < exists ; exists ; 2003 ; 9780973007367 ;  ; 9780973007367 ; In Troubled Times (9780973007367) >
+    au < exists ; exists ; 2003 ; 9780853235187 ; 9781781386842 ; 9781781386842 ; Knowledge and Learning in the Andes (9781781386842) >
+    au < exists ; exists ; 2003 ; 9780853238171 ; 9781781386996 ; 9781781386996 ; Labour and Globalisation (9781781386996) >
+    au < exists ; exists ; 2003 ; 9780853236788 ; 9781781387726 ; 9781781387726 ; Monstrous Adversary (9781781387726) >
+    au < exists ; exists ; 2003 ; 9780859896627 ;  ; 9780859896627 ; Myth, History and Culture in Republican Rome (9780859896627) >
+    au < exists ; exists ; 2003 ; 9780853236085 ; 9781781387818 ; 9781781387818 ; No Heavenly Delusion? (9781781387818) >
+    au < exists ; exists ; 2003 ; 9780853236184 ; 9781846313769 ; 9781846313769 ; Philip K Dick (9781846313769) >
+    au < exists ; exists ; 2003 ; 9781902700199 ;  ; 9781902700199 ; Public Health (9781902700199) >
+    au < exists ; exists ; 2003 ; 9780853239673 ;  ; 9780853239673 ; Public Sculpture of the City of London (9780853239673) >
+    au < exists ; exists ; 2003 ; 9780853238379 ;  ; 9780853238379 ; Public Sculpture of Warwickshire, Coventry and Solihull (9780853238379) >
+    au < exists ; exists ; 2003 ; 9780973007350 ;  ; 9780973007350 ; Registering Interest (9780973007350) >
+    au < exists ; exists ; 2003 ; 9780853237976 ; 9781781388211 ; 9781781388211 ; Reinventing the City (9781781388211) >
+    au < exists ; exists ; 2003 ; 9780853236986 ;  ; 9780853236986 ; Rumors of War and Infernal Machines (9780853236986) >
+    au < exists ; exists ; 2003 ; 9780853237785 ;  ; 9780853237785 ; Signs and Designs (9780853237785) >
+    au < exists ; exists ; 2003 ; 9780853239680 ;  ; 9780853239680 ; St Mary’s (9780853239680) >
+    au < exists ; exists ; 2003 ; 9781873403853 ;  ; 9781873403853 ; The Companion to Little Dorrit (9781873403853) >
+    au < exists ; exists ; 2003 ; 9780853235194 ; 9781846313134 ; 9781846313134 ; The Foundation of Hope (9781846313134) >
+    au < exists ; exists ; 2003 ; 9780853235590 ;  ; 9780853235590 ; The Scandalous Eye (9780853235590) >
+    au < exists ; exists ; 2003 ; 9780853235989 ; 9781781386972 ; 9781781386972 ; Unhastening Science (9781781386972) >
+    au < exists ; exists ; 2003 ; 9780853237181 ; 9781781386941 ; 9781781386941 ; Visions of Filth (9781781386941) >
+    au < exists ; exists ; 2004 ; 9781902700236 ;  ; 9781902700236 ; Art Behind Barbed Wire (9781902700236) >
+    au < exists ; exists ; 2004 ; 9780853237198 ;  ; 9780853237198 ; Art, Money, Parties (9780853237198) >
+    au < exists ; exists ; 2004 ; 9780853236993 ; 9781781386187 ; 9781781386187 ; Between Resistance and Adaptation (9781781386187) >
+    au < exists ; exists ; 2004 ; 9781902700250 ;  ; 9781902700250 ; British Ships in China Seas (9781902700250) >
+    au < exists ; exists ; 2004 ; 9780853236092 ;  ; 9780853236092 ; C.J. Allen 1862-1956 (9780853236092) >
+    au < exists ; exists ; 2004 ; 9781904675006 ;  ; 9781904675006 ; Clio's Cosmetics (9781904675006) >
+    au < exists ; exists ; 2004 ; 9780859897518 ;  ; 9780859897518 ; Fortress Builder (9780859897518) >
+    au < exists ; exists ; 2004 ; 9780853239185 ; 9781781386668 ; 9781781386668 ; Global America? (9781781386668) >
+    au < exists ; exists ; 2004 ; 9780853235392 ; 9781781386682 ; 9781781386682 ; Grounds for Review (9781781386682) >
+    au < exists ; exists ; 2004 ; 9781904675136 ;  ; 9781904675136 ; Gruesome Deaths and Celibate Lives (9781904675136) >
+    au < exists ; exists ; 2004 ; 9780853237099 ;  ; 9780853237099 ; History of the Liverpool Privateers and Letters of Marque, with an Account of the Liverpool Slave Trade, 1744-1812 (9780853237099) >
+    au < exists ; exists ; 2004 ; 9780853238485 ; 9781781386811 ; 9781781386811 ; Irish Migrants in Modern Wales (9781781386811) >
+    au < exists ; exists ; 2004 ; 9781904675020 ;  ; 9781904675020 ; Julius Caesar (9781904675020) >
+    au < exists ; exists ; 2004 ; 9780853237389 ; 9781781387740 ; 9781781387740 ; Mrs Brown is a Man and a Brother (9781781387740) >
+    au < exists ; exists ; 2004 ; 9780973007381 ;  ; 9780973007381 ; New Directions in Mediterranean Maritime History (9780973007381) >
+    au < exists ; exists ; 2004 ; 9781904675181 ;  ; 9781904675181 ; Numbering and Measuring in the Classical World (9781904675181) >
+    au < exists ; exists ; 2004 ; 9780853238683 ; 9781781388037 ; 9781781388037 ; Paul Muldoon (9781781388037) >
+    au < exists ; exists ; 2004 ; 9780853235576 ;  ; 9780853235576 ; Public Sculpture of Greater Manchester (9780853235576) >
+    au < exists ; exists ; 2004 ; 9780853236795 ; 9781781388280 ; 9781781388280 ; Role of the Romanies (9781781388280) >
+    au < exists ; exists ; 2004 ; 9780973007374 ;  ; 9780973007374 ; Sail and Steam (9780973007374) >
+    au < exists ; exists ; 2004 ; 9780853238881 ; 9781781388457 ; 9781781388457 ; Social Theory and Later Modernities (9781781388457) >
+    au < exists ; exists ; 2004 ; 9781904675013 ;  ; 9781904675013 ; The Authoress of the Odyssey (9781904675013) >
+    au < exists ; exists ; 2004 ; 9780973007398 ;  ; 9780973007398 ; The British Whaling Trade (9780973007398) >
+    au < exists ; exists ; 2004 ; 9780859897037 ;  ; 9780859897037 ; The Myths of Rome (9780859897037) >
+    au < exists ; exists ; 2004 ; 9781904675310 ;  ; 9781904675310 ; The Origins of Greek Religion (9781904675310) >
+    au < exists ; exists ; 2004 ; 9781902700274 ;  ; 9781902700274 ; The Stuckists: Punk Victorian (9781902700274) >
+    au < exists ; exists ; 2004 ; 9780859897549 ;  ; 9780859897549 ; Timber Castles (9780859897549) >
+    au < exists ; exists ; 2004 ; 9780853235699 ; 9781781386910 ; 9781781386910 ; W. S. Graham (9781781386910) >
+    au < exists ; exists ; 2005 ; 9780853234555 ;  ; 9780853234555 ; A Guide to Port Sunlight Village (9780853234555) >
+    au < exists ; exists ; 2005 ; 9780853237365 ; 9781781386101 ; 9781781386101 ; American Mythologies (9781781386101) >
+    au < exists ; exists ; 2005 ; 9780859893534 ;  ; 9780859893534 ; An Anglo-Saxon Chronicle (9780859893534) >
+    au < exists ; exists ; 2005 ; 9781904675037 ;  ; 9781904675037 ; Augustine (9781904675037) >
+    au < exists ; exists ; 2005 ; 9780853237440 ; 9781781386309 ; 9781781386309 ; Centre and Periphery in Modern British Poetry (9781781386309) >
+    au < exists ; exists ; 2005 ; 9780853238386 ; 9781781386316 ; 9781781386316 ; Charles the Bold in Italy 1467-1477 (9781781386316) >
+    au < exists ; exists ; 2005 ; 9780853239499 ;  ; 9780853239499 ; Earthly Delights (9780853239499) >
+    au < exists ; exists ; 2005 ; 9780853239390 ; 9781781386514 ; 9781781386514 ; Faith, Fraternity & Fighting (9781781386514) >
+    au < exists ; exists ; 2005 ; 9780853237594 ; 9781846313158 ; 9781846313158 ; From Rhetoric to Reality (9781846313158) >
+    au < exists ; exists ; 2005 ; 9780859893107 ;  ; 9780859893107 ; From Valois to Bourbon (9780859893107) >
+    au < exists ; exists ; 2005 ; 9780853237587 ;  ; 9780853237587 ; Georges Brassens and Jacques Brel (9780853237587) >
+    au < exists ; exists ; 2005 ; 9781904675358 ;  ; 9781904675358 ; Gilbert Murray's Euripides (9781904675358) >
+    au < exists ; exists ; 2005 ; 9780859895637 ;  ; 9780859895637 ; Last Years of Austria-Hungary (9780859895637) >
+    au < exists ; exists ; 2005 ; 9780859896856 ;  ; 9780859896856 ; Layamon's Arthur (9780859896856) >
+    au < exists ; exists ; 2005 ; 9781846310065 ;  ; 9781846310065 ; Liverpool: Maritime Mercantile City (9781846310065) >
+    au < exists ; exists ; 2005 ; 9780859897525 ;  ; 9780859897525 ; Lost Dramas of Classical Athens (9780859897525) >
+    au < exists ; exists ; 2005 ; 9780853237495 ;  ; 9780853237495 ; Martin Mere (9780853237495) >
+    au < exists ; exists ; 2005 ; 9780853239383 ;  ; 9780853239383 ; Masters of the Ninth Art (9780853239383) >
+    au < exists ; exists ; 2005 ; 9780859897457 ;  ; 9780859897457 ; Nazism, War and Genocide (9780859897457) >
+    au < exists ; exists ; 2005 ; 9780859897402 ;  ; 9780859897402 ; Nicholas Love's Mirror of the Blessed Life of Jesus Christ (9780859897402) >
+    au < exists ; exists ; 2005 ; 9781904675051 ;  ; 9781904675051 ; Ovid: Heroides I (9781904675051) >
+    au < exists ; exists ; 2005 ; 9781904675068 ;  ; 9781904675068 ; Ovid: Heroides II (9781904675068) >
+    au < exists ; exists ; 2005 ; 9780853231394 ;  ; 9780853231394 ; Portsmouth Point (9780853231394) >
+    au < exists ; exists ; 2005 ; 9780853239895 ;  ; 9780853239895 ; Public Sculpture of Staffordshire and the Black Country (9780853239895) >
+    au < exists ; exists ; 2005 ; 9780859897105 ;  ; 9780859897105 ; Roman Frontier Studies (9780859897105) >
+    au < exists ; exists ; 2005 ; 9781904675372 ;  ; 9781904675372 ; Rome and the Unification of Italy (9781904675372) >
+    au < exists ; exists ; 2005 ; 9780853231493 ;  ; 9780853231493 ; Samuel Walters, Lieutenant R.N. (9780853231493) >
+    au < exists ; exists ; 2005 ; 9780973893403 ;  ; 9780973893403 ; Scott Lithgow (9780973893403) >
+    au < exists ; exists ; 2005 ; 9780859897464 ;  ; 9780859897464 ; Scythians and Greeks (9780859897464) >
+    au < exists ; exists ; 2005 ; 9781904675075 ;  ; 9781904675075 ; Selections from the Attic Orators (9781904675075) >
+    au < exists ; exists ; 2005 ; 9781904675112 ;  ; 9781904675112 ; Statius: Achilleid (9781904675112) >
+    au < exists ; exists ; 2005 ; 9780853231356 ;  ; 9780853231356 ; Studies in Latin American Literature and Culture in Honour of James Higgins (9780853231356) >
+    au < exists ; exists ; 2005 ; 9780853239192 ;  ; 9780853239192 ; Summer of Love (9780853239192) >
+    au < exists ; exists ; 2005 ; 9781904675488 ;  ; 9781904675488 ; The Common Spring (9781904675488) >
+    au < exists ; exists ; 2005 ; 9780859893077 ;  ; 9780859893077 ; The Failure of Political Extremism in Inter-War Britain (9780859893077) >
+    au < exists ; exists ; 2005 ; 9780853239697 ;  ; 9780853239697 ; The Herculaneum Pottery (9780853239697) >
+    au < exists ; exists ; 2005 ; 9780853236399 ; 9781781387030 ; 9781781387030 ; The Leaguers (9781781387030) >
+    au < exists ; exists ; 2005 ; 9780853238195 ; 9781781388099 ; 9781781388099 ; The Poetry of Saying (9781781388099) >
+    au < exists ; exists ; 2005 ; 9780859895811 ;  ; 9780859895811 ; The Soviet Union: A Documentary History Volume 1 (9780859895811) >
+    au < exists ; exists ; 2005 ; 9780853231981 ;  ; 9780853231981 ; Transatlantic Slavery (9780853231981) >
+    au < exists ; exists ; 2005 ; 9780853237693 ; 9781846314278 ; 9781846314278 ; Transformations (9781846314278) >
+    au < exists ; exists ; 2005 ; 9780853237303 ;  ; 9780853237303 ; Travellers' Visions (9780853237303) >
+    au < exists ; exists ; 2005 ; 9780853238997 ; 9781846314377 ; 9781846314377 ; Visions and Re-Visions (9781846314377) >
+    au < exists ; exists ; 2005 ; 9780859897341 ;  ; 9780859897341 ; Wace's Roman De Brut (9780859897341) >
+    au < exists ; exists ; 2005 ; 9780853236191 ; 9781781386880 ; 9781781386880 ; Words and Music (9781781386880) >
+    au < exists ; exists ; 2006 ; 9780853235774 ;  ; 9780853235774 ; A New History of the Isle of Man, Vol. 1 (9780853235774) >
+    au < exists ; exists ; 2006 ; 9781846310331 ;  ; 9781846310331 ; Adventuring Through Spanish Colonies (9781846310331) >
+    au < exists ; exists ; 2006 ; 9781904675365 ;  ; 9781904675365 ; Aeschylus' Supplices (9781904675365) >
+    au < exists ; exists ; 2006 ; 9781846310256 ; 9781781386118 ; 9781781386118 ; Anarchist Seeds Beneath the Snow (9781781386118) >
+    au < exists ; exists ; 2006 ; 9781904675419 ;  ; 9781904675419 ; Ancient Greece in Film and Popular Culture (9781904675419) >
+    au < exists ; exists ; 2006 ; 9781846310317 ; 9781846312601 ; 9781846312601 ; Assia Djebar (9781846312601) >
+    au < exists ; exists ; 2006 ; 9781846310287 ; 9781781386279 ; 9781781386279 ; Calixthe Beyala (9781781386279) >
+    au < exists ; exists ; 2006 ; 9781846310232 ;  ; 9781846310232 ; Cathal O’Byrne and the Northern Revival in Ireland 1890-1960 (9781846310232) >
+    au < exists ; exists ; 2006 ; 9781846310218 ; 9781846312823 ; 9781846312823 ; Children Remembered (9781846312823) >
+    au < exists ; exists ; 2006 ; 9781846310171 ;  ; 9781846310171 ; Forkhill Protestants and Forkhill Catholics, 1787-1858 (9781846310171) >
+    au < exists ; exists ; 2006 ; 9781904675198 ;  ; 9781904675198 ; Hadrian's Wall and its People (9781904675198) >
+    au < exists ; exists ; 2006 ; 9781846310058 ;  ; 9781846310058 ; Henry James (9781846310058) >
+    au < exists ; exists ; 2006 ; 9780853239093 ;  ; 9780853239093 ; Irish Social and Political Attitudes (9780853239093) >
+    au < exists ; exists ; 2006 ; 9781904675150 ;  ; 9781904675150 ; Justus Lipsius: On Constancy (9781904675150) >
+    au < exists ; exists ; 2006 ; 9781846310348 ;  ; 9781846310348 ; Liverpool 800 (9781846310348) >
+    au < exists ; exists ; 2006 ; 9781846310362 ;  ; 9781846310362 ; Liverpool 800 Limited Edition (9781846310362) >
+    au < exists ; exists ; 2006 ; 9781846310072 ;  ; 9781846310072 ; Liverpool, 1660-1750 (9781846310072) >
+    au < exists ; exists ; 2006 ; 9781846310379 ;  ; 9781846310379 ; Mark Lewis (9781846310379) >
+    au < exists ; exists ; 2006 ; 9781846310102 ; 9781781387641 ; 9781781387641 ; Merseypride (9781781387641) >
+    au < exists ; exists ; 2006 ; 9780853230892 ;  ; 9780853230892 ; Multiple Modernities, Civil Society and Islam (9780853230892) >
+    au < exists ; exists ; 2006 ; 9781904675587 ;  ; 9781904675587 ; Pastoral and the Humanities (9781904675587) >
+    au < exists ; exists ; 2006 ; 9781846310386 ;  ; 9781846310386 ; Research: The Itemisation of Creative Knowledge (9781846310386) >
+    au < exists ; exists ; 2006 ; 9780859891394 ;  ; 9780859891394 ; Selections from Layamon's Brut (9780859891394) >
+    au < exists ; exists ; 2006 ; 9781846310089 ; 9781846314032 ; 9781846314032 ; Selling Shaker (9781846314032) >
+    au < exists ; exists ; 2006 ; 9781846310041 ;  ; 9781846310041 ; Shining Path (9781846310041) >
+    au < exists ; exists ; 2006 ; 9780853237990 ; 9781846314100 ; 9781846314100 ; Sociological Beginnings (9781846314100) >
+    au < exists ; exists ; 2006 ; 9781846310270 ; 9781781387979 ; 9781781387979 ; South American Independence (9781781387979) >
+    au < exists ; exists ; 2006 ; 9780859892483 ;  ; 9780859892483 ; Squaddies (9780859892483) >
+    au < exists ; exists ; 2006 ; 9781846310324 ; 9781781387931 ; 9781781387931 ; Sympathetic Ink (9781781387931) >
+    au < exists ; exists ; 2006 ; 9780973893427 ;  ; 9780973893427 ; Tankers in Trouble (9780973893427) >
+    au < exists ; exists ; 2006 ; 9780859897570 ;  ; 9780859897570 ; The Comedies of Terence (9780859897570) >
+    au < exists ; exists ; 2006 ; 9780859896290 ;  ; 9780859896290 ; The Exeter Anthology of Old English Poetry (9780859896290) >
+    au < exists ; exists ; 2006 ; 9781846310119 ; 9781781387023 ; 9781781387023 ; The Laughter of Foxes (9781781387023) >
+    au < exists ; exists ; 2006 ; 9780859891837 ;  ; 9780859891837 ; The Medieval Mystical Tradition In England (9780859891837) >
+    au < exists ; exists ; 2006 ; 9780853238393 ; 9781781387733 ; 9781781387733 ; The Most Dreadful Visitation (9781781387733) >
+    au < exists ; exists ; 2006 ; 9780859890991 ;  ; 9780859890991 ; The Parker Chronicle (9780859890991) >
+    au < exists ; exists ; 2006 ; 9780973893410 ;  ; 9780973893410 ; The Rescue of the Third Class on the Titanic (9780973893410) >
+    au < exists ; exists ; 2006 ; 9781846310225 ; 9781781386934 ; 9781781386934 ; The Voice of the Heart (9781781386934) >
+    au < exists ; exists ; 2006 ; 9781846310294 ;  ; 9781846310294 ; Unfamiliar Journeys (9781846310294) >
+    au < exists ; exists ; 2006 ; 9781904675525 ;  ; 9781904675525 ; Virgil's Aeneid (9781904675525) >
+    au < exists ; exists ; 2007 ; 9781846310645 ; 9781781387887 ; 9781781387887 ; A Tragedy of Errors (9781781387887) >
+    au < exists ; exists ; 2007 ; 9781846311048 ;  ; 9781846311048 ; Adrian Henri (9781846311048) >
+    au < exists ; exists ; 2007 ; 9780859897792 ;  ; 9780859897792 ; Aelfric's Lives of the Virgin Spouses (9780859897792) >
+    au < exists ; exists ; 2007 ; 9780859898133 ;  ; 9780859898133 ; Ancient Italy (9780859898133) >
+    au < exists ; exists ; 2007 ; 9781846311451 ;  ; 9781846311451 ; Anna Lucas (9781846311451) >
+    au < exists ; exists ; 2007 ; 9781846310829 ;  ; 9781846310829 ; Art in A City (9781846310829) >
+    au < exists ; exists ; 2007 ; 9781846311345 ;  ; 9781846311345 ; Birmingham Sculpture Trails (9781846311345) >
+    au < exists ; exists ; 2007 ; 9781904675297 ;  ; 9781904675297 ; Bishop Thirlwall's History of Greece (9781904675297) >
+    au < exists ; exists ; 2007 ; 9781846311130 ;  ; 9781846311130 ; British Trade with Spanish America, 1763–1808 (9781846311130) >
+    au < exists ; exists ; 2007 ; 9781846310706 ; 9781781386293 ; 9781781386293 ; Catholic Sensationalism and Victorian Literature (9781781386293) >
+    au < exists ; exists ; 2007 ; 9781846310812 ;  ; 9781846310812 ; Centre of the Creative Universe (9781846310812) >
+    au < exists ; exists ; 2007 ; 9781904675235 ;  ; 9781904675235 ; Conington's Virgil: Aeneid I - II (9781904675235) >
+    au < exists ; exists ; 2007 ; 9781904675211 ;  ; 9781904675211 ; Conington's Virgil: Eclogues (9781904675211) >
+    au < exists ; exists ; 2007 ; 9781904675228 ;  ; 9781904675228 ; Conington's Virgil: Georgics (9781904675228) >
+    au < exists ; exists ; 2007 ; 9781846310461 ;  ; 9781846310461 ; Cosmopolitanism and Europe (9781846310461) >
+    au < exists ; exists ; 2007 ; 9780853231899 ;  ; 9780853231899 ; Dead History, Live Art? (9780853231899) >
+    au < exists ; exists ; 2007 ; 9781846310560 ; 9781781386408 ; 9781781386408 ; Deconstruction and the Postcolonial (9781781386408) >
+    au < exists ; exists ; 2007 ; 9781846310805 ;  ; 9781846310805 ; European Solidarity (9781846310805) >
+    au < exists ; exists ; 2007 ; 9781846310799 ; 9781781386491 ; 9781781386491 ; Exile and Post-1946 Haitian Literature (9781781386491) >
+    au < exists ; exists ; 2007 ; 9781846310782 ; 9781781386576 ; 9781781386576 ; Frederick Douglass and the Atlantic World (9781781386576) >
+    au < exists ; exists ; 2007 ; 9781846310027 ; 9781846313172 ; 9781846313172 ; Gateways to Forever (9781846313172) >
+    au < exists ; exists ; 2007 ; 9780859898072 ;  ; 9780859898072 ; George II (9780859898072) >
+    au < exists ; exists ; 2007 ; 9781846310591 ; 9781846313257 ; 9781846313257 ; H. G. Wells, Modernity and the Movies (9781846313257) >
+    au < exists ; exists ; 2007 ; 9781904675679 ;  ; 9781904675679 ; Horkos (9781904675679) >
+    au < exists ; exists ; 2007 ; 9781846311079 ; 9781781386798 ; 9781781386798 ; Irish, Catholic and Scouse (9781781386798) >
+    au < exists ; exists ; 2007 ; 9781846310614 ; 9781781387016 ; 9781781387016 ; Latin American Cyberculture and Cyberliterature (9781781387016) >
+    au < exists ; exists ; 2007 ; 9781904675563 ;  ; 9781904675563 ; Learning Greek with Plato (9781904675563) >
+    au < exists ; exists ; 2007 ; 9781846310669 ; 9781846313509 ; 9781846313509 ; Liverpool and Transatlantic Slavery (9781846313509) >
+    au < exists ; exists ; 2007 ; 9781846310621 ;  ; 9781846310621 ; Liverpool A-Z (9781846310621) >
+    au < exists ; exists ; 2007 ; 9780973893458 ;  ; 9780973893458 ; Making Global and Local Connections (9780973893458) >
+    au < exists ; exists ; 2007 ; 9781846310393 ;  ; 9781846310393 ; Manx Bird Atlas (9781846310393) >
+    au < exists ; exists ; 2007 ; 9780973893434 ;  ; 9780973893434 ; Maritime Transport and Migration (9780973893434) >
+    au < exists ; exists ; 2007 ; 9781904675709 ;  ; 9781904675709 ; Mayor's Juvenal (two volume slipcased set) (9781904675709) >
+    au < exists ; exists ; 2007 ; 9781904675082 ;  ; 9781904675082 ; Mayor's Juvenal (Vol. I) (9781904675082) >
+    au < exists ; exists ; 2007 ; 9781904675099 ;  ; 9781904675099 ; Mayor's Juvenal (Vol. II) (9781904675099) >
+    au < exists ; exists ; 2007 ; 9781846311475 ;  ; 9781846311475 ; Nick Crowe & Ian Rawlinson (9781846311475) >
+    au < exists ; exists ; 2007 ; 9781846311017 ; 9781781387832 ; 9781781387832 ; Obelisk (9781781387832) >
+    au < exists ; exists ; 2007 ; 9781846310485 ; 9781846313738 ; 9781846313738 ; Patrick Chamoiseau (9781846313738) >
+    au < exists ; exists ; 2007 ; 9780859898027 ;  ; 9780859898027 ; Piers Plowman: An Introduction (9780859898027) >
+    au < exists ; exists ; 2007 ; 9781846311161 ; 9781781388068 ; 9781781388068 ; Poetry & Displacement (9781781388068) >
+    au < exists ; exists ; 2007 ; 9781846311154 ; 9781781388082 ; 9781781388082 ; Poetry & Language Writing (9781781388082) >
+    au < exists ; exists ; 2007 ; 9781846311147 ; 9781846313875 ; 9781846313875 ; Proust and America (9781846313875) >
+    au < exists ; exists ; 2007 ; 9781846310638 ;  ; 9781846310638 ; Public Sculpture of South London (9781846310638) >
+    au < exists ; exists ; 2007 ; 9781846310249 ; 9781781388334 ; 9781781388334 ; Science Fiction and Empire (9781781388334) >
+    au < exists ; exists ; 2007 ; 9780973893441 ;  ; 9780973893441 ; Seal Fisheries of the Falkland Islands and Dependencies (9780973893441) >
+    au < exists ; exists ; 2007 ; 9781846311178 ; 9781781388389 ; 9781781388389 ; Shades of Authority (9781781388389) >
+    au < exists ; exists ; 2007 ; 9781846310577 ; 9781781388396 ; 9781781388396 ; Shadows of the New Sun (9781781388396) >
+    au < exists ; exists ; 2007 ; 9780859898058 ;  ; 9780859898058 ; The Atlantis Story (9780859898058) >
+    au < exists ; exists ; 2007 ; 9781846311208 ;  ; 9781846311208 ; The Collection, the Ruin and the Theatre (9781846311208) >
+    au < exists ; exists ; 2007 ; 9780853238591 ; 9781846312878 ; 9781846312878 ; The Country You Have Never Seen (9781846312878) >
+    au < exists ; exists ; 2007 ; 9781846310140 ;  ; 9781846310140 ; The Ghosts of Songs (9781846310140) >
+    au < exists ; exists ; 2007 ; 9781846310690 ;  ; 9781846310690 ; The Letters of John Murray to Lord Byron (9781846310690) >
+    au < exists ; exists ; 2007 ; 9781846310652 ; 9781781387092 ; 9781781387092 ; The Long Road to Peace in Northern Ireland (9781781387092) >
+    au < exists ; exists ; 2007 ; 9781846310683 ; 9781846314162 ; 9781846314162 ; The Making of the Middle Ages (9781846314162) >
+    au < exists ; exists ; 2007 ; 9781846311444 ; 9781781387801 ; 9781781387801 ; The New Politics of Sinn Féin (9781781387801) >
+    au < exists ; exists ; 2007 ; 9781846311055 ;  ; 9781846311055 ; The Paris Olympia Press (9781846311055) >
+    au < exists ; exists ; 2007 ; 9780859897907 ;  ; 9780859897907 ; The Poems of the Pearl Manuscript (9780859897907) >
+    au < exists ; exists ; 2007 ; 9781904675167 ;  ; 9781904675167 ; The Politics of Greek Tragedy (9781904675167) >
+    au < exists ; exists ; 2007 ; 9780859895828 ;  ; 9780859895828 ; The Soviet Union: A Documentary History Volume 2 (9780859895828) >
+    au < exists ; exists ; 2007 ; 9781846310867 ; 9781781386965 ; 9781781386965 ; The Vaccination Controversy (9781781386965) >
+    au < exists ; exists ; 2007 ; 9781846310843 ;  ; 9781846310843 ; The Water's Edge (9781846310843) >
+    au < exists ; exists ; 2007 ; 9781904675730 ;  ; 9781904675730 ; Tragedy, Euripides and Euripideans (9781904675730) >
+    au < exists ; exists ; 2007 ; 9781846310713 ; 9781781387849 ; 9781781387849 ; Twenty-First Century Readings of ‘Tender is the Night’ (9781781387849) >
+    au < exists ; exists ; 2007 ; 9781846310416 ;  ; 9781846310416 ; Value, Art, Politics (9781846310416) >
+    au < exists ; exists ; 2007 ; 9781846310195 ; 9781846314346 ; 9781846314346 ; Varieties of World Making (9781846314346) >
+    au < exists ; exists ; 2007 ; 9781846310737 ; 9781781386859 ; 9781781386859 ; Writing Liverpool (9781781386859) >
+    au < exists ; exists ; 2008 ; 9781846311253 ; 9781781386620 ; 9781781386620 ; A Gallery to Play to (9781781386620) >
+    au < exists ; exists ; 2008 ; 9781904675389 ;  ; 9781904675389 ; Aetna (9781904675389) >
+    au < exists ; exists ; 2008 ; 9781846311482 ;  ; 9781846311482 ; Al and Al (9781846311482) >
+    au < exists ; exists ; 2008 ; 9781846311291 ;  ; 9781846311291 ; American Travellers in Liverpool (9781846311291) >
+    au < exists ; exists ; 2008 ; 9781904675785 ;  ; 9781904675785 ; Ancient Greece in Film and Popular Culture (Revised second edition) (9781904675785) >
+    au < exists ; exists ; 2008 ; 9781846311529 ;  ; 9781846311529 ; Birds in Cheshire and Wirral (9781846311529) >
+    au < exists ; exists ; 2008 ; 9781846311505 ;  ; 9781846311505 ; Cains (9781846311505) >
+    au < exists ; exists ; 2008 ; 9781846311864 ;  ; 9781846311864 ; Cities on the Edge (9781846311864) >
+    au < exists ; exists ; 2008 ; 9781846311574 ;  ; 9781846311574 ; Cityscape (9781846311574) >
+    au < exists ; exists ; 2008 ; 9781904675242 ;  ; 9781904675242 ; Conington's Virgil: Aeneid III - VI (9781904675242) >
+    au < exists ; exists ; 2008 ; 9781904675259 ;  ; 9781904675259 ; Conington's Virgil: Aeneid VII - IX (9781904675259) >
+    au < exists ; exists ; 2008 ; 9781904675266 ;  ; 9781904675266 ; Conington's Virgil: Aeneid X - XII (9781904675266) >
+    au < exists ; exists ; 2008 ; 9781904675761 ;  ; 9781904675761 ; Conington's Virgil: Set of Six Volumes (9781904675761) >
+    au < exists ; exists ; 2008 ; 9781846311512 ;  ; 9781846311512 ; Cover Versions (9781846311512) >
+    au < exists ; exists ; 2008 ; 9781846311420 ;  ; 9781846311420 ; Friends and Enemies (9781846311420) >
+    au < exists ; exists ; 2008 ; 9781904675815 ;  ; 9781904675815 ; Greek Geometric Pottery (9781904675815) >
+    au < exists ; exists ; 2008 ; 9781904675464 ;  ; 9781904675464 ; Hannibal (9781904675464) >
+    au < exists ; exists ; 2008 ; 9781846311819 ;  ; 9781846311819 ; Human Futures (9781846311819) >
+    au < exists ; exists ; 2008 ; 9781846311239 ;  ; 9781846311239 ; Human Zoos (9781846311239) >
+    au < exists ; exists ; 2008 ; 9781846311024 ;  ; 9781846311024 ; Identity Theft (9781846311024) >
+    au < exists ; exists ; 2008 ; 9781846311185 ; 9781846314537 ; 9781846314537 ; Identity, Belonging and Migration (9781846314537) >
+    au < exists ; exists ; 2008 ; 9781846310959 ;  ; 9781846310959 ; Idiocy (9781846310959) >
+    au < exists ; exists ; 2008 ; 9781846311093 ; 9781781386774 ; 9781781386774 ; Interdisciplinary Measures (9781781386774) >
+    au < exists ; exists ; 2008 ; 9780973893472 ;  ; 9780973893472 ; International Merchant Shipping in the Nineteenth and Twentieth Centuries (9780973893472) >
+    au < exists ; exists ; 2008 ; 9780853238492 ;  ; 9780853238492 ; Labyrinths of Deceit (9780853238492) >
+    au < exists ; exists ; 2008 ; 9780853235897 ;  ; 9780853235897 ; Liberty and Poetic Licence (9780853235897) >
+    au < exists ; exists ; 2008 ; 9781846311710 ;  ; 9781846311710 ; Made Up (9781846311710) >
+    au < exists ; exists ; 2008 ; 9781846310409 ;  ; 9781846310409 ; Manx Bird Atlas SPECIAL EDITION (9781846310409) >
+    au < exists ; exists ; 2008 ; 9781846311406 ; 9781781387658 ; 9781781387658 ; Michael Faraday’s Mental Exercises (9781781387658) >
+    au < exists ; exists ; 2008 ; 9781846311666 ;  ; 9781846311666 ; Mr Roscoe’s Garden (9781846311666) >
+    au < exists ; exists ; 2008 ; 9781904675204 ;  ; 9781904675204 ; Ovid: Ibis (9781904675204) >
+    au < exists ; exists ; 2008 ; 9780859897839 ;  ; 9780859897839 ; Piers Plowman (9780859897839) >
+    au < exists ; exists ; 2008 ; 9780973893465 ;  ; 9780973893465 ; Policing the Seas (9780973893465) >
+    au < exists ; exists ; 2008 ; 9781846311680 ;  ; 9781846311680 ; Pop Cultured (9781846311680) >
+    au < exists ; exists ; 2008 ; 9781846312069 ;  ; 9781846312069 ; Por Convención Ferrer, 1910 – 1918 (9781846312069) >
+    au < exists ; exists ; 2008 ; 9781846311703 ;  ; 9781846311703 ; Port of Culture (9781846311703) >
+    au < exists ; exists ; 2008 ; 9781846311314 ;  ; 9781846311314 ; Practical Manx (9781846311314) >
+    au < exists ; exists ; 2008 ; 9781846312052 ;  ; 9781846312052 ; Proposals for Liverpool (9781846312052) >
+    au < exists ; exists ; 2008 ; 9781846311352 ; 9781781388174 ; 9781781388174 ; Queer Universes (9781781388174) >
+    au < exists ; exists ; 2008 ; 9781904675631 ;  ; 9781904675631 ; Reading Catullus (9781904675631) >
+    au < exists ; exists ; 2008 ; 9781846311581 ;  ; 9781846311581 ; Rebirth of Liverpool (9781846311581) >
+    au < exists ; exists ; 2008 ; 9781846311628 ;  ; 9781846311628 ; Recognizing the Romantic Novel (9781846311628) >
+    au < exists ; exists ; 2008 ; 9781846310911 ; 9781781388235 ; 9781781388235 ; Representing Autism (9781781388235) >
+    au < exists ; exists ; 2008 ; 9781846312038 ;  ; 9781846312038 ; Royal Yacht Mary (9781846312038) >
+    au < exists ; exists ; 2008 ; 9781846311369 ;  ; 9781846311369 ; Shaping Belief (9781846311369) >
+    au < exists ; exists ; 2008 ; 9780859897860 ;  ; 9780859897860 ; Shipping and Military Power in the Seven Year War, 1756–1763 (9780859897860) >
+    au < exists ; exists ; 2008 ; 9780859898096 ;  ; 9780859898096 ; Signs of Cleopatra (9780859898096) >
+    au < exists ; exists ; 2008 ; 9781846311499 ;  ; 9781846311499 ; Sk-interfaces (9781846311499) >
+    au < exists ; exists ; 2008 ; 9781846310676 ; 9781781388419 ; 9781781388419 ; Slave Captain (9781781388419) >
+    au < exists ; exists ; 2008 ; 9781846311284 ;  ; 9781846311284 ; So Spirited a Town (9781846311284) >
+    au < exists ; exists ; 2008 ; 9781846311338 ;  ; 9781846311338 ; Specimen Colony (9781846311338) >
+    au < exists ; exists ; 2008 ; 9781846311765 ;  ; 9781846311765 ; Stuart Sutcliffe (9781846311765) >
+    au < exists ; exists ; 2008 ; 9781846311604 ;  ; 9781846311604 ; The BBC at the Watershed (9781846311604) >
+    au < exists ; exists ; 2008 ; 9781846311383 ;  ; 9781846311383 ; The Cultural Values of Europe (9781846311383) >
+    au < exists ; exists ; 2008 ; 9781846311277 ;  ; 9781846311277 ; The Culture of Capital (9781846311277) >
+    au < exists ; exists ; 2008 ; 9781846312045 ;  ; 9781846312045 ; The Fifth Floor (9781846312045) >
+    au < exists ; exists ; 2008 ; 9780980286205 ;  ; 9780980286205 ; The Making of a Medieval Manuscript DVD – NTSC version (9780980286205) >
+    au < exists ; exists ; 2008 ; 9781781381670 ;  ; 9781781381670 ; The Making of a Medieval Manuscript DVD – PAL version (9781781381670) >
+    au < exists ; exists ; 2008 ; 9781846311246 ;  ; 9781846311246 ; The Mammals of Cheshire (9781846311246) >
+    au < exists ; exists ; 2008 ; 9781905816026 ;  ; 9781905816026 ; The Poems of the Pearl Manuscript in Modern English Prose Translation (9781905816026) >
+    au < exists ; exists ; 2008 ; 9781846311376 ; 9781846314209 ; 9781846314209 ; The Sense of Community in French Caribbean Fiction (9781846314209) >
+    au < exists ; exists ; 2008 ; 9781904675716 ;  ; 9781904675716 ; The Tragedies of Sophocles (9781904675716) >
+    au < exists ; exists ; 2008 ; 9781846311659 ;  ; 9781846311659 ; The World in One School (9781846311659) >
+    au < exists ; exists ; 2008 ; 9780973893489 ;  ; 9780973893489 ; Trade, Migration and Urban Networks in Port Cities, c. 1640-1940 (9780973893489) >
+    au < exists ; exists ; 2008 ; 9781846311697 ;  ; 9781846311697 ; Unfamiliar Journeys Continued (9781846311697) >
+    au < exists ; exists ; 2008 ; 9780859898225 ;  ; 9780859898225 ; Unwritten Rome (9780859898225) >
+    au < exists ; exists ; 2008 ; 9781846311260 ;  ; 9781846311260 ; Variable Capital (9781846311260) >
+    au < exists ; exists ; 2008 ; 9781846311307 ;  ; 9781846311307 ; William Roscoe (9781846311307) >
+    au < exists ; exists ; 2009 ; 9781846311802 ;  ; 9781846311802 ; American Travel and Empire (9781846311802) >
+    au < exists ; exists ; 2009 ; 9780859897754 ;  ; 9780859897754 ; Ancrene Wisse / Guide for Anchoresses (9780859897754) >
+    au < exists ; exists ; 2009 ; 9781846310836 ;  ; 9781846310836 ; Art in a City Revisited (9781846310836) >
+    au < exists ; exists ; 2009 ; 9781846312106 ;  ; 9781846312106 ; Birds of the Cotswolds (9781846312106) >
+    au < exists ; exists ; 2009 ; 9781846312007 ;  ; 9781846312007 ; Black 1919 (9781846312007) >
+    au < exists ; exists ; 2009 ; 9780986497322 ;  ; 9780986497322 ; British Shipping and World Competition (9780986497322) >
+    au < exists ; exists ; 2009 ; 9781846311772 ; 9781846314513 ; 9781846314513 ; Chalcedon in Context (9781846314513) >
+    au < exists ; exists ; 2009 ; 9781846312120 ;  ; 9781846312120 ; Cinematic Fictions (9781846312120) >
+    au < exists ; exists ; 2009 ; 9781846311956 ;  ; 9781846311956 ; Colonial Tropes and Postcolonial Tricks (9781846311956) >
+    au < exists ; exists ; 2009 ; 9781846311826 ;  ; 9781846311826 ; Empire on the Verge of a Nervous Breakdown (9781846311826) >
+    au < exists ; exists ; 2009 ; 9781846310935 ;  ; 9781846310935 ; Fat, Gluttony and Sloth (9781846310935) >
+    au < exists ; exists ; 2009 ; 9781846312151 ;  ; 9781846312151 ; French Postmodern Masculinities (9781846312151) >
+    au < exists ; exists ; 2009 ; 9781904675273 ;  ; 9781904675273 ; Greek Tyranny (9781904675273) >
+    au < exists ; exists ; 2009 ; 9780980286229 ;  ; 9780980286229 ; Inside the Scriptorium 1: Inks, Paints & Quills DVD (9780980286229) >
+    au < exists ; exists ; 2009 ; 9780980286236 ;  ; 9780980286236 ; Inside the Scriptorium 2: Writing and Illuminating DVD (9780980286236) >
+    au < exists ; exists ; 2009 ; 9781846311635 ;  ; 9781846311635 ; John Clare and the Place of Poetry (9781846311635) >
+    au < exists ; exists ; 2009 ; 9781846312083 ;  ; 9781846312083 ; Late Medieval Spanish Studies in Honour of Dorothy Sherman Severin (9781846312083) >
+    au < exists ; exists ; 2009 ; 9781846312465 ;  ; 9781846312465 ; Lewis's Fifth Floor (9781846312465) >
+    au < exists ; exists ; 2009 ; 9781846312281 ;  ; 9781846312281 ; Malcolm Lowry (9781846312281) >
+    au < exists ; exists ; 2009 ; 9780859898317 ;  ; 9780859898317 ; Mortuary Practices and Social Identities in the Middle Ages (9780859898317) >
+    au < exists ; exists ; 2009 ; 9780986497315 ;  ; 9780986497315 ; Navigating African Maritime History (9780986497315) >
+    au < exists ; exists ; 2009 ; 9781846312274 ;  ; 9781846312274 ; Nuclear Papers (9781846312274) >
+    au < exists ; exists ; 2009 ; 9781846311796 ;  ; 9781846311796 ; Plan for Chaos (9781846311796) >
+    au < exists ; exists ; 2009 ; 9781846311987 ;  ; 9781846311987 ; Popular Opposition to Irish Home Rule in Edwardian Britain (9781846311987) >
+    au < exists ; exists ; 2009 ; 9781846310492 ;  ; 9781846310492 ; Postcolonial Eyes (9781846310492) >
+    au < exists ; exists ; 2009 ; 9781846310546 ;  ; 9781846310546 ; Postcolonial Thought in the French Speaking World (9781846310546) >
+    au < exists ; exists ; 2009 ; 9781846312199 ;  ; 9781846312199 ; Racism Postcolonialism Europe (9781846312199) >
+    au < exists ; exists ; 2009 ; 9781846311994 ;  ; 9781846311994 ; Reconfiguring Slavery (9781846311994) >
+    au < exists ; exists ; 2009 ; 9781846311871 ;  ; 9781846311871 ; Secularization and the World Religions (9781846311871) >
+    au < exists ; exists ; 2009 ; 9781846311840 ;  ; 9781846311840 ; Slaves to Sweetness (9781846311840) >
+    au < exists ; exists ; 2009 ; 9781846312014 ;  ; 9781846312014 ; Spanish Screen Fiction (9781846312014) >
+    au < exists ; exists ; 2009 ; 9780973893496 ;  ; 9780973893496 ; Taiwanese Distant-Water Fisheries in Southeast Asia, 1936-1977 (9780973893496) >
+    au < exists ; exists ; 2009 ; 9780859898164 ;  ; 9780859898164 ; The Digby Poems (9780859898164) >
+    au < exists ; exists ; 2009 ; 9781846311758 ;  ; 9781846311758 ; The Fenian Problem (9781846311758) >
+    au < exists ; exists ; 2009 ; 9781846310508 ;  ; 9781846310508 ; The French Atlantic (9781846310508) >
+    au < exists ; exists ; 2009 ; 9780859898423 ;  ; 9780859898423 ; The Great War and German Memory (9780859898423) >
+    au < exists ; exists ; 2009 ; 9781846311949 ;  ; 9781846311949 ; The Letters of Elizabeth Rigby, Lady Eastlake (9781846311949) >
+    au < exists ; exists ; 2009 ; 9781846311918 ; 9781781388464 ; 9781781388464 ; The Life and Poems of Anne Hunter (9781781388464) >
+    au < exists ; exists ; 2009 ; 9781846312175 ;  ; 9781846312175 ; The Macbride Principles (9781846312175) >
+    au < exists ; exists ; 2009 ; 9781846312243 ;  ; 9781846312243 ; The Original Liverpool Sound (9781846312243) >
+    au < exists ; exists ; 2009 ; 9781846311833 ;  ; 9781846311833 ; The Twilight of the Avant-Garde (9781846311833) >
+    au < exists ; exists ; 2009 ; 9780986497308 ;  ; 9780986497308 ; The Vital Spark (9780986497308) >
+    au < exists ; exists ; 2009 ; 9781846312229 ;  ; 9781846312229 ; Titanic and Liverpool (9781846312229) >
+    au < exists ; exists ; 2009 ; 9781846312298 ;  ; 9781846312298 ; We are the Real Time Experiment (9781846312298) >
+    au < exists ; exists ; 2009 ; 9780859898409 ;  ; 9780859898409 ; Working with Anglo-Saxon Manuscripts (9780859898409) >
+    au < exists ; exists ; 2010 ; 9780859898218 ;  ; 9780859898218 ; A Companion to 'The Doctrine of the Hert' (9780859898218) >
+    au < exists ; exists ; 2010 ; 9780853236078 ;  ; 9780853236078 ; A New History of the Isle of Man, Vol. 2 (9780853236078) >
+    au < exists ; exists ; 2010 ; 9781846314698 ;  ; 9781846314698 ; Activist Poetics by John Kinsella (9781846314698) >
+    au < exists ; exists ; 2010 ; 9781904675280 ;  ; 9781904675280 ; Ancient Rome at the Cinema (9781904675280) >
+    au < exists ; exists ; 2010 ; 9781846312342 ;  ; 9781846312342 ; Animal Alterity (9781846312342) >
+    au < exists ; exists ; 2010 ; 9781846312472 ;  ; 9781846312472 ; Artists Re (9781846312472) >
+    au < exists ; exists ; 2010 ; 9781846314773 ;  ; 9781846314773 ; Astrid Kirchherr (9781846314773) >
+    au < exists ; exists ; 2010 ; 9781904675143 ;  ; 9781904675143 ; Augustus, First Roman Emperor (9781904675143) >
+    au < exists ; exists ; 2010 ; 9781846312113 ;  ; 9781846312113 ; Bright Stars (9781846312113) >
+    au < exists ; exists ; 2010 ; 9781846311550 ;  ; 9781846311550 ; British Watercolours and Drawings (9781846311550) >
+    au < exists ; exists ; 2010 ; 9781846314780 ;  ; 9781846314780 ; Ciaran Carson (9781846314780) >
+    au < exists ; exists ; 2010 ; 9781846314711 ;  ; 9781846314711 ; Creating Memorials, Building Identities (9781846314711) >
+    au < exists ; exists ; 2010 ; 9781846312137 ;  ; 9781846312137 ; Cultured Violence (9781846312137) >
+    au < exists ; exists ; 2010 ; 9781846312144 ;  ; 9781846312144 ; Domains and Divisions of European History (9781846312144) >
+    au < exists ; exists ; 2010 ; 9781846312311 ;  ; 9781846312311 ; Frank O’Hara Now (9781846312311) >
+    au < exists ; exists ; 2010 ; 9781846311192 ;  ; 9781846311192 ; Georgian and Regency Liverpool, 1750–1850 (9781846311192) >
+    au < exists ; exists ; 2010 ; 9781846314988 ;  ; 9781846314988 ; Haiti Rising (9781846314988) >
+    au < exists ; exists ; 2010 ; 9781846314995 ; 9781781386705 ; 9781781386705 ; Haiti Unbound (9781781386705) >
+    au < exists ; exists ; 2010 ; 9781846311925 ;  ; 9781846311925 ; Inside the Death Drive (9781846311925) >
+    au < exists ; exists ; 2010 ; 9781846312458 ;  ; 9781846312458 ; Intellectuals, Culture and Public Policy in France (9781846312458) >
+    au < exists ; exists ; 2010 ; 9781846312359 ;  ; 9781846312359 ; Invisible Men (9781846312359) >
+    au < exists ; exists ; 2010 ; 9781846314742 ;  ; 9781846314742 ; Irish Birmingham (9781846314742) >
+    au < exists ; exists ; 2010 ; 9781846314889 ;  ; 9781846314889 ; Liverpool to Liverpool (9781846314889) >
+    au < exists ; exists ; 2010 ; 9780986497339 ;  ; 9780986497339 ; Maritime History as Global History (9780986497339) >
+    au < exists ; exists ; 2010 ; 9781846310522 ;  ; 9781846310522 ; Photo-texts (9781846310522) >
+    au < exists ; exists ; 2010 ; 9781846314865 ;  ; 9781846314865 ; Poetics of the Poster (9781846314865) >
+    au < exists ; exists ; 2010 ; 9781846312182 ;  ; 9781846312182 ; Poetry & Translation (9781846312182) >
+    au < exists ; exists ; 2010 ; 9781846312304 ;  ; 9781846312304 ; Poststructuralism and Postcoloniality (9781846312304) >
+    au < exists ; exists ; 2010 ; 9781846311727 ;  ; 9781846311727 ; Public Sculpture of Herefordshire, Shropshire and Worcestershire (9781846311727) >
+    au < exists ; exists ; 2010 ; 9781846314674 ;  ; 9781846314674 ; Queer Events (9781846314674) >
+    au < exists ; exists ; 2010 ; 9781846314827 ; 9781781388181 ; 9781781388181 ; Race and Antiracism in Black British and British Asian Literature (9781781388181) >
+    au < exists ; exists ; 2010 ; 9781846312373 ;  ; 9781846312373 ; Representing Epilepsy (9781846312373) >
+    au < exists ; exists ; 2010 ; 9780986497346 ;  ; 9780986497346 ; Rough Waters (9780986497346) >
+    au < exists ; exists ; 2010 ; 9781846314896 ;  ; 9781846314896 ; Sculpture Journal (9781846314896) >
+    au < exists ; exists ; 2010 ; 9781846312328 ;  ; 9781846312328 ; Sophistication (9781846312328) >
+    au < exists ; exists ; 2010 ; 9781846311895 ;  ; 9781846311895 ; The Beat Goes On (9781846311895) >
+    au < exists ; exists ; 2010 ; 9781904675747 ;  ; 9781904675747 ; The Classical Greek House (9781904675747) >
+    au < exists ; exists ; 2010 ; 9781846311413 ;  ; 9781846311413 ; The Diary of Elizabeth Lee (9781846311413) >
+    au < exists ; exists ; 2010 ; 9780859897778 ;  ; 9780859897778 ; The Doctrine of the Hert (9780859897778) >
+    au < exists ; exists ; 2010 ; 9780859898522 ;  ; 9780859898522 ; The Earliest Advocates of the English Bible (9780859898522) >
+    au < exists ; exists ; 2010 ; 9781904675303 ;  ; 9781904675303 ; The Emperors' Needles (9781904675303) >
+    au < exists ; exists ; 2010 ; 9780859898201 ;  ; 9780859898201 ; The English Manuscripts of Richard Rolle (9780859898201) >
+    au < exists ; exists ; 2010 ; 9781846314704 ;  ; 9781846314704 ; The Historical Jesus and the Literary Imagination 1860–1920 (9781846314704) >
+    au < exists ; exists ; 2010 ; 9781846314858 ; 9781781388228 ; 9781781388228 ; The Reinvention of Mexico (9781781388228) >
+    au < exists ; exists ; 2010 ; 9781846312205 ;  ; 9781846312205 ; The Reparative in Narratives (9781846312205) >
+    au < exists ; exists ; 2010 ; 9781846314834 ; 9781781387870 ; 9781781387870 ; Transnational French Studies (9781781387870) >
+    au < exists ; exists ; 2010 ; 9781846312236 ; 9781781386989 ; 9781781386989 ; Underground Writing (9781781386989) >
+    au < exists ; exists ; 2010 ; 9781846316371 ;  ; 9781846316371 ; Vision, Memory and Media (9781846316371) >
+    au < exists ; exists ; 2010 ; 9781846314841 ; 9781781386927 ; 9781781386927 ; Voyages over Voices (9781781386927) >
+    au < exists ; exists ; 2010 ; 9780984259830 ;  ; 9780984259830 ; Woolf and the City (9780984259830) >
+    au < exists ; exists ; 2011 ; 9780859898379 ;  ; 9780859898379 ; Alexander the Great (9780859898379) >
+    au < exists ; exists ; 2011 ; 9781846316449 ;  ; 9781846316449 ; Anatomy as Spectacle (9781846316449) >
+    au < exists ; exists ; 2011 ; 9781846312380 ; 9781781386132 ; 9781781386132 ; Argentina’s Partisan Past (9781781386132) >
+    au < exists ; exists ; 2011 ; 9781846314971 ; 9781781386194 ; 9781781386194 ; Beyond the Slave Narrative (9781781386194) >
+    au < exists ; exists ; 2011 ; 9781846316593 ;  ; 9781846316593 ; Building Peace in Northern Ireland (9781846316593) >
+    au < exists ; exists ; 2011 ; 9781846316432 ; 9781781386262 ; 9781781386262 ; Byron in Geneva (9781781386262) >
+    au < exists ; exists ; 2011 ; 9780859898515 ;  ; 9780859898515 ; Citation, Intertextuality and Memory in the Middle Ages and Renaissance volume 1 (9780859898515) >
+    au < exists ; exists ; 2011 ; 9781846314872 ; 9781781386354 ; 9781781386354 ; Consumer Chronicles (9781781386354) >
+    au < exists ; exists ; 2011 ; 9781846317484 ;  ; 9781846317484 ; Cuba’s Wild East (9781846317484) >
+    au < exists ; exists ; 2011 ; 9781846314797 ;  ; 9781846314797 ; Dialectical Conversions (9781846314797) >
+    au < exists ; exists ; 2011 ; 9781846316647 ; 9781781386569 ; 9781781386569 ; Franco-British Academic Partnerships (9781781386569) >
+    au < exists ; exists ; 2011 ; 9781846316555 ; 9781781386613 ; 9781781386613 ; French Studies in and for the 21st Century (9781781386613) >
+    au < exists ; exists ; 2011 ; 9781846317071 ;  ; 9781846317071 ; Gothic Science Fiction (9781846317071) >
+    au < exists ; exists ; 2011 ; 9781902700410 ;  ; 9781902700410 ; Irby, Wirral (9781902700410) >
+    au < exists ; exists ; 2011 ; 9781846316616 ;  ; 9781846316616 ; Ireland, Sweden and the Great European Migration (9781846316616) >
+    au < exists ; exists ; 2011 ; 9781846316685 ;  ; 9781846316685 ; Liverpool '81 (9781846316685) >
+    au < exists ; exists ; 2011 ; 9781846316470 ;  ; 9781846316470 ; Liverpool City of Radicals (9781846316470) >
+    au < exists ; exists ; 2011 ; 9781846317477 ;  ; 9781846317477 ; Liverpool Playhouse (9781846317477) >
+    au < exists ; exists ; 2011 ; 9781846311215 ;  ; 9781846311215 ; Manah (9781846311215) >
+    au < exists ; exists ; 2011 ; 9780986497360 ;  ; 9780986497360 ; New Directions in Norwegian Maritime History (9780986497360) >
+    au < exists ; exists ; 2011 ; 9780859898447 ;  ; 9780859898447 ; Performing Greek Drama in Oxford and on Tour with the Balliol Players (9780859898447) >
+    au < exists ; exists ; 2011 ; 9781846314803 ; 9781781388129 ; 9781781388129 ; Postcolonial Asylum (9781781388129) >
+    au < exists ; exists ; 2011 ; 9781846317453 ;  ; 9781846317453 ; Postcolonial Poetics (9781846317453) >
+    au < exists ; exists ; 2011 ; 9781904675822 ;  ; 9781904675822 ; Pseudo-Skylax's Periplous (9781904675822) >
+    au < exists ; exists ; 2011 ; 9781846314810 ;  ; 9781846314810 ; Public Sculpture of Bristol (9781846314810) >
+    au < exists ; exists ; 2011 ; 9781846312250 ;  ; 9781846312250 ; Public Sculpture of Outer South and West London (9781846312250) >
+    au < exists ; exists ; 2011 ; 9781846317088 ;  ; 9781846317088 ; Race, Ethnicity and Nuclear War (9781846317088) >
+    au < exists ; exists ; 2011 ; 9781846316401 ;  ; 9781846316401 ; Regenerating Culture and Society (9781846316401) >
+    au < exists ; exists ; 2011 ; 9781846316586 ; 9781781388365 ; 9781781388365 ; Seán MacBride (9781781388365) >
+    au < exists ; exists ; 2011 ; 9781846317439 ;  ; 9781846317439 ; Smashing H-Block (9781846317439) >
+    au < exists ; exists ; 2011 ; 9780859898621 ;  ; 9780859898621 ; The Battle of Brunanburh (9780859898621) >
+    au < exists ; exists ; 2011 ; 9780859898591 ;  ; 9780859898591 ; The Black Legend of Prince Rupert's Dog (9780859898591) >
+    au < exists ; exists ; 2011 ; 9781846316425 ;  ; 9781846316425 ; The Colonial Heritage of French Comics (9781846316425) >
+    au < exists ; exists ; 2011 ; 9780859898560 ;  ; 9780859898560 ; The Devil's Book (9780859898560) >
+    au < exists ; exists ; 2011 ; 9780986497353 ;  ; 9780986497353 ; The Dutch Navy of the Seventeenth and Eighteenth Centuries (9780986497353) >
+    au < exists ; exists ; 2011 ; 9781846314728 ; 9781781386545 ; 9781781386545 ; The Female Body in Medicine and Literature (9781781386545) >
+    au < exists ; exists ; 2011 ; 9781846316609 ;  ; 9781846316609 ; The German-Jewish Soldiers of the First World War in History and Memory (9781846316609) >
+    au < exists ; exists ; 2011 ; 9781902700403 ;  ; 9781902700403 ; The Huxley Viking Hoard (9781902700403) >
+    au < exists ; exists ; 2011 ; 9780986497377 ;  ; 9780986497377 ; The Impact of Technological Change (9780986497377) >
+    au < exists ; exists ; 2011 ; 9781846316999 ;  ; 9781846316999 ; The Liverpool Underworld (9781846316999) >
+    au < exists ; exists ; 2011 ; 9780859898430 ;  ; 9780859898430 ; The Material Culture of Daily Living in the Anglo-Saxon World (9780859898430) >
+    au < exists ; exists ; 2011 ; 9781846316579 ;  ; 9781846316579 ; The Monster Evil (9781846316579) >
+    au < exists ; exists ; 2011 ; 9781846316906 ; 9781781387825 ; 9781781387825 ; The Noir Atlantic (9781781387825) >
+    au < exists ; exists ; 2011 ; 9781846316654 ; 9781781388044 ; 9781781388044 ; The Place de la Bastille (9781781388044) >
+    au < exists ; exists ; 2011 ; 9781846310768 ; 9781781388242 ; 9781781388242 ; The Sociology of Architecture (9781781388242) >
+    au < exists ; exists ; 2011 ; 9781846316951 ;  ; 9781846316951 ; The World’s Most Difficult Quiz (9781846316951) >
+    au < exists ; exists ; 2011 ; 9781846316661 ; 9781781387917 ; 9781781387917 ; Thresholds of Meaning (9781781387917) >
+    au < exists ; exists ; 2011 ; 9781846317460 ;  ; 9781846317460 ; TransLife (9781846317460) >
+    au < exists ; exists ; 2011 ; 9780983533900 ;  ; 9780983533900 ; Virginia Woolf and the Natural World (9780983533900) >
+    au < exists ; exists ; 2011 ; 9781846316678 ; 9781781386866 ; 9781781386866 ; Writing Galicia into the World (9781781386866) >
+    au < exists ; exists ; 2011 ; 9781846316968 ; 9781781388471 ; 9781781388471 ; Zachary Macaulay 1768-1838 (9781781388471) >
+    au < exists ; exists ; 2012 ; 9781846318177 ; 9781781387139 ; 9781781387139 ; ‘Merely for Money’? (9781781387139) >
+    au < exists ; exists ; 2012 ; 9781846318573 ;  ; 9781846318573 ; A Pre-Raphaelite Journey: The Art of Eleanor Fortescue-Brickdale (9781846318573) >
+    au < exists ; exists ; 2012 ; 9781846317538 ; 9781781386095 ; 9781781386095 ; American Creoles (9781781386095) >
+    au < exists ; exists ; 2012 ; 9781846316456 ; 9781781386149 ; 9781781386149 ; Art and Pluralism (9781781386149) >
+    au < exists ; exists ; 2012 ; 9781846316340 ;  ; 9781846316340 ; Belfast 400 (9781846316340) >
+    au < exists ; exists ; 2012 ; 9781846316364 ;  ; 9781846316364 ; Belfast 400 Limited Edition (9781846316364) >
+    au < exists ; exists ; 2012 ; 9781846318184 ; 9781781386200 ; 9781781386200 ; Black Salt (9781781386200) >
+    au < exists ; exists ; 2012 ; 9781846317118 ; 9781781386347 ; 9781781386347 ; Civilians and War in Europe 1618–1815 (9781781386347) >
+    au < exists ; exists ; 2012 ; 9781846318290 ; 9781781386361 ; 9781781386361 ; Contagion and Enclaves (9781781386361) >
+    au < exists ; exists ; 2012 ; 9780983533955 ;  ; 9780983533955 ; Contradictory Woolf (9780983533955) >
+    au < exists ; exists ; 2012 ; 9781846317514 ;  ; 9781846317514 ; Cultural Hijack (9781846317514) >
+    au < exists ; exists ; 2012 ; 9781846318160 ;  ; 9781846318160 ; Earlier British Paintings in the Walker Art Gallery and Sudley House (9781846318160) >
+    au < exists ; exists ; 2012 ; 9781846318559 ;  ; 9781846318559 ; Essays in Romanticism, Volume 19 2012 (9781846318559) >
+    au < exists ; exists ; 2012 ; 9781846318467 ; 9781781386538 ; 9781781386538 ; Fathers, Daughters, and Slaves (9781781386538) >
+    au < exists ; exists ; 2012 ; 9781846317576 ; 9781781386552 ; 9781781386552 ; Film, Mobility and Urban Space (9781781386552) >
+    au < exists ; exists ; 2012 ; 9781846318252 ;  ; 9781846318252 ; Four Byzantine Novels (9781846318252) >
+    au < exists ; exists ; 2012 ; 9781846318351 ; 9781781386590 ; 9781781386590 ; French Cycling (9781781386590) >
+    au < exists ; exists ; 2012 ; 9781846317552 ;  ; 9781846317552 ; Future Wars (9781846317552) >
+    au < exists ; exists ; 2012 ; 9781846318566 ;  ; 9781846318566 ; Historical Studies in Industrial Relations, Volume 33 2012 (9781846318566) >
+    au < exists ; exists ; 2012 ; 9781846318795 ;  ; 9781846318795 ; In the Footsteps of Giants (9781846318795) >
+    au < exists ; exists ; 2012 ; 9781902700465 ;  ; 9781902700465 ; John Moores Painting Prize 2012 (9781902700465) >
+    au < exists ; exists ; 2012 ; 9781846318238 ; 9781781386828 ; 9781781386828 ; Journey Westward (9781781386828) >
+    au < exists ; exists ; 2012 ; 9781846317446 ;  ; 9781846317446 ; Liverpool – The Story of a City (9781846317446) >
+    au < exists ; exists ; 2012 ; 9781846318429 ; 9781781387054 ; 9781781387054 ; Locating Science Fiction (9781781387054) >
+    au < exists ; exists ; 2012 ; 9781846318191 ; 9781781387061 ; 9781781387061 ; Locating the English Diaspora, 1500-2010 (9781781387061) >
+    au < exists ; exists ; 2012 ; 9781846318313 ; 9781781387078 ; 9781781387078 ; London Irish Fictions (9781781387078) >
+    au < exists ; exists ; 2012 ; 9780859898300 ;  ; 9780859898300 ; Making Sense of Greek Art (9780859898300) >
+    au < exists ; exists ; 2012 ; 9781846318214 ; 9781781387702 ; 9781781387702 ; Mobility at Large (9781781387702) >
+    au < exists ; exists ; 2012 ; 9781846318504 ; 9781846317910 ; 9781846317910 ; News from Abroad (9781846317910) >
+    au < exists ; exists ; 2012 ; 9781846318306 ; 9781781388020 ; 9781781388020 ; Patriotism and Propaganda in First World War Britain (9781781388020) >
+    au < exists ; exists ; 2012 ; 9781846317569 ; 9781846317231 ; 9781846317231 ; Poetry by Women in Ireland (9781846317231) >
+    au < exists ; exists ; 2012 ; 9781846314926 ;  ; 9781846314926 ; Public Sculpture of Cheshire and Merseyside (excluding Liverpool) (9781846314926) >
+    au < exists ; exists ; 2012 ; 9781846316623 ;  ; 9781846316623 ; Public Sculpture of Historic Westminster (9781846316623) >
+    au < exists ; exists ; 2012 ; 9780859898720 ;  ; 9780859898720 ; Regional Australia and the Great War (9780859898720) >
+    au < exists ; exists ; 2012 ; 9781846318436 ; 9781781388273 ; 9781781388273 ; Roland Barthes at the Collège de France (9781781388273) >
+    au < exists ; exists ; 2012 ; 9781846318092 ; 9781781388341 ; 9781781388341 ; Science in Modern Poetry (9781781388341) >
+    au < exists ; exists ; 2012 ; 9781846318399 ;  ; 9781846318399 ; Scouse (9781846318399) >
+    au < exists ; exists ; 2012 ; 9781846317583 ; 9781781388426 ; 9781781388426 ; Slavery, Abolitionism and Empire in India, 1772–1843 (9781781388426) >
+    au < exists ; exists ; 2012 ; 9781846318344 ; 9781781387986 ; 9781781387986 ; Solar Flares (9781781387986) >
+    au < exists ; exists ; 2012 ; 9781846318221 ; 9781781387962 ; 9781781387962 ; Spanish Spaces (9781781387962) >
+    au < exists ; exists ; 2012 ; 9781846317545 ; 9781781387955 ; 9781781387955 ; Spatial Ecologies (9781781387955) >
+    au < exists ; exists ; 2012 ; 9781927869000 ;  ; 9781927869000 ; The Battle for the Migrants (9781927869000) >
+    au < exists ; exists ; 2012 ; 9780986497391 ;  ; 9780986497391 ; The Growth and Dissolution of a Large- Scale Business Enterprise (9780986497391) >
+    au < exists ; exists ; 2012 ; 9780986497384 ;  ; 9780986497384 ; The Rise of the English Shipping Industry in the Seventeenth and Eighteenth Centuries (9780986497384) >
+    au < exists ; exists ; 2012 ; 9781846318375 ;  ; 9781846318375 ; The World’s Most Difficult Quiz 2 (9781846318375) >
+    au < exists ; exists ; 2012 ; 9780859898676 ;  ; 9780859898676 ; The Young Kim Philby (9780859898676) >
+    au < exists ; exists ; 2012 ; 9781846318320 ; 9781781387924 ; 9781781387924 ; Thinking Barcelona (9781781387924) >
+    au < exists ; exists ; 2012 ; 9781846318207 ; 9781781386958 ; 9781781386958 ; Vietnam and Beyond (9781781386958) >
+    au < exists ; exists ; 2012 ; 9781846311116 ;  ; 9781846311116 ; Visions of Blake (9781846311116) >
+    au < exists ; exists ; 2012 ; 9780983533924 ;  ; 9780983533924 ; W. B. Yeats's 'A Vision' (9780983533924) >
+    au < exists ; exists ; 2012 ; 9781846318078 ; 9781781386897 ; 9781781386897 ; Wolfe Tone (9781781386897) >
+    au < exists ; exists ; 2013 ; 9781846319549 ;  ; 9781846319549 ; ‘Shuttles in the Rocking Loom’ (9781846319549) >
+    au < exists ; exists ; 2013 ; 9781846319570 ;  ; 9781846319570 ; 3am: Wonder, Paranoia and the Restless Night (9781846319570) >
+    au < exists ; exists ; 2013 ; 9781846318474 ; 9781846317842 ; 9781846317842 ; Africa in Europe (9781846317842) >
+    au < exists ; exists ; 2013 ; 9781846319587 ; 9781781385524 ; 9781781385524 ; Beastly Journeys (9781781385524) >
+    au < exists ; exists ; 2013 ; 9781846318856 ;  ; 9781846318856 ; Birds of the Heart of England (9781846318856) >
+    au < exists ; exists ; 2013 ; 9781846318245 ; 9781846317682 ; 9781846317682 ; Bosnia-Herzegovina (9781846317682) >
+    au < exists ; exists ; 2013 ; 9781846319716 ; 9781781385555 ; 9781781385555 ; Byron and the Forms of Thought (9781781385555) >
+    au < exists ; exists ; 2013 ; 9781846319709 ; 9781781385562 ; 9781781385562 ; Byron's Ghosts (9781781385562) >
+    au < exists ; exists ; 2013 ; 9781846318665 ; 9781781386286 ; 9781781386286 ; Caribbean Critique (9781781386286) >
+    au < exists ; exists ; 2013 ; 9780859898683 ;  ; 9780859898683 ; Champion (9780859898683) >
+    au < exists ; exists ; 2013 ; 9781846318412 ; 9781846317941 ; 9781846317941 ; Childhood, Autobiography and the Francophone Caribbean (9781846317941) >
+    au < exists ; exists ; 2013 ; 9780859898614 ;  ; 9780859898614 ; Citation, Intertextuality and Memory in the Middle Ages and Renaissance volume 2 (9780859898614) >
+    au < exists ; exists ; 2013 ; 9781846319747 ; 9781781385579 ; 9781781385579 ; Colombia’s Forgotten Frontier (9781781385579) >
+    au < exists ; exists ; 2013 ; 9781846318986 ; 9781781385586 ; 9781781385586 ; Commemorating the Irish Famine (9781781385586) >
+    au < exists ; exists ; 2013 ; 9781846318849 ; 9781781386378 ; 9781781386378 ; Contesting Views (9781781386378) >
+    au < exists ; exists ; 2013 ; 9781846319594 ;  ; 9781846319594 ; Coral (9781846319594) >
+    au < exists ; exists ; 2013 ; 9781927869017 ;  ; 9781927869017 ; Crossing the Bar (9781927869017) >
+    au < exists ; exists ; 2013 ; 9781846318603 ; 9781781385593 ; 9781781385593 ; Deaf School (9781781385593) >
+    au < exists ; exists ; 2013 ; 9781846318702 ; 9781781386415 ; 9781781386415 ; Disability Studies and Spanish Culture (9781781386415) >
+    au < exists ; exists ; 2013 ; 9781846319457 ;  ; 9781846319457 ; Essays in Romanticism, Volume 20 2013 (9781846319457) >
+    au < exists ; exists ; 2013 ; 9781846318658 ; 9781781386606 ; 9781781386606 ; French Scientific and Cultural Diplomacy (9781781386606) >
+    au < exists ; exists ; 2013 ; 9781846319617 ;  ; 9781846319617 ; Historical Studies in Industrial Relations, Volume 34 2013 (9781846319617) >
+    au < exists ; exists ; 2013 ; 9781846319471 ; 9781781385616 ; 9781781385616 ; Homicide in pre-Famine and Famine Ireland (9781781385616) >
+    au < exists ; exists ; 2013 ; 9781846318337 ; 9781781386750 ; 9781781386750 ; Iberian Modalities (9781781386750) >
+    au < exists ; exists ; 2013 ; 9781846319761 ; 9781781385623 ; 9781781385623 ; Imperial Emotions (9781781385623) >
+    au < exists ; exists ; 2013 ; 9781846318962 ; 9781781385630 ; 9781781385630 ; Imperialism as Diaspora (9781781385630) >
+    au < exists ; exists ; 2013 ; 9780989082624 ;  ; 9780989082624 ; Interdisciplinary/Multidisciplinary Woolf (9780989082624) >
+    au < exists ; exists ; 2013 ; 9781846318672 ; 9781781386781 ; 9781781386781 ; Intimate Enemies (9781781386781) >
+    au < exists ; exists ; 2013 ; 9780859898713 ;  ; 9780859898713 ; Introducing English Medieval Book History (9780859898713) >
+    au < exists ; exists ; 2013 ; 9781846318818 ; 9781781386804 ; 9781781386804 ; Irish London (9781781386804) >
+    au < exists ; exists ; 2013 ; 9781846319402 ; 9781781385661 ; 9781781385661 ; Leaving the North (9781781385661) >
+    au < exists ; exists ; 2013 ; 9781846318597 ; 9781781387085 ; 9781781387085 ; London Underground (9781781387085) >
+    au < exists ; exists ; 2013 ; 9780859898706 ;  ; 9780859898706 ; Manuscripts and Printed Books in Europe 1350–1550 (9780859898706) >
+    au < exists ; exists ; 2013 ; 9781846319464 ; 9781781385678 ; 9781781385678 ; Marie NDiaye (9781781385678) >
+    au < exists ; exists ; 2013 ; 9781846318894 ; 9781781387115 ; 9781781387115 ; Memoirs of a Leavisite (9781781387115) >
+    au < exists ; exists ; 2013 ; 9781846318719 ; 9781781387122 ; 9781781387122 ; Memory, Narrative and the Great War (9781781387122) >
+    au < exists ; exists ; 2013 ; 9781846318610 ; 9781781387665 ; 9781781387665 ; Michel Houellebecq (9781781387665) >
+    au < exists ; exists ; 2013 ; 9781846318634 ; 9781846318054 ; 9781846318054 ; Militant Liverpool (9781846318054) >
+    au < exists ; exists ; 2013 ; 9780859898836 ;  ; 9780859898836 ; Owain Glyndŵr (9780859898836) >
+    au < exists ; exists ; 2013 ; 9781846318757 ;  ; 9781846318757 ; Picasso and the Politics of Visual Representation (9781846318757) >
+    au < exists ; exists ; 2013 ; 9781846318641 ; 9781781388075 ; 9781781388075 ; Poetry & Geography (9781781388075) >
+    au < exists ; exists ; 2013 ; 9781846318931 ;  ; 9781846318931 ; Politics in a Glass Case (9781846318931) >
+    au < exists ; exists ; 2013 ; 9781846319754 ;  ; 9781846319754 ; Porous City (9781846319754) >
+    au < exists ; exists ; 2013 ; 9781846319419 ; 9781781385708 ; 9781781385708 ; Poverty and the Poor Law in Ireland 1850–1914 (9781781385708) >
+    au < exists ; exists ; 2013 ; 9781902700090 ;  ; 9781902700090 ; Prehistoric, Romano-British and Medieval Settlement in Lowland North West England (9781902700090) >
+    au < exists ; exists ; 2013 ; 9781846318979 ;  ; 9781846318979 ; Pre-Raphaelite Treasures at National Museums Liverpool (9781846318979) >
+    au < exists ; exists ; 2013 ; 9781846317125 ;  ; 9781846317125 ; Public Sculpture of Norfolk and Suffolk (9781846317125) >
+    au < exists ; exists ; 2013 ; 9781846318955 ; 9781781385715 ; 9781781385715 ; Pubs and Patriots (9781781385715) >
+    au < exists ; exists ; 2013 ; 9781846318924 ; 9781781388198 ; 9781781388198 ; Reading the Irish Woman (9781781388198) >
+    au < exists ; exists ; 2013 ; 9781846319686 ; 9781781385722 ; 9781781385722 ; Remembering the South African War (9781781385722) >
+    au < exists ; exists ; 2013 ; 9781846319433 ; 9781781385739 ; 9781781385739 ; Rhetorics of Belonging (9781781385739) >
+    au < exists ; exists ; 2013 ; 9781846318863 ; 9781781388303 ; 9781781388303 ; Sacred Modernity (9781781388303) >
+    au < exists ; exists ; 2013 ; 9781846319723 ; 9781781385746 ; 9781781385746 ; Singularities (9781781385746) >
+    au < exists ; exists ; 2013 ; 9780859898850 ;  ; 9780859898850 ; Speculum Inclusorum / A Mirror for Recluses (9780859898850) >
+    au < exists ; exists ; 2013 ; 9781846318498 ; 9781846317927 ; 9781846317927 ; States of Emergency (9781846317927) >
+    au < exists ; exists ; 2013 ; 9781846318900 ; 9781781387948 ; 9781781387948 ; Surveying the American Tropics (9781781387948) >
+    au < exists ; exists ; 2013 ; 9781846318481 ; 9781781387771 ; 9781781387771 ; The ‘Natural Leaders’ and their World (9781781387771) >
+    au < exists ; exists ; 2013 ; 9781846318085 ;  ; 9781846318085 ; The Birds of Gloucestershire (9781846318085) >
+    au < exists ; exists ; 2013 ; 9781846318580 ;  ; 9781846318580 ; The Breeding Birds of North Wales (9781846318580) >
+    au < exists ; exists ; 2013 ; 9781846319631 ; 9781781385609 ; 9781781385609 ; The Death of Caligula (9781781385609) >
+    au < exists ; exists ; 2013 ; 9781846318801 ; 9781781386583 ; 9781781386583 ; The French Anarchists in London, 1880–1914 (9781781386583) >
+    au < exists ; exists ; 2013 ; 9781846319693 ; 9781781385647 ; 9781781385647 ; The Knights Errant of Anarchy (9781781385647) >
+    au < exists ; exists ; 2013 ; 9780859898690 ;  ; 9780859898690 ; The Making of Thomas Hoccleve’s ‘Series’ (9780859898690) >
+    au < exists ; exists ; 2013 ; 9781846319525 ;  ; 9781846319525 ; The Origins of Palestinian Art (9781846319525) >
+    au < exists ; exists ; 2013 ; 9781846318764 ; 9781846319945 ; 9781846319945 ; The Poetry of Dylan Thomas (9781846319945) >
+    au < exists ; exists ; 2013 ; 9781846319426 ; 9781781385685 ; 9781781385685 ; The Politics of Memoir and the Northern Ireland Conflict (9781781385685) >
+    au < exists ; exists ; 2013 ; 9781846319662 ;  ; 9781846319662 ; Time & Motion (9781846319662) >
+    au < exists ; exists ; 2013 ; 9781846318917 ;  ; 9781846318917 ; Transvisuality: The Cultural Dimension of Visuality (Vol. I) (9781846318917) >
+    au < exists ; exists ; 2013 ; 9781846318948 ; 9781781385753 ; 9781781385753 ; V. Y. Mudimbe (9781781385753) >
+    au < exists ; exists ; 2013 ; 9781927869024 ;  ; 9781927869024 ; War and Trade in Eighteenth-Century Newfoundland (9781927869024) >
+    au < exists ; exists ; 2013 ; 9781846319730 ; 9781781385760 ; 9781781385760 ; What is Québécois Literature? (9781781385760) >
+    au < exists ; exists ; 2013 ; 9781846319778 ; 9781781385777 ; 9781781385777 ; Women’s Experimental Poetry in Britain 1970–2010 (9781781385777) >
+    au < exists ; exists ; 2014 ; 9781781381328 ;  ; 9781781381328 ; Armies, Politics and Revolution (9781781381328) >
+    au < exists ; exists ; 2014 ; 9781846319679 ; 9781781385852 ; 9781781385852 ; Before the Windrush (9781781385852) >
+    au < exists ; exists ; 2014 ; 9781846319389 ; 9781781385531 ; 9781781385531 ; Black Intersectionalities (9781781385531) >
+    au < exists ; exists ; 2014 ; 9781781380307 ; 9781781385968 ; 9781781385968 ; Borrowed Forms (9781781385968) >
+    au < exists ; exists ; 2014 ; 9781846319556 ; 9781781385548 ; 9781781385548 ; Britain’s Soldiers (9781781385548) >
+    au < exists ; exists ; 2014 ; 9781781380062 ;  ; 9781781380062 ; British Trade with Spanish America, 1763-1808 (9781781380062) >
+    au < exists ; exists ; 2014 ; 9781781381359 ;  ; 9781781381359 ; Clubbing Together (9781781381359) >
+    au < exists ; exists ; 2014 ; 9781781381236 ;  ; 9781781381236 ; Collective Conviction (9781781381236) >
+    au < exists ; exists ; 2014 ; 9781781381182 ;  ; 9781781381182 ; Communities in Contemporary Anglophone Caribbean Short Stories (9781781381182) >
+    au < exists ; exists ; 2014 ; 9781781381373 ;  ; 9781781381373 ; Crisis, Credibility and Corporate History (9781781381373) >
+    au < exists ; exists ; 2014 ; 9781781380208 ; 9781781386002 ; 9781781386002 ; Dada 1916 in Theory (9781781386002) >
+    au < exists ; exists ; 2014 ; 9781781380321 ; 9781781385944 ; 9781781385944 ; Decolonising the Intellectual (9781781385944) >
+    au < exists ; exists ; 2014 ; 9781781380215 ;  ; 9781781380215 ; Environmental Politics in Latin America and the Caribbean volume 1 (9781781380215) >
+    au < exists ; exists ; 2014 ; 9781781380246 ;  ; 9781781380246 ; Environmental Politics in Latin America and the Caribbean volume 2 (9781781380246) >
+    au < exists ; exists ; 2014 ; 9781781381243 ;  ; 9781781381243 ; Essays in Romanticism, Volume 21.1 2014 (9781781381243) >
+    au < exists ; exists ; 2014 ; 9781781381472 ;  ; 9781781381472 ; Essays in Romanticism, Volume 21.2 2014 (9781781381472) >
+    au < exists ; exists ; 2014 ; 9781781380345 ; 9781781385906 ; 9781781385906 ; Francophone Afropean Literatures (9781781385906) >
+    au < exists ; exists ; 2014 ; 9781781381496 ;  ; 9781781381496 ; Historical Studies in Industrial Relations, Volume 35 2014 (9781781381496) >
+    au < exists ; exists ; 2014 ; 9781781380253 ; 9781781385982 ; 9781781385982 ; Involuntary Associations (9781781385982) >
+    au < exists ; exists ; 2014 ; 9781781381199 ;  ; 9781781381199 ; Irish Science Fiction (9781781381199) >
+    au < exists ; exists ; 2014 ; 9781902700519 ;  ; 9781902700519 ; John Moores Painting Prize 2014 (9781902700519) >
+    au < exists ; exists ; 2014 ; 9781846319518 ;  ; 9781846319518 ; La Vie d’Edouard le Confesseur by a Nun of Barking Abbey (9781846319518) >
+    au < exists ; exists ; 2014 ; 9781846319440 ; 9781781385654 ; 9781781385654 ; Labour and the Caucus (9781781385654) >
+    au < exists ; exists ; 2014 ; 9781846319501 ;  ; 9781846319501 ; Land Travel and Communications in Tudor and Stuart England (9781846319501) >
+    au < exists ; exists ; 2014 ; 9781781380369 ; 9781781385869 ; 9781781385869 ; Language and Literary Form in French Caribbean Writing (9781781385869) >
+    au < exists ; exists ; 2014 ; 9781781381205 ;  ; 9781781381205 ; Lemography (9781781381205) >
+    au < exists ; exists ; 2014 ; 9781781381410 ;  ; 9781781381410 ; Mrs Stone & Dr Smellie (9781781381410) >
+    au < exists ; exists ; 2014 ; 9781781381427 ;  ; 9781781381427 ; Newspapers and Newsmakers (9781781381427) >
+    au < exists ; exists ; 2014 ; 9781846319396 ;  ; 9781846319396 ; Picasso / Marx (9781846319396) >
+    au < exists ; exists ; 2014 ; 9781781380352 ; 9781781385876 ; 9781781385876 ; Poetry & Responsibility (9781781385876) >
+    au < exists ; exists ; 2014 ; 9781781381502 ;  ; 9781781381502 ; Policing in Northern Ireland (9781781381502) >
+    au < exists ; exists ; 2014 ; 9781781380277 ; 9781781385999 ; 9781781385999 ; Political Communication in the Republic of Ireland (9781781385999) >
+    au < exists ; exists ; 2014 ; 9781781381250 ;  ; 9781781381250 ; Public Sculpture of Sussex (9781781381250) >
+    au < exists ; exists ; 2014 ; 9781781380178 ;  ; 9781781380178 ; Stanislaw Lem: Selected Letters to Michael Kandel (9781781380178) >
+    au < exists ; exists ; 2014 ; 9781781381441 ;  ; 9781781381441 ; Talking Revolution (9781781381441) >
+    au < exists ; exists ; 2014 ; 9781846319563 ;  ; 9781846319563 ; The Birds of Derbyshire (9781846319563) >
+    au < exists ; exists ; 2014 ; 9781781381267 ;  ; 9781781381267 ; The Birds of Herefordshire (9781781381267) >
+    au < exists ; exists ; 2014 ; 9781781381366 ;  ; 9781781381366 ; The Collected Writings of Edward Rushton (9781781381366) >
+    au < exists ; exists ; 2014 ; 9781781380314 ; 9781781385937 ; 9781781385937 ; The Colonial System Unveiled (9781781385937) >
+    au < exists ; exists ; 2014 ; 9781781381274 ;  ; 9781781381274 ; The Companion to Dombey and Son (9781781381274) >
+    au < exists ; exists ; 2014 ; 9781781380260 ; 9781781385890 ; 9781781385890 ; The IRA in Britain, 1919–1923 (9781781385890) >
+    au < exists ; exists ; 2014 ; 9781781380376 ; 9781781385883 ; 9781781385883 ; The Literatures of the French Pacific (9781781385883) >
+    au < exists ; exists ; 2014 ; 9781781380383 ; 9781781385951 ; 9781781385951 ; The Liverpool Companion to World Science Fiction Film (9781781385951) >
+    au < exists ; exists ; 2014 ; 9781781380284 ; 9781781385920 ; 9781781385920 ; The Roman Hannibal (9781781385920) >
+    au < exists ; exists ; 2014 ; 9781781380338 ; 9781781385975 ; 9781781385975 ; The Social Architecture of French Cinema (9781781385975) >
+    au < exists ; exists ; 2014 ; 9781781380291 ; 9781781386019 ; 9781781386019 ; The Winter of Discontent (9781781386019) >
+    au < exists ; exists ; 2014 ; 9780989082679 ;  ; 9780989082679 ; Virginia Woolf and the Common(wealth) Reader (9780989082679) >
+    au < exists ; exists ; 2014 ; 9781781381465 ;  ; 9781781381465 ; Writing on the Fault Line (9781781381465) >
+    au < exists ; exists ; 2015 ; 9780853236177 ;  ; 9780853236177 ; A New History of the Isle of Man, Vol. 3 (9780853236177) >
+    au < exists ; exists ; 2015 ; 9781781381793 ;  ; 9781781381793 ; And She Was (9781781381793) >
+    au < exists ; exists ; 2015 ; 9781781382516 ;  ; 9781781382516 ; Andean Truths (9781781382516) >
+    au < exists ; exists ; 2015 ; 9781781382714 ;  ; 9781781382714 ; Andreas: An Edition (9781781382714) >
+    au < exists ; exists ; 2015 ; 9781781381595 ;  ; 9781781381595 ; At the Limits of Memory (9781781381595) >
+    au < exists ; exists ; 2015 ; 9781781382639 ;  ; 9781781382639 ; Being Contemporary: French Literature, Culture and Politics Today (9781781382639) >
+    au < exists ; exists ; 2015 ; 9781781381724 ;  ; 9781781381724 ; Black Knowledges/Black Struggles (9781781381724) >
+    au < exists ; exists ; 2015 ; 9781781380185 ;  ; 9781781380185 ; Black Tommies (9781781380185) >
+    au < exists ; exists ; 2015 ; 9781781381809 ;  ; 9781781381809 ; Blood Child (9781781381809) >
+    au < exists ; exists ; 2015 ; 9781781381960 ;  ; 9781781381960 ; Branding the ‘Beur’ Author (9781781381960) >
+    au < exists ; exists ; 2015 ; 9781781381335 ;  ; 9781781381335 ; Byron and John Murray (9781781381335) >
+    au < exists ; exists ; 2015 ; 9781781381519 ;  ; 9781781381519 ; Caribbean Globalizations, 1492 to the Present Day (9781781381519) >
+    au < exists ; exists ; 2015 ; 9781781381892 ;  ; 9781781381892 ; Combined and Uneven Development (9781781381892) >
+    au < exists ; exists ; 2015 ; 9781781381878 ;  ; 9781781381878 ; Contemporary Irish Women Poets (9781781381878) >
+    au < exists ; exists ; 2015 ; 9781781381717 ;  ; 9781781381717 ; Creolizing Europe (9781781381717) >
+    au < exists ; exists ; 2015 ; 9781781382752 ;  ; 9781781382752 ; Cultural Diplomacy (9781781382752) >
+    au < exists ; exists ; 2015 ; 9781781381939 ;  ; 9781781381939 ; Cultures of Anyone (9781781381939) >
+    au < exists ; exists ; 2015 ; 9781781381311 ;  ; 9781781381311 ; Doctors in English (9781781381311) >
+    au < exists ; exists ; 2015 ; 9781781381380 ;  ; 9781781381380 ; Economy (9781781381380) >
+    au < exists ; exists ; 2015 ; 9781781382578 ;  ; 9781781382578 ; Édith Piaf (9781781382578) >
+    au < exists ; exists ; 2015 ; 9781781382721 ;  ; 9781781382721 ; Editing Medieval Texts (9781781382721) >
+    au < exists ; exists ; 2015 ; 9780989082686 ;  ; 9780989082686 ; Edward Dowden: A Critical Edition of the Complete Poetry (9780989082686) >
+    au < exists ; exists ; 2015 ; 9781781381991 ;  ; 9781781381991 ; Essays in Romanticism, Volume 22.1 2015 (9781781381991) >
+    au < exists ; exists ; 2015 ; 9781781382004 ;  ; 9781781382004 ; Essays in Romanticism, Volume 22.2 2015 (9781781382004) >
+    au < exists ; exists ; 2015 ; 9781781382622 ;  ; 9781781382622 ; Francophone Jewish Writers (9781781382622) >
+    au < exists ; exists ; 2015 ; 9781781381397 ;  ; 9781781381397 ; Funding Philanthropy (9781781381397) >
+    au < exists ; exists ; 2015 ; 9781781382554 ;  ; 9781781382554 ; Gifts for the Gods (9781781382554) >
+    au < exists ; exists ; 2015 ; 9781781381885 ;  ; 9781781381885 ; Group Therapy: Mental Distress in a Digital Age (9781781381885) >
+    au < exists ; exists ; 2015 ; 9781781382660 ;  ; 9781781382660 ; Guide to Scripts Used in English Writings up to 1500 (9781781382660) >
+    au < exists ; exists ; 2015 ; 9781781381618 ;  ; 9781781381618 ; Heroes or Traitors? (9781781381618) >
+    au < exists ; exists ; 2015 ; 9781781382011 ;  ; 9781781382011 ; Historical Studies in Industrial Relations, Volume 36 2015 (9781781382011) >
+    au < exists ; exists ; 2015 ; 9781781381823 ;  ; 9781781381823 ; Leisure and the Irish in the Nineteenth Century (9781781381823) >
+    au < exists ; exists ; 2015 ; 9781781382509 ;  ; 9781781382509 ; Life and Limb (9781781382509) >
+    au < exists ; exists ; 2015 ; 9781942954026 ;  ; 9781942954026 ; Love and Sex in D. H. Lawrence (9781942954026) >
+    au < exists ; exists ; 2015 ; 9781781381403 ;  ; 9781781381403 ; Magazines, Travel, and Middlebrow Culture (9781781381403) >
+    au < exists ; exists ; 2015 ; 9781781381229 ;  ; 9781781381229 ; Making 1916 (9781781381229) >
+    au < exists ; exists ; 2015 ; 9781781381656 ;  ; 9781781381656 ; Marc Karlin (9781781381656) >
+    au < exists ; exists ; 2015 ; 9781781381625 ;  ; 9781781381625 ; Migration, Ethnicity, and Madness (9781781381625) >
+    au < exists ; exists ; 2015 ; 9781781382431 ;  ; 9781781382431 ; Mulberry (9781781382431) >
+    au < exists ; exists ; 2015 ; 9781781381984 ;  ; 9781781381984 ; Muslim Women in French Cinema (9781781381984) >
+    au < exists ; exists ; 2015 ; 9780990895893 ;  ; 9780990895893 ; Never Out of Reach (9780990895893) >
+    au < exists ; exists ; 2015 ; 9781781381601 ;  ; 9781781381601 ; On the Edge: Writing the Border between Haiti and the Dominican Republic (9781781381601) >
+    au < exists ; exists ; 2015 ; 9781781382745 ;  ; 9781781382745 ; Patrick Modiano (9781781382745) >
+    au < exists ; exists ; 2015 ; 9781781381908 ;  ; 9781781381908 ; Poetry, Photography, Ekphrasis (9781781381908) >
+    au < exists ; exists ; 2015 ; 9781781382561 ;  ; 9781781382561 ; Positivism, Science and ‘The Scientists’ in Porfirian Mexico (9781781382561) >
+    au < exists ; exists ; 2015 ; 9781781381687 ;  ; 9781781381687 ; Public Sculpture of Sheffield and South Yorkshire (9781781381687) >
+    au < exists ; exists ; 2015 ; 9781781381953 ;  ; 9781781381953 ; Publishing Africa in French (9781781381953) >
+    au < exists ; exists ; 2015 ; 9781781381946 ;  ; 9781781381946 ; Rwanda Genocide Stories (9781781381946) >
+    au < exists ; exists ; 2015 ; 9781781381830 ;  ; 9781781381830 ; Science Fiction Double Feature (9781781381830) >
+    au < exists ; exists ; 2015 ; 9781781382608 ;  ; 9781781382608 ; Science Fiction Rebels: The Story of the Science-Fiction Magazines from 1981 to 1990 (9781781382608) >
+    au < exists ; exists ; 2015 ; 9781781381816 ;  ; 9781781381816 ; Small Hands (9781781381816) >
+    au < exists ; exists ; 2015 ; 9781781381861 ;  ; 9781781381861 ; Stanislaw Lem: Philosopher of the Future (9781781381861) >
+    au < exists ; exists ; 2015 ; 9781781381434 ;  ; 9781781381434 ; Surrealism, Science Fiction and Comics (9781781381434) >
+    au < exists ; exists ; 2015 ; 9781781381632 ;  ; 9781781381632 ; The Alvarez Generation (9781781381632) >
+    au < exists ; exists ; 2015 ; 9781781382646 ;  ; 9781781382646 ; The Battle of Crécy (9781781382646) >
+    au < exists ; exists ; 2015 ; 9781846319488 ;  ; 9781846319488 ; The Complete English Poems of John Skelton (9781846319488) >
+    au < exists ; exists ; 2015 ; 9781781382547 ;  ; 9781781382547 ; The Crimean War and Irish society (9781781382547) >
+    au < exists ; exists ; 2015 ; 9781781382738 ;  ; 9781781382738 ; The Della Robbia Pottery (9781781382738) >
+    au < exists ; exists ; 2015 ; 9781781381731 ;  ; 9781781381731 ; The Earles of Liverpool (9781781381731) >
+    au < exists ; exists ; 2015 ; 9781781382653 ;  ; 9781781382653 ; The Material Culture of the Built Environment in the Anglo-Saxon World (9781781382653) >
+    au < exists ; exists ; 2015 ; 9780990895886 ;  ; 9780990895886 ; The Reimagining of Place in English Modernism (9780990895886) >
+    au < exists ; exists ; 2015 ; 9781781382585 ;  ; 9781781382585 ; The Rhythm and the Tide (9781781382585) >
+    au < exists ; exists ; 2015 ; 9781781381458 ;  ; 9781781381458 ; thingworld (9781781381458) >
+    au < exists ; exists ; 2015 ; 9781781381786 ;  ; 9781781381786 ; TransVisuality: The Cultural Dimension of Visuality (9781781381786) >
+    au < exists ; exists ; 2015 ; 9781781381847 ;  ; 9781781381847 ; Tropics of Haiti (9781781381847) >
+    au < exists ; exists ; 2015 ; 9780990895800 ;  ; 9780990895800 ; Virginia Woolf: Writing the World (9780990895800) >
+    au < exists ; exists ; 2015 ; 9781781382677 ;  ; 9781781382677 ; Visualising Slavery (9781781382677) >
+    au < exists ; exists ; 2015 ; 9781781381977 ;  ; 9781781381977 ; Writing Life (9781781381977) >
+    au < exists ; exists ; 2015 ; 9780989082693 ;  ; 9780989082693 ; Writing Modern Ireland (9780989082693) >
+    au < exists ; exists ; 2016 ; 9781781383070 ; 9781781383087 ; 9781781383087 ; Benjamin Disraeli and John Murray: The Politician, The Publisher and The Representative (9781781383087) >
+    au < exists ; exists ; 2016 ; 9781781382882 ; 9781781384565 ; 9781781384565 ; Between the Bocas: A Literary Geography of Western Trinidad (9781781384565) >
+    au < exists ; exists ; 2016 ; 9781781382967 ; 9781781383797 ; 9781781383797 ; Bourdieu and Postcolonial Studies (9781781383797) >
+    au < exists ; exists ; 2016 ; 9781781382950 ; 9781781383780 ; 9781781383780 ; Caribbean (9781781383780) >
+    au < exists ; exists ; 2016 ; 9781781382448 ;  ; 9781781382448 ; Cities in Dialogue (9781781382448) >
+    au < exists ; exists ; 2016 ; 9781781383018 ; 9781781384572 ; 9781781384572 ; Dangerous Creole Liaisons (9781781384572) >
+    au < exists ; exists ; 2016 ; 9781781382837 ;  ; 9781781382837 ; Distant freedom (9781781382837) >
+    au < exists ; exists ; 2016 ; 9781781382813 ;  ; 9781781382813 ; Donatist Schism (9781781382813) >
+    au < exists ; exists ; 2016 ; 9781781383131 ;  ; 9781781383131 ; Essays in Romanticism, Volume 23.1 2016 (9781781383131) >
+    au < exists ; exists ; 2016 ; 9781781383025 ; 9781781384589 ; 9781781384589 ; Europeanising Spaces in Paris (9781781384589) >
+    au < exists ; exists ; 2016 ; 9781781382912 ;  ; 9781781382912 ; Every Little Sound (9781781382912) >
+    au < exists ; exists ; 2016 ; 9781942954057 ;  ; 9781942954057 ; Fascist Directive: Ezra Pound and Italian Cultural Nationalism (9781942954057) >
+    au < exists ; exists ; 2016 ; 9781781382998 ; 9781781384527 ; 9781781384527 ; Haiti Exception (9781781384527) >
+    au < exists ; exists ; 2016 ; 9781781382615 ;  ; 9781781382615 ; Hard Reading: Learning from Science Fiction (9781781382615) >
+    au < exists ; exists ; 2016 ; 9781781382806 ;  ; 9781781382806 ; Home/Land (9781781382806) >
+    au < exists ; exists ; 2016 ; 9781781382875 ; 9781781384602 ; 9781781384602 ; Lost in Transition: Constructing Memory in Contemporary Spain (9781781384602) >
+    au < exists ; exists ; 2016 ; 9781846318788 ;  ; 9781846318788 ; Manchester (9781846318788) >
+    au < exists ; exists ; 2016 ; 9781781382981 ; 9781781384534 ; 9781781384534 ; Manuscripts of the Wycliffite Bible in the Bodleian and Oxford College Libraries (9781781384534) >
+    au < exists ; exists ; 2016 ; 9781781383032 ; 9781781384619 ; 9781781384619 ; Pre-Raphaelites: Beauty and Rebellion (9781781384619) >
+    au < exists ; exists ; 2016 ; 9781781383001 ; 9781781384596 ; 9781781384596 ; Queer Maghrebi French (9781781384596) >
+    au < exists ; exists ; 2016 ; 9781781383094 ; 9781781388624 ; 9781781388624 ; Race on Display in 20th- and 21st Century France (9781781388624) >
+    au < exists ; exists ; 2016 ; 9781781382929 ;  ; 9781781382929 ; Slant Light (9781781382929) >
+    au < exists ; exists ; 2016 ; 9781781382783 ;  ; 9781781382783 ; Soldiers as Workers (9781781382783) >
+    au < exists ; exists ; 2016 ; 9781781382820 ;  ; 9781781382820 ; Tale of Two Saints (9781781382820) >
+    au < exists ; exists ; 2016 ; 9781781382844 ; 9781781384541 ; 9781781384541 ; Terraforming: Ecopolitical Transformations and Environmentalism in Science Fiction (9781781384541) >
+    au < exists ; exists ; 2016 ; 9781781382592 ;  ; 9781781382592 ; The Birds of Shropshire (9781781382592) >
+    au < exists ; exists ; 2016 ; 9781781382868 ; 9781781384558 ; 9781781384558 ; Vital Subjects (9781781384558) >
+    au < exists ; exists ; 2016 ; 9781781382684 ;  ; 9781781382684 ; Worker Voice (9781781382684) >
+    au < exists ; exists ; 2017 ; 9780853236375 ;  ; 9780853236375 ; A New History of the Isle of Man, Vol. 4 (9780853236375) >
+    au < exists ; exists ; 2017 ; 9781781381342 ;  ; 9781781381342 ; Caring for Migrants (9781781381342) >
+    au < exists ; exists ; 2017 ; 9781846314681 ;  ; 9781846314681 ; Walking Stewart (9781846314681) >
+
+   }
 
 }
