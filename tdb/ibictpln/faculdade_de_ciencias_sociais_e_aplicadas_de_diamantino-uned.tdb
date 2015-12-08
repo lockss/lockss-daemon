@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,7 +17,7 @@
       param[base_url] = http://www.portaldeperiodicos.uned.edu.br/
       param[journal_id] = REJUNED
 
-      au < released ; 2011 ; 1 ; Revista Jurídica da UNED Volume 1 ; 2011 >
+      au < released ; 2011 ; 1 ; Revista Jurídica da UNED Volume 1 ; 2011 ; >
 
   }
 
@@ -32,7 +32,7 @@
       param[base_url] = http://www.portaldeperiodicos.uned.edu.br/
       param[journal_id] = REMENFE
 
-      au < released ; 2010 ; 1 ; Revista Matogrossense de Enfermagem (REMENFE) Volume 1 ; 2010 >
+      au < released ; 2010 ; 1 ; Revista Matogrossense de Enfermagem (REMENFE) Volume 1 ; 2010 ; >
 
   }
 

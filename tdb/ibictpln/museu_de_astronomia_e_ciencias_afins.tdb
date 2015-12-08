@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,14 +17,14 @@
       param[base_url] = http://revistamuseologiaepatrimonio.mast.br/
       param[journal_id] = ppgpmus
 
-      au < released ; 2008 ; 1 ; Museologia e Patrimônio Volume 2008 ; 2008 >
-      au < released ; 2009 ; 2 ; Museologia e Patrimônio Volume 2009 ; 2009 >
-      au < released ; 2010 ; 3 ; Museologia e Patrimônio Volume 2010 ; 2010 >
-      au < released ; 2011 ; 4 ; Museologia e Patrimônio Volume 2011 ; 2011 >
-      au < released ; 2012 ; 5 ; Museologia e Patrimônio Volume 2012 ; 2012 >
-      au < released ; 2013 ; 6 ; Museologia e Patrimônio Volume 2013 ; 2013 >
-      au < released ; 2014 ; 7 ; Museologia e Patrimônio Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 8 ; Museologia e Patrimônio Volume 2015 ; 2015 >
+      au < released ; 2008 ; 1 ; Museologia e Patrimônio Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 2 ; Museologia e Patrimônio Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 3 ; Museologia e Patrimônio Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 4 ; Museologia e Patrimônio Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 5 ; Museologia e Patrimônio Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 6 ; Museologia e Patrimônio Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 7 ; Museologia e Patrimônio Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 8 ; Museologia e Patrimônio Volume 2015 ; 2015 ; >
 
   }
 

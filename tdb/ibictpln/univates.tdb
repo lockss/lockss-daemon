@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,11 +17,11 @@
       param[base_url] = http://www.univates.br/revistas/
       param[journal_id] = cadped
 
-      au < exists ; 2010 ; 1 ; Caderno Pedagógico Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 2 ; Caderno Pedagógico Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 3 ; Caderno Pedagógico Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 4 ; Caderno Pedagógico Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 5 ; Caderno Pedagógico Volume 2014 ; 2014 >
+      au < exists ; 2010 ; 1 ; Caderno Pedagógico Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 2 ; Caderno Pedagógico Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 3 ; Caderno Pedagógico Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 4 ; Caderno Pedagógico Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 5 ; Caderno Pedagógico Volume 2014 ; 2014 ; >
 
   }
 
@@ -36,12 +36,12 @@
       param[base_url] = http://www.univates.br/revistas/
       param[journal_id] = destaques
 
-      au < exists ; 2009 ; 1 ; Destaques Acadêmicos Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 2 ; Destaques Acadêmicos Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 3 ; Destaques Acadêmicos Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 4 ; Destaques Acadêmicos Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 5 ; Destaques Acadêmicos Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 6 ; Destaques Acadêmicos Volume 2014 ; 2014 >
+      au < exists ; 2009 ; 1 ; Destaques Acadêmicos Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 2 ; Destaques Acadêmicos Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 3 ; Destaques Acadêmicos Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 4 ; Destaques Acadêmicos Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 5 ; Destaques Acadêmicos Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 6 ; Destaques Acadêmicos Volume 2014 ; 2014 ; >
 
   }
 
@@ -56,11 +56,11 @@
       param[base_url] = http://www.univates.br/revistas/
       param[journal_id] = estudoedebate
 
-      au < exists ; 2010 ; 1 ; Estudo & Debate Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 2 ; Estudo & Debate Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 3 ; Estudo & Debate Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 4 ; Estudo & Debate Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 5 ; Estudo & Debate Volume 2014 ; 2014 >
+      au < exists ; 2010 ; 1 ; Estudo & Debate Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 2 ; Estudo & Debate Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 3 ; Estudo & Debate Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 4 ; Estudo & Debate Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 5 ; Estudo & Debate Volume 2014 ; 2014 ; >
 
   }
 
@@ -75,12 +75,12 @@
       param[base_url] = http://www.univates.br/revistas/
       param[journal_id] = signos
 
-      au < exists ; 2009 ; 1 ; Signos Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 2 ; Signos Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 3 ; Signos Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 4 ; Signos Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 5 ; Signos Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 6 ; Signos Volume 2014 ; 2014 >
+      au < exists ; 2009 ; 1 ; Signos Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 2 ; Signos Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 3 ; Signos Volume 2011 ; 2011 ; >
+      au < expected ; 2012 ; 4 ; Signos Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 5 ; Signos Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 6 ; Signos Volume 2014 ; 2014 ; >
 
   }
 

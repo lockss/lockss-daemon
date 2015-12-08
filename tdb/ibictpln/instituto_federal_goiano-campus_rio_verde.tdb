@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,12 +17,12 @@
       param[base_url] = http://rioverde.ifgoiano.edu.br/periodicos/
       param[journal_id] = gst
 
-      au < exists ; 2008 ; 1 ; Global Science and Technology Volume 1 ; 2008 >
-      au < exists ; 2009 ; 2 ; Global Science and Technology Volume 2 ; 2009 >
-      au < exists ; 2010 ; 3 ; Global Science and Technology Volume 3 ; 2010 >
-      au < exists ; 2011 ; 4 ; Global Science and Technology Volume 4 ; 2011 >
-      au < exists ; 2012 ; 5 ; Global Science and Technology Volume 5 ; 2012 >
-      au < exists ; 2013 ; 6 ; Global Science and Technology Volume 6 ; 2013 >
+      au < exists ; 2008 ; 1 ; Global Science and Technology Volume 1 ; 2008 ; >
+      au < exists ; 2009 ; 2 ; Global Science and Technology Volume 2 ; 2009 ; >
+      au < exists ; 2010 ; 3 ; Global Science and Technology Volume 3 ; 2010 ; >
+      au < exists ; 2011 ; 4 ; Global Science and Technology Volume 4 ; 2011 ; >
+      au < exists ; 2012 ; 5 ; Global Science and Technology Volume 5 ; 2012 ; >
+      au < exists ; 2013 ; 6 ; Global Science and Technology Volume 6 ; 2013 ; >
 
   }
 
@@ -37,9 +37,9 @@
       param[base_url] = http://rioverde.ifgoiano.edu.br/periodicos/
       param[journal_id] = vidadeensino
 
-      au < exists ; 2009 ; 1 ; Revista Vida de Ensino Volume 1 ; 2009 >
-      au < exists ; 2010 ; 2 ; Revista Vida de Ensino Volume 2 ; 2010 >
-      au < expected ; 2013 ; 3 ; Revista Vida de Ensino Volume 3 ; 2013 >
+      au < exists ; 2009 ; 1 ; Revista Vida de Ensino Volume 1 ; 2009 ; >
+      au < exists ; 2010 ; 2 ; Revista Vida de Ensino Volume 2 ; 2010 ; >
+      au < expected ; 2013 ; 3 ; Revista Vida de Ensino Volume 3 ; 2013 ; >
 
   }
 

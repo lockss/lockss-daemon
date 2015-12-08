@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,10 +17,10 @@
       param[base_url] = http://bibliotecadigital.fgv.br/ojs/
       param[journal_id] = boletimebap
 
-      au < exists ; 1964 ; 1 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 1 ; 1964 >
-      au < exists ; 1965 ; 2 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 2 ; 1965 >
-      au < exists ; 1966 ; 3 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 3 ; 1966 >
-      au < exists ; 1967 ; 4 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 4 ; 1967 >
+      au < exists ; 1964 ; 1 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 1 ; 1964 ; >
+      au < exists ; 1965 ; 2 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 2 ; 1965 ; >
+      au < exists ; 1966 ; 3 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 3 ; 1966 ; >
+      au < exists ; 1967 ; 4 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 4 ; 1967 ; >
 
   }
 
@@ -36,19 +36,19 @@
       param[base_url] = http://bibliotecadigital.fgv.br/ojs/
       param[journal_id] = rbfin
 
-      au < released ; 2003 ; 1 ; Brazilian Review of Finance  Volume 1 ; 2003 >
-      au < released ; 2004 ; 2 ; Brazilian Review of Finance  Volume 2 ; 2004 >
-      au < released ; 2005 ; 3 ; Brazilian Review of Finance  Volume 3 ; 2005 >
-      au < released ; 2006 ; 4 ; Brazilian Review of Finance  Volume 4 ; 2006 >
-      au < released ; 2007 ; 5 ; Brazilian Review of Finance  Volume 5 ; 2007 >
-      au < released ; 2008 ; 6 ; Brazilian Review of Finance  Volume 6 ; 2008 >
-      au < released ; 2009 ; 7 ; Brazilian Review of Finance  Volume 7 ; 2009 >
-      au < released ; 2010 ; 8 ; Brazilian Review of Finance  Volume 8 ; 2010 >
-      au < released ; 2011 ; 9 ; Brazilian Review of Finance  Volume 9 ; 2011 >
-      au < released ; 2012 ; 10 ; Brazilian Review of Finance  Volume 10 ; 2012 >
-      au < released ; 2013 ; 11 ; Brazilian Review of Finance  Volume 11 ; 2013 >
-      au < released ; 2014 ; 12 ; Brazilian Review of Finance  Volume 12 ; 2014 >
-      au < manifest ; 2015 ; 13 ; Brazilian Review of Finance  Volume 13 ; 2015 >
+      au < released ; 2003 ; 1 ; Brazilian Review of Finance  Volume 1 ; 2003 ; >
+      au < released ; 2004 ; 2 ; Brazilian Review of Finance  Volume 2 ; 2004 ; >
+      au < released ; 2005 ; 3 ; Brazilian Review of Finance  Volume 3 ; 2005 ; >
+      au < released ; 2006 ; 4 ; Brazilian Review of Finance  Volume 4 ; 2006 ; >
+      au < released ; 2007 ; 5 ; Brazilian Review of Finance  Volume 5 ; 2007 ; >
+      au < released ; 2008 ; 6 ; Brazilian Review of Finance  Volume 6 ; 2008 ; >
+      au < released ; 2009 ; 7 ; Brazilian Review of Finance  Volume 7 ; 2009 ; >
+      au < released ; 2010 ; 8 ; Brazilian Review of Finance  Volume 8 ; 2010 ; >
+      au < released ; 2011 ; 9 ; Brazilian Review of Finance  Volume 9 ; 2011 ; >
+      au < released ; 2012 ; 10 ; Brazilian Review of Finance  Volume 10 ; 2012 ; >
+      au < released ; 2013 ; 11 ; Brazilian Review of Finance  Volume 11 ; 2013 ; >
+      au < released ; 2014 ; 12 ; Brazilian Review of Finance  Volume 12 ; 2014 ; >
+      au < manifest ; 2015 ; 13 ; Brazilian Review of Finance  Volume 13 ; 2015 ; >
 
   }
 
@@ -63,10 +63,10 @@
       param[base_url] = http://bibliotecadigital.fgv.br/ojs/
       param[journal_id] = cgpc
 
-      au < exists ; 2010 ; 15 ; Cadernos Gestão Pública e Cidadania Volume 15 ; 2010 >
-      au < exists ; 2011 ; 16 ; Cadernos Gestão Pública e Cidadania Volume 16 ; 2011 >
-      au < exists ; 2012 ; 17 ; Cadernos Gestão Pública e Cidadania Volume 17 ; 2012 >
-      au < expected ; 2013 ; 18 ; Cadernos Gestão Pública e Cidadania Volume 18 ; 2013 >
+      au < exists ; 2010 ; 15 ; Cadernos Gestão Pública e Cidadania Volume 15 ; 2010 ; >
+      au < exists ; 2011 ; 16 ; Cadernos Gestão Pública e Cidadania Volume 16 ; 2011 ; >
+      au < exists ; 2012 ; 17 ; Cadernos Gestão Pública e Cidadania Volume 17 ; 2012 ; >
+      au < expected ; 2013 ; 18 ; Cadernos Gestão Pública e Cidadania Volume 18 ; 2013 ; >
 
   }
 
@@ -81,11 +81,11 @@
       param[base_url] = http://bibliotecadigital.fgv.br/ojs/
       param[journal_id] = gvcasos
 
-      au < exists ; 2010 ; 0 ; GVcasos Volume 0 (0) ; 0000 >
-      au < exists ; 2010 ; 0 ; GVcasos Volume 0 (2010) ; 2010 >
-      au < exists ; 2011 ; 1 ; GVcasos Volume 1 ; 2011 >
-      au < exists ; 2012 ; 2 ; GVcasos Volume 2 ; 2012 >
-      au < expected ; 2013 ; 3 ; GVcasos Volume 3 ; 2013 >
+      au < exists ; 2010 ; 0 ; GVcasos Volume 0 (0) ; 0000 ; >
+      au < exists ; 2010 ; 0 ; GVcasos Volume 0 (2010) ; 2010 ; >
+      au < exists ; 2011 ; 1 ; GVcasos Volume 1 ; 2011 ; >
+      au < exists ; 2012 ; 2 ; GVcasos Volume 2 ; 2012 ; >
+      au < expected ; 2013 ; 3 ; GVcasos Volume 3 ; 2013 ; >
 
   }
 
@@ -100,14 +100,14 @@
       param[base_url] = http://bibliotecadigital.fgv.br/ojs/
       param[journal_id] = oit
 
-      au < exists ; 2006 ; 1 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 1 ; 2006 >
-      au < exists ; 2007 ; 2 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 2 ; 2007 >
-      au < exists ; 2008 ; 3 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 3 ; 2008 >
-      au < exists ; 2009 ; 4 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 4 ; 2009 >
-      au < exists ; 2010 ; 5 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 5 ; 2010 >
-      au < exists ; 2011 ; 6 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 6 ; 2011 >
-      au < exists ; 2012 ; 7 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 7 ; 2012 >
-      au < expected ; 2013 ; 8 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 8 ; 2013 >
+      au < exists ; 2006 ; 1 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 1 ; 2006 ; >
+      au < exists ; 2007 ; 2 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 2 ; 2007 ; >
+      au < exists ; 2008 ; 3 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 3 ; 2008 ; >
+      au < exists ; 2009 ; 4 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 4 ; 2009 ; >
+      au < exists ; 2010 ; 5 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 5 ; 2010 ; >
+      au < exists ; 2011 ; 6 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 6 ; 2011 ; >
+      au < exists ; 2012 ; 7 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 7 ; 2012 ; >
+      au < expected ; 2013 ; 8 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 8 ; 2013 ; >
 
   }
 
@@ -122,53 +122,53 @@
       param[base_url] = http://bibliotecadigital.fgv.br/ojs/
       param[journal_id] = rap
 
-      au < exists ; 1967 ; 1 ; Revista de Administração Pública Volume 1 ; 1967 >
-      au < exists ; 1968 ; 2 ; Revista de Administração Pública Volume 2 ; 1968 >
-      au < exists ; 1969 ; 3 ; Revista de Administração Pública Volume 3 ; 1969 >
-      au < exists ; 1970 ; 4 ; Revista de Administração Pública Volume 4 ; 1970 >
-      au < exists ; 1971 ; 5 ; Revista de Administração Pública Volume 5 ; 1971 >
-      au < exists ; 1972 ; 6 ; Revista de Administração Pública Volume 6 ; 1972 >
-      au < exists ; 1973 ; 7 ; Revista de Administração Pública Volume 7 ; 1973 >
-      au < exists ; 1974 ; 8 ; Revista de Administração Pública Volume 8 ; 1974 >
-      au < exists ; 1975 ; 9 ; Revista de Administração Pública Volume 9 ; 1975 >
-      au < exists ; 1976 ; 10 ; Revista de Administração Pública Volume 10 ; 1976 >
-      au < exists ; 1977 ; 11 ; Revista de Administração Pública Volume 11 ; 1977 >
-      au < exists ; 1978 ; 12 ; Revista de Administração Pública Volume 12 ; 1978 >
-      au < exists ; 1979 ; 13 ; Revista de Administração Pública Volume 13 ; 1979 >
-      au < exists ; 1980 ; 14 ; Revista de Administração Pública Volume 14 ; 1980 >
-      au < exists ; 1981 ; 15 ; Revista de Administração Pública Volume 15 ; 1981 >
-      au < exists ; 1982 ; 16 ; Revista de Administração Pública Volume 16 ; 1982 >
-      au < exists ; 1983 ; 17 ; Revista de Administração Pública Volume 17 ; 1983 >
-      au < exists ; 1984 ; 18 ; Revista de Administração Pública Volume 18 ; 1984 >
-      au < exists ; 1985 ; 19 ; Revista de Administração Pública Volume 19 ; 1985 >
-      au < exists ; 1986 ; 20 ; Revista de Administração Pública Volume 20 ; 1986 >
-      au < exists ; 1987 ; 21 ; Revista de Administração Pública Volume 21 ; 1987 >
-      au < exists ; 1988 ; 22 ; Revista de Administração Pública Volume 22 ; 1988 >
-      au < exists ; 1989 ; 23 ; Revista de Administração Pública Volume 23 ; 1989 >
-      au < exists ; 1990 ; 24 ; Revista de Administração Pública Volume 24 ; 1990 >
-      au < exists ; 1991 ; 25 ; Revista de Administração Pública Volume 25 ; 1991 >
-      au < exists ; 1992 ; 26 ; Revista de Administração Pública Volume 26 ; 1992 >
-      au < exists ; 1993 ; 27 ; Revista de Administração Pública Volume 27 ; 1993 >
-      au < exists ; 1994 ; 28 ; Revista de Administração Pública Volume 28 ; 1994 >
-      au < exists ; 1995 ; 29 ; Revista de Administração Pública Volume 29 ; 1995 >
-      au < exists ; 1996 ; 30 ; Revista de Administração Pública Volume 30 ; 1996 >
-      au < exists ; 1997 ; 31 ; Revista de Administração Pública Volume 31 ; 1997 >
-      au < exists ; 1998 ; 32 ; Revista de Administração Pública Volume 32 ; 1998 >
-      au < exists ; 1999 ; 33 ; Revista de Administração Pública Volume 33 ; 1999 >
-      au < exists ; 2000 ; 34 ; Revista de Administração Pública Volume 34 ; 2000 >
-      au < exists ; 2001 ; 35 ; Revista de Administração Pública Volume 35 ; 2001 >
-      au < exists ; 2002 ; 36 ; Revista de Administração Pública Volume 36 ; 2002 >
-      au < exists ; 2003 ; 37 ; Revista de Administração Pública Volume 37 ; 2003 >
-      au < exists ; 2004 ; 38 ; Revista de Administração Pública Volume 38 ; 2004 >
-      au < exists ; 2005 ; 39 ; Revista de Administração Pública Volume 39 ; 2005 >
-      au < exists ; 2006 ; 40 ; Revista de Administração Pública Volume 40 ; 2006 >
-      au < exists ; 2007 ; 41 ; Revista de Administração Pública Volume 41 ; 2007 >
-      au < exists ; 2008 ; 42 ; Revista de Administração Pública Volume 42 ; 2008 >
-      au < exists ; 2009 ; 43 ; Revista de Administração Pública Volume 43 ; 2009 >
-      au < exists ; 2010 ; 44 ; Revista de Administração Pública Volume 44 ; 2010 >
-      au < exists ; 2011 ; 45 ; Revista de Administração Pública Volume 45 ; 2011 >
-      au < exists ; 2012 ; 46 ; Revista de Administração Pública Volume 46 ; 2012 >
-      au < expected ; 2013 ; 47 ; Revista de Administração Pública Volume 47 ; 2013 >
+      au < exists ; 1967 ; 1 ; Revista de Administração Pública Volume 1 ; 1967 ; >
+      au < exists ; 1968 ; 2 ; Revista de Administração Pública Volume 2 ; 1968 ; >
+      au < exists ; 1969 ; 3 ; Revista de Administração Pública Volume 3 ; 1969 ; >
+      au < exists ; 1970 ; 4 ; Revista de Administração Pública Volume 4 ; 1970 ; >
+      au < exists ; 1971 ; 5 ; Revista de Administração Pública Volume 5 ; 1971 ; >
+      au < exists ; 1972 ; 6 ; Revista de Administração Pública Volume 6 ; 1972 ; >
+      au < exists ; 1973 ; 7 ; Revista de Administração Pública Volume 7 ; 1973 ; >
+      au < exists ; 1974 ; 8 ; Revista de Administração Pública Volume 8 ; 1974 ; >
+      au < exists ; 1975 ; 9 ; Revista de Administração Pública Volume 9 ; 1975 ; >
+      au < exists ; 1976 ; 10 ; Revista de Administração Pública Volume 10 ; 1976 ; >
+      au < exists ; 1977 ; 11 ; Revista de Administração Pública Volume 11 ; 1977 ; >
+      au < exists ; 1978 ; 12 ; Revista de Administração Pública Volume 12 ; 1978 ; >
+      au < exists ; 1979 ; 13 ; Revista de Administração Pública Volume 13 ; 1979 ; >
+      au < exists ; 1980 ; 14 ; Revista de Administração Pública Volume 14 ; 1980 ; >
+      au < exists ; 1981 ; 15 ; Revista de Administração Pública Volume 15 ; 1981 ; >
+      au < exists ; 1982 ; 16 ; Revista de Administração Pública Volume 16 ; 1982 ; >
+      au < exists ; 1983 ; 17 ; Revista de Administração Pública Volume 17 ; 1983 ; >
+      au < exists ; 1984 ; 18 ; Revista de Administração Pública Volume 18 ; 1984 ; >
+      au < exists ; 1985 ; 19 ; Revista de Administração Pública Volume 19 ; 1985 ; >
+      au < exists ; 1986 ; 20 ; Revista de Administração Pública Volume 20 ; 1986 ; >
+      au < exists ; 1987 ; 21 ; Revista de Administração Pública Volume 21 ; 1987 ; >
+      au < exists ; 1988 ; 22 ; Revista de Administração Pública Volume 22 ; 1988 ; >
+      au < exists ; 1989 ; 23 ; Revista de Administração Pública Volume 23 ; 1989 ; >
+      au < exists ; 1990 ; 24 ; Revista de Administração Pública Volume 24 ; 1990 ; >
+      au < exists ; 1991 ; 25 ; Revista de Administração Pública Volume 25 ; 1991 ; >
+      au < exists ; 1992 ; 26 ; Revista de Administração Pública Volume 26 ; 1992 ; >
+      au < exists ; 1993 ; 27 ; Revista de Administração Pública Volume 27 ; 1993 ; >
+      au < exists ; 1994 ; 28 ; Revista de Administração Pública Volume 28 ; 1994 ; >
+      au < exists ; 1995 ; 29 ; Revista de Administração Pública Volume 29 ; 1995 ; >
+      au < exists ; 1996 ; 30 ; Revista de Administração Pública Volume 30 ; 1996 ; >
+      au < exists ; 1997 ; 31 ; Revista de Administração Pública Volume 31 ; 1997 ; >
+      au < exists ; 1998 ; 32 ; Revista de Administração Pública Volume 32 ; 1998 ; >
+      au < exists ; 1999 ; 33 ; Revista de Administração Pública Volume 33 ; 1999 ; >
+      au < exists ; 2000 ; 34 ; Revista de Administração Pública Volume 34 ; 2000 ; >
+      au < exists ; 2001 ; 35 ; Revista de Administração Pública Volume 35 ; 2001 ; >
+      au < exists ; 2002 ; 36 ; Revista de Administração Pública Volume 36 ; 2002 ; >
+      au < exists ; 2003 ; 37 ; Revista de Administração Pública Volume 37 ; 2003 ; >
+      au < exists ; 2004 ; 38 ; Revista de Administração Pública Volume 38 ; 2004 ; >
+      au < exists ; 2005 ; 39 ; Revista de Administração Pública Volume 39 ; 2005 ; >
+      au < exists ; 2006 ; 40 ; Revista de Administração Pública Volume 40 ; 2006 ; >
+      au < exists ; 2007 ; 41 ; Revista de Administração Pública Volume 41 ; 2007 ; >
+      au < exists ; 2008 ; 42 ; Revista de Administração Pública Volume 42 ; 2008 ; >
+      au < exists ; 2009 ; 43 ; Revista de Administração Pública Volume 43 ; 2009 ; >
+      au < exists ; 2010 ; 44 ; Revista de Administração Pública Volume 44 ; 2010 ; >
+      au < exists ; 2011 ; 45 ; Revista de Administração Pública Volume 45 ; 2011 ; >
+      au < exists ; 2012 ; 46 ; Revista de Administração Pública Volume 46 ; 2012 ; >
+      au < expected ; 2013 ; 47 ; Revista de Administração Pública Volume 47 ; 2013 ; >
 
   }
 
@@ -183,32 +183,32 @@
       param[base_url] = http://bibliotecadigital.fgv.br/ojs/
       param[journal_id] = reh
 
-      au < exists ; 1988 ; 1 ; Revista Estudos Históricos Volume 1 ; 1988 >
-      au < exists ; 1989 ; 2 ; Revista Estudos Históricos Volume 2 ; 1989 >
-      au < exists ; 1990 ; 3 ; Revista Estudos Históricos Volume 3 ; 1990 >
-      au < exists ; 1991 ; 4 ; Revista Estudos Históricos Volume 4 ; 1991 >
-      au < exists ; 1992 ; 5 ; Revista Estudos Históricos Volume 5 ; 1992 >
-      au < exists ; 1993 ; 6 ; Revista Estudos Históricos Volume 6 ; 1993 >
-      au < exists ; 1994 ; 7 ; Revista Estudos Históricos Volume 7 ; 1994 >
-      au < exists ; 1995 ; 8 ; Revista Estudos Históricos Volume 8 ; 1995 >
-      au < exists ; 1996 ; 9 ; Revista Estudos Históricos Volume 9 ; 1996 >
-      au < exists ; 1997 ; 10 ; Revista Estudos Históricos Volume 10 ; 1997 >
-      au < exists ; 1998 ; 11-12 ; Revista Estudos Históricos Volume 11-12 ; 1998 >
-      au < exists ; 1999 ; 13 ; Revista Estudos Históricos Volume 13 ; 1999 >
-      au < exists ; 2000 ; 14 ; Revista Estudos Históricos Volume 14 ; 2000 >
-      au < exists ; 2001 ; 2001 ; Revista Estudos Históricos Volume 2001 ; 2001 >
-      au < exists ; 2002 ; 2002 ; Revista Estudos Históricos Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 2003 ; Revista Estudos Históricos Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 2004 ; Revista Estudos Históricos Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 2005 ; Revista Estudos Históricos Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 2006 ; Revista Estudos Históricos Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 2007 ; Revista Estudos Históricos Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 21 ; Revista Estudos Históricos Volume 21 ; 2008 >
-      au < exists ; 2009 ; 22 ; Revista Estudos Históricos Volume 22 ; 2009 >
-      au < exists ; 2010 ; 23 ; Revista Estudos Históricos Volume 23 ; 2010 >
-      au < exists ; 2011 ; 24 ; Revista Estudos Históricos Volume 24 ; 2011 >
-      au < exists ; 2012 ; 25 ; Revista Estudos Históricos Volume 25 ; 2012 >
-      au < expected ; 2013 ; 26 ; Revista Estudos Históricos Volume 26 ; 2013 >
+      au < exists ; 1988 ; 1 ; Revista Estudos Históricos Volume 1 ; 1988 ; >
+      au < exists ; 1989 ; 2 ; Revista Estudos Históricos Volume 2 ; 1989 ; >
+      au < exists ; 1990 ; 3 ; Revista Estudos Históricos Volume 3 ; 1990 ; >
+      au < exists ; 1991 ; 4 ; Revista Estudos Históricos Volume 4 ; 1991 ; >
+      au < exists ; 1992 ; 5 ; Revista Estudos Históricos Volume 5 ; 1992 ; >
+      au < exists ; 1993 ; 6 ; Revista Estudos Históricos Volume 6 ; 1993 ; >
+      au < exists ; 1994 ; 7 ; Revista Estudos Históricos Volume 7 ; 1994 ; >
+      au < exists ; 1995 ; 8 ; Revista Estudos Históricos Volume 8 ; 1995 ; >
+      au < exists ; 1996 ; 9 ; Revista Estudos Históricos Volume 9 ; 1996 ; >
+      au < exists ; 1997 ; 10 ; Revista Estudos Históricos Volume 10 ; 1997 ; >
+      au < exists ; 1998 ; 11-12 ; Revista Estudos Históricos Volume 11-12 ; 1998 ; >
+      au < exists ; 1999 ; 13 ; Revista Estudos Históricos Volume 13 ; 1999 ; >
+      au < exists ; 2000 ; 14 ; Revista Estudos Históricos Volume 14 ; 2000 ; >
+      au < exists ; 2001 ; 2001 ; Revista Estudos Históricos Volume 2001 ; 2001 ; >
+      au < exists ; 2002 ; 2002 ; Revista Estudos Históricos Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 2003 ; Revista Estudos Históricos Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 2004 ; Revista Estudos Históricos Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 2005 ; Revista Estudos Históricos Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 2006 ; Revista Estudos Históricos Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 2007 ; Revista Estudos Históricos Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 21 ; Revista Estudos Históricos Volume 21 ; 2008 ; >
+      au < exists ; 2009 ; 22 ; Revista Estudos Históricos Volume 22 ; 2009 ; >
+      au < exists ; 2010 ; 23 ; Revista Estudos Históricos Volume 23 ; 2010 ; >
+      au < exists ; 2011 ; 24 ; Revista Estudos Históricos Volume 24 ; 2011 ; >
+      au < exists ; 2012 ; 25 ; Revista Estudos Históricos Volume 25 ; 2012 ; >
+      au < expected ; 2013 ; 26 ; Revista Estudos Históricos Volume 26 ; 2013 ; >
 
   }
 
@@ -223,11 +223,11 @@
       param[base_url] = http://bibliotecadigital.fgv.br/ojs/
       param[journal_id] = riel
 
-      au < released ; 2010 ; 2010 ; Revista Ibero-Americana de Estudos Legislativos Volume 2010 ; 2010 >
-      au < released ; 2012 ; 2012 ; Revista Ibero-Americana de Estudos Legislativos Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 2013 ; Revista Ibero-Americana de Estudos Legislativos Volume 2013 ; 2013 >
-      au < released ; 2014 ; 2014 ; Revista Ibero-Americana de Estudos Legislativos Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 2015 ; Revista Ibero-Americana de Estudos Legislativos Volume 2015 ; 2015 >
+      au < released ; 2010 ; 2010 ; Revista Ibero-Americana de Estudos Legislativos Volume 2010 ; 2010 ; >
+      au < released ; 2012 ; 2012 ; Revista Ibero-Americana de Estudos Legislativos Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 2013 ; Revista Ibero-Americana de Estudos Legislativos Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 2014 ; Revista Ibero-Americana de Estudos Legislativos Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 2015 ; Revista Ibero-Americana de Estudos Legislativos Volume 2015 ; 2015 ; >
 
   }
 
@@ -242,8 +242,8 @@
       param[base_url] = http://bibliotecadigital.fgv.br/ojs/
       param[journal_id] = tlii-wps
 
-      au < exists ; 2012 ; 2012 ; Technological Learning and Industrial Innovation Working Paper Series Volume 2012 ; 2012 >
-      au < exists ; 2013 ; 2013 ; Technological Learning and Industrial Innovation Working Paper Series Volume 2013 ; 2013 >
+      au < exists ; 2012 ; 2012 ; Technological Learning and Industrial Innovation Working Paper Series Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 2013 ; Technological Learning and Industrial Innovation Working Paper Series Volume 2013 ; 2013 ; >
 
   }
 
