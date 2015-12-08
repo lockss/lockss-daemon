@@ -10,6 +10,8 @@
   param[base_url] = http://online.liverpooluniversitypress.co.uk/
   implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_eisbn] ; name >
   
+  comment[isbn] = in the case of this publisher, it appears to be the hardback isbn that gives access to the volume.
+  
    {
 
       title <
@@ -69,7 +71,7 @@
     au < manifest ; exists ; 2009 ; 9781846311789 ;  ; 9781846311789 ; The Acts of the Council of Constantinople of 553 (9781846311789) >
     au < manifest ; exists ; 2009 ; 9781846312090 ;  ; 9781846312090 ; Three Political Voices from the Age of Justinian (9781846312090) >
     au < manifest ; exists ; 2010 ; 9781846314957 ;  ; 9781846314957 ; Bede: On the Nature of Things and On Times (9781846314957) >
-    au < exists ; exists ; 2010 ; 9781846314735 ;  ; 9781846314735 ; Orosius: Seven Books of History against the Pagans (9781846314735) >
+    au < manifest ; exists ; 2010 ; 9781846314735 ;  ; 9781846314735 ; Orosius: Seven Books of History against the Pagans (9781846314735) >
     au < manifest ; exists ; 2010 ; 9781846314933 ;  ; 9781846314933 ; The Chronicle of Pseudo-Zachariah Rhetor (9781846314933) >
     au < manifest ; exists ; 2011 ; 9781846316975 ;  ; 9781846316975 ; Theophilus of Edessa's Chronicle and the Circulation of Historical Knowledge in Late Antiquity and Early Islam (9781846316975) >
     au < manifest ; exists ; 2013 ; 9781846318443 ;  ; 9781846318443 ; Bede: Commentary on Revelation (9781846318443) >
@@ -91,7 +93,6 @@
         type = bookSeries
       >
 
-    au < exists ; exists ; 1964 ; 9780853233107 ;  ; 9780853233107 ; Philosophy of Francis Bacon (9780853233107) >
     au < exists ; exists ; 1975 ; 9780859890366 ;  ; 9780859890366 ; Aldred's Marginalia (9780859890366) >
     au < exists ; exists ; 1976 ; 9780859890762 ;  ; 9780859890762 ; Aelfric's Lives Of Three English Saints (9780859890762) >
     au < exists ; exists ; 1977 ; 9780859890663 ;  ; 9780859890663 ; Deor (9780859890663) >
@@ -435,7 +436,7 @@
     au < exists ; exists ; 2001 ; 9780853235064 ; 9781781387900 ; 9781781387900 ; Tony Harrison and the Holocaust (9781781387900) >
     au < exists ; exists ; 2001 ; 9780853236641 ;  ; 9780853236641 ; Urban Visions (9780853236641) >
     au < exists ; exists ; 2002 ; 9781902700144 ;  ; 9781902700144 ; A Passion for Natural History (9781902700144) >
-    au < exists ; exists ; 2002 ; 9780853235880 ;  ; 9780853235880 ; Avitus of Vienne (9780853235880) >
+    au < manifest ; exists ; 2002 ; 9780853235880 ;  ; 9780853235880 ; Avitus of Vienne (9780853235880) >
     au < exists ; exists ; 2002 ; 9780853239871 ; 9781781386224 ; 9781781386224 ; Breeding Superman (9781781386224) >
     au < exists ; exists ; 2002 ; 9780859896061 ;  ; 9780859896061 ; British Shipbuilding and the State since 1918 (9780859896061) >
     au < exists ; exists ; 2002 ; 9780853236962 ;  ; 9780853236962 ; Cannibal Hymn (9780853236962) >
@@ -570,9 +571,9 @@
     au < exists ; exists ; 2006 ; 9781846310287 ; 9781781386279 ; 9781781386279 ; Calixthe Beyala (9781781386279) >
     au < exists ; exists ; 2006 ; 9781846310232 ;  ; 9781846310232 ; Cathal O'Byrne and the Northern Revival in Ireland 1890-1960 (9781846310232) >
     au < exists ; exists ; 2006 ; 9781846310218 ; 9781846312823 ; 9781846312823 ; Children Remembered (9781846312823) >
-    au < exists ; exists ; 2006 ; 9781846310171 ;  ; 9781846310171 ; Forkhill Protestants and Forkhill Catholics, 1787-1858 (9781846310171) >
-    au < exists ; exists ; 2006 ; 9781904675198 ;  ; 9781904675198 ; Hadrian's Wall and its People (9781904675198) >
-    au < exists ; exists ; 2006 ; 9781846310058 ;  ; 9781846310058 ; Henry James (9781846310058) >
+    au < exists ; exists ; 2006 ; 9781846310157 ;  ; 9781846310157 ; Forkhill Protestants and Forkhill Catholics, 1787-1858 (9781846310157) >
+    au < exists ; exists ; 2006 ; 9781904675440 ;  ; 9781904675440 ; Hadrian's Wall and its People (9781904675440) >
+    au < exists ; exists ; 2006 ; 9781846318627 ;  ; 9781846318627 ; Henry James (9781846318627) >
     au < exists ; exists ; 2006 ; 9780853239093 ;  ; 9780853239093 ; Irish Social and Political Attitudes (9780853239093) >
     au < exists ; exists ; 2006 ; 9781904675150 ;  ; 9781904675150 ; Justus Lipsius: On Constancy (9781904675150) >
     au < exists ; exists ; 2006 ; 9781846310348 ;  ; 9781846310348 ; Liverpool 800 (9781846310348) >
