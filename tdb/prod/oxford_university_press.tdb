@@ -99,6 +99,7 @@
     au < manifest ; 2013 ; Aesthetic Surgery Journal Volume 33 ; 33 >
     au < manifest ; 2014 ; Aesthetic Surgery Journal Volume 34 ; 34 >
     au < manifest ; 2015 ; Aesthetic Surgery Journal Volume 35 ; 35 >
+    au < expected ; 2016 ; Aesthetic Surgery Journal Volume 36 ; 36 >
 
   }
 
@@ -429,6 +430,7 @@
     au < manifest ; 2013 ; American Entomologist Volume 59 ; 59 >
     au < manifest ; 2014 ; American Entomologist Volume 60 ; 60 >
     au < manifest ; 2015 ; American Entomologist Volume 61 ; 61 >
+    au < expected ; 2016 ; American Entomologist Volume 62 ; 62 >
 
   }
 
@@ -1161,6 +1163,7 @@
 
       au < released ; 2014 ; American Literary History Volume 26 [Project MUSE] ; 26 >
       au < released ; 2015 ; American Literary History Volume 27 [Project MUSE] ; 27 >
+      au < expected ; 2016 ; American Literary History Volume 28 [Project MUSE] ; 28 >
 
       }
 
@@ -1531,6 +1534,7 @@
     au < manifest ; 2013 ; Annals of the Entomological Society of America Volume 106 ; 106 >
     au < manifest ; 2014 ; Annals of the Entomological Society of America Volume 107 ; 107 >
     au < manifest ; 2015 ; Annals of the Entomological Society of America Volume 108 ; 108 >
+    au < expected ; 2016 ; Annals of the Entomological Society of America Volume 109 ; 109 >
 
   }
 
@@ -1880,6 +1884,7 @@
     au < manifest ; 2013 ; Arbitration International Volume 29 ; 29 >
     au < manifest ; 2014 ; Arbitration International Volume 30 ; 30 >
     au < manifest ; 2015 ; Arbitration International Volume 31 ; 31 >
+    au < expected ; 2016 ; Arbitration International Volume 32 ; 32 >
 
   }
 
@@ -1989,6 +1994,7 @@
     au < manifest ; 2013 ; Arthropod Management Tests Volume 38 ; 38 >
     au < manifest ; 2014 ; Arthropod Management Tests Volume 39 ; 39 >
     au < expected ; 2015 ; Arthropod Management Tests Volume 40 ; 40 >
+    au < expected ; 2016 ; Arthropod Management Tests Volume 41 ; 41 >
 
   }
 
@@ -2024,6 +2030,7 @@
     au < released ; 2013 ; Astronomy & Geophysics Volume 54 ; 54 >
     au < manifest ; 2014 ; Astronomy & Geophysics Volume 55 ; 55 >
     au < manifest ; 2015 ; Astronomy & Geophysics Volume 56 ; 56 >
+    au < expected ; 2016 ; Astronomy & Geophysics Volume 57 ; 57 >
 
   }
 
@@ -2364,6 +2371,7 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
 
     au < manifest ; 2015 ; BJA Education Volume 15 ; 15 >
+    au < expected ; 2016 ; BJA Education Volume 16 ; 16 >
 
   }
 
@@ -3708,6 +3716,7 @@
 
       au < released ; 2014 ; The Cambridge Quarterly Volume 43 [Project MUSE] ; 43 >
       au < released ; 2015 ; The Cambridge Quarterly Volume 44 [Project MUSE] ; 44 >
+      au < expected ; 2016 ; The Cambridge Quarterly Volume 45 [Project MUSE] ; 45 >
 
       }
 
@@ -4175,6 +4184,7 @@
     au < released ; 2013 ; The Chinese Journal of Comparative Law Volume 1 ; 1 >
     au < manifest ; 2014 ; The Chinese Journal of Comparative Law Volume 2 ; 2 >
     au < manifest ; 2015 ; The Chinese Journal of Comparative Law Volume 3 ; 3 >
+    au < expected ; 2016 ; The Chinese Journal of Comparative Law Volume 4 ; 4 >
 
   }
 
@@ -4871,6 +4881,7 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2015 ; Digital Scholarship in the Humanities Volume 30 ; 30 >
+    au < expected ; 2016 ; Digital Scholarship in the Humanities Volume 31 ; 31 >
 
   }
 
@@ -5153,6 +5164,7 @@
     au < manifest ; 2013 ; Economic Policy Volume 28 ; 28 >
     au < manifest ; 2014 ; Economic Policy Volume 29 ; 29 >
     au < manifest ; 2015 ; Economic Policy Volume 30 ; 30 >
+    au < expected ; 2016 ; Economic Policy Volume 31 ; 31 >
 
   }
 
@@ -5574,6 +5586,7 @@
 
       au < released ; 2014 ; Enterprise & Society Volume 15 [Project MUSE] ; 15 >
       au < released ; 2015 ; Enterprise & Society Volume 16 [Project MUSE] ; 16 >
+      au < expected ; 2016 ; Enterprise & Society Volume 17 [Project MUSE] ; 17 >
 
       }
 
@@ -5621,6 +5634,7 @@
     au < manifest ; 2013 ; Environmental Entomology Volume 42 ; 42 >
     au < manifest ; 2014 ; Environmental Entomology Volume 43 ; 43 >
     au < manifest ; 2015 ; Environmental Entomology Volume 44 ; 44 >
+    au < expected ; 2016 ; Environmental Entomology Volume 45 ; 45 >
 
   }
 
@@ -6038,6 +6052,7 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2015 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 1 ; 1 >
+    au < expected ; 2016 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 2 ; 2 >
 
   }
 
@@ -6872,6 +6887,7 @@
     au < manifest ; 2014 ; FEMS Microbiology Ecology Volume 87 ; 87 >
     au < manifest ; 2014 ; FEMS Microbiology Ecology Volume 88 ; 88 >
     au < expected ; 2015 ; FEMS Microbiology Ecology Volume 89 ; 89 >
+    au < expected ; 2016 ; FEMS Microbiology Ecology Volume 90 ; 90 >
 
   }
 
@@ -7092,6 +7108,7 @@
     au < expected ; 2014 ; FEMS Microbiology Letters Volume 361 ; 361 >
     au < manifest ; 2015 ; FEMS Microbiology Letters Volume 362 ; 362 >
     au < expected ; 2015 ; FEMS Microbiology Letters Volume 363 ; 363 >
+    au < expected ; 2016 ; FEMS Microbiology Letters Volume 364 ; 364 >
 
   }
 
@@ -7146,6 +7163,7 @@
     au < manifest ; 2013 ; FEMS Microbiology Reviews Volume 37 ; 37 >
     au < manifest ; 2014 ; FEMS Microbiology Reviews Volume 38 ; 38 >
     au < manifest ; 2015 ; FEMS Microbiology Reviews Volume 39 ; 39 >
+    au < expected ; 2016 ; FEMS Microbiology Reviews Volume 40 ; 40 >
 
   }
 
@@ -7176,6 +7194,7 @@
     au < manifest ; 2013 ; FEMS Yeast Research Volume 13 ; 13 >
     au < manifest ; 2014 ; FEMS Yeast Research Volume 14 ; 14 >
     au < manifest ; 2015 ; FEMS Yeast Research Volume 15 ; 15 >
+    au < expected ; 2016 ; FEMS Yeast Research Volume 16 ; 16 >
 
   }
 
@@ -7203,6 +7222,7 @@
     au < exists ; 2013 ; Foreign Policy Analysis Volume 9 ; 9 >
     au < exists ; 2014 ; Foreign Policy Analysis Volume 10 ; 10 >
     au < exists ; 2015 ; Foreign Policy Analysis Volume 11 ; 11 >
+    au < expected ; 2016 ; Foreign Policy Analysis Volume 12 ; 12 >
 
   }
 
@@ -7647,6 +7667,7 @@
 
       au < released ; 2014 ; French Studies: A Quarterly Review Volume 68 [Project MUSE] ; 68 >
       au < released ; 2015 ; French Studies: A Quarterly Review Volume 69 [Project MUSE] ; 69 >
+      au < expected ; 2016 ; French Studies: A Quarterly Review Volume 70 [Project MUSE] ; 70 >
 
       }
 
@@ -7970,6 +7991,7 @@
     au < manifest ; 2015 ; Geophysical Journal International Volume 201 ; 201 >
     au < manifest ; 2015 ; Geophysical Journal International Volume 202 ; 202 >
     au < manifest ; 2015 ; Geophysical Journal International Volume 203 ; 203 >
+    au < expected ; 2016 ; Geophysical Journal International Volume 204 ; 204 >
 
   }
 
@@ -8141,6 +8163,7 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < expected ; 2015 ; Global Summitry Volume 1 ; 1 >
+    au < expected ; 2016 ; Global Summitry Volume 2 ; 2 >
 
   }
 
@@ -8584,6 +8607,7 @@
       au < released ; 2014 ; History Workshop Journal Issue 78 [Project MUSE] ; 78 >
       au < released ; 2015 ; History Workshop Journal Issue 79 [Project MUSE] ; 79 >
       au < released ; 2015 ; History Workshop Journal Issue 80 [Project MUSE] ; 80 >
+      au < expected ; 2016 ; History Workshop Journal Issue 80 [Project MUSE] ; 81 >
 
       }
 
@@ -8670,6 +8694,7 @@
 
       au < released ; 2014 ; Holocaust and Genocide Studies Voluem 28 [Project MUSE] ; 28 >
       au < released ; 2015 ; Holocaust and Genocide Studies Voluem 29 [Project MUSE] ; 29 >
+      au < expected ; 2016 ; Holocaust and Genocide Studies Voluem 29 [Project MUSE] ; 30 >
 
       }
 
@@ -9204,6 +9229,7 @@
     au < released ; 2013-2014 ; ILAR Journal Volume 54 ; 54 >
     au < manifest ; 2014 ; ILAR Journal Volume 55 ; 55 >
     au < manifest ; 2015 ; ILAR Journal Volume 56 ; 56 >
+    au < expected ; 2016 ; ILAR Journal Volume 57 ; 57 >
 
    }
 
@@ -10316,6 +10342,7 @@
     au < manifest ; 2013 ; International Journal of Neuropsychopharmacology Volume 16 ; 16 >
     au < manifest ; 2014 ; International Journal of Neuropsychopharmacology Volume 17 ; 17 >
     au < manifest ; 2015 ; International Journal of Neuropsychopharmacology Volume 18 ; 18 >
+    au < expected ; 2016 ; International Journal of Neuropsychopharmacology Volume 19 ; 19 >
 
   }
 
@@ -10630,6 +10657,7 @@
     au < exists ; 2013 ; International Political Sociology Volume 7 ; 7 >
     au < exists ; 2014 ; International Political Sociology Volume 8 ; 8 >
     au < exists ; 2015 ; International Political Sociology Volume 9 ; 9 >
+    au < expected ; 2016 ; International Political Sociology Volume 10 ; 10 >
 
   }
 
@@ -10709,6 +10737,7 @@
     au < exists ; 2013 ; International Studies Perspectives Volume 14 ; 14 >
     au < exists ; 2014 ; International Studies Perspectives Volume 15 ; 15 >
     au < exists ; 2015 ; International Studies Perspectives Volume 16 ; 16 >
+    au < expected ; 2016 ; International Studies Perspectives Volume 17 ; 17 >
 
   }
 
@@ -10742,6 +10771,7 @@
     au < exists ; 2013 ; International Studies Quarterly Volume 57 ; 57 >
     au < exists ; 2014 ; International Studies Quarterly Volume 58 ; 58 >
     au < exists ; 2015 ; International Studies Quarterly Volume 59 ; 59 >
+    au < expected ; 2016 ; International Studies Quarterly Volume 60 ; 60 >
 
   }
 
@@ -10775,6 +10805,7 @@
     au < exists ; 2013 ; International Studies Review Volume 15 ; 15 >
     au < exists ; 2014 ; International Studies Review Volume 16 ; 16 >
     au < exists ; 2015 ; International Studies Review Volume 17 ; 17 >
+    au < expected ; 2016 ; International Studies Review Volume 18 ; 18 >
 
   }
 
@@ -11311,6 +11342,7 @@
     au < manifest ; 2013 ; JAMIA Volume 20 ; 20 >
     au < manifest ; 2014 ; JAMIA Volume 21 ; 21 >
     au < manifest ; 2015 ; JAMIA Volume 22 ; 22 >
+    au < expected ; 2016 ; JAMIA Volume 23 ; 23 >
 
   }
 
@@ -11408,6 +11440,7 @@
     au < released ; 2013 ; The Journal of Applied Poultry Research Volume 22 ; 22 >
     au < manifest ; 2014 ; The Journal of Applied Poultry Research Volume 23 ; 23 >
     au < manifest ; 2015 ; The Journal of Applied Poultry Research Volume 24 ; 24 >
+    au < expected ; 2016 ; The Journal of Applied Poultry Research Volume 25 ; 25 >
 
     }
 
@@ -11909,6 +11942,7 @@
     au < released ; 2013 ; Journal of Complex Networks Volume 1 ; 1 >
     au < released ; 2014 ; Journal of Complex Networks Volume 2 ; 2 >
     au < manifest ; 2015 ; Journal of Complex Networks Volume 3 ; 3 >
+    au < expected ; 2016 ; Journal of Complex Networks Volume 4 ; 4 >
 
     }
 
@@ -12011,6 +12045,7 @@
     au < manifest ; 2013-2014 ; Journal of Consumer Research Volume 40 ; 40 >
     au < manifest ; 2014-2015 ; Journal of Consumer Research Volume 41 ; 41 >
     au < manifest ; 2015-2016 ; Journal of Consumer Research Volume 42 ; 42 >
+    au < expected ; 2016-2017 ; Journal of Consumer Research Volume 43 ; 43 >
     
   }
 
@@ -12085,6 +12120,7 @@
     au < manifest ; 2013 ; Journal of Crohn's and Colitis Volume 7 ; 7 >
     au < manifest ; 2014 ; Journal of Crohn's and Colitis Volume 8 ; 8 >
     au < manifest ; 2015 ; Journal of Crohn's and Colitis Volume 9 ; 9 >
+    au < expected ; 2016 ; Journal of Crohn's and Colitis Volume 10 ; 10 >
 
   }
 
@@ -12252,6 +12288,7 @@
     au < manifest ; 2013 ; Journal of Economic Entomology Volume 106 ; 106 >
     au < manifest ; 2014 ; Journal of Economic Entomology Volume 107 ; 107 >
     au < manifest ; 2015 ; Journal of Economic Entomology Volume 108 ; 108 >
+    au < expected ; 2016 ; Journal of Economic Entomology Volume 109 ; 109 >
 
   }
 
@@ -12628,6 +12665,7 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2015 ; Journal of Financial Regulation Volume 1 ; 1 >
+    au < expected ; 2016 ; Journal of Financial Regulation Volume 2 ; 2 >
 
   }
 
@@ -13115,6 +13153,7 @@
 
       au < released ; 2014 ; Journal of the History of Medicine and Allied Sciences Volume 69 [Project MUSE] ; 69 >
       au < released ; 2015 ; Journal of the History of Medicine and Allied Sciences Volume 70 [Project MUSE] ; 70 >
+      au < expected ; 2016 ; Journal of the History of Medicine and Allied Sciences Volume 71 [Project MUSE] ; 71 >
 
       }
 
@@ -13450,6 +13489,7 @@
     au < manifest ; 2013 ; Journal of Insect Science Volume 13 ; 13 >
     au < manifest ; 2014 ; Journal of Insect Science Volume 14 ; 14 >
     au < manifest ; 2015 ; Journal of Insect Science Volume 15 ; 15 >
+    au < expected ; 2016 ; Journal of Insect Science Volume 16 ; 16 >
 
     }
 
@@ -13470,6 +13510,7 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2015 ; Journal of Integrable Systems Volume 1 ; 1 >
+    au < expected ; 2016 ; Journal of Integrable Systems Volume 2 ; 2 >
 
     }
 
@@ -13493,6 +13534,7 @@
     au < manifest ; 2013 ; Journal of Integrated Pest Management Volume 4 ; 4 >
     au < manifest ; 2014 ; Journal of Integrated Pest Management Volume 5 ; 5 >
     au < manifest ; 2015 ; Journal of Integrated Pest Management Volume 6 ; 6 >
+    au < expected ; 2016 ; Journal of Integrated Pest Management Volume 7 ; 7 >
 
   }
 
@@ -14050,6 +14092,7 @@
     au < manifest ; 2013 ; Journal of Mammalogy Volume 94 ; 94 >
     au < manifest ; 2014 ; Journal of Mammalogy Volume 95 ; 95 >
     au < manifest ; 2015 ; Journal of Mammalogy Volume 96 ; 96 >
+    au < expected ; 2016 ; Journal of Mammalogy Volume 97 ; 97 >
 
   }
 
@@ -14083,6 +14126,7 @@
     au < manifest ; 2013 ; Journal of Medical Entomology Volume 50 ; 50 >
     au < manifest ; 2014 ; Journal of Medical Entomology Volume 51 ; 51 >
     au < manifest ; 2015 ; Journal of Medical Entomology Volume 52 ; 52 >
+    au < expected ; 2016 ; Journal of Medical Entomology Volume 53 ; 53 >
 
   }
 
@@ -15214,6 +15258,7 @@
     au < manifest ; 2013 ; Journal of Surgical Case Reports Volume 2013 ; 2013 >
     au < manifest ; 2014 ; Journal of Surgical Case Reports Volume 2014 ; 2014 >
     au < manifest ; 2015 ; Journal of Surgical Case Reports Volume 2015 ; 2015 >
+    au < expected ; 2016 ; Journal of Surgical Case Reports Volume 2016 ; 2016 >
 
   }
 
@@ -15495,6 +15540,7 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2015 ; Journal of Urban Ecology Volume 1 ; 1 >
+    au < expected ; 2016 ; Journal of Urban Ecology Volume 2 ; 2 >
 
   }
 
@@ -15852,6 +15898,7 @@
 
       au < released ; 2014 ; The Library: The Transactions of the Bibliographical Society Volume 15 [Project MUSE] ; 15 >
       au < released ; 2015 ; The Library: The Transactions of the Bibliographical Society Volume 16 [Project MUSE] ; 16 >
+      au < expected ; 2016 ; The Library: The Transactions of the Bibliographical Society Volume 17 [Project MUSE] ; 17 >
 
       }
 
@@ -16087,6 +16134,7 @@
     au < manifest ; 2013 ; Mammalian Species Volume 45 ; 45 >
     au < manifest ; 2014 ; Mammalian Species Volume 46 ; 46 >
     au < manifest ; 2015 ; Mammalian Species Volume 47 ; 47 >
+    au < expected ; 2016 ; Mammalian Species Volume 48 ; 48 >
 
   }
 
@@ -16661,6 +16709,7 @@
 
       au < released ; 2014 ; Modern Judaism Volume 34 [Project MUSE] ; 34 >
       au < released ; 2015 ; Modern Judaism Volume 35 [Project MUSE] ; 35 >
+      au < expected ; 2016 ; Modern Judaism Volume 36 [Project MUSE] ; 36 >
 
       }
 
@@ -16836,6 +16885,7 @@
     au < manifest ; 2013 ; The Monist Volume 96 ; 96 >
     au < manifest ; 2014 ; The Monist Volume 97 ; 97 >
     au < manifest ; 2015 ; The Monist Volume 98 ; 98 >
+    au < expected ; 2016 ; The Monist Volume 99 ; 99 >
 
   }
 
@@ -17032,6 +17082,7 @@
     au < manifest ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 453 ; 453 >
     au < manifest ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 454 ; 454 >
     au < manifest ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 455 ; 455 >
+    au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 456 ; 456 >
 
   }
 
@@ -17147,6 +17198,7 @@
     au < manifest ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 453 ; 453 >
     au < manifest ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 454 ; 454 >
     au < manifest ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 455 ; 455 >
+    au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 456 ; 456 >
 
   }
 
@@ -17305,6 +17357,7 @@
 
       au < released ; 2014 ; Music and Letters Volume 95 [Project MUSE] ; 95 >
       au < released ; 2015 ; Music and Letters Volume 96 [Project MUSE] ; 96 >
+      au < expected ; 2016 ; Music and Letters Volume 97 [Project MUSE] ; 97 >
 
       }
 
@@ -18357,6 +18410,7 @@
     au < manifest ; 2013 ; Nutrition Reviews Volume 71 ; 71 >
     au < manifest ; 2014 ; Nutrition Reviews Volume 72 ; 72 >
     au < manifest ; 2015 ; Nutrition Reviews Volume 73 ; 73 >
+    au < expected ; 2016 ; Nutrition Reviews Volume 74 ; 74 >
 
   }
 
@@ -18613,6 +18667,7 @@
 
       au < released ; 2014 ; The Opera Quarterly Volume 30 [Project MUSE] ; 30 >
       au < released ; 2015 ; The Opera Quarterly Volume 31 [Project MUSE] ; 31 >
+      au < expected ; 2016 ; The Opera Quarterly Volume 32 [Project MUSE] ; 32 >
 
       }
 
@@ -18706,6 +18761,7 @@
 
       au < released ; 2014 ; The Oral History Review Volume 41 [Project MUSE] ; 41 >
       au < released ; 2015 ; The Oral History Review Volume 42 [Project MUSE] ; 42 >
+      au < expected ; 2016 ; The Oral History Review Volume 43 [Project MUSE] ; 43 >
 
       }
 
@@ -18992,6 +19048,7 @@
 
     au < manifest ; 2014 ; Oxford Medical Case Reports Volume 2014 ; 2014 >
     au < manifest ; 2015 ; Oxford Medical Case Reports Volume 2015 ; 2015 >
+    au < expected ; 2016 ; Oxford Medical Case Reports Volume 2016 ; 2016 >
 
   }
 
@@ -19077,6 +19134,7 @@
     au < manifest ; 2015 ; Pathogens and Disease Volume 73 ; 73 >
     au < expected ; 2015 ; Pathogens and Disease Volume 74 ; 74 >
     au < expected ; 2015 ; Pathogens and Disease Volume 75 ; 75 >
+    au < expected ; 2016 ; Pathogens and Disease Volume 76 ; 76 >
 
   }
 
@@ -21195,6 +21253,7 @@
 
     au < manifest ; 2014 ; Regenerative Biomaterials Volume 1 ; 1 >
     au < manifest ; 2015 ; Regenerative Biomaterials Volume 2 ; 2 >
+    au < expected ; 2016 ; Regenerative Biomaterials Volume 3 ; 3 >
 
   }
 
@@ -21335,6 +21394,7 @@
     au < released ; 2013 ; Review of Corporate Finance Studies Volume 2 ; 2 >
     au < released ; 2014 ; Review of Corporate Finance Studies Volume 3 ; 3 >
     au < expected ; 2015 ; Review of Corporate Finance Studies Volume 4 ; 4 >
+    au < expected ; 2016 ; Review of Corporate Finance Studies Volume 5 ; 5 >
 
   }
 
@@ -22249,6 +22309,7 @@
 
       au < released ; 2014 ; Social Politics: International Studies in Gender, State and Society Volume 21 [Project MUSE] ; 21 >
       au < released ; 2015 ; Social Politics: International Studies in Gender, State and Society Volume 22 [Project MUSE] ; 22 >
+      au < expected ; 2016 ; Social Politics: International Studies in Gender, State and Society Volume 23 [Project MUSE] ; 23 >
 
       }
 
@@ -22330,6 +22391,7 @@
     au < manifest ; 2013 ; Social Problems Volume 60 ; 60 >
     au < manifest ; 2014 ; Social Problems Volume 61 ; 61 >
     au < manifest ; 2015 ; Social Problems Volume 62 ; 62 >
+    au < expected ; 2016 ; Social Problems Volume 63 ; 63 >
 
   }
 
@@ -23018,6 +23080,7 @@
 
     au < manifest ; 2014 ; Transactions of the London Mathematical Society Volume 1 ; 1 >
     au < expected ; 2015 ; Transactions of the London Mathematical Society Volume 2 ; 2 >
+    au < expected ; 2016 ; Transactions of the London Mathematical Society Volume 3 ; 3 >
 
   }
 
@@ -23144,6 +23207,7 @@
     au < released ; 2013 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 107 ; 107 >
     au < manifest ; 2014 ; Transactions of the Royal Society of Tropical Medicine and Hygiene Volume 108 ; 108 >
     au < manifest ; 2015 ; Transactions of the Royal Society of Tropical Medicine and Hygiene Volume 109 ; 109 >
+    au < expected ; 2016 ; Transactions of the Royal Society of Tropical Medicine and Hygiene Volume 110 ; 110 >
 
   }
 
@@ -23361,6 +23425,7 @@
     au < manifest ; 2013 ; Uniform Law Review - Revue de droit uniforme Volume 18 ; 18 >
     au < manifest ; 2014 ; Uniform Law Review - Revue de droit uniforme Volume 19 ; 19 >
     au < manifest ; 2015 ; Uniform Law Review - Revue de droit uniforme Volume 20 ; 20 >
+    au < expected ; 2016 ; Uniform Law Review - Revue de droit uniforme Volume 21 ; 21 >
 
     }
 
@@ -23379,6 +23444,7 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2015 ; Virus Evolution Volume 1 ; 1 >
+    au < expected ; 2016 ; Virus Evolution Volume 2 ; 2 >
 
   }
 
@@ -23396,6 +23462,7 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2015 ; Work, Aging and Retirement Volume 1 ; 1 >
+    au < expected ; 2016 ; Work, Aging and Retirement Volume 2 ; 2 >
 
   }
 
@@ -23809,6 +23876,7 @@
       au < manifest ; 2013 ; Journal of Antitrust Enforcement Volume 1 ; 1 >
       au < released ; 2014 ; Journal of Antitrust Enforcement Volume 2 ; 2 >
       au < manifest ; 2015 ; Journal of Antitrust Enforcement Volume 3 ; 3 >
+      au < expected ; 2016 ; Journal of Antitrust Enforcement Volume 4 ; 4 >
 
     }
 
@@ -23898,6 +23966,7 @@
       au < released ; 2013 ; Journal of Survey Statistics and Methodology Volume 1 ; 1 >
       au < released ; 2014 ; Journal of Survey Statistics and Methodology Volume 2 ; 2 >
       au < manifest ; 2015 ; Journal of Survey Statistics and Methodology Volume 3 ; 3 >
+      au < expected ; 2016 ; Journal of Survey Statistics and Methodology Volume 4 ; 4 >
 
     }
 
@@ -23920,6 +23989,7 @@
       au < released ; 2013 ; London Review of International Law Volume 1 ; 1 >
       au < released ; 2014 ; London Review of International Law Volume 2 ; 2 >
       au < expected ; 2015 ; London Review of International Law Volume 3 ; 3 >
+      au < expected ; 2016 ; London Review of International Law Volume 4 ; 4 >
 
     }
 
@@ -23942,6 +24012,7 @@
       au < manifest ; 2013 ; Migration Studies Volume 1 ; 1 >
       au < released ; 2014 ; Migration Studies Volume 2 ; 2 >
       au < expected ; 2015 ; Migration Studies Volume 3 ; 3 >
+      au < expected ; 2016 ; Migration Studies Volume 4 ; 4 >
 
     }
 
@@ -24310,6 +24381,7 @@
       au < manifest ; 2013 ; The Quarterly Journal of Economics Volume 128 ; 128 >
       au < manifest ; 2014 ; The Quarterly Journal of Economics Volume 129 ; 129 >
       au < manifest ; 2015 ; The Quarterly Journal of Economics Volume 130 ; 130 >
+      au < expected ; 2016 ; The Quarterly Journal of Economics Volume 131 ; 131 >
 
     }
 
@@ -24331,6 +24403,7 @@
       au < released ; 2013 ; Conservation Physiology Volume 1 ; 1 >
       au < released ; 2014 ; Conservation Physiology Volume 2 ; 2 >
       au < expected ; 2015 ; Conservation Physiology Volume 3 ; 3 >
+      au < expected ; 2016 ; Conservation Physiology Volume 4 ; 4 >
 
     }
 
@@ -24350,6 +24423,7 @@
     au < released ; 2013 ; Evolution, Medicine, and Public Health Volume 2013 ; 2013 >
     au < manifest ; 2014 ; Evolution, Medicine, and Public Health Volume 2014 ; 2014 >
     au < manifest ; 2015 ; Evolution, Medicine, and Public Health Volume 2015 ; 2015 >
+    au < expected ; 2016 ; Evolution, Medicine, and Public Health Volume 2016 ; 2016 >
 
   }
 
@@ -24410,6 +24484,7 @@
       au < manifest ; 2013 ; Interacting with Computers Volume 25 ; 25 >
       au < released ; 2014 ; Interacting with Computers Volume 26 ; 26 >
       au < manifest ; 2015 ; Interacting with Computers Volume 27 ; 27 >
+      au < expected ; 2016 ; Interacting with Computers Volume 28 ; 28 >
 
     }
 
@@ -24430,6 +24505,7 @@
       au < manifest ; 2013 ; National Science Review Volume 1 ; 1 >
       au < manifest ; 2014 ; National Science Review Volume 2 ; 2 >
       au < expected ; 2015 ; National Science Review Volume 3 ; 3 >
+      au < expected ; 2016 ; National Science Review Volume 4 ; 4 >
 
   }
 
@@ -24527,6 +24603,7 @@
     au < exists ; 2013 ; BioScience Volume 63 ; 63 >
     au < released ; 2014 ; BioScience Volume 64 ; 64 >
     au < manifest ; 2015 ; BioScience Volume 65 ; 65 >
+    au < expected ; 2016 ; BioScience Volume 66 ; 66 >
 
   }
 
@@ -24646,6 +24723,7 @@
     au < manifest ; 2013 ; Poultry Science Volume 92 ; 92 >
     au < manifest ; 2014 ; Poultry Science Volume 93 ; 93 >
     au < manifest ; 2015 ; Poultry Science Volume 94 ; 94 >
+    au < expected ; 2016 ; Poultry Science Volume 95 ; 95 >
 
   }
 
