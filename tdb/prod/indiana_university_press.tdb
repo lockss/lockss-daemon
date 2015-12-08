@@ -68,7 +68,7 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < released ; 2014-2015 ; Africa Today Volume 61 ; 61 >
-        au < expected ; 2015-2016 ; Africa Today Volume 62 ; 62 >
+        au < manifest ; 2015-2016 ; Africa Today Volume 62 ; 62 >
 
       }
 
@@ -947,7 +947,7 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < released ; 2013-2014 ; Jewish Social Studies Volume 20 ; 20 >
-        au < expected ; 2015 ; Jewish Social Studies Volume 21 ; 21 > # Can't see in TOC, but can find manifest page.
+        au < manifest ; 2015 ; Jewish Social Studies Volume 21 ; 21 > # Can't see in TOC, but can find manifest page.
 
       }
 
@@ -1384,7 +1384,7 @@
 
         au < released ; 2014 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 26 ; 26 >
         au < released ; 2014 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 27 ; 27 >
-        au < expected ; 2015 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 28 ; 28 >
+        au < manifest ; 2015 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 28 ; 28 >
 
       }
 
@@ -1803,7 +1803,7 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < expected ; 2014 ; Textual Cultures: Texts, Contexts, Interpretation Volume 9 ; 9 >
+        au < manifest ; 2014 ; Textual Cultures: Texts, Contexts, Interpretation Volume 9 ; 9 >
 
       }
 
@@ -1948,10 +1948,10 @@
 
         au < released ; 2014 ; Transition Issue 113 ; 113 >
         au < released ; 2014 ; Transition Issue 114 ; 114 >
-        au < exists ; 2014 ; Transition Issue 115 ; 115 >
-        au < exists ; 2014 ; Transition Issue 116 ; 116 >
-        au < exists ; 2015 ; Transition Issue 117 ; 117 >
-        au < exists ; 2015 ; Transition Issue 118 ; 118 >
+        au < manifest ; 2014 ; Transition Issue 115 ; 115 >
+        au < manifest ; 2014 ; Transition Issue 116 ; 116 >
+        au < manifest ; 2015 ; Transition Issue 117 ; 117 >
+        au < manifest ; 2015 ; Transition Issue 118 ; 118 >
         au < exists ; 2015 ; Transition Issue 119 ; 119 >
 
       }
