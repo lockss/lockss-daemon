@@ -438,11 +438,34 @@ while (my $line = <>) {
     }
         sleep(4);
         
+  } elsif ($plugin eq "GeorgThiemeVerlagPlugin") {
+        #Url with list of urls for issues
+        #printf("%s\n",decode_entities($tmp));
+        $url = sprintf("%sejournals/issues/%s/%s", 
+          $param{base_url}, $param{journal_id}, $param{volume_name});
+        $man_url = uri_unescape($url);
+        my $req = HTTP::Request->new(GET, $man_url);
+        my $resp = $ua->request($req);
+        if ($resp->is_success) {
+            my $man_contents = $resp->content;
+            if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/Year $param{volume_name}/)) {
+                if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
+                    $vol_title = $1
+                }
+                $result = "Manifest"
+            } else {
+                $result = "--"
+            }
+        } else {
+            $result = "--"
+        }
+        sleep(4);
+
   } elsif ($plugin eq "ClockssGeorgThiemeVerlagPlugin") {
         #Url with list of urls for issues
         #printf("%s\n",decode_entities($tmp));
         $url = sprintf("%sejournals/issues/%s/%s", 
-        $param{base_url}, $param{journal_id}, $param{volume_name});
+          $param{base_url}, $param{journal_id}, $param{volume_name});
         $man_url = uri_unescape($url);
         my $req = HTTP::Request->new(GET, $man_url);
         my $resp = $ua->request($req);
@@ -463,6 +486,8 @@ while (my $line = <>) {
 
   } elsif (($plugin eq "TaylorAndFrancisPlugin") || 
            ($plugin eq "AIAAPlugin") || 
+           ($plugin eq "AllenPressJournalsPlugin") || 
+           ($plugin eq "AmPublicHealthAssocPlugin") || 
            ($plugin eq "AMetSocPlugin") || 
            ($plugin eq "ARRSPlugin") || 
            ($plugin eq "BIRAtyponPlugin") || 
