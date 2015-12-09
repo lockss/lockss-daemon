@@ -213,28 +213,279 @@
 
    }
 
-  {
+   {
 
-    title <
-      name = Mansholt Publication Series ;
-      issn = 1871-9309 ;
-      type = bookSeries
-    >
+      title <
+        name = AWLAE ;
+        issn = 1575-2474 ;
+        type = bookSeries
+      >
 
-    au < manifest ; exists ; 2006 ; 978-90-76998-96-1 ; 978-90-8686-588-8 ;  9789086865888 ; Heterodox views on economics and the economy of the global society, Volume 1 >
-    au < expected ; exists ; 2006 ; 978-90-8686-001-2 ; ; XX ; Decision science, Volume 2 >
-    au < manifest ; exists ; 2007 ; 978-90-8686-039-5 ; 978-90-8686-625-0 ;  9789086866250 ; Imaging the future, Volume 3 >
-    au < manifest ; exists ; 2007 ; 978-90-8686-047-0 ; 978-90-8686-618-2 ;  9789086866182 ; Development economics between markets and institutions, Volume 4 >
-#    au < manifest ; exists ; 2007 ; 978-90-8686-039-5 ; 978-90-8686-625-0 ;  9789086866250 ; Changing families and their lifestyle, Volume 5 >
-    au < manifest ; exists ; 2009 ; 978-90-8686-087-6 ; 978-90-8686-681-6 ;  9789086866816 ; Research in action, Volume 6 >
-    au < expected ; exists ; 2009 ; 978-90-8686-097-5 ; ; YY ; Space and economics, Volume 7 >
-    au < manifest ; exists ; 2010 ; 978-90-8686-133-0 ; 978-90-8686-693-9 ; 9789086866939 ; Five centuries of farming, Volume 8 >
-    au < manifest ; exists ; 2010 ; 978-90-8686-139-2 ; 978-90-8686-168-2 ; 9789086866717 ; Food, diversity, vulnerability and social change, Volume 9 >
-    au < manifest ; exists ; 2011 ; 978-90-8686-167-5 ; 978-90-8686-724-0 ; 9789086867240 ; Knowledge in action, Volume 11 >
-    au < manifest ; exists ; 2012 ; 978-90-8686-134-7 ; 978-90-8686-168-2 ; 9789086861682 ; Unlocking markets to smallolders, Volume 10 >
-    au < testing ; exists ; 2013 ; 978-90-8686-221-4 ; 978-90-8686-775-2 ; 9789086867752 ; The arena of everyday life, Volume 12 >
+    au < exists ; exists ; 2004 ; 9789076998466 ; 9789086865321 ; 9789086865321 ; HIV/AIDS and Agriculture in sub-Saharan Africa: An overview and annotated bibliography (9789086865321) >
+    au < exists ; exists ; 2005 ; 9789076998503 ; 9789086865604 ; 9789086865604 ; HIV/AIDS and human development in sub-Saharan Africa: Impact mitigation through agricultural interventions : an overview and annotated bibliography (9789086865604) >
+    au < exists ; exists ; 2005 ; 9789076998497 ; 9789086865352 ; 9789086865352 ; HIV/AIDS, gender and rural livelihoods in sub-Saharan Africa: An overview and annotated bibliography (9789086865352) >
+    au < exists ; exists ; 2006 ; 9789086860159 ; 9789086865864 ; 9789086865864 ; The combat for gender equality in education: Rural livelihood pathways in the context of HIV/AIDS (9789086865864) >
+    au < exists ; exists ; 2007 ; 9789086860630 ; 9789086866311 ; 9789086866311 ; When AIDS meets poverty: Implications for social capital in a village in Tanzania (9789086866311) >
+    au < exists ; exists ; 2008 ; 9789086860692 ; 9789086866410 ; 9789086866410 ; Adoption of agricultural innovations by smallholder farmers in the context of HIV/AIDS: The case of tissue-cultured banana in Kenya (9789086866410) >
+    au < exists ; exists ; 2008 ; 9789086860647 ; 9789086866342 ; 9789086866342 ; Living with AIDS in Uganda: Impacts on banana-farming households in two districts (9789086866342) >
+    au < exists ; exists ; 2010 ; 9789086861255 ; 9789086867028 ; 9789086867028 ; Efficacy of micro-financing women's activities in Côte d'Ivoire: Evidence from rural areas and HIV/AIDS-affected women (9789086867028) >
+    au < exists ; exists ; 2010 ; 9789086861590 ; 9789086867158 ; 9789086867158 ; Gender, AIDS and food security: Culture and vulnerability in rural Cote d'Ivoire (9789086867158) >
+    au < exists ; exists ; 2010 ; 9789086861583 ; 9789086867141 ; 9789086867141 ; Intrahousehold resource allocation and well-being: The case of rural households in Senegal (9789086867141) >
+    au < crawling ; exists ; 2010 ; 9789086861460 ; 9789086867004 ; 9789086867004 ; Single women, land and livelihood vulnerability in a communal area in Zimbabwe (9789086867004) >
 
-    au < crawling ; exists ; 2010 ; 978-90-8686-146-0 ; 978-90-8686-700-4 ; 9789086867004 ; Single women, land and livelihood vulnerability in a communal area in Zimbabwe >
-  }
+   }
+
+   {
+
+      title <
+        name = EAAP Book of Abstracts ;
+        issn = 1382-6077 ;
+        type = bookSeries
+      >
+
+    au < exists ; exists ; 2003 ; 9789076998206 ; 9789086865192 ; 9789086865192 ; Book of Abstracts of the 54th Annual Meeting of the European Association for Animal Production: Rome, Italy, 31 August - 3 September 2003 (9789086865192) >
+    au < exists ; exists ; 2004 ; 9789076998459 ; 9789086865291 ; 9789086865291 ; Book of Abstracts of the 55th Annual Meeting of the European Association for Animal Production: Bled, Slovenia, 5-9 September 2004 (9789086865291) >
+    au < exists ; exists ; 2005 ; 9789076998664 ; 9789086865444 ; 9789086865444 ; Book of Abstracts of the 56th Annual Meeting of the European Association for Animal Production: Uppsala, Sweden, 5-8 June 2005 (9789086865444) >
+    au < exists ; exists ; 2006 ; 9789086860036 ; 9789086865802 ; 9789086865802 ; Book of Abstracts of the 57th Annual Meeting of the European Association for Animal Production: Antalya, Turkey, 17-20 September 2006 (9789086865802) >
+    au < exists ; exists ; 2007 ; 9789086860456 ; 9789086866120 ; 9789086866120 ; Book of Abstracts of the 58th Annual Meeting of the European Association for Animal Production: Dublin, Ireland, 26-29 August 2007 (9789086866120) >
+    au < exists ; exists ; 2008 ; 9789086860746 ; 9789086866465 ; 9789086866465 ; Book of Abstracts of the 59th Annual Meeting of the European Association for Animal Production: Vilnius, Lithuania, 24-27 August 2008 (9789086866465) >
+    au < exists ; exists ; 2009 ; 9789086861217 ; 9789086866700 ; 9789086866700 ; Book of Abstracts of the 60th Annual Meeting of the European Association for Animal Production: Barcelona, Spain, 24-27 August 2009 (9789086866700) >
+    au < exists ; exists ; 2010 ; 9789086861521 ; 9789086867080 ; 9789086867080 ; Book of Abstracts of the 61st Annual Meeting of the European Association for Animal Production: Heraklion - Crete Island, Greece, 23-27 August 2010 (9789086867080) >
+    au < exists ; exists ; 2011 ; 9789086861774 ; 9789086867318 ; 9789086867318 ; Book of Abstracts of the 62nd Annual Meeting of the European Association for Animal Production: Stavanger, Norway, 29 August - 2 September 2011 (9789086867318) >
+    au < exists ; exists ; 2012 ; 9789086862061 ; 9789086867615 ; 9789086867615 ; Book of Abstracts of the 63rd Annual Meeting of the European Association for Animal Production: Bratislava, Slovakia, 27 - 31 August 2012 (9789086867615) >
+    au < exists ; exists ; 2013 ; 9789086862283 ; 9789086867820 ; 9789086867820 ; Book of Abstracts of the 64th Annual Meeting of the European Association for Animal Production: Nantes, France, 26 - 30 August 2013 (9789086867820) >
+    au < exists ; exists ; 2014 ; 9789086862481 ; 9789086867998 ; 9789086867998 ; Book of Abstracts of the 65th Annual Meeting of the European Association for Animal Production: Copenhagen, Denmark, 25 - 28 August 2014 (9789086867998) >
+    au < exists ; exists ; 2015 ; 9789086862696 ; 9789086868162 ; 9789086868162 ; Book of Abstracts of the 66th Annual Meeting of the European Association for Animal Production: Warsaw, Poland, 31 August - 4 September 2015 (9789086868162) >
+
+   }
+
+   {
+
+      title <
+        name = EAAP Scientific Series ;
+        name = 0071-2477 ;
+        type = bookSeries
+      >
+
+    au < exists ; exists ; 1991 ; 9789022010150 ; 9789086865000 ; 9789086865000 ; Performance recording of animals: State of the art, 1990 (9789086865000) >
+    au < exists ; exists ; 2000 ; 9789074134743 ; 9789086865048 ; 9789086865048 ; Quality of meat and fat in pigs as affected by genetics and nutrition: Proceedings of the joint session of the EAAP commissions on pig production, animal genetics and animal nutrition (9789086865048) >
+    au < exists ; exists ; 2002 ; 9789076998084 ; 9789086865062 ; 9789086865062 ; Organic meat and milk from ruminants: Proceedings of a joint international conference organised by the Hellenic Society of Animal Production an the British Society of Animal Science (9789086865062) >
+    au < exists ; exists ; 2003 ; 9789076998237 ; 9789086865161 ; 9789086865161 ; After BSE - A Future for the European Livestock Sector (9789086865161) >
+    au < exists ; exists ; 2003 ; 9789076998169 ; 9789086865116 ; 9789086865116 ; Performance recording of animals - State of the art, 2002: Proceedings of the 33rd Biennial Session of ICAR, Interlaken, Switzerland (9789086865116) >
+    au < exists ; exists ; 2003 ; 9789076998244 ; 9789086865208 ; 9789086865208 ; Progress in Research on Energy and Protein Metabolism (9789086865208) >
+    au < exists ; exists ; 2003 ; 9789074134927 ; 9789086865093 ; 9789086865093 ; Prospects for a sustainable dairy sector in the Mediterranean: Proceedings of the joint ANPA-EAAP-CIHEAM-FAO Symposium, Hammamet, Tunisia, 26-28 October 2000 (9789086865093) >
+    au < exists ; exists ; 2004 ; 9789076998374 ; 9789086865314 ; 9789086865314 ; Nutrition of the Performance Horse: Which system in Europe for evaluating the nutritional requirements? (9789086865314) >
+    au < exists ; exists ; 2004 ; 9789076998398 ; 9789086865246 ; 9789086865246 ; Recent advances of research in antinutritional factors in legume seeds and oilseeds: Proceedings of the fourth international workshop on antinutritional factors in legume seeds and oilseeds (9789086865246) >
+    au < exists ; exists ; 2005 ; 9789076998565 ; 9789086865611 ; 9789086865611 ; Animal production and natural resources utilisation in the Mediterranean mountain areas (9789086865611) >
+    au < exists ; exists ; 2005 ; 9789076998794 ; 9789086865468 ; 9789086865468 ; Conservation genetics of endangered horse breeds (9789086865468) >
+    au < exists ; exists ; 2005 ; 9789076998480 ; 9789086865376 ; 9789086865376 ; Indicators of milk and beef quality (9789086865376) >
+    au < exists ; exists ; 2005 ; 9789076998800 ; 9789086865475 ; 9789086865475 ; Knowledge transfer in cattle husbandry: New management practices, attitudes and adaptation (9789086865475) >
+    au < exists ; exists ; 2005 ; 9789076998541 ; 9789086865369 ; 9789086865369 ; Performance recording of animals - State of the art, 2004: Proceedings of the 34th Biennial Session of ICAR,  Sousse, Tunisia (9789086865369) >
+    au < exists ; exists ; 2005 ; 9789076998626 ; 9789086865420 ; 9789086865420 ; The growing horse: nutrition and prevention of growth disorders (9789086865420) >
+    au < exists ; exists ; 2006 ; 9789076998862 ; 9789086865680 ; 9789086865680 ; Animal products from the Mediterranean area (9789086865680) >
+    au < exists ; exists ; 2006 ; 9789076998633 ; 9789086865659 ; 9789086865659 ; Livestock farming systems: Product quality based on local resources leading to improved sustainability (9789086865659) >
+    au < exists ; exists ; 2006 ; 9789086860142 ; 9789086865840 ; 9789086865840 ; Nutrition and feeding of the broodmare (9789086865840) >
+    au < exists ; exists ; 2007 ; 9789086860302 ; 9789086865932 ; 9789086865932 ; Breeding, production recording, health and the evaluation of farm animals: Proceedings of the 35th Biennial Session of ICAR, Kuopio, Finland, June 6-10,  2006 (9789086865932) >
+    au < exists ; exists ; 2007 ; 9789086860418 ; 9789086866137 ; 9789086866137 ; Energy and protein metabolism and nutrition (9789086866137) >
+    au < exists ; exists ; 2007 ; 9789086860227 ; 9789086866106 ; 9789086866106 ; Evaluation of carcass and meat quality in ruminants (9789086866106) >
+    au < exists ; exists ; 2007 ; 9789086860333 ; 9789086866144 ; 9789086866144 ; Horse behaviour and welfare (9789086866144) >
+    au < exists ; exists ; 2008 ; 9789086860715 ; 9789086866441 ; 9789086866441 ; Nutrition of the exercising horse (9789086866441) >
+    au < exists ; exists ; 2009 ; 9789086860845 ; 9789086866571 ; 9789086866571 ; Breeding for robustness in cattle (9789086866571) >
+    au < exists ; exists ; 2010 ; 9789086861538 ; 9789086867097 ; 9789086867097 ; Energy and protein metabolism and nutrition (9789086867097) >
+    au < exists ; exists ; 2010 ; 9789086861552 ; 9789086867110 ; 9789086867110 ; The impact of nutrition on the health and welfare of horses (9789086867110) >
+    au < exists ; exists ; 2011 ; 9789086861705 ; 9789086867264 ; 9789086867264 ; New trends for innovation in the Mediterranean animal production (9789086867264) >
+    au < exists ; exists ; 2011 ; 9789086861620 ; 9789086867189 ; 9789086867189 ; NorFor - The Nordic feed evaluation system (9789086867189) >
+    au < exists ; exists ; 2012 ; 9789086861842 ; 9789086867417 ; 9789086867417 ; Animal farming and environmental interactions in the Mediterranean region (9789086867417) >
+    au < exists ; exists ; 2012 ; 9789086862009 ; 9789086867554 ; 9789086867554 ; Forages and grazing in horse nutrition (9789086867554) >
+    au < exists ; exists ; 2013 ; 9789086862078 ; 9789086867622 ; 9789086867622 ; Consumer attitudes to food quality products: Emphasis on Southern Europe (9789086867622) >
+    au < exists ; exists ; 2013 ; 9789086862276 ; 9789086867813 ; 9789086867813 ; Energy and protein metabolism and nutrition in sustainable animal production (9789086867813) >
+    au < exists ; exists ; 2014 ; 9789086862320 ; 9789086867851 ; 9789086867851 ; Cattle husbandry in Eastern Europe and China: Structure, development paths and optimisation (9789086867851) >
+    au < exists ; exists ; 2015 ; 9789086862795 ; 9789086868247 ; 9789086868247 ; The new equine economy in the 21st century (9789086868247) >
+
+   }
+
+   {
+
+      title <
+        name = EAAP Technical Series ;
+        name = 1570-7318 ;
+        type = bookSeries
+      >
+
+    au < exists ; exists ; 2003 ; 9789076998336 ; 9789086865215 ; 9789086865215 ; Image of the cattle sector and its products: Role of breeders associations (9789086865215) >
+    au < exists ; exists ; 2003 ; 9789076998268 ; 9789086865178 ; 9789086865178 ; Interaction between climate and animal production (9789086865178) >
+    au < exists ; exists ; 2003 ; 9789076998299 ; 9789086865123 ; 9789086865123 ; Livestock Farming Systems in Central and Eastern Europe (9789086865123) >
+    au < exists ; exists ; 2003 ; 9789076998251 ; 9789086865185 ; 9789086865185 ; Working animals in agriculture and transport: A collection of some current research and development observations (9789086865185) >
+    au < exists ; exists ; 2004 ; 9789076998275 ; 9789086865307 ; 9789086865307 ; Foot and Mouth Disease: New values, innovative research agenda's and policies (9789086865307) >
+    au < exists ; exists ; 2006 ; 9789076998923 ; 9789086865741 ; 9789086865741 ; Farm management and extension needs in Central and Eastern European countries under the EU milk quota system (9789086865741) >
+    au < exists ; exists ; 2008 ; 9789086860586 ; 9789086866304 ; 9789086866304 ; EU beef farming systems and CAP regulations (9789086866304) >
+    au < exists ; exists ; 2009 ; 9789086861040 ; 9789086866861 ; 9789086866861 ; The cattle sector in Central and Eastern Europe: Developments and opportunities in a time of transition (9789086866861) >
+
+   }
+
+   {
+
+      title <
+        name = Ecology and Control of Vector-borne diseases ;
+        name = 1875-0699 ;
+        type = bookSeries
+      >
+
+    au < exists ; exists ; 2007 ; 9789086860531 ; 9789086866267 ; 9789086866267 ; Emerging pests and vector-borne diseases in Europe (9789086866267) >
+    au < exists ; exists ; 2010 ; 9789086860913 ; 9789086866984 ; 9789086866984 ; Olfaction in vector-host interactions (9789086866984) >
+    au < exists ; exists ; 2013 ; 9789086861880 ; 9789086867448 ; 9789086867448 ; Ecology of parasite-vector interactions (9789086867448) >
+
+   }
+
+   {
+
+      title <
+        name = ECVPH Food safety assurance ;
+        name = 1871-9295 ;
+        type = bookSeries
+      >
+
+    au < exists ; exists ; 2002 ; 9789076998053 ; 9789086865086 ; 9789086865086 ; Food safety assurance in the pre-harvest phase (9789086865086) >
+    au < exists ; exists ; 2004 ; 9789076998060 ; 9789086865222 ; 9789086865222 ; Safety assurance during food processing (9789086865222) >
+    au < exists ; exists ; 2005 ; 9789076998077 ; 9789086865345 ; 9789086865345 ; Risk management strategies: monitoring and surveillance (9789086865345) >
+    au < exists ; exists ; 2006 ; 9789076998978 ; 9789086865833 ; 9789086865833 ; Towards a risk based chain control (9789086865833) >
+    au < exists ; exists ; 2009 ; 9789086861224 ; 9789086866908 ; 9789086866908 ; Welfare of production animals: assessment and management of risks (9789086866908) >
+    au < exists ; exists ; 2013 ; 9789086862269 ; 9789086867806 ; 9789086867806 ; Food borne viruses and prions and their significance for public health (9789086867806) >
+
+   }
+
+   {
+
+      title <
+        name = Environmental Policy ;
+        name = 2210-3309 ;
+        type = bookSeries
+      >
+
+    au < exists ; exists ; 2010 ; 9789086861514 ; 9789086867073 ; 9789086867073 ; Co-managing complex social-ecological systems in Tanzania: The case of Lake Jipe wetland (9789086867073) >
+    au < exists ; exists ; 2010 ; 9789086861439 ; 9789086866960 ; 9789086866960 ; Who greens the waves?: Changing authority in the environmental governance of shipping and offshore oil and gas production (9789086866960) >
+    au < exists ; exists ; 2011 ; 9789086861897 ; 9789086867455 ; 9789086867455 ; Modernising solid waste management at municipal level: Institutional arrangements in urban centres of East Africa (9789086867455) >
+    au < exists ; exists ; 2011 ; 9789086861910 ; 9789086867479 ; 9789086867479 ; The role of households in solid waste management in East Africa capital cities (9789086867479) >
+    au < exists ; exists ; 2012 ; 9789086862153 ; 9789086867691 ; 9789086867691 ; Assessing sanitary mixtures in East African cities (9789086867691) >
+    au < exists ; exists ; 2012 ; 9789086862191 ; 9789086867738 ; 9789086867738 ; Malaysian water sector reform: Policy and performance (9789086867738) >
+    au < exists ; exists ; 2012 ; 9789086861996 ; 9789086867547 ; 9789086867547 ; Payment schemes for forest ecosystem services in China: Policy, practices and performance (9789086867547) >
+    au < exists ; exists ; 2012 ; 9789086862184 ; 9789086867721 ; 9789086867721 ; Transnational governance through private authority: The case of Forest Stewardship Council certification in Russia (9789086867721) >
+    au < exists ; exists ; 2013 ; 9789086862429 ; 9789086867943 ; 9789086867943 ; Consuming mobility: A practice approach to sustainable mobility transitions (9789086867943) >
+    au < exists ; exists ; 2013 ; 9789086862290 ; 9789086867837 ; 9789086867837 ; Non-governmental organizations and the sustainability of small and medium-sized enterprises in Peru: An analysis of networks and discourses (9789086867837) >
+    au < exists ; exists ; 2014 ; 9789086862634 ; 9789086868117 ; 9789086868117 ; Sustainable food consumption: A practice based approach (9789086868117) >
+
+   }
+
+   {
+
+      title <
+        name = European Institute for Food Law series ;
+        name = 1871-3483 ;
+        type = bookSeries
+      >
+
+    au < exists ; exists ; 2009 ; 9789086861071 ; 9789086866748 ; 9789086866748 ; Fed up with the right to food?: The Netherlands' policies and practices regarding the human right to adequate food (9789086866748) >
+    au < exists ; exists ; 2009 ; 9789086860982 ; 9789086866793 ; 9789086866793 ; Reconciling food law to competitiveness (9789086866793) >
+    au < exists ; exists ; 2010 ; 9789086861576 ; 9789086867134 ; 9789086867134 ; Governing food security: Law, politics and the right to food (9789086867134) >
+    au < exists ; exists ; 2011 ; 9789086861767 ; 9789086867301 ; 9789086867301 ; Private food law: Governing food chains through contract law, self-regulation, private standards, audits and certification schemes (9789086867301) >
+    au < exists ; exists ; 2012 ; 9789086861941 ; 9789086867509 ; 9789086867509 ; Regulating food law: Risk analysis and the precautionary principle as general principles of EU food law (9789086867509) >
+    au < exists ; exists ; 2013 ; 9789086862399 ; 9789086867912 ; 9789086867912 ; The enforceability of the human right to adequate food: A comparative study (9789086867912) >
+    au < exists ; exists ; 2014 ; 9789086862511 ; 9789086868018 ; 9789086868018 ; From agricultural to food law: The new scenario (9789086868018) >
+
+   }
+
+   {
+
+      title <
+        name = Human health handbooks ;
+        name = 2212-375X ;
+        type = bookSeries
+      >
+
+    au < exists ; exists ; 2012 ; 9789086861750 ; 9789086867295 ; 9789086867295 ; Handbook of diet, nutrition and the skin (9789086867295) >
+    au < exists ; exists ; 2012 ; 9789086861743 ; 9789086867288 ; 9789086867288 ; Handbook of hair in health and disease (9789086867288) >
+    au < exists ; exists ; 2013 ; 9789086862115 ; 9789086867660 ; 9789086867660 ; Handbook of cheese in health: production, nutrition and medical sciences (9789086867660) >
+    au < exists ; exists ; 2013 ; 9789086862092 ; 9789086867646 ; 9789086867646 ; Handbook of dietary and nutritional aspects of human breast milk (9789086867646) >
+    au < exists ; exists ; 2013 ; 9789086862085 ; 9789086867639 ; 9789086867639 ; Handbook of nutrition, diet and sleep (9789086867639) >
+    au < exists ; exists ; 2013 ; 9789086862108 ; 9789086867653 ; 9789086867653 ; Handbook of vitamin D in human health: Prevention, treatment and toxicity (9789086867653) >
+    au < exists ; exists ; 2014 ; 9789086862122 ; 9789086867677 ; 9789086867677 ; Handbook of diet and nutrition in the menstrual cycle, periconception and fertility (9789086867677) >
+    au < exists ; exists ; 2014 ; 9789086862238 ; 9789086867776 ; 9789086867776 ; Handbook of dietary and nutritional aspects of bottle feeding (9789086867776) >
+    au < exists ; exists ; 2015 ; 9789086862542 ; 9789086868049 ; 9789086868049 ; Handbook of eggs in human function (9789086868049) >
+    au < exists ; exists ; 2015 ; 9789086862573 ; 9789086868063 ; 9789086868063 ; Handbook of public health in natural disasters: Nutrition, food, remediation and preparation (9789086868063) >
+    au < exists ; exists ; 2016 ; 9789086862764 ; 9789086868216 ; 9789086868216 ; Handbook of cholesterol: Biology, function and role in health and diseases (9789086868216) >
+    au < exists ; exists ; 2016 ; 9789086862771 ; 9789086868223 ; 9789086868223 ; Handbook of nutrition and diet in leukemia and blood disease therapy (9789086868223) >
+    au < exists ; exists ; 2016 ; 9789086862788 ; 9789086868230 ; 9789086868230 ; Handbook of nutrition and diet in therapy of bone diseases (9789086868230) >
+
+   }
+
+   {
+
+      title <
+        name = Innovation and Sustainability ;
+        name = 1875-0702 ;
+        type = bookSeries
+      >
+
+    au < exists ; exists ; 2007 ; 9789086860500 ; 9789086866205 ; 9789086866205 ; Environmental management in the Dutch food and beverage industry: A longitudinal study into the joint impact of business network and firm characteristics on the adoption of environmental management capabilities (9789086866205) >
+    au < exists ; exists ; 2007 ; 9789086860562 ; 9789086866281 ; 9789086866281 ; Strategic alignment of innovation to business: Balancing technology and markets in technology-based industries (9789086866281) >
+    au < exists ; exists ; 2009 ; 9789086861316 ; 9789086866786 ; 9789086866786 ; Product innovation in the Dutch food and beverage industry: A study on the impact of the innovation process, strategy and network on the product’s short and long term market performance (9789086866786) >
+    au < exists ; exists ; 2009 ; 9789086861019 ; 9789086866557 ; 9789086866557 ; Profiting from external knowledge: How firms use different knowledge acquisition strategies to improve their innovation performance (9789086866557) >
+
+   }
+
+   {
+
+      title <
+        name = International chains and networks ;
+        name = 1874-7663 ;
+        type = bookSeries
+      >
+
+    au < exists ; exists ; 2007 ; 9789086860494 ; 9789086866199 ; 9789086866199 ; Headquarters-subsidiary relationship governance in emerging markets of Central Eastern Europe: A study in Poland (9789086866199) >
+    au < exists ; exists ; 2007 ; 9789086860555 ; 9789086866274 ; 9789086866274 ; Integration and self regulation of quality management in Dutch agri-food supply chains: A cross-chain analysis of the poultry meat, the fruit and vegetable and the flower and potted plant chains (9789086866274) >
+    au < exists ; exists ; 2007 ; 9789086860548 ; 9789086866212 ; 9789086866212 ; Quality management and strategic alliances in the mango supply chain from Costa Rica: An interdisciplinary approach for analysing coordination, incentives and governance (9789086866212) >
+    au < exists ; exists ; 2007 ; 9789086860388 ; 9789086866021 ; 9789086866021 ; The role of Guanxi in buyer-seller relationships in China: A survey of vegetable supply chains in Jiangsu Province (9789086866021) >
+    au < exists ; exists ; 2009 ; 9789086860920 ; 9789086866540 ; 9789086866540 ; Cooperation for competition: Linking Ethiopian farmers to markets (9789086866540) >
+    au < exists ; exists ; 2009 ; 9789086861118 ; 9789086866762 ; 9789086866762 ; Logistics outsourcing in the food processing industry: A study in the Netherlands and Taiwan (9789086866762) >
+    au < exists ; exists ; 2009 ; 9789086861101 ; 9789086866847 ; 9789086866847 ; Supply chain integration, quality management and firm performance of pork processing industry in China (9789086866847) >
+    au < exists ; exists ; 2009 ; 9789086861026 ; 9789086866595 ; 9789086866595 ; The organisation of transactions: Studying supply networks using gaming simulation (9789086866595) >
+
+   }
+
+   {
+
+      title <
+        name = Mansholt Publication Series ;
+        name = 1871-9309 ;
+        type = bookSeries
+      >
+
+    au < exists ; exists ; 2006 ; 9789076998961 ; 9789086865888 ; 9789086865888 ; Heterodox views on economics and the economy of the global society (9789086865888) >
+    au < exists ; exists ; 2007 ; 9789086860517 ; 9789086866243 ; 9789086866243 ; Changing families and their lifestyles (9789086866243) >
+    au < exists ; exists ; 2007 ; 9789086860470 ; 9789086866182 ; 9789086866182 ; Development economics between markets and institutions: Incentives for growth, food security and sustainable use of the environment (9789086866182) >
+    au < exists ; exists ; 2007 ; 9789086860395 ; 9789086866250 ; 9789086866250 ; Imaging the future: Geo-visualisation for participatory spatial planning in Europe (9789086866250) >
+    au < exists ; exists ; 2009 ; 9789086860876 ; 9789086866816 ; 9789086866816 ; Research in action: Theories and practices for innovation and social change (9789086866816) >
+    au < exists ; exists ; 2010 ; 9789086861330 ; 9789086866939 ; 9789086866939 ; Five centuries of farming: A short history of Dutch agriculture 1500 - 2000 (9789086866939) >
+    au < exists ; exists ; 2010 ; 9789086861392 ; 9789086866717 ; 9789086866717 ; Food, diversity, vulnerability and social change: Research findings from insular Southeast Asia (9789086866717) >
+    au < exists ; exists ; 2011 ; 9789086861675 ; 9789086867240 ; 9789086867240 ; Knowledge in action: The search for collaborative research for sustainable landscape development (9789086867240) >
+    au < exists ; exists ; 2012 ; 9789086861347 ; 9789086861682 ; 9789086861682 ; Unlocking markets to smallholders: Lessons from  South Africa (9789086861682) >
+    au < ready ; exists ; 2013 ; 9789086862214 ; 9789086867752 ; 9789086867752 ; The arena of everyday life (9789086867752) >
+
+   }
+
+   {
+
+      title <
+        name = WAAP Book of the year ;
+        name = 1574-1125 ;
+        type = bookSeries
+      >
+
+    au < exists ; exists ; 2004 ; 9789076998473 ; 9789086865338 ; 9789086865338 ; WAAP Book of the year 2003: A review of Livestock Systems Developments and Researches (9789086865338) >
+    au < exists ; exists ; 2005 ; 9789076998671 ; 9789086865642 ; 9789086865642 ; Animal production and animal science worldwide: WAAP Book of the Year 2005 (9789086865642) >
+    au < exists ; exists ; 2007 ; 9789086860340 ; 9789086866151 ; 9789086866151 ; Animal production and animal science worldwide: WAAP book of the year 2006 (9789086866151) >
+    au < exists ; exists ; 2009 ; 9789086860685 ; 9789086866564 ; 9789086866564 ; Animal production and animal science worldwide: WAAP book of the year 2007 (9789086866564) >
+
+   }
 
 }
