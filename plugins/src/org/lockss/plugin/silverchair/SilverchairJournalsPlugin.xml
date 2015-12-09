@@ -20,11 +20,11 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>5</string>
+        <string>6</string>
       </entry>
     </map>
   </entry>
@@ -77,7 +77,7 @@
     <list>
       <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com|[^.]+\.silverchair\.netdna-cdn\.com|[^.]+\.silverchaircdn\.com)/"</string>
       <string>2,"^%s(SharedControls/)?DownloadImage\.aspx\?", base_url</string>
-      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|less|png|tif?f)(\?v=[0-9]+)?$", base_url_host</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
       <string>4,"^%s", base_url</string>
       <string>2,"__EVENTVALIDATION="</string>
       <string>2,"^%sdownloadCitation\.aspx\?format=[^&amp;]+$", base_url</string>
@@ -129,7 +129,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%sarticle\.aspx\?articleid=\d+$", base_url</string>
+      <string>"^%sarticle\.aspx\?articleid=%d$", base_url, resource_id</string>
     </list>
   </entry>
   <entry>

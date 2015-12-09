@@ -68,7 +68,7 @@
         <string>au_crawlrules</string>
         <list>
             <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com|[^.]+\.silverchair\.netdna-cdn\.com|[^.]+\.silverchaircdn\.com)/"</string>
-            <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|less|png|tif?f)(\?v=[0-9]+)?$", base_url_host</string>
+            <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
             <string>4,"^%s", base_url</string>
             <string>2,"__EVENTVALIDATION="</string>
             <string>1,"^%sbook\.aspx\?bookid=",base_url,</string>
@@ -117,7 +117,7 @@
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
-            <string>"^%scontent\.aspx\?bookid=\d+$", base_url</string>
+            <string>"^%spdfaccess\.ashx\?ResourceID=(\d+)&amp;PDFSource=(\d+)$", base_url</string>
         </list>
     </entry>
     <entry>
