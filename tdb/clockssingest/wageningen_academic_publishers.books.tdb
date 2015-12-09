@@ -9,20 +9,209 @@
   param[base_url] = http://www.wageningenacademic.com/
   implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_eisbn] ; name >
 
-  {
+   {
 
-    title <
-      name = Wageningen Academic Publishers ;
-      type = bookSeries
-    >
+      title <
+        name = Wageningen Books ;
+        type = bookSeries
+      >
 
-    au < crawling ; exists ; 2005 ; 978-90-76998-55-8 ; 978-90-8686-539-0 ; 9789086865390 ; Crop Systems Dynamics >
-    au < manifest ; exists ; 2005 ; 978-90-76998-58-9 ; 978-90-8686-545-1 ; 9789086865451 ; Animal Bioethics - Principles and Teaching Methods >
-    au < manifest ; exists ; 2006 ; 978-90-8686-010-4 ; 978-90-8686-579-6 ; 9789086865796 ; 52nd International Congress of Meat Science and Technology >
-    au < crawling ; exists ; 2010 ; 978-90-8686-146-0 ; 978-90-8686-700-4 ; 9789086867004 ; Single women, land and livelihood vulnerability in a communal area in Zimbabwe >
-    au < manifest ; exists ; 2012 ; 978-90-8686-184-2 ; 978-90-8686-741-7 ; 9789086867417 ; Animal farming and environmental interactions in the Mediterranean region >
+    au < exists ; exists ; 1995 ; 9789074134170 ; 9789086865017 ; 9789086865017 ; Greenhouse climate control: an integrated approach (9789086865017) >
+    au < exists ; exists ; 1999 ; 9789074134668 ; 9789086865024 ; 9789086865024 ; Post-pelleting application of liquid additives (9789086865024) >
+    au < exists ; exists ; 1999 ; 9789074134651 ; 9789086867592 ; 9789086867592 ; Seed potato technology (9789086867592) >
+    au < exists ; exists ; 2000 ; 9789074134774 ; 9789086865031 ; 9789086865031 ; Management of nitrogen and water in potato production (9789086865031) >
+    au < exists ; exists ; 2002 ; 9789076998114 ; 9789086865055 ; 9789086865055 ; Nutrition and health of the gastrointestinal tract (9789086865055) >
+    au < exists ; exists ; 2002 ; 9789076998091 ; 9789086865079 ; 9789086865079 ; Paradoxes in Food Chains and Networks (9789086865079) >
+    au < exists ; exists ; 2003 ; 9789076998213 ; 9789086865147 ; 9789086865147 ; Precision agriculture (9789086865147) >
+    au < exists ; exists ; 2003 ; 9789076998220 ; 9789086865154 ; 9789086865154 ; Precision livestock farming (9789086865154) >
+    au < exists ; exists ; 2003 ; 9789076998145 ; 9789086865109 ; 9789086865109 ; Quality of fish from catch to consumer: Labelling, modelling and traceability (9789086865109) >
+    au < exists ; exists ; 2003 ; 9789076998176 ; 9789086865130 ; 9789086865130 ; Weaning the pig: Concepts and consequences (9789086865130) >
+    au < exists ; exists ; 2004 ; 9789076998381 ; 9789086865253 ; 9789086865253 ; Automatic milking, a better understanding (9789086865253) >
+    au < exists ; exists ; 2004 ; 9789076998435 ; 9789086865284 ; 9789086865284 ; Controlling nitrogen flows and losses (9789086865284) >
+    au < exists ; exists ; 2004 ; 9789076998305 ; 9789086865277 ; 9789086865277 ; Decision support systems in potato production: Bringing models to practice (9789086865277) >
+    au < exists ; exists ; 2004 ; 9789076998329 ; 9789086866625 ; 9789086866625 ; Dietary fibre: Bio-active carbohydrates for food and feed (9789086866625) >
+    au < exists ; exists ; 2004 ; 9789076998404 ; 9789086865260 ; 9789086865260 ; Dynamics in chains and networks (9789086865260) >
+    au < exists ; exists ; 2004 ; 9789076998442 ; 9789086866656 ; 9789086866656 ; Health education and health promotion (9789086866656) >
+    au < exists ; exists ; 2004 ; 9789076998282 ; 9789086865239 ; 9789086865239 ; Meeting the mycotoxin menace (9789086865239) >
+    au < exists ; exists ; 2004 ; 9789076998411 ; 9789086866687 ; 9789086866687 ; Tables of composition and nutritional value of feed materials: Pigs, poultry, cattle, sheep, goats, rabbits, horses and fish (9789086866687) >
+    au < exists ; exists ; 2005 ; 9789076998589 ; 9789086865451 ; 9789086865451 ; Animal bioethics: Principles and teaching methods (9789086865451) >
+    au < exists ; exists ; 2005 ; 9789076998855 ; 9789086865635 ; 9789086865635 ; Applied equine nutrition: Equine NUtrition COnference (ENUCO) 2005 (9789086865635) >
+    au < crawling ; exists ; 2005 ; 9789076998558 ; 9789086865390 ; 9789086865390 ; Crop Systems Dynamics: An ecophysiological simulation model of genotype-by-environment interactions (9789086865390) >
+    au < exists ; exists ; 2005 ; 9789076998787 ; 9789086865406 ; 9789086865406 ; Emissions from European Agriculture (9789086865406) >
+    au < exists ; exists ; 2005 ; 9789076998718 ; 9789086865512 ; 9789086865512 ; Grassland: a global resource (9789086865512) >
+    au < exists ; exists ; 2005 ; 9789076998657 ; 9789086866663 ; 9789086866663 ; Innovation in agri-food systems (9789086866663) >
+    au < exists ; exists ; 2005 ; 9789076998701 ; 9789086865505 ; 9789086865505 ; Mastitis in dairy production: Current knowledge and future solutions (9789086865505) >
+    au < exists ; exists ; 2005 ; 9789076998732 ; 9789086865550 ; 9789086865550 ; Molecular breeding for the genetic improvement of forage crops and turf (9789086865550) >
+    au < exists ; exists ; 2005 ; 9789076998619 ; 9789086865581 ; 9789086865581 ; Nutrient Management in Agricultural Watersheds: A Wetlands Solution (9789086865581) >
+    au < exists ; exists ; 2005 ; 9789076998725 ; 9789086865567 ; 9789086865567 ; Optimisation of nutrient cycling and soil quality for sustainable grasslands (9789086865567) >
+    au < exists ; exists ; 2005 ; 9789076998749 ; 9789086865574 ; 9789086865574 ; Pastoral systems in marginal environments (9789086865574) >
+    au < exists ; exists ; 2005 ; 9789076998848 ; 9789086865628 ; 9789086865628 ; Potato in progress: Science meets practice (9789086865628) >
+    au < exists ; exists ; 2005 ; 9789076998695 ; 9789086865499 ; 9789086865499 ; Precision Agriculture ‘05 (9789086865499) >
+    au < exists ; exists ; 2005 ; 9789076998688 ; 9789086865482 ; 9789086865482 ; Precision Livestock Farming ‘05 (9789086865482) >
+    au < exists ; exists ; 2005 ; 9789076998534 ; 9789086865383 ; 9789086865383 ; Rapid methods for biological and chemical contaminants in food and feed (9789086865383) >
+    au < exists ; exists ; 2005 ; 9789076998596 ; 9789086865437 ; 9789086865437 ; Sea lavender, rust and mildew: A perennial pathosystem in the Netherlands (9789086865437) >
+    au < exists ; exists ; 2005 ; 9789076998756 ; 9789086865536 ; 9789086865536 ; Silage production and utilisation (9789086865536) >
+    au < exists ; exists ; 2005 ; 9789076998602 ; 9789086865413 ; 9789086865413 ; Starch derivatization: Fascinating and unique industrial opportunities (9789086865413) >
+    au < exists ; exists ; 2005 ; 9789076998428 ; 9789086865598 ; 9789086865598 ; Unravelling desertification: Policies and actor networks in Southern Europe (9789086865598) >
+    au < exists ; exists ; 2005 ; 9789076998763 ; 9789086865543 ; 9789086865543 ; Utilisation of grazed grass in temperate animal systems (9789086865543) >
+    au < exists ; exists ; 2005 ; 9789076998817 ; 9789086865529 ; 9789086865529 ; XX International Grassland Conference: Offered papers (9789086865529) >
+    au < exists ; exists ; 2006 ; 9789086860104 ; 9789086865796 ; 9789086865796 ; 52nd International Congress of Meat Science and Technology: Harnessing and exploiting global opportunities (9789086865796) >
+    au < exists ; exists ; 2006 ; 9789076998879 ; 9789086865703 ; 9789086865703 ; Antimicrobial growth promoters: Where do we go from here? (9789086865703) >
+    au < exists ; exists ; 2006 ; 9789086860029 ; 9789086865727 ; 9789086865727 ; Changing European farming systems for a better future: New visions for rural areas (9789086865727) >
+    au < exists ; exists ; 2006 ; 9789086860081 ; 9789086865758 ; 9789086865758 ; Ethics and the politics of food: Preprints of the 6th Congress of the European Society for Agricultural and Food Ethics (9789086865758) >
+    au < exists ; exists ; 2006 ; 9789076998947 ; 9789086866670 ; 9789086866670 ; Food habits and consumption in developing countries: Manual for field studies (9789086866670) >
+    au < exists ; exists ; 2006 ; 9789076998954 ; 9789086865734 ; 9789086865734 ; International agrifood chains and networks: Management and organization (9789086865734) >
+    au < exists ; exists ; 2006 ; 9789086860173 ; 9789086865895 ; 9789086865895 ; Learning to make change: Developing innovation competence for recreating the African university of the 21st century (9789086865895) >
+    au < exists ; exists ; 2006 ; 9789076998893 ; 9789086865673 ; 9789086865673 ; Livestock production and society (9789086865673) >
+    au < exists ; exists ; 2006 ; 9789086860043 ; 9789086865772 ; 9789086865772 ; Management of lameness causes in sport horses: Muscle, tendon, joint and bone disorders (9789086865772) >
+    au < exists ; exists ; 2006 ; 9789086860074 ; 9789086865857 ; 9789086865857 ; Mycotoxins and phycotoxins: Advances in determination, toxicology and exposure management (9789086865857) >
+    au < exists ; exists ; 2006 ; 9789076998886 ; 9789086865697 ; 9789086865697 ; Nutritional approaches to arresting the decline in fertility of pigs and poultry: Proceedings from Alltech's Technical Seminar Series (9789086865697) >
+    au < exists ; exists ; 2006 ; 9789086860111 ; 9789086865826 ; 9789086865826 ; Potato developments in a changing Europe (9789086865826) >
+    au < exists ; exists ; 2006 ; 9789076998572 ; 9789086865710 ; 9789086865710 ; Production diseases in farm animals (9789086865710) >
+    au < exists ; exists ; 2006 ; 9789076998640 ; 9789086865666 ; 9789086865666 ; Ruminant physiology: Digestion, metabolism and impact of nutrition on gene expression, immunology and stress (9789086865666) >
+    au < exists ; exists ; 2006 ; 9789086860050 ; 9789086865819 ; 9789086865819 ; Seafood research from fish to dish: Quality, safety and processing of wild and farmed seafood (9789086865819) >
+    au < exists ; exists ; 2006 ; 9789076998985 ; 9789086865765 ; 9789086865765 ; South American camelids research: Volume 1 (9789086865765) >
+    au < exists ; exists ; 2006 ; 9789086860067 ; 9789086865871 ; 9789086865871 ; The mycotoxin factbook: Food & feed topics (9789086865871) >
+    au < exists ; exists ; 2007 ; 9789086860296 ; 9789086866113 ; 9789086866113 ; Ammonia emissions in agriculture (9789086866113) >
+    au < exists ; exists ; 2007 ; 9789086860289 ; 9789086865970 ; 9789086865970 ; Ammonia: the case of the Netherlands (9789086865970) >
+    au < exists ; exists ; 2007 ; 9789086860401 ; 9789086866076 ; 9789086866076 ; Applied equine nutrition and training: Equine NUtrition COnference (ENUCO) 2007 (9789086866076) >
+    au < exists ; exists ; 2007 ; 9789086860432 ; 9789086866175 ; 9789086866175 ; Biofuels: implications for the feed industry (9789086866175) >
+    au < exists ; exists ; 2007 ; 9789086860371 ; 9789086865987 ; 9789086865987 ; Contracting for sustainability: An analysis of the Lake Victoria-EU Nile perch chain (9789086865987) >
+    au < exists ; exists ; 2007 ; 9789086860197 ; 9789086866229 ; 9789086866229 ; Dietary fibre components and functions (9789086866229) >
+    au < exists ; exists ; 2007 ; 9789086860135 ; 9789086865963 ; 9789086865963 ; Fishponds in farming systems (9789086865963) >
+    au < exists ; exists ; 2007 ; 9789086860180 ; 9789086865956 ; 9789086865956 ; Gaining the edge in pork and poultry production: Enhancing efficiency, quality and safety (9789086865956) >
+    au < exists ; exists ; 2007 ; 9789086860449 ; 9789086866090 ; 9789086866090 ; Gaining the edge in ruminant production: Nutritional strategies for optimal productivity and efficiency (9789086866090) >
+    au < exists ; exists ; 2007 ; 9789086860166 ; 9789086865901 ; 9789086865901 ; Human Security and International Insecurity (9789086865901) >
+    au < exists ; exists ; 2007 ; 9789086860258 ; 9789086865918 ; 9789086865918 ; On farm monitoring of pig welfare (9789086865918) >
+    au < exists ; exists ; 2007 ; 9789086860425 ; 9789086866083 ; 9789086866083 ; Potato production and innovative technologies (9789086866083) >
+    au < exists ; exists ; 2007 ; 9789086860241 ; 9789086866038 ; 9789086866038 ; Precision agriculture '07 (9789086866038) >
+    au < exists ; exists ; 2007 ; 9789086860234 ; 9789086866045 ; 9789086866045 ; Precision livestock farming '07 (9789086866045) >
+    au < exists ; exists ; 2007 ; 9789086860487 ; 9789086866236 ; 9789086866236 ; Producer organisations and market chains: Facilitating trajectories of change in developing countries (9789086866236) >
+    au < exists ; exists ; 2007 ; 9789086860579 ; 9789086866298 ; 9789086866298 ; Property rights after market liberalization reforms: Land titling and investments in rural Peru (9789086866298) >
+    au < exists ; exists ; 2007 ; 9789076998909 ; 9789086866052 ; 9789086866052 ; Quality management in food chains (9789086866052) >
+    au < exists ; exists ; 2007 ; 9789076998930 ; 9789086866069 ; 9789086866069 ; Rapid methods for food and feed quality determination (9789086866069) >
+    au < exists ; exists ; 2007 ; 9789086860357 ; 9789086865994 ; 9789086865994 ; Religion, International Relations and Development Cooperation (9789086865994) >
+    au < exists ; exists ; 2007 ; 9789086860319 ; 9789086865949 ; 9789086865949 ; Social learning towards a sustainable world: Principles, perspectives, and praxis (9789086865949) >
+    au < exists ; exists ; 2007 ; 9789086860210 ; 9789086866014 ; 9789086866014 ; Stepping-stones to improve upon functioning of participatory agricultural extension programs: Farmer field schools in Uganda (9789086866014) >
+    au < exists ; exists ; 2007 ; 9789086860463 ; 9789086866168 ; 9789086866168 ; Sustainable food production and ethics (9789086866168) >
+    au < exists ; exists ; 2007 ; 9789086860272 ; 9789086866007 ; 9789086866007 ; Tropical food chains: Governance regimes for quality management (9789086866007) >
+    au < exists ; exists ; 2007 ; 9789086860326 ; 9789086865925 ; 9789086865925 ; Utilisation and conservation of farm animal genetic resources (9789086865925) >
+    au < exists ; exists ; 2008 ; 9789086860814 ; 9789086866458 ; 9789086866458 ; Applied ethology: Addressing future challenges in animal agriculture (9789086866458) >
+    au < exists ; exists ; 2008 ; 9789086860524 ; 9789086866335 ; 9789086866335 ; Applying HACCP-based Quality Risk Management on dairy farms (9789086866335) >
+    au < exists ; exists ; 2008 ; 9789086860654 ; 9789086866359 ; 9789086866359 ; Aspergillus in the genomic era (9789086866359) >
+    au < exists ; exists ; 2008 ; 9789086861002 ; 9789086865789 ; 9789086865789 ; Book of Abstracts for the 10th World Conference on Animal Production (9789086865789) >
+    au < exists ; exists ; 2008 ; 9789086860265 ; 9789086866328 ; 9789086866328 ; Carbon sequestration in tropical grassland ecosystems (9789086866328) >
+    au < exists ; exists ; 2008 ; 9789086860739 ; 9789086866427 ; 9789086866427 ; Current advances in selenium research and applications: Volume 1 (9789086866427) >
+    au < exists ; exists ; 2008 ; 9789086860883 ; 9789086866519 ; 9789086866519 ; Formula for the future: nutrition or pathology?: Elevating performance and health in pigs and poultry (9789086866519) >
+    au < exists ; exists ; 2008 ; 9789086860609 ; 9789086866366 ; 9789086866366 ; Gut efficiency. the key ingredient in pig and poultry production: Elevating animal performance and health (9789086866366) >
+    au < exists ; exists ; 2008 ; 9789086860678 ; 9789086866403 ; 9789086866403 ; Gut efficiency. the key ingredient in ruminant production: Elevating animal performance and health (9789086866403) >
+    au < exists ; exists ; 2008 ; 9789086860791 ; 9789086866502 ; 9789086866502 ; Income stabilisation in European agriculture: Design and economic impact of risk management tools (9789086866502) >
+    au < exists ; exists ; 2008 ; 9789086860852 ; 9789086866496 ; 9789086866496 ; Mastitis control: From science to practice (9789086866496) >
+    au < exists ; exists ; 2008 ; 9789086860869 ; 9789086866533 ; 9789086866533 ; On the political economy of plant disease epidemics: Capita selecta in historical epidemiology (9789086866533) >
+    au < exists ; exists ; 2008 ; 9789086860623 ; 9789086866397 ; 9789086866397 ; Reconstructing biotechnologies: Critical social analyses (9789086866397) >
+    au < exists ; exists ; 2008 ; 9789086860203 ; 9789086866489 ; 9789086866489 ; South American camelids research: Volume 2 (9789086866489) >
+    au < exists ; exists ; 2008 ; 9789086860906 ; 9789086866526 ; 9789086866526 ; Sugarcane ethanol: Contributions to climate change mitigation and the environment (9789086866526) >
+    au < exists ; exists ; 2008 ; 9789086860722 ; 9789086866434 ; 9789086866434 ; The acute poorly performing sport horse (9789086866434) >
+    au < exists ; exists ; 2008 ; 9789086860838 ; 9789086866472 ; 9789086866472 ; The impact of Fair Trade (9789086866472) >
+    au < exists ; exists ; 2008 ; 9789086860616 ; 9789086866380 ; 9789086866380 ; Trace elements in animal production systems (9789086866380) >
+    au < exists ; exists ; 2008 ; 9789086860661 ; 9789086866373 ; 9789086866373 ; Welfare of pigs: From birth to slaughter (9789086866373) >
+    au < exists ; exists ; 2009 ; 9789086861248 ; 9789086866694 ; 9789086866694 ; Applied equine nutrition and training: Equine NUtrition and TRAining COnference (ENUTRACO) 2009 (9789086866694) >
+    au < exists ; exists ; 2009 ; 9789086861279 ; 9789086867349 ; 9789086867349 ; De landbouw tussen voedselcrises en overschotten (9789086867349) >
+    au < exists ; exists ; 2009 ; 9789086860944 ; 9789086866724 ; 9789086866724 ; Design of human nutrigenomics studies (9789086866724) >
+    au < exists ; exists ; 2009 ; 9789086861156 ; 9789086866731 ; 9789086866731 ; Ethical futures: bioscience and food horizons (9789086866731) >
+    au < exists ; exists ; 2009 ; 9789086861033 ; 9789086866601 ; 9789086866601 ; European pork chains: Diversity and quality challenges in consumer-oriented production and distribution (9789086866601) >
+    au < exists ; exists ; 2009 ; 9789086861361 ; 9789086867356 ; 9789086867356 ; Gezondheidslogo’s op eten: Verkenningen rond hun recente opmars (9789086867356) >
+    au < exists ; exists ; 2009 ; 9789086860890 ; 9789086866618 ; 9789086866618 ; International marketing and trade of quality food products (9789086866618) >
+    au < exists ; exists ; 2009 ; 9789086861149 ; 9789086866755 ; 9789086866755 ; JIAC2009 book of abstracts (9789086866755) >
+    au < exists ; exists ; 2009 ; 9789086860784 ; 9789086866588 ; 9789086866588 ; Marine functional food (9789086866588) >
+    au < exists ; exists ; 2009 ; 9789086861088 ; 9789086866779 ; 9789086866779 ; Pectins and pectinases (9789086866779) >
+    au < exists ; exists ; 2009 ; 9789086861132 ; 9789086866649 ; 9789086866649 ; Precision agriculture '09 (9789086866649) >
+    au < exists ; exists ; 2009 ; 9789086861125 ; 9789086866632 ; 9789086866632 ; Precision livestock farming '09 (9789086866632) >
+    au < exists ; exists ; 2009 ; 9789086861064 ; 9789086866809 ; 9789086866809 ; Reflexive biotechnology development: Studying plant breeding technologies and genomics for agriculture in the developing world (9789086866809) >
+    au < exists ; exists ; 2009 ; 9789086861231 ; 9789086867332 ; 9789086867332 ; Rond de scheidslijn van landbouweconomie en landbouwpolitiek (9789086867332) >
+    au < exists ; exists ; 2009 ; 9789086861057 ; 9789086866823 ; 9789086866823 ; Ruminant formula for the future: nutrition or pathology: Elevating performance and health (9789086866823) >
+    au < exists ; exists ; 2009 ; 9789086861194 ; 9789086866830 ; 9789086866830 ; Ruminant physiology: Digestion, metabolism and effects of nutrition on reproduction and welfare (9789086866830) >
+    au < exists ; exists ; 2009 ; 9789086860999 ; 9789086866854 ; 9789086866854 ; Sustainable animal production: The challenges and potential developments for professional farming (9789086866854) >
+    au < exists ; exists ; 2009 ; 9789086861095 ; 9789086866878 ; 9789086866878 ; The food economy: Global issues and challenges (9789086866878) >
+    au < exists ; exists ; 2009 ; 9789086861170 ; 9789086866885 ; 9789086866885 ; Transitions towards sustainable agriculture and food chains in peri-urban areas (9789086866885) >
+    au < exists ; exists ; 2009 ; 9789086861262 ; 9789086867325 ; 9789086867325 ; Van boterberg naar biobased: De Nederlandse landbouw in perspectief (9789086867325) >
+    au < exists ; exists ; 2009 ; 9789086860968 ; 9789086866892 ; 9789086866892 ; Voluntary feed intake in pigs (9789086866892) >
+    au < exists ; exists ; 2009 ; 9789086860937 ; 9789086866915 ; 9789086866915 ; Young people, education, and sustainable development: Exploring principles, perspectives, and praxis (9789086866915) >
+    au < exists ; exists ; 2010 ; 9789086861286 ; 9789086866922 ; 9789086866922 ; Dietary fibre: new frontiers for food and health (9789086866922) >
+    au < exists ; exists ; 2010 ; 9789086861491 ; 9789086867066 ; 9789086867066 ; Dynamics in animal nutrition (9789086867066) >
+    au < exists ; exists ; 2010 ; 9789086861293 ; 9789086866946 ; 9789086866946 ; Farm health and productivity management of dairy young stock (9789086866946) >
+    au < exists ; exists ; 2010 ; 9789086861545 ; 9789086867103 ; 9789086867103 ; Global food security: ethical and legal challenges (9789086867103) >
+    au < exists ; exists ; 2010 ; 9789086861446 ; 9789086866977 ; 9789086866977 ; Local cattle breeds in Europe: Development of policies and strategies for self-sustaining breeds (9789086866977) >
+    au < exists ; exists ; 2010 ; 9789086860951 ; 9789086867035 ; 9789086867035 ; Looking east looking west: Organic and quality food marketing in Asia and Europe (9789086867035) >
+    au < exists ; exists ; 2010 ; 9789086861453 ; 9789086866991 ; 9789086866991 ; Markets, marketing and developing countries: Where we stand and where we are heading (9789086866991) >
+    au < exists ; exists ; 2010 ; 9789086861569 ; 9789086867127 ; 9789086867127 ; Modelling nutrient digestion and utilisation in farm animals (9789086867127) >
+    au < exists ; exists ; 2010 ; 9789086861477 ; 9789086867011 ; 9789086867011 ; Performance diagnosis and purchase examination of elite sport horses (9789086867011) >
+    au < exists ; exists ; 2010 ; 9789086861484 ; 9789086867059 ; 9789086867059 ; Towards effective food chains: Models and applications (9789086867059) >
+    au < exists ; exists ; 2010 ; 9789086861415 ; 9789086866953 ; 9789086866953 ; Vital coalitions, vital regions: Partnerships for sustainable regional development (9789086866953) >
+    au < exists ; exists ; 2011 ; 9789086861835 ; 9789086867400 ; 9789086867400 ; Applied equine nutrition and training: Equine NUtrition and TRAining COnference (ENUTRACO) 2011 (9789086867400) >
+    au < exists ; exists ; 2011 ; 9789086861644 ; 9789086867202 ; 9789086867202 ; Cultivated vegetables of the world: a multilingual onomasticon (9789086867202) >
+    au < exists ; exists ; 2011 ; 9789086861637 ; 9789086867196 ; 9789086867196 ; Expedition agroparks: Research by design into sustainable development and agriculture in the network society (9789086867196) >
+    au < exists ; exists ; 2011 ; 9789086861729 ; 9789086867271 ; 9789086867271 ; Fibre production in South American camelids and other fibre animals (9789086867271) >
+    au < exists ; exists ; 2011 ; 9789086861668 ; 9789086867219 ; 9789086867219 ; Food and fuel: The example of Brazil (9789086867219) >
+    au < exists ; exists ; 2011 ; 9789086861354 ; 9789086867226 ; 9789086867226 ; Fundamentals of mold growth in indoor environments and strategies for healthy living (9789086867226) >
+    au < exists ; exists ; 2011 ; 9789086861651 ; 9789086867233 ; 9789086867233 ; Game meat hygiene in focus: Microbiology, epidemiology, risk analysis and quality assurance (9789086867233) >
+    au < exists ; exists ; 2011 ; 9789086861323 ; 9789086867042 ; 9789086867042 ; Institutional constraints to small farmer development in Southern Africa (9789086867042) >
+    au < exists ; exists ; 2011 ; 9789086861781 ; 9789086867363 ; 9789086867363 ; Inter-organizational information exchange, supply chain compliance and performance (9789086867363) >
+    au < exists ; exists ; 2011 ; 9789086861903 ; 9789086867462 ; 9789086867462 ; Living together in multi-ethnic neighbourhoods: The meaning of public spaces for issues of social integration (9789086867462) >
+    au < exists ; exists ; 2011 ; 9789086861699 ; 9789086867257 ; 9789086867257 ; Modern biotechnology: Panacea or new Pandora's box? (9789086867257) >
+    au < exists ; exists ; 2011 ; 9789086861606 ; 9789086867165 ; 9789086867165 ; New perspectives on economic development: A human agency approach (9789086867165) >
+    au < exists ; exists ; 2011 ; 9789086861828 ; 9789086867387 ; 9789086867387 ; Proceedings of the 5th International Conference on the Assessment of Animal Welfare at the Farm and Group Level (9789086867387) >
+    au < exists ; exists ; 2011 ; 9789086861798 ; 9789086867370 ; 9789086867370 ; Scientific evaluation of behavior, welfare and enrichment: Proceedings of the 45th congress of the ISAE (9789086867370) >
+    au < exists ; exists ; 2011 ; 9789086861811 ; 9789086867394 ; 9789086867394 ; The orange juice business: A Brazilian perspective (9789086867394) >
+    au < exists ; exists ; 2011 ; 9789086861613 ; 9789086867172 ; 9789086867172 ; Transformation and sustainability in agriculture: Connecting practice with social theory (9789086867172) >
+    au < exists ; exists ; 2011 ; 9789086861859 ; 9789086867424 ; 9789086867424 ; Udder health and communication (9789086867424) >
+    au < exists ; exists ; 2012 ; 9789086861927 ; 9789086867486 ; 9789086867486 ; Agriculture, peasantry and poverty in Turkey in the neo-liberal age (9789086867486) >
+    au < exists ; exists ; 2012 ; 9789086861972 ; 9789086867530 ; 9789086867530 ; Climate change and sustainable development: Ethical perspectives on land use and food production (9789086867530) >
+    au < exists ; exists ; 2012 ; 9789086861958 ; 9789086867516 ; 9789086867516 ; Farm animal proteomics: Proceedings of the 3rd Managing Committee Meeting and 2nd Meeting of Working Groups 1, 2 & 3 of COST Action FA1002 (9789086867516) >
+    au < exists ; exists ; 2012 ; 9789086862023 ; 9789086867561 ; 9789086867561 ; Feed efficiency in swine (9789086867561) >
+    au < exists ; exists ; 2012 ; 9789086861934 ; 9789086867493 ; 9789086867493 ; Forest-people interfaces: Understanding community forestry and biocultural diversity (9789086867493) >
+    au < exists ; exists ; 2012 ; 9789086861866 ; 9789086867431 ; 9789086867431 ; Geochemische bodematlas van Nederland (9789086867431) >
+    au < exists ; exists ; 2012 ; 9789086862030 ; 9789086867578 ; 9789086867578 ; Learning for sustainability in times of accelerating change (9789086867578) >
+    au < exists ; exists ; 2012 ; 9789086862054 ; 9789086867608 ; 9789086867608 ; Proceedings of the Xth International Scientific Congress in Fur Animal Production: Scientifur Volume 36 (3/4) (9789086867608) >
+    au < exists ; exists ; 2012 ; 9789086862047 ; 9789086867585 ; 9789086867585 ; Quality of life in designed environments: Proceedings of the 46th congress of the International Society for Applied Ethology (9789086867585) >
+    au < exists ; exists ; 2012 ; 9789086861965 ; 9789086867523 ; 9789086867523 ; SACRED SCIENCE?: On science and its interrelations with religious worldviews (9789086867523) >
+    au < exists ; exists ; 2013 ; 9789086862405 ; 9789086867936 ; 9789086867936 ; Applied equine nutrition and training: Equine NUtrition and TRAining COnference (ENUTRACO) 2013 (9789086867936) >
+    au < exists ; exists ; 2013 ; 9789086862252 ; 9789086867790 ; 9789086867790 ; Applied Ethology: understanding behaviour to improve livelihood: Proceedings of the 47th congress of the International Society for Applied Ethology (9789086867790) >
+    au < exists ; exists ; 2013 ; 9789086862221 ; 9789086867769 ; 9789086867769 ; Farm animal proteomics 2013: Proceedings of the 4th Management Committee Meeting and 3rd Meeting of Working Groups 1, 2 & 3 of COST Action FA1002 (9789086867769) >
+    au < exists ; exists ; 2013 ; 9789086862160 ; 9789086867707 ; 9789086867707 ; Improving farm animal welfare: Science and society working together: the Welfare Quality approach (9789086867707) >
+    au < exists ; exists ; 2013 ; 9789086862177 ; 9789086867714 ; 9789086867714 ; Livestock housing: Modern management to ensure optimal health and welfare of farm animals (9789086867714) >
+    au < exists ; exists ; 2013 ; 9789086862245 ; 9789086867783 ; 9789086867783 ; Precision agriculture '13 (9789086867783) >
+    au < exists ; exists ; 2013 ; 9789086862146 ; 9789086867684 ; 9789086867684 ; Renewing innovation systems in agriculture and food: How to go towards more sustainability? (9789086867684) >
+    au < exists ; exists ; 2013 ; 9789086862313 ; 9789086867844 ; 9789086867844 ; The ethics of consumption: The citizen, the market, and the law (9789086867844) >
+    au < exists ; exists ; 2013 ; 9789086862207 ; 9789086867745 ; 9789086867745 ; Welstendige ontwikkeling: Een betere kijk op groei (9789086867745) >
+    au < exists ; exists ; 2014 ; 9789086862627 ; 9789086868100 ; 9789086868100 ; Farm animal proteomics 2014: Proceedings of the 5th Management Committee Meeting and 4th Meeting of Working Groups 1,2 & 3 of COST Action FA 1002 (9789086868100) >
+    au < exists ; exists ; 2014 ; 9789086862436 ; 9789086867950 ; 9789086867950 ; Industrial, medical and environmental applications of microorganisms: Current status and trends (9789086867950) >
+    au < exists ; exists ; 2014 ; 9789086862528 ; 9789086868025 ; 9789086868025 ; Intergenerational learning and transformative leadership for sustainable futures (9789086868025) >
+    au < exists ; exists ; 2014 ; 9789086862443 ; 9789086867967 ; 9789086867967 ; Mutagenesis: exploring genetic diversity of crops (9789086867967) >
+    au < exists ; exists ; 2014 ; 9789086862344 ; 9789086867875 ; 9789086867875 ; Mutagenesis: exploring novel genes and pathways (9789086867875) >
+    au < exists ; exists ; 2014 ; 9789086862450 ; 9789086867974 ; 9789086867974 ; Proceedings of the 48th Congress of the International Society for Applied Ethology: Moving on (9789086867974) >
+    au < exists ; exists ; 2014 ; 9789086862474 ; 9789086867981 ; 9789086867981 ; Proceedings of the 6th International Conference on the Assessment of Animal Welfare at the Farm and Group Level (9789086867981) >
+    au < exists ; exists ; 2014 ; 9789086862368 ; 9789086867899 ; 9789086867899 ; Quality and risk management in agri-food chains (9789086867899) >
+    au < exists ; exists ; 2014 ; 9789086862351 ; 9789086867882 ; 9789086867882 ; Sustainable agroecosystems in climate change mitigation (9789086867882) >
+    au < exists ; exists ; 2014 ; 9789086862337 ; 9789086867868 ; 9789086867868 ; The great diversity: Trajectories of Asian development (9789086867868) >
+    au < exists ; exists ; 2014 ; 9789086862382 ; 9789086867905 ; 9789086867905 ; Trends in game meat hygiene: From forest to fork (9789086867905) >
+    au < exists ; exists ; 2015 ; 9789086862672 ; 9789086868148 ; 9789086868148 ;   Precision agriculture '15 (9789086868148) >
+    au < exists ; exists ; 2015 ; 9789086862726 ; 9789086868186 ; 9789086868186 ; Applied equine nutrition and training: Equine NUtrition and TRAining COnference (ENUTRACO) 2015 (9789086868186) >
+    au < exists ; exists ; 2015 ; 9789086862559 ; 9789086868056 ; 9789086868056 ; Coffee certification in East Africa: impact on farms, families and cooperatives (9789086868056) >
+    au < exists ; exists ; 2015 ; 9789086862733 ; 9789086868193 ; 9789086868193 ; Developmental work research: A tool for enabling collective agricultural innovation (9789086868193) >
+    au < exists ; exists ; 2015 ; 9789086862757 ; 9789086868209 ; 9789086868209 ; Envisioning a future without food waste and food poverty: Societal challenges (9789086868209) >
+    au < exists ; exists ; 2015 ; 9789086862610 ; 9789086868094 ; 9789086868094 ; Indirect calorimetry: Techniques, computations and applications (9789086868094) >
+    au < exists ; exists ; 2015 ; 9789076998916 ; 9789086867929 ; 9789086867929 ; Intestinal health: Key to maximise growth performance in livestock (9789086867929) >
+    au < exists ; exists ; 2015 ; 9789086862641 ; 9789086868131 ; 9789086868131 ; Know your food: Food ethics and innovation (9789086868131) >
+    au < exists ; exists ; 2015 ; 9789086862689 ; 9789086868155 ; 9789086868155 ; Precision livestock farming applications: Making sense of sensors to support farm management (9789086868155) >
+    au < exists ; exists ; 2015 ; 9789086862719 ; 9789086868179 ; 9789086868179 ; Proceedings of the 49th Congress of the International Society for Applied Ethology: Ethology for sustainable society (9789086868179) >
+    au < exists ; exists ; 2015 ; 9789086862566 ; 9789086868124 ; 9789086868124 ; Rural development: Knowledge and expertise in governance (9789086868124) >
+    au < exists ; exists ; 2015 ; 9789086862597 ; 9789086868070 ; 9789086868070 ; Rural protest groups and populist political parties (9789086868070) >
+    au < exists ; exists ; 2015 ; 9789086862535 ; 9789086868032 ; 9789086868032 ; The gestating and lactating sow (9789086868032) >
+    au < exists ; exists ; 2016 ; 9789086862801 ; 9789086868254 ; 9789086868254 ; Quality and innovation in food chains: Lessons and insights from Africa (9789086868254) >
+    au < exists ; exists ; 2016 ; 9789086862603 ; 9789086868087 ; 9789086868087 ; The end of animal life: a start for ethical debate: Ethical and societal considerations on killing animals (9789086868087) >
 
-  }
+   }
 
   {
 
@@ -45,6 +234,7 @@
     au < manifest ; exists ; 2012 ; 978-90-8686-134-7 ; 978-90-8686-168-2 ; 9789086861682 ; Unlocking markets to smallolders, Volume 10 >
     au < testing ; exists ; 2013 ; 978-90-8686-221-4 ; 978-90-8686-775-2 ; 9789086867752 ; The arena of everyday life, Volume 12 >
 
+    au < crawling ; exists ; 2010 ; 978-90-8686-146-0 ; 978-90-8686-700-4 ; 9789086867004 ; Single women, land and livelihood vulnerability in a communal area in Zimbabwe >
   }
 
 }
