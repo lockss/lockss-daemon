@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -18,22 +18,22 @@
       param[base_url] = http://www.revistas.unifacs.br/
       param[journal_id] = rde
 
-      au < exists ; 1998 ; 1 ; RDE-Revista de Desenvolvimento Econômico Volume 1998 ; 1998 >
-      au < exists ; 1999 ; 2 ; RDE-Revista de Desenvolvimento Econômico Volume 1999 ; 1999 >
-      au < exists ; 2000 ; 3 ; RDE-Revista de Desenvolvimento Econômico Volume 2000 ; 2000 >
-      au < exists ; 2001 ; 4 ; RDE-Revista de Desenvolvimento Econômico Volume 2001 ; 2001 >
-      au < exists ; 2002 ; 5 ; RDE-Revista de Desenvolvimento Econômico Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 6 ; RDE-Revista de Desenvolvimento Econômico Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 7 ; RDE-Revista de Desenvolvimento Econômico Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 8 ; RDE-Revista de Desenvolvimento Econômico Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 9 ; RDE-Revista de Desenvolvimento Econômico Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 10 ; RDE-Revista de Desenvolvimento Econômico Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 11 ; RDE-Revista de Desenvolvimento Econômico Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 12 ; RDE-Revista de Desenvolvimento Econômico Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 13 ; RDE-Revista de Desenvolvimento Econômico Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 14 ; RDE-Revista de Desenvolvimento Econômico Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 15 ; RDE-Revista de Desenvolvimento Econômico Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 16 ; RDE-Revista de Desenvolvimento Econômico Volume 2013 ; 2013 >
+      au < exists ; 1998 ; 1 ; RDE-Revista de Desenvolvimento Econômico Volume 1998 ; 1998 ; >
+      au < exists ; 1999 ; 2 ; RDE-Revista de Desenvolvimento Econômico Volume 1999 ; 1999 ; >
+      au < exists ; 2000 ; 3 ; RDE-Revista de Desenvolvimento Econômico Volume 2000 ; 2000 ; >
+      au < exists ; 2001 ; 4 ; RDE-Revista de Desenvolvimento Econômico Volume 2001 ; 2001 ; >
+      au < exists ; 2002 ; 5 ; RDE-Revista de Desenvolvimento Econômico Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 6 ; RDE-Revista de Desenvolvimento Econômico Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 7 ; RDE-Revista de Desenvolvimento Econômico Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 8 ; RDE-Revista de Desenvolvimento Econômico Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 9 ; RDE-Revista de Desenvolvimento Econômico Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 10 ; RDE-Revista de Desenvolvimento Econômico Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 11 ; RDE-Revista de Desenvolvimento Econômico Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 12 ; RDE-Revista de Desenvolvimento Econômico Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 13 ; RDE-Revista de Desenvolvimento Econômico Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 14 ; RDE-Revista de Desenvolvimento Econômico Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 15 ; RDE-Revista de Desenvolvimento Econômico Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 16 ; RDE-Revista de Desenvolvimento Econômico Volume 2013 ; 2013 ; >
 
   }
 
@@ -48,11 +48,11 @@
       param[base_url] = http://www.revistas.unifacs.br/
       param[journal_id] = redu
 
-      au < exists ; 2009 ; 1 ; Revista do Curso de Direito Volume 2009 [issn 1808-4435] ; 2009 >
-      au < exists ; 2010 ; 2 ; Revista do Curso de Direito Volume 2010 [issn 1808-4435] ; 2010 >
-      au < exists ; 2011 ; 3 ; Revista do Curso de Direito Volume 2011 [issn 1808-4435] ; 2011 >
-      au < exists ; 2012 ; 4 ; Revista do Curso de Direito Volume 2012 [issn 1808-4435] ; 2012 >
-      au < expected ; 2013 ; 5 ; Revista do Curso de Direito Volume 2013 [issn 1808-4435] ; 2013 >
+      au < exists ; 2009 ; 1 ; Revista do Curso de Direito Volume 2009 [issn 1808-4435] ; 2009 ; >
+      au < exists ; 2010 ; 2 ; Revista do Curso de Direito Volume 2010 [issn 1808-4435] ; 2010 ; >
+      au < exists ; 2011 ; 3 ; Revista do Curso de Direito Volume 2011 [issn 1808-4435] ; 2011 ; >
+      au < exists ; 2012 ; 4 ; Revista do Curso de Direito Volume 2012 [issn 1808-4435] ; 2012 ; >
+      au < expected ; 2013 ; 5 ; Revista do Curso de Direito Volume 2013 [issn 1808-4435] ; 2013 ; >
 
   }
 
@@ -67,9 +67,9 @@
       param[base_url] = http://www.revistas.unifacs.br/
       param[journal_id] = ree
 
-      au < exists ; 2011 ; 1 ; Revista Eletrônica de Energia Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 2 ; Revista Eletrônica de Energia Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 3 ; Revista Eletrônica de Energia Volume 2013 ; 2013 >
+      au < exists ; 2011 ; 1 ; Revista Eletrônica de Energia Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 2 ; Revista Eletrônica de Energia Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 3 ; Revista Eletrônica de Energia Volume 2013 ; 2013 ; >
 
   }
 
@@ -85,21 +85,21 @@
       param[base_url] = http://www.revistas.unifacs.br/
       param[journal_id] = rgb
 
-      au < exists ; 1999 ; 1 ; Gestão & Planejamento-G&P Volume 1999 ; 1999 >
-      au < exists ; 2000 ; 2 ; Gestão & Planejamento-G&P Volume 2000 ; 2000 >
-      au < exists ; 2001 ; 3 ; Gestão & Planejamento-G&P Volume 2001 ; 2001 >
-      au < exists ; 2002 ; 4 ; Gestão & Planejamento-G&P Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 5 ; Gestão & Planejamento-G&P Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 6 ; Gestão & Planejamento-G&P Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 7 ; Gestão & Planejamento-G&P Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 8 ; Gestão & Planejamento-G&P Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 9 ; Gestão & Planejamento-G&P Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 10 ; Gestão & Planejamento-G&P Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 11 ; Gestão & Planejamento-G&P Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 12 ; Gestão & Planejamento-G&P Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 13 ; Gestão & Planejamento-G&P Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 14 ; Gestão & Planejamento-G&P Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 15 ; Gestão & Planejamento-G&P Volume 2013 ; 2013 >
+      au < exists ; 1999 ; 1 ; Gestão & Planejamento-G&P Volume 1999 ; 1999 ; >
+      au < exists ; 2000 ; 2 ; Gestão & Planejamento-G&P Volume 2000 ; 2000 ; >
+      au < exists ; 2001 ; 3 ; Gestão & Planejamento-G&P Volume 2001 ; 2001 ; >
+      au < exists ; 2002 ; 4 ; Gestão & Planejamento-G&P Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 5 ; Gestão & Planejamento-G&P Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 6 ; Gestão & Planejamento-G&P Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 7 ; Gestão & Planejamento-G&P Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 8 ; Gestão & Planejamento-G&P Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 9 ; Gestão & Planejamento-G&P Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 10 ; Gestão & Planejamento-G&P Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 11 ; Gestão & Planejamento-G&P Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 12 ; Gestão & Planejamento-G&P Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 13 ; Gestão & Planejamento-G&P Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 14 ; Gestão & Planejamento-G&P Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 15 ; Gestão & Planejamento-G&P Volume 2013 ; 2013 ; >
 
   }
 
@@ -114,9 +114,9 @@
       param[base_url] = http://www.revistas.unifacs.br/
       param[journal_id] = rsc
 
-      au < exists ; 2011 ; 1 ; Revista de Sistemas e Computação-RSC Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 2 ; Revista de Sistemas e Computação-RSC Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 3 ; Revista de Sistemas e Computação-RSC Volume 2013 ; 2013 >
+      au < exists ; 2011 ; 1 ; Revista de Sistemas e Computação-RSC Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 2 ; Revista de Sistemas e Computação-RSC Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 3 ; Revista de Sistemas e Computação-RSC Volume 2013 ; 2013 ; >
 
   }
 
@@ -131,18 +131,18 @@
       param[base_url] = http://www.revistas.unifacs.br/
       param[journal_id] = sepa
 
-      au < exists ; 1997 ; 1 ; Seminário Estudantil de Produção Acadêmica Volume 1997 ; 1997 >
-      au < exists ; 1998 ; 2 ; Seminário Estudantil de Produção Acadêmica Volume 1998 ; 1998 >
-      au < exists ; 1999 ; 3 ; Seminário Estudantil de Produção Acadêmica Volume 1999 ; 1999 >
-      au < exists ; 2000 ; 4 ; Seminário Estudantil de Produção Acadêmica Volume 2000 ; 2000 >
-      au < exists ; 2001 ; 5 ; Seminário Estudantil de Produção Acadêmica Volume 2001 ; 2001 >
-      au < exists ; 2002 ; 6 ; Seminário Estudantil de Produção Acadêmica Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 7 ; Seminário Estudantil de Produção Acadêmica Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 8 ; Seminário Estudantil de Produção Acadêmica Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 9 ; Seminário Estudantil de Produção Acadêmica Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 10 ; Seminário Estudantil de Produção Acadêmica Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 11 ; Seminário Estudantil de Produção Acadêmica Volume 2007 ; 2007 >
-      au < expected ; 2013 ; 17 ; Seminário Estudantil de Produção Acadêmica Volume 2013 ; 2013 >
+      au < exists ; 1997 ; 1 ; Seminário Estudantil de Produção Acadêmica Volume 1997 ; 1997 ; >
+      au < exists ; 1998 ; 2 ; Seminário Estudantil de Produção Acadêmica Volume 1998 ; 1998 ; >
+      au < exists ; 1999 ; 3 ; Seminário Estudantil de Produção Acadêmica Volume 1999 ; 1999 ; >
+      au < exists ; 2000 ; 4 ; Seminário Estudantil de Produção Acadêmica Volume 2000 ; 2000 ; >
+      au < exists ; 2001 ; 5 ; Seminário Estudantil de Produção Acadêmica Volume 2001 ; 2001 ; >
+      au < exists ; 2002 ; 6 ; Seminário Estudantil de Produção Acadêmica Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 7 ; Seminário Estudantil de Produção Acadêmica Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 8 ; Seminário Estudantil de Produção Acadêmica Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 9 ; Seminário Estudantil de Produção Acadêmica Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 10 ; Seminário Estudantil de Produção Acadêmica Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 11 ; Seminário Estudantil de Produção Acadêmica Volume 2007 ; 2007 ; >
+      au < expected ; 2013 ; 17 ; Seminário Estudantil de Produção Acadêmica Volume 2013 ; 2013 ; >
 
   }
 

@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,13 +17,13 @@
       param[base_url] = http://portaldeperiodicos.unisul.br/
       param[journal_id] = Cadernos_Academicos
 
-      au < released ; 2009 ; 1 ; Cadernos Acadêmicos Volume 2009 ; 2009 >
-      au < released ; 2010 ; 2 ; Cadernos Acadêmicos Volume 2010 ; 2010 >
-      au < released ; 2011 ; 3 ; Cadernos Acadêmicos Volume 2011 ; 2011 >
-      au < released ; 2012 ; 4 ; Cadernos Acadêmicos Volume 2012 ; 2012 >
-      au < released ; 2013 ; 5 ; Cadernos Acadêmicos Volume 2013 ; 2013 >
-      au < released ; 2014 ; 6 ; Cadernos Acadêmicos Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 7 ; Cadernos Acadêmicos Volume 2015 ; 2015 >
+      au < released ; 2009 ; 1 ; Cadernos Acadêmicos Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 2 ; Cadernos Acadêmicos Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 3 ; Cadernos Acadêmicos Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 4 ; Cadernos Acadêmicos Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 5 ; Cadernos Acadêmicos Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 6 ; Cadernos Acadêmicos Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 7 ; Cadernos Acadêmicos Volume 2015 ; 2015 ; >
 
   }
 
@@ -38,10 +38,10 @@
       param[base_url] = http://portaldeperiodicos.unisul.br/
       param[journal_id] = CNTC
 
-      au < released ; 2012 ; 1 ; Cadernos de Naturologia e Terapias Complementares Volume 2012 ; 2012 >
-      au < released ; 2013 ; 2 ; Cadernos de Naturologia e Terapias Complementares Volume 2013 ; 2013 >
-      au < released ; 2014 ; 3 ; Cadernos de Naturologia e Terapias Complementares Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 4 ; Cadernos de Naturologia e Terapias Complementares Volume 2015 ; 2015 >
+      au < released ; 2012 ; 1 ; Cadernos de Naturologia e Terapias Complementares Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 2 ; Cadernos de Naturologia e Terapias Complementares Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 3 ; Cadernos de Naturologia e Terapias Complementares Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 4 ; Cadernos de Naturologia e Terapias Complementares Volume 2015 ; 2015 ; >
 
   }
 
@@ -56,22 +56,22 @@
       param[base_url] = http://portaldeperiodicos.unisul.br/
       param[journal_id] = Linguagem_Discurso
 
-      au < released ; 2000 ; 1 ; Linguagem em (Dis)curso Volume 2000 ; 2000 >
-      au < released ; 2001 ; 1-2 ; Linguagem em (Dis)curso Volume 2001 ; 2001 >
-      au < released ; 2002 ; 2-3 ; Linguagem em (Dis)curso Volume 2002 ; 2002 >
-      au < released ; 2003 ; 3-4 ; Linguagem em (Dis)curso Volume 2003 ; 2003 >
-      au < released ; 2004 ; 4-5 ; Linguagem em (Dis)curso Volume 2004 ; 2004 >
-      au < released ; 2005 ; 5 ; Linguagem em (Dis)curso Volume 2005 ; 2005 >
-      au < released ; 2006 ; 6 ; Linguagem em (Dis)curso Volume 2006 ; 2006 >
-      au < released ; 2007 ; 7 ; Linguagem em (Dis)curso Volume 2007 ; 2007 >
-      au < released ; 2008 ; 8 ; Linguagem em (Dis)curso Volume 2008 ; 2008 >
-      au < released ; 2009 ; 9 ; Linguagem em (Dis)curso Volume 2009 ; 2009 >
-      au < released ; 2010 ; 10 ; Linguagem em (Dis)curso Volume 2010 ; 2010 >
-      au < released ; 2011 ; 11 ; Linguagem em (Dis)curso Volume 2011 ; 2011 >
-      au < released ; 2012 ; 12 ; Linguagem em (Dis)curso Volume 2012 ; 2012 >
-      au < released ; 2013 ; 13 ; Linguagem em (Dis)curso Volume 2013 ; 2013 >
-      au < released ; 2014 ; 14 ; Linguagem em (Dis)curso Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 15 ; Linguagem em (Dis)curso Volume 2015 ; 2015 >
+      au < released ; 2000 ; 1 ; Linguagem em (Dis)curso Volume 2000 ; 2000 ; >
+      au < released ; 2001 ; 1-2 ; Linguagem em (Dis)curso Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 2-3 ; Linguagem em (Dis)curso Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 3-4 ; Linguagem em (Dis)curso Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 4-5 ; Linguagem em (Dis)curso Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 5 ; Linguagem em (Dis)curso Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 6 ; Linguagem em (Dis)curso Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 7 ; Linguagem em (Dis)curso Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 8 ; Linguagem em (Dis)curso Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 9 ; Linguagem em (Dis)curso Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 10 ; Linguagem em (Dis)curso Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 11 ; Linguagem em (Dis)curso Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 12 ; Linguagem em (Dis)curso Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 13 ; Linguagem em (Dis)curso Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 14 ; Linguagem em (Dis)curso Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 15 ; Linguagem em (Dis)curso Volume 2015 ; 2015 ; >
 
   }
 
@@ -86,24 +86,24 @@
       param[base_url] = http://portaldeperiodicos.unisul.br/
       param[journal_id] = Poiesis
 
-      au < exists ; 1998 ; 1 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 1998 ; 1998 >
-      au < exists ; 1999 ; 2 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 1999 ; 1999 >
-      au < exists ; 2000 ; 3 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2000 ; 2000 >
-      au < exists ; 2001 ; 4 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2001 ; 2001 >
-      au < exists ; 2002 ; 5 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 6 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 7 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 8 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 9 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 10 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2007 ; 2007 >
-      au < released ; 2008 ; 11 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2008 ; 2008 >
-      au < released ; 2009 ; 12 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2009 ; 2009 >
-      au < released ; 2010 ; 13 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2010 ; 2010 >
-      au < released ; 2011 ; 14 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2011 ; 2011 >
-      au < released ; 2012 ; 15 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2012 ; 2012 >
-      au < released ; 2013 ; 16 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2013 ; 2013 >
-      au < released ; 2014 ; 17 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 18 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2015 ; 2015 >
+      au < exists ; 1998 ; 1 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 1998 ; 1998 ; >
+      au < exists ; 1999 ; 2 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 1999 ; 1999 ; >
+      au < exists ; 2000 ; 3 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2000 ; 2000 ; >
+      au < exists ; 2001 ; 4 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2001 ; 2001 ; >
+      au < exists ; 2002 ; 5 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 6 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 7 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 8 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 9 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 10 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 11 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 12 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 13 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 14 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 15 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 16 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 17 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 18 ; Poiésis: Revista do Programa de Pós-graduação em Educação Volume 2015 ; 2015 ; >
 
   }
 
@@ -118,14 +118,14 @@
       param[base_url] = http://portaldeperiodicos.unisul.br/
       param[journal_id] = EeN
 
-      au < released ; 2008 ; 1 ; REEN: Revista Eletrônica de Estratégia e Negócios Volume 2008 ; 2008 >
-      au < released ; 2009 ; 2 ; REEN: Revista Eletrônica de Estratégia e Negócios Volume 2009 ; 2009 >
-      au < released ; 2010 ; 3 ; REEN: Revista Eletrônica de Estratégia e Negócios Volume 2010 ; 2010 >
-      au < released ; 2011 ; 4 ; REEN: Revista Eletrônica de Estratégia e Negócios Volume 2011 ; 2011 >
-      au < released ; 2012 ; 5 ; REEN: Revista Eletrônica de Estratégia e Negócios Volume 2012 ; 2012 >
-      au < released ; 2013 ; 6 ; REEN: Revista Eletrônica de Estratégia e Negócios Volume 2013 ; 2013 >
-      au < released ; 2014 ; 7 ; REEN: Revista Eletrônica de Estratégia e Negócios Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 8 ; REEN: Revista Eletrônica de Estratégia e Negócios Volume 2015 ; 2015 >
+      au < released ; 2008 ; 1 ; REEN: Revista Eletrônica de Estratégia e Negócios Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 2 ; REEN: Revista Eletrônica de Estratégia e Negócios Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 3 ; REEN: Revista Eletrônica de Estratégia e Negócios Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 4 ; REEN: Revista Eletrônica de Estratégia e Negócios Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 5 ; REEN: Revista Eletrônica de Estratégia e Negócios Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 6 ; REEN: Revista Eletrônica de Estratégia e Negócios Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 7 ; REEN: Revista Eletrônica de Estratégia e Negócios Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 8 ; REEN: Revista Eletrônica de Estratégia e Negócios Volume 2015 ; 2015 ; >
 
   }
 
@@ -140,10 +140,10 @@
       param[base_url] = http://portaldeperiodicos.unisul.br/
       param[journal_id] = ciencia_curso
 
-      au < released ; 2012 ; 1 ; Revista Científica Ciência em Curso Volume 2012 ; 2012 >
-      au < released ; 2013 ; 2 ; Revista Científica Ciência em Curso Volume 2013 ; 2013 >
-      au < released ; 2014 ; 3 ; Revista Científica Ciência em Curso Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 4 ; Revista Científica Ciência em Curso Volume 2015 ; 2015 >
+      au < released ; 2012 ; 1 ; Revista Científica Ciência em Curso Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 2 ; Revista Científica Ciência em Curso Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 3 ; Revista Científica Ciência em Curso Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 4 ; Revista Científica Ciência em Curso Volume 2015 ; 2015 ; >
 
   }
 
@@ -158,16 +158,16 @@
       param[base_url] = http://portaldeperiodicos.unisul.br/
       param[journal_id] = Critica_Cultural
 
-      au < released ; 2006 ; 1 ; Revista Crítica Cultural Volume 2006 ; 2006 >
-      au < released ; 2007 ; 2 ; Revista Crítica Cultural Volume 2007 ; 2007 >
-      au < released ; 2008 ; 3 ; Revista Crítica Cultural Volume 2008 ; 2008 >
-      au < released ; 2009 ; 4 ; Revista Crítica Cultural Volume 2009 ; 2009 >
-      au < released ; 2010 ; 5 ; Revista Crítica Cultural Volume 2010 ; 2010 >
-      au < released ; 2011 ; 6 ; Revista Crítica Cultural Volume 2011 ; 2011 >
-      au < released ; 2012 ; 7 ; Revista Crítica Cultural Volume 2012 ; 2012 >
-      au < released ; 2013 ; 8 ; Revista Crítica Cultural Volume 2013 ; 2013 >
-      au < released ; 2014 ; 9 ; Revista Crítica Cultural Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 10 ; Revista Crítica Cultural Volume 2015 ; 2015 >
+      au < released ; 2006 ; 1 ; Revista Crítica Cultural Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 2 ; Revista Crítica Cultural Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 3 ; Revista Crítica Cultural Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 4 ; Revista Crítica Cultural Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 5 ; Revista Crítica Cultural Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 6 ; Revista Crítica Cultural Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 7 ; Revista Crítica Cultural Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 8 ; Revista Crítica Cultural Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 9 ; Revista Crítica Cultural Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 10 ; Revista Crítica Cultural Volume 2015 ; 2015 ; >
 
   }
 
@@ -182,10 +182,10 @@
       param[base_url] = http://portaldeperiodicos.unisul.br/
       param[journal_id] = gestao_ambiental
 
-      au < released ; 2012 ; 1 ; Revista Gestão & Sustentabilidade Ambiental Volume 2012 ; 2012 >
-      au < released ; 2013 ; 2 ; Revista Gestão & Sustentabilidade Ambiental Volume 2013 ; 2013 >
-      au < released ; 2014 ; 3 ; Revista Gestão & Sustentabilidade Ambiental Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 4 ; Revista Gestão & Sustentabilidade Ambiental Volume 2015 ; 2015 >
+      au < released ; 2012 ; 1 ; Revista Gestão & Sustentabilidade Ambiental Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 2 ; Revista Gestão & Sustentabilidade Ambiental Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 3 ; Revista Gestão & Sustentabilidade Ambiental Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 4 ; Revista Gestão & Sustentabilidade Ambiental Volume 2015 ; 2015 ; >
 
   }
 
@@ -200,12 +200,12 @@
       param[base_url] = http://portaldeperiodicos.unisul.br/
       param[journal_id] = U_Fato_Direito
 
-      au < released ; 2010 ; 1 ; Revista Jurídica de Fato e de Direito Volume 2010 ; 2010 >
-      au < released ; 2011 ; 2 ; Revista Jurídica de Fato e de Direito Volume 2011 ; 2011 >
-      au < released ; 2012 ; 3 ; Revista Jurídica de Fato e de Direito Volume 2012 ; 2012 >
-      au < released ; 2013 ; 4 ; Revista Jurídica de Fato e de Direito Volume 2013 ; 2013 >
-      au < released ; 2014 ; 5 ; Revista Jurídica de Fato e de Direito Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 6 ; Revista Jurídica de Fato e de Direito Volume 2015 ; 2015 >
+      au < released ; 2010 ; 1 ; Revista Jurídica de Fato e de Direito Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 2 ; Revista Jurídica de Fato e de Direito Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 3 ; Revista Jurídica de Fato e de Direito Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 4 ; Revista Jurídica de Fato e de Direito Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 5 ; Revista Jurídica de Fato e de Direito Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 6 ; Revista Jurídica de Fato e de Direito Volume 2015 ; 2015 ; >
 
   }
 

@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,12 +17,12 @@
       param[base_url] = http://periodicos.urca.br/ojs/
       param[journal_id] = DirDialog
 
-      au < released ; 2010 ; 1 ; Revista eletrônica Direito & Dalogicidade Volume 2010 ; 2010 >
-      au < released ; 2011 ; 2 ; Revista eletrônica Direito & Dalogicidade Volume 2011 ; 2011 >
-      au < released ; 2012 ; 3 ; Revista eletrônica Direito & Dalogicidade Volume 2012 ; 2012 >
-      au < released ; 2013 ; 4 ; Revista eletrônica Direito & Dalogicidade Volume 2013 ; 2013 >
-      au < released ; 2014 ; 5 ; Revista eletrônica Direito & Dalogicidade Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 6 ; Revista eletrônica Direito & Dalogicidade Volume 2015 ; 2015 >
+      au < released ; 2010 ; 1 ; Revista eletrônica Direito & Dalogicidade Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 2 ; Revista eletrônica Direito & Dalogicidade Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 3 ; Revista eletrônica Direito & Dalogicidade Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 4 ; Revista eletrônica Direito & Dalogicidade Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 5 ; Revista eletrônica Direito & Dalogicidade Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 6 ; Revista eletrônica Direito & Dalogicidade Volume 2015 ; 2015 ; >
 
   }
 

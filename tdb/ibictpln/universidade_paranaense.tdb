@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,28 +17,28 @@
       param[base_url] = http://revistas.unipar.br/
       param[journal_id] = akropolis
 
-      au < exists ; 1993 ; 1 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 1993 ; 1993 >
-      au < exists ; 1994 ; 2 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 1994 ; 1994 >
-      au < exists ; 1995 ; 3 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 1995 ; 1995 >
-      au < exists ; 1996 ; 4 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 1996 ; 1996 >
-      au < exists ; 1997 ; 5 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 1997 ; 1997 >
-      au < exists ; 1998 ; 6 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 1998 ; 1998 >
-      au < exists ; 1999 ; 7 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 1999 ; 1999 >
-      au < exists ; 2000 ; 8 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2000 ; 2000 >
-      au < exists ; 2001 ; 9 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2001 ; 2001 >
-      au < exists ; 2002 ; 10 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 11 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 12 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 13 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 14 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 15 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 16 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 17 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 18 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 19 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 20 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 21 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 22 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2014 ; 2014 >
+      au < exists ; 1993 ; 1 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 1993 ; 1993 ; >
+      au < exists ; 1994 ; 2 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 1994 ; 1994 ; >
+      au < exists ; 1995 ; 3 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 1995 ; 1995 ; >
+      au < exists ; 1996 ; 4 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 1996 ; 1996 ; >
+      au < exists ; 1997 ; 5 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 1997 ; 1997 ; >
+      au < exists ; 1998 ; 6 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 1998 ; 1998 ; >
+      au < exists ; 1999 ; 7 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 1999 ; 1999 ; >
+      au < exists ; 2000 ; 8 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2000 ; 2000 ; >
+      au < exists ; 2001 ; 9 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2001 ; 2001 ; >
+      au < exists ; 2002 ; 10 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 11 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 12 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 13 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 14 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 15 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 16 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 17 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 18 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 19 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 20 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 21 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 22 ; Akrópolis: Revista de Ciências Humanas da UNIPAR Volume 2014 ; 2014 ; >
 
   }
 
@@ -53,24 +53,24 @@
       param[base_url] = http://revistas.unipar.br/
       param[journal_id] = saude
 
-      au < exists ; 1997 ; 1 ; Arquivos de Ciências da Saúde da UNIPAR Volume 1997 ; 1997 >
-      au < exists ; 1998 ; 2 ; Arquivos de Ciências da Saúde da UNIPAR Volume 1998 ; 1998 >
-      au < exists ; 1999 ; 3 ; Arquivos de Ciências da Saúde da UNIPAR Volume 1999 ; 1999 >
-      au < exists ; 2000 ; 4 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2000 ; 2000 >
-      au < exists ; 2001 ; 5 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2001 ; 2001 >
-      au < exists ; 2002 ; 6 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 7 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 8 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 9 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 10 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 11 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 12 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 13 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 14 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 15 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 16 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 17 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 18 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2014 ; 2014 >
+      au < exists ; 1997 ; 1 ; Arquivos de Ciências da Saúde da UNIPAR Volume 1997 ; 1997 ; >
+      au < exists ; 1998 ; 2 ; Arquivos de Ciências da Saúde da UNIPAR Volume 1998 ; 1998 ; >
+      au < exists ; 1999 ; 3 ; Arquivos de Ciências da Saúde da UNIPAR Volume 1999 ; 1999 ; >
+      au < exists ; 2000 ; 4 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2000 ; 2000 ; >
+      au < exists ; 2001 ; 5 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2001 ; 2001 ; >
+      au < exists ; 2002 ; 6 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 7 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 8 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 9 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 10 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 11 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 12 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 13 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 14 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 15 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2011 ; 2011 ; >
+      au < expected ; 2012 ; 16 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 17 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 18 ; Arquivos de Ciências da Saúde da UNIPAR Volume 2014 ; 2014 ; >
 
   }
 
@@ -85,23 +85,23 @@
       param[base_url] = http://revistas.unipar.br/
       param[journal_id] = veterinaria
 
-      au < exists ; 1998 ; 1 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 1998 ; 1998 >
-      au < exists ; 1999 ; 2 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 1999 ; 1999 >
-      au < exists ; 2000 ; 3 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2000 ; 2000 >
-      au < exists ; 2001 ; 4 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2001 ; 2001 >
-      au < exists ; 2002 ; 5 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 6 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 7 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 8 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 9 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 10 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 11 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 12 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 13 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 14 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 15 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 16 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 17 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2014 ; 2014 >
+      au < exists ; 1998 ; 1 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 1998 ; 1998 ; >
+      au < exists ; 1999 ; 2 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 1999 ; 1999 ; >
+      au < exists ; 2000 ; 3 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2000 ; 2000 ; >
+      au < exists ; 2001 ; 4 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2001 ; 2001 ; >
+      au < exists ; 2002 ; 5 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 6 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 7 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 8 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 9 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 10 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 11 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 12 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 13 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 14 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 15 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 16 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 17 ; Arquivos de Ciências Veterinárias e Zoologia da UNIPAR Volume 2014 ; 2014 ; >
 
   }
 
@@ -116,20 +116,20 @@
       param[base_url] = http://revistas.unipar.br/
       param[journal_id] = educere
 
-      au < exists ; 2001 ; 1 ; Educere-Revista da Educação da UNIPAR Volume 2001 ; 2001 >
-      au < exists ; 2002 ; 2 ; Educere-Revista da Educação da UNIPAR Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 3 ; Educere-Revista da Educação da UNIPAR Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 4 ; Educere-Revista da Educação da UNIPAR Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 5 ; Educere-Revista da Educação da UNIPAR Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 6 ; Educere-Revista da Educação da UNIPAR Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 7 ; Educere-Revista da Educação da UNIPAR Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 8 ; Educere-Revista da Educação da UNIPAR Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 9 ; Educere-Revista da Educação da UNIPAR Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 10 ; Educere-Revista da Educação da UNIPAR Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 11 ; Educere-Revista da Educação da UNIPAR Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 12 ; Educere-Revista da Educação da UNIPAR Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 13 ; Educere-Revista da Educação da UNIPAR Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 14 ; Educere-Revista da Educação da UNIPAR Volume 2014 ; 2014 >
+      au < exists ; 2001 ; 1 ; Educere-Revista da Educação da UNIPAR Volume 2001 ; 2001 ; >
+      au < exists ; 2002 ; 2 ; Educere-Revista da Educação da UNIPAR Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 3 ; Educere-Revista da Educação da UNIPAR Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 4 ; Educere-Revista da Educação da UNIPAR Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 5 ; Educere-Revista da Educação da UNIPAR Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 6 ; Educere-Revista da Educação da UNIPAR Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 7 ; Educere-Revista da Educação da UNIPAR Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 8 ; Educere-Revista da Educação da UNIPAR Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 9 ; Educere-Revista da Educação da UNIPAR Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 10 ; Educere-Revista da Educação da UNIPAR Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 11 ; Educere-Revista da Educação da UNIPAR Volume 2011 ; 2011 ; >
+      au < expected ; 2012 ; 12 ; Educere-Revista da Educação da UNIPAR Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 13 ; Educere-Revista da Educação da UNIPAR Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 14 ; Educere-Revista da Educação da UNIPAR Volume 2014 ; 2014 ; >
 
   }
 
@@ -144,21 +144,21 @@
       param[base_url] = http://revistas.unipar.br/
       param[journal_id] = empresarial
 
-      au < exists ; 2000 ; 1 ; Revista de Ciências Empresariais da UNIPAR Volume 2000 ; 2000 >
-      au < exists ; 2001 ; 2 ; Revista de Ciências Empresariais da UNIPAR Volume 2001 ; 2001 >
-      au < exists ; 2002 ; 3 ; Revista de Ciências Empresariais da UNIPAR Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 4 ; Revista de Ciências Empresariais da UNIPAR Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 5 ; Revista de Ciências Empresariais da UNIPAR Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 6 ; Revista de Ciências Empresariais da UNIPAR Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 7 ; Revista de Ciências Empresariais da UNIPAR Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 8 ; Revista de Ciências Empresariais da UNIPAR Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 9 ; Revista de Ciências Empresariais da UNIPAR Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 10 ; Revista de Ciências Empresariais da UNIPAR Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 11 ; Revista de Ciências Empresariais da UNIPAR Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 12 ; Revista de Ciências Empresariais da UNIPAR Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 13 ; Revista de Ciências Empresariais da UNIPAR Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 14 ; Revista de Ciências Empresariais da UNIPAR Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 15 ; Revista de Ciências Empresariais da UNIPAR Volume 2014 ; 2014 >
+      au < exists ; 2000 ; 1 ; Revista de Ciências Empresariais da UNIPAR Volume 2000 ; 2000 ; >
+      au < exists ; 2001 ; 2 ; Revista de Ciências Empresariais da UNIPAR Volume 2001 ; 2001 ; >
+      au < exists ; 2002 ; 3 ; Revista de Ciências Empresariais da UNIPAR Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 4 ; Revista de Ciências Empresariais da UNIPAR Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 5 ; Revista de Ciências Empresariais da UNIPAR Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 6 ; Revista de Ciências Empresariais da UNIPAR Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 7 ; Revista de Ciências Empresariais da UNIPAR Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 8 ; Revista de Ciências Empresariais da UNIPAR Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 9 ; Revista de Ciências Empresariais da UNIPAR Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 10 ; Revista de Ciências Empresariais da UNIPAR Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 11 ; Revista de Ciências Empresariais da UNIPAR Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 12 ; Revista de Ciências Empresariais da UNIPAR Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 13 ; Revista de Ciências Empresariais da UNIPAR Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 14 ; Revista de Ciências Empresariais da UNIPAR Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 15 ; Revista de Ciências Empresariais da UNIPAR Volume 2014 ; 2014 ; >
 
   }
 
@@ -173,23 +173,23 @@
       param[base_url] = http://revistas.unipar.br/
       param[journal_id] = juridica
 
-      au < exists ; 1998 ; 1 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 1998 ; 1998 >
-      au < exists ; 1999 ; 2 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 1999 ; 1999 >
-      au < exists ; 2000 ; 3 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2000 ; 2000 >
-      au < exists ; 2001 ; 4 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2001 ; 2001 >
-      au < exists ; 2002 ; 5 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 6 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 7 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 8 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 9 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 10 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 11 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 12 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 13 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 14 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 15 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 16 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 17 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2014 ; 2014 >
+      au < exists ; 1998 ; 1 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 1998 ; 1998 ; >
+      au < exists ; 1999 ; 2 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 1999 ; 1999 ; >
+      au < exists ; 2000 ; 3 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2000 ; 2000 ; >
+      au < exists ; 2001 ; 4 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2001 ; 2001 ; >
+      au < exists ; 2002 ; 5 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 6 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 7 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 8 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 9 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 10 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 11 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 12 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 13 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 14 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2011 ; 2011 ; >
+      au < expected ; 2012 ; 15 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 16 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 17 ; Revista de Ciências Jurídicas e Sociais da UNIPAR Volume 2014 ; 2014 ; >
 
   }
 

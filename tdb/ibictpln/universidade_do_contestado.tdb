@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,11 +17,11 @@
       param[base_url] = http://www.periodicos.unc.br/
       param[journal_id] = agora
 
-      au < exists ; 2009 ; 16 ; Ágora: revista de divulgação científica Volume 16 ; 2009 >
-      au < exists ; 2010 ; 17 ; Ágora: revista de divulgação científica Volume 17 ; 2010 >
-      au < exists ; 2011 ; 18 ; Ágora: revista de divulgação científica Volume 18 ; 2011 >
-      au < expected ; 2012 ; 19 ; Ágora: revista de divulgação científica Volume 19 ; 2012 >
-      au < expected ; 2013 ; 20 ; Ágora: revista de divulgação científica Volume 20 ; 2013 >
+      au < exists ; 2009 ; 16 ; Ágora: revista de divulgação científica Volume 16 ; 2009 ; >
+      au < exists ; 2010 ; 17 ; Ágora: revista de divulgação científica Volume 17 ; 2010 ; >
+      au < exists ; 2011 ; 18 ; Ágora: revista de divulgação científica Volume 18 ; 2011 ; >
+      au < expected ; 2012 ; 19 ; Ágora: revista de divulgação científica Volume 19 ; 2012 ; >
+      au < expected ; 2013 ; 20 ; Ágora: revista de divulgação científica Volume 20 ; 2013 ; >
 
   }
 
@@ -36,9 +36,9 @@
       param[base_url] = http://www.periodicos.unc.br/
       param[journal_id] = drd
 
-      au < exists ; 2011 ; 1 ; DRd-Desenvolvimento Regional em debate Volume 1 ; 2011 >
-      au < exists ; 2012 ; 2 ; DRd-Desenvolvimento Regional em debate Volume 2 ; 2012 >
-      au < exists ; 2013 ; 3 ; DRd-Desenvolvimento Regional em debate Volume 3 ; 2013 >
+      au < exists ; 2011 ; 1 ; DRd-Desenvolvimento Regional em debate Volume 1 ; 2011 ; >
+      au < exists ; 2012 ; 2 ; DRd-Desenvolvimento Regional em debate Volume 2 ; 2012 ; >
+      au < exists ; 2013 ; 3 ; DRd-Desenvolvimento Regional em debate Volume 3 ; 2013 ; >
 
   }
 
@@ -53,8 +53,8 @@
       param[base_url] = http://www.periodicos.unc.br/
       param[journal_id] = sma
 
-      au < exists ; 2012 ; 1 ; Saúde e meio ambiente: revista interdisciplinar Volume 1 ; 2012 >
-      au < expected ; 2013 ; 2 ; Saúde e meio ambiente: revista interdisciplinar Volume 2 ; 2013 >
+      au < exists ; 2012 ; 1 ; Saúde e meio ambiente: revista interdisciplinar Volume 1 ; 2012 ; >
+      au < expected ; 2013 ; 2 ; Saúde e meio ambiente: revista interdisciplinar Volume 2 ; 2013 ; >
 
   }
 

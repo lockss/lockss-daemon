@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,11 +17,11 @@
       param[base_url] = http://www.periodicos.ufgd.edu.br/
       param[journal_id] = agrarian
 
-      au < exists ; 2009 ; 1 ; Revista Agrarian Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 2 ; Revista Agrarian Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 3 ; Revista Agrarian Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 4 ; Revista Agrarian Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 5 ; Revista Agrarian Volume 2013 ; 2013 >
+      au < exists ; 2009 ; 1 ; Revista Agrarian Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 2 ; Revista Agrarian Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 3 ; Revista Agrarian Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 4 ; Revista Agrarian Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 5 ; Revista Agrarian Volume 2013 ; 2013 ; >
 
   }
 
@@ -36,8 +36,8 @@
       param[base_url] = http://www.periodicos.ufgd.edu.br/
       param[journal_id] = arredia
 
-      au < exists ; 2012 ; 1 ; Revista ArReDia Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 2 ; Revista ArReDia Volume 2013 ; 2013 >
+      au < exists ; 2012 ; 1 ; Revista ArReDia Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 2 ; Revista ArReDia Volume 2013 ; 2013 ; >
 
   }
 
@@ -52,12 +52,12 @@
       param[base_url] = http://www.periodicos.ufgd.edu.br/
       param[journal_id] = educacao
 
-      au < released ; 2010 ; 1 ; Revista Educação e Fronteiras On-Line Volume 2010 ; 2010 >
-      au < released ; 2011 ; 2 ; Revista Educação e Fronteiras On-Line Volume 2011 ; 2011 >
-      au < released ; 2012 ; 3 ; Revista Educação e Fronteiras On-Line Volume 2012 ; 2012 >
-      au < released ; 2013 ; 4 ; Revista Educação e Fronteiras On-Line Volume 2013 ; 2013 >
-      au < released ; 2014 ; 5 ; Revista Educação e Fronteiras On-Line Volume 2014 ; 2014 >
-      au < expected ; 2015 ; 6 ; Revista Educação e Fronteiras On-Line Volume 2015 ; 2015 >
+      au < released ; 2010 ; 1 ; Revista Educação e Fronteiras On-Line Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 2 ; Revista Educação e Fronteiras On-Line Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 3 ; Revista Educação e Fronteiras On-Line Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 4 ; Revista Educação e Fronteiras On-Line Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 5 ; Revista Educação e Fronteiras On-Line Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 6 ; Revista Educação e Fronteiras On-Line Volume 2015 ; 2015 ; >
 
   }
 
@@ -73,8 +73,8 @@
       param[base_url] = http://www.periodicos.ufgd.edu.br/
       param[journal_id] = entre-lugar
 
-      au < exists ; 2012 ; 1 ; Revista Entre-Luga Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 2 ; Revista Entre-Luga Volume 2013 ; 2013 >
+      au < exists ; 2012 ; 1 ; Revista Entre-Luga Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 2 ; Revista Entre-Luga Volume 2013 ; 2013 ; >
 
   }
 
@@ -90,15 +90,15 @@
       param[base_url] = http://www.periodicos.ufgd.edu.br/
       param[journal_id] = FRONTEIRAS
 
-      au < released ; 2007 ; 1 ; Fronteiras: Revista de História Volume 2007 ; 2007 >
-      au < released ; 2008 ; 2 ; Fronteiras: Revista de História Volume 2008 ; 2008 >
-      au < released ; 2009 ; 3 ; Fronteiras: Revista de História Volume 2009 ; 2009 >
-      au < released ; 2010 ; 4 ; Fronteiras: Revista de História Volume 2010 ; 2010 >
-      au < released ; 2011 ; 5 ; Fronteiras: Revista de História Volume 2011 ; 2011 >
-      au < released ; 2012 ; 6 ; Fronteiras: Revista de História Volume 2012 ; 2012 >
-      au < released ; 2013 ; 7 ; Fronteiras: Revista de História Volume 2013 ; 2013 >
-      au < ready ; 2014 ; 8 ; Fronteiras: Revista de História Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 9 ; Fronteiras: Revista de História Volume 2015 ; 2015 >
+      au < released ; 2007 ; 1 ; Fronteiras: Revista de História Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 2 ; Fronteiras: Revista de História Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 3 ; Fronteiras: Revista de História Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 4 ; Fronteiras: Revista de História Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 5 ; Fronteiras: Revista de História Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 6 ; Fronteiras: Revista de História Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 7 ; Fronteiras: Revista de História Volume 2013 ; 2013 ; >
+      au < ready ; 2014 ; 8 ; Fronteiras: Revista de História Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 9 ; Fronteiras: Revista de História Volume 2015 ; 2015 ; >
 
   }
 
@@ -113,15 +113,15 @@
       param[base_url] = http://www.periodicos.ufgd.edu.br/
       param[journal_id] = historiaemreflexao
 
-      au < released ; 2007 ; 1 ; Revista Eletrônica História em Reflexão Volume 2007 ; 2007 >
-      au < released ; 2008 ; 2 ; Revista Eletrônica História em Reflexão Volume 2008 ; 2008 >
-      au < released ; 2009 ; 3 ; Revista Eletrônica História em Reflexão Volume 2009 ; 2009 >
-      au < released ; 2010 ; 4 ; Revista Eletrônica História em Reflexão Volume 2010 ; 2010 >
-      au < released ; 2011 ; 5 ; Revista Eletrônica História em Reflexão Volume 2011 ; 2011 >
-      au < released ; 2012 ; 6 ; Revista Eletrônica História em Reflexão Volume 2012 ; 2012 >
-      au < released ; 2013 ; 7 ; Revista Eletrônica História em Reflexão Volume 2013 ; 2013 >
-      au < released ; 2014 ; 8 ; Revista Eletrônica História em Reflexão Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 9 ; Revista Eletrônica História em Reflexão Volume 2015 ; 2015 >
+      au < released ; 2007 ; 1 ; Revista Eletrônica História em Reflexão Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 2 ; Revista Eletrônica História em Reflexão Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 3 ; Revista Eletrônica História em Reflexão Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 4 ; Revista Eletrônica História em Reflexão Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 5 ; Revista Eletrônica História em Reflexão Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 6 ; Revista Eletrônica História em Reflexão Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 7 ; Revista Eletrônica História em Reflexão Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 8 ; Revista Eletrônica História em Reflexão Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 9 ; Revista Eletrônica História em Reflexão Volume 2015 ; 2015 ; >
 
   }
 
@@ -136,8 +136,8 @@
       param[base_url] = http://www.periodicos.ufgd.edu.br/
       param[journal_id] = moncoes
 
-      au < exists ; 2012 ; 1 ; Monções: Revista de Relações Internacionais da UFGD Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 2 ; Monções: Revista de Relações Internacionais da UFGD Volume 2013 ; 2013 >
+      au < exists ; 2012 ; 1 ; Monções: Revista de Relações Internacionais da UFGD Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 2 ; Monções: Revista de Relações Internacionais da UFGD Volume 2013 ; 2013 ; >
 
   }
 
@@ -152,8 +152,8 @@
       param[base_url] = http://www.periodicos.ufgd.edu.br/
       param[journal_id] = nanduty
 
-      au < exists ; 2012 ; 1 ; Revista Ñanduty Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 2 ; Revista Ñanduty Volume 2013 ; 2013 >
+      au < exists ; 2012 ; 1 ; Revista Ñanduty Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 2 ; Revista Ñanduty Volume 2013 ; 2013 ; >
 
   }
 
@@ -168,7 +168,7 @@
       param[base_url] = http://www.periodicos.ufgd.edu.br/
       param[journal_id] = premissas
 
-      au < exists ; 2010 ; 2 ; Premissas Volume 2010 ; 2010 >
+      au < exists ; 2010 ; 2 ; Premissas Volume 2010 ; 2010 ; >
 
   }
 
@@ -183,13 +183,13 @@
       param[base_url] = http://www.periodicos.ufgd.edu.br/
       param[journal_id] = Raido
 
-      au < exists ; 2007 ; 1 ; Revista Raído Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 2 ; Revista Raído Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 3 ; Revista Raído Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 4 ; Revista Raído Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 5 ; Revista Raído Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 6 ; Revista Raído Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 7 ; Revista Raído Volume 2013 ; 2013 >
+      au < exists ; 2007 ; 1 ; Revista Raído Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 2 ; Revista Raído Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 3 ; Revista Raído Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 4 ; Revista Raído Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 5 ; Revista Raído Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 6 ; Revista Raído Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 7 ; Revista Raído Volume 2013 ; 2013 ; >
 
   }
 
@@ -205,11 +205,11 @@
       param[base_url] = http://www.periodicos.ufgd.edu.br/
       param[journal_id] = videre
 
-      au < exists ; 2009 ; 1 ; Revista Videre Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 2 ; Revista Videre Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 3 ; Revista Videre Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 4 ; Revista Videre Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 5 ; Revista Videre Volume 2013 ; 2013 >
+      au < exists ; 2009 ; 1 ; Revista Videre Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 2 ; Revista Videre Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 3 ; Revista Videre Volume 2011 ; 2011 ; >
+      au < expected ; 2012 ; 4 ; Revista Videre Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 5 ; Revista Videre Volume 2013 ; 2013 ; >
 
   }
 

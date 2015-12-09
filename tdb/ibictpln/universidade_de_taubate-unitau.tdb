@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,13 +17,13 @@
       param[base_url] = http://periodicos.unitau.br/ojs-2.2/
       param[journal_id] = caminhoslinguistica
 
-      au < exists ; 2009 ; 1 ; Caminhos em Linguistica Aplicada Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 2 ; Caminhos em Linguistica Aplicada Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 3 ; Caminhos em Linguistica Aplicada Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 4 ; Caminhos em Linguistica Aplicada Volume 2012 ; 2012 >
-      au < exists ; 2013 ; 5 ; Caminhos em Linguistica Aplicada Volume 2013 ; 2013 >
-      au < exists ; 2014 ; 6 ; Caminhos em Linguistica Aplicada Volume 2014 ; 2014 >
-      au < expected ; 2015 ; 7 ; Caminhos em Linguistica Aplicada Volume 2015 ; 2015 >
+      au < exists ; 2009 ; 1 ; Caminhos em Linguistica Aplicada Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 2 ; Caminhos em Linguistica Aplicada Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 3 ; Caminhos em Linguistica Aplicada Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 4 ; Caminhos em Linguistica Aplicada Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 5 ; Caminhos em Linguistica Aplicada Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 6 ; Caminhos em Linguistica Aplicada Volume 2014 ; 2014 ; >
+      au < expected ; 2015 ; 7 ; Caminhos em Linguistica Aplicada Volume 2015 ; 2015 ; >
 
   }
 
@@ -38,13 +38,13 @@
       param[base_url] = http://periodicos.unitau.br/ojs-2.2/
       param[journal_id] = clipeodonto
 
-      au < released ; 2009 ; 1 ; Clínica e Pesquisa em Odontologia Volume 2009 ; 2009 >
-      au < released ; 2010 ; 2 ; Clínica e Pesquisa em Odontologia Volume 2010 ; 2010 >
-      au < released ; 2011 ; 3 ; Clínica e Pesquisa em Odontologia Volume 2011 ; 2011 >
-      au < released ; 2012 ; 4 ; Clínica e Pesquisa em Odontologia Volume 2012 ; 2012 >
-      au < released ; 2013 ; 5 ; Clínica e Pesquisa em Odontologia Volume 2013 ; 2013 >
-      au < released ; 2014 ; 6 ; Clínica e Pesquisa em Odontologia Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 7 ; Clínica e Pesquisa em Odontologia Volume 2015 ; 2015 >
+      au < released ; 2009 ; 1 ; Clínica e Pesquisa em Odontologia Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 2 ; Clínica e Pesquisa em Odontologia Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 3 ; Clínica e Pesquisa em Odontologia Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 4 ; Clínica e Pesquisa em Odontologia Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 5 ; Clínica e Pesquisa em Odontologia Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 6 ; Clínica e Pesquisa em Odontologia Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 7 ; Clínica e Pesquisa em Odontologia Volume 2015 ; 2015 ; >
 
   }
 

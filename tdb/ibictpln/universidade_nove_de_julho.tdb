@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -18,21 +18,21 @@
       param[base_url] = http://www4.uninove.br/ojs/
       param[journal_id] = dialogia
 
-      au < released ; 2001 ; 1 ; Dialogia Volume 2001 ; 2001 >
-      au < released ; 2002 ; 2 ; Dialogia Volume 2002 ; 2002 >
-      au < released ; 2003 ; 3 ; Dialogia Volume 2003 ; 2003 >
-      au < released ; 2004 ; 4 ; Dialogia Volume 2004 ; 2004 >
-      au < released ; 2005 ; 5 ; Dialogia Volume 2005 ; 2005 >
-      au < released ; 2006 ; 6 ; Dialogia Volume 2006 ; 2006 >
-      au < released ; 2007 ; 7 ; Dialogia Volume 2007 ; 2007 >
-      au < released ; 2008 ; 8 ; Dialogia Volume 2008 ; 2008 >
-      au < released ; 2009 ; 9 ; Dialogia Volume 2009 ; 2009 >
-      au < released ; 2010 ; 10 ; Dialogia Volume 2010 ; 2010 >
-      au < released ; 2011 ; 11 ; Dialogia Volume 2011 ; 2011 >
-      au < released ; 2012 ; 12 ; Dialogia Volume 2012 ; 2012 >
-      au < released ; 2013 ; 13 ; Dialogia Volume 2013 ; 2013 >
-      au < released ; 2014 ; 14 ; Dialogia Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 15 ; Dialogia Volume 2015 ; 2015 >
+      au < released ; 2001 ; 1 ; Dialogia Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 2 ; Dialogia Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 3 ; Dialogia Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 4 ; Dialogia Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 5 ; Dialogia Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 6 ; Dialogia Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 7 ; Dialogia Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 8 ; Dialogia Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 9 ; Dialogia Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 10 ; Dialogia Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 11 ; Dialogia Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 12 ; Dialogia Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 13 ; Dialogia Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 14 ; Dialogia Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 15 ; Dialogia Volume 2015 ; 2015 ; >
 
   }
 
@@ -48,21 +48,21 @@
       param[base_url] = http://www4.uninove.br/ojs/
       param[journal_id] = eccps
 
-      au < exists ; 1999 ; 1 ; EccoS Revista Científica Volume 1999 ; 1999 >
-      au < exists ; 2000 ; 2 ; EccoS Revista Científica Volume 2000 ; 2000 >
-      au < exists ; 2001 ; 3 ; EccoS Revista Científica Volume 2001 ; 2001 >
-      au < exists ; 2002 ; 4 ; EccoS Revista Científica Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 5 ; EccoS Revista Científica Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 6 ; EccoS Revista Científica Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 7 ; EccoS Revista Científica Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 8 ; EccoS Revista Científica Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 9 ; EccoS Revista Científica Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 10 ; EccoS Revista Científica Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 11 ; EccoS Revista Científica Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 12 ; EccoS Revista Científica Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 13 ; EccoS Revista Científica Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 14 ; EccoS Revista Científica Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 15 ; EccoS Revista Científica Volume 2013 ; 2013 >
+      au < exists ; 1999 ; 1 ; EccoS Revista Científica Volume 1999 ; 1999 ; >
+      au < exists ; 2000 ; 2 ; EccoS Revista Científica Volume 2000 ; 2000 ; >
+      au < exists ; 2001 ; 3 ; EccoS Revista Científica Volume 2001 ; 2001 ; >
+      au < exists ; 2002 ; 4 ; EccoS Revista Científica Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 5 ; EccoS Revista Científica Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 6 ; EccoS Revista Científica Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 7 ; EccoS Revista Científica Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 8 ; EccoS Revista Científica Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 9 ; EccoS Revista Científica Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 10 ; EccoS Revista Científica Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 11 ; EccoS Revista Científica Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 12 ; EccoS Revista Científica Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 13 ; EccoS Revista Científica Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 14 ; EccoS Revista Científica Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 15 ; EccoS Revista Científica Volume 2013 ; 2013 ; >
 
   }
 
@@ -78,17 +78,17 @@
       param[base_url] = http://www4.uninove.br/ojs/
       param[journal_id] = exacta
 
-      au < exists ; 2003 ; 1 ; Exacta Engenharia de Produção Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 2 ; Exacta Engenharia de Produção Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 3 ; Exacta Engenharia de Produção Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 4 ; Exacta Engenharia de Produção Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 5 ; Exacta Engenharia de Produção Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 6 ; Exacta Engenharia de Produção Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 7 ; Exacta Engenharia de Produção Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 8 ; Exacta Engenharia de Produção Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 9 ; Exacta Engenharia de Produção Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 10 ; Exacta Engenharia de Produção Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 11 ; Exacta Engenharia de Produção Volume 2013 ; 2013 >
+      au < exists ; 2003 ; 1 ; Exacta Engenharia de Produção Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 2 ; Exacta Engenharia de Produção Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 3 ; Exacta Engenharia de Produção Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 4 ; Exacta Engenharia de Produção Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 5 ; Exacta Engenharia de Produção Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 6 ; Exacta Engenharia de Produção Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 7 ; Exacta Engenharia de Produção Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 8 ; Exacta Engenharia de Produção Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 9 ; Exacta Engenharia de Produção Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 10 ; Exacta Engenharia de Produção Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 11 ; Exacta Engenharia de Produção Volume 2013 ; 2013 ; >
 
   }
 
@@ -105,19 +105,19 @@
       param[journal_id] = prisma
       
 
-      au < released ; 2002 ; 1 ; Prisma Jurídico Volume 2002 ; 2002 >
-      au < released ; 2003 ; 2 ; Prisma Jurídico Volume 2003 ; 2003 >
-      au < released ; 2004 ; 3 ; Prisma Jurídico Volume 2004 ; 2004 >
-      au < released ; 2005 ; 4 ; Prisma Jurídico Volume 2005 ; 2005 >
-      au < released ; 2006 ; 5 ; Prisma Jurídico Volume 2006 ; 2006 >
-      au < released ; 2007 ; 6 ; Prisma Jurídico Volume 2007 ; 2007 >
-      au < released ; 2008 ; 7 ; Prisma Jurídico Volume 2008 ; 2008 >
-      au < released ; 2009 ; 8 ; Prisma Jurídico Volume 2009 ; 2009 >
-      au < released ; 2010 ; 9 ; Prisma Jurídico Volume 2010 ; 2010 >
-      au < released ; 2011 ; 10 ; Prisma Jurídico Volume 2011 ; 2011 >
-      au < released ; 2012 ; 11 ; Prisma Jurídico Volume 2012 ; 2012 >
-      au < released ; 2013 ; 12 ; Prisma Jurídico Volume 2013 ; 2013 >
-      au < released ; 2014 ; 13 ; Prisma Jurídico Volume 2014 ; 2014 >
+      au < released ; 2002 ; 1 ; Prisma Jurídico Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 2 ; Prisma Jurídico Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 3 ; Prisma Jurídico Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 4 ; Prisma Jurídico Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 5 ; Prisma Jurídico Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 6 ; Prisma Jurídico Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 7 ; Prisma Jurídico Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 8 ; Prisma Jurídico Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 9 ; Prisma Jurídico Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 10 ; Prisma Jurídico Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 11 ; Prisma Jurídico Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 12 ; Prisma Jurídico Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 13 ; Prisma Jurídico Volume 2014 ; 2014 ; >
 
   }
 
@@ -133,18 +133,18 @@
       param[base_url] = http://www4.uninove.br/ojs/
       param[journal_id] = saude
 
-      au < exists ; 2002 ; 1 ; Conscientiae Saúde Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 2 ; Conscientiae Saúde Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 3 ; Conscientiae Saúde Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 4 ; Conscientiae Saúde Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 5 ; Conscientiae Saúde Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 6 ; Conscientiae Saúde Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 7 ; Conscientiae Saúde Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 8 ; Conscientiae Saúde Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 9 ; Conscientiae Saúde Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 10 ; Conscientiae Saúde Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 11 ; Conscientiae Saúde Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 12 ; Conscientiae Saúde Volume 2013 ; 2013 >
+      au < exists ; 2002 ; 1 ; Conscientiae Saúde Volume 2002 ; 2002 ; >
+      au < exists ; 2003 ; 2 ; Conscientiae Saúde Volume 2003 ; 2003 ; >
+      au < exists ; 2004 ; 3 ; Conscientiae Saúde Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 4 ; Conscientiae Saúde Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 5 ; Conscientiae Saúde Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 6 ; Conscientiae Saúde Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 7 ; Conscientiae Saúde Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 8 ; Conscientiae Saúde Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 9 ; Conscientiae Saúde Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 10 ; Conscientiae Saúde Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 11 ; Conscientiae Saúde Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 12 ; Conscientiae Saúde Volume 2013 ; 2013 ; >
 
   }
 
@@ -159,20 +159,20 @@
       param[base_url] = http://www.revistaiberoamericana.org/ojs/
       param[journal_id] = ibero
 
-      au < released ; 2002 ; 1 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2002 ; 2002 >
-      au < released ; 2003 ; 2 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2003 ; 2003 >
-      au < released ; 2004 ; 3 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2004 ; 2004 >
-      au < released ; 2005 ; 4 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2005 ; 2005 >
-      au < released ; 2006 ; 5 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2006 ; 2006 >
-      au < released ; 2007 ; 6 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2007 ; 2007 >
-      au < released ; 2008 ; 7 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2008 ; 2008 >
-      au < released ; 2009 ; 8 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2009 ; 2009 >
-      au < released ; 2010 ; 9 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2010 ; 2010 >
-      au < released ; 2011 ; 10 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2011 ; 2011 >
-      au < released ; 2012 ; 11 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2012 ; 2012 >
-      au < released ; 2013 ; 12 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2013 ; 2013 >
-      au < released ; 2014 ; 13 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 14 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2015 ; 2015 >
+      au < released ; 2002 ; 1 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 2 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 3 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 4 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 5 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 6 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 7 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 8 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 9 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 10 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 11 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 12 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 13 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 14 ; Iberoamerican Journal of Strategic Management (IJSM) Volume 2015 ; 2015 ; >
 
   }
 
@@ -187,20 +187,20 @@
       param[base_url] = http://www.revistabrasileiramarketing.org/ojs-2.2.4/
       param[journal_id] = remark
 
-      au < released ; 2002 ; 1 ; Revista Brasileira de Marketing – REMark Volume 2002 ; 2002 >
-      au < released ; 2003 ; 2 ; Revista Brasileira de Marketing – REMark Volume 2003 ; 2003 >
-      au < released ; 2004 ; 3 ; Revista Brasileira de Marketing – REMark Volume 2004 ; 2004 >
-      au < released ; 2005 ; 4 ; Revista Brasileira de Marketing – REMark Volume 2005 ; 2005 >
-      au < released ; 2006 ; 5 ; Revista Brasileira de Marketing – REMark Volume 2006 ; 2006 >
-      au < released ; 2007 ; 6 ; Revista Brasileira de Marketing – REMark Volume 2007 ; 2007 >
-      au < released ; 2008 ; 7 ; Revista Brasileira de Marketing – REMark Volume 2008 ; 2008 >
-      au < released ; 2009 ; 8 ; Revista Brasileira de Marketing – REMark Volume 2009 ; 2009 >
-      au < released ; 2010 ; 9 ; Revista Brasileira de Marketing – REMark Volume 2010 ; 2010 >
-      au < released ; 2011 ; 10 ; Revista Brasileira de Marketing – REMark Volume 2011 ; 2011 >
-      au < released ; 2012 ; 11 ; Revista Brasileira de Marketing – REMark Volume 2012 ; 2012 >
-      au < released ; 2013 ; 12 ; Revista Brasileira de Marketing – REMark Volume 2013 ; 2013 >
-      au < released ; 2014 ; 13 ; Revista Brasileira de Marketing – REMark Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 14 ; Revista Brasileira de Marketing – REMark Volume 2015 ; 2015 >
+      au < released ; 2002 ; 1 ; Revista Brasileira de Marketing – REMark Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 2 ; Revista Brasileira de Marketing – REMark Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 3 ; Revista Brasileira de Marketing – REMark Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 4 ; Revista Brasileira de Marketing – REMark Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 5 ; Revista Brasileira de Marketing – REMark Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 6 ; Revista Brasileira de Marketing – REMark Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 7 ; Revista Brasileira de Marketing – REMark Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 8 ; Revista Brasileira de Marketing – REMark Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 9 ; Revista Brasileira de Marketing – REMark Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 10 ; Revista Brasileira de Marketing – REMark Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 11 ; Revista Brasileira de Marketing – REMark Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 12 ; Revista Brasileira de Marketing – REMark Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 13 ; Revista Brasileira de Marketing – REMark Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 14 ; Revista Brasileira de Marketing – REMark Volume 2015 ; 2015 ; >
 
   }
 

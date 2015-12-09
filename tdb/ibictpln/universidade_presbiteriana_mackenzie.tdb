@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,8 +17,8 @@
       param[base_url] = http://editorarevistas.mackenzie.br/
       param[journal_id] = cade
 
-      au < exists ; 2012 ; 11 ; Revista CADE Volume 11 ; 2012 >
-      au < expected ; 2013 ; 2 ; Revista CADE Volume 2 ; 2013 >
+      au < exists ; 2012 ; 11 ; Revista CADE Volume 11 ; 2012 ; >
+      au < expected ; 2013 ; 2 ; Revista CADE Volume 2 ; 2013 ; >
 
   }
 
@@ -33,19 +33,19 @@
       param[base_url] = http://editorarevistas.mackenzie.br/
       param[journal_id] = cr
 
-      au < released ; 2003 ; 1 ; Revista Ciências da Religião: História e Sociedade Volume 1 ; 2003 >
-      au < released ; 2004 ; 2 ; Revista Ciências da Religião: História e Sociedade Volume 2 ; 2004 >
-      au < released ; 2005 ; 3 ; Revista Ciências da Religião: História e Sociedade Volume 3 ; 2005 >
-      au < released ; 2006 ; 4 ; Revista Ciências da Religião: História e Sociedade Volume 4 ; 2006 >
-      au < released ; 2007 ; 5 ; Revista Ciências da Religião: História e Sociedade Volume 5 ; 2007 >
-      au < released ; 2008 ; 6 ; Revista Ciências da Religião: História e Sociedade Volume 6 ; 2008 >
-      au < released ; 2009 ; 7 ; Revista Ciências da Religião: História e Sociedade Volume 7 ; 2009 >
-      au < released ; 2010 ; 8 ; Revista Ciências da Religião: História e Sociedade Volume 8 ; 2010 >
-      au < released ; 2011 ; 9 ; Revista Ciências da Religião: História e Sociedade Volume 9 ; 2011 >
-      au < released ; 2012 ; 10 ; Revista Ciências da Religião: História e Sociedade Volume 10 ; 2012 >
-      au < released ; 2013 ; 11 ; Revista Ciências da Religião: História e Sociedade Volume 11 ; 2013 >
-      au < released ; 2014 ; 12 ; Revista Ciências da Religião: História e Sociedade Volume 12 ; 2014 >
-      au < manifest ; 2015 ; 13 ; Revista Ciências da Religião: História e Sociedade Volume 13 ; 2015 >
+      au < released ; 2003 ; 1 ; Revista Ciências da Religião: História e Sociedade Volume 1 ; 2003 ; >
+      au < released ; 2004 ; 2 ; Revista Ciências da Religião: História e Sociedade Volume 2 ; 2004 ; >
+      au < released ; 2005 ; 3 ; Revista Ciências da Religião: História e Sociedade Volume 3 ; 2005 ; >
+      au < released ; 2006 ; 4 ; Revista Ciências da Religião: História e Sociedade Volume 4 ; 2006 ; >
+      au < released ; 2007 ; 5 ; Revista Ciências da Religião: História e Sociedade Volume 5 ; 2007 ; >
+      au < released ; 2008 ; 6 ; Revista Ciências da Religião: História e Sociedade Volume 6 ; 2008 ; >
+      au < released ; 2009 ; 7 ; Revista Ciências da Religião: História e Sociedade Volume 7 ; 2009 ; >
+      au < released ; 2010 ; 8 ; Revista Ciências da Religião: História e Sociedade Volume 8 ; 2010 ; >
+      au < released ; 2011 ; 9 ; Revista Ciências da Religião: História e Sociedade Volume 9 ; 2011 ; >
+      au < released ; 2012 ; 10 ; Revista Ciências da Religião: História e Sociedade Volume 10 ; 2012 ; >
+      au < released ; 2013 ; 11 ; Revista Ciências da Religião: História e Sociedade Volume 11 ; 2013 ; >
+      au < released ; 2014 ; 12 ; Revista Ciências da Religião: História e Sociedade Volume 12 ; 2014 ; >
+      au < manifest ; 2015 ; 13 ; Revista Ciências da Religião: História e Sociedade Volume 13 ; 2015 ; >
 
   }
 
@@ -61,20 +61,20 @@
       param[base_url] = http://editorarevistas.mackenzie.br/
       param[journal_id] = RAM
 
-      au < exists ; 2000 ; 1 ; Revista de Administração Mackenzie Volume 1 ; 2000 >
-      au < exists ; 2001 ; 2 ; Revista de Administração Mackenzie Volume 2 ; 2001 >
-      au < exists ; 2002 ; 3 ; Revista de Administração Mackenzie Volume 3 ; 2002 >
-      au < exists ; 2003 ; 4 ; Revista de Administração Mackenzie Volume 4 ; 2003 >
-      au < exists ; 2004 ; 5 ; Revista de Administração Mackenzie Volume 5 ; 2004 >
-      au < exists ; 2005 ; 6 ; Revista de Administração Mackenzie Volume 6 ; 2005 >
-      au < exists ; 2006 ; 7 ; Revista de Administração Mackenzie Volume 7 ; 2006 >
-      au < exists ; 2007 ; 8 ; Revista de Administração Mackenzie Volume 8 ; 2007 >
-      au < exists ; 2008 ; 9 ; Revista de Administração Mackenzie Volume 9 ; 2008 >
-      au < exists ; 2009 ; 10 ; Revista de Administração Mackenzie Volume 10 ; 2009 >
-      au < exists ; 2010 ; 11 ; Revista de Administração Mackenzie Volume 11 ; 2010 >
-      au < exists ; 2011 ; 12 ; Revista de Administração Mackenzie Volume 12 ; 2011 >
-      au < exists ; 2012 ; 13 ; Revista de Administração Mackenzie Volume 13 ; 2012 >
-      au < exists ; 2013 ; 14 ; Revista de Administração Mackenzie Volume 14 ; 2013 >
+      au < exists ; 2000 ; 1 ; Revista de Administração Mackenzie Volume 1 ; 2000 ; >
+      au < exists ; 2001 ; 2 ; Revista de Administração Mackenzie Volume 2 ; 2001 ; >
+      au < exists ; 2002 ; 3 ; Revista de Administração Mackenzie Volume 3 ; 2002 ; >
+      au < exists ; 2003 ; 4 ; Revista de Administração Mackenzie Volume 4 ; 2003 ; >
+      au < exists ; 2004 ; 5 ; Revista de Administração Mackenzie Volume 5 ; 2004 ; >
+      au < exists ; 2005 ; 6 ; Revista de Administração Mackenzie Volume 6 ; 2005 ; >
+      au < exists ; 2006 ; 7 ; Revista de Administração Mackenzie Volume 7 ; 2006 ; >
+      au < exists ; 2007 ; 8 ; Revista de Administração Mackenzie Volume 8 ; 2007 ; >
+      au < exists ; 2008 ; 9 ; Revista de Administração Mackenzie Volume 9 ; 2008 ; >
+      au < exists ; 2009 ; 10 ; Revista de Administração Mackenzie Volume 10 ; 2009 ; >
+      au < exists ; 2010 ; 11 ; Revista de Administração Mackenzie Volume 11 ; 2010 ; >
+      au < exists ; 2011 ; 12 ; Revista de Administração Mackenzie Volume 12 ; 2011 ; >
+      au < exists ; 2012 ; 13 ; Revista de Administração Mackenzie Volume 13 ; 2012 ; >
+      au < exists ; 2013 ; 14 ; Revista de Administração Mackenzie Volume 14 ; 2013 ; >
 
   }
 
@@ -89,17 +89,17 @@
       param[base_url] = http://editorarevistas.mackenzie.br/
       param[journal_id] = rem
 
-      au < exists ; 2003 ; 1 ; Revista de Economia Mackenzie Volume 1 ; 2003 >
-      au < exists ; 2004 ; 2 ; Revista de Economia Mackenzie Volume 2 ; 2004 >
-      au < exists ; 2005 ; 3 ; Revista de Economia Mackenzie Volume 3 ; 2005 >
-      au < exists ; 2006 ; 4 ; Revista de Economia Mackenzie Volume 4 ; 2006 >
-      au < exists ; 2007 ; 5 ; Revista de Economia Mackenzie Volume 5 ; 2007 >
-      au < exists ; 2008 ; 6 ; Revista de Economia Mackenzie Volume 6 ; 2008 >
-      au < exists ; 2009 ; 7 ; Revista de Economia Mackenzie Volume 7 ; 2009 >
-      au < exists ; 2010 ; 8 ; Revista de Economia Mackenzie Volume 8 ; 2010 >
-      au < exists ; 2011 ; 9 ; Revista de Economia Mackenzie Volume 9 ; 2011 >
-      au < exists ; 2012 ; 10 ; Revista de Economia Mackenzie Volume 10 ; 2012 >
-      au < expected ; 2013 ; 11 ; Revista de Economia Mackenzie Volume 11 ; 2013 >
+      au < exists ; 2003 ; 1 ; Revista de Economia Mackenzie Volume 1 ; 2003 ; >
+      au < exists ; 2004 ; 2 ; Revista de Economia Mackenzie Volume 2 ; 2004 ; >
+      au < exists ; 2005 ; 3 ; Revista de Economia Mackenzie Volume 3 ; 2005 ; >
+      au < exists ; 2006 ; 4 ; Revista de Economia Mackenzie Volume 4 ; 2006 ; >
+      au < exists ; 2007 ; 5 ; Revista de Economia Mackenzie Volume 5 ; 2007 ; >
+      au < exists ; 2008 ; 6 ; Revista de Economia Mackenzie Volume 6 ; 2008 ; >
+      au < exists ; 2009 ; 7 ; Revista de Economia Mackenzie Volume 7 ; 2009 ; >
+      au < exists ; 2010 ; 8 ; Revista de Economia Mackenzie Volume 8 ; 2010 ; >
+      au < exists ; 2011 ; 9 ; Revista de Economia Mackenzie Volume 9 ; 2011 ; >
+      au < exists ; 2012 ; 10 ; Revista de Economia Mackenzie Volume 10 ; 2012 ; >
+      au < expected ; 2013 ; 11 ; Revista de Economia Mackenzie Volume 11 ; 2013 ; >
 
   }
 
@@ -114,12 +114,12 @@
       param[base_url] = http://editorarevistas.mackenzie.br/
       param[journal_id] = rmd
 
-      au < released ; 2000 ; 1 ; Revista Direito Mackenzie Volume 1 ; 2000 >
-      au < released ; 2011 ; 5 ; Revista Direito Mackenzie Volume 5 ; 2011 >
-      au < released ; 2012 ; 6 ; Revista Direito Mackenzie Volume 6 ; 2012 >
-      au < released ; 2013 ; 7 ; Revista Direito Mackenzie Volume 7 ; 2013 >
-      au < released ; 2014 ; 8 ; Revista Direito Mackenzie Volume 8 ; 2014 >
-      au < expected ; 2015 ; 9 ; Revista Direito Mackenzie Volume 9 ; 2015 >
+      au < released ; 2000 ; 1 ; Revista Direito Mackenzie Volume 1 ; 2000 ; >
+      au < released ; 2011 ; 5 ; Revista Direito Mackenzie Volume 5 ; 2011 ; >
+      au < released ; 2012 ; 6 ; Revista Direito Mackenzie Volume 6 ; 2012 ; >
+      au < released ; 2013 ; 7 ; Revista Direito Mackenzie Volume 7 ; 2013 ; >
+      au < released ; 2014 ; 8 ; Revista Direito Mackenzie Volume 8 ; 2014 ; >
+      au < expected ; 2015 ; 9 ; Revista Direito Mackenzie Volume 9 ; 2015 ; >
 
   }
 
@@ -135,18 +135,18 @@
       param[base_url] = http://editorarevistas.mackenzie.br/
       param[journal_id] = remef
 
-      au < exists ; 2002 ; 1 ; Revista Mackenzie de Educação Física e Esporte Volume 1 ; 2002 >
-      au < exists ; 2003 ; 2 ; Revista Mackenzie de Educação Física e Esporte Volume 2 ; 2003 >
-      au < exists ; 2004 ; 3 ; Revista Mackenzie de Educação Física e Esporte Volume 3 ; 2004 >
-      au < exists ; 2005 ; 4 ; Revista Mackenzie de Educação Física e Esporte Volume 4 ; 2005 >
-      au < exists ; 2006 ; 5 ; Revista Mackenzie de Educação Física e Esporte Volume 5 ; 2006 >
-      au < exists ; 2007 ; 6 ; Revista Mackenzie de Educação Física e Esporte Volume 6 ; 2007 >
-      au < exists ; 2008 ; 7 ; Revista Mackenzie de Educação Física e Esporte Volume 7 ; 2008 >
-      au < exists ; 2009 ; 8 ; Revista Mackenzie de Educação Física e Esporte Volume 8 ; 2009 >
-      au < exists ; 2010 ; 9 ; Revista Mackenzie de Educação Física e Esporte Volume 9 ; 2010 >
-      au < exists ; 2011 ; 10 ; Revista Mackenzie de Educação Física e Esporte Volume 10 ; 2011 >
-      au < exists ; 2012 ; 11 ; Revista Mackenzie de Educação Física e Esporte Volume 11 ; 2012 >
-      au < expected ; 2013 ; 12 ; Revista Mackenzie de Educação Física e Esporte Volume 12 ; 2013 >
+      au < exists ; 2002 ; 1 ; Revista Mackenzie de Educação Física e Esporte Volume 1 ; 2002 ; >
+      au < exists ; 2003 ; 2 ; Revista Mackenzie de Educação Física e Esporte Volume 2 ; 2003 ; >
+      au < exists ; 2004 ; 3 ; Revista Mackenzie de Educação Física e Esporte Volume 3 ; 2004 ; >
+      au < exists ; 2005 ; 4 ; Revista Mackenzie de Educação Física e Esporte Volume 4 ; 2005 ; >
+      au < exists ; 2006 ; 5 ; Revista Mackenzie de Educação Física e Esporte Volume 5 ; 2006 ; >
+      au < exists ; 2007 ; 6 ; Revista Mackenzie de Educação Física e Esporte Volume 6 ; 2007 ; >
+      au < exists ; 2008 ; 7 ; Revista Mackenzie de Educação Física e Esporte Volume 7 ; 2008 ; >
+      au < exists ; 2009 ; 8 ; Revista Mackenzie de Educação Física e Esporte Volume 8 ; 2009 ; >
+      au < exists ; 2010 ; 9 ; Revista Mackenzie de Educação Física e Esporte Volume 9 ; 2010 ; >
+      au < exists ; 2011 ; 10 ; Revista Mackenzie de Educação Física e Esporte Volume 10 ; 2011 ; >
+      au < exists ; 2012 ; 11 ; Revista Mackenzie de Educação Física e Esporte Volume 11 ; 2012 ; >
+      au < expected ; 2013 ; 12 ; Revista Mackenzie de Educação Física e Esporte Volume 12 ; 2013 ; >
 
   }
 
@@ -161,17 +161,17 @@
       param[base_url] = http://editorarevistas.mackenzie.br/
       param[journal_id] = rmec
 
-      au < released ; 2000 ; 1 ; Revista Mackenzie de Engenharia e Computação Volume 1 ; 2000 >
-      au < released ; 2001 ; 2 ; Revista Mackenzie de Engenharia e Computação Volume 2 ; 2001 >
-      au < released ; 2002 ; 3 ; Revista Mackenzie de Engenharia e Computação Volume 3 ; 2002 >
-      au < released ; 2003 ; 4 ; Revista Mackenzie de Engenharia e Computação Volume 4 ; 2003 >
-      au < released ; 2004 ; 5 ; Revista Mackenzie de Engenharia e Computação Volume 5 ; 2004 >
-      au < released ; 2009 ; 6 ; Revista Mackenzie de Engenharia e Computação Volume 6 ; 2009 >
-      au < released ; 2011 ; 11 ; Revista Mackenzie de Engenharia e Computação Volume 11 ; 2011 >
-      au < released ; 2012 ; 12 ; Revista Mackenzie de Engenharia e Computação Volume 12 ; 2012 >
-      au < released ; 2013 ; 13 ; Revista Mackenzie de Engenharia e Computação Volume 13 ; 2013 >
-      au < ready ; 2014 ; 14 ; Revista Mackenzie de Engenharia e Computação Volume 14 ; 2014 >
-      au < expected ; 2015 ; 15 ; Revista Mackenzie de Engenharia e Computação Volume 15 ; 2015 >
+      au < released ; 2000 ; 1 ; Revista Mackenzie de Engenharia e Computação Volume 1 ; 2000 ; >
+      au < released ; 2001 ; 2 ; Revista Mackenzie de Engenharia e Computação Volume 2 ; 2001 ; >
+      au < released ; 2002 ; 3 ; Revista Mackenzie de Engenharia e Computação Volume 3 ; 2002 ; >
+      au < released ; 2003 ; 4 ; Revista Mackenzie de Engenharia e Computação Volume 4 ; 2003 ; >
+      au < released ; 2004 ; 5 ; Revista Mackenzie de Engenharia e Computação Volume 5 ; 2004 ; >
+      au < released ; 2009 ; 6 ; Revista Mackenzie de Engenharia e Computação Volume 6 ; 2009 ; >
+      au < released ; 2011 ; 11 ; Revista Mackenzie de Engenharia e Computação Volume 11 ; 2011 ; >
+      au < released ; 2012 ; 12 ; Revista Mackenzie de Engenharia e Computação Volume 12 ; 2012 ; >
+      au < released ; 2013 ; 13 ; Revista Mackenzie de Engenharia e Computação Volume 13 ; 2013 ; >
+      au < ready ; 2014 ; 14 ; Revista Mackenzie de Engenharia e Computação Volume 14 ; 2014 ; >
+      au < expected ; 2015 ; 15 ; Revista Mackenzie de Engenharia e Computação Volume 15 ; 2015 ; >
 
   }
 
@@ -186,21 +186,21 @@
       param[base_url] = http://editorarevistas.mackenzie.br/
       param[journal_id] = tl
 
-      au < exists ; 1999 ; 1 ; Revista Todas as Letras Volume 1 ; 1999 >
-      au < exists ; 2000 ; 2 ; Revista Todas as Letras Volume 2 ; 2000 >
-      au < exists ; 2001 ; 3 ; Revista Todas as Letras Volume 3 ; 2001 >
-      au < exists ; 2002 ; 4 ; Revista Todas as Letras Volume 4 ; 2002 >
-      au < exists ; 2003 ; 5 ; Revista Todas as Letras Volume 5 ; 2003 >
-      au < exists ; 2004 ; 6 ; Revista Todas as Letras Volume 6 ; 2004 >
-      au < exists ; 2005 ; 7 ; Revista Todas as Letras Volume 7 ; 2005 >
-      au < exists ; 2006 ; 8 ; Revista Todas as Letras Volume 8 ; 2006 >
-      au < exists ; 2007 ; 9 ; Revista Todas as Letras Volume 9 ; 2007 >
-      au < exists ; 2008 ; 10 ; Revista Todas as Letras Volume 10 ; 2008 >
-      au < exists ; 2009 ; 11 ; Revista Todas as Letras Volume 11 ; 2009 >
-      au < exists ; 2010 ; 12 ; Revista Todas as Letras Volume 12 ; 2010 >
-      au < exists ; 2011 ; 13 ; Revista Todas as Letras Volume 13 ; 2011 >
-      au < exists ; 2012 ; 14 ; Revista Todas as Letras Volume 14 ; 2012 >
-      au < exists ; 2013 ; 15 ; Revista Todas as Letras Volume 15 ; 2013 >
+      au < exists ; 1999 ; 1 ; Revista Todas as Letras Volume 1 ; 1999 ; >
+      au < exists ; 2000 ; 2 ; Revista Todas as Letras Volume 2 ; 2000 ; >
+      au < exists ; 2001 ; 3 ; Revista Todas as Letras Volume 3 ; 2001 ; >
+      au < exists ; 2002 ; 4 ; Revista Todas as Letras Volume 4 ; 2002 ; >
+      au < exists ; 2003 ; 5 ; Revista Todas as Letras Volume 5 ; 2003 ; >
+      au < exists ; 2004 ; 6 ; Revista Todas as Letras Volume 6 ; 2004 ; >
+      au < exists ; 2005 ; 7 ; Revista Todas as Letras Volume 7 ; 2005 ; >
+      au < exists ; 2006 ; 8 ; Revista Todas as Letras Volume 8 ; 2006 ; >
+      au < exists ; 2007 ; 9 ; Revista Todas as Letras Volume 9 ; 2007 ; >
+      au < exists ; 2008 ; 10 ; Revista Todas as Letras Volume 10 ; 2008 ; >
+      au < exists ; 2009 ; 11 ; Revista Todas as Letras Volume 11 ; 2009 ; >
+      au < exists ; 2010 ; 12 ; Revista Todas as Letras Volume 12 ; 2010 ; >
+      au < exists ; 2011 ; 13 ; Revista Todas as Letras Volume 13 ; 2011 ; >
+      au < exists ; 2012 ; 14 ; Revista Todas as Letras Volume 14 ; 2012 ; >
+      au < exists ; 2013 ; 15 ; Revista Todas as Letras Volume 15 ; 2013 ; >
 
   }
 
@@ -215,12 +215,12 @@
       param[base_url] = http://editorarevistas.mackenzie.br/
       param[journal_id] = tint
 
-      au < released ; 2010 ; 1 ; Revista Trama Interdisciplinar Volume 1 ; 2010 >
-      au < released ; 2011 ; 2 ; Revista Trama Interdisciplinar Volume 2 ; 2011 >
-      au < released ; 2012 ; 3 ; Revista Trama Interdisciplinar Volume 3 ; 2012 >
-      au < released ; 2013 ; 4 ; Revista Trama Interdisciplinar Volume 4 ; 2013 >
-      au < released ; 2014 ; 5 ; Revista Trama Interdisciplinar Volume 5 ; 2014 >
-      au < manifest ; 2015 ; 6 ; Revista Trama Interdisciplinar Volume 6 ; 2015 >
+      au < released ; 2010 ; 1 ; Revista Trama Interdisciplinar Volume 1 ; 2010 ; >
+      au < released ; 2011 ; 2 ; Revista Trama Interdisciplinar Volume 2 ; 2011 ; >
+      au < released ; 2012 ; 3 ; Revista Trama Interdisciplinar Volume 3 ; 2012 ; >
+      au < released ; 2013 ; 4 ; Revista Trama Interdisciplinar Volume 4 ; 2013 ; >
+      au < released ; 2014 ; 5 ; Revista Trama Interdisciplinar Volume 5 ; 2014 ; >
+      au < manifest ; 2015 ; 6 ; Revista Trama Interdisciplinar Volume 6 ; 2015 ; >
 
   }
 
@@ -235,20 +235,20 @@
       param[base_url] = http://www.mackenzie.br/dhtm/seer/
       param[journal_id] = cpgau
 
-      au < released ; 2001 ; 1 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2001 ; 2001 >
-      au < released ; 2002 ; 2 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2002 ; 2002 >
-      au < released ; 2003 ; 3 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2003 ; 2003 >
-      au < released ; 2004 ; 4 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2004 ; 2004 >
-      au < released ; 2005 ; 5 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2005 ; 2005 >
-      au < released ; 2006 ; 6 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2006 ; 2006 >
-      au < released ; 2007 ; 7 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2007 ; 2007 >
-      au < released ; 2008 ; 8 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2008 ; 2008 >
-      au < released ; 2009 ; 9 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2009 ; 2009 >
-      au < released ; 2010 ; 10 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2010 ; 2010 >
-      au < released ; 2011 ; 11 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2011 ; 2011 >
-      au < released ; 2012 ; 12 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 13 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 14 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2014 ; 2014 >
+      au < released ; 2001 ; 1 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2001 ; 2001 ; >
+      au < released ; 2002 ; 2 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 3 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 4 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 5 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 6 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 7 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 8 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 9 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 10 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 11 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 12 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 13 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 14 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2014 ; 2014 ; >
 
   }
 
@@ -263,16 +263,16 @@
       param[base_url] = http://www.mackenzie.br/dhtm/seer/
       param[journal_id] = jovenspesquisadores
 
-      au < exists ; 2004 ; 1 ; Jovens Pesquisadores Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 2 ; Jovens Pesquisadores Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 3 ; Jovens Pesquisadores Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 4 ; Jovens Pesquisadores Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 5 ; Jovens Pesquisadores Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 6 ; Jovens Pesquisadores Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 7 ; Jovens Pesquisadores Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 8 ; Jovens Pesquisadores Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 9 ; Jovens Pesquisadores Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 10 ; Jovens Pesquisadores Volume 2013 ; 2013 >
+      au < exists ; 2004 ; 1 ; Jovens Pesquisadores Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 2 ; Jovens Pesquisadores Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 3 ; Jovens Pesquisadores Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 4 ; Jovens Pesquisadores Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 5 ; Jovens Pesquisadores Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 6 ; Jovens Pesquisadores Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 7 ; Jovens Pesquisadores Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 8 ; Jovens Pesquisadores Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 9 ; Jovens Pesquisadores Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 10 ; Jovens Pesquisadores Volume 2013 ; 2013 ; >
 
   }
 

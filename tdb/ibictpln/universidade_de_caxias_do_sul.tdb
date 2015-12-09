@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
@@ -17,13 +17,13 @@
       param[base_url] = http://www.ucs.br/etc/revistas/
       param[journal_id] = antares
 
-      au < released ; 2009 ; 1 ; Antares: Letras e Humanidades Volume 2009 ; 2009 >
-      au < released ; 2010 ; 2 ; Antares: Letras e Humanidades Volume 2010 ; 2010 >
-      au < released ; 2011 ; 3 ; Antares: Letras e Humanidades Volume 2011 ; 2011 >
-      au < released ; 2012 ; 4 ; Antares: Letras e Humanidades Volume 2012 ; 2012 >
-      au < released ; 2013 ; 5 ; Antares: Letras e Humanidades Volume 2013 ; 2013 >
-      au < released ; 2014 ; 6 ; Antares: Letras e Humanidades Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 7 ; Antares: Letras e Humanidades Volume 2015 ; 2015 >
+      au < released ; 2009 ; 1 ; Antares: Letras e Humanidades Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 2 ; Antares: Letras e Humanidades Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 3 ; Antares: Letras e Humanidades Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 4 ; Antares: Letras e Humanidades Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 5 ; Antares: Letras e Humanidades Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 6 ; Antares: Letras e Humanidades Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 7 ; Antares: Letras e Humanidades Volume 2015 ; 2015 ; >
 
   }
 
@@ -37,7 +37,7 @@
       param[base_url] = http://www.ucs.br/etc/revistas/
       param[journal_id] = dossierosadosventos
 
-      au < exists ; 2008 ; 1 ; Anuário de Pesquisa do Programa de Pós-Graduação em Turismo Volume 2008 ; 2008 >
+      au < exists ; 2008 ; 1 ; Anuário de Pesquisa do Programa de Pós-Graduação em Turismo Volume 2008 ; 2008 ; >
 
   }
 
@@ -53,20 +53,20 @@
       param[base_url] = http://www.ucs.br/etc/revistas/
       param[journal_id] = conexao
 
-      au < released ; 2002 ; 1 ; Conexão: Comunicação e Cultura Volume 2002 ; 2002 >
-      au < released ; 2003 ; 2 ; Conexão: Comunicação e Cultura Volume 2003 ; 2003 >
-      au < released ; 2004 ; 3 ; Conexão: Comunicação e Cultura Volume 2004 ; 2004 >
-      au < released ; 2005 ; 4 ; Conexão: Comunicação e Cultura Volume 2005 ; 2005 >
-      au < released ; 2006 ; 5 ; Conexão: Comunicação e Cultura Volume 2006 ; 2006 >
-      au < released ; 2007 ; 6 ; Conexão: Comunicação e Cultura Volume 2007 ; 2007 >
-      au < released ; 2008 ; 7 ; Conexão: Comunicação e Cultura Volume 2008 ; 2008 >
-      au < released ; 2009 ; 8 ; Conexão: Comunicação e Cultura Volume 2009 ; 2009 >
-      au < released ; 2010 ; 9 ; Conexão: Comunicação e Cultura Volume 2010 ; 2010 >
-      au < released ; 2011 ; 10 ; Conexão: Comunicação e Cultura Volume 2011 ; 2011 >
-      au < released ; 2012 ; 11 ; Conexão: Comunicação e Cultura Volume 2012 ; 2012 >
-      au < released ; 2013 ; 12 ; Conexão: Comunicação e Cultura Volume 2013 ; 2013 >
-      au < released ; 2014 ; 13 ; Conexão: Comunicação e Cultura Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 14 ; Conexão: Comunicação e Cultura Volume 2015 ; 2015 >
+      au < released ; 2002 ; 1 ; Conexão: Comunicação e Cultura Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 2 ; Conexão: Comunicação e Cultura Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 3 ; Conexão: Comunicação e Cultura Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 4 ; Conexão: Comunicação e Cultura Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 5 ; Conexão: Comunicação e Cultura Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 6 ; Conexão: Comunicação e Cultura Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 7 ; Conexão: Comunicação e Cultura Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 8 ; Conexão: Comunicação e Cultura Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 9 ; Conexão: Comunicação e Cultura Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 10 ; Conexão: Comunicação e Cultura Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 11 ; Conexão: Comunicação e Cultura Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 12 ; Conexão: Comunicação e Cultura Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 13 ; Conexão: Comunicação e Cultura Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 14 ; Conexão: Comunicação e Cultura Volume 2015 ; 2015 ; >
 
   }
 
@@ -82,13 +82,13 @@
       param[base_url] = http://www.ucs.br/etc/revistas/
       param[journal_id] = conjectura
 
-      au < released ; 2009 ; 1 ; Conjectura: filosofia e educação Volume 2009 ; 2009 >
-      au < released ; 2010 ; 2 ; Conjectura: filosofia e educação Volume 2010 ; 2010 >
-      au < released ; 2011 ; 3 ; Conjectura: filosofia e educação Volume 2011 ; 2011 >
-      au < released ; 2012 ; 4 ; Conjectura: filosofia e educação Volume 2012 ; 2012 >
-      au < released ; 2013 ; 5 ; Conjectura: filosofia e educação Volume 2013 ; 2013 >
-      au < released ; 2014 ; 6 ; Conjectura: filosofia e educação Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 7 ; Conjectura: filosofia e educação Volume 2015 ; 2015 >
+      au < released ; 2009 ; 1 ; Conjectura: filosofia e educação Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 2 ; Conjectura: filosofia e educação Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 3 ; Conjectura: filosofia e educação Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 4 ; Conjectura: filosofia e educação Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 5 ; Conjectura: filosofia e educação Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 6 ; Conjectura: filosofia e educação Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 7 ; Conjectura: filosofia e educação Volume 2015 ; 2015 ; >
 
   }
 
@@ -103,10 +103,10 @@
       param[base_url] = http://www.ucs.br/etc/revistas/
       param[journal_id] = docorpo
 
-      au < exists ; 2011 ; 1 ; Do Corpo: ciências e artes Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 2 ; Do Corpo: ciências e artes Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 3 ; Do Corpo: ciências e artes Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 4 ; Do Corpo: ciências e artes Volume 2014 ; 2014 >
+      au < exists ; 2011 ; 1 ; Do Corpo: ciências e artes Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 2 ; Do Corpo: ciências e artes Volume 2012 ; 2012 ; >
+      au < expected ; 2013 ; 3 ; Do Corpo: ciências e artes Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 4 ; Do Corpo: ciências e artes Volume 2014 ; 2014 ; >
 
   }
 
@@ -122,10 +122,10 @@
       param[base_url] = http://www.ucs.br/etc/revistas/
       param[journal_id] = direitoambiental
 
-      au < ready ; 2011 ; 1 ; Revista Direito Ambiental e Sociedade Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 2 ; Revista Direito Ambiental e Sociedade Volume 2012 ; 2012 >
-      au < ready ; 2013 ; 3 ; Revista Direito Ambiental e Sociedade Volume 2013 ; 2013 >
-      au < ready ; 2014 ; 4 ; Revista Direito Ambiental e Sociedade Volume 2014 ; 2014 >
+      au < ready ; 2011 ; 1 ; Revista Direito Ambiental e Sociedade Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 2 ; Revista Direito Ambiental e Sociedade Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 3 ; Revista Direito Ambiental e Sociedade Volume 2013 ; 2013 ; >
+      au < ready ; 2014 ; 4 ; Revista Direito Ambiental e Sociedade Volume 2014 ; 2014 ; >
 
   }
 
@@ -141,20 +141,20 @@
       param[base_url] = http://www.ucs.br/etc/revistas/
       param[journal_id] = metis
 
-      au < released ; 2002 ; 1 ; Revista Métis: história & cultura Volume 2002 ; 2002 >
-      au < released ; 2003 ; 2 ; Revista Métis: história & cultura Volume 2003 ; 2003 >
-      au < released ; 2004 ; 3 ; Revista Métis: história & cultura Volume 2004 ; 2004 >
-      au < released ; 2005 ; 4 ; Revista Métis: história & cultura Volume 2005 ; 2005 >
-      au < released ; 2006 ; 5 ; Revista Métis: história & cultura Volume 2006 ; 2006 >
-      au < released ; 2007 ; 6 ; Revista Métis: história & cultura Volume 2007 ; 2007 >
-      au < released ; 2008 ; 7 ; Revista Métis: história & cultura Volume 2008 ; 2008 >
-      au < released ; 2009 ; 8 ; Revista Métis: história & cultura Volume 2009 ; 2009 >
-      au < released ; 2010 ; 9 ; Revista Métis: história & cultura Volume 2010 ; 2010 >
-      au < released ; 2011 ; 10 ; Revista Métis: história & cultura Volume 2011 ; 2011 >
-      au < released ; 2012 ; 11 ; Revista Métis: história & cultura Volume 2012 ; 2012 >
-      au < released ; 2013 ; 12 ; Revista Métis: história & cultura Volume 2013 ; 2013 >
-      au < released ; 2014 ; 13 ; Revista Métis: história & cultura Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 14 ; Revista Métis: história & cultura Volume 2015 ; 2015 >
+      au < released ; 2002 ; 1 ; Revista Métis: história & cultura Volume 2002 ; 2002 ; >
+      au < released ; 2003 ; 2 ; Revista Métis: história & cultura Volume 2003 ; 2003 ; >
+      au < released ; 2004 ; 3 ; Revista Métis: história & cultura Volume 2004 ; 2004 ; >
+      au < released ; 2005 ; 4 ; Revista Métis: história & cultura Volume 2005 ; 2005 ; >
+      au < released ; 2006 ; 5 ; Revista Métis: história & cultura Volume 2006 ; 2006 ; >
+      au < released ; 2007 ; 6 ; Revista Métis: história & cultura Volume 2007 ; 2007 ; >
+      au < released ; 2008 ; 7 ; Revista Métis: história & cultura Volume 2008 ; 2008 ; >
+      au < released ; 2009 ; 8 ; Revista Métis: história & cultura Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 9 ; Revista Métis: história & cultura Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 10 ; Revista Métis: história & cultura Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 11 ; Revista Métis: história & cultura Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 12 ; Revista Métis: história & cultura Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 13 ; Revista Métis: história & cultura Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 14 ; Revista Métis: história & cultura Volume 2015 ; 2015 ; >
 
   }
 
@@ -169,13 +169,13 @@
       param[base_url] = http://www.ucs.br/etc/revistas/
       param[journal_id] = rosadosventos
 
-      au < released ; 2009 ; 1 ; Rosa dos Ventos Volume 2009 ; 2009 >
-      au < released ; 2010 ; 2 ; Rosa dos Ventos Volume 2010 ; 2010 >
-      au < released ; 2011 ; 3 ; Rosa dos Ventos Volume 2011 ; 2011 >
-      au < released ; 2012 ; 4 ; Rosa dos Ventos Volume 2012 ; 2012 >
-      au < released ; 2013 ; 5 ; Rosa dos Ventos Volume 2013 ; 2013 >
-      au < released ; 2014 ; 6 ; Rosa dos Ventos Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 7 ; Rosa dos Ventos Volume 2015 ; 2015 >
+      au < released ; 2009 ; 1 ; Rosa dos Ventos Volume 2009 ; 2009 ; >
+      au < released ; 2010 ; 2 ; Rosa dos Ventos Volume 2010 ; 2010 ; >
+      au < released ; 2011 ; 3 ; Rosa dos Ventos Volume 2011 ; 2011 ; >
+      au < released ; 2012 ; 4 ; Rosa dos Ventos Volume 2012 ; 2012 ; >
+      au < released ; 2013 ; 5 ; Rosa dos Ventos Volume 2013 ; 2013 ; >
+      au < released ; 2014 ; 6 ; Rosa dos Ventos Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 7 ; Rosa dos Ventos Volume 2015 ; 2015 ; >
 
   }
 

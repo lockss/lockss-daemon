@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
     
     comment[0] = This publisher may have changed the structure so much that manifest pages cannot be found.
 
@@ -19,9 +19,9 @@
       param[base_url] = http://seer.uece.br/
       param[journal_id] = ?journal=politicaspublicasemdebate
 
-      au < exists ; 2011 ; 1 ; Conhecer: Debate entre o Público e o Privado Volume 1 ; 2011 >
-      au < exists ; 2012 ; 2 ; Conhecer: Debate entre o Público e o Privado Volume 2 ; 2012 >
-      au < expected ; 2013 ; 3 ; Conhecer: Debate entre o Público e o Privado Volume 3 ; 2013 >
+      au < exists ; 2011 ; 1 ; Conhecer: Debate entre o Público e o Privado Volume 1 ; 2011 ; >
+      au < exists ; 2012 ; 2 ; Conhecer: Debate entre o Público e o Privado Volume 2 ; 2012 ; >
+      au < expected ; 2013 ; 3 ; Conhecer: Debate entre o Público e o Privado Volume 3 ; 2013 ; >
 
   }
 
@@ -36,7 +36,7 @@
       param[base_url] = http://seer.uece.br/
       param[journal_id] = ?journal=RHC
 
-      au < exists ; 2013 ; 1 ; História e Culturas Volume 1 ; 2013 >
+      au < exists ; 2013 ; 1 ; História e Culturas Volume 1 ; 2013 ; >
 
   }
 
@@ -52,17 +52,17 @@
       param[base_url] = http://seer.uece.br/
       param[journal_id] = ?journal=opublicoeoprivado
 
-      au < exists ; 2003 ; 1-2 ; O público e o privado Volume 1-2 ; 2003 >
-      au < exists ; 2004 ; 3-4 ; O público e o privado Volume 3-4 ; 2004 >
-      au < exists ; 2005 ; 5-6 ; O público e o privado Volume 5-6 ; 2005 >
-      au < exists ; 2006 ; 7-8 ; O público e o privado Volume 7-8 ; 2006 >
-      au < exists ; 2007 ; 9-10 ; O público e o privado Volume 9-10 ; 2007 >
-      au < exists ; 2008 ; 11-12 ; O público e o privado Volume 11-12 ; 2008 >
-      au < exists ; 2009 ; 13-14 ; O público e o privado Volume 13-14 ; 2009 >
-      au < exists ; 2010 ; 15-16 ; O público e o privado Volume 15-16 ; 2010 >
-      au < exists ; 2011 ; 17-18 ; O público e o privado Volume 17-18 ; 2011 >
-      au < expected ; 2012 ; 19-20 ; O público e o privado Volume 19-20 ; 2012 >
-      au < expected ; 2013 ; 21-22 ; O público e o privado Volume 21-22 ; 2013 >
+      au < exists ; 2003 ; 1-2 ; O público e o privado Volume 1-2 ; 2003 ; >
+      au < exists ; 2004 ; 3-4 ; O público e o privado Volume 3-4 ; 2004 ; >
+      au < exists ; 2005 ; 5-6 ; O público e o privado Volume 5-6 ; 2005 ; >
+      au < exists ; 2006 ; 7-8 ; O público e o privado Volume 7-8 ; 2006 ; >
+      au < exists ; 2007 ; 9-10 ; O público e o privado Volume 9-10 ; 2007 ; >
+      au < exists ; 2008 ; 11-12 ; O público e o privado Volume 11-12 ; 2008 ; >
+      au < exists ; 2009 ; 13-14 ; O público e o privado Volume 13-14 ; 2009 ; >
+      au < exists ; 2010 ; 15-16 ; O público e o privado Volume 15-16 ; 2010 ; >
+      au < exists ; 2011 ; 17-18 ; O público e o privado Volume 17-18 ; 2011 ; >
+      au < expected ; 2012 ; 19-20 ; O público e o privado Volume 19-20 ; 2012 ; >
+      au < expected ; 2013 ; 21-22 ; O público e o privado Volume 21-22 ; 2013 ; >
 
   }
 
@@ -77,10 +77,10 @@
       param[base_url] = http://seer.uece.br/
       param[journal_id] = ?journal=PRF
 
-      au < exists ; 2007 ; 3 ; Polymatheia-revista de filosofia Volume 3 ; 2007 >
-      au < exists ; 2008 ; 4 ; Polymatheia-revista de filosofia Volume 4 ; 2008 >
-      au < exists ; 2009 ; 5 ; Polymatheia-revista de filosofia Volume 5 ; 2009 >
-      au < exists ; 2013 ; 6 ; Polymatheia-revista de filosofia Volume 6 ; 2013 >
+      au < exists ; 2007 ; 3 ; Polymatheia-revista de filosofia Volume 3 ; 2007 ; >
+      au < exists ; 2008 ; 4 ; Polymatheia-revista de filosofia Volume 4 ; 2008 ; >
+      au < exists ; 2009 ; 5 ; Polymatheia-revista de filosofia Volume 5 ; 2009 ; >
+      au < exists ; 2013 ; 6 ; Polymatheia-revista de filosofia Volume 6 ; 2013 ; >
 
   }
 
@@ -95,8 +95,8 @@
       param[base_url] = http://seer.uece.br/
       param[journal_id] = ?journal=geouece
 
-      au < exists ; 2012 ; 1 ; Revista GeoUECE Volume 1 ; 2012 >
-      au < expected ; 2013 ; 2 ; Revista GeoUECE Volume 2 ; 2013 >
+      au < exists ; 2012 ; 1 ; Revista GeoUECE Volume 1 ; 2012 ; >
+      au < expected ; 2013 ; 2 ; Revista GeoUECE Volume 2 ; 2013 ; >
 
   }
 

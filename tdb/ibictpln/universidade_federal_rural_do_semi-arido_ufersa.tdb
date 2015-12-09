@@ -4,7 +4,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; volume ; name ; param[year] ; comment >
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
 
