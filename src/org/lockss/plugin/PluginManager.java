@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -314,7 +314,7 @@ public class PluginManager
   private Map cuNodeVersionMap = Collections.synchronizedMap(new HashMap());
   // Map of plugin key to PluginInfo
   private Map pluginfoMap = Collections.synchronizedMap(new HashMap());
-  private RegistryPlugin regPlugin;
+  private Map<String, Plugin> internalPlugins = new HashMap<String, Plugin>();
   private boolean prevCrawlOnce = false;
 
   private KeyStore keystore;
@@ -1567,7 +1567,7 @@ public class PluginManager
    * by the LOCKSS daemon.
    */
   public boolean isInternalPlugin(Plugin plugin) {
-    return plugin instanceof RegistryPlugin;
+    return internalPlugins.containsKey(plugin.getPluginId());
   }
 
   /**
@@ -2726,14 +2726,47 @@ public class PluginManager
     processRegistryAus(loadAus);
   }
 
-  private synchronized RegistryPlugin getRegistryPlugin() {
-    if (regPlugin == null) {
-      regPlugin = new RegistryPlugin();
-      String pluginKey = pluginKeyFromName("org.lockss.plugin.RegistryPlugin");
-      regPlugin.initPlugin(getDaemon());
-      setPlugin(pluginKey, regPlugin);
+  RegistryPlugin getRegistryPlugin() {
+    return (RegistryPlugin)getInternalPlugin(RegistryPlugin.PLUGIN_ID);
+  }
+
+  /**
+   * Provides an internal plugin by its identifier, creating it if necessary.
+   * 
+   * @param id
+   *          A String with the plugin identifier.
+   * @return a Plugin with the requested internal plugin.
+   * @exception IllegalArgumentException
+   *              if there is no internal plugin with the supplied identifier.
+   */
+  private synchronized Plugin getInternalPlugin(String id) {
+    Plugin internalPlugin = internalPlugins.get(id);
+
+    if (internalPlugin == null) {
+      if (ImportPlugin.PLUGIN_ID.equals(id)) {
+	internalPlugin = new ImportPlugin();
+      } else if (RegistryPlugin.PLUGIN_ID.equals(id)) {
+	internalPlugin = new RegistryPlugin();
+      } else {
+	throw new IllegalArgumentException("Unknown internal plugin id: " + id);
+      }
+
+      String pluginKey = pluginKeyFromName(id);
+      internalPlugin.initPlugin(getDaemon());
+      setPlugin(pluginKey, internalPlugin);
+      internalPlugins.put(id, internalPlugin);
     }
-    return regPlugin;
+
+    return internalPlugin;
+  }
+
+  /**
+   * Provides the plugin used to import files into archival units.
+   * 
+   * @return an ImportPlugin with the requested plugin.
+   */
+  public ImportPlugin getImportPlugin() {
+    return (ImportPlugin)getInternalPlugin(ImportPlugin.PLUGIN_ID);
   }
 
   // Trigger a new content crawl on the registry AU if required.
