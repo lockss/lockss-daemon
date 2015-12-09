@@ -46,10 +46,10 @@ public class ScJournalsArticleIteratorFactory
   public static final String ROLE_CITATION_MEDLARS = "CitationMedlars";
   
   private static final String ROOT_TEMPLATE = "\"%s\", base_url";
-  private static final String PATTERN_TEMPLATE = "\"^%sarticle\\.aspx\\?articleid=\\d+$\", base_url";
+  private static final String PATTERN_TEMPLATE = "\"^%s(article|proceeding)\\.aspx\\?articleid=\\d+$\", base_url";
   
-  private static final Pattern HTML_PATTERN = Pattern.compile("/article\\.aspx\\?articleid=(\\d+)$", Pattern.CASE_INSENSITIVE);
-  private static final String HTML_REPLACEMENT = "/article.aspx?articleid=$1";
+  private static final Pattern HTML_PATTERN = Pattern.compile("/(article|proceeding)\\.aspx\\?articleid=(\\d+)$", Pattern.CASE_INSENSITIVE);
+  private static final String HTML_REPLACEMENT = "/(article|proceeding).aspx?articleid=$1";
 
   private static final String RIS_REPLACEMENT = "/downloadCitation.aspx?format=ris&articleid=$1";
   private static final String BIBTEX_REPLACEMENT_BIB = "/downloadCitation.aspx?format=bib&articleid=$1";
