@@ -68,7 +68,7 @@ public class ScHtmlMetadataExtractorFactory implements FileMetadataExtractorFact
     cookMap.put("citation_author", MetadataField.FIELD_AUTHOR);
     cookMap.put("citation_keyword", MetadataField.FIELD_KEYWORDS);
     // addition for proceedings
-    cookMap.put("citation_pdf_url", MetadataField.DC_KEY_IDENTIFIER);
+    cookMap.put("citation_pdf_url", MetadataField.DC_FIELD_IDENTIFIER);
   }
   
   @Override
