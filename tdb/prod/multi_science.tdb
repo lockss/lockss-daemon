@@ -187,7 +187,7 @@
 
     param[journal_id] = ijai
 
-    au < manifest ; 2009 ; International Journal of Aerospace Innovations Volume 1 ; 1 >
+    au < doNotProcess ; 2009 ; International Journal of Aerospace Innovations Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; International Journal of Aerospace Innovations Volume 2 ; 2 >
     au < doNotProcess ; 2011 ; International Journal of Aerospace Innovations Volume 3 ; 3 >
     au < released ; 2012 ; International Journal of Aerospace Innovations Volume 4 ; 4 >
@@ -229,7 +229,7 @@
 
     param[journal_id] = ijemf
 
-    au < manifest ; 2009 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 1 ; 1 >
+    au < doNotProcess ; 2009 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 2 ; 2 >
     au < doNotProcess ; 2011-2012 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 3 ; 3 >
 
@@ -244,7 +244,7 @@
 
     param[journal_id] = ijfc
 
-    au < manifest ; 2009 ; International Journal of Flow Control Volume 1 ; 1 >
+    au < doNotProcess ; 2009 ; International Journal of Flow Control Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; International Journal of Flow Control Volume 2 ; 2 >
     au < doNotProcess ; 2011 ; International Journal of Flow Control Volume 3 ; 3 >
     au < released ; 2012 ; International Journal of Flow Control Volume 4 ; 4 >
