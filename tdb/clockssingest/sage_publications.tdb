@@ -861,6 +861,25 @@
 
   {
     title <
+      name = Alexandria ;
+      issn = 0955-7490 ;
+      eissn = 2050-4551
+    >
+	
+      param[base_url] = http://ala.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2009 ; Alexandria Volume 21 ; 21 ; >
+      au < exists ; exists ; 2011 ; Alexandria Volume 22 ; 22 ; >
+      au < exists ; exists ; 2012 ; Alexandria Volume 23 ; 23 ; >
+      au < exists ; exists ; 2013 ; Alexandria Volume 24 ; 24 ; >
+      au < exists ; exists ; 2014 ; Alexandria Volume 25 ; 25 ; >
+      au < expected ; exists ; 2016 ; Alexandria Volume 26 ; 26 ; >
+
+  }
+
+  {
+    title <
       name = Alternatives: Global, Local, Political ;
       issn = 0304-3754
     >
