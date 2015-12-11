@@ -17,15 +17,15 @@
       param[base_url] = http://cadernos.cenpec.org.br/cadernos/
       param[journal_id] = cadernos
 
-      au < ready ; 2006 ; 1 ; Cadernos Cenpec Volume 2006 ; 2006 ; >
-      au < ready ; 2007 ; 2 ; Cadernos Cenpec Volume 2007 ; 2007 ; >
-      au < ready ; 2008 ; 3 ; Cadernos Cenpec Volume 2008 ; 2008 ; >
-      au < ready ; 2009 ; 4 ; Cadernos Cenpec Volume 2009 ; 2009 ; >
-      au < ready ; 2010 ; 5 ; Cadernos Cenpec Volume 2010 ; 2010 ; >
-      au < ready ; 2011 ; 6 ; Cadernos Cenpec Volume 2011 ; 2011 ; >
-      au < ready ; 2012 ; 7 ; Cadernos Cenpec Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 8 ; Cadernos Cenpec Volume 2013 ; 2013 ; >
-      au < ready ; 2014 ; 9 ; Cadernos Cenpec Volume 2014 ; 2014 ; >
+      au < releasing ; 2006 ; 1 ; Cadernos Cenpec Volume 2006 ; 2006 ; >
+      au < releasing ; 2007 ; 2 ; Cadernos Cenpec Volume 2007 ; 2007 ; >
+      au < releasing ; 2008 ; 3 ; Cadernos Cenpec Volume 2008 ; 2008 ; >
+      au < releasing ; 2009 ; 4 ; Cadernos Cenpec Volume 2009 ; 2009 ; >
+      au < releasing ; 2010 ; 5 ; Cadernos Cenpec Volume 2010 ; 2010 ; >
+      au < releasing ; 2011 ; 6 ; Cadernos Cenpec Volume 2011 ; 2011 ; >
+      au < releasing ; 2012 ; 7 ; Cadernos Cenpec Volume 2012 ; 2012 ; >
+      au < releasing ; 2013 ; 8 ; Cadernos Cenpec Volume 2013 ; 2013 ; >
+      au < releasing ; 2014 ; 9 ; Cadernos Cenpec Volume 2014 ; 2014 ; >
       au < expected ; 2015 ; 10 ; Cadernos Cenpec Volume 2015 ; 2015 ; >
 
   }
