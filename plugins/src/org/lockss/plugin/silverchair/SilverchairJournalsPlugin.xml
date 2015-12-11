@@ -75,9 +75,11 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com|[^.]+\.silverchair\.netdna-cdn\.com|[^.]+\.silverchaircdn\.com)/"</string>
+      <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com)/"</string>
       <string>2,"^%s(SharedControls/)?DownloadImage\.aspx\?", base_url</string>
       <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
+      <string>1,"^https?://[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)
+        $"</string>
       <string>4,"^%s", base_url</string>
       <string>2,"__EVENTVALIDATION="</string>
       <string>2,"^%sdownloadCitation\.aspx\?format=[^&amp;]+$", base_url</string>
@@ -169,7 +171,7 @@
   </entry>
   <entry>
     <string>au_permitted_host_pattern</string>
-    <string>"[^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com|[^.]+\.silverchair\.netdna-cdn\.com|[^.]+\.silverchaircdn\.com"</string>
+    <string>"[^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com"</string>
   </entry>
   <entry>
       <string>plugin_url_fetcher_factory</string>
