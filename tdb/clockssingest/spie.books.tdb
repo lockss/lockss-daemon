@@ -7,6 +7,7 @@
   >
 
   plugin = org.lockss.plugin.silverchair.ClockssSilverchairBooksPlugin
+
   implicit < status ; status2 ; year ;  param[book_id] ; eisbn ; isbn ; name >
   param[base_url] = http://ebooks.spiedigitallibrary.org/
 
@@ -96,7 +97,7 @@
     au < exists ; exists ; 2005 ; 144 ; 9780819480415 ; 9780819456069 ; Sculptured Thin Films: Nanoengineered Morphology and Optics >
     au < exists ; exists ; 2006 ; 211 ; 9780819478351 ; ; Coherent-Mode Representations in Optics >
     au < exists ; exists ; 2006 ; 122 ; 9780819481085 ; 9780819461193 ; Computational Color Technology >
-    au < exists ; exists ; 2006 ; 123 ; 9780819478344 ; 9780819461186 ; Confocal Microscopy and Multiphoton Excitation Microscopy: The Genesis of Live Cell Imaging >
+    au < testing ; exists ; 2006 ; 123 ; 9780819478344 ; 9780819461186 ; Confocal Microscopy and Multiphoton Excitation Microscopy: The Genesis of Live Cell Imaging >
     au < exists ; exists ; 2006 ; 124 ; 9780819480712 ; 9780819458452 ; EUV Sources for Lithography >
     au < exists ; exists ; 2006 ; 125 ; 9780819478245 ; 9780819463616 ; Field Guide to Infrared Systems >
     au < exists ; exists ; 2006 ; 126 ; 9780819478252 ; 9780819465108 ; Field Guide to Interferometric Optical exists >
@@ -205,8 +206,8 @@
     au < exists ; exists ; 2013 ; 652 ; 9780819496324 ; 9780819496317 ; Ocean Sensing and Monitoring: Optics and Other Methods >
     au < exists ; exists ; 2013 ; 653 ; 9780819491121 ; 9780819491114 ; Optical Imaging and Aberrations, Part III: Wavefront Analysis >
     au < exists ; exists ; 2013 ; 681 ; 9780819497888 ; 9780819497871 ; Optical Satellite Data Compression and Implementation >
-    au < exists ; exists ; 2013 ; 679 ; 9780819493293 ; 9780819493286 ; Optical Satellite Signal Processing and Enhancement >
-    au < exists ; exists ; 2013 ; 670 ; 9780819493323 ; 9780819493316 ; Pyroelectric Materials: Infrared Detectors, Particle Accelerators, and Energy Harvesters >
+    au < testing ; exists ; 2013 ; 679 ; 9780819493293 ; 9780819493286 ; Optical Satellite Signal Processing and Enhancement >
+    au < testing ; exists ; 2013 ; 670 ; 9780819493323 ; 9780819493316 ; Pyroelectric Materials: Infrared Detectors, Particle Accelerators, and Energy Harvesters >
     au < exists ; exists ; 2013 ; 553 ; 9780819493262 ; 9780819493255 ; Stray Light Analysis and Control >
     au < exists ; exists ; 2013 ; 554 ; 9780819494580 ; 9780819494573 ; The Proper Care of Optics: Cleaning, Handling, Storage, and Shipping >
     au < exists ; exists ; 2013 ; 680 ; 9780819496096 ; 9780819495969 ; The Wonder of Nanotechnology: Quantum Optoelectronic Devices and Applications >
@@ -228,7 +229,7 @@
     au < exists ; exists ; 2015 ; 1407 ; 9781628416725 ;  ; Carbon Nanoparticles in Photoacoustic Imaging >
     au < exists ; exists ; 2015 ; 1389 ; 9781628416558 ; 9781628416541 ; Field Guide to Lidar >
     au < exists ; exists ; 2015 ; 1405 ; 9781628416480 ;  ; How to Set Up a Laser Lab >
-    au < exists ; exists ; 2015 ; 1518 ; 9781628416459 ;  ; Image Resolution: Deconstructing Hollywood's Zoom and Enhance >
+    au < testing ; exists ; 2015 ; 1518 ; 9781628416459 ;  ; Image Resolution: Deconstructing Hollywood's Zoom and Enhance >
     au < exists ; exists ; 2015 ; 1406 ; 9781628416718 ;  ; Optical Sensing: Microstructured Fibers, Fiber Micromachining, and Functional Coatings >
     au < exists ; exists ; 2015 ; 1408 ; 9781628416732 ;  ; Optimization Techniques for Diffraction Spectrometers >
     au < exists ; exists ; 2015 ; 1409 ; 9781628416749 ;  ; Femtosecond-Laser-Assisted LASIK Eye Surgery and Imaging >
