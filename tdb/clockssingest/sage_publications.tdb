@@ -2731,6 +2731,58 @@
   {
 
     title <
+      name = Applied Spectroscopy ;
+      issn = 0003-7028 ;
+      eissn = 1943-3530
+    >
+
+      param[base_url] = http://asp.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      #content available from 1946 volume 1 to 1979 volume 33
+
+      au < exists ; exists ; 1980 ; Applied Spectroscopy Volume 34 ; 34 ; >
+      au < exists ; exists ; 1981 ; Applied Spectroscopy Volume 35 ; 35 ; >
+      au < exists ; exists ; 1982 ; Applied Spectroscopy Volume 36 ; 36 ; >
+      au < exists ; exists ; 1983 ; Applied Spectroscopy Volume 37 ; 37 ; >
+      au < exists ; exists ; 1984 ; Applied Spectroscopy Volume 38 ; 38 ; >
+      au < exists ; exists ; 1985 ; Applied Spectroscopy Volume 39 ; 39 ; >
+      au < exists ; exists ; 1986 ; Applied Spectroscopy Volume 40 ; 40 ; >
+      au < exists ; exists ; 1987 ; Applied Spectroscopy Volume 41 ; 41 ; >
+      au < exists ; exists ; 1988 ; Applied Spectroscopy Volume 42 ; 42 ; >
+      au < exists ; exists ; 1989 ; Applied Spectroscopy Volume 43 ; 43 ; >
+      au < exists ; exists ; 1990 ; Applied Spectroscopy Volume 44 ; 44 ; >
+      au < exists ; exists ; 1991 ; Applied Spectroscopy Volume 45 ; 45 ; >
+      au < exists ; exists ; 1992 ; Applied Spectroscopy Volume 46 ; 46 ; >
+      au < exists ; exists ; 1993 ; Applied Spectroscopy Volume 47 ; 47 ; >
+      au < exists ; exists ; 1994 ; Applied Spectroscopy Volume 48 ; 48 ; >
+      au < exists ; exists ; 1995 ; Applied Spectroscopy Volume 49 ; 49 ; >
+      au < exists ; exists ; 1996 ; Applied Spectroscopy Volume 50 ; 50 ; >
+      au < exists ; exists ; 1997 ; Applied Spectroscopy Volume 51 ; 51 ; >
+      au < exists ; exists ; 1998 ; Applied Spectroscopy Volume 52 ; 52 ; >
+      au < exists ; exists ; 1999 ; Applied Spectroscopy Volume 53 ; 53 ; >
+      au < exists ; exists ; 2000 ; Applied Spectroscopy Volume 54 ; 54 ; >
+      au < exists ; exists ; 2001 ; Applied Spectroscopy Volume 55 ; 55 ; >
+      au < exists ; exists ; 2002 ; Applied Spectroscopy Volume 56 ; 56 ; >
+      au < exists ; exists ; 2003 ; Applied Spectroscopy Volume 57 ; 57 ; >
+      au < exists ; exists ; 2004 ; Applied Spectroscopy Volume 58 ; 58 ; >
+      au < exists ; exists ; 2005 ; Applied Spectroscopy Volume 59 ; 59 ; >
+      au < exists ; exists ; 2006 ; Applied Spectroscopy Volume 60 ; 60 ; >
+      au < exists ; exists ; 2007 ; Applied Spectroscopy Volume 61 ; 61 ; >
+      au < exists ; exists ; 2008 ; Applied Spectroscopy Volume 62 ; 62 ; >
+      au < exists ; exists ; 2009 ; Applied Spectroscopy Volume 63 ; 63 ; >
+      au < exists ; exists ; 2010 ; Applied Spectroscopy Volume 64 ; 64 ; >
+      au < exists ; exists ; 2011 ; Applied Spectroscopy Volume 65 ; 65 ; >
+      au < exists ; exists ; 2012 ; Applied Spectroscopy Volume 66 ; 66 ; >
+      au < exists ; exists ; 2013 ; Applied Spectroscopy Volume 67 ; 67 ; >
+      au < exists ; exists ; 2014 ; Applied Spectroscopy Volume 68 ; 68 ; >
+      au < exists ; exists ; 2015 ; Applied Spectroscopy Volume 69 ; 69 ; >
+      au < expected ; exists ; 2016 ; Applied Spectroscopy Volume 70 ; 70 ; >
+
+  }
+
+  {
+
+    title <
       name = Armed Forces & Society ;
       issn = 0095-327X ;
       eissn = 1556-0848
@@ -26947,6 +26999,31 @@
   {
 
     title <
+      name = Journal of Special Education Technology ;
+      issn = 0162-6434 ;
+      eissn = 2381-3121
+    >
+
+      param[base_url] = http://jst.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 1978 ; Journal of Special Education Technology Volume 1 ; 1 ; >
+      au < exists ; exists ; 1978-1979 ; Journal of Special Education Technology Volume 2 ; 2 ; >
+
+      au < exists ; exists ; 2009 ; Journal of Special Education Technology Volume 24 ; 24 ; >
+      au < exists ; exists ; 2010 ; Journal of Special Education Technology Volume 25 ; 25 ; >
+      au < exists ; exists ; 2011 ; Journal of Special Education Technology Volume 26 ; 26 ; >
+      au < exists ; exists ; 2012 ; Journal of Special Education Technology Volume 27 ; 27 ; >
+      au < exists ; exists ; 2013 ; Journal of Special Education Technology Volume 28 ; 28 ; >
+      au < exists ; exists ; 2014 ; Journal of Special Education Technology Volume 29 ; 29 ; >
+      au < exists ; exists ; 2015 ; Journal of Special Education Technology Volume 30 ; 30 ; >
+      au < expected ; exists ; 2016 ; Journal of Special Education Technology Volume 31 ; 31 ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Sport & Social Issues ;
       issn = 0193-7235 ;
       eissn = 1552-7638
@@ -29835,6 +29912,89 @@
       au < expected ; exists ; 2016 ; Media, War & Conflict Volume 9 ; 9 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Media International Australia ;
+      issn = 1329-878X ;
+      eissn = 2200-467X
+    >
+
+      param[base_url] = http://mia.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      #content available from 1976 volume 1 to 1999 volume 93
+
+      au < exists ; exists ; 2000 ; Media International Australia Volume 94 ; 94 ; >
+      au < exists ; exists ; 2000 ; Media International Australia Volume 95 ; 95 ; >
+      au < exists ; exists ; 2000 ; Media International Australia Volume 96 ; 96 ; >
+      au < exists ; exists ; 2000 ; Media International Australia Volume 97 ; 97 ; >
+      au < exists ; exists ; 2001 ; Media International Australia Volume 98 ; 98 ; >
+      au < exists ; exists ; 2001 ; Media International Australia Volume 99 ; 99 ; >
+      au < exists ; exists ; 2001 ; Media International Australia Volume 100 ; 100 ; >
+      au < exists ; exists ; 2001 ; Media International Australia Volume 101 ; 101 ; >
+      au < exists ; exists ; 2002 ; Media International Australia Volume 102 ; 102 ; >
+      au < exists ; exists ; 2002 ; Media International Australia Volume 103 ; 103 ; >
+      au < exists ; exists ; 2002 ; Media International Australia Volume 104 ; 104 ; >
+      au < exists ; exists ; 2002 ; Media International Australia Volume 105 ; 105 ; >
+      au < exists ; exists ; 2003 ; Media International Australia Volume 106 ; 106 ; >
+      au < exists ; exists ; 2003 ; Media International Australia Volume 107 ; 107 ; >
+      au < exists ; exists ; 2003 ; Media International Australia Volume 108 ; 108 ; >
+      au < exists ; exists ; 2003 ; Media International Australia Volume 109 ; 109 ; >
+      au < exists ; exists ; 2004 ; Media International Australia Volume 110 ; 110 ; >
+      au < exists ; exists ; 2004 ; Media International Australia Volume 111 ; 111 ; >
+      au < exists ; exists ; 2004 ; Media International Australia Volume 112 ; 112 ; >
+      au < exists ; exists ; 2004 ; Media International Australia Volume 113 ; 113 ; >
+      au < exists ; exists ; 2005 ; Media International Australia Volume 114 ; 114 ; >
+      au < exists ; exists ; 2005 ; Media International Australia Volume 115 ; 115 ; >
+      au < exists ; exists ; 2005 ; Media International Australia Volume 116 ; 116 ; >
+      au < exists ; exists ; 2005 ; Media International Australia Volume 117 ; 117 ; >
+      au < exists ; exists ; 2006 ; Media International Australia Volume 118 ; 118 ; >
+      au < exists ; exists ; 2006 ; Media International Australia Volume 119 ; 119 ; >
+      au < exists ; exists ; 2006 ; Media International Australia Volume 120 ; 120 ; >
+      au < exists ; exists ; 2006 ; Media International Australia Volume 121 ; 121 ; >
+      au < exists ; exists ; 2007 ; Media International Australia Volume 122 ; 122 ; >
+      au < exists ; exists ; 2007 ; Media International Australia Volume 123 ; 123 ; >
+      au < exists ; exists ; 2007 ; Media International Australia Volume 124 ; 124 ; >
+      au < exists ; exists ; 2007 ; Media International Australia Volume 125 ; 125 ; >
+      au < exists ; exists ; 2008 ; Media International Australia Volume 126 ; 126 ; >
+      au < exists ; exists ; 2008 ; Media International Australia Volume 127 ; 127 ; >
+      au < exists ; exists ; 2008 ; Media International Australia Volume 128 ; 128 ; >
+      au < exists ; exists ; 2008 ; Media International Australia Volume 129 ; 129 ; >
+      au < exists ; exists ; 2009 ; Media International Australia Volume 130 ; 130 ; >
+      au < exists ; exists ; 2009 ; Media International Australia Volume 131 ; 131 ; >
+      au < exists ; exists ; 2009 ; Media International Australia Volume 132 ; 132 ; >
+      au < exists ; exists ; 2009 ; Media International Australia Volume 133 ; 133 ; >
+      au < exists ; exists ; 2010 ; Media International Australia Volume 134 ; 134 ; >
+      au < exists ; exists ; 2010 ; Media International Australia Volume 135 ; 135 ; >
+      au < exists ; exists ; 2010 ; Media International Australia Volume 136 ; 136 ; >
+      au < exists ; exists ; 2010 ; Media International Australia Volume 137 ; 137 ; >
+      au < exists ; exists ; 2011 ; Media International Australia Volume 138 ; 138 ; >
+      au < exists ; exists ; 2011 ; Media International Australia Volume 139 ; 139 ; >
+      au < exists ; exists ; 2011 ; Media International Australia Volume 140 ; 140 ; >
+      au < exists ; exists ; 2011 ; Media International Australia Volume 141 ; 141 ; >
+      au < exists ; exists ; 2012 ; Media International Australia Volume 142 ; 142 ; >
+      au < exists ; exists ; 2012 ; Media International Australia Volume 143 ; 143 ; >
+      au < exists ; exists ; 2012 ; Media International Australia Volume 144 ; 144 ; >
+      au < exists ; exists ; 2012 ; Media International Australia Volume 145 ; 145 ; >
+      au < exists ; exists ; 2013 ; Media International Australia Volume 146 ; 146 ; >
+      au < exists ; exists ; 2013 ; Media International Australia Volume 147 ; 147 ; >
+      au < exists ; exists ; 2013 ; Media International Australia Volume 148 ; 148 ; >
+      au < exists ; exists ; 2013 ; Media International Australia Volume 149 ; 149 ; >
+      au < exists ; exists ; 2014 ; Media International Australia Volume 150 ; 150 ; >
+      au < exists ; exists ; 2014 ; Media International Australia Volume 151 ; 151 ; >
+      au < exists ; exists ; 2014 ; Media International Australia Volume 152 ; 152 ; >
+      au < exists ; exists ; 2014 ; Media International Australia Volume 153 ; 153 ; >
+      au < exists ; exists ; 2015 ; Media International Australia Volume 154 ; 154 ; >
+      au < exists ; exists ; 2015 ; Media International Australia Volume 155 ; 155 ; >
+      au < expected ; exists ; 2015 ; Media International Australia Volume 156 ; 156 ; >
+      au < expected ; exists ; 2015 ; Media International Australia Volume 157 ; 157 ; >
+      au < expected ; exists ; 2016 ; Media International Australia Volume 158 ; 158 ; >
+      au < expected ; exists ; 2016 ; Media International Australia Volume 159 ; 159 ; >
+      au < expected ; exists ; 2016 ; Media International Australia Volume 160 ; 160 ; >
+      au < expected ; exists ; 2016 ; Media International Australia Volume 161 ; 161 ; >
 
   }
 
@@ -36216,6 +36376,39 @@
       au < crawling ; exists ; 2014 ; Research in Comparative and International Education Volume 9 ; 9 ; >
       au < crawling ; exists ; 2015 ; Research in Comparative and International Education Volume 10 ; 10 ; >
       au < expected ; exists ; 2016 ; Research in Comparative and International Education Volume 11 ; 11 ; >
+
+  }
+
+  {
+
+    title <
+      name = Research in Education ;
+      issn =  0034-5237 ;
+      eissn = 2050-4608
+    >
+
+      param[base_url] = http://rie.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      
+      au < exists ; exists ; 1999 ; Research in Education Volume 61 ; 61 ; >
+      au < exists ; exists ; 1999 ; Research in Education Volume 62 ; 62 ; >
+      au < exists ; exists ; 2000 ; Research in Education Volume 63 ; 63 ; >
+      au < exists ; exists ; 2000 ; Research in Education Volume 64 ; 64 ; >
+      au < exists ; exists ; 2001 ; Research in Education Volume 65 ; 65 ; >
+      au < exists ; exists ; 2001 ; Research in Education Volume 66 ; 66 ; >
+      au < exists ; exists ; 2002 ; Research in Education Volume 67 ; 67 ; >
+      au < exists ; exists ; 2002 ; Research in Education Volume 68 ; 68 ; >
+      au < exists ; exists ; 2003 ; Research in Education Volume 69 ; 69 ; >
+      au < exists ; exists ; 2003 ; Research in Education Volume 70 ; 70 ; >
+      au < exists ; exists ; 2004 ; Research in Education Volume 71 ; 71 ; >
+      au < exists ; exists ; 2004 ; Research in Education Volume 72 ; 72 ; >
+      au < exists ; exists ; 2005 ; Research in Education Volume 73 ; 73 ; >
+      au < exists ; exists ; 2005 ; Research in Education Volume 74 ; 74 ; >
+      au < exists ; exists ; 2006 ; Research in Education Volume 75 ; 75 ; >
+      au < exists ; exists ; 2006 ; Research in Education Volume 76 ; 76 ; >
+      au < exists ; exists ; 2007 ; Research in Education Volume 77 ; 77 ; >
+      au < exists ; exists ; 2007 ; Research in Education Volume 78 ; 78 ; >
+      au < exists ; exists ; 2008 ; Research in Education Volume 79 ; 79 ; >
 
   }
 
