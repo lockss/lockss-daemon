@@ -158,7 +158,7 @@
     </entry>
     <entry>
         <string>au_permitted_host_pattern</string>
-        <string>"[^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com|[^.]+\.silverchair\.netdna-cdn\.com|[^.]+\.silverchaircdn\.com"</string>
+        <string>"[^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com|[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com"</string>
     </entry>
     <entry>
         <string>plugin_url_fetcher_factory</string>
