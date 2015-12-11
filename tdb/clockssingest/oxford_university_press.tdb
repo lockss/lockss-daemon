@@ -461,8 +461,8 @@
     au < manifest ; exists ; 2010 ; American Entomologist Volume 56 ; 56 ; >
     au < manifest ; exists ; 2011 ; American Entomologist Volume 57 ; 57 ; >
     au < manifest ; exists ; 2012 ; American Entomologist Volume 58 ; 58 ; >
-    au < manifest ; exists ; 2013 ; American Entomologist Volume 59 ; 59 ; >
-    au < testing ; exists ; 2014 ; American Entomologist Volume 60 ; 60 ; >
+    au < testing ; exists ; 2013 ; American Entomologist Volume 59 ; 59 ; >
+    au < ready ; exists ; 2014 ; American Entomologist Volume 60 ; 60 ; >
     au < crawling ; exists ; 2015 ; American Entomologist Volume 61 ; 61 ; >
     au < expected ; exists ; 2016 ; American Entomologist Volume 62 ; 62 ; >
 
@@ -1866,7 +1866,6 @@
 
     param[base_url] = http://arbitration.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
-    comment[notReady] = probe url problem in manifest page
 
     au < manifest ; exists ; 1985 ; Arbitration International Volume 1 ; 1 ; >
     au < manifest ; exists ; 1986 ; Arbitration International Volume 2 ; 2 ; >
@@ -1896,7 +1895,7 @@
     au < manifest ; exists ; 2010 ; Arbitration International Volume 26 ; 26 ; >
     au < manifest ; exists ; 2011 ; Arbitration International Volume 27 ; 27 ; >
     au < crawling ; exists ; 2012 ; Arbitration International Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2013 ; Arbitration International Volume 29 ; 29 ; >
+    au < ready ; exists ; 2013 ; Arbitration International Volume 29 ; 29 ; >
     au < crawling ; exists ; 2014 ; Arbitration International Volume 30 ; 30 ; >
     au < crawling ; exists ; 2015 ; Arbitration International Volume 31 ; 31 ; >
     au < expected ; exists ; 2016 ; Arbitration International Volume 32 ; 32 ; >
@@ -4866,7 +4865,7 @@
     au < finished ; finished ; 2012 ; Current Legal Problems Volume 65 ; 65 ; >
     au < frozen ; exists ; 2013 ; Current Legal Problems Volume 66 ; 66 ; >
     au < frozen ; exists ; 2014 ; Current Legal Problems Volume 67 ; 67 ; >
-    au < manifest ; exists ; 2015 ; Current Legal Problems Volume 68 ; 68 ; >
+    au < testing ; exists ; 2015 ; Current Legal Problems Volume 68 ; 68 ; >
     au < expected ; exists ; 2016 ; Current Legal Problems Volume 69 ; 69 ; >
 
   }
@@ -6888,7 +6887,7 @@
     au < crawling ; exists ; 2014 ; FEMS Microbiology Ecology Volume 88 ; 88 ; >
     au < exists ; exists ; 2014 ; FEMS Microbiology Ecology Volume 89 ; 89 ; >
     au < exists ; exists ; 2014 ; FEMS Microbiology Ecology Volume 90 ; 90 ; >
-    au < manifest ; exists ; 2015 ; FEMS Microbiology Ecology Volume 91 ; 91 ; >
+    au < testing ; exists ; 2015 ; FEMS Microbiology Ecology Volume 91 ; 91 ; >
     au < exists ; exists ; 2015 ; FEMS Microbiology Ecology Volume 92 ; 92 ; >
     au < exists ; exists ; 2015 ; FEMS Microbiology Ecology Volume 93 ; 93 ; >
     au < exists ; exists ; 2015 ; FEMS Microbiology Ecology Volume 94 ; 94 ; >
@@ -11857,11 +11856,11 @@
     au < manifest ; exists ; 2006-2007 ; Journal of Consumer Research Volume 33 ; 33 ; >
     au < testing ; exists ; 2007-2008 ; Journal of Consumer Research Volume 34 ; 34 ; >
     au < ready ; exists ; 2008-2009 ; Journal of Consumer Research Volume 35 ; 35 ; >
-    au < testing ; exists ; 2009-2010 ; Journal of Consumer Research Volume 36 ; 36 ; >
+    au < ready ; exists ; 2009-2010 ; Journal of Consumer Research Volume 36 ; 36 ; >
     au < testing ; exists ; 2010-2011 ; Journal of Consumer Research Volume 37 ; 37 ; >
     au < ready ; exists ; 2011-2012 ; Journal of Consumer Research Volume 38 ; 38 ; >
     au < testing ; exists ; 2012-2013 ; Journal of Consumer Research Volume 39 ; 39 ; >
-    au < testing ; exists ; 2013-2014 ; Journal of Consumer Research Volume 40 ; 40 ; >
+    au < ready ; exists ; 2013-2014 ; Journal of Consumer Research Volume 40 ; 40 ; >
     au < ready ; exists ; 2014-2015 ; Journal of Consumer Research Volume 41 ; 41 ; >
     au < manifest ; exists ; 2015-2016 ; Journal of Consumer Research Volume 42 ; 42 ; >
     au < expected ; exists ; 2016-2017 ; Journal of Consumer Research Volume 43 ; 43 ; >
@@ -12421,7 +12420,7 @@
     au < finished ; crawling ; 2012 ; Journal of Experimental Botany Volume 63 ; 63 ; >
     au < frozen ; exists ; 2013 ; Journal of Experimental Botany Volume 64 ; 64 ; >
     au < crawling ; exists ; 2014 ; Journal of Experimental Botany Volume 65 ; 65 ; >
-    au < testing ; exists ; 2015 ; Journal of Experimental Botany Volume 66 ; 66 ; >
+    au < ready ; exists ; 2015 ; Journal of Experimental Botany Volume 66 ; 66 ; >
     au < expected ; exists ; 2016 ; Journal of Experimental Botany Volume 67 ; 67 ; >
 
     }
@@ -12745,7 +12744,7 @@
     au < finished ; finished ; 2012 ; Journal of Heredity Volume 103 ; 103 ; >
     au < frozen ; exists ; 2013 ; Journal of Heredity Volume 104 ; 104 ; >
     au < crawling ; exists ; 2014 ; Journal of Heredity Volume 105 ; 105 ; >
-    au < testing ; exists ; 2015 ; Journal of Heredity Volume 106 ; 106 ; >
+    au < ready ; exists ; 2015 ; Journal of Heredity Volume 106 ; 106 ; >
     au < expected ; exists ; 2016 ; Journal of Heredity Volume 107 ; 107 ; >
 
     }
@@ -13875,7 +13874,7 @@
     au < manifest ; exists ; 2010 ; Journal of Mammalogy Volume 91 ; 91 ; >
     au < manifest ; exists ; 2011 ; Journal of Mammalogy Volume 92 ; 92 ; >
     au < manifest ; exists ; 2012 ; Journal of Mammalogy Volume 93 ; 93 ; >
-    au < manifest ; exists ; 2013 ; Journal of Mammalogy Volume 94 ; 94 ; > #Probe url
+    au < ready ; exists ; 2013 ; Journal of Mammalogy Volume 94 ; 94 ; >
     au < crawling ; exists ; 2014 ; Journal of Mammalogy Volume 95 ; 95 ; >
     au < crawling ; exists ; 2015 ; Journal of Mammalogy Volume 96 ; 96 ; >
     au < expected ; exists ; 2016 ; Journal of Mammalogy Volume 97 ; 97 ; >
@@ -15058,7 +15057,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Surgical Case Reports Volume 2012 ; 2012 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Surgical Case Reports Volume 2013 ; 2013 ; >
     au < frozen ; exists ; 2014 ; Journal of Surgical Case Reports Volume 2014 ; 2014 ; >
-    au < testing ; exists ; 2015 ; Journal of Surgical Case Reports Volume 2015 ; 2015 ; >
+    au < ready ; exists ; 2015 ; Journal of Surgical Case Reports Volume 2015 ; 2015 ; >
     au < expected ; exists ; 2016 ; Journal of Surgical Case Reports Volume 2016 ; 2016 ; >
 
     }
@@ -15939,7 +15938,7 @@
     au < manifest ; exists ; 2011 ; Mammalian Species Volume 43 ; 43 ; >
     au < frozen ; exists ; 2012 ; Mammalian Species Volume 44 ; 44 ; >
     au < frozen ; exists ; 2013 ; Mammalian Species Volume 45 ; 45 ; >
-    au < testing ; exists ; 2014 ; Mammalian Species Volume 46 ; 46 ; >
+    au < ready ; exists ; 2014 ; Mammalian Species Volume 46 ; 46 ; >
     au < crawling ; exists ; 2015 ; Mammalian Species Volume 47 ; 47 ; >
     au < expected ; exists ; 2016 ; Mammalian Species Volume 48 ; 48 ; >
 
@@ -16631,7 +16630,7 @@
     au < manifest ; exists ; 2011 ; The Monist Volume 94 ; 94 ; >
     au < manifest ; exists ; 2012 ; The Monist Volume 95 ; 95 ; >
     au < crawling ; exists ; 2013 ; The Monist Volume 96 ; 96 ; >
-    au < testing ; exists ; 2014 ; The Monist Volume 97 ; 97 ; >
+    au < ready ; exists ; 2014 ; The Monist Volume 97 ; 97 ; >
     au < crawling ; exists ; 2015 ; The Monist Volume 98 ; 98 ; >
     au < expected ; exists ; 2016 ; The Monist Volume 99 ; 99 ; >
 
@@ -16826,8 +16825,8 @@
     au < crawling ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 451 ; 451 ; >
     au < crawling ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 452 ; 452 ; >
     au < crawling ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 453 ; 453 ; >
-    au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 454 ; 454 ; >
-    au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 455 ; 455 ; >
+    au < testing ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 454 ; 454 ; >
+    au < testing ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 455 ; 455 ; >
     au < expected ; exists ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 456 ; 456 ; >
 
   }
@@ -16940,8 +16939,8 @@
     au < crawling ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 451 ; 451 ; >
     au < crawling ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 452 ; 452 ; >
     au < crawling ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 453 ; 453 ; >
-    au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 454 ; 454 ; >
-    au < manifest ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 455 ; 455 ; >
+    au < testing ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 454 ; 454 ; >
+    au < testing ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 455 ; 455 ; >
     au < expected ; exists ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 456 ; 456 ; >
 
   }
@@ -17365,7 +17364,7 @@
     au < finished ; finished ; 2012 ; The Musical Quarterly Volume 95 ; 95 ; >
     au < frozen ; exists ; 2013 ; The Musical Quarterly Volume 96 ; 96 ; >
     au < finished ; crawling ; 2014 ; The Musical Quarterly Volume 97 ; 97 ; >
-    au < manifest ; exists ; 2015 ; The Musical Quarterly Volume 98 ; 98 ; >
+    au < testing ; exists ; 2015 ; The Musical Quarterly Volume 98 ; 98 ; >
     au < expected ; exists ; 2016 ; The Musical Quarterly Volume 99 ; 99 ; >
 
     }
@@ -19130,7 +19129,7 @@
     au < crawling ; exists ; 2015 ; Past & Present Volume 226 ; 226 ; >
     au < crawling ; exists ; 2015 ; Past & Present Volume 227 ; 227 ; >
     au < crawling ; exists ; 2015 ; Past & Present Volume 228 ; 228 ; >
-    au < manifest ; exists ; 2015 ; Past & Present Volume 229 ; 229 ; >
+    au < testing ; exists ; 2015 ; Past & Present Volume 229 ; 229 ; >
     au < expected ; exists ; 2016 ; Past & Present Volume 230 ; 230 ; >
 
     }
@@ -20814,7 +20813,7 @@
     au < crawling ; exists ; 2015 ; Radiation Protection Dosimetry Volume 164 ; 164 ; >
     au < crawling ; exists ; 2015 ; Radiation Protection Dosimetry Volume 165 ; 165 ; >
     au < ready ; exists ; 2015 ; Radiation Protection Dosimetry Volume 166 ; 166 ; >
-    au < manifest ; exists ; 2015 ; Radiation Protection Dosimetry Volume 167 ; 167 ; >
+    au < testing ; exists ; 2015 ; Radiation Protection Dosimetry Volume 167 ; 167 ; >
     au < expected ; exists ; 2016 ; Radiation Protection Dosimetry Volume 168 ; 168 ; >
 
     }
@@ -22037,8 +22036,8 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Social Problems Volume 57 ; 57 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Social Problems Volume 58 ; 58 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Social Problems Volume 59 ; 59 ; >
-    au < manifest ; exists ; 2013 ; Social Problems Volume 60 ; 60 ; >
-    au < testing ; exists ; 2014 ; Social Problems Volume 61 ; 61 ; >
+    au < testing ; exists ; 2013 ; Social Problems Volume 60 ; 60 ; >
+    au < ready ; exists ; 2014 ; Social Problems Volume 61 ; 61 ; >
     au < crawling ; exists ; 2015 ; Social Problems Volume 62 ; 62 ; >
     au < expected ; exists ; 2016 ; Social Problems Volume 63 ; 63 ; >
 
@@ -22735,7 +22734,7 @@
     au < crawling ; exists ; 2015 ; Toxicological Sciences Volume 145 ; 145 ; >
     au < crawling ; exists ; 2015 ; Toxicological Sciences Volume 146 ; 146 ; >
     au < ready ; exists ; 2015 ; Toxicological Sciences Volume 147 ; 147 ; >
-    au < manifest ; exists ; 2015 ; Toxicological Sciences Volume 148 ; 148 ; >
+    au < testing ; exists ; 2015 ; Toxicological Sciences Volume 148 ; 148 ; >
     au < expected ; exists ; 2016 ; Toxicological Sciences Volume 149 ; 149 ; >
 
     }
