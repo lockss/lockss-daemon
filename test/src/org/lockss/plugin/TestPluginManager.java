@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1846,6 +1846,23 @@ public class TestPluginManager extends LockssTestCase {
 
     ArchivalUnit au = mgr.getAuFromId(auid);
     assertNotNull(au);
+  }
+
+  /**
+   * Tests PluginManager.isInternalPlugin(Plugin).
+   * @throws Exception
+   */
+  public void testIsInternalPlugin() throws Exception {
+    Plugin internalPlugin = mgr.getImportPlugin();
+    assertNotNull(internalPlugin);
+    assertTrue(mgr.isInternalPlugin(internalPlugin));
+    internalPlugin = mgr.getRegistryPlugin();
+    assertNotNull(internalPlugin);
+    assertTrue(mgr.isInternalPlugin(internalPlugin));
+    assertTrue(mgr.ensurePluginLoaded(mockPlugKey));
+    internalPlugin = mgr.getPlugin(mockPlugKey);
+    assertNotNull(internalPlugin);
+    assertFalse(mgr.isInternalPlugin(internalPlugin));
   }
 
   public static Test suite() {
