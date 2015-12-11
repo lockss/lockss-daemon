@@ -19250,7 +19250,7 @@
       eissn = 2059-8033
      >
 
-      param[base_url] = http://sed.sagepub.com/
+      param[base_url] = http://sps.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
