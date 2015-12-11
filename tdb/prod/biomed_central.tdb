@@ -3194,50 +3194,6 @@
 
     {
       title <
-        name = Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine  ;
-        issn = 1757-7241 ;
-        issnl = 1757-7241
-      >
-
-      comment[base_url] = http://sjtrem.biomedcentral.com/
-      param[journal_eissn] = 1757-7241
-
-      au < exists ; 2008 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 16 ; 16 >
-      au < exists ; 2009 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 17 ; 17 >
-      au < exists ; 2010 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 18 ; 18 >
-      au < exists ; 2011 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 19 ; 19 >
-      au < exists ; 2012 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 20 ; 20 >
-      au < exists ; 2013 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 21 ; 21 >
-      au < exists ; 2014 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 22 ; 22 >
-      au < exists ; 2015 ; Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine Volume 23 ; 23 >
-
-    }
-
-    {
-      title <
-        name = Scoliosis ;
-        eissn = 1748-7161 ;
-        issnl = 1748-7161
-      >
-
-      comment[base_url] = http://scoliosisjournal.biomedcentral.com/
-      param[journal_eissn] = 1748-7161
-
-      au < doNotProcess ; 2006 ; Scoliosis Volume 1 ; 1 >
-      au < doNotProcess ; 2007 ; Scoliosis Volume 2 ; 2 >
-      au < doNotProcess ; 2008 ; Scoliosis Volume 3 ; 3 >
-      au < doNotProcess ; 2009 ; Scoliosis Volume 4 ; 4 >
-      au < doNotProcess ; 2010 ; Scoliosis Volume 5 ; 5 >
-      au < doNotProcess ; 2011 ; Scoliosis Volume 6 ; 6 >
-      au < exists ; 2012 ; Scoliosis Volume 7 ; 7 >
-      au < exists ; 2013 ; Scoliosis Volume 8 ; 8 >
-      au < exists ; 2014 ; Scoliosis Volume 9 ; 9 >
-      au < exists ; 2015 ; Scoliosis Volume 10 ; 10 >
-
-    }
-
-    {
-      title <
         name = Skeletal Muscle ;
         issn = 2044-5040 ;
         issnl = 2044-5040
@@ -3251,29 +3207,6 @@
       au < exists ; 2013 ; Skeletal Muscle Volume 3 ; 3 >
       au < exists ; 2014 ; Skeletal Muscle Volume 4 ; 4 >
       au < exists ; 2015 ; Skeletal Muscle Volume 5 ; 5 >
-
-    }
-
-    {
-      title <
-        name = Source Code for Biology and Medicine ;
-        eissn = 1751-0473 ;
-        issnl = 1751-0473
-      >
-
-      comment[base_url] = http://scfbm.biomedcentral.com/
-      param[journal_eissn] = 1751-0473
-
-      au < doNotProcess ; 2006 ; Source Code for Biology and Medicine Volume 1 ; 1 >
-      au < doNotProcess ; 2007 ; Source Code for Biology and Medicine Volume 2 ; 2 >
-      au < doNotProcess ; 2008 ; Source Code for Biology and Medicine Volume 3 ; 3 >
-      au < doNotProcess ; 2009 ; Source Code for Biology and Medicine Volume 4 ; 4 >
-      au < doNotProcess ; 2010 ; Source Code for Biology and Medicine Volume 5 ; 5 >
-      au < doNotProcess ; 2011 ; Source Code for Biology and Medicine Volume 6 ; 6 >
-      au < exists ; 2012 ; Source Code for Biology and Medicine Volume 7 ; 7 >
-      au < exists ; 2013 ; Source Code for Biology and Medicine Volume 8 ; 8 >
-      au < exists ; 2014 ; Source Code for Biology and Medicine Volume 9 ; 9 >
-      au < exists ; 2015 ; Source Code for Biology and Medicine Volume 10 ; 10 >
 
     }
 
@@ -3293,29 +3226,6 @@
       au < exists ; 2013 ; Stem Cell Research & Therapy Volume 4 ; 4 >
       au < exists ; 2014 ; Stem Cell Research & Therapy Volume 5 ; 5 >
       au < exists ; 2015 ; Stem Cell Research & Therapy Volume 6 ; 6 >
-
-    }
-
-    {
-      title <
-        name = Substance Abuse Treatment, Prevention, and Policy ;
-        eissn = 1747-597X ;
-        issnl = 1747-597X
-      >
-
-      comment[base_url] = http://substanceabusepolicy.biomedcentral.com/
-      param[journal_eissn] = 1747-597X
-
-      au < doNotProcess ; 2006 ; Substance Abuse Treatment, Prevention, and Policy Volume 1 ; 1 >
-      au < doNotProcess ; 2007 ; Substance Abuse Treatment, Prevention, and Policy Volume 2 ; 2 >
-      au < doNotProcess ; 2008 ; Substance Abuse Treatment, Prevention, and Policy Volume 3 ; 3 >
-      au < doNotProcess ; 2009 ; Substance Abuse Treatment, Prevention, and Policy Volume 4 ; 4 >
-      au < doNotProcess ; 2010 ; Substance Abuse Treatment, Prevention, and Policy Volume 5 ; 5 >
-      au < doNotProcess ; 2011 ; Substance Abuse Treatment, Prevention, and Policy Volume 6 ; 6 >
-      au < exists ; 2012 ; Substance Abuse Treatment, Prevention, and Policy Volume 7 ; 7 >
-      au < exists ; 2013 ; Substance Abuse Treatment, Prevention, and Policy Volume 8 ; 8 >
-      au < exists ; 2014 ; Substance Abuse Treatment, Prevention, and Policy Volume 9 ; 9 >
-      au < exists ; 2015 ; Substance Abuse Treatment, Prevention, and Policy Volume 10 ; 10 >
 
     }
 
@@ -3364,79 +3274,6 @@
 
     {
       title <
-        name = Thrombosis Journal ;
-        eissn = 1477-9560 ;
-        issnl = 1477-9560
-      >
-
-      comment[base_url] = http://thrombosisjournal.biomedcentral.com/
-      param[journal_eissn] = 1477-9560
-
-      au < doNotProcess ; 2003 ; Thrombosis Journal Volume 1 ; 1 >
-      au < doNotProcess ; 2004 ; Thrombosis Journal Volume 2 ; 2 >
-      au < doNotProcess ; 2005 ; Thrombosis Journal Volume 3 ; 3 >
-      au < doNotProcess ; 2006 ; Thrombosis Journal Volume 4 ; 4 >
-      au < doNotProcess ; 2007 ; Thrombosis Journal Volume 5 ; 5 >
-      au < doNotProcess ; 2008 ; Thrombosis Journal Volume 6 ; 6 >
-      au < doNotProcess ; 2009 ; Thrombosis Journal Volume 7 ; 7 >
-      au < doNotProcess ; 2010 ; Thrombosis Journal Volume 8 ; 8 >
-      au < doNotProcess ; 2011 ; Thrombosis Journal Volume 9 ; 9 >
-      au < exists ; 2012 ; Thrombosis Journal Volume 10 ; 10 >
-      au < exists ; 2013 ; Thrombosis Journal Volume 11 ; 11 >
-      au < exists ; 2014 ; Thrombosis Journal Volume 12 ; 12 >
-      au < exists ; 2015 ; Thrombosis Journal Volume 13 ; 13 >
-
-    }
-
-    {
-      title <
-        name = Thyroid Research ;
-        issn = 1756-6614 ;
-        issnl = 1756-6614
-      >
-
-      comment[base_url] = http://thyroidresearchjournal.biomedcentral.com/
-      param[journal_eissn] = 1756-6614
-
-      au < exists ; 2008 ; Thyroid Research Volume 1 ; 1 >
-      au < exists ; 2009 ; Thyroid Research Volume 2 ; 2 >
-      au < exists ; 2010 ; Thyroid Research Volume 3 ; 3 >
-      au < exists ; 2011 ; Thyroid Research Volume 4 ; 4 >
-      au < exists ; 2012 ; Thyroid Research Volume 5 ; 5 >
-      au < exists ; 2013 ; Thyroid Research Volume 6 ; 6 >
-      au < exists ; 2014 ; Thyroid Research Volume 7 ; 7 >
-      au < exists ; 2015 ; Thyroid Research Volume 8 ; 8 >
-
-    }
-
-    {
-      title <
-        name = Tobacco Induced Diseases ;
-        issn = 1617-9625 ;
-        issnl = 1617-9625
-      >
-
-      comment[base_url] = http://tobaccoinduceddiseases.biomedcentral.com/
-      param[journal_eissn] = 1617-9625
-
-      au < exists ; 2002-2003 ; Tobacco Induced Diseases Volume 1 ; 1 >
-      au < exists ; 2004 ; Tobacco Induced Diseases Volume 2 ; 2 >
-      au < exists ; 2005-2007 ; Tobacco Induced Diseases Volume 3 ; 3 >
-      au < exists ; 2008 ; Tobacco Induced Diseases Volume 4 ; 4 >
-      au < exists ; 2009 ; Tobacco Induced Diseases Volume 5 ; 5 >
-      au < exists ; 0 ; Tobacco Induced Diseases Volume 6 ; 6 > #malformed
-      au < exists ; 0 ; Tobacco Induced Diseases Volume 7 ; 7 > #malformed
-      au < exists ; 2010 ; Tobacco Induced Diseases Volume 8 ; 8 >
-      au < exists ; 2011 ; Tobacco Induced Diseases Volume 9 ; 9 >
-      au < doNotProcess ; 2012 ; Tobacco Induced Diseases Volume 10 ; 10 >
-      au < exists ; 2013 ; Tobacco Induced Diseases Volume 11 ; 11 >
-      au < exists ; 2014 ; Tobacco Induced Diseases Volume 12 ; 12 >
-      au < exists ; 2015 ; Tobacco Induced Diseases Volume 13 ; 13 >
-
-    }
-
-    {
-      title <
         name = Translational Neurodegeneration ;
         issn = 2047-9158 ;
         issnl = 2047-9158
@@ -3467,35 +3304,6 @@
       au < exists ; 2013 ; Transplantation Research Volume 2 ; 2 >
       au < exists ; 2014 ; Transplantation Research Volume 3 ; 3 >
       au < exists ; 2015 ; Transplantation Research Volume 4 ; 4 >
-
-    }
-
-    {
-      title <
-        name = Trials ;
-        eissn = 1745-6215 ;
-        issnl = 1745-6215
-      >
-
-      comment[base_url] = http://trialsjournal.biomedcentral.com/
-      param[journal_eissn] = 1745-6215
-
-      au < doNotProcess ; 2000 ; Trials Volume 1 ; 1 >
-      au < doNotProcess ; 2001 ; Trials Volume 2 ; 2 >
-      au < doNotProcess ; 2002 ; Trials Volume 3 ; 3 >
-      au < doNotProcess ; 2003 ; Trials Volume 4 ; 4 >
-      au < doNotProcess ; 2004 ; Trials Volume 5 ; 5 >
-      au < doNotProcess ; 2005 ; Trials Volume 6 ; 6 >
-      au < doNotProcess ; 2006 ; Trials Volume 7 ; 7 >
-      au < doNotProcess ; 2007 ; Trials Volume 8 ; 8 >
-      au < doNotProcess ; 2008 ; Trials Volume 9 ; 9 >
-      au < doNotProcess ; 2009 ; Trials Volume 10 ; 10 >
-      au < doNotProcess ; 2010 ; Trials Volume 11 ; 11 >
-      au < doNotProcess ; 2011 ; Trials Volume 12 ; 12 >
-      au < exists ; 2012 ; Trials Volume 13 ; 13 >
-      au < exists ; 2013 ; Trials Volume 14 ; 14 >
-      au < exists ; 2014 ; Trials Volume 15 ; 15 >
-      au < exists ; 2015 ; Trials Volume 16 ; 16 >
 
     }
 
@@ -3539,31 +3347,6 @@
 
     {
       title <
-        name = Virology Journal ;
-        eissn = 1743-422X ;
-        issnl = 1743-422X
-      >
-
-      comment[base_url] = http://virologyj.biomedcentral.com/
-      param[journal_eissn] = 1743-422X
-
-      au < doNotProcess ; 2004 ; Virology Journal Volume 1 ; 1 >
-      au < doNotProcess ; 2005 ; Virology Journal Volume 2 ; 2 >
-      au < doNotProcess ; 2006 ; Virology Journal Volume 3 ; 3 >
-      au < doNotProcess ; 2007 ; Virology Journal Volume 4 ; 4 >
-      au < doNotProcess ; 2008 ; Virology Journal Volume 5 ; 5 >
-      au < doNotProcess ; 2009 ; Virology Journal Volume 6 ; 6 >
-      au < doNotProcess ; 2010 ; Virology Journal Volume 7 ; 7 >
-      au < doNotProcess ; 2011 ; Virology Journal Volume 8 ; 8 >
-      au < exists ; 2012 ; Virology Journal Volume 9 ; 9>
-      au < exists ; 2013 ; Virology Journal Volume 10 ; 10 >
-      au < exists ; 2014 ; Virology Journal Volume 11 ; 11 >
-      au < exists ; 2015 ; Virology Journal Volume 12 ; 12 >
-
-    }
-
-    {
-      title <
         name = World Allergy Organization Journal ;
         issn = 1939-4551 ;
         issnl = 1939-4551
@@ -3580,55 +3363,6 @@
       au < exists ; 2013 ; World Allergy Organization Journal Volume 6 ; 6 >
       au < exists ; 2014 ; World Allergy Organization Journal Volume 7 ; 7 >
       au < exists ; 2015 ; World Allergy Organization Journal Volume 8 ; 8 >
-
-    }
-
-    {
-      title <
-        name = World Journal of Emergency Surgery ;
-        eissn = 1749-7922 ;
-        issnl = 1749-7922
-      >
-
-      comment[base_url] = http://wjes.biomedcentral.com/
-      param[journal_eissn] = 1749-7922
-
-      au < doNotProcess ; 2006 ; World Journal of Emergency Surgery Volume 1 ; 1 >
-      au < doNotProcess ; 2007 ; World Journal of Emergency Surgery Volume 2 ; 2 >
-      au < doNotProcess ; 2008 ; World Journal of Emergency Surgery Volume 3 ; 3 >
-      au < doNotProcess ; 2009 ; World Journal of Emergency Surgery Volume 4 ; 4 >
-      au < doNotProcess ; 2010 ; World Journal of Emergency Surgery Volume 5 ; 5 >
-      au < doNotProcess ; 2011 ; World Journal of Emergency Surgery Volume 6 ; 6 >
-      au < exists ; 2012 ; World Journal of Emergency Surgery Volume 7 ; 7 >
-      au < exists ; 2013 ; World Journal of Emergency Surgery Volume 8 ; 8 >
-      au < exists ; 2014 ; World Journal of Emergency Surgery Volume 9 ; 9 >
-      au < exists ; 2015 ; World Journal of Emergency Surgery Volume 10 ; 10 >
-
-    }
-
-    {
-      title <
-        name = World Journal of Surgical Oncology ;
-        eissn = 1477-7819 ;
-        issnl = 1477-7819
-      >
-
-      comment[base_url] = http://wjso.biomedcentral.com/
-      param[journal_eissn] = 1477-7819
-
-      au < doNotProcess ; 2003 ; World Journal of Surgical Oncology Volume 1 ; 1 >
-      au < doNotProcess ; 2004 ; World Journal of Surgical Oncology Volume 2 ; 2 >
-      au < doNotProcess ; 2005 ; World Journal of Surgical Oncology Volume 3 ; 3 >
-      au < doNotProcess ; 2006 ; World Journal of Surgical Oncology Volume 4 ; 4 >
-      au < doNotProcess ; 2007 ; World Journal of Surgical Oncology Volume 5 ; 5 >
-      au < doNotProcess ; 2008 ; World Journal of Surgical Oncology Volume 6 ; 6 >
-      au < doNotProcess ; 2009 ; World Journal of Surgical Oncology Volume 7 ; 7 >
-      au < doNotProcess ; 2010 ; World Journal of Surgical Oncology Volume 8 ; 8 >
-      au < doNotProcess ; 2011 ; World Journal of Surgical Oncology Volume 9 ; 9 >
-      au < exists ; 2012 ; World Journal of Surgical Oncology Volume 10 ; 10 >
-      au < exists ; 2013 ; World Journal of Surgical Oncology Volume 11 ; 11 >
-      au < exists ; 2014 ; World Journal of Surgical Oncology Volume 12 ; 12 >
-      au < exists ; 2015 ; World Journal of Surgical Oncology Volume 13 ; 13 >
 
     }
 
