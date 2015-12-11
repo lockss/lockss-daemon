@@ -40,11 +40,11 @@
     au < manifest ; exists ; 1999 ; 9781563473234 ; 9781600862458 ; 9781600862458 ; Structural Dynamics in Aeronautical Engineering (9781600862458) >
     au < testing ; exists ; 2000 ; 9781563473975 ; 9781600862137 ; 9781600862137 ; Mathematical Methods in Defense Analyses, 3e (9781600862137) >
     au < testing ; exists ; 2001 ; 9781563474729 ; 9781600861734 ; 9781600861734 ; Design Methodologies for Space Transportation Systems (9781600861734) >
-    au < ready ; exists ; 2001 ; 9781563474637 ; 9781600861857 ; 9781600861857 ; Flight Vehicle Performance and Aerodynamic Control (9781600861857) >
-    au < ready ; exists ; 2002 ; 9781563475757 ; 9781600861758 ; 9781600861758 ; Dynamics, Control, and Flying Qualities of V/STOL Aircraft (9781600861758) >
+    au < crawling ; exists ; 2001 ; 9781563474637 ; 9781600861857 ; 9781600861857 ; Flight Vehicle Performance and Aerodynamic Control (9781600861857) >
+    au < crawling ; exists ; 2002 ; 9781563475757 ; 9781600861758 ; 9781600861758 ; Dynamics, Control, and Flying Qualities of V/STOL Aircraft (9781600861758) >
     au < ready ; exists ; 2003 ; 9781563475634 ; 9781600861550 ; 9781600861550 ; Analytical Mechanics of Space Systems (9781600861550) >
     au < ready ; exists ; 2003 ; 9781563475801 ; 9781600861819 ; 9781600861819 ; Finite Element Multidisciplinary Analysis, Second Edition (9781600861819) >
-    au < ready ; exists ; 2003 ; 9781563475825 ; 9781600862519 ; 9781600862519 ; The Fundamentals of Aircraft Combat Survivability Analysis and Design, Second Edition (9781600862519) >
+    au < crawling ; exists ; 2003 ; 9781563475825 ; 9781600862519 ; 9781600862519 ; The Fundamentals of Aircraft Combat Survivability Analysis and Design, Second Edition (9781600862519) >
     au < testing ; exists ; 2006 ; 9781563478376 ; 9781600861352 ; 9781600861352 ; Aircraft and Rotorcraft System Identification (9781600861352) >
     au < ready ; exists ; 2006 ; 9781563477935 ; 9781600861567 ; 9781600861567 ; Applied Cartesian Tensors for Aerospace Simulations (9781600861567) >
     au < testing ; exists ; 2006 ; 9781563476990 ; 9781600861765 ; 9781600861765 ; Elements of Continuum Mechanics (9781600861765) >
@@ -52,7 +52,7 @@
     au < ready ; exists ; 2006 ; 9781563477812 ; 9781600862502 ; 9781600862502 ; The Biokinetics of Flying and Swimming, 2e (9781600862502) >
     au < ready ; exists ; 2007 ; 9781563478383 ; 9781600861628 ; 9781600861628 ; Basic MATLAB®, Simulink®, and Stateflow® (9781600861628) >
     au < testing ; exists ; 2007 ; 9781563479175 ; 9781600861925 ; 9781600861925 ; Highly Flexible Structures: Modeling, Computation, and Experimentation (9781600861925) >
-    au < ready ; exists ; 2007 ; 9781563478734 ; 9781600862083 ; 9781600862083 ; Introduction to Helicopter and Tiltrotor Flight Simulation (9781600862083) >
+    au < crawling ; exists ; 2007 ; 9781563478734 ; 9781600862083 ; 9781600862083 ; Introduction to Helicopter and Tiltrotor Flight Simulation (9781600862083) >
     au < ready ; exists ; 2007 ; 9781563478499 ; 9781600862106 ; 9781600862106 ; Introduction to the Design of Fixed-Wing Micro Air Vehicles Including Three Case Studies (9781600862106) >
     au < ready ; exists ; 2009 ; 9781563479977 ; 9781563479991 ; 9781563479991 ; Finite Element Structural Analysis (9781563479991) >
     au < ready ; exists ; 2010 ; 9781600867620 ; 9781600867644 ; 9781600867644 ; Multiple Scales Theory and Aerospace Applications (9781600867644) >
@@ -92,14 +92,14 @@
     au < testing ; exists ; 2003 ; 9781624102998 ; 9781624102998 ; 9781624102998 ; The Airplane (9781624102998) >
     au < testing ; exists ; 2004 ; 9781563477058 ; 9781600868733 ; 9781600868733 ; Blazing the Trail (9781600868733) >
     au < testing ; exists ; 2004 ; 9781563476440 ; 9781600868894 ; 9781600868894 ; Unmanned Aviation (9781600868894) >
-    au < ready ; exists ; 2006 ; 9781563476495 ; 9781600868870 ; 9781600868870 ; History of Liquid Propellant Rocket Engines (9781600868870) >
+    au < crawling ; exists ; 2006 ; 9781563476495 ; 9781600868870 ; 9781600868870 ; History of Liquid Propellant Rocket Engines (9781600868870) >
     au < testing ; exists ; 2007 ; 9781563478444 ; 9781600868351 ; 9781600868351 ; Space Exploration and Astronaut Safety (9781600868351) >
     au < testing ; exists ; 2007 ; 9781563479182 ; 9781600868856 ; 9781600868856 ; Black Hawk (9781600868856) >
     au < ready ; exists ; 2008 ; 9781563479496 ; 9781600868795 ; 9781600868795 ; Terminal Chaos (9781600868795) >
     au < ready ; exists ; 2009 ; 9781563479663 ; 9781563479670 ; 9781563479670 ; Success Stories in Satellite Systems (9781563479670) >
     au < ready ; exists ; 2009 ; 9781563479823 ; 9781563479878 ; 9781563479878 ; Out of This World - The New Field of Space Architecture (9781563479878) >
     au < ready ; exists ; 2009 ; 9781600867125 ; 9781600867316 ; 9781600867316 ; From Rainbow to Gusto (9781600867316) >
-    au < ready ; exists ; 2010 ; 9781600867118 ; 9781600867293 ; 9781600867293 ; The Engines of Pratt & Whitney: A Technical History (9781600867293) >
+    au < crawling ; exists ; 2010 ; 9781600867118 ; 9781600867293 ; 9781600867293 ; The Engines of Pratt & Whitney: A Technical History (9781600867293) >
     au < ready ; exists ; 2010 ; 9781600867149 ; 9781600867552 ; 9781600867552 ; German Development of the Swept Wing: 1935-1945 (9781600867552) >
     au < ready ; exists ; 2010 ; 9781600867569 ; 9781600867583 ; 9781600867583 ; Skycrane: Igor Sikorsky's Last Vision (9781600867583) >
     au < ready ; exists ; 2010 ; 9781563473074 ; 9781600867873 ; 9781600867873 ; The General Dynamics Case Study on the F-16 Fly-By-Wire Flight Control System (9781600867873) >
@@ -110,8 +110,8 @@
     au < ready ; exists ; 2013 ; 9781624102103 ; 9781624102110 ; 9781624102110 ; Safety Management Systems for Aviation Practitioners: Real-World Lessons (9781624102110) >
     au < ready ; exists ; 2013 ; 9781624102165 ; 9781624102172 ; 9781624102172 ; Space Shuttle Legacy (9781624102172) >
     au < ready ; exists ; 2014 ; 9781624102622 ; 9781624103223 ; 9781624103223 ; The Overview Effect: Space Exploration and Human Evolution, Third Edition (9781624103223) >
-    au < ready ; exists ; 2015 ; 9781624102721 ; 9781624102738 ; 9781624102738 ; Gottinger Monograph N: German Research and Development on Rotary-Wing Aircraft (1939-1945) (9781624102738) >
-    au < ready ; exists ; 2015 ; 9781624103490 ; 9781624103506 ; 9781624103506 ; Intercept 1961: The Birth of Soviet Missile Defense (9781624103506) >
+    au < crawling ; exists ; 2015 ; 9781624102721 ; 9781624102738 ; 9781624102738 ; Gottinger Monograph N: German Research and Development on Rotary-Wing Aircraft (1939-1945) (9781624102738) >
+    au < crawling ; exists ; 2015 ; 9781624103490 ; 9781624103506 ; 9781624103506 ; Intercept 1961: The Birth of Soviet Missile Defense (9781624103506) >
     au < notReady ; exists ; 2015 ; 9781624103513 ; 9781624103520 ; 9781624103520 ; Advanced Airship Technologies and Design Approaches (9781624103520) >
 
   }
@@ -300,7 +300,7 @@
     au < testing ; exists ; 2001 ; 9781563475177 ; 9781600866654 ; 9781600866654 ; Fixed and Flapping Wing Aerodynamics for Micro Air Vehicle Applications (9781600866654) >
     au < ready ; exists ; 2002 ; 9781563475184 ; 9781600866661 ; 9781600866661 ; Physical and Chemical Processes in Gas Dynamics Vol. 1 (9781600866661) >
     au < testing ; exists ; 2002 ; 9781563475412 ; 9781600866678 ; 9781600866678 ; Advanced Hypersonic Test Facilities (9781600866678) >
-    au < ready ; exists ; 2003 ; 9781563476075 ; 9781600866685 ; 9781600866685 ; Economic Principles Applied to Space Industry Decisions (9781600866685) >
+    au < crawling ; exists ; 2003 ; 9781563476075 ; 9781600866685 ; 9781600866685 ; Economic Principles Applied to Space Industry Decisions (9781600866685) >
     au < testing ; exists ; 2003 ; 9781563475795 ; 9781600866692 ; 9781600866692 ; Satellite Communications in the 21st Century: Trends and Technologies (9781600866692) >
     au < testing ; exists ; 2004 ; 9781563476549 ; 9781600866708 ; 9781600866708 ; Spatial Disorientation in Aviation (9781600866708) >
     au < ready ; exists ; 2004 ; 9781563476662 ; 9781600866722 ; 9781600866722 ; Applications of Robust Control to Nonlinear Systems (9781600866722) >
@@ -313,18 +313,18 @@
     au < ready ; exists ; 2006 ; 9781563477898 ; 9781600866838 ; 9781600866838 ; Applications of Circulation Control Technology (9781600866838) >
     au < testing ; exists ; 2006 ; 9781563478284 ; 9781600866845 ; 9781600866845 ; Airborne Doppler Radar (9781600866845) >
     au < ready ; exists ; 2006 ; 9781563478369 ; 9781600866852 ; 9781600866852 ; Flight Vehicle System Identification (9781600866852) >
-    au < ready ; exists ; 2007 ; 9781563478413 ; 9781600866869 ; 9781600866869 ; Jet Induced Effects (9781600866869) >
+    au < crawling ; exists ; 2007 ; 9781563478413 ; 9781600866869 ; 9781600866869 ; Jet Induced Effects (9781600866869) >
     au < ready ; exists ; 2007 ; 9781563477034 ; 9781600866876 ; 9781600866876 ; Fundamentals of Hybrid Rocket Combustion and Propulsion (9781600866876) >
     au < ready ; exists ; 2007 ; 9781563479199 ; 9781600866890 ; 9781600866890 ; Space Operations: Mission Management, Technologies, and Current Applications (9781600866890) >
     au < testing ; exists ; 2007 ; 9781563479212 ; 9781600866906 ; 9781600866906 ; Combustion Instabilities in Liquid Rocket Engines (9781600866906) >
     au < ready ; exists ; 2008 ; 9781563479519 ; 9781600860096 ; 9781600860096 ; Nuclear Space Power and Propulsion Systems (9781600860096) >
     au < ready ; exists ; 2008 ; 9781563479281 ; 9781600866913 ; 9781600866913 ; Combustion Instability (9781600866913) >
-    au < ready ; exists ; 2008 ; 9781563479342 ; 9781600866920 ; 9781600866920 ; NASA Space Science Vision Missions (9781600866920) >
-    au < ready ; exists ; 2008 ; 9781563479298 ; 9781600866937 ; 9781600866937 ; Advanced Propulsion Systems and Technologies, Today to 2020 (9781600866937) >
+    au < crawling ; exists ; 2008 ; 9781563479342 ; 9781600866920 ; 9781600866920 ; NASA Space Science Vision Missions (9781600866920) >
+    au < crawling ; exists ; 2008 ; 9781563479298 ; 9781600866937 ; 9781600866937 ; Advanced Propulsion Systems and Technologies, Today to 2020 (9781600866937) >
     au < ready ; exists ; 2009 ; 9781563479656 ; 9781563479854 ; 9781563479854 ; Hypervelocity Gouging Impacts (9781563479854) >
     au < crawling ; exists ; 2009 ; 9781563479830 ; 9781563479892 ; 9781563479892 ; Fundamentals and Applications of Modern Flow Control (9781563479892) >
-    au < ready ; exists ; 2009 ; 9781563479564 ; 9781563479953 ; 9781563479953 ; Frontiers of Propulsion Science (9781563479953) >
-    au < ready ; exists ; 2009 ; 9781600867187 ; 9781600867200 ; 9781600867200 ; Fundamentals of Kalman Filtering: A Practical Approach, Third Edition (9781600867200) >
+    au < crawling ; exists ; 2009 ; 9781563479564 ; 9781563479953 ; 9781563479953 ; Frontiers of Propulsion Science (9781563479953) >
+    au < crawling ; exists ; 2009 ; 9781600867187 ; 9781600867200 ; 9781600867200 ; Fundamentals of Kalman Filtering: A Practical Approach, Third Edition (9781600867200) >
     au < ready ; exists ; 2010 ; 9781600867255 ; 9781600867279 ; 9781600867279 ; Advances in Collaborative Civil Aeronautical Multidisciplinary Design Optimization (9781600867279) >
     au < ready ; exists ; 2010 ; 9781600867682 ; 9781600867699 ; 9781600867699 ; Emergence of Pico- and Nanosatellites for Atmospheric Research and Technology Testing (9781600867699) >
     au < notReady ; exists ; 2011 ; 9781600868177 ; 9781600868184 ; 9781600868184 ; Space Operations: Exploration, Scientific Utilization, and Technology Development (9781600868184) >
@@ -336,7 +336,7 @@
     au < ready ; exists ; 2014 ; 9781624102608 ; 9781624102714 ; 9781624102714 ; Computational Intelligence in Aerospace Sciences (9781624102714) >
     au < notReady ; exists ; 2015 ; 9781624101953 ; 9781624101960 ; 9781624101960 ; Precision Aerial Delivery Systems: Modeling, Dynamics, and Control (9781624101960) >
     au < notReady ; exists ; 2015 ; 9781624101984 ; 9781624101991 ; 9781624101991 ; Space Operations: Innovations, Inventions, and Discoveries (9781624101991) >
-    au < ready ; exists ; 2015 ; 9781624102783 ; 9781624102790 ; 9781624102790 ; Flight Vehicle System Identification: A Time-Domain Methodology, Second Edition (9781624102790) >
+    au < crawling ; exists ; 2015 ; 9781624102783 ; 9781624102790 ; 9781624102790 ; Flight Vehicle System Identification: A Time-Domain Methodology, Second Edition (9781624102790) >
     au < notReady ; exists ; 2015 ; 9781624103285 ; 9781624103292 ; 9781624103292 ; Hypersonic Nonequilibrium Flows: Fundamentals and Recent Advances (9781624103292) >
 
   }

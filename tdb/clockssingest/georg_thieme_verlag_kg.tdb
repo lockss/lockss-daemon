@@ -1451,8 +1451,8 @@
     param[journal_id] = 10.1055/s-00025479
     comment[years] = 2013
 
-    au < ready ; exists ; 2014 ; 2014 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 1 ; 1 >
-    au < ready ; exists ; 2015 ; 2015 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 2 ; 2 >
+    au < crawling ; exists ; 2014 ; 2014 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 1 ; 1 >
+    au < crawling ; exists ; 2015 ; 2015 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 2 ; 2 >
 
   }
 
@@ -2381,9 +2381,9 @@
     comment[years] = 2012-current
     comment[0] = under the umbrella title Journal of Neurological Surgery which combines several old titles
 
-    au < ready ; exists ; 2012 ; 2012 ; Journal of Neurological Surgery Part B : Skull Base Volume 2012 ; 73 >
+    au < crawling ; exists ; 2012 ; 2012 ; Journal of Neurological Surgery Part B : Skull Base Volume 2012 ; 73 >
     au < ready ; exists ; 2013 ; 2013 ; Journal of Neurological Surgery Part B : Skull Base Volume 2013 ; 74 >
-    au < ready ; exists ; 2014 ; 2014 ; Journal of Neurological Surgery Part B : Skull Base Volume 2014 ; 75 >
+    au < crawling ; exists ; 2014 ; 2014 ; Journal of Neurological Surgery Part B : Skull Base Volume 2014 ; 75 >
 
   }
 
@@ -2402,7 +2402,7 @@
     au < crawling ; exists ; 2012 ; 2012 ; Journal of Neurological Surgery Reports Volume 2012 ; 73 >
     au < crawling ; exists ; 2013 ; 2013 ; Journal of Neurological Surgery Reports Volume 2013 ; 74 >
     au < crawling ; exists ; 2014 ; 2014 ; Journal of Neurological Surgery Reports Volume 2014 ; 75 >
-    au < ready ; exists ; 2015 ; 2015 ; Journal of Neurological Surgery Reports Volume 2015 ; 76 >
+    au < crawling ; exists ; 2015 ; 2015 ; Journal of Neurological Surgery Reports Volume 2015 ; 76 >
 
   }
 
@@ -2483,10 +2483,10 @@
     param[journal_id] = 10.1055/s-00000183
     comment[years] = 2012-current
 
-    au < ready ; exists ; 2012 ; 2012 ; Journal of Wrist Surgery Volume 2012 ; 1 >
+    au < crawling ; exists ; 2012 ; 2012 ; Journal of Wrist Surgery Volume 2012 ; 1 >
     au < ready ; exists ; 2013 ; 2013 ; Journal of Wrist Surgery Volume 2013 ; 2 >
-    au < ready ; exists ; 2014 ; 2014 ; Journal of Wrist Surgery Volume 2014 ; 3 >
-    au < ready ; exists ; 2015 ; 2015 ; Journal of Wrist Surgery Volume 2015 ; 4 >
+    au < crawling ; exists ; 2014 ; 2014 ; Journal of Wrist Surgery Volume 2014 ; 3 >
+    au < crawling ; exists ; 2015 ; 2015 ; Journal of Wrist Surgery Volume 2015 ; 4 >
     au < expected ; exists ; 2016 ; 2016 ; Journal of Wrist Surgery Volume 2016 ; 5 >
 
   }
@@ -4718,7 +4718,7 @@
 
     au < crawling ; exists ; 2013 ; 2013 ; Sportphysio Volume 1 ; 1 >
     au < ready ; exists ; 2014 ; 2014 ; Sportphysio Volume 2 ; 2 >
-    au < ready ; exists ; 2015 ; 2015 ; Sportphysio Volume 3 ; 3 >
+    au < crawling ; exists ; 2015 ; 2015 ; Sportphysio Volume 3 ; 3 >
 
   }
 

@@ -70,9 +70,9 @@
     au < manifest ; exists ; 2009 ; Journal of Biomedical Optics Volume 14 ; 2009 >
     au < manifest ; exists ; 2010 ; Journal of Biomedical Optics Volume 15 ; 2010 >
     au < manifest ; exists ; 2011 ; Journal of Biomedical Optics Volume 16 ; 2011 >
-    au < ready ; exists ; 2012 ; Journal of Biomedical Optics Volume 17 ; 2012 >
-    au < ready ; exists ; 2013 ; Journal of Biomedical Optics Volume 18 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Biomedical Optics Volume 19 ; 2014 >
+    au < crawling ; exists ; 2012 ; Journal of Biomedical Optics Volume 17 ; 2012 >
+    au < crawling ; exists ; 2013 ; Journal of Biomedical Optics Volume 18 ; 2013 >
+    au < crawling ; exists ; 2014 ; Journal of Biomedical Optics Volume 19 ; 2014 >
     au < testing ; exists ; 2015 ; Journal of Biomedical Optics Volume 20 ; 2015 >
 
     }
@@ -107,10 +107,10 @@
     au < manifest ; exists ; 2009 ; Journal of Electronic Imaging Volume 18 ; 2009 >
     au < manifest ; exists ; 2010 ; Journal of Electronic Imaging Volume 19 ; 2010 >
     au < manifest ; exists ; 2011 ; Journal of Electronic Imaging Volume 20 ; 2011 >
-    au < ready ; exists ; 2012 ; Journal of Electronic Imaging Volume 21 ; 2012 >
-    au < ready ; exists ; 2013 ; Journal of Electronic Imaging Volume 22 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Electronic Imaging Volume 23 ; 2014 >
-    au < ready ; exists ; 2015 ; Journal of Electronic Imaging Volume 24 ; 2015 >
+    au < crawling ; exists ; 2012 ; Journal of Electronic Imaging Volume 21 ; 2012 >
+    au < crawling ; exists ; 2013 ; Journal of Electronic Imaging Volume 22 ; 2013 >
+    au < crawling ; exists ; 2014 ; Journal of Electronic Imaging Volume 23 ; 2014 >
+    au < crawling ; exists ; 2015 ; Journal of Electronic Imaging Volume 24 ; 2015 >
 
     }
 
@@ -124,7 +124,7 @@
     param[base_url] = http://medicalimaging.spiedigitallibrary.org/
     param[resource_id] = 165
 
-    au < ready ; exists ; 2014 ; Journal of Medical Imaging Volume 1 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Medical Imaging Volume 1 ; 2014 >
     au < testing ; exists ; 2015 ; Journal of Medical Imaging Volume 2 ; 2015 >
 
     }
@@ -149,10 +149,10 @@
     au < manifest ; exists ; 2009 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 8 ; 2009 >
     au < manifest ; exists ; 2010 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 9 ; 2010 >
     au < manifest ; exists ; 2011 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 10 ; 2011 >
-    au < ready ; exists ; 2012 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 11 ; 2012 >
-    au < ready ; exists ; 2013 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 12 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 13 ; 2014 >
-    au < ready ; exists ; 2015 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 14 ; 2015 >
+    au < crawling ; exists ; 2012 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 11 ; 2012 >
+    au < crawling ; exists ; 2013 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 12 ; 2013 >
+    au < crawling ; exists ; 2014 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 13 ; 2014 >
+    au < crawling ; exists ; 2015 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 14 ; 2015 >
 
     }
 
@@ -189,7 +189,7 @@
     au < manifest ; exists ; 2011 ; Journal of Photonics for Energy Volume 1 ; 2011 >
     au < crawling ; exists ; 2012 ; Journal of Photonics for Energy Volume 2 ; 2012 >
     au < crawling ; exists ; 2013 ; Journal of Photonics for Energy Volume 3 ; 2013 >
-    au < ready ; exists ; 2014 ; Journal of Photonics for Energy Volume 4 ; 2014 >
+    au < crawling ; exists ; 2014 ; Journal of Photonics for Energy Volume 4 ; 2014 >
     au < crawling ; exists ; 2015 ; Journal of Photonics for Energy Volume 5 ; 2015 >
 
     }
@@ -269,10 +269,10 @@
     au < manifest ; exists ; 2009 ; Optical Engineering Volume 48 ; 2009 >
     au < manifest ; exists ; 2010 ; Optical Engineering Volume 49 ; 2010 >
     au < manifest ; exists ; 2011 ; Optical Engineering Volume 50 ; 2011 >
-    au < ready ; exists ; 2012 ; Optical Engineering Volume 51 ; 2012 >
-    au < ready ; exists ; 2013 ; Optical Engineering Volume 52 ; 2013 >
-    au < ready ; exists ; 2014 ; Optical Engineering Volume 53 ; 2014 >
-    au < ready ; exists ; 2015 ; Optical Engineering Volume 54 ; 2015 >
+    au < crawling ; exists ; 2012 ; Optical Engineering Volume 51 ; 2012 >
+    au < crawling ; exists ; 2013 ; Optical Engineering Volume 52 ; 2013 >
+    au < crawling ; exists ; 2014 ; Optical Engineering Volume 53 ; 2014 >
+    au < crawling ; exists ; 2015 ; Optical Engineering Volume 54 ; 2015 >
 
     }
 
