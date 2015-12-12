@@ -73,7 +73,7 @@
     au < crawling ; exists ; 2012 ; Journal of Biomedical Optics Volume 17 ; 2012 >
     au < crawling ; exists ; 2013 ; Journal of Biomedical Optics Volume 18 ; 2013 >
     au < crawling ; exists ; 2014 ; Journal of Biomedical Optics Volume 19 ; 2014 >
-    au < testing ; exists ; 2015 ; Journal of Biomedical Optics Volume 20 ; 2015 >
+    au < manifest ; exists ; 2015 ; Journal of Biomedical Optics Volume 20 ; 2015 >
 
     }
 
@@ -125,7 +125,7 @@
     param[resource_id] = 165
 
     au < crawling ; exists ; 2014 ; Journal of Medical Imaging Volume 1 ; 2014 >
-    au < testing ; exists ; 2015 ; Journal of Medical Imaging Volume 2 ; 2015 >
+    au < manifest ; exists ; 2015 ; Journal of Medical Imaging Volume 2 ; 2015 >
 
     }
 
