@@ -1563,9 +1563,91 @@ while (my $line = <>) {
       $result = "--REQ_FAIL--"
     }
     sleep(4);
-                
-  } 
-  if ($result eq "Plugin Unknown") {
+
+  } elsif ($plugin eq "SilverchairProceedingsPlugin") {
+    $url = sprintf("%sLOCKSS/ListOfVolumes.aspx?year=%d",
+      $param{base_url}, $param{year});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+      	$vol_title= "Proceedings for " . $param{year};
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);
+
+  } elsif ($plugin eq "ClockssSilverchairProceedingsPlugin") {
+    $url = sprintf("%sLOCKSS/ListOfVolumes.aspx?year=%d",
+      $param{base_url}, $param{year});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+      	$vol_title= "Proceedings for " . $param{year};
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);
+
+  } elsif ($plugin eq "SilverchairBooksPlugin") {
+    $url = sprintf("%sbook.aspx?bookid=%d",
+      $param{base_url}, $param{resource_id});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+      if ($man_contents =~ m/<title>(.*)<\/title>/si) {
+          $vol_title = $1;
+          $vol_title =~ s/\s*\n\s*/ /g;
+          }
+        $result = "Manifest"
+     } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);
+
+  } elsif ($plugin eq "ClockssSilverchairBooksPlugin") {
+    $url = sprintf("%sbook.aspx?bookid=%d",
+      $param{base_url}, $param{resource_id});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+      if ($man_contents =~ m/<title>(.*)<\/title>/si) {
+          $vol_title = $1;
+          $vol_title =~ s/\s*\n\s*/ /g;
+          }
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);
+  }
+
+  if($result eq "Plugin Unknown") {
     printf("*PLUGIN UNKNOWN*, %s, %s\n",$auid,$man_url);
     $total_missing_plugin = $total_missing_plugin + 1;
   } elsif ($result eq "Manifest") {
