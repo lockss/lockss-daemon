@@ -70,6 +70,7 @@
             <string>1,"^https?://([^.]+\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|ajax\.microsoft\.com)/"</string>
             <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
             <string>1,"^https?://[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$"</string>
+            <string>1,"^https?://[^.]+\.(silverchair\.netdna-cdn|silverchaircdn)\.com/combres\.axd/"</string>
             <string>4,"^%s", base_url</string>
             <string>2,"__EVENTVALIDATION="</string>
             <string>1,"^%sbook\.aspx\?bookid=",base_url,</string>
