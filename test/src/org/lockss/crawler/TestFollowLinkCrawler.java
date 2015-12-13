@@ -263,7 +263,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     mau.addUrl(url1, false, true);
 
     assertTrue(doCrawl0(crawler));
-   }
+  }
 
   //Fetch startUrl, extractor will return a single url that already exists
   //we should only cache startUrl
@@ -437,7 +437,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 				"http://www.example.com/two.html"));
     assertSameElements(exp, extractor.getArgs());
 
-     exp =
+    exp =
       SetUtil.set(ListUtil.list(mau, null, Constants.DEFAULT_ENCODING,
 				"http://www.example.com/three.html"));
     assertSameElements(exp, ext2.getArgs());
@@ -655,7 +655,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     ce = new MyMockRetryableCacheException("Test exception");
     assertEquals(BaseCrawler.DEFAULT_DEFAULT_RETRY_COUNT,
-        cf.getRetryCount(ce));
+		 cf.getRetryCount(ce));
 
     ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_DEFAULT_RETRY_COUNT, "7");
     crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
@@ -694,7 +694,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     ce = new MyMockRetryableCacheException("Test exception");
     assertEquals(BaseCrawler.DEFAULT_DEFAULT_RETRY_DELAY,
-        cf.getRetryDelay(ce));
+		 cf.getRetryDelay(ce));
 
     ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_DEFAULT_RETRY_DELAY,
 				  "765432");
@@ -717,8 +717,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     crawler.setUrlsToFollow(ListUtil.list(CW_URL1, CW_URL2, CW_URL3));
     addUrls(ListUtil.list(CW_URL1, CW_URL2, CW_URL3));
 
-    crawler.setDaemonPermissionCheckers(
-        ListUtil.list(new MyMockPermissionChecker(100)));
+    crawler.setDaemonPermissionCheckers(ListUtil.list(new MyMockPermissionChecker(100)));
     crawler.doCrawl();
   }
 
@@ -784,10 +783,10 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     // make it abort after either url1 or url2 cached.  (Can't predict
     // order, so do both.)
     MyMockUrlFetcher mmuf = (MyMockUrlFetcher)
-        mau.makeUrlFetcher(crawler.getCrawlerFacade(), url1);
+      mau.makeUrlFetcher(crawler.getCrawlerFacade(), url1);
     mmuf.abortCrawl = true;
     mmuf = (MyMockUrlFetcher)
-        mau.makeUrlFetcher(crawler.getCrawlerFacade(), url2);
+      mau.makeUrlFetcher(crawler.getCrawlerFacade(), url2);
     mmuf.abortCrawl = true;
     assertFalse(crawler.doCrawl());
     // should have cached startUrl and one of the others
@@ -850,7 +849,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     crawler.setUrlsToFollow(ListUtil.list(url1, url2, url3));
     extractor.addUrlsToReturn(url1, SetUtil.set(startUrl));
     assertEquals(SetUtil.set(startUrl, url1, url2, url3),
-		crawlUrls(ListUtil.list(url1, url2, url3)));
+		 crawlUrls(ListUtil.list(url1, url2, url3)));
   }
 
 //   public void testCrawlListPreservesUncrawledUrls() {
@@ -906,23 +905,23 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 //   }
   
   public void testAbbreviatedCrawlTest(int expCrawlerStatus,
-      SubstanceChecker.State expSubState,
-      Collection<String> expFetched,
-      int substanceThreshold,
-      List<String> substanceUrlRegexps,
-      List<String> nonSubstanceUrlRegexps,
-      List<String> urlsToFollow
-      ) throws Exception {
+				       SubstanceChecker.State expSubState,
+				       Collection<String> expFetched,
+				       int substanceThreshold,
+				       List<String> substanceUrlRegexps,
+				       List<String> nonSubstanceUrlRegexps,
+				       List<String> urlsToFollow
+				       ) throws Exception {
     
     setSubstanceMode("Crawl");
     Configuration auConfig = mau.getConfiguration().copy();
     auConfig.put(ConfigParamDescr.CRAWL_TEST_SUBSTANCE_THRESHOLD.getKey(),
-    ""+substanceThreshold);
+		 ""+substanceThreshold);
     mau.setConfiguration(auConfig);
     if (substanceUrlRegexps != null)
-        mau.setSubstanceUrlPatterns(compileRegexps(substanceUrlRegexps));
+      mau.setSubstanceUrlPatterns(compileRegexps(substanceUrlRegexps));
     if (nonSubstanceUrlRegexps != null)
-        mau.setNonSubstanceUrlPatterns(compileRegexps(nonSubstanceUrlRegexps));
+      mau.setNonSubstanceUrlPatterns(compileRegexps(nonSubstanceUrlRegexps));
     
     mau.setStartUrls(urlsToFollow);
     
@@ -942,57 +941,57 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     assertEquals(expFetched, crawler.fetched);
   }
 
-public void testCrawlTestPassZero() throws Exception {
-testAbbreviatedCrawlTest(Crawler.STATUS_CRAWL_TEST_SUCCESSFUL,
-  State.Yes,
-  SetUtil.set(nsurl1),
-  0,
-  ListUtil.list("html"),
-  null,
-  ListUtil.list(nsurl1, nsurl2, nsurl3, nsurl4));
-}
+  public void testCrawlTestPassZero() throws Exception {
+    testAbbreviatedCrawlTest(Crawler.STATUS_CRAWL_TEST_SUCCESSFUL,
+			     State.Yes,
+			     SetUtil.set(nsurl1),
+			     0,
+			     ListUtil.list("html"),
+			     null,
+			     ListUtil.list(nsurl1, nsurl2, nsurl3, nsurl4));
+  }
 
-public void testCrawlTestPass1() throws Exception {
-testAbbreviatedCrawlTest(Crawler.STATUS_CRAWL_TEST_SUCCESSFUL,
-  State.Yes,
-  SetUtil.set(nsurl1),
-  1,
-  ListUtil.list("html"),
-  null,
-  ListUtil.list(nsurl1, nsurl2, nsurl3, nsurl4));
-}
+  public void testCrawlTestPass1() throws Exception {
+    testAbbreviatedCrawlTest(Crawler.STATUS_CRAWL_TEST_SUCCESSFUL,
+			     State.Yes,
+			     SetUtil.set(nsurl1),
+			     1,
+			     ListUtil.list("html"),
+			     null,
+			     ListUtil.list(nsurl1, nsurl2, nsurl3, nsurl4));
+  }
 
-public void testCrawlTestPass2() throws Exception {
-testAbbreviatedCrawlTest(Crawler.STATUS_CRAWL_TEST_SUCCESSFUL,
-  State.Yes,
-  SetUtil.set(nsurl1, nsurl2, nsurl3, nsurl4),
-  2,
-  ListUtil.list("html"),
-  null,
-  ListUtil.list(nsurl1, nsurl2, nsurl3, nsurl4));
-}
+  public void testCrawlTestPass2() throws Exception {
+    testAbbreviatedCrawlTest(Crawler.STATUS_CRAWL_TEST_SUCCESSFUL,
+			     State.Yes,
+			     SetUtil.set(nsurl1, nsurl2, nsurl3, nsurl4),
+			     2,
+			     ListUtil.list("html"),
+			     null,
+			     ListUtil.list(nsurl1, nsurl2, nsurl3, nsurl4));
+  }
 
-public void testCrawlTestFail() throws Exception {
-testAbbreviatedCrawlTest(Crawler.STATUS_CRAWL_TEST_FAIL,
-  State.Yes,
-  SetUtil.set(nsurl1, nsurl2, nsurl3, nsurl4),
-  3,
-  ListUtil.list("html"),
-  null,
-  ListUtil.list(nsurl1, nsurl2, nsurl3, nsurl4));
-}
+  public void testCrawlTestFail() throws Exception {
+    testAbbreviatedCrawlTest(Crawler.STATUS_CRAWL_TEST_FAIL,
+			     State.Yes,
+			     SetUtil.set(nsurl1, nsurl2, nsurl3, nsurl4),
+			     3,
+			     ListUtil.list("html"),
+			     null,
+			     ListUtil.list(nsurl1, nsurl2, nsurl3, nsurl4));
+  }
 
-public void testCrawlTestCrawlFail() throws Exception {
-crawler.setDaemonPermissionCheckers(
-ListUtil.list(new MyMockPermissionChecker(0)));
-testAbbreviatedCrawlTest(Crawler.STATUS_NO_PUB_PERMISSION,
-  State.Unknown,
-  Collections.EMPTY_SET,
-  1,
-  ListUtil.list("html"),
-  null,
-  ListUtil.list(nsurl1, nsurl2, nsurl3, nsurl4));
-}
+  public void testCrawlTestCrawlFail() throws Exception {
+    crawler.setDaemonPermissionCheckers(
+					ListUtil.list(new MyMockPermissionChecker(0)));
+    testAbbreviatedCrawlTest(Crawler.STATUS_NO_PUB_PERMISSION,
+			     State.Unknown,
+			     Collections.EMPTY_SET,
+			     1,
+			     ListUtil.list("html"),
+			     null,
+			     ListUtil.list(nsurl1, nsurl2, nsurl3, nsurl4));
+  }
 
   List<String> queueUrlList(CrawlQueue cq) {
     List<String> res = new ArrayList<String>();
@@ -1013,15 +1012,15 @@ testAbbreviatedCrawlTest(Crawler.STATUS_NO_PUB_PERMISSION,
   public void testMyLinkExtractorCallback() {
     final String prefix = "http://www.example.com/"; // pseudo crawl rule
     MockArchivalUnit mau = new MockArchivalUnit() {
-      // shouldBeCached() is true of anything starting with prefix
-      public boolean shouldBeCached(String url) {
-        return StringUtil.startsWithIgnoreCase(url, prefix);
-      }
-      // siteNormalizeUrl() removes "SESSION/" from url
-      public String siteNormalizeUrl(String url) {
-        return StringUtil.replaceString(url, "SESSION/", "");
-      }
-    };
+	// shouldBeCached() is true of anything starting with prefix
+	public boolean shouldBeCached(String url) {
+	  return StringUtil.startsWithIgnoreCase(url, prefix);
+	}
+	// siteNormalizeUrl() removes "SESSION/" from url
+	public String siteNormalizeUrl(String url) {
+	  return StringUtil.replaceString(url, "SESSION/", "");
+	}
+      };
     CrawlUrlData curl = new CrawlUrlData("referring.url", 0);
     CrawlQueue cq = new CrawlQueue(null);
     TestableFollowLinkCrawler.MyLinkExtractorCallback mfuc =
@@ -1031,7 +1030,7 @@ testAbbreviatedCrawlTest(Crawler.STATUS_NO_PUB_PERMISSION,
     mfuc.foundLink("http://www.example.com/SESSION/foo.bar");
     mfuc.foundLink("HTTP://www.example.com/SESSION/foo.bar");
     assertEquals(ListUtil.list("http://www.example.com/foo.bar"),
-        queueUrlList(cq));
+		 queueUrlList(cq));
     // illegal url gets added depending on path traversal action
     mfuc.foundLink("http://www.example.com/foo/../..");
     switch (CurrentConfig.getIntParam(UrlUtil.PARAM_PATH_TRAVERSAL_ACTION,
@@ -1069,7 +1068,7 @@ testAbbreviatedCrawlTest(Crawler.STATUS_NO_PUB_PERMISSION,
                                                    int passPermissionCheck,
                                                    List<String> urlsToCrawl,
                                                    MockArchivalUnit mmau) {
-   //set plugin
+    //set plugin
     mmau.setPlugin(new MockPlugin(getMockLockssDaemon()));
     mmau.setAuId("permissionPage au");
     MockCachedUrlSet mcus = (MockCachedUrlSet)mmau.getAuCachedUrlSet();
@@ -1078,11 +1077,11 @@ testAbbreviatedCrawlTest(Crawler.STATUS_NO_PUB_PERMISSION,
 
     //set Crawl spec
     mmau.setStartUrls((permissionPages != null
-        ? permissionPages : urlsToCrawl));
-		mmau.setPermissionUrls((permissionPages != null
-				? permissionPages : urlsToCrawl));
-		mmau.setCrawlRule(crawlRule);
-		mmau.setRefetchDepth(1);
+		       ? permissionPages : urlsToCrawl));
+    mmau.setPermissionUrls((permissionPages != null
+			    ? permissionPages : urlsToCrawl));
+    mmau.setCrawlRule(crawlRule);
+    mmau.setRefetchDepth(1);
 
     //set Crawler
     crawler = makeTestableCrawler();
@@ -1111,8 +1110,7 @@ testAbbreviatedCrawlTest(Crawler.STATUS_NO_PUB_PERMISSION,
     //set Crawl spec
     mau.setStartUrls(permissionList);
     mau.setPermissionUrls(permissionList);
-    crawler.setDaemonPermissionCheckers(ListUtil.list(
-        new MyMockPermissionChecker(2)));
+    crawler.setDaemonPermissionCheckers(ListUtil.list(new MyMockPermissionChecker(2)));
 
     crawler.setUrlsToFollow(urls);
     assertTrue(crawler.doCrawl());
@@ -1136,8 +1134,7 @@ testAbbreviatedCrawlTest(Crawler.STATUS_NO_PUB_PERMISSION,
     addUrls(allUrls);
     mau.setStartUrls(allUrls);
     mau.setPermissionUrls(allUrls);
-    crawler.setDaemonPermissionCheckers(ListUtil.list(
-        new MyMockPermissionChecker(2)));
+    crawler.setDaemonPermissionCheckers(ListUtil.list(new MyMockPermissionChecker(2)));
 
     assertTrue(crawler.doCrawl());
     Set expected = SetUtil.fromList(allUrls);
@@ -1159,8 +1156,7 @@ testAbbreviatedCrawlTest(Crawler.STATUS_NO_PUB_PERMISSION,
 
     mau.setStartUrls(startUrls);
     mau.setPermissionUrls(permissionList);
-    crawler.setDaemonPermissionCheckers(ListUtil.list(
-        new MyMockPermissionChecker(1)));
+    crawler.setDaemonPermissionCheckers(ListUtil.list(new MyMockPermissionChecker(1)));
 
     crawler.setUrlsToFollow(urls);
     
@@ -1297,7 +1293,7 @@ testAbbreviatedCrawlTest(Crawler.STATUS_NO_PUB_PERMISSION,
       numPermissionGranted = num;
     }
 
-   /**
+    /**
      * checkPermission
      *
      * @param reader Reader
@@ -1326,8 +1322,8 @@ testAbbreviatedCrawlTest(Crawler.STATUS_NO_PUB_PERMISSION,
     protected TestableFollowLinkCrawler(ArchivalUnit au, AuState aus){
       super(au, aus);
       crawlStatus = new CrawlerStatus(au,
-		    au.getStartUrls(),
-		    null);
+				      au.getStartUrls(),
+				      null);
       setCrawlManager(TestFollowLinkCrawler.this.crawlMgr);
     }
 
