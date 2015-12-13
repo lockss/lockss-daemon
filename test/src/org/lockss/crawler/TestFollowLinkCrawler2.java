@@ -617,7 +617,7 @@ public class TestFollowLinkCrawler2 extends LockssTestCase {
     Map expectedErrors = MapUtil.map(permissionPage, "Test exception");
     assertEquals(expectedErrors, crawlStatus.getUrlsWithErrors());
     assertEquals(1, crawlStatus.getNumUrlsWithErrors());
-    assertEquals(Crawler.STATUS_NO_PUB_PERMISSION,
+    assertEquals(Crawler.STATUS_FETCH_ERROR,
 		 crawlStatus.getCrawlStatus());
     assertEquals(CrawlerStatus.UNABLE_TO_FETCH_PERM_ERR_MSG, 
 		 crawlStatus.getCrawlStatusMsg());
@@ -639,7 +639,7 @@ public class TestFollowLinkCrawler2 extends LockssTestCase {
 
     crawler.doCrawl();
     CrawlerStatus crawlStatus = crawler.getCrawlerStatus();
-    assertEquals(Crawler.STATUS_NO_PUB_PERMISSION, crawlStatus.getCrawlStatus());
+    assertEquals(Crawler.STATUS_FETCH_ERROR, crawlStatus.getCrawlStatus());
     assertEquals(CrawlerStatus.UNABLE_TO_FETCH_PERM_ERR_MSG,
                  crawlStatus.getCrawlStatusMsg());
     Map expectedErrors = MapUtil.map(permissionPage,
