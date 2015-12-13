@@ -553,6 +553,23 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     assertEquals(TEST_URL, mconn.getURL());
     assertEquals("phost", mconn.proxyHost);
     assertEquals(126, mconn.proxyPort);
+    assertNull(mconn.getRequestProperty(Constants.X_LOCKSS_AUID));
+  }
+
+  public void testProxyNyAuid() throws Exception {
+    ConfigurationUtil.addFromArgs(BaseUrlFetcher.PARAM_PROXY_BY_AUID, "true");
+    MockConnectionBaseUrlFetcher muf =
+      new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    muf.setUrlConsumerFactory(new PassiveUrlConsumerFactory());
+    MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
+    muf.addConnection(mconn);
+    muf.setProxy("phost", 126);
+    muf.fetch();
+    assertEquals(TEST_URL, mconn.getURL());
+    assertEquals("phost", mconn.proxyHost);
+    assertEquals(126, mconn.proxyPort);
+    assertEquals(mau.getAuId(),
+		 mconn.getRequestProperty(Constants.X_LOCKSS_AUID));
   }
 
   public void testLocalAddr() throws Exception {

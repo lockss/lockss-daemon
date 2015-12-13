@@ -121,6 +121,9 @@ public interface Constants {
    * from the cache */
   public static String X_LOCKSS_SOURCE_CACHE = "cache";
 
+  /** Header used with proxy to request content from a specific AU */
+  public static String X_LOCKSS_AUID = "X-Lockss-Auid";
+
   /** The local address to which to the proxy should bind the socket for
    * outgoing requests */
   public static String X_LOCKSS_LOCAL_ADDRESS = "X-Lockss-Local-Addr";
