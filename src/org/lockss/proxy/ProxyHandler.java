@@ -444,11 +444,26 @@ public class ProxyHandler extends AbstractHttpHandler {
       return;
     }
 */
-    CachedUrl cu = pluginMgr.findCachedUrl(urlString);
-
+    ArchivalUnit au;
+    CachedUrl cu;
+    String auid = request.getField(Constants.X_LOCKSS_AUID);
+    if (!StringUtil.isNullString(auid)) {
+      au = pluginMgr.getAuFromId(auid);
+      if (au == null) {
+	response.sendError(HttpResponse.__412_Precondition_Failed,
+			   "AU specified by " + Constants.X_LOCKSS_AUID +
+			   " header not found: " + auid);
+	logAccess(request, "412 AU not found: " + auid,
+		  TimeBase.msSince(reqStartTime));
+	return;
+      }
+      cu = au.makeCachedUrl(urlString);
+    } else {
+      cu = pluginMgr.findCachedUrl(urlString);
+    }
     // Don't allow CLOCKSS to serve local content for unsubscribed AUs
     if (cu != null && theDaemon.isDetectClockssSubscription() && !auditProxy) {
-      ArchivalUnit au = cu.getArchivalUnit();
+      au = cu.getArchivalUnit();
       switch (AuUtil.getAuState(au).getClockssSubscriptionStatus()) {
         case AuState.CLOCKSS_SUB_UNKNOWN:
         case AuState.CLOCKSS_SUB_NO:
@@ -694,11 +709,25 @@ public class ProxyHandler extends AbstractHttpHandler {
     return cu != null && AuUtil.isPubNever(cu.getArchivalUnit());
   }
 
+  ArchivalUnit getSpecifiedAu(HttpRequest request) {
+    String auid = request.getField(Constants.X_LOCKSS_AUID);
+    if (StringUtil.isNullString(auid)) {
+      return null;
+    }
+    return pluginMgr.getAuFromId(auid);
+  }
+
   void logAccess(HttpRequest request, String msg) {
     logAccess(request, msg, -1);
   }
 
   void logAccess(HttpRequest request, String msg, long reqElapsedTime) {
+    ArchivalUnit au = null;
+    if ((au = getSpecifiedAu(request)) != null) {
+
+
+      msg = "AU: " + au.getName() + " : " + msg;
+    }
     proxyMgr.logAccess(request.getMethod(), request.getURI().toString(), msg,
 		       getOrigReqAddr(request),
 		       reqElapsedTime);
@@ -1185,11 +1214,13 @@ public class ProxyHandler extends AbstractHttpHandler {
     int reqPort = request.getHttpConnection().getRemotePort();
     if (reqPort > 0) {
       String res = loopbackConnectMap.get(reqPort);
-      log.debug3("lookup loopback req addr: " + reqPort + " = " + res);
-      return res;
+      if (res != null) {
+	log.debug3("lookup loopback req addr: " + reqPort + " = " + res);
+	return res;
+      }
     }
-    log.debug3("lookup loopback req addr: " + request + " = null");
-    return null;
+    log.debug3("lookup loopback req addr: " + reqPort + " = null");
+    return reqAddr;
   }
 
 
