@@ -77,6 +77,12 @@ public class BaseUrlFetcher implements UrlFetcher {
     "refetch_on_set_cookie";
   private static final boolean DEFAULT_SHOULD_REFETCH_ON_SET_COOKIE = true;
   
+  /** If true, X-Lockss-Auid: header will be included in proxy requests.
+   * Use in order to get an accurate copy of an AU from the audit proxy. */
+  public static final String PARAM_PROXY_BY_AUID =
+    Configuration.PREFIX + "baseuc.proxyByAuid";
+  public static final boolean DEFAULT_PROXY_BY_AUID = false;
+  
   /** If true, any thread watchdog will be stopped while waiting on a rate
    * limiter. */
   public static final String PARAM_STOP_WATCHDOG_DURING_PAUSE =
@@ -174,6 +180,13 @@ public class BaseUrlFetcher implements UrlFetcher {
     } catch (CacheException.RedirectOutsideCrawlSpecException ex) {
       // Count this as an excluded URL
       crawlStatus.signalUrlExcluded(origUrl, ex.getMessage());
+      if (fetchFlags.get(UrlCacher.IS_PERMISSION_FETCH)) {
+	// and throw if fetching a permission page
+	// XXX Awkward - suggests decision made at wrong level
+	throw ex;
+      } else {
+	// else no error
+      }
     } catch (CacheException ex) {
       // Failed.  Don't try this one again during this crawl.
       crawlFacade.addToFailedUrls(origUrl);
@@ -189,7 +202,8 @@ public class BaseUrlFetcher implements UrlFetcher {
           crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR, ex.getMessage());
         }
       }
-      if (ex.isAttributeSet(CacheException.ATTRIBUTE_FATAL)) {
+      if (ex.isAttributeSet(CacheException.ATTRIBUTE_FATAL) ||
+	  fetchFlags.get(UrlCacher.IS_PERMISSION_FETCH)) {
         throw ex;
       }
     } catch (Exception ex) {
@@ -467,6 +481,10 @@ public class BaseUrlFetcher implements UrlFetcher {
         if (log.isDebug3()) log.debug3("Proxying through " + proxyHost
 					     + ":" + proxyPort);
         conn.setProxy(proxyHost, proxyPort);
+	if (CurrentConfig.getBooleanParam(PARAM_PROXY_BY_AUID,
+					  DEFAULT_PROXY_BY_AUID)) {
+          conn.setRequestProperty(Constants.X_LOCKSS_AUID, au.getAuId());
+	}
       }
       if (localAddr != null) {
         conn.setLocalAddress(localAddr);

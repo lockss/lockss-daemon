@@ -643,6 +643,7 @@ public abstract class BaseCrawler implements Crawler {
     }
     BitSet permFetchFlags = uf.getFetchFlags();
     permFetchFlags.set(UrlCacher.REFETCH_FLAG);
+    permFetchFlags.set(UrlCacher.IS_PERMISSION_FETCH);
     uf.setFetchFlags(permFetchFlags);
     return uf;
   }

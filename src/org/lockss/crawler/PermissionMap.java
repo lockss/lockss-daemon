@@ -292,13 +292,20 @@ public class PermissionMap {
           logger.debug3("Crawl Window closed, aborting crawl");
           crawlStatus.setCrawlStatus(Crawler.STATUS_WINDOW_CLOSED);
           return false;
-        case PERMISSION_NOT_OK:
         case PERMISSION_FETCH_FAILED:
+          logger.debug3("Permission fetch failed");
+	  if (!crawlStatus.isCrawlError()) {
+	    crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR);
+	  }
+          return false;
+        case PERMISSION_NOT_OK:
         case PERMISSION_NOT_IN_CRAWL_SPEC:
         case PERMISSION_MISSING:
         case PERMISSION_REPOSITORY_ERROR:
         case PERMISSION_UNCHECKED:
         default:
+          logger.debug3("probe: " + rec.getStatus());
+          logger.debug3("status: " + crawlStatus.getCrawlStatus());
           break;
         }
       } catch (MalformedURLException e){
@@ -400,7 +407,7 @@ public class PermissionMap {
       logger.siteError("CacheException reading permission page", ex);
       rec.setStatus(PermissionStatus.PERMISSION_FETCH_FAILED);
       crawlStatus.signalErrorForUrl(pUrl, ex.getMessage(),
-            Crawler.STATUS_NO_PUB_PERMISSION,
+            Crawler.STATUS_FETCH_ERROR,
             CrawlerStatus.UNABLE_TO_FETCH_PERM_ERR_MSG);
     } catch (Exception ex) {
       logger.error("Exception reading permission page at " + pUrl, ex);

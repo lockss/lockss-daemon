@@ -128,12 +128,60 @@ public class TestFollowLinkCrawlerErrorPaths extends LockssTestCase {
     crawler.setPermissionMap(new AlwaysPermissionMap(cf));
     mau.setUrlFetchers(ListUtil.list(new TestableUrlFetcher(cf, startUrl, new CacheException.PermissionException(LOGIN_ERROR_MSG))));
     assertFalse(crawler.fetch(new CrawlUrlData(startUrl, 0)));
-    assertEquals(Crawler.STATUS_FETCH_ERROR ,status.getCrawlStatus());
+    assertEquals(Crawler.STATUS_FETCH_ERROR, status.getCrawlStatus());
     assertEquals(true, crawler.isAborted());
     assertEquals(LOGIN_ERROR_MSG, status.getCrawlStatusMsg());
   }
   
-  
+  public void testPermission404(){
+    CacheException.setDefaultSuppressStackTrace(false);
+    String permissionUrl1 = "http://www.example.com/index.html";
+    List permissionList = ListUtil.list(permissionUrl1);
+
+    // Arrange for the UrlFetcher to throw RedirectOutsideCrawlSpecException
+    CrawlerFacade cf = crawler.getCrawlerFacade();
+    CacheException rocs = 
+      new CacheException.NoRetryDeadLinkException("permission 404");
+    TestableUrlFetcher uf =
+      new TestableUrlFetcher(cf, permissionUrl1, rocs);
+    mau.setUrlFetchers(ListUtil.list(uf));
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    mau.setStartUrls(startUrls);
+    mau.addUrl(permissionUrl1);
+    mau.setPermissionUrls(permissionList);
+    
+    assertFalse(crawler.doCrawl());
+    assertEquals(Crawler.STATUS_FETCH_ERROR, status.getCrawlStatus());
+    assertEquals("Unable to fetch permission page", status.getCrawlStatusMsg());
+    assertEmpty(cus.getCachedUrls());
+  }
+
+  public void testPermissionPageExcludedRedirect(){
+    CacheException.setDefaultSuppressStackTrace(false);
+    String permissionUrl1 = "http://www.example.com/index.html";
+    List permissionList = ListUtil.list(permissionUrl1);
+
+    // Arrange for the UrlFetcher to throw RedirectOutsideCrawlSpecException
+    CrawlerFacade cf = crawler.getCrawlerFacade();
+    CacheException rocs = 
+      new CacheException.RedirectOutsideCrawlSpecException("ffff -> tttt");
+    TestableUrlFetcher uf =
+      new TestableUrlFetcher(cf, permissionUrl1, rocs);
+    mau.setUrlFetchers(ListUtil.list(uf));
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    mau.setStartUrls(startUrls);
+    mau.addUrl(permissionUrl1);
+    mau.setPermissionUrls(permissionList);
+    
+    assertFalse(crawler.doCrawl());
+    assertEquals(Crawler.STATUS_FETCH_ERROR, status.getCrawlStatus());
+    assertEquals("Unable to fetch permission page", status.getCrawlStatusMsg());
+    assertEmpty(cus.getCachedUrls());
+  }
+
+
   MyMockArchivalUnit newMyMockArchivalUnit() {
     NodeManager nodeManager = new MockNodeManager();
     MyMockArchivalUnit mau = new MyMockArchivalUnit();
@@ -219,7 +267,10 @@ public class TestFollowLinkCrawlerErrorPaths extends LockssTestCase {
     
     @Override
     protected InputStream getUncachedInputStreamOnly(String lastModified) throws IOException{
-      if(error != null) throw error;
+      if(error != null) {
+	error.fillInStackTrace();
+	throw error;
+      }
       return null;
     }
     
