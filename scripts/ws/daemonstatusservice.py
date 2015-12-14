@@ -33,7 +33,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.3.4'
+__version__ = '0.3.5'
 
 import getpass
 import itertools
@@ -43,6 +43,10 @@ import sys
 
 import DaemonStatusServiceImplService_client
 from wsutil import datetimems, datems, durationms, zsiauth
+
+#
+# Library
+#
 
 def get_au_status(host, auth, auid):
   '''Performs a getAuStatus operation on the given host for the given AUID, and
@@ -421,45 +425,31 @@ def _do_get_au_status(options):
     data = dict([(((k[0],), (k[1], k[2])), v) for k, v in data.iteritems()])
     _output_table(options, data, ['AUID'], [sorted(options.hosts), [_AU_STATUS[k][0] for k in options.select]])
 
-def _build_auids_names(options):
-  data = dict()
-  for host in options.hosts:
-    res = get_auids(host, options.auth)
-    if len(options.auids) == 0:
-      for r in res: data[(r.Id, r.Name, host)] = True
-    else:
-      for auid in options.auids:
-        lst = filter(lambda r: r.Id == auid, res)
-        if len(lst) == 0: data[(auid, None, host)] = False
-        else: data[(auid, lst[0].Name, host)] = True
-  # Fix up names
-  if len(options.auids) > 0:
-    names = dict()
-    for k in data:
-      if k[1] is not None: names.setdefault(k[0], k[1])
-    for k in data:
-      if k[1] is None and k[0] in names:
-        data[(k[0], names[k[0]], k[2])] = data[k]
-        del data[k]
-  return data
-
 def _do_get_auids(options):
-  auidsnames = _build_auids_names(options)
-  # Special case
-  if len(options.hosts) == 1 and len(options.auids) == 0 and not options.no_single_output:
-    for k in sorted(auidsnames): print k[0]
-    return
-  data = dict([((k[0:2], k[2:]), 'x' if v else '') for k, v in auidsnames.iteritems()])
-  _output_table(options, data, ['AUID'], [sorted(options.hosts)])
+  _do_get_auids_names(options, False)
 
-def _do_get_auids_names(options):
-  auidsnames = _build_auids_names(options)
+def _do_get_auids_names(options, do_names=True):
+  data = set()
+  names = dict()
+  for host in options.hosts:
+    for r in get_auids(host, options.auth):
+      data.add((r.Id, host))
+      if do_names: names.setdefault(r.Id, r.Name)
   # Special case
   if len(options.hosts) == 1 and len(options.auids) == 0 and not options.no_single_output:
-    for k in sorted(auidsnames): _output_record(options, list(k[0:2]))
+    if do_names:
+      for x in sorted(data): _output_record(options, [x[0], names.get(x[0])])
+    else:
+      for x in sorted(data): _output_record(options, [x[0]])
     return
-  data = dict([(((k[0], k[1] if k[1] else ''), k[2:]), 'x' if v else '') for k, v in auidsnames.iteritems()])
-  _output_table(options, data, ['AUID', 'Name'], [sorted(options.hosts)])
+  if len(options.auids) == 0: auids = set([x[0] for x in data])
+  else: auids = options.auids
+  if do_names:
+    display = dict([(((x[0], names.get(x[0])), (x[1],)), str(x in data)) for x in itertools.product(auids, options.hosts)])
+    _output_table(options, display, ['AUID', 'Name'], [sorted(options.hosts)])
+  else:
+    display = dict([(((x[0],), (x[1],)), str(x in data)) for x in itertools.product(auids, options.hosts)])
+    _output_table(options, display, ['AUID'], [sorted(options.hosts)])
 
 def _do_get_peer_agreements(options):
   pa = get_peer_agreements(options.host, options.auth, options.auid)
