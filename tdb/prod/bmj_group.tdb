@@ -327,7 +327,8 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 99 ; 99 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 100 ; 100 >
+    au < HighWirePressH20Plugin ; exists ; 2015 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 100 ; 100 >
+    au < HighWirePressH20Plugin ; exists ; 2016 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 101 ; 101 >
 
   }
 
@@ -921,7 +922,8 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Frontline Gastroenterology Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Frontline Gastroenterology Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Frontline Gastroenterology Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Frontline Gastroenterology Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 2015 ; Frontline Gastroenterology Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 2016 ; Frontline Gastroenterology Volume 7 ; 7 >
 
   }
 
@@ -1144,7 +1146,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Gut Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Gut Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Gut Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Gut Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; exists ; 2015 ; Gut Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; exists ; 2016 ; Gut Volume 65 ; 65 >
 
   }
 
@@ -1258,6 +1261,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2013 ; Heart Volume 99 ; 99 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Heart Volume 100 ; 100 >
     au < HighWirePressH20Plugin ; testing ; 2015 ; Heart Volume 101 ; 101 >
+    au < HighWirePressH20Plugin ; exists ; 2016 ; Heart Volume 102 ; 102 >
 
   }
 
@@ -1466,7 +1470,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Epidemiology & Community Health Volume 66 ; 66 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Journal of Epidemiology & Community Health Volume 67 ; 67 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Journal of Epidemiology & Community Health Volume 68 ; 68 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Journal of Epidemiology & Community Health Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; exists ; 2015 ; Journal of Epidemiology & Community Health Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; exists ; 2016 ; Journal of Epidemiology & Community Health Volume 70 ; 70 >
 
   }
 
@@ -1633,7 +1638,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of NeuroInterventional Surgery Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Journal of NeuroInterventional Surgery Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Journal of NeuroInterventional Surgery Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Journal of NeuroInterventional Surgery Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 2015 ; Journal of NeuroInterventional Surgery Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 2016 ; Journal of NeuroInterventional Surgery Volume 8 ; 8 >
 
   }
 
@@ -2066,7 +2072,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Occupational and Environmental Medicine Volume 69 ; 69 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Occupational and Environmental Medicine Volume 70 ; 70 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Occupational and Environmental Medicine Volume 71 ; 71 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Occupational and Environmental Medicine Volume 72 ; 72 >
+    au < HighWirePressH20Plugin ; exists ; 2015 ; Occupational and Environmental Medicine Volume 72 ; 72 >
+    au < HighWirePressH20Plugin ; exists ; 2016 ; Occupational and Environmental Medicine Volume 73 ; 73 >
 
   }
 
@@ -2446,7 +2453,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Thorax Volume 67 ; 67 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Thorax Volume 68 ; 68 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Thorax Volume 69 ; 69 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Thorax Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; exists ; 2015 ; Thorax Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; exists ; 2016 ; Thorax Volume 71 ; 71 >
 
   }
 
