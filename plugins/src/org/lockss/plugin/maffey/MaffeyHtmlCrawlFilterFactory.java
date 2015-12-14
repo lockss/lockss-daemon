@@ -55,8 +55,9 @@ public class MaffeyHtmlCrawlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "id", "colleagues"),
     };
     return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+        encoding,
+        encoding,
+        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
   }
 
 }
