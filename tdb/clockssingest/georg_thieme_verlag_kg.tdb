@@ -4888,7 +4888,7 @@
    au < doNotProcess ; exists ; 2008 ; 2008 ; SYNLETT Volume 2008 ; 19 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; SYNLETT Volume 2009 ; 20 >
    au < crawling ; exists ; 2010 ; 2010 ; SYNLETT Volume 2010 ; 21 >
-   au < testing ; exists ; 2011 ; 2011 ; SYNLETT Volume 2011 ; 22 >
+   au < notReady ; exists ; 2011 ; 2011 ; SYNLETT Volume 2011 ; 22 >
    au < crawling ; exists ; 2012 ; 2012 ; SYNLETT Volume 2012 ; 23 >
    au < crawling ; exists ; 2013 ; 2013 ; SYNLETT Volume 2013 ; 24 >
    au < crawling ; exists ; 2014 ; 2014 ; SYNLETT Volume 2014 ; 25 >
@@ -4933,8 +4933,8 @@
    au < crawling ; exists ; 2011 ; 2011 ; SYNTHESIS Volume 2011 ; 43 >
    au < crawling ; exists ; 2012 ; 2012 ; SYNTHESIS Volume 2012 ; 44 >
    au < crawling ; exists ; 2013 ; 2013 ; SYNTHESIS Volume 2013 ; 45 >
-   au < testing ; exists ; 2014 ; 2014 ; SYNTHESIS Volume 2014 ; 46 >
-   au < testing ; exists ; 2015 ; 2015 ; SYNTHESIS Volume 2015 ; 47 >
+   au < notReady ; exists ; 2014 ; 2014 ; SYNTHESIS Volume 2014 ; 46 >
+   au < notReady ; exists ; 2015 ; 2015 ; SYNTHESIS Volume 2015 ; 47 >
 
   }
 
@@ -5264,7 +5264,7 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; Via medici Volume 2009 ; 14 >
     au < crawling ; exists ; 2010 ; 2010 ; Via medici Volume 2010 ; 15 >
     au < crawling ; exists ; 2011 ; 2011 ; Via medici Volume 2011 ; 16 >
-    au < testing ; exists ; 2012 ; 2012 ; Via medici Volume 2012 ; 17 >
+    au < notReady ; exists ; 2012 ; 2012 ; Via medici Volume 2012 ; 17 >
     au < crawling ; exists ; 2013 ; 2013 ; Via medici Volume 2013 ; 18 >
     au < crawling ; exists ; 2014 ; 2014 ; Via medici Volume 2014 ; 19 >
     au < expected ; exists ; 2015 ; 2015 ; Via medici Volume 2015 ; 20 >
@@ -5339,7 +5339,7 @@
     au < crawling ; exists ; 2012 ; 2012 ; Zahnmedizin up2date Volume 2012 ; 6 >
     au < crawling ; exists ; 2013 ; 2013 ; Zahnmedizin up2date Volume 2013 ; 7 >
     au < crawling ; exists ; 2014 ; 2014 ; Zahnmedizin up2date Volume 2014 ; 8 >
-    au < testing ; exists ; 2015 ; 2015 ; Zahnmedizin up2date Volume 2015 ; 9 >
+    au < notReady ; exists ; 2015 ; 2015 ; Zahnmedizin up2date Volume 2015 ; 9 >
 
   }
 
