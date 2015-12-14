@@ -273,21 +273,21 @@ class _DaemonStatusServiceOptions(object):
     usage = '%prog [OPTIONS] [--host=HOST|--hosts=HFILE]...'
     parser = optparse.OptionParser(version=__version__, description=__doc__, usage=usage)
     # Hosts
-    group = optparse.OptionGroup(parser, 'Hosts')
+    group = optparse.OptionGroup(parser, 'Target hosts')
     group.add_option('--host', action='append', default=list(), help='add host:port pair to list of target hosts')
     group.add_option('--hosts', action='append', default=list(), metavar='HFILE', help='add host:port pairs in HFILE to list of target hosts')
     group.add_option('--password', metavar='PASS', help='UI password (default: interactive prompt)')
     group.add_option('--username', metavar='USER', help='UI username (default: interactive prompt)')
     parser.add_option_group(group)
     # AUIDs
-    group = optparse.OptionGroup(parser, 'AUIDs')
+    group = optparse.OptionGroup(parser, 'Target AUIDs')
     group.add_option('--auid', action='append', default=list(), help='add AUID to list of target AUIDs')
     group.add_option('--auids', action='append', default=list(), metavar='AFILE', help='add AUIDs in AFILE to list of target AUIDs')
     parser.add_option_group(group)
     # Daemon operations
     group = optparse.OptionGroup(parser, 'Daemon operations')
-    group.add_option('--get-auids', action='store_true', help='output all AUIDs')
-    group.add_option('--get-auids-names', action='store_true', help='output all AUIDs and names')
+    group.add_option('--get-auids', action='store_true', help='output True/False table of all AUIDs (or target AUIDs if specified) present on target hosts')
+    group.add_option('--get-auids-names', action='store_true', help='output True/False table of all AUIDs (or target AUIDs if specified) and their names present on target hosts')
     group.add_option('--get-platform-configuration', action='store_true', help='output platform configuration; narrow down output with optional --select list chosen among %s' % (', '.join(sorted(_PLATFORM_CONFIGURATION)),))
     group.add_option('--is-daemon-ready', action='store_true', help='output True if all target hosts are ready, False otherwise; always exit with 0')
     group.add_option('--is-daemon-ready-quiet', action='store_true', help='output nothing, exit with 0 if all target hosts are ready, 1 otherwise')
