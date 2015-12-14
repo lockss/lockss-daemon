@@ -4993,7 +4993,7 @@
     param[journal_id] = 10.1055/s-00028781
     comment[0] = Currently only eFirst is online
 
-    au < expected ; exists ; 2015 ; 2015 ; The Surgery Journal Volume 1 ; 1 >
+    au < manifest ; exists ; 2015 ; 2015 ; The Surgery Journal Volume 1 ; 1 >
 
   }
 
