@@ -15830,7 +15830,7 @@
       au < crawling ; exists ; 2014 ; The International Journal of Aging and Human Development Volume 78 ; 78 ; >
       au < finished ; crawling ; 2014 ; The International Journal of Aging and Human Development Volume 79 ; 79 ; >
       au < crawling ; exists ; 2015 ; The International Journal of Aging and Human Development Volume 80 ; 80 ; >
-      au < manifest ; exists ; 2015 ; The International Journal of Aging and Human Development Volume 81 ; 81 ; >
+      au < crawling ; exists ; 2015 ; The International Journal of Aging and Human Development Volume 81 ; 81 ; >
       au < expected ; exists ; 2016 ; The International Journal of Aging and Human Development Volume 82 ; 82 ; >
 
   }
@@ -16915,7 +16915,7 @@
       param[base_url] = http://ijq.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2015 ; International Journal of Qualitative Methods Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2015 ; International Journal of Qualitative Methods Volume 14 ; 14 ; >
       au < expected ; exists ; 2016 ; International Journal of Qualitative Methods Volume 15 ; 15 ; >
 
   }
@@ -22934,7 +22934,7 @@
       au < zapped ; finished ; 2012 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 9 ; 9 ; >
       au < finished ; finished ; 2013 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 10 ; 10 ; >
       au < finished ; finished ; 2014 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 11 ; 11 ; >
-      au < ready ; exists ; 2015 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2015 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 12 ; 12 ; >
       au < expected ; exists ; 2016 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 13 ; 13 ; >
 
     }
@@ -25385,7 +25385,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2014 ; Journal of Patient Experience Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2015 ; Journal of Patient Experience Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2015 ; Journal of Patient Experience Volume 2 ; 2 ; >
       au < expected ; exists ; 2016 ; Journal of Patient Experience Volume 3 ; 3 ; >
 
   }
@@ -28625,7 +28625,7 @@
       au < exists ; exists ; 2011 ; Justice Research and Policy Volume 13 ; 13 ; >
       au < exists ; exists ; 2012 ; Justice Research and Policy Volume 14 ; 14 ; >
       au < exists ; exists ; 2013 ; Justice Research and Policy Volume 15 ; 15 ; >
-      au < ready ; exists ; 2015 ; Justice Research and Policy Volume 16 ; 16 ; >
+      au < crawling ; exists ; 2015 ; Justice Research and Policy Volume 16 ; 16 ; >
       au < expected ; exists ; 2016 ; Justice Research and Policy Volume 17 ; 17 ; >
 
   }
@@ -45461,7 +45461,7 @@
     au < exists ; exists ; 2012 ; Pacifica: Australasian Theological Studies Volume 25 ; 25 ; >
     au < finished ; finished ; 2013 ; Pacifica: Australasian Theological Studies Volume 26 ; 26 ; >
     au < crawling ; exists ; 2014 ; Pacifica: Australasian Theological Studies Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2015 ; Pacifica: Australasian Theological Studies Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2015 ; Pacifica: Australasian Theological Studies Volume 28 ; 28 ; >
     au < expected ; exists ; 2016 ; Pacifica: Australasian Theological Studies Volume 29 ; 29 ; >
 
     }
