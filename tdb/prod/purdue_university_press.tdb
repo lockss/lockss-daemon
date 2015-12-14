@@ -17,17 +17,17 @@
     param[journal_abbr] = atg
     implicit < status ; year ; name ; param[volume] >
 
-    au < testing ; 1989 ; Against the Grain Volume 1 ; 1 >
-    au < testing ; 1990 ; Against the Grain Volume 2 ; 2 >
-    au < testing ; 1991 ; Against the Grain Volume 3 ; 3 >
-    au < testing ; 1992 ; Against the Grain Volume 4 ; 4 >
-    au < testing ; 1993 ; Against the Grain Volume 5 ; 5 >
-    au < testing ; 1994 ; Against the Grain Volume 6 ; 6 >
-    au < testing ; 1995 ; Against the Grain Volume 7 ; 7 >
-    au < testing ; 1996 ; Against the Grain Volume 8 ; 8 >
-    au < testing ; 1997 ; Against the Grain Volume 9 ; 9 >
-    au < testing ; 1998 ; Against the Grain Volume 10 ; 10 >
-    au < testing ; 1999 ; Against the Grain Volume 11 ; 11 >
+    au < ready ; 1989 ; Against the Grain Volume 1 ; 1 >
+    au < ready ; 1990 ; Against the Grain Volume 2 ; 2 >
+    au < ready ; 1991 ; Against the Grain Volume 3 ; 3 >
+    au < ready ; 1992 ; Against the Grain Volume 4 ; 4 >
+    au < ready ; 1993 ; Against the Grain Volume 5 ; 5 >
+    au < ready ; 1994 ; Against the Grain Volume 6 ; 6 >
+    au < ready ; 1995 ; Against the Grain Volume 7 ; 7 >
+    au < ready ; 1996 ; Against the Grain Volume 8 ; 8 >
+    au < ready ; 1997 ; Against the Grain Volume 9 ; 9 >
+    au < ready ; 1998 ; Against the Grain Volume 10 ; 10 >
+    au < ready ; 1999 ; Against the Grain Volume 11 ; 11 >
     au < ready ; 2000 ; Against the Grain Volume 12 ; 12 >
     au < ready ; 2001 ; Against the Grain Volume 13 ; 13 >
     au < ready ; 2002 ; Against the Grain Volume 14 ; 14 >
