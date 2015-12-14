@@ -1,0 +1,42 @@
+{
+
+  publisher <
+    name = The Advertising Research Foundation
+  >
+
+    plugin = org.lockss.plugin.highwire.HWDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+  {
+
+    title <
+      name = Journal of Advertising Research ;
+      issn = 0021-8499 ;
+      eissn = 1740-1909 ;
+      issnl = 0021-8499
+    >
+
+    param[base_url] = http://www.journalofadvertisingresearch.com/
+
+    au < exists ; 2000 ; Journal of Advertising Research Volume 40 ; 40 >
+    au < exists ; 2001 ; Journal of Advertising Research Volume 41 ; 41 >
+    au < exists ; 2002 ; Journal of Advertising Research Volume 42 ; 42 >
+    au < exists ; 2003 ; Journal of Advertising Research Volume 43 ; 43 >
+    au < exists ; 2004 ; Journal of Advertising Research Volume 44 ; 44 >
+    au < exists ; 2005 ; Journal of Advertising Research Volume 45 ; 45 >
+    au < exists ; 2006 ; Journal of Advertising Research Volume 46 ; 46 >
+    au < exists ; 2007 ; Journal of Advertising Research Volume 47 ; 47 >
+    au < exists ; 2008 ; Journal of Advertising Research Volume 48 ; 48 >
+    au < exists ; 2009 ; Journal of Advertising Research Volume 49 ; 49 >
+    au < exists ; 2010 ; Journal of Advertising Research Volume 50 ; 50 >
+    au < exists ; 2011 ; Journal of Advertising Research Volume 51 ; 51 >
+    au < exists ; 2012 ; Journal of Advertising Research Volume 52 ; 52 >
+    au < exists ; 2013 ; Journal of Advertising Research Volume 53 ; 53 >
+    au < exists ; 2014 ; Journal of Advertising Research Volume 54 ; 54 >
+    au < exists ; 2015 ; Journal of Advertising Research Volume 55 ; 55 >
+    au < expected ; 2016 ; Journal of Advertising Research Volume 56 ; 56 >
+
+  }
+
+}
+
