@@ -63,33 +63,37 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
     param[journal_id] = BWCN
 
-    au < finished ; crawling ; 1972 ; Journal of Collective Negotiations Volume 1 ; 1 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1973 ; Journal of Collective Negotiations Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1974 ; Journal of Collective Negotiations Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1975 ; Journal of Collective Negotiations Volume 4 ; 4 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1976 ; Journal of Collective Negotiations Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1977 ; Journal of Collective Negotiations Volume 6 ; 6 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1978 ; Journal of Collective Negotiations Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1979 ; Journal of Collective Negotiations Volume 8 ; 8 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1980 ; Journal of Collective Negotiations Volume 9 ; 9 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1981 ; Journal of Collective Negotiations Volume 10 ; 10 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1982 ; Journal of Collective Negotiations Volume 11 ; 11 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1983 ; Journal of Collective Negotiations Volume 12 ; 12 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1984 ; Journal of Collective Negotiations Volume 13 ; 13 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1985 ; Journal of Collective Negotiations Volume 14 ; 14 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1986 ; Journal of Collective Negotiations Volume 15 ; 15 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1987 ; Journal of Collective Negotiations Volume 16 ; 16 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1988 ; Journal of Collective Negotiations Volume 17 ; 17 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1989 ; Journal of Collective Negotiations Volume 18 ; 18 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1990 ; Journal of Collective Negotiations Volume 19 ; 19 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1991 ; Journal of Collective Negotiations Volume 20 ; 20 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1992 ; Journal of Collective Negotiations Volume 21 ; 21 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1993 ; Journal of Collective Negotiations Volume 22 ; 22 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1994 ; Journal of Collective Negotiations Volume 23 ; 23 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1995 ; Journal of Collective Negotiations Volume 24 ; 24 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1996 ; Journal of Collective Negotiations Volume 25 ; 25 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1997 ; Journal of Collective Negotiations Volume 26 ; 26 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1998 ; Journal of Collective Negotiations Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+    {
+    #there are one or two singleton pdfs in an issue but for all intents Vol1 to Vol27 are abstract only
+      attr[au_coverage_depth] = abstracts
+      au < finished ; crawling ; 1972 ; Journal of Collective Negotiations Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1973 ; Journal of Collective Negotiations Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1974 ; Journal of Collective Negotiations Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1975 ; Journal of Collective Negotiations Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1976 ; Journal of Collective Negotiations Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1977 ; Journal of Collective Negotiations Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1978 ; Journal of Collective Negotiations Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1979 ; Journal of Collective Negotiations Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1980 ; Journal of Collective Negotiations Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1981 ; Journal of Collective Negotiations Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1982 ; Journal of Collective Negotiations Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1983 ; Journal of Collective Negotiations Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1984 ; Journal of Collective Negotiations Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1985 ; Journal of Collective Negotiations Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1986 ; Journal of Collective Negotiations Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1987 ; Journal of Collective Negotiations Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1988 ; Journal of Collective Negotiations Volume 17 ; 17 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1989 ; Journal of Collective Negotiations Volume 18 ; 18 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1990 ; Journal of Collective Negotiations Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1991 ; Journal of Collective Negotiations Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1992 ; Journal of Collective Negotiations Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1993 ; Journal of Collective Negotiations Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1994 ; Journal of Collective Negotiations Volume 23 ; 23 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1995 ; Journal of Collective Negotiations Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1996 ; Journal of Collective Negotiations Volume 25 ; 25 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1997 ; Journal of Collective Negotiations Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1998 ; Journal of Collective Negotiations Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+    }
     au < finished ; crawling ; 1999 ; Journal of Collective Negotiations Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2000 ; Journal of Collective Negotiations Volume 29 ; 29 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2003-2005 ; Journal of Collective Negotiations Volume 30 ; 30 ; reingest2.clockss.org:8085 >
