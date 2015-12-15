@@ -1170,8 +1170,6 @@
       eissn = 2160-0228
     >
 
-    {
-
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://genre.dukejournals.org/
@@ -1192,8 +1190,8 @@
       au < released ; 2013 ; Genre: Forms of Discourse and Culture Volume 46 ; 46 >
       au < released ; 2014 ; Genre: Forms of Discourse and Culture Volume 47 ; 47 >
       au < manifest ; 2015 ; Genre: Forms of Discourse and Culture Volume 48 ; 48 >
+      au < expected ; 2016 ; Genre: Forms of Discourse and Culture Volume 49 ; 49 >
 
-    }
   }
 
   {
@@ -1705,6 +1703,8 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of Middle East Women's Studies Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; expected ; 2016 ; Journal of Middle East Women's Studies Volume 12 ; 12 >
+
    }
 
   {
