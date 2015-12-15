@@ -272,10 +272,12 @@ public class TestCharsetUtil extends LockssTestCase {
       new ByteArrayInputStream(HTML_FILE.getBytes("UTF-8"));
     // read the first 100 bytes.
     int in_length = bais.available();
+    assertEquals(in_length, HTML_FILE.getBytes().length);
     bais.read(buf,0,buf.length);
+    // convert the first 100 bytes into a string
     buf_string = new String(buf,"UTF-8");
     int str_length = buf_string.length();
-    assertEquals(in_length - buf.length, bais.available());
+    assertEquals(100, buf_string.getBytes().length);
     // create a new CharsetReader
     InputStream is = CharsetUtil.joinStreamsWithCharset(buf,bais,"UTF-8");
     Reader rdr = new InputStreamReader(is,"UTF-8");
@@ -283,6 +285,7 @@ public class TestCharsetUtil extends LockssTestCase {
     // read in the chars that we already read...
     rdr.read(charbuf);
     assertEquals(buf_string.toCharArray(), charbuf);
+
   }
 
   /**
