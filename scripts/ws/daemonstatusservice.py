@@ -33,7 +33,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.3.5'
+__version__ = '0.3.6'
 
 import getpass
 import itertools
@@ -286,17 +286,18 @@ class _DaemonStatusServiceOptions(object):
     parser.add_option_group(group)
     # Daemon operations
     group = optparse.OptionGroup(parser, 'Daemon operations')
-    group.add_option('--get-auids', action='store_true', help='output True/False table of all AUIDs (or target AUIDs if specified) present on target hosts')
-    group.add_option('--get-auids-names', action='store_true', help='output True/False table of all AUIDs (or target AUIDs if specified) and their names present on target hosts')
-    group.add_option('--get-platform-configuration', action='store_true', help='output platform configuration; narrow down output with optional --select list chosen among %s' % (', '.join(sorted(_PLATFORM_CONFIGURATION)),))
-    group.add_option('--is-daemon-ready', action='store_true', help='output True if all target hosts are ready, False otherwise; always exit with 0')
-    group.add_option('--is-daemon-ready-quiet', action='store_true', help='output nothing, exit with 0 if all target hosts are ready, 1 otherwise')
+    group.add_option('--get-auids', action='store_true', help='output True/False table of all AUIDs (or target AUIDs if specified) present')
+    group.add_option('--get-auids-names', action='store_true', help='output True/False table of all AUIDs (or target AUIDs if specified) present and their names')
+    group.add_option('--get-platform-configuration', action='store_true', help='output platform configuration information; narrow down with --select if specified (%s)' % (', '.join(sorted(_PLATFORM_CONFIGURATION)),))
+    group.add_option('--is-daemon-ready', action='store_true', help='output True/False table of ready status of target hosts; always exit with 0')
+    group.add_option('--is-daemon-ready-quiet', action='store_true', help='output nothing; exit with 0 if all target hosts are ready, 1 otherwise')
     parser.add_option_group(group)
     # AU operations
     group = optparse.OptionGroup(parser, 'AU operations')
-    group.add_option('--get-au-status', action='store_true', help='output AU status information; narrow down output with optional --select list chosen among %s' % (', '.join(sorted(_AU_STATUS)),))
+    group.add_option('--get-au-status', action='store_true', help='output AU status information; narrow down with --select if specified (%s)' % (', '.join(sorted(_AU_STATUS)),))
     group.add_option('--get-peer-agreements', action='store_true', help='output peer agreements')
     parser.add_option_group(group)
+    # Query operations
     group = optparse.OptionGroup(parser, 'Query operations')
     group.add_option('--query-aus', action='store_true', help='perform AU query with optional --where clause; narrow down output with optional --select list chosen among %s' % (', '.join(sorted(_QUERY_AUS)),))
     group.add_option('--where', help='optional WHERE clause for query operations')
@@ -304,7 +305,7 @@ class _DaemonStatusServiceOptions(object):
     # Output
     group = optparse.OptionGroup(parser, 'Output')
     group.add_option('--group-by-field', action='store_true', help='group results by field instead of host')
-    group.add_option('--no-single-output', action='store_true', help='no special output format for a single target host')
+    group.add_option('--no-special-output', action='store_true', help='no special output format for a single target host')
     group.add_option('--select', metavar='FIELDS', help='comma-separated list of fields for narrower output')
     parser.add_option_group(group)
     return parser
@@ -339,15 +340,17 @@ class _DaemonStatusServiceOptions(object):
     if self.get_platform_configuration: self.select = self.__init_select(parser, opts, _PLATFORM_CONFIGURATION)
     # get_au_status/get_peer_agreements
     self.get_au_status = opts.get_au_status
-    if self.get_au_status: self.select = self.__init_select(parser, opts, _AU_STATUS)
+    if self.get_au_status:
+      if len(self.auids) == 0: parser.error('at least one target AUID is required with --get-au-status')
+      self.select = self.__init_select(parser, opts, _AU_STATUS)
     self.get_peer_agreements = opts.get_peer_agreements
     # query_aus/where/select
     self.where = opts.where
     self.query_aus = opts.query_aus
     if self.query_aus: self.select = self.__init_select(parser, opts, _QUERY_AUS)
-    # group_by_field/no_single_output
+    # group_by_field/no_special_output
     self.group_by_field = opts.group_by_field
-    self.no_single_output = opts.no_single_output
+    self.no_special_output = opts.no_special_output
     # auth
     u = opts.username or getpass.getpass('UI username: ')
     p = opts.password or getpass.getpass('UI password: ')
@@ -401,7 +404,7 @@ _AU_STATUS = {
   'status': ('Status', lambda r: r.Status),
   'subscriptionStatus': ('Subscription status', lambda r: r.SubscriptionStatus),
   'substanceState': ('Substance state', lambda r: r.SubstanceState),
-  'volume': ('Volume', lambda r: r.Volume),
+  'volume': ('Volume name', lambda r: r.Volume),
   'year': ('Year', lambda r: r.Year)
 }
 
@@ -409,21 +412,19 @@ def _do_get_au_status(options):
   data = dict()
   for host in options.hosts:
     hostauids = set([r.Id for r in get_auids(host, options.auth)])
-    if len(options.auids) == 0: wantedauids = list(hostauids)
-    else: wantedauids = options.auids
-    for auid in wantedauids:
+    for auid in options.auids:
       if auid not in hostauids: continue
       r = get_au_status(host, options.auth, auid)
-      if r is None: continue
+      if r is None: continue # Probably doesn't happen
       for x in options.select:
         head, lamb = _AU_STATUS[x]
         data[(auid, host, head)] = lamb(r)
   if options.group_by_field:
-    data = dict([(((k[0],), (k[2], k[1])), v) for k, v in data.iteritems()])
-    _output_table(options, data, ['AUID'], [[_AU_STATUS[k][0] for k in options.select], sorted(options.hosts)])
+    display = dict([(((k[0],), (k[2], k[1])), v) for k, v in data.iteritems()])
+    _output_table(options, display, ['AUID'], [[_AU_STATUS[k][0] for k in options.select], sorted(options.hosts)])
   else:
-    data = dict([(((k[0],), (k[1], k[2])), v) for k, v in data.iteritems()])
-    _output_table(options, data, ['AUID'], [sorted(options.hosts), [_AU_STATUS[k][0] for k in options.select]])
+    display = dict([(((k[0],), (k[1], k[2])), v) for k, v in data.iteritems()])
+    _output_table(options, display, ['AUID'], [sorted(options.hosts), [_AU_STATUS[k][0] for k in options.select]])
 
 def _do_get_auids(options):
   _do_get_auids_names(options, False)
@@ -436,7 +437,7 @@ def _do_get_auids_names(options, do_names=True):
       data.add((r.Id, host))
       if do_names: names.setdefault(r.Id, r.Name)
   # Special case
-  if len(options.hosts) == 1 and len(options.auids) == 0 and not options.no_single_output:
+  if len(options.hosts) == 1 and len(options.auids) == 0 and not options.no_special_output:
     if do_names:
       for x in sorted(data): _output_record(options, [x[0], names.get(x[0])])
     else:
@@ -495,8 +496,12 @@ def _do_get_platform_configuration(options):
     for x in options.select:
       head, lamb = _PLATFORM_CONFIGURATION[x]
       data[(head, host)] = lamb(r)
-  data = dict([(((k[0],), (k[1],)), v) for k, v in data.iteritems()])
-  _output_table(options, data, [''], [sorted(options.hosts)])
+  # Special case
+  if len(options.hosts) == 1 and not options.no_special_output:
+    for k, v in sorted(data.iteritems()): _output_record(options, [k[0], v])
+    return
+  display = dict([(((k[0],), (k[1],)), v) for k, v in data.iteritems()])
+  _output_table(options, display, [''], [sorted(options.hosts)])
 
 def _do_is_daemon_ready(options):
   '''Outputs a table whose rows are target hosts and whose column is filled with
@@ -505,7 +510,7 @@ def _do_is_daemon_ready(options):
   displayed.)
   '''
   # Special case
-  if len(options.hosts) == 1 and not options.no_single_output:
+  if len(options.hosts) == 1 and not options.no_special_output:
     print str(is_daemon_ready(options.hosts[0], options.auth))
     return
   for host in sorted(options.hosts):
