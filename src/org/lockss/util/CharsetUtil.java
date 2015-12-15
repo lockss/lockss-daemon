@@ -153,8 +153,9 @@ public class CharsetUtil {
     ByteArrayOutputStream buffered = new ByteArrayOutputStream();
     int len = 0;
     byte[] buf = new byte[1024];
-    if(inStream != null)
+    if(inStream != null) {
       len = inStream.read(buf);
+    }
 
     if (len <= 0) {
       return new InputStreamAndCharset(inStream, expectedCharset);
@@ -197,7 +198,7 @@ public class CharsetUtil {
     InputStream is = joinStreamsWithCharset(buffered.toByteArray(),
                                             inStream,
                                             charset);
-      return new InputStreamAndCharset(is, charset);
+    return new InputStreamAndCharset(is, charset);
 
   }
 
@@ -280,7 +281,7 @@ public class CharsetUtil {
    * @param in the byte array containing a sampling of bytes
    * @param expected the encoding to give preference to when looking for a
    * match, null if unknown
-   * @return the charset with > 50% confidence with a prefer or null
+   * @return the charset with > 35% confidence with a prefer or null
    */
   public static String guessCharsetFromBytes(byte[] in, String expected)
   {
@@ -290,7 +291,7 @@ public class CharsetUtil {
     }
     detector.setText(in);
     CharsetMatch match = detector.detect();
-    if(match.getConfidence() > 50) {// we want at least a 50% match
+    if(match != null && match.getConfidence() > 35) {// we want at least a 50% match
       return match.getName();
     }
     else {
@@ -325,9 +326,8 @@ public class CharsetUtil {
       detector.setDeclaredEncoding(expected);
     }
     detector.setText(inStream);
-    CharsetMatch[] matches = detector.detectAll();
     CharsetMatch match = detector.detect();
-    if(match.getConfidence() > 50) {// we want at least a 50% match
+    if(match != null && match.getConfidence() > 50) {// we want at least a 50% match
       return match.getName();
     }
     else {
@@ -456,6 +456,7 @@ public class CharsetUtil {
   public static InputStream joinStreamsWithCharset(
       byte[] buffered, InputStream tail, String charset)
     throws IOException {
+    //return new SequenceInputStream(new ByteArrayInputStream(buffered),tail);
 
     return new JoinedStream(buffered, tail);
   }
@@ -556,6 +557,15 @@ public class CharsetUtil {
         buffered = null;
       }
       return tail.read();
+    }
+
+    @Override
+    public int available() throws IOException {
+      int avail = tail.available();
+      if (buffered != null) {
+        avail += Math.max(buffered.length - pos,0);
+      }
+      return avail;
     }
 
     @Override

@@ -119,7 +119,6 @@ public class PermissionUrlConsumer extends SimpleUrlConsumer {
       // workaround until they're fixed.
 
       Reader reader;
-      // todo: wrap this in param check
       if(CharsetUtil.inferCharset()) {
         InputStreamAndCharset isc = CharsetUtil.getCharsetStream(is, charset);
         charset = isc.getCharset();
@@ -152,5 +151,4 @@ public class PermissionUrlConsumer extends SimpleUrlConsumer {
     //reached the end without finding permission
     return false; 
   }
-
 }
