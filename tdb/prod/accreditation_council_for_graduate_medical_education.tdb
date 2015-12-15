@@ -21,10 +21,10 @@
     
     param[journal_id] = jgme
     
-    au < exists ; 2009 ; Journal of Graduate Medical Education Volume 1 ; 1 >
-    au < exists ; 2010 ; Journal of Graduate Medical Education Volume 2 ; 2 >
-    au < exists ; 2011 ; Journal of Graduate Medical Education Volume 3 ; 3 >
-    au < exists ; 2012 ; Journal of Graduate Medical Education Volume 4 ; 4 >
+    au < manifest ; 2009 ; Journal of Graduate Medical Education Volume 1 ; 1 >
+    au < manifest ; 2010 ; Journal of Graduate Medical Education Volume 2 ; 2 >
+    au < manifest ; 2011 ; Journal of Graduate Medical Education Volume 3 ; 3 >
+    au < manifest ; 2012 ; Journal of Graduate Medical Education Volume 4 ; 4 >
     au < released ; 2013 ; Journal of Graduate Medical Education Volume 5 ; 5 >
     au < released ; 2014 ; Journal of Graduate Medical Education Volume 6 ; 6 >
     au < released ; 2015 ; Journal of Graduate Medical Education Volume 7 ; 7 >
