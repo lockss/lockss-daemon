@@ -15,16 +15,16 @@
       param[journal_abbr] = annals-of-iowa
       implicit < status ; year ; name ; param[volume] >
 
-      au < testing ; 2005 ; Annals at Iowa Volume 64 ; 64 >
-      au < testing ; 2006 ; Annals at Iowa Volume 65 ; 65 >
-      au < testing ; 2007 ; Annals at Iowa Volume 66 ; 66 >
-      au < testing ; 2008 ; Annals at Iowa Volume 67 ; 67 >
-      au < testing ; 2009 ; Annals at Iowa Volume 68 ; 68 >
-      au < testing ; 2010 ; Annals at Iowa Volume 69 ; 69 >
-      au < testing ; 2011 ; Annals at Iowa Volume 70 ; 70 >
-      au < testing ; 2012 ; Annals at Iowa Volume 71 ; 71 >
-      au < testing ; 2013 ; Annals at Iowa Volume 72 ; 72 >
-      au < testing ; 2014 ; Annals at Iowa Volume 73 ; 73 >
+      au < ready ; 2005 ; Annals at Iowa Volume 64 ; 64 >
+      au < ready ; 2006 ; Annals at Iowa Volume 65 ; 65 >
+      au < ready ; 2007 ; Annals at Iowa Volume 66 ; 66 >
+      au < ready ; 2008 ; Annals at Iowa Volume 67 ; 67 >
+      au < ready ; 2009 ; Annals at Iowa Volume 68 ; 68 >
+      au < ready ; 2010 ; Annals at Iowa Volume 69 ; 69 >
+      au < ready ; 2011 ; Annals at Iowa Volume 70 ; 70 >
+      au < ready ; 2012 ; Annals at Iowa Volume 71 ; 71 >
+      au < ready ; 2013 ; Annals at Iowa Volume 72 ; 72 >
+      au < ready ; 2014 ; Annals at Iowa Volume 73 ; 73 >
       au < expected ; 2015 ; Annals at Iowa Volume 74 ; 74 >
 
     }
@@ -94,8 +94,8 @@
 
       au < manifest ; 1988 ; Dada/Surrealism Volume 17 ; 17 >
       au < manifest ; 1990 ; Dada/Surrealism Volume 18 ; 18 >
-      au < testing ; 2013 ; Dada/Surrealism Volume 19 ; 19 >
-      au < testing ; 2014 ; Dada/Surrealism Volume 20 ; 20 >
+      au < ready ; 2013 ; Dada/Surrealism Volume 19 ; 19 >
+      au < ready ; 2014 ; Dada/Surrealism Volume 20 ; 20 >
       au < exists ; 2014 ; Dada/Surrealism Volume 21 ; 21 >
       au < exists ; 2015 ; Dada/Surrealism Volume 22 ; 22 >
 
@@ -125,7 +125,7 @@
       au < released ; 2009 ; Electronic Journal of Africana Bibliography Volume 11 ; 11 >
       au < released ; 2009 ; Electronic Journal of Africana Bibliography Volume 12 ; 12 >
       au < released ; 2012 ; Electronic Journal of Africana Bibliography Volume 13 ; 13 >
-      au < testing ; 2014 ; Electronic Journal of Africana Bibliography Volume 14 ; 14 >
+      au < ready ; 2014 ; Electronic Journal of Africana Bibliography Volume 14 ; 14 >
       au < manifest ; 2015 ; Electronic Journal of Africana Bibliography Volume 15 ; 15 >
 
     }
@@ -157,10 +157,10 @@
       param[journal_abbr] = iowa-historical-review
       implicit < status ; year ; name ; param[volume] >
 
-      au < testing ; 2007-2008 ; Iowa Historical Review Volume 1 ; 1 >
-      au < testing ; 2011 ; Iowa Historical Review Volume 2 ; 2 >
-      au < testing ; 2013 ; Iowa Historical Review Volume 3 ; 3 >
-      au < testing ; 2013-2014 ; Iowa Historical Review Volume 4 ; 4 >
+      au < ready ; 2007-2008 ; Iowa Historical Review Volume 1 ; 1 >
+      au < ready ; 2011 ; Iowa Historical Review Volume 2 ; 2 >
+      au < ready ; 2013 ; Iowa Historical Review Volume 3 ; 3 >
+      au < ready ; 2013-2014 ; Iowa Historical Review Volume 4 ; 4 >
       au < manifest ; 2015 ; Iowa Historical Review Volume 5 ; 5 >
 
     }
@@ -200,7 +200,7 @@
       au < released ; 2010 ; Iowa Journal of Cultural Studies Volume 12 ; 12 >
       au < doesNotExist ; 2010 ; Iowa Journal of Cultural Studies Volume 13 ; 13 >
       au < released ; 2013 ; Iowa Journal of Cultural Studies Volume 14 ; 14 >
-      au < testing ; 2014 ; Iowa Journal of Cultural Studies Volume 15 ; 15 >
+      au < ready ; 2014 ; Iowa Journal of Cultural Studies Volume 15 ; 15 >
       au < manifest ; 2015 ; Iowa Journal of Cultural Studies Volume 16 ; 16 >
 
     }
@@ -245,8 +245,8 @@
 
       au < released ; 2011 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 1 ; 1 >
       au < released ; 2012 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 2 ; 2 >
-      au < testing ; 2013 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 3 ; 3 >
-      au < testing ; 2014 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 4 ; 4 >
+      au < ready ; 2013 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 3 ; 3 >
+      au < ready ; 2014 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 4 ; 4 >
       au < expected ; 2015 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 5 ; 5 >
 
     }
@@ -263,12 +263,12 @@
       param[journal_abbr] = mzwp
       implicit < status ; year ; name ; param[volume] >
 
-      au < testing ; 2005 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2005 ; 2005 >
-      au < testing ; 2006 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2006 ; 2006 >
-      au < testing ; 2007 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2007 ; 2007 >
-      au < testing ; 2011 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2011 ; 2011 >
-      au < testing ; 2012 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2012 ; 2012 >
-      au < testing ; 2014 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2014 ; 2014 >
+      au < ready ; 2005 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2005 ; 2005 >
+      au < ready ; 2006 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2006 ; 2006 >
+      au < ready ; 2007 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2007 ; 2007 >
+      au < ready ; 2011 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2011 ; 2011 >
+      au < ready ; 2012 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2012 ; 2012 >
+      au < ready ; 2014 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2014 ; 2014 >
       au < expected ; 2015 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2015 ; 2015 >
 
     }
@@ -334,7 +334,7 @@
       au < released ; 2011 ; Medieval Feminist Forum Volume 47 ; 47 >
       au < released ; 2012 ; Medieval Feminist Forum Volume 48 ; 48 >
       au < released ; 2013 ; Medieval Feminist Forum Volume 49 ; 49 >
-      au < testing ; 2014 ; Medieval Feminist Forum Volume 50 ; 50 >
+      au < ready ; 2014 ; Medieval Feminist Forum Volume 50 ; 50 >
       au < manifest ; 2015 ; Medieval Feminist Forum Volume 51 ; 51 >
 
     }
@@ -358,8 +358,8 @@
       au < released ; 2009 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 6 ; 6 >
       au < released ; 2011 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 7 ; 7 >
       au < released ; 2012 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 8 ; 8 >
-      au < testing ; 2013 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 9 ; 9 >
-      au < testing ; 2014 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 10 ; 10 >
+      au < ready ; 2013 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 9 ; 9 >
+      au < ready ; 2014 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 10 ; 10 >
       au < manifest ; 2015 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 11 ; 11 >
 
     }
@@ -377,8 +377,8 @@
 
       au < released ; 2010 ; Proceedings in Obstetrics and Gynecology Volume 1 ; 1 >
       au < released ; 2011 ; Proceedings in Obstetrics and Gynecology Volume 2 ; 2 >
-      au < testing ; 2013 ; Proceedings in Obstetrics and Gynecology Volume 3 ; 3 >
-      au < testing ; 2014 ; Proceedings in Obstetrics and Gynecology Volume 4 ; 4 >
+      au < ready ; 2013 ; Proceedings in Obstetrics and Gynecology Volume 3 ; 3 >
+      au < ready ; 2014 ; Proceedings in Obstetrics and Gynecology Volume 4 ; 4 >
       au < manifest ; 2015 ; Proceedings in Obstetrics and Gynecology Volume 5 ; 5 >
 
     }
