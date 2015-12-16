@@ -12599,10 +12599,10 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     #continued from Journal of Electron Microscopy
-    au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Electron Microscopy Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Electron Microscopy Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of Electron Microscopy Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Journal of Electron Microscopy Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Microscopy Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; Microscopy Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Microscopy Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; expected ; 2016 ; Microscopy Volume 65 ; 65 >
 
   }
 
