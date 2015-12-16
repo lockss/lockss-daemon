@@ -7175,6 +7175,7 @@
 
     title <
       name = FEMS Yeast Research ;
+      issn = 1567-1356 ;
       eissn = 1567-1364 ;
       issnl = 1567-1364
     >
@@ -12242,12 +12243,29 @@
     au < finished ; crawling ; 2010 ; Journal of Electron Microscopy Volume 59 ; 59 ; >
     au < finished ; crawling ; 2011 ; Journal of Electron Microscopy Volume 60 ; 60 ; >
     au < finished ; frozen ; 2012 ; Journal of Electron Microscopy Volume 61 ; 61 ; >
-    au < frozen ; exists ; 2013 ; Journal of Electron Microscopy Volume 62 ; 62 ; >
-    au < frozen ; exists ; 2014 ; Journal of Electron Microscopy Volume 63 ; 63 ; >
-    au < crawling ; exists ; 2015 ; Journal of Electron Microscopy Volume 64 ; 64 ; >
-    au < expected ; exists ; 2016 ; Journal of Electron Microscopy Volume 65 ; 65 ; >
+    #continued as Microscopy 2050-5698 2050-5701
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Microscopy ;
+      issn = 2050-5698 ;
+      eissn = 2050-5701 ;
+      issnl = 2050-5698
+    >
+
+    param[base_url] = http://jmicro.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    #continued from Journal of Electron Microscopy
+    au < frozen ; exists ; 2013 ; Microscopy Volume 62 ; 62 ; >
+    au < frozen ; exists ; 2014 ; Microscopy Volume 63 ; 63 ; >
+    au < crawling ; exists ; 2015 ; Microscopy Volume 64 ; 64 ; >
+    au < expected ; exists ; 2016 ; Microscopy Volume 65 ; 65 ; >
 
   }
 
