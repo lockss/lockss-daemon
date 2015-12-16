@@ -7175,7 +7175,6 @@
 
     title <
       name = FEMS Yeast Research ;
-      issn = 1567-1356 ;
       eissn = 1567-1364 ;
       issnl = 1567-1364
     >
@@ -12243,29 +12242,12 @@
     au < finished ; crawling ; 2010 ; Journal of Electron Microscopy Volume 59 ; 59 ; >
     au < finished ; crawling ; 2011 ; Journal of Electron Microscopy Volume 60 ; 60 ; >
     au < finished ; frozen ; 2012 ; Journal of Electron Microscopy Volume 61 ; 61 ; >
-    #continued as Microscopy 2050-5698 2050-5701
+    au < frozen ; exists ; 2013 ; Journal of Electron Microscopy Volume 62 ; 62 ; >
+    au < frozen ; exists ; 2014 ; Journal of Electron Microscopy Volume 63 ; 63 ; >
+    au < crawling ; exists ; 2015 ; Journal of Electron Microscopy Volume 64 ; 64 ; >
+    au < expected ; exists ; 2016 ; Journal of Electron Microscopy Volume 65 ; 65 ; >
 
     }
-
-  }
-
-  {
-
-    title <
-      name = Microscopy ;
-      issn = 2050-5698 ;
-      eissn = 2050-5701 ;
-      issnl = 2050-5698
-    >
-
-    param[base_url] = http://jmicro.oxfordjournals.org/
-    pluginSuffix = ClockssHighWirePressH20Plugin
-
-    #continued from Journal of Electron Microscopy
-    au < frozen ; exists ; 2013 ; Microscopy Volume 62 ; 62 ; >
-    au < frozen ; exists ; 2014 ; Microscopy Volume 63 ; 63 ; >
-    au < crawling ; exists ; 2015 ; Microscopy Volume 64 ; 64 ; >
-    au < expected ; exists ; 2016 ; Microscopy Volume 65 ; 65 ; >
 
   }
 
@@ -19948,7 +19930,7 @@
     au < frozen ; exists ; 2012 ; Protein Engineering, Design & Selection : PEDS Volume 25 ; 25 ; >
     au < finished ; crawling ; 2013 ; Protein Engineering, Design & Selection : PEDS Volume 26 ; 26 ; >
     au < finished ; crawling ; 2014 ; Protein Engineering, Design & Selection : PEDS Volume 27 ; 27 ; >
-    au < ready ; exists ; 2015 ; Protein Engineering, Design & Selection : PEDS Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2015 ; Protein Engineering, Design & Selection : PEDS Volume 28 ; 28 ; >
     au < expected ; exists ; 2016 ; Protein Engineering, Design & Selection : PEDS Volume 29 ; 29 ; >
 
     }
@@ -20830,8 +20812,8 @@
     au < crawling ; exists ; 2015 ; Radiation Protection Dosimetry Volume 163 ; 163 ; >
     au < crawling ; exists ; 2015 ; Radiation Protection Dosimetry Volume 164 ; 164 ; >
     au < crawling ; exists ; 2015 ; Radiation Protection Dosimetry Volume 165 ; 165 ; >
-    au < ready ; exists ; 2015 ; Radiation Protection Dosimetry Volume 166 ; 166 ; >
-    au < ready ; exists ; 2015 ; Radiation Protection Dosimetry Volume 167 ; 167 ; >
+    au < crawling ; exists ; 2015 ; Radiation Protection Dosimetry Volume 166 ; 166 ; >
+    au < crawling ; exists ; 2015 ; Radiation Protection Dosimetry Volume 167 ; 167 ; >
     au < expected ; exists ; 2016 ; Radiation Protection Dosimetry Volume 168 ; 168 ; >
 
     }
@@ -24261,7 +24243,7 @@
     au < finished ; finished ; 2012 ; BioScience Volume 62 ; 62 ; >
     au < frozen ; exists ; 2013 ; BioScience Volume 63 ; 63 ; >
     au < finished ; crawling ; 2014 ; BioScience Volume 64 ; 64 ; >
-    au < ready ; exists ; 2015 ; BioScience Volume 65 ; 65 ; >
+    au < crawling ; exists ; 2015 ; BioScience Volume 65 ; 65 ; >
     au < expected ; exists ; 2016 ; BioScience Volume 66 ; 66 ; >
 
   }
