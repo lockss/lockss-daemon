@@ -178,6 +178,7 @@ public class TestFollowLinkCrawlerErrorPaths extends LockssTestCase {
     assertFalse(crawler.doCrawl());
     assertEquals(Crawler.STATUS_FETCH_ERROR, status.getCrawlStatus());
     assertEquals("Unable to fetch permission page", status.getCrawlStatusMsg());
+    assertEquals("ffff -> tttt", status.getErrorForUrl(permissionUrl1));
     assertEmpty(cus.getCachedUrls());
   }
 
