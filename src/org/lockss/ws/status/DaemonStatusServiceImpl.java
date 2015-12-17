@@ -41,7 +41,6 @@ import static org.lockss.config.ConfigManager.PARAM_PLATFORM_FQDN;
 import static org.lockss.config.ConfigManager.PARAM_PLATFORM_IP_ADDRESS;
 import static org.lockss.config.ConfigManager.PARAM_PLATFORM_LOCAL_V3_IDENTITY;
 import static org.lockss.config.ConfigManager.PARAM_PLATFORM_PROJECT;
-import static org.lockss.config.ConfigManager.PARAM_PLATFORM_SECOND_IP_ADDRESS;
 import static org.lockss.config.ConfigManager.PARAM_PLATFORM_SMTP_HOST;
 import static org.lockss.config.ConfigManager.PARAM_PLATFORM_SMTP_PORT;
 import static org.lockss.util.BuildInfo.BUILD_HOST;
@@ -694,10 +693,6 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
     result.setHostName(config.get(PARAM_PLATFORM_FQDN));
 
     result.setIpAddress(config.get(PARAM_PLATFORM_IP_ADDRESS));
-
-    if (theDaemon.isClockss()) {
-      result.setIpAddress(config.get(PARAM_PLATFORM_SECOND_IP_ADDRESS));
-    }
 
     result.setGroups((List<String>)(config.getPlatformGroupList()));
     result.setProject(config.get(PARAM_PLATFORM_PROJECT));
