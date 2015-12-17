@@ -261,6 +261,7 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
     } else if (cb == null) {
       throw new IllegalArgumentException("Called with null callback");
     }
+    theLog.debug2("Extracting URLs from " + srcUrl);
     // our base url is the same as source when we start
     // the wrapper is only needed for the stats manager
     org.lockss.extractor.LinkExtractor.Callback wrapped_cb = cb;
