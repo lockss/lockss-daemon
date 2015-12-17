@@ -658,6 +658,32 @@ public class TestUrlUtil extends LockssTestCase {
 		 UrlUtil.encodeQueryArg("foo=bar?a=b&c=b"));
   }
 
+  public void testEncodeUrl() throws Exception {
+    assertEquals("", UrlUtil.encodeUrl(""));
+    assertEquals("foo", UrlUtil.encodeUrl("foo"));
+    assertEquals("http%3A%2F%2Fhost%2Ffoo+bar",
+		 UrlUtil.encodeUrl("http://host/foo bar"));
+    assertEquals("f%22oo+", UrlUtil.encodeUrl("f\"oo "));
+    assertEquals("+foo%7C", UrlUtil.encodeUrl(" foo|"));
+    assertEquals("%5Bfoo%5D", UrlUtil.encodeUrl("[foo]"));
+    // "smart" left/right double quotes
+    assertEquals("http%3A%2F%2Fhost%2FINT-%E2%80%9CToll%E2%80%9D-Extending",
+		 UrlUtil.encodeUrl("http://host/INT-\u201cToll\u201d-Extending"));
+  }
+
+  public void testDecodeUrl() throws Exception {
+    assertEquals("", UrlUtil.decodeUrl(""));
+    assertEquals("foo", UrlUtil.decodeUrl("foo"));
+    assertEquals("http://host/foo bar",
+		 UrlUtil.decodeUrl("http%3A%2F%2Fhost%2Ffoo+bar"));
+    assertEquals("f\"oo ", UrlUtil.decodeUrl("f%22oo+"));
+    assertEquals(" foo|", UrlUtil.decodeUrl("+foo%7C"));
+    assertEquals("[foo]", UrlUtil.decodeUrl("%5Bfoo%5D"));
+    // "smart" left/right double quotes
+    assertEquals("http://host/INT-\u201cToll\u201d-Extending",
+		 UrlUtil.decodeUrl("http%3A%2F%2Fhost%2FINT-%E2%80%9CToll%E2%80%9D-Extending"));
+  }
+
   boolean uri=false;
 
   public void testResolveUrl() throws Exception {

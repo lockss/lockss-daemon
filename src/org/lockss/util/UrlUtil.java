@@ -671,7 +671,6 @@ public class UrlUtil {
     try {
       return UriUtils.decode(url, enc);
     } catch (UnsupportedEncodingException e) {
-      // The system should always have the platform default
       throw new RuntimeException("Encoding (" + enc + ") unsupported", e);
     }
   }
@@ -679,11 +678,11 @@ public class UrlUtil {
   /** URLencode a string */
   public static String encodeUrl(String url) {
     try {
-      return URLEncoder.encode(url, Constants.DEFAULT_ENCODING);
+      return URLEncoder.encode(url, Constants.ENCODING_UTF_8);
     } catch (UnsupportedEncodingException e) {
-      // The system should always have the platform default
+      // The system should always have UTF-8
       throw new RuntimeException("Default encoding (" +
-                                 Constants.DEFAULT_ENCODING + ") unsupported",
+                                 Constants.ENCODING_UTF_8 + ") unsupported",
           e);
     }
   }
@@ -691,11 +690,11 @@ public class UrlUtil {
   /** URLdecode a string */
   public static String decodeUrl(String url) {
     try {
-      return URLDecoder.decode(url, Constants.DEFAULT_ENCODING);
+      return URLDecoder.decode(url, Constants.ENCODING_UTF_8);
     } catch (UnsupportedEncodingException e) {
-      // The system should always have the platform default
+      // The system should always have UTF-8
       throw new RuntimeException("Default encoding (" +
-                                 Constants.DEFAULT_ENCODING + ") unsupported",
+                                 Constants.ENCODING_UTF_8 + ") unsupported",
           e);
     }
   }
