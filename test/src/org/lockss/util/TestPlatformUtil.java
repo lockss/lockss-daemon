@@ -84,10 +84,10 @@ public class TestPlatformUtil extends LockssTestCase {
     }
   }
 
-  public void testGetSystemTempDir() {
+  public void testGetSystemTempDir() throws IOException {
     String javatmp = System.getProperty("java.io.tmpdir");
     assertEquals(javatmp, PlatformUtil.getSystemTempDir());
-    String parmtmp = "/another/tmp/dir";
+    String parmtmp = new File(getTempDir(), "another/tmp/dir").toString();
     ConfigurationUtil.setFromArgs(ConfigManager.PARAM_TMPDIR, parmtmp);
     assertEquals(new File(parmtmp, "dtmp").toString(),
 		 PlatformUtil.getSystemTempDir());

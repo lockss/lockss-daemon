@@ -1316,8 +1316,14 @@ public class ConfigManager implements LockssManager {
 
     String tmpdir = config.get(PARAM_TMPDIR);
     if (!StringUtil.isNullString(tmpdir)) {
-      String javaTmpDir = new File(tmpdir, "dtmp").toString();
-      System.setProperty("java.io.tmpdir", javaTmpDir);
+      File javaTmpDir = new File(tmpdir, "dtmp");
+      if (FileUtil.ensureDirExists(javaTmpDir)) {
+	FileUtil.setOwnerRWX(javaTmpDir);
+	System.setProperty("java.io.tmpdir", javaTmpDir.toString());
+      } else {
+	log.warning("Can't create/access temp dir: " + javaTmpDir +
+		    ", using default: " + System.getProperty("java.io.tmpdir"));
+      }
     }
     System.setProperty("jsse.enableSNIExtension",
 		       Boolean.toString(config.getBoolean(PARAM_JSSE_ENABLESNIEXTENSION,
