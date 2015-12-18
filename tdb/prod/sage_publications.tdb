@@ -17926,8 +17926,7 @@
       title <
         name = International Criminal Justice Review ;
         issn = 1057-5677 ;
-        eissn = 1556-3855 ;
-        issnl = 1057-5677
+        eissn = 1556-3855 
       >
 
       {
@@ -18027,8 +18026,7 @@
     title <
       name = The International Journal of Aging and Human Development ;
       issn = 0091-4150 ;
-      eissn = 1541-3535 ;
-      issnl = 0091-4150
+      eissn = 1541-3535 
     >
 
       param[base_url] = http://ahd.sagepub.com/
@@ -18106,8 +18104,7 @@
       title <
         name = International Journal of Behavioral Development ;
         issn = 0165-0254 ;
-        eissn = 1464-0651 ;
-        issnl = 0165-0254
+        eissn = 1464-0651 
       >
 
       {
@@ -18232,8 +18229,7 @@
     title <
       name = International Journal of Christianity and Education ;
       issn = 2056-9971 ;
-      eissn = 2056-998X ;
-      issnl = 2056-9971
+      eissn = 2056-998X 
     >
 
       param[base_url] = http://ice.sagepub.com/
@@ -18251,8 +18247,7 @@
       title <
         name = International Journal of Comparative Sociology ;
         issn = 0020-7152 ;
-        eissn = 1745-2554 ;
-        issnl = 0020-7152
+        eissn = 1745-2554 
       >
 
       {
@@ -18353,8 +18348,7 @@
       title <
         name = International Journal of Cross Cultural Management ;
         issn = 1470-5958 ;
-        eissn = 1741-2838 ;
-        issnl = 1470-5958
+        eissn = 1741-2838 
       >
 
       {
@@ -18414,8 +18408,7 @@
       title <
         name = International Journal of Cultural Studies ;
         issn = 1367-8779 ;
-        eissn = 1460-356X ;
-        issnl = 1367-8779
+        eissn = 1460-356X 
       >
 
       {
@@ -18478,8 +18471,7 @@
       title <
         name = International Journal of Damage Mechanics ;
         issn = 1056-7895 ;
-        eissn = 1530-7921 ;
-        issnl = 1056-7895
+        eissn = 1530-7921 
       >
 
       {
@@ -18547,11 +18539,9 @@
 
       title <
         name = International Journal of Discrimination and the Law ;
-        issn = 1358-2291 ;
-        issnl = 1358-2291
+        issn = 1358-2291 
       >
 
-      {
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://jdi.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
@@ -18573,22 +18563,18 @@
         au < manifest ; 2015 ; International Journal of Discrimination and the Law Volume 15 ; 15 >
         au < expected ; 2016 ; International Journal of Discrimination and the Law Volume 16 ; 16 >
 
-      }
-
     }
 
     {
       title <
         name = International Journal of Electrical Engineering Education ;
         issn = 0020-7209 ;
-        eissn = 2050-4578 ;
-        issnl = 0020-7209
+        eissn = 2050-4578 
       >
 
-        pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://ije.sagepub.com/
-        implicit < status ; year ; name ; param[volume_name] >
-
+     pluginSuffix = HighWirePressH20Plugin
+     param[base_url] = http://ije.sagepub.com/
+     implicit < status ; year ; name ; param[volume_name] >
 
      au < manifest ; 2014 ; International Journal of Electrical Engineering Education Volume 51 ; 51 >
      au < manifest ; 2015 ; International Journal of Electrical Engineering Education Volume 52 ; 52 >
@@ -18600,8 +18586,7 @@
       title <
         name = International Journal of Engine Research ;
         issn = 1468-0874 ;
-        eissn = 2041-3149 ;
-        issnl = 1468-0874
+        eissn = 2041-3149 
       >
 
       {
@@ -18638,8 +18623,7 @@
     title <
       name = The International Journal of Evidence & Proof ;
       issn = 1365-7127 ;
-      eissn = 1740-5572 ;
-      issnl = 1365-7127
+      eissn = 1740-5572 
     >
 
       param[base_url] = http://epj.sagepub.com/
@@ -18668,8 +18652,7 @@
     title <
       name = International Journal of Health Services ;
       issn = 0020-7314 ;
-      eissn = 1541-4469 ;
-      issnl = 0020-7314
+      eissn = 1541-4469 
     >
 
         param[base_url] = http://joh.sagepub.com/
@@ -18722,8 +18705,7 @@
       title <
         name = International Journal of High Performance Computing Applications ;
         issn = 1094-3420 ;
-        eissn = 1741-2846 ;
-        issnl = 1094-3420
+        eissn = 1741-2846 
       >
 
       {
@@ -18813,8 +18795,7 @@
       title <
         name = The International Journal of Lower Extremity Wounds ;
         issn = 1534-7346 ;
-        eissn = 1552-6941 ;
-        issnl = 1534-7346
+        eissn = 1552-6941 
       >
 
       {
@@ -18857,13 +18838,12 @@
 
     }
 
-  {
+    {
 
     title <
       name = International Journal of Mechanical Engineering Education ;
       issn = 0306-4190 ;
-      eissn = 2050-4586 ;
-      issnl = 0306-4190
+      eissn = 2050-4586 
     >
 
       param[base_url] = http://ijj.sagepub.com/
@@ -18889,15 +18869,37 @@
       au < manifest ; 2015 ; International Journal of Mechanical Engineering Education Volume 43 ; 43 >
       au < expected ; 2016 ; International Journal of Mechanical Engineering Education Volume 44 ; 44 >
 
-  }
+    }
+
+    {
+
+    title <
+      name = International Journal of Micro Air Vehicles ;
+      issn = 1756-8293 ;
+      eissn = 1756-8307 
+    >
+
+      param[base_url] = http://mav.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2009 ; International Journal of Micro Air Vehicles Volume 1 ; 1 >
+        au < exists ; 2010 ; International Journal of Micro Air Vehicles Volume 2 ; 2 >
+        au < exists ; 2011 ; International Journal of Micro Air Vehicles Volume 3 ; 3 >
+        au < exists ; 2012 ; International Journal of Micro Air Vehicles Volume 4 ; 4 >
+        au < exists ; 2013 ; International Journal of Micro Air Vehicles Volume 5 ; 5 >
+        au < exists ; 2014 ; International Journal of Micro Air Vehicles Volume 6 ; 6 >
+        au < exists ; 2015 ; International Journal of Micro Air Vehicles Volume 7 ; 7 >
+        au < expected ; 2016 ; International Journal of Micro Air Vehicles Volume 8 ; 8 >
+
+    }
 
     {
 
       title <
         name = International Journal of Music Education ;
         issn = 0255-7614 ;
-        eissn = 1744-795X ;
-        issnl = 0255-7614
+        eissn = 1744-795X 
       >
 
       {
@@ -18992,8 +18994,7 @@
       title <
         name = International Journal of Offender Therapy and Comparative Criminology ;
         issn = 0306-624X ;
-        eissn = 1552-6933 ;
-        issnl = 0306-624X
+        eissn = 1552-6933 
       >
 
       {
@@ -19012,7 +19013,6 @@
 
         param[base_url] = http://ijo.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
 
         au < HighWireStrVolPlugin ; down ; 2005 ; International Journal of Offender Therapy and Comparative Criminology Volume 49 ; 49 >
         au < HighWireStrVolPlugin ; down ; 2007 ; International Journal of Offender Therapy and Comparative Criminology Volume 51 ; 51 >
@@ -19090,8 +19090,7 @@
     title <
       name = International Journal of Police Science & Management ;
       issn = 1461-3557 ;
-      eissn = 1478-1603 ;
-      issnl = 1461-3557
+      eissn = 1478-1603 
     >
 
       param[base_url] = http://psm.sagepub.com/
@@ -19121,8 +19120,7 @@
       title <
         name = The International Journal of Robotics Research ;
         issn = 0278-3649 ;
-        eissn = 1741-3176 ;
-        issnl = 0278-3649
+        eissn = 1741-3176 
       >
 
       {
@@ -19244,8 +19242,7 @@
       title <
         name = International Journal of Social Psychiatry ;
         issn = 0020-7640 ;
-        eissn = 1741-2854 ;
-        issnl = 0020-7640
+        eissn = 1741-2854 
       >
 
       {
@@ -19365,6 +19362,32 @@
       au < exists ; 2014 ; International Journal of Space Structures Volume 29 ; 29 >
       au < exists ; 2015 ; International Journal of Space Structures Volume 30 ; 30 >
       au < expected ; 2016 ; International Journal of Space Structures Volume 31 ; 31 >
+
+    }
+
+    {
+
+    title <
+      name = International journal of Sports Science & Coaching ;
+      issn = 1747-9541 ;
+      eissn = 2048-397X 
+    >
+
+      param[base_url] = http://spo.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2006 ; International journal of Sports Science & Coaching Volume 1 ; 1 >
+      au < exists ; 2007 ; International journal of Sports Science & Coaching Volume 2 ; 2 >
+      au < exists ; 2008 ; International journal of Sports Science & Coaching Volume 3 ; 3 >
+      au < exists ; 2009 ; International journal of Sports Science & Coaching Volume 4 ; 4 >
+      au < exists ; 2010 ; International journal of Sports Science & Coaching Volume 5 ; 5 >
+      au < exists ; 2011 ; International journal of Sports Science & Coaching Volume 6 ; 6 >
+      au < exists ; 2012 ; International journal of Sports Science & Coaching Volume 7 ; 7 >
+      au < exists ; 2013 ; International journal of Sports Science & Coaching Volume 8 ; 8 >
+      au < exists ; 2014 ; International journal of Sports Science & Coaching Volume 9 ; 9 >
+      au < exists ; 2015 ; International journal of Sports Science & Coaching Volume 10 ; 10 >
+      au < expected ; 2016 ; International journal of Sports Science & Coaching Volume 11 ; 11 >
 
     }
 
@@ -20948,6 +20971,31 @@
         au < expected ; 2016 ; Journal of Aging and Health Volume 28 ; 28 >
 
       }
+
+    }
+
+    {
+
+    title <
+      name = Journal of Algorithms & Computational Technology ;
+      issn = 1748-3018 ;
+      eissn = 1748-3026
+    >
+
+      param[base_url] = http://act.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2007 ; Journal of Algorithms & Computational Technology Volume 1 ; 1 >
+      au < exists ; 2008 ; Journal of Algorithms & Computational Technology Volume 2 ; 2 >
+      au < exists ; 2009 ; Journal of Algorithms & Computational Technology Volume 3 ; 3 >
+      au < exists ; 2010 ; Journal of Algorithms & Computational Technology Volume 4 ; 4 >
+      au < exists ; 2011 ; Journal of Algorithms & Computational Technology Volume 5 ; 5 >
+      au < exists ; 2012 ; Journal of Algorithms & Computational Technology Volume 6 ; 6 >
+      au < exists ; 2013 ; Journal of Algorithms & Computational Technology Volume 7 ; 7 >
+      au < exists ; 2014 ; Journal of Algorithms & Computational Technology Volume 8 ; 8 >
+      au < exists ; 2015 ; Journal of Algorithms & Computational Technology Volume 9 ; 9 >
+      au < expected ; 2016 ; Journal of Algorithms & Computational Technology Volume 10 ; 10 >
 
     }
 

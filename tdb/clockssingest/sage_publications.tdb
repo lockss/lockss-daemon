@@ -16388,13 +16388,11 @@
       title <
         name = International Journal of Electrical Engineering Education ;
         issn = 0020-7209 ;
-        eissn = 2050-4578 ;
-        issnl = 0020-7209
+        eissn = 2050-4578 
       >
 
-        pluginSuffix = ClockssHighWirePressH20Plugin
-        param[base_url] = http://ije.sagepub.com/
-
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://ije.sagepub.com/
 
      au < crawling ; exists ; 2014 ; International Journal of Electrical Engineering Education Volume 51 ; 51 ; >
      au < crawling ; exists ; 2015 ; International Journal of Electrical Engineering Education Volume 52 ; 52 ; >
@@ -16443,8 +16441,7 @@
     title <
       name = The International Journal of Evidence & Proof ;
       issn = 1365-7127 ;
-      eissn = 1740-5572 ;
-      issnl = 1365-7127
+      eissn = 1740-5572 
     >
 
       param[base_url] = http://epj.sagepub.com/
@@ -16472,8 +16469,7 @@
     title <
       name = International Journal of Health Services ;
       issn = 0020-7314 ;
-      eissn = 1541-4469 ;
-      issnl = 0020-7314
+      eissn = 1541-4469 
     >
 
       param[base_url] = http://joh.sagepub.com/
@@ -16667,6 +16663,28 @@
       au < crawling ; exists ; 2014 ; International Journal of Mechanical Engineering Education Volume 42 ; 42 ; >
       au < crawling ; exists ; 2015 ; International Journal of Mechanical Engineering Education Volume 43 ; 43 ; >
       au < expected ; exists ; 2016 ; International Journal of Mechanical Engineering Education Volume 44 ; 44 ; >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Micro Air Vehicles ;
+      issn = 1756-8293 ;
+      eissn = 1756-8307 
+    >
+
+      param[base_url] = http://mav.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+        au < exists ; exists ; 2009 ; International Journal of Micro Air Vehicles Volume 1 ; 1 ; >
+        au < exists ; exists ; 2010 ; International Journal of Micro Air Vehicles Volume 2 ; 2 ; >
+        au < exists ; exists ; 2011 ; International Journal of Micro Air Vehicles Volume 3 ; 3 ; >
+        au < exists ; exists ; 2012 ; International Journal of Micro Air Vehicles Volume 4 ; 4 ; >
+        au < exists ; exists ; 2013 ; International Journal of Micro Air Vehicles Volume 5 ; 5 ; >
+        au < exists ; exists ; 2014 ; International Journal of Micro Air Vehicles Volume 6 ; 6 ; >
+        au < exists ; exists ; 2015 ; International Journal of Micro Air Vehicles Volume 7 ; 7 ; >
+        au < expected ; exists ; 2016 ; International Journal of Micro Air Vehicles Volume 8 ; 8 ; >
 
   }
 
@@ -17224,6 +17242,31 @@
       au < exists ; exists ; 2014 ; International Journal of Space Structures Volume 29 ; 29 ; >
       au < exists ; exists ; 2015 ; International Journal of Space Structures Volume 30 ; 30 ; >
       au < expected ; exists ; 2016 ; International Journal of Space Structures Volume 31 ; 31 ; >
+
+  }
+
+  {
+
+    title <
+      name = International journal of Sports Science & Coaching ;
+      issn = 1747-9541 ;
+      eissn = 2048-397X 
+    >
+
+      param[base_url] = http://spo.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2006 ; International journal of Sports Science & Coaching Volume 1 ; 1 ; >
+      au < exists ; exists ; 2007 ; International journal of Sports Science & Coaching Volume 2 ; 2 ; >
+      au < exists ; exists ; 2008 ; International journal of Sports Science & Coaching Volume 3 ; 3 ; >
+      au < exists ; exists ; 2009 ; International journal of Sports Science & Coaching Volume 4 ; 4 ; >
+      au < exists ; exists ; 2010 ; International journal of Sports Science & Coaching Volume 5 ; 5 ; >
+      au < exists ; exists ; 2011 ; International journal of Sports Science & Coaching Volume 6 ; 6 ; >
+      au < exists ; exists ; 2012 ; International journal of Sports Science & Coaching Volume 7 ; 7 ; >
+      au < exists ; exists ; 2013 ; International journal of Sports Science & Coaching Volume 8 ; 8 ; >
+      au < exists ; exists ; 2014 ; International journal of Sports Science & Coaching Volume 9 ; 9 ; >
+      au < exists ; exists ; 2015 ; International journal of Sports Science & Coaching Volume 10 ; 10 ; >
+      au < expected ; exists ; 2016 ; International journal of Sports Science & Coaching Volume 11 ; 11 ; >
 
   }
 
@@ -18883,6 +18926,30 @@
       au < expected ; exists ; 2016 ; Journal of Aging and Health Volume 28 ; 28 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Algorithms & Computational Technology ;
+      issn = 1748-3018 ;
+      eissn = 1748-3026
+    >
+
+      param[base_url] = http://act.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2007 ; Journal of Algorithms & Computational Technology Volume 1 ; 1 ; >
+      au < exists ; exists ; 2008 ; Journal of Algorithms & Computational Technology Volume 2 ; 2 ; >
+      au < exists ; exists ; 2009 ; Journal of Algorithms & Computational Technology Volume 3 ; 3 ; >
+      au < exists ; exists ; 2010 ; Journal of Algorithms & Computational Technology Volume 4 ; 4 ; >
+      au < exists ; exists ; 2011 ; Journal of Algorithms & Computational Technology Volume 5 ; 5 ; >
+      au < exists ; exists ; 2012 ; Journal of Algorithms & Computational Technology Volume 6 ; 6 ; >
+      au < exists ; exists ; 2013 ; Journal of Algorithms & Computational Technology Volume 7 ; 7 ; >
+      au < exists ; exists ; 2014 ; Journal of Algorithms & Computational Technology Volume 8 ; 8 ; >
+      au < exists ; exists ; 2015 ; Journal of Algorithms & Computational Technology Volume 9 ; 9 ; >
+      au < expected ; exists ; 2016 ; Journal of Algorithms & Computational Technology Volume 10 ; 10 ; >
 
   }
 
