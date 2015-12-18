@@ -21,14 +21,14 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < ready ; 1992 ; Appalachian Heritage Volume 20 ; 20 >
-      au < ready ; 1993 ; Appalachian Heritage Volume 21 ; 21 >
-      au < ready ; 1994 ; Appalachian Heritage Volume 22 ; 22 >
-      au < ready ; 1995 ; Appalachian Heritage Volume 23 ; 23 >
-      au < ready ; 1996 ; Appalachian Heritage Volume 24 ; 24 >
-      au < ready ; 1997 ; Appalachian Heritage Volume 25 ; 25 >
-      au < ready ; 1998 ; Appalachian Heritage Volume 26 ; 26 >
-      au < ready ; 1999 ; Appalachian Heritage Volume 27 ; 27 >
+      au < releasing ; 1992 ; Appalachian Heritage Volume 20 ; 20 >
+      au < releasing ; 1993 ; Appalachian Heritage Volume 21 ; 21 >
+      au < releasing ; 1994 ; Appalachian Heritage Volume 22 ; 22 >
+      au < releasing ; 1995 ; Appalachian Heritage Volume 23 ; 23 >
+      au < releasing ; 1996 ; Appalachian Heritage Volume 24 ; 24 >
+      au < releasing ; 1997 ; Appalachian Heritage Volume 25 ; 25 >
+      au < releasing ; 1998 ; Appalachian Heritage Volume 26 ; 26 >
+      au < releasing ; 1999 ; Appalachian Heritage Volume 27 ; 27 >
 
     }
 
@@ -116,7 +116,7 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < released ; 2014 ; The Comparatist Volume 38 ; 38 >
-      au < ready ; 2015 ; The Comparatist Volume 39 ; 39 >
+      au < releasing ; 2015 ; The Comparatist Volume 39 ; 39 >
 
     }
 
@@ -204,7 +204,7 @@
 
       au < released ; 2013 ; The High School Journal Volume 97 ; 97 >
       au < released ; 2014-2015 ; The High School Journal Volume 98 ; 98 >
-      au < ready ; 2015 ; The High School Journal Volume 99 ; 99 >
+      au < releasing ; 2015 ; The High School Journal Volume 99 ; 99 >
 
     }
 
@@ -305,20 +305,20 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < ready ; 1990 ; Southeastern Geographer Volume 30 ; 30 >
-      au < ready ; 1991 ; Southeastern Geographer Volume 31 ; 31 >
-      au < ready ; 1992 ; Southeastern Geographer Volume 32 ; 32 >
-      au < ready ; 1993 ; Southeastern Geographer Volume 33 ; 33 >
-      au < ready ; 1994 ; Southeastern Geographer Volume 34 ; 34 >
-      au < ready ; 1995 ; Southeastern Geographer Volume 35 ; 35 >
-      au < ready ; 1996 ; Southeastern Geographer Volume 36 ; 36 >
-      au < ready ; 1997 ; Southeastern Geographer Volume 37 ; 37 >
-      au < ready ; 1998 ; Southeastern Geographer Volume 38 ; 38 >
-      au < ready ; 1999 ; Southeastern Geographer Volume 39 ; 39 >
-      au < ready ; 2000 ; Southeastern Geographer Volume 40 ; 40 >
-      au < ready ; 2001 ; Southeastern Geographer Volume 41 ; 41 >
-      au < ready ; 2002 ; Southeastern Geographer Volume 42 ; 42 >
-      au < ready ; 2003 ; Southeastern Geographer Volume 43 ; 43 >
+      au < releasing ; 1990 ; Southeastern Geographer Volume 30 ; 30 >
+      au < releasing ; 1991 ; Southeastern Geographer Volume 31 ; 31 >
+      au < releasing ; 1992 ; Southeastern Geographer Volume 32 ; 32 >
+      au < releasing ; 1993 ; Southeastern Geographer Volume 33 ; 33 >
+      au < releasing ; 1994 ; Southeastern Geographer Volume 34 ; 34 >
+      au < releasing ; 1995 ; Southeastern Geographer Volume 35 ; 35 >
+      au < releasing ; 1996 ; Southeastern Geographer Volume 36 ; 36 >
+      au < releasing ; 1997 ; Southeastern Geographer Volume 37 ; 37 >
+      au < releasing ; 1998 ; Southeastern Geographer Volume 38 ; 38 >
+      au < releasing ; 1999 ; Southeastern Geographer Volume 39 ; 39 >
+      au < releasing ; 2000 ; Southeastern Geographer Volume 40 ; 40 >
+      au < releasing ; 2001 ; Southeastern Geographer Volume 41 ; 41 >
+      au < releasing ; 2002 ; Southeastern Geographer Volume 42 ; 42 >
+      au < releasing ; 2003 ; Southeastern Geographer Volume 43 ; 43 >
 
     }
 
@@ -366,12 +366,12 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < ready ; 1994 ; Southern Cultures Volume 0 ; 0 >
-      au < ready ; 1994-1995 ; Southern Cultures Volume 1 ; 1 >
-      au < ready ; 1996 ; Southern Cultures Volume 2 ; 2 >
-      au < ready ; 1997 ; Southern Cultures Volume 3 ; 3 >
-      au < ready ; 1998 ; Southern Cultures Volume 4 ; 4 >
-      au < ready ; 1999 ; Southern Cultures Volume 5 ; 5 >
+      au < releasing ; 1994 ; Southern Cultures Volume 0 ; 0 >
+      au < releasing ; 1994-1995 ; Southern Cultures Volume 1 ; 1 >
+      au < releasing ; 1996 ; Southern Cultures Volume 2 ; 2 >
+      au < releasing ; 1997 ; Southern Cultures Volume 3 ; 3 >
+      au < releasing ; 1998 ; Southern Cultures Volume 4 ; 4 >
+      au < releasing ; 1999 ; Southern Cultures Volume 5 ; 5 >
 
     }
 

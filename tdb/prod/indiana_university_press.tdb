@@ -396,8 +396,8 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < ready ; 1999 ; Ethics & the Environment Volume 4 ; 4 >
-        au < ready ; 2000 ; Ethics & the Environment Volume 5 ; 5 >
+        au < releasing ; 1999 ; Ethics & the Environment Volume 4 ; 4 >
+        au < releasing ; 2000 ; Ethics & the Environment Volume 5 ; 5 >
 
       }
 
@@ -602,7 +602,7 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < ready ; 1998 ; History & Memory Volume 10 ; 10 >
+        au < releasing ; 1998 ; History & Memory Volume 10 ; 10 >
 
       }
 
@@ -947,7 +947,7 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < released ; 2013-2014 ; Jewish Social Studies Volume 20 ; 20 >
-        au < ready ; 2015 ; Jewish Social Studies Volume 21 ; 21 > 
+        au < releasing ; 2015 ; Jewish Social Studies Volume 21 ; 21 > 
 
       }
 
@@ -1287,9 +1287,9 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < ready ; 2001 ; Meridians: feminism, race, transnationalism Volume 1 ; 1 >
-        au < ready ; 2001-2002 ; Meridians: feminism, race, transnationalism Volume 2 ; 2 >
-        au < ready ; 2002-2003 ; Meridians: feminism, race, transnationalism Volume 3 ; 3 >
+        au < releasing ; 2001 ; Meridians: feminism, race, transnationalism Volume 1 ; 1 >
+        au < releasing ; 2001-2002 ; Meridians: feminism, race, transnationalism Volume 2 ; 2 >
+        au < releasing ; 2002-2003 ; Meridians: feminism, race, transnationalism Volume 3 ; 3 >
 
       }
 
@@ -1384,7 +1384,7 @@
 
         au < released ; 2014 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 26 ; 26 >
         au < released ; 2014 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 27 ; 27 >
-        au < ready ; 2015 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 28 ; 28 >
+        au < releasing ; 2015 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 28 ; 28 >
 
       }
 
@@ -1803,7 +1803,7 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < ready ; 2014 ; Textual Cultures: Texts, Contexts, Interpretation Volume 9 ; 9 >
+        au < releasing ; 2014 ; Textual Cultures: Texts, Contexts, Interpretation Volume 9 ; 9 >
 
       }
 
@@ -1923,21 +1923,21 @@
 
         au < released ; 2002-2003 ; Transition Volume 12 ; 12 >
         au < released ; 2004-2007 ; Transition Volume 13 ; 13 >
-        au < released ; 2008 ; Transition Issue 98 ; 98 >
-        au < released ; 2008 ; Transition Issue 99 ; 99 >
-        au < released ; 2009 ; Transition Issue 100 ; 100 >
-        au < released ; 2009 ; Transition Issue 101 ; 101 >
-        au < released ; 2010 ; Transition Issue 102 ; 102 >
-        au < released ; 2010 ; Transition Issue 103 ; 103 >
-        au < released ; 2011 ; Transition Issue 104 ; 104 >
-        au < released ; 2011 ; Transition Issue 105 ; 105 >
-        au < released ; 2011 ; Transition Issue 106 ; 106 >
-        au < released ; 2012 ; Transition Issue 107 ; 107 >
-        au < released ; 2012 ; Transition Issue 108 ; 108 >
-        au < released ; 2012 ; Transition Issue 109 ; 109 >
-        au < released ; 2013 ; Transition Issue 110 ; 110 >
-        au < released ; 2013 ; Transition Issue 111 ; 111 >
-        au < released ; 2013 ; Transition Issue 112 ; 112 >
+        au < released ; 2008 ; Transition Volume 98 ; 98 >
+        au < released ; 2008 ; Transition Volume 99 ; 99 >
+        au < released ; 2009 ; Transition Volume 100 ; 100 >
+        au < released ; 2009 ; Transition Volume 101 ; 101 >
+        au < released ; 2010 ; Transition Volume 102 ; 102 >
+        au < released ; 2010 ; Transition Volume 103 ; 103 >
+        au < released ; 2011 ; Transition Volume 104 ; 104 >
+        au < released ; 2011 ; Transition Volume 105 ; 105 >
+        au < released ; 2011 ; Transition Volume 106 ; 106 >
+        au < released ; 2012 ; Transition Volume 107 ; 107 >
+        au < released ; 2012 ; Transition Volume 108 ; 108 >
+        au < released ; 2012 ; Transition Volume 109 ; 109 >
+        au < released ; 2013 ; Transition Volume 110 ; 110 >
+        au < released ; 2013 ; Transition Volume 111 ; 111 >
+        au < released ; 2013 ; Transition Volume 112 ; 112 >
 
       }
 
@@ -1945,13 +1945,13 @@
 
         param[base_url] = https://muse.jhu.edu/
 
-        au < released ; 2014 ; Transition Issue 113 ; 113 >
-        au < released ; 2014 ; Transition Issue 114 ; 114 >
-        au < ready ; 2014 ; Transition Issue 115 ; 115 >
-        au < ready ; 2014 ; Transition Issue 116 ; 116 >
-        au < ready ; 2015 ; Transition Issue 117 ; 117 >
-        au < ready ; 2015 ; Transition Issue 118 ; 118 >
-        au < expected ; 2015 ; Transition Issue 119 ; 119 >
+        au < released ; 2014 ; Transition Volume 113 ; 113 >
+        au < released ; 2014 ; Transition Volume 114 ; 114 >
+        au < releasing ; 2014 ; Transition Volume 115 ; 115 >
+        au < releasing ; 2014 ; Transition Volume 116 ; 116 >
+        au < releasing ; 2015 ; Transition Volume 117 ; 117 >
+        au < releasing ; 2015 ; Transition Volume 118 ; 118 >
+        au < expected ; 2015 ; Transition Volume 119 ; 119 >
 
       }
 

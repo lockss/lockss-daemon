@@ -21,9 +21,9 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < ready ; 2000-2001 ; The Hemingway Review Volume 20 ; 20 >
-      au < ready ; 2001-2002 ; The Hemingway Review Volume 21 ; 21 >
-      au < ready ; 2002-2003 ; The Hemingway Review Volume 22 ; 22 >
+      au < releasing ; 2000-2001 ; The Hemingway Review Volume 20 ; 20 >
+      au < releasing ; 2001-2002 ; The Hemingway Review Volume 21 ; 21 >
+      au < releasing ; 2002-2003 ; The Hemingway Review Volume 22 ; 22 >
 
     }
 
@@ -50,7 +50,7 @@
 
       au < released ; 2013 ; The Hemingway Review Volume 33 ; 33 >
       au < released ; 2014-2015 ; The Hemingway Review Volume 34 ; 34 >
-      au < ready ; 2015 ; The Hemingway Review Volume 35 ; 35 >
+      au < releasing ; 2015 ; The Hemingway Review Volume 35 ; 35 >
 
     }
 
