@@ -863,6 +863,38 @@
   {
 
     title <
+      name = Advances in Structural Engineering ;
+      issn = 1369-4332 ;
+      eissn = 2048-4011
+    >
+
+      param[base_url] = http://ase.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2000 ; Advances in Structural Engineering Volume 3 ; 3 >
+      au < exists ; 2001 ; Advances in Structural Engineering Volume 4 ; 4 >
+      au < exists ; 2002 ; Advances in Structural Engineering Volume 5 ; 5 >
+      au < exists ; 2003 ; Advances in Structural Engineering Volume 6 ; 6 >
+      au < exists ; 2004 ; Advances in Structural Engineering Volume 7 ; 7 >
+      au < exists ; 2005 ; Advances in Structural Engineering Volume 8 ; 8 >
+      au < exists ; 2006 ; Advances in Structural Engineering Volume 9 ; 9 >
+      au < exists ; 2007 ; Advances in Structural Engineering Volume 10 ; 10 >
+      au < exists ; 2008 ; Advances in Structural Engineering Volume 11 ; 11 >
+      au < exists ; 2009 ; Advances in Structural Engineering Volume 12 ; 12 >
+      au < exists ; 2010 ; Advances in Structural Engineering Volume 13 ; 13 >
+      au < exists ; 2011 ; Advances in Structural Engineering Volume 14 ; 14 >
+      au < exists ; 2012 ; Advances in Structural Engineering Volume 15 ; 15 >
+      au < exists ; 2013 ; Advances in Structural Engineering Volume 16 ; 16 >
+      au < exists ; 2014 ; Advances in Structural Engineering Volume 17 ; 17 >
+      au < exists ; 2015 ; Advances in Structural Engineering Volume 18 ; 18 >
+      au < expected ; 2016 ; Advances in Structural Engineering Volume 19 ; 19 >
+
+  }
+
+  {
+
+    title <
       name = AERA Open ;
       eissn = 2332-8584
     >
@@ -11209,13 +11241,12 @@
 
     }
 
-  {
+    {
 
     title <
       name = Empirical Studies of the Arts ;
       issn = 0276-2374 ;
-      eissn = 1541-4493 ;
-      issnl = 0276-2374 
+      eissn = 1541-4493 
     >
 
       param[base_url] = http://art.sagepub.com/
@@ -11241,7 +11272,40 @@
       au < manifest ; 2015 ; Empirical Studies of the Arts Volume 33 ; 33 >
       au < expected ; 2016 ; Empirical Studies of the Arts Volume 34 ; 34 >
 
-  }
+    }
+
+    {
+
+    title <
+      name = Energy & Environment ;
+      issn = 0958-305X ;
+      eissn = 2048-4070 
+    >
+
+      param[base_url] = http://eae.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 1999 ; Energy & Environment Volume 10 ; 10 >
+      au < exists ; 2000 ; Energy & Environment Volume 11 ; 11 >
+      au < exists ; 2001 ; Energy & Environment Volume 12 ; 12 >
+      au < exists ; 2002 ; Energy & Environment Volume 13 ; 13 >
+      au < exists ; 2003 ; Energy & Environment Volume 14 ; 14 >
+      au < exists ; 2004 ; Energy & Environment Volume 15 ; 15 >
+      au < exists ; 2005 ; Energy & Environment Volume 16 ; 16 >
+      au < exists ; 2006 ; Energy & Environment Volume 17 ; 17 >
+      au < exists ; 2007 ; Energy & Environment Volume 18 ; 18 >
+      au < exists ; 2008 ; Energy & Environment Volume 19 ; 19 >
+      au < exists ; 2009 ; Energy & Environment Volume 20 ; 20 >
+      au < exists ; 2010 ; Energy & Environment Volume 21 ; 21 >
+      au < exists ; 2011 ; Energy & Environment Volume 22 ; 22 >
+      au < exists ; 2012 ; Energy & Environment Volume 23 ; 23 >
+      au < exists ; 2013 ; Energy & Environment Volume 24 ; 24 >
+      au < exists ; 2014 ; Energy & Environment Volume 25 ; 25 >
+      au < exists ; 2015 ; Energy & Environment Volume 26 ; 26 >
+      au < expected ; 2016 ; Energy & Environment Volume 27 ; 27 >
+
+    }
 
     {
       title <
@@ -17958,7 +18022,7 @@
 
   }
 
-  {
+    {
 
     title <
       name = The International Journal of Aging and Human Development ;
@@ -18006,7 +18070,36 @@
       au < manifest ; 2015 ; The International Journal of Aging and Human Development Volume 81 ; 81 >
       au < expected ; 2016 ; The International Journal of Aging and Human Development Volume 82 ; 82 >
 
-  }
+    }
+
+    {
+
+    title <
+      name = International Journal of Architectural Computing ;
+      issn = 1478-0771 ;
+      eissn = 2048-3988 
+    >
+
+      param[base_url] = http://jac.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2003 ; International Journal of Architectural Computing Volume 1 ; 1 >
+      au < exists ; 2004 ; International Journal of Architectural Computing Volume 2 ; 2 >
+      au < exists ; 2005 ; International Journal of Architectural Computing Volume 3 ; 3 >
+      au < exists ; 2006 ; International Journal of Architectural Computing Volume 4 ; 4 >
+      au < exists ; 2007 ; International Journal of Architectural Computing Volume 5 ; 5 >
+      au < exists ; 2008 ; International Journal of Architectural Computing Volume 6 ; 6 >
+      au < exists ; 2009 ; International Journal of Architectural Computing Volume 7 ; 7 >
+      au < exists ; 2010 ; International Journal of Architectural Computing Volume 8 ; 8 >
+      au < exists ; 2011 ; International Journal of Architectural Computing Volume 9 ; 9 >
+      au < exists ; 2012 ; International Journal of Architectural Computing Volume 10 ; 10 >
+      au < exists ; 2013 ; International Journal of Architectural Computing Volume 11 ; 11 >
+      au < exists ; 2014 ; International Journal of Architectural Computing Volume 12 ; 12 >
+      au < exists ; 2015 ; International Journal of Architectural Computing Volume 13 ; 13 >
+      au < expected ; 2016 ; International Journal of Architectural Computing Volume 14 ; 14 >
+
+    }
 
     {
 
@@ -20352,6 +20445,29 @@
       au < released ; 2014 ; Jadavpur Journal of International Relations Volume 18 ; 18 >
       au < expected ; 2015 ; Jadavpur Journal of International Relations Volume 19 ; 19 >
       au < expected ; 2016 ; Jadavpur Journal of International Relations Volume 20 ; 20 >
+
+    }
+
+    {
+
+    title <
+      name = The Journal of Computational Multiphase Flows ;
+      issn = 1757-482X ;
+      eissn = 1757-4838 
+    >
+
+      param[base_url] = http://cmf.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2009 ; The Journal of Computational Multiphase Flows Volume 1 ; 1 >
+      au < exists ; 2010 ; The Journal of Computational Multiphase Flows Volume 2 ; 2 >
+      au < exists ; 2011 ; The Journal of Computational Multiphase Flows Volume 3 ; 3 >
+      au < exists ; 2012 ; The Journal of Computational Multiphase Flows Volume 4 ; 4 >
+      au < exists ; 2013 ; The Journal of Computational Multiphase Flows Volume 5 ; 5 >
+      au < exists ; 2014 ; The Journal of Computational Multiphase Flows Volume 6 ; 6 >
+      au < exists ; 2015 ; The Journal of Computational Multiphase Flows Volume 7 ; 7 >
+      au < expected ; 2016 ; The Journal of Computational Multiphase Flows Volume 8 ; 8 >
 
     }
 
@@ -46411,6 +46527,38 @@ comment[mpj] = now published by Brill
         au < manifest ; 2016 ; Western Journal of Nursing Research Volume 38 ; 38 >
 
       }
+
+    }
+
+    {
+
+    title <
+      name = Wind Engineering ;
+      issn = 0309-524X ;
+      eissn = 2048-402X 
+    >
+
+      param[base_url] = http://eae.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2000 ; Wind Engineering Volume 24 ; 24 >
+      au < exists ; 2001 ; Wind Engineering Volume 25 ; 25 >
+      au < exists ; 2002 ; Wind Engineering Volume 26 ; 26 >
+      au < exists ; 2003 ; Wind Engineering Volume 27 ; 27 >
+      au < exists ; 2004 ; Wind Engineering Volume 28 ; 28 >
+      au < exists ; 2005 ; Wind Engineering Volume 29 ; 29 >
+      au < exists ; 2006 ; Wind Engineering Volume 30 ; 30 >
+      au < exists ; 2007 ; Wind Engineering Volume 31 ; 31 >
+      au < exists ; 2008 ; Wind Engineering Volume 32 ; 32 >
+      au < exists ; 2009 ; Wind Engineering Volume 33 ; 33 >
+      au < exists ; 2010 ; Wind Engineering Volume 34 ; 34 >
+      au < exists ; 2011 ; Wind Engineering Volume 35 ; 35 >
+      au < exists ; 2012 ; Wind Engineering Volume 36 ; 36 >
+      au < exists ; 2013 ; Wind Engineering Volume 37 ; 37 >
+      au < exists ; 2014 ; Wind Engineering Volume 38 ; 38 >
+      au < exists ; 2015 ; Wind Engineering Volume 39 ; 39 >
+      au < expected ; 2016 ; Wind Engineering Volume 40 ; 40 >
 
     }
 
