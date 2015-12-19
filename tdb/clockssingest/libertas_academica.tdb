@@ -1097,6 +1097,7 @@
 
     param[journal_id] = 150
     comment[0] = no years 2010, 2013, 2014 as of 04/02/15. No longer published.
+    #small differences among production boxes - global files...okay for trigger
     
     au < finished ; finished ; 2009 ; Immunotherapy Insights Volume 1 ; 1 ; 2009 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2011 ; Immunotherapy Insights Volume 2 ; 2 ; 2011 ; reingest3.clockss.org:8083 >
@@ -1536,6 +1537,7 @@
 
     param[journal_id] = 105
     comment[0] = no years 2014 as of 04/02/15
+    #small differences among production boxes - global files; post-correction orphans - okay for trigger
 
     au < finished ; finished ; 2008 ; Particle Physics Insights Volume 1 ; 1 ; 2008 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2009 ; Particle Physics Insights Volume 2 ; 2 ; 2009 ; reingest3.clockss.org:8083 >
