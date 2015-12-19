@@ -44,7 +44,8 @@
 
     title <
       name = Advances in Structural Engineering ;
-      issn = 1369-4332
+      issn = 1369-4332 ;
+      eissn = 2048-4011
     >
 
     param[journal_id] = ase
@@ -104,7 +105,8 @@
 
     title <
       name = Energy & Environment ;
-      issn = 0958-305X
+      issn = 0958-305X ;
+      eissn = 2048-4070
     >
 
     param[journal_id] = ee
@@ -206,12 +208,12 @@
 
   }
 
-
   {
 
     title <
       name = International Journal of Architectural Computing ;
-      issn = 1478-0771
+      issn = 1478-0771 ;
+      eissn = 2048-3988 
     >
 
     param[journal_id] = ijac
@@ -665,12 +667,12 @@
 
   }
 
-
   {
 
     title <
       name = The Journal of Computational Multiphase Flows ;
-      issn = 1757-482X
+      issn = 1757-482X ;
+      eissn = 1757-4838 
     >
 
     param[journal_id] = jcmf
@@ -686,12 +688,12 @@
 
   }
 
-
   {
 
     title <
       name = Wind Engineering ;
-      issn = 0309-524X
+      issn = 0309-524X ;
+      eissn = 2048-402X
     >
 
     param[journal_id] = we
