@@ -263,7 +263,6 @@
       param[base_url] = http://www.euppublishing.com/
       param[journal_id] = ccs
       implicit < status ; year ; name ; param[volume_name] >
-      comment[notReady] = 500 internal server error
 
       au < released ; 2004 ; Comparative Critical Studies Volume 1 ; 1 >
       au < released ; 2005 ; Comparative Critical Studies Volume 2 ; 2 >
@@ -274,7 +273,7 @@
       au < released ; 2010 ; Comparative Critical Studies Volume 7 ; 7 >
       au < released ; 2011 ; Comparative Critical Studies Volume 8 ; 8 >
       au < released ; 2012 ; Comparative Critical Studies Volume 9 ; 9 >
-      au < notReady ; 2013 ; Comparative Critical Studies Volume 10 ; 10 >
+      au < ready ; 2013 ; Comparative Critical Studies Volume 10 ; 10 >
       au < manifest ; 2014 ; Comparative Critical Studies Volume 11 ; 11 >
       au < manifest ; 2015 ; Comparative Critical Studies Volume 12 ; 12 >
     
