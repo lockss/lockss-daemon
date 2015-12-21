@@ -137,23 +137,34 @@ public class TestSubstanceChecker extends LockssTestCase {
 
   public void testFindSubstNo() throws Exception {
     mau.setSubstanceUrlPatterns(compileRegexps(ListUtil.list("one", "two" )));
-    mau.addUrl("http://four/", false, true);
-    mau.addUrl("http://three/", false, true);
+    List<MockCachedUrl> mcus = new ArrayList<MockCachedUrl>();
+
+    mcus.add(mau.addUrl("http://four/", false, true));
+    mcus.add(mau.addUrl("http://three/", false, true));
     mau.populateAuCachedUrlSet();
     checker = new SubstanceChecker(mau);
     assertEquals(State.No, checker.findSubstance());
     assertEquals(State.No, checker.hasSubstance());
+
+    for (MockCachedUrl mcu : mcus) {
+      assertFalse("CU left open: " + mcu, mcu.isOpen());
+    }
   }
 
   public void testFindSubstYes() throws Exception {
     mau.setSubstanceUrlPatterns(compileRegexps(ListUtil.list("one", "two" )));
-    mau.addUrl("http://four/", false, true);
-    mau.addUrl("http://two/", false, true);
-    mau.addUrl("http://three/", false, true);
+    List<MockCachedUrl> mcus = new ArrayList<MockCachedUrl>();
+    mcus.add(mau.addUrl("http://four/", false, true));
+    mcus.add(mau.addUrl("http://two/", false, true));
+    mcus.add(mau.addUrl("http://three/", false, true));
     mau.populateAuCachedUrlSet();
     checker = new SubstanceChecker(mau);
     assertEquals(State.Yes, checker.findSubstance());
     assertEquals(State.Yes, checker.hasSubstance());
+
+    for (MockCachedUrl mcu : mcus) {
+      assertFalse("CU left open: " + mcu, mcu.isOpen());
+    }
   }
 
   public void testCountSubst() throws Exception {
@@ -292,6 +303,8 @@ public class TestSubstanceChecker extends LockssTestCase {
     MockCachedUrl first = mau.addUrl(urls.get(0));
     CIProperties props = new CIProperties();
     props.put(CachedUrl.PROPERTY_CONTENT_URL, urls.get(urls.size() - 1));
+    List<MockCachedUrl> mcus = new ArrayList<MockCachedUrl>();
+    mcus.add(first);
     MockCachedUrl mcu = first;
 
     for (String url : urls) {
@@ -302,8 +315,16 @@ public class TestSubstanceChecker extends LockssTestCase {
       mcu.setProperties(props);
       props = null;
       mcu = mau.addUrl(url);
+      mcus.add(mcu);
     }
     checker.checkSubstance(first);
+    for (MockCachedUrl amcu : mcus) {
+      log.critical("amcu: " + amcu);
+      if (amcu != first) {
+	assertFalse("CU left open: " + amcu, amcu.isOpen());
+      };
+    }      
+
   }
 
   List<Pattern> compileRegexps(List<String> regexps)
