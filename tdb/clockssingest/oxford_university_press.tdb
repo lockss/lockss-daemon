@@ -731,6 +731,33 @@
   {
 
     title <
+      name = American Journal of Clinical Pathology ;
+      issn = 0002-9173 ;
+      eissn = 1943-7722 ;
+      issnl = 0002-9173
+    >
+    
+    param[base_url] = http://ajcp.oxfordjournals.org/
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
+    
+    au < exists ; exists ; 2010 ; American Journal of Clinical Pathology Volume 133 ; 133 ; >
+    au < exists ; exists ; 2010 ; American Journal of Clinical Pathology Volume 134 ; 134 ; >
+    au < exists ; exists ; 2011 ; American Journal of Clinical Pathology Volume 135 ; 135 ; >
+    au < exists ; exists ; 2011 ; American Journal of Clinical Pathology Volume 136 ; 136 ; >
+    au < exists ; exists ; 2012 ; American Journal of Clinical Pathology Volume 137 ; 137 ; >
+    au < exists ; exists ; 2012 ; American Journal of Clinical Pathology Volume 138 ; 138 ; >
+    au < exists ; exists ; 2013 ; American Journal of Clinical Pathology Volume 139 ; 139 ; >
+    au < exists ; exists ; 2013 ; American Journal of Clinical Pathology Volume 140 ; 140 ; >
+    au < exists ; exists ; 2014 ; American Journal of Clinical Pathology Volume 141 ; 141 ; >
+    au < exists ; exists ; 2014 ; American Journal of Clinical Pathology Volume 142 ; 142 ; >
+    au < exists ; exists ; 2015 ; American Journal of Clinical Pathology Volume 143 ; 143 ; >
+    au < exists ; exists ; 2015 ; American Journal of Clinical Pathology Volume 144 ; 144 ; >
+
+  }
+
+  {
+
+    title <
       name = American Journal of Epidemiology ;
       issn = 0002-9262 ;
       eissn = 1476-6256 ;
@@ -15408,6 +15435,27 @@
     au < expected ; exists ; 2016 ; The Journal of World Energy Law & Business Volume 9 ; 9 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = LabMedicine ;
+      issn = 0007-5027 ;
+      eissn = 1943-7730 ;
+      issnl = 0007-5027
+    >
+
+    param[base_url] = http://labmed.oxfordjournals.org/
+    pluginSuffix = oup.ClockssOUPDrupalPlugin
+    
+    au < exists ; exists ; 2010 ; LabMedicine Volume 41 ; 41 ; >
+    au < exists ; exists ; 2011 ; LabMedicine Volume 42 ; 42 ; >
+    au < exists ; exists ; 2012 ; LabMedicine Volume 43 ; 43 ; >
+    au < exists ; exists ; 2013 ; LabMedicine Volume 44 ; 44 ; >
+    au < exists ; exists ; 2014 ; LabMedicine Volume 45 ; 45 ; >
+    au < exists ; exists ; 2015 ; LabMedicine Volume 46 ; 46 ; >
 
   }
 
