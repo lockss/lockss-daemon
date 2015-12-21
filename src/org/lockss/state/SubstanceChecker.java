@@ -241,8 +241,12 @@ public class SubstanceChecker {
 	  if (redirCu == null) {
 	    break;
 	  }
-	  Properties redirProps = redirCu.getProperties();
-	  redirUrl = redirProps.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO);
+	  try {
+	    Properties redirProps = redirCu.getProperties();
+	    redirUrl = redirProps.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO);
+	  } finally {
+	    AuUtil.safeRelease(redirCu);
+	  }
 	} while (redirUrl != null);
 
 	for (String u : urls) {
@@ -265,12 +269,17 @@ public class SubstanceChecker {
   /** Iterate through AU until substance found. */ 
   public State findSubstance() {
     if (isStateFullyDetermined()) {
-      log.debug("findSubstance() already known");
+      log.debug("findSubstance() already known: " + hasSubstance +
+		": " + au.getName());
       return hasSubstance;
     }
-    log.debug("findSubstance() searching");
+    log.debug("findSubstance() searching: " + au.getName());
     for (CachedUrl cu : au.getAuCachedUrlSet().getCuIterable()) {
-      checkSubstance(cu);
+      try {
+	checkSubstance(cu);
+      } finally {
+	AuUtil.safeRelease(cu);
+      }
       if (isStateFullyDetermined()) {
 	break;
       }

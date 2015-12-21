@@ -70,6 +70,9 @@ public class MockCachedUrl implements CachedUrl {
   private LinkRewriterFactory lrf = null;
   private FileMetadataExtractor metadataExtractor = null;
 
+  private boolean released = false;
+  private boolean open = false;
+
   public MockCachedUrl(String url) {
     this.versions = new ArrayList();
     this.url = url;
@@ -151,6 +154,7 @@ public class MockCachedUrl implements CachedUrl {
   }
 
   public Reader openForReading() {
+    open = true;
     if (content != null) {
       return new StringReader(content);
     }
@@ -202,6 +206,7 @@ public class MockCachedUrl implements CachedUrl {
   public InputStream getUnfilteredInputStream(HashedInputStream.Hasher hasher) {
     log.debug3("MockCachedUrl.getUnfilteredInputStream with " +
 	       (hasher == null ? "no " : "") + "Hasher");
+    open = true;
     if (hasher == null) {
       return getUnfilteredInputStream();
     }
@@ -210,22 +215,29 @@ public class MockCachedUrl implements CachedUrl {
 
   public InputStream getUnfilteredInputStream() {
     log.debug3("MockCachedUrl.getUnfilteredInputStream");
+    InputStream res = null;
     try {
       if (cachedFile != null) {
 	if (isResource) {
-	  return ClassLoader.getSystemClassLoader().
+	  res = ClassLoader.getSystemClassLoader().
 	    getResourceAsStream(cachedFile);
 	} else {
-	  return new FileInputStream(cachedFile);
+	  res = new FileInputStream(cachedFile);
 	}
       }
     } catch (IOException ex) {
       return null;
     }
-    if (content != null) {
-      return new StringInputStream(content);
+    if (res == null && content != null) {
+      res = new StringInputStream(content);
     }
-    return cachedIS;
+    if (res == null) {
+      res = cachedIS;
+    }
+    if (res != null) {
+      open = true;
+    }
+    return res;
   }
 
   public InputStream openForHashing() {
@@ -285,6 +297,7 @@ public class MockCachedUrl implements CachedUrl {
   }
 
   public CIProperties getProperties(){
+    open = true;
     return cachedProp;
   }
 
@@ -293,10 +306,12 @@ public class MockCachedUrl implements CachedUrl {
   }
 
   public String getContentType(){
+    open = true;
     return cachedProp.getProperty(PROPERTY_CONTENT_TYPE);
   }
 
   public String getEncoding(){
+    open = true;
     return Constants.DEFAULT_ENCODING;
   }
 
@@ -347,6 +362,16 @@ public class MockCachedUrl implements CachedUrl {
   }
 
   public void release() {
+    released = true;
+    open = false;
+  }
+
+  public boolean isOpen() {
+    return open;
+  }
+
+  public boolean isReleased() {
+    return released;
   }
 
   public CachedUrl getArchiveMemberCu(ArchiveMemberSpec ams) {
