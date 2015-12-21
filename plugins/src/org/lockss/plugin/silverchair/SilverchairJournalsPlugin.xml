@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>27</string>
+    <string>28</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -90,6 +90,7 @@
       <string>1,"^%sissue\.aspx/SetArticlePDFLinkBasedOnAccess", base_url</string>
       <string>1,"^%svolume\.aspx/SetPDFLinkBasedOnAccess", base_url</string>
       <string>1,"^%spdfaccess\.ashx\?ResourceID", base_url</string>
+      <string>1,"^%sScriptResource\.axd?d", base_url</string>
     </list>
   </entry>
   <entry>
