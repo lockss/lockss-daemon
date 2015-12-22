@@ -517,10 +517,6 @@ while (my $line = <>) {
               if ($man_contents =~ m/<title>\s*(.*) LOCKSS Manifest Page\s*<\/title>/si) {
                   $vol_title = $1;
                   $vol_title =~ s/\s*\n\s*/ /g;
-                  $vol_title =~ s/2013/Volume $param{volume_name}/g;
-                  $vol_title =~ s/2014/Volume $param{volume_name}/g;
-                  $vol_title =~ s/2015/Volume $param{volume_name}/g;
-                  $vol_title =~ s/2016/Volume $param{volume_name}/g;
                   $vol_title =~ s/ &amp\; / & /;
                   if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
                       $vol_title = "\"" . $vol_title . "\"";
@@ -569,10 +565,6 @@ while (my $line = <>) {
               if ($man_contents =~ m/<title>\s*(.*) CLOCKSS Manifest Page\s*<\/title>/si) {
                   $vol_title = $1;
                   $vol_title =~ s/\s*\n\s*/ /g;
-                  $vol_title =~ s/2013/Volume $param{volume_name}/g;
-                  $vol_title =~ s/2014/Volume $param{volume_name}/g;
-                  $vol_title =~ s/2015/Volume $param{volume_name}/g;
-                  $vol_title =~ s/2016/Volume $param{volume_name}/g;
                   $vol_title =~ s/ &amp\; / & /;
                   if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
                       $vol_title = "\"" . $vol_title . "\"";
