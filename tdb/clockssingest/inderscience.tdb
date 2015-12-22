@@ -5859,7 +5859,7 @@
       param[journal_id] = ijns
       comment[0] = title is not yet published, 9/19/2013
 
-      au < expected ; exists ; 2015 ; International Journal of Network Science Volume 1 ; 1 >
+      au < manifest ; exists ; 2015 ; International Journal of Network Science Volume 1 ; 1 >
 
     }
 
@@ -6613,7 +6613,7 @@
 
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Quantitative Research in Education Volume 1 ; 1 >
       au < crawling ; exists ; 2014 ; International Journal of Quantitative Research in Education Volume 2 ; 2 >
-      au < expected ; exists ; 2015 ; International Journal of Quantitative Research in Education Volume 3 ; 3 >
+      au < manifest ; exists ; 2015 ; International Journal of Quantitative Research in Education Volume 3 ; 3 >
 
     }
 
@@ -6651,7 +6651,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Rapid Manufacturing Volume 2 ; 2 >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Rapid Manufacturing Volume 3 ; 3 >
       au < crawling ; exists ; 2014 ; International Journal of Rapid Manufacturing Volume 4 ; 4 >
-      au < expected ; exists ; 2015 ; International Journal of Rapid Manufacturing Volume 5 ; 5 >
+      au < manifest ; exists ; 2015 ; International Journal of Rapid Manufacturing Volume 5 ; 5 >
 
     }
 
