@@ -2008,6 +2008,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     param[base_url] = http://mp.bmj.com/
     comment[0] = merged with Clinical Pathology.
 
+    au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Molecular Pathology Volume 55 ; 55 >
     au < HighWirePressH20Plugin ; down ; 2003 ; Molecular Pathology Volume 56 ; 56 >
 
   }
@@ -2198,7 +2199,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Postgraduate Medical Journal Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Postgraduate Medical Journal Volume 89 ; 89 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Postgraduate Medical Journal Volume 90 ; 90 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Postgraduate Medical Journal Volume 91 ; 91 >
+    au < HighWirePressH20Plugin ; exists ; 2015 ; Postgraduate Medical Journal Volume 91 ; 91 >
+    au < HighWirePressH20Plugin ; exists ; 2016 ; Postgraduate Medical Journal Volume 92 ; 92 >
 
   }
 
@@ -2526,7 +2528,8 @@ comment[tc15] = recursive URL structure
       au < HighWirePressH20Plugin ; released ; 2012 ; Tobacco Control Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; released ; 2013 ; Tobacco Control Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; released ; 2014 ; Tobacco Control Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Tobacco Control Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; exists ; 2015 ; Tobacco Control Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; exists ; 2016 ; Tobacco Control Volume 25 ; 25 >
 
     }
 
