@@ -1,5 +1,5 @@
 /*
- * $Id: SciELOHtmlMetadataExtractorFactory.java 44086 2015-09-15 00:56:52Z etenbrink $
+ * $Id$
  */
 
 /*
@@ -69,7 +69,6 @@ public class SciELOHtmlMetadataExtractorFactory implements FileMetadataExtractor
    * <meta name="citation_firstpage"
    * <meta name="citation_lastpage"
    * <meta name="citation_id"
-   * <meta name="citation_pdf_url"
    * <meta name="citation_pdf_url"
    */
   public static class SciELOHtmlMetadataExtractor 

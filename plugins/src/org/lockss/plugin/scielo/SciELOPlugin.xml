@@ -1,4 +1,6 @@
 <map>
+  <!-- This plugin is currently for CLOCKSS only and single instance crawling 
+        no hash filtering needed -->
   <entry>
     <string>plugin_status</string>
     <string>testing - EJ</string>
@@ -9,7 +11,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -41,6 +43,15 @@
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
         <key>journal_issn</key>
         <displayName>Journal ISSN</displayName>
         <description>International Standard Serial Number.</description>
@@ -50,25 +61,8 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>base_url</key>
-        <displayName>Base URL</displayName>
-        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-        <type>3</type>
-        <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <!-- org.lockss.daemon.ConfigParamDescr>  may need to add params, so this is pending
-        <key>volume_name</key>
-        <displayName>Volume</displayName>
-        <type>1</type>
-        <size>20</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr -->
-      <org.lockss.daemon.ConfigParamDescr>
         <key>year</key>
-        <displayName>Volume</displayName>
+        <displayName>Year</displayName>
         <type>4</type>
         <size>4</size>
         <definitional>true</definitional>
@@ -83,9 +77,9 @@
   <entry>
     <string>au_start_url</string>
     <list>
-      <string>"%sscielo.php?script=sci_serial&amp;pid=%s&amp;lng=en", base_url, journal_issn, year</string>
-      <string>"%sscielo.php?script=sci_serial&amp;pid=%s&amp;lng=es", base_url, journal_issn, year</string>
-      <string>"%sscielo.php?script=sci_serial&amp;pid=%s&amp;lng=pt", base_url, journal_issn, year</string>
+      <string>"%sscielo.php?script=sci_issues&amp;pid=%s&amp;lng=en", base_url, journal_issn</string>
+      <string>"%sscielo.php?script=sci_issues&amp;pid=%s&amp;lng=es", base_url, journal_issn</string>
+      <string>"%sscielo.php?script=sci_issues&amp;pid=%s&amp;lng=pt", base_url, journal_issn</string>
     </list>
   </entry>
   <entry>
@@ -93,8 +87,12 @@
     <!-- examples
         http://www.scielo.br/img/es/lead.gif
         http://www.scielo.br/img/revistas/abcd/v27n1/0102-6720-abcd-27-01-00009-gf02-pt.jpg
+        http://www.scielo.br/pdf/abcd/v26n4/v26n4a20.pdf
+        http://www.scielo.br/pdf/abcd/v26n4/en_v26n4a20.pdf
         http://www.scielo.br/pdf/abcd/v27n1/0102-6720-abcd-27-01-00088.pdf
         http://www.scielo.br/pdf/abcd/v27n1/pt_0102-6720-abcd-27-01-00001.pdf
+        http://www.scielo.br/pdf/abcd/v26n4/en_v26n4a20.pdf
+        http://www.scielo.br/pdf/abcd/v26n4/v26n4a01.pdf
         http://www.scielo.br/scielo.php?script=sci_abstract&pid=S0102-67202014000100003&lng=en
         http://www.scielo.br/scielo.php?script=sci_abstract&pid=S0102-67202014000100003&lng=en&tlng=pt
         http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0102-67202014000100086&lng=en&tlng=pt
@@ -106,15 +104,15 @@
         http://www.scielo.br/scielo.php?script=sci_pdf&pid=S0102-67202014000100084&lng=en&tlng=pt
         http://www.scielo.br/scielo.php?script=sci_serial&pid=0102-6720&lng=pt
         http://www.scielo.br/scieloOrg/php/articleXML.php?pid=S0102-67202014000100001&lang=en
+        https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js
      -->
     <list>
-      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
-      <string>4,"^%s", base_url, journal_issn, year</string>
-      <string>1,"^%sscielo.php\?script=sci_issues[&amp;]pid=%s&amp;", base_url, journal_issn</string>
-      <string>1,"^%sscielo.php\?script=sci_.+%s%d[0-9]{4}&amp;", base_url, journal_issn, year</string>
-      <string>1,"^%sscielo.php\?script=sci_.+%s%d[0-9]{4,16}[&amp;]", base_url, journal_issn, year</string>
-      <string>1,"^%spdf/.+/(.._)?%s.+\.pdf", base_url, journal_issn, year</string>
-      <string>1,"^%sscieloOrg/php/articleXML.php[?]pid=S%s%d", base_url, journal_issn, year</string>
+      <string>1,"^https?://(%s|[^.]+\.googleapis\.com|cdn[.]mathjax[.]org|[^.]+\.cloudfront\.net)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%spdf/.+/(.._)?.+\.pdf", base_url</string>
+      <string>1,"^%sscielo\.php\?script=sci_issues&amp;pid=%s&amp;", base_url, journal_issn</string>
+      <string>1,"^%sscielo\.php\?script=sci_.+&amp;pid=[^&amp;]{0,5}%s%d[0-9]{4,16}", base_url, journal_issn, year</string>
+      <string>1,"^%sscieloOrg/php/articleXML\.php\?pid=[^&amp;]{0,5}%s%d[0-9]{4,16}", base_url, journal_issn, year</string>
     </list>
   </entry>
   <entry>
@@ -124,15 +122,14 @@
     http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0102-67202014000100001&lng=en&nrm=iso&tlng=pt
     -->
     <list>
-      <string>"^%spdf/.+/(.._)?%s", base_url, journal_issn, year</string>
-      <string>"^%sscielo.php\?script=sci_arttext.pid=.%s%d", base_url, journal_issn, year</string>
-      <!-- string>"^%s", base_url, journal_issn, year</string  -->
+      <string>"^%spdf/.+/(.._)?.+\.pdf", base_url</string>
+      <string>"^%sscielo.php\?script=sci_arttext&amp;pid=[^&amp;]{0,5}%s%d[0-9]{4,16}", base_url, journal_issn, year</string>
     </list>
   </entry>
-  <!-- recrawl depth is 3 -->
+  <!-- recrawl depth is 2 -->
  <entry>
     <string>au_crawl_depth</string>
-    <int>3</int>
+    <int>2</int>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -140,36 +137,16 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>3000</long>
+    <long>300</long>
   </entry>
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
-    <string>key:scielo</string>
+    <string>key:SciELO</string>
   </entry>
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.scielo.SciELOUrlNormalizer</string>
   </entry>
-  <!-- entry>
-    <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.scielo.SciELOHtmlCrawlFilterFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.scielo.SciELOUrlConsumerFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.scielo.SciELOHtmlLinkExtractorFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.scielo.SciELOHtmlHashFilterFactory</string>
-  </entry>
-  <entry>
-    <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.scielo.SciELOPdfFilterFactory</string>
-  </entry -->
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.scielo.SciELOArticleIteratorFactory</string>
@@ -187,14 +164,10 @@
       </entry>
     </map>
   </entry>
-  <!--  for ingest to clockss-production -->
   <entry>
-    <string>clockss_override</string>
-    <map>
-     <entry>
-        <string>au_def_pause_time</string>
-        <long>100</long>
-     </entry>
-    </map>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts -->
+    <string>au_permitted_host_pattern</string>
+    <string>[^.]+\.googleapis\.com|cdn[.]mathjax[.]org|[^.]+\.cloudfront\.net</string>
   </entry>
 </map>

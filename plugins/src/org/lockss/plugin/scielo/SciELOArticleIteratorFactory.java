@@ -1,4 +1,4 @@
-/* $Id: SciELOArticleIteratorFactory.java 44086 2015-09-15 00:56:52Z etenbrink $
+/* $Id$
  
 Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -30,7 +30,6 @@ package org.lockss.plugin.scielo;
 
 import java.util.Arrays;
 import java.util.Iterator;
-import java.util.List;
 import java.util.regex.*;
 
 import org.lockss.daemon.PluginException;
@@ -65,48 +64,48 @@ public class SciELOArticleIteratorFactory
   
   // scielo.php?script=sci_arttext&pid=S<journal_issn><year><volume><issue><identifier>&...
   protected static final String PATTERN_TEMPLATE = 
-    "\"%sscielo.php[?]script=sci_arttext[&amp;]pid=S%s%d[0-9]{1,99}[&amp;]lng=en$\", base_url, journal_issn, year";
+    "\"%sscielo.php[?]script=sci_arttext&pid=[^&]{0,5}%s%d[0-9]{4,16}&lng=en$\", base_url, journal_issn, year";
 
   // Groups:
   // 1. pid
   // 2. lng param (optional)
   protected Pattern FULLTEXT_PATTERN = 
-      Pattern.compile("scielo.php[?]script=(sci_arttext)[&amp;]pid=([^&]+)[&amp;]lng=(..)",
+      Pattern.compile("scielo.php[?]script=sci_arttext&pid=([^&-]{0,5}[0-9-]{9}[0-9]{8,20})&lng=en",
           Pattern.CASE_INSENSITIVE);
   
-  protected static String FT_REPLACEMENT1  = "scielo.php?script=sci_arttext&pid=$2&lng=en";
-  protected static String FT_REPLACEMENT1e = "scielo.php?script=sci_arttext&pid=$2&lng=es";
-  protected static String FT_REPLACEMENT1p = "scielo.php?script=sci_arttext&pid=$2&lng=pt";
-  protected static String FT_REPLACEMENT2i = "scielo.php?script=sci_arttext&pid=$2&lng=en&tlng=en";
-  protected static String FT_REPLACEMENT2e = "scielo.php?script=sci_arttext&pid=$2&lng=en&tlng=es";
-  protected static String FT_REPLACEMENT2p = "scielo.php?script=sci_arttext&pid=$2&lng=en&tlng=pt";
-  protected static String FT_REPLACEMENT3i = "scielo.php?script=sci_arttext&pid=$2&lng=es&tlng=en";
-  protected static String FT_REPLACEMENT3e = "scielo.php?script=sci_arttext&pid=$2&lng=es&tlng=es";
-  protected static String FT_REPLACEMENT3p = "scielo.php?script=sci_arttext&pid=$2&lng=es&tlng=pt";
-  protected static String FT_REPLACEMENT4i = "scielo.php?script=sci_arttext&pid=$2&lng=pt&tlng=en";
-  protected static String FT_REPLACEMENT4e = "scielo.php?script=sci_arttext&pid=$2&lng=pt&tlng=es";
-  protected static String FT_REPLACEMENT4p = "scielo.php?script=sci_arttext&pid=$2&lng=pt&tlng=pt";
+  protected static String FT_REPLACEMENT1i = "scielo.php?script=sci_arttext&pid=$1&lng=en";
+  protected static String FT_REPLACEMENT1e = "scielo.php?script=sci_arttext&pid=$1&lng=es";
+  protected static String FT_REPLACEMENT1p = "scielo.php?script=sci_arttext&pid=$1&lng=pt";
+  protected static String FT_REPLACEMENT2i = "scielo.php?script=sci_arttext&pid=$1&lng=en&tlng=en";
+  protected static String FT_REPLACEMENT2e = "scielo.php?script=sci_arttext&pid=$1&lng=en&tlng=es";
+  protected static String FT_REPLACEMENT2p = "scielo.php?script=sci_arttext&pid=$1&lng=en&tlng=pt";
+  protected static String FT_REPLACEMENT3i = "scielo.php?script=sci_arttext&pid=$1&lng=es&tlng=en";
+  protected static String FT_REPLACEMENT3e = "scielo.php?script=sci_arttext&pid=$1&lng=es&tlng=es";
+  protected static String FT_REPLACEMENT3p = "scielo.php?script=sci_arttext&pid=$1&lng=es&tlng=pt";
+  protected static String FT_REPLACEMENT4i = "scielo.php?script=sci_arttext&pid=$1&lng=pt&tlng=en";
+  protected static String FT_REPLACEMENT4e = "scielo.php?script=sci_arttext&pid=$1&lng=pt&tlng=es";
+  protected static String FT_REPLACEMENT4p = "scielo.php?script=sci_arttext&pid=$1&lng=pt&tlng=pt";
   
   // these can be created from the FT url
-  protected static String PDF_LANDING_REPLACEMENT1 = "scielo.php?script=sci_pdf&pid=$2&lng=en";
-  protected static String PDF_LANDING_REPLACEMENT2 = "scielo.php?script=sci_pdf&pid=$2&lng=es";
-  protected static String PDF_LANDING_REPLACEMENT3 = "scielo.php?script=sci_pdf&pid=$2&lng=pt";
+  protected static String PDF_LANDING_REPLACEMENT1 = "scielo.php?script=sci_pdf&pid=$1&lng=en";
+  protected static String PDF_LANDING_REPLACEMENT2 = "scielo.php?script=sci_pdf&pid=$1&lng=es";
+  protected static String PDF_LANDING_REPLACEMENT3 = "scielo.php?script=sci_pdf&pid=$1&lng=pt";
   
-  protected static String ABSTRACT_REPLACEMENT1  = "scielo.php?script=sci_abstract&pid=$2&lng=en";
-  protected static String ABSTRACT_REPLACEMENT1e = "scielo.php?script=sci_abstract&pid=$2&lng=es";
-  protected static String ABSTRACT_REPLACEMENT1p = "scielo.php?script=sci_abstract&pid=$2&lng=pt";
-  protected static String ABSTRACT_REPLACEMENT2i = "scielo.php?script=sci_abstract&pid=$2&lng=en&tlng=en";
-  protected static String ABSTRACT_REPLACEMENT2e = "scielo.php?script=sci_abstract&pid=$2&lng=en&tlng=es";
-  protected static String ABSTRACT_REPLACEMENT2p = "scielo.php?script=sci_abstract&pid=$2&lng=en&tlng=pt";
-  protected static String ABSTRACT_REPLACEMENT3i = "scielo.php?script=sci_abstract&pid=$2&lng=es&tlng=en";
-  protected static String ABSTRACT_REPLACEMENT3e = "scielo.php?script=sci_abstract&pid=$2&lng=es&tlng=es";
-  protected static String ABSTRACT_REPLACEMENT3p = "scielo.php?script=sci_abstract&pid=$2&lng=es&tlng=pt";
-  protected static String ABSTRACT_REPLACEMENT4i = "scielo.php?script=sci_abstract&pid=$2&lng=pt&tlng=en";
-  protected static String ABSTRACT_REPLACEMENT4e = "scielo.php?script=sci_abstract&pid=$2&lng=pt&tlng=es";
-  protected static String ABSTRACT_REPLACEMENT4p = "scielo.php?script=sci_abstract&pid=$2&lng=pt&tlng=pt";
+  protected static String ABSTRACT_REPLACEMENT1i = "scielo.php?script=sci_abstract&pid=$1&lng=en";
+  protected static String ABSTRACT_REPLACEMENT1e = "scielo.php?script=sci_abstract&pid=$1&lng=es";
+  protected static String ABSTRACT_REPLACEMENT1p = "scielo.php?script=sci_abstract&pid=$1&lng=pt";
+  protected static String ABSTRACT_REPLACEMENT2i = "scielo.php?script=sci_abstract&pid=$1&lng=en&tlng=en";
+  protected static String ABSTRACT_REPLACEMENT2e = "scielo.php?script=sci_abstract&pid=$1&lng=en&tlng=es";
+  protected static String ABSTRACT_REPLACEMENT2p = "scielo.php?script=sci_abstract&pid=$1&lng=en&tlng=pt";
+  protected static String ABSTRACT_REPLACEMENT3i = "scielo.php?script=sci_abstract&pid=$1&lng=es&tlng=en";
+  protected static String ABSTRACT_REPLACEMENT3e = "scielo.php?script=sci_abstract&pid=$1&lng=es&tlng=es";
+  protected static String ABSTRACT_REPLACEMENT3p = "scielo.php?script=sci_abstract&pid=$1&lng=es&tlng=pt";
+  protected static String ABSTRACT_REPLACEMENT4i = "scielo.php?script=sci_abstract&pid=$1&lng=pt&tlng=en";
+  protected static String ABSTRACT_REPLACEMENT4e = "scielo.php?script=sci_abstract&pid=$1&lng=pt&tlng=es";
+  protected static String ABSTRACT_REPLACEMENT4p = "scielo.php?script=sci_abstract&pid=$1&lng=pt&tlng=pt";
   
   // http://www.scielo.br/scieloOrg/php/articleXML.php?pid=S0102-67202014000400233&lang=en
-  protected static String XML_REPLACEMENT = "scieloOrg/php/articleXML.php?pid=$2&lang=en";
+  protected static String XML_REPLACEMENT = "scieloOrg/php/articleXML.php?pid=$1&lang=en";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -137,35 +136,35 @@ public class SciELOArticleIteratorFactory
     
     builder.addAspect(FULLTEXT_PATTERN,
         Arrays.asList(
-            FT_REPLACEMENT1,
-            FT_REPLACEMENT1e,
-            FT_REPLACEMENT1p,
-            FT_REPLACEMENT2i,
-            FT_REPLACEMENT2e,
-            FT_REPLACEMENT2p,
-            FT_REPLACEMENT3i,
-            FT_REPLACEMENT3e,
+            FT_REPLACEMENT4p,
             FT_REPLACEMENT3p,
-            FT_REPLACEMENT4i,
+            FT_REPLACEMENT2p,
+            FT_REPLACEMENT1p,
+            FT_REPLACEMENT3e,
             FT_REPLACEMENT4e,
-            FT_REPLACEMENT4p
+            FT_REPLACEMENT2e,
+            FT_REPLACEMENT1e,
+            FT_REPLACEMENT1i,
+            FT_REPLACEMENT2i,
+            FT_REPLACEMENT3i,
+            FT_REPLACEMENT4i
             ),
         ArticleFiles.ROLE_FULL_TEXT_HTML);
     
     builder.addAspect(
         Arrays.asList(
-            ABSTRACT_REPLACEMENT1,
-            ABSTRACT_REPLACEMENT1e,
-            ABSTRACT_REPLACEMENT1p,
-            ABSTRACT_REPLACEMENT2e,
-            ABSTRACT_REPLACEMENT2i,
-            ABSTRACT_REPLACEMENT2p,
-            ABSTRACT_REPLACEMENT3e,
-            ABSTRACT_REPLACEMENT3i,
+            ABSTRACT_REPLACEMENT4p,
             ABSTRACT_REPLACEMENT3p,
+            ABSTRACT_REPLACEMENT2p,
+            ABSTRACT_REPLACEMENT1p,
+            ABSTRACT_REPLACEMENT3e,
             ABSTRACT_REPLACEMENT4e,
-            ABSTRACT_REPLACEMENT4i,
-            ABSTRACT_REPLACEMENT4p
+            ABSTRACT_REPLACEMENT2e,
+            ABSTRACT_REPLACEMENT1e,
+            ABSTRACT_REPLACEMENT1i,
+            ABSTRACT_REPLACEMENT2i,
+            ABSTRACT_REPLACEMENT3i,
+            ABSTRACT_REPLACEMENT4i
             ),
         ArticleFiles.ROLE_ABSTRACT);
     
