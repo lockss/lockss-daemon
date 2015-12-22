@@ -537,8 +537,6 @@
         issn = 0001-8392
       >
 
-      {
-
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://asq.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
@@ -562,11 +560,41 @@
         au < manifest ; 2015 ; Administrative Science Quarterly Volume 60 ; 60 >
         au < expected ; 2016 ; Administrative Science Quarterly Volume 61 ; 61 >
 
-      }
+    }
+
+    {
+
+    title <
+      name = Adsorption Science & Technology ;
+      issn = 0263-6174 ;
+      eissn = 2048-4038
+    >
+
+      param[base_url] = http://adt.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2000 ; Adsorption Science & Technology Volume 18 ; 18 >
+      au < exists ; 2001 ; Adsorption Science & Technology Volume 19 ; 19 >
+      au < exists ; 2002 ; Adsorption Science & Technology Volume 20 ; 20 >
+      au < exists ; 2003 ; Adsorption Science & Technology Volume 21 ; 21 >
+      au < exists ; 2004 ; Adsorption Science & Technology Volume 22 ; 22 >
+      au < exists ; 2005 ; Adsorption Science & Technology Volume 23 ; 23 >
+      au < exists ; 2006 ; Adsorption Science & Technology Volume 24 ; 24 >
+      au < exists ; 2007 ; Adsorption Science & Technology Volume 25 ; 25 >
+      au < exists ; 2008 ; Adsorption Science & Technology Volume 26 ; 26 >
+      au < exists ; 2009 ; Adsorption Science & Technology Volume 27 ; 27 >
+      au < exists ; 2010 ; Adsorption Science & Technology Volume 28 ; 28 >
+      au < exists ; 2011 ; Adsorption Science & Technology Volume 29 ; 29 >
+      au < exists ; 2012 ; Adsorption Science & Technology Volume 30 ; 30 >
+      au < exists ; 2013 ; Adsorption Science & Technology Volume 31 ; 31 >
+      au < exists ; 2014 ; Adsorption Science & Technology Volume 32 ; 32 >
+      au < exists ; 2015 ; Adsorption Science & Technology Volume 33 ; 33 >
+      au < expected ; 2016 ; Adsorption Science & Technology Volume 34 ; 34 >
 
     }
 
-  {
+    {
 
     title <
       name = Advances in Mechanical Engineering ;
@@ -587,7 +615,7 @@
       au < manifest ; 2015 ; Advances in Mechanical Engineering Volume 7 ; 7 >
       au < expected ; 2016 ; Advances in Mechanical Engineering Volume 8 ; 8 >
 
-  }
+    }
 
     {
 
@@ -3498,9 +3526,9 @@
 
       title <
         name = Asian Journal of Legal Education ;
-      issn = 2322-0058 ;
-      eissn = 2348-2451 ;
-      issnl = 2322-0058
+        issn = 2322-0058 ;
+        eissn = 2348-2451 ;
+        issnl = 2322-0058
       >
 
         pluginSuffix = HighWirePressH20Plugin
@@ -11304,6 +11332,38 @@
       au < exists ; 2014 ; Energy & Environment Volume 25 ; 25 >
       au < exists ; 2015 ; Energy & Environment Volume 26 ; 26 >
       au < expected ; 2016 ; Energy & Environment Volume 27 ; 27 >
+
+    }
+
+    {
+
+    title <
+      name = Energy Exploration & Exploitation ;
+      issn = 0144-5987 ;
+      eissn = 2048-4054 
+    >
+
+      param[base_url] = http://eea.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2000 ; Energy Exploration & Exploitation Volume 18 ; 18 >
+      au < exists ; 2001 ; Energy Exploration & Exploitation Volume 19 ; 19 >
+      au < exists ; 2002 ; Energy Exploration & Exploitation Volume 20 ; 20 >
+      au < exists ; 2003 ; Energy Exploration & Exploitation Volume 21 ; 21 >
+      au < exists ; 2004 ; Energy Exploration & Exploitation Volume 22 ; 22 >
+      au < exists ; 2005 ; Energy Exploration & Exploitation Volume 23 ; 23 >
+      au < exists ; 2006 ; Energy Exploration & Exploitation Volume 24 ; 24 >
+      au < exists ; 2007 ; Energy Exploration & Exploitation Volume 25 ; 25 >
+      au < exists ; 2008 ; Energy Exploration & Exploitation Volume 26 ; 26 >
+      au < exists ; 2009 ; Energy Exploration & Exploitation Volume 27 ; 27 >
+      au < exists ; 2010 ; Energy Exploration & Exploitation Volume 28 ; 28 >
+      au < exists ; 2011 ; Energy Exploration & Exploitation Volume 29 ; 29 >
+      au < exists ; 2012 ; Energy Exploration & Exploitation Volume 30 ; 30 >
+      au < exists ; 2013 ; Energy Exploration & Exploitation Volume 31 ; 31 >
+      au < exists ; 2014 ; Energy Exploration & Exploitation Volume 32 ; 32 >
+      au < exists ; 2015 ; Energy Exploration & Exploitation Volume 33 ; 33 >
+      au < expected ; 2016 ; Energy Exploration & Exploitation Volume 34 ; 34 >
 
     }
 
@@ -27783,6 +27843,37 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       }
 
+    }
+
+    {
+
+    title <
+      name = Journal of Low Frequency Noise, Vibration and Active Control ;
+      issn = 0263-0923 ;
+      eissn = 2048-4046 
+    >
+
+      param[base_url] = http://lfn.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2000 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 19 ; 19 >
+      au < exists ; 2001 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 20 ; 20 >
+      au < exists ; 2002 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 21 ; 21 >
+      au < exists ; 2003 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 22 ; 22 >
+      au < exists ; 2004 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 23 ; 23 >
+      au < exists ; 2005 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 24 ; 24 >
+      au < exists ; 2006 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 25 ; 25 >
+      au < exists ; 2007 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 26 ; 26 >
+      au < exists ; 2008 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 27 ; 27 >
+      au < exists ; 2009 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 28 ; 28 >
+      au < exists ; 2010 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 29 ; 29 >
+      au < exists ; 2011 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 30 ; 30 >
+      au < exists ; 2012 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 31 ; 31 >
+      au < exists ; 2013 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 32 ; 32 >
+      au < exists ; 2014 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 33 ; 33 >
+      au < exists ; 2015 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 34 ; 34 >
+      au < expected ; 2016 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 35 ; 35 >
 
     }
 
@@ -35151,7 +35242,7 @@ comment[mpj] = now published by Brill
 
     }
 
-  {
+    {
 
     title <
       name = New Solutions ;
@@ -35182,9 +35273,9 @@ comment[mpj] = now published by Brill
       au < manifest ; 2015 ; New Solutions Volume 25 ; 25 >
       au < expected ; 2016 ; New Solutions Volume 26 ; 26 >
 
-  }
+    }
 
-  {
+    {
 
     title <
       name = Newspaper Research Journal ;
@@ -35199,9 +35290,9 @@ comment[mpj] = now published by Brill
       au < manifest ; 2015 ; Newspaper Research Journal Volume 36 ; 36 >
       au < expected ; 2016 ; Newspaper Research Journal Volume 37 ; 37 >
 
-  }
+    }
 
-  {
+    {
 
     title <
       name = Nineteenth Century Theatre and Film ;
@@ -35229,7 +35320,40 @@ comment[mpj] = now published by Brill
       au < expected ; 2015 ; Nineteenth Century Theatre and Film Volume 42 ; 42 >
       au < expected ; 2016 ; Nineteenth Century Theatre and Film Volume 43 ; 43 >
 
-  }
+    }
+
+    {
+
+    title <
+      name = Noise & Vibration Worldwide ;
+      issn = 0957-4565 ;
+      eissn = 2048-4062
+    >
+
+      param[base_url] = http://nvw.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 1999 ; Noise & Vibration Worldwide Volume 30 ; 30 >
+      au < exists ; 2000 ; Noise & Vibration Worldwide Volume 31 ; 31 >
+      au < exists ; 2001 ; Noise & Vibration Worldwide Volume 32 ; 32 >
+      au < exists ; 2002 ; Noise & Vibration Worldwide Volume 33 ; 33 >
+      au < exists ; 2003 ; Noise & Vibration Worldwide Volume 34 ; 34 >
+      au < exists ; 2004 ; Noise & Vibration Worldwide Volume 35 ; 35 >
+      au < exists ; 2005 ; Noise & Vibration Worldwide Volume 36 ; 36 >
+      au < exists ; 2006 ; Noise & Vibration Worldwide Volume 37 ; 37 >
+      au < exists ; 2007 ; Noise & Vibration Worldwide Volume 38 ; 38 >
+      au < exists ; 2008 ; Noise & Vibration Worldwide Volume 39 ; 39 >
+      au < exists ; 2009 ; Noise & Vibration Worldwide Volume 40 ; 40 >
+      au < exists ; 2010 ; Noise & Vibration Worldwide Volume 41 ; 41 >
+      au < exists ; 2011 ; Noise & Vibration Worldwide Volume 42 ; 42 >
+      au < exists ; 2012 ; Noise & Vibration Worldwide Volume 43 ; 43 >
+      au < exists ; 2013 ; Noise & Vibration Worldwide Volume 44 ; 44 >
+      au < exists ; 2014 ; Noise & Vibration Worldwide Volume 45 ; 45 >
+      au < exists ; 2015 ; Noise & Vibration Worldwide Volume 46 ; 46 >
+      au < expected ; 2016 ; Noise & Vibration Worldwide Volume 47 ; 47 >
+
+    }
 
     {
 
