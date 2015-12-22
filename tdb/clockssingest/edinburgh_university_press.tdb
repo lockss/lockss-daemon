@@ -379,6 +379,8 @@
       eissn = 1750-0125 ;
       issnl = 1474-9475 
      >
+     
+     comment[moved] = title changed to Holy Land and Palistine Studies. issn 2054-1988
 
     param[journal_id] = hls
 
@@ -393,7 +395,25 @@
     au < finished ; finished ; 2012 ; Holy Land Studies Volume 11 ; 11 >
     au < crawling ; exists ; 2013 ; Holy Land Studies Volume 12 ; 12 >
     au < finished ; crawling ; 2014 ; Holy Land Studies Volume 13 ; 13 >
-    au < crawling ; exists ; 2015 ; Holy Land Studies Volume 14 ; 14 >
+    au < superseded ; exists ; 2015 ; Holy Land Studies Volume 14 [superseded] ; 14 >
+    # title name and issn changed.
+
+  }
+
+  {
+
+    title <
+      name = Holy Land and Palistine Studies: A Multidisciplinary Journal ;
+      issn = 2054-1988 ;
+      eissn = 2054-1996 ;
+      issnl = 2054-1988 
+     >
+     
+     comment[moved] = title changed from Holy Land Studies. issn 1474-9475
+
+     param[journal_id] = hlps
+
+     au < exists ; exists ; 2015 ; Holy Land and Palistine Studies Volume 14 ; 14 >
 
   }
 
