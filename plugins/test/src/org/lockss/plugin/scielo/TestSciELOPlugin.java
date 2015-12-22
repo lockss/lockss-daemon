@@ -1,5 +1,5 @@
 /*
- * $Id: TestSciELOPlugin.java 43339 2015-07-31 21:11:05Z etenbrink $
+ * $Id$
  */
 
 /*

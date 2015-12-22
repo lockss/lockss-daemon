@@ -1,5 +1,5 @@
 /*
- * $Id: TestAPSDrupalArticleIteratorFactory.java 40932 2015-03-24 23:38:30Z etenbrink $
+ * $Id$
  */
 
 /*
