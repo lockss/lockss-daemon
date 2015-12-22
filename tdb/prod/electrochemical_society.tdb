@@ -137,14 +137,14 @@
       {
       attr[au_coverage_depth] = abstracts
       
-      au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Meeting Abstracts Volume MA2014-01 [abstracts only] ; MA2014-01 >
-      au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Meeting Abstracts Volume MA2014-02 [abstracts only] ; MA2014-02 >
-      au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Meeting Abstracts Volume MA2014-03 [abstracts only] ; MA2014-03 >
-      au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Meeting Abstracts Volume MA2014-04 [abstracts only] ; MA2014-04 >
-      au < HighWirePressH20Plugin ; manifest ; 2015 ; ECS Meeting Abstracts Volume MA2015-01 [abstracts only] ; MA2015-01 >
-      au < HighWirePressH20Plugin ; manifest ; 2015 ; ECS Meeting Abstracts Volume MA2015-02 [abstracts only] ; MA2015-02 >
-      au < HighWirePressH20Plugin ; manifest ; 2015 ; ECS Meeting Abstracts Volume MA2015-03 [abstracts only] ; MA2015-03 >
-      au < HighWirePressH20Plugin ; manifest ; 2015 ; ECS Meeting Abstracts Volume MA2015-04 [abstracts only] ; MA2015-04 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; ECS Meeting Abstracts Volume MA2014-01 [abstracts only] ; MA2014-01 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; ECS Meeting Abstracts Volume MA2014-02 [abstracts only] ; MA2014-02 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; ECS Meeting Abstracts Volume MA2014-03 [abstracts only] ; MA2014-03 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; ECS Meeting Abstracts Volume MA2014-04 [abstracts only] ; MA2014-04 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; ECS Meeting Abstracts Volume MA2015-01 [abstracts only] ; MA2015-01 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; ECS Meeting Abstracts Volume MA2015-02 [abstracts only] ; MA2015-02 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; ECS Meeting Abstracts Volume MA2015-03 [abstracts only] ; MA2015-03 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; ECS Meeting Abstracts Volume MA2015-04 [abstracts only] ; MA2015-04 >
       }
     
     }
