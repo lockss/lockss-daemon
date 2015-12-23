@@ -984,6 +984,13 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_PERMITTED_HOSTS,
 				    "foo[0-9]+\\.com");
       assertTrue(crawlManager.isGloballyPermittedHost("foo27.com"));
+      assertFalse(crawlManager.isGloballyPermittedHost("bar42.edu"));
+
+      ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_PERMITTED_HOSTS,
+				    "^foo[0-9]+\\.com$;^bar..\\.edu$");
+      assertTrue(crawlManager.isGloballyPermittedHost("foo27.com"));
+      assertTrue(crawlManager.isGloballyPermittedHost("bar42.edu"));
+      assertFalse(crawlManager.isGloballyPermittedHost("foo27.com;bar42.edu"));
     }
 
     public void testAllowedPluginPermittedHosts() {
@@ -996,6 +1003,12 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       assertTrue(crawlManager.isAllowedPluginPermittedHost("foo27.com"));
       ConfigurationUtil.removeKey(CrawlManagerImpl.PARAM_PERMITTED_HOSTS);
       assertTrue(crawlManager.isAllowedPluginPermittedHost("foo27.com"));
+
+      ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_ALLOWED_PLUGIN_PERMITTED_HOSTS,
+				    "^foo[0-9]+\\.com$;^baz..\\.edu$");
+      assertTrue(crawlManager.isAllowedPluginPermittedHost("foo27.com"));
+      assertTrue(crawlManager.isAllowedPluginPermittedHost("baz42.edu"));
+      assertFalse(crawlManager.isAllowedPluginPermittedHost("foo27.com;baz42.edu"));
     }
   }
 

@@ -257,20 +257,21 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     PREFIX + "globallyExcludedUrlPattern";
   static final String DEFAULT_EXCLUDE_URL_PATTERN = null;
 
-  /** Regexp matching hosts from which collection is permitted without
-   * explicit permission on the host.  Intended for distribution sites for
-   * standard vss, js, etc. libraries. */
+  /** List of regexps matching hosts from which collection is permitted
+   * without explicit permission on the host.  Intended for distribution
+   * sites for standard vss, js, etc. libraries. */
   public static final String PARAM_PERMITTED_HOSTS =
     PREFIX + "globallyPermittedHosts";
-  static final String DEFAULT_PERMITTED_HOSTS = null;
+  static final List<String> DEFAULT_PERMITTED_HOSTS = Collections.EMPTY_LIST;
 
-  /** Regexp matching hosts from which plugins are allowed to permit
-   * collection without explicit permission on the host.  I.e., this is a
-   * filter on what plugins are allowed to permit via
+  /** List of regexps matching hosts from which plugins are allowed to
+   * permit collection without explicit permission on the host.  I.e., this
+   * is a filter on what plugins are allowed to permit via
    * au_permitted_host_pattern */
   public static final String PARAM_ALLOWED_PLUGIN_PERMITTED_HOSTS =
     PREFIX + "allowedPluginPermittedHosts";
-  static final String DEFAULT_ALLOWED_PLUGIN_PERMITTED_HOSTS = null;
+  static final List<String> DEFAULT_ALLOWED_PLUGIN_PERMITTED_HOSTS =
+    Collections.EMPTY_LIST;
 
   // Defined here because it makes more sense for the name to be associated
   // with the crawler even though it's currently used in BaseUrlFetcher.
@@ -333,8 +334,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   /** Note that these are Apache ORO Patterns, not Java Patterns */
   private Pattern globallyExcludedUrlPattern;
   
-  private Pattern globallyPermittedHostPattern;;
-  private Pattern allowedPluginPermittedHosts;
+  private List<Pattern> globallyPermittedHostPatterns = Collections.EMPTY_LIST;;
+  private List<Pattern> allowedPluginPermittedHosts;
 
   private PatternIntMap crawlPriorityAuidMap;
 
@@ -552,13 +553,13 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       }
 
       if (changedKeys.contains(PARAM_PERMITTED_HOSTS)) {
-	setGloballyPermittedHostPattern(config.get(PARAM_PERMITTED_HOSTS,
-						   DEFAULT_PERMITTED_HOSTS));
+	setGloballyPermittedHostPatterns(config.getList(PARAM_PERMITTED_HOSTS,
+							DEFAULT_PERMITTED_HOSTS));
       }
 
       if (changedKeys.contains(PARAM_ALLOWED_PLUGIN_PERMITTED_HOSTS)) {
-	setAllowedPluginPermittedHostPattern(config.get(PARAM_ALLOWED_PLUGIN_PERMITTED_HOSTS,
-							DEFAULT_ALLOWED_PLUGIN_PERMITTED_HOSTS));
+	setAllowedPluginPermittedHostPatterns(config.getList(PARAM_ALLOWED_PLUGIN_PERMITTED_HOSTS,
+							     DEFAULT_ALLOWED_PLUGIN_PERMITTED_HOSTS));
       }
 
       if (changedKeys.contains(PARAM_MAX_REPAIR_RATE)) {
@@ -627,52 +628,68 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   }
 
   public boolean isGloballyPermittedHost(String host) {
-    if (globallyPermittedHostPattern == null) {
-      return false;
-    }
-    return RegexpUtil.getMatcher().contains(host, globallyPermittedHostPattern);
-  }
-
-  void setGloballyPermittedHostPattern(String pat) {
-    if (pat != null) {
-      int flags =
-	Perl5Compiler.READ_ONLY_MASK | Perl5Compiler.CASE_INSENSITIVE_MASK;
-      try {
-	globallyPermittedHostPattern = RegexpUtil.getCompiler().compile(pat,
-									flags);
-	logger.info("Globally permitted host pattern: " + pat);
-	return;
-      } catch (MalformedPatternException e) {
-	logger.error("Illegal globally permitted host pattern: " + pat, e);
+    for (Pattern pat : globallyPermittedHostPatterns) {
+      if (RegexpUtil.getMatcher().contains(host, pat)) {
+	return true;
       }
     }
-    globallyPermittedHostPattern = null;
-    logger.debug("No global exclude pattern");
+    return false;
+  }
+
+  void setGloballyPermittedHostPatterns(List<String> pats) {
+    if (pats == null) {
+      globallyPermittedHostPatterns = Collections.EMPTY_LIST;
+      logger.debug("No global exclude patterns");
+    } else {
+      // not using RegexpUtil.compileRegexps() so one bad pattern doesn't
+      // prevent others from taking effect
+      int flags =
+	Perl5Compiler.READ_ONLY_MASK | Perl5Compiler.CASE_INSENSITIVE_MASK;
+      Perl5Compiler comp = RegexpUtil.getCompiler();
+      List<Pattern> res = new ArrayList<Pattern>(pats.size());
+      for (String pat : pats) {
+	try {
+	  res.add(comp.compile(pat, flags));
+	} catch (MalformedPatternException e) {
+	  logger.error("Illegal globally permitted host pattern: " + pat, e);
+	}
+      }
+      globallyPermittedHostPatterns = res;
+      logger.info("Globally permitted host patterns: " + res);
+    }
   }
 
   public boolean isAllowedPluginPermittedHost(String host) {
-    if (allowedPluginPermittedHosts == null) {
-      return false;
-    }
-    return RegexpUtil.getMatcher().contains(host, allowedPluginPermittedHosts);
-  }
-
-  void setAllowedPluginPermittedHostPattern(String pat) {
-    if (pat != null) {
-      int flags =
-	Perl5Compiler.READ_ONLY_MASK | Perl5Compiler.CASE_INSENSITIVE_MASK;
-      try {
-	allowedPluginPermittedHosts = RegexpUtil.getCompiler().compile(pat,
-								       flags);
-	logger.info("Allowed plugin permitted host pattern: " + pat);
-	return;
-      } catch (MalformedPatternException e) {
-	logger.error("Illegal allowed plugin permitted host pattern: " + pat,
-		     e);
+    for (Pattern pat : allowedPluginPermittedHosts) {
+      if (RegexpUtil.getMatcher().contains(host, pat)) {
+	return true;
       }
     }
-    allowedPluginPermittedHosts = null;
-    logger.debug("No allowed plugin permitted hosts");
+    return false;
+  }
+
+  void setAllowedPluginPermittedHostPatterns(List<String> pats) {
+    if (pats == null) {
+      allowedPluginPermittedHosts = Collections.EMPTY_LIST;
+      logger.debug("No allowed plugin permitted hosts");
+    } else {
+      // not using RegexpUtil.compileRegexps() so one bad pattern doesn't
+      // prevent others from taking effect
+      int flags =
+	Perl5Compiler.READ_ONLY_MASK | Perl5Compiler.CASE_INSENSITIVE_MASK;
+      Perl5Compiler comp = RegexpUtil.getCompiler();
+      List<Pattern> res = new ArrayList<Pattern>(pats.size());
+      for (String pat : pats) {
+	try {
+	  res.add(comp.compile(pat, flags));
+	} catch (MalformedPatternException e) {
+	  logger.error("Illegal allowed plugin permitted host pattern: " + pat,
+		       e);
+	}
+      }
+      allowedPluginPermittedHosts = res;
+      logger.info("Allowed plugin permitted host patterns: " + res);
+    }
   }
 
   static final Runnable NULL_RUNNER = new Runnable() {
