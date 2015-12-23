@@ -22,9 +22,9 @@
       au < manifest ; exists ; 2010 ; Beneficial Microbes Volume 1 ; 1 >
       au < manifest ; exists ; 2011 ; Beneficial Microbes Volume 2 ; 2 >
       au < manifest ; exists ; 2012 ; Beneficial Microbes Volume 3 ; 3 >
-      au < ready ; exists ; 2013 ; Beneficial Microbes Volume 4 ; 4 >
+      au < crawling ; exists ; 2013 ; Beneficial Microbes Volume 4 ; 4 >
       au < ready ; exists ; 2014 ; Beneficial Microbes Volume 5 ; 5 >
-      au < ready ; exists ; 2015 ; Beneficial Microbes Volume 6 ; 6 >
+      au < crawling ; exists ; 2015 ; Beneficial Microbes Volume 6 ; 6 >
 
 
     }
@@ -42,7 +42,7 @@
       au < manifest ; exists ; 2012 ; Comparative Exercise Physiology Volume 8 ; 8 >
       au < ready ; exists ; 2013 ; Comparative Exercise Physiology Volume 9 ; 9 >
       au < crawling ; exists ; 2014 ; Comparative Exercise Physiology Volume 10 ; 10 >
-      au < ready ; exists ; 2015 ; Comparative Exercise Physiology Volume 11 ; 11 >
+      au < crawling ; exists ; 2015 ; Comparative Exercise Physiology Volume 11 ; 11 >
 
     }
 
@@ -55,7 +55,7 @@
 
       param[journal_id] = jiff
 
-      au < ready ; exists ; 2015 ; Journal of Insects as Food and Feed Volume 1 ; 1 >
+      au < crawling ; exists ; 2015 ; Journal of Insects as Food and Feed Volume 1 ; 1 >
 
     }
 
@@ -97,9 +97,9 @@
 
       param[journal_id] = qas
 
-      au < ready ; exists ; 2013 ; Quality Assurance and Safety of Crops & Foods Volume 5 ; 5 >
+      au < crawling ; exists ; 2013 ; Quality Assurance and Safety of Crops & Foods Volume 5 ; 5 >
       au < crawling ; exists ; 2014 ; Quality Assurance and Safety of Crops & Foods Volume 6 ; 6 >
-      au < ready ; exists ; 2015 ; Quality Assurance and Safety of Crops & Foods Volume 7 ; 7 >
+      au < crawling ; exists ; 2015 ; Quality Assurance and Safety of Crops & Foods Volume 7 ; 7 >
 
     }
 
@@ -119,7 +119,7 @@
       au < manifest ; exists ; 2011 ; World Mycotoxin Journal Volume 4 ; 4 >
       au < manifest ; exists ; 2012 ; World Mycotoxin Journal Volume 5 ; 5 >
       au < ready ; exists ; 2013 ; World Mycotoxin Journal Volume 6 ; 6 >
-      au < ready ; exists ; 2014 ; World Mycotoxin Journal Volume 7 ; 7 >
+      au < crawling ; exists ; 2014 ; World Mycotoxin Journal Volume 7 ; 7 >
       au < crawling ; exists ; 2015 ; World Mycotoxin Journal Volume 8 ; 8 >
 
     }
