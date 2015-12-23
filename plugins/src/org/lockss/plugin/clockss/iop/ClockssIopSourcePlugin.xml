@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>development</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,20 +9,8 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
-  <!-- DEBUG ONLY SECTION to avoid sample directories
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>4,"^%s", base_url</string>
-      <string>2,"^%s%d/.*;O=[AD]$", base_url, year</string>
-      <string>2,"^%s%d/1/", base_url, year</string>
-      <string>2,"^%s%d/2/", base_url, year</string>
-      <string>1,"^%s%d/", base_url, year</string>
-    </list>
-  </entry>  
-  -->
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
