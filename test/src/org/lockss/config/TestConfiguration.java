@@ -533,26 +533,16 @@ public class TestConfiguration extends LockssTestCase {
   }
 
   private static final String c3 =
-    "prop.p1=a;b;c;d;e;f;g";
+    "prop.p1=a;b;c;d;e;f;g\n" +
+    "prop.p2=xxx";
 
   public void testGetList() throws IOException {
     Configuration config = newConfiguration();
     config.load(loadFCF(FileTestUtil.urlOfString(c3)));
-    try {
-      List l = config.getList("prop.p1");
-      assertNotNull(l);
-      assertEquals(7, l.size());
-      Collections.sort(l);
-      assertEquals("a", (String)l.get(0));
-      assertEquals("b", (String)l.get(1));
-      assertEquals("c", (String)l.get(2));
-      assertEquals("d", (String)l.get(3));
-      assertEquals("e", (String)l.get(4));
-      assertEquals("f", (String)l.get(5));
-      assertEquals("g", (String)l.get(6));
-    } catch (Exception ex) {
-      fail("Should not have thrown: " + ex);
-    }
+    List l = config.getList("prop.p1");
+    assertEquals(ListUtil.list("a", "b", "c", "d", "e", "f", "g"), 
+		 config.getList("prop.p1"));
+    assertEquals(ListUtil.list("xxx"), config.getList("prop.p2"));
   }
 
   public void testGetListEmptyStrings() throws IOException {
