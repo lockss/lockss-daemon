@@ -184,8 +184,8 @@ public class SciELOArticleIteratorFactory
     builder.addAspect(FT_REPLACEMENT3e, ArticleFiles.ROLE_FULL_TEXT_HTML + "_es");
     builder.addAspect(FT_REPLACEMENT4p, ArticleFiles.ROLE_FULL_TEXT_HTML + "_pt");
     
-    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
-        ArticleFiles.ROLE_FULL_TEXT_HTML);
+    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_FULL_TEXT_PDF);
     
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
         ArticleFiles.ROLE_ABSTRACT,
