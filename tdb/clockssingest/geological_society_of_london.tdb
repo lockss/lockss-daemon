@@ -73,6 +73,7 @@
     au < crawling ; exists ; 2013 ; Geochemistry: Exploration, Environment, Analysis Volume 13 ; 13 >
     au < finished ; finished ; 2014 ; Geochemistry: Exploration, Environment, Analysis Volume 14 ; 14 >
     au < crawling ; exists ; 2015 ; Geochemistry: Exploration, Environment, Analysis Volume 15 ; 15 >
+    au < expected ; exists ; 2016 ; Geochemistry: Exploration, Environment, Analysis Volume 16 ; 16 >
 
   }
 
@@ -131,6 +132,7 @@
     au < crawling ; exists ; 2015 ; Geological Society of London Memoirs Volume 43 ; 43 >
     au < crawling ; exists ; 2015 ; Geological Society of London Memoirs Volume 44 ; 44 >
     au < crawling ; exists ; 2015 ; Geological Society of London Memoirs Volume 45 ; 45 >
+    au < expected ; exists ; 2016 ; Geological Society of London Memoirs Volume 46 ; 46 >
 
   }
 
@@ -554,7 +556,7 @@
     au < expected ; exists ; 2015 ; Geological Society of London Special Publications Volume 408 ; 408 >
     au < crawling ; exists ; 2015 ; Geological Society of London Special Publications Volume 409 ; 409 >
     au < crawling ; exists ; 2015 ; Geological Society of London Special Publications Volume 410 ; 410 >
-    au < manifest ; exists ; 2015 ; Geological Society of London Special Publications Volume 411 ; 411 >
+    au < testing ; exists ; 2015 ; Geological Society of London Special Publications Volume 411 ; 411 >
     au < crawling ; exists ; 2015 ; Geological Society of London Special Publications Volume 412 ; 412 >
     au < crawling ; exists ; 2015 ; Geological Society of London Special Publications Volume 413 ; 413 >
     au < crawling ; exists ; 2015 ; Geological Society of London Special Publications Volume 414 ; 414 >
@@ -565,7 +567,8 @@
     au < crawling ; exists ; 2015 ; Geological Society of London Special Publications Volume 419 ; 419 >
     au < expected ; exists ; 2015 ; Geological Society of London Special Publications Volume 420 ; 420 >
     au < crawling ; exists ; 2015 ; Geological Society of London Special Publications Volume 421 ; 421 >
-    au < manifest ; exists ; 2015 ; Geological Society of London Special Publications Volume 422 ; 422 >
+    au < testing ; exists ; 2015 ; Geological Society of London Special Publications Volume 422 ; 422 >
+    au < expected ; exists ; 2016 ; Geological Society of London Special Publications Volume 423 ; 423 >
 
   }
 
@@ -626,6 +629,7 @@
     au < crawling ; exists ; 2013 ; Journal of the Geological Society of London Volume 170 ; 170 >
     au < finished ; crawling ; 2014 ; Journal of the Geological Society of London Volume 171 ; 171 >
     au < crawling ; exists ; 2015 ; Journal of the Geological Society of London Volume 172 ; 172 >
+    au < expected ; exists ; 2016 ; Journal of the Geological Society of London Volume 173 ; 173 >
 
   }
 
@@ -660,6 +664,7 @@
       au < frozen ; exists ; 2013 ; Petroleum Geoscience Volume 19 ; 19 >
       au < finished ; crawling ; 2014 ; Petroleum Geoscience Volume 20 ; 20 >
       au < crawling ; exists ; 2015 ; Petroleum Geoscience Volume 21 ; 21 >
+      au < expected ; exists ; 2016 ; Petroleum Geoscience Volume 22 ; 22 >
     
   }
 
@@ -722,6 +727,7 @@
     au < crawling ; exists ; 2013 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 46 ; 46 >
     au < finished ; crawling ; 2014 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 47 ; 47 >
     au < crawling ; exists ; 2015 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 48 ; 48 >
+    au < expected ; exists ; 2016 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 49 ; 49 >
       
   }
 
