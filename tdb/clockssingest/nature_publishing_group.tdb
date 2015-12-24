@@ -2423,8 +2423,20 @@
     au < crawling ; exists ; 2015 ; Nature Volume 524 ; 2015 ; 524 >
     au < crawling ; exists ; 2015 ; Nature Volume 525 ; 2015 ; 525 >
     au < crawling ; exists ; 2015 ; Nature Volume 526 ; 2015 ; 526 >
-    au < manifest ; exists ; 2015 ; Nature Volume 527 ; 2015 ; 527 >
-    au < manifest ; exists ; 2015 ; Nature Volume 528 ; 2015 ; 528 >
+    au < ready ; exists ; 2015 ; Nature Volume 527 ; 2015 ; 527 >
+    au < ready ; exists ; 2015 ; Nature Volume 528 ; 2015 ; 528 >
+    au < expected ; exists ; 2016 ; Nature Volume 529 ; 2016 ; 529 >
+    au < expected ; exists ; 2016 ; Nature Volume 530 ; 2016 ; 530 >
+    au < expected ; exists ; 2016 ; Nature Volume 531 ; 2016 ; 531 >
+    au < expected ; exists ; 2016 ; Nature Volume 532 ; 2016 ; 532 >
+    au < expected ; exists ; 2016 ; Nature Volume 533 ; 2016 ; 533 >
+    au < expected ; exists ; 2016 ; Nature Volume 534 ; 2016 ; 534 >
+    au < expected ; exists ; 2016 ; Nature Volume 535 ; 2016 ; 535 >
+    au < expected ; exists ; 2016 ; Nature Volume 536 ; 2016 ; 536 >
+    au < expected ; exists ; 2016 ; Nature Volume 537 ; 2016 ; 537 >
+    au < expected ; exists ; 2016 ; Nature Volume 538 ; 2016 ; 538 >
+    au < expected ; exists ; 2016 ; Nature Volume 539 ; 2016 ; 539 >
+    au < expected ; exists ; 2016 ; Nature Volume 540 ; 2016 ; 540 >
 
   }
 
@@ -2472,6 +2484,7 @@
     au < crawling ; exists ; 2013 ; Nature Biotechnology Volume 31 ; 2013 ; 31 >
     au < crawling ; exists ; 2014 ; Nature Biotechnology Volume 32 ; 2014 ; 32 >
     au < crawling ; exists ; 2015 ; Nature Biotechnology Volume 33 ; 2015 ; 33 >
+    au < expected ; exists ; 2016 ; Nature Biotechnology Volume 34 ; 2016 ; 34 >
 
   }
 
@@ -2504,6 +2517,7 @@
     au < crawling ; exists ; 2013 ; Nature Cell Biology Volume 15 ; 2013 ; 15 >
     au < crawling ; exists ; 2014 ; Nature Cell Biology Volume 16 ; 2014 ; 16 >
     au < crawling ; exists ; 2015 ; Nature Cell Biology Volume 17 ; 2015 ; 17 >
+    au < expected ; exists ; 2016 ; Nature Cell Biology Volume 18 ; 2016 ; 18 >
 
   }
 
@@ -2529,6 +2543,7 @@
     au < crawling ; exists ; 2013 ; Nature Chemical Biology Volume 9 ; 2013 ; 9 >
     au < crawling ; exists ; 2014 ; Nature Chemical Biology Volume 10 ; 2014 ; 10 >
     au < crawling ; exists ; 2015 ; Nature Chemical Biology Volume 11 ; 2015 ; 11 >
+    au < expected ; exists ; 2016 ; Nature Chemical Biology Volume 12 ; 2016 ; 12 >
 
   }
 
@@ -2550,6 +2565,7 @@
     au < crawling ; exists ; 2013 ; Nature Chemistry Volume 5 ; 2013 ; 5 >
     au < crawling ; exists ; 2014 ; Nature Chemistry Volume 6 ; 2014 ; 6 >
     au < crawling ; exists ; 2015 ; Nature Chemistry Volume 7 ; 2015 ; 7 >
+    au < expected ; exists ; 2016 ; Nature Chemistry Volume 8 ; 2016 ; 8 >
 
   }
 
@@ -2568,6 +2584,7 @@
     au < crawling ; exists ; 2013 ; Nature Climate Change Volume 3 ; 2013 ; 3 >
     au < crawling ; exists ; 2014 ; Nature Climate Change Volume 4 ; 2014 ; 4 >
     au < crawling ; exists ; 2015 ; Nature Climate Change Volume 5 ; 2015 ; 5 >
+    au < expected ; exists ; 2016 ; Nature Climate Change Volume 6 ; 2016 ; 6 >
 
   }
 
@@ -2588,7 +2605,8 @@
     au < crawling ; exists ; 2013 ; Nature Communications Volume 4 ; 2013 ; 4 >
     au < crawling ; exists ; 2014 ; Nature Communications Volume 5 ; 2014 ; 5 >
     au < notReady ; exists ; 2015 ; Nature Communications Volume 6 ; 2015 ; 6 >
-  
+    au < expected ; exists ; 2016 ; Nature Communications Volume 7 ; 2016 ; 7 >
+
   }
   {
 
@@ -2611,6 +2629,7 @@
     au < finished ; finished ; 2013 ; Nature Digest Volume 10 ; 2013 ; 10 >
     au < crawling ; exists ; 2014 ; Nature Digest Volume 11 ; 2014 ; 11 >
     au < crawling ; exists ; 2015 ; Nature Digest Volume 12 ; 2015 ; 12 >
+    au < expected ; exists ; 2016 ; Nature Digest Volume 13 ; 2016 ; 13 >
 
   }
 
@@ -2672,6 +2691,7 @@
     au < crawling ; exists ; 2013 ; Nature Genetics Volume 45 ; 2013 ; 45 >
     au < crawling ; exists ; 2014 ; Nature Genetics Volume 46 ; 2014 ; 46 >
     au < crawling ; exists ; 2015 ; Nature Genetics Volume 47 ; 2015 ; 47 >
+    au < expected ; exists ; 2016 ; Nature Genetics Volume 48 ; 2016 ; 48 >
 
   }
 
@@ -2694,6 +2714,7 @@
     au < crawling ; exists ; 2013 ; Nature Geoscience Volume 6 ; 2013 ; 6 >
     au < crawling ; exists ; 2014 ; Nature Geoscience Volume 7 ; 2014 ; 7 >
     au < crawling ; exists ; 2015 ; Nature Geoscience Volume 8 ; 2015 ; 8 >
+    au < expected ; exists ; 2016 ; Nature Geoscience Volume 9 ; 2016 ; 9 >
 
   }
 
@@ -2724,6 +2745,7 @@
     au < crawling ; exists ; 2013 ; Nature Immunology Volume 14 ; 2013 ; 14 >
     au < crawling ; exists ; 2014 ; Nature Immunology Volume 15 ; 2014 ; 15 >
     au < crawling ; exists ; 2015 ; Nature Immunology Volume 16 ; 2015 ; 16 >
+    au < expected ; exists ; 2016 ; Nature Immunology Volume 17 ; 2016 ; 17 >
 
   }
 
@@ -2752,6 +2774,7 @@
     au < crawling ; exists ; 2013 ; Nature Materials Volume 12 ; 2013 ; 12 >
     au < crawling ; exists ; 2014 ; Nature Materials Volume 13 ; 2014 ; 13 >
     au < crawling ; exists ; 2015 ; Nature Materials Volume 14 ; 2015 ; 14 >
+    au < expected ; exists ; 2016 ; Nature Materials Volume 15 ; 2016 ; 15 >
 
   }
 
@@ -2787,6 +2810,7 @@
     au < crawling ; exists ; 2013 ; Nature Medicine Volume 19 ; 2013 ; 19 >
     au < crawling ; exists ; 2014 ; Nature Medicine Volume 20 ; 2014 ; 20 >
     au < crawling ; exists ; 2015 ; Nature Medicine Volume 21 ; 2015 ; 21 >
+    au < expected ; exists ; 2016 ; Nature Medicine Volume 22 ; 2016 ; 22 >
 
   }
 
@@ -2813,6 +2837,7 @@
     au < crawling ; exists ; 2013 ; Nature Methods Volume 10 ; 2013 ; 10 >
     au < crawling ; exists ; 2014 ; Nature Methods Volume 11 ; 2014 ; 11 >
     au < crawling ; exists ; 2015 ; Nature Methods Volume 12 ; 2015 ; 12 >
+    au < expected ; exists ; 2016 ; Nature Methods Volume 13 ; 2016 ; 13 >
 
   }
 
@@ -2837,6 +2862,7 @@
     au < crawling ; exists ; 2013 ; Nature Nanotechnology Volume 8 ; 2013 ; 8 >
     au < crawling ; exists ; 2014 ; Nature Nanotechnology Volume 9 ; 2014 ; 9 >
     au < crawling ; exists ; 2015 ; Nature Nanotechnology Volume 10 ; 2015 ; 10 >
+    au < expected ; exists ; 2016 ; Nature Nanotechnology Volume 11 ; 2016 ; 11 >
 
   }
 
@@ -2869,6 +2895,7 @@
     au < crawling ; exists ; 2013 ; Nature Neuroscience Volume 16 ; 2013 ; 16 >
     au < crawling ; exists ; 2014 ; Nature Neuroscience Volume 17 ; 2014 ; 17 >
     au < crawling ; exists ; 2015 ; Nature Neuroscience Volume 18 ; 2015 ; 18 >
+    au < expected ; exists ; 2016 ; Nature Neuroscience Volume 19 ; 2016 ; 19 >
 
   }
 
@@ -2893,6 +2920,7 @@
     au < crawling ; exists ; 2013 ; Nature Photonics Volume 7 ; 2013 ; 7 >
     au < crawling ; exists ; 2014 ; Nature Photonics Volume 8 ; 2014 ; 8 >
     au < crawling ; exists ; 2015 ; Nature Photonics Volume 9 ; 2015 ; 9 >
+    au < expected ; exists ; 2016 ; Nature Photonics Volume 10 ; 2016 ; 10 >
 
   }
 
@@ -2918,6 +2946,7 @@
     au < crawling ; exists ; 2013 ; Nature Physics Volume 9 ; 2013 ; 9 >
     au < crawling ; exists ; 2014 ; Nature Physics Volume 10 ; 2014 ; 10 >
     au < crawling ; exists ; 2015 ; Nature Physics Volume 11 ; 2015 ; 11 >
+    au < expected ; exists ; 2016 ; Nature Physics Volume 12 ; 2016 ; 12 >
 
   }
 
@@ -2942,6 +2971,7 @@
     au < crawling ; exists ; 2013 ; Nature Protocols Volume 8 ; 2013 ; 8 >
     au < crawling ; exists ; 2014 ; Nature Protocols Volume 9 ; 2014 ; 9 >
     au < crawling ; exists ; 2015 ; Nature Protocols Volume 10 ; 2015 ; 10 >
+    au < expected ; exists ; 2016 ; Nature Protocols Volume 11 ; 2016 ; 11 >
 
   }
 
@@ -2971,6 +3001,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Cancer Volume 13 ; 2013 ; 13 >
     au < crawling ; exists ; 2014 ; Nature Reviews Cancer Volume 14 ; 2014 ; 14 >
     au < crawling ; exists ; 2015 ; Nature Reviews Cancer Volume 15 ; 2015 ; 15 >
+    au < expected ; exists ; 2016 ; Nature Reviews Cancer Volume 16 ; 2016 ; 16 >
 
   }
 
@@ -2997,6 +3028,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Cardiology Volume 10 ; 2013 ; 10 >
     au < crawling ; exists ; 2014 ; Nature Reviews Cardiology Volume 11 ; 2014 ; 11 >
     au < crawling ; exists ; 2015 ; Nature Reviews Cardiology Volume 12 ; 2015 ; 12 >
+    au < expected ; exists ; 2016 ; Nature Reviews Cardiology Volume 13 ; 2016 ; 13 >
 
   }
 
@@ -3023,6 +3055,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Clinical Oncology Volume 10 ; 2013 ; 10 >
     au < crawling ; exists ; 2014 ; Nature Reviews Clinical Oncology Volume 11 ; 2014 ; 11 >
     au < crawling ; exists ; 2015 ; Nature Reviews Clinical Oncology Volume 12 ; 2015 ; 12 >
+    au < expected ; exists ; 2016 ; Nature Reviews Clinical Oncology Volume 13 ; 2016 ; 13 >
 
   }
 
@@ -3051,6 +3084,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Drug Discovery Volume 12 ; 2013 ; 12 >
     au < crawling ; exists ; 2014 ; Nature Reviews Drug Discovery Volume 13 ; 2014 ; 13 >
     au < crawling ; exists ; 2015 ; Nature Reviews Drug Discovery Volume 14 ; 2015 ; 14 >
+    au < expected ; exists ; 2016 ; Nature Reviews Drug Discovery Volume 15 ; 2016 ; 15 >
 
   }
 
@@ -3076,6 +3110,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Endocrinology Volume 9 ; 2013 ; 9 >
     au < finished ; crawling ; 2014 ; Nature Reviews Endocrinology Volume 10 ; 2014 ; 10 >
     au < crawling ; exists ; 2015 ; Nature Reviews Endocrinology Volume 11 ; 2015 ; 11 >
+    au < expected ; exists ; 2016 ; Nature Reviews Endocrinology Volume 12 ; 2016 ; 12 >
 
   }
 
