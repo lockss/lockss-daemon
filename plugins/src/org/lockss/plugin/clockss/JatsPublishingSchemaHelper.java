@@ -43,6 +43,8 @@ import org.lockss.extractor.XmlDomMetadataExtractor.NodeValue;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -233,6 +235,39 @@ implements SourceXmlSchemaHelper {
       return valbuilder.toString();
     }
   };
+  
+  
+  /* 
+   * ISSN evaluator - really a validator                                                                                                                                                                              
+  *                                                                                                                                                                                               
+  * Do our best to pull a valid ISSN from given text. The following                                                                                                                               
+  * has shown up:                                                                                                                                                                                 
+  * 1070-8022 //correct                                                                                                                                                                           
+  * 1110 -1148                                                                                                                                                                                                                                                                                                                                                   
+  */
+ private static final String STD_ISSN_PATTERN_STRING = "(\\d{4})\\s*(-)?\\s*(\\d{3}[\\dXx])";
+ private static Pattern ISSN_PATTERN =  Pattern.compile("^\\s*" + STD_ISSN_PATTERN_STRING, Pattern.CASE_INSENSITIVE);
+
+ static private final NodeValue JATS_ISSN_VALUE = new NodeValue() {
+
+   @Override
+   public String getValue(Node node) {
+     log.debug3("getValue of WOLTERSKLUWER ISSN");
+     String issnVal = node.getTextContent();
+     Matcher iMat = ISSN_PATTERN.matcher(issnVal);
+     if(!iMat.find()){ //use find not match to ignore trailing stuff                                                                                                                              
+       log.debug3("no match");
+       return null;
+     }
+     StringBuilder retVal = new StringBuilder();
+     retVal.append(iMat.group(1));
+     retVal.append("-");
+     retVal.append(iMat.group(3));
+     log.debug3("returning " + retVal.toString());
+     return retVal.toString();
+   }
+ };
+
 
   /* 
    *  JATS specific XPATH key definitions that we care about
@@ -279,9 +314,9 @@ implements SourceXmlSchemaHelper {
       new HashMap<String,XPathValue>();
   static {
     JATS_articleMap.put(JATS_jtitle, JATS_TITLE_VALUE);
-    JATS_articleMap.put(JATS_issn, XmlDomMetadataExtractor.TEXT_VALUE);
-    JATS_articleMap.put(JATS_pissn, XmlDomMetadataExtractor.TEXT_VALUE);
-    JATS_articleMap.put(JATS_eissn, XmlDomMetadataExtractor.TEXT_VALUE);
+    JATS_articleMap.put(JATS_issn, JATS_ISSN_VALUE);
+    JATS_articleMap.put(JATS_pissn, JATS_ISSN_VALUE);
+    JATS_articleMap.put(JATS_eissn, JATS_ISSN_VALUE);
     JATS_articleMap.put(JATS_pubname, XmlDomMetadataExtractor.TEXT_VALUE);
     JATS_articleMap.put(JATS_doi, XmlDomMetadataExtractor.TEXT_VALUE);
     JATS_articleMap.put(JATS_atitle, JATS_TITLE_VALUE);

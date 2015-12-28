@@ -106,8 +106,8 @@ public class IopJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
           thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date));
         }
       }
-      if (thisAM.get(MetadataField.FIELD_ISSN) == null) {
-        //try the pissn version
+      if ((thisAM.get(MetadataField.FIELD_ISSN) == null) && (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_pissn) != null)){
+        //try the pissn version if raw value not null
         thisAM.put(MetadataField.FIELD_ISSN, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_pissn));
       }
     }
