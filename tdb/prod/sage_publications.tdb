@@ -46710,7 +46710,7 @@ comment[mpj] = now published by Brill
       eissn = 2048-402X 
     >
 
-      param[base_url] = http://eae.sagepub.com/
+      param[base_url] = http://wie.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
