@@ -3604,8 +3604,8 @@
     au < manifest ; exists ; 1957 ; 8 ; Boletim do Instituto Oceanográfico Volume 8 ; 1957 ; >
     au < manifest ; exists ; 1958 ; 9 ; Boletim do Instituto Oceanográfico Volume 9 ; 1958 ; >
     au < manifest ; exists ; 1959 ; 10 ; Boletim do Instituto Oceanográfico Volume 10 ; 1959 ; >
-    au < manifest ; exists ; 1960 ; 11 ; Boletim do Instituto Oceanográfico Volume 11 ; 1960 ; >
-    au < manifest ; exists ; 1961 ; 11 ; Boletim do Instituto Oceanográfico Volume 11 ; 1961 ; >
+    au < manifest ; exists ; 1960 ; 11 ; Boletim do Instituto Oceanográfico Volume 11 (1960) ; 1960 ; >
+    au < manifest ; exists ; 1961 ; 11 ; Boletim do Instituto Oceanográfico Volume 11 (1961) ; 1961 ; >
     au < manifest ; exists ; 1962 ; 12 ; Boletim do Instituto Oceanográfico Volume 12 ; 1962 ; >
     au < manifest ; exists ; 1963 ; 13 ; Boletim do Instituto Oceanográfico Volume 13 ; 1963 ; >
     au < manifest ; exists ; 1965 ; 14 ; Boletim do Instituto Oceanográfico Volume 14 ; 1965 ; >
@@ -4685,8 +4685,8 @@
     param[journal_issn] = 0101-3262
 
     au < manifest ; exists ; 1997 ; 18 ; Cadernos CEDES Volume 18 ; 1997 ; >
-    au < manifest ; exists ; 1998 ; 19 ; Cadernos CEDES Volume 19 ; 1998 ; >
-    au < manifest ; exists ; 1999 ; 19 ; Cadernos CEDES Volume 19 ; 1999 ; >
+    au < manifest ; exists ; 1998 ; 19 ; Cadernos CEDES Volume 19 (1998) ; 1998 ; >
+    au < manifest ; exists ; 1999 ; 19 ; Cadernos CEDES Volume 19 (1999) ; 1999 ; >
     au < manifest ; exists ; 2000 ; 20 ; Cadernos CEDES Volume 20 ; 2000 ; >
     au < manifest ; exists ; 2001 ; 21 ; Cadernos CEDES Volume 21 ; 2001 ; >
     au < manifest ; exists ; 2002 ; 22 ; Cadernos CEDES Volume 22 ; 2002 ; >
@@ -11255,13 +11255,13 @@
     param[base_url] = http://www.scielo.org.mx/
     param[journal_issn] = 1665-7381
 
-    au < manifest ; exists ; 2009 ; 3 ; Ingeniería mecánica, tecnología y desarrollo Volume 3 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 3 ; Ingeniería mecánica, tecnología y desarrollo Volume 3 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 3-4 ; Ingeniería mecánica, tecnología y desarrollo Volume 3-4 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 4 ; Ingeniería mecánica, tecnología y desarrollo Volume 4 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 4 ; Ingeniería mecánica, tecnología y desarrollo Volume 4 ; 2013 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2014 ; 4-5 ; Ingeniería mecánica, tecnología y desarrollo Volume 4-5 ; 2014 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2015 ; 5 ; Ingeniería mecánica, tecnología y desarrollo Volume 5 ; 2015 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 2009 ; 3 ; Ingeniería mecánica, tecnología y desarrollo Volume 3 (2009) ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 3 ; Ingeniería mecánica, tecnología y desarrollo Volume 3 (2010) ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 3-4 ; Ingeniería mecánica, tecnología y desarrollo Volume 3-4 (2011) ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 4 ; Ingeniería mecánica, tecnología y desarrollo Volume 4 (2012) ; 2012 ; >
+    au < crawling ; exists ; 2013 ; 4 ; Ingeniería mecánica, tecnología y desarrollo Volume 4 (2013) ; 2013 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 4-5 ; Ingeniería mecánica, tecnología y desarrollo Volume 4-5 (2014) ; 2014 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2015 ; 5 ; Ingeniería mecánica, tecnología y desarrollo Volume 5 (2015) ; 2015 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -11520,8 +11520,8 @@
     param[base_url] = http://www.scielo.br/
     param[journal_issn] = 1518-7012
 
-    au < manifest ; exists ; 2006 ; 8 ; Interações (Campo Grande) Volume 8 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 8 ; Interações (Campo Grande) Volume 8 ; 2007 ; >
+    au < manifest ; exists ; 2006 ; 8 ; Interações (Campo Grande) Volume 8 (2006) ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 8 ; Interações (Campo Grande) Volume 8 (2007) ; 2007 ; >
     au < manifest ; exists ; 2008 ; 9 ; Interações (Campo Grande) Volume 9 ; 2008 ; >
     au < manifest ; exists ; 2009 ; 10 ; Interações (Campo Grande) Volume 10 ; 2009 ; >
     au < manifest ; exists ; 2010 ; 11 ; Interações (Campo Grande) Volume 11 ; 2010 ; >
@@ -12972,10 +12972,10 @@
     param[base_url] = http://www.scielo.org.mx/
     param[journal_issn] = 1405-9436
 
-    au < manifest ; exists ; 2008 ; 3 ; La ventana. Revista de estudios de género Volume 3 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 3-4 ; La ventana. Revista de estudios de género Volume 3-4 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 4 ; La ventana. Revista de estudios de género Volume 4 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 4 ; La ventana. Revista de estudios de género Volume 4 ; 2011 ; >
+    au < manifest ; exists ; 2008 ; 3 ; La ventana. Revista de estudios de género Volume 3 (2008) ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 3-4 ; La ventana. Revista de estudios de género Volume 3-4 (2009) ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 4 ; La ventana. Revista de estudios de género Volume 4 (2010) ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 4 ; La ventana. Revista de estudios de género Volume 4 (2011) ; 2011 ; >
 
   }
 
@@ -14221,14 +14221,14 @@
     param[base_url] = http://www.scielo.org.mx/
     param[journal_issn] = 1665-8906
 
-    au < manifest ; exists ; 2007 ; 4 ; Migraciones internacionales Volume 4 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 4 ; Migraciones internacionales Volume 4 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 5 ; Migraciones internacionales Volume 5 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 5 ; Migraciones internacionales Volume 5 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 6 ; Migraciones internacionales Volume 6 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 6 ; Migraciones internacionales Volume 6 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 7 ; Migraciones internacionales Volume 7 ; 2013 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2014 ; 7 ; Migraciones internacionales Volume 7 ; 2014 ; reingest3.clockss.org:8083 >
+    au < manifest ; exists ; 2007 ; 4 ; Migraciones internacionales Volume 4 (2007) ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 4 ; Migraciones internacionales Volume 4 (2008) ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 5 ; Migraciones internacionales Volume 5 (2009) ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 5 ; Migraciones internacionales Volume 5 (2010) ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 6 ; Migraciones internacionales Volume 6 (2011) ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 6 ; Migraciones internacionales Volume 6 (2012) ; 2012 ; >
+    au < crawling ; exists ; 2013 ; 7 ; Migraciones internacionales Volume 7 (2013) ; 2013 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2014 ; 7 ; Migraciones internacionales Volume 7 (2014) ; 2014 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; 8 ; Migraciones internacionales Volume 8 ; 2015 ; reingest4.clockss.org:8082 >
 
   }
@@ -16641,8 +16641,8 @@
     param[base_url] = http://www.scielo.br/
     param[journal_issn] = 1414-9893
 
-    au < manifest ; exists ; 1982 ; 3 ; Psicologia: Ciência e Profissão Volume 3 ; 1982 ; >
-    au < manifest ; exists ; 1983 ; 3 ; Psicologia: Ciência e Profissão Volume 3 ; 1983 ; >
+    au < manifest ; exists ; 1982 ; 3 ; Psicologia: Ciência e Profissão Volume 3 (1982) ; 1982 ; >
+    au < manifest ; exists ; 1983 ; 3 ; Psicologia: Ciência e Profissão Volume 3 (1983) ; 1983 ; >
     au < manifest ; exists ; 1984 ; 4 ; Psicologia: Ciência e Profissão Volume 4 ; 1984 ; >
     au < manifest ; exists ; 1985 ; 5 ; Psicologia: Ciência e Profissão Volume 5 ; 1985 ; >
     au < manifest ; exists ; 1986 ; 6 ; Psicologia: Ciência e Profissão Volume 6 ; 1986 ; >
@@ -16727,8 +16727,8 @@
     param[base_url] = http://www.scielo.br/
     param[journal_issn] = 1413-8557
 
-    au < manifest ; exists ; 1996 ; 1 ; Psicologia Escolar e Educacional Volume 1 ; 1996 ; >
-    au < manifest ; exists ; 1997 ; 1 ; Psicologia Escolar e Educacional Volume 1 ; 1997 ; >
+    au < manifest ; exists ; 1996 ; 1 ; Psicologia Escolar e Educacional Volume 1 (1996) ; 1996 ; >
+    au < manifest ; exists ; 1997 ; 1 ; Psicologia Escolar e Educacional Volume 1 (1997) ; 1997 ; >
     au < manifest ; exists ; 1998 ; 2 ; Psicologia Escolar e Educacional Volume 2 ; 1998 ; >
     au < manifest ; exists ; 1999 ; 3 ; Psicologia Escolar e Educacional Volume 3 ; 1999 ; >
     au < manifest ; exists ; 2000 ; 4 ; Psicologia Escolar e Educacional Volume 4 ; 2000 ; >
@@ -17887,8 +17887,8 @@
     param[base_url] = http://scielo.isciii.es/
     param[journal_issn] = 1699-695X
 
-    au < manifest ; exists ; 2008 ; 2 ; Revista Clínica de Medicina de Familia Volume 2 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 2 ; Revista Clínica de Medicina de Familia Volume 2 ; 2009 ; >
+    au < manifest ; exists ; 2008 ; 2 ; Revista Clínica de Medicina de Familia Volume 2 (2008) ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 2 ; Revista Clínica de Medicina de Familia Volume 2 (2009) ; 2009 ; >
     au < manifest ; exists ; 2010 ; 3 ; Revista Clínica de Medicina de Familia Volume 3 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 4 ; Revista Clínica de Medicina de Familia Volume 4 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 5 ; Revista Clínica de Medicina de Familia Volume 5 ; 2012 ; >
@@ -20979,10 +20979,10 @@
     param[journal_issn] = 0101-8175
 
     au < manifest ; exists ; 1982 ; 1 ; Revista Brasileira de Zoologia Volume 1 ; 1982 ; >
-    au < manifest ; exists ; 1983 ; 2 ; Revista Brasileira de Zoologia Volume 2 ; 1983 ; >
-    au < manifest ; exists ; 1984 ; 2 ; Revista Brasileira de Zoologia Volume 2 ; 1984 ; >
-    au < manifest ; exists ; 1985 ; 3 ; Revista Brasileira de Zoologia Volume 3 ; 1985 ; >
-    au < manifest ; exists ; 1986 ; 3 ; Revista Brasileira de Zoologia Volume 3 ; 1986 ; >
+    au < manifest ; exists ; 1983 ; 2 ; Revista Brasileira de Zoologia Volume 2 (1983) ; 1983 ; >
+    au < manifest ; exists ; 1984 ; 2 ; Revista Brasileira de Zoologia Volume 2 (1984) ; 1984 ; >
+    au < manifest ; exists ; 1985 ; 3 ; Revista Brasileira de Zoologia Volume 3 (1985) ; 1985 ; >
+    au < manifest ; exists ; 1986 ; 3 ; Revista Brasileira de Zoologia Volume 3 (1986) ; 1986 ; >
     au < manifest ; exists ; 1987 ; 4 ; Revista Brasileira de Zoologia Volume 4 ; 1987 ; >
     au < manifest ; exists ; 1988 ; 5 ; Revista Brasileira de Zoologia Volume 5 ; 1988 ; >
     au < manifest ; exists ; 1989 ; 6 ; Revista Brasileira de Zoologia Volume 6 ; 1989 ; >
@@ -23087,17 +23087,17 @@
     param[base_url] = http://www.scielo.org.ar/
     param[journal_issn] = 1850-0013
 
-    au < manifest ; exists ; 2003 ; 1 ; Revista iberoamericana de ciencia tecnología y sociedad Volume 1 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; 1 ; Revista iberoamericana de ciencia tecnología y sociedad Volume 1 ; 2004 ; >
+    au < manifest ; exists ; 2003 ; 1 ; Revista iberoamericana de ciencia tecnología y sociedad Volume 1 (2003) ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 1 ; Revista iberoamericana de ciencia tecnología y sociedad Volume 1 (2004) ; 2004 ; >
     au < manifest ; exists ; 2005 ; 2 ; Revista iberoamericana de ciencia tecnología y sociedad Volume 2 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 3 ; Revista iberoamericana de ciencia tecnología y sociedad Volume 3 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 3 ; Revista iberoamericana de ciencia tecnología y sociedad Volume 3 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 4 ; Revista iberoamericana de ciencia tecnología y sociedad Volume 4 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 4-5 ; Revista iberoamericana de ciencia tecnología y sociedad Volume 4-5 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 5 ; Revista iberoamericana de ciencia tecnología y sociedad Volume 5 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 6 ; Revista iberoamericana de ciencia tecnología y sociedad Volume 6 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 6-7 ; Revista iberoamericana de ciencia tecnología y sociedad Volume 6-7 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 7 ; Revista iberoamericana de ciencia tecnología y sociedad Volume 7 ; 2013 ; reingest3.clockss.org:8083 >
+    au < manifest ; exists ; 2006 ; 3 ; Revista iberoamericana de ciencia tecnología y sociedad Volume 3 (2006) ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 3 ; Revista iberoamericana de ciencia tecnología y sociedad Volume 3 (2007) ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 4 ; Revista iberoamericana de ciencia tecnología y sociedad Volume 4 (2008) ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 4-5 ; Revista iberoamericana de ciencia tecnología y sociedad Volume 4-5 (2009) ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 5 ; Revista iberoamericana de ciencia tecnología y sociedad Volume 5 (2010) ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 6 ; Revista iberoamericana de ciencia tecnología y sociedad Volume 6 (2011) ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 6-7 ; Revista iberoamericana de ciencia tecnología y sociedad Volume 6-7 (2012) ; 2012 ; >
+    au < crawling ; exists ; 2013 ; 7 ; Revista iberoamericana de ciencia tecnología y sociedad Volume 7 (2013) ; 2013 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2014 ; 8 ; Revista iberoamericana de ciencia tecnología y sociedad Volume 8 ; 2014 ; reingest4.clockss.org:8082 >
 
   }
