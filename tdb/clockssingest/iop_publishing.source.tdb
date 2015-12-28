@@ -12,16 +12,12 @@
        name = IOP Publishing Source Content
     >
     
-    {
+    plugin = org.lockss.plugin.clockss.iop.ClockssIopSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/iop-released/
+    comment[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
     
-      plugin = org.lockss.plugin.clockss.iop.ClockssIopSourcePlugin
-      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/iop-released/
-      comment[proxy] = DIRECT
-      implicit < status ; status2 ; year ; name ; param[year] >
-    
-      au < readySource ; crawling ; 2015 ; IOP Publishing Source Content 2015 ; 2015 >
-
-    }
+    au < readySource ; crawling ; 2015 ; IOP Publishing Source Content 2015 ; 2015 >
 
   }
 
