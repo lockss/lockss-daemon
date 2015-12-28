@@ -72,6 +72,19 @@
 
   {
     title <
+      name = Journal of Numerical Cognition ;
+      issn = 2363-8761
+    >
+
+      param[base_url] = http://jnc.psychopen.eu/
+      param[journal_id] = jnc
+  
+      au < exists ; exists ; 2015 ; Journal of Numerical Cognition Volume 1 ; 1 ; 2015 >
+
+  }
+
+  {
+    title <
       name = Journal of Social and Political Psychology ;
       issn = 2195-3325
     >
