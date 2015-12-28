@@ -793,44 +793,6 @@
 
     {
       title <
-        name = Fibrogenesis & Tissue Repair ;
-        issn = 1755-1536 ;
-        issnl = 1755-1536
-      >
-
-      comment[base_url] = http://fibrogenesis.biomedcentral.com/
-      param[journal_eissn] = 1755-1536
-
-      au < doNotProcess ; 2008 ; Fibrogenesis & Tissue Repair Volume 1 ; 1 >
-      au < doNotProcess ; 2009 ; Fibrogenesis & Tissue Repair Volume 2 ; 2 >
-      au < doNotProcess ; 2010 ; Fibrogenesis & Tissue Repair Volume 3 ; 3 >
-      au < doNotProcess ; 2011 ; Fibrogenesis & Tissue Repair Volume 4 ; 4 >
-      au < doNotProcess ; 2012 ; Fibrogenesis & Tissue Repair Volume 5 ; 5 >
-      au < exists ; 2013 ; Fibrogenesis & Tissue Repair Volume 6 ; 6 >
-      au < exists ; 2014 ; Fibrogenesis & Tissue Repair Volume 7 ; 7 >
-      au < exists ; 2015 ; Fibrogenesis & Tissue Repair Volume 8 ; 8 >
-
-    }
-
-    {
-      title <
-        name = Flavour ;
-        issn = 2044-7248 ;
-        issnl = 2044-7248
-      >
-
-      comment[base_url] = http://flavourjournal.biomedcentral.com/
-      param[journal_eissn] = 2044-7248
-
-      au < doNotProcess ; 2012 ; Flavour Volume 1 ; 1 >
-      au < exists ; 2013 ; Flavour Volume 2 ; 2 >
-      au < exists ; 2014 ; Flavour Volume 3 ; 3 >
-      au < exists ; 2015 ; Flavour Volume 4 ; 4 >
-
-    }
-
-    {
-      title <
         name = Fluids and Barriers of the CNS ;
         eissn = 2045-8118 ;
         issnl = 2045-8118
@@ -846,31 +808,6 @@
       au < exists ; 2013 ; Fluids and Barriers of the CNS Volume 10 ; 10 >
       au < exists ; 2014 ; Fluids and Barriers of the CNS Volume 11 ; 11 >
       au < exists ; 2015 ; Fluids and Barriers of the CNS Volume 12 ; 12 >
-
-    }
-
-    {
-      title <
-        name = Frontiers in Zoology ;
-        eissn = 1742-9994 ;
-        issnl = 1742-9994
-      >
-
-      comment[base_url] = http://frontiersinzoology.biomedcentral.com/
-      param[journal_eissn] = 1742-9994
-
-      au < doNotProcess ; 2004 ; Frontiers in Zoology Volume 1 ; 1 >
-      au < doNotProcess ; 2005 ; Frontiers in Zoology Volume 2 ; 2 >
-      au < doNotProcess ; 2006 ; Frontiers in Zoology Volume 3 ; 3 >
-      au < doNotProcess ; 2007 ; Frontiers in Zoology Volume 4 ; 4 >
-      au < doNotProcess ; 2008 ; Frontiers in Zoology Volume 5 ; 5 >
-      au < doNotProcess ; 2009 ; Frontiers in Zoology Volume 6 ; 6 >
-      au < doNotProcess ; 2010 ; Frontiers in Zoology Volume 7 ; 7 >
-      au < doNotProcess ; 2011 ; Frontiers in Zoology Volume 8 ; 8 >
-      au < doNotProcess ; 2012 ; Frontiers in Zoology Volume 9 ; 9 >
-      au < exists ; 2013 ; Frontiers in Zoology Volume 10 ; 10 >
-      au < exists ; 2014 ; Frontiers in Zoology Volume 11 ; 11 >
-      au < exists ; 2015 ; Frontiers in Zoology Volume 12 ; 12 >
 
     }
 
@@ -966,26 +903,6 @@
 
     {
       title <
-        name = Gut Pathogens ;
-        issn = 1757-4749 ;
-        issnl = 1757-4749
-      >
-
-      comment[base_url] = http://gutpathogens.biomedcentral.com/
-      param[journal_eissn] = 1757-4749
-
-      au < exists ; 2009 ; Gut Pathogens Volume 1 ; 1 >
-      au < exists ; 2010 ; Gut Pathogens Volume 2 ; 2 >
-      au < exists ; 2011 ; Gut Pathogens Volume 3 ; 3 >
-      au < doNotProcess ; 2012 ; Gut Pathogens Volume 4 ; 4 >
-      au < exists ; 2013 ; Gut Pathogens Volume 5 ; 5 >
-      au < exists ; 2014 ; Gut Pathogens Volume 6 ; 6 >
-      au < exists ; 2015 ; Gut Pathogens Volume 7 ; 7 >
-
-    }
-
-    {
-      title <
         name = Harm Reduction Journal ;
         eissn = 1477-7517 ;
         issnl = 1477-7517
@@ -1006,56 +923,6 @@
       au < exists ; 2013 ; Harm Reduction Journal Volume 10 ; 10 >
       au < exists ; 2014 ; Harm Reduction Journal Volume 11 ; 11 >
       au < exists ; 2015 ; Harm Reduction Journal Volume 12 ; 12 >
-
-    }
-
-    {
-      title <
-        name = Head & Face Medicine ;
-        eissn = 1746-160X ;
-        issnl = 1746-160X
-      >
-
-      comment[base_url] = http://head-face-med.biomedcentral.com/
-      param[journal_eissn] = 1746-160X
-
-      au < doNotProcess ; 2005 ; Head & Face Medicine Volume 1 ; 1 >
-      au < doNotProcess ; 2006 ; Head & Face Medicine Volume 2 ; 2 >
-      au < doNotProcess ; 2007 ; Head & Face Medicine Volume 3 ; 3 >
-      au < doNotProcess ; 2008 ; Head & Face Medicine Volume 4 ; 4 >
-      au < doNotProcess ; 2009 ; Head & Face Medicine Volume 5 ; 5 >
-      au < doNotProcess ; 2010 ; Head & Face Medicine Volume 6 ; 6 >
-      au < doNotProcess ; 2011 ; Head & Face Medicine Volume 7 ; 7 >
-      au < exists ; 2012 ; Head & Face Medicine Volume 8 ; 8 >
-      au < exists ; 2013 ; Head & Face Medicine Volume 9 ; 9 >
-      au < exists ; 2014 ; Head & Face Medicine Volume 10 ; 10 >
-      au < exists ; 2015 ; Head & Face Medicine Volume 11 ; 11 >
-
-    }
-
-    {
-      title <
-        name = Health and Quality of Life Outcomes ;
-        eissn = 1477-7525 ;
-        issnl = 1477-7525
-      >
-
-      comment[base_url] = http://hqlo.biomedcentral.com/
-      param[journal_eissn] = 1477-7525
-
-      au < doNotProcess ; 2003 ; Health and Quality of Life Outcomes Volume 1 ; 1 >
-      au < doNotProcess ; 2004 ; Health and Quality of Life Outcomes Volume 2 ; 2 >
-      au < doNotProcess ; 2005 ; Health and Quality of Life Outcomes Volume 3 ; 3 >
-      au < doNotProcess ; 2006 ; Health and Quality of Life Outcomes Volume 4 ; 4 >
-      au < doNotProcess ; 2007 ; Health and Quality of Life Outcomes Volume 5 ; 5 >
-      au < doNotProcess ; 2008 ; Health and Quality of Life Outcomes Volume 6 ; 6 >
-      au < doNotProcess ; 2009 ; Health and Quality of Life Outcomes Volume 7 ; 7 >
-      au < doNotProcess ; 2010 ; Health and Quality of Life Outcomes Volume 8 ; 8 >
-      au < doNotProcess ; 2011 ; Health and Quality of Life Outcomes Volume 9 ; 9 >
-      au < exists ; 2012 ; Health and Quality of Life Outcomes Volume 10 ; 10 >
-      au < exists ; 2013 ; Health and Quality of Life Outcomes Volume 11 ; 11 >
-      au < exists ; 2014 ; Health and Quality of Life Outcomes Volume 12 ; 12 >
-      au < exists ; 2015 ; Health and Quality of Life Outcomes Volume 13 ; 13 >
 
     }
 
@@ -1154,32 +1021,6 @@
 
     {
       title <
-        name = Human Resources for Health ;
-        eissn = 1478-4491 ;
-        issnl = 1478-4491
-      >
-
-      comment[base_url] = http://human-resources-health.biomedcentral.com/
-      param[journal_eissn] = 1478-4491
-
-      au < doNotProcess ; 2003 ; Human Resources for Health Volume 1 ; 1 >
-      au < doNotProcess ; 2004 ; Human Resources for Health Volume 2 ; 2 >
-      au < doNotProcess ; 2005 ; Human Resources for Health Volume 3 ; 3 >
-      au < doNotProcess ; 2006 ; Human Resources for Health Volume 4 ; 4 >
-      au < doNotProcess ; 2007 ; Human Resources for Health Volume 5 ; 5 >
-      au < doNotProcess ; 2008 ; Human Resources for Health Volume 6 ; 6 >
-      au < doNotProcess ; 2009 ; Human Resources for Health Volume 7 ; 7 >
-      au < doNotProcess ; 2010 ; Human Resources for Health Volume 8 ; 8 >
-      au < doNotProcess ; 2011 ; Human Resources for Health Volume 9 ; 9 >
-      au < exists ; 2012 ; Human Resources for Health Volume 10 ; 10 >
-      au < exists ; 2013 ; Human Resources for Health Volume 11 ; 11 >
-      au < exists ; 2014 ; Human Resources for Health Volume 12 ; 12 >
-      au < exists ; 2015 ; Human Resources for Health Volume 13 ; 13 >
-
-    }
-
-    {
-      title <
         name = Immunity & Ageing ;
         eissn = 1742-4933 ;
         issnl = 1742-4933
@@ -1200,29 +1041,6 @@
       au < exists ; 2013 ; Immunity & Ageing Volume 10 ; 10 >
       au < exists ; 2014 ; Immunity & Ageing Volume 11 ; 11 >
       au < exists ; 2015 ; Immunity & Ageing Volume 12 ; 12 >
-
-    }
-
-    {
-      title <
-        name = Implementation Science ;
-        eissn = 1748-5908 ;
-        issnl = 1748-5908
-      >
-
-      comment[base_url] = http://implementationscience.biomedcentral.com/
-      param[journal_eissn] = 1748-5908
-
-      au < doNotProcess ; 2006 ; Implementation Science Volume 1 ; 1 >
-      au < doNotProcess ; 2007 ; Implementation Science Volume 2 ; 2 >
-      au < doNotProcess ; 2008 ; Implementation Science Volume 3 ; 3 >
-      au < doNotProcess ; 2009 ; Implementation Science Volume 4 ; 4 >
-      au < doNotProcess ; 2010 ; Implementation Science Volume 5 ; 5 >
-      au < doNotProcess ; 2011 ; Implementation Science Volume 6 ; 6 >
-      au < exists ; 2012 ; Implementation Science Volume 7 ; 7 >
-      au < exists ; 2013 ; Implementation Science Volume 8 ; 8 >
-      au < exists ; 2014 ; Implementation Science Volume 9 ; 9 >
-      au < exists ; 2015 ; Implementation Science Volume 10 ; 10 >
 
     }
 
@@ -1762,94 +1580,6 @@
 
     {
       title <
-        name = Journal of Experimental & Clinical Cancer Research ;
-        issn = 1756-9966 ;
-        issnl = 1756-9966
-      >
-
-      comment[base_url] = http://jeccr.biomedcentral.com/
-      param[journal_eissn] = 1756-9966
-
-      au < doNotProcess ; 2008 ; Journal of Experimental & Clinical Cancer Research Volume 27 ; 27 >
-      au < doNotProcess ; 2009 ; Journal of Experimental & Clinical Cancer Research Volume 28 ; 28 >
-      au < doNotProcess ; 2010 ; Journal of Experimental & Clinical Cancer Research Volume 29 ; 29 >
-      au < doNotProcess ; 2011 ; Journal of Experimental & Clinical Cancer Research Volume 30 ; 30 >
-      au < exists ; 2012 ; Journal of Experimental & Clinical Cancer Research Volume 31 ; 31 >
-      au < exists ; 2013 ; Journal of Experimental & Clinical Cancer Research Volume 32 ; 32 >
-      au < exists ; 2014 ; Journal of Experimental & Clinical Cancer Research Volume 33 ; 33 >
-      au < exists ; 2015 ; Journal of Experimental & Clinical Cancer Research Volume 34 ; 34 >
-
-    }
-
-    {
-      title <
-        name = Journal of Foot and Ankle Research ;
-        issn = 1757-1146 ;
-        issnl = 1757-1146
-      >
-
-      comment[base_url] = http://jfootankleres.biomedcentral.com/
-      param[journal_eissn] = 1757-1146
-
-      au < exists ; 2008 ; Journal of Foot and Ankle Research Volume 1 ; 1 >
-      au < exists ; 2009 ; Journal of Foot and Ankle Research Volume 2 ; 2 >
-      au < exists ; 2010 ; Journal of Foot and Ankle Research Volume 3 ; 3 >
-      au < exists ; 2011 ; Journal of Foot and Ankle Research Volume 4 ; 4 >
-      au < exists ; 2012 ; Journal of Foot and Ankle Research Volume 5 ; 5 >
-      au < exists ; 2013 ; Journal of Foot and Ankle Research Volume 6 ; 6 >
-      au < exists ; 2014 ; Journal of Foot and Ankle Research Volume 7 ; 7 >
-      au < exists ; 2015 ; Journal of Foot and Ankle Research Volume 8 ; 8 >
-
-    }
-
-    {
-      title <
-        name = Journal of Hematology & Oncology ;
-        eissn = 1756-8722 ;
-        issnl = 1756-8722
-      >
-
-      comment[base_url] = http://jhoonline.biomedcentral.com/
-      param[journal_eissn] = 1756-8722
-
-      au < doNotProcess ; 2008 ; Journal of Hematology & Oncology Volume 1 ; 1 >
-      au < doNotProcess ; 2009 ; Journal of Hematology & Oncology Volume 2 ; 2 >
-      au < doNotProcess ; 2010 ; Journal of Hematology & Oncology Volume 3 ; 3 >
-      au < doNotProcess ; 2011 ; Journal of Hematology & Oncology Volume 4 ; 4 >
-      au < exists ; 2012 ; Journal of Hematology & Oncology Volume 5 ; 5 >
-      au < exists ; 2013 ; Journal of Hematology & Oncology Volume 6 ; 6 >
-      au < exists ; 2014 ; Journal of Hematology & Oncology Volume 7 ; 7 >
-      au < exists ; 2015 ; Journal of Hematology & Oncology Volume 8 ; 8 >
-
-    }
-
-    {
-      title <
-        name = Journal of Inflammation ;
-        eissn = 1476-9255 ;
-        issnl = 1476-9255
-      >
-
-      comment[base_url] = http://journal-inflammation.biomedcentral.com/
-      param[journal_eissn] = 1476-9255
-
-      au < doNotProcess ; 2004 ; Journal of Inflammation Volume 1 ; 1 >
-      au < doNotProcess ; 2005 ; Journal of Inflammation Volume 2 ; 2 >
-      au < doNotProcess ; 2006 ; Journal of Inflammation Volume 3 ; 3 >
-      au < doNotProcess ; 2007 ; Journal of Inflammation Volume 4 ; 4 >
-      au < doNotProcess ; 2008 ; Journal of Inflammation Volume 5 ; 5 >
-      au < doNotProcess ; 2009 ; Journal of Inflammation Volume 6 ; 6 >
-      au < doNotProcess ; 2010 ; Journal of Inflammation Volume 7 ; 7 >
-      au < doNotProcess ; 2011 ; Journal of Inflammation Volume 8 ; 8 >
-      au < exists ; 2012 ; Journal of Inflammation Volume 9 ; 9 >
-      au < exists ; 2013 ; Journal of Inflammation Volume 10 ; 10 >
-      au < exists ; 2014 ; Journal of Inflammation Volume 11 ; 11 >
-      au < exists ; 2015 ; Journal of Inflammation Volume 12 ; 12 >
-
-    }
-
-    {
-      title <
         name = Journal of Intensive Care ;
         issn = 2052-0492 ;
         issnl = 2052-0492
@@ -1866,28 +1596,6 @@
 
     {
       title <
-        name = Journal of Medical Case Reports ;
-        issn = 1752-1947 ;
-        issnl = 1752-1947
-      >
-
-      comment[base_url] = http://jmedicalcasereports.biomedcentral.com/
-      param[journal_eissn] = 1752-1947
-
-      au < exists ; 2007 ; Journal of Medical Case Reports Volume 1 ; 1 >
-      au < exists ; 2008 ; Journal of Medical Case Reports Volume 2 ; 2 >
-      au < exists ; 2009 ; Journal of Medical Case Reports Volume 3 ; 3 >
-      au < exists ; 2010 ; Journal of Medical Case Reports Volume 4 ; 4 >
-      au < exists ; 2011 ; Journal of Medical Case Reports Volume 5 ; 5 >
-      au < exists ; 2012 ; Journal of Medical Case Reports Volume 6 ; 6 >
-      au < exists ; 2013 ; Journal of Medical Case Reports Volume 7 ; 7 >
-      au < exists ; 2014 ; Journal of Medical Case Reports Volume 8 ; 8 >
-      au < exists ; 2015 ; Journal of Medical Case Reports Volume 9 ; 9 >
-
-    }
-
-    {
-      title <
         name = Journal of Molecular Psychiatry ;
         issn = 2049-9256 ;
         issnl = 2049-9256
@@ -1899,195 +1607,6 @@
       au < exists ; 2013 ; Journal of Molecular Psychiatry Volume 1 ; 1 >
       au < exists ; 2014 ; Journal of Molecular Psychiatry Volume 2 ; 2 >
       au < exists ; 2015 ; Journal of Molecular Psychiatry Volume 3 ; 3 >
-
-    }
-
-    {
-      title <
-        name = Journal of Nanobiotechnology ;
-        eissn = 1477-3155 ;
-        issnl = 1477-3155
-      >
-
-      comment[base_url] = http://jnanobiotechnology.biomedcentral.com/
-      param[journal_eissn] = 1477-3155
-
-      au < doNotProcess ; 2003 ; Journal of Nanobiotechnology Volume 1 ; 1 >
-      au < doNotProcess ; 2004 ; Journal of Nanobiotechnology Volume 2 ; 2 >
-      au < doNotProcess ; 2005 ; Journal of Nanobiotechnology Volume 3 ; 3 >
-      au < doNotProcess ; 2006 ; Journal of Nanobiotechnology Volume 4 ; 4 >
-      au < doNotProcess ; 2007 ; Journal of Nanobiotechnology Volume 5 ; 5 >
-      au < doNotProcess ; 2008 ; Journal of Nanobiotechnology Volume 6 ; 6 >
-      au < doNotProcess ; 2009 ; Journal of Nanobiotechnology Volume 7 ; 7 >
-      au < doNotProcess ; 2010 ; Journal of Nanobiotechnology Volume 8 ; 8 >
-      au < doNotProcess ; 2011 ; Journal of Nanobiotechnology Volume 9 ; 9 >
-      au < exists ; 2012 ; Journal of Nanobiotechnology Volume 10 ; 10 >
-      au < exists ; 2013 ; Journal of Nanobiotechnology Volume 11 ; 11 >
-      au < exists ; 2014 ; Journal of Nanobiotechnology Volume 12 ; 12 >
-      au < exists ; 2015 ; Journal of Nanobiotechnology Volume 13 ; 13 >
-
-    }
-
-    {
-      title <
-        name = Journal of Negative Results in BioMedicine ;
-        eissn = 1477-5751 ;
-        issnl = 1477-5751
-      >
-
-      comment[base_url] = http://jnrbm.biomedcentral.com/
-      param[journal_eissn] = 1477-5751
-
-      au < doNotProcess ; 2002 ; Journal of Negative Results in BioMedicine Volume 1 ; 1 >
-      au < doNotProcess ; 2003 ; Journal of Negative Results in BioMedicine Volume 2 ; 2 >
-      au < doNotProcess ; 2004 ; Journal of Negative Results in BioMedicine Volume 3 ; 3 >
-      au < doNotProcess ; 2005 ; Journal of Negative Results in BioMedicine Volume 4 ; 4 >
-      au < doNotProcess ; 2006 ; Journal of Negative Results in BioMedicine Volume 5 ; 5 >
-      au < doNotProcess ; 2007 ; Journal of Negative Results in BioMedicine Volume 6 ; 6 >
-      au < doNotProcess ; 2008 ; Journal of Negative Results in BioMedicine Volume 7 ; 7 >
-      au < doNotProcess ; 2009 ; Journal of Negative Results in BioMedicine Volume 8 ; 8 >
-      au < doNotProcess ; 2010 ; Journal of Negative Results in BioMedicine Volume 9 ; 9 >
-      au < doNotProcess ; 2011 ; Journal of Negative Results in BioMedicine Volume 10 ; 10 >
-      au < exists ; 2012 ; Journal of Negative Results in BioMedicine Volume 11 ; 11 >
-      au < exists ; 2013 ; Journal of Negative Results in BioMedicine Volume 12 ; 12 >
-      au < exists ; 2014 ; Journal of Negative Results in BioMedicine Volume 13 ; 13 >
-      au < exists ; 2015 ; Journal of Negative Results in BioMedicine Volume 14 ; 14 >
-
-    }
-
-    {
-
-      title <
-        name = Journal of Neurodevelopmental Disorders ;
-        issn = 1866-1947 ;
-        eissn = 1866-1955 ;
-        issnl = 1866-1947
-      >
-
-      comment[base_url] = http://jneurodevdisorders.biomedcentral.com/
-      param[journal_eissn] = 1866-1955
-
-      au < exists ; 2012 ; Journal of Neurodevelopmental Disorders Volume 4 ; 4 >
-      au < exists ; 2013 ; Journal of Neurodevelopmental Disorders Volume 5 ; 5 >
-      au < exists ; 2014 ; Journal of Neurodevelopmental Disorders Volume 6 ; 6 >
-      au < exists ; 2015 ; Journal of Neurodevelopmental Disorders Volume 7 ; 7 >
-
-    }
-
-    {
-      title <
-        name = Journal of NeuroEngineering and Rehabilitation ;
-        eissn = 1743-0003 ;
-        issnl = 1743-0003
-      >
-
-      comment[base_url] = http://jneuroengrehab.biomedcentral.com/
-      param[journal_eissn] = 1743-0003
-
-      au < doNotProcess ; 2004 ; Journal of NeuroEngineering and Rehabilitation Volume 1 ; 1 >
-      au < doNotProcess ; 2005 ; Journal of NeuroEngineering and Rehabilitation Volume 2 ; 2 >
-      au < doNotProcess ; 2006 ; Journal of NeuroEngineering and Rehabilitation Volume 3 ; 3 >
-      au < doNotProcess ; 2007 ; Journal of NeuroEngineering and Rehabilitation Volume 4 ; 4 >
-      au < doNotProcess ; 2008 ; Journal of NeuroEngineering and Rehabilitation Volume 5 ; 5 >
-      au < doNotProcess ; 2009 ; Journal of NeuroEngineering and Rehabilitation Volume 6 ; 6 >
-      au < doNotProcess ; 2010 ; Journal of NeuroEngineering and Rehabilitation Volume 7 ; 7 >
-      au < doNotProcess ; 2011 ; Journal of NeuroEngineering and Rehabilitation Volume 8 ; 8 >
-      au < exists ; 2012 ; Journal of NeuroEngineering and Rehabilitation Volume 9 ; 9 >
-      au < exists ; 2013 ; Journal of NeuroEngineering and Rehabilitation Volume 10 ; 10 >
-      au < exists ; 2014 ; Journal of NeuroEngineering and Rehabilitation Volume 11 ; 11 >
-      au < exists ; 2015 ; Journal of NeuroEngineering and Rehabilitation Volume 12 ; 12 >
-
-    }
-
-    {
-      title <
-        name = Journal of Neuroinflammation ;
-        eissn = 1742-2094 ;
-        issnl = 1742-2094
-      >
-
-      comment[base_url] = http://jneuroinflammation.biomedcentral.com/
-      param[journal_eissn] = 1742-2094
-
-      au < doNotProcess ; 2004 ; Journal of Neuroinflammation Volume 1 ; 1 >
-      au < doNotProcess ; 2005 ; Journal of Neuroinflammation Volume 2 ; 2 >
-      au < doNotProcess ; 2006 ; Journal of Neuroinflammation Volume 3 ; 3 >
-      au < doNotProcess ; 2007 ; Journal of Neuroinflammation Volume 4 ; 4 >
-      au < doNotProcess ; 2008 ; Journal of Neuroinflammation Volume 5 ; 5 >
-      au < doNotProcess ; 2009 ; Journal of Neuroinflammation Volume 6 ; 6 >
-      au < doNotProcess ; 2010 ; Journal of Neuroinflammation Volume 7 ; 7 >
-      au < doNotProcess ; 2011 ; Journal of Neuroinflammation Volume 8 ; 8 >
-      au < exists ; 2012 ; Journal of Neuroinflammation Volume 9 ; 9 >
-      au < exists ; 2013 ; Journal of Neuroinflammation Volume 10 ; 10 >
-      au < exists ; 2014 ; Journal of Neuroinflammation Volume 11 ; 11 >
-      au < exists ; 2015 ; Journal of Neuroinflammation Volume 12 ; 12 >
-
-    }
-
-    {
-      title <
-        name = Journal of Occupational Medicine and Toxicology ;
-        issn = 1745-6673 ;
-        issnl = 1745-6673
-      >
-
-      comment[base_url] = http://occup-med.biomedcentral.com/
-      param[journal_eissn] = 1745-6673
-
-      au < doNotProcess ; 2006 ; Journal of Occupational Medicine and Toxicology Volume 1 ; 1 >
-      au < doNotProcess ; 2007 ; Journal of Occupational Medicine and Toxicology Volume 2 ; 2 >
-      au < doNotProcess ; 2008 ; Journal of Occupational Medicine and Toxicology Volume 3 ; 3 >
-      au < doNotProcess ; 2009 ; Journal of Occupational Medicine and Toxicology Volume 4 ; 4 >
-      au < doNotProcess ; 2010 ; Journal of Occupational Medicine and Toxicology Volume 5 ; 5 >
-      au < doNotProcess ; 2011 ; Journal of Occupational Medicine and Toxicology Volume 6 ; 6 >
-      au < exists ; 2012 ; Journal of Occupational Medicine and Toxicology Volume 7 ; 7 >
-      au < exists ; 2013 ; Journal of Occupational Medicine and Toxicology Volume 8 ; 8 >
-      au < exists ; 2014 ; Journal of Occupational Medicine and Toxicology Volume 9 ; 9 >
-      au < exists ; 2015 ; Journal of Occupational Medicine and Toxicology Volume 10 ; 10 >
-
-    }
-
-    {
-      title <
-        name = Journal of Orthopaedic Surgery and Research ;
-        eissn = 1749-799X ;
-        issnl = 1749-799X
-      >
-
-      comment[base_url] = http://josr-online.biomedcentral.com/
-      param[journal_eissn] = 1749-799X
-
-      au < doNotProcess ; 2006 ; Journal of Orthopaedic Surgery and Research Volume 1 ; 1 >
-      au < doNotProcess ; 2007 ; Journal of Orthopaedic Surgery and Research Volume 2 ; 2 >
-      au < doNotProcess ; 2008 ; Journal of Orthopaedic Surgery and Research Volume 3 ; 3 >
-      au < doNotProcess ; 2009 ; Journal of Orthopaedic Surgery and Research Volume 4 ; 4 >
-      au < doNotProcess ; 2010 ; Journal of Orthopaedic Surgery and Research Volume 5 ; 5 >
-      au < doNotProcess ; 2011 ; Journal of Orthopaedic Surgery and Research Volume 6 ; 6 >
-      au < exists ; 2012 ; Journal of Orthopaedic Surgery and Research Volume 7 ; 7 >
-      au < exists ; 2013 ; Journal of Orthopaedic Surgery and Research Volume 8 ; 8 >
-      au < exists ; 2014 ; Journal of Orthopaedic Surgery and Research Volume 9 ; 9 >
-      au < exists ; 2015 ; Journal of Orthopaedic Surgery and Research Volume 10 ; 10 >
-
-    }
-
-    {
-      title <
-        name = Journal of Ovarian Research ;
-        issn = 1757-2215 ;
-        issnl = 1757-2215
-      >
-
-      comment[base_url] = http://ovarianresearch.biomedcentral.com/
-      param[journal_eissn] = 1757-2215
-
-      au < exists ; 2008 ; Journal of Ovarian Research Volume 1 ; 1 >
-      au < exists ; 2009 ; Journal of Ovarian Research Volume 2 ; 2 >
-      au < doNotProcess ; 2010 ; Journal of Ovarian Research Volume 3 ; 3 >
-      au < exists ; 2011 ; Journal of Ovarian Research Volume 4 ; 4 >
-      au < exists ; 2012 ; Journal of Ovarian Research Volume 5 ; 5 >
-      au < exists ; 2013 ; Journal of Ovarian Research Volume 6 ; 6 >
-      au < exists ; 2014 ; Journal of Ovarian Research Volume 7 ; 7 >
-      au < exists ; 2015 ; Journal of Ovarian Research Volume 8 ; 8 >
 
     }
 
@@ -2126,31 +1645,6 @@
 
     {
       title <
-        name = Journal of the International Society of Sports Nutrition ;
-        eissn = 1550-2783 ;
-        issnl = 1550-2783
-      >
-
-      comment[base_url] = http://jissn.biomedcentral.com/
-      param[journal_eissn] = 1550-2783
-
-      au < doNotProcess ; 2004 ; Journal of the International Society of Sports Nutrition Volume 1 ; 1 >
-      au < doNotProcess ; 2005 ; Journal of the International Society of Sports Nutrition Volume 2 ; 2 >
-      au < doNotProcess ; 2006 ; Journal of the International Society of Sports Nutrition Volume 3 ; 3 >
-      au < doNotProcess ; 2007 ; Journal of the International Society of Sports Nutrition Volume 4 ; 4 >
-      au < doNotProcess ; 2008 ; Journal of the International Society of Sports Nutrition Volume 5 ; 5 >
-      au < doNotProcess ; 2009 ; Journal of the International Society of Sports Nutrition Volume 6 ; 6 >
-      au < doNotProcess ; 2010 ; Journal of the International Society of Sports Nutrition Volume 7 ; 7 >
-      au < doNotProcess ; 2011 ; Journal of the International Society of Sports Nutrition Volume 8 ; 8 >
-      au < exists ; 2012 ; Journal of the International Society of Sports Nutrition Volume 9 ; 9 >
-      au < exists ; 2013 ; Journal of the International Society of Sports Nutrition Volume 10 ; 10 >
-      au < exists ; 2014 ; Journal of the International Society of Sports Nutrition Volume 11 ; 11 >
-      au < exists ; 2015 ; Journal of the International Society of Sports Nutrition Volume 12 ; 12 >
-
-    }
-
-    {
-      title <
         name = Journal of Therapeutic Ultrasound ;
         issn = 2050-5736 ;
         issnl = 2050-5736
@@ -2167,54 +1661,6 @@
 
     {
       title <
-        name = Journal of Translational Medicine ;
-        eissn = 1479-5876 ;
-        issnl = 1479-5876
-      >
-
-      comment[base_url] = http://translational-medicine.biomedcentral.com/
-      param[journal_eissn] = 1479-5876
-
-      au < doNotProcess ; 2003 ; Journal of Translational Medicine Volume 1 ; 1 >
-      au < doNotProcess ; 2004 ; Journal of Translational Medicine Volume 2 ; 2 >
-      au < doNotProcess ; 2005 ; Journal of Translational Medicine Volume 3 ; 3 >
-      au < doNotProcess ; 2006 ; Journal of Translational Medicine Volume 4 ; 4 >
-      au < doNotProcess ; 2007 ; Journal of Translational Medicine Volume 5 ; 5 >
-      au < doNotProcess ; 2008 ; Journal of Translational Medicine Volume 6 ; 6 >
-      au < doNotProcess ; 2009 ; Journal of Translational Medicine Volume 7 ; 7 >
-      au < doNotProcess ; 2010 ; Journal of Translational Medicine Volume 8 ; 8 >
-      au < doNotProcess ; 2011 ; Journal of Translational Medicine Volume 9 ; 9 >
-      au < exists ; 2012 ; Journal of Translational Medicine Volume 10 ; 10 >
-      au < exists ; 2013 ; Journal of Translational Medicine Volume 11 ; 11 >
-      au < exists ; 2014 ; Journal of Translational Medicine Volume 12 ; 12 >
-      au < exists ; 2015 ; Journal of Translational Medicine Volume 13 ; 13 >
-
-    }
-
-    {
-      title <
-        name = Journal of Trauma Management & Outcomes ;
-        eissn = 1752-2897 ;
-        issnl = 1752-2897
-      >
-
-      comment[base_url] = http://traumamanagement.biomedcentral.com/
-      param[journal_eissn] = 1752-2897
-
-      au < doNotProcess ; 2007 ; Journal of Trauma Management & Outcomes Volume 1 ; 1 >
-      au < doNotProcess ; 2008 ; Journal of Trauma Management & Outcomes Volume 2 ; 2 >
-      au < doNotProcess ; 2009 ; Journal of Trauma Management & Outcomes Volume 3 ; 3 >
-      au < doNotProcess ; 2010 ; Journal of Trauma Management & Outcomes Volume 4 ; 4 >
-      au < doNotProcess ; 2011 ; Journal of Trauma Management & Outcomes Volume 5 ; 5 >
-      au < exists ; 2012 ; Journal of Trauma Management & Outcomes Volume 6 ; 6 >
-      au < exists ; 2013 ; Journal of Trauma Management & Outcomes Volume 7 ; 7 >
-      au < exists ; 2014 ; Journal of Trauma Management & Outcomes Volume 8 ; 8 >
-      au < exists ; 2015 ; Journal of Trauma Management & Outcomes Volume 9 ; 9 >
-
-    }
-
-    {
-      title <
         name = Journal of Venomous Animals and Toxins including Tropical Diseases ;
         issn = 1678-9199 ;
         issnl = 1678-9199
@@ -2226,33 +1672,6 @@
       au < exists ; 2013 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 19 ; 19 >
       au < exists ; 2014 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 20 ; 20 >
       au < exists ; 2015 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 21 ; 21 >
-
-    }
-
-    {
-      title <
-        name = Lipids in Health and Disease ;
-        eissn = 1476-511X ;
-        issnl = 1476-511X
-      >
-
-      comment[base_url] = http://lipidworld.biomedcentral.com/
-      param[journal_eissn] = 1476-511X
-
-      au < doNotProcess ; 2002 ; Lipids in Health and Disease Volume 1 ; 1 >
-      au < doNotProcess ; 2003 ; Lipids in Health and Disease Volume 2 ; 2 >
-      au < doNotProcess ; 2004 ; Lipids in Health and Disease Volume 3 ; 3 >
-      au < doNotProcess ; 2005 ; Lipids in Health and Disease Volume 4 ; 4 >
-      au < doNotProcess ; 2006 ; Lipids in Health and Disease Volume 5 ; 5 >
-      au < doNotProcess ; 2007 ; Lipids in Health and Disease Volume 6 ; 6 >
-      au < doNotProcess ; 2008 ; Lipids in Health and Disease Volume 7 ; 7 >
-      au < doNotProcess ; 2009 ; Lipids in Health and Disease Volume 8 ; 8 >
-      au < doNotProcess ; 2010 ; Lipids in Health and Disease Volume 9 ; 9 >
-      au < doNotProcess ; 2011 ; Lipids in Health and Disease Volume 10 ; 10 >
-      au < exists ; 2012 ; Lipids in Health and Disease Volume 11 ; 11 >
-      au < exists ; 2013 ; Lipids in Health and Disease Volume 12 ; 12 >
-      au < exists ; 2014 ; Lipids in Health and Disease Volume 13 ; 13 >
-      au < exists ; 2015 ; Lipids in Health and Disease Volume 14 ; 14 >
 
     }
 
