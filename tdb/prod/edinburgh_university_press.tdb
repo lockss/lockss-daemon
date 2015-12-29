@@ -544,6 +544,8 @@
       issnl = 1474-9475
     >
 
+     comment[moved] = title changed to Holy Land and Palistine Studies. issn 2054-1988
+
     {
 
       plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
@@ -562,7 +564,7 @@
       au < released ; 2012 ; Holy Land Studies Volume 11 ; 11 >
       au < released ; 2013 ; Holy Land Studies Volume 12 ; 12 >
       au < released ; 2014 ; Holy Land Studies Volume 13 ; 13 >
-      au < manifest ; 2015 ; Holy Land Studies Volume 14 ; 14 >
+      #journal changed name and issn after 2014
 
     }
 
@@ -574,18 +576,32 @@
       attr[journal_id] = hls
       implicit < status ; year ; name ; param[volume] >
 
-      {
-
         param[base_url] = http://muse.jhu.edu/
 
-        au < released ; 2006 ; Holy Land Studies: A Multidisciplinary Journal Volume 5 [Project MUSE] ; 5 >
-        au < released ; 2007 ; Holy Land Studies: A Multidisciplinary Journal Volume 6 [Project MUSE] ; 6 >
-        au < released ; 2008 ; Holy Land Studies: A Multidisciplinary Journal Volume 7 [Project MUSE] ; 7 >
-
-      }
-
+        au < released ; 2006 ; Holy Land Studies Volume 5 [Project MUSE] ; 5 >
+        au < released ; 2007 ; Holy Land Studies Volume 6 [Project MUSE] ; 6 >
+        au < released ; 2008 ; Holy Land Studies Volume 7 [Project MUSE] ; 7 >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Holy Land and Palistine Studies: A Multidisciplinary Journal ;
+      issn = 2054-1988 ;
+      eissn = 2054-1996 ;
+      issnl = 2054-1988 
+    >
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = hlps
+      implicit < status ; year ; name ; param[volume_name] >
+      comment[moved] = title changed from Holy Land Studies. issn 1474-9475
+
+      au < manifest ; 2015 ; Holy Land and Palistine Studies Volume 14 ; 14 >
 
   }
 
