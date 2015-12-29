@@ -32,9 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.scielo;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -44,26 +42,41 @@ import org.lockss.util.Logger;
 
 
 public class SciELOUrlNormalizer implements UrlNormalizer {
-  protected static Logger log = Logger.getLogger(SciELOUrlNormalizer.class);
+  
+  private static final Logger log = Logger.getLogger(SciELOUrlNormalizer.class);
   
   protected static final String TARGET_URL1 = "&pdf_path="; // how we identify these URLs
   protected static final Pattern PDF_PAT = Pattern.compile("(https?://[^/]+/).*&pdf_path=([^&]+)&");
   
   protected static final String TARGET_URL2 = "/scielo.php?"; // how we identify these URLs
+  // /scielo.php?download&format=A&pid=B
+  protected static final String DOWNLOAD_PARAM = "download";
+  protected static final String FORMAT_PARAM = "format";
+  // /scielo.php?script=A&...
   protected static final String SCRIPT_PARAM = "script";
   protected static final String PID_PARAM = "pid";
   protected static final String LANG_PARAM = "lang";
   protected static final String LNG_PARAM = "lng";
   protected static final String NRM_PARAM = "nrm";
   protected static final String TLNG_PARAM = "tlng";
-  protected static final String ORIGINALLANG_PARAM = "ORIGINALLANG";
+  protected static final String ORIGINALLANG_PARAM = "ORIGINALLANG"; // unused?
   protected static final String NRM_DEFAULT_VAL = "iso";
   protected static final String TLNG_DEFAULT_VAL = "en";
   
   protected static final String TARGET_URL3 = "scieloOrg/php/articleXML.php?"; // how we identify these URLs
   
-  protected static final String[] KNOWN_PARAMS =
-    {SCRIPT_PARAM, PID_PARAM, LANG_PARAM, LNG_PARAM, NRM_PARAM, TLNG_PARAM, ORIGINALLANG_PARAM};
+  protected static final Set<String> KNOWN_PARAMS = new HashSet<String>(Arrays.asList(
+      DOWNLOAD_PARAM,
+      FORMAT_PARAM,
+      SCRIPT_PARAM,
+      PID_PARAM,
+      LANG_PARAM,
+      LNG_PARAM,
+      NRM_PARAM,
+      TLNG_PARAM,
+      ORIGINALLANG_PARAM                                                                                  
+    ));
+    
   
   @Override
   public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
@@ -73,6 +86,7 @@ public class SciELOUrlNormalizer implements UrlNormalizer {
     if ((qmark > 1) && (url.lastIndexOf(":/") > qmark)) {
       return url;
     }
+    
     // Some pdf URLs redirect to other URLs
     // The URLs look like this:
     // <base_url>/readcube/epdf.php?doi=10.1590/S0102-67202014000100001&pid=S0102-67202014000100001
@@ -81,125 +95,119 @@ public class SciELOUrlNormalizer implements UrlNormalizer {
     // <base_url>/pdf/abcd/v27n1/0102-6720-abcd-27-01-00001.pdf
     // Trim any &tlng=en param (and any trailing params)
     if (url.contains(TARGET_URL1)) {
+      log.debug3("case 1");
       Matcher pdf_mat = PDF_PAT.matcher(url);
       if (pdf_mat.find()) {
         url = pdf_mat.group(1) + "pdf/" + pdf_mat.group(2);
       }
       log.debug3(url);
+      return url;
     }
-    else if (url.contains(TARGET_URL2)) {
+    
+    if (url.contains(TARGET_URL2)) {
+      log.debug3("case 2");
       // There are cases where we need to specify order of arguments
-      // This is because we generate the URLS with the link extractor and need to 
+      // This is because we generate the URLs with the link extractor and need to 
       // makes sure we don't get redundant URLs due to "found" links that are
       // the same but for ordering.
       
       // Only do this normalization for correctly formatted URLs
       
-      StringBuilder new_url = new StringBuilder(url.substring(0, qmark));
+      StringBuilder newUrl = new StringBuilder(url.substring(0, qmark));
+      Map<String, String> query = parseQueryString(url.substring(qmark + 1));
+      String val;
       
-      // get a map of key-value pairs for the query args on the url
-      Map<String, String> argMap = getQueryArgsFromUrl(url, qmark);
+      if (!(query.containsKey(DOWNLOAD_PARAM) || query.get(SCRIPT_PARAM) != null)) {
+        return url; // don't alter URLs not of these two types
+      }
       
-      // limit the map access by using var to hold value
-      String theVal = null;
-      
-      if ( (theVal= argMap.get(SCRIPT_PARAM)) != null) {
-        new_url.append("?" + SCRIPT_PARAM + "=" + theVal);
-      } else {
+      if (query.containsKey(DOWNLOAD_PARAM)) {
+        newUrl.append("?" + DOWNLOAD_PARAM);
+        val = query.get(PID_PARAM);
+        if (val != null) {
+          newUrl.append("&" + PID_PARAM + "=" + val );
+        }
+        val = query.get(FORMAT_PARAM);
+        if (val != null) {
+          newUrl.append("&" + FORMAT_PARAM + "=" + val);
+        }
+        url = newUrl.toString();
+        log.debug3(url);
         return url;
       }
       
-      if ( (theVal= argMap.get(PID_PARAM)) != null) {
-        new_url.append("&" + PID_PARAM + "=" + theVal);
+      val = query.get(SCRIPT_PARAM);
+      newUrl.append("?" + SCRIPT_PARAM + "=" + val);
+      val = query.get(PID_PARAM);
+      if (val != null) {
+        newUrl.append("&" + PID_PARAM + "=" + val);
+      }
+      val = query.get(LNG_PARAM);
+      if (val == null) {
+        val = "en";
+      }
+      newUrl.append("&" + LNG_PARAM + "=" + val);
+      val = query.get(NRM_PARAM);
+      if (val != null && !val.equals(NRM_DEFAULT_VAL)) {
+        newUrl.append("&" + NRM_PARAM + "=" + val);
+      }
+      val = query.get(TLNG_PARAM);
+      if (val != null && !val.equals(TLNG_DEFAULT_VAL)) {
+        newUrl.append("&" + TLNG_PARAM + "=" + val);
       }
       
-      // add on language param
-      if ( (theVal = argMap.get(LNG_PARAM)) == null) {
-        // this does happen. make it "en"
-        log.debug3("no LNG_PARAM on this url:" + url);
-        theVal = "en";
-      }
-      new_url.append("&" + LNG_PARAM + "=" + theVal);
-      
-      // add on nrm param, if not =iso
-      if ((theVal = argMap.get(NRM_PARAM)) == null) {
-        // this does happen. make it "iso"
-        log.debug3("no NRM_PARAM on this url:" + url);
-        theVal = NRM_DEFAULT_VAL;
-      }
-      if (!theVal.equals(NRM_DEFAULT_VAL)) {
-        new_url.append("&" + NRM_PARAM + "=" + theVal);
-      }
-      
-      // add on tlng param, if not =en
-      if ((theVal = argMap.get(TLNG_PARAM)) == null) {
-        // this does happen. make it "en"
-        log.debug3("no TLNG_PARAM on this url:" + url);
-        theVal = TLNG_DEFAULT_VAL;
-      }
-      if (!theVal.equals(TLNG_DEFAULT_VAL)) {
-        new_url.append("&" + TLNG_PARAM + "=" + theVal);
-      }
-      
-      url = new_url.toString();
+      url = newUrl.toString();
       log.debug3(url);
-    } else if (url.contains(TARGET_URL3)) {
-      
-      StringBuilder new_url = new StringBuilder(url.substring(0, qmark));
-      
-      // get a map of key-value pairs for the query args on the url
-      Map<String, String> argMap = getQueryArgsFromUrl(url, qmark);
-      
-      String theVal = null;
-      
-      if ( (theVal= argMap.get(PID_PARAM)) != null) {
-        new_url.append("?" + PID_PARAM + "=" + theVal);
-      } else {
-        return url;
-      }
-      // force LANG_PARAM =en
-      new_url.append("&" + LANG_PARAM + "=en");
-      url = new_url.toString();
-      log.debug3(url);
+      return url;
     }
+    
+    if (url.contains(TARGET_URL3)) {
+      log.debug3("case 3");
+      StringBuilder newUrl = new StringBuilder(url.substring(0, qmark));
+      Map<String, String> query = parseQueryString(url.substring(qmark + 1));
+      String val;
+      
+      val = query.get(PID_PARAM);
+      if (val == null) {
+        return url;
+      }
+      
+      newUrl.append("?" + PID_PARAM + "=" + val);
+      newUrl.append("&" + LANG_PARAM + "=en"); // force LANG_PARAM to "en"
+
+      url = newUrl.toString();
+      log.debug3(url);
+      return url;
+    }
+    
+    // Otherwise...
     return url;
   }
   
-  /*
-   * This will ultimately become a util function
-   * Given the String url and the index position of the qmark return 
-   * a map of the query string key-value pairs
-   * this method takes in optional qmark
-   */
-  private static Map<String, String> getQueryArgsFromUrl(String url, int qmark) {
-    //First pick up the args in to a map
-    Map<String, String> argMap = new HashMap<String, String>();
-    String argKey;
-    String argVal;
-    int splitIndex;
-    
-    String query_string = url.substring(qmark+1);
-    if (query_string.contains("%26")) {
-      query_string = query_string.replace("%26", "&");
-    }
-    
-    for (String oneArg: query_string.split("&")) {
-      log.debug3("argument: " + oneArg);
-      splitIndex = oneArg.indexOf("=");
-      if (splitIndex > 0) {
-        // guard against malformed query - don't create entry
-        argKey = oneArg.substring(0, (splitIndex > 0 ? splitIndex : 0));
-        argVal = oneArg.substring(splitIndex+1);
-        log.debug3("map entry: " + argKey + "  " + argVal);
-        if (!Arrays.asList(KNOWN_PARAMS).contains(argKey)) {
-          log.warning(oneArg + " not in KNOWN_PARAMS");
-        }
-        argMap.put(argKey,  argVal);
-      } else {
-        log.warning(oneArg + " is malformed");
+  protected static Map<String, String> parseQueryString(String queryString) {
+    queryString = queryString.replace("%26", "&");
+    Map<String, String> ret = new HashMap<String, String>();
+
+    for (String pair : queryString.split("&")) {
+      log.debug3("pair: " + pair);
+      int eq = pair.indexOf("=");
+      String key;
+      String val;
+      if (eq < 0 || eq == pair.length() - 1) {
+        key = pair;
+        val = null;
       }
+      else {
+        key = pair.substring(0, eq);
+        val = pair.substring(eq + 1);
+      }
+      if (!KNOWN_PARAMS.contains(key)) {
+        log.debug(key + " not in known params");
+      }
+      ret.put(key, val);
     }
-    return argMap;
+
+    return ret;
   }
   
 }

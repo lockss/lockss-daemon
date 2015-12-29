@@ -11,7 +11,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -22,7 +22,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -111,8 +111,8 @@
       <string>4,"^%s", base_url</string>
       <string>1,"^%spdf/.+/(.._)?.+\.pdf", base_url</string>
       <string>1,"^%sscielo\.php\?script=sci_issues&amp;pid=%s&amp;", base_url, journal_issn</string>
-      <string>1,"^%sscielo\.php\?script=sci_.+&amp;pid=[^&amp;]{0,5}%s%d[0-9]{4,16}", base_url, journal_issn, year</string>
-      <string>1,"^%sscieloOrg/php/articleXML\.php\?pid=[^&amp;]{0,5}%s%d[0-9]{4,16}", base_url, journal_issn, year</string>
+      <string>1,"^%sscielo\.php\?(script=sci_.+|download)&amp;pid=[^&amp;]{0,5}%s%d[0-9]{4,16}", base_url, journal_issn, year</string>
+      <string>1,"^%sscieloOrg/php/(articleXML|reference)\.php\?pid=[^&amp;]{0,5}%s%d[0-9]{4,16}", base_url, journal_issn, year</string>
     </list>
   </entry>
   <entry>
@@ -169,5 +169,9 @@
          org.lockss.crawler.allowedPluginPermittedHosts -->
     <string>au_permitted_host_pattern</string>
     <string>[^.]+\.googleapis\.com|cdn[.]mathjax[.]org|[^.]+\.cloudfront\.net</string>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.scielo.SciEloHtmlLinkExtractorFactory</string>
   </entry>
 </map>
