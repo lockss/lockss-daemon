@@ -731,7 +731,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; British Journal of Sports Medicine Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; released ; 2014 ; British Journal of Sports Medicine Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; British Journal of Sports Medicine Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; British Journal of Sports Medicine Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; British Journal of Sports Medicine Volume 50 ; 50 >
 
   }
 
@@ -849,7 +849,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; Emergency Medicine Journal Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Emergency Medicine Journal Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Emergency Medicine Journal Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Emergency Medicine Journal Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Emergency Medicine Journal Volume 33 ; 33 >
 
   }
 
@@ -901,7 +901,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; European Journal of Hospital Pharmacy: Science and Practice Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; released ; 2014 ; European Journal of Hospital Pharmacy: Science and Practice Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; European Journal of Hospital Pharmacy: Science and Practice Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; European Journal of Hospital Pharmacy: Science and Practice Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; European Journal of Hospital Pharmacy: Science and Practice Volume 23 ; 23 >
 
   }
 
@@ -1501,7 +1501,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2013 ; Journal of Family Planning and Reproductive Health Care Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Journal of Family Planning and Reproductive Health Care Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of Family Planning and Reproductive Health Care Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Journal of Family Planning and Reproductive Health Care Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Journal of Family Planning and Reproductive Health Care Volume 42 ; 42 >
 
   }
 
@@ -2180,8 +2180,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Postgraduate Medical Journal Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Postgraduate Medical Journal Volume 89 ; 89 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Postgraduate Medical Journal Volume 90 ; 90 >
-    au < HighWirePressH20Plugin ; exists ; 2015 ; Postgraduate Medical Journal Volume 91 ; 91 >
-    au < HighWirePressH20Plugin ; exists ; 2016 ; Postgraduate Medical Journal Volume 92 ; 92 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Postgraduate Medical Journal Volume 91 ; 91 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Postgraduate Medical Journal Volume 92 ; 92 >
 
   }
 
@@ -2509,8 +2509,8 @@ comment[tc15] = recursive URL structure
       au < HighWirePressH20Plugin ; released ; 2012 ; Tobacco Control Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; released ; 2013 ; Tobacco Control Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; released ; 2014 ; Tobacco Control Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; exists ; 2015 ; Tobacco Control Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; exists ; 2016 ; Tobacco Control Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; manifest ; 2015 ; Tobacco Control Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; manifest ; 2016 ; Tobacco Control Volume 25 ; 25 >
 
     }
 
