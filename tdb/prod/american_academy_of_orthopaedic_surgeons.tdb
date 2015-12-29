@@ -16,30 +16,31 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://www.jaaos.org/
     implicit < status ; year ; name ; param[volume_name] >
+    
+    comment[0] = publisher moved to Wolters Kluwer. see http://journals.lww.com/jaaos/
 
-    au < released ; 1993 ; Journal of the American Academy of Orthopaedic Surgeons Volume 1 ; 1 >
-    au < released ; 1994 ; Journal of the American Academy of Orthopaedic Surgeons Volume 2 ; 2 >
-    au < released ; 1995 ; Journal of the American Academy of Orthopaedic Surgeons Volume 3 ; 3 >
-    au < released ; 1996 ; Journal of the American Academy of Orthopaedic Surgeons Volume 4 ; 4 >
-    au < released ; 1997 ; Journal of the American Academy of Orthopaedic Surgeons Volume 5 ; 5 >
-    au < released ; 1998 ; Journal of the American Academy of Orthopaedic Surgeons Volume 6 ; 6 >
-    au < released ; 1999 ; Journal of the American Academy of Orthopaedic Surgeons Volume 7 ; 7 >
-    au < released ; 2000 ; Journal of the American Academy of Orthopaedic Surgeons Volume 8 ; 8 >
-    au < released ; 2001 ; Journal of the American Academy of Orthopaedic Surgeons Volume 9 ; 9 >
-    au < released ; 2002 ; Journal of the American Academy of Orthopaedic Surgeons Volume 10 ; 10 >
-    au < released ; 2003 ; Journal of the American Academy of Orthopaedic Surgeons Volume 11 ; 11 >
-    au < released ; 2004 ; Journal of the American Academy of Orthopaedic Surgeons Volume 12 ; 12 >
-    au < released ; 2005 ; Journal of the American Academy of Orthopaedic Surgeons Volume 13 ; 13 >
-    au < released ; 2006 ; Journal of the American Academy of Orthopaedic Surgeons Volume 14 ; 14 >
-    au < released ; 2007 ; Journal of the American Academy of Orthopaedic Surgeons Volume 15 ; 15 >
-    au < released ; 2008 ; Journal of the American Academy of Orthopaedic Surgeons Volume 16 ; 16 >
-    au < released ; 2009 ; Journal of the American Academy of Orthopaedic Surgeons Volume 17 ; 17 >
-    au < released ; 2010 ; Journal of the American Academy of Orthopaedic Surgeons Volume 18 ; 18 >
-    au < released ; 2011 ; Journal of the American Academy of Orthopaedic Surgeons Volume 19 ; 19 >
-    au < released ; 2012 ; Journal of the American Academy of Orthopaedic Surgeons Volume 20 ; 20 >
-    au < released ; 2013 ; Journal of the American Academy of Orthopaedic Surgeons Volume 21 ; 21 >
-    au < released ; 2014 ; Journal of the American Academy of Orthopaedic Surgeons Volume 22 ; 22 >
-    au < manifest ; 2015 ; Journal of the American Academy of Orthopaedic Surgeons Volume 23 ; 23 >
+    au < down ; 1993 ; Journal of the American Academy of Orthopaedic Surgeons Volume 1 ; 1 >
+    au < down ; 1994 ; Journal of the American Academy of Orthopaedic Surgeons Volume 2 ; 2 >
+    au < down ; 1995 ; Journal of the American Academy of Orthopaedic Surgeons Volume 3 ; 3 >
+    au < down ; 1996 ; Journal of the American Academy of Orthopaedic Surgeons Volume 4 ; 4 >
+    au < down ; 1997 ; Journal of the American Academy of Orthopaedic Surgeons Volume 5 ; 5 >
+    au < down ; 1998 ; Journal of the American Academy of Orthopaedic Surgeons Volume 6 ; 6 >
+    au < down ; 1999 ; Journal of the American Academy of Orthopaedic Surgeons Volume 7 ; 7 >
+    au < down ; 2000 ; Journal of the American Academy of Orthopaedic Surgeons Volume 8 ; 8 >
+    au < down ; 2001 ; Journal of the American Academy of Orthopaedic Surgeons Volume 9 ; 9 >
+    au < down ; 2002 ; Journal of the American Academy of Orthopaedic Surgeons Volume 10 ; 10 >
+    au < down ; 2003 ; Journal of the American Academy of Orthopaedic Surgeons Volume 11 ; 11 >
+    au < down ; 2004 ; Journal of the American Academy of Orthopaedic Surgeons Volume 12 ; 12 >
+    au < down ; 2005 ; Journal of the American Academy of Orthopaedic Surgeons Volume 13 ; 13 >
+    au < down ; 2006 ; Journal of the American Academy of Orthopaedic Surgeons Volume 14 ; 14 >
+    au < down ; 2007 ; Journal of the American Academy of Orthopaedic Surgeons Volume 15 ; 15 >
+    au < down ; 2008 ; Journal of the American Academy of Orthopaedic Surgeons Volume 16 ; 16 >
+    au < down ; 2009 ; Journal of the American Academy of Orthopaedic Surgeons Volume 17 ; 17 >
+    au < down ; 2010 ; Journal of the American Academy of Orthopaedic Surgeons Volume 18 ; 18 >
+    au < down ; 2011 ; Journal of the American Academy of Orthopaedic Surgeons Volume 19 ; 19 >
+    au < down ; 2012 ; Journal of the American Academy of Orthopaedic Surgeons Volume 20 ; 20 >
+    au < down ; 2013 ; Journal of the American Academy of Orthopaedic Surgeons Volume 21 ; 21 >
+    au < down ; 2014 ; Journal of the American Academy of Orthopaedic Surgeons Volume 22 ; 22 >
 
   }
 
