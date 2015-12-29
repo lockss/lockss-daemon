@@ -50,6 +50,7 @@
       au < released ; 2013 ; Journal of Clinical Oncology Volume 31 ; 31 >
       au < released ; 2014 ; Journal of Clinical Oncology Volume 32 ; 32 >
       au < manifest ; 2015 ; Journal of Clinical Oncology Volume 33 ; 33 >
+      au < expected ; 2016 ; Journal of Clinical Oncology Volume 34 ; 34 >
 
     }
 
@@ -67,6 +68,7 @@
       param[base_url] = http://jgo.ascopubs.org/ 
 
       au < exists ; 2015 ; Journal of Global Oncology Volume 1 ; 1 >
+      au < expected ; 2016 ; Journal of Global Oncology Volume 2 ; 2 >
 
     }
 
@@ -94,6 +96,7 @@
       au < released ; 2013 ; Journal of Oncology Practice Volume 9 ; 9 >
       au < released ; 2014 ; Journal of Oncology Practice Volume 10 ; 10 >
       au < manifest ; 2015 ; Journal of Oncology Practice Volume 11 ; 11 >
+      au < expected ; 2016 ; Journal of Oncology Practice Volume 12 ; 12 >
 
     }
 
