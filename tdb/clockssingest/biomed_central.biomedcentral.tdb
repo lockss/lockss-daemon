@@ -544,6 +544,7 @@
     {
       title <
         name = Biological Research ;
+        issn = 0716-9760 ;
         eissn = 0717-6287 ;
         issnl = 0717-6287
       >
@@ -551,8 +552,8 @@
       param[base_url] = http://www.biolres.com/
       param[journal_issn] = 0717-6287
 
-      au < down ; exists ; 2014 ; Biological Research Volume 47 ; 47 >
-      au < down ; exists ; 2015 ; Biological Research Volume 48 ; 48 >
+      au < superseded ; exists ; 2014 ; Biological Research Volume 47 [superseded] ; 47 >
+      au < superseded ; exists ; 2015 ; Biological Research Volume 48 [superseded] ; 48 >
 
     }
 
