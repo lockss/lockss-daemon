@@ -141,6 +141,7 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = educacaoemquestao
 
+      au < manifest ; 2005 ; 24-25 ; Revista Educação em Questão Volume 2005 ; 2005 ; >
       au < released ; 2006 ; 26-27 ; Revista Educação em Questão Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 28-30 ; Revista Educação em Questão Volume 2007 ; 2007 ; >
       au < released ; 2008 ; 31-33 ; Revista Educação em Questão Volume 2008 ; 2008 ; >
@@ -380,14 +381,13 @@
       comment[publisher] = Universidade Federal do Rio Grande do Norte-UFRN
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = sociedadeeterritorio
-      
-      comment[manifest] = manifest pages are now gone.
 
       au < released ; 2009 ; 1 ; Sociedade e Território Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 2 ; Sociedade e Território Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 3 ; Sociedade e Território Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 4 ; Sociedade e Território Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 5 ; Sociedade e Território Volume 2013 ; 2013 ; >
+      au < manifest ; 2014 ; 6 ; Sociedade e Território Volume 2014 ; 2014 ; >
 
   }
 
@@ -404,6 +404,7 @@
 
       au < manifest ; 2012 ; 1 ; Vivência: Revista de Antropologia Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 2 ; Vivência: Revista de Antropologia Volume 2013 ; 2013 ; >
+      au < expected ; 2014 ; 3 ; Vivência: Revista de Antropologia Volume 2014 ; 2014 ; >
 
   }
 
@@ -425,6 +426,7 @@
       au < manifest ; 2012 ; 5 ; Revista Constituição e Garantia de Direitos Volume 2012 ; 2012 ; >
       au < manifest ; 2013 ; 6 ; Revista Constituição e Garantia de Direitos Volume 2013 ; 2013 ; >
       au < manifest ; 2014 ; 7 ; Revista Constituição e Garantia de Direitos Volume 2014 ; 2014 ; >
+      au < manifest ; 2015 ; 8 ; Revista Constituição e Garantia de Direitos Volume 2015 ; 2015 ; >
 
   }
 
