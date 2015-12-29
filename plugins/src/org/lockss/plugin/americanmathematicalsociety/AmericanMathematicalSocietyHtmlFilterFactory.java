@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,13 +33,18 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.americanmathematicalsociety;
 
 import java.io.InputStream;
+import java.io.Reader;
+
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.filters.TagNameFilter;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
+import org.lockss.util.ReaderInputStream;
 
 public class AmericanMathematicalSocietyHtmlFilterFactory implements FilterFactory {
   Logger log = Logger.getLogger(AmericanMathematicalSocietyHtmlFilterFactory.class);
@@ -67,8 +72,9 @@ public class AmericanMathematicalSocietyHtmlFilterFactory implements FilterFacto
     // Do the initial html filtering
     InputStream filteredStream = new HtmlFilterInputStream(in,encoding,
         HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-    
-    return filteredStream;
+    // add whitespace filtering
+    Reader filteredReader = FilterUtil.getReader(filteredStream, encoding);
+    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
   }
   
 }

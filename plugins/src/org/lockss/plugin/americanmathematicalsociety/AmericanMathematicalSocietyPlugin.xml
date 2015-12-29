@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -69,15 +69,17 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^%s.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url</string>
+      <string>1,"^https?://%s/[^?]+[.](bmp|css|gif|ico|jpe?g|js|png|tif?f|eot|svg|ttf|woff.?)$", url_host(base_url)</string>
+      <string>4,"^%s", base_url</string>
       <string>1,"^%s(?:journals/)?%s/home-%d[.]html$", base_url, journal_id, year</string>
       <string>1,"^%s%s/%d-[0-9-]{2,9}/?$", base_url, journal_id, year</string>
       <string>1,"^%sjournals/%s/%d-[0-9-]{2,9}/", base_url, journal_id, year</string>
     </list>
   </entry>
   <entry>
-    <string>au_crawl_depth</string>
-    <int>1</int>
+    <!-- manifest to issue to articles, plus one for incorrect manifest -->
+    <string>au_refetch_depth</string>
+    <int>3</int>
   </entry>
   <entry>
     <string>plugin_config_props</string>
