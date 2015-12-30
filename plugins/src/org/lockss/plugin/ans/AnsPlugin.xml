@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Nuclear Society Plugin, Base URL %s, Download URL %s, Jounal ID %s, Volume %s", base_url, download_url, journal_id, volume_name</string>
+    <string>"American Nuclear Society Plugin, Base URL %s, Download URL %s, Journal ID %s, Volume %s", base_url, download_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -41,15 +41,16 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://(%s|((cdn|glc)\.ans\.org))/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
+      <string>1,"^https?://(%s|((cdn|glc)\.ans\.org))/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff.?)$", url_host(base_url)</string>
       <string>1,"^%spubs/journals/%s/v_%s", base_url, journal_id, volume_name</string>
       <string>1,"^%spubs/journals/(%s|download)/a_[0-9]+$", base_url, journal_id</string>
-      <string>1,"^%s\?a=[0-9]+$", download_url</string>
+      <string>1,"^%s(download/)?\?a=[0-9]+$", download_url</string>
     </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
+      <!-- actual pdf -->
       <string>"^%spubs/journals/%s/a_[0-9]+$", base_url, journal_id</string>
     </list>
   </entry>

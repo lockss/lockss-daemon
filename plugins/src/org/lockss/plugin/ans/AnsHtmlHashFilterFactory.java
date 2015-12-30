@@ -39,7 +39,7 @@ import org.htmlparser.filters.*;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
-public class AnsHtmlFilterFactory implements FilterFactory {
+public class AnsHtmlHashFilterFactory implements FilterFactory {
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
@@ -49,8 +49,18 @@ public class AnsHtmlFilterFactory implements FilterFactory {
      new TagNameFilter("script"),
      // footer
      HtmlNodeFilters.tagWithAttribute("div", "id", "d_footwrap"),
+     // left menu
+     HtmlNodeFilters.tagWithAttribute("div", "id", "d_lmenu"),
+     // title 
+     HtmlNodeFilters.tagWithAttribute("div", "id", "d_title"),
+     // top menu
+     HtmlNodeFilters.tagWithAttribute("div", "id", "d_sitemenu"),
+     // another top menu
+     HtmlNodeFilters.tagWithAttribute("div", "id", "d_xmenus"),
+     // breadcrumbs
+     HtmlNodeFilters.tagWithAttribute("div", "id", "d_nest"),
      // spacing tags
-     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "flush"),
+     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "flush"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,

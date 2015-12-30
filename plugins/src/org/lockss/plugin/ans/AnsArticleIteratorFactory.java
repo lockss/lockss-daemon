@@ -54,27 +54,31 @@ implements ArticleIteratorFactory,
       Logger.getLogger(AnsArticleIteratorFactory.class);
 
   // params from tdb file corresponding to AU
-  protected static final String ROOT_TEMPLATE_BASE = "\"%s\", base_url";
+  protected static final String ROOT_TEMPLATE_BASE = "\"%spubs/journals/\", base_url";
   protected static final String ROOT_TEMPLATE_DOWNLOAD = "\"%s\", download_url";
 
   protected static final String PATTERN_TEMPLATE =
-      "\"^(%spubs/journals/%s|%s)\", base_url, journal_id, download_url";
+      "\"^%spubs/journals/%s\", base_url, journal_id";
+
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) 
       throws PluginException {
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
 
+    
     //http://www.ans.org/pubs/journals/nse/a_37021
-    //http://epubs.ans.org/?a=37469
+    //http://epubs.ans.org/download/?a=37469
+    //
     
+    final String DOWNLOAD_URL = au.getConfiguration().get("download_url");
     final Pattern ABSTRACT_PATTERN = Pattern.compile(
-       "pubs/journals/([^/]+)/a_([0-9]+)$",
+       "^(http://[^/]+/)pubs/journals/([^/]+)/a_([0-9]+)$",
        Pattern.CASE_INSENSITIVE);
+    final String ABSTRACT_REPLACEMENT = "$1pubs/journals/$2/a_$3";
+    final String PDF_LANDING_REPLACEMENT = DOWNLOAD_URL + "?a=$3";
+    final String PDF_REPLACEMENT = DOWNLOAD_URL + "download/?a=$3";
     
-    
-    final String ABSTRACT_REPLACEMENT = "pubs/journals/$1/a_$2";
-    final String CONTENT_REPLACEMENT = "?a=$2";
     ArrayList<String >rootList = new ArrayList<String>();
     rootList.add(ROOT_TEMPLATE_BASE);
     rootList.add(ROOT_TEMPLATE_DOWNLOAD);
@@ -89,7 +93,11 @@ implements ArticleIteratorFactory,
         ArticleFiles.ROLE_ARTICLE_METADATA);
     
     builder.addAspect(
-            CONTENT_REPLACEMENT,
+            PDF_LANDING_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
+    
+    builder.addAspect(
+            PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
 
     builder.setFullTextFromRoles(

@@ -48,7 +48,6 @@ import org.lockss.util.Logger;
 
 public class AnsHtmlMetadataExtractorFactory
   implements FileMetadataExtractorFactory {
-  private static final Logger log = Logger.getLogger(AnsHtmlMetadataExtractorFactory.class);
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
