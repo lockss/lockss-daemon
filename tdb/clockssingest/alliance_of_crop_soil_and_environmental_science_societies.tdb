@@ -41,7 +41,7 @@
     au < manifest ; exists ; 2011 ; Agronomy Journal Volume 103 ; 103 >
     au < manifest ; exists ; 2012 ; Agronomy Journal Volume 104 ; 104 >
     au < crawling ; exists ; 2013 ; Agronomy Journal Volume 105 ; 105 >
-    au < crawling ; exists ; 2014 ; Agronomy Journal Volume 106 ; 106 >
+    au < finished ; crawling ; 2014 ; Agronomy Journal Volume 106 ; 106 >
     au < crawling ; exists ; 2015 ; Agronomy Journal Volume 107 ; 107 >
     au < manifest ; exists ; 2016 ; Agronomy Journal Volume 108 ; 108 >
 
@@ -84,7 +84,7 @@
     au < manifest ; exists ; 2011 ; Crop Science Volume 51 ; 51 >
     au < manifest ; exists ; 2012 ; Crop Science Volume 52 ; 52 >
     au < crawling ; exists ; 2013 ; Crop Science Volume 53 ; 53 >
-    au < crawling ; exists ; 2014 ; Crop Science Volume 54 ; 54 >
+    au < finished ; crawling ; 2014 ; Crop Science Volume 54 ; 54 >
     au < crawling ; exists ; 2015 ; Crop Science Volume 55 ; 55 >
 
   }
@@ -126,7 +126,7 @@
     au < manifest ; exists ; 2011 ; Journal of Environmental Quality Volume 40 ; 40 >
     au < manifest ; exists ; 2012 ; Journal of Environmental Quality Volume 41 ; 41 >
     au < crawling ; exists ; 2013 ; Journal of Environmental Quality Volume 42 ; 42 >
-    au < crawling ; exists ; 2014 ; Journal of Environmental Quality Volume 43 ; 43 >
+    au < finished ; crawling ; 2014 ; Journal of Environmental Quality Volume 43 ; 43 >
     au < crawling ; exists ; 2015 ; Journal of Environmental Quality Volume 44 ; 44 >
 
 
@@ -148,7 +148,7 @@
     au < manifest ; exists ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 >
     au < manifest ; exists ; 2012 ; Journal of Plant Registrations Volume 6 ; 6 >
     au < finished ; finished ; 2013 ; Journal of Plant Registrations Volume 7 ; 7 >
-    au < crawling ; exists ; 2014 ; Journal of Plant Registrations Volume 8 ; 8 >
+    au < finished ; crawling ; 2014 ; Journal of Plant Registrations Volume 8 ; 8 >
     au < crawling ; exists ; 2015 ; Journal of Plant Registrations Volume 9 ; 9 >
 
   }
@@ -249,7 +249,7 @@
     au < manifest ; exists ; 2011 ; Soil Science Society of America Journal Volume 75 ; 75 >
     au < manifest ; exists ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 >
     au < crawling ; exists ; 2013 ; Soil Science Society of America Journal Volume 77 ; 77 >
-    au < crawling ; exists ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 >
+    au < finished ; crawling ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 >
     au < crawling ; exists ; 2015 ; Soil Science Society of America Journal Volume 79 ; 79 >
 
   }
