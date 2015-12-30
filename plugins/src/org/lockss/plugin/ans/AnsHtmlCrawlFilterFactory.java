@@ -50,22 +50,8 @@ public class AnsHtmlCrawlFilterFactory implements FilterFactory {
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
       
-      //footer
-      HtmlNodeFilters.tagWithAttribute("div", "id", "ds-footer-wrapper"),
-      // header
-      HtmlNodeFilters.tagWithAttribute("div", "id", "ds-header-wrapper"),
-      //url trail
-      HtmlNodeFilters.tagWithAttribute("div", "id", "ds-trail-wrapper"),
-      //js warning
-      HtmlNodeFilters.tagWithAttribute("div", "id", "no-js-warning-wrapper"),
-      //sidebar
-      HtmlNodeFilters.tagWithAttribute("div", "id", "ds-options-wrapper"),
-      //link to whole collection
-      HtmlNodeFilters.tagWithAttribute("ul", "class", "ds-referenceSet-list"),
-      
-      /*Filters for Brazil DSpace*/
-      // links in metadata to outside au
-      HtmlNodeFilters.tagWithAttribute("td", "class", "metadataFieldValue"),
+    		// footer
+    	     HtmlNodeFilters.tagWithAttribute("div", "id", "d_footwrap"),
       
     };
     return new HtmlFilterInputStream(in,

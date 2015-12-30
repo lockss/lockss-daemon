@@ -32,8 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.ans;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
 import java.util.regex.Pattern;
 
 import org.lockss.daemon.*;
@@ -52,10 +54,11 @@ implements ArticleIteratorFactory,
       Logger.getLogger(AnsArticleIteratorFactory.class);
 
   // params from tdb file corresponding to AU
-  protected static final String ROOT_TEMPLATE = "\"%s\",base_url";
+  protected static final String ROOT_TEMPLATE_BASE = "\"%s\", base_url";
+  protected static final String ROOT_TEMPLATE_DOWNLOAD = "\"%s\", download_url";
 
   protected static final String PATTERN_TEMPLATE =
-      "\"^%spubs/journals/%s\", base_url, journal_id";
+      "\"^(%spubs/journals/%s|%s)\", base_url, journal_id, download_url";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) 
@@ -69,11 +72,15 @@ implements ArticleIteratorFactory,
        "pubs/journals/([^/]+)/a_([0-9]+)$",
        Pattern.CASE_INSENSITIVE);
     
+    
     final String ABSTRACT_REPLACEMENT = "pubs/journals/$1/a_$2";
-    final String CONTENT_REPLACEMENT = "\\?a=$2";
-
+    final String CONTENT_REPLACEMENT = "?a=$2";
+    ArrayList<String >rootList = new ArrayList<String>();
+    rootList.add(ROOT_TEMPLATE_BASE);
+    rootList.add(ROOT_TEMPLATE_DOWNLOAD);
+    
     builder.setSpec(target,
-        ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+        rootList, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
     
     builder.addAspect(
     		ABSTRACT_PATTERN,

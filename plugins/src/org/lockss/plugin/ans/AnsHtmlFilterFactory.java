@@ -48,17 +48,9 @@ public class AnsHtmlFilterFactory implements FilterFactory {
      //filter out script
      new TagNameFilter("script"),
      // footer
-     HtmlNodeFilters.tagWithAttribute("div", "id", "ds-footer-wrapper"),
-     // header
-     HtmlNodeFilters.tagWithAttribute("div", "id", "ds-header-wrapper"),
-     //trail
-     HtmlNodeFilters.tagWithAttribute("div", "id", "ds-trail-wrapper"),
-     //js warning
-     HtmlNodeFilters.tagWithAttribute("div", "id", "no-js-warning-wrapper"),
-     //sidebar
-     HtmlNodeFilters.tagWithAttribute("div", "id", "ds-options-wrapper"),
-     //link to whole collection
-     HtmlNodeFilters.tagWithAttribute("ul", "class", "ds-referenceSet-list"),
+     HtmlNodeFilters.tagWithAttribute("div", "id", "d_footwrap"),
+     // spacing tags
+     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "flush"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,

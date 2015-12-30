@@ -1,0 +1,38 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.ans.ClockssAnsPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>5</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.clockss.AnsPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>5</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>American Nuclear Society Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"American Nuclear Society Plugin (CLOCKSS), Base URL %s, Jounal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+ </map>
