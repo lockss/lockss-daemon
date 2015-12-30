@@ -8,7 +8,8 @@
 
   comment[platform] = Atypon
   
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressBooksPlugin
+  param[base_url] = http://www.nrcresearchpress.com/  
   implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_eisbn] ; name >
   
 
