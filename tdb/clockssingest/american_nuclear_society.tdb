@@ -9,7 +9,7 @@
   implicit < status ; status2 ; year ; name ; param[volume_name] >
   plugin = org.lockss.plugin.ans.ClockssAnsPlugin
   param[base_url] = http://www.ans.org/
-  param[download_url] = http://epub.ans.org/
+  param[download_url] = http://epubs.ans.org/
 
 
     {
@@ -21,7 +21,11 @@
 
       param[journal_id] = nse
       
-      au < expected ; exists ; 2015 ; Nuclear Science and Engineering Volume 2015 ; 2015 >
+      au < ready ; exists ; 2015 ; Nuclear Science and Engineering Volume 179 ; 179 >
+      au < ready ; exists ; 2015 ; Nuclear Science and Engineering Volume 180 ; 180 >
+      au < ready ; exists ; 2015 ; Nuclear Science and Engineering Volume 181 ; 181 >
+
+
 
     }
 
@@ -34,7 +38,10 @@
 
       param[journal_id] = nt
       
-      au < expected ; exists ; 2015 ; Nuclear Technology Volume 2015 ; 2015 >
+      au < ready ; exists ; 2015 ; Nuclear Technology Volume 189 ; 189 >
+      au < ready ; exists ; 2015 ; Nuclear Technology Volume 190 ; 190 >
+      au < ready ; exists ; 2015 ; Nuclear Technology Volume 191 ; 191 >
+      au < ready ; exists ; 2015 ; Nuclear Technology Volume 192 ; 192 >
 
     }
 
@@ -47,7 +54,8 @@
 
       param[journal_id] = fst
       
-      au < expected ; exists ; 2015 ; Fusion Science and Technology Volume 2015 ; 2015 >
+      au < ready ; exists ; 2015 ; Fusion Science and Technology Volume 67 ; 67 >
+      au < ready ; exists ; 2015 ; Fusion Science and Technology Volume 68 ; 68 >
 
     }
 
