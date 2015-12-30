@@ -11,7 +11,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -22,7 +22,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -173,5 +173,9 @@
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.scielo.SciEloHtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.scielo.SciEloHtmlCrawlFilterFactory</string>
   </entry>
 </map>
