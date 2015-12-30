@@ -9,7 +9,8 @@
   comment[platform] = Atypon
   
   plugin = needs.plugin
-  implicit < status ; status2 ; name ; param[isbn] ; param[eisbn] >
+  implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_eisbn] ; name >
+  
 
   {
   
@@ -18,20 +19,20 @@
       type = bookSeries
       >
       
-      au < exists ; exists ; 1996 International Symposium on Bacterial Polyhydroxyalkanoates ; 978-0-660-17083-1  ; 978-0-9878114-5-5 >
-      au < exists ; exists ; Advances in Mycorrhizal Science and Technology ; 978-0-660-19883-5 ; 978-0-660-19882-8 >
-      au < exists ; exists ; Alfalfa and Relatives: Evolution and Classification of Medicago ; 978-0-660-19979-5 ; 978-1-927346-18-1 >
-      au < exists ; exists ; Annotated Keys to the Genera of Nearctic Chalcidoidea ; 978-0-660-16669-8 ; 978-0-9878114-2-4 >
-      au < exists ; exists ; Assessment of Species Diversity in the Atlantic Maritime Ecozone ; 978-0-660-19835-4 ; 978-0-660-19836-1 >
-      au < exists ; exists ; Atlantic Halibut (Hippoglossus hippoglossus) and Pacific Halibut (H. stenolepis) and their North American Fisheries Canadian Bulletin of Fisheries and Aquatic Sciences No. 227 ; 978-0-660-15111-3 ; 978-0-660-19313-7 >
-      au < exists ; exists ; Atlas of Migmatites ; 978-0-660-19787-6 ; 978-0-660-19788-3 >
-      au < exists ; exists ; Audubon: Beyond Birds ; 978-0-660-19894-1 ; 978-0-660-19895-8 >
-      au < exists ; exists ; Beetles of the Galapagos Islands, Ecuador ; 978-0-660-19421-9 ; 978-0-660-19422-6 >
-      au < exists ; exists ; Biodiversity & Health ; 978-0-660-62713-7 ; 978-0-662-49441-6 >
-      au < exists ; exists ; Biology of Populus and its Implications for Management and Conservation ; 978-0-660-16506-6 ; 978-0-9878114-1-7 >
-      au < exists ; exists ; Blue Grouse: Their Biology and Natural History ; 978-0-660-19271-0 ; 978-0-660-19272-7 >
-      au < exists ; exists ; Calcium: The Grand-Master Cell Signaler ; 978-0-660-18201-8 ; 978-0-660-18991-8 >
-      au < exists ; exists ; Canadian Marine Fisheries in a Changing and Uncertain World Canadian Special Publication of Fisheries and Aquatic Sciences No. 129 ; 978-0-660-17638-3 ; 978-0-660-19314-4 >
+      au < manifest ; exists ; 1997 ; 978-0-660-17083-1 ; 978-0-9878114-5-5 ; 9780987811455 ; 1996 International Symposium on Bacterial Polyhydroxyalkanoates >
+      au < manifest ; exists ; 2009 ; 978-0-660-19883-5 ; 978-0-660-19882-8 ; 9780660198828 ; Advances in Mycorrhizal Science and Technology >
+      au < manifest ; exists ; 2010 ; 978-0-660-19979-5 ; 978-1-927346-18-1 ; 9781927346181 ; Alfalfa and Relatives: Evolution and Classification of Medicago >
+      au < manifest ; exists ; 1997 ; 978-0-660-16669-8 ; 978-0-9878114-2-4 ; 9780987811424 ; Annotated Keys to the Genera of Nearctic Chalcidoidea >
+      au < manifest ; exists ; 2010 ; 978-0-660-19835-4 ; 978-0-660-19836-1 ; 9780660198361 ; Assessment of Species Diversity in the Atlantic Maritime Ecozone >
+      au < manifest ; exists ; 1994 ; 978-0-660-15111-3 ; 978-0-660-19313-7 ; 9780660193137 ; Atlantic Halibut (Hippoglossus hippoglossus) and Pacific Halibut (H. stenolepis) and their North American Fisheries Canadian Bulletin of Fisheries and Aquatic Sciences No. 227 >
+      au < manifest ; exists ; 2008 ; 978-0-660-19787-6 ; 978-0-660-19788-3 ; 9780660197883 ; Atlas of Migmatites >
+      au < manifest ; exists ; 2009 ; 978-0-660-19894-1 ; 978-0-660-19895-8 ; 9780660198958 ; Audubon: Beyond Birds >
+      au < manifest ; exists ; 2006 ; 978-0-660-19421-9 ; 978-0-660-19422-6 ; 9780660194226 ; Beetles of the Galapagos Islands, Ecuador >
+      au < manifest ; exists ; 2005 ; 978-0-660-62713-7 ; 978-0-662-49441-6 ; 9780662494416 ; Biodiversity & Health >
+      au < manifest ; exists ; 1996 ; 978-0-660-16506-6 ; 978-0-9878114-1-7 ; 9780987811417 ; Biology of Populus and its Implications for Management and Conservation >
+      au < manifest ; exists ; 2004 ; 978-0-660-19271-0 ; 978-0-660-19272-7 ; 9780660192727 ; Blue Grouse: Their Biology and Natural History >
+      au < manifest ; exists ; 2001 ; 978-0-660-18201-8 ; 978-0-660-18991-8 ; 9780660189918 ; Calcium: The Grand-Master Cell Signaler >
+      au < manifest ; exists ; 1999 ; 978-0-660-17638-3 ; 978-0-660-19314-4 ; 9780660193144 ; Canadian Marine Fisheries in a Changing and Uncertain World Canadian Special Publication of Fisheries and Aquatic Sciences No. 129 >
     
   }
   
@@ -247,7 +248,7 @@
     {
   
     title < 
-      name = Durability of Building Materials and Components 8, Volumes 1-4  ;
+      name = Durability of Building Materials and Components 8, Volumes 1-4 ;
       type = book  
      >
     comment[isbn] = 978-0-660-17737-3    
@@ -280,7 +281,7 @@
     {
   
     title < 
-      name = Evaluation of Closed-containment Technologies for Saltwater Salmon Aquaculture  ;
+      name = Evaluation of Closed-containment Technologies for Saltwater Salmon Aquaculture ;
       type = book  
       >
       comment[isbn] = 978-0-660-19968-9 
@@ -291,7 +292,7 @@
     {
   
     title < 
-      name = Flora of the Canadian Arctic Archipelago  ;
+      name = Flora of the Canadian Arctic Archipelago ;
       type = book  
       >
       comment[isbn] = 978-0-660-19727-2 
@@ -302,7 +303,7 @@
     {
   
     title < 
-      name = Flower Guide for Holiday Weekends in Eastern Canada and Northeastern U.S.A.  ;
+      name = Flower Guide for Holiday Weekends in Eastern Canada and Northeastern U.S.A. ;
       type = book  
       >
       comment[isbn] = 978-0-660-19096-9 
@@ -313,7 +314,7 @@
     {
   
     title < 
-      name = Frasnian (Upper Devonian) Colonial Disphyllid Corals from Western Canada  ;
+      name = Frasnian (Upper Devonian) Colonial Disphyllid Corals from Western Canada ;
       type = book  
       >
       comment[isbn] = 978-0-660-19943-6 
@@ -324,7 +325,7 @@
   {
   
     title < 
-      name = Genera of the Trichoptera of Canada and Adjoining or Adjacent United States The Insects and Arachnids of Canada Series, Part 7  ;
+      name = Genera of the Trichoptera of Canada and Adjoining or Adjacent United States The Insects and Arachnids of Canada Series, Part 7 ;
       type = book  
       >
       comment[isbn] = 978-0-660-16402-1 
@@ -335,7 +336,7 @@
     {
   
     title < 
-      name = George J. Klein: The Great Inventor  ;
+      name = George J. Klein: The Great Inventor ;
       type = book  
       >
       comment[isbn] = 978-0-660-19322-9 
@@ -346,7 +347,7 @@
     {
   
     title < 
-      name = George J. Klein: The Great Inventor  ;
+      name = George J. Klein: The Great Inventor ;
       type = book  
       >
       comment[isbn] = 978-0-660-19322-9 
@@ -358,7 +359,7 @@
     {
   
     title < 
-      name = Gerhard Herzberg  ;
+      name = Gerhard Herzberg ;
       type = book  
       >
       comment[isbn] = 978-0-660-18757-0 
@@ -371,7 +372,7 @@
     {
   
     title < 
-      name = Guide d'identification du phytoplancton marin de l'estuaire et du golfe du Saint-Laurent incluant ��galement certains protozoaires Canadian Special Publication of Fisheries and Aquatic Sciences No. 128  ;
+      name = Guide d'identification du phytoplancton marin de l'estuaire et du golfe du Saint-Laurent incluant ��galement certains protozoaires Canadian Special Publication of Fisheries and Aquatic Sciences No. 128 ;
       type = book  
       >
       comment[isbn] = 978-0-660-96057-9 
@@ -383,7 +384,7 @@
     {
   
     title < 
-      name = Guide to the Parasites of Fishes of Canada Canadian Special Publication of Fisheries and Aquatic Sciences No. 124  ;
+      name = Guide to the Parasites of Fishes of Canada Canadian Special Publication of Fisheries and Aquatic Sciences No. 124 ;
       type = book  
       >
       comment[isbn] = 978-0-660-16403-8 
@@ -395,7 +396,7 @@
     {
   
     title < 
-      name = Her Daughter the Engineer  ;
+      name = Her Daughter the Engineer ;
       type = book  
       >
       comment[isbn] = 978-0-660-19813-2 
@@ -407,7 +408,7 @@
     {
   
     title < 
-      name = Herbes culinaires pour nos jardins de pays froid  ;
+      name = Herbes culinaires pour nos jardins de pays froid ;
       type = book  
       >
       comment[isbn] = 978-0-660-96164-4 
@@ -420,7 +421,7 @@
     {
   
     title < 
-      name = Histology of the Atlantic Cod, Gadus morhua / Atlas d'histologie de la morue franche, Gadus morhua Canadian Special Publication of Fisheries and Aquatic Sciences No. 119  ;
+      name = Histology of the Atlantic Cod, Gadus morhua / Atlas d'histologie de la morue franche, Gadus morhua Canadian Special Publication of Fisheries and Aquatic Sciences No. 119 ;
       type = book  
       >
       comment[isbn] = 978-0-660-57482-0 
@@ -432,7 +433,7 @@
     {
   
     title < 
-      name = Images of the Morphology and Anatomy of Seedless Vascular Plants and Gymnosperms  ;
+      name = Images of the Morphology and Anatomy of Seedless Vascular Plants and Gymnosperms ;
       type = book  
       >
       comment[isbn] = 978-0-9877172-0-7 
@@ -444,7 +445,7 @@
     {
   
     title < 
-      name = Impacts of water diversion on biotic communities of a river in a dune watershed  ;
+      name = Impacts of water diversion on biotic communities of a river in a dune watershed ;
       type = book  
       >
       comment[isbn] = 978-0-660-19942-9 
@@ -455,7 +456,7 @@
     {
   
     title < 
-      name = La gestion des p��ches maritimes au Canada Bulletin canadien des sciences halieutiques et aquatiques no 225  ;
+      name = La gestion des p��ches maritimes au Canada Bulletin canadien des sciences halieutiques et aquatiques no 225 ;
       type = book  
       >
       comment[isbn] = 978-0-660-94830-0 
@@ -467,7 +468,7 @@
     {
   
     title < 
-      name = Late Ordovician Articulate Brachiopods from the Red River and Stony Mountain Formations, Southern Manitoba  ;
+      name = Late Ordovician Articulate Brachiopods from the Red River and Stony Mountain Formations, Southern Manitoba ;
       type = book  
       >
       comment[isbn] = 978-0-660-18283-4 
@@ -479,7 +480,7 @@
     {
   
     title < 
-      name = Late Ordovician and Early Silurian stromatoporoid sponges from Anticosti Island, eastern Canada  ;
+      name = Late Ordovician and Early Silurian stromatoporoid sponges from Anticosti Island, eastern Canada ;
       type = book  
       >
       comment[isbn] = 978-0-660-19930-6 
@@ -490,7 +491,7 @@
     {
   
     title < 
-      name = Late Ordovician orthide and billingsellide brachiopods from Anticosti Island, eastern Canada  ;
+      name = Late Ordovician orthide and billingsellide brachiopods from Anticosti Island, eastern Canada ;
       type = book  
       >
       comment[isbn] = 978-0-660-19789-0 
@@ -502,7 +503,7 @@
     {
   
     title < 
-      name = Le fl��tan de l'Atlantique (Hippoglossus hippoglossus) et le fl��tan du Pacifique (H. stenolipis) et les p��cheries de ces esp��ces en Amerique du Nord Canadian Bulletin of Fisheries and Aquatic Sciences No. 227  ;
+      name = Le fl��tan de l'Atlantique (Hippoglossus hippoglossus) et le fl��tan du Pacifique (H. stenolipis) et les p��cheries de ces esp��ces en Amerique du Nord Canadian Bulletin of Fisheries and Aquatic Sciences No. 227 ;
       type = book  
       >
       comment[isbn] = 978-0-660-94579-8 
@@ -514,7 +515,7 @@
     {
   
     title < 
-      name = Le syst��me canadien de classification des sols  ;
+      name = Le syst��me canadien de classification des sols ;
       type = book  
       >
       comment[isbn] = 978-0-660-96059-3 
@@ -526,7 +527,7 @@
     {
   
     title < 
-      name = Les Fourmis : comportement, organisation sociale et evolution  ;
+      name = Les Fourmis : comportement, organisation sociale et evolution ;
       type = book  
       >
       comment[isbn] = 978-0-660-97021-9 
@@ -538,7 +539,7 @@
     {
   
     title < 
-      name = Les cultures m��dicinales canadiennes  ;
+      name = Les cultures m��dicinales canadiennes ;
       type = book  
       >
       comment[isbn] = 978-0-660-96380-8 
@@ -550,7 +551,7 @@
     {
   
     title < 
-      name = Les l��gumes du Canada  ;
+      name = Les l��gumes du Canada ;
       type = book  
       >
       comment[isbn] = 978-0-660-95418-9 
@@ -562,7 +563,7 @@
     {
   
     title < 
-      name = Lichen Genus Rinodina (Ach.) Gray (Lecanorales, Physciaceae) in North America, north of Mexico  ;
+      name = Lichen Genus Rinodina (Ach.) Gray (Lecanorales, Physciaceae) in North America, north of Mexico ;
       type = book  
       >
       comment[isbn] = 978-0-660-19941-2 
@@ -574,7 +575,7 @@
     {
   
     title < 
-      name = Lower Permian Colonial Rugose Corals, Western and Northwestern Pangaea  ;
+      name = Lower Permian Colonial Rugose Corals, Western and Northwestern Pangaea ;
       type = book  
       >
       comment[isbn] = 978-0-660-19664-0 
@@ -586,7 +587,7 @@
     {
   
     title < 
-      name = Ludlow and Pridoli (Upper Silurian) Graptolites from the Arctic Islands, Canada  ;
+      name = Ludlow and Pridoli (Upper Silurian) Graptolites from the Arctic Islands, Canada ;
       type = book  
       >
       comment[isbn] = 978-0-660-19326-7 
@@ -598,7 +599,7 @@
     {
   
     title < 
-      name = Management of Marine Fisheries in Canada Canadian Bulletin of Fisheries and Aquatic Sciences No. 225  ;
+      name = Management of Marine Fisheries in Canada Canadian Bulletin of Fisheries and Aquatic Sciences No. 225 ;
       type = book  
       >
       comment[isbn] = 978-0-660-15002-4 
@@ -610,7 +611,7 @@
     {
   
     title < 
-      name = Manual of Central American Diptera  ;
+      name = Manual of Central American Diptera ;
       type = book  
       >
       comment[isbn] = 978-0-660-19958-0 
@@ -622,7 +623,7 @@
     {
   
     title < 
-      name = Manual of Central American Diptera  ;
+      name = Manual of Central American Diptera ;
       type = book 
       >
       comment[isbn] = 978-0-660-19833-0 
@@ -634,7 +635,7 @@
     {
   
     title < 
-      name = Marine Protected Areas and Fisheries Closures in British Columbia Canadian Special Publication of Fisheries and Aquatic Sciences No. 131  ;
+      name = Marine Protected Areas and Fisheries Closures in British Columbia Canadian Special Publication of Fisheries and Aquatic Sciences No. 131 ;
       type = book  
       >
       comment[isbn] = 978-0-660-17788-5 
@@ -646,7 +647,7 @@
     {
   
     title < 
-      name = Mesozoic Vertebrate Life  ;
+      name = Mesozoic Vertebrate Life ;
       type = book  
       >
       comment[isbn] = 978-0-253-33907-2 
@@ -658,7 +659,7 @@
     {
   
     title < 
-      name = Methods of Modifying Habitat to Benefit the Great Lakes Ecosystem CISTI Occassional Paper No. 1  ;
+      name = Methods of Modifying Habitat to Benefit the Great Lakes Ecosystem CISTI Occassional Paper No. 1 ;
       type = book  
       >
       comment[isbn] = 978-0-660-16047-4 
@@ -670,7 +671,7 @@
     {
   
     title < 
-      name = Molecular Symmetry and Spectroscopy, 2nd Ed.  ;
+      name = Molecular Symmetry and Spectroscopy, 2nd Ed. ;
       type = book      
       >
       comment[isbn] = 978-0-660-19628-2 
@@ -682,7 +683,7 @@
     {
   
     title < 
-      name = Mycorrhizas  ;
+      name = Mycorrhizas ;
       type = book  
       >
       comment[isbn] = 978-0-660-19087-7 
@@ -694,7 +695,7 @@
     {
   
     title < 
-      name = Mycorrhizas  ;
+      name = Mycorrhizas ;
       type = book  
       >
       comment[isbn] = 978-0-660-19404-2 
@@ -705,7 +706,7 @@
     {
   
     title < 
-      name = New Horned Dinosaur from an Upper Cretaceous Bone Bed in Alberta  ;
+      name = New Horned Dinosaur from an Upper Cretaceous Bone Bed in Alberta ;
       type = book      
       >
       comment[isbn] = 978-0-660-19819-4 
@@ -717,7 +718,7 @@
     {
   
     title < 
-      name = Numerical Methods in Atmospheric and Oceanic Modelling  ;
+      name = Numerical Methods in Atmospheric and Oceanic Modelling ;
       type = book  
       >
       comment[isbn] = 978-0-9698414-4-9 
@@ -728,7 +729,7 @@
     {
   
     title < 
-      name = Orb-Weaving Spiders of Canada and Alaska The Insects and Arachnids of Canada Series, Part 23  ;
+      name = Orb-Weaving Spiders of Canada and Alaska The Insects and Arachnids of Canada Series, Part 23 ;
       type = book  
       >
       comment[isbn] = 978-0-660-18898-0 
@@ -740,7 +741,7 @@
     {
   
     title < 
-      name = Perspectives on Canadian Marine Fisheries Management Canadian Bulletin of Fisheries and Aquatic Sciences No. 226  ;
+      name = Perspectives on Canadian Marine Fisheries Management Canadian Bulletin of Fisheries and Aquatic Sciences No. 226 ;
       type = book  
       >
       comment[isbn] = 978-0-660-15003-1 
@@ -752,7 +753,7 @@
     {
   
     title < 
-      name = Petite flore pour les longues fins de semaine dans l'est du Canada et le nord-est des ��tats-Unis  ;
+      name = Petite flore pour les longues fins de semaine dans l'est du Canada et le nord-est des ��tats-Unis ;
       type = book  
       >
       comment[isbn] = 978-0-660-97058-5 
@@ -764,7 +765,7 @@
     {
   
     title < 
-      name = Phillipsastreid Corals from the Frasnian (Upper Devonian) of Western Canada  ;
+      name = Phillipsastreid Corals from the Frasnian (Upper Devonian) of Western Canada ;
       type = book  
       >
       comment[isbn] = 978-0-660-19364-9 
@@ -776,7 +777,7 @@
     {
   
     title < 
-      name = Photographic Atlas of Fish Otoliths of the Northwest Atlantic Ocean Canadian Special Publication of Fisheries and Aquatic Sciences No. 133  ;
+      name = Photographic Atlas of Fish Otoliths of the Northwest Atlantic Ocean Canadian Special Publication of Fisheries and Aquatic Sciences No. 133 ;
       type = book  
       >
       comment[isbn] = 978-0-660-19108-9 
@@ -788,7 +789,7 @@
     {
   
     title < 
-      name = Physiological Changes Associated with the Diadromous Migration of Salmonids  ;
+      name = Physiological Changes Associated with the Diadromous Migration of Salmonids ;
       type = book  
       >
       comment[isbn] = 978-0-660-17637-6 
@@ -800,7 +801,7 @@
     {
   
     title < 
-      name = Plant Adaptation  ;
+      name = Plant Adaptation ;
       type = book  
       >
       comment[isbn] = 978-0-660-19336-6 
@@ -812,7 +813,7 @@
     {
   
     title < 
-      name = Poplar Culture in North America  ;
+      name = Poplar Culture in North America ;
       type = book  
       >
       comment[isbn] = 978-0-660-18145-5 
@@ -824,7 +825,7 @@
     {
   
     title < 
-      name = Predaceous Diving Beetles (Coleoptera: Dytiscidae) of the Nearctic Region, with emphasis on the fauna of Canada and Alaska  ;
+      name = Predaceous Diving Beetles (Coleoptera: Dytiscidae) of the Nearctic Region, with emphasis on the fauna of Canada and Alaska ;
       type = book  
       >
       comment[isbn] = 978-0-660-17967-4 
@@ -836,7 +837,7 @@
     {
   
     title < 
-      name = Proceedings of the 17th International Symposium on High Performance Computing Systems and Applications and OSCAR Symposium  ;
+      name = Proceedings of the 17th International Symposium on High Performance Computing Systems and Applications and OSCAR Symposium ;
       type = book  
       >
       comment[isbn] = 978-0-660-19028-0 
@@ -848,7 +849,7 @@
     {
   
     title < 
-      name = Proceedings of the North Pacific Symposium on Invertebrate Stock Assessment and Management Canadian Special Publication of Fisheries and Aquatic Sciences No. 125  ;
+      name = Proceedings of the North Pacific Symposium on Invertebrate Stock Assessment and Management Canadian Special Publication of Fisheries and Aquatic Sciences No. 125 ;
       type = book  
       >
       comment[isbn] = 978-0-660-17221-7 
@@ -860,7 +861,7 @@
     {
   
     title < 
-      name = Proceedings of the SUNY Institute of Technology Conference on Theoretical High Energy Physics  ;
+      name = Proceedings of the SUNY Institute of Technology Conference on Theoretical High Energy Physics ;
       type = book  
       >
       comment[isbn] = 978-0-660-19065-5 
@@ -872,7 +873,7 @@
     {
   
     title < 
-      name = Proceedings of the Sixth International Conference on Computer Supported Cooperative Work in Design  ;
+      name = Proceedings of the Sixth International Conference on Computer Supported Cooperative Work in Design ;
       type = book  
       >
       comment[isbn] = 978-0-660-18493-7 
@@ -884,7 +885,7 @@
     {
   
     title < 
-      name = Production et utilisation de l'argousier (Hippophae rhamnoides L.)  ;
+      name = Production et utilisation de l'argousier (Hippophae rhamnoides L.) ;
       type = book  
       >
       comment[isbn] = 978-0-660-96931-2 
@@ -896,7 +897,7 @@
     {
   
     title < 
-      name = Production of Juvenile Atlantic Salmon, Salmo salar, in Natural Waters Canadian Special Publication of Fisheries and Aquatic Sciences No. 118  ;
+      name = Production of Juvenile Atlantic Salmon, Salmo salar, in Natural Waters Canadian Special Publication of Fisheries and Aquatic Sciences No. 118 ;
       type = book  
       >
       comment[isbn] = 978-0-660-14954-7 
@@ -908,7 +909,7 @@
     {
   
     title < 
-      name = Quest for Sustainable International Fisheries  ;
+      name = Quest for Sustainable International Fisheries ;
       type = book  
       >
       comment[isbn] = 978-0-660-19724-1 
@@ -920,7 +921,7 @@
     {
   
     title < 
-      name = Renaissance II  ;
+      name = Renaissance II ;
       type = book  
       >
      
@@ -932,7 +933,7 @@
     {
   
     title < 
-      name = Renaissance II  ;
+      name = Renaissance II ;
       type = book  
       >
       comment[isbn] = 978-0-660-96472-0 
@@ -944,7 +945,7 @@
     {
   
     title < 
-      name = Risk Evaluation and Biological Reference Points for Fisheries Management Canadian Special Publication of Fisheries and Aquatic Sciences No. 120  ;
+      name = Risk Evaluation and Biological Reference Points for Fisheries Management Canadian Special Publication of Fisheries and Aquatic Sciences No. 120 ;
       type = book  
       >
       comment[isbn] = 978-0-660-14956-1 
@@ -956,7 +957,7 @@
     {
   
     title < 
-      name = Salmonine Introductions to the Laurentian Great Lakes Canadian Special Publication of Fisheries and Aquatic Sciences No. 132  ;
+      name = Salmonine Introductions to the Laurentian Great Lakes Canadian Special Publication of Fisheries and Aquatic Sciences No. 132 ;
       type = book  
       >
       comment[isbn] = 978-0-660-17639-0 
@@ -968,7 +969,7 @@
     {
   
     title < 
-      name = Science, agriculture et s��curit�� alimentaire  ;
+      name = Science, agriculture et s��curit�� alimentaire ;
       type = book  
       >
       comment[isbn] = 978-0-660-95109-6 
@@ -980,7 +981,7 @@
     {
   
     title < 
-      name = Sea Buckthorn (Hippophae rhamnoides L.)  ;
+      name = Sea Buckthorn (Hippophae rhamnoides L.) ;
       type = book  
       >
       comment[isbn] = 978-0-660-19007-5 
@@ -992,7 +993,7 @@
     {
   
     title < 
-      name = Silurian (Late Llandovery-Ludlow) Atrypid Brachiopods from Gotland and the United Kingdom  ;
+      name = Silurian (Late Llandovery-Ludlow) Atrypid Brachiopods from Gotland and the United Kingdom ;
       type = book  
       >
       comment[isbn] = 978-0-660-19011-2 
@@ -1004,7 +1005,7 @@
     {
   
     title < 
-      name = Siphonophora (Cnidaria, Hydrozoa) of Canadian Pacific waters  ;
+      name = Siphonophora (Cnidaria, Hydrozoa) of Canadian Pacific waters ;
       type = book  
       >
       comment[isbn] = 978-0-660-19843-9 
@@ -1016,7 +1017,7 @@
     {
   
     title < 
-      name = Smaller Orders of Insects of the Gal��pagos Islands, Ecuador  ;
+      name = Smaller Orders of Insects of the Gal��pagos Islands, Ecuador ;
       type = book  
       >
       comment[isbn] = 978-0-660-18284-1 
@@ -1028,7 +1029,7 @@
     {
   
     title < 
-      name = Steam, Water, and Hydrothermal Systems: Physics and Chemistry Meeting the Needs of Industry  ;
+      name = Steam, Water, and Hydrothermal Systems: Physics and Chemistry Meeting the Needs of Industry ;
       type = book  
       >
       comment[isbn] = 978-0-660-17778-6 
@@ -1040,7 +1041,7 @@
     {
   
     title < 
-      name = Synopsis of the Parasites of Fishes of Canada  ;
+      name = Synopsis of the Parasites of Fishes of Canada ;
       type = book  
       >
       comment[isbn] = 978-0-660-15902-7 
@@ -1051,7 +1052,7 @@
     {
   
     title < 
-      name = Systematics of New World Clinocera Meigen (Diptera: Empididae: Clinocerinae)  ;
+      name = Systematics of New World Clinocera Meigen (Diptera: Empididae: Clinocerinae) ;
       type = book  
       >
       comment[isbn] = 978-0-660-19800-2 
@@ -1063,7 +1064,7 @@
     {
   
     title < 
-      name = Taxonomy, Evolution, and Biostratigraphy of Conodonts  ;
+      name = Taxonomy, Evolution, and Biostratigraphy of Conodonts ;
       type = book  
       >
       comment[isbn] = 978-0-660-18521-7 
@@ -1075,7 +1076,7 @@
     {
   
     title < 
-      name = Teaching Plant Anatomy Through Creative Laboratory Exercises  ;
+      name = Teaching Plant Anatomy Through Creative Laboratory Exercises ;
       type = book  
       >
       comment[isbn] = 978-0-660-19798-2 
@@ -1087,7 +1088,7 @@
     {
   
     title < 
-      name = The Canadian Entomologist  ;
+      name = The Canadian Entomologist ;
       type = book  
       >
       comment[isbn] = 0008-347X 
@@ -1099,7 +1100,7 @@
     {
   
     title < 
-      name = The Forestry Chronicle  ;
+      name = The Forestry Chronicle ;
       type = book  
       >
       comment[isbn] = 0015-7546 
@@ -1112,7 +1113,7 @@
     {
   
     title < 
-      name = Top 100 Food Plants  ;
+      name = Top 100 Food Plants ;
       type = book  
       >
       comment[isbn] = 978-0-660-19858-3 
@@ -1124,7 +1125,7 @@
     {
   
     title < 
-      name = Towards Sustainable Management of the Boreal Forest  ;
+      name = Towards Sustainable Management of the Boreal Forest ;
       type = book  
       >
       comment[isbn] = 978-0-660-18762-4 
@@ -1136,7 +1137,7 @@
     {
   
     title < 
-      name = Trace Elements in Man and Animals  ;
+      name = Trace Elements in Man and Animals ;
       type = book  
       >
       comment[isbn] = 978-0-660-16404-5 
@@ -1148,7 +1149,7 @@
     {
   
     title < 
-      name = Vegetables of Canada  ;
+      name = Vegetables of Canada ;
       type = book  
       >
       comment[isbn] = 978-0-660-19503-2 
@@ -1160,7 +1161,7 @@
     {
   
     title < 
-      name = Water, Science, and the Public Canadian Special Publication of Fisheries and Aquatic Sciences No. 123  ;
+      name = Water, Science, and the Public Canadian Special Publication of Fisheries and Aquatic Sciences No. 123 ;
       type = book  
       >
       comment[isbn] = 978-0-660-15903-4 
@@ -1172,7 +1173,7 @@
     {
   
     title < 
-      name = Workshop on Rebuilding Abalone Stocks in British Columbia Canadian Special Publication of Fisheries and Aquataquatic Sciences No. 130  ;
+      name = Workshop on Rebuilding Abalone Stocks in British Columbia Canadian Special Publication of Fisheries and Aquataquatic Sciences No. 130 ;
       type = book  
       >
       comment[isbn] = 978-0-660-18292-6 
