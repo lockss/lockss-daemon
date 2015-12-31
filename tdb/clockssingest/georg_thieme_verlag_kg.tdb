@@ -42,10 +42,10 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 42 ; 42 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 43 ; 43 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 44 ; 44 >
-    au < crawling ; exists ; 2010 ; 2010 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 45 ; 45 >
-    au < crawling ; exists ; 2011 ; 2011 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 46 ; 46 >
+    au < finished ; crawling ; 2010 ; 2010 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 45 ; 45 >
+    au < finished ; crawling ; 2011 ; 2011 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 46 ; 46 >
     au < crawling ; exists ; 2012 ; 2012 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 47 ; 47 >
-    au < crawling ; exists ; 2013 ; 2013 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 48 ; 48 >
+    au < finished ; crawling ; 2013 ; 2013 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 48 ; 48 >
     au < finished ; crawling ; 2014 ; 2014 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 49 ; 49 >
     au < crawling ; exists ; 2015 ; 2015 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 50 ; 50 >
 
@@ -97,7 +97,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Aktuelle Dermatologie Volume 33 ; 33 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Aktuelle Dermatologie Volume 34 ; 34 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Aktuelle Dermatologie Volume 35 ; 35 >
-    au < crawling ; exists ; 2010 ; 2010 ; Aktuelle Dermatologie Volume 36 ; 36 >
+    au < finished ; crawling ; 2010 ; 2010 ; Aktuelle Dermatologie Volume 36 ; 36 >
     au < finished ; finished ; 2011 ; 2011 ; Aktuelle Dermatologie Volume 37 ; 37 >
     au < crawling ; exists ; 2012 ; 2012 ; Aktuelle Dermatologie Volume 38 ; 38 >
     au < notReady ; exists ; 2013 ; 2013 ; Aktuelle Dermatologie Volume 39 ; 39 >
@@ -126,10 +126,10 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Aktuelle Ernährungsmedizin Volume 32 ; 32 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Aktuelle Ernährungsmedizin Volume 33 ; 33 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Aktuelle Ernährungsmedizin Volume 34 ; 34 >
-    au < crawling ; exists ; 2010 ; 2010 ; Aktuelle Ernährungsmedizin Volume 35 ; 35 >
-    au < crawling ; exists ; 2011 ; 2011 ; Aktuelle Ernährungsmedizin Volume 36 ; 36 >
+    au < finished ; crawling ; 2010 ; 2010 ; Aktuelle Ernährungsmedizin Volume 35 ; 35 >
+    au < finished ; crawling ; 2011 ; 2011 ; Aktuelle Ernährungsmedizin Volume 36 ; 36 >
     au < crawling ; exists ; 2012 ; 2012 ; Aktuelle Ernährungsmedizin Volume 37 ; 37 >
-    au < crawling ; exists ; 2013 ; 2013 ; Aktuelle Ernährungsmedizin Volume 38 ; 38 >
+    au < finished ; crawling ; 2013 ; 2013 ; Aktuelle Ernährungsmedizin Volume 38 ; 38 >
     au < finished ; manifest ; 2014 ; 2014 ; Aktuelle Ernährungsmedizin Volume 39 ; 39 >
     au < crawling ; exists ; 2015 ; 2015 ; Aktuelle Ernährungsmedizin Volume 40 ; 40 >
 
@@ -146,8 +146,8 @@
     param[journal_id] = 10.1055/s-00022861
     comment[years] = 2012-current
 
-    au < crawling ; exists ; 2012 ; 2012 ; Aktuelle Kardiologie Volume 1 ; 1 >
-    au < crawling ; exists ; 2013 ; 2013 ; Aktuelle Kardiologie Volume 2 ; 2 >
+    au < finished ; crawling ; 2012 ; 2012 ; Aktuelle Kardiologie Volume 1 ; 1 >
+    au < finished ; crawling ; 2013 ; 2013 ; Aktuelle Kardiologie Volume 2 ; 2 >
     au < finished ; crawling ; 2014 ; 2014 ; Aktuelle Kardiologie Volume 3 ; 3 >
     au < crawling ; exists ; 2015 ; 2015 ; Aktuelle Kardiologie Volume 4 ; 4 >
 
@@ -195,7 +195,7 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; Aktuelle Neurologie Volume 2008 ; 35 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Aktuelle Neurologie Volume 2009 ; 36 >
     au < crawling ; exists ; 2010 ; 2010 ; Aktuelle Neurologie Volume 2010 ; 37 >
-    au < crawling ; exists ; 2011 ; 2011 ; Aktuelle Neurologie Volume 2011 ; 38 >
+    au < finished ; crawling ; 2011 ; 2011 ; Aktuelle Neurologie Volume 2011 ; 38 >
     au < crawling ; exists ; 2012 ; 2012 ; Aktuelle Neurologie Volume 2012 ; 39 >
     au < finished ; finished ; 2013 ; 2013 ; Aktuelle Neurologie Volume 2013 ; 40 >
     au < finished ; crawling ; 2014 ; 2014 ; Aktuelle Neurologie Volume 2014 ; 41 >
@@ -242,10 +242,10 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Aktuelle Rheumatologie Volume 34 ; 34 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Aktuelle Rheumatologie Volume 35 ; 35 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Aktuelle Rheumatologie Volume 36 ; 36 >
-    au < crawling ; exists ; 2010 ; 2010 ; Aktuelle Rheumatologie Volume 37 ; 37 >
-    au < crawling ; exists ; 2011 ; 2011 ; Aktuelle Rheumatologie Volume 38 ; 38 >
-    au < crawling ; exists ; 2012 ; 2012 ; Aktuelle Rheumatologie Volume 39 ; 39 >
-    au < crawling ; exists ; 2013 ; 2013 ; Aktuelle Rheumatologie Volume 40 ; 40 >
+    au < finished ; crawling ; 2010 ; 2010 ; Aktuelle Rheumatologie Volume 37 ; 37 >
+    au < finished ; crawling ; 2011 ; 2011 ; Aktuelle Rheumatologie Volume 38 ; 38 >
+    au < finished ; crawling ; 2012 ; 2012 ; Aktuelle Rheumatologie Volume 39 ; 39 >
+    au < finished ; crawling ; 2013 ; 2013 ; Aktuelle Rheumatologie Volume 40 ; 40 >
     au < finished ; crawling ; 2014 ; 2014 ; Aktuelle Rheumatologie Volume 41 ; 41 >
     au < crawling ; exists ; 2015 ; 2015 ; Aktuelle Rheumatologie Volume 42 ; 42 >
 
@@ -317,7 +317,7 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; Aktuelle Urologie Volume 2009 ; 40 >
     au < finished ; finished ; 2010 ; 2010 ; Aktuelle Urologie Volume 2010 ; 41 >
     au < finished ; finished ; 2011 ; 2011 ; Aktuelle Urologie Volume 2011 ; 42 >
-    au < crawling ; exists ; 2012 ; 2012 ; Aktuelle Urologie Volume 2012 ; 43 >
+    au < finished ; crawling ; 2012 ; 2012 ; Aktuelle Urologie Volume 2012 ; 43 >
     au < crawling ; exists ; 2013 ; 2013 ; Aktuelle Urologie Volume 2013 ; 44 >
     au < crawling ; exists ; 2014 ; 2014 ; Aktuelle Urologie Volume 2014 ; 45 >
     au < crawling ; exists ; 2015 ; 2015 ; Aktuelle Urologie Volume 2015 ; 46 >
@@ -375,10 +375,10 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Allgemeine Homöopathische Zeitung Volume 2007 ; 252 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Allgemeine Homöopathische Zeitung Volume 2008 ; 253 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Allgemeine Homöopathische Zeitung Volume 2009 ; 254 >
-    au < crawling ; exists ; 2010 ; 2010 ; Allgemeine Homöopathische Zeitung Volume 2010 ; 255 >
-    au < crawling ; exists ; 2011 ; 2011 ; Allgemeine Homöopathische Zeitung Volume 2011 ; 256 >
-    au < crawling ; exists ; 2012 ; 2012 ; Allgemeine Homöopathische Zeitung Volume 2012 ; 257 >
-    au < crawling ; exists ; 2013 ; 2013 ; Allgemeine Homöopathische Zeitung Volume 2013 ; 258 >
+    au < finished ; crawling ; 2010 ; 2010 ; Allgemeine Homöopathische Zeitung Volume 2010 ; 255 >
+    au < finished ; crawling ; 2011 ; 2011 ; Allgemeine Homöopathische Zeitung Volume 2011 ; 256 >
+    au < finished ; crawling ; 2012 ; 2012 ; Allgemeine Homöopathische Zeitung Volume 2012 ; 257 >
+    au < finished ; crawling ; 2013 ; 2013 ; Allgemeine Homöopathische Zeitung Volume 2013 ; 258 >
     au < finished ; crawling ; 2014 ; 2014 ; Allgemeine Homöopathische Zeitung Volume 2014 ; 259 >
     au < crawling ; exists ; 2015 ; 2015 ; Allgemeine Homöopathische Zeitung Volume 2015 ; 260 >
 
@@ -399,9 +399,9 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; Allgemein- und Viszeralchirurgie up2date Volume 2008 ; 2 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Allgemein- und Viszeralchirurgie up2date Volume 2009 ; 3 >
     au < finished ; finished ; 2010 ; 2010 ; Allgemein- und Viszeralchirurgie up2date Volume 2010 ; 4 >
-    au < crawling ; exists ; 2011 ; 2011 ; Allgemein- und Viszeralchirurgie up2date Volume 2011 ; 5 >
-    au < crawling ; exists ; 2012 ; 2012 ; Allgemein- und Viszeralchirurgie up2date Volume 2012 ; 6 >
-    au < crawling ; exists ; 2013 ; 2013 ; Allgemein- und Viszeralchirurgie up2date Volume 2013 ; 7 >
+    au < finished ; crawling ; 2011 ; 2011 ; Allgemein- und Viszeralchirurgie up2date Volume 2011 ; 5 >
+    au < finished ; crawling ; 2012 ; 2012 ; Allgemein- und Viszeralchirurgie up2date Volume 2012 ; 6 >
+    au < finished ; crawling ; 2013 ; 2013 ; Allgemein- und Viszeralchirurgie up2date Volume 2013 ; 7 >
     au < finished ; crawling ; 2014 ; 2014 ; Allgemein- und Viszeralchirurgie up2date Volume 2014 ; 8 >
     au < crawling ; exists ; 2015 ; 2015 ; Allgemein- und Viszeralchirurgie up2date Volume 2015 ; 9 >
 
@@ -445,8 +445,8 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; American Journal of Perinatology Volume 2007 ; 24 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; American Journal of Perinatology Volume 2008 ; 25 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; American Journal of Perinatology Volume 2009 ; 26 >
-    au < crawling ; exists ; 2010 ; 2010 ; American Journal of Perinatology Volume 2010 ; 27 >
-    au < crawling ; exists ; 2011 ; 2011 ; American Journal of Perinatology Volume 2011 ; 28 >
+    au < finished ; crawling ; 2010 ; 2010 ; American Journal of Perinatology Volume 2010 ; 27 >
+    au < finished ; crawling ; 2011 ; 2011 ; American Journal of Perinatology Volume 2011 ; 28 >
     au < crawling ; exists ; 2012 ; 2012 ; American Journal of Perinatology Volume 2012 ; 29 >
     au < crawling ; exists ; 2013 ; 2013 ; American Journal of Perinatology Volume 2013 ; 30 >
     au < finished ; manifest ; 2014 ; 2014 ; American Journal of Perinatology Volume 2014 ; 31 >
@@ -465,9 +465,9 @@
     param[journal_id] = 10.1055/s-00000169
     comment[years] = 2011-current
 
-    au < crawling ; exists ; 2011 ; 2011 ; American Journal of Perinatology Reports Volume 2011 ; 1 >
+    au < finished ; crawling ; 2011 ; 2011 ; American Journal of Perinatology Reports Volume 2011 ; 1 >
     au < finished ; crawling ; 2012 ; 2012 ; American Journal of Perinatology Reports Volume 2012 ; 2 >
-    au < crawling ; exists ; 2013 ; 2013 ; American Journal of Perinatology Reports Volume 2013 ; 3 >
+    au < finished ; crawling ; 2013 ; 2013 ; American Journal of Perinatology Reports Volume 2013 ; 3 >
     au < crawling ; exists ; 2014 ; 2014 ; American Journal of Perinatology Reports Volume 2014 ; 4 >
     au < crawling ; exists ; 2015 ; 2015 ; American Journal of Perinatology Reports Volume 2015 ; 5 >
 
@@ -497,7 +497,7 @@
     >
     param[journal_id] = 10.1055/s-00026220
 
-   au < crawling ; exists ; 2010 ; 2010 ; Arquivos Internacionais de Otorrinolaringologia Volume 2010 ; 1 >
+   au < finished ; crawling ; 2010 ; 2010 ; Arquivos Internacionais de Otorrinolaringologia Volume 2010 ; 1 >
    au < crawling ; exists ; 2011 ; 2011 ; Arquivos Internacionais de Otorrinolaringologia Volume 2011 ; 2 >
    au < crawling ; exists ; 2012 ; 2012 ; Arquivos Internacionais de Otorrinolaringologia Volume 2012 ; 3 >
    au < expected ; exists ; 2013 ; 2013 ; Arquivos Internacionais de Otorrinolaringologia Volume 2013 ; 4 >
@@ -526,9 +526,9 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Arzneimittelforschung Volume 2007 ; 57 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Arzneimittelforschung Volume 2008 ; 58 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Arzneimittelforschung Volume 2009 ; 59 >
-    au < crawling ; exists ; 2010 ; 2010 ; Arzneimittelforschung Volume 2010 ; 60 >
-    au < crawling ; exists ; 2011 ; 2011 ; Arzneimittelforschung Volume 2011 ; 61 >
-    au < crawling ; exists ; 2012 ; 2012 ; Arzneimittelforschung Volume 2012 ; 62 >
+    au < finished ; crawling ; 2010 ; 2010 ; Arzneimittelforschung Volume 2010 ; 60 >
+    au < finished ; crawling ; 2011 ; 2011 ; Arzneimittelforschung Volume 2011 ; 61 >
+    au < finished ; crawling ; 2012 ; 2012 ; Arzneimittelforschung Volume 2012 ; 62 >
 
    }
 
@@ -544,7 +544,7 @@
     comment[years] = 2013-current
     comment[0] = published as Arzneimittelforschung before 2014.
 
-    au < crawling ; exists ; 2013 ; 2013 ; Drug Research Volume 2013 ; 63 >
+    au < finished ; crawling ; 2013 ; 2013 ; Drug Research Volume 2013 ; 63 >
     au < finished ; crawling ; 2014 ; 2014 ; Drug Research Volume 2014 ; 64 >
     au < crawling ; exists ; 2015 ; 2015 ; Drug Research Volume 2015 ; 65 >
 
@@ -561,9 +561,9 @@
     param[journal_id] = 10.1055/s-00000174
     comment[years] = 2011-current
 
-    au < crawling ; exists ; 2011 ; 2011 ; Augenheilkunde up2date Volume 2011 ; 1 >
-    au < crawling ; exists ; 2012 ; 2012 ; Augenheilkunde up2date Volume 2012 ; 2 >
-    au < crawling ; exists ; 2013 ; 2013 ; Augenheilkunde up2date Volume 2013 ; 3 >
+    au < finished ; crawling ; 2011 ; 2011 ; Augenheilkunde up2date Volume 2011 ; 1 >
+    au < finished ; crawling ; 2012 ; 2012 ; Augenheilkunde up2date Volume 2012 ; 2 >
+    au < finished ; crawling ; 2013 ; 2013 ; Augenheilkunde up2date Volume 2013 ; 3 >
     au < finished ; crawling ; 2014 ; 2014 ; Augenheilkunde up2date Volume 2014 ; 4 >
     au < crawling ; exists ; 2015 ; 2015 ; Augenheilkunde up2date Volume 2015 ; 5 >
 
@@ -588,9 +588,9 @@
         au < doNotProcess ; exists ; 2008 ; 2008 ; B&G Bewegungstherapie und Gesundheitssport Volume 2008 ; 24 >
         au < doNotProcess ; exists ; 2009 ; 2009 ; B&G Bewegungstherapie und Gesundheitssport Volume 2009 ; 25 >
         au < finished ; crawling ; 2010 ; 2010 ; B&G Bewegungstherapie und Gesundheitssport Volume 2010 ; 26 >
-        au < crawling ; exists ; 2011 ; 2011 ; B&G Bewegungstherapie und Gesundheitssport Volume 2011 ; 27 >
+        au < finished ; crawling ; 2011 ; 2011 ; B&G Bewegungstherapie und Gesundheitssport Volume 2011 ; 27 >
         au < crawling ; exists ; 2012 ; 2012 ; B&G Bewegungstherapie und Gesundheitssport Volume 2012 ; 28 >
-        au < crawling ; exists ; 2013 ; 2013 ; B&G Bewegungstherapie und Gesundheitssport Volume 2013 ; 29 >
+        au < finished ; crawling ; 2013 ; 2013 ; B&G Bewegungstherapie und Gesundheitssport Volume 2013 ; 29 >
         au < finished ; finished ; 2014 ; 2014 ; B&G Bewegungstherapie und Gesundheitssport Volume 2014 ; 30 >
         au < crawling ; exists ; 2015 ; 2015 ; B&G Bewegungstherapie und Gesundheitssport Volume 2015 ; 31 >
 
@@ -617,10 +617,10 @@
         au < doNotProcess ; exists ; 2007 ; 2007 ; Balint Journal Volume 2007 ; 8 >
         au < doNotProcess ; exists ; 2008 ; 2008 ; Balint Journal Volume 2008 ; 9 >
         au < doNotProcess ; exists ; 2009 ; 2009 ; Balint Journal Volume 2009 ; 10 >
-        au < crawling ; exists ; 2010 ; 2010 ; Balint Journal Volume 2010 ; 11 >
+        au < finished ; crawling ; 2010 ; 2010 ; Balint Journal Volume 2010 ; 11 >
         au < crawling ; exists ; 2011 ; 2011 ; Balint Journal Volume 2011 ; 12 >
         au < crawling ; exists ; 2012 ; 2012 ; Balint Journal Volume 2012 ; 13 >
-        au < crawling ; exists ; 2013 ; 2013 ; Balint Journal Volume 2013 ; 14 >
+        au < finished ; crawling ; 2013 ; 2013 ; Balint Journal Volume 2013 ; 14 >
         au < finished ; crawling ; 2014 ; 2014 ; Balint Journal Volume 2014 ; 15 >
         au < crawling ; exists ; 2015 ; 2015 ; Balint Journal Volume 2015 ; 16 >
 
@@ -649,8 +649,8 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 2007 ; 67 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 2008 ; 68 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 2009 ; 69 >
-    au < crawling ; exists ; 2010 ; 2010 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 2010 ; 70 >
-    au < crawling ; exists ; 2011 ; 2011 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 2011 ; 71 >
+    au < finished ; crawling ; 2010 ; 2010 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 2010 ; 70 >
+    au < finished ; crawling ; 2011 ; 2011 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 2011 ; 71 >
 
     }
 
@@ -676,9 +676,9 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; Clinics in Colon and Rectal Surgery Volume 2008 ; 21 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Clinics in Colon and Rectal Surgery Volume 2009 ; 22 >
     au < crawling ; exists ; 2010 ; 2010 ; Clinics in Colon and Rectal Surgery Volume 2010 ; 23 >
-    au < crawling ; exists ; 2011 ; 2011 ; Clinics in Colon and Rectal Surgery Volume 2011 ; 24 >
-    au < crawling ; exists ; 2012 ; 2012 ; Clinics in Colon and Rectal Surgery Volume 2012 ; 25 >
-    au < crawling ; exists ; 2013 ; 2013 ; Clinics in Colon and Rectal Surgery Volume 2013 ; 026 >
+    au < finished ; crawling ; 2011 ; 2011 ; Clinics in Colon and Rectal Surgery Volume 2011 ; 24 >
+    au < finished ; crawling ; 2012 ; 2012 ; Clinics in Colon and Rectal Surgery Volume 2012 ; 25 >
+    au < finished ; crawling ; 2013 ; 2013 ; Clinics in Colon and Rectal Surgery Volume 2013 ; 026 >
     au < finished ; manifest ; 2014 ; 2014 ; Clinics in Colon and Rectal Surgery Volume 2014 ; 027 >
     au < crawling ; exists ; 2015 ; 2015 ; Clinics in Colon and Rectal Surgery Volume 2015 ; 028 >
 
@@ -698,7 +698,7 @@
 
     au < doNotProcess ; exists ; 2008 ; 2008 ; Craniomaxillofacial Trauma & Reconstruction Volume 2008 ; 1 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Craniomaxillofacial Trauma & Reconstruction Volume 2009 ; 2 >
-    au < crawling ; exists ; 2010 ; 2010 ; Craniomaxillofacial Trauma & Reconstruction Volume 2010 ; 3 >
+    au < finished ; crawling ; 2010 ; 2010 ; Craniomaxillofacial Trauma & Reconstruction Volume 2010 ; 3 >
     au < crawling ; exists ; 2011 ; 2011 ; Craniomaxillofacial Trauma & Reconstruction Volume 2011 ; 4 >
     au < crawling ; exists ; 2012 ; 2012 ; Craniomaxillofacial Trauma & Reconstruction Volume 2012 ; 5 >
     au < crawling ; exists ; 2013 ; 2013 ; Craniomaxillofacial Trauma & Reconstruction Volume 2013 ; 6 >
@@ -740,9 +740,9 @@
    au < doNotProcess ; exists ; 2008 ; 2008 ; Deutsche Heilpraktiker-Zeitschrift Volume 2008 ; 3 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Deutsche Heilpraktiker-Zeitschrift Volume 2009 ; 4 >
    au < crawling ; exists ; 2010 ; 2010 ; Deutsche Heilpraktiker-Zeitschrift Volume 2010 ; 5 >
-   au < crawling ; exists ; 2011 ; 2011 ; Deutsche Heilpraktiker-Zeitschrift Volume 2011 ; 6 >
-   au < crawling ; exists ; 2012 ; 2012 ; Deutsche Heilpraktiker-Zeitschrift Volume 2012 ; 7 >
-   au < crawling ; exists ; 2013 ; 2013 ; Deutsche Heilpraktiker-Zeitschrift Volume 2013 ; 8 >
+   au < finished ; crawling ; 2011 ; 2011 ; Deutsche Heilpraktiker-Zeitschrift Volume 2011 ; 6 >
+   au < finished ; crawling ; 2012 ; 2012 ; Deutsche Heilpraktiker-Zeitschrift Volume 2012 ; 7 >
+   au < finished ; crawling ; 2013 ; 2013 ; Deutsche Heilpraktiker-Zeitschrift Volume 2013 ; 8 >
    au < finished ; crawling ; 2014 ; 2014 ; Deutsche Heilpraktiker-Zeitschrift Volume 2014 ; 9 >
    au < crawling ; exists ; 2015 ; 2015 ; Deutsche Heilpraktiker-Zeitschrift Volume 2015 ; 10 >
 
@@ -786,10 +786,10 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Deutsche Zeitschrift für Onkologie Volume 2007 ; 39 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Deutsche Zeitschrift für Onkologie Volume 2008 ; 40 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Deutsche Zeitschrift für Onkologie Volume 2009 ; 41 >
-   au < crawling ; exists ; 2010 ; 2010 ; Deutsche Zeitschrift für Onkologie Volume 2010 ; 42 >
+   au < finished ; crawling ; 2010 ; 2010 ; Deutsche Zeitschrift für Onkologie Volume 2010 ; 42 >
    au < crawling ; exists ; 2011 ; 2011 ; Deutsche Zeitschrift für Onkologie Volume 2011 ; 43 >
-   au < crawling ; exists ; 2012 ; 2012 ; Deutsche Zeitschrift für Onkologie Volume 2012 ; 44 >
-   au < crawling ; exists ; 2013 ; 2013 ; Deutsche Zeitschrift für Onkologie Volume 2013 ; 45 >
+   au < finished ; crawling ; 2012 ; 2012 ; Deutsche Zeitschrift für Onkologie Volume 2012 ; 44 >
+   au < finished ; crawling ; 2013 ; 2013 ; Deutsche Zeitschrift für Onkologie Volume 2013 ; 45 >
    au < finished ; finished ; 2014 ; 2014 ; Deutsche Zeitschrift für Onkologie Volume 2014 ; 46 >
    au < crawling ; exists ; 2015 ; 2015 ; Deutsche Zeitschrift für Onkologie Volume 2015 ; 47 >
 
@@ -824,10 +824,10 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Diabetes aktuell Volume 2007 ; 5 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Diabetes aktuell Volume 2008 ; 6 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Diabetes aktuell Volume 2009 ; 7 >
-   au < crawling ; exists ; 2010 ; 2010 ; Diabetes aktuell Volume 2010 ; 8 >
+   au < finished ; crawling ; 2010 ; 2010 ; Diabetes aktuell Volume 2010 ; 8 >
    au < crawling ; exists ; 2011 ; 2011 ; Diabetes aktuell Volume 2011 ; 9 >
    au < crawling ; exists ; 2012 ; 2012 ; Diabetes aktuell Volume 2012 ; 10 >
-   au < crawling ; exists ; 2013 ; 2013 ; Diabetes aktuell Volume 2013 ; 11 >
+   au < finished ; crawling ; 2013 ; 2013 ; Diabetes aktuell Volume 2013 ; 11 >
    au < crawling ; exists ; 2014 ; 2014 ; Diabetes aktuell Volume 2014 ; 12 >
    au < crawling ; exists ; 2015 ; 2015 ; Diabetes aktuell Volume 2015 ; 13 >
 
@@ -849,7 +849,7 @@
    au < doNotProcess ; exists ; 2008 ; 2008 ; Diabetologie und Stoffwechsel Volume 2008 ; 3 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Diabetologie und Stoffwechsel Volume 2009 ; 4 >
    au < crawling ; exists ; 2010 ; 2010 ; Diabetologie und Stoffwechsel Volume 2010 ; 5 >
-   au < crawling ; exists ; 2011 ; 2011 ; Diabetologie und Stoffwechsel Volume 2011 ; 6 >
+   au < finished ; crawling ; 2011 ; 2011 ; Diabetologie und Stoffwechsel Volume 2011 ; 6 >
    au < crawling ; exists ; 2012 ; 2012 ; Diabetologie und Stoffwechsel Volume 2012 ; 7 >
    au < finished ; finished ; 2013 ; 2013 ; Diabetologie und Stoffwechsel Volume 2013 ; 8 >
    au < crawling ; exists ; 2014 ; 2014 ; Diabetologie und Stoffwechsel Volume 2014 ; 9 >
@@ -872,9 +872,9 @@
    au < doNotProcess ; exists ; 2008 ; 2008 ; Dialyse aktuell Volume 2008 ; 3 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Dialyse aktuell Volume 2009 ; 4 >
    au < crawling ; exists ; 2010 ; 2010 ; Dialyse aktuell Volume 2010 ; 5 >
-   au < crawling ; exists ; 2011 ; 2011 ; Dialyse aktuell Volume 2011 ; 6 >
-   au < crawling ; exists ; 2012 ; 2012 ; Dialyse aktuell Volume 2012 ; 7 >
-   au < crawling ; exists ; 2013 ; 2013 ; Dialyse aktuell Volume 2013 ; 8 >
+   au < finished ; crawling ; 2011 ; 2011 ; Dialyse aktuell Volume 2011 ; 6 >
+   au < finished ; crawling ; 2012 ; 2012 ; Dialyse aktuell Volume 2012 ; 7 >
+   au < finished ; crawling ; 2013 ; 2013 ; Dialyse aktuell Volume 2013 ; 8 >
    au < finished ; crawling ; 2014 ; 2014 ; Dialyse aktuell Volume 2014 ; 9 >
    au < crawling ; exists ; 2015 ; 2015 ; Dialyse aktuell Volume 2015 ; 10 >
 
@@ -1027,7 +1027,7 @@
    au < doNotProcess ; exists ; 2008 ; 2008 ; DMW - Deutsche Medizinische Wochenschrift Volume 2008 ; 134 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; DMW - Deutsche Medizinische Wochenschrift Volume 2009 ; 135 >
    au < crawling ; exists ; 2010 ; 2010 ; DMW - Deutsche Medizinische Wochenschrift Volume 2010 ; 136 >
-   au < crawling ; exists ; 2011 ; 2011 ; DMW - Deutsche Medizinische Wochenschrift Volume 2011 ; 137 >
+   au < finished ; crawling ; 2011 ; 2011 ; DMW - Deutsche Medizinische Wochenschrift Volume 2011 ; 137 >
    au < crawling ; exists ; 2012 ; 2012 ; DMW - Deutsche Medizinische Wochenschrift Volume 2012 ; 138 >
    au < crawling ; exists ; 2013 ; 2013 ; DMW - Deutsche Medizinische Wochenschrift Volume 2013 ; 139 >
    au < crawling ; exists ; 2014 ; 2014 ; DMW - Deutsche Medizinische Wochenschrift Volume 2014 ; 140 >
@@ -1056,7 +1056,7 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; Deutsche Zeitschrift für Osteopathie Volume 2009 ; 7 >
    au < crawling ; exists ; 2010 ; 2010 ; Deutsche Zeitschrift für Osteopathie Volume 2010 ; 8 >
    au < crawling ; exists ; 2011 ; 2011 ; Deutsche Zeitschrift für Osteopathie Volume 2011 ; 9 >
-   au < crawling ; exists ; 2012 ; 2012 ; Deutsche Zeitschrift für Osteopathie Volume 2012 ; 10 >
+   au < finished ; crawling ; 2012 ; 2012 ; Deutsche Zeitschrift für Osteopathie Volume 2012 ; 10 >
    au < crawling ; exists ; 2013 ; 2013 ; Deutsche Zeitschrift für Osteopathie Volume 2013 ; 11 >
    au < crawling ; exists ; 2014 ; 2014 ; Deutsche Zeitschrift für Osteopathie Volume 2014 ; 12 >
    au < crawling ; exists ; 2015 ; 2015 ; Deutsche Zeitschrift für Osteopathie Volume 2015 ; 13 >
@@ -1079,9 +1079,9 @@
    au < doNotProcess ; exists ; 2008 ; 2008 ; Endo-Praxis Volume 2008 ; 24 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Endo-Praxis Volume 2009 ; 25 >
    au < crawling ; exists ; 2010 ; 2010 ; Endo-Praxis Volume 2010 ; 26 >
-   au < crawling ; exists ; 2011 ; 2011 ; Endo-Praxis Volume 2011 ; 27 >
-   au < crawling ; exists ; 2012 ; 2012 ; Endo-Praxis Volume 2012 ; 28 >
-   au < crawling ; exists ; 2013 ; 2013 ; Endo-Praxis Volume 2013 ; 29 >
+   au < finished ; crawling ; 2011 ; 2011 ; Endo-Praxis Volume 2011 ; 27 >
+   au < finished ; crawling ; 2012 ; 2012 ; Endo-Praxis Volume 2012 ; 28 >
+   au < finished ; crawling ; 2013 ; 2013 ; Endo-Praxis Volume 2013 ; 29 >
    au < finished ; crawling ; 2014 ; 2014 ; Endo-Praxis Volume 2014 ; 30 >
    au < crawling ; exists ; 2015 ; 2015 ; Endo-Praxis Volume 2015 ; 31 >
 
@@ -1143,7 +1143,7 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; Endoscopy Volume 2009 ; 41 >
    au < crawling ; exists ; 2010 ; 2010 ; Endoscopy Volume 2010 ; 42 >
    au < crawling ; exists ; 2011 ; 2011 ; Endoscopy Volume 2011 ; 43 >
-   au < crawling ; exists ; 2012 ; 2012 ; Endoscopy Volume 2012 ; 44 >
+   au < finished ; crawling ; 2012 ; 2012 ; Endoscopy Volume 2012 ; 44 >
    au < crawling ; exists ; 2013 ; 2013 ; Endoscopy Volume 2013 ; 45 >
    au < finished ; crawling ; 2014 ; 2014 ; Endoscopy Volume 2014 ; 46 >
    au < crawling ; exists ; 2015 ; 2015 ; Endoscopy Volume 2015 ; 47 >
@@ -1187,8 +1187,8 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; Endoscopy heute Volume 2009 ; 22 >
    au < crawling ; exists ; 2010 ; 2010 ; Endoscopy heute Volume 2010 ; 23 >
    au < crawling ; exists ; 2011 ; 2011 ; Endoscopy heute Volume 2011 ; 24 >
-   au < crawling ; exists ; 2012 ; 2012 ; Endoscopy heute Volume 2012 ; 25 >
-   au < crawling ; exists ; 2013 ; 2013 ; Endoscopy heute Volume 2013 ; 26 >
+   au < finished ; crawling ; 2012 ; 2012 ; Endoscopy heute Volume 2012 ; 25 >
+   au < finished ; crawling ; 2013 ; 2013 ; Endoscopy heute Volume 2013 ; 26 >
    au < finished ; crawling ; 2014 ; 2014 ; Endoscopy heute Volume 2014 ; 27 >
    au < crawling ; exists ; 2015 ; 2015 ; Endoscopy heute Volume 2015 ; 28 >
 
@@ -1217,8 +1217,8 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; Erfahrungsheilkunde Volume 2009 ; 58 >
    au < crawling ; exists ; 2010 ; 2010 ; Erfahrungsheilkunde Volume 2010 ; 59 >
    au < crawling ; exists ; 2011 ; 2011 ; Erfahrungsheilkunde Volume 2011 ; 60 >
-   au < crawling ; exists ; 2012 ; 2012 ; Erfahrungsheilkunde Volume 2012 ; 61 >
-   au < crawling ; exists ; 2013 ; 2013 ; Erfahrungsheilkunde Volume 2013 ; 62 >
+   au < finished ; crawling ; 2012 ; 2012 ; Erfahrungsheilkunde Volume 2012 ; 61 >
+   au < finished ; crawling ; 2013 ; 2013 ; Erfahrungsheilkunde Volume 2013 ; 62 >
    au < finished ; manifest ; 2014 ; 2014 ; Erfahrungsheilkunde Volume 2014 ; 63 >
    au < crawling ; exists ; 2015 ; 2015 ; Erfahrungsheilkunde Volume 2015 ; 64 >
 
@@ -1261,7 +1261,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Ergoscience Volume 2 ; 2 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Ergoscience Volume 3 ; 3 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Ergoscience Volume 4 ; 4 >
-    au < crawling ; exists ; 2010 ; 2010 ; Ergoscience Volume 5 ; 5 >
+    au < finished ; crawling ; 2010 ; 2010 ; Ergoscience Volume 5 ; 5 >
 
   }
 
@@ -1288,8 +1288,8 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; Ernährung & Medizin Volume 2009 ; 24 >
    au < crawling ; exists ; 2010 ; 2010 ; Ernährung & Medizin Volume 2010 ; 25 >
    au < crawling ; exists ; 2011 ; 2011 ; Ernährung & Medizin Volume 2011 ; 26 >
-   au < crawling ; exists ; 2012 ; 2012 ; Ernährung & Medizin Volume 2012 ; 27 >
-   au < crawling ; exists ; 2013 ; 2013 ; Ernährung & Medizin Volume 2013 ;028 >
+   au < finished ; crawling ; 2012 ; 2012 ; Ernährung & Medizin Volume 2012 ; 27 >
+   au < finished ; crawling ; 2013 ; 2013 ; Ernährung & Medizin Volume 2013 ;028 >
    au < finished ; finished ; 2014 ; 2014 ; Ernährung & Medizin Volume 2014 ;029 >
    au < crawling ; exists ; 2015 ; 2015 ; Ernährung & Medizin Volume 2015 ;030 >
 
@@ -1329,8 +1329,8 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; European Journal of Pediatric Surgery Volume 2009 ; 19 >
    au < crawling ; exists ; 2010 ; 2010 ; European Journal of Pediatric Surgery Volume 2010 ; 20 >
    au < crawling ; exists ; 2011 ; 2011 ; European Journal of Pediatric Surgery Volume 2011 ; 21 >
-   au < crawling ; exists ; 2012 ; 2012 ; European Journal of Pediatric Surgery Volume 2012 ; 22 >
-   au < crawling ; exists ; 2013 ; 2013 ; European Journal of Pediatric Surgery Volume 2013 ; 23 >
+   au < finished ; crawling ; 2012 ; 2012 ; European Journal of Pediatric Surgery Volume 2012 ; 22 >
+   au < finished ; crawling ; 2013 ; 2013 ; European Journal of Pediatric Surgery Volume 2013 ; 23 >
    au < crawling ; exists ; 2014 ; 2014 ; European Journal of Pediatric Surgery Volume 2014 ; 24 >
    au < crawling ; exists ; 2015 ; 2015 ; European Journal of Pediatric Surgery Volume 2015 ; 25 >
 
@@ -1385,7 +1385,7 @@
 
 
    au < crawling ; exists ; 2010 ; 2010 ; Evidence-Based Spine-Care Journal Volume 2010 ; 1 >
-   au < crawling ; exists ; 2011 ; 2011 ; Evidence-Based Spine-Care Journal Volume 2011 ; 2 >
+   au < finished ; crawling ; 2011 ; 2011 ; Evidence-Based Spine-Care Journal Volume 2011 ; 2 >
    au < crawling ; exists ; 2012 ; 2012 ; Evidence-Based Spine-Care Journal Volume 2012 ; 3 >
    au < crawling ; exists ; 2013 ; 2013 ; Evidence-Based Spine-Care Journal Volume 2013 ; 4 >
    au < crawling ; exists ; 2014 ; 2014 ; Evidence-Based Spine-Care Journal Volume 2014 ; 5 >
@@ -1433,7 +1433,7 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; Experimental and Clinical Endocrinology & Diabetes Volume 2009 ; 117 >
    au < crawling ; exists ; 2010 ; 2010 ; Experimental and Clinical Endocrinology & Diabetes Volume 2010 ; 118 >
    au < crawling ; exists ; 2011 ; 2011 ; Experimental and Clinical Endocrinology & Diabetes Volume 2011 ; 119 >
-   au < crawling ; exists ; 2012 ; 2012 ; Experimental and Clinical Endocrinology & Diabetes Volume 2012 ; 120 >
+   au < finished ; crawling ; 2012 ; 2012 ; Experimental and Clinical Endocrinology & Diabetes Volume 2012 ; 120 >
    au < crawling ; exists ; 2013 ; 2013 ; Experimental and Clinical Endocrinology & Diabetes Volume 2013 ; 121 >
    au < finished ; crawling ; 2014 ; 2014 ; Experimental and Clinical Endocrinology & Diabetes Volume 2014 ; 122 >
    au < crawling ; exists ; 2015 ; 2015 ; Experimental and Clinical Endocrinology & Diabetes Volume 2015 ; 123 >
@@ -1496,9 +1496,9 @@
    au < doNotProcess ; exists ; 2008 ; 2008 ; Facial Plastic Surgery Volume 2008 ; 24 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Facial Plastic Surgery Volume 2009 ; 25 >
    au < crawling ; exists ; 2010 ; 2010 ; Facial Plastic Surgery Volume 2010 ; 26 >
-   au < crawling ; exists ; 2011 ; 2011 ; Facial Plastic Surgery Volume 2011 ; 27 >
-   au < crawling ; exists ; 2012 ; 2012 ; Facial Plastic Surgery Volume 2012 ; 28 >
-   au < crawling ; exists ; 2013 ; 2013 ; Facial Plastic Surgery Volume 2013 ; 29 >
+   au < finished ; crawling ; 2011 ; 2011 ; Facial Plastic Surgery Volume 2011 ; 27 >
+   au < finished ; crawling ; 2012 ; 2012 ; Facial Plastic Surgery Volume 2012 ; 28 >
+   au < finished ; crawling ; 2013 ; 2013 ; Facial Plastic Surgery Volume 2013 ; 29 >
    au < finished ; crawling ; 2014 ; 2014 ; Facial Plastic Surgery Volume 2014 ; 28 >
    au < crawling ; exists ; 2015 ; 2015 ; Facial Plastic Surgery Volume 2015 ; 29 >
 
@@ -1519,9 +1519,9 @@
    au < doNotProcess ; exists ; 2008 ; 2008 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2008 ; 15 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2009 ; 16 >
    au < crawling ; exists ; 2010 ; 2010 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2010 ; 17 >
-   au < crawling ; exists ; 2011 ; 2011 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2011 ; 18 >
+   au < finished ; crawling ; 2011 ; 2011 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2011 ; 18 >
    au < crawling ; exists ; 2012 ; 2012 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2012 ; 19 >
-   au < crawling ; exists ; 2013 ; 2013 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2013 ; 20 >
+   au < finished ; crawling ; 2013 ; 2013 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2013 ; 20 >
    au < finished ; crawling ; 2014 ; 2014 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2014 ; 21 >
    au < crawling ; exists ; 2015 ; 2015 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2015 ; 22 >
 
@@ -1618,8 +1618,8 @@
    au < doNotProcess ; exists ; 2008 ; 2008 ; Gastroenterologie up2dat Volume 2008 ; 4 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Gastroenterologie up2dat Volume 2009 ; 5 >
    au < crawling ; exists ; 2010 ; 2010 ; Gastroenterologie up2dat Volume 2010 ; 6 >
-   au < crawling ; exists ; 2011 ; 2011 ; Gastroenterologie up2dat Volume 2011 ; 7 >
-   au < crawling ; exists ; 2012 ; 2012 ; Gastroenterologie up2dat Volume 2012 ; 8 >
+   au < finished ; crawling ; 2011 ; 2011 ; Gastroenterologie up2dat Volume 2011 ; 7 >
+   au < finished ; crawling ; 2012 ; 2012 ; Gastroenterologie up2dat Volume 2012 ; 8 >
    au < crawling ; exists ; 2013 ; 2013 ; Gastroenterologie up2dat Volume 2013 ; 9 >
    au < crawling ; exists ; 2014 ; 2014 ; Gastroenterologie up2dat Volume 2014 ; 10 >
    au < crawling ; exists ; 2015 ; 2015 ; Gastroenterologie up2dat Volume 2015 ; 11 >
@@ -1670,7 +1670,7 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; Geburtshilfe und Frauenheilkunde Volume 2009 ; 69 >
    au < crawling ; exists ; 2010 ; 2010 ; Geburtshilfe und Frauenheilkunde Volume 2010 ; 70 >
    au < crawling ; exists ; 2011 ; 2011 ; Geburtshilfe und Frauenheilkunde Volume 2011 ; 71 >
-   au < crawling ; exists ; 2012 ; 2012 ; Geburtshilfe und Frauenheilkunde Volume 2012 ; 72 >
+   au < finished ; crawling ; 2012 ; 2012 ; Geburtshilfe und Frauenheilkunde Volume 2012 ; 72 >
    au < crawling ; exists ; 2013 ; 2013 ; Geburtshilfe und Frauenheilkunde Volume 2013 ; 73 >
    au < crawling ; exists ; 2014 ; 2014 ; Geburtshilfe und Frauenheilkunde Volume 2014 ; 74 >
    au < crawling ; exists ; 2015 ; 2015 ; Geburtshilfe und Frauenheilkunde Volume 2015 ; 75 >
@@ -1712,8 +1712,8 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2007 ; 12 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2008 ; 13 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2009 ; 14 >
-   au < crawling ; exists ; 2010 ; 2010 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2010 ; 15 >
-   au < crawling ; exists ; 2011 ; 2011 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2011 ; 16 >
+   au < finished ; crawling ; 2010 ; 2010 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2010 ; 15 >
+   au < finished ; crawling ; 2011 ; 2011 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2011 ; 16 >
    au < crawling ; exists ; 2012 ; 2012 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2012 ; 17 >
    au < crawling ; exists ; 2013 ; 2013 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2013 ; 18 >
    au < finished ; crawling ; 2014 ; 2014 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2014 ; 19 >
@@ -1763,7 +1763,7 @@
     param[journal_id] = 10.1055/s-00000177
     comment[years] = 2011-current
 
-   au < crawling ; exists ; 2011 ; 2011 ; Global Spine Journal Volume 2011 ; 1 >
+   au < finished ; crawling ; 2011 ; 2011 ; Global Spine Journal Volume 2011 ; 1 >
    au < crawling ; exists ; 2012 ; 2012 ; Global Spine Journal Volume 2012 ; 2 >
    au < crawling ; exists ; 2013 ; 2013 ; Global Spine Journal Volume 2013 ; 3 >
    au < crawling ; exists ; 2014 ; 2014 ; Global Spine Journal Volume 2014 ; 4 >
@@ -1813,7 +1813,7 @@
     param[journal_id] = 10.1055/s-00023621
     comment[years] = 2004-current
 
-    au < crawling ; exists ; 2012 ; 2012 ; Handchirurgie Scan Volume 1 ; 1 >
+    au < finished ; crawling ; 2012 ; 2012 ; Handchirurgie Scan Volume 1 ; 1 >
     au < crawling ; exists ; 2013 ; 2013 ; Handchirurgie Scan Volume 2 ; 2 >
     au < finished ; crawling ; 2014 ; 2014 ; Handchirurgie Scan Volume 3 ; 3 >
     au < crawling ; exists ; 2015 ; 2015 ; Handchirurgie Scan Volume 4 ; 4 >
@@ -1877,10 +1877,10 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Homoeopathic Links Volume 2007 ; 20 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Homoeopathic Links Volume 2008 ; 21 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Homoeopathic Links Volume 2009 ; 22 >
-   au < crawling ; exists ; 2010 ; 2010 ; Homoeopathic Links Volume 2010 ; 23 >
+   au < finished ; crawling ; 2010 ; 2010 ; Homoeopathic Links Volume 2010 ; 23 >
    au < crawling ; exists ; 2011 ; 2011 ; Homoeopathic Links Volume 2011 ; 24 >
    au < crawling ; exists ; 2012 ; 2012 ; Homoeopathic Links Volume 2012 ; 25 >
-   au < crawling ; exists ; 2013 ; 2013 ; Homoeopathic Links Volume 2013 ; 26 >
+   au < finished ; crawling ; 2013 ; 2013 ; Homoeopathic Links Volume 2013 ; 26 >
    au < crawling ; exists ; 2014 ; 2014 ; Homoeopathic Links Volume 2014 ; 27 >
    au < crawling ; exists ; 2015 ; 2015 ; Homoeopathic Links Volume 2015 ; 28 >
 
@@ -1959,9 +1959,9 @@
     param[journal_id] = 10.1055/s-00000166
     comment[years] = 2011-current
 
-   au < crawling ; exists ; 2011 ; 2011 ; Im OP Volume 2011 ; 1  >
-   au < crawling ; exists ; 2012 ; 2012 ; Im OP Volume 2012 ; 2 >
-   au < crawling ; exists ; 2013 ; 2013 ; Im OP Volume 2013 ; 3 >
+   au < finished ; crawling ; 2011 ; 2011 ; Im OP Volume 2011 ; 1  >
+   au < finished ; crawling ; 2012 ; 2012 ; Im OP Volume 2012 ; 2 >
+   au < finished ; crawling ; 2013 ; 2013 ; Im OP Volume 2013 ; 3 >
    au < crawling ; exists ; 2014 ; 2014 ; Im OP Volume 2014 ; 4 >
    au < crawling ; exists ; 2015 ; 2015 ; Im OP Volume 2015 ; 5 >
 
@@ -2049,7 +2049,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; intensiv Volume 2007 ; 15 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; intensiv Volume 2008 ; 16 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; intensiv Volume 2009 ; 17 >
-    au < crawling ; exists ; 2010 ; 2010 ; intensiv Volume 2010 ; 18 >
+    au < finished ; crawling ; 2010 ; 2010 ; intensiv Volume 2010 ; 18 >
     au < crawling ; exists ; 2011 ; 2011 ; intensiv Volume 2011 ; 19 >
     au < crawling ; exists ; 2012 ; 2012 ; intensiv Volume 2012 ; 20 >
     au < crawling ; exists ; 2013 ; 2013 ; intensiv Volume 2013 ; 21 >
@@ -2094,7 +2094,7 @@
     param[journal_id] = 10.1055/s-00025477
     comment[years] = 2012-current
 
-   au < crawling ; exists ; 2012 ; 2012 ; International Archives of Otorhinolaryngology Volume 16 ; 16 >
+   au < finished ; crawling ; 2012 ; 2012 ; International Archives of Otorhinolaryngology Volume 16 ; 16 >
    au < crawling ; exists ; 2013 ; 2013 ; International Archives of Otorhinolaryngology Volume 17 ; 17 >
    au < crawling ; exists ; 2014 ; 2014 ; International Archives of Otorhinolaryngology Volume 18 ; 18 >
    au < crawling ; exists ; 2015 ; 2015 ; International Archives of Otorhinolaryngology Volume 19 ; 19 >
@@ -2133,7 +2133,7 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; International Journal of Angiology Volume 2009 ; 18 >
     au < crawling ; exists ; 2010 ; 2010 ; International Journal of Angiology Volume 2010 ; 19 >
     au < crawling ; exists ; 2011 ; 2011 ; International Journal of Angiology Volume 2011 ; 20 >
-    au < crawling ; exists ; 2012 ; 2012 ; International Journal of Angiology Volume 2012 ; 21 >
+    au < finished ; crawling ; 2012 ; 2012 ; International Journal of Angiology Volume 2012 ; 21 >
     au < crawling ; exists ; 2013 ; 2013 ; International Journal of Angiology Volume 2013 ; 22 >
     au < crawling ; exists ; 2014 ; 2014 ; International Journal of Angiology Volume 2014 ; 23 >
     au < crawling ; exists ; 2015 ; 2015 ; International Journal of Angiology Volume 2015 ; 24 >
@@ -2184,7 +2184,7 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; International Journal of Sports Medicine Volume 2009 ; 30 >
     au < crawling ; exists ; 2010 ; 2010 ; International Journal of Sports Medicine Volume 2010 ; 31 >
     au < crawling ; exists ; 2011 ; 2011 ; International Journal of Sports Medicine Volume 2011 ; 32 >
-    au < crawling ; exists ; 2012 ; 2012 ; International Journal of Sports Medicine Volume 2012 ; 33 >
+    au < finished ; crawling ; 2012 ; 2012 ; International Journal of Sports Medicine Volume 2012 ; 33 >
     au < crawling ; exists ; 2013 ; 2013 ; International Journal of Sports Medicine Volume 2013 ; 34 >
     au < crawling ; exists ; 2014 ; 2014 ; International Journal of Sports Medicine Volume 2014 ; 35 >
     au < crawling ; exists ; 2015 ; 2015 ; International Journal of Sports Medicine Volume 2015 ; 36 >
@@ -2276,7 +2276,7 @@
     comment[0] = moved from BioMedCentral.
 
    au < crawling ; exists ; 2006 ; 2006 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2006 ; 1 >
-   au < crawling ; exists ; 2007 ; 2007 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2007 ; 2 >
+   au < finished ; crawling ; 2007 ; 2007 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2007 ; 2 >
    au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2008 ; 3 >
    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2009 ; 4 >
    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2010 ; 5 >
@@ -2324,9 +2324,9 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Knee Surgery Volume 2007 ; 20 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Journal of Knee Surgery Volume 2008 ; 21 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Journal of Knee Surgery Volume 2009 ; 22 >
-    au < crawling ; exists ; 2010 ; 2010 ; Journal of Knee Surgery Volume 2010 ; 23 >
+    au < finished ; crawling ; 2010 ; 2010 ; Journal of Knee Surgery Volume 2010 ; 23 >
     au < crawling ; exists ; 2011 ; 2011 ; Journal of Knee Surgery Volume 2011 ; 24 >
-    au < crawling ; exists ; 2012 ; 2012 ; Journal of Knee Surgery Volume 2012 ; 25 >
+    au < finished ; crawling ; 2012 ; 2012 ; Journal of Knee Surgery Volume 2012 ; 25 >
     au < crawling ; exists ; 2013 ; 2013 ; Journal of Knee Surgery Volume 2013 ; 26 >
     au < crawling ; exists ; 2014 ; 2014 ; Journal of Knee Surgery Volume 2014 ; 27 >
     au < crawling ; exists ; 2015 ; 2015 ; Journal of Knee Surgery Volume 2015 ; 28 >
@@ -2399,8 +2399,8 @@
     param[journal_id] = 10.1055/s-00000182
     comment[years] = 2012-current
 
-    au < crawling ; exists ; 2012 ; 2012 ; Journal of Neurological Surgery Reports Volume 2012 ; 73 >
-    au < crawling ; exists ; 2013 ; 2013 ; Journal of Neurological Surgery Reports Volume 2013 ; 74 >
+    au < finished ; crawling ; 2012 ; 2012 ; Journal of Neurological Surgery Reports Volume 2012 ; 73 >
+    au < finished ; crawling ; 2013 ; 2013 ; Journal of Neurological Surgery Reports Volume 2013 ; 74 >
     au < crawling ; exists ; 2014 ; 2014 ; Journal of Neurological Surgery Reports Volume 2014 ; 75 >
     au < crawling ; exists ; 2015 ; 2015 ; Journal of Neurological Surgery Reports Volume 2015 ; 76 >
 
@@ -2529,7 +2529,7 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; Kardiologie up2date Volume 2009 ; 5 >
     au < crawling ; exists ; 2010 ; 2010 ; Kardiologie up2date Volume 2010 ; 6 >
     au < crawling ; exists ; 2011 ; 2011 ; Kardiologie up2date Volume 2011 ; 7 >
-    au < crawling ; exists ; 2012 ; 2012 ; Kardiologie up2date Volume 2012 ; 8 >
+    au < finished ; crawling ; 2012 ; 2012 ; Kardiologie up2date Volume 2012 ; 8 >
     au < crawling ; exists ; 2013 ; 2013 ; Kardiologie up2date Volume 2013 ; 9 >
     au < crawling ; exists ; 2014 ; 2014 ; Kardiologie up2date Volume 2014 ; 10 >
     au < crawling ; exists ; 2015 ; 2015 ; Kardiologie up2date Volume 2015 ; 11 >
@@ -2552,7 +2552,7 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; kleintier konkret Volume 2009 ; 12 >
     au < crawling ; exists ; 2010 ; 2010 ; kleintier konkret Volume 2010 ; 13 >
     au < crawling ; exists ; 2011 ; 2011 ; kleintier konkret Volume 2011 ; 14 >
-    au < crawling ; exists ; 2012 ; 2012 ; kleintier konkret Volume 2012 ; 15 >
+    au < finished ; crawling ; 2012 ; 2012 ; kleintier konkret Volume 2012 ; 15 >
     au < crawling ; exists ; 2013 ; 2013 ; kleintier konkret Volume 2013 ; 16 >
     au < crawling ; exists ; 2014 ; 2014 ; kleintier konkret Volume 2014 ; 17 >
     au < crawling ; exists ; 2015 ; 2015 ; kleintier konkret Volume 2015 ; 18 >
@@ -2577,7 +2577,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Klinikarzt Der Volume 2007 ; 36 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Klinikarzt Der Volume 2008 ; 37 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Klinikarzt Der Volume 2009 ; 38 >
-    au < crawling ; exists ; 2010 ; 2010 ; Klinikarzt Der Volume 2010 ; 39 >
+    au < finished ; crawling ; 2010 ; 2010 ; Klinikarzt Der Volume 2010 ; 39 >
     au < crawling ; exists ; 2011 ; 2011 ; Klinikarzt Der Volume 2011 ; 40 >
     au < crawling ; exists ; 2012 ; 2012 ; Klinikarzt Der Volume 2012 ; 41 >
     au < crawling ; exists ; 2013 ; 2013 ; Klinikarzt Der Volume 2013 ; 42 >
@@ -2730,7 +2730,7 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; Klinische Pädiatrie Volume 2008 ; 220 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Klinische Pädiatrie Volume 2009 ; 221 >
     au < crawling ; exists ; 2010 ; 2010 ; Klinische Pädiatrie Volume 2010 ; 222 >
-    au < crawling ; exists ; 2011 ; 2011 ; Klinische Pädiatrie Volume 2011 ; 223 >
+    au < finished ; crawling ; 2011 ; 2011 ; Klinische Pädiatrie Volume 2011 ; 223 >
     au < crawling ; exists ; 2012 ; 2012 ; Klinische Pädiatrie Volume 2012 ; 224 >
     au < crawling ; exists ; 2013 ; 2013 ; Klinische Pädiatrie Volume 2013 ; 225 >
     au < crawling ; exists ; 2014 ; 2014 ; Klinische Pädiatrie Volume 2014 ; 226 >
@@ -2854,7 +2854,7 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; Laryngo-Rhino-Otologie Volume 2009 ; 88 >
     au < crawling ; exists ; 2010 ; 2010 ; Laryngo-Rhino-Otologie Volume 2010 ; 89 >
     au < crawling ; exists ; 2011 ; 2011 ; Laryngo-Rhino-Otologie Volume 2011 ; 90 >
-    au < crawling ; exists ; 2012 ; 2012 ; Laryngo-Rhino-Otologie Volume 2012 ; 91 >
+    au < finished ; crawling ; 2012 ; 2012 ; Laryngo-Rhino-Otologie Volume 2012 ; 91 >
     au < crawling ; exists ; 2013 ; 2013 ; Laryngo-Rhino-Otologie Volume 2013 ; 92 >
     au < crawling ; exists ; 2014 ; 2014 ; Laryngo-Rhino-Otologie Volume 2014 ; 93 >
     au < crawling ; exists ; 2015 ; 2015 ; Laryngo-Rhino-Otologie Volume 2015 ; 94 >
@@ -2898,7 +2898,7 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; manuelletherapie Volume 2008 ; 12 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; manuelletherapie Volume 2009 ; 13 >
     au < crawling ; exists ; 2010 ; 2010 ; manuelletherapie Volume 2010 ; 14 >
-    au < crawling ; exists ; 2011 ; 2011 ; manuelletherapie Volume 2011 ; 15 >
+    au < finished ; crawling ; 2011 ; 2011 ; manuelletherapie Volume 2011 ; 15 >
     au < crawling ; exists ; 2012 ; 2012 ; manuelletherapie Volume 2012 ; 16 >
     au < crawling ; exists ; 2013 ; 2013 ; manuelletherapie Volume 2013 ;  17 >
     au < crawling ; exists ; 2014 ; 2014 ; manuelletherapie Volume 2014 ;  18 >
@@ -2988,7 +2988,7 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; min - Minimally Invasive Neurosurgery Volume 51 ; 51 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; min - Minimally Invasive Neurosurgery Volume 52 ; 52 >
     au < crawling ; exists ; 2010 ; 2010 ; min - Minimally Invasive Neurosurgery Volume 53 ; 53 >
-    au < crawling ; exists ; 2011 ; 2011 ; min - Minimally Invasive Neurosurgery Volume 54 ; 54 >
+    au < finished ; crawling ; 2011 ; 2011 ; min - Minimally Invasive Neurosurgery Volume 54 ; 54 >
 
   }
 
@@ -3092,7 +3092,7 @@
     comment[years] = 2011-current
 
     au < crawling ; exists ; 2011 ; 2011 ; Neuroradiologie Scan Volume 2011 ; 1 >
-    au < crawling ; exists ; 2012 ; 2012 ; Neuroradiologie Scan Volume 2012 ; 2 >
+    au < finished ; crawling ; 2012 ; 2012 ; Neuroradiologie Scan Volume 2012 ; 2 >
     au < crawling ; exists ; 2013 ; 2013 ; Neuroradiologie Scan Volume 2013 ; 3 >
     au < crawling ; exists ; 2014 ; 2014 ; Neuroradiologie Scan Volume 2014 ; 4 >
     au < crawling ; exists ; 2015 ; 2015 ; Neuroradiologie Scan Volume 2015 ; 5 >
@@ -3113,7 +3113,7 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; neuroreha Volume 2009 ; 1 >
     au < crawling ; exists ; 2010 ; 2010 ; neuroreha Volume 2010 ; 2 >
     au < crawling ; exists ; 2011 ; 2011 ; neuroreha Volume 2011 ; 3 >
-    au < crawling ; exists ; 2012 ; 2012 ; neuroreha Volume 2012 ; 4 >
+    au < finished ; crawling ; 2012 ; 2012 ; neuroreha Volume 2012 ; 4 >
     au < crawling ; exists ; 2013 ; 2013 ; neuroreha Volume 2013 ; 5 >
     au < crawling ; exists ; 2014 ; 2014 ; neuroreha Volume 2014 ; 6 >
     au < crawling ; exists ; 2015 ; 2015 ; neuroreha Volume 2015 ; 7 >
@@ -3277,7 +3277,7 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; OP-Journal Volume 2009 ; 25 >
     au < crawling ; exists ; 2010 ; 2010 ; OP-Journal Volume 2010 ; 26 >
     au < crawling ; exists ; 2011 ; 2011 ; OP-Journal Volume 2011 ; 27 >
-    au < crawling ; exists ; 2012 ; 2012 ; OP-Journal Volume 2012 ; 28 >
+    au < finished ; crawling ; 2012 ; 2012 ; OP-Journal Volume 2012 ; 28 >
     au < crawling ; exists ; 2013 ; 2013 ; OP-Journal Volume 2013 ; 29 >
     au < crawling ; exists ; 2014 ; 2014 ; OP-Journal Volume 2014 ; 30 >
     au < crawling ; exists ; 2015 ; 2015 ; OP-Journal Volume 2015 ; 31 >
@@ -3296,7 +3296,7 @@
     comment[years] = 2012-current
     comment[0] = coming online soon as of July 2012
 
-    au < crawling ; exists ; 2012 ; 2012 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2012 ; 1 >
+    au < finished ; crawling ; 2012 ; 2012 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2012 ; 1 >
     au < crawling ; exists ; 2013 ; 2013 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2013 ; 2 >
     au < crawling ; exists ; 2014 ; 2014 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2014 ; 3 >
     au < crawling ; exists ; 2015 ; 2015 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2015 ; 4 >
@@ -3346,7 +3346,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Orthopedic Trauma Directions Volume 2007 ; 5 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Orthopedic Trauma Directions Volume 2008 ; 6 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Orthopedic Trauma Directions Volume 2009 ; 7 >
-    au < crawling ; exists ; 2010 ; 2010 ; Orthopedic Trauma Directions Volume 2010 ; 8 >
+    au < finished ; crawling ; 2010 ; 2010 ; Orthopedic Trauma Directions Volume 2010 ; 8 >
     au < crawling ; exists ; 2011 ; 2011 ; Orthopedic Trauma Directions Volume 2011 ; 9 >
 
   }
@@ -3403,9 +3403,9 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Pädiatrie up2date Volume 2007 ; 2 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Pädiatrie up2date Volume 2008 ; 3 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Pädiatrie up2date Volume 2009 ; 4 >
-    au < crawling ; exists ; 2010 ; 2010 ; Pädiatrie up2date Volume 2010 ; 5 >
-    au < crawling ; exists ; 2011 ; 2011 ; Pädiatrie up2date Volume 2011 ; 6 >
-    au < crawling ; exists ; 2012 ; 2012 ; Pädiatrie up2date Volume 2012 ; 7 >
+    au < finished ; crawling ; 2010 ; 2010 ; Pädiatrie up2date Volume 2010 ; 5 >
+    au < finished ; crawling ; 2011 ; 2011 ; Pädiatrie up2date Volume 2011 ; 6 >
+    au < finished ; crawling ; 2012 ; 2012 ; Pädiatrie up2date Volume 2012 ; 7 >
     au < crawling ; exists ; 2013 ; 2013 ; Pädiatrie up2date Volume 2013 ; 8 >
     au < crawling ; exists ; 2014 ; 2014 ; Pädiatrie up2date Volume 2014 ; 9 >
     au < crawling ; exists ; 2015 ; 2015 ; Pädiatrie up2date Volume 2015 ; 10 >
@@ -3431,8 +3431,8 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; pferde spiegel Volume 2008 ; 11 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; pferde spiegel Volume 2009 ; 12 >
     au < crawling ; exists ; 2010 ; 2010 ; pferde spiegel Volume 2010 ; 13 >
-    au < crawling ; exists ; 2011 ; 2011 ; pferde spiegel Volume 2011 ; 14 >
-    au < crawling ; exists ; 2012 ; 2012 ; pferde spiegel Volume 2012 ; 15 >
+    au < finished ; crawling ; 2011 ; 2011 ; pferde spiegel Volume 2011 ; 14 >
+    au < finished ; crawling ; 2012 ; 2012 ; pferde spiegel Volume 2012 ; 15 >
     au < crawling ; exists ; 2013 ; 2013 ; pferde spiegel Volume 2013 ; 16 >
     au < crawling ; exists ; 2014 ; 2014 ; pferde spiegel Volume 2014 ; 17 >
     au < crawling ; exists ; 2015 ; 2015 ; pferde spiegel Volume 2015 ; 18 >
@@ -3493,7 +3493,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Pharmacopsychiatry Volume 2007 ; 40 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Pharmacopsychiatry Volume 2008 ; 41 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Pharmacopsychiatry Volume 2009 ; 42 >
-    au < crawling ; exists ; 2010 ; 2010 ; Pharmacopsychiatry Volume 2010 ; 43 >
+    au < finished ; crawling ; 2010 ; 2010 ; Pharmacopsychiatry Volume 2010 ; 43 >
     au < crawling ; exists ; 2011 ; 2011 ; Pharmacopsychiatry Volume 2011 ; 44 >
     au < crawling ; exists ; 2012 ; 2012 ; Pharmacopsychiatry Volume 2012 ; 45 >
     au < crawling ; exists ; 2013 ; 2013 ; Pharmacopsychiatry Volume 2013 ; 46 >
@@ -3532,9 +3532,9 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2007 ; 17 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2008 ; 18 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2009 ; 19 >
-    au < crawling ; exists ; 2010 ; 2010 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2010 ; 20 >
+    au < finished ; crawling ; 2010 ; 2010 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2010 ; 20 >
     au < crawling ; exists ; 2011 ; 2011 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2011 ; 21 >
-    au < crawling ; exists ; 2012 ; 2012 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2012 ; 22 >
+    au < finished ; crawling ; 2012 ; 2012 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2012 ; 22 >
     au < crawling ; exists ; 2013 ; 2013 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2013 ; 23 >
     au < crawling ; exists ; 2014 ; 2014 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2014 ; 24 >
     au < crawling ; exists ; 2015 ; 2015 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2015 ; 25 >
@@ -3552,7 +3552,7 @@
     param[journal_id] = 10.1055/s-00000162
     comment[years] = 2010-current
 
-    au < crawling ; exists ; 2010 ; 2010 ; physiopraxis Volume 2010 ; 8 >
+    au < finished ; crawling ; 2010 ; 2010 ; physiopraxis Volume 2010 ; 8 >
     au < notReady ; exists ; 2011 ; 2011 ; physiopraxis Volume 2011 ; 9 >
     #pdf hash error
     au < crawling ; exists ; 2012 ; 2012 ; physiopraxis Volume 2012 ; 10 >
@@ -3579,9 +3579,9 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; physioscience Volume 2007 ; 3 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; physioscience Volume 2008 ; 4 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; physioscience Volume 2009 ; 5 >
-    au < crawling ; exists ; 2010 ; 2010 ; physioscience Volume 2010 ; 6 >
+    au < finished ; crawling ; 2010 ; 2010 ; physioscience Volume 2010 ; 6 >
     au < crawling ; exists ; 2011 ; 2011 ; physioscience Volume 2011 ; 7 >
-    au < crawling ; exists ; 2012 ; 2012 ; physioscience Volume 2012 ; 8 >
+    au < finished ; crawling ; 2012 ; 2012 ; physioscience Volume 2012 ; 8 >
     au < crawling ; exists ; 2013 ; 2013 ; physioscience Volume 2013 ; 9 >
     au < crawling ; exists ; 2014 ; 2014 ; physioscience Volume 2014 ; 10 >
     au < crawling ; exists ; 2015 ; 2015 ; physioscience Volume 2015 ; 11 >
@@ -3713,8 +3713,8 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Planta Medica Volume 2007 ; 73 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Planta Medica Volume 2008 ; 74 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Planta Medica Volume 2009 ; 75 >
-   au < crawling ; exists ; 2010 ; 2010 ; Planta Medica Volume 2010 ; 76 >
-   au < crawling ; exists ; 2011 ; 2011 ; Planta Medica Volume 2011 ; 77 >
+   au < finished ; crawling ; 2010 ; 2010 ; Planta Medica Volume 2010 ; 76 >
+   au < finished ; crawling ; 2011 ; 2011 ; Planta Medica Volume 2011 ; 77 >
    au < crawling ; exists ; 2012 ; 2012 ; Planta Medica Volume 2012 ; 78 >
    au < crawling ; exists ; 2013 ; 2013 ; Planta Medica Volume 2013 ; 79 >
    au < crawling ; exists ; 2014 ; 2014 ; Planta Medica Volume 2014 ; 80 >
@@ -3791,7 +3791,7 @@
    au < crawling ; exists ; 2010 ; 2010 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 2010 ; 60 >
    au < crawling ; exists ; 2011 ; 2011 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 2011 ; 61 >
    au < crawling ; exists ; 2012 ; 2012 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 2012 ; 62 >
-   au < crawling ; exists ; 2013 ; 2013 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 2013 ; 63 >
+   au < finished ; crawling ; 2013 ; 2013 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 2013 ; 63 >
    au < crawling ; exists ; 2014 ; 2014 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 2014 ; 64 >
    au < crawling ; exists ; 2015 ; 2015 ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie Volume 2015 ; 65 >
 
@@ -3835,8 +3835,8 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Psych Pflege Heute Volume 2007 ; 13 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Psych Pflege Heute Volume 2008 ; 14 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Psych Pflege Heute Volume 2009 ; 15 >
-   au < crawling ; exists ; 2010 ; 2010 ; Psych Pflege Heute Volume 2010 ; 16 >
-   au < crawling ; exists ; 2011 ; 2011 ; Psych Pflege Heute Volume 2011 ; 17 >
+   au < finished ; crawling ; 2010 ; 2010 ; Psych Pflege Heute Volume 2010 ; 16 >
+   au < finished ; crawling ; 2011 ; 2011 ; Psych Pflege Heute Volume 2011 ; 17 >
    au < crawling ; exists ; 2012 ; 2012 ; Psych Pflege Heute Volume 2012 ; 18 >
    au < crawling ; exists ; 2013 ; 2013 ; Psych Pflege Heute Volume 2013 ; 19 >
    au < finished ; crawling ; 2014 ; 2014 ; Psych Pflege Heute Volume 2014 ; 20 >
@@ -3959,7 +3959,7 @@
    au < crawling ; exists ; 2010 ; 2010 ; Radiologie up2date Volume 2010 ; 10 >
    au < crawling ; exists ; 2011 ; 2011 ; Radiologie up2date Volume 2011 ; 11 >
    au < crawling ; exists ; 2012 ; 2012 ; Radiologie up2date Volume 2012 ; 12 >
-   au < crawling ; exists ; 2013 ; 2013 ; Radiologie up2date Volume 2013 ; 13 >
+   au < finished ; crawling ; 2013 ; 2013 ; Radiologie up2date Volume 2013 ; 13 >
    au < finished ; crawling ; 2014 ; 2014 ; Radiologie up2date Volume 2014 ; 14 >
    au < crawling ; exists ; 2015 ; 2015 ; Radiologie up2date Volume 2015 ; 15 >
 
@@ -3981,7 +3981,7 @@
    au < crawling ; exists ; 2010 ; 2010 ; Radiopraxis Volume 2010 ; 3 >
    au < crawling ; exists ; 2011 ; 2011 ; Radiopraxis Volume 2011 ; 4 >
    au < crawling ; exists ; 2012 ; 2012 ; Radiopraxis Volume 2012 ; 5 >
-   au < crawling ; exists ; 2013 ; 2013 ; Radiopraxis Volume 2013 ; 6 >
+   au < finished ; crawling ; 2013 ; 2013 ; Radiopraxis Volume 2013 ; 6 >
    au < crawling ; exists ; 2014 ; 2014 ; Radiopraxis Volume 2014 ; 7 >
    au < crawling ; exists ; 2015 ; 2015 ; Radiopraxis Volume 2015 ; 8 >
 
@@ -4011,7 +4011,7 @@
    au < crawling ; exists ; 2010 ; 2010 ; Rehabilitation Die Volume 2010 ; 49 >
    au < crawling ; exists ; 2011 ; 2011 ; Rehabilitation Die Volume 2011 ; 50 >
    au < crawling ; exists ; 2012 ; 2012 ; Rehabilitation Die Volume 2012 ; 51 >
-   au < crawling ; exists ; 2013 ; 2013 ; Rehabilitation Die Volume 2013 ; 52 >
+   au < finished ; crawling ; 2013 ; 2013 ; Rehabilitation Die Volume 2013 ; 52 >
    au < finished ; crawling ; 2014 ; 2014 ; Rehabilitation Die Volume 2014 ; 53 >
    au < crawling ; exists ; 2015 ; 2015 ; Rehabilitation Die Volume 2015 ; 54 >
 
@@ -4028,8 +4028,8 @@
     param[journal_id] = 10.1055/s-00000178
     comment[years] = 2012-current
 
-   au < crawling ; exists ; 2012 ; 2012 ; retten! Volume 2012 ; 1 >
-   au < crawling ; exists ; 2013 ; 2013 ; retten! Volume 2013 ; 2 >
+   au < finished ; crawling ; 2012 ; 2012 ; retten! Volume 2012 ; 1 >
+   au < finished ; crawling ; 2013 ; 2013 ; retten! Volume 2013 ; 2 >
    au < crawling ; exists ; 2014 ; 2014 ; retten! Volume 2014 ; 3 >
    au < crawling ; exists ; 2015 ; 2015 ; retten! Volume 2015 ; 4 >
 
@@ -4156,7 +4156,7 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Seminars in Hearing Volume 2007 ; 28 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Seminars in Hearing Volume 2008 ; 29 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Seminars in Hearing Volume 2009 ; 30 >
-   au < crawling ; exists ; 2010 ; 2010 ; Seminars in Hearing Volume 2010 ; 31 >
+   au < finished ; crawling ; 2010 ; 2010 ; Seminars in Hearing Volume 2010 ; 31 >
    au < crawling ; exists ; 2011 ; 2011 ; Seminars in Hearing Volume 2011 ; 32 >
    au < crawling ; exists ; 2012 ; 2012 ; Seminars in Hearing Volume 2012 ; 33 >
    au < crawling ; exists ; 2013 ; 2013 ; Seminars in Hearing Volume 2013 ; 34 >
@@ -4203,9 +4203,9 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Seminars in Interventional Radiology Volume 2007 ; 24 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Seminars in Interventional Radiology Volume 2008 ; 25 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Seminars in Interventional Radiology Volume 2009 ; 26 >
-   au < crawling ; exists ; 2010 ; 2010 ; Seminars in Interventional Radiology Volume 2010 ; 27 >
-   au < crawling ; exists ; 2011 ; 2011 ; Seminars in Interventional Radiology Volume 2011 ; 28 >
-   au < crawling ; exists ; 2012 ; 2012 ; Seminars in Interventional Radiology Volume 2012 ; 29 >
+   au < finished ; crawling ; 2010 ; 2010 ; Seminars in Interventional Radiology Volume 2010 ; 27 >
+   au < finished ; crawling ; 2011 ; 2011 ; Seminars in Interventional Radiology Volume 2011 ; 28 >
+   au < finished ; crawling ; 2012 ; 2012 ; Seminars in Interventional Radiology Volume 2012 ; 29 >
    au < crawling ; exists ; 2013 ; 2013 ; Seminars in Interventional Radiology Volume 2013 ; 30 >
    au < crawling ; exists ; 2014 ; 2014 ; Seminars in Interventional Radiology Volume 2014 ; 31 >
    au < crawling ; exists ; 2015 ; 2015 ; Seminars in Interventional Radiology Volume 2015 ; 32 >
@@ -4253,10 +4253,10 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Seminars in Liver Disease Volume 2007 ; 27 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Seminars in Liver Disease Volume 2008 ; 28 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Seminars in Liver Disease Volume 2009 ; 29 >
-   au < crawling ; exists ; 2010 ; 2010 ; Seminars in Liver Disease Volume 2010 ; 30 >
+   au < finished ; crawling ; 2010 ; 2010 ; Seminars in Liver Disease Volume 2010 ; 30 >
    au < crawling ; exists ; 2011 ; 2011 ; Seminars in Liver Disease Volume 2011 ; 31 >
    au < crawling ; exists ; 2012 ; 2012 ; Seminars in Liver Disease Volume 2012 ; 32 >
-   au < crawling ; exists ; 2013 ; 2013 ; Seminars in Liver Disease Volume 2013 ; 33 >
+   au < finished ; crawling ; 2013 ; 2013 ; Seminars in Liver Disease Volume 2013 ; 33 >
    au < crawling ; exists ; 2014 ; 2014 ; Seminars in Liver Disease Volume 2014 ; 34 >
    au < crawling ; exists ; 2015 ; 2015 ; Seminars in Liver Disease Volume 2015 ; 35 >
 
@@ -4338,7 +4338,7 @@
    au < doNotProcess ; exists ; 2008 ; 2008 ; Seminars in Neurology Volume 2008 ; 28 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Seminars in Neurology Volume 2009 ; 29 >
    au < crawling ; exists ; 2010 ; 2010 ; Seminars in Neurology Volume 2010 ; 30 >
-   au < crawling ; exists ; 2011 ; 2011 ; Seminars in Neurology Volume 2011 ; 31 >
+   au < finished ; crawling ; 2011 ; 2011 ; Seminars in Neurology Volume 2011 ; 31 >
    au < crawling ; exists ; 2012 ; 2012 ; Seminars in Neurology Volume 2012 ; 32 >
    au < crawling ; exists ; 2013 ; 2013 ; Seminars in Neurology Volume 2013 ; 33 >
    au < crawling ; exists ; 2014 ; 2014 ; Seminars in Neurology Volume 2014 ; 34 >
@@ -4397,7 +4397,7 @@
    au < doNotProcess ; exists ; 2008 ; 2008 ; Seminars in Plastic Surgery Volume 2008 ; 22 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Seminars in Plastic Surgery Volume 2009 ; 23 >
    au < crawling ; exists ; 2010 ; 2010 ; Seminars in Plastic Surgery Volume 2010 ; 24 >
-   au < crawling ; exists ; 2011 ; 2011 ; Seminars in Plastic Surgery Volume 2011 ; 25 >
+   au < finished ; crawling ; 2011 ; 2011 ; Seminars in Plastic Surgery Volume 2011 ; 25 >
    au < crawling ; exists ; 2012 ; 2012 ; Seminars in Plastic Surgery Volume 2012 ; 26 >
    au < crawling ; exists ; 2013 ; 2013 ; Seminars in Plastic Surgery Volume 2013 ; 27 >
    au < crawling ; exists ; 2014 ; 2014 ; Seminars in Plastic Surgery Volume 2014 ; 28 >
@@ -4458,10 +4458,10 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Seminars in Reproductive Medicine Volume 2007 ; 25 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Seminars in Reproductive Medicine Volume 2008 ; 26 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Seminars in Reproductive Medicine Volume 2009 ; 27 >
-   au < crawling ; exists ; 2010 ; 2010 ; Seminars in Reproductive Medicine Volume 2010 ; 28 >
-   au < crawling ; exists ; 2011 ; 2011 ; Seminars in Reproductive Medicine Volume 2011 ; 29 >
+   au < finished ; crawling ; 2010 ; 2010 ; Seminars in Reproductive Medicine Volume 2010 ; 28 >
+   au < finished ; crawling ; 2011 ; 2011 ; Seminars in Reproductive Medicine Volume 2011 ; 29 >
    au < crawling ; exists ; 2012 ; 2012 ; Seminars in Reproductive Medicine Volume 2012 ; 30 >
-   au < crawling ; exists ; 2013 ; 2013 ; Seminars in Reproductive Medicine Volume 2013 ; 31 >
+   au < finished ; crawling ; 2013 ; 2013 ; Seminars in Reproductive Medicine Volume 2013 ; 31 >
    au < crawling ; exists ; 2014 ; 2014 ; Seminars in Reproductive Medicine Volume 2014 ; 32 >
    au < crawling ; exists ; 2015 ; 2015 ; Seminars in Reproductive Medicine Volume 2015 ; 33 >
 
@@ -4627,8 +4627,8 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2008 ; 5 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2009 ; 6 >
     au < crawling ; exists ; 2010 ; 2010 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2010 ; 7 >
-    au < crawling ; exists ; 2011 ; 2011 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2011 ; 8 >
-    au < crawling ; exists ; 2012 ; 2012 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2012 ; 9 >
+    au < finished ; crawling ; 2011 ; 2011 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2011 ; 8 >
+    au < finished ; crawling ; 2012 ; 2012 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2012 ; 9 >
     au < crawling ; exists ; 2013 ; 2013 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2013 ; 10 >
     au < crawling ; exists ; 2014 ; 2014 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2014 ; 11 >
     au < crawling ; exists ; 2015 ; 2015 ; Senologie - Zeitschrift für Mammadiagnostik und -therapie Volume 2015 ; 12 >
@@ -4656,8 +4656,8 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Skull Base Volume 2007 ; 17 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Skull Base Volume 2008 ; 18 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Skull Base Volume 2009 ; 19 >
-    au < crawling ; exists ; 2010 ; 2010 ; Skull Base Volume 2010 ; 20 >
-    au < crawling ; exists ; 2011 ; 2011 ; Skull Base Volume 2011 ; 21 >
+    au < finished ; crawling ; 2010 ; 2010 ; Skull Base Volume 2010 ; 20 >
+    au < finished ; crawling ; 2011 ; 2011 ; Skull Base Volume 2011 ; 21 >
 
   }
 
@@ -4757,8 +4757,8 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Sportverletzung - Sportschaden Volume 2007 ; 21 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Sportverletzung - Sportschaden Volume 2008 ; 22 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Sportverletzung - Sportschaden Volume 2009 ; 23 >
-   au < crawling ; exists ; 2010 ; 2010 ; Sportverletzung - Sportschaden Volume 2010 ; 24 >
-   au < crawling ; exists ; 2011 ; 2011 ; Sportverletzung - Sportschaden Volume 2011 ; 25 >
+   au < finished ; crawling ; 2010 ; 2010 ; Sportverletzung - Sportschaden Volume 2010 ; 24 >
+   au < finished ; crawling ; 2011 ; 2011 ; Sportverletzung - Sportschaden Volume 2011 ; 25 >
    au < crawling ; exists ; 2012 ; 2012 ; Sportverletzung - Sportschaden Volume 2012 ; 26 >
    au < crawling ; exists ; 2013 ; 2013 ; Sportverletzung - Sportschaden Volume 2013 ; 27 >
    au < crawling ; exists ; 2014 ; 2014 ; Sportverletzung - Sportschaden Volume 2014 ; 28 >
@@ -4819,8 +4819,8 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Suchttherapie Volume 2007 ; 8 >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Suchttherapie Volume 2008 ; 9 >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Suchttherapie Volume 2009 ; 10 >
-   au < crawling ; exists ; 2010 ; 2010 ; Suchttherapie Volume 2010 ; 11 >
-   au < crawling ; exists ; 2011 ; 2011 ; Suchttherapie Volume 2011 ; 12 >
+   au < finished ; crawling ; 2010 ; 2010 ; Suchttherapie Volume 2010 ; 11 >
+   au < finished ; crawling ; 2011 ; 2011 ; Suchttherapie Volume 2011 ; 12 >
    au < crawling ; exists ; 2012 ; 2012 ; Suchttherapie Volume 2012 ; 13 >
    au < crawling ; exists ; 2013 ; 2013 ; Suchttherapie Volume 2013 ; 14 >
    au < crawling ; exists ; 2014 ; 2014 ; Suchttherapie Volume 2014 ; 15 >
@@ -4931,7 +4931,7 @@
    au < doNotProcess ; exists ; 2009 ; 2009 ; SYNTHESIS Volume 2009 ; 41 >
    au < crawling ; exists ; 2010 ; 2010 ; SYNTHESIS Volume 2010 ; 42 >
    au < crawling ; exists ; 2011 ; 2011 ; SYNTHESIS Volume 2011 ; 43 >
-   au < crawling ; exists ; 2012 ; 2012 ; SYNTHESIS Volume 2012 ; 44 >
+   au < finished ; crawling ; 2012 ; 2012 ; SYNTHESIS Volume 2012 ; 44 >
    au < crawling ; exists ; 2013 ; 2013 ; SYNTHESIS Volume 2013 ; 45 >
    au < notReady ; exists ; 2014 ; 2014 ; SYNTHESIS Volume 2014 ; 46 >
    au < notReady ; exists ; 2015 ; 2015 ; SYNTHESIS Volume 2015 ; 47 >
@@ -5040,10 +5040,10 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; The Thoracic and Cardiovascular Surgeon Volume 2007 ; 55 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; The Thoracic and Cardiovascular Surgeon Volume 2008 ; 56 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; The Thoracic and Cardiovascular Surgeon Volume 2009 ; 57 >
-    au < crawling ; exists ; 2010 ; 2010 ; The Thoracic and Cardiovascular Surgeon Volume 2010 ; 58 >
-    au < crawling ; exists ; 2011 ; 2011 ; The Thoracic and Cardiovascular Surgeon Volume 2011 ; 59 >
+    au < finished ; crawling ; 2010 ; 2010 ; The Thoracic and Cardiovascular Surgeon Volume 2010 ; 58 >
+    au < finished ; crawling ; 2011 ; 2011 ; The Thoracic and Cardiovascular Surgeon Volume 2011 ; 59 >
     au < crawling ; exists ; 2012 ; 2012 ; The Thoracic and Cardiovascular Surgeon Volume 2012 ; 60 >
-    au < crawling ; exists ; 2013 ; 2013 ; The Thoracic and Cardiovascular Surgeon Volume 2013 ; 61 >
+    au < finished ; crawling ; 2013 ; 2013 ; The Thoracic and Cardiovascular Surgeon Volume 2013 ; 61 >
     au < finished ; crawling ; 2014 ; 2014 ; The Thoracic and Cardiovascular Surgeon Volume 2014 ; 62 >
     au < crawling ; exists ; 2015 ; 2015 ; The Thoracic and Cardiovascular Surgeon Volume 2015 ; 63 >
 
@@ -5062,8 +5062,8 @@
     param[journal_id] = 10.1055/s-00024355
     comment[years] = 2012-present
 
-    au < crawling ; exists ; 2012 ; 2012 ; The Thoracic and Cardiovascular Surgeon Reports Volume 1 ; 1 >
-    au < crawling ; exists ; 2013 ; 2013 ; The Thoracic and Cardiovascular Surgeon Reports Volume 2 ; 2 >
+    au < finished ; crawling ; 2012 ; 2012 ; The Thoracic and Cardiovascular Surgeon Reports Volume 1 ; 1 >
+    au < finished ; crawling ; 2013 ; 2013 ; The Thoracic and Cardiovascular Surgeon Reports Volume 2 ; 2 >
     au < finished ; crawling ; 2014 ; 2014 ; The Thoracic and Cardiovascular Surgeon Reports Volume 3 ; 3 >
     au < manifest ; exists ; 2015 ; 2015 ; The Thoracic and Cardiovascular Surgeon Reports Volume 4 ; 4 >
 
@@ -5100,8 +5100,8 @@
     comment[years] = 2011-current
 
     au < crawling ; exists ; 2011 ; 2011 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2011 ; 1 >
-    au < crawling ; exists ; 2012 ; 2012 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2012 ; 2 >
-    au < crawling ; exists ; 2013 ; 2013 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2013 ; 3 >
+    au < finished ; crawling ; 2012 ; 2012 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2012 ; 2 >
+    au < finished ; crawling ; 2013 ; 2013 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2013 ; 3 >
     au < finished ; crawling ; 2014 ; 2014 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2014 ; 4 >
     au < crawling ; exists ; 2015 ; 2015 ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie Volume 2015 ; 5 >
 
@@ -5129,10 +5129,10 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; TumorDiagnostik & Therapie Volume 2007 ; 30 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; TumorDiagnostik & Therapie Volume 2008 ; 31 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; TumorDiagnostik & Therapie Volume 2009 ; 32 >
-    au < crawling ; exists ; 2010 ; 2010 ; TumorDiagnostik & Therapie Volume 2010 ; 33 >
+    au < finished ; crawling ; 2010 ; 2010 ; TumorDiagnostik & Therapie Volume 2010 ; 33 >
     au < crawling ; exists ; 2011 ; 2011 ; TumorDiagnostik & Therapie Volume 2011 ; 34 >
-    au < crawling ; exists ; 2012 ; 2012 ; TumorDiagnostik & Therapie Volume 2012 ; 35 >
-    au < crawling ; exists ; 2013 ; 2013 ; TumorDiagnostik & Therapie Volume 2013 ; 34 >
+    au < finished ; crawling ; 2012 ; 2012 ; TumorDiagnostik & Therapie Volume 2012 ; 35 >
+    au < finished ; crawling ; 2013 ; 2013 ; TumorDiagnostik & Therapie Volume 2013 ; 34 >
     au < crawling ; exists ; 2014 ; 2014 ; TumorDiagnostik & Therapie Volume 2014 ; 35 >
     au < crawling ; exists ; 2015 ; 2015 ; TumorDiagnostik & Therapie Volume 2015 ; 36 >
 
@@ -5183,7 +5183,7 @@
     au < crawling ; exists ; 2010 ; 2010 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2010 ; 31 >
     au < crawling ; exists ; 2011 ; 2011 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2011 ; 32 >
     au < crawling ; exists ; 2012 ; 2012 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2012 ; 33 >
-    au < crawling ; exists ; 2013 ; 2013 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2013 ; 34 >
+    au < finished ; crawling ; 2013 ; 2013 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2013 ; 34 >
     au < finished ; crawling ; 2014 ; 2014 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2014 ; 35 >
     au < crawling ; exists ; 2015 ; 2015 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2015 ; 36 >
 
@@ -5241,7 +5241,7 @@
     au < crawling ; exists ; 2010 ; 2010 ; veterinär spiegel Volume 2010 ; 20 >
     au < crawling ; exists ; 2011 ; 2011 ; veterinär spiegel Volume 2011 ; 21 >
     au < crawling ; exists ; 2012 ; 2012 ; veterinär spiegel Volume 2012 ; 22 >
-    au < crawling ; exists ; 2013 ; 2013 ; veterinär spiegel Volume 2013 ; 23 >
+    au < finished ; crawling ; 2013 ; 2013 ; veterinär spiegel Volume 2013 ; 23 >
     au < finished ; crawling ; 2014 ; 2014 ; veterinär spiegel Volume 2014 ; 24 >
     au < crawling ; exists ; 2015 ; 2015 ; veterinär spiegel Volume 2015 ; 25 >
 
@@ -5265,7 +5265,7 @@
     au < crawling ; exists ; 2010 ; 2010 ; Via medici Volume 2010 ; 15 >
     au < crawling ; exists ; 2011 ; 2011 ; Via medici Volume 2011 ; 16 >
     au < notReady ; exists ; 2012 ; 2012 ; Via medici Volume 2012 ; 17 >
-    au < crawling ; exists ; 2013 ; 2013 ; Via medici Volume 2013 ; 18 >
+    au < finished ; crawling ; 2013 ; 2013 ; Via medici Volume 2013 ; 18 >
     au < finished ; crawling ; 2014 ; 2014 ; Via medici Volume 2014 ; 19 >
     au < expected ; exists ; 2015 ; 2015 ; Via medici Volume 2015 ; 20 >
 
@@ -5335,9 +5335,9 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; Zahnmedizin up2date Volume 2008 ; 2 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Zahnmedizin up2date Volume 2009 ; 3 >
     au < crawling ; exists ; 2010 ; 2010 ; Zahnmedizin up2date Volume 2010 ; 4 >
-    au < crawling ; exists ; 2011 ; 2011 ; Zahnmedizin up2date Volume 2011 ; 5 >
+    au < finished ; crawling ; 2011 ; 2011 ; Zahnmedizin up2date Volume 2011 ; 5 >
     au < crawling ; exists ; 2012 ; 2012 ; Zahnmedizin up2date Volume 2012 ; 6 >
-    au < crawling ; exists ; 2013 ; 2013 ; Zahnmedizin up2date Volume 2013 ; 7 >
+    au < finished ; crawling ; 2013 ; 2013 ; Zahnmedizin up2date Volume 2013 ; 7 >
     au < crawling ; exists ; 2014 ; 2014 ; Zahnmedizin up2date Volume 2014 ; 8 >
     au < notReady ; exists ; 2015 ; 2015 ; Zahnmedizin up2date Volume 2015 ; 9 >
 
@@ -5389,10 +5389,10 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Zeitschrift für Gastroenterologie Volume 2007 ; 45 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Zeitschrift für Gastroenterologie Volume 2008 ; 46 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Zeitschrift für Gastroenterologie Volume 2009 ; 47 >
-    au < crawling ; exists ; 2010 ; 2010 ; Zeitschrift für Gastroenterologie Volume 2010 ; 48 >
+    au < finished ; crawling ; 2010 ; 2010 ; Zeitschrift für Gastroenterologie Volume 2010 ; 48 >
     au < crawling ; exists ; 2011 ; 2011 ; Zeitschrift für Gastroenterologie Volume 2011 ; 49 >
     au < crawling ; exists ; 2012 ; 2012 ; Zeitschrift für Gastroenterologie Volume 2012 ; 50 >
-    au < crawling ; exists ; 2013 ; 2013 ; Zeitschrift für Gastroenterologie Volume 2013 ; 51 >
+    au < finished ; crawling ; 2013 ; 2013 ; Zeitschrift für Gastroenterologie Volume 2013 ; 51 >
     au < crawling ; exists ; 2014 ; 2014 ; Zeitschrift für Gastroenterologie Volume 2014 ; 52 >
     au < crawling ; exists ; 2015 ; 2015 ; Zeitschrift für Gastroenterologie Volume 2015 ; 53 >
 
@@ -5497,7 +5497,7 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; Zeitschrift für Klassische Homöopathie Volume 2009 ; 53 >
     au < crawling ; exists ; 2010 ; 2010 ; Zeitschrift für Klassische Homöopathie Volume 2010 ; 54 >
     au < crawling ; exists ; 2011 ; 2011 ; Zeitschrift für Klassische Homöopathie Volume 2011 ; 55 >
-    au < crawling ; exists ; 2012 ; 2012 ; Zeitschrift für Klassische Homöopathie Volume 2012 ; 56 >
+    au < finished ; crawling ; 2012 ; 2012 ; Zeitschrift für Klassische Homöopathie Volume 2012 ; 56 >
     au < crawling ; exists ; 2013 ; 2013 ; Zeitschrift für Klassische Homöopathie Volume 2013 ; 57 >
     au < crawling ; exists ; 2014 ; 2014 ; Zeitschrift für Klassische Homöopathie Volume 2014 ; 58 >
     au < crawling ; exists ; 2015 ; 2015 ; Zeitschrift für Klassische Homöopathie Volume 2015 ; 59 >
@@ -5518,8 +5518,8 @@
 
     au < doNotProcess ; exists ; 2009 ; 2009 ; Zeitschrift für Komplementärmedizin Volume 2009 ; 1 >
     au < crawling ; exists ; 2010 ; 2010 ; Zeitschrift für Komplementärmedizin Volume 2010 ; 2 >
-    au < crawling ; exists ; 2011 ; 2011 ; Zeitschrift für Komplementärmedizin Volume 2011 ; 3 >
-    au < crawling ; exists ; 2012 ; 2012 ; Zeitschrift für Komplementärmedizin Volume 2012 ; 4 >
+    au < finished ; crawling ; 2011 ; 2011 ; Zeitschrift für Komplementärmedizin Volume 2011 ; 3 >
+    au < finished ; crawling ; 2012 ; 2012 ; Zeitschrift für Komplementärmedizin Volume 2012 ; 4 >
     au < crawling ; exists ; 2013 ; 2013 ; Zeitschrift für Komplementärmedizin Volume 2013 ; 5 >
     au < finished ; crawling ; 2014 ; 2014 ; Zeitschrift für Komplementärmedizin Volume 2014 ; 6 >
     au < crawling ; exists ; 2015 ; 2015 ; Zeitschrift für Komplementärmedizin Volume 2015 ; 7 >
@@ -5541,7 +5541,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Zeitschrift für Orthomolekulare Medizin Volume 2007 ; 5 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Zeitschrift für Orthomolekulare Medizin Volume 2008 ; 6 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Zeitschrift für Orthomolekulare Medizin Volume 2009 ; 7 >
-    au < crawling ; exists ; 2010 ; 2010 ; Zeitschrift für Orthomolekulare Medizin Volume 2010 ; 8 >
+    au < finished ; crawling ; 2010 ; 2010 ; Zeitschrift für Orthomolekulare Medizin Volume 2010 ; 8 >
     au < crawling ; exists ; 2011 ; 2011 ; Zeitschrift für Orthomolekulare Medizin Volume 2011 ; 9 >
     au < crawling ; exists ; 2012 ; 2012 ; Zeitschrift für Orthomolekulare Medizin Volume 2012 ; 10 >
     au < crawling ; exists ; 2013 ; 2013 ; Zeitschrift für Orthomolekulare Medizin Volume 2013 ; 11 >
@@ -5567,7 +5567,7 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2009 ; 147 >
     au < crawling ; exists ; 2010 ; 2010 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2010 ; 148 >
     au < crawling ; exists ; 2011 ; 2011 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2011 ; 149 >
-    au < crawling ; exists ; 2012 ; 2012 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2012 ; 150 >
+    au < finished ; crawling ; 2012 ; 2012 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2012 ; 150 >
     au < crawling ; exists ; 2013 ; 2013 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2013 ; 151 >
     au < finished ; crawling ; 2014 ; 2014 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2014 ; 152 >
     au < crawling ; exists ; 2015 ; 2015 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 2015 ; 153 >
@@ -5642,7 +5642,7 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; Zeitschrift für Palliativmedizin Volume 2009 ; 10 >
     au < crawling ; exists ; 2010 ; 2010 ; Zeitschrift für Palliativmedizin Volume 2010 ; 11 >
     au < crawling ; exists ; 2011 ; 2011 ; Zeitschrift für Palliativmedizin Volume 2011 ; 12 >
-    au < crawling ; exists ; 2012 ; 2012 ; Zeitschrift für Palliativmedizin Volume 2012 ; 13 >
+    au < finished ; crawling ; 2012 ; 2012 ; Zeitschrift für Palliativmedizin Volume 2012 ; 13 >
     au < crawling ; exists ; 2013 ; 2013 ; Zeitschrift für Palliativmedizin Volume 2013 ; 14 >
     au < crawling ; exists ; 2014 ; 2014 ; Zeitschrift für Palliativmedizin Volume 2014 ; 15 >
     au < crawling ; exists ; 2015 ; 2015 ; Zeitschrift für Palliativmedizin Volume 2015 ; 16 >
@@ -5667,7 +5667,7 @@
     au < doNotProcess ; exists ; 2008 ; 2008 ; Zeitschrift für Phytotherapie Volume 2008 ; 29 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Zeitschrift für Phytotherapie Volume 2009 ; 30 >
     au < crawling ; exists ; 2010 ; 2010 ; Zeitschrift für Phytotherapie Volume 2010 ; 31 >
-    au < crawling ; exists ; 2011 ; 2011 ; Zeitschrift für Phytotherapie Volume 2011 ; 32 >
+    au < finished ; crawling ; 2011 ; 2011 ; Zeitschrift für Phytotherapie Volume 2011 ; 32 >
     au < crawling ; exists ; 2012 ; 2012 ; Zeitschrift für Phytotherapie Volume 2012 ; 33 >
     au < crawling ; exists ; 2013 ; 2013 ; Zeitschrift für Phytotherapie Volume 2013 ; 34 >
     au < finished ; crawling ; 2014 ; 2014 ; Zeitschrift für Phytotherapie Volume 2014 ; 35 >
@@ -5727,7 +5727,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Zeitschrift für Chirurgie Volume 2007 ; 132 >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Zeitschrift für Chirurgie Volume 2008 ; 133 >
     au < doNotProcess ; exists ; 2009 ; 2009 ; Zeitschrift für Chirurgie Volume 2009 ; 134 >
-    au < crawling ; exists ; 2010 ; 2010 ; Zeitschrift für Chirurgie Volume 2010 ; 135 >
+    au < finished ; crawling ; 2010 ; 2010 ; Zeitschrift für Chirurgie Volume 2010 ; 135 >
     au < crawling ; exists ; 2011 ; 2011 ; Zeitschrift für Chirurgie Volume 2011 ; 136 >
     au < crawling ; exists ; 2012 ; 2012 ; Zeitschrift für Chirurgie Volume 2012 ; 137 >
     au < crawling ; exists ; 2013 ; 2013 ; Zeitschrift für Chirurgie Volume 2013 ; 138 >
@@ -5844,7 +5844,7 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; ZWR - Das Deutsche Zahnärzteblatt Volume 2009 ; 118 >
     au < crawling ; exists ; 2010 ; 2010 ; ZWR - Das Deutsche Zahnärzteblatt Volume 2010 ; 119 >
     au < crawling ; exists ; 2011 ; 2011 ; ZWR - Das Deutsche Zahnärzteblatt Volume 2011 ; 120 >
-    au < crawling ; exists ; 2012 ; 2012 ; ZWR - Das Deutsche Zahnärzteblatt Volume 2012 ; 121 >
+    au < finished ; crawling ; 2012 ; 2012 ; ZWR - Das Deutsche Zahnärzteblatt Volume 2012 ; 121 >
     au < crawling ; exists ; 2013 ; 2013 ; ZWR - Das Deutsche Zahnärzteblatt Volume 2013 ; 122 >
     au < crawling ; exists ; 2014 ; 2014 ; ZWR - Das Deutsche Zahnärzteblatt Volume 2014 ; 123 >
     au < crawling ; exists ; 2015 ; 2015 ; ZWR - Das Deutsche Zahnärzteblatt Volume 2015 ; 124 >

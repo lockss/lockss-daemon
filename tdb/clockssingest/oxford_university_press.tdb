@@ -2037,7 +2037,7 @@
     au < manifest ; exists ; 2006 ; Arthropod Management Tests Volume 31 ; 31 ; >
     au < manifest ; exists ; 2007 ; Arthropod Management Tests Volume 32 ; 32 ; >
     au < manifest ; exists ; 2008 ; Arthropod Management Tests Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2009 ; Arthropod Management Tests Volume 34 ; 34 ; >
+    au < finished ; crawling ; 2009 ; Arthropod Management Tests Volume 34 ; 34 ; >
     au < frozen ; exists ; 2010 ; Arthropod Management Tests Volume 35 ; 35 ; >
     au < crawling ; exists ; 2011 ; Arthropod Management Tests Volume 36 ; 36 ; >
     au < frozen ; exists ; 2012 ; Arthropod Management Tests Volume 37 ; 37 ; >
@@ -7069,7 +7069,7 @@
     au < frozen ; exists ; 2009 ; FEMS Microbiology Letters Volume 290 ; 290 ; >
     au < crawling ; exists ; 2009 ; FEMS Microbiology Letters Volume 291 ; 291 ; >
     au < crawling ; exists ; 2009 ; FEMS Microbiology Letters Volume 292 ; 292 ; >
-    au < frozen ; exists ; 2009 ; FEMS Microbiology Letters Volume 293 ; 293 ; >
+    au < finished ; crawling ; 2009 ; FEMS Microbiology Letters Volume 293 ; 293 ; >
     au < crawling ; exists ; 2009 ; FEMS Microbiology Letters Volume 294 ; 294 ; >
     au < frozen ; exists ; 2009 ; FEMS Microbiology Letters Volume 295 ; 295 ; >
     au < crawling ; exists ; 2009 ; FEMS Microbiology Letters Volume 296 ; 296 ; >
@@ -7080,7 +7080,7 @@
     au < frozen ; exists ; 2009 ; FEMS Microbiology Letters Volume 301 ; 301 ; >
     au < crawling ; exists ; 2010 ; FEMS Microbiology Letters Volume 302 ; 302 ; >
     au < frozen ; exists ; 2010 ; FEMS Microbiology Letters Volume 303 ; 303 ; >
-    au < frozen ; exists ; 2010 ; FEMS Microbiology Letters Volume 304 ; 304 ; >
+    au < finished ; crawling ; 2010 ; FEMS Microbiology Letters Volume 304 ; 304 ; >
     au < crawling ; exists ; 2010 ; FEMS Microbiology Letters Volume 305 ; 305 ; >
     au < frozen ; exists ; 2010 ; FEMS Microbiology Letters Volume 306 ; 306 ; >
     au < frozen ; exists ; 2010 ; FEMS Microbiology Letters Volume 307 ; 307 ; >
@@ -15065,7 +15065,7 @@
     au < zapped ; finished ; 2010-2011 ; Journal of Social History Volume 44 ; 44 ; >
     au < finished ; frozen ; 2011-2012 ; Journal of Social History Volume 45 ; 45 ; >
     au < finished ; finished ; 2012-2013 ; Journal of Social History Volume 46 ; 46 ; >
-    au < frozen ; exists ; 2013-2014 ; Journal of Social History Volume 47 ; 47 ; >
+    au < finished ; crawling ; 2013-2014 ; Journal of Social History Volume 47 ; 47 ; >
     au < crawling ; exists ; 2014-2015 ; Journal of Social History Volume 48 ; 48 ; >
     au < manifest ; exists ; 2015-2016 ; Journal of Social History Volume 49 ; 49 ; >
     au < expected ; exists ; 2016-2017 ; Journal of Social History Volume 50 ; 50 ; >
@@ -16272,7 +16272,7 @@
     au < manifest ; exists ; 2008 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 33 ; 33 ; >
     au < finished ; finished ; 2009 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 34 ; 34 ; >
     au < frozen ; exists ; 2010 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 35 ; 35 ; >
-    au < frozen ; exists ; 2011 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 36 ; 36 ; >
+    au < finished ; crawling ; 2011 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 36 ; 36 ; >
     au < finished ; finished ; 2012 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 37 ; 37 ; >
     au < finished ; finished ; 2013 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 38 ; 38 ; >
     au < finished ; crawling ; 2014 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 39 ; 39 ; >
@@ -18633,7 +18633,7 @@
     au < manifest ; exists ; 2006 ; Oxford Economic Papers Volume 58 ; 58 ; >
     au < manifest ; exists ; 2007 ; Oxford Economic Papers Volume 59 ; 59 ; >
     au < manifest ; exists ; 2008 ; Oxford Economic Papers Volume 60 ; 60 ; >
-    au < crawling ; exists ; 2009 ; Oxford Economic Papers Volume 61 ; 61 ; >
+    au < finished ; crawling ; 2009 ; Oxford Economic Papers Volume 61 ; 61 ; >
     au < finished ; frozen ; 2010 ; Oxford Economic Papers Volume 62 ; 62 ; >
     au < finished ; frozen ; 2011 ; Oxford Economic Papers Volume 63 ; 63 ; >
     au < finished ; finished ; 2012 ; Oxford Economic Papers Volume 64 ; 64 ; >
@@ -22387,7 +22387,7 @@
     au < finished ; crawling ; 2010 ; Sociology of Religion Volume 71 ; 71 ; >
     au < finished ; frozen ; 2011 ; Sociology of Religion Volume 72 ; 72 ; >
     au < finished ; frozen ; 2012 ; Sociology of Religion Volume 73 ; 73 ; >
-    au < frozen ; exists ; 2013 ; Sociology of Religion Volume 74 ; 74 ; >
+    au < finished ; crawling ; 2013 ; Sociology of Religion Volume 74 ; 74 ; >
     au < finished ; crawling ; 2014 ; Sociology of Religion Volume 75 ; 75 ; >
     au < crawling ; exists ; 2015 ; Sociology of Religion Volume 76 ; 76 ; >
     au < expected ; exists ; 2016 ; Sociology of Religion Volume 77 ; 77 ; >

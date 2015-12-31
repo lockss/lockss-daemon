@@ -60,8 +60,8 @@
     au < manifest ; exists ; 2007 ; Before Farming Volume 2007 ; 2007 >
     au < crawling ; exists ; 2008 ; Before Farming Volume 2008 ; 2008 >
     au < crawling ; exists ; 2009 ; Before Farming Volume 2009 ; 2009 >
-    au < crawling ; exists ; 2010 ; Before Farming Volume 2010 ; 2010 >
-    au < crawling ; exists ; 2011 ; Before Farming Volume 2011 ; 2011 >
+    au < finished ; crawling ; 2010 ; Before Farming Volume 2010 ; 2010 >
+    au < finished ; crawling ; 2011 ; Before Farming Volume 2011 ; 2011 >
     au < crawling ; exists ; 2012 ; Before Farming Volume 2012 ; 2012 >
 
   }
@@ -238,11 +238,11 @@
     au < manifest ; exists ; 2005 ; Essays in Romanticism Volume 13 ; 13 >
     au < manifest ; exists ; 2006 ; Essays in Romanticism Volume 14 ; 14 >
     au < manifest ; exists ; 2007 ; Essays in Romanticism Volume 15 ; 15 >
-    au < crawling ; exists ; 2008 ; Essays in Romanticism Volume 16 ; 16 >
+    au < finished ; crawling ; 2008 ; Essays in Romanticism Volume 16 ; 16 >
     au < crawling ; exists ; 2009 ; Essays in Romanticism Volume 17 ; 17 >
-    au < crawling ; exists ; 2010 ; Essays in Romanticism Volume 18 ; 18 >
+    au < finished ; crawling ; 2010 ; Essays in Romanticism Volume 18 ; 18 >
     au < crawling ; exists ; 2012 ; Essays in Romanticism Volume 19 ; 19 >
-    au < crawling ; exists ; 2013 ; Essays in Romanticism Volume 20 ; 20 >
+    au < finished ; crawling ; 2013 ; Essays in Romanticism Volume 20 ; 20 >
     au < crawling ; exists ; 2014 ; Essays in Romanticism Volume 21 ; 21 >
     au < crawling ; exists ; 2015 ; Essays in Romanticism Volume 22 ; 22 >
 
@@ -300,7 +300,7 @@
     param[journal_id] = franc
 
     au < crawling ; exists ; 2012 ; Francosphères Volume 1 ; 1 >
-    au < crawling ; exists ; 2013 ; Francosphères Volume 2 ; 2 >
+    au < finished ; crawling ; 2013 ; Francosphères Volume 2 ; 2 >
     au < crawling ; exists ; 2014 ; Francosphères Volume 3 ; 3 >
     au < crawling ; exists ; 2015 ; Francosphères Volume 4 ; 4 >
 
@@ -453,7 +453,7 @@
     param[journal_id] = mb
 
     au < crawling ; exists ; 2010 ; Modern Believing Volume 51 ; 51 >
-    au < crawling ; exists ; 2011 ; Modern Believing Volume 52 ; 52 >
+    au < finished ; crawling ; 2011 ; Modern Believing Volume 52 ; 52 >
     au < crawling ; exists ; 2012 ; Modern Believing Volume 53 ; 53 >
     au < crawling ; exists ; 2013 ; Modern Believing Volume 54 ; 54 >
     au < crawling ; exists ; 2014 ; Modern Believing Volume 55 ; 55 >
@@ -510,7 +510,7 @@
 
     param[journal_id] = newsletter
 
-    au < crawling ; exists ; 2012 ; Newsletter of the Gypsy Lore Society Volume 35 ; 35 >
+    au < finished ; crawling ; 2012 ; Newsletter of the Gypsy Lore Society Volume 35 ; 35 >
     au < finished ; finished ; 2013 ; Newsletter of the Gypsy Lore Society Volume 36 ; 36 >
     au < crawling ; exists ; 2014 ; Newsletter of the Gypsy Lore Society Volume 37 ; 37 >
     au < expected ; exists ; 2015 ; Newsletter of the Gypsy Lore Society Volume 38 ; 38 >
@@ -575,17 +575,17 @@
 
     au < crawling ; exists ; 2008 ; Quebec Studies Volume 45 ; 45 >
     au < crawling ; exists ; 2008 ; Quebec Studies Volume 46 ; 46 >
-    au < crawling ; exists ; 2009 ; Quebec Studies Volume 47 ; 47 >
+    au < finished ; crawling ; 2009 ; Quebec Studies Volume 47 ; 47 >
     au < crawling ; exists ; 2009 ; Quebec Studies Volume 48 ; 48 >
     au < crawling ; exists ; 2010 ; Quebec Studies Volume 49 ; 49 >
     au < crawling ; exists ; 2010 ; Quebec Studies Volume 50 ; 50 >
     au < crawling ; exists ; 2011 ; Quebec Studies Volume 51 ; 51 >
     au < crawling ; exists ; 2011 ; Quebec Studies Volume 52 ; 52 >
-    au < crawling ; exists ; 2012 ; Quebec Studies Volume 53 ; 53 >
-    au < crawling ; exists ; 2012 ; Quebec Studies Volume 54 ; 54 >
+    au < finished ; crawling ; 2012 ; Quebec Studies Volume 53 ; 53 >
+    au < finished ; crawling ; 2012 ; Quebec Studies Volume 54 ; 54 >
     au < crawling ; exists ; 2012 ; Quebec Studies Volume Special_Issue ; Special_Issue >
-    au < crawling ; exists ; 2013 ; Quebec Studies Volume 55 ; 55 >
-    au < crawling ; exists ; 2013 ; Quebec Studies Volume 56 ; 56 >
+    au < finished ; crawling ; 2013 ; Quebec Studies Volume 55 ; 55 >
+    au < finished ; crawling ; 2013 ; Quebec Studies Volume 56 ; 56 >
     au < crawling ; exists ; 2014 ; Quebec Studies Volume 57 ; 57 >
     au < finished ; crawling ; 2014 ; Quebec Studies Volume 58 ; 58 >
     au < crawling ; exists ; 2015 ; Quebec Studies Volume 59 ; 59 >

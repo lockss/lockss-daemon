@@ -287,7 +287,7 @@
     param[journal_id] = ijhde
     # purchased by Sage 11/15
 
-    au < crawling ; exists ; 2012 ; International Journal of Heritage in the Digital Era Volume 1 ; 1 ; >
+    au < finished ; crawling ; 2012 ; International Journal of Heritage in the Digital Era Volume 1 ; 1 ; >
     au < finished ; finished ; 2013 ; International Journal of Heritage in the Digital Era Volume 2 ; 2 ; >
     au < finished ; crawling ; 2014 ; International Journal of Heritage in the Digital Era Volume 3 ; 3 ; >
     au < crawling ; exists ; 2015 ; International Journal of Heritage in the Digital Era Volume 4 ; 4 ; >
@@ -323,7 +323,7 @@
 
     au < crawling ; exists ; 2009 ; International Journal of Innovation Science Volume 1 ; 1 ; >
     au < crawling ; exists ; 2010 ; International Journal of Innovation Science Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2011 ; International Journal of Innovation Science Volume 3 ; 3 ; >
+    au < finished ; crawling ; 2011 ; International Journal of Innovation Science Volume 3 ; 3 ; >
     au < crawling ; exists ; 2012 ; International Journal of Innovation Science Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; International Journal of Innovation Science Volume 5 ; 5 ; >
     au < finished ; crawling ; 2014 ; International Journal of Innovation Science Volume 6 ; 6 ; >
@@ -544,10 +544,10 @@
     param[journal_id] = jsfe
     # transfering to Emerald Publishing
 
-    au < crawling ; exists ; 2010 ; Journal of Structural Fire Engineering Volume 1 ; 1 ; >
+    au < finished ; crawling ; 2010 ; Journal of Structural Fire Engineering Volume 1 ; 1 ; >
     au < crawling ; exists ; 2011 ; Journal of Structural Fire Engineering Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2012 ; Journal of Structural Fire Engineering Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2013 ; Journal of Structural Fire Engineering Volume 4 ; 4 ; >
+    au < finished ; crawling ; 2012 ; Journal of Structural Fire Engineering Volume 3 ; 3 ; >
+    au < finished ; crawling ; 2013 ; Journal of Structural Fire Engineering Volume 4 ; 4 ; >
     au < finished ; crawling ; 2014 ; Journal of Structural Fire Engineering Volume 5 ; 5 ; >
     au < crawling ; exists ; 2015 ; Journal of Structural Fire Engineering Volume 6 ; 6 ; >
 
@@ -568,8 +568,8 @@
     au < crawling ; exists ; 2000 ; Low Frequency Noise, Vibration and Active Control Volume 19 ; 19 ; >
     au < crawling ; exists ; 2001 ; Low Frequency Noise, Vibration and Active Control Volume 20 ; 20 ; >
     au < crawling ; exists ; 2002 ; Low Frequency Noise, Vibration and Active Control Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2003 ; Low Frequency Noise, Vibration and Active Control Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2004 ; Low Frequency Noise, Vibration and Active Control Volume 23 ; 23 ; >
+    au < finished ; crawling ; 2003 ; Low Frequency Noise, Vibration and Active Control Volume 22 ; 22 ; >
+    au < finished ; crawling ; 2004 ; Low Frequency Noise, Vibration and Active Control Volume 23 ; 23 ; >
     au < crawling ; exists ; 2005 ; Low Frequency Noise, Vibration and Active Control Volume 24 ; 24 ; >
     au < crawling ; exists ; 2006 ; Low Frequency Noise, Vibration and Active Control Volume 25 ; 25 ; >
     au < crawling ; exists ; 2007 ; Low Frequency Noise, Vibration and Active Control Volume 26 ; 26 ; >
@@ -640,12 +640,12 @@
     param[journal_id] = ijm
     # transfering to Institute of Multiphysics
 
-    au < crawling ; exists ; 2007 ; The International Journal of Multiphysics Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2008 ; The International Journal of Multiphysics Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2009 ; The International Journal of Multiphysics Volume 3 ; 3 ; >
+    au < finished ; crawling ; 2007 ; The International Journal of Multiphysics Volume 1 ; 1 ; >
+    au < finished ; crawling ; 2008 ; The International Journal of Multiphysics Volume 2 ; 2 ; >
+    au < finished ; crawling ; 2009 ; The International Journal of Multiphysics Volume 3 ; 3 ; >
     au < crawling ; exists ; 2010 ; The International Journal of Multiphysics Volume 4 ; 4 ; >
     au < crawling ; exists ; 2011 ; The International Journal of Multiphysics Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2012 ; The International Journal of Multiphysics Volume 6 ; 6 ; >
+    au < finished ; crawling ; 2012 ; The International Journal of Multiphysics Volume 6 ; 6 ; >
     au < crawling ; exists ; 2013 ; The International Journal of Multiphysics Volume 7 ; 7 ; >
     au < finished ; crawling ; 2014 ; The International Journal of Multiphysics Volume 8 ; 8 ; >
     au < crawling ; exists ; 2015 ; The International Journal of Multiphysics Volume 9 ; 9 ; >
@@ -705,16 +705,16 @@
     param[journal_id] = we
     # purchased by Sage 11/15
 
-    au < crawling ; exists ; 2000 ; Wind Engineering Volume 24 ; 24 ; >
+    au < finished ; crawling ; 2000 ; Wind Engineering Volume 24 ; 24 ; >
     au < crawling ; exists ; 2001 ; Wind Engineering Volume 25 ; 25 ; >
     au < crawling ; exists ; 2002 ; Wind Engineering Volume 26 ; 26 ; >
     au < crawling ; exists ; 2003 ; Wind Engineering Volume 27 ; 27 ; >
     au < crawling ; exists ; 2004 ; Wind Engineering Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2005 ; Wind Engineering Volume 29 ; 29 ; >
+    au < finished ; crawling ; 2005 ; Wind Engineering Volume 29 ; 29 ; >
     au < crawling ; exists ; 2006 ; Wind Engineering Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2007 ; Wind Engineering Volume 31 ; 31 ; >
+    au < finished ; crawling ; 2007 ; Wind Engineering Volume 31 ; 31 ; >
     au < crawling ; exists ; 2008 ; Wind Engineering Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2009 ; Wind Engineering Volume 33 ; 33 ; >
+    au < finished ; crawling ; 2009 ; Wind Engineering Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Wind Engineering Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Wind Engineering Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Wind Engineering Volume 36 ; 36 ; >
