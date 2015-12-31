@@ -637,6 +637,7 @@ while (my $line = <>) {
            ($plugin eq "ClockssEndocrineSocietyBooksPlugin") || 
            ($plugin eq "ClockssFutureScienceBooksPlugin") || 
            ($plugin eq "ClockssLiverpoolBooksPlugin") || 
+           ($plugin eq "ClockssNRCResearchPressBooksPlugin") || 
            ($plugin eq "ClockssSEGBooksPlugin") || 
            ($plugin eq "ClockssWageningenBooksPlugin")) {
       $url = sprintf("%sclockss/eisbn/%s", 
