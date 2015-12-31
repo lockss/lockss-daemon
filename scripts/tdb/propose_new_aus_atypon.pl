@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 # $Id: propose_new_aus.pl 39864 2015-02-18 09:10:24Z thib_gc $
 #
-# Read in a list of AUs defined with the Atypon plugins.
+# Read in a list of AUs defined with the Atypon journal plugins.
 # Propose new AUs, either before or after the range provided
 # in the list.
 
