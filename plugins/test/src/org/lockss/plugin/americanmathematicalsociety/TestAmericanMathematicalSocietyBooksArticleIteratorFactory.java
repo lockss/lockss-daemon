@@ -126,6 +126,8 @@ public class TestAmericanMathematicalSocietyBooksArticleIteratorFactory extends 
     // but not to pdf or image http://www.ams.org/books/conm/629/conm629-endmatter.pdf
     assertNotMatchesRE(pat, "http://www.ams.org/colid/200/colid200-endmatter.pdf");
     assertNotMatchesRE(pat, "http://www.ams.org/images/remote-access-icon.png");
+    assertNotMatchesRE(pat, "http://www.ams.org/books/colid/200/12300");
+    assertNotMatchesRE(pat, "http://www.ams.org/books/colid/200/12300/colid200-12300.pdf");
     
     // wrong base url
     assertNotMatchesRE(pat, "http://ametsoc.org/colid/2008/3-1/p01.xhtml");
