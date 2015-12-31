@@ -137,7 +137,7 @@
       param[journal_id] = be
 
       au < exists ; exists ; 2012 ; British Economics Volume 47 ; 2012 ; 47 ; >
-      au < crawling ; exists ; 2013 ; British Economics Volume 48 ; 2013 ; 48 ; >
+      au < finished ; crawling ; 2013 ; British Economics Volume 48 ; 2013 ; 48 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2014 ; British Economics Volume 49 ; 2014 ; 49 ; >
       au < crawling ; exists ; 2015 ; British Economics Volume 50 ; 2015 ; 50 ; >
 
@@ -155,7 +155,7 @@
       param[journal_id] = ces
 
       au < exists ; exists ; 2012 ; Comparative Economic Studies Volume 54 ; 2012 ; 54 ; >
-      au < crawling ; exists ; 2013 ; Comparative Economic Studies Volume 55 ; 2013 ; 55 ; >
+      au < finished ; crawling ; 2013 ; Comparative Economic Studies Volume 55 ; 2013 ; 55 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; Comparative Economic Studies Volume 56 ; 2014 ; 56 ; >
       au < crawling ; exists ; 2015 ; Comparative Economic Studies Volume 57 ; 2015 ; 57 ; >
 
@@ -210,7 +210,7 @@
       au < doNotProcess ; exists ; 2010 ; Contemporary Political Theory Volume 9 ; 2010 ; 9 ; >
       au < doNotProcess ; exists ; 2011 ; Contemporary Political Theory Volume 10 ; 2011 ; 10 ; >
       au < finished ; frozen ; 2012 ; Contemporary Political Theory Volume 11 ; 2012 ; 11 ; >
-      au < crawling ; exists ; 2013 ; Contemporary Political Theory Volume 12 ; 2013 ; 12 ; >
+      au < finished ; crawling ; 2013 ; Contemporary Political Theory Volume 12 ; 2013 ; 12 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; Contemporary Political Theory Volume 13 ; 2014 ; 13 ; >
       au < crawling ; exists ; 2015 ; Contemporary Political Theory Volume 14 ; 2015 ; 14 ; >
 
@@ -475,7 +475,7 @@
       au < doNotProcess ; exists ; 2009 ; Journal of Asset Management Volume 10 ; 2009 ; 10 ; >
       au < doNotProcess ; exists ; 2010 ; Journal of Asset Management Volume 11 ; 2010 ; 11 ; >
       au < doNotProcess ; exists ; 2011 ; Journal of Asset Management Volume 12 ; 2011 ; 12 ; >
-      au < crawling ; exists ; 2012 ; Journal of Asset Management Volume 13 ; 2012 ; 13 ; >
+      au < finished ; crawling ; 2012 ; Journal of Asset Management Volume 13 ; 2012 ; 13 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2013 ; Journal of Asset Management Volume 14 ; 2013 ; 14 ; >
       au < finished ; crawling ; 2014 ; Journal of Asset Management Volume 15 ; 2014 ; 15 ; >
       au < crawling ; exists ; 2015 ; Journal of Asset Management Volume 16 ; 2015 ; 16 ; >
@@ -610,7 +610,7 @@
 
       param[journal_id] = jma
 
-      au < crawling ; exists ; 2013 ; Journal of Database Marketing & Customer Strategy Management Volume 1 ; 2013 ; 1 ; >
+      au < finished ; crawling ; 2013 ; Journal of Database Marketing & Customer Strategy Management Volume 1 ; 2013 ; 1 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2014 ; Journal of Database Marketing & Customer Strategy Management Volume 2 ; 2014 ; 2 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2015 ; Journal of Database Marketing & Customer Strategy Management Volume 3 ; 2015 ; 3 ; >
 
@@ -1251,7 +1251,7 @@
 
       param[journal_id] = ipr
 
-      au < crawling ; exists ; 2013 ; International Politics Reviews Volume 1 ; 2013 ; 1 ; >
+      au < finished ; crawling ; 2013 ; International Politics Reviews Volume 1 ; 2013 ; 1 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2014 ; International Politics Reviews Volume 2 ; 2014 ; 2 ; >
       au < crawling ; exists ; 2015 ; International Politics Reviews Volume 3 ; 2015 ; 3 ; >
 

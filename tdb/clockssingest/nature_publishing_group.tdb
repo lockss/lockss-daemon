@@ -29,7 +29,7 @@
     au < finished ; frozen ; 2010 ; Acta Pharmacologica Sinica Volume 31 ; 2010 ; 31 ; >
     au < finished ; crawling ; 2011 ; Acta Pharmacologica Sinica Volume 32 ; 2011 ; 32 ; >
     au < finished ; frozen ; 2012 ; Acta Pharmacologica Sinica Volume 33 ; 2012 ; 33 ; >
-    au < crawling ; exists ; 2013 ; Acta Pharmacologica Sinica Volume 34 ; 2013 ; 34 ; >
+    au < finished ; crawling ; 2013 ; Acta Pharmacologica Sinica Volume 34 ; 2013 ; 34 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2014 ; Acta Pharmacologica Sinica Volume 35 ; 2014 ; 35 ; >
     au < crawling ; exists ; 2015 ; Acta Pharmacologica Sinica Volume 36 ; 2015 ; 36 ; >
 
@@ -184,7 +184,7 @@
     au < zapped ; finished ; 2010 ; Bone Marrow Transplantation Volume 46 [superseded] ; 2010 ; 46 ; >
     au < finished ; crawling ; 2011 ; Bone Marrow Transplantation Volume 46 ; 2011 ; 46 ; >
     au < finished ; crawling ; 2012 ; Bone Marrow Transplantation Volume 47 ; 2012 ; 47 ; >
-    au < crawling ; exists ; 2013 ; Bone Marrow Transplantation Volume 48 ; 2013 ; 48 ; >
+    au < finished ; crawling ; 2013 ; Bone Marrow Transplantation Volume 48 ; 2013 ; 48 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Bone Marrow Transplantation Volume 49 ; 2014 ; 49 ; >
     au < crawling ; exists ; 2015 ; Bone Marrow Transplantation Volume 50 ; 2015 ; 50 ; >
 
@@ -309,8 +309,8 @@
     au < finished ; crawling ; 2009 ; British Dental Journal Volume 207 ; 2009 ; 207 ; >
     au < finished ; crawling ; 2010 ; British Dental Journal Volume 208 ; 2010 ; 208 ; >
     au < finished ; crawling ; 2010 ; British Dental Journal Volume 209 ; 2010 ; 209 ; >
-    au < crawling ; exists ; 2011 ; British Dental Journal Volume 210 ; 2011 ; 210 ; >
-    au < crawling ; exists ; 2011 ; British Dental Journal Volume 211 ; 2011 ; 211 ; >
+    au < finished ; crawling ; 2011 ; British Dental Journal Volume 210 ; 2011 ; 210 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2011 ; British Dental Journal Volume 211 ; 2011 ; 211 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2012 ; British Dental Journal Volume 212 ; 2012 ; 212 ; >
     au < finished ; crawling ; 2012 ; British Dental Journal Volume 213 ; 2012 ; 213 ; >
     au < crawling ; exists ; 2013 ; British Dental Journal Volume 214 ; 2013 ; 214 ; >
@@ -1280,7 +1280,7 @@
     au < finished ; crawling ; 2010 ; International Journal of Obesity Volume 34 ; 2010 ; 34 ; >
     au < finished ; crawling ; 2011 ; International Journal of Obesity Volume 35 ; 2011 ; 35 ; >
     au < finished ; crawling ; 2012 ; International Journal of Obesity Volume 36 ; 2012 ; 36 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Obesity Volume 37 ; 2013 ; 37 ; >
+    au < finished ; crawling ; 2013 ; International Journal of Obesity Volume 37 ; 2013 ; 37 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; International Journal of Obesity Volume 38 ; 2014 ; 38 ; >
     au < crawling ; exists ; 2015 ; International Journal of Obesity Volume 39 ; 2015 ; 39 ; >
 
@@ -1746,7 +1746,7 @@
 
     param[journal_id] = ki
 
-    au < crawling ; exists ; 2008 ; Kidney International Volume 73 (2008) ; 2008 ; 73 ; >
+    au < finished ; crawling ; 2008 ; Kidney International Volume 73 (2008) ; 2008 ; 73 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2008 ; Kidney International Volume 74 (2008) ; 2008 ; 74 ; >
     au < crawling ; exists ; 2009 ; Kidney International Volume 75 (2009) ; 2009 ; 75 ; >
     au < crawling ; exists ; 2009 ; Kidney International Volume 76 (2009) ; 2009 ; 76 ; >
@@ -1757,7 +1757,7 @@
     au < finished ; crawling ; 2012 ; Kidney International Volume 81 ; 2012 ; 81 ; >
     au < exists ; exists ; 2012 ; Kidney International Volume 82 ; 2012 ; 82 ; >
     au < crawling ; exists ; 2013 ; Kidney International Volume 83 ; 2013 ; 83 ; >
-    au < crawling ; exists ; 2013 ; Kidney International Volume 84 ; 2013 ; 84 ; >
+    au < finished ; crawling ; 2013 ; Kidney International Volume 84 ; 2013 ; 84 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2014 ; Kidney International Volume 85 ; 2014 ; 85 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2014 ; Kidney International Volume 86 ; 2014 ; 86 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Kidney International Volume 87 ; 2015 ; 87 ; >
@@ -1917,7 +1917,7 @@
     au < finished ; frozen ; 2010 ; Modern Pathology Volume 23 ; 2010 ; 23 ; >
     au < finished ; crawling ; 2011 ; Modern Pathology Volume 24 ; 2011 ; 24 ; >
     au < finished ; crawling ; 2012 ; Modern Pathology Volume 25 ; 2012 ; 25 ; >
-    au < crawling ; exists ; 2013 ; Modern Pathology Volume 26 ; 2013 ; 26 ; >
+    au < finished ; crawling ; 2013 ; Modern Pathology Volume 26 ; 2013 ; 26 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Modern Pathology Volume 27 ; 2014 ; 27 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Modern Pathology Volume 28 ; 2015 ; 28 ; >
 
@@ -1950,7 +1950,7 @@
     au < finished ; crawling ; 2010 ; Molecular Psychiatry Volume 15 ; 2010 ; 15 ; >
     au < finished ; crawling ; 2011 ; Molecular Psychiatry Volume 16 ; 2011 ; 16 ; >
     au < finished ; frozen ; 2012 ; Molecular Psychiatry Volume 17 ; 2012 ; 17 ; >
-    au < crawling ; exists ; 2013 ; Molecular Psychiatry Volume 18 ; 2013 ; 18 ; >
+    au < finished ; crawling ; 2013 ; Molecular Psychiatry Volume 18 ; 2013 ; 18 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; Molecular Psychiatry Volume 19 ; 2014 ; 19 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Molecular Psychiatry Volume 20 ; 2015 ; 20 ; >
 
@@ -2388,7 +2388,7 @@
     au < crawling ; exists ; 2012 ; Nature Volume 489 ; 2012 ; 489 ; >
     au < crawling ; exists ; 2012 ; Nature Volume 490 ; 2012 ; 490 ; >
     au < crawling ; exists ; 2012 ; Nature Volume 491 ; 2012 ; 491 ; >
-    au < crawling ; exists ; 2012 ; Nature Volume 492 ; 2012 ; 492 ; >
+    au < finished ; crawling ; 2012 ; Nature Volume 492 ; 2012 ; 492 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2013 ; Nature Volume 493 ; 2013 ; 493 ; >
     au < crawling ; exists ; 2013 ; Nature Volume 494 ; 2013 ; 494 ; >
     au < crawling ; exists ; 2013 ; Nature Volume 495 ; 2013 ; 495 ; >
@@ -2580,7 +2580,7 @@
      param[journal_id] = nclimate
 
     au < finished ; finished ; 2011 ; Nature Climate Change Volume 1 ; 2011 ; 1 ; >
-    au < crawling ; exists ; 2012 ; Nature Climate Change Volume 2 ; 2012 ; 2 ; >
+    au < finished ; crawling ; 2012 ; Nature Climate Change Volume 2 ; 2012 ; 2 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2013 ; Nature Climate Change Volume 3 ; 2013 ; 3 ; >
     au < crawling ; exists ; 2014 ; Nature Climate Change Volume 4 ; 2014 ; 4 ; >
     au < crawling ; exists ; 2015 ; Nature Climate Change Volume 5 ; 2015 ; 5 ; >
@@ -3300,7 +3300,7 @@
     au < zapped ; finished ; 2009 ; Nature Reviews Neurology Volume 5 ; 2009 ; 5 ; >
     au < finished ; frozen ; 2010 ; Nature Reviews Neurology Volume 6 ; 2010 ; 6 ; >
     au < finished ; crawling ; 2011 ; Nature Reviews Neurology Volume 7 ; 2011 ; 7 ; >
-    au < crawling ; exists ; 2012 ; Nature Reviews Neurology Volume 8 ; 2012 ; 8 ; >
+    au < finished ; crawling ; 2012 ; Nature Reviews Neurology Volume 8 ; 2012 ; 8 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2013 ; Nature Reviews Neurology Volume 9 ; 2013 ; 9 ; >
     au < finished ; crawling ; 2014 ; Nature Reviews Neurology Volume 10 ; 2014 ; 10 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Nature Reviews Neurology Volume 11 ; 2015 ; 11 ; >
@@ -3381,7 +3381,7 @@
     au < zapped ; finished ; 2009 ; Nature Reviews Urology Volume 6 ; 2009 ; 6 ; >
     au < finished ; frozen ; 2010 ; Nature Reviews Urology Volume 7 ; 2010 ; 7 ; >
     au < finished ; crawling ; 2011 ; Nature Reviews Urology Volume 8 ; 2011 ; 8 ; >
-    au < crawling ; exists ; 2012 ; Nature Reviews Urology Volume 9 ; 2012 ; 9 ; >
+    au < finished ; crawling ; 2012 ; Nature Reviews Urology Volume 9 ; 2012 ; 9 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2013 ; Nature Reviews Urology Volume 10 ; 2013 ; 10 ; >
     au < finished ; crawling ; 2014 ; Nature Reviews Urology Volume 11 ; 2014 ; 11 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Nature Reviews Urology Volume 12 ; 2015 ; 12 ; >
@@ -3479,7 +3479,7 @@
     comment[notReady] = not 100% agreement may need deep recrawl RU 4761
     
     au < finished ; crawling ; 2009 ; NPG Asia Materials Volume 1 ; 2009 ; 1 ; >
-    au < crawling ; exists ; 2010 ; NPG Asia Materials Volume 2 ; 2010 ; 2 ; >
+    au < finished ; crawling ; 2010 ; NPG Asia Materials Volume 2 ; 2010 ; 2 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2011 ; NPG Asia Materials Volume 3 ; 2011 ; 3 ; >
     au < ingNotReady ; exists ; 2012 ; NPG Asia Materials Volume 4 ; 2012 ; 4 ; >
     au < crawling ; exists ; 2013 ; NPG Asia Materials Volume 5 ; 2013 ; 5 ; >
