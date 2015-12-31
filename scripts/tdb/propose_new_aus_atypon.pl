@@ -45,7 +45,7 @@ while (my $line = <>) {
     chomp($line);
     # Check only for Atypon plugins.
     if ($line =~ m/(atypon|TaylorAndFrancisPlugin)/i) {
-      if ($line =~ m/org\|lockss\|plugin\|taylorandfrancis\|(\S+)\&base_url~(\S+)\&journal_id~(\S+)\&volume_name~(\d+)/) {
+      if ($line =~ m/org\|lockss\|plugin\|(\S+)\&base_url~(\S+)\&journal_id~(\S+)\&volume_name~(\d+)/) {
         my $au_plugin = $1;
         my $base_url = $2;
         my $journal_id = $3;
@@ -80,7 +80,7 @@ exit(0);
 
 sub print_au {
     my ($plugin, $base_url, $journal_id, $vol_num) = @_;
-    printf("%s|%s|%s|%s|%s\n", "org", "lockss", "plugin", "taylorandfrancis",
+    printf("%s|%s|%s|%s\n", "org", "lockss", "plugin", 
     "${plugin}\&base_url~${base_url}\&journal_id~${journal_id}\&volume_name~${vol_num}");
     return(1); 
 }
