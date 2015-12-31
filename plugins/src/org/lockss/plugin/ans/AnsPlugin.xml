@@ -9,7 +9,24 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>2</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -50,8 +67,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <!-- actual pdf -->
-      <string>"^%spubs/journals/%s/a_[0-9]+$", base_url, journal_id</string>
+      <string>"^%sdownload/\?a=[0-9]+$", download_url</string>
     </list>
   </entry>
   <entry>
@@ -106,7 +122,7 @@
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.ans.AnsHtmlFilterFactory</string>
+    <string>org.lockss.plugin.ans.AnsHtmlHashFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
