@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -52,14 +52,14 @@ public class TestAmericanMathematicalSocietyBooksArticleIteratorFactory extends 
   private final String PLUGIN_NAME =
       "org.lockss.plugin.americanmathematicalsociety.ClockssAmericanMathematicalSocietyBooksPlugin";
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
-  static final String JOURNAL_ID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
+  static final String COLLECTION_ID_KEY = "collection_id";
   static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
   private final String BASE_URL = "http://www.ams.org/";
-  private final String JOURNAL_ID = "jid";
+  private final String COLLECTION_ID = "colid";
   private final String YEAR = "2008";
   private final Configuration AU_CONFIG = ConfigurationUtil.fromArgs(
       BASE_URL_KEY, BASE_URL,
-      JOURNAL_ID_KEY, JOURNAL_ID,
+      COLLECTION_ID_KEY, COLLECTION_ID,
       YEAR_KEY, YEAR);
   private static final int DEFAULT_FILESIZE = 3000;
   
@@ -93,7 +93,7 @@ public class TestAmericanMathematicalSocietyBooksArticleIteratorFactory extends 
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("root", rootPath);
     conf.put(BASE_URL_KEY, BASE_URL);
-    conf.put(JOURNAL_ID_KEY, "jid");
+    conf.put(COLLECTION_ID_KEY, "colid");
     conf.put(YEAR_KEY, "2008");
     conf.put("depth", "1");
     conf.put("branch", "0");
@@ -107,28 +107,28 @@ public class TestAmericanMathematicalSocietyBooksArticleIteratorFactory extends 
   
   public void testRoots() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
-    assertEquals(ListUtil.list(BASE_URL + "books/jid/"),
+    assertEquals(ListUtil.list(BASE_URL + "books/colid/"),
         getRootUrls(artIter));
   }
   
   //
-  // We are set up to match any of <journal_id>/<year>/p.*
+  // We are set up to match any of <COLLECTION_id>/<year>/p.*
   //
   
   public void testUrls() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
     
-    // we match to "^%sbooks/(%s)/([0-9]{2,5})(/\\1\\2\\.pdf)?$", base_url, journal_i
-    assertMatchesRE(pat, "http://www.ams.org/books/jid/200");
-    assertMatchesRE(pat, "http://www.ams.org/books/jid/200/jid200.pdf");
+    // we match to "^%sbooks/(%s)/([0-9]{2,5})(/\\1\\2\\.pdf)?$", base_url, collection_i
+    assertMatchesRE(pat, "http://www.ams.org/books/colid/200");
+    assertMatchesRE(pat, "http://www.ams.org/books/colid/200/colid200.pdf");
     
     // but not to pdf or image http://www.ams.org/books/conm/629/conm629-endmatter.pdf
-    assertNotMatchesRE(pat, "http://www.ams.org/jid/200/jid200-endmatter.pdf");
+    assertNotMatchesRE(pat, "http://www.ams.org/colid/200/colid200-endmatter.pdf");
     assertNotMatchesRE(pat, "http://www.ams.org/images/remote-access-icon.png");
     
     // wrong base url
-    assertNotMatchesRE(pat, "http://ametsoc.org/jid/2008/3-1/p01.xhtml");
+    assertNotMatchesRE(pat, "http://ametsoc.org/colid/2008/3-1/p01.xhtml");
   }
   
   //
@@ -143,17 +143,17 @@ public class TestAmericanMathematicalSocietyBooksArticleIteratorFactory extends 
     /*
      *  Go through the simulated content you just crawled and modify the results to emulate
      *  what you would find in a "real" crawl with AmericanMathematicalSociety:
-     *  <base_url>/books/<journal_id>/<year>-.*
+     *  <base_url>/books/<collection_id>/<year>-.*
      */
     
     String pat1 = "(\\d+)file[.]html";
     // turn xxfile.xhtml into abstracts
-    String repHtml = "books/" + JOURNAL_ID + "/" + "$1";
+    String repHtml = "books/" + COLLECTION_ID + "/" + "$1";
     PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat1, repHtml);
     // turn xxfile.pdf into fulltext pdfs
     String pat2 = "(\\d+)file[.]pdf";
-    String repPdf = "books/" + JOURNAL_ID + "/" +
-        "$1/" + JOURNAL_ID + "$1.pdf";
+    String repPdf = "books/" + COLLECTION_ID + "/" +
+        "$1/" + COLLECTION_ID + "$1.pdf";
     PluginTestUtil.copyAu(sau, au, ".*[.]pdf$", pat2, repPdf);
     
     // At this point we have 10 sets of 2 types of articles

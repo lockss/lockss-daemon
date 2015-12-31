@@ -36,7 +36,6 @@ import java.net.*;
 import java.util.*;
 
 import org.lockss.test.*;
-import org.lockss.util.ListUtil;
 import org.lockss.plugin.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
@@ -47,7 +46,7 @@ import org.lockss.plugin.wrapper.WrapperUtil;
 
 public class TestAmericanMathematicalSocietyBooksPlugin extends LockssTestCase {
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
-  static final String JOURNAL_ID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
+  static final String COLLECTION_ID_KEY = "collection_id";
   static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
   
   private MockLockssDaemon theDaemon;
@@ -79,7 +78,7 @@ public class TestAmericanMathematicalSocietyBooksPlugin extends LockssTestCase {
   public void testCreateAu() {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
-    props.setProperty(JOURNAL_ID_KEY, "j_id");
+    props.setProperty(COLLECTION_ID_KEY, "c_id");
     props.setProperty(YEAR_KEY, "2004");
     DefinableArchivalUnit au = null;
     try {
@@ -100,7 +99,7 @@ public class TestAmericanMathematicalSocietyBooksPlugin extends LockssTestCase {
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "blah");
-    props.setProperty(JOURNAL_ID_KEY, "jams");
+    props.setProperty(COLLECTION_ID_KEY, "jams");
     props.setProperty(YEAR_KEY, "2001");
     
     try {
@@ -115,13 +114,13 @@ public class TestAmericanMathematicalSocietyBooksPlugin extends LockssTestCase {
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
-    props.setProperty(JOURNAL_ID_KEY, "j_id");
+    props.setProperty(COLLECTION_ID_KEY, "c_id");
     props.setProperty(YEAR_KEY, "2004");
     
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("American Mathematical Society Books Plugin (CLOCKSS), " +
         "Base URL http://www.example.com/, " +
-        "Book ID j_id, Year 2004", au.getName());
+        "Collection ID c_id, Year 2004", au.getName());
   }
   
   public void testGetPluginId() {
@@ -130,17 +129,10 @@ public class TestAmericanMathematicalSocietyBooksPlugin extends LockssTestCase {
         plugin.getPluginId());
   }
   
-  public void testGetAuConfigProperties() {
-    assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
-        ConfigParamDescr.JOURNAL_ID,
-        ConfigParamDescr.YEAR),
-        plugin.getLocalAuConfigDescrs());
-  }
-  
   public void testGetArticleMetadataExtractor() {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
-    props.setProperty(JOURNAL_ID_KEY, "asdf");
+    props.setProperty(COLLECTION_ID_KEY, "asdf");
     props.setProperty(YEAR_KEY, "2004");
     DefinableArchivalUnit au = null;
     try {
@@ -159,7 +151,7 @@ public class TestAmericanMathematicalSocietyBooksPlugin extends LockssTestCase {
   public void testGetHashFilterFactory() {
     assertNull(plugin.getHashFilterFactory("BogusFilterFactory"));
     assertNull(plugin.getHashFilterFactory("application/pdf"));
-    assertNotNull(plugin.getHashFilterFactory("text/html"));
+    assertNull(plugin.getHashFilterFactory("text/html"));
   }
   public void testGetArticleIteratorFactory() {
     assertTrue(WrapperUtil.unwrap(plugin.getArticleIteratorFactory())
@@ -172,7 +164,7 @@ public class TestAmericanMathematicalSocietyBooksPlugin extends LockssTestCase {
     String ROOT_URL = "http://www.example.com/";
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, ROOT_URL);
-    props.setProperty(JOURNAL_ID_KEY, "asdf");
+    props.setProperty(COLLECTION_ID_KEY, "asdf");
     props.setProperty(YEAR_KEY, "2004");
     DefinableArchivalUnit au = null;
     try {

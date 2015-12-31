@@ -32,12 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.americanmathematicalsociety;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
@@ -47,25 +41,29 @@ public class AmericanMathematicalSocietyBooksUrlNormalizer implements UrlNormali
   
   protected static Logger log = Logger.getLogger(AmericanMathematicalSocietyBooksUrlNormalizer.class);
   
-  protected static final String TARGET_URL1 = "www.ams.org/books/"; // how we identify these URLs
-  protected static final String TARGET_URL2 = ".pdf";
-//http://www.ams.org/books/conm/612/12221/conm612-12221.pdf
-  protected static final Pattern PDF_PAT = Pattern.compile(
-      "(https?://[^/]+/books/)([^/]+)/([0-9]{2,5})/([0-9]{6})/\\1\\2-\\3\\.pdf");
-  
+//  protected static final String TARGET_URL1 = "/books/"; // how we identify these URLs
+//  protected static final String TARGET_URL2 = ".pdf";
+//  protected static final Pattern PDF_PAT = Pattern.compile(
+//      "(https?://[^/]+/books/)([^/]+)/([0-9]{2,5})/([0-9]+)/\\2\\3-\\4\\.pdf");
   
   @Override
   public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
     
-    if (url.contains(TARGET_URL1) &&
-        url.endsWith(TARGET_URL2)) {
-      log.debug3(url);
-      Matcher pdf_mat = PDF_PAT.matcher(url);
-      if (pdf_mat.matches()) {
-        url = pdf_mat.group(1) + "/" + pdf_mat.group(2) + "/" + pdf_mat.group(3);
-      }
-      log.debug3(url);
-    }
+//    if (url.contains(TARGET_URL1) &&
+//        url.endsWith(TARGET_URL2)) {
+//      log.debug(url);
+//      String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
+//      if (url.contains(baseUrl)) {
+//        Matcher pdf_mat = PDF_PAT.matcher(url);
+//        if (pdf_mat.matches()) {
+//          url = pdf_mat.replaceAll("$1$2/$3/$4");
+//          log.debug(url);
+//        }
+//        else {
+//          log.debug("no match");
+//        }
+//      }
+//    }
     return url;
   }
   

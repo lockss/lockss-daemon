@@ -94,11 +94,13 @@ public class AmericanMathematicalSocietyHtmlMetadataExtractorFactory
       tagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
       tagMap.put("citation_doi", MetadataField.FIELD_DOI);
       tagMap.put("citation_issn", MetadataField.FIELD_ISSN);
+      tagMap.put("citation_isbn", MetadataField.FIELD_ISBN);
       tagMap.put("citation_publication_date", MetadataField.FIELD_DATE);
       tagMap.put("citation_author",
           new MetadataField(MetadataField.FIELD_AUTHOR,
                             MetadataField.splitAt(",")));
       tagMap.put("citation_pdf_url", MetadataField.FIELD_ACCESS_URL);
+      tagMap.put("citation_series_title", MetadataField.FIELD_SERIES_TITLE);
     }
     
     

@@ -8,16 +8,12 @@
     <string>org.lockss.plugin.americanmathematicalsociety.ClockssAmericanMathematicalSocietyBooksPlugin</string>
   </entry>
   <entry>
-    <string>plugin_version</string>
-    <string>1</string>
+    <string>plugin_name</string>
+    <string>American Mathematical Society Books Plugin (CLOCKSS)</string>
   </entry>
   <entry>
-    <string>plugin_parent</string>
-    <string>org.lockss.plugin.americanmathematicalsociety.ClockssAmericanMathematicalSocietyPlugin</string>
-  </entry>
-   <entry>
-    <string>plugin_parent_version</string>
-    <string>4</string>
+    <string>plugin_version</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -37,24 +33,41 @@
     </map>
   </entry>
   <entry>
-    <string>au_name</string>
-    <string>"American Mathematical Society Books Plugin (CLOCKSS), Base URL %s, Book ID %s, Year %d", base_url, journal_id, year</string>
+    <string>required_daemon_version</string>
+    <string>1.68.0</string>
   </entry>
   <entry>
-    <string>plugin_name</string>
-    <string>American Mathematical Society Books Plugin (CLOCKSS)</string>
+    <string>au_name</string>
+    <string>"American Mathematical Society Books Plugin (CLOCKSS), Base URL %s, Collection ID %s, Year %d", base_url, collection_id, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sclockssdata?p=%s", base_url, journal_id</string>
+    <string>"%sclockssdata?p=%s", base_url, collection_id</string>
+  </entry>
+  <entry> 
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%sbooks/%s/?", base_url, collection_id</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>"%sbooks/%s/year/%d/?", base_url, collection_id, year</string>
+      </entry>
+      <entry>
+        <string>au_article</string>
+        <string>"%sbooks/%s/%s/?", base_url, collection_id, book_num</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://%s/[^?]+[.](bmp|css|gif|ico|jpe?g|js|png|tif?f|eot|svg|ttf|woff.?)$", url_host(base_url)</string>
       <string>4,"^%s", base_url</string>
-      <string>1, "%sbooks/%s/year/%d/?", base_url, journal_id, year</string>
-      <string>1,"^%sbooks/%s/[0-9]{2,5}", base_url, journal_id</string>
+      <string>1, "%sbooks/%s/year/%d/?", base_url, collection_id, year</string>
+      <string>1,"^%sbooks/%s/[0-9]{2,5}", base_url, collection_id</string>
     </list>
   </entry>
   <entry>
@@ -63,12 +76,47 @@
     <int>2</int>
   </entry>
   <entry>
-    <string>au_substance_url_pattern</string>
+    <string>plugin_config_props</string>
     <list>
-      <string>"^%sbooks/(%s)/([0-9]{2,5})/$1$2[.]pdf$", base_url, journal_id, year</string>
-      <string>"^%sbooks/%s/([0-9]{2,5})/[^/?-]+[.]pdf$", base_url, journal_id, year</string>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>collection_id</key>
+        <displayName>Collection Identifier</displayName>
+        <description>Identifier for collection (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%sbooks/(%s)/([0-9]{2,5})/\\1\\2[.]pdf$", base_url, collection_id, year</string>
+    </list>
+  </entry>
+  <!-- entry>
+    <string>text/html_filter_factory</string>
+    no html hash filter needed for single crawl plugin
+  </entry -->
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.americanmathematicalsociety.AmericanMathematicalSocietyBooksArticleIteratorFactory</string>
@@ -78,7 +126,12 @@
     <string>org.lockss.plugin.americanmathematicalsociety.AmericanMathematicalSocietyBooksArticleIteratorFactory</string>
   </entry>
   <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.americanmathematicalsociety.AmericanMathematicalSocietyBooksUrlNormalizer</string>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.americanmathematicalsociety.AmericanMathematicalSocietyHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
 </map>
