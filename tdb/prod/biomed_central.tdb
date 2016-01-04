@@ -542,27 +542,6 @@
     }
 
     {
-      title <
-        name = Clinical Proteomics ;
-        issn = 1542-6416 ;
-        eissn = 1559-0275 ;
-        issnl = 1542-6416
-      >
-
-      comment[base_url] = http://clinicalproteomicsjournal.biomedcentral.com/
-      param[journal_eissn] = 1542-6416
-      comment[moved_from] = Springer Science+Business Media in 2011
-
-      au < doNotProcess ; 2010 ; Clinical Proteomics Volume 7 ; 7 >
-      au < exists ; 2011 ; Clinical Proteomics Volume 8 ; 8 >
-      au < doNotProcess ; 2012 ; Clinical Proteomics Volume 9 ; 9 >
-      au < doNotProcess ; 2013 ; Clinical Proteomics Volume 10 ; 10 >
-      au < exists ; 2014 ; Clinical Proteomics Volume 11 ; 11 >
-      au < exists ; 2015 ; Clinical Proteomics Volume 12 ; 12 >
-
-    }
-
-    {
 
       title <
         name = Clinical Sarcoma Research ;
@@ -720,45 +699,6 @@
 
     {
       title <
-        name = EvoDevo ;
-        issn = 2041-9139 ;
-        issnl = 2041-9139
-      >
-
-      comment[base_url] = http://evodevojournal.biomedcentral.com/
-      param[journal_eissn] = 2041-9139
-
-      au < doNotProcess ; 2010 ; EvoDevo Volume 1 ; 1 >
-      au < doNotProcess ; 2011 ; EvoDevo Volume 2 ; 2 >
-      au < doNotProcess ; 2012 ; EvoDevo Volume 3 ; 3 >
-      au < exists ; 2013 ; EvoDevo Volume 4 ; 4 >
-      au < exists ; 2014 ; EvoDevo Volume 5 ; 5 >
-      au < exists ; 2015 ; EvoDevo Volume 6 ; 6 >
-
-    }
-
-    {
-      title <
-        name = Experimental & Translational Stroke Medicine ;
-        issn = 2040-7378 ;
-        issnl = 2040-7378
-      >
-
-      comment[base_url] = http://etsmjournal.biomedcentral.com/
-      param[journal_eissn] = 2040-7378
-
-      au < doNotProcess ; 2009 ; Experimental & Translational Stroke Medicine Volume 1 ; 1 >
-      au < doNotProcess ; 2010 ; Experimental & Translational Stroke Medicine Volume 2 ; 2 >
-      au < doNotProcess ; 2011 ; Experimental & Translational Stroke Medicine Volume 3 ; 3 >
-      au < doNotProcess ; 2012 ; Experimental & Translational Stroke Medicine Volume 4 ; 4 >
-      au < exists ; 2013 ; Experimental & Translational Stroke Medicine Volume 5 ; 5 >
-      au < exists ; 2014 ; Experimental & Translational Stroke Medicine Volume 6 ; 6 >
-      au < exists ; 2015 ; Experimental & Translational Stroke Medicine Volume 7 ; 7 >
-
-    }
-
-    {
-      title <
         name = Experimental Hematology & Oncology ;
         issn = 2162-3619 ;
         issnl = 2162-3619
@@ -813,55 +753,6 @@
 
     {
       title <
-        name = Genome Biology ;
-        issn = 1465-6906 ;
-        issnl = 1465-6906
-      >
-
-      param[journal_eissn] = 1465-6906
-      comment[base_url] = http://genomebiology.biomedcentral.com/
-
-      au < doNotProcess ; 2000 ; Genome Biology Volume 1 ; 1 >
-      au < doNotProcess ; 2001 ; Genome Biology Volume 2 ; 2 >
-      au < doNotProcess ; 2002 ; Genome Biology Volume 3 ; 3 >
-      au < doNotProcess ; 2003 ; Genome Biology Volume 4 ; 4 >
-      au < doNotProcess ; 2004 ; Genome Biology Volume 5 ; 5 >
-      au < doNotProcess ; 2005 ; Genome Biology Volume 6 ; 6 >
-      au < doNotProcess ; 2006 ; Genome Biology Volume 7 ; 7 >
-      au < doNotProcess ; 2007 ; Genome Biology Volume 8 ; 8 >
-      au < doNotProcess ; 2008 ; Genome Biology Volume 9 ; 9 >
-      au < doNotProcess ; 2009 ; Genome Biology Volume 10 ; 10 >
-      au < doNotProcess ; 2010 ; Genome Biology Volume 11 ; 11 >
-      au < doNotProcess ; 2011 ; Genome Biology Volume 12 ; 12 >
-      au < exists ; 2012 ; Genome Biology Volume 13 ; 13 >
-      au < exists ; 2013 ; Genome Biology Volume 14 ; 14 >
-      au < exists ; 2014 ; Genome Biology Volume 15 ; 15 >
-      au < exists ; 2015 ; Genome Biology Volume 16 ; 16 >
-
-    }
-
-    {
-      title <
-        name = Genome Medicine ;
-        issn = 1756-994X ;
-        issnl = 1756-994X
-      >
-
-      param[journal_eissn] = 1756-994X
-      comment[base_url] = http://genomemedicine.biomedcentral.com/
-
-      au < exists ; 2009 ; Genome Medicine Volume 1 ; 1 >
-      au < exists ; 2010 ; Genome Medicine Volume 2 ; 2 >
-      au < exists ; 2011 ; Genome Medicine Volume 3 ; 3 >
-      au < exists ; 2012 ; Genome Medicine Volume 4 ; 4 >
-      au < exists ; 2013 ; Genome Medicine Volume 5 ; 5 >
-      au < exists ; 2014 ; Genome Medicine Volume 6 ; 6 >
-      au < exists ; 2015 ; Genome Medicine Volume 7 ; 7 >
-
-    }
-
-    {
-      title <
         name = GigaScience ;
         issn = 2047-217X ;
         issnl = 2047-217X
@@ -879,55 +770,6 @@
 
     {
       title <
-        name = Globalization and Health ;
-        eissn = 1744-8603 ;
-        issnl = 1744-8603
-      >
-
-      comment[base_url] = http://globalizationandhealth.biomedcentral.com/
-      param[journal_eissn] = 1744-8603
-
-      au < doNotProcess ; 2005 ; Globalization and Health Volume 1 ; 1 >
-      au < doNotProcess ; 2006 ; Globalization and Health Volume 2 ; 2 >
-      au < doNotProcess ; 2007 ; Globalization and Health Volume 3 ; 3 >
-      au < doNotProcess ; 2008 ; Globalization and Health Volume 4 ; 4 >
-      au < doNotProcess ; 2009 ; Globalization and Health Volume 5 ; 5 >
-      au < doNotProcess ; 2010 ; Globalization and Health Volume 6 ; 6 >
-      au < doNotProcess ; 2011 ; Globalization and Health Volume 7 ; 7 >
-      au < doNotProcess ; 2012 ; Globalization and Health Volume 8 ; 8 >
-      au < exists ; 2013 ; Globalization and Health Volume 9 ; 9 >
-      au < exists ; 2014 ; Globalization and Health Volume 10 ; 10 >
-      au < exists ; 2015 ; Globalization and Health Volume 11 ; 11 >
-
-    }
-
-    {
-      title <
-        name = Harm Reduction Journal ;
-        eissn = 1477-7517 ;
-        issnl = 1477-7517
-      >
-
-      comment[base_url] = http://harmreductionjournal.biomedcentral.com/
-      param[journal_eissn] = 1477-7517
-
-      au < doNotProcess ; 2004 ; Harm Reduction Journal Volume 1 ; 1 >
-      au < doNotProcess ; 2005 ; Harm Reduction Journal Volume 2 ; 2 >
-      au < doNotProcess ; 2006 ; Harm Reduction Journal Volume 3 ; 3 >
-      au < doNotProcess ; 2007 ; Harm Reduction Journal Volume 4 ; 4 >
-      au < doNotProcess ; 2008 ; Harm Reduction Journal Volume 5 ; 5 >
-      au < doNotProcess ; 2009 ; Harm Reduction Journal Volume 6 ; 6 >
-      au < doNotProcess ; 2010 ; Harm Reduction Journal Volume 7 ; 7 >
-      au < doNotProcess ; 2011 ; Harm Reduction Journal Volume 8 ; 8 >
-      au < doNotProcess ; 2012 ; Harm Reduction Journal Volume 9 ; 9 >
-      au < exists ; 2013 ; Harm Reduction Journal Volume 10 ; 10 >
-      au < exists ; 2014 ; Harm Reduction Journal Volume 11 ; 11 >
-      au < exists ; 2015 ; Harm Reduction Journal Volume 12 ; 12 >
-
-    }
-
-    {
-      title <
         name = Health Information Science and Systems ;
         issn = 2047-2501 ;
         issnl = 2047-2501
@@ -939,60 +781,6 @@
       au < exists ; 2013 ; Health Information Science and Systems Volume 1 ; 1 >
       au < exists ; 2014 ; Health Information Science and Systems Volume 2 ; 2 >
       au < exists ; 2015 ; Health Information Science and Systems Volume 3 ; 3 >
-
-    }
-
-    {
-      title <
-        name = Health Research Policy and Systems ;
-        eissn = 1478-4505 ;
-        issnl = 1478-4505
-      >
-
-      comment[base_url] = http://health-policy-systems.biomedcentral.com/
-      param[journal_eissn] = 1478-4505
-
-      comment[HRPS] = Volume 1 is from 2003
-
-      au < doNotProcess ; 2002 ; Health Research Policy and Systems Volume 1 ; 1 >
-      au < doNotProcess ; 2004 ; Health Research Policy and Systems Volume 2 ; 2 >
-      au < doNotProcess ; 2005 ; Health Research Policy and Systems Volume 3 ; 3 >
-      au < doNotProcess ; 2006 ; Health Research Policy and Systems Volume 4 ; 4 >
-      au < doNotProcess ; 2007 ; Health Research Policy and Systems Volume 5 ; 5 >
-      au < doNotProcess ; 2008 ; Health Research Policy and Systems Volume 6 ; 6 >
-      au < doNotProcess ; 2009 ; Health Research Policy and Systems Volume 7 ; 7 >
-      au < doNotProcess ; 2010 ; Health Research Policy and Systems Volume 8 ; 8 >
-      au < doNotProcess ; 2011 ; Health Research Policy and Systems Volume 9 ; 9 >
-      au < exists ; 2012 ; Health Research Policy and Systems Volume 10 ; 10 >
-      au < exists ; 2013 ; Health Research Policy and Systems Volume 11 ; 11 >
-      au < exists ; 2014 ; Health Research Policy and Systems Volume 12 ; 12 >
-      au < exists ; 2015 ; Health Research Policy and Systems Volume 13 ; 13 >
-
-    }
-
-    {
-      title <
-        name = Hereditary Cancer in Clinical Practice ;
-        issn = 1897-4287 ;
-        issnl = 1897-4287
-      >
-
-      comment[base_url] = http://hccpjournal.biomedcentral.com/
-      param[journal_eissn] = 1897-4287
-
-      au < exists ; 2003 ; Hereditary Cancer in Clinical Practice Volume 1 ; 1 >
-      au < exists ; 2004 ; Hereditary Cancer in Clinical Practice Volume 2 ; 2 >
-      au < exists ; 2005 ; Hereditary Cancer in Clinical Practice Volume 3 ; 3 >
-      au < exists ; 2006 ; Hereditary Cancer in Clinical Practice Volume 4 ; 4 >
-      au < exists ; 2007 ; Hereditary Cancer in Clinical Practice Volume 5 ; 5 >
-      au < exists ; 2008 ; Hereditary Cancer in Clinical Practice Volume 6 ; 6 >
-      au < exists ; 2009 ; Hereditary Cancer in Clinical Practice Volume 7 ; 7 >
-      au < exists ; 2010 ; Hereditary Cancer in Clinical Practice Volume 8 ; 8 >
-      au < exists ; 2011 ; Hereditary Cancer in Clinical Practice Volume 9 ; 9 >
-      au < exists ; 2012 ; Hereditary Cancer in Clinical Practice Volume 10 ; 10 >
-      au < exists ; 2013 ; Hereditary Cancer in Clinical Practice Volume 11 ; 11 >
-      au < exists ; 2014 ; Hereditary Cancer in Clinical Practice Volume 12 ; 12 >
-      au < exists ; 2015 ; Hereditary Cancer in Clinical Practice Volume 13 ; 13 >
 
     }
 
@@ -1045,31 +833,6 @@
     }
 
     {
-      title <
-        name = Infectious Agents and Cancer ;
-        issn = 1750-9378 ;
-        issnl = 1750-9378
-      >
-
-      comment[base_url] = http://infectagentscancer.biomedcentral.com/
-      param[journal_eissn] = 1750-9378
-
-      comment[notReady] = Volume 5, 500 Internal Server error http://infectagentscancer.biomedcentral.com/content/5/1/19
-
-      au < doNotProcess ; 2006 ; Infectious Agents and Cancer Volume 1 ; 1 >
-      au < doNotProcess ; 2007 ; Infectious Agents and Cancer Volume 2 ; 2 >
-      au < doNotProcess ; 2008 ; Infectious Agents and Cancer Volume 3 ; 3 >
-      au < doNotProcess ; 2009 ; Infectious Agents and Cancer Volume 4 ; 4 >
-      au < exists ; 2010 ; Infectious Agents and Cancer Volume 5 ; 5 >
-      au < doNotProcess ; 2011 ; Infectious Agents and Cancer Volume 6 ; 6 >
-      au < doNotProcess ; 2012 ; Infectious Agents and Cancer Volume 7 ; 7 >
-      au < exists ; 2013 ; Infectious Agents and Cancer Volume 8 ; 8 >
-      au < exists ; 2014 ; Infectious Agents and Cancer Volume 9 ; 9 >
-      au < exists ; 2015 ; Infectious Agents and Cancer Volume 10 ; 10 >
-
-    }
-
-    {
 
       title <
         name = Infectious Diseases of Poverty ;
@@ -1084,29 +847,6 @@
       au < exists ; 2013 ; Infectious Diseases of Poverty Volume 2 ; 2 >
       au < exists ; 2014 ; Infectious Diseases of Poverty Volume 3 ; 3 >
       au < exists ; 2015 ; Infectious Diseases of Poverty Volume 4 ; 4 >
-
-    }
-
-    {
-      title <
-        name = International Breastfeeding Journal ;
-        eissn = 1746-4358 ;
-        issnl = 1746-4358
-      >
-
-      comment[base_url] = http://internationalbreastfeedingjournal.biomedcentral.com/
-      param[journal_eissn] = 1746-4358
-
-      au < doNotProcess ; 2006 ; International Breastfeeding Journal Volume 1 ; 1 >
-      au < doNotProcess ; 2007 ; International Breastfeeding Journal Volume 2 ; 2 >
-      au < doNotProcess ; 2008 ; International Breastfeeding Journal Volume 3 ; 3 >
-      au < doNotProcess ; 2009 ; International Breastfeeding Journal Volume 4 ; 4 >
-      au < doNotProcess ; 2010 ; International Breastfeeding Journal Volume 5 ; 5 >
-      au < doNotProcess ; 2011 ; International Breastfeeding Journal Volume 6 ; 6 >
-      au < exists ; 2012 ; International Breastfeeding Journal Volume 7 ; 7 >
-      au < exists ; 2013 ; International Breastfeeding Journal Volume 8 ; 8 >
-      au < exists ; 2014 ; International Breastfeeding Journal Volume 9 ; 9 >
-      au < exists ; 2015 ; International Breastfeeding Journal Volume 10 ; 10 >
 
     }
 
@@ -1134,31 +874,6 @@
       au < exists ; 2013 ; International Journal for Equity in Health Volume 12 ; 12 >
       au < exists ; 2014 ; International Journal for Equity in Health Volume 13 ; 13 >
       au < exists ; 2015 ; International Journal for Equity in Health Volume 14 ; 14 >
-
-    }
-
-    {
-      title <
-        name = International Journal of Behavioral Nutrition and Physical Activity ;
-        eissn = 1479-5868 ;
-        issnl = 1479-5868
-      >
-
-      comment[base_url] = http://ijbnpa.biomedcentral.com/
-      param[journal_eissn] = 1479-5868
-
-      au < doNotProcess ; 2004 ; International Journal of Behavioral Nutrition and Physical Activity Volume 1 ; 1 >
-      au < doNotProcess ; 2005 ; International Journal of Behavioral Nutrition and Physical Activity Volume 2 ; 2 >
-      au < doNotProcess ; 2006 ; International Journal of Behavioral Nutrition and Physical Activity Volume 3 ; 3 >
-      au < doNotProcess ; 2007 ; International Journal of Behavioral Nutrition and Physical Activity Volume 4 ; 4 >
-      au < doNotProcess ; 2008 ; International Journal of Behavioral Nutrition and Physical Activity Volume 5 ; 5 >
-      au < doNotProcess ; 2009 ; International Journal of Behavioral Nutrition and Physical Activity Volume 6 ; 6 >
-      au < doNotProcess ; 2010 ; International Journal of Behavioral Nutrition and Physical Activity Volume 7 ; 7 >
-      au < doNotProcess ; 2011 ; International Journal of Behavioral Nutrition and Physical Activity Volume 8 ; 8 >
-      au < exists ; 2012 ; International Journal of Behavioral Nutrition and Physical Activity Volume 9 ; 9 >
-      au < exists ; 2013 ; International Journal of Behavioral Nutrition and Physical Activity Volume 10 ; 10 >
-      au < exists ; 2014 ; International Journal of Behavioral Nutrition and Physical Activity Volume 11 ; 11 >
-      au < exists ; 2015 ; International Journal of Behavioral Nutrition and Physical Activity Volume 12 ; 12 >
 
     }
 
@@ -1303,27 +1018,6 @@
 
     {
       title <
-        name = Italian Journal of Pediatrics ;
-        issn = 1824-7288 ;
-        issnl = 1824-7288
-      >
-
-      comment[base_url] = http://ijponline.biomedcentral.com/
-      param[journal_eissn] = 1824-7288
-
-      au < exists ; 2008 ; Italian Journal of Pediatrics Volume 34 ; 34 >
-      au < exists ; 2009 ; Italian Journal of Pediatrics Volume 35 ; 35 >
-      au < exists ; 2010 ; Italian Journal of Pediatrics Volume 36 ; 36 >
-      au < exists ; 2011 ; Italian Journal of Pediatrics Volume 37 ; 37 >
-      au < exists ; 2012 ; Italian Journal of Pediatrics Volume 38 ; 38 >
-      au < exists ; 2013 ; Italian Journal of Pediatrics Volume 39 ; 39 >
-      au < exists ; 2014 ; Italian Journal of Pediatrics Volume 40 ; 40 >
-      au < exists ; 2015 ; Italian Journal of Pediatrics Volume 41 ; 41 >
-
-    }
-
-    {
-      title <
         name = Journal for ImmunoTherapy of Cancer ;
         issn = 2051-1426 ;
         issnl = 2051-1426
@@ -1373,28 +1067,6 @@
 
     {
       title <
-        name = Journal of Biological Engineering ;
-        eissn = 1754-1611 ;
-        issnl = 1754-1611
-      >
-
-      comment[base_url] = http://jbioleng.biomedcentral.com/
-      param[journal_eissn] = 1754-1611
-
-      au < doNotProcess ; 2007 ; Journal of Biological Engineering Volume 1 ; 1 >
-      au < doNotProcess ; 2008 ; Journal of Biological Engineering Volume 2 ; 2 >
-      au < doNotProcess ; 2009 ; Journal of Biological Engineering Volume 3 ; 3 >
-      au < doNotProcess ; 2010 ; Journal of Biological Engineering Volume 4 ; 4 >
-      au < doNotProcess ; 2011 ; Journal of Biological Engineering Volume 5 ; 5 >
-      au < exists ; 2012 ; Journal of Biological Engineering Volume 6 ; 6 >
-      au < exists ; 2013 ; Journal of Biological Engineering Volume 7 ; 7 >
-      au < exists ; 2014 ; Journal of Biological Engineering Volume 8 ; 8 >
-      au < exists ; 2015 ; Journal of Biological Engineering Volume 9 ; 9 >
-
-    }
-
-    {
-      title <
         name = Journal of Biological Research-Thessaloniki ;
         issn = 1790-045X ;
         eissn = 2241-5793 ;
@@ -1406,27 +1078,6 @@
 
       au < exists ; 2014 ; Journal of Biological Research-Thessaloniki Volume 21 ; 21 >
       au < exists ; 2015 ; Journal of Biological Research-Thessaloniki Volume 22 ; 22 >
-
-    }
-
-    {
-      title <
-        name = Journal of Biomedical Science ;
-        issn = 1021-7770 ;
-        eissn = 1423-0127 ;
-        issnl = 1021-7770
-      >
-
-      comment[base_url] = http://jbiomedsci.biomedcentral.com/
-      param[journal_eissn] = 1423-0127
-
-      au < exists ; 2009 ; Journal of Biomedical Science Volume 16 ; 16 >
-      au < exists ; 2010 ; Journal of Biomedical Science Volume 17 ; 17 >
-      au < exists ; 2011 ; Journal of Biomedical Science Volume 18 ; 18 >
-      au < exists ; 2012 ; Journal of Biomedical Science Volume 19 ; 19 >
-      au < exists ; 2013 ; Journal of Biomedical Science Volume 20 ; 20 >
-      au < exists ; 2014 ; Journal of Biomedical Science Volume 21 ; 21 >
-      au < exists ; 2015 ; Journal of Biomedical Science Volume 22 ; 22 >
 
     }
 
@@ -1446,61 +1097,6 @@
       au < exists ; 2013 ; Journal of Biomedical Semantics Volume 4 ; 4 >
       au < exists ; 2014 ; Journal of Biomedical Semantics Volume 5 ; 5 >
       au < exists ; 2015 ; Journal of Biomedical Semantics Volume 6 ; 6 >
-
-    }
-
-    {
-      title <
-        name = Journal of Cardiothoracic Surgery ;
-        eissn = 1749-8090 ;
-        issnl = 1749-8090
-      >
-
-      comment[base_url] = http://cardiothoracicsurgery.biomedcentral.com/
-      param[journal_eissn] = 1749-8090
-
-      au < doNotProcess ; 2006 ; Journal of Cardiothoracic Surgery Volume 1 ; 1 >
-      au < doNotProcess ; 2007 ; Journal of Cardiothoracic Surgery Volume 2 ; 2 >
-      au < doNotProcess ; 2008 ; Journal of Cardiothoracic Surgery Volume 3 ; 3 >
-      au < doNotProcess ; 2009 ; Journal of Cardiothoracic Surgery Volume 4 ; 4 >
-      au < doNotProcess ; 2010 ; Journal of Cardiothoracic Surgery Volume 5 ; 5 >
-      au < doNotProcess ; 2011 ; Journal of Cardiothoracic Surgery Volume 6 ; 6 >
-      au < exists ; 2012 ; Journal of Cardiothoracic Surgery Volume 7 ; 7 >
-      au < exists ; 2013 ; Journal of Cardiothoracic Surgery Volume 8 ; 8 >
-      au < exists ; 2014 ; Journal of Cardiothoracic Surgery Volume 9 ; 9 >
-      au < exists ; 2015 ; Journal of Cardiothoracic Surgery Volume 10 ; 10 >
-
-    }
-
-    {
-      title <
-        name = Journal of Cardiovascular Magnetic Resonance ;
-        issn = 1097-6647 ;
-        eissn = 1532-429X ;
-        issnl = 1532-429X
-      >
-
-        param[journal_eissn] = 1532-429X
-
-        comment[base_url] = http://jcmr-online.biomedcentral.com/
-
-        au < exists ; 1999 ; Journal of Cardiovascular Magnetic Resonance Volume 1 ; 1 >
-        au < exists ; 2000 ; Journal of Cardiovascular Magnetic Resonance Volume 2 ; 2 >
-        au < exists ; 2001 ; Journal of Cardiovascular Magnetic Resonance Volume 3 ; 3 >
-        au < exists ; 2002 ; Journal of Cardiovascular Magnetic Resonance Volume 4 ; 4 >
-        au < exists ; 2003 ; Journal of Cardiovascular Magnetic Resonance Volume 5 ; 5 >
-        au < exists ; 2004 ; Journal of Cardiovascular Magnetic Resonance Volume 6 ; 6 >
-        au < exists ; 2005 ; Journal of Cardiovascular Magnetic Resonance Volume 7 ; 7 >
-        au < exists ; 2006 ; Journal of Cardiovascular Magnetic Resonance Volume 8 ; 8 >
-        au < exists ; 2007 ; Journal of Cardiovascular Magnetic Resonance Volume 9 ; 9 >
-        au < exists ; 2008 ; Journal of Cardiovascular Magnetic Resonance Volume 10 ; 10 >
-        au < doNotProcess ; 2009 ; Journal of Cardiovascular Magnetic Resonance Volume 11 ; 11 >
-        au < exists ; 2010 ; Journal of Cardiovascular Magnetic Resonance Volume 12 ; 12 >
-        au < doNotProcess ; 2011 ; Journal of Cardiovascular Magnetic Resonance Volume 13 ; 13 >
-        au < exists ; 2012 ; Journal of Cardiovascular Magnetic Resonance Volume 14 ; 14 >
-        au < exists ; 2013 ; Journal of Cardiovascular Magnetic Resonance Volume 15 ; 15 >
-        au < exists ; 2014 ; Journal of Cardiovascular Magnetic Resonance Volume 16 ; 16 >
-        au < exists ; 2015 ; Journal of Cardiovascular Magnetic Resonance Volume 17 ; 17 >
 
     }
 
@@ -1551,30 +1147,6 @@
       au < exists ; 2013 ; Journal of Eating Disorders Volume 1 ; 1 >
       au < doNotProcess ; 2014 ; Journal of Eating Disorders Volume 2 ; 2 >
       au < exists ; 2015 ; Journal of Eating Disorders Volume 3 ; 3 >
-
-    }
-
-    {
-      title <
-        name = Journal of Ethnobiology and Ethnomedicine ;
-        eissn = 1746-4269 ;
-        issnl = 1746-4269
-      >
-
-      comment[base_url] = http://ethnobiomed.biomedcentral.com/
-      param[journal_eissn] = 1746-4269
-
-      au < doNotProcess ; 2005 ; Journal of Ethnobiology and Ethnomedicine Volume 1 ; 1 >
-      au < doNotProcess ; 2006 ; Journal of Ethnobiology and Ethnomedicine Volume 2 ; 2 >
-      au < doNotProcess ; 2007 ; Journal of Ethnobiology and Ethnomedicine Volume 3 ; 3 >
-      au < doNotProcess ; 2008 ; Journal of Ethnobiology and Ethnomedicine Volume 4 ; 4 >
-      au < doNotProcess ; 2009 ; Journal of Ethnobiology and Ethnomedicine Volume 5 ; 5 >
-      au < doNotProcess ; 2010 ; Journal of Ethnobiology and Ethnomedicine Volume 6 ; 6 >
-      au < doNotProcess ; 2011 ; Journal of Ethnobiology and Ethnomedicine Volume 7 ; 7 >
-      au < exists ; 2012 ; Journal of Ethnobiology and Ethnomedicine Volume 8 ; 8 >
-      au < exists ; 2013 ; Journal of Ethnobiology and Ethnomedicine Volume 9 ; 9 >
-      au < exists ; 2014 ; Journal of Ethnobiology and Ethnomedicine Volume 10 ; 10 >
-      au < exists ; 2015 ; Journal of Ethnobiology and Ethnomedicine Volume 11 ; 11 >
 
     }
 
@@ -2230,29 +1802,6 @@
       param[journal_eissn] = 2054-314X
 
       au < exists ; 2015 ; Disaster and Military Medicine Volume 1 ; 1 >
-
-    }
-
-    {
-      title <
-        name = European Review of Aging and Physical Activity ;
-        issn = 1813-7253 ;
-        eissn = 1861-6909 ;
-        issnl = 1861-6909
-      >
-      
-      param[journal_eissn] = 1861-6909
-
-      au < exists ; 2006 ; European Review of Aging and Physical Activity Volume 3 ; 3 >
-      au < exists ; 2007 ; European Review of Aging and Physical Activity Volume 4 ; 4 >
-      au < exists ; 2008 ; European Review of Aging and Physical Activity Volume 5 ; 5 >
-      au < exists ; 2009 ; European Review of Aging and Physical Activity Volume 6 ; 6 >
-      au < exists ; 2010 ; European Review of Aging and Physical Activity Volume 7 ; 7 >
-      au < exists ; 2011 ; European Review of Aging and Physical Activity Volume 8 ; 8 >
-      au < exists ; 2012 ; European Review of Aging and Physical Activity Volume 9 ; 9 >
-      au < exists ; 2013 ; European Review of Aging and Physical Activity Volume 10 ; 10 >
-      au < exists ; 2014 ; European Review of Aging and Physical Activity Volume 11 ; 11 >
-      au < exists ; 2015 ; European Review of Aging and Physical Activity Volume 12 ; 12 >
 
     }
 
