@@ -19,13 +19,11 @@
     >
 
     au < manifest ; exists ; 2011 ; 978-1-56080-287-7 ; 978-1-56080-294-5 ; 9781560802945 ; SEAM Phase 1: Challenges of Subsalt Imaging in Tertiary Basins, with Emphasis on Deepwater Gulf of Mexico > 
-    au < manifest ; exists ; 2011 ; 978-1-56080-281-5 ; 978-1-56080-285-3 ; 9781560802853 ; Seismic Acquisition from Yesterday to Tomorrow >
     au < manifest ; exists ; 2011 ; 978-1-56080-280-8 ; 978-1-56080-293-8 ; 9781560802938 ; First Steps in Seismic Interpretation > 
     au < manifest ; exists ; 2011 ; 978-1-56080-282-2 ; 978-1-56080-289-1 ; 9781560802891 ; Multicomponent Seismic Technology > 
     au < manifest ; exists ; 2011 ; 978-1-56080-228-0 ; 978-1-56080-283-9 ; 9781560802839 ; Seismology of Azimuthally Anisotropic Media and Seismic Fracture Characterization >
     au < manifest ; exists ; 2011 ; 978-0-89181-374-3 ; 978-1-56080-288-4 ; 9781560802884 ; nterpretation of Three-Dimensional Seismic Data >
     au < crawling ; exists ; 2012 ; 978-1-56080-329-4 ; 978-1-56080-330-0 ; 9781560803300 ; Engineering Seismology with Applications to Geotechnical Engineering >
-    au < crawling ; exists ; 2012 ; 978-1-56080-315-7 ; 978-1-56080-316-4 ; 9781560803164 ; Microseismic Imaging of Hydraulic Fracturing >
     au < crawling ; exists ; 2012 ; 978-1-56080-298-3 ; 978-1-56080-305-8 ; 9781560803058 ; Fundamentals of Gravity Exploration >
     au < crawling ; exists ; 2012 ; 978-1-56080-299-0 ; 978-1-56080-300-3 ; 9781560803003 ; Seismic Signatures and Analysis of Reflection Data in Anisotropic Media, Third Edition > 
     au < crawling ; exists ; 2012 ; 978-1-56080-303-4 ; 978-1-56080-304-1 ; 9781560803041 ; 3D Seismic Survey Design, Second Edition >
@@ -33,10 +31,8 @@
     au < crawling ; exists ; 2013 ; 978-1-56080-313-3 ; 978-1-56080-314-0 ; 9781560803140 ; Remote Sensing in Action >
     au < expected ; exists ; 2013 ; 978-1-56080-301-0 ; 978-1-56080-302-7 ; 9781560803027 ; Encyclopedia of Exploration Geophysics >
     au < crawling ; exists ; 2014 ; 978-1-56080-319-5 ; 978-1-56080-320-1 ; 9781560803201 ; AVO >
-    au < crawling ; exists ; 2014 ; 978-1-56080-307-2 ; 978-1-56080-312-6 ; 9781560803126 ; Practical applications of time-lapse seismic data >
     au < crawling ; exists ; 2014 ; 978-0-643-09809-1 ; 978-1-56080-321-8 ; 9781560803218 ; Geological Interpretation of Aeromagnetic Data >
     au < crawling ; exists ; 2014 ; 978-1-56080-310-2 ; 978-1-56080-311-9 ; 9781560803119 ; Hydrocarbon Seepage >
-    au < finished ; crawling ; 2014 ; 978-1-56080-291-4 ; 978-1-56080-295-2 ; 9781560802952 ; Elements of Seismic Dispersion: A Somewhat Practical Guide to Frequency-Dependent Phenomena >
     au < manifest ; exists ; 2015 ; 978-1-56080-290-7 ; 978-1-56080-308-9 ; 9781560803089 ; Numerical Modeling of Seismic Wave Propagation >
       
   }
@@ -82,11 +78,11 @@
     au < manifest ; exists ; 2008 ; ; 9781560801634 ; 9781560801634 ; Reservoir Geophysics: Applications (9781560801634) >
     au < manifest ; exists ; 2009 ; ; 9781560801597 ; 9781560801597 ; Petroleum Geoengineering: Integration of Static and Dynamic Models  (9781560801597) >
     au < manifest ; exists ; 2010 ; ; 9781560802129 ; 9781560802129 ; Geophysics Under Stress: Geomechanical Applications of Seismic and Borehole Acoustic Waves  (9781560802129) >
-    au < exists ; exists ; 2011 ; ; 9781560802853 ; 9781560802853 ; Seismic Acquisition from Yesterday to Tomorrow  (9781560802853) >
-    au < exists ; exists ; 2012 ; ; 9781560802952 ; 9781560802952 ; Elements of Seismic Dispersion (9781560802952) >
-    au < exists ; exists ; 2013 ; ; 9781560803126 ; 9781560803126 ; Practical Applications of Time-lapse Seismic Data  (9781560803126) >
-    au < exists ; exists ; 2014 ; ; 9781560803164 ; 9781560803164 ; Microseismic Imaging of Hydraulic Fracturing: Improved Engineering of Unconventional Shale Reservoirs  (9781560803164) >
-    au < exists ; exists ; 2014 ; ; 9781560803270 ; 9781560803270 ; Understanding Seismic Anisotropy in Exploration and Exploitation, second edition  (9781560803270) >
+    au < manifest ; exists ; 2011 ; ; 9781560802853 ; 9781560802853 ; Seismic Acquisition from Yesterday to Tomorrow  (9781560802853) >
+    au < finished ; crawling ; 2012 ; ; 9781560802952 ; 9781560802952 ; Elements of Seismic Dispersion (9781560802952) >
+    au < crawling ; exists ; 2013 ; ; 9781560803126 ; 9781560803126 ; Practical Applications of Time-lapse Seismic Data  (9781560803126) >
+    au < crawling ; exists ; 2014 ; ; 9781560803164 ; 9781560803164 ; Microseismic Imaging of Hydraulic Fracturing: Improved Engineering of Unconventional Shale Reservoirs  (9781560803164) >
+    au < crawling ; exists ; 2014 ; ; 9781560803270 ; 9781560803270 ; Understanding Seismic Anisotropy in Exploration and Exploitation, second edition  (9781560803270) >
 
   }
 
