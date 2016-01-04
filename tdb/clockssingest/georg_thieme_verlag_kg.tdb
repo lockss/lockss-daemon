@@ -2284,7 +2284,7 @@
    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2012 ; 7 ; >
    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2013 ; 8 ; >
    au < crawling ; exists ; 2014 ; 2014 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2014 ; 9 ; >
-   au < manifest ; exists ; 2015 ; 2015 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2015 ; 10 ; >
+   au < testing ; exists ; 2015 ; 2015 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2015 ; 10 ; >
 
   }
 
@@ -4993,7 +4993,7 @@
     param[journal_id] = 10.1055/s-00028781
     comment[0] = Currently only eFirst is online
 
-    au < manifest ; exists ; 2015 ; 2015 ; The Surgery Journal Volume 1 ; 1 ; >
+    au < testing ; exists ; 2015 ; 2015 ; The Surgery Journal Volume 1 ; 1 ; >
 
   }
 
@@ -5065,7 +5065,7 @@
     au < finished ; crawling ; 2012 ; 2012 ; The Thoracic and Cardiovascular Surgeon Reports Volume 1 ; 1 ; >
     au < finished ; crawling ; 2013 ; 2013 ; The Thoracic and Cardiovascular Surgeon Reports Volume 2 ; 2 ; >
     au < finished ; crawling ; 2014 ; 2014 ; The Thoracic and Cardiovascular Surgeon Reports Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; The Thoracic and Cardiovascular Surgeon Reports Volume 4 ; 4 ; >
+    au < testing ; exists ; 2015 ; 2015 ; The Thoracic and Cardiovascular Surgeon Reports Volume 4 ; 4 ; >
 
   }
 
