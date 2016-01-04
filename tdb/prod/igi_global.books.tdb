@@ -9,7 +9,7 @@
 
   {
     implicit < status ; year ; eisbn ; param[book_isbn] ; doi ; param[volume] ; name ; author >
-    comment[notReady] = 2, 59744, 61636, 72163, 63886, 70787, 70785, 41880 Forthcoming Book - Contents Coming Soon (3/5/2014)
+    comment[notReady] = Forthcoming Book - Contents Coming Soon 
   
     {
         title <
@@ -17,7 +17,7 @@
         type = bookSeries
         >
     
-    au < notReady ; 2000 ; 9781930708723 ; 9781878289810 ; 10.4018/978-1-87828-981-0 ; 2 ; A Primer for Disaster Recovery Planning in an IT Environment ; Charlotte J. Hiattt > 
+    au < testing ; 2000 ; 9781930708723 ; 9781878289810 ; 10.4018/978-1-87828-981-0 ; 2 ; A Primer for Disaster Recovery Planning in an IT Environment ; Charlotte J. Hiattt > 
     au < released ; 2000 ;  ; 9781615205936 ; 10.4018/978-1-61520-593-6 ; 44492 ; Annals of Cases on Information Technology: Applications and Management in Organizations (2000) ;  > 
     au < released ; 2000 ; 9781930708457 ; 9781878289759 ; 10.4018/978-1-87828-975-9 ; 92 ; Auditing Information Systems ; Mario Piattini (Universidad de Castilla-La Mancha, Spain) > 
     au < released ; 2000 ; 9781930708464 ; 9781878289742 ; 10.4018/978-1-878289-74-2 ; 127 ; Case Studies on Information Technology in Higher Education: Implications for Policy and Practice ; Lisa Ann Petrides > 
@@ -467,7 +467,7 @@
     au < released ; 2007 ; 9781599043661 ; 9781599043647 ; 10.4018/978-1-59904-364-7 ; 235 ; Data Warehouses and OLAP: Concepts, Architectures and Solutions ; Robert Wrembel and Christian  Koncilia > 
     au < released ; 2007 ; 9781599042213 ; 9781599042190 ; 10.4018/978-1-59904-219-0 ; 248 ; Design Pattern Formalization Techniques ; Toufik Taibi > 
     au < released ; 2007 ; 9781599040714 ; 9781599040691 ; 10.4018/978-1-59904-069-1 ; 251 ; Designing for Networked Communications: Strategies and Development ; Simon Heilesen and Sisse Siggaard Jensen > 
-    au < notReady ; 2007 ; 9781599043869 ; 9781599043852 ; 10.4018/978-1-59904-385-2 ; 262 ; Dictionary of Information Science and Technology ; Mehdi Khosrow-Pour (Information Resources Management Association, USA) > 
+    au < testing ; 2007 ; 9781599043869 ; 9781599043852 ; 10.4018/978-1-59904-385-2 ; 262 ; Dictionary of Information Science and Technology ; Mehdi Khosrow-Pour (Information Resources Management Association, USA) > 
     au < released ; 2007 ; 9781599042794 ; 9781599042770 ; 10.4018/978-1-59904-277-0 ; 287 ; E-Business Innovation and Process Management ; In Lee (Western Illinois University, USA) > 
     au < released ; 2007 ; 9781599042060 ; 9781599042046 ; 10.4018/978-1-59904-204-6 ; 289 ; E-Business Process Management: Technologies and Solutions ; Jayavel Sounderpandian and Tapen Sinha > 
     au < released ; 2007 ; 9781599041254 ; 9781599041230 ; 10.4018/978-1-59904-123-0 ; 297 ; E-Commerce in Regional Small to Medium Enterprises ; Robert MacGregor (University of Wollongong, Australia) and Lejla Vrazalic (University of Wollongong in Dubai, UAE) > 
