@@ -252,7 +252,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     e.initCause(cause);
     return e;
   }
- 
+
   /** for testing */
   protected HttpClientUrlConnection(String urlString, HttpClient client,
 				    LockssGetMethod method)
@@ -389,6 +389,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     }
   }
 
+    /** method for passing through the post content */
   public void setRequestEntity(RequestEntity entity) {
     assertNotExecuted();
     if(method instanceof PostMethod) {
