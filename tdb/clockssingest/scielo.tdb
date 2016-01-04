@@ -311,6 +311,30 @@
   {
 
     title <
+      name = Acta Botánica Venezuelica ;
+      issn = 0084-5906
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0084-5906
+
+    au < manifest ; exists ; 2001 ; 24 ; Acta Botánica Venezuelica Volume 24 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 25 ; Acta Botánica Venezuelica Volume 25 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 26 ; Acta Botánica Venezuelica Volume 26 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 27 ; Acta Botánica Venezuelica Volume 27 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 28 ; Acta Botánica Venezuelica Volume 28 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 29 ; Acta Botánica Venezuelica Volume 29 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 30 ; Acta Botánica Venezuelica Volume 30 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 31 ; Acta Botánica Venezuelica Volume 31 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 32 ; Acta Botánica Venezuelica Volume 32 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 33 ; Acta Botánica Venezuelica Volume 33 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 34 ; Acta Botánica Venezuelica Volume 34 ; 2011 ; >
+
+  }
+
+  {
+
+    title <
       name = Acta Cirurgica Brasileira ;
       issn = 0102-8650 ;
       eissn = 1678-2674
@@ -555,6 +579,31 @@
     au < crawling ; exists ; 2013 ; 26 ; Acta Odontológica Latinoamericana Volume 26 ; 2013 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2014 ; 27 ; Acta Odontológica Latinoamericana Volume 27 ; 2014 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 28 ; Acta Odontológica Latinoamericana Volume 28 ; 2015 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Acta Odontológica Venezolana ;
+      issn = 0001-6365
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0001-6365
+
+    au < manifest ; exists ; 1999 ; 37 ; Acta Odontológica Venezolana Volume 37 ; 1999 ; >
+    au < manifest ; exists ; 2000 ; 38 ; Acta Odontológica Venezolana Volume 38 ; 2000 ; >
+    au < manifest ; exists ; 2001 ; 39 ; Acta Odontológica Venezolana Volume 39 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 40 ; Acta Odontológica Venezolana Volume 40 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 41 ; Acta Odontológica Venezolana Volume 41 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 42 ; Acta Odontológica Venezolana Volume 42 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 43 ; Acta Odontológica Venezolana Volume 43 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 44 ; Acta Odontológica Venezolana Volume 44 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 45 ; Acta Odontológica Venezolana Volume 45 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 46 ; Acta Odontológica Venezolana Volume 46 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 47 ; Acta Odontológica Venezolana Volume 47 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 48 ; Acta Odontológica Venezolana Volume 48 ; 2010 ; >
 
   }
 
@@ -1127,6 +1176,29 @@
   {
 
     title <
+      name = Agroalimentaria ;
+      issn = 1316-0354
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1316-0354
+
+    au < manifest ; exists ; 2001 ; 6 ; Agroalimentaria Volume 6 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 7 ; Agroalimentaria Volume 7 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 8 ; Agroalimentaria Volume 8 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 9 ; Agroalimentaria Volume 9 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 10 ; Agroalimentaria Volume 10 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 11 ; Agroalimentaria Volume 11 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 12 ; Agroalimentaria Volume 12 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 13-14 ; Agroalimentaria Volume 13-14 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 15 ; Agroalimentaria Volume 15 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 16 ; Agroalimentaria Volume 16 ; 2010 ; >
+
+  }
+
+  {
+
+    title <
       name = Agrociencia ;
       issn = 1405-3195
     >
@@ -1224,6 +1296,29 @@
     au < frozen ; exists ; 2013 ; 24 ; Agronomía Mesoamericana Volume 24 ; 2013 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2014 ; 25 ; Agronomía Mesoamericana Volume 25 ; 2014 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; 26 ; Agronomía Mesoamericana Volume 26 ; 2015 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Agronomía Tropical ;
+      issn = 0002-192X
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0002-192X
+
+    au < manifest ; exists ; 2002 ; 52 ; Agronomía Tropical Volume 52 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 53 ; Agronomía Tropical Volume 53 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 54 ; Agronomía Tropical Volume 54 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 55 ; Agronomía Tropical Volume 55 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 56 ; Agronomía Tropical Volume 56 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 57 ; Agronomía Tropical Volume 57 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 58 ; Agronomía Tropical Volume 58 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 59 ; Agronomía Tropical Volume 59 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 60 ; Agronomía Tropical Volume 60 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 61 ; Agronomía Tropical Volume 61 ; 2011 ; >
 
   }
 
@@ -1829,6 +1924,33 @@
     au < crawling ; exists ; 2013 ; 29 ; Anales de Psicología Volume 29 ; 2013 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2014 ; 30 ; Anales de Psicología Volume 30 ; 2014 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; 31 ; Anales de Psicología Volume 31 ; 2015 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Anales Venezolanos de Nutrición ;
+      issn = 0798-0752
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0798-0752
+
+    au < manifest ; exists ; 2001 ; 14 ; Anales Venezolanos de Nutrición Volume 14 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 15 ; Anales Venezolanos de Nutrición Volume 15 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 16 ; Anales Venezolanos de Nutrición Volume 16 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 17 ; Anales Venezolanos de Nutrición Volume 17 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 18 ; Anales Venezolanos de Nutrición Volume 18 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 19 ; Anales Venezolanos de Nutrición Volume 19 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 20 ; Anales Venezolanos de Nutrición Volume 20 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 21 ; Anales Venezolanos de Nutrición Volume 21 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 22 ; Anales Venezolanos de Nutrición Volume 22 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 23 ; Anales Venezolanos de Nutrición Volume 23 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 24 ; Anales Venezolanos de Nutrición Volume 24 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 25 ; Anales Venezolanos de Nutrición Volume 25 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 26 ; Anales Venezolanos de Nutrición Volume 26 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 27 ; Anales Venezolanos de Nutrición Volume 27 ; 2014 ; >
 
   }
 
@@ -2547,6 +2669,81 @@
   {
 
     title <
+      name = Archivos Latinoamericanos de Nutrición ;
+      issn = 0004-0622
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0004-0622
+
+    au < manifest ; exists ; 2000 ; 50 ; Archivos Latinoamericanos de Nutrición Volume 50 ; 2000 ; >
+    au < manifest ; exists ; 2001 ; 51 ; Archivos Latinoamericanos de Nutrición Volume 51 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 52 ; Archivos Latinoamericanos de Nutrición Volume 52 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 53 ; Archivos Latinoamericanos de Nutrición Volume 53 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 54 ; Archivos Latinoamericanos de Nutrición Volume 54 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 55 ; Archivos Latinoamericanos de Nutrición Volume 55 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 56 ; Archivos Latinoamericanos de Nutrición Volume 56 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 57 ; Archivos Latinoamericanos de Nutrición Volume 57 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 58 ; Archivos Latinoamericanos de Nutrición Volume 58 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 59 ; Archivos Latinoamericanos de Nutrición Volume 59 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 60 ; Archivos Latinoamericanos de Nutrición Volume 60 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 61 ; Archivos Latinoamericanos de Nutrición Volume 61 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 62 ; Archivos Latinoamericanos de Nutrición Volume 62 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 63 ; Archivos Latinoamericanos de Nutrición Volume 63 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 64 ; Archivos Latinoamericanos de Nutrición Volume 64 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 65 ; Archivos Latinoamericanos de Nutrición Volume 65 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
+      name = Archivos Venezolanos de Farmacología y Terapéutica ;
+      issn = 0798-0264
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0798-0264
+
+    au < manifest ; exists ; 2000 ; 19 ; Archivos Venezolanos de Farmacología y Terapéutica Volume 19 ; 2000 ; >
+    au < manifest ; exists ; 2001 ; 20 ; Archivos Venezolanos de Farmacología y Terapéutica Volume 20 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 21 ; Archivos Venezolanos de Farmacología y Terapéutica Volume 21 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 22 ; Archivos Venezolanos de Farmacología y Terapéutica Volume 22 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 23 ; Archivos Venezolanos de Farmacología y Terapéutica Volume 23 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 24 ; Archivos Venezolanos de Farmacología y Terapéutica Volume 24 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 25 ; Archivos Venezolanos de Farmacología y Terapéutica Volume 25 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 26 ; Archivos Venezolanos de Farmacología y Terapéutica Volume 26 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 27 ; Archivos Venezolanos de Farmacología y Terapéutica Volume 27 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 28 ; Archivos Venezolanos de Farmacología y Terapéutica Volume 28 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 29 ; Archivos Venezolanos de Farmacología y Terapéutica Volume 29 ; 2010 ; >
+
+  }
+
+  {
+
+    title <
+      name = Archivos Venezolanos de Puericultura y Pediatría ;
+      issn = 0004-0649
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0004-0649
+
+    au < manifest ; exists ; 2007 ; 70 ; Archivos Venezolanos de Puericultura y Pediatría Volume 70 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 71 ; Archivos Venezolanos de Puericultura y Pediatría Volume 71 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 72 ; Archivos Venezolanos de Puericultura y Pediatría Volume 72 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 73 ; Archivos Venezolanos de Puericultura y Pediatría Volume 73 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 74 ; Archivos Venezolanos de Puericultura y Pediatría Volume 74 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 75 ; Archivos Venezolanos de Puericultura y Pediatría Volume 75 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 76 ; Archivos Venezolanos de Puericultura y Pediatría Volume 76 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 77 ; Archivos Venezolanos de Puericultura y Pediatría Volume 77 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 78 ; Archivos Venezolanos de Puericultura y Pediatría Volume 78 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
       name = Areté ;
       issn = 1016-913X
     >
@@ -2581,6 +2778,28 @@
     au < manifest ; exists ; 2011 ; 34 ; Argos (1853-6379) Volume 34 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 35 ; Argos (1853-6379) Volume 35 ; 2012 ; >
     au < crawling ; exists ; 2013 ; 36 ; Argos (1853-6379) Volume 36 ; 2013 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Argos ;
+      issn = 0254-1637
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0254-1637
+
+    au < manifest ; exists ; 2006 ; 23 ; Argos Volume 23 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 24 ; Argos Volume 24 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 25 ; Argos Volume 25 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 26 ; Argos Volume 26 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 27 ; Argos Volume 27 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 28 ; Argos Volume 28 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 29 ; Argos Volume 29 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 30 ; Argos Volume 30 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 31 ; Argos Volume 31 ; 2014 ; >
 
   }
 
@@ -3303,6 +3522,32 @@
   {
 
     title <
+      name = Bioagro ;
+      issn = 1316-3361
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1316-3361
+
+    au < manifest ; exists ; 2003 ; 15 ; Bioagro Volume 15 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 16 ; Bioagro Volume 16 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 17 ; Bioagro Volume 17 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 18 ; Bioagro Volume 18 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 19 ; Bioagro Volume 19 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 20 ; Bioagro Volume 20 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 21 ; Bioagro Volume 21 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 22 ; Bioagro Volume 22 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 23 ; Bioagro Volume 23 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 24 ; Bioagro Volume 24 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 25 ; Bioagro Volume 25 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 26 ; Bioagro Volume 26 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 27 ; Bioagro Volume 27 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
       name = Biocell ;
       issn = 0327-9545 ;
       eissn = 1667-5746
@@ -3822,6 +4067,26 @@
   {
 
     title <
+      name = Boletin de Linguistica ;
+      issn = 0798-9709
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0798-9709
+
+    au < manifest ; exists ; 2005 ; 17 ; Boletin de Linguistica Volume 17 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 18 ; Boletin de Linguistica Volume 18 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 19 ; Boletin de Linguistica Volume 19 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 20 ; Boletin de Linguistica Volume 20 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 21 ; Boletin de Linguistica Volume 21 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 22 ; Boletin de Linguistica Volume 22 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 23 ; Boletin de Linguistica Volume 23 ; 2011 ; >
+
+  }
+
+  {
+
+    title <
       name = Boletín del Instituto de Historia Argentina y Americana Dr. Emilio Ravignani ;
       issn = 0524-9767 ;
       eissn = 1850-2563
@@ -3880,6 +4145,28 @@
   {
 
     title <
+      name = Boletín de Malariología y Salud Ambiental ;
+      issn = 1690-4648
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1690-4648
+
+    au < manifest ; exists ; 2006 ; 46 ; Boletín de Malariología y Salud Ambiental Volume 46 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 47 ; Boletín de Malariología y Salud Ambiental Volume 47 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 48 ; Boletín de Malariología y Salud Ambiental Volume 48 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 49 ; Boletín de Malariología y Salud Ambiental Volume 49 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 50 ; Boletín de Malariología y Salud Ambiental Volume 50 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 51 ; Boletín de Malariología y Salud Ambiental Volume 51 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 52 ; Boletín de Malariología y Salud Ambiental Volume 52 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 53 ; Boletín de Malariología y Salud Ambiental Volume 53 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 54 ; Boletín de Malariología y Salud Ambiental Volume 54 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
       name = Boletín geográfico ;
       eissn = 2313-903X
     >
@@ -3931,6 +4218,28 @@
     au < frozen ; exists ; 2013 ; 46 ; Boletín mexicano de derecho comparado Volume 46 ; 2013 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2014 ; 47 ; Boletín mexicano de derecho comparado Volume 47 ; 2014 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; 48 ; Boletín mexicano de derecho comparado Volume 48 ; 2015 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Boletín Técnico ;
+      issn = 0376-723X
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0376-723X
+
+    au < manifest ; exists ; 2001 ; 39 ; Boletín Técnico Volume 39 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 40 ; Boletín Técnico Volume 40 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 41 ; Boletín Técnico Volume 41 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 42 ; Boletín Técnico Volume 42 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 43 ; Boletín Técnico Volume 43 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 44 ; Boletín Técnico Volume 44 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 45 ; Boletín Técnico Volume 45 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 46 ; Boletín Técnico Volume 46 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 47 ; Boletín Técnico Volume 47 ; 2009 ; >
 
   }
 
@@ -6097,6 +6406,28 @@
   {
 
     title <
+      name = Comunidad y Salud ;
+      issn = 1690-3293
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1690-3293
+
+    au < manifest ; exists ; 2006 ; 4 ; Comunidad y Salud Volume 4 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 5 ; Comunidad y Salud Volume 5 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 6 ; Comunidad y Salud Volume 6 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 7 ; Comunidad y Salud Volume 7 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 8 ; Comunidad y Salud Volume 8 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 9 ; Comunidad y Salud Volume 9 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 10 ; Comunidad y Salud Volume 10 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 11 ; Comunidad y Salud Volume 11 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 12 ; Comunidad y Salud Volume 12 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
       name = Concreto y cemento. Investigación y desarrollo ;
       issn = 2007-3011
     >
@@ -6674,6 +7005,33 @@
     au < manifest ; exists ; 2008 ; 2008 ; Cuadernos de la Facultad de Humanidades y Ciencias Sociales. Universidad Nacional de Jujuy Volume 2008 ; 2008 ; >
     au < manifest ; exists ; 2009 ; 2009 ; Cuadernos de la Facultad de Humanidades y Ciencias Sociales. Universidad Nacional de Jujuy Volume 2009 ; 2009 ; >
     au < manifest ; exists ; 2010 ; 2010 ; Cuadernos de la Facultad de Humanidades y Ciencias Sociales. Universidad Nacional de Jujuy Volume 2010 ; 2010 ; >
+
+  }
+
+  {
+
+    title <
+      name = Cuadernos del Cendes ;
+      issn = 1012-2508
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1012-2508
+
+    au < manifest ; exists ; 2002 ; 19 ; Cuadernos del Cendes Volume 19 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 20 ; Cuadernos del Cendes Volume 20 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 21 ; Cuadernos del Cendes Volume 21 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 22 ; Cuadernos del Cendes Volume 22 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 23 ; Cuadernos del Cendes Volume 23 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 24 ; Cuadernos del Cendes Volume 24 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 25 ; Cuadernos del Cendes Volume 25 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 26 ; Cuadernos del Cendes Volume 26 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 27 ; Cuadernos del Cendes Volume 27 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 28 ; Cuadernos del Cendes Volume 28 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 29 ; Cuadernos del Cendes Volume 29 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 30 ; Cuadernos del Cendes Volume 30 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 31 ; Cuadernos del Cendes Volume 31 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 32 ; Cuadernos del Cendes Volume 32 ; 2015 ; >
 
   }
 
@@ -8102,6 +8460,24 @@
   {
 
     title <
+      name = Educere ;
+      issn = 1316-4910
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1316-4910
+
+    au < manifest ; exists ; 2005 ; 9 ; Educere Volume 9 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 10 ; Educere Volume 10 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 11 ; Educere Volume 11 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 12 ; Educere Volume 12 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 13 ; Educere Volume 13 ; 2009 ; >
+
+  }
+
+  {
+
+    title <
       name = EDUMECENTRO ;
       eissn = 2077-2874
     >
@@ -8412,6 +8788,23 @@
   {
 
     title <
+      name = Enlace ;
+      issn = 1690-7515
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1690-7515
+
+    au < manifest ; exists ; 2006 ; 3 ; Enlace Volume 3 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 4 ; Enlace Volume 4 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 5 ; Enlace Volume 5 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 6 ; Enlace Volume 6 ; 2009 ; >
+
+  }
+
+  {
+
+    title <
       name = Ensaio: Avaliação e Políticas Públicas em Educação ;
       issn = 0104-4036 ;
       eissn = 1809-4465
@@ -8524,6 +8917,46 @@
 
     au < crawling ; exists ; 2014 ; 23 ; Epidemiologia e Serviços de Saúde Volume 23 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; 24 ; Epidemiologia e Serviços de Saúde Volume 24 ; 2015 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = EPISTEME ;
+      issn = 0798-4324
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0798-4324
+
+    au < manifest ; exists ; 2005 ; 25 ; EPISTEME Volume 25 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 26 ; EPISTEME Volume 26 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 27 ; EPISTEME Volume 27 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 28 ; EPISTEME Volume 28 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 29 ; EPISTEME Volume 29 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 30 ; EPISTEME Volume 30 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 31 ; EPISTEME Volume 31 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 32 ; EPISTEME Volume 32 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 33 ; EPISTEME Volume 33 ; 2013 ; >
+
+  }
+
+  {
+
+    title <
+      name = Ernstia ;
+      issn = 0252-8274
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0252-8274
+
+    au < manifest ; exists ; 2006 ; 16 ; Ernstia Volume 16 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 17 ; Ernstia Volume 17 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 18 ; Ernstia Volume 18 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 19 ; Ernstia Volume 19 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 20 ; Ernstia Volume 20 ; 2010 ; >
 
   }
 
@@ -9786,6 +10219,27 @@
   {
 
     title <
+      name = Frónesis ;
+      issn = 1315-6268
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1315-6268
+
+    au < manifest ; exists ; 2003 ; 10 ; Frónesis Volume 10 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 11 ; Frónesis Volume 11 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 12 ; Frónesis Volume 12 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 13 ; Frónesis Volume 13 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 14 ; Frónesis Volume 14 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 15 ; Frónesis Volume 15 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 16 ; Frónesis Volume 16 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 17 ; Frónesis Volume 17 ; 2010 ; >
+
+  }
+
+  {
+
+    title <
       name = Frontera norte ;
       issn = 0187-7372
     >
@@ -9827,6 +10281,26 @@
   {
 
     title <
+      name = Gaceta Laboral ;
+      issn = 1315-8597
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1315-8597
+
+    au < manifest ; exists ; 2005 ; 11 ; Gaceta Laboral Volume 11 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 12 ; Gaceta Laboral Volume 12 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 13 ; Gaceta Laboral Volume 13 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 14 ; Gaceta Laboral Volume 14 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 15 ; Gaceta Laboral Volume 15 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 16 ; Gaceta Laboral Volume 16 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 17 ; Gaceta Laboral Volume 17 ; 2011 ; >
+
+  }
+
+  {
+
+    title <
       name = Gaceta Médica Boliviana ;
       eissn = 1012-2966
     >
@@ -9845,6 +10319,29 @@
     au < frozen ; exists ; 2013 ; 36 ; Gaceta Médica Boliviana Volume 36 ; 2013 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 37 ; Gaceta Médica Boliviana Volume 37 ; 2014 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; 38 ; Gaceta Médica Boliviana Volume 38 ; 2015 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Gaceta Médica de Caracas ;
+      issn = 0367-4762
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0367-4762
+
+    au < manifest ; exists ; 2001 ; 109 ; Gaceta Médica de Caracas Volume 109 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 110 ; Gaceta Médica de Caracas Volume 110 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 111 ; Gaceta Médica de Caracas Volume 111 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 112 ; Gaceta Médica de Caracas Volume 112 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 113 ; Gaceta Médica de Caracas Volume 113 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 114 ; Gaceta Médica de Caracas Volume 114 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 115 ; Gaceta Médica de Caracas Volume 115 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 116 ; Gaceta Médica de Caracas Volume 116 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 117 ; Gaceta Médica de Caracas Volume 117 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 118 ; Gaceta Médica de Caracas Volume 118 ; 2010 ; >
 
   }
 
@@ -9993,6 +10490,28 @@
 
     au < frozen ; exists ; 2014 ; 21 ; GE-Portuguese Journal of Gastroenterology Volume 21 ; 2014 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; 22 ; GE-Portuguese Journal of Gastroenterology Volume 22 ; 2015 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Gen ;
+      issn = 0016-3503
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0016-3503
+
+    au < manifest ; exists ; 2006 ; 60 ; Gen Volume 60 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 61 ; Gen Volume 61 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 62 ; Gen Volume 62 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 63 ; Gen Volume 63 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 64 ; Gen Volume 64 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 65 ; Gen Volume 65 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 66 ; Gen Volume 66 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 67 ; Gen Volume 67 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 68 ; Gen Volume 68 ; 2014 ; >
 
   }
 
@@ -11318,6 +11837,28 @@
   {
 
     title <
+      name = Interciencia ;
+      issn = 0378-1844
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0378-1844
+
+    au < manifest ; exists ; 2001 ; 26 ; Interciencia Volume 26 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 27 ; Interciencia Volume 27 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 28 ; Interciencia Volume 28 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 29 ; Interciencia Volume 29 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 30 ; Interciencia Volume 30 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 31 ; Interciencia Volume 31 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 32 ; Interciencia Volume 32 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 33 ; Interciencia Volume 33 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 34 ; Interciencia Volume 34 ; 2009 ; >
+
+  }
+
+  {
+
+    title <
       name = Intercom: Revista Brasileira de Ciências da Comunicação ;
       issn = 1809-5844 ;
       eissn = 1980-3508
@@ -11659,6 +12200,33 @@
   {
 
     title <
+      name = Investigación Clínica ;
+      issn = 0535-5133
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0535-5133
+
+    au < manifest ; exists ; 2001 ; 42 ; Investigación Clínica Volume 42 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 43 ; Investigación Clínica Volume 43 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 44 ; Investigación Clínica Volume 44 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 45 ; Investigación Clínica Volume 45 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 46 ; Investigación Clínica Volume 46 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 47 ; Investigación Clínica Volume 47 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 48 ; Investigación Clínica Volume 48 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 49 ; Investigación Clínica Volume 49 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 50 ; Investigación Clínica Volume 50 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 51 ; Investigación Clínica Volume 51 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 52 ; Investigación Clínica Volume 52 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 53 ; Investigación Clínica Volume 53 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 54 ; Investigación Clínica Volume 54 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 55 ; Investigación Clínica Volume 55 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
       name = Investigación económica ;
       issn = 0185-1667
     >
@@ -11824,6 +12392,32 @@
     au < frozen ; exists ; 2013 ; 31 ; Investigación y Educación en Enfermería Volume 31 ; 2013 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2014 ; 32 ; Investigación y Educación en Enfermería Volume 32 ; 2014 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; 33 ; Investigación y Educación en Enfermería Volume 33 ; 2015 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Investigación y Postgrado ;
+      issn = 1316-0087
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1316-0087
+
+    au < manifest ; exists ; 2001 ; 16 ; Investigación y Postgrado Volume 16 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 17 ; Investigación y Postgrado Volume 17 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 18 ; Investigación y Postgrado Volume 18 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 19 ; Investigación y Postgrado Volume 19 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 20 ; Investigación y Postgrado Volume 20 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 21 ; Investigación y Postgrado Volume 21 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 22 ; Investigación y Postgrado Volume 22 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 23 ; Investigación y Postgrado Volume 23 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 24 ; Investigación y Postgrado Volume 24 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 25 ; Investigación y Postgrado Volume 25 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 26 ; Investigación y Postgrado Volume 26 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 27 ; Investigación y Postgrado Volume 27 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 28 ; Investigación y Postgrado Volume 28 ; 2013 ; >
 
   }
 
@@ -12767,6 +13361,29 @@
   {
 
     title <
+      name = Kasmera ;
+      issn = 0075-5222
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0075-5222
+
+    au < manifest ; exists ; 2005 ; 33 ; Kasmera Volume 33 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 34 ; Kasmera Volume 34 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 35 ; Kasmera Volume 35 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 36 ; Kasmera Volume 36 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 37 ; Kasmera Volume 37 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 38 ; Kasmera Volume 38 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 39 ; Kasmera Volume 39 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 40 ; Kasmera Volume 40 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 41 ; Kasmera Volume 41 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 42 ; Kasmera Volume 42 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
       name = Koedoe ;
       issn = 0075-6458 ;
       eissn = 2071-0771
@@ -13182,12 +13799,22 @@
 
     title <
       name = Letras ;
-      eissn = 2071-5072
+      issn = 0459-1283
     >
 
-    param[base_url] = http://www.scielo.org.pe/
-    param[journal_issn] = 2071-5072
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0459-1283
 
+    au < manifest ; exists ; 2005 ; 47 ; Letras Volume 47 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 48 ; Letras Volume 48 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 49 ; Letras Volume 49 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 50 ; Letras Volume 50 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 51 ; Letras Volume 51 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 52 ; Letras Volume 52 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 53 ; Letras Volume 53 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 54 ; Letras Volume 54 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 55 ; Letras Volume 55 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 56 ; Letras Volume 56 ; 2014 ; >
 
   }
 
@@ -14630,6 +15257,28 @@
   {
 
     title <
+      name = Núcleo ;
+      issn = 0798-9784
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0798-9784
+
+    au < manifest ; exists ; 2005 ; 17 ; Núcleo Volume 17 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 18 ; Núcleo Volume 18 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 19 ; Núcleo Volume 19 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 20 ; Núcleo Volume 20 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 21 ; Núcleo Volume 21 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 22 ; Núcleo Volume 22 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 23 ; Núcleo Volume 23 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 24 ; Núcleo Volume 24 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 25 ; Núcleo Volume 25 ; 2013 ; >
+
+  }
+
+  {
+
+    title <
       name = Nucleus ;
       issn = 0864-084X ;
       eissn = 2075-5635
@@ -14834,6 +15483,26 @@
     au < frozen ; exists ; 2013 ; 80 ; Onderstepoort Journal of Veterinary Research Volume 80 ; 2013 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2014 ; 81 ; Onderstepoort Journal of Veterinary Research Volume 81 ; 2014 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; 82 ; Onderstepoort Journal of Veterinary Research Volume 82 ; 2015 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Opción ;
+      issn = 1012-1587
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1012-1587
+
+    au < manifest ; exists ; 2003 ; 19 ; Opción Volume 19 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 20 ; Opción Volume 20 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 21 ; Opción Volume 21 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 22 ; Opción Volume 22 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 23 ; Opción Volume 23 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 24 ; Opción Volume 24 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 25 ; Opción Volume 25 ; 2009 ; >
 
   }
 
@@ -15197,6 +15866,29 @@
 
     au < crawling ; exists ; 2014 ; 6 ; Papers in physics Volume 6 ; 2014 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 7 ; Papers in physics Volume 7 ; 2015 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Paradígma ;
+      issn = 1011-2251
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1011-2251
+
+    au < manifest ; exists ; 2005 ; 26 ; Paradígma Volume 26 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 27 ; Paradígma Volume 27 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 28 ; Paradígma Volume 28 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 29 ; Paradígma Volume 29 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 30 ; Paradígma Volume 30 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 31 ; Paradígma Volume 31 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 32 ; Paradígma Volume 32 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 33 ; Paradígma Volume 33 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 34 ; Paradígma Volume 34 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 35 ; Paradígma Volume 35 ; 2014 ; >
 
   }
 
@@ -19743,6 +20435,24 @@
   {
 
     title <
+      name = Revista Científica ;
+      issn = 0798-2259
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0798-2259
+
+    au < manifest ; exists ; 2006 ; 16 ; Revista Científica Volume 16 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 17 ; Revista Científica Volume 17 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 18 ; Revista Científica Volume 18 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 19 ; Revista Científica Volume 19 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 20 ; Revista Científica Volume 20 ; 2010 ; >
+
+  }
+
+  {
+
+    title <
       name = Revista Científica Ciencia Médica ;
       issn = 2077-3323 ;
       eissn = 1817-7433
@@ -21683,6 +22393,25 @@
   {
 
     title <
+      name = Revista de Ciencias Sociales (1315-9518) ;
+      issn = 1315-9518
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1315-9518
+
+    au < manifest ; exists ; 2005 ; 11 ; Revista de Ciencias Sociales (1315-9518) Volume 11 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 12 ; Revista de Ciencias Sociales (1315-9518) Volume 12 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 13 ; Revista de Ciencias Sociales (1315-9518) Volume 13 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 14 ; Revista de Ciencias Sociales (1315-9518) Volume 14 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 15 ; Revista de Ciencias Sociales (1315-9518) Volume 15 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 16 ; Revista de Ciencias Sociales (1315-9518) Volume 16 ; 2010 ; >
+
+  }
+
+  {
+
+    title <
       name = Revista de Ciencia y Tecnología ;
       eissn = 1851-7587
     >
@@ -22081,6 +22810,26 @@
   {
 
     title <
+      name = Revista de Filosofía (0798-1171) ;
+      issn = 0798-1171
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0798-1171
+
+    au < manifest ; exists ; 2003 ; 21 ; Revista de Filosofía (0798-1171) Volume 21 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 22 ; Revista de Filosofía (0798-1171) Volume 22 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 23 ; Revista de Filosofía (0798-1171) Volume 23 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 24 ; Revista de Filosofía (0798-1171) Volume 24 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 25 ; Revista de Filosofía (0798-1171) Volume 25 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 26 ; Revista de Filosofía (0798-1171) Volume 26 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 27 ; Revista de Filosofía (0798-1171) Volume 27 ; 2009 ; >
+
+  }
+
+  {
+
+    title <
       name = Revista de filosofía open insight ;
       issn = 2007-2406 ;
       eissn = 2395-8936
@@ -22238,6 +22987,28 @@
     au < frozen ; exists ; 2013 ; 2013 ; Revista de Ingeniería Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2014 ; 2014 ; Revista de Ingeniería Volume 2014 ; 2014 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2015 ; 2015 ; Revista de Ingeniería Volume 2015 ; 2015 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Revista de Investigación ;
+      issn = 1010-2914
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1010-2914
+
+    au < manifest ; exists ; 2007 ; 31 ; Revista de Investigación Volume 31 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 32 ; Revista de Investigación Volume 32 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 33 ; Revista de Investigación Volume 33 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 34 ; Revista de Investigación Volume 34 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 35 ; Revista de Investigación Volume 35 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 36 ; Revista de Investigación Volume 36 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 37 ; Revista de Investigación Volume 37 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 38 ; Revista de Investigación Volume 38 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 39 ; Revista de Investigación Volume 39 ; 2015 ; >
 
   }
 
@@ -22467,12 +23238,20 @@
 
     title <
       name = Revista de la Facultad de Agronomía ;
-      eissn = 1669-9513
+      issn = 0378-7818
     >
 
-    param[base_url] = http://www.scielo.org.ar/
-    param[journal_issn] = 1669-9513
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0378-7818
 
+    au < manifest ; exists ; 2002 ; 19 ; Revista de la Facultad de Agronomía Volume 19 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 20 ; Revista de la Facultad de Agronomía Volume 20 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 21 ; Revista de la Facultad de Agronomía Volume 21 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 22 ; Revista de la Facultad de Agronomía Volume 22 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 23 ; Revista de la Facultad de Agronomía Volume 23 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 24 ; Revista de la Facultad de Agronomía Volume 24 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 25 ; Revista de la Facultad de Agronomía Volume 25 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 26 ; Revista de la Facultad de Agronomía Volume 26 ; 2009 ; >
 
   }
 
@@ -22497,6 +23276,29 @@
   {
 
     title <
+      name = Revista de la Facultad de Ciencias Veterinarias ;
+      issn = 0258-6576
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0258-6576
+
+    au < manifest ; exists ; 2005 ; 46 ; Revista de la Facultad de Ciencias Veterinarias Volume 46 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 47 ; Revista de la Facultad de Ciencias Veterinarias Volume 47 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 48 ; Revista de la Facultad de Ciencias Veterinarias Volume 48 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 49 ; Revista de la Facultad de Ciencias Veterinarias Volume 49 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 50 ; Revista de la Facultad de Ciencias Veterinarias Volume 50 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 51 ; Revista de la Facultad de Ciencias Veterinarias Volume 51 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 52 ; Revista de la Facultad de Ciencias Veterinarias Volume 52 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 53 ; Revista de la Facultad de Ciencias Veterinarias Volume 53 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 54 ; Revista de la Facultad de Ciencias Veterinarias Volume 54 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 55 ; Revista de la Facultad de Ciencias Veterinarias Volume 55 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
       name = Revista de la Facultad de Derecho y Ciencias Políticas ;
       issn = 0120-3886
     >
@@ -22508,6 +23310,29 @@
     au < manifest ; exists ; 2012 ; 42 ; Revista de la Facultad de Derecho y Ciencias Políticas Volume 42 ; 2012 ; >
     au < crawling ; exists ; 2013 ; 43 ; Revista de la Facultad de Derecho y Ciencias Políticas Volume 43 ; 2013 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 44 ; Revista de la Facultad de Derecho y Ciencias Políticas Volume 44 ; 2014 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Revista de la Facultad de Ingeniería Universidad Central de Venezuela ;
+      issn = 0798-4065
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0798-4065
+
+    au < manifest ; exists ; 2005 ; 20 ; Revista de la Facultad de Ingeniería Universidad Central de Venezuela Volume 20 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 21 ; Revista de la Facultad de Ingeniería Universidad Central de Venezuela Volume 21 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 22 ; Revista de la Facultad de Ingeniería Universidad Central de Venezuela Volume 22 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 23 ; Revista de la Facultad de Ingeniería Universidad Central de Venezuela Volume 23 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 24 ; Revista de la Facultad de Ingeniería Universidad Central de Venezuela Volume 24 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 25 ; Revista de la Facultad de Ingeniería Universidad Central de Venezuela Volume 25 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 26 ; Revista de la Facultad de Ingeniería Universidad Central de Venezuela Volume 26 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 27 ; Revista de la Facultad de Ingeniería Universidad Central de Venezuela Volume 27 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 28 ; Revista de la Facultad de Ingeniería Universidad Central de Venezuela Volume 28 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 29 ; Revista de la Facultad de Ingeniería Universidad Central de Venezuela Volume 29 ; 2014 ; >
 
   }
 
@@ -22532,6 +23357,30 @@
     au < frozen ; exists ; 2013 ; 61 ; Revista de la Facultad de Medicina (0120-0011) Volume 61 ; 2013 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2014 ; 62 ; Revista de la Facultad de Medicina (0120-0011) Volume 62 ; 2014 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; 63 ; Revista de la Facultad de Medicina (0120-0011) Volume 63 ; 2015 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Revista de la Facultad de Medicina (0798-0469) ;
+      issn = 0798-0469
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0798-0469
+
+    au < manifest ; exists ; 2000 ; 23 ; Revista de la Facultad de Medicina (0798-0469) Volume 23 ; 2000 ; >
+    au < manifest ; exists ; 2001 ; 24 ; Revista de la Facultad de Medicina (0798-0469) Volume 24 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 25 ; Revista de la Facultad de Medicina (0798-0469) Volume 25 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 26 ; Revista de la Facultad de Medicina (0798-0469) Volume 26 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 27 ; Revista de la Facultad de Medicina (0798-0469) Volume 27 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 28 ; Revista de la Facultad de Medicina (0798-0469) Volume 28 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 29 ; Revista de la Facultad de Medicina (0798-0469) Volume 29 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 30 ; Revista de la Facultad de Medicina (0798-0469) Volume 30 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 31 ; Revista de la Facultad de Medicina (0798-0469) Volume 31 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 32 ; Revista de la Facultad de Medicina (0798-0469) Volume 32 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 33 ; Revista de la Facultad de Medicina (0798-0469) Volume 33 ; 2010 ; >
 
   }
 
@@ -22695,6 +23544,34 @@
   {
 
     title <
+      name = Revista de la Sociedad Venezolana de Microbiología ;
+      issn = 1315-2556
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1315-2556
+
+    au < manifest ; exists ; 2000 ; 20 ; Revista de la Sociedad Venezolana de Microbiología Volume 20 ; 2000 ; >
+    au < manifest ; exists ; 2001 ; 21 ; Revista de la Sociedad Venezolana de Microbiología Volume 21 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 22 ; Revista de la Sociedad Venezolana de Microbiología Volume 22 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 23 ; Revista de la Sociedad Venezolana de Microbiología Volume 23 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 24 ; Revista de la Sociedad Venezolana de Microbiología Volume 24 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 25 ; Revista de la Sociedad Venezolana de Microbiología Volume 25 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 26 ; Revista de la Sociedad Venezolana de Microbiología Volume 26 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 27 ; Revista de la Sociedad Venezolana de Microbiología Volume 27 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 28 ; Revista de la Sociedad Venezolana de Microbiología Volume 28 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 29 ; Revista de la Sociedad Venezolana de Microbiología Volume 29 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 30 ; Revista de la Sociedad Venezolana de Microbiología Volume 30 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 31 ; Revista de la Sociedad Venezolana de Microbiología Volume 31 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 32 ; Revista de la Sociedad Venezolana de Microbiología Volume 32 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 33 ; Revista de la Sociedad Venezolana de Microbiología Volume 33 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 34 ; Revista de la Sociedad Venezolana de Microbiología Volume 34 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
       name = Revista de la Unión Matemática Argentina ;
       issn = 0041-6932 ;
       eissn = 1669-9637
@@ -22745,6 +23622,31 @@
     au < manifest ; exists ; 2005 ; 18 ; Revista del Instituto Nacional de Enfermedades Respiratorias Volume 18 ; 2005 ; >
     au < manifest ; exists ; 2006 ; 19 ; Revista del Instituto Nacional de Enfermedades Respiratorias Volume 19 ; 2006 ; >
     au < manifest ; exists ; 2007 ; 20 ; Revista del Instituto Nacional de Enfermedades Respiratorias Volume 20 ; 2007 ; >
+
+  }
+
+  {
+
+    title <
+      name = Revista del Instituto Nacional de Higiene Rafael Rangel ;
+      issn = 0798-0477
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0798-0477
+
+    au < manifest ; exists ; 2003 ; 34 ; Revista del Instituto Nacional de Higiene Rafael Rangel Volume 34 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 35 ; Revista del Instituto Nacional de Higiene Rafael Rangel Volume 35 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 36 ; Revista del Instituto Nacional de Higiene Rafael Rangel Volume 36 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 37 ; Revista del Instituto Nacional de Higiene Rafael Rangel Volume 37 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 38 ; Revista del Instituto Nacional de Higiene Rafael Rangel Volume 38 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 39 ; Revista del Instituto Nacional de Higiene Rafael Rangel Volume 39 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 40 ; Revista del Instituto Nacional de Higiene Rafael Rangel Volume 40 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 41 ; Revista del Instituto Nacional de Higiene Rafael Rangel Volume 41 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 42 ; Revista del Instituto Nacional de Higiene Rafael Rangel Volume 42 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 43 ; Revista del Instituto Nacional de Higiene Rafael Rangel Volume 43 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 44 ; Revista del Instituto Nacional de Higiene Rafael Rangel Volume 44 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 45 ; Revista del Instituto Nacional de Higiene Rafael Rangel Volume 45 ; 2014 ; >
 
   }
 
@@ -22908,6 +23810,33 @@
   {
 
     title <
+      name = Revista de Obstetricia y Ginecología de Venezuela ;
+      issn = 0048-7732
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0048-7732
+
+    au < manifest ; exists ; 2001 ; 61 ; Revista de Obstetricia y Ginecología de Venezuela Volume 61 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 62 ; Revista de Obstetricia y Ginecología de Venezuela Volume 62 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 63 ; Revista de Obstetricia y Ginecología de Venezuela Volume 63 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 64 ; Revista de Obstetricia y Ginecología de Venezuela Volume 64 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 65 ; Revista de Obstetricia y Ginecología de Venezuela Volume 65 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 66 ; Revista de Obstetricia y Ginecología de Venezuela Volume 66 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 67 ; Revista de Obstetricia y Ginecología de Venezuela Volume 67 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 68 ; Revista de Obstetricia y Ginecología de Venezuela Volume 68 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 69 ; Revista de Obstetricia y Ginecología de Venezuela Volume 69 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 70 ; Revista de Obstetricia y Ginecología de Venezuela Volume 70 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 71 ; Revista de Obstetricia y Ginecología de Venezuela Volume 71 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 72 ; Revista de Obstetricia y Ginecología de Venezuela Volume 72 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 73 ; Revista de Obstetricia y Ginecología de Venezuela Volume 73 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 74 ; Revista de Obstetricia y Ginecología de Venezuela Volume 74 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
       name = Revista de Odontologia da UNESP ;
       eissn = 1807-2577
     >
@@ -22974,6 +23903,28 @@
     au < frozen ; exists ; 2013 ; 73 ; Revista de otorrinolaringología y cirugía de cabeza y cuello Volume 73 ; 2013 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2014 ; 74 ; Revista de otorrinolaringología y cirugía de cabeza y cuello Volume 74 ; 2014 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2015 ; 75 ; Revista de otorrinolaringología y cirugía de cabeza y cuello Volume 75 ; 2015 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Revista de Pedagogía ;
+      issn = 0798-9792
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0798-9792
+
+    au < manifest ; exists ; 2002 ; 23 ; Revista de Pedagogía Volume 23 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 24 ; Revista de Pedagogía Volume 24 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 25 ; Revista de Pedagogía Volume 25 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 26 ; Revista de Pedagogía Volume 26 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 27 ; Revista de Pedagogía Volume 27 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 28 ; Revista de Pedagogía Volume 28 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 29 ; Revista de Pedagogía Volume 29 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 30 ; Revista de Pedagogía Volume 30 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 31 ; Revista de Pedagogía Volume 31 ; 2010 ; >
 
   }
 
@@ -24549,6 +25500,34 @@
   {
 
     title <
+      name = Revista Latinoamericana de Metalurgia y Materiales ;
+      issn = 0255-6952
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0255-6952
+
+    au < manifest ; exists ; 2001 ; 21 ; Revista Latinoamericana de Metalurgia y Materiales Volume 21 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 22 ; Revista Latinoamericana de Metalurgia y Materiales Volume 22 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 23 ; Revista Latinoamericana de Metalurgia y Materiales Volume 23 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 24 ; Revista Latinoamericana de Metalurgia y Materiales Volume 24 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 25 ; Revista Latinoamericana de Metalurgia y Materiales Volume 25 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 26 ; Revista Latinoamericana de Metalurgia y Materiales Volume 26 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 27 ; Revista Latinoamericana de Metalurgia y Materiales Volume 27 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 28 ; Revista Latinoamericana de Metalurgia y Materiales Volume 28 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 29 ; Revista Latinoamericana de Metalurgia y Materiales Volume 29 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 30 ; Revista Latinoamericana de Metalurgia y Materiales Volume 30 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 31 ; Revista Latinoamericana de Metalurgia y Materiales Volume 31 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 32 ; Revista Latinoamericana de Metalurgia y Materiales Volume 32 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 33 ; Revista Latinoamericana de Metalurgia y Materiales Volume 33 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 34 ; Revista Latinoamericana de Metalurgia y Materiales Volume 34 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 35 ; Revista Latinoamericana de Metalurgia y Materiales Volume 35 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
       name = Revista Latinoamericana de Psicología ;
       issn = 0120-0534
     >
@@ -25870,6 +26849,28 @@
   {
 
     title <
+      name = Revista Técnica de la Facultad de Ingeniería Universidad del Zulia ;
+      issn = 0254-0770
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0254-0770
+
+    au < manifest ; exists ; 2002 ; 25 ; Revista Técnica de la Facultad de Ingeniería Universidad del Zulia Volume 25 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 26 ; Revista Técnica de la Facultad de Ingeniería Universidad del Zulia Volume 26 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 27 ; Revista Técnica de la Facultad de Ingeniería Universidad del Zulia Volume 27 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 28 ; Revista Técnica de la Facultad de Ingeniería Universidad del Zulia Volume 28 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 29 ; Revista Técnica de la Facultad de Ingeniería Universidad del Zulia Volume 29 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 30 ; Revista Técnica de la Facultad de Ingeniería Universidad del Zulia Volume 30 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 31 ; Revista Técnica de la Facultad de Ingeniería Universidad del Zulia Volume 31 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 32 ; Revista Técnica de la Facultad de Ingeniería Universidad del Zulia Volume 32 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 33 ; Revista Técnica de la Facultad de Ingeniería Universidad del Zulia Volume 33 ; 2010 ; >
+
+  }
+
+  {
+
+    title <
       name = Revista Tecnología en Marcha ;
       eissn = 0379-3962
     >
@@ -25996,6 +26997,108 @@
     au < frozen ; exists ; 2013 ; 22 ; Revista Uruguaya de Ciencia Política Volume 22 ; 2013 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2014 ; 23 ; Revista Uruguaya de Ciencia Política Volume 23 ; 2014 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2015 ; 24 ; Revista Uruguaya de Ciencia Política Volume 24 ; 2015 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Revista Venezolana de Economía y Ciencias Sociales ;
+      issn = 2003-0507 ;
+      eissn = 1315-6411
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1315-6411
+
+    au < manifest ; exists ; 2005 ; 11 ; Revista Venezolana de Economía y Ciencias Sociales Volume 11 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 12 ; Revista Venezolana de Economía y Ciencias Sociales Volume 12 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 13 ; Revista Venezolana de Economía y Ciencias Sociales Volume 13 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 14 ; Revista Venezolana de Economía y Ciencias Sociales Volume 14 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 15 ; Revista Venezolana de Economía y Ciencias Sociales Volume 15 ; 2009 ; >
+
+  }
+
+  {
+
+    title <
+      name = Revista Venezolana de Endocrinología y Metabolismo ;
+      issn = 1690-3110
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1690-3110
+
+    au < manifest ; exists ; 2003 ; 1 ; Revista Venezolana de Endocrinología y Metabolismo Volume 1 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 2 ; Revista Venezolana de Endocrinología y Metabolismo Volume 2 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 3 ; Revista Venezolana de Endocrinología y Metabolismo Volume 3 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 4 ; Revista Venezolana de Endocrinología y Metabolismo Volume 4 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 5 ; Revista Venezolana de Endocrinología y Metabolismo Volume 5 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 6 ; Revista Venezolana de Endocrinología y Metabolismo Volume 6 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 7 ; Revista Venezolana de Endocrinología y Metabolismo Volume 7 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 8 ; Revista Venezolana de Endocrinología y Metabolismo Volume 8 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 9 ; Revista Venezolana de Endocrinología y Metabolismo Volume 9 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 10 ; Revista Venezolana de Endocrinología y Metabolismo Volume 10 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 11 ; Revista Venezolana de Endocrinología y Metabolismo Volume 11 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 12 ; Revista Venezolana de Endocrinología y Metabolismo Volume 12 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 13 ; Revista Venezolana de Endocrinología y Metabolismo Volume 13 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
+      name = Revista Venezolana de Estudios de la Mujer ;
+      issn = 1316-3701
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1316-3701
+
+    au < manifest ; exists ; 2006 ; 11 ; Revista Venezolana de Estudios de la Mujer Volume 11 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 12 ; Revista Venezolana de Estudios de la Mujer Volume 12 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 13 ; Revista Venezolana de Estudios de la Mujer Volume 13 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 14 ; Revista Venezolana de Estudios de la Mujer Volume 14 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 15 ; Revista Venezolana de Estudios de la Mujer Volume 15 ; 2010 ; >
+
+  }
+
+  {
+
+    title <
+      name = Revista Venezolana de Gerencia ;
+      issn = 1315-9984
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1315-9984
+
+    au < manifest ; exists ; 2005 ; 10 ; Revista Venezolana de Gerencia Volume 10 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 11 ; Revista Venezolana de Gerencia Volume 11 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 12 ; Revista Venezolana de Gerencia Volume 12 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 13 ; Revista Venezolana de Gerencia Volume 13 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 14 ; Revista Venezolana de Gerencia Volume 14 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 15 ; Revista Venezolana de Gerencia Volume 15 ; 2010 ; >
+
+  }
+
+  {
+
+    title <
+      name = Revista Venezolana de Oncología ;
+      issn = 0798-0582
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0798-0582
+
+    au < manifest ; exists ; 2005 ; 17 ; Revista Venezolana de Oncología Volume 17 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 18 ; Revista Venezolana de Oncología Volume 18 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 19 ; Revista Venezolana de Oncología Volume 19 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 20 ; Revista Venezolana de Oncología Volume 20 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 21 ; Revista Venezolana de Oncología Volume 21 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 22 ; Revista Venezolana de Oncología Volume 22 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 23 ; Revista Venezolana de Oncología Volume 23 ; 2011 ; >
 
   }
 
@@ -26132,6 +27235,23 @@
   {
 
     title <
+      name = Saber ;
+      issn = 1315-0162 ;
+      eissn = 2343-6468
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1315-0162
+
+    au < manifest ; exists ; 2013 ; 25 ; Saber Volume 25 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 26 ; Saber Volume 26 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 27 ; Saber Volume 27 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
       name = SA Crime Quarterly ;
       issn = 1991-3877 ;
       eissn = 2413-3108
@@ -26210,6 +27330,28 @@
   {
 
     title <
+      name = Salud de los Trabajadores ;
+      issn = 1315-0138
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1315-0138
+
+    au < manifest ; exists ; 2006 ; 14 ; Salud de los Trabajadores Volume 14 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 15 ; Salud de los Trabajadores Volume 15 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 16 ; Salud de los Trabajadores Volume 16 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 17 ; Salud de los Trabajadores Volume 17 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 18 ; Salud de los Trabajadores Volume 18 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 19 ; Salud de los Trabajadores Volume 19 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 20 ; Salud de los Trabajadores Volume 20 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 21 ; Salud de los Trabajadores Volume 21 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 22 ; Salud de los Trabajadores Volume 22 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
       name = Salud mental ;
       issn = 0185-3325
     >
@@ -26253,6 +27395,24 @@
     au < crawling ; exists ; 2013 ; 55 ; Salud Pública de México Volume 55 ; 2013 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 56 ; Salud Pública de México Volume 56 ; 2014 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 57 ; Salud Pública de México Volume 57 ; 2015 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Salus ;
+      issn = 1316-7138
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1316-7138
+
+    au < manifest ; exists ; 2011 ; 15 ; Salus Volume 15 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 16 ; Salus Volume 16 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 17 ; Salus Volume 17 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 18 ; Salus Volume 18 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 19 ; Salus Volume 19 ; 2015 ; >
 
   }
 
@@ -28093,6 +29253,27 @@
   {
 
     title <
+      name = Tiempo y Espacio ;
+      issn = 1315-9496
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1315-9496
+
+    au < manifest ; exists ; 2008 ; 18 ; Tiempo y Espacio Volume 18 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 19 ; Tiempo y Espacio Volume 19 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 20 ; Tiempo y Espacio Volume 20 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 21 ; Tiempo y Espacio Volume 21 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 22 ; Tiempo y Espacio Volume 22 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 23 ; Tiempo y Espacio Volume 23 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 24 ; Tiempo y Espacio Volume 24 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 25 ; Tiempo y Espacio Volume 25 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
       name = Tinkazos ;
       eissn = 1990-7451
     >
@@ -28604,6 +29785,29 @@
   {
 
     title <
+      name = Universidad, Ciencia y Tecnología ;
+      issn = 1316-4821
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1316-4821
+
+    au < manifest ; exists ; 2005 ; 9 ; Universidad, Ciencia y Tecnología Volume 9 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 10 ; Universidad, Ciencia y Tecnología Volume 10 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 11 ; Universidad, Ciencia y Tecnología Volume 11 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 12 ; Universidad, Ciencia y Tecnología Volume 12 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 13 ; Universidad, Ciencia y Tecnología Volume 13 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 14 ; Universidad, Ciencia y Tecnología Volume 14 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 15 ; Universidad, Ciencia y Tecnología Volume 15 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 16 ; Universidad, Ciencia y Tecnología Volume 16 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 17 ; Universidad, Ciencia y Tecnología Volume 17 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 18 ; Universidad, Ciencia y Tecnología Volume 18 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
       name = Universidad de La Habana ;
       eissn = 0253-9276
     >
@@ -28782,6 +29986,25 @@
     au < crawling ; exists ; 2013 ; 5 ; urbe. Revista Brasileira de Gestão Urbana Volume 5 ; 2013 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2014 ; 6 ; urbe. Revista Brasileira de Gestão Urbana Volume 6 ; 2014 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; 7 ; urbe. Revista Brasileira de Gestão Urbana Volume 7 ; 2015 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Utopìa y Praxis Latinoamericana ;
+      issn = 1315-5216
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 1315-5216
+
+    au < manifest ; exists ; 2005 ; 10 ; Utopìa y Praxis Latinoamericana Volume 10 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 11 ; Utopìa y Praxis Latinoamericana Volume 11 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 12 ; Utopìa y Praxis Latinoamericana Volume 12 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 13 ; Utopìa y Praxis Latinoamericana Volume 13 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 14 ; Utopìa y Praxis Latinoamericana Volume 14 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 15 ; Utopìa y Praxis Latinoamericana Volume 15 ; 2010 ; >
 
   }
 
@@ -29079,6 +30302,32 @@
     au < crawling ; exists ; 2013 ; 30 ; Zoologia (Curitiba) Volume 30 ; 2013 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 31 ; Zoologia (Curitiba) Volume 31 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; 32 ; Zoologia (Curitiba) Volume 32 ; 2015 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Zootecnia Tropical ;
+      issn = 0798-7269
+    >
+
+    param[base_url] = http://www.scielo.org.ve/
+    param[journal_issn] = 0798-7269
+
+    au < manifest ; exists ; 2002 ; 20 ; Zootecnia Tropical Volume 20 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 21 ; Zootecnia Tropical Volume 21 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 22 ; Zootecnia Tropical Volume 22 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 23 ; Zootecnia Tropical Volume 23 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 24 ; Zootecnia Tropical Volume 24 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 25 ; Zootecnia Tropical Volume 25 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 26 ; Zootecnia Tropical Volume 26 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 27 ; Zootecnia Tropical Volume 27 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 28 ; Zootecnia Tropical Volume 28 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 29 ; Zootecnia Tropical Volume 29 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 30 ; Zootecnia Tropical Volume 30 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 31 ; Zootecnia Tropical Volume 31 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 32 ; Zootecnia Tropical Volume 32 ; 2014 ; >
 
   }
 
