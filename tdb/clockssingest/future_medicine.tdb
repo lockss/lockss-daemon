@@ -153,7 +153,7 @@
 
     au < crawling ; exists ; 2012 ; CNS Oncology Volume 1 ; 1 >
     au < crawling ; exists ; 2013 ; CNS Oncology Volume 2 ; 2 >
-    au < finished ; crawling ; 2014 ; CNS Oncology Volume 3 ; 3 >
+    au < finished ; finished ; 2014 ; CNS Oncology Volume 3 ; 3 >
     au < crawling ; exists ; 2015 ; CNS Oncology Volume 4 ; 4 >
     
   }
@@ -169,7 +169,7 @@
 
     au < finished ; crawling ; 2012 ; Colorectal Cancer Volume 1 ; 1 >
     au < crawling ; exists ; 2013 ; Colorectal Cancer Volume 2 ; 2 >
-    au < finished ; crawling ; 2014 ; Colorectal Cancer Volume 3 ; 3 >
+    au < finished ; finished ; 2014 ; Colorectal Cancer Volume 3 ; 3 >
     au < crawling ; exists ; 2015 ; Colorectal Cancer Volume 4 ; 4 >
     
   }
@@ -273,7 +273,7 @@
     au < manifest ; exists ; 2009 ; Future Neurology Volume 4 ; 4 >
     au < manifest ; exists ; 2010 ; Future Neurology Volume 5 ; 5 >
     au < manifest ; exists ; 2011 ; Future Neurology Volume 6 ; 6 >
-    au < finished ; crawling ; 2012 ; Future Neurology Volume 7 ; 7 >
+    au < finished ; finished ; 2012 ; Future Neurology Volume 7 ; 7 >
     au < crawling ; exists ; 2013 ; Future Neurology Volume 8 ; 8 >
     au < crawling ; exists ; 2014 ; Future Neurology Volume 9 ; 9 >
     au < crawling ; exists ; 2015 ; Future Neurology Volume 10 ; 10 >
@@ -320,7 +320,7 @@
     au < manifest ; exists ; 2009 ; Future Virology Volume 4 ; 4 >
     au < manifest ; exists ; 2010 ; Future Virology Volume 5 ; 5 >
     au < manifest ; exists ; 2011 ; Future Virology Volume 6 ; 6 >
-    au < finished ; crawling ; 2012 ; Future Virology Volume 7 ; 7 >
+    au < finished ; finished ; 2012 ; Future Virology Volume 7 ; 7 >
     au < ingNotReady ; exists ; 2013 ; Future Virology Volume 8 ; 8 >
     au < finished ; crawling ; 2014 ; Future Virology Volume 9 ; 9 >
     au < crawling ; exists ; 2015 ; Future Virology Volume 10 ; 10 >
@@ -524,7 +524,7 @@
     
     param[journal_id] = lmt
 
-    au < finished ; crawling ; 2012 ; Lung Cancer Management Volume 1 ; 1 >
+    au < finished ; finished ; 2012 ; Lung Cancer Management Volume 1 ; 1 >
     au < crawling ; exists ; 2013 ; Lung Cancer Management Volume 2 ; 2 >
     au < crawling ; exists ; 2014 ; Lung Cancer Management Volume 3 ; 3 >
     au < crawling ; exists ; 2015 ; Lung Cancer Management Volume 4 ; 4 >
@@ -686,7 +686,7 @@
     au < manifest ; exists ; 2009 ; Pharmacogenomics Volume 10 ; 10 >
     au < manifest ; exists ; 2010 ; Pharmacogenomics Volume 11 ; 11 >
     au < manifest ; exists ; 2011 ; Pharmacogenomics Volume 12 ; 12 >
-    au < finished ; crawling ; 2012 ; Pharmacogenomics Volume 13 ; 13 >
+    au < finished ; finished ; 2012 ; Pharmacogenomics Volume 13 ; 13 >
     au < crawling ; exists ; 2013 ; Pharmacogenomics Volume 14 ; 14 >
     au < crawling ; exists ; 2014 ; Pharmacogenomics Volume 15 ; 15 >
     au < crawling ; exists ; 2015 ; Pharmacogenomics Volume 16 ; 16 >
@@ -734,7 +734,7 @@
     au < manifest ; exists ; 2011 ; Women's Health Volume 7 ; 7 >
     au < crawling ; exists ; 2012 ; Women's Health Volume 8 ; 8 >
     au < ingNotReady ; exists ; 2013 ; Women's Health Volume 9 ; 9 >
-    au < finished ; crawling ; 2014 ; Women's Health Volume 10 ; 10 >
+    au < finished ; finished ; 2014 ; Women's Health Volume 10 ; 10 >
     au < crawling ; exists ; 2015 ; Women's Health Volume 11 ; 11 >
     
   }

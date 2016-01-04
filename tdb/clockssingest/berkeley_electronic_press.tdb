@@ -39,10 +39,10 @@
     param[journal_section] = advances
     comment[merged] = with 1538-0629, 1538-0645 and 1538-0653 into 1555-0494 in 2007
 
-    au < down ; frozen ; 2001 ; Advances in Economic Analysis & Policy Volume 1 ; 1 >
+    au < down ; finished ; 2001 ; Advances in Economic Analysis & Policy Volume 1 ; 1 >
     au < down ; crawling ; 2002 ; Advances in Economic Analysis & Policy Volume 2 ; 2 >
     au < zapped ; finished ; 2003 ; Advances in Economic Analysis & Policy Volume 3 ; 3 >
-    au < down ; crawling ; 2004 ; Advances in Economic Analysis & Policy Volume 4 ; 4 >
+    au < down ; finished ; 2004 ; Advances in Economic Analysis & Policy Volume 4 ; 4 >
     au < zapped ; finished ; 2005 ; Advances in Economic Analysis & Policy Volume 5 ; 5 >
     au < zapped ; finished ; 2006 ; Advances in Economic Analysis & Policy Volume 6 ; 6 >    
 
@@ -61,7 +61,7 @@
     param[journal_section] = advances
     comment[merged] = with 1534-5998, 1534-6005 and 1534-0621 into 1555-0486 in 2007
 
-    au < down ; crawling ; 2001 ; Advances in Macroeconomics Volume 1 ; 1 >
+    au < down ; finished ; 2001 ; Advances in Macroeconomics Volume 1 ; 1 >
     au < down ; crawling ; 2002 ; Advances in Macroeconomics Volume 2 ; 2 >
     au < zapped ; finished ; 2003 ; Advances in Macroeconomics Volume 3 ; 3 >
     au < zapped ; finished ; 2004 ; Advances in Macroeconomics Volume 4 ; 4 >
@@ -276,7 +276,7 @@
     au < doesNotExist ; doesNotExist ; 1999 ; Business and Politics Volume 1 ; 1 >
     au < zapped ; finished ; 2000 ; Business and Politics Volume 2 ; 2 >
     au < down ; crawling ; 2001 ; Business and Politics Volume 3 ; 3 >
-    au < down ; frozen ; 2002 ; Business and Politics Volume 4 ; 4 >
+    au < down ; finished ; 2002 ; Business and Politics Volume 4 ; 4 >
     au < down ; finished ; 2003 ; Business and Politics Volume 5 ; 5 >
     au < zapped ; finished ; 2004 ; Business and Politics Volume 6 ; 6 >
     au < zapped ; finished ; 2005 ; Business and Politics Volume 7 ; 7 >
@@ -404,7 +404,7 @@
     comment[merged] = with 1534-5955, 1534-5963 and 1534-598X into 1555-0478 in 2007
 
     au < zapped ; finished ; 2001 ; Contributions to Theoretical Economics Volume 1 ; 1 >    
-    au < down ; crawling ; 2002 ; Contributions to Theoretical Economics Volume 2 ; 2 >
+    au < down ; finished ; 2002 ; Contributions to Theoretical Economics Volume 2 ; 2 >
     au < zapped ; finished ; 2003 ; Contributions to Theoretical Economics Volume 3 ; 3 >    
     au < zapped ; finished ; 2004 ; Contributions to Theoretical Economics Volume 4 ; 4 >
     au < down ; finished ; 2005 ; Contributions to Theoretical Economics Volume 5 ; 5 >    
@@ -637,7 +637,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijb
 
-    au < down ; crawling ; 2005 ; The International Journal of Biostatistics Volume 1 ; 1 >
+    au < down ; finished ; 2005 ; The International Journal of Biostatistics Volume 1 ; 1 >
     au < zapped ; finished ; 2006 ; The International Journal of Biostatistics Volume 2 ; 2 >
     au < zapped ; finished ; 2007 ; The International Journal of Biostatistics Volume 3 ; 3 >
     au < zapped ; finished ; 2008 ; The International Journal of Biostatistics Volume 4 ; 4 >
@@ -1231,7 +1231,7 @@
     au < down ; finished ; 2007 ; Peace Economics, Peace Science and Public Policy Volume 13 ; 13 >
     au < zapped ; finished ; 2008 ; Peace Economics, Peace Science and Public Policy Volume 14 ; 14 >
     au < zapped ; finished ; 2009 ; Peace Economics, Peace Science and Public Policy Volume 15 ; 15 >
-    au < down ; frozen ; 2010 ; Peace Economics, Peace Science and Public Policy Volume 16 ; 16 >
+    au < down ; finished ; 2010 ; Peace Economics, Peace Science and Public Policy Volume 16 ; 16 >
     au < zapped ; finished ; 2011 ; Peace Economics, Peace Science and Public Policy Volume 17 ; 17 >
 
   }
@@ -1586,7 +1586,7 @@
     param[journal_section] = topics
     comment[merged] = with 1534-6005, 1534-6013, 1534-6021 and into 1555-0486 in 2007
 
-    au < down ; crawling ; 2001 ; Topics in Macroeconomics Volume 1 ; 1 >
+    au < down ; finished ; 2001 ; Topics in Macroeconomics Volume 1 ; 1 >
     au < down ; crawling ; 2002 ; Topics in Macroeconomics Volume 2 ; 2 >
     au < zapped ; finished ; 2003 ; Topics in Macroeconomics Volume 3 ; 3 >
     au < zapped ; finished ; 2004 ; Topics in Macroeconomics Volume 4 ; 4 >

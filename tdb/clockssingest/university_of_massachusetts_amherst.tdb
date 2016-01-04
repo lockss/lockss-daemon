@@ -57,7 +57,7 @@
     param[journal_abbr] = cpo
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < finished ; crawling ; 2012 ; communication +1 Volume 1 ; 1 >
+    au < finished ; finished ; 2012 ; communication +1 Volume 1 ; 1 >
     au < finished ; finished ; 2013 ; communication +1 Volume 2 ; 2 >
     au < finished ; finished ; 2014 ; communication +1 Volume 3 ; 3 >
     au < crawling ; exists ; 2015 ; communication +1 Volume 4 ; 4 >
@@ -231,7 +231,7 @@
     au < manifest ; exists ; 2009 ; The Journal of Hospitality Financial Management Volume 17 ; 17 >
     au < manifest ; exists ; 2010 ; The Journal of Hospitality Financial Management Volume 18 ; 18 >
     au < manifest ; exists ; 2011 ; The Journal of Hospitality Financial Management Volume 19 ; 19 >
-    au < finished ; crawling ; 2012 ; The Journal of Hospitality Financial Management Volume 20 [Dig Commons] ; 20 >
+    au < finished ; finished ; 2012 ; The Journal of Hospitality Financial Management Volume 20 [Dig Commons] ; 20 >
     au < expected ; exists ; 2015 ; The Journal of Hospitality Financial Management Volume 21 [Dig Commons] ; 21 >
     
   }
