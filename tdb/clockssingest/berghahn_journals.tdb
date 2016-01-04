@@ -161,7 +161,7 @@
     au < manifest ; exists ; 2009 ; Critical Survey Volume 21 ; 21 >
     au < manifest ; exists ; 2010 ; Critical Survey Volume 22 ; 22 >
     au < crawling ; exists ; 2011 ; Critical Survey Volume 23 ; 23 >
-    au < finished ; frozen ; 2012 ; Critical Survey Volume 24 ; 24 >
+    au < finished ; finished ; 2012 ; Critical Survey Volume 24 ; 24 >
     au < crawling ; exists ; 2013 ; Critical Survey Volume 25 ; 25 >
     au < crawling ; exists ; 2014 ; Critical Survey Volume 26 ; 26 >
     au < crawling ; exists ; 2015 ; Critical Survey Volume 27 ; 27 >
@@ -573,22 +573,22 @@
     param[journal_id] = nomp
     param[journal_issn] = 0822-7942
         
-    au < down ; crawling ; 1997 ; Nomadic Peoples Volume 1 ; 1 >
+    au < down ; finished ; 1997 ; Nomadic Peoples Volume 1 ; 1 >
     au < down ; crawling ; 1998 ; Nomadic Peoples Volume 2 ; 2 >
-    au < down ; crawling ; 1999 ; Nomadic Peoples Volume 3 ; 3 >
-    au < down ; crawling ; 2000 ; Nomadic Peoples Volume 4 ; 4 >
-    au < down ; crawling ; 2001 ; Nomadic Peoples Volume 5 ; 5 >
-    au < down ; crawling ; 2002 ; Nomadic Peoples Volume 6 ; 6 >
-    au < down ; crawling ; 2003 ; Nomadic Peoples Volume 7 ; 7 >
-    au < down ; crawling ; 2004 ; Nomadic Peoples Volume 8 ; 8 >
-    au < down ; crawling ; 2005 ; Nomadic Peoples Volume 9 ; 9 >
-    au < down ; crawling ; 2006 ; Nomadic Peoples Volume 10 ; 10 >
-    au < down ; crawling ; 2007 ; Nomadic Peoples Volume 11 ; 11>
-    au < down ; crawling ; 2008 ; Nomadic Peoples Volume 12 ; 12 >
-    au < down ; crawling ; 2009 ; Nomadic Peoples Volume 13 ; 13 >
-    au < down ; crawling ; 2010 ; Nomadic Peoples Volume 14 ; 14 >
-    au < down ; crawling ; 2011 ; Nomadic Peoples Volume 15 ; 15 >
-    au < down ; crawling ; 2012 ; Nomadic Peoples Volume 16 ; 16 >
+    au < down ; finished ; 1999 ; Nomadic Peoples Volume 3 ; 3 >
+    au < down ; finished ; 2000 ; Nomadic Peoples Volume 4 ; 4 >
+    au < down ; finished ; 2001 ; Nomadic Peoples Volume 5 ; 5 >
+    au < down ; finished ; 2002 ; Nomadic Peoples Volume 6 ; 6 >
+    au < down ; finished ; 2003 ; Nomadic Peoples Volume 7 ; 7 >
+    au < down ; finished ; 2004 ; Nomadic Peoples Volume 8 ; 8 >
+    au < down ; finished ; 2005 ; Nomadic Peoples Volume 9 ; 9 >
+    au < down ; finished ; 2006 ; Nomadic Peoples Volume 10 ; 10 >
+    au < down ; finished ; 2007 ; Nomadic Peoples Volume 11 ; 11>
+    au < down ; finished ; 2008 ; Nomadic Peoples Volume 12 ; 12 >
+    au < down ; finished ; 2009 ; Nomadic Peoples Volume 13 ; 13 >
+    au < down ; finished ; 2010 ; Nomadic Peoples Volume 14 ; 14 >
+    au < down ; finished ; 2011 ; Nomadic Peoples Volume 15 ; 15 >
+    au < down ; finished ; 2012 ; Nomadic Peoples Volume 16 ; 16 >
     au < down ; crawling ; 2013 ; Nomadic Peoples Volume 17 ; 17 >
     
   }

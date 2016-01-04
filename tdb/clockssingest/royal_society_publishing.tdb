@@ -68,7 +68,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1999 ; Biographical Memoirs of Fellows of the Royal Society Volume 45 ; 45 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2000 ; Biographical Memoirs of Fellows of the Royal Society Volume 46 ; 46 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2001 ; Biographical Memoirs of Fellows of the Royal Society Volume 47 ; 47 >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2002 ; Biographical Memoirs of Fellows of the Royal Society Volume 48 ; 48 >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2002 ; Biographical Memoirs of Fellows of the Royal Society Volume 48 ; 48 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2003 ; Biographical Memoirs of Fellows of the Royal Society Volume 49 ; 49 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Biographical Memoirs of Fellows of the Royal Society Volume 50 ; 50 >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2005 ; Biographical Memoirs of Fellows of the Royal Society Volume 51 ; 51 >
@@ -77,7 +77,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Biographical Memoirs of Fellows of the Royal Society Volume 54 ; 54 >
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2009 ; Biographical Memoirs of Fellows of the Royal Society Volume 55 ; 55 >
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2010 ; Biographical Memoirs of Fellows of the Royal Society Volume 56 ; 56 >
-    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2011 ; Biographical Memoirs of Fellows of the Royal Society Volume 57 ; 57 >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Biographical Memoirs of Fellows of the Royal Society Volume 57 ; 57 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Biographical Memoirs of Fellows of the Royal Society Volume 58 ; 58 >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Biographical Memoirs of Fellows of the Royal Society Volume 59 ; 59 >
     au < ClockssHWDrupalPlugin ; exists ; exists ; 2014 ; Biographical Memoirs of Fellows of the Royal Society Volume 60 ; 60 >
@@ -97,7 +97,7 @@
     param[base_url] = http://rsbl.royalsocietypublishing.org/
 
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Biology Letters Volume 1 ; 1 >
-    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2006 ; Biology Letters Volume 2 ; 2 >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Biology Letters Volume 2 ; 2 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Biology Letters Volume 3 ; 3 >
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2008 ; Biology Letters Volume 4 ; 4 >
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2009 ; Biology Letters Volume 5 ; 5 >
@@ -124,7 +124,7 @@
 
     comment[rsfs] = Do not add earlier issues - From 2008 to 2010 Interface Focus was published as a supplement to J R Soc Interface 
 
-    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2011 ; Interface Focus Volume 1 ; 1 >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Interface Focus Volume 1 ; 1 >
     au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; Interface Focus Volume 2 ; 2 >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Interface Focus Volume 3 ; 3 >
     au < ClockssHWDrupalPlugin ; exists ; exists ; 2014 ; Interface Focus Volume 4 ; 4 >
@@ -146,7 +146,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2004 ; Journal of the Royal Society Interface Volume 1 ; 1 >
     au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2005 ; Journal of the Royal Society Interface Volume 2 ; 2 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2006 ; Journal of the Royal Society Interface Volume 3 ; 3 >
-    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2007 ; Journal of the Royal Society Interface Volume 4 ; 4 >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2007 ; Journal of the Royal Society Interface Volume 4 ; 4 >
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2008 ; Journal of the Royal Society Interface Volume 5 ; 5 >
     au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2009 ; Journal of the Royal Society Interface Volume 6 ; 6 >
     au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2010 ; Journal of the Royal Society Interface Volume 7 ; 7 >
@@ -231,10 +231,10 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2005 ; Notes and Records of the Royal Society Volume 59 ; 59 >
     au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2006 ; Notes and Records of the Royal Society Volume 60 ; 60 >
     au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2007 ; Notes and Records of the Royal Society Volume 61 ; 61 >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2008 ; Notes and Records of the Royal Society Volume 62 ; 62 >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; Notes and Records of the Royal Society Volume 62 ; 62 >
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2009 ; Notes and Records of the Royal Society Volume 63 ; 63 >
     au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2010 ; Notes and Records of the Royal Society Volume 64 ; 64 >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2011 ; Notes and Records of the Royal Society Volume 65 ; 65 >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Notes and Records of the Royal Society Volume 65 ; 65 >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; Notes and Records of the Royal Society Volume 66 ; 66 >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Notes and Records of the Royal Society Volume 67 ; 67 >
     au < ClockssHWDrupalPlugin ; exists ; exists ; 2014 ; Notes and Records the Royal Society Journal of the History of Science Volume 68 ; 68 >
@@ -252,7 +252,7 @@
 
     param[base_url] = http://rsob.royalsocietypublishing.org/
     
-    au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2011 ; Open Biology Volume 1 ; 1 >
+    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; Open Biology Volume 1 ; 1 >
     au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2012 ; Open Biology Volume 2 ; 2 >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Open Biology Volume 3 [superseded] ; 3 >
     au < ClockssHWDrupalPlugin ; exists ; exists ; 2013 ; Open Biology Volume 3 ; 3 >
@@ -461,7 +461,7 @@
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2006 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 364 ; 364 >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2007 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 365 ; 365 >
     au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2008 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 366 ; 366 >
-    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2009 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 367 ; 367 >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 367 ; 367 >
     au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2010 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 368 ; 368 >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2011 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 369 ; 369 >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 370 ; 370 >
@@ -1470,11 +1470,11 @@
     au < ClockssHighWirePressH20Plugin ; down ; crawling ; 1993 ; Proceedings of the Royal Society B: Biological Sciences Volume 253 ; 253 >
     au < ClockssHighWirePressH20Plugin ; down ; finished ; 1993 ; Proceedings of the Royal Society B: Biological Sciences Volume 254 ; 254 >
     au < ClockssHighWirePressH20Plugin ; down ; crawling ; 1994 ; Proceedings of the Royal Society B: Biological Sciences Volume 255 ; 255 >
-    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 1994 ; Proceedings of the Royal Society B: Biological Sciences Volume 256 ; 256 >
+    au < ClockssHighWirePressH20Plugin ; down ; finished ; 1994 ; Proceedings of the Royal Society B: Biological Sciences Volume 256 ; 256 >
     au < ClockssHighWirePressH20Plugin ; down ; crawling ; 1994 ; Proceedings of the Royal Society B: Biological Sciences Volume 257 ; 257 >
     au < ClockssHighWirePressH20Plugin ; down ; crawling ; 1994 ; Proceedings of the Royal Society B: Biological Sciences Volume 258 ; 258 >
-    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 1995 ; Proceedings of the Royal Society B: Biological Sciences Volume 259 ; 259 >
-    au < ClockssHighWirePressH20Plugin ; down ; frozen ; 1995 ; Proceedings of the Royal Society B: Biological Sciences Volume 260 ; 260 >
+    au < ClockssHighWirePressH20Plugin ; down ; finished ; 1995 ; Proceedings of the Royal Society B: Biological Sciences Volume 259 ; 259 >
+    au < ClockssHighWirePressH20Plugin ; down ; finished ; 1995 ; Proceedings of the Royal Society B: Biological Sciences Volume 260 ; 260 >
     au < ClockssHighWirePressH20Plugin ; down ; crawling ; 1995 ; Proceedings of the Royal Society B: Biological Sciences Volume 261 ; 261 >
     au < ClockssHighWirePressH20Plugin ; down ; crawling ; 1995 ; Proceedings of the Royal Society B: Biological Sciences Volume 262 ; 262 >
     au < ClockssHighWirePressH20Plugin ; down ; crawling ; 1996 ; Proceedings of the Royal Society B: Biological Sciences Volume 263 ; 263 >
@@ -1569,12 +1569,12 @@
     au < ClockssHWDrupalPlugin ; exists ; exists ; 1894 ; Proceedings of the Royal Society of London Volume 57 ; 57 >
     au < ClockssHWDrupalPlugin ; exists ; exists ; 1895 ; Proceedings of the Royal Society of London Volume 58 ; 58 >
     au < ClockssHWDrupalPlugin ; exists ; exists ; 1895 ; Proceedings of the Royal Society of London Volume 59 ; 59 >
-    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 1896 ; Proceedings of the Royal Society of London Volume 60 ; 60 >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1896 ; Proceedings of the Royal Society of London Volume 60 ; 60 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1897 ; Proceedings of the Royal Society of London Volume 61 ; 61 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1897 ; Proceedings of the Royal Society of London Volume 62 ; 62 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1898 ; Proceedings of the Royal Society of London Volume 63 ; 63 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1898 ; Proceedings of the Royal Society of London Volume 64 ; 64 >
-    au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 1899 ; Proceedings of the Royal Society of London Volume 65 ; 65 >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1899 ; Proceedings of the Royal Society of London Volume 65 ; 65 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1899 ; Proceedings of the Royal Society of London Volume 66 ; 66 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1900 ; Proceedings of the Royal Society of London Volume 67 ; 67 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1901 ; Proceedings of the Royal Society of London Volume 68 ; 68 >
@@ -1584,7 +1584,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1903 ; Proceedings of the Royal Society of London Volume 72 ; 72 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1904 ; Proceedings of the Royal Society of London Volume 73 ; 73 >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1904 ; Proceedings of the Royal Society of London Volume 74 ; 74 >
-    au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 1904 ; Proceedings of the Royal Society of London Volume 75 ; 75 >
+    au < ClockssHighWirePressH20Plugin ; finished ; finished ; 1904 ; Proceedings of the Royal Society of London Volume 75 ; 75 >
 
   }
 

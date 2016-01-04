@@ -23,7 +23,7 @@
     comment[0] = publishing has apparently stopped as of Oct 2014.
 
     au < finished ; frozen ; 2010 ; Administrative Law Review Volume 62 ; 62 >
-    au < finished ; crawling ; 2011 ; Administrative Law Review Volume 63 ; 63 >
+    au < finished ; finished ; 2011 ; Administrative Law Review Volume 63 ; 63 >
     au < finished ; frozen ; 2012 ; Administrative Law Review Volume 64 ; 64 >
 
   }
@@ -40,7 +40,7 @@
     comment[v26] = not online as of 20120118
 
     au < finished ; crawling ; 1986 ; American University International Law Review Volume 1 ; 1 >
-    au < finished ; crawling ; 1987 ; American University International Law Review Volume 2 ; 2 >
+    au < finished ; finished ; 1987 ; American University International Law Review Volume 2 ; 2 >
     au < finished ; crawling ; 1988 ; American University International Law Review Volume 3 ; 3 >
     au < finished ; frozen ; 1989 ; American University International Law Review Volume 4 ; 4 >
     au < finished ; crawling ; 1989-1990 ; American University International Law Review Volume 5 ; 5 >
@@ -50,16 +50,16 @@
     au < finished ; frozen ; 1993-1994 ; American University International Law Review Volume 9 ; 9 >
     au < finished ; frozen ; 1994-1995 ; American University International Law Review Volume 10 ; 10 >
     au < finished ; crawling ; 1996 ; American University International Law Review Volume 11 ; 11 >
-    au < finished ; crawling ; 1997 ; American University International Law Review Volume 12 ; 12 >
+    au < finished ; finished ; 1997 ; American University International Law Review Volume 12 ; 12 >
     au < finished ; crawling ; 1997-1998 ; American University International Law Review Volume 13 ; 13 >
     au < finished ; frozen ; 1998-1999 ; American University International Law Review Volume 14 ; 14 >
     au < finished ; crawling ; 1999-2000 ; American University International Law Review Volume 15 ; 15 >
-    au < finished ; crawling ; 2000-2001 ; American University International Law Review Volume 16 ; 16 >
+    au < finished ; finished ; 2000-2001 ; American University International Law Review Volume 16 ; 16 >
     au < finished ; crawling ; 2001-2002 ; American University International Law Review Volume 17 ; 17 >
     au < finished ; frozen ; 2002-2003 ; American University International Law Review Volume 18 ; 18 >
     au < finished ; frozen ; 2003-2004 ; American University International Law Review Volume 19 ; 19 >
     au < finished ; crawling ; 2004-2005 ; American University International Law Review Volume 20 ; 20 >
-    au < finished ; crawling ; 2005-2006 ; American University International Law Review Volume 21 ; 21 >
+    au < finished ; finished ; 2005-2006 ; American University International Law Review Volume 21 ; 21 >
     au < finished ; finished ; 2006-2007 ; American University International Law Review Volume 22 ; 22 >
     au < finished ; crawling ; 2007-2008 ; American University International Law Review Volume 23 ; 23 >
     au < finished ; crawling ; 2008-2009 ; American University International Law Review Volume 24 ; 24 >
@@ -102,7 +102,7 @@
 
     au < finished ; frozen ; 2011 ; American University Labor & Employment Law Forum Volume 1 ; 1 >
     au < finished ; crawling ; 2012 ; American University Labor & Employment Law Forum Volume 2 ; 2 >
-    au < finished ; crawling ; 2013 ; American University Labor & Employment Law Forum Volume 3 ; 3 >
+    au < finished ; finished ; 2013 ; American University Labor & Employment Law Forum Volume 3 ; 3 >
     au < finished ; finished ; 2014 ; American University Labor & Employment Law Forum Volume 4 ; 4 >
     au < crawling ; exists ; 2015 ; American University Labor & Employment Law Forum Volume 5 ; 5 >
 
@@ -131,15 +131,15 @@
     au < finished ; crawling ; 2003-2004 ; American University Law Review Volume 53 ; 53 >
     au < manifest ; exists ; 2004-2005 ; American University Law Review Volume 54 ; 54 >
     au < finished ; crawling ; 2005-2006 ; American University Law Review Volume 55 ; 55 >
-    au < finished ; crawling ; 2006-2007 ; American University Law Review Volume 56 ; 56 >
+    au < finished ; finished ; 2006-2007 ; American University Law Review Volume 56 ; 56 >
     au < finished ; crawling ; 2007-2008 ; American University Law Review Volume 57 ; 57 >
     au < finished ; frozen ; 2008-2009 ; American University Law Review Volume 58 ; 58 >
-    au < finished ; crawling ; 2009-2010 ; American University Law Review Volume 59 ; 59 >
+    au < finished ; finished ; 2009-2010 ; American University Law Review Volume 59 ; 59 >
     au < finished ; finished ; 2010-2011 ; American University Law Review Volume 60 ; 60 >
     au < finished ; crawling ; 2011-2012 ; American University Law Review Volume 61 ; 61 >
     au < crawling ; exists ; 2012-2013 ; American University Law Review Volume 62 ; 62 >
-    au < finished ; crawling ; 2013-2014 ; American University Law Review Volume 63 ; 63 >
-    au < finished ; crawling ; 2014-2015 ; American University Law Review Volume 64 ; 64 >
+    au < finished ; finished ; 2013-2014 ; American University Law Review Volume 63 ; 63 >
+    au < finished ; finished ; 2014-2015 ; American University Law Review Volume 64 ; 64 >
     au < expected ; exists ; 2015-2016 ; American University Law Review Volume 65 ; 65 >
 
   }
@@ -209,13 +209,13 @@
 
     param[journal_abbr] = tma
 
-    au < finished ; crawling ; 2005 ; The Modern American Volume 1 ; 1 >
+    au < finished ; finished ; 2005 ; The Modern American Volume 1 ; 1 >
     au < finished ; finished ; 2006 ; The Modern American Volume 2 ; 2 >
     au < finished ; finished ; 2007 ; The Modern American Volume 3 ; 3 >
     au < finished ; frozen ; 2008 ; The Modern American Volume 4 ; 4 >
-    au < finished ; crawling ; 2009 ; The Modern American Volume 5 ; 5 >
-    au < finished ; crawling ; 2010 ; The Modern American Volume 6 ; 6 >
-    au < finished ; crawling ; 2011 ; The Modern American Volume 7 ; 7 >
+    au < finished ; finished ; 2009 ; The Modern American Volume 5 ; 5 >
+    au < finished ; finished ; 2010 ; The Modern American Volume 6 ; 6 >
+    au < finished ; finished ; 2011 ; The Modern American Volume 7 ; 7 >
     au < crawling ; exists ; 2013 ; The Modern American Volume 8 ; 8 >
     au < crawling ; exists ; 2013 ; The Modern American Volume 9 ; 9 >
     au < expected ; exists ; 2015 ; The Modern American Volume 10 ; 10 >
@@ -232,19 +232,19 @@
     param[journal_abbr] = sdlp
 
     au < finished ; crawling ; 2000 ; Sustainable Development Law & Policy Volume 1 ; 1 >
-    au < finished ; crawling ; 2002 ; Sustainable Development Law & Policy Volume 2 ; 2 >
+    au < finished ; finished ; 2002 ; Sustainable Development Law & Policy Volume 2 ; 2 >
     au < finished ; crawling ; 2003 ; Sustainable Development Law & Policy Volume 3 ; 3 >
-    au < finished ; crawling ; 2004 ; Sustainable Development Law & Policy Volume 4 ; 4 >
-    au < finished ; crawling ; 2005 ; Sustainable Development Law & Policy Volume 5 ; 5 >
-    au < finished ; crawling ; 2005-2006 ; Sustainable Development Law & Policy Volume 6 ; 6 >
+    au < finished ; finished ; 2004 ; Sustainable Development Law & Policy Volume 4 ; 4 >
+    au < finished ; finished ; 2005 ; Sustainable Development Law & Policy Volume 5 ; 5 >
+    au < finished ; finished ; 2005-2006 ; Sustainable Development Law & Policy Volume 6 ; 6 >
     au < finished ; crawling ; 2006-2007 ; Sustainable Development Law & Policy Volume 7 ; 7 >
-    au < finished ; crawling ; 2007-2008 ; Sustainable Development Law & Policy Volume 8 ; 8 >
+    au < finished ; finished ; 2007-2008 ; Sustainable Development Law & Policy Volume 8 ; 8 >
     au < finished ; frozen ; 2008-2009 ; Sustainable Development Law & Policy Volume 9 ; 9 >
-    au < finished ; crawling ; 2009-2010 ; Sustainable Development Law & Policy Volume 10 ; 10 >
+    au < finished ; finished ; 2009-2010 ; Sustainable Development Law & Policy Volume 10 ; 10 >
     au < finished ; finished ; 2010-2011 ; Sustainable Development Law & Policy Volume 11 ; 11 >
     au < finished ; crawling ; 2011-2012 ; Sustainable Development Law & Policy Volume 12 ; 12 >
     au < crawling ; exists ; 2012 ; Sustainable Development Law & Policy Volume 13 ; 13 >
-    au < finished ; crawling ; 2014 ; Sustainable Development Law & Policy Volume 14 ; 14 >
+    au < finished ; finished ; 2014 ; Sustainable Development Law & Policy Volume 14 ; 14 >
     au < crawling ; exists ; 2015 ; Sustainable Development Law & Policy Volume 15 ; 15 >
 
   }

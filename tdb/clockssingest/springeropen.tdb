@@ -132,7 +132,7 @@
         param[journal_issn] = 2196-0089 
         comment[platform] = BioMedCentralPlugin
 
-        au < finished ; crawling ; 2014 ; Applied Informatics Volume 1 ; 1 >
+        au < finished ; finished ; 2014 ; Applied Informatics Volume 1 ; 1 >
         au < down ; exists ; 2015 ; Applied Informatics Volume 2 ; 2 >
 
     }
@@ -987,7 +987,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < down ; exists ; 2013 ; Geothermal Energy Volume 1 ; 1 >
-        au < finished ; crawling ; 2014 ; Geothermal Energy Volume 2 ; 2 >
+        au < finished ; finished ; 2014 ; Geothermal Energy Volume 2 ; 2 >
         au < down ; exists ; 2015 ; Geothermal Energy Volume 3 ; 3 >
   
     }
