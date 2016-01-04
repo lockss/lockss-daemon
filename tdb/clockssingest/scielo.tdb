@@ -2590,18 +2590,18 @@
   {
 
     title <
-      name = Argos ;
+      name = Argos (1853-6379) ;
       eissn = 1853-6379
     >
 
     param[base_url] = http://www.scielo.org.ar/
     param[journal_issn] = 1853-6379
 
-    au < manifest ; exists ; 2009 ; 32 ; Argos Volume 32 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 33 ; Argos Volume 33 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 34 ; Argos Volume 34 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 35 ; Argos Volume 35 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 36 ; Argos Volume 36 ; 2013 ; reingest3.clockss.org:8083 >
+    au < manifest ; exists ; 2009 ; 32 ; Argos (1853-6379) Volume 32 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 33 ; Argos (1853-6379) Volume 33 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 34 ; Argos (1853-6379) Volume 34 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 35 ; Argos (1853-6379) Volume 35 ; 2012 ; >
+    au < crawling ; exists ; 2013 ; 36 ; Argos (1853-6379) Volume 36 ; 2013 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -6528,54 +6528,54 @@
   {
 
     title <
-      name = Cuadernos de economía ;
+      name = Cuadernos de economía (0717-6821) ;
       eissn = 0717-6821
     >
 
     param[base_url] = http://www.scielo.cl/
     param[journal_issn] = 0717-6821
 
-    au < manifest ; exists ; 2000 ; 37 ; Cuadernos de economía Volume 37 ; 2000 ; >
-    au < manifest ; exists ; 2001 ; 38 ; Cuadernos de economía Volume 38 ; 2001 ; >
-    au < manifest ; exists ; 2002 ; 39 ; Cuadernos de economía Volume 39 ; 2002 ; >
-    au < manifest ; exists ; 2003 ; 40 ; Cuadernos de economía Volume 40 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; 41 ; Cuadernos de economía Volume 41 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; 42 ; Cuadernos de economía Volume 42 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 43 ; Cuadernos de economía Volume 43 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 44 ; Cuadernos de economía Volume 44 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 45 ; Cuadernos de economía Volume 45 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 46 ; Cuadernos de economía Volume 46 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 47 ; Cuadernos de economía Volume 47 ; 2010 ; >
+    au < manifest ; exists ; 2000 ; 37 ; Cuadernos de economía (0717-6821) Volume 37 ; 2000 ; >
+    au < manifest ; exists ; 2001 ; 38 ; Cuadernos de economía (0717-6821) Volume 38 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 39 ; Cuadernos de economía (0717-6821) Volume 39 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 40 ; Cuadernos de economía (0717-6821) Volume 40 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 41 ; Cuadernos de economía (0717-6821) Volume 41 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 42 ; Cuadernos de economía (0717-6821) Volume 42 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 43 ; Cuadernos de economía (0717-6821) Volume 43 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 44 ; Cuadernos de economía (0717-6821) Volume 44 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 45 ; Cuadernos de economía (0717-6821) Volume 45 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 46 ; Cuadernos de economía (0717-6821) Volume 46 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 47 ; Cuadernos de economía (0717-6821) Volume 47 ; 2010 ; >
 
   }
 
   {
 
     title <
-      name = Cuadernos de Economía ;
+      name = Cuadernos de Economía (0121-4772) ;
       issn = 0121-4772
     >
 
     param[base_url] = http://www.scielo.org.co/
     param[journal_issn] = 0121-4772
 
-    au < manifest ; exists ; 2000 ; 19 ; Cuadernos de Economía Volume 19 ; 2000 ; >
-    au < manifest ; exists ; 2001 ; 20 ; Cuadernos de Economía Volume 20 ; 2001 ; >
-    au < manifest ; exists ; 2002 ; 21 ; Cuadernos de Economía Volume 21 ; 2002 ; >
-    au < manifest ; exists ; 2003 ; 22 ; Cuadernos de Economía Volume 22 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; 23 ; Cuadernos de Economía Volume 23 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; 24 ; Cuadernos de Economía Volume 24 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 25 ; Cuadernos de Economía Volume 25 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 26 ; Cuadernos de Economía Volume 26 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 27 ; Cuadernos de Economía Volume 27 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 28 ; Cuadernos de Economía Volume 28 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 29 ; Cuadernos de Economía Volume 29 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 30 ; Cuadernos de Economía Volume 30 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 31 ; Cuadernos de Economía Volume 31 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; 32 ; Cuadernos de Economía Volume 32 ; 2013 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2014 ; 33 ; Cuadernos de Economía Volume 33 ; 2014 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; 34 ; Cuadernos de Economía Volume 34 ; 2015 ; reingest3.clockss.org:8083 >
-    au < manifest ; exists ; 2016 ; 35 ; Cuadernos de Economía Volume 35 ; 2016 ; >
+    au < manifest ; exists ; 2000 ; 19 ; Cuadernos de Economía (0121-4772) Volume 19 ; 2000 ; >
+    au < manifest ; exists ; 2001 ; 20 ; Cuadernos de Economía (0121-4772) Volume 20 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 21 ; Cuadernos de Economía (0121-4772) Volume 21 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 22 ; Cuadernos de Economía (0121-4772) Volume 22 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 23 ; Cuadernos de Economía (0121-4772) Volume 23 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 24 ; Cuadernos de Economía (0121-4772) Volume 24 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 25 ; Cuadernos de Economía (0121-4772) Volume 25 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 26 ; Cuadernos de Economía (0121-4772) Volume 26 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 27 ; Cuadernos de Economía (0121-4772) Volume 27 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 28 ; Cuadernos de Economía (0121-4772) Volume 28 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 29 ; Cuadernos de Economía (0121-4772) Volume 29 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 30 ; Cuadernos de Economía (0121-4772) Volume 30 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 31 ; Cuadernos de Economía (0121-4772) Volume 31 ; 2012 ; >
+    au < frozen ; exists ; 2013 ; 32 ; Cuadernos de Economía (0121-4772) Volume 32 ; 2013 ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2014 ; 33 ; Cuadernos de Economía (0121-4772) Volume 33 ; 2014 ; reingest2.clockss.org:8085 >
+    au < frozen ; exists ; 2015 ; 34 ; Cuadernos de Economía (0121-4772) Volume 34 ; 2015 ; reingest3.clockss.org:8083 >
+    au < manifest ; exists ; 2016 ; 35 ; Cuadernos de Economía (0121-4772) Volume 35 ; 2016 ; >
 
   }
 
@@ -15084,39 +15084,39 @@
   {
 
     title <
-      name = Palabra clave ;
+      name = Palabra clave (1853-9912) ;
       eissn = 1853-9912
     >
 
     param[base_url] = http://www.scielo.org.ar/
     param[journal_issn] = 1853-9912
 
-    au < manifest ; exists ; 2011 ; 1 ; Palabra clave Volume 1 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 1-2 ; Palabra clave Volume 1-2 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 2-3 ; Palabra clave Volume 2-3 ; 2013 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2014 ; 3-4 ; Palabra clave Volume 3-4 ; 2014 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2015 ; 4 ; Palabra clave Volume 4 ; 2015 ; reingest3.clockss.org:8083 >
+    au < manifest ; exists ; 2011 ; 1 ; Palabra clave (1853-9912) Volume 1 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 1-2 ; Palabra clave (1853-9912) Volume 1-2 ; 2012 ; >
+    au < crawling ; exists ; 2013 ; 2-3 ; Palabra clave (1853-9912) Volume 2-3 ; 2013 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 3-4 ; Palabra clave (1853-9912) Volume 3-4 ; 2014 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2015 ; 4 ; Palabra clave (1853-9912) Volume 4 ; 2015 ; reingest3.clockss.org:8083 >
 
   }
 
   {
 
     title <
-      name = Palabra Clave ;
+      name = Palabra Clave (0122-8285) ;
       issn = 0122-8285
     >
 
     param[base_url] = http://www.scielo.org.co/
     param[journal_issn] = 0122-8285
 
-    au < manifest ; exists ; 2008 ; 11 ; Palabra Clave Volume 11 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 12 ; Palabra Clave Volume 12 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 13 ; Palabra Clave Volume 13 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 14 ; Palabra Clave Volume 14 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 15 ; Palabra Clave Volume 15 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 16 ; Palabra Clave Volume 16 ; 2013 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2014 ; 17 ; Palabra Clave Volume 17 ; 2014 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2015 ; 18 ; Palabra Clave Volume 18 ; 2015 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 2008 ; 11 ; Palabra Clave (0122-8285) Volume 11 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 12 ; Palabra Clave (0122-8285) Volume 12 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 13 ; Palabra Clave (0122-8285) Volume 13 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 14 ; Palabra Clave (0122-8285) Volume 14 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 15 ; Palabra Clave (0122-8285) Volume 15 ; 2012 ; >
+    au < crawling ; exists ; 2013 ; 16 ; Palabra Clave (0122-8285) Volume 16 ; 2013 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 17 ; Palabra Clave (0122-8285) Volume 17 ; 2014 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2015 ; 18 ; Palabra Clave (0122-8285) Volume 18 ; 2015 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -21570,7 +21570,7 @@
   {
 
     title <
-      name = Revista de Ciencias Sociales ;
+      name = Revista de Ciencias Sociales (0797-5538) ;
       issn = 0797-5538 ;
       eissn = 1688-4981
     >
@@ -21578,8 +21578,8 @@
     param[base_url] = http://www.scielo.edu.uy/
     param[journal_issn] = 0797-5538
 
-    au < frozen ; exists ; 2014 ; 27 ; Revista de Ciencias Sociales Volume 27 ; 2014 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; 28 ; Revista de Ciencias Sociales Volume 28 ; 2015 ; reingest3.clockss.org:8083 >
+    au < frozen ; exists ; 2014 ; 27 ; Revista de Ciencias Sociales (0797-5538) Volume 27 ; 2014 ; reingest2.clockss.org:8085 >
+    au < frozen ; exists ; 2015 ; 28 ; Revista de Ciencias Sociales (0797-5538) Volume 28 ; 2015 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -22813,23 +22813,23 @@
   {
 
     title <
-      name = Revista de filosofía ;
+      name = Revista de filosofía (0718-4360) ;
       eissn = 0718-4360
     >
 
     param[base_url] = http://www.scielo.cl/
     param[journal_issn] = 0718-4360
 
-    au < manifest ; exists ; 2006 ; 62 ; Revista de filosofía Volume 62 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 63 ; Revista de filosofía Volume 63 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 64 ; Revista de filosofía Volume 64 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 65 ; Revista de filosofía Volume 65 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 66 ; Revista de filosofía Volume 66 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 67 ; Revista de filosofía Volume 67 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 68 ; Revista de filosofía Volume 68 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; 69 ; Revista de filosofía Volume 69 ; 2013 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2014 ; 70 ; Revista de filosofía Volume 70 ; 2014 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; 71 ; Revista de filosofía Volume 71 ; 2015 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 2006 ; 62 ; Revista de filosofía (0718-4360) Volume 62 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 63 ; Revista de filosofía (0718-4360) Volume 63 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 64 ; Revista de filosofía (0718-4360) Volume 64 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 65 ; Revista de filosofía (0718-4360) Volume 65 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 66 ; Revista de filosofía (0718-4360) Volume 66 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 67 ; Revista de filosofía (0718-4360) Volume 67 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 68 ; Revista de filosofía (0718-4360) Volume 68 ; 2012 ; >
+    au < frozen ; exists ; 2013 ; 69 ; Revista de filosofía (0718-4360) Volume 69 ; 2013 ; reingest3.clockss.org:8083 >
+    au < frozen ; exists ; 2014 ; 70 ; Revista de filosofía (0718-4360) Volume 70 ; 2014 ; reingest4.clockss.org:8082 >
+    au < frozen ; exists ; 2015 ; 71 ; Revista de filosofía (0718-4360) Volume 71 ; 2015 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -25499,24 +25499,24 @@
   {
 
     title <
-      name = Revista de la Facultad de Medicina ;
+      name = Revista de la Facultad de Medicina (0120-0011) ;
       issn = 0120-0011
     >
 
     param[base_url] = http://www.scielo.org.co/
     param[journal_issn] = 0120-0011
 
-    au < manifest ; exists ; 2005 ; 53 ; Revista de la Facultad de Medicina Volume 53 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 54 ; Revista de la Facultad de Medicina Volume 54 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 55 ; Revista de la Facultad de Medicina Volume 55 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 56 ; Revista de la Facultad de Medicina Volume 56 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 57 ; Revista de la Facultad de Medicina Volume 57 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 58 ; Revista de la Facultad de Medicina Volume 58 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 59 ; Revista de la Facultad de Medicina Volume 59 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 60 ; Revista de la Facultad de Medicina Volume 60 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; 61 ; Revista de la Facultad de Medicina Volume 61 ; 2013 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2014 ; 62 ; Revista de la Facultad de Medicina Volume 62 ; 2014 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2015 ; 63 ; Revista de la Facultad de Medicina Volume 63 ; 2015 ; reingest3.clockss.org:8083 >
+    au < manifest ; exists ; 2005 ; 53 ; Revista de la Facultad de Medicina (0120-0011) Volume 53 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 54 ; Revista de la Facultad de Medicina (0120-0011) Volume 54 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 55 ; Revista de la Facultad de Medicina (0120-0011) Volume 55 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 56 ; Revista de la Facultad de Medicina (0120-0011) Volume 56 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 57 ; Revista de la Facultad de Medicina (0120-0011) Volume 57 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 58 ; Revista de la Facultad de Medicina (0120-0011) Volume 58 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 59 ; Revista de la Facultad de Medicina (0120-0011) Volume 59 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 60 ; Revista de la Facultad de Medicina (0120-0011) Volume 60 ; 2012 ; >
+    au < frozen ; exists ; 2013 ; 61 ; Revista de la Facultad de Medicina (0120-0011) Volume 61 ; 2013 ; reingest1.clockss.org:8082 >
+    au < frozen ; exists ; 2014 ; 62 ; Revista de la Facultad de Medicina (0120-0011) Volume 62 ; 2014 ; reingest2.clockss.org:8085 >
+    au < frozen ; exists ; 2015 ; 63 ; Revista de la Facultad de Medicina (0120-0011) Volume 63 ; 2015 ; reingest3.clockss.org:8083 >
 
   }
 
