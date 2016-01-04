@@ -54,6 +54,8 @@ public class ClockssNRCResearchPressHtmlCrawlFilterFactory extends BaseAtyponHtm
       HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar-left"),
       // Cannot filter out entire sidebar-right because we need to pick up the 
       //dowload citations -so remove smaller chunk
+      // do not pick up the img links inside the ads
+      HtmlNodeFilters.tagWithAttribute("div",  "class", "ads"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "addthis_toolbox"),
       //  strip below the main title with links to Home, About, Journals, etc...
       HtmlNodeFilters.tagWithAttribute("div", "id", "nav-wrapper"),
