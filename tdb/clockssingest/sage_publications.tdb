@@ -30937,7 +30937,7 @@
       au < crawling ; exists ; 2014 ; Multiple Sclerosis Journal Volume 20 ; 20 ; >
       au < crawling ; exists ; 2015 ; Multiple Sclerosis Journal Volume 21 ; 21 ; >
       au < manifest ; exists ; 2016 ; Multiple Sclerosis Journal Volume 22 ; 22 ; >
-      au < doesNotExist ; exists ; 0 ; Multiple Sclerosis Journal Volume 23 ; 23 ; > #link to supplement, but content doesn't exist.
+      au < doesNotExist ; doesNotExist ; 0 ; Multiple Sclerosis Journal Volume 23 ; 23 ; > #link to supplement, but content doesn't exist.
 
     }
 
