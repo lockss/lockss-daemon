@@ -42,6 +42,10 @@
   </entry>
   <entry>
     <string>au_start_url</string>
+    <string>"%sbooks/%s/year/%d/", base_url, collection_id, year</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
     <string>"%sclockssdata?p=%s", base_url, collection_id</string>
   </entry>
   <entry> 
@@ -65,15 +69,17 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://%s/[^?]+[.](bmp|css|gif|ico|jpe?g|js|png|tif?f|eot|svg|ttf|woff.?)$", url_host(base_url)</string>
+      <!-- otherwise, all content from CDN -->
+      <string>1,"^https?://([^.]+\.(googleapis|jquery|gstatic|bootstrapcdn)\.com|.*\.mathjax\.org)/."</string>
       <string>4,"^%s", base_url</string>
       <string>1, "%sbooks/%s/year/%d/?", base_url, collection_id, year</string>
-      <string>1,"^%sbooks/%s/[0-9]{2,5}", base_url, collection_id</string>
+      <string>1,"^%sbooks/%s/[0-9]+", base_url, collection_id</string>
     </list>
   </entry>
   <entry>
-    <!-- manifest to book (not to chapters) -->
+    <!-- book (not to chapters) -->
     <string>au_refetch_depth</string>
-    <int>2</int>
+    <int>1</int>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -110,7 +116,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%sbooks/(%s)/([0-9]{2,5})/\1\2[.]pdf$", base_url, collection_id, year</string>
+      <string>"^%sbooks/(%s)/([0-9]+)/\1\2[.]pdf$", base_url, collection_id, year</string>
     </list>
   </entry>
   <!-- entry>
@@ -133,5 +139,17 @@
         <string>org.lockss.plugin.americanmathematicalsociety.AmericanMathematicalSocietyHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts -->
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>.+\.googleapis\.com</string>
+      <string>.+\.jquery\.com</string>
+      <string>.+\.gstatic\.com</string>
+      <string>.+\.bootstrapcdn\.com</string>
+      <string>.+\.mathjax\.org</string>
+    </list>
   </entry>
 </map>
