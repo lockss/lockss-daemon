@@ -4179,12 +4179,27 @@
         au < zapped ; finished ; 2012 ; British Journal of Pain Volume 6 ; 6 ; >
         au < finished ; finished ; 2013 ; British Journal of Pain Volume 7 ; 7 ; >
         au < finished ; crawling ; 2014 ; British Journal of Pain Volume 8 ; 8 ; >
-        au < expected ; exists ; 2015 ; British Journal of Pain Volume 9 ; 9 ; >
+        au < exists ; exists ; 2015 ; British Journal of Pain Volume 9 ; 9 ; >
         au < expected ; exists ; 2016 ; British Journal of Pain Volume 10 ; 10 ; >
 
       }
 
-    }
+  }
+
+  {
+
+    title <
+      name = The British Journal of Politics and International Relations ;
+      issn = 1369-1481 ;
+      eissn = 1467-856X
+    >
+
+      param[base_url] = http://bpi.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < expected ; exists ; 2016 ; The British Journal of Politics and International Relations Volume 1 ; 1 ; >
+
+  }
 
   {
 
@@ -29442,6 +29457,27 @@
       au < finished ; finished ; 2014 ; Lighting Research and Technology Volume 46 ; 46 ; >
       au < crawling ; exists ; 2015 ; Lighting Research and Technology Volume 47 ; 47 ; >
       au < expected ; exists ; 2016 ; Lighting Research and Technology Volume 48 ; 48 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Literacy Research: Theory, Method, and Practice ;
+      issn = 2381-3369 ;
+      eissn = 2381-3377
+    >
+
+    param[base_url] = http://lrx.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2015 ; Literacy Research: Theory, Method, and Practice Volume 64 ; 64 ; >
+      au < expected ; exists ; 2016 ; Literacy Research: Theory, Method, and Practice Volume 65 ; 65 ; >
 
     }
 
