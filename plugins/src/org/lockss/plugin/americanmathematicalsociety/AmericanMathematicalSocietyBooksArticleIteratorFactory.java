@@ -55,7 +55,7 @@ implements ArticleIteratorFactory,
       "\"%sbooks/%s/\", base_url, collection_id";
   
   protected static final String PATTERN_TEMPLATE =
-      "\"^%sbooks/(%s)/([0-9]{2,5})(/\\1\\2\\.pdf)?$\", base_url, collection_id";
+      "\"^%sbooks/(%s)/([0-9]+)(/\\1\\2\\.pdf)?$\", base_url, collection_id";
   
   /*
     various files
@@ -64,10 +64,10 @@ implements ArticleIteratorFactory,
   
   // Identify groups in the pattern
   protected static final Pattern HTML_PATTERN = Pattern.compile(
-      "/books/([^/]+)/([0-9]{2,5})$",
+      "/books/([^/]+)/([0-9]+)$",
       Pattern.CASE_INSENSITIVE);
   protected static final Pattern PDF_PATTERN = Pattern.compile(
-      "/books/([^/]+)/([0-9]{2,5})/\\1\\2\\.pdf$",
+      "/books/([^/]+)/([0-9]+)/\\1\\2\\.pdf$",
       Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
@@ -84,18 +84,19 @@ implements ArticleIteratorFactory,
         ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
     
     // The order in which we want to define full_text_cu.
-    // First one that exists will get the job, html then PDF
-    
-    // set up html to be an aspect that will trigger an ArticleFiles
-    builder.addAspect(
-        HTML_PATTERN, HTML_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_HTML,
-        ArticleFiles.ROLE_ARTICLE_METADATA);
+    // First one that exists will get the job, PDF then html
     
     // set up PDF to be an aspect that will trigger an ArticleFiles
     builder.addAspect(
         PDF_PATTERN, PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
+    
+    // set up html to be an aspect that will trigger an ArticleFiles
+    builder.addAspect(
+        HTML_PATTERN, HTML_REPLACEMENT,
+        ArticleFiles.ROLE_ABSTRACT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
     
     return builder.getSubTreeArticleIterator();
   }

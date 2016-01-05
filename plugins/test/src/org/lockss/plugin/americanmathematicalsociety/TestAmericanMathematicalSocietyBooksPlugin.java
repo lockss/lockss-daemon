@@ -183,7 +183,8 @@ public class TestAmericanMathematicalSocietyBooksPlugin extends LockssTestCase {
     // toc page for a book http://www.ams.org/books/conm/630
     shouldCacheTest(ROOT_URL + "books/asdf/200/", true, au);
     shouldCacheTest(ROOT_URL + "books/asdf/200", true, au);
-    shouldCacheTest(ROOT_URL + "books/asdf/9", false, au);
+    shouldCacheTest(ROOT_URL + "books/asdf/9", true, au);
+    shouldCacheTest(ROOT_URL + "books/asdf/abc", false, au);
     
     // chapter files
     shouldCacheTest(ROOT_URL + "books/asdf/200/123456", true, au);
