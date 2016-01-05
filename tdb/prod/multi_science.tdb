@@ -527,8 +527,8 @@
     au < manifest ; 2000 ; Low Frequency Noise, Vibration and Active Control Volume 19 ; 19 >
     au < manifest ; 2001 ; Low Frequency Noise, Vibration and Active Control Volume 20 ; 20 >
     au < manifest ; 2002 ; Low Frequency Noise, Vibration and Active Control Volume 21 ; 21 >
-    au < manifest ; 2003 ; Low Frequency Noise, Vibration and Active Control Volume 22 ; 22 >
-    au < manifest ; 2004 ; Low Frequency Noise, Vibration and Active Control Volume 23 ; 23 >
+    au < ready ; 2003 ; Low Frequency Noise, Vibration and Active Control Volume 22 ; 22 >
+    au < ready ; 2004 ; Low Frequency Noise, Vibration and Active Control Volume 23 ; 23 >
     au < manifest ; 2005 ; Low Frequency Noise, Vibration and Active Control Volume 24 ; 24 >
     au < manifest ; 2006 ; Low Frequency Noise, Vibration and Active Control Volume 25 ; 25 >
     au < manifest ; 2007 ; Low Frequency Noise, Vibration and Active Control Volume 26 ; 26 >
@@ -595,9 +595,9 @@
 
     param[journal_id] = ijm
 
-    au < manifest ; 2007 ; The International Journal of Multiphysics Volume 1 ; 1 >
-    au < manifest ; 2008 ; The International Journal of Multiphysics Volume 2 ; 2 >
-    au < manifest ; 2009 ; The International Journal of Multiphysics Volume 3 ; 3 >
+    au < ready ; 2007 ; The International Journal of Multiphysics Volume 1 ; 1 >
+    au < ready ; 2008 ; The International Journal of Multiphysics Volume 2 ; 2 >
+    au < ready ; 2009 ; The International Journal of Multiphysics Volume 3 ; 3 >
     au < doNotProcess ; 2010 ; The International Journal of Multiphysics Volume 4 ; 4 >
     au < doNotProcess ; 2011 ; The International Journal of Multiphysics Volume 5 ; 5 >
     au < doNotProcess ; 2012 ; The International Journal of Multiphysics Volume 6 ; 6 >
@@ -656,16 +656,16 @@
 
     param[journal_id] = we
 
-    au < manifest ; 2000 ; Wind Engineering Volume 24 ; 24 >
+    au < ready ; 2000 ; Wind Engineering Volume 24 ; 24 >
     au < manifest ; 2001 ; Wind Engineering Volume 25 ; 25 >
     au < manifest ; 2002 ; Wind Engineering Volume 26 ; 26 >
     au < manifest ; 2003 ; Wind Engineering Volume 27 ; 27 >
     au < manifest ; 2004 ; Wind Engineering Volume 28 ; 28 >
-    au < manifest ; 2005 ; Wind Engineering Volume 29 ; 29 >
+    au < ready ; 2005 ; Wind Engineering Volume 29 ; 29 >
     au < manifest ; 2006 ; Wind Engineering Volume 30 ; 30 >
-    au < manifest ; 2007 ; Wind Engineering Volume 31 ; 31 >
+    au < ready ; 2007 ; Wind Engineering Volume 31 ; 31 >
     au < manifest ; 2008 ; Wind Engineering Volume 32 ; 32 >
-    au < manifest ; 2009 ; Wind Engineering Volume 33 ; 33 >
+    au < ready ; 2009 ; Wind Engineering Volume 33 ; 33 >
     au < doNotProcess ; 2010 ; Wind Engineering Volume 34 ; 34 >
     au < doNotProcess ; 2011 ; Wind Engineering Volume 35 ; 35 >
     au < doNotProcess ; 2012 ; Wind Engineering Volume 36 ; 36 >

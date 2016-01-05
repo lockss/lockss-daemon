@@ -57,8 +57,8 @@
     au < manifest ; 2007 ; Before Farming Volume 2007 ; 2007 >
     au < manifest ; 2008 ; Before Farming Volume 2008 ; 2008 >
     au < manifest ; 2009 ; Before Farming Volume 2009 ; 2009 >
-    au < manifest ; 2010 ; Before Farming Volume 2010 ; 2010 >
-    au < manifest ; 2011 ; Before Farming Volume 2011 ; 2011 >
+    au < ready ; 2010 ; Before Farming Volume 2010 ; 2010 >
+    au < ready ; 2011 ; Before Farming Volume 2011 ; 2011 >
     au < manifest ; 2012 ; Before Farming Volume 2012 ; 2012 >
 
   }
@@ -235,11 +235,11 @@
     au < manifest ; 2005 ; Essays in Romanticism Volume 13 ; 13 >
     au < manifest ; 2006 ; Essays in Romanticism Volume 14 ; 14 >
     au < manifest ; 2007 ; Essays in Romanticism Volume 15 ; 15 >
-    au < manifest ; 2008 ; Essays in Romanticism Volume 16 ; 16 >
+    au < ready ; 2008 ; Essays in Romanticism Volume 16 ; 16 >
     au < manifest ; 2009 ; Essays in Romanticism Volume 17 ; 17 >
-    au < manifest ; 2010 ; Essays in Romanticism Volume 18 ; 18 >
+    au < ready ; 2010 ; Essays in Romanticism Volume 18 ; 18 >
     au < manifest ; 2012 ; Essays in Romanticism Volume 19 ; 19 >
-    au < manifest ; 2013 ; Essays in Romanticism Volume 20 ; 20 >
+    au < ready ; 2013 ; Essays in Romanticism Volume 20 ; 20 >
     au < manifest ; 2014 ; Essays in Romanticism Volume 21 ; 21 >
     au < manifest ; 2015 ; Essays in Romanticism Volume 22 ; 22 >
 
@@ -297,7 +297,7 @@
     param[journal_id] = franc
 
     au < manifest ; 2012 ; Francosphères Volume 1 ; 1 >
-    au < manifest ; 2013 ; Francosphères Volume 2 ; 2 >
+    au < ready ; 2013 ; Francosphères Volume 2 ; 2 >
     au < manifest ; 2014 ; Francosphères Volume 3 ; 3 >
     au < manifest ; 2015 ; Francosphères Volume 4 ; 4 >
 
@@ -454,7 +454,7 @@
     param[journal_id] = mb
 
     au < manifest ; 2010 ; Modern Believing Volume 51 ; 51 >
-    au < manifest ; 2011 ; Modern Believing Volume 52 ; 52 >
+    au < ready ; 2011 ; Modern Believing Volume 52 ; 52 >
     au < manifest ; 2012 ; Modern Believing Volume 53 ; 53 >
     au < manifest ; 2013 ; Modern Believing Volume 54 ; 54 >
     au < manifest ; 2014 ; Modern Believing Volume 55 ; 55 >
@@ -511,7 +511,7 @@
 
     param[journal_id] = newsletter
 
-    au < manifest ; 2012 ; Newsletter of the Gypsy Lore Society Volume 35 ; 35 >
+    au < ready ; 2012 ; Newsletter of the Gypsy Lore Society Volume 35 ; 35 >
     au < ready ; 2013 ; Newsletter of the Gypsy Lore Society Volume 36 ; 36 >
     au < manifest ; 2014 ; Newsletter of the Gypsy Lore Society Volume 37 ; 37 >
     au < expected ; 2015 ; Newsletter of the Gypsy Lore Society Volume 38 ; 38 >
@@ -576,17 +576,17 @@
 
     au < manifest ; 2008 ; Quebec Studies Volume 45 ; 45 >
     au < manifest ; 2008 ; Quebec Studies Volume 46 ; 46 >
-    au < manifest ; 2009 ; Quebec Studies Volume 47 ; 47 >
+    au < ready ; 2009 ; Quebec Studies Volume 47 ; 47 >
     au < manifest ; 2009 ; Quebec Studies Volume 48 ; 48 >
     au < manifest ; 2010 ; Quebec Studies Volume 49 ; 49 >
     au < manifest ; 2010 ; Quebec Studies Volume 50 ; 50 >
     au < manifest ; 2011 ; Quebec Studies Volume 51 ; 51 >
     au < manifest ; 2011 ; Quebec Studies Volume 52 ; 52 >
-    au < manifest ; 2012 ; Quebec Studies Volume 53 ; 53 >
-    au < manifest ; 2012 ; Quebec Studies Volume 54 ; 54 >
+    au < ready ; 2012 ; Quebec Studies Volume 53 ; 53 >
+    au < ready ; 2012 ; Quebec Studies Volume 54 ; 54 >
     au < manifest ; 2012 ; Quebec Studies Volume Special_Issue ; Special_Issue >
-    au < manifest ; 2013 ; Quebec Studies Volume 55 ; 55 >
-    au < manifest ; 2013 ; Quebec Studies Volume 56 ; 56 >
+    au < ready ; 2013 ; Quebec Studies Volume 55 ; 55 >
+    au < ready ; 2013 ; Quebec Studies Volume 56 ; 56 >
     au < manifest ; 2014 ; Quebec Studies Volume 57 ; 57 >
     au < ready ; 2014 ; Quebec Studies Volume 58 ; 58 >
     au < manifest ; 2015 ; Quebec Studies Volume 59 ; 59 >
