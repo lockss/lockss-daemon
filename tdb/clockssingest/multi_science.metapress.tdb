@@ -577,7 +577,7 @@
     au < doNotProcess ; exists ; 2009 ; The International Journal of Multiphysics Volume 3 ; 3 >
     au < superseded ; finished ; 2010 ; The International Journal of Multiphysics Volume 4 [superseded] ; 4 >
     au < superseded ; finished ; 2011 ; The International Journal of Multiphysics Volume 5 [superseded] ; 5 >
-    au < superseded ; crawling ; 2012 ; The International Journal of Multiphysics Volume 6 [superseded] ; 6 >
+    au < superseded ; down ; 2012 ; The International Journal of Multiphysics Volume 6 [superseded] ; 6 >
     au < superseded ; exists ; 2013 ; The International Journal of Multiphysics Volume 7 [superseded] ; 7 >
     au < doNotProcess ; exists ; 2014 ; The International Journal of Multiphysics Volume 8 ; 8 >
     au < doNotProcess ; exists ; 2015 ; The International Journal of Multiphysics Volume 9 ; 9 >
@@ -660,7 +660,7 @@
     param[journal_issn] = 1708-5284
 
     au < superseded ; finished ; 2011 ; World Journal of Engineering Volume 8 [superseded] ; 8 >
-    au < superseded ; crawling ; 2012 ; World Journal of Engineering Volume 9 [superseded] ; 9 >
+    au < superseded ; down ; 2012 ; World Journal of Engineering Volume 9 [superseded] ; 9 >
     au < superseded ; exists ; 2013 ; World Journal of Engineering Volume 10 [superseded] ; 10 >
     au < doNotProcess ; exists ; 2014 ; World Journal of Engineering Volume 11 ; 11 >
     au < doNotProcess ; exists ; 2015 ; World Journal of Engineering Volume 12 ; 12 >
