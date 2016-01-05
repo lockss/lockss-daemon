@@ -4659,12 +4659,28 @@
         au < released ; 2010 ; British Journal of Pain Volume 4 ; 4 >
         au < released ; 2011 ; British Journal of Pain Volume 5 ; 5 >
         au < released ; 2012 ; British Journal of Pain Volume 6 ; 6 >
-        au < expected ; 2013 ; British Journal of Pain Volume 7 ; 7 >
-        au < expected ; 2014 ; British Journal of Pain Volume 8 ; 8 >
-        au < expected ; 2015 ; British Journal of Pain Volume 9 ; 9 >
+        au < exists ; 2013 ; British Journal of Pain Volume 7 ; 7 >
+        au < exists ; 2014 ; British Journal of Pain Volume 8 ; 8 >
+        au < exists ; 2015 ; British Journal of Pain Volume 9 ; 9 >
         au < expected ; 2016 ; British Journal of Pain Volume 10 ; 10 >
 
       }
+
+    }
+
+    {
+
+    title <
+      name = The British Journal of Politics and International Relations ;
+      issn = 1369-1481 ;
+      eissn = 1467-856X
+    >
+
+      param[base_url] = http://bpi.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < expected ; 2016 ; The British Journal of Politics and International Relations Volume 1 ; 1 >
 
     }
 
@@ -32789,6 +32805,28 @@ comment[mpj] = now published by Brill
       }
 
     }
+
+  {
+
+    title <
+      name = Literacy Research: Theory, Method, and Practice ;
+      issn = 2381-3369 ;
+      eissn = 2381-3377
+    >
+
+    param[base_url] = http://lrx.sagepub.com/
+
+    {
+
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2015 ; Literacy Research: Theory, Method, and Practice Volume 64 ; 64 >
+      au < expected ; 2016 ; Literacy Research: Theory, Method, and Practice Volume 65 ; 65 >
+
+    }
+
+  }
 
   {
 
