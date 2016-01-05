@@ -97,7 +97,6 @@
       au < doNotProcess ; 2005-2007 ; Atoms for Peace: an International Journal Volume 1 ; 1 >
       au < doNotProcess ; 2008-2009 ; Atoms for Peace: an International Journal Volume 2 ; 2 >
       au < doNotProcess ; 2010-2013 ; Atoms for Peace: an International Journal Volume 3 ; 3 >
-      au < expected ; 2015 ; Atoms for Peace: an International Journal Volume 4 ; 4 >
 
     }
 
@@ -114,7 +113,6 @@
 
       au < doNotProcess ; 2008-2010 ; The Botulinum Journal Volume 1 ; 1 >
       au < doNotProcess ; 2011-2013 ; The Botulinum Journal Volume 2 ; 2 >
-      au < expected ; 2015 ; The Botulinum Journal Volume 3 ; 3 >
 
     }
 
@@ -156,8 +154,8 @@
 
       au < doNotProcess ; 2009-2010 ; European Journal of Cross-Cultural Competence and Management Volume 1 ; 1 >
       au < doNotProcess ; 2011-2012 ; European Journal of Cross-Cultural Competence and Management Volume 2 ; 2 >
-      au < released ; 2014 ; European Journal of Cross-Cultural Competence and Management Volume 3 ; 3 >
-      au < expected ; 2015 ; European Journal of Cross-Cultural Competence and Management Volume 4 ; 4 >
+      au < released ; 2014-2015 ; European Journal of Cross-Cultural Competence and Management Volume 3 ; 3 >
+      au < expected ; 2016 ; European Journal of Cross-Cultural Competence and Management Volume 4 ; 4 >
 
     }
 
@@ -6136,8 +6134,8 @@
 
       param[journal_id] = ijpe
 
-      au < released ; 2014 ; International Journal of Petroleum Engineering Volume 1 ; 1 >
-      au < expected ; 2015 ; International Journal of Petroleum Engineering Volume 2 ; 2 >
+      au < released ; 2014-2015 ; International Journal of Petroleum Engineering Volume 1 ; 1 >
+      au < expected ; 2016 ; International Journal of Petroleum Engineering Volume 2 ; 2 >
 
     }
 
@@ -6153,7 +6151,7 @@
       param[journal_id] = ijplp
       comment[0] = title is not yet published on 9/26/2013
 
-      au < expected ; 2015 ; International Journal of Physiotherapy and Life Physics Volume 1 ; 1 >
+      au < expected ; 2016 ; International Journal of Physiotherapy and Life Physics Volume 1 ; 1 >
 
     }
 
@@ -6170,7 +6168,7 @@
 
       au < doNotProcess ; 2011-2013 ; International Journal of Planning and Scheduling Volume 1 ; 1 >
       au < released ; 2014-2015 ; International Journal of Planning and Scheduling Volume 2 ; 2 >
-      au < expected ; 2015 ; International Journal of Planning and Scheduling Volume 3 ; 3 >
+      au < expected ; 2016 ; International Journal of Planning and Scheduling Volume 3 ; 3 >
 
     }
 
@@ -6455,7 +6453,7 @@
       param[journal_id] = ijpsq
       comment[0] = title is not yet published on 9/26/2013
 
-      au < expected ; 2015 ; International Journal of Product Sound Quality Volume 1 ; 1 >
+      au < expected ; 2016 ; International Journal of Product Sound Quality Volume 1 ; 1 >
 
     }
 
