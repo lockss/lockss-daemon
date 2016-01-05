@@ -226,6 +226,7 @@
     au < finished ; finished ; 2010 ; Arms & Armour Volume 7 ; 7 > 
     au < finished ; frozen ; 2011 ; Arms & Armour Volume 8 ; 8 > 
     au < finished ; finished ; 2012 ; Arms & Armour Volume 9 ; 9 > 
+    au < finished ; finished ; 2012 ; Arms & Armour Volume 9 ; 9 >
     au < doNotProcess ; doNotProcess ; 2013 ; Arms & Armour Volume 10 ; 10 > 
 
   }
@@ -3905,11 +3906,12 @@
     au < doNotProcess ; doNotProcess ; 2006 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 38 ; 38 > 
     au < doNotProcess ; doNotProcess ; 2007 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 39 ; 39 > 
     au < doNotProcess ; doNotProcess ; 2008 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 40 ; 40 > 
-    au < doNotProcess ; doNotProcess ; 2009 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 41 ; 41 > 
-    au < finished ; finished ; 2010 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 42 ; 42 > 
-    au < finished ; crawling ; 2011 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 43 ; 43 > 
+    au < doNotProcess ; doNotProcess ; 2009 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 41 ; 41 >
+    au < finished ; finished ; 2010 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 42 ; 42 >
+    au < finished ; crawling ; 2011 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 43 ; 43 >
     au < finished ; finished ; 2012 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 44 ; 44 > 
-    au < doNotProcess ; doNotProcess ; 2013 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 45 ; 45 > 
+    au < finished ; finished ; 2012 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 44 ; 44 >
+    au < doNotProcess ; doNotProcess ; 2013 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 45 ; 45 >
 
   }
 
@@ -3962,13 +3964,13 @@
     au < doNotProcess ; doNotProcess ; 2004 ; Textile History Volume 35 ; 35 > 
     au < doNotProcess ; doNotProcess ; 2005 ; Textile History Volume 36 ; 36 > 
     au < doNotProcess ; doNotProcess ; 2006 ; Textile History Volume 37 ; 37 > 
-    au < doNotProcess ; doNotProcess ; 2007 ; Textile History Volume 38 ; 38 > 
-    au < doNotProcess ; doNotProcess ; 2008 ; Textile History Volume 39 ; 39 > 
-    au < doNotProcess ; doNotProcess ; 2009 ; Textile History Volume 40 ; 40 > 
-    au < finished ; finished ; 2010 ; Textile History Volume 41 ; 41 > 
-    au < finished ; finished ; 2011 ; Textile History Volume 42 ; 42 > 
-    au < finished ; crawling ; 2012 ; Textile History Volume 43 ; 43 > 
-    au < doNotProcess ; doNotProcess ; 2013 ; Textile History Volume 44 ; 44 > 
+    au < doNotProcess ; doNotProcess ; 2007 ; Textile History Volume 38 ; 38 >
+    au < doNotProcess ; doNotProcess ; 2008 ; Textile History Volume 39 ; 39 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Textile History Volume 40 ; 40 >
+    au < finished ; finished ; 2010 ; Textile History Volume 41 ; 41 >
+    au < finished ; finished ; 2011 ; Textile History Volume 42 ; 42 >
+    au < finished ; crawling ; 2012 ; Textile History Volume 43 ; 43 >
+    au < doNotProcess ; doNotProcess ; 2013 ; Textile History Volume 44 ; 44 >
 
   }
 
@@ -3989,12 +3991,12 @@
     au < doNotProcess ; doNotProcess ; 2005 ; Transactions of the Institute of Metal Finishing Volume 83 ; 83 > 
     au < doNotProcess ; doNotProcess ; 2006 ; Transactions of the Institute of Metal Finishing Volume 84 ; 84 > 
     au < doNotProcess ; doNotProcess ; 2007 ; Transactions of the Institute of Metal Finishing Volume 85 ; 85 > 
-    au < doNotProcess ; doNotProcess ; 2008 ; Transactions of the Institute of Metal Finishing Volume 86 ; 86 > 
-    au < doNotProcess ; doNotProcess ; 2009 ; Transactions of the Institute of Metal Finishing Volume 87 ; 87 > 
-    au < finished ; crawling ; 2010 ; Transactions of the Institute of Metal Finishing Volume 88 ; 88 > 
-    au < finished ; finished ; 2011 ; Transactions of the Institute of Metal Finishing Volume 89 ; 89 > 
-    au < finished ; crawling ; 2012 ; Transactions of the Institute of Metal Finishing Volume 90 ; 90 > 
-    au < doNotProcess ; doNotProcess ; 2013 ; Transactions of the Institute of Metal Finishing Volume 91 ; 91 > 
+    au < doNotProcess ; doNotProcess ; 2008 ; Transactions of the Institute of Metal Finishing Volume 86 ; 86 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Transactions of the Institute of Metal Finishing Volume 87 ; 87 >
+    au < finished ; crawling ; 2010 ; Transactions of the Institute of Metal Finishing Volume 88 ; 88 >
+    au < finished ; finished ; 2011 ; Transactions of the Institute of Metal Finishing Volume 89 ; 89 >
+    au < finished ; crawling ; 2012 ; Transactions of the Institute of Metal Finishing Volume 90 ; 90 >
+    au < doNotProcess ; doNotProcess ; 2013 ; Transactions of the Institute of Metal Finishing Volume 91 ; 91 >
 
   }
 
@@ -4034,12 +4036,12 @@
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; doNotProcess ; 2007 ; Tribology - Materials, Surfaces & Interfaces Volume 1 ; 1 > 
-    au < doNotProcess ; doNotProcess ; 2008 ; Tribology - Materials, Surfaces & Interfaces Volume 2 ; 2 > 
-    au < doNotProcess ; doNotProcess ; 2009 ; Tribology - Materials, Surfaces & Interfaces Volume 3 ; 3 > 
-    au < finished ; crawling ; 2010 ; Tribology - Materials, Surfaces & Interfaces Volume 4 ; 4 > 
-    au < finished ; finished ; 2011 ; Tribology - Materials, Surfaces & Interfaces Volume 5 ; 5 > 
-    au < finished ; crawling ; 2012 ; Tribology - Materials, Surfaces & Interfaces Volume 6 ; 6 > 
-    au < doNotProcess ; doNotProcess ; 2013 ; Tribology - Materials, Surfaces & Interfaces Volume 7 ; 7 > 
+    au < doNotProcess ; doNotProcess ; 2008 ; Tribology - Materials, Surfaces & Interfaces Volume 2 ; 2 >
+    au < doNotProcess ; doNotProcess ; 2009 ; Tribology - Materials, Surfaces & Interfaces Volume 3 ; 3 >
+    au < finished ; crawling ; 2010 ; Tribology - Materials, Surfaces & Interfaces Volume 4 ; 4 >
+    au < finished ; finished ; 2011 ; Tribology - Materials, Surfaces & Interfaces Volume 5 ; 5 >
+    au < finished ; crawling ; 2012 ; Tribology - Materials, Surfaces & Interfaces Volume 6 ; 6 >
+    au < doNotProcess ; doNotProcess ; 2013 ; Tribology - Materials, Surfaces & Interfaces Volume 7 ; 7 >
 
   }
 
@@ -4097,9 +4099,9 @@
     param[journal_issn] = 1757-8949
 
     comment[0] = publication ceased December 31, 2012
-    
-    au < finished ; finished ; 2010 ; Usus Antiquior Volume 1 ; 1 > 
-    au < finished ; finished ; 2011 ; Usus Antiquior Volume 2 ; 2 >  
+
+    au < finished ; finished ; 2010 ; Usus Antiquior Volume 1 ; 1 >
+    au < finished ; finished ; 2011 ; Usus Antiquior Volume 2 ; 2 >
     au < finished ; finished ; 2012 ; Usus Antiquior Volume 3 ; 3 >
 
   }
@@ -4200,13 +4202,13 @@
     au < doNotProcess ; doNotProcess ; 2005 ; War & Society Volume 23 ; 23 > 
     au < doNotProcess ; doNotProcess ; 2005 ; War & Society Volume 24 ; 24 > 
     au < doNotProcess ; doNotProcess ; 2006 ; War & Society Volume 25 ; 25 > 
-    au < doNotProcess ; doNotProcess ; 2007 ; War & Society Volume 26 ; 26 > 
-    au < doNotProcess ; doNotProcess ; 2008 ; War & Society Volume 27 ; 27 > 
-    au < doNotProcess ; doNotProcess ; 2009 ; War & Society Volume 28 ; 28 > 
-    au < finished ; finished ; 2010 ; War & Society Volume 29 ; 29 > 
-    au < finished ; finished ; 2011 ; War & Society Volume 30 ; 30 > 
-    au < finished ; crawling ; 2012 ; War & Society Volume 31 ; 31 > 
-    au < doNotProcess ; doNotProcess ; 2013 ; War & Society Volume 32 ; 32 > 
+    au < doNotProcess ; doNotProcess ; 2007 ; War & Society Volume 26 ; 26 >
+    au < doNotProcess ; doNotProcess ; 2008 ; War & Society Volume 27 ; 27 >
+    au < doNotProcess ; doNotProcess ; 2009 ; War & Society Volume 28 ; 28 >
+    au < finished ; finished ; 2010 ; War & Society Volume 29 ; 29 >
+    au < finished ; finished ; 2011 ; War & Society Volume 30 ; 30 >
+    au < finished ; crawling ; 2012 ; War & Society Volume 31 ; 31 >
+    au < doNotProcess ; doNotProcess ; 2013 ; War & Society Volume 32 ; 32 >
 
   }
 
