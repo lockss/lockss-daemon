@@ -74,6 +74,7 @@
     au < manifest ; 2013 ; Geochemistry: Exploration, Environment, Analysis Volume 13 ; 13 >
     au < released ; 2014 ; Geochemistry: Exploration, Environment, Analysis Volume 14 ; 14 >
     au < manifest ; 2015 ; Geochemistry: Exploration, Environment, Analysis Volume 15 ; 15 >
+    au < expected ; 2016 ; Geochemistry: Exploration, Environment, Analysis Volume 16 ; 16 >
 
   }
 
@@ -131,10 +132,13 @@
     au < HighWirePressH20Plugin ; released ; 2014 ; Geological Society of London Memoirs Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Geological Society of London Memoirs Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Geological Society of London Memoirs Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; manifest ; 2015 ; Geological Society of London Memoirs Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; Geological Society of London Memoirs Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Geological Society of London Memoirs Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Geological Society of London Memoirs Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Geological Society of London Memoirs Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; expected ; 2016 ; Geological Society of London Memoirs Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; expected ; 2016 ; Geological Society of London Memoirs Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; expected ; 2016 ; Geological Society of London Memoirs Volume 48 ; 48 >
 
   }
 
@@ -561,7 +565,7 @@
     au < HighWirePressH20Plugin ; expected ; 2015 ; Geological Society of London Special Publications Volume 408 ; 408 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Geological Society of London Special Publications Volume 409 ; 409 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Geological Society of London Special Publications Volume 410 ; 410 >
-    au < HighWirePressH20Plugin ; manifest ; 2015 ; Geological Society of London Special Publications Volume 411 ; 411 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Geological Society of London Special Publications Volume 411 ; 411 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Geological Society of London Special Publications Volume 412 ; 412 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Geological Society of London Special Publications Volume 413 ; 413 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Geological Society of London Special Publications Volume 414 ; 414 >
@@ -573,6 +577,13 @@
     au < HighWirePressH20Plugin ; expected ; 2015 ; Geological Society of London Special Publications Volume 420 ; 420 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Geological Society of London Special Publications Volume 421 ; 421 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Geological Society of London Special Publications Volume 422 ; 422 >
+    au < HighWirePressH20Plugin ; expected ; 2016 ; Geological Society of London Special Publications Volume 423 ; 423 >
+    au < HighWirePressH20Plugin ; expected ; 2016 ; Geological Society of London Special Publications Volume 424 ; 424 >
+    au < HighWirePressH20Plugin ; expected ; 2016 ; Geological Society of London Special Publications Volume 425 ; 425 >
+    au < HighWirePressH20Plugin ; expected ; 2016 ; Geological Society of London Special Publications Volume 426 ; 426 >
+    au < HighWirePressH20Plugin ; expected ; 2016 ; Geological Society of London Special Publications Volume 427 ; 427 >
+    au < HighWirePressH20Plugin ; expected ; 2016 ; Geological Society of London Special Publications Volume 428 ; 428 >
+    au < HighWirePressH20Plugin ; expected ; 2016 ; Geological Society of London Special Publications Volume 429 ; 429 >
 
   }
 
@@ -635,6 +646,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of the Geological Society of London Volume 170 ; 170 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Journal of the Geological Society of London Volume 171 ; 171 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of the Geological Society of London Volume 172 ; 172 >
+    au < HighWirePressH20Plugin ; expected ; 2016 ; Journal of the Geological Society of London Volume 173 ; 173 >
 
   }
 
@@ -671,6 +683,7 @@
       au < manifest ; 2013 ; Petroleum Geoscience Volume 19 ; 19 >
       au < released ; 2014 ; Petroleum Geoscience Volume 20 ; 20 >
       au < manifest ; 2015 ; Petroleum Geoscience Volume 21 ; 21 >
+      au < expected ; 2016 ; Petroleum Geoscience Volume 22 ; 22 >
     
   }
 
@@ -735,6 +748,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; expected ; 2016 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 49 ; 49 >
       
   }
 
