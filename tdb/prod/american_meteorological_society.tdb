@@ -105,6 +105,95 @@
   {
 
     title <
+      name = Journal of Applied Meteorology ;
+      issn = 0021-8952 ;
+      issnl = 0021-8952
+    >
+
+    param[journal_id] = jam
+    comment[continued_by] = 0733-3021
+
+    au < manifest ; 1962 ; Journal of Applied Meteorology Volume 1 ; 1 >
+    au < manifest ; 1963 ; Journal of Applied Meteorology Volume 2 ; 2 >
+    au < manifest ; 1964 ; Journal of Applied Meteorology Volume 3 ; 3 >
+    au < manifest ; 1965 ; Journal of Applied Meteorology Volume 4 ; 4 >
+    au < manifest ; 1966 ; Journal of Applied Meteorology Volume 5 ; 5 >
+    au < manifest ; 1967 ; Journal of Applied Meteorology Volume 6 ; 6 >
+    au < manifest ; 1968 ; Journal of Applied Meteorology Volume 7 ; 7 >
+    au < manifest ; 1969 ; Journal of Applied Meteorology Volume 8 ; 8 >
+    au < manifest ; 1970 ; Journal of Applied Meteorology Volume 9 ; 9 >
+    au < manifest ; 1971 ; Journal of Applied Meteorology Volume 10 ; 10 >
+    au < manifest ; 1972 ; Journal of Applied Meteorology Volume 11 ; 11 >
+    au < manifest ; 1973 ; Journal of Applied Meteorology Volume 12 ; 12 >
+    au < manifest ; 1974 ; Journal of Applied Meteorology Volume 13 ; 13 >
+    au < manifest ; 1975 ; Journal of Applied Meteorology Volume 14 ; 14 >
+    au < manifest ; 1976 ; Journal of Applied Meteorology Volume 15 ; 15 >
+    au < manifest ; 1977 ; Journal of Applied Meteorology Volume 16 ; 16 >
+    au < manifest ; 1978 ; Journal of Applied Meteorology Volume 17 ; 17 >
+    au < manifest ; 1979 ; Journal of Applied Meteorology Volume 18 ; 18 >
+    au < manifest ; 1980 ; Journal of Applied Meteorology Volume 19 ; 19 >
+    au < manifest ; 1981 ; Journal of Applied Meteorology Volume 20 ; 20 >
+    au < manifest ; 1982 ; Journal of Applied Meteorology Volume 21 ; 21 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Climate and Applied Meteorology ;
+      issn = 0733-3021 ;
+      issnl = 0733-3021
+    >
+
+    param[journal_id] = jcam
+    comment[continues] = 0021-8952
+    comment[continued_by] = 0894-8763
+
+    au < manifest ; 1983 ; Journal of Climate and Applied Meteorology Volume 22 ; 22 >
+    au < manifest ; 1984 ; Journal of Climate and Applied Meteorology Volume 23 ; 23 >
+    au < manifest ; 1985 ; Journal of Climate and Applied Meteorology Volume 24 ; 24 >
+    au < manifest ; 1986 ; Journal of Climate and Applied Meteorology Volume 25 ; 25 >
+    au < manifest ; 1987 ; Journal of Climate and Applied Meteorology Volume 26 ; 26 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Applied Meteorology ;
+      issn = 0894-8763 ;
+      eissn = 1520-0450 ;
+      issnl = 0894-8763
+    >
+
+    param[journal_id] = apme1
+    comment[continues] = 0733-3021
+    comment[continued_by] = 1558-8424
+
+    au < manifest ; 1988 ; Journal of Applied Meteorology Volume 27 ; 27 >
+    au < manifest ; 1989 ; Journal of Applied Meteorology Volume 28 ; 28 >
+    au < manifest ; 1990 ; Journal of Applied Meteorology Volume 29 ; 29 >
+    au < manifest ; 1991 ; Journal of Applied Meteorology Volume 30 ; 30 >
+    au < manifest ; 1992 ; Journal of Applied Meteorology Volume 31 ; 31 >
+    au < manifest ; 1993 ; Journal of Applied Meteorology Volume 32 ; 32 >
+    au < manifest ; 1994 ; Journal of Applied Meteorology Volume 33 ; 33 >
+    au < manifest ; 1995 ; Journal of Applied Meteorology Volume 34 ; 34 >
+    au < manifest ; 1996 ; Journal of Applied Meteorology Volume 35 ; 35 >
+    au < manifest ; 1997 ; Journal of Applied Meteorology Volume 36 ; 36 >
+    au < manifest ; 1998 ; Journal of Applied Meteorology Volume 37 ; 37 >
+    au < manifest ; 1999 ; Journal of Applied Meteorology Volume 38 ; 38 >
+    au < manifest ; 2000 ; Journal of Applied Meteorology Volume 39 ; 39 >
+    au < manifest ; 2001 ; Journal of Applied Meteorology Volume 40 ; 40 >
+    au < manifest ; 2002 ; Journal of Applied Meteorology Volume 41 ; 41 >
+    au < manifest ; 2003 ; Journal of Applied Meteorology Volume 42 ; 42 >
+    au < manifest ; 2004 ; Journal of Applied Meteorology Volume 43 ; 43 >
+    au < manifest ; 2005 ; Journal of Applied Meteorology Volume 44 ; 44 >
+
+  }
+
+  {
+
+    title <
       name = Journal of Applied Meteorology and Climatology ;
       issn = 1558-8424 ;
       eissn = 1558-8432 ;
@@ -112,52 +201,8 @@
     >
 
     param[journal_id] = apme
-    comment[notReady] = no substance
-  
-    au < manifest ; 1962 ; Journal of Applied Meteorology and Climatology Volume 1 ; 1 >  
-    au < manifest ; 1963 ; Journal of Applied Meteorology and Climatology Volume 2 ; 2 >  
-    au < manifest ; 1964 ; Journal of Applied Meteorology and Climatology Volume 3 ; 3 >  
-    au < manifest ; 1965 ; Journal of Applied Meteorology and Climatology Volume 4 ; 4 >  
-    au < manifest ; 1966 ; Journal of Applied Meteorology and Climatology Volume 5 ; 5 >  
-    au < manifest ; 1967 ; Journal of Applied Meteorology and Climatology Volume 6 ; 6 >  
-    au < manifest ; 1968 ; Journal of Applied Meteorology and Climatology Volume 7 ; 7 >  
-    au < manifest ; 1969 ; Journal of Applied Meteorology and Climatology Volume 8 ; 8 >  
-    au < manifest ; 1970 ; Journal of Applied Meteorology and Climatology Volume 9 ; 9 >
-    au < manifest ; 1971 ; Journal of Applied Meteorology and Climatology Volume 10 ; 10 >
-    au < manifest ; 1972 ; Journal of Applied Meteorology and Climatology Volume 11 ; 11 >
-    au < manifest ; 1973 ; Journal of Applied Meteorology and Climatology Volume 12 ; 12 >
-    au < manifest ; 1974 ; Journal of Applied Meteorology and Climatology Volume 13 ; 13 >
-    au < manifest ; 1975 ; Journal of Applied Meteorology and Climatology Volume 14 ; 14 >
-    au < manifest ; 1976 ; Journal of Applied Meteorology and Climatology Volume 15 ; 15 >
-    au < manifest ; 1977 ; Journal of Applied Meteorology and Climatology Volume 16 ; 16 >
-    au < manifest ; 1978 ; Journal of Applied Meteorology and Climatology Volume 17 ; 17 >
-    au < manifest ; 1979 ; Journal of Applied Meteorology and Climatology Volume 18 ; 18 >
-    au < manifest ; 1980 ; Journal of Applied Meteorology and Climatology Volume 19 ; 19 >
-    au < manifest ; 1981 ; Journal of Applied Meteorology and Climatology Volume 20 ; 20 >
-    au < manifest ; 1982 ; Journal of Applied Meteorology and Climatology Volume 21 ; 21 >
-    au < manifest ; 1983 ; Journal of Applied Meteorology and Climatology Volume 22 ; 22 >
-    au < manifest ; 1984 ; Journal of Applied Meteorology and Climatology Volume 23 ; 23 >
-    au < manifest ; 1985 ; Journal of Applied Meteorology and Climatology Volume 24 ; 24 >
-    au < manifest ; 1986 ; Journal of Applied Meteorology and Climatology Volume 25 ; 25 >
-    au < manifest ; 1987 ; Journal of Applied Meteorology and Climatology Volume 26 ; 26 >
-    au < manifest ; 1988 ; Journal of Applied Meteorology and Climatology Volume 27 ; 27 >
-    au < manifest ; 1989 ; Journal of Applied Meteorology and Climatology Volume 28 ; 28 >
-    au < manifest ; 1990 ; Journal of Applied Meteorology and Climatology Volume 29 ; 29 >
-    au < manifest ; 1991 ; Journal of Applied Meteorology and Climatology Volume 30 ; 30 >
-    au < manifest ; 1992 ; Journal of Applied Meteorology and Climatology Volume 31 ; 31 >
-    au < manifest ; 1993 ; Journal of Applied Meteorology and Climatology Volume 32 ; 32 >
-    au < manifest ; 1994 ; Journal of Applied Meteorology and Climatology Volume 33 ; 33 >
-    au < manifest ; 1995 ; Journal of Applied Meteorology and Climatology Volume 34 ; 34 >
-    au < manifest ; 1996 ; Journal of Applied Meteorology and Climatology Volume 35 ; 35 >
-    au < manifest ; 1997 ; Journal of Applied Meteorology and Climatology Volume 36 ; 36 >
-    au < manifest ; 1998 ; Journal of Applied Meteorology and Climatology Volume 37 ; 37 >
-    au < manifest ; 1999 ; Journal of Applied Meteorology and Climatology Volume 38 ; 38 >
-    au < manifest ; 2000 ; Journal of Applied Meteorology and Climatology Volume 39 ; 39 >
-    au < manifest ; 2001 ; Journal of Applied Meteorology and Climatology Volume 40 ; 40 >
-    au < manifest ; 2002 ; Journal of Applied Meteorology and Climatology Volume 41 ; 41 >
-    au < manifest ; 2003 ; Journal of Applied Meteorology and Climatology Volume 42 ; 42 >
-    au < manifest ; 2004 ; Journal of Applied Meteorology and Climatology Volume 43 ; 43 >
-    au < notReady ; 2005 ; Journal of Applied Meteorology and Climatology Volume 44 ; 44 >
+    comment[continues] = 0894-8763
+
     au < released ; 2006 ; Journal of Applied Meteorology and Climatology Volume 45 ; 45 >
     au < released ; 2007 ; Journal of Applied Meteorology and Climatology Volume 46 ; 46 >
     au < released ; 2008 ; Journal of Applied Meteorology and Climatology Volume 47 ; 47 >
