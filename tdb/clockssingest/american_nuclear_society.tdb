@@ -21,9 +21,9 @@
 
       param[journal_id] = nse
       
-      au < ready ; exists ; 2015 ; Nuclear Science and Engineering Volume 179 ; 179 >
-      au < ready ; exists ; 2015 ; Nuclear Science and Engineering Volume 180 ; 180 >
-      au < ready ; exists ; 2015 ; Nuclear Science and Engineering Volume 181 ; 181 >
+      au < crawling ; exists ; 2015 ; Nuclear Science and Engineering Volume 179 ; 179 >
+      au < crawling ; exists ; 2015 ; Nuclear Science and Engineering Volume 180 ; 180 >
+      au < crawling ; exists ; 2015 ; Nuclear Science and Engineering Volume 181 ; 181 >
 
 
 
@@ -38,10 +38,10 @@
 
       param[journal_id] = nt
       
-      au < ready ; exists ; 2015 ; Nuclear Technology Volume 189 ; 189 >
-      au < ready ; exists ; 2015 ; Nuclear Technology Volume 190 ; 190 >
-      au < ready ; exists ; 2015 ; Nuclear Technology Volume 191 ; 191 >
-      au < ready ; exists ; 2015 ; Nuclear Technology Volume 192 ; 192 >
+      au < crawling ; exists ; 2015 ; Nuclear Technology Volume 189 ; 189 >
+      au < crawling ; exists ; 2015 ; Nuclear Technology Volume 190 ; 190 >
+      au < crawling ; exists ; 2015 ; Nuclear Technology Volume 191 ; 191 >
+      au < crawling ; exists ; 2015 ; Nuclear Technology Volume 192 ; 192 >
 
     }
 
@@ -54,8 +54,8 @@
 
       param[journal_id] = fst
       
-      au < ready ; exists ; 2015 ; Fusion Science and Technology Volume 67 ; 67 >
-      au < ready ; exists ; 2015 ; Fusion Science and Technology Volume 68 ; 68 >
+      au < crawling ; exists ; 2015 ; Fusion Science and Technology Volume 67 ; 67 >
+      au < crawling ; exists ; 2015 ; Fusion Science and Technology Volume 68 ; 68 >
 
     }
 
