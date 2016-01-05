@@ -2244,7 +2244,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Design Engineering Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Design Engineering Volume 4 ; 4 ; >
       au < finished ; finished ; 2012-2014 ; International Journal of Design Engineering Volume 5 ; 5 ; >
-      au < testing ; exists ; 2015 ; International Journal of Design Engineering Volume 6 ; 6 ; >
+      au < ready ; exists ; 2015 ; International Journal of Design Engineering Volume 6 ; 6 ; >
 
     }
 
@@ -4331,7 +4331,7 @@
 
       au < doNotProcess ; doNotProcess ; 2007-2012 ; International Journal of Intelligent Enterprise Volume 1 ; 1 ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Intelligent Enterprise Volume 2 ; 2 ; >
-      au < testing ; exists ; 2015 ; International Journal of Intelligent Enterprise Volume 3 ; 3 ; >
+      au < ready ; exists ; 2015 ; International Journal of Intelligent Enterprise Volume 3 ; 3 ; >
 
     }
 
@@ -4626,7 +4626,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 3 ; 3 ; >
       au < crawling ; exists ; 2013-2014 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 4 ; 4 ; >
-      au < testing ; exists ; 2015 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 5 ; 5 ; >
+      au < ready ; exists ; 2015 ; International Journal of Knowledge Engineering and Soft Data Paradigms Volume 5 ; 5 ; >
 
     }
 
@@ -5856,7 +5856,7 @@
 
       param[journal_id] = ijns
 
-      au < testing ; exists ; 2015 ; International Journal of Network Science Volume 1 ; 1 ; >
+      au < ready ; exists ; 2015 ; International Journal of Network Science Volume 1 ; 1 ; >
 
     }
 
@@ -6557,7 +6557,7 @@
       param[journal_id] = ijpspm
 
       au < doNotProcess ; doNotProcess ; 2007-2010 ; International Journal of Public Sector Performance Management Volume 1 ; 1 ; >
-      au < testing ; exists ; 2012-2015 ; International Journal of Public Sector Performance Management Volume 2 ; 2 ; >
+      au < ready ; exists ; 2012-2015 ; International Journal of Public Sector Performance Management Volume 2 ; 2 ; >
 
     }
 
@@ -6610,7 +6610,7 @@
 
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Quantitative Research in Education Volume 1 ; 1 ; >
       au < crawling ; exists ; 2014 ; International Journal of Quantitative Research in Education Volume 2 ; 2 ; >
-      au < testing ; exists ; 2015 ; International Journal of Quantitative Research in Education Volume 3 ; 3 ; >
+      au < ready ; exists ; 2015 ; International Journal of Quantitative Research in Education Volume 3 ; 3 ; >
 
     }
 
@@ -6648,7 +6648,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Rapid Manufacturing Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Rapid Manufacturing Volume 3 ; 3 ; >
       au < crawling ; exists ; 2014 ; International Journal of Rapid Manufacturing Volume 4 ; 4 ; >
-      au < testing ; exists ; 2015 ; International Journal of Rapid Manufacturing Volume 5 ; 5 ; >
+      au < ready ; exists ; 2015 ; International Journal of Rapid Manufacturing Volume 5 ; 5 ; >
 
     }
 
