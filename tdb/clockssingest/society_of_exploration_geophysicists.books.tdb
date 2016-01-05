@@ -27,7 +27,6 @@
     au < crawling ; exists ; 2012 ; 978-1-56080-298-3 ; 978-1-56080-305-8 ; 9781560803058 ; Fundamentals of Gravity Exploration >
     au < crawling ; exists ; 2012 ; 978-1-56080-299-0 ; 978-1-56080-300-3 ; 9781560803003 ; Seismic Signatures and Analysis of Reflection Data in Anisotropic Media, Third Edition > 
     au < crawling ; exists ; 2012 ; 978-1-56080-303-4 ; 978-1-56080-304-1 ; 9781560803041 ; 3D Seismic Survey Design, Second Edition >
-    au < crawling ; exists ; 2013 ; 978-1-56080-326-3 ; 978-1-56080-327-0 ; 9781560803270 ; Understanding Seismic Anisotropy in Exploration and Exploitation >
     au < crawling ; exists ; 2013 ; 978-1-56080-313-3 ; 978-1-56080-314-0 ; 9781560803140 ; Remote Sensing in Action >
     au < expected ; exists ; 2013 ; 978-1-56080-301-0 ; 978-1-56080-302-7 ; 9781560803027 ; Encyclopedia of Exploration Geophysics >
     au < crawling ; exists ; 2014 ; 978-1-56080-319-5 ; 978-1-56080-320-1 ; 9781560803201 ; AVO >
@@ -83,6 +82,33 @@
     au < crawling ; exists ; 2013 ; ; 9781560803126 ; 9781560803126 ; Practical Applications of Time-lapse Seismic Data  (9781560803126) >
     au < crawling ; exists ; 2014 ; ; 9781560803164 ; 9781560803164 ; Microseismic Imaging of Hydraulic Fracturing: Improved Engineering of Unconventional Shale Reservoirs  (9781560803164) >
     au < crawling ; exists ; 2014 ; ; 9781560803270 ; 9781560803270 ; Understanding Seismic Anisotropy in Exploration and Exploitation, second edition  (9781560803270) >
+
+  }
+
+  {
+
+    title <
+      name = General Series ;
+      type = bookSeries
+    >
+
+    au < exists ; exists ; 1959 ; ; 9781560802563 ; 9781560802563 ; Lessons in Seismic Computing (9781560802563) >
+    au < exists ; exists ; 1963 ; ; 9781560802655 ; 9781560802655 ; International Gravity Measurements  (9781560802655) >
+    au < exists ; exists ; 1966 ; ; 9781560802709 ; 9781560802709 ; Mining Geophysics Volume 1, Case Histories  (9781560802709) >
+    au < exists ; exists ; 1967 ; ; 9781560802679 ; 9781560802679 ; Seismic Refraction Prospecting  (9781560802679) >
+    au < exists ; exists ; 1970 ; ; 9781560802860 ; 9781560802860 ; Glossary of Terms Used in Well Logging  (9781560802860) >
+    au < exists ; exists ; 1971 ; ; 9781560802525 ; 9781560802525 ; Seismic Filtering  (9781560802525) >
+    au < exists ; exists ; 1980 ; ; 9781560802501 ; 9781560802501 ; Interval Velocities from Seismic Reflection Time Measurements (9781560802501) >
+    au < exists ; exists ; 1980 ; ; 9781560802426 ; 9781560802426 ; The Generalized Reciprocal Method of Seismic Refraction Interpretation  (9781560802426) >
+    au < exists ; exists ; 1981 ; ; 9781560802518 ; 9781560802518 ; SQUID Applications to Geophysics  (9781560802518) >
+    au < exists ; exists ; 1982 ; ; 9781560802778 ; 9781560802778 ; Concepts and Techniques in Oil and Gas Exploration  (9781560802778) >
+    au < exists ; exists ; 1985 ; ; 9781560802723 ; 9781560802723 ; The Utility of Regional Gravity and Magnetic Anomaly Maps  (9781560802723) >
+    au < exists ; exists ; 1989 ; ; 9781560802389 ; 9781560802389 ; 50 Years of Geophysical Ideas  (9781560802389) >
+    au < exists ; exists ; 1990 ; ; 9781560802457 ; 9781560802457 ; Reflections of a Seismic Interpreter  (9781560802457) >
+    au < exists ; exists ; 1994 ; ; 9781560802617 ; 9781560802617 ; Theory of Seismic Diffractions  (9781560802617) >
+    au < exists ; exists ; 1996 ; ; 9781560802693 ; 9781560802693 ; Seismic Anisotropy  (9781560802693) >
+    au < exists ; exists ; 2000 ; ; 9781560802327 ; 9781560802327 ; Geophysical Signal Analysis  (9781560802327) >
+    au < exists ; exists ; 2011 ; ; 9781560802945 ; 9781560802945 ; SEAM Phase 1: Challenges of Subsalt Imaging in Tertiary Basins, with Emphasis on Deepwater Gulf of Mexico (9781560802945) >
 
   }
 
