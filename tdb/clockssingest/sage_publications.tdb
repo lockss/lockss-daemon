@@ -13292,7 +13292,7 @@
       param[base_url] = http://gqn.sagepub.com/
 
       au < finished ; crawling ; 2014 ; Global Qualitative Nursing Research Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2015 ; Global Qualitative Nursing Research Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2015 ; Global Qualitative Nursing Research Volume 2 ; 2 ; >
       au < expected ; exists ; 2016 ; Global Qualitative Nursing Research Volume 3 ; 3 ; >
 
   }
@@ -13841,7 +13841,7 @@
       param[base_url] = http://hme.sagepub.com/
 
       au < finished ; finished ; 2014 ; Health Services Research and Managerial Epidemiology Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2015 ; Health Services Research and Managerial Epidemiology Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2015 ; Health Services Research and Managerial Epidemiology Volume 2 ; 2 ; >
       au < expected ; exists ; 2016 ; Health Services Research and Managerial Epidemiology Volume 3 ; 3 ; >
 
   }
@@ -18548,7 +18548,7 @@
       au < exists ; exists ; 2012 ; Jadavpur Journal of International Relations Volume 16 ; 16 ; >
       au < crawling ; exists ; 2013 ; Jadavpur Journal of International Relations Volume 17 ; 17 ; >
       au < finished ; finished ; 2014 ; Jadavpur Journal of International Relations Volume 18 ; 18 ; >
-      au < manifest ; exists ; 2015 ; Jadavpur Journal of International Relations Volume 19 ; 19 ; >
+      au < crawling ; exists ; 2015 ; Jadavpur Journal of International Relations Volume 19 ; 19 ; >
       au < expected ; exists ; 2016 ; Jadavpur Journal of International Relations Volume 20 ; 20 ; >
 
     }
@@ -23026,7 +23026,7 @@
       param[base_url] = http://jor.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2015 ; Journal of Feline Medicine and Surgery Open Reports Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2015 ; Journal of Feline Medicine and Surgery Open Reports Volume 1 ; 1 ; >
       au < expected ; exists ; 2016 ; Journal of Feline Medicine and Surgery Open Reports Volume 2 ; 2 ; >
 
   }
@@ -23935,7 +23935,7 @@
 
       au < crawling ; exists ; 2013 ; Journal of Inborn Errors of Metabolism and Screening Volume 1 ; 1 ; >
       au < crawling ; exists ; 2014 ; Journal of Inborn Errors of Metabolism and Screening Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2015 ; Journal of Inborn Errors of Metabolism and Screening Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2015 ; Journal of Inborn Errors of Metabolism and Screening Volume 3 ; 3 ; >
       au < expected ; exists ; 2016 ; Journal of Inborn Errors of Metabolism and Screening Volume 4 ; 4 ; >
 
   }
@@ -30954,7 +30954,7 @@
       param[base_url] = http://mso.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2015 ; Multiple Sclerosis Journal – Experimental, Translational and Clinical Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2015 ; Multiple Sclerosis Journal – Experimental, Translational and Clinical Volume 1 ; 1 ; >
       au < expected ; exists ; 2016 ; Multiple Sclerosis Journal – Experimental, Translational and Clinical Volume 2 ; 2 ; >
 
   }
@@ -37595,7 +37595,7 @@
       param[base_url] = http://sbh.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 2015 ; Scars, Burns & Healing Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2015 ; Scars, Burns & Healing Volume 1 ; 1 ; >
     au < expected ; exists ; 2016 ; Scars, Burns & Healing Volume 2 ; 2 ; >
 
   }
@@ -45809,7 +45809,7 @@
 
     au < finished ; finished ; 2013 ; SAGE Open Medical Case Reports Volume 1 ; 1 ; >
     au < crawling ; exists ; 2014 ; SAGE Open Medical Case Reports Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2015 ; SAGE Open Medical Case Reports Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2015 ; SAGE Open Medical Case Reports Volume 3 ; 3 ; >
     au < expected ; exists ; 2016 ; SAGE Open Medical Case Reports Volume 4 ; 4 ; >
 
     }
@@ -45826,7 +45826,7 @@
 
     au < finished ; finished ; 2013 ; SAGE Open Medicine Volume 1 ; 1 ; >
     au < crawling ; exists ; 2014 ; SAGE Open Medicine Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2015 ; SAGE Open Medicine Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2015 ; SAGE Open Medicine Volume 3 ; 3 ; >
     au < expected ; exists ; 2016 ; SAGE Open Medicine Volume 4 ; 4 ; >
 
     }
