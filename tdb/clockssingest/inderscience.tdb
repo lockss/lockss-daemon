@@ -410,7 +410,7 @@
       au < doNotProcess ; exists ; 2009 ; International Journal of Advanced Media and Communication Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Advanced Media and Communication Volume 4 ; 4 ; >
       au < finished ; crawling ; 2013-2014 ; International Journal of Advanced Media and Communication Volume 5 ; 5 ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2015 ; International Journal of Advanced Media and Communication Volume 6 ; 6 ; >
+      au < expected ; exists ; 2016 ; International Journal of Advanced Media and Communication Volume 6 ; 6 ; >
 
     }
 
@@ -450,7 +450,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Aerodynamics Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Aerodynamics Volume 3 ; 3 ; >
       au < crawling ; exists ; 2014 ; International Journal of Aerodynamics Volume 4 ; 4 ; >
-      au < expected ; exists ; 2015 ; International Journal of Aerodynamics Volume 5 ; 5 ; >
+      au < expected ; exists ; 2016 ; International Journal of Aerodynamics Volume 5 ; 5 ; >
 
     }
 
@@ -564,7 +564,7 @@
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Applied Cryptography Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2010-2012 ; International Journal of Applied Cryptography Volume 2 ; 2 ; >
       au < finished ; crawling ; 2013-2014 ; International Journal of Applied Cryptography Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2015 ; International Journal of Applied Cryptography Volume 4 ; 4 ; >
+      au < expected ; exists ; 2016 ; International Journal of Applied Cryptography Volume 4 ; 4 ; >
 
     }
 
@@ -623,7 +623,7 @@
       param[journal_id] = ijans
 
       au < crawling ; exists ; 2013-2014 ; International Journal of Applied Nonlinear Science Volume 1 ; 1 ; >
-      au < expected ; exists ; 2015 ; International Journal of Applied Nonlinear Science Volume 2 ; 2 ; >
+      au < expected ; exists ; 2016 ; International Journal of Applied Nonlinear Science Volume 2 ; 2 ; >
 
     }
 
@@ -676,7 +676,7 @@
 
       au < doNotProcess ; doNotProcess ; 2008-2010 ; International Journal of Arab Culture, Management and Sustainable Development Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Arab Culture, Management and Sustainable Development Volume 2 ; 2 ; >
-      au < expected ; exists ; 2015 ; International Journal of Arab Culture, Management and Sustainable Development Volume 3 ; 3 ; >
+      au < expected ; exists ; 2016 ; International Journal of Arab Culture, Management and Sustainable Development Volume 3 ; 3 ; >
 
     }
 
@@ -733,8 +733,8 @@
       param[journal_id] = ijaudit
 
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Auditing Technology Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2014 ; International Journal of Auditing Technology Volume 2 ; 2 ; >
-      au < expected ; exists ; 2015 ; International Journal of Auditing Technology Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2014-2015 ; International Journal of Auditing Technology Volume 2 ; 2 ; >
+      au < expected ; exists ; 2016 ; International Journal of Auditing Technology Volume 3 ; 3 ; >
 
     }
 
@@ -772,8 +772,8 @@
 
       param[journal_id] = ijal
 
-      au < finished ; finished ; 2013 ; International Journal of Automation and Logistics Volume 1 ; 1 ; >
-      au < expected ; exists ; 2015 ; International Journal of Automation and Logistics Volume 2 ; 2 ; >
+      au < crawling ; crawling ; 2013-2015 ; International Journal of Automation and Logistics Volume 1 ; 1 ; >
+      au < expected ; exists ; 2016 ; International Journal of Automation and Logistics Volume 2 ; 2 ; >
 
     }
 
@@ -931,8 +931,9 @@
 
       param[journal_id] = ijbdi
 
-      au < exists ; exists ; 2014 ; International Journal of Big Data Intelligence Volume 4 ; 4 ; >
-      au < exists ; exists ; 2015 ; International Journal of Big Data Intelligence Volume 5 ; 5 ; >
+      au < exists ; exists ; 2014 ; International Journal of Big Data Intelligence Volume 1 ; 1 ; >
+      au < exists ; exists ; 2015 ; International Journal of Big Data Intelligence Volume 2 ; 2 ; >
+      au < exists ; exists ; 2016 ; International Journal of Big Data Intelligence Volume 3 ; 3 ; >
 
     }
 
@@ -1110,7 +1111,7 @@
 
       param[journal_id] = ijmbs
 
-      au < finished ; crawling ; 2014 ; International Journal of Migration and Border Studies Volume 1 ; 1 ; >
+      au < finished ; crawling ; 2014-2015 ; International Journal of Migration and Border Studies Volume 1 ; 1 ; >
       au < expected ; exists ; 2015 ; International Journal of Migration and Border Studies Volume 2 ; 2 ; >
 
     }
@@ -1457,8 +1458,8 @@
       au < doNotProcess ; exists ; 2009 ; International Journal of Business Process Integration and Management Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Business Process Integration and Management Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Business Process Integration and Management Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2014 ; International Journal of Business Process Integration and Management Volume 7 ; 7 ; >
-      au < expected ; exists ; 2015 ; International Journal of Business Process Integration and Management Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2014-2015 ; International Journal of Business Process Integration and Management Volume 7 ; 7 ; >
+      au < expected ; exists ; 2016-2017 ; International Journal of Business Process Integration and Management Volume 8 ; 8 ; >
 
     }
 
@@ -1573,8 +1574,8 @@
 
       param[journal_id] = ijci
 
-      au < finished ; finished ; 2014 ; International Journal of Collaborative Intelligence Volume 1 ; 1 ; >
-      au < expected ; exists ; 2015 ; International Journal of Collaborative Intelligence Volume 2 ; 2 ; >
+      au < finished ; finished ; 2014-2015 ; International Journal of Collaborative Intelligence Volume 1 ; 1 ; >
+      au < expected ; exists ; 2016 ; International Journal of Collaborative Intelligence Volume 2 ; 2 ; >
 
     }
 
@@ -1618,7 +1619,7 @@
 
       param[journal_id] = ijcast
 
-      au < expected ; exists ; 2015 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 ; >
+      au < expected ; exists ; 2016 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 ; >
 
     }
 
@@ -1672,7 +1673,7 @@
 
       param[journal_id] = ijccia
 
-      au < expected ; exists ; 2015 ; International Journal of Computational Complexity and Intelligent Algorithms Volume 1 ; 1 ; >
+      au < expected ; exists ; 2016 ; International Journal of Computational Complexity and Intelligent Algorithms Volume 1 ; 1 ; >
 
     }
 
@@ -1744,8 +1745,8 @@
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Computational Materials Science and Surface Engineering Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Computational Materials Science and Surface Engineering Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Computational Materials Science and Surface Engineering Volume 5 ; 5 ; >
-      au < finished ; finished ; 2014 ; International Journal of Computational Materials Science and Surface Engineering Volume 6 ; 6 ; >
-      au < expected ; exists ; 2015 ; International Journal of Computational Materials Science and Surface Engineering Volume 7 ; 7 ; >
+      au < finished ; finished ; 2014-2015 ; International Journal of Computational Materials Science and Surface Engineering Volume 6 ; 6 ; >
+      au < expected ; exists ; 2016-2017 ; International Journal of Computational Materials Science and Surface Engineering Volume 7 ; 7 ; >
 
     }
 
@@ -1760,7 +1761,7 @@
 
       param[journal_id] = ijcmh
 
-      au < expected ; exists ; 2015 ; International Journal of Computational Medicine and Healthcare Volume 1 ; 1 ; >
+      au < expected ; exists ; 2016 ; International Journal of Computational Medicine and Healthcare Volume 1 ; 1 ; >
 
     }
 
@@ -1775,7 +1776,7 @@
 
       param[journal_id] = ijcmme
 
-      au < expected ; exists ; 2015 ; International Journal of Computational Microbiology and Medical Ecology Volume 1 ; 1 ; >
+      au < expected ; exists ; 2016 ; International Journal of Computational Microbiology and Medical Ecology Volume 1 ; 1 ; >
 
     }
 
@@ -1926,7 +1927,7 @@
       param[journal_id] = ijcih
 
       au < doNotProcess ; doNotProcess ; 2010-2012 ; International Journal of Computers in Healthcare Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2014-2016 ; International Journal of Computers in Healthcare Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2014-2015 ; International Journal of Computers in Healthcare Volume 2 ; 2 ; >
       #not testing because volume 2 content is not completely available yet
     }
 
@@ -2119,9 +2120,9 @@
       >
 
       param[journal_id] = ijcm
-      comment[0] = title is not yet published on 9/30/2013
+      comment[0] = title is not yet published on 9/30/2013, 1/5/2016
 
-      au < expected ; exists ; 2015 ; International Journal of Cultural Management Volume 1 ; 1 ; >
+      au < expected ; exists ; 2016 ; International Journal of Cultural Management Volume 1 ; 1 ; >
 
     }
 
@@ -2274,7 +2275,7 @@
 
       param[journal_id] = ijdet
 
-      au < expected ; exists ; 2015 ; International Journal of Digital Enterprise Technology Volume 1 ; 1 ; >
+      au < expected ; exists ; 2016 ; International Journal of Digital Enterprise Technology Volume 1 ; 1 ; >
 
     }
 
@@ -2305,8 +2306,8 @@
       param[journal_id] = ijdipe
 
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Diplomacy and Economy Volume 1 ; 1 ; >
-      au < finished ; crawling ; 2014 ; International Journal of Diplomacy and Economy Volume 2 ; 2 ; >
-      au < expected ; exists ; 2015 ; International Journal of Diplomacy and Economy Volume 3 ; 3 ; >
+      au < finished ; crawling ; 2014-2015 ; International Journal of Diplomacy and Economy Volume 2 ; 2 ; >
+      au < expected ; exists ; 2016-2017 ; International Journal of Diplomacy and Economy Volume 3 ; 3 ; >
 
     }
 
@@ -2533,8 +2534,8 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Electronic Finance Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Electronic Finance Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Electronic Finance Volume 7 ; 7 ; >
-      au < finished ; finished ; 2014 ; International Journal of Electronic Finance Volume 8 ; 8 ; >
-      au < expected ; exists ; 2015 ; International Journal of Electronic Finance Volume 9 ; 9 ; >
+      au < finished ; finished ; 2014-2015 ; International Journal of Electronic Finance Volume 8 ; 8 ; >
+      au < expected ; exists ; 2016 ; International Journal of Electronic Finance Volume 9 ; 9 ; >
 
     }
 
@@ -2556,6 +2557,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Electronic Governance Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Electronic Governance Volume 6 ; 6 ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Electronic Governance Volume 7 ; 7 ; >
+      au < expected ; exists ; 2016 ; International Journal of Electronic Governance Volume 8 ; 8 ; >
 
     }
 
@@ -2597,8 +2599,8 @@
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Electronic Marketing and Retailing Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Electronic Marketing and Retailing Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Electronic Marketing and Retailing Volume 5 ; 5 ; >
-      au < finished ; finished ; 2014 ; International Journal of Electronic Marketing and Retailing Volume 6 ; 6 ; >
-      au < expected ; exists ; 2015 ; International Journal of Electronic Marketing and Retailing Volume 7 ; 7 ; >
+      au < finished ; finished ; 2014-2015 ; International Journal of Electronic Marketing and Retailing Volume 6 ; 6 ; >
+      au < expected ; exists ; 2016-2017 ; International Journal of Electronic Marketing and Retailing Volume 7 ; 7 ; >
 
     }
 
@@ -2634,7 +2636,7 @@
 
       param[journal_id] = ijetrade
 
-      au < expected ; exists ; 2015 ; International Journal of Electronic Trade Volume 1 ; 1 ; >
+      au < expected ; exists ; 2016 ; International Journal of Electronic Trade Volume 1 ; 1 ; >
 
     }
 
@@ -2780,8 +2782,8 @@
       au < doNotProcess ; exists ; 2009 ; International Journal of Enterprise Network Management Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Enterprise Network Management Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Enterprise Network Management Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2014 ; International Journal of Enterprise Network Management Volume 6 ; 6 ; >
-      au < expected ; exists ; 2015 ; International Journal of Enterprise Network Management Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2014-2015 ; International Journal of Enterprise Network Management Volume 6 ; 6 ; >
+      au < expected ; exists ; 2016 ; International Journal of Enterprise Network Management Volume 7 ; 7 ; >
 
     }
 
@@ -2796,7 +2798,7 @@
 
       param[journal_id] = ijesii
 
-      au < expected ; exists ; 2015 ; International Journal of Enterprise Systems Integration and Interoperability Volume 1 ; 1 ; >
+      au < expected ; exists ; 2016 ; International Journal of Enterprise Systems Integration and Interoperability Volume 1 ; 1 ; >
 
     }
 
@@ -2811,7 +2813,7 @@
 
       param[journal_id] = ijenttm
 
-      au < expected ; exists ; 2015 ; International Journal of Entertainment Technology and Management Volume 1 ; 1 ; >
+      au < expected ; exists ; 2016 ; International Journal of Entertainment Technology and Management Volume 1 ; 1 ; >
 
     }
 
@@ -4641,7 +4643,7 @@
 
       param[journal_id] = ijkmth
 
-      au < expected ; exists ; 2015 ; International Journal of Knowledge Management in Tourism and Hospitality Volume 1 ; 1 ; >
+      au < expected ; exists ; 2016 ; International Journal of Knowledge Management in Tourism and Hospitality Volume 1 ; 1 ; >
 
     }
 
@@ -4764,7 +4766,7 @@
 
       param[journal_id] = ijlid
 
-      au < expected ; exists ; 2015 ; International Journal of Legal Information Design Volume 1 ; 1 ; >
+      au < expected ; exists ; 2016 ; International Journal of Legal Information Design Volume 1 ; 1 ; >
 
     }
 
@@ -5689,7 +5691,7 @@
 
       param[journal_id] = ijme
 
-      au < expected ; exists ; 2015 ; International Journal of Molecular Engineering Volume 1 ; 1 ; >
+      au < expected ; exists ; 2016 ; International Journal of Molecular Engineering Volume 1 ; 1 ; >
 
     }
 
@@ -6017,7 +6019,7 @@
 
       param[journal_id] = ijnss
 
-      au < expected ; exists ; 2015 ; International Journal of Nuclear Safety and Security Volume 1 ; 1 ; >
+      au < expected ; exists ; 2016 ; International Journal of Nuclear Safety and Security Volume 1 ; 1 ; >
 
     }
 
@@ -6709,7 +6711,7 @@
 
       param[journal_id] = ijrem
 
-      au < expected ; exists ; 2015 ; International Journal of Remanufacturing Volume 1 ; 1 ; >
+      au < expected ; exists ; 2016 ; International Journal of Remanufacturing Volume 1 ; 1 ; >
 
     }
 
@@ -7377,7 +7379,7 @@
 
       param[journal_id] = ijsrpsd
 
-      au < expected ; exists ; 2015 ; International Journal of Sudan Research, Policy and Sustainable Development Volume 1 ; 1 ; >
+      au < expected ; exists ; 2016 ; International Journal of Sudan Research, Policy and Sustainable Development Volume 1 ; 1 ; >
 
     }
 
@@ -7487,8 +7489,8 @@
 
       au < doNotProcess ; exists ; 2008-2009 ; International Journal of Sustainable Manufacturing Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2010-2012 ; International Journal of Sustainable Manufacturing Volume 2 ; 2 ; >
-      au < finished ; finished ; 2013-2014 ; International Journal of Sustainable Manufacturing Volume 3 ; 3 ; >
-      au < expected ; exists ; 2015 ; International Journal of Sustainable Manufacturing Volume 4 ; 4 ; >
+      au < finished ; finished ; 2013-2015 ; International Journal of Sustainable Manufacturing Volume 3 ; 3 ; >
+      au < expected ; exists ; 2016 ; International Journal of Sustainable Manufacturing Volume 4 ; 4 ; >
 
     }
 
@@ -7559,8 +7561,8 @@
 
       param[journal_id] = ijsi
 
-      au < finished ; finished ; 2013-2014 ; International Journal of Swarm Intelligence Volume 1 ; 1 ; >
-      au < expected ; exists ; 2015 ; International Journal of Swarm Intelligence Volume 2 ; 2 ; >
+      au < finished ; finished ; 2013-2015 ; International Journal of Swarm Intelligence Volume 1 ; 1 ; >
+      au < expected ; exists ; 2016 ; International Journal of Swarm Intelligence Volume 2 ; 2 ; >
 
     }
 
@@ -7616,8 +7618,8 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Systems, Control and Communications Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Systems, Control and Communications Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Systems, Control and Communications Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2014 ; International Journal of Systems, Control and Communications Volume 6 ; 6 ; >
-      au < expected ; exists ; 2015 ; International Journal of Systems, Control and Communications Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2014-2015 ; International Journal of Systems, Control and Communications Volume 6 ; 6 ; >
+      au < expected ; exists ; 2016 ; International Journal of Systems, Control and Communications Volume 7 ; 7 ; >
 
     }
 
@@ -7742,8 +7744,8 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Technology Intelligence and Planning Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Technology Intelligence and Planning Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Technology Intelligence and Planning Volume 9 ; 9 ; >
-      au < finished ; crawling ; 2014 ; International Journal of Technology Intelligence and Planning Volume 10 ; 10 ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2015 ; International Journal of Technology Intelligence and Planning Volume 11 ; 11 ; >
+      au < finished ; crawling ; 2014-2015 ; International Journal of Technology Intelligence and Planning Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < expected ; exists ; 2016 ; International Journal of Technology Intelligence and Planning Volume 11 ; 11 ; >
 
     }
 
@@ -7938,7 +7940,7 @@
       param[journal_id] = ijbeam
 
       au < finished ; finished ; 2011-2014 ; International Journal of the Built Environment and Asset Management Volume 1 ; 1 ; >
-      au < expected ; exists ; 2015 ; International Journal of the Built Environment and Asset Management Volume 2 ; 2 ; >
+      au < expected ; exists ; 2016 ; International Journal of the Built Environment and Asset Management Volume 2 ; 2 ; >
 
     }
 
@@ -8067,8 +8069,8 @@
 
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Ultra Wideband Communications and Systems Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Ultra Wideband Communications and Systems Volume 2 ; 2 ; >
-      au < finished ; crawling ; 2014-2015 ; International Journal of Ultra Wideband Communications and Systems Volume 3 ; 3 ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2015 ; International Journal of Ultra Wideband Communications and Systems Volume 4 ; 4 ; >
+      au < finished ; crawling ; 2014 ; International Journal of Ultra Wideband Communications and Systems Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+      au < expected ; exists ; 2016 ; International Journal of Ultra Wideband Communications and Systems Volume 4 ; 4 ; >
 
     }
 
@@ -8090,7 +8092,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Value Chain Management Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Value Chain Management Volume 6 ; 6 ; >
       au < finished ; crawling ; 2013-2014 ; International Journal of Value Chain Management Volume 7 ; 7 ; reingest3.clockss.org:8083 >
-      au < expected ; exists ; 2015 ; International Journal of Value Chain Management Volume 8 ; 8 ; >
+      au < expected ; exists ; 2016 ; International Journal of Value Chain Management Volume 8 ; 8 ; >
 
     }
 
@@ -8199,7 +8201,7 @@
       au < doNotProcess ; exists ; 2005-2008 ; International Journal of Vehicle Information and Communication Systems Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2009-2011 ; International Journal of Vehicle Information and Communication Systems Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Vehicle Information and Communication Systems Volume 3 ; 3 ; >
-      au < expected ; exists ; 2015 ; International Journal of Vehicle Information and Communication Systems Volume 4 ; 4 ; >
+      au < expected ; exists ; 2016 ; International Journal of Vehicle Information and Communication Systems Volume 4 ; 4 ; >
 
     }
 
@@ -8240,7 +8242,7 @@
       param[journal_id] = ijvp
 
       au < finished ; finished ; 2013-2014 ; International Journal of Vehicle Performance Volume 1 ; 1 ; >
-      au < expected ; exists ; 2015 ; International Journal of Vehicle Performance Volume 2 ; 2 ; >
+      au < expected ; exists ; 2016 ; International Journal of Vehicle Performance Volume 2 ; 2 ; >
 
     }
 
@@ -8415,7 +8417,7 @@
 
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Web Science Volume 1 ; 1 ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Web Science Volume 2 ; 2 ; >
-      au < expected ; exists ; 2015 ; International Journal of Web Science Volume 3 ; 3 ; >
+      au < expected ; exists ; 2016 ; International Journal of Web Science Volume 3 ; 3 ; >
 
     }
 
@@ -8452,8 +8454,8 @@
 
       param[journal_id] = ijwi
 
-      au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Work Innovation Volume 1 ; 1 ; >
-      au < expected ; exists ; 2015 ; International Journal of Work Innovation Volume 4 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2012-2015 ; International Journal of Work Innovation Volume 1 ; 1 ; >
+      au < expected ; exists ; 2016 ; International Journal of Work Innovation Volume 4 ; 4 ; >
 
     }
 
