@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -310,12 +310,23 @@ public class AuMetadataRecorder {
       DbException {
     final String DEBUG_HEADER = "recordMetadata(): ";
 
-    // Loop through the metadata for each article.
+    // Get the mandatory metadata fields.
+    List<String> mandatoryFields = mdManager.getMandatoryMetadataFields();
+    if (log.isDebug3()) log.debug3("mandatoryFields = " + mandatoryFields);
+
+    // Loop through the metadata for each item.
     while (mditr.hasNext()) {
       task.pokeWDog();
 
+      // Get the next metadata item.
+      ArticleMetadataInfo mdInfo = mditr.next();
+
+      // Validate all the metadata fields.
+      validateMetadata(mdInfo, mandatoryFields);
+
+
       // Normalize all the metadata fields.
-      ArticleMetadataInfo normalizedMdInfo = normalizeMetadata(mditr.next());
+      ArticleMetadataInfo normalizedMdInfo = normalizeMetadata(mdInfo);
 
       // Store the metadata fields in the database.
       storeMetadata(conn, normalizedMdInfo);
@@ -350,6 +361,221 @@ public class AuMetadataRecorder {
       if (problems.size() > 0) {
 	// Yes: Merge it.
 	fixUnknownPublishersAuData(conn, problems);
+      }
+    }
+  }
+
+  /**
+   * Validates the metadata fields.
+   * 
+   * @param mdinfo
+   *          An ArticleMetadataInfo with the metadata fields.
+   * @param mandatoryFields
+   *          A List<String> with the metadata fields that are mandatory.
+   * @throws MetadatException
+   *           if the validation fails.
+   */
+  void validateMetadata(ArticleMetadataInfo mdinfo,
+      List<String> mandatoryFields) throws MetadataException {
+    if (mandatoryFields == null || mandatoryFields.size() == 0) {
+      return;
+    }
+
+    for (String mandatoryField : mandatoryFields) {
+      switch (mandatoryField) {
+      case "publisher":
+	if (StringUtil.isNullString(mdinfo.publisher)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "provider":
+	if (StringUtil.isNullString(mdinfo.provider)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "publicationTitle":
+	if (StringUtil.isNullString(mdinfo.publicationTitle)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "publicationType":
+	if (StringUtil.isNullString(mdinfo.publicationType)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "articleTitle":
+	if (StringUtil.isNullString(mdinfo.articleTitle)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "articleType":
+	if (StringUtil.isNullString(mdinfo.articleType)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "accessUrl":
+	if (StringUtil.isNullString(mdinfo.accessUrl)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "isbn":
+	if (StringUtil.isNullString(mdinfo.isbn)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "eisbn":
+	if (StringUtil.isNullString(mdinfo.eisbn)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "issn":
+	if (StringUtil.isNullString(mdinfo.issn)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "eissn":
+	if (StringUtil.isNullString(mdinfo.eissn)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "doi":
+	if (StringUtil.isNullString(mdinfo.doi)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "pubDate":
+	if (StringUtil.isNullString(mdinfo.pubDate)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "pubYear":
+	if (StringUtil.isNullString(mdinfo.pubYear)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "volume":
+	if (StringUtil.isNullString(mdinfo.volume)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "issue":
+	if (StringUtil.isNullString(mdinfo.issue)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "startPage":
+	if (StringUtil.isNullString(mdinfo.startPage)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "endPage":
+	if (StringUtil.isNullString(mdinfo.endPage)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "seriesTitle":
+	if (StringUtil.isNullString(mdinfo.seriesTitle)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "authors":
+	if (mdinfo.authors == null || mdinfo.authors.size() == 0) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "keywords":
+	if (mdinfo.keywords == null || mdinfo.keywords.size() == 0) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "featuredUrlMap":
+	if (mdinfo.featuredUrlMap == null
+	|| mdinfo.featuredUrlMap.size() == 0) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "coverage":
+	if (StringUtil.isNullString(mdinfo.coverage)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "itemNumber":
+	if (StringUtil.isNullString(mdinfo.itemNumber)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "proprietaryIdentifier":
+	if (StringUtil.isNullString(mdinfo.proprietaryIdentifier)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "proprietarySeriesIdentifier":
+	if (StringUtil.isNullString(mdinfo.proprietarySeriesIdentifier)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      case "fetchTime":
+	if (StringUtil.isNullString(mdinfo.fetchTime)) {
+	  throw new MetadataException("Missing mandatory metadata field '"
+	      + mandatoryField + "' in " + mdinfo.toString(), mdinfo);
+	}
+	break;
+
+      default:
+	log.warning("Ignoring unknown mandatory field '" + mandatoryField
+	    + "'");
       }
     }
   }
@@ -497,6 +723,17 @@ public class AuMetadataRecorder {
 	mdinfo.publisher = DbManager.truncateVarchar(name, MAX_NAME_COLUMN);
       } else {
 	mdinfo.publisher = name;
+      }
+    }
+
+    if (mdinfo.provider != null) {
+      String name = mdinfo.provider.trim();
+      if (name.length() > MAX_NAME_COLUMN) {
+	log.warning("provider too long '" + mdinfo.provider
+	    + "' for title: '" + mdinfo.publicationTitle + "'");
+	mdinfo.provider = DbManager.truncateVarchar(name, MAX_NAME_COLUMN);
+      } else {
+	mdinfo.provider = name;
       }
     }
 

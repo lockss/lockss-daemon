@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,8 +37,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
@@ -155,6 +157,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     runNormalizeMetadataTest();
     runRecordMultipleJournalsAndPublishers();
     runValidateMdItemTypeHierarchyTest();
+    runValidateMetadataTest();
   }
 
   ReindexingTask newReindexingTask(ArchivalUnit au,
@@ -1421,6 +1424,63 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
     assertFalse(amr.validateMdItemTypeHierarchy(null,
 	MetadataField.PUBLICATION_TYPE_BOOKSERIES));
+  }
+
+  private void runValidateMetadataTest() throws Exception {
+    // Set up the featured URL map.
+    String validFeatureUrl = "UrlForValidFeature";
+    String validFeature = "ValidFeature";
+
+    Map<String, String> featuredUrls = new HashMap<String, String>();
+    featuredUrls.put(validFeature, validFeatureUrl);
+
+    // Generate the metadata.
+    ArticleMetadataBuffer metadata =
+	getJournalMetadata("Publisher", 1, 1, true, false, featuredUrls, false);
+    Iterator<ArticleMetadataInfo> mditr = metadata.iterator();
+    ArticleMetadataInfo ami = mditr.next();
+
+    ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
+	.getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
+
+    AuMetadataRecorder amr =
+	new AuMetadataRecorder(task, metadataManager, sau0);
+
+    amr.validateMetadata(ami, null);
+
+    List<String> mandatoryFields = new ArrayList<String>();
+    amr.validateMetadata(ami, mandatoryFields);
+
+    mandatoryFields.add("publisher");
+    amr.validateMetadata(ami, mandatoryFields);
+
+    mandatoryFields = new ArrayList<String>();
+    mandatoryFields.add("featuredUrlMap");
+    mandatoryFields.add("publisher");
+    mandatoryFields.add("publicationType");
+    mandatoryFields.add("issn");
+    mandatoryFields.add("eissn");
+    mandatoryFields.add("pubDate");
+    mandatoryFields.add("pubYear");
+    mandatoryFields.add("articleTitle");
+    mandatoryFields.add("articleType");
+    mandatoryFields.add("authors");
+    mandatoryFields.add("accessUrl");
+    amr.validateMetadata(ami, mandatoryFields);
+
+    mandatoryFields.add("provider");
+
+    try {
+      amr.validateMetadata(ami, mandatoryFields);
+      fail();
+    } catch (MetadataException me) {
+      // Expected exception.
+    }
+
+    mandatoryFields = new ArrayList<String>();
+    mandatoryFields.add("badField");
+
+    amr.validateMetadata(ami, mandatoryFields);
   }
 
   private static class MySimulatedPlugin extends SimulatedPlugin {
