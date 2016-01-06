@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -38,11 +38,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Mathematical Society Books Plugin (CLOCKSS), Base URL %s, Collection ID %s, Year %d", base_url, collection_id, year</string>
+    <string>"American Mathematical Society Books Plugin (CLOCKSS), Base URL %s, Collection ID %s, YearStr %s", base_url, collection_id, year_string</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sbooks/%s/year/%d/", base_url, collection_id, year</string>
+    <string>"%sbooks/%s/year/%s/", base_url, collection_id, year_string</string>
   </entry>
   <entry>
     <string>au_permission_url</string>
@@ -57,7 +57,7 @@
       </entry>
       <entry>
         <string>au_volume</string>
-        <string>"%sbooks/%s/year/%d/?", base_url, collection_id, year</string>
+        <string>"%sbooks/%s/year/%s/?", base_url, collection_id, year_string</string>
       </entry>
       <entry>
         <string>au_article</string>
@@ -72,8 +72,8 @@
       <string>1,"^https?://([^.]+\.(googleapis|jquery|gstatic|bootstrapcdn)\.com|cdn\.mathjax\.org)/."</string>
       <string>1,"^https?://%s/[^?]+[.](bmp|css|gif|ico|jpe?g|js|png|tif?f|eot|svg|ttf|woff.?)$", url_host(base_url)</string>
       <string>4,"^%s", base_url</string>
-      <string>1, "%sbooks/%s/year/%d/?", base_url, collection_id, year</string>
-      <string>1,"^%sbooks/%s/[0-9]+", base_url, collection_id</string>
+      <string>1, "%sbooks/%s/year/%s/?", base_url, collection_id, year_string</string>
+      <string>1,"^%sbooks/%s/[0-9.]+", base_url, collection_id</string>
     </list>
   </entry>
   <entry>
@@ -103,11 +103,11 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>year</key>
-        <displayName>Year</displayName>
-        <description>Four digit year (e.g., 2004)</description>
-        <type>4</type>
-        <size>4</size>
+        <key>year_string</key>
+        <displayName>YearStr</displayName>
+        <description>Year string (2004 or 1990-1999)</description>
+        <type>1</type>
+        <size>20</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -116,7 +116,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%sbooks/(%s)/([0-9]+)/\1\2[.]pdf$", base_url, collection_id, year</string>
+      <string>"^%sbooks/(%s)/([0-9.]+)/\1\2[.]pdf$", base_url, collection_id</string>
     </list>
   </entry>
   <!-- entry>
