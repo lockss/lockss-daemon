@@ -3,7 +3,9 @@
     name = Wageningen Academic Publishers
   >
   {
-    plugin = org.lockss.plugin.atypon.wageningen.WageningenJournalsPlugin
+
+    plugin = needs.plugin
+    #plugin = org.lockss.plugin.atypon.wageningen.WageningenJournalsPlugin
     param[base_url] = http://www.wageningenacademic.com/
     implicit < status ; year ; name ; param[volume_name] >
 

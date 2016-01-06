@@ -915,7 +915,8 @@
   }
 
   {
-    plugin = org.lockss.plugin.pub2web.asm.ASMscienceJournalsPlugin
+    plugin = needs.plugin
+    #plugin = org.lockss.plugin.pub2web.asm.ASMscienceJournalsPlugin
     param[base_url] = http://www.asmscience.org/
     implicit < status ; year ; name ; param[volume_name] >
     comment[platform] = Pub2Web
