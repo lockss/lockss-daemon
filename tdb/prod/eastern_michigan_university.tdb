@@ -19,6 +19,18 @@
 
     {
 
+      param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 1999 ; Journal of Narrative Theory Volume 29 ; 29 >
+      au < exists ; 2000 ; Journal of Narrative Theory Volume 30 ; 30 >
+      au < exists ; 2001 ; Journal of Narrative Theory Volume 31 ; 31 >
+      au < exists ; 2002 ; Journal of Narrative Theory Volume 32 ; 32 >
+      au < exists ; 2003 ; Journal of Narrative Theory Volume 33 ; 33 >
+
+    }
+
+    {
+
       param[base_url] = http://muse.jhu.edu/
 
       au < released ; 2004 ; Journal of Narrative Theory Volume 34 ; 34 >

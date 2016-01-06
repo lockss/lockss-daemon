@@ -1725,6 +1725,50 @@
 
     {
 
+      param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 1963 ; Journal of the History of Philosophy Volume 1 ; 1 >
+      au < exists ; 1964 ; Journal of the History of Philosophy Volume 2 ; 2 >
+      au < exists ; 1965 ; Journal of the History of Philosophy Volume 3 ; 3 >
+      au < exists ; 1966 ; Journal of the History of Philosophy Volume 4 ; 4 >
+      au < exists ; 1967 ; Journal of the History of Philosophy Volume 5 ; 5 >
+      au < exists ; 1968 ; Journal of the History of Philosophy Volume 6 ; 6 >
+      au < exists ; 1969 ; Journal of the History of Philosophy Volume 7 ; 7 >
+      au < exists ; 1970 ; Journal of the History of Philosophy Volume 8 ; 8 >
+      au < exists ; 1971 ; Journal of the History of Philosophy Volume 9 ; 9 >
+      au < exists ; 1972 ; Journal of the History of Philosophy Volume 10 ; 10 >
+      au < exists ; 1973 ; Journal of the History of Philosophy Volume 11 ; 11 >
+      au < exists ; 1974 ; Journal of the History of Philosophy Volume 12 ; 12 >
+      au < exists ; 1975 ; Journal of the History of Philosophy Volume 13 ; 13 >
+      au < exists ; 1976 ; Journal of the History of Philosophy Volume 14 ; 14 >
+      au < exists ; 1977 ; Journal of the History of Philosophy Volume 15 ; 15 >
+      au < exists ; 1978 ; Journal of the History of Philosophy Volume 16 ; 16 >
+      au < exists ; 1979 ; Journal of the History of Philosophy Volume 17 ; 17 >
+      au < exists ; 1980 ; Journal of the History of Philosophy Volume 18 ; 18 >
+      au < exists ; 1981 ; Journal of the History of Philosophy Volume 19 ; 19 >
+      au < exists ; 1982 ; Journal of the History of Philosophy Volume 20 ; 20 >
+      au < exists ; 1983 ; Journal of the History of Philosophy Volume 21 ; 21 >
+      au < exists ; 1984 ; Journal of the History of Philosophy Volume 22 ; 22 >
+      au < exists ; 1985 ; Journal of the History of Philosophy Volume 23 ; 23 >
+      au < exists ; 1986 ; Journal of the History of Philosophy Volume 24 ; 24 >
+      au < exists ; 1987 ; Journal of the History of Philosophy Volume 25 ; 25 >
+      au < exists ; 1988 ; Journal of the History of Philosophy Volume 26 ; 26 >
+      au < exists ; 1989 ; Journal of the History of Philosophy Volume 27 ; 27 >
+      au < exists ; 1990 ; Journal of the History of Philosophy Volume 28 ; 28 >
+      au < exists ; 1991 ; Journal of the History of Philosophy Volume 29 ; 29 >
+      au < exists ; 1992 ; Journal of the History of Philosophy Volume 30 ; 30 >
+      au < exists ; 1993 ; Journal of the History of Philosophy Volume 31 ; 31 >
+      au < exists ; 1994 ; Journal of the History of Philosophy Volume 32 ; 32 >
+      au < exists ; 1995 ; Journal of the History of Philosophy Volume 33 ; 33 >
+      au < exists ; 1996 ; Journal of the History of Philosophy Volume 34 ; 34 >
+      au < exists ; 1997 ; Journal of the History of Philosophy Volume 35 ; 35 >
+      au < exists ; 1998 ; Journal of the History of Philosophy Volume 36 ; 36 >
+      au < exists ; 1999 ; Journal of the History of Philosophy Volume 37 ; 37 >
+
+    }
+
+    {
+
       param[base_url] = http://muse.jhu.edu/
 
       au < released ; 2000 ; Journal of the History of Philosophy Volume 38 ; 38 >
@@ -1827,6 +1871,18 @@
 
     param[journal_dir] = kennedy_institute_of_ethics_journal
     attr[journal_id] = ken
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 1991 ; Kennedy Institute of Ethics Journal Volume 1 ; 1 >
+      au < exists ; 1992 ; Kennedy Institute of Ethics Journal Volume 2 ; 2 >
+      au < exists ; 1993 ; Kennedy Institute of Ethics Journal Volume 3 ; 3 >
+      au < exists ; 1994 ; Kennedy Institute of Ethics Journal Volume 4 ; 4 >
+      au < exists ; 1995 ; Kennedy Institute of Ethics Journal Volume 5 ; 5 >
+
+    }
 
     {
 
