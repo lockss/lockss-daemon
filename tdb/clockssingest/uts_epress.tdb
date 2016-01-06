@@ -15,7 +15,7 @@
       name = Commonwealth Journal of Local Governance ;
       eissn = 1836-0394
     >
-    
+
     param[journal_id] = cjlg
 
     au < exists ; exists ; 2008 ; 2008 ; Commonwealth Journal of Local Governance Volume 1 ; 1 >
@@ -24,8 +24,8 @@
     au < manifest ; exists ; 2011 ; 2011 ; Commonwealth Journal of Local Governance Volume 8-9 ; 8-9 >
     au < manifest ; exists ; 2012 ; 2012 ; Commonwealth Journal of Local Governance Volume 10-11 ; 10-11 >
     au < manifest ; exists ; 2013 ; 2013 ; Commonwealth Journal of Local Governance Volume 12-14 ; 12-14 >
-    au < manifest ; exists ; 2014 ; 2014 ; Commonwealth Journal of Local Governance Volume 15 ; 15 >
-    au < manifest ; exists ; 2015 ; 2015 ; Commonwealth Journal of Local Governance Volume 16-17 ; 16-17 >
+    au < testing ; exists ; 2014 ; 2014 ; Commonwealth Journal of Local Governance Volume 15 ; 15 >
+    au < testing ; exists ; 2015 ; 2015 ; Commonwealth Journal of Local Governance Volume 16-17 ; 16-17 >
     au < expected ; exists ; 2016 ; 2016 ; Commonwealth Journal of Local Governance Volume 18-19 ; 18-19 >
 
   }
@@ -35,7 +35,7 @@
       name = Construction Economics and Building ;
       eissn = 2204-9029
     >
-    
+
     param[journal_id] = AJCEB
 
     au < manifest ; exists ; 2006 ; 2006 ; Construction Economics and Building Volume 6 ; 6 >
@@ -46,8 +46,8 @@
     au < manifest ; exists ; 2011 ; 2011 ; Construction Economics and Building Volume 11 ; 11 >
     au < manifest ; exists ; 2012 ; 2012 ; Construction Economics and Building Volume 12 ; 12 >
     au < manifest ; exists ; 2013 ; 2013 ; Construction Economics and Building Volume 13 ; 13 >
-    au < manifest ; exists ; 2014 ; 2014 ; Construction Economics and Building Volume 14 ; 14 >
-    au < manifest ; exists ; 2015 ; 2015 ; Construction Economics and Building Volume 15 ; 15 >
+    au < testing ; exists ; 2014 ; 2014 ; Construction Economics and Building Volume 14 ; 14 >
+    au < testing ; exists ; 2015 ; 2015 ; Construction Economics and Building Volume 15 ; 15 >
     au < expected ; exists ; 2016 ; 2016 ; Construction Economics and Building Volume 16 ; 16 >
 
   }
@@ -57,7 +57,7 @@
       name = Cosmopolitan Civil Societies: An Interdisciplinary Journal ;
       eissn = 1837-5391
     >
-    
+
     param[journal_id] = mcs
 
     au < manifest ; exists ; 2009 ; 2009 ; Cosmopolitan Civil Societies: An Interdisciplinary Journal Volume 1 ; 1 >
@@ -65,8 +65,8 @@
     au < manifest ; exists ; 2011 ; 2011 ; Cosmopolitan Civil Societies: An Interdisciplinary Journal Volume 3 ; 3 >
     au < manifest ; exists ; 2012 ; 2012 ; Cosmopolitan Civil Societies: An Interdisciplinary Journal Volume 4 ; 4 >
     au < manifest ; exists ; 2013 ; 2013 ; Cosmopolitan Civil Societies: An Interdisciplinary Journal Volume 5 ; 5 >
-    au < manifest ; exists ; 2014 ; 2014 ; Cosmopolitan Civil Societies: An Interdisciplinary Journal Volume 6 ; 6 >
-    au < manifest ; exists ; 2015 ; 2015 ; Cosmopolitan Civil Societies: An Interdisciplinary Journal Volume 7 ; 7 >
+    au < testing ; exists ; 2014 ; 2014 ; Cosmopolitan Civil Societies: An Interdisciplinary Journal Volume 6 ; 6 >
+    au < testing ; exists ; 2015 ; 2015 ; Cosmopolitan Civil Societies: An Interdisciplinary Journal Volume 7 ; 7 >
     au < expected ; exists ; 2016 ; 2016 ; Cosmopolitan Civil Societies: An Interdisciplinary Journal Volume 8 ; 8 >
 
   }
@@ -76,7 +76,7 @@
       name = Cultural Studies Review ;
       eissn = 1837-8692
     >
-    
+
     param[journal_id] = csrj
 
     au < manifest ; exists ; 2005 ; 2005 ; Cultural Studies Review Volume 11 ; 11 >
@@ -88,8 +88,8 @@
     au < manifest ; exists ; 2011 ; 2011 ; Cultural Studies Review Volume 17 ; 17 >
     au < manifest ; exists ; 2012 ; 2012 ; Cultural Studies Review Volume 18 ; 18 >
     au < manifest ; exists ; 2013 ; 2013 ; Cultural Studies Review Volume 19 ; 19 >
-    au < manifest ; exists ; 2014 ; 2014 ; Cultural Studies Review Volume 20 ; 20 >
-    au < manifest ; exists ; 2015 ; 2015 ; Cultural Studies Review Volume 21 ; 21 >
+    au < testing ; exists ; 2014 ; 2014 ; Cultural Studies Review Volume 20 ; 20 >
+    au < testing ; exists ; 2015 ; 2015 ; Cultural Studies Review Volume 21 ; 21 >
     au < expected ; exists ; 2016 ; 2016 ; Cultural Studies Review Volume 22 ; 22 >
 
   }
@@ -99,7 +99,7 @@
       name = Gateways: International Journal of Community Research and Engagement ;
       eissn = 1836-3393
     >
-    
+
     param[journal_id] = ijcre
 
     au < manifest ; exists ; 2008 ; 2008 ; Gateways: International Journal of Community Research and Engagement Volume 1 ; 1 >
@@ -108,8 +108,8 @@
     au < manifest ; exists ; 2011 ; 2011 ; Gateways: International Journal of Community Research and Engagement Volume 4 ; 4 >
     au < manifest ; exists ; 2012 ; 2012 ; Gateways: International Journal of Community Research and Engagement Volume 5 ; 5 >
     au < manifest ; exists ; 2013 ; 2013 ; Gateways: International Journal of Community Research and Engagement Volume 6 ; 6 >
-    au < manifest ; exists ; 2014 ; 2014 ; Gateways: International Journal of Community Research and Engagement Volume 7 ; 7 >
-    au < manifest ; exists ; 2015 ; 2015 ; Gateways: International Journal of Community Research and Engagement Volume 8 ; 8 >
+    au < testing ; exists ; 2014 ; 2014 ; Gateways: International Journal of Community Research and Engagement Volume 7 ; 7 >
+    au < testing ; exists ; 2015 ; 2015 ; Gateways: International Journal of Community Research and Engagement Volume 8 ; 8 >
     au < expected ; exists ; 2016 ; 2016 ; Gateways: International Journal of Community Research and Engagement Volume 9 ; 9 >
 
   }
@@ -119,14 +119,14 @@
       name = International Journal of Rural Law and Policy ;
       eissn = 1839-745X
     >
-    
+
     param[journal_id] = ijrlp
 
     au < manifest ; exists ; 2011 ; 2011 ; International Journal of Rural Law and Policy Volume 2011 ; 2011 >
     au < manifest ; exists ; 2012 ; 2012 ; International Journal of Rural Law and Policy Volume 2012 ; 2012 >
     au < manifest ; exists ; 2013 ; 2013 ; International Journal of Rural Law and Policy Volume 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; 2014 ; International Journal of Rural Law and Policy Volume 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; 2015 ; International Journal of Rural Law and Policy Volume 2015 ; 2015 >
+    au < testing ; exists ; 2014 ; 2014 ; International Journal of Rural Law and Policy Volume 2014 ; 2014 >
+    au < testing ; exists ; 2015 ; 2015 ; International Journal of Rural Law and Policy Volume 2015 ; 2015 >
     au < expected ; exists ; 2016 ; 2016 ; International Journal of Rural Law and Policy Volume 2016 ; 2016 >
 
   }
@@ -136,7 +136,7 @@
       name = Literacy and Numeracy Studies ;
       eissn = 1839-2903
     >
-    
+
     param[journal_id] = lnj
 
     au < exists ; exists ; 2005 ; 2005 ; Literacy and Numeracy Studies Volume 13 ; 13 >
@@ -148,8 +148,8 @@
     au < manifest ; exists ; 2011 ; 2011 ; Literacy and Numeracy Studies Volume 19 ; 19 >
     au < manifest ; exists ; 2012 ; 2012 ; Literacy and Numeracy Studies Volume 20 ; 20 >
     au < manifest ; exists ; 2013 ; 2013 ; Literacy and Numeracy Studies Volume 21 ; 21 >
-    au < manifest ; exists ; 2014 ; 2014 ; Literacy and Numeracy Studies Volume 22 ; 22 >
-    au < manifest ; exists ; 2015 ; 2015 ; Literacy and Numeracy Studies Volume 23 ; 23 >
+    au < testing ; exists ; 2014 ; 2014 ; Literacy and Numeracy Studies Volume 22 ; 22 >
+    au < testing ; exists ; 2015 ; 2015 ; Literacy and Numeracy Studies Volume 23 ; 23 >
     au < expected ; exists ; 2016 ; 2016 ; Literacy and Numeracy Studies Volume 24 ; 24 >
 
   }
@@ -159,11 +159,11 @@
       name = Organisational Project Management ;
       eissn = 2203-6156
     >
-    
+
     param[journal_id] = opm
 
-    au < manifest ; exists ; 2014 ; 2014 ; Organisational Project Management Volume 1 ; 1 >
-    au < manifest ; exists ; 2015 ; 2015 ; Organisational Project Management Volume 2 ; 2 >
+    au < testing ; exists ; 2014 ; 2014 ; Organisational Project Management Volume 1 ; 1 >
+    au < testing ; exists ; 2015 ; 2015 ; Organisational Project Management Volume 2 ; 2 >
     au < expected ; exists ; 2016 ; 2016 ; Organisational Project Management Volume 3 ; 3 >
 
   }
@@ -173,7 +173,7 @@
       name = PORTAL Journal of Multidisciplinary International Studies ;
       eissn = 1449-2490
     >
-    
+
     param[journal_id] = portal
 
     au < manifest ; exists ; 2004 ; 2004 ; PORTAL Journal of Multidisciplinary International Studies Volume 1 ; 1 >
@@ -186,8 +186,8 @@
     au < manifest ; exists ; 2011 ; 2011 ; PORTAL Journal of Multidisciplinary International Studies Volume 8 ; 8 >
     au < manifest ; exists ; 2012 ; 2012 ; PORTAL Journal of Multidisciplinary International Studies Volume 9 ; 9 >
     au < manifest ; exists ; 2013 ; 2013 ; PORTAL Journal of Multidisciplinary International Studies Volume 10 ; 10 >
-    au < manifest ; exists ; 2014 ; 2014 ; PORTAL Journal of Multidisciplinary International Studies Volume 11 ; 11 >
-    au < manifest ; exists ; 2015 ; 2015 ; PORTAL Journal of Multidisciplinary International Studies Volume 12 ; 12 >
+    au < testing ; exists ; 2014 ; 2014 ; PORTAL Journal of Multidisciplinary International Studies Volume 11 ; 11 >
+    au < testing ; exists ; 2015 ; 2015 ; PORTAL Journal of Multidisciplinary International Studies Volume 12 ; 12 >
     au < expected ; exists ; 2016 ; 2016 ; PORTAL Journal of Multidisciplinary International Studies Volume 13 ; 13 >
 
   }
@@ -197,7 +197,7 @@
       name = Public History Review ;
       eissn = 1833-4989
     >
-    
+
     param[journal_id] = phrj
 
     au < manifest ; exists ; 2006 ; 2006 ; Public History Review Volume 12-13 ; 12-13 >
@@ -208,8 +208,8 @@
     au < manifest ; exists ; 2011 ; 2011 ; Public History Review Volume 18 ; 18 >
     au < manifest ; exists ; 2012 ; 2012 ; Public History Review Volume 19 ; 19 >
     au < manifest ; exists ; 2013 ; 2013 ; Public History Review Volume 20 ; 20 >
-    au < manifest ; exists ; 2014 ; 2014 ; Public History Review Volume 21 ; 21 >
-    au < manifest ; exists ; 2015 ; 2015 ; Public History Review Volume 22 ; 22 >
+    au < testing ; exists ; 2014 ; 2014 ; Public History Review Volume 21 ; 21 >
+    au < testing ; exists ; 2015 ; 2015 ; Public History Review Volume 22 ; 22 >
     au < expected ; exists ; 2016 ; 2016 ; Public History Review Volume 23 ; 23 >
 
   }
@@ -219,7 +219,7 @@
       name = Sydney Journal ;
       eissn = 1835-0151
     >
-    
+
     param[journal_id] = sydney_journal
 
     au < manifest ; exists ; 2008 ; 2008 ; Public History Review Volume 1 ; 1 >
