@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Mathematical Society Plugin</string>
+    <string>American Mathematical Society Journals Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Mathematical Society Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+    <string>"American Mathematical Society Journals Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
   <entry>
     <!-- Not really in use for the GLN, see the CLOCKSS version -->
@@ -69,6 +69,8 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!-- all content from CDN -->
+      <string>1,"^https?://([^.]+\.(googleapis|jquery|gstatic|bootstrapcdn)\.com|cdn\.mathjax\.org)/."</string>
       <string>1,"^https?://%s/[^?]+[.](bmp|css|gif|ico|jpe?g|js|png|tif?f|eot|svg|ttf|woff.?)$", url_host(base_url)</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%s(?:journals/)?%s/home-%d[.]html$", base_url, journal_id, year</string>
@@ -139,5 +141,17 @@
         <string>org.lockss.plugin.americanmathematicalsociety.AmericanMathematicalSocietyHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts -->
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>.+\.googleapis\.com</string>
+      <string>.+\.jquery\.com</string>
+      <string>.+\.gstatic\.com</string>
+      <string>.+\.bootstrapcdn\.com</string>
+      <string>.+\.mathjax\.org</string>
+    </list>
   </entry>
 </map>
