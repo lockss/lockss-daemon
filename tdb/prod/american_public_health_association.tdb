@@ -129,6 +129,10 @@
     param[journal_id] = ajph
     implicit < status ; year ; volume ; name ; param[volume_name] >
 
+    au < doNotProcess ; 2005 ; 95 ; American Journal of Public Health Volume 95 ; 95 >
+    au < doNotProcess ; 2006 ; 96 ; American Journal of Public Health Volume 96 ; 96 >
+    au < doNotProcess ; 2007 ; 97 ; American Journal of Public Health Volume 97 ; 97 >
+    au < doNotProcess ; 2008 ; 98 ; American Journal of Public Health Volume 98 ; 98 >
     au < doNotProcess ; 2009 ; 99 ; American Journal of Public Health Volume 99 ; 99 >
     au < doNotProcess ; 2010 ; 100 ; American Journal of Public Health Volume 100 ; 100 >
     au < doNotProcess ; 2011 ; 101 ; American Journal of Public Health Volume 101 ; 101 >
