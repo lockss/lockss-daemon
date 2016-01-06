@@ -1,5 +1,5 @@
 /*
- * $Id: TestAmericanMathematicalSocietyArticleIteratorFactory.java 39864 2015-02-18 09:10:24Z thib_gc $
+ * $Id$
  */
 
 /*
@@ -53,7 +53,7 @@ public class TestAmericanMathematicalSocietyBooksArticleIteratorFactory extends 
       "org.lockss.plugin.americanmathematicalsociety.ClockssAmericanMathematicalSocietyBooksPlugin";
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String COLLECTION_ID_KEY = "collection_id";
-  static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
+  static final String YEAR_KEY = "year_string";
   private final String BASE_URL = "http://www.ams.org/";
   private final String COLLECTION_ID = "colid";
   private final String YEAR = "2008";
@@ -119,9 +119,11 @@ public class TestAmericanMathematicalSocietyBooksArticleIteratorFactory extends 
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
     
-    // we match to "^%sbooks/(%s)/([0-9]{2,5})(/\\1\\2\\.pdf)?$", base_url, collection_i
+    // we match to "^%sbooks/(%s)/([0-9.]+)(/\\1\\2\\.pdf)?$", base_url, collection_i
     assertMatchesRE(pat, "http://www.ams.org/books/colid/200");
     assertMatchesRE(pat, "http://www.ams.org/books/colid/200/colid200.pdf");
+    assertMatchesRE(pat, "http://www.ams.org/books/colid/010.1");
+    assertMatchesRE(pat, "http://www.ams.org/books/colid/010.1/colid010.1.pdf");
     
     // but not to pdf or image http://www.ams.org/books/conm/629/conm629-endmatter.pdf
     assertNotMatchesRE(pat, "http://www.ams.org/colid/200/colid200-endmatter.pdf");

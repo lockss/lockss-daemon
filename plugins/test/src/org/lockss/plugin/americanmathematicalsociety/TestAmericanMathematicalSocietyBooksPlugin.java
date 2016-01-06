@@ -1,5 +1,5 @@
 /*
- * $Id: TestAmericanMathematicalSocietyPlugin.java 39864 2015-02-18 09:10:24Z thib_gc $
+ * $Id$
  */
 
 /*
@@ -47,7 +47,7 @@ import org.lockss.plugin.wrapper.WrapperUtil;
 public class TestAmericanMathematicalSocietyBooksPlugin extends LockssTestCase {
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String COLLECTION_ID_KEY = "collection_id";
-  static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
+  static final String YEAR_KEY = "year_string";
   
   private MockLockssDaemon theDaemon;
   private DefinablePlugin plugin;
@@ -100,7 +100,7 @@ public class TestAmericanMathematicalSocietyBooksPlugin extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "blah");
     props.setProperty(COLLECTION_ID_KEY, "jams");
-    props.setProperty(YEAR_KEY, "2001");
+    props.setProperty(YEAR_KEY, "2000-2009");
     
     try {
       makeAuFromProps(props);
@@ -120,7 +120,7 @@ public class TestAmericanMathematicalSocietyBooksPlugin extends LockssTestCase {
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("American Mathematical Society Books Plugin (CLOCKSS), " +
         "Base URL http://www.example.com/, " +
-        "Collection ID c_id, Year 2004", au.getName());
+        "Collection ID c_id, YearStr 2004", au.getName());
   }
   
   public void testGetPluginId() {
@@ -179,23 +179,52 @@ public class TestAmericanMathematicalSocietyBooksPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "clockssdata?p=asdf", true, au);
     shouldCacheTest(ROOT_URL + "lockssdata?p=asdf", false, au);
     shouldCacheTest(ROOT_URL + "books/asdf/year/2004", true, au);
+    shouldCacheTest(ROOT_URL + "books/asdf/year/2000-2009", false, au);
     
     // toc page for a book http://www.ams.org/books/conm/630
     shouldCacheTest(ROOT_URL + "books/asdf/200/", true, au);
     shouldCacheTest(ROOT_URL + "books/asdf/200", true, au);
     shouldCacheTest(ROOT_URL + "books/asdf/9", true, au);
+    shouldCacheTest(ROOT_URL + "books/asdf/010.1", true, au);
     shouldCacheTest(ROOT_URL + "books/asdf/abc", false, au);
+    
+    shouldCacheTest(ROOT_URL + "books/asdf/200/asdf200.pdf", true, au);
+    shouldCacheTest(ROOT_URL + "books/asdf/010.1/asdf010.1.pdf", true, au);
     
     // chapter files
     shouldCacheTest(ROOT_URL + "books/asdf/200/123456", true, au);
-    shouldCacheTest(ROOT_URL + "books/asdf/200/asdf200.pdf", true, au);
     shouldCacheTest(ROOT_URL + "books/asdf/200/asdf2000000.pdf", true, au);
     shouldCacheTest(ROOT_URL + "books/asdf/200/123456/asdf200-123456.pdf", true, au);
+    shouldCacheTest(ROOT_URL + "books/asdf/010.1/4567", true, au);
+    shouldCacheTest(ROOT_URL + "books/asdf/010.1/4567/asdf010.1-123456.pdf", true, au);
     
     // should not get crawled - wrong journal
     shouldCacheTest(ROOT_URL + "clockssdata/?p=ecgd", false, au);
     // should not get crawled - LOCKSS
     shouldCacheTest("http://lockss.stanford.edu", false, au);
+  }
+  
+  public void testShouldCacheProperPagesYears() throws Exception {
+    String ROOT_URL = "http://www.example.com/";
+    Properties props = new Properties();
+    props.setProperty(BASE_URL_KEY, ROOT_URL);
+    props.setProperty(COLLECTION_ID_KEY, "xyz");
+    props.setProperty(YEAR_KEY, "2000-2009");
+    DefinableArchivalUnit au = null;
+    try {
+      au = makeAuFromProps(props);
+    }
+    catch (ConfigurationException ex) {
+    }
+    theDaemon.getLockssRepository(au);
+    
+    // Test for pages that should get crawled
+    // permission page/start url
+    shouldCacheTest(ROOT_URL + "clockssdata?p=xyz", true, au);
+    shouldCacheTest(ROOT_URL + "lockssdata?p=xyz", false, au);
+    shouldCacheTest(ROOT_URL + "books/xyz/year/2000-2009", true, au);
+    shouldCacheTest(ROOT_URL + "books/xyz/year/2004", false, au);
+    
   }
   
   private void shouldCacheTest(String url, boolean shouldCache, ArchivalUnit au) {

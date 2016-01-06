@@ -1,10 +1,10 @@
 /*
- * $Id: AmericanMathematicalSocietyArticleIteratorFactory.java 39864 2015-02-18 09:10:24Z thib_gc $
+ * $Id$
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -55,7 +55,7 @@ implements ArticleIteratorFactory,
       "\"%sbooks/%s/\", base_url, collection_id";
   
   protected static final String PATTERN_TEMPLATE =
-      "\"^%sbooks/(%s)/([0-9]+)(/\\1\\2\\.pdf)?$\", base_url, collection_id";
+      "\"^%sbooks/(%s)/([0-9.]+)(/\\1\\2\\.pdf)?$\", base_url, collection_id";
   
   /*
     various files
@@ -64,10 +64,10 @@ implements ArticleIteratorFactory,
   
   // Identify groups in the pattern
   protected static final Pattern HTML_PATTERN = Pattern.compile(
-      "/books/([^/]+)/([0-9]+)$",
+      "/books/([^/]+)/([0-9.]+)$",
       Pattern.CASE_INSENSITIVE);
   protected static final Pattern PDF_PATTERN = Pattern.compile(
-      "/books/([^/]+)/([0-9]+)/\\1\\2\\.pdf$",
+      "/books/([^/]+)/([0-9.]+)/\\1\\2\\.pdf$",
       Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
