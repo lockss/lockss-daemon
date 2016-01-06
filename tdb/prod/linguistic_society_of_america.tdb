@@ -21,6 +21,40 @@
 
     {
 
+      param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 1974 ; Language Volume 50 ; 50 >
+      au < exists ; 1975 ; Language Volume 51 ; 51 >
+      au < exists ; 1976 ; Language Volume 52 ; 52 >
+      au < exists ; 1977 ; Language Volume 53 ; 53 >
+      au < exists ; 1978 ; Language Volume 54 ; 54 >
+      au < exists ; 1979 ; Language Volume 55 ; 55 >
+      au < exists ; 1980 ; Language Volume 56 ; 56 >
+      au < exists ; 1981 ; Language Volume 57 ; 57 >
+      au < exists ; 1982 ; Language Volume 58 ; 58 >
+      au < exists ; 1983 ; Language Volume 59 ; 59 >
+      au < exists ; 1984 ; Language Volume 60 ; 60 >
+      au < exists ; 1985 ; Language Volume 61 ; 61 >
+      au < exists ; 1986 ; Language Volume 62 ; 62 >
+      au < exists ; 1987 ; Language Volume 63 ; 63 >
+      au < exists ; 1988 ; Language Volume 64 ; 64 >
+      au < exists ; 1989 ; Language Volume 65 ; 65 >
+      au < exists ; 1990 ; Language Volume 66 ; 66 >
+      au < exists ; 1991 ; Language Volume 67 ; 67 >
+      au < exists ; 1992 ; Language Volume 68 ; 68 >
+      au < exists ; 1993 ; Language Volume 69 ; 69 >
+      au < exists ; 1994 ; Language Volume 70 ; 70 >
+      au < exists ; 1995 ; Language Volume 71 ; 71 >
+      au < exists ; 1996 ; Language Volume 72 ; 72 >
+      au < exists ; 1997 ; Language Volume 73 ; 73 >
+      au < exists ; 1998 ; Language Volume 74 ; 74 >
+      au < exists ; 1999 ; Language Volume 75 ; 75 >
+      au < exists ; 2000 ; Language Volume 76 ; 76 >
+
+    }
+
+    {
+
       param[base_url] = http://muse.jhu.edu/
 
       au < released ; 2001 ; Language Volume 77 ; 77 >
@@ -47,7 +81,6 @@
       au < released ; 2015 ; Language Volume 91 ; 91 >
 
     }
-
 
   }
 
