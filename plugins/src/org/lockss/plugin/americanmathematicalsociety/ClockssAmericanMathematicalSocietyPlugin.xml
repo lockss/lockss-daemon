@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -17,15 +17,15 @@
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Mathematical Society Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+    <string>"American Mathematical Society Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Mathematical Society Plugin (CLOCKSS)</string>
+    <string>American Mathematical Society Journals Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_start_url</string>

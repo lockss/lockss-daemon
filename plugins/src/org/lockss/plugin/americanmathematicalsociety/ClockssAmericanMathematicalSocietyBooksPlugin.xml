@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -68,9 +68,9 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!-- all content from CDN -->
+      <string>1,"^https?://([^.]+\.(googleapis|jquery|gstatic|bootstrapcdn)\.com|cdn\.mathjax\.org)/."</string>
       <string>1,"^https?://%s/[^?]+[.](bmp|css|gif|ico|jpe?g|js|png|tif?f|eot|svg|ttf|woff.?)$", url_host(base_url)</string>
-      <!-- otherwise, all content from CDN -->
-      <string>1,"^https?://([^.]+\.(googleapis|jquery|gstatic|bootstrapcdn)\.com|.*\.mathjax\.org)/."</string>
       <string>4,"^%s", base_url</string>
       <string>1, "%sbooks/%s/year/%d/?", base_url, collection_id, year</string>
       <string>1,"^%sbooks/%s/[0-9]+", base_url, collection_id</string>
