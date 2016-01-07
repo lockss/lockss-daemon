@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>28</string>
+    <string>29</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -169,6 +169,13 @@
         <string>org.lockss.plugin.silverchair.ScHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>405=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string>
+      <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string>
+    </list>
   </entry>
   <entry>
     <string>au_permitted_host_pattern</string>
