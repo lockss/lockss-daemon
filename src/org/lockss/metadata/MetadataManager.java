@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -207,6 +207,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   static final String UNKNOWN_SERIES_NAME_ROOT = "UNKNOWN_SERIES";
 
   /**
+   * Mandatory metadata fields.
+   */
+  static final String PARAM_MANDATORY_FIELDS = PREFIX + "mandatoryFields";
+  static final List<String> DEFAULT_MANDATORY_FIELDS = null;
+
+  /**
    * Map of running reindexing tasks keyed by their AuIds
    */
   final Map<String, ReindexingTask> activeReindexingTasks =
@@ -306,6 +312,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
   // The SQL code executor.
   private MetadataManagerSql mdManagerSql;
+
+  private List<String> mandatoryMetadataFields = DEFAULT_MANDATORY_FIELDS;
 
   /**
    * Starts the MetadataManager service.
@@ -411,6 +419,15 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	maxPendingAuBatchSize =
 	    config.getInt(PARAM_MAX_PENDING_TO_REINDEX_AU_BATCH_SIZE,
 			  DEFAULT_MAX_PENDING_TO_REINDEX_AU_BATCH_SIZE);
+      }
+
+      if (changedKeys.contains(PARAM_MANDATORY_FIELDS)) {
+	mandatoryMetadataFields =
+	    (List<String>)config.getList(PARAM_MANDATORY_FIELDS,
+		DEFAULT_MANDATORY_FIELDS);
+
+	if (log.isDebug3())
+	  log.debug3("mandatoryMetadataFields = " + mandatoryMetadataFields);
       }
     }
   }
@@ -4211,5 +4228,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   public Map<String, Collection<String>> getPublicationsWithMultiplePids()
       throws DbException {
     return getMetadataManagerSql().getPublicationsWithMultiplePids();
+  }
+
+  /**
+   * Provides the list of metadata fields that are mandatory.
+   *
+   * @return a List<String> with the metadata fields that are mandatory.
+   */
+  public List<String> getMandatoryMetadataFields() {
+    return mandatoryMetadataFields;
   }
 }

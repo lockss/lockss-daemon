@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -221,6 +221,7 @@ public class TestMetadataManager extends LockssTestCase {
     runRemoveChildMetadataItemTest();
     runMetadataMonitorTest();
     runPublicationIntervalTest();
+    runTestMandatoryMetadataFields();
   }
 
   private void runCreateMetadataTest() throws Exception {
@@ -1528,6 +1529,17 @@ public class TestMetadataManager extends LockssTestCase {
     }
 
     DbManager.safeRollbackAndClose(conn);
+  }
+
+  private void runTestMandatoryMetadataFields() throws Exception {
+    ConfigurationUtil.addFromArgs(MetadataManager.PARAM_MANDATORY_FIELDS,
+	"abc;xyz");
+
+    List<String> mandatoryFields = metadataManager.getMandatoryMetadataFields();
+
+    assertEquals(2, mandatoryFields.size());
+    assertEquals("abc", mandatoryFields.get(0));
+    assertEquals("xyz", mandatoryFields.get(1));
   }
 
   public static class MySubTreeArticleIteratorFactory
