@@ -10,7 +10,7 @@
     plugin = org.lockss.plugin.americanmathematicalsociety.ClockssAmericanMathematicalSocietyBooksPlugin
     param[base_url] = http://www.ams.org/
     comment[type] = bookSeries
-    implicit < status ; status2 ; year ; name ; param[year] >
+    implicit < status ; status2 ; year ; name ; param[year_string] >
     
     {
   
