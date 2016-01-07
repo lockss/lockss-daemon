@@ -180,6 +180,7 @@
     au < doNotProcess ; 2009 ; Comma Volume 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Comma Volume 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Comma Volume 2011 ; 2011 >
+    au < exists ; 2012 ; Comma Volume 2012 ; 2012 >
 
   }
 
@@ -277,6 +278,7 @@
 
     param[journal_id] = extr
 
+    au < exists ; 2010 ; Extrapolation Volume 51 ; 51 >
     au < doNotProcess ; 2011 ; Extrapolation Volume 52 ; 52 >
     au < doNotProcess ; 2012 ; Extrapolation Volume 53 ; 53 >
     au < manifest ; 2013 ; Extrapolation Volume 54 ; 54 >
@@ -373,6 +375,7 @@
     au < manifest ; 2013 ; International Development Planning Review Volume 35 ; 35 >
     au < manifest ; 2014 ; International Development Planning Review Volume 36 ; 36 >
     au < manifest ; 2015 ; International Development Planning Review Volume 37 ; 37 >
+    au < exists ; 2016 ; International Development Planning Review Volume 38 ; 38 >
 
   }
 
@@ -387,6 +390,7 @@
     param[journal_id] = hgr
 
     au < manifest ; 2015 ; Hunter Gatherer Research Volume 1 ; 1 >
+    au < expected ; 2016 ; Hunter Gatherer Research Volume 2 ; 2 >
 
   }
 
@@ -412,6 +416,7 @@
     au < manifest ; 2013 ; Journal of Literary & Cultural Disability Studies Volume 7 ; 7 >
     au < manifest ; 2014 ; Journal of Literary & Cultural Disability Studies Volume 8 ; 8 >
     au < manifest ; 2015 ; Journal of Literary & Cultural Disability Studies Volume 9 ; 9 >
+    au < expected ; 2016 ; Journal of Literary & Cultural Disability Studies Volume 10 ; 10 >
 
     }
 
@@ -439,6 +444,7 @@
     au < manifest ; 2013 ; Labour History Review Volume 78 [Atypon] ; 78 >
     au < manifest ; 2014 ; Labour History Review Volume 79 [Atypon] ; 79 >
     au < manifest ; 2015 ; Labour History Review Volume 80 [Atypon] ; 80 >
+    au < expected ; 2016 ; Labour History Review Volume 81 [Atypon] ; 81 >
 
   }
 
@@ -453,12 +459,15 @@
 
     param[journal_id] = mb
 
+    au < exists ; 2008 ; Modern Believing Volume 51 ; 51 >
+    au < exists ; 2009 ; Modern Believing Volume 52 ; 52 >
     au < manifest ; 2010 ; Modern Believing Volume 51 ; 51 >
     au < ready ; 2011 ; Modern Believing Volume 52 ; 52 >
     au < manifest ; 2012 ; Modern Believing Volume 53 ; 53 >
     au < manifest ; 2013 ; Modern Believing Volume 54 ; 54 >
     au < manifest ; 2014 ; Modern Believing Volume 55 ; 55 >
     au < manifest ; 2015 ; Modern Believing Volume 56 ; 56 >
+    au < expected ; 2016 ; Modern Believing Volume 57 ; 57 >
 
   }
 
@@ -498,6 +507,7 @@
     au < manifest ; 2013 ; Music, Sound, and the Moving Image Volume 7 ; 7 >
     au < manifest ; 2014 ; Music, Sound, and the Moving Image Volume 8 ; 8 >
     au < manifest ; 2015 ; Music, Sound, and the Moving Image Volume 9 ; 9 >
+    au < expected ; 2016 ; Music, Sound, and the Moving Image Volume 10 ; 10 >
 
   }
 
@@ -560,6 +570,7 @@
     au < manifest ; 2013 ; Romani Studies Volume 23 ; 23 >
     au < manifest ; 2014 ; Romani Studies Volume 24 ; 24 >
     au < manifest ; 2015 ; Romani Studies Volume 25 ; 25 >
+    au < expected ; 2016 ; Romani Studies Volume 26 ; 26 >
 
   }
 
@@ -591,6 +602,7 @@
     au < ready ; 2014 ; Quebec Studies Volume 58 ; 58 >
     au < manifest ; 2015 ; Quebec Studies Volume 59 ; 59 >
     au < exists ; 2015 ; Quebec Studies Volume 60 ; 60 >
+    au < expected ; 2016 ; Quebec Studies Volume 61 ; 61 >
 
   }
 
@@ -613,6 +625,7 @@
     au < manifest ; 2013 ; Science Fiction Film and Television Volume 6 ; 6 >
     au < manifest ; 2014 ; Science Fiction Film and Television Volume 7 ; 7 >
     au < manifest ; 2015 ; Science Fiction Film and Television Volume 8 ; 8 >
+    au < expected ; 2016 ; Science Fiction Film and Television Volume 9 ; 9 >
 
   }
 
@@ -639,6 +652,7 @@
     au < manifest ; 2013 ; Sculpture Journal Volume 22 ; 22 >
     au < manifest ; 2014 ; Sculpture Journal Volume 23 ; 23 >
     au < manifest ; 2015 ; Sculpture Journal Volume 24 ; 24 >
+    au < expected ; 2016 ; Sculpture Journal Volume 25 ; 25 >
 
   }
 
@@ -760,6 +774,7 @@
     au < manifest ; 2013 ; Town Planning Review Volume 84 ; 84 >
     au < manifest ; 2014 ; Town Planning Review Volume 85 ; 85 >
     au < manifest ; 2015 ; Town Planning Review Volume 86 ; 86 >
+    au < expected ; 2016 ; Town Planning Review Volume 87 ; 87 >
 
   }
 
