@@ -89,7 +89,7 @@ http://www.ams.org/journals/jams/2013-26-01/S0894-0347-2012-00742-5/S0894-0347-2
     
     // The order in which we want to define full_text_cu.
     // First one that exists will get the job, PDF then html
-    
+
     // set up html to be an aspect that will trigger an ArticleFiles
     builder.addAspect(
         HTML_PATTERN, HTML_REPLACEMENT,
@@ -103,7 +103,7 @@ http://www.ams.org/journals/jams/2013-26-01/S0894-0347-2012-00742-5/S0894-0347-2
     
     return builder.getSubTreeArticleIterator();
   }
-  
+
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
     throws PluginException {
