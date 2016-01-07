@@ -34,6 +34,7 @@
     au < released ; 2013 ; Adsorption Science & Technology Volume 31 ; 31 >
     au < released ; 2014 ; Adsorption Science & Technology Volume 32 ; 32 >
     au < manifest ; 2015 ; Adsorption Science & Technology Volume 33 ; 33 >
+    au < expected ; 2016 ; Adsorption Science & Technology Volume 34 ; 34 >
 
   }
 
@@ -63,6 +64,7 @@
     au < released ; 2013 ; Advances in Structural Engineering Volume 16 ; 16 >
     au < released ; 2014 ; Advances in Structural Engineering Volume 17 ; 17 >
     au < manifest ; 2015 ; Advances in Structural Engineering Volume 18 ; 18 >
+    au < expected ; 2016 ; Advances in Structural Engineering Volume 19 ; 19 >
 
   }
 
@@ -93,6 +95,7 @@
     au < released ; 2013 ; Building Acoustics Volume 20 ; 20 >
     au < released ; 2014 ; Building Acoustics Volume 21 ; 21 >
     au < manifest ; 2015 ; Building Acoustics Volume 22 ; 22 >
+    au < expected ; 2016 ; Building Acoustics Volume 23 ; 23 >
 
   }
 
@@ -123,6 +126,7 @@
     au < released ; 2013 ; Energy & Environment Volume 24 ; 24 >
     au < released ; 2014 ; Energy & Environment Volume 25 ; 25 >
     au < manifest ; 2015 ; Energy & Environment Volume 26 ; 26 >
+    au < expected ; 2016 ; Energy & Environment Volume 27 ; 27 >
 
   }
 
@@ -152,6 +156,7 @@
     au < released ; 2013 ; Energy Exploration & Exploitation Volume 31 ; 31 >
     au < released ; 2014 ; Energy Exploration & Exploitation Volume 32 ; 32 >
     au < manifest ; 2015 ; Energy Exploration & Exploitation Volume 33 ; 33 >
+    au < expected ; 2016 ; Energy Exploration & Exploitation Volume 34 ; 34 >
 
   }
 
@@ -179,6 +184,7 @@
     au < released ; 2013 ; International Journal of Aeroacoustics Volume 12 ; 12 >
     au < released ; 2014 ; International Journal of Aeroacoustics Volume 13 ; 13 >
     au < manifest ; 2015 ; International Journal of Aeroacoustics Volume 14 ; 14 >
+    au < expected ; 2016 ; International Journal of Aeroacoustics Volume 15 ; 15 >
 
   }
 
@@ -222,6 +228,7 @@
     au < released ; 2013 ; International Journal of Architectural Computing Volume 11 ; 11 >
     au < released ; 2014 ; International Journal of Architectural Computing Volume 12 ; 12 >
     au < manifest ; 2015 ; International Journal of Architectural Computing Volume 13 ; 13 >
+    au < expected ; 2016 ; International Journal of Architectural Computing Volume 14 ; 14 >
 
   }
 
@@ -256,6 +263,7 @@
     au < released ; 2013 ; International Journal of Flow Control Volume 5 ; 5 >
     au < released ; 2014 ; International Journal of Flow Control Volume 6 ; 6 >
     au < manifest ; 2015 ; International Journal of Flow Control Volume 7 ; 7 >
+    au < expected ; 2016 ; International Journal of Flow Control Volume 8 ; 8 >
 
   }
 
@@ -273,6 +281,7 @@
     au < released ; 2013 ; International Journal of Heritage in the Digital Era Volume 2 ; 2 >
     au < released ; 2014 ; International Journal of Heritage in the Digital Era Volume 3 ; 3 >
     au < manifest ; 2015 ; International Journal of Heritage in the Digital Era Volume 4 ; 4 >
+    au < expected ; 2016 ; International Journal of Heritage in the Digital Era Volume 5 ; 5 >
 
   }
 
@@ -308,6 +317,7 @@
     au < released ; 2013 ; International Journal of Innovation Science Volume 5 ; 5 >
     au < released ; 2014 ; International Journal of Innovation Science Volume 6 ; 6 >
     au < manifest ; 2015 ; International Journal of Innovation Science Volume 7 ; 7 >
+    au < expected ; 2016 ; International Journal of Innovation Science Volume 8 ; 8 >
 
   }
 
@@ -553,6 +563,9 @@
 
     param[journal_id] = nvww
 
+    au < exists ; 2008 ; Noise & Vibration Worldwide Volume 39 ; 39 >
+    au < exists ; 2009 ; Noise & Vibration Worldwide Volume 40 ; 40 >
+    au < exists ; 2010 ; Noise & Vibration Worldwide Volume 41 ; 41 >
     au < doNotProcess ; 2011 ; Noise & Vibration Worldwide Volume 42 ; 42 >
     au < doNotProcess ; 2012 ; Noise & Vibration Worldwide Volume 43 ; 43 >
     au < released ; 2013 ; Noise & Vibration Worldwide Volume 44 ; 44 >
