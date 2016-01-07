@@ -130,7 +130,6 @@
       issnl = 0021-8669
     >
     param[journal_id] = ja
-    comment[notReady] = fetch error
 
     au < manifest ; 1964 ; Journal of Aircraft Volume 1 ; 1 >
     au < manifest ; 1965 ; Journal of Aircraft Volume 2 ; 2 >
@@ -173,7 +172,7 @@
     au < manifest ; 2002 ; Journal of Aircraft Volume 39 ; 39 >
     au < manifest ; 2003 ; Journal of Aircraft Volume 40 ; 40 >
     au < manifest ; 2004 ; Journal of Aircraft Volume 41 ; 41 >
-    au < notReady ; 2005 ; Journal of Aircraft Volume 42 ; 42 >
+    au < ready ; 2005 ; Journal of Aircraft Volume 42 ; 42 >
     au < released ; 2006 ; Journal of Aircraft Volume 43 ; 43 >
     au < released ; 2007 ; Journal of Aircraft Volume 44 ; 44 >
     au < released ; 2008 ; Journal of Aircraft Volume 45 ; 45 >

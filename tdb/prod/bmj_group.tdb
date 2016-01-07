@@ -967,7 +967,7 @@
 
     au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; BMJ Case Reports Volume 2008 ; 2008 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; BMJ Case Reports Volume 2009 ; 2009 >
-    au < HighWirePressH20Plugin ; notReady ; 2010 ; BMJ Case Reports Volume 2010 ; 2010 > #only picks up 4 pages
+    au < HighWirePressH20Plugin ; ready ; 2010 ; BMJ Case Reports Volume 2010 ; 2010 >
     au < HighWirePressH20Plugin ; released ; 2011 ; BMJ Case Reports Volume 2011 ; 2011 >
     au < HighWirePressH20Plugin ; released ; 2012 ; BMJ Case Reports Volume 2012 ; 2012 >
     au < HighWirePressH20Plugin ; exists ; 2013 ; BMJ Case Reports Volume 2013 ; 2013 >
