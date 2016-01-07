@@ -9,7 +9,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>7</string>
+        <string>8</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -167,4 +167,12 @@
         <string>plugin_url_fetcher_factory</string>
         <string>org.lockss.plugin.silverchair.ScUrlFetcherFactory</string>
     </entry>
+    <entry>
+        <string>plugin_cache_result_list</string>
+        <list>
+            <string>405=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string>
+            <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string>
+        </list>
+    </entry>
+
 </map>
