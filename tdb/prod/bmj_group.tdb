@@ -1988,6 +1988,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     param[base_url] = http://mp.bmj.com/
     comment[0] = merged with Clinical Pathology.
 
+    au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; Molecular Pathology Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Molecular Pathology Volume 54 ; 54 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Molecular Pathology Volume 55 ; 55 >
     au < HighWirePressH20Plugin ; down ; 2003 ; Molecular Pathology Volume 56 ; 56 >
