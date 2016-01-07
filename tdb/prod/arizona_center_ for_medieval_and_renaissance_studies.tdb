@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = Arizona Center for Medieval and Renaissance Studies
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+    title <
+      name = Early Modern Women ;
+      issn = 1933-0065 ;
+      eissn = 2378-4776
+    >
+
+    param[journal_dir] = early_modern_women
+    attr[journal_id] = emw
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 2015 ; Early Modern Women Volume 10 ; 10 >
+
+    }
+
+  }
+
+}
