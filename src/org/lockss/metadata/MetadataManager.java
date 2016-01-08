@@ -4128,8 +4128,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * Provides the metadata items in the database that have no name.
    * 
    * @return a Collection<Map<String, String>> with the unnamed metadata items
-   *         articles sorted by publisher, parent type, parent title and item
-   *         type.
+   *         sorted by publisher, parent type, parent title and item type.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
@@ -4237,5 +4236,18 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   public List<String> getMandatoryMetadataFields() {
     return mandatoryMetadataFields;
+  }
+
+  /**
+   * Provides the non-parent metadata items in the database that have no DOI.
+   * 
+   * @return a Collection<Map<String, String>> with the non-parent metadata
+   *         items that have no DOI sorted by publisher, parent type, parent
+   *         title and item type.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Collection<Map<String, String>> getNoDoiItems() throws DbException {
+    return getMetadataManagerSql().getNoDoiItems();
   }
 }

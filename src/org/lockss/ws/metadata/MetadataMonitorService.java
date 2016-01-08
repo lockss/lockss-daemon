@@ -1,10 +1,10 @@
 /*
- * $Id: MetadataMonitorService.java 44384 2015-10-02 21:50:01Z fergaloy-sf $
+ * $Id$
  */
 
 /*
 
- Copyright (c) 2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2015-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,6 +37,7 @@ import javax.jws.WebService;
 import org.lockss.ws.entities.KeyIdNamePairListPair;
 import org.lockss.ws.entities.KeyValueListPair;
 import org.lockss.ws.entities.LockssWebServicesFault;
+import org.lockss.ws.entities.MetadataItemWsResult;
 import org.lockss.ws.entities.MismatchedMetadataChildWsResult;
 import org.lockss.ws.entities.UnnamedItemWsResult;
 
@@ -240,4 +241,15 @@ public interface MetadataMonitorService {
   @WebMethod
   List<KeyValueListPair> getPublicationsWithMultiplePids()
       throws LockssWebServicesFault;
+
+  /**
+   * Provides the non-parent metadata items in the database that have no DOI.
+   * 
+   * @return a List<MetadataItemWsResult> with the non-parent metadata items
+   *         that have no DOI sorted sorted by publisher, Archival Unit, parent
+   *         type, parent name, item type and item name.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<MetadataItemWsResult> getNoDoiItems() throws LockssWebServicesFault;
 }

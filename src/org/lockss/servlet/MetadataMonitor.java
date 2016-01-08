@@ -1,10 +1,10 @@
 /*
- * $Id: MetadataMonitor.java 44382 2015-10-02 20:05:46Z fergaloy-sf $
+ * $Id$
  */
 
 /*
 
- Copyright (c) 2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2015-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -157,6 +157,14 @@ public class MetadataMonitor extends LockssServlet {
       "Lists the names of publications with multiple proprietary identifiers";
   private static final String LIST_MULTIPLE_PID_PUBLICATIONS_HEADER =
       "Publications With Multiple Proprietary Identifiers";
+  private static final String LIST_ITEMS_WITHOUT_DOI_LINK =
+      "Non-Parent Metadata Items Without DOI";
+  private static final String LIST_ITEMS_WITHOUT_DOI_ACTION =
+      "listMetadataItemsWithoutDoi";
+  private static final String LIST_ITEMS_WITHOUT_DOI_HELP =
+      "Lists the non-parent metadata items that have no DOI";
+  private static final String LIST_ITEMS_WITHOUT_DOI_HEADER =
+      "Non-Parent Metadata Items Without DOI";
 
   private static final String BACK_LINK_PREFIX = "Back to ";
 
@@ -224,6 +232,8 @@ public class MetadataMonitor extends LockssServlet {
 	listMetadataItemsWithoutName();
       } else if (LIST_MULTIPLE_PID_PUBLICATIONS_ACTION.equals(action)) {
 	listMultiplePidPublications();
+      } else if (LIST_ITEMS_WITHOUT_DOI_ACTION.equals(action)) {
+	listMetadataItemsWithoutDoi();
       } else {
 	displayMainPage();
       }
@@ -330,6 +340,12 @@ public class MetadataMonitor extends LockssServlet {
 	LIST_MULTIPLE_PID_PUBLICATIONS_LINK,
 	ACTION + LIST_MULTIPLE_PID_PUBLICATIONS_ACTION,
 	LIST_MULTIPLE_PID_PUBLICATIONS_HELP));
+
+    // List the non-parent metadata items that have no DOI.
+    list.add(getMenuDescriptor(myDescr,
+	LIST_ITEMS_WITHOUT_DOI_LINK,
+	ACTION + LIST_ITEMS_WITHOUT_DOI_ACTION,
+	LIST_ITEMS_WITHOUT_DOI_HELP));
 
     return list.iterator();
   }
@@ -1448,6 +1464,89 @@ public class MetadataMonitor extends LockssServlet {
     }
 
     makeTablePage(LIST_MULTIPLE_PID_PUBLICATIONS_HEADER, results);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Displays the non-parent metadata items that have no DOI.
+   * 
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   * @throws IOException
+   */
+  private void listMetadataItemsWithoutDoi() throws DbException, IOException {
+    final String DEBUG_HEADER = "listMetadataItemsWithoutDoi(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    String attributes = "align=\"left\" cellspacing=\"4\" cellpadding=\"5\"";
+
+    // Create the results table.
+    Table results = new Table(0, attributes);
+    results.newRow();
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Publisher");
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Archival Unit Name");
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Parent Title");
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Parent Type");
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Item Title");
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Item Type");
+
+    // The metadata items that have no DOI, sorted by publisher, parent type,
+    // parent title and item type.
+    Collection<Map<String, String>> noDoiItems = mdManager.getNoDoiItems();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "noDoiItems.size() = " + noDoiItems.size());
+
+    // Check whether there are results to display.
+    if (noDoiItems.size() > 0) {
+      // Yes: Loop through the items.
+      for (Map<String, String> itemData : noDoiItems) {
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "itemData = " + itemData);
+
+	results.newRow();
+	results.newCell("align=\"center\"");
+	results.add(itemData.get("col7"));
+	results.newCell("align=\"center\"");
+
+	String auId = PluginManager.generateAuId(itemData.get("col6"),
+	    itemData.get("col5"));
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+	ArchivalUnit au = pluginManager.getAuFromId(auId);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+	if (au != null) {
+	  results.add(au.getName());
+	} else {
+	  results.add(auId);
+	}
+
+	results.newCell("align=\"center\"");
+	results.add(itemData.get("col3"));
+	results.newCell("align=\"center\"");
+	results.add(itemData.get("col4"));
+	results.newCell("align=\"center\"");
+	results.add(itemData.get("col1"));
+	results.newCell("align=\"center\"");
+	results.add(itemData.get("col2"));
+      }
+    } else {
+      // No.
+      results.newRow();
+      results.newCell();
+      results.add("");
+      results.newRow();
+      results.newCell("colspan=\"6\" align=\"center\"");
+      results.add("No non-parent metadata items without DOI");
+    }
+
+    makeTablePage(LIST_ITEMS_WITHOUT_DOI_HEADER, results);
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 }
