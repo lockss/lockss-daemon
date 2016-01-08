@@ -1,10 +1,10 @@
 /*
- * $Id: MetadataMonitorServiceImpl.java 44384 2015-10-02 21:50:01Z fergaloy-sf $
+ * $Id$
  */
 
 /*
 
- Copyright (c) 2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2015-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -47,6 +47,7 @@ import org.lockss.ws.entities.KeyIdNamePairListPair;
 import org.lockss.ws.entities.KeyValueListPair;
 import org.lockss.ws.entities.IdNamePair;
 import org.lockss.ws.entities.LockssWebServicesFault;
+import org.lockss.ws.entities.MetadataItemWsResult;
 import org.lockss.ws.entities.MismatchedMetadataChildWsResult;
 import org.lockss.ws.entities.UnnamedItemWsResult;
 
@@ -800,6 +801,56 @@ public class MetadataMonitorServiceImpl implements MetadataMonitorService {
       if (log.isDebug2())
 	log.debug2(DEBUG_HEADER + "results.size() = " + results.size());
       return results;
+    } catch (Exception e) {
+      throw new LockssWebServicesFault(e);
+    }
+  }
+
+  /**
+   * Provides the non-parent metadata items in the database that have no DOI.
+   *
+   * @return a List<MetadataItemWsResult> with the non-parent metadata items
+   *         that have no DOI sorted sorted by publisher, Archival Unit, parent
+   *         type, parent name, item type and item name.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<MetadataItemWsResult> getNoDoiItems()
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "getNoDoiItems(): ";
+    List<MetadataItemWsResult> noDoiItems =
+	new ArrayList<MetadataItemWsResult>();
+
+    try {
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Invoked.");
+
+      for (Map<String, String> noDoiItem :
+	getMetadataManager().getNoDoiItems()) {
+	MetadataItemWsResult result = new MetadataItemWsResult();
+	result.setItemName(noDoiItem.get("col1"));
+	result.setItemType(noDoiItem.get("col2"));
+	result.setParentName(noDoiItem.get("col3"));
+	result.setParentType(noDoiItem.get("col4"));
+
+	String auId = PluginManager.generateAuId(noDoiItem.get("col6"),
+	    noDoiItem.get("col5"));
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+	ArchivalUnit au = getPluginManager().getAuFromId(auId);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+	if (au != null) {
+	  result.setAuName(au.getName());
+	} else {
+	  result.setAuName(auId);
+	}
+
+	result.setPublisherName(noDoiItem.get("col7"));
+
+	noDoiItems.add(result);
+      }
+
+      return noDoiItems;
     } catch (Exception e) {
       throw new LockssWebServicesFault(e);
     }
