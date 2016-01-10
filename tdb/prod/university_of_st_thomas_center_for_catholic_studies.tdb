@@ -19,6 +19,15 @@
 
     {
 
+      param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 1998 ; Logos: A Journal of Catholic Thought and Culture Volume 1 ; 1 >
+      au < exists ; 1999 ; Logos: A Journal of Catholic Thought and Culture Volume 2 ; 2 >
+
+    }
+
+    {
+
       param[base_url] = http://muse.jhu.edu/
 
       au < released ; 2000 ; Logos: A Journal of Catholic Thought and Culture Volume 3 ; 3 >
