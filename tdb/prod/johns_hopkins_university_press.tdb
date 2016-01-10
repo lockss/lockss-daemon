@@ -1983,6 +1983,11 @@
 
       param[base_url] = https://muse.jhu.edu/
 
+      au < exists ; 1967-1968 ; Ch'ing-shih wen-t'i Volume 1 ; 1 >
+      au < exists ; 1969-1972 ; Ch'ing-shih wen-t'i Volume 2 ; 2 >
+      au < exists ; 1975-1978 ; Ch'ing-shih wen-t'i Volume 3 ; 3 >
+      au < exists ; 1981-1983 ; Ch'ing-shih wen-t'i Volume 4 ; 4 >
+      au < exists ; 1984 ; Ch'ing-shih wen-t'i Volume 5 ; 5 >
       au < released ; 1985 ; Late Imperial China Volume 6 ; 6 >
       au < released ; 1986 ; Late Imperial China Volume 7 ; 7 >
       au < released ; 1987 ; Late Imperial China Volume 8 ; 8 >
@@ -2132,6 +2137,19 @@
 
       param[base_url] = http://muse.jhu.edu/
 
+      au < exists ; 1982 ; Literature and Medicine Volume 1 ; 1 >
+      au < exists ; 1983 ; Literature and Medicine Volume 2 ; 2 >
+      au < exists ; 1984 ; Literature and Medicine Volume 3 ; 3 >
+      au < exists ; 1985 ; Literature and Medicine Volume 4 ; 4 >
+      au < exists ; 1986 ; Literature and Medicine Volume 5 ; 5 >
+      au < exists ; 1987 ; Literature and Medicine Volume 6 ; 6 >
+      au < exists ; 1988 ; Literature and Medicine Volume 7 ; 7 >
+      au < exists ; 1989 ; Literature and Medicine Volume 8 ; 8 >
+      au < exists ; 1990 ; Literature and Medicine Volume 9 ; 9 >
+      au < exists ; 1991 ; Literature and Medicine Volume 10 ; 10 >
+      au < exists ; 1992 ; Literature and Medicine Volume 11 ; 11 >
+      au < exists ; 1993 ; Literature and Medicine Volume 12 ; 12 >
+      au < exists ; 1994 ; Literature and Medicine Volume 13 ; 13 >
       au < released ; 1995 ; Literature and Medicine Volume 14 ; 14 >
       au < released ; 1996 ; Literature and Medicine Volume 15 ; 15 >
       au < released ; 1997 ; Literature and Medicine Volume 16 ; 16 >
@@ -2175,6 +2193,22 @@
 
     param[journal_dir] = modern_fiction_studies
     attr[journal_id] = mfs
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 1985 ; MFS Modern Fiction Studies Volume 31 ; 31 >
+      au < exists ; 1986 ; MFS Modern Fiction Studies Volume 32 ; 32 >
+      au < exists ; 1987 ; MFS Modern Fiction Studies Volume 33 ; 33 >
+      au < exists ; 1988 ; MFS Modern Fiction Studies Volume 34 ; 34 >
+      au < exists ; 1989 ; MFS Modern Fiction Studies Volume 35 ; 35 >
+      au < exists ; 1990 ; MFS Modern Fiction Studies Volume 36 ; 36 >
+      au < exists ; 1991 ; MFS Modern Fiction Studies Volume 37 ; 37 >
+      au < exists ; 1992 ; MFS Modern Fiction Studies Volume 38 ; 38 >
+      au < exists ; 1993 ; MFS Modern Fiction Studies Volume 39 ; 39 >
+
+    }
 
     {
 
@@ -2510,6 +2544,55 @@
 
     {
 
+      param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 1958 ; Perspectives in Biology and Medicine Volume 1 ; 1 >
+      au < exists ; 1959 ; Perspectives in Biology and Medicine Volume 2 ; 2 >
+      au < exists ; 1960 ; Perspectives in Biology and Medicine Volume 3 ; 3 >
+      au < exists ; 1961 ; Perspectives in Biology and Medicine Volume 4 ; 4 >
+      au < exists ; 1962 ; Perspectives in Biology and Medicine Volume 5 ; 5 >
+      au < exists ; 1963 ; Perspectives in Biology and Medicine Volume 6 ; 6 >
+      au < exists ; 1964 ; Perspectives in Biology and Medicine Volume 7 ; 7 >
+      au < exists ; 1965 ; Perspectives in Biology and Medicine Volume 8 ; 8 >
+      au < exists ; 1966 ; Perspectives in Biology and Medicine Volume 9 ; 9 >
+      au < exists ; 1967 ; Perspectives in Biology and Medicine Volume 10 ; 10 >
+      au < exists ; 1968 ; Perspectives in Biology and Medicine Volume 11 ; 11 >
+      au < exists ; 1969 ; Perspectives in Biology and Medicine Volume 12 ; 12 >
+      au < exists ; 1970 ; Perspectives in Biology and Medicine Volume 13 ; 13 >
+      au < exists ; 1971 ; Perspectives in Biology and Medicine Volume 14 ; 14 >
+      au < exists ; 1972 ; Perspectives in Biology and Medicine Volume 15 ; 15 >
+      au < exists ; 1973 ; Perspectives in Biology and Medicine Volume 16 ; 16 >
+      au < exists ; 1974 ; Perspectives in Biology and Medicine Volume 17 ; 17 >
+      au < exists ; 1975 ; Perspectives in Biology and Medicine Volume 18 ; 18 >
+      au < exists ; 1976 ; Perspectives in Biology and Medicine Volume 19 ; 19 >
+      au < exists ; 1977 ; Perspectives in Biology and Medicine Volume 20 ; 20 >
+      au < exists ; 1978 ; Perspectives in Biology and Medicine Volume 21 ; 21 >
+      au < exists ; 1979 ; Perspectives in Biology and Medicine Volume 22 ; 22 >
+      au < exists ; 1980 ; Perspectives in Biology and Medicine Volume 23 ; 23 >
+      au < exists ; 1981 ; Perspectives in Biology and Medicine Volume 24 ; 24 >
+      au < exists ; 1982 ; Perspectives in Biology and Medicine Volume 25 ; 25 >
+      au < exists ; 1983 ; Perspectives in Biology and Medicine Volume 26 ; 26 >
+      au < exists ; 1984 ; Perspectives in Biology and Medicine Volume 27 ; 27 >
+      au < exists ; 1985 ; Perspectives in Biology and Medicine Volume 28 ; 28 >
+      au < exists ; 1986 ; Perspectives in Biology and Medicine Volume 29 ; 29 >
+      au < exists ; 1987 ; Perspectives in Biology and Medicine Volume 30 ; 30 >
+      au < exists ; 1988 ; Perspectives in Biology and Medicine Volume 31 ; 31 >
+      au < exists ; 1989 ; Perspectives in Biology and Medicine Volume 32 ; 32 >
+      au < exists ; 1990 ; Perspectives in Biology and Medicine Volume 33 ; 33 >
+      au < exists ; 1991 ; Perspectives in Biology and Medicine Volume 34 ; 34 >
+      au < exists ; 1992 ; Perspectives in Biology and Medicine Volume 35 ; 35 >
+      au < exists ; 1993 ; Perspectives in Biology and Medicine Volume 36 ; 36 >
+      au < exists ; 1994 ; Perspectives in Biology and Medicine Volume 37 ; 37 >
+      au < exists ; 1995 ; Perspectives in Biology and Medicine Volume 38 ; 38 >
+      au < exists ; 1996 ; Perspectives in Biology and Medicine Volume 39 ; 39 >
+      au < exists ; 1997 ; Perspectives in Biology and Medicine Volume 40 ; 40 >
+      au < exists ; 1998 ; Perspectives in Biology and Medicine Volume 41 ; 41 >
+      au < exists ; 1999 ; Perspectives in Biology and Medicine Volume 42 ; 42 >
+
+    }
+
+    {
+
       param[base_url] = http://muse.jhu.edu/
 
       au < released ; 2000 ; Perspectives in Biology and Medicine Volume 43 ; 43 >
@@ -2551,6 +2634,31 @@
 
     param[journal_dir] = philosophy_and_literature
     attr[journal_id] = phl
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 1977 ; Philosophy and Literature Volume 1 ; 1 >
+      au < exists ; 1978 ; Philosophy and Literature Volume 2 ; 2 >
+      au < exists ; 1979 ; Philosophy and Literature Volume 3 ; 3 >
+      au < exists ; 1980 ; Philosophy and Literature Volume 4 ; 4 >
+      au < exists ; 1981 ; Philosophy and Literature Volume 5 ; 5 >
+      au < exists ; 1982 ; Philosophy and Literature Volume 6 ; 6 >
+      au < exists ; 1983 ; Philosophy and Literature Volume 7 ; 7 >
+      au < exists ; 1984 ; Philosophy and Literature Volume 8 ; 8 >
+      au < exists ; 1985 ; Philosophy and Literature Volume 9 ; 9 >
+      au < exists ; 1986 ; Philosophy and Literature Volume 10 ; 10 >
+      au < exists ; 1987 ; Philosophy and Literature Volume 11 ; 11 >
+      au < exists ; 1988 ; Philosophy and Literature Volume 12 ; 12 >
+      au < exists ; 1989 ; Philosophy and Literature Volume 13 ; 13 >
+      au < exists ; 1990 ; Philosophy and Literature Volume 14 ; 14 >
+      au < exists ; 1991 ; Philosophy and Literature Volume 15 ; 15 >
+      au < exists ; 1992 ; Philosophy and Literature Volume 16 ; 16 >
+      au < exists ; 1993 ; Philosophy and Literature Volume 17 ; 17 >
+      au < exists ; 1994 ; Philosophy and Literature Volume 18 ; 18 >
+
+    }
 
     {
 
