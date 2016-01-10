@@ -2135,7 +2135,7 @@
 
     {
 
-      param[base_url] = http://muse.jhu.edu/
+      param[base_url] = https://muse.jhu.edu/
 
       au < exists ; 1982 ; Literature and Medicine Volume 1 ; 1 >
       au < exists ; 1983 ; Literature and Medicine Volume 2 ; 2 >
@@ -2150,6 +2150,13 @@
       au < exists ; 1992 ; Literature and Medicine Volume 11 ; 11 >
       au < exists ; 1993 ; Literature and Medicine Volume 12 ; 12 >
       au < exists ; 1994 ; Literature and Medicine Volume 13 ; 13 >
+
+    }
+
+    {
+
+      param[base_url] = http://muse.jhu.edu/
+
       au < released ; 1995 ; Literature and Medicine Volume 14 ; 14 >
       au < released ; 1996 ; Literature and Medicine Volume 15 ; 15 >
       au < released ; 1997 ; Literature and Medicine Volume 16 ; 16 >
@@ -2708,6 +2715,15 @@
 
     param[journal_dir] = philosophy_psychiatry_and_psychology
     attr[journal_id] = ppp
+
+    {
+
+      param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 1994 ; Philosophy, Psychiatry, & Psychology Volume 1 ; 1 >
+      au < exists ; 1995 ; Philosophy, Psychiatry, & Psychology Volume 2 ; 2 >
+
+    }
 
     {
 
