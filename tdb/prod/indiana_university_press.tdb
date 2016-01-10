@@ -1461,6 +1461,14 @@
 
       {
 
+        param[base_url] = https://muse.jhu.edu/
+
+        au < exists ; 2001 ; Philosophy of Music Education Review Volume 9 ; 9 >
+
+      }
+
+      {
+
         param[base_url] = http://muse.jhu.edu/
 
         au < released ; 2002 ; Philosophy of Music Education Review Volume 10 ; 10 >
@@ -1526,6 +1534,15 @@
       attr[journal_id] = ptx
       implicit < status ; year ; name ; param[volume] >
     
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < exists ; 1998 ; Prooftexts Volume 18 ; 18 >
+        au < exists ; 1999 ; Prooftexts Volume 19 ; 19 >
+
+      }
+
       {
 
         param[base_url] = http://muse.jhu.edu/
