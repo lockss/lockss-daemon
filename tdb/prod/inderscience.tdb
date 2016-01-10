@@ -968,9 +968,9 @@
 
       param[journal_id] = ijbdi
 
-      au < exists ; 2014 ; International Journal of Big Data Intelligence Volume 4 ; 4 >
-      au < exists ; 2015 ; International Journal of Big Data Intelligence Volume 5 ; 5 >
-      au < expected ; 2016 ; International Journal of Big Data Intelligence Volume 6 ; 6 >
+      au < exists ; 2014 ; International Journal of Big Data Intelligence Volume 1 ; 1 >
+      au < exists ; 2015 ; International Journal of Big Data Intelligence Volume 2 ; 2 >
+      au < expected ; 2016 ; International Journal of Big Data Intelligence Volume 3 ; 3 >
 
     }
 
@@ -2258,7 +2258,8 @@
       au < released ; 2014 ; International Journal of Data Mining and Bioinformatics Volume 10 ; 10 >
       au < manifest ; 2015 ; International Journal of Data Mining and Bioinformatics Volume 11 ; 11 >
       au < manifest ; 2015 ; International Journal of Data Mining and Bioinformatics Volume 12 ; 12 >
-      au < expected ; 2016 ; International Journal of Data Mining and Bioinformatics Volume 13 ; 13 >
+      au < exists ; 2015 ; International Journal of Data Mining and Bioinformatics Volume 13 ; 13 >
+      au < manifest ; 2016 ; International Journal of Data Mining and Bioinformatics Volume 14 ; 14 >
 
     }
 
@@ -6316,7 +6317,9 @@
       au < manifest ; 2014 ; International Journal of Oil, Gas and Coal Technology Volume 7 ; 7 >
       au < manifest ; 2014 ; International Journal of Oil, Gas and Coal Technology Volume 8 ; 8 >
       au < manifest ; 2015 ; International Journal of Oil, Gas and Coal Technology Volume 9 ; 9 >
-      au < expected ; 2016 ; International Journal of Oil, Gas and Coal Technology Volume 10 ; 10 >
+      au < expected ; 2015 ; International Journal of Oil, Gas and Coal Technology Volume 10 ; 10 >
+      au < expected ; 2016 ; International Journal of Oil, Gas and Coal Technology Volume 11 ; 11 >
+      au < expected ; 2016 ; International Journal of Oil, Gas and Coal Technology Volume 12 ; 12 >
 
     }
 
