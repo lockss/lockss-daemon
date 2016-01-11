@@ -14,15 +14,15 @@
      param[base_url] = http://standardsingenomics.org/
      param[journal_id] = sigen
      implicit < status ; year ; param[year] ; name ; volume >
+     comment[moved] = journal moved to Springer. See http://www.standardsingenomics.com/
      
-      au < released ; 2009 ; 2009 ; Standards in Genomic Sciences Volume 1 ; 1 >  
-      au < released ; 2010 ; 2010 ; Standards in Genomic Sciences Volume 2-3 ; 2-3 >  
-      au < released ; 2011 ; 2011 ; Standards in Genomic Sciences Volume 4-5 ; 4-5 >  
-      au < released ; 2012 ; 2012 ; Standards in Genomic Sciences Volume 6-7 ; 6-7 >  
-      au < released ; 2013 ; 2013 ; Standards in Genomic Sciences Volume 7-9 ; 7-9 >  
-      au < released ; 2014 ; 2014 ; Standards in Genomic Sciences Volume 9-10 ; 9-10 >
-      au < expected ; 2015 ; 2015 ; Standards in Genomic Sciences Volume 11-12 ; 11-12 >
-     
+      au < down ; 2009 ; 2009 ; Standards in Genomic Sciences Volume 1 ; 1 >  
+      au < down ; 2010 ; 2010 ; Standards in Genomic Sciences Volume 2-3 ; 2-3 >  
+      au < down ; 2011 ; 2011 ; Standards in Genomic Sciences Volume 4-5 ; 4-5 >  
+      au < down ; 2012 ; 2012 ; Standards in Genomic Sciences Volume 6-7 ; 6-7 >  
+      au < down ; 2013 ; 2013 ; Standards in Genomic Sciences Volume 7-9 ; 7-9 >  
+      au < down ; 2014 ; 2014 ; Standards in Genomic Sciences Volume 9-10 ; 9-10 >
+
   }
     
 }
