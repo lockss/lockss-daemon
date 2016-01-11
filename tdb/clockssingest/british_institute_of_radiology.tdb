@@ -136,7 +136,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; British Journal of Radiology Volume 86 ; 86 >
       au < finished ; crawling ; 2014 ; British Journal of Radiology Volume 87 ; 87 >
       au < ready ; exists ; 2015 ; British Journal of Radiology Volume 88 ; 88 >
-      au < expected ; exists ; 2016 ; British Journal of Radiology Volume 89 ; 89 >
+      au < manifest ; exists ; 2016 ; British Journal of Radiology Volume 89 ; 89 >
       
     }
     
@@ -157,7 +157,7 @@
       param[journal_id] = bjrcr
 
       au < crawling ; exists ; 2015 ; BJR|case reports Volume 1 ; 1 >
-      au < expected ; exists ; 2016 ; BJR|case reports Volume 2 ; 2 >
+      au < manifest ; exists ; 2016 ; BJR|case reports Volume 2 ; 2 >
 
   }
 
@@ -235,7 +235,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Dentomaxillofacial Radiology Volume 42 ; 42 >
       au < crawling ; exists ; 2014 ; Dentomaxillofacial Radiology Volume 43 ; 43 >
       au < crawling ; exists ; 2015 ; Dentomaxillofacial Radiology Volume 44 ; 44 >
-      au < expected ; exists ; 2016 ; Dentomaxillofacial Radiology Volume 45 ; 45 >
+      au < manifest ; exists ; 2016 ; Dentomaxillofacial Radiology Volume 45 ; 45 >
 
     }
 
