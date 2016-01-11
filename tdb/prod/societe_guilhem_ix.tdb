@@ -21,6 +21,33 @@
 
     {
 
+      param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 1985-1986 ; Tenso Volume 1 ; 1 >
+      au < exists ; 1987 ; Tenso Volume 2 ; 2 >
+      au < exists ; 1987-1988 ; Tenso Volume 3 ; 3 >
+      au < exists ; 1988-1989 ; Tenso Volume 4 ; 4 >
+      au < exists ; 1989-1990 ; Tenso Volume 5 ; 5 >
+      au < exists ; 1990-1991 ; Tenso Volume 6 ; 6 >
+      au < exists ; 1991-1992 ; Tenso Volume 7 ; 7 >
+      au < exists ; 1992-1993 ; Tenso Volume 8 ; 8 >
+      au < exists ; 1993-1994 ; Tenso Volume 9 ; 9 >
+      au < exists ; 1994-1995 ; Tenso Volume 10 ; 10 >
+      au < exists ; 1995-1996 ; Tenso Volume 11 ; 11 >
+      au < exists ; 1995-1996 ; Tenso Volume 11 ; 11 >
+      au < exists ; 1996-1997 ; Tenso Volume 12 ; 12 >
+      au < exists ; 1997-1998 ; Tenso Volume 13 ; 13 >
+      au < exists ; 1999 ; Tenso Volume 14 ; 14 >
+      au < exists ; 2000 ; Tenso Volume 15 ; 15 >
+      au < exists ; 2001 ; Tenso Volume 16 ; 16 >
+      au < exists ; 2002 ; Tenso Volume 17 ; 17 >
+      au < exists ; 2003 ; Tenso Volume 18 ; 18 >
+      au < exists ; 2004 ; Tenso Volume 19 ; 19 >
+
+    }
+
+    {
+
       param[base_url] = http://muse.jhu.edu/
 
       au < released ; 2005 ; Tenso Volume 20 ; 20 >

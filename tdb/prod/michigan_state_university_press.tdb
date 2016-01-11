@@ -332,6 +332,15 @@
 
     {
 
+      param[base_url] = https://muse.jhu.edu/
+
+      au < exists ; 2003 ; Red Cedar Review Volume 38 ; 38 ; 38 >
+      au < exists ; 2004 ; Red Cedar Review Volume 39 ; 39 ; 39 >
+
+    }
+
+    {
+
       param[base_url] = http://muse.jhu.edu/
 
       au < released ; 2005 ; Red Cedar Review Volume 40 ; 40 ; 40 >
