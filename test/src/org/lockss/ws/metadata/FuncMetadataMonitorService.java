@@ -236,5 +236,6 @@ public class FuncMetadataMonitorService extends LockssTestCase {
     assertNull(proxy.getUnnamedItems());
     assertNull(proxy.getPublicationsWithMultiplePids());
     assertNull(proxy.getNoDoiItems());
+    assertNull(proxy.getNoAccessUrlItems());
   }
 }

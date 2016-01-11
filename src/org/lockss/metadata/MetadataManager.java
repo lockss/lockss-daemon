@@ -4250,4 +4250,19 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   public Collection<Map<String, String>> getNoDoiItems() throws DbException {
     return getMetadataManagerSql().getNoDoiItems();
   }
+
+  /**
+   * Provides the non-parent metadata items in the database that have no Access
+   * URL.
+   *
+   * @return a Collection<Map<String, String>> with the non-parent metadata
+   *         items that have no Access URL sorted by publisher, parent type,
+   *         parent title and item type.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Collection<Map<String, String>> getNoAccessUrlItems()
+      throws DbException {
+    return getMetadataManagerSql().getNoAccessUrlItems();
+  }
 }

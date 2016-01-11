@@ -165,6 +165,14 @@ public class MetadataMonitor extends LockssServlet {
       "Lists the non-parent metadata items that have no DOI";
   private static final String LIST_ITEMS_WITHOUT_DOI_HEADER =
       "Non-Parent Metadata Items Without DOI";
+  private static final String LIST_ITEMS_WITHOUT_ACCESS_URL_LINK =
+      "Non-Parent Metadata Items Without Access URL";
+  private static final String LIST_ITEMS_WITHOUT_ACCESS_URL_ACTION =
+      "listMetadataItemsWithoutAccessUrl";
+  private static final String LIST_ITEMS_WITHOUT_ACCESS_URL_HELP =
+      "Lists the non-parent metadata items that have no Access URL";
+  private static final String LIST_ITEMS_WITHOUT_ACCESS_URL_HEADER =
+      "Non-Parent Metadata Items Without Access URL";
 
   private static final String BACK_LINK_PREFIX = "Back to ";
 
@@ -234,6 +242,8 @@ public class MetadataMonitor extends LockssServlet {
 	listMultiplePidPublications();
       } else if (LIST_ITEMS_WITHOUT_DOI_ACTION.equals(action)) {
 	listMetadataItemsWithoutDoi();
+      } else if (LIST_ITEMS_WITHOUT_ACCESS_URL_ACTION.equals(action)) {
+	listMetadataItemsWithoutAccessUrl();
       } else {
 	displayMainPage();
       }
@@ -346,6 +356,12 @@ public class MetadataMonitor extends LockssServlet {
 	LIST_ITEMS_WITHOUT_DOI_LINK,
 	ACTION + LIST_ITEMS_WITHOUT_DOI_ACTION,
 	LIST_ITEMS_WITHOUT_DOI_HELP));
+
+    // List the non-parent metadata items that have no Access URL.
+    list.add(getMenuDescriptor(myDescr,
+	LIST_ITEMS_WITHOUT_ACCESS_URL_LINK,
+	ACTION + LIST_ITEMS_WITHOUT_ACCESS_URL_ACTION,
+	LIST_ITEMS_WITHOUT_ACCESS_URL_HELP));
 
     return list.iterator();
   }
@@ -1547,6 +1563,91 @@ public class MetadataMonitor extends LockssServlet {
     }
 
     makeTablePage(LIST_ITEMS_WITHOUT_DOI_HEADER, results);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Displays the non-parent metadata items that have no Access URL.
+   *
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   * @throws IOException
+   */
+  private void listMetadataItemsWithoutAccessUrl()
+      throws DbException, IOException {
+    final String DEBUG_HEADER = "listMetadataItemsWithoutAccessUrl(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    String attributes = "align=\"left\" cellspacing=\"4\" cellpadding=\"5\"";
+
+    // Create the results table.
+    Table results = new Table(0, attributes);
+    results.newRow();
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Publisher");
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Archival Unit Name");
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Parent Title");
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Parent Type");
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Item Title");
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Item Type");
+
+    // The metadata items that have no Access URL, sorted by publisher, parent
+    // type, parent title and item type.
+    Collection<Map<String, String>> noAccessUrlItems =
+	mdManager.getNoAccessUrlItems();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "noAccessUrlItems.size() = " + noAccessUrlItems.size());
+
+    // Check whether there are results to display.
+    if (noAccessUrlItems.size() > 0) {
+      // Yes: Loop through the items.
+      for (Map<String, String> itemData : noAccessUrlItems) {
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "itemData = " + itemData);
+
+	results.newRow();
+	results.newCell("align=\"center\"");
+	results.add(itemData.get("col7"));
+	results.newCell("align=\"center\"");
+
+	String auId = PluginManager.generateAuId(itemData.get("col6"),
+	    itemData.get("col5"));
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+	ArchivalUnit au = pluginManager.getAuFromId(auId);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+	if (au != null) {
+	  results.add(au.getName());
+	} else {
+	  results.add(auId);
+	}
+
+	results.newCell("align=\"center\"");
+	results.add(itemData.get("col3"));
+	results.newCell("align=\"center\"");
+	results.add(itemData.get("col4"));
+	results.newCell("align=\"center\"");
+	results.add(itemData.get("col1"));
+	results.newCell("align=\"center\"");
+	results.add(itemData.get("col2"));
+      }
+    } else {
+      // No.
+      results.newRow();
+      results.newCell();
+      results.add("");
+      results.newRow();
+      results.newCell("colspan=\"6\" align=\"center\"");
+      results.add("No non-parent metadata items without Access URL");
+    }
+
+    makeTablePage(LIST_ITEMS_WITHOUT_ACCESS_URL_HEADER, results);
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 }

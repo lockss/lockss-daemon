@@ -857,6 +857,57 @@ public class MetadataMonitorServiceImpl implements MetadataMonitorService {
   }
 
   /**
+   * Provides the non-parent metadata items in the database that have no Access
+   * URL.
+   *
+   * @return a List<MetadataItemWsResult> with the non-parent metadata items
+   *         that have no Access URL sorted sorted by publisher, Archival Unit,
+   *         parent type, parent name, item type and item name.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<MetadataItemWsResult> getNoAccessUrlItems()
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "getNoAccessUrlItems(): ";
+    List<MetadataItemWsResult> noAccessUrlItems =
+	new ArrayList<MetadataItemWsResult>();
+
+    try {
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Invoked.");
+
+      for (Map<String, String> noAccessUrlItem :
+	getMetadataManager().getNoAccessUrlItems()) {
+	MetadataItemWsResult result = new MetadataItemWsResult();
+	result.setItemName(noAccessUrlItem.get("col1"));
+	result.setItemType(noAccessUrlItem.get("col2"));
+	result.setParentName(noAccessUrlItem.get("col3"));
+	result.setParentType(noAccessUrlItem.get("col4"));
+
+	String auId = PluginManager.generateAuId(noAccessUrlItem.get("col6"),
+	    noAccessUrlItem.get("col5"));
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+	ArchivalUnit au = getPluginManager().getAuFromId(auId);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+	if (au != null) {
+	  result.setAuName(au.getName());
+	} else {
+	  result.setAuName(auId);
+	}
+
+	result.setPublisherName(noAccessUrlItem.get("col7"));
+
+	noAccessUrlItems.add(result);
+      }
+
+      return noAccessUrlItems;
+    } catch (Exception e) {
+      throw new LockssWebServicesFault(e);
+    }
+  }
+
+  /**
    * Provides the metadata manager.
    * 
    * @return a MetadataManager with the metadata manager.
