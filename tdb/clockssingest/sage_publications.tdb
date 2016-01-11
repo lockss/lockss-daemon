@@ -17095,6 +17095,19 @@
       param[base_url] = http://ijq.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 2002 ; International Journal of Qualitative Methods Volume 1 ; 1 ; >
+      au < exists ; exists ; 2003 ; International Journal of Qualitative Methods Volume 2 ; 2 ; >
+      au < exists ; exists ; 2004 ; International Journal of Qualitative Methods Volume 3 ; 3 ; >
+      au < exists ; exists ; 2005 ; International Journal of Qualitative Methods Volume 4 ; 4 ; >
+      au < exists ; exists ; 2006 ; International Journal of Qualitative Methods Volume 5 ; 5 ; >
+      au < exists ; exists ; 2007 ; International Journal of Qualitative Methods Volume 6 ; 6 ; >
+      au < exists ; exists ; 2008 ; International Journal of Qualitative Methods Volume 7 ; 7 ; >
+      au < exists ; exists ; 2009 ; International Journal of Qualitative Methods Volume 8 ; 8 ; >
+      au < exists ; exists ; 2010 ; International Journal of Qualitative Methods Volume 9 ; 9 ; >
+      au < exists ; exists ; 2011 ; International Journal of Qualitative Methods Volume 10 ; 10 ; >
+      au < exists ; exists ; 2012 ; International Journal of Qualitative Methods Volume 11 ; 11 ; >
+      au < exists ; exists ; 2013 ; International Journal of Qualitative Methods Volume 12 ; 12 ; >
+      au < exists ; exists ; 2014 ; International Journal of Qualitative Methods Volume 13 ; 13 ; >
       au < crawling ; exists ; 2015 ; International Journal of Qualitative Methods Volume 14 ; 14 ; >
       au < expected ; exists ; 2016 ; International Journal of Qualitative Methods Volume 15 ; 15 ; >
 
@@ -18423,7 +18436,7 @@
       au < exists ; exists ; 2012 ; Irish Economic and Social History Volume 39 ; 39 ; >
       au < exists ; exists ; 2013 ; Irish Economic and Social History Volume 40 ; 40 ; >
       au < exists ; exists ; 2014 ; Irish Economic and Social History Volume 41 ; 41 ; >
-      au < expected ; exists ; 2015 ; Irish Economic and Social History Volume 42 ; 42 ; >
+      au < exists ; exists ; 2015 ; Irish Economic and Social History Volume 42 ; 42 ; >
       au < expected ; exists ; 2016 ; Irish Economic and Social History Volume 43 ; 43 ; >
 
   }
@@ -26490,6 +26503,7 @@
       au < exists ; exists ; 2010 ; Journal of Reproductive Biotechnology and Fertility Volume 1 ; 1 ; >
       au < exists ; exists ; 2011 ; Journal of Reproductive Biotechnology and Fertility Volume 2 ; 2 ; >
       au < exists ; exists ; 2012 ; Journal of Reproductive Biotechnology and Fertility Volume 3 ; 3 ; >
+      au < exists ; exists ; 2015 ; Journal of Reproductive Biotechnology and Fertility Volume 4 ; 4 ; >
 
   }
 
