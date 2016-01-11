@@ -74,6 +74,7 @@ implements SourceXmlSchemaHelper {
   // get the journal title from the closest preceding journal-info node
   private static final String dataset_journal_title = "preceding-sibling::journal-issue[1]/journal-issue-properties/collection-title";
   // this will be there if part of a book series (which looks like a journal)
+  // pick up the raw value but we won't cook it - too manh false positives turning journals to book-series
   private static final String dataset_series_isbn = "preceding-sibling::journal-issue[1]/journal-issue-properties/isbn";
   // these ones are the same for both JOURNALS and BOOKS so make them public      
   public static final String dataset_metadata = "files-info/ml/pathname";
@@ -141,6 +142,7 @@ implements SourceXmlSchemaHelper {
     articleMap.put(dataset_pdf, XmlDomMetadataExtractor.TEXT_VALUE);
     //articleMap.put(dataset_journal_title, JOURNAL_ISSUE_TITLE_VALUE);
     articleMap.put(dataset_journal_title, XmlDomMetadataExtractor.TEXT_VALUE);
+    // pick up the raw value but do not use it. Too many false positives turning journals --> book-series
     articleMap.put(dataset_series_isbn, XmlDomMetadataExtractor.TEXT_VALUE);
   }
 
@@ -159,7 +161,9 @@ implements SourceXmlSchemaHelper {
     cookMap.put(dataset_article_doi, MetadataField.FIELD_DOI);
     cookMap.put(dataset_article_issn, MetadataField.FIELD_ISSN);
     cookMap.put(dataset_journal_title, MetadataField.FIELD_PUBLICATION_TITLE);
-    cookMap.put(dataset_series_isbn, MetadataField.FIELD_ISBN);
+    //DO NOT COOK THIS...too many false positives turning journals in to book-series
+    // not sure why Elsevier is categorizing collections of journals as book series
+    //cookMap.put(dataset_series_isbn, MetadataField.FIELD_ISBN);
     cookMap.put(dataset_article_date, MetadataField.FIELD_DATE);
   }
 

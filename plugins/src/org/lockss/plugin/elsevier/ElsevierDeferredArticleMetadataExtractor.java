@@ -202,7 +202,8 @@ public class ElsevierDeferredArticleMetadataExtractor extends BaseArticleMetadat
    *  Journals/Book-Series  articleMD (from main.xml) has 
    *       FIELD_AUTHOR, FIELD_ARTICLE_TITLE, FIELD_ACCESS_URL
    *    from datasetMD (from dataset.xml) get
-   *       FIELD_DOI, FIELD_ISSN, FIELD_PUBLICATION_TITLE, FIELD_DATE, FIELD_ISBN (if book series)
+   *       FIELD_DOI, FIELD_ISSN, FIELD_PUBLICATION_TITLE, FIELD_DATE
+   *       NOTE - no longer picking up FIELD_ISBN for journals - it was often a false positive
    *    fallbacks to pick up from raw
    *       if FIELD_DATE is null, use raw "common_copyright" if available
    *       if FIELD_DOI is null, use raw "common_doi" if available
@@ -244,7 +245,11 @@ public class ElsevierDeferredArticleMetadataExtractor extends BaseArticleMetadat
       articleMD.put(MetadataField.FIELD_ARTICLE_TYPE,  MetadataField.ARTICLE_TYPE_BOOKCHAPTER);
       articleMD.put(MetadataField.FIELD_PUBLICATION_TYPE,  MetadataField.PUBLICATION_TYPE_BOOK);
     } else {
-      // JOURNAL or BOOK-SERIES
+      // JOURNAL - BOOK-SERIES
+      // NO BOOK-SERIES; for now we are not choosing books series by 
+      // not cooking the isbn in the raw metadata to a FIELD_ISBN
+      // there were a lot of false positives for collections that were causing problems. Just make them
+      // journals and count them as articles
       articleMD.putIfBetter(MetadataField.FIELD_DATE, articleMD.getRaw(ElsevierJournalsMainDTD5XmlSchemaHelper.common_copyright));
       articleMD.putIfBetter(MetadataField.FIELD_DOI,articleMD.getRaw(ElsevierJournalsMainDTD5XmlSchemaHelper.common_doi));
       //docheading, such as "Book Review" or "Index" or "Research Article"
