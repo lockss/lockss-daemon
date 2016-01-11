@@ -599,11 +599,11 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < ready ; 1988-1989 ; Eighteenth-Century Fiction Volume 1 ; 1 >
-      au < testing ; 1989-1990 ; Eighteenth-Century Fiction Volume 2 ; 2 >
-      au < testing ; 1990-1991 ; Eighteenth-Century Fiction Volume 3 ; 3 >
+      au < ready ; 1989-1990 ; Eighteenth-Century Fiction Volume 2 ; 2 >
+      au < ready ; 1990-1991 ; Eighteenth-Century Fiction Volume 3 ; 3 >
       au < ready ; 1991-1992 ; Eighteenth-Century Fiction Volume 4 ; 4 >
-      au < testing ; 1992-1993 ; Eighteenth-Century Fiction Volume 5 ; 5 >
-      au < testing ; 1993-1994 ; Eighteenth-Century Fiction Volume 6 ; 6 >
+      au < ready ; 1992-1993 ; Eighteenth-Century Fiction Volume 5 ; 5 >
+      au < ready ; 1993-1994 ; Eighteenth-Century Fiction Volume 6 ; 6 >
       au < ready ; 1994-1995 ; Eighteenth-Century Fiction Volume 7 ; 7 >
       au < ready ; 1995-1996 ; Eighteenth-Century Fiction Volume 8 ; 8 >
       au < ready ; 1996-1997 ; Eighteenth-Century Fiction Volume 9 ; 9 >
@@ -1150,21 +1150,21 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < testing ; 1931-1932 ; University of Toronto Quarterly Volume 1 ; 1 >
+      au < ready ; 1931-1932 ; University of Toronto Quarterly Volume 1 ; 1 >
       au < ready ; 1932-1933 ; University of Toronto Quarterly Volume 2 ; 2 >
       au < ready ; 1933-1934 ; University of Toronto Quarterly Volume 3 ; 3 >
       au < ready ; 1934-1935 ; University of Toronto Quarterly Volume 4 ; 4 >
       au < ready ; 1935-1936 ; University of Toronto Quarterly Volume 5 ; 5 >
       au < ready ; 1936-1937 ; University of Toronto Quarterly Volume 6 ; 6 >
-      au < testing ; 1937-1938 ; University of Toronto Quarterly Volume 7 ; 7 >
-      au < testing ; 1938-1939 ; University of Toronto Quarterly Volume 8 ; 8 >
-      au < testing ; 1939-1940 ; University of Toronto Quarterly Volume 9 ; 9 >
-      au < testing ; 1940-1941 ; University of Toronto Quarterly Volume 10 ; 10 >
-      au < testing ; 1941-1942 ; University of Toronto Quarterly Volume 11 ; 11 >
-      au < testing ; 1942-1943 ; University of Toronto Quarterly Volume 12 ; 12 >
+      au < ready ; 1937-1938 ; University of Toronto Quarterly Volume 7 ; 7 >
+      au < ready ; 1938-1939 ; University of Toronto Quarterly Volume 8 ; 8 >
+      au < ready ; 1939-1940 ; University of Toronto Quarterly Volume 9 ; 9 >
+      au < ready ; 1940-1941 ; University of Toronto Quarterly Volume 10 ; 10 >
+      au < ready ; 1941-1942 ; University of Toronto Quarterly Volume 11 ; 11 >
+      au < ready ; 1942-1943 ; University of Toronto Quarterly Volume 12 ; 12 >
       au < ready ; 1943-1944 ; University of Toronto Quarterly Volume 13 ; 13 >
       au < ready ; 1944-1945 ; University of Toronto Quarterly Volume 14 ; 14 >
-      au < testing ; 1945-1946 ; University of Toronto Quarterly Volume 15 ; 15 >
+      au < ready ; 1945-1946 ; University of Toronto Quarterly Volume 15 ; 15 >
       au < ready ; 1946-1947 ; University of Toronto Quarterly Volume 16 ; 16 >
       au < ready ; 1947-1948 ; University of Toronto Quarterly Volume 17 ; 17 >
       au < ready ; 1948-1949 ; University of Toronto Quarterly Volume 18 ; 18 >
@@ -1172,23 +1172,23 @@
       au < ready ; 1950-1951 ; University of Toronto Quarterly Volume 20 ; 20 >
       au < ready ; 1951-1952 ; University of Toronto Quarterly Volume 21 ; 21 >
       au < doesNotExist ; 1952-1953 ; University of Toronto Quarterly Volume 22 ; 22 >
-      au < manifest ; 1953-1954 ; University of Toronto Quarterly Volume 23 ; 23 >
-      au < manifest ; 1954-1955 ; University of Toronto Quarterly Volume 24 ; 24 >
-      au < manifest ; 1955-1956 ; University of Toronto Quarterly Volume 25 ; 25 >
-      au < manifest ; 1956-1957 ; University of Toronto Quarterly Volume 26 ; 26 >
-      au < manifest ; 1957-1958 ; University of Toronto Quarterly Volume 27 ; 27 >
-      au < manifest ; 1958-1959 ; University of Toronto Quarterly Volume 28 ; 28 >
-      au < manifest ; 1959-1960 ; University of Toronto Quarterly Volume 29 ; 29 >
-      au < manifest ; 1960-1961 ; University of Toronto Quarterly Volume 30 ; 30 >
-      au < manifest ; 1961-1962 ; University of Toronto Quarterly Volume 31 ; 31 >
-      au < manifest ; 1962-1963 ; University of Toronto Quarterly Volume 32 ; 32 >
-      au < manifest ; 1963-1964 ; University of Toronto Quarterly Volume 33 ; 33 >
-      au < manifest ; 1964-1965 ; University of Toronto Quarterly Volume 34 ; 34 >
-      au < manifest ; 1965-1966 ; University of Toronto Quarterly Volume 35 ; 35 >
-      au < manifest ; 1966-1967 ; University of Toronto Quarterly Volume 36 ; 36 >
-      au < manifest ; 1967-1968 ; University of Toronto Quarterly Volume 37 ; 37 >
-      au < manifest ; 1968-1969 ; University of Toronto Quarterly Volume 38 ; 38 >
-      au < manifest ; 1969-1970 ; University of Toronto Quarterly Volume 39 ; 39 >
+      au < testing ; 1953-1954 ; University of Toronto Quarterly Volume 23 ; 23 >
+      au < testing ; 1954-1955 ; University of Toronto Quarterly Volume 24 ; 24 >
+      au < testing ; 1955-1956 ; University of Toronto Quarterly Volume 25 ; 25 >
+      au < testing ; 1956-1957 ; University of Toronto Quarterly Volume 26 ; 26 >
+      au < testing ; 1957-1958 ; University of Toronto Quarterly Volume 27 ; 27 >
+      au < testing ; 1958-1959 ; University of Toronto Quarterly Volume 28 ; 28 >
+      au < testing ; 1959-1960 ; University of Toronto Quarterly Volume 29 ; 29 >
+      au < testing ; 1960-1961 ; University of Toronto Quarterly Volume 30 ; 30 >
+      au < testing ; 1961-1962 ; University of Toronto Quarterly Volume 31 ; 31 >
+      au < testing ; 1962-1963 ; University of Toronto Quarterly Volume 32 ; 32 >
+      au < testing ; 1963-1964 ; University of Toronto Quarterly Volume 33 ; 33 >
+      au < testing ; 1964-1965 ; University of Toronto Quarterly Volume 34 ; 34 >
+      au < testing ; 1965-1966 ; University of Toronto Quarterly Volume 35 ; 35 >
+      au < testing ; 1966-1967 ; University of Toronto Quarterly Volume 36 ; 36 >
+      au < testing ; 1967-1968 ; University of Toronto Quarterly Volume 37 ; 37 >
+      au < testing ; 1968-1969 ; University of Toronto Quarterly Volume 38 ; 38 >
+      au < testing ; 1969-1970 ; University of Toronto Quarterly Volume 39 ; 39 >
       au < doesNotExist ; 1970-1971 ; University of Toronto Quarterly Volume 40 ; 40 >
       au < manifest ; 1971-1972 ; University of Toronto Quarterly Volume 41 ; 41 >
       au < manifest ; 1972-1973 ; University of Toronto Quarterly Volume 42 ; 42 >
