@@ -1,16 +1,18 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>test only</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.elsevier.ClockssElsevierDTD5SourcePlugin</string>
-  </entry>       
+  </entry>
+      <!-- this one masquerades as a book series, not a journal -->
+      <string>1,"^%s%d/CLKS0000000000916([A-Z]\.tar)", base_url, year</string>
   <entry>
     <string>plugin_version</string>
     <string>25</string>
-  </entry>      
+  </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
