@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,10 +35,10 @@ package org.lockss.plugin.base;
 import java.io.*;
 import java.net.*;
 import java.util.*;
-import java.util.regex.*;
 
 import org.lockss.util.*;
 import org.lockss.daemon.*;
+import org.lockss.daemon.AuParamType.InvalidFormatException;
 import org.lockss.plugin.*;
 
 /**
@@ -61,7 +61,8 @@ import org.lockss.plugin.*;
  * </dl>  
  */
 public class BaseAuParamFunctor implements AuParamFunctor {
-  static Logger log = Logger.getLogger("BaseAuParamFunctor");
+  
+  private static final Logger log = Logger.getLogger(BaseAuParamFunctor.class);
 
   public static final AuParamFunctor SINGLETON = new BaseAuParamFunctor();
 
@@ -89,12 +90,22 @@ public class BaseAuParamFunctor implements AuParamFunctor {
 	return URLEncoder.encode((String)arg, URL_ENCODE_CHARSET);
       } else if (fn.equals("url_decode")) {
 	return URLDecoder.decode((String)arg, URL_ENCODE_CHARSET);
+      } else if (fn.equals("range_min")) { // added in 1.70
+        return ((Vector)AuParamType.Range.parse((String)arg)).firstElement();
+      } else if (fn.equals("range_max")) { // added in 1.70
+        return ((Vector)AuParamType.Range.parse((String)arg)).lastElement();
+      } else if (fn.equals("num_range_min")) { // added in 1.70
+        return ((Vector)AuParamType.NumRange.parse((String)arg)).firstElement();
+      } else if (fn.equals("num_range_max")) { // added in 1.70
+        return ((Vector)AuParamType.NumRange.parse((String)arg)).lastElement();
       }
       throw new PluginException.InvalidDefinition("Undefined function: " + fn);
     } catch (ClassCastException e) {
       throw new PluginException.BehaviorException("Illegal arg type", e);
     } catch (MalformedURLException e) {
       throw new PluginException.BehaviorException("Malformed fn arg", e);
+    } catch (InvalidFormatException ife) {
+      throw new PluginException.BehaviorException("Invalid format", ife);
     } catch (UnsupportedEncodingException e) {
       throw new PluginException.BehaviorException("Unsupported charset (shouldn't happen)", e);
     }
@@ -107,8 +118,14 @@ public class BaseAuParamFunctor implements AuParamFunctor {
 	"add_www", "del_www",
 	"to_http", "to_https",
 	"url_encode", "url_decode",
+	"range_min", "range_max",
       }) {
       fnTypes.put(x, AuParamType.String);
+    }
+    for (String x : new String[] {
+        "num_range_min", "num_range_max",
+      }) {
+      fnTypes.put(x, AuParamType.Long);
     }
   };
 

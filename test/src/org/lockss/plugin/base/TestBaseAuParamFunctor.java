@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,17 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.base;
 
-import java.io.*;
-import java.util.*;
-import org.lockss.app.*;
-import org.lockss.config.*;
-import org.lockss.config.Tdb.TdbException;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.ArchivalUnit.ConfigurationException;
-import org.lockss.extractor.*;
-import org.lockss.util.*;
 
 public class TestBaseAuParamFunctor extends LockssTestCase {
 
@@ -87,13 +79,27 @@ public class TestBaseAuParamFunctor extends LockssTestCase {
 		 fn.apply(null, "url_decode",
 			  "http%3A%2F%2Ffoo.bar%2Fpath%3Fa%3Dv%26a2%3Dv2",
 			  AuParamType.String));
+    
+    assertEquals("aaa",
+                 fn.apply(null, "range_min", "aaa-zzz", AuParamType.String));
+    assertEquals("zzz",
+                 fn.apply(null, "range_max", "aaa-zzz", AuParamType.String));
+
+    assertEquals(Long.valueOf(123L),
+                 fn.apply(null, "num_range_min", "123-456", AuParamType.Long));
+    assertEquals(Long.valueOf(456L),
+                 fn.apply(null, "num_range_max", "123-456", AuParamType.Long));
   }
 
   AuParamType fntype(String name) throws PluginException {
     return fn.type(null, name);
   }
 
+  /**
+   * Also tests the exact number and names of all functors
+   */
   public void testType() throws PluginException {
+    assertEquals(12, BaseAuParamFunctor.fnTypes.size());
     assertEquals(null, fntype("no_fn"));
     assertEquals(AuParamType.String, fntype("url_host"));
     assertEquals(AuParamType.String, fntype("url_path"));
@@ -103,5 +109,9 @@ public class TestBaseAuParamFunctor extends LockssTestCase {
     assertEquals(AuParamType.String, fntype("to_https"));
     assertEquals(AuParamType.String, fntype("url_encode"));
     assertEquals(AuParamType.String, fntype("url_decode"));
+    assertEquals(AuParamType.String, fntype("range_min"));
+    assertEquals(AuParamType.String, fntype("range_max"));
+    assertEquals(AuParamType.Long, fntype("num_range_min"));
+    assertEquals(AuParamType.Long, fntype("num_range_max"));
   }
 }
