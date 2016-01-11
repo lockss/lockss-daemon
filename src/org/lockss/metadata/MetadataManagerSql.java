@@ -1413,6 +1413,52 @@ public class MetadataManagerSql {
       + " and " + DOI_TABLE + "." + DOI_COLUMN + " is null"
       + " order by \"col7\", \"col6\", \"col5\", \"col3\", \"col1\"";
 
+  // Query to retrieve all the non-parent metadata items that have no Access
+  // URL.
+  private static final String GET_NO_ACCESS_URL_ITEMS_QUERY = "select "
+      + "min1." + NAME_COLUMN + " as \"col1\""
+      + ", mit1." + TYPE_NAME_COLUMN + " as \"col2\""
+      + ", min2." + NAME_COLUMN + " as \"col3\""
+      + ", mit2." + TYPE_NAME_COLUMN + " as \"col4\""
+      + ", au." + AU_KEY_COLUMN + " as \"col5\""
+      + ", pl." + PLUGIN_ID_COLUMN + " as \"col6\""
+      + ", pr." + PUBLISHER_NAME_COLUMN + " as \"col7\""
+      + " from " + MD_ITEM_TYPE_TABLE + " mit1"
+      + ", " + MD_ITEM_TYPE_TABLE + " mit2"
+      + ", " + AU_TABLE
+      + ", " + PLUGIN_TABLE + " pl"
+      + ", " + AU_MD_TABLE + " am"
+      + ", " + PUBLICATION_TABLE + " pn"
+      + ", " + PUBLISHER_TABLE + " pr"
+      + ", " + MD_ITEM_TABLE + " mi1"
+      + " left outer join " + URL_TABLE
+      + " on mi1." + MD_ITEM_SEQ_COLUMN
+      + " = " + URL_TABLE + "." + MD_ITEM_SEQ_COLUMN
+      + " and " + URL_TABLE + "." + FEATURE_COLUMN
+      + " = '" + MetadataManager.ACCESS_URL_FEATURE + "'"
+      + " left outer join " + MD_ITEM_NAME_TABLE + " min1"
+      + " on mi1." + MD_ITEM_SEQ_COLUMN + " = min1." + MD_ITEM_SEQ_COLUMN
+      + " and min1." + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'"
+      + ", " + MD_ITEM_TABLE + " mi2"
+      + " left outer join " + MD_ITEM_NAME_TABLE + " min2"
+      + " on mi2." + MD_ITEM_SEQ_COLUMN + " = min2." + MD_ITEM_SEQ_COLUMN
+      + " and min2." + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'"
+      + " where mi1." + PARENT_SEQ_COLUMN + " = mi2." + MD_ITEM_SEQ_COLUMN
+      + " and mit1." + MD_ITEM_TYPE_SEQ_COLUMN
+      + " = mi1." + MD_ITEM_TYPE_SEQ_COLUMN
+      + " and mit2." + MD_ITEM_TYPE_SEQ_COLUMN
+      + " = mi2." + MD_ITEM_TYPE_SEQ_COLUMN
+      + " and mi1." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
+      + " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
+      + " and au." + PLUGIN_SEQ_COLUMN + " = pl." + PLUGIN_SEQ_COLUMN
+      + " and mi2." + MD_ITEM_SEQ_COLUMN + " = pn." + MD_ITEM_SEQ_COLUMN
+      + " and pn." + PUBLISHER_SEQ_COLUMN + " = pr." + PUBLISHER_SEQ_COLUMN
+      + " and (mit1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 3"
+      + " or mit1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 5"
+      + " or mit1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 6)"
+      + " and " + URL_TABLE + "." + FEATURE_COLUMN + " is null"
+      + " order by \"col7\", \"col6\", \"col5\", \"col3\", \"col1\"";
+
   private DbManager dbManager;
   private MetadataManager metadataManager;
 
@@ -6417,5 +6463,119 @@ public class MetadataManagerSql {
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "noDoiItems.size() = " + noDoiItems.size());
     return noDoiItems;
+  }
+
+  /**
+   * Provides the non-parent metadata items in the database that have no Access
+   * URL.
+   * 
+   * @return a Collection<Map<String, String>> with the non-parent metadata
+   *         items that have no Access URL sorted by publisher, parent type,
+   *         parent title and item type.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Collection<Map<String, String>> getNoAccessUrlItems() throws DbException {
+    final String DEBUG_HEADER = "getNoAccessUrlItems(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Collection<Map<String, String>> noAccessUrlItems = null;
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Get the non-parent metadata items in the database that have no Access
+      // URL.
+      noAccessUrlItems = getNoAccessUrlItems(conn);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER
+	+ "noAccessUrlItems.size() = " + noAccessUrlItems.size());
+    return noAccessUrlItems;
+  }
+
+  /**
+   * Provides the non-parent metadata items in the database that have no Access
+   * URL.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a Collection<Map<String, String>> with the non-parent metadata
+   *         items that have no Access URL sorted by publisher, parent type,
+   *         parent title and item type.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private Collection<Map<String, String>> getNoAccessUrlItems(Connection conn)
+      throws DbException {
+    final String DEBUG_HEADER = "getNoAccessUrlItems(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Collection<Map<String, String>> noAccessUrlItems =
+	new ArrayList<Map<String, String>>();
+
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+
+    try {
+      stmt = dbManager.prepareStatement(conn, GET_NO_ACCESS_URL_ITEMS_QUERY);
+      resultSet = dbManager.executeQuery(stmt);
+
+      // Loop through the non-parent items with no Access URL. 
+      while (resultSet.next()) {
+	Map<String, String> noAccessUrlItem = new HashMap<String, String>();
+
+	String col1 = resultSet.getString("col1");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "col1 = " + col1);
+
+	noAccessUrlItem.put("col1", col1);
+
+	String col2 = resultSet.getString("col2");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "col2 = " + col2);
+
+	noAccessUrlItem.put("col2", col2);
+
+	String col3 = resultSet.getString("col3");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "col3 = " + col3);
+
+	noAccessUrlItem.put("col3", col3);
+
+	String col4 = resultSet.getString("col4");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "col4 = " + col4);
+
+	noAccessUrlItem.put("col4", col4);
+
+	String col5 = resultSet.getString("col5");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "col5 = " + col5);
+
+	noAccessUrlItem.put("col5", col5);
+
+	String col6 = resultSet.getString("col6");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "col6 = " + col6);
+
+	noAccessUrlItem.put("col6", col6);
+
+	String col7 = resultSet.getString("col7");
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "col7 = " + col7);
+
+	noAccessUrlItem.put("col7", col7);
+
+	noAccessUrlItems.add(noAccessUrlItem);
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get the non-parent items with no Access URL";
+      log.error(message, sqle);
+      log.error("SQL = '" + GET_NO_ACCESS_URL_ITEMS_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "noAccessUrlItems.size() = "
+	+ noAccessUrlItems.size());
+    return noAccessUrlItems;
   }
 }

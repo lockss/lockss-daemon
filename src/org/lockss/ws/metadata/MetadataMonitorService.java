@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataMonitorService.java 44384 2015-10-02 21:50:01Z fergaloy-sf $
+ * $Id: MetadataMonitorService.java 45604 2016-01-08 21:26:08Z fergaloy-sf $
  */
 
 /*
@@ -252,4 +252,17 @@ public interface MetadataMonitorService {
    */
   @WebMethod
   List<MetadataItemWsResult> getNoDoiItems() throws LockssWebServicesFault;
+
+  /**
+   * Provides the non-parent metadata items in the database that have no Access
+   * URL.
+   * 
+   * @return a List<MetadataItemWsResult> with the non-parent metadata items
+   *         that have no Access URL sorted sorted by publisher, Archival Unit,
+   *         parent type, parent name, item type and item name.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<MetadataItemWsResult> getNoAccessUrlItems()
+      throws LockssWebServicesFault;
 }
