@@ -12,20 +12,6 @@
   implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_eisbn] ; name >  
 
   {
-  
-    title <
-      name = Society of Exploration Geophysicists Books ;
-      type = bookSeries
-    >
-
-    au < crawling ; exists ; 2012 ; 978-1-56080-329-4 ; 978-1-56080-330-0 ; 9781560803300 ; Engineering Seismology with Applications to Geotechnical Engineering >
-    au < crawling ; exists ; 2013 ; 978-1-56080-313-3 ; 978-1-56080-314-0 ; 9781560803140 ; Remote Sensing in Action >
-    au < crawling ; exists ; 2014 ; 978-1-56080-319-5 ; 978-1-56080-320-1 ; 9781560803201 ; AVO >
-    au < crawling ; exists ; 2014 ; 978-0-643-09809-1 ; 978-1-56080-321-8 ; 9781560803218 ; Geological Interpretation of Aeromagnetic Data >
-      
-  }
-
-  {
 
     title <
       name = Course Notes Series ;
@@ -149,8 +135,8 @@
     au < manifest ; exists ; 2009 ; ; 9781560801603 ; 9781560801603 ; The Misadventures of Interpreter Sam  (9781560801603) >
     au < manifest ; exists ; 2011 ; ; 9781560802938 ; 9781560802938 ; First Steps in Seismic Interpretation (9781560802938) >
     au < crawling ; exists ; 2012 ; ; 9781560803058 ; 9781560803058 ; Fundamentals of Gravity Exploration (9781560803058) >
-    au < manifest ; exists ; 2013 ; ; 9781560803218 ; 9781560803218 ; Geological Interpretation of Aeromagnetic Data (9781560803218) >
-    au < manifest ; exists ; 2014 ; ; 9781560803140 ; 9781560803140 ; Remote Sensing in Action: The Curious Case of Sherlock Holmes and Albert Einstein  (9781560803140) >
+    au < crawling ; exists ; 2013 ; ; 9781560803218 ; 9781560803218 ; Geological Interpretation of Aeromagnetic Data (9781560803218) >
+    au < crawling ; exists ; 2014 ; ; 9781560803140 ; 9781560803140 ; Remote Sensing in Action: The Curious Case of Sherlock Holmes and Albert Einstein  (9781560803140) >
 
   }
 
@@ -221,8 +207,8 @@
     au < manifest ; exists ; 2006 ; ; 9781560801689 ; 9781560801689 ; 3D Seismic Imaging  (9781560801689) >
     au < manifest ; exists ; 2010 ; ; 9781560802174 ; 9781560802174 ; Methods and Applications in Reservoir Geophysics  (9781560802174) >
     au < manifest ; exists ; 2011 ; ; 9781560802884 ; 9781560802884 ; Interpretation of Three-Dimensional Seismic Data (9781560802884) >
-    au < manifest ; exists ; 2014 ; ; 9781560803201 ; 9781560803201 ; AVO (9781560803201) >
-    au < manifest ; exists ; 2015 ; ; 9781560803300 ; 9781560803300 ; Engineering Seismology with Applications to Geotechnical Engineering (9781560803300) >
+    au < crawling ; exists ; 2014 ; ; 9781560803201 ; 9781560803201 ; AVO (9781560803201) >
+    au < crawling ; exists ; 2015 ; ; 9781560803300 ; 9781560803300 ; Engineering Seismology with Applications to Geotechnical Engineering (9781560803300) >
 
   }
 
