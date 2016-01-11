@@ -1,37 +1,15 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>test only</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.elsevier.ClockssElsevierDTD5SourcePlugin</string>
   </entry>       
-<!--  REMOVE DEBUGGING ONLY...leave in until after review  -->
-   <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>4,"^%s", base_url</string>
-      <string>2,"^%s%d/.*;O=[AD]$", base_url, year</string>
-  <!-- greatly limit the content for limited debugging -->
-      <string>1,"^%s%d/CLKS0000000000254([A-Z]\.tar)", base_url, year</string>
-      <string>1,"^%s%d/CLKS0000000000397([A-Z]\.tar)", base_url, year</string>
-      <string>1,"^%s%d/CLKS0000000000404([A-Z]\.tar)", base_url, year</string>
-      <!-- this one masquerades as a book series, not a journal --> 
-      <string>1,"^%s%d/CLKS0000000000916([A-Z]\.tar)", base_url, year</string>
-  <!--  test the books samples off content5 -->
-      <string>1,"^%s%d/CLKSB000000000042([A-Z]\.tar)", base_url, year</string>
-      <string>1,"^%s%d/CLKSB000000000043([A-Z]\.tar)", base_url, year</string>
-      <string>1,"^%s%d/CLKSB000000000044([A-Z]\.tar)", base_url, year</string>
-  <!--  this one is for the local test files -->
-      <string>1,"^%s%d/CLKS003", base_url, year</string>
-      <string>1,"^%s%d/CLKSB001", base_url, year</string>
-    </list>
-  </entry>
-<!-- END OF DEBUGGIN ONLY -->
   <entry>
     <string>plugin_version</string>
-    <string>24</string>
+    <string>25</string>
   </entry>      
   <entry>
     <string>plugin_feature_version_map</string>
