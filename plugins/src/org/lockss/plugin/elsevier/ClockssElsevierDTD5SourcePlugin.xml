@@ -1,12 +1,12 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>test only</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.elsevier.ClockssElsevierDTD5SourcePlugin</string>
-  </entry>       
+  </entry>
 <!--  REMOVE DEBUGGING ONLY...leave in until after review  -->
    <entry>
     <string>au_crawlrules</string>
@@ -17,6 +17,8 @@
       <string>1,"^%s%d/CLKS0000000000254([A-Z]\.tar)", base_url, year</string>
       <string>1,"^%s%d/CLKS0000000000397([A-Z]\.tar)", base_url, year</string>
       <string>1,"^%s%d/CLKS0000000000404([A-Z]\.tar)", base_url, year</string>
+      <!-- this one masquerades as a book series, not a journal -->
+      <string>1,"^%s%d/CLKS0000000000916([A-Z]\.tar)", base_url, year</string>
   <!--  test the books samples off content5 -->
       <string>1,"^%s%d/CLKSB000000000042([A-Z]\.tar)", base_url, year</string>
       <string>1,"^%s%d/CLKSB000000000043([A-Z]\.tar)", base_url, year</string>
@@ -29,14 +31,14 @@
 <!-- END OF DEBUGGIN ONLY -->
   <entry>
     <string>plugin_version</string>
-    <string>23</string>
-  </entry>      
+    <string>24</string>
+  </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>16</string>
+        <string>17</string>
       </entry>
       <entry>
         <string>Poll</string>
