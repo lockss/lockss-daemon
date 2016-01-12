@@ -38,7 +38,7 @@
      au < finished ; crawling ; 2012 ; Algebraic & Geometric Topology Volume 12 ; 12 ; 2012 >
      au < finished ; finished ; 2013 ; Algebraic & Geometric Topology Volume 13 ; 13 ; 2013 >
      au < finished ; crawling ; 2014 ; Algebraic & Geometric Topology Volume 14 ; 14 ; 2014 >
-     au < ready ; exists ; 2015 ; Algebraic & Geometric Topology Volume 15 ; 15 ; 2015 >
+     au < crawling ; exists ; 2015 ; Algebraic & Geometric Topology Volume 15 ; 15 ; 2015 >
      au < expected ; exists ; 2016 ; Algebraic & Geometric Topology Volume 16 ; 16 ; 2016 >
      
   }
@@ -62,7 +62,7 @@
      au < finished ; finished ; 2012 ; Algebra & Number Theory Volume 6 ; 6 ; 2012 >
      au < finished ; finished ; 2013 ; Algebra & Number Theory Volume 7 ; 7 ; 2013 >
      au < deepCrawl ; exists ; 2014 ; Algebra & Number Theory Volume 8 ; 8 ; 2014 >
-     au < ready ; exists ; 2015 ; Algebra & Number Theory Volume 9 ; 9 ; 2015 >
+     au < crawling ; exists ; 2015 ; Algebra & Number Theory Volume 9 ; 9 ; 2015 >
      au < expected ; exists ; 2016 ; Algebra & Number Theory Volume 10 ; 10 ; 2016 >
  
   }
@@ -84,7 +84,7 @@
      au < finished ; finished ; 2012 ; Analysis & PDE Volume 5 ; 5 ; 2012 >
      au < finished ; finished ; 2013 ; Analysis & PDE Volume 6 ; 6 ; 2013 >
      au < finished ; finished ; 2014 ; Analysis & PDE Volume 7 ; 7 ; 2014 >
-     au < ready ; exists ; 2015 ; Analysis & PDE Volume 8 ; 8 ; 2015 >
+     au < crawling ; exists ; 2015 ; Analysis & PDE Volume 8 ; 8 ; 2015 >
      au < expected ; exists ; 2016 ; Analysis & PDE Volume 9 ; 9 ; 2016 >
 
   }
@@ -108,7 +108,7 @@
      au < finished ; finished ; 2012 ; Communications in Applied Mathematics and Computational Science Volume 7 ; 7 ; 2012 >
      au < finished ; finished ; 2013 ; Communications in Applied Mathematics and Computational Science Volume 8 ; 8 ; 2013 >
      au < finished ; crawling ; 2014 ; Communications in Applied Mathematics and Computational Science Volume 9 ; 9 ; 2014 >
-     au < ready ; exists ; 2015 ; Communications in Applied Mathematics and Computational Science Volume 10 ; 10 ; 2015 >
+     au < crawling ; exists ; 2015 ; Communications in Applied Mathematics and Computational Science Volume 10 ; 10 ; 2015 >
      au < expected ; exists ; 2016 ; Communications in Applied Mathematics and Computational Science Volume 11 ; 11 ; 2016 >
   
   }
@@ -141,7 +141,7 @@
      au < finished ; finished ; 2012 ; Geometric Topology Volume 16 ; 16 ; 2012 >
      au < crawling ; exists ; 2013 ; Geometric Topology Volume 17 ; 17 ; 2013 >
      au < deepCrawl ; exists ; 2014 ; Geometric Topology Volume 18 ; 18 ; 2014 >
-     au < ready ; exists ; 2015 ; Geometric Topology Volume 19 ; 19 ; 2015 >
+     au < crawling ; exists ; 2015 ; Geometric Topology Volume 19 ; 19 ; 2015 >
      au < expected ; exists ; 2016 ; Geometric Topology Volume 20 ; 20 ; 2016 >
  
   }
@@ -186,7 +186,7 @@
      au < finished ; finished ; 2012 ; Journal of Mechanics of Materials and Structures Volume 7 ; 7 ; 2012 >
      au < finished ; finished ; 2013 ; Journal of Mechanics of Materials and Structures Volume 8 ; 8 ; 2013 >
      au < finished ; crawling ; 2014 ; Journal of Mechanics of Materials and Structures Volume 9 ; 9 ; 2014 >
-     au < ready ; exists ; 2015 ; Journal of Mechanics of Materials and Structures Volume 10 ; 10 ; 2015 >
+     au < crawling ; exists ; 2015 ; Journal of Mechanics of Materials and Structures Volume 10 ; 10 ; 2015 >
      au < expected ; exists ; 2016 ; Journal of Mechanics of Materials and Structures Volume 11 ; 11 ; 2016 >
  
    }
@@ -206,7 +206,7 @@
      au < crawling ; exists ; 2012 ; Journal of Software for Algebra and Geometry Volume 4 ; 4 ; 2012 >
      au < finished ; finished ; 2013 ; Journal of Software for Algebra and Geometry Volume 5 ; 5 ; 2013 >
      au < finished ; finished ; 2014 ; Journal of Software for Algebra and Geometry Volume 6 ; 6 ; 2014 >
-     au < ready ; exists ; 2015 ; Journal of Software for Algebra and Geometry Volume 7 ; 7 ; 2015 >
+     au < crawling ; exists ; 2015 ; Journal of Software for Algebra and Geometry Volume 7 ; 7 ; 2015 >
      au < expected ; exists ; 2016 ; Journal of Software for Algebra and Geometry Volume 8 ; 8 ; 2016 >
 
   }
@@ -223,7 +223,7 @@
  
      au < finished ; finished ; 2013 ; Mathematics and Mechanics of Complex Systems Volume 1 ; 1 ; 2013 >
      au < finished ; finished ; 2014 ; Mathematics and Mechanics of Complex Systems Volume 2 ; 2 ; 2014 >
-     au < ready ; exists ; 2015 ; Mathematics and Mechanics of Complex Systems Volume 3 ; 3 ; 2015 >
+     au < crawling ; exists ; 2015 ; Mathematics and Mechanics of Complex Systems Volume 3 ; 3 ; 2015 >
      au < expected ; exists ; 2016 ; Mathematics and Mechanics of Complex Systems Volume 4 ; 4 ; 2016 >
 
   }
