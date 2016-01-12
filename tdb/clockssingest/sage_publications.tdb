@@ -12938,7 +12938,7 @@
       param[base_url] = http://ggm.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2015 ; Gerontology and Geriatric Medicine Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2015 ; Gerontology and Geriatric Medicine Volume 1 ; 1 ; >
       au < expected ; exists ; 2016 ; Gerontology and Geriatric Medicine Volume 2 ; 2 ; >
 
   }
@@ -15320,7 +15320,7 @@
       param[base_url] = http://ijc.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2015 ; Indian Journal of Corporate Governance Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2015 ; Indian Journal of Corporate Governance Volume 8 ; 8 ; >
       au < expected ; exists ; 2016 ; Indian Journal of Corporate Governance Volume 9 ; 9 ; >
 
   }
@@ -29490,7 +29490,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2015 ; Literacy Research: Theory, Method, and Practice Volume 64 ; 64 ; >
+      au < crawling ; exists ; 2015 ; Literacy Research: Theory, Method, and Practice Volume 64 ; 64 ; >
       au < expected ; exists ; 2016 ; Literacy Research: Theory, Method, and Practice Volume 65 ; 65 ; >
 
     }
