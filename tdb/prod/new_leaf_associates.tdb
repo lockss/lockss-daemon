@@ -3,8 +3,8 @@
     name = New Leaf Associates
   >
 
-  plugin = needs.plugin
-  implicit < status ; year ; name ; param[volume] >
+  plugin = org.lockss.plugin.jafscd.JafscdPlugin
+  implicit < status ; year ; name ; param[volume_name] ; param[manifest_id]>
   param[base_url] = http://www.agdevjournal.com/
 
   {
@@ -16,12 +16,12 @@
 
     comment[0] = manifest page is online
     
-    au < exists ; 2010-2011 ; Journal of Agriculture, Food Systems, and Community Development Volume 1 ; 1 >
-    au < exists ; 2011-2012 ; Journal of Agriculture, Food Systems, and Community Development Volume 2 ; 2 >
-    au < exists ; 2012-2013 ; Journal of Agriculture, Food Systems, and Community Development Volume 3 ; 3 >
-    au < exists ; 2013-2014 ; Journal of Agriculture, Food Systems, and Community Development Volume 4 ; 4 >
-    au < exists ; 2014-2015 ; Journal of Agriculture, Food Systems, and Community Development Volume 5 ; 5 >
-    au < expected ; 2015-2016 ; Journal of Agriculture, Food Systems, and Community Development Volume 6 ; 6 >
+    au < exists ; 2010-2011 ; Journal of Agriculture, Food Systems, and Community Development Volume 1 ; 1 ; 285>
+    au < exists ; 2011-2012 ; Journal of Agriculture, Food Systems, and Community Development Volume 2 ; 2 ; 286>
+    au < exists ; 2012-2013 ; Journal of Agriculture, Food Systems, and Community Development Volume 3 ; 3 ; 386>
+    au < exists ; 2013-2014 ; Journal of Agriculture, Food Systems, and Community Development Volume 4 ; 4 ; 481>
+    au < exists ; 2014-2015 ; Journal of Agriculture, Food Systems, and Community Development Volume 5 ; 5 ; 570>
+    au < expected ; 2015-2016 ; Journal of Agriculture, Food Systems, and Community Development Volume 6 ; 6 ; 600>
 
   }
 
