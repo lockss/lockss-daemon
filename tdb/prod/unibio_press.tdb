@@ -1,11 +1,8 @@
 {
 
   publisher <
-    name = Unibio Press 
-    
+    name = Herpetological Society of Japan
   >
-  
-  comment[aggregator] = UniBio Press
 
   {
     title <
@@ -16,7 +13,7 @@
     >
 
     {
-
+      provider = Unibio Press
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
@@ -37,6 +34,12 @@
     }
 
   }
+}
+{
+
+  publisher <
+    name = Japan Society of Mammalian Ova Research
+  >
 
   {
     title <
@@ -47,6 +50,7 @@
     >
 
     {
+      provider = Unibio Press
       implicit < status ; year ; name ; param[volume_name] >
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
@@ -67,7 +71,13 @@
     }
 
   }
-  
+}
+{
+
+  publisher <
+    name = Mammal Society of Japan
+  >
+
   {
     title <
       name = Mammal Study ;
@@ -77,6 +87,7 @@
     >
 
     {
+      provider = Unibio Press
       implicit < status ; year ; name ; param[volume_name] >
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
@@ -98,6 +109,13 @@
 
   }
 
+}
+{
+
+  publisher <
+    name = Ornithological Society of Japan
+  >
+
   {
     title <
       name = Ornithological Science ;
@@ -106,6 +124,7 @@
     >
 
     {
+      provider = Unibio Press
       implicit < status ; year ; name ; param[volume_name] >
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
@@ -126,7 +145,13 @@
     }
     
   }
-  
+}
+{
+
+  publisher <
+    name = Palaeontological Society of Japan
+  >
+
   {
     title <
       name = Paleontological Research ;
@@ -136,6 +161,7 @@
     >
 
     {
+      provider = Unibio Press
       implicit < status ; year ; name ; param[volume_name] >
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
@@ -158,7 +184,13 @@
     }
 
   }
-  
+}
+{
+
+  publisher <
+    name = Zoological Society of Japan
+  >
+
   {
   
     title <
@@ -168,7 +200,7 @@
     >
 
     {
-    
+      provider = Unibio Press
       implicit < status ; year ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
@@ -181,7 +213,7 @@
     }
 
     {
-
+      provider = Unibio Press
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
