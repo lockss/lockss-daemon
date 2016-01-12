@@ -5927,6 +5927,27 @@
   }
 
   {
+
+    title <
+      name = Journal of Healthcare Engineering ;
+      issn = 2040-2295 ;
+      eissn = 2040-2309 ;
+      issnl = 2040-2295
+    >
+
+    param[journal_id] = jhe
+    # transfering from Multi Science
+
+    au < doNotProcess ; exists ; 2010 ; Journal of Healthcare Engineering Volume 1 (2010) ; 2010 ; 1 ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Healthcare Engineering Volume 2 (2011) ; 2011 ; 2 ; >
+    au < doNotProcess ; exists ; 2012 ; Journal of Healthcare Engineering Volume 3 (2012) ; 2012 ; 3 ; >
+    au < doNotProcess ; exists ; 2013 ; Journal of Healthcare Engineering Volume 4 (2013) ; 2013 ; 4 ; >
+    au < doNotProcess ; exists ; 2014 ; Journal of Healthcare Engineering Volume 5 (2014) ; 2014 ; 5 ; >
+    au < doNotProcess ; exists ; 2015 ; Journal of Healthcare Engineering Volume 6 (2015) ; 2015 ; 6 ; >
+
+  }
+
+  {
     title <
       name = Journal of Histology ;
       issn = 2356-7430 ;
