@@ -68,7 +68,7 @@ public class JafscdArticleIteratorFactory implements ArticleIteratorFactory, Art
   }
 
   // Enclose the method that creates the builder to allow a child to do additional processing
-  protected SubTreeArticleIteratorBuilder localBuilderCreator(ArchivalUnit au) { 
+  protected SubTreeArticleIteratorBuilder localBuilderCreator(ArchivalUnit au) {
     return new SubTreeArticleIteratorBuilder(au);
   }
 
@@ -79,4 +79,3 @@ public class JafscdArticleIteratorFactory implements ArticleIteratorFactory, Art
     return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
 }
-

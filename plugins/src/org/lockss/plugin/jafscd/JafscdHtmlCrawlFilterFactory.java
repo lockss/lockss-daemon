@@ -45,8 +45,8 @@ public class JafscdHtmlCrawlFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding) {
     NodeFilter[] filters = new NodeFilter[] {
-    		//Menu and related articles/other isses
-    	     HtmlNodeFilters.tagWithAttribute("div", "class", "A_Left_Column"),
+		//Menu and related articles/other isses
+	     HtmlNodeFilters.tagWithAttribute("div", "class", "A_Left_Column"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
