@@ -1,13 +1,11 @@
 {
 
   publisher <
-    name = Unibio Press ;
+    name = Herpetological Society of Japan ;
     info[contract] = 2013 ;
     info[tester] = 8
     
   >
-  
-  comment[aggregator] = UniBio Press
 
   {
     title <
@@ -19,6 +17,7 @@
 
     {
 
+      provider = Unibio Press
       plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin  
       implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
@@ -35,10 +34,20 @@
       au < crawling ; exists ; 2013 ; Current Herpetology Volume 32 ; 32 >
       au < crawling ; exists ; 2014 ; Current Herpetology Volume 33 ; 33 >
       au < crawling ; exists ; 2015 ; Current Herpetology Volume 34 ; 34 >
+      au < expected ; exists ; 2016 ; Current Herpetology Volume 35 ; 35 >
       
     }
 
   }
+}
+{
+
+  publisher <
+    name = Japan Society of Mammalian Ova Research ;
+    info[contract] = 2013 ;
+    info[tester] = 8
+    
+  >
 
   {
     title <
@@ -49,6 +58,7 @@
     >
 
     {
+      provider = Unibio Press
       implicit < status ; status2 ; year ; name ; param[volume_name] >
       plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
@@ -65,11 +75,21 @@
       au < crawling ; exists ; 2013 ; Journal of Mammalian Ova Research Volume 30 ; 30 >
       au < crawling ; exists ; 2014 ; Journal of Mammalian Ova Research Volume 31 ; 31 >
       au < crawling ; exists ; 2015 ; Journal of Mammalian Ova Research Volume 32 ; 32 >
+      au < expected ; exists ; 2016 ; Journal of Mammalian Ova Research Volume 33 ; 33 >
 
     }
 
   }
-  
+}
+{
+
+  publisher <
+    name = Mammal Society of Japan ;
+    info[contract] = 2013 ;
+    info[tester] = 8
+    
+  >
+
   {
     title <
       name = Mammal Study ;
@@ -79,6 +99,7 @@
     >
 
     {
+      provider = Unibio Press
       implicit < status ; status2 ; year ; name ; param[volume_name] >
       plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
@@ -95,10 +116,20 @@
       au < crawling ; exists ; 2013 ; Mammal Study Volume 38 ; 38 >
       au < crawling ; exists ; 2014 ; Mammal Study Volume 39 ; 39 >
       au < crawling ; exists ; 2015 ; Mammal Study Volume 40 ; 40 >
+      au < expected ; exists ; 2016 ; Mammal Study Volume 41 ; 41 >
 
     }
 
   }
+}
+{
+
+  publisher <
+    name = Ornithological Society of Japan ;
+    info[contract] = 2013 ;
+    info[tester] = 8
+    
+  >
 
   {
     title <
@@ -108,6 +139,7 @@
     >
 
     {
+      provider = Unibio Press
       implicit < status ; status2 ; year ; name ; param[volume_name] >
       plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
@@ -124,11 +156,21 @@
       au < crawling ; exists ; 2013 ; Ornithological Science Volume 12 ; 12 >
       au < crawling ; exists ; 2014 ; Ornithological Science Volume 13 ; 13 >
       au < crawling ; exists ; 2015 ; Ornithological Science Volume 14 ; 14 >
+      au < expected ; exists ; 2016 ; Ornithological Science Volume 15 ; 15 >
 
     }
     
   }
-  
+}
+{
+
+  publisher <
+    name = Palaeontological Society of Japan ;
+    info[contract] = 2013 ;
+    info[tester] = 8
+    
+  >
+
   {
     title <
       name = Paleontological Research ;
@@ -138,6 +180,7 @@
     >
 
     {
+      provider = Unibio Press
       implicit < status ; status2 ; year ; name ; param[volume_name] >
       plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
@@ -156,10 +199,21 @@
       au < crawling ; exists ; 2013 ; Paleontological Research Volume 17 ; 17 >
       au < crawling ; exists ; 2014 ; Paleontological Research Volume 18 ; 18 >
       au < crawling ; exists ; 2015 ; Paleontological Research Volume 19 ; 19 >
+      au < expected ; exists ; 2016 ; Paleontological Research Volume 20 ; 20 >
+
     }
 
   }
-  
+}
+{
+
+  publisher <
+    name = Zoological Society of Japan ;
+    info[contract] = 2013 ;
+    info[tester] = 8
+    
+  >
+
   {
     title <
       name = Zoological Science ;
@@ -168,7 +222,7 @@
     >
 
     {
-
+      provider = Unibio Press
       plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin  
       implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
@@ -195,6 +249,7 @@
       au < crawling ; exists ; 2013 ; Zoological Science Volume 30 ; 30 >
       au < crawling ; exists ; 2014 ; Zoological Science Volume 31 ; 31 >
       au < crawling ; exists ; 2015 ; Zoological Science Volume 32 ; 32 >
+      au < expected ; exists ; 2016 ; Zoological Science Volume 33 ; 33 >
 
     }
 
