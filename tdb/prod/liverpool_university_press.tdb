@@ -180,7 +180,7 @@
     au < doNotProcess ; 2009 ; Comma Volume 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Comma Volume 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Comma Volume 2011 ; 2011 >
-    au < exists ; 2012 ; Comma Volume 2012 ; 2012 >
+    au < manifest ; 2012 ; Comma Volume 2012 ; 2012 >
 
   }
 
@@ -278,7 +278,7 @@
 
     param[journal_id] = extr
 
-    au < exists ; 2010 ; Extrapolation Volume 51 ; 51 >
+    au < manifest ; 2010 ; Extrapolation Volume 51 ; 51 >
     au < doNotProcess ; 2011 ; Extrapolation Volume 52 ; 52 >
     au < doNotProcess ; 2012 ; Extrapolation Volume 53 ; 53 >
     au < manifest ; 2013 ; Extrapolation Volume 54 ; 54 >
@@ -375,7 +375,7 @@
     au < manifest ; 2013 ; International Development Planning Review Volume 35 ; 35 >
     au < manifest ; 2014 ; International Development Planning Review Volume 36 ; 36 >
     au < manifest ; 2015 ; International Development Planning Review Volume 37 ; 37 >
-    au < exists ; 2016 ; International Development Planning Review Volume 38 ; 38 >
+    au < manifest ; 2016 ; International Development Planning Review Volume 38 ; 38 >
 
   }
 
@@ -459,15 +459,15 @@
 
     param[journal_id] = mb
 
-    au < exists ; 2008 ; Modern Believing Volume 49 ; 49 >
-    au < exists ; 2009 ; Modern Believing Volume 50 ; 50 >
+    au < manifest ; 2008 ; Modern Believing Volume 49 ; 49 >
+    au < manifest ; 2009 ; Modern Believing Volume 50 ; 50 >
     au < manifest ; 2010 ; Modern Believing Volume 51 ; 51 >
     au < ready ; 2011 ; Modern Believing Volume 52 ; 52 >
     au < manifest ; 2012 ; Modern Believing Volume 53 ; 53 >
     au < manifest ; 2013 ; Modern Believing Volume 54 ; 54 >
     au < manifest ; 2014 ; Modern Believing Volume 55 ; 55 >
     au < manifest ; 2015 ; Modern Believing Volume 56 ; 56 >
-    au < expected ; 2016 ; Modern Believing Volume 57 ; 57 >
+    au < manifest ; 2016 ; Modern Believing Volume 57 ; 57 >
 
   }
 
@@ -524,7 +524,7 @@
     au < ready ; 2012 ; Newsletter of the Gypsy Lore Society Volume 35 ; 35 >
     au < ready ; 2013 ; Newsletter of the Gypsy Lore Society Volume 36 ; 36 >
     au < manifest ; 2014 ; Newsletter of the Gypsy Lore Society Volume 37 ; 37 >
-    au < expected ; 2015 ; Newsletter of the Gypsy Lore Society Volume 38 ; 38 >
+    au < manifest ; 2015 ; Newsletter of the Gypsy Lore Society Volume 38 ; 38 >
 
   }
 

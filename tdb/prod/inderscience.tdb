@@ -208,7 +208,7 @@
       au < manifest ; 2013 ; European Journal of International Management Volume 7 ; 7 >
       au < manifest ; 2014 ; European Journal of International Management Volume 8 ; 8 >
       au < manifest ; 2015 ; European Journal of International Management Volume 9 ; 9 >
-      au < expected ; 2016 ; European Journal of International Management Volume 10 ; 10 >
+      au < manifest ; 2016 ; European Journal of International Management Volume 10 ; 10 >
 
     }
 
@@ -240,7 +240,7 @@
       au < manifest ; 2013 ; Global Business and Economics Review Volume 15 ; 15 >
       au < ready ; 2014 ; Global Business and Economics Review Volume 16 ; 16 >
       au < manifest ; 2015 ; Global Business and Economics Review Volume 17 ; 17 >
-      au < expected ; 2016 ; Global Business and Economics Review Volume 18 ; 18 >
+      au < manifest ; 2016 ; Global Business and Economics Review Volume 18 ; 18 >
 
     }
 
@@ -308,7 +308,7 @@
       au < manifest ; 2013 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 9 ; 9 >
       au < released ; 2014 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 10 ; 10 >
       au < manifest ; 2015 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 11 ; 11 >
-      au < expected ; 2016 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 12 ; 12 >
+      au < manifest ; 2016 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 12 ; 12 >
 
     }
 
@@ -954,9 +954,9 @@
 
       param[journal_id] = ijbdi
 
-      au < exists ; 2014 ; International Journal of Big Data Intelligence Volume 1 ; 1 >
-      au < exists ; 2015 ; International Journal of Big Data Intelligence Volume 2 ; 2 >
-      au < expected ; 2016 ; International Journal of Big Data Intelligence Volume 3 ; 3 >
+      au < manifest ; 2014 ; International Journal of Big Data Intelligence Volume 1 ; 1 >
+      au < manifest ; 2015 ; International Journal of Big Data Intelligence Volume 2 ; 2 >
+      au < manifest ; 2016 ; International Journal of Big Data Intelligence Volume 3 ; 3 >
 
     }
 
@@ -1164,7 +1164,7 @@
       au < manifest ; 2013 ; International Journal of Business and Emerging Markets Volume 5 ; 5 >
       au < released ; 2014 ; International Journal of Business and Emerging Markets Volume 6 ; 6 >
       au < manifest ; 2015 ; International Journal of Business and Emerging Markets Volume 7 ; 7 >
-      au < expected ; 2016 ; International Journal of Business and Emerging Markets Volume 8 ; 8 >
+      au < manifest ; 2016 ; International Journal of Business and Emerging Markets Volume 8 ; 8 >
 
     }
 
@@ -1194,7 +1194,7 @@
       au < ready ; 2014 ; International Journal of Business and Globalisation Volume 13 ; 13 >
       au < manifest ; 2015 ; International Journal of Business and Globalisation Volume 14 ; 14 >
       au < manifest ; 2015 ; International Journal of Business and Globalisation Volume 15 ; 15 >
-      au < expected ; 2016 ; International Journal of Business and Globalisation Volume 16 ; 16 >
+      au < manifest ; 2016 ; International Journal of Business and Globalisation Volume 16 ; 16 >
 
     }
 
@@ -1218,7 +1218,7 @@
       au < manifest ; 2013 ; International Journal of Business and Systems Research Volume 7 ; 7 >
       au < ready ; 2014 ; International Journal of Business and Systems Research Volume 8 ; 8 >
       au < manifest ; 2015 ; International Journal of Business and Systems Research Volume 9 ; 9 >
-      au < expected ; 2016 ; International Journal of Business and Systems Research Volume 10 ; 10 >
+      au < manifest ; 2016 ; International Journal of Business and Systems Research Volume 10 ; 10 >
 
     }
 
@@ -1303,7 +1303,7 @@
       au < manifest ; 2013 ; International Journal of Business Excellence Volume 6 ; 6 >
       au < released ; 2014 ; International Journal of Business Excellence Volume 7 ; 7 >
       au < manifest ; 2015 ; International Journal of Business Excellence Volume 8 ; 8 >
-      au < expected ; 2016 ; International Journal of Business Excellence Volume 9 ; 9 >
+      au < manifest ; 2016 ; International Journal of Business Excellence Volume 9 ; 9 >
 
     }
 
@@ -1378,7 +1378,7 @@
       au < manifest ; 2015 ; International Journal of Business Information Systems Volume 18 ; 18 >
       au < manifest ; 2015 ; International Journal of Business Information Systems Volume 19 ; 19 >
       au < manifest ; 2015 ; International Journal of Business Information Systems Volume 20 ; 20 >
-      au < expected ; 2016 ; International Journal of Business Information Systems Volume 21 ; 21 >
+      au < manifest ; 2016 ; International Journal of Business Information Systems Volume 21 ; 21 >
 
     }
 
@@ -1402,7 +1402,7 @@
       au < manifest ; 2013 ; International Journal of Business Innovation and Research Volume 7 ; 7 >
       au < released ; 2014 ; International Journal of Business Innovation and Research Volume 8 ; 8 >
       au < manifest ; 2015 ; International Journal of Business Innovation and Research Volume 9 ; 9 >
-      au < expected ; 2016 ; International Journal of Business Innovation and Research Volume 10 ; 10 >
+      au < manifest ; 2016 ; International Journal of Business Innovation and Research Volume 10 ; 10 >
 
     }
 
@@ -1480,7 +1480,7 @@
       au < manifest ; 2013 ; International Journal of Business Performance Management Volume 14 ; 14 >
       au < ready ; 2014 ; International Journal of Business Performance Management Volume 15 ; 15 >
       au < manifest ; 2015 ; International Journal of Business Performance Management Volume 16 ; 16 >
-      au < expected ; 2016 ; International Journal of Business Performance Management Volume 17 ; 17 >
+      au < manifest ; 2016 ; International Journal of Business Performance Management Volume 17 ; 17 >
 
     }
 
@@ -1649,7 +1649,7 @@
       au < released ; 2014 ; International Journal of Communication Networks and Distributed Systems Volume 13 ; 13 >
       au < manifest ; 2015 ; International Journal of Communication Networks and Distributed Systems Volume 14 ; 14 >
       au < manifest ; 2015 ; International Journal of Communication Networks and Distributed Systems Volume 15 ; 15 >
-      au < expected ; 2016 ; International Journal of Communication Networks and Distributed Systems Volume 16 ; 16 >
+      au < manifest ; 2016 ; International Journal of Communication Networks and Distributed Systems Volume 16 ; 16 >
 
     }
 
@@ -1742,7 +1742,7 @@
       au < manifest ; 2013 ; International Journal of Computational Economics and Econometrics Volume 3 ; 3 >
       au < ready ; 2014 ; International Journal of Computational Economics and Econometrics Volume 4 ; 4 >
       au < manifest ; 2015 ; International Journal of Computational Economics and Econometrics Volume 5 ; 5 >
-      au < expected ; 2016 ; International Journal of Computational Economics and Econometrics Volume 6 ; 6 >
+      au < manifest ; 2016 ; International Journal of Computational Economics and Econometrics Volume 6 ; 6 >
 
     }
 
@@ -1854,7 +1854,7 @@
       au < manifest ; 2013 ; International Journal of Computational Science and Engineering Volume 8 ; 8 >
       au < released ; 2014 ; International Journal of Computational Science and Engineering Volume 9 ; 9 >
       au < manifest ; 2015 ; International Journal of Computational Science and Engineering Volume 10 ; 10 >
-      au < expected ; 2016 ; International Journal of Computational Science and Engineering Volume 11 ; 11 >
+      au < manifest ; 2016 ; International Journal of Computational Science and Engineering Volume 11 ; 11 >
 
     }
 
@@ -1891,7 +1891,7 @@
       au < doNotProcess ; 2012-2013 ; International Journal of Computational Vision and Robotics Volume 3 ; 3 >
       au < released ; 2014 ; International Journal of Computational Vision and Robotics Volume 4 ; 4 >
       au < manifest ; 2015 ; International Journal of Computational Vision and Robotics Volume 5 ; 5 >
-      au < expected ; 2016 ; International Journal of Computational Vision and Robotics Volume 6 ; 6 >
+      au < manifest ; 2016 ; International Journal of Computational Vision and Robotics Volume 6 ; 6 >
 
     }
 
@@ -1913,7 +1913,7 @@
       au < manifest ; 2013 ; International Journal of Computer Aided Engineering and Technology Volume 5 ; 5 >
       au < released ; 2014 ; International Journal of Computer Aided Engineering and Technology Volume 6 ; 6 >
       au < manifest ; 2015 ; International Journal of Computer Aided Engineering and Technology Volume 7 ; 7 >
-      au < expected ; 2016 ; International Journal of Computer Aided Engineering and Technology Volume 8 ; 8 >
+      au < manifest ; 2016 ; International Journal of Computer Aided Engineering and Technology Volume 8 ; 8 >
 
     }
 
@@ -1969,7 +1969,7 @@
       au < manifest ; 2014 ; International Journal of Computer Applications in Technology Volume 50 ; 50 >
       au < manifest ; 2015 ; International Journal of Computer Applications in Technology Volume 51 ; 51 >
       au < manifest ; 2015 ; International Journal of Computer Applications in Technology Volume 52 ; 52 >
-      au < expected ; 2016 ; International Journal of Computer Applications in Technology Volume 53 ; 53 >
+      au < manifest ; 2016 ; International Journal of Computer Applications in Technology Volume 53 ; 53 >
 
     }
 
@@ -2232,7 +2232,7 @@
       au < released ; 2014 ; International Journal of Data Mining and Bioinformatics Volume 10 ; 10 >
       au < manifest ; 2015 ; International Journal of Data Mining and Bioinformatics Volume 11 ; 11 >
       au < manifest ; 2015 ; International Journal of Data Mining and Bioinformatics Volume 12 ; 12 >
-      au < exists ; 2016 ; International Journal of Data Mining and Bioinformatics Volume 13 ; 13 >
+      au < manifest ; 2016 ; International Journal of Data Mining and Bioinformatics Volume 13 ; 13 >
       au < expected ; 2016 ; International Journal of Data Mining and Bioinformatics Volume 14 ; 14 >
 
     }
@@ -2701,7 +2701,7 @@
       au < manifest ; 2013 ; International Journal of Electronic Security and Digital Forensics Volume 5 ; 5 >
       au < ready ; 2014 ; International Journal of Electronic Security and Digital Forensics Volume 6 ; 6 >
       au < manifest ; 2015 ; International Journal of Electronic Security and Digital Forensics Volume 7 ; 7 >
-      au < expected ; 2016 ; International Journal of Electronic Security and Digital Forensics Volume 8 ; 8 >
+      au < manifest ; 2016 ; International Journal of Electronic Security and Digital Forensics Volume 8 ; 8 >
 
     }
 
@@ -2754,7 +2754,7 @@
       au < manifest ; 2013 ; International Journal of Embedded Systems Volume 5 ; 5 >
       au < manifest ; 2014 ; International Journal of Embedded Systems Volume 6 ; 6 >
       au < manifest ; 2015 ; International Journal of Embedded Systems Volume 7 ; 7 >
-      au < expected ; 2016 ; International Journal of Embedded Systems Volume 8 ; 8 >
+      au < manifest ; 2016 ; International Journal of Embedded Systems Volume 8 ; 8 >
 
     }
 
@@ -2848,7 +2848,7 @@
       au < manifest ; 2013 ; International Journal of Engineering Systems Modelling and Simulation Volume 5 ; 5 >
       au < released ; 2014 ; International Journal of Engineering Systems Modelling and Simulation Volume 6 ; 6 >
       au < manifest ; 2015 ; International Journal of Engineering Systems Modelling and Simulation Volume 7 ; 7 >
-      au < expected ; 2016 ; International Journal of Engineering Systems Modelling and Simulation Volume 8 ; 8 >
+      au < manifest ; 2016 ; International Journal of Engineering Systems Modelling and Simulation Volume 8 ; 8 >
 
     }
 
@@ -2998,7 +2998,7 @@
       au < manifest ; 2015 ; International Journal of Entrepreneurship and Small Business Volume 24 ; 24 >
       au < manifest ; 2015 ; International Journal of Entrepreneurship and Small Business Volume 25 ; 25 >
       au < manifest ; 2015 ; International Journal of Entrepreneurship and Small Business Volume 26 ; 26 >
-      au < expected ; 2016 ; International Journal of Entrepreneurship and Small Business Volume 27 ; 27 >
+      au < manifest ; 2016 ; International Journal of Entrepreneurship and Small Business Volume 27 ; 27 >
 
     }
 
@@ -3124,7 +3124,7 @@
       au < manifest ; 2013 ; International Journal of Environment and Sustainable Development Volume 12 ; 12 >
       au < manifest ; 2014 ; International Journal of Environment and Sustainable Development Volume 13 ; 13 >
       au < manifest ; 2015 ; International Journal of Environment and Sustainable Development Volume 14 ; 14 >
-      au < expected ; 2016 ; International Journal of Environment and Sustainable Development Volume 15 ; 15 >
+      au < manifest ; 2016 ; International Journal of Environment and Sustainable Development Volume 15 ; 15 >
 
     }
 
@@ -3277,7 +3277,7 @@
       au < manifest ; 2014 ; International Journal of Exergy Volume 15 ; 15 >
       au < manifest ; 2015 ; International Journal of Exergy Volume 16 ; 16 >
       au < manifest ; 2015 ; International Journal of Exergy Volume 17 ; 17 >
-      au < expected ; 2016 ; International Journal of Exergy Volume 18 ; 18 >
+      au < manifest ; 2016 ; International Journal of Exergy Volume 18 ; 18 >
 
     }
 
@@ -3555,7 +3555,7 @@
       au < manifest ; 2013 ; International Journal of Global Energy Issues Volume 36 ; 36 >
       au < released ; 2014 ; International Journal of Global Energy Issues Volume 37 ; 37 >
       au < manifest ; 2015 ; International Journal of Global Energy Issues Volume 38 ; 38 >
-      au < expected ; 2016 ; International Journal of Global Energy Issues Volume 39 ; 39 >
+      au < manifest ; 2016 ; International Journal of Global Energy Issues Volume 39 ; 39 >
 
     }
 
@@ -3606,7 +3606,7 @@
       au < manifest ; 2013 ; International Journal of Global Warming Volume 5 ; 5 >
       au < released ; 2014 ; International Journal of Global Warming Volume 6 ; 6 >
       au < manifest ; 2015 ; International Journal of Global Warming Volume 7 ; 7 >
-      au < expected ; 2016 ; International Journal of Global Warming Volume 8 ; 8 >
+      au < manifest ; 2016 ; International Journal of Global Warming Volume 8 ; 8 >
 
     }
 
@@ -3692,7 +3692,7 @@
       au < manifest ; 2013 ; International Journal of Grid and Utility Computing Volume 4 ; 4 >
       au < released ; 2014 ; International Journal of Grid and Utility Computing Volume 5 ; 5 >
       au < manifest ; 2015 ; International Journal of Grid and Utility Computing Volume 6 ; 6 >
-      au < expected ; 2016 ; International Journal of Grid and Utility Computing Volume 7 ; 7 >
+      au < manifest ; 2016 ; International Journal of Grid and Utility Computing Volume 7 ; 7 >
 
 
     }
@@ -3904,7 +3904,7 @@
       au < manifest ; 2013 ; International Journal of Hydrology Science and Technology Volume 3 ; 3 >
       au < released ; 2014 ; International Journal of Hydrology Science and Technology Volume 4 ; 4 >
       au < manifest ; 2015 ; International Journal of Hydrology Science and Technology Volume 5 ; 5 >
-      au < expected ; 2016 ; International Journal of Hydrology Science and Technology Volume 6 ; 6 >
+      au < manifest ; 2016 ; International Journal of Hydrology Science and Technology Volume 6 ; 6 >
 
     }
 
@@ -3964,7 +3964,7 @@
       au < released ; 2014 ; International Journal of Indian Culture and Business Management Volume 9 ; 9 >
       au < manifest ; 2015 ; International Journal of Indian Culture and Business Management Volume 10 ; 10 >
       au < manifest ; 2015 ; International Journal of Indian Culture and Business Management Volume 11 ; 11 >
-      au < expected ; 2016 ; International Journal of Indian Culture and Business Management Volume 12 ; 12 >
+      au < manifest ; 2016 ; International Journal of Indian Culture and Business Management Volume 12 ; 12 >
 
     }
 
@@ -4000,7 +4000,7 @@
       au < manifest ; 2015 ; International Journal of Industrial and Systems Engineering Volume 19 ; 19 >
       au < manifest ; 2015 ; International Journal of Industrial and Systems Engineering Volume 20 ; 20 >
       au < manifest ; 2015 ; International Journal of Industrial and Systems Engineering Volume 21 ; 21 >
-      au < expected ; 2016 ; International Journal of Industrial and Systems Engineering Volume 22 ; 22 >
+      au < manifest ; 2016 ; International Journal of Industrial and Systems Engineering Volume 22 ; 22 >
 
     }
 
@@ -4057,7 +4057,7 @@
       au < manifest ; 2013 ; International Journal of Information and Communication Technology Volume 5 ; 5 >
       au < released ; 2014 ; International Journal of Information and Communication Technology Volume 6 ; 6 >
       au < manifest ; 2015 ; International Journal of Information and Communication Technology Volume 7 ; 7 >
-      au < expected ; 2016 ; International Journal of Information and Communication Technology Volume 8 ; 8 >
+      au < manifest ; 2016 ; International Journal of Information and Communication Technology Volume 8 ; 8 >
 
     }
 
@@ -4228,7 +4228,7 @@
       au < manifest ; 2013 ; International Journal of Information Technology and Management Volume 12 ; 12 >
       au < manifest ; 2014 ; International Journal of Information Technology and Management Volume 13 ; 13 >
       au < manifest ; 2015 ; International Journal of Information Technology and Management Volume 14 ; 14 >
-      au < expected ; 2016 ; International Journal of Information Technology and Management Volume 15 ; 15 >
+      au < manifest ; 2016 ; International Journal of Information Technology and Management Volume 15 ; 15 >
 
     }
 
@@ -4279,7 +4279,7 @@
       au < released ; 2014 ; International Journal of Innovation and Learning Volume 16 ; 16 >
       au < manifest ; 2015 ; International Journal of Innovation and Learning Volume 17 ; 17 >
       au < manifest ; 2015 ; International Journal of Innovation and Learning Volume 18 ; 18 >
-      au < expected ; 2016 ; International Journal of Innovation and Learning Volume 19 ; 19 >
+      au < manifest ; 2016 ; International Journal of Innovation and Learning Volume 19 ; 19 >
 
     }
 
@@ -4324,7 +4324,7 @@
       au < manifest ; 2013 ; International Journal of Innovation and Sustainable Development Volume 7 ; 7 >
       au < manifest ; 2014 ; International Journal of Innovation and Sustainable Development Volume 8 ; 8 >
       au < manifest ; 2015 ; International Journal of Innovation and Sustainable Development Volume 9 ; 9 >
-      au < expected ; 2016 ; International Journal of Innovation and Sustainable Development Volume 10 ; 10 >
+      au < manifest ; 2016 ; International Journal of Innovation and Sustainable Development Volume 10 ; 10 >
 
     }
 
@@ -4669,7 +4669,7 @@
       au < doNotProcess ; 2011 ; International Journal of Internet Technology and Secured Transactions Volume 3 ; 3 >
       au < doNotProcess ; 2012 ; International Journal of Internet Technology and Secured Transactions Volume 4 ; 4 >
       au < released ; 2013-2014 ; International Journal of Internet Technology and Secured Transactions Volume 5 ; 5 >
-      au < expected ; 2015 ; International Journal of Internet Technology and Secured Transactions Volume 6 ; 6 >
+      au < manifest ; 2015 ; International Journal of Internet Technology and Secured Transactions Volume 6 ; 6 >
       au < expected ; 2016 ; International Journal of Internet Technology and Secured Transactions Volume 7 ; 7 >
 
     }
@@ -5057,7 +5057,7 @@
       au < manifest ; 2015 ; International Journal of Logistics Systems and Management Volume 20 ; 20 >
       au < manifest ; 2015 ; International Journal of Logistics Systems and Management Volume 21 ; 21 >
       au < manifest ; 2015 ; International Journal of Logistics Systems and Management Volume 22 ; 22 >
-      au < expected ; 2016 ; International Journal of Logistics Systems and Management Volume 23 ; 23 >
+      au < manifest ; 2016 ; International Journal of Logistics Systems and Management Volume 23 ; 23 >
 
     }
 
@@ -5275,7 +5275,7 @@
       au < manifest ; 2013 ; International Journal of Management in Education Volume 7 ; 7 >
       au < released ; 2014 ; International Journal of Management in Education Volume 8 ; 8 >
       au < manifest ; 2015 ; International Journal of Management in Education Volume 9 ; 9 >
-      au < expected ; 2016 ; International Journal of Management in Education Volume 10 ; 10 >
+      au < manifest ; 2016 ; International Journal of Management in Education Volume 10 ; 10 >
 
     }
 
@@ -5475,7 +5475,7 @@
       au < released ; 2014 ; International Journal of Materials and Product Technology Volume 49 ; 49 >
       au < manifest ; 2015 ; International Journal of Materials and Product Technology Volume 50 ; 50 >
       au < manifest ; 2015 ; International Journal of Materials and Product Technology Volume 51 ; 51 >
-      au < expected ; 2016 ; International Journal of Materials and Product Technology Volume 52 ; 52 >
+      au < manifest ; 2016 ; International Journal of Materials and Product Technology Volume 52 ; 52 >
 
     }
 
@@ -5563,7 +5563,7 @@
       au < manifest ; 2013 ; International Journal of Mathematics in Operational Research Volume 5 ; 5 >
       au < manifest ; 2014 ; International Journal of Mathematics in Operational Research Volume 6 ; 6 >
       au < manifest ; 2015 ; International Journal of Mathematics in Operational Research Volume 7 ; 7 >
-      au < expected ; 2016 ; International Journal of Mathematics in Operational Research Volume 8 ; 8 >
+      au < manifest ; 2016 ; International Journal of Mathematics in Operational Research Volume 8 ; 8 >
 
     }
 
@@ -5645,7 +5645,7 @@
       au < manifest ; 2013 ; International Journal of Medical Engineering and Informatics Volume 5 ; 5 >
       au < manifest ; 2014 ; International Journal of Medical Engineering and Informatics Volume 6 ; 6 >
       au < manifest ; 2015 ; International Journal of Medical Engineering and Informatics Volume 7 ; 7 >
-      au < expected ; 2016 ; International Journal of Medical Engineering and Informatics Volume 8 ; 8 >
+      au < manifest ; 2016 ; International Journal of Medical Engineering and Informatics Volume 8 ; 8 >
 
     }
 
@@ -5779,7 +5779,7 @@
       au < manifest ; 2013 ; International Journal of Mobile Communications Volume 11 ; 11 >
       au < manifest ; 2014 ; International Journal of Mobile Communications Volume 12 ; 12 >
       au < manifest ; 2015 ; International Journal of Mobile Communications Volume 13 ; 13 >
-      au < expected ; 2016 ; International Journal of Mobile Communications Volume 14 ; 14 >
+      au < manifest ; 2016 ; International Journal of Mobile Communications Volume 14 ; 14 >
 
     }
 
@@ -6279,8 +6279,8 @@
       au < manifest ; 2014 ; International Journal of Oil, Gas and Coal Technology Volume 7 ; 7 >
       au < manifest ; 2014 ; International Journal of Oil, Gas and Coal Technology Volume 8 ; 8 >
       au < manifest ; 2015 ; International Journal of Oil, Gas and Coal Technology Volume 9 ; 9 >
-      au < exists ; 2015 ; International Journal of Oil, Gas and Coal Technology Volume 10 ; 10 >
-      au < exists ; 2016 ; International Journal of Oil, Gas and Coal Technology Volume 11 ; 11 >
+      au < manifest ; 2015 ; International Journal of Oil, Gas and Coal Technology Volume 10 ; 10 >
+      au < manifest ; 2016 ; International Journal of Oil, Gas and Coal Technology Volume 11 ; 11 >
       au < expected ; 2016 ; International Journal of Oil, Gas and Coal Technology Volume 12 ; 12 >
 
     }
@@ -6320,7 +6320,7 @@
       au < manifest ; 2015 ; International Journal of Operational Research Volume 22 ; 22 >
       au < manifest ; 2015 ; International Journal of Operational Research Volume 23 ; 23 >
       au < manifest ; 2015 ; International Journal of Operational Research Volume 24 ; 24 >
-      au < expected ; 2016 ; International Journal of Operational Research Volume 25 ; 25 >
+      au < manifest ; 2016 ; International Journal of Operational Research Volume 25 ; 25 >
 
     }
 
@@ -6571,7 +6571,7 @@
       au < ready ; 2009-2013 ; International Journal of Process Management and Benchmarking Volume 3 ; 3 >
       au < ready ; 2014 ; International Journal of Process Management and Benchmarking Volume 4 ; 4 >
       au < manifest ; 2015 ; International Journal of Process Management and Benchmarking Volume 5 ; 5 >
-      au < expected ; 2016 ; International Journal of Process Management and Benchmarking Volume 6 ; 6 >
+      au < manifest ; 2016 ; International Journal of Process Management and Benchmarking Volume 6 ; 6 >
 
     }
 
@@ -6612,7 +6612,7 @@
       au < manifest ; 2013 ; International Journal of Procurement Management Volume 6 ; 6 >
       au < ready ; 2014 ; International Journal of Procurement Management Volume 7 ; 7 >
       au < manifest ; 2015 ; International Journal of Procurement Management Volume 8 ; 8 >
-      au < expected ; 2016 ; International Journal of Procurement Management Volume 9 ; 9 >
+      au < manifest ; 2016 ; International Journal of Procurement Management Volume 9 ; 9 >
 
     }
 
@@ -6717,7 +6717,7 @@
       au < manifest ; 2014 ; International Journal of Productivity and Quality Management Volume 14 ; 14 >
       au < manifest ; 2015 ; International Journal of Productivity and Quality Management Volume 15 ; 15 >
       au < manifest ; 2015 ; International Journal of Productivity and Quality Management Volume 16 ; 16 >
-      au < expected ; 2016 ; International Journal of Productivity and Quality Management Volume 17 ; 17 >
+      au < manifest ; 2016 ; International Journal of Productivity and Quality Management Volume 17 ; 17 >
 
     }
 
@@ -6980,7 +6980,7 @@
       au < manifest ; 2013 ; International Journal of Renewable Energy Technology Volume 4 ; 4 >
       au < released ; 2014 ; International Journal of Renewable Energy Technology Volume 5 ; 5 >
       au < manifest ; 2015 ; International Journal of Renewable Energy Technology Volume 6 ; 6 >
-      au < expected ; 2016 ; International Journal of Renewable Energy Technology Volume 7 ; 7 >
+      au < manifest ; 2016 ; International Journal of Renewable Energy Technology Volume 7 ; 7 >
 
     }
 
@@ -7109,7 +7109,7 @@
       au < released ; 2014 ; International Journal of Sensor Networks Volume 16 ; 16 >
       au < manifest ; 2015 ; International Journal of Sensor Networks Volume 17 ; 17 >
       au < manifest ; 2015 ; International Journal of Sensor Networks Volume 18 ; 18 >
-      au < expected ; 2016 ; International Journal of Sensor Networks Volume 19 ; 19 >
+      au < manifest ; 2016 ; International Journal of Sensor Networks Volume 19 ; 19 >
 
     }
 
@@ -7163,7 +7163,7 @@
       au < manifest ; 2015 ; International Journal of Services and Operations Management Volume 20 ; 20 >
       au < manifest ; 2015 ; International Journal of Services and Operations Management Volume 21 ; 21 >
       au < manifest ; 2015 ; International Journal of Services and Operations Management Volume 22 ; 22 >
-      au < expected ; 2016 ; International Journal of Services and Operations Management Volume 23 ; 23 >
+      au < manifest ; 2016 ; International Journal of Services and Operations Management Volume 23 ; 23 >
 
     }
 
@@ -7311,7 +7311,7 @@
       au < manifest ; 2013 ; International Journal of Shipping and Transport Logistics Volume 5 ; 5 >
       au < released ; 2014 ; International Journal of Shipping and Transport Logistics Volume 6 ; 6 >
       au < manifest ; 2015 ; International Journal of Shipping and Transport Logistics Volume 7 ; 7 >
-      au < expected ; 2016 ; International Journal of Shipping and Transport Logistics Volume 8 ; 8 >
+      au < manifest ; 2016 ; International Journal of Shipping and Transport Logistics Volume 8 ; 8 >
 
     }
 
@@ -7636,7 +7636,7 @@
       au < manifest ; 2013 ; International Journal of Structural Engineering Volume 4 ; 4 >
       au < released ; 2014 ; International Journal of Structural Engineering Volume 5 ; 5 >
       au < manifest ; 2015 ; International Journal of Structural Engineering Volume 6 ; 6 >
-      au < expected ; 2016 ; International Journal of Structural Engineering Volume 7 ; 7 >
+      au < manifest ; 2016 ; International Journal of Structural Engineering Volume 7 ; 7 >
 
     }
 
@@ -7729,7 +7729,7 @@
       au < manifest ; 2013 ; International Journal of Sustainable Development Volume 16 ; 16 >
       au < manifest ; 2014 ; International Journal of Sustainable Development Volume 17 ; 17 >
       au < manifest ; 2015 ; International Journal of Sustainable Development Volume 18 ; 18 >
-      au < expected ; 2016 ; International Journal of Sustainable Development Volume 19 ; 19 >
+      au < manifest ; 2016 ; International Journal of Sustainable Development Volume 19 ; 19 >
 
     }
 
@@ -7751,7 +7751,7 @@
       au < manifest ; 2013 ; International Journal of Sustainable Economy Volume 5 ; 5 >
       au < manifest ; 2014 ; International Journal of Sustainable Economy Volume 6 ; 6 >
       au < manifest ; 2015 ; International Journal of Sustainable Economy Volume 7 ; 7 >
-      au < expected ; 2016 ; International Journal of Sustainable Economy Volume 8 ; 8 >
+      au < manifest ; 2016 ; International Journal of Sustainable Economy Volume 8 ; 8 >
 
     }
 
@@ -8142,7 +8142,7 @@
       au < manifest ; 2013 ; International Journal of Technology Marketing Volume 8 ; 8 >
       au < manifest ; 2014 ; International Journal of Technology Marketing Volume 9 ; 9 >
       au < manifest ; 2015 ; International Journal of Technology Marketing Volume 10 ; 10 >
-      au < expected ; 2016 ; International Journal of Technology Marketing Volume 11 ; 11 >
+      au < manifest ; 2016 ; International Journal of Technology Marketing Volume 11 ; 11 >
 
     }
 
@@ -8482,7 +8482,7 @@
       au < manifest ; 2015 ; International Journal of Vehicle Design Volume 67 ; 67 >
       au < manifest ; 2015 ; International Journal of Vehicle Design Volume 68 ; 68 >
       au < manifest ; 2015 ; International Journal of Vehicle Design Volume 69 ; 69 >
-      au < expected ; 2016 ; International Journal of Vehicle Design Volume 70 ; 70 >
+      au < manifest ; 2016 ; International Journal of Vehicle Design Volume 70 ; 70 >
 
     }
 
@@ -8629,7 +8629,7 @@
       au < doNotProcess ; 2013 ; International Journal of Water Volume 7 ; 7 >
       au < released ; 2014 ; International Journal of Water Volume 8 ; 8 >
       au < manifest ; 2015 ; International Journal of Water Volume 9 ; 9 >
-      au < expected ; 2016 ; International Journal of Water Volume 10 ; 10 >
+      au < manifest ; 2016 ; International Journal of Water Volume 10 ; 10 >
 
     }
 
@@ -8746,7 +8746,7 @@
       au < manifest ; 2013 ; International Journal of Wireless and Mobile Computing Volume 6 ; 6 >
       au < released ; 2014 ; International Journal of Wireless and Mobile Computing Volume 7 ; 7 >
       au < manifest ; 2015 ; International Journal of Wireless and Mobile Computing Volume 8 ; 8 >
-      au < expected ; 2016 ; International Journal of Wireless and Mobile Computing Volume 9 ; 9 >
+      au < manifest ; 2016 ; International Journal of Wireless and Mobile Computing Volume 9 ; 9 >
 
     }
 
@@ -8851,7 +8851,7 @@
       au < doNotProcess ; 2012 ; Journal for International Business and Entrepreneurship Development Volume 6 ; 6 >
       au < manifest ; 2013-2014 ; Journal for International Business and Entrepreneurship Development Volume 7 ; 7 >
       au < manifest ; 2015 ; Journal for International Business and Entrepreneurship Development Volume 8 ; 8 >
-      au < expected ; 2016 ; Journal for International Business and Entrepreneurship Development Volume 9 ; 9 >
+      au < manifest ; 2016 ; Journal for International Business and Entrepreneurship Development Volume 9 ; 9 >
 
     }
 
@@ -8992,7 +8992,7 @@
       au < manifest ; 2013 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 9 ; 9 >
       au < manifest ; 2014 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 10 ; 10 >
       au < manifest ; 2015 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 11 ; 11 >
-      au < expected ; 2016 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 12 ; 12 >
+      au < manifest ; 2016 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 12 ; 12 >
 
     }
 
