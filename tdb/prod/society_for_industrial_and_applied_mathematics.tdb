@@ -25,8 +25,8 @@
     au < manifest ; 2006 ; Multiscale Modeling and Simulation Volume 5 ; 5 >
     au < manifest ; 2007-2008 ; Multiscale Modeling and Simulation Volume 6 ; 6 >
     au < manifest ; 2008-2009 ; Multiscale Modeling and Simulation Volume 7 ; 7 >
-    au < releasing ; 2009-2010 ; Multiscale Modeling and Simulation Volume 8 ; 8 >
-    au < releasing ; 2011 ; Multiscale Modeling and Simulation Volume 9 ; 9 >
+    au < released ; 2009-2010 ; Multiscale Modeling and Simulation Volume 8 ; 8 >
+    au < released ; 2011 ; Multiscale Modeling and Simulation Volume 9 ; 9 >
     au < released ; 2012 ; Multiscale Modeling and Simulation Volume 10 ; 10 >
     au < released ; 2013 ; Multiscale Modeling and Simulation Volume 11 ; 11 >
     au < notReady ; 2014 ; Multiscale Modeling and Simulation Volume 12 ; 12 >
@@ -51,11 +51,11 @@
     au < manifest ; 2007 ; Journal on Applied Dynamical Systems Volume 6 ; 6 >
     au < manifest ; 2008 ; Journal on Applied Dynamical Systems Volume 7 ; 7 >
     au < manifest ; 2009 ; Journal on Applied Dynamical Systems Volume 8 ; 8 >
-    au < releasing ; 2010 ; Journal on Applied Dynamical Systems Volume 9 ; 9 >
-    au < releasing ; 2011 ; Journal on Applied Dynamical Systems Volume 10 ; 10 >
+    au < released ; 2010 ; Journal on Applied Dynamical Systems Volume 9 ; 9 >
+    au < released ; 2011 ; Journal on Applied Dynamical Systems Volume 10 ; 10 >
     au < released ; 2012 ; Journal on Applied Dynamical Systems Volume 11 ; 11 >
     au < released ; 2013 ; Journal on Applied Dynamical Systems Volume 12 ; 12 >
-    au < releasing ; 2014 ; Journal on Applied Dynamical Systems Volume 13 ; 13 >
+    au < released ; 2014 ; Journal on Applied Dynamical Systems Volume 13 ; 13 >
     au < manifest ; 2015 ; Journal on Applied Dynamical Systems Volume 14 ; 14 >
     au < expected ; 2016 ; Journal on Applied Dynamical Systems Volume 15 ; 15 >
 
@@ -144,7 +144,7 @@
     au < released ; 2011 ; Journal on Applied Mathematics Volume 71 ; 71 >
     au < released ; 2012 ; Journal on Applied Mathematics Volume 72 ; 72 >
     au < released ; 2013 ; Journal on Applied Mathematics Volume 73 ; 73 >
-    au < releasing ; 2014 ; Journal on Applied Mathematics Volume 74 ; 74 >
+    au < released ; 2014 ; Journal on Applied Mathematics Volume 74 ; 74 >
     au < manifest ; 2015 ; Journal on Applied Mathematics Volume 75 ; 75 >
     au < manifest ; 2016 ; Journal on Applied Mathematics Volume 76 ; 76 >
 
@@ -170,7 +170,7 @@
     au < released ; 2011 ; Journal on Computing Volume 40 ; 40 >
     au < released ; 2012 ; Journal on Computing Volume 41 ; 41 >
     au < released ; 2013 ; Journal on Computing Volume 42 ; 42 >
-    au < releasing ; 2014 ; Journal on Computing Volume 43 ; 43 >
+    au < released ; 2014 ; Journal on Computing Volume 43 ; 43 >
     au < manifest ; 2015 ; Journal on Computing Volume 44 ; 44 >
     au < manifest ; 2016 ; Journal on Computing Volume 45 ; 45 >
 
@@ -188,15 +188,15 @@
 
     au < manifest ; 2003 ; Journal on Control and Optimization Volume 42 ; 42 >
     au < manifest ; 2004 ; Journal on Control and Optimization Volume 43 ; 43 >
-    au < releasing ; 2005 ; Journal on Control and Optimization Volume 44 ; 44 >
+    au < released ; 2005 ; Journal on Control and Optimization Volume 44 ; 44 >
     au < manifest ; 2006 ; Journal on Control and Optimization Volume 45 ; 45 >
     au < manifest ; 2007 ; Journal on Control and Optimization Volume 46 ; 46 >
     au < manifest ; 2008 ; Journal on Control and Optimization Volume 47 ; 47 >
     au < manifest ; 2009 ; Journal on Control and Optimization Volume 48 ; 48 >
-    au < releasing ; 2011 ; Journal on Control and Optimization Volume 49 ; 49 >
-    au < releasing ; 2012 ; Journal on Control and Optimization Volume 50 ; 50 >
+    au < released ; 2011 ; Journal on Control and Optimization Volume 49 ; 49 >
+    au < released ; 2012 ; Journal on Control and Optimization Volume 50 ; 50 >
     au < released ; 2013 ; Journal on Control and Optimization Volume 51 ; 51 >
-    au < releasing ; 2014 ; Journal on Control and Optimization Volume 52 ; 52 >
+    au < released ; 2014 ; Journal on Control and Optimization Volume 52 ; 52 >
     au < manifest ; 2015 ; Journal on Control and Optimization Volume 53 ; 53 >
     au < manifest ; 2016 ; Journal on Control and Optimization Volume 54 ; 54 >
 
@@ -220,11 +220,11 @@
     au < manifest ; 2007 ; Journal on Discrete Mathematics Volume 21 ; 21 >
     au < manifest ; 2008 ; Journal on Discrete Mathematics Volume 22 ; 22 >
     au < manifest ; 2008 ; Journal on Discrete Mathematics Volume 23 ; 23 >
-    au < releasing ; 2010 ; Journal on Discrete Mathematics Volume 24 ; 24 >
+    au < released ; 2010 ; Journal on Discrete Mathematics Volume 24 ; 24 >
     au < released ; 2011 ; Journal on Discrete Mathematics Volume 25 ; 25 >
     au < released ; 2012 ; Journal on Discrete Mathematics Volume 26 ; 26 >
     au < released ; 2013 ; Journal on Discrete Mathematics Volume 27 ; 27 >
-    au < releasing ; 2014 ; Journal on Discrete Mathematics Volume 28 ; 28 >
+    au < released ; 2014 ; Journal on Discrete Mathematics Volume 28 ; 28 >
     au < manifest ; 2015 ; Journal on Discrete Mathematics Volume 29 ; 29 >
     au < manifest ; 2016 ; Journal on Discrete Mathematics Volume 30 ; 30 >
 
@@ -239,11 +239,11 @@
 
     param[journal_id] = sjfmbj
 
-    au < releasing ; 2010 ; Journal on Financial Mathematics Volume 1 ; 1 >
+    au < released ; 2010 ; Journal on Financial Mathematics Volume 1 ; 1 >
     au < released ; 2011 ; Journal on Financial Mathematics Volume 2 ; 2 >
     au < released ; 2012 ; Journal on Financial Mathematics Volume 3 ; 3 >
     au < released ; 2013 ; Journal on Financial Mathematics Volume 4 ; 4 >
-    au < releasing ; 2014 ; Journal on Financial Mathematics Volume 5 ; 5 >
+    au < released ; 2014 ; Journal on Financial Mathematics Volume 5 ; 5 >
     au < manifest ; 2015 ; Journal on Financial Mathematics Volume 6 ; 6 >
     au < expected ; 2016 ; Journal on Financial Mathematics Volume 7 ; 7 >
 
@@ -260,11 +260,11 @@
 
     au < manifest ; 2008 ; Journal on Imaging Sciences Volume 1 ; 1 >
     au < manifest ; 2009 ; Journal on Imaging Sciences Volume 2 ; 2 >
-    au < releasing ; 2010 ; Journal on Imaging Sciences Volume 3 ; 3 >
+    au < released ; 2010 ; Journal on Imaging Sciences Volume 3 ; 3 >
     au < released ; 2011 ; Journal on Imaging Sciences Volume 4 ; 4 >
     au < released ; 2012 ; Journal on Imaging Sciences Volume 5 ; 5 >
     au < released ; 2013 ; Journal on Imaging Sciences Volume 6 ; 6 >
-    au < releasing ; 2014 ; Journal on Imaging Sciences Volume 7 ; 7 >
+    au < released ; 2014 ; Journal on Imaging Sciences Volume 7 ; 7 >
     au < manifest ; 2015 ; Journal on Imaging Sciences Volume 8 ; 8 >
     au < manifest ; 2016 ; Journal on Imaging Sciences Volume 9 ; 9 >
 
@@ -283,15 +283,15 @@
     au < manifest ; 2003-2004 ; Journal on Mathematical Analysis Volume 35 ; 35 >
     au < manifest ; 2004-2005 ; Journal on Mathematical Analysis Volume 36 ; 36 >
     au < manifest ; 2005-2006 ; Journal on Mathematical Analysis Volume 37 ; 37 >
-    au < releasing ; 2006-2007 ; Journal on Mathematical Analysis Volume 38 ; 38 >
+    au < released ; 2006-2007 ; Journal on Mathematical Analysis Volume 38 ; 38 >
     au < manifest ; 2007-2008 ; Journal on Mathematical Analysis Volume 39 ; 39 >
     au < manifest ; 2008-2009 ; Journal on Mathematical Analysis Volume 40 ; 40 >
     au < manifest ; 2009-2010 ; Journal on Mathematical Analysis Volume 41 ; 41 >
-    au < releasing ; 2010 ; Journal on Mathematical Analysis Volume 42 ; 42 >
-    au < releasing ; 2011 ; Journal on Mathematical Analysis Volume 43 ; 43 >
-    au < releasing ; 2012 ; Journal on Mathematical Analysis Volume 44 ; 44 >
+    au < released ; 2010 ; Journal on Mathematical Analysis Volume 42 ; 42 >
+    au < released ; 2011 ; Journal on Mathematical Analysis Volume 43 ; 43 >
+    au < released ; 2012 ; Journal on Mathematical Analysis Volume 44 ; 44 >
     au < released ; 2013 ; Journal on Mathematical Analysis Volume 45 ; 45 >
-    au < releasing ; 2014 ; Journal on Mathematical Analysis Volume 46 ; 46 >
+    au < released ; 2014 ; Journal on Mathematical Analysis Volume 46 ; 46 >
     au < manifest ; 2015 ; Journal on Mathematical Analysis Volume 47 ; 47 >
     au < manifest ; 2016 ; Journal on Mathematical Analysis Volume 48 ; 48 >
 
@@ -314,10 +314,10 @@
     au < manifest ; 2006 ; Journal on Matrix Analysis and Application Volume 29 ; 29 >
     au < manifest ; 2008 ; Journal on Matrix Analysis and Application Volume 30 ; 30 >
     au < manifest ; 2009 ; Journal on Matrix Analysis and Application Volume 31 ; 31 >
-    au < releasing ; 2011 ; Journal on Matrix Analysis and Application Volume 32 ; 32 >
-    au < releasing ; 2012 ; Journal on Matrix Analysis and Application Volume 33 ; 33 >
+    au < released ; 2011 ; Journal on Matrix Analysis and Application Volume 32 ; 32 >
+    au < released ; 2012 ; Journal on Matrix Analysis and Application Volume 33 ; 33 >
     au < released ; 2013 ; Journal on Matrix Analysis and Application Volume 34 ; 34 >
-    au < releasing ; 2014 ; Journal on Matrix Analysis and Application Volume 35 ; 35 >
+    au < released ; 2014 ; Journal on Matrix Analysis and Application Volume 35 ; 35 >
     au < manifest ; 2015 ; Journal on Matrix Analysis and Application Volume 36 ; 36 >
     au < expected ; 2016 ; Journal on Matrix Analysis and Application Volume 37 ; 37 >
 
@@ -340,11 +340,11 @@
     au < manifest ; 2007 ; Journal on Numerical Analysis Volume 45 ; 45 >
     au < manifest ; 2008 ; Journal on Numerical Analysis Volume 46 ; 46 >
     au < manifest ; 2008 ; Journal on Numerical Analysis Volume 47 ; 47 >
-    au < releasing ; 2010 ; Journal on Numerical Analysis Volume 48 ; 48 >
-    au < releasing ; 2011 ; Journal on Numerical Analysis Volume 49 ; 49 >
+    au < released ; 2010 ; Journal on Numerical Analysis Volume 48 ; 48 >
+    au < released ; 2011 ; Journal on Numerical Analysis Volume 49 ; 49 >
     au < released ; 2012 ; Journal on Numerical Analysis Volume 50 ; 50 >
-    au < releasing ; 2013 ; Journal on Numerical Analysis Volume 51 ; 51 >
-    au < releasing ; 2014 ; Journal on Numerical Analysis Volume 52 ; 52 >
+    au < released ; 2013 ; Journal on Numerical Analysis Volume 51 ; 51 >
+    au < released ; 2014 ; Journal on Numerical Analysis Volume 52 ; 52 >
     au < manifest ; 2015 ; Journal on Numerical Analysis Volume 53 ; 53 >
     au < manifest ; 2016 ; Journal on Numerical Analysis Volume 54 ; 54 >
 
@@ -370,7 +370,7 @@
     au < released ; 2011 ; Journal on Optimization Volume 21 ; 21 >
     au < released ; 2012 ; Journal on Optimization Volume 22 ; 22 >
     au < released ; 2013 ; Journal on Optimization Volume 23 ; 23 >
-    au < releasing ; 2014 ; Journal on Optimization Volume 24 ; 24 >
+    au < released ; 2014 ; Journal on Optimization Volume 24 ; 24 >
     au < manifest ; 2015 ; Journal on Optimization Volume 25 ; 25 >
     au < manifest ; 2016 ; Journal on Optimization Volume 26 ; 26 >
 
@@ -391,13 +391,13 @@
     au < manifest ; 2005 ; Journal on Scientific Computing Volume 27 ; 27 >
     au < manifest ; 2006 ; Journal on Scientific Computing Volume 28 ; 28 >
     au < manifest ; 2007 ; Journal on Scientific Computing Volume 29 ; 29 >
-    au < releasing ; 2007 ; Journal on Scientific Computing Volume 30 ; 30 >
+    au < released ; 2007 ; Journal on Scientific Computing Volume 30 ; 30 >
     au < manifest ; 2008 ; Journal on Scientific Computing Volume 31 ; 31 >
-    au < releasing ; 2010 ; Journal on Scientific Computing Volume 32 ; 32 >
-    au < releasing ; 2011 ; Journal on Scientific Computing Volume 33 ; 33 >
-    au < releasing ; 2012 ; Journal on Scientific Computing Volume 34 ; 34 >
+    au < released ; 2010 ; Journal on Scientific Computing Volume 32 ; 32 >
+    au < released ; 2011 ; Journal on Scientific Computing Volume 33 ; 33 >
+    au < released ; 2012 ; Journal on Scientific Computing Volume 34 ; 34 >
     au < released ; 2013 ; Journal on Scientific Computing Volume 35 ; 35 >
-    au < releasing ; 2014 ; Journal on Scientific Computing Volume 36 ; 36 >
+    au < released ; 2014 ; Journal on Scientific Computing Volume 36 ; 36 >
     au < manifest ; 2015 ; Journal on Scientific Computing Volume 37 ; 37 >
     au < manifest ; 2016 ; Journal on Scientific Computing Volume 38 ; 38 >
 
@@ -413,7 +413,7 @@
     param[journal_id] = sjuqa3
 
     au < released ; 2013 ; Journal on Uncertainty Quantification Volume 1 ; 1 >
-    au < releasing ; 2014 ; Journal on Uncertainty Quantification Volume 2 ; 2 >
+    au < released ; 2014 ; Journal on Uncertainty Quantification Volume 2 ; 2 >
     au < manifest ; 2015 ; Journal on Uncertainty Quantification Volume 3 ; 3 >
     au < expected ; 2016 ; Journal on Uncertainty Quantification Volume 4 ; 4 >
 
@@ -436,11 +436,11 @@
     au < manifest ; 2007 ; SIAM Review Volume 49 ; 49 >
     au < manifest ; 2008 ; SIAM Review Volume 50 ; 50 >
     au < manifest ; 2009 ; SIAM Review Volume 51 ; 51 >
-    au < releasing ; 2010 ; SIAM Review Volume 52 ; 52 >
-    au < releasing ; 2011 ; SIAM Review Volume 53 ; 53 >
-    au < releasing ; 2012 ; SIAM Review Volume 54 ; 54 >
+    au < released ; 2010 ; SIAM Review Volume 52 ; 52 >
+    au < released ; 2011 ; SIAM Review Volume 53 ; 53 >
+    au < released ; 2012 ; SIAM Review Volume 54 ; 54 >
     au < released ; 2013 ; SIAM Review Volume 55 ; 55 >
-    au < releasing ; 2014 ; SIAM Review Volume 56 ; 56 >
+    au < released ; 2014 ; SIAM Review Volume 56 ; 56 >
     au < manifest ; 2015 ; SIAM Review Volume 57 ; 57 >
     au < expected ; 2016 ; SIAM Review Volume 58 ; 58 >
 
@@ -461,13 +461,13 @@
     au < manifest ; 2005 ; Theory of Probability and its Applications Volume 49 ; 49 >
     au < manifest ; 2006 ; Theory of Probability and its Applications Volume 50 ; 50 >
     au < manifest ; 2007 ; Theory of Probability and its Applications Volume 51 ; 51 >
-    au < releasing ; 2008 ; Theory of Probability and its Applications Volume 52 ; 52 >
+    au < released ; 2008 ; Theory of Probability and its Applications Volume 52 ; 52 >
     au < manifest ; 2009 ; Theory of Probability and its Applications Volume 53 ; 53 >
-    au < releasing ; 2010 ; Theory of Probability and its Applications Volume 54 ; 54 >
+    au < released ; 2010 ; Theory of Probability and its Applications Volume 54 ; 54 >
     au < released ; 2011 ; Theory of Probability and its Applications Volume 55 ; 55 >
     au < released ; 2012 ; Theory of Probability and its Applications Volume 56 ; 56 >
     au < released ; 2013 ; Theory of Probability and its Applications Volume 57 ; 57 >
-    au < releasing ; 2014 ; Theory of Probability and its Applications Volume 58 ; 58 >
+    au < released ; 2014 ; Theory of Probability and its Applications Volume 58 ; 58 >
     au < manifest ; 2015 ; Theory of Probability and its Applications Volume 59 ; 59 >
     au < expected ; 2016 ; Theory of Probability and its Applications Volume 60 ; 60 >
 
