@@ -953,7 +953,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Heart Asia Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Heart Asia Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Heart Asia Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; ready ; 2015 ; Heart Asia Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; releasing ; 2015 ; Heart Asia Volume 7 ; 7 >
 
   }
 
@@ -969,7 +969,7 @@
 
     au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; BMJ Case Reports Volume 2008 ; 2008 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; BMJ Case Reports Volume 2009 ; 2009 >
-    au < HighWirePressH20Plugin ; ready ; 2010 ; BMJ Case Reports Volume 2010 ; 2010 >
+    au < HighWirePressH20Plugin ; releasing ; 2010 ; BMJ Case Reports Volume 2010 ; 2010 >
     au < HighWirePressH20Plugin ; released ; 2011 ; BMJ Case Reports Volume 2011 ; 2011 >
     au < HighWirePressH20Plugin ; released ; 2012 ; BMJ Case Reports Volume 2012 ; 2012 >
     au < HighWirePressH20Plugin ; exists ; 2013 ; BMJ Case Reports Volume 2013 ; 2013 >
@@ -2261,7 +2261,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; down ; 2012 ; BMJ Quality & Safety Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; down ; 2013 ; BMJ Quality & Safety Volume 22 ; 22 >
       au < HighWirePressH20Plugin ; down ; 2014 ; BMJ Quality & Safety Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; ready ; 2015 ; BMJ Quality & Safety Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; releasing ; 2015 ; BMJ Quality & Safety Volume 24 ; 24 >
       au < HighWirePressH20Plugin ; manifest ; 2016 ; BMJ Quality & Safety Volume 25 ; 25 >
 
       }
@@ -2276,7 +2276,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://rmdopen.bmj.com/
 
-    au < HighWirePressH20Plugin ; ready ; 2015 ; RMD Open Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; releasing ; 2015 ; RMD Open Volume 1 ; 1 >
 
   }
 

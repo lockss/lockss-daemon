@@ -277,9 +277,9 @@
     param[base_url] = http://www.syllabusjournal.org/
     param[journal_id] = syllabus
 
-    au < ready ; 2012 ; Syllabus Volume 1 ; 1 ; 2012 >
-    au < ready ; 2013 ; Syllabus Volume 2 ; 2 ; 2013 >
-    au < ready ; 2014 ; Syllabus Volume 3 ; 3 ; 2014 >
+    au < releasing ; 2012 ; Syllabus Volume 1 ; 1 ; 2012 >
+    au < releasing ; 2013 ; Syllabus Volume 2 ; 2 ; 2013 >
+    au < releasing ; 2014 ; Syllabus Volume 3 ; 3 ; 2014 >
     
   }
   

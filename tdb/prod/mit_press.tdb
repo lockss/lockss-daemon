@@ -150,30 +150,30 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-    au < ready ; 1976-1977 ; International Security Volume 1 ; 1 >
-    au < ready ; 1977-1978 ; International Security Volume 2 ; 2 >
-    au < ready ; 1978-1979 ; International Security Volume 3 ; 3 >
-    au < ready ; 1979-1980 ; International Security Volume 4 ; 4 >
-    au < ready ; 1980-1981 ; International Security Volume 5 ; 5 >
-    au < ready ; 1981-1982 ; International Security Volume 6 ; 6 >
-    au < ready ; 1982-1983 ; International Security Volume 7 ; 7 >
-    au < ready ; 1983-1984 ; International Security Volume 8 ; 8 >
-    au < ready ; 1984-1985 ; International Security Volume 9 ; 9 >
-    au < ready ; 1985-1986 ; International Security Volume 10 ; 10 >
-    au < ready ; 1986-1987 ; International Security Volume 11 ; 11 >
-    au < ready ; 1987-1988 ; International Security Volume 12 ; 12 >
-    au < ready ; 1988-1989 ; International Security Volume 13 ; 13 >
-    au < ready ; 1989-1990 ; International Security Volume 14 ; 14 >
-    au < ready ; 1990-1991 ; International Security Volume 15 ; 15 >
-    au < ready ; 1991-1992 ; International Security Volume 16 ; 16 >
-    au < ready ; 1992-1993 ; International Security Volume 17 ; 17 >
-    au < ready ; 1993-1994 ; International Security Volume 18 ; 18 >
-    au < ready ; 1994-1995 ; International Security Volume 19 ; 19 >
-    au < ready ; 1995-1996 ; International Security Volume 20 ; 20 >
-    au < ready ; 1996-1997 ; International Security Volume 21 ; 21 >
-    au < ready ; 1997-1998 ; International Security Volume 22 ; 22 >
-    au < ready ; 1998-1999 ; International Security Volume 23 ; 23 >
-    au < ready ; 1999-2000 ; International Security Volume 24 ; 24 >
+    au < releasing ; 1976-1977 ; International Security Volume 1 ; 1 >
+    au < releasing ; 1977-1978 ; International Security Volume 2 ; 2 >
+    au < releasing ; 1978-1979 ; International Security Volume 3 ; 3 >
+    au < releasing ; 1979-1980 ; International Security Volume 4 ; 4 >
+    au < releasing ; 1980-1981 ; International Security Volume 5 ; 5 >
+    au < releasing ; 1981-1982 ; International Security Volume 6 ; 6 >
+    au < releasing ; 1982-1983 ; International Security Volume 7 ; 7 >
+    au < releasing ; 1983-1984 ; International Security Volume 8 ; 8 >
+    au < releasing ; 1984-1985 ; International Security Volume 9 ; 9 >
+    au < releasing ; 1985-1986 ; International Security Volume 10 ; 10 >
+    au < releasing ; 1986-1987 ; International Security Volume 11 ; 11 >
+    au < releasing ; 1987-1988 ; International Security Volume 12 ; 12 >
+    au < releasing ; 1988-1989 ; International Security Volume 13 ; 13 >
+    au < releasing ; 1989-1990 ; International Security Volume 14 ; 14 >
+    au < releasing ; 1990-1991 ; International Security Volume 15 ; 15 >
+    au < releasing ; 1991-1992 ; International Security Volume 16 ; 16 >
+    au < releasing ; 1992-1993 ; International Security Volume 17 ; 17 >
+    au < releasing ; 1993-1994 ; International Security Volume 18 ; 18 >
+    au < releasing ; 1994-1995 ; International Security Volume 19 ; 19 >
+    au < releasing ; 1995-1996 ; International Security Volume 20 ; 20 >
+    au < releasing ; 1996-1997 ; International Security Volume 21 ; 21 >
+    au < releasing ; 1997-1998 ; International Security Volume 22 ; 22 >
+    au < releasing ; 1998-1999 ; International Security Volume 23 ; 23 >
+    au < releasing ; 1999-2000 ; International Security Volume 24 ; 24 >
 
     }
 
@@ -379,7 +379,7 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < released ; 2014 ; Leonardo Music Journal Volume 24 ; 24 >
-      au < ready ; 2015 ; Leonardo Music Journal Volume 25 ; 25 >
+      au < releasing ; 2015 ; Leonardo Music Journal Volume 25 ; 25 >
 
     }
 
