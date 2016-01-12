@@ -4197,7 +4197,24 @@
       param[base_url] = http://bpi.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < expected ; exists ; 2016 ; The British Journal of Politics and International Relations Volume 1 ; 1 ; >
+      au < exists ; exists ; 1999 ; The British Journal of Politics and International Relations Volume 1 ; 1 ; >
+      au < exists ; exists ; 2000 ; The British Journal of Politics and International Relations Volume 2 ; 2 ; >
+      au < exists ; exists ; 2001 ; The British Journal of Politics and International Relations Volume 3 ; 3 ; >
+      au < exists ; exists ; 2002 ; The British Journal of Politics and International Relations Volume 4 ; 4 ; >
+      au < exists ; exists ; 2003 ; The British Journal of Politics and International Relations Volume 5 ; 5 ; >
+      au < exists ; exists ; 2004 ; The British Journal of Politics and International Relations Volume 6 ; 6 ; >
+      au < exists ; exists ; 2005 ; The British Journal of Politics and International Relations Volume 7 ; 7 ; >
+      au < exists ; exists ; 2006 ; The British Journal of Politics and International Relations Volume 8 ; 8 ; >
+      au < exists ; exists ; 2007 ; The British Journal of Politics and International Relations Volume 9 ; 9 ; >
+      au < exists ; exists ; 2008 ; The British Journal of Politics and International Relations Volume 10 ; 10 ; >
+      au < exists ; exists ; 2009 ; The British Journal of Politics and International Relations Volume 11 ; 11 ; >
+      au < exists ; exists ; 2010 ; The British Journal of Politics and International Relations Volume 12 ; 12 ; >
+      au < exists ; exists ; 2011 ; The British Journal of Politics and International Relations Volume 13 ; 13 ; >
+      au < exists ; exists ; 2012 ; The British Journal of Politics and International Relations Volume 14 ; 14 ; >
+      au < exists ; exists ; 2013 ; The British Journal of Politics and International Relations Volume 15 ; 15 ; >
+      au < exists ; exists ; 2014 ; The British Journal of Politics and International Relations Volume 16 ; 16 ; >
+      au < exists ; exists ; 2015 ; The British Journal of Politics and International Relations Volume 17 ; 17 ; >
+      au < expected ; exists ; 2016 ; The British Journal of Politics and International Relations Volume 18 ; 18 ; >
 
   }
 
@@ -20307,6 +20324,10 @@
       au < exists ; exists ; 2010 ; Journal of Cerebral Blood Flow & Metabolism Volume 30 ; 30 ; >
       au < exists ; exists ; 2011 ; Journal of Cerebral Blood Flow & Metabolism Volume 31 ; 31 ; >
       au < exists ; exists ; 2012 ; Journal of Cerebral Blood Flow & Metabolism Volume 32 ; 32 ; >
+      au < exists ; exists ; 2013 ; Journal of Cerebral Blood Flow & Metabolism Volume 33 ; 33 ; >
+      au < exists ; exists ; 2014 ; Journal of Cerebral Blood Flow & Metabolism Volume 34 ; 34 ; >
+      au < exists ; exists ; 2015 ; Journal of Cerebral Blood Flow & Metabolism Volume 35 ; 35 ; >
+      au < exists ; exists ; 2016 ; Journal of Cerebral Blood Flow & Metabolism Volume 36 ; 36 ; >
 
   }
 
