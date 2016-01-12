@@ -508,7 +508,7 @@
     param[base_url] = http://bmjopenrespres.bmj.com/
 
     au < HighWirePressH20Plugin ; released ; 2014 ; BMJ Open Respiratory Research Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; BMJ Open Respiratory Research Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; BMJ Open Respiratory Research Volume 2 ; 2 >
 
   }
   
@@ -935,7 +935,7 @@
     param[base_url] = http://openheart.bmj.com/
 
     au < HighWirePressH20Plugin ; released ; 2014 ; OpenHeart Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; 2015 ; OpenHeart Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; OpenHeart Volume 2 ; 2 >
 
   }
 

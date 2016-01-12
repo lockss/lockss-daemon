@@ -563,9 +563,9 @@
 
     param[journal_id] = nvww
 
-    au < exists ; 2008 ; Noise & Vibration Worldwide Volume 39 ; 39 >
-    au < exists ; 2009 ; Noise & Vibration Worldwide Volume 40 ; 40 >
-    au < exists ; 2010 ; Noise & Vibration Worldwide Volume 41 ; 41 >
+    au < manifest ; 2008 ; Noise & Vibration Worldwide Volume 39 ; 39 >
+    au < manifest ; 2009 ; Noise & Vibration Worldwide Volume 40 ; 40 >
+    au < manifest ; 2010 ; Noise & Vibration Worldwide Volume 41 ; 41 >
     au < doNotProcess ; 2011 ; Noise & Vibration Worldwide Volume 42 ; 42 >
     au < doNotProcess ; 2012 ; Noise & Vibration Worldwide Volume 43 ; 43 >
     au < released ; 2013 ; Noise & Vibration Worldwide Volume 44 ; 44 >
