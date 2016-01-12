@@ -1734,7 +1734,7 @@
     au < finished ; frozen ; 2012 ; AoB PLANTS Volume 2012 ; 2012 ; >
     au < frozen ; exists ; 2013 ; AoB PLANTS Volume 5 ; 5 ; >
     au < finished ; crawling ; 2014 ; AoB PLANTS Volume 6 ; 6 ; >
-    au < testing ; exists ; 2015 ; AoB PLANTS Volume 7 ; 7 ; >
+    au < ready ; exists ; 2015 ; AoB PLANTS Volume 7 ; 7 ; >
     au < expected ; exists ; 2016 ; AoB PLANTS Volume 8 ; 8 ; >
 
   }
@@ -2362,7 +2362,7 @@
     au < zapped ; finished ; 2012 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 5 ; 5 ; >
     au < finished ; finished ; 2013 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 6 ; 6 ; >
     au < finished ; finished ; 2014 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 7 ; 7 ; >
-    au < testing ; exists ; 2015 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 8 ; 8 ; >
+    au < ready ; exists ; 2015 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 8 ; 8 ; >
     au < expected ; exists ; 2016 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 9 ; 9 ; >
 
     }
@@ -2427,7 +2427,7 @@
     param[base_url] = http://bjaed.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < testing ; exists ; 2015 ; BJA Education Volume 15 ; 15 ; >
+    au < ready ; exists ; 2015 ; BJA Education Volume 15 ; 15 ; >
     au < manifest ; exists ; 2016 ; BJA Education Volume 16 ; 16 ; >
 
   }
@@ -3389,7 +3389,7 @@
     au < crawling ; exists ; 2015 ; British Medical Bulletin Volume 113 ; 113 ; >
     au < crawling ; exists ; 2015 ; British Medical Bulletin Volume 114 ; 114 ; >
     au < crawling ; exists ; 2015 ; British Medical Bulletin Volume 115 ; 115 ; >
-    au < testing ; exists ; 2015 ; British Medical Bulletin Volume 116 ; 116 ; >
+    au < ready ; exists ; 2015 ; British Medical Bulletin Volume 116 ; 116 ; >
     au < expected ; exists ; 2016 ; British Medical Bulletin Volume 117 ; 117 ; >
 
     }
@@ -6016,7 +6016,7 @@
     param[base_url] = http://ehjqcco.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < testing ; exists ; 2015 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 1 ; 1 ; >
+    au < ready ; exists ; 2015 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 1 ; 1 ; >
     au < expected ; exists ; 2016 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 2 ; 2 ; >
 
   }
@@ -7139,7 +7139,7 @@
     au < exists ; exists ; 2014 ; FEMS Microbiology Letters Volume 360 ; 360 ; >
     au < exists ; exists ; 2014 ; FEMS Microbiology Letters Volume 361 ; 361 ; >
     au < crawling ; exists ; 2015 ; FEMS Microbiology Letters Volume 362 ; 362 ; >
-    au < testing ; exists ; 2015 ; FEMS Microbiology Letters Volume 363 ; 363 ; >
+    au < ready ; exists ; 2015 ; FEMS Microbiology Letters Volume 363 ; 363 ; >
     au < expected ; exists ; 2016 ; FEMS Microbiology Letters Volume 364 ; 364 ; >
 
   }
@@ -15586,7 +15586,7 @@
     au < finished ; finished ; 2012 ; The Leo Baeck Institute Yearbook Volume 57 ; 57 ; >
     au < frozen ; exists ; 2013 ; The Leo Baeck Institute Yearbook Volume 58 ; 58 ; >
     au < finished ; crawling ; 2014 ; The Leo Baeck Institute Yearbook Volume 59 ; 59 ; >
-    au < testing ; exists ; 2015 ; The Leo Baeck Institute Yearbook Volume 60 ; 60 ; >
+    au < ready ; exists ; 2015 ; The Leo Baeck Institute Yearbook Volume 60 ; 60 ; >
     au < expected ; exists ; 2016 ; The Leo Baeck Institute Yearbook Volume 61 ; 61 ; >
 
     }
@@ -18835,7 +18835,7 @@
     au < crawling ; exists ; 2014 ; Pathogens and Disease Volume 71 ; 71 ; >
     au < exists ; exists ; 2014 ; Pathogens and Disease Volume 72 ; 72 ; >
     au < crawling ; exists ; 2015 ; Pathogens and Disease Volume 73 ; 73 ; >
-    au < testing ; exists ; 2015 ; Pathogens and Disease Volume 74 ; 74 ; >
+    au < ready ; exists ; 2015 ; Pathogens and Disease Volume 74 ; 74 ; >
     au < expected ; exists ; 2015 ; Pathogens and Disease Volume 75 ; 75 ; >
     au < expected ; exists ; 2016 ; Pathogens and Disease Volume 76 ; 76 ; >
 
@@ -22819,7 +22819,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < finished ; crawling ; 2014 ; Transactions of the London Mathematical Society Volume 1 ; 1 ; >
-    au < testing ; exists ; 2015 ; Transactions of the London Mathematical Society Volume 2 ; 2 ; >
+    au < ready ; exists ; 2015 ; Transactions of the London Mathematical Society Volume 2 ; 2 ; >
     au < expected ; exists ; 2016 ; Transactions of the London Mathematical Society Volume 3 ; 3 ; >
 
   }
@@ -23381,7 +23381,7 @@
     au < finished ; finished ; 2012 ; Yearbook of European Law Volume 31 ; 31 ; >
     au < frozen ; exists ; 2013 ; Yearbook of European Law Volume 32 ; 32 ; >
     au < finished ; finished ; 2014 ; Yearbook of European Law Volume 33 ; 33 ; >
-    au < testing ; exists ; 2015 ; Yearbook of European Law Volume 34 ; 34 ; >
+    au < ready ; exists ; 2015 ; Yearbook of European Law Volume 34 ; 34 ; >
     au < expected ; exists ; 2016 ; Yearbook of European Law Volume 35 ; 35 ; >
 
   }
@@ -24134,7 +24134,7 @@
 
       au < finished ; finished ; 2013 ; Conservation Physiology Volume 1 ; 1 ; >
       au < finished ; finished ; 2014 ; Conservation Physiology Volume 2 ; 2 ; >
-      au < testing ; exists ; 2015 ; Conservation Physiology Volume 3 ; 3 ; >
+      au < ready ; exists ; 2015 ; Conservation Physiology Volume 3 ; 3 ; >
       au < expected ; exists ; 2016 ; Conservation Physiology Volume 4 ; 4 ; >
 
     }
