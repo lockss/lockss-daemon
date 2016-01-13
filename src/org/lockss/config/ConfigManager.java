@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -2112,11 +2112,9 @@ public class ConfigManager implements LockssManager {
    */
   public synchronized void startAuBatch() {
     auBatchDepth++;
-    log.critical("startAuBatch: " + auBatchDepth, new Throwable());
   }
 
   public synchronized void finishAuBatch() throws IOException {
-    log.critical("finishAuBatch: " + auBatchDepth, new Throwable());
     executeDeferredAuBatch();
     if (--auBatchDepth < 0) {
       log.warning("auBatchDepth want negative, resetting to zero",

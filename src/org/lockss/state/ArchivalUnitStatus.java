@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -297,7 +297,7 @@ public class ArchivalUnitStatus
 	  rowL.add(makeRow(au, nodeMan, inclCols));
 	  stats.aus++;
 	} catch (Exception e) {
-	  logger.warning("Unexpected expection building row", e);
+	  logger.warning("Unexpected execption building row", e);
 	}
       }
       stats.restarting = pluginMgr.getNumAusRestarting();
@@ -544,7 +544,7 @@ public class ArchivalUnitStatus
 	  rowL.add(makeRow(table, au));
 	  stats.aus++;
 	} catch (Exception e) {
-	  logger.warning("Unexpected expection building row", e);
+	  logger.warning("Unexpected execption building row", e);
 	}
       }
       stats.restarting = pluginMgr.getNumAusRestarting();
@@ -652,7 +652,7 @@ public class ArchivalUnitStatus
 	try {
 	  rowL.add(makeRow(table, cu));
 	} catch (Exception e) {
-	  logger.warning("Unexpected expection building row", e);
+	  logger.warning("Unexpected execption building row", e);
 	}
       }
       return rowL;
