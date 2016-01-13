@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -497,8 +497,8 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     }
 
     @Override
-    public void storeContentIn(String url, InputStream input,
-        CIProperties headers)
+    protected void storeContentIn(String url, InputStream input,
+				  CIProperties headers)
         throws IOException {
       super.storeContentIn(url, input, headers);
       wasStored = true;

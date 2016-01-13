@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -328,7 +328,7 @@ public class MockArchivalUnit implements ArchivalUnit {
       // here, so make it ok to call getUncachedInputStream() again.  The
       // semantics of makeUrlCacher() is that it makes a new one each
       // time.)
-      ((MockUrlCacher)uc).setNotExecuted();
+      ((MockUrlCacher)uc).setNotExecuted(ud);
       logger.debug(uc+" came from ucHash");
     } else {
       logger.debug("ucHash is null, so makeUrlCacher is returning null");

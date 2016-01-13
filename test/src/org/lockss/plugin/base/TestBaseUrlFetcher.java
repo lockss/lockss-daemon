@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -441,6 +441,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     assertEquals("555666", props.get(CachedUrl.PROPERTY_FETCH_TIME));
   }
 
+  // Ensure no compression performed on receipt
   public void testGzippedFetch() throws IOException {
     String testString = "test gzipped content";
     MockConnectionBaseUrlFetcher muf =
@@ -449,8 +450,8 @@ public class TestBaseUrlFetcher extends LockssTestCase {
       makeConn(200, "", null, new GZIPpedInputStream(testString));
     mconn.setResponseContentEncoding("gzip");
     muf.addConnection(mconn);
-    InputStream is = muf.getUncachedInputStream();
-    assertReaderMatchesString(testString, new InputStreamReader(is));
+    assertSameBytes(new GZIPpedInputStream(testString),
+		    muf.getUncachedInputStream());
   }
 
   public void testMalformedUrlException() throws IOException {
@@ -1251,6 +1252,48 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     }
   }
 
+  public void testCacheLPCCompressedLoginPage() throws IOException {
+    StringLoginPageChecker loginPageChecker =
+      new StringLoginPageChecker("login string");
+    List<String> urls = ListUtil.list("http://example.com");
+    mau.setStartUrls(urls);
+    mau.setPermissionUrls(urls);
+    mau.setLoginPageChecker(loginPageChecker);
+    mau.setRefetchDepth(99);
+    fetcher.setUrlConsumerFactory(new PassiveUrlConsumerFactory());
+    fetcher._input = new GZIPpedInputStream("xxxlogin stringmxxx");
+    fetcher._headers = fromArgs(CachedUrl.PROPERTY_CONTENT_ENCODING, "gzip"); 
+    // should cache
+    try {
+      fetcher.fetch();
+      fail("Should have thrown a CacheException.PermissionException");
+    } catch (CacheException.PermissionException ex) {
+    }
+  }
+
+  public void testCacheLPCCompressedNotLoginPage() throws IOException {
+    StringLoginPageChecker loginPageChecker =
+      new StringLoginPageChecker("login string");
+    List<String> urls = ListUtil.list("http://example.com");
+    mau.setStartUrls(urls);
+    mau.setPermissionUrls(urls);
+    mau.setLoginPageChecker(loginPageChecker);
+    mau.setRefetchDepth(99);
+    fetcher.setUrlConsumerFactory(new PassiveUrlConsumerFactory());
+    fetcher._input = new GZIPpedInputStream("xxx content content content xxx");
+    fetcher._headers = fromArgs(CachedUrl.PROPERTY_CONTENT_ENCODING, "gzip"); 
+    // should cache
+    assertEquals(UrlFetcher.FetchResult.FETCHED, fetcher.fetch());
+    assertTrue(loginPageChecker.wasCalled());
+  }
+
+  CIProperties fromArgs(String prop, String val) {
+    CIProperties props = new CIProperties();
+    props.put(prop, val);
+    return props;
+  }
+
+
   /**
    * Tests that we wrap input streams that don't support marks in a
    * BufferedInputStream
@@ -1292,6 +1335,25 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     public boolean isLoginPage(Properties props, Reader reader) {
       wasCalled = true;
       return this.isLoginPage;
+    }
+
+    public boolean wasCalled() {
+      return this.wasCalled;
+    }
+  }
+
+  class StringLoginPageChecker implements LoginPageChecker {
+    private boolean wasCalled = false;
+    private String str;
+
+    StringLoginPageChecker(String str) {
+      this.str = str;
+    }
+
+    public boolean isLoginPage(Properties props, Reader reader)
+	throws IOException {
+      wasCalled = true;
+      return StringUtil.containsString(reader, str);
     }
 
     public boolean wasCalled() {

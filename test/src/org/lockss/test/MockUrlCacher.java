@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -52,7 +52,6 @@ public class MockUrlCacher implements UrlCacher {
   private MockCachedUrlSet cus = null;
   private MockCachedUrl cu;
   private String url;
-  private InputStream uncachedIS;
   private CIProperties uncachedProp;
 
   private boolean shouldBeCached = false;
@@ -68,6 +67,8 @@ public class MockUrlCacher implements UrlCacher {
   private LockssWatchdog wdog;
   private String fetchUrl;
   private List<String> redirectUrls;
+  private boolean isReadContent = false;
+
 
   public MockUrlCacher(MockArchivalUnit au, UrlData ud){
     this.url = ud.url;
@@ -152,11 +153,7 @@ public class MockUrlCacher implements UrlCacher {
     setCachedUrl(cu);
   }
 
-    // Write interface - used by the crawler.
-  public void storeContent(InputStream input,
-      CIProperties headers) throws IOException{
-    storeContent();
-  }
+  // Write interface - used by the crawler.
   public void storeContent() throws IOException{
     MockCachedUrl cu = (MockCachedUrl)getCachedUrl();
     if (cu != null) {
@@ -169,11 +166,26 @@ public class MockUrlCacher implements UrlCacher {
         cus.addCachedUrl(url);
       }
     }
-    ByteArrayOutputStream baos = new ByteArrayOutputStream();
-//     logger.critical("Storing from " + input);
-//     long bytes = StreamUtil.copy(input, baos);
-//     logger.debug3("Stored " + bytes + " bytes");
-//     storedContent = baos.toByteArray();
+    if (isReadContent) {
+      ByteArrayOutputStream baos = new ByteArrayOutputStream();
+      long bytes = StreamUtil.copy(input, baos);
+      logger.debug3("Stored " + bytes + " bytes");
+      storedContent = baos.toByteArray();
+    }
+  }
+
+  public void setReadContent(boolean val) {
+    isReadContent = val;
+  }
+
+  /** Return an array of the bytes that were stored, or null if
+   * storeContent() hasn't been called */
+  public byte[] getStoredContentBytes() {
+    return storedContent;
+  }
+
+  public InputStream getStoredContentStream() {
+    return new ByteArrayInputStream(storedContent);
   }
 
   public void setCachingException(IOException e, int numTimesToThrow) {
@@ -217,14 +229,13 @@ public class MockUrlCacher implements UrlCacher {
     executed = false;
   }
 
-  public void reset() {
+  void setNotExecuted(UrlData ud) {
+    setNotExecuted();
+    this.headers = ud.headers;
+    this.input = ud.input;
   }
 
  //mock specific acessors
-
-  public void setUncachedInputStream(InputStream is){
-    uncachedIS = is;
-  }
 
   public void setUncachedProperties(CIProperties prop){
     uncachedProp = prop;

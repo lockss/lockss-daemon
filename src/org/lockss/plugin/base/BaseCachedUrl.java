@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -213,9 +213,44 @@ public class BaseCachedUrl implements CachedUrl {
     return true;
   }
 
+  /** Return an InputStream on the content.  If a Content-Encoding header
+   * is present indicating that the content is compressed, it is
+   * decompressed. */
   public InputStream getUnfilteredInputStream() {
     ensureRnc();
-    return rnc.getInputStream();
+    InputStream in = rnc.getInputStream();;
+    String contentEncoding = getProperty(PROPERTY_CONTENT_ENCODING);
+    if (StringUtil.isNullString(contentEncoding)) {
+      return in;
+    }
+    // Daemon versions 1.67 and 1.68 decompressed on receipt but didn't
+    // remove the Content-Encoding header.  If decompression fails return
+    // the raw stream.
+    InputStream bin = new BufferedInputStream(in);
+    bin.mark(1024);
+    try {
+      InputStream res =
+	StreamUtil.getUncompressedInputStream(bin, contentEncoding);
+      if (contentEncoding.equalsIgnoreCase("deflate")) {
+	// InflaterInputStream doesn't throw on bad input until first byte
+	// is read.  (GZIPInputStream throws on construction.)
+	res = new BufferedInputStream(res);
+	res.mark(1);
+	res.read();
+	res.reset();
+      }
+      return res;
+    } catch (IOException e) {
+      logger.warning("Decompression failed, returning raw stream: " + getUrl(),
+		     e);
+      try {
+	bin.reset();
+	return bin;
+      } catch (IOException e2) {
+	logger.warning("Reset (after decompression error) failed", e2);
+	throw new RuntimeException("Internal error: please report \"Insufficient buffering for reset\".");
+      }
+    }
   }
 
   public InputStream getUnfilteredInputStream(HashedInputStream.Hasher hasher) {
@@ -230,6 +265,14 @@ public class BaseCachedUrl implements CachedUrl {
   private InputStream newHashedInputStream(InputStream is,
 					   HashedInputStream.Hasher hasher) {
     return new BufferedInputStream(new HashedInputStream(is, hasher));
+  }
+
+  private String getProperty(String prop) {
+    CIProperties props = getProperties();
+    if (props != null) {
+      return props.getProperty(prop);
+    }
+    return null;
   }
 
   public String getContentType() {
