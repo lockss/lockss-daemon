@@ -68,7 +68,7 @@ public class JafscdHtmlMetadataExtractorFactory implements FileMetadataExtractor
     }
 
     protected static final Pattern DOI_PAT =
-            Pattern.compile(".+http://dx.doi.org/([^\\s]+),?\\s.+");
+            Pattern.compile(".+http://dx.doi.org/([^\\s<,&]+)(<span[^>]+>)?([^\\s,&<]+)?.+");
 
     @Override
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
@@ -89,7 +89,14 @@ public class JafscdHtmlMetadataExtractorFactory implements FileMetadataExtractor
 				log.debug("found DOI line:" + line);
 				Matcher m = DOI_PAT.matcher(line);
 				if(m.matches()){
-					am.putRaw("doi", m.group(1));
+					int count = m.groupCount();
+					String doi = "";
+					if(count >= 3 && m.group(3) != null) {
+						doi = m.group(1) + m.group(3);
+					} else if(count > 0) {
+						doi = m.group(1);
+					}
+					am.putRaw("doi", doi);
 					break;
 				}
 			}
