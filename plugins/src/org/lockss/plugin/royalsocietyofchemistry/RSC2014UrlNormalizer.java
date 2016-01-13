@@ -49,7 +49,7 @@ import org.lockss.util.StringUtil;
 
 public class RSC2014UrlNormalizer implements UrlNormalizer {
   
-  private static final Logger log = Logger.getLogger(RSC2014PdfFilterFactory.class);
+  private static final Logger log = Logger.getLogger(RSC2014UrlNormalizer.class);
   
   /*  Note: this assumes that all AUs have same params, this way we set the urls once
    *       param[base_url] = http://pubs.rsc.org/
