@@ -3,10 +3,17 @@ See http://www.lockss.org/ for information about the project.
 
 Obtaining Source
 ----------------
+A one-time copy can be obtained with wget or curl:
 
-The latest version of this code can be obtained via Subversion with
+wget https://github.com/lockss/lockss-daemon/archive/master.zip`
+or
+curl -L -o master.zip https://github.com/lockss/lockss-daemon/archive/master.zip`
 
- svn checkout svn://svn.code.sf.net/p/lockss/svn/lockss-daemon/trunk lockss-daemon
+To establish a local copy of the LOCKSS git repository you can
+use the “git clone” command to establish the repository and “git pull” to pull in updates:
+
+git clone https://github.com/lockss/lockss-daemon.git` # to get working copy
+git pull` # to update
 
 Prerequisites
 -------------
@@ -20,7 +27,7 @@ Installed Packages:
 - Python 2.5 or greater (but not 3.x).
 
 (On Debian or Ubuntu,
-  apt-get install python sun-java6-jdk ant ant-optional
+  apt-get install python sun-java7-jdk ant ant-optional
 )
 
 Other Prerequisites:
@@ -33,12 +40,12 @@ Other Prerequisites:
 - For some of the tools the JAVA_HOME env var must be set to the directory
   in which the JDK is installed.  (I.e., it's expected that tools.jar can
   be found in ${JAVA_HOME}/lib)
-  
+
 
 To Build
 --------
 
 ant test-all		Builds the system and runs all unit tests
 ant test-one -Dclass=org.lockss.foo.TestBar
-			Builds the system and runs one JUnit test class.
+			        Builds the system and runs one JUnit test class.
 ant -projecthelp	Lists other build options
