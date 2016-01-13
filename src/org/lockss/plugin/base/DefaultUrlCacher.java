@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -164,7 +164,7 @@ public class DefaultUrlCacher implements UrlCacher {
    * REDIRECT_OPTION_STORE_ALL was specified, store the content and
    * headers under each name in the chain of redirections.
    */
-  public void storeContent(InputStream input, CIProperties headers)
+  private void storeContent(InputStream input, CIProperties headers)
       throws IOException {
     if(input != null) {
       Collection<String> startUrls = au.getStartUrls();
@@ -254,8 +254,8 @@ public class DefaultUrlCacher implements UrlCacher {
     return false;
   }
 
-  public void storeContentIn(String url, InputStream input,
-			     CIProperties headers)
+  protected void storeContentIn(String url, InputStream input,
+				CIProperties headers)
       throws IOException {
     RepositoryNode leaf = null;
     OutputStream os = null;

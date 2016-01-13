@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -2332,11 +2332,31 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     return leaf;
   }
 
+  public static RepositoryNode createLeaf(LockssRepository repo, String url,
+      InputStream contentStream, Properties props) throws Exception {
+    RepositoryNode leaf = repo.createNewNode(url);
+    createContentVersion(leaf, contentStream, props);
+    return leaf;
+  }
+
   public static void createContentVersion(RepositoryNode leaf,
 					  String content, Properties props)
       throws Exception {
     leaf.makeNewVersion();
     writeToLeaf(leaf, content);
+    if (props==null) {
+      props = new Properties();
+    }
+    leaf.setNewProperties(props);
+    leaf.sealNewVersion();
+  }
+
+  public static void createContentVersion(RepositoryNode leaf,
+					  InputStream contentStream,
+					  Properties props)
+      throws Exception {
+    leaf.makeNewVersion();
+    writeToLeaf(leaf, contentStream);
     if (props==null) {
       props = new Properties();
     }
@@ -2354,6 +2374,14 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     StreamUtil.copy(is, os);
     os.close();
     is.close();
+  }
+
+  public static void writeToLeaf(RepositoryNode leaf, InputStream contentStream)
+      throws Exception {
+    OutputStream os = leaf.getNewOutputStream();
+    StreamUtil.copy(contentStream, os);
+    os.close();
+    contentStream.close();
   }
 
   public static String getLeafContent(RepositoryNodeVersion leaf)

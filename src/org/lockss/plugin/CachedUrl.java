@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -100,6 +100,8 @@ public interface CachedUrl extends CachedUrlSetNode {
   // case-sensitive context in RepositoryNode.  The use of CIProperties
   // should be pushed down into the repository.
   public static final String PROPERTY_CHECKSUM = "x-lockss-checksum";
+
+  public static final String PROPERTY_CONTENT_ENCODING = "content-encoding";
 
   /** CachedUrl properties that the daemon uses internally, should not be
    * served with content */

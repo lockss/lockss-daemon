@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -197,6 +197,10 @@ public class TestBaseCachedUrl extends LockssTestCase {
     abstract void createLeaf(String url, String content, CIProperties props)
 	throws Exception;
 
+    abstract void createLeaf(String url, InputStream contentStream,
+			     CIProperties props)
+	throws Exception;
+
     /** Concrete class must return either the current version or an older
      * version here */
     abstract CachedUrl getTestCu(String url);
@@ -219,7 +223,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
 
     public void testIsLeaf() throws Exception {
       createLeaf(url1, content1, null);
-      createLeaf(url2, null, null);
+      createLeaf(url2, (String)null, null);
 
       CachedUrl cu = getTestCu(url1);
       assertTrue(cu.isLeaf());
@@ -265,7 +269,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
       assertTrue(cu.hasContent());
     }
 
-    public void testOpenForReading() throws Exception {
+    public void testGetUnfilteredInputStream() throws Exception {
       createLeaf(url1, content1, null);
       createLeaf(url2, content2, null);
       createLeaf(url3, "", null);
@@ -281,6 +285,52 @@ public class TestBaseCachedUrl extends LockssTestCase {
       cu = getTestCu(url3);
       urlIs = cu.getUnfilteredInputStream();
       assertEquals("", StringUtil.fromInputStream(urlIs));
+    }
+
+    public void testGZipped() throws Exception {
+      String test = "this is some text to be compressssssed";
+      createLeaf(url1, new GZIPpedInputStream(test),
+		 fromArgs(CachedUrl.PROPERTY_CONTENT_ENCODING,
+			  "gzip"));
+      createLeaf(url2, new GZIPpedInputStream(test), null);
+      createLeaf(url3, test,
+		 fromArgs(CachedUrl.PROPERTY_CONTENT_ENCODING,
+			  "gzip"));
+
+      CachedUrl cu = getTestCu(url1);
+      InputStream urlIs = cu.getUnfilteredInputStream();
+      assertEquals(test, StringUtil.fromInputStream(urlIs));
+
+      cu = getTestCu(url2);
+      assertSameBytes(new GZIPpedInputStream(test),
+		      cu.getUnfilteredInputStream());
+
+      cu = getTestCu(url3);
+      urlIs = cu.getUnfilteredInputStream();
+      assertEquals(test, StringUtil.fromInputStream(urlIs));
+    }
+
+    public void testDeflated() throws Exception {
+      String test = "this is a football";
+      createLeaf(url1, new DeflatedInputStream(test),
+		 fromArgs(CachedUrl.PROPERTY_CONTENT_ENCODING,
+			  "deflate"));
+      createLeaf(url2, new DeflatedInputStream(test), null);
+      createLeaf(url3, test,
+		 fromArgs(CachedUrl.PROPERTY_CONTENT_ENCODING,
+			  "deflate"));
+
+      CachedUrl cu = getTestCu(url1);
+      InputStream urlIs = cu.getUnfilteredInputStream();
+      assertEquals(test, StringUtil.fromInputStream(urlIs));
+
+      cu = getTestCu(url2);
+      assertSameBytes(new DeflatedInputStream(test),
+		      cu.getUnfilteredInputStream());
+
+      cu = getTestCu(url3);
+      urlIs = cu.getUnfilteredInputStream();
+      assertEquals(test, StringUtil.fromInputStream(urlIs));
     }
 
     public void testOpenForHashingDefaultsToNoFiltering() throws Exception {
@@ -492,7 +542,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
       CIProperties newProps = new CIProperties();
       newProps.setProperty("test", "value");
       newProps.setProperty("test2", "value2");
-      createLeaf(url1, null, newProps);
+      createLeaf(url1, (String)null, newProps);
 
       CachedUrl cu = getTestCu(url1);
       CIProperties urlProps = cu.getProperties();
@@ -504,7 +554,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
       CIProperties newProps = new CIProperties();
       newProps.setProperty("test", "value");
       newProps.setProperty("test2", "value2");
-      createLeaf(url1, null, newProps);
+      createLeaf(url1, (String)null, newProps);
 
       CachedUrl cu = getTestCu(url1);
       cu.addProperty(CachedUrl.PROPERTY_CHECKSUM, "foobar");
@@ -649,6 +699,11 @@ public class TestBaseCachedUrl extends LockssTestCase {
       TestRepositoryNodeImpl.createLeaf(repo, url, content, props);
     }
 
+    protected void createLeaf(String url, InputStream contentStream,
+			      CIProperties props) throws Exception {
+      TestRepositoryNodeImpl.createLeaf(repo, url, contentStream, props);
+    }
+
     CachedUrl getTestCu(String url) {
       return mau.makeCachedUrl(url);
     }
@@ -673,6 +728,15 @@ public class TestBaseCachedUrl extends LockssTestCase {
       RepositoryNode node =
 	TestRepositoryNodeImpl.createLeaf(repo, url, badcontent+"1", p);
       TestRepositoryNodeImpl.createContentVersion(node, content, props);
+    }
+
+    protected void createLeaf(String url, InputStream contentStream,
+			      CIProperties props) throws Exception {
+      Properties p = new Properties();
+      p.put("wrongkey", "wrongval");
+      RepositoryNode node =
+	TestRepositoryNodeImpl.createLeaf(repo, url, badcontent+"1", p);
+      TestRepositoryNodeImpl.createContentVersion(node, contentStream, props);
     }
 
     CachedUrl getTestCu(String url) {
@@ -705,6 +769,16 @@ public class TestBaseCachedUrl extends LockssTestCase {
       RepositoryNode node =
 	TestRepositoryNodeImpl.createLeaf(repo, url, badcontent+"1", p);
       TestRepositoryNodeImpl.createContentVersion(node, content, props);
+      TestRepositoryNodeImpl.createContentVersion(node, badcontent+"3", p);
+    }
+
+    protected void createLeaf(String url, InputStream contentStream,
+			      CIProperties props) throws Exception {
+      Properties p = new Properties();
+      p.put("wrongkey", "wrongval");
+      RepositoryNode node =
+	TestRepositoryNodeImpl.createLeaf(repo, url, badcontent+"1", p);
+      TestRepositoryNodeImpl.createContentVersion(node, contentStream, props);
       TestRepositoryNodeImpl.createContentVersion(node, badcontent+"3", p);
     }
 

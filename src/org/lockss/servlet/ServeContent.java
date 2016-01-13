@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1098,27 +1098,7 @@ public class ServeContent extends LockssServlet {
       throws CacheException.PermissionException, IOException {
     // get the input stream from the connection
     InputStream input = conn.getResponseInputStream();
-
-    // only check for HTML login pages to avoid doing unnecessary
-    // work for other document types; publishers typically return
-    // a 200 response code and an HTML page with a login form
-    String ctype = conn.getResponseContentType();
-    String mimeType = HeaderUtil.getMimeTypeFromContentType(ctype);
-    if ("text/html".equalsIgnoreCase(mimeType)) {
-      // build list of response header properties
-      CIProperties headers = new CIProperties();
-      for (int i = 0; true; i++) {
-        String key = conn.getResponseHeaderFieldKey(i);
-        String val = conn.getResponseHeaderFieldVal(i);
-        if ((key == null) && (val == null)) {
-          break;
-        }
-        headers.put(key, val);
-      }
-      // throws CacheException.PermissionException if found login page
-      input = checkLoginPage(input, headers);
-    }
-
+    input = checkLoginPage(input, conn);
     return input;
   }
 
@@ -1129,73 +1109,116 @@ public class ServeContent extends LockssServlet {
    * will be closed if a new one is created.
    *
    * @param input an input stream
-   * @param headers a set of header properties
+   * @param conn the url connection from which to get response info
    * @return an input stream positioned at the same position as the original
    *  one if the original stream is not a login page
    * @throws CacheException.PermissionException if the connection is to a
    *  login page or the LoginPageChecker for the plugin reported an error
    * @throws IOException if IO error while checking the stream
    */
-  private InputStream checkLoginPage(InputStream input, CIProperties headers)
+  private InputStream checkLoginPage(InputStream input,
+				     LockssUrlConnection conn)
       throws CacheException.PermissionException, IOException {
 
     LoginPageChecker checker = au.getLoginPageChecker();
-    if (checker != null) {
-      InputStream oldInput = input;
+    if (checker == null) {
+      return input;
+    }
+    // only check for HTML login pages to avoid doing unnecessary
+    // work for other document types; publishers typically return
+    // a 200 response code and an HTML page with a login form
+    String ctype = conn.getResponseContentType();
+    String mimeType = HeaderUtil.getMimeTypeFromContentType(ctype);
+    if (!Constants.MIME_TYPE_HTML.equalsIgnoreCase(mimeType)) {
+      return input;
+    }
 
-      // buffer html page stream to allow login page checker to read it
-      int limit = CurrentConfig.getIntParam(
-                                             BaseUrlFetcher.PARAM_LOGIN_CHECKER_MARK_LIMIT,
-                                             BaseUrlFetcher.DEFAULT_LOGIN_CHECKER_MARK_LIMIT);
-      DeferredTempFileOutputStream dos =
-        new DeferredTempFileOutputStream(limit);
+    InputStream oldInput = input;
+    // copy page to tmp file to allow login page checker to read it
+    // XXX this is an inconsistent use of this param
+    int limit =
+      CurrentConfig.getIntParam(BaseUrlFetcher.PARAM_LOGIN_CHECKER_MARK_LIMIT,
+				BaseUrlFetcher.DEFAULT_LOGIN_CHECKER_MARK_LIMIT);
+    DeferredTempFileOutputStream dos = new DeferredTempFileOutputStream(limit);
+    try {
+      StreamUtil.copy(input, dos);
+    } finally {
+      IOUtil.safeClose(oldInput);
+      IOUtil.safeClose(dos);
+    }
+    // Get response headers in form required by login page checker
+    CIProperties headers = ciPropsFromConnResponse(conn);
+
+    try {
+      input = dos.getInputStream();
+    } catch (IOException e) {
+      dos.deleteTempFile();
+      throw e;
+    }
+    // Decompress if necessary before invoking checker
+    // XXX Refactor to decompress higher up so don't have to repeat for rewriter
+    String contentEncoding = conn.getResponseContentEncoding();
+    if (contentEncoding != null) {
+      if (log.isDebug3())
+	log.debug3("Wrapping for login page checker Content-Encoding: " +
+		   contentEncoding);
       try {
-        StreamUtil.copy(input, dos);
-      } finally {
-        IOUtil.safeClose(oldInput);
-        IOUtil.safeClose(dos);
+	input = StreamUtil.getUncompressedInputStream(input, contentEncoding);
+	// Rewritten response is not encoded, and we don't know its length
+	// (not that the login page checker is likely to care)
+	headers.remove(HttpFields.__ContentEncoding);
+	headers.remove(HttpFields.__ContentLength);
+      } catch (UnsupportedEncodingException e) {
+	log.warning("Unsupported Content-Encoding: " + contentEncoding +
+		    ", not decoding before checking for login page " + url);
       }
-      try {
-        input = dos.getInputStream();
-      } catch (IOException e) {
-        dos.deleteTempFile();
-        throw e;
+    }
+    // create reader for input stream
+    String charset = CharsetUtil.guessCharsetFromStream(input,ctype);
+    try {
+      Reader reader = new InputStreamReader(input, charset);
+
+      if (checker.isLoginPage(headers, reader)) {
+	IOUtil.safeClose(input);
+	input = null;
+	dos.deleteTempFile();
+	throw new CacheException.PermissionException("Found a login page");
       }
-      // create reader for input stream
-      String ctype = headers.getProperty("Content-Type");
-
-      String charset = CharsetUtil.guessCharsetFromStream(input,ctype);
-      try {
-        Reader reader = new InputStreamReader(input, charset);
-
-        if (checker.isLoginPage(headers, reader)) {
-          IOUtil.safeClose(input);
-          input = null;
-          dos.deleteTempFile();
-          throw new CacheException.PermissionException("Found a login page");
-        }
-      } catch (PluginException e) {
-        CacheException.PermissionException ex =
-          new CacheException.PermissionException("Error checking login page");
-        ex.initCause(e);
-        IOUtil.safeClose(input);
-        input = null;
-        dos.deleteTempFile();
-        throw ex;
-      } finally {
-        if (input == null) {
-          // delete the temp file immediately if not returning an input
-          // stream open on it
-          dos.deleteTempFile();
-        } else {
-          IOUtil.safeClose(input);
-          return dos.getDeleteOnCloseInputStream();
-        }
+    } catch (PluginException e) {
+      CacheException.PermissionException ex =
+	new CacheException.PermissionException("Error checking login page");
+      ex.initCause(e);
+      IOUtil.safeClose(input);
+      input = null;
+      dos.deleteTempFile();
+      throw ex;
+    } finally {
+      if (input == null) {
+	// delete the temp file immediately if not returning an input
+	// stream open on it
+	dos.deleteTempFile();
+      } else {
+	IOUtil.safeClose(input);
+	return dos.getDeleteOnCloseInputStream();
       }
     }
 
     return input;
   }
+
+  CIProperties ciPropsFromConnResponse(LockssUrlConnection conn) {
+    CIProperties res = new CIProperties();
+    for (int i = 0; true; i++) {
+      String key = conn.getResponseHeaderFieldKey(i);
+      String val = conn.getResponseHeaderFieldVal(i);
+      if ((key == null) && (val == null)) {
+	break;
+      }
+      res.put(key, val);
+    }
+    return res;
+  }
+
 
   /**
    * Serve content from publisher.
@@ -1257,8 +1280,9 @@ public class ServeContent extends LockssServlet {
         try {
           respStrm =
               StreamUtil.getUncompressedInputStream(respStrm, contentEncoding);
-          // Rewritten response is not encoded
+          // Rewritten response is not encoded, and we don't know its length
           contentEncoding = null;
+	  responseContentLength = -1;
         } catch (UnsupportedEncodingException e) {
           log.warning("Unsupported Content-Encoding: " + contentEncoding +
                       ", not rewriting " + url);

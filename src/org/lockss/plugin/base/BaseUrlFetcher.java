@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -416,7 +416,7 @@ public class BaseUrlFetcher implements UrlFetcher {
           return null;
         }
       }
-      input = conn.getUncompressedResponseInputStream();
+      input = conn.getResponseInputStream();
       if (input == null) {
         log.warning("Got null input stream back from conn.getResponseInputStream");
       }
@@ -538,7 +538,7 @@ public class BaseUrlFetcher implements UrlFetcher {
     checkConnectException(conn);
   }
   
-  protected InputStream checkLoginPage(InputStream input, Properties headers,
+  protected InputStream checkLoginPage(InputStream input, CIProperties headers,
 				       String lastModified)
       throws IOException {
     LoginPageChecker checker = au.getLoginPageChecker();
@@ -549,13 +549,35 @@ public class BaseUrlFetcher implements UrlFetcher {
       }
       input.mark(CurrentConfig.getIntParam(PARAM_LOGIN_CHECKER_MARK_LIMIT,
 					   DEFAULT_LOGIN_CHECKER_MARK_LIMIT));
+      InputStream uncIn = input;
+      String contentEncoding =
+	headers.getProperty(CachedUrl.PROPERTY_CONTENT_ENCODING);
+      if (contentEncoding != null) {
+	if (log.isDebug3())
+	  log.debug3("Wrapping for login page checker Content-Encoding: " +
+		     contentEncoding);
+	try {
+	  uncIn = StreamUtil.getUncompressedInputStream(uncIn, contentEncoding);
+	  // Rewritten response is not encoded, and we don't know its length
+	  // (not that the login page checker is likely to care)
+	  // Don't modify the Properties that were passed in
+	  headers = CIProperties.fromProperties(headers);
+	  headers.remove(CachedUrl.PROPERTY_CONTENT_ENCODING);
+	  headers.remove("Content-Length");
+	} catch (UnsupportedEncodingException e) {
+	  log.warning("Unsupported Content-Encoding: " + contentEncoding +
+		      ", not decoding before checking for login page " +
+		      fetchUrl);
+	}
+      }
+
       Reader reader;
       String charset = AuUtil.getCharsetOrDefault(uncachedProperties);
       if(CharsetUtil.inferCharset()) {
-        reader = CharsetUtil.getReader(input, charset);
+        reader = CharsetUtil.getReader(uncIn, charset);
       }
       else {
-        reader = new InputStreamReader(input, charset);
+        reader = new InputStreamReader(uncIn, charset);
       }
       try {
         if (checker.isLoginPage(headers, reader)) {

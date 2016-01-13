@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -50,7 +50,7 @@ import org.lockss.daemon.Crawler.CrawlerFacade;
  */
 
 public class MockUrlFetcher implements UrlFetcher {
-  private static Logger logger = Logger.getLogger("MockUrlCacher");
+  private static Logger logger = Logger.getLogger(MockUrlFetcher.class);
 
   private MockArchivalUnit au = null;
   private MockCachedUrlSet cus = null;
@@ -244,7 +244,7 @@ public class MockUrlFetcher implements UrlFetcher {
 
   public String toString() {
     StringBuffer sb = new StringBuffer(url.length()+17);
-    sb.append("[MockUrlCacher: ");
+    sb.append("[MockUrlFetcher: ");
     sb.append(url);
     sb.append("]");
     return sb.toString();
@@ -291,6 +291,7 @@ public class MockUrlFetcher implements UrlFetcher {
     try {
       is.reset();
     } catch (IOException e) {
+      logger.error("Couldn't reset InputStream: " + is, e);
       return getUncachedInputStream();
     }
     return is;
