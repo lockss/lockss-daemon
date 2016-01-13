@@ -280,6 +280,21 @@
   {
   
     title < 
+      name = Journal of Portuguese Linguistics ;
+      issn = 1645-4537 ;
+      eissn = 2397-5563 
+    >
+    
+    param[base_url] = http://jpl.letras.ulisboa.pt/
+    param[journal_id] = jpl
+    
+    au < exists ; 2015 ; Journal of Portuguese Linguistics Volume 15 ; 15 ; 2015 >
+
+  }
+
+  {
+  
+    title < 
       name = Open Journal of Bioresources ;
       eissn = 2056-5542
     >
