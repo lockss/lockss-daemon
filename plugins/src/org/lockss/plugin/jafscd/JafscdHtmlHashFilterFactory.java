@@ -33,11 +33,15 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.jafscd;
 
 import java.io.InputStream;
+import java.io.Reader;
 
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.ReaderInputStream;
 
 public class JafscdHtmlHashFilterFactory implements FilterFactory {
 
@@ -71,9 +75,14 @@ public class JafscdHtmlHashFilterFactory implements FilterFactory {
      HtmlNodeFilters.tagWithAttributeRegex("a", "href", "mailto:"),
      
     };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    HtmlFilterInputStream filteredStream = new HtmlFilterInputStream(in,
+            encoding,
+            HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+
+    Reader filteredReader = FilterUtil.getReader(filteredStream, encoding);
+
+    // Remove white space
+    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
   }
 
 }
