@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -202,9 +202,18 @@ public class TestAuParamType extends LockssTestCase {
     assertEquals(ListUtil.list("foo", "foo"),
 		 AuParamType.Range.parse("foo-foo"));
 
-    // Should these be illegal?
-    assertEquals(ListUtil.list("bar"), AuParamType.Range.parse("bar"));
-    assertEquals(ListUtil.list("bar"), AuParamType.Range.parse("bar-"));
+    // Singleton is equivalent to range w/ same min and max
+    assertEquals(ListUtil.list("bar", "bar"), AuParamType.Range.parse("bar"));
+    try {
+      AuParamType.Range.parse("foo-");
+      fail("Range.parse(\"foo-bar\") should throw InvalidFormatException");
+    } catch (InvalidFormatException expected) {
+    }
+    try {
+      AuParamType.Range.parse("-foo");
+      fail("Range.parse(\"foo-bar\") should throw InvalidFormatException");
+    } catch (InvalidFormatException expected) {
+    }
     try {
       AuParamType.Range.parse("foo-bar");
       fail("Range.parse(\"foo-bar\") should throw InvalidFormatException");
@@ -217,17 +226,13 @@ public class TestAuParamType extends LockssTestCase {
     assertEquals(ListUtil.list(1L, 2L), AuParamType.NumRange.parse("1-02"));
     assertEquals(ListUtil.list(8L, 9L), AuParamType.NumRange.parse("08-09"));
     assertEquals(ListUtil.list(1L, 22L), AuParamType.NumRange.parse("1-022"));
+    assertEquals(ListUtil.list(4L, 4L), AuParamType.NumRange.parse("4"));
     assertEquals(ListUtil.list("foo", "foo"),
 		 AuParamType.NumRange.parse("foo-foo"));
 
     try {
       AuParamType.NumRange.parse("a-42");
       fail("NumRange.parse(\"a-42\") should throw InvalidFormatException");
-    } catch (InvalidFormatException expected) {
-    }
-    try {
-      AuParamType.NumRange.parse("12");
-      fail("NumRange.parse(\"foo-bar\") should throw InvalidFormatException");
     } catch (InvalidFormatException expected) {
     }
     try {

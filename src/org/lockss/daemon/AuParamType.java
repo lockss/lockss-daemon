@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -132,6 +132,13 @@ public enum AuParamType {
   Range(TYPE_RANGE) {
     public Object parse(String val) throws InvalidFormatException {
       Vector pair = StringUtil.breakAt(val, '-', 2, true, true);
+      // Turn range "S" into "S-S".
+      if (pair.size() == 1 && val.indexOf("-") < 0) {
+	pair.add(pair.firstElement());
+      }
+      if (pair.size() != 2) {
+	throw new InvalidFormatException("Invalid Range: " + val);
+      }
       String s_min = (String)pair.firstElement();
       String s_max = (String)pair.lastElement();
       if ( !(s_min.compareTo(s_max) <= 0) ) {
@@ -142,6 +149,11 @@ public enum AuParamType {
   NumRange(TYPE_NUM_RANGE) {
     public Object parse(String val) throws InvalidFormatException {
       Vector pair = StringUtil.breakAt(val,'-',2,true, true);
+
+      // Turn range "N" into "N-N".
+      if (pair.size() == 1 && val.indexOf("-") < 0) {
+	pair.add(pair.firstElement());
+      }
       if (pair.size() != 2) {
 	throw new InvalidFormatException("Invalid Range: " + val);
       }
