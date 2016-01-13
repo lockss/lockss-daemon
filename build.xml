@@ -6,7 +6,7 @@
  Ant build file for LOCKSS daemon
 ========================================================================
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1744,7 +1744,10 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
     </copy>
     <delete file="${rpm.root}/etc/init.d/lockss.solaris" quiet="true" />
     <delete file="${rpm.root}/etc/lockss/upgrade-solaris" quiet="true" />
-    <rpm specFile="lockss-daemon.spec" topDir="${rpm.top}" />
+    <!-- The two defines allow rpms built on CentOS 6 to be installed on
+	 CentOS 5 -->
+    <rpm specFile="lockss-daemon.spec" topDir="${rpm.top}"
+	 command="-bb --define &quot;_binary_filedigest_algorithm 1&quot; --define &quot;_binary_payload w9.gzdio&quot;" />
     <!-- rpmbuild failure doesn't necessarily cause rpm task to fail, so
          check whether any rpms were built  -->
     <fileset id="rpm.filesetid" dir="${rpm.rpms}" />
