@@ -22,7 +22,7 @@ To update the local copy run within you local lockss-daemon dir:
 `git pull`
 
 ### Building and Installing
- 
+
 ### Dependencies:
 - Sun JDK 7.  Java 8 is not yet supported.
 - Ant 1.7.1 or greater.  (http://ant.apache.org/)
@@ -34,10 +34,10 @@ On Debian or Ubuntu you can grab all of the above with:
 
 ### Other Dependencies:
 
-#### Junit 
+#### Junit
 Junit is included in the LOCKSS source distribution, but the Ant targets that invoke JUnit (test-xxx) require the JUnit jar to be on Ant's classpath.  The easiest way to do that is to copy lib/junit.jar into Ant's lib directory (\<ant-install-dir\>/ant/lib) or your local .ant/lib directory.
 
-#### JAVAHOME Environment variable
+##### JAVAHOME Environment variable
 For some of the tools the JAVAHOME env var must be set to the directory in which the JDK is installed.  (I.e., it's expected that tools.jar can be found in $JAVAHOME/lib)
 
 ### To Build
