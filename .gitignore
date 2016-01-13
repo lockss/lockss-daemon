@@ -1,0 +1,335 @@
+
+# /
+/.classpath
+/.depend
+/.project
+/.pydevproject
+/.settings
+/bin
+/classes
+/derby.log
+/export
+/instrumented
+/javadoc
+/jcoverage.ser
+/plugin-tool-log.txt
+/rpt-test-err
+/rpt-test-out
+/tempbuild
+/tmplib
+
+# /ant/
+/ant/classes
+
+# /generated/
+/generated/src
+/generated/classes
+
+# /lib/
+/lib/lockss-ant.jar
+/lib/lockss-generated-test.jar
+/lib/lockss-generated.jar
+/lib/lockss-platform.jar
+/lib/lockss-plugins-test.jar
+/lib/lockss-plugins.jar
+/lib/lockss-test.jar
+/lib/lockss-tools-test.jar
+/lib/lockss-tools.jar
+/lib/lockss.jar
+/lib/maxheap
+/lib/packing-list
+/lib/run-classpath
+/lib/run-props
+/lib/jsoup-1.7.1-sources.jar
+
+# /plugins/
+/plugins/classes
+/plugins/jars
+/plugins/externals
+
+# /plugins/test/
+/plugins/test/classes
+
+# /plugins/test/src/org/lockss/plugin/georgthiemeverlag/
+/plugins/test/src/org/lockss/plugin/georgthiemeverlag/TestGeorgThiemeVerlagPdfFilterFactory.java
+
+# /plugins/test/src/org/lockss/plugin/ingenta/
+/plugins/test/src/org/lockss/plugin/ingenta/TestIngentaPdfFilterFactory.java
+
+# /plugins/test/src/org/lockss/plugin/metapress/
+/plugins/test/src/org/lockss/plugin/metapress/TestMetaPressPdfFilterFactory.java
+
+# /rpms/RPMS/
+/rpms/RPMS/noarch
+
+# /scripts/slurp/
+/scripts/slurp/*.pyc
+/scripts/slurp/*.pyo
+
+# /scripts/tdb/
+/scripts/tdb/*.pyc
+/scripts/tdb/*.pyo
+
+# /scripts/ws/
+/scripts/ws/*.hosts
+
+# /src/org/lockss/htdocs/images/
+/src/org/lockss/htdocs/images/.xvpics
+
+# /src/org/lockss/repository/jcr/
+/src/org/lockss/repository/jcr/*.avaj
+
+# /test/
+/test/classes
+/test/javadoc
+/test/results
+/test/run-classpath
+/test/test-classpath
+/test/test-p-classpath
+
+# /test/frameworks/
+/test/frameworks/tags
+/test/frameworks/tdbxml
+
+# /test/frameworks/clean_up_daemon/
+/test/frameworks/clean_up_daemon/*.py[co]
+
+# /test/frameworks/lib/
+/test/frameworks/lib/*.py[co]
+
+# /test/frameworks/pylorus/
+/test/frameworks/pylorus/*.py[co]
+
+# /test/frameworks/run_dev/
+/test/frameworks/run_dev/cache
+/test/frameworks/run_dev/derby.log
+/test/frameworks/run_dev/dpid
+/test/frameworks/run_dev/export
+/test/frameworks/run_dev/history
+/test/frameworks/run_dev/iddb
+/test/frameworks/run_dev/lib
+/test/frameworks/run_dev/local.txt
+/test/frameworks/run_dev/test.out
+
+# /test/frameworks/run_multiple_daemons/
+/test/frameworks/run_multiple_daemons/lib
+/test/frameworks/run_multiple_daemons/lockss.opt
+
+# /test/frameworks/run_multiple_daemons/test1/
+/test/frameworks/run_multiple_daemons/test1/V1
+/test/frameworks/run_multiple_daemons/test1/V3
+/test/frameworks/run_multiple_daemons/test1/cache
+/test/frameworks/run_multiple_daemons/test1/config
+/test/frameworks/run_multiple_daemons/test1/db
+/test/frameworks/run_multiple_daemons/test1/derby.log
+/test/frameworks/run_multiple_daemons/test1/dpid
+/test/frameworks/run_multiple_daemons/test1/export
+/test/frameworks/run_multiple_daemons/test1/history
+/test/frameworks/run_multiple_daemons/test1/iddb
+/test/frameworks/run_multiple_daemons/test1/jvm_args
+/test/frameworks/run_multiple_daemons/test1/local.opt
+/test/frameworks/run_multiple_daemons/test1/localA
+/test/frameworks/run_multiple_daemons/test1/localB
+/test/frameworks/run_multiple_daemons/test1/plugins
+/test/frameworks/run_multiple_daemons/test1/simcontent
+/test/frameworks/run_multiple_daemons/test1/test.out
+/test/frameworks/run_multiple_daemons/test1/tfile
+/test/frameworks/run_multiple_daemons/test1/v3state
+
+# /test/frameworks/run_multiple_daemons/test2/
+/test/frameworks/run_multiple_daemons/test2/V1
+/test/frameworks/run_multiple_daemons/test2/V3
+/test/frameworks/run_multiple_daemons/test2/cache
+/test/frameworks/run_multiple_daemons/test2/config
+/test/frameworks/run_multiple_daemons/test2/db
+/test/frameworks/run_multiple_daemons/test2/derby.log
+/test/frameworks/run_multiple_daemons/test2/dpid
+/test/frameworks/run_multiple_daemons/test2/export
+/test/frameworks/run_multiple_daemons/test2/history
+/test/frameworks/run_multiple_daemons/test2/iddb
+/test/frameworks/run_multiple_daemons/test2/local.opt
+/test/frameworks/run_multiple_daemons/test2/localA
+/test/frameworks/run_multiple_daemons/test2/localB
+/test/frameworks/run_multiple_daemons/test2/plugins
+/test/frameworks/run_multiple_daemons/test2/simcontent
+/test/frameworks/run_multiple_daemons/test2/test.out
+/test/frameworks/run_multiple_daemons/test2/tfile
+/test/frameworks/run_multiple_daemons/test2/v3state
+
+# /test/frameworks/run_multiple_daemons/test3/
+/test/frameworks/run_multiple_daemons/test3/V1
+/test/frameworks/run_multiple_daemons/test3/V3
+/test/frameworks/run_multiple_daemons/test3/cache
+/test/frameworks/run_multiple_daemons/test3/config
+/test/frameworks/run_multiple_daemons/test3/db
+/test/frameworks/run_multiple_daemons/test3/derby.log
+/test/frameworks/run_multiple_daemons/test3/dpid
+/test/frameworks/run_multiple_daemons/test3/export
+/test/frameworks/run_multiple_daemons/test3/history
+/test/frameworks/run_multiple_daemons/test3/iddb
+/test/frameworks/run_multiple_daemons/test3/local.opt
+/test/frameworks/run_multiple_daemons/test3/localA
+/test/frameworks/run_multiple_daemons/test3/localB
+/test/frameworks/run_multiple_daemons/test3/plugins
+/test/frameworks/run_multiple_daemons/test3/simcontent
+/test/frameworks/run_multiple_daemons/test3/test.out
+/test/frameworks/run_multiple_daemons/test3/tfile
+/test/frameworks/run_multiple_daemons/test3/v3state
+
+# /test/frameworks/run_multiple_daemons/test4/
+/test/frameworks/run_multiple_daemons/test4/V1
+/test/frameworks/run_multiple_daemons/test4/V3
+/test/frameworks/run_multiple_daemons/test4/cache
+/test/frameworks/run_multiple_daemons/test4/config
+/test/frameworks/run_multiple_daemons/test4/db
+/test/frameworks/run_multiple_daemons/test4/derby.log
+/test/frameworks/run_multiple_daemons/test4/dpid
+/test/frameworks/run_multiple_daemons/test4/export
+/test/frameworks/run_multiple_daemons/test4/history
+/test/frameworks/run_multiple_daemons/test4/iddb
+/test/frameworks/run_multiple_daemons/test4/local.opt
+/test/frameworks/run_multiple_daemons/test4/localA
+/test/frameworks/run_multiple_daemons/test4/localB
+/test/frameworks/run_multiple_daemons/test4/plugins
+/test/frameworks/run_multiple_daemons/test4/simcontent
+/test/frameworks/run_multiple_daemons/test4/test.out
+/test/frameworks/run_multiple_daemons/test4/tfile
+/test/frameworks/run_multiple_daemons/test4/v3state
+
+# /test/frameworks/run_multiple_daemons_clockss/
+/test/frameworks/run_multiple_daemons_clockss/lib
+/test/frameworks/run_multiple_daemons_clockss/lockss.opt
+
+# /test/frameworks/run_multiple_daemons_clockss/test1/
+/test/frameworks/run_multiple_daemons_clockss/test1/V1
+/test/frameworks/run_multiple_daemons_clockss/test1/V3
+/test/frameworks/run_multiple_daemons_clockss/test1/cache
+/test/frameworks/run_multiple_daemons_clockss/test1/config
+/test/frameworks/run_multiple_daemons_clockss/test1/db
+/test/frameworks/run_multiple_daemons_clockss/test1/derby.log
+/test/frameworks/run_multiple_daemons_clockss/test1/dpid
+/test/frameworks/run_multiple_daemons_clockss/test1/export
+/test/frameworks/run_multiple_daemons_clockss/test1/history
+/test/frameworks/run_multiple_daemons_clockss/test1/iddb
+/test/frameworks/run_multiple_daemons_clockss/test1/local.opt
+/test/frameworks/run_multiple_daemons_clockss/test1/localA
+/test/frameworks/run_multiple_daemons_clockss/test1/localB
+/test/frameworks/run_multiple_daemons_clockss/test1/plugins
+/test/frameworks/run_multiple_daemons_clockss/test1/simcontent
+/test/frameworks/run_multiple_daemons_clockss/test1/test.out
+/test/frameworks/run_multiple_daemons_clockss/test1/tfile
+/test/frameworks/run_multiple_daemons_clockss/test1/v3state
+
+# /test/frameworks/run_multiple_daemons_clockss/test2/
+/test/frameworks/run_multiple_daemons_clockss/test2/V1
+/test/frameworks/run_multiple_daemons_clockss/test2/V3
+/test/frameworks/run_multiple_daemons_clockss/test2/cache
+/test/frameworks/run_multiple_daemons_clockss/test2/config
+/test/frameworks/run_multiple_daemons_clockss/test2/db
+/test/frameworks/run_multiple_daemons_clockss/test2/derby.log
+/test/frameworks/run_multiple_daemons_clockss/test2/dpid
+/test/frameworks/run_multiple_daemons_clockss/test2/export
+/test/frameworks/run_multiple_daemons_clockss/test2/history
+/test/frameworks/run_multiple_daemons_clockss/test2/iddb
+/test/frameworks/run_multiple_daemons_clockss/test2/local.opt
+/test/frameworks/run_multiple_daemons_clockss/test2/localA
+/test/frameworks/run_multiple_daemons_clockss/test2/localB
+/test/frameworks/run_multiple_daemons_clockss/test2/plugins
+/test/frameworks/run_multiple_daemons_clockss/test2/simcontent
+/test/frameworks/run_multiple_daemons_clockss/test2/test.out
+/test/frameworks/run_multiple_daemons_clockss/test2/tfile
+/test/frameworks/run_multiple_daemons_clockss/test2/v3state
+
+# /test/frameworks/run_multiple_daemons_clockss/test3/
+/test/frameworks/run_multiple_daemons_clockss/test3/V1
+/test/frameworks/run_multiple_daemons_clockss/test3/V3
+/test/frameworks/run_multiple_daemons_clockss/test3/cache
+/test/frameworks/run_multiple_daemons_clockss/test3/config
+/test/frameworks/run_multiple_daemons_clockss/test3/db
+/test/frameworks/run_multiple_daemons_clockss/test3/derby.log
+/test/frameworks/run_multiple_daemons_clockss/test3/dpid
+/test/frameworks/run_multiple_daemons_clockss/test3/export
+/test/frameworks/run_multiple_daemons_clockss/test3/history
+/test/frameworks/run_multiple_daemons_clockss/test3/iddb
+/test/frameworks/run_multiple_daemons_clockss/test3/local.opt
+/test/frameworks/run_multiple_daemons_clockss/test3/localA
+/test/frameworks/run_multiple_daemons_clockss/test3/localB
+/test/frameworks/run_multiple_daemons_clockss/test3/plugins
+/test/frameworks/run_multiple_daemons_clockss/test3/simcontent
+/test/frameworks/run_multiple_daemons_clockss/test3/test.out
+/test/frameworks/run_multiple_daemons_clockss/test3/tfile
+/test/frameworks/run_multiple_daemons_clockss/test3/v3state
+
+# /test/frameworks/run_multiple_daemons_clockss/test4/
+/test/frameworks/run_multiple_daemons_clockss/test4/V1
+/test/frameworks/run_multiple_daemons_clockss/test4/V3
+/test/frameworks/run_multiple_daemons_clockss/test4/cache
+/test/frameworks/run_multiple_daemons_clockss/test4/config
+/test/frameworks/run_multiple_daemons_clockss/test4/db
+/test/frameworks/run_multiple_daemons_clockss/test4/derby.log
+/test/frameworks/run_multiple_daemons_clockss/test4/dpid
+/test/frameworks/run_multiple_daemons_clockss/test4/export
+/test/frameworks/run_multiple_daemons_clockss/test4/history
+/test/frameworks/run_multiple_daemons_clockss/test4/iddb
+/test/frameworks/run_multiple_daemons_clockss/test4/local.opt
+/test/frameworks/run_multiple_daemons_clockss/test4/localA
+/test/frameworks/run_multiple_daemons_clockss/test4/localB
+/test/frameworks/run_multiple_daemons_clockss/test4/plugins
+/test/frameworks/run_multiple_daemons_clockss/test4/simcontent
+/test/frameworks/run_multiple_daemons_clockss/test4/test.out
+/test/frameworks/run_multiple_daemons_clockss/test4/tfile
+/test/frameworks/run_multiple_daemons_clockss/test4/v3state
+
+# /test/frameworks/run_one_daemon/
+/test/frameworks/run_one_daemon/LocalB
+/test/frameworks/run_one_daemon/cache
+/test/frameworks/run_one_daemon/derby.log
+/test/frameworks/run_one_daemon/dpid
+/test/frameworks/run_one_daemon/export
+/test/frameworks/run_one_daemon/history
+/test/frameworks/run_one_daemon/iddb
+/test/frameworks/run_one_daemon/jmp_dump-*.txt
+/test/frameworks/run_one_daemon/jmp_heap_dump_*
+/test/frameworks/run_one_daemon/lib
+/test/frameworks/run_one_daemon/localA
+/test/frameworks/run_one_daemon/lockss.opt
+/test/frameworks/run_one_daemon/test.out
+/test/frameworks/run_one_daemon/tfile
+
+# /test/frameworks/run_one_daemon_clockss/
+/test/frameworks/run_one_daemon_clockss/LocalB
+/test/frameworks/run_one_daemon_clockss/cache
+/test/frameworks/run_one_daemon_clockss/derby.log
+/test/frameworks/run_one_daemon_clockss/dpid
+/test/frameworks/run_one_daemon_clockss/export
+/test/frameworks/run_one_daemon_clockss/history
+/test/frameworks/run_one_daemon_clockss/iddb
+/test/frameworks/run_one_daemon_clockss/jmp_dump-*.txt
+/test/frameworks/run_one_daemon_clockss/jmp_heap_dump_*
+/test/frameworks/run_one_daemon_clockss/lib
+/test/frameworks/run_one_daemon_clockss/localA
+/test/frameworks/run_one_daemon_clockss/lockss.opt
+/test/frameworks/run_one_daemon_clockss/test.out
+/test/frameworks/run_one_daemon_clockss/tfile
+
+# /test/frameworks/run_stf/
+/test/frameworks/run_stf/*.py[co]
+/test/frameworks/run_stf/lib
+/test/frameworks/run_stf/simContent
+/test/frameworks/run_stf/testcase-*
+/test/frameworks/run_stf/testsuite.opt
+
+# /test/scripts/
+/test/scripts/*.pyc
+/test/scripts/*.pyo
+/test/scripts/run-burp.sh
+
+# /test/src/org/lockss/repository/jcr/
+/test/src/org/lockss/repository/jcr/*.avaj
+
+# /tools/
+/tools/classes
+
+# /tools/test/
+/tools/test/classes
+/tools/test/results
