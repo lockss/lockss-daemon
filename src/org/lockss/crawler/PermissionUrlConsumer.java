@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,8 +44,7 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.lockss.crawler.PermissionRecord.PermissionStatus;
 import org.lockss.daemon.Crawler;
 import org.lockss.daemon.PermissionChecker;
-import org.lockss.plugin.AuUtil;
-import org.lockss.plugin.FetchedUrlData;
+import org.lockss.plugin.*;
 import org.lockss.plugin.base.SimpleUrlConsumer;
 import org.lockss.util.CharsetUtil;
 import org.lockss.util.CharsetUtil.InputStreamAndCharset;
@@ -95,44 +94,61 @@ public class PermissionUrlConsumer extends SimpleUrlConsumer {
     }
     if (permOk) {
       permMap.setPermissionResult(fud.fetchUrl,
-          PermissionStatus.PERMISSION_OK);
+				  PermissionStatus.PERMISSION_OK);
+      fud.resetInputStream();
       super.consume();
     }
   }
   
-  protected boolean checkPermission(
-      Collection<PermissionChecker> permCheckers, PermissionLogic logic)
-          throws IOException {
+  protected boolean checkPermission(Collection<PermissionChecker> permCheckers,
+				    PermissionLogic logic)
+      throws IOException {
+
     PermissionChecker checker;
-    InputStream is = fud.input;
-    if(!is.markSupported()) {
-      is = new BufferedInputStream(is);
-    }
+    InputStream fudis = fud.getResettableInputStream();
+
+    // allow us to reread contents if reasonable size
+    fudis.mark(crawlFacade.permissonStreamResetMax());
+
+    String contentEncoding =
+      fud.headers.getProperty(CachedUrl.PROPERTY_CONTENT_ENCODING);
+
+    boolean notFirst = false;
+
     // check the lockss checkers and find at least one checker that matches
     for (Iterator<PermissionChecker> it = permCheckers.iterator();
         it.hasNext(); ) {
-      // allow us to reread contents if reasonable size
-      is.mark(crawlFacade.permissonStreamResetMax());
       checker = it.next();
+      // reset stream if not first time through
+      if (notFirst) {
+	try {
+	  fudis.reset();
+	} catch(IOException ex) {
+	  //unable to reset for some reason
+	  fud.resetInputStream();
+	  fudis = fud.getResettableInputStream();
+	}
+      } else {
+	notFirst = true;
+      }
+
+      // decompress if necessary
+      InputStream is =
+	StreamUtil.getUncompressedInputStream(fudis, contentEncoding);
 
       // XXX Some PermissionCheckers close their stream.  This is a
       // workaround until they're fixed.
-
       Reader reader;
       if(CharsetUtil.inferCharset()) {
         InputStreamAndCharset isc = CharsetUtil.getCharsetStream(is, charset);
         charset = isc.getCharset();
         is = isc.getInStream();
       }
-    	reader =new InputStreamReader(new StreamUtil.IgnoreCloseInputStream(is), charset);
+
+      reader = new InputStreamReader(new StreamUtil.IgnoreCloseInputStream(is),
+				     charset);
       boolean perm = checker.checkPermission(crawlFacade, reader, fud.fetchUrl);
-      try {
-        is.reset();
-      } catch(IOException ex) {
-        //unable to reset for some reason
-        fud.resetInputStream();
-        is = fud.input;
-      }
+
       if (perm) {
         if(logic == PermissionLogic.OR_CHECKER){
           logger.debug3("Found permission on "+checker);
