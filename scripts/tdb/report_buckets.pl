@@ -2,14 +2,18 @@
 #
 # Read in two reports of AUids and status. Generate a count
 # of category crossings.
-# 
+#
 # To create report, comparing two points in time.
+# svn:
 # svn update -r 20110101
 # ./scripts/tdb/tdbout -t auid,status tdb/prod/*.tdb | sort -u > file1.txt
 # svn update -r 20111231
 # ./scripts/tdb/tdbout -t auid,status tdb/prod/*.tdb | sort -u > file2.txt
 # ./report_buckets file1.txt file2.txt
-# 
+# git:
+# git checkout `git rev-list -n 1 --before="2011-01-01 00:00" master`
+# ./scripts/tdb/tdbout -t auid,status tdb/prod/*.tdb | sort -u > file1.txt
+# git checkout `git rev-list -n 1 --before="2011-12-31 23:59" master`
 # To create a report, comparing status1 and status2 in clockssingest
 # ./scripts/tdb/tdbout -t auid,status tdb/clockssingest/*.tdb | sort -u > file1.txt
 # ./scripts/tdb/tdbout -t auid,status2 tdb/clockssingest/*.tdb | sort -u > file2.txt
@@ -85,7 +89,7 @@ foreach my $auid (keys(%auid_status)) {
     }
 }
 
-# Fill 2D array of buckets for each combination 
+# Fill 2D array of buckets for each combination
 # of start and end status
 my @start_end = ();
 # Initialize all to 0
@@ -117,7 +121,7 @@ foreach my $auid (keys(%auid_status)) {
 			printf("Previously released, now manifest:%s\n",$auid);
 		}
 	}
-	
+
 # Print out report
 # Header
 printf("Status");
@@ -185,7 +189,7 @@ foreach my $auid (keys(%auid_status)) {
 
 # Write out report.
 for (my $c = $code{"notPresent"}; $c <= $code{"deleted"}; ++$c) {
-    printf("%s\t%d\t%d\t%d\t%d\n", 
+    printf("%s\t%d\t%d\t%d\t%d\n",
 	&code_name($c),
 	$start_bucket[$c], $end_bucket[$c],
 	$no_change_bucket[$c], $change_bucket[$c]);
