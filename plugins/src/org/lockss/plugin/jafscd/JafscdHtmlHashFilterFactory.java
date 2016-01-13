@@ -45,8 +45,12 @@ public class JafscdHtmlHashFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding) {
     NodeFilter[] filters = new NodeFilter[] {
-     //filter out script
-     new TagNameFilter("script"),
+     //filter out script and other tags that are highly modified
+     HtmlNodeFilters.comment(),
+     HtmlNodeFilters.tag("script"),
+     HtmlNodeFilters.tag("noscript"),
+     HtmlNodeFilters.tag("style"),
+     HtmlNodeFilters.tag("head"),
      //Menu and related articles/other issues
      HtmlNodeFilters.tagWithAttribute("div", "class", "A_Left_Column"),
      //Footer menu that seems to currently be blank
@@ -59,7 +63,12 @@ public class JafscdHtmlHashFilterFactory implements FilterFactory {
      HtmlNodeFilters.tagWithAttribute("div", "id", "search"),
      //another blank navigation div
      HtmlNodeFilters.tagWithAttribute("div", "id", "Sub_Top_Nav"),
-     
+     //banner & menu
+     HtmlNodeFilters.tagWithAttribute("div", "class", "masthead"),
+     //breadcrumbs
+     HtmlNodeFilters.tagWithAttribute("div", "id", "pathway"),
+     //href tags with embeded javascript
+     HtmlNodeFilters.tagWithAttributeRegex("a", "href", "mailto:"),
      
     };
     return new HtmlFilterInputStream(in,
