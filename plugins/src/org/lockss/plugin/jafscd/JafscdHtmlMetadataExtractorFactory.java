@@ -50,10 +50,10 @@ public class JafscdHtmlMetadataExtractorFactory implements FileMetadataExtractor
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
 							   String contentType)
       throws PluginException {
-    return new MaffeyHtmlMetadataExtractor();
+    return new JafscdHtmlMetadataExtractor();
   }
 
-  public static class MaffeyHtmlMetadataExtractor
+  public static class JafscdHtmlMetadataExtractor
     extends SimpleHtmlMetaTagMetadataExtractor {
 
     // Map HTML meta tag names to cooked metadata fields
@@ -83,10 +83,7 @@ public class JafscdHtmlMetadataExtractorFactory implements FileMetadataExtractor
 		// go through the cached URL content line by line
 		for (String line = bReader.readLine(); line != null; line = bReader.readLine()) {										
 			line = line.trim();										
-			
-			// title is of form: <title>MyJournalTitle articles</title>
 			if(line.contains("http://dx.doi.org/")){
-				log.debug("found DOI line:" + line);
 				Matcher m = DOI_PAT.matcher(line);
 				if(m.matches()){
 					int count = m.groupCount();

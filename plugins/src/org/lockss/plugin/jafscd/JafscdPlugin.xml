@@ -103,6 +103,10 @@
     <string>org.lockss.plugin.jafscd.JafscdHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
+    <string>au_login_page_checker</string>
+    <string>org.lockss.plugin.jafscd.JafscdLoginPageChecker</string>
+  </entry>
+  <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.jafscd.JafscdArticleIteratorFactory</string>
   </entry>
