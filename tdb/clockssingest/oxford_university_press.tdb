@@ -18348,7 +18348,7 @@
     param[base_url] = http://ofid.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < testing ; exists ; 2014 ; Open Forum Infectious Diseases Volume 1 ; 1 ; >
+    au < ready ; exists ; 2014 ; Open Forum Infectious Diseases Volume 1 ; 1 ; >
     au < testing ; exists ; 2015 ; Open Forum Infectious Diseases Volume 2 ; 2 ; >
     au < expected ; exists ; 2016 ; Open Forum Infectious Diseases Volume 3 ; 3 ; >
 
