@@ -132,7 +132,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%sarticle\.aspx\?articleid=%d$", base_url, resource_id</string>
+      <string>"^%sarticle\.aspx\?articleid=\d+$", base_url, resource_id</string>
     </list>
   </entry>
   <entry>
