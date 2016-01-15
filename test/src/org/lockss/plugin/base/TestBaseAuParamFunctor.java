@@ -79,7 +79,7 @@ public class TestBaseAuParamFunctor extends LockssTestCase {
 		 fn.apply(null, "url_decode",
 			  "http%3A%2F%2Ffoo.bar%2Fpath%3Fa%3Dv%26a2%3Dv2",
 			  AuParamType.String));
-    
+
     assertEquals("aaa",
                  fn.apply(null, "range_min", "aaa-zzz", AuParamType.String));
     assertEquals("zzz",

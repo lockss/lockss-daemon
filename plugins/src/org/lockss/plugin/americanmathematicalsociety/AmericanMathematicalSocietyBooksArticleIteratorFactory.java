@@ -98,6 +98,13 @@ implements ArticleIteratorFactory,
         ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE,
         ArticleFiles.ROLE_ARTICLE_METADATA);
     
+    // set up html to be an aspect that will trigger an ArticleFiles
+    builder.addAspect(
+        HTML_PATTERN, HTML_REPLACEMENT,
+        ArticleFiles.ROLE_ABSTRACT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
+
     return builder.getSubTreeArticleIterator();
   }
   

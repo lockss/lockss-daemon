@@ -1485,7 +1485,7 @@ public class MetadataMonitor extends LockssServlet {
 
   /**
    * Displays the non-parent metadata items that have no DOI.
-   * 
+   *
    * @throws DbException
    *           if any problem occurred accessing the database.
    * @throws IOException
@@ -1568,7 +1568,7 @@ public class MetadataMonitor extends LockssServlet {
 
   /**
    * Displays the non-parent metadata items that have no Access URL.
-   * 
+   *
    * @throws DbException
    *           if any problem occurred accessing the database.
    * @throws IOException

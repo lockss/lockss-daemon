@@ -4254,7 +4254,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /**
    * Provides the non-parent metadata items in the database that have no Access
    * URL.
-   * 
+   *
    * @return a Collection<Map<String, String>> with the non-parent metadata
    *         items that have no Access URL sorted by publisher, parent type,
    *         parent title and item type.

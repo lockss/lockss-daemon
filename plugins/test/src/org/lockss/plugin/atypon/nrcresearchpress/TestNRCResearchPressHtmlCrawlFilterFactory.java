@@ -207,6 +207,18 @@ public class TestNRCResearchPressHtmlCrawlFilterFactory extends LockssTestCase {
           "</div>foo";
   private static final String rightSidebarAdsFiltered="foo";
 
+  private static final String rightSidebarAds=
+      "<div class=\"ads\">" +
+          "<!-- Right Sidebar Section: Advertisements Component -->" +
+          "<div style=\"padding-top:3px\">" +
+          "<a href=\"/action/clickThrough?id=1400&url=%2Fjournal%2Fas&loc=%2Faction%2FshowCitFormats%3Fdoi%3D10.1139%252F9780660166698&pubId=40404223\" target=\"_blank\"><img src=\"/sda/1400/Arctic Science Ad.gif\" alt=\"Arctic Science Ad\"/></a>" +
+          "</div>" +
+          "<div id=\"big-block\">" +
+          "<div id=\"mvBoxAd\" style=\"text-align:center;\"></div>" +
+          "</div>" +
+          "</div>foo";
+  private static final String rightSidebarAdsFiltered="foo";
+
   public void setUp() throws Exception {
     super.setUp();
     fact = new ClockssNRCResearchPressHtmlCrawlFilterFactory();
@@ -256,6 +268,10 @@ public class TestNRCResearchPressHtmlCrawlFilterFactory extends LockssTestCase {
         new StringInputStream(issueNav), Constants.DEFAULT_ENCODING);
     assertEquals(issueNavFiltered, StringUtil.fromInputStream(actIn1));
     
+    actIn1 = fact.createFilteredInputStream(mau,
+        new StringInputStream(rightSidebarAds), Constants.DEFAULT_ENCODING);
+    assertEquals(rightSidebarAdsFiltered, StringUtil.fromInputStream(actIn1));
+
     actIn1 = fact.createFilteredInputStream(mau,
         new StringInputStream(rightSidebarAds), Constants.DEFAULT_ENCODING);
     assertEquals(rightSidebarAdsFiltered, StringUtil.fromInputStream(actIn1));

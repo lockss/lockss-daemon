@@ -42,7 +42,7 @@ import org.lockss.ws.metadata.MetadataMonitorService;
 public class GetNoDoiItemsClient extends MetadataMonitorServiceBaseClient {
   /**
    * The main method.
-   * 
+   *
    * @param args
    *          A String[] with the command line arguments.
    * @throws Exception

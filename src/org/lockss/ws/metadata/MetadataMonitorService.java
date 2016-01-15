@@ -244,7 +244,7 @@ public interface MetadataMonitorService {
 
   /**
    * Provides the non-parent metadata items in the database that have no DOI.
-   * 
+   *
    * @return a List<MetadataItemWsResult> with the non-parent metadata items
    *         that have no DOI sorted sorted by publisher, Archival Unit, parent
    *         type, parent name, item type and item name.
@@ -256,7 +256,7 @@ public interface MetadataMonitorService {
   /**
    * Provides the non-parent metadata items in the database that have no Access
    * URL.
-   * 
+   *
    * @return a List<MetadataItemWsResult> with the non-parent metadata items
    *         that have no Access URL sorted sorted by publisher, Archival Unit,
    *         parent type, parent name, item type and item name.

@@ -463,7 +463,7 @@ def _alter_files(options, aus):
 def _deprecation_warning():
   '''Displays a deprecation warning to standard error if necessary.'''
   for arg in sys.argv[1:]:
-    for dep in ['--from=', '--to=', '--from2=', '--to2=']: 
+    for dep in ['--from=', '--to=', '--from2=', '--to2=']:
       if arg.startswith(dep):
         sys.stderr.write('Warning: --from/--to and --from2/--to2 are deprecated\n')
         return

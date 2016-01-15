@@ -43,7 +43,7 @@ public class GetNoAccessUrlItemsClient
 extends MetadataMonitorServiceBaseClient {
   /**
    * The main method.
-   * 
+   *
    * @param args
    *          A String[] with the command line arguments.
    * @throws Exception

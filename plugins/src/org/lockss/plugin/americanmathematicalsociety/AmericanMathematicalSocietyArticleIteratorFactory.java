@@ -95,12 +95,12 @@ http://www.ams.org/journals/jams/2013-26-01/S0894-0347-2012-00742-5/S0894-0347-2
         HTML_PATTERN, HTML_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_HTML,
         ArticleFiles.ROLE_ARTICLE_METADATA);
-    
+
     // set up PDF to be an aspect that will trigger an ArticleFiles
     builder.addAspect(
         PDF_PATTERN, PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
-    
+
     return builder.getSubTreeArticleIterator();
   }
 

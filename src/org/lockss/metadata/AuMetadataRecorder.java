@@ -367,7 +367,7 @@ public class AuMetadataRecorder {
 
   /**
    * Validates the metadata fields.
-   * 
+   *
    * @param mdinfo
    *          An ArticleMetadataInfo with the metadata fields.
    * @param mandatoryFields

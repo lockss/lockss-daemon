@@ -246,7 +246,7 @@ public class ElsevierDeferredArticleMetadataExtractor extends BaseArticleMetadat
       articleMD.put(MetadataField.FIELD_PUBLICATION_TYPE,  MetadataField.PUBLICATION_TYPE_BOOK);
     } else {
       // JOURNAL - BOOK-SERIES
-      // NO BOOK-SERIES; for now we are not choosing books series by 
+      // NO BOOK-SERIES; for now we are not choosing books series by
       // not cooking the isbn in the raw metadata to a FIELD_ISBN
       // there were a lot of false positives for collections that were causing problems. Just make them
       // journals and count them as articles
