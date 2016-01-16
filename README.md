@@ -52,3 +52,7 @@ Builds the system and runs one JUnit test class.
 -`ant -projecthelp`
 
 Lists other build options
+
+-`ant btf`
+
+Build out the test frameworks to allow running a daemon and testing on local machine.
