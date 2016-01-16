@@ -1,0 +1,151 @@
+<map>
+  <entry>
+   <string>plugin_status</string>
+   <string>ready</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.royalsocietyofchemistry.RSCBooksPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Royal Society of Chemistry Books Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.68.4</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Royal Society of Chemistry Books Plugin, Base URL %s, Year %d", base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sen/ebooks/lockss?copyrightyear=%d", base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+      <list>
+        <string>"%sen/ebooks/lockss?copyrightyear=%d", base_url, year</string>
+        <string>"%slockss.htm", graphics_url</string>
+      </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <string>"^%sen/content/chapterpdf/[0-9]{4}/[a-z0-9-]+\?isbn=[-0-9X]+$", base_url</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^%s", graphics_url</string>
+      <!-- all content from CDN -->
+      <string>1,"^https?://(.+\.(googleapis)\.com)/."</string>
+      <string>2,"^%sen/(error|account)/", base_url</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%sen/ebooks/lockss\?isbn=[-0-9x]+", base_url</string>
+      <string>1,"^%sen/content/chapter/[-a-z0-9]+/[-0-9x]+", base_url</string>
+      <string>1,"^%sen/content/chapterpdf/[0-9]{4}/[-a-z0-9]+\?isbn=[-0-9x]+", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>graphics_url</key>
+        <displayName>Graphics URL</displayName>
+        <description>Shared graphics, css, etc. on  http://sod-a.rsc-cdn.org/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description></description>
+        <type>2</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.royalsocietyofchemistry.RSCBooksArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.royalsocietyofchemistry.RSCBooksArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.royalsocietyofchemistry.RSCBooksHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.royalsocietyofchemistry.RSCBooksUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>400=org.lockss.util.urlconn.CacheException$RetrySameUrlException</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <!-- manifest to book/chapters or 2 -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts -->
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>.+\.googleapis\.com</string>
+    </list>
+  </entry>
+</map>
