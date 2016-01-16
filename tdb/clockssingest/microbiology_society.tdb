@@ -8,8 +8,6 @@
     comment[moved] = from HW to Pub2Web
     
     comment[0] = Formerly: Society for General Microbiology
-    pluginPrefix = org.lockss.plugin.highwire.
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
   {
   
@@ -21,7 +19,8 @@
      
       comment[continued_by] = International Journal of Systematic Bacteriology 0020-7713
 
-      pluginSuffix = ClockssHighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[base_url] = http://ijs.sgmjournals.org/
       
       au < doNotProcess ; doNotProcess ; 1951 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 1 ; 1 >
@@ -53,7 +52,8 @@
       comment[continues] = International Bulletin of Bacterial Nomenclature and Taxonomy 0096-266X
       comment[continued_by] = International Journal of Systematic and Evolutionary Bacteriology 1466-5026
       
-      pluginSuffix = ClockssHighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[base_url] = http://ijs.sgmjournals.org/
 
       au < doNotProcess ; doNotProcess ; 1966 ; International Journal of Systematic Bacteriology Volume 16 ; 16 >
@@ -103,7 +103,8 @@
 
       comment[continues] = International Journal of Systematic Bacteriology 0020-7713
 
-      pluginSuffix = ClockssHighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[base_url] = http://ijs.sgmjournals.org/
 
       au < exists ; exists ; 2000 ; International Journal of Systematic and Evolutionary Microbiology Volume 50 ; 50 >
@@ -134,7 +135,8 @@
 
       comment[continued_by] = Microbiology 1350-0872 as of Jan 1994
 
-      pluginSuffix = ClockssHighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[base_url] = http://mic.sgmjournals.org/
 
       au < doNotProcess ; doNotProcess ; 1947 ; Journal of General Microbiology Volume 1 ; 1 >
@@ -286,7 +288,8 @@
       issnl = 0022-1317
     >
 
-      pluginSuffix = ClockssHighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[base_url] = http://vir.sgmjournals.org/
 
       au < doNotProcess ; doNotProcess ; 1967 ; Journal of General Virology Volume 1 ; 1 >
@@ -396,7 +399,8 @@
       issnl = 0022-2615
     >
 
-      pluginSuffix = ClockssHighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[base_url] = http://jmm.sgmjournals.org/
 
       au < doNotProcess ; doNotProcess ; 1968 ; Journal of Medical Microbiology Volume 1 ; 1 >
@@ -475,7 +479,8 @@
     {
 
       rights = openaccess
-      pluginSuffix = ClockssHighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[base_url] = http://jmmcr.sgmjournals.org/
 
       au < exists ; exists ; 2014 ; JMM Case Reports Volume 1 ; 1 >
@@ -494,7 +499,8 @@
     {
 
       rights = openaccess
-      pluginSuffix = ClockssHighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[base_url] = http://mgen.sgmjournals.org/
 
       au < expected ; exists ; 2015 ; Microbial Genomics Volume 1 ; 1 >
@@ -513,7 +519,8 @@
     
       comment[continues] = Journal of General Microbiology 0022-1287 as of Jan 1994
 
-      pluginSuffix = ClockssHighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[base_url] = http://mic.sgmjournals.org/
 
       au < doNotProcess ; doNotProcess ; 1994 ; Microbiology Volume 140 ; 140 >
