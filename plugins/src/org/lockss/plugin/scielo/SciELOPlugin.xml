@@ -11,7 +11,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -22,7 +22,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>3</string>
+        <string>4</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -168,7 +168,11 @@
     <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
          org.lockss.crawler.allowedPluginPermittedHosts -->
     <string>au_permitted_host_pattern</string>
-    <string>[^.]+\.googleapis\.com|cdn[.]mathjax[.]org|[^.]+\.cloudfront\.net</string>
+    <list>
+      <string>.+\.googleapis\.com</string>
+      <string>.+\.mathjax\.org</string>
+      <string>.+\.cloudfront\.net</string>
+    </list>
   </entry>
   <entry>
     <string>text/html_link_extractor_factory</string>
