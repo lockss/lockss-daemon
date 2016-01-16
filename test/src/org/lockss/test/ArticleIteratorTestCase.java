@@ -32,15 +32,24 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
-import java.io.*;
-import java.util.*;
-import java.net.*;
-import java.util.regex.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
 
-import org.lockss.config.*;
-import org.lockss.plugin.*;
+import org.lockss.extractor.MetadataTarget;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.ArticleFiles;
+import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.CachedUrlSet;
+import org.lockss.plugin.PluginManager;
+import org.lockss.plugin.SubTreeArticleIterator;
+import org.lockss.plugin.UrlCacher;
+import org.lockss.plugin.UrlData;
 import org.lockss.util.CIProperties;
-import org.lockss.extractor.*;
 
 /** Framework for ArticleIterator tests. */
 public abstract class ArticleIteratorTestCase extends LockssTestCase {
