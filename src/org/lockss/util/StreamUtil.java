@@ -242,6 +242,18 @@ public class StreamUtil {
     return totalCharCount;
   }
 
+  /** Return the number of bytes that can be read from the InputStream.
+   * The stream is consumed but not closed. */
+  public static long countBytes(InputStream is) throws IOException {
+    return copy(is, new org.apache.commons.io.output.NullOutputStream());
+  }
+
+  /** Return the number of characters that can be read from the Reader
+   * The reader is consumed but not closed. */
+  public static long countChars(Reader reader) throws IOException {
+    return copy(reader, new org.apache.commons.io.output.NullWriter());
+  }
+
   public static class InputException extends IOException {
     public InputException(IOException cause) {
       super(cause);
