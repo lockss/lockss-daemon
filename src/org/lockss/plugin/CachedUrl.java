@@ -88,6 +88,12 @@ public interface CachedUrl extends CachedUrlSetNode {
    * redirects.  Not predictable; don't use. */
   public static final String PROPERTY_ORIG_URL = "X-Lockss-orig-url";
 
+  /** Prefix applied to Content-Encoding and Content-Length headers to
+   * indicate the original encoding with which the content was received
+   * (because CachedUrl ununcodes content when returning an InputStream on
+   * it) */
+  public static final String ENCODED_HEADER_PREFIX = "X-Lockss-Encoded-";
+
   /** Local time when file collected.  *Not* derived from the Date: header
    * from the server, which is stored separately if present.  Poorly named
    * but cannot be changed. */
@@ -102,6 +108,18 @@ public interface CachedUrl extends CachedUrlSetNode {
   public static final String PROPERTY_CHECKSUM = "x-lockss-checksum";
 
   public static final String PROPERTY_CONTENT_ENCODING = "content-encoding";
+  public static final String PROPERTY_CONTENT_LENGTH = "content-length";
+
+  /** Property indicating Content-Encoding with which the file was
+   * received, if any */
+  public static final String PROPERTY_UNENCODED_CONTENT_ENCODING =
+    ENCODED_HEADER_PREFIX + PROPERTY_CONTENT_ENCODING;
+
+  /** Property indicating Content-Lengh before any encoding was removed, if
+   * the file was received encoded. */
+  public static final String PROPERTY_UNENCODED_CONTENT_LENGTH =
+    ENCODED_HEADER_PREFIX + PROPERTY_CONTENT_LENGTH;
+
 
   /** CachedUrl properties that the daemon uses internally, should not be
    * served with content */
