@@ -2719,6 +2719,40 @@
   {
 
     title <
+      name = Applied Biosafety ;
+      issn = 1535-6760 
+    >
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://apb.sagepub.com/
+
+      au < exists ; exists ; 1996 ; Applied Biosafety Volume 1 ; 1 ; >
+      au < exists ; exists ; 1997 ; Applied Biosafety Volume 2 ; 2 ; >
+      au < exists ; exists ; 1998 ; Applied Biosafety Volume 3 ; 3 ; >
+      au < exists ; exists ; 1999 ; Applied Biosafety Volume 4 ; 4 ; >
+      au < exists ; exists ; 2000 ; Applied Biosafety Volume 5 ; 5 ; >
+      au < exists ; exists ; 2001 ; Applied Biosafety Volume 6 ; 6 ; >
+      au < exists ; exists ; 2002 ; Applied Biosafety Volume 7 ; 7 ; >
+      au < exists ; exists ; 2003 ; Applied Biosafety Volume 8 ; 8 ; >
+      au < exists ; exists ; 2004 ; Applied Biosafety Volume 9 ; 9 ; >
+      au < exists ; exists ; 2005 ; Applied Biosafety Volume 10 ; 10 ; >
+      au < exists ; exists ; 2006 ; Applied Biosafety Volume 11 ; 11 ; >
+      au < exists ; exists ; 2007 ; Applied Biosafety Volume 12 ; 12 ; >
+      au < exists ; exists ; 2008 ; Applied Biosafety Volume 13 ; 13 ; >
+      au < exists ; exists ; 2009 ; Applied Biosafety Volume 14 ; 14 ; >
+      au < exists ; exists ; 2010 ; Applied Biosafety Volume 15 ; 15 ; >
+      au < exists ; exists ; 2011 ; Applied Biosafety Volume 16 ; 16 ; >
+      au < exists ; exists ; 2012 ; Applied Biosafety Volume 17 ; 17 ; >
+      au < exists ; exists ; 2013 ; Applied Biosafety Volume 18 ; 18 ; >
+      au < exists ; exists ; 2014 ; Applied Biosafety Volume 19 ; 19 ; >
+      au < exists ; exists ; 2015 ; Applied Biosafety Volume 20 ; 20 ; >
+      au < expected ; exists ; 2016 ; Applied Biosafety Volume 21 ; 21 ; >
+
+  }
+
+  {
+
+    title <
       name = Applied Psychological Measurement ;
       issn = 0146-6216 ;
       eissn = 1552-3497
@@ -30964,10 +30998,23 @@
   {
 
     title <
+      name = Molecular Pain ;
+        eissn = 1744-8069 
+    >
+
+      param[base_url] = http://mpx.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2006 ; Molecular Pain Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+    title <
       name = Multiple Sclerosis Journal ;
         issn = 1352-4585 ;
-        eissn = 1477-0970 ;
-        issnl = 1352-4585
+        eissn = 1477-0970 
     >
 
     param[base_url] = http://msj.sagepub.com/
