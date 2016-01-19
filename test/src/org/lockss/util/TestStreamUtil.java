@@ -224,6 +224,16 @@ public class TestStreamUtil extends LockssTestCase {
     assertTrue(resultStr.equals("test string"));
   }
 
+  public void testCountBytes() throws IOException {
+    String str = "012345678901234567890";
+    assertEquals(str.length(), StreamUtil.countBytes(new StringInputStream(str)));
+  }
+
+  public void testCountChars() throws IOException {
+    String str = "012345678901234567890";
+    assertEquals(str.length(), StreamUtil.countChars(new StringReader(str)));
+  }
+
   public void testReadBuf() throws IOException {
     int len = 12;
     byte[] buf = new byte[len];
