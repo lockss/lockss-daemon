@@ -954,8 +954,8 @@
 
       param[journal_id] = ijbdi
 
-      au < manifest ; exists ; 2014 ; International Journal of Big Data Intelligence Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2015 ; International Journal of Big Data Intelligence Volume 2 ; 2 ; >
+      au < testing ; exists ; 2014 ; International Journal of Big Data Intelligence Volume 1 ; 1 ; >
+      au < testing ; exists ; 2015 ; International Journal of Big Data Intelligence Volume 2 ; 2 ; >
       au < manifest ; exists ; 2016 ; International Journal of Big Data Intelligence Volume 3 ; 3 ; >
 
     }
@@ -1981,6 +1981,7 @@
 
       au < doNotProcess ; doNotProcess ; 2010-2012 ; International Journal of Computers in Healthcare Volume 1 ; 1 ; >
       au < manifest ; exists ; 2014-2015 ; International Journal of Computers in Healthcare Volume 2 ; 2 ; >
+      #not testing, issue3 & 4 not online yet
 
     }
 
@@ -6271,7 +6272,7 @@
       au < crawling ; exists ; 2014 ; International Journal of Oil, Gas and Coal Technology Volume 7 ; 7 ; >
       au < crawling ; exists ; 2014 ; International Journal of Oil, Gas and Coal Technology Volume 8 ; 8 ; >
       au < crawling ; exists ; 2015 ; International Journal of Oil, Gas and Coal Technology Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2015 ; International Journal of Oil, Gas and Coal Technology Volume 10 ; 10 ; >
+      au < testing ; exists ; 2015 ; International Journal of Oil, Gas and Coal Technology Volume 10 ; 10 ; >
       au < exists ; exists ; 2016 ; International Journal of Oil, Gas and Coal Technology Volume 11 ; 11 ; >
       au < expected ; exists ; 2016 ; International Journal of Oil, Gas and Coal Technology Volume 12 ; 12 ; >
 
