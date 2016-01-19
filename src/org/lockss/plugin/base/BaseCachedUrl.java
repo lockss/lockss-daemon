@@ -60,6 +60,7 @@ public class BaseCachedUrl implements CachedUrl {
   private RepositoryNode leaf = null;
   protected RepositoryNode.RepositoryNodeContents rnc = null;
   protected Properties options;
+  protected CIProperties ciProps;
 
   public static final String PREFIX = Configuration.PREFIX + "baseCachedUrl.";
 
@@ -219,8 +220,10 @@ public class BaseCachedUrl implements CachedUrl {
   public InputStream getUnfilteredInputStream() {
     ensureRnc();
     InputStream in = rnc.getInputStream();;
-    String contentEncoding = getProperty(PROPERTY_CONTENT_ENCODING);
-    if (StringUtil.isNullString(contentEncoding)) {
+    // Content-Encoding header has been renamed to X-Lockss-Unencoded-...
+    String contentEncoding = getProperty(PROPERTY_UNENCODED_CONTENT_ENCODING);
+    if (StringUtil.isNullString(contentEncoding) ||
+	contentEncoding.equalsIgnoreCase("identity")) {
       return in;
     }
     // Daemon versions 1.67 and 1.68 decompressed on receipt but didn't
@@ -323,9 +326,35 @@ public class BaseCachedUrl implements CachedUrl {
     return ret;
   }
 
+  /** Return the CU properties, consisting of the response headers plus
+   * additional props added by the daemon.  If a Content-Encoding header is
+   * present, it and any accompanying Content-Length are removed, and
+   * replaced with prop name prefixed with {@value ENCODED_HEADER_PREFIX}.
+   * The original headers cannot be included, as they're no longer
+   * accurate, but some clients might want to know how the content was
+   * actually delivered. */
   public CIProperties getProperties() {
     ensureRnc();
-    return CIProperties.fromProperties(rnc.getProperties());
+    if (ciProps == null) {
+      CIProperties props = CIProperties.fromProperties(rnc.getProperties());
+      String contentEncoding = props.getProperty(PROPERTY_CONTENT_ENCODING);
+      if (!StringUtil.isNullString(contentEncoding) &&
+	  !contentEncoding.equalsIgnoreCase("identity")) {
+	// We're going to uncompress; rename what would be incorrect
+	// Content-Encoding and Content-Length
+	props.remove(PROPERTY_CONTENT_ENCODING);
+	props.setProperty(PROPERTY_UNENCODED_CONTENT_ENCODING,
+			  contentEncoding);
+	String contentLength = props.getProperty(PROPERTY_CONTENT_LENGTH);
+	if (!StringUtil.isNullString(contentLength)) {
+	  props.remove(PROPERTY_CONTENT_LENGTH);
+	  props.setProperty(PROPERTY_UNENCODED_CONTENT_LENGTH,
+			    contentLength);
+	}
+      }
+      ciProps = props;
+    }
+    return ciProps;
   }
 
   /**
@@ -367,6 +396,7 @@ public class BaseCachedUrl implements CachedUrl {
   private void ensureRnc() {
     if (rnc == null) {
       rnc = getNodeVersion().getNodeContents();
+      ciProps = null;
     }
   }
 
