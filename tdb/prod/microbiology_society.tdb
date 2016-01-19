@@ -5,6 +5,7 @@
   >
   
   comment[0] = Formerly: Society for General Microbiology
+  comment[platform] = Pub2Web
 
   {
   
@@ -16,6 +17,7 @@
      
       comment[continued_by] = International Journal of Systematic Bacteriology 0020-7713
 
+    {
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://ijs.sgmjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
@@ -35,6 +37,30 @@
       au < down ; 1963 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 13 ; 13 >
       au < down ; 1964 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 14 ; 14 >
       au < down ; 1965 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 15 ; 15 >
+    }
+
+    {
+      plugin = org.lockss.plugin.pub2web.ms.MicrobiologySocietyJournalsPlugin
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://ijs.microbiologyresearch.org/
+      param[journal_id] = ijsem
+
+      au < doNotProcess ; 1951 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 1 ; 1 >
+      au < doNotProcess ; 1952 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 2 ; 2 >
+      au < doNotProcess ; 1953 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 3 ; 3 >
+      au < doNotProcess ; 1954 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 4 ; 4 >
+      au < doNotProcess ; 1955 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 5 ; 5 >
+      au < doNotProcess ; 1956 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 6 ; 6 >
+      au < doNotProcess ; 1957 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 7 ; 7 >
+      au < doNotProcess ; 1958 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 8 ; 8 >
+      au < doNotProcess ; 1959 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 9 ; 9 >
+      au < doNotProcess ; 1960 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 10 ; 10 >
+      au < doNotProcess ; 1961 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 11 ; 11 >
+      au < doNotProcess ; 1962 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 12 ; 12 >
+      au < doNotProcess ; 1963 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 13 ; 13 >
+      au < doNotProcess ; 1964 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 14 ; 14 >
+      au < doNotProcess ; 1965 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 15 ; 15 >
+    }
 
   }
 
@@ -49,6 +75,7 @@
       comment[continues] = International Bulletin of Bacterial Nomenclature and Taxonomy 0096-266X
       comment[continued_by] = International Journal of Systematic and Evolutionary Bacteriology 1466-5026
       
+    {  
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://ijs.sgmjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
@@ -87,9 +114,51 @@
       au < down ; 1997 ; International Journal of Systematic Bacteriology Volume 47 ; 47 >
       au < down ; 1998 ; International Journal of Systematic Bacteriology Volume 48 ; 48 >
       au < down ; 1999 ; International Journal of Systematic Bacteriology Volume 49 ; 49 >
+    }
+
+    {  
+      plugin = org.lockss.plugin.pub2web.ms.MicrobiologySocietyJournalsPlugin
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://ijs.microbiologyresearch.org/
+      param[journal_id] = ijsem
+
+      au < doNotProcess ; 1966 ; International Journal of Systematic Bacteriology Volume 16 ; 16 >
+      au < doNotProcess ; 1967 ; International Journal of Systematic Bacteriology Volume 17 ; 17 >
+      au < doNotProcess ; 1968 ; International Journal of Systematic Bacteriology Volume 18 ; 18 >
+      au < doNotProcess ; 1969 ; International Journal of Systematic Bacteriology Volume 19 ; 19 >
+      au < doNotProcess ; 1970 ; International Journal of Systematic Bacteriology Volume 20 ; 20 >
+      au < doNotProcess ; 1971 ; International Journal of Systematic Bacteriology Volume 21 ; 21 >
+      au < doNotProcess ; 1972 ; International Journal of Systematic Bacteriology Volume 22 ; 22 >
+      au < doNotProcess ; 1973 ; International Journal of Systematic Bacteriology Volume 23 ; 23 >
+      au < doNotProcess ; 1974 ; International Journal of Systematic Bacteriology Volume 24 ; 24 >
+      au < doNotProcess ; 1975 ; International Journal of Systematic Bacteriology Volume 25 ; 25 >
+      au < doNotProcess ; 1976 ; International Journal of Systematic Bacteriology Volume 26 ; 26 >
+      au < doNotProcess ; 1977 ; International Journal of Systematic Bacteriology Volume 27 ; 27 >
+      au < doNotProcess ; 1978 ; International Journal of Systematic Bacteriology Volume 28 ; 28 >
+      au < doNotProcess ; 1979 ; International Journal of Systematic Bacteriology Volume 29 ; 29 >
+      au < doNotProcess ; 1980 ; International Journal of Systematic Bacteriology Volume 30 ; 30 >
+      au < doNotProcess ; 1981 ; International Journal of Systematic Bacteriology Volume 31 ; 31 >
+      au < doNotProcess ; 1982 ; International Journal of Systematic Bacteriology Volume 32 ; 32 >
+      au < doNotProcess ; 1983 ; International Journal of Systematic Bacteriology Volume 33 ; 33 >
+      au < doNotProcess ; 1984 ; International Journal of Systematic Bacteriology Volume 34 ; 34 >
+      au < doNotProcess ; 1985 ; International Journal of Systematic Bacteriology Volume 35 ; 35 >
+      au < doNotProcess ; 1986 ; International Journal of Systematic Bacteriology Volume 36 ; 36 >
+      au < doNotProcess ; 1987 ; International Journal of Systematic Bacteriology Volume 37 ; 37 >
+      au < doNotProcess ; 1988 ; International Journal of Systematic Bacteriology Volume 38 ; 38 >
+      au < doNotProcess ; 1989 ; International Journal of Systematic Bacteriology Volume 39 ; 39 >
+      au < doNotProcess ; 1990 ; International Journal of Systematic Bacteriology Volume 40 ; 40 >
+      au < doNotProcess ; 1991 ; International Journal of Systematic Bacteriology Volume 41 ; 41 >
+      au < doNotProcess ; 1992 ; International Journal of Systematic Bacteriology Volume 42 ; 42 >
+      au < doNotProcess ; 1993 ; International Journal of Systematic Bacteriology Volume 43 ; 43 >
+      au < doNotProcess ; 1994 ; International Journal of Systematic Bacteriology Volume 44 ; 44 >
+      au < doNotProcess ; 1995 ; International Journal of Systematic Bacteriology Volume 45 ; 45 >
+      au < doNotProcess ; 1996 ; International Journal of Systematic Bacteriology Volume 46 ; 46 >
+      au < doNotProcess ; 1997 ; International Journal of Systematic Bacteriology Volume 47 ; 47 >
+      au < doNotProcess ; 1998 ; International Journal of Systematic Bacteriology Volume 48 ; 48 >
+      au < doNotProcess ; 1999 ; International Journal of Systematic Bacteriology Volume 49 ; 49 >
+    }
 
   }
-   
    
   {
     title <
@@ -99,10 +168,9 @@
       issnl = 1466-5026
     >
 
-    {
-    
       comment[continues] = International Journal of Systematic Bacteriology 0020-7713
 
+    {
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://ijs.sgmjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
@@ -123,9 +191,32 @@
       au < doNotProcess ; 2013 ; International Journal of Systematic and Evolutionary Microbiology Volume 63 ; 63 >
       au < doNotProcess ; 2014 ; International Journal of Systematic and Evolutionary Microbiology Volume 64 ; 64 >
       au < doNotProcess ; 2015 ; International Journal of Systematic and Evolutionary Microbiology Volume 65 ; 65 >
-
     }
+    
+    {
+      plugin = org.lockss.plugin.pub2web.ms.MicrobiologySocietyJournalsPlugin
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://ijs.microbiologyresearch.org/
+      param[journal_id] = ijsem
 
+      au < doNotProcess ; 2000 ; International Journal of Systematic and Evolutionary Microbiology Volume 50 ; 50 >
+      au < doNotProcess ; 2001 ; International Journal of Systematic and Evolutionary Microbiology Volume 51 ; 51 >
+      au < doNotProcess ; 2002 ; International Journal of Systematic and Evolutionary Microbiology Volume 52 ; 52 >
+      au < doNotProcess ; 2003 ; International Journal of Systematic and Evolutionary Microbiology Volume 53 ; 53 >
+      au < doNotProcess ; 2004 ; International Journal of Systematic and Evolutionary Microbiology Volume 54 ; 54 >
+      au < doNotProcess ; 2005 ; International Journal of Systematic and Evolutionary Microbiology Volume 55 ; 55 >
+      au < doNotProcess ; 2006 ; International Journal of Systematic and Evolutionary Microbiology Volume 56 ; 56 >
+      au < doNotProcess ; 2007 ; International Journal of Systematic and Evolutionary Microbiology Volume 57 ; 57 >
+      au < doNotProcess ; 2008 ; International Journal of Systematic and Evolutionary Microbiology Volume 58 ; 58 >
+      au < doNotProcess ; 2009 ; International Journal of Systematic and Evolutionary Microbiology Volume 59 ; 59 >
+      au < doNotProcess ; 2010 ; International Journal of Systematic and Evolutionary Microbiology Volume 60 ; 60 >
+      au < doNotProcess ; 2011 ; International Journal of Systematic and Evolutionary Microbiology Volume 61 ; 61 >
+      au < doNotProcess ; 2012 ; International Journal of Systematic and Evolutionary Microbiology Volume 62 ; 62 >
+      au < exists ; 2013 ; International Journal of Systematic and Evolutionary Microbiology Volume 63 ; 63 >
+      au < exists ; 2014 ; International Journal of Systematic and Evolutionary Microbiology Volume 64 ; 64 >
+      au < exists ; 2015 ; International Journal of Systematic and Evolutionary Microbiology Volume 65 ; 65 >
+    }
+    
   }
 
   {

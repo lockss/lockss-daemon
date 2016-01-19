@@ -19,6 +19,8 @@
      
       comment[continued_by] = International Journal of Systematic Bacteriology 0020-7713
 
+    {
+
       plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[base_url] = http://ijs.sgmjournals.org/
@@ -39,6 +41,31 @@
       au < doNotProcess ; doNotProcess ; 1964 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 14 ; 14 >
       au < doNotProcess ; doNotProcess ; 1965 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 15 ; 15 >
 
+    }
+
+    {
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      implicit < status ; status2 ; year ; name ; param[volume_name] >
+      param[base_url] = http://ijs.sgmjournals.org/
+      
+      au < doNotProcess ; doNotProcess ; 1951 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 1 ; 1 >
+      au < doNotProcess ; doNotProcess ; 1952 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 2 ; 2 >
+      au < doNotProcess ; doNotProcess ; 1953 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 3 ; 3 >
+      au < doNotProcess ; doNotProcess ; 1954 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 4 ; 4 >
+      au < doNotProcess ; doNotProcess ; 1955 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 5 ; 5 >
+      au < doNotProcess ; doNotProcess ; 1956 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 6 ; 6 >
+      au < doNotProcess ; doNotProcess ; 1957 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 7 ; 7 >
+      au < doNotProcess ; doNotProcess ; 1958 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 8 ; 8 >
+      au < doNotProcess ; doNotProcess ; 1959 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 9 ; 9 >
+      au < doNotProcess ; doNotProcess ; 1960 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 10 ; 10 >
+      au < doNotProcess ; doNotProcess ; 1961 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 11 ; 11 >
+      au < doNotProcess ; doNotProcess ; 1962 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 12 ; 12 >
+      au < doNotProcess ; doNotProcess ; 1963 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 13 ; 13 >
+      au < doNotProcess ; doNotProcess ; 1964 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 14 ; 14 >
+      au < doNotProcess ; doNotProcess ; 1965 ; International Bulletin of Bacterial Nomenclature and Taxonomy Volume 15 ; 15 >
+
+    }
   }
 
   {
@@ -103,9 +130,36 @@
 
       comment[continues] = International Journal of Systematic Bacteriology 0020-7713
 
+    {
+      
       plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[base_url] = http://ijs.sgmjournals.org/
+
+      au < doNotProcess ; exists ; 2000 ; International Journal of Systematic and Evolutionary Microbiology Volume 50 ; 50 >
+      au < doNotProcess ; exists ; 2001 ; International Journal of Systematic and Evolutionary Microbiology Volume 51 ; 51 >
+      au < doNotProcess ; exists ; 2002 ; International Journal of Systematic and Evolutionary Microbiology Volume 52 ; 52 >
+      au < doNotProcess ; exists ; 2003 ; International Journal of Systematic and Evolutionary Microbiology Volume 53 ; 53 >
+      au < doNotProcess ; exists ; 2004 ; International Journal of Systematic and Evolutionary Microbiology Volume 54 ; 54 >
+      au < doNotProcess ; exists ; 2005 ; International Journal of Systematic and Evolutionary Microbiology Volume 55 ; 55 >
+      au < doNotProcess ; exists ; 2006 ; International Journal of Systematic and Evolutionary Microbiology Volume 56 ; 56 >
+      au < doNotProcess ; exists ; 2007 ; International Journal of Systematic and Evolutionary Microbiology Volume 57 ; 57 >
+      au < doNotProcess ; exists ; 2008 ; International Journal of Systematic and Evolutionary Microbiology Volume 58 ; 58 >
+      au < doNotProcess ; exists ; 2009 ; International Journal of Systematic and Evolutionary Microbiology Volume 59 ; 59 >
+      au < doNotProcess ; exists ; 2010 ; International Journal of Systematic and Evolutionary Microbiology Volume 60 ; 60 >
+      au < doNotProcess ; exists ; 2011 ; International Journal of Systematic and Evolutionary Microbiology Volume 61 ; 61 >
+      au < down ; frozen ; 2012 ; International Journal of Systematic and Evolutionary Microbiology Volume 62 ; 62 >
+      au < down ; exists ; 2013 ; International Journal of Systematic and Evolutionary Microbiology Volume 63 ; 63 >
+      au < down ; exists ; 2014 ; International Journal of Systematic and Evolutionary Microbiology Volume 64 ; 64 >
+      au < doNotProcess ; exists ; 2015 ; International Journal of Systematic and Evolutionary Microbiology Volume 65 ; 65 >
+    }
+
+    {
+      
+      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
+      implicit < status ; status2 ; year ; name ; param[volume_name] >
+      param[base_url] = http://ijs.microbiologyresearch.org/
+      param[journal_id] = ijsem
 
       au < exists ; exists ; 2000 ; International Journal of Systematic and Evolutionary Microbiology Volume 50 ; 50 >
       au < exists ; exists ; 2001 ; International Journal of Systematic and Evolutionary Microbiology Volume 51 ; 51 >
@@ -119,10 +173,11 @@
       au < exists ; exists ; 2009 ; International Journal of Systematic and Evolutionary Microbiology Volume 59 ; 59 >
       au < exists ; exists ; 2010 ; International Journal of Systematic and Evolutionary Microbiology Volume 60 ; 60 >
       au < exists ; exists ; 2011 ; International Journal of Systematic and Evolutionary Microbiology Volume 61 ; 61 >
-      au < down ; frozen ; 2012 ; International Journal of Systematic and Evolutionary Microbiology Volume 62 ; 62 >
-      au < down ; exists ; 2013 ; International Journal of Systematic and Evolutionary Microbiology Volume 63 ; 63 >
-      au < down ; exists ; 2014 ; International Journal of Systematic and Evolutionary Microbiology Volume 64 ; 64 >
+      au < doNotProcess ; frozen ; 2012 ; International Journal of Systematic and Evolutionary Microbiology Volume 62 ; 62 >
+      au < doNotProcess ; exists ; 2013 ; International Journal of Systematic and Evolutionary Microbiology Volume 63 ; 63 >
+      au < doNotProcess ; exists ; 2014 ; International Journal of Systematic and Evolutionary Microbiology Volume 64 ; 64 >
       au < exists ; exists ; 2015 ; International Journal of Systematic and Evolutionary Microbiology Volume 65 ; 65 >
+    }
 
   }
 
