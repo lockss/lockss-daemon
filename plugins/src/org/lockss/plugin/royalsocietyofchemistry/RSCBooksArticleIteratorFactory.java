@@ -50,18 +50,13 @@ public class RSCBooksArticleIteratorFactory
   
   private static final Logger log = Logger.getLogger(RSCBooksArticleIteratorFactory.class);
   
-  protected static final String ROOT_TEMPLATE =
-      "\"%sen/content/\", base_url";
-//    "\"%sen/content/chapterpdf/[0-9]+/\", base_url, year";
-//  <string>1,"^%sen/content/chapter/[-a-z0-9]+/[-0-9x]+", base_url</string>
-//  <string>1,"^%sen/content/chapterpdf/%d/[-a-z0-9]+\?isbn=[-0-9x]+", base_url, year</string>
-  protected static final String PATTERN_TEMPLATE =
-      "\"/chapter/[-a-z0-9]+/[-0-9x]+\"";
+  protected static final String ROOT_TEMPLATE = "\"%sen/content/\", base_url";
+  protected static final String PATTERN_TEMPLATE = "\"/chapter/[-a-z0-9]+/[-0-9x]+\"";
   
   /*
    * various aspects of a book chapter
-   * 
-   * 
+   * "^%sen/content/chapter/[-a-z0-9]+/[-0-9x]+", base_url
+   * "^%sen/content/chapterpdf/[0-9]{4}/[-a-z0-9]+\?isbn=[-0-9x]+", base_url
    */
   
   // Identify groups in the pattern 

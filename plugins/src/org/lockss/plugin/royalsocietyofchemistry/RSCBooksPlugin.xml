@@ -1,7 +1,7 @@
 <map>
   <entry>
    <string>plugin_status</string>
-   <string>ready</string>
+   <string>testing - EJ</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -34,7 +34,7 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.68.4</string>
+    <string>1.68.0</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -53,7 +53,7 @@
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
-    <string>"^%sen/content/chapterpdf/[0-9]{4}/[a-z0-9-]+\?isbn=[-0-9X]+$", base_url</string>
+    <string>"^%sen/content/chapterpdf/[0-9]{4}/[a-z0-9-]+\?isbn=[-0-9x]+$", base_url</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
