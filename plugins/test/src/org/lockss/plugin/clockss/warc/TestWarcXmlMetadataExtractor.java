@@ -121,7 +121,7 @@ public class TestWarcXmlMetadataExtractor extends LockssTestCase {
       ArticleMetadata mdRecord = null;
       while (mdIt.hasNext()) {
         mdRecord = (ArticleMetadata) mdIt.next();
-        log.setLevel("debug3");
+        //log.setLevel("debug3");
         log.debug3(mdRecord.ppString(2));
         compareMetadata(mdRecord);
 
@@ -136,6 +136,11 @@ public class TestWarcXmlMetadataExtractor extends LockssTestCase {
   private void compareMetadata(ArticleMetadata AM) {
 
     assertNotNull(AM);
+    assertEquals(AM.get(MetadataField.FIELD_ARTICLE_TITLE),"Article about Foo");
+    assertEquals(AM.get(MetadataField.FIELD_PUBLICATION_TITLE),"Journal of Foo");
+    assertEquals(AM.get(MetadataField.FIELD_DOI),"10.9999/12-34-56");
+    assertEquals(AM.get(MetadataField.FIELD_VOLUME),"12");
+    assertEquals(AM.get(MetadataField.FIELD_ISSUE),"34");
   }
   
 }
