@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<article-set>
+ <article dtd-version="1.1" xmlns="http://jats.nlm.nih.gov" xmlns:xlink="http://www.w3.org/1999/xlink">
+<front>
+   <journal-meta>
+     <journal-title-group>
+       <journal-title>Journal of Foo</journal-title>
+     </journal-title-group>
+     <issn publication-format="print">1234-5678</issn>
+     <issn publication-format="electronic">8765-4321</issn>
+     <publisher>
+       <publisher-name>Society of Foo</publisher-name>
+     </publisher>
+   </journal-meta>
+   <article-meta>
+     <article-id pub-id-type="doi">10.9999/12-34-56</article-id>
+     <title-group>
+       <article-title>Article about Foo</article-title>
+     </title-group>
+     <contrib-group>
+       <contrib contrib-type="author">
+         <name>
+           <surname>Doe</surname>
+           <given-names>John</given-names>
+           <prefix>Dr.</prefix>
+           <suffix>Jr.</suffix>
+         </name>
+       </contrib>
+     </contrib-group>
+     <pub-date date-type="pub" iso-8601-date="2016-01-19">
+       <year>2016</year>
+       <month>01</month>
+       <day>19</day>
+     </pub-date>
+     <volume>12</volume>
+     <issue>34</issue>
+     <fpage>56</fpage>
+     <lpage>78</lpage>
+     <self-uri xlink:href="http://www.example.com/10.9999/12-34-56">http://www.example.com/10.9999/12-34-56</self-uri>
+     <custom-meta-group>
+       <custom-meta>
+         <meta-name>mykey</meta-name>
+         <meta-value>myvalue</meta-value>
+       </custom-meta>
+     </custom-meta-group>
+   </article-meta>
+</front>   
+ </article>
+</article-set>

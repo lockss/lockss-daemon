@@ -1,0 +1,128 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>development</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.clockss.warc.ClockssWarcPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>  
+  <entry>
+    <!-- support for guessing at encoding, setting provider -->
+    <string>required_daemon_version</string>
+    <string>1.67.0</string>
+  </entry>  
+  <entry>
+    <string>plugin_name</string>
+    <string>Warc Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Warc Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>100</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>28800000</long>
+  </entry>
+  <entry>
+    <string>au_refetch_depth</string>
+    <int>99</int>
+  </entry>
+  <entry>
+    <string>plugin_notes</string>
+    <string>Plugin for ingest of CLOCKSS warc files</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%s%d/", base_url, year</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%s%d/", base_url, year</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>      
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <!-- BASE_URL/warcfiles/foo-released/2015/foo-timedate.warc.gz -->
+      <string>"^%s%d/.+\.warc\.gz", base_url, year</string>
+    </list>
+  </entry>
+  <!--  do not explode the archive. The xml file is at the top level, not archived -->
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.clockss.SourceXmlArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.clockss.SourceXmlArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.clockss.warc.WarcJatsXmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+    <entry>
+    <string>application/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.clockss.warc.WarcJatsXmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>        
+</map>
