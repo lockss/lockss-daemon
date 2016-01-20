@@ -22,7 +22,7 @@
     au < testing ; exists ; 2007 ; Journal of Applied Remote Sensing Volume 1 ; 2007 >
     au < testing ; exists ; 2008 ; Journal of Applied Remote Sensing Volume 2 ; 2008 >
     au < testing ; exists ; 2009 ; Journal of Applied Remote Sensing Volume 3 ; 2009 >
-    au < testing ; exists ; 2010 ; Journal of Applied Remote Sensing Volume 4 ; 2010 >
+    au < ready ; exists ; 2010 ; Journal of Applied Remote Sensing Volume 4 ; 2010 >
     au < testing ; exists ; 2011 ; Journal of Applied Remote Sensing Volume 5 ; 2011 >
     au < crawling ; exists ; 2012 ; Journal of Applied Remote Sensing Volume 6 ; 2012 >
     au < crawling ; exists ; 2013 ; Journal of Applied Remote Sensing Volume 7 ; 2013 >
@@ -126,7 +126,7 @@
     param[resource_id] = 165
 
     au < crawling ; exists ; 2014 ; Journal of Medical Imaging Volume 1 ; 2014 >
-    au < testing ; exists ; 2015 ; Journal of Medical Imaging Volume 2 ; 2015 >
+    au < ready ; exists ; 2015 ; Journal of Medical Imaging Volume 2 ; 2015 >
 
     }
 
