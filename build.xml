@@ -139,7 +139,7 @@ Args:
   <property name="svn.module.default" value="lockss-daemon" />
   <property name="svn.dir"       value="lockss-daemon" />
   <property name="svn.anon.root"
-		  value="svn://svn.code.sf.net/p/lockss/svn/lockss-daemon" />
+		  value="https://github.com/lockss/lockss-daemon.git" />
   <!-- XXX should get this from -->
 
   <!--  Directories -->
@@ -1364,24 +1364,19 @@ The target you have selected requires compiling under JDK 1.7.
   <!-- Find currently checked out branch if no explicit arg supplied -->
   <target name="set.branchname" depends="prepare,check.contrib">
    <property name="branch" value="" />
-   <if>
-    <equals arg1="${branch}" arg2="" />
+   <if> <equals arg1="${branch}" arg2="" />
     <then>
-      <exec executable="svn" dir="${basedir}" outputproperty="svn.info">
-	<arg value="info" />
+      <exec executable="git" dir="${basedir}" outputproperty="git.status">
+	      <arg value="status" />
       </exec>
       <propertyregex property="branch.name"
-		     input="${svn.info}"
-		     regexp="URL.*${svn.module.default}/(.*)"
+		     input="${git.status}"
+		     regexp="On branch (.*)"
 		     select="\1"
-		     defaultValue="trunkcc" />
-      <propertyregex property="svn.root"
-		     input="${svn.info}"
-		     regexp="Repository Root: (.*)"
-		     select="\1" />
+		     defaultValue="master" />
     </then>
     <else>
-      <property name="branch.name" value="branches/${branch}"/>
+      <property name="branch.name" value="${branch}"/>
     </else>
    </if>
   </target>
@@ -2839,9 +2834,9 @@ Test results in ${test.results}
    <trycatch property="recursive.error.msg">
      <try>
        <if>
-	 <equals arg1="${branch.name}" arg2="trunk" />
+	 <equals arg1="${branch.name}" arg2="master" />
 	 <then>
-	   <echo>Checking out MAIN BRANCH
+	   <echo>Checking out MASTER BRANCH
 	     to ${temp.build.dir}</echo>
 	 </then>
 	 <else>
@@ -2852,16 +2847,19 @@ Test results in ${test.results}
        <if>
 	 <isfalse value="${nosvn}" />
 	 <then>
-           <if>
-             <isfalse value="${copylib}" />
+       <property name="copylib" value="false"/>
+       <if> <isfalse value="${copylib}" />
              <then>
-	       <exec executable="svn" dir="${temp.build.dir}"
-		     failonerror="true">
-		 <arg value="checkout" />
-		 <arg value="-q" />
-		 <arg value="--non-interactive" />
-		 <arg value="${svn.anon.root}/${branch.name}" />
-		 <arg value="${svn.dir}" />
+	       <exec executable="git" dir="${temp.build.dir}" failonerror="true">
+		      <arg value="clone" />
+		      <arg value="-q" />
+		      <arg value="--depth" />
+             <arg value="1"/>
+              <arg value="--branch"/>
+              <arg value="${branch.name}"/>
+             <arg value="--single-branch"/>
+		      <arg value="${svn.anon.root}" />
+		      <arg value="${svn.dir}" />
 	       </exec>
              </then>
              <else>
