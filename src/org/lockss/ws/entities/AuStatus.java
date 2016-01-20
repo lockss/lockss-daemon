@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -62,6 +62,7 @@ public class AuStatus {
   private Boolean currentlyCrawling;
   private Boolean currentlyPolling;
   private String subscriptionStatus;
+  private String provider;
 
   /**
    * Provides the Archival Unit volume name.
@@ -314,6 +315,15 @@ public class AuStatus {
     return subscriptionStatus;
   }
 
+  /**
+   * Provides the Archival Unit provider name.
+   * 
+   * @return a String with the provider name.
+   */
+  public String getProvider() {
+    return provider;
+  }
+
   public void setVolume(String volume) {
     this.volume = volume;
   }
@@ -422,6 +432,10 @@ public class AuStatus {
     this.subscriptionStatus = subscriptionStatus;
   }
 
+  public void setProvider(String provider) {
+    this.provider = provider;
+  }
+
   @Override
   public String toString() {
     StringBuilder builder = new StringBuilder();
@@ -479,6 +493,8 @@ public class AuStatus {
     builder.append(currentlyPolling);
     builder.append(", subscriptionStatus=");
     builder.append(subscriptionStatus);
+    builder.append(", provider=");
+    builder.append(provider);
     builder.append("]");
     return builder.toString();
   }
