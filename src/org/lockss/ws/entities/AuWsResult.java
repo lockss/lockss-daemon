@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2014-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -75,6 +75,7 @@ public class AuWsResult {
   private List<String> substanceUrls;
   private List<String> articleUrls;
   private String journalTitle;
+  private String tdbProvider;
 
   /**
    * Provides the Archival Unit identifier.
@@ -528,6 +529,18 @@ public class AuWsResult {
     this.journalTitle = journalTitle;
   }
 
+  /**
+   * Provides the Archival Unit provider name from the TDB.
+   * 
+   * @return a String with the provider name from the TDB.
+   */
+  public String getTdbProvider() {
+    return tdbProvider;
+  }
+  public void setTdbProvider(String tdbProvider) {
+    this.tdbProvider = tdbProvider;
+  }
+
   @Override
   public String toString() {
     return "[AuWsResult auId=" + auId + ", name=" + name + ", volume=" + volume
@@ -551,6 +564,7 @@ public class AuWsResult {
 	+ urlStems + ", isBulkContent=" + isBulkContent + ", peerAgreements="
 	+ peerAgreements + ", urls=" + urls + ", substanceUrls=" + substanceUrls
 	+ ", articleUrls=" + articleUrls + ", journalTitle=" + journalTitle
+	+ ", tdbProvider=" + tdbProvider
 	+ "]";
   }
 }

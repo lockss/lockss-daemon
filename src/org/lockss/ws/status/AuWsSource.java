@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2014-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -119,6 +119,7 @@ public class AuWsSource extends AuWsResult {
   private boolean substanceUrlsPopulated = false;
   private boolean articleUrlsPopulated = false;
   private boolean journalTitlePopulated;
+  private boolean tdbProviderPopulated = false;
 
   private LockssDaemon theDaemon = null;
   private Plugin plugin = null;
@@ -857,6 +858,21 @@ public class AuWsSource extends AuWsResult {
     }
 
     return super.getJournalTitle();
+  }
+
+  @Override
+  public String getTdbProvider() {
+    if (!tdbProviderPopulated) {
+      String providerName = AuUtil.getTitleAttribute(au, "provider");
+
+      if (!StringUtil.isNullString(providerName)) {
+	setTdbProvider(providerName);
+      }
+
+      tdbProviderPopulated = true;
+    }
+
+    return super.getTdbProvider();
   }
 
   /**
