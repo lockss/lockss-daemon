@@ -23,7 +23,7 @@
     au < testing ; exists ; 2008 ; Journal of Applied Remote Sensing Volume 2 ; 2008 >
     au < testing ; exists ; 2009 ; Journal of Applied Remote Sensing Volume 3 ; 2009 >
     au < ready ; exists ; 2010 ; Journal of Applied Remote Sensing Volume 4 ; 2010 >
-    au < testing ; exists ; 2011 ; Journal of Applied Remote Sensing Volume 5 ; 2011 >
+    au < ready ; exists ; 2011 ; Journal of Applied Remote Sensing Volume 5 ; 2011 >
     au < crawling ; exists ; 2012 ; Journal of Applied Remote Sensing Volume 6 ; 2012 >
     au < crawling ; exists ; 2013 ; Journal of Applied Remote Sensing Volume 7 ; 2013 >
     au < crawling ; exists ; 2014 ; Journal of Applied Remote Sensing Volume 8 ; 2014 >
@@ -67,7 +67,7 @@
     au < manifest ; exists ; 2005 ; Journal of Biomedical Optics Volume 10 ; 2005 >
     au < manifest ; exists ; 2006 ; Journal of Biomedical Optics Volume 11 ; 2006 >
     au < manifest ; exists ; 2007 ; Journal of Biomedical Optics Volume 12 ; 2007 >
-    au < testing ; exists ; 2008 ; Journal of Biomedical Optics Volume 13 ; 2008 >
+    au < ready ; exists ; 2008 ; Journal of Biomedical Optics Volume 13 ; 2008 >
     au < testing ; exists ; 2009 ; Journal of Biomedical Optics Volume 14 ; 2009 >
     au < testing ; exists ; 2010 ; Journal of Biomedical Optics Volume 15 ; 2010 >
     au < testing ; exists ; 2011 ; Journal of Biomedical Optics Volume 16 ; 2011 >
@@ -107,7 +107,7 @@
     au < testing ; exists ; 2008 ; Journal of Electronic Imaging Volume 17 ; 2008 >
     au < testing ; exists ; 2009 ; Journal of Electronic Imaging Volume 18 ; 2009 >
     au < testing ; exists ; 2010 ; Journal of Electronic Imaging Volume 19 ; 2010 >
-    au < testing ; exists ; 2011 ; Journal of Electronic Imaging Volume 20 ; 2011 >
+    au < ready ; exists ; 2011 ; Journal of Electronic Imaging Volume 20 ; 2011 >
     au < crawling ; exists ; 2012 ; Journal of Electronic Imaging Volume 21 ; 2012 >
     au < crawling ; exists ; 2013 ; Journal of Electronic Imaging Volume 22 ; 2013 >
     au < crawling ; exists ; 2014 ; Journal of Electronic Imaging Volume 23 ; 2014 >
@@ -166,9 +166,9 @@
     param[base_url] = http://nanophotonics.spiedigitallibrary.org/
     param[resource_id] = 97
 
-    au < testing ; exists ; 2007 ; Journal of Nanophotonics Volume 1 ; 2007 >
+    au < ready ; exists ; 2007 ; Journal of Nanophotonics Volume 1 ; 2007 >
     au < testing ; exists ; 2008 ; Journal of Nanophotonics Volume 2 ; 2008 >
-    au < testing ; exists ; 2009 ; Journal of Nanophotonics Volume 3 ; 2009 >
+    au < ready ; exists ; 2009 ; Journal of Nanophotonics Volume 3 ; 2009 >
     au < testing ; exists ; 2010 ; Journal of Nanophotonics Volume 4 ; 2010 >
     au < testing ; exists ; 2011 ; Journal of Nanophotonics Volume 5 ; 2011 >
     au < crawling ; exists ; 2012 ; Journal of Nanophotonics Volume 6 ; 2012 >
@@ -187,7 +187,7 @@
     param[base_url] = http://photonicsforenergy.spiedigitallibrary.org/
     param[resource_id] = 98
 
-    au < testing ; exists ; 2011 ; Journal of Photonics for Energy Volume 1 ; 2011 >
+    au < ready ; exists ; 2011 ; Journal of Photonics for Energy Volume 1 ; 2011 >
     au < crawling ; exists ; 2012 ; Journal of Photonics for Energy Volume 2 ; 2012 >
     au < crawling ; exists ; 2013 ; Journal of Photonics for Energy Volume 3 ; 2013 >
     au < crawling ; exists ; 2014 ; Journal of Photonics for Energy Volume 4 ; 2014 >
