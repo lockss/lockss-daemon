@@ -21647,6 +21647,20 @@
   {
 
     title <
+      name = Journal of Development Policy and Practice ;
+      issn = 2455-1333 
+    >
+
+      param[base_url] = http://jdp.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2016 ; Journal of Development Policy and Practice Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Developing Societies ;
       issn = 0169-796X ;
       eissn = 1745-2546

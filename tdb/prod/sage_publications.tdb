@@ -22285,6 +22285,21 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     {
 
+    title <
+      name = Journal of Development Policy and Practice ;
+      issn = 2455-1333 
+    >
+
+      param[base_url] = http://jdp.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2016 ; Journal of Development Policy and Practice Volume 1 ; 1 >
+
+    }
+
+    {
+
       title <
         name = Journal of Business Communication ;
         issn = 0021-9436 ;
