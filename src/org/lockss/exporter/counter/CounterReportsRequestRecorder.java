@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -98,9 +98,12 @@ public class CounterReportsRequestRecorder {
    *          was contacted while processing the request.
    * @param publisherCode
    *          An int with the publisher involvement code.
+   * @param organization
+   *          A String with the name of the organization to which to assign this
+   *          request for COUNTER purposes.
    */
   public void recordRequest(String url, PublisherContacted contacted,
-      int publisherCode) {
+      int publisherCode, String organization) {
     try {
       final String DEBUG_HEADER = "recordRequest(): ";
       CounterReportsManager counterReportsManager =
@@ -131,7 +134,8 @@ public class CounterReportsRequestRecorder {
       log.debug2("isPublisherInvolved = " + isPublisherInvolved);
 
       // Persist the request data.
-      counterReportsManager.persistRequest(url, isPublisherInvolved);
+      counterReportsManager.persistRequest(url, isPublisherInvolved,
+	  organization);
       log.debug2(DEBUG_HEADER + "Done.");
     } catch (DbException sqle) {
       log.error("Cannot persist request - Statistics not collected", sqle);

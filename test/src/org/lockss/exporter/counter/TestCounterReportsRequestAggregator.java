@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -301,10 +301,10 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
     Long fullPublicationSeq = initializeFullBookMetadata();
     Long sectionPublicationSeq = initializeSectionBookMetadata();
 
-    counterReportsManager.persistRequest(FULL_URL, false);
-    counterReportsManager.persistRequest(FULL_URL, true);
-    counterReportsManager.persistRequest(SECTION_URL, false);
-    counterReportsManager.persistRequest(SECTION_URL, true);
+    counterReportsManager.persistRequest(FULL_URL, false, null);
+    counterReportsManager.persistRequest(FULL_URL, true, null);
+    counterReportsManager.persistRequest(SECTION_URL, false, null);
+    counterReportsManager.persistRequest(SECTION_URL, true, null);
 
     checkRequestRowCount(4);
 
@@ -596,10 +596,10 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
   public void runTestMonthJournalAggregation() throws Exception {
     Long publicationSeq = initializeJournalMetadata();
 
-    counterReportsManager.persistRequest(HTML_URL, false);
-    counterReportsManager.persistRequest(HTML_URL, true);
-    counterReportsManager.persistRequest(PDF_URL, false);
-    counterReportsManager.persistRequest(PDF_URL, true);
+    counterReportsManager.persistRequest(HTML_URL, false, null);
+    counterReportsManager.persistRequest(HTML_URL, true, null);
+    counterReportsManager.persistRequest(PDF_URL, false, null);
+    counterReportsManager.persistRequest(PDF_URL, true, null);
 
     checkRequestRowCount(4);
 

@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -112,10 +112,10 @@ public class TestCounterReportsBookReport2L extends LockssTestCase {
     initializeFullBookMetadata();
     initializeSectionBookMetadata();
 
-    counterReportsManager.persistRequest(FULL_URL, false);
-    counterReportsManager.persistRequest(FULL_URL, true);
-    counterReportsManager.persistRequest(SECTION_URL, false);
-    counterReportsManager.persistRequest(SECTION_URL, true);
+    counterReportsManager.persistRequest(FULL_URL, false, null);
+    counterReportsManager.persistRequest(FULL_URL, true, null);
+    counterReportsManager.persistRequest(SECTION_URL, false, null);
+    counterReportsManager.persistRequest(SECTION_URL, true, null);
 
     CounterReportsRequestAggregator aggregator =
 	new CounterReportsRequestAggregator(theDaemon);
