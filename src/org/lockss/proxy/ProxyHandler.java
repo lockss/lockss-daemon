@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -496,11 +496,9 @@ public class ProxyHandler extends AbstractHttpHandler {
 			 response, cu);
 	  logAccess(request, "200 from cache", TimeBase.msSince(reqStartTime));
 	  // Record the necessary information required for COUNTER reports.
-	  CounterReportsRequestRecorder
-	      .getInstance()
-	      .recordRequest(urlString,
-			     CounterReportsRequestRecorder.PublisherContacted.FALSE,
-			     200);
+	  CounterReportsRequestRecorder.getInstance().recordRequest(urlString,
+	      CounterReportsRequestRecorder.PublisherContacted.FALSE, 200,
+	      null);
 	  return;
 	} else {
 	  // Not found on cache and told not to forward request
@@ -741,9 +739,8 @@ public class ProxyHandler extends AbstractHttpHandler {
 		     CounterReportsRequestRecorder.PublisherContacted contacted,
 		     int publisherCode) {
     if (proxyMgr.isCounterCountable(request.getField(HttpFields.__UserAgent))) {
-      CounterReportsRequestRecorder.getInstance().recordRequest(url,
-								contacted,
-								publisherCode);
+      CounterReportsRequestRecorder.getInstance().recordRequest(url, contacted,
+	  publisherCode, null);
     }
   }
 
