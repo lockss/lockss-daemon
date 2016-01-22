@@ -1058,7 +1058,7 @@
       au < manifest ; 2015 ; International Journal of Biomedical Engineering and Technology Volume 17 ; 17 >
       au < manifest ; 2015 ; International Journal of Biomedical Engineering and Technology Volume 18 ; 18 >
       au < manifest ; 2015 ; International Journal of Biomedical Engineering and Technology Volume 19 ; 19 >
-      au < expected ; 2016 ; International Journal of Biomedical Engineering and Technology Volume 20 ; 20 >
+      au < manifest ; 2016 ; International Journal of Biomedical Engineering and Technology Volume 20 ; 20 >
 
     }
 
@@ -2233,7 +2233,7 @@
       au < manifest ; 2015 ; International Journal of Data Mining and Bioinformatics Volume 11 ; 11 >
       au < manifest ; 2015 ; International Journal of Data Mining and Bioinformatics Volume 12 ; 12 >
       au < manifest ; 2016 ; International Journal of Data Mining and Bioinformatics Volume 13 ; 13 >
-      au < expected ; 2016 ; International Journal of Data Mining and Bioinformatics Volume 14 ; 14 >
+      au < manifest ; 2016 ; International Journal of Data Mining and Bioinformatics Volume 14 ; 14 >
 
     }
 
@@ -8315,7 +8315,7 @@
       au < manifest ; 2013 ; International Journal of Trade and Global Markets Volume 6 ; 6 >
       au < released ; 2014 ; International Journal of Trade and Global Markets Volume 7 ; 7 >
       au < manifest ; 2015 ; International Journal of Trade and Global Markets Volume 8 ; 8 >
-      au < expected ; 2016 ; International Journal of Trade and Global Markets Volume 9 ; 9 >
+      au < manifest ; 2016 ; International Journal of Trade and Global Markets Volume 9 ; 9 >
 
     }
 
@@ -8544,7 +8544,7 @@
       param[journal_id] = ijvp
 
       au < released ; 2013-2014 ; International Journal of Vehicle Performance Volume 1 ; 1 >
-      au < expected ; 2016 ; International Journal of Vehicle Performance Volume 2 ; 2 >
+      au < manifest ; 2016 ; International Journal of Vehicle Performance Volume 2 ; 2 >
 
     }
 

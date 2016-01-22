@@ -1057,7 +1057,7 @@
       au < crawling ; exists ; 2015 ; International Journal of Biomedical Engineering and Technology Volume 17 ; 17 ; >
       au < crawling ; exists ; 2015 ; International Journal of Biomedical Engineering and Technology Volume 18 ; 18 ; >
       au < crawling ; exists ; 2015 ; International Journal of Biomedical Engineering and Technology Volume 19 ; 19 ; >
-      au < expected ; exists ; 2016 ; International Journal of Biomedical Engineering and Technology Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Biomedical Engineering and Technology Volume 20 ; 20 ; >
 
     }
 
@@ -2233,7 +2233,7 @@
       au < crawling ; exists ; 2015 ; International Journal of Data Mining and Bioinformatics Volume 11 ; 11 ; >
       au < crawling ; exists ; 2015 ; International Journal of Data Mining and Bioinformatics Volume 12 ; 12 ; >
       au < manifest ; exists ; 2016 ; International Journal of Data Mining and Bioinformatics Volume 13 ; 13 ; >
-      au < expected ; exists ; 2016 ; International Journal of Data Mining and Bioinformatics Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Data Mining and Bioinformatics Volume 14 ; 14 ; >
 
     }
 
@@ -6274,7 +6274,7 @@
       au < crawling ; exists ; 2014 ; International Journal of Oil, Gas and Coal Technology Volume 8 ; 8 ; >
       au < crawling ; exists ; 2015 ; International Journal of Oil, Gas and Coal Technology Volume 9 ; 9 ; >
       au < ready ; exists ; 2015 ; International Journal of Oil, Gas and Coal Technology Volume 10 ; 10 ; >
-      au < exists ; exists ; 2016 ; International Journal of Oil, Gas and Coal Technology Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Oil, Gas and Coal Technology Volume 11 ; 11 ; >
       au < expected ; exists ; 2016 ; International Journal of Oil, Gas and Coal Technology Volume 12 ; 12 ; >
 
     }
@@ -8309,7 +8309,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Trade and Global Markets Volume 6 ; 6 ; >
       au < finished ; finished ; 2014 ; International Journal of Trade and Global Markets Volume 7 ; 7 ; >
       au < crawling ; exists ; 2015 ; International Journal of Trade and Global Markets Volume 8 ; 8 ; >
-      au < expected ; exists ; 2016 ; International Journal of Trade and Global Markets Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Trade and Global Markets Volume 9 ; 9 ; >
 
     }
 
@@ -8538,7 +8538,7 @@
       param[journal_id] = ijvp
 
       au < finished ; finished ; 2013-2014 ; International Journal of Vehicle Performance Volume 1 ; 1 ; >
-      au < expected ; exists ; 2016 ; International Journal of Vehicle Performance Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Vehicle Performance Volume 2 ; 2 ; >
 
     }
 
