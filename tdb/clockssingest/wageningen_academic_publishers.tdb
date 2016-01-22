@@ -25,6 +25,7 @@
       au < crawling ; exists ; 2013 ; Beneficial Microbes Volume 4 ; 4 >
       au < crawling ; exists ; 2014 ; Beneficial Microbes Volume 5 ; 5 >
       au < crawling ; exists ; 2015 ; Beneficial Microbes Volume 6 ; 6 >
+      au < expected ; exists ; 2016 ; Beneficial Microbes Volume 7 ; 7 >
 
 
     }
@@ -43,6 +44,7 @@
       au < crawling ; exists ; 2013 ; Comparative Exercise Physiology Volume 9 ; 9 >
       au < crawling ; exists ; 2014 ; Comparative Exercise Physiology Volume 10 ; 10 >
       au < crawling ; exists ; 2015 ; Comparative Exercise Physiology Volume 11 ; 11 >
+      au < expected ; exists ; 2016 ; Comparative Exercise Physiology Volume 12 ; 12 >
 
     }
 
@@ -56,6 +58,7 @@
       param[journal_id] = jiff
 
       au < crawling ; exists ; 2015 ; Journal of Insects as Food and Feed Volume 1 ; 1 >
+      au < expected ; exists ; 2016 ; Journal of Insects as Food and Feed Volume 2 ; 2 >
 
     }
 
@@ -84,6 +87,7 @@
       au < crawling ; exists ; 2013 ; Journal on Chain and Network Science Volume 13 ; 13 >
       au < crawling ; exists ; 2014 ; Journal on Chain and Network Science Volume 14 ; 14 >
       au < crawling ; exists ; 2015 ; Journal on Chain and Network Science Volume 15 ; 15 >
+      au < expected ; exists ; 2016 ; Journal on Chain and Network Science Volume 16 ; 16 >
 
     }
 
@@ -100,6 +104,7 @@
       au < crawling ; exists ; 2013 ; Quality Assurance and Safety of Crops & Foods Volume 5 ; 5 >
       au < finished ; crawling ; 2014 ; Quality Assurance and Safety of Crops & Foods Volume 6 ; 6 >
       au < crawling ; exists ; 2015 ; Quality Assurance and Safety of Crops & Foods Volume 7 ; 7 >
+      au < manifest ; exists ; 2016 ; Quality Assurance and Safety of Crops & Foods Volume 8 ; 8 >
 
     }
 
@@ -121,6 +126,7 @@
       au < crawling ; exists ; 2013 ; World Mycotoxin Journal Volume 6 ; 6 >
       au < crawling ; exists ; 2014 ; World Mycotoxin Journal Volume 7 ; 7 >
       au < crawling ; exists ; 2015 ; World Mycotoxin Journal Volume 8 ; 8 >
+      au < expected ; exists ; 2016 ; World Mycotoxin Journal Volume 9 ; 9 >
 
     }
 
