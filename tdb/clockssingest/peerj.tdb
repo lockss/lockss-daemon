@@ -13,33 +13,26 @@
     title < 
       name = PeerJ ;
       issn = 2167-8359
-    >    
-  
+    >
+    
+    {
+    
     plugin = org.lockss.plugin.peerj.ClockssPeerJPlugin
     param[base_url] = https://peerj.com/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[0] = see PD-1266
     
     au < finished ; crawling ; 2013 ; PeerJ 2013 ; 2013 > 
-    au < doNotProcess ; exists ; 2014 ; PeerJ 2014 ; 2014 >
-    au < doNotProcess ; exists ; 2015 ; PeerJ 2015 ; 2015 >
+    }
+    {
     
-  }
-  
-  {
-  
-    title < 
-      name = PeerJ PrePrint Archives ;
-      issn = 2167-9843
-    >
-
-    plugin = org.lockss.plugin.peerj.ClockssPeerJPreprintsPlugin
+    plugin = org.lockss.plugin.peerj.ClockssPeerJ2016Plugin
     param[base_url] = https://peerj.com/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     
-    au < doNotProcess ; exists ; 2013 ; PeerJ PrePrint Archives: 2013 ; 2013 > 
-    au < doNotProcess ; exists ; 2014 ; PeerJ PrePrint Archives: 2014 ; 2014 > 
-
+    au < doNotProcess ; exists ; 2014 ; PeerJ 2014 ; 2014 >
+    au < doNotProcess ; exists ; 2015 ; PeerJ 2015 ; 2015 >
+    }
   }
-
+  
 }
