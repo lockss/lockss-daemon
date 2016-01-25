@@ -3207,7 +3207,7 @@
 
       param[journal_issn] = 2049-2804
       
-      au < down ; 2012-2013 ; International Journal of Happiness and Development Volume 1 ; 1 >
+      au < superseded ; 2012-2013 ; International Journal of Happiness and Development Volume 1 [superseded] ; 1 >
       au < doNotProcess ; 2014 ; International Journal of Happiness and Development Volume 2 ; 2 >
 
     }
@@ -3682,7 +3682,7 @@
       param[journal_issn] = 2042-3225
       
       au < down ; 2010-2011 ; International Journal of Information Technology, Communications and Convergence Volume 1 ; 1 >
-      au < down ; 2012 ; International Journal of Information Technology, Communications and Convergence Volume 2 ; 2 >
+      au < superseded ; 2012 ; International Journal of Information Technology, Communications and Convergence Volume 2 [superseded] ; 2 >
       au < doNotProcess ; 2013 ; International Journal of Information Technology, Communications and Convergence Volume 3 ; 3 >
 
     }
