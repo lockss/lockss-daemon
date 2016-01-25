@@ -20,7 +20,7 @@
     param[resource_id] = 96
 
     au < testing ; exists ; 2007 ; Journal of Applied Remote Sensing Volume 1 ; 2007 >
-    au < testing ; exists ; 2008 ; Journal of Applied Remote Sensing Volume 2 ; 2008 >
+    au < ready ; exists ; 2008 ; Journal of Applied Remote Sensing Volume 2 ; 2008 >
     au < testing ; exists ; 2009 ; Journal of Applied Remote Sensing Volume 3 ; 2009 >
     au < ready ; exists ; 2010 ; Journal of Applied Remote Sensing Volume 4 ; 2010 >
     au < ready ; exists ; 2011 ; Journal of Applied Remote Sensing Volume 5 ; 2011 >
@@ -68,9 +68,9 @@
     au < manifest ; exists ; 2006 ; Journal of Biomedical Optics Volume 11 ; 2006 >
     au < manifest ; exists ; 2007 ; Journal of Biomedical Optics Volume 12 ; 2007 >
     au < ready ; exists ; 2008 ; Journal of Biomedical Optics Volume 13 ; 2008 >
-    au < testing ; exists ; 2009 ; Journal of Biomedical Optics Volume 14 ; 2009 >
-    au < testing ; exists ; 2010 ; Journal of Biomedical Optics Volume 15 ; 2010 >
-    au < testing ; exists ; 2011 ; Journal of Biomedical Optics Volume 16 ; 2011 >
+    au < ready ; exists ; 2009 ; Journal of Biomedical Optics Volume 14 ; 2009 >
+    au < ready ; exists ; 2010 ; Journal of Biomedical Optics Volume 15 ; 2010 >
+    au < ready ; exists ; 2011 ; Journal of Biomedical Optics Volume 16 ; 2011 >
     au < crawling ; exists ; 2012 ; Journal of Biomedical Optics Volume 17 ; 2012 >
     au < crawling ; exists ; 2013 ; Journal of Biomedical Optics Volume 18 ; 2013 >
     au < crawling ; exists ; 2014 ; Journal of Biomedical Optics Volume 19 ; 2014 >
@@ -167,7 +167,7 @@
     param[resource_id] = 97
 
     au < ready ; exists ; 2007 ; Journal of Nanophotonics Volume 1 ; 2007 >
-    au < testing ; exists ; 2008 ; Journal of Nanophotonics Volume 2 ; 2008 >
+    au < ready ; exists ; 2008 ; Journal of Nanophotonics Volume 2 ; 2008 >
     au < ready ; exists ; 2009 ; Journal of Nanophotonics Volume 3 ; 2009 >
     au < testing ; exists ; 2010 ; Journal of Nanophotonics Volume 4 ; 2010 >
     au < testing ; exists ; 2011 ; Journal of Nanophotonics Volume 5 ; 2011 >
@@ -266,7 +266,7 @@
     au < manifest ; exists ; 2005 ; Optical Engineering Volume 44 ; 2005 >
     au < manifest ; exists ; 2006 ; Optical Engineering Volume 45 ; 2006 >
     au < manifest ; exists ; 2007 ; Optical Engineering Volume 46 ; 2007 >
-    au < testing ; exists ; 2008 ; Optical Engineering Volume 47 ; 2008 >
+    au < ready ; exists ; 2008 ; Optical Engineering Volume 47 ; 2008 >
     au < testing ; exists ; 2009 ; Optical Engineering Volume 48 ; 2009 >
     au < testing ; exists ; 2010 ; Optical Engineering Volume 49 ; 2010 >
     au < testing ; exists ; 2011 ; Optical Engineering Volume 50 ; 2011 >
