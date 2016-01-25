@@ -130,7 +130,7 @@
     au < manifest ; exists ; 2013 ; Advances in Dual Diagnosis Volume 6 ; 6 ; >
     au < crawling ; exists ; 2014 ; Advances in Dual Diagnosis Volume 7 ; 7 ; >
     au < crawling ; exists ; 2015 ; Advances in Dual Diagnosis Volume 8 ; 8 ; >
-    au < expected ; exists ; 2016 ; Advances in Dual Diagnosis Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2016 ; Advances in Dual Diagnosis Volume 9 ; 9 ; >
 
   }
 
@@ -169,7 +169,7 @@
     au < manifest ; exists ; 2013 ; Advances in Mental Health and Intellectual Disabilities Volume 7 ; 7 ; >
     au < crawling ; exists ; 2014 ; Advances in Mental Health and Intellectual Disabilities Volume 8 ; 8 ; >
     au < crawling ; exists ; 2015 ; Advances in Mental Health and Intellectual Disabilities Volume 9 ; 9 ; >
-    au < expected ; exists ; 2016 ; Advances in Mental Health and Intellectual Disabilities Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2016 ; Advances in Mental Health and Intellectual Disabilities Volume 10 ; 10 ; >
 
   }
 
@@ -1182,7 +1182,7 @@
     au < manifest ; exists ; 2013 ; Business Process Management Journal Volume 19 ; 19 ; >
     au < crawling ; exists ; 2014 ; Business Process Management Journal Volume 20 ; 20 ; >
     au < crawling ; exists ; 2015 ; Business Process Management Journal Volume 21 ; 21 ; >
-    au < expected ; exists ; 2016 ; Business Process Management Journal Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2016 ; Business Process Management Journal Volume 22 ; 22 ; >
 
   }
 
@@ -1410,7 +1410,7 @@
     au < manifest ; exists ; 2013 ; Circuit World Volume 39 ; 39 ; >
     au < crawling ; exists ; 2014 ; Circuit World Volume 40 ; 40 ; >
     au < crawling ; exists ; 2015 ; Circuit World Volume 41 ; 41 ; >
-    au < expected ; exists ; 2016 ; Circuit World Volume 42 ; 42 ; >
+    au < manifest ; exists ; 2016 ; Circuit World Volume 42 ; 42 ; >
 
   }
 
@@ -2536,7 +2536,7 @@
     au < manifest ; exists ; 2013 ; Facilities Volume 31 ; 31 ; >
     au < crawling ; exists ; 2014 ; Facilities Volume 32 ; 32 ; >
     au < crawling ; exists ; 2015 ; Facilities Volume 33 ; 33 ; >
-    au < expected ; exists ; 2016 ; Facilities Volume 34 ; 34 ; >
+    au < manifest ; exists ; 2016 ; Facilities Volume 34 ; 34 ; >
 
   }
 
@@ -2714,7 +2714,7 @@
     au < manifest ; exists ; 2013 ; Higher Education, Skills and Work-based Learning Volume 3 ; 3 ; >
     au < crawling ; exists ; 2014 ; Higher Education, Skills and Work-based Learning Volume 4 ; 4 ; >
     au < crawling ; exists ; 2015 ; Higher Education, Skills and Work-based Learning Volume 5 ; 5 ; >
-    au < expected ; exists ; 2016 ; Higher Education, Skills and Work-based Learning Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2016 ; Higher Education, Skills and Work-based Learning Volume 6 ; 6 ; >
 
   }
 
@@ -3134,7 +3134,7 @@
     au < manifest ; exists ; 2013 ; Industrial Robot: The international journal of industrial and service robotics Volume 40 ; 40 ; >
     au < crawling ; exists ; 2014 ; Industrial Robot: The international journal of industrial and service robotics Volume 41 ; 41 ; >
     au < crawling ; exists ; 2015 ; Industrial Robot: The international journal of industrial and service robotics Volume 42 ; 42 ; >
-    au < expected ; exists ; 2016 ; Industrial Robot: The international journal of industrial and service robotics Volume 43 ; 43 ; >
+    au < manifest ; exists ; 2016 ; Industrial Robot: The international journal of industrial and service robotics Volume 43 ; 43 ; >
 
   }
 
@@ -3395,11 +3395,11 @@
     param[journal_id] = ijrd
 
     au < manifest ; exists ; 2009-2010 ; International Journal for Researcher Development Volume 1 ; 1 ; >
-    au < exists ; exists ; 2011 ; International Journal for Researcher Development Volume 2 ; 2 ; >
-    au < exists ; exists ; 2012 ; International Journal for Researcher Development Volume 3 ; 3 ; >
-    au < exists ; exists ; 2013 ; International Journal for Researcher Development Volume 4 ; 4 ; >
-    au < exists ; exists ; 2014 ; International Journal for Researcher Development Volume 5 ; 5 ; >
-    au < exists ; exists ; 2015 ; International Journal for Researcher Development Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2011 ; International Journal for Researcher Development Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2012 ; International Journal for Researcher Development Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2013 ; International Journal for Researcher Development Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2014 ; International Journal for Researcher Development Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2015 ; International Journal for Researcher Development Volume 6 ; 6 ; >
     au < expected ; exists ; 2016 ; International Journal for Researcher Development Volume 7 ; 7 ; >
 
   }
@@ -4097,7 +4097,7 @@
     au < manifest ; exists ; 2013 ; International Journal of Law and Management Volume 55 ; 55 ; >
     au < crawling ; exists ; 2014 ; International Journal of Law and Management Volume 56 ; 56 ; >
     au < crawling ; exists ; 2015 ; International Journal of Law and Management Volume 57 ; 57 ; >
-    au < expected ; exists ; 2016 ; International Journal of Law and Management Volume 58 ; 58 ; >
+    au < manifest ; exists ; 2016 ; International Journal of Law and Management Volume 58 ; 58 ; >
 
   }
 
@@ -4232,7 +4232,7 @@
     au < manifest ; exists ; 2013 ; International Journal of Managerial Finance Volume 9 ; 9 ; >
     au < crawling ; exists ; 2014 ; International Journal of Managerial Finance Volume 10 ; 10 ; >
     au < crawling ; exists ; 2015 ; International Journal of Managerial Finance Volume 11 ; 11 ; >
-    au < expected ; exists ; 2016 ; International Journal of Managerial Finance Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2016 ; International Journal of Managerial Finance Volume 12 ; 12 ; >
 
   }
 
@@ -5231,7 +5231,7 @@
     au < manifest ; exists ; 2013 ; Internet Research Volume 23 ; 23 ; >
     au < crawling ; exists ; 2014 ; Internet Research Volume 24 ; 24 ; >
     au < crawling ; exists ; 2015 ; Internet Research Volume 25 ; 25 ; >
-    au < expected ; exists ; 2016 ; Internet Research Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2016 ; Internet Research Volume 26 ; 26 ; >
 
   }
 
@@ -5406,7 +5406,7 @@
     au < manifest ; exists ; 2013 ; Journal of Applied Accounting Research Volume 14 ; 14 ; >
     au < crawling ; exists ; 2014 ; Journal of Applied Accounting Research Volume 15 ; 15 ; >
     au < crawling ; exists ; 2015 ; Journal of Applied Accounting Research Volume 16 ; 16 ; >
-    au < expected ; exists ; 2016 ; Journal of Applied Accounting Research Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2016 ; Journal of Applied Accounting Research Volume 17 ; 17 ; >
 
   }
 
@@ -6049,7 +6049,7 @@
     au < manifest ; exists ; 2013 ; Journal of Educational Administration Volume 51 ; 51 ; >
     au < crawling ; exists ; 2014 ; Journal of Educational Administration Volume 52 ; 52 ; >
     au < crawling ; exists ; 2015 ; Journal of Educational Administration Volume 53 ; 53 ; >
-    au < expected ; exists ; 2016 ; Journal of Educational Administration Volume 54 ; 54 ; >
+    au < manifest ; exists ; 2016 ; Journal of Educational Administration Volume 54 ; 54 ; >
 
   }
 
@@ -6549,7 +6549,7 @@
     au < manifest ; exists ; 2013 ; Journal of Hospitality and Tourism Technology Volume 4 ; 4 ; >
     au < crawling ; exists ; 2014 ; Journal of Hospitality and Tourism Technology Volume 5 ; 5 ; >
     au < crawling ; exists ; 2015 ; Journal of Hospitality and Tourism Technology Volume 6 ; 6 ; >
-    au < expected ; exists ; 2016 ; Journal of Hospitality and Tourism Technology Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2016 ; Journal of Hospitality and Tourism Technology Volume 7 ; 7 ; >
 
   }
 
@@ -6820,7 +6820,7 @@
     au < manifest ; exists ; 2013 ; Journal of Islamic Accounting and Business Research Volume 4 ; 4 ; >
     au < crawling ; exists ; 2014 ; Journal of Islamic Accounting and Business Research Volume 5 ; 5 ; >
     au < crawling ; exists ; 2015 ; Journal of Islamic Accounting and Business Research Volume 6 ; 6 ; >
-    au < expected ; exists ; 2016 ; Journal of Islamic Accounting and Business Research Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2016 ; Journal of Islamic Accounting and Business Research Volume 7 ; 7 ; >
 
   }
 
@@ -7118,7 +7118,7 @@
     au < manifest ; exists ; 2013 ; Journal of Manufacturing Technology Management Volume 24 ; 24 ; >
     au < crawling ; exists ; 2014 ; Journal of Manufacturing Technology Management Volume 25 ; 25 ; >
     au < crawling ; exists ; 2015 ; Journal of Manufacturing Technology Management Volume 26 ; 26 ; >
-    au < expected ; exists ; 2016 ; Journal of Manufacturing Technology Management Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2016 ; Journal of Manufacturing Technology Management Volume 27 ; 27 ; >
 
   }
 
@@ -7401,7 +7401,7 @@
     au < manifest ; exists ; 2013 ; Journal of Property Investment & Finance Volume 31 ; 31 ; >
     au < crawling ; exists ; 2014 ; Journal of Property Investment & Finance Volume 32 ; 32 ; >
     au < crawling ; exists ; 2015 ; Journal of Property Investment & Finance Volume 33 ; 33 ; >
-    au < expected ; exists ; 2016 ; Journal of Property Investment & Finance Volume 34 ; 34 ; >
+    au < manifest ; exists ; 2016 ; Journal of Property Investment & Finance Volume 34 ; 34 ; >
 
   }
 
@@ -8767,7 +8767,7 @@
     au < manifest ; exists ; 2013 ; Marketing Intelligence & Planning Volume 31 ; 31 ; >
     au < crawling ; exists ; 2014 ; Marketing Intelligence & Planning Volume 32 ; 32 ; >
     au < crawling ; exists ; 2015 ; Marketing Intelligence & Planning Volume 33 ; 33 ; >
-    au < expected ; exists ; 2016 ; Marketing Intelligence & Planning Volume 34 ; 34 ; >
+    au < manifest ; exists ; 2016 ; Marketing Intelligence & Planning Volume 34 ; 34 ; >
 
   }
 
@@ -9409,7 +9409,7 @@
     au < manifest ; exists ; 2013 ; Pacific Accounting Review Volume 25 ; 25 ; >
     au < crawling ; exists ; 2014 ; Pacific Accounting Review Volume 26 ; 26 ; >
     au < crawling ; exists ; 2015 ; Pacific Accounting Review Volume 27 ; 27 ; >
-    au < expected ; exists ; 2016 ; Pacific Accounting Review Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2016 ; Pacific Accounting Review Volume 28 ; 28 ; >
 
   }
 
@@ -9882,7 +9882,7 @@
     au < manifest ; exists ; 2013 ; Qualitative Research Journal Volume 13 ; 13 ; >
     au < crawling ; exists ; 2014 ; Qualitative Research Journal Volume 14 ; 14 ; >
     au < crawling ; exists ; 2015 ; Qualitative Research Journal Volume 15 ; 15 ; >
-    au < expected ; exists ; 2016 ; Qualitative Research Journal Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2016 ; Qualitative Research Journal Volume 16 ; 16 ; >
 
   }
 
@@ -10252,7 +10252,7 @@
     au < manifest ; exists ; 2013 ; Sensor Review Volume 33 ; 33 ; >
     au < crawling ; exists ; 2014 ; Sensor Review Volume 34 ; 34 ; >
     au < crawling ; exists ; 2015 ; Sensor Review Volume 35 ; 35 ; >
-    au < expected ; exists ; 2016 ; Sensor Review Volume 36 ; 36 ; >
+    au < manifest ; exists ; 2016 ; Sensor Review Volume 36 ; 36 ; >
 
   }
 
@@ -10410,7 +10410,7 @@
     au < manifest ; exists ; 2013 ; Soldering & Surface Mount Technology Volume 25 ; 25 ; >
     au < crawling ; exists ; 2014 ; Soldering & Surface Mount Technology Volume 26 ; 26 ; >
     au < crawling ; exists ; 2015 ; Soldering & Surface Mount Technology Volume 27 ; 27 ; >
-    au < expected ; exists ; 2016 ; Soldering & Surface Mount Technology Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2016 ; Soldering & Surface Mount Technology Volume 28 ; 28 ; >
 
   }
 
@@ -11306,7 +11306,7 @@
     au < manifest ; exists ; 2013 ; Worldwide Hospitality and Tourism Themes Volume 5 ; 5 ; >
     au < crawling ; exists ; 2014 ; Worldwide Hospitality and Tourism Themes Volume 6 ; 6 ; >
     au < crawling ; exists ; 2015 ; Worldwide Hospitality and Tourism Themes Volume 7 ; 7 ; >
-    au < expected ; exists ; 2016 ; Worldwide Hospitality and Tourism Themes Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2016 ; Worldwide Hospitality and Tourism Themes Volume 8 ; 8 ; >
 
   }
 

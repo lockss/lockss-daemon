@@ -79,7 +79,7 @@
     au < crawling ; exists ; 2013 ; British Journal of Community Nursing Volume 18 ; 18 ; >
     au < crawling ; exists ; 2014 ; British Journal of Community Nursing Volume 19 ; 19 ; >
     au < crawling ; exists ; 2015 ; British Journal of Community Nursing Volume 20 ; 20 ; >
-    au < expected ; exists ; 2016 ; British Journal of Community Nursing Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2016 ; British Journal of Community Nursing Volume 21 ; 21 ; >
 
 
   }
@@ -119,7 +119,7 @@
     au < crawling ; exists ; 2013 ; British Journal of Healthcare Management Volume 19 ; 19 ; >
     au < crawling ; exists ; 2014 ; British Journal of Healthcare Management Volume 20 ; 20 ; >
     au < crawling ; exists ; 2015 ; British Journal of Healthcare Management Volume 21 ; 21 ; >
-    au < expected ; exists ; 2016 ; British Journal of Healthcare Management Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2016 ; British Journal of Healthcare Management Volume 22 ; 22 ; >
 
 
   }
@@ -139,7 +139,7 @@
     au < crawling ; exists ; 2013 ; British Journal of Hospital Medicine Volume 74 ; 74 ; >
     au < finished ; crawling ; 2014 ; British Journal of Hospital Medicine Volume 75 ; 75 ; >
     au < crawling ; exists ; 2015 ; British Journal of Hospital Medicine Volume 76 ; 76 ; >
-    au < expected ; exists ; 2016 ; British Journal of Hospital Medicine Volume 77 ; 77 ; >
+    au < manifest ; exists ; 2016 ; British Journal of Hospital Medicine Volume 77 ; 77 ; >
 
 
   }
@@ -178,7 +178,7 @@
     au < crawling ; exists ; 2013 ; British Journal of Midwifery Volume 21 ; 21 ; >
     au < finished ; crawling ; 2014 ; British Journal of Midwifery Volume 22 ; 22 ; >
     au < crawling ; exists ; 2015 ; British Journal of Midwifery Volume 23 ; 23 ; >
-    au < expected ; exists ; 2016 ; British Journal of Midwifery Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2016 ; British Journal of Midwifery Volume 24 ; 24 ; >
 
 
   }
@@ -218,7 +218,7 @@
     au < crawling ; exists ; 2013 ; British Journal of Nursing Volume 22 ; 22 ; >
     au < crawling ; exists ; 2014 ; British Journal of Nursing Volume 23 ; 23 ; >
     au < crawling ; exists ; 2015 ; British Journal of Nursing Volume 24 ; 24 ; >
-    au < expected ; exists ; 2016 ; British Journal of Nursing Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2016 ; British Journal of Nursing Volume 25 ; 25 ; >
 
 
   }
@@ -270,7 +270,7 @@
     au < crawling ; exists ; 2013 ; Dental Nursing Volume 9 ; 9 ; >
     au < crawling ; exists ; 2014 ; Dental Nursing Volume 10 ; 10 ; >
     au < crawling ; exists ; 2015 ; Dental Nursing Volume 11 ; 11 ; >
-    au < expected ; exists ; 2016 ; Dental Nursing Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2016 ; Dental Nursing Volume 12 ; 12 ; >
 
   }
 
@@ -308,7 +308,7 @@
     au < crawling ; exists ; 2013 ; Independent Nurse Volume 2013 ; 2013 ; >
     au < crawling ; exists ; 2014 ; Independent Nurse Volume 2014 ; 2014 ; >
     au < crawling ; exists ; 2015 ; Independent Nurse Volume 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Independent Nurse Volume 2016 ; 2016 ; >
+    au < manifest ; exists ; 2016 ; Independent Nurse Volume 2016 ; 2016 ; >
 
   }
 
@@ -436,7 +436,7 @@
     au < crawling ; exists ; 2013 ; Journal of Health Visiting Volume 1 ; 1 ; >
     au < crawling ; exists ; 2014 ; Journal of Health Visiting Volume 2 ; 2 ; >
     au < crawling ; exists ; 2015 ; Journal of Health Visiting Volume 3 ; 3 ; >
-    au < expected ; exists ; 2016 ; Journal of Health Visiting Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2016 ; Journal of Health Visiting Volume 4 ; 4 ; >
 
   }
 
@@ -455,7 +455,7 @@
     au < crawling ; exists ; 2013 ; Journal of Paramedic Practice Volume 5 ; 5 ; >
     au < finished ; crawling ; 2014 ; Journal of Paramedic Practice Volume 6 ; 6 ; >
     au < notReady ; exists ; 2015 ; Journal of Paramedic Practice Volume 7 ; 7 ; >
-    au < expected ; exists ; 2016 ; Journal of Paramedic Practice Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2016 ; Journal of Paramedic Practice Volume 8 ; 8 ; >
 
   }
 
@@ -493,7 +493,7 @@
     au < crawling ; exists ; 2013 ; Journal of Wound Care Volume 22 ; 22 ; >
     au < finished ; crawling ; 2014 ; Journal of Wound Care Volume 23 ; 23 ; >
     au < crawling ; exists ; 2015 ; Journal of Wound Care Volume 24 ; 24 ; >
-    au < expected ; exists ; 2016 ; Journal of Wound Care Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2016 ; Journal of Wound Care Volume 25 ; 25 ; >
 
   }
 
@@ -512,7 +512,7 @@
     au < crawling ; exists ; 2013 ; Nurse Prescribing Volume 11 ; 11 ; >
     au < finished ; crawling ; 2014 ; Nurse Prescribing Volume 12 ; 12 ; >
     au < crawling ; exists ; 2015 ; Nurse Prescribing Volume 13 ; 13 ; >
-    au < expected ; exists ; 2016 ; Nurse Prescribing Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2016 ; Nurse Prescribing Volume 14 ; 14 ; >
 
   }
 
@@ -526,18 +526,18 @@
     comment[base_url] = http://www.nursingresidentialcare.com/
     param[journal_id] = nrec
 
-    au < exists ; exists ; 2005 ; Nursing and Residential Care Volume 7 ; 7 ; >
-    au < exists ; exists ; 2006 ; Nursing and Residential Care Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2005 ; Nursing and Residential Care Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2006 ; Nursing and Residential Care Volume 8 ; 8 ; >
     au < manifest ; exists ; 2007 ; Nursing and Residential Care Volume 9 ; 9 ; >
     au < manifest ; exists ; 2008 ; Nursing and Residential Care Volume 10 ; 10 ; >
     au < finished ; crawling ; 2009 ; Nursing and Residential Care Volume 11 ; 11 ; >
     au < finished ; crawling ; 2010 ; Nursing and Residential Care Volume 12 ; 12 ; >
     au < notReady ; exists ; 2011 ; Nursing and Residential Care Volume 13 ; 13 ; >
-    au < exists ; exists ; 2012 ; Nursing and Residential Care Volume 14 ; 14 ; >
-    au < exists ; exists ; 2013 ; Nursing and Residential Care Volume 15 ; 15 ; >
-    au < exists ; exists ; 2014 ; Nursing and Residential Care Volume 16 ; 16 ; >
-    au < exists ; exists ; 2015 ; Nursing and Residential Care Volume 17 ; 17 ; >
-    au < exists ; exists ; 2016 ; Nursing and Residential Care Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2012 ; Nursing and Residential Care Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2013 ; Nursing and Residential Care Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2014 ; Nursing and Residential Care Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2015 ; Nursing and Residential Care Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2016 ; Nursing and Residential Care Volume 18 ; 18 ; >
 
   }
 
@@ -556,7 +556,7 @@
     au < crawling ; exists ; 2013 ; Practice Nursing Volume 24 ; 24 ; >
     au < frozen ; exists ; 2014 ; Practice Nursing Volume 25 ; 25 ; >
     au < crawling ; exists ; 2015 ; Practice Nursing Volume 26 ; 26 ; >
-    au < expected ; exists ; 2016 ; Practice Nursing Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2016 ; Practice Nursing Volume 27 ; 27 ; >
 
   }
 
@@ -575,7 +575,7 @@
     au < finished ; crawling ; 2013 ; Companion Animal Volume 18 ; 18 ; >
     au < finished ; crawling ; 2014 ; Companion Animal Volume 19 ; 19 ; >
     au < crawling ; exists ; 2015 ; Companion Animal Volume 20 ; 20 ; >
-    au < expected ; exists ; 2016 ; Companion Animal Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2016 ; Companion Animal Volume 21 ; 21 ; >
 
   }
 
@@ -594,7 +594,7 @@
     au < crawling ; exists ; 2013 ; Equine Health Volume 2013 ; 2013 ; >
     au < crawling ; exists ; 2014 ; Equine Health Volume 2014 ; 2014 ; >
     au < crawling ; exists ; 2015 ; Equine Health Volume 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Equine Health Volume 2016 ; 2016 ; >
+    au < manifest ; exists ; 2016 ; Equine Health Volume 2016 ; 2016 ; >
 
   }
 
@@ -665,7 +665,7 @@
     au < finished ; crawling ; 2013 ; Child Care Volume 10 ; 10 ; >
     au < finished ; crawling ; 2014 ; Child Care Volume 11 ; 11 ; >
     au < crawling ; exists ; 2015 ; Child Care Volume 12 ; 12 ; >
-    au < expected ; exists ; 2016 ; Child Care Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2016 ; Child Care Volume 13 ; 13 ; >
 
   }
 
@@ -684,7 +684,7 @@
     au < crawling ; exists ; 2013 ; Early Years Educator (EYE) Volume 14 ; 14 ; >
     au < crawling ; exists ; 2014 ; Early Years Educator (EYE) Volume 15 ; 15 ; >
     au < crawling ; exists ; 2015 ; Early Years Educator (EYE) Volume 16 ; 16 ; >
-    au < expected ; exists ; 2016 ; Early Years Educator (EYE) Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2016 ; Early Years Educator (EYE) Volume 17 ; 17 ; >
 
   }
 
@@ -721,7 +721,7 @@
     au < crawling ; exists ; 2013 ; Headteacher Update Volume 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Headteacher Update Volume 2014 ; 2014 ; >
     au < crawling ; exists ; 2015 ; Headteacher Update Volume 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Headteacher Update Volume 2016 ; 2016 ; >
+    au < manifest ; exists ; 2016 ; Headteacher Update Volume 2016 ; 2016 ; >
 
   }
 
@@ -739,7 +739,7 @@
     au < crawling ; exists ; 2013 ; Nursery World Volume 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Nursery World Volume 2014 ; 2014 ; >
     au < crawling ; exists ; 2015 ; Nursery World Volume 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Nursery World Volume 2016 ; 2016 ; >
+    au < manifest ; exists ; 2016 ; Nursery World Volume 2016 ; 2016 ; >
 
   }
 
@@ -759,7 +759,7 @@
     au < crawling ; exists ; 2013 ; Practical Pre-School Volume 2013 ; 2013 ; >
     au < crawling ; exists ; 2014 ; Practical Pre-School Volume 2014 ; 2014 ; >
     au < notReady ; exists ; 2015 ; Practical Pre-School Volume 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Practical Pre-School Volume 2016 ; 2016 ; >
+    au < manifest ; exists ; 2016 ; Practical Pre-School Volume 2016 ; 2016 ; >
 
   }
 
@@ -779,7 +779,7 @@
     au < crawling ; exists ; 2013 ; Primary Teacher Update Volume 2013 ; 2013 ; >
     au < crawling ; exists ; 2014 ; Primary Teacher Update Volume 2014 ; 2014 ; >
     au < crawling ; exists ; 2015 ; Primary Teacher Update Volume 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Primary Teacher Update Volume 2016 ; 2016 ; >
+    au < manifest ; exists ; 2016 ; Primary Teacher Update Volume 2016 ; 2016 ; >
 
   }
 
@@ -797,7 +797,7 @@
     au < crawling ; exists ; 2013 ; SecEd Volume 2013 ; 2013 ; >
     au < crawling ; exists ; 2014 ; SecEd Volume 2014 ; 2014 ; >
     au < crawling ; exists ; 2015 ; SecEd Volume 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; SecEd Volume 2016 ; 2016 ; >
+    au < manifest ; exists ; 2016 ; SecEd Volume 2016 ; 2016 ; >
 
 
   }
