@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -86,7 +86,8 @@ public class TestDaemonStatusService extends LockssTestCase {
 
     tempDirPath = setUpDiskSpace();
 
-    ConfigurationUtil.addFromArgs(IdentityManager.PARAM_LOCAL_IP, TEST_LOCAL_IP);
+    ConfigurationUtil.addFromArgs(IdentityManager.PARAM_LOCAL_IP,
+	TEST_LOCAL_IP);
 
     theDaemon = getMockLockssDaemon();
     theDaemon.setDaemonInited(true);
@@ -351,6 +352,7 @@ public class TestDaemonStatusService extends LockssTestCase {
     assertEquals(6, au.getAuConfiguration().getNonDefParams().size());
     assertFalse(au.getIsBulkContent());
     assertNull(au.getJournalTitle());
+    assertNull(au.getTdbProvider());
     au = aus.get(1);
     assertTrue(au.getAuId().startsWith(auIdStart));
     assertTrue(au.getName().startsWith("Simulated Content: /"));
@@ -362,6 +364,7 @@ public class TestDaemonStatusService extends LockssTestCase {
     assertEquals(6, au.getAuConfiguration().getNonDefParams().size());
     assertFalse(au.getIsBulkContent());
     assertNull(au.getJournalTitle());
+    assertNull(au.getTdbProvider());
 
     query = "select auId";
     aus = service.queryAus(query);

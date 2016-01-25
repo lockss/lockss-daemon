@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2014-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -113,6 +113,7 @@ public class AuHelper {
   static String SUBSTANCE_URLS = "substanceUrls";
   static String ARTICLE_URLS = "articleUrls";
   static String JOURNAL_TITLE = "journalTitle";
+  static String TDB_PROVIDER = "tdbProvider";
 
   /**
    * All the property names used in Archival Unit queries.
@@ -157,6 +158,7 @@ public class AuHelper {
       add(SUBSTANCE_URLS);
       add(ARTICLE_URLS);
       add(JOURNAL_TITLE);
+      add(TDB_PROVIDER);
     }
   };
 
@@ -324,6 +326,12 @@ public class AuHelper {
     if (theDaemon.isDetectClockssSubscription()) {
       result.setSubscriptionStatus(AuUtil.getAuState(au)
 	  .getClockssSubscriptionStatusString());
+    }
+
+    String provider = AuUtil.getTitleAttribute(au, "provider");
+
+    if (!StringUtil.isNullString(provider)) {
+      result.setProvider(provider);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
@@ -786,6 +794,16 @@ public class AuHelper {
       }
 
       builder.append("journalTitle=").append(result.getJournalTitle());
+    }
+
+    if (result.getTdbProvider() != null) {
+      if (!isFirst) {
+	builder.append(", ");
+      } else {
+	isFirst = false;
+      }
+
+      builder.append("tdbProvider=").append(result.getTdbProvider());
     }
 
     return builder.append("]").toString();
