@@ -1202,8 +1202,8 @@
     comment[0] = quarterly journal expected to launch April 1 2013
     #Volume 1 and early part of 2 used non-standard 0 in front of number
 
-    au < testing ; exists ; 2013 ; Journal of Unmanned Vehicle Systems Volume 1 ; 01 >
-    au < testing ; exists ; 2014 ; Journal of Unmanned Vehicle Systems Volume 2, Issues 1-3 ; 02 >
+    au < ready ; exists ; 2013 ; Journal of Unmanned Vehicle Systems Volume 1 ; 01 >
+    au < ready ; exists ; 2014 ; Journal of Unmanned Vehicle Systems Volume 2, Issues 1-3 ; 02 >
     au < finished ; crawling ; 2014 ; Journal of Unmanned Vehicle Systems Volume 2, Issue 4 ; 2 >
     au < crawling ; exists ; 2015 ; Journal of Unmanned Vehicle Systems Volume 3 ; 3 >
 
