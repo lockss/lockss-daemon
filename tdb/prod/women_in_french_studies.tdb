@@ -26,8 +26,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < doNotProcess ; 2010 ; Women in French Studies Volume 18 ; 18 >
-      #not available
+      au < manifest ; 2009 ; Women in French Studies Volume 17 ; 17 >
+      au < manifest ; 2010 ; Women in French Studies Volume 18 ; 18 >
 
     }
 
@@ -49,6 +49,7 @@
       au < released ; 2014 ; Women in French Studies Volume 22 ; 22 >
       au < released ; 2014 ; Women in French Studies Special Issue 2014 ; 2014 >
       au < released ; 2015 ; Women in French Studies Volume 23 ; 23 >
+      au < expected ; 2016 ; Women in French Studies Volume 24 ; 24 >
 
     }
 
