@@ -2,7 +2,7 @@
   <!-- Inherited from PeerJPlugin.xml. -->  
   <entry>
     <string>plugin_status</string>
-    <string>down - PD-1266</string>
+    <string>deprecated</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -10,11 +10,11 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>PeerJ Plugin (CLOCKSS)</string>
+    <string>PeerJ Plugin (retired plugin for CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -22,11 +22,11 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"PeerJ Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"PeerJ Plugin (retired plugin for CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>clockss_override</string>

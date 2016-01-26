@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>PeerJ 2016 Plugin</string>
+    <string>PeerJ Plugin</string>
   </entry>
   <entry>
     <!-- allows for multiple journals under peerj host, but no preprints -->
@@ -40,28 +40,23 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"PeerJ 2016 Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"PeerJ Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_permission_url</string>
     <list>
       <string>"%slockss.txt", base_url</string>
-      <!--  cloudfront handled by au_permitted_host_pattern -->      
-      <!-- hardwire cloudfront host in case publisher changes it 
-      <string>"https://dfzljdn9uc3pi.cloudfront.net/lockss.txt"</string>
-      <string>"https://d3amtssd1tejdt.cloudfront.net/lockss.txt"</string>
-      <string>"https://d2pdyyx74uypu5.cloudfront.net/lockss.txt"</string>
-      -->
     </list>
   </entry>
   <entry>
-    <!-- https://peerj.com/archives/?year=2013 -->
+    <!-- https://peerj.com/archives/?year=2013&journal=peerj -->
     <string>au_start_url</string>
     <string>"%sarchives/?year=%s&amp;journal=%s", base_url, volume_name, journal_id</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <!--  examples:
+    for now, disallowing amazonaws as it leads to 403 forbidden at that site on search_btn.png
     https://s3.amazonaws.com/static.peerj.com/images/launch/MontereyJellyPeerJ.jpg
     https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js    
     https://d2pdyyx74uypu5.cloudfront.net/images/apple-touch-icon.png    
@@ -75,27 +70,30 @@
     https://peerj.com/articles/250/reviews/
     https://peerj.com/articles/250.pdf (also: .bib, .ris, .xml from menu)
        exclude alt suffixes in non-reachable links: .amp, .citeproc, .html, .json, .rdf, .unixref
-       /250.html is redundant to /250/ and there is no user reachable link to it 
+       /250.html is redundant to /250/ and there is no user reachable link to it
+    https://peerj.com/articles/cs-15/
+      articles from computer science start with "cs-"...        
     -->
     <list>
       <!-- cloudfront used for support files -->
-      <string>1,"^https?://(%s|[^.]+\.amazonaws\.com|[^.]+\.cloudfront\.net|[^.]+\.googleapis\.com)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
+      <string>1,"^https?://(%s|[^.]+\.cloudfront\.net|[^.]+\.googleapis\.com)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
       <!-- fonts sometimes have argument; limit the options but allow simple arg -->
       <string>1,"^https?://%s/assets/[^?]*\.(eot|svg|ttf|woff)([?](v=|-)[^/&amp;]+)?$", url_host(base_url)</string>
       <!-- cloudfront also used for volume-specific supplemental content .docx, .gz, etc -->
       <string>1,"^https://[^.]+\.cloudfront\.net/%s", volume_name</string>
       <string>4,"^%s", base_url</string>
-      <!-- for debug <string>1,"^%sarticles/index\.html\?month=%s-02", base_url, volume_name</string> -->
       <string>1,"^%sarticles/index\.html\?month=%s-", base_url, volume_name</string>
-      <string>1,"^%sarticles/[0-9]+/$", base_url</string>
-      <string>2,"^%sarticles/[0-9]+\.(amp|citeproc|html|json|rdf|unixref)$", base_url</string>
-      <string>1,"^%sarticles/[0-9]+\.[^/]+", base_url</string>
+      <string>1,"^%sarticles/(%s-)?[0-9]+$", base_url, journal_id</string>
+      <string>2,"^%sarticles/(%s-)?[0-9]+\.(amp|citeproc|html|json|rdf|unixref)$", base_url, journal_id</string>
+      <string>1,"^%sarticles/(%s-)?[0-9]+\.[^/]+$", base_url, journal_id</string>
     </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
+  <!-- https://peerj.com/articles/cs-39.pdf --> 
+  <!-- https://peerj.com/articles/250.pdf   -->
     <list>
-      <string>"^%sarticles/[0-9]+\.pdf$", base_url</string>
+      <string>"^%sarticles/(%s-)?[0-9]+\.pdf$", base_url, journal_id</string>
     </list>
   </entry>
   <entry>
@@ -103,7 +101,7 @@
          org.lockss.crawler.allowedPluginPermittedHosts -->
     <string>au_permitted_host_pattern</string>
     <list>
-      <string>.+\.amazonaws\.com</string>
+     <!-- <string>s3\.amazonaws\.com</string> -->
       <string>.+\.cloudfront\.net</string>
       <string>.+\.googleapis\.com</string>
     </list>
@@ -170,11 +168,11 @@
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.peerj.PeerJArticleIteratorFactory</string>
+    <string>org.lockss.plugin.peerj.PeerJ2016ArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.peerj.PeerJArticleIteratorFactory</string>
+    <string>org.lockss.plugin.peerj.PeerJ2016ArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>application/x-research-info-systems_metadata_extractor_factory_map</string>

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,96 +43,103 @@ import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-public class PeerJPreprintsArticleIteratorFactory
+public class PeerJ2016ArticleIteratorFactory
 implements ArticleIteratorFactory,
            ArticleMetadataExtractorFactory {
 
-  protected static Logger log = 
-      Logger.getLogger(PeerJPreprintsArticleIteratorFactory.class);
+  private static final Logger log = 
+      Logger.getLogger(PeerJ2016ArticleIteratorFactory.class);
 
-  protected static final String ROOT_TEMPLATE = "\"%spreprints/\", base_url";
+  protected static final String ROOT_TEMPLATE = "\"%sarticles/\", base_url";
   
+  /*
+   * In order not to destabilize the legacy PeerJPlugin, this iterator serves
+   * the new PeerJ2016Plugin which takes an additional parameter - journal_id
+   * and allows for a journal-id prefix to the article number.  
+   * PeerJ journal: https://peerj.com/articles/250.pdf
+   * PeerJ computer science: https://peerj.com/articles/cs-42.pdf
+   *   since a url won't get collected unless the optional journal letters match
+   *   the current journal, we can just allow any chars plus hyphen (optionally)
+   * This iterator also requires a trailing "/" at the end of the full-text html/abstract  
+   */
+  
+  /* catch all html or pdf aspects with the pattern 
+   * peerj.com/articles/250/ <--ignore terminating slash, daemon does...
+   * peerj.com/articles/cs-25/
+   * peerj.com/articles/250.pdf
+   * peerj.com/articles/cs-25.pdf
+   */
   protected static final String PATTERN_TEMPLATE = 
-      "\"^%s(preprints)/([0-9]+)(\\.pdf)?$\", base_url";
+      "\"^%sarticles/(([a-z]+-)?[0-9]+)(\\.pdf)?$\", base_url";
   
   private Pattern PDF_PATTERN = 
-      Pattern.compile("/(preprints)/([0-9]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
+      Pattern.compile("/articles/(([a-z]+-)?[0-9]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
 
-  private Pattern ABSTRACT_PATTERN = 
-      Pattern.compile("/(preprints)/([0-9]+)$", Pattern.CASE_INSENSITIVE);
-      
-  private static String PDF_REPLACEMENT = "/$1/$2.pdf";
-  private static String ABSTRACT_REPLACEMENT = "/$1/$2";
-  private static String XML_REPLACEMENT = "/$1/$2.xml";
-  private static String BIB_REPLACEMENT = "/$1/$2.bib";
-  private static String RIS_REPLACEMENT = "/$1/$2.ris";
-  private static String ALTERNATE_ABSTRACT_REPLACEMENT = "/$1/$2.html";
-  private static String ALTERNATE_RDF_REPLACEMENT = "/$1/$2.rdf";
-  private static String ALTERNATE_JSON_REPLACEMENT = "/$1/$2.json";
+  private Pattern HTML_PATTERN = 
+      Pattern.compile("/articles/(([a-z]+-)?[0-9]+)$", Pattern.CASE_INSENSITIVE);
+
   
-  public static final String ROLE_ABSTRACT_XML = "AbstractXml";  
-  public static final String ROLE_ALTERNATE_ABSTRACT = "AlternateAbstractHtml";
-  public static final String ROLE_ALTERNATE_RDF = "AlternateRdf";
-  public static final String ROLE_ALTERNATE_JSON = "AlternateJson";
-
-  // PeerJ preprints content looks like:
-  // <peerjbase>.com/preprints/14/
-  // <peerjbase>.com/preprints/14.pdf
-  // <peerjbase>.com/preprints/14.bib
-  // <peerjbase>.com/preprints/14.ris
-  // <peerjbase>.com/preprints/14.xml
-  // <peerjbase>.com/preprints/14.html
-  // <peerjbase>.com/preprints/14.rdf
-  // <peerjbase>.com/preprints/14.json
+  // generate the following variants
+  // peerj.com/articles/55.bib
+  // peerj.com/articles/55.ris
+  // peerj.com/articles/55.xml
+  // peerj.com/articles/cs-42.xml, etc
+  
+  // this 2016 plugin does not collect the link rel but not accessible
+  // peerj.com/articles/55.html
+  // peerj.com/articles/55.rdf
+  // peerj.com/articles/55.json
+  // peerj.com/articles/55.unixref
+  private static String PDF_REPLACEMENT = "/articles/$1.pdf";
+  private static String HTML_REPLACEMENT = "/articles/$1";
+  private static String XML_REPLACEMENT = "/articles/$1.xml";
+  private static String BIB_REPLACEMENT = "/articles/$1.bib";
+  private static String RIS_REPLACEMENT = "/articles/$1.ris";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, 
       MetadataTarget target) throws PluginException {
     
     SubTreeArticleIteratorBuilder builder = 
-        new SubTreeArticleIteratorBuilder(au);
-
-    builder.setSpec(target, ROOT_TEMPLATE, PATTERN_TEMPLATE, 
+        new SubTreeArticleIteratorBuilder(au);  
+    
+    builder.setSpec(target,ROOT_TEMPLATE, PATTERN_TEMPLATE, 
         Pattern.CASE_INSENSITIVE);
-      
+    
     // The order in which these aspects are added is important. They determine
     // which will trigger the ArticleFiles and if you are only counting 
     // articles (not pulling metadata) then the lower aspects aren't looked 
     // for, once you get a match.
-    
+
+    // html landing page has full-text
+    builder.addAspect(HTML_PATTERN, HTML_REPLACEMENT, 
+        ArticleFiles.ROLE_FULL_TEXT_HTML);
+
     // set up PDF to be an aspect that will trigger an ArticleFiles
     builder.addAspect(PDF_PATTERN, PDF_REPLACEMENT, 
         ArticleFiles.ROLE_FULL_TEXT_PDF);   
-    
-    builder.addAspect(ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT, 
-        ArticleFiles.ROLE_ABSTRACT);
-                      
-    builder.addAspect(XML_REPLACEMENT, ROLE_ABSTRACT_XML);
-    
+
+    builder.addAspect(XML_REPLACEMENT, ArticleFiles.ROLE_FULL_TEXT_XML);
+
     builder.addAspect(BIB_REPLACEMENT, ArticleFiles.ROLE_CITATION_BIBTEX);
-    
+
+    // Currently only a RIS metadata extractor. Every articles seems to have this.
+    // could build an html extractor if it proved necessary
     builder.addAspect(RIS_REPLACEMENT, ArticleFiles.ROLE_CITATION_RIS, 
         ArticleFiles.ROLE_ARTICLE_METADATA);
-    
-    // full-text html file from <link rel> tag found from page source
-    // this link is not found from web pages
-    builder.addAspect(ALTERNATE_ABSTRACT_REPLACEMENT, ROLE_ALTERNATE_ABSTRACT);
-    
-    builder.addAspect(ALTERNATE_RDF_REPLACEMENT, ROLE_ALTERNATE_RDF);
-    
-    builder.addAspect(ALTERNATE_JSON_REPLACEMENT, ROLE_ALTERNATE_JSON);
-    
+
+
     // The order in which we want to define full_text_cu.
     // First one that exists will get the job
-    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF, 
-        ROLE_ALTERNATE_ABSTRACT, ArticleFiles.ROLE_ABSTRACT); 
+    builder.setFullTextFromRoles(
+        ArticleFiles.ROLE_FULL_TEXT_PDF, ArticleFiles.ROLE_FULL_TEXT_HTML);  
         
-    return builder.getSubTreeArticleIterator();
-  }
+     return builder.getSubTreeArticleIterator();
+  }  
   
   @Override
-  public ArticleMetadataExtractor createArticleMetadataExtractor(
-      MetadataTarget target) throws PluginException {
+  public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
+    throws PluginException {
     return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
 

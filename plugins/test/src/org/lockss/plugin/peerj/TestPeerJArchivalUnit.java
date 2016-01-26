@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,7 +42,6 @@ import org.lockss.daemon.RangeCachedUrlSetSpec;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrlSet;
 import org.lockss.plugin.PluginManager;
-import org.lockss.plugin.UrlCacher;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.plugin.definable.DefinableArchivalUnit;
 import org.lockss.plugin.definable.DefinablePlugin;
@@ -69,7 +68,7 @@ public class TestPeerJArchivalUnit extends LockssTestCase {
   MockLockssDaemon daemon;
   PluginManager pluginMgr;
   
-  private static Logger log = Logger.getLogger(TestPeerJArchivalUnit.class);
+  private static final Logger log = Logger.getLogger(TestPeerJArchivalUnit.class);
 
   private static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   private static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
@@ -205,7 +204,7 @@ public class TestPeerJArchivalUnit extends LockssTestCase {
   // Variant to test PeerJ Archives (main) site
   public static class TestArchives extends TestPeerJArchivalUnit {   
     public void testArchivalUnit() throws Exception {
-      variantPluginName = "PeerJ Plugin";
+      variantPluginName = "PeerJ Plugin (retired plugin)";
       variantPluginId =  "org.lockss.plugin.peerj.PeerJPlugin";
       variantPeerjSite = "archives";
       variantBaseConstant = "articles";
@@ -224,32 +223,11 @@ public class TestPeerJArchivalUnit extends LockssTestCase {
     }
   }
   
-  // Variant to test PeerJ Preprints site
-  public static class TestPreprints extends TestPeerJArchivalUnit {   
-    public void testArchivalUnit() throws Exception {
-      variantPluginName = "PeerJ Preprints Plugin (CLOCKSS)";
-      variantPluginId =  "org.lockss.plugin.peerj.ClockssPeerJPreprintsPlugin";
-      variantPeerjSite = "archives-preprints";
-      variantBaseConstant = "preprints";
-      variantPeerjAu = createAu(new URL("http://www.example.com/"), 
-          VOLUME_NAME, variantPluginId);
-      
-      testGetName("http://www.example1.com/", "2010", variantPluginId, 
-          variantPluginName);
-      testConstructNullUrl("2011", variantPluginId);
-      testShouldDoNewContentCrawlFor0(variantPeerjAu);
-      testShouldDoNewContentCrawlTooEarly(variantPeerjAu);
-      testShouldNotCachePageFromOtherSite(variantPeerjAu, variantPeerjSite);
-      testStartUrlConstruction(variantPeerjAu, variantPeerjSite);
-      testShouldCacheProperPages(variantPeerjAu, variantPeerjSite,
-          variantBaseConstant);
-    }
-  }
   
   public static Test suite() {
     return variantSuites(new Class[] {
         TestArchives.class,
-        TestPreprints.class
+        // Variant to test PeerJ Preprints site no longer exists
     });
   }
   

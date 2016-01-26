@@ -1,7 +1,17 @@
 Notes: Copied the initial analyis from RU4644, and added the rest.
 ** Splitting the plugin into 2 separate plugins for PeerJ Archives site
-and PeerJ Preprints site. (plugin version 8).
+and PeerJ Preprints site. (plugin version 8). NO MORE
 ** no longer need for peerj_site param (plugin version 9).
+
+1/26/16 - NOTE 
+preprints is not being collected. Deleting this never-released plugin
+BUT, there is a computer science journal so creating a new plugin that allows for a journal_id
+peerj.com/archives/?year=2016&journal=(cs|peerj)
+also - moving the cloudfront support and googleapis support to use permitted_hosts setting
+created a newer, much simpler article iterator.
+
+Leaving the old plugin and article iterator because it was used to collect 2013 peerj
+
 
 -------------------INSTRUCTIONS-------------------------------------
 Make a local copy of this file for each new plugin. 

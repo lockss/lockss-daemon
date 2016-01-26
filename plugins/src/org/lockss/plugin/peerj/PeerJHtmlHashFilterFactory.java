@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -59,6 +59,8 @@ import org.lockss.util.ReaderInputStream;
  * volume/start url     - https://peerj.com/archives/?year=2013
  * issue toc            - https://peerj.com/articles/index.html?month=2013-02
  * article              - https://peerj.com/articles/46/
+ * 
+ * NOTE - preprints is not being supported.... leaving hashing for now, will
  * Preprints:
  * year -               - https://peerj.com/archives-preprints/
  * volume/start url     - https://peerj.com/archives-preprints/?year=2013

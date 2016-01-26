@@ -302,36 +302,12 @@ public class TestPeerJArticleIteratorFactory
     }
   }
 
- /*
-  * PeerJ Preprints site.
-  *   article files:
-  *   full text pdf      - <baser_url>/preprints/14.pdf
-  *   abstract           - <baser_url>/preprints/14/      (including full text)
-  *   full text xml      - <baser_url>/preprints/14.xml
-  *   citation bib       - <baser_url>/preprints/14.bib
-  *   citation ris       - <baser_url>/preprints/14.ris
-  *   alternate html     - <baser_url>/preprints/14.html
-  *   alternate rdf      - <baser_url>/preprints/14.rdf
-  *   alternate json     - <baser_url>/preprints/14.json
-  */
-  public static class TestPreprints extends TestPeerJArticleIteratorFactory {
-    public TestPreprints() {
-      variantPluginName = "org.lockss.plugin.peerj.ClockssPeerJPreprintsPlugin";
-      variantPeerjSite = "archives-preprints";
-      variantBaseConstant = "preprints";
-      variantArticleName = "14";
-      variantPeerjXmlRole = PeerJPreprintsArticleIteratorFactory.ROLE_ABSTRACT_XML;
-      variantAlternateRoles = Arrays.asList(
-          PeerJPreprintsArticleIteratorFactory.ROLE_ALTERNATE_ABSTRACT,
-          PeerJPreprintsArticleIteratorFactory.ROLE_ALTERNATE_RDF,
-          PeerJPreprintsArticleIteratorFactory.ROLE_ALTERNATE_JSON);
-    }   
-  }
+
 
   public static Test suite() {
     return variantSuites(new Class[] {
         TestArchives.class,
-        TestPreprints.class
+        // Variant to test PeerJ Preprints site no longer exists
       });
   }
 }

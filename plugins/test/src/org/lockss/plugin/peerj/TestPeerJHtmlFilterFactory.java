@@ -47,7 +47,8 @@ import org.lockss.plugin.PluginTestUtil;
 import org.lockss.test.*;
 
 /*
- * Tests hash filtering for both PeerJ sites: Archives (main), and Preprints.
+ * Tests hash filtering for both PeerJ sites: Archives (main)
+ * no longer testing preprints - not supported
  */
 public class TestPeerJHtmlFilterFactory
   extends LockssTestCase {
@@ -55,7 +56,6 @@ public class TestPeerJHtmlFilterFactory
   String variantPluginId;
   FilterFactory variantFact;
   ArchivalUnit variantArchivesAu;
-  ArchivalUnit variantPreprintsAu;
   String tempDirPath;
   MockLockssDaemon daemon;
   PluginManager pluginMgr;
@@ -425,8 +425,6 @@ private static final String withFlagModal =
       startMockDaemon();
       variantFact = new PeerJHtmlHashFilterFactory();
       variantArchivesAu = createAu("org.lockss.plugin.peerj.PeerJPlugin");
-      variantPreprintsAu = createAu(
-          "org.lockss.plugin.peerj.PeerJPreprintsPlugin");
     }
     public void testFilteringArchives() throws Exception {
       doFilterTest(variantArchivesAu, variantFact, withHead, filteredHead);
@@ -469,49 +467,6 @@ private static final String withFlagModal =
       doFilterTest(variantArchivesAu, variantFact, withAnnotationTabsContent, 
           filteredStr);
       doFilterTest(variantArchivesAu, variantFact, withAnnotationsOuterHeapmap, 
-          filteredStr);
-    }
-    public void testFilteringPreprints() throws Exception {
-      doFilterTest(variantPreprintsAu, variantFact, withHead, filteredHead);
-      doFilterTest(variantPreprintsAu, variantFact, withScript, filteredStr);
-      doFilterTest(variantPreprintsAu, variantFact, withNoscript, filteredStr);
-      doFilterTest(variantPreprintsAu, variantFact, withComments, filteredStr);
-      doFilterTest(variantPreprintsAu, variantFact, withInstitutionAlert,
-          filteredStr);
-      doFilterTest(variantPreprintsAu, variantFact, withReadAnnounceAlert,
-          filteredStr);
-      doFilterTest(variantPreprintsAu, variantFact, withQaAnnounceAlert,
-          filteredStr);
-      doFilterTest(variantPreprintsAu, variantFact, withSubmitAnnounceAlert, 
-          filteredStr);
-      doFilterTest(variantPreprintsAu, variantFact, withTopNavbarFixedTop,
-          filteredStr);
-      doFilterTest(variantPreprintsAu, variantFact, withItemTopNavbar,
-          filteredStr);
-      doFilterTest(variantPreprintsAu, variantFact, 
-          withAllLeftColumnExceptDownloadAs, 
-          withoutAllLeftColumnExceptDownloadAs);
-      doFilterTest(variantPreprintsAu, variantFact, withAllRightColumnn, 
-          filteredStr);
-      doFilterTest(variantPreprintsAu, variantFact, withFlagModal, filteredStr);
-      doFilterTest(variantPreprintsAu, variantFact, withFollowModal,
-          filteredStr);
-      doFilterTest(variantPreprintsAu, variantFact, withUnfollowModal, 
-          filteredStr);
-      doFilterTest(variantPreprintsAu, variantFact, withMetricsModal, 
-          filteredStr);
-      doFilterTest(variantPreprintsAu, variantFact, withShareModal, 
-          filteredStr);
-      doFilterTest(variantPreprintsAu, variantFact, withCitingModal,
-          filteredStr);
-      doFilterTest(variantPreprintsAu, variantFact, withArticleLinksModal,
-          filteredStr);
-      doFilterTest(variantPreprintsAu, variantFact, withFoot, filteredStr);
-      doFilterTest(variantPreprintsAu, variantFact, withAnnotationTabsNav,
-          filteredStr);
-      doFilterTest(variantPreprintsAu, variantFact, withAnnotationTabsContent, 
-          filteredStr);
-      doFilterTest(variantPreprintsAu, variantFact, withAnnotationsOuterHeapmap, 
           filteredStr);
     }
   }

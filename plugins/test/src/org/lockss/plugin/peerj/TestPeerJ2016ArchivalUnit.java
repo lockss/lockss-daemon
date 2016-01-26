@@ -60,7 +60,7 @@ public class TestPeerJ2016ArchivalUnit extends LockssTestCase {
   private static final Logger log = Logger.getLogger(TestPeerJ2016ArchivalUnit.class);
 
   static final String PLUGIN_ID = "org.lockss.plugin.peerj.ClockssPeerJ2016Plugin";
-  static final String PluginName = "PeerJ 2016 Plugin (CLOCKSS)";
+  static final String PluginName = "PeerJ Plugin (CLOCKSS)";
 
   public void setUp() throws Exception {
     super.setUp();
@@ -111,15 +111,16 @@ public class TestPeerJ2016ArchivalUnit extends LockssTestCase {
     BaseCachedUrlSet cus = new BaseCachedUrlSet(PJAu,
         new RangeCachedUrlSetSpec(base.toString()));
     // permission page
-    shouldCacheTest("https://peerj.com/lockss.txt", true, PJAu, cus);  
-    shouldCacheTest("https://s3.amazonaws.com/static.peerj.com/images/lPJAunch/MontereyJellyPeerJ.jpg", true, PJAu, cus);
+    shouldCacheTest("https://peerj.com/lockss.txt", true, PJAu, cus);
+    //took this out of crawl rules because led to 403 on some button.png images...and seem unnecessary
+    //shouldCacheTest("https://s3.amazonaws.com/static.peerj.com/images/lPJAunch/MontereyJellyPeerJ.jpg", true, PJAu, cus);
     shouldCacheTest("https://d2pdyyx74uypu5.cloudfront.net/images/apple-touch-icon.png", true, PJAu, cus);
     shouldCacheTest("https://peerj.com/assets/icomoon/fonts/icomoon.eot?-90lpjv", true, PJAu, cus);
     shouldCacheTest("https://peerj.com/assets/font-awesome-3.2.1/font/fontawesome-webfont.ttf?v=3.2.1", true, PJAu, cus);
     shouldCacheTest("https://dfzljdn9uc3pi.cloudfront.net/2014/250/1/fig-1-2x.jpg", true, PJAu, cus);
     shouldCacheTest("https://peerj.com/archives/?year=2014&journal=peerj", true, PJAu, cus);
     shouldCacheTest("https://peerj.com/articles/index.html?month=2014-01&journal=peerj", true, PJAu, cus);
-    shouldCacheTest("https://peerj.com/articles/250/", true, PJAu, cus);
+    shouldCacheTest("https://peerj.com/articles/250", true, PJAu, cus);
         shouldCacheTest("https://peerj.com/articles/250.pdf", true, PJAu, cus);
     shouldCacheTest("https://peerj.com/articles/250.bib", true, PJAu, cus);
     shouldCacheTest("https://peerj.com/articles/250.ris", true, PJAu, cus);
@@ -155,8 +156,38 @@ public class TestPeerJ2016ArchivalUnit extends LockssTestCase {
     shouldCacheTest("http://peerj/?year=2012&journal=peerj", false, PJAu, cus);  
     shouldCacheTest("http://peerj/archives/?year=2012", false, PJAu, cus);  
     shouldCacheTest("http://peerj/?year=2012&journal=cs", false, PJAu, cus);  
+    shouldCacheTest("http://peerj/?year=2012&journal=cs", false, PJAu, cus);  
     // LOCKSS
     shouldCacheTest("http://lockss.stanford.edu", false, PJAu, cus);
+    
+    //change the AU to be the computer science one and check a few more
+    ArchivalUnit CSAu = makeAu(base, "2016", "cs");
+    theDaemon.getLockssRepository(CSAu);
+    theDaemon.getNodeManager(CSAu);
+    BaseCachedUrlSet cscus = new BaseCachedUrlSet(CSAu,
+        new RangeCachedUrlSetSpec(base.toString()));
+    shouldCacheTest("https://peerj.com/lockss.txt", true, CSAu, cscus);  
+    shouldCacheTest("https://peerj.com/assets/font-awesome-3.2.1/font/fontawesome-webfont.ttf?v=3.2.1", true, CSAu, cscus);
+    shouldCacheTest("https://peerj.com/archives/?year=2016&journal=cs", true, CSAu, cscus);
+    shouldCacheTest("https://peerj.com/articles/index.html?month=2016-01&journal=cs", true, CSAu, cscus);
+    shouldCacheTest("https://peerj.com/articles/cs-250", true, CSAu, cscus);
+        shouldCacheTest("https://peerj.com/articles/cs-250.pdf", true, CSAu, cscus);
+    shouldCacheTest("https://peerj.com/articles/cs-250.bib", true, CSAu, cscus);
+    shouldCacheTest("https://peerj.com/articles/cs-250.ris", true, CSAu, cscus);
+    shouldCacheTest("https://peerj.com/articles/cs-250.xml", true, CSAu, cscus);
+    // DO NOT CACHE
+    shouldCacheTest("https://peerj.com/articles/cs-250/reviews/", false, CSAu, cscus);
+    shouldCacheTest("https://peerj.com/articles/cs-250.html", false, CSAu, cscus);
+    shouldCacheTest("https://peerj.com/articles/cs-250.amp", false, CSAu, cscus);
+    shouldCacheTest("https://peerj.com/articles/cs-250.citeproc", false, CSAu, cscus);
+    shouldCacheTest("https://peerj.com/articles/cs-250.json", false, CSAu, cscus);
+    shouldCacheTest("https://peerj.com/articles/cs-250.rdf", false, CSAu, cscus);
+    shouldCacheTest("https://peerj.com/articles/cs-250.unixref", false, CSAu, cscus);
+    //it must be the correct journal
+    shouldCacheTest("https://peerj.com/articles/peerj-250.pdf", false, CSAu, cscus);
+    //alas no way to guard against this one...if the journal cross links to peerj
+    shouldCacheTest("https://peerj.com/articles/250.pdf", true, CSAu, cscus);    
+    
   }
   
   private void shouldCacheTest(String url, boolean shouldCache,
