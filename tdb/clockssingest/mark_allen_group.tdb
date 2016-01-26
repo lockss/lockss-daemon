@@ -74,6 +74,12 @@
     comment[base_url] = http://www.bjcn.co.uk/
     param[journal_id] = bjcn
 
+    au < exists ; exists ; 2005 ; British Journal of Community Nursing Volume 10 ; 10 ; >
+    au < exists ; exists ; 2006 ; British Journal of Community Nursing Volume 11 ; 11 ; >
+    au < exists ; exists ; 2007 ; British Journal of Community Nursing Volume 12 ; 12 ; >
+    au < exists ; exists ; 2008 ; British Journal of Community Nursing Volume 13 ; 13 ; >
+    au < exists ; exists ; 2009 ; British Journal of Community Nursing Volume 14 ; 14 ; >
+    au < exists ; exists ; 2010 ; British Journal of Community Nursing Volume 15 ; 15 ; >
     au < manifest ; exists ; 2011 ; British Journal of Community Nursing Volume 16 ; 16 ; >
     au < manifest ; exists ; 2012 ; British Journal of Community Nursing Volume 17 ; 17 ; >
     au < crawling ; exists ; 2013 ; British Journal of Community Nursing Volume 18 ; 18 ; >
@@ -94,6 +100,10 @@
     comment[base_url] = http://www.healthcare-assistants.co.uk/
     param[journal_id] = bjha
 
+    au < exists ; exists ; 2007 ; British Journal of Healthcare Assistants Volume 1 ; 1 ; >
+    au < exists ; exists ; 2008 ; British Journal of Healthcare Assistants Volume 2 ; 2 ; >
+    au < exists ; exists ; 2009 ; British Journal of Healthcare Assistants Volume 3 ; 3 ; >
+    au < exists ; exists ; 2010 ; British Journal of Healthcare Assistants Volume 4 ; 4 ; >
     au < manifest ; exists ; 2011 ; British Journal of Healthcare Assistants Volume 5 ; 5 ; >
     au < manifest ; exists ; 2012 ; British Journal of Healthcare Assistants Volume 6 ; 6 ; >
     au < crawling ; exists ; 2013 ; British Journal of Healthcare Assistants Volume 7 ; 7 ; >
@@ -114,6 +124,8 @@
     comment[base_url] = http://www.bjhcm.co.uk/
     param[journal_id] = bjhc
 
+    au < exists ; exists ; 2009 ; British Journal of Healthcare Management Volume 15 ; 15 ; >
+    au < exists ; exists ; 2010 ; British Journal of Healthcare Management Volume 16 ; 16 ; >
     au < manifest ; exists ; 2011 ; British Journal of Healthcare Management Volume 17 ; 17 ; >
     au < manifest ; exists ; 2012 ; British Journal of Healthcare Management Volume 18 ; 18 ; >
     au < crawling ; exists ; 2013 ; British Journal of Healthcare Management Volume 19 ; 19 ; >
@@ -173,6 +185,8 @@
     comment[base_url] = http://www.britishjournalofmidwifery.com/
     param[journal_id] = bjom
 
+    au < exists ; exists ; 2009 ; British Journal of Midwifery Volume 17 ; 17 ; >
+    au < exists ; exists ; 2010 ; British Journal of Midwifery Volume 18 ; 18 ; >
     au < manifest ; exists ; 2011 ; British Journal of Midwifery Volume 19 ; 19 ; >
     au < manifest ; exists ; 2012 ; British Journal of Midwifery Volume 20 ; 20 ; >
     au < crawling ; exists ; 2013 ; British Journal of Midwifery Volume 21 ; 21 ; >
@@ -193,6 +207,8 @@
     comment[base_url] = http://www.bjnn.co.uk/
     param[journal_id] = bjnn
 
+    au < exists ; exists ; 2009 ; British Journal of Neuroscience Nursing Volume 5 ; 5 ; >
+    au < exists ; exists ; 2010 ; British Journal of Neuroscience Nursing Volume 6 ; 6 ; >
     au < manifest ; exists ; 2011 ; British Journal of Neuroscience Nursing Volume 7 ; 7 ; >
     au < manifest ; exists ; 2012 ; British Journal of Neuroscience Nursing Volume 8 ; 8 ; >
     au < crawling ; exists ; 2013 ; British Journal of Neuroscience Nursing Volume 9 ; 9 ; >
@@ -213,6 +229,8 @@
     comment[base_url] = http://www.britishjournalofnursing.com/
     param[journal_id] = bjon
 
+    au < exists ; exists ; 2009 ; British Journal of Nursing Volume 18 ; 18 ; >
+    au < exists ; exists ; 2010 ; British Journal of Nursing Volume 19 ; 19 ; >
     au < manifest ; exists ; 2011 ; British Journal of Nursing Volume 20 ; 20 ; >
     au < manifest ; exists ; 2012 ; British Journal of Nursing Volume 21 ; 21 ; >
     au < crawling ; exists ; 2013 ; British Journal of Nursing Volume 22 ; 22 ; >
@@ -233,6 +251,8 @@
     comment[base_url] = http://www.school-nursing.co.uk/
     param[journal_id] = bjsn
 
+    au < exists ; exists ; 2009 ; British Journal of School Nursing Volume 4 ; 4 ; >
+    au < exists ; exists ; 2010 ; British Journal of School Nursing Volume 5 ; 5 ; >
     au < manifest ; exists ; 2011 ; British Journal of School Nursing Volume 6 ; 6 ; >
     au < manifest ; exists ; 2012 ; British Journal of School Nursing Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; British Journal of School Nursing Volume 8 ; 8 ; >
