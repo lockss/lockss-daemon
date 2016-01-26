@@ -14,7 +14,7 @@
   <entry>
     <!-- allows for multiple journals under peerj host, but no preprints -->
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <!-- to use new feature of HtmlNodeFilters in the html hash filter - allExceptSubtree() -->
@@ -30,11 +30,11 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -66,6 +66,8 @@
     https://dfzljdn9uc3pi.cloudfront.net/2014/250/1/fig-1-2x.jpg
     https://peerj.com/archives/?year=2014&journal=peerj
     https://peerj.com/articles/index.html?month=2014-01&journal=peerj
+      note that the article has a trailing slash, but the daemon takes it off
+      we must allow both in the crawl rules...
     https://peerj.com/articles/250/
     https://peerj.com/articles/250/reviews/
     https://peerj.com/articles/250.pdf (also: .bib, .ris, .xml from menu)
@@ -83,7 +85,7 @@
       <string>1,"^https://[^.]+\.cloudfront\.net/%s", volume_name</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%sarticles/index\.html\?month=%s-", base_url, volume_name</string>
-      <string>1,"^%sarticles/(%s-)?[0-9]+$", base_url, journal_id</string>
+      <string>1,"^%sarticles/(%s-)?[0-9]+/?$", base_url, journal_id</string>
       <string>2,"^%sarticles/(%s-)?[0-9]+\.(amp|citeproc|html|json|rdf|unixref)$", base_url, journal_id</string>
       <string>1,"^%sarticles/(%s-)?[0-9]+\.[^/]+$", base_url, journal_id</string>
     </list>
