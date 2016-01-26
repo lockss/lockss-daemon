@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -185,82 +185,82 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
 	CounterReportsRequestRecorder.getInstance();
 
     recorder.recordRequest(IGNORABLE_URL,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
+	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200, null);
 
     checkRequestRowCount(0);
 
     recorder.recordRequest(RECORDABLE_URL,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
+	CounterReportsRequestRecorder.PublisherContacted.FALSE, 200, null);
 
     checkRequestRowCount(1);
     checkRequestByPublisherInvolvementRowCount(false, 1);
     checkRequestByPublisherInvolvementRowCount(true, 0);
 
     recorder.recordRequest(IGNORABLE_URL,
-	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
+	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200, null);
 
     checkRequestRowCount(1);
     checkRequestByPublisherInvolvementRowCount(false, 1);
     checkRequestByPublisherInvolvementRowCount(true, 0);
 
     recorder.recordRequest(RECORDABLE_URL,
-	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200);
+	CounterReportsRequestRecorder.PublisherContacted.TRUE, 200, null);
 
     checkRequestRowCount(2);
     checkRequestByPublisherInvolvementRowCount(false, 1);
     checkRequestByPublisherInvolvementRowCount(true, 1);
 
     recorder.recordRequest(IGNORABLE_URL,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 304);
+	CounterReportsRequestRecorder.PublisherContacted.FALSE, 304, null);
 
     checkRequestRowCount(2);
     checkRequestByPublisherInvolvementRowCount(false, 1);
     checkRequestByPublisherInvolvementRowCount(true, 1);
 
     recorder.recordRequest(RECORDABLE_URL,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 304);
+	CounterReportsRequestRecorder.PublisherContacted.FALSE, 304, null);
 
     checkRequestRowCount(3);
     checkRequestByPublisherInvolvementRowCount(false, 2);
     checkRequestByPublisherInvolvementRowCount(true, 1);
 
     recorder.recordRequest(IGNORABLE_URL,
-	CounterReportsRequestRecorder.PublisherContacted.TRUE, 304);
+	CounterReportsRequestRecorder.PublisherContacted.TRUE, 304, null);
 
     checkRequestRowCount(3);
     checkRequestByPublisherInvolvementRowCount(false, 2);
     checkRequestByPublisherInvolvementRowCount(true, 1);
 
     recorder.recordRequest(RECORDABLE_URL,
-	CounterReportsRequestRecorder.PublisherContacted.TRUE, 304);
+	CounterReportsRequestRecorder.PublisherContacted.TRUE, 304, null);
 
     checkRequestRowCount(4);
     checkRequestByPublisherInvolvementRowCount(false, 2);
     checkRequestByPublisherInvolvementRowCount(true, 2);
 
     recorder.recordRequest(IGNORABLE_URL,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 404);
+	CounterReportsRequestRecorder.PublisherContacted.FALSE, 404, null);
 
     checkRequestRowCount(4);
     checkRequestByPublisherInvolvementRowCount(false, 2);
     checkRequestByPublisherInvolvementRowCount(true, 2);
 
     recorder.recordRequest(RECORDABLE_URL,
-	CounterReportsRequestRecorder.PublisherContacted.FALSE, 404);
+	CounterReportsRequestRecorder.PublisherContacted.FALSE, 404, null);
 
     checkRequestRowCount(5);
     checkRequestByPublisherInvolvementRowCount(false, 3);
     checkRequestByPublisherInvolvementRowCount(true, 2);
 
     recorder.recordRequest(IGNORABLE_URL,
-	CounterReportsRequestRecorder.PublisherContacted.TRUE, 404);
+	CounterReportsRequestRecorder.PublisherContacted.TRUE, 404, null);
 
     checkRequestRowCount(5);
     checkRequestByPublisherInvolvementRowCount(false, 3);
     checkRequestByPublisherInvolvementRowCount(true, 2);
 
     recorder.recordRequest(RECORDABLE_URL,
-	CounterReportsRequestRecorder.PublisherContacted.TRUE, 404);
+	CounterReportsRequestRecorder.PublisherContacted.TRUE, 404, null);
 
     checkRequestRowCount(6);
     checkRequestByPublisherInvolvementRowCount(false, 4);

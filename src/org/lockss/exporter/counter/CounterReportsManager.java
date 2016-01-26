@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -117,6 +117,18 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       + "reportOutputDirectoryName";
 
   public static final String DEFAULT_REPORT_OUTPUTDIR = "output";
+
+  /**
+   * Name of the organization to which to assign COUNTER requests by default.
+   * <p />
+   * Defaults to <code>YOUR_ORGANIZATION_NAME_HERE</code>. Changes require
+   * daemon restart.
+   */
+  public static final String PARAM_REPORT_ORGNAME = PREFIX
+      + "defaultOrganizationName";
+
+  public static final String DEFAULT_REPORT_ORGNAME =
+      "YOUR_ORGANIZATION_NAME_HERE";
 
   // Aggregations names.
   public static final String ALL_BOOKS_NAME = "COUNTER REPORTS ALL BOOKS";
@@ -460,6 +472,9 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
   /** The metadata manager */
   private MetadataManager metadataManager = null;
 
+  // The default organization name.
+  private String defaultOrgName = DEFAULT_REPORT_ORGNAME;
+
   /**
    * Starts the CounterReportsManager service.
    */
@@ -612,6 +627,9 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       return false;
     }
 
+    defaultOrgName = config.get(PARAM_REPORT_ORGNAME, DEFAULT_REPORT_ORGNAME);
+    if (log.isDebug3()) log.debug3("defaultOrgName = " + defaultOrgName);
+
     log.debug2(DEBUG_HEADER + "Done.");
     return true;
   }
@@ -712,16 +730,25 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
    *          A String with the requested URL.
    * @param isPublisherInvolved
    *          A boolean indicating the involvement of the publisher.
+   * @param organization
+   *          A String with the name of the organization to which to assign this
+   *          request for COUNTER purposes.
    * @throws DbException
    *           if there are problems accessing the database.
    */
-  public void persistRequest(String url, boolean isPublisherInvolved)
-      throws DbException {
+  public void persistRequest(String url, boolean isPublisherInvolved,
+      String organization) throws DbException {
     final String DEBUG_HEADER = "persistRequest(): ";
 
     // Do nothing more if the service is not ready to be used.
     if (!ready) {
       return;
+    }
+
+    // Use the default organization name if none is passed.
+    if (StringUtil.isNullString(organization)) {
+      organization = defaultOrgName;
+      if (log.isDebug3()) log.debug3("organization = " + organization);
     }
 
     Connection conn = null;
