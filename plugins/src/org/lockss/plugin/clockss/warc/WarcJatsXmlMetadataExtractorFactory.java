@@ -37,7 +37,6 @@ import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 
 import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 

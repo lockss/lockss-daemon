@@ -228,17 +228,9 @@ public class XPathXmlMetadataParser  {
     if (articleNode != null) {
       articlePath = xpath.compile(articleNode);
     }
-    if (log.isDebug3()) {
-      if (globalMap != null) {
-        log.debug3("globalMap: " + globalMap.toString());
-      } else { log.debug3("globalMap is null"); }
-      if (globalMap != null) {
-        log.debug3("articleNode: " + articleNode.toString());
-      } else { log.debug3("articleNode is null"); }
-      if (articleMap != null) { 
-      log.debug3("articleMap: " + articleMap.toString());
-      } else { log.debug3("articleMap is null");}
-    }
+    log.debug3("globalMap: " + globalMap);
+    log.debug3("articleNode: " + articleNode);
+    log.debug3("articleMap: " + articleMap);
   }
 
   /*
