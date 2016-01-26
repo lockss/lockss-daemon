@@ -34,32 +34,11 @@
       au < crawling ; exists ; 2004 ; 978-0-660-19271-0 ; 978-0-660-19272-7 ; 9780660192727 ; Blue Grouse: Their Biology and Natural History >
       au < crawling ; exists ; 2001 ; 978-0-660-18201-8 ; 978-0-660-18991-8 ; 9780660189918 ; Calcium: The Grand-Master Cell Signaler >
       au < crawling ; exists ; 1999 ; 978-0-660-17638-3 ; 978-0-660-19314-4 ; 9780660193144 ; Canadian Marine Fisheries in a Changing and Uncertain World Canadian Special Publication of Fisheries and Aquatic Sciences No. 129 >
+      au < exists ; exists ; 2000 ; 978-0-660-17534-8 ; 978-0-660-18296-4 ; 9780660182964 ; Canadian Medicinal Crops >
+      au < exists ; exists ; 1998 ; 978-0-660-17404-4 ; 978-0-660-18469-2 ; 9780660184692 ; Canadian System of Soil Classification, 3rd Ed. >
     
   }
   
-  {
-  
-    title < 
-      name = Canadian Medicinal Crops ;
-      type = book
-       
-    >
-    comment[isbn] = 978-0-660-17534-8 
-    comment[eisbn] = 978-0-660-18296-4 
-    
-  }
-  
-  {
-  
-    title < 
-      name = Canadian System of Soil Classification, 3rd Ed. ;
-      type = book
-      
-    >
-    comment[isbn] = 978-0-660-17404-4 
-    comment[eisbn] = 978-0-660-18469-2
-  }
-    
   {
   
     title < 
@@ -69,8 +48,8 @@
     comment[isbn] = 978-0-660-16709-1 
     comment[eisbn] = 978-0-9878114-3-1
 
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
     }
-    
     {
   
     title < 
@@ -80,8 +59,8 @@
     comment[isbn] = 978-0-660-18612-2  
     comment[eisbn] = 978-0-660-18994-9
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
     }
-    
     {
   
     title < 
@@ -91,8 +70,8 @@
     comment[isbn] = 978-0-660-80366-1  
     comment[eisbn] = 978-0-662-49442-3
 
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
     }
-    
     {
   
     title < 
@@ -102,8 +81,8 @@
     comment[isbn] = 978-0-660-17640-6     
     comment[eisbn] = 978-0-9878114-9-3 
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
     }
-    
     {
   
     title < 
@@ -113,8 +92,8 @@
     comment[isbn] = 978-0-660-18165-3   
     comment[eisbn] = 978-0-660-18463-0
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
     }
-    
     {
   
     title < 
@@ -124,6 +103,7 @@
      
     comment[isbn] = 978-0-660-19089-1 
     comment[eisbn] = 978-0-660-19091-4
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
     }
     
     {
@@ -134,6 +114,7 @@
       >
     comment[isbn] = 978-0-660-15780-1 
     comment[eisbn] = 978-0-9877172-3-8    
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
     }
     
     {
@@ -144,6 +125,7 @@
       >
     comment[isbn] = 978-0-660-19399-1 
     comment[eisbn] = 978-0-660-19401-1
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
     }
     
     {
@@ -154,6 +136,7 @@
      >
     comment[isbn] = 978-0-660-19400-4 
     comment[eisbn] = 978-0-660-19767-8
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
      
     }
     
@@ -165,6 +148,7 @@
       >
     comment[isbn] = 978-0-660-19092-1    
     comment[eisbn] = 978-0-660-19093-8
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -176,9 +160,9 @@
      >
     comment[isbn] = 978-0-660-17785-4    
     comment[eisbn] = 978-0-660-18600-9
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
-    
     {
   
     title < 
@@ -187,6 +171,7 @@
      >
     comment[isbn] = 978-0-660-19073-0
     comment[eisbn] = 978-0-660-19074-7
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
      
     }
     
@@ -198,7 +183,7 @@
       >
     comment[isbn] = 978-0-660-19827-9 
     comment[eisbn] = 978-0-660-19827-9
-     
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
     }
     
     {
@@ -209,6 +194,7 @@
      >
     comment[isbn] = 978-0-660-18480-7
     comment[eisbn] = 978-1-927346-07-5
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
     }
     
     {
@@ -220,6 +206,7 @@
     comment[isbn] = 978-0-660-19707-4 
     comment[eisbn] = 978-0-660-19708-1
 
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
     }
     
     {
@@ -232,8 +219,8 @@
     comment[isbn] = 978-0-660-17522-5 
     comment[eisbn] = 978-0-9878114-7-9 
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
     }
-    
     {
   
     title < 
@@ -244,8 +231,8 @@
     comment[isbn] = 978-0-660-19890-3
     comment[eisbn] = 978-1-927346-13-6
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
     }
-    
     {
   
     title < 
@@ -255,8 +242,8 @@
     comment[isbn] = 978-0-660-17737-3    
     comment[eisbn] = 978-1-927346-01-3
 
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
     }
-    
     {
   
     title < 
@@ -266,8 +253,8 @@
     comment[isbn] = 978-0-660-17959-9 
     comment[eisbn] = 978-0-660-18470-8
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
     }
-    
     {
   
     title < 
@@ -277,8 +264,8 @@
     comment[isbn] = 978-0-660-17256-9 
     comment[eisbn] = 978-0-660-18466-1
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
     }
-    
     {
   
     title < 
@@ -288,8 +275,8 @@
       comment[isbn] = 978-0-660-19968-9 
       comment[eisbn] = 978-1-927346-16-7
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
     }
-    
     {
   
     title < 
@@ -299,8 +286,8 @@
       comment[isbn] = 978-0-660-19727-2 
       comment[eisbn] = 978-0-660-19727-2
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
     }
-    
     {
   
     title < 
@@ -310,8 +297,8 @@
       comment[isbn] = 978-0-660-19096-9 
       comment[eisbn] = 978-1-927346-09-9     
 
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
     }
-    
     {
   
     title < 
@@ -321,8 +308,8 @@
       comment[isbn] = 978-0-660-19943-6 
       comment[eisbn] = 978-1-927346-14-3
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
   }
-  
   {
   
     title < 
@@ -332,6 +319,7 @@
       comment[isbn] = 978-0-660-16402-1 
       comment[eisbn] = 978-0-660-18467-8
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
     }
 
     {
@@ -343,6 +331,7 @@
       comment[isbn] = 978-0-660-19322-9 
       comment[eisbn] = 978-0-660-19323-6
 
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
     }
     
     {
@@ -354,6 +343,7 @@
       comment[isbn] = 978-0-660-19322-9 
       comment[eisbn] = 978-0-660-19323-6     
 
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -367,6 +357,7 @@
       comment[eisbn] = 978-0-660-18757-0
      
 
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -379,6 +370,7 @@
       comment[isbn] = 978-0-660-96057-9 
       comment[eisbn] = 978-0-9878114-8-6
 
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -391,6 +383,7 @@
       comment[isbn] = 978-0-660-16403-8 
       comment[eisbn] = 978-0-9878114-0-0     
 
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -403,6 +396,7 @@
       comment[isbn] = 978-0-660-19813-2 
       comment[eisbn] = 978-0-660-19814-9     
 
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -416,6 +410,7 @@
       comment[eisbn] = 978-0-660-18600-9
      
 
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -428,6 +423,7 @@
       comment[isbn] = 978-0-660-57482-0 
       comment[eisbn] = 978-0-9877172-1-4     
 
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -439,6 +435,7 @@
       >
       comment[isbn] = 978-0-9877172-0-7 
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
 
     }
@@ -451,6 +448,7 @@
       >
       comment[isbn] = 978-0-660-19942-9 
       comment[eisbn] = 978-1-927346-17-4     
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -463,6 +461,7 @@
       comment[isbn] = 978-0-660-94830-0 
       comment[eisbn] = 978-0-660-96925-1     
 
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -475,6 +474,7 @@
       comment[isbn] = 978-0-660-18283-4 
       comment[eisbn] = 978-0-660-18993-2
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -486,6 +486,7 @@
       >
       comment[isbn] = 978-0-660-19930-6 
       comment[eisbn] = 978-1-927346-15-0     
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -498,6 +499,7 @@
       comment[isbn] = 978-0-660-19789-0 
       comment[eisbn] = 978-0-660-19816-3
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -510,6 +512,7 @@
       comment[isbn] = 978-0-660-94579-8 
       comment[eisbn] = 978-0-660-96926-8
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -522,6 +525,7 @@
       comment[isbn] = 978-0-660-96059-3 
       comment[eisbn] = 978-0-660-96799-8
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -534,6 +538,7 @@
       comment[isbn] = 978-0-660-97021-9 
       comment[eisbn] = 978-0-660-97022-6
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -546,6 +551,7 @@
       comment[isbn] = 978-0-660-96380-8 
       comment[eisbn] = 978-0-660-96408-9
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -558,6 +564,7 @@
       comment[isbn] = 978-0-660-95418-9 
       comment[eisbn] = 978-0-660-96494-2
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -570,6 +577,7 @@
       comment[isbn] = 978-0-660-19941-2 
       comment[eisbn] = 978-1-927346-11-2
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -582,6 +590,7 @@
       comment[isbn] = 978-0-660-19664-0 
       comment[eisbn] = 978-0-660-19665-7
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -594,6 +603,7 @@
       comment[isbn] = 978-0-660-19326-7 
       comment[eisbn] = 978-0-660-19327-4
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -606,6 +616,7 @@
       comment[isbn] = 978-0-660-15002-4 
       comment[eisbn] = 978-0-660-19311-3
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -618,6 +629,7 @@
       comment[isbn] = 978-0-660-19958-0 
       comment[eisbn] = 978-1-927346-19-8
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -630,6 +642,7 @@
       comment[isbn] = 978-0-660-19833-0 
       comment[eisbn] = 978-0-660-19834-7
       
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -642,6 +655,7 @@
       comment[isbn] = 978-0-660-17788-5 
       comment[eisbn] = 978-1-927346-04-4
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -654,6 +668,7 @@
       comment[isbn] = 978-0-253-33907-2 
       comment[eisbn] = 978-1-927346-08-2
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -666,6 +681,7 @@
       comment[isbn] = 978-0-660-16047-4 
       comment[eisbn] = 978-0-9877172-7-6
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -678,6 +694,7 @@
       comment[isbn] = 978-0-660-19628-2 
       comment[eisbn] = 978-0-660-18464-7
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -690,6 +707,7 @@
       comment[isbn] = 978-0-660-19087-7 
       comment[eisbn] = 978-0-660-19372-4
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -701,6 +719,7 @@
       >
       comment[isbn] = 978-0-660-19404-2 
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -713,6 +732,7 @@
       comment[isbn] = 978-0-660-19819-4 
       comment[eisbn] = 978-0-660-19820-0 
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -724,6 +744,7 @@
       >
       comment[isbn] = 978-0-9698414-4-9 
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -736,6 +757,7 @@
       comment[isbn] = 978-0-660-18898-0 
       comment[eisbn] = 978-0-660-19260-4
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -748,6 +770,7 @@
       comment[isbn] = 978-0-660-15003-1 
       comment[eisbn] = 978-0-660-19312-0
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -760,6 +783,7 @@
       comment[isbn] = 978-0-660-97058-5 
       comment[eisbn] = 978-0-660-97059-2
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -772,6 +796,7 @@
       comment[isbn] = 978-0-660-19364-9 
       comment[eisbn] = 978-0-660-19365-6
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -784,6 +809,7 @@
       comment[isbn] = 978-0-660-19108-9 
       comment[eisbn] = 978-0-660-19267-3
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -796,6 +822,7 @@
       comment[isbn] = 978-0-660-17637-6 
       comment[eisbn] = 978-0-660-18468-5
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -808,6 +835,7 @@
       comment[isbn] = 978-0-660-19336-6 
       comment[eisbn] = 978-0-660-19337-3
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -820,6 +848,7 @@
       comment[isbn] = 978-0-660-18145-5 
       comment[eisbn] = 978-0-660-18988-8
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -832,6 +861,7 @@
       comment[isbn] = 978-0-660-17967-4 
       comment[eisbn] = 978-1-927346-05-1
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -844,6 +874,7 @@
       comment[isbn] = 978-0-660-19028-0 
       comment[eisbn] = 978-0-660-19029-7
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -856,6 +887,7 @@
       comment[isbn] = 978-0-660-17221-7 
       comment[eisbn] = 978-0-9878114-6-2
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -868,6 +900,7 @@
       comment[isbn] = 978-0-660-19065-5 
       comment[eisbn] = 978-0-660-19065-5
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -880,6 +913,7 @@
       comment[isbn] = 978-0-660-18493-7 
       comment[eisbn] = 978-1-927346-06-8
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -892,6 +926,7 @@
       comment[isbn] = 978-0-660-96931-2 
       comment[eisbn] = 978-0-660-96932-9
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -904,6 +939,7 @@
       comment[isbn] = 978-0-660-14954-7 
       comment[eisbn] = 978-0-9877172-2-1
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -916,6 +952,7 @@
       comment[isbn] = 978-0-660-19724-1 
       comment[eisbn] = 978-0-660-19725-8
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -928,6 +965,7 @@
      
       comment[isbn] = 978-0-660-18397-8 
       comment[eisbn] = 978-0-660-18995-6
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -940,6 +978,7 @@
       comment[isbn] = 978-0-660-96472-0 
       comment[eisbn] = 978-0-660-96798-1
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -952,6 +991,7 @@
       comment[isbn] = 978-0-660-14956-1 
       comment[eisbn] = 978-0-9877172-5-2
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -964,6 +1004,7 @@
       comment[isbn] = 978-0-660-17639-0 
       comment[eisbn] = 978-0-660-18990-1
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -976,6 +1017,7 @@
       comment[isbn] = 978-0-660-95109-6 
       comment[eisbn] = 978-0-9877172-9-0
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -988,6 +1030,7 @@
       comment[isbn] = 978-0-660-19007-5 
       comment[eisbn] = 978-0-660-19265-9
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -1000,6 +1043,7 @@
       comment[isbn] = 978-0-660-19011-2 
       comment[eisbn] = 
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -1012,6 +1056,7 @@
       comment[isbn] = 978-0-660-19843-9 
       comment[eisbn] = 978-0-660-19844-6
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -1024,6 +1069,7 @@
       comment[isbn] = 978-0-660-18284-1 
       comment[eisbn] = 978-0-660-18992-5
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -1036,6 +1082,7 @@
       comment[isbn] = 978-0-660-17778-6 
       comment[eisbn] = 978-0-660-17778-6
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -1047,6 +1094,7 @@
       >
       comment[isbn] = 978-0-660-15902-7 
       comment[eisbn] = 978-0-9877172-4-5
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -1059,6 +1107,7 @@
       comment[isbn] = 978-0-660-19800-2 
       comment[eisbn] = 978-0-660-19801-9
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -1071,6 +1120,7 @@
       comment[isbn] = 978-0-660-18521-7 
       comment[eisbn] = 978-0-660-18989-5
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -1082,6 +1132,7 @@
       >
       comment[isbn] = 978-0-660-19798-2 
       comment[eisbn] = 978-0-660-19799-9
+           au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
      
 
     }
@@ -1095,6 +1146,7 @@
       comment[isbn] = 0008-347X 
       comment[eisbn] = 1918-3240
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -1107,6 +1159,7 @@
       comment[isbn] = 0015-7546 
       comment[eisbn] = 1499-9315
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -1120,6 +1173,7 @@
       comment[isbn] = 978-0-660-19858-3 
       comment[eisbn] = 978-0-660-19859-0
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -1132,6 +1186,7 @@
       comment[isbn] = 978-0-660-18762-4 
       comment[eisbn] = 978-0-660-19256-7
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -1144,6 +1199,7 @@
       comment[isbn] = 978-0-660-16404-5 
       comment[eisbn] = 978-0-9878114-4-8
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -1156,6 +1212,7 @@
       comment[isbn] = 978-0-660-19503-2 
       comment[eisbn] = 978-0-660-18471-5
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -1168,6 +1225,7 @@
       comment[isbn] = 978-0-660-15903-4 
       comment[eisbn] = 978-0-9877172-6-9
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
     
@@ -1180,6 +1238,7 @@
       comment[isbn] = 978-0-660-18292-6 
       comment[eisbn] = 978-0-660-18462-3
      
+      au < exists ; exists ; 0 ; 0 ; 0 ; 0 ; name >
 
     }
 
