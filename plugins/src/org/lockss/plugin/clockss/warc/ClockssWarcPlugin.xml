@@ -95,7 +95,7 @@
     <string>au_substance_url_pattern</string>
     <list>
       <!-- BASE_URL/warcfiles/foo-released/2015/foo-timedate.warc.gz -->
-      <string>"^%s%d/.+\.warc\.gz", base_url, year</string>
+      <string>"^%s%d/.+\.warc\.gz$", base_url, year</string>
     </list>
   </entry>
   <!--  do not explode the archive. The xml file is at the top level, not archived -->
