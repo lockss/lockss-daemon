@@ -8,52 +8,49 @@
 
   rights = openaccess
 
+    param[base_url] = https://peerj.com/
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
+
   {
   
     title < 
       name = PeerJ ;
-      issn = 2167-8359
+      eissn = 2167-8359
     >
     
     {
     
     plugin = org.lockss.plugin.peerj.ClockssPeerJPlugin
-    param[base_url] = https://peerj.com/
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[0] = see PD-1266
     
-    au < finished ; crawling ; 2013 ; PeerJ 2013 ; 2013 > 
+    au < finished ; crawling ; 2013 ; PeerJ Volume 2013 ; 2013 > 
     }
     {
     
     plugin = org.lockss.plugin.peerj.ClockssPeerJ2016Plugin
-    param[base_url] = https://peerj.com/
     param[journal_id] = peerj 
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
-    au < testing ; exists ; 2014 ; PeerJ 2014 ; 2014 >
-    au < exists ; exists ; 2015 ; PeerJ 2015 ; 2015 >
-    au < testing ; exists ; 2016 ; PeerJ 2016 ; 2016 >
+    au < doNotProcess ; exists ; 2013 ; PeerJ Volume 2013 ; 2013 >
+    au < testing ; exists ; 2014 ; PeerJ Volume 2014 ; 2014 >
+    au < exists ; exists ; 2015 ; PeerJ Volume 2015 ; 2015 >
+    au < testing ; exists ; 2016 ; PeerJ Volume 2016 ; 2016 >
     }
   }
-  
+
   {
-  
+
     title < 
       name = PeerJ Computer Science ;
-      issn = 2376-5992
+      eissn = 2376-5992
     >
-    
+
     {
-    
+
     plugin = org.lockss.plugin.peerj.ClockssPeerJ2016Plugin
-    param[base_url] = https://peerj.com/
     param[journal_id] = cs 
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     
-    au < testing ; exists ; 2015 ; PeerJ Computer Science 2015 ; 2015 >
-    au < testing ; exists ; 2016 ; PeerJ Computer Science 2016 ; 2016 >
+    au < testing ; exists ; 2015 ; PeerJ Computer Science Volume 2015 ; 2015 >
+    au < testing ; exists ; 2016 ; PeerJ Computer Science Volume 2016 ; 2016 >
     }
   }
-  
 }
