@@ -289,6 +289,7 @@
 
       au < released ; 2014 ; Arethusa Volume 47 ; 47 >
       au < released ; 2015 ; Arethusa Volume 48 ; 48 >
+      au < manifest ; 2016 ; Arethusa Volume 49 ; 49 >
 
     }
 
@@ -1427,6 +1428,7 @@
 
       au < released ; 2014 ; Journal of Democracy Volume 25 ; 25 >
       au < released ; 2015 ; Journal of Democracy Volume 26 ; 26 >
+      au < manifest ; 2016 ; Journal of Democracy Volume 27 ; 27 >
 
     }
 
@@ -1545,6 +1547,7 @@
 
       au < released ; 2014 ; Journal of Health Care for the Poor and Underserved Volume 25 ; 25 >
       au < released ; 2015 ; Journal of Health Care for the Poor and Underserved Volume 26 ; 26 >
+      au < expected ; 2016 ; Journal of Health Care for the Poor and Underserved Volume 27 ; 27 >
 
     }
 
@@ -2532,9 +2535,9 @@
 
       au < released ; 2014 ; Partial Answers: Journal of Literature and the History of Ideas Volume 12 ; 12 >
       au < released ; 2015 ; Partial Answers: Journal of Literature and the History of Ideas Volume 13 ; 13 >
+      au < manifest ; 2016 ; Partial Answers: Journal of Literature and the History of Ideas Volume 14 ; 14 >
 
     }
-
 
   }
 
@@ -3718,23 +3721,23 @@
 
       param[base_url] = http://muse.jhu.edu/
 
-      au < exists ; 1977 ; The Lion and the Unicorn Volume 1 ; 1 >
-      au < exists ; 1978 ; The Lion and the Unicorn Volume 2 ; 2 >
-      au < exists ; 1979 ; The Lion and the Unicorn Volume 3 ; 3 >
-      au < exists ; 1980 ; The Lion and the Unicorn Volume 4 ; 4 >
-      au < exists ; 1981 ; The Lion and the Unicorn Volume 5 ; 5 >
-      au < exists ; 1982 ; The Lion and the Unicorn Volume 6 ; 6 >
-      au < exists ; 1983-1984 ; The Lion and the Unicorn Volume 7-8 ; 7 >
-      au < exists ; 1985 ; The Lion and the Unicorn Volume 9 ; 9 >
-      au < exists ; 1986 ; The Lion and the Unicorn Volume 10 ; 10 >
-      au < exists ; 1987 ; The Lion and the Unicorn Volume 11 ; 11 >
-      au < exists ; 1988 ; The Lion and the Unicorn Volume 12 ; 12 >
-      au < exists ; 1989 ; The Lion and the Unicorn Volume 13 ; 13 >
-      au < exists ; 1990 ; The Lion and the Unicorn Volume 14 ; 14 >
-      au < exists ; 1991 ; The Lion and the Unicorn Volume 15 ; 15 >
-      au < exists ; 1992 ; The Lion and the Unicorn Volume 16 ; 16 >
-      au < exists ; 1993 ; The Lion and the Unicorn Volume 17 ; 17 >
-      au < manifest ; 1994 ; The Lion and the Unicorn Volume 18 ; 18 >
+      au < testing ; 1977 ; The Lion and the Unicorn Volume 1 ; 1 >
+      au < testing ; 1978 ; The Lion and the Unicorn Volume 2 ; 2 >
+      au < testing ; 1979 ; The Lion and the Unicorn Volume 3 ; 3 >
+      au < testing ; 1980 ; The Lion and the Unicorn Volume 4 ; 4 >
+      au < testing ; 1981 ; The Lion and the Unicorn Volume 5 ; 5 >
+      au < testing ; 1982 ; The Lion and the Unicorn Volume 6 ; 6 >
+      au < testing ; 1983-1984 ; The Lion and the Unicorn Volume 7-8 ; 7 >
+      au < testing ; 1985 ; The Lion and the Unicorn Volume 9 ; 9 >
+      au < testing ; 1986 ; The Lion and the Unicorn Volume 10 ; 10 >
+      au < testing ; 1987 ; The Lion and the Unicorn Volume 11 ; 11 >
+      au < testing ; 1988 ; The Lion and the Unicorn Volume 12 ; 12 >
+      au < testing ; 1989 ; The Lion and the Unicorn Volume 13 ; 13 >
+      au < testing ; 1990 ; The Lion and the Unicorn Volume 14 ; 14 >
+      au < testing ; 1991 ; The Lion and the Unicorn Volume 15 ; 15 >
+      au < testing ; 1992 ; The Lion and the Unicorn Volume 16 ; 16 >
+      au < testing ; 1993 ; The Lion and the Unicorn Volume 17 ; 17 >
+      au < testing ; 1994 ; The Lion and the Unicorn Volume 18 ; 18 >
       au < released ; 1995 ; The Lion and the Unicorn Volume 19 ; 19 >
       au < released ; 1996 ; The Lion and the Unicorn Volume 20 ; 20 >
       au < released ; 1997 ; The Lion and the Unicorn Volume 21 ; 21 >
@@ -3912,11 +3915,11 @@
 
       param[base_url] = http://muse.jhu.edu/
 
-      au < exists ; 1991 ; Theatre Topics Volume 1 ; 1 >
-      au < exists ; 1992 ; Theatre Topics Volume 2 ; 2 >
-      au < exists ; 1993 ; Theatre Topics Volume 3 ; 3 >
-      au < exists ; 1994 ; Theatre Topics Volume 4 ; 4 >
-      au < manifest ; 1995 ; Theatre Topics Volume 5 ; 5 >
+      au < testing ; 1991 ; Theatre Topics Volume 1 ; 1 >
+      au < testing ; 1992 ; Theatre Topics Volume 2 ; 2 >
+      au < testing ; 1993 ; Theatre Topics Volume 3 ; 3 >
+      au < testing ; 1994 ; Theatre Topics Volume 4 ; 4 >
+      au < testing ; 1995 ; Theatre Topics Volume 5 ; 5 >
       au < released ; 1996 ; Theatre Topics Volume 6 ; 6 >
       au < released ; 1997 ; Theatre Topics Volume 7 ; 7 >
       au < released ; 1998 ; Theatre Topics Volume 8 ; 8 >
@@ -3989,9 +3992,9 @@
 
       au < released ; 2014 ; Theory & Event Volume 17 ; 17 >
       au < released ; 2015 ; Theory & Event Volume 18 ; 18 >
+      au < manifest ; 2016 ; Theory & Event Volume 19 ; 19 >
 
     }
-
 
   }
 
