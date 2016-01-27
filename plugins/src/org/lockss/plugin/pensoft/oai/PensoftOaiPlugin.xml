@@ -39,7 +39,7 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
-      <string>1,"^%sarticles.php\?id=[0-9]+$", base_url</string>
+      <string>1,"^%s(articles|article_preview)\.php\?id=[0-9]+$", base_url</string>
       <string>1,"^%slib/ajax_srv/article_elements_srv.php\?action=download_pdf&amp;item_id=[0-9]+$", base_url</string>
       <string>1,"^%slib/ajax_srv/generate_pdf.php\?document_id=[0-9]+&amp;(readonly_preview=1)?$", base_url</string>
     </list>
@@ -93,10 +93,6 @@
   <entry>
     <string>plugin_crawl_seed_factory</string>
     <string>org.lockss.plugin.pensoft.oai.PensoftOaiCrawlSeedFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.pensoft.oai.PensoftOaiHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>

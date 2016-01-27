@@ -47,8 +47,19 @@ public class PensoftOaiHtmlFilterFactory implements FilterFactory {
     NodeFilter[] filters = new NodeFilter[] {
      //filter out script
      new TagNameFilter("script"),
-     // footer
+     new TagNameFilter("style"),
+     
+     HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+     //popup stuff may change
+     HtmlNodeFilters.tagWithAttribute("div", "id", "feedback-popup"),
+     HtmlNodeFilters.tagWithAttribute("div", "id", "P-Post-Review-Form-Poll"),
+     HtmlNodeFilters.tagWithAttribute("div", "class", "popup-background"),
+     HtmlNodeFilters.tagWithAttribute("div", "class", "P-Article-References-For-Baloon"),
      HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+     HtmlNodeFilters.tagWithAttribute("div", "id", "ArticleBaloon"),
+     HtmlNodeFilters.tagWithAttribute("div", "class", "P-clear"),
+     
+     
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
