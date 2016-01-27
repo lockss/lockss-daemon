@@ -36,10 +36,12 @@ import java.io.IOException;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
-
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
+import org.lockss.extractor.MetadataField.Cardinality;
+import org.lockss.extractor.MetadataField.Validator;
 import org.lockss.plugin.*;
 
 
@@ -65,13 +67,47 @@ import org.lockss.plugin.*;
 <meta content="1" name="citation_firstpage">
 <meta content="62" name="citation_lastpage">
 <meta content="10.1090/S0894-0347-2012-00742-5" name="citation_doi">
+
+ Metadata on page http://www.ams.org/books/surv/032
+<meta name="citation_series_title" content="Mathematical Surveys and Monographs">
+<meta name="citation_abstract_html_url" content="http://www.ams.org/surv/032">
+<meta name="citation_pdf_url" content="http://www.ams.org/surv/032/surv032.pdf">
+<meta name="citation_issn" content="0076-5376">
+<meta name="citation_issn" content="2331-7159">
+<meta name="citation_isbn" content="978-0-8218-1533-5">
+<meta name="citation_isbn" content="978-1-4704-1259-3">
+<meta name="citation_publisher" content="American Mathematical Society">
+<meta name="citation_author" content="Jacobowitz, Howard">
+<meta name="citation_title" content="An Introduction to CR Structures">
+<meta name="citation_publication_date" content="1990/08/07">
+<meta name="citation_volume" content="32">
+<meta name="citation_doi" content="http://dx.doi.org/10.1090/surv/032">
+
  */
 
 public class AmericanMathematicalSocietyHtmlMetadataExtractorFactory
     implements FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger(
       AmericanMathematicalSocietyHtmlMetadataExtractorFactory.class);
-
+  
+  public static final String URL_PREFIX_DOI = "https?://dx.doi.org/";
+  public static MetadataField AMS_DOI = new MetadataField(
+      MetadataField.KEY_DOI, Cardinality.Single, 
+      new Validator() {
+        public String validate(ArticleMetadata am, MetadataField field, String val)
+            throws MetadataException.ValidationException {
+          // remove leading "doi:" before checking validity
+          String doi = StringUtils.removeStartIgnoreCase(val, MetadataField.PROTOCOL_DOI);
+          if (!MetadataUtil.isDoi(doi)) {
+            doi = val.replaceFirst(URL_PREFIX_DOI, "");
+            if (!MetadataUtil.isDoi(doi)) {
+              throw new MetadataException.ValidationException("Illegal DOI: " + val);
+            }
+          }
+          return doi;
+        }
+      });
+  
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
         String contentType)
@@ -92,7 +128,7 @@ public class AmericanMathematicalSocietyHtmlMetadataExtractorFactory
       tagMap.put("citation_issue", MetadataField.FIELD_ISSUE);
       tagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
       tagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
-      tagMap.put("citation_doi", MetadataField.FIELD_DOI);
+      tagMap.put("citation_doi", AMS_DOI);
       tagMap.put("citation_issn", MetadataField.FIELD_ISSN);
       tagMap.put("citation_isbn", MetadataField.FIELD_ISBN);
       tagMap.put("citation_publication_date", MetadataField.FIELD_DATE);
