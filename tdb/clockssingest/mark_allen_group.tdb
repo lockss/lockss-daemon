@@ -258,6 +258,8 @@
     comment[base_url] = http://www.school-nursing.co.uk/
     param[journal_id] = bjsn
 
+    au < exists ; exists ; 2006 ; British Journal of School Nursing Volume 1 ; 1 ; >
+    au < exists ; exists ; 2007 ; British Journal of School Nursing Volume 2 ; 2 ; >
     au < exists ; exists ; 2008 ; British Journal of School Nursing Volume 3 ; 3 ; >
     au < exists ; exists ; 2009 ; British Journal of School Nursing Volume 4 ; 4 ; >
     au < exists ; exists ; 2010 ; British Journal of School Nursing Volume 5 ; 5 ; >
@@ -633,6 +635,7 @@
     comment[base_url] = http://www.equinehealthmagazine.com/
     param[journal_id] = eqhe
 
+    au < exists ; exists ; 2010 ; Equine Health Volume 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Equine Health Volume 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Equine Health Volume 2012 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Equine Health Volume 2013 ; 2013 ; >
