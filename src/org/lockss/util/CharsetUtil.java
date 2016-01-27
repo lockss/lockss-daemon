@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2014-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,12 +42,17 @@ import com.ibm.icu.text.CharsetMatch;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 
+import org.lockss.plugin.*;
+
 /**
  * A class meant to encapsulate static character encoding/decoding using icu4j
  */
 public class CharsetUtil {
+  private static final Logger log = Logger.getLogger(CharsetUtil.class);
+
   public static final String PREFIX = org.lockss.config.Configuration.PREFIX + "crawler.";
-  /** If true will CharsetUtil for charset determination */
+  /** If true, CharsetUtil will try to infer the proper charset to use,
+   * falling back to the specified one if it can't. */
   public static final String PARAM_INFER_CHARSET = PREFIX + "inferCharset";
   public static final boolean DEFAULT_INFER_CHARSET = true;
 
@@ -149,7 +154,11 @@ public class CharsetUtil {
    * @throws IOException
    */
   public static InputStreamAndCharset getCharsetStream(InputStream inStream,
-    String expectedCharset) throws IOException {
+						       String expectedCharset)
+      throws IOException {
+    if (!CharsetUtil.inferCharset()) {
+      return new InputStreamAndCharset(inStream, expectedCharset);
+    }
     ByteArrayOutputStream buffered = new ByteArrayOutputStream();
     int len = 0;
     byte[] buf = new byte[1024];
@@ -202,6 +211,17 @@ public class CharsetUtil {
 
   }
 
+  public static InputStreamAndCharset getCharsetStream(CachedUrl cu)
+      throws IOException {
+    return getCharsetStream(cu.getUncompressedInputStream(),
+			    getAllegedCharset(cu));
+  }
+
+
+  static String getAllegedCharset(CachedUrl cu) {
+    return HeaderUtil.getCharsetOrDefaultFromContentType(cu.getContentType());
+  }
+
   /**
    * Given a byte stream, figure out an encoding and return a character stream
    * and the encoding used to convert bytes to characters. This will look for a
@@ -230,6 +250,12 @@ public class CharsetUtil {
     InputStreamAndCharset charsetStream = getCharsetStream(inStream, expectedCharset);
     return new InputStreamReader(charsetStream.getInStream(),
                                  charsetStream.getCharset());
+  }
+
+  public static InputStreamReader getReader(CachedUrl cu) throws IOException {
+    return (InputStreamReader)
+      getCharsetReader(cu.getUncompressedInputStream(),
+		       getAllegedCharset(cu)).getLeft();
   }
 
   /**
@@ -265,6 +291,12 @@ public class CharsetUtil {
     InputStreamAndCharset isc = getCharsetStream(inStream, expectedCharset);
     Reader charsetReader = new InputStreamReader(isc.getInStream(),isc.getCharset());
     return new ImmutablePair<>(charsetReader, isc.getCharset());
+  }
+
+  public static Pair<java.io.Reader, String> getCharsetReader(CachedUrl cu)
+      throws IOException {
+    return getCharsetReader(cu.getUncompressedInputStream(),
+			    getAllegedCharset(cu));
   }
 
   /**

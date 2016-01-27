@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -346,7 +346,7 @@ public class ViewContent extends LockssServlet {
       if (isFilter) {
 	in = cu.openForHashing();
       } else {
-	in = cu.getUnfilteredInputStream();
+	in = cu.getUncompressedInputStream();
       }
       StreamUtil.copy(in, out);
     } catch (IOException e) {

@@ -88,12 +88,6 @@ public interface CachedUrl extends CachedUrlSetNode {
    * redirects.  Not predictable; don't use. */
   public static final String PROPERTY_ORIG_URL = "X-Lockss-orig-url";
 
-  /** Prefix applied to Content-Encoding and Content-Length headers to
-   * indicate the original encoding with which the content was received
-   * (because CachedUrl ununcodes content when returning an InputStream on
-   * it) */
-  public static final String ENCODED_HEADER_PREFIX = "X-Lockss-Encoded-";
-
   /** Local time when file collected.  *Not* derived from the Date: header
    * from the server, which is stored separately if present.  Poorly named
    * but cannot be changed. */
@@ -109,17 +103,6 @@ public interface CachedUrl extends CachedUrlSetNode {
 
   public static final String PROPERTY_CONTENT_ENCODING = "content-encoding";
   public static final String PROPERTY_CONTENT_LENGTH = "content-length";
-
-  /** Property indicating Content-Encoding with which the file was
-   * received, if any */
-  public static final String PROPERTY_UNENCODED_CONTENT_ENCODING =
-    ENCODED_HEADER_PREFIX + PROPERTY_CONTENT_ENCODING;
-
-  /** Property indicating Content-Lengh before any encoding was removed, if
-   * the file was received encoded. */
-  public static final String PROPERTY_UNENCODED_CONTENT_LENGTH =
-    ENCODED_HEADER_PREFIX + PROPERTY_CONTENT_LENGTH;
-
 
   /** CachedUrl properties that the daemon uses internally, should not be
    * served with content */
@@ -212,8 +195,9 @@ public interface CachedUrl extends CachedUrlSetNode {
   public InputStream getUnfilteredInputStream();
 
   /**
-  * Get an object from which the content of the url can be read
-  * from the cache, together with a hash.
+  * Get an object from which the raw content of the url can be read from
+  * the cache.  Also computes a hash of the raw file
+
   * @param md MessageDigest that will see the unfiltered content
   * @return a {@link InputStream} object from which the
   *         unfiltered content of the cached url can be read.
@@ -221,22 +205,46 @@ public interface CachedUrl extends CachedUrlSetNode {
   public InputStream getUnfilteredInputStream(HashedInputStream.Hasher hasher);
 
   /**
-   * Get an inputstream of the content suitable for hashing.
-   * Probably filtered.
+  * Return an InputStream on the content, uncompressing it if it was
+  * received compressed (i.e., with a Content-Encoding of <code>gzip</code>
+  * or <code>deflate</code>.  The contents of the returned stream may not
+  * match the result of {@link #getContentSize()}, or the Content-Encoding
+  * or Content-Length properties.
+  * @return a {@link InputStream} object from which the uncompressed and
+  * unfiltered content of the cached url can be read.
+  */
+  public InputStream getUncompressedInputStream();
+
+  /**
+  * Return an InputStream on the content, uncompressing it if it was
+  * received compressed.
+  * @param md MessageDigest that will see the content, before any
+  * uncompression or filtering is applied
+  * @return a {@link InputStream} object from which the uncompressed and
+  * unfiltered content of the cached url can be read.
+  */
+  public InputStream getUncompressedInputStream(HashedInputStream.Hasher
+						hasher);
+
+  /**
+   * Get an inputstream of the content suitable for hashing.  Uncompressed
+   * if necessary, and filtered if so specified by the plugin.
    * @return an {@link InputStream}
    */
   public InputStream openForHashing();
 
   /**
-   * Get an inputstream of the content suitable for hashing,
-   * together with a hash of the unfiltered content.
-   * @param md MessageDigest to hash the unfiltered content
+   * Get an inputstream of the content suitable for hashing.  Uncompressed
+   * if necessary, and filtered if so specified by the plugin.  Also
+   * computes a hash of the raw file (no filter, no decompression).
+   * @param md MessageDigest to hash the  unfiltered content
    * @return an {@link InputStream}
    */
   public InputStream openForHashing(HashedInputStream.Hasher hasher);
 
   /**
-   * Return a reader on this CachedUrl
+   * Return a Reader on the content, uncompressed if it was recieved
+   * compressed.
    * @return {@link Reader}
    */
   public Reader openForReading();

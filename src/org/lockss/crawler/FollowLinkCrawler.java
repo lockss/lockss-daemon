@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -637,21 +637,17 @@ public class FollowLinkCrawler extends BaseCrawler {
               LinkExtractor extractor = getLinkExtractor(cu);
               if (extractor != null) {
                 //IOException if the CU can't be read
-                InputStream in = null;
+		InputStream in = null;
                 try {
                   pokeWDog();
-                  in = cu.getUnfilteredInputStream();
                   // Might be reparsing with new content (if depth reduced
                   // below refetch depth); clear any existing children
                   curl.clearChildren();
-                  String charset =
-                    HeaderUtil.getCharsetOrDefaultFromContentType(cu.getContentType());
-                  if (CharsetUtil.inferCharset())  {
-                    CharsetUtil.InputStreamAndCharset
-                      isc =CharsetUtil.getCharsetStream(in, charset);
-                    charset = isc.getCharset();
-                    in = isc.getInStream();
-                  }
+		  CharsetUtil.InputStreamAndCharset isc =
+		    CharsetUtil.getCharsetStream(cu);
+		  String charset = isc.getCharset();
+		  in = isc.getInStream();
+
                   in = FilterUtil.getCrawlFilteredStream(au, in, charset,
                       cu.getContentType());
                   extractor.extractUrls(au, in, charset,
