@@ -55,7 +55,6 @@ public class PensoftOaiHtmlFilterFactory implements FilterFactory {
      HtmlNodeFilters.tagWithAttribute("div", "id", "P-Post-Review-Form-Poll"),
      HtmlNodeFilters.tagWithAttribute("div", "class", "popup-background"),
      HtmlNodeFilters.tagWithAttribute("div", "class", "P-Article-References-For-Baloon"),
-     HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
      HtmlNodeFilters.tagWithAttribute("div", "id", "ArticleBaloon"),
      HtmlNodeFilters.tagWithAttribute("div", "class", "P-clear"),
      
