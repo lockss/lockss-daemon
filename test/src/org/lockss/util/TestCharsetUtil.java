@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2015-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,10 +31,12 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.util;
 
-import org.lockss.test.LockssTestCase;
-
 import java.io.*;
 import java.nio.charset.Charset;
+import org.apache.commons.lang3.*;
+
+import org.lockss.test.*;
+import org.lockss.plugin.*;
 
 /** 
 * CharsetUtil Tester. 
@@ -74,7 +76,7 @@ public class TestCharsetUtil extends LockssTestCase {
     "</title>\n" +
     "</head>";
 
-  String HTML_FILE =
+  static final String HTML_FILE =
     "<HTML>\n" +
     "<HEAD>\n" +
     "<TITLE>HTML DOCUMENT TEST</TITLE>\n" +
@@ -109,7 +111,7 @@ public class TestCharsetUtil extends LockssTestCase {
     "</BODY>\n" +
     "</HTML>\n";
 
-  String HTML_FILE_NOT_UTF =
+  static final String HTML_FILE_NOT_UTF =
     "<HTML>\n" +
     "<HEAD>\n" +
     "<TITLE>HTML DOCUMENT TEST</TITLE>\n" +
@@ -143,17 +145,17 @@ public class TestCharsetUtil extends LockssTestCase {
     "</BODY>\n" +
     "</HTML>\n";
 
-  File mTempDir;
+  static final String NO_CHARSET_HTML =
+    "<HTML>\n" +
+    "\n" +
+    "<head>\n" +
+     "</head>\n" +
+     "<body>\n" +
+     "<h1>My Website</h1>\n" +
+     "<p>Some text...</p>\n" +
+     "</body>\n" +
+     "</html>\n";
 
-  public void setUp() throws Exception {
-      super.setUp();
-      mTempDir = FileUtil.createTempDir("testCharsetUtil","");
-   }
-
-   public void tearDown() throws Exception {
-     FileUtil.delTree(mTempDir);
-     super.tearDown();
-   }
 
 
   /**
@@ -201,8 +203,40 @@ public class TestCharsetUtil extends LockssTestCase {
       new ByteArrayInputStream(HTML_FILE_NOT_UTF.getBytes("iso-8859-1"));
     assertEquals("ISO-8859-1", CharsetUtil.guessCharsetFromStream(bais,
                                                              "ISO-8859-1"));
+  }
 
+  static final String URL1 = "http://u.r/l";
 
+  public void testCu() throws IOException {
+    MockCachedUrl mcu = new MockCachedUrl(URL1);
+    InputStream is =
+      new ByteArrayInputStream(HTML_FILE_NOT_UTF.getBytes("iso-8859-1"));
+    mcu.storeContent(is);
+    CharsetUtil.InputStreamAndCharset isc = CharsetUtil.getCharsetStream(mcu);
+    assertEquals("ISO-8859-1", isc.getCharset());
+    // Should always call getUncompressedInputStream()
+    assertTrue(mcu.getUncompressedCalled());
+
+    // Should ignore CU-specified charset
+    mcu = new MockCachedUrl(URL1);
+    is = new ByteArrayInputStream(HTML_FILE_NOT_UTF.getBytes("iso-8859-1"));
+    CIProperties ctype = new CIProperties();
+    ctype.put(CachedUrl.PROPERTY_CONTENT_TYPE, "UTF-8");
+    mcu.storeContent(is, ctype);
+    isc = CharsetUtil.getCharsetStream(mcu);
+    assertEquals("ISO-8859-1", isc.getCharset());
+    assertTrue(mcu.getUncompressedCalled());
+    
+    mcu = new MockCachedUrl(URL1);
+    byte [] conc = ArrayUtils.addAll(UTF16_BOM_LE,
+				     NO_CHARSET_HTML.getBytes("ISO-8859-1"));
+    is =  new ByteArrayInputStream(conc);
+    ctype = new CIProperties();
+    ctype.put(CachedUrl.PROPERTY_CONTENT_TYPE, "UTF-8");
+    mcu.storeContent(is, ctype);
+    isc = CharsetUtil.getCharsetStream(mcu);
+    assertEquals("UTF-16LE", isc.getCharset());
+    assertTrue(mcu.getUncompressedCalled());
   }
 
   /**
@@ -285,7 +319,6 @@ public class TestCharsetUtil extends LockssTestCase {
     // read in the chars that we already read...
     rdr.read(charbuf);
     assertEquals(buf_string.toCharArray(), charbuf);
-
   }
 
   /**
@@ -332,6 +365,70 @@ public class TestCharsetUtil extends LockssTestCase {
       assertTrue(CharsetUtil.isSpace(space));
       assertTrue(CharsetUtil.isSpace(tab));
    }
+
+  String guessCharsetName(byte[] initialBytes) throws IOException {
+    byte [] conc = ArrayUtils.addAll(initialBytes,
+				     NO_CHARSET_HTML.getBytes("ISO-8859-1"));
+    InputStream is =  new ByteArrayInputStream(conc);
+    return CharsetUtil.guessCharsetName(is);
+  }
+
+  public void testGuessCharsetName() throws Exception {
+    assertEquals("UTF-8", guessCharsetName(UTF8_BOM));
+    assertEquals("UTF-16LE", guessCharsetName(UTF16_BOM_LE));
+    assertEquals("UTF-16BE", guessCharsetName(UTF16_BOM_BE));
+    if (CharsetUtil.supportedCharsetName("UTF-32LE") != null) {
+      assertEquals("UTF-32LE", guessCharsetName(UTF32_BOM_LE));
+      assertEquals("UTF-32BE", guessCharsetName(UTF32_BOM_BE));
+    }
+    if (CharsetUtil.supportedCharsetName("UTF-7") != null) {
+      assertEquals("UTF-7", guessCharsetName(UTF7_BOM_v1));
+      assertEquals("UTF-7", guessCharsetName(UTF7_BOM_v2));
+      assertEquals("UTF-7", guessCharsetName(UTF7_BOM_v3));
+      assertEquals("UTF-7", guessCharsetName(UTF7_BOM_v4));
+    }
+    if (CharsetUtil.supportedCharsetName("UTF-1") != null) {
+      assertEquals("UTF-1", guessCharsetName(UTF1_BOM));
+    } else {
+      assertEquals("UTF-8", guessCharsetName(UTF1_BOM));
+    }
+  }
+
+  void assertStreamCharsetFromBOM(String expCharset, byte[] initialBytes)
+      throws IOException {
+    byte [] conc = ArrayUtils.addAll(initialBytes,
+				     NO_CHARSET_HTML.getBytes("ISO-8859-1"));
+    InputStream is =  new ByteArrayInputStream(conc);
+    CharsetUtil.InputStreamAndCharset isc = CharsetUtil.getCharsetStream(is);
+    assertEquals(expCharset, isc.getCharset());
+    // The charset returned reflects the BOM, not the encoding of the byte
+    // stream we passed in.  We're just checking here that the InputStream
+    // wasn't mangled and the BOM was correctly removed.
+    assertReaderMatchesString(NO_CHARSET_HTML,
+			      new InputStreamReader(isc.getInStream(),
+						    "ISO-8859-1"));
+  }
+
+  public void testGetCharsetStream() throws Exception {
+    assertStreamCharsetFromBOM("UTF-8", UTF8_BOM);
+    assertStreamCharsetFromBOM("UTF-16LE", UTF16_BOM_LE);
+    assertStreamCharsetFromBOM("UTF-16BE", UTF16_BOM_BE);
+    if (CharsetUtil.supportedCharsetName("UTF-32LE") != null) {
+      assertStreamCharsetFromBOM("UTF-32LE", UTF32_BOM_LE);
+      assertStreamCharsetFromBOM("UTF-32BE", UTF32_BOM_BE);
+    }
+    if (CharsetUtil.supportedCharsetName("UTF-7") != null) {
+      assertStreamCharsetFromBOM("UTF-7", UTF7_BOM_v1);
+      assertStreamCharsetFromBOM("UTF-7", UTF7_BOM_v2);
+      assertStreamCharsetFromBOM("UTF-7", UTF7_BOM_v3);
+      assertStreamCharsetFromBOM("UTF-7", UTF7_BOM_v4);
+    }
+    if (CharsetUtil.supportedCharsetName("UTF-1") != null) {
+      assertStreamCharsetFromBOM("UTF-1", UTF1_BOM);
+    } else {
+      assertStreamCharsetFromBOM("UTF-8", UTF1_BOM);
+    }
+  }
 
    public void testHasUtf8BOM() throws Exception {
       assertTrue(CharsetUtil.hasUtf8BOM(UTF8_BOM, UTF8_BOM.length));
@@ -525,20 +622,17 @@ public class TestCharsetUtil extends LockssTestCase {
 
    private static void assertCharset(String golden, byte[] bytes,
                                      String expectedCharset)
-     throws IOException {
+       throws IOException {
      InputStreamReader reader =
-        CharsetUtil.getReader(new ByteArrayInputStream(bytes), expectedCharset);
-      assertEquals(expectedCharset, Charset.forName(reader.getEncoding()).displayName());
-      StringBuilder sb = new StringBuilder();
-      char[] buf = new char[1024];
-      for (int n; (n = reader.read(buf)) > 0;) {
-         sb.append(buf, 0, n);
-      }
-      assertEquals(golden, sb.toString());
+       CharsetUtil.getReader(new ByteArrayInputStream(bytes), expectedCharset);
+     assertEquals(expectedCharset,
+		  Charset.forName(reader.getEncoding()).displayName());
+     StringBuilder sb = new StringBuilder();
+     assertEquals(golden, StringUtil.fromReader(reader));
    }
 
   private File writeEncodedFile(String content, String enc) throws IOException {
-    File retFile = FileUtil.createTempFile("charset",enc, mTempDir);
+    File retFile = getTempFile("charset", enc);
     OutputStreamWriter osw = new OutputStreamWriter(
                                  new FileOutputStream(retFile),
                                  Charset.forName(enc).newEncoder());

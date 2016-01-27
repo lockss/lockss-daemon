@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.base;
 
 import java.io.*;
+import java.nio.charset.Charset;
 import java.util.*;
 import java.security.MessageDigest;
 import junit.framework.*;
@@ -59,7 +60,6 @@ public class TestBaseCachedUrl extends LockssTestCase {
   String url1 = "http://www.example.com/testDir/leaf1";
   String url2 = "http://www.example.com/testDir/leaf2";
   String url3 = "http://www.example.com/testDir/leaf3";
-  String url4 = "http://www.example.com/testDir/leaf4";
   String urlparent = "http://www.example.com/testDir";
   String content1 = "test content 1";
   String content2 = "test content 2 longer";
@@ -86,6 +86,11 @@ public class TestBaseCachedUrl extends LockssTestCase {
   public void tearDown() throws Exception {
     repo.stopService();
     super.tearDown();
+  }
+
+  InputStream getEncodedInputStream(String content, String charset)
+      throws IOException {
+    return new ByteArrayInputStream(content.getBytes(charset));
   }
 
   /** Tests that are independent of versioning */
@@ -304,48 +309,36 @@ public class TestBaseCachedUrl extends LockssTestCase {
 			  "gzip",
 			  CachedUrl.PROPERTY_CONTENT_LENGTH,
 			  clen));
-      createLeaf(url4, new GZIPpedInputStream(content),
-		 fromArgs(CachedUrl.PROPERTY_CONTENT_ENCODING,
-			  "gzip",
-			  CachedUrl.PROPERTY_CONTENT_LENGTH,
-			  clenz));
 
       CachedUrl cu = getTestCu(url1);
-      InputStream urlIs = cu.getUnfilteredInputStream();
-      assertEquals(content, StringUtil.fromInputStream(urlIs));
+      assertSameBytes(new GZIPpedInputStream(content),
+		      cu.getUnfilteredInputStream());
+      assertEquals(content,
+		   StringUtil.fromInputStream(cu.getUncompressedInputStream()));
+      assertEquals(content,
+		   StringUtil.fromReader(cu.openForReading()));
       Properties props = cu.getProperties();
-      assertNull(props.getProperty(CachedUrl.PROPERTY_CONTENT_ENCODING));
-      assertNull(props.getProperty(CachedUrl.PROPERTY_CONTENT_LENGTH));
-      assertEquals("gzip", props.getProperty(CachedUrl.PROPERTY_UNENCODED_CONTENT_ENCODING));
-      assertEquals(clenz, props.getProperty(CachedUrl.PROPERTY_UNENCODED_CONTENT_LENGTH));
+      assertEquals("gzip",
+		   props.getProperty(CachedUrl.PROPERTY_CONTENT_ENCODING));
+      assertEquals(clenz,
+		   props.getProperty(CachedUrl.PROPERTY_CONTENT_LENGTH));
 
-      // Same, but ensure properties get fixe up *before*
-      // getUncompressedInputStream() is called
-      cu = getTestCu(url4);
-      props = cu.getProperties();
-      assertNull(props.getProperty(CachedUrl.PROPERTY_CONTENT_ENCODING));
-      assertNull(props.getProperty(CachedUrl.PROPERTY_CONTENT_LENGTH));
-      assertEquals("gzip", props.getProperty(CachedUrl.PROPERTY_UNENCODED_CONTENT_ENCODING));
-      assertEquals(clenz, props.getProperty(CachedUrl.PROPERTY_UNENCODED_CONTENT_LENGTH));
-      urlIs = cu.getUnfilteredInputStream();
-      assertEquals(content, StringUtil.fromInputStream(urlIs));
-
+      // no content-encoding header, shouldn't get uncompressed
       cu = getTestCu(url2);
       assertSameBytes(new GZIPpedInputStream(content),
 		      cu.getUnfilteredInputStream());
-      props = cu.getProperties();
-      assertEquals(clenz,
-		   props.getProperty(CachedUrl.PROPERTY_CONTENT_LENGTH));
+      assertSameBytes(new GZIPpedInputStream(content),
+		      cu.getUncompressedInputStream());
+
       // 1.67 and 1.68 uncompressed but didn't remove Content-Encoding
       // header; ensure we don't fail when uncompressor fails
       cu = getTestCu(url3);
-      urlIs = cu.getUnfilteredInputStream();
-      assertEquals(content, StringUtil.fromInputStream(urlIs));
-      props = cu.getProperties();
-      assertNull(props.getProperty(CachedUrl.PROPERTY_CONTENT_ENCODING));
-      assertNull(props.getProperty(CachedUrl.PROPERTY_CONTENT_LENGTH));
-      assertEquals("gzip", props.getProperty(CachedUrl.PROPERTY_UNENCODED_CONTENT_ENCODING));
-      assertEquals(clen, props.getProperty(CachedUrl.PROPERTY_UNENCODED_CONTENT_LENGTH));
+      assertEquals(content,
+		   StringUtil.fromInputStream(cu.getUnfilteredInputStream()));
+      assertEquals(content,
+		   StringUtil.fromInputStream(cu.getUncompressedInputStream()));
+      assertEquals(content,
+		   StringUtil.fromReader(cu.openForReading()));
     }
 
     public void testDeflated() throws Exception {
@@ -364,47 +357,36 @@ public class TestBaseCachedUrl extends LockssTestCase {
 			  "deflate",
 			  CachedUrl.PROPERTY_CONTENT_LENGTH,
 			  clen));
-      createLeaf(url4, new DeflatedInputStream(content),
-		 fromArgs(CachedUrl.PROPERTY_CONTENT_ENCODING,
-			  "deflate",
-			  CachedUrl.PROPERTY_CONTENT_LENGTH,
-			  clenz));
 
       CachedUrl cu = getTestCu(url1);
-      InputStream urlIs = cu.getUnfilteredInputStream();
-      assertEquals(content, StringUtil.fromInputStream(urlIs));
+      assertSameBytes(new DeflatedInputStream(content),
+		      cu.getUnfilteredInputStream());
+      assertEquals(content,
+		   StringUtil.fromInputStream(cu.getUncompressedInputStream()));
+      assertEquals(content,
+		   StringUtil.fromReader(cu.openForReading()));
       Properties props = cu.getProperties();
-      assertNull(props.getProperty(CachedUrl.PROPERTY_CONTENT_ENCODING));
-      assertNull(props.getProperty(CachedUrl.PROPERTY_CONTENT_LENGTH));
-      assertEquals("deflate", props.getProperty(CachedUrl.PROPERTY_UNENCODED_CONTENT_ENCODING));
-      assertEquals(clenz, props.getProperty(CachedUrl.PROPERTY_UNENCODED_CONTENT_LENGTH));
+      assertEquals("deflate",
+		   props.getProperty(CachedUrl.PROPERTY_CONTENT_ENCODING));
+      assertEquals(clenz,
+		   props.getProperty(CachedUrl.PROPERTY_CONTENT_LENGTH));
 
-      // Same, but ensure properties get fixe up *before*
-      // getUncompressedInputStream() is called
-      cu = getTestCu(url4);
-      props = cu.getProperties();
-      assertNull(props.getProperty(CachedUrl.PROPERTY_CONTENT_ENCODING));
-      assertNull(props.getProperty(CachedUrl.PROPERTY_CONTENT_LENGTH));
-      assertEquals("deflate", props.getProperty(CachedUrl.PROPERTY_UNENCODED_CONTENT_ENCODING));
-      assertEquals(clenz, props.getProperty(CachedUrl.PROPERTY_UNENCODED_CONTENT_LENGTH));
-      urlIs = cu.getUnfilteredInputStream();
-      assertEquals(content, StringUtil.fromInputStream(urlIs));
-
+      // no content-encoding header, shouldn't get uncompressed
       cu = getTestCu(url2);
       assertSameBytes(new DeflatedInputStream(content),
 		      cu.getUnfilteredInputStream());
-      props = cu.getProperties();
-      assertEquals(clenz, props.getProperty(CachedUrl.PROPERTY_CONTENT_LENGTH));
+      assertSameBytes(new DeflatedInputStream(content),
+		      cu.getUncompressedInputStream());
+
       // 1.67 and 1.68 uncompressed but didn't remove Content-Encoding
       // header; ensure we don't fail when uncompressor fails
       cu = getTestCu(url3);
-      urlIs = cu.getUnfilteredInputStream();
-      assertEquals(content, StringUtil.fromInputStream(urlIs));
-      props = cu.getProperties();
-      assertNull(props.getProperty(CachedUrl.PROPERTY_CONTENT_ENCODING));
-      assertNull(props.getProperty(CachedUrl.PROPERTY_CONTENT_LENGTH));
-      assertEquals("deflate", props.getProperty(CachedUrl.PROPERTY_UNENCODED_CONTENT_ENCODING));
-      assertEquals(clen, props.getProperty(CachedUrl.PROPERTY_UNENCODED_CONTENT_LENGTH));
+      assertEquals(content,
+		   StringUtil.fromInputStream(cu.getUnfilteredInputStream()));
+      assertEquals(content,
+		   StringUtil.fromInputStream(cu.getUncompressedInputStream()));
+      assertEquals(content,
+		   StringUtil.fromReader(cu.openForReading()));
     }
 
     public void testIdentity() throws Exception {
@@ -423,8 +405,10 @@ public class TestBaseCachedUrl extends LockssTestCase {
 			  clenz));
 
       CachedUrl cu = getTestCu(url1);
-      InputStream urlIs = cu.getUnfilteredInputStream();
-      assertEquals(content, StringUtil.fromInputStream(urlIs));
+      assertEquals(content,
+		   StringUtil.fromInputStream(cu.getUnfilteredInputStream()));
+      assertEquals(content,
+		   StringUtil.fromInputStream(cu.getUncompressedInputStream()));
       Properties props = cu.getProperties();
       assertEquals("identity", props.getProperty(CachedUrl.PROPERTY_CONTENT_ENCODING));
       assertEquals(clen, props.getProperty(CachedUrl.PROPERTY_CONTENT_LENGTH));
@@ -432,9 +416,8 @@ public class TestBaseCachedUrl extends LockssTestCase {
       cu = getTestCu(url2);
       assertSameBytes(new GZIPpedInputStream(content),
 		      cu.getUnfilteredInputStream());
-      props = cu.getProperties();
-      assertEquals(clenz,
-		   props.getProperty(CachedUrl.PROPERTY_CONTENT_LENGTH));
+      assertSameBytes(new GZIPpedInputStream(content),
+		      cu.getUncompressedInputStream());
     }
 
     public void testOpenForHashingDefaultsToNoFiltering() throws Exception {
@@ -695,13 +678,31 @@ public class TestBaseCachedUrl extends LockssTestCase {
       }
     }
 
-    public void testGetReader() throws Exception {
+    public void testOpenForReading() throws Exception {
       createLeaf(url1, content1, null);
 
       CachedUrl cu = getTestCu(url1);
       Reader reader = cu.openForReading();
       assertEquals(content1, StringUtil.fromReader(reader));
     }
+
+    public void testOpenForReadingCharset(String charset) throws Exception {
+      createLeaf(url1, getEncodedInputStream(content1, charset), null);
+      CachedUrl cu = getTestCu(url1);
+      Reader reader = cu.openForReading();
+      assertEquals(content1, StringUtil.fromReader(reader));
+    }
+
+    public void testOpenForReadingCharset1() throws Exception {
+      testOpenForReadingCharset("UTF-8");
+    }
+    public void testOpenForReadingCharset2() throws Exception {
+      testOpenForReadingCharset("UTF-16");
+    }
+    public void testOpenForReadingCharset3() throws Exception {
+      testOpenForReadingCharset("UTF-32");
+    }
+
   }
 
   class MyMockArchivalUnit extends MockArchivalUnit {

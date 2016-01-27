@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -72,6 +72,7 @@ public class MockCachedUrl implements CachedUrl {
 
   private boolean released = false;
   private boolean open = false;
+  private boolean getUncompressedCalled = false;
 
   public MockCachedUrl(String url) {
     this.versions = new ArrayList();
@@ -240,6 +241,21 @@ public class MockCachedUrl implements CachedUrl {
     return res;
   }
 
+  public InputStream getUncompressedInputStream() {
+    getUncompressedCalled = true;
+    return getUnfilteredInputStream();
+  }
+
+  public InputStream getUncompressedInputStream(HashedInputStream.Hasher
+						hasher) {
+    getUncompressedCalled = true;
+    return getUnfilteredInputStream(hasher);
+  }
+
+  public boolean getUncompressedCalled() {
+    return getUncompressedCalled;
+  }
+
   public InputStream openForHashing() {
     return openForHashing(null);
   }
@@ -315,12 +331,18 @@ public class MockCachedUrl implements CachedUrl {
     return Constants.DEFAULT_ENCODING;
   }
 
-    // Write interface - used by the crawler.
+
+
+  public void storeContent(InputStream input) throws IOException {
+    storeContent(input, null);
+  }
 
   public void storeContent(InputStream input, CIProperties headers)
       throws IOException {
     cachedIS = input;
-    cachedProp = headers;
+    if (headers != null) {
+      cachedProp = headers;
+    }
   }
 
   public FileMetadataExtractor getFileMetadataExtractor(MetadataTarget target) {

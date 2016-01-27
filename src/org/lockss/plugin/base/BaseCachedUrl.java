@@ -60,7 +60,6 @@ public class BaseCachedUrl implements CachedUrl {
   private RepositoryNode leaf = null;
   protected RepositoryNode.RepositoryNodeContents rnc = null;
   protected Properties options;
-  protected CIProperties ciProps;
 
   public static final String PREFIX = Configuration.PREFIX + "baseCachedUrl.";
 
@@ -163,7 +162,7 @@ public class BaseCachedUrl implements CachedUrl {
       return getFilteredStream(hasher);
     } else {
       logger.debug3("Filtering off, returning unfiltered stream");
-      return getUnfilteredInputStream(hasher);
+      return getUncompressedInputStream(hasher);
     }
   }
 
@@ -214,14 +213,34 @@ public class BaseCachedUrl implements CachedUrl {
     return true;
   }
 
+  public InputStream getUnfilteredInputStream() {
+    ensureRnc();
+    return rnc.getInputStream();
+  }
+
+  public InputStream getUnfilteredInputStream(HashedInputStream.Hasher hasher) {
+    InputStream is = getUnfilteredInputStream();
+    if (hasher != null) {
+      is = newHashedInputStream(is, hasher);
+    }
+    return is;
+  }
+
   /** Return an InputStream on the content.  If a Content-Encoding header
    * is present indicating that the content is compressed, it is
    * decompressed. */
-  public InputStream getUnfilteredInputStream() {
-    ensureRnc();
-    InputStream in = rnc.getInputStream();;
-    // Content-Encoding header has been renamed to X-Lockss-Unencoded-...
-    String contentEncoding = getProperty(PROPERTY_UNENCODED_CONTENT_ENCODING);
+  public InputStream getUncompressedInputStream() {
+    return getUncompressedInputStream(null);
+  }
+
+  /** Return an InputStream on the content.  If a Content-Encoding header
+   * is present indicating that the content is compressed, it is
+   * decompressed.  The Content-Encoding and Content-Length headers, and
+   * the results of getContentSize(), will continue to reflect the
+   * compressed content, not what is returned in this stream. */
+  public InputStream getUncompressedInputStream(HashedInputStream.Hasher hasher) {
+    InputStream in = getUnfilteredInputStream(hasher);;
+    String contentEncoding = getProperty(PROPERTY_CONTENT_ENCODING);
     if (StringUtil.isNullString(contentEncoding) ||
 	contentEncoding.equalsIgnoreCase("identity")) {
       return in;
@@ -254,14 +273,6 @@ public class BaseCachedUrl implements CachedUrl {
 	throw new RuntimeException("Internal error: please report \"Insufficient buffering for reset\".");
       }
     }
-  }
-
-  public InputStream getUnfilteredInputStream(HashedInputStream.Hasher hasher) {
-    InputStream is = getUnfilteredInputStream();
-    if (hasher != null) {
-      is = newHashedInputStream(is, hasher);
-    }
-    return is;
   }
 
   // Clients of CachedUrl expect InputStreams to support mark/reset
@@ -300,14 +311,7 @@ public class BaseCachedUrl implements CachedUrl {
 
   public Reader openForReading() {
     try {
-      if (CharsetUtil.inferCharset()) {
-        return CharsetUtil.getReader(getUnfilteredInputStream(),
-                                     HeaderUtil.getCharsetFromContentType(getContentType()));
-      }
-      else {
-        return new BufferedReader( new InputStreamReader(getUnfilteredInputStream(),
-                                                         getEncoding()));
-      }
+      return CharsetUtil.getReader(this);
     } catch (IOException e) {
       // XXX Wrong Exception.  Should this method be declared to throw
       // UnsupportedEncodingException?
@@ -326,35 +330,9 @@ public class BaseCachedUrl implements CachedUrl {
     return ret;
   }
 
-  /** Return the CU properties, consisting of the response headers plus
-   * additional props added by the daemon.  If a Content-Encoding header is
-   * present, it and any accompanying Content-Length are removed, and
-   * replaced with prop name prefixed with {@value ENCODED_HEADER_PREFIX}.
-   * The original headers cannot be included, as they're no longer
-   * accurate, but some clients might want to know how the content was
-   * actually delivered. */
   public CIProperties getProperties() {
     ensureRnc();
-    if (ciProps == null) {
-      CIProperties props = CIProperties.fromProperties(rnc.getProperties());
-      String contentEncoding = props.getProperty(PROPERTY_CONTENT_ENCODING);
-      if (!StringUtil.isNullString(contentEncoding) &&
-	  !contentEncoding.equalsIgnoreCase("identity")) {
-	// We're going to uncompress; rename what would be incorrect
-	// Content-Encoding and Content-Length
-	props.remove(PROPERTY_CONTENT_ENCODING);
-	props.setProperty(PROPERTY_UNENCODED_CONTENT_ENCODING,
-			  contentEncoding);
-	String contentLength = props.getProperty(PROPERTY_CONTENT_LENGTH);
-	if (!StringUtil.isNullString(contentLength)) {
-	  props.remove(PROPERTY_CONTENT_LENGTH);
-	  props.setProperty(PROPERTY_UNENCODED_CONTENT_LENGTH,
-			    contentLength);
-	}
-      }
-      ciProps = props;
-    }
-    return ciProps;
+    return CIProperties.fromProperties(rnc.getProperties());
   }
 
   /**
@@ -396,7 +374,6 @@ public class BaseCachedUrl implements CachedUrl {
   private void ensureRnc() {
     if (rnc == null) {
       rnc = getNodeVersion().getNodeContents();
-      ciProps = null;
     }
   }
 
@@ -435,10 +412,7 @@ public class BaseCachedUrl implements CachedUrl {
 	logger.debug3("Filtering " + contentType +
 		      " with " + fact.getClass().getName());
       }
-      InputStream unfis = getUnfilteredInputStream();
-      if (hasher != null) {
-	unfis = newHashedInputStream(unfis, hasher);
-      }
+      InputStream unfis = getUncompressedInputStream(hasher);
       try {
 	return fact.createFilteredInputStream(au, unfis, getEncoding());
       } catch (PluginException e) {
@@ -452,9 +426,6 @@ public class BaseCachedUrl implements CachedUrl {
     // then look for deprecated FilterRule
     FilterRule fr = au.getFilterRule(contentType);
     if (fr != null) {
-      if (hasher != null) {
-	throw new IllegalArgumentException("LocalHash incompatible with FilterRule");
-      }
       if (logger.isDebug3()) {
 	logger.debug3("Filtering " + contentType +
 		      " with " + fr.getClass().getName());
@@ -469,7 +440,7 @@ public class BaseCachedUrl implements CachedUrl {
       }
     }
     if (logger.isDebug3()) logger.debug3("Not filtering " + contentType);
-    InputStream ret = getUnfilteredInputStream();
+    InputStream ret = getUncompressedInputStream();
     if (hasher != null) {
       ret = newHashedInputStream(ret, hasher);
     }

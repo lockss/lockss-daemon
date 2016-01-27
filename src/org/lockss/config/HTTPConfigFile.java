@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2001-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2001-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -223,14 +223,8 @@ public class HTTPConfigFile extends BaseConfigFile {
       }
       InputStream in = conn.getUncompressedResponseInputStream();
       String ctype = conn.getResponseContentType();
-      Reader rdr;
       String charset = HeaderUtil.getCharsetOrDefaultFromContentType(ctype);
-      if(CharsetUtil.inferCharset()) {
-         rdr = CharsetUtil.getReader(in, charset);
-      }
-      else {
-        rdr = new InputStreamReader(in, charset);
-      }
+      Reader rdr = CharsetUtil.getReader(in, charset);
       String body = StringUtil.fromReader(rdr, 10000);
       if (StringUtil.isNullString(body)) {
 	return msg;

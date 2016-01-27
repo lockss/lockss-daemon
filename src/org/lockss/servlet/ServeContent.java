@@ -1052,7 +1052,6 @@ public class ServeContent extends LockssServlet {
 
     ctype = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
     String mimeType = HeaderUtil.getMimeTypeFromContentType(ctype);
-    String charset = cu.getEncoding();
 
     if (log.isDebug3()) {
       log.debug3( "Serving cached content for: " + url
@@ -1078,8 +1077,9 @@ public class ServeContent extends LockssServlet {
     resp.setHeader(Constants.X_LOCKSS, Constants.X_LOCKSS_FROM_CACHE);
 
     // rewrite content from cache
-    handleRewriteInputStream(cu.getUnfilteredInputStream(),
-        mimeType, charset, cu.getContentSize());
+    CharsetUtil.InputStreamAndCharset isc = CharsetUtil.getCharsetStream(cu);
+    handleRewriteInputStream(isc.getInStream(), mimeType,
+			     isc.getCharset(), cu.getContentSize());
   }
 
   /**

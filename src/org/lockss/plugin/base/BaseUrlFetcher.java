@@ -571,14 +571,8 @@ public class BaseUrlFetcher implements UrlFetcher {
 	}
       }
 
-      Reader reader;
       String charset = AuUtil.getCharsetOrDefault(uncachedProperties);
-      if(CharsetUtil.inferCharset()) {
-        reader = CharsetUtil.getReader(uncIn, charset);
-      }
-      else {
-        reader = new InputStreamReader(uncIn, charset);
-      }
+      Reader reader = CharsetUtil.getReader(uncIn, charset);
       try {
         if (checker.isLoginPage(headers, reader)) {
           throw new CacheException.PermissionException("Found a login page");

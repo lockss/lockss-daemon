@@ -139,12 +139,9 @@ public class PermissionUrlConsumer extends SimpleUrlConsumer {
       // XXX Some PermissionCheckers close their stream.  This is a
       // workaround until they're fixed.
       Reader reader;
-      // todo: wrap this in param check
-      if(CharsetUtil.inferCharset()) {
-        InputStreamAndCharset isc = CharsetUtil.getCharsetStream(is, charset);
-        charset = isc.getCharset();
-        is = isc.getInStream();
-      }
+      InputStreamAndCharset isc = CharsetUtil.getCharsetStream(is, charset);
+      charset = isc.getCharset();
+      is = isc.getInStream();
 
       reader = new InputStreamReader(new StreamUtil.IgnoreCloseInputStream(is),
 				     charset);
