@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -111,13 +111,13 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
   }
 
   protected InputStream getInputStream(CachedUrl cu) {
-    return isFiltered ? cu.openForHashing() : cu.getUnfilteredInputStream();
+    return isFiltered ? cu.openForHashing() : cu.getUncompressedInputStream();
   }
 
   protected InputStream getInputStream(CachedUrl cu,
 				       HashedInputStream.Hasher hasher) {
     return isFiltered ? cu.openForHashing(hasher)
-      : cu.getUnfilteredInputStream(hasher);
+      : cu.getUncompressedInputStream(hasher);
   }
 
   /** Subclass should override to return proper array of digest */

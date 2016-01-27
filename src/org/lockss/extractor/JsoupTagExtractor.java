@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -118,7 +118,7 @@ public class JsoupTagExtractor extends SimpleFileMetadataExtractor {
     }
     ArticleMetadata am_ret = new ArticleMetadata();
     if(cu.getContentSize() > 0) {
-      InputStream in = cu.getUnfilteredInputStream();
+      InputStream in = cu.getUncompressedInputStream();
       // we pass in null for charset to determine from http-equiv meta selector
       Document doc = Jsoup.parse(in, null, cu.getUrl(), m_parser);
       if(m_isHtml && (m_selectors == null || m_selectors.isEmpty())) {
