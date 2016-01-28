@@ -42,34 +42,49 @@
       comment[publisher] = Universidade Estadual do Sudoeste da Bahia-UESB
       
       {
+      param[base_url] = http://www.estudosdalinguagem.org/
+      param[journal_id] = estudosdalinguagem
+
+      au < exists ; 2005 ; 1-2 ; Estudos da Língua(gem) Volume 1-2 ; 2005 ; >
+      au < exists ; 2006 ; 3-4 ; Estudos da Língua(gem) Volume 3-4 ; 2006 ; >
+      au < exists ; 2007 ; 5 ; Estudos da Língua(gem) Volume 5 ; 2007 ; >
+      au < exists ; 2008 ; 6 ; Estudos da Língua(gem) Volume 6 ; 2008 ; >
+      au < exists ; 2009 ; 7 ; Estudos da Língua(gem) Volume 7 ; 2009 ; >
+      au < exists ; 2010 ; 8 ; Estudos da Língua(gem) Volume 8 ; 2010 ; >
+      au < exists ; 2011 ; 9 ; Estudos da Língua(gem) Volume 9 ; 2011 ; >
+      au < exists ; 2012 ; 10 ; Estudos da Língua(gem) Volume 10 ; 2012 ; >
+      au < exists ; 2013 ; 11 ; Estudos da Língua(gem) Volume 11 ; 2013 ; >
+      au < exists ; 2014 ; 12 ; Estudos da Língua(gem) Volume 12 ; 2014 ; >
+      au < expected ; 2015 ; 13 ; Estudos da Língua(gem) Volume 13 ; 2015 ; >
+      }
+      {
       param[base_url] = http://estudosdalinguagem.uesb.br/
       param[journal_id] = estudosdalinguagem
 
-      au < released ; 2005 ; 1-2 ; Estudos da Língua(gem) Volume 1-2 ; 2005 ; >
-      au < released ; 2006 ; 3-4 ; Estudos da Língua(gem) Volume 3-4 ; 2006 ; >
-      au < released ; 2007 ; 5 ; Estudos da Língua(gem) Volume 5 ; 2007 ; >
-      au < released ; 2008 ; 6 ; Estudos da Língua(gem) Volume 6 ; 2008 ; >
-      au < released ; 2009 ; 7 ; Estudos da Língua(gem) Volume 7 ; 2009 ; >
-      au < released ; 2010 ; 8 ; Estudos da Língua(gem) Volume 8 ; 2010 ; >
-      au < released ; 2011 ; 9 ; Estudos da Língua(gem) Volume 9 ; 2011 ; >
-      au < released ; 2012 ; 10 ; Estudos da Língua(gem) Volume 10 ; 2012 ; >
-      au < released ; 2013 ; 11 ; Estudos da Língua(gem) Volume 11 ; 2013 ; >
-      au < released ; 2014 ; 12 ; Estudos da Língua(gem) Volume 12 ; 2014 ; >
-      au < expected ; 2015 ; 13 ; Estudos da Língua(gem) Volume 13 ; 2015 ; >
+      au < superseded ; 2005 ; 1-2 ; Estudos da Língua(gem) Volume 1-2 [superseded2] ; 2005 ; journal moved >
+      au < superseded ; 2006 ; 3-4 ; Estudos da Língua(gem) Volume 3-4 [superseded2] ; 2006 ; journal moved >
+      au < superseded ; 2007 ; 5 ; Estudos da Língua(gem) Volume 5 [superseded2] ; 2007 ; journal moved >
+      au < superseded ; 2008 ; 6 ; Estudos da Língua(gem) Volume 6 [superseded2] ; 2008 ; journal moved >
+      au < superseded ; 2009 ; 7 ; Estudos da Língua(gem) Volume 7 [superseded2] ; 2009 ; journal moved >
+      au < superseded ; 2010 ; 8 ; Estudos da Língua(gem) Volume 8 [superseded2] ; 2010 ; journal moved >
+      au < superseded ; 2011 ; 9 ; Estudos da Língua(gem) Volume 9 [superseded2] ; 2011 ; journal moved >
+      au < superseded ; 2012 ; 10 ; Estudos da Língua(gem) Volume 10 [superseded2] ; 2012 ; journal moved >
+      au < superseded ; 2013 ; 11 ; Estudos da Língua(gem) Volume 11 [superseded2] ; 2013 ; journal moved >
+      au < superseded ; 2014 ; 12 ; Estudos da Língua(gem) Volume 12 [superseded2] ; 2014 ; journal moved >
       }
       {
       param[base_url] = http://www.estudosdalinguagem.org/seer/
       param[journal_id] = estudosdalinguagem
 
-      au < superseded ; 2005 ; 1-2 ; Estudos da Língua(gem) Volume 1-2 [superseded] ; 2005 ; journal moved >
-      au < superseded ; 2006 ; 3-4 ; Estudos da Língua(gem) Volume 3-4 [superseded] ; 2006 ; journal moved >
-      au < superseded ; 2007 ; 5 ; Estudos da Língua(gem) Volume 5 [superseded] ; 2007 ; journal moved >
-      au < superseded ; 2008 ; 6 ; Estudos da Língua(gem) Volume 6 [superseded] ; 2008 ; journal moved >
-      au < superseded ; 2009 ; 7 ; Estudos da Língua(gem) Volume 7 [superseded] ; 2009 ; journal moved >
-      au < superseded ; 2010 ; 8 ; Estudos da Língua(gem) Volume 8 [superseded] ; 2010 ; journal moved >
-      au < superseded ; 2011 ; 9 ; Estudos da Língua(gem) Volume 9 [superseded] ; 2011 ; journal moved >
-      au < superseded ; 2012 ; 10 ; Estudos da Língua(gem) Volume 10 [superseded] ; 2012 ; journal moved >
-      au < superseded ; 2013 ; 11 ; Estudos da Língua(gem) Volume 11 [superseded] ; 2013 ; journal moved >
+      au < superseded ; 2005 ; 1-2 ; Estudos da Língua(gem) Volume 1-2 [superseded1] ; 2005 ; journal moved >
+      au < superseded ; 2006 ; 3-4 ; Estudos da Língua(gem) Volume 3-4 [superseded1] ; 2006 ; journal moved >
+      au < superseded ; 2007 ; 5 ; Estudos da Língua(gem) Volume 5 [superseded1] ; 2007 ; journal moved >
+      au < superseded ; 2008 ; 6 ; Estudos da Língua(gem) Volume 6 [superseded1] ; 2008 ; journal moved >
+      au < superseded ; 2009 ; 7 ; Estudos da Língua(gem) Volume 7 [superseded1] ; 2009 ; journal moved >
+      au < superseded ; 2010 ; 8 ; Estudos da Língua(gem) Volume 8 [superseded1] ; 2010 ; journal moved >
+      au < superseded ; 2011 ; 9 ; Estudos da Língua(gem) Volume 9 [superseded1] ; 2011 ; journal moved >
+      au < superseded ; 2012 ; 10 ; Estudos da Língua(gem) Volume 10 [superseded1] ; 2012 ; journal moved >
+      au < superseded ; 2013 ; 11 ; Estudos da Língua(gem) Volume 11 [superseded1] ; 2013 ; journal moved >
       }
   }
 
