@@ -66,6 +66,7 @@
       au < released ; 2013 ; The Analyst Volume 138 ; 138 ; 2013 >
       au < manifest ; 2014 ; The Analyst Volume 139 ; 139 ; 2014 >
       au < manifest ; 2015 ; The Analyst Volume 140 ; 140 ; 2015 >
+      au < expected ; 2016 ; The Analyst Volume 141 ; 141 ; 2016 >
     }
   }
 
@@ -122,6 +123,7 @@
       au < released ; 2013 ; Analytical Methods Volume 5 ; 5 ; 2013 >
       au < manifest ; 2014 ; Analytical Methods Volume 6 ; 6 ; 2014 >
       au < manifest ; 2015 ; Analytical Methods Volume 7 ; 7 ; 2015 >
+      au < expected ; 2016 ; Analytical Methods Volume 8 ; 8 ; 2016 >
     }
   }
 
@@ -255,6 +257,7 @@
       au < released ; 2013 ; CBiomaterials Science Volume 1 ; 1 ; 2013 >
       au < manifest ; 2014 ; CBiomaterials Science Volume 2 ; 2 ; 2014 >
       au < manifest ; 2015 ; CBiomaterials Science Volume 3 ; 3 ; 2015 >
+      au < expected ; 2016 ; CBiomaterials Science Volume 4 ; 4 ; 2016 >
     }
   }
 
@@ -295,6 +298,7 @@
       au < released ; 2013 ; Chemical Communications Volume 49 ; 49 ; 2013 >
       au < manifest ; 2014 ; Chemical Communications Volume 50 ; 50 ; 2014 >
       au < manifest ; 2015 ; Chemical Communications Volume 51 ; 51 ; 2015 >
+      au < expected ; 2016 ; Chemical Communications Volume 52 ; 52 ; 2016 >
     }
   }
 
@@ -342,6 +346,7 @@
       au < testing ; 2013 ; Chemical Society Reviews Volume 42 ; 42 ; 2013 >
       au < manifest ; 2014 ; Chemical Society Reviews Volume 43 ; 43 ; 2014 >
       au < manifest ; 2015 ; Chemical Society Reviews Volume 44 ; 44 ; 2015 >
+      au < expected ; 2016 ; Chemical Society Reviews Volume 45 ; 45 ; 2016 >
     }
   }
 
@@ -443,6 +448,7 @@
       au < released ; 2013 ; CrystEngComm Volume 15 ; 15 ; 2013 >
       au < manifest ; 2014 ; CrystEngComm Volume 16 ; 16 ; 2014 >
       au < manifest ; 2015 ; CrystEngComm Volume 17 ; 17 ; 2015 >
+      au < expected ; 2016 ; CrystEngComm Volume 18 ; 18 ; 2016 >
     }
   }
 
@@ -490,6 +496,7 @@
       au < released ; 2013 ; Dalton Transactions Volume 42 ; 42 ; 2013 >
       au < manifest ; 2014 ; Dalton Transactions Volume 43 ; 43 ; 2014 >
       au < manifest ; 2015 ; Dalton Transactions Volume 44 ; 44 ; 2015 >
+      au < expected ; 2016 ; Dalton Transactions Volume 45 ; 45 ; 2016 >
     }
   }
 
@@ -524,8 +531,8 @@
       au < released ; 2010 ; Energy & Environmental Science Volume 3 ; 3 ; 2010 >
       au < released ; 2011 ; Energy & Environmental Science Volume 4 ; 4 ; 2011 >
       au < manifest ; 2012 ; Energy & Environmental Science Volume 5 ; 5 ; 2012 >
-      au < manifest ; 2013 ; Energy & Environmental Science Volume 6 ; 6 ; 2013 >
-      au < manifest ; 2014 ; Energy & Environmental Science Volume 7 ; 7 ; 2014 >
+      au < testing ; 2013 ; Energy & Environmental Science Volume 6 ; 6 ; 2013 >
+      au < testing ; 2014 ; Energy & Environmental Science Volume 7 ; 7 ; 2014 >
       au < manifest ; 2015 ; Energy & Environmental Science Volume 8 ; 8 ; 2015 >
     }
   }
@@ -608,6 +615,11 @@
       au < manifest ; 2015 ; Faraday Discussions Volume 181 ; 181 ; 2015 >
       au < manifest ; 2015 ; Faraday Discussions Volume 182 ; 182 ; 2015 >
       au < manifest ; 2015 ; Faraday Discussions Volume 183 ; 183 ; 2015 >
+      au < exists ; 2015 ; Faraday Discussions Volume 184 ; 184 ; 2015 >
+      au < exists ; 2015 ; Faraday Discussions Volume 185 ; 185 ; 2015 >
+
+      au < expected ; 2016 ; Faraday Discussions Volume 186 ; 186 ; 2016 >
+      au < expected ; 2016 ; Faraday Discussions Volume 187 ; 187 ; 2016 >
     }
   }
 
@@ -673,7 +685,7 @@
       au < released ; 2011 ; Green Chemistry Volume 13 ; 13 ; 2011 >
       au < manifest ; 2012 ; Green Chemistry Volume 14 ; 14 ; 2012 >
       au < released ; 2013 ; Green Chemistry Volume 15 ; 15 ; 2013 >
-      au < manifest ; 2014 ; Green Chemistry Volume 16 ; 16 ; 2014 >
+      au < testing ; 2014 ; Green Chemistry Volume 16 ; 16 ; 2014 >
       au < manifest ; 2015 ; Green Chemistry Volume 17 ; 17 ; 2015 >
     }
   }
@@ -708,7 +720,7 @@
       au < manifest ; 2011 ; Integrative Biology Volume 3 ; 3 ; 2011 >
       au < manifest ; 2012 ; Integrative Biology Volume 4 ; 4 ; 2012 >
       au < released ; 2013 ; Integrative Biology Volume 5 ; 5 ; 2013 >
-      au < manifest ; 2014 ; Integrative Biology Volume 6 ; 6 ; 2014 >
+      au < testing ; 2014 ; Integrative Biology Volume 6 ; 6 ; 2014 >
       au < manifest ; 2015 ; Integrative Biology Volume 7 ; 7 ; 2015 >
     }
   }
@@ -755,7 +767,7 @@
       au < released ; 2011 ; Journal of Analytical Atomic Spectrometry Volume 26 ; 26 ; 2011 >
       au < released ; 2012 ; Journal of Analytical Atomic Spectrometry Volume 27 ; 27 ; 2012 >
       au < released ; 2013 ; Journal of Analytical Atomic Spectrometry Volume 28 ; 28 ; 2013 >
-      au < manifest ; 2014 ; Journal of Analytical Atomic Spectrometry Volume 29 ; 29 ; 2014 >
+      au < testing ; 2014 ; Journal of Analytical Atomic Spectrometry Volume 29 ; 29 ; 2014 >
       au < manifest ; 2015 ; Journal of Analytical Atomic Spectrometry Volume 30 ; 30 ; 2015 >
     }
   }
@@ -904,7 +916,7 @@
       au < manifest ; 2011 ; Journal of Environmental Monitoring Volume 13 ; 13 ; 2011 >
       au < manifest ; 2012 ; Journal of Environmental Monitoring Volume 14 ; 14 ; 2012 >
       au < released ; 2013 ; Journal of Environmental Monitoring Volume 15 ; 15 ; 2013 >
-      au < manifest ; 2014 ; Journal of Environmental Monitoring Volume 16 ; 16 ; 2014 >
+      au < testing ; 2014 ; Journal of Environmental Monitoring Volume 16 ; 16 ; 2014 >
       au < manifest ; 2015 ; Journal of Environmental Monitoring Volume 17 ; 17 ; 2015 >
     }
   }
@@ -990,7 +1002,7 @@
       au < manifest ; 2011 ; Lab on a Chip Volume 11 ; 11 ; 2011 >
       au < manifest ; 2012 ; Lab on a Chip Volume 12 ; 12 ; 2012 >
       au < released ; 2013 ; Lab on a Chip Volume 13 ; 13 ; 2013 >
-      au < manifest ; 2014 ; Lab on a Chip Volume 14 ; 14 ; 2014 >
+      au < testing ; 2014 ; Lab on a Chip Volume 14 ; 14 ; 2014 >
       au < manifest ; 2015 ; Lab on a Chip Volume 15 ; 15 ; 2015 >
     }
   }
