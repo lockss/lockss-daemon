@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing</string>
+    <string>ready</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,7 +9,24 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>2</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>2</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>2</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -38,7 +55,7 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?v=)?$", url_host(base_url)</string>
       <string>1,"^%s(articles|article_preview)\.php\?id=[0-9]+$", base_url</string>
       <string>1,"^%slib/ajax_srv/article_elements_srv.php\?action=download_pdf&amp;item_id=[0-9]+$", base_url</string>
       <string>1,"^%slib/ajax_srv/generate_pdf.php\?document_id=[0-9]+&amp;(readonly_preview=1)?$", base_url</string>
@@ -47,7 +64,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%sarticles.php\?id=[0-9]+$", base_url</string>
+      <string>"^%slib/ajax_srv/article_elements_srv.php\?action=download_pdf&amp;item_id=[0-9]+$", base_url</string>
     </list>
   </entry>
   <entry>
@@ -81,14 +98,6 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
-  </entry>
-  <entry>
-    <string>au_exclude_urls_from_polls_pattern</string>
-    <string>"^%soai/request\?verb=GetRecord&amp;.+$", base_url</string>
-  </entry>
-  <entry>
-    <string>au_exclude_urls_from_poll_results_pattern</string> 
-    <string>"^%soai/request\?verb=GetRecord&amp;.+$", base_url</string>
   </entry>
   <entry>
     <string>plugin_crawl_seed_factory</string>

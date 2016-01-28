@@ -1,10 +1,10 @@
 /*
- * $Id: DryadArticleIteratorFactory.java 39864 2015-02-18 09:10:24Z thib_gc $
+ * $Id:$
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.pensoft.oai;
 
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
@@ -55,24 +54,23 @@ implements ArticleIteratorFactory,
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url"; 
 
   protected static final String PATTERN_TEMPLATE =
-      "\"^%s\", base_url";
+      "\"^%sarticles.php\\?id=[0-9]+$\", base_url";
+  
+  protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
+	       "articles.php\\?id=([0-9]+)$",
+	       Pattern.CASE_INSENSITIVE);
+
+  //Some are full text HTML and some are abtracts
+  //Abstract = http://zookeys.pensoft.net/articles.php?id=1929
+  //Full Text = http://bdj.pensoft.net/articles.php?id=995
+  protected static final String ABSTRACT_REPLACEMENT = "articles.php\\?id=$1";
+  //http://zookeys.pensoft.net/lib/ajax_srv/article_elements_srv.php?action=download_pdf&item_id=1929
+  protected static final String PDF_REPLACEMENT = "lib/ajax_srv/article_elements_srv\\.php\\?action=download_pdf&item_id=$1";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) 
       throws PluginException {
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
-
-    //final Pattern CONTENT_PATTERN = Pattern.compile(
-    //   "bitstream/([0-9]+/[0-9]+)(/.*\\.pdf)$",
-    //   Pattern.CASE_INSENSITIVE);
-    
-    final Pattern ABSTRACT_PATTERN = Pattern.compile(
-       "articles.php\\?id=([0-9]+)$",
-       Pattern.CASE_INSENSITIVE);
-    //lib/ajax_srv/article_elements_srv.php?action=download_pdf&item_id=1925		
-    final String ABSTRACT_REPLACEMENT = "articles.php\\?id=$1";
-    final String PDF_REPLACEMENT = "lib/ajax_srv/article_elements_srv\\.php\\?action=download_pdf&item_id=$1";
-
 
     builder.setSpec(target,
         ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);

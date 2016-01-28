@@ -1,5 +1,5 @@
 /*
- * $Id: NatureHtmlMetadataExtractorFactory.java 40402 2015-03-10 22:37:41Z alexandraohlson $
+ * $Id:$
  */
 
 /*
@@ -54,10 +54,10 @@ public class PensoftOaiHtmlMetadataExtractorFactory
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
                                String contentType)
       throws PluginException {
-    return new DSpaceHtmlMetadataExtractor();
+    return new PensoftOaiHtmlMetadataExtractor();
   }
 
-  public static class DSpaceHtmlMetadataExtractor
+  public static class PensoftOaiHtmlMetadataExtractor
     extends SimpleHtmlMetaTagMetadataExtractor {
     private static MultiMap tagMap = new MultiValueMap();
     static {
