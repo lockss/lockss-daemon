@@ -18629,7 +18629,22 @@
       au < crawling ; exists ; 2015 ; Jadavpur Journal of International Relations Volume 19 ; 19 ; >
       au < expected ; exists ; 2016 ; Jadavpur Journal of International Relations Volume 20 ; 20 ; >
 
-    }
+  }
+
+  {
+
+    title <
+      name = JDR Clinical & Translational Research ;
+      issn = 2380-0844 ;
+      eissn = 2380-0852 
+    >
+
+      param[base_url] = http://jct.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < expected ; exists ; 2016 ; JDR Clinical & Translational Research Volume 1 ; 1 ; >
+
+  }
 
   {
 
@@ -31005,6 +31020,21 @@
       au < manifest ; exists ; 2016 ; Modern China Volume 42 ; 42 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Molecular Imaging ;
+        eissn = 1536-0121 
+    >
+
+      param[base_url] = http://mix.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2015 ; Molecular Imaging Volume 14 ; 14 ; >
+      au < exists ; exists ; 2016 ; Molecular Imaging Volume 15 ; 15 ; >
 
   }
 
