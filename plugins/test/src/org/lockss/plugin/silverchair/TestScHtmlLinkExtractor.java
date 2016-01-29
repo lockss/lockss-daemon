@@ -136,10 +136,30 @@ public class TestScHtmlLinkExtractor extends LockssTestCase {
                          emitted.add(url);
                        }
                    });
-    System.out.println(emitted);
+    //System.out.println(emitted);
     assertEquals(2, emitted.size()); // 2 x with "articleid"
     assertContains(emitted, baseUrl + "downloadCitation.aspx?format=ris&articleid=1234567");
     assertContains(emitted, baseUrl + "downloadCitation.aspx?articleid=1234567");
+    
+    //Now do the same thing but using a SPIE proceeding article...different srcUrl
+    http://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=1224845
+    srcUrl = baseUrl + "proceeding.aspx?articleid=1234567";
+    final List<String> newemitted = new ArrayList<>();
+    le.extractUrls(null,
+                   new StringInputStream(input),
+                   Constants.ENCODING_UTF_8,
+                   srcUrl,
+                   new LinkExtractor.Callback() {
+                       @Override
+                       public void foundLink(String url) {
+                         newemitted.add(url);
+                       }
+                   });
+    //System.out.println(newemitted);
+    assertEquals(2, emitted.size()); // 2 x with "articleid"
+    assertContains(emitted, baseUrl + "downloadCitation.aspx?format=ris&articleid=1234567");
+    assertContains(emitted, baseUrl + "downloadCitation.aspx?articleid=1234567");
+    
   }
 
   public void testPdfLink() throws Exception {

@@ -46,7 +46,7 @@ public class ScHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
   private static final Logger logger = Logger.getLogger(ScHtmlLinkExtractor.class);
   
   protected static final Pattern PATTERN_ARTICLE =
-      Pattern.compile("/article\\.aspx\\?(articleid=[^&]+)$",
+      Pattern.compile("/(article|proceeding)\\.aspx\\?(articleid=[^&]+)$",
                       Pattern.CASE_INSENSITIVE);
   
   protected static final Pattern PATTERN_CITATION =
@@ -99,7 +99,7 @@ public class ScHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
         Matcher srcUrlMat = PATTERN_ARTICLE.matcher(srcUrl);
         if (srcUrlMat.find()) {
           // Derive article ID
-          String articleIdPair = srcUrlMat.group(1);
+          String articleIdPair = srcUrlMat.group(2);
           // Generate correct citation URL
           String url = null;
           if (formatPair == null) {
