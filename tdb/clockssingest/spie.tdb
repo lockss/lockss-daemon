@@ -42,7 +42,7 @@
     param[base_url] = http://astronomicaltelescopes.spiedigitallibrary.org/
     param[resource_id] = 166
 
-    au < crawling ; exists ; 2015 ; Journal of Astronomical Telescopes, Instruments, and Systems Volume 1 ; 2015 >
+    au < crawling ; exists ; 2015 ; Journal of Astronomical Telescopes, Instruments, and Systems Volume 1 ; 2015 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -56,26 +56,26 @@
     param[base_url] = http://biomedicaloptics.spiedigitallibrary.org/
     param[resource_id] = 93
 
-    au < manifest ; exists ; 1996 ; Journal of Biomedical Optics Volume 1 ; 1996 >
-    au < manifest ; exists ; 1997 ; Journal of Biomedical Optics Volume 2 ; 1997 >
-    au < manifest ; exists ; 1998 ; Journal of Biomedical Optics Volume 3 ; 1998 >
-    au < manifest ; exists ; 1999 ; Journal of Biomedical Optics Volume 4 ; 1999 >
-    au < manifest ; exists ; 2000 ; Journal of Biomedical Optics Volume 5 ; 2000 >
-    au < manifest ; exists ; 2001 ; Journal of Biomedical Optics Volume 6 ; 2001 >
-    au < manifest ; exists ; 2002 ; Journal of Biomedical Optics Volume 7 ; 2002 >
-    au < manifest ; exists ; 2003 ; Journal of Biomedical Optics Volume 8 ; 2003 >
-    au < manifest ; exists ; 2004 ; Journal of Biomedical Optics Volume 9 ; 2004 >
-    au < manifest ; exists ; 2005 ; Journal of Biomedical Optics Volume 10 ; 2005 >
-    au < manifest ; exists ; 2006 ; Journal of Biomedical Optics Volume 11 ; 2006 >
-    au < manifest ; exists ; 2007 ; Journal of Biomedical Optics Volume 12 ; 2007 >
-    au < crawling ; exists ; 2008 ; Journal of Biomedical Optics Volume 13 ; 2008 >
-    au < ready ; exists ; 2009 ; Journal of Biomedical Optics Volume 14 ; 2009 >
-    au < ready ; exists ; 2010 ; Journal of Biomedical Optics Volume 15 ; 2010 >
-    au < ready ; exists ; 2011 ; Journal of Biomedical Optics Volume 16 ; 2011 >
-    au < crawling ; exists ; 2012 ; Journal of Biomedical Optics Volume 17 ; 2012 >
-    au < crawling ; exists ; 2013 ; Journal of Biomedical Optics Volume 18 ; 2013 >
-    au < crawling ; exists ; 2014 ; Journal of Biomedical Optics Volume 19 ; 2014 >
-    au < testing ; exists ; 2015 ; Journal of Biomedical Optics Volume 20 ; 2015 >
+    au < manifest ; exists ; 1996 ; Journal of Biomedical Optics Volume 1 ; 1996 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 1997 ; Journal of Biomedical Optics Volume 2 ; 1997 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 1998 ; Journal of Biomedical Optics Volume 3 ; 1998 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 1999 ; Journal of Biomedical Optics Volume 4 ; 1999 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 2000 ; Journal of Biomedical Optics Volume 5 ; 2000 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 2001 ; Journal of Biomedical Optics Volume 6 ; 2001 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 2002 ; Journal of Biomedical Optics Volume 7 ; 2002 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 2003 ; Journal of Biomedical Optics Volume 8 ; 2003 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 2004 ; Journal of Biomedical Optics Volume 9 ; 2004 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 2005 ; Journal of Biomedical Optics Volume 10 ; 2005 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 2006 ; Journal of Biomedical Optics Volume 11 ; 2006 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 2007 ; Journal of Biomedical Optics Volume 12 ; 2007 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2008 ; Journal of Biomedical Optics Volume 13 ; 2008 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 2009 ; Journal of Biomedical Optics Volume 14 ; 2009 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 2010 ; Journal of Biomedical Optics Volume 15 ; 2010 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 2011 ; Journal of Biomedical Optics Volume 16 ; 2011 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2012 ; Journal of Biomedical Optics Volume 17 ; 2012 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2013 ; Journal of Biomedical Optics Volume 18 ; 2013 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; Journal of Biomedical Optics Volume 19 ; 2014 ; reingest2.clockss.org:8085 >
+    au < testing ; exists ; 2015 ; Journal of Biomedical Optics Volume 20 ; 2015 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -127,8 +127,8 @@
     param[base_url] = http://medicalimaging.spiedigitallibrary.org/
     param[resource_id] = 165
 
-    au < crawling ; exists ; 2014 ; Journal of Medical Imaging Volume 1 ; 2014 >
-    au < crawling ; exists ; 2015 ; Journal of Medical Imaging Volume 2 ; 2015 >
+    au < crawling ; exists ; 2014 ; Journal of Medical Imaging Volume 1 ; 2014 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2015 ; Journal of Medical Imaging Volume 2 ; 2015 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -142,20 +142,20 @@
     param[base_url] = http://nanolithography.spiedigitallibrary.org/
     param[resource_id] = 95
 
-    au < manifest ; exists ; 2002 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 1 ; 2002 >
-    au < manifest ; exists ; 2003 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 2 ; 2003 >
-    au < manifest ; exists ; 2004 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 3 ; 2004 >
-    au < manifest ; exists ; 2005 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 4 ; 2005 >
-    au < manifest ; exists ; 2006 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 5 ; 2006 >
-    au < manifest ; exists ; 2007 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 6 ; 2007 >
-    au < ready ; exists ; 2008 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 7 ; 2008 >
-    au < ready ; exists ; 2009 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 8 ; 2009 >
-    au < testing ; exists ; 2010 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 9 ; 2010 >
-    au < testing ; exists ; 2011 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 10 ; 2011 >
-    au < crawling ; exists ; 2012 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 11 ; 2012 >
-    au < crawling ; exists ; 2013 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 12 ; 2013 >
-    au < crawling ; exists ; 2014 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 13 ; 2014 >
-    au < crawling ; exists ; 2015 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 14 ; 2015 >
+    au < manifest ; exists ; 2002 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 1 ; 2002 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 2003 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 2 ; 2003 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 2004 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 3 ; 2004 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 2005 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 4 ; 2005 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 2006 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 5 ; 2006 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 2007 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 6 ; 2007 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 2008 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 7 ; 2008 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 2009 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 8 ; 2009 ; reingest1.clockss.org:8082 >
+    au < testing ; exists ; 2010 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 9 ; 2010 ; reingest2.clockss.org:8085 >
+    au < testing ; exists ; 2011 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 10 ; 2011 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2012 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 11 ; 2012 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2013 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 12 ; 2013 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 13 ; 2014 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2015 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 14 ; 2015 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -168,15 +168,15 @@
     param[base_url] = http://nanophotonics.spiedigitallibrary.org/
     param[resource_id] = 97
 
-    au < crawling ; exists ; 2007 ; Journal of Nanophotonics Volume 1 ; 2007 >
-    au < ready ; exists ; 2008 ; Journal of Nanophotonics Volume 2 ; 2008 >
-    au < crawling ; exists ; 2009 ; Journal of Nanophotonics Volume 3 ; 2009 >
-    au < testing ; exists ; 2010 ; Journal of Nanophotonics Volume 4 ; 2010 >
-    au < testing ; exists ; 2011 ; Journal of Nanophotonics Volume 5 ; 2011 >
-    au < crawling ; exists ; 2012 ; Journal of Nanophotonics Volume 6 ; 2012 >
-    au < crawling ; exists ; 2013 ; Journal of Nanophotonics Volume 7 ; 2013 >
-    au < crawling ; exists ; 2014 ; Journal of Nanophotonics Volume 8 ; 2014 >
-    au < crawling ; exists ; 2015 ; Journal of Nanophotonics Volume 9 ; 2015 >
+    au < crawling ; exists ; 2007 ; Journal of Nanophotonics Volume 1 ; 2007 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 2008 ; Journal of Nanophotonics Volume 2 ; 2008 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2009 ; Journal of Nanophotonics Volume 3 ; 2009 ; reingest1.clockss.org:8082 >
+    au < testing ; exists ; 2010 ; Journal of Nanophotonics Volume 4 ; 2010 ; reingest2.clockss.org:8085 >
+    au < testing ; exists ; 2011 ; Journal of Nanophotonics Volume 5 ; 2011 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2012 ; Journal of Nanophotonics Volume 6 ; 2012 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2013 ; Journal of Nanophotonics Volume 7 ; 2013 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; Journal of Nanophotonics Volume 8 ; 2014 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2015 ; Journal of Nanophotonics Volume 9 ; 2015 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -189,11 +189,11 @@
     param[base_url] = http://photonicsforenergy.spiedigitallibrary.org/
     param[resource_id] = 98
 
-    au < crawling ; exists ; 2011 ; Journal of Photonics for Energy Volume 1 ; 2011 >
-    au < crawling ; exists ; 2012 ; Journal of Photonics for Energy Volume 2 ; 2012 >
-    au < crawling ; exists ; 2013 ; Journal of Photonics for Energy Volume 3 ; 2013 >
-    au < crawling ; exists ; 2014 ; Journal of Photonics for Energy Volume 4 ; 2014 >
-    au < crawling ; exists ; 2015 ; Journal of Photonics for Energy Volume 5 ; 2015 >
+    au < crawling ; exists ; 2011 ; Journal of Photonics for Energy Volume 1 ; 2011 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2012 ; Journal of Photonics for Energy Volume 2 ; 2012 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2013 ; Journal of Photonics for Energy Volume 3 ; 2013 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; Journal of Photonics for Energy Volume 4 ; 2014 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2015 ; Journal of Photonics for Energy Volume 5 ; 2015 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -207,8 +207,8 @@
     param[base_url] = http://neurophotonics.spiedigitallibrary.org/
     param[resource_id] = 169
 
-    au < crawling ; exists ; 2014 ; Neurophotonics Volume 1 ; 2014 >
-    au < crawling ; exists ; 2015 ; Neurophotonics Volume 2 ; 2015 >
+    au < crawling ; exists ; 2014 ; Neurophotonics Volume 1 ; 2014 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2015 ; Neurophotonics Volume 2 ; 2015 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -222,86 +222,61 @@
     param[base_url] = http://opticalengineering.spiedigitallibrary.org/
     param[resource_id] = 92
 
-    au < manifest ; exists ; 1962 ; Optical Engineering Volume 1 ; 1962 >
-    au < manifest ; exists ; 1963 ; Optical Engineering Volume 1-2 ; 1963 >
-    au < manifest ; exists ; 1964 ; Optical Engineering Volume 2-3 ; 1964 >
-    au < manifest ; exists ; 1965 ; Optical Engineering Volume 3-4 ; 1965 >
-    au < manifest ; exists ; 1966 ; Optical Engineering Volume 4-5 ; 1966 >
-    au < manifest ; exists ; 1967 ; Optical Engineering Volume 5-6 ; 1967 >
-    au < manifest ; exists ; 1968 ; Optical Engineering Volume 6-7 ; 1968 >
-    au < manifest ; exists ; 1969 ; Optical Engineering Volume 7-8 ; 1969 >
-    au < manifest ; exists ; 1970 ; Optical Engineering Volume 8-9 ; 1970 >
-    au < manifest ; exists ; 1971 ; Optical Engineering Volume 9-10 ; 1971 >
-    au < manifest ; exists ; 1972 ; Optical Engineering Volume 11 ; 1972 >
-    au < manifest ; exists ; 1973 ; Optical Engineering Volume 12 ; 1973 >
-    au < manifest ; exists ; 1974 ; Optical Engineering Volume 13 ; 1974 >
-    au < manifest ; exists ; 1975 ; Optical Engineering Volume 14 ; 1975 >
-    au < manifest ; exists ; 1976 ; Optical Engineering Volume 15 ; 1976 >
-    au < manifest ; exists ; 1977 ; Optical Engineering Volume 16 ; 1977 >
-    au < manifest ; exists ; 1978 ; Optical Engineering Volume 17 ; 1978 >
-    au < manifest ; exists ; 1979 ; Optical Engineering Volume 18 ; 1979 >
-    au < manifest ; exists ; 1980 ; Optical Engineering Volume 19 ; 1980 >
-    au < manifest ; exists ; 1981 ; Optical Engineering Volume 20 ; 1981 >
-    au < manifest ; exists ; 1982 ; Optical Engineering Volume 21 ; 1982 >
-    au < manifest ; exists ; 1983 ; Optical Engineering Volume 22 ; 1983 >
-    au < manifest ; exists ; 1984 ; Optical Engineering Volume 23 ; 1984 >
-    au < manifest ; exists ; 1985 ; Optical Engineering Volume 24 ; 1985 >
-    au < manifest ; exists ; 1986 ; Optical Engineering Volume 25 ; 1986 >
-    au < manifest ; exists ; 1987 ; Optical Engineering Volume 26 ; 1987 >
-    au < manifest ; exists ; 1988 ; Optical Engineering Volume 27 ; 1988 >
-    au < manifest ; exists ; 1989 ; Optical Engineering Volume 28 ; 1989 >
-    au < manifest ; exists ; 1990 ; Optical Engineering Volume 29 ; 1990 >
-    au < manifest ; exists ; 1991 ; Optical Engineering Volume 30 ; 1991 >
-    au < manifest ; exists ; 1992 ; Optical Engineering Volume 31 ; 1992 >
-    au < manifest ; exists ; 1993 ; Optical Engineering Volume 32 ; 1993 >
-    au < manifest ; exists ; 1994 ; Optical Engineering Volume 33 ; 1994 >
-    au < manifest ; exists ; 1995 ; Optical Engineering Volume 34 ; 1995 >
-    au < manifest ; exists ; 1996 ; Optical Engineering Volume 35 ; 1996 >
-    au < manifest ; exists ; 1997 ; Optical Engineering Volume 36 ; 1997 >
-    au < manifest ; exists ; 1998 ; Optical Engineering Volume 37 ; 1998 >
-    au < manifest ; exists ; 1999 ; Optical Engineering Volume 38 ; 1999 >
-    au < manifest ; exists ; 2000 ; Optical Engineering Volume 39 ; 2000 >
-    au < manifest ; exists ; 2001 ; Optical Engineering Volume 40 ; 2001 >
-    au < manifest ; exists ; 2002 ; Optical Engineering Volume 41 ; 2002 >
-    au < manifest ; exists ; 2003 ; Optical Engineering Volume 42 ; 2003 >
-    au < manifest ; exists ; 2004 ; Optical Engineering Volume 43 ; 2004 >
-    au < manifest ; exists ; 2005 ; Optical Engineering Volume 44 ; 2005 >
-    au < manifest ; exists ; 2006 ; Optical Engineering Volume 45 ; 2006 >
-    au < manifest ; exists ; 2007 ; Optical Engineering Volume 46 ; 2007 >
-    au < ready ; exists ; 2008 ; Optical Engineering Volume 47 ; 2008 >
-    au < testing ; exists ; 2009 ; Optical Engineering Volume 48 ; 2009 >
-    au < testing ; exists ; 2010 ; Optical Engineering Volume 49 ; 2010 >
-    au < testing ; exists ; 2011 ; Optical Engineering Volume 50 ; 2011 >
-    au < crawling ; exists ; 2012 ; Optical Engineering Volume 51 ; 2012 >
-    au < crawling ; exists ; 2013 ; Optical Engineering Volume 52 ; 2013 >
-    au < crawling ; exists ; 2014 ; Optical Engineering Volume 53 ; 2014 >
-    au < crawling ; exists ; 2015 ; Optical Engineering Volume 54 ; 2015 >
+    au < manifest ; exists ; 1962 ; Optical Engineering Volume 1 ; 1962 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 1963 ; Optical Engineering Volume 1-2 ; 1963 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 1964 ; Optical Engineering Volume 2-3 ; 1964 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 1965 ; Optical Engineering Volume 3-4 ; 1965 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 1966 ; Optical Engineering Volume 4-5 ; 1966 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 1967 ; Optical Engineering Volume 5-6 ; 1967 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 1968 ; Optical Engineering Volume 6-7 ; 1968 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 1969 ; Optical Engineering Volume 7-8 ; 1969 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 1970 ; Optical Engineering Volume 8-9 ; 1970 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 1971 ; Optical Engineering Volume 9-10 ; 1971 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 1972 ; Optical Engineering Volume 11 ; 1972 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 1973 ; Optical Engineering Volume 12 ; 1973 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 1974 ; Optical Engineering Volume 13 ; 1974 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 1975 ; Optical Engineering Volume 14 ; 1975 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 1976 ; Optical Engineering Volume 15 ; 1976 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 1977 ; Optical Engineering Volume 16 ; 1977 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 1978 ; Optical Engineering Volume 17 ; 1978 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 1979 ; Optical Engineering Volume 18 ; 1979 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 1980 ; Optical Engineering Volume 19 ; 1980 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 1981 ; Optical Engineering Volume 20 ; 1981 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 1982 ; Optical Engineering Volume 21 ; 1982 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 1983 ; Optical Engineering Volume 22 ; 1983 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 1984 ; Optical Engineering Volume 23 ; 1984 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 1985 ; Optical Engineering Volume 24 ; 1985 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 1986 ; Optical Engineering Volume 25 ; 1986 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 1987 ; Optical Engineering Volume 26 ; 1987 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 1988 ; Optical Engineering Volume 27 ; 1988 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 1989 ; Optical Engineering Volume 28 ; 1989 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 1990 ; Optical Engineering Volume 29 ; 1990 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 1991 ; Optical Engineering Volume 30 ; 1991 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 1992 ; Optical Engineering Volume 31 ; 1992 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 1993 ; Optical Engineering Volume 32 ; 1993 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 1994 ; Optical Engineering Volume 33 ; 1994 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 1995 ; Optical Engineering Volume 34 ; 1995 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 1996 ; Optical Engineering Volume 35 ; 1996 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 1997 ; Optical Engineering Volume 36 ; 1997 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 1998 ; Optical Engineering Volume 37 ; 1998 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 1999 ; Optical Engineering Volume 38 ; 1999 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 2000 ; Optical Engineering Volume 39 ; 2000 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 2001 ; Optical Engineering Volume 40 ; 2001 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 2002 ; Optical Engineering Volume 41 ; 2002 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 2003 ; Optical Engineering Volume 42 ; 2003 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 2004 ; Optical Engineering Volume 43 ; 2004 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 2005 ; Optical Engineering Volume 44 ; 2005 ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 2006 ; Optical Engineering Volume 45 ; 2006 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 2007 ; Optical Engineering Volume 46 ; 2007 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 2008 ; Optical Engineering Volume 47 ; 2008 ; reingest2.clockss.org:8085 >
+    au < testing ; exists ; 2009 ; Optical Engineering Volume 48 ; 2009 ; reingest1.clockss.org:8082 >
+    au < testing ; exists ; 2010 ; Optical Engineering Volume 49 ; 2010 ; reingest2.clockss.org:8085 >
+    au < testing ; exists ; 2011 ; Optical Engineering Volume 50 ; 2011 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2012 ; Optical Engineering Volume 51 ; 2012 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2013 ; Optical Engineering Volume 52 ; 2013 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; Optical Engineering Volume 53 ; 2014 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2015 ; Optical Engineering Volume 54 ; 2015 ; reingest1.clockss.org:8082 >
 
-    }
-
-    {
-    title <
-      name = SPIE Letters ;
-      eissn = 1948-7541
-    >
-
-    param[base_url] =
-
-    }
-
-    {
-    title <
-      name = SPIE Reviews ;
-      eissn = 1946-3251
-    >
-
-    param[base_url] = http://reviews.spiedigitallibrary.org/
-    plugin = needs.plugin
-    comment[resource_id] = no resource_id
-    comment[access] = subscription & permission needed
-
-    au < exists ; exists ; 2010 ; SPIE Reviews Volume 1 ; 2010 >
-    au < exists ; exists ; 2011 ; SPIE Reviews Volume 2 ; 2011 >
     }
 
 }
