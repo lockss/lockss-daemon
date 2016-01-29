@@ -15,63 +15,63 @@
     >
     
     plugin = org.lockss.plugin.silverchair.ClockssSilverchairProceedingsPlugin
-    implicit < status ; status2 ; year ; name ; param[year] >
+    implicit < status ; status2 ; year ; name ; param[year] ; hidden[proxy] >
     param[base_url] = http://proceedings.spiedigitallibrary.org/
 
-    au < manifest ; exists ; 1963 ; SPIE Proceedings 1963 ; 1963 >
-    au < manifest ; exists ; 1964 ; SPIE Proceedings 1964 ; 1964 >
-    au < manifest ; exists ; 1965 ; SPIE Proceedings 1965 ; 1965 >
-    au < manifest ; exists ; 1966 ; SPIE Proceedings 1966 ; 1966 >
-    au < manifest ; exists ; 1967 ; SPIE Proceedings 1967 ; 1967 >
-    au < manifest ; exists ; 1968 ; SPIE Proceedings 1968 ; 1968 >
-    au < manifest ; exists ; 1969 ; SPIE Proceedings 1969 ; 1969 >
-    au < manifest ; exists ; 1970 ; SPIE Proceedings 1970 ; 1970 >
-    au < manifest ; exists ; 1971 ; SPIE Proceedings 1971 ; 1971 >
-    au < manifest ; exists ; 1972 ; SPIE Proceedings 1972 ; 1972 >
-    au < manifest ; exists ; 1973 ; SPIE Proceedings 1973 ; 1973 >
-    au < manifest ; exists ; 1974 ; SPIE Proceedings 1974 ; 1974 >
-    au < manifest ; exists ; 1975 ; SPIE Proceedings 1975 ; 1975 >
-    au < manifest ; exists ; 1976 ; SPIE Proceedings 1976 ; 1976 >
-    au < manifest ; exists ; 1977 ; SPIE Proceedings 1977 ; 1977 >
-    au < manifest ; exists ; 1978 ; SPIE Proceedings 1978 ; 1978 >
-    au < manifest ; exists ; 1979 ; SPIE Proceedings 1979 ; 1979 >
-    au < manifest ; exists ; 1980 ; SPIE Proceedings 1980 ; 1980 >
-    au < manifest ; exists ; 1981 ; SPIE Proceedings 1981 ; 1981 >
-    au < manifest ; exists ; 1982 ; SPIE Proceedings 1982 ; 1982 >
-    au < manifest ; exists ; 1983 ; SPIE Proceedings 1983 ; 1983 >
-    au < manifest ; exists ; 1984 ; SPIE Proceedings 1984 ; 1984 >
-    au < manifest ; exists ; 1985 ; SPIE Proceedings 1985 ; 1985 >
-    au < manifest ; exists ; 1986 ; SPIE Proceedings 1986 ; 1986 >
-    au < manifest ; exists ; 1987 ; SPIE Proceedings 1987 ; 1987 >
-    au < manifest ; exists ; 1988 ; SPIE Proceedings 1988 ; 1988 >
-    au < manifest ; exists ; 1989 ; SPIE Proceedings 1989 ; 1989 >
-    au < manifest ; exists ; 1990 ; SPIE Proceedings 1990 ; 1990 >
-    au < manifest ; exists ; 1991 ; SPIE Proceedings 1991 ; 1991 >
-    au < manifest ; exists ; 1992 ; SPIE Proceedings 1992 ; 1992 >
-    au < manifest ; exists ; 1993 ; SPIE Proceedings 1993 ; 1993 >
-    au < manifest ; exists ; 1994 ; SPIE Proceedings 1994 ; 1994 >
-    au < manifest ; exists ; 1995 ; SPIE Proceedings 1995 ; 1995 >
-    au < manifest ; exists ; 1996 ; SPIE Proceedings 1996 ; 1996 >
-    au < manifest ; exists ; 1997 ; SPIE Proceedings 1997 ; 1997 >
-    au < manifest ; exists ; 1998 ; SPIE Proceedings 1998 ; 1998 >
-    au < manifest ; exists ; 1999 ; SPIE Proceedings 1999 ; 1999 >
-    au < manifest ; exists ; 2000 ; SPIE Proceedings 2000 ; 2000 >
-    au < manifest ; exists ; 2001 ; SPIE Proceedings 2001 ; 2001 >
-    au < manifest ; exists ; 2002 ; SPIE Proceedings 2002 ; 2002 >
-    au < manifest ; exists ; 2003 ; SPIE Proceedings 2003 ; 2003 >
-    au < manifest ; exists ; 2004 ; SPIE Proceedings 2004 ; 2004 >
-    au < manifest ; exists ; 2005 ; SPIE Proceedings 2005 ; 2005 >
-    au < manifest ; exists ; 2006 ; SPIE Proceedings 2006 ; 2006 >
-    au < manifest ; exists ; 2007 ; SPIE Proceedings 2007 ; 2007 >
-    au < manifest ; exists ; 2008 ; SPIE Proceedings 2008 ; 2008 >
-    au < manifest ; exists ; 2009 ; SPIE Proceedings 2009 ; 2009 >
-    au < manifest ; exists ; 2010 ; SPIE Proceedings 2010 ; 2010 >
-    au < manifest ; exists ; 2011 ; SPIE Proceedings 2011 ; 2011 >
-    au < manifest ; exists ; 2012 ; SPIE Proceedings 2012 ; 2012 >
-    au < manifest ; exists ; 2013 ; SPIE Proceedings 2013 ; 2013 >
-    au < manifest ; exists ; 2014 ; SPIE Proceedings 2014 ; 2014 >
-    au < manifest ; exists ; 2015 ; SPIE Proceedings 2015 ; 2015 >
-    au < expected ; exists ; 2016 ; SPIE Proceedings 2016 ; 2016 >
+    au < ready ; exists ; 1963 ; SPIE Proceedings 1963 ; 1963 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 1964 ; SPIE Proceedings 1964 ; 1964 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 1965 ; SPIE Proceedings 1965 ; 1965 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 1966 ; SPIE Proceedings 1966 ; 1966 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 1967 ; SPIE Proceedings 1967 ; 1967 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 1968 ; SPIE Proceedings 1968 ; 1968 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 1969 ; SPIE Proceedings 1969 ; 1969 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 1970 ; SPIE Proceedings 1970 ; 1970 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 1971 ; SPIE Proceedings 1971 ; 1971 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 1972 ; SPIE Proceedings 1972 ; 1972 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 1973 ; SPIE Proceedings 1973 ; 1973 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 1974 ; SPIE Proceedings 1974 ; 1974 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 1975 ; SPIE Proceedings 1975 ; 1975 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 1976 ; SPIE Proceedings 1976 ; 1976 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 1977 ; SPIE Proceedings 1977 ; 1977 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 1978 ; SPIE Proceedings 1978 ; 1978 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 1979 ; SPIE Proceedings 1979 ; 1979 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 1980 ; SPIE Proceedings 1980 ; 1980 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 1981 ; SPIE Proceedings 1981 ; 1981 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 1982 ; SPIE Proceedings 1982 ; 1982 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 1983 ; SPIE Proceedings 1983 ; 1983 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 1984 ; SPIE Proceedings 1984 ; 1984 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 1985 ; SPIE Proceedings 1985 ; 1985 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 1986 ; SPIE Proceedings 1986 ; 1986 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 1987 ; SPIE Proceedings 1987 ; 1987 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 1988 ; SPIE Proceedings 1988 ; 1988 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 1989 ; SPIE Proceedings 1989 ; 1989 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 1990 ; SPIE Proceedings 1990 ; 1990 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 1991 ; SPIE Proceedings 1991 ; 1991 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 1992 ; SPIE Proceedings 1992 ; 1992 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 1993 ; SPIE Proceedings 1993 ; 1993 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 1994 ; SPIE Proceedings 1994 ; 1994 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 1995 ; SPIE Proceedings 1995 ; 1995 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 1996 ; SPIE Proceedings 1996 ; 1996 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 1997 ; SPIE Proceedings 1997 ; 1997 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 1998 ; SPIE Proceedings 1998 ; 1998 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 1999 ; SPIE Proceedings 1999 ; 1999 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 2000 ; SPIE Proceedings 2000 ; 2000 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 2001 ; SPIE Proceedings 2001 ; 2001 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 2002 ; SPIE Proceedings 2002 ; 2002 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 2003 ; SPIE Proceedings 2003 ; 2003 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 2004 ; SPIE Proceedings 2004 ; 2004 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 2005 ; SPIE Proceedings 2005 ; 2005 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 2006 ; SPIE Proceedings 2006 ; 2006 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 2007 ; SPIE Proceedings 2007 ; 2007 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 2008 ; SPIE Proceedings 2008 ; 2008 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 2009 ; SPIE Proceedings 2009 ; 2009 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 2010 ; SPIE Proceedings 2010 ; 2010 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 2011 ; SPIE Proceedings 2011 ; 2011 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 2012 ; SPIE Proceedings 2012 ; 2012 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 2013 ; SPIE Proceedings 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < ready ; exists ; 2014 ; SPIE Proceedings 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < ready ; exists ; 2015 ; SPIE Proceedings 2015 ; 2015 ; reingest1.clockss.org:8082 >
+    au < expected ; exists ; 2016 ; SPIE Proceedings 2016 ; 2016 ; >
   
   }
  
