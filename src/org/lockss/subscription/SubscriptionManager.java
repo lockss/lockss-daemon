@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -614,6 +614,10 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       // name is journal title
       publicationSeq =
 	  mdManager.findJournal(conn, publisherSeq, pIssn, eIssn, name);
+    } else if (MetadataField.PUBLICATION_TYPE_PROCEEDINGS.equals(pubType)) {
+      // Name is proceedings publication title.
+      publicationSeq =
+	  mdManager.findProceedings(conn, publisherSeq, pIssn, eIssn, name);
     }
     
     if (log.isDebug3())
@@ -934,7 +938,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    */
   private boolean isSerialPublicationType(String pubType) {
     return (MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(pubType) ||
-	MetadataField.PUBLICATION_TYPE_JOURNAL.equals(pubType));
+	MetadataField.PUBLICATION_TYPE_JOURNAL.equals(pubType) ||
+	MetadataField.PUBLICATION_TYPE_PROCEEDINGS.equals(pubType));
   }
 
   /**
@@ -1067,6 +1072,9 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
             pIssn, eIssn, publicationName, firstProprietaryId);
       } else if (MetadataField.PUBLICATION_TYPE_JOURNAL.equals(pubType)) {
         publicationSeq = mdManager.findOrCreateJournal(conn, publisherSeq,  
+            pIssn, eIssn, publicationName, firstProprietaryId);
+      } else if (MetadataField.PUBLICATION_TYPE_PROCEEDINGS.equals(pubType)) {
+        publicationSeq = mdManager.findOrCreateProceedings(conn, publisherSeq,  
             pIssn, eIssn, publicationName, firstProprietaryId);
       }
 
@@ -2338,6 +2346,10 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       // Yes: Find it or create it.
       publicationSeq = mdManager.findOrCreateJournal(conn,publisherSeq, pIssn,
 	  eIssn, publicationName, firstProprietaryId);
+    } else if (MetadataField.PUBLICATION_TYPE_PROCEEDINGS.equals(pubType)) {
+      // Yes: Find it or create it.
+      publicationSeq = mdManager.findOrCreateProceedings(conn,publisherSeq,
+	  pIssn, eIssn, publicationName, firstProprietaryId);
     }
 
     if (log.isDebug3())

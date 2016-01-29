@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -140,8 +140,9 @@ public class CounterReportsRequestAggregator {
       + " and " + "u." + MD_ITEM_SEQ_COLUMN + " = " + "m." + MD_ITEM_SEQ_COLUMN
       + " and " + "m." + MD_ITEM_TYPE_SEQ_COLUMN + " = "
       + "t." + MD_ITEM_TYPE_SEQ_COLUMN
-      + " and " + "t." + TYPE_NAME_COLUMN + " = '"
-      + MD_ITEM_TYPE_JOURNAL_ARTICLE + "'"
+      + " and " + "(t." + TYPE_NAME_COLUMN + " = '"
+      + MD_ITEM_TYPE_JOURNAL_ARTICLE + "' or t." + TYPE_NAME_COLUMN + " = '"
+      + MD_ITEM_TYPE_PROCEEDINGS_ARTICLE + "')"
       + " and " + "m." + PARENT_SEQ_COLUMN + " = " + "p." + MD_ITEM_SEQ_COLUMN
       + " and " + "p." + PUBLICATION_SEQ_COLUMN + " = ?"
       + " and " + "r." + REQUEST_YEAR_COLUMN + " = ?"
@@ -162,8 +163,9 @@ public class CounterReportsRequestAggregator {
       + " and " + "u." + MD_ITEM_SEQ_COLUMN + " = " + "m." + MD_ITEM_SEQ_COLUMN
       + " and " + "m." + MD_ITEM_TYPE_SEQ_COLUMN + " = "
       + "t." + MD_ITEM_TYPE_SEQ_COLUMN
-      + " and " + "t." + TYPE_NAME_COLUMN + " = '"
-      + MD_ITEM_TYPE_JOURNAL_ARTICLE + "'"
+      + " and " + "(t." + TYPE_NAME_COLUMN + " = '"
+      + MD_ITEM_TYPE_JOURNAL_ARTICLE + "' or t." + TYPE_NAME_COLUMN + " = '"
+      + MD_ITEM_TYPE_PROCEEDINGS_ARTICLE + "')"
       + " and " + "m." + PARENT_SEQ_COLUMN + " = " + "p." + MD_ITEM_SEQ_COLUMN
       + " and " + "p." + PUBLICATION_SEQ_COLUMN + " = ?"
       + " and " + "r." + REQUEST_YEAR_COLUMN + " = ?"
@@ -185,8 +187,9 @@ public class CounterReportsRequestAggregator {
       + " and " + "u." + MD_ITEM_SEQ_COLUMN + " = " + "m." + MD_ITEM_SEQ_COLUMN
       + " and " + "m." + MD_ITEM_TYPE_SEQ_COLUMN + " = "
       + "t." + MD_ITEM_TYPE_SEQ_COLUMN
-      + " and " + "t." + TYPE_NAME_COLUMN + " = '"
-      + MD_ITEM_TYPE_JOURNAL_ARTICLE + "'"
+      + " and " + "(t." + TYPE_NAME_COLUMN + " = '"
+      + MD_ITEM_TYPE_JOURNAL_ARTICLE + "' or t." + TYPE_NAME_COLUMN + " = '"
+      + MD_ITEM_TYPE_PROCEEDINGS_ARTICLE + "')"
       + " and " + "m." + PARENT_SEQ_COLUMN + " = " + "p." + MD_ITEM_SEQ_COLUMN
       + " and " + "p." + PUBLICATION_SEQ_COLUMN + " = ?"
       + " and " + "r." + REQUEST_YEAR_COLUMN + " = ?"
@@ -231,8 +234,9 @@ public class CounterReportsRequestAggregator {
       + " and " + "u." + URL_COLUMN + " = " + "r." + URL_COLUMN
       + " and " + "m." + MD_ITEM_TYPE_SEQ_COLUMN + " = "
       + "t." + MD_ITEM_TYPE_SEQ_COLUMN
-      + " and " + "t." + TYPE_NAME_COLUMN + " = '"
-      + MD_ITEM_TYPE_JOURNAL_ARTICLE + "'"
+      + " and " + "(t." + TYPE_NAME_COLUMN + " = '"
+      + MD_ITEM_TYPE_JOURNAL_ARTICLE + "' or t." + TYPE_NAME_COLUMN + " = '"
+      + MD_ITEM_TYPE_PROCEEDINGS_ARTICLE + "')"
       + " and " + "r." + REQUEST_YEAR_COLUMN + " = ?"
       + " and " + "r." + REQUEST_MONTH_COLUMN + " = ?"
       + " and " + "r." + IS_PUBLISHER_INVOLVED_COLUMN + " = ?"
@@ -256,8 +260,9 @@ public class CounterReportsRequestAggregator {
       + " and " + "u." + MD_ITEM_SEQ_COLUMN + " = " + "m." + MD_ITEM_SEQ_COLUMN
       + " and " + "m." + MD_ITEM_TYPE_SEQ_COLUMN + " = "
       + "t." + MD_ITEM_TYPE_SEQ_COLUMN
-      + " and " + "t." + TYPE_NAME_COLUMN + " = '"
-      + MD_ITEM_TYPE_JOURNAL_ARTICLE + "'"
+      + " and " + "(t." + TYPE_NAME_COLUMN + " = '"
+      + MD_ITEM_TYPE_JOURNAL_ARTICLE + "' or t." + TYPE_NAME_COLUMN + " = '"
+      + MD_ITEM_TYPE_PROCEEDINGS_ARTICLE + "')"
       + " and " + "m." + PARENT_SEQ_COLUMN + " = " + "p." + MD_ITEM_SEQ_COLUMN
       + " and " + "p." + PUBLICATION_SEQ_COLUMN + " = ?"
       + " and " + "r." + REQUEST_YEAR_COLUMN + " = ?"
@@ -317,8 +322,9 @@ public class CounterReportsRequestAggregator {
       + " and u." + MD_ITEM_SEQ_COLUMN + " = m." + MD_ITEM_SEQ_COLUMN
       + " and " + "m." + MD_ITEM_TYPE_SEQ_COLUMN + " = "
       + "t." + MD_ITEM_TYPE_SEQ_COLUMN
-      + " and " + "t." + TYPE_NAME_COLUMN + " = '"
-      + MD_ITEM_TYPE_JOURNAL_ARTICLE + "'"
+      + " and " + "(t." + TYPE_NAME_COLUMN + " = '"
+      + MD_ITEM_TYPE_JOURNAL_ARTICLE + "' or t." + TYPE_NAME_COLUMN + " = '"
+      + MD_ITEM_TYPE_PROCEEDINGS_ARTICLE + "')"
       + " and " + "m." + PARENT_SEQ_COLUMN + " = " + "p." + MD_ITEM_SEQ_COLUMN
       + " and " + "p." + PUBLICATION_SEQ_COLUMN + " = ?)"
       + " and " + IS_PUBLISHER_INVOLVED_COLUMN + " = ? "

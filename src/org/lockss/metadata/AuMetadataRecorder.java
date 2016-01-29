@@ -1062,7 +1062,7 @@ public class AuMetadataRecorder {
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private void storeMetadata(Connection conn, ArticleMetadataInfo mdinfo)
+  void storeMetadata(Connection conn, ArticleMetadataInfo mdinfo)
       throws MetadataException, DbException {
     final String DEBUG_HEADER = "storeMetadata(): ";
     if (log.isDebug3()) {
@@ -1395,6 +1395,9 @@ public class AuMetadataRecorder {
     } else if (MetadataField.ARTICLE_TYPE_BOOKVOLUME.equals(childType)) {
       return MetadataField.PUBLICATION_TYPE_BOOK.equals(parentType)
 	  || MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(parentType);
+    } else if (MetadataField.ARTICLE_TYPE_PROCEEDINGSARTICLE.
+	equals(childType)) {
+      return MetadataField.PUBLICATION_TYPE_PROCEEDINGS.equals(parentType);
     }
     
     return false;
