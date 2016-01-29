@@ -124,6 +124,7 @@
     comment[base_url] = http://www.bjhcm.co.uk/
     param[journal_id] = bjhc
 
+    au < exists ; exists ; 2008 ; British Journal of Healthcare Management Volume 14 ; 14 ; >
     au < exists ; exists ; 2009 ; British Journal of Healthcare Management Volume 15 ; 15 ; >
     au < exists ; exists ; 2010 ; British Journal of Healthcare Management Volume 16 ; 16 ; >
     au < manifest ; exists ; 2011 ; British Journal of Healthcare Management Volume 17 ; 17 ; >
@@ -146,6 +147,9 @@
     comment[base_url] = http://www.bjhm.co.uk/
     param[journal_id] = hmed
 
+    au < exists ; exists ; 2008 ; British Journal of Hospital Medicine Volume 69 ; 69 ; >
+    au < exists ; exists ; 2009 ; British Journal of Hospital Medicine Volume 70 ; 70 ; >
+    au < exists ; exists ; 2010 ; British Journal of Hospital Medicine Volume 71 ; 71 ; >
     au < manifest ; exists ; 2011 ; British Journal of Hospital Medicine Volume 72 ; 72 ; >
     au < manifest ; exists ; 2012 ; British Journal of Hospital Medicine Volume 73 ; 73 ; >
     au < crawling ; exists ; 2013 ; British Journal of Hospital Medicine Volume 74 ; 74 ; >
@@ -185,6 +189,7 @@
     comment[base_url] = http://www.britishjournalofmidwifery.com/
     param[journal_id] = bjom
 
+    au < exists ; exists ; 2008 ; British Journal of Midwifery Volume 16 ; 16 ; >
     au < exists ; exists ; 2009 ; British Journal of Midwifery Volume 17 ; 17 ; >
     au < exists ; exists ; 2010 ; British Journal of Midwifery Volume 18 ; 18 ; >
     au < manifest ; exists ; 2011 ; British Journal of Midwifery Volume 19 ; 19 ; >
@@ -207,6 +212,7 @@
     comment[base_url] = http://www.bjnn.co.uk/
     param[journal_id] = bjnn
 
+    au < exists ; exists ; 2008 ; British Journal of Neuroscience Nursing Volume 4 ; 4 ; >
     au < exists ; exists ; 2009 ; British Journal of Neuroscience Nursing Volume 5 ; 5 ; >
     au < exists ; exists ; 2010 ; British Journal of Neuroscience Nursing Volume 6 ; 6 ; >
     au < manifest ; exists ; 2011 ; British Journal of Neuroscience Nursing Volume 7 ; 7 ; >
@@ -229,6 +235,7 @@
     comment[base_url] = http://www.britishjournalofnursing.com/
     param[journal_id] = bjon
 
+    au < exists ; exists ; 2008 ; British Journal of Nursing Volume 17 ; 17 ; >
     au < exists ; exists ; 2009 ; British Journal of Nursing Volume 18 ; 18 ; >
     au < exists ; exists ; 2010 ; British Journal of Nursing Volume 19 ; 19 ; >
     au < manifest ; exists ; 2011 ; British Journal of Nursing Volume 20 ; 20 ; >
@@ -251,6 +258,9 @@
     comment[base_url] = http://www.school-nursing.co.uk/
     param[journal_id] = bjsn
 
+    au < exists ; exists ; 2006 ; British Journal of School Nursing Volume 1 ; 1 ; >
+    au < exists ; exists ; 2007 ; British Journal of School Nursing Volume 2 ; 2 ; >
+    au < exists ; exists ; 2008 ; British Journal of School Nursing Volume 3 ; 3 ; >
     au < exists ; exists ; 2009 ; British Journal of School Nursing Volume 4 ; 4 ; >
     au < exists ; exists ; 2010 ; British Journal of School Nursing Volume 5 ; 5 ; >
     au < manifest ; exists ; 2011 ; British Journal of School Nursing Volume 6 ; 6 ; >
@@ -285,6 +295,9 @@
     comment[base_url] = http://www.dental-nursing.co.uk/
     param[journal_id] = denn
 
+    au < exists ; exists ; 2008 ; Dental Nursing Volume 4 ; 4 ; >
+    au < exists ; exists ; 2009 ; Dental Nursing Volume 5 ; 5 ; >
+    au < exists ; exists ; 2010 ; Dental Nursing Volume 6 ; 6 ; >
     au < manifest ; exists ; 2011 ; Dental Nursing Volume 7 ; 7 ; >
     au < manifest ; exists ; 2012 ; Dental Nursing Volume 8 ; 8 ; >
     au < crawling ; exists ; 2013 ; Dental Nursing Volume 9 ; 9 ; >
@@ -304,6 +317,9 @@
     comment[base_url] = http://www.gastrointestinalnursing.co.uk/
     param[journal_id] = gasn
 
+    au < exists ; exists ; 2008 ; Gastrointestinal Nursing Volume 6 ; 6 ; >
+    au < exists ; exists ; 2009 ; Gastrointestinal Nursing Volume 7 ; 7 ; >
+    au < exists ; exists ; 2010 ; Gastrointestinal Nursing Volume 8 ; 8 ; >
     au < manifest ; exists ; 2011 ; Gastrointestinal Nursing Volume 9 ; 9 ; >
     au < manifest ; exists ; 2012 ; Gastrointestinal Nursing Volume 10 ; 10 ; >
     au < crawling ; exists ; 2013 ; Gastrointestinal Nursing Volume 11 ; 11 ; >
@@ -342,6 +358,7 @@
     comment[base_url] = http://www.ijop.co.uk/
     param[journal_id] = ijop
 
+    au < exists ; exists ; 2010 ; International Journal of Ophthalmic Practice Volume 1 ; 1 ; >
     au < manifest ; exists ; 2011 ; International Journal of Ophthalmic Practice Volume 2 ; 2 ; >
     au < manifest ; exists ; 2012 ; International Journal of Ophthalmic Practice Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; International Journal of Ophthalmic Practice Volume 4 ; 4 ; >
@@ -361,6 +378,9 @@
     comment[base_url] = http://www.ijpn.co.uk/
     param[journal_id] = ijpn
 
+    au < exists ; exists ; 2008 ; International Journal of Palliative Nursing Volume 14 ; 14 ; >
+    au < exists ; exists ; 2009 ; International Journal of Palliative Nursing Volume 15 ; 15 ; >
+    au < exists ; exists ; 2010 ; International Journal of Palliative Nursing Volume 16 ; 16 ; >
     au < manifest ; exists ; 2011 ; International Journal of Palliative Nursing Volume 17 ; 17 ; >
     au < manifest ; exists ; 2012 ; International Journal of Palliative Nursing Volume 18 ; 18 ; >
     au < crawling ; exists ; 2013 ; International Journal of Palliative Nursing Volume 19 ; 19 ; >
@@ -380,6 +400,9 @@
     comment[base_url] = http://www.ijtr.co.uk/
     param[journal_id] = ijtr
 
+    au < exists ; exists ; 2008 ; International Journal of Therapy and Rehabilitation Volume 15 ; 15 ; >
+    au < exists ; exists ; 2009 ; International Journal of Therapy and Rehabilitation Volume 16 ; 16 ; >
+    au < exists ; exists ; 2010 ; International Journal of Therapy and Rehabilitation Volume 17 ; 17 ; >
     au < manifest ; exists ; 2011 ; International Journal of Therapy and Rehabilitation Volume 18 ; 18 ; >
     au < manifest ; exists ; 2012 ; International Journal of Therapy and Rehabilitation Volume 19 ; 19 ; >
     au < crawling ; exists ; 2013 ; International Journal of Therapy and Rehabilitation Volume 20 ; 20 ; >
@@ -571,6 +594,9 @@
     comment[base_url] = http://www.practicenursing.com/
     param[journal_id] = pnur
 
+    au < exists ; exists ; 2008 ; Practice Nursing Volume 19 ; 19 ; >
+    au < exists ; exists ; 2009 ; Practice Nursing Volume 20 ; 20 ; >
+    au < exists ; exists ; 2010 ; Practice Nursing Volume 21 ; 21 ; >
     au < manifest ; exists ; 2011 ; Practice Nursing Volume 22 ; 22 ; >
     au < manifest ; exists ; 2012 ; Practice Nursing Volume 23 ; 23 ; >
     au < crawling ; exists ; 2013 ; Practice Nursing Volume 24 ; 24 ; >
@@ -609,6 +635,7 @@
     comment[base_url] = http://www.equinehealthmagazine.com/
     param[journal_id] = eqhe
 
+    au < exists ; exists ; 2010 ; Equine Health Volume 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Equine Health Volume 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Equine Health Volume 2012 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Equine Health Volume 2013 ; 2013 ; >
@@ -647,6 +674,7 @@
     comment[base_url] = http://www.theveterinarynurse.com/
     param[journal_id] = vetn
 
+    au < exists ; exists ; 2010 ; The Veterinary Nurse Volume 1 ; 1 ; >
     au < manifest ; exists ; 2011 ; The Veterinary Nurse Volume 2 ; 2 ; >
     au < manifest ; exists ; 2012 ; The Veterinary Nurse Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; The Veterinary Nurse Volume 4 ; 4 ; >
@@ -680,6 +708,9 @@
     comment[0] = need to update base_url 
     param[journal_id] = chca
 
+    au < exists ; exists ; 2008 ; Child Care Volume 5 ; 5 ; >
+    au < exists ; exists ; 2009 ; Child Care Volume 6 ; 6 ; >
+    au < exists ; exists ; 2010 ; Child Care Volume 7 ; 7 ; >
     au < manifest ; exists ; 2011 ; Child Care Volume 8 ; 8 ; >
     au < manifest ; exists ; 2012 ; Child Care Volume 9 ; 9 ; >
     au < finished ; crawling ; 2013 ; Child Care Volume 10 ; 10 ; >
@@ -699,6 +730,9 @@
     comment[base_url] = http://www.earlyyearseducator.co.uk/
     param[journal_id] = eyed
 
+    au < exists ; exists ; 2008 ; Early Years Educator (EYE) Volume 9 ; 9 ; >
+    au < exists ; exists ; 2009 ; Early Years Educator (EYE) Volume 10 ; 10 ; >
+    au < exists ; exists ; 2010 ; Early Years Educator (EYE) Volume 11 ; 11 ; >
     au < manifest ; exists ; 2011 ; Early Years Educator (EYE) Volume 12 ; 12 ; >
     au < manifest ; exists ; 2012 ; Early Years Educator (EYE) Volume 13 ; 13 ; >
     au < crawling ; exists ; 2013 ; Early Years Educator (EYE) Volume 14 ; 14 ; >
@@ -736,6 +770,9 @@
     comment[pdf] = file from http://content.yudu.com
     param[journal_id] = htup
 
+    au < exists ; exists ; 2008 ; Headteacher Update Volume 2008 ; 2008 ; >
+    au < exists ; exists ; 2009 ; Headteacher Update Volume 2009 ; 2009 ; >
+    au < exists ; exists ; 2010 ; Headteacher Update Volume 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Headteacher Update Volume 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Headteacher Update Volume 2012 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Headteacher Update Volume 2013 ; 2013 ; >
@@ -773,6 +810,8 @@
     comment[base_url] = http://www.practicalpreschool.com/
     param[journal_id] = prps
 
+    au < exists ; exists ; 2008 ; Practical Pre-School Volume 2008 ; 2008 ; >
+    au < exists ; exists ; 2009 ; Practical Pre-School Volume 2009 ; 2009 ; >
     au < manifest ; exists ; 2010 ; Practical Pre-School Volume 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Practical Pre-School Volume 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Practical Pre-School Volume 2012 ; 2012 ; >

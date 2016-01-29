@@ -7,6 +7,71 @@
   implicit < status ; year ; name ; param[volume] >
 
   {
+
+    title <
+      name = Africa: The Journal of the International African Institute ;
+      issn = 0001-9720 ;
+      eissn = 1750-0184 ;
+      issnl = 0001-9720
+    >
+
+      param[journal_dir] = africa_the_journal_of_the_international_african_institute
+      attr[journal_id] = afr
+      comment[year2005] = Bibliography only
+    
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2005 ; Africa: The Journal of the International African Institute Bibliography 2005 ; 2005 >
+        au < released ; 2006 ; Africa: The Journal of the International African Institute Bibliography 2006 ; 2006 >
+        au < released ; 2007 ; Africa: The Journal of the International African Institute Bibliography 2007 ; 2007 >
+        au < released ; 2008 ; Africa: The Journal of the International African Institute Bibliography 2008 ; 2008 >
+        au < released ; 2009 ; Africa: The Journal of the International African Institute Bibliography 2009 ; 2009 >
+
+      }
+
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < exists ; 2000 ; Africa: The Journal of the International African Institute Volume 70 ; 70 >
+        au < exists ; 2001 ; Africa: The Journal of the International African Institute Volume 71 ; 71 >
+        au < exists ; 2002 ; Africa: The Journal of the International African Institute Volume 72 ; 72 >
+        au < exists ; 2003 ; Africa: The Journal of the International African Institute Volume 73 ; 73 >
+        au < exists ; 2004 ; Africa: The Journal of the International African Institute Volume 74 ; 74 >
+        au < exists ; 2005 ; Africa: The Journal of the International African Institute Volume 75 ; 75 >
+
+      }
+
+      {
+
+        param[base_url] = http://muse.jhu.edu/
+
+        au < released ; 2006 ; Africa: The Journal of the International African Institute Volume 76 ; 76 >
+        au < released ; 2007 ; Africa: The Journal of the International African Institute Volume 77 ; 77 >
+        au < released ; 2008 ; Africa: The Journal of the International African Institute Volume 78 ; 78 >
+        au < released ; 2009 ; Africa: The Journal of the International African Institute Volume 79 ; 79 >
+        au < released ; 2010 ; Africa: The Journal of the International African Institute Volume 80 ; 80 >
+        au < released ; 2011 ; Africa: The Journal of the International African Institute Volume 81 ; 81 >
+        au < released ; 2012 ; Africa: The Journal of the International African Institute Volume 82 ; 82 >
+        au < released ; 2013 ; Africa: The Journal of the International African Institute Volume 83 ; 83 >
+
+      }
+
+      {
+
+        param[base_url] = https://muse.jhu.edu/
+
+        au < released ; 2014 ; Africa: The Journal of the International African Institute Volume 84 ; 84 >
+        au < released ; 2015 ; Africa: The Journal of the International African Institute Volume 85 ; 85 >
+
+      }
+
+  }
+
+  {
     title <
       name = Canadian Journal on Aging / La Revue canadienne du vieillissement ;
       issn = 0714-9808 ;

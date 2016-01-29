@@ -20615,6 +20615,22 @@
     {
 
     title <
+      name = JDR Clinical & Translational Research ;
+      issn = 2380-0844 ;
+      eissn = 2380-0852 
+    >
+
+      param[base_url] = http://jct.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < expected ; 2016 ; JDR Clinical & Translational Research Volume 1 ; 1 >
+
+    }
+
+    {
+
+    title <
       name = The Journal of Computational Multiphase Flows ;
       issn = 1757-482X ;
       eissn = 1757-4838 
@@ -34400,6 +34416,22 @@ comment[mpj] = now published by Brill
         au < manifest ; 2016 ; Modern China Volume 42 ; 42 >
 
       }
+
+    }
+
+    {
+
+    title <
+      name = Molecular Imaging ;
+        eissn = 1536-0121 
+    >
+
+      param[base_url] = http://mix.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2015 ; Molecular Imaging Volume 14 ; 14 >
+      au < exists ; 2016 ; Molecular Imaging Volume 15 ; 15 >
 
     }
 

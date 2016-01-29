@@ -6,6 +6,7 @@
     info[tester] = 0
   >
 
+  plugin = org.lockss.plugin.highwire.ClockssHWDrupalPlugin
   implicit < status ; status2 ; year ; name ; param[volume_name] >
   comment[0] = all moving to Drupal by July 15 2015
     
@@ -17,7 +18,6 @@
       eissn =  1095-9203
     >
     
-      plugin = org.lockss.plugin.highwire.ClockssHWDrupalPlugin
       param[base_url] = http://www.sciencemag.org/
 
       au < exists ; exists ; 2012 ; Science Volume 335 ; 335 >
@@ -47,7 +47,6 @@
       eissn =  1937-9145
     >
     
-      plugin = org.lockss.plugin.highwire.ClockssHWDrupalPlugin
       param[base_url] = http://stke.sciencemag.org/
 
       au < exists ; exists ; 2008 ; Science Signaling Volume 1 ; 1 >
@@ -69,7 +68,6 @@
       eissn = 1946-6242
     >
     
-      plugin = org.lockss.plugin.highwire.ClockssHWDrupalPlugin
       param[base_url] = http://stm.sciencemag.org/
 
       au < exists ; exists ; 2009 ; Science Translational Medicine Volume 1 ; 1 >
@@ -89,7 +87,6 @@
       eissn = 2375-2548
     >
     
-      plugin = org.lockss.plugin.highwire.ClockssHWDrupalPlugin
       param[base_url] = http://advances.sciencemag.org/
 
       au < exists ; exists ; 2015 ; Science Advances Volume 1 ; 1 >

@@ -16,7 +16,7 @@ To establish a local copy of the LOCKSS git repository you can
 use the “git clone” command to establish the repository and “git pull” to pull in updates:
 
 git clone https://github.com/lockss/lockss-daemon.git` # to get working copy
-git pull` # to update
+git pull` # to update 
 
 Prerequisites
 -------------

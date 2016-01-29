@@ -1,10 +1,10 @@
 /*
- * $Id: OaiPmhHtmlFilterFactory.java,v 1.1.2.1 2014/05/05 17:32:30 wkwilson Exp $
+ * $Id:$
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,7 +28,7 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
- */
+*/
 
 package org.lockss.plugin.pensoft.oai;
 
@@ -47,8 +47,18 @@ public class PensoftOaiHtmlFilterFactory implements FilterFactory {
     NodeFilter[] filters = new NodeFilter[] {
      //filter out script
      new TagNameFilter("script"),
-     // footer
-     HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+     new TagNameFilter("style"),
+     
+     HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+     //popup stuff may change
+     HtmlNodeFilters.tagWithAttribute("div", "id", "feedback-popup"),
+     HtmlNodeFilters.tagWithAttribute("div", "id", "P-Post-Review-Form-Poll"),
+     HtmlNodeFilters.tagWithAttribute("div", "class", "popup-background"),
+     HtmlNodeFilters.tagWithAttribute("div", "class", "P-Article-References-For-Baloon"),
+     HtmlNodeFilters.tagWithAttribute("div", "id", "ArticleBaloon"),
+     HtmlNodeFilters.tagWithAttribute("div", "class", "P-clear"),
+     
+     
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
