@@ -206,6 +206,10 @@ public class DefLockssConfigurationBuilder
    */
   static final String WARC_PROXY_WEB_PORT_PARAM = "warcProxyWebPort";
   static final int WARC_PROXY_WEB_PORT_DEFAULT = 4338;
+
+  /* ----------------------------------------------------------------------- */
+  /*          class variables  */
+  /* ----------------------------------------------------------------------- */
   /**
    * The url from which to start the crawl
    */
@@ -257,10 +261,12 @@ public class DefLockssConfigurationBuilder
     builder.setOutputDirectory(new File(m_outDir));
 
     try {
-      if (configFile != null)
+      if (configFile != null) {
         m_config = new PropertiesConfiguration(configFile);
-      else
+      }
+      else {
         m_config = defaultConfig();
+      }
       configureBuilder(builder);
     } catch (ConfigurationException e) {
       System.out.println("Error configuring crawl: " + e.getMessage());
@@ -551,7 +557,7 @@ public class DefLockssConfigurationBuilder
 
     for(BrowserType type : BrowserType.values()) {
       sb.append(type.name());
-      sb.append(",");
+      sb.append(',');
     }
     sb.deleteCharAt(sb.length()-1);
     return sb.toString();
@@ -565,7 +571,7 @@ public class DefLockssConfigurationBuilder
    *
    * @return a BrowserType of that name
    *
-   * @throws java.lang.IllegalArgumentException if name is not found in out
+   * @throws IllegalArgumentException if name is not found in out
    * types.
    */
   protected BrowserType getSpecifiedBrowser(String browser_name) {
