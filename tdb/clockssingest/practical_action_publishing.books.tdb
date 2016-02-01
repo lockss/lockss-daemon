@@ -1,0 +1,28 @@
+{
+
+  publisher <
+    name = Practical Action Publishing ;
+    info[contract] = 2013 ;
+    info[tester] = 8
+  >
+
+  comment[platform] = Atypon
+  
+  plugin = org.lockss.plugin.atypon.practicalaction.ClockssPracticalActionBooksPlugin
+  param[base_url] = http://www.developmentbookshelf.com/
+  implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_eisbn] ; name >
+  
+
+  {
+  
+    title < 
+      name = Practical Action Publishing Books ;
+      type = bookSeries
+      >
+      
+      au < testing ; exists ; 1991 ; 978-1-85339-098-2 ; 978-1-78044-423-9 ; 9781780444239 ; Action and Knowledge: Breaking the monopoly with Participatory Action-Research >
+      au < testing ; exists ; 2013 ; 978-1-85339-763-9 ; 978-1-78044-763-6 ; 9781780447636 ; Achieving Water Security: Lessons from research in water supply, sanitation, and hygiene in Ethiopia >
+
+
+  }
+}
