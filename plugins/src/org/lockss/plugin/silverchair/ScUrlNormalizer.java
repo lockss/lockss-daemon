@@ -55,8 +55,11 @@ public class ScUrlNormalizer implements UrlNormalizer {
   private static final Pattern ATAB_PATTERN = Pattern.compile("&atab=[^&]*", Pattern.CASE_INSENSITIVE);
   private static final String ATAB_CANONICAL = "";
   
-  private static final Pattern ARTICLE_PATTERN = Pattern.compile("/(article|proceeding)\\.aspx\\?articleid=(\\d+)", Pattern.CASE_INSENSITIVE);
+  private static final Pattern ARTICLE_PATTERN = Pattern.compile("/article\\.aspx\\?articleid=(\\d+)", Pattern.CASE_INSENSITIVE);
   private static final String ARTICLE_CANONICAL = "/article.aspx?articleid=$2";
+
+  private static final Pattern PROCEEDING_PATTERN = Pattern.compile("/proceeding\\.aspx\\?articleid=(\\d+)", Pattern.CASE_INSENSITIVE);
+  private static final String PROCEEDING_CANONICAL = "/proceeding.aspx?articleid=$2";
 
   private static final Pattern ISSUE_PATTERN = Pattern.compile("/Issue\\.aspx\\?(issueid=(\\d+)&journalid=(\\d+)|journalid=(\\d+)&issueid=(\\d+))", Pattern.CASE_INSENSITIVE);
   private static final String ISSUE_CANONICAL = "/Issue.aspx?issueid=$2$5&journalid=$3$4";
@@ -65,6 +68,7 @@ public class ScUrlNormalizer implements UrlNormalizer {
   public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
     url = ATAB_PATTERN.matcher(url).replaceFirst(ATAB_CANONICAL);
     url = ARTICLE_PATTERN.matcher(url).replaceFirst(ARTICLE_CANONICAL);
+    url = PROCEEDING_PATTERN.matcher(url).replaceFirst(PROCEEDING_CANONICAL);
     url = ISSUE_PATTERN.matcher(url).replaceFirst(ISSUE_CANONICAL);
     url = url.replace("\u2111", "&image"); // RU4998
     return url;
