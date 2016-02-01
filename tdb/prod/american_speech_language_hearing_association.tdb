@@ -60,9 +60,25 @@
     {
 
       plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
-      param[base_url] = http://ajslp.asha.org/
       param[resource_id] = 141
       implicit < status ; year ; name ; param[year] >
+
+      {
+      param[base_url] = http://ajslp.asha.org/
+
+      au < doNotProcess ; 2005 ; American Journal of Speech-Language Pathology Volume 14 ; 2005 >
+      au < doNotProcess ; 2006 ; American Journal of Speech-Language Pathology Volume 15 ; 2006 >
+      au < doNotProcess ; 2007 ; American Journal of Speech-Language Pathology Volume 16 ; 2007 >
+      au < doNotProcess ; 2008 ; American Journal of Speech-Language Pathology Volume 17 ; 2008 >
+      au < doNotProcess ; 2009 ; American Journal of Speech-Language Pathology Volume 18 ; 2009 >
+      au < doNotProcess ; 2010 ; American Journal of Speech-Language Pathology Volume 19 ; 2010 >
+      au < doNotProcess ; 2011 ; American Journal of Speech-Language Pathology Volume 20 ; 2011 >
+      au < doNotProcess ; 2012 ; American Journal of Speech-Language Pathology Volume 21 ; 2012 >
+      
+      }
+
+      {
+      param[base_url] = http://ajslp.pubs.asha.org/
 
       au < manifest ; 1992 ; American Journal of Speech-Language Pathology Volume 1 ; 1992 >
       au < manifest ; 1993 ; American Journal of Speech-Language Pathology Volume 2 ; 1993 >
@@ -88,6 +104,8 @@
       au < testing ; 2013 ; American Journal of Speech-Language Pathology Volume 22 ; 2013 >
       au < testing ; 2014 ; American Journal of Speech-Language Pathology Volume 23 ; 2014 >
       au < manifest ; 2015 ; American Journal of Speech-Language Pathology Volume 24 ; 2015 >
+      
+      }
 
     }
 
@@ -104,10 +122,25 @@
     {
 
       plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
-      param[base_url] = http://jslhr.asha.org/
       param[resource_id] = 142
       implicit < status ; year ; name ; param[year] >
       comment[continues] = 0022-4677
+
+      {
+      param[base_url] = http://jslhr.asha.org/
+
+      au < doNotProcess ; 2005 ; Journal of Speech, Language, and Hearing Research Volume 48 ; 2005 >
+      au < doNotProcess ; 2006 ; Journal of Speech, Language, and Hearing Research Volume 49 ; 2006 >
+      au < doNotProcess ; 2007 ; Journal of Speech, Language, and Hearing Research Volume 50 ; 2007 >
+      au < doNotProcess ; 2008 ; Journal of Speech, Language, and Hearing Research Volume 51 ; 2008 >
+      au < doNotProcess ; 2009 ; Journal of Speech, Language, and Hearing Research Volume 52 ; 2009 >
+      au < doNotProcess ; 2010 ; Journal of Speech, Language, and Hearing Research Volume 53 ; 2010 >
+      au < doNotProcess ; 2011 ; Journal of Speech, Language, and Hearing Research Volume 54 ; 2011 >
+      au < doNotProcess ; 2012 ; Journal of Speech, Language, and Hearing Research Volume 55 ; 2012 >
+      }
+
+      {
+      param[base_url] = http://jslhr.pubs.asha.org/
 
       au < manifest ; 1958 ; Journal of Speech, Language, and Hearing Research Volume 1 ; 1958 >
       au < manifest ; 1959 ; Journal of Speech, Language, and Hearing Research Volume 2 ; 1959 >
@@ -167,6 +200,7 @@
       au < testing ; 2013 ; Journal of Speech, Language, and Hearing Research Volume 56 ; 2013 >
       au < testing ; 2014 ; Journal of Speech, Language, and Hearing Research Volume 57 ; 2014 >
       au < manifest ; 2015 ; Journal of Speech, Language, and Hearing Research Volume 58 ; 2015 >
+      }
 
     }
 
@@ -186,6 +220,22 @@
       param[base_url] = http://lshss.asha.org/
       param[resource_id] = 143
       implicit < status ; year ; name ; param[year] >
+
+      {
+      param[base_url] = http://lshss.asha.org/
+
+      au < doNotProcess ; 2005 ; Language, Speech, and Hearing Services in Schools Volume 36 ; 2005 >
+      au < doNotProcess ; 2006 ; Language, Speech, and Hearing Services in Schools Volume 37 ; 2006 >
+      au < doNotProcess ; 2007 ; Language, Speech, and Hearing Services in Schools Volume 38 ; 2007 >
+      au < doNotProcess ; 2008 ; Language, Speech, and Hearing Services in Schools Volume 39 ; 2008 >
+      au < doNotProcess ; 2009 ; Language, Speech, and Hearing Services in Schools Volume 40 ; 2009 >
+      au < doNotProcess ; 2010 ; Language, Speech, and Hearing Services in Schools Volume 41 ; 2010 >
+      au < doNotProcess ; 2011 ; Language, Speech, and Hearing Services in Schools Volume 42 ; 2011 >
+      au < doNotProcess ; 2012 ; Language, Speech, and Hearing Services in Schools Volume 43 ; 2012 >
+      }
+      
+      {
+      param[base_url] = http://lshss.pubs.asha.org/
 
       au < manifest ; 1970 ; Language, Speech, and Hearing Services in Schools Volume 1 ; 1970 >
       au < manifest ; 1972 ; Language, Speech, and Hearing Services in Schools Volume 3 ; 1972 >
@@ -232,6 +282,7 @@
       au < testing ; 2013 ; Language, Speech, and Hearing Services in Schools Volume 44 ; 2013 >
       au < testing ; 2014 ; Language, Speech, and Hearing Services in Schools Volume 45 ; 2014 >
       au < manifest ; 2015 ; Language, Speech, and Hearing Services in Schools Volume 46 ; 2015 >
+      }
 
     }
 
