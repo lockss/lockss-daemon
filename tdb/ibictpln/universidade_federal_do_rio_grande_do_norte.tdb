@@ -146,8 +146,8 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = educacaoemquestao
 
-      au < testing ; 2004 ; 20-21 ; Revista Educação em Questão Volume 2004 ; 2004 ; >
-      au < testing ; 2005 ; 22-24 ; Revista Educação em Questão Volume 2005 ; 2005 ; >
+      au < ready ; 2004 ; 20-21 ; Revista Educação em Questão Volume 2004 ; 2004 ; >
+      au < ready ; 2005 ; 22-24 ; Revista Educação em Questão Volume 2005 ; 2005 ; >
       au < released ; 2006 ; 25-27 ; Revista Educação em Questão Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 28-30 ; Revista Educação em Questão Volume 2007 ; 2007 ; >
       au < released ; 2008 ; 31-33 ; Revista Educação em Questão Volume 2008 ; 2008 ; >
@@ -213,11 +213,11 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = jscr
 
-      au < testing ; 2010 ; 1 ; The Journal of Surgical and Clinical Research, Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 2 ; The Journal of Surgical and Clinical Research, Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 3 ; The Journal of Surgical and Clinical Research, Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 4 ; The Journal of Surgical and Clinical Research, Volume 2013 ; 2013 ; >
-      au < testing ; 2014 ; 5 ; The Journal of Surgical and Clinical Research, Volume 2014 ; 2014 ; >
+      au < ready ; 2010 ; 1 ; The Journal of Surgical and Clinical Research, Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 2 ; The Journal of Surgical and Clinical Research, Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 3 ; The Journal of Surgical and Clinical Research, Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 4 ; The Journal of Surgical and Clinical Research, Volume 2013 ; 2013 ; >
+      au < ready ; 2014 ; 5 ; The Journal of Surgical and Clinical Research, Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 6 ; The Journal of Surgical and Clinical Research, Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 7 ; The Journal of Surgical and Clinical Research, Volume 2016 ; 2016 ; >
 
@@ -340,13 +340,13 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = publica
 
-      au < testing ; 2005 ; 1 ; Revista PublICa Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 2 ; Revista PublICa Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 3 ; Revista PublICa Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 4 ; Revista PublICa Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 5 ; Revista PublICa Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 6 ; Revista PublICa Volume 2010 ; 2010 ; >
-      au < testing ; 2012 ; 7 ; Revista PublICa Volume 2012 ; 2012 ; >
+      au < ready ; 2005 ; 1 ; Revista PublICa Volume 2005 ; 2005 ; >
+      au < ready ; 2006 ; 2 ; Revista PublICa Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 3 ; Revista PublICa Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 4 ; Revista PublICa Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 5 ; Revista PublICa Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 6 ; Revista PublICa Volume 2010 ; 2010 ; >
+      au < ready ; 2012 ; 7 ; Revista PublICa Volume 2012 ; 2012 ; >
 
   }
 
@@ -402,8 +402,8 @@
       au < released ; 2010 ; 2 ; Sociedade e Território Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 3 ; Sociedade e Território Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 4 ; Sociedade e Território Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 5 ; Sociedade e Território Volume 2013 ; 2013 ; >
-      au < testing ; 2014 ; 6 ; Sociedade e Território Volume 2014 ; 2014 ; >
+      au < ready ; 2013 ; 5 ; Sociedade e Território Volume 2013 ; 2013 ; >
+      au < ready ; 2014 ; 6 ; Sociedade e Território Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 7 ; Sociedade e Território Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 8 ; Sociedade e Território Volume 2016 ; 2016 ; >
 
@@ -420,9 +420,9 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = vivencia
 
-      au < testing ; 2012 ; 39-40 ; Vivência: Revista de Antropologia Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 41 ; Vivência: Revista de Antropologia Volume 2013 ; 2013 ; >
-      au < testing ; 2014 ; 42 ; Vivência: Revista de Antropologia Volume 2014 ; 2014 ; >
+      au < ready ; 2012 ; 39-40 ; Vivência: Revista de Antropologia Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 41 ; Vivência: Revista de Antropologia Volume 2013 ; 2013 ; >
+      au < ready ; 2014 ; 42 ; Vivência: Revista de Antropologia Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 43 ; Vivência: Revista de Antropologia Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 44 ; Vivência: Revista de Antropologia Volume 2016 ; 2016 ; >
 
@@ -439,13 +439,13 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = constituicaoegarantiadedireitos
 
-      au < testing ; 2007 ; 1 ; Revista Constituição e Garantia de Direitos Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 2 ; Revista Constituição e Garantia de Direitos Volume 2008 ; 2008 ; >
-      au < testing ; 2010 ; 3 ; Revista Constituição e Garantia de Direitos Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 4 ; Revista Constituição e Garantia de Direitos Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 5 ; Revista Constituição e Garantia de Direitos Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 6 ; Revista Constituição e Garantia de Direitos Volume 2013 ; 2013 ; >
-      au < testing ; 2014 ; 7 ; Revista Constituição e Garantia de Direitos Volume 2014 ; 2014 ; >
+      au < ready ; 2007 ; 1 ; Revista Constituição e Garantia de Direitos Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 2 ; Revista Constituição e Garantia de Direitos Volume 2008 ; 2008 ; >
+      au < ready ; 2010 ; 3 ; Revista Constituição e Garantia de Direitos Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 4 ; Revista Constituição e Garantia de Direitos Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 5 ; Revista Constituição e Garantia de Direitos Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 6 ; Revista Constituição e Garantia de Direitos Volume 2013 ; 2013 ; >
+      au < ready ; 2014 ; 7 ; Revista Constituição e Garantia de Direitos Volume 2014 ; 2014 ; >
       au < manifest ; 2015 ; 8 ; Revista Constituição e Garantia de Direitos Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 9 ; Revista Constituição e Garantia de Direitos Volume 2016 ; 2016 ; >
 
