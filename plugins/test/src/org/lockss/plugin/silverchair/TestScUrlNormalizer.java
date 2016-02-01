@@ -52,6 +52,15 @@ public class TestScUrlNormalizer extends LockssTestCase {
                  norm.normalizeUrl("http://www.example.com/Article.aspx?ArticleID=1234444", null));
   }
   
+  public void testProceedingId() throws Exception {
+    assertEquals("http://www.example.com/proceeding.aspx?articleid=1234444",
+                 norm.normalizeUrl("http://www.example.com/proceeding.aspx?articleid=1234444", null));
+    assertEquals("http://www.example.com/proceeding.aspx?articleid=1234444",
+                 norm.normalizeUrl("http://www.example.com/proceeding.aspx?articleID=1234444", null));
+    assertEquals("http://www.example.com/proceeding.aspx?articleid=1234444",
+                 norm.normalizeUrl("http://www.example.com/Proceeding.aspx?ArticleID=1234444", null));
+  }
+  
   public void testIssue() throws Exception {
     assertEquals("http://www.example.com/Issue.aspx?issueid=111111&journalid=77",
                  norm.normalizeUrl("http://www.example.com/Issue.aspx?issueid=111111&journalid=77", null));

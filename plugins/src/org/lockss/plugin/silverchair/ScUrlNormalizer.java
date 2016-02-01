@@ -56,10 +56,10 @@ public class ScUrlNormalizer implements UrlNormalizer {
   private static final String ATAB_CANONICAL = "";
   
   private static final Pattern ARTICLE_PATTERN = Pattern.compile("/article\\.aspx\\?articleid=(\\d+)", Pattern.CASE_INSENSITIVE);
-  private static final String ARTICLE_CANONICAL = "/article.aspx?articleid=$2";
+  private static final String ARTICLE_CANONICAL = "/article.aspx?articleid=$1";
 
   private static final Pattern PROCEEDING_PATTERN = Pattern.compile("/proceeding\\.aspx\\?articleid=(\\d+)", Pattern.CASE_INSENSITIVE);
-  private static final String PROCEEDING_CANONICAL = "/proceeding.aspx?articleid=$2";
+  private static final String PROCEEDING_CANONICAL = "/proceeding.aspx?articleid=$1";
 
   private static final Pattern ISSUE_PATTERN = Pattern.compile("/Issue\\.aspx\\?(issueid=(\\d+)&journalid=(\\d+)|journalid=(\\d+)&issueid=(\\d+))", Pattern.CASE_INSENSITIVE);
   private static final String ISSUE_CANONICAL = "/Issue.aspx?issueid=$2$5&journalid=$3$4";
