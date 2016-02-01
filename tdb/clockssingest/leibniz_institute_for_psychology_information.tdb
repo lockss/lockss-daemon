@@ -82,7 +82,7 @@
       param[base_url] = http://jnc.psychopen.eu/
       param[journal_id] = jnc
 
-      au < ready ; exists ; 2015 ; Journal of Numerical Cognition Volume 1 ; 1 ; 2015 >
+      au < crawling ; exists ; 2015 ; Journal of Numerical Cognition Volume 1 ; 1 ; 2015 >
       au < expected ; exists ; 2016 ; Journal of Numerical Cognition Volume 2 ; 2 ; 2016 >
 
   }
