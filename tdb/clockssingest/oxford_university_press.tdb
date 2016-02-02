@@ -22802,6 +22802,8 @@
     au < ready ; exists ; 2015 ; Toxicological Sciences Volume 147 ; 147 ; >
     au < ready ; exists ; 2015 ; Toxicological Sciences Volume 148 ; 148 ; >
     au < manifest ; exists ; 2016 ; Toxicological Sciences Volume 149 ; 149 ; >
+    au < expected ; exists ; 2016 ; Toxicological Sciences Volume 150 ; 150 ; >
+    au < expected ; exists ; 2016 ; Toxicological Sciences Volume 151 ; 151 ; >
 
     }
 
@@ -24433,4 +24435,349 @@
 
   }
 
+  {
+
+    title <
+      name = American Journal of Clinical Pathology ;
+      issn = 0002-9173 ;
+      eissn = 1943-7722
+    >
+
+      param[base_url] = http://www.ajcp.oxfordjournals.org/
+      pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+      au < exists ; exists ; 2015 ; American Journal of Clinical Pathology Volume 143 ; 143 ; >
+      au < exists ; exists ; 2015 ; American Journal of Clinical Pathology Volume 144 ; 144 ; >
+      au < exists ; exists ; 2016 ; American Journal of Clinical Pathology Volume 145 ; 145 ; >
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Legal History ;
+      issn = 0002-9319 ;
+      eissn = 2161-797X
+    >
+
+      param[base_url] = http://ajlh.oxfordjournals.org/
+      pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+      au < exists ; exists ; 2014 ; American Journal of Legal History Volume 54 ; 54 ; >
+      au < exists ; exists ; 2015 ; American Journal of Legal History Volume 55 ; 55 ; >
+      au < exists ; exists ; 2016 ; American Journal of Legal History Volume 56 ; 56 ; >
+
+  }
+
+  {
+
+    title <
+      name = Aristotelian Society Supplementary Volume 
+    >
+
+      param[base_url] = http://aristoteliansupp.oxfordjournals.org/
+      pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+      au < exists ; exists ; 2014 ; Aristotelian Society Supplementary Volume Volume 88 ; 88 ; >
+      au < exists ; exists ; 2015 ; Aristotelian Society Supplementary Volume Volume 89 ; 89 ; >
+      au < exists ; exists ; 2016 ; Aristotelian Society Supplementary Volume Volume 90 ; 90 ; >
+
+  }
+
+  {
+
+    title <
+      name = Background ;
+      issn = 0361-5448
+    >
+
+      param[base_url] = http://background.oxfordjournals.org/
+      pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+      au < exists ; exists ; 1962-1963 ; Background Volume 6 ; 6 ; >
+      au < exists ; exists ; 1963-1964 ; Background Volume 7 ; 7 ; >
+      au < exists ; exists ; 1964-1965 ; Background Volume 8 ; 8 ; >
+      au < exists ; exists ; 1965-1966 ; Background Volume 9 ; 9 ; >
+      au < exists ; exists ; 1966 ; Background Volume 10 ; 10 ; >
+
+  }
+
+  {
+
+    title <
+      name = Background on World Politics ;
+      issn = 1533-6689
+    >
+
+      param[base_url] = http://backgroundwp.oxfordjournals.org/
+      pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+      au < exists ; exists ; 1961 ; Background on World Politics Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+    title <
+      name = Critical Values ;
+      issn = 2378-8321 ;
+      eissn = 2378-8372
+    >
+
+      param[base_url] = http://criticalvalues.oxfordjournals.org/
+      pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+      au < exists ; exists ; 2014 ; Critical Values Volume 7 ; 7 ; >
+      au < exists ; exists ; 2015 ; Critical Values Volume 8 ; 8 ; >
+      au < exists ; exists ; 2016 ; Critical Values Volume 9 ; 9 ; >
+
+  }
+
+  {
+
+    title <
+      name = Current Zoology ;
+      issn = 1674-5507 ;
+      eissn = 2396-9814
+    >
+
+      param[base_url] = http://cz.oxfordjournals.org/
+      pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+      au < expected ; exists ; 2016 ; Current Zoology Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+    title <
+      name = Dynamics and Statistics of the Climate System 
+    >
+
+      param[base_url] = http://climatesystem.oxfordjournals.org/
+      pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+      au < exists ; exists ;    1 ; Dynamics and Statistics of the Climate System Volume 1 ; 1 ; >
+      au < exists ; exists ;    2 ; Dynamics and Statistics of the Climate System Volume 2 ; 2 ; >
+      au < exists ; exists ;    3 ; Dynamics and Statistics of the Climate System Volume 3 ; 3 ; >
+      au < exists ; exists ;    4 ; Dynamics and Statistics of the Climate System Volume 4 ; 4 ; >
+      au < exists ; exists ;    5 ; Dynamics and Statistics of the Climate System Volume 5 ; 5 ; >
+      au < exists ; exists ;    6 ; Dynamics and Statistics of the Climate System Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+    title <
+      name = Environmental Epigenetics 
+    >
+
+      param[base_url] = http://eep.oxfordjournals.org/
+      pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+      au < exists ; exists ;    1 ; Environmental Epigenetics Volume 1 ; 1 ; >
+      au < exists ; exists ;    2 ; Environmental Epigenetics Volume 2 ; 2 ; >
+      au < exists ; exists ;    3 ; Environmental Epigenetics Volume 3 ; 3 ; >
+      au < exists ; exists ;    4 ; Environmental Epigenetics Volume 4 ; 4 ; >
+      au < exists ; exists ;    5 ; Environmental Epigenetics Volume 5 ; 5 ; >
+      au < exists ; exists ;    6 ; Environmental Epigenetics Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+    title <
+      name = European Heart Journal - Cardiovascular Pharmacotherapy 
+    >
+
+      param[base_url] = http://ehjcvp.oxfordjournals.org/
+      pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+      au < exists ; exists ;    1 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 1 ; 1 ; >
+      au < exists ; exists ;    2 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 2 ; 2 ; >
+      au < exists ; exists ;    3 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 3 ; 3 ; >
+      au < exists ; exists ;    4 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 4 ; 4 ; >
+      au < exists ; exists ;    5 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 5 ; 5 ; >
+      au < exists ; exists ;    6 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Crohn's and Colitis Supplements 
+    >
+
+      param[base_url] = http://ecco-jccs.oxfordjournals.org/
+      pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+      au < exists ; exists ;    1 ; Journal of Crohn's and Colitis Supplements Volume 1 ; 1 ; >
+      au < exists ; exists ;    2 ; Journal of Crohn's and Colitis Supplements Volume 2 ; 2 ; >
+      au < exists ; exists ;    3 ; Journal of Crohn's and Colitis Supplements Volume 3 ; 3 ; >
+      au < exists ; exists ;    4 ; Journal of Crohn's and Colitis Supplements Volume 4 ; 4 ; >
+      au < exists ; exists ;    5 ; Journal of Crohn's and Colitis Supplements Volume 5 ; 5 ; >
+      au < exists ; exists ;    6 ; Journal of Crohn's and Colitis Supplements Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Language Evolution 
+    >
+
+      param[base_url] = http://jole.oxfordjournals.org/
+      pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+      au < exists ; exists ;    1 ; Journal of Language Evolution Volume 1 ; 1 ; >
+      au < exists ; exists ;    2 ; Journal of Language Evolution Volume 2 ; 2 ; >
+      au < exists ; exists ;    3 ; Journal of Language Evolution Volume 3 ; 3 ; >
+      au < exists ; exists ;    4 ; Journal of Language Evolution Volume 4 ; 4 ; >
+      au < exists ; exists ;    5 ; Journal of Language Evolution Volume 5 ; 5 ; >
+      au < exists ; exists ;    6 ; Journal of Language Evolution Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Neuropathology & Experimental Neurology 
+    >
+
+      param[base_url] = http://www.jnen.oxfordjournals.org/
+      pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+      au < exists ; exists ;    1 ; Journal of Neuropathology & Experimental Neurology Volume 1 ; 1 ; >
+      au < exists ; exists ;    2 ; Journal of Neuropathology & Experimental Neurology Volume 2 ; 2 ; >
+      au < exists ; exists ;    3 ; Journal of Neuropathology & Experimental Neurology Volume 3 ; 3 ; >
+      au < exists ; exists ;    4 ; Journal of Neuropathology & Experimental Neurology Volume 4 ; 4 ; >
+      au < exists ; exists ;    5 ; Journal of Neuropathology & Experimental Neurology Volume 5 ; 5 ; >
+      au < exists ; exists ;    6 ; Journal of Neuropathology & Experimental Neurology Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Travel Medicine 
+    >
+
+      param[base_url] = http://jtm.oxfordjournals.org/
+      pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+      au < exists ; exists ;    1 ; Journal of Travel Medicine Volume 1 ; 1 ; >
+      au < exists ; exists ;    2 ; Journal of Travel Medicine Volume 2 ; 2 ; >
+      au < exists ; exists ;    3 ; Journal of Travel Medicine Volume 3 ; 3 ; >
+      au < exists ; exists ;    4 ; Journal of Travel Medicine Volume 4 ; 4 ; >
+      au < exists ; exists ;    5 ; Journal of Travel Medicine Volume 5 ; 5 ; >
+      au < exists ; exists ;    6 ; Journal of Travel Medicine Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+    title <
+      name = Multimedia Manual Cardio-Thoracic Surgery 
+    >
+
+      param[base_url] = http://mmcts.oxfordjournals.org/
+      pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+      au < exists ; exists ;    1 ; Multimedia Manual Cardio-Thoracic Surgery Volume 1 ; 1 ; >
+      au < exists ; exists ;    2 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2 ; 2 ; >
+      au < exists ; exists ;    3 ; Multimedia Manual Cardio-Thoracic Surgery Volume 3 ; 3 ; >
+      au < exists ; exists ;    4 ; Multimedia Manual Cardio-Thoracic Surgery Volume 4 ; 4 ; >
+      au < exists ; exists ;    5 ; Multimedia Manual Cardio-Thoracic Surgery Volume 5 ; 5 ; >
+      au < exists ; exists ;    6 ; Multimedia Manual Cardio-Thoracic Surgery Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+    title <
+      name = Music Therapy 
+    >
+
+      param[base_url] = http://musictherapy.oxfordjournals.org/
+      pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+      au < exists ; exists ;    1 ; Music Therapy Volume 1 ; 1 ; >
+      au < exists ; exists ;    2 ; Music Therapy Volume 2 ; 2 ; >
+      au < exists ; exists ;    3 ; Music Therapy Volume 3 ; 3 ; >
+      au < exists ; exists ;    4 ; Music Therapy Volume 4 ; 4 ; >
+      au < exists ; exists ;    5 ; Music Therapy Volume 5 ; 5 ; >
+      au < exists ; exists ;    6 ; Music Therapy Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+    title <
+      name = Pain Medicine 
+    >
+
+      param[base_url] = http://www.painmedicine.oxfordjournals.org/
+      pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+      au < exists ; exists ;    1 ; Pain Medicine Volume 1 ; 1 ; >
+      au < exists ; exists ;    2 ; Pain Medicine Volume 2 ; 2 ; >
+      au < exists ; exists ;    3 ; Pain Medicine Volume 3 ; 3 ; >
+      au < exists ; exists ;    4 ; Pain Medicine Volume 4 ; 4 ; >
+      au < exists ; exists ;    5 ; Pain Medicine Volume 5 ; 5 ; >
+      au < exists ; exists ;    6 ; Pain Medicine Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+    title <
+      name = Proceedings of the Aristotelian Society 
+    >
+
+      param[base_url] = http://aristotelian.oxfordjournals.org/
+      pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+      au < exists ; exists ;    1 ; Proceedings of the Aristotelian Society Volume 1 ; 1 ; >
+      au < exists ; exists ;    2 ; Proceedings of the Aristotelian Society Volume 2 ; 2 ; >
+      au < exists ; exists ;    3 ; Proceedings of the Aristotelian Society Volume 3 ; 3 ; >
+      au < exists ; exists ;    4 ; Proceedings of the Aristotelian Society Volume 4 ; 4 ; >
+      au < exists ; exists ;    5 ; Proceedings of the Aristotelian Society Volume 5 ; 5 ; >
+      au < exists ; exists ;    6 ; Proceedings of the Aristotelian Society Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+    title <
+      name = Social Work Research and Abstracts 
+    >
+
+      param[base_url] = http://swra.oxfordjournals.org/
+      pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+      au < exists ; exists ;    1 ; Social Work Research and Abstracts Volume 1 ; 1 ; >
+      au < exists ; exists ;    2 ; Social Work Research and Abstracts Volume 2 ; 2 ; >
+      au < exists ; exists ;    3 ; Social Work Research and Abstracts Volume 3 ; 3 ; >
+      au < exists ; exists ;    4 ; Social Work Research and Abstracts Volume 4 ; 4 ; >
+      au < exists ; exists ;    5 ; Social Work Research and Abstracts Volume 5 ; 5 ; >
+      au < exists ; exists ;    6 ; Social Work Research and Abstracts Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+    title <
+      name = Western Historical Quarterly 
+    >
+
+      param[base_url] = http://www.whq.oxfordjournals.org/
+      pluginSuffix = oup.ClockssOUPDrupalPlugin
+
+      au < exists ; exists ;    1 ; Western Historical Quarterly Volume 1 ; 1 ; >
+      au < exists ; exists ;    2 ; Western Historical Quarterly Volume 2 ; 2 ; >
+      au < exists ; exists ;    3 ; Western Historical Quarterly Volume 3 ; 3 ; >
+      au < exists ; exists ;    4 ; Western Historical Quarterly Volume 4 ; 4 ; >
+      au < exists ; exists ;    5 ; Western Historical Quarterly Volume 5 ; 5 ; >
+      au < exists ; exists ;    6 ; Western Historical Quarterly Volume 6 ; 6 ; >
+  }
 }
