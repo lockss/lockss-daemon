@@ -73,7 +73,7 @@ public class MetadataManagerSql {
       + BIB_ITEM_TABLE;
 
   // Query to count publication items that have associated AU_ITEMs
-  // of type 'journal' or 'book'
+  // of type 'journal' or 'book' or 'proceedings'.
   private static final String COUNT_PUBLICATION_QUERY = 
         "select count(distinct "
       + PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN + ") from "
@@ -86,7 +86,8 @@ public class MetadataManagerSql {
       + " and " + MD_ITEM_TABLE + "." + MD_ITEM_TYPE_SEQ_COLUMN
       + "=" + MD_ITEM_TYPE_TABLE + "." + MD_ITEM_TYPE_SEQ_COLUMN
       + " and " + MD_ITEM_TYPE_TABLE + "." + TYPE_NAME_COLUMN
-      + " in ('journal','book')";
+      + " in ('" + MD_ITEM_TYPE_JOURNAL + "','" + MD_ITEM_TYPE_BOOK + "','"
+      + MD_ITEM_TYPE_PROCEEDINGS + "')";
 
   // Query to count PUBLISHER items that have associated AU_ITEMs
   private static final String COUNT_PUBLISHER_QUERY = 
@@ -1024,8 +1025,13 @@ public class MetadataManagerSql {
       + " and m." + MD_ITEM_SEQ_COLUMN + " = issn." + MD_ITEM_SEQ_COLUMN
       + " and m." + MD_ITEM_TYPE_SEQ_COLUMN
       + " = mit." + MD_ITEM_TYPE_SEQ_COLUMN
-      + " and mit." + TYPE_NAME_COLUMN + " != 'book_series'"
-      + " and mit." + TYPE_NAME_COLUMN + " != 'journal'"
+      + " and mit." + TYPE_NAME_COLUMN + " != '" + MD_ITEM_TYPE_BOOK_SERIES
+      + "'"
+      + " and mit." + TYPE_NAME_COLUMN + " != '" + MD_ITEM_TYPE_JOURNAL + "'"
+      + " and mit." + TYPE_NAME_COLUMN + " != '" + MD_ITEM_TYPE_PROCEEDINGS
+      + "'"
+      + " and mit." + TYPE_NAME_COLUMN + " != '"
+      + MD_ITEM_TYPE_UNKNOWN_PUBLICATION + "'"
       + " order by mn." + NAME_COLUMN
       + ", mit." + TYPE_NAME_COLUMN
       + ", issn." + ISSN_COLUMN;
@@ -1046,7 +1052,7 @@ public class MetadataManagerSql {
       + " and m." + MD_ITEM_SEQ_COLUMN + " = isbn." + MD_ITEM_SEQ_COLUMN
       + " and m." + MD_ITEM_TYPE_SEQ_COLUMN
       + " = mit." + MD_ITEM_TYPE_SEQ_COLUMN
-      + " and mit." + TYPE_NAME_COLUMN + " != 'book'"
+      + " and mit." + TYPE_NAME_COLUMN + " != '" + MD_ITEM_TYPE_BOOK + "'"
       + " order by mn." + NAME_COLUMN
       + ", mit." + TYPE_NAME_COLUMN
       + ", isbn." + ISBN_COLUMN;
@@ -1409,7 +1415,8 @@ public class MetadataManagerSql {
       + " and pn." + PUBLISHER_SEQ_COLUMN + " = pr." + PUBLISHER_SEQ_COLUMN
       + " and (mit1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 3"
       + " or mit1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 5"
-      + " or mit1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 6)"
+      + " or mit1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 6"
+      + " or mit1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 8)"
       + " and " + DOI_TABLE + "." + DOI_COLUMN + " is null"
       + " order by \"col7\", \"col6\", \"col5\", \"col3\", \"col1\"";
 
@@ -1455,7 +1462,8 @@ public class MetadataManagerSql {
       + " and pn." + PUBLISHER_SEQ_COLUMN + " = pr." + PUBLISHER_SEQ_COLUMN
       + " and (mit1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 3"
       + " or mit1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 5"
-      + " or mit1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 6)"
+      + " or mit1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 6"
+      + " or mit1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 8)"
       + " and " + URL_TABLE + "." + FEATURE_COLUMN + " is null"
       + " order by \"col7\", \"col6\", \"col5\", \"col3\", \"col1\"";
 
@@ -2490,7 +2498,8 @@ public class MetadataManagerSql {
    * @param publisherSeq
    *          A Long with the publisher identifier.
    * @param parentMdItemSeq
-   *          A Long with the publication parent metadata item parent identifier.
+   *          A Long with the publication parent metadata item parent
+   *          identifier.
    * @param mdItemType
    *          A String with the type of publication.
    * @param title

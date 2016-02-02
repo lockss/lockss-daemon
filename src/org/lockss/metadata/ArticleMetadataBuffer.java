@@ -184,9 +184,10 @@ class ArticleMetadataBuffer {
       // get article type from metadata or infer it if not set
       articleType = md.get(MetadataField.FIELD_ARTICLE_TYPE);
       if (StringUtil.isNullString(articleType)) {
-        if (   MetadataField.PUBLICATION_TYPE_BOOK.equals(publicationType)
-            || MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(publicationType)) {
-          if (    StringUtil.isNullString(startPage)
+        if (MetadataField.PUBLICATION_TYPE_BOOK.equals(publicationType)
+            || MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(publicationType)
+           ) {
+          if (StringUtil.isNullString(startPage)
               || !StringUtil.isNullString(endPage)
               || !StringUtil.isNullString(itemNumber)) {
             // assume book chapter if startPage, endPage, or itemNumber present
@@ -195,9 +196,14 @@ class ArticleMetadataBuffer {
             // assume book volume if none of these fields are present
             articleType = MetadataField.ARTICLE_TYPE_BOOKVOLUME;
           }
-        } else if (MetadataField.PUBLICATION_TYPE_JOURNAL.equals(publicationType)) {
+        } else if (MetadataField.PUBLICATION_TYPE_JOURNAL.
+            equals(publicationType)) {
           // assume article for journal
           articleType = MetadataField.ARTICLE_TYPE_JOURNALARTICLE;          
+        } else if (MetadataField.PUBLICATION_TYPE_PROCEEDINGS.
+            equals(publicationType)) {
+          // Assume article for proceedings publication.
+          articleType = MetadataField.ARTICLE_TYPE_PROCEEDINGSARTICLE;          
         }
       }
     }

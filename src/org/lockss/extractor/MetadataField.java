@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,7 +36,6 @@ import java.util.*;
 import org.lockss.util.*;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -151,7 +150,8 @@ public class MetadataField {
       String eisbn = StringUtils.removeStartIgnoreCase(val, PROTOCOL_EISBN);
       if (!MetadataUtil.isIsbn(eisbn, false)) { // ignore publisher malformed
                                                 // ISBNs
-        throw new MetadataException.ValidationException("Illegal EISBN: " + val);
+        throw new MetadataException.ValidationException("Illegal EISBN: "
+            + val);
       }
       return eisbn;
     }
@@ -167,7 +167,8 @@ public class MetadataField {
         throws MetadataException.ValidationException {
       // normalize so that it is never set to null or to empty string
       if( (val == null) || val.isEmpty()) {
-        throw new MetadataException.ValidationException("Illegal provider: empty string"); 
+        throw new MetadataException.ValidationException(
+            "Illegal provider: empty string"); 
       }
       return val;
     }
@@ -182,7 +183,8 @@ public class MetadataField {
         throws MetadataException.ValidationException {
       // normalize so that it is never set to null or to empty string
       if( (val == null) || val.isEmpty()) {
-        throw new MetadataException.ValidationException("Illegal publisher: empty string"); 
+        throw new MetadataException.ValidationException(
+            "Illegal publisher: empty string"); 
       }
       return val;
     }
@@ -196,7 +198,12 @@ public class MetadataField {
   public static final String PUBLICATION_TYPE_BOOKSERIES = "bookSeries";
   /** Publication is a journal. */
   public static final String PUBLICATION_TYPE_JOURNAL = "journal";
-  
+  /** Publication is a proceedings publication. */
+  public static final String PUBLICATION_TYPE_PROCEEDINGS = "proceedings";
+  /** Publication is an unknown publication. */
+  public static final String PUBLICATION_TYPE_UNKNOWN_PUBLICATION =
+      "unknown_publication";
+
   public static final String KEY_PUBLICATION_TYPE = "pubtype";
 
   /** Publication unit is a journal article */
@@ -205,7 +212,12 @@ public class MetadataField {
   public static final String ARTICLE_TYPE_BOOKCHAPTER = "book_chapter";
   /** Publication unit is a whole book or volume */
   public static final String ARTICLE_TYPE_BOOKVOLUME = "book_volume";
-  
+  /** Publication unit is a proceedings article */
+  public static final String ARTICLE_TYPE_PROCEEDINGSARTICLE =
+      "proceedings_article";
+  /** Publication unit is an unknown article */
+  public static final String ARTICLE_TYPE_UNKNOWNARTICLE = "unknown_article";
+
   public static final String KEY_ARTICLE_TYPE = "articletype";
 
   // You cannot put in an empty string or a null value for publication type
@@ -267,7 +279,8 @@ public class MetadataField {
   private static Validator pubtitlevalid = new Validator() {
     public String validate(ArticleMetadata am,MetadataField field,String val)
         throws MetadataException.ValidationException {
-      // normalize publication title so that it is never set to null or to empty string
+      // Normalize publication title so that it is never set to null or to empty
+      // string.
       if( (val == null) || val.isEmpty()) {
         throw new MetadataException.ValidationException(
             "Illegal publication title: empty string"); 
@@ -279,7 +292,8 @@ public class MetadataField {
       KEY_PUBLICATION_TITLE, Cardinality.Single, pubtitlevalid);
   /** @deprecated use {@link #FIELD_PUBLICATION_TITLE} instead */
   @Deprecated
-  public static final MetadataField FIELD_JOURNAL_TITLE = FIELD_PUBLICATION_TITLE;
+  public static final MetadataField FIELD_JOURNAL_TITLE =
+  FIELD_PUBLICATION_TITLE;
 
 
   public static final String KEY_SERIES_TITLE = "series.title";
@@ -288,7 +302,8 @@ public class MetadataField {
   private static Validator seriestitlevalid = new Validator() {
     public String validate(ArticleMetadata am,MetadataField field,String val)
         throws MetadataException.ValidationException {
-      // normalize publication title so that it is never set to null or to empty string
+      // Normalize publication title so that it is never set to null or to empty
+      // string.
       if( (val == null) || val.isEmpty()) {
         throw new MetadataException.ValidationException(
             "Illegal series title: empty string"); 
@@ -377,8 +392,8 @@ public class MetadataField {
 
   /** The volume of a serial publication (Google Scholar non-standard). */
   public static final String DC_KEY_CITATION_VOLUME = "dc.citation_volume";
-  public static final MetadataField DC_FIELD_CITATION_VOLUME = new MetadataField(
-      DC_KEY_CITATION_VOLUME, Cardinality.Single);
+  public static final MetadataField DC_FIELD_CITATION_VOLUME =
+      new MetadataField(DC_KEY_CITATION_VOLUME, Cardinality.Single);
 
   /** An entity responsible for making contributions to the resource. */
   public static final String DC_KEY_CONTRIBUTOR = "dc.contributor";
@@ -1125,6 +1140,4 @@ public class MetadataField {
     public String extract(ArticleMetadata am, MetadataField field,String value);
 
   }
-
-  
 }

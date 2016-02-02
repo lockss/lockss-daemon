@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,7 +32,6 @@
 package org.lockss.metadata;
 
 import static org.lockss.db.SqlConstants.*;
-import static org.lockss.metadata.MetadataManager.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -45,6 +44,7 @@ import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.exporter.biblio.BibliographicUtil;
+import org.lockss.extractor.MetadataField;
 import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
 
@@ -122,10 +122,10 @@ final public class MetadataDatabaseUtil {
     @Override
     public String getPublicationType() {
       if (publicationType == null) {
-        return "journal";
+        return MetadataField.PUBLICATION_TYPE_JOURNAL;
       }
-      return (publicationType.equals("book_series")) 
-          ? "bookSeries" : publicationType;
+      return (publicationType.equals(MD_ITEM_TYPE_BOOK_SERIES)) 
+          ? MetadataField.PUBLICATION_TYPE_BOOKSERIES : publicationType;
     }
 
     @Override
@@ -332,9 +332,11 @@ from
   , md_item_name title
   , md_item mi1
       left join issn e_issn1
-        on mi1.md_item_seq = e_issn1.md_item_seq and e_issn1.issn_type = 'e_issn' 
+        on mi1.md_item_seq = e_issn1.md_item_seq
+          and e_issn1.issn_type = 'e_issn' 
       left join issn p_issn1
-        on mi1.md_item_seq = p_issn1.md_item_seq and p_issn1.issn_type = 'p_issn'
+        on mi1.md_item_seq = p_issn1.md_item_seq
+          and p_issn1.issn_type = 'p_issn'
       left join isbn e_isbn
         on mi1.md_item_seq = e_isbn.md_item_seq and e_isbn.isbn_type = 'e_isbn'
       left join isbn p_isbn
@@ -342,15 +344,18 @@ from
       left join md_item mi0
         on mi0.md_item_seq = mi1.parent_seq
       left join md_item_name series_title
-        on mi0.md_item_seq = series_title.md_item_seq and series_title.name_type = 'primary'
+        on mi0.md_item_seq = series_title.md_item_seq
+          and series_title.name_type = 'primary'
       left join publication pn0
         on mi0.md_item_seq = pn0.md_item_seq
       left join md_item_type mit0
         on mi0.md_item_type_seq = mit0.md_item_type_seq
       left join issn e_issn0
-        on mi0.md_item_seq = e_issn0.md_item_seq and e_issn0.issn_type = 'e_issn' 
+        on mi0.md_item_seq = e_issn0.md_item_seq
+          and e_issn0.issn_type = 'e_issn' 
       left join issn p_issn0
-        on mi0.md_item_seq = p_issn0.md_item_seq and p_issn0.issn_type = 'p_issn'
+        on mi0.md_item_seq = p_issn0.md_item_seq
+          and p_issn0.issn_type = 'p_issn'
       left join md_item mi2
         on mi2.parent_seq = mi1.md_item_seq
       left join bib_item b
@@ -435,7 +440,8 @@ where
       + "   and mi1." + MD_ITEM_TYPE_SEQ_COLUMN
       + "     = mit1." + MD_ITEM_TYPE_SEQ_COLUMN
       + "   and mit1." + TYPE_NAME_COLUMN
-      + "     in ('" + MD_ITEM_TYPE_JOURNAL + "','" + MD_ITEM_TYPE_BOOK + "')"
+      + "     in ('" + MD_ITEM_TYPE_JOURNAL + "','" + MD_ITEM_TYPE_BOOK + "','"
+      +                MD_ITEM_TYPE_PROCEEDINGS + "')"
       + "   and mi1." + MD_ITEM_SEQ_COLUMN + " = title." + MD_ITEM_SEQ_COLUMN
       + "   and title." + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'"
       + "   and mi2." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN

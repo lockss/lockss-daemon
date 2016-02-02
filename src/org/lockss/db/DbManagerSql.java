@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2014-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -9011,6 +9011,31 @@ public class DbManagerSql {
 
     // Create the necessary indices.
     executeDdlQueries(conn, VERSION_26_INDEX_CREATE_QUERIES);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates the database from version 26 to version 27.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred updating the database.
+   */
+  void updateDatabaseFrom26To27(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "updateDatabaseFrom26To27(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    // Add new metadata item types.
+    addMetadataItemType(conn, MD_ITEM_TYPE_PROCEEDINGS);
+    addMetadataItemType(conn, MD_ITEM_TYPE_PROCEEDINGS_ARTICLE);
+    addMetadataItemType(conn, MD_ITEM_TYPE_UNKNOWN_PUBLICATION);
+    addMetadataItemType(conn, MD_ITEM_TYPE_UNKNOWN_ARTICLE);
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }

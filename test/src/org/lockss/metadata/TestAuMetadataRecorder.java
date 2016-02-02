@@ -158,6 +158,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     runRecordMultipleJournalsAndPublishers();
     runValidateMdItemTypeHierarchyTest();
     runValidateMetadataTest();
+    runRecordProceedingsTest();
   }
 
   ReindexingTask newReindexingTask(ArchivalUnit au,
@@ -1395,6 +1396,10 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 	.validateMdItemTypeHierarchy(MetadataField.PUBLICATION_TYPE_BOOKSERIES,
 	    MetadataField.ARTICLE_TYPE_BOOKVOLUME));
 
+    assertTrue(amr
+	.validateMdItemTypeHierarchy(MetadataField.PUBLICATION_TYPE_PROCEEDINGS,
+	    MetadataField.ARTICLE_TYPE_PROCEEDINGSARTICLE));
+
     assertFalse(amr.validateMdItemTypeHierarchy(null,
 	MetadataField.ARTICLE_TYPE_JOURNALARTICLE));
 
@@ -1417,6 +1422,13 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 	    MetadataField.ARTICLE_TYPE_BOOKVOLUME));
 
     assertFalse(amr.validateMdItemTypeHierarchy(null,
+	MetadataField.ARTICLE_TYPE_PROCEEDINGSARTICLE));
+
+    assertFalse(amr
+	.validateMdItemTypeHierarchy(MetadataField.PUBLICATION_TYPE_PROCEEDINGS,
+	    MetadataField.ARTICLE_TYPE_JOURNALARTICLE));
+
+    assertFalse(amr.validateMdItemTypeHierarchy(null,
 	MetadataField.PUBLICATION_TYPE_JOURNAL));
 
     assertFalse(amr.validateMdItemTypeHierarchy(null,
@@ -1424,6 +1436,9 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
     assertFalse(amr.validateMdItemTypeHierarchy(null,
 	MetadataField.PUBLICATION_TYPE_BOOKSERIES));
+
+    assertFalse(amr.validateMdItemTypeHierarchy(null,
+	MetadataField.PUBLICATION_TYPE_PROCEEDINGS));
   }
 
   private void runValidateMetadataTest() throws Exception {
@@ -1481,6 +1496,94 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     mandatoryFields.add("badField");
 
     amr.validateMetadata(ami, mandatoryFields);
+  }
+
+  private void runRecordProceedingsTest() throws Exception {
+    ArticleMetadata am = new ArticleMetadata();
+    am.put(MetadataField.FIELD_PUBLICATION_TYPE,
+	MetadataField.PUBLICATION_TYPE_PROCEEDINGS);
+    am.put(MetadataField.FIELD_ARTICLE_TYPE,
+	MetadataField.ARTICLE_TYPE_PROCEEDINGSARTICLE);
+    am.put(MetadataField.FIELD_PUBLICATION_TITLE, "Proceedings Title");
+    am.put(MetadataField.FIELD_DATE, "2016-01-28");
+    am.put(MetadataField.FIELD_ISSN,"12345678");
+    am.put(MetadataField.FIELD_EISSN,"43217654");
+    am.put(MetadataField.FIELD_ARTICLE_TITLE, "Article Title");
+    am.put(MetadataField.FIELD_PUBLISHER, "Publisher");
+    am.put(MetadataField.FIELD_AUTHOR, "Author,First");
+    am.put(MetadataField.FIELD_AUTHOR, "Author,Second");
+    am.put(MetadataField.FIELD_ACCESS_URL, "http://xyz.com/1");
+    am.put(MetadataField.FIELD_ITEM_NUMBER, "3");
+
+    ArticleMetadataBuffer amBuffer = new ArticleMetadataBuffer(getTempDir());
+    amBuffer.add(am);
+
+    Connection conn = null;
+
+    try {
+      conn = dbManager.getConnection();
+
+      assertEquals(0, countItemsByTypeName(conn, MD_ITEM_TYPE_BOOK_SERIES));
+      assertEquals(1, countItemsByTypeName(conn, MD_ITEM_TYPE_BOOK));
+      assertEquals(0, countItemsByTypeName(conn, MD_ITEM_TYPE_BOOK_CHAPTER));
+      assertEquals(1, countItemsByTypeName(conn, MD_ITEM_TYPE_JOURNAL));
+      assertEquals(0, countItemsByTypeName(conn, MD_ITEM_TYPE_JOURNAL_ARTICLE));
+      assertEquals(0, countItemsByTypeName(conn, MD_ITEM_TYPE_BOOK_VOLUME));
+      assertEquals(0, countItemsByTypeName(conn, MD_ITEM_TYPE_PROCEEDINGS));
+      assertEquals(0, countItemsByTypeName(conn,
+	  MD_ITEM_TYPE_PROCEEDINGS_ARTICLE));
+      assertEquals(0, countItemsByTypeName(conn,
+	  MD_ITEM_TYPE_UNKNOWN_PUBLICATION));
+      assertEquals(0, countItemsByTypeName(conn,
+	  MD_ITEM_TYPE_UNKNOWN_ARTICLE));
+
+      new AuMetadataRecorder(null, metadataManager, sau0).storeMetadata(conn,
+	  amBuffer.iterator().next());
+
+      assertEquals(0, countItemsByTypeName(conn, MD_ITEM_TYPE_BOOK_SERIES));
+      assertEquals(1, countItemsByTypeName(conn, MD_ITEM_TYPE_BOOK));
+      assertEquals(0, countItemsByTypeName(conn, MD_ITEM_TYPE_BOOK_CHAPTER));
+      assertEquals(1, countItemsByTypeName(conn, MD_ITEM_TYPE_JOURNAL));
+      assertEquals(0, countItemsByTypeName(conn, MD_ITEM_TYPE_JOURNAL_ARTICLE));
+      assertEquals(0, countItemsByTypeName(conn, MD_ITEM_TYPE_BOOK_VOLUME));
+      assertEquals(1, countItemsByTypeName(conn, MD_ITEM_TYPE_PROCEEDINGS));
+      assertEquals(1, countItemsByTypeName(conn,
+	  MD_ITEM_TYPE_PROCEEDINGS_ARTICLE));
+      assertEquals(0, countItemsByTypeName(conn,
+	  MD_ITEM_TYPE_UNKNOWN_PUBLICATION));
+      assertEquals(0, countItemsByTypeName(conn,
+	  MD_ITEM_TYPE_UNKNOWN_ARTICLE));
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+  }
+
+  private int countItemsByTypeName(Connection conn, String type)
+      throws SQLException, DbException {
+    int count = -1;
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+
+    try {
+      String query = "select count(*) from " + MD_ITEM_TABLE + " mi"
+	  + ", " + MD_ITEM_TYPE_TABLE + " mit"
+	  + " where mi." + MD_ITEM_TYPE_SEQ_COLUMN
+	  + " = mit." + MD_ITEM_TYPE_SEQ_COLUMN
+	  + " and mit." + TYPE_NAME_COLUMN + " = ?";
+
+      stmt = dbManager.prepareStatement(conn, query);
+      stmt.setString(1, type);
+      resultSet = dbManager.executeQuery(stmt);
+
+      if (resultSet.next()) {
+	count = resultSet.getInt(1);
+      }
+    } finally {
+      resultSet.close();
+      stmt.close();
+    }
+
+    return count;
   }
 
   private static class MySimulatedPlugin extends SimulatedPlugin {

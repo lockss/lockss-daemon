@@ -1288,7 +1288,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @param eIsbn
    *          A String with the electronic ISBN of the publication.
    * @param pubType
-   *          The type of publication: "journal", "book", or "bookSeries"
+   *          The type of publication: "journal", "book", "bookSeries" or
+   *          "proceedings".
    * @param seriesName
    *          A string with the name of the book series.
    * @param proprietarySeriesId
@@ -1320,7 +1321,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pubTitle = " + pubTitle);
 
     // Check whether it is a book series.
-    if (   MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(pubType)
+    if (MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(pubType)
         || !StringUtil.isNullString(seriesName)) {
       // Yes: Find or create the book series.
       log.debug3(DEBUG_HEADER + "is book series.");
@@ -1332,12 +1333,18 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           pIssn, eIssn, pIsbn, eIsbn, seriesTitle, proprietarySeriesId, 
 	  pubTitle, proprietaryId);
       // No: Check whether it is a book.
-    } else if (   MetadataField.PUBLICATION_TYPE_BOOK.equals(pubType)
+    } else if (MetadataField.PUBLICATION_TYPE_BOOK.equals(pubType)
                || isBook(pIsbn, eIsbn)) {
       // Yes: Find or create the book.
       log.debug3(DEBUG_HEADER + "is book.");
       publicationSeq = findOrCreateBook(conn, publisherSeq, null, 
           pIsbn, eIsbn, pubTitle, proprietaryId);
+      // No: Check whether it is a proceedings article.
+    } else if (MetadataField.PUBLICATION_TYPE_PROCEEDINGS.equals(pubType)) {
+      // Yes: Find or create the proceedings publication.
+      log.debug3(DEBUG_HEADER + "is proceedings.");
+      publicationSeq = findOrCreateProceedings(conn, publisherSeq, 
+          pIssn, eIssn, pubTitle, proprietaryId);
     } else {
       // No, it is a journal article: Find or create the journal.
       log.debug3(DEBUG_HEADER + "is journal.");
@@ -1708,6 +1715,96 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
       // No: Add to the database the journal name in the metadata as an
       // alternate, if new.
+      addNewMdItemName(conn, mdItemSeq, title);
+      log.debug3(DEBUG_HEADER + "added new title name.");
+
+      // Add to the database the ISSN values in the metadata, if new.
+      addNewMdItemIssns(conn, mdItemSeq, pIssn, eIssn);
+      log.debug3(DEBUG_HEADER + "added new title ISSNs.");
+
+      // Add to the database the proprietary identifier, if not there already.
+      addNewMdItemProprietaryIds(conn, mdItemSeq,
+	  Collections.singleton(proprietaryId));
+    }
+
+    return publicationSeq;
+  }
+
+  /**
+   * Provides the identifier of a proceedings publication if existing or after
+   * creating it otherwise.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publisherSeq
+   *          A Long with the publisher identifier.
+   * @param pIssn
+   *          A String with the print ISSN of the proceedings publication.
+   * @param eIssn
+   *          A String with the electronic ISSN of the proceedings publication.
+   * @param title
+   *          A String with the name of the proceedings publication.
+   * @param proprietaryId
+   *          A String with the proprietary identifier of the proceedings
+   *          publication.
+   * @return a Long with the identifier of the proceedings publication.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Long findOrCreateProceedings(Connection conn, Long publisherSeq, 
+      String pIssn, String eIssn, String title, String proprietaryId)
+      throws DbException {
+    final String DEBUG_HEADER = "findOrCreateProceedings(): ";
+    Long publicationSeq = null;
+    Long mdItemSeq = null;
+
+    // Skip it if it no title name or ISSNs, as it will not be possible to
+    // find the proceedings publication to which it belongs in the database.
+    if (StringUtil.isNullString(title) && pIssn == null && eIssn == null) {
+      log.error("Title for article cannot be created as it has no name or ISSN "
+	  + "values.");
+      return publicationSeq;
+    }
+
+    // Find the proceedings publication.
+    publicationSeq =
+	findPublication(conn, publisherSeq, title, pIssn, eIssn, null, null,
+			MD_ITEM_TYPE_PROCEEDINGS);
+    log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+
+    // Check whether it is a new proceedings publication.
+    if (publicationSeq == null) {
+      // Yes: Add to the database the new proceedings publication.
+      publicationSeq = addPublication(conn, publisherSeq, null, 
+	  MD_ITEM_TYPE_PROCEEDINGS, title);
+      log.debug3(DEBUG_HEADER + "new publicationSeq = " + publicationSeq);
+
+      // Skip it if the new proceedings publication could not be added.
+      if (publicationSeq == null) {
+	log.error("Publication for new proceedings publication '" + title
+	    + "' could not be created.");
+	return publicationSeq;
+      }
+
+      // Get the proceedings publication metadata item identifier.
+      mdItemSeq = findPublicationMetadataItem(conn, publicationSeq);
+      log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+
+      // Add to the database the new proceedings publication ISSN values.
+      mdManagerSql.addMdItemIssns(conn, mdItemSeq, pIssn, eIssn);
+      log.debug3(DEBUG_HEADER + "added title ISSNs.");
+
+      // Add to the database the new proceedings publication proprietary
+      // identifier.
+      addMdItemProprietaryIds(conn, mdItemSeq,
+	  Collections.singleton(proprietaryId));
+    } else {
+      // No: Get the proceedings publication metadata item identifier.
+      mdItemSeq = findPublicationMetadataItem(conn, publicationSeq);
+      log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+
+      // No: Add to the database the proceedings publication name in the
+      // metadata as an alternate, if new.
       addNewMdItemName(conn, mdItemSeq, title);
       log.debug3(DEBUG_HEADER + "added new title name.");
 
@@ -3153,6 +3250,45 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     publicationSeq =
 	findPublication(conn, publisherSeq, 
 	                title, pIssn, eIssn, null, null, MD_ITEM_TYPE_JOURNAL);
+    log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+
+    return publicationSeq;
+  }
+  
+  /**
+   * Provides the identifier of an existing proceedings publication, null
+   * otherwise.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param pIssn
+   *          A String with the print ISSN of the proceedings publication.
+   * @param eIssn
+   *          A String with the electronic ISSN of the proceedings publication.
+   * @param publisherSeq
+   *          A Long with the publisher identifier.
+   * @param title
+   *          A String with the name of the proceedings publication.
+   * @return a Long with the identifier of the proceedings publication.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Long findProceedings(Connection conn, Long publisherSeq, 
+      String pIssn, String eIssn, String title) throws DbException {
+    final String DEBUG_HEADER = "findProceedings(): ";
+    Long publicationSeq = null;
+
+    // Skip it if it no title name or ISSNs, as it will not be possible to
+    // find the proceedings publication to which it belongs in the database.
+    if (StringUtil.isNullString(title) && pIssn == null && eIssn == null) {
+      log.error("Title for article cannot be created as it has no name or ISSN "
+	  + "values.");
+      return publicationSeq;
+    }
+
+    // Find the proceedings publication.
+    publicationSeq = findPublication(conn, publisherSeq, title, pIssn, eIssn,
+	null, null, MD_ITEM_TYPE_PROCEEDINGS);
     log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
 
     return publicationSeq;
