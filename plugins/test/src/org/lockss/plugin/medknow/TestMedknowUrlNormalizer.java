@@ -75,6 +75,13 @@ public class TestMedknowUrlNormalizer extends LockssTestCase {
     assertEquals("http://www.jpgmonline.com/citation.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh",
         normalizer.normalizeUrl("http://www.jpgmonline.com/citation.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh", null));
     
+    
+    // for encoding authLast
+    assertEquals("http://www.jpgmonline.com/article.asp?issn=0189-6725;year=2015;volume=12;issue=3;spage=200;epage=202;aulast=P%E9rez-Egido;type=0",
+        normalizer.normalizeUrl("http://www.jpgmonline.com/article.asp?issn=0189-6725;year=2015;volume=12;issue=3;spage=200;epage=202;aulast=P" + (char) 0xE9 + "rez-Egido;type=0", null));
+    assertEquals("http://www.jpgmonline.com/article.asp?issn=0189-6725;year=2015;volume=12;issue=3;spage=200;epage=202;aulast=Perez-Egido;type=0",
+        normalizer.normalizeUrl("http://www.jpgmonline.com/article.asp?issn=0189-6725;year=2015;volume=12;issue=3;spage=200;epage=202;aulast=Perez-Egido;type=0", null));
+    
   }
   
 }

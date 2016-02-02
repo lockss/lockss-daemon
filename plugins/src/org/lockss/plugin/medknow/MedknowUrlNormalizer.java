@@ -1,6 +1,6 @@
 /* $Id$
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,11 +28,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.medknow;
 
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
+import org.lockss.util.Constants;
 import org.lockss.util.Logger;
+import org.lockss.util.UrlUtil;
 
 
 /* 
@@ -53,10 +56,29 @@ import org.lockss.util.Logger;
 public class MedknowUrlNormalizer implements UrlNormalizer {
   
   private static final Logger log = Logger.getLogger(MedknowUrlNormalizer.class);
+  private static final String authLast = ";aulast=";
+  private static final String authLastPat = "aulast=[^;]+";
+  private static final Pattern authPat = Pattern.compile(authLastPat);
 
   public String normalizeUrl(String url, ArchivalUnit au)
       throws PluginException {
     
+    /** links like...
+     href="article.asp?issn=0189-6725;year=2015;volume=12;issue=3;spage=200;epage=202;aulast=P<E9>rez-Egido;type=0"
+     need to be encoded to 
+     href="article.asp?issn=0189-6725;year=2015;volume=12;issue=3;spage=200;epage=202;aulast=P%E9rez-Egido;type=0"
+     for the links to work correctly
+     */
+    if (url.contains(authLast)) {
+      Matcher authMatch = authPat.matcher(url);
+      if (authMatch.find()) {
+        String u_str = authMatch.group();
+        if(log.isDebug2()) log.debug2("in:" + u_str);
+        u_str = UrlUtil.encodeUri(u_str, Constants.ENCODING_ISO_8859_1).replace("%25", "%");
+        if(log.isDebug2()) log.debug2("out:" + u_str);
+        url = url.replaceFirst(authLastPat, u_str);
+      }
+    }
     /** "http://www.afrjpaedsurg.org/article.asp?issn=0189-6725;year=2012;
      volume=9;issue=1;spage=13;epage=16;aulast=Kothari
       ;aid=AfrJPaediatrSurg_2012_9_1_13_93295" */
@@ -90,7 +112,6 @@ public class MedknowUrlNormalizer implements UrlNormalizer {
     }
     log.debug3("normalized url: " + url);
     return(url);
-
   }
 
 }
