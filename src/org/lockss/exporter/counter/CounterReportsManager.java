@@ -2327,7 +2327,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
-      DbManager.safeCloseConnection(conn);
+      DbManager.safeRollbackAndClose(conn);
     }
 
     log.debug2(DEBUG_HEADER + "Done.");
@@ -2649,7 +2649,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
-      DbManager.safeCloseConnection(conn);
+      DbManager.safeRollbackAndClose(conn);
     }
 
     log.debug2(DEBUG_HEADER + "Done.");
@@ -2854,7 +2854,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
-      DbManager.safeCloseConnection(conn);
+      DbManager.safeRollbackAndClose(conn);
     }
 
     log.debug2(DEBUG_HEADER + "Done.");
