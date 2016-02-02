@@ -479,7 +479,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; BMJ Open Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2014 ; BMJ Open Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; BMJ Open Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; BMJ Open Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; BMJ Open Volume 6 ; 6 >
 
   }
   
@@ -1919,10 +1919,10 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; released ; 2010 ; Journal of the Royal Army Medical Corps Volume 156 ; 156 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Journal of the Royal Army Medical Corps Volume 157 ; 157 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Journal of the Royal Army Medical Corps Volume 158 ; 158 >
-      au < HighWirePressH20Plugin ; exists ; 2013 ; Journal of the Royal Army Medical Corps Volume 159 ; 159 >
-      au < HighWirePressH20Plugin ; exists ; 2014 ; Journal of the Royal Army Medical Corps Volume 160 ; 160 >
-      au < HighWirePressH20Plugin ; exists ; 2015 ; Journal of the Royal Army Medical Corps Volume 161 ; 161 >
-      au < HighWirePressH20Plugin ; exists ; 2016 ; Journal of the Royal Army Medical Corps Volume 162 ; 162 >
+      au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of the Royal Army Medical Corps Volume 159 ; 159 >
+      au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of the Royal Army Medical Corps Volume 160 ; 160 >
+      au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of the Royal Army Medical Corps Volume 161 ; 161 >
+      au < HighWirePressH20Plugin ; manifest ; 2016 ; Journal of the Royal Army Medical Corps Volume 162 ; 162 >
 
     }
     
@@ -1976,7 +1976,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Medical Humanities Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Medical Humanities Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Medical Humanities Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; exists ; 2015 ; Medical Humanities Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Medical Humanities Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; expected ; 2016 ; Medical Humanities Volume 42 ; 42 >
 
   }
@@ -2215,8 +2215,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Practical Neurology Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Practical Neurology Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Practical Neurology Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; exists ; 2015 ; Practical Neurology Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; exists ; 2016 ; Practical Neurology Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Practical Neurology Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Practical Neurology Volume 16 ; 16 >
 
   }
 
@@ -2383,8 +2383,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Sexually Transmitted Infections Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Sexually Transmitted Infections Volume 89 ; 89 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Sexually Transmitted Infections Volume 90 ; 90 >
-    au < HighWirePressH20Plugin ; exists ; 2015 ; Sexually Transmitted Infections Volume 91 ; 91 >
-    au < HighWirePressH20Plugin ; exists ; 2016 ; Sexually Transmitted Infections Volume 92 ; 92 >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Sexually Transmitted Infections Volume 91 ; 91 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Sexually Transmitted Infections Volume 92 ; 92 >
 
   }
 
