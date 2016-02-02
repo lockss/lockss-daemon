@@ -38,6 +38,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Adsorption Science & Technology Volume 31 ; 31 ; >
     au < finished ; finished ; 2014 ; Adsorption Science & Technology Volume 32 ; 32 ; >
     au < crawling ; exists ; 2015 ; Adsorption Science & Technology Volume 33 ; 33 ; >
+    au < expected ; exists ; 2016 ; Adsorption Science & Technology Volume 34 ; 34 ; >
 
   }
 
@@ -68,6 +69,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Advances in Structural Engineering Volume 16 ; 16 ; >
     au < finished ; crawling ; 2014 ; Advances in Structural Engineering Volume 17 ; 17 ; >
     au < crawling ; exists ; 2015 ; Advances in Structural Engineering Volume 18 ; 18 ; >
+    au < expected ; exists ; 2016 ; Advances in Structural Engineering Volume 19 ; 19 ; >
 
   }
 
@@ -131,6 +133,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Energy & Environment Volume 24 ; 24 ; >
     au < finished ; finished ; 2014 ; Energy & Environment Volume 25 ; 25 ; >
     au < crawling ; exists ; 2015 ; Energy & Environment Volume 26 ; 26 ; >
+    au < expected ; exists ; 2016 ; Energy & Environment Volume 27 ; 27 ; >
 
   }
 
@@ -161,6 +164,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Energy Exploration & Exploitation Volume 31 ; 31 ; >
     au < crawling ; exists ; 2014 ; Energy Exploration & Exploitation Volume 32 ; 32 ; >
     au < crawling ; exists ; 2015 ; Energy Exploration & Exploitation Volume 33 ; 33 ; >
+    au < expected ; exists ; 2016 ; Energy Exploration & Exploitation Volume 34 ; 34 ; >
 
   }
 
@@ -235,6 +239,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Architectural Computing Volume 11 ; 11 ; >
     au < finished ; finished ; 2014 ; International Journal of Architectural Computing Volume 12 ; 12 ; >
     au < crawling ; exists ; 2015 ; International Journal of Architectural Computing Volume 13 ; 13 ; >
+    au < expected ; exists ; 2016 ; International Journal of Architectural Computing Volume 14 ; 14 ; >
 
   }
 
@@ -273,6 +278,7 @@
     au < finished ; crawling ; 2013 ; International Journal of Flow Control Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2014 ; International Journal of Flow Control Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; International Journal of Flow Control Volume 7 ; 7 ; >
+    au < expected ; exists ; 2016 ; International Journal of Flow Control Volume 8 ; 8 ; >
 
   }
 
@@ -329,6 +335,7 @@
     au < crawling ; exists ; 2013 ; International Journal of Innovation Science Volume 5 ; 5 ; >
     au < finished ; crawling ; 2014 ; International Journal of Innovation Science Volume 6 ; 6 ; >
     au < crawling ; exists ; 2015 ; International Journal of Innovation Science Volume 7 ; 7 ; >
+    au < expected ; exists ; 2016 ; International Journal of Innovation Science Volume 8 ; 8 ; >
 
   }
 
@@ -598,6 +605,8 @@
     param[journal_id] = nvww
     # purchased by Sage 11/15
 
+    au < exists ; exists ; 2008 ; Noise & Vibration Worldwide Volume 39 ; 39 ; >
+    au < exists ; exists ; 2009 ; Noise & Vibration Worldwide Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Noise & Vibration Worldwide Volume 41 ; 41 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Noise & Vibration Worldwide Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Noise & Vibration Worldwide Volume 43 ; 43 ; >
