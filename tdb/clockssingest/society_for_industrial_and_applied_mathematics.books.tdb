@@ -5,7 +5,7 @@
     info[tester] = 0
   >
 
-  plugin = org.lockss.plugin.atypon.siam.ClockssSiamPlugin
+  plugin = org.lockss.plugin.atypon.siam.ClockssSiamBooksPlugin
   param[base_url] = http://epubs.siam.org/
   implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_eisbn] ; name >
   
@@ -14,7 +14,7 @@
   
     title < 
       name = Society for Industrial and Applied Mathematics Books ;
-      type = bookSeries
+      type = book
       >
       
       au < testing ; exists ; 2005 ; 978-0-89871-584-2 ; 978-0-89871-815-7 ; 9780898718157 ; Accuracy and Reliability in Scientific Computing >

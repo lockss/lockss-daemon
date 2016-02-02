@@ -17,11 +17,11 @@
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponBooksPlugin</string>
+    <string>org.lockss.plugin.atypon.siam.SiamBooksPlugin</string>
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>12</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -31,18 +31,6 @@
     <string>au_start_url</string>
     <string>"%sclockss/eisbn/%s", base_url, book_eisbn</string>
   </entry>
-  <entry>
-    <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.atypon.siam.SiamHtmlLinkExtractorFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.atypon.siam.SiamHtmlHashFilterFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.atypon.siam.SiamHtmlCrawlFilterFactory</string>
-  </entry>  
   <entry>
   <!--  CLOCKSS does not need this warning message about registering IP addresses -->
     <string>plugin_au_config_user_msg</string>

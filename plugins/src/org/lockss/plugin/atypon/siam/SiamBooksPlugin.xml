@@ -1,31 +1,31 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>development</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.atypon.siam.SiamPlugin</string>
+    <string>org.lockss.plugin.atypon.siam.SiamBooksPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>24</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Society for Industrial and Applied Mathematics Journals Plugin</string>
+    <string>Society for Industrial and Applied Mathematics Books Plugin</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponBooksPlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>44</string>
+    <string>12</string>
   </entry>  
   <entry>
     <string>au_name</string>
-    <string>"Society for Industrial and Applied Mathematics Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Society for Industrial and Applied Mathematics Books Plugin, Base URL %s, eISBN %s", base_url, book_eisbn</string>
   </entry>
   <entry>
     <string>text/html_link_extractor_factory</string>
