@@ -51,12 +51,12 @@ public class ScJournalsArticleIteratorFactory
   private static final Pattern HTML_PATTERN = Pattern.compile("/(article|proceeding)\\.aspx\\?articleid=(\\d+)$", Pattern.CASE_INSENSITIVE);
   private static final String HTML_REPLACEMENT = "/$1.aspx?articleid=$2";
 
-  private static final String RIS_REPLACEMENT = "/downloadCitation.aspx?format=ris&articleid=$1";
-  private static final String BIBTEX_REPLACEMENT_BIB = "/downloadCitation.aspx?format=bib&articleid=$1";
-  private static final String BIBTEX_REPLACEMENT_BIBTEX = "/downloadCitation.aspx?format=bibtex&articleid=$1";
-  private static final String MEDLARS_REPLACEMENT = "/downloadCitation.aspx?format=txt&articleid=$1";
-  private static final String REFWORKS_REPLACEMENT = "/downloadCitation.aspx?articleid=$1";
-
+  private static final String RIS_REPLACEMENT = "/downloadCitation.aspx?format=ris&articleid=$2";
+  private static final String BIBTEX_REPLACEMENT_BIB = "/downloadCitation.aspx?format=bib&articleid=$2";
+  private static final String BIBTEX_REPLACEMENT_BIBTEX = "/downloadCitation.aspx?format=bibtex&articleid=$2";
+  private static final String MEDLARS_REPLACEMENT = "/downloadCitation.aspx?format=txt&articleid=$2";
+  private static final String REFWORKS_REPLACEMENT = "/downloadCitation.aspx?articleid=$2";
+  
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
