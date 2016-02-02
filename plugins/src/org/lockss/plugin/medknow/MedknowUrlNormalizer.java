@@ -83,7 +83,7 @@ public class MedknowUrlNormalizer implements UrlNormalizer {
      volume=9;issue=1;spage=13;epage=16;aulast=Kothari
       ;aid=AfrJPaediatrSurg_2012_9_1_13_93295" */
     if (url.contains(";aid=")) {
-      log.debug("ur contains ';aid=': " + url);
+      if(log.isDebug2()) log.debug2("ur contains ';aid=': " + url);
       url = url.replaceFirst(";aid=.+$", "");
     } else if (url.contains(";month=")) {
       /*
@@ -105,7 +105,7 @@ public class MedknowUrlNormalizer implements UrlNormalizer {
       if (log.isDebug3()) {
         // just for debugging do unnecessary additional check
         if (url.contains(";type=")) {
-          log.debug3("must remove the ';type' argumen from citation landing page url");
+          log.debug3("must remove the ';type' argument from citation landing page url");
         }
       }
       url = url.replaceFirst(";type=.+$", "");
