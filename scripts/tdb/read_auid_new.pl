@@ -582,6 +582,7 @@ while (my $line = <>) {
 
   # the non-Clockss Atypon Books plugins go here
   } elsif (($plugin eq "AIAABooksPlugin") || 
+           ($plugin eq "EmeraldGroupBooksPlugin") ||
            ($plugin eq "EndocrineSocietyBooksPlugin") ||
            ($plugin eq "FutureScienceBooksPlugin") ||
            ($plugin eq "LiverpoolBooksPlugin")) {
@@ -634,6 +635,7 @@ while (my $line = <>) {
 
   # the CLOCKSS Atypon Books plugins go here   
   } elsif (($plugin eq "ClockssAIAABooksPlugin") || 
+           ($plugin eq "ClockssEmeraldGroupBooksPlugin") || 
            ($plugin eq "ClockssEndocrineSocietyBooksPlugin") || 
            ($plugin eq "ClockssFutureScienceBooksPlugin") || 
            ($plugin eq "ClockssLiverpoolBooksPlugin") || 
