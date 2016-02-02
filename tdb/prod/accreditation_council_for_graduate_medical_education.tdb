@@ -2,8 +2,7 @@
 
   publisher <
     name = Accreditation Council for Graduate Medical Education ;
-    comment[platform] = Atypon ;
-    info[tester] = 0
+    comment[platform] = Atypon
   >
   
   comment[plugin] = See PD-166
@@ -28,6 +27,7 @@
     au < released ; 2013 ; Journal of Graduate Medical Education Volume 5 ; 5 >
     au < released ; 2014 ; Journal of Graduate Medical Education Volume 6 ; 6 >
     au < released ; 2015 ; Journal of Graduate Medical Education Volume 7 ; 7 >
+    au < expected ; 2016 ; Journal of Graduate Medical Education Volume 8 ; 8 >
     
   }
   
