@@ -17,28 +17,28 @@
     param[journal_abbr] = atg
     implicit < status ; year ; name ; param[volume] >
 
-    au < releasing ; 1989 ; Against the Grain Volume 1 ; 1 >
-    au < releasing ; 1990 ; Against the Grain Volume 2 ; 2 >
-    au < releasing ; 1991 ; Against the Grain Volume 3 ; 3 >
-    au < releasing ; 1992 ; Against the Grain Volume 4 ; 4 >
-    au < releasing ; 1993 ; Against the Grain Volume 5 ; 5 >
-    au < releasing ; 1994 ; Against the Grain Volume 6 ; 6 >
-    au < releasing ; 1995 ; Against the Grain Volume 7 ; 7 >
-    au < releasing ; 1996 ; Against the Grain Volume 8 ; 8 >
-    au < releasing ; 1997 ; Against the Grain Volume 9 ; 9 >
-    au < releasing ; 1998 ; Against the Grain Volume 10 ; 10 >
-    au < releasing ; 1999 ; Against the Grain Volume 11 ; 11 >
-    au < releasing ; 2000 ; Against the Grain Volume 12 ; 12 >
-    au < releasing ; 2001 ; Against the Grain Volume 13 ; 13 >
-    au < releasing ; 2002 ; Against the Grain Volume 14 ; 14 >
-    au < releasing ; 2003 ; Against the Grain Volume 15 ; 15 >
-    au < releasing ; 2004 ; Against the Grain Volume 16 ; 16 >
-    au < releasing ; 2005 ; Against the Grain Volume 17 ; 17 >
-    au < releasing ; 2006 ; Against the Grain Volume 18 ; 18 >
-    au < releasing ; 2007 ; Against the Grain Volume 19 ; 19 >
-    au < releasing ; 2008 ; Against the Grain Volume 20 ; 20 >
-    au < releasing ; 2009 ; Against the Grain Volume 21 ; 21 >
-    au < releasing ; 2010 ; Against the Grain Volume 22 ; 22 >
+    au < released ; 1989 ; Against the Grain Volume 1 ; 1 >
+    au < released ; 1990 ; Against the Grain Volume 2 ; 2 >
+    au < released ; 1991 ; Against the Grain Volume 3 ; 3 >
+    au < released ; 1992 ; Against the Grain Volume 4 ; 4 >
+    au < released ; 1993 ; Against the Grain Volume 5 ; 5 >
+    au < released ; 1994 ; Against the Grain Volume 6 ; 6 >
+    au < released ; 1995 ; Against the Grain Volume 7 ; 7 >
+    au < released ; 1996 ; Against the Grain Volume 8 ; 8 >
+    au < released ; 1997 ; Against the Grain Volume 9 ; 9 >
+    au < released ; 1998 ; Against the Grain Volume 10 ; 10 >
+    au < released ; 1999 ; Against the Grain Volume 11 ; 11 >
+    au < released ; 2000 ; Against the Grain Volume 12 ; 12 >
+    au < released ; 2001 ; Against the Grain Volume 13 ; 13 >
+    au < released ; 2002 ; Against the Grain Volume 14 ; 14 >
+    au < released ; 2003 ; Against the Grain Volume 15 ; 15 >
+    au < released ; 2004 ; Against the Grain Volume 16 ; 16 >
+    au < released ; 2005 ; Against the Grain Volume 17 ; 17 >
+    au < released ; 2006 ; Against the Grain Volume 18 ; 18 >
+    au < released ; 2007 ; Against the Grain Volume 19 ; 19 >
+    au < released ; 2008 ; Against the Grain Volume 20 ; 20 >
+    au < released ; 2009 ; Against the Grain Volume 21 ; 21 >
+    au < released ; 2010 ; Against the Grain Volume 22 ; 22 >
     au < released ; 2011 ; Against the Grain Volume 23 ; 23 >
 
   }
@@ -93,7 +93,7 @@
       au < released ; 2012 ; CLCWeb: Comparative Literature and Culture Volume 14 ; 14 >
       au < released ; 2013 ; CLCWeb: Comparative Literature and Culture Volume 15 ; 15 >
       au < released ; 2014 ; CLCWeb: Comparative Literature and Culture Volume 16 ; 16 >
-      au < releasing ; 2015 ; CLCWeb: Comparative Literature and Culture Volume 17 ; 17 >
+      au < released ; 2015 ; CLCWeb: Comparative Literature and Culture Volume 17 ; 17 >
 
     }
 
