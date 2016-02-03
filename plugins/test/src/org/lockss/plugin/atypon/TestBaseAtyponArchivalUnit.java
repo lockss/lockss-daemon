@@ -357,6 +357,12 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     testSpecificUserMsg("http://www.magonlinelibrary.com/", null, 
         "org.lockss.plugin.atypon.markallen.MarkAllenPlugin",
         "org.lockss.plugin.atypon.markallen.ClockssMarkAllenPlugin");
+    
+    //Massachusetts Medical - uses the BaseAtypon default with its base_url
+    testSpecificUserMsg("http://www.nejm.org/", default_msg_part1 + "http://www.nejm.org/" + default_msg_part2, 
+       "org.lockss.plugin.atypon.massachusettsmedicalsociety.MassachusettsMedicalSocietyPlugin",
+       null);
+    
     //multiscience
     testSpecificUserMsg("http://multi-science.atypon.com/", null, 
         "org.lockss.plugin.atypon.multiscience.MultiSciencePlugin",
@@ -416,6 +422,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     pluginPubMap.put("http://online.liverpooluniversitypress.co.uk/", "Liverpool University Press");
     pluginPubMap.put("http://www.maneyonline.com/", "Maney Publishing");
     pluginPubMap.put("http://www.magonlinelibrary.com/", "Mark Allen Group");
+    pluginPubMap.put("http://www.nejm.org/", "Massachusetts Medical Society");
     pluginPubMap.put("http://multi-science.atypon.com/", "Multi-Science");    
     pluginPubMap.put("http://www.nrcresearchpress.com/", "NRC Research Press");
     pluginPubMap.put("http://www.developmentbookshelf.com/", "Practical Action Publishing");
