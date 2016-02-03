@@ -5085,6 +5085,21 @@
   {
 
     title <
+      name = Dynamics and Statistics of the Climate System ;
+      eissn = 2059-6987
+    >
+
+    param[base_url] = http://climatesystem.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2016 ; Dynamics and Statistics of the Climate System Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
       name = Early Music ;
       issn = 0306-1078 ;
       eissn = 1741-7260 ;
@@ -5735,6 +5750,22 @@
   {
 
     title <
+      name = Environmental Epigenetics ;
+      eissn = 2058-5888
+    >
+
+    param[base_url] = http://eep.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2015 ; Environmental Epigenetics Volume 1 ; 1 >
+    au < exists ; 2016 ; Environmental Epigenetics Volume 2 ; 2 >
+
+  }
+
+  {
+
+    title <
       name = Environmental History ;
       issn = 1084-5453 ;
       eissn = 1930-8892 ;
@@ -6134,6 +6165,23 @@
     au < oup.OUPDrupalPlugin ; manifest ; 2016 ; European Heart Journal Volume 37 ; 37 >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = European Heart Journal - Cardiovascular Pharmacotherapy ;
+      issn = 2055-6837 ;
+      eissn = 2055-6845
+    >
+
+    param[base_url] = http://ehjcvp.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2015 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 1 ; 1 >
+    au < exists ; 2016 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 2 ; 2 >
 
   }
 
@@ -12283,8 +12331,7 @@
     title <
       name = Journal of Crohn's and Colitis ;
       issn = 1873-9946 ;
-      eissn = 1876-4479 ;
-      issnl = 1873-9946
+      eissn = 1876-4479 
     >
     param[base_url] = http://ecco-jcc.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
@@ -12306,6 +12353,25 @@
   {
 
     title <
+      name = Journal of Crohn's and Colitis Supplements ;
+      issn = 1873-9954 ;
+      eissn = 1876-4460
+    >
+
+    param[base_url] = http://ecco-jccs.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2007 ; Journal of Crohn's and Colitis Supplements Volume 1 ; 1 >
+    au < exists ; 2008 ; Journal of Crohn's and Colitis Supplements Volume 2 ; 2 >
+    au < exists ; 2009 ; Journal of Crohn's and Colitis Supplements Volume 3 ; 3 >
+    au < exists ; 2010 ; Journal of Crohn's and Colitis Supplements Volume 4 ; 4 >
+
+  }
+
+  {
+
+    title <
       name = Journal of Cybersecurity ;
       issn = 2057-2085 ;
       eissn = 2057-2093 ;
@@ -12316,7 +12382,7 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < expected ; 2015 ; Journal of Cybersecurity Volume 1 ; 1 >
+    au < exists ; 2015 ; Journal of Cybersecurity Volume 1 ; 1 >
   }
 
   {
@@ -13964,6 +14030,23 @@
   {
 
     title <
+      name = Journal of Language Evolution ;
+      issn = 2058-4571 ;
+      eissn = 2058-458X
+    >
+
+    param[base_url] = http://jole.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2015 ; Journal of Language Evolution Volume 2015 ; 2015 >
+    au < exists ; 2016 ; Journal of Language Evolution Volume 2016 ; 2016 >
+
+  }
+
+  {
+
+    title <
       name = Journal of Law, Economics, and Organization ;
       issn = 8756-6222 ;
       eissn = 1465-7341 ;
@@ -14578,10 +14661,10 @@
     au < HighWirePressH20Plugin ; manifest ; 1911 ; Journal of the National Cancer Institute: JNCI Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; manifest ; 1912 ; Journal of the National Cancer Institute: JNCI Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 1913 ; Journal of the National Cancer Institute: JNCI Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1914 ; Journal of the National Cancer Institute: JNCI Volume 6 ; 6  >
-    au < HighWirePressH20Plugin ; manifest ; 1915 ; Journal of the National Cancer Institute: JNCI Volume 7 ; 7  >
-    au < HighWirePressH20Plugin ; manifest ; 1916 ; Journal of the National Cancer Institute: JNCI Volume 8 ; 8  >
-    au < HighWirePressH20Plugin ; manifest ; 1917 ; Journal of the National Cancer Institute: JNCI Volume 9 ; 9  >
+    au < HighWirePressH20Plugin ; manifest ; 1914 ; Journal of the National Cancer Institute: JNCI Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 1915 ; Journal of the National Cancer Institute: JNCI Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; manifest ; 1916 ; Journal of the National Cancer Institute: JNCI Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 1917 ; Journal of the National Cancer Institute: JNCI Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; manifest ; 1918 ; Journal of the National Cancer Institute: JNCI Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; manifest ; 1919 ; Journal of the National Cancer Institute: JNCI Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; manifest ; 1920 ; Journal of the National Cancer Institute: JNCI Volume 12 ; 12 >
@@ -14685,6 +14768,39 @@
     au < HighWirePressH20Plugin ; manifest ; 2016 ; Journal of the National Cancer Institute: JNCI Volume 108 ; 108 >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Neuropathology & Experimental Neurology ;
+      issn = 0022-3069 ;
+      eissn = 1554-6578
+    >
+
+    param[base_url] = http://jnen.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+    #content available from 1985 volume 44 to 1999 volume 58	
+
+    au < exists ; 2000 ; Journal of Neuropathology & Experimental Neurology Volume 59 ; 59 >
+    au < exists ; 2001 ; Journal of Neuropathology & Experimental Neurology Volume 60 ; 60 >
+    au < exists ; 2002 ; Journal of Neuropathology & Experimental Neurology Volume 61 ; 61 >
+    au < exists ; 2003 ; Journal of Neuropathology & Experimental Neurology Volume 62 ; 62 >
+    au < exists ; 2004 ; Journal of Neuropathology & Experimental Neurology Volume 63 ; 63 >
+    au < exists ; 2005 ; Journal of Neuropathology & Experimental Neurology Volume 64 ; 64 >
+    au < exists ; 2006 ; Journal of Neuropathology & Experimental Neurology Volume 65 ; 65 >
+    au < exists ; 2007 ; Journal of Neuropathology & Experimental Neurology Volume 66 ; 66 >
+    au < exists ; 2008 ; Journal of Neuropathology & Experimental Neurology Volume 67 ; 67 >
+    au < exists ; 2009 ; Journal of Neuropathology & Experimental Neurology Volume 68 ; 68 >
+    au < exists ; 2010 ; Journal of Neuropathology & Experimental Neurology Volume 69 ; 69 >
+    au < exists ; 2011 ; Journal of Neuropathology & Experimental Neurology Volume 70 ; 70 >
+    au < exists ; 2012 ; Journal of Neuropathology & Experimental Neurology Volume 71 ; 71 >
+    au < exists ; 2013 ; Journal of Neuropathology & Experimental Neurology Volume 72 ; 72 >
+    au < exists ; 2014 ; Journal of Neuropathology & Experimental Neurology Volume 73 ; 73 >
+    au < exists ; 2015 ; Journal of Neuropathology & Experimental Neurology Volume 74 ; 74 >
+    au < exists ; 2016 ; Journal of Neuropathology & Experimental Neurology Volume 75 ; 75 >
 
   }
 
@@ -15678,6 +15794,44 @@
     au < HighWirePressH20Plugin ; expected ; 2016 ; Journal of Topology Volume 9 ; 9 >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Travel Medicine ;
+      issn = 1195-1982 ;
+      eissn = 1708-8305
+    >
+
+    param[base_url] = http://jtm.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 1994 ; Journal of Travel Medicine Volume 1 ; 1 >
+    au < exists ; 1995 ; Journal of Travel Medicine Volume 2 ; 2 >
+    au < exists ; 1996 ; Journal of Travel Medicine Volume 3 ; 3 >
+    au < exists ; 1997 ; Journal of Travel Medicine Volume 4 ; 4 >
+    au < exists ; 1998 ; Journal of Travel Medicine Volume 5 ; 5 >
+    au < exists ; 1999 ; Journal of Travel Medicine Volume 6 ; 6 >
+    au < exists ; 2000 ; Journal of Travel Medicine Volume 7 ; 7 >
+    au < exists ; 2001 ; Journal of Travel Medicine Volume 8 ; 8 >
+    au < exists ; 2002 ; Journal of Travel Medicine Volume 9 ; 9 >
+    au < exists ; 2003 ; Journal of Travel Medicine Volume 10 ; 10 >
+    au < exists ; 2004 ; Journal of Travel Medicine Volume 11 ; 11 >
+    au < exists ; 2005 ; Journal of Travel Medicine Volume 12 ; 12 >
+    au < exists ; 2006 ; Journal of Travel Medicine Volume 13 ; 13 >
+    au < exists ; 2007 ; Journal of Travel Medicine Volume 14 ; 14 >
+    au < exists ; 2008 ; Journal of Travel Medicine Volume 15 ; 15 >
+    au < exists ; 2009 ; Journal of Travel Medicine Volume 16 ; 16 >
+    au < exists ; 2010 ; Journal of Travel Medicine Volume 17 ; 17 >
+    au < exists ; 2011 ; Journal of Travel Medicine Volume 18 ; 18 >
+    au < exists ; 2012 ; Journal of Travel Medicine Volume 19 ; 19 >
+    au < exists ; 2013 ; Journal of Travel Medicine Volume 20 ; 20 >
+    au < exists ; 2014 ; Journal of Travel Medicine Volume 21 ; 21 >
+    au < exists ; 2015 ; Journal of Travel Medicine Volume 22 ; 22 >
+    au < exists ; 2016 ; Journal of Travel Medicine Volume 23 ; 23 >
 
   }
 
@@ -17725,6 +17879,34 @@
   {
 
     title <
+      name = Music Therapy ;
+      issn = 0734-7367
+    >
+
+    param[base_url] = http://musictherapy.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+
+    au < exists ; 1981 ; Music Therapy Volume 1 ; 1 >
+    au < exists ; 1982 ; Music Therapy Volume 2 ; 2 >
+    au < exists ; 1983 ; Music Therapy Volume 3 ; 3 >
+    au < exists ; 1984 ; Music Therapy Volume 4 ; 4 >
+    au < exists ; 1985 ; Music Therapy Volume 5 ; 5 >
+    au < exists ; 1986-1987 ; Music Therapy Volume 6 ; 6 >
+    au < exists ; 1988 ; Music Therapy Volume 7 ; 7 >
+    au < exists ; 1989 ; Music Therapy Volume 8 ; 8 >
+    au < exists ; 1990 ; Music Therapy Volume 9 ; 9 >
+    au < exists ; 1991 ; Music Therapy Volume 10 ;10 >
+    au < exists ; 1992 ; Music Therapy Volume 11 ;11 >
+    au < exists ; 1993-1994 ; Music Therapy Volume 12 ;12 >
+    au < exists ; 1995 ; Music Therapy Volume 13 ;13 >
+    au < exists ; 1996 ; Music Therapy Volume 14 ;14 >
+
+  }
+
+  {
+
+    title <
       name = Music Therapy Perspectives ;
       issn = 0734-6875 ;
       eissn = 2053-7395 ;
@@ -19422,6 +19604,38 @@
   {
 
     title <
+      name = Pain Medicine ;
+      issn = 1526-2375 ;
+      eissn = 1526-4637
+    >
+
+    param[base_url] = http://painmedicine.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2000 ; Pain Medicine Volume 1 ; 1 >
+    au < exists ; 2001 ; Pain Medicine Volume 2 ; 2 >
+    au < exists ; 2002 ; Pain Medicine Volume 3 ; 3 >
+    au < exists ; 2003 ; Pain Medicine Volume 4 ; 4 >
+    au < exists ; 2004 ; Pain Medicine Volume 5 ; 5 >
+    au < exists ; 2005 ; Pain Medicine Volume 6 ; 6 >
+    au < exists ; 2006 ; Pain Medicine Volume 7 ; 7 >
+    au < exists ; 2007 ; Pain Medicine Volume 8 ; 8 >
+    au < exists ; 2008 ; Pain Medicine Volume 9 ; 9 >
+    au < exists ; 2009 ; Pain Medicine Volume 10 ;10 >
+    au < exists ; 2010 ; Pain Medicine Volume 11 ;11 >
+    au < exists ; 2011 ; Pain Medicine Volume 12 ;12 >
+    au < exists ; 2012 ; Pain Medicine Volume 13 ;13 >
+    au < exists ; 2013 ; Pain Medicine Volume 14 ;14 >
+    au < exists ; 2014 ; Pain Medicine Volume 15 ;15 >
+    au < exists ; 2015 ; Pain Medicine Volume 16 ;16 >
+    au < exists ; 2016 ; Pain Medicine Volume 17 ;17 >
+
+  }
+
+  {
+
+    title <
       name = Pathogens and Disease ;
       eissn = 2049-632X  ;
       issnl = 2049-632X
@@ -20185,6 +20399,39 @@
     au < HighWirePressH20Plugin ; manifest ; 2016 ; Political Analysis Volume 24 ; 24 >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Proceedings of the Aristotelian Society ;
+      issn = 0066-7374 ;
+      eissn = 1467-9264
+    >
+
+    param[base_url] = http://aristotelian.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+    #content available from 1888 volume os1 to 1999 volume 99
+
+    au < exists ; 2000 ; Proceedings of the Aristotelian Society Volume 100 ; 100 >
+    au < exists ; 2001 ; Proceedings of the Aristotelian Society Volume 101 ; 101 >
+    au < exists ; 2002 ; Proceedings of the Aristotelian Society Volume 102 ; 102 >
+    au < exists ; 2003 ; Proceedings of the Aristotelian Society Volume 103 ; 103 >
+    au < exists ; 2004 ; Proceedings of the Aristotelian Society Volume 104 ; 104 >
+    au < exists ; 2005 ; Proceedings of the Aristotelian Society Volume 105 ; 105 >
+    au < exists ; 2006 ; Proceedings of the Aristotelian Society Volume 106 ; 106 >
+    au < exists ; 2007 ; Proceedings of the Aristotelian Society Volume 107 ; 107 >
+    au < exists ; 2008 ; Proceedings of the Aristotelian Society Volume 108 ; 108 >
+    au < exists ; 2009 ; Proceedings of the Aristotelian Society Volume 109 ; 109 >
+    au < exists ; 2010 ; Proceedings of the Aristotelian Society Volume 110 ; 110 >
+    au < exists ; 2011 ; Proceedings of the Aristotelian Society Volume 111 ; 111 >
+    au < exists ; 2012 ; Proceedings of the Aristotelian Society Volume 112 ; 112 >
+    au < exists ; 2013 ; Proceedings of the Aristotelian Society Volume 113 ; 113 >
+    au < exists ; 2014 ; Proceedings of the Aristotelian Society Volume 114 ; 114 >
+    au < exists ; 2015 ; Proceedings of the Aristotelian Society Volume 115 ; 115 >
+    au < expected ; 2016 ; Proceedings of the Aristotelian Society Volume 116 ; 116 >
 
   }
 
@@ -22906,6 +23153,37 @@
   {
 
     title <
+      name = Social Work Research and Abstracts ;
+      issn = 0148-0847 
+    >
+
+    param[base_url] = http://swra.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 1977 ; Social Work Research and Abstracts Volume 13 ; 13 >
+    au < exists ; 1978 ; Social Work Research and Abstracts Volume 14 ; 14 >
+    au < exists ; 1979 ; Social Work Research and Abstracts Volume 15 ; 15 >
+    au < exists ; 1980 ; Social Work Research and Abstracts Volume 16 ; 16 >
+    au < exists ; 1981 ; Social Work Research and Abstracts Volume 17 ; 17 >
+    au < exists ; 1982 ; Social Work Research and Abstracts Volume 18 ; 18 >
+    au < exists ; 1983 ; Social Work Research and Abstracts Volume 19 ; 19 >
+    au < exists ; 1984 ; Social Work Research and Abstracts Volume 20 ; 20 >
+    au < exists ; 1985 ; Social Work Research and Abstracts Volume 21 ; 21 >
+    au < exists ; 1986 ; Social Work Research and Abstracts Volume 22 ; 22 >
+    au < exists ; 1987 ; Social Work Research and Abstracts Volume 23 ; 23 >
+    au < exists ; 1988 ; Social Work Research and Abstracts Volume 24 ; 24 >
+    au < exists ; 1989 ; Social Work Research and Abstracts Volume 25 ; 25 >
+    au < exists ; 1990 ; Social Work Research and Abstracts Volume 26 ; 26 >
+    au < exists ; 1991 ; Social Work Research and Abstracts Volume 27 ; 27 >
+    au < exists ; 1992 ; Social Work Research and Abstracts Volume 28 ; 28 >
+    au < exists ; 1993 ; Social Work Research and Abstracts Volume 29 ; 29 >
+
+  }
+
+  {
+
+    title <
       name = Socio-Economic Review ;
       issn = 1475-1461 ;
       eissn = 1475-147X ;
@@ -23800,6 +24078,39 @@
     au < manifest ; 2015 ; Virus Evolution Volume 1 ; 1 >
     au < expected ; 2016 ; Virus Evolution Volume 2 ; 2 >
 
+  }
+
+  {
+
+    title <
+      name = Western Historical Quarterly ;
+      issn = 0043-3810 ;
+      eissn = 1939-8603 
+    >
+
+    param[base_url] = http://whq.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+    #content available from 1970 volume 1 to 1999 volume 30
+
+    au < exists ; 2000 ; Western Historical Quarterly Volume 31 ; 31 >
+    au < exists ; 2001 ; Western Historical Quarterly Volume 32 ; 32 >
+    au < exists ; 2002 ; Western Historical Quarterly Volume 33 ; 33 >
+    au < exists ; 2003 ; Western Historical Quarterly Volume 34 ; 34 >
+    au < exists ; 2004 ; Western Historical Quarterly Volume 35 ; 35 >
+    au < exists ; 2005 ; Western Historical Quarterly Volume 36 ; 36 >
+    au < exists ; 2006 ; Western Historical Quarterly Volume 37 ; 37 >
+    au < exists ; 2007 ; Western Historical Quarterly Volume 38 ; 38 >
+    au < exists ; 2008 ; Western Historical Quarterly Volume 39 ; 39 >
+    au < exists ; 2009 ; Western Historical Quarterly Volume 40 ; 40 >
+    au < exists ; 2010 ; Western Historical Quarterly Volume 41 ; 41 >
+    au < exists ; 2011 ; Western Historical Quarterly Volume 42 ; 42 >
+    au < exists ; 2012 ; Western Historical Quarterly Volume 43 ; 43 >
+    au < exists ; 2013 ; Western Historical Quarterly Volume 44 ; 44 >
+    au < exists ; 2014 ; Western Historical Quarterly Volume 45 ; 45 >
+    au < exists ; 2015 ; Western Historical Quarterly Volume 46 ; 46 >
+    au < exists ; 2016 ; Western Historical Quarterly Volume 47 ; 47 >
+    
   }
 
   {
