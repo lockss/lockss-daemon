@@ -25492,6 +25492,9 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
+      au < exists ; 2009 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2009 ; 2009 >
+      au < exists ; 2010 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2010 ; 2010 >
+      au < exists ; 2011 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2011 ; 2011 >
       au < exists ; 2012 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2012 ; 2012 >
       au < exists ; 2013 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2013 ; 2013 >
       au < exists ; 2014 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2014 ; 2014 >
