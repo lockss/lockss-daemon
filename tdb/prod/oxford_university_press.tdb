@@ -25402,7 +25402,7 @@
     >
 
       param[base_url] = http://ajlh.oxfordjournals.org/
-      plugin = org.lockss.plugin.highwire.oup.ClockssOUPDrupalPlugin
+      plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2014 ; American Journal of Legal History Volume 54 ; 54 >
@@ -25418,7 +25418,7 @@
     >
 
       param[base_url] = http://aristoteliansupp.oxfordjournals.org/
-      plugin = org.lockss.plugin.highwire.oup.ClockssOUPDrupalPlugin
+      plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2014 ; Aristotelian Society Supplementary Volume Volume 88 ; 88 >
@@ -25435,7 +25435,7 @@
     >
 
       param[base_url] = http://background.oxfordjournals.org/
-      plugin = org.lockss.plugin.highwire.oup.ClockssOUPDrupalPlugin
+      plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 1962-1963 ; Background Volume 6 ; 6 >
@@ -25454,7 +25454,7 @@
     >
 
       param[base_url] = http://backgroundwp.oxfordjournals.org/
-      plugin = org.lockss.plugin.highwire.oup.ClockssOUPDrupalPlugin
+      plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 1961 ; Background on World Politics Volume 5 ; 5 >
@@ -25470,7 +25470,7 @@
     >
 
       param[base_url] = http://criticalvalues.oxfordjournals.org/
-      plugin = org.lockss.plugin.highwire.oup.ClockssOUPDrupalPlugin
+      plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2014 ; Critical Values Volume 7 ; 7 >
@@ -25488,7 +25488,7 @@
     >
 
       param[base_url] = http://cz.oxfordjournals.org/
-      plugin = org.lockss.plugin.highwire.oup.ClockssOUPDrupalPlugin
+      plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
       implicit < status ; year ; name ; param[volume_name] >
 
       au < expected ; 2016 ; Current Zoology Volume 1 ; 1 >
@@ -25503,7 +25503,7 @@
     >
 
       param[base_url] = http://climatesystem.oxfordjournals.org/
-      plugin = org.lockss.plugin.highwire.oup.ClockssOUPDrupalPlugin
+      plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2016 ; Dynamics and Statistics of the Climate System Volume 1 ; 1 >
@@ -25518,7 +25518,7 @@
     >
 
       param[base_url] = http://eep.oxfordjournals.org/
-      plugin = org.lockss.plugin.highwire.oup.ClockssOUPDrupalPlugin
+      plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2015 ; Environmental Epigenetics Volume 1 ; 1 >
@@ -25535,7 +25535,7 @@
     >
 
       param[base_url] = http://ehjcvp.oxfordjournals.org/
-      plugin = org.lockss.plugin.highwire.oup.ClockssOUPDrupalPlugin
+      plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2015 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 1 ; 1 >
@@ -25552,7 +25552,7 @@
     >
 
       param[base_url] = http://ecco-jccs.oxfordjournals.org/
-      plugin = org.lockss.plugin.highwire.oup.ClockssOUPDrupalPlugin
+      plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2007 ; Journal of Crohn's and Colitis Supplements Volume 1 ; 1 >
@@ -25571,7 +25571,7 @@
     >
 
       param[base_url] = http://jole.oxfordjournals.org/
-      plugin = org.lockss.plugin.highwire.oup.ClockssOUPDrupalPlugin
+      plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2015 ; Journal of Language Evolution Volume 2015 ; 2015 >
@@ -25588,7 +25588,7 @@
     >
 
       param[base_url] = http://jnen.oxfordjournals.org/
-      plugin = org.lockss.plugin.highwire.oup.ClockssOUPDrupalPlugin
+      plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
       implicit < status ; year ; name ; param[volume_name] >
       #content available from 1985 volume 44 to 1999 volume 58  
 
@@ -25621,7 +25621,7 @@
     >
 
       param[base_url] = http://jtm.oxfordjournals.org/
-      plugin = org.lockss.plugin.highwire.oup.ClockssOUPDrupalPlugin
+      plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 1994 ; Journal of Travel Medicine Volume 1 ; 1 >
@@ -25658,13 +25658,13 @@
     >
 
       param[base_url] = http://mmcts.oxfordjournals.org/
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2012 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2012 ; 2012 >
       au < exists ; 2013 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2013 ; 2013 >
       au < exists ; 2014 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2014 ; 2014 >
-      au < exists ; 2015 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2015 ; 2015 >
+      au < manifest ; 2015 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2015 ; 2015 >
       au < exists ; 2016 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2016 ; 2016 >
 
   }
@@ -25677,7 +25677,7 @@
     >
 
       param[base_url] = http://musictherapy.oxfordjournals.org/
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 1981 ; Music Therapy Volume 1 ; 1 >
@@ -25706,7 +25706,7 @@
     >
 
       param[base_url] = http://painmedicine.oxfordjournals.org/
-      plugin = org.lockss.plugin.highwire.oup.ClockssOUPDrupalPlugin
+      plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2000 ; Pain Medicine Volume 1 ; 1 >
@@ -25738,7 +25738,7 @@
     >
 
       param[base_url] = http://aristotelian.oxfordjournals.org/
-      plugin = org.lockss.plugin.highwire.oup.ClockssOUPDrupalPlugin
+      plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
       implicit < status ; year ; name ; param[volume_name] >
       #content available from 1888 volume os1 to 1999 volume 99
 
@@ -25770,7 +25770,7 @@
     >
 
       param[base_url] = http://swra.oxfordjournals.org/
-      plugin = org.lockss.plugin.highwire.oup.ClockssOUPDrupalPlugin
+      plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 1977 ; Social Work Research and Abstracts Volume 13 ; 13 >
@@ -25802,7 +25802,7 @@
     >
 
       param[base_url] = http://whq.oxfordjournals.org/
-      plugin = org.lockss.plugin.highwire.oup.ClockssOUPDrupalPlugin
+      plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
       implicit < status ; year ; name ; param[volume_name] >
       #content available from 1970 volume 1 to 1999 volume 30
 
