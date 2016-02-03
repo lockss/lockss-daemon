@@ -8,7 +8,7 @@ BEGIN {
 
 {
   # add a loop to add line only if either [status is _not_ manifest] OR [journal_year (or journal end year) is gt or eq to 2005 && journal year (or journal end year) is lt or eq to the current year we are testing]
-  current_year = 2014
+  current_year = 2015
   end_year = 0
   incontract = 0
   test_year = ""
