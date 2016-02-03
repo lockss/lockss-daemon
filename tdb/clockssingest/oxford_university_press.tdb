@@ -24438,23 +24438,6 @@
   {
 
     title <
-      name = American Journal of Clinical Pathology ;
-      issn = 0002-9173 ;
-      eissn = 1943-7722
-    >
-
-      param[base_url] = http://www.ajcp.oxfordjournals.org/
-      pluginSuffix = oup.ClockssOUPDrupalPlugin
-
-      au < exists ; exists ; 2015 ; American Journal of Clinical Pathology Volume 143 ; 143 ; >
-      au < exists ; exists ; 2015 ; American Journal of Clinical Pathology Volume 144 ; 144 ; >
-      au < exists ; exists ; 2016 ; American Journal of Clinical Pathology Volume 145 ; 145 ; >
-
-  }
-
-  {
-
-    title <
       name = American Journal of Legal History ;
       issn = 0002-9319 ;
       eissn = 2161-797X
