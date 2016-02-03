@@ -585,7 +585,8 @@ while (my $line = <>) {
            ($plugin eq "EmeraldGroupBooksPlugin") ||
            ($plugin eq "EndocrineSocietyBooksPlugin") ||
            ($plugin eq "FutureScienceBooksPlugin") ||
-           ($plugin eq "LiverpoolBooksPlugin")) {
+           ($plugin eq "LiverpoolBooksPlugin") ||
+           ($plugin eq "WageningenBooksPlugin")) {
       $url = sprintf("%slockss/eisbn/%s", 
       $param{base_url}, $param{book_eisbn});
       $man_url = uri_unescape($url);
