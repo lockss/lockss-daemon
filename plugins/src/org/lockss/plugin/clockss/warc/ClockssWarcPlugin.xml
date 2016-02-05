@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -41,6 +41,12 @@
     <string>au_name</string>
     <string>"Warc Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
+  <!--  identify this as bulk content so it doesn't fall back to TDB values for metadata-->
+  <entry>
+    <string>plugin_bulk_content</string>
+    <boolean>true</boolean>
+  </entry>
+  
   <entry>
     <string>au_def_pause_time</string>
     <long>100</long>
