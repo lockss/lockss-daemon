@@ -7,7 +7,7 @@
   >
 
   plugin = needs.plugin
-  comment[plugin] = plugin will be a daughter of OJS2 plugin, possibly called ClockssIETLinkBookPlugin
+  comment[plugin] = pub2web, possibly called ClockssIETLinkBookPlugin
   param[base_url] = http://digital-library.theiet.org/
 
   {
