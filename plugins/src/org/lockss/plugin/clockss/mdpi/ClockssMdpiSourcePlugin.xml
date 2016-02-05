@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.clockss.mdpi.ClockssMdpiJatsSourcePlugin</string>
+    <string>org.lockss.plugin.clockss.mdpi.ClockssMdpiSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -38,11 +38,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"MDPI JATS Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+    <string>"Multidisciplinary Digital Publishing Institute Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>MDPI JATS Source Plugin (CLOCKSS)</string>
+    <string>Multidisciplinary Digital Publishing Institute Source Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
@@ -56,12 +56,16 @@
     <string>standard</string>
   </entry>
   <entry>
+    <string>plugin_bulk_content</string>
+    <boolean>true</boolean>
+  </entry>  
+  <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.clockss.SourceZipXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.mdpi.MdpiZipXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.clockss.SourceZipXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.mdpi.MdpiZipXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/xml_metadata_extractor_factory_map</string>

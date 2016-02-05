@@ -30,12 +30,10 @@
 
  */
 
-package org.lockss.plugin.clockss.mdpi;
+package org.lockss.plugin.clockss.cambridge;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import org.lockss.util.*;
 import org.lockss.daemon.*;
@@ -48,8 +46,9 @@ import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
 
 
-public class MdpiJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-  private static final Logger log = Logger.getLogger(MdpiJatsXmlMetadataExtractorFactory.class);
+
+public class CambridgeJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+  private static final Logger log = Logger.getLogger(CambridgeJatsXmlMetadataExtractorFactory.class);
 
   private static SourceXmlSchemaHelper JatsPublishingHelper = null;
 
@@ -70,9 +69,16 @@ public class MdpiJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtrac
       }
       return JatsPublishingHelper;
     }
-    
 
 
+    /* 
+     * XML filename is <article_number>h.xml
+     * PDF filename is <article_number>a.pdf
+     * in the same directory
+     * we have excluded the <article_number>w.xml files from the iterator
+     * we don't care about the <article_number>a_hi.pdf which are hi-resolution pdf files
+     * So far in the sample there is a 1:1 corresondence from h.xml files and a.pdf files
+     */
     /* In this case, the filename is the same as the xml filename
      */
     @Override
@@ -80,7 +86,8 @@ public class MdpiJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtrac
         ArticleMetadata oneAM) {
 
       String url_string = cu.getUrl();
-      String pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
+      //remove "h.xml" and replace with "a.pdf"
+      String pdfName = url_string.substring(0,url_string.length() - 5) + "a.pdf";
       log.debug3("pdfName is " + pdfName);
       List<String> returnList = new ArrayList<String>();
       returnList.add(pdfName);
@@ -91,7 +98,7 @@ public class MdpiJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtrac
     protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
         CachedUrl cu, ArticleMetadata thisAM) {
 
-      log.debug3("in MDPI postCookProcess");
+      log.debug3("in Cambridge postCookProcess");
       //If we didn't get a valid date value, use the copyright year if it's there
       if (thisAM.get(MetadataField.FIELD_DATE) == null) {
         if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date) != null) {
