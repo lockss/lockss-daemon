@@ -9,8 +9,26 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
+<!--  updating out of sync with parent, must have own feature_version_map -->  
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>14</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>29</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>6</string>
+      </entry>
+    </map>
+  </entry>    
   <entry>
     <string>plugin_name</string>
     <string>Practical Action Publishing Plugin (CLOCKSS)</string>
@@ -39,6 +57,10 @@
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.practicalaction.PracticalActionJournalsHtmlCrawlFilterFactory</string>
   </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.atypon.practicalaction.PracticalActionHtmlLinkExtractorFactory</string>
+  </entry>  
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.atypon.practicalaction.PracticalActionJournalsPdfFilterFactory</string>
