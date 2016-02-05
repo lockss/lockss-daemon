@@ -56,7 +56,7 @@ public class SourceZipXmlArticleIteratorFactory implements ArticleIteratorFactor
       "\"%s%d/.*\\.zip!/.*\\.xml$\", base_url, year";
 
   // Be sure to exclude all nested archives in case supplemental data is provided this way
-  static final Pattern NESTED_ARCHIVE_PATTERN = 
+  protected static final Pattern NESTED_ARCHIVE_PATTERN = 
       Pattern.compile(".*/[^/]+\\.zip!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$", 
           Pattern.CASE_INSENSITIVE);
 
@@ -73,7 +73,7 @@ public class SourceZipXmlArticleIteratorFactory implements ArticleIteratorFactor
     builder.setSpec(builder.newSpec()
                     .setTarget(target)
                     .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE)
-                    .setExcludeSubTreePattern(NESTED_ARCHIVE_PATTERN)
+                    .setExcludeSubTreePattern(getExcludeSubTreePattern())
                     .setVisitArchiveMembers(true)); // to be able to see what is in zip
     
     // NOTE - full_text_cu is set automatically to the url used for the articlefiles
@@ -85,6 +85,10 @@ public class SourceZipXmlArticleIteratorFactory implements ArticleIteratorFactor
                       ArticleFiles.ROLE_ARTICLE_METADATA);
 
     return builder.getSubTreeArticleIterator();
+  }
+  
+  protected Pattern getExcludeSubTreePattern() {
+    return NESTED_ARCHIVE_PATTERN;
   }
   
   @Override
