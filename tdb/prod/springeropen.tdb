@@ -906,15 +906,15 @@
   
         title <
           name = Functional Linguistics ;
-          issn = 2196-419X 
+          eissn = 2196-419X 
         >
   
         param[base_url] = http://www.functionallinguistics.com/
         param[journal_issn] = 2196-419X 
         comment[platform] = move to SpringerOpen
 
-        au < manifest ; 2014 ; Functional Linguistics Volume 1 ; 1 >
-        au < manifest ; 2015 ; Functional Linguistics Volume 2 ; 2 >
+        au < doNotProcess ; 2014 ; Functional Linguistics Volume 1 ; 1 >
+        au < doNotProcess ; 2015 ; Functional Linguistics Volume 2 ; 2 >
 
     }
 
@@ -922,15 +922,15 @@
   
         title <
           name = Geoscience Letters ;
-          issn = 2196-4092 
+          eissn = 2196-4092 
         >
   
         param[base_url] = http://www.geoscienceletters.com/
         param[journal_issn] = 2196-4092 
-        comment[platform] = BioMedCentralPlugin
+        comment[platform] = move to SpringerOpen
 
-        au < manifest ; 2014 ; Geoscience Letters Volume 1 ; 1 >
-        au < manifest ; 2015 ; Geoscience Letters Volume 2 ; 2 >
+        au < doNotProcess ; 2014 ; Geoscience Letters Volume 1 ; 1 >
+        au < doNotProcess ; 2015 ; Geoscience Letters Volume 2 ; 2 >
 
     }
 
@@ -948,23 +948,24 @@
         au < manifest ; 2013 ; Geothermal Energy Volume 1 ; 1 >
         au < down ; 2014 ; Geothermal Energy Volume 2 ; 2 >
         au < manifest ; 2015 ; Geothermal Energy Volume 3 ; 3 >
+        au < exists ; 2016 ; Geothermal Energy Volume 4 ; 4 >
   
     }
   
     {
   
         title <
-          name = Health and Justice ;
-          issn = 2194-7899 
+          name = Health & Justice ;
+          eissn = 2194-7899 
         >
   
-        param[base_url] = http://www.healthandjusticejournal.com/
+        param[base_url] = http://healthandjusticejournal.springeropen.com/
         param[journal_issn] = 2194-7899 
-        comment[platform] = BioMedCentralPlugin
+        comment[platform] = move to SpringerOpen
   
-        au < manifest ; 2013 ; Health and Justice Volume 1 ; 1 >
-        au < manifest ; 2014 ; Health and Justice Volume 2 ; 2 >
-        au < manifest ; 2015 ; Health and Justice Volume 3 ; 3 >
+        au < doNotProcess ; 2013 ; Health & Justice Volume 1 ; 1 >
+        au < doNotProcess ; 2014 ; Health & Justice Volume 2 ; 2 >
+        au < doNotProcess ; 2015 ; Health & Justice Volume 3 ; 3 >
   
     }
   
@@ -977,13 +978,13 @@
   
         param[base_url] = http://www.healtheconomicsreview.com/
         param[journal_issn] = 2191-1991 
-        comment[platform] = BioMedCentralPlugin
+        comment[platform] = move to SpringerOpen
   
-        au < manifest ; 2011 ; Health Economics Review Volume 1 ; 1 >
-        au < manifest ; 2012 ; Health Economics Review Volume 2 ; 2 >
-        au < manifest ; 2013 ; Health Economics Review Volume 3 ; 3 >
-        au < manifest ; 2014 ; Health Economics Review Volume 4 ; 4 >
-        au < manifest ; 2015 ; Health Economics Review Volume 5 ; 5 >
+        au < doNotProcess ; 2011 ; Health Economics Review Volume 1 ; 1 >
+        au < doNotProcess ; 2012 ; Health Economics Review Volume 2 ; 2 >
+        au < doNotProcess ; 2013 ; Health Economics Review Volume 3 ; 3 >
+        au < doNotProcess ; 2014 ; Health Economics Review Volume 4 ; 4 >
+        au < doNotProcess ; 2015 ; Health Economics Review Volume 5 ; 5 >
   
     }
   
@@ -998,12 +999,13 @@
   
         param[base_url] = http://www.thehugojournal.com/
         param[journal_issn] = 1877-6566
-        comment[platform] = BioMedCentralPlugin
+        comment[platform] = move to SpringerOpen
+        # ceased publishing with SpringerOpen
   
-        au < manifest ; 2012 ; HUGO Journal Volume 6 ; 6 >
-        au < manifest ; 2013 ; HUGO Journal Volume 7 ; 7 >
-        au < manifest ; 2014 ; HUGO Journal Volume 8 ; 8 >
-        au < manifest ; 2015 ; HUGO Journal Volume 9 ; 9 >
+        au < doNotProcess ; 2012 ; The HUGO Journal Volume 6 ; 6 >
+        au < doNotProcess ; 2013 ; The HUGO Journal Volume 7 ; 7 >
+        au < doNotProcess ; 2014 ; The HUGO Journal Volume 8 ; 8 >
+        au < doNotProcess ; 2015 ; The HUGO Journal Volume 9 ; 9 >
   
     }
   
