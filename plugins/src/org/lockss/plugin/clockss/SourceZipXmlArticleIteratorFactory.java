@@ -55,6 +55,11 @@ public class SourceZipXmlArticleIteratorFactory implements ArticleIteratorFactor
   private static final String PATTERN_TEMPLATE = 
       "\"%s%d/.*\\.zip!/.*\\.xml$\", base_url, year";
 
+  // Be sure to exclude all nested archives in case supplemental data is provided this way
+  static final Pattern NESTED_ARCHIVE_PATTERN = 
+      Pattern.compile(".*/[^/]+\\.zip!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$", 
+          Pattern.CASE_INSENSITIVE);
+
   public static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
   public static final String XML_REPLACEMENT = "/$1.xml";
   
@@ -68,6 +73,7 @@ public class SourceZipXmlArticleIteratorFactory implements ArticleIteratorFactor
     builder.setSpec(builder.newSpec()
                     .setTarget(target)
                     .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE)
+                    .setExcludeSubTreePattern(NESTED_ARCHIVE_PATTERN)
                     .setVisitArchiveMembers(true)); // to be able to see what is in zip
     
     // NOTE - full_text_cu is set automatically to the url used for the articlefiles
