@@ -52,7 +52,7 @@ public class SourceZipXmlArticleIteratorFactory implements ArticleIteratorFactor
   protected static Logger log = Logger.getLogger(SourceZipXmlArticleIteratorFactory.class);
   
   // ROOT_TEMPLATE doesn't need to be defined as sub-tree is entire tree under base/year
-  private static final String PATTERN_TEMPLATE = 
+  protected static final String ALL_XML_PATTERN_TEMPLATE = 
       "\"%s%d/.*\\.zip!/.*\\.xml$\", base_url, year";
 
   // Be sure to exclude all nested archives in case supplemental data is provided this way
@@ -72,7 +72,7 @@ public class SourceZipXmlArticleIteratorFactory implements ArticleIteratorFactor
     // no need to limit to ROOT_TEMPLATE
     builder.setSpec(builder.newSpec()
                     .setTarget(target)
-                    .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE)
+                    .setPatternTemplate(getIncludePatternTemplate(), Pattern.CASE_INSENSITIVE)
                     .setExcludeSubTreePattern(getExcludeSubTreePattern())
                     .setVisitArchiveMembers(true)); // to be able to see what is in zip
     
@@ -87,10 +87,23 @@ public class SourceZipXmlArticleIteratorFactory implements ArticleIteratorFactor
     return builder.getSubTreeArticleIterator();
   }
   
+  // NOTE - for a child to create their own version of this. 
+  // This does not work to limit the match of the include, except when 
+  // the urls are "below" the pattern - intended for subtree
+  // A child might use this to limit entire subtrees - default is to avoid
+  // descending in to nested archive files (eg suplementary data)
   protected Pattern getExcludeSubTreePattern() {
     return NESTED_ARCHIVE_PATTERN;
   }
-  
+
+  // NOTE - for a child to create their own version of this
+  // Most likely use is to limit which XML files should be used for article iteration
+  // since excluding is limited to subtrees, just create more limiting regex pattern
+  // to identify the appropriate xml files
+  protected String getIncludePatternTemplate() {
+    return ALL_XML_PATTERN_TEMPLATE;
+  }
+
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
