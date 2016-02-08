@@ -46,14 +46,18 @@ public class MdpiZipXmlArticleIteratorFactory extends SourceZipXmlArticleIterato
   protected static Logger log = Logger.getLogger(MdpiZipXmlArticleIteratorFactory.class);
   
   // Be sure to exclude all nested archives in case supplemental data is provided this way
-  // also exclude __ToC_blah.xml files
-  protected static final Pattern EXCLUDE_XML_PATTERN = 
-      Pattern.compile(".*/[^/]+\\.zip!/(__ToC_[^/]+\\.xml|.+\\.(zip|tar|gz|tgz|tar\\.gz))$", 
-          Pattern.CASE_INSENSITIVE);
+  // also exclude __ToC_blah.xml files - but it is hard to do a positive statement to exclude this.
+  // The files we *do* want are of the form....
+  // zip: /water-07-10.zip
+  // issue TOC xml: __ToC_water_07_10.xml
+  // article xml: water-07-05731.xml
+  // the xml may not start with a double "__"
+  protected static final String NOT_TOC_XML_TEMPLATE =
+      "\"%s%d/.*\\.zip!/[^_][^_].*\\.xml$\", base_url, year";
 
   @Override
-  protected Pattern getExcludeSubTreePattern() {
-    return EXCLUDE_XML_PATTERN;
+  protected String getIncludePatternTemplate() {
+    return NOT_TOC_XML_TEMPLATE;
   }
   
 }

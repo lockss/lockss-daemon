@@ -53,10 +53,14 @@ public class CambridgeZipXmlArticleIteratorFactory extends SourceZipXmlArticleIt
   protected static final Pattern EXCLUDE_XML_PATTERN = 
       Pattern.compile(".*/[^/]+\\.zip!/([^/]+w\\.xml|.+\\.(zip|tar|gz|tgz|tar\\.gz))$", 
           Pattern.CASE_INSENSITIVE);
+  
+  // For Cambridge, we only want to iterate on the blahblah/12345h.xml files, not the 12345w.xmlfiles
+  protected static final String ONLY_H_XML_TEMPLATE =
+      "\"%s%d/.*\\.zip!/.*h\\.xml$\", base_url, year";
 
   @Override
-  protected Pattern getExcludeSubTreePattern() {
-    return EXCLUDE_XML_PATTERN;
+  protected String getIncludePatternTemplate() {
+    return ONLY_H_XML_TEMPLATE;
   }
   
 }
