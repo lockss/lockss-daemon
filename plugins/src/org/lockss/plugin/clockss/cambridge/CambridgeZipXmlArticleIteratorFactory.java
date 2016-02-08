@@ -41,9 +41,9 @@ import org.lockss.util.Logger;
 // Extend the basic SourceZipXmlArticleIteratorFactory to exclude the TOC xml files
 //  we only want to "find" the article xml files
 //
-public class CampbridgeZipXmlArticleIteratorFactory extends SourceZipXmlArticleIteratorFactory {
+public class CambridgeZipXmlArticleIteratorFactory extends SourceZipXmlArticleIteratorFactory {
 
-  protected static Logger log = Logger.getLogger(CampbridgeZipXmlArticleIteratorFactory.class);
+  protected static Logger log = Logger.getLogger(CambridgeZipXmlArticleIteratorFactory.class);
   
   // Be sure to exclude all nested archives in case supplemental data is provided this way
   // each article comes with two xml files
