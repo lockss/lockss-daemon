@@ -234,7 +234,7 @@
   
         title <
           name = Brazilian Journal of Science and Technology ;
-          issn = 2196-288X 
+          eissn = 2196-288X 
         >
   
         param[base_url] = http://www.bjst-journal.com/
@@ -266,7 +266,7 @@
   
         title <
           name = City, Territory and Architecture ;
-          issn = 2195-2701 
+          eissn = 2195-2701 
         >
   
         param[base_url] = http://www.cityterritoryarchitecture.com/
@@ -319,7 +319,7 @@
   
         title <
           name = Complex Adaptive Systems Modeling ;
-          issn = 2194-3206 
+          eissn = 2194-3206 
         >
   
         param[base_url] = http://www.casmodeling.com/
@@ -336,7 +336,7 @@
   
         title <
           name = Computational Cognitive Science ;
-          issn = 2195-3961 
+          eissn = 2195-3961 
         >
   
         param[base_url] = http://www.computationalcognitivescience.com/
@@ -388,7 +388,7 @@
   
         title <
           name = Decision Analytics ;
-          issn = 2193-8636 
+          eissn = 2193-8636 
         >
   
         param[base_url] = http://www.decisionanalyticsjournal.com/
@@ -404,7 +404,7 @@
   
         title <
           name = Earth Perspectives ;
-          issn = 2194-6434 
+          eissn = 2194-6434 
         >
   
         param[base_url] = http://www.earth-perspectives.com/
@@ -489,7 +489,7 @@
   
         title <
           name = Empirical Research in Vocational Education and Training ;
-          issn = 1877-6345 
+          eissn = 1877-6345 
         >
   
         param[base_url] = http://www.ervet-journal.com/
@@ -544,7 +544,7 @@
   
         title <
           name = Environmental Systems Research ;
-          issn = 2193-2697 
+          eissn = 2193-2697 
         >
   
         param[base_url] = http://www.environmentalsystemsresearch.com/
@@ -885,7 +885,7 @@
   
         title <
           name = Fire Science Reviews ;
-          issn = 2193-0414 
+          eissn = 2193-0414 
         >
   
         param[base_url] = http://www.firesciencereviews.com/
@@ -947,7 +947,7 @@
   
         title <
           name = Functional Linguistics ;
-          issn = 2196-419X 
+          eissn = 2196-419X 
         >
   
         param[base_url] = http://www.functionallinguistics.com/
@@ -963,7 +963,7 @@
   
         title <
           name = Geoscience Letters ;
-          issn = 2196-4092 
+          eissn = 2196-4092 
         >
   
         param[base_url] = http://www.geoscienceletters.com/
@@ -995,7 +995,7 @@
     {
   
         title <
-          name = Health and Justice ;
+          name = Health & Justice ;
           issn = 2194-7899 
         >
   
@@ -1003,9 +1003,9 @@
         param[journal_issn] = 2194-7899 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; Health and Justice Volume 1 ; 1 >
-        au < down ; exists ; 2014 ; Health and Justice Volume 2 ; 2 >
-        au < down ; exists ; 2015 ; Health and Justice Volume 3 ; 3 >
+        au < down ; exists ; 2013 ; Health & Justice Volume 1 ; 1 >
+        au < down ; exists ; 2014 ; Health & Justice Volume 2 ; 2 >
+        au < down ; exists ; 2015 ; Health & Justice Volume 3 ; 3 >
   
     }
   
