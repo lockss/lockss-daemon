@@ -55,6 +55,8 @@ public class PermissionUrlConsumer extends SimpleUrlConsumer {
   static Logger logger = Logger.getLogger(PermissionUrlConsumer.class);
   protected PermissionMap permMap;
   protected String charset;
+  protected InputStream fudis;
+  protected boolean strmNeedsReset = false;
   
   protected enum PermissionLogic {
     OR_CHECKER, AND_CHECKER
@@ -70,6 +72,10 @@ public class PermissionUrlConsumer extends SimpleUrlConsumer {
   public void consume() throws IOException {
     boolean permOk = false;
     // if we didn't find at least one required lockss permission - fail.
+    fudis = fud.getResettableInputStream();
+    // allow us to reread contents if reasonable size
+    fudis.mark(crawlFacade.permissonStreamResetMax());
+
     if (!checkPermission(permMap.getDaemonPermissionCheckers(),
         PermissionLogic.OR_CHECKER)) {
       logger.siteError("No (C)LOCKSS crawl permission on " + fud.fetchUrl);
@@ -105,22 +111,16 @@ public class PermissionUrlConsumer extends SimpleUrlConsumer {
       throws IOException {
 
     PermissionChecker checker;
-    InputStream fudis = fud.getResettableInputStream();
-
-    // allow us to reread contents if reasonable size
-    fudis.mark(crawlFacade.permissonStreamResetMax());
 
     String contentEncoding =
       fud.headers.getProperty(CachedUrl.PROPERTY_CONTENT_ENCODING);
-
-    boolean notFirst = false;
 
     // check the lockss checkers and find at least one checker that matches
     for (Iterator<PermissionChecker> it = permCheckers.iterator();
         it.hasNext(); ) {
       checker = it.next();
       // reset stream if not first time through
-      if (notFirst) {
+      if (strmNeedsReset) {
 	try {
 	  fudis.reset();
 	} catch(IOException ex) {
@@ -129,7 +129,7 @@ public class PermissionUrlConsumer extends SimpleUrlConsumer {
 	  fudis = fud.getResettableInputStream();
 	}
       } else {
-	notFirst = true;
+	strmNeedsReset = true;
       }
 
       // decompress if necessary
