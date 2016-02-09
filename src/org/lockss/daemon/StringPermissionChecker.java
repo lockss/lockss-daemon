@@ -111,6 +111,17 @@ public class StringPermissionChecker extends BasePermissionChecker {
     return false;
   }
 
+  public String toString() {
+    StringBuffer sb = new StringBuffer(80);
+    sb.append("[SPC: ");
+    if (m_flags.get(IGNORE_CASE)) {
+      sb.append("IGN: ");
+    }
+    sb.append(m_matchString);
+    sb.append("]");
+    return sb.toString();
+  }
+
   static public class StringFilterRule implements FilterRule {
     public Reader createFilteredReader(Reader reader) {
       Reader filteredReader = StringFilter.makeNestedFilter(reader,
