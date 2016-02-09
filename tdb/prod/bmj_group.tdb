@@ -54,7 +54,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; Acupuncture in Medicine Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Acupuncture in Medicine Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Acupuncture in Medicine Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Acupuncture in Medicine Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Acupuncture in Medicine Volume 34 ; 34 >
 
   }
 
@@ -1992,14 +1992,14 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     param[base_url] = http://mp.bmj.com/
     comment[0] = merged with Clinical Pathology after Jan 2004.
 
-    au < HighWirePressH20Plugin ; exists ; 1995 ; Molecular Pathology Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; exists ; 1996 ; Molecular Pathology Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; exists ; 1997 ; Molecular Pathology Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; exists ; 1998 ; Molecular Pathology Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; exists ; 1999 ; Molecular Pathology Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; exists ; 2000 ; Molecular Pathology Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; exists ; 2001 ; Molecular Pathology Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; exists ; 2002 ; Molecular Pathology Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; manifest ; 1995 ; Molecular Pathology Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; manifest ; 1996 ; Molecular Pathology Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; manifest ; 1997 ; Molecular Pathology Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; manifest ; 1998 ; Molecular Pathology Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; manifest ; 1999 ; Molecular Pathology Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; manifest ; 2000 ; Molecular Pathology Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; manifest ; 2001 ; Molecular Pathology Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; manifest ; 2002 ; Molecular Pathology Volume 55 ; 55 >
     au < HighWirePressH20Plugin ; released ; 2003 ; Molecular Pathology Volume 56 ; 56 >
 
   }
