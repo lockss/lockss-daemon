@@ -173,10 +173,10 @@
     param[journal_id] = ca
     param[journal_issn] = 0305-7674
 
-    au < exists ; exists ; 2012 ; The Cambridge Journal of Anthropology Volume 30 ; 30 >
-    au < exists ; exists ; 2013 ; The Cambridge Journal of Anthropology Volume 31 ; 31 >
-    au < exists ; exists ; 2014 ; The Cambridge Journal of Anthropology Volume 32 ; 32 >
-    au < exists ; exists ; 2015 ; The Cambridge Journal of Anthropology Volume 33 ; 33 >
+    au < testing ; exists ; 2012 ; The Cambridge Journal of Anthropology Volume 30 ; 30 >
+    au < testing ; exists ; 2013 ; The Cambridge Journal of Anthropology Volume 31 ; 31 >
+    au < testing ; exists ; 2014 ; The Cambridge Journal of Anthropology Volume 32 ; 32 >
+    au < testing ; exists ; 2015 ; The Cambridge Journal of Anthropology Volume 33 ; 33 >
 
   }
 
@@ -192,16 +192,16 @@
     param[journal_id] = coco
     param[journal_issn] = 1807-9326
 
-    au < exists ; exists ; 2005 ; Contributions to the History of Concepts Volume 1 ; 1 >
-    au < exists ; exists ; 2006 ; Contributions to the History of Concepts Volume 2 ; 2 >
-    au < exists ; exists ; 2007 ; Contributions to the History of Concepts Volume 3 ; 3 >
-    au < exists ; exists ; 2008 ; Contributions to the History of Concepts Volume 4 ; 4 >
-    au < exists ; exists ; 2009 ; Contributions to the History of Concepts Volume 5 ; 5 >
-    au < exists ; exists ; 2011 ; Contributions to the History of Concepts Volume 6 ; 6 >
-    au < exists ; exists ; 2012 ; Contributions to the History of Concepts Volume 7 ; 7 >
-    au < exists ; exists ; 2013 ; Contributions to the History of Concepts Volume 8 ; 8 >
-    au < exists ; exists ; 2014 ; Contributions to the History of Concepts Volume 9 ; 9 >
-    au < exists ; exists ; 2015 ; Contributions to the History of Concepts Volume 10 ; 10 >
+    au < manifest ; exists ; 2005 ; Contributions to the History of Concepts Volume 1 ; 1 >
+    au < manifest ; exists ; 2006 ; Contributions to the History of Concepts Volume 2 ; 2 >
+    au < manifest ; exists ; 2007 ; Contributions to the History of Concepts Volume 3 ; 3 >
+    au < manifest ; exists ; 2008 ; Contributions to the History of Concepts Volume 4 ; 4 >
+    au < manifest ; exists ; 2009 ; Contributions to the History of Concepts Volume 5 ; 5 >
+    au < testing ; exists ; 2011 ; Contributions to the History of Concepts Volume 6 ; 6 >
+    au < testing ; exists ; 2012 ; Contributions to the History of Concepts Volume 7 ; 7 >
+    au < testing ; exists ; 2013 ; Contributions to the History of Concepts Volume 8 ; 8 >
+    au < testing ; exists ; 2014 ; Contributions to the History of Concepts Volume 9 ; 9 >
+    au < testing ; exists ; 2015 ; Contributions to the History of Concepts Volume 10 ; 10 >
 
   }
 
@@ -251,8 +251,8 @@
     param[journal_id] = demt
     param[journal_issn] = 2332-8894
 
-    au < exists ; exists ; 2014 ; Democratic Theory Volume 1 ; 1 >
-    au < exists ; exists ; 2015 ; Democratic Theory Volume 2 ; 2 >
+    au < testing ; exists ; 2014 ; Democratic Theory Volume 1 ; 1 >
+    au < testing ; exists ; 2015 ; Democratic Theory Volume 2 ; 2 >
     
   }
 
@@ -509,10 +509,10 @@
     param[journal_id] = ijsq
     param[journal_issn] = 1757-0344
     
-    au < exists ; exists ; 2011 ; International Journal of Social Quality Volume 1 ; 1 >
-    au < exists ; exists ; 2012 ; International Journal of Social Quality Volume 2 ; 2 >
-    au < exists ; exists ; 2013 ; International Journal of Social Quality Volume 3 ; 3 >
-    au < exists ; exists ; 2014 ; International Journal of Social Quality Volume 4 ; 4 >
+    au < testing ; exists ; 2011 ; International Journal of Social Quality Volume 1 ; 1 >
+    au < testing ; exists ; 2012 ; International Journal of Social Quality Volume 2 ; 2 >
+    au < testing ; exists ; 2013 ; International Journal of Social Quality Volume 3 ; 3 >
+    au < testing ; exists ; 2014 ; International Journal of Social Quality Volume 4 ; 4 >
     
   }
 
@@ -547,10 +547,10 @@
     param[journal_id] = itpol
     param[journal_issn] = 1086-4946 
     
-    au < exists ; exists ; 2012 ; Italian Politics Volume 27 ; 27 >
-    au < exists ; exists ; 2013 ; Italian Politics Volume 28 ; 28 >
-    au < exists ; exists ; 2014 ; Italian Politics Volume 29 ; 29 >
-    au < exists ; exists ; 2015 ; Italian Politics Volume 30 ; 30 >
+    au < testing ; exists ; 2012 ; Italian Politics Volume 27 ; 27 >
+    au < testing ; exists ; 2013 ; Italian Politics Volume 28 ; 28 >
+    au < testing ; exists ; 2014 ; Italian Politics Volume 29 ; 29 >
+    au < testing ; exists ; 2015 ; Italian Politics Volume 30 ; 30 >
     
   }
 
@@ -671,10 +671,10 @@
     param[journal_id] = mih
     param[journal_issn] = 2296-0503
 
-    au < exists ; exists ; 2013 ; Mobility in History Volume 4 ; 4 >
-    au < exists ; exists ; 2014 ; Mobility in History Volume 5 ; 5 >
-    au < exists ; exists ; 2015 ; Mobility in History Volume 6 ; 6 >
-    au < exists ; exists ; 2016 ; Mobility in History Volume 7 ; 7 >
+    au < testing ; exists ; 2013 ; Mobility in History Volume 4 ; 4 >
+    au < testing ; exists ; 2014 ; Mobility in History Volume 5 ; 5 >
+    au < testing ; exists ; 2015 ; Mobility in History Volume 6 ; 6 >
+    au < testing ; exists ; 2016 ; Mobility in History Volume 7 ; 7 >
     
   }
 
