@@ -23,7 +23,7 @@
     au < manifest ; 1793 ; Account of the Receipts and Expenditures of the United States 1793 ; 1793 >
     au < manifest ; 1797 ; Account of the Receipts and Expenditures of the United States 1797 ; 1797 >
     au < manifest ; 1805 ; Account of the Receipts and Expenditures of the United States 1805 ; 1805 >
-    au < manifest ; 1806 ; Account of the Receipts and Expenditures of the United States 1806 ; 1806 >
+    au < exists ; 1806 ; Account of the Receipts and Expenditures of the United States 1806 ; 1806 >
     au < manifest ; 1808 ; Account of the Receipts and Expenditures of the United States 1808 ; 1808 >
     au < manifest ; 1809 ; Account of the Receipts and Expenditures of the United States 1809 ; 1809 >
     au < manifest ; 1812 ; Account of the Receipts and Expenditures of the United States 1812 ; 1812 >
@@ -41,18 +41,18 @@
     au < manifest ; 1824 ; Account of the Receipts and Expenditures of the United States 1824 ; 1824 >
     au < manifest ; 1825 ; Account of the Receipts and Expenditures of the United States 1825 ; 1825 >
     au < manifest ; 1826 ; Account of the Receipts and Expenditures of the United States 1826 ; 1826 >
-    au < manifest ; 1827 ; Account of the Receipts and Expenditures of the United States 1827 ; 1827 >
+    au < exists ; 1827 ; Account of the Receipts and Expenditures of the United States 1827 ; 1827 >
     au < manifest ; 1828 ; Account of the Receipts and Expenditures of the United States 1828 ; 1828 >
     au < manifest ; 1829 ; Account of the Receipts and Expenditures of the United States 1829 ; 1829 >
     au < manifest ; 1830 ; Account of the Receipts and Expenditures of the United States 1830 ; 1830 >
     au < manifest ; 1831 ; Account of the Receipts and Expenditures of the United States 1831 ; 1831 >
     au < manifest ; 1832 ; Account of the Receipts and Expenditures of the United States 1832 ; 1832 >
     au < manifest ; 1833 ; Account of the Receipts and Expenditures of the United States 1833 ; 1833 >
-    au < manifest ; 1834 ; Account of the Receipts and Expenditures of the United States 1834 ; 1834 >
+    au < exists ; 1834 ; Account of the Receipts and Expenditures of the United States 1834 ; 1834 >
     au < manifest ; 1835 ; Account of the Receipts and Expenditures of the United States 1835 ; 1835 >
     au < manifest ; 1836 ; Account of the Receipts and Expenditures of the United States 1836 ; 1836 >
     au < manifest ; 1837 ; Account of the Receipts and Expenditures of the United States 1837 ; 1837 >
-    au < manifest ; 1838 ; Account of the Receipts and Expenditures of the United States 1838 ; 1838 >
+    au < exists ; 1838 ; Account of the Receipts and Expenditures of the United States 1838 ; 1838 >
     au < manifest ; 1839 ; Account of the Receipts and Expenditures of the United States 1839 ; 1839 >
     au < manifest ; 1840 ; Account of the Receipts and Expenditures of the United States 1840 ; 1840 >
     au < manifest ; 1841 ; Account of the Receipts and Expenditures of the United States 1841 ; 1841 >
@@ -222,6 +222,13 @@
     au < manifest ; 2006 ; Account of the Receipts and Expenditures of the United States 2006 ; 2006 >
     au < manifest ; 2007 ; Account of the Receipts and Expenditures of the United States 2007 ; 2007 >
     au < manifest ; 2008 ; Account of the Receipts and Expenditures of the United States 2008 ; 2008 >
+    au < expected ; 2009 ; Account of the Receipts and Expenditures of the United States 2009 ; 2009 >
+    au < expected ; 2010 ; Account of the Receipts and Expenditures of the United States 2010 ; 2010 >
+    au < expected ; 2011 ; Account of the Receipts and Expenditures of the United States 2011 ; 2011 >
+    au < expected ; 2012 ; Account of the Receipts and Expenditures of the United States 2012 ; 2012 >
+    au < expected ; 2013 ; Account of the Receipts and Expenditures of the United States 2013 ; 2013 >
+    au < expected ; 2014 ; Account of the Receipts and Expenditures of the United States 2014 ; 2014 >
+    au < expected ; 2015 ; Account of the Receipts and Expenditures of the United States 2015 ; 2015 >
 
   }
 
@@ -270,6 +277,7 @@
     au < released ; 2013 ; Additional Government Publications 2013 ; 2013 >
     au < released ; 2014 ; Additional Government Publications 2014 ; 2014 >
     au < manifest ; 2015 ; Additional Government Publications 2015 ; 2015 >
+    au < expected ; 2016 ; Additional Government Publications 2016 ; 2016 >
 
   }
 
@@ -302,6 +310,7 @@
     au < released ; 2013 ; Budget of the United States Government 2013 ; 2013 >
     au < released ; 2014 ; Budget of the United States Government 2014 ; 2014 >
     au < manifest ; 2015 ; Budget of the United States Government 2015 ; 2015 >
+    au < expected ; 2016 ; Budget of the United States Government 2016 ; 2016 >
 
 
   }
@@ -385,6 +394,7 @@
     au < manifest ; 2013 ; Code of Federal Regulations 2013 ; 2013 >
     au < manifest ; 2014 ; Code of Federal Regulations 2014 ; 2014 >
     au < manifest ; 2015 ; Code of Federal Regulations 2015 ; 2015 >
+    au < expected ; 2016 ; Code of Federal Regulations 2016 ; 2016 >
 
   }
 
@@ -438,6 +448,7 @@
     au < released ; 2013 ; Congressional Bills 2013 ; 2013 >
     au < released ; 2014 ; Congressional Bills 2014 ; 2014 >
     au < manifest ; 2015 ; Congressional Bills 2015 ; 2015 >
+    au < expected ; 2016 ; Congressional Bills 2016 ; 2016 >
 
   }
 
@@ -465,6 +476,7 @@
     au < released ; 2013 ; Congressional Calendars 2013 ; 2013 >
     au < released ; 2014 ; Congressional Calendars 2014 ; 2014 >
     au < manifest ; 2015 ; Congressional Calendars 2015 ; 2015 >
+    au < expected ; 2016 ; Congressional Calendars 2016 ; 2016 >
 
   }
 
@@ -501,6 +513,7 @@
     au < released ; 2013 ; Congressional Committee Prints 2013 ; 2013 >
     au < released ; 2014 ; Congressional Committee Prints 2014 ; 2014 >
     au < manifest ; 2015 ; Congressional Committee Prints 2015 ; 2015 >
+    au < expected ; 2016 ; Congressional Committee Prints 2016 ; 2016 >
 
   }
 
@@ -527,6 +540,7 @@
     au < released ; 2011 ; Congressional Directory 2011 ; 2011 >
     au < expected ; 2014 ; Congressional Directory 2014 ; 2014 >
     au < expected ; 2015 ; Congressional Directory 2015 ; 2015 >
+    au < expected ; 2016 ; Congressional Directory 2016 ; 2016 >
 
   }
 
@@ -568,6 +582,7 @@
     au < released ; 2013 ; Congressional Documents 2013 ; 2013 >
     au < released ; 2014 ; Congressional Documents 2014 ; 2014 >
     au < manifest ; 2015 ; Congressional Documents 2015 ; 2015 >
+    au < expected ; 2016 ; Congressional Documents 2016 ; 2016 >
 
   }
 
@@ -606,6 +621,7 @@
     au < released ; 2013 ; Congressional Hearings 2013 ; 2013 >
     au < released ; 2014 ; Congressional Hearings 2014 ; 2014 >
     au < manifest ; 2015 ; Congressional Hearings 2015 ; 2015 >
+    au < expected ; 2016 ; Congressional Hearings 2016 ; 2016 >
 
   }
 
@@ -639,6 +655,7 @@
     au < released ; 2013 ; Congressional Record 2013 ; 2013 >
     au < released ; 2014 ; Congressional Record 2014 ; 2014 >
     au < manifest ; 2015 ; Congressional Record 2015 ; 2015 >
+    au < expected ; 2016 ; Congressional Record 2016 ; 2016 >
 
   }
 
@@ -697,6 +714,7 @@
     au < released ; 2013 ; Congressional Record Index 2013 ; 2013 >
     au < released ; 2014 ; Congressional Record Index 2014 ; 2014 >
     au < manifest ; 2015 ; Congressional Record Index 2015 ; 2015 >
+    au < expected ; 2016 ; Congressional Record Index 2016 ; 2016 >
 
   }
 
@@ -729,6 +747,7 @@
     au < released ; 2013 ; Congressional Reports 2013 ; 2013 >
     au < released ; 2014 ; Congressional Reports 2014 ; 2014 >
     au < manifest ; 2015 ; Congressional Reports 2015 ; 2015 >
+    au < expected ; 2016 ; Congressional Reports 2016 ; 2016 >
 
   }
 
@@ -747,6 +766,7 @@
     au < released ; 2013 ; Daily Compilation of Presidential Documents 2013 ; 2013 >
     au < released ; 2014 ; Daily Compilation of Presidential Documents 2014 ; 2014 >
     au < manifest ; 2015 ; Daily Compilation of Presidential Documents 2015 ; 2015 >
+    au < expected ; 2016 ; Daily Compilation of Presidential Documents 2016 ; 2016 >
 
   }
 
@@ -779,6 +799,7 @@
     au < released ; 2013 ; Economic Indicators 2013 ; 2013 >
     au < released ; 2014 ; Economic Indicators 2014 ; 2014 >
     au < manifest ; 2015 ; Economic Indicators 2015 ; 2015 >
+    au < expected ; 2016 ; Economic Indicators 2016 ; 2016 >
 
   }
 
@@ -810,6 +831,7 @@
     au < released ; 2013 ; Economic Report of the President 2013 ; 2013 >
     au < released ; 2014 ; Economic Report of the President 2014 ; 2014 >
     au < manifest ; 2015 ; Economic Report of the President 2015 ; 2015 >
+    au < expected ; 2016 ; Economic Report of the President 2016 ; 2016 >
 
   }
 
@@ -864,6 +886,7 @@
     au < released ; 2013 ; Federal Register 2013 ; 2013 >
     au < manifest ; 2014 ; Federal Register 2014 ; 2014 >
     au < manifest ; 2015 ; Federal Register 2015 ; 2015 >
+    au < expected ; 2016 ; Federal Register 2016 ; 2016 >
 
   }
 
@@ -935,6 +958,7 @@
     au < released ; 2013 ; History of Bills 2013 ; 2013 >
     au < manifest ; 2014 ; History of Bills 2014 ; 2014 >
     au < manifest ; 2015 ; History of Bills 2015 ; 2015 >
+    au < expected ; 2016 ; History of Bills 2016 ; 2016 >
 
   }
 
@@ -956,6 +980,7 @@
     au < released ; 2013 ; House Rules and Manual 2013 ; 2013 >
     au < manifest ; 2014 ; House Rules and Manual 2014 ; 2014 >
     au < manifest ; 2015 ; House Rules and Manual 2015 ; 2015 >
+    au < expected ; 2016 ; House Rules and Manual 2016 ; 2016 >
 
   }
 
@@ -1006,6 +1031,7 @@
     au < released ; 2013 ; List of CFR Sections Affected 2013 ; 2013 >
     au < manifest ; 2014 ; List of CFR Sections Affected 2014 ; 2014 >
     au < manifest ; 2015 ; List of CFR Sections Affected 2015 ; 2015 >
+    au < expected ; 2016 ; List of CFR Sections Affected 2016 ; 2016 >
 
   }
 
@@ -1058,6 +1084,7 @@
     au < released ; 2013 ; Public and Private Laws 2013 ; 2013 >
     au < manifest ; 2014 ; Public and Private Laws 2014 ; 2014 >
     au < manifest ; 2015 ; Public and Private Laws 2015 ; 2015 >
+    au < expected ; 2016 ; Public and Private Laws 2016 ; 2016 >
 
   }
 
@@ -1196,6 +1223,7 @@
     au < manifest ; 2013 ; United States Courts 2013 ; 2013 >
     au < manifest ; 2014 ; United States Courts 2014 ; 2014 >
     au < manifest ; 2015 ; United States Courts 2015 ; 2015 >
+    au < expected ; 2016 ; United States Courts 2016 ; 2016 >
 
   }
 
@@ -1228,6 +1256,7 @@
     au < released ; 2013 ; United States Government Manual 2013 ; 2013 >
     au < expected ; 2014 ; United States Government Manual 2014 ; 2014 >
     au < expected ; 2015 ; United States Government Manual 2015 ; 2015 >
+    au < expected ; 2016 ; United States Government Manual 2016 ; 2016 >
 
   }
 

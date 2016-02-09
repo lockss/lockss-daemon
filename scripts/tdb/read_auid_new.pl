@@ -269,6 +269,7 @@ while (my $line = <>) {
       if ($resp->is_success) {
           my $man_contents = $resp->content;
           if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/))) {
+              $vol_title = $param{collection_id};
               $result = "Manifest"
           } else {
               $result = "--"
@@ -276,7 +277,7 @@ while (my $line = <>) {
       } else {
           $result = "--"
       }
-      sleep(4);
+      sleep(5);
 
   } elsif ($plugin eq "BePressPlugin") {
         $url = sprintf("%s%s/lockss-volume%d.html", 
