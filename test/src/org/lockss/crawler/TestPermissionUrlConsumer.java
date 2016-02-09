@@ -1,8 +1,3 @@
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// test not first permission checker (to test reset)
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-
 /*
  * $Id: TestPermissionUrlConsumer.java 45054 2015-11-30 23:27:00Z tlipkis $
  */
@@ -168,6 +163,45 @@ public abstract class TestPermissionUrlConsumer extends LockssTestCase {
 		      muc1.getStoredContentStream());
     }
 
+    public void testCompressedOkNotFirstPlusPluginPermissionChecker()
+	throws Exception {
+      List<PermissionChecker> plugPerms =
+	ListUtil.list(new StringPermissionChecker(notFirstPermContent));
+      pMap = new MyPermissionMap(mcf, new LockssPermission().getCheckers(),
+				 plugPerms, new ArrayList());
+      FetchedUrlData fud = makeFud(makeCompressedStream(notFirstPermContent),
+				   encHdr());
+      PermissionUrlConsumerFactory pucf =
+	new PermissionUrlConsumerFactory(pMap);
+      MockUrlCacher muc1 = (MockUrlCacher)mau.makeUrlCacher(fud.getUrlData());
+      muc1.setReadContent(true);
+      puc = (PermissionUrlConsumer)pucf.createUrlConsumer(mcf, fud);
+      puc.consume();
+      assertEquals(PermissionStatus.PERMISSION_OK, pMap.getStatus(url1));
+      assertSameBytes(makeCompressedStream(notFirstPermContent),
+		      muc1.getStoredContentStream());
+    }
+
+    public void testCompressedOkNotFirstPlusPluginPermissionCheckerNotFirst()
+	throws Exception {
+      List<PermissionChecker> plugPerms =
+	ListUtil.list(new StringPermissionChecker(notFirstPermContent),
+		      new StringPermissionChecker(notFirstPermContent));
+      pMap = new MyPermissionMap(mcf, new LockssPermission().getCheckers(),
+				 plugPerms, new ArrayList());
+      FetchedUrlData fud = makeFud(makeCompressedStream(notFirstPermContent),
+				   encHdr());
+      PermissionUrlConsumerFactory pucf =
+	new PermissionUrlConsumerFactory(pMap);
+      MockUrlCacher muc1 = (MockUrlCacher)mau.makeUrlCacher(fud.getUrlData());
+      muc1.setReadContent(true);
+      puc = (PermissionUrlConsumer)pucf.createUrlConsumer(mcf, fud);
+      puc.consume();
+      assertEquals(PermissionStatus.PERMISSION_OK, pMap.getStatus(url1));
+      assertSameBytes(makeCompressedStream(notFirstPermContent),
+		      muc1.getStoredContentStream());
+    }
+
     public void testCompressedNoPerm() throws Exception {
       FetchedUrlData fud =
 	new FetchedUrlData(url1, url1,
@@ -277,6 +311,45 @@ public abstract class TestPermissionUrlConsumer extends LockssTestCase {
     }
 
     public void testUncompressedOkNotFirst() throws Exception {
+      FetchedUrlData fud = makeFud(notFirstPermContent);
+      PermissionUrlConsumerFactory pucf =
+	new PermissionUrlConsumerFactory(pMap);
+      MockUrlCacher muc1 = (MockUrlCacher)mau.makeUrlCacher(fud.getUrlData());
+      muc1.setReadContent(true);
+
+      puc = (PermissionUrlConsumer)pucf.createUrlConsumer(mcf, fud);
+      puc.consume();
+      assertEquals(PermissionStatus.PERMISSION_OK, pMap.getStatus(url1));
+      assertInputStreamMatchesString(notFirstPermContent,
+				     muc1.getStoredContentStream());
+    }
+
+    public void testUncompressedOkNotFirstPlusPluginPermissionChecker()
+	throws Exception {
+      List<PermissionChecker> plugPerms =
+	ListUtil.list(new StringPermissionChecker(notFirstPermContent));
+      pMap = new MyPermissionMap(mcf, new LockssPermission().getCheckers(),
+				 plugPerms, new ArrayList());
+      FetchedUrlData fud = makeFud(notFirstPermContent);
+      PermissionUrlConsumerFactory pucf =
+	new PermissionUrlConsumerFactory(pMap);
+      MockUrlCacher muc1 = (MockUrlCacher)mau.makeUrlCacher(fud.getUrlData());
+      muc1.setReadContent(true);
+
+      puc = (PermissionUrlConsumer)pucf.createUrlConsumer(mcf, fud);
+      puc.consume();
+      assertEquals(PermissionStatus.PERMISSION_OK, pMap.getStatus(url1));
+      assertInputStreamMatchesString(notFirstPermContent,
+				     muc1.getStoredContentStream());
+    }
+
+    public void testUncompressedOkNotFirstPlusPluginPermissionCheckerNotFirst()
+	throws Exception {
+      List<PermissionChecker> plugPerms =
+	ListUtil.list(new StringPermissionChecker(notFirstPermContent),
+		      new StringPermissionChecker(notFirstPermContent));
+      pMap = new MyPermissionMap(mcf, new LockssPermission().getCheckers(),
+				 plugPerms, new ArrayList());
       FetchedUrlData fud = makeFud(notFirstPermContent);
       PermissionUrlConsumerFactory pucf =
 	new PermissionUrlConsumerFactory(pMap);
