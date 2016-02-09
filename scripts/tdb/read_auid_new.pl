@@ -260,6 +260,24 @@ while (my $line = <>) {
   }
         sleep(4);
 
+  } elsif ($plugin eq "GPOFDSysSitemapsPlugin") {
+      $url = sprintf("%ssmap/fdsys/sitemap_%d/%d_%s_sitemap.xml", 
+      $param{base_url}, $param{year}, $param{year}, $param{collection_id});
+      $man_url = uri_unescape($url);
+      my $req = HTTP::Request->new(GET, $man_url);
+      my $resp = $ua->request($req);
+      if ($resp->is_success) {
+          my $man_contents = $resp->content;
+          if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/))) {
+              $result = "Manifest"
+          } else {
+              $result = "--"
+          }
+      } else {
+          $result = "--"
+      }
+      sleep(4);
+
   } elsif ($plugin eq "BePressPlugin") {
         $url = sprintf("%s%s/lockss-volume%d.html", 
             $param{base_url}, $param{journal_abbr}, $param{volume});
