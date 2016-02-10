@@ -276,7 +276,7 @@
     au < released ; 2012 ; Additional Government Publications 2012 ; 2012 >
     au < released ; 2013 ; Additional Government Publications 2013 ; 2013 >
     au < released ; 2014 ; Additional Government Publications 2014 ; 2014 >
-    au < manifest ; 2015 ; Additional Government Publications 2015 ; 2015 >
+    au < testing ; 2015 ; Additional Government Publications 2015 ; 2015 >
     au < expected ; 2016 ; Additional Government Publications 2016 ; 2016 >
 
   }
@@ -309,7 +309,7 @@
     au < released ; 2012 ; Budget of the United States Government 2012 ; 2012 >
     au < released ; 2013 ; Budget of the United States Government 2013 ; 2013 >
     au < released ; 2014 ; Budget of the United States Government 2014 ; 2014 >
-    au < manifest ; 2015 ; Budget of the United States Government 2015 ; 2015 >
+    au < testing ; 2015 ; Budget of the United States Government 2015 ; 2015 >
     au < expected ; 2016 ; Budget of the United States Government 2016 ; 2016 >
 
 
@@ -393,7 +393,7 @@
     au < released ; 2012 ; Code of Federal Regulations 2012 ; 2012 >
     au < manifest ; 2013 ; Code of Federal Regulations 2013 ; 2013 >
     au < manifest ; 2014 ; Code of Federal Regulations 2014 ; 2014 >
-    au < manifest ; 2015 ; Code of Federal Regulations 2015 ; 2015 >
+    au < testing ; 2015 ; Code of Federal Regulations 2015 ; 2015 >
     au < expected ; 2016 ; Code of Federal Regulations 2016 ; 2016 >
 
   }
@@ -447,7 +447,7 @@
     au < released ; 2012 ; Congressional Bills 2012 ; 2012 >
     au < released ; 2013 ; Congressional Bills 2013 ; 2013 >
     au < released ; 2014 ; Congressional Bills 2014 ; 2014 >
-    au < manifest ; 2015 ; Congressional Bills 2015 ; 2015 >
+    au < testing ; 2015 ; Congressional Bills 2015 ; 2015 >
     au < expected ; 2016 ; Congressional Bills 2016 ; 2016 >
 
   }
@@ -475,7 +475,7 @@
     au < released ; 2012 ; Congressional Calendars 2012 ; 2012 >
     au < released ; 2013 ; Congressional Calendars 2013 ; 2013 >
     au < released ; 2014 ; Congressional Calendars 2014 ; 2014 >
-    au < manifest ; 2015 ; Congressional Calendars 2015 ; 2015 >
+    au < testing ; 2015 ; Congressional Calendars 2015 ; 2015 >
     au < expected ; 2016 ; Congressional Calendars 2016 ; 2016 >
 
   }
@@ -512,7 +512,7 @@
     au < released ; 2012 ; Congressional Committee Prints 2012 ; 2012 >
     au < released ; 2013 ; Congressional Committee Prints 2013 ; 2013 >
     au < released ; 2014 ; Congressional Committee Prints 2014 ; 2014 >
-    au < manifest ; 2015 ; Congressional Committee Prints 2015 ; 2015 >
+    au < testing ; 2015 ; Congressional Committee Prints 2015 ; 2015 >
     au < expected ; 2016 ; Congressional Committee Prints 2016 ; 2016 >
 
   }
@@ -581,7 +581,7 @@
     au < released ; 2012 ; Congressional Documents 2012 ; 2012 >
     au < released ; 2013 ; Congressional Documents 2013 ; 2013 >
     au < released ; 2014 ; Congressional Documents 2014 ; 2014 >
-    au < manifest ; 2015 ; Congressional Documents 2015 ; 2015 >
+    au < testing ; 2015 ; Congressional Documents 2015 ; 2015 >
     au < expected ; 2016 ; Congressional Documents 2016 ; 2016 >
 
   }
@@ -620,7 +620,7 @@
     au < released ; 2012 ; Congressional Hearings 2012 ; 2012 >
     au < released ; 2013 ; Congressional Hearings 2013 ; 2013 >
     au < released ; 2014 ; Congressional Hearings 2014 ; 2014 >
-    au < manifest ; 2015 ; Congressional Hearings 2015 ; 2015 >
+    au < testing ; 2015 ; Congressional Hearings 2015 ; 2015 >
     au < expected ; 2016 ; Congressional Hearings 2016 ; 2016 >
 
   }
@@ -978,7 +978,7 @@
     au < released ; 2009 ; House Rules and Manual 2009 ; 2009 >
     au < released ; 2011 ; House Rules and Manual 2011 ; 2011 >
     au < released ; 2013 ; House Rules and Manual 2013 ; 2013 >
-    au < manifest ; 2014 ; House Rules and Manual 2014 ; 2014 >
+    au < expected ; 2014 ; House Rules and Manual 2014 ; 2014 >
     au < manifest ; 2015 ; House Rules and Manual 2015 ; 2015 >
     au < expected ; 2016 ; House Rules and Manual 2016 ; 2016 >
 
@@ -1327,7 +1327,7 @@
     au < released ; 2008 ; United States Statutes at Large 2008 ; 2008 >
     au < manifest ; 2009 ; United States Statutes at Large 2009 ; 2009 >
     au < manifest ; 2010 ; United States Statutes at Large 2010 ; 2010 >
-    au < manifest ; 2011 ; United States Statutes at Large 2011 ; 2011 >
+    au < expected ; 2011 ; United States Statutes at Large 2011 ; 2011 >
     au < manifest ; 2012 ; United States Statutes at Large 2012 ; 2012 >
 
   }
@@ -1357,6 +1357,7 @@
     au < released ; 2007 ; Weekly Compilation of Presidential Documents 2007 ; 2007 >
     au < released ; 2008 ; Weekly Compilation of Presidential Documents 2008 ; 2008 >
     au < released ; 2009 ; Weekly Compilation of Presidential Documents 2009 ; 2009 >
+    au < expected ; 2010 ; Weekly Compilation of Presidential Documents 2010 ; 2010 >
 
   }
 
