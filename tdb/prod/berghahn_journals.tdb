@@ -190,11 +190,11 @@
     param[journal_id] = coco
     param[journal_issn] = 1807-9326
 
-    au < testing ; 2005 ; Contributions to the History of Concepts Volume 1 ; 1 >
-    au < testing ; 2006 ; Contributions to the History of Concepts Volume 2 ; 2 >
-    au < testing ; 2007 ; Contributions to the History of Concepts Volume 3 ; 3 >
-    au < testing ; 2008 ; Contributions to the History of Concepts Volume 4 ; 4 >
-    au < testing ; 2009 ; Contributions to the History of Concepts Volume 5 ; 5 >
+    au < ready ; 2005 ; Contributions to the History of Concepts Volume 1 ; 1 >
+    au < ready ; 2006 ; Contributions to the History of Concepts Volume 2 ; 2 >
+    au < ready ; 2007 ; Contributions to the History of Concepts Volume 3 ; 3 >
+    au < ready ; 2008 ; Contributions to the History of Concepts Volume 4 ; 4 >
+    au < ready ; 2009 ; Contributions to the History of Concepts Volume 5 ; 5 >
     au < manifest ; 2011 ; Contributions to the History of Concepts Volume 6 ; 6 >
     au < manifest ; 2012 ; Contributions to the History of Concepts Volume 7 ; 7 >
     au < manifest ; 2013 ; Contributions to the History of Concepts Volume 8 ; 8 >
@@ -512,6 +512,7 @@
     au < manifest ; 2012 ; International Journal of Social Quality Volume 2 ; 2 >
     au < manifest ; 2013 ; International Journal of Social Quality Volume 3 ; 3 >
     au < manifest ; 2014 ; International Journal of Social Quality Volume 4 ; 4 >
+    au < manifest ; 2015 ; International Journal of Social Quality Volume 5 ; 5 >
     
   }
 
