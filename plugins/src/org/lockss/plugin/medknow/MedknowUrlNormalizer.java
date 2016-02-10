@@ -57,7 +57,7 @@ public class MedknowUrlNormalizer implements UrlNormalizer {
   
   private static final Logger log = Logger.getLogger(MedknowUrlNormalizer.class);
   private static final String authLast = ";aulast=";
-  private static final String authLastPat = "aulast=[^;]+";
+  private static final String authLastPat = "aulast=[^;]*";
   private static final Pattern authPat = Pattern.compile(authLastPat);
 
   public String normalizeUrl(String url, ArchivalUnit au)
