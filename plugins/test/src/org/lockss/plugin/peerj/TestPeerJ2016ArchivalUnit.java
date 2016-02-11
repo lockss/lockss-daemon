@@ -45,7 +45,11 @@ import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockLockssDaemon;
+import org.lockss.test.MockLockssUrlConnection;
 import org.lockss.util.Logger;
+import org.lockss.util.urlconn.CacheException;
+import org.lockss.util.urlconn.HttpResultMap;
+import org.lockss.util.urlconn.CacheException.RetrySameUrlException;
 
 /* 
  * Tests archival unit for PeerJ Archival site
@@ -61,6 +65,8 @@ public class TestPeerJ2016ArchivalUnit extends LockssTestCase {
 
   static final String PLUGIN_ID = "org.lockss.plugin.peerj.ClockssPeerJ2016Plugin";
   static final String PluginName = "PeerJ Plugin (CLOCKSS)";
+  
+  private DefinablePlugin plugin;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -84,10 +90,9 @@ public class TestPeerJ2016ArchivalUnit extends LockssTestCase {
     }
     Configuration config = ConfigurationUtil.fromProps(props);
 
-    DefinablePlugin ap = new DefinablePlugin();
-    ap.initPlugin(getMockLockssDaemon(),
-        PLUGIN_ID);
-    DefinableArchivalUnit au = (DefinableArchivalUnit)ap.createAu(config);
+    plugin = new DefinablePlugin();
+    plugin.initPlugin(getMockLockssDaemon(), PLUGIN_ID);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)plugin.createAu(config);
     return au;
   }
   
@@ -97,6 +102,48 @@ public class TestPeerJ2016ArchivalUnit extends LockssTestCase {
       fail("Should have thrown ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) {
     }
+  }
+  
+  public void testHandlesHttpResultCodes() throws Exception {
+    URL base = new URL("http://www.example.com/");
+    DefinableArchivalUnit au = makeAu(base, "2014", "cs");
+    MockLockssUrlConnection conn = new MockLockssUrlConnection();
+    String starturl =
+        "http://www.example.com/archives/?year=2014&journal=cs";
+    
+    conn.setURL("http://www.example.com/articles/cs-18.pdf");
+    CacheException exc =
+        ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
+            403, "foo");
+    assertClass(CacheException.PermissionException.class, exc);
+    
+    conn.setURL(starturl);
+    exc = ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
+        403, "foo");
+    assertClass(CacheException.PermissionException.class, exc);
+    
+    conn.setURL("http://www.example.com/articles/cs-18/1.jpg");
+    exc = ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
+        403, "foo");
+    assertClass(CacheException.NoRetryDeadLinkException.class, exc);
+    
+    conn.setURL(starturl);
+    exc = ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
+        429, "foo");
+    assertClass(PeerJHttpResponseHandler.RetryableNetworkException_10M.class, exc);
+    
+    conn.setURL("http://uuu17/");
+    exc =
+        ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
+            500, "foo");
+    assertClass(CacheException.NoRetryDeadLinkException.class, exc);
+    
+    conn.setURL(starturl);
+    exc = ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
+        500, "foo");
+    assertClass(RetrySameUrlException.class, exc);
+    
+    
   }
   
   // Test the crawl rules for PeerJ Archives (main) site; 
