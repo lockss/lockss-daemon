@@ -704,20 +704,21 @@
 
       param[base_url] = http://lawreview.law-dev.library.pitt.edu/ojs/
       param[journal_id] = lawreview
+      comment[down] = site is gone.
 
-      au < manifest ; 2003 ; 2003 ; University of Pittsburgh Law Review Volume 65 ; 65 >
-      au < manifest ; 2004 ; 2004 ; University of Pittsburgh Law Review Volume 65-66 ; 65-66 >
-      au < released ; 2005 ; 2005 ; University of Pittsburgh Law Review Volume 66-67 ; 66-67 >
-      au < released ; 2006 ; 2006 ; University of Pittsburgh Law Review Volume 67-68 ; 67-68 >
-      au < released ; 2007 ; 2007 ; University of Pittsburgh Law Review Volume 68-69 ; 68-69 >
-      au < released ; 2008 ; 2008 ; University of Pittsburgh Law Review Volume 69-70 ; 69-70 >
-      au < released ; 2009 ; 2009 ; University of Pittsburgh Law Review Volume 71 ; 71 >
-      au < released ; 2010 ; 2010 ; University of Pittsburgh Law Review Volume 72 ; 72 >
-      au < released ; 2011 ; 2011 ; University of Pittsburgh Law Review Volume 72-73 ; 72-73 >
-      au < released ; 2012 ; 2012 ; University of Pittsburgh Law Review Volume 73-74 ; 73-74 >
-      au < released ; 2013 ; 2013 ; University of Pittsburgh Law Review Volume 75 ; 75 >
-      au < released ; 2014 ; 2014 ; University of Pittsburgh Law Review Volume 76 ; 76 >
-      au < testing ; 2015 ; 2015 ; University of Pittsburgh Law Review Volume 77 ; 77 >
+      au < exists ; 2003 ; 2003 ; University of Pittsburgh Law Review Volume 65 ; 65 >
+      au < exists ; 2004 ; 2004 ; University of Pittsburgh Law Review Volume 65-66 ; 65-66 >
+      au < down ; 2005 ; 2005 ; University of Pittsburgh Law Review Volume 66-67 ; 66-67 >
+      au < down ; 2006 ; 2006 ; University of Pittsburgh Law Review Volume 67-68 ; 67-68 >
+      au < down ; 2007 ; 2007 ; University of Pittsburgh Law Review Volume 68-69 ; 68-69 >
+      au < down ; 2008 ; 2008 ; University of Pittsburgh Law Review Volume 69-70 ; 69-70 >
+      au < down ; 2009 ; 2009 ; University of Pittsburgh Law Review Volume 71 ; 71 >
+      au < down ; 2010 ; 2010 ; University of Pittsburgh Law Review Volume 72 ; 72 >
+      au < down ; 2011 ; 2011 ; University of Pittsburgh Law Review Volume 72-73 ; 72-73 >
+      au < down ; 2012 ; 2012 ; University of Pittsburgh Law Review Volume 73-74 ; 73-74 >
+      au < down ; 2013 ; 2013 ; University of Pittsburgh Law Review Volume 75 ; 75 >
+      au < down ; 2014 ; 2014 ; University of Pittsburgh Law Review Volume 76 ; 76 >
+      au < expected ; 2015 ; 2015 ; University of Pittsburgh Law Review Volume 77 ; 77 >
 
   }
 

@@ -78,26 +78,27 @@
     
       param[base_url] = http://www.film-philosophy.com/
       param[journal_id] = f-p
+      comment[down] = manifest pages gone.
 
-      au < released ; 1997 ; Film-Philosophy Volume 1 ; 1 ; 1997 >
-      au < released ; 1998 ; Film-Philosophy Volume 2 ; 2 ; 1998 >
-      au < released ; 1999 ; Film-Philosophy Volume 3 ; 3 ; 1999 >
-      au < released ; 2000 ; Film-Philosophy Volume 4 ; 4 ; 2000 >
-      au < released ; 2001 ; Film-Philosophy Volume 5 ; 5 ; 2001 >
-      au < released ; 2002 ; Film-Philosophy Volume 6 ; 6 ; 2002 >
-      au < released ; 2003 ; Film-Philosophy Volume 7 ; 7 ; 2003 >
-      au < released ; 2004 ; Film-Philosophy Volume 8 ; 8 ; 2004 >
-      au < released ; 2005 ; Film-Philosophy Volume 9 ; 9 ; 2005 >
-      au < released ; 2006 ; Film-Philosophy Volume 10 ; 10 ; 2006 >
-      au < released ; 2007 ; Film-Philosophy Volume 11 ; 11 ; 2007 >
-      au < released ; 2008 ; Film-Philosophy Volume 12 ; 12 ; 2008 >
-      au < released ; 2009 ; Film-Philosophy Volume 13 ; 13 ; 2009 >
-      au < released ; 2010 ; Film-Philosophy Volume 14 ; 14 ; 2010 >
-      au < released ; 2011 ; Film-Philosophy Volume 15 ; 15 ; 2011 >
-      au < released ; 2012 ; Film-Philosophy Volume 16 ; 16 ; 2012 >
-      au < released ; 2013 ; Film-Philosophy Volume 17 ; 17 ; 2013 >
-      au < released ; 2014 ; Film-Philosophy Volume 18 ; 18 ; 2014 >
-      au < testing ; 2015 ; Film-Philosophy Volume 19 ; 19 ; 2015 >
+      au < down ; 1997 ; Film-Philosophy Volume 1 ; 1 ; 1997 >
+      au < down ; 1998 ; Film-Philosophy Volume 2 ; 2 ; 1998 >
+      au < down ; 1999 ; Film-Philosophy Volume 3 ; 3 ; 1999 >
+      au < down ; 2000 ; Film-Philosophy Volume 4 ; 4 ; 2000 >
+      au < down ; 2001 ; Film-Philosophy Volume 5 ; 5 ; 2001 >
+      au < down ; 2002 ; Film-Philosophy Volume 6 ; 6 ; 2002 >
+      au < down ; 2003 ; Film-Philosophy Volume 7 ; 7 ; 2003 >
+      au < down ; 2004 ; Film-Philosophy Volume 8 ; 8 ; 2004 >
+      au < down ; 2005 ; Film-Philosophy Volume 9 ; 9 ; 2005 >
+      au < down ; 2006 ; Film-Philosophy Volume 10 ; 10 ; 2006 >
+      au < down ; 2007 ; Film-Philosophy Volume 11 ; 11 ; 2007 >
+      au < down ; 2008 ; Film-Philosophy Volume 12 ; 12 ; 2008 >
+      au < down ; 2009 ; Film-Philosophy Volume 13 ; 13 ; 2009 >
+      au < down ; 2010 ; Film-Philosophy Volume 14 ; 14 ; 2010 >
+      au < down ; 2011 ; Film-Philosophy Volume 15 ; 15 ; 2011 >
+      au < down ; 2012 ; Film-Philosophy Volume 16 ; 16 ; 2012 >
+      au < down ; 2013 ; Film-Philosophy Volume 17 ; 17 ; 2013 >
+      au < down ; 2014 ; Film-Philosophy Volume 18 ; 18 ; 2014 >
+      au < exists ; 2015 ; Film-Philosophy Volume 19 ; 19 ; 2015 >
 
     }
 
