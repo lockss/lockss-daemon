@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -77,7 +77,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbQueryBuilder:0.2.2]";
+  public static final String VERSION = "[TdbQueryBuilder:0.2.3]";
   
   /**
    * <p>
@@ -127,8 +127,8 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
                  Au.STATUS_READY,
                  Au.STATUS_READY_SOURCE,
                  Au.STATUS_CRAWLING,
-                 Au.STATUS_FROZEN,
                  Au.STATUS_DEEP_CRAWL,
+                 Au.STATUS_FROZEN,
                  Au.STATUS_ING_NOT_READY,
                  Au.STATUS_RELEASING,
                  Au.STATUS_FINISHED,
@@ -169,6 +169,60 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
       Option.builder()
             .longOpt(KEY_ALLIANCE)
             .desc(String.format("include only AUs whose plugin is not in the non-Alliance set"))
+            .build();
+  
+  /**
+   * <p>
+   * Key for the clockss-preserved option ({@value}).
+   * </p>
+   * 
+   * @since 1.70
+   */
+  protected static final String KEY_CLOCKSS_INGEST = "clockss-ingest";
+
+  /**
+   * <p>
+   * Single letter for the clockss-ingest option ({@value}).
+   * </p>
+   * 
+   * @since 1.70
+   */
+  protected static final char LETTER_CLOCKSS_INGEST = 'H';
+  
+  /**
+   * <p>
+   * Unmodifiable list of statuses associated with the clockss-ingest option.
+   * </p>
+   * 
+   * @since 1.70
+   * @see Au#STATUS_CRAWLING
+   * @see Au#STATUS_DEEP_CRAWL
+   * @see Au#STATUS_FROZEN
+   * @see Au#STATUS_ING_NOT_READY
+   * @see Au#STATUS_FINISHED
+   * @see Au#STATUS_DOWN
+   * @see Au#STATUS_SUPERSEDED
+   */
+  public static final List<String> CLOCKSS_INGEST_STATUSES =
+      AppUtil.ul(Au.STATUS_CRAWLING,
+                 Au.STATUS_DEEP_CRAWL,
+                 Au.STATUS_FROZEN,
+                 Au.STATUS_ING_NOT_READY,
+                 Au.STATUS_FINISHED,
+                 Au.STATUS_DOWN,
+                 Au.STATUS_SUPERSEDED);
+  
+  /**
+   * <p>
+   * The clockss-ingest option.
+   * </p>
+   * 
+   * @since 1.70
+   */
+  protected static final Option OPTION_CLOCKSS_INGEST =
+      Option.builder(Character.toString(LETTER_CLOCKSS_INGEST))
+            .longOpt(KEY_CLOCKSS_INGEST)
+            .desc(String.format("include all active CLOCKSS ingest statuses in secondary query %s", CLOCKSS_INGEST_STATUSES))
             .build();
   
   /**
@@ -270,7 +324,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
   protected static final Option OPTION_CLOCKSS_PRODUCTION =
       Option.builder(Character.toString(LETTER_CLOCKSS_PRODUCTION))
             .longOpt(KEY_CLOCKSS_PRODUCTION)
-            .desc(String.format("include all CLOCKSS production statuses in secondary query %s", CLOCKSS_PRODUCTION_STATUSES))
+            .desc(String.format("include all active CLOCKSS production statuses in secondary query %s", CLOCKSS_PRODUCTION_STATUSES))
             .build();
   
   /**
@@ -1132,6 +1186,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
   public void addOptions(Options options) {
     options.addOption(OPTION_ALL);
     options.addOption(OPTION_ALLIANCE);
+    options.addOption(OPTION_CLOCKSS_INGEST);
     options.addOption(OPTION_CLOCKSS_PRESERVED);
     options.addOption(OPTION_CLOCKSS_PRODUCTION);
     options.addOption(OPTION_CRAWLING);
@@ -1196,6 +1251,9 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
     final Set<String> secondarySet = new HashSet<String>();
     if (cmd.hasOption(KEY_ALL)) {
       secondarySet.addAll(ALL_STATUSES);
+    }
+    if (cmd.hasOption(KEY_CLOCKSS_INGEST)) {
+      secondarySet.addAll(CLOCKSS_INGEST_STATUSES);
     }
     if (cmd.hasOption(KEY_CLOCKSS_PRESERVED)) {
       secondarySet.addAll(CLOCKSS_PRESERVED_STATUSES);

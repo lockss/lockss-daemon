@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -240,16 +240,16 @@ public class TdbXml {
     * </p>
     *
     * @since 1.67
-    * @see Au#STATUS_FROZEN
     * @see Au#STATUS_DEEP_CRAWL
+    * @see Au#STATUS_FROZEN
     * @see Au#STATUS_FINISHED
     * @see Au#STATUS_DOWN
     * @see Au#STATUS_SUPERSEDED
     * @see Au#STATUS_ZAPPED
     */  
   protected static final Set<String> PUB_DOWN_STATUSES =
-      Collections.unmodifiableSet(new HashSet<String>(Arrays.asList(Au.STATUS_FROZEN,
-                                                                    Au.STATUS_DEEP_CRAWL,
+      Collections.unmodifiableSet(new HashSet<String>(Arrays.asList(Au.STATUS_DEEP_CRAWL,
+                                                                    Au.STATUS_FROZEN,
                                                                     Au.STATUS_FINISHED,
                                                                     Au.STATUS_DOWN,
                                                                     Au.STATUS_SUPERSEDED,
