@@ -122,7 +122,7 @@ public class TestPeerJ2016ArchivalUnit extends LockssTestCase {
         403, "foo");
     assertClass(CacheException.PermissionException.class, exc);
     
-    conn.setURL("http://www.example.com/articles/cs-18/1.jpg");
+    conn.setURL("https://dfzljdn9uc3pi.cloudfront.net/2014/228/1/fig-1-2x.jpg");
     exc = ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
         403, "foo");
     assertClass(CacheException.NoRetryDeadLinkException.class, exc);

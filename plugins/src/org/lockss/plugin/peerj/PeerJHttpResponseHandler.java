@@ -85,9 +85,8 @@ public class PeerJHttpResponseHandler implements CacheResultHandler {
     switch (responseCode) {
       case 403:
         logger.debug2("403");
-        if (!url.endsWith(".jpg") &&
-            (   url.contains("/articles/") ||
-                url.contains("archives/?year="))
+        if (url.contains("/articles/") ||
+            url.contains("archives/?year=")
             ) {
           return new CacheException.PermissionException("403 Forbidden");
         }
@@ -98,9 +97,8 @@ public class PeerJHttpResponseHandler implements CacheResultHandler {
         return new RetryableNetworkException_10M("429 Too Many Requests (non-fatal)");
       case 500:
         logger.debug2("500");
-        if (!url.endsWith(".jpg") &&
-            (   url.contains("/articles/index.html") ||
-                url.contains("archives/?year="))
+        if (url.contains("/articles/index.html") ||
+            url.contains("archives/?year=")
             ) {
           return new CacheException.RetrySameUrlException("500 Internal Server Error");
         }
