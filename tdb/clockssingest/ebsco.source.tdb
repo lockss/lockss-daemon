@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = EBSCO ;
+    info[contract] = 2015 ;
+    info[tester] = S
+  >
+  
+  {
+  
+    title <
+      name = EBSCO Source Content
+    >
+      
+    provider = EBSCO
+    #publisher will vary and comes from the metadata
+    plugin = org.lockss.plugin.clockss.ebsco.ClockssEBSCOSourcePlugin
+    param[base_url] = http://content5.lockss.org/sourcefiles/ebsco-released/
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+    
+    au < testing ; exists ; 2016 ; EBSCO Source Content 2016 ; 2016 >
+        
+  }
+
+}
