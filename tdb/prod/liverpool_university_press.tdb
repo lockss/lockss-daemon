@@ -587,8 +587,12 @@
 
     param[journal_id] = quaker
 
-    au < expected ; 2015 ; Quaker Studies Volume 19 ; 19 >
-    au < expected ; 2016 ; Quaker Studies Volume 20 ; 20 >
+    au < exists ; 2010-2011 ; Quaker Studies Volume 15 ; 15 >
+    au < exists ; 2011-2012 ; Quaker Studies Volume 16 ; 16 >
+    au < exists ; 2012-2013 ; Quaker Studies Volume 17 ; 17 >
+    au < exists ; 2013-2014 ; Quaker Studies Volume 18 ; 18 >
+    au < exists ; 2014-2015 ; Quaker Studies Volume 19 ; 19 >
+    au < exists ; 2015-2016 ; Quaker Studies Volume 20 ; 20 >
 
   }
 
