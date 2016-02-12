@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,22 +43,26 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
 
 // Keeps contents only (includeNodes), then hashes out unwanted nodes 
 // within the content (excludeNodes).
+// The challenge is to make sure we get the necessary minimum substantive content
+// on each html page so they don't hash down to nothing
+//   TOC
+//   article landing page/full-text html
+//   showCitFormat form selection page
 public class PracticalActionJournalsHtmlHashFilterFactory 
-  extends BaseAtyponHtmlHashFilterFactory  {
-     
+extends BaseAtyponHtmlHashFilterFactory  {
+
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in, 
-                                               String encoding) {
+      InputStream in, 
+      String encoding) {
     NodeFilter[] includeNodes = new NodeFilter[] {
-        // ?? review when manifest pages up
         // manifest pages
         // <ul> and <li> without attributes (unlike TOC/abs/ref breadcrumbs)
         new NodeFilter() {
           @Override
           public boolean accept(Node node) {
             if (HtmlNodeFilters.tagWithAttributeRegex("a", "href", 
-                                                      "/toc/").accept(node)) {
+                "/toc/").accept(node)) {
               Node liParent = node.getParent();
               if (liParent instanceof Bullet) {
                 Bullet li = (Bullet)liParent;
@@ -76,6 +80,10 @@ public class PracticalActionJournalsHtmlHashFilterFactory
             return false;
           }
         },
+        // showCitFormats html form page - section with article information                                           
+        HtmlNodeFilters.tagWithAttribute("div", "class", "articleList"),
+        // showPopup html page - references, information, tables - just plain text
+        HtmlNodeFilters.tagWithAttribute("body", "class", "popupBody"),
         // toc - contents only
         // http://www.developmentbookshelf.com/toc/edm/25/1
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "tocListWidget"),
@@ -83,10 +91,9 @@ public class PracticalActionJournalsHtmlHashFilterFactory
         // http://www.developmentbookshelf.com/doi/abs/10.3362/1755-1986.2014.004
         // http://www.developmentbookshelf.com/doi/ref/10.3362/1755-1986.2014.004
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                          "literatumPublicationContentWidget")
-                                                                  
+            "literatumPublicationContentWidget")
     };
-    
+
     
     // handled by parent: script, sfxlink, stylesheet, pdfplus file sise
     // <head> tag, <li> item has the text "Cited by", accessIcon, 
@@ -97,8 +104,12 @@ public class PracticalActionJournalsHtmlHashFilterFactory
         // abs - scattering - potentially generated code added (like
         // Endocrine Society)                                      
         // http://www.developmentbookshelf.com/doi/abs/10.3362/1755-1986.2014.004
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "articleMetaDrop")  
+                                              HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+                                                  "articleMetaDrop"),
+        // tooltip ref link with changing href hash number
+         HtmlNodeFilters.tagWithAttribute("a", "class", 
+                                              "tooltipTrigger infoIcon")
+                                              
     };
     return super.createFilteredInputStream(au, in, encoding, 
                                            includeNodes, excludeNodes);
