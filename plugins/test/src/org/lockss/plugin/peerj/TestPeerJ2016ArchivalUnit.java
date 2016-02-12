@@ -136,7 +136,7 @@ public class TestPeerJ2016ArchivalUnit extends LockssTestCase {
     exc =
         ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
             500, "foo");
-    assertClass(CacheException.NoRetryDeadLinkException.class, exc);
+    assertClass(CacheException.RetryDeadLinkException.class, exc);
     
     conn.setURL(starturl);
     exc = ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,

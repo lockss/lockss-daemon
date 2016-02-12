@@ -94,7 +94,7 @@ public class PeerJHttpResponseHandler implements CacheResultHandler {
         return new CacheException.NoRetryDeadLinkException("403 Forbidden (non-fatal)");
       case 429:
         logger.debug2("429");
-        return new RetryableNetworkException_10M("429 Too Many Requests (non-fatal)");
+        return new RetryableNetworkException_10M("429 Too Many Requests");
       case 500:
         logger.debug2("500");
         if (url.contains("/articles/index.html") ||
@@ -103,7 +103,7 @@ public class PeerJHttpResponseHandler implements CacheResultHandler {
           return new CacheException.RetrySameUrlException("500 Internal Server Error");
         }
         
-        return new CacheException.NoRetryDeadLinkException("500 Internal Server Error (non-fatal)");
+        return new CacheException.RetryDeadLinkException("500 Internal Server Error (non-fatal)");
       default:
         logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
         throw new UnsupportedOperationException("Unexpected responseCode (" + responseCode + ")");
