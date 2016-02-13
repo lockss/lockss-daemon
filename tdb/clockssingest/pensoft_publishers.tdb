@@ -45,7 +45,7 @@
     au < manifest ; exists ; 2011 ; 2011 ; BioRisk Issue 6 ; 6 >
     au < manifest ; exists ; 2012 ; 2012 ; BioRisk Issue 7 ; 7 >
     au < manifest ; exists ; 2013 ; 2013 ; BioRisk Issue 8 ; 8 >
-    au < ready ; exists ; 2014 ; 2014 ; BioRisk Issue 9 ; 9 >
+    au < crawling ; exists ; 2014 ; 2014 ; BioRisk Issue 9 ; 9 >
   
    }
    
@@ -65,7 +65,7 @@
     au < manifest ; exists ; 2011 ; 2011 ; Comparative Cytogenetics Issue 5 ; 5 >
     au < manifest ; exists ; 2012 ; 2012 ; Comparative Cytogenetics Issue 6 ; 6 >
     au < manifest ; exists ; 2013 ; 2013 ; Comparative Cytogenetics Issue 7 ; 7 >
-    au < ready ; exists ; 2014 ; 2014 ; Comparative Cytogenetics Issue 8 ; 8 >
+    au < crawling ; exists ; 2014 ; 2014 ; Comparative Cytogenetics Issue 8 ; 8 >
   
    }
 
@@ -172,7 +172,7 @@
     au < manifest ; exists ; 2011 ; 2011 ; NeoBiota Issues 9-11 ; 9-11 >
     au < manifest ; exists ; 2012 ; 2012 ; NeoBiota Issues 12-15 ; 12-15 >
     au < manifest ; exists ; 2013 ; 2013 ; NeoBiota Issues 16-19 ; 16-19 >
-    au < ready ; exists ; 2014 ; 2014 ; NeoBiota Issues 20-24 ; 20-24 >
+    au < crawling ; exists ; 2014 ; 2014 ; NeoBiota Issues 20-24 ; 20-24 >
   
    }
 
@@ -208,7 +208,7 @@
     au < manifest ; exists ; 2011 ; 2011 ; PhytoKeys Issues 2-7 ; 2-7 >
     au < manifest ; exists ; 2012 ; 2012 ; PhytoKeys Issues 8-19 ; 8-19 >
     au < manifest ; exists ; 2013 ; 2013 ; PhytoKeys Issues 20-26 ; 20-26 >
-    au < ready ; exists ; 2014 ; 2014 ; PhytoKeys Issues 27-32 ; 27-32 >
+    au < crawling ; exists ; 2014 ; 2014 ; PhytoKeys Issues 27-32 ; 27-32 >
   
    }
   
@@ -250,7 +250,7 @@
     au < manifest ; exists ; 2011 ; 2011 ; ZooKeys Issues 74-160 ; 74-160 >
     au < manifest ; exists ; 2012 ; 2012 ; ZooKeys Issues 161-255 ; 161-255 >
     au < manifest ; exists ; 2013 ; 2013 ; ZooKeys Issues 256-342 ; 256-342 >
-    au < ready ; exists ; 2014 ; 2014 ; ZooKeys Issues 343-430 ; 343-430 >
+    au < crawling ; exists ; 2014 ; 2014 ; ZooKeys Issues 343-430 ; 343-430 >
   
    }
    
