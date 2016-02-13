@@ -1013,18 +1013,18 @@
   
         title <
           name = Human-centric Computing and Information Sciences ;
-          issn = 2192-1962 
+          eissn = 2192-1962 
         >
   
         param[base_url] = http://www.hcis-journal.com/
         param[journal_issn] = 2192-1962 
-        comment[platform] = BioMedCentralPlugin
+        comment[platform] = move to SpringerOpen
   
-        au < manifest ; 2011 ; Human-centric Computing and Information Sciences Volume 1 ; 1 >
-        au < manifest ; 2012 ; Human-centric Computing and Information Sciences Volume 2 ; 2 >
-        au < manifest ; 2013 ; Human-centric Computing and Information Sciences Volume 3 ; 3 >
-        au < manifest ; 2014 ; Human-centric Computing and Information Sciences Volume 4 ; 4 >
-        au < manifest ; 2015 ; Human-centric Computing and Information Sciences Volume 5 ; 5 >
+        au < doNotProcess ; 2011 ; Human-centric Computing and Information Sciences Volume 1 ; 1 >
+        au < doNotProcess ; 2012 ; Human-centric Computing and Information Sciences Volume 2 ; 2 >
+        au < doNotProcess ; 2013 ; Human-centric Computing and Information Sciences Volume 3 ; 3 >
+        au < doNotProcess ; 2014 ; Human-centric Computing and Information Sciences Volume 4 ; 4 >
+        au < doNotProcess ; 2015 ; Human-centric Computing and Information Sciences Volume 5 ; 5 >
   
     }
   
@@ -1032,16 +1032,16 @@
   
         title <
           name = In Silico Pharmacology ;
-          issn = 2193-9616 
+          eissn = 2193-9616 
         >
   
         param[base_url] = http://www.in-silico-pharmacology.com/
         param[journal_issn] = 2193-9616 
-        comment[platform] = BioMedCentralPlugin
+        comment[platform] = move to SpringerOpen
   
-        au < manifest ; 2013 ; In Silico Pharmacology Volume 1 ; 1 >
-        au < manifest ; 2014 ; In Silico Pharmacology Volume 2 ; 2 >
-        au < manifest ; 2015 ; In Silico Pharmacology Volume 3 ; 3 >
+        au < doNotProcess ; 2013 ; In Silico Pharmacology Volume 1 ; 1 >
+        au < doNotProcess ; 2014 ; In Silico Pharmacology Volume 2 ; 2 >
+        au < doNotProcess ; 2015 ; In Silico Pharmacology Volume 3 ; 3 >
   
     }
 
@@ -1049,15 +1049,15 @@
   
         title <
           name = Injury Epidemiology ;
-          issn = 2197-1714 
+          eissn = 2197-1714 
         >
   
         param[base_url] = http://www.injepijournal.com/
         param[journal_issn] = 2197-1714 
-        comment[platform] = BioMedCentralPlugin
+        comment[platform] = move to SpringerOpen
 
-        au < manifest ; 2014 ; Injury Epidemiology Volume 1 ; 1 >
-        au < manifest ; 2015 ; Injury Epidemiology Volume 2 ; 2 >
+        au < doNotProcess ; 2014 ; Injury Epidemiology Volume 1 ; 1 >
+        au < doNotProcess ; 2015 ; Injury Epidemiology Volume 2 ; 2 >
 
     }
 
@@ -1065,17 +1065,18 @@
   
         title <
           name = Integrating Materials and Manufacturing Innovation ;
-          issn = 2193-9772 
+          issn = 2193-9764 ;
+          eissn = 2193-9772 
         >
   
         param[base_url] = http://www.immijournal.com/
         param[journal_issn] = 2193-9772 
-        comment[platform] = BioMedCentralPlugin
+        comment[platform] =  move to SpringerOpen
   
-        au < manifest ; 2012 ; Integrating Materials and Manufacturing Innovation Volume 1 ; 1 >
+        au < doNotProcess ; 2012 ; Integrating Materials and Manufacturing Innovation Volume 1 ; 1 >
         au < down ; 2013 ; Integrating Materials and Manufacturing Innovation Volume 2 ; 2 >
-        au < manifest ; 2014 ; Integrating Materials and Manufacturing Innovation Volume 3 ; 3 >
-        au < manifest ; 2015 ; Integrating Materials and Manufacturing Innovation Volume 4 ; 4 >
+        au < doNotProcess ; 2014 ; Integrating Materials and Manufacturing Innovation Volume 3 ; 3 >
+        au < doNotProcess ; 2015 ; Integrating Materials and Manufacturing Innovation Volume 4 ; 4 >
   
     }
   
@@ -1083,16 +1084,16 @@
   
         title <
           name = Intensive Care Medicine Experimental ;
-          issn = 2197-425X 
+          eissn = 2197-425X 
         >
   
         param[base_url] = http://www.icm-experimental.com/
         param[journal_issn] = 2197-425X 
-        comment[platform] = BioMedCentralPlugin
+        comment[platform] = move to SpringerOpen
   
-        au < manifest ; 2013 ; Intensive Care Medicine Experimental Volume 1 ; 1 >
-        au < manifest ; 2014 ; Intensive Care Medicine Experimental Volume 2 ; 2 >
-        au < manifest ; 2015 ; Intensive Care Medicine Experimental Volume 3 ; 3 >
+        au < doNotProcess ; 2013 ; Intensive Care Medicine Experimental Volume 1 ; 1 >
+        au < doNotProcess ; 2014 ; Intensive Care Medicine Experimental Volume 2 ; 2 >
+        au < doNotProcess ; 2015 ; Intensive Care Medicine Experimental Volume 3 ; 3 >
   
     }
   
@@ -1100,17 +1101,18 @@
   
         title <
           name = International Aquatic Research ;
-          issn = 2008-6970 
+          issn = 2008-4935 ;
+          eissn = 2008-6970 
         >
   
         param[base_url] = http://www.intaquares.com/
         param[journal_issn] = 2008-6970 
-        comment[platform] = BioMedCentralPlugin
+        comment[platform] = move to SpringerOpen
   
-        au < manifest ; 2012 ; International Aquatic Research Volume 4 ; 4 >
-        au < manifest ; 2013 ; International Aquatic Research Volume 5 ; 5 >
-        au < manifest ; 2014 ; International Aquatic Research Volume 6 ; 6 >
-        au < manifest ; 2015 ; International Aquatic Research Volume 7 ; 7 >
+        au < doNotProcess ; 2012 ; International Aquatic Research Volume 4 ; 4 >
+        au < doNotProcess ; 2013 ; International Aquatic Research Volume 5 ; 5 >
+        au < doNotProcess ; 2014 ; International Aquatic Research Volume 6 ; 6 >
+        au < doNotProcess ; 2015 ; International Aquatic Research Volume 7 ; 7 >
   
     }
   
@@ -1124,12 +1126,12 @@
   
         param[base_url] = http://www.advancedstructeng.com/
         param[journal_issn] = 2008-6695 
-        comment[platform] = BioMedCentralPlugin
+        comment[platform] = move to SpringerOpen
   
-        au < manifest ; 2012 ; International Journal of Advanced Structural Engineering Volume 4 ; 4>
-        au < manifest ; 2013 ; International Journal of Advanced Structural Engineering Volume 5 ; 5 >
-        au < manifest ; 2014 ; International Journal of Advanced Structural Engineering Volume 6 ; 6 >
-        au < manifest ; 2015 ; International Journal of Advanced Structural Engineering Volume 7 ; 7 >
+        au < doNotProcess ; 2012 ; International Journal of Advanced Structural Engineering Volume 4 ; 4>
+        au < doNotProcess ; 2013 ; International Journal of Advanced Structural Engineering Volume 5 ; 5 >
+        au < doNotProcess ; 2014 ; International Journal of Advanced Structural Engineering Volume 6 ; 6 >
+        au < doNotProcess ; 2015 ; International Journal of Advanced Structural Engineering Volume 7 ; 7 >
   
     }
   
@@ -1137,16 +1139,16 @@
   
         title <
           name = International Journal of Bipolar Disorders ;
-          issn = 2194-7511 
+          eissn = 2194-7511 
         >
   
         param[base_url] = http://www.journalbipolardisorders.com/
         param[journal_issn] = 2194-7511 
-        comment[platform] = BioMedCentralPlugin
+        comment[platform] = move to SpringerOpen
   
-        au < manifest ; 2013 ; International Journal of Bipolar Disorders Volume 1 ; 1 >
-        au < manifest ; 2014 ; International Journal of Bipolar Disorders Volume 2 ; 2 >
-        au < manifest ; 2015 ; International Journal of Bipolar Disorders Volume 3 ; 3 >
+        au < doNotProcess ; 2013 ; International Journal of Bipolar Disorders Volume 1 ; 1 >
+        au < doNotProcess ; 2014 ; International Journal of Bipolar Disorders Volume 2 ; 2 >
+        au < doNotProcess ; 2015 ; International Journal of Bipolar Disorders Volume 3 ; 3 >
   
     }
   
@@ -1160,13 +1162,13 @@
   
         param[base_url] = http://www.intjem.com/
         param[journal_issn] = 1865-1372
-        comment[platform] = BioMedCentralPlugin
+        comment[platform] = move to SpringerOpen
   
-        au < manifest ; 2011 ; International Journal of Emergency Medicine Volume 4 ; 4 >
-        au < manifest ; 2012 ; International Journal of Emergency Medicine Volume 5 ; 5 >
-        au < manifest ; 2013 ; International Journal of Emergency Medicine Volume 6 ; 6 >
-        au < manifest ; 2014 ; International Journal of Emergency Medicine Volume 7 ; 7 >
-        au < manifest ; 2015 ; International Journal of Emergency Medicine Volume 8 ; 8 >
+        au < doNotProcess ; 2011 ; International Journal of Emergency Medicine Volume 4 ; 4 >
+        au < doNotProcess ; 2012 ; International Journal of Emergency Medicine Volume 5 ; 5 >
+        au < doNotProcess ; 2013 ; International Journal of Emergency Medicine Volume 6 ; 6 >
+        au < doNotProcess ; 2014 ; International Journal of Emergency Medicine Volume 7 ; 7 >
+        au < doNotProcess ; 2015 ; International Journal of Emergency Medicine Volume 8 ; 8 >
   
     }
   
@@ -1174,17 +1176,18 @@
   
         title <
           name = International Journal of Energy and Environmental Engineering ;
-          issn = 2251-6832 
+          issn = 2008-9163 ;
+          eissn = 2251-6832 
         >
   
         param[base_url] = http://www.journal-ijeee.com/
         param[journal_issn] = 2251-6832 
-        comment[platform] = BioMedCentralPlugin
+        comment[platform] = move to SpringerOpen
   
-        au < manifest ; 2012 ; International Journal of Energy and Environmental Engineering Volume 3 ; 3 >
+        au < doNotProcess ; 2012 ; International Journal of Energy and Environmental Engineering Volume 3 ; 3 >
         au < down ; 2013 ; International Journal of Energy and Environmental Engineering Volume 4 ; 4 >
-        au < manifest ; 2014 ; International Journal of Energy and Environmental Engineering Volume 5 ; 5 >
-        au < manifest ; 2015 ; International Journal of Energy and Environmental Engineering Volume 6 ; 6 >
+        au < doNotProcess ; 2014 ; International Journal of Energy and Environmental Engineering Volume 5 ; 5 >
+        au < doNotProcess ; 2015 ; International Journal of Energy and Environmental Engineering Volume 6 ; 6 >
   
     }
   
@@ -1192,15 +1195,15 @@
   
         title <
           name = International Journal of Food Contamination ;
-          issn = 2196-2804 
+          eissn = 2196-2804 
         >
   
         param[base_url] = http://www.foodcontaminationjournal.com/
         param[journal_issn] = 2196-2804 
-        comment[platform] = BioMedCentralPlugin
+        comment[platform] = move to SpringerOpen
   
-        au < manifest ; 2014 ; International Journal of Food Contamination Volume 1 ; 1 >
-        au < manifest ; 2015 ; International Journal of Food Contamination Volume 2 ; 2 >
+        au < doNotProcess ; 2014 ; International Journal of Food Contamination Volume 1 ; 1 >
+        au < doNotProcess ; 2015 ; International Journal of Food Contamination Volume 2 ; 2 >
   
     }
   
@@ -1208,33 +1211,35 @@
   
         title <
           name = International Journal of Industrial Chemistry ;
-          issn = 2228-5547 
+          issn = 2228-5970 ;
+          eissn = 2228-5547 
         >
   
         param[base_url] = http://www.industchem.com/
         param[journal_issn] = 2228-5547 
-        comment[platform] = BioMedCentralPlugin
+        comment[platform] = move to SpringerOpen
   
-        au < manifest ; 2012 ; International Journal of Industrial Chemistry Volume 3 ; 3 >
-        au < manifest ; 2013 ; International Journal of Industrial Chemistry Volume 4 ; 4 >
-        au < manifest ; 2014 ; International Journal of Industrial Chemistry Volume 5 ; 5 >
-        au < manifest ; 2015 ; International Journal of Industrial Chemistry Volume 6 ; 6 >
+        au < doNotProcess ; 2012 ; International Journal of Industrial Chemistry Volume 3 ; 3 >
+        au < doNotProcess ; 2013 ; International Journal of Industrial Chemistry Volume 4 ; 4 >
+        au < doNotProcess ; 2014 ; International Journal of Industrial Chemistry Volume 5 ; 5 >
+        au < doNotProcess ; 2015 ; International Journal of Industrial Chemistry Volume 6 ; 6 >
   
     }
   
     {
   
         title <
-          name = International Journal Of Recycling of Organic Waste in Agriculture ;
-          issn = 2251-7715 
+          name = International Journal of Recycling of Organic Waste in Agriculture ;
+          issn = 2195-3228 ;
+          eissn = 2251-7715 
         >
   
         param[base_url] = http://www.ijrowa.com/
         param[journal_issn] = 2251-7715 
-        comment[platform] = BioMedCentralPlugin
+        comment[platform] = move to SpringerOpen
   
-        au < manifest ; 2012 ; International Journal Of Recycling of Organic Waste in Agriculture Volume 1 ; 1 >
-        au < manifest ; 2013 ; International Journal Of Recycling of Organic Waste in Agriculture Volume 2 ; 2 >
+        au < doNotProcess ; 2012 ; International Journal of Recycling of Organic Waste in Agriculture Volume 1 ; 1 >
+        au < doNotProcess ; 2013 ; International Journal of Recycling of Organic Waste in Agriculture Volume 2 ; 2 >
 
     }
   
@@ -1242,15 +1247,15 @@
   
         title <
           name = International Journal of STEM Education ;
-          issn = 2196-7822 
+          eissn = 2196-7822 
         >
 
         param[base_url] = http://www.stemeducationjournal.com/
         param[journal_issn] = 2196-7822 
-        comment[platform] = BioMedCentralPlugin
+        comment[platform] = move to SpringerOpen
   
-        au < manifest ; 2014 ; International Journal of STEM Education Volume 1 ; 1 >
-        au < manifest ; 2015 ; International Journal of STEM Education Volume 2 ; 2 >
+        au < doNotProcess ; 2014 ; International Journal of STEM Education Volume 1 ; 1 >
+        au < doNotProcess ; 2015 ; International Journal of STEM Education Volume 2 ; 2 >
 
     }
   
@@ -1258,17 +1263,18 @@
   
         title <
           name = International Nano Letters ;
-          issn = 2228-5326 
+          issn = 2008-9295 ;
+          eissn = 2228-5326 
         >
   
         param[base_url] = http://www.inl-journal.com/
         param[journal_issn] = 2228-5326 
-        comment[platform] = BioMedCentralPlugin
+        comment[platform] = move to SpringerOpen
   
-        au < manifest ; 2012 ; International Nano Letters Volume 2 ; 2 >
-        au < manifest ; 2013 ; International Nano Letters Volume 3 ; 3 >
-        au < manifest ; 2014 ; International Nano Letters Volume 4 ; 4 >
-        au < manifest ; 2015 ; International Nano Letters Volume 5 ; 5 >
+        au < doNotProcess ; 2012 ; International Nano Letters Volume 2 ; 2 >
+        au < doNotProcess ; 2013 ; International Nano Letters Volume 3 ; 3 >
+        au < doNotProcess ; 2014 ; International Nano Letters Volume 4 ; 4 >
+        au < doNotProcess ; 2015 ; International Nano Letters Volume 5 ; 5 >
   
     }
   
