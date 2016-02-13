@@ -9,7 +9,7 @@
     param[base_url] = http://journals.whitingbirch.net/
     implicit < status ; year ; param[year] ; name ; volume >
     
-    comment[moving] = moving from metapress to OJS on February 25, 2015. Marked exists till manifest pages come online.
+    comment[moving] = moving from metapress to OJS on February 25, 2015.
 
   {
 
@@ -33,7 +33,8 @@
      au < manifest ; 2012 ; 2012 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 22 ; 22 >
      au < manifest ; 2013 ; 2013 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 23 ; 23 >
      au < manifest ; 2014 ; 2014 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 24 ; 24 >
-     au < testing ; 2015 ; 2015 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 25 ; 25 >
+     au < ready ; 2015 ; 2015 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 25 ; 25 >
+     au < expected ; 2016 ; 2016 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 26 ; 26 >
   
   }
 
@@ -80,7 +81,8 @@
     au < manifest ; 2012 ; 2012 ; Social Work and Social Sciences Review Volume 2012 ; 2012 >
     au < manifest ; 2013 ; 2013 ; Social Work and Social Sciences Review Volume 2013 ; 2013 >
     au < manifest ; 2014 ; 2014 ; Social Work and Social Sciences Review Volume 2014 ; 2014 >
-    au < testing ; 2015 ; 2015 ; Social Work and Social Sciences Review Volume 2015 ; 2015 >
+    au < ready ; 2015 ; 2015 ; Social Work and Social Sciences Review Volume 2015 ; 2015 >
+    au < expected ; 2016 ; 2016 ; Social Work and Social Sciences Review Volume 2016 ; 2016 >
     
   }
 
@@ -94,8 +96,9 @@
     
     param[journal_id] = JSPW
 
-    au < testing ; 2012 ; 2012 ; Journal of Social Policy and Social Work in Transition Volume 3 ; 3 >
-    au < testing ; 2013 ; 2013 ; Journal of Social Policy and Social Work in Transition Volume 4 ; 4 >
+    au < ready ; 2012 ; 2012 ; Journal of Social Policy and Social Work in Transition Volume 3 ; 3 >
+    au < ready ; 2013 ; 2013 ; Journal of Social Policy and Social Work in Transition Volume 4 ; 4 >
+    au < expected ; 2014 ; 2014 ; Journal of Social Policy and Social Work in Transition Volume 5 ; 5 >
     
   }
 
