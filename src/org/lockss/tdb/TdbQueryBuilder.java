@@ -86,7 +86,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * 
    * @since 1.67
    */
-  protected static final String KEY_ALL = "all"; // TODO: should be renamed --viable
+  protected static final String KEY_ALL = "all"; // TODO: should be renamed --viable/-V
   
   /**
    * <p>
