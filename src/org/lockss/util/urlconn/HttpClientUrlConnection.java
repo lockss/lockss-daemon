@@ -2,7 +2,7 @@
  * $Id$
  *
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -58,6 +58,10 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   static final String PARAM_ACCEPT_HEADER = PREFIX + "acceptHeader";
   static final String DEFAULT_ACCEPT_HEADER =
     "text/html, image/gif, image/jpeg; q=.2, */*; q=.2";
+
+  /** Charset to be used to encode/decode HTTP result headers. */
+  static final String PARAM_HEADER_CHARSET = PREFIX + "httpHeaderCharset";
+  static final String DEFAULT_HEADER_CHARSET = "ISO-8859-1";
 
   /** Repeated response headers normally get combined on receipe into a
    * single header with a comma-separated value.  Headers in this list do
@@ -166,6 +170,10 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 					DEFAULT_SINGLE_COOKIE_HEADER);
 	params.setBooleanParameter(HttpMethodParams.SINGLE_COOKIE_HEADER,
 				   val);
+      }
+      if (diffs.contains(PARAM_HEADER_CHARSET)) {
+	String val = config.get(PARAM_HEADER_CHARSET, DEFAULT_HEADER_CHARSET);
+	params.setParameter(HttpMethodParams.HTTP_ELEMENT_CHARSET, val);
       }
       ServerTrustLevel stl =
 	(ServerTrustLevel)config.getEnum(ServerTrustLevel.class,
@@ -346,6 +354,12 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   public void addRequestProperty(String key, String value) {
     assertNotExecuted();
     method.addRequestHeader(key, value);
+  }
+
+  public void setHeaderCharset(String charset) {
+    assertNotExecuted();
+    HttpMethodParams params = method.getParams();
+    params.setHttpElementCharset(charset);
   }
 
   public void setFollowRedirects(boolean followRedirects) {

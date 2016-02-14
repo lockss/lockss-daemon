@@ -2,7 +2,7 @@
  * $Id$
  *
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -101,6 +101,10 @@ public abstract class BaseLockssUrlConnection implements LockssUrlConnection {
   public void setLocalAddress(IPAddr localAddress) {
     assertNotExecuted();
     this.localAddress = localAddress;
+  }
+
+  public void setHeaderCharset(String charset) {
+    throw new UnsupportedOperationException();
   }
 
   public void setFollowRedirects(boolean followRedirects) {
