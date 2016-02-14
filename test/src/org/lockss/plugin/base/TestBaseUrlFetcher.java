@@ -51,12 +51,6 @@ import org.lockss.config.*;
 
 import static org.lockss.util.DateTimeUtil.GMT_DATE_FORMATTER;
 
-/**
- * This is the test class for org.lockss.plugin.simulated.GenericFileUrlFetcher
- *
- * @author Emil Aalto
- * @version 0.0
- */
 public class TestBaseUrlFetcher extends LockssTestCase {
 
   protected static Logger logger = Logger.getLogger("TestBaseUrlFetcher");
@@ -414,6 +408,17 @@ public class TestBaseUrlFetcher extends LockssTestCase {
 				   "accept-languege", "da, en-gb;q=0.8, en;q=0.7",
 				   "foo", "bar"),
 		 mconn.getRequestProperties());
+  }
+
+  public void testCustomizeConnection() throws Exception {
+    MockConnectionBaseUrlFetcher muf =
+      new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    muf.setHeaderCharset("FOO_CHARSET");
+    MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
+    muf.addConnection(mconn);
+    muf.getUncachedInputStream();
+    assertEquals("FOO_CHARSET", mconn.headerCharset);
+    assertTrue(muf.executeCalled);
   }
 
   public void testGetUncachedProperties() throws IOException {
@@ -1383,6 +1388,8 @@ public class TestBaseUrlFetcher extends LockssTestCase {
   // used for successive redirect fetches.
   private class MockConnectionBaseUrlFetcher extends BaseUrlFetcher {
     List connections = new ArrayList();
+    String headerCharset;
+    boolean executeCalled = false;
 
     public MockConnectionBaseUrlFetcher(Crawler.CrawlerFacade cf,
         String url) {
@@ -1411,6 +1418,25 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     protected void pauseBeforeFetch() {
       pauseBeforeFetchCounter++;
     }
+
+    @Override
+    protected void customizeConnection(LockssUrlConnection conn) {
+      if (headerCharset != null) {
+	conn.setHeaderCharset(headerCharset);
+      }
+    }
+
+    @Override
+    protected void executeConnection(LockssUrlConnection conn)
+	throws IOException {
+      executeCalled = true;
+      super.executeConnection(conn);
+    }
+
+    private void setHeaderCharset(String charset) {
+      headerCharset = charset;
+    }
+
   }
 
   // Mock BaseUrlFetcher that fakes the connection
@@ -1528,6 +1554,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     String username;
     String password;
     String cpolicy;
+    String headerCharset;
     List<List<String>> cookies = new ArrayList<List<String>>();
 
     public MyMockLockssUrlConnection() throws IOException {
@@ -1568,6 +1595,11 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     public List<List<String>> getCookies() {
       return cookies;
     }
+
+    public void setHeaderCharset(String charset) {
+      headerCharset = charset;
+    }
+
   }
 
   private class ThrowingMockLockssUrlConnection extends MockLockssUrlConnection {

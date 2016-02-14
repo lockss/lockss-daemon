@@ -2,7 +2,7 @@
  * $Id$
  *
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -100,6 +100,10 @@ public interface LockssUrlConnection {
 
   /** Set the local address to be used when creating connections. */
   public void setLocalAddress(IPAddr localAddress);
+
+  /** Set the charset to be used to encode and decode HTTP request and
+   * response headers */
+  public void setHeaderCharset(String charset);
 
   /** Set the user-agent request header */
   public void setUserAgent(String value);

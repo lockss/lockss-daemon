@@ -239,6 +239,7 @@ public class BaseUrlFetcher implements UrlFetcher {
         headers = getUncachedProperties();
         if (input == null){
           //If input is null then ifModifiedSince returned not modified
+	  log.debug3("Not modified: " + fetchUrl);
           return FetchResult.FETCHED_NOT_MODIFIED;
         } else if (headers == null) {
           return FetchResult.NOT_FETCHED;
@@ -253,6 +254,7 @@ public class BaseUrlFetcher implements UrlFetcher {
         }
       } catch (CacheException e) {
         if (!e.isAttributeSet(CacheException.ATTRIBUTE_RETRY)) {
+	  log.debug3("No retry", e);
           throw e;
         }
         if (retriesLeft < 0) {
@@ -524,7 +526,8 @@ public class BaseUrlFetcher implements UrlFetcher {
         conn.setIfModifiedSince(lastModified);
       }
       pauseBeforeFetch();
-      conn.execute();
+      customizeConnection(conn);
+      executeConnection(conn);
     } catch (MalformedURLException ex) {
       log.debug2("openConnection", ex);
       throw resultMap.getMalformedURLException(ex);
@@ -538,6 +541,16 @@ public class BaseUrlFetcher implements UrlFetcher {
     checkConnectException(conn);
   }
   
+  /** Override to change connection settings */
+  protected void customizeConnection(LockssUrlConnection conn) {
+  }
+
+  /** Override to modify/wrap conn.execute() */
+  protected void executeConnection(LockssUrlConnection conn)
+      throws IOException {
+    conn.execute();
+  }
+
   protected InputStream checkLoginPage(InputStream input, CIProperties headers,
 				       String lastModified)
       throws IOException {

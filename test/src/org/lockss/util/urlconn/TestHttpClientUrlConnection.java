@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,6 +43,7 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.apache.commons.httpclient.*;
 import org.apache.commons.httpclient.cookie.CookiePolicy;
+import org.apache.commons.httpclient.params.*;
 import org.apache.commons.httpclient.protocol.*;
 
 /**
@@ -196,6 +197,23 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     hdr = method.getRequestHeader("accept");
     assertEquals(HttpClientUrlConnection.DEFAULT_ACCEPT_HEADER, hdr.getValue());
 
+  }
+
+  public void testHeaderCharsetDefault() throws Exception {
+    // ensure default config
+    ConfigurationUtil.resetConfig();
+    assertEquals("ISO-8859-1", method.getParams().getHttpElementCharset());
+    conn.setHeaderCharset("UTF-8");
+    assertEquals("UTF-8", method.getParams().getHttpElementCharset());
+  }
+
+  public void testHeaderCharset() throws Exception {
+    // ensure default config
+    ConfigurationUtil.addFromArgs(HttpClientUrlConnection.PARAM_HEADER_CHARSET,
+				  "UTF-8");
+    assertEquals("UTF-8", method.getParams().getHttpElementCharset());
+    conn.setHeaderCharset("ISO-8859-1");
+    assertEquals("ISO-8859-1", method.getParams().getHttpElementCharset());
   }
 
   public void testServerTrustLevelDefault() throws Exception {
@@ -497,11 +515,20 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     int contentLength = -1;
     boolean released = false;
     int res = -1;
+    HttpMethodParams params = new HttpMethodParams();
 
     public MyMockGetMethod(String url) {
       super();
       this.url = url;
       getMeth = new HttpClientUrlConnection.LockssGetMethodImpl(url);
+    }
+
+    public HttpMethodParams getParams() {
+      return params;
+    }
+
+    public void setParams(final HttpMethodParams params) {
+      this.params = params;
     }
 
     // this doesn't set the url in getMeth, but that isn't used for

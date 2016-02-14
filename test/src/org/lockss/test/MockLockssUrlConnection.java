@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -92,6 +92,9 @@ public class MockLockssUrlConnection extends BaseLockssUrlConnection {
 
   public boolean getKeepAlive() {
     return keepAlive;
+  }
+
+  public void setHeaderCharset(String charset) {
   }
 
   public void setRequestProperty(String key, String value) {
