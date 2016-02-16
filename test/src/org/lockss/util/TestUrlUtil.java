@@ -541,11 +541,29 @@ public class TestUrlUtil extends LockssTestCase {
 
   public void testIsHttpUrl() {
     assertTrue(UrlUtil.isHttpUrl("http://foo"));
-    assertTrue(UrlUtil.isHttpUrl("https://foo"));
+    assertFalse(UrlUtil.isHttpUrl("https://foo"));
     assertTrue(UrlUtil.isHttpUrl("HTTP://foo"));
-    assertTrue(UrlUtil.isHttpUrl("HTTPS://foo"));
+    assertFalse(UrlUtil.isHttpUrl("HTTPS://foo"));
     assertFalse(UrlUtil.isHttpUrl("ftp://foo"));
     assertFalse(UrlUtil.isHttpUrl("file://foo"));
+  }
+
+  public void testIsHttpsUrl() {
+    assertFalse(UrlUtil.isHttpsUrl("http://foo"));
+    assertTrue(UrlUtil.isHttpsUrl("https://foo"));
+    assertFalse(UrlUtil.isHttpsUrl("HTTP://foo"));
+    assertTrue(UrlUtil.isHttpsUrl("HTTPS://foo"));
+    assertFalse(UrlUtil.isHttpsUrl("ftp://foo"));
+    assertFalse(UrlUtil.isHttpsUrl("file://foo"));
+  }
+
+  public void testIsHttpOrHttpsUrl() {
+    assertTrue(UrlUtil.isHttpOrHttpsUrl("http://foo"));
+    assertTrue(UrlUtil.isHttpOrHttpsUrl("https://foo"));
+    assertTrue(UrlUtil.isHttpOrHttpsUrl("HTTP://foo"));
+    assertTrue(UrlUtil.isHttpOrHttpsUrl("HTTPS://foo"));
+    assertFalse(UrlUtil.isHttpOrHttpsUrl("ftp://foo"));
+    assertFalse(UrlUtil.isHttpOrHttpsUrl("file://foo"));
   }
 
   public void testGetUrlPrefixNullString(){

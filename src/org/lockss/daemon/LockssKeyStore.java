@@ -318,7 +318,7 @@ public class LockssKeyStore {
       ins = getClass().getClassLoader().getResourceAsStream(location);
       break;
     case Url:
-      if (UrlUtil.isHttpUrl(location)) {
+      if (UrlUtil.isHttpOrHttpsUrl(location)) {
 	ins = UrlUtil.openInputStream(location);
       } else {
 	URL keystoreUrl = new URL(location);

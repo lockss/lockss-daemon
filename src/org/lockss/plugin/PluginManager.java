@@ -2916,7 +2916,7 @@ public class PluginManager
 	  } finally {
 	    IOUtil.safeClose(kin);
 	  }
-	} else if (UrlUtil.isHttpUrl(keystoreLoc) ||
+	} else if (UrlUtil.isHttpOrHttpsUrl(keystoreLoc) ||
                    UrlUtil.isFileUrl(keystoreLoc)) {
 	  URL keystoreUrl = new URL(keystoreLoc);
           ks.load(keystoreUrl.openStream(), passchar);

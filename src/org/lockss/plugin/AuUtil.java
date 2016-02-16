@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -57,7 +57,8 @@ import org.lockss.plugin.exploded.*;
  * writers, thus there's no need to muddy those interfaces.
  */
 public class AuUtil {
-  private static Logger log = Logger.getLogger("AuUtil");
+	
+  private static final Logger log = Logger.getLogger(AuUtil.class);
   
   /** The default poll protocol to use, unless otherwise overridden by the
    * Archival Unit's poll_protocol config param.=
@@ -358,6 +359,24 @@ public class AuUtil {
 			false);
   }
 
+  public static boolean isParamUrlHttp(ArchivalUnit au, String paramKey) {
+    String url = au.getConfiguration().get(paramKey);
+    return url != null && UrlUtil.isHttpUrl(url);
+  }
+  
+  public static boolean isParamUrlHttps(ArchivalUnit au, String paramKey) {
+    String url = au.getConfiguration().get(paramKey);
+    return url != null && UrlUtil.isHttpsUrl(url);
+  }
+  
+  public static boolean isBaseUrlHttp(ArchivalUnit au) {
+    return isParamUrlHttp(au, ConfigParamDescr.BASE_URL.getKey());
+  }
+  
+  public static boolean isBaseUrlHttps(ArchivalUnit au) {
+    return isParamUrlHttps(au, ConfigParamDescr.BASE_URL.getKey());
+  }
+  
   public static String getPollVersion(ArchivalUnit au) {
     Plugin plugin = au.getPlugin();
     String res = plugin.getFeatureVersion(Plugin.Feature.Poll);

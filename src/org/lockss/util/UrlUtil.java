@@ -494,11 +494,28 @@ public class UrlUtil {
     return URL_PAT.matcher(str).find();
   }
 
-  /** Return true if an http: or https: url */
+  /**
+   * Returns true if an http: (but not https:) URL
+   * @since 1.70
+   */
   // XXX does this need to trim blanks?
   public static boolean isHttpUrl(String url) {
-    return StringUtil.startsWithIgnoreCase(url, "http:") ||
-           StringUtil.startsWithIgnoreCase(url, "https:");
+    return StringUtil.startsWithIgnoreCase(url, "http:");
+  }
+
+  /**
+   * Returns true if an https: (but not http:) URL
+   * @since 1.70
+   */
+  // XXX does this need to trim blanks?
+  public static boolean isHttpsUrl(String url) {
+    return StringUtil.startsWithIgnoreCase(url, "https:");
+  }
+
+  /** Return true if an http: or https: url */
+  // XXX does this need to trim blanks?
+  public static boolean isHttpOrHttpsUrl(String url) {
+    return isHttpUrl(url) || isHttpsUrl(url);
   }
 
   /** Return true if a file: url */
@@ -1205,7 +1222,7 @@ public class UrlUtil {
    */
   public static InputStream openInputStream(String urlString)
       throws IOException {
-    if (isHttpUrl(urlString)) {
+    if (isHttpOrHttpsUrl(urlString)) {
       return openHttpClientInputStream(urlString);
     } else {
       URL url = new URL(urlString);
@@ -1255,7 +1272,7 @@ public class UrlUtil {
                  LockssUrlConnectionPool connectionPool)
       throws IOException {
     LockssUrlConnection luc;
-    if (isHttpUrl(urlString)) {
+    if (isHttpOrHttpsUrl(urlString)) {
       if (useHttpClient) {
         HttpClient client = null;
         if (connectionPool != null) {

@@ -522,7 +522,7 @@ public class OpenUrlResolver {
     if (params.containsKey("rft_id")) {
       String rft_id = params.get("rft_id");
       // handle rft_id that is an HTTP or HTTPS URL
-      if (UrlUtil.isHttpUrl(rft_id)) {
+      if (UrlUtil.isHttpOrHttpsUrl(rft_id)) {
         resolvedDirectly = resolveFromUrl(rft_id);
         if (resolvedDirectly.resolvedTo != OpenUrlInfo.ResolvedTo.NONE) {
           return resolvedDirectly;

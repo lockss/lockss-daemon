@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -271,6 +271,38 @@ public class TestAuUtil extends LockssTestCase {
 						  "http://foo.bar/")));
   }
 
+  public void testIsParamUrlHttpHttps() throws Exception {
+    final String MYURLKEY = "my_url";
+    LocalMockArchivalUnit httpau = new LocalMockArchivalUnit();
+    httpau.setConfiguration(ConfigurationUtil.fromArgs(MYURLKEY, "http://www.example.com/"));
+    LocalMockArchivalUnit httpsau = new LocalMockArchivalUnit();
+    httpsau.setConfiguration(ConfigurationUtil.fromArgs(MYURLKEY, "https://www.example.com/"));
+    assertTrue(AuUtil.isParamUrlHttp(httpau, MYURLKEY));
+    assertFalse(AuUtil.isParamUrlHttp(httpsau, MYURLKEY));
+    assertFalse(AuUtil.isParamUrlHttps(httpau, MYURLKEY));
+    assertTrue(AuUtil.isParamUrlHttps(httpsau, MYURLKEY));
+    // URL param that doesn't exist/isn't set
+    final String BADURLKEY = "bad_url";
+    assertFalse(AuUtil.isParamUrlHttp(httpau, BADURLKEY));
+    assertFalse(AuUtil.isParamUrlHttps(httpau, BADURLKEY));
+  }
+  
+  public void testIsBaseUrlHttpHttps() throws Exception {
+    LocalMockArchivalUnit httpau = new LocalMockArchivalUnit();
+    // In the event base_url isn't set
+    assertFalse(AuUtil.isBaseUrlHttp(httpau));
+    assertFalse(AuUtil.isBaseUrlHttps(httpau));
+    // With base_url set
+    final String BASEURLKEY = ConfigParamDescr.BASE_URL.getKey();
+    httpau.setConfiguration(ConfigurationUtil.fromArgs(BASEURLKEY, "http://www.example.com/"));
+    LocalMockArchivalUnit httpsau = new LocalMockArchivalUnit();
+    httpsau.setConfiguration(ConfigurationUtil.fromArgs(BASEURLKEY, "https://www.example.com/"));
+    assertTrue(AuUtil.isBaseUrlHttp(httpau));
+    assertFalse(AuUtil.isBaseUrlHttp(httpsau));
+    assertFalse(AuUtil.isBaseUrlHttps(httpau));
+    assertTrue(AuUtil.isBaseUrlHttps(httpsau));
+  }
+  
   public void testIsDeleteExtraFiles() throws Exception {
     ExternalizableMap map = new ExternalizableMap();
     DefinablePlugin dplug = new DefinablePlugin();

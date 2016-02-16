@@ -543,7 +543,7 @@ public class ProxyHandler extends AbstractHttpHandler {
             TimeBase.msSince(reqStartTime));
         return;
       }
-      if (UrlUtil.isHttpUrl(urlString)) {
+      if (UrlUtil.isHttpOrHttpsUrl(urlString)) {
         if (HttpRequest.__GET.equals(request.getMethod())) {
           doLockss(pathInContext, pathParams, request, response,
               urlString, cu, reqStartTime);

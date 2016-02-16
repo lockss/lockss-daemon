@@ -72,7 +72,7 @@ public class ConfigCache {
       // doesn't yet exist in the cache, add it.
       log.debug2("Adding " + url);
       BaseConfigFile bcf;
-      if (UrlUtil.isHttpUrl(url)) {
+      if (UrlUtil.isHttpOrHttpsUrl(url)) {
 	bcf = new HTTPConfigFile(url);
       } else if (UrlUtil.isJarUrl(url)) {
 	bcf = new JarConfigFile(url);
