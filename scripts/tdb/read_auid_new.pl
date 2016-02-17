@@ -641,7 +641,7 @@ while (my $line = <>) {
 		  if ($bresp->is_success) {
 		      my $b_contents = $bresp->content;
 		      # what we're looking for on the page is href="/doi/pdf/doi1/doi2"
-		      if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf\/${doi1}\/${doi2}\"/)) {
+		      if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf\/${doi1}\/${doi2}/)) {
                         $result = "Manifest";
 		      } 
 		  }
@@ -698,7 +698,7 @@ while (my $line = <>) {
 		  if ($bresp->is_success) {
 		      my $b_contents = $bresp->content;
 		      # what we're looking for on the page is href="/doi/pdf/doi1/doi2"
-		      if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf\/${doi1}\/${doi2}\"/)) {
+		      if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf\/${doi1}\/${doi2}/)) {
                         $result = "Manifest";
 		      } 
 		  }
