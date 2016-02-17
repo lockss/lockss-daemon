@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Product SYSTEM "onix-international.dtd">
+<Product>
+  <RecordReference>buddhist_architecture</RecordReference>
+  <!-- Notification on pubblication  -->
+  <NotificationType>03</NotificationType>
+  <ProductIdentifier>
+    <!-- 15: ISBN 13 -->
+    <ProductIDType>15</ProductIDType>
+    <IDValue>9788898392315</IDValue>
+  </ProductIdentifier>
+  <ProductIdentifier>
+    <!-- 06: DOI -->
+    <ProductIDType>06</ProductIDType>
+    <IDValue>10.978.8898392/315</IDValue>
+  </ProductIdentifier>
+  <!-- EB: Digital download and online -->
+  <ProductForm>EB</ProductForm>
+  <Title>
+    <!-- 01: Distinctive title (book); Cover title (serial); Title on item (serial content item or reviewed resource) -->
+    <TitleType>01</TitleType>
+    <TitleText>Buddhist Architecture in the Swat Valley, Pakistan. Stupas, Viharas, a Dwelling Unit</TitleText>
+  </Title>
+  <Contributor>
+    <SequenceNumber>1</SequenceNumber>
+    <!-- A01 BY (aythor) -->
+    <ContributorRole>A01</ContributorRole>
+    <PersonNameInverted>Faccenna, Domenico</PersonNameInverted>
+  </Contributor>
+  <Contributor>
+    <SequenceNumber>1</SequenceNumber>
+    <ContributorRole>A01</ContributorRole>
+    <PersonNameInverted>Spagnesi, Piero</PersonNameInverted>
+  </Contributor>
+  <EditionNumber>1</EditionNumber>
+  <Language>
+    <!-- 01: Language of text -->
+    <LanguageRole>01</LanguageRole>
+    <LanguageCode>eng</LanguageCode>
+  </Language>
+  <NumberOfPages>588</NumberOfPages>
+  <OtherText>
+    <!-- 03: Description -->
+    <TextType>03</TextType>
+    <Text>The volume reports an accurate survey of the sacred Buddhist Gandharan 
+      architecture in the Swat Valley, carryed out by one of the main experts 
+      in the past culture of that territory, Domenico Faccenna, in association 
+      with Piero Spagnesi.
+      With the collaboration of Luca M. Olivieri and foreword by Marco Mancini 
+      and Adriano Rossi. 
+      ACT-FIELD SCHOOL PROJECT Reports and Memoirs (series), special volume.</Text>
+  </OtherText>
+  <Publisher>
+    <!-- 01: Publisher -->
+    <PublishingRole>01</PublishingRole>
+    <PublisherName>BraDypUS</PublisherName>
+  </Publisher>
+  <PublicationDate>2015</PublicationDate>
+  <Measure>
+    <!-- 01: height  -->
+    <MeasureType>01</MeasureType>
+    <Measurement>21.5</Measurement>
+    <MeasureUnitCode>cm</MeasureUnitCode>
+  </Measure>
+  <Measure>
+    <!-- 02: width -->
+    <MeasureTypeCode>02</MeasureTypeCode>
+    <Measurement>35.5</Measurement>
+    <MeasureUnitCode>cm</MeasureUnitCode>
+  </Measure>
+  <SupplyDetail>
+    <!-- 20: available -->
+    <ProductAvailability>20</ProductAvailability>
+    <Price>
+      <PriceType>01</PriceType>
+      <PriceAmount>0</PriceAmount>
+      <CurrencyCode>EUR</CurrencyCode>
+    </Price>
+  </SupplyDetail>
+</Product>
