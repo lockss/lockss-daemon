@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,16 +37,15 @@ import java.io.*;
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
 
-//import org.lockss.util.Logger;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
+import org.lockss.extractor.MetadataException.ValidationException;
+import org.lockss.extractor.MetadataField.*;
 import org.lockss.plugin.*;
 
 
 public class ProjectMuseHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
   
-  // private static final Logger log = Logger.getLogger(ProjectMuseHtmlMetadataExtractorFactory.class);
-
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(
       MetadataTarget target, String contentType)
@@ -87,6 +86,9 @@ public class ProjectMuseHtmlMetadataExtractorFactory implements FileMetadataExtr
       } else {
         am.replace(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
       }
+      am.replace(MetadataField.FIELD_ACCESS_URL,
+                 HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(cu.getArchivalUnit(),
+                                                                      am.get(MetadataField.FIELD_ACCESS_URL)));
       emitter.emitMetadata(cu, am);
     }
   }

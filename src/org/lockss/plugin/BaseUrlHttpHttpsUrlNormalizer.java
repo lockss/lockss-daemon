@@ -30,22 +30,52 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.projmuse;
+package org.lockss.plugin;
 
-import org.apache.commons.lang3.StringUtils;
-import org.lockss.daemon.PluginException;
-import org.lockss.plugin.*;
+import org.lockss.daemon.*;
+import org.lockss.util.UrlUtil;
 
 /**
- * @since 1.67.5
+ * <p>
+ * A URL normalizer that first forces an incoming URL to have the same HTTP or
+ * HTTPS protocol as the AU's base URL ({@link ConfigParamDescr#BASE_URL}) if
+ * it is on the same hose, before applying other normalization.
+ * </p>
+ * 
+ * @author Thib Guicherd-Callin
+ * @since 1.70
  */
-public class ProjectMuseUrlNormalizer extends HttpToHttpsUtil.BaseUrlHttpHttpsUrlNormalizer {
-
-  protected static final String VERSION_SUFFIX = "?v=";
+public class BaseUrlHttpHttpsUrlNormalizer implements UrlNormalizer {
 
   @Override
-  public String additionalNormalization(String url, ArchivalUnit au) throws PluginException {
-    url = StringUtils.substringBeforeLast(url, VERSION_SUFFIX);
+  public String normalizeUrl(String url,
+                             ArchivalUnit au)
+      throws PluginException {
+    if (UrlUtil.isSameHost(au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()),
+                           url)) {
+      url = AuUtil.normalizeHttpHttpsFromBaseUrl(au, url);
+    }
+    return additionalNormalization(url, au);
+  }
+  
+  /**
+   * <p>
+   * By default, this parent implementation does not perform any additional
+   * normalization and only returns the original URL.
+   * </p>
+   * 
+   * @param url
+   *          A URL.
+   * @param au
+   *          An archival unit.
+   * @return A normalized URL string as needed (unchanged URL by default)
+   * @throws PluginException
+   *           if a plugin error arises
+   * @since 1.70
+   */
+  public String additionalNormalization(String url,
+                                        ArchivalUnit au)
+      throws PluginException {
     return url;
   }
 

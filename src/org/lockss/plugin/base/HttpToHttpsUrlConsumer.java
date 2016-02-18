@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,50 +30,67 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.projmuse;
+package org.lockss.plugin.base;
 
 import java.io.IOException;
 
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.SimpleUrlConsumer;
+import org.lockss.util.UrlUtil;
 
 /**
- * @since 1.67.5 
+ * <p>
+ * This URL consumer is suitable for a site that used to be HTTP-only and is now
+ * HTTP-to-HTTPS, meaning that all HTTP URL requests are now redirected to the
+ * corresponding HTTPS URL. For HTTPS-defined AUs, it does nothing special.
+ * For HTTP-defined AUs, it stores content under the origin (HTTP) URL when it
+ * encounters an HTTP-to-HTTPS redirect chain, as determined by
+ * {@link #shouldStoreAtOrigUrl()} (which can be overridden).
+ * </p>
+ * 
+ * @author Thib Guicherd-Callin
+ * @since 1.70
+ * @see HttpToHttpsUrlConsumerFactory
  */
-public class ProjectMuseUrlConsumer extends SimpleUrlConsumer {
+public class HttpToHttpsUrlConsumer extends SimpleUrlConsumer {
 
   /**
-   * @since 1.67.5
+   * @param facade
+   * @param fud
+   * @since 1.70
    */
-  public ProjectMuseUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
+  public HttpToHttpsUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
     super(facade, fud);
   }
 
   @Override
   public void consume() throws IOException {
     if (shouldStoreAtOrigUrl()) {
-      // FIXME 1.68: call storeAtOrigUrl() instead of these 4 lines
-      // storeAtOrigUrl();
-      fud.redirectUrls = null;
-      fud.fetchUrl = null;
-      fud.headers.remove(CachedUrl.PROPERTY_REDIRECTED_TO);
-      fud.headers.put(CachedUrl.PROPERTY_CONTENT_URL, fud.origUrl);
+      storeAtOrigUrl();
     }
     super.consume();
   }
-  
+
   /**
-   * @since 1.67.5
+   * <p>
+   * Determines if the URL is to be stored under its redirect chain's origin
+   * URL. By default in this implementation, this is true when the AU is
+   * HTTP-defined and there has been a single-hop redirect from an HTTP URL to
+   * the exactly corresponding HTTPS URL.
+   * </p>
+   * 
+   * @return true if and only if the URL fetch matches the above criteria
+   * @since 1.70
+   * @see AuUtil#isBaseUrlHttp(ArchivalUnit)
    */
-  protected boolean shouldStoreAtOrigUrl() {
-    return ProjectMuseUtil.isBaseUrlHttp(au)
+  public boolean shouldStoreAtOrigUrl() {
+    return AuUtil.isBaseUrlHttp(au)
            && fud.redirectUrls != null
            && fud.redirectUrls.size() == 1
            && fud.fetchUrl.equals(fud.redirectUrls.get(0))
-           && fud.origUrl.startsWith(ProjectMuseUtil.HTTP)
-           && fud.fetchUrl.startsWith(ProjectMuseUtil.HTTPS)
-           && fud.origUrl.substring(ProjectMuseUtil.HTTP.length()).equals(fud.fetchUrl.substring(ProjectMuseUtil.HTTPS.length()));
+           && UrlUtil.isHttpUrl(fud.origUrl)
+           && UrlUtil.isHttpsUrl(fud.fetchUrl)
+           && UrlUtil.stripProtocol(fud.origUrl).equals(UrlUtil.stripProtocol(fud.fetchUrl));
   }
   
 }

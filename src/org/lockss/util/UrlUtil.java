@@ -2,7 +2,7 @@
  * $Id$
  *
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,7 +48,9 @@ import org.springframework.web.util.UriUtils;
 /** Utilities for URLs and URLConnections
  */
 public class UrlUtil {
-  private static Logger log = Logger.getLogger("UrlUtil");
+  
+  private static final Logger log = Logger.getLogger(UrlUtil.class);
+  
   /**
    * The separator string for URLs.
    */
@@ -1119,12 +1121,22 @@ public class UrlUtil {
     return url;
   }
 
-  /** Remove a subdomain from the host part of a URL
-   * @param url the URL string
-   * @param subdomain the (case insensitive) subdomain to remove (no
-   * trailing dot)
-   * @return the URL string with the subdomain removed from the beginning
-   * of the host
+  /**
+   * <p>
+   * Replaces a URL's scheme (e.g. <code>http</code> with another (e.g.
+   * <code>https</code>), unless the given URL does not begin with the given
+   * original scheme or is insufficiently long.
+   * </p>
+   * 
+   * @param url
+   *          A URL.
+   * @param from
+   *          An original protocol (e.g. <code>"http"</code>)
+   * @param to
+   *          A destination protocol (e.g. <code>"https"</code>)
+   * @return A URL string with the original protocol replaced by the destination
+   *         protocol, or the original string if the given URL does not begin
+   *         with the original protocol or is insufficiently long
    */
   public static String replaceScheme(String url, String from, String to) {
     int flen = from.length();

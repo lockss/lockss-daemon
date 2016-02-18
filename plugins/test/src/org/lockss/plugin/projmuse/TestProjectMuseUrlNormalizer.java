@@ -75,13 +75,11 @@ public class TestProjectMuseUrlNormalizer extends LockssTestCase {
   }
   
   public void testSuffix() throws Exception {
-    // HTTP base URL: trim suffix and nothing else
     assertEquals("http://www.example.com/foo.css",
                  norm.normalizeUrl("http://www.example.com/foo.css?v=1.1", mauHttp));
-    assertEquals("https://www.example.com/foo.css",
-                 norm.normalizeUrl("https://www.example.com/foo.css?v=1.1", mauHttp));
-    // HTTPS base URL: trim suffix and nothing else
     assertEquals("http://www.example.com/foo.css",
+                 norm.normalizeUrl("https://www.example.com/foo.css?v=1.1", mauHttp));
+    assertEquals("https://www.example.com/foo.css",
                  norm.normalizeUrl("http://www.example.com/foo.css?v=1.1", mauHttps));
     assertEquals("https://www.example.com/foo.css",
                  norm.normalizeUrl("https://www.example.com/foo.css?v=1.1", mauHttps));

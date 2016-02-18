@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,19 +30,26 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.projmuse;
+package org.lockss.plugin.base;
 
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
 
 /**
- * @since 1.67.5
+ * <p>
+ * A URL consumer factory that instantiates URL consumers of type
+ * {@link HttpToHttpsUrlConsumer}.
+ * </p>
+ * 
+ * @author Thib Guicherd-Callin
+ * @since 1.70
  */
-public class ProjectMuseUrlConsumerFactory implements UrlConsumerFactory {
+public class HttpToHttpsUrlConsumerFactory implements UrlConsumerFactory {
 
   @Override
-  public UrlConsumer createUrlConsumer(CrawlerFacade facade, FetchedUrlData fud) {
-    return new ProjectMuseUrlConsumer(facade, fud);
+  public UrlConsumer createUrlConsumer(CrawlerFacade crawlFacade,
+                                       FetchedUrlData fud) {
+    return new HttpToHttpsUrlConsumer(crawlFacade, fud);
   }
 
 }

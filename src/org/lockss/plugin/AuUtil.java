@@ -376,6 +376,23 @@ public class AuUtil {
   public static boolean isBaseUrlHttps(ArchivalUnit au) {
     return isParamUrlHttps(au, ConfigParamDescr.BASE_URL.getKey());
   }
+
+  public static String normalizeHttpHttpsFromParamUrl(ArchivalUnit au,
+                                                      String paramKey,
+                                                      String url) {
+    if (isParamUrlHttp(au, paramKey) && UrlUtil.isHttpsUrl(url)) {
+      return UrlUtil.replaceScheme(url, "https", "http");
+    }
+    if (isParamUrlHttps(au, paramKey) && UrlUtil.isHttpUrl(url)) {
+      return UrlUtil.replaceScheme(url, "http", "https");
+    }
+    return url;
+  }
+  
+  public static String normalizeHttpHttpsFromBaseUrl(ArchivalUnit au,
+                                                     String url) {
+    return normalizeHttpHttpsFromParamUrl(au, ConfigParamDescr.BASE_URL.getKey(), url);
+  }
   
   public static String getPollVersion(ArchivalUnit au) {
     Plugin plugin = au.getPlugin();
