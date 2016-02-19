@@ -96,7 +96,7 @@ implements FileMetadataExtractorFactory {
 
     mris.removeRisTag("DA");
     mris.addRisTag("A1", MetadataField.FIELD_AUTHOR);
-    mris.addRisTag("Y1", MetadataField.FIELD_AUTHOR);
+    mris.addRisTag("Y1", MetadataField.FIELD_DATE);
     //if UR isn't in the AU then it will get changed later to FULL_TEXT_CU
     return mris;
   }
@@ -125,12 +125,7 @@ implements FileMetadataExtractorFactory {
           am.put(MetadataField.FIELD_PUBLICATION_TITLE, am.getRaw("JO")); // might be unabbreviated version
         }
       } 
-      if (am.get(MetadataField.FIELD_DATE) == null) {
-        if (am.getRaw("DA") != null) { // if DA wasn't there, use Y1
-          am.put(MetadataField.FIELD_DATE, am.getRaw("DA"));
-        }
-      }
-
+      
       /* type defaults to ARTICLE_TYPE_JOURNALARTICLE */
       /* The BaseArticleMetadataExtractor will add the tdb defaults and check the access_url */
       am.putIfBetter(MetadataField.FIELD_PUBLISHER,MEDKNOW_PUBNAME);

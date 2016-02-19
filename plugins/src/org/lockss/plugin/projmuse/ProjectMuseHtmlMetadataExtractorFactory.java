@@ -77,12 +77,7 @@ public class ProjectMuseHtmlMetadataExtractorFactory implements FileMetadataExtr
       am.cook(tagMap);
       String url = am.get(MetadataField.FIELD_ACCESS_URL);
       ArchivalUnit au = cu.getArchivalUnit();
-      if (url != null && !url.isEmpty()) {
-        CachedUrl val = au.makeCachedUrl(url);
-        if (!val.hasContent()) {
-          url = cu.getUrl();
-        }
-      } else {
+      if (url == null || url.isEmpty() || !au.makeCachedUrl(url).hasContent()) {
         url = cu.getUrl();
       }
       am.replace(MetadataField.FIELD_ACCESS_URL,
