@@ -81,14 +81,13 @@ public class ProjectMuseHtmlMetadataExtractorFactory implements FileMetadataExtr
       if (url != null && !url.isEmpty()) {
         CachedUrl val = cu.getArchivalUnit().makeCachedUrl(url);
         if (!val.hasContent()) {
-          am.replace(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
+          url = cu.getUrl();
         }
       } else {
-        am.replace(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
+        url = cu.getUrl();
       }
       am.replace(MetadataField.FIELD_ACCESS_URL,
-                 HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(cu.getArchivalUnit(),
-                                                                      am.get(MetadataField.FIELD_ACCESS_URL)));
+                 HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(cu.getArchivalUnit(), url));
       emitter.emitMetadata(cu, am);
     }
   }
