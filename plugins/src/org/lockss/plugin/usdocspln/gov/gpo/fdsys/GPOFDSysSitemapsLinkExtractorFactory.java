@@ -40,13 +40,20 @@ import javax.xml.parsers.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsLinkExtractorFactory.GPOFDSysSitemapsLinkExtractor.SitemapsHandler.NoNeedToContinueException;
 import org.lockss.util.*;
 import org.xml.sax.*;
 
 public class GPOFDSysSitemapsLinkExtractorFactory implements LinkExtractorFactory {
 
   protected static Logger logger = Logger.getLogger("GPOFDSysSitemapsLinkExtractorFactory");
+  
+  protected static class NoNeedToContinueException extends SAXException {
+    
+    public NoNeedToContinueException() {
+      super();
+    }
+    
+  }
   
   @Override
   public LinkExtractor createLinkExtractor(String mimeType) throws PluginException {
@@ -63,14 +70,6 @@ public class GPOFDSysSitemapsLinkExtractorFactory implements LinkExtractorFactor
       public InputSource resolveEntity(String publicID, String systemID) 
         throws SAXException {
         return new InputSource(new StringReader(""));
-      }
-      
-      protected static class NoNeedToContinueException extends SAXException {
-        
-        public NoNeedToContinueException() {
-          super();
-        }
-        
       }
       
       protected Callback callback;
@@ -156,11 +155,11 @@ public class GPOFDSysSitemapsLinkExtractorFactory implements LinkExtractorFactor
     }
     
     @Override
-    public void extractUrls(ArchivalUnit au,
+    public void extractUrls(final ArchivalUnit au,
                             InputStream in,
                             String encoding,
-                            String srcUrl,
-                            Callback cb)
+                            final String srcUrl,
+                            final Callback cb)
         throws IOException, PluginException {
       // Create SAX parser
       SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
@@ -181,7 +180,18 @@ public class GPOFDSysSitemapsLinkExtractorFactory implements LinkExtractorFactor
       
       // Parse document; may bail early with custom NoNeedToContinueException
       try {
-        saxParser.parse(inputSource, new SitemapsHandler(new URL(srcUrl), cb));
+        saxParser.parse(inputSource, new SitemapsHandler(new URL(srcUrl), 
+            new Callback() {
+          @Override
+          public void foundLink(String url) {
+            if (au != null) {
+              if (HttpToHttpsUtil.UrlUtil.isSameHost(srcUrl, url)) {
+                url = HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(au, url);
+              }
+            }
+            cb.foundLink(url);
+          }
+      }));
       }
       catch (NoNeedToContinueException nntce) {
         if (logger.isDebug2()) {

@@ -39,8 +39,6 @@ import org.apache.commons.collections.map.MultiValueMap;
 
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
-import org.lockss.extractor.MetadataException.ValidationException;
-import org.lockss.extractor.MetadataField.*;
 import org.lockss.plugin.*;
 
 
@@ -78,17 +76,17 @@ public class ProjectMuseHtmlMetadataExtractorFactory implements FileMetadataExtr
         new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       am.cook(tagMap);
       String url = am.get(MetadataField.FIELD_ACCESS_URL);
+      ArchivalUnit au = cu.getArchivalUnit();
       if (url != null && !url.isEmpty()) {
-        CachedUrl val = cu.getArchivalUnit().makeCachedUrl(url);
+        CachedUrl val = au.makeCachedUrl(url);
         if (!val.hasContent()) {
-          am.replace(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
+          url = cu.getUrl();
         }
       } else {
-        am.replace(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
+        url = cu.getUrl();
       }
       am.replace(MetadataField.FIELD_ACCESS_URL,
-                 HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(cu.getArchivalUnit(),
-                                                                      am.get(MetadataField.FIELD_ACCESS_URL)));
+                 HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(au, url));
       emitter.emitMetadata(cu, am);
     }
   }

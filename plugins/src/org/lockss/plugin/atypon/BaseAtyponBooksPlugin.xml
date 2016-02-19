@@ -18,7 +18,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -35,7 +35,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>3</string>
+        <string>4</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -64,7 +64,7 @@
     exclude traps
     book landing page: <base>/doi/book/<doi> - where doi may (futuresciencegroup) or may not (aiaa) be the prefix + eisbn
     entire book pdf: <base>/doi/pdf/<doi>
-    chapter pages: <base>/doi/(abs|full|pdf)/<doi>
+    chapter pages: <base>/doi/(abs|full|pdf|ref)/<doi>
     image access: <base>/action/showPopup?citid=citart1&id=ch1-f1.1&doi=10.2217%2Febo.11.115
     citation extraction page: <base>/action/showCitFormats?doi=10.2217%2F9781780840246
     citation RIS page (normalized by us): <base>/action/downloadCitation?doi=10.2217/ebo.11.122&format=ris&include=cit
@@ -74,7 +74,7 @@
       <string>1,"^%sna101/home/[a-z]+/publisher/[^/]+/books/content/books/[^/]+/%s/", base_url, book_eisbn</string>   
       <string>2,"^%sdoi/[^/]+/[0-9.]+/(null\?|[-.9]+$)", base_url</string>
       <string>1,"^%sdoi/book/[0-9.]+/", base_url</string>
-      <string>1,"^%sdoi/(abs|full|pdf)/[0-9.]+/", base_url</string>
+      <string>1,"^%sdoi/(abs|full|pdf|ref)/[0-9.]+/", base_url</string>
       <string>1,"^%saction/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", base_url</string>
       <string>1,"^%saction/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", base_url</string> 
     </list>

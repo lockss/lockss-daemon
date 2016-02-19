@@ -32,13 +32,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.usdocspln.gov.gpo.fdsys;
 
-import org.lockss.daemon.*;
-import org.lockss.plugin.*;
+import org.lockss.daemon.ConfigParamDescr;
+import org.lockss.daemon.PluginException;
+import org.lockss.plugin.ArchivalUnit;
 
-public class GPOFDSysSitemapsUrlNormalizer implements UrlNormalizer {
+public class GPOFDSysSitemapsUrlNormalizer extends HttpToHttpsUtil.BaseUrlHttpHttpsUrlNormalizer {
 
   @Override
-  public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
+  public String additionalNormalization(String url, ArchivalUnit au) throws PluginException {
     final String prefixPath = "fdsys/search/pagedetails.action?";
     final String packageIdVar = "packageId=";
     final String destination1 = "fdsys/pkg/";
