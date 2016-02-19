@@ -1828,7 +1828,7 @@
 
     param[base_url] = http://www.greenpharmacy.info/
     param[journal_issn] = 0973-8258
-    comment[0] This journal has a different structure than typical Medknow journals; got an error "Unable to fetch permission page" and it goes downhill from there
+    # This journal has a different structure than typical Medknow journals; got an error "Unable to fetch permission page" and it goes downhill from there
 
     au < doNotProcess ; exists ; 2007 ; International Journal of Green Pharmacy Volume 1 ; 2007 ; 1 >
     au < doNotProcess ; exists ; 2008 ; International Journal of Green Pharmacy Volume 2 ; 2008 ; 2 >
