@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>32</string>
+    <string>33</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>15</string>
+        <string>16</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -24,9 +24,13 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.68.0</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -70,17 +74,20 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%ssmap/fdsys/sitemap_%d/%d_%s_sitemap.xml", base_url, year, year, collection_id</string>
+    <list>
+      <string>"%ssmap/fdsys/sitemap_%d/%d_%s_sitemap.xml", to_http(base_url), year, year, collection_id</string>
+      <string>"%ssmap/fdsys/sitemap_%d/%d_%s_sitemap.xml", to_https(base_url), year, year, collection_id</string>
+    </list>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
-      <string>4,"^%s", base_url</string>
-      <string>2,"^%sfdsys/(granule|pkg)/[^/]+\.zip$", base_url</string>
-      <string>1,"^%sfdsys/(granule|pkg)/%s-", base_url, collection_id</string>
-      <string>1,"^%sfdsys/search/getfrtoc\.action\?selectedDate=%d", base_url, year</string>
-      <string>1,"^%sfdsys/search/pagedetails\.action\?.*packageId=%s-", base_url, collection_id</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url)</string>
+      <string>4,"^https?://%s/", url_host(base_url)</string>
+      <string>2,"^https?://%s/fdsys/(granule|pkg)/[^/]+\.zip$", url_host(base_url)</string>
+      <string>1,"^https?://%s/fdsys/(granule|pkg)/%s-", url_host(base_url), collection_id</string>
+      <string>1,"^https?://%s/fdsys/search/getfrtoc\.action\?selectedDate=%d", url_host(base_url), year</string>
+      <string>1,"^https?://%s/fdsys/search/pagedetails\.action\?.*packageId=%s-", url_host(base_url), collection_id</string>
     </list>
   </entry>
   <entry>
@@ -120,6 +127,10 @@
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.HttpToHttpsUtil$HttpToHttpsUrlConsumerFactory</string>
   </entry>
   <entry>
     <string>au_crawl_depth</string>

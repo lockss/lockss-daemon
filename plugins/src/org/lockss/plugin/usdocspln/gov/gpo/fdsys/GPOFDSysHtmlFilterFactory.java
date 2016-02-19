@@ -42,6 +42,7 @@ import org.htmlparser.util.*;
 import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
+import org.lockss.filter.StringFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
@@ -176,10 +177,10 @@ public class GPOFDSysHtmlFilterFactory implements FilterFactory {
                                   encoding,
                                   new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),
                                                             xform));
-
     try {
       Reader filteredReader = new InputStreamReader(prefilteredStream, encoding);
-      Reader whitespaceReader = new WhiteSpaceFilter(filteredReader);
+      Reader httpFilter = new StringFilter(filteredReader, "http:", "https:");
+      Reader whitespaceReader = new WhiteSpaceFilter(httpFilter);
       return new ReaderInputStream(whitespaceReader, encoding);
     }
     catch (UnsupportedEncodingException uee) {

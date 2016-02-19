@@ -41,10 +41,11 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.projmuse.HttpToHttpsUtil;
 
 
 public class GPOFDSysSitemapsHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("GPOFDSysSitemapsHtmlMetadataExtractorFactory");
+  static Logger log = Logger.getLogger(GPOFDSysSitemapsHtmlMetadataExtractorFactory.class);
 
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
                  String contentType)
@@ -65,7 +66,20 @@ public class GPOFDSysSitemapsHtmlMetadataExtractorFactory implements FileMetadat
         throws IOException {
       ArticleMetadata am = 
         new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
-      am.cook(tagMap);        
+      am.cook(tagMap);
+      String url = am.get(MetadataField.FIELD_ACCESS_URL);
+      ArchivalUnit au = cu.getArchivalUnit();
+      if (url != null && !url.isEmpty()) {
+        CachedUrl val = au.makeCachedUrl(url);
+        if (!val.hasContent()) {
+          url = cu.getUrl();
+        }
+      } else {
+        url = cu.getUrl();
+      }
+      am.replace(MetadataField.FIELD_ACCESS_URL,
+                 HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(au, url));
+      
       emitter.emitMetadata(cu, am);
     }
   }
