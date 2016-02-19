@@ -137,7 +137,7 @@
     au < doNotProcess ; exists ; 2009 ; Annals of Cardiac Anaesthesia Volume 12 ; 2009 ; 12 >
     au < doNotProcess ; exists ; 2010 ; Annals of Cardiac Anaesthesia Volume 13 ; 2010 ; 13 >
     au < doNotProcess ; exists ; 2011 ; Annals of Cardiac Anaesthesia Volume 14 ; 2011 ; 14 >
-    au < testing ; exists ; 2012 ; Annals of Cardiac Anaesthesia Volume 15 ; 2012 ; 15 >
+    au < boost ; exists ; 2012 ; Annals of Cardiac Anaesthesia Volume 15 ; 2012 ; 15 >
     au < doNotProcess ; exists ; 2013 ; Annals of Cardiac Anaesthesia Volume 16 ; 2013 ; 16 >
     au < exists ; exists ; 2014 ; Annals of Cardiac Anaesthesia Volume 17 ; 2014 ; 17 >
 
@@ -788,7 +788,7 @@
     au < doNotProcess ; exists ; 2007 ; Indian Journal of Dermatology Volume 52 ; 2007 ; 52 >
     au < doNotProcess ; exists ; 2008 ; Indian Journal of Dermatology Volume 53 ; 2008 ; 53 >
     au < doNotProcess ; exists ; 2009 ; Indian Journal of Dermatology Volume 54 ; 2009 ; 54 >
-    au < testing ; exists ; 2010 ; Indian Journal of Dermatology Volume 55 ; 2010 ; 55 >
+    au < boost ; exists ; 2010 ; Indian Journal of Dermatology Volume 55 ; 2010 ; 55 >
     au < doNotProcess ; exists ; 2011 ; Indian Journal of Dermatology Volume 56 ; 2011 ; 56 >
     au < doNotProcess ; exists ; 2012 ; Indian Journal of Dermatology Volume 57 ; 2012 ; 57 >
     au < doNotProcess ; exists ; 2013 ; Indian Journal of Dermatology Volume 58 ; 2013 ; 58 >
@@ -1828,6 +1828,7 @@
 
     param[base_url] = http://www.greenpharmacy.info/
     param[journal_issn] = 0973-8258
+    comment[0] This journal has a different structure than typical Medknow journals; got an error "Unable to fetch permission page" and it goes downhill from there
 
     au < doNotProcess ; exists ; 2007 ; International Journal of Green Pharmacy Volume 1 ; 2007 ; 1 >
     au < doNotProcess ; exists ; 2008 ; International Journal of Green Pharmacy Volume 2 ; 2008 ; 2 >
@@ -1835,7 +1836,7 @@
     au < doNotProcess ; exists ; 2010 ; International Journal of Green Pharmacy Volume 4 ; 2010 ; 4 >
     au < doNotProcess ; exists ; 2011 ; International Journal of Green Pharmacy Volume 5 ; 2011 ; 5 >
     au < doNotProcess ; exists ; 2012 ; International Journal of Green Pharmacy Volume 6 ; 2012 ; 6 >
-    au < testing ; exists ; 2013 ; International Journal of Green Pharmacy Volume 7 ; 2013 ; 7 >
+    au < doNotProcess ; exists ; 2013 ; International Journal of Green Pharmacy Volume 7 ; 2013 ; 7 >
     au < expected ; exists ; 2014 ; International Journal of Green Pharmacy Volume 8 ; 2014 ; 8 >
 
   }
@@ -2922,7 +2923,7 @@
     au < doNotProcess ; exists ; 2010 ; Journal of Pediatric Neurosciences Volume 5 ; 2010 ; 5 >
     au < doNotProcess ; exists ; 2011 ; Journal of Pediatric Neurosciences Volume 6 ; 2011 ; 6 >
     au < doNotProcess ; exists ; 2012 ; Journal of Pediatric Neurosciences Volume 7 ; 2012 ; 7 >
-    au < testing ; exists ; 2013 ; Journal of Pediatric Neurosciences Volume 8 ; 2013 ; 8 >
+    au < boost ; exists ; 2013 ; Journal of Pediatric Neurosciences Volume 8 ; 2013 ; 8 >
     au < expected ; exists ; 2014 ; Journal of Pediatric Neurosciences Volume 9 ; 2014 ; 9 >
 
   }
