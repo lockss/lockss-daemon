@@ -125,6 +125,15 @@
     <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsArticleIteratorFactory</string>
   </entry>
   <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysHtmlFilterFactory</string>
   </entry>
