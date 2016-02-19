@@ -29,6 +29,7 @@
     </map>
   </entry>
   <entry>
+    <!-- uses functors like url_host() -->
     <string>required_daemon_version</string>
     <string>1.68.0</string>
   </entry>
