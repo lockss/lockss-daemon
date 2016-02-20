@@ -43,7 +43,8 @@
     }
 
     {
-      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
+      #plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
+      plugin = needs.plugin
       implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[base_url] = http://ijs.microbiologyresearch.org/
       param[journal_id] = ijsem
@@ -121,7 +122,8 @@
     }
       
     {
-      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
+      #plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
+      plugin = needs.plugin
       implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[base_url] = http://ijs.microbiologyresearch.org/
       param[journal_id] = ijsem
@@ -200,7 +202,8 @@
 
     {
       
-      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
+      #plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
+      plugin = needs.plugin
       implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[base_url] = http://ijs.microbiologyresearch.org/
       param[journal_id] = ijsem
@@ -383,7 +386,8 @@
     }
       
     {
-      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
+      #plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
+      plugin = needs.plugin
       implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[base_url] = http://mic.microbiologyresearch.org/
       param[journal_id] = micro
@@ -644,7 +648,8 @@
     }
 
     {
-      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
+      #plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
+      plugin = needs.plugin
       implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[base_url] = http://jgv.microbiologyresearch.org/
       param[journal_id] = jgv
@@ -832,7 +837,8 @@
     }
     
     {
-      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
+      #plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
+      plugin = needs.plugin
       implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[base_url] = http://jmm.microbiologyresearch.org/
       param[journal_id] = jmm
@@ -915,7 +921,8 @@
 
     {
       rights = openaccess
-      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
+      #plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
+      plugin = needs.plugin
       implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[base_url] = http://jmmcr.microbiologyresearch.org/
       param[journal_id] = jmmcr
@@ -936,7 +943,8 @@
 
     {
       rights = openaccess
-      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
+      #plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
+      plugin = needs.plugin
       implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[base_url] = http://mgen.microbiologyresearch.org/
       param[journal_id] = mgen
@@ -989,7 +997,8 @@
     }
 
     {
-      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
+      #plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
+      plugin = needs.plugin
       implicit < status ; status2 ; year ; name ; param[volume_name] >
       param[base_url] = http://mic.microbiologyresearch.org/
       param[journal_id] = micro
