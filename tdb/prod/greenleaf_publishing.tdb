@@ -23,7 +23,8 @@
 
     au < released ; 2013 ; Building Sustainable Legacies: The New Frontier Of Societal Value Co-Creation Volume 2013 ; 2013 >
     au < released ; 2014 ; Building Sustainable Legacies: The New Frontier Of Societal Value Co-Creation Volume 2014 ; 2014 >
-    au < manifest ; 2015 ; Building Sustainable Legacies: The New Frontier Of Societal Value Co-Creation Volume 2015 ; 2015 >
+    au < testing ; 2015 ; Building Sustainable Legacies: The New Frontier Of Societal Value Co-Creation Volume 2015 ; 2015 >
+    au < expected ; 2016 ; Building Sustainable Legacies: The New Frontier Of Societal Value Co-Creation Volume 2016 ; 2016 >
 
   }
 
@@ -38,7 +39,8 @@
 
     au < released ; 2013 ; Business, Peace and Sustainable Development Volume 2013 ; 2013 >
     au < released ; 2014 ; Business, Peace and Sustainable Development Volume 2014 ; 2014 >
-    au < manifest ; 2015 ; Business, Peace and Sustainable Development Volume 2015 ; 2015 >
+    au < testing ; 2015 ; Business, Peace and Sustainable Development Volume 2015 ; 2015 >
+    au < expected ; 2016 ; Business, Peace and Sustainable Development Volume 2016 ; 2016 >
 
   }
 
@@ -84,7 +86,8 @@
     au < released ; 2012 ; Journal of Corporate Citizenship Volume 2012 ; 2012 >
     au < released ; 2013 ; Journal of Corporate Citizenship Volume 2013 ; 2013 >
     au < released ; 2014 ; Journal of Corporate Citizenship Volume 2014 ; 2014 >
-    au < manifest ; 2015 ; Journal of Corporate Citizenship Volume 2015 ; 2015 >
+    au < testing ; 2015 ; Journal of Corporate Citizenship Volume 2015 ; 2015 >
+    au < expected ; 2016 ; Journal of Corporate Citizenship Volume 2016 ; 2016 >
 
   }
 
@@ -98,7 +101,7 @@
     param[journal_issn] = 2053-2350 
 
     au < exists ; 2014 ; The Journal of Sustainable Mobility Volume 2014 ; 2014 >
-    au < expected ; 2015 ; The Journal of Sustainable Mobility Volume 2015 ; 2015 >
+    au < exists ; 2015 ; The Journal of Sustainable Mobility Volume 2015 ; 2015 >
 
   }
 
