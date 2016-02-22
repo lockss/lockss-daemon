@@ -31,8 +31,8 @@
     au < manifest ; exists ; 2011 ; Enterprise Development & Microfinance Volume 22 ; 22 >
     au < manifest ; exists ; 2012 ; Enterprise Development & Microfinance Volume 23 ; 23 >
     au < doNotProcess ; doNotProcess ; 2013 ; Enterprise Development & Microfinance Volume 24 ; 24 >
-    au < testing ; exists ; 2014 ; Enterprise Development & Microfinance Volume 25 ; 25 >
-    au < testing ; exists ; 2015 ; Enterprise Development & Microfinance Volume 26 ; 26 >
+    au < manifest ; exists ; 2014 ; Enterprise Development & Microfinance Volume 25 ; 25 >
+    au < ready ; exists ; 2015 ; Enterprise Development & Microfinance Volume 26 ; 26 >
     au < expected ; exists ; 2016 ; Enterprise Development & Microfinance Volume 27 ; 27 >
 
   }
@@ -49,7 +49,7 @@
     au < manifest ; exists ; 2011 ; Foodchain Volume 1 ; 1 >
     au < manifest ; exists ; 2012 ; Foodchain Volume 2 ; 2 >
     au < doNotProcess ; doNotProcess ; 2013 ; Foodchain Volume 3 ; 3 >
-    au < manifest ; exists ; 2014 ; Foodchain Volume 4 ; 4 >
+    au < testing ; exists ; 2014 ; Foodchain Volume 4 ; 4 >
     au < manifest ; exists ; 2015 ; Foodchain Volume 5 ; 5 >
     au < expected ; exists ; 2016 ; Foodchain Volume 6 ; 6 >
 
@@ -126,7 +126,7 @@
     au < manifest ; exists ; 2011 ; Waterlines Volume 30 ; 30 >
     au < manifest ; exists ; 2012 ; Waterlines Volume 31 ; 31 >
     au < doNotProcess ; doNotProcess ; 2013 ; Waterlines Volume 32 ; 32 >
-    au < manifest ; exists ; 2014 ; Waterlines Volume 33 ; 33 >
+    au < testing ; exists ; 2014 ; Waterlines Volume 33 ; 33 >
     au < manifest ; exists ; 2015 ; Waterlines Volume 34 ; 34 >
     au < manifest ; exists ; 2016 ; Waterlines Volume 35 ; 35 >
 
