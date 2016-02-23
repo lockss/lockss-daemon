@@ -20,10 +20,10 @@
         type = bookSeries
       >
 
-    au < ready ; exists ; 1987 ; 9780853230762 ;  ; 9780853230762 ; Pacatus (9780853230762) >
+    au < crawling ; exists ; 1987 ; 9780853230762 ;  ; 9780853230762 ; Pacatus (9780853230762) >
     au < finished ; crawling ; 1988 ; 9780853232261 ;  ; 9780853232261 ; Gregory of Tours: Glory of the Confessors (9780853232261) >
     au < ready ; exists ; 1988 ; 9780853232360 ;  ; 9780853232360 ; Gregory of Tours: Glory of the Martyrs (9780853232360) >
-    au < ready ; exists ; 1988 ; 9780853233275 ;  ; 9780853233275 ; Gregory of Tours: Life of the Fathers (9780853233275) >
+    au < crawling ; exists ; 1988 ; 9780853233275 ;  ; 9780853233275 ; Gregory of Tours: Life of the Fathers (9780853233275) >
     au < ready ; exists ; 1989 ; 9780853230960 ;  ; 9780853230960 ; Chronicon Paschale 284-628 (9780853230960) >
     au < ready ; exists ; 1989 ; 9780853233268 ;  ; 9780853233268 ; Iamblichus (9780853233268) >
     au < crawling ; exists ; 1989 ; 9780853233763 ;  ; 9780853233763 ; The Emperor Julian (9780853233763) >
@@ -32,10 +32,10 @@
     au < crawling ; exists ; 1992 ; 9780853231271 ;  ; 9780853231271 ; Victor of Vita (9780853231271) >
     au < crawling ; exists ; 1993 ; 9780853232087 ;  ; 9780853232087 ; Eutropius Breviarium (9780853232087) >
     au < crawling ; exists ; 1993 ; 9780853232384 ;  ; 9780853232384 ; The Seventh Century in the West Syrian Chronicles (9780853232384) >
-    au < ready ; exists ; 1994 ; 9780853232186 ;  ; 9780853232186 ; Aurelius Victor (9780853232186) >
+    au < crawling ; exists ; 1994 ; 9780853232186 ;  ; 9780853232186 ; Aurelius Victor (9780853232186) >
     au < crawling ; exists ; 1994 ; 9780853233787 ;  ; 9780853233787 ; Bede: On the Tabernacle (9780853233787) >
     au < crawling ; exists ; 1994 ; 9780853233688 ;  ; 9780853233688 ; Caesarius of Arles (9780853233688) >
-    au < ready ; exists ; 1995 ; 9780853230496 ;  ; 9780853230496 ; Bede: On the Temple (9780853230496) >
+    au < crawling ; exists ; 1995 ; 9780853230496 ;  ; 9780853230496 ; Bede: On the Temple (9780853230496) >
     au < crawling ; exists ; 1995 ; 9780853234791 ;  ; 9780853234791 ; The Lives of the Ninth-Century Popes (9780853234791) >
     au < crawling ; exists ; 1995 ; 9780853231790 ;  ; 9780853231790 ; Venantius Fortunatus (9780853231790) >
     au < ready ; exists ; 1996 ; 9780853239314 ;  ; 9780853239314 ; Donatist Martyr Stories (9780853239314) >
@@ -48,14 +48,14 @@
     au < crawling ; exists ; 1999 ; 9780853236931 ;  ; 9780853236931 ; Bede: The Reckoning of Time (9780853236931) >
     au < crawling ; exists ; 1999 ; 9780853235545 ;  ; 9780853235545 ; Conquerors and Chroniclers of Early Medieval Spain (9780853235545) >
     au < ready ; exists ; 1999 ; 9780853237037 ;  ; 9780853237037 ; Ruricius of Limoges and Friends (9780853237037) >
-    au < ready ; exists ; 1999 ; 9780853235644 ;  ; 9780853235644 ; The Armenian History Attributed to Sebeos (9780853235644) >
+    au < crawling ; exists ; 1999 ; 9780853235644 ;  ; 9780853235644 ; The Armenian History Attributed to Sebeos (9780853235644) >
     au < ready ; exists ; 2000 ; 9780853235958 ;  ; 9780853235958 ; Antioch as a Centre of Hellenic Culture, as Observed by Libanius (9780853235958) >
     au < crawling ; exists ; 2000 ; 9780853235859 ;  ; 9780853235859 ; Chronicle of Pseudo-Joshua the Stylite (9780853235859) >
     au < crawling ; exists ; 2000 ; 9780853236153 ;  ; 9780853236153 ; Neoplatonic Saints (9780853236153) >
-    au < ready ; exists ; 2000 ; 9780853236054 ;  ; 9780853236054 ; The Ecclesiastical History of Evagrius Scholasticus (9780853236054) >
+    au < crawling ; exists ; 2000 ; 9780853236054 ;  ; 9780853236054 ; The Ecclesiastical History of Evagrius Scholasticus (9780853236054) >
     au < ready ; exists ; 2001 ; 9780853231066 ;  ; 9780853231066 ; Politics, Philosophy and Empire in the Fourth Century (9780853231066) >
     au < crawling ; exists ; 2001 ; 9780853239178 ;  ; 9780853239178 ; The Christian's Guide to Greek Culture (9780853239178) >
-    au < ready ; exists ; 2002 ; 9780853235880 ;  ; 9780853235880 ; Avitus of Vienne (9780853235880) >
+    au < crawling ; exists ; 2002 ; 9780853235880 ;  ; 9780853235880 ; Avitus of Vienne (9780853235880) >
     au < crawling ; exists ; 2003 ; 9780853236481 ;  ; 9780853236481 ; Constantine and Christendom (9780853236481) >
     au < crawling ; exists ; 2004 ; 9780853239987 ;  ; 9780853239987 ; Cassiodorus: Institutions of Divine and Secular Learning (9780853239987) >
     au < crawling ; exists ; 2004 ; 9780853239888 ;  ; 9780853239888 ; Lactantius (9780853239888) >
@@ -66,7 +66,7 @@
     au < crawling ; exists ; 2006 ; 9780853239598 ;  ; 9780853239598 ; The Chronicle of Ireland (9780853239598) >
     au < finished ; crawling ; 2007 ; 9781846311543 ;  ; 9781846311543 ; The Lives of the Eighth-Century Popes AD 715-817 (9781846311543) >
     au < crawling ; exists ; 2008 ; 9781846310881 ;  ; 9781846310881 ; Bede: On Genesis (9781846310881) >
-    au < ready ; exists ; 2008 ; 9781846311321 ;  ; 9781846311321 ; Nemesius (9781846311321) >
+    au < crawling ; exists ; 2008 ; 9781846311321 ;  ; 9781846311321 ; Nemesius (9781846311321) >
     au < crawling ; exists ; 2008 ; 9781846311611 ;  ; 9781846311611 ; Sources for the Study of the School of Nisibis (9781846311611) >
     au < ready ; exists ; 2008 ; 9781846311598 ;  ; 9781846311598 ; The Formularies of Angers and Marculf (9781846311598) >
     au < crawling ; exists ; 2009 ; 9781846314766 ;  ; 9781846314766 ; Book of Pontiffs, The (9781846314766) >

@@ -80,7 +80,7 @@
      param[au_oai_set] = dez
      param[base_url] = http://dez.pensoft.net/
 
-     au < ready ; exists ; 2014 ; 2014 ; Deutsche Entomologische Zeitschrift Volume 61 ; 61 >
+     au < crawling ; exists ; 2014 ; 2014 ; Deutsche Entomologische Zeitschrift Volume 61 ; 61 >
 
    }
    
@@ -118,7 +118,7 @@
     au < manifest ; exists ; 2011 ; 2011 ; Journal of Hymenoptera Research Volumes 20-23 ; 20-23 >
     au < manifest ; exists ; 2012 ; 2012 ; Journal of Hymenoptera Research Volumes 24-29 ; 24-29 >
     au < manifest ; exists ; 2013 ; 2013 ; Journal of Hymenoptera Research Volumes 30-34 ; 30-34 >
-    au < ready ; exists ; 2014 ; 2014 ; Journal of Hymenoptera Research Volumes 35-40 ; 35-40 >
+    au < crawling ; exists ; 2014 ; 2014 ; Journal of Hymenoptera Research Volumes 35-40 ; 35-40 >
   
    }
   
@@ -188,7 +188,7 @@
     param[au_oai_set] = nl
     param[base_url] = http://nl.pensoft.net/
     
-    au < ready ; exists ; 2014 ; 2014 ; Nota Lepidopterologica Volumes 37 ; 37 >
+    au < crawling ; exists ; 2014 ; 2014 ; Nota Lepidopterologica Volumes 37 ; 37 >
     au < testing ; exists ; 2015 ; 2015 ; Nota Lepidopterologica Volumes 38 ; 38 >
    }
     
@@ -227,7 +227,7 @@
     
     au < manifest ; exists ; 2011 ; 2011 ; Subterranean Biology Volumes 8-9 ; 8-9 >
     au < manifest ; exists ; 2013 ; 2013 ; Subterranean Biology Volumes 10-11 ; 10-11 >
-    au < ready ; exists ; 2014 ; 2014 ; Subterranean Biology Volumes 12-13 ; 12-13 >
+    au < crawling ; exists ; 2014 ; 2014 ; Subterranean Biology Volumes 12-13 ; 12-13 >
 
   
    }
@@ -266,7 +266,7 @@
     param[au_oai_set] = zse
     param[base_url] = http://zse.pensoft.net/
 
-    au < ready ; exists ; 2014 ; 2014 ; Zoosystematics and Evolution Volumes 90 ; 90 >
+    au < crawling ; exists ; 2014 ; 2014 ; Zoosystematics and Evolution Volumes 90 ; 90 >
 
     }
 
