@@ -13,47 +13,93 @@
       issnl = 0031-9023
     >
 
+   {
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://ptjournal.apta.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 1980 ; Physical Therapy Volume 60 ; 60 >
-    au < manifest ; 1981 ; Physical Therapy Volume 61 ; 61 >
-    au < manifest ; 1982 ; Physical Therapy Volume 62 ; 62 >
-    au < manifest ; 1983 ; Physical Therapy Volume 63 ; 63 >
-    au < manifest ; 1984 ; Physical Therapy Volume 64 ; 64 >
-    au < manifest ; 1985 ; Physical Therapy Volume 65 ; 65 >
-    au < manifest ; 1986 ; Physical Therapy Volume 66 ; 66 >
-    au < manifest ; 1987 ; Physical Therapy Volume 67 ; 67 >
-    au < manifest ; 1988 ; Physical Therapy Volume 68 ; 68 >
-    au < manifest ; 1989 ; Physical Therapy Volume 69 ; 69 >
-    au < manifest ; 1990 ; Physical Therapy Volume 70 ; 70 >
-    au < manifest ; 1991 ; Physical Therapy Volume 71 ; 71 >
-    au < manifest ; 1992 ; Physical Therapy Volume 72 ; 72 >
-    au < manifest ; 1993 ; Physical Therapy Volume 73 ; 73 >
-    au < manifest ; 1994 ; Physical Therapy Volume 74 ; 74 >
-    au < manifest ; 1995 ; Physical Therapy Volume 75 ; 75 >
-    au < manifest ; 1996 ; Physical Therapy Volume 76 ; 76 >
-    au < manifest ; 1997 ; Physical Therapy Volume 77 ; 77 >
-    au < manifest ; 1998 ; Physical Therapy Volume 78 ; 78 >
-    au < manifest ; 1999 ; Physical Therapy Volume 79 ; 79 >
-    au < testing ; 2000 ; Physical Therapy Volume 80 ; 80 >
-    au < testing ; 2001 ; Physical Therapy Volume 81 ; 81 >
-    au < testing ; 2002 ; Physical Therapy Volume 82 ; 82 >
-    au < testing ; 2003 ; Physical Therapy Volume 83 ; 83 >
-    au < testing ; 2004 ; Physical Therapy Volume 84 ; 84 >
-    au < released ; 2005 ; Physical Therapy Volume 85 ; 85 >
-    au < released ; 2006 ; Physical Therapy Volume 86 ; 86 >
-    au < released ; 2007 ; Physical Therapy Volume 87 ; 87 >
-    au < released ; 2008 ; Physical Therapy Volume 88 ; 88 >
-    au < released ; 2009 ; Physical Therapy Volume 89 ; 89 >
-    au < released ; 2010 ; Physical Therapy Volume 90 ; 90 >
-    au < released ; 2011 ; Physical Therapy Volume 91 ; 91 >
-    au < released ; 2012 ; Physical Therapy Volume 92 ; 92 >
-    au < released ; 2013 ; Physical Therapy Volume 93 ; 93 >
-    au < released ; 2014 ; Physical Therapy Volume 94 ; 94 >
-    au < testing ; 2015 ; Physical Therapy Volume 95 ; 95 >
-    au < manifest ; 2016 ; Physical Therapy Volume 96 ; 96 >
+    au < doNotProcess ; 1980 ; Physical Therapy Volume 60 ; 60 >
+    au < doNotProcess ; 1981 ; Physical Therapy Volume 61 ; 61 >
+    au < doNotProcess ; 1982 ; Physical Therapy Volume 62 ; 62 >
+    au < doNotProcess ; 1983 ; Physical Therapy Volume 63 ; 63 >
+    au < doNotProcess ; 1984 ; Physical Therapy Volume 64 ; 64 >
+    au < doNotProcess ; 1985 ; Physical Therapy Volume 65 ; 65 >
+    au < doNotProcess ; 1986 ; Physical Therapy Volume 66 ; 66 >
+    au < doNotProcess ; 1987 ; Physical Therapy Volume 67 ; 67 >
+    au < doNotProcess ; 1988 ; Physical Therapy Volume 68 ; 68 >
+    au < doNotProcess ; 1989 ; Physical Therapy Volume 69 ; 69 >
+    au < doNotProcess ; 1990 ; Physical Therapy Volume 70 ; 70 >
+    au < doNotProcess ; 1991 ; Physical Therapy Volume 71 ; 71 >
+    au < doNotProcess ; 1992 ; Physical Therapy Volume 72 ; 72 >
+    au < doNotProcess ; 1993 ; Physical Therapy Volume 73 ; 73 >
+    au < doNotProcess ; 1994 ; Physical Therapy Volume 74 ; 74 >
+    au < doNotProcess ; 1995 ; Physical Therapy Volume 75 ; 75 >
+    au < doNotProcess ; 1996 ; Physical Therapy Volume 76 ; 76 >
+    au < doNotProcess ; 1997 ; Physical Therapy Volume 77 ; 77 >
+    au < doNotProcess ; 1998 ; Physical Therapy Volume 78 ; 78 >
+    au < doNotProcess ; 1999 ; Physical Therapy Volume 79 ; 79 >
+    au < doNotProcess ; 2000 ; Physical Therapy Volume 80 ; 80 >
+    au < doNotProcess ; 2001 ; Physical Therapy Volume 81 ; 81 >
+    au < doNotProcess ; 2002 ; Physical Therapy Volume 82 ; 82 >
+    au < doNotProcess ; 2003 ; Physical Therapy Volume 83 ; 83 >
+    au < doNotProcess ; 2004 ; Physical Therapy Volume 84 ; 84 >
+    au < down ; 2005 ; Physical Therapy Volume 85 ; 85 >
+    au < down ; 2006 ; Physical Therapy Volume 86 ; 86 >
+    au < down ; 2007 ; Physical Therapy Volume 87 ; 87 >
+    au < down ; 2008 ; Physical Therapy Volume 88 ; 88 >
+    au < down ; 2009 ; Physical Therapy Volume 89 ; 89 >
+    au < down ; 2010 ; Physical Therapy Volume 90 ; 90 >
+    au < down ; 2011 ; Physical Therapy Volume 91 ; 91 >
+    au < down ; 2012 ; Physical Therapy Volume 92 ; 92 >
+    au < down ; 2013 ; Physical Therapy Volume 93 ; 93 >
+    au < down ; 2014 ; Physical Therapy Volume 94 ; 94 >
+    au < doNotProcess ; 2015 ; Physical Therapy Volume 95 ; 95 >
+    au < doNotProcess ; 2016 ; Physical Therapy Volume 96 ; 96 >
+   }
+
+   {
+    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    param[base_url] = http://ptjournal.apta.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 1980 ; Physical Therapy Volume 60 ; 60 >
+    au < exists ; 1981 ; Physical Therapy Volume 61 ; 61 >
+    au < exists ; 1982 ; Physical Therapy Volume 62 ; 62 >
+    au < exists ; 1983 ; Physical Therapy Volume 63 ; 63 >
+    au < exists ; 1984 ; Physical Therapy Volume 64 ; 64 >
+    au < exists ; 1985 ; Physical Therapy Volume 65 ; 65 >
+    au < exists ; 1986 ; Physical Therapy Volume 66 ; 66 >
+    au < exists ; 1987 ; Physical Therapy Volume 67 ; 67 >
+    au < exists ; 1988 ; Physical Therapy Volume 68 ; 68 >
+    au < exists ; 1989 ; Physical Therapy Volume 69 ; 69 >
+    au < exists ; 1990 ; Physical Therapy Volume 70 ; 70 >
+    au < exists ; 1991 ; Physical Therapy Volume 71 ; 71 >
+    au < exists ; 1992 ; Physical Therapy Volume 72 ; 72 >
+    au < exists ; 1993 ; Physical Therapy Volume 73 ; 73 >
+    au < exists ; 1994 ; Physical Therapy Volume 74 ; 74 >
+    au < exists ; 1995 ; Physical Therapy Volume 75 ; 75 >
+    au < exists ; 1996 ; Physical Therapy Volume 76 ; 76 >
+    au < exists ; 1997 ; Physical Therapy Volume 77 ; 77 >
+    au < exists ; 1998 ; Physical Therapy Volume 78 ; 78 >
+    au < exists ; 1999 ; Physical Therapy Volume 79 ; 79 >
+    au < exists ; 2000 ; Physical Therapy Volume 80 ; 80 >
+    au < exists ; 2001 ; Physical Therapy Volume 81 ; 81 >
+    au < exists ; 2002 ; Physical Therapy Volume 82 ; 82 >
+    au < exists ; 2003 ; Physical Therapy Volume 83 ; 83 >
+    au < exists ; 2004 ; Physical Therapy Volume 84 ; 84 >
+    au < doNotProcess ; 2005 ; Physical Therapy Volume 85 ; 85 >
+    au < doNotProcess ; 2006 ; Physical Therapy Volume 86 ; 86 >
+    au < doNotProcess ; 2007 ; Physical Therapy Volume 87 ; 87 >
+    au < doNotProcess ; 2008 ; Physical Therapy Volume 88 ; 88 >
+    au < doNotProcess ; 2009 ; Physical Therapy Volume 89 ; 89 >
+    au < doNotProcess ; 2010 ; Physical Therapy Volume 90 ; 90 >
+    au < doNotProcess ; 2011 ; Physical Therapy Volume 91 ; 91 >
+    au < doNotProcess ; 2012 ; Physical Therapy Volume 92 ; 92 >
+    au < doNotProcess ; 2013 ; Physical Therapy Volume 93 ; 93 >
+    au < doNotProcess ; 2014 ; Physical Therapy Volume 94 ; 94 >
+    au < exists ; 2015 ; Physical Therapy Volume 95 ; 95 >
+    au < exists ; 2016 ; Physical Therapy Volume 96 ; 96 >
+   }
 
   }
 
