@@ -36,7 +36,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Australian Journal of French Studies Volume 50 ; 50 >
     au < crawling ; exists ; 2014 ; Australian Journal of French Studies Volume 51 ; 51 >
     au < crawling ; exists ; 2015 ; Australian Journal of French Studies Volume 52 ; 52 >
-    au < expected ; exists ; 2016 ; Australian Journal of French Studies Volume 53 ; 53 >
+    au < manifest ; exists ; 2016 ; Australian Journal of French Studies Volume 53 ; 53 >
 
   }
 
@@ -586,12 +586,12 @@
 
     param[journal_id] = quaker
 
-    au < exists ; exists ; 2010-2011 ; Quaker Studies Volume 15 ; 15 >
-    au < exists ; exists ; 2011-2012 ; Quaker Studies Volume 16 ; 16 >
-    au < exists ; exists ; 2012-2013 ; Quaker Studies Volume 17 ; 17 >
+    au < manifest ; exists ; 2010-2011 ; Quaker Studies Volume 15 ; 15 >
+    au < manifest ; exists ; 2011-2012 ; Quaker Studies Volume 16 ; 16 >
+    au < manifest ; exists ; 2012-2013 ; Quaker Studies Volume 17 ; 17 >
     au < manifest ; exists ; 2013-2014 ; Quaker Studies Volume 18 ; 18 >
-    au < exists ; exists ; 2014-2015 ; Quaker Studies Volume 19 ; 19 >
-    au < exists ; exists ; 2015-2016 ; Quaker Studies Volume 20 ; 20 >
+    au < manifest ; exists ; 2014-2015 ; Quaker Studies Volume 19 ; 19 >
+    au < manifest ; exists ; 2015-2016 ; Quaker Studies Volume 20 ; 20 >
 
   }
 
