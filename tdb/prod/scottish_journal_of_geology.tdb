@@ -19,7 +19,7 @@
     param[base_url] = http://sjg.lyellcollection.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 1965 ; Scottish Journal of Geology Volume 1 ; 1 >
+    au < testing ; 1965 ; Scottish Journal of Geology Volume 1 ; 1 >
     au < released ; 1966 ; Scottish Journal of Geology Volume 2 ; 2 >
     au < released ; 1967 ; Scottish Journal of Geology Volume 3 ; 3 >
     au < released ; 1968 ; Scottish Journal of Geology Volume 4 ; 4 >
@@ -70,6 +70,7 @@
     au < released ; 2013 ; Scottish Journal of Geology Volume 49 ; 49 >
     au < released ; 2014 ; Scottish Journal of Geology Volume 50 ; 50 >
     au < ready ; 2015 ; Scottish Journal of Geology Volume 51 ; 51 >
+    au < expected ; 2016 ; Scottish Journal of Geology Volume 52 ; 52 >
     
     }
     

@@ -57,7 +57,8 @@
     au < released ; 2012 ; Avian Biology Research Volume 5 ; 5 >
     au < released ; 2013 ; Avian Biology Research Volume 6 ; 6 >
     au < released ; 2014 ; Avian Biology Research Volume 7 ; 7 >
-    au < manifest ; 2015 ; Avian Biology Research Volume 8 ; 8 >
+    au < testing ; 2015 ; Avian Biology Research Volume 8 ; 8 >
+    au < expected ; 2016 ; Avian Biology Research Volume 9 ; 9 >
 
   }
 
@@ -71,27 +72,25 @@
 
     param[journal_id] = csb
     param[journal_issn] = 0954-2299
-    
-    comment[notReady] = 8/11/2015. V26. Cannot access permission page. 403 Forbidden http://www.ingentaconnect.com/content/0954-2299?format=lockss&volume=26
+    #move to Taylor and Francis
 
-    au < released ; 1998 ; Chemical Speciation & Bioavailability Volume 10 ; 10 >
-    au < released ; 1999 ; Chemical Speciation & Bioavailability Volume 11 ; 11 >
-    au < released ; 2000 ; Chemical Speciation & Bioavailability Volume 12 ; 12 >
-    au < released ; 2001 ; Chemical Speciation & Bioavailability Volume 13 ; 13 >
-    au < released ; 2002 ; Chemical Speciation & Bioavailability Volume 14 ; 14 >
-    au < released ; 2003 ; Chemical Speciation & Bioavailability Volume 15 ; 15 >
-    au < released ; 2004 ; Chemical Speciation & Bioavailability Volume 16 ; 16 >
-    au < released ; 2005 ; Chemical Speciation & Bioavailability Volume 17 ; 17 >
-    au < released ; 2006 ; Chemical Speciation & Bioavailability Volume 18 ; 18 >
-    au < released ; 2007 ; Chemical Speciation & Bioavailability Volume 19 ; 19 >
-    au < released ; 2008 ; Chemical Speciation & Bioavailability Volume 20 ; 20 >
-    au < released ; 2009 ; Chemical Speciation & Bioavailability Volume 21 ; 21 >
-    au < released ; 2010 ; Chemical Speciation & Bioavailability Volume 22 ; 22 >
-    au < released ; 2011 ; Chemical Speciation & Bioavailability Volume 23 ; 23 >
-    au < released ; 2012 ; Chemical Speciation & Bioavailability Volume 24 ; 24 >
-    au < released ; 2013 ; Chemical Speciation & Bioavailability Volume 25 ; 25 >
-    au < notReady ; 2014 ; Chemical Speciation & Bioavailability Volume 26 ; 26 >
-    au < expected ; 2015 ; Chemical Speciation & Bioavailability Volume 27 ; 27 >
+    au < down ; 1998 ; Chemical Speciation & Bioavailability Volume 10 ; 10 >
+    au < down ; 1999 ; Chemical Speciation & Bioavailability Volume 11 ; 11 >
+    au < down ; 2000 ; Chemical Speciation & Bioavailability Volume 12 ; 12 >
+    au < down ; 2001 ; Chemical Speciation & Bioavailability Volume 13 ; 13 >
+    au < down ; 2002 ; Chemical Speciation & Bioavailability Volume 14 ; 14 >
+    au < down ; 2003 ; Chemical Speciation & Bioavailability Volume 15 ; 15 >
+    au < down ; 2004 ; Chemical Speciation & Bioavailability Volume 16 ; 16 >
+    au < down ; 2005 ; Chemical Speciation & Bioavailability Volume 17 ; 17 >
+    au < down ; 2006 ; Chemical Speciation & Bioavailability Volume 18 ; 18 >
+    au < down ; 2007 ; Chemical Speciation & Bioavailability Volume 19 ; 19 >
+    au < down ; 2008 ; Chemical Speciation & Bioavailability Volume 20 ; 20 >
+    au < down ; 2009 ; Chemical Speciation & Bioavailability Volume 21 ; 21 >
+    au < down ; 2010 ; Chemical Speciation & Bioavailability Volume 22 ; 22 >
+    au < down ; 2011 ; Chemical Speciation & Bioavailability Volume 23 ; 23 >
+    au < down ; 2012 ; Chemical Speciation & Bioavailability Volume 24 ; 24 >
+    au < down ; 2013 ; Chemical Speciation & Bioavailability Volume 25 ; 25 >
+    au < doNotProcess ; 2014 ; Chemical Speciation & Bioavailability Volume 26 ; 26 >
 
   }
 
@@ -122,7 +121,8 @@
     au < released ; 2012 ; Journal of Chemical Research Volume 36 ; 36 >
     au < released ; 2013 ; Journal of Chemical Research Volume 37 ; 37 >
     au < released ; 2014 ; Journal of Chemical Research Volume 38 ; 38 >
-    au < manifest ; 2015 ; Journal of Chemical Research Volume 39 ; 39 >
+    au < testing ; 2015 ; Journal of Chemical Research Volume 39 ; 39 >
+    au < expected ; 2016 ; Journal of Chemical Research Volume 40 ; 40 >
 
   }
 
@@ -205,7 +205,8 @@
     au < released ; 2012 ; Progress in Reaction Kenetics & Mechanism Volume 37 ; 37 >
     au < released ; 2013 ; Progress in Reaction Kenetics & Mechanism Volume 38 ; 38 >
     au < released ; 2014 ; Progress in Reaction Kenetics & Mechanism Volume 39 ; 39 >
-    au < manifest ; 2015 ; Progress in Reaction Kenetics & Mechanism Volume 40 ; 40 >
+    au < testing ; 2015 ; Progress in Reaction Kenetics & Mechanism Volume 40 ; 40 >
+    au < expected ; 2016 ; Progress in Reaction Kenetics & Mechanism Volume 41 ; 41 >
 
   }
 
@@ -234,7 +235,8 @@
     au < released ; 2012 ; Science Progress Volume 95 ; 95 >
     au < released ; 2013 ; Science Progress Volume 96 ; 96 >
     au < released ; 2014 ; Science Progress Volume 97 ; 97 >
-    au < manifest ; 2015 ; Science Progress Volume 98 ; 98 >
+    au < testing ; 2015 ; Science Progress Volume 98 ; 98 >
+    au < expected ; 2016 ; Science Progress Volume 99 ; 99 >
 
   }
 
