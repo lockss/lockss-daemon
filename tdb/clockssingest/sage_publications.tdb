@@ -3676,11 +3676,11 @@
     plugin = org.lockss.plugin.autobiography.ClockssAutoBiographyPlugin
     param[base_url] = http://autobiography.stanford.clockss.org/
     param[journal_id] = aub
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
-    au < finished ; finished ; 2004 ; Auto/Biography Volume 12 ; 12 >
-    au < finished ; finished ; 2005 ; Auto/Biography Volume 13 ; 13 >
-    au < finished ; finished ; 2006-2007 ; Auto/Biography Volume 14 ; 14 >
+    au < finished ; finished ; 2004 ; Auto/Biography Volume 12 ; 12 ; >
+    au < finished ; finished ; 2005 ; Auto/Biography Volume 13 ; 13 ; >
+    au < finished ; finished ; 2006-2007 ; Auto/Biography Volume 14 ; 14 ; >
 
   }
 
@@ -3831,19 +3831,19 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://tbt.sagepub.com/
-        implicit < status ; status2 ; year ; name ; param[volume_name] >
+        implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
-        au < manifest ; exists ; 2006 ; The Bible Translator Volume 57 ; 57 >
-        au < manifest ; exists ; 2007 ; The Bible Translator Volume 58 ; 58 >
-        au < finished ; finished ; 2008 ; The Bible Translator Volume 59 ; 59 >
-        au < crawling ; exists ; 2009 ; The Bible Translator Volume 60 ; 60 >
-        au < crawling ; exists ; 2010 ; The Bible Translator Volume 61 ; 61 >
-        au < finished ; finished ; 2011 ; The Bible Translator Volume 62 ; 62 >
-        au < finished ; finished ; 2012 ; The Bible Translator Volume 63 ; 63 >
-        au < crawling ; exists ; 2013 ; The Bible Translator Volume 64 ; 64 >
-        au < finished ; finished ; 2014 ; The Bible Translator Volume 65 ; 65 >
-        au < crawling ; exists ; 2015 ; The Bible Translator Volume 66 ; 66 >
-        au < expected ; exists ; 2016 ; The Bible Translator Volume 67 ; 67 >
+        au < manifest ; exists ; 2006 ; The Bible Translator Volume 57 ; 57 ; >
+        au < manifest ; exists ; 2007 ; The Bible Translator Volume 58 ; 58 ; >
+        au < finished ; finished ; 2008 ; The Bible Translator Volume 59 ; 59 ; >
+        au < crawling ; exists ; 2009 ; The Bible Translator Volume 60 ; 60 ; >
+        au < crawling ; exists ; 2010 ; The Bible Translator Volume 61 ; 61 ; >
+        au < finished ; finished ; 2011 ; The Bible Translator Volume 62 ; 62 ; >
+        au < finished ; finished ; 2012 ; The Bible Translator Volume 63 ; 63 ; >
+        au < crawling ; exists ; 2013 ; The Bible Translator Volume 64 ; 64 ; >
+        au < finished ; finished ; 2014 ; The Bible Translator Volume 65 ; 65 ; >
+        au < crawling ; exists ; 2015 ; The Bible Translator Volume 66 ; 66 ; >
+        au < expected ; exists ; 2016 ; The Bible Translator Volume 67 ; 67 ; >
 
       }
 
@@ -9521,35 +9521,35 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://elr.sagepub.com/
-        implicit < status ; status2 ; year ; name ; param[volume_name] >
+        implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
-        au < manifest ; exists ; 1990 ; The Economic and Labour Relations Review Volume 1 ; 1 >
-        au < manifest ; exists ; 1991 ; The Economic and Labour Relations Review Volume 2 ; 2 >
-        au < manifest ; exists ; 1992 ; The Economic and Labour Relations Review Volume 3 ; 3 >
-        au < manifest ; exists ; 1993 ; The Economic and Labour Relations Review Volume 4 ; 4 >
-        au < manifest ; exists ; 1994 ; The Economic and Labour Relations Review Volume 5 ; 5 >
-        au < manifest ; exists ; 1995 ; The Economic and Labour Relations Review Volume 6 ; 6 >
-        au < manifest ; exists ; 1996 ; The Economic and Labour Relations Review Volume 7 ; 7 >
-        au < manifest ; exists ; 1997 ; The Economic and Labour Relations Review Volume 8 ; 8 >
-        au < manifest ; exists ; 1998 ; The Economic and Labour Relations Review Volume 9 ; 9 >
-        au < manifest ; exists ; 1999 ; The Economic and Labour Relations Review Volume 10 ; 10 >
-        au < manifest ; exists ; 2000 ; The Economic and Labour Relations Review Volume 11 ; 11 >
-        au < manifest ; exists ; 2001 ; The Economic and Labour Relations Review Volume 12 ; 12 >
-        au < manifest ; exists ; 2002 ; The Economic and Labour Relations Review Volume 13 ; 13 >
-        au < manifest ; exists ; 2003 ; The Economic and Labour Relations Review Volume 14 ; 14 >
-        au < manifest ; exists ; 2004 ; The Economic and Labour Relations Review Volume 15 ; 15 >
-        au < manifest ; exists ; 2005 ; The Economic and Labour Relations Review Volume 16 ; 16 >
-        au < manifest ; exists ; 2006 ; The Economic and Labour Relations Review Volume 17 ; 17 >
-        au < manifest ; exists ; 2007 ; The Economic and Labour Relations Review Volume 18 ; 18 >
-        au < finished ; finished ; 2008 ; The Economic and Labour Relations Review Volume 19 ; 19 >
-        au < finished ; finished ; 2009 ; The Economic and Labour Relations Review Volume 20 ; 20 >
-        au < finished ; finished ; 2010 ; The Economic and Labour Relations Review Volume 21 ; 21 >
-        au < finished ; finished ; 2011 ; The Economic and Labour Relations Review Volume 22 ; 22 >
-        au < finished ; finished ; 2012 ; The Economic and Labour Relations Review Volume 23 ; 23 >
-        au < finished ; finished ; 2013 ; The Economic and Labour Relations Review Volume 24 ; 24 >
-        au < finished ; crawling ; 2014 ; The Economic and Labour Relations Review Volume 25 ; 25 >
-        au < crawling ; exists ; 2015 ; The Economic and Labour Relations Review Volume 26 ; 26 >
-        au < expected ; exists ; 2016 ; The Economic and Labour Relations Review Volume 27 ; 27 >
+        au < manifest ; exists ; 1990 ; The Economic and Labour Relations Review Volume 1 ; 1 ; >
+        au < manifest ; exists ; 1991 ; The Economic and Labour Relations Review Volume 2 ; 2 ; >
+        au < manifest ; exists ; 1992 ; The Economic and Labour Relations Review Volume 3 ; 3 ; >
+        au < manifest ; exists ; 1993 ; The Economic and Labour Relations Review Volume 4 ; 4 ; >
+        au < manifest ; exists ; 1994 ; The Economic and Labour Relations Review Volume 5 ; 5 ; >
+        au < manifest ; exists ; 1995 ; The Economic and Labour Relations Review Volume 6 ; 6 ; >
+        au < manifest ; exists ; 1996 ; The Economic and Labour Relations Review Volume 7 ; 7 ; >
+        au < manifest ; exists ; 1997 ; The Economic and Labour Relations Review Volume 8 ; 8 ; >
+        au < manifest ; exists ; 1998 ; The Economic and Labour Relations Review Volume 9 ; 9 ; >
+        au < manifest ; exists ; 1999 ; The Economic and Labour Relations Review Volume 10 ; 10 ; >
+        au < manifest ; exists ; 2000 ; The Economic and Labour Relations Review Volume 11 ; 11 ; >
+        au < manifest ; exists ; 2001 ; The Economic and Labour Relations Review Volume 12 ; 12 ; >
+        au < manifest ; exists ; 2002 ; The Economic and Labour Relations Review Volume 13 ; 13 ; >
+        au < manifest ; exists ; 2003 ; The Economic and Labour Relations Review Volume 14 ; 14 ; >
+        au < manifest ; exists ; 2004 ; The Economic and Labour Relations Review Volume 15 ; 15 ; >
+        au < manifest ; exists ; 2005 ; The Economic and Labour Relations Review Volume 16 ; 16 ; >
+        au < manifest ; exists ; 2006 ; The Economic and Labour Relations Review Volume 17 ; 17 ; >
+        au < manifest ; exists ; 2007 ; The Economic and Labour Relations Review Volume 18 ; 18 ; >
+        au < finished ; finished ; 2008 ; The Economic and Labour Relations Review Volume 19 ; 19 ; >
+        au < finished ; finished ; 2009 ; The Economic and Labour Relations Review Volume 20 ; 20 ; >
+        au < finished ; finished ; 2010 ; The Economic and Labour Relations Review Volume 21 ; 21 ; >
+        au < finished ; finished ; 2011 ; The Economic and Labour Relations Review Volume 22 ; 22 ; >
+        au < finished ; finished ; 2012 ; The Economic and Labour Relations Review Volume 23 ; 23 ; >
+        au < finished ; finished ; 2013 ; The Economic and Labour Relations Review Volume 24 ; 24 ; >
+        au < finished ; crawling ; 2014 ; The Economic and Labour Relations Review Volume 25 ; 25 ; >
+        au < crawling ; exists ; 2015 ; The Economic and Labour Relations Review Volume 26 ; 26 ; >
+        au < expected ; exists ; 2016 ; The Economic and Labour Relations Review Volume 27 ; 27 ; >
 
       }
 
@@ -13424,12 +13424,12 @@
     comment[dcor] = This triggered title is being reingested, so there's no need for the PDF filter
     plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
     param[base_url] = http://graft.stanford.clockss.org/
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
     attr[au_feature_key] = pdf
 
-    au < down ; crawling ; 2001 ; Graft: Organ and Cell Transplantation Volume 4 ; 4 >
-    au < down ; crawling ; 2002 ; Graft: Organ and Cell Transplantation Volume 5 ; 5 >
-    au < down ; crawling ; 2003 ; Graft: Organ and Cell Transplantation Volume 6 ; 6 >
+    au < down ; crawling ; 2001 ; Graft: Organ and Cell Transplantation Volume 4 ; 4 ; >
+    au < down ; crawling ; 2002 ; Graft: Organ and Cell Transplantation Volume 5 ; 5 ; >
+    au < down ; crawling ; 2003 ; Graft: Organ and Cell Transplantation Volume 6 ; 6 ; >
 
   }
 
@@ -30127,57 +30127,57 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://mac.sagepub.com/
-        implicit < status ; status2 ; year ; name ; param[volume_name] >
+        implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
-        au < manifest ; exists ; 1968 ; Measurement and Control Volume 1 ; 1 >
-        au < manifest ; exists ; 1969 ; Measurement and Control Volume 2 ; 2 >
-        au < manifest ; exists ; 1970 ; Measurement and Control Volume 3 ; 3 >
-        au < manifest ; exists ; 1971 ; Measurement and Control Volume 4 ; 4 >
-        au < manifest ; exists ; 1972 ; Measurement and Control Volume 5 ; 5 >
-        au < doesNotExist ; doesNotExist ; 0 ; Measurement and Control Volume 6 ; 6 >
-        au < manifest ; exists ; 1974 ; Measurement and Control Volume 7 ; 7 >
-        au < manifest ; exists ; 1975 ; Measurement and Control Volume 8 ; 8 >
-        au < manifest ; exists ; 1976 ; Measurement and Control Volume 9 ; 9 >
-        au < manifest ; exists ; 1977 ; Measurement and Control Volume 10 ; 10 >
-        au < manifest ; exists ; 1978 ; Measurement and Control Volume 11 ; 11 >
-        au < manifest ; exists ; 1979 ; Measurement and Control Volume 12 ; 12 >
-        au < manifest ; exists ; 1980 ; Measurement and Control Volume 13 ; 13 >
-        au < manifest ; exists ; 1981 ; Measurement and Control Volume 14 ; 14 >
-        au < manifest ; exists ; 1982 ; Measurement and Control Volume 15 ; 15 >
-        au < manifest ; exists ; 1983 ; Measurement and Control Volume 16 ; 16 >
-        au < manifest ; exists ; 1984 ; Measurement and Control Volume 17 ; 17 >
-        au < manifest ; exists ; 1985 ; Measurement and Control Volume 18 ; 18 >
-        au < manifest ; exists ; 1986 ; Measurement and Control Volume 19 ; 19 >
-        au < manifest ; exists ; 1987 ; Measurement and Control Volume 20 ; 20 >
-        au < manifest ; exists ; 1988 ; Measurement and Control Volume 21 ; 21 >
-        au < manifest ; exists ; 1989 ; Measurement and Control Volume 22 ; 22 >
-        au < manifest ; exists ; 1990 ; Measurement and Control Volume 23 ; 23 >
-        au < doesNotExist ; doesNotExist ; 0 ; Measurement and Control Volume 24 ; 24 >
-        au < doesNotExist ; doesNotExist ; 0 ; Measurement and Control Volume 25 ; 25 >
-        au < manifest ; exists ; 1993 ; Measurement and Control Volume 26 ; 26 >
-        au < manifest ; exists ; 1994 ; Measurement and Control Volume 27 ; 27 >
-        au < manifest ; exists ; 1995 ; Measurement and Control Volume 28 ; 28 >
-        au < manifest ; exists ; 1996 ; Measurement and Control Volume 29 ; 29 >
-        au < manifest ; exists ; 1997 ; Measurement and Control Volume 30 ; 30 >
-        au < manifest ; exists ; 1998 ; Measurement and Control Volume 31 ; 31 >
-        au < manifest ; exists ; 1999 ; Measurement and Control Volume 32 ; 32 >
-        au < manifest ; exists ; 2000 ; Measurement and Control Volume 33 ; 33 >
-        au < manifest ; exists ; 2001 ; Measurement and Control Volume 34 ; 34 >
-        au < manifest ; exists ; 2002 ; Measurement and Control Volume 35 ; 35 >
-        au < manifest ; exists ; 2003 ; Measurement and Control Volume 36 ; 36 >
-        au < manifest ; exists ; 2004 ; Measurement and Control Volume 37 ; 37 >
-        au < manifest ; exists ; 2005 ; Measurement and Control Volume 38 ; 38 >
-        au < manifest ; exists ; 2006 ; Measurement and Control Volume 39 ; 39 >
-        au < manifest ; exists ; 2007 ; Measurement and Control Volume 40 ; 40 >
-        au < finished ; finished ; 2008 ; Measurement and Control Volume 41 ; 41 >
-        au < finished ; finished ; 2009 ; Measurement and Control Volume 42 ; 42 >
-        au < finished ; finished ; 2010 ; Measurement and Control Volume 43 ; 43 >
-        au < finished ; finished ; 2011 ; Measurement and Control Volume 44 ; 44 >
-        au < crawling ; exists ; 2012 ; Measurement and Control Volume 45 ; 45 >
-        au < finished ; finished ; 2013 ; Measurement and Control Volume 46 ; 46 >
-        au < finished ; finished ; 2014 ; Measurement and Control Volume 47 ; 47 >
-        au < crawling ; exists ; 2015 ; Measurement and Control Volume 48 ; 48 >
-        au < expected ; exists ; 2016 ; Measurement and Control Volume 49 ; 49 >
+        au < manifest ; exists ; 1968 ; Measurement and Control Volume 1 ; 1 ; >
+        au < manifest ; exists ; 1969 ; Measurement and Control Volume 2 ; 2 ; >
+        au < manifest ; exists ; 1970 ; Measurement and Control Volume 3 ; 3 ; >
+        au < manifest ; exists ; 1971 ; Measurement and Control Volume 4 ; 4 ; >
+        au < manifest ; exists ; 1972 ; Measurement and Control Volume 5 ; 5 ; >
+        au < doesNotExist ; doesNotExist ; 0 ; Measurement and Control Volume 6 ; 6 ; >
+        au < manifest ; exists ; 1974 ; Measurement and Control Volume 7 ; 7 ; >
+        au < manifest ; exists ; 1975 ; Measurement and Control Volume 8 ; 8 ; >
+        au < manifest ; exists ; 1976 ; Measurement and Control Volume 9 ; 9 ; >
+        au < manifest ; exists ; 1977 ; Measurement and Control Volume 10 ; 10 ; >
+        au < manifest ; exists ; 1978 ; Measurement and Control Volume 11 ; 11 ; >
+        au < manifest ; exists ; 1979 ; Measurement and Control Volume 12 ; 12 ; >
+        au < manifest ; exists ; 1980 ; Measurement and Control Volume 13 ; 13 ; >
+        au < manifest ; exists ; 1981 ; Measurement and Control Volume 14 ; 14 ; >
+        au < manifest ; exists ; 1982 ; Measurement and Control Volume 15 ; 15 ; >
+        au < manifest ; exists ; 1983 ; Measurement and Control Volume 16 ; 16 ; >
+        au < manifest ; exists ; 1984 ; Measurement and Control Volume 17 ; 17 ; >
+        au < manifest ; exists ; 1985 ; Measurement and Control Volume 18 ; 18 ; >
+        au < manifest ; exists ; 1986 ; Measurement and Control Volume 19 ; 19 ; >
+        au < manifest ; exists ; 1987 ; Measurement and Control Volume 20 ; 20 ; >
+        au < manifest ; exists ; 1988 ; Measurement and Control Volume 21 ; 21 ; >
+        au < manifest ; exists ; 1989 ; Measurement and Control Volume 22 ; 22 ; >
+        au < manifest ; exists ; 1990 ; Measurement and Control Volume 23 ; 23 ; >
+        au < doesNotExist ; doesNotExist ; 0 ; Measurement and Control Volume 24 ; 24 ; >
+        au < doesNotExist ; doesNotExist ; 0 ; Measurement and Control Volume 25 ; 25 ; >
+        au < manifest ; exists ; 1993 ; Measurement and Control Volume 26 ; 26 ; >
+        au < manifest ; exists ; 1994 ; Measurement and Control Volume 27 ; 27 ; >
+        au < manifest ; exists ; 1995 ; Measurement and Control Volume 28 ; 28 ; >
+        au < manifest ; exists ; 1996 ; Measurement and Control Volume 29 ; 29 ; >
+        au < manifest ; exists ; 1997 ; Measurement and Control Volume 30 ; 30 ; >
+        au < manifest ; exists ; 1998 ; Measurement and Control Volume 31 ; 31 ; >
+        au < manifest ; exists ; 1999 ; Measurement and Control Volume 32 ; 32 ; >
+        au < manifest ; exists ; 2000 ; Measurement and Control Volume 33 ; 33 ; >
+        au < manifest ; exists ; 2001 ; Measurement and Control Volume 34 ; 34 ; >
+        au < manifest ; exists ; 2002 ; Measurement and Control Volume 35 ; 35 ; >
+        au < manifest ; exists ; 2003 ; Measurement and Control Volume 36 ; 36 ; >
+        au < manifest ; exists ; 2004 ; Measurement and Control Volume 37 ; 37 ; >
+        au < manifest ; exists ; 2005 ; Measurement and Control Volume 38 ; 38 ; >
+        au < manifest ; exists ; 2006 ; Measurement and Control Volume 39 ; 39 ; >
+        au < manifest ; exists ; 2007 ; Measurement and Control Volume 40 ; 40 ; >
+        au < finished ; finished ; 2008 ; Measurement and Control Volume 41 ; 41 ; >
+        au < finished ; finished ; 2009 ; Measurement and Control Volume 42 ; 42 ; >
+        au < finished ; finished ; 2010 ; Measurement and Control Volume 43 ; 43 ; >
+        au < finished ; finished ; 2011 ; Measurement and Control Volume 44 ; 44 ; >
+        au < crawling ; exists ; 2012 ; Measurement and Control Volume 45 ; 45 ; >
+        au < finished ; finished ; 2013 ; Measurement and Control Volume 46 ; 46 ; >
+        au < finished ; finished ; 2014 ; Measurement and Control Volume 47 ; 47 ; >
+        au < crawling ; exists ; 2015 ; Measurement and Control Volume 48 ; 48 ; >
+        au < expected ; exists ; 2016 ; Measurement and Control Volume 49 ; 49 ; >
 
       }
 
@@ -36504,18 +36504,18 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://rme.sagepub.com/
-        implicit < status ; status2 ; year ; name ; param[volume_name] >
+        implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
-        au < manifest ; exists ; 2007 ; Recherche et Applications en Marketing (English Edition) Volume 22 ; 22 >
-        au < finished ; finished ; 2008 ; Recherche et Applications en Marketing (English Edition) Volume 23 ; 23 >
-        au < crawling ; exists ; 2009 ; Recherche et Applications en Marketing (English Edition) Volume 24 ; 24 >
-        au < finished ; finished ; 2010 ; Recherche et Applications en Marketing (English Edition) Volume 25 ; 25 >
-        au < crawling ; exists ; 2011 ; Recherche et Applications en Marketing (English Edition) Volume 26 ; 26 >
-        au < exists ; exists ; 2012 ; Recherche et Applications en Marketing (English Edition) Volume 27 ; 27 >
-        au < crawling ; exists ; 2013 ; Recherche et Applications en Marketing (English Edition) Volume 28 ; 28 >
-        au < finished ; finished ; 2014 ; Recherche et Applications en Marketing (English Edition) Volume 29 ; 29 >
-        au < crawling ; exists ; 2015 ; Recherche et Applications en Marketing (English Edition) Volume 30 ; 30 >
-        au < expected ; exists ; 2016 ; Recherche et Applications en Marketing (English Edition) Volume 31 ; 31 >
+        au < manifest ; exists ; 2007 ; Recherche et Applications en Marketing (English Edition) Volume 22 ; 22 ; >
+        au < finished ; finished ; 2008 ; Recherche et Applications en Marketing (English Edition) Volume 23 ; 23 ; >
+        au < crawling ; exists ; 2009 ; Recherche et Applications en Marketing (English Edition) Volume 24 ; 24 ; >
+        au < finished ; finished ; 2010 ; Recherche et Applications en Marketing (English Edition) Volume 25 ; 25 ; >
+        au < crawling ; exists ; 2011 ; Recherche et Applications en Marketing (English Edition) Volume 26 ; 26 ; >
+        au < exists ; exists ; 2012 ; Recherche et Applications en Marketing (English Edition) Volume 27 ; 27 ; >
+        au < crawling ; exists ; 2013 ; Recherche et Applications en Marketing (English Edition) Volume 28 ; 28 ; >
+        au < finished ; finished ; 2014 ; Recherche et Applications en Marketing (English Edition) Volume 29 ; 29 ; >
+        au < crawling ; exists ; 2015 ; Recherche et Applications en Marketing (English Edition) Volume 30 ; 30 ; >
+        au < expected ; exists ; 2016 ; Recherche et Applications en Marketing (English Edition) Volume 31 ; 31 ; >
 
       }
 
@@ -36533,18 +36533,18 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://ram.sagepub.com/
-        implicit < status ; status2 ; year ; name ; param[volume_name] >
+        implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
-        au < manifest ; exists ; 2007 ; Recherche et Applications en Marketing Volume 22 ; 22 >
-        au < finished ; finished ; 2008 ; Recherche et Applications en Marketing Volume 23 ; 23 >
-        au < crawling ; exists ; 2009 ; Recherche et Applications en Marketing Volume 24 ; 24 >
-        au < finished ; finished ; 2010 ; Recherche et Applications en Marketing Volume 25 ; 25 >
-        au < finished ; finished ; 2011 ; Recherche et Applications en Marketing Volume 26 ; 26 >
-        au < exists ; exists ; 2012 ; Recherche et Applications en Marketing Volume 27 ; 27 >
-        au < finished ; finished ; 2013 ; Recherche et Applications en Marketing Volume 28 ; 28 >
-        au < finished ; finished ; 2014 ; Recherche et Applications en Marketing Volume 29 ; 29 >
-        au < crawling ; exists ; 2015 ; Recherche et Applications en Marketing Volume 30 ; 30 >
-        au < manifest ; exists ; 2016 ; Recherche et Applications en Marketing Volume 31 ; 31 >
+        au < manifest ; exists ; 2007 ; Recherche et Applications en Marketing Volume 22 ; 22 ; >
+        au < finished ; finished ; 2008 ; Recherche et Applications en Marketing Volume 23 ; 23 ; >
+        au < crawling ; exists ; 2009 ; Recherche et Applications en Marketing Volume 24 ; 24 ; >
+        au < finished ; finished ; 2010 ; Recherche et Applications en Marketing Volume 25 ; 25 ; >
+        au < finished ; finished ; 2011 ; Recherche et Applications en Marketing Volume 26 ; 26 ; >
+        au < exists ; exists ; 2012 ; Recherche et Applications en Marketing Volume 27 ; 27 ; >
+        au < finished ; finished ; 2013 ; Recherche et Applications en Marketing Volume 28 ; 28 ; >
+        au < finished ; finished ; 2014 ; Recherche et Applications en Marketing Volume 29 ; 29 ; >
+        au < crawling ; exists ; 2015 ; Recherche et Applications en Marketing Volume 30 ; 30 ; >
+        au < manifest ; exists ; 2016 ; Recherche et Applications en Marketing Volume 31 ; 31 ; >
 
       }
 
@@ -45497,21 +45497,21 @@
 
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://cph.sagepub.com/
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
-    au < exists ; exists ; 2004 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 137 ; 137 >
-    au < exists ; exists ; 2005 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 138 ; 138 >
-    au < exists ; exists ; 2006 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 139 ; 139 >
-    au < exists ; exists ; 2007 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 140 ; 140 >
-    au < exists ; exists ; 2008 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 141 ; 141 >
-    au < exists ; exists ; 2009 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 142 ; 142 >
-    au < exists ; exists ; 2010 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 143 ; 143 >
-    au < exists ; exists ; 2011 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 144 ; 144 >
-    au < exists ; exists ; 2012 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 145 ; 145 >
-    au < finished ; finished ; 2013 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 146 ; 146 >
-    au < crawling ; exists ; 2014 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 147 ; 147 >
-    au < crawling ; exists ; 2015 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 148 ; 148 >
-    au < manifest ; exists ; 2016 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 149 ; 149 >
+    au < exists ; exists ; 2004 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 137 ; 137 ; >
+    au < exists ; exists ; 2005 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 138 ; 138 ; >
+    au < exists ; exists ; 2006 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 139 ; 139 ; >
+    au < exists ; exists ; 2007 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 140 ; 140 ; >
+    au < exists ; exists ; 2008 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 141 ; 141 ; >
+    au < exists ; exists ; 2009 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 142 ; 142 ; >
+    au < exists ; exists ; 2010 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 143 ; 143 ; >
+    au < exists ; exists ; 2011 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 144 ; 144 ; >
+    au < exists ; exists ; 2012 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 145 ; 145 ; >
+    au < finished ; finished ; 2013 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 146 ; 146 ; >
+    au < crawling ; exists ; 2014 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 147 ; 147 ; >
+    au < crawling ; exists ; 2015 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 148 ; 148 ; >
+    au < manifest ; exists ; 2016 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 149 ; 149 ; >
 
     }
 
@@ -46662,9 +46662,9 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://hpm.sagepub.com/
-      implicit < status ; status2 ; year ; isbn ; name ; param[volume_name] >
+      implicit < status ; status2 ; year ; isbn ; name ; param[volume_name] ; hidden[proxy] >
 
-      au < exists ; exists ; 2009 ; 0-443-04576-3 ; Handbook of Practice Management Volume 71 ; 71 >
+      au < exists ; exists ; 2009 ; 0-443-04576-3 ; Handbook of Practice Management Volume 71 ; 71 ; >
 
     }
 
