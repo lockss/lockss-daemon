@@ -46,6 +46,12 @@
     <string>"American Physiological Society Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
+    <string>au_start_url</string>
+    <list>
+      <string>"%slockss-manifest/vol_%s_manifest.html", base_url, volume_name</string>
+    </list>
+  </entry>
+  <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.highwire.aps.APSHtmlCrawlFilterFactory</string>
   </entry>
