@@ -6,7 +6,8 @@ use LWP::UserAgent;
 use HTTP::Request;
 use HTTP::Cookies;
 use HTML::Entities;
-use encoding 'utf8';
+use utf8;
+#use encoding 'utf8';
 use Encode qw(decode encode);
 
 my $lockss_tag  = "LOCKSS system has permission to collect, preserve, and serve this Archival Unit";
@@ -663,6 +664,7 @@ while (my $line = <>) {
            ($plugin eq "ClockssNRCResearchPressBooksPlugin") || 
            ($plugin eq "ClockssSEGBooksPlugin") || 
            ($plugin eq "ClockssSiamBooksPlugin") || 
+           ($plugin eq "ClockssPracticalActionBooksPlugin") || 
            ($plugin eq "ClockssWageningenBooksPlugin")) {
       $url = sprintf("%sclockss/eisbn/%s", 
       $param{base_url}, $param{book_eisbn});
@@ -1472,7 +1474,32 @@ while (my $line = <>) {
       $result = "--REQ_FAIL--"
     }
     sleep(4);
-                
+    
+  } elsif (($plugin eq "MedknowPlugin") || ($plugin eq "ClockssMedknowPlugin")) {
+    $url = sprintf("%sbackissues.asp",
+      $param{base_url});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      #showBackIssue.asp?issn=0022-3859;year=2016;volume=62
+      if (defined($man_contents) && ($man_contents =~ m/showBackIssue.asp?issn=$param{journal_issn};year=$param{year};volume=$param{volume_name}/)) {
+        if ($man_contents =~ m/<title>(.*)<\/title>/si) {
+          $vol_title = $1;
+          $vol_title =~ s/\s*\n\s*/ /g;
+          $vol_title =~ s/: Table of content/Volume $param{volume_name}/;
+          $vol_title =~ s/\s+/ /g;         
+        } 
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);
+                          
 #  } elsif ($plugin eq "EmeraldPlugin") {
 #    $url = sprintf("%scrawlers/lockss.htm?issn=%s&volume=%s", 
 #      $param{base_url}, $param{journal_issn}, $param{volume_name});
