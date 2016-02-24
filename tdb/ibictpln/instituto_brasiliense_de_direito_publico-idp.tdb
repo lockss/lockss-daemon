@@ -31,7 +31,7 @@
       au < notReady ; 2012 ; 10 ; Caderno Virtual Volume 10 ; 2012 ; crawl error on abstract >
       au < notReady ; 2013 ; 11 ; Caderno Virtual Volume 11 ; 2013 ; crawl error on abstract >
       au < released ; 2014 ; 12 ; Caderno Virtual Volume 12 ; 2014 ; >
-      au < manifest ; 2015 ; 13 ; Caderno Virtual Volume 13 ; 2015 ; >
+      au < testing ; 2015 ; 13 ; Caderno Virtual Volume 13 ; 2015 ; >
       au < expected ; 2016 ; 14 ; Caderno Virtual Volume 14 ; 2016 ; >
 
   }
@@ -59,7 +59,7 @@
       au < notReady ; 2012 ; 2012 ; Direito Público Volume 2012 ; 2012 ; no http on www.iob.com.br >
       au < notReady ; 2013 ; 2013 ; Direito Público Volume 2013 ; 2013 ; no http on www.iob.com.br >
       au < notReady ; 2014 ; 2014 ; Direito Público Volume 2014 ; 2014 ; recursive URLs >
-      au < manifest ; 2015 ; 2015 ; Direito Público Volume 2015 ; 2015 ; recursive URLs >
+      au < testing ; 2015 ; 2015 ; Direito Público Volume 2015 ; 2015 ; recursive URLs >
 
   }
 

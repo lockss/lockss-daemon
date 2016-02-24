@@ -17,15 +17,14 @@
       comment[publisher] = Fundação Educacional de Ituverava
       param[base_url] = http://www.nucleus.feituverava.com.br/
       param[journal_id] = animalium
-      comment[notReady] = Fetch error. Login to read?
 
       au < notReady ; 2009 ; 1 ; Revista Nucleus Animalium Volume 2009 ; 2009 ; articles need login >
       au < notReady ; 2010 ; 2 ; Revista Nucleus Animalium Volume 2010 ; 2010 ; articles need login >
       au < notReady ; 2011 ; 3 ; Revista Nucleus Animalium Volume 2011 ; 2011 ; articles need login >
       au < notReady ; 2012 ; 4 ; Revista Nucleus Animalium Volume 2012 ; 2012 ; articles need login >
       au < notReady ; 2013 ; 5 ; Revista Nucleus Animalium Volume 2013 ; 2013 ; articles need login >
-      au < notReady ; 2014 ; 6 ; Revista Nucleus Animalium Volume 2014 ; 2014 ; redirect >
-      au < testing ; 2015 ; 7 ; Revista Nucleus Animalium Volume 2015 ; 2015 ; >
+      au < notReady ; 2014 ; 6 ; Revista Nucleus Animalium Volume 2014 ; 2014 ; articles need login >
+      au < notReady ; 2015 ; 7 ; Revista Nucleus Animalium Volume 2015 ; 2015 ; articles need login >
       au < expected ; 2016 ; 8 ; Revista Nucleus Animalium Volume 2016 ; 2016 ; >
 
   }
@@ -54,7 +53,7 @@
       au < notReady ; 2012 ; 9 ; Revista Nucleus Volume 2012 ; 2012 ; articles need login >
       au < notReady ; 2013 ; 10 ; Revista Nucleus Volume 2013 ; 2013 ; articles need login >
       au < released ; 2014 ; 11 ; Revista Nucleus Volume 2014 ; 2014 ; >
-      au < testing ; 2015 ; 12 ; Revista Nucleus Volume 2015 ; 2015 ; >
+      au < ready ; 2015 ; 12 ; Revista Nucleus Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 13 ; Revista Nucleus Volume 2016 ; 2016 ; >
 
   }
