@@ -204,6 +204,8 @@ public final class PluginWellformednessTests extends LockssTestCase {
     AuUtil.isRepairFromPublisherWhenTooClose(au, true);
     AuUtil.isRepairFromPublisherWhenTooClose(au, false);
     AuUtil.minReplicasForNoQuorumPeerRepair(au, 2);
+    
+    au.getUrlConsumerFactory();
   }
 
   public static class PluginFailedToLoadException extends Exception {
