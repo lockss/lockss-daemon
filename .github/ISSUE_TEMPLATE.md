@@ -1,7 +1,10 @@
-
-Describe the issue here.
+## Describe the issue here.
 
 ### Expected behavior 
 ### Actual behavior.
 ### Steps to reproduce the problem.
-### Specifications like the version of the project, operating system, or hardware.
+### Specifications:
+1. Version of the daemon
+2. Hash of branch (if applicable)
+3. Operating system
+4. Hardware
