@@ -8,7 +8,7 @@
 
     plugin = needs.plugin
     param[base_url] = http://msp.org/
-    implicit < status ; status2 ; isbn ; eisbn ; year ; volume ; name ; param[isbn] >
+    implicit < status ; status2 ; isbn ; eisbn ; year ; volume ; name ; param[isbn] ; hidden[proxy] >
     
   {
   

@@ -15,7 +15,7 @@
     >
 
     plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
-    implicit < status ; status2 ; year ; name ; volume ; param[year] >
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
 
     {
 
@@ -24,10 +24,10 @@
       param[base_url] = http://africaninvertebrates.org/ojs/
       param[journal_id] = AI
  
-      au < crawling ; exists ; 2012 ; African Invertebrates Volume 2012 ; 2012 ; 2012 >
-      au < crawling ; exists ; 2013 ; African Invertebrates Volume 2013 ; 2013 ; 2013 >
-      au < finished ; finished ; 2014 ; African Invertebrates Volume 2014 ; 2014 ; 2014 >
-      au < crawling ; exists ; 2015 ; African Invertebrates Volume 2015 ; 2015 ; 2015 >
+      au < crawling ; exists ; 2012 ; African Invertebrates Volume 2012 ; 2012 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; African Invertebrates Volume 2013 ; 2013 ; 2013 ; >
+      au < finished ; finished ; 2014 ; African Invertebrates Volume 2014 ; 2014 ; 2014 ; >
+      au < crawling ; exists ; 2015 ; African Invertebrates Volume 2015 ; 2015 ; 2015 ; >
 
     }
     

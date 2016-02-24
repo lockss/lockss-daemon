@@ -9,7 +9,7 @@
   {
     plugin = org.lockss.plugin.pub2web.asm.ClockssASMscienceJournalsPlugin
     param[base_url] = http://www.asmscience.org/
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
     comment[platform] = Pub2Web
   
     {
@@ -20,12 +20,12 @@
       
       param[journal_id] = ecosalplus
       
-      au < finished ; finished ; 2004-2005 ; EcoSal Plus Volume 1 ; 1 >
-      au < finished ; finished ; 2006-2007 ; EcoSal Plus Volume 2 ; 2 >
-      au < finished ; finished ; 2008-2009 ; EcoSal Plus Volume 3 ; 3 >
-      au < finished ; finished ; 2010-2011 ; EcoSal Plus Volume 4 ; 4 >
-      au < finished ; finished ; 2012-2013 ; EcoSal Plus Volume 5 ; 5 >
-      au < crawling ; exists ; 2014-2015 ; EcoSal Plus Volume 6 ; 6 >
+      au < finished ; finished ; 2004-2005 ; EcoSal Plus Volume 1 ; 1 ; >
+      au < finished ; finished ; 2006-2007 ; EcoSal Plus Volume 2 ; 2 ; >
+      au < finished ; finished ; 2008-2009 ; EcoSal Plus Volume 3 ; 3 ; >
+      au < finished ; finished ; 2010-2011 ; EcoSal Plus Volume 4 ; 4 ; >
+      au < finished ; finished ; 2012-2013 ; EcoSal Plus Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2014-2015 ; EcoSal Plus Volume 6 ; 6 ; >
 
     }
   
@@ -37,9 +37,9 @@
       
       param[journal_id] = microbiolspec
       
-      au < finished ; finished ; 2013 ; Microbiology Spectrum 2013 ; 1 >
-      au < finished ; finished ; 2014 ; Microbiology Spectrum 2014 ; 2 >
-      au < crawling ; exists ; 2015 ; Microbiology Spectrum 2015 ; 3 >
+      au < finished ; finished ; 2013 ; Microbiology Spectrum 2013 ; 1 ; >
+      au < finished ; finished ; 2014 ; Microbiology Spectrum 2014 ; 2 ; >
+      au < crawling ; exists ; 2015 ; Microbiology Spectrum 2015 ; 3 ; >
 
     }
 

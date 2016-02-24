@@ -9,7 +9,7 @@
     plugin = needs.plugin
     comment[0] = Needs updated e-book list with fulltext e-books only.
     param[base_url] = http://centrofilosofia.org/
-    implicit < status ; status2 ; param[isbn] ; name >
+    implicit < status ; status2 ; param[isbn] ; name ; hidden[proxy] >
     
   {
   
@@ -18,60 +18,60 @@
       type = bookSeries
     >  
 
-    au < exists ; exists ; 978-972-8531-92-8 ; O intervalo de contigência. Hans Blumenberg e outros modernos >
-    au < exists ; exists ; 978-989-8553-05-8 ; As artes do não poder. Cartas de Vieira: Um paradigma de retórica epistolar do barroco >
-    au < exists ; exists ; 978-989-8533-02-7 ; A geometria do tempo em Hannah Arendt >
-    au < exists ; exists ; 978-989-8553-08-9 ; O feio para além do belo >
-    au < exists ; exists ; 978-972-8531-77-5 ; Razão e liberdade vol. I e II: Homenagem a Manuel José do Carmo Ferreira >
-    au < exists ; exists ; 978-972-8531-84-3 ; Jus sive potentia: Direito natural e individuação em Spinoza >
-    au < exists ; exists ; 978-972-8531-68-3 ; A crise das ciências europeias e a fenomenologia transcendental >
-    au < exists ; exists ; 978-972-8531-61-4 ; Investigações lógicas II Vol. Parte II: Investigações para a fenomenologia e a teoria do conhecimento >
-    au < exists ; exists ; 978-972-8531-41-9 ; Europa crise e renovação. A crise da humanidade europeia e a filosofia >
-    au < exists ; exists ; 978-972-8531-60-7 ; Investigações lógicas: Prolegómenos à lógica pura. >
-    au < exists ; exists ; 978-972-8531-59-1 ; Investigações lógicas. II Volume. Parte I: Investigações para a fenomenologia e a teoria do conhecimento >
-    au < exists ; exists ; 978-972-8531-95-9 ; Spinoza. Ser e agir >
-    au < exists ; exists ; 978-972-8531-96-6 ; Filosofia da paisagem. Uma antologia >
-    au < exists ; exists ; 978-972-8531-91-1 ; As cavernas da modernidade. Acerca de Hans Blumenberg >
-    au < exists ; exists ; 978-972-8531-89-8 ; Que é o homem? Was ist der mensch? >
-    au < exists ; exists ; 978-972-8531-99-7 ; Varia Antiqua. Estudos de filosofia antiga >
-    au < exists ; exists ; 978-989-8553-00-3 ; A religião e o sentido da vida. Paradigmas culturais >
-    au < exists ; exists ; 978-989-8553-01-0 ; A revolução kantiana e o idealismo alemão: La revolución kantiana y el idealismo alemán >
-    au < exists ; exists ; 978-972-8531-90-4 ; Figuras da racionalidade. Neokantismo e fenomenologia >
-    au < exists ; exists ; 978-972-8531-98-0 ; Heidegger pensador da terra >
-    au < exists ; exists ; 978-972-8531-93-5 ; De outro modo que ser ou para lá da essência >
-    au < exists ; exists ; 978-972-8531-71-3 ; A crise >
-    au < exists ; exists ; 978-972-8531-42-7 ; A felicidade na fenomenologia da vida >
-    au < exists ; exists ; 978-972-8531-39-3 ; A felicidade na ética de kant >
-    au < exists ; exists ; 978-972-8531-65-2 ; A morte e a origem >
-    au < exists ; exists ; 978-972-8531-36-2 ; Acordar para a lógica matemática >
-    au < exists ; exists ; 978-972-8531-74-4 ; AMente e consciência. Ensaios de filosofia da mente e fenomenologia >
-    au < exists ; exists ; 978-972-8531-56-0 ; Hannah Arendt. Luz e sombra >
-    au < exists ; exists ; 978-972-8531-62-1 ; Arte, metafísica e mitologia. Colóquio Luso-Alemão de Filosofia >
-    au < exists ; exists ; 978-972-8531-44-3 ; Direct Reference, cognitive significance and fregean sense >
-    au < exists ; exists ; 978-972-851-63-8 ; Do ponto de vista do universo: Um estudo sobre a racionalidade da ética consequencialista >
-    au < exists ; exists ; 978-972-8531-52-2 ; Filosofia kantiana do direito e da política >
-    au < exists ; exists ; 978-972-8531-64-5 ; Formas de arte: Prática crítica de Berlioz, kierkegaard, Liszt e Schumann >
-    au < exists ; exists ; 978-972-8531-38-6 ; Humano e inumano >
-    au < exists ; exists ; 978-972-8531-461 ; Kant. Posteridade e actualidade >
-    au < exists ; exists ; 978-972-8531-49-2 ; Kant e o conceito de filosofia >
-    au < exists ; exists ; 978-972-8531-53-9 ; Kant em Portugal: 1974-2004 >
-    au < exists ; exists ; 978-972-8531-78-2 ; Longos dias têm cem anos. Vieira da Silva: um olhar contemporâneo >
-    au < exists ; exists ; 978-972-8531-43-5 ; Lévinas entre nós >
-    au < exists ; exists ; 978-972-8531-37-0 ; O envolvimento do infinito no finito >
-    au < exists ; exists ; 978-972-8531-48-5 ; O outro Kant >
-    au < exists ; exists ; 978-972-8531-67-6 ; O poder pelo poder. Ficção e ordem no combate de Carl Schmit em torno do poder >
-    au < exists ; exists ; 978-972-8531-55-3 ; O Édipo iberista. Teoria assimptótica do iberismo filosófico. Um paradigma da especificidade filosófica da Península Ibérica >
-    au < exists ; exists ; 978-972-8531-45-4 ; Ordem e ser: Ontologia da relação em Santo Agostinho >
-    au < exists ; exists ; 978-972-8531-51-5 ; Pensar a sensiblidade >
-    au < exists ; exists ; 978-972-8531-54-6 ; Repertório da bibliografia filosófica portuguesa (1988-2005) >
-    au < exists ; exists ; 978-972-8531-50-8 ; Schiller, cidadão do mundo >
-    au < exists ; exists ; 978-972-8531-22-2 ; Sínteses activas >
-    au < exists ; exists ; 978-972-8531-66-9 ; Um pensar para o outro. Estudos sobre Emmanuel Lévinas >
-    au < exists ; exists ; 978-989-8553-06-5 ; Kierkegaard in Lisbon: Contemporary readings of repetition, fear and trembling, philosophical fragments and the 1843 and 1844 upbuilding discourses >
-    au < exists ; exists ; 978-989-8553-10-2 ; Ética >
-    au < exists ; exists ; 978-989-8553-03-4 ; Ser, devir e perecer >
-    au < exists ; exists ; 978-989-8553-07-2 ; Sentido, interpretação e verdade >
-    au < exists ; exists ; 978-989-8553-09-6 ; Natureza criadora >
+    au < exists ; exists ; 978-972-8531-92-8 ; O intervalo de contigência. Hans Blumenberg e outros modernos ; >
+    au < exists ; exists ; 978-989-8553-05-8 ; As artes do não poder. Cartas de Vieira: Um paradigma de retórica epistolar do barroco ; >
+    au < exists ; exists ; 978-989-8533-02-7 ; A geometria do tempo em Hannah Arendt ; >
+    au < exists ; exists ; 978-989-8553-08-9 ; O feio para além do belo ; >
+    au < exists ; exists ; 978-972-8531-77-5 ; Razão e liberdade vol. I e II: Homenagem a Manuel José do Carmo Ferreira ; >
+    au < exists ; exists ; 978-972-8531-84-3 ; Jus sive potentia: Direito natural e individuação em Spinoza ; >
+    au < exists ; exists ; 978-972-8531-68-3 ; A crise das ciências europeias e a fenomenologia transcendental ; >
+    au < exists ; exists ; 978-972-8531-61-4 ; Investigações lógicas II Vol. Parte II: Investigações para a fenomenologia e a teoria do conhecimento ; >
+    au < exists ; exists ; 978-972-8531-41-9 ; Europa crise e renovação. A crise da humanidade europeia e a filosofia ; >
+    au < exists ; exists ; 978-972-8531-60-7 ; Investigações lógicas: Prolegómenos à lógica pura. ; >
+    au < exists ; exists ; 978-972-8531-59-1 ; Investigações lógicas. II Volume. Parte I: Investigações para a fenomenologia e a teoria do conhecimento ; >
+    au < exists ; exists ; 978-972-8531-95-9 ; Spinoza. Ser e agir ; >
+    au < exists ; exists ; 978-972-8531-96-6 ; Filosofia da paisagem. Uma antologia ; >
+    au < exists ; exists ; 978-972-8531-91-1 ; As cavernas da modernidade. Acerca de Hans Blumenberg ; >
+    au < exists ; exists ; 978-972-8531-89-8 ; Que é o homem? Was ist der mensch? ; >
+    au < exists ; exists ; 978-972-8531-99-7 ; Varia Antiqua. Estudos de filosofia antiga ; >
+    au < exists ; exists ; 978-989-8553-00-3 ; A religião e o sentido da vida. Paradigmas culturais ; >
+    au < exists ; exists ; 978-989-8553-01-0 ; A revolução kantiana e o idealismo alemão: La revolución kantiana y el idealismo alemán ; >
+    au < exists ; exists ; 978-972-8531-90-4 ; Figuras da racionalidade. Neokantismo e fenomenologia ; >
+    au < exists ; exists ; 978-972-8531-98-0 ; Heidegger pensador da terra ; >
+    au < exists ; exists ; 978-972-8531-93-5 ; De outro modo que ser ou para lá da essência ; >
+    au < exists ; exists ; 978-972-8531-71-3 ; A crise ; >
+    au < exists ; exists ; 978-972-8531-42-7 ; A felicidade na fenomenologia da vida ; >
+    au < exists ; exists ; 978-972-8531-39-3 ; A felicidade na ética de kant ; >
+    au < exists ; exists ; 978-972-8531-65-2 ; A morte e a origem ; >
+    au < exists ; exists ; 978-972-8531-36-2 ; Acordar para a lógica matemática ; >
+    au < exists ; exists ; 978-972-8531-74-4 ; AMente e consciência. Ensaios de filosofia da mente e fenomenologia ; >
+    au < exists ; exists ; 978-972-8531-56-0 ; Hannah Arendt. Luz e sombra ; >
+    au < exists ; exists ; 978-972-8531-62-1 ; Arte, metafísica e mitologia. Colóquio Luso-Alemão de Filosofia ; >
+    au < exists ; exists ; 978-972-8531-44-3 ; Direct Reference, cognitive significance and fregean sense ; >
+    au < exists ; exists ; 978-972-851-63-8 ; Do ponto de vista do universo: Um estudo sobre a racionalidade da ética consequencialista ; >
+    au < exists ; exists ; 978-972-8531-52-2 ; Filosofia kantiana do direito e da política ; >
+    au < exists ; exists ; 978-972-8531-64-5 ; Formas de arte: Prática crítica de Berlioz, kierkegaard, Liszt e Schumann ; >
+    au < exists ; exists ; 978-972-8531-38-6 ; Humano e inumano ; >
+    au < exists ; exists ; 978-972-8531-461 ; Kant. Posteridade e actualidade ; >
+    au < exists ; exists ; 978-972-8531-49-2 ; Kant e o conceito de filosofia ; >
+    au < exists ; exists ; 978-972-8531-53-9 ; Kant em Portugal: 1974-2004 ; >
+    au < exists ; exists ; 978-972-8531-78-2 ; Longos dias têm cem anos. Vieira da Silva: um olhar contemporâneo ; >
+    au < exists ; exists ; 978-972-8531-43-5 ; Lévinas entre nós ; >
+    au < exists ; exists ; 978-972-8531-37-0 ; O envolvimento do infinito no finito ; >
+    au < exists ; exists ; 978-972-8531-48-5 ; O outro Kant ; >
+    au < exists ; exists ; 978-972-8531-67-6 ; O poder pelo poder. Ficção e ordem no combate de Carl Schmit em torno do poder ; >
+    au < exists ; exists ; 978-972-8531-55-3 ; O Édipo iberista. Teoria assimptótica do iberismo filosófico. Um paradigma da especificidade filosófica da Península Ibérica ; >
+    au < exists ; exists ; 978-972-8531-45-4 ; Ordem e ser: Ontologia da relação em Santo Agostinho ; >
+    au < exists ; exists ; 978-972-8531-51-5 ; Pensar a sensiblidade ; >
+    au < exists ; exists ; 978-972-8531-54-6 ; Repertório da bibliografia filosófica portuguesa (1988-2005) ; >
+    au < exists ; exists ; 978-972-8531-50-8 ; Schiller, cidadão do mundo ; >
+    au < exists ; exists ; 978-972-8531-22-2 ; Sínteses activas ; >
+    au < exists ; exists ; 978-972-8531-66-9 ; Um pensar para o outro. Estudos sobre Emmanuel Lévinas ; >
+    au < exists ; exists ; 978-989-8553-06-5 ; Kierkegaard in Lisbon: Contemporary readings of repetition, fear and trembling, philosophical fragments and the 1843 and 1844 upbuilding discourses ; >
+    au < exists ; exists ; 978-989-8553-10-2 ; Ética ; >
+    au < exists ; exists ; 978-989-8553-03-4 ; Ser, devir e perecer ; >
+    au < exists ; exists ; 978-989-8553-07-2 ; Sentido, interpretação e verdade ; >
+    au < exists ; exists ; 978-989-8553-09-6 ; Natureza criadora ; >
 
   }
   

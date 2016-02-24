@@ -8,7 +8,7 @@
 
   plugin = org.lockss.plugin.highwire.ClockssHWDrupalPlugin
   comment[platform] = HighWire Drupal
-  implicit < status ; status2 ; year ; name ; param[volume_name] >
+  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
   {
 
@@ -21,25 +21,25 @@
 
     param[base_url] = http://emboj.embopress.org/
 
-    au < doNotProcess ; doNotProcess ; 1997 ; The EMBO Journal Volume 16 ; 16 >
-    au < doNotProcess ; doNotProcess ; 1998 ; The EMBO Journal Volume 17 ; 17 >
-    au < doNotProcess ; doNotProcess ; 1999 ; The EMBO Journal Volume 18 ; 18 >
-    au < doNotProcess ; doNotProcess ; 2000 ; The EMBO Journal Volume 19 ; 19 >
-    au < doNotProcess ; doNotProcess ; 2001 ; The EMBO Journal Volume 20 ; 20 >
-    au < doNotProcess ; doNotProcess ; 2002 ; The EMBO Journal Volume 21 ; 21 >
-    au < doNotProcess ; doNotProcess ; 2003 ; The EMBO Journal Volume 22 ; 22 >
-    au < doNotProcess ; doNotProcess ; 2004 ; The EMBO Journal Volume 23 ; 23 >
-    au < doNotProcess ; doNotProcess ; 2005 ; The EMBO Journal Volume 24 ; 24 >
-    au < doNotProcess ; doNotProcess ; 2006 ; The EMBO Journal Volume 25 ; 25 >
-    au < doNotProcess ; doNotProcess ; 2007 ; The EMBO Journal Volume 26 ; 26 >
-    au < doNotProcess ; doNotProcess ; 2008 ; The EMBO Journal Volume 27 ; 27 >
-    au < doNotProcess ; doNotProcess ; 2009 ; The EMBO Journal Volume 28 ; 28 >
-    au < doNotProcess ; doNotProcess ; 2010 ; The EMBO Journal Volume 29 ; 29 >
-    au < doNotProcess ; doNotProcess ; 2011 ; The EMBO Journal Volume 30 ; 30 >
-    au < doNotProcess ; doNotProcess ; 2012 ; The EMBO Journal Volume 31 ; 31 >
-    au < doNotProcess ; doNotProcess ; 2013 ; The EMBO Journal Volume 32 ; 32 >
-    au < expected ; exists ; 2014 ; The EMBO Journal Volume 33 ; 33 >
-    au < expected ; exists ; 2015 ; The EMBO Journal Volume 34 ; 34 >
+    au < doNotProcess ; doNotProcess ; 1997 ; The EMBO Journal Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; The EMBO Journal Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; The EMBO Journal Volume 18 ; 18 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; The EMBO Journal Volume 19 ; 19 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; The EMBO Journal Volume 20 ; 20 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; The EMBO Journal Volume 21 ; 21 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; The EMBO Journal Volume 22 ; 22 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; The EMBO Journal Volume 23 ; 23 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; The EMBO Journal Volume 24 ; 24 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; The EMBO Journal Volume 25 ; 25 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; The EMBO Journal Volume 26 ; 26 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; The EMBO Journal Volume 27 ; 27 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; The EMBO Journal Volume 28 ; 28 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; The EMBO Journal Volume 29 ; 29 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; The EMBO Journal Volume 30 ; 30 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; The EMBO Journal Volume 31 ; 31 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; The EMBO Journal Volume 32 ; 32 ; >
+    au < expected ; exists ; 2014 ; The EMBO Journal Volume 33 ; 33 ; >
+    au < expected ; exists ; 2015 ; The EMBO Journal Volume 34 ; 34 ; >
 
 
   }
@@ -53,13 +53,13 @@
 
     param[base_url] = http://embomolmed.embopress.org/
     
-    au < exists ; exists ; 2009 ; EMBO Molecular Medicine Volume 1 ; 1 >
-    au < exists ; exists ; 2009-2010 ; EMBO Molecular Medicine Volume 2 ; 2 >
-    au < exists ; exists ; 2011 ; EMBO Molecular Medicine Volume 3 ; 3 >
-    au < exists ; exists ; 2012 ; EMBO Molecular Medicine Volume 4 ; 4 >
-    au < exists ; exists ; 2013 ; EMBO Molecular Medicine Volume 5 ; 5 >
-    au < exists ; exists ; 2014 ; EMBO Molecular Medicine Volume 6 ; 6 >
-    au < exists ; exists ; 2015 ; EMBO Molecular Medicine Volume 7 ; 7 >
+    au < exists ; exists ; 2009 ; EMBO Molecular Medicine Volume 1 ; 1 ; >
+    au < exists ; exists ; 2009-2010 ; EMBO Molecular Medicine Volume 2 ; 2 ; >
+    au < exists ; exists ; 2011 ; EMBO Molecular Medicine Volume 3 ; 3 ; >
+    au < exists ; exists ; 2012 ; EMBO Molecular Medicine Volume 4 ; 4 ; >
+    au < exists ; exists ; 2013 ; EMBO Molecular Medicine Volume 5 ; 5 ; >
+    au < exists ; exists ; 2014 ; EMBO Molecular Medicine Volume 6 ; 6 ; >
+    au < exists ; exists ; 2015 ; EMBO Molecular Medicine Volume 7 ; 7 ; >
 
   }
 
@@ -73,22 +73,22 @@
     >
     param[base_url] = http://embor.embopress.org/
 
-    au < doNotProcess ; doNotProcess ; 2000 ; EMBO Reports Volume 1 ; 1 >
-    au < doNotProcess ; doNotProcess ; 2001 ; EMBO Reports Volume 2 ; 2 >
-    au < doNotProcess ; doNotProcess ; 2002 ; EMBO Reports Volume 3 ; 3 >
-    au < doNotProcess ; doNotProcess ; 2003 ; EMBO Reports Volume 4 ; 4 >
-    au < doNotProcess ; doNotProcess ; 2004 ; EMBO Reports Volume 5 ; 5 >
-    au < doNotProcess ; doNotProcess ; 2005 ; EMBO Reports Volume 6 ; 6 >
-    au < doNotProcess ; doNotProcess ; 2006 ; EMBO Reports Volume 7 ; 7 >
-    au < doNotProcess ; doNotProcess ; 2007 ; EMBO Reports Volume 8 ; 8 >
-    au < doNotProcess ; doNotProcess ; 2008 ; EMBO Reports Volume 9 ; 9 >
-    au < doNotProcess ; doNotProcess ; 2009 ; EMBO Reports Volume 10 ; 10 >
-    au < doNotProcess ; doNotProcess ; 2010 ; EMBO Reports Volume 11 ; 11 >
-    au < doNotProcess ; doNotProcess ; 2011 ; EMBO Reports Volume 12 ; 12 >
-    au < doNotProcess ; doNotProcess ; 2012 ; EMBO Reports Volume 13 ; 13 >
-    au < doNotProcess ; doNotProcess ; 2013 ; EMBO Reports Volume 14 ; 14 >
-    au < expected ; exists ; 2014 ; EMBO Reports Volume 15 ; 15 >
-    au < expected ; exists ; 2015 ; EMBO Reports Volume 16 ; 16 >
+    au < doNotProcess ; doNotProcess ; 2000 ; EMBO Reports Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; EMBO Reports Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; EMBO Reports Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; EMBO Reports Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; EMBO Reports Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; EMBO Reports Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; EMBO Reports Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; EMBO Reports Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; EMBO Reports Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; EMBO Reports Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; EMBO Reports Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; EMBO Reports Volume 12 ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; EMBO Reports Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; EMBO Reports Volume 14 ; 14 ; >
+    au < expected ; exists ; 2014 ; EMBO Reports Volume 15 ; 15 ; >
+    au < expected ; exists ; 2015 ; EMBO Reports Volume 16 ; 16 ; >
 
   }
 
@@ -100,17 +100,17 @@
     >
     param[base_url] = http://msb.embopress.org/
     
-    au < doNotProcess ; doNotProcess ; 2005 ; Molecular Systems Biology Volume 1 ; 1 >
-    au < doNotProcess ; doNotProcess ; 2006 ; Molecular Systems Biology Volume 2 ; 2 >
-    au < doNotProcess ; doNotProcess ; 2007 ; Molecular Systems Biology Volume 3 ; 3 >
-    au < doNotProcess ; doNotProcess ; 2008 ; Molecular Systems Biology Volume 4 ; 4 >
-    au < doNotProcess ; doNotProcess ; 2009 ; Molecular Systems Biology Volume 5 ; 5 >
-    au < doNotProcess ; doNotProcess ; 2010 ; Molecular Systems Biology Volume 6 ; 6 >
-    au < doNotProcess ; doNotProcess ; 2011 ; Molecular Systems Biology Volume 7 ; 7 >
-    au < doNotProcess ; doNotProcess ; 2012 ; Molecular Systems Biology Volume 8 ; 8 >
-    au < doNotProcess ; doNotProcess ; 2013 ; Molecular Systems Biology Volume 9 ; 9 >
-    au < expected ; exists ; 2014 ; Molecular Systems Biology Volume 10 ; 10 >
-    au < expected ; exists ; 2015 ; Molecular Systems Biology Volume 11 ; 11 >
+    au < doNotProcess ; doNotProcess ; 2005 ; Molecular Systems Biology Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Molecular Systems Biology Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Molecular Systems Biology Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Molecular Systems Biology Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Molecular Systems Biology Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Molecular Systems Biology Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Molecular Systems Biology Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Molecular Systems Biology Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Molecular Systems Biology Volume 9 ; 9 ; >
+    au < expected ; exists ; 2014 ; Molecular Systems Biology Volume 10 ; 10 ; >
+    au < expected ; exists ; 2015 ; Molecular Systems Biology Volume 11 ; 11 ; >
 
   }
 
@@ -121,8 +121,8 @@
       eissn = 1757-4684
     >
     param[base_url] = http://embomolmed.embopress.org/
-    au < doNotProcess ; doNotProcess ; 2013 ; EMBO Molecular Medicine Volume 5 ; 5 >
-    au < doNotProcess ; doNotProcess ; 2014 ; EMBO Molecular Medicine Volume 6 ; 6 >
+    au < doNotProcess ; doNotProcess ; 2013 ; EMBO Molecular Medicine Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; EMBO Molecular Medicine Volume 6 ; 6 ; >
 
   }
 

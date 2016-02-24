@@ -9,7 +9,7 @@
   comment[0] = Do not add any titles with the DigitalCommons/BePress Plugin without Vicky's approval. Document Vicky's approval in PD-36.
 
   plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
-  implicit < status ; status2 ; year ; name ; param[volume] >
+  implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
   param[base_url] = http://repository.uwyo.edu/
 
   {
@@ -24,34 +24,34 @@
 
     param[journal_abbr] = ela
 
-    au < manifest ; exists ; 1996 ; The Electronic Journal of Linear Algebra Volume 1 ; 1 >
-    au < manifest ; exists ; 1997 ; The Electronic Journal of Linear Algebra Volume 2 ; 2 >
-    au < manifest ; exists ; 1998 ; The Electronic Journal of Linear Algebra Volume 3 ; 3 >
-    au < manifest ; exists ; 1998 ; The Electronic Journal of Linear Algebra Volume 4 ; 4 >
-    au < manifest ; exists ; 1999 ; The Electronic Journal of Linear Algebra Volume 5 ; 5 >
-    au < manifest ; exists ; 2000 ; The Electronic Journal of Linear Algebra Volume 6 ; 6 >
-    au < manifest ; exists ; 2000 ; The Electronic Journal of Linear Algebra Volume 7 ; 7 >
-    au < manifest ; exists ; 2001 ; The Electronic Journal of Linear Algebra Volume 8 ; 8 >
-    au < manifest ; exists ; 2002 ; The Electronic Journal of Linear Algebra Volume 9 ; 9 >
-    au < manifest ; exists ; 2003 ; The Electronic Journal of Linear Algebra Volume 10 ; 10 >
-    au < manifest ; exists ; 2004 ; The Electronic Journal of Linear Algebra Volume 11 ; 11 >
-    au < manifest ; exists ; 2004 ; The Electronic Journal of Linear Algebra Volume 12 ; 12 >
-    au < manifest ; exists ; 2005 ; The Electronic Journal of Linear Algebra Volume 13 ; 13 >
-    au < manifest ; exists ; 2005 ; The Electronic Journal of Linear Algebra Volume 14 ; 14 >
-    au < manifest ; exists ; 2006 ; The Electronic Journal of Linear Algebra Volume 15 ; 15 >
-    au < manifest ; exists ; 2007 ; The Electronic Journal of Linear Algebra Volume 16 ; 16 >
-    au < manifest ; exists ; 2008 ; The Electronic Journal of Linear Algebra Volume 17 ; 17 >
-    au < manifest ; exists ; 2009 ; The Electronic Journal of Linear Algebra Volume 18 ; 18 >
-    au < manifest ; exists ; 2009 ; The Electronic Journal of Linear Algebra Volume 19 ; 19 >
-    au < manifest ; exists ; 2010 ; The Electronic Journal of Linear Algebra Volume 20 ; 20 >
-    au < manifest ; exists ; 2010 ; The Electronic Journal of Linear Algebra Volume 21 ; 21 >
-    au < manifest ; exists ; 2011 ; The Electronic Journal of Linear Algebra Volume 22 ; 22 >
-    au < manifest ; exists ; 2012 ; The Electronic Journal of Linear Algebra Volume 23 ; 23 >
-    au < manifest ; exists ; 2012 ; The Electronic Journal of Linear Algebra Volume 24 ; 24 >
-    au < manifest ; exists ; 2012 ; The Electronic Journal of Linear Algebra Volume 25 ; 25 >
-    au < crawling ; exists ; 2013 ; The Electronic Journal of Linear Algebra Volume 26 ; 26 >
-    au < crawling ; exists ; 2014 ; The Electronic Journal of Linear Algebra Volume 27 ; 27 >
-    au < crawling ; exists ; 2015 ; The Electronic Journal of Linear Algebra Volume 28 ; 28 >
+    au < manifest ; exists ; 1996 ; The Electronic Journal of Linear Algebra Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1997 ; The Electronic Journal of Linear Algebra Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1998 ; The Electronic Journal of Linear Algebra Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1998 ; The Electronic Journal of Linear Algebra Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1999 ; The Electronic Journal of Linear Algebra Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2000 ; The Electronic Journal of Linear Algebra Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2000 ; The Electronic Journal of Linear Algebra Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2001 ; The Electronic Journal of Linear Algebra Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2002 ; The Electronic Journal of Linear Algebra Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2003 ; The Electronic Journal of Linear Algebra Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2004 ; The Electronic Journal of Linear Algebra Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2004 ; The Electronic Journal of Linear Algebra Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2005 ; The Electronic Journal of Linear Algebra Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2005 ; The Electronic Journal of Linear Algebra Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2006 ; The Electronic Journal of Linear Algebra Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2007 ; The Electronic Journal of Linear Algebra Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2008 ; The Electronic Journal of Linear Algebra Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2009 ; The Electronic Journal of Linear Algebra Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2009 ; The Electronic Journal of Linear Algebra Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2010 ; The Electronic Journal of Linear Algebra Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2010 ; The Electronic Journal of Linear Algebra Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2011 ; The Electronic Journal of Linear Algebra Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2012 ; The Electronic Journal of Linear Algebra Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2012 ; The Electronic Journal of Linear Algebra Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2012 ; The Electronic Journal of Linear Algebra Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2013 ; The Electronic Journal of Linear Algebra Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2014 ; The Electronic Journal of Linear Algebra Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2015 ; The Electronic Journal of Linear Algebra Volume 28 ; 28 ; >
 
   }
 

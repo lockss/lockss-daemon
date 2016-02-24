@@ -20,15 +20,15 @@
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
     param[base_url] = http://ajlpublishing.org/
     param[journal_abbr] = jl
-    implicit < status ; status2 ; year ; name ; param[volume] >
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < manifest ; exists ; 2006 ; Judaica Librarianship Volume 12 ; 12 >
-    au < manifest ; exists ; 2007 ; Judaica Librarianship Volume 13 ; 13 >
-    au < manifest ; exists ; 2008 ; Judaica Librarianship Volume 14 ; 14 >
-    au < manifest ; exists ; 2009 ; Judaica Librarianship Volume 15 ; 15 >
-    au < crawling ; exists ; 2011 ; Judaica Librarianship Volume 16-17 ; 16 >
-    au < finished ; finished ; 2014 ; Judaica Librarianship Volume 18 ; 18 >
-    au < expected ; exists ; 2015 ; Judaica Librarianship Volume 19 ; 19 >
+    au < manifest ; exists ; 2006 ; Judaica Librarianship Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2007 ; Judaica Librarianship Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2008 ; Judaica Librarianship Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2009 ; Judaica Librarianship Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2011 ; Judaica Librarianship Volume 16-17 ; 16 ; >
+    au < finished ; finished ; 2014 ; Judaica Librarianship Volume 18 ; 18 ; >
+    au < expected ; exists ; 2015 ; Judaica Librarianship Volume 19 ; 19 ; >
 
   }
 

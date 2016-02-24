@@ -6,7 +6,7 @@
     info[tester] = 5
   >
   
-  implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+  implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
   pluginPrefix = org.lockss.plugin.highwire.
   {
   
@@ -23,12 +23,12 @@
       #plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
     
-      au < ClockssHighWirePlugin ; superseded ; down ; 2008 ; AAP Grand Rounds Volume 19 [superseded] ; 19 >
-      au < ClockssHighWirePlugin ; superseded ; down ; 2008 ; AAP Grand Rounds Volume 20 [superseded] ; 20 >
-      au < ClockssHighWirePlugin ; superseded ; down ; 2009 ; AAP Grand Rounds Volume 21 [superseded] ; 21 >
-      au < ClockssHighWirePlugin ; superseded ; down ; 2009 ; AAP Grand Rounds Volume 22 [superseded] ; 22 >
-      au < ClockssHighWirePlugin ; zapped ; finished ; 2010 ; AAP Grand Rounds Volume 23 ; 23 >
-      au < ClockssHighWirePlugin ; zapped ; finished ; 2010 ; AAP Grand Rounds Volume 24 ; 24 >
+      au < ClockssHighWirePlugin ; superseded ; down ; 2008 ; AAP Grand Rounds Volume 19 [superseded] ; 19 ; >
+      au < ClockssHighWirePlugin ; superseded ; down ; 2008 ; AAP Grand Rounds Volume 20 [superseded] ; 20 ; >
+      au < ClockssHighWirePlugin ; superseded ; down ; 2009 ; AAP Grand Rounds Volume 21 [superseded] ; 21 ; >
+      au < ClockssHighWirePlugin ; superseded ; down ; 2009 ; AAP Grand Rounds Volume 22 [superseded] ; 22 ; >
+      au < ClockssHighWirePlugin ; zapped ; finished ; 2010 ; AAP Grand Rounds Volume 23 ; 23 ; >
+      au < ClockssHighWirePlugin ; zapped ; finished ; 2010 ; AAP Grand Rounds Volume 24 ; 24 ; >
 
     }
     
@@ -36,42 +36,42 @@
     
       #plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1999 ; AAP Grand Rounds Volume 1 ; 1 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1999 ; AAP Grand Rounds Volume 2 ; 2 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2000 ; AAP Grand Rounds Volume 3 ; 3 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2000 ; AAP Grand Rounds Volume 4 ; 4 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2001 ; AAP Grand Rounds Volume 5 ; 5 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2001 ; AAP Grand Rounds Volume 6 ; 6 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2002 ; AAP Grand Rounds Volume 7 ; 7 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2002 ; AAP Grand Rounds Volume 8 ; 8 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2003 ; AAP Grand Rounds Volume 9 ; 9 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2003 ; AAP Grand Rounds Volume 10 ; 10 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2004 ; AAP Grand Rounds Volume 11 ; 11 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2004 ; AAP Grand Rounds Volume 12 ; 12 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2005 ; AAP Grand Rounds Volume 13 ; 13 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2005 ; AAP Grand Rounds Volume 14 ; 14 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2006 ; AAP Grand Rounds Volume 15 ; 15 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2006 ; AAP Grand Rounds Volume 16 ; 16 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2007 ; AAP Grand Rounds Volume 17 ; 17 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2007 ; AAP Grand Rounds Volume 18 ; 18 >
-      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2008 ; AAP Grand Rounds Volume 19 ; 19 >
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; AAP Grand Rounds Volume 20 ; 20 >
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; AAP Grand Rounds Volume 21 ; 21 >
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; AAP Grand Rounds Volume 22 ; 22 >
-      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; AAP Grand Rounds Volume 23 ; 23 >
-      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; AAP Grand Rounds Volume 24 ; 24 >
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; AAP Grand Rounds Volume 25 ; 25 >
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; AAP Grand Rounds Volume 26 ; 26 >
-      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; AAP Grand Rounds Volume 27 ; 27 >
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; AAP Grand Rounds Volume 28 ; 28 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2013 ; AAP Grand Rounds Volume 29 ; 29 >
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; AAP Grand Rounds Volume 30 ; 30 >
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; AAP Grand Rounds Volume 31 ; 31 >
-      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2014 ; AAP Grand Rounds Volume 32 ; 32 >
-      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; AAP Grand Rounds Volume 33 ; 33 >
-      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; AAP Grand Rounds Volume 34 ; 34 >
-      au < ClockssHWDrupalPlugin ; expected ; exists ; 2016 ; AAP Grand Rounds Volume 35 ; 35 >
-      au < ClockssHWDrupalPlugin ; expected ; exists ; 2016 ; AAP Grand Rounds Volume 36 ; 36 >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1999 ; AAP Grand Rounds Volume 1 ; 1 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1999 ; AAP Grand Rounds Volume 2 ; 2 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2000 ; AAP Grand Rounds Volume 3 ; 3 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2000 ; AAP Grand Rounds Volume 4 ; 4 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2001 ; AAP Grand Rounds Volume 5 ; 5 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2001 ; AAP Grand Rounds Volume 6 ; 6 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2002 ; AAP Grand Rounds Volume 7 ; 7 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2002 ; AAP Grand Rounds Volume 8 ; 8 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2003 ; AAP Grand Rounds Volume 9 ; 9 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2003 ; AAP Grand Rounds Volume 10 ; 10 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2004 ; AAP Grand Rounds Volume 11 ; 11 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2004 ; AAP Grand Rounds Volume 12 ; 12 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2005 ; AAP Grand Rounds Volume 13 ; 13 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2005 ; AAP Grand Rounds Volume 14 ; 14 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2006 ; AAP Grand Rounds Volume 15 ; 15 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2006 ; AAP Grand Rounds Volume 16 ; 16 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2007 ; AAP Grand Rounds Volume 17 ; 17 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2007 ; AAP Grand Rounds Volume 18 ; 18 ; >
+      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2008 ; AAP Grand Rounds Volume 19 ; 19 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; AAP Grand Rounds Volume 20 ; 20 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; AAP Grand Rounds Volume 21 ; 21 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; AAP Grand Rounds Volume 22 ; 22 ; >
+      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; AAP Grand Rounds Volume 23 ; 23 ; >
+      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; AAP Grand Rounds Volume 24 ; 24 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; AAP Grand Rounds Volume 25 ; 25 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; AAP Grand Rounds Volume 26 ; 26 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; AAP Grand Rounds Volume 27 ; 27 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; AAP Grand Rounds Volume 28 ; 28 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2013 ; AAP Grand Rounds Volume 29 ; 29 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; AAP Grand Rounds Volume 30 ; 30 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; AAP Grand Rounds Volume 31 ; 31 ; >
+      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2014 ; AAP Grand Rounds Volume 32 ; 32 ; >
+      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; AAP Grand Rounds Volume 33 ; 33 ; >
+      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; AAP Grand Rounds Volume 34 ; 34 ; >
+      au < ClockssHWDrupalPlugin ; expected ; exists ; 2016 ; AAP Grand Rounds Volume 35 ; 35 ; >
+      au < ClockssHWDrupalPlugin ; expected ; exists ; 2016 ; AAP Grand Rounds Volume 36 ; 36 ; >
 
     }
   
@@ -92,9 +92,9 @@
       #plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
 
-      au < ClockssHighWirePlugin ; zapped ; finished ; 2008 ; AAP News Volume 29 ; 29 >
-      au < ClockssHighWirePlugin ; zapped ; finished ; 2009 ; AAP News Volume 30 ; 30 >
-      au < ClockssHighWirePlugin ; superseded ; down ; 2010 ; AAP News Volume 31 [superseded] ; 31 >
+      au < ClockssHighWirePlugin ; zapped ; finished ; 2008 ; AAP News Volume 29 ; 29 ; >
+      au < ClockssHighWirePlugin ; zapped ; finished ; 2009 ; AAP News Volume 30 ; 30 ; >
+      au < ClockssHighWirePlugin ; superseded ; down ; 2010 ; AAP News Volume 31 [superseded] ; 31 ; >
       
     }
     
@@ -102,43 +102,43 @@
     
       #plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1985 ; AAP News Volume 1 ; 1 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1986 ; AAP News Volume 2 ; 2 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1987 ; AAP News Volume 3 ; 3 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1988 ; AAP News Volume 4 ; 4 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1989 ; AAP News Volume 5 ; 5 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1990 ; AAP News Volume 6 ; 6 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1991 ; AAP News Volume 7 ; 7 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1992 ; AAP News Volume 8 ; 8 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1993 ; AAP News Volume 9 ; 9 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1994 ; AAP News Volume 10 ; 10 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1995 ; AAP News Volume 11 ; 11 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1996 ; AAP News Volume 12 ; 12 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1997 ; AAP News Volume 13 ; 13 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1998 ; AAP News Volume 14 ; 14 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1999 ; AAP News Volume 15 ; 15 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2000 ; AAP News Volume 16 ; 16 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2000 ; AAP News Volume 17 ; 17 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2001 ; AAP News Volume 18 ; 18 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2001 ; AAP News Volume 19 ; 19 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2002 ; AAP News Volume 20 ; 20 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2002 ; AAP News Volume 21 ; 21 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2003 ; AAP News Volume 22 ; 22 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2003 ; AAP News Volume 23 ; 23 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2004 ; AAP News Volume 24 ; 24 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2004 ; AAP News Volume 25 ; 25 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2005 ; AAP News Volume 26 ; 26 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2006 ; AAP News Volume 27 ; 27 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2007 ; AAP News Volume 28 ; 28 >
-      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2008 ; AAP News Volume 29 ; 29 >
-      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; AAP News Volume 30 ; 30 >
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; AAP News Volume 31 ; 31 >
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; AAP News Volume 32 ; 32 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; AAP News Volume 33 ; 33 >
-      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; AAP News Volume 34 ; 34 >
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; AAP News Volume 35 ; 35 >
-      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; AAP News Volume 36 ; 36 >
-      au < ClockssHWDrupalPlugin ; expected ; exists ; 2016 ; AAP News Volume 37 ; 37 >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1985 ; AAP News Volume 1 ; 1 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1986 ; AAP News Volume 2 ; 2 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1987 ; AAP News Volume 3 ; 3 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1988 ; AAP News Volume 4 ; 4 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1989 ; AAP News Volume 5 ; 5 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1990 ; AAP News Volume 6 ; 6 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1991 ; AAP News Volume 7 ; 7 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1992 ; AAP News Volume 8 ; 8 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1993 ; AAP News Volume 9 ; 9 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1994 ; AAP News Volume 10 ; 10 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1995 ; AAP News Volume 11 ; 11 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1996 ; AAP News Volume 12 ; 12 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1997 ; AAP News Volume 13 ; 13 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1998 ; AAP News Volume 14 ; 14 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1999 ; AAP News Volume 15 ; 15 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2000 ; AAP News Volume 16 ; 16 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2000 ; AAP News Volume 17 ; 17 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2001 ; AAP News Volume 18 ; 18 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2001 ; AAP News Volume 19 ; 19 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2002 ; AAP News Volume 20 ; 20 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2002 ; AAP News Volume 21 ; 21 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2003 ; AAP News Volume 22 ; 22 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2003 ; AAP News Volume 23 ; 23 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2004 ; AAP News Volume 24 ; 24 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2004 ; AAP News Volume 25 ; 25 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2005 ; AAP News Volume 26 ; 26 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2006 ; AAP News Volume 27 ; 27 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2007 ; AAP News Volume 28 ; 28 ; >
+      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2008 ; AAP News Volume 29 ; 29 ; >
+      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; AAP News Volume 30 ; 30 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2010 ; AAP News Volume 31 ; 31 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; AAP News Volume 32 ; 32 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; AAP News Volume 33 ; 33 ; >
+      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; AAP News Volume 34 ; 34 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; AAP News Volume 35 ; 35 ; >
+      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; AAP News Volume 36 ; 36 ; >
+      au < ClockssHWDrupalPlugin ; expected ; exists ; 2016 ; AAP News Volume 37 ; 37 ; >
 
     }
   
@@ -154,12 +154,12 @@
     #plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     param[base_url] = http://hosppeds.aappublications.org/
 
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Hospital Pediatrics Volume 1 ; 1 >
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Hospital Pediatrics Volume 2 ; 2 >
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Hospital Pediatrics Volume 3 ; 3 >
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Hospital Pediatrics Volume 4 ; 4 >
-      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; Hospital Pediatrics Volume 5 ; 5 >
-      au < ClockssHWDrupalPlugin ; expected ; exists ; 2016 ; Hospital Pediatrics Volume 6 ; 6 >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Hospital Pediatrics Volume 1 ; 1 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Hospital Pediatrics Volume 2 ; 2 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Hospital Pediatrics Volume 3 ; 3 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Hospital Pediatrics Volume 4 ; 4 ; >
+      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; Hospital Pediatrics Volume 5 ; 5 ; >
+      au < ClockssHWDrupalPlugin ; expected ; exists ; 2016 ; Hospital Pediatrics Volume 6 ; 6 ; >
 
   }
   
@@ -178,9 +178,9 @@
       #plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
     
-      au < ClockssHighWirePlugin ; superseded ; down ; 2008 ; NeoReviews Volume 9 [superseded] ; 9 >
-      au < ClockssHighWirePlugin ; zapped ; finished ; 2009 ; NeoReviews Volume 10 ; 10 >
-      au < ClockssHighWirePlugin ; zapped ; finished ; 2010 ; NeoReviews Volume 11 ; 11 >
+      au < ClockssHighWirePlugin ; superseded ; down ; 2008 ; NeoReviews Volume 9 [superseded] ; 9 ; >
+      au < ClockssHighWirePlugin ; zapped ; finished ; 2009 ; NeoReviews Volume 10 ; 10 ; >
+      au < ClockssHighWirePlugin ; zapped ; finished ; 2010 ; NeoReviews Volume 11 ; 11 ; >
   
     }
     
@@ -188,23 +188,23 @@
     
       #plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2000 ; NeoReviews Volume 1 ; 1 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2001 ; NeoReviews Volume 2 ; 2 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2002 ; NeoReviews Volume 3 ; 3 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2003 ; NeoReviews Volume 4 ; 4 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2004 ; NeoReviews Volume 5 ; 5 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2005 ; NeoReviews Volume 6 ; 6 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2006 ; NeoReviews Volume 7 ; 7 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2007 ; NeoReviews Volume 8 ; 8 >
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; NeoReviews Volume 9 ; 9 >
-      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; NeoReviews Volume 10 ; 10 >
-      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; NeoReviews Volume 11 ; 11 >
-      au < ClockssHighWirePressH20Plugin ; frozen ; crawling ; 2011 ; NeoReviews Volume 12 ; 12 >
-      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; NeoReviews Volume 13 ; 13 >
-      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; NeoReviews Volume 14 ; 14 >
-      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2014 ; NeoReviews Volume 15 ; 15 >
-      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; NeoReviews Volume 16 ; 16 >
-      au < ClockssHWDrupalPlugin ; expected ; exists ; 2016 ; NeoReviews Volume 17 ; 17 >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2000 ; NeoReviews Volume 1 ; 1 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2001 ; NeoReviews Volume 2 ; 2 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2002 ; NeoReviews Volume 3 ; 3 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2003 ; NeoReviews Volume 4 ; 4 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2004 ; NeoReviews Volume 5 ; 5 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2005 ; NeoReviews Volume 6 ; 6 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2006 ; NeoReviews Volume 7 ; 7 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2007 ; NeoReviews Volume 8 ; 8 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2008 ; NeoReviews Volume 9 ; 9 ; >
+      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; NeoReviews Volume 10 ; 10 ; >
+      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; NeoReviews Volume 11 ; 11 ; >
+      au < ClockssHighWirePressH20Plugin ; frozen ; crawling ; 2011 ; NeoReviews Volume 12 ; 12 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; NeoReviews Volume 13 ; 13 ; >
+      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; NeoReviews Volume 14 ; 14 ; >
+      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2014 ; NeoReviews Volume 15 ; 15 ; >
+      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; NeoReviews Volume 16 ; 16 ; >
+      au < ClockssHWDrupalPlugin ; expected ; exists ; 2016 ; NeoReviews Volume 17 ; 17 ; >
 
     }
   
@@ -225,12 +225,12 @@
       #plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
     
-      au < ClockssHighWirePlugin ; zapped ; finished ; 2008 ; Pediatrics Volume 121 ; 121 >
-      au < ClockssHighWirePlugin ; zapped ; finished ; 2008 ; Pediatrics Volume 122 ; 122 >
-      au < ClockssHighWirePlugin ; zapped ; finished ; 2009 ; Pediatrics Volume 123 ; 123 >
-      au < ClockssHighWirePlugin ; superseded ; down ; 2009 ; Pediatrics Volume 124 [superseded] ; 124 >
-      au < ClockssHighWirePlugin ; zapped ; finished ; 2010 ; Pediatrics Volume 125 ; 125 >
-      au < ClockssHighWirePlugin ; zapped ; finished ; 2010 ; Pediatrics Volume 126 ; 126 >
+      au < ClockssHighWirePlugin ; zapped ; finished ; 2008 ; Pediatrics Volume 121 ; 121 ; >
+      au < ClockssHighWirePlugin ; zapped ; finished ; 2008 ; Pediatrics Volume 122 ; 122 ; >
+      au < ClockssHighWirePlugin ; zapped ; finished ; 2009 ; Pediatrics Volume 123 ; 123 ; >
+      au < ClockssHighWirePlugin ; superseded ; down ; 2009 ; Pediatrics Volume 124 [superseded] ; 124 ; >
+      au < ClockssHighWirePlugin ; zapped ; finished ; 2010 ; Pediatrics Volume 125 ; 125 ; >
+      au < ClockssHighWirePlugin ; zapped ; finished ; 2010 ; Pediatrics Volume 126 ; 126 ; >
   
     }
     
@@ -238,143 +238,143 @@
     
       #plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1948 ; Pediatrics Volume 1 ; 1 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1948 ; Pediatrics Volume 2 ; 2 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1949 ; Pediatrics Volume 3 ; 3 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1949 ; Pediatrics Volume 4 ; 4 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1950 ; Pediatrics Volume 5 ; 5 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1950 ; Pediatrics Volume 6 ; 6 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1951 ; Pediatrics Volume 7 ; 7 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1951 ; Pediatrics Volume 8 ; 8 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1952 ; Pediatrics Volume 9 ; 9 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1952 ; Pediatrics Volume 10 ; 10 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1953 ; Pediatrics Volume 11 ; 11 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1953 ; Pediatrics Volume 12 ; 12 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1954 ; Pediatrics Volume 13 ; 13 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1954 ; Pediatrics Volume 14 ; 14 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1955 ; Pediatrics Volume 15 ; 15 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1955 ; Pediatrics Volume 16 ; 16 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1956 ; Pediatrics Volume 17 ; 17 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1956 ; Pediatrics Volume 18 ; 18 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1957 ; Pediatrics Volume 19 ; 19 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1957 ; Pediatrics Volume 20 ; 20 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1958 ; Pediatrics Volume 21 ; 21 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1958 ; Pediatrics Volume 22 ; 22 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1959 ; Pediatrics Volume 23 ; 23 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1959 ; Pediatrics Volume 24 ; 24 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1960 ; Pediatrics Volume 25 ; 25 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1960 ; Pediatrics Volume 26 ; 26 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1961 ; Pediatrics Volume 27 ; 27 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1961 ; Pediatrics Volume 28 ; 28 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1962 ; Pediatrics Volume 29 ; 29 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1962 ; Pediatrics Volume 30 ; 30 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1963 ; Pediatrics Volume 31 ; 31 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1963 ; Pediatrics Volume 32 ; 32 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1964 ; Pediatrics Volume 33 ; 33 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1964 ; Pediatrics Volume 34 ; 34 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1965 ; Pediatrics Volume 35 ; 35 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1965 ; Pediatrics Volume 36 ; 36 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1966 ; Pediatrics Volume 37 ; 37 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1966 ; Pediatrics Volume 38 ; 38 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1967 ; Pediatrics Volume 39 ; 39 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1967 ; Pediatrics Volume 40 ; 40 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1968 ; Pediatrics Volume 41 ; 41 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1968 ; Pediatrics Volume 42 ; 42 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1969 ; Pediatrics Volume 43 ; 43 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1969 ; Pediatrics Volume 44 ; 44 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1970 ; Pediatrics Volume 45 ; 45 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1970 ; Pediatrics Volume 46 ; 46 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1971 ; Pediatrics Volume 47 ; 47 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1971 ; Pediatrics Volume 48 ; 48 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1972 ; Pediatrics Volume 49 ; 49 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1972 ; Pediatrics Volume 50 ; 50 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1973 ; Pediatrics Volume 51 ; 51 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1973 ; Pediatrics Volume 52 ; 52 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1974 ; Pediatrics Volume 53 ; 53 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1974 ; Pediatrics Volume 54 ; 54 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1975 ; Pediatrics Volume 55 ; 55 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1975 ; Pediatrics Volume 56 ; 56 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1976 ; Pediatrics Volume 57 ; 57 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1976 ; Pediatrics Volume 58 ; 58 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1977 ; Pediatrics Volume 59 ; 59 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1977 ; Pediatrics Volume 60 ; 60 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1978 ; Pediatrics Volume 61 ; 61 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1978 ; Pediatrics Volume 62 ; 62 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1979 ; Pediatrics Volume 63 ; 63 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1979 ; Pediatrics Volume 64 ; 64 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1980 ; Pediatrics Volume 65 ; 65 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1980 ; Pediatrics Volume 66 ; 66 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1981 ; Pediatrics Volume 67 ; 67 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1981 ; Pediatrics Volume 68 ; 68 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1982 ; Pediatrics Volume 69 ; 69 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1982 ; Pediatrics Volume 70 ; 70 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1983 ; Pediatrics Volume 71 ; 71 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1983 ; Pediatrics Volume 72 ; 72 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1984 ; Pediatrics Volume 73 ; 73 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1984 ; Pediatrics Volume 74 ; 74 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1985 ; Pediatrics Volume 75 ; 75 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1985 ; Pediatrics Volume 76 ; 76 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1986 ; Pediatrics Volume 77 ; 77 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1986 ; Pediatrics Volume 78 ; 78 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1987 ; Pediatrics Volume 79 ; 79 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1987 ; Pediatrics Volume 80 ; 80 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1988 ; Pediatrics Volume 81 ; 81 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1988 ; Pediatrics Volume 82 ; 82 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1989 ; Pediatrics Volume 83 ; 83 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1989 ; Pediatrics Volume 84 ; 84 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1990 ; Pediatrics Volume 85 ; 85 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1990 ; Pediatrics Volume 86 ; 86 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1991 ; Pediatrics Volume 87 ; 87 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1991 ; Pediatrics Volume 88 ; 88 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1992 ; Pediatrics Volume 89 ; 89 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1992 ; Pediatrics Volume 90 ; 90 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1993 ; Pediatrics Volume 91 ; 91 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1993 ; Pediatrics Volume 92 ; 92 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1994 ; Pediatrics Volume 93 ; 93 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1994 ; Pediatrics Volume 94 ; 94 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1995 ; Pediatrics Volume 95 ; 95 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1995 ; Pediatrics Volume 96 ; 96 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1996 ; Pediatrics Volume 97 ; 97 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1996 ; Pediatrics Volume 98 ; 98 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1997 ; Pediatrics Volume 99 ; 99 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1997 ; Pediatrics Volume 100 ; 100 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1998 ; Pediatrics Volume 101 ; 101 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1998 ; Pediatrics Volume 102 ; 102 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1999 ; Pediatrics Volume 103 ; 103 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1999 ; Pediatrics Volume 104 ; 104 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2000 ; Pediatrics Volume 105 ; 105 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2000 ; Pediatrics Volume 106 ; 106 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2001 ; Pediatrics Volume 107 ; 107 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2001 ; Pediatrics Volume 108 ; 108 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2002 ; Pediatrics Volume 109 ; 109 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2002 ; Pediatrics Volume 110 ; 110 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2003 ; Pediatrics Volume 111 ; 111 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2003 ; Pediatrics Volume 112 ; 112 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2004 ; Pediatrics Volume 113 ; 113 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2004 ; Pediatrics Volume 114 ; 114 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2005 ; Pediatrics Volume 115 ; 115 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2005 ; Pediatrics Volume 116 ; 116 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2006 ; Pediatrics Volume 117 ; 117 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2006 ; Pediatrics Volume 118 ; 118 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2007 ; Pediatrics Volume 119 ; 119 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2007 ; Pediatrics Volume 120 ; 120 >
-      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2008 ; Pediatrics Volume 121 ; 121 >
-      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2008 ; Pediatrics Volume 122 ; 122 >
-      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; Pediatrics Volume 123 ; 123 >
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Pediatrics Volume 124 ; 124 >
-      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; Pediatrics Volume 125 ; 125 >
-      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; Pediatrics Volume 126 ; 126 >
-      au < ClockssHighWirePressH20Plugin ; frozen ; crawling ; 2011 ; Pediatrics Volume 127 ; 127 >
-      au < ClockssHighWirePressH20Plugin ; frozen ; crawling ; 2011 ; Pediatrics Volume 128 ; 128 >
-      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; Pediatrics Volume 129 ; 129 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; Pediatrics Volume 130 ; 130 >
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Pediatrics Volume 131 ; 131 >
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Pediatrics Volume 132 ; 132 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2014 ; Pediatrics Volume 133 ; 133 >
-      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2014 ; Pediatrics Volume 134 ; 134 >
-      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2015 ; Pediatrics Volume 135 ; 135 >
-      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; Pediatrics Volume 136 ; 136 >
-      au < ClockssHWDrupalPlugin ; expected ; exists ; 2016 ; Pediatrics Volume 137 ; 137 >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1948 ; Pediatrics Volume 1 ; 1 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1948 ; Pediatrics Volume 2 ; 2 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1949 ; Pediatrics Volume 3 ; 3 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1949 ; Pediatrics Volume 4 ; 4 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1950 ; Pediatrics Volume 5 ; 5 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1950 ; Pediatrics Volume 6 ; 6 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1951 ; Pediatrics Volume 7 ; 7 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1951 ; Pediatrics Volume 8 ; 8 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1952 ; Pediatrics Volume 9 ; 9 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1952 ; Pediatrics Volume 10 ; 10 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1953 ; Pediatrics Volume 11 ; 11 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1953 ; Pediatrics Volume 12 ; 12 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1954 ; Pediatrics Volume 13 ; 13 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1954 ; Pediatrics Volume 14 ; 14 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1955 ; Pediatrics Volume 15 ; 15 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1955 ; Pediatrics Volume 16 ; 16 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1956 ; Pediatrics Volume 17 ; 17 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1956 ; Pediatrics Volume 18 ; 18 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1957 ; Pediatrics Volume 19 ; 19 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1957 ; Pediatrics Volume 20 ; 20 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1958 ; Pediatrics Volume 21 ; 21 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1958 ; Pediatrics Volume 22 ; 22 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1959 ; Pediatrics Volume 23 ; 23 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1959 ; Pediatrics Volume 24 ; 24 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1960 ; Pediatrics Volume 25 ; 25 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1960 ; Pediatrics Volume 26 ; 26 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1961 ; Pediatrics Volume 27 ; 27 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1961 ; Pediatrics Volume 28 ; 28 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1962 ; Pediatrics Volume 29 ; 29 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1962 ; Pediatrics Volume 30 ; 30 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1963 ; Pediatrics Volume 31 ; 31 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1963 ; Pediatrics Volume 32 ; 32 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1964 ; Pediatrics Volume 33 ; 33 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1964 ; Pediatrics Volume 34 ; 34 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1965 ; Pediatrics Volume 35 ; 35 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1965 ; Pediatrics Volume 36 ; 36 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1966 ; Pediatrics Volume 37 ; 37 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1966 ; Pediatrics Volume 38 ; 38 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1967 ; Pediatrics Volume 39 ; 39 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1967 ; Pediatrics Volume 40 ; 40 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1968 ; Pediatrics Volume 41 ; 41 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1968 ; Pediatrics Volume 42 ; 42 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1969 ; Pediatrics Volume 43 ; 43 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1969 ; Pediatrics Volume 44 ; 44 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1970 ; Pediatrics Volume 45 ; 45 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1970 ; Pediatrics Volume 46 ; 46 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1971 ; Pediatrics Volume 47 ; 47 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1971 ; Pediatrics Volume 48 ; 48 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1972 ; Pediatrics Volume 49 ; 49 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1972 ; Pediatrics Volume 50 ; 50 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1973 ; Pediatrics Volume 51 ; 51 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1973 ; Pediatrics Volume 52 ; 52 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1974 ; Pediatrics Volume 53 ; 53 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1974 ; Pediatrics Volume 54 ; 54 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1975 ; Pediatrics Volume 55 ; 55 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1975 ; Pediatrics Volume 56 ; 56 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1976 ; Pediatrics Volume 57 ; 57 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1976 ; Pediatrics Volume 58 ; 58 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1977 ; Pediatrics Volume 59 ; 59 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1977 ; Pediatrics Volume 60 ; 60 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1978 ; Pediatrics Volume 61 ; 61 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1978 ; Pediatrics Volume 62 ; 62 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1979 ; Pediatrics Volume 63 ; 63 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1979 ; Pediatrics Volume 64 ; 64 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1980 ; Pediatrics Volume 65 ; 65 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1980 ; Pediatrics Volume 66 ; 66 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1981 ; Pediatrics Volume 67 ; 67 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1981 ; Pediatrics Volume 68 ; 68 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1982 ; Pediatrics Volume 69 ; 69 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1982 ; Pediatrics Volume 70 ; 70 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1983 ; Pediatrics Volume 71 ; 71 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1983 ; Pediatrics Volume 72 ; 72 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1984 ; Pediatrics Volume 73 ; 73 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1984 ; Pediatrics Volume 74 ; 74 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1985 ; Pediatrics Volume 75 ; 75 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1985 ; Pediatrics Volume 76 ; 76 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1986 ; Pediatrics Volume 77 ; 77 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1986 ; Pediatrics Volume 78 ; 78 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1987 ; Pediatrics Volume 79 ; 79 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1987 ; Pediatrics Volume 80 ; 80 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1988 ; Pediatrics Volume 81 ; 81 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1988 ; Pediatrics Volume 82 ; 82 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1989 ; Pediatrics Volume 83 ; 83 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1989 ; Pediatrics Volume 84 ; 84 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1990 ; Pediatrics Volume 85 ; 85 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1990 ; Pediatrics Volume 86 ; 86 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1991 ; Pediatrics Volume 87 ; 87 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1991 ; Pediatrics Volume 88 ; 88 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1992 ; Pediatrics Volume 89 ; 89 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1992 ; Pediatrics Volume 90 ; 90 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1993 ; Pediatrics Volume 91 ; 91 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1993 ; Pediatrics Volume 92 ; 92 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1994 ; Pediatrics Volume 93 ; 93 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1994 ; Pediatrics Volume 94 ; 94 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1995 ; Pediatrics Volume 95 ; 95 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1995 ; Pediatrics Volume 96 ; 96 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1996 ; Pediatrics Volume 97 ; 97 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1996 ; Pediatrics Volume 98 ; 98 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1997 ; Pediatrics Volume 99 ; 99 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1997 ; Pediatrics Volume 100 ; 100 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1998 ; Pediatrics Volume 101 ; 101 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1998 ; Pediatrics Volume 102 ; 102 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1999 ; Pediatrics Volume 103 ; 103 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1999 ; Pediatrics Volume 104 ; 104 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2000 ; Pediatrics Volume 105 ; 105 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2000 ; Pediatrics Volume 106 ; 106 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2001 ; Pediatrics Volume 107 ; 107 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2001 ; Pediatrics Volume 108 ; 108 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2002 ; Pediatrics Volume 109 ; 109 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2002 ; Pediatrics Volume 110 ; 110 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2003 ; Pediatrics Volume 111 ; 111 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2003 ; Pediatrics Volume 112 ; 112 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2004 ; Pediatrics Volume 113 ; 113 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2004 ; Pediatrics Volume 114 ; 114 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2005 ; Pediatrics Volume 115 ; 115 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2005 ; Pediatrics Volume 116 ; 116 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2006 ; Pediatrics Volume 117 ; 117 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2006 ; Pediatrics Volume 118 ; 118 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2007 ; Pediatrics Volume 119 ; 119 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2007 ; Pediatrics Volume 120 ; 120 ; >
+      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2008 ; Pediatrics Volume 121 ; 121 ; >
+      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2008 ; Pediatrics Volume 122 ; 122 ; >
+      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; Pediatrics Volume 123 ; 123 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2009 ; Pediatrics Volume 124 ; 124 ; >
+      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; Pediatrics Volume 125 ; 125 ; >
+      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; Pediatrics Volume 126 ; 126 ; >
+      au < ClockssHighWirePressH20Plugin ; frozen ; crawling ; 2011 ; Pediatrics Volume 127 ; 127 ; >
+      au < ClockssHighWirePressH20Plugin ; frozen ; crawling ; 2011 ; Pediatrics Volume 128 ; 128 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; Pediatrics Volume 129 ; 129 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; Pediatrics Volume 130 ; 130 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Pediatrics Volume 131 ; 131 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Pediatrics Volume 132 ; 132 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2014 ; Pediatrics Volume 133 ; 133 ; >
+      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2014 ; Pediatrics Volume 134 ; 134 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; exists ; 2015 ; Pediatrics Volume 135 ; 135 ; >
+      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; Pediatrics Volume 136 ; 136 ; >
+      au < ClockssHWDrupalPlugin ; expected ; exists ; 2016 ; Pediatrics Volume 137 ; 137 ; >
 
     }
   
@@ -395,9 +395,9 @@
       #plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
     
-      au < ClockssHighWirePlugin ; zapped ; finished ; 2008 ; Pediatrics in Review Volume 29 ; 29 >
-      au < ClockssHighWirePlugin ; zapped ; finished ; 2009 ; Pediatrics in Review Volume 30 ; 30 >
-      au < ClockssHighWirePlugin ; zapped ; finished ; 2010 ; Pediatrics in Review Volume 31 ; 31 >
+      au < ClockssHighWirePlugin ; zapped ; finished ; 2008 ; Pediatrics in Review Volume 29 ; 29 ; >
+      au < ClockssHighWirePlugin ; zapped ; finished ; 2009 ; Pediatrics in Review Volume 30 ; 30 ; >
+      au < ClockssHighWirePlugin ; zapped ; finished ; 2010 ; Pediatrics in Review Volume 31 ; 31 ; >
 
     }
 
@@ -405,43 +405,43 @@
     
       #plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1980 ; Pediatrics in Review Volume 1 ; 1 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1981 ; Pediatrics in Review Volume 2 ; 2 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1982 ; Pediatrics in Review Volume 3 ; 3 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1983 ; Pediatrics in Review Volume 4 ; 4 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1984 ; Pediatrics in Review Volume 5 ; 5 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1985 ; Pediatrics in Review Volume 6 ; 6 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1986 ; Pediatrics in Review Volume 7 ; 7 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1987 ; Pediatrics in Review Volume 8 ; 8 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1988 ; Pediatrics in Review Volume 9 ; 9 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1989 ; Pediatrics in Review Volume 10 ; 10 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1990 ; Pediatrics in Review Volume 11 ; 11 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1991 ; Pediatrics in Review Volume 12 ; 12 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1992 ; Pediatrics in Review Volume 13 ; 13 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1993 ; Pediatrics in Review Volume 14 ; 14 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1994 ; Pediatrics in Review Volume 15 ; 15 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1995 ; Pediatrics in Review Volume 16 ; 16 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1996 ; Pediatrics in Review Volume 17 ; 17 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1997 ; Pediatrics in Review Volume 18 ; 18 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1998 ; Pediatrics in Review Volume 19 ; 19 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1999 ; Pediatrics in Review Volume 20 ; 20 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2000 ; Pediatrics in Review Volume 21 ; 21 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2001 ; Pediatrics in Review Volume 22 ; 22 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2002 ; Pediatrics in Review Volume 23 ; 23 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2003 ; Pediatrics in Review Volume 24 ; 24 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2004 ; Pediatrics in Review Volume 25 ; 25 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2005 ; Pediatrics in Review Volume 26 ; 26 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2006 ; Pediatrics in Review Volume 27 ; 27 >
-      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2007 ; Pediatrics in Review Volume 28 ; 28 >
-      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2008 ; Pediatrics in Review Volume 29 ; 29 >
-      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; Pediatrics in Review Volume 30 ; 30 >
-      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; Pediatrics in Review Volume 31 ; 31 >
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Pediatrics in Review Volume 32 ; 32 >
-      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Pediatrics in Review Volume 33 ; 33 >
-      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; Pediatrics in Review Volume 34 ; 34 >
-      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2014 ; Pediatrics in Review Volume 35 ; 35 >
-      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; Pediatrics in Review Volume 36 ; 36 >
-      au < ClockssHWDrupalPlugin ; expected ; exists ; 2016 ; Pediatrics in Review Volume 37 ; 37 >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1980 ; Pediatrics in Review Volume 1 ; 1 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1981 ; Pediatrics in Review Volume 2 ; 2 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1982 ; Pediatrics in Review Volume 3 ; 3 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1983 ; Pediatrics in Review Volume 4 ; 4 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1984 ; Pediatrics in Review Volume 5 ; 5 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1985 ; Pediatrics in Review Volume 6 ; 6 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1986 ; Pediatrics in Review Volume 7 ; 7 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1987 ; Pediatrics in Review Volume 8 ; 8 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1988 ; Pediatrics in Review Volume 9 ; 9 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1989 ; Pediatrics in Review Volume 10 ; 10 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1990 ; Pediatrics in Review Volume 11 ; 11 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1991 ; Pediatrics in Review Volume 12 ; 12 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1992 ; Pediatrics in Review Volume 13 ; 13 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1993 ; Pediatrics in Review Volume 14 ; 14 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1994 ; Pediatrics in Review Volume 15 ; 15 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1995 ; Pediatrics in Review Volume 16 ; 16 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1996 ; Pediatrics in Review Volume 17 ; 17 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1997 ; Pediatrics in Review Volume 18 ; 18 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1998 ; Pediatrics in Review Volume 19 ; 19 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 1999 ; Pediatrics in Review Volume 20 ; 20 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2000 ; Pediatrics in Review Volume 21 ; 21 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2001 ; Pediatrics in Review Volume 22 ; 22 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2002 ; Pediatrics in Review Volume 23 ; 23 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2003 ; Pediatrics in Review Volume 24 ; 24 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2004 ; Pediatrics in Review Volume 25 ; 25 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2005 ; Pediatrics in Review Volume 26 ; 26 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2006 ; Pediatrics in Review Volume 27 ; 27 ; >
+      au < ClockssHWDrupalPlugin ; manifest ; exists ; 2007 ; Pediatrics in Review Volume 28 ; 28 ; >
+      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2008 ; Pediatrics in Review Volume 29 ; 29 ; >
+      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2009 ; Pediatrics in Review Volume 30 ; 30 ; >
+      au < ClockssHWDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; Pediatrics in Review Volume 31 ; 31 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Pediatrics in Review Volume 32 ; 32 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Pediatrics in Review Volume 33 ; 33 ; >
+      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; Pediatrics in Review Volume 34 ; 34 ; >
+      au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2014 ; Pediatrics in Review Volume 35 ; 35 ; >
+      au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; Pediatrics in Review Volume 36 ; 36 ; >
+      au < ClockssHWDrupalPlugin ; expected ; exists ; 2016 ; Pediatrics in Review Volume 37 ; 37 ; >
 
     }
   
@@ -459,24 +459,24 @@
     comment[0] = This is a serialized book. 
     comment[1] = Moving to Silverchair in 2014
 
-    #implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+    #implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
     #pluginPrefix = org.lockss.plugin.highwire.
     
     comment[online] = The 2012 Volume is located at aapredbook.aapublications.org, and other volumes will eventually move there.
     {
       param[base_url] = http://redbookarchive.aappublications.org/
 
-      au < ClockssHighWirePlugin ; down ; finished ; 2000 ; Red Book Online Volume 2000 ; 2000 >
-      au < ClockssHighWirePlugin ; down ; crawling ; 2003 ; Red Book Online Volume 2003 ; 2003 >
-      au < ClockssHighWirePlugin ; down ; crawling ; 2006 ; Red Book Online Volume 2006 ; 2006 >
-      au < ClockssHighWirePlugin ; down ; crawling ; 2009 ; Red Book Online Volume 2009 ; 2009 >
+      au < ClockssHighWirePlugin ; down ; finished ; 2000 ; Red Book Online Volume 2000 ; 2000 ; >
+      au < ClockssHighWirePlugin ; down ; crawling ; 2003 ; Red Book Online Volume 2003 ; 2003 ; >
+      au < ClockssHighWirePlugin ; down ; crawling ; 2006 ; Red Book Online Volume 2006 ; 2006 ; >
+      au < ClockssHighWirePlugin ; down ; crawling ; 2009 ; Red Book Online Volume 2009 ; 2009 ; >
     }
 
     {
       param[base_url] = http://aapredbook.aappublications.org/
       comment[moved] = moved to http://redbook.solutions.aap.org/
       
-      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; Red Book Online Volume 2012 ; 1 >
+      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; Red Book Online Volume 2012 ; 1 ; >
     }
 
   }

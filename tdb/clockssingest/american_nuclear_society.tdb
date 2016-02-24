@@ -6,7 +6,7 @@
     info[tester] = 8
   >
 
-  implicit < status ; status2 ; year ; name ; param[volume_name] >
+  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
   plugin = org.lockss.plugin.ans.ClockssAnsPlugin
   param[base_url] = http://www.ans.org/
   param[download_url] = http://epubs.ans.org/
@@ -21,15 +21,15 @@
 
       param[journal_id] = nse
       
-      au < exists ; exists ; 2014 ; Nuclear Science and Engineering Volume 176 ; 176 >
-      au < exists ; exists ; 2014 ; Nuclear Science and Engineering Volume 177 ; 177 >
-      au < exists ; exists ; 2014 ; Nuclear Science and Engineering Volume 178 ; 178 >
-      au < crawling ; exists ; 2015 ; Nuclear Science and Engineering Volume 179 ; 179 >
-      au < crawling ; exists ; 2015 ; Nuclear Science and Engineering Volume 180 ; 180 >
-      au < crawling ; exists ; 2015 ; Nuclear Science and Engineering Volume 181 ; 181 >
-      au < expected ; exists ; 2016 ; Nuclear Science and Engineering Volume 182 ; 182 >
-      au < expected ; exists ; 2016 ; Nuclear Science and Engineering Volume 183 ; 183 >
-      au < expected ; exists ; 2016 ; Nuclear Science and Engineering Volume 184 ; 184 >
+      au < exists ; exists ; 2014 ; Nuclear Science and Engineering Volume 176 ; 176 ; >
+      au < exists ; exists ; 2014 ; Nuclear Science and Engineering Volume 177 ; 177 ; >
+      au < exists ; exists ; 2014 ; Nuclear Science and Engineering Volume 178 ; 178 ; >
+      au < crawling ; exists ; 2015 ; Nuclear Science and Engineering Volume 179 ; 179 ; >
+      au < crawling ; exists ; 2015 ; Nuclear Science and Engineering Volume 180 ; 180 ; >
+      au < crawling ; exists ; 2015 ; Nuclear Science and Engineering Volume 181 ; 181 ; >
+      au < expected ; exists ; 2016 ; Nuclear Science and Engineering Volume 182 ; 182 ; >
+      au < expected ; exists ; 2016 ; Nuclear Science and Engineering Volume 183 ; 183 ; >
+      au < expected ; exists ; 2016 ; Nuclear Science and Engineering Volume 184 ; 184 ; >
 
 
 
@@ -44,18 +44,18 @@
 
       param[journal_id] = nt
       
-      au < exists ; exists ; 2014 ; Nuclear Technology Volume 185 ; 185 >
-      au < exists ; exists ; 2014 ; Nuclear Technology Volume 186 ; 186 >
-      au < exists ; exists ; 2014 ; Nuclear Technology Volume 187 ; 187 >
-      au < exists ; exists ; 2014 ; Nuclear Technology Volume 188 ; 188 >
-      au < crawling ; exists ; 2015 ; Nuclear Technology Volume 189 ; 189 >
-      au < crawling ; exists ; 2015 ; Nuclear Technology Volume 190 ; 190 >
-      au < crawling ; exists ; 2015 ; Nuclear Technology Volume 191 ; 191 >
-      au < crawling ; exists ; 2015 ; Nuclear Technology Volume 192 ; 192 >
-      au < exists ; exists ; 2016 ; Nuclear Technology Volume 193 ; 193 >
-      au < expected ; exists ; 2016 ; Nuclear Technology Volume 194 ; 194 >
-      au < expected ; exists ; 2016 ; Nuclear Technology Volume 195 ; 195 >
-      au < expected ; exists ; 2016 ; Nuclear Technology Volume 196 ; 196 >
+      au < exists ; exists ; 2014 ; Nuclear Technology Volume 185 ; 185 ; >
+      au < exists ; exists ; 2014 ; Nuclear Technology Volume 186 ; 186 ; >
+      au < exists ; exists ; 2014 ; Nuclear Technology Volume 187 ; 187 ; >
+      au < exists ; exists ; 2014 ; Nuclear Technology Volume 188 ; 188 ; >
+      au < crawling ; exists ; 2015 ; Nuclear Technology Volume 189 ; 189 ; >
+      au < crawling ; exists ; 2015 ; Nuclear Technology Volume 190 ; 190 ; >
+      au < crawling ; exists ; 2015 ; Nuclear Technology Volume 191 ; 191 ; >
+      au < crawling ; exists ; 2015 ; Nuclear Technology Volume 192 ; 192 ; >
+      au < exists ; exists ; 2016 ; Nuclear Technology Volume 193 ; 193 ; >
+      au < expected ; exists ; 2016 ; Nuclear Technology Volume 194 ; 194 ; >
+      au < expected ; exists ; 2016 ; Nuclear Technology Volume 195 ; 195 ; >
+      au < expected ; exists ; 2016 ; Nuclear Technology Volume 196 ; 196 ; >
 
     }
 
@@ -68,12 +68,12 @@
 
       param[journal_id] = fst
       
-      au < exists ; exists ; 2014 ; Fusion Science and Technology Volume 65 ; 65 >
-      au < exists ; exists ; 2014 ; Fusion Science and Technology Volume 66 ; 66 >
-      au < crawling ; exists ; 2015 ; Fusion Science and Technology Volume 67 ; 67 >
-      au < crawling ; exists ; 2015 ; Fusion Science and Technology Volume 68 ; 68 >
-      au < expected ; exists ; 2016 ; Fusion Science and Technology Volume 69 ; 69 >
-      au < expected ; exists ; 2016 ; Fusion Science and Technology Volume 70 ; 70 >
+      au < exists ; exists ; 2014 ; Fusion Science and Technology Volume 65 ; 65 ; >
+      au < exists ; exists ; 2014 ; Fusion Science and Technology Volume 66 ; 66 ; >
+      au < crawling ; exists ; 2015 ; Fusion Science and Technology Volume 67 ; 67 ; >
+      au < crawling ; exists ; 2015 ; Fusion Science and Technology Volume 68 ; 68 ; >
+      au < expected ; exists ; 2016 ; Fusion Science and Technology Volume 69 ; 69 ; >
+      au < expected ; exists ; 2016 ; Fusion Science and Technology Volume 70 ; 70 ; >
 
     }
 

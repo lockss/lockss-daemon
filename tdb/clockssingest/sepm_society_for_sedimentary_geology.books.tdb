@@ -6,7 +6,7 @@
   >
 
   plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-  implicit < status ; status2 ; year ; isbn ; name ; param[volume_name] >
+  implicit < status ; status2 ; year ; isbn ; name ; param[volume_name] ; hidden[proxy] >
   
   comment[lockss] = HighWire says that they don't have a method for providing access to books. No ETA for fix. See PD-534, RT6183.
 
@@ -20,109 +20,109 @@
 
       param[base_url] = http://sp.sepmonline.org/
 
-      au < exists ; exists ; 1929 ; 978-1-56576-202-2 ; Bibliography of Otoliths Volume 1 ; 1 >
-      au < exists ; exists ; 1951 ; 978-1-56576-203-9 ; Turbidity Currents and the Transportation of Coarse Sediments to Deep Water Volume 2 ; 2 >
-      au < exists ; exists ; 1955 ; 978-1-56576-204-6 ; Finding Ancient Shorelines Volume 3 ; 3 >
-      au < exists ; exists ; 1955 ; 978-1-56576-205-3 ; Recent Marine Sediments Volume 4 ; 4 >
-      au < exists ; exists ; 1957 ; 978-1-56576-206-0 ; Regional Aspects of Carbonate Deposition Volume 5 ; 5 >
-      au < exists ; exists ; 1958 ; 978-1-56576-207-7 ; Journal of Sedimentary Petrology Index Volume 6 ; 6 >
-      au < exists ; exists ; 1959 ; 978-1-56576-208-4 ; Silica in Sediments Volume 7 ; 7 >
-      au < exists ; exists ; 1960 ; 978-1-56576-209-1 ; Journal of Paleontology Index  Volume 8 ; 8 >
-      au < exists ; exists ; 1960 ; 978-1-56576-210-7 ; Taxonomic Notes on the Species Figured by H. B. Brady in His Report of the Foraminifera Dredged by H. M. S. Challenger During the Years 1873-1876 Volume 9 ; 9 >
-      au < exists ; exists ; 1963 ; 978-1-56576-196-4 ; Polar Wandering and Continental Drift Volume 10 ; 10 >
-      au < exists ; exists ; 1964 ; 978-1-56576-141-4 ; Palynology in Oil Exploration Volume 11 ; 11 >
-      au < exists ; exists ; 1960 ; 978-1-56576-142-1 ; Primary Sedimentary Structures and Their Hydrodynamic Interpretation Volume 12 ; 12 >
-      au < exists ; exists ; 1995 ; 978-1-56576-143-8 ; Dolomitization and Limestone Diagenesis Volume 13 ; 13 >
-      au < exists ; exists ; 1969 ; 978-1-56576-144-5 ; Depositional Environments in Carbonate Rocks Volume 14 ; 14 >
-      au < exists ; exists ; 1970 ; 978-1-56576-145-2 ; Deltaic Sedimentation - Modern and Ancient Volume 15 ; 15 >
-      au < exists ; exists ; 1972 ; 978-1-56576-146-9 ; Recognition of Ancient Sedimentary Environments Volume 16 ; 16 >
-      au < exists ; exists ; 1972 ; 978-1-56576-147-6 ; Sedimentation in the World Ocean: With Emphasis on the Nature,Distribution and Behavior of Marine Suspensions Volume 17 ; 17 >
-      au < exists ; exists ; 1974 ; 978-1-56576-148-3 ; Reefs in Time and Space: Selected Examples for the Recent and Ancient Volume 18 ; 18 >
-      au < exists ; exists ; 1974 ; 978-1-56576-149-0 ; Modern and Ancient Geosynclinal Sedimentation Volume 19 ; 19 >
-      au < exists ; exists ; 1974 ; 978-1-56576-150-6 ; Studies in Paleo-Oceanography Volume 20 ; 20 >
-      au < exists ; exists ; 1974 ; 978-1-56576-151-3 ; Paleogeographic Provinces and Provinciality Volume 21 ; 21 >
-      au < exists ; exists ; 1974 ; 978-1-56576-152-0 ; Tectonics and Sedimentation Volume 22 ; 22 >
-      au < exists ; exists ; 1975 ; 978-1-56576-153-7 ; Glaciofluvial and Glaciolacustrine Sedimentation Volume 23 ; 23 >
-      au < exists ; exists ; 1987 ; 978-1-56576-154-4 ; Beach and Nearshore Sedimentation Volume 24 ; 24 >
-      au < exists ; exists ; 1977 ; 978-1-56576-155-1 ; Deep-Water Carbonate Environments Volume 25 ; 25 >
-      au < exists ; exists ; 1979 ; 978-1-56576-156-8 ; Aspects of Diagenesis Volume 26 ; 26 >
-      au < exists ; exists ; 1979 ; 978-1-56576-157-5 ; Geology of Continental Slopes Volume 27 ; 27 >
-      au < exists ; exists ; 1980 ; 978-1-56576-158-2 ; Concepts and Models of Dolomitization Volume 28 ; 28 >
-      au < exists ; exists ; 1980 ; 978-1-56576-159-9 ; Marine Phosphorites Volume 29 ; 29 >
-      au < exists ; exists ; 1981 ; 978-1-56576-160-5 ; European Fossil Reef Models Volume 30 ; 30 >
-      au < exists ; exists ; 1981 ; 978-1-56576-161-2 ; Recent and Ancient Nonmarine Depositional Environments: Models for Exploration Volume 31 ; 31 >
-      au < exists ; exists ; 1981 ; 978-1-56576-162-9 ; The Deep Sea Drilling Project: A Decade of Progress Volume 32 ; 32 >
-      au < exists ; exists ; 1983 ; 978-1-56576-163-6 ; The Shelfbreak: Critical Interface on Continental Margins Volume 33 ; 33 >
-      au < exists ; exists ; 1984 ; 978-1-56576-164-3 ; Siliciclastic Shelf Sediments Volume 34 ; 34 >
-      au < exists ; exists ; 1985 ; 978-1-56576-165-0 ; Biogenic Structures: Their Use in Interpreting Depositional Systems Volume 35 ; 35 >
-      au < exists ; exists ; 1985 ; 978-1-56576-166-7 ; Carbonate Cements Volume 36 ; 36 >
-      au < exists ; exists ; 1986 ; 978-1-56576-167-4 ; Strike-Slip Deformation, Basin Formation and Sedimentation Volume 37 ; 37 >
-      au < exists ; exists ; 1986 ; 978-1-56576-104-9 ; Roles of Organic Matter in Sediment Diagenesis Volume 38 ; 38 >
-      au < exists ; exists ; 1987 ; 978-1-56576-096-7 ; Recent Development in Fluvial Sedimentology Volume 39 ; 39 >
-      au < exists ; exists ; 1987 ; 978-1-56576-168-1 ; Reservoir Sedimentology Volume 40 ; 40 >
-      au < exists ; exists ; 1988 ; 978-1-56576-095-0 ; Sea-Level Fluctuation and Coastal Evolution Volume 41 ; 41 >
-      au < exists ; exists ; 1989 ; 978-1-56576-089-9 ; Sea-Level Changes Volume 42 ; 42 >
-      au < exists ; exists ; 1989 ; 978-1-56576-169-8 ; Sedimentology and Geochemistry of Dolostones Volume 43 ; 43 >
-      au < exists ; exists ; 1989 ; 978-1-56576-105-6 ; Controls on Carbonate Platform and Basin Development Volume 44 ; 44 >
-      au < exists ; exists ; 1991 ; 978-1-56576-170-4 ; Sedimentation in Volcanic Settings Volume 45 ; 45 >
-      au < exists ; exists ; 1991 ; 978-1-56576-171-1 ; From Shoreline to Abyss: Contributions to Marine Geology in Honor of Francis Parker Shepard Volume 46 ; 46 >
-      au < exists ; exists ; 1992 ; 978-1-56576-172-8 ; Origin, Diagenesis and Petrophysics of Clay Minerals in Sandstone Volume 47 ; 47 >
-      au < exists ; exists ; 1993 ; 978-1-56576-173-5 ; Quaternary Coasts of the United States Volume 48 ; 48 >
-      au < exists ; exists ; 1991 ; 978-1-56576-174-2 ; Applications of Paleomagnetism to Sedimentary Geology Volume 49 ; 49 >
-      au < exists ; exists ; 1994 ; 978-1-56576-175-9 ; Sedimentology and Geochemistry of Modern and Ancient Saline Lakes Volume 50 ; 50 >
-      au < exists ; exists ; 1994 ; 978-1-56576-090-5 ; Incised-Valley Systems: Origin and Sedimentary Sequences Volume 51 ; 51 >
-      au < exists ; exists ; 1995 ; 978-1-56576-176-6 ; Stratigraphic Evolution of Foreland Basins Volume 52 ; 52 >
-      au < exists ; exists ; 1995 ; 978-1-56576-177-3 ; Graphic Correlation Volume 53 ; 53 >
-      au < exists ; exists ; 1995 ; 978-1-56576-091-2 ; Geochronology, Time Scales and Global Stratigraphic Correlation Volume 54 ; 54 >
-      au < exists ; exists ; 1996 ; 978-1-56576-178-0 ; Siliciclastic Diagenesis and Fluid Flow: Concepts and Applications Volume 55 ; 55 >
-      au < exists ; exists ; 1997 ; 978-1-56576-179-7 ; Cool-Water Carbonates Volume 56 ; 56 >
-      au < exists ; exists ; 1997 ; 978-1-56576-180-3 ; Basin-Wide Diagenetic Patterns: Integrated Petrologic, Geochemical and Hydrologic Considerations Volume 57 ; 57 >
-      au < exists ; exists ; 1998 ; 978-1-56576-181-0 ; Paleogeographic Evolution and Non-Glacial Eustacy: Northern South America Volume 58 ; 58 >
-      au < exists ; exists ; 1998 ; 978-1-56576-182-7 ; Relative Role of Eustasy, Climate, and Tectonism in Continental Rocks Volume 59 ; 59 >
-      au < exists ; exists ; 1999 ; 978-1-56576-093-6 ; Mesozoic and Cenozoic Sequence Stratigraphy of European Basins Volume 60 ; 60 >
-      au < exists ; exists ; 1999 ; 978-1-56576-183-4 ; Tidalites: Processes and Products Volume 61 ; 61 >
-      au < exists ; exists ; 1999 ; 978-1-56576-184-1 ; Numerical Experiments in Stratigraphy: Recent Advances in Stratigraphic and Sedimentologic Computer Simulations Volume 62 ; 62 >
-      au < exists ; exists ; 1999 ; 978-1-56576-185-8 ; Advances in Carbonate Sequence Stratigraphy: Application to Reservoirs, Outcrops and Models Volume 63 ; 63 >
-      au < exists ; exists ; 1999 ; 978-1-56576-186-5 ; Isolated Shallow Marine Sand Bodies: Sequence Stratigraphic Analysis and Sedimentologic Interpretation Volume 64 ; 64 >
-      au < exists ; exists ; 1999 ; 978-1-56576-187-2 ; Geologic Framework of the Capitan Reef Volume 65 ; 65 >
-      au < exists ; exists ; 2000 ; 978-1-56576-188-9 ; Marine Authigenesis: From Global to Microbial Volume 66 ; 66 >
-      au < exists ; exists ; 2000 ; 978-1-56576-189-6 ; Carbonate Sedimentation and Diagenesis in the Evolving Precambrian World Volume 67 ; 67 >
-      au < exists ; exists ; 2001 ; 978-1-56576-191-9 ; Middle East Models of Jurassic/Cretaceous Carbonate Systems Volume 69 ; 69 >
-      au < exists ; exists ; 2001 ; 978-1-56576-192-6 ; Subsurface Geology of a Prograding Carbonate Platform Margin, Great Bahama Bank: Results of the Bahamas Drilling Project Volume 70 ; 70 >
-      au < exists ; exists ; 2001 ; 978-1-56576-193-3 ; Modern and Ancient Carbonate Eolianites: Sedimentology, Sequence Stratigraphy and Diagenesis Volume 71 ; 71 >
-      au < exists ; exists ; 2002 ; 978-1-56576-194-0 ; Phanerozoic Reef Patterns Volume 72 ; 72 >
-      au < exists ; exists ; 2002 ; 978-1-56576-195-7 ; Sedimentation in Continental Rifts Volume 73 ; 73 >
-      au < exists ; exists ; 2003 ; 978-1-56576-211-4 ; Paleozoic Carbonates of the Commonwealth of Independent States (CIS): Subsurface Reservoirs and Outcrop Analogs Volume 74 ; 74 >
-      au < exists ; exists ; 2003 ; 978-1-56576-212-1 ; Micropaleontological Proxies for Sea-Level Change and Stratigraphic Discontinuities Volume 75 ; 75 >
-      au < exists ; exists ; 2003 ; 978-1-56576-213-8 ; Tropical Deltas of Southeast Asia: Sedimentology, Stratigraphy and Petroleum Geology Volume 76 ; 76 >
-      au < exists ; exists ; 2003 ; 978-1-56576-214-5 ; Climate Controls on Stratigraphy Volume 77 ; 77 >
-      au < exists ; exists ; 2003 ; 978-1-56576-334-0 ; Permo-Carboniferous Carbonate Platforms and Reefs Volume 78 ; 78 >
-      au < exists ; exists ; 2004 ; 978-1-56576-215-2 ; Late Quaternary Stratigraphic Evolution of the Northern Gulf of Mexico Margin Volume 79 ; 79 >
-      au < exists ; exists ; 2004 ; 978-1-56576-216-9 ; Aquifer Characterization Volume 80 ; 80 >
-      au < exists ; exists ; 2004 ; 978-1-56576-217-6 ; Cyclostratigraphy: Approaches and Case Histories Volume 81 ; 81 >
-      au < exists ; exists ; 2005 ; 978-1-56576-218-3 ; The Deposition of Organic-Carbon-Rich Sediments: Models, Mechanisms and Consequences Volume 82 ; 82 >
-      au < exists ; exists ; 2005 ; 978-1-56576-219-0 ; River Deltas: Concepts, Models and Examples Volume 83 ; 83 >
-      au < exists ; exists ; 2006 ; 978-1-56576-121-6 ; Facies Models Revisited Volume 84 ; 84 >
-      au < exists ; exists ; 2006 ; 978-1-56576-220-6 ; Incised Valleys in Time and Space Volume 85 ; 85 >
-      au < exists ; exists ; 2007 ; 978-1-56576-294-7 ; Proterozoic Geology of Western North America and Siberia Volume 86 ; 86 >
-      au < exists ; exists ; 2007 ; 978-1-56576-295-4 ; Cretaceous Rudists and Carbonate Platforms: Environmental Feedback Volume 87 ; 87 >
-      au < exists ; exists ; 2007 ; 978-1-56576-290-9 ; Sediment-Organism Interactions: A Multifaceted Ichnology Volume 88 ; 88 >
-      au < exists ; exists ; 2008 ; 978-1-56576-224-4 ; Controls on Carbonate Platform and Reef Development Volume 89 ; 89 >
-      au < exists ; exists ; 2008 ; 978-1-56576-318-0 ; Recent Advances in Models of Siliciclastic Shallow-Marine Stratigraphy Volume 90 ; 90 >
-      au < exists ; exists ; 2009 ; 978-1-56576-296-1 ; Cretaceous Oceanic Red Beds: Stratigraphy, Composition, Origins, and Paleoceanographic and Paleoclimatic Significance Volume 91 ; 91 >
-      au < exists ; exists ; 2009 ; 978-1-56576-200-8 ; External Controls on Deep-Water Depositional Systems Volume 92 ; 92 >
-      au < exists ; exists ; 2009 ; 978-1-56576-297-8 ; Geologic Problem Solving with Microfossils: A Volume in Honor of Garry D. Jones Volume 93 ; 93 >
-      au < exists ; exists ; 2010 ; 978-1-56576-298-5 ; Application of Modern Stratigraphic Techniques: Theory and Case Histories Volume 94 ; 94 >
-      au < exists ; exists ; 2010 ; 978-1-56576-299-2 ; Cenozoic Carbonate Systems of Australasia Volume 95 ; 95 >
-      au < exists ; exists ; 2011 ; 978-1-56576-286-2 ; Mass-Transport Deposits in Deepwater Settings Volume 96 ; 96 >
-      au < exists ; exists ; 2011 ; 978-1-56576-307-4 ; From River to Rock Record: The Preservation of Fluvial Sediments and Their Subsequent Interpretation Volume 97 ; 97 >
-      au < exists ; exists ; 2011 ; 978-1-56576-291-6 ; The Permian Rotliegend of the Netherlands Volume 98 ; 98 >
-      au < exists ; exists ; 2012 ; 978-1-56576-304-3 ; Application of the Principles of Seismic Geomorphology Volume 99 ; 99 >
-      au < exists ; exists ; 2011 ; 978-1-56576-309-8 ; The End-Cretaceous Mass Extinction and the Chicxulub Impact in Texas Volume 100 ; 100 >
-      au < exists ; exists ; 2012 ; 978-1-56576-283-1 ; Microbial Mats in Siliciclastic Depositional Systems Volume 101 ; 101 >
-      au < exists ; exists ; 2012 ; 978-1-56576-313-5 ; Sedimentary Geology of Mars Volume 102 ; 102 >
-      au < exists ; exists ; 2012 ; 978-1-56576-317-3 ; Analyzing Thermal Histories of Sedimentary Basins: Methods and Case Studies Volume 103 ; 103 >
-      au < exists ; exists ; 2013 ; 978-1-56576-303-6 ; New Frontiers in Paleopedology and Terrestrial Paleoclimatology: Paleosols and Soil Surface Analog Systems Volume 104 ; 104 >
+      au < exists ; exists ; 1929 ; 978-1-56576-202-2 ; Bibliography of Otoliths Volume 1 ; 1 ; >
+      au < exists ; exists ; 1951 ; 978-1-56576-203-9 ; Turbidity Currents and the Transportation of Coarse Sediments to Deep Water Volume 2 ; 2 ; >
+      au < exists ; exists ; 1955 ; 978-1-56576-204-6 ; Finding Ancient Shorelines Volume 3 ; 3 ; >
+      au < exists ; exists ; 1955 ; 978-1-56576-205-3 ; Recent Marine Sediments Volume 4 ; 4 ; >
+      au < exists ; exists ; 1957 ; 978-1-56576-206-0 ; Regional Aspects of Carbonate Deposition Volume 5 ; 5 ; >
+      au < exists ; exists ; 1958 ; 978-1-56576-207-7 ; Journal of Sedimentary Petrology Index Volume 6 ; 6 ; >
+      au < exists ; exists ; 1959 ; 978-1-56576-208-4 ; Silica in Sediments Volume 7 ; 7 ; >
+      au < exists ; exists ; 1960 ; 978-1-56576-209-1 ; Journal of Paleontology Index  Volume 8 ; 8 ; >
+      au < exists ; exists ; 1960 ; 978-1-56576-210-7 ; Taxonomic Notes on the Species Figured by H. B. Brady in His Report of the Foraminifera Dredged by H. M. S. Challenger During the Years 1873-1876 Volume 9 ; 9 ; >
+      au < exists ; exists ; 1963 ; 978-1-56576-196-4 ; Polar Wandering and Continental Drift Volume 10 ; 10 ; >
+      au < exists ; exists ; 1964 ; 978-1-56576-141-4 ; Palynology in Oil Exploration Volume 11 ; 11 ; >
+      au < exists ; exists ; 1960 ; 978-1-56576-142-1 ; Primary Sedimentary Structures and Their Hydrodynamic Interpretation Volume 12 ; 12 ; >
+      au < exists ; exists ; 1995 ; 978-1-56576-143-8 ; Dolomitization and Limestone Diagenesis Volume 13 ; 13 ; >
+      au < exists ; exists ; 1969 ; 978-1-56576-144-5 ; Depositional Environments in Carbonate Rocks Volume 14 ; 14 ; >
+      au < exists ; exists ; 1970 ; 978-1-56576-145-2 ; Deltaic Sedimentation - Modern and Ancient Volume 15 ; 15 ; >
+      au < exists ; exists ; 1972 ; 978-1-56576-146-9 ; Recognition of Ancient Sedimentary Environments Volume 16 ; 16 ; >
+      au < exists ; exists ; 1972 ; 978-1-56576-147-6 ; Sedimentation in the World Ocean: With Emphasis on the Nature,Distribution and Behavior of Marine Suspensions Volume 17 ; 17 ; >
+      au < exists ; exists ; 1974 ; 978-1-56576-148-3 ; Reefs in Time and Space: Selected Examples for the Recent and Ancient Volume 18 ; 18 ; >
+      au < exists ; exists ; 1974 ; 978-1-56576-149-0 ; Modern and Ancient Geosynclinal Sedimentation Volume 19 ; 19 ; >
+      au < exists ; exists ; 1974 ; 978-1-56576-150-6 ; Studies in Paleo-Oceanography Volume 20 ; 20 ; >
+      au < exists ; exists ; 1974 ; 978-1-56576-151-3 ; Paleogeographic Provinces and Provinciality Volume 21 ; 21 ; >
+      au < exists ; exists ; 1974 ; 978-1-56576-152-0 ; Tectonics and Sedimentation Volume 22 ; 22 ; >
+      au < exists ; exists ; 1975 ; 978-1-56576-153-7 ; Glaciofluvial and Glaciolacustrine Sedimentation Volume 23 ; 23 ; >
+      au < exists ; exists ; 1987 ; 978-1-56576-154-4 ; Beach and Nearshore Sedimentation Volume 24 ; 24 ; >
+      au < exists ; exists ; 1977 ; 978-1-56576-155-1 ; Deep-Water Carbonate Environments Volume 25 ; 25 ; >
+      au < exists ; exists ; 1979 ; 978-1-56576-156-8 ; Aspects of Diagenesis Volume 26 ; 26 ; >
+      au < exists ; exists ; 1979 ; 978-1-56576-157-5 ; Geology of Continental Slopes Volume 27 ; 27 ; >
+      au < exists ; exists ; 1980 ; 978-1-56576-158-2 ; Concepts and Models of Dolomitization Volume 28 ; 28 ; >
+      au < exists ; exists ; 1980 ; 978-1-56576-159-9 ; Marine Phosphorites Volume 29 ; 29 ; >
+      au < exists ; exists ; 1981 ; 978-1-56576-160-5 ; European Fossil Reef Models Volume 30 ; 30 ; >
+      au < exists ; exists ; 1981 ; 978-1-56576-161-2 ; Recent and Ancient Nonmarine Depositional Environments: Models for Exploration Volume 31 ; 31 ; >
+      au < exists ; exists ; 1981 ; 978-1-56576-162-9 ; The Deep Sea Drilling Project: A Decade of Progress Volume 32 ; 32 ; >
+      au < exists ; exists ; 1983 ; 978-1-56576-163-6 ; The Shelfbreak: Critical Interface on Continental Margins Volume 33 ; 33 ; >
+      au < exists ; exists ; 1984 ; 978-1-56576-164-3 ; Siliciclastic Shelf Sediments Volume 34 ; 34 ; >
+      au < exists ; exists ; 1985 ; 978-1-56576-165-0 ; Biogenic Structures: Their Use in Interpreting Depositional Systems Volume 35 ; 35 ; >
+      au < exists ; exists ; 1985 ; 978-1-56576-166-7 ; Carbonate Cements Volume 36 ; 36 ; >
+      au < exists ; exists ; 1986 ; 978-1-56576-167-4 ; Strike-Slip Deformation, Basin Formation and Sedimentation Volume 37 ; 37 ; >
+      au < exists ; exists ; 1986 ; 978-1-56576-104-9 ; Roles of Organic Matter in Sediment Diagenesis Volume 38 ; 38 ; >
+      au < exists ; exists ; 1987 ; 978-1-56576-096-7 ; Recent Development in Fluvial Sedimentology Volume 39 ; 39 ; >
+      au < exists ; exists ; 1987 ; 978-1-56576-168-1 ; Reservoir Sedimentology Volume 40 ; 40 ; >
+      au < exists ; exists ; 1988 ; 978-1-56576-095-0 ; Sea-Level Fluctuation and Coastal Evolution Volume 41 ; 41 ; >
+      au < exists ; exists ; 1989 ; 978-1-56576-089-9 ; Sea-Level Changes Volume 42 ; 42 ; >
+      au < exists ; exists ; 1989 ; 978-1-56576-169-8 ; Sedimentology and Geochemistry of Dolostones Volume 43 ; 43 ; >
+      au < exists ; exists ; 1989 ; 978-1-56576-105-6 ; Controls on Carbonate Platform and Basin Development Volume 44 ; 44 ; >
+      au < exists ; exists ; 1991 ; 978-1-56576-170-4 ; Sedimentation in Volcanic Settings Volume 45 ; 45 ; >
+      au < exists ; exists ; 1991 ; 978-1-56576-171-1 ; From Shoreline to Abyss: Contributions to Marine Geology in Honor of Francis Parker Shepard Volume 46 ; 46 ; >
+      au < exists ; exists ; 1992 ; 978-1-56576-172-8 ; Origin, Diagenesis and Petrophysics of Clay Minerals in Sandstone Volume 47 ; 47 ; >
+      au < exists ; exists ; 1993 ; 978-1-56576-173-5 ; Quaternary Coasts of the United States Volume 48 ; 48 ; >
+      au < exists ; exists ; 1991 ; 978-1-56576-174-2 ; Applications of Paleomagnetism to Sedimentary Geology Volume 49 ; 49 ; >
+      au < exists ; exists ; 1994 ; 978-1-56576-175-9 ; Sedimentology and Geochemistry of Modern and Ancient Saline Lakes Volume 50 ; 50 ; >
+      au < exists ; exists ; 1994 ; 978-1-56576-090-5 ; Incised-Valley Systems: Origin and Sedimentary Sequences Volume 51 ; 51 ; >
+      au < exists ; exists ; 1995 ; 978-1-56576-176-6 ; Stratigraphic Evolution of Foreland Basins Volume 52 ; 52 ; >
+      au < exists ; exists ; 1995 ; 978-1-56576-177-3 ; Graphic Correlation Volume 53 ; 53 ; >
+      au < exists ; exists ; 1995 ; 978-1-56576-091-2 ; Geochronology, Time Scales and Global Stratigraphic Correlation Volume 54 ; 54 ; >
+      au < exists ; exists ; 1996 ; 978-1-56576-178-0 ; Siliciclastic Diagenesis and Fluid Flow: Concepts and Applications Volume 55 ; 55 ; >
+      au < exists ; exists ; 1997 ; 978-1-56576-179-7 ; Cool-Water Carbonates Volume 56 ; 56 ; >
+      au < exists ; exists ; 1997 ; 978-1-56576-180-3 ; Basin-Wide Diagenetic Patterns: Integrated Petrologic, Geochemical and Hydrologic Considerations Volume 57 ; 57 ; >
+      au < exists ; exists ; 1998 ; 978-1-56576-181-0 ; Paleogeographic Evolution and Non-Glacial Eustacy: Northern South America Volume 58 ; 58 ; >
+      au < exists ; exists ; 1998 ; 978-1-56576-182-7 ; Relative Role of Eustasy, Climate, and Tectonism in Continental Rocks Volume 59 ; 59 ; >
+      au < exists ; exists ; 1999 ; 978-1-56576-093-6 ; Mesozoic and Cenozoic Sequence Stratigraphy of European Basins Volume 60 ; 60 ; >
+      au < exists ; exists ; 1999 ; 978-1-56576-183-4 ; Tidalites: Processes and Products Volume 61 ; 61 ; >
+      au < exists ; exists ; 1999 ; 978-1-56576-184-1 ; Numerical Experiments in Stratigraphy: Recent Advances in Stratigraphic and Sedimentologic Computer Simulations Volume 62 ; 62 ; >
+      au < exists ; exists ; 1999 ; 978-1-56576-185-8 ; Advances in Carbonate Sequence Stratigraphy: Application to Reservoirs, Outcrops and Models Volume 63 ; 63 ; >
+      au < exists ; exists ; 1999 ; 978-1-56576-186-5 ; Isolated Shallow Marine Sand Bodies: Sequence Stratigraphic Analysis and Sedimentologic Interpretation Volume 64 ; 64 ; >
+      au < exists ; exists ; 1999 ; 978-1-56576-187-2 ; Geologic Framework of the Capitan Reef Volume 65 ; 65 ; >
+      au < exists ; exists ; 2000 ; 978-1-56576-188-9 ; Marine Authigenesis: From Global to Microbial Volume 66 ; 66 ; >
+      au < exists ; exists ; 2000 ; 978-1-56576-189-6 ; Carbonate Sedimentation and Diagenesis in the Evolving Precambrian World Volume 67 ; 67 ; >
+      au < exists ; exists ; 2001 ; 978-1-56576-191-9 ; Middle East Models of Jurassic/Cretaceous Carbonate Systems Volume 69 ; 69 ; >
+      au < exists ; exists ; 2001 ; 978-1-56576-192-6 ; Subsurface Geology of a Prograding Carbonate Platform Margin, Great Bahama Bank: Results of the Bahamas Drilling Project Volume 70 ; 70 ; >
+      au < exists ; exists ; 2001 ; 978-1-56576-193-3 ; Modern and Ancient Carbonate Eolianites: Sedimentology, Sequence Stratigraphy and Diagenesis Volume 71 ; 71 ; >
+      au < exists ; exists ; 2002 ; 978-1-56576-194-0 ; Phanerozoic Reef Patterns Volume 72 ; 72 ; >
+      au < exists ; exists ; 2002 ; 978-1-56576-195-7 ; Sedimentation in Continental Rifts Volume 73 ; 73 ; >
+      au < exists ; exists ; 2003 ; 978-1-56576-211-4 ; Paleozoic Carbonates of the Commonwealth of Independent States (CIS): Subsurface Reservoirs and Outcrop Analogs Volume 74 ; 74 ; >
+      au < exists ; exists ; 2003 ; 978-1-56576-212-1 ; Micropaleontological Proxies for Sea-Level Change and Stratigraphic Discontinuities Volume 75 ; 75 ; >
+      au < exists ; exists ; 2003 ; 978-1-56576-213-8 ; Tropical Deltas of Southeast Asia: Sedimentology, Stratigraphy and Petroleum Geology Volume 76 ; 76 ; >
+      au < exists ; exists ; 2003 ; 978-1-56576-214-5 ; Climate Controls on Stratigraphy Volume 77 ; 77 ; >
+      au < exists ; exists ; 2003 ; 978-1-56576-334-0 ; Permo-Carboniferous Carbonate Platforms and Reefs Volume 78 ; 78 ; >
+      au < exists ; exists ; 2004 ; 978-1-56576-215-2 ; Late Quaternary Stratigraphic Evolution of the Northern Gulf of Mexico Margin Volume 79 ; 79 ; >
+      au < exists ; exists ; 2004 ; 978-1-56576-216-9 ; Aquifer Characterization Volume 80 ; 80 ; >
+      au < exists ; exists ; 2004 ; 978-1-56576-217-6 ; Cyclostratigraphy: Approaches and Case Histories Volume 81 ; 81 ; >
+      au < exists ; exists ; 2005 ; 978-1-56576-218-3 ; The Deposition of Organic-Carbon-Rich Sediments: Models, Mechanisms and Consequences Volume 82 ; 82 ; >
+      au < exists ; exists ; 2005 ; 978-1-56576-219-0 ; River Deltas: Concepts, Models and Examples Volume 83 ; 83 ; >
+      au < exists ; exists ; 2006 ; 978-1-56576-121-6 ; Facies Models Revisited Volume 84 ; 84 ; >
+      au < exists ; exists ; 2006 ; 978-1-56576-220-6 ; Incised Valleys in Time and Space Volume 85 ; 85 ; >
+      au < exists ; exists ; 2007 ; 978-1-56576-294-7 ; Proterozoic Geology of Western North America and Siberia Volume 86 ; 86 ; >
+      au < exists ; exists ; 2007 ; 978-1-56576-295-4 ; Cretaceous Rudists and Carbonate Platforms: Environmental Feedback Volume 87 ; 87 ; >
+      au < exists ; exists ; 2007 ; 978-1-56576-290-9 ; Sediment-Organism Interactions: A Multifaceted Ichnology Volume 88 ; 88 ; >
+      au < exists ; exists ; 2008 ; 978-1-56576-224-4 ; Controls on Carbonate Platform and Reef Development Volume 89 ; 89 ; >
+      au < exists ; exists ; 2008 ; 978-1-56576-318-0 ; Recent Advances in Models of Siliciclastic Shallow-Marine Stratigraphy Volume 90 ; 90 ; >
+      au < exists ; exists ; 2009 ; 978-1-56576-296-1 ; Cretaceous Oceanic Red Beds: Stratigraphy, Composition, Origins, and Paleoceanographic and Paleoclimatic Significance Volume 91 ; 91 ; >
+      au < exists ; exists ; 2009 ; 978-1-56576-200-8 ; External Controls on Deep-Water Depositional Systems Volume 92 ; 92 ; >
+      au < exists ; exists ; 2009 ; 978-1-56576-297-8 ; Geologic Problem Solving with Microfossils: A Volume in Honor of Garry D. Jones Volume 93 ; 93 ; >
+      au < exists ; exists ; 2010 ; 978-1-56576-298-5 ; Application of Modern Stratigraphic Techniques: Theory and Case Histories Volume 94 ; 94 ; >
+      au < exists ; exists ; 2010 ; 978-1-56576-299-2 ; Cenozoic Carbonate Systems of Australasia Volume 95 ; 95 ; >
+      au < exists ; exists ; 2011 ; 978-1-56576-286-2 ; Mass-Transport Deposits in Deepwater Settings Volume 96 ; 96 ; >
+      au < exists ; exists ; 2011 ; 978-1-56576-307-4 ; From River to Rock Record: The Preservation of Fluvial Sediments and Their Subsequent Interpretation Volume 97 ; 97 ; >
+      au < exists ; exists ; 2011 ; 978-1-56576-291-6 ; The Permian Rotliegend of the Netherlands Volume 98 ; 98 ; >
+      au < exists ; exists ; 2012 ; 978-1-56576-304-3 ; Application of the Principles of Seismic Geomorphology Volume 99 ; 99 ; >
+      au < exists ; exists ; 2011 ; 978-1-56576-309-8 ; The End-Cretaceous Mass Extinction and the Chicxulub Impact in Texas Volume 100 ; 100 ; >
+      au < exists ; exists ; 2012 ; 978-1-56576-283-1 ; Microbial Mats in Siliciclastic Depositional Systems Volume 101 ; 101 ; >
+      au < exists ; exists ; 2012 ; 978-1-56576-313-5 ; Sedimentary Geology of Mars Volume 102 ; 102 ; >
+      au < exists ; exists ; 2012 ; 978-1-56576-317-3 ; Analyzing Thermal Histories of Sedimentary Basins: Methods and Case Studies Volume 103 ; 103 ; >
+      au < exists ; exists ; 2013 ; 978-1-56576-303-6 ; New Frontiers in Paleopedology and Terrestrial Paleoclimatology: Paleosols and Soil Surface Analog Systems Volume 104 ; 104 ; >
 
   }
   
@@ -136,14 +136,14 @@
 
       param[base_url] = http://cs.sepmonline.org/
 
-      au < exists ; exists ; 1987 ; 978-1-56576-101-8 ; Cross-Bedding, Bedforms and Paleocurrents Volume 1 ; 1 >
-      au < exists ; exists ; 1990 ; 978-1-56576-225-1 ; Models and Stratigraphy of Mid-Cretaceous Reef Communities, Gulf of Mexico Volume 2 ; 2 >
-      au < exists ; exists ; 1991 ; 978-1-56576-226-8 ; The Three-Dimensional Facies Architecture of Terrigenous Clastic Sediments and Its Implications for Hydrocarbon Discovery and Recovery Volume 3 ; 3 >
-      au < exists ; exists ; 1994 ; 978-1-56576-227-5 ; Tectonic and Eustatic Controls on Sedimentary Cycles Volume 4 ; 4 >
-      au < exists ; exists ; 1996 ; 978-1-56576-228-2 ; Models for Carbonate Stratigraphy from Miocene Reef Complexes of Mediterranean Regions Volume 5 ; 5 >
-      au < exists ; exists ; 1998 ; 978-1-56576-229-9 ; Stratigraphy and Paleoenvironments of the Cretaceous Western Interior Seaway, USA Volume 6 ; 6 >
-      au < exists ; exists ; 1999 ; 978-1-56576-319-7 ; Siliciclastic Sequence Stratigraphy: Concepts and Applications Volume 7 ; 7 >
-      au < exists ; exists ; 2005 ; 978-1-56576-132-2 ; Carbonate Sedimentology and Sequence Stratigraphy Volume 8 ; 8 >
+      au < exists ; exists ; 1987 ; 978-1-56576-101-8 ; Cross-Bedding, Bedforms and Paleocurrents Volume 1 ; 1 ; >
+      au < exists ; exists ; 1990 ; 978-1-56576-225-1 ; Models and Stratigraphy of Mid-Cretaceous Reef Communities, Gulf of Mexico Volume 2 ; 2 ; >
+      au < exists ; exists ; 1991 ; 978-1-56576-226-8 ; The Three-Dimensional Facies Architecture of Terrigenous Clastic Sediments and Its Implications for Hydrocarbon Discovery and Recovery Volume 3 ; 3 ; >
+      au < exists ; exists ; 1994 ; 978-1-56576-227-5 ; Tectonic and Eustatic Controls on Sedimentary Cycles Volume 4 ; 4 ; >
+      au < exists ; exists ; 1996 ; 978-1-56576-228-2 ; Models for Carbonate Stratigraphy from Miocene Reef Complexes of Mediterranean Regions Volume 5 ; 5 ; >
+      au < exists ; exists ; 1998 ; 978-1-56576-229-9 ; Stratigraphy and Paleoenvironments of the Cretaceous Western Interior Seaway, USA Volume 6 ; 6 ; >
+      au < exists ; exists ; 1999 ; 978-1-56576-319-7 ; Siliciclastic Sequence Stratigraphy: Concepts and Applications Volume 7 ; 7 ; >
+      au < exists ; exists ; 2005 ; 978-1-56576-132-2 ; Carbonate Sedimentology and Sequence Stratigraphy Volume 8 ; 8 ; >
 
   }
 
@@ -157,42 +157,42 @@
 
       param[base_url] = http://scnotes.sepmonline.org/
 
-      au < exists ; exists ; 1975 ; 978-1-56576-231-2 ; Depositional Environments As Interpreted from Primary Sedimentary Structures and Stratification Sequences Volume 2 ; 2 >
-      au < exists ; exists ; 1984 ; 978-1-56576-232-9 ; Mechanics of Sediment Movement Volume 3 ; 3 >
-      au < exists ; exists ; 1987 ; 978-1-56576-233-6 ; Marine Evaporites Volume 4 ; 4 >
-      au < exists ; exists ; 1978 ; 978-1-56576-234-3 ; Trace Fossil Concepts Volume 5 ; 5 >
-      au < exists ; exists ; 1979 ; 978-1-56576-235-0 ; Foraminiferal Ecology and Paleoecology Volume 6 ; 6 >
-      au < exists ; exists ; 1987 ; 978-1-56576-236-7 ; How to Assess Maturation and Paleotemperatures Volume 7 ; 7 >
-      au < exists ; exists ; 1980 ; 978-1-56576-237-4 ; Principles and Applications of Coal Petrology Volume 8 ; 8 >
-      au < exists ; exists ; 1982 ; 978-1-56576-238-1 ; Structures and Sequences in Clastic Rocks Volume 9 ; 9 >
-      au < exists ; exists ; 1983 ; 978-1-56576-239-8 ; Stable Isotopes in Sedimentary Geology Volume 10 ; 10 >
-      au < exists ; exists ; 1983 ; 978-1-56576-240-4 ; Patterns of Sedimentation, Diagenesis and Hydrocarbon Accumulation in Cretaceous Rocks of the Rocky Mountains Volume 11 ; 11 >
-      au < exists ; exists ; 1983 ; 978-1-56576-241-1 ; Platform Margin and Deep Water Carbonates Volume 12 ; 12 >
-      au < exists ; exists ; 1986 ; 978-1-56576-242-8 ; Shelf Sands and Sandstone Reservoirs Volume 13 ; 13 >
-      au < exists ; exists ; 1984 ; 978-1-56576-243-5 ; Modern and Ancient Deep-Sea Fan Sedimentation Volume 14 ; 14 >
-      au < exists ; exists ; 1984 ; 978-1-56576-244-2 ; Ichnology: The Use of Trace Fossils in Sedimentology and Stratigraphy Volume 15 ; 15 >
-      au < exists ; exists ; 1985 ; 978-1-56576-245-9 ; Glacial Sedimentary Environments Volume 16 ; 16 >
-      au < exists ; exists ; 1985 ; 978-1-56576-246-6 ; Relationship of Organic Matter and Mineral Diagenesis Volume 17 ; 17 >
-      au < exists ; exists ; 1986 ; 978-1-56576-247-3 ; Paleoclimates and Economic Geology Volume 18 ; 18 >
-      au < exists ; exists ; 1985 ; 978-1-56576-248-0 ; Recognition of Fluvial Depositional Systems and Their Resource Potential Volume 19 ; 19 >
-      au < exists ; exists ; 1988 ; 978-1-56576-099-8 ; Origin and Migration of Subsurface Sedimentary Brines Volume 21 ; 21 >
-      au < exists ; exists ; 1988 ; 978-1-56576-249-7 ; Clay Minerals for Petroleum Geologists and Engineers Volume 22 ; 22 >
-      au < exists ; exists ; 1991 ; 978-1-56576-106-3 ; Luminescence Microscopy and Spectroscopy: Qualitative and Quantitative Applications Volume 25 ; 25 >
-      au < exists ; exists ; 1992 ; 978-1-56576-250-3 ; Geochemistry of Organic Matter in Sediments and Sedimentary Rocks Volume 27 ; 27 >
-      au < exists ; exists ; 1992 ; 978-1-56576-251-0 ; Devonian Early-Mississippian Carbonates of the Western Canada Sedimentary Basin: A Sequence Stratigraphic Framework Volume 28 ; 28 >
-      au < exists ; exists ; 1994 ; 978-1-56576-109-4 ; Geological Log Interpretation Volume 29 ; 29 >
-      au < exists ; exists ; 1994 ; 978-1-56576-320-3 ; Reservoir Quality Assessment and Prediction in Clastic Rocks Volume 30 ; 30 >
-      au < exists ; exists ; 1994 ; 978-1-56576-098-1 ; Systematics of Fluid Inclusions in Diagenetic Minerals Volume 31 ; 31 >
-      au < exists ; exists ; 1994 ; 978-1-56576-102-5 ; Introduction to Environmental Hydrogeology Volume 32 ; 32 >
-      au < exists ; exists ; 1994 ; 978-1-56576-253-4 ; Climate Model Application in Paleoenvironmental Analysis Volume 33 ; 33 >
-      au < exists ; exists ; 1995 ; 978-1-56576-103-2 ; Hydrocarbon Reservoir Characterization: Geologic Framework and Flow Unit Modeling Volume 34 ; 34 >
-      au < exists ; exists ; 1995 ; 978-1-56576-254-1 ; Milankovitch Sea-Level Changes, Cyces and Reservoirs on Carbonate Platforms in Greenhouse and Ice-House Worlds Volume 35 ; 35 >
-      au < exists ; exists ; 1995 ; 978-1-56576-255-8 ; Nonlinear Dynamics and Fractals: New Numerical Techniques for Sedimentary Data Volume 36 ; 36 >
-      au < exists ; exists ; 1997 ; 978-1-56576-114-8 ; Sequence Stratigraphy and Characterization of Carbonate Reservoirs Volume 40 ; 40 >
-      au < exists ; exists ; 2000 ; 978-1-56576-115-5 ; 3-D Seismic Interpretation: A Primer for Geologists Volume 48 ; 48 >
-      au < exists ; exists ; 2000 ; 978-1-56576-285-5 ; Applied Sandstone Diagenesis: Practical Petrographic Solutions for a Variety of Common Exploration, Development and Production Problems Volume 50 ; 50 >
-      au < exists ; exists ; 2006 ; 978-1-56576-284-8 ; Continental Trace Fossils Volume 51 ; 51 >
-      au < exists ; exists ; 2007 ; 978-1-56576-140-7 ; Applied Ichnology Volume 52 ; 52 >
+      au < exists ; exists ; 1975 ; 978-1-56576-231-2 ; Depositional Environments As Interpreted from Primary Sedimentary Structures and Stratification Sequences Volume 2 ; 2 ; >
+      au < exists ; exists ; 1984 ; 978-1-56576-232-9 ; Mechanics of Sediment Movement Volume 3 ; 3 ; >
+      au < exists ; exists ; 1987 ; 978-1-56576-233-6 ; Marine Evaporites Volume 4 ; 4 ; >
+      au < exists ; exists ; 1978 ; 978-1-56576-234-3 ; Trace Fossil Concepts Volume 5 ; 5 ; >
+      au < exists ; exists ; 1979 ; 978-1-56576-235-0 ; Foraminiferal Ecology and Paleoecology Volume 6 ; 6 ; >
+      au < exists ; exists ; 1987 ; 978-1-56576-236-7 ; How to Assess Maturation and Paleotemperatures Volume 7 ; 7 ; >
+      au < exists ; exists ; 1980 ; 978-1-56576-237-4 ; Principles and Applications of Coal Petrology Volume 8 ; 8 ; >
+      au < exists ; exists ; 1982 ; 978-1-56576-238-1 ; Structures and Sequences in Clastic Rocks Volume 9 ; 9 ; >
+      au < exists ; exists ; 1983 ; 978-1-56576-239-8 ; Stable Isotopes in Sedimentary Geology Volume 10 ; 10 ; >
+      au < exists ; exists ; 1983 ; 978-1-56576-240-4 ; Patterns of Sedimentation, Diagenesis and Hydrocarbon Accumulation in Cretaceous Rocks of the Rocky Mountains Volume 11 ; 11 ; >
+      au < exists ; exists ; 1983 ; 978-1-56576-241-1 ; Platform Margin and Deep Water Carbonates Volume 12 ; 12 ; >
+      au < exists ; exists ; 1986 ; 978-1-56576-242-8 ; Shelf Sands and Sandstone Reservoirs Volume 13 ; 13 ; >
+      au < exists ; exists ; 1984 ; 978-1-56576-243-5 ; Modern and Ancient Deep-Sea Fan Sedimentation Volume 14 ; 14 ; >
+      au < exists ; exists ; 1984 ; 978-1-56576-244-2 ; Ichnology: The Use of Trace Fossils in Sedimentology and Stratigraphy Volume 15 ; 15 ; >
+      au < exists ; exists ; 1985 ; 978-1-56576-245-9 ; Glacial Sedimentary Environments Volume 16 ; 16 ; >
+      au < exists ; exists ; 1985 ; 978-1-56576-246-6 ; Relationship of Organic Matter and Mineral Diagenesis Volume 17 ; 17 ; >
+      au < exists ; exists ; 1986 ; 978-1-56576-247-3 ; Paleoclimates and Economic Geology Volume 18 ; 18 ; >
+      au < exists ; exists ; 1985 ; 978-1-56576-248-0 ; Recognition of Fluvial Depositional Systems and Their Resource Potential Volume 19 ; 19 ; >
+      au < exists ; exists ; 1988 ; 978-1-56576-099-8 ; Origin and Migration of Subsurface Sedimentary Brines Volume 21 ; 21 ; >
+      au < exists ; exists ; 1988 ; 978-1-56576-249-7 ; Clay Minerals for Petroleum Geologists and Engineers Volume 22 ; 22 ; >
+      au < exists ; exists ; 1991 ; 978-1-56576-106-3 ; Luminescence Microscopy and Spectroscopy: Qualitative and Quantitative Applications Volume 25 ; 25 ; >
+      au < exists ; exists ; 1992 ; 978-1-56576-250-3 ; Geochemistry of Organic Matter in Sediments and Sedimentary Rocks Volume 27 ; 27 ; >
+      au < exists ; exists ; 1992 ; 978-1-56576-251-0 ; Devonian Early-Mississippian Carbonates of the Western Canada Sedimentary Basin: A Sequence Stratigraphic Framework Volume 28 ; 28 ; >
+      au < exists ; exists ; 1994 ; 978-1-56576-109-4 ; Geological Log Interpretation Volume 29 ; 29 ; >
+      au < exists ; exists ; 1994 ; 978-1-56576-320-3 ; Reservoir Quality Assessment and Prediction in Clastic Rocks Volume 30 ; 30 ; >
+      au < exists ; exists ; 1994 ; 978-1-56576-098-1 ; Systematics of Fluid Inclusions in Diagenetic Minerals Volume 31 ; 31 ; >
+      au < exists ; exists ; 1994 ; 978-1-56576-102-5 ; Introduction to Environmental Hydrogeology Volume 32 ; 32 ; >
+      au < exists ; exists ; 1994 ; 978-1-56576-253-4 ; Climate Model Application in Paleoenvironmental Analysis Volume 33 ; 33 ; >
+      au < exists ; exists ; 1995 ; 978-1-56576-103-2 ; Hydrocarbon Reservoir Characterization: Geologic Framework and Flow Unit Modeling Volume 34 ; 34 ; >
+      au < exists ; exists ; 1995 ; 978-1-56576-254-1 ; Milankovitch Sea-Level Changes, Cyces and Reservoirs on Carbonate Platforms in Greenhouse and Ice-House Worlds Volume 35 ; 35 ; >
+      au < exists ; exists ; 1995 ; 978-1-56576-255-8 ; Nonlinear Dynamics and Fractals: New Numerical Techniques for Sedimentary Data Volume 36 ; 36 ; >
+      au < exists ; exists ; 1997 ; 978-1-56576-114-8 ; Sequence Stratigraphy and Characterization of Carbonate Reservoirs Volume 40 ; 40 ; >
+      au < exists ; exists ; 2000 ; 978-1-56576-115-5 ; 3-D Seismic Interpretation: A Primer for Geologists Volume 48 ; 48 ; >
+      au < exists ; exists ; 2000 ; 978-1-56576-285-5 ; Applied Sandstone Diagenesis: Practical Petrographic Solutions for a Variety of Common Exploration, Development and Production Problems Volume 50 ; 50 ; >
+      au < exists ; exists ; 2006 ; 978-1-56576-284-8 ; Continental Trace Fossils Volume 51 ; 51 ; >
+      au < exists ; exists ; 2007 ; 978-1-56576-140-7 ; Applied Ichnology Volume 52 ; 52 ; >
 
   }
 
@@ -206,25 +206,25 @@
 
       param[base_url] = http://notes.sepmonline.org/
 
-      au < exists ; exists ; 1980 ; 978-1-56576-256-5 ; Carbonate Reservoir Rocks Volume 1 ; 1 >
-      au < exists ; exists ; 1981 ; 978-1-56576-257-2 ; Deep-Water Clastic Sediments Volume 2 ; 2 >
-      au < exists ; exists ; 1982 ; 978-1-56576-258-9 ; Depositional and Diagenetic Spectra of Evaporites Volume 3 ; 3 >
-      au < exists ; exists ; 1983 ; 978-1-56576-259-6 ; Carbonate Buildups Volume 4 ; 4 >
-      au < exists ; exists ; 1984 ; 978-1-56576-260-2 ; Carbonate Sands Volume 5 ; 5 >
-      au < exists ; exists ; 1985 ; 978-1-56576-261-9 ; Deep-Water Carbonates: Buildups, Turbidites, Debris Flows and Chalks Volume 6 ; 6 >
-      au < exists ; exists ; 1985 ; 978-1-56576-262-6 ; Rocky Mountain Carbonate Reservoirs Volume 7 ; 7 >
-      au < exists ; exists ; 1985 ; 978-1-56576-263-3 ; Depositional Modeling of Detrital Rocks: With Emphasis on Cored Sequences of Petroleum Reservoirs Volume 8 ; 8 >
-      au < exists ; exists ; 1996 ; 978-1-56576-264-0 ; Modern and Ancient Shelf Clastics Volume 9 ; 9 >
-      au < exists ; exists ; 1988 ; 978-1-56576-100-1 ; Giant Oil and Gas Fields Volume 12 ; 12 >
-      au < exists ; exists ; 1989 ; 978-1-56576-267-1 ; Subsurface and Outcrop Examination of the Capitan Shelf Margin, Northern Delaware Basin Volume 13 ; 13 >
-      au < exists ; exists ; 1990 ; 978-1-56576-268-8 ; Miocene and Oligocene Petroleum Reservoirs of the Santa Maria and Santa Barabara-Ventura Basins, California Volume 14 ; 14 >
-      au < exists ; exists ; 1991 ; 978-1-56576-269-5 ; Mixed Carbonate-Siliciclastic Sequences Volume 15 ; 15 >
-      au < exists ; exists ; 1992 ; 978-1-56576-097-4 ; Applications of Ichnology to Petroleum Exploration Volume 17 ; 17 >
-      au < exists ; exists ; 1994 ; 978-1-56576-270-1 ; Paleokarst Related Hydrocarbon Reservoirs Volume 18 ; 18 >
-      au < exists ; exists ; 1994 ; 978-1-56576-271-8 ; Lacustrine Reservoirs and Depositional Systems Volume 19 ; 19 >
-      au < exists ; exists ; 1995 ; 978-1-56576-272-5 ; Turbidites and Associated Deep-Water Facies Volume 20 ; 20 >
-      au < exists ; exists ; 2001 ; 978-1-56576-273-2 ; Petroleum Plays and Systems in the National Petroleum Reserve - Alaska (NPRA) Volume 21 ; 21 >
-      au < exists ; exists ; 2008 ; 978-1-56576-138-4 ; Developing Models and Analogs for Isolated Carbonate Platforms: Holocene and Pleistocene Carbonates of the Caicos Platform, British West Indies Volume 22 ; 22 >
+      au < exists ; exists ; 1980 ; 978-1-56576-256-5 ; Carbonate Reservoir Rocks Volume 1 ; 1 ; >
+      au < exists ; exists ; 1981 ; 978-1-56576-257-2 ; Deep-Water Clastic Sediments Volume 2 ; 2 ; >
+      au < exists ; exists ; 1982 ; 978-1-56576-258-9 ; Depositional and Diagenetic Spectra of Evaporites Volume 3 ; 3 ; >
+      au < exists ; exists ; 1983 ; 978-1-56576-259-6 ; Carbonate Buildups Volume 4 ; 4 ; >
+      au < exists ; exists ; 1984 ; 978-1-56576-260-2 ; Carbonate Sands Volume 5 ; 5 ; >
+      au < exists ; exists ; 1985 ; 978-1-56576-261-9 ; Deep-Water Carbonates: Buildups, Turbidites, Debris Flows and Chalks Volume 6 ; 6 ; >
+      au < exists ; exists ; 1985 ; 978-1-56576-262-6 ; Rocky Mountain Carbonate Reservoirs Volume 7 ; 7 ; >
+      au < exists ; exists ; 1985 ; 978-1-56576-263-3 ; Depositional Modeling of Detrital Rocks: With Emphasis on Cored Sequences of Petroleum Reservoirs Volume 8 ; 8 ; >
+      au < exists ; exists ; 1996 ; 978-1-56576-264-0 ; Modern and Ancient Shelf Clastics Volume 9 ; 9 ; >
+      au < exists ; exists ; 1988 ; 978-1-56576-100-1 ; Giant Oil and Gas Fields Volume 12 ; 12 ; >
+      au < exists ; exists ; 1989 ; 978-1-56576-267-1 ; Subsurface and Outcrop Examination of the Capitan Shelf Margin, Northern Delaware Basin Volume 13 ; 13 ; >
+      au < exists ; exists ; 1990 ; 978-1-56576-268-8 ; Miocene and Oligocene Petroleum Reservoirs of the Santa Maria and Santa Barabara-Ventura Basins, California Volume 14 ; 14 ; >
+      au < exists ; exists ; 1991 ; 978-1-56576-269-5 ; Mixed Carbonate-Siliciclastic Sequences Volume 15 ; 15 ; >
+      au < exists ; exists ; 1992 ; 978-1-56576-097-4 ; Applications of Ichnology to Petroleum Exploration Volume 17 ; 17 ; >
+      au < exists ; exists ; 1994 ; 978-1-56576-270-1 ; Paleokarst Related Hydrocarbon Reservoirs Volume 18 ; 18 ; >
+      au < exists ; exists ; 1994 ; 978-1-56576-271-8 ; Lacustrine Reservoirs and Depositional Systems Volume 19 ; 19 ; >
+      au < exists ; exists ; 1995 ; 978-1-56576-272-5 ; Turbidites and Associated Deep-Water Facies Volume 20 ; 20 ; >
+      au < exists ; exists ; 2001 ; 978-1-56576-273-2 ; Petroleum Plays and Systems in the National Petroleum Reserve - Alaska (NPRA) Volume 21 ; 21 ; >
+      au < exists ; exists ; 2008 ; 978-1-56576-138-4 ; Developing Models and Analogs for Isolated Carbonate Platforms: Holocene and Pleistocene Carbonates of the Caicos Platform, British West Indies Volume 22 ; 22 ; >
 
   }
 

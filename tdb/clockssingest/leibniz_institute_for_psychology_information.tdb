@@ -6,7 +6,7 @@
     info[tester] = 8
   >
 
-      implicit < status ; status2 ; year ; name ; volume ; param[year] >
+      implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
 
   {
@@ -18,18 +18,18 @@
       param[base_url] = http://ejop.psychopen.eu/
       param[journal_id] = ejop
 
-      au < manifest ; exists ; 2005 ; Europe's Journal of Psychology Volume 1 ; 1 ; 2005 >
-      au < manifest ; exists ; 2006 ; Europe's Journal of Psychology Volume 2 ; 2 ; 2006 >
-      au < manifest ; exists ; 2007 ; Europe's Journal of Psychology Volume 3 ; 3 ; 2007 >
-      au < manifest ; exists ; 2008 ; Europe's Journal of Psychology Volume 4 ; 4 ; 2008 >
-      au < manifest ; exists ; 2009 ; Europe's Journal of Psychology Volume 5 ; 5 ; 2009 >
-      au < manifest ; exists ; 2010 ; Europe's Journal of Psychology Volume 6 ; 6 ; 2010 >
-      au < manifest ; exists ; 2011 ; Europe's Journal of Psychology Volume 7 ; 7 ; 2011 >
-      au < manifest ; exists ; 2012 ; Europe's Journal of Psychology Volume 8 ; 8 ; 2012 >
-      au < finished ; crawling ; 2013 ; Europe's Journal of Psychology Volume 9 ; 9 ; 2013 >
-      au < finished ; finished ; 2014 ; Europe's Journal of Psychology Volume 10 ; 10 ; 2014 >
-      au < crawling ; exists ; 2015 ; Europe's Journal of Psychology Volume 11 ; 11 ; 2015 >
-      au < expected ; exists ; 2016 ; Europe's Journal of Psychology Volume 12 ; 12 ; 2016 >
+      au < manifest ; exists ; 2005 ; Europe's Journal of Psychology Volume 1 ; 1 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; Europe's Journal of Psychology Volume 2 ; 2 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; Europe's Journal of Psychology Volume 3 ; 3 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Europe's Journal of Psychology Volume 4 ; 4 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; Europe's Journal of Psychology Volume 5 ; 5 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; Europe's Journal of Psychology Volume 6 ; 6 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Europe's Journal of Psychology Volume 7 ; 7 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Europe's Journal of Psychology Volume 8 ; 8 ; 2012 ; >
+      au < finished ; crawling ; 2013 ; Europe's Journal of Psychology Volume 9 ; 9 ; 2013 ; >
+      au < finished ; finished ; 2014 ; Europe's Journal of Psychology Volume 10 ; 10 ; 2014 ; >
+      au < crawling ; exists ; 2015 ; Europe's Journal of Psychology Volume 11 ; 11 ; 2015 ; >
+      au < expected ; exists ; 2016 ; Europe's Journal of Psychology Volume 12 ; 12 ; 2016 ; >
 
   }
 
@@ -42,11 +42,11 @@
       param[base_url] = http://ejcop.psychopen.eu/
       param[journal_id] = ejcop
 
-      au < manifest ; exists ; 2009 ; The European Journal of Counselling Psychology Volume 1 ; 1 ; 2009 >
-      au < crawling ; exists ; 2013 ; The European Journal of Counselling Psychology Volume 2 ; 2 ; 2013 >
-      au < finished ; finished ; 2014 ; The European Journal of Counselling Psychology Volume 3 ; 3 ; 2014 >
-      au < crawling ; exists ; 2015 ; The European Journal of Counselling Psychology Volume 4 ; 4 ; 2015 >
-      au < expected ; exists ; 2016 ; The European Journal of Counselling Psychology Volume 5 ; 5 ; 2016 >
+      au < manifest ; exists ; 2009 ; The European Journal of Counselling Psychology Volume 1 ; 1 ; 2009 ; >
+      au < crawling ; exists ; 2013 ; The European Journal of Counselling Psychology Volume 2 ; 2 ; 2013 ; >
+      au < finished ; finished ; 2014 ; The European Journal of Counselling Psychology Volume 3 ; 3 ; 2014 ; >
+      au < crawling ; exists ; 2015 ; The European Journal of Counselling Psychology Volume 4 ; 4 ; 2015 ; >
+      au < expected ; exists ; 2016 ; The European Journal of Counselling Psychology Volume 5 ; 5 ; 2016 ; >
 
   }
 
@@ -59,16 +59,16 @@
       param[base_url] = http://interpersona.psychopen.eu/
       param[journal_id] = interpersona
 
-      au < manifest ; exists ; 2007 ; Interpersona: An International Journal on Personal Relationships Volume 1 ; 1 ; 2007 >
-      au < manifest ; exists ; 2008 ; Interpersona: An International Journal on Personal Relationships Volume 2 ; 2 ; 2008 >
-      au < manifest ; exists ; 2009 ; Interpersona: An International Journal on Personal Relationships Volume 3 ; 3 ; 2009 >
-      au < manifest ; exists ; 2010 ; Interpersona: An International Journal on Personal Relationships Volume 4 ; 4 ; 2010 >
-      au < manifest ; exists ; 2011 ; Interpersona: An International Journal on Personal Relationships Volume 5 ; 5 ; 2011 >
-      au < manifest ; exists ; 2012 ; Interpersona: An International Journal on Personal Relationships Volume 6 ; 6 ; 2012 >
-      au < finished ; finished ; 2013 ; Interpersona: An International Journal on Personal Relationships Volume 7 ; 7 ; 2013 >
-      au < finished ; finished ; 2014 ; Interpersona: An International Journal on Personal Relationships Volume 8 ; 8 ; 2014 >
-      au < crawling ; exists ; 2015 ; Interpersona: An International Journal on Personal Relationships Volume 9 ; 9 ; 2015 >
-      au < expected ; exists ; 2016 ; Interpersona: An International Journal on Personal Relationships Volume 10 ; 10 ; 2016 >
+      au < manifest ; exists ; 2007 ; Interpersona: An International Journal on Personal Relationships Volume 1 ; 1 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Interpersona: An International Journal on Personal Relationships Volume 2 ; 2 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; Interpersona: An International Journal on Personal Relationships Volume 3 ; 3 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; Interpersona: An International Journal on Personal Relationships Volume 4 ; 4 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Interpersona: An International Journal on Personal Relationships Volume 5 ; 5 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Interpersona: An International Journal on Personal Relationships Volume 6 ; 6 ; 2012 ; >
+      au < finished ; finished ; 2013 ; Interpersona: An International Journal on Personal Relationships Volume 7 ; 7 ; 2013 ; >
+      au < finished ; finished ; 2014 ; Interpersona: An International Journal on Personal Relationships Volume 8 ; 8 ; 2014 ; >
+      au < crawling ; exists ; 2015 ; Interpersona: An International Journal on Personal Relationships Volume 9 ; 9 ; 2015 ; >
+      au < expected ; exists ; 2016 ; Interpersona: An International Journal on Personal Relationships Volume 10 ; 10 ; 2016 ; >
 
   }
 
@@ -82,8 +82,8 @@
       param[base_url] = http://jnc.psychopen.eu/
       param[journal_id] = jnc
 
-      au < crawling ; exists ; 2015 ; Journal of Numerical Cognition Volume 1 ; 1 ; 2015 >
-      au < expected ; exists ; 2016 ; Journal of Numerical Cognition Volume 2 ; 2 ; 2016 >
+      au < crawling ; exists ; 2015 ; Journal of Numerical Cognition Volume 1 ; 1 ; 2015 ; >
+      au < expected ; exists ; 2016 ; Journal of Numerical Cognition Volume 2 ; 2 ; 2016 ; >
 
   }
 
@@ -96,10 +96,10 @@
       param[base_url] = http://jspp.psychopen.eu/
       param[journal_id] = jspp
 
-      au < finished ; finished ; 2013 ; Journal of Social and Political Psychology Volume 1 ; 1 ; 2013 >
-      au < finished ; finished ; 2014 ; Journal of Social and Political Psychology Volume 2 ; 2 ; 2014 >
-      au < crawling ; exists ; 2015 ; Journal of Social and Political Psychology Volume 3 ; 3 ; 2015 >
-      au < manifest ; exists ; 2016 ; Journal of Social and Political Psychology Volume 4 ; 4 ; 2016 >
+      au < finished ; finished ; 2013 ; Journal of Social and Political Psychology Volume 1 ; 1 ; 2013 ; >
+      au < finished ; finished ; 2014 ; Journal of Social and Political Psychology Volume 2 ; 2 ; 2014 ; >
+      au < crawling ; exists ; 2015 ; Journal of Social and Political Psychology Volume 3 ; 3 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Journal of Social and Political Psychology Volume 4 ; 4 ; 2016 ; >
 
   }
 
@@ -112,11 +112,11 @@
       param[base_url] = http://psyct.psychopen.eu/
       param[journal_id] = psyct
 
-      au < manifest ; exists ; 2012 ; Psychological Thought Volume 5 ; 5 ; 2012 >
-      au < crawling ; exists ; 2013 ; Psychological Thought Volume 6 ; 6 ; 2013 >
-      au < finished ; finished ; 2014 ; Psychological Thought Volume 7 ; 7 ; 2014 >
-      au < crawling ; exists ; 2015 ; Psychological Thought Volume 8 ; 8 ; 2015 >
-      au < expected ; exists ; 2016 ; Psychological Thought Volume 9 ; 9 ; 2016 >
+      au < manifest ; exists ; 2012 ; Psychological Thought Volume 5 ; 5 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; Psychological Thought Volume 6 ; 6 ; 2013 ; >
+      au < finished ; finished ; 2014 ; Psychological Thought Volume 7 ; 7 ; 2014 ; >
+      au < crawling ; exists ; 2015 ; Psychological Thought Volume 8 ; 8 ; 2015 ; >
+      au < expected ; exists ; 2016 ; Psychological Thought Volume 9 ; 9 ; 2016 ; >
 
   }
 
@@ -129,11 +129,11 @@
       param[base_url] = http://pch.psychopen.eu/
       param[journal_id] = pch
 
-      au < manifest ; exists ; 2012 ; Psychology, Community & Health Volume 1 ; 1 ; 2012 >
-      au < finished ; finished ; 2013 ; Psychology, Community & Health Volume 2 ; 2 ; 2013 >
-      au < finished ; finished ; 2014 ; Psychology, Community & Health Volume 3 ; 3 ; 2014 >
-      au < crawling ; exists ; 2015 ; Psychology, Community & Health Volume 4 ; 4 ; 2015 >
-      au < expected ; exists ; 2016 ; Psychology, Community & Health Volume 5 ; 5 ; 2016 >
+      au < manifest ; exists ; 2012 ; Psychology, Community & Health Volume 1 ; 1 ; 2012 ; >
+      au < finished ; finished ; 2013 ; Psychology, Community & Health Volume 2 ; 2 ; 2013 ; >
+      au < finished ; finished ; 2014 ; Psychology, Community & Health Volume 3 ; 3 ; 2014 ; >
+      au < crawling ; exists ; 2015 ; Psychology, Community & Health Volume 4 ; 4 ; 2015 ; >
+      au < expected ; exists ; 2016 ; Psychology, Community & Health Volume 5 ; 5 ; 2016 ; >
 
   }
 

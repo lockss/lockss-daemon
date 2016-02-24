@@ -7,7 +7,7 @@
   >
   
     rights = openaccess
-    implicit < status ; status2 ; year ; param[au_oai_date] ; name ; volume >
+    implicit < status ; status2 ; year ; param[au_oai_date] ; name ; volume ; hidden[proxy] >
     comment[old_plugin] = org.lockss.plugin.pensoft.ClockssPensoftPlugin
     plugin = org.lockss.plugin.pensoft.oai.ClockssPensoftOaiPlugin
 
@@ -22,9 +22,9 @@
     param[au_oai_set] = bdj
     param[base_url] = http://bdj.pensoft.net/
 
-    au < manifest ; exists ; 2013 ; 2013 ; Biodiversity Data Journal Volume 1 ; 1 >
-    au < testing ; exists ; 2014 ; 2014 ; Biodiversity Data Journal Volume 2 ; 2 >
-    au < testing ; exists ; 2015 ; 2015 ; Biodiversity Data Journal Volume 3 ; 3 >
+    au < manifest ; exists ; 2013 ; 2013 ; Biodiversity Data Journal Volume 1 ; 1 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Biodiversity Data Journal Volume 2 ; 2 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Biodiversity Data Journal Volume 3 ; 3 ; >
     
    }
 
@@ -39,13 +39,13 @@
     param[au_oai_set] = biorisk
     param[base_url] = http://biorisk.pensoft.net/
     
-    au < manifest ; exists ; 2008 ; 2008 ; BioRisk Volume 1 ; 1 >
-    au < manifest ; exists ; 2009 ; 2009 ; BioRisk Volumes 2-3 ; 2-3 >
-    au < manifest ; exists ; 2010 ; 2010 ; BioRisk Volumes 4-5 ; 4-5 >
-    au < manifest ; exists ; 2011 ; 2011 ; BioRisk Volume 6 ; 6 >
-    au < manifest ; exists ; 2012 ; 2012 ; BioRisk Volume 7 ; 7 >
-    au < manifest ; exists ; 2013 ; 2013 ; BioRisk Volume 8 ; 8 >
-    au < crawling ; exists ; 2014 ; 2014 ; BioRisk Volume 9 ; 9 >
+    au < manifest ; exists ; 2008 ; 2008 ; BioRisk Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; BioRisk Volumes 2-3 ; 2-3 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; BioRisk Volumes 4-5 ; 4-5 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; BioRisk Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; BioRisk Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; BioRisk Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; BioRisk Volume 9 ; 9 ; >
   
    }
    
@@ -60,12 +60,12 @@
     param[au_oai_set] = compcytogen
     param[base_url] = http://compcytogen.pensoft.net/
     
-    au < manifest ; exists ; 2009 ; 2009 ; Comparative Cytogenetics Volume 3 ; 3 >
-    au < manifest ; exists ; 2010 ; 2010 ; Comparative Cytogenetics Volume 4 ; 4 >
-    au < manifest ; exists ; 2011 ; 2011 ; Comparative Cytogenetics Volume 5 ; 5 >
-    au < manifest ; exists ; 2012 ; 2012 ; Comparative Cytogenetics Volume 6 ; 6 >
-    au < manifest ; exists ; 2013 ; 2013 ; Comparative Cytogenetics Volume 7 ; 7 >
-    au < crawling ; exists ; 2014 ; 2014 ; Comparative Cytogenetics Volume 8 ; 8 >
+    au < manifest ; exists ; 2009 ; 2009 ; Comparative Cytogenetics Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; Comparative Cytogenetics Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Comparative Cytogenetics Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Comparative Cytogenetics Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Comparative Cytogenetics Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; Comparative Cytogenetics Volume 8 ; 8 ; >
   
    }
 
@@ -80,7 +80,7 @@
      param[au_oai_set] = dez
      param[base_url] = http://dez.pensoft.net/
 
-     au < crawling ; exists ; 2014 ; 2014 ; Deutsche Entomologische Zeitschrift Volume 61 ; 61 >
+     au < crawling ; exists ; 2014 ; 2014 ; Deutsche Entomologische Zeitschrift Volume 61 ; 61 ; >
 
    }
    
@@ -96,10 +96,10 @@
     param[au_oai_set] = ijm
     param[base_url] = http://ijm.pensoft.net/
     
-    au < manifest ; exists ; 2011 ; 2011 ; International Journal of Myriapodology Volumes 4-6 ; 4-6 >
-    au < manifest ; exists ; 2012 ; 2012 ; International Journal of Myriapodology Volume 7 ; 7 >
-    au < manifest ; exists ; 2013 ; 2013 ; International Journal of Myriapodology Volume 8 ; 8 >
-    au < testing ; exists ; 2014 ; 2014 ; International Journal of Myriapodology Volume 9 ; 9 >
+    au < manifest ; exists ; 2011 ; 2011 ; International Journal of Myriapodology Volumes 4-6 ; 4-6 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; International Journal of Myriapodology Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; International Journal of Myriapodology Volume 8 ; 8 ; >
+    au < testing ; exists ; 2014 ; 2014 ; International Journal of Myriapodology Volume 9 ; 9 ; >
 
    }
   
@@ -115,10 +115,10 @@
     param[au_oai_set] = jhr
     param[base_url] = http://jhr.pensoft.net/
     
-    au < manifest ; exists ; 2011 ; 2011 ; Journal of Hymenoptera Research Volumes 20-23 ; 20-23 >
-    au < manifest ; exists ; 2012 ; 2012 ; Journal of Hymenoptera Research Volumes 24-29 ; 24-29 >
-    au < manifest ; exists ; 2013 ; 2013 ; Journal of Hymenoptera Research Volumes 30-34 ; 30-34 >
-    au < crawling ; exists ; 2014 ; 2014 ; Journal of Hymenoptera Research Volumes 35-40 ; 35-40 >
+    au < manifest ; exists ; 2011 ; 2011 ; Journal of Hymenoptera Research Volumes 20-23 ; 20-23 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Journal of Hymenoptera Research Volumes 24-29 ; 24-29 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Journal of Hymenoptera Research Volumes 30-34 ; 30-34 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; Journal of Hymenoptera Research Volumes 35-40 ; 35-40 ; >
   
    }
   
@@ -134,10 +134,10 @@
     param[au_oai_set] = mycokeys
     param[base_url] = http://mycokeys.pensoft.net/
     
-    au < manifest ; exists ; 2011 ; 2011 ; MycoKeys Volume 1 ; 1 >
-    au < manifest ; exists ; 2012 ; 2012 ; MycoKeys Volumes 2-5 ; 2-5 >
-    au < manifest ; exists ; 2013 ; 2013 ; MycoKeys Volumes 6-7 ; 6-7 >
-    au < ready ; exists ; 2014 ; 2014 ; MycoKeys Volumes 8-9 ; 8-9 >
+    au < manifest ; exists ; 2011 ; 2011 ; MycoKeys Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; MycoKeys Volumes 2-5 ; 2-5 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; MycoKeys Volumes 6-7 ; 6-7 ; >
+    au < ready ; exists ; 2014 ; 2014 ; MycoKeys Volumes 8-9 ; 8-9 ; >
   
    }
   
@@ -151,9 +151,9 @@
     param[au_oai_set] = natureconservation
     param[base_url] = http://natureconservation.pensoft.net/
     
-    au < manifest ; exists ; 2012 ; 2012 ; Nature Conservation Volume 1-3 ; 1-3 >
-    au < manifest ; exists ; 2013 ; 2013 ; Nature Conservation Volume 4-6 ; 4-6 >
-    au < ready ; exists ; 2014 ; 2014 ; Nature Conservation Volume 7-9 ; 7-9 >
+    au < manifest ; exists ; 2012 ; 2012 ; Nature Conservation Volume 1-3 ; 1-3 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Nature Conservation Volume 4-6 ; 4-6 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Nature Conservation Volume 7-9 ; 7-9 ; >
   
    }
   
@@ -169,10 +169,10 @@
     param[au_oai_set] = neobiota
     param[base_url] = http://neobiota.pensoft.net/
     
-    au < manifest ; exists ; 2011 ; 2011 ; NeoBiota Volumes 9-11 ; 9-11 >
-    au < manifest ; exists ; 2012 ; 2012 ; NeoBiota Volumes 12-15 ; 12-15 >
-    au < manifest ; exists ; 2013 ; 2013 ; NeoBiota Volumes 16-19 ; 16-19 >
-    au < crawling ; exists ; 2014 ; 2014 ; NeoBiota Volumes 20-24 ; 20-24 >
+    au < manifest ; exists ; 2011 ; 2011 ; NeoBiota Volumes 9-11 ; 9-11 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; NeoBiota Volumes 12-15 ; 12-15 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; NeoBiota Volumes 16-19 ; 16-19 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; NeoBiota Volumes 20-24 ; 20-24 ; >
   
    }
 
@@ -188,8 +188,8 @@
     param[au_oai_set] = nl
     param[base_url] = http://nl.pensoft.net/
     
-    au < crawling ; exists ; 2014 ; 2014 ; Nota Lepidopterologica Volumes 37 ; 37 >
-    au < testing ; exists ; 2015 ; 2015 ; Nota Lepidopterologica Volumes 38 ; 38 >
+    au < crawling ; exists ; 2014 ; 2014 ; Nota Lepidopterologica Volumes 37 ; 37 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Nota Lepidopterologica Volumes 38 ; 38 ; >
    }
     
    {
@@ -204,11 +204,11 @@
     param[au_oai_set] = phytokeys
     param[base_url] = http://phytokeys.pensoft.net/
     
-    au < manifest ; exists ; 2010 ; 2010 ; PhytoKeys Volume 1 ; 1 >
-    au < manifest ; exists ; 2011 ; 2011 ; PhytoKeys Volumes 2-7 ; 2-7 >
-    au < manifest ; exists ; 2012 ; 2012 ; PhytoKeys Volumes 8-19 ; 8-19 >
-    au < manifest ; exists ; 2013 ; 2013 ; PhytoKeys Volumes 20-26 ; 20-26 >
-    au < crawling ; exists ; 2014 ; 2014 ; PhytoKeys Volumes 27-32 ; 27-32 >
+    au < manifest ; exists ; 2010 ; 2010 ; PhytoKeys Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; PhytoKeys Volumes 2-7 ; 2-7 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; PhytoKeys Volumes 8-19 ; 8-19 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; PhytoKeys Volumes 20-26 ; 20-26 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; PhytoKeys Volumes 27-32 ; 27-32 ; >
   
    }
   
@@ -225,9 +225,9 @@
     param[au_oai_set] = subtbiol
     param[base_url] = http://subtbiol.pensoft.net/
     
-    au < manifest ; exists ; 2011 ; 2011 ; Subterranean Biology Volumes 8-9 ; 8-9 >
-    au < manifest ; exists ; 2013 ; 2013 ; Subterranean Biology Volumes 10-11 ; 10-11 >
-    au < crawling ; exists ; 2014 ; 2014 ; Subterranean Biology Volumes 12-13 ; 12-13 >
+    au < manifest ; exists ; 2011 ; 2011 ; Subterranean Biology Volumes 8-9 ; 8-9 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Subterranean Biology Volumes 10-11 ; 10-11 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; Subterranean Biology Volumes 12-13 ; 12-13 ; >
 
   
    }
@@ -244,13 +244,13 @@
     param[au_oai_set] = zookeys
     param[base_url] = http://zookeys.pensoft.net/
     
-    au < manifest ; exists ; 2008 ; 2008 ; ZooKeys Volumes 1-4 ; 1-4 >
-    au < manifest ; exists ; 2009 ; 2009 ; ZooKeys Volumes 5-31 ; 5-31 >
-    au < manifest ; exists ; 2010 ; 2010 ; ZooKeys Volumes 32-73 ; 32-73 >
-    au < manifest ; exists ; 2011 ; 2011 ; ZooKeys Volumes 74-160 ; 74-160 >
-    au < manifest ; exists ; 2012 ; 2012 ; ZooKeys Volumes 161-255 ; 161-255 >
-    au < manifest ; exists ; 2013 ; 2013 ; ZooKeys Volumes 256-342 ; 256-342 >
-    au < crawling ; exists ; 2014 ; 2014 ; ZooKeys Volumes 343-430 ; 343-430 >
+    au < manifest ; exists ; 2008 ; 2008 ; ZooKeys Volumes 1-4 ; 1-4 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; ZooKeys Volumes 5-31 ; 5-31 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; ZooKeys Volumes 32-73 ; 32-73 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; ZooKeys Volumes 74-160 ; 74-160 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; ZooKeys Volumes 161-255 ; 161-255 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; ZooKeys Volumes 256-342 ; 256-342 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; ZooKeys Volumes 343-430 ; 343-430 ; >
   
    }
    
@@ -266,7 +266,7 @@
     param[au_oai_set] = zse
     param[base_url] = http://zse.pensoft.net/
 
-    au < crawling ; exists ; 2014 ; 2014 ; Zoosystematics and Evolution Volumes 90 ; 90 >
+    au < crawling ; exists ; 2014 ; 2014 ; Zoosystematics and Evolution Volumes 90 ; 90 ; >
 
     }
 

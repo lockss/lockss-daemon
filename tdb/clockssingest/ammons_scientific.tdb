@@ -12,7 +12,7 @@
   
   plugin = org.lockss.plugin.atypon.ammonsscientific.ClockssAmmonsScientificPlugin
   param[base_url] = http://www.amsciepub.com/
-  implicit < status ; status2 ; year ; name ; param[volume_name] >
+  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
   
   {
   
@@ -23,10 +23,10 @@
     
     param[journal_id] = cp
  
-    au < crawling ; exists ; 2012 ; Comprehensive Psychology Volume 1 ; 1 >
-    au < finished ; finished ; 2013 ; Comprehensive Psychology Volume 2 ; 2 >
-    au < finished ; finished ; 2014 ; Comprehensive Psychology Volume 3 ; 3 >
-    au < crawling ; exists ; 2015 ; Comprehensive Psychology Volume 4 ; 4 >
+    au < crawling ; exists ; 2012 ; Comprehensive Psychology Volume 1 ; 1 ; >
+    au < finished ; finished ; 2013 ; Comprehensive Psychology Volume 2 ; 2 ; >
+    au < finished ; finished ; 2014 ; Comprehensive Psychology Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2015 ; Comprehensive Psychology Volume 4 ; 4 ; >
 
   }
 
@@ -39,10 +39,10 @@
     
     param[journal_id] = it
  
-    au < crawling ; exists ; 2012 ; Innovative Teaching Volume 1 ; 1 >
-    au < crawling ; exists ; 2013 ; Innovative Teaching Volume 2 ; 2 >
-    au < finished ; finished ; 2014 ; Innovative Teaching Volume 3 ; 3 >
-    au < crawling ; exists ; 2015 ; Innovative Teaching Volume 4 ; 4 >
+    au < crawling ; exists ; 2012 ; Innovative Teaching Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2013 ; Innovative Teaching Volume 2 ; 2 ; >
+    au < finished ; finished ; 2014 ; Innovative Teaching Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2015 ; Innovative Teaching Volume 4 ; 4 ; >
 
   }
 
@@ -55,123 +55,123 @@
     
     param[journal_id] = pr0
  
-    au < crawling ; exists ; 1955 ; Psychological Reports Volume 1 ; 1 >
-    au < crawling ; exists ; 1956 ; Psychological Reports Volume 2 ; 2 >
-    au < crawling ; exists ; 1957 ; Psychological Reports Volume 3 ; 3 >
-    au < crawling ; exists ; 1958 ; Psychological Reports Volume 4 ; 4 >
-    au < crawling ; exists ; 1959 ; Psychological Reports Volume 5 ; 5 >
-    au < crawling ; exists ; 1960 ; Psychological Reports Volume 6 ; 6 >
-    au < crawling ; exists ; 1960 ; Psychological Reports Volume 7 ; 7 >
-    au < crawling ; exists ; 1961 ; Psychological Reports Volume 8 ; 8 >
-    au < crawling ; exists ; 1961 ; Psychological Reports Volume 9 ; 9 >
-    au < crawling ; exists ; 1962 ; Psychological Reports Volume 10 ; 10 >
-    au < crawling ; exists ; 1962 ; Psychological Reports Volume 11 ; 11 >
-    au < crawling ; exists ; 1963 ; Psychological Reports Volume 12 ; 12 >
-    au < crawling ; exists ; 1963 ; Psychological Reports Volume 13 ; 13 >
-    au < crawling ; exists ; 1964 ; Psychological Reports Volume 14 ; 14 >
-    au < crawling ; exists ; 1964 ; Psychological Reports Volume 15 ; 15 >
-    au < crawling ; exists ; 1965 ; Psychological Reports Volume 16 ; 16 >
-    au < crawling ; exists ; 1965 ; Psychological Reports Volume 17 ; 17 >
-    au < crawling ; exists ; 1966 ; Psychological Reports Volume 18 ; 18 >
-    au < crawling ; exists ; 1966 ; Psychological Reports Volume 19 ; 19 >
-    au < crawling ; exists ; 1967 ; Psychological Reports Volume 20 ; 20 >
-    au < crawling ; exists ; 1967 ; Psychological Reports Volume 21 ; 21 >
-    au < crawling ; exists ; 1968 ; Psychological Reports Volume 22 ; 22 >
-    au < crawling ; exists ; 1968 ; Psychological Reports Volume 23 ; 23 >
-    au < crawling ; exists ; 1969 ; Psychological Reports Volume 24 ; 24 >
-    au < crawling ; exists ; 1969 ; Psychological Reports Volume 25 ; 25 >
-    au < crawling ; exists ; 1970 ; Psychological Reports Volume 26 ; 26 >
-    au < crawling ; exists ; 1970 ; Psychological Reports Volume 27 ; 27 >
-    au < crawling ; exists ; 1971 ; Psychological Reports Volume 28 ; 28 >
-    au < crawling ; exists ; 1971 ; Psychological Reports Volume 29 ; 29 >
-    au < crawling ; exists ; 1972 ; Psychological Reports Volume 30 ; 30 >
-    au < crawling ; exists ; 1972 ; Psychological Reports Volume 31 ; 31 >
-    au < crawling ; exists ; 1973 ; Psychological Reports Volume 32 ; 32 >
-    au < crawling ; exists ; 1973 ; Psychological Reports Volume 33 ; 33 >
-    au < crawling ; exists ; 1974 ; Psychological Reports Volume 34 ; 34 >
-    au < crawling ; exists ; 1974 ; Psychological Reports Volume 35 ; 35 >
-    au < crawling ; exists ; 1975 ; Psychological Reports Volume 36 ; 36 >
-    au < crawling ; exists ; 1975 ; Psychological Reports Volume 37 ; 37 >
-    au < crawling ; exists ; 1976 ; Psychological Reports Volume 38 ; 38 >
-    au < crawling ; exists ; 1976 ; Psychological Reports Volume 39 ; 39 >
-    au < crawling ; exists ; 1977 ; Psychological Reports Volume 40 ; 40 >
-    au < crawling ; exists ; 1977 ; Psychological Reports Volume 41 ; 41 >
-    au < crawling ; exists ; 1978 ; Psychological Reports Volume 42 ; 42 >
-    au < crawling ; exists ; 1978 ; Psychological Reports Volume 43 ; 43 >
-    au < crawling ; exists ; 1979 ; Psychological Reports Volume 44 ; 44 >
-    au < crawling ; exists ; 1979 ; Psychological Reports Volume 45 ; 45 >
-    au < crawling ; exists ; 1980 ; Psychological Reports Volume 46 ; 46 >
-    au < crawling ; exists ; 1980 ; Psychological Reports Volume 47 ; 47 >
-    au < crawling ; exists ; 1981 ; Psychological Reports Volume 48 ; 48 >
-    au < crawling ; exists ; 1981 ; Psychological Reports Volume 49 ; 49 >
-    au < crawling ; exists ; 1982 ; Psychological Reports Volume 50 ; 50 >
-    au < crawling ; exists ; 1982 ; Psychological Reports Volume 51 ; 51 >
-    au < crawling ; exists ; 1983 ; Psychological Reports Volume 52 ; 52 >
-    au < crawling ; exists ; 1983 ; Psychological Reports Volume 53 ; 53 >
-    au < crawling ; exists ; 1984 ; Psychological Reports Volume 54 ; 54 >
-    au < crawling ; exists ; 1984 ; Psychological Reports Volume 55 ; 55 >
-    au < crawling ; exists ; 1985 ; Psychological Reports Volume 56 ; 56 >
-    au < crawling ; exists ; 1985 ; Psychological Reports Volume 57 ; 57 >
-    au < crawling ; exists ; 1986 ; Psychological Reports Volume 58 ; 58 >
-    au < crawling ; exists ; 1986 ; Psychological Reports Volume 59 ; 59 >
-    au < crawling ; exists ; 1987 ; Psychological Reports Volume 60 ; 60 >
-    au < crawling ; exists ; 1987 ; Psychological Reports Volume 61 ; 61 >
-    au < crawling ; exists ; 1988 ; Psychological Reports Volume 62 ; 62 >
-    au < crawling ; exists ; 1988 ; Psychological Reports Volume 63 ; 63 >
-    au < crawling ; exists ; 1989 ; Psychological Reports Volume 64 ; 64 >
-    au < crawling ; exists ; 1989 ; Psychological Reports Volume 65 ; 65 >
-    au < crawling ; exists ; 1990 ; Psychological Reports Volume 66 ; 66 >
-    au < crawling ; exists ; 1990 ; Psychological Reports Volume 67 ; 67 >
-    au < crawling ; exists ; 1991 ; Psychological Reports Volume 68 ; 68 >
-    au < crawling ; exists ; 1991 ; Psychological Reports Volume 69 ; 69 >
-    au < crawling ; exists ; 1992 ; Psychological Reports Volume 70 ; 70 >
-    au < crawling ; exists ; 1992 ; Psychological Reports Volume 71 ; 71 >
-    au < crawling ; exists ; 1993 ; Psychological Reports Volume 72 ; 72 >
-    au < crawling ; exists ; 1993 ; Psychological Reports Volume 73 ; 73 >
-    au < crawling ; exists ; 1994 ; Psychological Reports Volume 74 ; 74 >
-    au < crawling ; exists ; 1994 ; Psychological Reports Volume 75 ; 75 >
-    au < crawling ; exists ; 1995 ; Psychological Reports Volume 76 ; 76 >
-    au < crawling ; exists ; 1995 ; Psychological Reports Volume 77 ; 77 >
-    au < crawling ; exists ; 1996 ; Psychological Reports Volume 78 ; 78 >
-    au < crawling ; exists ; 1996 ; Psychological Reports Volume 79 ; 79 >
-    au < crawling ; exists ; 1997 ; Psychological Reports Volume 80 ; 80 >
-    au < crawling ; exists ; 1997 ; Psychological Reports Volume 81 ; 81 >
-    au < crawling ; exists ; 1998 ; Psychological Reports Volume 82 ; 82 >
-    au < crawling ; exists ; 1998 ; Psychological Reports Volume 83 ; 83 >
-    au < crawling ; exists ; 1999 ; Psychological Reports Volume 84 ; 84 >
-    au < crawling ; exists ; 1999 ; Psychological Reports Volume 85 ; 85 >
-    au < crawling ; exists ; 2000 ; Psychological Reports Volume 86 ; 86 >
-    au < crawling ; exists ; 2000 ; Psychological Reports Volume 87 ; 87 >
-    au < crawling ; exists ; 2001 ; Psychological Reports Volume 88 ; 88 >
-    au < crawling ; exists ; 2001 ; Psychological Reports Volume 89 ; 89 >
-    au < crawling ; exists ; 2002 ; Psychological Reports Volume 90 ; 90 >
-    au < crawling ; exists ; 2002 ; Psychological Reports Volume 91 ; 91 >
-    au < crawling ; exists ; 2003 ; Psychological Reports Volume 92 ; 92 >
-    au < crawling ; exists ; 2003 ; Psychological Reports Volume 93 ; 93 >
-    au < crawling ; exists ; 2004 ; Psychological Reports Volume 94 ; 94 >
-    au < crawling ; exists ; 2004 ; Psychological Reports Volume 95 ; 95 >
-    au < crawling ; exists ; 2005 ; Psychological Reports Volume 96 ; 96 >
-    au < crawling ; exists ; 2005 ; Psychological Reports Volume 97 ; 97 >
-    au < crawling ; exists ; 2006 ; Psychological Reports Volume 98 ; 98 >
-    au < crawling ; exists ; 2006 ; Psychological Reports Volume 99 ; 99 >
-    au < crawling ; exists ; 2007 ; Psychological Reports Volume 100 ; 100 >
-    au < crawling ; exists ; 2007 ; Psychological Reports Volume 101 ; 101 >
-    au < crawling ; exists ; 2008 ; Psychological Reports Volume 102 ; 102 >
-    au < crawling ; exists ; 2008 ; Psychological Reports Volume 103 ; 103 >
-    au < crawling ; exists ; 2009 ; Psychological Reports Volume 104 ; 104 >
-    au < crawling ; exists ; 2009 ; Psychological Reports Volume 105 ; 105 >
-    au < crawling ; exists ; 2010 ; Psychological Reports Volume 106 ; 106 >
-    au < crawling ; exists ; 2010 ; Psychological Reports Volume 107 ; 107 >
-    au < crawling ; exists ; 2011 ; Psychological Reports Volume 108 ; 108 >
-    au < superseded ; exists ; 2011 ; Psychological Reports Volume 109 [superseded] ; 109 > #reprocess when it moves to highwire
-    au < crawling ; exists ; 2012 ; Psychological Reports Volume 110 ; 110 >
-    au < crawling ; exists ; 2012 ; Psychological Reports Volume 111 ; 111 >
-    au < crawling ; exists ; 2013 ; Psychological Reports Volume 112 ; 112 >
-    au < crawling ; exists ; 2013 ; Psychological Reports Volume 113 ; 113 >
-    au < crawling ; exists ; 2014 ; Psychological Reports Volume 114 ; 114 >
-    au < crawling ; exists ; 2014 ; Psychological Reports Volume 115 ; 115 >
-    au < doNotProcess ; exists ; 2015 ; Psychological Reports Volume 116 ; 116 > #PD-1411 500 Internal Server Error. process after move.
-    au < crawling ; exists ; 2015 ; Psychological Reports Volume 117 ; 117 >
+    au < crawling ; exists ; 1955 ; Psychological Reports Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1956 ; Psychological Reports Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1957 ; Psychological Reports Volume 3 ; 3 ; >
+    au < crawling ; exists ; 1958 ; Psychological Reports Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1959 ; Psychological Reports Volume 5 ; 5 ; >
+    au < crawling ; exists ; 1960 ; Psychological Reports Volume 6 ; 6 ; >
+    au < crawling ; exists ; 1960 ; Psychological Reports Volume 7 ; 7 ; >
+    au < crawling ; exists ; 1961 ; Psychological Reports Volume 8 ; 8 ; >
+    au < crawling ; exists ; 1961 ; Psychological Reports Volume 9 ; 9 ; >
+    au < crawling ; exists ; 1962 ; Psychological Reports Volume 10 ; 10 ; >
+    au < crawling ; exists ; 1962 ; Psychological Reports Volume 11 ; 11 ; >
+    au < crawling ; exists ; 1963 ; Psychological Reports Volume 12 ; 12 ; >
+    au < crawling ; exists ; 1963 ; Psychological Reports Volume 13 ; 13 ; >
+    au < crawling ; exists ; 1964 ; Psychological Reports Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1964 ; Psychological Reports Volume 15 ; 15 ; >
+    au < crawling ; exists ; 1965 ; Psychological Reports Volume 16 ; 16 ; >
+    au < crawling ; exists ; 1965 ; Psychological Reports Volume 17 ; 17 ; >
+    au < crawling ; exists ; 1966 ; Psychological Reports Volume 18 ; 18 ; >
+    au < crawling ; exists ; 1966 ; Psychological Reports Volume 19 ; 19 ; >
+    au < crawling ; exists ; 1967 ; Psychological Reports Volume 20 ; 20 ; >
+    au < crawling ; exists ; 1967 ; Psychological Reports Volume 21 ; 21 ; >
+    au < crawling ; exists ; 1968 ; Psychological Reports Volume 22 ; 22 ; >
+    au < crawling ; exists ; 1968 ; Psychological Reports Volume 23 ; 23 ; >
+    au < crawling ; exists ; 1969 ; Psychological Reports Volume 24 ; 24 ; >
+    au < crawling ; exists ; 1969 ; Psychological Reports Volume 25 ; 25 ; >
+    au < crawling ; exists ; 1970 ; Psychological Reports Volume 26 ; 26 ; >
+    au < crawling ; exists ; 1970 ; Psychological Reports Volume 27 ; 27 ; >
+    au < crawling ; exists ; 1971 ; Psychological Reports Volume 28 ; 28 ; >
+    au < crawling ; exists ; 1971 ; Psychological Reports Volume 29 ; 29 ; >
+    au < crawling ; exists ; 1972 ; Psychological Reports Volume 30 ; 30 ; >
+    au < crawling ; exists ; 1972 ; Psychological Reports Volume 31 ; 31 ; >
+    au < crawling ; exists ; 1973 ; Psychological Reports Volume 32 ; 32 ; >
+    au < crawling ; exists ; 1973 ; Psychological Reports Volume 33 ; 33 ; >
+    au < crawling ; exists ; 1974 ; Psychological Reports Volume 34 ; 34 ; >
+    au < crawling ; exists ; 1974 ; Psychological Reports Volume 35 ; 35 ; >
+    au < crawling ; exists ; 1975 ; Psychological Reports Volume 36 ; 36 ; >
+    au < crawling ; exists ; 1975 ; Psychological Reports Volume 37 ; 37 ; >
+    au < crawling ; exists ; 1976 ; Psychological Reports Volume 38 ; 38 ; >
+    au < crawling ; exists ; 1976 ; Psychological Reports Volume 39 ; 39 ; >
+    au < crawling ; exists ; 1977 ; Psychological Reports Volume 40 ; 40 ; >
+    au < crawling ; exists ; 1977 ; Psychological Reports Volume 41 ; 41 ; >
+    au < crawling ; exists ; 1978 ; Psychological Reports Volume 42 ; 42 ; >
+    au < crawling ; exists ; 1978 ; Psychological Reports Volume 43 ; 43 ; >
+    au < crawling ; exists ; 1979 ; Psychological Reports Volume 44 ; 44 ; >
+    au < crawling ; exists ; 1979 ; Psychological Reports Volume 45 ; 45 ; >
+    au < crawling ; exists ; 1980 ; Psychological Reports Volume 46 ; 46 ; >
+    au < crawling ; exists ; 1980 ; Psychological Reports Volume 47 ; 47 ; >
+    au < crawling ; exists ; 1981 ; Psychological Reports Volume 48 ; 48 ; >
+    au < crawling ; exists ; 1981 ; Psychological Reports Volume 49 ; 49 ; >
+    au < crawling ; exists ; 1982 ; Psychological Reports Volume 50 ; 50 ; >
+    au < crawling ; exists ; 1982 ; Psychological Reports Volume 51 ; 51 ; >
+    au < crawling ; exists ; 1983 ; Psychological Reports Volume 52 ; 52 ; >
+    au < crawling ; exists ; 1983 ; Psychological Reports Volume 53 ; 53 ; >
+    au < crawling ; exists ; 1984 ; Psychological Reports Volume 54 ; 54 ; >
+    au < crawling ; exists ; 1984 ; Psychological Reports Volume 55 ; 55 ; >
+    au < crawling ; exists ; 1985 ; Psychological Reports Volume 56 ; 56 ; >
+    au < crawling ; exists ; 1985 ; Psychological Reports Volume 57 ; 57 ; >
+    au < crawling ; exists ; 1986 ; Psychological Reports Volume 58 ; 58 ; >
+    au < crawling ; exists ; 1986 ; Psychological Reports Volume 59 ; 59 ; >
+    au < crawling ; exists ; 1987 ; Psychological Reports Volume 60 ; 60 ; >
+    au < crawling ; exists ; 1987 ; Psychological Reports Volume 61 ; 61 ; >
+    au < crawling ; exists ; 1988 ; Psychological Reports Volume 62 ; 62 ; >
+    au < crawling ; exists ; 1988 ; Psychological Reports Volume 63 ; 63 ; >
+    au < crawling ; exists ; 1989 ; Psychological Reports Volume 64 ; 64 ; >
+    au < crawling ; exists ; 1989 ; Psychological Reports Volume 65 ; 65 ; >
+    au < crawling ; exists ; 1990 ; Psychological Reports Volume 66 ; 66 ; >
+    au < crawling ; exists ; 1990 ; Psychological Reports Volume 67 ; 67 ; >
+    au < crawling ; exists ; 1991 ; Psychological Reports Volume 68 ; 68 ; >
+    au < crawling ; exists ; 1991 ; Psychological Reports Volume 69 ; 69 ; >
+    au < crawling ; exists ; 1992 ; Psychological Reports Volume 70 ; 70 ; >
+    au < crawling ; exists ; 1992 ; Psychological Reports Volume 71 ; 71 ; >
+    au < crawling ; exists ; 1993 ; Psychological Reports Volume 72 ; 72 ; >
+    au < crawling ; exists ; 1993 ; Psychological Reports Volume 73 ; 73 ; >
+    au < crawling ; exists ; 1994 ; Psychological Reports Volume 74 ; 74 ; >
+    au < crawling ; exists ; 1994 ; Psychological Reports Volume 75 ; 75 ; >
+    au < crawling ; exists ; 1995 ; Psychological Reports Volume 76 ; 76 ; >
+    au < crawling ; exists ; 1995 ; Psychological Reports Volume 77 ; 77 ; >
+    au < crawling ; exists ; 1996 ; Psychological Reports Volume 78 ; 78 ; >
+    au < crawling ; exists ; 1996 ; Psychological Reports Volume 79 ; 79 ; >
+    au < crawling ; exists ; 1997 ; Psychological Reports Volume 80 ; 80 ; >
+    au < crawling ; exists ; 1997 ; Psychological Reports Volume 81 ; 81 ; >
+    au < crawling ; exists ; 1998 ; Psychological Reports Volume 82 ; 82 ; >
+    au < crawling ; exists ; 1998 ; Psychological Reports Volume 83 ; 83 ; >
+    au < crawling ; exists ; 1999 ; Psychological Reports Volume 84 ; 84 ; >
+    au < crawling ; exists ; 1999 ; Psychological Reports Volume 85 ; 85 ; >
+    au < crawling ; exists ; 2000 ; Psychological Reports Volume 86 ; 86 ; >
+    au < crawling ; exists ; 2000 ; Psychological Reports Volume 87 ; 87 ; >
+    au < crawling ; exists ; 2001 ; Psychological Reports Volume 88 ; 88 ; >
+    au < crawling ; exists ; 2001 ; Psychological Reports Volume 89 ; 89 ; >
+    au < crawling ; exists ; 2002 ; Psychological Reports Volume 90 ; 90 ; >
+    au < crawling ; exists ; 2002 ; Psychological Reports Volume 91 ; 91 ; >
+    au < crawling ; exists ; 2003 ; Psychological Reports Volume 92 ; 92 ; >
+    au < crawling ; exists ; 2003 ; Psychological Reports Volume 93 ; 93 ; >
+    au < crawling ; exists ; 2004 ; Psychological Reports Volume 94 ; 94 ; >
+    au < crawling ; exists ; 2004 ; Psychological Reports Volume 95 ; 95 ; >
+    au < crawling ; exists ; 2005 ; Psychological Reports Volume 96 ; 96 ; >
+    au < crawling ; exists ; 2005 ; Psychological Reports Volume 97 ; 97 ; >
+    au < crawling ; exists ; 2006 ; Psychological Reports Volume 98 ; 98 ; >
+    au < crawling ; exists ; 2006 ; Psychological Reports Volume 99 ; 99 ; >
+    au < crawling ; exists ; 2007 ; Psychological Reports Volume 100 ; 100 ; >
+    au < crawling ; exists ; 2007 ; Psychological Reports Volume 101 ; 101 ; >
+    au < crawling ; exists ; 2008 ; Psychological Reports Volume 102 ; 102 ; >
+    au < crawling ; exists ; 2008 ; Psychological Reports Volume 103 ; 103 ; >
+    au < crawling ; exists ; 2009 ; Psychological Reports Volume 104 ; 104 ; >
+    au < crawling ; exists ; 2009 ; Psychological Reports Volume 105 ; 105 ; >
+    au < crawling ; exists ; 2010 ; Psychological Reports Volume 106 ; 106 ; >
+    au < crawling ; exists ; 2010 ; Psychological Reports Volume 107 ; 107 ; >
+    au < crawling ; exists ; 2011 ; Psychological Reports Volume 108 ; 108 ; >
+    au < superseded ; exists ; 2011 ; Psychological Reports Volume 109 [superseded] ; 109 ; > #reprocess when it moves to highwire
+    au < crawling ; exists ; 2012 ; Psychological Reports Volume 110 ; 110 ; >
+    au < crawling ; exists ; 2012 ; Psychological Reports Volume 111 ; 111 ; >
+    au < crawling ; exists ; 2013 ; Psychological Reports Volume 112 ; 112 ; >
+    au < crawling ; exists ; 2013 ; Psychological Reports Volume 113 ; 113 ; >
+    au < crawling ; exists ; 2014 ; Psychological Reports Volume 114 ; 114 ; >
+    au < crawling ; exists ; 2014 ; Psychological Reports Volume 115 ; 115 ; >
+    au < doNotProcess ; exists ; 2015 ; Psychological Reports Volume 116 ; 116 ; > #PD-1411 500 Internal Server Error. process after move.
+    au < crawling ; exists ; 2015 ; Psychological Reports Volume 117 ; 117 ; >
     
   }
 
@@ -184,127 +184,127 @@
     
     param[journal_id] = pms
 
-    au < crawling ; exists ; 1949 ; Perceptual and Motor Skills Volume 1 ; 1 >
-    au < crawling ; exists ; 1950 ; Perceptual and Motor Skills Volume 2 ; 2 >
-    au < notReady ; exists ; 1951 ; Perceptual and Motor Skills Volume 3 ; 3 > #no articles online. TOC only. See http://www.amsciepub.com/clockss/pms/3/index.html
-    au < crawling ; exists ; 1952 ; Perceptual and Motor Skills Volume 4 ; 4 >
-    au < crawling ; exists ; 1955 ; Perceptual and Motor Skills Volume 5 ; 5 >
-    au < crawling ; exists ; 1956 ; Perceptual and Motor Skills Volume 6 ; 6 >
-    au < crawling ; exists ; 1957 ; Perceptual and Motor Skills Volume 7 ; 7 >
-    au < crawling ; exists ; 1958 ; Perceptual and Motor Skills Volume 8 ; 8 >
-    au < crawling ; exists ; 1959 ; Perceptual and Motor Skills Volume 9 ; 9 >
-    au < crawling ; exists ; 1960 ; Perceptual and Motor Skills Volume 10 ; 10 >
-    au < crawling ; exists ; 1960 ; Perceptual and Motor Skills Volume 11 ; 11 >
-    au < crawling ; exists ; 1961 ; Perceptual and Motor Skills Volume 12 ; 12 >
-    au < crawling ; exists ; 1961 ; Perceptual and Motor Skills Volume 13 ; 13 >
-    au < crawling ; exists ; 1962 ; Perceptual and Motor Skills Volume 14 ; 14 >
-    au < crawling ; exists ; 1962 ; Perceptual and Motor Skills Volume 15 ; 15 >
-    au < crawling ; exists ; 1963 ; Perceptual and Motor Skills Volume 16 ; 16 >
-    au < crawling ; exists ; 1963 ; Perceptual and Motor Skills Volume 17 ; 17 >
-    au < crawling ; exists ; 1964 ; Perceptual and Motor Skills Volume 18 ; 18 >
-    au < crawling ; exists ; 1964 ; Perceptual and Motor Skills Volume 19 ; 19 >
-    au < crawling ; exists ; 1965 ; Perceptual and Motor Skills Volume 20 ; 20 >
-    au < crawling ; exists ; 1965 ; Perceptual and Motor Skills Volume 21 ; 21 >
-    au < crawling ; exists ; 1966 ; Perceptual and Motor Skills Volume 22 ; 22 >
-    au < crawling ; exists ; 1966 ; Perceptual and Motor Skills Volume 23 ; 23 >
-    au < crawling ; exists ; 1967 ; Perceptual and Motor Skills Volume 24 ; 24 >
-    au < crawling ; exists ; 1967 ; Perceptual and Motor Skills Volume 25 ; 25 >
-    au < crawling ; exists ; 1968 ; Perceptual and Motor Skills Volume 26 ; 26 >
-    au < crawling ; exists ; 1968 ; Perceptual and Motor Skills Volume 27 ; 27 >
-    au < crawling ; exists ; 1969 ; Perceptual and Motor Skills Volume 28 ; 28 >
-    au < crawling ; exists ; 1969 ; Perceptual and Motor Skills Volume 29 ; 29 >
-    au < crawling ; exists ; 1970 ; Perceptual and Motor Skills Volume 30 ; 30 >
-    au < crawling ; exists ; 1970 ; Perceptual and Motor Skills Volume 31 ; 31 >
-    au < crawling ; exists ; 1971 ; Perceptual and Motor Skills Volume 32 ; 32 >
-    au < crawling ; exists ; 1971 ; Perceptual and Motor Skills Volume 33 ; 33 >
-    au < crawling ; exists ; 1972 ; Perceptual and Motor Skills Volume 34 ; 34 >
-    au < crawling ; exists ; 1972 ; Perceptual and Motor Skills Volume 35 ; 35 >
-    au < crawling ; exists ; 1973 ; Perceptual and Motor Skills Volume 36 ; 36 >
-    au < crawling ; exists ; 1973 ; Perceptual and Motor Skills Volume 37 ; 37 >
-    au < crawling ; exists ; 1974 ; Perceptual and Motor Skills Volume 38 ; 38 >
-    au < crawling ; exists ; 1974 ; Perceptual and Motor Skills Volume 39 ; 39 >
-    au < crawling ; exists ; 1975 ; Perceptual and Motor Skills Volume 40 ; 40 >
-    au < crawling ; exists ; 1975 ; Perceptual and Motor Skills Volume 41 ; 41 >
-    au < crawling ; exists ; 1976 ; Perceptual and Motor Skills Volume 42 ; 42 >
-    au < crawling ; exists ; 1976 ; Perceptual and Motor Skills Volume 43 ; 43 >
-    au < crawling ; exists ; 1977 ; Perceptual and Motor Skills Volume 44 ; 44 >
-    au < crawling ; exists ; 1977 ; Perceptual and Motor Skills Volume 45 ; 45 >
-    au < crawling ; exists ; 1978 ; Perceptual and Motor Skills Volume 46 ; 46 >
-    au < crawling ; exists ; 1978 ; Perceptual and Motor Skills Volume 47 ; 47 >
-    au < crawling ; exists ; 1979 ; Perceptual and Motor Skills Volume 48 ; 48 >
-    au < crawling ; exists ; 1979 ; Perceptual and Motor Skills Volume 49 ; 49 >
-    au < crawling ; exists ; 1980 ; Perceptual and Motor Skills Volume 50 ; 50 >
-    au < crawling ; exists ; 1980 ; Perceptual and Motor Skills Volume 51 ; 51 >
-    au < crawling ; exists ; 1981 ; Perceptual and Motor Skills Volume 52 ; 52 >
-    au < crawling ; exists ; 1981 ; Perceptual and Motor Skills Volume 53 ; 53 >
-    au < crawling ; exists ; 1982 ; Perceptual and Motor Skills Volume 54 ; 54 >
-    au < crawling ; exists ; 1982 ; Perceptual and Motor Skills Volume 55 ; 55 >
-    au < crawling ; exists ; 1983 ; Perceptual and Motor Skills Volume 56 ; 56 >
-    au < crawling ; exists ; 1983 ; Perceptual and Motor Skills Volume 57 ; 57 >
-    au < crawling ; exists ; 1984 ; Perceptual and Motor Skills Volume 58 ; 58 >
-    au < crawling ; exists ; 1984 ; Perceptual and Motor Skills Volume 59 ; 59 >
-    au < crawling ; exists ; 1985 ; Perceptual and Motor Skills Volume 60 ; 60 >
-    au < crawling ; exists ; 1985 ; Perceptual and Motor Skills Volume 61 ; 61 >
-    au < crawling ; exists ; 1986 ; Perceptual and Motor Skills Volume 62 ; 62 >
-    au < crawling ; exists ; 1986 ; Perceptual and Motor Skills Volume 63 ; 63 >
-    au < crawling ; exists ; 1987 ; Perceptual and Motor Skills Volume 64 ; 64 >
-    au < crawling ; exists ; 1987 ; Perceptual and Motor Skills Volume 65 ; 65 >
-    au < crawling ; exists ; 1988 ; Perceptual and Motor Skills Volume 66 ; 66 >
-    au < crawling ; exists ; 1988 ; Perceptual and Motor Skills Volume 67 ; 67 >
-    au < crawling ; exists ; 1989 ; Perceptual and Motor Skills Volume 68 ; 68 >
-    au < crawling ; exists ; 1989 ; Perceptual and Motor Skills Volume 69 ; 69 >
-    au < crawling ; exists ; 1990 ; Perceptual and Motor Skills Volume 70 ; 70 >
-    au < crawling ; exists ; 1990 ; Perceptual and Motor Skills Volume 71 ; 71 >
-    au < crawling ; exists ; 1991 ; Perceptual and Motor Skills Volume 72 ; 72 >
-    au < crawling ; exists ; 1991 ; Perceptual and Motor Skills Volume 73 ; 73 >
-    au < crawling ; exists ; 1992 ; Perceptual and Motor Skills Volume 74 ; 74 >
-    au < crawling ; exists ; 1992 ; Perceptual and Motor Skills Volume 75 ; 75 >
-    au < crawling ; exists ; 1993 ; Perceptual and Motor Skills Volume 76 ; 76 >
-    au < crawling ; exists ; 1993 ; Perceptual and Motor Skills Volume 77 ; 77 >
-    au < crawling ; exists ; 1994 ; Perceptual and Motor Skills Volume 78 ; 78 >
-    au < crawling ; exists ; 1994 ; Perceptual and Motor Skills Volume 79 ; 79 >
-    au < crawling ; exists ; 1995 ; Perceptual and Motor Skills Volume 80 ; 80 >
-    au < crawling ; exists ; 1995 ; Perceptual and Motor Skills Volume 81 ; 81 >
-    au < crawling ; exists ; 1996 ; Perceptual and Motor Skills Volume 82 ; 82 >
-    au < crawling ; exists ; 1996 ; Perceptual and Motor Skills Volume 83 ; 83 >
-    au < crawling ; exists ; 1997 ; Perceptual and Motor Skills Volume 84 ; 84 >
-    au < crawling ; exists ; 1997 ; Perceptual and Motor Skills Volume 85 ; 85 >
-    au < crawling ; exists ; 1998 ; Perceptual and Motor Skills Volume 86 ; 86 >
-    au < crawling ; exists ; 1998 ; Perceptual and Motor Skills Volume 87 ; 87 >
-    au < crawling ; exists ; 1999 ; Perceptual and Motor Skills Volume 88 ; 88 >
-    au < crawling ; exists ; 1999 ; Perceptual and Motor Skills Volume 89 ; 89 >
-    au < crawling ; exists ; 2000 ; Perceptual and Motor Skills Volume 90 ; 90 >
-    au < crawling ; exists ; 2000 ; Perceptual and Motor Skills Volume 91 ; 91 >
-    au < crawling ; exists ; 2001 ; Perceptual and Motor Skills Volume 92 ; 92 >
-    au < crawling ; exists ; 2001 ; Perceptual and Motor Skills Volume 93 ; 93 >
-    au < crawling ; exists ; 2002 ; Perceptual and Motor Skills Volume 94 ; 94 >
-    au < crawling ; exists ; 2002 ; Perceptual and Motor Skills Volume 95 ; 95 >
-    au < crawling ; exists ; 2003 ; Perceptual and Motor Skills Volume 96 ; 96 >
-    au < crawling ; exists ; 2003 ; Perceptual and Motor Skills Volume 97 ; 97 >
-    au < crawling ; exists ; 2004 ; Perceptual and Motor Skills Volume 98 ; 98 >
-    au < crawling ; exists ; 2004 ; Perceptual and Motor Skills Volume 99 ; 99 >
-    au < crawling ; exists ; 2005 ; Perceptual and Motor Skills Volume 100 ; 100 >
-    au < crawling ; exists ; 2005 ; Perceptual and Motor Skills Volume 101 ; 101 >
-    au < crawling ; exists ; 2006 ; Perceptual and Motor Skills Volume 102 ; 102 >
-    au < crawling ; exists ; 2006 ; Perceptual and Motor Skills Volume 103 ; 103 >
-    au < crawling ; exists ; 2007 ; Perceptual and Motor Skills Volume 104 ; 104 >
-    au < crawling ; exists ; 2007 ; Perceptual and Motor Skills Volume 105 ; 105 >
-    au < crawling ; exists ; 2008 ; Perceptual and Motor Skills Volume 106 ; 106 >
-    au < crawling ; exists ; 2008 ; Perceptual and Motor Skills Volume 107 ; 107 >
-    au < crawling ; exists ; 2009 ; Perceptual and Motor Skills Volume 108 ; 108 >
-    au < crawling ; exists ; 2009 ; Perceptual and Motor Skills Volume 109 ; 109 >
-    au < crawling ; exists ; 2010 ; Perceptual and Motor Skills Volume 110 ; 110 >
-    au < crawling ; exists ; 2010 ; Perceptual and Motor Skills Volume 111 ; 111 >
-    au < crawling ; exists ; 2011 ; Perceptual and Motor Skills Volume 112 ; 112 >
-    au < crawling ; exists ; 2011 ; Perceptual and Motor Skills Volume 113 ; 113 >
-    au < crawling ; exists ; 2012 ; Perceptual and Motor Skills Volume 114 ; 114 >
-    au < crawling ; exists ; 2012 ; Perceptual and Motor Skills Volume 115 ; 115 >
-    au < crawling ; exists ; 2013 ; Perceptual and Motor Skills Volume 116 ; 116 >
-    au < crawling ; exists ; 2013 ; Perceptual and Motor Skills Volume 117 ; 117 >
-    au < crawling ; exists ; 2014 ; Perceptual and Motor Skills Volume 118 ; 118 >
-    au < crawling ; exists ; 2014 ; Perceptual and Motor Skills Volume 119 ; 119 >
-    au < doNotProcess ; exists ; 2015 ; Perceptual and Motor Skills Volume 120 ; 120 > #PD-1411 500 Internal Server Error. process after move.
-    au < crawling ; exists ; 2015 ; Perceptual and Motor Skills Volume 121 ; 121 >
+    au < crawling ; exists ; 1949 ; Perceptual and Motor Skills Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1950 ; Perceptual and Motor Skills Volume 2 ; 2 ; >
+    au < notReady ; exists ; 1951 ; Perceptual and Motor Skills Volume 3 ; 3 ; > #no articles online. TOC only. See http://www.amsciepub.com/clockss/pms/3/index.html
+    au < crawling ; exists ; 1952 ; Perceptual and Motor Skills Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1955 ; Perceptual and Motor Skills Volume 5 ; 5 ; >
+    au < crawling ; exists ; 1956 ; Perceptual and Motor Skills Volume 6 ; 6 ; >
+    au < crawling ; exists ; 1957 ; Perceptual and Motor Skills Volume 7 ; 7 ; >
+    au < crawling ; exists ; 1958 ; Perceptual and Motor Skills Volume 8 ; 8 ; >
+    au < crawling ; exists ; 1959 ; Perceptual and Motor Skills Volume 9 ; 9 ; >
+    au < crawling ; exists ; 1960 ; Perceptual and Motor Skills Volume 10 ; 10 ; >
+    au < crawling ; exists ; 1960 ; Perceptual and Motor Skills Volume 11 ; 11 ; >
+    au < crawling ; exists ; 1961 ; Perceptual and Motor Skills Volume 12 ; 12 ; >
+    au < crawling ; exists ; 1961 ; Perceptual and Motor Skills Volume 13 ; 13 ; >
+    au < crawling ; exists ; 1962 ; Perceptual and Motor Skills Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1962 ; Perceptual and Motor Skills Volume 15 ; 15 ; >
+    au < crawling ; exists ; 1963 ; Perceptual and Motor Skills Volume 16 ; 16 ; >
+    au < crawling ; exists ; 1963 ; Perceptual and Motor Skills Volume 17 ; 17 ; >
+    au < crawling ; exists ; 1964 ; Perceptual and Motor Skills Volume 18 ; 18 ; >
+    au < crawling ; exists ; 1964 ; Perceptual and Motor Skills Volume 19 ; 19 ; >
+    au < crawling ; exists ; 1965 ; Perceptual and Motor Skills Volume 20 ; 20 ; >
+    au < crawling ; exists ; 1965 ; Perceptual and Motor Skills Volume 21 ; 21 ; >
+    au < crawling ; exists ; 1966 ; Perceptual and Motor Skills Volume 22 ; 22 ; >
+    au < crawling ; exists ; 1966 ; Perceptual and Motor Skills Volume 23 ; 23 ; >
+    au < crawling ; exists ; 1967 ; Perceptual and Motor Skills Volume 24 ; 24 ; >
+    au < crawling ; exists ; 1967 ; Perceptual and Motor Skills Volume 25 ; 25 ; >
+    au < crawling ; exists ; 1968 ; Perceptual and Motor Skills Volume 26 ; 26 ; >
+    au < crawling ; exists ; 1968 ; Perceptual and Motor Skills Volume 27 ; 27 ; >
+    au < crawling ; exists ; 1969 ; Perceptual and Motor Skills Volume 28 ; 28 ; >
+    au < crawling ; exists ; 1969 ; Perceptual and Motor Skills Volume 29 ; 29 ; >
+    au < crawling ; exists ; 1970 ; Perceptual and Motor Skills Volume 30 ; 30 ; >
+    au < crawling ; exists ; 1970 ; Perceptual and Motor Skills Volume 31 ; 31 ; >
+    au < crawling ; exists ; 1971 ; Perceptual and Motor Skills Volume 32 ; 32 ; >
+    au < crawling ; exists ; 1971 ; Perceptual and Motor Skills Volume 33 ; 33 ; >
+    au < crawling ; exists ; 1972 ; Perceptual and Motor Skills Volume 34 ; 34 ; >
+    au < crawling ; exists ; 1972 ; Perceptual and Motor Skills Volume 35 ; 35 ; >
+    au < crawling ; exists ; 1973 ; Perceptual and Motor Skills Volume 36 ; 36 ; >
+    au < crawling ; exists ; 1973 ; Perceptual and Motor Skills Volume 37 ; 37 ; >
+    au < crawling ; exists ; 1974 ; Perceptual and Motor Skills Volume 38 ; 38 ; >
+    au < crawling ; exists ; 1974 ; Perceptual and Motor Skills Volume 39 ; 39 ; >
+    au < crawling ; exists ; 1975 ; Perceptual and Motor Skills Volume 40 ; 40 ; >
+    au < crawling ; exists ; 1975 ; Perceptual and Motor Skills Volume 41 ; 41 ; >
+    au < crawling ; exists ; 1976 ; Perceptual and Motor Skills Volume 42 ; 42 ; >
+    au < crawling ; exists ; 1976 ; Perceptual and Motor Skills Volume 43 ; 43 ; >
+    au < crawling ; exists ; 1977 ; Perceptual and Motor Skills Volume 44 ; 44 ; >
+    au < crawling ; exists ; 1977 ; Perceptual and Motor Skills Volume 45 ; 45 ; >
+    au < crawling ; exists ; 1978 ; Perceptual and Motor Skills Volume 46 ; 46 ; >
+    au < crawling ; exists ; 1978 ; Perceptual and Motor Skills Volume 47 ; 47 ; >
+    au < crawling ; exists ; 1979 ; Perceptual and Motor Skills Volume 48 ; 48 ; >
+    au < crawling ; exists ; 1979 ; Perceptual and Motor Skills Volume 49 ; 49 ; >
+    au < crawling ; exists ; 1980 ; Perceptual and Motor Skills Volume 50 ; 50 ; >
+    au < crawling ; exists ; 1980 ; Perceptual and Motor Skills Volume 51 ; 51 ; >
+    au < crawling ; exists ; 1981 ; Perceptual and Motor Skills Volume 52 ; 52 ; >
+    au < crawling ; exists ; 1981 ; Perceptual and Motor Skills Volume 53 ; 53 ; >
+    au < crawling ; exists ; 1982 ; Perceptual and Motor Skills Volume 54 ; 54 ; >
+    au < crawling ; exists ; 1982 ; Perceptual and Motor Skills Volume 55 ; 55 ; >
+    au < crawling ; exists ; 1983 ; Perceptual and Motor Skills Volume 56 ; 56 ; >
+    au < crawling ; exists ; 1983 ; Perceptual and Motor Skills Volume 57 ; 57 ; >
+    au < crawling ; exists ; 1984 ; Perceptual and Motor Skills Volume 58 ; 58 ; >
+    au < crawling ; exists ; 1984 ; Perceptual and Motor Skills Volume 59 ; 59 ; >
+    au < crawling ; exists ; 1985 ; Perceptual and Motor Skills Volume 60 ; 60 ; >
+    au < crawling ; exists ; 1985 ; Perceptual and Motor Skills Volume 61 ; 61 ; >
+    au < crawling ; exists ; 1986 ; Perceptual and Motor Skills Volume 62 ; 62 ; >
+    au < crawling ; exists ; 1986 ; Perceptual and Motor Skills Volume 63 ; 63 ; >
+    au < crawling ; exists ; 1987 ; Perceptual and Motor Skills Volume 64 ; 64 ; >
+    au < crawling ; exists ; 1987 ; Perceptual and Motor Skills Volume 65 ; 65 ; >
+    au < crawling ; exists ; 1988 ; Perceptual and Motor Skills Volume 66 ; 66 ; >
+    au < crawling ; exists ; 1988 ; Perceptual and Motor Skills Volume 67 ; 67 ; >
+    au < crawling ; exists ; 1989 ; Perceptual and Motor Skills Volume 68 ; 68 ; >
+    au < crawling ; exists ; 1989 ; Perceptual and Motor Skills Volume 69 ; 69 ; >
+    au < crawling ; exists ; 1990 ; Perceptual and Motor Skills Volume 70 ; 70 ; >
+    au < crawling ; exists ; 1990 ; Perceptual and Motor Skills Volume 71 ; 71 ; >
+    au < crawling ; exists ; 1991 ; Perceptual and Motor Skills Volume 72 ; 72 ; >
+    au < crawling ; exists ; 1991 ; Perceptual and Motor Skills Volume 73 ; 73 ; >
+    au < crawling ; exists ; 1992 ; Perceptual and Motor Skills Volume 74 ; 74 ; >
+    au < crawling ; exists ; 1992 ; Perceptual and Motor Skills Volume 75 ; 75 ; >
+    au < crawling ; exists ; 1993 ; Perceptual and Motor Skills Volume 76 ; 76 ; >
+    au < crawling ; exists ; 1993 ; Perceptual and Motor Skills Volume 77 ; 77 ; >
+    au < crawling ; exists ; 1994 ; Perceptual and Motor Skills Volume 78 ; 78 ; >
+    au < crawling ; exists ; 1994 ; Perceptual and Motor Skills Volume 79 ; 79 ; >
+    au < crawling ; exists ; 1995 ; Perceptual and Motor Skills Volume 80 ; 80 ; >
+    au < crawling ; exists ; 1995 ; Perceptual and Motor Skills Volume 81 ; 81 ; >
+    au < crawling ; exists ; 1996 ; Perceptual and Motor Skills Volume 82 ; 82 ; >
+    au < crawling ; exists ; 1996 ; Perceptual and Motor Skills Volume 83 ; 83 ; >
+    au < crawling ; exists ; 1997 ; Perceptual and Motor Skills Volume 84 ; 84 ; >
+    au < crawling ; exists ; 1997 ; Perceptual and Motor Skills Volume 85 ; 85 ; >
+    au < crawling ; exists ; 1998 ; Perceptual and Motor Skills Volume 86 ; 86 ; >
+    au < crawling ; exists ; 1998 ; Perceptual and Motor Skills Volume 87 ; 87 ; >
+    au < crawling ; exists ; 1999 ; Perceptual and Motor Skills Volume 88 ; 88 ; >
+    au < crawling ; exists ; 1999 ; Perceptual and Motor Skills Volume 89 ; 89 ; >
+    au < crawling ; exists ; 2000 ; Perceptual and Motor Skills Volume 90 ; 90 ; >
+    au < crawling ; exists ; 2000 ; Perceptual and Motor Skills Volume 91 ; 91 ; >
+    au < crawling ; exists ; 2001 ; Perceptual and Motor Skills Volume 92 ; 92 ; >
+    au < crawling ; exists ; 2001 ; Perceptual and Motor Skills Volume 93 ; 93 ; >
+    au < crawling ; exists ; 2002 ; Perceptual and Motor Skills Volume 94 ; 94 ; >
+    au < crawling ; exists ; 2002 ; Perceptual and Motor Skills Volume 95 ; 95 ; >
+    au < crawling ; exists ; 2003 ; Perceptual and Motor Skills Volume 96 ; 96 ; >
+    au < crawling ; exists ; 2003 ; Perceptual and Motor Skills Volume 97 ; 97 ; >
+    au < crawling ; exists ; 2004 ; Perceptual and Motor Skills Volume 98 ; 98 ; >
+    au < crawling ; exists ; 2004 ; Perceptual and Motor Skills Volume 99 ; 99 ; >
+    au < crawling ; exists ; 2005 ; Perceptual and Motor Skills Volume 100 ; 100 ; >
+    au < crawling ; exists ; 2005 ; Perceptual and Motor Skills Volume 101 ; 101 ; >
+    au < crawling ; exists ; 2006 ; Perceptual and Motor Skills Volume 102 ; 102 ; >
+    au < crawling ; exists ; 2006 ; Perceptual and Motor Skills Volume 103 ; 103 ; >
+    au < crawling ; exists ; 2007 ; Perceptual and Motor Skills Volume 104 ; 104 ; >
+    au < crawling ; exists ; 2007 ; Perceptual and Motor Skills Volume 105 ; 105 ; >
+    au < crawling ; exists ; 2008 ; Perceptual and Motor Skills Volume 106 ; 106 ; >
+    au < crawling ; exists ; 2008 ; Perceptual and Motor Skills Volume 107 ; 107 ; >
+    au < crawling ; exists ; 2009 ; Perceptual and Motor Skills Volume 108 ; 108 ; >
+    au < crawling ; exists ; 2009 ; Perceptual and Motor Skills Volume 109 ; 109 ; >
+    au < crawling ; exists ; 2010 ; Perceptual and Motor Skills Volume 110 ; 110 ; >
+    au < crawling ; exists ; 2010 ; Perceptual and Motor Skills Volume 111 ; 111 ; >
+    au < crawling ; exists ; 2011 ; Perceptual and Motor Skills Volume 112 ; 112 ; >
+    au < crawling ; exists ; 2011 ; Perceptual and Motor Skills Volume 113 ; 113 ; >
+    au < crawling ; exists ; 2012 ; Perceptual and Motor Skills Volume 114 ; 114 ; >
+    au < crawling ; exists ; 2012 ; Perceptual and Motor Skills Volume 115 ; 115 ; >
+    au < crawling ; exists ; 2013 ; Perceptual and Motor Skills Volume 116 ; 116 ; >
+    au < crawling ; exists ; 2013 ; Perceptual and Motor Skills Volume 117 ; 117 ; >
+    au < crawling ; exists ; 2014 ; Perceptual and Motor Skills Volume 118 ; 118 ; >
+    au < crawling ; exists ; 2014 ; Perceptual and Motor Skills Volume 119 ; 119 ; >
+    au < doNotProcess ; exists ; 2015 ; Perceptual and Motor Skills Volume 120 ; 120 ; > #PD-1411 500 Internal Server Error. process after move.
+    au < crawling ; exists ; 2015 ; Perceptual and Motor Skills Volume 121 ; 121 ; >
 
   }
 }

@@ -7,7 +7,7 @@
     info[tester] = 5
   >
 
-  implicit < status ; status2 ; year ; name ; param[volume_name] >
+  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
   {
      plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
@@ -25,11 +25,11 @@
     
      param[journal_issn] = 2050-4551 
    
-     au < doNotProcess ; doNotProcess ; 2009 ; Alexandria Volume 21 ; 21 >
-     au < down ; finished ; 2011 ; Alexandria Volume 22 ; 22 >
-     au < down ; finished ; 2012 ; Alexandria Volume 23 ; 23 >
-     au < down ; exists ; 2013 ; Alexandria Volume 24 ; 24 >
-     au < doNotProcess ; exists ; 2014 ; Alexandria Volume 25 ; 25 >
+     au < doNotProcess ; doNotProcess ; 2009 ; Alexandria Volume 21 ; 21 ; >
+     au < down ; finished ; 2011 ; Alexandria Volume 22 ; 22 ; >
+     au < down ; finished ; 2012 ; Alexandria Volume 23 ; 23 ; >
+     au < down ; exists ; 2013 ; Alexandria Volume 24 ; 24 ; >
+     au < doNotProcess ; exists ; 2014 ; Alexandria Volume 25 ; 25 ; >
 
     }
   
@@ -45,12 +45,12 @@
       
      param[journal_issn] = 2054-9326
      
-     au < doNotProcess ; doNotProcess ; 2003 ; Bulletin of the John Rylands Library Volume 85 ; 85 >
-     au < doNotProcess ; doNotProcess ; 2004 ; Bulletin of the John Rylands Library Volume 86 ; 86 >
-     au < doNotProcess ; doNotProcess ; 2005 ; Bulletin of the John Rylands Library Volume 87 ; 87 >
-     au < doNotProcess ; doNotProcess ; 2006 ; Bulletin of the John Rylands Library Volume 88 ; 88 >
-     au < down ; exists ; 2012-2013 ; Bulletin of the John Rylands Library Volume 89 ; 89 >
-     au < doNotProcess ; exists ; 2014 ; Bulletin of the John Rylands Library Volume 90 ; 90 >
+     au < doNotProcess ; doNotProcess ; 2003 ; Bulletin of the John Rylands Library Volume 85 ; 85 ; >
+     au < doNotProcess ; doNotProcess ; 2004 ; Bulletin of the John Rylands Library Volume 86 ; 86 ; >
+     au < doNotProcess ; doNotProcess ; 2005 ; Bulletin of the John Rylands Library Volume 87 ; 87 ; >
+     au < doNotProcess ; doNotProcess ; 2006 ; Bulletin of the John Rylands Library Volume 88 ; 88 ; >
+     au < down ; exists ; 2012-2013 ; Bulletin of the John Rylands Library Volume 89 ; 89 ; >
+     au < doNotProcess ; exists ; 2014 ; Bulletin of the John Rylands Library Volume 90 ; 90 ; >
     
     }
     
@@ -66,18 +66,18 @@
       
      param[journal_issn] = 0184-7678
      
-     au < doNotProcess ; doNotProcess ; 2009 ; Cahiers Élisabéthains Volume 75 ; 75 >
-     au < doNotProcess ; doNotProcess ; 2009 ; Cahiers Élisabéthains Volume 76 ; 76 >
-     au < doNotProcess ; doNotProcess ; 2010 ; Cahiers Élisabéthains Volume 77 ; 77 >
-     au < doNotProcess ; doNotProcess ; 2010 ; Cahiers Élisabéthains Volume 78 ; 78 >
-     au < down ; exists ; 2011 ; Cahiers Élisabéthains Volume 79 ; 79 >
-     au < down ; exists ; 2011 ; Cahiers Élisabéthains Volume 80 ; 80 >
-     au < down ; exists ; 2012 ; Cahiers Élisabéthains Volume 81 ; 81 >
-     au < down ; exists ; 2012 ; Cahiers Élisabéthains Volume 82 ; 82 >
-     au < down ; exists ; 2013 ; Cahiers Élisabéthains Volume 83 ; 83 >
-     au < down ; exists ; 2013 ; Cahiers Élisabéthains Volume 84 ; 84 >
-     au < doNotProcess ; exists ; 2014 ; Cahiers Élisabéthains Volume 85 ; 85 >
-     au < doNotProcess ; exists ; 2014 ; Cahiers Élisabéthains Volume 86 ; 86 >
+     au < doNotProcess ; doNotProcess ; 2009 ; Cahiers Élisabéthains Volume 75 ; 75 ; >
+     au < doNotProcess ; doNotProcess ; 2009 ; Cahiers Élisabéthains Volume 76 ; 76 ; >
+     au < doNotProcess ; doNotProcess ; 2010 ; Cahiers Élisabéthains Volume 77 ; 77 ; >
+     au < doNotProcess ; doNotProcess ; 2010 ; Cahiers Élisabéthains Volume 78 ; 78 ; >
+     au < down ; exists ; 2011 ; Cahiers Élisabéthains Volume 79 ; 79 ; >
+     au < down ; exists ; 2011 ; Cahiers Élisabéthains Volume 80 ; 80 ; >
+     au < down ; exists ; 2012 ; Cahiers Élisabéthains Volume 81 ; 81 ; >
+     au < down ; exists ; 2012 ; Cahiers Élisabéthains Volume 82 ; 82 ; >
+     au < down ; exists ; 2013 ; Cahiers Élisabéthains Volume 83 ; 83 ; >
+     au < down ; exists ; 2013 ; Cahiers Élisabéthains Volume 84 ; 84 ; >
+     au < doNotProcess ; exists ; 2014 ; Cahiers Élisabéthains Volume 85 ; 85 ; >
+     au < doNotProcess ; exists ; 2014 ; Cahiers Élisabéthains Volume 86 ; 86 ; >
     
     }
     
@@ -92,15 +92,15 @@
 
      param[journal_issn] = 1749-6039
    
-     au < doNotProcess ; doNotProcess ; 2006 ; Critical Studies in Television Volume 1 ; 1 >
-     au < doNotProcess ; doNotProcess ; 2007 ; Critical Studies in Television Volume 2 ; 2 >
-     au < doNotProcess ; doNotProcess ; 2008 ; Critical Studies in Television Volume 3 ; 3 >
-     au < doNotProcess ; doNotProcess ; 2009 ; Critical Studies in Television Volume 4 ; 4 >
-     au < doNotProcess ; doNotProcess ; 2010 ; Critical Studies in Television Volume 5 ; 5 >
-     au < down ; finished ; 2011 ; Critical Studies in Television Volume 6 ; 6 >
-     au < down ; finished ; 2012 ; Critical Studies in Television Volume 7 ; 7 >
-     au < down ; exists ; 2013 ; Critical Studies in Television Volume 8 ; 8 >
-     au < doNotProcess ; exists ; 2014 ; Critical Studies in Television Volume 9 ; 9 >
+     au < doNotProcess ; doNotProcess ; 2006 ; Critical Studies in Television Volume 1 ; 1 ; >
+     au < doNotProcess ; doNotProcess ; 2007 ; Critical Studies in Television Volume 2 ; 2 ; >
+     au < doNotProcess ; doNotProcess ; 2008 ; Critical Studies in Television Volume 3 ; 3 ; >
+     au < doNotProcess ; doNotProcess ; 2009 ; Critical Studies in Television Volume 4 ; 4 ; >
+     au < doNotProcess ; doNotProcess ; 2010 ; Critical Studies in Television Volume 5 ; 5 ; >
+     au < down ; finished ; 2011 ; Critical Studies in Television Volume 6 ; 6 ; >
+     au < down ; finished ; 2012 ; Critical Studies in Television Volume 7 ; 7 ; >
+     au < down ; exists ; 2013 ; Critical Studies in Television Volume 8 ; 8 ; >
+     au < doNotProcess ; exists ; 2014 ; Critical Studies in Television Volume 9 ; 9 ; >
 
     }
  
@@ -115,22 +115,22 @@
 
      param[journal_issn] = 2050-456X
      
-     au < doNotProcess ; doNotProcess ; 1999 ; Gothic Studies Volume 1 ; 1 >
-     au < doNotProcess ; doNotProcess ; 2000 ; Gothic Studies Volume 2 ; 2 >
-     au < doNotProcess ; doNotProcess ; 2001 ; Gothic Studies Volume 3 ; 3 >
-     au < doNotProcess ; doNotProcess ; 2002 ; Gothic Studies Volume 4 ; 4 >
-     au < doNotProcess ; doNotProcess ; 2003 ; Gothic Studies Volume 5 ; 5 >
-     au < doNotProcess ; doNotProcess ; 2004 ; Gothic Studies Volume 6 ; 6 >
-     au < doNotProcess ; doNotProcess ; 2005 ; Gothic Studies Volume 7 ; 7 >
-     au < doNotProcess ; doNotProcess ; 2006 ; Gothic Studies Volume 8 ; 8 >
-     au < doNotProcess ; doNotProcess ; 2007 ; Gothic Studies Volume 9 ; 9 >
-     au < doNotProcess ; doNotProcess ; 2008 ; Gothic Studies Volume 10 ; 10 >
-     au < doNotProcess ; doNotProcess ; 2009 ; Gothic Studies Volume 11 ; 11 >
-     au < doNotProcess ; doNotProcess ; 2010 ; Gothic Studies Volume 12 ; 12 >
-     au < down ; finished ; 2011 ; Gothic Studies Volume 13 ; 13 >
-     au < down ; finished ; 2012 ; Gothic Studies Volume 14 ; 14 >
-     au < down ; exists ; 2013 ; Gothic Studies Volume 15 ; 15 >
-     au < doNotProcess ; exists ; 2014 ; Gothic Studies Volume 16 ; 16 >
+     au < doNotProcess ; doNotProcess ; 1999 ; Gothic Studies Volume 1 ; 1 ; >
+     au < doNotProcess ; doNotProcess ; 2000 ; Gothic Studies Volume 2 ; 2 ; >
+     au < doNotProcess ; doNotProcess ; 2001 ; Gothic Studies Volume 3 ; 3 ; >
+     au < doNotProcess ; doNotProcess ; 2002 ; Gothic Studies Volume 4 ; 4 ; >
+     au < doNotProcess ; doNotProcess ; 2003 ; Gothic Studies Volume 5 ; 5 ; >
+     au < doNotProcess ; doNotProcess ; 2004 ; Gothic Studies Volume 6 ; 6 ; >
+     au < doNotProcess ; doNotProcess ; 2005 ; Gothic Studies Volume 7 ; 7 ; >
+     au < doNotProcess ; doNotProcess ; 2006 ; Gothic Studies Volume 8 ; 8 ; >
+     au < doNotProcess ; doNotProcess ; 2007 ; Gothic Studies Volume 9 ; 9 ; >
+     au < doNotProcess ; doNotProcess ; 2008 ; Gothic Studies Volume 10 ; 10 ; >
+     au < doNotProcess ; doNotProcess ; 2009 ; Gothic Studies Volume 11 ; 11 ; >
+     au < doNotProcess ; doNotProcess ; 2010 ; Gothic Studies Volume 12 ; 12 ; >
+     au < down ; finished ; 2011 ; Gothic Studies Volume 13 ; 13 ; >
+     au < down ; finished ; 2012 ; Gothic Studies Volume 14 ; 14 ; >
+     au < down ; exists ; 2013 ; Gothic Studies Volume 15 ; 15 ; >
+     au < doNotProcess ; exists ; 2014 ; Gothic Studies Volume 16 ; 16 ; >
 
     }
 
@@ -145,22 +145,22 @@
     
      param[journal_issn] = 2050-4578
      
-     au < doNotProcess ; doNotProcess ; 1999 ; International Journal of Electrical Engineering Education Volume 36 ; 36 >
-     au < doNotProcess ; doNotProcess ; 2000 ; International Journal of Electrical Engineering Education Volume 37 ; 37 >
-     au < doNotProcess ; doNotProcess ; 2001 ; International Journal of Electrical Engineering Education Volume 38 ; 38 >
-     au < doNotProcess ; doNotProcess ; 2002 ; International Journal of Electrical Engineering Education Volume 39 ; 39 >
-     au < doNotProcess ; doNotProcess ; 2003 ; International Journal of Electrical Engineering Education Volume 40 ; 40 >
-     au < doNotProcess ; doNotProcess ; 2004 ; International Journal of Electrical Engineering Education Volume 41 ; 41 >
-     au < doNotProcess ; doNotProcess ; 2005 ; International Journal of Electrical Engineering Education Volume 42 ; 42 >
-     au < doNotProcess ; doNotProcess ; 2006 ; International Journal of Electrical Engineering Education Volume 43 ; 43 >
-     au < doNotProcess ; doNotProcess ; 2007 ; International Journal of Electrical Engineering Education Volume 44 ; 44 >
-     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Electrical Engineering Education Volume 45 ; 45 >
-     au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Electrical Engineering Education Volume 46 ; 46 >
-     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Electrical Engineering Education Volume 47 ; 47 >
-     au < down ; finished ; 2011 ; International Journal of Electrical Engineering Education Volume 48 ; 48 >
-     au < down ; finished ; 2012 ; International Journal of Electrical Engineering Education Volume 49 ; 49 >
-     au < down ; exists ; 2013 ; International Journal of Electrical Engineering Education Volume 50 ; 50 >
-     au < doNotProcess ; exists ; 2014 ; International Journal of Electrical Engineering Education Volume 51 ; 51 >
+     au < doNotProcess ; doNotProcess ; 1999 ; International Journal of Electrical Engineering Education Volume 36 ; 36 ; >
+     au < doNotProcess ; doNotProcess ; 2000 ; International Journal of Electrical Engineering Education Volume 37 ; 37 ; >
+     au < doNotProcess ; doNotProcess ; 2001 ; International Journal of Electrical Engineering Education Volume 38 ; 38 ; >
+     au < doNotProcess ; doNotProcess ; 2002 ; International Journal of Electrical Engineering Education Volume 39 ; 39 ; >
+     au < doNotProcess ; doNotProcess ; 2003 ; International Journal of Electrical Engineering Education Volume 40 ; 40 ; >
+     au < doNotProcess ; doNotProcess ; 2004 ; International Journal of Electrical Engineering Education Volume 41 ; 41 ; >
+     au < doNotProcess ; doNotProcess ; 2005 ; International Journal of Electrical Engineering Education Volume 42 ; 42 ; >
+     au < doNotProcess ; doNotProcess ; 2006 ; International Journal of Electrical Engineering Education Volume 43 ; 43 ; >
+     au < doNotProcess ; doNotProcess ; 2007 ; International Journal of Electrical Engineering Education Volume 44 ; 44 ; >
+     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Electrical Engineering Education Volume 45 ; 45 ; >
+     au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Electrical Engineering Education Volume 46 ; 46 ; >
+     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Electrical Engineering Education Volume 47 ; 47 ; >
+     au < down ; finished ; 2011 ; International Journal of Electrical Engineering Education Volume 48 ; 48 ; >
+     au < down ; finished ; 2012 ; International Journal of Electrical Engineering Education Volume 49 ; 49 ; >
+     au < down ; exists ; 2013 ; International Journal of Electrical Engineering Education Volume 50 ; 50 ; >
+     au < doNotProcess ; exists ; 2014 ; International Journal of Electrical Engineering Education Volume 51 ; 51 ; >
 
     }
 
@@ -189,22 +189,22 @@
     
      param[journal_issn] = 2050-4586
      
-     au < doNotProcess ; doNotProcess ; 1999 ; International Journal of Mechanical Engineering Education Volume 27 ; 27 >
-     au < doNotProcess ; doNotProcess ; 2000 ; International Journal of Mechanical Engineering Education Volume 28 ; 28 >
-     au < doNotProcess ; doNotProcess ; 2001 ; International Journal of Mechanical Engineering Education Volume 29 ; 29 >
-     au < doNotProcess ; doNotProcess ; 2002 ; International Journal of Mechanical Engineering Education Volume 30 ; 30 >
-     au < doNotProcess ; doNotProcess ; 2003 ; International Journal of Mechanical Engineering Education Volume 31 ; 31 >
-     au < doNotProcess ; doNotProcess ; 2004 ; International Journal of Mechanical Engineering Education Volume 32 ; 32 >
-     au < doNotProcess ; doNotProcess ; 2005 ; International Journal of Mechanical Engineering Education Volume 33 ; 33 >
-     au < doNotProcess ; doNotProcess ; 2006 ; International Journal of Mechanical Engineering Education Volume 34 ; 34 >
-     au < doNotProcess ; doNotProcess ; 2007 ; International Journal of Mechanical Engineering Education Volume 35 ; 35 >
-     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Mechanical Engineering Education Volume 36 ; 36 >
-     au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Mechanical Engineering Education Volume 37 ; 37 >
-     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Mechanical Engineering Education Volume 38 ; 38 >
-     au < down ; finished ; 2011 ; International Journal of Mechanical Engineering Education Volume 39 ; 39 >
-     au < down ; crawling ; 2012 ; International Journal of Mechanical Engineering Education Volume 40 ; 40 >
-     au < down ; exists ; 2013 ; International Journal of Mechanical Engineering Education Volume 41 ; 41 >
-     au < doNotProcess ; exists ; 2014 ; International Journal of Mechanical Engineering Education Volume 42 ; 42 >
+     au < doNotProcess ; doNotProcess ; 1999 ; International Journal of Mechanical Engineering Education Volume 27 ; 27 ; >
+     au < doNotProcess ; doNotProcess ; 2000 ; International Journal of Mechanical Engineering Education Volume 28 ; 28 ; >
+     au < doNotProcess ; doNotProcess ; 2001 ; International Journal of Mechanical Engineering Education Volume 29 ; 29 ; >
+     au < doNotProcess ; doNotProcess ; 2002 ; International Journal of Mechanical Engineering Education Volume 30 ; 30 ; >
+     au < doNotProcess ; doNotProcess ; 2003 ; International Journal of Mechanical Engineering Education Volume 31 ; 31 ; >
+     au < doNotProcess ; doNotProcess ; 2004 ; International Journal of Mechanical Engineering Education Volume 32 ; 32 ; >
+     au < doNotProcess ; doNotProcess ; 2005 ; International Journal of Mechanical Engineering Education Volume 33 ; 33 ; >
+     au < doNotProcess ; doNotProcess ; 2006 ; International Journal of Mechanical Engineering Education Volume 34 ; 34 ; >
+     au < doNotProcess ; doNotProcess ; 2007 ; International Journal of Mechanical Engineering Education Volume 35 ; 35 ; >
+     au < doNotProcess ; doNotProcess ; 2008 ; International Journal of Mechanical Engineering Education Volume 36 ; 36 ; >
+     au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Mechanical Engineering Education Volume 37 ; 37 ; >
+     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Mechanical Engineering Education Volume 38 ; 38 ; >
+     au < down ; finished ; 2011 ; International Journal of Mechanical Engineering Education Volume 39 ; 39 ; >
+     au < down ; crawling ; 2012 ; International Journal of Mechanical Engineering Education Volume 40 ; 40 ; >
+     au < down ; exists ; 2013 ; International Journal of Mechanical Engineering Education Volume 41 ; 41 ; >
+     au < doNotProcess ; exists ; 2014 ; International Journal of Mechanical Engineering Education Volume 42 ; 42 ; >
     
     }
 
@@ -220,14 +220,14 @@
     
      param[journal_issn] = 2050-4918
      
-     au < doNotProcess ; doNotProcess ; 2007 ; Irish Economic and Social History Volume 34 ; 34 >
-     au < doNotProcess ; doNotProcess ; 2008 ; Irish Economic and Social History Volume 35 ; 35 >
-     au < doNotProcess ; doNotProcess ; 2009 ; Irish Economic and Social History Volume 36 ; 36 >
-     au < doNotProcess ; doNotProcess ; 2010 ; Irish Economic and Social History Volume 37 ; 37 >
-     au < down ; finished ; 2011 ; Irish Economic and Social History Volume 38 ; 38 >
-     au < down ; finished ; 2012 ; Irish Economic and Social History Volume 39 ; 39 >
-     au < down ; exists ; 2013 ; Irish Economic and Social History Volume 40 ; 40 >
-     au < doNotProcess ; exists ; 2014 ; Irish Economic and Social History Volume 41 ; 41 >
+     au < doNotProcess ; doNotProcess ; 2007 ; Irish Economic and Social History Volume 34 ; 34 ; >
+     au < doNotProcess ; doNotProcess ; 2008 ; Irish Economic and Social History Volume 35 ; 35 ; >
+     au < doNotProcess ; doNotProcess ; 2009 ; Irish Economic and Social History Volume 36 ; 36 ; >
+     au < doNotProcess ; doNotProcess ; 2010 ; Irish Economic and Social History Volume 37 ; 37 ; >
+     au < down ; finished ; 2011 ; Irish Economic and Social History Volume 38 ; 38 ; >
+     au < down ; finished ; 2012 ; Irish Economic and Social History Volume 39 ; 39 ; >
+     au < down ; exists ; 2013 ; Irish Economic and Social History Volume 40 ; 40 ; >
+     au < doNotProcess ; exists ; 2014 ; Irish Economic and Social History Volume 41 ; 41 ; >
 
     }
 
@@ -244,13 +244,13 @@
     
      param[journal_issn] = 2050-5280
      
-     au < superseded ; exists ; 0 ; Irish Journal of Sociology Volume 21O [to delete] ; 21O >
-     au < doNotProcess ; doNotProcess ; 2009 ; Irish Journal of Sociology Volume 17 ; 17 >
-     au < doNotProcess ; doNotProcess ; 2010 ; Irish Journal of Sociology Volume 18 ; 18 >
-     au < down ; finished ; 2011 ; Irish Journal of Sociology Volume 19 ; 19 >
-     au < down ; finished ; 2012 ; Irish Journal of Sociology Volume 20 ; 20 >
-     au < down ; exists ; 2013 ; Irish Journal of Sociology Volume 21 ; 21 >
-     au < doNotProcess ; exists ; 2014 ; Irish Journal of Sociology Volume 22 ; 22 >
+     au < superseded ; exists ; 0 ; Irish Journal of Sociology Volume 21O [to delete] ; 21O ; >
+     au < doNotProcess ; doNotProcess ; 2009 ; Irish Journal of Sociology Volume 17 ; 17 ; >
+     au < doNotProcess ; doNotProcess ; 2010 ; Irish Journal of Sociology Volume 18 ; 18 ; >
+     au < down ; finished ; 2011 ; Irish Journal of Sociology Volume 19 ; 19 ; >
+     au < down ; finished ; 2012 ; Irish Journal of Sociology Volume 20 ; 20 ; >
+     au < down ; exists ; 2013 ; Irish Journal of Sociology Volume 21 ; 21 ; >
+     au < doNotProcess ; exists ; 2014 ; Irish Journal of Sociology Volume 22 ; 22 ; >
   
      }
 
@@ -265,18 +265,18 @@
     
      param[journal_issn] = 1479-7194
      
-     au < doNotProcess ; doNotProcess ; 2002-2003 ; Journal of Adult and Continuing Education Volume 8 ; 8 >
-     au < doNotProcess ; doNotProcess ; 2003 ; Journal of Adult and Continuing Education Volume 9 ; 9 >
-     au < doNotProcess ; doNotProcess ; 2004 ; Journal of Adult and Continuing Education Volume 10 ; 10 >
-     au < doNotProcess ; doNotProcess ; 2005 ; Journal of Adult and Continuing Education Volume 11 ; 11 >
-     au < doNotProcess ; doNotProcess ; 2006 ; Journal of Adult and Continuing Education Volume 12 ; 12 >
-     au < doNotProcess ; doNotProcess ; 2007 ; Journal of Adult and Continuing Education Volume 13 ; 13 >
-     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Adult and Continuing Education Volume 14 ; 14 >
-     au < doNotProcess ; doNotProcess ; 2010 ; Journal of Adult and Continuing Education Volume 16 ; 16 >
-     au < down ; finished ; 2011 ; Journal of Adult and Continuing Education Volume 17 ; 17 >
-     au < down ; finished ; 2012 ; Journal of Adult and Continuing Education Volume 18 ; 18 >
-     au < down ; exists ; 2013 ; Journal of Adult and Continuing Education Volume 19 ; 19 >
-     au < doNotProcess ; exists ; 2014 ; Journal of Adult and Continuing Education Volume 20 ; 20 >
+     au < doNotProcess ; doNotProcess ; 2002-2003 ; Journal of Adult and Continuing Education Volume 8 ; 8 ; >
+     au < doNotProcess ; doNotProcess ; 2003 ; Journal of Adult and Continuing Education Volume 9 ; 9 ; >
+     au < doNotProcess ; doNotProcess ; 2004 ; Journal of Adult and Continuing Education Volume 10 ; 10 ; >
+     au < doNotProcess ; doNotProcess ; 2005 ; Journal of Adult and Continuing Education Volume 11 ; 11 ; >
+     au < doNotProcess ; doNotProcess ; 2006 ; Journal of Adult and Continuing Education Volume 12 ; 12 ; >
+     au < doNotProcess ; doNotProcess ; 2007 ; Journal of Adult and Continuing Education Volume 13 ; 13 ; >
+     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Adult and Continuing Education Volume 14 ; 14 ; >
+     au < doNotProcess ; doNotProcess ; 2010 ; Journal of Adult and Continuing Education Volume 16 ; 16 ; >
+     au < down ; finished ; 2011 ; Journal of Adult and Continuing Education Volume 17 ; 17 ; >
+     au < down ; finished ; 2012 ; Journal of Adult and Continuing Education Volume 18 ; 18 ; >
+     au < down ; exists ; 2013 ; Journal of Adult and Continuing Education Volume 19 ; 19 ; >
+     au < doNotProcess ; exists ; 2014 ; Journal of Adult and Continuing Education Volume 20 ; 20 ; >
    
     }
 
@@ -291,22 +291,22 @@
     
      param[journal_issn] = 1759-3999
      
-     au < doNotProcess ; doNotProcess ; 1999 ; The Journal of Transport History Volume 20 ; 20 >
-     au < doNotProcess ; doNotProcess ; 2000 ; The Journal of Transport History Volume 21 ; 21 >
-     au < doNotProcess ; doNotProcess ; 2001 ; The Journal of Transport History Volume 22 ; 22 >
-     au < doNotProcess ; doNotProcess ; 2002 ; The Journal of Transport History Volume 23 ; 23 >
-     au < doNotProcess ; doNotProcess ; 2003 ; The Journal of Transport History Volume 24 ; 24 >
-     au < doNotProcess ; doNotProcess ; 2004 ; The Journal of Transport History Volume 25 ; 25 >
-     au < doNotProcess ; doNotProcess ; 2005 ; The Journal of Transport History Volume 26 ; 26 >
-     au < doNotProcess ; doNotProcess ; 2006 ; The Journal of Transport History Volume 27 ; 27 >
-     au < doNotProcess ; doNotProcess ; 2007 ; The Journal of Transport History Volume 28 ; 28 >
-     au < doNotProcess ; doNotProcess ; 2008 ; The Journal of Transport History Volume 29 ; 29 >
-     au < doNotProcess ; doNotProcess ; 2009 ; The Journal of Transport History Volume 30 ; 30 >
-     au < doNotProcess ; doNotProcess ; 2010 ; The Journal of Transport History Volume 31 ; 31 >
-     au < down ; finished ; 2011 ; The Journal of Transport History Volume 32 ; 32 >
-     au < down ; finished ; 2012 ; The Journal of Transport History Volume 33 ; 33 >
-     au < down ; exists ; 2013 ; The Journal of Transport History Volume 34 ; 34 >
-     au < doNotProcess ; exists ; 2014 ; The Journal of Transport History Volume 35 ; 35 >
+     au < doNotProcess ; doNotProcess ; 1999 ; The Journal of Transport History Volume 20 ; 20 ; >
+     au < doNotProcess ; doNotProcess ; 2000 ; The Journal of Transport History Volume 21 ; 21 ; >
+     au < doNotProcess ; doNotProcess ; 2001 ; The Journal of Transport History Volume 22 ; 22 ; >
+     au < doNotProcess ; doNotProcess ; 2002 ; The Journal of Transport History Volume 23 ; 23 ; >
+     au < doNotProcess ; doNotProcess ; 2003 ; The Journal of Transport History Volume 24 ; 24 ; >
+     au < doNotProcess ; doNotProcess ; 2004 ; The Journal of Transport History Volume 25 ; 25 ; >
+     au < doNotProcess ; doNotProcess ; 2005 ; The Journal of Transport History Volume 26 ; 26 ; >
+     au < doNotProcess ; doNotProcess ; 2006 ; The Journal of Transport History Volume 27 ; 27 ; >
+     au < doNotProcess ; doNotProcess ; 2007 ; The Journal of Transport History Volume 28 ; 28 ; >
+     au < doNotProcess ; doNotProcess ; 2008 ; The Journal of Transport History Volume 29 ; 29 ; >
+     au < doNotProcess ; doNotProcess ; 2009 ; The Journal of Transport History Volume 30 ; 30 ; >
+     au < doNotProcess ; doNotProcess ; 2010 ; The Journal of Transport History Volume 31 ; 31 ; >
+     au < down ; finished ; 2011 ; The Journal of Transport History Volume 32 ; 32 ; >
+     au < down ; finished ; 2012 ; The Journal of Transport History Volume 33 ; 33 ; >
+     au < down ; exists ; 2013 ; The Journal of Transport History Volume 34 ; 34 ; >
+     au < doNotProcess ; exists ; 2014 ; The Journal of Transport History Volume 35 ; 35 ; >
     
     }
 
@@ -321,22 +321,22 @@
     
      param[journal_issn] = 2050-4594
      
-     au < doNotProcess ; doNotProcess ; 1999 ; Literature & History Volume 8 ; 8 >
-     au < doNotProcess ; doNotProcess ; 2000 ; Literature & History Volume 9 ; 9 >
-     au < doNotProcess ; doNotProcess ; 2001 ; Literature & History Volume 10 ; 10 >
-     au < doNotProcess ; doNotProcess ; 2002 ; Literature & History Volume 11 ; 11 >
-     au < doNotProcess ; doNotProcess ; 2003 ; Literature & History Volume 12 ; 12 >
-     au < doNotProcess ; doNotProcess ; 2004 ; Literature & History Volume 13 ; 13 >
-     au < doNotProcess ; doNotProcess ; 2005 ; Literature & History Volume 14 ; 14 >
-     au < doNotProcess ; doNotProcess ; 2006 ; Literature & History Volume 15 ; 15 >
-     au < doNotProcess ; doNotProcess ; 2007 ; Literature & History Volume 16 ; 16 >
-     au < doNotProcess ; doNotProcess ; 2008 ; Literature & History Volume 17 ; 17 >
-     au < doNotProcess ; doNotProcess ; 2009 ; Literature & History Volume 18 ; 18 >
-     au < doNotProcess ; doNotProcess ; 2010 ; Literature & History Volume 19 ; 19 >
-     au < down ; finished ; 2011 ; Literature & History Volume 20 ; 20 >
-     au < down ; finished ; 2012 ; Literature & History Volume 21 ; 21 >
-     au < down ; exists ; 2013 ; Literature & History Volume 22 ; 22 >
-     au < doNotProcess ; exists ; 2014 ; Literature & History Volume 23 ; 23 >
+     au < doNotProcess ; doNotProcess ; 1999 ; Literature & History Volume 8 ; 8 ; >
+     au < doNotProcess ; doNotProcess ; 2000 ; Literature & History Volume 9 ; 9 ; >
+     au < doNotProcess ; doNotProcess ; 2001 ; Literature & History Volume 10 ; 10 ; >
+     au < doNotProcess ; doNotProcess ; 2002 ; Literature & History Volume 11 ; 11 ; >
+     au < doNotProcess ; doNotProcess ; 2003 ; Literature & History Volume 12 ; 12 ; >
+     au < doNotProcess ; doNotProcess ; 2004 ; Literature & History Volume 13 ; 13 ; >
+     au < doNotProcess ; doNotProcess ; 2005 ; Literature & History Volume 14 ; 14 ; >
+     au < doNotProcess ; doNotProcess ; 2006 ; Literature & History Volume 15 ; 15 ; >
+     au < doNotProcess ; doNotProcess ; 2007 ; Literature & History Volume 16 ; 16 ; >
+     au < doNotProcess ; doNotProcess ; 2008 ; Literature & History Volume 17 ; 17 ; >
+     au < doNotProcess ; doNotProcess ; 2009 ; Literature & History Volume 18 ; 18 ; >
+     au < doNotProcess ; doNotProcess ; 2010 ; Literature & History Volume 19 ; 19 ; >
+     au < down ; finished ; 2011 ; Literature & History Volume 20 ; 20 ; >
+     au < down ; finished ; 2012 ; Literature & History Volume 21 ; 21 ; >
+     au < down ; exists ; 2013 ; Literature & History Volume 22 ; 22 ; >
+     au < doNotProcess ; exists ; 2014 ; Literature & History Volume 23 ; 23 ; >
 
     }
 
@@ -350,19 +350,19 @@
 
      param[journal_issn] = 2048-2906
      
-     au < doNotProcess ; doNotProcess ; 2002 ; Nineteenth Century Theatre and Film Volume 29 ; 29 >
-     au < doNotProcess ; doNotProcess ; 2003 ; Nineteenth Century Theatre and Film Volume 30 ; 30 >
-     au < doNotProcess ; doNotProcess ; 2004 ; Nineteenth Century Theatre and Film Volume 31 ; 31 >
-     au < doNotProcess ; doNotProcess ; 2005 ; Nineteenth Century Theatre and Film Volume 32 ; 32 >
-     au < doNotProcess ; doNotProcess ; 2006 ; Nineteenth Century Theatre and Film Volume 33 ; 33 >
-     au < doNotProcess ; doNotProcess ; 2007 ; Nineteenth Century Theatre and Film Volume 34 ; 34 >
-     au < doNotProcess ; doNotProcess ; 2008 ; Nineteenth Century Theatre and Film Volume 35 ; 35 >
-     au < doNotProcess ; doNotProcess ; 2009 ; Nineteenth Century Theatre and Film Volume 36 ; 36 >
-     au < doNotProcess ; doNotProcess ; 2010 ; Nineteenth Century Theatre and Film Volume 37 ; 37 >
-     au < down ; finished ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 >
-     au < down ; finished ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 >
-     au < down ; exists ; 2013 ; Nineteenth Century Theatre and Film Volume 40 ; 40 >
-     au < doNotProcess ; exists ; 2014 ; Nineteenth Century Theatre and Film Volume 41 ; 41 >
+     au < doNotProcess ; doNotProcess ; 2002 ; Nineteenth Century Theatre and Film Volume 29 ; 29 ; >
+     au < doNotProcess ; doNotProcess ; 2003 ; Nineteenth Century Theatre and Film Volume 30 ; 30 ; >
+     au < doNotProcess ; doNotProcess ; 2004 ; Nineteenth Century Theatre and Film Volume 31 ; 31 ; >
+     au < doNotProcess ; doNotProcess ; 2005 ; Nineteenth Century Theatre and Film Volume 32 ; 32 ; >
+     au < doNotProcess ; doNotProcess ; 2006 ; Nineteenth Century Theatre and Film Volume 33 ; 33 ; >
+     au < doNotProcess ; doNotProcess ; 2007 ; Nineteenth Century Theatre and Film Volume 34 ; 34 ; >
+     au < doNotProcess ; doNotProcess ; 2008 ; Nineteenth Century Theatre and Film Volume 35 ; 35 ; >
+     au < doNotProcess ; doNotProcess ; 2009 ; Nineteenth Century Theatre and Film Volume 36 ; 36 ; >
+     au < doNotProcess ; doNotProcess ; 2010 ; Nineteenth Century Theatre and Film Volume 37 ; 37 ; >
+     au < down ; finished ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 ; >
+     au < down ; finished ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 ; >
+     au < down ; exists ; 2013 ; Nineteenth Century Theatre and Film Volume 40 ; 40 ; >
+     au < doNotProcess ; exists ; 2014 ; Nineteenth Century Theatre and Film Volume 41 ; 41 ; >
     
     }
 
@@ -377,23 +377,23 @@
     
      param[journal_issn] = 2308-0906
 
-     au < doNotProcess ; doNotProcess ; 1997 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 1 ; 1 >
-     au < doNotProcess ; doNotProcess ; 1998 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 2 ; 2 >
-     au < doNotProcess ; doNotProcess ; 1999 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 3 ; 3 >
-     au < doNotProcess ; doNotProcess ; 2000 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 4 ; 4 >
-     au < doNotProcess ; doNotProcess ; 2001 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 5 ; 5 >
-     au < doNotProcess ; doNotProcess ; 2002 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 6 ; 6 >
-     au < doNotProcess ; doNotProcess ; 2003 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 7 ; 7 >
-     au < doNotProcess ; doNotProcess ; 2004 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 8 ; 8 >
-     au < doNotProcess ; doNotProcess ; 2005 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 9 ; 9 >
-     au < doNotProcess ; doNotProcess ; 2006 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 10 ; 10 >
-     au < doNotProcess ; doNotProcess ; 2007 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 11 ; 11 >
-     au < doNotProcess ; doNotProcess ; 2008 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 12 ; 12 >
-     au < doNotProcess ; doNotProcess ; 2009 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 13 ; 13 >
-     au < doNotProcess ; doNotProcess ; 2010 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 14 ; 14 >
-     au < down ; exists ; 2011 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 15 ; 15 >
-     au < down ; exists ; 2012-2013 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 16 ; 16 >
-     au < doNotProcess ; exists ; 2014 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 17 ; 17 >
+     au < doNotProcess ; doNotProcess ; 1997 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 1 ; 1 ; >
+     au < doNotProcess ; doNotProcess ; 1998 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 2 ; 2 ; >
+     au < doNotProcess ; doNotProcess ; 1999 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 3 ; 3 ; >
+     au < doNotProcess ; doNotProcess ; 2000 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 4 ; 4 ; >
+     au < doNotProcess ; doNotProcess ; 2001 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 5 ; 5 ; >
+     au < doNotProcess ; doNotProcess ; 2002 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 6 ; 6 ; >
+     au < doNotProcess ; doNotProcess ; 2003 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 7 ; 7 ; >
+     au < doNotProcess ; doNotProcess ; 2004 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 8 ; 8 ; >
+     au < doNotProcess ; doNotProcess ; 2005 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 9 ; 9 ; >
+     au < doNotProcess ; doNotProcess ; 2006 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 10 ; 10 ; >
+     au < doNotProcess ; doNotProcess ; 2007 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 11 ; 11 ; >
+     au < doNotProcess ; doNotProcess ; 2008 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 12 ; 12 ; >
+     au < doNotProcess ; doNotProcess ; 2009 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 13 ; 13 ; >
+     au < doNotProcess ; doNotProcess ; 2010 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 14 ; 14 ; >
+     au < down ; exists ; 2011 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 15 ; 15 ; >
+     au < down ; exists ; 2012-2013 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 16 ; 16 ; >
+     au < doNotProcess ; exists ; 2014 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 17 ; 17 ; >
 
     }
 
@@ -408,38 +408,38 @@
     
      param[journal_issn] = 2050-4608
      
-     au < doNotProcess ; doNotProcess ; 1999 ; Research in Education Volume 61 ; 61 >
-     au < doNotProcess ; doNotProcess ; 1999 ; Research in Education Volume 62 ; 62 >
-     au < doNotProcess ; doNotProcess ; 2000 ; Research in Education Volume 63 ; 63 >
-     au < doNotProcess ; doNotProcess ; 2000 ; Research in Education Volume 64 ; 64 >
-     au < doNotProcess ; doNotProcess ; 2001 ; Research in Education Volume 65 ; 65 >
-     au < doNotProcess ; doNotProcess ; 2001 ; Research in Education Volume 66 ; 66 >
-     au < doNotProcess ; doNotProcess ; 2002 ; Research in Education Volume 67 ; 67 >
-     au < doNotProcess ; doNotProcess ; 2002 ; Research in Education Volume 68 ; 68 >
-     au < doNotProcess ; doNotProcess ; 2003 ; Research in Education Volume 69 ; 69 >
-     au < doNotProcess ; doNotProcess ; 2003 ; Research in Education Volume 70 ; 70 >
-     au < doNotProcess ; doNotProcess ; 2004 ; Research in Education Volume 71 ; 71 >
-     au < doNotProcess ; doNotProcess ; 2004 ; Research in Education Volume 72 ; 72 >
-     au < doNotProcess ; doNotProcess ; 2005 ; Research in Education Volume 73 ; 73 >
-     au < doNotProcess ; doNotProcess ; 2005 ; Research in Education Volume 74 ; 74 >
-     au < doNotProcess ; doNotProcess ; 2006 ; Research in Education Volume 75 ; 75 >
-     au < doNotProcess ; doNotProcess ; 2006 ; Research in Education Volume 76 ; 76 >
-     au < doNotProcess ; doNotProcess ; 2007 ; Research in Education Volume 77 ; 77 >
-     au < doNotProcess ; doNotProcess ; 2007 ; Research in Education Volume 78 ; 78 >
-     au < doNotProcess ; doNotProcess ; 2008 ; Research in Education Volume 79 ; 79 >
-     au < doNotProcess ; doNotProcess ; 2008 ; Research in Education Volume 80 ; 80 >
-     au < doNotProcess ; doNotProcess ; 2009 ; Research in Education Volume 81 ; 81 >
-     au < doNotProcess ; doNotProcess ; 2009 ; Research in Education Volume 82 ; 82 >
-     au < doNotProcess ; doNotProcess ; 2010 ; Research in Education Volume 83 ; 83 >
-     au < doNotProcess ; doNotProcess ; 2010 ; Research in Education Volume 84 ; 84 >
-     au < down ; finished ; 2011 ; Research in Education Volume 85 ; 85 >
-     au < down ; finished ; 2011 ; Research in Education Volume 86 ; 86 >
-     au < down ; finished ; 2012 ; Research in Education Volume 87 ; 87 >
-     au < down ; finished ; 2012 ; Research in Education Volume 88 ; 88 >
-     au < down ; exists ; 2013 ; Research in Education Volume 89 ; 89 >
-     au < down ; exists ; 2013 ; Research in Education Volume 90 ; 90 >
-     au < doNotProcess ; exists ; 2014 ; Research in Education Volume 91 ; 91 >
-     au < doNotProcess ; exists ; 2014 ; Research in Education Volume 92 ; 92 >
+     au < doNotProcess ; doNotProcess ; 1999 ; Research in Education Volume 61 ; 61 ; >
+     au < doNotProcess ; doNotProcess ; 1999 ; Research in Education Volume 62 ; 62 ; >
+     au < doNotProcess ; doNotProcess ; 2000 ; Research in Education Volume 63 ; 63 ; >
+     au < doNotProcess ; doNotProcess ; 2000 ; Research in Education Volume 64 ; 64 ; >
+     au < doNotProcess ; doNotProcess ; 2001 ; Research in Education Volume 65 ; 65 ; >
+     au < doNotProcess ; doNotProcess ; 2001 ; Research in Education Volume 66 ; 66 ; >
+     au < doNotProcess ; doNotProcess ; 2002 ; Research in Education Volume 67 ; 67 ; >
+     au < doNotProcess ; doNotProcess ; 2002 ; Research in Education Volume 68 ; 68 ; >
+     au < doNotProcess ; doNotProcess ; 2003 ; Research in Education Volume 69 ; 69 ; >
+     au < doNotProcess ; doNotProcess ; 2003 ; Research in Education Volume 70 ; 70 ; >
+     au < doNotProcess ; doNotProcess ; 2004 ; Research in Education Volume 71 ; 71 ; >
+     au < doNotProcess ; doNotProcess ; 2004 ; Research in Education Volume 72 ; 72 ; >
+     au < doNotProcess ; doNotProcess ; 2005 ; Research in Education Volume 73 ; 73 ; >
+     au < doNotProcess ; doNotProcess ; 2005 ; Research in Education Volume 74 ; 74 ; >
+     au < doNotProcess ; doNotProcess ; 2006 ; Research in Education Volume 75 ; 75 ; >
+     au < doNotProcess ; doNotProcess ; 2006 ; Research in Education Volume 76 ; 76 ; >
+     au < doNotProcess ; doNotProcess ; 2007 ; Research in Education Volume 77 ; 77 ; >
+     au < doNotProcess ; doNotProcess ; 2007 ; Research in Education Volume 78 ; 78 ; >
+     au < doNotProcess ; doNotProcess ; 2008 ; Research in Education Volume 79 ; 79 ; >
+     au < doNotProcess ; doNotProcess ; 2008 ; Research in Education Volume 80 ; 80 ; >
+     au < doNotProcess ; doNotProcess ; 2009 ; Research in Education Volume 81 ; 81 ; >
+     au < doNotProcess ; doNotProcess ; 2009 ; Research in Education Volume 82 ; 82 ; >
+     au < doNotProcess ; doNotProcess ; 2010 ; Research in Education Volume 83 ; 83 ; >
+     au < doNotProcess ; doNotProcess ; 2010 ; Research in Education Volume 84 ; 84 ; >
+     au < down ; finished ; 2011 ; Research in Education Volume 85 ; 85 ; >
+     au < down ; finished ; 2011 ; Research in Education Volume 86 ; 86 ; >
+     au < down ; finished ; 2012 ; Research in Education Volume 87 ; 87 ; >
+     au < down ; finished ; 2012 ; Research in Education Volume 88 ; 88 ; >
+     au < down ; exists ; 2013 ; Research in Education Volume 89 ; 89 ; >
+     au < down ; exists ; 2013 ; Research in Education Volume 90 ; 90 ; >
+     au < doNotProcess ; exists ; 2014 ; Research in Education Volume 91 ; 91 ; >
+     au < doNotProcess ; exists ; 2014 ; Research in Education Volume 92 ; 92 ; >
     
     }
   }
@@ -468,7 +468,7 @@
 
     comment[0] = Moving off of Ingenta Dec 2012 and picked up by T&F
 
-    au < superseded ; down ; 2012 ; The Seventeenth Century Volume 27 [superseded] ; 27 >
+    au < superseded ; down ; 2012 ; The Seventeenth Century Volume 27 [superseded] ; 27 ; >
 
     }
 
@@ -484,11 +484,11 @@
     param[journal_issn] = 1471-4787 
     comment[0] = Moving off of Ingenta Dec 2012 and picked up by T&F
 
-    au < down ; finished ; 2004 ; Visual Culture in Britain Volume 5 ; 5 >
-    au < down ; finished ; 2005 ; Visual Culture in Britain Volume 6 ; 6 >
-    au < down ; finished ; 2006 ; Visual Culture in Britain Volume 7 ; 7 >
-    au < down ; finished ; 2007 ; Visual Culture in Britain Volume 8 ; 8 >
-    au < down ; finished ; 2008 ; Visual Culture in Britain Volume 9 ; 9 >
+    au < down ; finished ; 2004 ; Visual Culture in Britain Volume 5 ; 5 ; >
+    au < down ; finished ; 2005 ; Visual Culture in Britain Volume 6 ; 6 ; >
+    au < down ; finished ; 2006 ; Visual Culture in Britain Volume 7 ; 7 ; >
+    au < down ; finished ; 2007 ; Visual Culture in Britain Volume 8 ; 8 ; >
+    au < down ; finished ; 2008 ; Visual Culture in Britain Volume 9 ; 9 ; >
 
     }
   }

@@ -23,19 +23,19 @@
     param[publisher_id] = paaf
     param[journal_id] = paaf
     param[journal_issn] = 0030-851X
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
-    au < manifest ; exists ; 2005-2006 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 78 ; 78 >
-    au < manifest ; exists ; 2006-2007 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 79 ; 79 >
-    au < manifest ; exists ; 2007 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 80 ; 80 >
-    au < manifest ; exists ; 2008 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 81 ; 81 >
-    au < finished ; crawling ; 2009 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 82 ; 82 >
-    au < finished ; crawling ; 2010 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 83 ; 83 >
-    au < finished ; crawling ; 2011 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 84 ; 84 >
-    au < finished ; crawling ; 2012 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 85 ; 85 >
-    au < crawling ; exists ; 2013 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 86 ; 86 >
-    au < crawling ; exists ; 2014 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 87 ; 87 >
-    au < crawling ; exists ; 2015 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 88 ; 88 >
+    au < manifest ; exists ; 2005-2006 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 78 ; 78 ; >
+    au < manifest ; exists ; 2006-2007 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 79 ; 79 ; >
+    au < manifest ; exists ; 2007 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 80 ; 80 ; >
+    au < manifest ; exists ; 2008 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 81 ; 81 ; >
+    au < finished ; crawling ; 2009 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 82 ; 82 ; >
+    au < finished ; crawling ; 2010 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 83 ; 83 ; >
+    au < finished ; crawling ; 2011 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 84 ; 84 ; >
+    au < finished ; crawling ; 2012 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 85 ; 85 ; >
+    au < crawling ; exists ; 2013 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 86 ; 86 ; >
+    au < crawling ; exists ; 2014 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 87 ; 87 ; >
+    au < crawling ; exists ; 2015 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 88 ; 88 ; >
 
   }
 

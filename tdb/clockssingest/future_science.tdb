@@ -8,7 +8,7 @@
 
   plugin = org.lockss.plugin.atypon.futurescience.ClockssFutureSciencePlugin
   param[base_url] = http://www.future-science.com/
-  implicit < status ; status2 ; year ; name ; param[volume_name] >
+  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
   {
   
@@ -20,14 +20,14 @@
     
     param[journal_id] = bio
 
-    au < manifest ; exists ; 2009 ; Bioanalysis Volume 1 ; 1 >
-    au < manifest ; exists ; 2010 ; Bioanalysis Volume 2 ; 2 >
-    au < manifest ; exists ; 2011 ; Bioanalysis Volume 3 ; 3 >
-    au < crawling ; exists ; 2012 ; Bioanalysis Volume 4 ; 4 >
-    au < ingNotReady ; exists ; 2013 ; Bioanalysis Volume 5 ; 5 >
-    au < crawling ; exists ; 2014 ; Bioanalysis Volume 6 ; 6 >
-    au < crawling ; exists ; 2015 ; Bioanalysis Volume 7 ; 7 >
-    au < manifest ; exists ; 2016 ; Bioanalysis Volume 8 ; 8 >
+    au < manifest ; exists ; 2009 ; Bioanalysis Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2010 ; Bioanalysis Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2011 ; Bioanalysis Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2012 ; Bioanalysis Volume 4 ; 4 ; >
+    au < ingNotReady ; exists ; 2013 ; Bioanalysis Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2014 ; Bioanalysis Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2015 ; Bioanalysis Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2016 ; Bioanalysis Volume 8 ; 8 ; >
     
   }
 
@@ -44,10 +44,10 @@
     
     comment[0] = Volume 3 added to ingest 1,2,4 only. This journal moved to T&F.
 
-    au < doNotProcess ; doNotProcess ; 2010 ; Biofuels Volume 1 ; 1 >
-    au < doNotProcess ; doNotProcess ; 2011 ; Biofuels Volume 2 ; 2 >
-    au < superseded ; exists ; 2012 ; Biofuels Volume 3 [superseded] ; 3 >
-    au < superseded ; exists ; 2013 ; Biofuels Volume 4 [superseded] ; 4 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Biofuels Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Biofuels Volume 2 ; 2 ; >
+    au < superseded ; exists ; 2012 ; Biofuels Volume 3 [superseded] ; 3 ; >
+    au < superseded ; exists ; 2013 ; Biofuels Volume 4 [superseded] ; 4 ; >
    
   }
 
@@ -61,10 +61,10 @@
     comment[1] = Publisher no longer providing title after 2013
     param[journal_id] = cmt
 
-    au < doNotProcess ; doNotProcess ; 2010 ; Carbon Management Volume 1 ; 1 >
-    au < doNotProcess ; doNotProcess ; 2011 ; Carbon Management Volume 2 ; 2 >
-    au < superseded ; exists ; 2012 ; Carbon Management Volume 3 [superseded] ; 3 >
-    au < superseded ; exists ; 2013 ; Carbon Management Volume 4 [superseded] ; 4 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Carbon Management Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Carbon Management Volume 2 ; 2 ; >
+    au < superseded ; exists ; 2012 ; Carbon Management Volume 3 [superseded] ; 3 ; >
+    au < superseded ; exists ; 2013 ; Carbon Management Volume 4 [superseded] ; 4 ; >
 
   
   }
@@ -78,12 +78,12 @@
     
     param[journal_id] = cli
 
-    au < manifest ; exists ; 2011 ; Clinical Investigation Volume 1 ; 1 >
-    au < crawling ; exists ; 2012 ; Clinical Investigation Volume 2 ; 2 >
-    au < crawling ; exists ; 2013 ; Clinical Investigation Volume 3 ; 3 >
-    au < crawling ; exists ; 2014 ; Clinical Investigation Volume 4 ; 4 >
-    au < crawling ; exists ; 2015 ; Clinical Investigation Volume 5 ; 5 >
-    au < expected ; exists ; 2016 ; Clinical Investigation Volume 6 ; 6 >
+    au < manifest ; exists ; 2011 ; Clinical Investigation Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2012 ; Clinical Investigation Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2013 ; Clinical Investigation Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2014 ; Clinical Investigation Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2015 ; Clinical Investigation Volume 5 ; 5 ; >
+    au < expected ; exists ; 2016 ; Clinical Investigation Volume 6 ; 6 ; >
     
   }
 
@@ -97,14 +97,14 @@
     
     param[journal_id] = fmc
 
-    au < manifest ; exists ; 2009 ; Future Medicinal Chemistry Volume 1 ; 1 >
-    au < manifest ; exists ; 2010 ; Future Medicinal Chemistry Volume 2 ; 2 >
-    au < manifest ; exists ; 2011 ; Future Medicinal Chemistry Volume 3 ; 3 >
-    au < crawling ; exists ; 2012 ; Future Medicinal Chemistry Volume 4 ; 4 >
-    au < crawling ; exists ; 2013 ; Future Medicinal Chemistry Volume 5 ; 5 >
-    au < crawling ; exists ; 2014 ; Future Medicinal Chemistry Volume 6 ; 6 >
-    au < crawling ; exists ; 2015 ; Future Medicinal Chemistry Volume 7 ; 7 >
-    au < manifest ; exists ; 2016 ; Future Medicinal Chemistry Volume 8 ; 8 >
+    au < manifest ; exists ; 2009 ; Future Medicinal Chemistry Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2010 ; Future Medicinal Chemistry Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2011 ; Future Medicinal Chemistry Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2012 ; Future Medicinal Chemistry Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2013 ; Future Medicinal Chemistry Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2014 ; Future Medicinal Chemistry Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2015 ; Future Medicinal Chemistry Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2016 ; Future Medicinal Chemistry Volume 8 ; 8 ; >
     
   }
 
@@ -117,8 +117,8 @@
     
     param[journal_id] = fso
 
-    au < crawling ; exists ; 2015 ; Future Science OA Volume 1 ; 1 >
-    au < expected ; exists ; 2016 ; Future Science OA Volume 2 ; 2 >
+    au < crawling ; exists ; 2015 ; Future Science OA Volume 1 ; 1 ; >
+    au < expected ; exists ; 2016 ; Future Science OA Volume 2 ; 2 ; >
     
   }
 
@@ -131,10 +131,10 @@
     
     param[journal_id] = pbp
 
-    au < crawling ; exists ; 2013 ; Pharmaceutical Bioprocessing Volume 1 ; 1 >
-    au < crawling ; exists ; 2014 ; Pharmaceutical Bioprocessing Volume 2 ; 2 >
-    au < crawling ; exists ; 2015 ; Pharmaceutical Bioprocessing Volume 3 ; 3 >
-    au < expected ; exists ; 2016 ; Pharmaceutical Bioprocessing Volume 4 ; 4 >
+    au < crawling ; exists ; 2013 ; Pharmaceutical Bioprocessing Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2014 ; Pharmaceutical Bioprocessing Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2015 ; Pharmaceutical Bioprocessing Volume 3 ; 3 ; >
+    au < expected ; exists ; 2016 ; Pharmaceutical Bioprocessing Volume 4 ; 4 ; >
     
   }
 
@@ -147,11 +147,11 @@
     
     param[journal_id] = ppa
 
-    au < crawling ; exists ; 2012 ; Pharmaceutical Patent Analyst Volume 1 ; 1 >
-    au < crawling ; exists ; 2013 ; Pharmaceutical Patent Analyst Volume 2 ; 2 >
-    au < crawling ; exists ; 2014 ; Pharmaceutical Patent Analyst Volume 3 ; 3 >
-    au < crawling ; exists ; 2015 ; Pharmaceutical Patent Analyst Volume 4 ; 4 >
-    au < manifest ; exists ; 2016 ; Pharmaceutical Patent Analyst Volume 5 ; 5 >
+    au < crawling ; exists ; 2012 ; Pharmaceutical Patent Analyst Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2013 ; Pharmaceutical Patent Analyst Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2014 ; Pharmaceutical Patent Analyst Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2015 ; Pharmaceutical Patent Analyst Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2016 ; Pharmaceutical Patent Analyst Volume 5 ; 5 ; >
     
   }
 
@@ -165,13 +165,13 @@
     
     param[journal_id] = tde
 
-    au < manifest ; exists ; 2010 ; Therapeutic Delivery Volume 1 ; 1 >
-    au < manifest ; exists ; 2011 ; Therapeutic Delivery Volume 2 ; 2 >
-    au < finished ; crawling ; 2012 ; Therapeutic Delivery Volume 3 ; 3 >
-    au < crawling ; exists ; 2013 ; Therapeutic Delivery Volume 4 ; 4 >
-    au < crawling ; exists ; 2014 ; Therapeutic Delivery Volume 5 ; 5 >
-    au < crawling ; exists ; 2015 ; Therapeutic Delivery Volume 6 ; 6 >
-    au < manifest ; exists ; 2016 ; Therapeutic Delivery Volume 7 ; 7 >
+    au < manifest ; exists ; 2010 ; Therapeutic Delivery Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2011 ; Therapeutic Delivery Volume 2 ; 2 ; >
+    au < finished ; crawling ; 2012 ; Therapeutic Delivery Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2013 ; Therapeutic Delivery Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2014 ; Therapeutic Delivery Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2015 ; Therapeutic Delivery Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2016 ; Therapeutic Delivery Volume 7 ; 7 ; >
     
   }
 

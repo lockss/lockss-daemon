@@ -26,14 +26,14 @@
     param[publisher_id] = manup
     param[journal_issn] = 1074-164X 
     param[journal_id] = medst 
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
-    au < down ; finished ; 2005 ; Mediterranean Studies Volume 14 ; 14 >
-    au < down ; crawling ; 2006 ; Mediterranean Studies Volume 15 ; 15 >
-    au < down ; finished ; 2007 ; Mediterranean Studies Volume 16 ; 16 >
-    au < down ; finished ; 2008 ; Mediterranean Studies Volume 17 ; 17 >
-    au < down ; finished ; 2009 ; Mediterranean Studies Volume 18 ; 18 >
-    au < down ; finished ; 2010 ; Mediterranean Studies Volume 19 ; 19 >
+    au < down ; finished ; 2005 ; Mediterranean Studies Volume 14 ; 14 ; >
+    au < down ; crawling ; 2006 ; Mediterranean Studies Volume 15 ; 15 ; >
+    au < down ; finished ; 2007 ; Mediterranean Studies Volume 16 ; 16 ; >
+    au < down ; finished ; 2008 ; Mediterranean Studies Volume 17 ; 17 ; >
+    au < down ; finished ; 2009 ; Mediterranean Studies Volume 18 ; 18 ; >
+    au < down ; finished ; 2010 ; Mediterranean Studies Volume 19 ; 19 ; >
 
   }
 

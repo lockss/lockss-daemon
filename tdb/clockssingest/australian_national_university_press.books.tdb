@@ -8,7 +8,7 @@
   
     plugin = needs.SourcePlugin 
     param[base_url] = http://press.anu.edu.au/
-    implicit < status ; status2 ; year ; name ; param[year] >
+    implicit < status ; status2 ; year ; name ; param[year] ; hidden[proxy] >
 
   {
   
@@ -17,7 +17,7 @@
       type = bookSeries
     >
     
-      au < exists ; exists ; 2014 ; ANU Press Books Source Content 2014 ; 2014 >
+      au < exists ; exists ; 2014 ; ANU Press Books Source Content 2014 ; 2014 ; >
 
   }
 }

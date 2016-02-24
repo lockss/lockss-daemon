@@ -19,10 +19,10 @@
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
     param[base_url] = http://globalsummitry.org/
     param[journal_abbr] = gsj
-    implicit < status ; status2 ; year ; name ; param[volume] >
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
     comment[down] = website gone. journal moved to OUP. http://globalsummitry.oxfordjournals.org/
 
-    au < down ; exists ; 2013 ; Global Summitry Journal Volume 1 ; 1 >
+    au < down ; exists ; 2013 ; Global Summitry Journal Volume 1 ; 1 ; >
 
   }
 

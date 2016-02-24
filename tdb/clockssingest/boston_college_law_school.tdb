@@ -9,7 +9,7 @@
   comment[0] = Do not add any titles with the DigitalCommons/BePress Plugin without Vicky's approval. Document Vicky's approval in PD-36.
 
   plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
-  implicit < status ; status2 ; year ; name ; param[volume] >
+  implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
   param[base_url] = http://lawdigitalcommons.bc.edu/
   
   {
@@ -21,48 +21,48 @@
 
     param[journal_abbr] = ealr
 
-    au < finished ; crawling ; 1971-1972 ; Boston College Environmental Affairs Law Review Volume 1 ; 1 >
-    au < finished ; crawling ; 1972-1973 ; Boston College Environmental Affairs Law Review Volume 2 ; 2 >
-    au < finished ; frozen ; 1974 ; Boston College Environmental Affairs Law Review Volume 3 ; 3 >
-    au < finished ; finished ; 1975 ; Boston College Environmental Affairs Law Review Volume 4 ; 4 >
-    au < finished ; crawling ; 1976 ; Boston College Environmental Affairs Law Review Volume 5 ; 5 >
-    au < finished ; crawling ; 1977-1978 ; Boston College Environmental Affairs Law Review Volume 6 ; 6 >
-    au < finished ; crawling ; 1978-1979 ; Boston College Environmental Affairs Law Review Volume 7 ; 7 >
-    au < finished ; crawling ; 1979-1980 ; Boston College Environmental Affairs Law Review Volume 8 ; 8 >
-    au < finished ; crawling ; 1980-1982 ; Boston College Environmental Affairs Law Review Volume 9 ; 9 >
-    au < finished ; frozen ; 1982-1983 ; Boston College Environmental Affairs Law Review Volume 10 ; 10 >
-    au < finished ; finished ; 1983-1984 ; Boston College Environmental Affairs Law Review Volume 11 ; 11 >
-    au < finished ; crawling ; 1985 ; Boston College Environmental Affairs Law Review Volume 12 ; 12 >
-    au < finished ; crawling ; 1985-1986 ; Boston College Environmental Affairs Law Review Volume 13 ; 13 >
-    au < finished ; crawling ; 1986-1987 ; Boston College Environmental Affairs Law Review Volume 14 ; 14 >
-    au < finished ; crawling ; 1987-1988 ; Boston College Environmental Affairs Law Review Volume 15 ; 15 >
-    au < finished ; crawling ; 1988-1989 ; Boston College Environmental Affairs Law Review Volume 16 ; 16 >
-    au < finished ; crawling ; 1989-1990 ; Boston College Environmental Affairs Law Review Volume 17 ; 17 >
-    au < finished ; crawling ; 1990-1991 ; Boston College Environmental Affairs Law Review Volume 18 ; 18 >
-    au < finished ; finished ; 1991-1992 ; Boston College Environmental Affairs Law Review Volume 19 ; 19 >
-    au < finished ; crawling ; 1993 ; Boston College Environmental Affairs Law Review Volume 20 ; 20 >
-    au < finished ; crawling ; 1993-1994 ; Boston College Environmental Affairs Law Review Volume 21 ; 21 >
-    au < finished ; crawling ; 1994-1995 ; Boston College Environmental Affairs Law Review Volume 22 ; 22 >
-    au < finished ; crawling ; 1995-1996 ; Boston College Environmental Affairs Law Review Volume 23 ; 23 >
-    au < finished ; crawling ; 1996-1997 ; Boston College Environmental Affairs Law Review Volume 24 ; 24 >
-    au < finished ; crawling ; 1997-1998 ; Boston College Environmental Affairs Law Review Volume 25 ; 25 >
-    au < finished ; finished ; 1998-1999 ; Boston College Environmental Affairs Law Review Volume 26 ; 26 >
-    au < finished ; frozen ; 1999-2000 ; Boston College Environmental Affairs Law Review Volume 27 ; 27 >
-    au < finished ; crawling ; 2000-2001 ; Boston College Environmental Affairs Law Review Volume 28 ; 28 >
-    au < doesNotExist ; doesNotExist ; 2001-2002 ; Boston College Environmental Affairs Law Review Volume 29 ; 29 >
-    au < finished ; crawling ; 2002-2003 ; Boston College Environmental Affairs Law Review Volume 30 ; 30 >
-    au < finished ; finished ; 2004 ; Boston College Environmental Affairs Law Review Volume 31 ; 31 >
-    au < finished ; crawling ; 2005 ; Boston College Environmental Affairs Law Review Volume 32 ; 32 >
-    au < finished ; crawling ; 2006 ; Boston College Environmental Affairs Law Review Volume 33 ; 33 >
-    au < finished ; crawling ; 2007 ; Boston College Environmental Affairs Law Review Volume 34 ; 34 >
-    au < finished ; crawling ; 2008 ; Boston College Environmental Affairs Law Review Volume 35 ; 35 >
-    au < finished ; crawling ; 2009 ; Boston College Environmental Affairs Law Review Volume 36 ; 36 >
-    au < finished ; crawling ; 2010 ; Boston College Environmental Affairs Law Review Volume 37 ; 37 >
-    au < finished ; crawling ; 2011 ; Boston College Environmental Affairs Law Review Volume 38 ; 38 >
-    au < finished ; crawling ; 2012 ; Boston College Environmental Affairs Law Review Volume 39 ; 39 >
-    au < finished ; finished ; 2013 ; Boston College Environmental Affairs Law Review Volume 40 ; 40 >
-    au < finished ; finished ; 2014 ; Boston College Environmental Affairs Law Review Volume 41 ; 41 >
-    au < crawling ; exists ; 2015 ; Boston College Environmental Affairs Law Review Volume 42 ; 42 >
+    au < finished ; crawling ; 1971-1972 ; Boston College Environmental Affairs Law Review Volume 1 ; 1 ; >
+    au < finished ; crawling ; 1972-1973 ; Boston College Environmental Affairs Law Review Volume 2 ; 2 ; >
+    au < finished ; frozen ; 1974 ; Boston College Environmental Affairs Law Review Volume 3 ; 3 ; >
+    au < finished ; finished ; 1975 ; Boston College Environmental Affairs Law Review Volume 4 ; 4 ; >
+    au < finished ; crawling ; 1976 ; Boston College Environmental Affairs Law Review Volume 5 ; 5 ; >
+    au < finished ; crawling ; 1977-1978 ; Boston College Environmental Affairs Law Review Volume 6 ; 6 ; >
+    au < finished ; crawling ; 1978-1979 ; Boston College Environmental Affairs Law Review Volume 7 ; 7 ; >
+    au < finished ; crawling ; 1979-1980 ; Boston College Environmental Affairs Law Review Volume 8 ; 8 ; >
+    au < finished ; crawling ; 1980-1982 ; Boston College Environmental Affairs Law Review Volume 9 ; 9 ; >
+    au < finished ; frozen ; 1982-1983 ; Boston College Environmental Affairs Law Review Volume 10 ; 10 ; >
+    au < finished ; finished ; 1983-1984 ; Boston College Environmental Affairs Law Review Volume 11 ; 11 ; >
+    au < finished ; crawling ; 1985 ; Boston College Environmental Affairs Law Review Volume 12 ; 12 ; >
+    au < finished ; crawling ; 1985-1986 ; Boston College Environmental Affairs Law Review Volume 13 ; 13 ; >
+    au < finished ; crawling ; 1986-1987 ; Boston College Environmental Affairs Law Review Volume 14 ; 14 ; >
+    au < finished ; crawling ; 1987-1988 ; Boston College Environmental Affairs Law Review Volume 15 ; 15 ; >
+    au < finished ; crawling ; 1988-1989 ; Boston College Environmental Affairs Law Review Volume 16 ; 16 ; >
+    au < finished ; crawling ; 1989-1990 ; Boston College Environmental Affairs Law Review Volume 17 ; 17 ; >
+    au < finished ; crawling ; 1990-1991 ; Boston College Environmental Affairs Law Review Volume 18 ; 18 ; >
+    au < finished ; finished ; 1991-1992 ; Boston College Environmental Affairs Law Review Volume 19 ; 19 ; >
+    au < finished ; crawling ; 1993 ; Boston College Environmental Affairs Law Review Volume 20 ; 20 ; >
+    au < finished ; crawling ; 1993-1994 ; Boston College Environmental Affairs Law Review Volume 21 ; 21 ; >
+    au < finished ; crawling ; 1994-1995 ; Boston College Environmental Affairs Law Review Volume 22 ; 22 ; >
+    au < finished ; crawling ; 1995-1996 ; Boston College Environmental Affairs Law Review Volume 23 ; 23 ; >
+    au < finished ; crawling ; 1996-1997 ; Boston College Environmental Affairs Law Review Volume 24 ; 24 ; >
+    au < finished ; crawling ; 1997-1998 ; Boston College Environmental Affairs Law Review Volume 25 ; 25 ; >
+    au < finished ; finished ; 1998-1999 ; Boston College Environmental Affairs Law Review Volume 26 ; 26 ; >
+    au < finished ; frozen ; 1999-2000 ; Boston College Environmental Affairs Law Review Volume 27 ; 27 ; >
+    au < finished ; crawling ; 2000-2001 ; Boston College Environmental Affairs Law Review Volume 28 ; 28 ; >
+    au < doesNotExist ; doesNotExist ; 2001-2002 ; Boston College Environmental Affairs Law Review Volume 29 ; 29 ; >
+    au < finished ; crawling ; 2002-2003 ; Boston College Environmental Affairs Law Review Volume 30 ; 30 ; >
+    au < finished ; finished ; 2004 ; Boston College Environmental Affairs Law Review Volume 31 ; 31 ; >
+    au < finished ; crawling ; 2005 ; Boston College Environmental Affairs Law Review Volume 32 ; 32 ; >
+    au < finished ; crawling ; 2006 ; Boston College Environmental Affairs Law Review Volume 33 ; 33 ; >
+    au < finished ; crawling ; 2007 ; Boston College Environmental Affairs Law Review Volume 34 ; 34 ; >
+    au < finished ; crawling ; 2008 ; Boston College Environmental Affairs Law Review Volume 35 ; 35 ; >
+    au < finished ; crawling ; 2009 ; Boston College Environmental Affairs Law Review Volume 36 ; 36 ; >
+    au < finished ; crawling ; 2010 ; Boston College Environmental Affairs Law Review Volume 37 ; 37 ; >
+    au < finished ; crawling ; 2011 ; Boston College Environmental Affairs Law Review Volume 38 ; 38 ; >
+    au < finished ; crawling ; 2012 ; Boston College Environmental Affairs Law Review Volume 39 ; 39 ; >
+    au < finished ; finished ; 2013 ; Boston College Environmental Affairs Law Review Volume 40 ; 40 ; >
+    au < finished ; finished ; 2014 ; Boston College Environmental Affairs Law Review Volume 41 ; 41 ; >
+    au < crawling ; exists ; 2015 ; Boston College Environmental Affairs Law Review Volume 42 ; 42 ; >
   }
 
   {
@@ -75,44 +75,44 @@
   
     param[journal_abbr] = iclr
 
-    au < finished ; crawling ; 1977 ; Boston College International and Comparative Law Review Volume 1 ; 1 >
-    au < finished ; finished ; 1978-1979 ; Boston College International and Comparative Law Review Volume 2 ; 2 >
-    au < finished ; finished ; 1979-1980 ; Boston College International and Comparative Law Review Volume 3 ; 3 >
-    au < finished ; crawling ; 1981 ; Boston College International and Comparative Law Review Volume 4 ; 4 >
-    au < finished ; crawling ; 1982 ; Boston College International and Comparative Law Review Volume 5 ; 5 >
-    au < finished ; crawling ; 1983 ; Boston College International and Comparative Law Review Volume 6 ; 6 >
-    au < finished ; frozen ; 1984 ; Boston College International and Comparative Law Review Volume 7 ; 7 >
-    au < finished ; crawling ; 1985 ; Boston College International and Comparative Law Review Volume 8 ; 8 >
-    au < finished ; crawling ; 1986 ; Boston College International and Comparative Law Review Volume 9 ; 9 >
-    au < finished ; crawling ; 1987 ; Boston College International and Comparative Law Review Volume 10 ; 10 >
-    au < finished ; finished ; 1988 ; Boston College International and Comparative Law Review Volume 11 ; 11 >
-    au < finished ; finished ; 1989 ; Boston College International and Comparative Law Review Volume 12 ; 12 >
-    au < finished ; crawling ; 1990 ; Boston College International and Comparative Law Review Volume 13 ; 13 >
-    au < finished ; finished ; 1991 ; Boston College International and Comparative Law Review Volume 14 ; 14 >
-    au < finished ; finished ; 1992 ; Boston College International and Comparative Law Review Volume 15 ; 15 >
-    au < finished ; crawling ; 1993 ; Boston College International and Comparative Law Review Volume 16 ; 16 >
-    au < finished ; finished ; 1994 ; Boston College International and Comparative Law Review Volume 17 ; 17 >
-    au < finished ; crawling ; 1995 ; Boston College International and Comparative Law Review Volume 18 ; 18 >
-    au < finished ; frozen ; 1996 ; Boston College International and Comparative Law Review Volume 19 ; 19 >
-    au < finished ; crawling ; 1997 ; Boston College International and Comparative Law Review Volume 20 ; 20 >
-    au < finished ; crawling ; 1998 ; Boston College International and Comparative Law Review Volume 21 ; 21 >
-    au < finished ; finished ; 1999 ; Boston College International and Comparative Law Review Volume 22 ; 22 >
-    au < finished ; crawling ; 2000 ; Boston College International and Comparative Law Review Volume 23 ; 23 >
-    au < finished ; finished ; 2001 ; Boston College International and Comparative Law Review Volume 24 ; 24 >
-    au < finished ; crawling ; 2002 ; Boston College International and Comparative Law Review Volume 25 ; 25 >
-    au < finished ; finished ; 2003 ; Boston College International and Comparative Law Review Volume 26 ; 26 >
-    au < finished ; crawling ; 2004 ; Boston College International and Comparative Law Review Volume 27 ; 27 >
-    au < finished ; finished ; 2005 ; Boston College International and Comparative Law Review Volume 28 ; 28 >
-    au < finished ; crawling ; 2006 ; Boston College International and Comparative Law Review Volume 29 ; 29 >
-    au < finished ; crawling ; 2007 ; Boston College International and Comparative Law Review Volume 30 ; 30 >
-    au < finished ; finished ; 2008 ; Boston College International and Comparative Law Review Volume 31 ; 31 >
-    au < finished ; finished ; 2009 ; Boston College International and Comparative Law Review Volume 32 ; 32 >
-    au < finished ; crawling ; 2010 ; Boston College International and Comparative Law Review Volume 33 ; 33 >
-    au < finished ; crawling ; 2011 ; Boston College International and Comparative Law Review Volume 34 ; 34 >
-    au < finished ; crawling ; 2012 ; Boston College International and Comparative Law Review Volume 35 ; 35 >
-    au < finished ; finished ; 2013 ; Boston College International and Comparative Law Review Volume 36 ; 36 >
-    au < finished ; finished ; 2014 ; Boston College International and Comparative Law Review Volume 37 ; 37 >
-    au < crawling ; exists ; 2015 ; Boston College International and Comparative Law Review Volume 38 ; 38 >
+    au < finished ; crawling ; 1977 ; Boston College International and Comparative Law Review Volume 1 ; 1 ; >
+    au < finished ; finished ; 1978-1979 ; Boston College International and Comparative Law Review Volume 2 ; 2 ; >
+    au < finished ; finished ; 1979-1980 ; Boston College International and Comparative Law Review Volume 3 ; 3 ; >
+    au < finished ; crawling ; 1981 ; Boston College International and Comparative Law Review Volume 4 ; 4 ; >
+    au < finished ; crawling ; 1982 ; Boston College International and Comparative Law Review Volume 5 ; 5 ; >
+    au < finished ; crawling ; 1983 ; Boston College International and Comparative Law Review Volume 6 ; 6 ; >
+    au < finished ; frozen ; 1984 ; Boston College International and Comparative Law Review Volume 7 ; 7 ; >
+    au < finished ; crawling ; 1985 ; Boston College International and Comparative Law Review Volume 8 ; 8 ; >
+    au < finished ; crawling ; 1986 ; Boston College International and Comparative Law Review Volume 9 ; 9 ; >
+    au < finished ; crawling ; 1987 ; Boston College International and Comparative Law Review Volume 10 ; 10 ; >
+    au < finished ; finished ; 1988 ; Boston College International and Comparative Law Review Volume 11 ; 11 ; >
+    au < finished ; finished ; 1989 ; Boston College International and Comparative Law Review Volume 12 ; 12 ; >
+    au < finished ; crawling ; 1990 ; Boston College International and Comparative Law Review Volume 13 ; 13 ; >
+    au < finished ; finished ; 1991 ; Boston College International and Comparative Law Review Volume 14 ; 14 ; >
+    au < finished ; finished ; 1992 ; Boston College International and Comparative Law Review Volume 15 ; 15 ; >
+    au < finished ; crawling ; 1993 ; Boston College International and Comparative Law Review Volume 16 ; 16 ; >
+    au < finished ; finished ; 1994 ; Boston College International and Comparative Law Review Volume 17 ; 17 ; >
+    au < finished ; crawling ; 1995 ; Boston College International and Comparative Law Review Volume 18 ; 18 ; >
+    au < finished ; frozen ; 1996 ; Boston College International and Comparative Law Review Volume 19 ; 19 ; >
+    au < finished ; crawling ; 1997 ; Boston College International and Comparative Law Review Volume 20 ; 20 ; >
+    au < finished ; crawling ; 1998 ; Boston College International and Comparative Law Review Volume 21 ; 21 ; >
+    au < finished ; finished ; 1999 ; Boston College International and Comparative Law Review Volume 22 ; 22 ; >
+    au < finished ; crawling ; 2000 ; Boston College International and Comparative Law Review Volume 23 ; 23 ; >
+    au < finished ; finished ; 2001 ; Boston College International and Comparative Law Review Volume 24 ; 24 ; >
+    au < finished ; crawling ; 2002 ; Boston College International and Comparative Law Review Volume 25 ; 25 ; >
+    au < finished ; finished ; 2003 ; Boston College International and Comparative Law Review Volume 26 ; 26 ; >
+    au < finished ; crawling ; 2004 ; Boston College International and Comparative Law Review Volume 27 ; 27 ; >
+    au < finished ; finished ; 2005 ; Boston College International and Comparative Law Review Volume 28 ; 28 ; >
+    au < finished ; crawling ; 2006 ; Boston College International and Comparative Law Review Volume 29 ; 29 ; >
+    au < finished ; crawling ; 2007 ; Boston College International and Comparative Law Review Volume 30 ; 30 ; >
+    au < finished ; finished ; 2008 ; Boston College International and Comparative Law Review Volume 31 ; 31 ; >
+    au < finished ; finished ; 2009 ; Boston College International and Comparative Law Review Volume 32 ; 32 ; >
+    au < finished ; crawling ; 2010 ; Boston College International and Comparative Law Review Volume 33 ; 33 ; >
+    au < finished ; crawling ; 2011 ; Boston College International and Comparative Law Review Volume 34 ; 34 ; >
+    au < finished ; crawling ; 2012 ; Boston College International and Comparative Law Review Volume 35 ; 35 ; >
+    au < finished ; finished ; 2013 ; Boston College International and Comparative Law Review Volume 36 ; 36 ; >
+    au < finished ; finished ; 2014 ; Boston College International and Comparative Law Review Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2015 ; Boston College International and Comparative Law Review Volume 38 ; 38 ; >
 
   }
 
@@ -125,62 +125,62 @@
 
     param[journal_abbr] = bclr
 
-    au < finished ; finished ; 1959-1960 ; Boston College Law Review Volume 1 ; 1 >
-    au < finished ; crawling ; 1960-1961 ; Boston College Law Review Volume 2 ; 2 >
-    au < finished ; crawling ; 1961-1962 ; Boston College Law Review Volume 3 ; 3 >
-    au < finished ; finished ; 1962-1963 ; Boston College Law Review Volume 4 ; 4 >
-    au < finished ; finished ; 1963-1964 ; Boston College Law Review Volume 5 ; 5 >
-    au < finished ; finished ; 1964-1965 ; Boston College Law Review Volume 6 ; 6 >
-    au < finished ; crawling ; 1965-1966 ; Boston College Law Review Volume 7 ; 7 >
-    au < finished ; finished ; 1966-1967 ; Boston College Law Review Volume 8 ; 8 >
-    au < finished ; finished ; 1967-1968 ; Boston College Law Review Volume 9 ; 9 >
-    au < finished ; finished ; 1968-1969 ; Boston College Law Review Volume 10 ; 10 >
-    au < finished ; crawling ; 1969-1970 ; Boston College Law Review Volume 11 ; 11 >
-    au < finished ; crawling ; 1970-1971 ; Boston College Law Review Volume 12 ; 12 >
-    au < finished ; crawling ; 1971-1972 ; Boston College Law Review Volume 13 ; 13 >
-    au < finished ; crawling ; 1972-1973 ; Boston College Law Review Volume 14 ; 14 >
-    au < finished ; crawling ; 1973-1974 ; Boston College Law Review Volume 15 ; 15 >
-    au < finished ; finished ; 1974-1975 ; Boston College Law Review Volume 16 ; 16 >
-    au < finished ; crawling ; 1975-1976 ; Boston College Law Review Volume 17 ; 17 >
-    au < finished ; finished ; 1976-1977 ; Boston College Law Review Volume 18 ; 18 >
-    au < finished ; crawling ; 1977-1978 ; Boston College Law Review Volume 19 ; 19 >
-    au < finished ; crawling ; 1978-1979 ; Boston College Law Review Volume 20 ; 20 >
-    au < finished ; crawling ; 1979-1980 ; Boston College Law Review Volume 21 ; 21 >
-    au < finished ; finished ; 1980-1981 ; Boston College Law Review Volume 22 ; 22 >
-    au < finished ; frozen ; 1981-1982 ; Boston College Law Review Volume 23 ; 23 >
-    au < finished ; finished ; 1982-1983 ; Boston College Law Review Volume 24 ; 24 >
-    au < finished ; crawling ; 1983-1984 ; Boston College Law Review Volume 25 ; 25 >
-    au < finished ; finished ; 1984-1985 ; Boston College Law Review Volume 26 ; 26 >
-    au < finished ; crawling ; 1985-1986 ; Boston College Law Review Volume 27 ; 27 >
-    au < finished ; finished ; 1986-1987 ; Boston College Law Review Volume 28 ; 28 >
-    au < finished ; crawling ; 1987-1988 ; Boston College Law Review Volume 29 ; 29 >
-    au < finished ; crawling ; 1988-1989 ; Boston College Law Review Volume 30 ; 30 >
-    au < finished ; crawling ; 1989-1990 ; Boston College Law Review Volume 31 ; 31 >
-    au < finished ; finished ; 1990-1991 ; Boston College Law Review Volume 32 ; 32 >
-    au < finished ; finished ; 1991-1992 ; Boston College Law Review Volume 33 ; 33 >
-    au < finished ; finished ; 1992-1993 ; Boston College Law Review Volume 34 ; 34 >
-    au < finished ; crawling ; 1993-1994 ; Boston College Law Review Volume 35 ; 35 >
-    au < finished ; frozen ; 1994-1995 ; Boston College Law Review Volume 36 ; 36 >
-    au < finished ; crawling ; 1995-1996 ; Boston College Law Review Volume 37 ; 37 >
-    au < finished ; frozen ; 1996-1997 ; Boston College Law Review Volume 38 ; 38 >
-    au < finished ; crawling ; 1997-1998 ; Boston College Law Review Volume 39 ; 39 >
-    au < finished ; crawling ; 1998-1999 ; Boston College Law Review Volume 40 ; 40 >
-    au < finished ; crawling ; 1999-2000 ; Boston College Law Review Volume 41 ; 41 >
-    au < finished ; crawling ; 2000-2001 ; Boston College Law Review Volume 42 ; 42 >
-    au < finished ; crawling ; 2001-2002 ; Boston College Law Review Volume 43 ; 43 >
-    au < finished ; crawling ; 2002-2003 ; Boston College Law Review Volume 44 ; 44 >
-    au < finished ; crawling ; 2003-2004 ; Boston College Law Review Volume 45 ; 45 >
-    au < finished ; finished ; 2004-2005 ; Boston College Law Review Volume 46 ; 46 >
-    au < finished ; frozen ; 2005-2006 ; Boston College Law Review Volume 47 ; 47 >
-    au < finished ; finished ; 2007 ; Boston College Law Review Volume 48 ; 48 >
-    au < finished ; crawling ; 2008 ; Boston College Law Review Volume 49 ; 49 >
-    au < finished ; crawling ; 2009 ; Boston College Law Review Volume 50 ; 50 >
-    au < finished ; crawling ; 2010 ; Boston College Law Review Volume 51 ; 51 >
-    au < finished ; frozen ; 2011 ; Boston College Law Review Volume 52 ; 52 >
-    au < finished ; crawling ; 2012 ; Boston College Law Review Volume 53 ; 53 >
-    au < crawling ; exists ; 2013 ; Boston College Law Review Volume 54 ; 54 >
-    au < finished ; finished ; 2014 ; Boston College Law Review Volume 55 ; 55 >
-    au < crawling ; exists ; 2015 ; Boston College Law Review Volume 56 ; 56 >
+    au < finished ; finished ; 1959-1960 ; Boston College Law Review Volume 1 ; 1 ; >
+    au < finished ; crawling ; 1960-1961 ; Boston College Law Review Volume 2 ; 2 ; >
+    au < finished ; crawling ; 1961-1962 ; Boston College Law Review Volume 3 ; 3 ; >
+    au < finished ; finished ; 1962-1963 ; Boston College Law Review Volume 4 ; 4 ; >
+    au < finished ; finished ; 1963-1964 ; Boston College Law Review Volume 5 ; 5 ; >
+    au < finished ; finished ; 1964-1965 ; Boston College Law Review Volume 6 ; 6 ; >
+    au < finished ; crawling ; 1965-1966 ; Boston College Law Review Volume 7 ; 7 ; >
+    au < finished ; finished ; 1966-1967 ; Boston College Law Review Volume 8 ; 8 ; >
+    au < finished ; finished ; 1967-1968 ; Boston College Law Review Volume 9 ; 9 ; >
+    au < finished ; finished ; 1968-1969 ; Boston College Law Review Volume 10 ; 10 ; >
+    au < finished ; crawling ; 1969-1970 ; Boston College Law Review Volume 11 ; 11 ; >
+    au < finished ; crawling ; 1970-1971 ; Boston College Law Review Volume 12 ; 12 ; >
+    au < finished ; crawling ; 1971-1972 ; Boston College Law Review Volume 13 ; 13 ; >
+    au < finished ; crawling ; 1972-1973 ; Boston College Law Review Volume 14 ; 14 ; >
+    au < finished ; crawling ; 1973-1974 ; Boston College Law Review Volume 15 ; 15 ; >
+    au < finished ; finished ; 1974-1975 ; Boston College Law Review Volume 16 ; 16 ; >
+    au < finished ; crawling ; 1975-1976 ; Boston College Law Review Volume 17 ; 17 ; >
+    au < finished ; finished ; 1976-1977 ; Boston College Law Review Volume 18 ; 18 ; >
+    au < finished ; crawling ; 1977-1978 ; Boston College Law Review Volume 19 ; 19 ; >
+    au < finished ; crawling ; 1978-1979 ; Boston College Law Review Volume 20 ; 20 ; >
+    au < finished ; crawling ; 1979-1980 ; Boston College Law Review Volume 21 ; 21 ; >
+    au < finished ; finished ; 1980-1981 ; Boston College Law Review Volume 22 ; 22 ; >
+    au < finished ; frozen ; 1981-1982 ; Boston College Law Review Volume 23 ; 23 ; >
+    au < finished ; finished ; 1982-1983 ; Boston College Law Review Volume 24 ; 24 ; >
+    au < finished ; crawling ; 1983-1984 ; Boston College Law Review Volume 25 ; 25 ; >
+    au < finished ; finished ; 1984-1985 ; Boston College Law Review Volume 26 ; 26 ; >
+    au < finished ; crawling ; 1985-1986 ; Boston College Law Review Volume 27 ; 27 ; >
+    au < finished ; finished ; 1986-1987 ; Boston College Law Review Volume 28 ; 28 ; >
+    au < finished ; crawling ; 1987-1988 ; Boston College Law Review Volume 29 ; 29 ; >
+    au < finished ; crawling ; 1988-1989 ; Boston College Law Review Volume 30 ; 30 ; >
+    au < finished ; crawling ; 1989-1990 ; Boston College Law Review Volume 31 ; 31 ; >
+    au < finished ; finished ; 1990-1991 ; Boston College Law Review Volume 32 ; 32 ; >
+    au < finished ; finished ; 1991-1992 ; Boston College Law Review Volume 33 ; 33 ; >
+    au < finished ; finished ; 1992-1993 ; Boston College Law Review Volume 34 ; 34 ; >
+    au < finished ; crawling ; 1993-1994 ; Boston College Law Review Volume 35 ; 35 ; >
+    au < finished ; frozen ; 1994-1995 ; Boston College Law Review Volume 36 ; 36 ; >
+    au < finished ; crawling ; 1995-1996 ; Boston College Law Review Volume 37 ; 37 ; >
+    au < finished ; frozen ; 1996-1997 ; Boston College Law Review Volume 38 ; 38 ; >
+    au < finished ; crawling ; 1997-1998 ; Boston College Law Review Volume 39 ; 39 ; >
+    au < finished ; crawling ; 1998-1999 ; Boston College Law Review Volume 40 ; 40 ; >
+    au < finished ; crawling ; 1999-2000 ; Boston College Law Review Volume 41 ; 41 ; >
+    au < finished ; crawling ; 2000-2001 ; Boston College Law Review Volume 42 ; 42 ; >
+    au < finished ; crawling ; 2001-2002 ; Boston College Law Review Volume 43 ; 43 ; >
+    au < finished ; crawling ; 2002-2003 ; Boston College Law Review Volume 44 ; 44 ; >
+    au < finished ; crawling ; 2003-2004 ; Boston College Law Review Volume 45 ; 45 ; >
+    au < finished ; finished ; 2004-2005 ; Boston College Law Review Volume 46 ; 46 ; >
+    au < finished ; frozen ; 2005-2006 ; Boston College Law Review Volume 47 ; 47 ; >
+    au < finished ; finished ; 2007 ; Boston College Law Review Volume 48 ; 48 ; >
+    au < finished ; crawling ; 2008 ; Boston College Law Review Volume 49 ; 49 ; >
+    au < finished ; crawling ; 2009 ; Boston College Law Review Volume 50 ; 50 ; >
+    au < finished ; crawling ; 2010 ; Boston College Law Review Volume 51 ; 51 ; >
+    au < finished ; frozen ; 2011 ; Boston College Law Review Volume 52 ; 52 ; >
+    au < finished ; crawling ; 2012 ; Boston College Law Review Volume 53 ; 53 ; >
+    au < crawling ; exists ; 2013 ; Boston College Law Review Volume 54 ; 54 ; >
+    au < finished ; finished ; 2014 ; Boston College Law Review Volume 55 ; 55 ; >
+    au < crawling ; exists ; 2015 ; Boston College Law Review Volume 56 ; 56 ; >
 
   }
   
@@ -194,10 +194,10 @@
     comment[continues] = 0276-3583
     param[journal_abbr] = jlsj
     
-    au < finished ; frozen ; 2012 ; Boston College Journal of Law & Social Justice Volume 32 ; 32 >
-    au < finished ; finished ; 2013 ; Boston College Journal of Law & Social Justice Volume 33 ; 33 >
-    au < finished ; finished ; 2014 ; Boston College Journal of Law & Social Justice Volume 34 ; 34 >
-    au < crawling ; exists ; 2015 ; Boston College Journal of Law & Social Justice Volume 35 ; 35 >
+    au < finished ; frozen ; 2012 ; Boston College Journal of Law & Social Justice Volume 32 ; 32 ; >
+    au < finished ; finished ; 2013 ; Boston College Journal of Law & Social Justice Volume 33 ; 33 ; >
+    au < finished ; finished ; 2014 ; Boston College Journal of Law & Social Justice Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2015 ; Boston College Journal of Law & Social Justice Volume 35 ; 35 ; >
 
   }
   
@@ -211,37 +211,37 @@
 	comment[continued_by] = 2165-5235
     param[journal_abbr] = twlj
 
-    au < finished ; crawling ; 1981 ; Boston College Third World Law Journal Volume 1 ; 1 >
-    au < finished ; frozen ; 1982 ; Boston College Third World Law Journal Volume 2 ; 2 >
-    au < finished ; crawling ; 1983 ; Boston College Third World Law Journal Volume 3 ; 3 >
-    au < finished ; crawling ; 1984 ; Boston College Third World Law Journal Volume 4 ; 4 >
-    au < finished ; crawling ; 1985 ; Boston College Third World Law Journal Volume 5 ; 5 >
-    au < finished ; crawling ; 1986 ; Boston College Third World Law Journal Volume 6 ; 6 >
-    au < finished ; crawling ; 1987 ; Boston College Third World Law Journal Volume 7 ; 7 >
-    au < finished ; finished ; 1988 ; Boston College Third World Law Journal Volume 8 ; 8 >
-    au < finished ; crawling ; 1989 ; Boston College Third World Law Journal Volume 9 ; 9 >
-    au < finished ; crawling ; 1990 ; Boston College Third World Law Journal Volume 10 ; 10 >
-    au < finished ; crawling ; 1991 ; Boston College Third World Law Journal Volume 11 ; 11 >
-    au < finished ; crawling ; 1992 ; Boston College Third World Law Journal Volume 12 ; 12 >
-    au < finished ; crawling ; 1993 ; Boston College Third World Law Journal Volume 13 ; 13 >
-    au < finished ; crawling ; 1994 ; Boston College Third World Law Journal Volume 14 ; 14 >
-    au < finished ; crawling ; 1995 ; Boston College Third World Law Journal Volume 15 ; 15 >
-    au < finished ; crawling ; 1996 ; Boston College Third World Law Journal Volume 16 ; 16 >
-    au < finished ; frozen ; 1997 ; Boston College Third World Law Journal Volume 17 ; 17 >
-    au < finished ; finished ; 1998 ; Boston College Third World Law Journal Volume 18 ; 18 >
-    au < finished ; finished ; 1999 ; Boston College Third World Law Journal Volume 19 ; 19 >
-    au < finished ; crawling ; 2000 ; Boston College Third World Law Journal Volume 20 ; 20 >
-    au < finished ; crawling ; 2001 ; Boston College Third World Law Journal Volume 21 ; 21 >
-    au < finished ; crawling ; 2002 ; Boston College Third World Law Journal Volume 22 ; 22 >
-    au < finished ; finished ; 2003 ; Boston College Third World Law Journal Volume 23 ; 23 >
-    au < finished ; crawling ; 2004 ; Boston College Third World Law Journal Volume 24 ; 24 >
-    au < finished ; crawling ; 2005 ; Boston College Third World Law Journal Volume 25 ; 25 >
-    au < finished ; finished ; 2006 ; Boston College Third World Law Journal Volume 26 ; 26 >
-    au < finished ; frozen ; 2007 ; Boston College Third World Law Journal Volume 27 ; 27 >
-    au < finished ; crawling ; 2008 ; Boston College Third World Law Journal Volume 28 ; 28 >
-    au < finished ; crawling ; 2009 ; Boston College Third World Law Journal Volume 29 ; 29 >
-    au < finished ; crawling ; 2010 ; Boston College Third World Law Journal Volume 30 ; 30 >
-    au < finished ; frozen ; 2011 ; Boston College Third World Law Journal Volume 31 ; 31 >
+    au < finished ; crawling ; 1981 ; Boston College Third World Law Journal Volume 1 ; 1 ; >
+    au < finished ; frozen ; 1982 ; Boston College Third World Law Journal Volume 2 ; 2 ; >
+    au < finished ; crawling ; 1983 ; Boston College Third World Law Journal Volume 3 ; 3 ; >
+    au < finished ; crawling ; 1984 ; Boston College Third World Law Journal Volume 4 ; 4 ; >
+    au < finished ; crawling ; 1985 ; Boston College Third World Law Journal Volume 5 ; 5 ; >
+    au < finished ; crawling ; 1986 ; Boston College Third World Law Journal Volume 6 ; 6 ; >
+    au < finished ; crawling ; 1987 ; Boston College Third World Law Journal Volume 7 ; 7 ; >
+    au < finished ; finished ; 1988 ; Boston College Third World Law Journal Volume 8 ; 8 ; >
+    au < finished ; crawling ; 1989 ; Boston College Third World Law Journal Volume 9 ; 9 ; >
+    au < finished ; crawling ; 1990 ; Boston College Third World Law Journal Volume 10 ; 10 ; >
+    au < finished ; crawling ; 1991 ; Boston College Third World Law Journal Volume 11 ; 11 ; >
+    au < finished ; crawling ; 1992 ; Boston College Third World Law Journal Volume 12 ; 12 ; >
+    au < finished ; crawling ; 1993 ; Boston College Third World Law Journal Volume 13 ; 13 ; >
+    au < finished ; crawling ; 1994 ; Boston College Third World Law Journal Volume 14 ; 14 ; >
+    au < finished ; crawling ; 1995 ; Boston College Third World Law Journal Volume 15 ; 15 ; >
+    au < finished ; crawling ; 1996 ; Boston College Third World Law Journal Volume 16 ; 16 ; >
+    au < finished ; frozen ; 1997 ; Boston College Third World Law Journal Volume 17 ; 17 ; >
+    au < finished ; finished ; 1998 ; Boston College Third World Law Journal Volume 18 ; 18 ; >
+    au < finished ; finished ; 1999 ; Boston College Third World Law Journal Volume 19 ; 19 ; >
+    au < finished ; crawling ; 2000 ; Boston College Third World Law Journal Volume 20 ; 20 ; >
+    au < finished ; crawling ; 2001 ; Boston College Third World Law Journal Volume 21 ; 21 ; >
+    au < finished ; crawling ; 2002 ; Boston College Third World Law Journal Volume 22 ; 22 ; >
+    au < finished ; finished ; 2003 ; Boston College Third World Law Journal Volume 23 ; 23 ; >
+    au < finished ; crawling ; 2004 ; Boston College Third World Law Journal Volume 24 ; 24 ; >
+    au < finished ; crawling ; 2005 ; Boston College Third World Law Journal Volume 25 ; 25 ; >
+    au < finished ; finished ; 2006 ; Boston College Third World Law Journal Volume 26 ; 26 ; >
+    au < finished ; frozen ; 2007 ; Boston College Third World Law Journal Volume 27 ; 27 ; >
+    au < finished ; crawling ; 2008 ; Boston College Third World Law Journal Volume 28 ; 28 ; >
+    au < finished ; crawling ; 2009 ; Boston College Third World Law Journal Volume 29 ; 29 ; >
+    au < finished ; crawling ; 2010 ; Boston College Third World Law Journal Volume 30 ; 30 ; >
+    au < finished ; frozen ; 2011 ; Boston College Third World Law Journal Volume 31 ; 31 ; >
     
   }
 

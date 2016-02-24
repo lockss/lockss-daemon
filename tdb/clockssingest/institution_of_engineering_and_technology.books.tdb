@@ -12,7 +12,7 @@
 
   {
 
-    implicit < status ; status2 ; year ; isbn ; eisbn ; param[isbn] ; volume ; name >
+    implicit < status ; status2 ; year ; isbn ; eisbn ; param[isbn] ; volume ; name ; hidden[proxy] >
 
     {
   
@@ -35,9 +35,9 @@
       >
       comment[0] = series string - /circuits/
       
-      au < exists ; exists ; 1991 ; 9780863412592 ; 9781849193573 ; 9780863412592 ; 3 ; Analogue-digital ASICs: circuit techniques, design tools and applications >
-      au < exists ; exists ; 1992 ; 9780863412677 ; 9781849193580 ; 9780863412677 ; 4 ; Algorithmic and Knowledge-based CAD for VLSI >
-      au < exists ; exists ; 1993 ; 9780863412974 ; 9781849191647 ; 9780863412974 ; 5 ; Analogue IC Design: The Current-Mode Approach >
+      au < exists ; exists ; 1991 ; 9780863412592 ; 9781849193573 ; 9780863412592 ; 3 ; Analogue-digital ASICs: circuit techniques, design tools and applications ; >
+      au < exists ; exists ; 1992 ; 9780863412677 ; 9781849193580 ; 9780863412677 ; 4 ; Algorithmic and Knowledge-based CAD for VLSI ; >
+      au < exists ; exists ; 1993 ; 9780863412974 ; 9781849191647 ; 9780863412974 ; 5 ; Analogue IC Design: The Current-Mode Approach ; >
 
     }   
     

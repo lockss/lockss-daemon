@@ -8,7 +8,7 @@
 
     plugin = needs.plugin
     comment[platform] = HighWire
-    implicit < status ; status2 ; year ; volume ; doi ; param[eisbn] ; name >
+    implicit < status ; status2 ; year ; volume ; doi ; param[eisbn] ; name ; hidden[proxy] >
     type = bookSeries
     param[base_url] = http://erspublications.com/
 
@@ -22,53 +22,53 @@
     comment[0] = Series name changed from European Respiratory Monograph.
     
     {
-      au < exists ; exists ; 2014 ; 64 ; 10.1183/1025448x.erm6414 ; 978-1-84984-051-4 ; Cystic Fibrosis (2014) >
-      au < exists ; exists ; 2014 ; 65 ; 10.1183/2312508X.erm6514 ; 978-1-84984-053-8 ; Respiratory Epidemiology (2014) >
+      au < exists ; exists ; 2014 ; 64 ; 10.1183/1025448x.erm6414 ; 978-1-84984-051-4 ; Cystic Fibrosis (2014) ; >
+      au < exists ; exists ; 2014 ; 65 ; 10.1183/2312508X.erm6514 ; 978-1-84984-053-8 ; Respiratory Epidemiology (2014) ; >
     }
     {
     
-      au < exists ; exists ; 2002 ; 27 ; 10.1183/1025448x.erm2703 ; 978-1-904097-93-8 ; Pulmonary Vascular Pathology: a Clinical Update >
-      au < exists ; exists ; 2003 ; 25 ; 10.1183/1025448x.erm2503 ; 978-1-904097-95-2 ; Respiratory Diseases in Women >
-      au < exists ; exists ; 2003 ; 26 ; 10.1183/1025448x.erm2603 ; 978-1-904097-94-5 ; Lung Transplantation (2003) >
-      au < exists ; exists ; 2004 ; 28 ; 10.1183/1025448x.erm2804 ; 978-1-904097-92-1 ; Antibiotics and the Lung >
-      au < exists ; exists ; 2004 ; 29 ; 10.1183/1025448x.erm2904 ; 978-1-904097-91-4 ; Surgery for Non-Neoplastic Disorders of the Chest: A Clinical Update >
-      au < exists ; exists ; 2004 ; 30 ; 10.1183/1025448x.erm3004 ; 978-1-904097-90-7 ; Imaging >
-      au < exists ; exists ; 2005 ; 31 ; 10.1183/1025448x.ERM3105 ; 978-1-904097-89-1 ; Lung Function Testing >
-      au < exists ; exists ; 2005 ; 32 ; 10.1183/1025448x.erm3205 ; 978-1-904097-88-4 ; Sarcoidosis >
-      au < exists ; exists ; 2005 ; 33 ; 10.1183/1025448x.erm3305 ; 978-1-904097-87-7 ; Diagnosis, Prevention and Treatment of Exercise-Related Asthma, Respiratory and Allergic Disorders in Sports >
-      au < exists ; exists ; 2006 ; 34 ; 10.1183/1025448x.ERM3406 ; 978-1-904097-86-0 ; Pulmonary Manifestations of Systemic Diseases >
-      au < exists ; exists ; 2006 ; 35 ; 10.1183/1025448x.erm3506 ; 978-1-904097-85-3 ; Cystic Fibrosis (2006) >
-      au < exists ; exists ; 2006 ; 36 ; 10.1183/1025448x.erm3606 ; 978-1-904097-84-6 ; Respiratory Emergencies >
-      au < exists ; exists ; 2006 ; 37 ; 10.1183/1025448x.ERM3706 ; 978-1-904097-83-9 ; Respiratory Diseases in Infants and Children >
-      au < exists ; exists ; 2006 ; 38 ; 10.1183/1025448x.erm3806 ; 978-1-904097-82-2 ; Management of Chronic Obstructive Pulmonary Disease >
-      au < exists ; exists ; 2007 ; 39 ; 10.1183/1025448x.ERM3907 ; 978-1-904097-81-5 ; Pathology of the Lung >
-      au < exists ; exists ; 2007 ; 40 ; 10.1183/1025448x.ERM4007 ; 978-1-904097-80-8 ; Clinical Exercise Testing >
-      au < exists ; exists ; 2008 ; 41 ; 10.1183/1025448x.ERM4108 ; 978-1-904097-79-2 ; Noninvasive Ventilation >
-      au < exists ; exists ; 2008 ; 42 ; 10.1183/1025448x.ERM4208 ; 978-1-904097-78-5 ; Smoking Cessation >
-      au < exists ; exists ; 2009 ; 43 ; 10.1183/1025448x.ERM4309 ; 978-1-904097-77-8 ; Respiratory Diseases in the Elderly >
-      au < exists ; exists ; 2009 ; 44 ; 10.1183/1025448x.ERM4409 ; 978-1-904097-76-1 ; Thoracic Malignancies >
-      au < exists ; exists ; 2009 ; 45 ; 10.1183/1025448x.ERM4509 ; 978-1-904097-96-9 ; Lung Transplantation (2009) >
-      au < exists ; exists ; 2009 ; 46 ; 10.1183/1025448x.ERM4609 ; 978-1-904097-97-6 ; Interstitial Lung Diseases >
-      au < exists ; exists ; 2010 ; 47 ; 10.1183/1025448x.erm4710 ; 978-1-904097-98-3 ; Paediatric Lung Function >
-      au < exists ; exists ; 2010 ; 48 ; 10.1183/1025448x.ERM4810 ; 978-1-84984-002-6 ; Interventional Pulmonology >
-      au < exists ; exists ; 2010 ; 49 ; 10.1183/1025448x.erm4910 ; 978-1-84984-005-7 ; Exhaled Biomarkers >
-      au < exists ; exists ; 2010 ; 50 ; 10.1183/1025448x.erm5010 ; 978-1-84984-007-1 ; Sleep Apnoea >
-      au < exists ; exists ; 2011 ; 51 ; 10.1183/1025448x.erm5110 ; 978-1-84984-010-1 ; Difficult-to-Treat Severe Asthma >
-      au < exists ; exists ; 2011 ; 52 ; 10.1183/1025448x.erm5210 ; 978-1-84984-012-5 ; Bronchiectasis >
-      au < exists ; exists ; 2011 ; 53 ; 10.1183/1025448x.erm5310 ; 978-1-84984-016-3 ; Nosocomial and Ventilator-Associated Pneumonia >
-      au < exists ; exists ; 2011 ; 54 ; 10.1183/1025448x.erm5410 ; 978-1-84984-014-9 ; Orphan Lung Diseases >
-      au < exists ; exists ; 2012 ; 55 ; 10.1183/1025448x.erm5512 ; 978-1-84984-022-4 ; New Developments in Mechanical Ventilation >
-      au < exists ; exists ; 2012 ; 56 ; 10.1183/1025448x.erm5612 ; 978-1-84984-020-0 ; Paediatric Asthma >
-      au < exists ; exists ; 2012 ; 57 ; 10.1183/1025448x.erm5712 ; 978-1-84984-026-2 ; Pulmonary Hypertension >
-      au < exists ; exists ; 2012 ; 58 ; 10.1183/1025448x.erm5812 ; 978-1-84984-028-6 ; Tuberculosis >
-      au < exists ; exists ; 2013 ; 59 ; 10.1183/1025448x.erm5913 ; 978-1-84984-033-0 ; COPD and Comorbidity >
-      au < exists ; exists ; 2013 ; 60 ; 10.1183/1025448x.erm6013 ; 978-1-84984-035-4 ; The Spectrum of Bronchial Infection >
-      au < exists ; exists ; 2013 ; 61 ; 10.1183/1025448x.erm6113 ; 978-1-84984-037-8 ; Complex Pleuropulmonary Infections >
-      au < exists ; exists ; 2013 ; 62 ; 10.1183/1025448x.erm6213 ; 978-1-84984-045-3 ; Outcomes in Clinical Trials >
-      au < exists ; exists ; 2014 ; 63 ; 10.1183/1025448x.erm6314 ; 978-1-84984-049-1 ; Community-Acquired Pneumonia >
+      au < exists ; exists ; 2002 ; 27 ; 10.1183/1025448x.erm2703 ; 978-1-904097-93-8 ; Pulmonary Vascular Pathology: a Clinical Update ; >
+      au < exists ; exists ; 2003 ; 25 ; 10.1183/1025448x.erm2503 ; 978-1-904097-95-2 ; Respiratory Diseases in Women ; >
+      au < exists ; exists ; 2003 ; 26 ; 10.1183/1025448x.erm2603 ; 978-1-904097-94-5 ; Lung Transplantation (2003) ; >
+      au < exists ; exists ; 2004 ; 28 ; 10.1183/1025448x.erm2804 ; 978-1-904097-92-1 ; Antibiotics and the Lung ; >
+      au < exists ; exists ; 2004 ; 29 ; 10.1183/1025448x.erm2904 ; 978-1-904097-91-4 ; Surgery for Non-Neoplastic Disorders of the Chest: A Clinical Update ; >
+      au < exists ; exists ; 2004 ; 30 ; 10.1183/1025448x.erm3004 ; 978-1-904097-90-7 ; Imaging ; >
+      au < exists ; exists ; 2005 ; 31 ; 10.1183/1025448x.ERM3105 ; 978-1-904097-89-1 ; Lung Function Testing ; >
+      au < exists ; exists ; 2005 ; 32 ; 10.1183/1025448x.erm3205 ; 978-1-904097-88-4 ; Sarcoidosis ; >
+      au < exists ; exists ; 2005 ; 33 ; 10.1183/1025448x.erm3305 ; 978-1-904097-87-7 ; Diagnosis, Prevention and Treatment of Exercise-Related Asthma, Respiratory and Allergic Disorders in Sports ; >
+      au < exists ; exists ; 2006 ; 34 ; 10.1183/1025448x.ERM3406 ; 978-1-904097-86-0 ; Pulmonary Manifestations of Systemic Diseases ; >
+      au < exists ; exists ; 2006 ; 35 ; 10.1183/1025448x.erm3506 ; 978-1-904097-85-3 ; Cystic Fibrosis (2006) ; >
+      au < exists ; exists ; 2006 ; 36 ; 10.1183/1025448x.erm3606 ; 978-1-904097-84-6 ; Respiratory Emergencies ; >
+      au < exists ; exists ; 2006 ; 37 ; 10.1183/1025448x.ERM3706 ; 978-1-904097-83-9 ; Respiratory Diseases in Infants and Children ; >
+      au < exists ; exists ; 2006 ; 38 ; 10.1183/1025448x.erm3806 ; 978-1-904097-82-2 ; Management of Chronic Obstructive Pulmonary Disease ; >
+      au < exists ; exists ; 2007 ; 39 ; 10.1183/1025448x.ERM3907 ; 978-1-904097-81-5 ; Pathology of the Lung ; >
+      au < exists ; exists ; 2007 ; 40 ; 10.1183/1025448x.ERM4007 ; 978-1-904097-80-8 ; Clinical Exercise Testing ; >
+      au < exists ; exists ; 2008 ; 41 ; 10.1183/1025448x.ERM4108 ; 978-1-904097-79-2 ; Noninvasive Ventilation ; >
+      au < exists ; exists ; 2008 ; 42 ; 10.1183/1025448x.ERM4208 ; 978-1-904097-78-5 ; Smoking Cessation ; >
+      au < exists ; exists ; 2009 ; 43 ; 10.1183/1025448x.ERM4309 ; 978-1-904097-77-8 ; Respiratory Diseases in the Elderly ; >
+      au < exists ; exists ; 2009 ; 44 ; 10.1183/1025448x.ERM4409 ; 978-1-904097-76-1 ; Thoracic Malignancies ; >
+      au < exists ; exists ; 2009 ; 45 ; 10.1183/1025448x.ERM4509 ; 978-1-904097-96-9 ; Lung Transplantation (2009) ; >
+      au < exists ; exists ; 2009 ; 46 ; 10.1183/1025448x.ERM4609 ; 978-1-904097-97-6 ; Interstitial Lung Diseases ; >
+      au < exists ; exists ; 2010 ; 47 ; 10.1183/1025448x.erm4710 ; 978-1-904097-98-3 ; Paediatric Lung Function ; >
+      au < exists ; exists ; 2010 ; 48 ; 10.1183/1025448x.ERM4810 ; 978-1-84984-002-6 ; Interventional Pulmonology ; >
+      au < exists ; exists ; 2010 ; 49 ; 10.1183/1025448x.erm4910 ; 978-1-84984-005-7 ; Exhaled Biomarkers ; >
+      au < exists ; exists ; 2010 ; 50 ; 10.1183/1025448x.erm5010 ; 978-1-84984-007-1 ; Sleep Apnoea ; >
+      au < exists ; exists ; 2011 ; 51 ; 10.1183/1025448x.erm5110 ; 978-1-84984-010-1 ; Difficult-to-Treat Severe Asthma ; >
+      au < exists ; exists ; 2011 ; 52 ; 10.1183/1025448x.erm5210 ; 978-1-84984-012-5 ; Bronchiectasis ; >
+      au < exists ; exists ; 2011 ; 53 ; 10.1183/1025448x.erm5310 ; 978-1-84984-016-3 ; Nosocomial and Ventilator-Associated Pneumonia ; >
+      au < exists ; exists ; 2011 ; 54 ; 10.1183/1025448x.erm5410 ; 978-1-84984-014-9 ; Orphan Lung Diseases ; >
+      au < exists ; exists ; 2012 ; 55 ; 10.1183/1025448x.erm5512 ; 978-1-84984-022-4 ; New Developments in Mechanical Ventilation ; >
+      au < exists ; exists ; 2012 ; 56 ; 10.1183/1025448x.erm5612 ; 978-1-84984-020-0 ; Paediatric Asthma ; >
+      au < exists ; exists ; 2012 ; 57 ; 10.1183/1025448x.erm5712 ; 978-1-84984-026-2 ; Pulmonary Hypertension ; >
+      au < exists ; exists ; 2012 ; 58 ; 10.1183/1025448x.erm5812 ; 978-1-84984-028-6 ; Tuberculosis ; >
+      au < exists ; exists ; 2013 ; 59 ; 10.1183/1025448x.erm5913 ; 978-1-84984-033-0 ; COPD and Comorbidity ; >
+      au < exists ; exists ; 2013 ; 60 ; 10.1183/1025448x.erm6013 ; 978-1-84984-035-4 ; The Spectrum of Bronchial Infection ; >
+      au < exists ; exists ; 2013 ; 61 ; 10.1183/1025448x.erm6113 ; 978-1-84984-037-8 ; Complex Pleuropulmonary Infections ; >
+      au < exists ; exists ; 2013 ; 62 ; 10.1183/1025448x.erm6213 ; 978-1-84984-045-3 ; Outcomes in Clinical Trials ; >
+      au < exists ; exists ; 2014 ; 63 ; 10.1183/1025448x.erm6314 ; 978-1-84984-049-1 ; Community-Acquired Pneumonia ; >
 
-      au < exists ; exists ; 2014 ; 66 ; 10.1183/2312508X.erm6614 ; 978-1-84984-055-2 ; Pulmonary Complications of HIV >
-      au < exists ; exists ; 2015 ; 67 ; 10.1183/2312508X.erm6715 ; 978-1-84984-060-6 ; Obstructive Sleep Apnoea >
+      au < exists ; exists ; 2014 ; 66 ; 10.1183/2312508X.erm6614 ; 978-1-84984-055-2 ; Pulmonary Complications of HIV ; >
+      au < exists ; exists ; 2015 ; 67 ; 10.1183/2312508X.erm6715 ; 978-1-84984-060-6 ; Obstructive Sleep Apnoea ; >
 
     }
   }
