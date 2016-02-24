@@ -45,7 +45,7 @@
     au < manifest ; exists ; 2011 ; 2011 ; BioRisk Volume 6 ; 6 ; >
     au < manifest ; exists ; 2012 ; 2012 ; BioRisk Volume 7 ; 7 ; >
     au < manifest ; exists ; 2013 ; 2013 ; BioRisk Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; BioRisk Volume 9 ; 9 ; >
+    au < ready ; exists ; 2014 ; 2014 ; BioRisk Volume 9 ; 9 ; >
   
    }
    
@@ -65,7 +65,7 @@
     au < manifest ; exists ; 2011 ; 2011 ; Comparative Cytogenetics Volume 5 ; 5 ; >
     au < manifest ; exists ; 2012 ; 2012 ; Comparative Cytogenetics Volume 6 ; 6 ; >
     au < manifest ; exists ; 2013 ; 2013 ; Comparative Cytogenetics Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Comparative Cytogenetics Volume 8 ; 8 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Comparative Cytogenetics Volume 8 ; 8 ; >
   
    }
 
@@ -80,7 +80,7 @@
      param[au_oai_set] = dez
      param[base_url] = http://dez.pensoft.net/
 
-     au < crawling ; exists ; 2014 ; 2014 ; Deutsche Entomologische Zeitschrift Volume 61 ; 61 ; >
+     au < ready ; exists ; 2014 ; 2014 ; Deutsche Entomologische Zeitschrift Volume 61 ; 61 ; >
 
    }
    
@@ -118,7 +118,7 @@
     au < manifest ; exists ; 2011 ; 2011 ; Journal of Hymenoptera Research Volumes 20-23 ; 20-23 ; >
     au < manifest ; exists ; 2012 ; 2012 ; Journal of Hymenoptera Research Volumes 24-29 ; 24-29 ; >
     au < manifest ; exists ; 2013 ; 2013 ; Journal of Hymenoptera Research Volumes 30-34 ; 30-34 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Journal of Hymenoptera Research Volumes 35-40 ; 35-40 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Journal of Hymenoptera Research Volumes 35-40 ; 35-40 ; >
   
    }
   
@@ -172,7 +172,7 @@
     au < manifest ; exists ; 2011 ; 2011 ; NeoBiota Volumes 9-11 ; 9-11 ; >
     au < manifest ; exists ; 2012 ; 2012 ; NeoBiota Volumes 12-15 ; 12-15 ; >
     au < manifest ; exists ; 2013 ; 2013 ; NeoBiota Volumes 16-19 ; 16-19 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; NeoBiota Volumes 20-24 ; 20-24 ; >
+    au < ready ; exists ; 2014 ; 2014 ; NeoBiota Volumes 20-24 ; 20-24 ; >
   
    }
 
@@ -188,7 +188,7 @@
     param[au_oai_set] = nl
     param[base_url] = http://nl.pensoft.net/
     
-    au < crawling ; exists ; 2014 ; 2014 ; Nota Lepidopterologica Volumes 37 ; 37 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Nota Lepidopterologica Volumes 37 ; 37 ; >
     au < testing ; exists ; 2015 ; 2015 ; Nota Lepidopterologica Volumes 38 ; 38 ; >
    }
     
@@ -208,7 +208,7 @@
     au < manifest ; exists ; 2011 ; 2011 ; PhytoKeys Volumes 2-7 ; 2-7 ; >
     au < manifest ; exists ; 2012 ; 2012 ; PhytoKeys Volumes 8-19 ; 8-19 ; >
     au < manifest ; exists ; 2013 ; 2013 ; PhytoKeys Volumes 20-26 ; 20-26 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; PhytoKeys Volumes 27-32 ; 27-32 ; >
+    au < ready ; exists ; 2014 ; 2014 ; PhytoKeys Volumes 27-32 ; 27-32 ; >
   
    }
   
@@ -227,7 +227,7 @@
     
     au < manifest ; exists ; 2011 ; 2011 ; Subterranean Biology Volumes 8-9 ; 8-9 ; >
     au < manifest ; exists ; 2013 ; 2013 ; Subterranean Biology Volumes 10-11 ; 10-11 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Subterranean Biology Volumes 12-13 ; 12-13 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Subterranean Biology Volumes 12-13 ; 12-13 ; >
 
   
    }
@@ -250,7 +250,7 @@
     au < manifest ; exists ; 2011 ; 2011 ; ZooKeys Volumes 74-160 ; 74-160 ; >
     au < manifest ; exists ; 2012 ; 2012 ; ZooKeys Volumes 161-255 ; 161-255 ; >
     au < manifest ; exists ; 2013 ; 2013 ; ZooKeys Volumes 256-342 ; 256-342 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; ZooKeys Volumes 343-430 ; 343-430 ; >
+    au < ready ; exists ; 2014 ; 2014 ; ZooKeys Volumes 343-430 ; 343-430 ; >
   
    }
    
@@ -266,7 +266,7 @@
     param[au_oai_set] = zse
     param[base_url] = http://zse.pensoft.net/
 
-    au < crawling ; exists ; 2014 ; 2014 ; Zoosystematics and Evolution Volumes 90 ; 90 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Zoosystematics and Evolution Volumes 90 ; 90 ; >
 
     }
 

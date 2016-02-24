@@ -2,7 +2,7 @@
   publisher <
     name = Society for Industrial and Applied Mathematics ;
     info[contract] = 2013 ;
-    info[tester] = 0
+    info[tester] = 8
   >
 
   plugin = org.lockss.plugin.atypon.siam.ClockssSiamBooksPlugin
@@ -85,7 +85,7 @@
       au < manifest ; exists ; 1989 ; 978-0-89871-027-4 ; 978-1-61197-039-5 ; 9781611970395 ; Feasible Computations and Provable Complexity Properties (978-1-61197-039-5) ; >
       au < manifest ; exists ; 1989 ; 978-0-89871-230-8 ; 978-1-61197-083-8 ; 9781611970838 ; Augmented Lagrangian and Operator-Splitting Methods in Nonlinear Mechanics (978-1-61197-083-8) ; >
       au < manifest ; exists ; 1989 ; 978-0-89871-231-5 ; 978-1-61197-016-6 ; 9781611970166 ; Combinatorial Algorithms (978-1-61197-016-6) ; >
-      au < crawling ; exists ; 1989 ; 978-0-89871-232-2 ; 978-1-61197-015-9 ; 9781611970159 ; Stochastic Processes in the Neurosciences (978-1-61197-015-9) ; >
+      au < ready ; exists ; 1989 ; 978-0-89871-232-2 ; 978-1-61197-015-9 ; 9781611970159 ; Stochastic Processes in the Neurosciences (978-1-61197-015-9) ; >
       au < manifest ; exists ; 1989 ; 978-0-89871-237-7 ; 978-1-61197-082-1 ; 9781611970821 ; Boundary Stabilization of Thin Plates (978-1-61197-082-1) ; >
       au < manifest ; exists ; 1989 ; 978-0-89871-239-1 ; 978-1-61197-103-3 ; 9781611971033 ; Symbolic Computation (978-1-61197-103-3) ; >
       au < manifest ; exists ; 1989 ; 978-0-89871-240-7 ; 978-1-61197-013-5 ; 9781611970135 ; The Method of Equivalence and Its Applications (978-1-61197-013-5) ; >
@@ -251,7 +251,7 @@
       au < manifest ; exists ; 2002 ; 978-0-89871-511-8 ; 978-0-89871-921-5 ; 9780898719215 ; Mathematical Optimization and Economic Theory (978-0-89871-921-5) ; >
       au < manifest ; exists ; 2002 ; 978-0-89871-514-9 ; 978-0-89871-920-8 ; 9780898719208 ; The Finite Element Method for Elliptic Problems (978-0-89871-920-8) ; >
       au < manifest ; exists ; 2002 ; 978-0-89871-519-4 ; 978-0-89871-829-4 ; 9780898718294 ; Stochastic Modeling in Broadband Communications Systems (978-0-89871-829-4) ; >
-      au < testing ; exists ; 2002 ; 978-0-89871-521-7 ; 978-0-89871-802-7 ; 9780898718027 ; Accuracy and Stability of Numerical Algorithms (978-0-89871-802-7) ; >
+      au < exists ; exists ; 2002 ; 978-0-89871-521-7 ; 978-0-89871-802-7 ; 9780898718027 ; Accuracy and Stability of Numerical Algorithms (978-0-89871-802-7) ; >
       au < manifest ; exists ; 2002 ; 978-0-89871-523-1 ; 978-0-89871-919-2 ; 9780898719192 ; Lanczos Algorithms for Large Symmetric Eigenvalue Computations (978-0-89871-919-2) ; >
       au < manifest ; exists ; 2002 ; 978-0-89871-524-8 ; 978-0-89871-755-6 ; 9780898717556 ; Design Sensitivity Analysis (978-0-89871-755-6) ; >
       au < manifest ; exists ; 2002 ; 978-0-89871-525-5 ; 978-0-89871-844-7 ; 9780898718447 ; Fuzzy Logic and Probability Applications (978-0-89871-844-7) ; >
@@ -301,7 +301,7 @@
       au < manifest ; exists ; 2005 ; 978-0-89871-581-1 ; 978-0-89871-816-4 ; 9780898718164 ; Understanding Search Engines (978-0-89871-816-4) ; >
       au < manifest ; exists ; 2005 ; 978-0-89871-582-8 ; 978-0-89871-788-4 ; 9780898717884 ; Mining Imperfect Data (978-0-89871-788-4) ; >
       au < manifest ; exists ; 2005 ; 978-0-89871-583-5 ; 978-0-89871-747-1 ; 9780898717471 ; Smart Material Systems (978-0-89871-747-1) ; >
-      au < testing ; exists ; 2005 ; 978-0-89871-584-2 ; 978-0-89871-815-7 ; 9780898718157 ; Accuracy and Reliability in Scientific Computing (978-0-89871-815-7) ; >
+      au < exists ; exists ; 2005 ; 978-0-89871-584-2 ; 978-0-89871-815-7 ; 9780898718157 ; Accuracy and Reliability in Scientific Computing (978-0-89871-815-7) ; >
       au < manifest ; exists ; 2005 ; 978-0-89871-586-6 ; 978-0-89871-867-6 ; 9780898718676 ; Applied Dynamic Programming for Optimization of Dynamical Systems (978-0-89871-867-6) ; >
       au < manifest ; exists ; 2005 ; 978-0-89871-587-3 ; 978-0-89871-838-6 ; 9780898718386 ; Anthology of Statistics in Sports (978-0-89871-838-6) ; >
       au < manifest ; exists ; 2005 ; 978-0-89871-588-0 ; 978-0-89871-837-9 ; 9780898718379 ; Design and Analysis of Gauge R&R Studies (978-0-89871-837-9) ; >
@@ -443,10 +443,10 @@
       au < manifest ; exists ; 2015 ; 978-1-61197-368-6 ; 978-1-61197-369-3 ; 9781611973693 ; Evaluating Gas Network Capacities (978-1-61197-369-3) ; >
       au < manifest ; exists ; 2015 ; 978-1-61197-370-9 ; 978-1-61197-371-6 ; 9781611973716 ; Mathematics of Planet Earth (978-1-61197-371-6) ; >
       au < manifest ; exists ; 2015 ; 978-1-61197-377-8 ; 978-1-61197-378-5 ; 9781611973785 ; Variational Methods for the Numerical Solution of Nonlinear Elliptic Problems (978-1-61197-378-5) ; >
-      au < testing ; exists ; 2015 ; 978-1-61197-385-3 ; 978-1-61197-386-0 ; 9781611973860 ; Active Subspaces (978-1-61197-386-0) ; >
+      au < exists ; exists ; 2015 ; 978-1-61197-385-3 ; 978-1-61197-386-0 ; 9781611973860 ; Active Subspaces (978-1-61197-386-0) ; >
       au < manifest ; exists ; 2015 ; 978-1-61197-387-7 ; 978-1-61197-388-4 ; 9781611973884 ; Finite Dimensional Linear Systems (978-1-61197-388-4) ; >
       au < manifest ; exists ; 2015 ; 978-1-61197-389-1 ; 978-1-61197-390-7 ; 9781611973907 ; Spline Functions (978-1-61197-390-7) ; >
-      au < crawling ; exists ; 2015 ; 978-1-61197-393-8 ; 978-1-61197-394-5 ; 9781611973945 ; The Defocusing Nonlinear Schrödinger Equation (978-1-61197-394-5) ; >
+      au < ready ; exists ; 2015 ; 978-1-61197-393-8 ; 978-1-61197-394-5 ; 9781611973945 ; The Defocusing Nonlinear Schrödinger Equation (978-1-61197-394-5) ; >
       au < manifest ; exists ; 2015 ; 978-1-61197-395-2 ; 978-1-61197-396-9 ; 9781611973969 ; The Shapes of Things (978-1-61197-396-9) ; >
       au < manifest ; exists ; 2015 ; 978-1-61197-402-7 ; 978-1-61197-404-1 ; 9781611974041 ; A Primer on Radial Basis Functions with Applications to the Geosciences (978-1-61197-404-1) ; >
       au < manifest ; exists ; 2015 ; 978-1-61197-405-8 ; 978-1-61197-406-5 ; 9781611974065 ; An Introduction to Domain Decomposition Methods (978-1-61197-406-5) ; >
