@@ -1483,13 +1483,15 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
+      #showBackIssue.asp?issn=0189-6725;year=2015;volume=12
       #showBackIssue.asp?issn=0022-3859;year=2016;volume=62
-      if (defined($man_contents) && ($man_contents =~ m/showBackIssue.asp?issn=$param{journal_issn};year=$param{year};volume=$param{volume_name}/)) {
+      #showBackIssue.asp?issn=$param{journal_issn};year=$param{year};volume=$param{volume_name}
+      if (defined($man_contents) && ($man_contents =~ m/showBackIssue.asp\?issn=$param{journal_issn};year=$param{year};volume=$param{volume_name}/)) {
         if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
-          $vol_title =~ s/: Table of content/Volume $param{volume_name}/;
-          $vol_title =~ s/\s+/ /g;         
+          $vol_title =~ s/\s+/ /g;   
+          $vol_title =~ s/: Table of Contents?/ Volume $param{volume_name}/i; 
         } 
         $result = "Manifest"
       } else {
