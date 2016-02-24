@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,6 +39,8 @@ package org.lockss.plugin.highwire;
  * satisfy the crawl rules they will be collected. 
  */
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -71,7 +73,28 @@ public class HighWireDrupalHtmlLinkExtractorFactory implements LinkExtractorFact
   @Override
   public LinkExtractor createLinkExtractor(String mimeType)
       throws PluginException {
-    JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor();
+    JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor() {
+
+      @Override
+      public void extractUrls(
+          final ArchivalUnit au, InputStream in, String encoding,
+          final String srcUrl, final Callback cb) throws IOException, PluginException {
+        // wrap the call back
+        super.extractUrls(au, in, encoding, srcUrl, 
+            new Callback() {
+          @Override
+          public void foundLink(String url) {
+            if (au != null) {
+              if (HttpToHttpsUtil.UrlUtil.isSameHost(srcUrl, url)) {
+                url = HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(au, url);
+              }
+            }
+            cb.foundLink(url);
+          }
+        });
+      }
+      
+    };
     // we will do some additional processing for <link href="/node/25370" rel="shortlink">
     extractor.registerTagExtractor(LINKTAG, new HWSimpleTagLinkExtractor(HREF_NAME));
     extractor.registerTagExtractor(DIVTAG, new SimpleTagLinkExtractor(REL_NAME));
@@ -107,6 +130,11 @@ public class HighWireDrupalHtmlLinkExtractorFactory implements LinkExtractorFact
           Matcher hrefMat = NODE_PATTERN.matcher(node.attr(HREF_NAME));
           if (hrefMat.find()) {
             String newUrl =  urlMat.group(1) + "highwire/citation/" + hrefMat.group(1) + "/ris";
+            if (au != null) {
+              if (HttpToHttpsUtil.UrlUtil.isSameHost(srcUrl, newUrl)) {
+                newUrl = HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(au, newUrl);
+              }
+            }
             log.debug3("Created/added new url: " + newUrl);
             cb.foundLink(newUrl);
           }

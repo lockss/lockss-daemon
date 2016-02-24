@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -96,12 +96,14 @@ public class TestBMJDrupalPlugin extends LockssTestCase {
     props.setProperty(VOL_KEY, "313");
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     
-    String starturl =
-        "http://www.example.com/lockss-manifest/vol_313_manifest.html";
+    String starturl[] = {
+        "http://www.example.com/lockss-manifest/vol_313_manifest.html", 
+        "https://www.example.com/lockss-manifest/vol_313_manifest.html", 
+    };
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("BMJ Plugin, Base URL http://www.example.com/, Volume 313",
         au.getName());
-    assertEquals(ListUtil.list(starturl), au.getStartUrls());
+    assertEquals(ListUtil.list(starturl[0],starturl[1]), au.getStartUrls());
   }
   
   public void testGetPluginId() {

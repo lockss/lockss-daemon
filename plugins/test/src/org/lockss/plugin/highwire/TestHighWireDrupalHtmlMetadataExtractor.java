@@ -56,7 +56,7 @@ public class TestHighWireDrupalHtmlMetadataExtractor extends LockssTestCase {
   
   private static String PLUGIN_NAME = "org.lockss.plugin.highwire.HighWireDrupalPlugin";
   
-  private static String BASE_URL = "http://ajpcell.physiology.org/";
+  private static String BASE_URL = "https://ajpcell.physiology.org/";
   private static String SIM_ROOT = BASE_URL + "hwjn/"; // Simulated journal ID: "HighWire Journal"
   
   @Override
@@ -160,6 +160,7 @@ public class TestHighWireDrupalHtmlMetadataExtractor extends LockssTestCase {
    */
   public void testExtractFromGoodContent() throws Exception {
     String url = "http://www.bmj.com/hwjn";
+    String urls = "https://www.bmj.com/hwjn";
     MockCachedUrl cu = new MockCachedUrl(url, hwau);
     cu.setContent(goodContent);
     cu.setContentSize(goodContent.length());
@@ -183,7 +184,7 @@ public class TestHighWireDrupalHtmlMetadataExtractor extends LockssTestCase {
     assertEquals(goodStartPage, md.get(MetadataField.FIELD_START_PAGE));
     assertEquals(goodDOI, md.get(MetadataField.FIELD_DOI));
     // will use metadata url if extracted goodURL does not exist and contain content
-    assertEquals(url, md.get(MetadataField.FIELD_ACCESS_URL));
+    assertEquals(urls, md.get(MetadataField.FIELD_ACCESS_URL));
     assertEquals(goodPropId, md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
   }
   

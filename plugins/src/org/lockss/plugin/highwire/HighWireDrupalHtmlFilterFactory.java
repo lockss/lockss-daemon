@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,13 +42,14 @@ import org.htmlparser.Attribute;
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.Tag;
-import org.htmlparser.filters.*;
+import org.htmlparser.filters.OrFilter;
 import org.htmlparser.nodes.TextNode;
 import org.htmlparser.util.NodeList;
 import org.htmlparser.util.ParserException;
 import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
+import org.lockss.filter.StringFilter;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.ArchivalUnit;
@@ -195,12 +196,13 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
           HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
     }
     
+    Reader filteredReader = FilterUtil.getReader(combinedFiltered, encoding);
+    Reader httpFilter = new StringFilter(filteredReader, "http:", "https:");
     if (doWSFiltering()) {
-      Reader filteredReader = FilterUtil.getReader(combinedFiltered, encoding);
-      return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
+      return new ReaderInputStream(new WhiteSpaceFilter(httpFilter));
+    } else {
+      return new ReaderInputStream(httpFilter);
     }
-    
-    return combinedFiltered;
   }
   
   /** Create an array of NodeFilters that combines the baseHWDrupalFilters with

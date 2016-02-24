@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,7 +40,7 @@ import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
-public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
+public class HighWireDrupalUrlNormalizer extends HttpToHttpsUtil.BaseUrlHttpHttpsUrlNormalizer {
   
   private static final Logger log = Logger.getLogger(HighWireDrupalUrlNormalizer.class);
   
@@ -75,7 +75,7 @@ public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
   
   
   @Override
-  public String normalizeUrl(String url, ArchivalUnit au)
+  public String additionalNormalization(String url, ArchivalUnit au)
       throws PluginException {
     // map 
     // http://ajpcell.physiology.org/content/ajpcell/303/1/C1/F1.large.jpg?width=800&height=600

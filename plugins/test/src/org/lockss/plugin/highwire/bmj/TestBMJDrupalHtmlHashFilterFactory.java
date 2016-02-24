@@ -121,7 +121,7 @@ public class TestBMJDrupalHtmlHashFilterFactory extends LockssTestCase {
       "<article>" + 
       "<div class=\"panel-pane pane-highwire-markup\">" +
       "<div class=\"highwire-markup\">\n" +
-      "<a href=\"http://www.bmj.com/content/350/bmj.g7811\" target=\"_blank\">" + 
+      "<a href=\"https://www.bmj.com/content/350/bmj.g7811\" target=\"_blank\">" + 
       " Some content" +
       "</a>" +
       "            </div>" + 

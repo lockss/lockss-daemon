@@ -50,12 +50,14 @@ import org.lockss.test.LockssTestCase;
  * & http://static.beta.www.bmj.com/content/304/2/H253.full-text.pdf
  * to http://www.bmj.com/content/ajpheart/304/2/H253.full.pdf
  */
+import org.lockss.test.MockArchivalUnit;
 
 public class TestBMJDrupalUrlNormalizer extends LockssTestCase {
   
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   private DefinablePlugin plugin;
+  private MockArchivalUnit m_mau;
   
   @Override
   public void setUp() throws Exception {
@@ -65,9 +67,11 @@ public class TestBMJDrupalUrlNormalizer extends LockssTestCase {
         "org.lockss.plugin.highwire.bmj.BMJDrupalPlugin");
     Properties props = new Properties();
     props.setProperty(VOL_KEY, "303");
-    props.setProperty(BASE_URL_KEY, "http://www.example.com/");
+    props.setProperty(BASE_URL_KEY, "http://www.bmj.com/");
     
     Configuration config = ConfigurationUtil.fromProps(props);
+    m_mau = new MockArchivalUnit();
+    m_mau.setConfiguration(config);
     plugin.configureAu(config, null);
     }
   
@@ -76,18 +80,18 @@ public class TestBMJDrupalUrlNormalizer extends LockssTestCase {
     // http://static.www.bmj.com/sites/default/files/attachments/bmj-article/pre-pub-history
     
     assertEquals("http://www.bmj.com/content/303/1/C1/F1.large.jpg",
-        normalizer.normalizeUrl("http://www.bmj.com/content/303/1/C1/F1.large.jpg?width=800&height=600", null));
+        normalizer.normalizeUrl("http://www.bmj.com/content/303/1/C1/F1.large.jpg?width=800&height=600", m_mau));
     assertEquals("http://www.bmj.com/content/304/2/H253.full.pdf+html",
-        normalizer.normalizeUrl("http://static.www.bmj.com/content/304/2/H253.full-text.pdf%2Bhtml", null));
+        normalizer.normalizeUrl("https://static.www.bmj.com/content/304/2/H253.full-text.pdf%2Bhtml", m_mau));
     
     assertEquals("http://www.bmj.com/content/304/2/H253",
-        normalizer.normalizeUrl("http://static.beta.www.bmj.com/content/304/2/H253", null));
+        normalizer.normalizeUrl("http://static.beta.www.bmj.com/content/304/2/H253", m_mau));
     
     assertEquals("http://www.bmj.com/content/304/2/H253",
-        normalizer.normalizeUrl("http://static.beta.ww.bmj.com/content/304/2/H253", null));
+        normalizer.normalizeUrl("https://static.beta.ww.bmj.com/content/304/2/H253", m_mau));
     
-    assertEquals("http://staticbeta.www.bmj.com/content/304/2/H253",
-        normalizer.normalizeUrl("http://staticbeta.www.bmj.com/content/304/2/H253", null));
+    assertEquals("https://staticbeta.www.bmj.com/content/304/2/H253",
+        normalizer.normalizeUrl("https://staticbeta.www.bmj.com/content/304/2/H253", m_mau));
   }
   
 }

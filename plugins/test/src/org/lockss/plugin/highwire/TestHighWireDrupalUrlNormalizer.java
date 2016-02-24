@@ -34,6 +34,7 @@ package org.lockss.plugin.highwire;
 
 import java.util.Properties;
 
+import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.plugin.UrlNormalizer;
@@ -56,12 +57,16 @@ import org.lockss.test.LockssTestCase;
  * & http://ajpheart.physiology.org/content/304/2/H253.full.pdf%2Bhtml
  * to http://ajpheart.physiology.org/content/304/2/H253.full.pdf+html
  */
+import org.lockss.test.MockArchivalUnit;
 
 public class TestHighWireDrupalUrlNormalizer extends LockssTestCase {
   
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   private DefinablePlugin plugin;
+  private MockArchivalUnit m_mau;
+  private MockArchivalUnit m_mau2;
+  
   
   @Override
   public void setUp() throws Exception {
@@ -74,47 +79,57 @@ public class TestHighWireDrupalUrlNormalizer extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     
     Configuration config = ConfigurationUtil.fromProps(props);
+    props.setProperty(BASE_URL_KEY, "https://www.example.com/");
+    m_mau = new MockArchivalUnit();
+    m_mau.setConfiguration(config);
+    
+    Configuration config2 = ConfigurationUtil.fromProps(props);
+    m_mau2 = new MockArchivalUnit();
+    m_mau2.setConfiguration(config2);
+    
     plugin.configureAu(config, null);
     }
   
   public void testUrlNormalizer() throws Exception {
     UrlNormalizer normalizer = new HighWireDrupalUrlNormalizer();
     
-    assertEquals("http://ajpcell.physiology.org/content/303/1/C1.full.pdf",
-        normalizer.normalizeUrl("http://ajpcell.physiology.org/sites/all/libraries/pdfjs/web/viewer.html?file=/content/ajpcell/303/1/C1.full.pdf", null));
+    assertEquals("http://www.example.com/content/303/1/C1.full.pdf",
+        normalizer.normalizeUrl("https://www.example.com/sites/all/libraries/pdfjs/web/viewer.html?file=/content/ajpcell/303/1/C1.full.pdf", m_mau));
+    assertEquals("https://www.example.com/content/303/1/C1.full.pdf",
+        normalizer.normalizeUrl("http://www.example.com/sites/all/libraries/pdfjs/web/viewer.html?file=/content/ajpcell/303/1/C1.full.pdf", m_mau2));
     
-    assertEquals("http://ajpcell.physiology.org/content/ajpcell/303/1/C1/F1.large.jpg",
-        normalizer.normalizeUrl("http://ajpcell.physiology.org/content/ajpcell/303/1/C1/F1.large.jpg?width=800&height=600", null));
-    assertEquals("http://ajpcell.physiology.org/content/ajpcell/303/1/C1/F1.large.jpg",
-        normalizer.normalizeUrl("http://ajpcell.physiology.org/content/ajpcell/303/1/C1/F1.large.jpg?download=true", null));
-    assertEquals("http://ajplung.physiology.org/sites/default/files/color/jcore_1-15d49f53/colors.css",
-        normalizer.normalizeUrl("http://ajplung.physiology.org/sites/default/files/color/jcore_1-15d49f53/colors.css?n3sdk7", null));
-    assertEquals("http://ajpheart.physiology.org/content/ajpheart/304/2/H253.full.pdf",
-        normalizer.normalizeUrl("http://ajpheart.physiology.org/content/ajpheart/304/2/H253.full-text.pdf", null));
-    assertEquals("http://ajpheart.physiology.org/content/304/2/H253.full.pdf",
-        normalizer.normalizeUrl("http://ajpheart.physiology.org/content/304/2/H253.full-text.pdf", null));
-    assertEquals("http://ajpheart.physiology.org/content/304/2/H253.full.pdf+html",
-        normalizer.normalizeUrl("http://ajpheart.physiology.org/content/304/2/H253.full-text.pdf+html", null));
-    assertEquals("http://ajpheart.physiology.org/content/304/2/H253.full.pdf+html",
-        normalizer.normalizeUrl("http://ajpheart.physiology.org/content/304/2/H253.full.pdf%2Bhtml", null));
-    assertEquals("http://ajpheart.physiology.org/content/304/2/H253.full.pdf+html",
-        normalizer.normalizeUrl("http://ajpheart.physiology.org/content/304/2/H253.full-text.pdf%2Bhtml", null));
+    assertEquals("https://www.example.com/content/ajpcell/303/1/C1/F1.large.jpg",
+        normalizer.normalizeUrl("https://www.example.com/content/ajpcell/303/1/C1/F1.large.jpg?width=800&height=600", m_mau2));
+    assertEquals("http://www.example.com/content/ajpcell/303/1/C1/F1.large.jpg",
+        normalizer.normalizeUrl("http://www.example.com/content/ajpcell/303/1/C1/F1.large.jpg?download=true", m_mau));
+    assertEquals("http://www.example.com/sites/default/files/color/jcore_1-15d49f53/colors.css",
+        normalizer.normalizeUrl("http://www.example.com/sites/default/files/color/jcore_1-15d49f53/colors.css?n3sdk7", m_mau));
+    assertEquals("http://www.example.com/content/ajpheart/304/2/H253.full.pdf",
+        normalizer.normalizeUrl("https://www.example.com/content/ajpheart/304/2/H253.full-text.pdf", m_mau));
+    assertEquals("http://www.example.com/content/304/2/H253.full.pdf",
+        normalizer.normalizeUrl("http://www.example.com/content/304/2/H253.full-text.pdf", m_mau));
+    assertEquals("https://www.example.com/content/304/2/H253.full.pdf+html",
+        normalizer.normalizeUrl("http://www.example.com/content/304/2/H253.full-text.pdf+html", m_mau2));
+    assertEquals("http://www.example.com/content/304/2/H253.full.pdf+html",
+        normalizer.normalizeUrl("https://www.example.com/content/304/2/H253.full.pdf%2Bhtml", m_mau));
+    assertEquals("https://www.example.com/content/304/2/H253.full.pdf+html",
+        normalizer.normalizeUrl("https://www.example.com/content/304/2/H253.full-text.pdf%2Bhtml", m_mau2));
     
-    assertEquals("http://ajpcell.physiology.org/content/303/1/C1",
-        normalizer.normalizeUrl("http://ajpcell.physiology.org/content/303/1/C1?rss=foo", null));
-    assertEquals("http://ajpcell.physiology.org/content/303/1/C1",
-        normalizer.normalizeUrl("http://ajpcell.physiology.org/content/303/1/C1?ijkey=foo", null));
-    assertEquals("http://ajpcell.physiology.org/content/303/1/C1.e-letters",
-        normalizer.normalizeUrl("http://ajpcell.physiology.org/content/303/1/C1.e-letters?foo", null));
-    assertEquals("http://physrev.physiology.org/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.eot",
-        normalizer.normalizeUrl("http://physrev.physiology.org/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.eot?-2mifpm", null));
-    assertEquals("http://physrev.physiology.org/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.svg",
-        normalizer.normalizeUrl("http://physrev.physiology.org/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.svg?-2mifpm", null));
-    assertEquals("http://physrev.physiology.org/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.woff",
-        normalizer.normalizeUrl("http://physrev.physiology.org/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.woff?-2mifpm", null));
+    assertEquals("https://www.example.com/content/303/1/C1",
+        normalizer.normalizeUrl("https://www.example.com/content/303/1/C1?rss=foo", m_mau2));
+    assertEquals("http://www.example.com/content/303/1/C1",
+        normalizer.normalizeUrl("https://www.example.com/content/303/1/C1?ijkey=foo", m_mau));
+    assertEquals("https://www.example.com/content/303/1/C1.e-letters",
+        normalizer.normalizeUrl("http://www.example.com/content/303/1/C1.e-letters?foo", m_mau2));
+    assertEquals("https://www.example.com/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.eot",
+        normalizer.normalizeUrl("http://www.example.com/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.eot?-2mifpm", m_mau2));
+    assertEquals("http://www.example.com/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.svg",
+        normalizer.normalizeUrl("http://www.example.com/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.svg?-2mifpm", m_mau));
+    assertEquals("https://www.example.com/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.woff",
+        normalizer.normalizeUrl("https://www.example.com/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.woff?-2mifpm", m_mau2));
     
-    assertEquals("http://physrev.physiology.org/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.tiff?-2mifpm",
-        normalizer.normalizeUrl("http://physrev.physiology.org/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.tiff?-2mifpm", null));
+    assertEquals("https://www.example.com/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.tiff?-2mifpm",
+        normalizer.normalizeUrl("http://www.example.com/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.tiff?-2mifpm", m_mau2));
   }
   
 }

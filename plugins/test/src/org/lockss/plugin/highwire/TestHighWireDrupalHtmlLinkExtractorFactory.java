@@ -3,7 +3,7 @@
  */
 /*
 
- Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,6 +32,9 @@
 package org.lockss.plugin.highwire;
 
 import java.util.Set;
+
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.extractor.JsoupHtmlLinkExtractor;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.test.LockssTestCase;
@@ -48,8 +51,25 @@ public class TestHighWireDrupalHtmlLinkExtractorFactory extends LockssTestCase {
   private MyLinkExtractorCallback m_callback;
   static String ENC = Constants.DEFAULT_ENCODING;
   private MockArchivalUnit m_mau;
+  private MockArchivalUnit m_mau2;
   private final String HW_BASE_URL = "http://ajp.highwire.org/";
+  private final String HW_BASE_URL2 = "https://ajp.highwire.org/";
   private static final String NODE_ID = "111111";
+  
+  /**
+   * Configuration method. 
+   * @return
+   */
+  Configuration auConfig() {
+    Configuration conf = ConfigManager.newConfiguration();
+    conf.put("base_url", HW_BASE_URL);
+    return conf;
+  }
+  Configuration auConfig2() {
+    Configuration conf = ConfigManager.newConfiguration();
+    conf.put("base_url", HW_BASE_URL2);
+    return conf;
+  }
   
   private static final String citation = "<html><head><title>Test Title</title>" +
       "<link href=\"/node/" + NODE_ID + "\" rel=\"shortlink\">" +
@@ -79,9 +99,9 @@ public class TestHighWireDrupalHtmlLinkExtractorFactory extends LockssTestCase {
   
   public static final String basicLinksHtml = "      <ul>" +
       "  <li><a href=\"http://ajp.highwire.org/\">AIAA ASSOCIATION WEBSITE</a></li>" +
-      "  <li id=\"cartItem\"><a href=\"http://ajp.highwire.org/IframeOneColumn.aspx?id=4191\">VIEW CART (<span id=\"cartItemCount\">0</span>)</a></li>" +
+      "  <li id=\"cartItem\"><a href=\"https://ajp.highwire.org/IframeOneColumn.aspx?id=4191\">VIEW CART (<span id=\"cartItemCount\">0</span>)</a></li>" +
       "  <li><a href=\"http://ajp.highwire.org/SecondaryTwoColumn.aspx?id=255\">JOIN</a></li>" +
-      "  <li><a href=\"http://ajp.highwire.org/IframeOneColumn.aspx?id=3411\">LOGIN</a></li>" +
+      "  <li><a href=\"https://ajp.highwire.org/IframeOneColumn.aspx?id=3411\">LOGIN</a></li>" +
       "</ul>";
   
   
@@ -89,6 +109,9 @@ public class TestHighWireDrupalHtmlLinkExtractorFactory extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     m_mau = new MockArchivalUnit();
+    m_mau.setConfiguration(auConfig());
+    m_mau2 = new MockArchivalUnit();
+    m_mau2.setConfiguration(auConfig2());
     m_callback = new MyLinkExtractorCallback();
     fact = new HighWireDrupalHtmlLinkExtractorFactory();
     m_extractor = fact.createLinkExtractor("html");
@@ -113,6 +136,23 @@ public class TestHighWireDrupalHtmlLinkExtractorFactory extends LockssTestCase {
     }
   }
   
+  public void testBasicLinkss() throws Exception {
+    expectedUrls = SetUtil.set(
+        "https://ajp.highwire.org/",
+        "https://ajp.highwire.org/IframeOneColumn.aspx?id=4191",
+        "https://ajp.highwire.org/SecondaryTwoColumn.aspx?id=255",
+        "https://ajp.highwire.org/IframeOneColumn.aspx?id=3411");
+    
+    Set<String> result_strings = parseSingleSource2(basicLinksHtml);
+    
+    assertEquals(4, result_strings.size());
+    
+    for (String url : result_strings) {
+      log.debug3("URL: " + url);
+      assertTrue(expectedUrls.contains(url));
+    }
+  }
+  
   
   // this is copied directly from the Jsoup test to make sure that our class extension
   // hasn't broken fallback behavior
@@ -127,9 +167,9 @@ public class TestHighWireDrupalHtmlLinkExtractorFactory extends LockssTestCase {
     
     // ensure character entities processed before rel url resolution
     source = "<html><head><title>Test</title></head><body>"
-        + "<base href=http://www.example.com/foo/bar>"
+        + "<base href=https://www.example.com/foo/bar>"
         + "<a href=&#46&#46/xxx>link1</a>";
-    assertEquals(SetUtil.set("http://www.example.com/xxx"),
+    assertEquals(SetUtil.set("https://www.example.com/xxx"),
         parseSingleSource(source));
   }
   
@@ -146,7 +186,8 @@ public class TestHighWireDrupalHtmlLinkExtractorFactory extends LockssTestCase {
       throws Exception {
     String srcUrl = HW_BASE_URL + "content/1/2/c3";
     String mimeType = "html";
-    LinkExtractor ue = new JsoupHtmlLinkExtractor();
+    HighWireDrupalHtmlLinkExtractorFactory lef = new HighWireDrupalHtmlLinkExtractorFactory();
+    LinkExtractor ue = lef.createLinkExtractor(null);
     m_mau.setLinkExtractor(mimeType, ue);
     MockCachedUrl mcu = new org.lockss.test.MockCachedUrl(srcUrl, m_mau);
     mcu.setContent(source);
@@ -158,10 +199,34 @@ public class TestHighWireDrupalHtmlLinkExtractorFactory extends LockssTestCase {
     return m_callback.getFoundUrls();
   }
   
+  private Set<String> parseSingleSource2(String source)
+      throws Exception {
+    String srcUrl = HW_BASE_URL2 + "content/1/2/c3";
+    String mimeType = "html";
+    HighWireDrupalHtmlLinkExtractorFactory lef = new HighWireDrupalHtmlLinkExtractorFactory();
+    LinkExtractor ue = lef.createLinkExtractor(null);
+    m_mau.setLinkExtractor(mimeType, ue);
+    MockCachedUrl mcu = new org.lockss.test.MockCachedUrl(srcUrl, m_mau2);
+    mcu.setContent(source);
+    
+    m_callback.reset();
+    m_extractor.extractUrls(m_mau2,
+        new org.lockss.test.StringInputStream(source), ENC,
+        srcUrl, m_callback);
+    return m_callback.getFoundUrls();
+  }
+  
   // and once we get to the toc page, will we handle stuff as expected? 
   public void testToc() throws Exception {
     String expectedUrl = HW_BASE_URL + "highwire/article_citation_preview/" + NODE_ID;
     Set<String> result_strings = parseToc(toc);
+    
+    assertEquals(2, result_strings.size());
+    assertTrue(result_strings.contains(expectedUrl));
+  }
+  public void testToc2() throws Exception {
+    String expectedUrl = HW_BASE_URL2 + "highwire/article_citation_preview/" + NODE_ID;
+    Set<String> result_strings = parseToc2(toc);
     
     assertEquals(2, result_strings.size());
     assertTrue(result_strings.contains(expectedUrl));
@@ -178,6 +243,22 @@ public class TestHighWireDrupalHtmlLinkExtractorFactory extends LockssTestCase {
     
     m_callback.reset();
     m_extractor.extractUrls(m_mau,
+        new org.lockss.test.StringInputStream(source), ENC,
+        srcUrl, m_callback);
+    return m_callback.getFoundUrls();
+  }
+  
+  private Set<String> parseToc2(String source)
+      throws Exception {
+    String srcUrl = HW_BASE_URL2 + "content/1/2.toc";
+    String mimeType = "html";
+    LinkExtractor ue = new JsoupHtmlLinkExtractor();
+    m_mau2.setLinkExtractor(mimeType, ue);
+    MockCachedUrl mcu = new org.lockss.test.MockCachedUrl(srcUrl, m_mau2);
+    mcu.setContent(source);
+    
+    m_callback.reset();
+    m_extractor.extractUrls(m_mau2,
         new org.lockss.test.StringInputStream(source), ENC,
         srcUrl, m_callback);
     return m_callback.getFoundUrls();

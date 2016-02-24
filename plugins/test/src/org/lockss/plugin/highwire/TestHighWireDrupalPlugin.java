@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,6 +35,7 @@ package org.lockss.plugin.highwire;
 import java.net.MalformedURLException;
 import java.util.Properties;
 
+import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.ArchivalUnit;
@@ -47,8 +48,20 @@ import org.lockss.util.urlconn.HttpResultMap;
 
 public class TestHighWireDrupalPlugin extends LockssTestCase {
   
-  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
-  static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
+  private static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  private static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
+  
+  private static final String HW_BASE_URL = "http://ajp.highwire.org/";
+  
+  /**
+   * Configuration method. 
+   * @return
+   */
+  Configuration auConfig() {
+    Configuration conf = ConfigManager.newConfiguration();
+    conf.put("base_url", HW_BASE_URL);
+    return conf;
+  }
   
   private MockLockssDaemon theDaemon;
   private DefinablePlugin plugin;
@@ -95,12 +108,14 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     props.setProperty(VOL_KEY, "303");
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     
-    String starturl =
-        "http://www.example.com/lockss-manifest/vol_303_manifest.html";
+    String starturl[] = {
+        "http://www.example.com/lockss-manifest/vol_303_manifest.html", 
+        "https://www.example.com/lockss-manifest/vol_303_manifest.html", 
+    };
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("HighWire Drupal Plugin, Base URL http://www.example.com/, Volume 303",
         au.getName());
-    assertEquals(ListUtil.list(starturl), au.getStartUrls());
+    assertEquals(ListUtil.list(starturl[0],starturl[1]), au.getStartUrls());
   }
   
   public void testGetPluginId() {
@@ -138,6 +153,7 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
   // Test the crawl rules for eLife
   public void testShouldCacheProperPages() throws Exception {
     String ROOT_URL = "http://highwire.org/";
+    String ROOT_URL2 = "https://highwire.org/";
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, ROOT_URL);
     props.setProperty(VOL_KEY, "2015");
@@ -152,14 +168,18 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     // Test for pages that should get crawled or not
     // permission page/start url
     shouldCacheTest(ROOT_URL + "lockss-manifest/vol_2015_manifest.html", true, au);
+    shouldCacheTest(ROOT_URL2 + "lockss-manifest/vol_2015_manifest.html", true, au);
     shouldCacheTest(ROOT_URL + "clockss-manifest/vol_2015_manifest.html", false, au);
+    shouldCacheTest(ROOT_URL2 + "clockss-manifest/vol_2015_manifest.html", false, au);
     shouldCacheTest(ROOT_URL + "manifest/year=2015", false, au);
     // toc page for a volume, issue
     shouldCacheTest(ROOT_URL + "content/2015", false, au);
     shouldCacheTest(ROOT_URL + "content/2015/1", true, au);
     shouldCacheTest(ROOT_URL + "content/2015/2.toc", true, au);
+    shouldCacheTest(ROOT_URL2 + "content/2015/2.toc", true, au);
     // article files
     shouldCacheTest(ROOT_URL + "content/2015/1/2", true, au);
+    shouldCacheTest(ROOT_URL2 + "content/2015/1/2", true, au);
     shouldCacheTest(ROOT_URL + "content/2015/1/2.abstract", true, au);
     shouldCacheTest(ROOT_URL + "content/2015/1/2.extract", true, au);
     shouldCacheTest(ROOT_URL + "content/2015/1/2.full", true, au);
@@ -186,7 +206,9 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "sites/default/themes/font/fontawesome-webfont.eot", true, au);
     
     shouldCacheTest(ROOT_URL + "content/hw/suppl/2014/04/23/hw.02130.DC1/hw02130_Supplemental_files.zip", true, au);
+    shouldCacheTest(ROOT_URL2 + "content/hw/suppl/2014/04/23/hw.02130.DC1/hw02130_Supplemental_files.zip", true, au);
     shouldCacheTest("http://cdn.cloudfront.net/content/2015/1/3/F1.medium.gif", true, au);
+    shouldCacheTest("https://cdn.cloudfront.net/content/2015/1/3/F1.medium.gif", true, au);
     shouldCacheTest("http://cdn.cloudfront.net/content/2015/1/3/F1.medium.gif?width=400", false, au);
     shouldCacheTest("http://cdn.mathjax.org/mathjax/latest/MathJax.js", true, au);
     shouldCacheTest("https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js", true, au);

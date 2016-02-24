@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -94,12 +94,14 @@ public class TestOUPDrupalPlugin extends LockssTestCase {
     props.setProperty(VOL_KEY, "303");
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     
-    String starturl =
-        "http://www.example.com/lockss-manifest/vol_303_manifest.html";
+    String starturl[] = {
+        "http://www.example.com/lockss-manifest/vol_303_manifest.html", 
+        "https://www.example.com/lockss-manifest/vol_303_manifest.html", 
+    };
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("Oxford University Press Plugin, Base URL http://www.example.com/, Volume 303",
         au.getName());
-    assertEquals(ListUtil.list(starturl), au.getStartUrls());
+    assertEquals(ListUtil.list(starturl[0],starturl[1]), au.getStartUrls());
   }
   
   public void testGetPluginId() {
