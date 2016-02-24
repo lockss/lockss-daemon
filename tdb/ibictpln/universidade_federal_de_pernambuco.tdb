@@ -17,7 +17,7 @@
       param[base_url] = http://periodicos.ufpb.br/ojs2/
       param[journal_id] = economia
       
-      comment[duplicate] = this is a duplicate journal, accidentally released. The publisher is ufpb.
+      comment[duplicate] = this is a duplicate journal, accidentally released. The publisher is ufpb. same as journal economia at u fed da paraiba.
 
       au < released ; 1997 ; 1 ; Revista Economia e Desenvolvimento Volume 1997 [Universidade Federal de Pernambuco] ; 1997 ; >
       au < released ; 2004 ; 8 ; Revista Economia e Desenvolvimento Volume 2004 [Universidade Federal de Pernambuco] ; 2004 ; >
@@ -31,6 +31,8 @@
       au < released ; 2012 ; 16 ; Revista Economia e Desenvolvimento Volume 2012 [Universidade Federal de Pernambuco] ; 2012 ; >
       au < released ; 2013 ; 17 ; Revista Economia e Desenvolvimento Volume 2013 [Universidade Federal de Pernambuco] ; 2013 ; >
       au < released ; 2014 ; 18 ; Revista Economia e Desenvolvimento Volume 2014 [Universidade Federal de Pernambuco] ; 2014 ; >
+      au < manifest ; 2015 ; 19 ; Revista Economia e Desenvolvimento Volume 2014 [Universidade Federal de Pernambuco] ; 2015 ; >
+      au < expected ; 2016 ; 20 ; Revista Economia e Desenvolvimento Volume 2014 [Universidade Federal de Pernambuco] ; 2016 ; >
 
   }
 
