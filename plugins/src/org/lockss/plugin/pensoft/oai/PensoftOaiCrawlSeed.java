@@ -35,6 +35,7 @@ package org.lockss.plugin.pensoft.oai;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -80,7 +81,7 @@ public class PensoftOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
 	      throws ConfigurationException {
 	    try {
 	      String link;
-	      Collection<String> idList = new ArrayList<String>();
+	      Collection<String> idList = new HashSet<String>();
 	      for (Iterator<Record> recIter = getServiceProvider().listRecords(params);
 	           recIter.hasNext();) {
 	        Record rec = recIter.next();
