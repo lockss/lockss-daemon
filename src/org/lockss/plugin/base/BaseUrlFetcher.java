@@ -735,12 +735,18 @@ public class BaseUrlFetcher implements UrlFetcher {
     }
     // update the current location with the redirect location.
     try {
-      String newUrlString = UrlUtil.resolveUri(fetchUrl, location);
+      String resolvedLocation = UrlUtil.resolveUri(fetchUrl, location);
+      String newUrlString = resolvedLocation;
       if (CurrentConfig.getBooleanParam(PARAM_NORMALIZE_REDIRECT_URL,
-					DEFAULT_NORMALIZE_REDIRECT_URL)) {
+                                        DEFAULT_NORMALIZE_REDIRECT_URL)) {
         try {
-          newUrlString = UrlUtil.normalizeUrl(newUrlString, au);
+          newUrlString = UrlUtil.normalizeUrl(resolvedLocation, au);
           log.debug3("Normalized to '" + newUrlString + "'");
+          if (isHttpToHttpsRedirect(fetchUrl, resolvedLocation, newUrlString)) {
+            log.debug3("HTTP to HTTPS redirect normalized back to HTTP; keeping '"
+                       + resolvedLocation + "'");
+            newUrlString = resolvedLocation;
+          }
         } catch (PluginBehaviorException e) {
           log.warning("Couldn't normalize redirect URL: " + newUrlString, e);
         }
@@ -858,6 +864,31 @@ public class BaseUrlFetcher implements UrlFetcher {
   
   public LockssWatchdog getWatchdog() {
     return wdog;
+  }
+  
+  /**
+   * <p>
+   * Determines if the triple of a fetch URL, its redirect URL, and the
+   * normalized redirect URL is an HTTP-to-HTTPS redirect that is then
+   * normalized back to the HTTP URL. In {@link BaseUrlFetcher}, this is always
+   * false; in {@link HttpToHttpsUrlFetcher}, it is a customizable action.
+   * </p>
+   * 
+   * @param fetched
+   *          The fetch URL
+   * @param redirect
+   *          The redirect URL (the URL the fetch redirected to)
+   * @param normalized
+   *          The normalized redirect URL
+   * @return True if and only if the given triple represents an HTTP-HTTPS-HTTP
+   *         loop (always false in {@link BaseUrlFetcher})
+   * @since 1.70
+   * @see HttpToHttpsUrlFetcher#isHttpToHttpsRedirect(String, String, String)
+   */
+  protected boolean isHttpToHttpsRedirect(String fetched,
+                                          String redirect,
+                                          String normalized) {
+    return false;
   }
  
 }
