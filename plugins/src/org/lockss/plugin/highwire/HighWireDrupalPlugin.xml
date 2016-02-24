@@ -156,11 +156,11 @@
   </entry>
   <entry>
     <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin..HttpToHttpsUtil$HttpToHttpsUrlConsumerFactory</string>
+    <string>org.lockss.plugin.highwire.HttpToHttpsUtil$HttpToHttpsUrlConsumerFactory</string>
   </entry>
   <entry>
     <string>plugin_url_fetcher_factory</string>
-    <string>org.lockss.plugin.projmuse.HttpToHttpsUtil$HttpToHttpsUrlFetcherFactory</string>
+    <string>org.lockss.plugin.highwire.HttpToHttpsUtil$HttpToHttpsUrlFetcherFactory</string>
   </entry>
   <entry>
     <string>plugin_cache_result_list</string>
