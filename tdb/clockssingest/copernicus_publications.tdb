@@ -8,7 +8,7 @@
   >
 
     plugin = org.lockss.plugin.copernicus.ClockssCopernicusPublicationsPlugin
-    implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] ; hidden[proxy] >
     comment[year] = year as param, not really use in plugin
 
   {
@@ -22,49 +22,49 @@
       param[home_url] = http://www.advances-in-geosciences.net/
       comment[v37] = publication year is 2013 to 2014, publisher puts it under 2013, we collect it under 2014
 
-      au < manifest ; exists ; 2003 ; 2003 ; Advances in Geosciences Volume 1 ; 1 >
-      au < manifest ; exists ; 2005 ; 2005 ; Advances in Geosciences Volume 2 ; 2 >
-      au < manifest ; exists ; 2005 ; 2005 ; Advances in Geosciences Volume 3 ; 3 >
-      au < manifest ; exists ; 2005 ; 2005 ; Advances in Geosciences Volume 4 ; 4 >
-      au < manifest ; exists ; 2005 ; 2005 ; Advances in Geosciences Volume 5 ; 5 >
-      au < manifest ; exists ; 2006 ; 2006 ; Advances in Geosciences Volume 6 ; 6 >
-      au < manifest ; exists ; 2006 ; 2006 ; Advances in Geosciences Volume 7 ; 7 >
-      au < manifest ; exists ; 2006 ; 2006 ; Advances in Geosciences Volume 8 ; 8 >
-      au < manifest ; exists ; 2006 ; 2006 ; Advances in Geosciences Volume 9 ; 9 >
-      au < manifest ; exists ; 2007 ; 2007 ; Advances in Geosciences Volume 10 ; 10 >
-      au < manifest ; exists ; 2007 ; 2007 ; Advances in Geosciences Volume 11 ; 11 >
-      au < manifest ; exists ; 2007 ; 2007 ; Advances in Geosciences Volume 12 ; 12 >
-      au < manifest ; exists ; 2007 ; 2007 ; Advances in Geosciences Volume 13 ; 13 >
-      au < manifest ; exists ; 2008 ; 2008 ; Advances in Geosciences Volume 14 ; 14 >
-      au < manifest ; exists ; 2008 ; 2008 ; Advances in Geosciences Volume 15 ; 15 >
-      au < manifest ; exists ; 2008 ; 2008 ; Advances in Geosciences Volume 16 ; 16 >
-      au < manifest ; exists ; 2008 ; 2008 ; Advances in Geosciences Volume 17 ; 17 >
-      au < manifest ; exists ; 2008 ; 2008 ; Advances in Geosciences Volume 18 ; 18 >
-      au < manifest ; exists ; 2008 ; 2008 ; Advances in Geosciences Volume 19 ; 19 >
-      au < manifest ; exists ; 2009 ; 2009 ; Advances in Geosciences Volume 20 ; 20 >
-      au < manifest ; exists ; 2009 ; 2009 ; Advances in Geosciences Volume 21 ; 21 >
-      au < manifest ; exists ; 2009 ; 2009 ; Advances in Geosciences Volume 22 ; 22 >
-      au < manifest ; exists ; 2010 ; 2010 ; Advances in Geosciences Volume 23 ; 23 >
-      au < manifest ; exists ; 2010 ; 2010 ; Advances in Geosciences Volume 24 ; 24 >
-      au < manifest ; exists ; 2010 ; 2010 ; Advances in Geosciences Volume 25 ; 25 >
-      au < manifest ; exists ; 2010 ; 2010 ; Advances in Geosciences Volume 26 ; 26 >
-      au < manifest ; exists ; 2010 ; 2010 ; Advances in Geosciences Volume 27 ; 27 >
-      au < manifest ; exists ; 2010 ; 2010 ; Advances in Geosciences Volume 28 ; 28 >
-      au < manifest ; exists ; 2011 ; 2011 ; Advances in Geosciences Volume 29 ; 29 >
-      au < manifest ; exists ; 2011 ; 2011 ; Advances in Geosciences Volume 30 ; 30 >
-      au < finished ; crawling ; 2012 ; 2012 ; Advances in Geosciences Volume 31 ; 31 >
-      au < finished ; crawling ; 2012 ; 2012 ; Advances in Geosciences Volume 32 ; 32 >
-      au < crawling ; exists ; 2013 ; 2013 ; Advances in Geosciences Volume 33 ; 33 >
-      au < crawling ; exists ; 2013 ; 2013 ; Advances in Geosciences Volume 34 ; 34 >
-      au < crawling ; exists ; 2013 ; 2013 ; Advances in Geosciences Volume 35 ; 35 >
-      au < crawling ; exists ; 2013 ; 2013 ; Advances in Geosciences Volume 36 ; 36 >
-      au < crawling ; exists ; 2013-2014 ; 2014 ; Advances in Geosciences Volume 37 ; 37 >
-      au < crawling ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 38 ; 38 >
-      au < deepCrawl ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 39 ; 39 >
-      au < crawling ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 40 ; 40 >
-      au < crawling ; exists ; 2015 ; 2015 ; Advances in Geosciences Volume 41 ; 41 >
-      au < expected ; exists ; 2015 ; 2015 ; Advances in Geosciences Volume 42 ; 42 >
-      au < expected ; exists ; 2015 ; 2015 ; Advances in Geosciences Volume 43 ; 43 >
+      au < manifest ; exists ; 2003 ; 2003 ; Advances in Geosciences Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Advances in Geosciences Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Advances in Geosciences Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Advances in Geosciences Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Advances in Geosciences Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Advances in Geosciences Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Advances in Geosciences Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Advances in Geosciences Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Advances in Geosciences Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Advances in Geosciences Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Advances in Geosciences Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Advances in Geosciences Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Advances in Geosciences Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Advances in Geosciences Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Advances in Geosciences Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Advances in Geosciences Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Advances in Geosciences Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Advances in Geosciences Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Advances in Geosciences Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Advances in Geosciences Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Advances in Geosciences Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Advances in Geosciences Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Advances in Geosciences Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Advances in Geosciences Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Advances in Geosciences Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Advances in Geosciences Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Advances in Geosciences Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Advances in Geosciences Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Advances in Geosciences Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Advances in Geosciences Volume 30 ; 30 ; >
+      au < finished ; crawling ; 2012 ; 2012 ; Advances in Geosciences Volume 31 ; 31 ; >
+      au < finished ; crawling ; 2012 ; 2012 ; Advances in Geosciences Volume 32 ; 32 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Advances in Geosciences Volume 33 ; 33 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Advances in Geosciences Volume 34 ; 34 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Advances in Geosciences Volume 35 ; 35 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Advances in Geosciences Volume 36 ; 36 ; >
+      au < crawling ; exists ; 2013-2014 ; 2014 ; Advances in Geosciences Volume 37 ; 37 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 38 ; 38 ; >
+      au < deepCrawl ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 39 ; 39 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Advances in Geosciences Volume 40 ; 40 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Advances in Geosciences Volume 41 ; 41 ; >
+      au < expected ; exists ; 2015 ; 2015 ; Advances in Geosciences Volume 42 ; 42 ; >
+      au < expected ; exists ; 2015 ; 2015 ; Advances in Geosciences Volume 43 ; 43 ; >
     
    }
     
@@ -78,19 +78,19 @@
       param[base_url] = http://www.adv-radio-sci.net/
       param[home_url] = http://www.advances-in-radio-science.net/
 
-      au < manifest ; exists ; 2003 ; 2003 ; Advances in Radio Science 2002 Volume 1 ; 1 >
-      au < manifest ; exists ; 2004 ; 2004 ; Advances in Radio Science 2003 Volume 2 ; 2 >
-      au < manifest ; exists ; 2005 ; 2005 ; Advances in Radio Science 2004 Volume 3 ; 3 >
-      au < manifest ; exists ; 2006 ; 2006 ; Advances in Radio Science 2005 Volume 4 ; 4 >
-      au < manifest ; exists ; 2007 ; 2007 ; Advances in Radio Science 2006 Volume 5 ; 5 >
-      au < manifest ; exists ; 2008 ; 2008 ; Advances in Radio Science 2007 Volume 6 ; 6 >
-      au < manifest ; exists ; 2009 ; 2009 ; Advances in Radio Science 2008 Volume 7 ; 7 >
-      au < manifest ; exists ; 2010 ; 2010 ; Advances in Radio Science 2009 Volume 8 ; 8 >
-      au < manifest ; exists ; 2011 ; 2011 ; Advances in Radio Science 2010 Volume 9 ; 9 >
-      au < finished ; crawling ; 2012 ; 2012 ; Advances in Radio Science 2011 Volume 10 ; 10 >
-      au < crawling ; exists ; 2013 ; 2013 ; Advances in Radio Science 2012 Volume 11 ; 11 >
-      au < finished ; crawling ; 2014 ; 2014 ; Advances in Radio Science 2013 Volume 12 ; 12 >
-      au < crawling ; exists ; 2015 ; 2015 ; Advances in Radio Science 2014 Volume 13 ; 13 >
+      au < manifest ; exists ; 2003 ; 2003 ; Advances in Radio Science 2002 Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Advances in Radio Science 2003 Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Advances in Radio Science 2004 Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Advances in Radio Science 2005 Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Advances in Radio Science 2006 Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Advances in Radio Science 2007 Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Advances in Radio Science 2008 Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Advances in Radio Science 2009 Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Advances in Radio Science 2010 Volume 9 ; 9 ; >
+      au < finished ; crawling ; 2012 ; 2012 ; Advances in Radio Science 2011 Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Advances in Radio Science 2012 Volume 11 ; 11 ; >
+      au < finished ; crawling ; 2014 ; 2014 ; Advances in Radio Science 2013 Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Advances in Radio Science 2014 Volume 13 ; 13 ; >
     
    }
     
@@ -104,18 +104,18 @@
       param[base_url] = http://www.adv-sci-res.net/
       param[home_url] = http://www.advances-in-science-and-research.net/
 
-      au < manifest ; exists ; 2007 ; 2007 ; Advances in Science and Research Volume 1 ; 1 >
-      au < manifest ; exists ; 2008 ; 2008 ; Advances in Science and Research Volume 2 ; 2 >
-      au < manifest ; exists ; 2009 ; 2009 ; Advances in Science and Research Volume 3 ; 3 >
-      au < manifest ; exists ; 2010 ; 2010 ; Advances in Science and Research Volume 4 ; 4 >
-      au < manifest ; exists ; 2010 ; 2010 ; Advances in Science and Research Volume 5 ; 5 >
-      au < manifest ; exists ; 2011 ; 2011 ; Advances in Science and Research Volume 6 ; 6 >
-      au < manifest ; exists ; 2011 ; 2011 ; Advances in Science and Research Volume 7 ; 7 >
-      au < finished ; crawling ; 2012 ; 2012 ; Advances in Science and Research Volume 8 ; 8 >
-      au < doesNotExist ; doesNotExist ; 2012 ; 0 ; Advances in Science and Research Volume 9 ; 0 >
-      au < crawling ; exists ; 2013 ; 2013 ; Advances in Science and Research Volume 10 ; 10 >
-      au < crawling ; exists ; 2014 ; 2014 ; Advances in Science and Research Volume 11 ; 11 >
-      au < crawling ; exists ; 2015 ; 2015 ; Advances in Science and Research Volume 12 ; 12 >
+      au < manifest ; exists ; 2007 ; 2007 ; Advances in Science and Research Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Advances in Science and Research Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Advances in Science and Research Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Advances in Science and Research Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Advances in Science and Research Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Advances in Science and Research Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Advances in Science and Research Volume 7 ; 7 ; >
+      au < finished ; crawling ; 2012 ; 2012 ; Advances in Science and Research Volume 8 ; 8 ; >
+      au < doesNotExist ; doesNotExist ; 2012 ; 0 ; Advances in Science and Research Volume 9 ; 0 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Advances in Science and Research Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Advances in Science and Research Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Advances in Science and Research Volume 12 ; 12 ; >
     
    }
     
@@ -129,7 +129,7 @@
       param[base_url] = http://www.adv-stat-clim-meteorol-oceanogr.net/
       param[home_url] = http://www.advances-statistical-climatology-meteorology-oceanography.net/
 
-      au < crawling ; exists ; 2015 ; 2015 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 1 ; 1 >
+      au < crawling ; exists ; 2015 ; 2015 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 1 ; 1 ; >
 
    }
     
@@ -146,29 +146,29 @@
 
       {
         attr[au_coverage_depth] = abstracts
-        au < manifest ; exists ; 1994 ; 1994 ; Annales Geophysicae Volume 12 [abstracts only] ; 12 >
-        au < manifest ; exists ; 1995 ; 1995 ; Annales Geophysicae Volume 13 [abstracts only] ; 13 >
+        au < manifest ; exists ; 1994 ; 1994 ; Annales Geophysicae Volume 12 [abstracts only] ; 12 ; >
+        au < manifest ; exists ; 1995 ; 1995 ; Annales Geophysicae Volume 13 [abstracts only] ; 13 ; >
       }
-      au < manifest ; exists ; 1996 ; 1996 ; Annales Geophysicae Volume 14 ; 14 >
-      au < manifest ; exists ; 1997 ; 1997 ; Annales Geophysicae Volume 15 ; 15 >
-      au < manifest ; exists ; 1998 ; 1998 ; Annales Geophysicae Volume 16 ; 16 >
-      au < manifest ; exists ; 1999 ; 1999 ; Annales Geophysicae Volume 17 ; 17 >
-      au < manifest ; exists ; 2000 ; 2000 ; Annales Geophysicae Volume 18 ; 18 >
-      au < manifest ; exists ; 2001 ; 2001 ; Annales Geophysicae Volume 19 ; 19 >
-      au < manifest ; exists ; 2002 ; 2002 ; Annales Geophysicae Volume 20 ; 20 >
-      au < manifest ; exists ; 2003 ; 2003 ; Annales Geophysicae Volume 21 ; 21 >
-      au < manifest ; exists ; 2004 ; 2004 ; Annales Geophysicae Volume 22 ; 22 >
-      au < manifest ; exists ; 2005 ; 2005 ; Annales Geophysicae Volume 23 ; 23 >
-      au < manifest ; exists ; 2006 ; 2006 ; Annales Geophysicae Volume 24 ; 24 >
-      au < manifest ; exists ; 2007 ; 2007 ; Annales Geophysicae Volume 25 ; 25 >
-      au < manifest ; exists ; 2008 ; 2008 ; Annales Geophysicae Volume 26 ; 26 >
-      au < manifest ; exists ; 2009 ; 2009 ; Annales Geophysicae Volume 27 ; 27 >
-      au < manifest ; exists ; 2010 ; 2010 ; Annales Geophysicae Volume 28 ; 28 >
-      au < manifest ; exists ; 2011 ; 2011 ; Annales Geophysicae Volume 29 ; 29 >
-      au < finished ; crawling ; 2012 ; 2012 ; Annales Geophysicae Volume 30 ; 30 >
-      au < crawling ; exists ; 2013 ; 2013 ; Annales Geophysicae Volume 31 ; 31 >
-      au < crawling ; exists ; 2014 ; 2014 ; Annales Geophysicae Volume 32 ; 32 >
-      au < crawling ; exists ; 2015 ; 2015 ; Annales Geophysicae Volume 33 ; 33 >
+      au < manifest ; exists ; 1996 ; 1996 ; Annales Geophysicae Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1997 ; 1997 ; Annales Geophysicae Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1998 ; 1998 ; Annales Geophysicae Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1999 ; 1999 ; Annales Geophysicae Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; Annales Geophysicae Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Annales Geophysicae Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Annales Geophysicae Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Annales Geophysicae Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Annales Geophysicae Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Annales Geophysicae Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Annales Geophysicae Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Annales Geophysicae Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Annales Geophysicae Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Annales Geophysicae Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Annales Geophysicae Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Annales Geophysicae Volume 29 ; 29 ; >
+      au < finished ; crawling ; 2012 ; 2012 ; Annales Geophysicae Volume 30 ; 30 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Annales Geophysicae Volume 31 ; 31 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Annales Geophysicae Volume 32 ; 32 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Annales Geophysicae Volume 33 ; 33 ; >
     
    }
     
@@ -185,28 +185,28 @@
       param[base_url] = http://www.archanimbreed.com/
       comment[pdf] = http://doi.fbn-dummerstorf.de/ for 2013 & 2014
 
-      au < exists ; exists ; 1999 ; 1999 ; Archives Animal Breeding Volume 17 ; 17 >
-      au < exists ; exists ; 2000 ; 2000 ; Archives Animal Breeding Volume 18 ; 18 >
-      au < exists ; exists ; 2001 ; 2001 ; Archives Animal Breeding Volume 19 ; 19 >
-      au < exists ; exists ; 2002 ; 2002 ; Archives Animal Breeding Volume 20 ; 20 >
-      au < exists ; exists ; 2003 ; 2003 ; Archives Animal Breeding Volume 21 ; 21 >
-      au < exists ; exists ; 2004 ; 2004 ; Archives Animal Breeding Volume 22 ; 22 >
-      au < exists ; exists ; 2005 ; 2005 ; Archives Animal Breeding Volume 23 ; 23 >
-      au < exists ; exists ; 2006 ; 2006 ; Archives Animal Breeding Volume 24 ; 24 >
-      au < exists ; exists ; 2007 ; 2007 ; Archives Animal Breeding Volume 25 ; 25 >
-      au < exists ; exists ; 2008 ; 2008 ; Archives Animal Breeding Volume 26 ; 26 >
-      au < exists ; exists ; 2009 ; 2009 ; Archives Animal Breeding Volume 27 ; 27 >
-      au < exists ; exists ; 2010 ; 2010 ; Archives Animal Breeding Volume 28 ; 28 >
-      au < exists ; exists ; 2011 ; 2011 ; Archives Animal Breeding Volume 29 ; 29 >
-      au < exists ; exists ; 2012 ; 2012 ; Archives Animal Breeding Volume 30 ; 30 >
-      au < exists ; exists ; 2013 ; 2013 ; Archives Animal Breeding Volume 31 ; 31 >
-      au < exists ; exists ; 2014 ; 2014 ; Archives Animal Breeding Volume 32 ; 32 >
+      au < exists ; exists ; 1999 ; 1999 ; Archives Animal Breeding Volume 17 ; 17 ; >
+      au < exists ; exists ; 2000 ; 2000 ; Archives Animal Breeding Volume 18 ; 18 ; >
+      au < exists ; exists ; 2001 ; 2001 ; Archives Animal Breeding Volume 19 ; 19 ; >
+      au < exists ; exists ; 2002 ; 2002 ; Archives Animal Breeding Volume 20 ; 20 ; >
+      au < exists ; exists ; 2003 ; 2003 ; Archives Animal Breeding Volume 21 ; 21 ; >
+      au < exists ; exists ; 2004 ; 2004 ; Archives Animal Breeding Volume 22 ; 22 ; >
+      au < exists ; exists ; 2005 ; 2005 ; Archives Animal Breeding Volume 23 ; 23 ; >
+      au < exists ; exists ; 2006 ; 2006 ; Archives Animal Breeding Volume 24 ; 24 ; >
+      au < exists ; exists ; 2007 ; 2007 ; Archives Animal Breeding Volume 25 ; 25 ; >
+      au < exists ; exists ; 2008 ; 2008 ; Archives Animal Breeding Volume 26 ; 26 ; >
+      au < exists ; exists ; 2009 ; 2009 ; Archives Animal Breeding Volume 27 ; 27 ; >
+      au < exists ; exists ; 2010 ; 2010 ; Archives Animal Breeding Volume 28 ; 28 ; >
+      au < exists ; exists ; 2011 ; 2011 ; Archives Animal Breeding Volume 29 ; 29 ; >
+      au < exists ; exists ; 2012 ; 2012 ; Archives Animal Breeding Volume 30 ; 30 ; >
+      au < exists ; exists ; 2013 ; 2013 ; Archives Animal Breeding Volume 31 ; 31 ; >
+      au < exists ; exists ; 2014 ; 2014 ; Archives Animal Breeding Volume 32 ; 32 ; >
       }
 
       {
       param[base_url] = http://www.arch-anim-breed.net/
 
-      au < crawling ; exists ; 2015 ; 2015 ; Archives Animal Breeding Volume 58 ; 58 >
+      au < crawling ; exists ; 2015 ; 2015 ; Archives Animal Breeding Volume 58 ; 58 ; >
       }
 
    }
@@ -221,8 +221,8 @@
       param[base_url] = http://www.astra-proc.net/
       param[home_url] = http://www.astra-proceedings.net/
 
-      au < finished ; finished ; 2014 ; 2014 ; ASTRA Proceedings Volume 1 ; 1 >
-      au < crawling ; exists ; 2015 ; 2015 ; ASTRA Proceedings Volume 2 ; 2 >
+      au < finished ; finished ; 2014 ; 2014 ; ASTRA Proceedings Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; ASTRA Proceedings Volume 2 ; 2 ; >
 
    }
     
@@ -237,14 +237,14 @@
       param[home_url] = http://www.astrophysics-and-space-sciences-transactions.net/
       comment[0] = no publication after 2012
 
-      au < manifest ; exists ; 2005 ; 2005 ; Astrophysics and Space Sciences Transactions Volume 1 ; 1 >
-      au < manifest ; exists ; 2006 ; 2006 ; Astrophysics and Space Sciences Transactions Volume 2 ; 2 >
-      au < manifest ; exists ; 2007 ; 2007 ; Astrophysics and Space Sciences Transactions Volume 3 ; 3 >
-      au < manifest ; exists ; 2008 ; 2008 ; Astrophysics and Space Sciences Transactions Volume 4 ; 4 >
-      au < manifest ; exists ; 2009 ; 2009 ; Astrophysics and Space Sciences Transactions Volume 5 ; 5 >
-      au < manifest ; exists ; 2010 ; 2010 ; Astrophysics and Space Sciences Transactions Volume 6 ; 6 >
-      au < manifest ; exists ; 2011 ; 2011 ; Astrophysics and Space Sciences Transactions Volume 7 ; 7 >
-      au < finished ; finished ; 2012 ; 2012 ; Astrophysics and Space Sciences Transactions Volume 8 ; 8 >
+      au < manifest ; exists ; 2005 ; 2005 ; Astrophysics and Space Sciences Transactions Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Astrophysics and Space Sciences Transactions Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Astrophysics and Space Sciences Transactions Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Astrophysics and Space Sciences Transactions Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Astrophysics and Space Sciences Transactions Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Astrophysics and Space Sciences Transactions Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Astrophysics and Space Sciences Transactions Volume 7 ; 7 ; >
+      au < finished ; finished ; 2012 ; 2012 ; Astrophysics and Space Sciences Transactions Volume 8 ; 8 ; >
     
    }
     
@@ -258,21 +258,21 @@
       param[base_url] = http://www.atmos-chem-phys.net/
       param[home_url] = http://www.atmospheric-chemistry-and-physics.net/
 
-      au < manifest ; exists ; 2001 ; 2001 ; Atmospheric Chemistry and Physics Volume 1 ; 1 >
-      au < manifest ; exists ; 2002 ; 2002 ; Atmospheric Chemistry and Physics Volume 2 ; 2 >
-      au < manifest ; exists ; 2003 ; 2003 ; Atmospheric Chemistry and Physics Volume 3 ; 3 >
-      au < manifest ; exists ; 2004 ; 2004 ; Atmospheric Chemistry and Physics Volume 4 ; 4 >
-      au < manifest ; exists ; 2005 ; 2005 ; Atmospheric Chemistry and Physics Volume 5 ; 5 >
-      au < manifest ; exists ; 2006 ; 2006 ; Atmospheric Chemistry and Physics Volume 6 ; 6 >
-      au < manifest ; exists ; 2007 ; 2007 ; Atmospheric Chemistry and Physics Volume 7 ; 7 >
-      au < manifest ; exists ; 2008 ; 2008 ; Atmospheric Chemistry and Physics Volume 8 ; 8 >
-      au < manifest ; exists ; 2009 ; 2009 ; Atmospheric Chemistry and Physics Volume 9 ; 9 >
-      au < manifest ; exists ; 2010 ; 2010 ; Atmospheric Chemistry and Physics Volume 10 ; 10 >
-      au < manifest ; exists ; 2011 ; 2011 ; Atmospheric Chemistry and Physics Volume 11 ; 11 >
-      au < finished ; crawling ; 2012 ; 2012 ; Atmospheric Chemistry and Physics Volume 12 ; 12 >
-      au < crawling ; exists ; 2013 ; 2013 ; Atmospheric Chemistry and Physics Volume 13 ; 13 >
-      au < deepCrawl ; exists ; 2014 ; 2014 ; Atmospheric Chemistry and Physics Volume 14 ; 14 >
-      au < crawling ; exists ; 2015 ; 2015 ; Atmospheric Chemistry and Physics Volume 15 ; 15 >
+      au < manifest ; exists ; 2001 ; 2001 ; Atmospheric Chemistry and Physics Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Atmospheric Chemistry and Physics Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Atmospheric Chemistry and Physics Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Atmospheric Chemistry and Physics Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Atmospheric Chemistry and Physics Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Atmospheric Chemistry and Physics Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Atmospheric Chemistry and Physics Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Atmospheric Chemistry and Physics Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Atmospheric Chemistry and Physics Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Atmospheric Chemistry and Physics Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Atmospheric Chemistry and Physics Volume 11 ; 11 ; >
+      au < finished ; crawling ; 2012 ; 2012 ; Atmospheric Chemistry and Physics Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Atmospheric Chemistry and Physics Volume 13 ; 13 ; >
+      au < deepCrawl ; exists ; 2014 ; 2014 ; Atmospheric Chemistry and Physics Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Atmospheric Chemistry and Physics Volume 15 ; 15 ; >
     
    }
     
@@ -286,21 +286,21 @@
       param[home_url] = http://www.atmospheric-chemistry-and-physics.net/
       comment[doNotProcess] = Do Not Process Discussions paper 
 
-      au < doNotProcess ; exists ; 2001 ; 2001 ; Atmospheric Chemistry and Physics Discussions Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2002 ; 2002 ; Atmospheric Chemistry and Physics Discussions Volume 2 ; 2 >
-      au < doNotProcess ; exists ; 2003 ; 2003 ; Atmospheric Chemistry and Physics Discussions Volume 3 ; 3 >
-      au < doNotProcess ; exists ; 2004 ; 2004 ; Atmospheric Chemistry and Physics Discussions Volume 4 ; 4 >
-      au < doNotProcess ; exists ; 2005 ; 2005 ; Atmospheric Chemistry and Physics Discussions Volume 5 ; 5 >
-      au < doNotProcess ; exists ; 2006 ; 2006 ; Atmospheric Chemistry and Physics Discussions Volume 6 ; 6 >
-      au < doNotProcess ; exists ; 2007 ; 2007 ; Atmospheric Chemistry and Physics Discussions Volume 7 ; 7 >
-      au < doNotProcess ; exists ; 2008 ; 2008 ; Atmospheric Chemistry and Physics Discussions Volume 8 ; 8 >
-      au < doNotProcess ; exists ; 2009 ; 2009 ; Atmospheric Chemistry and Physics Discussions Volume 9 ; 9 >
-      au < doNotProcess ; exists ; 2010 ; 2010 ; Atmospheric Chemistry and Physics Discussions Volume 10 ; 10 >
-      au < doNotProcess ; exists ; 2011 ; 2011 ; Atmospheric Chemistry and Physics Discussions Volume 11 ; 11 >
-      au < doNotProcess ; exists ; 2012 ; 2012 ; Atmospheric Chemistry and Physics Discussions Volume 12 ; 12 >
-      au < doNotProcess ; exists ; 2013 ; 2013 ; Atmospheric Chemistry and Physics Discussions Volume 13 ; 13 >
-      au < doNotProcess ; exists ; 2014 ; 2014 ; Atmospheric Chemistry and Physics Discussions Volume 14 ; 14 >
-      au < doNotProcess ; exists ; 2015 ; 2015 ; Atmospheric Chemistry and Physics Discussions Volume 15 ; 15 >
+      au < doNotProcess ; exists ; 2001 ; 2001 ; Atmospheric Chemistry and Physics Discussions Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; 2002 ; Atmospheric Chemistry and Physics Discussions Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; 2003 ; Atmospheric Chemistry and Physics Discussions Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; 2004 ; Atmospheric Chemistry and Physics Discussions Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; 2005 ; Atmospheric Chemistry and Physics Discussions Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; 2006 ; Atmospheric Chemistry and Physics Discussions Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; 2007 ; Atmospheric Chemistry and Physics Discussions Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2008 ; 2008 ; Atmospheric Chemistry and Physics Discussions Volume 8 ; 8 ; >
+      au < doNotProcess ; exists ; 2009 ; 2009 ; Atmospheric Chemistry and Physics Discussions Volume 9 ; 9 ; >
+      au < doNotProcess ; exists ; 2010 ; 2010 ; Atmospheric Chemistry and Physics Discussions Volume 10 ; 10 ; >
+      au < doNotProcess ; exists ; 2011 ; 2011 ; Atmospheric Chemistry and Physics Discussions Volume 11 ; 11 ; >
+      au < doNotProcess ; exists ; 2012 ; 2012 ; Atmospheric Chemistry and Physics Discussions Volume 12 ; 12 ; >
+      au < doNotProcess ; exists ; 2013 ; 2013 ; Atmospheric Chemistry and Physics Discussions Volume 13 ; 13 ; >
+      au < doNotProcess ; exists ; 2014 ; 2014 ; Atmospheric Chemistry and Physics Discussions Volume 14 ; 14 ; >
+      au < doNotProcess ; exists ; 2015 ; 2015 ; Atmospheric Chemistry and Physics Discussions Volume 15 ; 15 ; >
     
    }
     
@@ -314,14 +314,14 @@
       param[base_url] = http://www.atmos-meas-tech.net/
       param[home_url] = http://www.atmospheric-measurement-techniques.net/
 
-      au < manifest ; exists ; 2008 ; 2008 ; Atmospheric Measurement Techniques Volume 1 ; 1 >
-      au < manifest ; exists ; 2009 ; 2009 ; Atmospheric Measurement Techniques Volume 2 ; 2 >
-      au < manifest ; exists ; 2010 ; 2010 ; Atmospheric Measurement Techniques Volume 3 ; 3 >
-      au < manifest ; exists ; 2011 ; 2011 ; Atmospheric Measurement Techniques Volume 4 ; 4 >
-      au < finished ; frozen ; 2012 ; 2012 ; Atmospheric Measurement Techniques Volume 5 ; 5 >
-      au < crawling ; exists ; 2013 ; 2013 ; Atmospheric Measurement Techniques Volume 6 ; 6 >
-      au < finished ; crawling ; 2014 ; 2014 ; Atmospheric Measurement Techniques Volume 7 ; 7 >
-      au < crawling ; exists ; 2015 ; 2015 ; Atmospheric Measurement Techniques Volume 8 ; 8 >
+      au < manifest ; exists ; 2008 ; 2008 ; Atmospheric Measurement Techniques Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Atmospheric Measurement Techniques Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Atmospheric Measurement Techniques Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Atmospheric Measurement Techniques Volume 4 ; 4 ; >
+      au < finished ; frozen ; 2012 ; 2012 ; Atmospheric Measurement Techniques Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Atmospheric Measurement Techniques Volume 6 ; 6 ; >
+      au < finished ; crawling ; 2014 ; 2014 ; Atmospheric Measurement Techniques Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Atmospheric Measurement Techniques Volume 8 ; 8 ; >
     
    }
     
@@ -335,14 +335,14 @@
       param[home_url] = http://www.atmospheric-measurement-techniques.net/
       comment[doNotProcess] = Do Not Process Discussions paper 
 
-      au < doNotProcess ; exists ; 2008 ; 2008 ; Atmospheric Measurement Techniques Discussions Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2009 ; 2009 ; Atmospheric Measurement Techniques Discussions Volume 2 ; 2 >
-      au < doNotProcess ; exists ; 2010 ; 2010 ; Atmospheric Measurement Techniques Discussions Volume 3 ; 3 >
-      au < doNotProcess ; exists ; 2011 ; 2011 ; Atmospheric Measurement Techniques Discussions Volume 4 ; 4 >
-      au < doNotProcess ; exists ; 2012 ; 2012 ; Atmospheric Measurement Techniques Discussions Volume 5 ; 5 >
-      au < doNotProcess ; exists ; 2013 ; 2013 ; Atmospheric Measurement Techniques Discussions Volume 6 ; 6 >
-      au < doNotProcess ; exists ; 2014 ; 2014 ; Atmospheric Measurement Techniques Discussions Volume 7 ; 7 >
-      au < doNotProcess ; exists ; 2015 ; 2015 ; Atmospheric Measurement Techniques Discussions Volume 8 ; 8 >
+      au < doNotProcess ; exists ; 2008 ; 2008 ; Atmospheric Measurement Techniques Discussions Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2009 ; 2009 ; Atmospheric Measurement Techniques Discussions Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2010 ; 2010 ; Atmospheric Measurement Techniques Discussions Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2011 ; 2011 ; Atmospheric Measurement Techniques Discussions Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2012 ; 2012 ; Atmospheric Measurement Techniques Discussions Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2013 ; 2013 ; Atmospheric Measurement Techniques Discussions Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2014 ; 2014 ; Atmospheric Measurement Techniques Discussions Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2015 ; 2015 ; Atmospheric Measurement Techniques Discussions Volume 8 ; 8 ; >
     
    }
     
@@ -356,18 +356,18 @@
       param[base_url] = http://www.biogeosciences.net/
       param[home_url] = http://www.biogeosciences.net/
 
-      au < manifest ; exists ; 2004 ; 2004 ; Biogeosciences Volume 1 ; 1 >
-      au < manifest ; exists ; 2005 ; 2005 ; Biogeosciences Volume 2 ; 2 >
-      au < manifest ; exists ; 2006 ; 2006 ; Biogeosciences Volume 3 ; 3 >
-      au < manifest ; exists ; 2007 ; 2007 ; Biogeosciences Volume 4 ; 4 >
-      au < manifest ; exists ; 2008 ; 2008 ; Biogeosciences Volume 5 ; 5 >
-      au < manifest ; exists ; 2009 ; 2009 ; Biogeosciences Volume 6 ; 6 >
-      au < manifest ; exists ; 2010 ; 2010 ; Biogeosciences Volume 7 ; 7 >
-      au < manifest ; exists ; 2011 ; 2011 ; Biogeosciences Volume 8 ; 8 >
-      au < finished ; finished ; 2012 ; 2012 ; Biogeosciences Volume 9 ; 9 >
-      au < crawling ; exists ; 2013 ; 2013 ; Biogeosciences Volume 10 ; 10 >
-      au < crawling ; exists ; 2014 ; 2014 ; Biogeosciences Volume 11 ; 11 >
-      au < crawling ; exists ; 2015 ; 2015 ; Biogeosciences Volume 12 ; 12 >
+      au < manifest ; exists ; 2004 ; 2004 ; Biogeosciences Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Biogeosciences Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Biogeosciences Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Biogeosciences Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Biogeosciences Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Biogeosciences Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Biogeosciences Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Biogeosciences Volume 8 ; 8 ; >
+      au < finished ; finished ; 2012 ; 2012 ; Biogeosciences Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Biogeosciences Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Biogeosciences Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Biogeosciences Volume 12 ; 12 ; >
     
    }
     
@@ -381,18 +381,18 @@
       param[home_url] = http://www.biogeosciences.net/
       comment[doNotProcess] = Do Not Process Discussions paper 
 
-      au < doNotProcess ; exists ; 2004 ; 2004 ; Biogeosciences Discussions Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2005 ; 2005 ; Biogeosciences Discussions Volume 2 ; 2 >
-      au < doNotProcess ; exists ; 2006 ; 2006 ; Biogeosciences Discussions Volume 3 ; 3 >
-      au < doNotProcess ; exists ; 2007 ; 2007 ; Biogeosciences Discussions Volume 4 ; 4 >
-      au < doNotProcess ; exists ; 2008 ; 2008 ; Biogeosciences Discussions Volume 5 ; 5 >
-      au < doNotProcess ; exists ; 2009 ; 2009 ; Biogeosciences Discussions Volume 6 ; 6 >
-      au < doNotProcess ; exists ; 2010 ; 2010 ; Biogeosciences Discussions Volume 7 ; 7 >
-      au < doNotProcess ; exists ; 2011 ; 2011 ; Biogeosciences Discussions Volume 8 ; 8 >
-      au < doNotProcess ; exists ; 2012 ; 2012 ; Biogeosciences Discussions Volume 9 ; 9 >
-      au < doNotProcess ; exists ; 2013 ; 2013 ; Biogeosciences Discussions Volume 10 ; 10 >
-      au < doNotProcess ; exists ; 2014 ; 2014 ; Biogeosciences Discussions Volume 11 ; 11 >
-      au < doNotProcess ; exists ; 2015 ; 2015 ; Biogeosciences Discussions Volume 12 ; 12 >
+      au < doNotProcess ; exists ; 2004 ; 2004 ; Biogeosciences Discussions Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2005 ; 2005 ; Biogeosciences Discussions Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2006 ; 2006 ; Biogeosciences Discussions Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2007 ; 2007 ; Biogeosciences Discussions Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2008 ; 2008 ; Biogeosciences Discussions Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2009 ; 2009 ; Biogeosciences Discussions Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2010 ; 2010 ; Biogeosciences Discussions Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2011 ; 2011 ; Biogeosciences Discussions Volume 8 ; 8 ; >
+      au < doNotProcess ; exists ; 2012 ; 2012 ; Biogeosciences Discussions Volume 9 ; 9 ; >
+      au < doNotProcess ; exists ; 2013 ; 2013 ; Biogeosciences Discussions Volume 10 ; 10 ; >
+      au < doNotProcess ; exists ; 2014 ; 2014 ; Biogeosciences Discussions Volume 11 ; 11 ; >
+      au < doNotProcess ; exists ; 2015 ; 2015 ; Biogeosciences Discussions Volume 12 ; 12 ; >
     
    }
     
@@ -406,17 +406,17 @@
       param[base_url] = http://www.clim-past.net/
       param[home_url] = http://www.climate-of-the-past.net/
 
-      au < manifest ; exists ; 2005 ; 2005 ; Climate of the Past Volume 1 ; 1 >
-      au < manifest ; exists ; 2006 ; 2006 ; Climate of the Past Volume 2 ; 2 >
-      au < manifest ; exists ; 2007 ; 2007 ; Climate of the Past Volume 3 ; 3 >
-      au < manifest ; exists ; 2008 ; 2008 ; Climate of the Past Volume 4 ; 4 >
-      au < manifest ; exists ; 2009 ; 2009 ; Climate of the Past Volume 5 ; 5 >
-      au < manifest ; exists ; 2010 ; 2010 ; Climate of the Past Volume 6 ; 6 >
-      au < manifest ; exists ; 2011 ; 2011 ; Climate of the Past Volume 7 ; 7 >
-      au < finished ; finished ; 2012 ; 2012 ; Climate of the Past Volume 8 ; 8 >
-      au < crawling ; exists ; 2013 ; 2013 ; Climate of the Past Volume 9 ; 9 >
-      au < crawling ; exists ; 2014 ; 2014 ; Climate of the Past Volume 10 ; 10 >
-      au < crawling ; exists ; 2015 ; 2015 ; Climate of the Past Volume 11 ; 11 >
+      au < manifest ; exists ; 2005 ; 2005 ; Climate of the Past Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Climate of the Past Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Climate of the Past Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Climate of the Past Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Climate of the Past Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Climate of the Past Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Climate of the Past Volume 7 ; 7 ; >
+      au < finished ; finished ; 2012 ; 2012 ; Climate of the Past Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Climate of the Past Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Climate of the Past Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Climate of the Past Volume 11 ; 11 ; >
     
    }
     
@@ -430,17 +430,17 @@
       param[home_url] = http://www.climate-of-the-past.net/
       comment[doNotProcess] = Do Not Process Discussions paper 
 
-      au < doNotProcess ; exists ; 2005 ; 2005 ; Climate of the Past Discussions Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2006 ; 2006 ; Climate of the Past Discussions Volume 2 ; 2 >
-      au < doNotProcess ; exists ; 2007 ; 2007 ; Climate of the Past Discussions Volume 3 ; 3 >
-      au < doNotProcess ; exists ; 2008 ; 2008 ; Climate of the Past Discussions Volume 4 ; 4 >
-      au < doNotProcess ; exists ; 2009 ; 2009 ; Climate of the Past Discussions Volume 5 ; 5 >
-      au < doNotProcess ; exists ; 2010 ; 2010 ; Climate of the Past Discussions Volume 6 ; 6 >
-      au < doNotProcess ; exists ; 2011 ; 2011 ; Climate of the Past Discussions Volume 7 ; 7 >
-      au < doNotProcess ; exists ; 2012 ; 2012 ; Climate of the Past Discussions Volume 8 ; 8 >
-      au < doNotProcess ; exists ; 2013 ; 2013 ; Climate of the Past Discussions Volume 9 ; 9 >
-      au < doNotProcess ; exists ; 2014 ; 2014 ; Climate of the Past Discussions Volume 10 ; 10 >
-      au < doNotProcess ; exists ; 2015 ; 2015 ; Climate of the Past Discussions Volume 11 ; 11 >
+      au < doNotProcess ; exists ; 2005 ; 2005 ; Climate of the Past Discussions Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2006 ; 2006 ; Climate of the Past Discussions Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2007 ; 2007 ; Climate of the Past Discussions Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2008 ; 2008 ; Climate of the Past Discussions Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2009 ; 2009 ; Climate of the Past Discussions Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2010 ; 2010 ; Climate of the Past Discussions Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2011 ; 2011 ; Climate of the Past Discussions Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2012 ; 2012 ; Climate of the Past Discussions Volume 8 ; 8 ; >
+      au < doNotProcess ; exists ; 2013 ; 2013 ; Climate of the Past Discussions Volume 9 ; 9 ; >
+      au < doNotProcess ; exists ; 2014 ; 2014 ; Climate of the Past Discussions Volume 10 ; 10 ; >
+      au < doNotProcess ; exists ; 2015 ; 2015 ; Climate of the Past Discussions Volume 11 ; 11 ; >
     
    }
     
@@ -454,14 +454,14 @@
       param[base_url] = http://www.drink-water-eng-sci.net/
       param[home_url] = http://www.drinking-water-engineering-and-science.net/
 
-      au < manifest ; exists ; 2008 ; 2008 ; Drinking Water Engineering and Science Volume 1 ; 1 >
-      au < manifest ; exists ; 2009 ; 2009 ; Drinking Water Engineering and Science Volume 2 ; 2 >
-      au < manifest ; exists ; 2010 ; 2010 ; Drinking Water Engineering and Science Volume 3 ; 3 >
-      au < manifest ; exists ; 2011 ; 2011 ; Drinking Water Engineering and Science Volume 4 ; 4 >
-      au < finished ; frozen ; 2012 ; 2012 ; Drinking Water Engineering and Science Volume 5 ; 5 >
-      au < crawling ; exists ; 2013 ; 2013 ; Drinking Water Engineering and Science Volume 6 ; 6 >
-      au < crawling ; exists ; 2014 ; 2014 ; Drinking Water Engineering and Science Volume 7 ; 7 >
-      au < crawling ; exists ; 2015 ; 2015 ; Drinking Water Engineering and Science Volume 8 ; 8 >
+      au < manifest ; exists ; 2008 ; 2008 ; Drinking Water Engineering and Science Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Drinking Water Engineering and Science Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Drinking Water Engineering and Science Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Drinking Water Engineering and Science Volume 4 ; 4 ; >
+      au < finished ; frozen ; 2012 ; 2012 ; Drinking Water Engineering and Science Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Drinking Water Engineering and Science Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Drinking Water Engineering and Science Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Drinking Water Engineering and Science Volume 8 ; 8 ; >
     
    }
     
@@ -475,14 +475,14 @@
       param[home_url] = http://www.drinking-water-engineering-and-science.net/
       comment[doNotProcess] = Do Not Process Discussions paper 
 
-      au < doNotProcess ; exists ; 2008 ; 2008 ; Drinking Water Engineering and Science Discussions Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2009 ; 2009 ; Drinking Water Engineering and Science Discussions Volume 2 ; 2 >
-      au < doNotProcess ; exists ; 2010 ; 2010 ; Drinking Water Engineering and Science Discussions Volume 3 ; 3 >
-      au < doNotProcess ; exists ; 2011 ; 2011 ; Drinking Water Engineering and Science Discussions Volume 4 ; 4 >
-      au < doNotProcess ; exists ; 2012 ; 2012 ; Drinking Water Engineering and Science Discussions Volume 5 ; 5 >
-      au < doNotProcess ; exists ; 2013 ; 2013 ; Drinking Water Engineering and Science Discussions Volume 6 ; 6 >
-      au < doNotProcess ; exists ; 2014 ; 2014 ; Drinking Water Engineering and Science Discussions Volume 7 ; 7 >
-      au < doNotProcess ; exists ; 2015 ; 2015 ; Drinking Water Engineering and Science Discussions Volume 8 ; 8 >
+      au < doNotProcess ; exists ; 2008 ; 2008 ; Drinking Water Engineering and Science Discussions Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2009 ; 2009 ; Drinking Water Engineering and Science Discussions Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2010 ; 2010 ; Drinking Water Engineering and Science Discussions Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2011 ; 2011 ; Drinking Water Engineering and Science Discussions Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2012 ; 2012 ; Drinking Water Engineering and Science Discussions Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2013 ; 2013 ; Drinking Water Engineering and Science Discussions Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2014 ; 2014 ; Drinking Water Engineering and Science Discussions Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2015 ; 2015 ; Drinking Water Engineering and Science Discussions Volume 8 ; 8 ; >
     
    }
     
@@ -496,9 +496,9 @@
       param[base_url] = http://www.earth-surf-dynam.net/
       param[home_url] = http://www.earth-surface-dynamics.net/
 
-      au < crawling ; exists ; 2013 ; 2013 ; Earth Surface Dynamics Volume 1 ; 1 >
-      au < crawling ; exists ; 2014 ; 2014 ; Earth Surface Dynamics Volume 2 ; 2 >
-      au < crawling ; exists ; 2015 ; 2015 ; Earth Surface Dynamics Volume 3 ; 3 >
+      au < crawling ; exists ; 2013 ; 2013 ; Earth Surface Dynamics Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Earth Surface Dynamics Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Earth Surface Dynamics Volume 3 ; 3 ; >
     
    }
     
@@ -512,9 +512,9 @@
       param[home_url] = http://www.earth-surf-dynam-discuss.net/
       comment[doNotProcess] = Do Not Process Discussions paper 
 
-      au < doNotProcess ; exists ; 2013 ; 2013 ; Earth Surface Dynamics Discussions Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2014 ; 2014 ; Earth Surface Dynamics Discussions Volume 2 ; 2 >
-      au < doNotProcess ; exists ; 2015 ; 2015 ; Earth Surface Dynamics Discussions Volume 3 ; 3 >
+      au < doNotProcess ; exists ; 2013 ; 2013 ; Earth Surface Dynamics Discussions Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2014 ; 2014 ; Earth Surface Dynamics Discussions Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2015 ; 2015 ; Earth Surface Dynamics Discussions Volume 3 ; 3 ; >
     
    }
     
@@ -528,12 +528,12 @@
       param[base_url] = http://www.earth-syst-dynam.net/
       param[home_url] = http://www.earth-system-dynamics.net/
 
-      au < manifest ; exists ; 2010 ; 2010 ; Earth System Dynamics Volume 1 ; 1 >
-      au < manifest ; exists ; 2011 ; 2011 ; Earth System Dynamics Volume 2 ; 2 >
-      au < finished ; crawling ; 2012 ; 2012 ; Earth System Dynamics Volume 3 ; 3 >
-      au < crawling ; exists ; 2013 ; 2013 ; Earth System Dynamics Volume 4 ; 4 >
-      au < crawling ; exists ; 2014 ; 2014 ; Earth System Dynamics Volume 5 ; 5 >
-      au < crawling ; exists ; 2015 ; 2015 ; Earth System Dynamics Volume 6 ; 6 >
+      au < manifest ; exists ; 2010 ; 2010 ; Earth System Dynamics Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Earth System Dynamics Volume 2 ; 2 ; >
+      au < finished ; crawling ; 2012 ; 2012 ; Earth System Dynamics Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Earth System Dynamics Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Earth System Dynamics Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Earth System Dynamics Volume 6 ; 6 ; >
     
    }
     
@@ -547,12 +547,12 @@
       param[home_url] = http://www.earth-system-dynamics.net/
       comment[doNotProcess] = Do Not Process Discussions paper 
 
-      au < doNotProcess ; exists ; 2010 ; 2010 ; Earth System Dynamics Discussions Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2011 ; 2011 ; Earth System Dynamics Discussions Volume 2 ; 2 >
-      au < doNotProcess ; exists ; 2012 ; 2012 ; Earth System Dynamics Discussions Volume 3 ; 3 >
-      au < doNotProcess ; exists ; 2013 ; 2013 ; Earth System Dynamics Discussions Volume 4 ; 4 >
-      au < doNotProcess ; exists ; 2014 ; 2014 ; Earth System Dynamics Discussions Volume 5 ; 5 >
-      au < doNotProcess ; exists ; 2015 ; 2015 ; Earth System Dynamics Discussions Volume 6 ; 6 >
+      au < doNotProcess ; exists ; 2010 ; 2010 ; Earth System Dynamics Discussions Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2011 ; 2011 ; Earth System Dynamics Discussions Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2012 ; 2012 ; Earth System Dynamics Discussions Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2013 ; 2013 ; Earth System Dynamics Discussions Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2014 ; 2014 ; Earth System Dynamics Discussions Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2015 ; 2015 ; Earth System Dynamics Discussions Volume 6 ; 6 ; >
     
    }
     
@@ -566,13 +566,13 @@
       param[base_url] = http://www.earth-syst-sci-data.net/
       param[home_url] = http://www.earth-system-science-data.net/
 
-      au < manifest ; exists ; 2009 ; 2009 ; Earth System Science Data Volume 1 ; 1 >
-      au < manifest ; exists ; 2010 ; 2010 ; Earth System Science Data Volume 2 ; 2 >
-      au < manifest ; exists ; 2011 ; 2011 ; Earth System Science Data Volume 3 ; 3 >
-      au < finished ; crawling ; 2012 ; 2012 ; Earth System Science Data Volume 4 ; 4 >
-      au < crawling ; exists ; 2013 ; 2013 ; Earth System Science Data Volume 5 ; 5 >
-      au < frozen ; exists ; 2014 ; 2014 ; Earth System Science Data Volume 6 ; 6 >
-      au < crawling ; exists ; 2015 ; 2015 ; Earth System Science Data Volume 7 ; 7 >
+      au < manifest ; exists ; 2009 ; 2009 ; Earth System Science Data Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Earth System Science Data Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Earth System Science Data Volume 3 ; 3 ; >
+      au < finished ; crawling ; 2012 ; 2012 ; Earth System Science Data Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Earth System Science Data Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2014 ; 2014 ; Earth System Science Data Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Earth System Science Data Volume 7 ; 7 ; >
     
    }
     
@@ -586,14 +586,14 @@
       param[home_url] = http://www.earth-system-science-data.net/
       comment[doNotProcess] = Do Not Process Discussions paper 
 
-      au < doNotProcess ; exists ; 2008 ; 2008 ; Earth System Science Data Discussions Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2009 ; 2009 ; Earth System Science Data Discussions Volume 2 ; 2 >
-      au < doNotProcess ; exists ; 2010 ; 2010 ; Earth System Science Data Discussions Volume 3 ; 3 >
-      au < doNotProcess ; exists ; 2011 ; 2011 ; Earth System Science Data Discussions Volume 4 ; 4 >
-      au < doNotProcess ; exists ; 2012 ; 2012 ; Earth System Science Data Discussions Volume 5 ; 5 >
-      au < doNotProcess ; exists ; 2013 ; 2013 ; Earth System Science Data Discussions Volume 6 ; 6 >
-      au < doNotProcess ; exists ; 2014 ; 2014 ; Earth System Science Data Discussions Volume 7 ; 7 >
-      au < doNotProcess ; exists ; 2015 ; 2015 ; Earth System Science Data Discussions Volume 8 ; 8 >
+      au < doNotProcess ; exists ; 2008 ; 2008 ; Earth System Science Data Discussions Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2009 ; 2009 ; Earth System Science Data Discussions Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2010 ; 2010 ; Earth System Science Data Discussions Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2011 ; 2011 ; Earth System Science Data Discussions Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2012 ; 2012 ; Earth System Science Data Discussions Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2013 ; 2013 ; Earth System Science Data Discussions Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2014 ; 2014 ; Earth System Science Data Discussions Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2015 ; 2015 ; Earth System Science Data Discussions Volume 8 ; 8 ; >
     
    }
     
@@ -607,11 +607,11 @@
       param[base_url] = http://www.electronic-earth.net/
       param[home_url] = http://www.electronic-earth.net/
 
-      au < manifest ; exists ; 2006 ; 2006 ; eEarth Volume 1 ; 1 >
-      au < manifest ; exists ; 2007 ; 2007 ; eEarth Volume 2 ; 2 >
-      au < manifest ; exists ; 2008 ; 2008 ; eEarth Volume 3 ; 3 >
-      au < manifest ; exists ; 2009 ; 2009 ; eEarth Volume 4 ; 4 >
-      au < manifest ; exists ; 2010 ; 2010 ; eEarth Volume 5 ; 5 >
+      au < manifest ; exists ; 2006 ; 2006 ; eEarth Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; eEarth Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; eEarth Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; eEarth Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; eEarth Volume 5 ; 5 ; >
     
    }
     
@@ -625,10 +625,10 @@
       param[home_url] = http://www.electronic-earth.net/
       comment[doNotProcess] = Do Not Process Discussions paper 
 
-      au < doNotProcess ; exists ; 2006 ; 2006 ; eEarth Discussions Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2007 ; 2007 ; eEarth Discussions Volume 2 ; 2 >
-      au < doNotProcess ; exists ; 2008 ; 2008 ; eEarth Discussions Volume 3 ; 3 >
-      au < doNotProcess ; exists ; 2009 ; 2009 ; eEarth Discussions Volume 4 ; 4 >
+      au < doNotProcess ; exists ; 2006 ; 2006 ; eEarth Discussions Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2007 ; 2007 ; eEarth Discussions Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2008 ; 2008 ; eEarth Discussions Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2009 ; 2009 ; eEarth Discussions Volume 4 ; 4 ; >
     
    }
 
@@ -641,8 +641,8 @@
       param[base_url] = http://www.field-actions-sci-rep.net/
       param[home_url] = http://www.field-actions-science-reports.net/
 
-      au < manifest ; exists ; 2008 ; 2008 ; Field Actions Science Reports Volume 1 ; 1 >
-      au < manifest ; exists ; 2009 ; 2009 ; Field Actions Science Reports Volume 2 ; 2 >
+      au < manifest ; exists ; 2008 ; 2008 ; Field Actions Science Reports Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Field Actions Science Reports Volume 2 ; 2 ; >
     
    }
     
@@ -659,26 +659,26 @@
 
       {
       attr[au_coverage_depth] = abstracts
-      au < manifest ; exists ; 1998 ; 1998 ; Fossil Record Reports Volume 1 [abstract only] ; 1 >
-      au < manifest ; exists ; 1999 ; 1999 ; Fossil Record Reports Volume 2 [abstract only] ; 2 >
-      au < manifest ; exists ; 2000 ; 2000 ; Fossil Record Reports Volume 3 [abstract only] ; 3 >
-      au < manifest ; exists ; 2001 ; 2001 ; Fossil Record Reports Volume 4 [abstract only] ; 4 >
-      au < manifest ; exists ; 2002 ; 2002 ; Fossil Record Reports Volume 5 [abstract only] ; 5 >
-      au < manifest ; exists ; 2003 ; 2003 ; Fossil Record Reports Volume 6 [abstract only] ; 6 >
-      au < manifest ; exists ; 2004 ; 2004 ; Fossil Record Reports Volume 7 [abstract only] ; 7 >
-      au < manifest ; exists ; 2005 ; 2005 ; Fossil Record Reports Volume 8 [abstract only] ; 8 >
-      au < manifest ; exists ; 2006 ; 2006 ; Fossil Record Reports Volume 9 [abstract only] ; 9 >
-      au < manifest ; exists ; 2007 ; 2007 ; Fossil Record Reports Volume 10 [abstract only] ; 10 >
-      au < manifest ; exists ; 2008 ; 2008 ; Fossil Record Reports Volume 11 [abstract only] ; 11 >
-      au < manifest ; exists ; 2009 ; 2009 ; Fossil Record Reports Volume 12 [abstract only] ; 12 >
-      au < manifest ; exists ; 2010 ; 2010 ; Fossil Record Reports Volume 13 [abstract only] ; 13 >
-      au < crawling ; exists ; 2011 ; 2011 ; Fossil Record Reports Volume 14 [abstract only] ; 14 >
-      au < crawling ; exists ; 2012 ; 2012 ; Fossil Record Reports Volume 15 [abstract only] ; 15 >
-      au < crawling ; exists ; 2013 ; 2013 ; Fossil Record Reports Volume 16 [abstract only] ; 16 >
+      au < manifest ; exists ; 1998 ; 1998 ; Fossil Record Reports Volume 1 [abstract only] ; 1 ; >
+      au < manifest ; exists ; 1999 ; 1999 ; Fossil Record Reports Volume 2 [abstract only] ; 2 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; Fossil Record Reports Volume 3 [abstract only] ; 3 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Fossil Record Reports Volume 4 [abstract only] ; 4 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Fossil Record Reports Volume 5 [abstract only] ; 5 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Fossil Record Reports Volume 6 [abstract only] ; 6 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Fossil Record Reports Volume 7 [abstract only] ; 7 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Fossil Record Reports Volume 8 [abstract only] ; 8 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Fossil Record Reports Volume 9 [abstract only] ; 9 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Fossil Record Reports Volume 10 [abstract only] ; 10 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Fossil Record Reports Volume 11 [abstract only] ; 11 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Fossil Record Reports Volume 12 [abstract only] ; 12 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Fossil Record Reports Volume 13 [abstract only] ; 13 ; >
+      au < crawling ; exists ; 2011 ; 2011 ; Fossil Record Reports Volume 14 [abstract only] ; 14 ; >
+      au < crawling ; exists ; 2012 ; 2012 ; Fossil Record Reports Volume 15 [abstract only] ; 15 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Fossil Record Reports Volume 16 [abstract only] ; 16 ; >
       }
       
-      au < crawling ; exists ; 2014 ; 2014 ; Fossil Record Reports Volume 17 ; 17 >
-      au < crawling ; exists ; 2015 ; 2015 ; Fossil Record Reports Volume 18 ; 18 >
+      au < crawling ; exists ; 2014 ; 2014 ; Fossil Record Reports Volume 17 ; 17 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Fossil Record Reports Volume 18 ; 18 ; >
       
    }
     
@@ -694,76 +694,76 @@
       
       comment[notReady] = This journal is open access one year after publication. eg 2013 volume is available jan 1 2015.
 
-      au < manifest ; exists ; 1946 ; 1946 ; Geographica Helvetica Volume 1 ; 1 >
-      au < manifest ; exists ; 1947 ; 1947 ; Geographica Helvetica Volume 2 ; 2 >
-      au < manifest ; exists ; 1948 ; 1948 ; Geographica Helvetica Volume 3 ; 3 >
-      au < manifest ; exists ; 1949 ; 1949 ; Geographica Helvetica Volume 4 ; 4 >
-      au < manifest ; exists ; 1950 ; 1950 ; Geographica Helvetica Volume 5 ; 5 >
-      au < manifest ; exists ; 1951 ; 1951 ; Geographica Helvetica Volume 6 ; 6 >
-      au < manifest ; exists ; 1952 ; 1952 ; Geographica Helvetica Volume 7 ; 7 >
-      au < manifest ; exists ; 1953 ; 1953 ; Geographica Helvetica Volume 8 ; 8 >
-      au < manifest ; exists ; 1954 ; 1954 ; Geographica Helvetica Volume 9 ; 9 >
-      au < manifest ; exists ; 1955 ; 1955 ; Geographica Helvetica Volume 10 ; 10 >
-      au < manifest ; exists ; 1956 ; 1956 ; Geographica Helvetica Volume 11 ; 11 >
-      au < manifest ; exists ; 1957 ; 1957 ; Geographica Helvetica Volume 12 ; 12 >
-      au < manifest ; exists ; 1958 ; 1958 ; Geographica Helvetica Volume 13 ; 13 >
-      au < manifest ; exists ; 1959 ; 1959 ; Geographica Helvetica Volume 14 ; 14 >
-      au < manifest ; exists ; 1960 ; 1960 ; Geographica Helvetica Volume 15 ; 15 >
-      au < manifest ; exists ; 1961 ; 1961 ; Geographica Helvetica Volume 16 ; 16 >
-      au < manifest ; exists ; 1962 ; 1962 ; Geographica Helvetica Volume 17 ; 17 >
-      au < manifest ; exists ; 1963 ; 1963 ; Geographica Helvetica Volume 18 ; 18 >
-      au < manifest ; exists ; 1964 ; 1964 ; Geographica Helvetica Volume 19 ; 19 >
-      au < manifest ; exists ; 1965 ; 1965 ; Geographica Helvetica Volume 20 ; 20 >
-      au < manifest ; exists ; 1966 ; 1966 ; Geographica Helvetica Volume 21 ; 21 >
-      au < manifest ; exists ; 1967 ; 1967 ; Geographica Helvetica Volume 22 ; 22 >
-      au < manifest ; exists ; 1968 ; 1968 ; Geographica Helvetica Volume 23 ; 23 >
-      au < manifest ; exists ; 1969 ; 1969 ; Geographica Helvetica Volume 24 ; 24 >
-      au < manifest ; exists ; 1970 ; 1970 ; Geographica Helvetica Volume 25 ; 25 >
-      au < manifest ; exists ; 1971 ; 1971 ; Geographica Helvetica Volume 26 ; 26 >
-      au < manifest ; exists ; 1972 ; 1972 ; Geographica Helvetica Volume 27 ; 27 >
-      au < manifest ; exists ; 1973 ; 1973 ; Geographica Helvetica Volume 28 ; 28 >
-      au < manifest ; exists ; 1974 ; 1974 ; Geographica Helvetica Volume 29 ; 29 >
-      au < manifest ; exists ; 1975 ; 1975 ; Geographica Helvetica Volume 30 ; 30 >
-      au < manifest ; exists ; 1976 ; 1976 ; Geographica Helvetica Volume 31 ; 31 >
-      au < manifest ; exists ; 1977 ; 1977 ; Geographica Helvetica Volume 32 ; 32 >
-      au < manifest ; exists ; 1978 ; 1978 ; Geographica Helvetica Volume 33 ; 33 >
-      au < manifest ; exists ; 1979 ; 1979 ; Geographica Helvetica Volume 34 ; 34 >
-      au < manifest ; exists ; 1980 ; 1980 ; Geographica Helvetica Volume 35 ; 35 >
-      au < manifest ; exists ; 1981 ; 1981 ; Geographica Helvetica Volume 36 ; 36 >
-      au < manifest ; exists ; 1982 ; 1982 ; Geographica Helvetica Volume 37 ; 37 >
-      au < manifest ; exists ; 1983 ; 1983 ; Geographica Helvetica Volume 38 ; 38 >
-      au < manifest ; exists ; 1984 ; 1984 ; Geographica Helvetica Volume 39 ; 39 >
-      au < manifest ; exists ; 1985 ; 1985 ; Geographica Helvetica Volume 40 ; 40 >
-      au < manifest ; exists ; 1986 ; 1986 ; Geographica Helvetica Volume 41 ; 41 >
-      au < manifest ; exists ; 1987 ; 1987 ; Geographica Helvetica Volume 42 ; 42 >
-      au < manifest ; exists ; 1988 ; 1988 ; Geographica Helvetica Volume 43 ; 43 >
-      au < manifest ; exists ; 1989 ; 1989 ; Geographica Helvetica Volume 44 ; 44 >
-      au < manifest ; exists ; 1990 ; 1990 ; Geographica Helvetica Volume 45 ; 45 >
-      au < manifest ; exists ; 1991 ; 1991 ; Geographica Helvetica Volume 46 ; 46 >
-      au < manifest ; exists ; 1992 ; 1992 ; Geographica Helvetica Volume 47 ; 47 >
-      au < manifest ; exists ; 1993 ; 1993 ; Geographica Helvetica Volume 48 ; 48 >
-      au < manifest ; exists ; 1994 ; 1994 ; Geographica Helvetica Volume 49 ; 49 >
-      au < manifest ; exists ; 1995 ; 1995 ; Geographica Helvetica Volume 50 ; 50 >
-      au < manifest ; exists ; 1996 ; 1996 ; Geographica Helvetica Volume 51 ; 51 >
-      au < manifest ; exists ; 1997 ; 1997 ; Geographica Helvetica Volume 52 ; 52 >
-      au < manifest ; exists ; 1998 ; 1998 ; Geographica Helvetica Volume 53 ; 53 >
-      au < manifest ; exists ; 1999 ; 1999 ; Geographica Helvetica Volume 54 ; 54 >
-      au < manifest ; exists ; 2000 ; 2000 ; Geographica Helvetica Volume 55 ; 55 >
-      au < manifest ; exists ; 2001 ; 2001 ; Geographica Helvetica Volume 56 ; 56 >
-      au < manifest ; exists ; 2002 ; 2002 ; Geographica Helvetica Volume 57 ; 57 >
-      au < manifest ; exists ; 2003 ; 2003 ; Geographica Helvetica Volume 58 ; 58 >
-      au < manifest ; exists ; 2004 ; 2004 ; Geographica Helvetica Volume 59 ; 59 >
-      au < manifest ; exists ; 2005 ; 2005 ; Geographica Helvetica Volume 60 ; 60 >
-      au < manifest ; exists ; 2006 ; 2006 ; Geographica Helvetica Volume 61 ; 61 >
-      au < manifest ; exists ; 2007 ; 2007 ; Geographica Helvetica Volume 62 ; 62 >
-      au < manifest ; exists ; 2008 ; 2008 ; Geographica Helvetica Volume 63 ; 63 >
-      au < manifest ; exists ; 2009 ; 2009 ; Geographica Helvetica Volume 64 ; 64 >
-      au < manifest ; exists ; 2010 ; 2010 ; Geographica Helvetica Volume 65 ; 65 >
-      au < manifest ; exists ; 2011 ; 2011 ; Geographica Helvetica Volume 66 ; 66 >
-      au < finished ; finished ; 2012 ; 2012 ; Geographica Helvetica Volume 67 ; 67 >
-      au < ingNotReady ; exists ; 2013 ; 2013 ; Geographica Helvetica Volume 68 ; 68 >
-      au < notReady ; exists ; 2014 ; 2014 ; Geographica Helvetica Volume 69 ; 69 >
-      au < crawling ; exists ; 2015 ; 2015 ; Geographica Helvetica Volume 70 ; 70 >
+      au < manifest ; exists ; 1946 ; 1946 ; Geographica Helvetica Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1947 ; 1947 ; Geographica Helvetica Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1948 ; 1948 ; Geographica Helvetica Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1949 ; 1949 ; Geographica Helvetica Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1950 ; 1950 ; Geographica Helvetica Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1951 ; 1951 ; Geographica Helvetica Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1952 ; 1952 ; Geographica Helvetica Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1953 ; 1953 ; Geographica Helvetica Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1954 ; 1954 ; Geographica Helvetica Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1955 ; 1955 ; Geographica Helvetica Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1956 ; 1956 ; Geographica Helvetica Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1957 ; 1957 ; Geographica Helvetica Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1958 ; 1958 ; Geographica Helvetica Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1959 ; 1959 ; Geographica Helvetica Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1960 ; 1960 ; Geographica Helvetica Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1961 ; 1961 ; Geographica Helvetica Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1962 ; 1962 ; Geographica Helvetica Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1963 ; 1963 ; Geographica Helvetica Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1964 ; 1964 ; Geographica Helvetica Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1965 ; 1965 ; Geographica Helvetica Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1966 ; 1966 ; Geographica Helvetica Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1967 ; 1967 ; Geographica Helvetica Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1968 ; 1968 ; Geographica Helvetica Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1969 ; 1969 ; Geographica Helvetica Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1970 ; 1970 ; Geographica Helvetica Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1971 ; 1971 ; Geographica Helvetica Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1972 ; 1972 ; Geographica Helvetica Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1973 ; 1973 ; Geographica Helvetica Volume 28 ; 28 ; >
+      au < manifest ; exists ; 1974 ; 1974 ; Geographica Helvetica Volume 29 ; 29 ; >
+      au < manifest ; exists ; 1975 ; 1975 ; Geographica Helvetica Volume 30 ; 30 ; >
+      au < manifest ; exists ; 1976 ; 1976 ; Geographica Helvetica Volume 31 ; 31 ; >
+      au < manifest ; exists ; 1977 ; 1977 ; Geographica Helvetica Volume 32 ; 32 ; >
+      au < manifest ; exists ; 1978 ; 1978 ; Geographica Helvetica Volume 33 ; 33 ; >
+      au < manifest ; exists ; 1979 ; 1979 ; Geographica Helvetica Volume 34 ; 34 ; >
+      au < manifest ; exists ; 1980 ; 1980 ; Geographica Helvetica Volume 35 ; 35 ; >
+      au < manifest ; exists ; 1981 ; 1981 ; Geographica Helvetica Volume 36 ; 36 ; >
+      au < manifest ; exists ; 1982 ; 1982 ; Geographica Helvetica Volume 37 ; 37 ; >
+      au < manifest ; exists ; 1983 ; 1983 ; Geographica Helvetica Volume 38 ; 38 ; >
+      au < manifest ; exists ; 1984 ; 1984 ; Geographica Helvetica Volume 39 ; 39 ; >
+      au < manifest ; exists ; 1985 ; 1985 ; Geographica Helvetica Volume 40 ; 40 ; >
+      au < manifest ; exists ; 1986 ; 1986 ; Geographica Helvetica Volume 41 ; 41 ; >
+      au < manifest ; exists ; 1987 ; 1987 ; Geographica Helvetica Volume 42 ; 42 ; >
+      au < manifest ; exists ; 1988 ; 1988 ; Geographica Helvetica Volume 43 ; 43 ; >
+      au < manifest ; exists ; 1989 ; 1989 ; Geographica Helvetica Volume 44 ; 44 ; >
+      au < manifest ; exists ; 1990 ; 1990 ; Geographica Helvetica Volume 45 ; 45 ; >
+      au < manifest ; exists ; 1991 ; 1991 ; Geographica Helvetica Volume 46 ; 46 ; >
+      au < manifest ; exists ; 1992 ; 1992 ; Geographica Helvetica Volume 47 ; 47 ; >
+      au < manifest ; exists ; 1993 ; 1993 ; Geographica Helvetica Volume 48 ; 48 ; >
+      au < manifest ; exists ; 1994 ; 1994 ; Geographica Helvetica Volume 49 ; 49 ; >
+      au < manifest ; exists ; 1995 ; 1995 ; Geographica Helvetica Volume 50 ; 50 ; >
+      au < manifest ; exists ; 1996 ; 1996 ; Geographica Helvetica Volume 51 ; 51 ; >
+      au < manifest ; exists ; 1997 ; 1997 ; Geographica Helvetica Volume 52 ; 52 ; >
+      au < manifest ; exists ; 1998 ; 1998 ; Geographica Helvetica Volume 53 ; 53 ; >
+      au < manifest ; exists ; 1999 ; 1999 ; Geographica Helvetica Volume 54 ; 54 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; Geographica Helvetica Volume 55 ; 55 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Geographica Helvetica Volume 56 ; 56 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Geographica Helvetica Volume 57 ; 57 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Geographica Helvetica Volume 58 ; 58 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Geographica Helvetica Volume 59 ; 59 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Geographica Helvetica Volume 60 ; 60 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Geographica Helvetica Volume 61 ; 61 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Geographica Helvetica Volume 62 ; 62 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Geographica Helvetica Volume 63 ; 63 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Geographica Helvetica Volume 64 ; 64 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Geographica Helvetica Volume 65 ; 65 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Geographica Helvetica Volume 66 ; 66 ; >
+      au < finished ; finished ; 2012 ; 2012 ; Geographica Helvetica Volume 67 ; 67 ; >
+      au < ingNotReady ; exists ; 2013 ; 2013 ; Geographica Helvetica Volume 68 ; 68 ; >
+      au < notReady ; exists ; 2014 ; 2014 ; Geographica Helvetica Volume 69 ; 69 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Geographica Helvetica Volume 70 ; 70 ; >
     
    }
     
@@ -777,10 +777,10 @@
       param[base_url] = http://www.geosci-instrum-method-data-syst.net/
       param[home_url] = http://www.geoscientific-instrumentation-methods-and-data-systems.net/
 
-      au < finished ; crawling ; 2012 ; 2012 ; Geoscientific Instrumentation, Methods and Data Systems Volume 1 ; 1 >
-      au < crawling ; exists ; 2013 ; 2013 ; Geoscientific Instrumentation, Methods and Data Systems Volume 2 ; 2 >
-      au < crawling ; exists ; 2014 ; 2014 ; Geoscientific Instrumentation, Methods and Data Systems Volume 3 ; 3 >
-      au < crawling ; exists ; 2015 ; 2015 ; Geoscientific Instrumentation, Methods and Data Systems Volume 4 ; 4 >
+      au < finished ; crawling ; 2012 ; 2012 ; Geoscientific Instrumentation, Methods and Data Systems Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Geoscientific Instrumentation, Methods and Data Systems Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Geoscientific Instrumentation, Methods and Data Systems Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Geoscientific Instrumentation, Methods and Data Systems Volume 4 ; 4 ; >
     
    }
    
@@ -794,11 +794,11 @@
       param[home_url] = http://www.geoscientific-instrumentation-methods-and-data-systems.net/
       comment[doNotProcess] = Do Not Process Discussions paper 
 
-      au < doNotProcess ; exists ; 2011 ; 2011 ; Geoscientific Instrumentation, Methods and Data Systems Discussions Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2012 ; 2012 ; Geoscientific Instrumentation, Methods and Data Systems Discussions Volume 2 ; 2 >
-      au < doNotProcess ; exists ; 2013 ; 2013 ; Geoscientific Instrumentation, Methods and Data Systems Discussions Volume 3 ; 3 >
-      au < doNotProcess ; exists ; 2014 ; 2014 ; Geoscientific Instrumentation, Methods and Data Systems Discussions Volume 4 ; 4 >
-      au < doNotProcess ; exists ; 2015 ; 2015 ; Geoscientific Instrumentation, Methods and Data Systems Discussions Volume 5 ; 5 >
+      au < doNotProcess ; exists ; 2011 ; 2011 ; Geoscientific Instrumentation, Methods and Data Systems Discussions Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2012 ; 2012 ; Geoscientific Instrumentation, Methods and Data Systems Discussions Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2013 ; 2013 ; Geoscientific Instrumentation, Methods and Data Systems Discussions Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2014 ; 2014 ; Geoscientific Instrumentation, Methods and Data Systems Discussions Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2015 ; 2015 ; Geoscientific Instrumentation, Methods and Data Systems Discussions Volume 5 ; 5 ; >
     
    }
 
@@ -812,14 +812,14 @@
       param[base_url] = http://www.geosci-model-dev.net/
       param[home_url] = http://www.geoscientific-model-development.net/
 
-      au < manifest ; exists ; 2008 ; 2008 ; Geoscientific Model Development Volume 1 ; 1 >
-      au < manifest ; exists ; 2009 ; 2009 ; Geoscientific Model Development Volume 2 ; 2 >
-      au < manifest ; exists ; 2010 ; 2010 ; Geoscientific Model Development Volume 3 ; 3 >
-      au < manifest ; exists ; 2011 ; 2011 ; Geoscientific Model Development Volume 4 ; 4 >
-      au < finished ; frozen ; 2012 ; 2012 ; Geoscientific Model Development Volume 5 ; 5 >
-      au < crawling ; exists ; 2013 ; 2013 ; Geoscientific Model Development Volume 6 ; 6 >
-      au < finished ; crawling ; 2014 ; 2014 ; Geoscientific Model Development Volume 7 ; 7 >
-      au < crawling ; exists ; 2015 ; 2015 ; Geoscientific Model Development Volume 8 ; 8 >
+      au < manifest ; exists ; 2008 ; 2008 ; Geoscientific Model Development Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Geoscientific Model Development Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Geoscientific Model Development Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Geoscientific Model Development Volume 4 ; 4 ; >
+      au < finished ; frozen ; 2012 ; 2012 ; Geoscientific Model Development Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Geoscientific Model Development Volume 6 ; 6 ; >
+      au < finished ; crawling ; 2014 ; 2014 ; Geoscientific Model Development Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Geoscientific Model Development Volume 8 ; 8 ; >
     
    }
     
@@ -833,14 +833,14 @@
       param[home_url] = http://www.geoscientific-model-development.net/
       comment[doNotProcess] = Do Not Process Discussions paper 
 
-      au < doNotProcess ; exists ; 2008 ; 2008 ; Geoscientific Model Development Discussions Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2009 ; 2009 ; Geoscientific Model Development Discussions Volume 2 ; 2 >
-      au < doNotProcess ; exists ; 2010 ; 2010 ; Geoscientific Model Development Discussions Volume 3 ; 3 >
-      au < doNotProcess ; exists ; 2011 ; 2011 ; Geoscientific Model Development Discussions Volume 4 ; 4 >
-      au < doNotProcess ; exists ; 2012 ; 2012 ; Geoscientific Model Development Discussions Volume 5 ; 5 >
-      au < doNotProcess ; exists ; 2013 ; 2013 ; Geoscientific Model Development Discussions Volume 6 ; 6 >
-      au < doNotProcess ; exists ; 2014 ; 2014 ; Geoscientific Model Development Discussions Volume 7 ; 7 >
-      au < doNotProcess ; exists ; 2015 ; 2015 ; Geoscientific Model Development Discussions Volume 8 ; 8 >
+      au < doNotProcess ; exists ; 2008 ; 2008 ; Geoscientific Model Development Discussions Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2009 ; 2009 ; Geoscientific Model Development Discussions Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2010 ; 2010 ; Geoscientific Model Development Discussions Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2011 ; 2011 ; Geoscientific Model Development Discussions Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2012 ; 2012 ; Geoscientific Model Development Discussions Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2013 ; 2013 ; Geoscientific Model Development Discussions Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2014 ; 2014 ; Geoscientific Model Development Discussions Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2015 ; 2015 ; Geoscientific Model Development Discussions Volume 8 ; 8 ; >
     
    }
     
@@ -854,9 +854,9 @@
       param[base_url] = http://www.geoth-energ-sci.net/
       param[home_url] = http://www.geothermal-energy-science.net/
 
-      au < crawling ; exists ; 2013 ; 2013 ; Geothermal Energy Science Volume 1 ; 1 >
-      au < finished ; crawling ; 2014 ; 2014 ; Geothermal Energy Science Volume 2 ; 2 >
-      au < crawling ; exists ; 2015 ; 2015 ; Geothermal Energy Science Volume 3 ; 3 >
+      au < crawling ; exists ; 2013 ; 2013 ; Geothermal Energy Science Volume 1 ; 1 ; >
+      au < finished ; crawling ; 2014 ; 2014 ; Geothermal Energy Science Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Geothermal Energy Science Volume 3 ; 3 ; >
     
    }
     
@@ -870,12 +870,12 @@
       param[base_url] = http://www.hist-geo-space-sci.net/
       param[home_url] = http://www.history-of-geo-and-space-sciences.net/
 
-      au < manifest ; exists ; 2010 ; 2010 ; History of Geo- and Space Sciences Volume 1 ; 1 >
-      au < manifest ; exists ; 2011 ; 2011 ; History of Geo- and Space Sciences Volume 2 ; 2 >
-      au < finished ; crawling ; 2012 ; 2012 ; History of Geo- and Space Sciences Volume 3 ; 3 >
-      au < crawling ; exists ; 2013 ; 2013 ; History of Geo- and Space Sciences Volume 4 ; 4 >
-      au < crawling ; exists ; 2014 ; 2014 ; History of Geo- and Space Sciences Volume 5 ; 5 >
-      au < crawling ; exists ; 2015 ; 2015 ; History of Geo- and Space Sciences Volume 6 ; 6 >
+      au < manifest ; exists ; 2010 ; 2010 ; History of Geo- and Space Sciences Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; History of Geo- and Space Sciences Volume 2 ; 2 ; >
+      au < finished ; crawling ; 2012 ; 2012 ; History of Geo- and Space Sciences Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; History of Geo- and Space Sciences Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; History of Geo- and Space Sciences Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; History of Geo- and Space Sciences Volume 6 ; 6 ; >
     
    }
     
@@ -889,25 +889,25 @@
       param[base_url] = http://www.hydrol-earth-syst-sci.net/
       param[home_url] = http://www.hydrology-and-earth-system-sciences.net/
 
-      au < manifest ; exists ; 1997 ; 1997 ; Hydrology and Earth System Sciences Volume 1 ; 1 >
-      au < manifest ; exists ; 1998 ; 1998 ; Hydrology and Earth System Sciences Volume 2 ; 2 >
-      au < manifest ; exists ; 1999 ; 1999 ; Hydrology and Earth System Sciences Volume 3 ; 3 >
-      au < manifest ; exists ; 2000 ; 2000 ; Hydrology and Earth System Sciences Volume 4 ; 4 >
-      au < manifest ; exists ; 2001 ; 2001 ; Hydrology and Earth System Sciences Volume 5 ; 5 >
-      au < manifest ; exists ; 2002 ; 2002 ; Hydrology and Earth System Sciences Volume 6 ; 6 >
-      au < manifest ; exists ; 2003 ; 2003 ; Hydrology and Earth System Sciences Volume 7 ; 7 >
-      au < manifest ; exists ; 2004 ; 2004 ; Hydrology and Earth System Sciences Volume 8 ; 8 >
-      au < manifest ; exists ; 2005 ; 2005 ; Hydrology and Earth System Sciences Volume 9 ; 9 >
-      au < manifest ; exists ; 2006 ; 2006 ; Hydrology and Earth System Sciences Volume 10 ; 10 >
-      au < manifest ; exists ; 2007 ; 2007 ; Hydrology and Earth System Sciences Volume 11 ; 11 >
-      au < manifest ; exists ; 2008 ; 2008 ; Hydrology and Earth System Sciences Volume 12 ; 12 >
-      au < manifest ; exists ; 2009 ; 2009 ; Hydrology and Earth System Sciences Volume 13 ; 13 >
-      au < manifest ; exists ; 2010 ; 2010 ; Hydrology and Earth System Sciences Volume 14 ; 14 >
-      au < manifest ; exists ; 2011 ; 2011 ; Hydrology and Earth System Sciences Volume 15 ; 15 >
-      au < finished ; frozen ; 2012 ; 2012 ; Hydrology and Earth System Sciences Volume 16 ; 16 >
-      au < crawling ; exists ; 2013 ; 2013 ; Hydrology and Earth System Sciences Volume 17 ; 17 >
-      au < crawling ; exists ; 2014 ; 2014 ; Hydrology and Earth System Sciences Volume 18 ; 18 >
-      au < crawling ; exists ; 2015 ; 2015 ; Hydrology and Earth System Sciences Volume 19 ; 19 >
+      au < manifest ; exists ; 1997 ; 1997 ; Hydrology and Earth System Sciences Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1998 ; 1998 ; Hydrology and Earth System Sciences Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1999 ; 1999 ; Hydrology and Earth System Sciences Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; Hydrology and Earth System Sciences Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Hydrology and Earth System Sciences Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Hydrology and Earth System Sciences Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Hydrology and Earth System Sciences Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Hydrology and Earth System Sciences Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Hydrology and Earth System Sciences Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Hydrology and Earth System Sciences Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Hydrology and Earth System Sciences Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Hydrology and Earth System Sciences Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Hydrology and Earth System Sciences Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Hydrology and Earth System Sciences Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Hydrology and Earth System Sciences Volume 15 ; 15 ; >
+      au < finished ; frozen ; 2012 ; 2012 ; Hydrology and Earth System Sciences Volume 16 ; 16 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Hydrology and Earth System Sciences Volume 17 ; 17 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Hydrology and Earth System Sciences Volume 18 ; 18 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Hydrology and Earth System Sciences Volume 19 ; 19 ; >
     
    }
     
@@ -921,18 +921,18 @@
       param[home_url] = http://www.hydrology-and-earth-system-sciences.net/
       comment[doNotProcess] = Do Not Process Discussions paper 
 
-      au < doNotProcess ; exists ; 2004 ; 2004 ; Hydrology and Earth System Sciences Discussions Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2005 ; 2005 ; Hydrology and Earth System Sciences Discussions Volume 2 ; 2 >
-      au < doNotProcess ; exists ; 2006 ; 2006 ; Hydrology and Earth System Sciences Discussions Volume 3 ; 3 >
-      au < doNotProcess ; exists ; 2007 ; 2007 ; Hydrology and Earth System Sciences Discussions Volume 4 ; 4 >
-      au < doNotProcess ; exists ; 2008 ; 2008 ; Hydrology and Earth System Sciences Discussions Volume 5 ; 5 >
-      au < doNotProcess ; exists ; 2009 ; 2009 ; Hydrology and Earth System Sciences Discussions Volume 6 ; 6 >
-      au < doNotProcess ; exists ; 2010 ; 2010 ; Hydrology and Earth System Sciences Discussions Volume 7 ; 7 >
-      au < doNotProcess ; exists ; 2011 ; 2011 ; Hydrology and Earth System Sciences Discussions Volume 8 ; 8 >
-      au < doNotProcess ; exists ; 2012 ; 2012 ; Hydrology and Earth System Sciences Discussions Volume 9 ; 9 >
-      au < doNotProcess ; exists ; 2013 ; 2013 ; Hydrology and Earth System Sciences Discussions Volume 10 ; 10 >
-      au < doNotProcess ; exists ; 2014 ; 2014 ; Hydrology and Earth System Sciences Discussions Volume 11 ; 11 >
-      au < doNotProcess ; exists ; 2015 ; 2015 ; Hydrology and Earth System Sciences Discussions Volume 12 ; 12 >
+      au < doNotProcess ; exists ; 2004 ; 2004 ; Hydrology and Earth System Sciences Discussions Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2005 ; 2005 ; Hydrology and Earth System Sciences Discussions Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2006 ; 2006 ; Hydrology and Earth System Sciences Discussions Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2007 ; 2007 ; Hydrology and Earth System Sciences Discussions Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2008 ; 2008 ; Hydrology and Earth System Sciences Discussions Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2009 ; 2009 ; Hydrology and Earth System Sciences Discussions Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2010 ; 2010 ; Hydrology and Earth System Sciences Discussions Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2011 ; 2011 ; Hydrology and Earth System Sciences Discussions Volume 8 ; 8 ; >
+      au < doNotProcess ; exists ; 2012 ; 2012 ; Hydrology and Earth System Sciences Discussions Volume 9 ; 9 ; >
+      au < doNotProcess ; exists ; 2013 ; 2013 ; Hydrology and Earth System Sciences Discussions Volume 10 ; 10 ; >
+      au < doNotProcess ; exists ; 2014 ; 2014 ; Hydrology and Earth System Sciences Discussions Volume 11 ; 11 ; >
+      au < doNotProcess ; exists ; 2015 ; 2015 ; Hydrology and Earth System Sciences Discussions Volume 12 ; 12 ; >
     
    }
     
@@ -946,26 +946,26 @@
       param[base_url] = http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/
       param[home_url] = http://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/
 
-      au < finished ; finished ; 2012 ; 2012 ; ISPRS Annals Volume I-2 ; I-2 >
-      au < finished ; finished ; 2012 ; 2012 ; ISPRS Annals Volume I-3 ; I-3 >
-      au < finished ; finished ; 2012 ; 2012 ; ISPRS Annals Volume I-4 ; I-4 >
-      au < finished ; finished ; 2012 ; 2012 ; ISPRS Annals Volume I-7 ; I-7 >
-      au < finished ; finished ; 2013 ; 2013 ; ISPRS Annals Volume II-3/W1 ; II-3-W1 >
-      au < finished ; finished ; 2013 ; 2013 ; ISPRS Annals Volume II-5/W1 ; II-5-W1 >
-      au < finished ; finished ; 2013 ; 2013 ; ISPRS Annals Volume II-3/W2 ; II-3-W2 >
-      au < finished ; finished ; 2013 ; 2013 ; ISPRS Annals Volume II-5/W2 ; II-5-W2 >
-      au < finished ; finished ; 2013 ; 2013 ; ISPRS Annals Volume II-3/W3 ; II-3-W3 >
-      au < finished ; finished ; 2013 ; 2013 ; ISPRS Annals Volume II-2/W1 ; II-2-W1 >
-      au < finished ; finished ; 2013 ; 2013 ; ISPRS Annals Volume II-4/W1 ; II-4-W1 >
-      au < deepCrawl ; exists ; 2014 ; 2014 ; ISPRS Annals Volume II-1 ; II-1 >
-      au < finished ; crawling ; 2014 ; 2014 ; ISPRS Annals Volume II-2 ; II-2 >
-      au < finished ; crawling ; 2014 ; 2014 ; ISPRS Annals Volume II-3 ; II-3 >
-      au < finished ; finished ; 2014 ; 2014 ; ISPRS Annals Volume II-4 ; II-4 >
-      au < finished ; finished ; 2014 ; 2014 ; ISPRS Annals Volume II-5 ; II-5 >
-      au < finished ; finished ; 2014 ; 2014 ; ISPRS Annals Volume II-6 ; II-6 >
-      au < finished ; crawling ; 2014 ; 2014 ; ISPRS Annals Volume II-7 ; II-7 >
-      au < finished ; crawling ; 2014 ; 2014 ; ISPRS Annals Volume II-8 ; II-8 >
-      au < crawling ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-3/W4 ; II-3-W4 >
+      au < finished ; finished ; 2012 ; 2012 ; ISPRS Annals Volume I-2 ; I-2 ; >
+      au < finished ; finished ; 2012 ; 2012 ; ISPRS Annals Volume I-3 ; I-3 ; >
+      au < finished ; finished ; 2012 ; 2012 ; ISPRS Annals Volume I-4 ; I-4 ; >
+      au < finished ; finished ; 2012 ; 2012 ; ISPRS Annals Volume I-7 ; I-7 ; >
+      au < finished ; finished ; 2013 ; 2013 ; ISPRS Annals Volume II-3/W1 ; II-3-W1 ; >
+      au < finished ; finished ; 2013 ; 2013 ; ISPRS Annals Volume II-5/W1 ; II-5-W1 ; >
+      au < finished ; finished ; 2013 ; 2013 ; ISPRS Annals Volume II-3/W2 ; II-3-W2 ; >
+      au < finished ; finished ; 2013 ; 2013 ; ISPRS Annals Volume II-5/W2 ; II-5-W2 ; >
+      au < finished ; finished ; 2013 ; 2013 ; ISPRS Annals Volume II-3/W3 ; II-3-W3 ; >
+      au < finished ; finished ; 2013 ; 2013 ; ISPRS Annals Volume II-2/W1 ; II-2-W1 ; >
+      au < finished ; finished ; 2013 ; 2013 ; ISPRS Annals Volume II-4/W1 ; II-4-W1 ; >
+      au < deepCrawl ; exists ; 2014 ; 2014 ; ISPRS Annals Volume II-1 ; II-1 ; >
+      au < finished ; crawling ; 2014 ; 2014 ; ISPRS Annals Volume II-2 ; II-2 ; >
+      au < finished ; crawling ; 2014 ; 2014 ; ISPRS Annals Volume II-3 ; II-3 ; >
+      au < finished ; finished ; 2014 ; 2014 ; ISPRS Annals Volume II-4 ; II-4 ; >
+      au < finished ; finished ; 2014 ; 2014 ; ISPRS Annals Volume II-5 ; II-5 ; >
+      au < finished ; finished ; 2014 ; 2014 ; ISPRS Annals Volume II-6 ; II-6 ; >
+      au < finished ; crawling ; 2014 ; 2014 ; ISPRS Annals Volume II-7 ; II-7 ; >
+      au < finished ; crawling ; 2014 ; 2014 ; ISPRS Annals Volume II-8 ; II-8 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; ISPRS Annals Volume II-3/W4 ; II-3-W4 ; >
     
    }
 
@@ -981,34 +981,34 @@
       param[home_url] = http://www.isprs.org/proceedings/
       comment[0] = needs review on file directory on website 
 
-      au < expected ; exists ; 1978 ; 1978 ; ISPRS Archives Volume XXII ; XXII >
-      au < exists ; exists ; 1980 ; 1980 ; ISPRS Archives Volume XXIII ; XXIII >
-      au < expected ; exists ; 1982 ; 1982 ; ISPRS Archives Volume XXIV ; XXIV >
-      au < exists ; exists ; 1984 ; 1984 ; ISPRS Archives Volume XXV ; XXV >
-      au < exists ; exists ; 1986 ; 1986 ; ISPRS Archives Volume XXVI ; XXVI >
-      au < exists ; exists ; 1988 ; 1988 ; ISPRS Archives Volume XXVII ; XXVII >
-      au < expected ; exists ; 1990 ; 1990 ; ISPRS Archives Volume XXVIII ; XXVIII >
-      au < exists ; exists ; 1992 ; 1992 ; ISPRS Archives Volume XXIX ; XXIX >
-      au < expected ; exists ; 1994 ; 1994 ; ISPRS Archives Volume XXX (1994) ; XXX >
-      au < expected ; exists ; 1995 ; 1995 ; ISPRS Archives Volume XXX (1995) ; XXX >
-      au < exists ; exists ; 1996 ; 1996 ; ISPRS Archives Volume XXXI ; XXXI >
-      au < expected ; exists ; 1997 ; 1997 ; ISPRS Archives Volume XXXII (1997) ; XXXII >
-      au < exists ; exists ; 1998 ; 1998 ; ISPRS Archives Volume XXXII (1998) ; XXXII >
-      au < exists ; exists ; 1999 ; 1999 ; ISPRS Archives Volume XXXII (1999) ; XXXII >
-      au < exists ; exists ; 2000 ; 2000 ; ISPRS Archives Volume XXXIII ; XXXIII >
-      au < exists ; exists ; 2001 ; 2001 ; ISPRS Archives Volume XXXIV (2001) ; XXXIV >
-      au < exists ; exists ; 2002 ; 2002 ; ISPRS Archives Volume XXXIV (2002) ; XXXIV >
-      au < exists ; exists ; 2003 ; 2003 ; ISPRS Archives Volume XXXIV (2003) ; XXXIV >
-      au < exists ; exists ; 2004 ; 2004 ; ISPRS Archives Volume XXXIV (2004) ; XXXIV >
-      au < exists ; exists ; 2004 ; 2004 ; ISPRS Archives Volume XXXV ; XXXV >
-      au < exists ; exists ; 2004 ; 2004 ; ISPRS Archives Volume XXXVI (2004) ; XXXVI >
-      au < exists ; exists ; 2005 ; 2005 ; ISPRS Archives Volume XXXVI (2005) ; XXXVI >
-      au < exists ; exists ; 2006 ; 2006 ; ISPRS Archives Volume XXXVI (2006) ; XXXVI >
-      au < exists ; exists ; 2007 ; 2007 ; ISPRS Archives Volume XXXVI (2007) ; XXXVI >
-      au < exists ; exists ; 2008 ; 2008 ; ISPRS Archives Volume XXXVII ; XXXVII >
-      au < exists ; exists ; 2008 ; 2008 ; ISPRS Archives Volume XXXVIII (2008) ; XXXVIII >
-      au < exists ; exists ; 2009 ; 2009 ; ISPRS Archives Volume XXXVIII (2009) ; XXXVIII >
-      au < exists ; exists ; 2010 ; 2010 ; ISPRS Archives Volume XXXVIII (2010) ; XXXVIII >
+      au < expected ; exists ; 1978 ; 1978 ; ISPRS Archives Volume XXII ; XXII ; >
+      au < exists ; exists ; 1980 ; 1980 ; ISPRS Archives Volume XXIII ; XXIII ; >
+      au < expected ; exists ; 1982 ; 1982 ; ISPRS Archives Volume XXIV ; XXIV ; >
+      au < exists ; exists ; 1984 ; 1984 ; ISPRS Archives Volume XXV ; XXV ; >
+      au < exists ; exists ; 1986 ; 1986 ; ISPRS Archives Volume XXVI ; XXVI ; >
+      au < exists ; exists ; 1988 ; 1988 ; ISPRS Archives Volume XXVII ; XXVII ; >
+      au < expected ; exists ; 1990 ; 1990 ; ISPRS Archives Volume XXVIII ; XXVIII ; >
+      au < exists ; exists ; 1992 ; 1992 ; ISPRS Archives Volume XXIX ; XXIX ; >
+      au < expected ; exists ; 1994 ; 1994 ; ISPRS Archives Volume XXX (1994) ; XXX ; >
+      au < expected ; exists ; 1995 ; 1995 ; ISPRS Archives Volume XXX (1995) ; XXX ; >
+      au < exists ; exists ; 1996 ; 1996 ; ISPRS Archives Volume XXXI ; XXXI ; >
+      au < expected ; exists ; 1997 ; 1997 ; ISPRS Archives Volume XXXII (1997) ; XXXII ; >
+      au < exists ; exists ; 1998 ; 1998 ; ISPRS Archives Volume XXXII (1998) ; XXXII ; >
+      au < exists ; exists ; 1999 ; 1999 ; ISPRS Archives Volume XXXII (1999) ; XXXII ; >
+      au < exists ; exists ; 2000 ; 2000 ; ISPRS Archives Volume XXXIII ; XXXIII ; >
+      au < exists ; exists ; 2001 ; 2001 ; ISPRS Archives Volume XXXIV (2001) ; XXXIV ; >
+      au < exists ; exists ; 2002 ; 2002 ; ISPRS Archives Volume XXXIV (2002) ; XXXIV ; >
+      au < exists ; exists ; 2003 ; 2003 ; ISPRS Archives Volume XXXIV (2003) ; XXXIV ; >
+      au < exists ; exists ; 2004 ; 2004 ; ISPRS Archives Volume XXXIV (2004) ; XXXIV ; >
+      au < exists ; exists ; 2004 ; 2004 ; ISPRS Archives Volume XXXV ; XXXV ; >
+      au < exists ; exists ; 2004 ; 2004 ; ISPRS Archives Volume XXXVI (2004) ; XXXVI ; >
+      au < exists ; exists ; 2005 ; 2005 ; ISPRS Archives Volume XXXVI (2005) ; XXXVI ; >
+      au < exists ; exists ; 2006 ; 2006 ; ISPRS Archives Volume XXXVI (2006) ; XXXVI ; >
+      au < exists ; exists ; 2007 ; 2007 ; ISPRS Archives Volume XXXVI (2007) ; XXXVI ; >
+      au < exists ; exists ; 2008 ; 2008 ; ISPRS Archives Volume XXXVII ; XXXVII ; >
+      au < exists ; exists ; 2008 ; 2008 ; ISPRS Archives Volume XXXVIII (2008) ; XXXVIII ; >
+      au < exists ; exists ; 2009 ; 2009 ; ISPRS Archives Volume XXXVIII (2009) ; XXXVIII ; >
+      au < exists ; exists ; 2010 ; 2010 ; ISPRS Archives Volume XXXVIII (2010) ; XXXVIII ; >
     }
     
     {
@@ -1016,56 +1016,56 @@
       param[base_url] = http://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/
       param[home_url] = http://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/
 
-      au < manifest ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-1/C22 ; XXXVIII-1-C22 >
-      au < manifest ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-3/W22 ; XXXVIII-3-W22 >
-      au < manifest ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-4/C21 ; XXXVIII-4-C21 >
-      au < manifest ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-4/W19 ; XXXVIII-4-W19 >
-      au < manifest ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-4/W25 ; XXXVIII-4-W25 >
-      au < manifest ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-5/W12 ; XXXVIII-5-W12 >
-      au < manifest ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-5/W16 ; XXXVIII-5-W16 >
-      au < manifest ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-6/W27 ; XXXVIII-6-W27 >
-      au < manifest ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-8/W20 ; XXXVIII-8-W20 >
-      au < finished ; finished ; 2012 ; 2012 ; ISPRS Archives Volume XXXVIII-4/C26 ; XXXVIII-4-C26 >
-      au < crawling ; exists ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B1 ; XXXIX-B1 >
-      au < finished ; finished ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B2 ; XXXIX-B2 >
-      au < finished ; finished ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B3 ; XXXIX-B3 >
-      au < finished ; finished ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B4 ; XXXIX-B4 >
-      au < crawling ; exists ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B5 ; XXXIX-B5 >
-      au < finished ; finished ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B6 ; XXXIX-B6 >
-      au < finished ; finished ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B7 ; XXXIX-B7 >
-      au < finished ; finished ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B8 ; XXXIX-B8 >
-      au < finished ; finished ; 2013 ; 2013 ; ISPRS Archives Volume XL-1/W1 ; XL-1-W1 >
-      au < finished ; finished ; 2013 ; 2013 ; ISPRS Archives Volume XL-1/W2 ; XL-1-W2 >
-      au < finished ; finished ; 2013 ; 2013 ; ISPRS Archives Volume XL-1/W3 ; XL-1-W3 >
-      au < finished ; finished ; 2013 ; 2013 ; ISPRS Archives Volume XL-2/W1 ; XL-2-W1 >
-      au < crawling ; exists ; 2013 ; 2013 ; ISPRS Archives Volume XL-2/W2 ; XL-2-W2 >
-      au < crawling ; exists ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W1 ; XL-4-W1 >
-      au < finished ; finished ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W2 ; XL-4-W2 >
-      au < finished ; finished ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W3 ; XL-4-W3 >
-      au < finished ; finished ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W4 ; XL-4-W4 >
-      au < finished ; finished ; 2013 ; 2013 ; ISPRS Archives Volume XL-5/W1 ; XL-5-W1 >
-      au < finished ; finished ; 2013 ; 2013 ; ISPRS Archives Volume XL-5/W3 ; XL-5-W3 >
-      au < finished ; finished ; 2013 ; 2013 ; ISPRS Archives Volume XL-7/W1 ; XL-7-W1 >
-      au < finished ; finished ; 2013 ; 2013 ; ISPRS Archives Volume XL-7/W2 ; XL-7-W2 >
-      au < finished ; finished ; 2014 ; 2014 ; ISPRS Archives Volume XL-2/W3 ; XL-2-W3 >
-      au < finished ; finished ; 2014 ; 2014 ; ISPRS Archives Volume XL-3/W1 ; XL-3-W1 >
-      au < finished ; finished ; 2014 ; 2014 ; ISPRS Archives Volume XL-5/W2 ; XL-5-W2 >
-      au < finished ; crawling ; 2014 ; 2014 ; ISPRS Archives Volume XL-1 ; XL-1 >
-      au < finished ; crawling ; 2014 ; 2014 ; ISPRS Archives Volume XL-2 ; XL-2 >
-      au < finished ; crawling ; 2014 ; 2014 ; ISPRS Archives Volume XL-3 ; XL-3 >
-      au < finished ; finished ; 2014 ; 2014 ; ISPRS Archives Volume XL-4 ; XL-4 >
-      au < finished ; finished ; 2014 ; 2014 ; ISPRS Archives Volume XL-5 ; XL-5 >
-      au < finished ; finished ; 2014 ; 2014 ; ISPRS Archives Volume XL-6 ; XL-6 >
-      au < deepCrawl ; exists ; 2014 ; 2014 ; ISPRS Archives Volume XL-7 ; XL-7 >
-      au < deepCrawl ; exists ; 2014 ; 2014 ; ISPRS Archives Volume XL-8 ; XL-8 >
-      au < crawling ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-3/W2 ; XL-3-W2 >
-      au < crawling ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-4/W5 ; XL-4-W5 >
-      au < crawling ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-4/W7 ; XL-4-W7 >
-      au < crawling ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W4 ; XL-5-W4 >
-      au < crawling ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W5 ; XL-5-W5 >
-      au < crawling ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W6 ; XL-5-W6 >
-      au < crawling ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-6/W1 ; XL-6-W1 >
-      au < crawling ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-7/W3 ; XL-7-W3 >
+      au < manifest ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-1/C22 ; XXXVIII-1-C22 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-3/W22 ; XXXVIII-3-W22 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-4/C21 ; XXXVIII-4-C21 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-4/W19 ; XXXVIII-4-W19 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-4/W25 ; XXXVIII-4-W25 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-5/W12 ; XXXVIII-5-W12 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-5/W16 ; XXXVIII-5-W16 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-6/W27 ; XXXVIII-6-W27 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; ISPRS Archives Volume XXXVIII-8/W20 ; XXXVIII-8-W20 ; >
+      au < finished ; finished ; 2012 ; 2012 ; ISPRS Archives Volume XXXVIII-4/C26 ; XXXVIII-4-C26 ; >
+      au < crawling ; exists ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B1 ; XXXIX-B1 ; >
+      au < finished ; finished ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B2 ; XXXIX-B2 ; >
+      au < finished ; finished ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B3 ; XXXIX-B3 ; >
+      au < finished ; finished ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B4 ; XXXIX-B4 ; >
+      au < crawling ; exists ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B5 ; XXXIX-B5 ; >
+      au < finished ; finished ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B6 ; XXXIX-B6 ; >
+      au < finished ; finished ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B7 ; XXXIX-B7 ; >
+      au < finished ; finished ; 2012 ; 2012 ; ISPRS Archives Volume XXXIX-B8 ; XXXIX-B8 ; >
+      au < finished ; finished ; 2013 ; 2013 ; ISPRS Archives Volume XL-1/W1 ; XL-1-W1 ; >
+      au < finished ; finished ; 2013 ; 2013 ; ISPRS Archives Volume XL-1/W2 ; XL-1-W2 ; >
+      au < finished ; finished ; 2013 ; 2013 ; ISPRS Archives Volume XL-1/W3 ; XL-1-W3 ; >
+      au < finished ; finished ; 2013 ; 2013 ; ISPRS Archives Volume XL-2/W1 ; XL-2-W1 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; ISPRS Archives Volume XL-2/W2 ; XL-2-W2 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W1 ; XL-4-W1 ; >
+      au < finished ; finished ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W2 ; XL-4-W2 ; >
+      au < finished ; finished ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W3 ; XL-4-W3 ; >
+      au < finished ; finished ; 2013 ; 2013 ; ISPRS Archives Volume XL-4/W4 ; XL-4-W4 ; >
+      au < finished ; finished ; 2013 ; 2013 ; ISPRS Archives Volume XL-5/W1 ; XL-5-W1 ; >
+      au < finished ; finished ; 2013 ; 2013 ; ISPRS Archives Volume XL-5/W3 ; XL-5-W3 ; >
+      au < finished ; finished ; 2013 ; 2013 ; ISPRS Archives Volume XL-7/W1 ; XL-7-W1 ; >
+      au < finished ; finished ; 2013 ; 2013 ; ISPRS Archives Volume XL-7/W2 ; XL-7-W2 ; >
+      au < finished ; finished ; 2014 ; 2014 ; ISPRS Archives Volume XL-2/W3 ; XL-2-W3 ; >
+      au < finished ; finished ; 2014 ; 2014 ; ISPRS Archives Volume XL-3/W1 ; XL-3-W1 ; >
+      au < finished ; finished ; 2014 ; 2014 ; ISPRS Archives Volume XL-5/W2 ; XL-5-W2 ; >
+      au < finished ; crawling ; 2014 ; 2014 ; ISPRS Archives Volume XL-1 ; XL-1 ; >
+      au < finished ; crawling ; 2014 ; 2014 ; ISPRS Archives Volume XL-2 ; XL-2 ; >
+      au < finished ; crawling ; 2014 ; 2014 ; ISPRS Archives Volume XL-3 ; XL-3 ; >
+      au < finished ; finished ; 2014 ; 2014 ; ISPRS Archives Volume XL-4 ; XL-4 ; >
+      au < finished ; finished ; 2014 ; 2014 ; ISPRS Archives Volume XL-5 ; XL-5 ; >
+      au < finished ; finished ; 2014 ; 2014 ; ISPRS Archives Volume XL-6 ; XL-6 ; >
+      au < deepCrawl ; exists ; 2014 ; 2014 ; ISPRS Archives Volume XL-7 ; XL-7 ; >
+      au < deepCrawl ; exists ; 2014 ; 2014 ; ISPRS Archives Volume XL-8 ; XL-8 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-3/W2 ; XL-3-W2 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-4/W5 ; XL-4-W5 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-4/W7 ; XL-4-W7 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W4 ; XL-5-W4 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W5 ; XL-5-W5 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-5/W6 ; XL-5-W6 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-6/W1 ; XL-6-W1 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; ISPRS Archives Volume XL-7/W3 ; XL-7-W3 ; >
 
      }
    }
@@ -1080,10 +1080,10 @@
       param[base_url] = http://www.j-sens-sens-syst.net/
       param[home_url] = http://www.journal-of-sensors-and-sensor-systems.net/
 
-      au < finished ; crawling ; 2012 ; 2012 ; Journal of Sensors and Sensor Systems Volume 1 ; 1 >
-      au < crawling ; exists ; 2013 ; 2013 ; Journal of Sensors and Sensor Systems Volume 2 ; 2 >
-      au < crawling ; exists ; 2014 ; 2014 ; Journal of Sensors and Sensor Systems Volume 3 ; 3 >
-      au < crawling ; exists ; 2015 ; 2015 ; Journal of Sensors and Sensor Systems Volume 4 ; 4 >
+      au < finished ; crawling ; 2012 ; 2012 ; Journal of Sensors and Sensor Systems Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Journal of Sensors and Sensor Systems Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Journal of Sensors and Sensor Systems Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Journal of Sensors and Sensor Systems Volume 4 ; 4 ; >
     
    }
    
@@ -1097,12 +1097,12 @@
       param[base_url] = http://www.mech-sci.net/
       param[home_url] = http://www.mechanical-sciences.net/
 
-      au < manifest ; exists ; 2010 ; 2010 ; Mechanical Sciences Volume 1 ; 1 >
-      au < manifest ; exists ; 2011 ; 2011 ; Mechanical Sciences Volume 2 ; 2 >
-      au < finished ; crawling ; 2012 ; 2012 ; Mechanical Sciences Volume 3 ; 3 >
-      au < crawling ; exists ; 2013 ; 2013 ; Mechanical Sciences Volume 4 ; 4 >
-      au < crawling ; exists ; 2014 ; 2014 ; Mechanical Sciences Volume 5 ; 5 >
-      au < crawling ; exists ; 2015 ; 2015 ; Mechanical Sciences Volume 6 ; 6 >
+      au < manifest ; exists ; 2010 ; 2010 ; Mechanical Sciences Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Mechanical Sciences Volume 2 ; 2 ; >
+      au < finished ; crawling ; 2012 ; 2012 ; Mechanical Sciences Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Mechanical Sciences Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Mechanical Sciences Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Mechanical Sciences Volume 6 ; 6 ; >
     
    }
     
@@ -1116,21 +1116,21 @@
       param[base_url] = http://www.nat-hazards-earth-syst-sci.net/
       param[home_url] = http://www.natural-hazards-and-earth-system-sciences.net/
 
-      au < manifest ; exists ; 2001 ; 2001 ; Natural Hazards and Earth System Sciences Volume 1 ; 1 >
-      au < manifest ; exists ; 2002 ; 2002 ; Natural Hazards and Earth System Sciences Volume 2 ; 2 >
-      au < manifest ; exists ; 2003 ; 2003 ; Natural Hazards and Earth System Sciences Volume 3 ; 3 >
-      au < manifest ; exists ; 2004 ; 2004 ; Natural Hazards and Earth System Sciences Volume 4 ; 4 >
-      au < manifest ; exists ; 2005 ; 2005 ; Natural Hazards and Earth System Sciences Volume 5 ; 5 >
-      au < manifest ; exists ; 2006 ; 2006 ; Natural Hazards and Earth System Sciences Volume 6 ; 6 >
-      au < manifest ; exists ; 2007 ; 2007 ; Natural Hazards and Earth System Sciences Volume 7 ; 7 >
-      au < manifest ; exists ; 2008 ; 2008 ; Natural Hazards and Earth System Sciences Volume 8 ; 8 >
-      au < manifest ; exists ; 2009 ; 2009 ; Natural Hazards and Earth System Sciences Volume 9 ; 9 >
-      au < manifest ; exists ; 2010 ; 2010 ; Natural Hazards and Earth System Sciences Volume 10 ; 10 >
-      au < manifest ; exists ; 2011 ; 2011 ; Natural Hazards and Earth System Sciences Volume 11 ; 11 >
-      au < finished ; crawling ; 2012 ; 2012 ; Natural Hazards and Earth System Sciences Volume 12 ; 12 >
-      au < crawling ; exists ; 2013 ; 2013 ; Natural Hazards and Earth System Sciences Volume 13 ; 13 >
-      au < crawling ; exists ; 2014 ; 2014 ; Natural Hazards and Earth System Sciences Volume 14 ; 14 >
-      au < crawling ; exists ; 2015 ; 2015 ; Natural Hazards and Earth System Sciences Volume 15 ; 15 >
+      au < manifest ; exists ; 2001 ; 2001 ; Natural Hazards and Earth System Sciences Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Natural Hazards and Earth System Sciences Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Natural Hazards and Earth System Sciences Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Natural Hazards and Earth System Sciences Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Natural Hazards and Earth System Sciences Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Natural Hazards and Earth System Sciences Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Natural Hazards and Earth System Sciences Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Natural Hazards and Earth System Sciences Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Natural Hazards and Earth System Sciences Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Natural Hazards and Earth System Sciences Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Natural Hazards and Earth System Sciences Volume 11 ; 11 ; >
+      au < finished ; crawling ; 2012 ; 2012 ; Natural Hazards and Earth System Sciences Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Natural Hazards and Earth System Sciences Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Natural Hazards and Earth System Sciences Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Natural Hazards and Earth System Sciences Volume 15 ; 15 ; >
     
    }
    
@@ -1144,9 +1144,9 @@
       param[home_url] = http://www.natural-hazards-and-earth-system-sciences.net/
       comment[doNotProcess] = Do Not Process Discussions paper 
 
-      au < doNotProcess ; exists ; 2013 ; 2013 ; Natural Hazards and Earth System Sciences Discussions Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2014 ; 2014 ; Natural Hazards and Earth System Sciences Discussions Volume 2 ; 2 >
-      au < doNotProcess ; exists ; 2015 ; 2015 ; Natural Hazards and Earth System Sciences Discussions Volume 3 ; 3 >
+      au < doNotProcess ; exists ; 2013 ; 2013 ; Natural Hazards and Earth System Sciences Discussions Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2014 ; 2014 ; Natural Hazards and Earth System Sciences Discussions Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2015 ; 2015 ; Natural Hazards and Earth System Sciences Discussions Volume 3 ; 3 ; >
  
    }
     
@@ -1160,28 +1160,28 @@
       param[base_url] = http://www.nonlin-processes-geophys.net/
       param[home_url] = http://www.nonlinear-processes-in-geophysics.net/
 
-      au < manifest ; exists ; 1994 ; 1994 ; Nonlinear Processes in Geophysics Volume 1 ; 1 >
-      au < manifest ; exists ; 1995 ; 1995 ; Nonlinear Processes in Geophysics Volume 2 ; 2 >
-      au < manifest ; exists ; 1996 ; 1996 ; Nonlinear Processes in Geophysics Volume 3 ; 3 >
-      au < manifest ; exists ; 1997 ; 1997 ; Nonlinear Processes in Geophysics Volume 4 ; 4 >
-      au < manifest ; exists ; 1998 ; 1998 ; Nonlinear Processes in Geophysics Volume 5 ; 5 >
-      au < manifest ; exists ; 1999 ; 1999 ; Nonlinear Processes in Geophysics Volume 6 ; 6 >
-      au < manifest ; exists ; 2000 ; 2000 ; Nonlinear Processes in Geophysics Volume 7 ; 7 >
-      au < manifest ; exists ; 2001 ; 2001 ; Nonlinear Processes in Geophysics Volume 8 ; 8 >
-      au < manifest ; exists ; 2002 ; 2002 ; Nonlinear Processes in Geophysics Volume 9 ; 9 >
-      au < manifest ; exists ; 2003 ; 2003 ; Nonlinear Processes in Geophysics Volume 10 ; 10 >
-      au < manifest ; exists ; 2004 ; 2004 ; Nonlinear Processes in Geophysics Volume 11 ; 11 >
-      au < manifest ; exists ; 2005 ; 2005 ; Nonlinear Processes in Geophysics Volume 12 ; 12 >
-      au < manifest ; exists ; 2006 ; 2006 ; Nonlinear Processes in Geophysics Volume 13 ; 13 >
-      au < manifest ; exists ; 2007 ; 2007 ; Nonlinear Processes in Geophysics Volume 14 ; 14 >
-      au < manifest ; exists ; 2008 ; 2008 ; Nonlinear Processes in Geophysics Volume 15 ; 15 >
-      au < manifest ; exists ; 2009 ; 2009 ; Nonlinear Processes in Geophysics Volume 16 ; 16 >
-      au < manifest ; exists ; 2010 ; 2010 ; Nonlinear Processes in Geophysics Volume 17 ; 17 >
-      au < manifest ; exists ; 2011 ; 2011 ; Nonlinear Processes in Geophysics Volume 18 ; 18 >
-      au < finished ; crawling ; 2012 ; 2012 ; Nonlinear Processes in Geophysics Volume 19 ; 19 >
-      au < crawling ; exists ; 2013 ; 2013 ; Nonlinear Processes in Geophysics Volume 20 ; 20 >
-      au < crawling ; exists ; 2014 ; 2014 ; Nonlinear Processes in Geophysics Volume 21 ; 21 >
-      au < crawling ; exists ; 2015 ; 2015 ; Nonlinear Processes in Geophysics Volume 22 ; 22 >
+      au < manifest ; exists ; 1994 ; 1994 ; Nonlinear Processes in Geophysics Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1995 ; 1995 ; Nonlinear Processes in Geophysics Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1996 ; 1996 ; Nonlinear Processes in Geophysics Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1997 ; 1997 ; Nonlinear Processes in Geophysics Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1998 ; 1998 ; Nonlinear Processes in Geophysics Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1999 ; 1999 ; Nonlinear Processes in Geophysics Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; Nonlinear Processes in Geophysics Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Nonlinear Processes in Geophysics Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Nonlinear Processes in Geophysics Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Nonlinear Processes in Geophysics Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Nonlinear Processes in Geophysics Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Nonlinear Processes in Geophysics Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Nonlinear Processes in Geophysics Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Nonlinear Processes in Geophysics Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Nonlinear Processes in Geophysics Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Nonlinear Processes in Geophysics Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Nonlinear Processes in Geophysics Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Nonlinear Processes in Geophysics Volume 18 ; 18 ; >
+      au < finished ; crawling ; 2012 ; 2012 ; Nonlinear Processes in Geophysics Volume 19 ; 19 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Nonlinear Processes in Geophysics Volume 20 ; 20 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Nonlinear Processes in Geophysics Volume 21 ; 21 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Nonlinear Processes in Geophysics Volume 22 ; 22 ; >
     
    }
 
@@ -1195,8 +1195,8 @@
       param[home_url] = http://www.nonlinear-processes-in-geophysics.net/
       comment[doNotProcess] = Do Not Process Discussions paper 
 
-      au < doNotProcess ; exists ; 2014 ; 2014 ; Nonlinear Processes in Geophysics Discussions Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2015 ; 2015 ; Nonlinear Processes in Geophysics Discussions Volume 2 ; 2 >
+      au < doNotProcess ; exists ; 2014 ; 2014 ; Nonlinear Processes in Geophysics Discussions Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2015 ; 2015 ; Nonlinear Processes in Geophysics Discussions Volume 2 ; 2 ; >
 
    }
     
@@ -1210,17 +1210,17 @@
       param[base_url] = http://www.ocean-sci.net/
       param[home_url] = http://www.ocean-science.net/
 
-      au < manifest ; exists ; 2005 ; 2005 ; Ocean Science Volume 1 ; 1 >
-      au < manifest ; exists ; 2006 ; 2006 ; Ocean Science Volume 2 ; 2 >
-      au < manifest ; exists ; 2007 ; 2007 ; Ocean Science Volume 3 ; 3 >
-      au < manifest ; exists ; 2008 ; 2008 ; Ocean Science Volume 4 ; 4 >
-      au < manifest ; exists ; 2009 ; 2009 ; Ocean Science Volume 5 ; 5 >
-      au < manifest ; exists ; 2010 ; 2010 ; Ocean Science Volume 6 ; 6 >
-      au < manifest ; exists ; 2011 ; 2011 ; Ocean Science Volume 7 ; 7 >
-      au < finished ; crawling ; 2012 ; 2012 ; Ocean Science Volume 8 ; 8 >
-      au < crawling ; exists ; 2013 ; 2013 ; Ocean Science Volume 9 ; 9 >
-      au < crawling ; exists ; 2014 ; 2014 ; Ocean Science Volume 10 ; 10 >
-      au < crawling ; exists ; 2015 ; 2015 ; Ocean Science Volume 11 ; 11 >
+      au < manifest ; exists ; 2005 ; 2005 ; Ocean Science Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Ocean Science Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Ocean Science Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Ocean Science Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Ocean Science Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Ocean Science Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Ocean Science Volume 7 ; 7 ; >
+      au < finished ; crawling ; 2012 ; 2012 ; Ocean Science Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Ocean Science Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Ocean Science Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Ocean Science Volume 11 ; 11 ; >
     
    }
     
@@ -1234,18 +1234,18 @@
       param[home_url] = http://www.ocean-science.net/
       comment[doNotProcess] = Do Not Process Discussions paper 
 
-      au < doNotProcess ; exists ; 2004 ; 2004 ; Ocean Science Discussions Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2005 ; 2005 ; Ocean Science Discussions Volume 2 ; 2 >
-      au < doNotProcess ; exists ; 2006 ; 2006 ; Ocean Science Discussions Volume 3 ; 3 >
-      au < doNotProcess ; exists ; 2007 ; 2007 ; Ocean Science Discussions Volume 4 ; 4 >
-      au < doNotProcess ; exists ; 2008 ; 2008 ; Ocean Science Discussions Volume 5 ; 5 >
-      au < doNotProcess ; exists ; 2009 ; 2009 ; Ocean Science Discussions Volume 6 ; 6 >
-      au < doNotProcess ; exists ; 2010 ; 2010 ; Ocean Science Discussions Volume 7 ; 7 >
-      au < doNotProcess ; exists ; 2011 ; 2011 ; Ocean Science Discussions Volume 8 ; 8 >
-      au < doNotProcess ; exists ; 2012 ; 2012 ; Ocean Science Discussions Volume 9 ; 9 >
-      au < doNotProcess ; exists ; 2013 ; 2013 ; Ocean Science Discussions Volume 10 ; 10 >
-      au < doNotProcess ; exists ; 2014 ; 2014 ; Ocean Science Discussions Volume 11 ; 11 >
-      au < doNotProcess ; exists ; 2015 ; 2015 ; Ocean Science Discussions Volume 12 ; 12 >
+      au < doNotProcess ; exists ; 2004 ; 2004 ; Ocean Science Discussions Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2005 ; 2005 ; Ocean Science Discussions Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2006 ; 2006 ; Ocean Science Discussions Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2007 ; 2007 ; Ocean Science Discussions Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2008 ; 2008 ; Ocean Science Discussions Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2009 ; 2009 ; Ocean Science Discussions Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2010 ; 2010 ; Ocean Science Discussions Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2011 ; 2011 ; Ocean Science Discussions Volume 8 ; 8 ; >
+      au < doNotProcess ; exists ; 2012 ; 2012 ; Ocean Science Discussions Volume 9 ; 9 ; >
+      au < doNotProcess ; exists ; 2013 ; 2013 ; Ocean Science Discussions Volume 10 ; 10 ; >
+      au < doNotProcess ; exists ; 2014 ; 2014 ; Ocean Science Discussions Volume 11 ; 11 ; >
+      au < doNotProcess ; exists ; 2015 ; 2015 ; Ocean Science Discussions Volume 12 ; 12 ; >
     
    }
     
@@ -1259,9 +1259,9 @@
       param[base_url] = http://www.pattern-recogn-phys.net/
       param[home_url] = http://www.pattern-recognition-in-physics.net/
 
-      au < finished ; finished ; 2013 ; 2013 ; Pattern Recognition in Physics Volume 1 ; 1 >
-      au < finished ; crawling ; 2014 ; 2014 ; Pattern Recognition in Physics Volume 2 ; 2 >
-      au < expected ; exists ; 2015 ; 2015 ; Pattern Recognition in Physics Volume 3 ; 3 >
+      au < finished ; finished ; 2013 ; 2013 ; Pattern Recognition in Physics Volume 1 ; 1 ; >
+      au < finished ; crawling ; 2014 ; 2014 ; Pattern Recognition in Physics Volume 2 ; 2 ; >
+      au < expected ; exists ; 2015 ; 2015 ; Pattern Recognition in Physics Volume 3 ; 3 ; >
     
    }
     
@@ -1275,8 +1275,8 @@
       param[base_url] = http://www.primate-biol.net/
       param[home_url] = http://www.primate-biology.net/
 
-      au < deepCrawl ; exists ; 2014 ; 2014 ; Primate Biology Volume 1 ; 1 >
-      au < crawling ; exists ; 2015 ; 2015 ; Primate Biology Volume 2 ; 2 >
+      au < deepCrawl ; exists ; 2014 ; 2014 ; Primate Biology Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Primate Biology Volume 2 ; 2 ; >
     
    }
 
@@ -1292,11 +1292,11 @@
       param[base_url] = http://www.proc-iahs.net/
       param[home_url] = http://www.proceedings-international-association-of-hydrological-sciences.net/
 
-      au < finished ; crawling ; 2014 ; 2014 ; Proceedings of the International Association of Hydrological Sciences Volume 364 ; 364 >
-      au < crawling ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 365 ; 365 >
-      au < crawling ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 366 ; 366 >
-      au < crawling ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 367 ; 367 >
-      au < crawling ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 368 ; 368 >
+      au < finished ; crawling ; 2014 ; 2014 ; Proceedings of the International Association of Hydrological Sciences Volume 364 ; 364 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 365 ; 365 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 366 ; 366 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 367 ; 367 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 368 ; 368 ; >
     
    }
 
@@ -1310,26 +1310,26 @@
       param[base_url] = http://www.sci-dril.net/
       param[home_url] = http://www.scientific-drilling.net/
 
-      au < manifest ; exists ; 2005 ; 2005 ; Scientific Drilling Volume 1 ; 1 >
-      au < manifest ; exists ; 2006 ; 2006 ; Scientific Drilling Volume 2 ; 2 >
-      au < manifest ; exists ; 2006 ; 2006 ; Scientific Drilling Volume 3 ; 3 >
-      au < manifest ; exists ; 2007 ; 2007 ; Scientific Drilling Volume 4 ; 4 >
-      au < manifest ; exists ; 2007 ; 2007 ; Scientific Drilling Volume 5 ; 5 >
-      au < manifest ; exists ; 2007 ; 2007 ; Scientific Drilling Volume SpecialIssue ; SpecialIssue >
-      au < manifest ; exists ; 2008 ; 2008 ; Scientific Drilling Volume 6 ; 6 >
-      au < manifest ; exists ; 2009 ; 2009 ; Scientific Drilling Volume 7 ; 7 >
-      au < manifest ; exists ; 2009 ; 2009 ; Scientific Drilling Volume 8 ; 8 >
-      au < manifest ; exists ; 2010 ; 2010 ; Scientific Drilling Volume 9 ; 9 >
-      au < manifest ; exists ; 2010 ; 2010 ; Scientific Drilling Volume 10 ; 10 >
-      au < manifest ; exists ; 2011 ; 2011 ; Scientific Drilling Volume 11 ; 11 >
-      au < manifest ; exists ; 2011 ; 2011 ; Scientific Drilling Volume 12 ; 12 >
-      au < frozen ; exists ; 2012 ; 2012 ; Scientific Drilling Volume 13 ; 13 >
-      au < frozen ; exists ; 2012 ; 2012 ; Scientific Drilling Volume 14 ; 14 >
-      au < crawling ; exists ; 2013 ; 2013 ; Scientific Drilling Volume 15 ; 15 >
-      au < crawling ; exists ; 2013 ; 2013 ; Scientific Drilling Volume 16 ; 16 >
-      au < frozen ; exists ; 2014 ; 2014 ; Scientific Drilling Volume 17 ; 17 >
-      au < crawling ; exists ; 2014 ; 2014 ; Scientific Drilling Volume 18 ; 18 >
-      au < crawling ; exists ; 2015 ; 2015 ; Scientific Drilling Volume 19 ; 19 >
+      au < manifest ; exists ; 2005 ; 2005 ; Scientific Drilling Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Scientific Drilling Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Scientific Drilling Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Scientific Drilling Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Scientific Drilling Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Scientific Drilling Volume SpecialIssue ; SpecialIssue ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Scientific Drilling Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Scientific Drilling Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Scientific Drilling Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Scientific Drilling Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Scientific Drilling Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Scientific Drilling Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Scientific Drilling Volume 12 ; 12 ; >
+      au < frozen ; exists ; 2012 ; 2012 ; Scientific Drilling Volume 13 ; 13 ; >
+      au < frozen ; exists ; 2012 ; 2012 ; Scientific Drilling Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Scientific Drilling Volume 15 ; 15 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Scientific Drilling Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2014 ; 2014 ; Scientific Drilling Volume 17 ; 17 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Scientific Drilling Volume 18 ; 18 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Scientific Drilling Volume 19 ; 19 ; >
     
    }
     
@@ -1344,13 +1344,13 @@
       param[home_url] = http://www.social-geography.net/
       comment[0] = stopped publishing as of 2012.
 
-      au < manifest ; exists ; 2005 ; 2005 ; Social Geography Volume 1 ; 1 >
-      au < manifest ; exists ; 2007 ; 2007 ; Social Geography Volume 2 ; 2 >
-      au < manifest ; exists ; 2008 ; 2008 ; Social Geography Volume 3 ; 3 >
-      au < manifest ; exists ; 2009 ; 2009 ; Social Geography Volume 4 ; 4 >
-      au < manifest ; exists ; 2010 ; 2010 ; Social Geography Volume 5 ; 5 >
-      au < manifest ; exists ; 2011 ; 2011 ; Social Geography Volume 6 ; 6 >
-      au < finished ; finished ; 2012 ; 2012 ; Social Geography Volume 7 ; 7 >
+      au < manifest ; exists ; 2005 ; 2005 ; Social Geography Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Social Geography Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Social Geography Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Social Geography Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Social Geography Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Social Geography Volume 6 ; 6 ; >
+      au < finished ; finished ; 2012 ; 2012 ; Social Geography Volume 7 ; 7 ; >
     
    }
     
@@ -1364,7 +1364,7 @@
       param[base_url] = http://www.soil-journal.net/
       param[home_url] = http://www.soil-journal.net/
 
-      au < crawling ; exists ; 2015 ; 2015 ; SOIL Volume 1 ; 1 >
+      au < crawling ; exists ; 2015 ; 2015 ; SOIL Volume 1 ; 1 ; >
 
    }
     
@@ -1378,8 +1378,8 @@
       param[home_url] = http://www.soil-discuss.net/
       comment[doNotProcess] = Do Not Process Discussions paper 
 
-      au < doNotProcess ; exists ; 2014 ; 2014 ; SOIL Discussions Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2015 ; 2015 ; SOIL Discussions Volume 2 ; 2 >
+      au < doNotProcess ; exists ; 2014 ; 2014 ; SOIL Discussions Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2015 ; 2015 ; SOIL Discussions Volume 2 ; 2 ; >
 
    }
     
@@ -1393,12 +1393,12 @@
       param[base_url] = http://www.solid-earth.net/
       param[home_url] = http://www.solid-earth.net/
 
-      au < manifest ; exists ; 2010 ; 2010 ; Solid Earth Volume 1 ; 1 >
-      au < manifest ; exists ; 2011 ; 2011 ; Solid Earth Volume 2 ; 2 >
-      au < finished ; finished ; 2012 ; 2012 ; Solid Earth Volume 3 ; 3 >
-      au < crawling ; exists ; 2013 ; 2013 ; Solid Earth Volume 4 ; 4 >
-      au < crawling ; exists ; 2014 ; 2014 ; Solid Earth Volume 5 ; 5 >
-      au < crawling ; exists ; 2015 ; 2015 ; Solid Earth Volume 6 ; 6 >
+      au < manifest ; exists ; 2010 ; 2010 ; Solid Earth Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Solid Earth Volume 2 ; 2 ; >
+      au < finished ; finished ; 2012 ; 2012 ; Solid Earth Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Solid Earth Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Solid Earth Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Solid Earth Volume 6 ; 6 ; >
     
    }
     
@@ -1412,13 +1412,13 @@
       param[home_url] = http://www.solid-earth.net/
       comment[doNotProcess] = Do Not Process Discussions paper 
 
-      au < doNotProcess ; exists ; 2009 ; 2009 ; Solid Earth Discussions Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2010 ; 2010 ; Solid Earth Discussions Volume 2 ; 2 >
-      au < doNotProcess ; exists ; 2011 ; 2011 ; Solid Earth Discussions Volume 3 ; 3 >
-      au < doNotProcess ; exists ; 2012 ; 2012 ; Solid Earth Discussions Volume 4 ; 4 >
-      au < doNotProcess ; exists ; 2013 ; 2013 ; Solid Earth Discussions Volume 5 ; 5 >
-      au < doNotProcess ; exists ; 2014 ; 2014 ; Solid Earth Discussions Volume 6 ; 6 >
-      au < doNotProcess ; exists ; 2015 ; 2015 ; Solid Earth Discussions Volume 7 ; 7 >
+      au < doNotProcess ; exists ; 2009 ; 2009 ; Solid Earth Discussions Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2010 ; 2010 ; Solid Earth Discussions Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2011 ; 2011 ; Solid Earth Discussions Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2012 ; 2012 ; Solid Earth Discussions Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2013 ; 2013 ; Solid Earth Discussions Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2014 ; 2014 ; Solid Earth Discussions Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2015 ; 2015 ; Solid Earth Discussions Volume 7 ; 7 ; >
     
    }
     
@@ -1432,10 +1432,10 @@
       param[base_url] = http://www.stephan-mueller-spec-publ-ser.net/
       param[home_url] = http://www.stephan-mueller-special-publication-series.net/
 
-      au < manifest ; exists ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 1 ; 1 >
-      au < manifest ; exists ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 2 ; 2 >
-      au < manifest ; exists ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 3 ; 3 >
-      au < manifest ; exists ; 2009 ; 2009 ; Stephan Mueller Special Publication Series Volume 4 ; 4 >
+      au < manifest ; exists ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Stephan Mueller Special Publication Series Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Stephan Mueller Special Publication Series Volume 4 ; 4 ; >
     
    }
     
@@ -1448,7 +1448,7 @@
       param[base_url] = http://www.surv-perspect-integr-environ-soc.net/
       param[home_url] = http://www.surveys-and-perspectives-integrating-environment-and-society.net/
 
-      au < manifest ; exists ; 2008 ; 2008 ; Surveys and Perspectives Integrating Environment and Society Volume 1 ; 1 >
+      au < manifest ; exists ; 2008 ; 2008 ; Surveys and Perspectives Integrating Environment and Society Volume 1 ; 1 ; >
     
    }
     
@@ -1462,15 +1462,15 @@
       param[base_url] = http://www.the-cryosphere.net/
       param[home_url] = http://www.the-cryosphere.net/
 
-      au < manifest ; exists ; 2007 ; 2007 ; The Cryosphere Volume 1 ; 1 >
-      au < manifest ; exists ; 2008 ; 2008 ; The Cryosphere Volume 2 ; 2 >
-      au < manifest ; exists ; 2009 ; 2009 ; The Cryosphere Volume 3 ; 3 >
-      au < manifest ; exists ; 2010 ; 2010 ; The Cryosphere Volume 4 ; 4 >
-      au < manifest ; exists ; 2011 ; 2011 ; The Cryosphere Volume 5 ; 5 >
-      au < finished ; crawling ; 2012 ; 2012 ; The Cryosphere Volume 6 ; 6 >
-      au < crawling ; exists ; 2013 ; 2013 ; The Cryosphere Volume 7 ; 7 >
-      au < finished ; crawling ; 2014 ; 2014 ; The Cryosphere Volume 8 ; 8 >
-      au < crawling ; exists ; 2015 ; 2015 ; The Cryosphere Volume 9 ; 9 >
+      au < manifest ; exists ; 2007 ; 2007 ; The Cryosphere Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; The Cryosphere Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; The Cryosphere Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; The Cryosphere Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; The Cryosphere Volume 5 ; 5 ; >
+      au < finished ; crawling ; 2012 ; 2012 ; The Cryosphere Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; The Cryosphere Volume 7 ; 7 ; >
+      au < finished ; crawling ; 2014 ; 2014 ; The Cryosphere Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; The Cryosphere Volume 9 ; 9 ; >
     
    }
     
@@ -1484,15 +1484,15 @@
       param[home_url] = http://www.the-cryosphere.net/
       comment[doNotProcess] = Do Not Process Discussions paper 
 
-      au < doNotProcess ; exists ; 2007 ; 2007 ; The Cryosphere Discussions Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2008 ; 2008 ; The Cryosphere Discussions Volume 2 ; 2 >
-      au < doNotProcess ; exists ; 2009 ; 2009 ; The Cryosphere Discussions Volume 3 ; 3 >
-      au < doNotProcess ; exists ; 2010 ; 2010 ; The Cryosphere Discussions Volume 4 ; 4 >
-      au < doNotProcess ; exists ; 2011 ; 2011 ; The Cryosphere Discussions Volume 5 ; 5 >
-      au < doNotProcess ; exists ; 2012 ; 2012 ; The Cryosphere Discussions Volume 6 ; 6 >
-      au < doNotProcess ; exists ; 2013 ; 2013 ; The Cryosphere Discussions Volume 7 ; 7 >
-      au < doNotProcess ; exists ; 2014 ; 2014 ; The Cryosphere Discussions Volume 8 ; 8 >
-      au < doNotProcess ; exists ; 2015 ; 2015 ; The Cryosphere Discussions Volume 9 ; 9 >
+      au < doNotProcess ; exists ; 2007 ; 2007 ; The Cryosphere Discussions Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2008 ; 2008 ; The Cryosphere Discussions Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2009 ; 2009 ; The Cryosphere Discussions Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2010 ; 2010 ; The Cryosphere Discussions Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2011 ; 2011 ; The Cryosphere Discussions Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2012 ; 2012 ; The Cryosphere Discussions Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2013 ; 2013 ; The Cryosphere Discussions Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2014 ; 2014 ; The Cryosphere Discussions Volume 8 ; 8 ; >
+      au < doNotProcess ; exists ; 2015 ; 2015 ; The Cryosphere Discussions Volume 9 ; 9 ; >
     
    }
 
@@ -1506,21 +1506,21 @@
       param[base_url] = http://www.web-ecol.net/
       param[home_url] = http://www.web-ecology.net/
 
-      au < manifest ; exists ; 2000 ; 2000 ; Web Ecology Volume 1 ; 1 >
-      au < manifest ; exists ; 2001 ; 2001 ; Web Ecology Volume 2 ; 2 >
-      au < manifest ; exists ; 2002 ; 2002 ; Web Ecology Volume 3 ; 3 >
-      au < manifest ; exists ; 2003 ; 2003 ; Web Ecology Volume 4 ; 4 >
-      au < manifest ; exists ; 2005 ; 2005 ; Web Ecology Volume 5 ; 5 >
-      au < manifest ; exists ; 2006 ; 2006 ; Web Ecology Volume 6 ; 6 >
-      au < manifest ; exists ; 2007 ; 2007 ; Web Ecology Volume 7 ; 7 >
-      au < manifest ; exists ; 2008 ; 2008 ; Web Ecology Volume 8 ; 8 >
-      au < manifest ; exists ; 2009 ; 2009 ; Web Ecology Volume 9 ; 9 >
-      au < manifest ; exists ; 2010 ; 2010 ; Web Ecology Volume 10 ; 10 >
-      au < manifest ; exists ; 2011 ; 2011 ; Web Ecology Volume 11 ; 11 >
-      au < finished ; crawling ; 2012 ; 2012 ; Web Ecology Volume 12 ; 12 >
-      au < crawling ; exists ; 2013 ; 2013 ; Web Ecology Volume 13 ; 13 >
-      au < crawling ; exists ; 2014 ; 2014 ; Web Ecology Volume 14 ; 14 >
-      au < crawling ; exists ; 2015 ; 2015 ; Web Ecology Volume 15 ; 15 >
+      au < manifest ; exists ; 2000 ; 2000 ; Web Ecology Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Web Ecology Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Web Ecology Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Web Ecology Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Web Ecology Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Web Ecology Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Web Ecology Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Web Ecology Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Web Ecology Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Web Ecology Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Web Ecology Volume 11 ; 11 ; >
+      au < finished ; crawling ; 2012 ; 2012 ; Web Ecology Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Web Ecology Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Web Ecology Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Web Ecology Volume 15 ; 15 ; >
     
    }
     

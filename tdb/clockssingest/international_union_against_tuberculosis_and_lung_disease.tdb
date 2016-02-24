@@ -12,7 +12,7 @@
   param[graphics_url] = http://graphics.ingentaconnect.com/
   param[publisher_id] = iuatld
   
-  implicit < status ; status2 ; year ; name ; param[volume_name] >
+  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
   {
     title <
@@ -25,25 +25,25 @@
     param[journal_id] = ijtld
     param[journal_issn] = 1027-3719
 
-    au < manifest ; exists ; 1997 ; International Journal of Tuberculosis and Lung Disease Volume 1 ; 1 >
-    au < manifest ; exists ; 1998 ; International Journal of Tuberculosis and Lung Disease Volume 2 ; 2 >
-    au < manifest ; exists ; 1999 ; International Journal of Tuberculosis and Lung Disease Volume 3 ; 3 >
-    au < manifest ; exists ; 2000 ; International Journal of Tuberculosis and Lung Disease Volume 4 ; 4 >
-    au < manifest ; exists ; 2001 ; International Journal of Tuberculosis and Lung Disease Volume 5 ; 5 >
-    au < manifest ; exists ; 2002 ; International Journal of Tuberculosis and Lung Disease Volume 6 ; 6 >
-    au < manifest ; exists ; 2003 ; International Journal of Tuberculosis and Lung Disease Volume 7 ; 7 >
-    au < manifest ; exists ; 2004 ; International Journal of Tuberculosis and Lung Disease Volume 8 ; 8 >
-    au < manifest ; exists ; 2005 ; International Journal of Tuberculosis and Lung Disease Volume 9 ; 9 >
-    au < manifest ; exists ; 2006 ; International Journal of Tuberculosis and Lung Disease Volume 10 ; 10 >
-    au < manifest ; exists ; 2007 ; International Journal of Tuberculosis and Lung Disease Volume 11 ; 11 >
-    au < manifest ; exists ; 2008 ; International Journal of Tuberculosis and Lung Disease Volume 12 ; 12 >
-    au < manifest ; exists ; 2009 ; International Journal of Tuberculosis and Lung Disease Volume 13 ; 13 >
-    au < manifest ; exists ; 2010 ; International Journal of Tuberculosis and Lung Disease Volume 14 ; 14 >
-    au < manifest ; exists ; 2011 ; International Journal of Tuberculosis and Lung Disease Volume 15 ; 15 >
-    au < manifest ; exists ; 2012 ; International Journal of Tuberculosis and Lung Disease Volume 16 ; 16 >
-    au < crawling ; exists ; 2013 ; International Journal of Tuberculosis and Lung Disease Volume 17 ; 17 >
-    au < crawling ; exists ; 2014 ; International Journal of Tuberculosis and Lung Disease Volume 18 ; 18 >
-    au < crawling ; exists ; 2015 ; International Journal of Tuberculosis and Lung Disease Volume 19 ; 19 >
+    au < manifest ; exists ; 1997 ; International Journal of Tuberculosis and Lung Disease Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1998 ; International Journal of Tuberculosis and Lung Disease Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1999 ; International Journal of Tuberculosis and Lung Disease Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2000 ; International Journal of Tuberculosis and Lung Disease Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2001 ; International Journal of Tuberculosis and Lung Disease Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2002 ; International Journal of Tuberculosis and Lung Disease Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2003 ; International Journal of Tuberculosis and Lung Disease Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2004 ; International Journal of Tuberculosis and Lung Disease Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2005 ; International Journal of Tuberculosis and Lung Disease Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2006 ; International Journal of Tuberculosis and Lung Disease Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2007 ; International Journal of Tuberculosis and Lung Disease Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2008 ; International Journal of Tuberculosis and Lung Disease Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2009 ; International Journal of Tuberculosis and Lung Disease Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2010 ; International Journal of Tuberculosis and Lung Disease Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2011 ; International Journal of Tuberculosis and Lung Disease Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2012 ; International Journal of Tuberculosis and Lung Disease Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Tuberculosis and Lung Disease Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2014 ; International Journal of Tuberculosis and Lung Disease Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2015 ; International Journal of Tuberculosis and Lung Disease Volume 19 ; 19 ; >
 
   }
 
@@ -57,11 +57,11 @@
     param[journal_id] = pha
     param[journal_issn] = 2220-8372
 
-    au < manifest ; exists ; 2011 ; Public Health Action Volume 1 ; 1 >
-    au < manifest ; exists ; 2012 ; Public Health Action Volume 2 ; 2 >
-    au < crawling ; exists ; 2013 ; Public Health Action Volume 3 ; 3 >
-    au < crawling ; exists ; 2014 ; Public Health Action Volume 4 ; 4 >
-    au < crawling ; exists ; 2015 ; Public Health Action Volume 5 ; 5 >
+    au < manifest ; exists ; 2011 ; Public Health Action Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2012 ; Public Health Action Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2013 ; Public Health Action Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2014 ; Public Health Action Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2015 ; Public Health Action Volume 5 ; 5 ; >
 
   }
 

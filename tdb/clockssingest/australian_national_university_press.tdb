@@ -8,7 +8,7 @@
   
     plugin = needs.plugin 
     param[base_url] = http://press.anu.edu.au/
-    implicit < status ; status2 ; year ; name ; param[volume] >
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
   {
   
@@ -20,44 +20,44 @@
     
     param[journal_abbr] = aboriginal-history-journal
 
-    au < exists ; exists ; 1977 ; Aboriginal History Journal Volume 1 ; 1 >
-    au < exists ; exists ; 1978 ; Aboriginal History Journal Volume 2 ; 2 >
-    au < exists ; exists ; 1979 ; Aboriginal History Journal Volume 3 ; 3 >
-    au < exists ; exists ; 1980 ; Aboriginal History Journal Volume 4 ; 4 >
-    au < exists ; exists ; 1981 ; Aboriginal History Journal Volume 5 ; 5 >
-    au < exists ; exists ; 1982 ; Aboriginal History Journal Volume 6 ; 6 >
-    au < exists ; exists ; 1983 ; Aboriginal History Journal Volume 7 ; 7 >
-    au < exists ; exists ; 1984 ; Aboriginal History Journal Volume 8 ; 8 >
-    au < exists ; exists ; 1985 ; Aboriginal History Journal Volume 9 ; 9 >
-    au < exists ; exists ; 1986 ; Aboriginal History Journal Volume 10 ; 10 >
-    au < exists ; exists ; 1987 ; Aboriginal History Journal Volume 11 ; 11 >
-    au < exists ; exists ; 1988 ; Aboriginal History Journal Volume 12 ; 12 >
-    au < exists ; exists ; 1989 ; Aboriginal History Journal Volume 13 ; 13 >
-    au < exists ; exists ; 1990 ; Aboriginal History Journal Volume 14 ; 14 >
-    au < exists ; exists ; 1991 ; Aboriginal History Journal Volume 15 ; 15 >
-    au < exists ; exists ; 1992 ; Aboriginal History Journal Volume 16 ; 16 >
-    au < exists ; exists ; 1993 ; Aboriginal History Journal Volume 17 ; 17 >
-    au < exists ; exists ; 1994 ; Aboriginal History Journal Volume 18 ; 18 >
-    au < exists ; exists ; 1995 ; Aboriginal History Journal Volume 19 ; 19 >
-    au < exists ; exists ; 1996 ; Aboriginal History Journal Volume 20 ; 20 >
-    au < exists ; exists ; 1997 ; Aboriginal History Journal Volume 21 ; 21 >
-    au < exists ; exists ; 1998 ; Aboriginal History Journal Volume 22 ; 22 >
-    au < exists ; exists ; 1999 ; Aboriginal History Journal Volume 23 ; 23 >
-    au < exists ; exists ; 2000 ; Aboriginal History Journal Volume 24 ; 24 >
-    au < exists ; exists ; 2001 ; Aboriginal History Journal Volume 25 ; 25 >
-    au < exists ; exists ; 2002 ; Aboriginal History Journal Volume 26 ; 26 >
-    au < exists ; exists ; 2003 ; Aboriginal History Journal Volume 27 ; 27 >
-    au < exists ; exists ; 2004 ; Aboriginal History Journal Volume 28 ; 28 >
-    au < exists ; exists ; 2005 ; Aboriginal History Journal Volume 29 ; 29 >
-    au < exists ; exists ; 2006 ; Aboriginal History Journal Volume 30 ; 30 >
-    au < exists ; exists ; 2007 ; Aboriginal History Journal Volume 31 ; 31 >
-    au < exists ; exists ; 2008 ; Aboriginal History Journal Volume 32 ; 32 >
-    au < exists ; exists ; 2010 ; Aboriginal History Journal Volume 33 ; 33 >
-    au < exists ; exists ; 2011 ; Aboriginal History Journal Volume 34 ; 34 >
-    au < exists ; exists ; 2011 ; Aboriginal History Journal Volume 35 ; 35 >
-    au < exists ; exists ; 2013 ; Aboriginal History Journal Volume 36 ; 36 >
-    au < exists ; exists ; 2013 ; Aboriginal History Journal Volume 37 ; 37 >
-    au < exists ; exists ; 2015 ; Aboriginal History Journal Volume 38 ; 38 >
+    au < exists ; exists ; 1977 ; Aboriginal History Journal Volume 1 ; 1 ; >
+    au < exists ; exists ; 1978 ; Aboriginal History Journal Volume 2 ; 2 ; >
+    au < exists ; exists ; 1979 ; Aboriginal History Journal Volume 3 ; 3 ; >
+    au < exists ; exists ; 1980 ; Aboriginal History Journal Volume 4 ; 4 ; >
+    au < exists ; exists ; 1981 ; Aboriginal History Journal Volume 5 ; 5 ; >
+    au < exists ; exists ; 1982 ; Aboriginal History Journal Volume 6 ; 6 ; >
+    au < exists ; exists ; 1983 ; Aboriginal History Journal Volume 7 ; 7 ; >
+    au < exists ; exists ; 1984 ; Aboriginal History Journal Volume 8 ; 8 ; >
+    au < exists ; exists ; 1985 ; Aboriginal History Journal Volume 9 ; 9 ; >
+    au < exists ; exists ; 1986 ; Aboriginal History Journal Volume 10 ; 10 ; >
+    au < exists ; exists ; 1987 ; Aboriginal History Journal Volume 11 ; 11 ; >
+    au < exists ; exists ; 1988 ; Aboriginal History Journal Volume 12 ; 12 ; >
+    au < exists ; exists ; 1989 ; Aboriginal History Journal Volume 13 ; 13 ; >
+    au < exists ; exists ; 1990 ; Aboriginal History Journal Volume 14 ; 14 ; >
+    au < exists ; exists ; 1991 ; Aboriginal History Journal Volume 15 ; 15 ; >
+    au < exists ; exists ; 1992 ; Aboriginal History Journal Volume 16 ; 16 ; >
+    au < exists ; exists ; 1993 ; Aboriginal History Journal Volume 17 ; 17 ; >
+    au < exists ; exists ; 1994 ; Aboriginal History Journal Volume 18 ; 18 ; >
+    au < exists ; exists ; 1995 ; Aboriginal History Journal Volume 19 ; 19 ; >
+    au < exists ; exists ; 1996 ; Aboriginal History Journal Volume 20 ; 20 ; >
+    au < exists ; exists ; 1997 ; Aboriginal History Journal Volume 21 ; 21 ; >
+    au < exists ; exists ; 1998 ; Aboriginal History Journal Volume 22 ; 22 ; >
+    au < exists ; exists ; 1999 ; Aboriginal History Journal Volume 23 ; 23 ; >
+    au < exists ; exists ; 2000 ; Aboriginal History Journal Volume 24 ; 24 ; >
+    au < exists ; exists ; 2001 ; Aboriginal History Journal Volume 25 ; 25 ; >
+    au < exists ; exists ; 2002 ; Aboriginal History Journal Volume 26 ; 26 ; >
+    au < exists ; exists ; 2003 ; Aboriginal History Journal Volume 27 ; 27 ; >
+    au < exists ; exists ; 2004 ; Aboriginal History Journal Volume 28 ; 28 ; >
+    au < exists ; exists ; 2005 ; Aboriginal History Journal Volume 29 ; 29 ; >
+    au < exists ; exists ; 2006 ; Aboriginal History Journal Volume 30 ; 30 ; >
+    au < exists ; exists ; 2007 ; Aboriginal History Journal Volume 31 ; 31 ; >
+    au < exists ; exists ; 2008 ; Aboriginal History Journal Volume 32 ; 32 ; >
+    au < exists ; exists ; 2010 ; Aboriginal History Journal Volume 33 ; 33 ; >
+    au < exists ; exists ; 2011 ; Aboriginal History Journal Volume 34 ; 34 ; >
+    au < exists ; exists ; 2011 ; Aboriginal History Journal Volume 35 ; 35 ; >
+    au < exists ; exists ; 2013 ; Aboriginal History Journal Volume 36 ; 36 ; >
+    au < exists ; exists ; 2013 ; Aboriginal History Journal Volume 37 ; 37 ; >
+    au < exists ; exists ; 2015 ; Aboriginal History Journal Volume 38 ; 38 ; >
 
   }
 
@@ -71,28 +71,28 @@
     
     param[journal_abbr] = agenda-a-journal-of-policy-analysis-and-reform-2
 
-    au < exists ; exists ; 1994 ; Agenda - A Journal of Policy Analysis and Reform Volume 1 ; 1 >
-    au < exists ; exists ; 1995 ; Agenda - A Journal of Policy Analysis and Reform Volume 2 ; 2 >
-    au < exists ; exists ; 1996 ; Agenda - A Journal of Policy Analysis and Reform Volume 3 ; 3 >
-    au < exists ; exists ; 1997 ; Agenda - A Journal of Policy Analysis and Reform Volume 4 ; 4 >
-    au < exists ; exists ; 1998 ; Agenda - A Journal of Policy Analysis and Reform Volume 5 ; 5 >
-    au < exists ; exists ; 1999 ; Agenda - A Journal of Policy Analysis and Reform Volume 6 ; 6 >
-    au < exists ; exists ; 2000 ; Agenda - A Journal of Policy Analysis and Reform Volume 7 ; 7 >
-    au < exists ; exists ; 2001 ; Agenda - A Journal of Policy Analysis and Reform Volume 8 ; 8 >
-    au < exists ; exists ; 2002 ; Agenda - A Journal of Policy Analysis and Reform Volume 9 ; 9 >
-    au < exists ; exists ; 2003 ; Agenda - A Journal of Policy Analysis and Reform Volume 10 ; 10 >
-    au < exists ; exists ; 2004 ; Agenda - A Journal of Policy Analysis and Reform Volume 11 ; 11 >
-    au < exists ; exists ; 2005 ; Agenda - A Journal of Policy Analysis and Reform Volume 12 ; 12 >
-    au < exists ; exists ; 2006 ; Agenda - A Journal of Policy Analysis and Reform Volume 13 ; 13 >
-    au < exists ; exists ; 2007 ; Agenda - A Journal of Policy Analysis and Reform Volume 14 ; 14 >
-    au < exists ; exists ; 2008 ; Agenda - A Journal of Policy Analysis and Reform Volume 15 ; 15 >
-    au < exists ; exists ; 2009 ; Agenda - A Journal of Policy Analysis and Reform Volume 16 ; 16 >
-    au < exists ; exists ; 2010 ; Agenda - A Journal of Policy Analysis and Reform Volume 17 ; 17 >
-    au < exists ; exists ; 2011 ; Agenda - A Journal of Policy Analysis and Reform Volume 18 ; 18 >
-    au < exists ; exists ; 2012 ; Agenda - A Journal of Policy Analysis and Reform Volume 19 ; 19 >
-    au < exists ; exists ; 2013 ; Agenda - A Journal of Policy Analysis and Reform Volume 20 ; 20 >
-    au < exists ; exists ; 2014 ; Agenda - A Journal of Policy Analysis and Reform Volume 21 ; 21 >
-    au < expected ; exists ; 2015 ; Agenda - A Journal of Policy Analysis and Reform Volume 22 ; 22 >
+    au < exists ; exists ; 1994 ; Agenda - A Journal of Policy Analysis and Reform Volume 1 ; 1 ; >
+    au < exists ; exists ; 1995 ; Agenda - A Journal of Policy Analysis and Reform Volume 2 ; 2 ; >
+    au < exists ; exists ; 1996 ; Agenda - A Journal of Policy Analysis and Reform Volume 3 ; 3 ; >
+    au < exists ; exists ; 1997 ; Agenda - A Journal of Policy Analysis and Reform Volume 4 ; 4 ; >
+    au < exists ; exists ; 1998 ; Agenda - A Journal of Policy Analysis and Reform Volume 5 ; 5 ; >
+    au < exists ; exists ; 1999 ; Agenda - A Journal of Policy Analysis and Reform Volume 6 ; 6 ; >
+    au < exists ; exists ; 2000 ; Agenda - A Journal of Policy Analysis and Reform Volume 7 ; 7 ; >
+    au < exists ; exists ; 2001 ; Agenda - A Journal of Policy Analysis and Reform Volume 8 ; 8 ; >
+    au < exists ; exists ; 2002 ; Agenda - A Journal of Policy Analysis and Reform Volume 9 ; 9 ; >
+    au < exists ; exists ; 2003 ; Agenda - A Journal of Policy Analysis and Reform Volume 10 ; 10 ; >
+    au < exists ; exists ; 2004 ; Agenda - A Journal of Policy Analysis and Reform Volume 11 ; 11 ; >
+    au < exists ; exists ; 2005 ; Agenda - A Journal of Policy Analysis and Reform Volume 12 ; 12 ; >
+    au < exists ; exists ; 2006 ; Agenda - A Journal of Policy Analysis and Reform Volume 13 ; 13 ; >
+    au < exists ; exists ; 2007 ; Agenda - A Journal of Policy Analysis and Reform Volume 14 ; 14 ; >
+    au < exists ; exists ; 2008 ; Agenda - A Journal of Policy Analysis and Reform Volume 15 ; 15 ; >
+    au < exists ; exists ; 2009 ; Agenda - A Journal of Policy Analysis and Reform Volume 16 ; 16 ; >
+    au < exists ; exists ; 2010 ; Agenda - A Journal of Policy Analysis and Reform Volume 17 ; 17 ; >
+    au < exists ; exists ; 2011 ; Agenda - A Journal of Policy Analysis and Reform Volume 18 ; 18 ; >
+    au < exists ; exists ; 2012 ; Agenda - A Journal of Policy Analysis and Reform Volume 19 ; 19 ; >
+    au < exists ; exists ; 2013 ; Agenda - A Journal of Policy Analysis and Reform Volume 20 ; 20 ; >
+    au < exists ; exists ; 2014 ; Agenda - A Journal of Policy Analysis and Reform Volume 21 ; 21 ; >
+    au < expected ; exists ; 2015 ; Agenda - A Journal of Policy Analysis and Reform Volume 22 ; 22 ; >
 
   }
 
@@ -106,15 +106,15 @@
     
     param[journal_abbr] = australian-humanities-review
 
-    au < exists ; exists ; 2008 ; Australian Humanities Review Issue 44 ; 44 >
-    au < exists ; exists ; 2008 ; Australian Humanities Review Issue 45 ; 45 >
-    au < exists ; exists ; 2009 ; Australian Humanities Review Issue 46 ; 46 >
-    au < exists ; exists ; 2009 ; Australian Humanities Review Issue 47 ; 47 >
-    au < exists ; exists ; 2010 ; Australian Humanities Review Issue 48 ; 48 >
-    au < exists ; exists ; 2010 ; Australian Humanities Review Issue 49 ; 49 >
-    au < exists ; exists ; 2011 ; Australian Humanities Review Issue 50 ; 50 >
-    au < exists ; exists ; 2011 ; Australian Humanities Review Issue 51 ; 51 >
-    au < exists ; exists ; 2012 ; Australian Humanities Review Issue 52 ; 52 >
+    au < exists ; exists ; 2008 ; Australian Humanities Review Issue 44 ; 44 ; >
+    au < exists ; exists ; 2008 ; Australian Humanities Review Issue 45 ; 45 ; >
+    au < exists ; exists ; 2009 ; Australian Humanities Review Issue 46 ; 46 ; >
+    au < exists ; exists ; 2009 ; Australian Humanities Review Issue 47 ; 47 ; >
+    au < exists ; exists ; 2010 ; Australian Humanities Review Issue 48 ; 48 ; >
+    au < exists ; exists ; 2010 ; Australian Humanities Review Issue 49 ; 49 ; >
+    au < exists ; exists ; 2011 ; Australian Humanities Review Issue 50 ; 50 ; >
+    au < exists ; exists ; 2011 ; Australian Humanities Review Issue 51 ; 51 ; >
+    au < exists ; exists ; 2012 ; Australian Humanities Review Issue 52 ; 52 ; >
 
   }
 
@@ -128,13 +128,13 @@
     
     param[journal_abbr] = craftdesign-enquiry
 
-    au < exists ; exists ; 2009 ; craft + design enquiry issue 1 ; 1 >
-    au < exists ; exists ; 2010 ; craft + design enquiry issue 2 ; 2 >
-    au < exists ; exists ; 2011 ; craft + design enquiry issue 3 ; 3 >
-    au < exists ; exists ; 2012 ; craft + design enquiry issue 4 ; 4 >
-    au < exists ; exists ; 2013 ; craft + design enquiry issue 5 ; 5 >
-    au < exists ; exists ; 2014 ; craft + design enquiry issue 6 ; 6 >
-    au < expected ; exists ; 2015 ; craft + design enquiry issue 7 ; 7 >
+    au < exists ; exists ; 2009 ; craft + design enquiry issue 1 ; 1 ; >
+    au < exists ; exists ; 2010 ; craft + design enquiry issue 2 ; 2 ; >
+    au < exists ; exists ; 2011 ; craft + design enquiry issue 3 ; 3 ; >
+    au < exists ; exists ; 2012 ; craft + design enquiry issue 4 ; 4 ; >
+    au < exists ; exists ; 2013 ; craft + design enquiry issue 5 ; 5 ; >
+    au < exists ; exists ; 2014 ; craft + design enquiry issue 6 ; 6 ; >
+    au < expected ; exists ; 2015 ; craft + design enquiry issue 7 ; 7 ; >
 
   }
 
@@ -148,13 +148,13 @@
     
     param[journal_abbr] = east-asia-forum-quarterly
     
-    au < exists ; exists ; 2009 ; East Asia Forum Quarterly Volume 1 ; 1 >
-    au < exists ; exists ; 2010 ; East Asia Forum Quarterly Volume 2 ; 2 >
-    au < exists ; exists ; 2011 ; East Asia Forum Quarterly Volume 3 ; 3 >
-    au < exists ; exists ; 2012 ; East Asia Forum Quarterly Volume 4 ; 4 >
-    au < exists ; exists ; 2013 ; East Asia Forum Quarterly Volume 5 ; 5 >
-    au < exists ; exists ; 2014 ; East Asia Forum Quarterly Volume 6 ; 6 >
-    au < exists ; exists ; 2015 ; East Asia Forum Quarterly Volume 7 ; 7 >
+    au < exists ; exists ; 2009 ; East Asia Forum Quarterly Volume 1 ; 1 ; >
+    au < exists ; exists ; 2010 ; East Asia Forum Quarterly Volume 2 ; 2 ; >
+    au < exists ; exists ; 2011 ; East Asia Forum Quarterly Volume 3 ; 3 ; >
+    au < exists ; exists ; 2012 ; East Asia Forum Quarterly Volume 4 ; 4 ; >
+    au < exists ; exists ; 2013 ; East Asia Forum Quarterly Volume 5 ; 5 ; >
+    au < exists ; exists ; 2014 ; East Asia Forum Quarterly Volume 6 ; 6 ; >
+    au < exists ; exists ; 2015 ; East Asia Forum Quarterly Volume 7 ; 7 ; >
 
   }
 
@@ -168,22 +168,22 @@
     
     param[journal_abbr] = humanities-research-journal-series
     
-    au < exists ; exists ; 1997 ; Humanities Research Volume 1997 ; 1997 >
-    au < exists ; exists ; 1998 ; Humanities Research Volume 1998 ; 1998 >
-    au < exists ; exists ; 1999 ; Humanities Research Volume 1999 ; 1999 >
-    au < exists ; exists ; 2000 ; Humanities Research Volume 2000 ; 2000 >
-    au < exists ; exists ; 2001 ; Humanities Research Volume VIII ; 2001 >
-    au < exists ; exists ; 2002 ; Humanities Research Volume IX ; 2002 >
-    au < exists ; exists ; 2003 ; Humanities Research Volume X ; 2003 >
-    au < exists ; exists ; 2004 ; Humanities Research Volume XI ; 2004 >
-    au < exists ; exists ; 2005 ; Humanities Research Volume XII ; 2005 >
-    au < exists ; exists ; 2006 ; Humanities Research Volume XIII ; 2006 >
-    au < exists ; exists ; 2007 ; Humanities Research Volume XIV ; 2007 >
-    au < exists ; exists ; 2009 ; Humanities Research Volume XV ; 2009 >
-    au < exists ; exists ; 2010 ; Humanities Research Volume XVI ; 2010 >
-    au < exists ; exists ; 2011 ; Humanities Research Volume XVII ; 2011 >
-    au < exists ; exists ; 2012 ; Humanities Research Volume XVIII ; XVIII >
-    au < exists ; exists ; 2013 ; Humanities Research Volume XIX ; XIX >
+    au < exists ; exists ; 1997 ; Humanities Research Volume 1997 ; 1997 ; >
+    au < exists ; exists ; 1998 ; Humanities Research Volume 1998 ; 1998 ; >
+    au < exists ; exists ; 1999 ; Humanities Research Volume 1999 ; 1999 ; >
+    au < exists ; exists ; 2000 ; Humanities Research Volume 2000 ; 2000 ; >
+    au < exists ; exists ; 2001 ; Humanities Research Volume VIII ; 2001 ; >
+    au < exists ; exists ; 2002 ; Humanities Research Volume IX ; 2002 ; >
+    au < exists ; exists ; 2003 ; Humanities Research Volume X ; 2003 ; >
+    au < exists ; exists ; 2004 ; Humanities Research Volume XI ; 2004 ; >
+    au < exists ; exists ; 2005 ; Humanities Research Volume XII ; 2005 ; >
+    au < exists ; exists ; 2006 ; Humanities Research Volume XIII ; 2006 ; >
+    au < exists ; exists ; 2007 ; Humanities Research Volume XIV ; 2007 ; >
+    au < exists ; exists ; 2009 ; Humanities Research Volume XV ; 2009 ; >
+    au < exists ; exists ; 2010 ; Humanities Research Volume XVI ; 2010 ; >
+    au < exists ; exists ; 2011 ; Humanities Research Volume XVII ; 2011 ; >
+    au < exists ; exists ; 2012 ; Humanities Research Volume XVIII ; XVIII ; >
+    au < exists ; exists ; 2013 ; Humanities Research Volume XIX ; XIX ; >
 
   }
 }

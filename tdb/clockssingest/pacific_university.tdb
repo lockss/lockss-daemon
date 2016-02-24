@@ -18,12 +18,12 @@
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://commons.pacificu.edu/
     param[journal_abbr] = hip
-    implicit < status ; status2 ; year ; name ; param[volume] >
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
     
     comment[moved] = journal no longer eligible for clockss inclusion. No manifest pages.
 
-    au < down ; crawling ; 2011-2013 ; Health and Interprofessional Practice Volume 1 ; 1 >
-    au < down ; exists ; 2013-2014 ; Health and Interprofessional Practice Volume 2 ; 2 >
+    au < down ; crawling ; 2011-2013 ; Health and Interprofessional Practice Volume 1 ; 1 ; >
+    au < down ; exists ; 2013-2014 ; Health and Interprofessional Practice Volume 2 ; 2 ; >
     
   }
 

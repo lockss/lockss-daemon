@@ -7,7 +7,7 @@
   >
 
     plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
-    implicit < status ; status2 ; year ; param[year] ; name ; volume >
+    implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
 
   {
     title <
@@ -22,8 +22,8 @@
       comment[name_change] = After Volume 2, issues changed name/issn to Victoria University Law and Justice Journal
       comment[continued_by] = 2202-7912
 
-      au < finished ; finished ; 2011 ; 2011 ; DICTUM - Victoria Law School Journal Volume 1 ; 1 >
-      au < finished ; finished ; 2012 ; 2012 ; DICTUM - Victoria Law School Journal Volume 2 ; 2 >
+      au < finished ; finished ; 2011 ; 2011 ; DICTUM - Victoria Law School Journal Volume 1 ; 1 ; >
+      au < finished ; finished ; 2012 ; 2012 ; DICTUM - Victoria Law School Journal Volume 2 ; 2 ; >
 
   }
 
@@ -41,10 +41,10 @@
       comment[name_change1] = Volumes 1-2 are available under issn 1838-6849
       comment[continues] = 1838-6849
 
-      au < finished ; finished ; 2013 ; 2013 ; Victoria University Law and Justice Journal Volume 3 ; 3 >
-      au < finished ; finished ; 2014 ; 2014 ; Victoria University Law and Justice Journal Volume 4 ; 4 >
-      au < crawling ; exists ; 2015 ; 2015 ; Victoria University Law and Justice Journal Volume 5 ; 5 >
-      au < expected ; exists ; 2016 ; 2016 ; Victoria University Law and Justice Journal Volume 6 ; 6 >
+      au < finished ; finished ; 2013 ; 2013 ; Victoria University Law and Justice Journal Volume 3 ; 3 ; >
+      au < finished ; finished ; 2014 ; 2014 ; Victoria University Law and Justice Journal Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Victoria University Law and Justice Journal Volume 5 ; 5 ; >
+      au < expected ; exists ; 2016 ; 2016 ; Victoria University Law and Justice Journal Volume 6 ; 6 ; >
 
   }
 
@@ -60,17 +60,17 @@
 
       comment[notReady] = V9 notReady. url with no http causing unending redirects "www.ft.com/cms/s/..." on page http://jbsge.vu.edu.au/article/view/612/
 
-      au < manifest ; exists ; 2006 ; 2006 ; Journal of Business Systems, Governance & Ethics Volume 1 ; 1 >
-      au < manifest ; exists ; 2007 ; 2007 ; Journal of Business Systems, Governance & Ethics Volume 2 ; 2 >
-      au < manifest ; exists ; 2008 ; 2008 ; Journal of Business Systems, Governance & Ethics Volume 3 ; 3 >
-      au < manifest ; exists ; 2009 ; 2009 ; Journal of Business Systems, Governance & Ethics Volume 4 ; 4 >
-      au < manifest ; exists ; 2010 ; 2010 ; Journal of Business Systems, Governance & Ethics Volume 5 ; 5 >
-      au < manifest ; exists ; 2011 ; 2011 ; Journal of Business Systems, Governance & Ethics Volume 6 ; 6 >
-      au < manifest ; exists ; 2012 ; 2012 ; Journal of Business Systems, Governance & Ethics Volume 7 ; 7 >
-      au < manifest ; exists ; 2013 ; 2013 ; Journal of Business Systems, Governance & Ethics Volume 8 ; 8 >
-      au < notReady ; exists ; 2014 ; 2014 ; Journal of Business Systems, Governance & Ethics Volume 9 ; 9 >
-      au < crawling ; exists ; 2015 ; 2015 ; Journal of Business Systems, Governance & Ethics Volume 10 ; 10 >
-      au < expected ; exists ; 2016 ; 2016 ; Journal of Business Systems, Governance & Ethics Volume 11 ; 11 >
+      au < manifest ; exists ; 2006 ; 2006 ; Journal of Business Systems, Governance & Ethics Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Journal of Business Systems, Governance & Ethics Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Journal of Business Systems, Governance & Ethics Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Journal of Business Systems, Governance & Ethics Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Journal of Business Systems, Governance & Ethics Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Journal of Business Systems, Governance & Ethics Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; Journal of Business Systems, Governance & Ethics Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; Journal of Business Systems, Governance & Ethics Volume 8 ; 8 ; >
+      au < notReady ; exists ; 2014 ; 2014 ; Journal of Business Systems, Governance & Ethics Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Journal of Business Systems, Governance & Ethics Volume 10 ; 10 ; >
+      au < expected ; exists ; 2016 ; 2016 ; Journal of Business Systems, Governance & Ethics Volume 11 ; 11 ; >
 
   }
 
@@ -85,14 +85,14 @@
       param[base_url] = http://offsetartsjournal.vu.edu.au/
       param[journal_id] = offset
 
-      au < manifest ; exists ; 2009 ; 2009 ; Offset Volume 9 ; 9 >
-      au < manifest ; exists ; 2010 ; 2010 ; Offset Volume 10 ; 10 >
-      au < manifest ; exists ; 2011 ; 2011 ; Offset Volume 11 ; 11 >
-      au < manifest ; exists ; 2012 ; 2012 ; Offset Volume 12 ; 12 >
-      au < crawling ; exists ; 2013 ; 2013 ; Offset Volume 13 ; 13 >
-      au < finished ; finished ; 2014 ; 2014 ; Offset Volume 14 ; 14 >
-      au < crawling ; exists ; 2015 ; 2015 ; Offset Volume 15 ; 15 >
-      au < expected ; exists ; 2016 ; 2016 ; Offset Volume 16 ; 16 >
+      au < manifest ; exists ; 2009 ; 2009 ; Offset Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Offset Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Offset Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; Offset Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Offset Volume 13 ; 13 ; >
+      au < finished ; finished ; 2014 ; 2014 ; Offset Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Offset Volume 15 ; 15 ; >
+      au < expected ; exists ; 2016 ; 2016 ; Offset Volume 16 ; 16 ; >
 
   }
 

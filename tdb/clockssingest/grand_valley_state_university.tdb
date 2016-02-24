@@ -18,38 +18,38 @@
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
     param[base_url] = http://scholarworks.gvsu.edu/
     param[journal_abbr] = lajm
-    implicit < status ; status2 ; year ; name ; param[volume] >
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < manifest ; exists ; 1985 ; Language Arts Journal of Michigan Volume 1 ; 1 >
-    au < manifest ; exists ; 1986 ; Language Arts Journal of Michigan Volume 2 ; 2 >
-    au < manifest ; exists ; 1987 ; Language Arts Journal of Michigan Volume 3 ; 3 >
-    au < manifest ; exists ; 1988 ; Language Arts Journal of Michigan Volume 4 ; 4 >
-    au < manifest ; exists ; 1989-1990 ; Language Arts Journal of Michigan Volume 5 ; 5 >
-    au < manifest ; exists ; 1990 ; Language Arts Journal of Michigan Volume 6 ; 6 >
-    au < manifest ; exists ; 1991 ; Language Arts Journal of Michigan Volume 7 ; 7 >
-    au < manifest ; exists ; 1992 ; Language Arts Journal of Michigan Volume 8 ; 8 >
-    au < manifest ; exists ; 1993 ; Language Arts Journal of Michigan Volume 9 ; 9 >
-    au < manifest ; exists ; 1994 ; Language Arts Journal of Michigan Volume 10 ; 10 >
-    au < manifest ; exists ; 1995 ; Language Arts Journal of Michigan Volume 11 ; 11 >
-    au < manifest ; exists ; 1996 ; Language Arts Journal of Michigan Volume 12 ; 12 >
-    au < manifest ; exists ; 1997 ; Language Arts Journal of Michigan Volume 13 ; 13 >
-    au < manifest ; exists ; 1998 ; Language Arts Journal of Michigan Volume 14 ; 14 >
-    au < manifest ; exists ; 1999 ; Language Arts Journal of Michigan Volume 15 ; 15 >
-    au < manifest ; exists ; 2000 ; Language Arts Journal of Michigan Volume 16 ; 16 >
-    au < manifest ; exists ; 2001 ; Language Arts Journal of Michigan Volume 17 ; 17 >
-    au < manifest ; exists ; 2002 ; Language Arts Journal of Michigan Volume 18 ; 18 >
-    au < manifest ; exists ; 2003 ; Language Arts Journal of Michigan Volume 19 ; 19 >
-    au < manifest ; exists ; 2004 ; Language Arts Journal of Michigan Volume 20 ; 20 >
-    au < manifest ; exists ; 2005 ; Language Arts Journal of Michigan Volume 21 ; 21 >
-    au < manifest ; exists ; 2006 ; Language Arts Journal of Michigan Volume 22 ; 22 >
-    au < manifest ; exists ; 2007-2008 ; Language Arts Journal of Michigan Volume 23 ; 23 >
-    au < manifest ; exists ; 2008-2009 ; Language Arts Journal of Michigan Volume 24 ; 24 >
-    au < manifest ; exists ; 2009-2010 ; Language Arts Journal of Michigan Volume 25 ; 25 >
-    au < manifest ; exists ; 2010-2011 ; Language Arts Journal of Michigan Volume 26 ; 26 >
-    au < finished ; finished ; 2011-2012 ; Language Arts Journal of Michigan Volume 27 ; 27 >
-    au < finished ; crawling ; 2012-2013 ; Language Arts Journal of Michigan Volume 28 ; 28 >
-    au < finished ; finished ; 2013-2014 ; Language Arts Journal of Michigan Volume 29 ; 29 >
-    au < finished ; finished ; 2014-2015 ; Language Arts Journal of Michigan Volume 30 ; 30 >
+    au < manifest ; exists ; 1985 ; Language Arts Journal of Michigan Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1986 ; Language Arts Journal of Michigan Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1987 ; Language Arts Journal of Michigan Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1988 ; Language Arts Journal of Michigan Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1989-1990 ; Language Arts Journal of Michigan Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1990 ; Language Arts Journal of Michigan Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1991 ; Language Arts Journal of Michigan Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1992 ; Language Arts Journal of Michigan Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1993 ; Language Arts Journal of Michigan Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1994 ; Language Arts Journal of Michigan Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1995 ; Language Arts Journal of Michigan Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1996 ; Language Arts Journal of Michigan Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1997 ; Language Arts Journal of Michigan Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1998 ; Language Arts Journal of Michigan Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1999 ; Language Arts Journal of Michigan Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2000 ; Language Arts Journal of Michigan Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2001 ; Language Arts Journal of Michigan Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2002 ; Language Arts Journal of Michigan Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2003 ; Language Arts Journal of Michigan Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2004 ; Language Arts Journal of Michigan Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2005 ; Language Arts Journal of Michigan Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2006 ; Language Arts Journal of Michigan Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2007-2008 ; Language Arts Journal of Michigan Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2008-2009 ; Language Arts Journal of Michigan Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2009-2010 ; Language Arts Journal of Michigan Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2010-2011 ; Language Arts Journal of Michigan Volume 26 ; 26 ; >
+    au < finished ; finished ; 2011-2012 ; Language Arts Journal of Michigan Volume 27 ; 27 ; >
+    au < finished ; crawling ; 2012-2013 ; Language Arts Journal of Michigan Volume 28 ; 28 ; >
+    au < finished ; finished ; 2013-2014 ; Language Arts Journal of Michigan Volume 29 ; 29 ; >
+    au < finished ; finished ; 2014-2015 ; Language Arts Journal of Michigan Volume 30 ; 30 ; >
    
 
   }
@@ -64,14 +64,14 @@
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
     param[base_url] = http://scholarworks.gvsu.edu/
     param[journal_abbr] = jti
-    implicit < status ; status2 ; year ; name ; param[volume] >
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < manifest ; exists ; 2011 ; The Journal of Tourism Insights Volume 1 ; 1 >
-    au < manifest ; exists ; 2011 ; The Journal of Tourism Insights Volume 2 ; 2 >
-    au < finished ; finished ; 2012 ; The Journal of Tourism Insights Volume 3 ; 3 >
-    au < crawling ; exists ; 2013 ; The Journal of Tourism Insights Volume 4 ; 4 >
-    au < finished ; finished ; 2014 ; The Journal of Tourism Insights Volume 5 ; 5 >
-    au < crawling ; exists ; 2015 ; The Journal of Tourism Insights Volume 6 ; 6 >
+    au < manifest ; exists ; 2011 ; The Journal of Tourism Insights Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2011 ; The Journal of Tourism Insights Volume 2 ; 2 ; >
+    au < finished ; finished ; 2012 ; The Journal of Tourism Insights Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2013 ; The Journal of Tourism Insights Volume 4 ; 4 ; >
+    au < finished ; finished ; 2014 ; The Journal of Tourism Insights Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2015 ; The Journal of Tourism Insights Volume 6 ; 6 ; >
 
   }
   
@@ -85,19 +85,19 @@
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://scholarworks.gvsu.edu/
     param[journal_abbr] = orpc
-    implicit < status ; status2 ; year ; name ; param[volume] >
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 1 ; 1 >
-    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 2 ; 2 >
-    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 3 ; 3 >
-    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 4 ; 4 >
-    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 5 ; 5 >
-    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 6 ; 6 >
-    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 7 ; 7 >
-    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 8 ; 8 >
-    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 9 ; 9 >
-    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 10 ; 10 >
-    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 11 ; 11 >
+    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 11 ; 11 ; >
 
   }
 }

@@ -2622,21 +2622,19 @@
       issnl = 1474-3310
     >
 
-    comment[dcor] = This triggered title is being reingested
-
-    comment[ceased] = ceased publication in 2008
-    plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
+    # This triggered title is being reingested
+    # ceased publication in 2008
+    pluginSuffix = ClockssHighWirePlugin
     param[base_url] = http://btci.stanford.clockss.org/
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
 
-    au < finished ; finished ; 2001 ; Brief Treatment and Crisis Intervention Volume 1 ; 1 >
-    au < finished ; finished ; 2002 ; Brief Treatment and Crisis Intervention Volume 2 ; 2 >
-    au < finished ; finished ; 2003 ; Brief Treatment and Crisis Intervention Volume 3 ; 3 >
-    au < finished ; finished ; 2004 ; Brief Treatment and Crisis Intervention Volume 4 ; 4 >
-    au < finished ; finished ; 2005 ; Brief Treatment and Crisis Intervention Volume 5 ; 5 >
-    au < finished ; finished ; 2006 ; Brief Treatment and Crisis Intervention Volume 6 ; 6 >
-    au < finished ; finished ; 2007 ; Brief Treatment and Crisis Intervention Volume 7 ; 7 >
-    au < finished ; finished ; 2008 ; Brief Treatment and Crisis Intervention Volume 8 ; 8 >
+    au < finished ; finished ; 2001 ; Brief Treatment and Crisis Intervention Volume 1 ; 1 ; >
+    au < finished ; finished ; 2002 ; Brief Treatment and Crisis Intervention Volume 2 ; 2 ; >
+    au < finished ; finished ; 2003 ; Brief Treatment and Crisis Intervention Volume 3 ; 3 ; >
+    au < finished ; finished ; 2004 ; Brief Treatment and Crisis Intervention Volume 4 ; 4 ; >
+    au < finished ; finished ; 2005 ; Brief Treatment and Crisis Intervention Volume 5 ; 5 ; >
+    au < finished ; finished ; 2006 ; Brief Treatment and Crisis Intervention Volume 6 ; 6 ; >
+    au < finished ; finished ; 2007 ; Brief Treatment and Crisis Intervention Volume 7 ; 7 ; >
+    au < finished ; finished ; 2008 ; Brief Treatment and Crisis Intervention Volume 8 ; 8 ; >
 
   }
 

@@ -17,12 +17,12 @@
 
      plugin = needs.plugin
      param[base_url] = http://www.alluvium-journal.org/
-     implicit < status ; status2 ; year ; param[year] ; name ; volume >
+     implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
 
-     au < doNotProcess ; exists ; 2012 ; 2012 ; Alluvium Volume 2012 ; 2012 >
-     au < doNotProcess ; exists ; 2013 ; 2013 ; Alluvium Volume 2013 ; 2013 >
-     au < doNotProcess ; exists ; 2014 ; 2014 ; Alluvium Volume 2014 ; 2014 >
-     au < expected ; exists ; 2015 ; 2015 ; Alluvium Volume 2015 ; 2015 >
+     au < doNotProcess ; exists ; 2012 ; 2012 ; Alluvium Volume 2012 ; 2012 ; >
+     au < doNotProcess ; exists ; 2013 ; 2013 ; Alluvium Volume 2013 ; 2013 ; >
+     au < doNotProcess ; exists ; 2014 ; 2014 ; Alluvium Volume 2014 ; 2014 ; >
+     au < expected ; exists ; 2015 ; 2015 ; Alluvium Volume 2015 ; 2015 ; >
    
   }
     
@@ -37,14 +37,14 @@
      param[base_url] = https://www.pynchon.net/
      param[journal_id] = owap
      comment[platform] = moving from standard OJS to special OJS
-     implicit < status ; status2 ; year ; param[year] ; name ; volume >
+     implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
      
      comment[0] = Is on ubiquity press platform which has moved to hibrid version of OJS. See error at https://www.pynchon.net/index.php/owap/gateway/lockss?year=2013
 
-     au < down ; crawling ; 2012 ; 2012 ; Orbit: Writing Around Pynchon Volume 1 ; 1 >
-     au < down ; exists ; 2013 ; 2013 ; Orbit: Writing Around Pynchon Volume 2 ; 2 >
-     au < doNotProcess ; exists ; 2014 ; 2014 ; Orbit: Writing Around Pynchon Volume 3 ; 3 >
-     au < doNotProcess ; exists ; 2015 ; 2015 ; Orbit: Writing Around Pynchon Volume 4 ; 4 >
+     au < down ; crawling ; 2012 ; 2012 ; Orbit: Writing Around Pynchon Volume 1 ; 1 ; >
+     au < down ; exists ; 2013 ; 2013 ; Orbit: Writing Around Pynchon Volume 2 ; 2 ; >
+     au < doNotProcess ; exists ; 2014 ; 2014 ; Orbit: Writing Around Pynchon Volume 3 ; 3 ; >
+     au < doNotProcess ; exists ; 2015 ; 2015 ; Orbit: Writing Around Pynchon Volume 4 ; 4 ; >
      
   }
 

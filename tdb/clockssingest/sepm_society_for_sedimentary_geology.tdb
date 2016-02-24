@@ -7,7 +7,7 @@
   >
 
   plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
-  implicit < status ; status2 ; year ; name ; param[volume_name] >
+  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
   {
     title <
@@ -18,92 +18,92 @@
     >
       param[base_url] = http://jsedres.sepmonline.org/
 
-      au < manifest ; exists ; 1931 ; Journal of Sedimentary Research Volume 1 ; 1 >
-      au < manifest ; exists ; 1932 ; Journal of Sedimentary Research Volume 2 ; 2 >
-      au < manifest ; exists ; 1933 ; Journal of Sedimentary Research Volume 3 ; 3 >
-      au < manifest ; exists ; 1934 ; Journal of Sedimentary Research Volume 4 ; 4 >
-      au < manifest ; exists ; 1935 ; Journal of Sedimentary Research Volume 5 ; 5 >
-      au < manifest ; exists ; 1936 ; Journal of Sedimentary Research Volume 6 ; 6 >
-      au < manifest ; exists ; 1937 ; Journal of Sedimentary Research Volume 7 ; 7 >
-      au < manifest ; exists ; 1938 ; Journal of Sedimentary Research Volume 8 ; 8 >
-      au < manifest ; exists ; 1939 ; Journal of Sedimentary Research Volume 9 ; 9 >
-      au < manifest ; exists ; 1940 ; Journal of Sedimentary Research Volume 10 ; 10 >
-      au < manifest ; exists ; 1941 ; Journal of Sedimentary Research Volume 11 ; 11 >
-      au < manifest ; exists ; 1942 ; Journal of Sedimentary Research Volume 12 ; 12 >
-      au < manifest ; exists ; 1943 ; Journal of Sedimentary Research Volume 13 ; 13 >
-      au < manifest ; exists ; 1944 ; Journal of Sedimentary Research Volume 14 ; 14 >
-      au < manifest ; exists ; 1945 ; Journal of Sedimentary Research Volume 15 ; 15 >
-      au < manifest ; exists ; 1946 ; Journal of Sedimentary Research Volume 16 ; 16 >
-      au < manifest ; exists ; 1947 ; Journal of Sedimentary Research Volume 17 ; 17 >
-      au < manifest ; exists ; 1948 ; Journal of Sedimentary Research Volume 18 ; 18 >
-      au < manifest ; exists ; 1949 ; Journal of Sedimentary Research Volume 19 ; 19 >
-      au < manifest ; exists ; 1950 ; Journal of Sedimentary Research Volume 20 ; 20 >
-      au < manifest ; exists ; 1951 ; Journal of Sedimentary Research Volume 21 ; 21 >
-      au < manifest ; exists ; 1952 ; Journal of Sedimentary Research Volume 22 ; 22 >
-      au < manifest ; exists ; 1953 ; Journal of Sedimentary Research Volume 23 ; 23 >
-      au < manifest ; exists ; 1954 ; Journal of Sedimentary Research Volume 24 ; 24 >
-      au < manifest ; exists ; 1955 ; Journal of Sedimentary Research Volume 25 ; 25 >
-      au < manifest ; exists ; 1956 ; Journal of Sedimentary Research Volume 26 ; 26 >
-      au < manifest ; exists ; 1957 ; Journal of Sedimentary Research Volume 27 ; 27 >
-      au < manifest ; exists ; 1958 ; Journal of Sedimentary Research Volume 28 ; 28 >
-      au < manifest ; exists ; 1959 ; Journal of Sedimentary Research Volume 29 ; 29 >
-      au < manifest ; exists ; 1960 ; Journal of Sedimentary Research Volume 30 ; 30 >
-      au < manifest ; exists ; 1961 ; Journal of Sedimentary Research Volume 31 ; 31 >
-      au < manifest ; exists ; 1962 ; Journal of Sedimentary Research Volume 32 ; 32 >
-      au < manifest ; exists ; 1963 ; Journal of Sedimentary Research Volume 33 ; 33 >
-      au < manifest ; exists ; 1964 ; Journal of Sedimentary Research Volume 34 ; 34 >
-      au < manifest ; exists ; 1965 ; Journal of Sedimentary Research Volume 35 ; 35 >
-      au < manifest ; exists ; 1966 ; Journal of Sedimentary Research Volume 36 ; 36 >
-      au < manifest ; exists ; 1967 ; Journal of Sedimentary Research Volume 37 ; 37 >
-      au < manifest ; exists ; 1968 ; Journal of Sedimentary Research Volume 38 ; 38 >
-      au < manifest ; exists ; 1969 ; Journal of Sedimentary Research Volume 39 ; 39 >
-      au < manifest ; exists ; 1970 ; Journal of Sedimentary Research Volume 40 ; 40 >
-      au < manifest ; exists ; 1971 ; Journal of Sedimentary Research Volume 41 ; 41 >
-      au < manifest ; exists ; 1972 ; Journal of Sedimentary Research Volume 42 ; 42 >
-      au < manifest ; exists ; 1973 ; Journal of Sedimentary Research Volume 43 ; 43 >
-      au < manifest ; exists ; 1974 ; Journal of Sedimentary Research Volume 44 ; 44 >
-      au < manifest ; exists ; 1975 ; Journal of Sedimentary Research Volume 45 ; 45 >
-      au < manifest ; exists ; 1976 ; Journal of Sedimentary Research Volume 46 ; 46 >
-      au < manifest ; exists ; 1977 ; Journal of Sedimentary Research Volume 47 ; 47 >
-      au < manifest ; exists ; 1978 ; Journal of Sedimentary Research Volume 48 ; 48 >
-      au < manifest ; exists ; 1979 ; Journal of Sedimentary Research Volume 49 ; 49 >
-      au < manifest ; exists ; 1980 ; Journal of Sedimentary Research Volume 50 ; 50 >
-      au < manifest ; exists ; 1981 ; Journal of Sedimentary Research Volume 51 ; 51 >
-      au < manifest ; exists ; 1982 ; Journal of Sedimentary Research Volume 52 ; 52 >
-      au < manifest ; exists ; 1983 ; Journal of Sedimentary Research Volume 53 ; 53 >
-      au < manifest ; exists ; 1984 ; Journal of Sedimentary Research Volume 54 ; 54 >
-      au < manifest ; exists ; 1985 ; Journal of Sedimentary Research Volume 55 ; 55 >
-      au < manifest ; exists ; 1986 ; Journal of Sedimentary Research Volume 56 ; 56 >
-      au < manifest ; exists ; 1987 ; Journal of Sedimentary Research Volume 57 ; 57 >
-      au < manifest ; exists ; 1988 ; Journal of Sedimentary Research Volume 58 ; 58 >
-      au < manifest ; exists ; 1989 ; Journal of Sedimentary Research Volume 59 ; 59 >
-      au < manifest ; exists ; 1990 ; Journal of Sedimentary Research Volume 60 ; 60 >
-      au < manifest ; exists ; 1991 ; Journal of Sedimentary Research Volume 61 ; 61 >
-      au < manifest ; exists ; 1992 ; Journal of Sedimentary Research Volume 62 ; 62 >
-      au < manifest ; exists ; 1993 ; Journal of Sedimentary Research Volume 63 ; 63 >
-      au < manifest ; exists ; 1994 ; Journal of Sedimentary Research Volume 64 ; 64 >
-      au < manifest ; exists ; 1995 ; Journal of Sedimentary Research Volume 65 ; 65 >
-      au < manifest ; exists ; 1996 ; Journal of Sedimentary Research Volume 66 ; 66 >
-      au < manifest ; exists ; 1997 ; Journal of Sedimentary Research Volume 67 ; 67 >
-      au < manifest ; exists ; 1998 ; Journal of Sedimentary Research Volume 68 ; 68 >
-      au < manifest ; exists ; 1999 ; Journal of Sedimentary Research Volume 69 ; 69 >
-      au < manifest ; exists ; 2000 ; Journal of Sedimentary Research Volume 70 ; 70 >
-      au < manifest ; exists ; 2001 ; Journal of Sedimentary Research Volume 71 ; 71 >
-      au < manifest ; exists ; 2002 ; Journal of Sedimentary Research Volume 72 ; 72 >
-      au < manifest ; exists ; 2003 ; Journal of Sedimentary Research Volume 73 ; 73 >
-      au < manifest ; exists ; 2004 ; Journal of Sedimentary Research Volume 74 ; 74 >
-      au < manifest ; exists ; 2005 ; Journal of Sedimentary Research Volume 75 ; 75 >
-      au < manifest ; exists ; 2006 ; Journal of Sedimentary Research Volume 76 ; 76 >
-      au < manifest ; exists ; 2007 ; Journal of Sedimentary Research Volume 77 ; 77 >
-      au < manifest ; exists ; 2008 ; Journal of Sedimentary Research Volume 78 ; 78 >
-      au < manifest ; exists ; 2009 ; Journal of Sedimentary Research Volume 79 ; 79 >
-      au < manifest ; exists ; 2010 ; Journal of Sedimentary Research Volume 80 ; 80 >
-      au < manifest ; exists ; 2011 ; Journal of Sedimentary Research Volume 81 ; 81 >
-      au < crawling ; exists ; 2012 ; Journal of Sedimentary Research Volume 82 ; 82 >
-      au < crawling ; exists ; 2013 ; Journal of Sedimentary Research Volume 83 ; 83 >
-      au < crawling ; exists ; 2014 ; Journal of Sedimentary Research Volume 84 ; 84 >
-      au < crawling ; exists ; 2015 ; Journal of Sedimentary Research Volume 85 ; 85 >
-      au < manifest ; exists ; 2016 ; Journal of Sedimentary Research Volume 86 ; 86 >
+      au < manifest ; exists ; 1931 ; Journal of Sedimentary Research Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1932 ; Journal of Sedimentary Research Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1933 ; Journal of Sedimentary Research Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1934 ; Journal of Sedimentary Research Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1935 ; Journal of Sedimentary Research Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1936 ; Journal of Sedimentary Research Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1937 ; Journal of Sedimentary Research Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1938 ; Journal of Sedimentary Research Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1939 ; Journal of Sedimentary Research Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1940 ; Journal of Sedimentary Research Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1941 ; Journal of Sedimentary Research Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1942 ; Journal of Sedimentary Research Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1943 ; Journal of Sedimentary Research Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1944 ; Journal of Sedimentary Research Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1945 ; Journal of Sedimentary Research Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1946 ; Journal of Sedimentary Research Volume 16 ; 16 ; >
+      au < manifest ; exists ; 1947 ; Journal of Sedimentary Research Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1948 ; Journal of Sedimentary Research Volume 18 ; 18 ; >
+      au < manifest ; exists ; 1949 ; Journal of Sedimentary Research Volume 19 ; 19 ; >
+      au < manifest ; exists ; 1950 ; Journal of Sedimentary Research Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1951 ; Journal of Sedimentary Research Volume 21 ; 21 ; >
+      au < manifest ; exists ; 1952 ; Journal of Sedimentary Research Volume 22 ; 22 ; >
+      au < manifest ; exists ; 1953 ; Journal of Sedimentary Research Volume 23 ; 23 ; >
+      au < manifest ; exists ; 1954 ; Journal of Sedimentary Research Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1955 ; Journal of Sedimentary Research Volume 25 ; 25 ; >
+      au < manifest ; exists ; 1956 ; Journal of Sedimentary Research Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1957 ; Journal of Sedimentary Research Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1958 ; Journal of Sedimentary Research Volume 28 ; 28 ; >
+      au < manifest ; exists ; 1959 ; Journal of Sedimentary Research Volume 29 ; 29 ; >
+      au < manifest ; exists ; 1960 ; Journal of Sedimentary Research Volume 30 ; 30 ; >
+      au < manifest ; exists ; 1961 ; Journal of Sedimentary Research Volume 31 ; 31 ; >
+      au < manifest ; exists ; 1962 ; Journal of Sedimentary Research Volume 32 ; 32 ; >
+      au < manifest ; exists ; 1963 ; Journal of Sedimentary Research Volume 33 ; 33 ; >
+      au < manifest ; exists ; 1964 ; Journal of Sedimentary Research Volume 34 ; 34 ; >
+      au < manifest ; exists ; 1965 ; Journal of Sedimentary Research Volume 35 ; 35 ; >
+      au < manifest ; exists ; 1966 ; Journal of Sedimentary Research Volume 36 ; 36 ; >
+      au < manifest ; exists ; 1967 ; Journal of Sedimentary Research Volume 37 ; 37 ; >
+      au < manifest ; exists ; 1968 ; Journal of Sedimentary Research Volume 38 ; 38 ; >
+      au < manifest ; exists ; 1969 ; Journal of Sedimentary Research Volume 39 ; 39 ; >
+      au < manifest ; exists ; 1970 ; Journal of Sedimentary Research Volume 40 ; 40 ; >
+      au < manifest ; exists ; 1971 ; Journal of Sedimentary Research Volume 41 ; 41 ; >
+      au < manifest ; exists ; 1972 ; Journal of Sedimentary Research Volume 42 ; 42 ; >
+      au < manifest ; exists ; 1973 ; Journal of Sedimentary Research Volume 43 ; 43 ; >
+      au < manifest ; exists ; 1974 ; Journal of Sedimentary Research Volume 44 ; 44 ; >
+      au < manifest ; exists ; 1975 ; Journal of Sedimentary Research Volume 45 ; 45 ; >
+      au < manifest ; exists ; 1976 ; Journal of Sedimentary Research Volume 46 ; 46 ; >
+      au < manifest ; exists ; 1977 ; Journal of Sedimentary Research Volume 47 ; 47 ; >
+      au < manifest ; exists ; 1978 ; Journal of Sedimentary Research Volume 48 ; 48 ; >
+      au < manifest ; exists ; 1979 ; Journal of Sedimentary Research Volume 49 ; 49 ; >
+      au < manifest ; exists ; 1980 ; Journal of Sedimentary Research Volume 50 ; 50 ; >
+      au < manifest ; exists ; 1981 ; Journal of Sedimentary Research Volume 51 ; 51 ; >
+      au < manifest ; exists ; 1982 ; Journal of Sedimentary Research Volume 52 ; 52 ; >
+      au < manifest ; exists ; 1983 ; Journal of Sedimentary Research Volume 53 ; 53 ; >
+      au < manifest ; exists ; 1984 ; Journal of Sedimentary Research Volume 54 ; 54 ; >
+      au < manifest ; exists ; 1985 ; Journal of Sedimentary Research Volume 55 ; 55 ; >
+      au < manifest ; exists ; 1986 ; Journal of Sedimentary Research Volume 56 ; 56 ; >
+      au < manifest ; exists ; 1987 ; Journal of Sedimentary Research Volume 57 ; 57 ; >
+      au < manifest ; exists ; 1988 ; Journal of Sedimentary Research Volume 58 ; 58 ; >
+      au < manifest ; exists ; 1989 ; Journal of Sedimentary Research Volume 59 ; 59 ; >
+      au < manifest ; exists ; 1990 ; Journal of Sedimentary Research Volume 60 ; 60 ; >
+      au < manifest ; exists ; 1991 ; Journal of Sedimentary Research Volume 61 ; 61 ; >
+      au < manifest ; exists ; 1992 ; Journal of Sedimentary Research Volume 62 ; 62 ; >
+      au < manifest ; exists ; 1993 ; Journal of Sedimentary Research Volume 63 ; 63 ; >
+      au < manifest ; exists ; 1994 ; Journal of Sedimentary Research Volume 64 ; 64 ; >
+      au < manifest ; exists ; 1995 ; Journal of Sedimentary Research Volume 65 ; 65 ; >
+      au < manifest ; exists ; 1996 ; Journal of Sedimentary Research Volume 66 ; 66 ; >
+      au < manifest ; exists ; 1997 ; Journal of Sedimentary Research Volume 67 ; 67 ; >
+      au < manifest ; exists ; 1998 ; Journal of Sedimentary Research Volume 68 ; 68 ; >
+      au < manifest ; exists ; 1999 ; Journal of Sedimentary Research Volume 69 ; 69 ; >
+      au < manifest ; exists ; 2000 ; Journal of Sedimentary Research Volume 70 ; 70 ; >
+      au < manifest ; exists ; 2001 ; Journal of Sedimentary Research Volume 71 ; 71 ; >
+      au < manifest ; exists ; 2002 ; Journal of Sedimentary Research Volume 72 ; 72 ; >
+      au < manifest ; exists ; 2003 ; Journal of Sedimentary Research Volume 73 ; 73 ; >
+      au < manifest ; exists ; 2004 ; Journal of Sedimentary Research Volume 74 ; 74 ; >
+      au < manifest ; exists ; 2005 ; Journal of Sedimentary Research Volume 75 ; 75 ; >
+      au < manifest ; exists ; 2006 ; Journal of Sedimentary Research Volume 76 ; 76 ; >
+      au < manifest ; exists ; 2007 ; Journal of Sedimentary Research Volume 77 ; 77 ; >
+      au < manifest ; exists ; 2008 ; Journal of Sedimentary Research Volume 78 ; 78 ; >
+      au < manifest ; exists ; 2009 ; Journal of Sedimentary Research Volume 79 ; 79 ; >
+      au < manifest ; exists ; 2010 ; Journal of Sedimentary Research Volume 80 ; 80 ; >
+      au < manifest ; exists ; 2011 ; Journal of Sedimentary Research Volume 81 ; 81 ; >
+      au < crawling ; exists ; 2012 ; Journal of Sedimentary Research Volume 82 ; 82 ; >
+      au < crawling ; exists ; 2013 ; Journal of Sedimentary Research Volume 83 ; 83 ; >
+      au < crawling ; exists ; 2014 ; Journal of Sedimentary Research Volume 84 ; 84 ; >
+      au < crawling ; exists ; 2015 ; Journal of Sedimentary Research Volume 85 ; 85 ; >
+      au < manifest ; exists ; 2016 ; Journal of Sedimentary Research Volume 86 ; 86 ; >
 
   }
 
@@ -116,37 +116,37 @@
 
       param[base_url] = http://palaios.sepmonline.org/
 
-      au < manifest ; exists ; 1986 ; PALAIOS Volume 1 ; 1 >
-      au < manifest ; exists ; 1987 ; PALAIOS Volume 2 ; 2 >
-      au < manifest ; exists ; 1988 ; PALAIOS Volume 3 ; 3 >
-      au < manifest ; exists ; 1989 ; PALAIOS Volume 4 ; 4 >
-      au < manifest ; exists ; 1990 ; PALAIOS Volume 5 ; 5 >
-      au < manifest ; exists ; 1991 ; PALAIOS Volume 6 ; 6 >
-      au < manifest ; exists ; 1992 ; PALAIOS Volume 7 ; 7 >
-      au < manifest ; exists ; 1993 ; PALAIOS Volume 8 ; 8 >
-      au < manifest ; exists ; 1994 ; PALAIOS Volume 9 ; 9 >
-      au < manifest ; exists ; 1995 ; PALAIOS Volume 10 ; 10 >
-      au < manifest ; exists ; 1996 ; PALAIOS Volume 11 ; 11 >
-      au < manifest ; exists ; 1997 ; PALAIOS Volume 12 ; 12 >
-      au < manifest ; exists ; 1998 ; PALAIOS Volume 13 ; 13 >
-      au < manifest ; exists ; 1999 ; PALAIOS Volume 14 ; 14 >
-      au < manifest ; exists ; 2000 ; PALAIOS Volume 15 ; 15 >
-      au < manifest ; exists ; 2001 ; PALAIOS Volume 16 ; 16 >
-      au < manifest ; exists ; 2002 ; PALAIOS Volume 17 ; 17 >
-      au < manifest ; exists ; 2003 ; PALAIOS Volume 18 ; 18 >
-      au < manifest ; exists ; 2004 ; PALAIOS Volume 19 ; 19 >
-      au < manifest ; exists ; 2005 ; PALAIOS Volume 20 ; 20 >
-      au < manifest ; exists ; 2006 ; PALAIOS Volume 21 ; 21 >
-      au < manifest ; exists ; 2007 ; PALAIOS Volume 22 ; 22 >
-      au < manifest ; exists ; 2008 ; PALAIOS Volume 23 ; 23 >
-      au < manifest ; exists ; 2009 ; PALAIOS Volume 24 ; 24 >
-      au < manifest ; exists ; 2010 ; PALAIOS Volume 25 ; 25 >
-      au < manifest ; exists ; 2011 ; PALAIOS Volume 26 ; 26 >
-      au < crawling ; exists ; 2012 ; PALAIOS Volume 27 ; 27 >
-      au < finished ; finished ; 2013 ; PALAIOS Volume 28 ; 28 >
-      au < finished ; finished ; 2014 ; PALAIOS Volume 29 ; 29 >
-      au < crawling ; exists ; 2015 ; PALAIOS Volume 30 ; 30 >
-      au < manifest ; exists ; 2016 ; PALAIOS Volume 31 ; 31 >
+      au < manifest ; exists ; 1986 ; PALAIOS Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1987 ; PALAIOS Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1988 ; PALAIOS Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1989 ; PALAIOS Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1990 ; PALAIOS Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1991 ; PALAIOS Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1992 ; PALAIOS Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1993 ; PALAIOS Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1994 ; PALAIOS Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1995 ; PALAIOS Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1996 ; PALAIOS Volume 11 ; 11 ; >
+      au < manifest ; exists ; 1997 ; PALAIOS Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1998 ; PALAIOS Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1999 ; PALAIOS Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2000 ; PALAIOS Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2001 ; PALAIOS Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2002 ; PALAIOS Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2003 ; PALAIOS Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2004 ; PALAIOS Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2005 ; PALAIOS Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2006 ; PALAIOS Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2007 ; PALAIOS Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2008 ; PALAIOS Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2009 ; PALAIOS Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2010 ; PALAIOS Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2011 ; PALAIOS Volume 26 ; 26 ; >
+      au < crawling ; exists ; 2012 ; PALAIOS Volume 27 ; 27 ; >
+      au < finished ; finished ; 2013 ; PALAIOS Volume 28 ; 28 ; >
+      au < finished ; finished ; 2014 ; PALAIOS Volume 29 ; 29 ; >
+      au < crawling ; exists ; 2015 ; PALAIOS Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2016 ; PALAIOS Volume 31 ; 31 ; >
 
   }
 

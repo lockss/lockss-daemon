@@ -8,7 +8,7 @@
 
     plugin = needs.plugin
     #same platform as Ubiquity Press
-    implicit < status ; status2 ; year ; name ; volume ; param[year] >
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
     #volume directory used in url is 1 less than the volume number
     
     {
@@ -21,9 +21,9 @@
     param[base_url] = http://www.comicsgrid.com/
     param[journal_id] = cg
     
-    au < doNotProcess ; exists ; 2013 ; The Comics Grid: Journal of Comics Scholarship Volume 3 ; 3 ; 2013 >
-    au < exists ; exists ; 2014 ; The Comics Grid: Journal of Comics Scholarship Volume 4 ; 4 ; 2014 >
-    au < exists ; exists ; 2015 ; The Comics Grid: Journal of Comics Scholarship Volume 5 ; 5 ; 2015 >
+    au < doNotProcess ; exists ; 2013 ; The Comics Grid: Journal of Comics Scholarship Volume 3 ; 3 ; 2013 ; >
+    au < exists ; exists ; 2014 ; The Comics Grid: Journal of Comics Scholarship Volume 4 ; 4 ; 2014 ; >
+    au < exists ; exists ; 2015 ; The Comics Grid: Journal of Comics Scholarship Volume 5 ; 5 ; 2015 ; >
     
     }
   

@@ -8,7 +8,7 @@
   
   plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
   param[base_url] = http://www.threatenedtaxa.org/
-  implicit < status ; status2 ; year ; param[year] ; name ; volume >
+  implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
   comment[platform] = moving to OJS2
   
   {
@@ -21,13 +21,13 @@
     
     comment[dNP] = migrating to OJS platform Sept 2013
 
-    au < doNotProcess ; exists ; 2009 ; 2009 ; Journal of Threatened Taxa Volume 1 ; 1 >
-    au < doNotProcess ; exists ; 2010 ; 2010 ; Journal of Threatened Taxa Volume 2 ; 2 >
-    au < doNotProcess ; exists ; 2011 ; 2011 ; Journal of Threatened Taxa Volume 3 ; 3 >
-    au < doNotProcess ; exists ; 2012 ; 2012 ; Journal of Threatened Taxa Volume 4 ; 4 >
-    au < doNotProcess ; exists ; 2013 ; 2013 ; Journal of Threatened Taxa Volume 5 ; 5 >
-    au < doNotProcess ; exists ; 2014 ; 2014 ; Journal of Threatened Taxa Volume 6 ; 6 >
-    au < expected ; exists ; 2015 ; 2015 ; Journal of Threatened Taxa Volume 7 ; 7 >
+    au < doNotProcess ; exists ; 2009 ; 2009 ; Journal of Threatened Taxa Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 2010 ; 2010 ; Journal of Threatened Taxa Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 2011 ; 2011 ; Journal of Threatened Taxa Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 2012 ; 2012 ; Journal of Threatened Taxa Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 2013 ; 2013 ; Journal of Threatened Taxa Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 2014 ; 2014 ; Journal of Threatened Taxa Volume 6 ; 6 ; >
+    au < expected ; exists ; 2015 ; 2015 ; Journal of Threatened Taxa Volume 7 ; 7 ; >
 
 
   }

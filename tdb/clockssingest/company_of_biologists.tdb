@@ -8,7 +8,7 @@
   >
 
   pluginPrefix = org.lockss.plugin.highwire.
-  implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
+  implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
   comment[0] = for tdb title list update go to http://www.biologists.com/journals.html
 
   {
@@ -21,10 +21,10 @@
 
     param[base_url] = http://bio.biologists.org/
 
-    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; Biology Open Volume 1 ; 1 >
-    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Biology Open Volume 2 ; 2 >
-    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2014 ; Biology Open Volume 3 ; 3 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2015 ; Biology Open Volume 4 ; 4 >
+    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; Biology Open Volume 1 ; 1 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Biology Open Volume 2 ; 2 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2014 ; Biology Open Volume 3 ; 3 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2015 ; Biology Open Volume 4 ; 4 ; >
 
   }
 
@@ -39,148 +39,148 @@
 
     param[base_url] = http://dev.biologists.org/
 
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1953 ; Development Volume 1 ; 1 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1954 ; Development Volume 2 ; 2 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1955 ; Development Volume 3 ; 3 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1956 ; Development Volume 4 ; 4 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1957 ; Development Volume 5 ; 5 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1958 ; Development Volume 6 ; 6 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1959 ; Development Volume 7 ; 7 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1960 ; Development Volume 8 ; 8 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1961 ; Development Volume 9 ; 9 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1962 ; Development Volume 10 ; 10 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1963 ; Development Volume 11 ; 11 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1964 ; Development Volume 12 ; 12 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1965 ; Development Volume 13 ; 13 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1965 ; Development Volume 14 ; 14 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1966 ; Development Volume 15 ; 15 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1966 ; Development Volume 16 ; 16 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1967 ; Development Volume 17 ; 17 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1967 ; Development Volume 18 ; 18 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1968 ; Development Volume 19 ; 19 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1968 ; Development Volume 20 ; 20 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1969 ; Development Volume 21 ; 21 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1969 ; Development Volume 22 ; 22 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1970 ; Development Volume 23 ; 23 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1970 ; Development Volume 24 ; 24 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1971 ; Development Volume 25 ; 25 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1971 ; Development Volume 26 ; 26 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1972 ; Development Volume 27 ; 27 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1972 ; Development Volume 28 ; 28 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1973 ; Development Volume 29 ; 29 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1973 ; Development Volume 30 ; 30 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1974 ; Development Volume 31 ; 31 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1974 ; Development Volume 32 ; 32 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1975 ; Development Volume 33 ; 33 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1975 ; Development Volume 34 ; 34 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1976 ; Development Volume 35 ; 35 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1976 ; Development Volume 36 ; 36 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Development Volume 37 ; 37 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Development Volume 38 ; 38 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Development Volume 39 ; 39 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Development Volume 40 ; 40 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Development Volume 41 ; 41 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Development Volume 42 ; 42 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Development Volume 43 ; 43 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Development Volume 44 ; 44 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Development Volume 45 ; 45 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Development Volume 46 ; 46 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Development Volume 47 ; 47 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Development Volume 48 ; 48 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Development Volume 49 ; 49 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Development Volume 50 ; 50 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Development Volume 51 ; 51 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Development Volume 52 ; 52 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Development Volume 53 ; 53 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Development Volume 54 ; 54 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Development Volume 55 ; 55 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Development Volume 56 ; 56 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Development Volume 57 ; 57 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Development Volume 58 ; 58 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Development Volume 59 ; 59 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Development Volume 60 ; 60 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Development Volume 61 ; 61 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Development Volume 62 ; 62 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Development Volume 63 ; 63 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Development Volume 64 ; 64 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Development Volume 65 ; 65 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Development Volume 66 ; 66 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Development Volume 67 ; 67 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Development Volume 68 ; 68 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Development Volume 69 ; 69 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Development Volume 70 ; 70 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Development Volume 71 ; 71 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Development Volume 72 ; 72 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Development Volume 73 ; 73 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Development Volume 74 ; 74 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Development Volume 75 ; 75 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Development Volume 76 ; 76 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Development Volume 77 ; 77 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Development Volume 78 ; 78 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Development Volume 79 ; 79 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Development Volume 80 ; 80 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Development Volume 81 ; 81 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Development Volume 82 ; 82 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Development Volume 83 ; 83 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Development Volume 84 ; 84 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Development Volume 85 ; 85 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Development Volume 86 ; 86 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Development Volume 87 ; 87 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Development Volume 88 ; 88 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Development Volume 89 ; 89 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Development Volume 90 ; 90 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Development Volume 91 ; 91 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Development Volume 92 ; 92 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Development Volume 93 ; 93 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Development Volume 94 ; 94 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Development Volume 95 ; 95 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Development Volume 96 ; 96 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Development Volume 97 ; 97 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Development Volume 98 ; 98 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Development Volume 99 ; 99 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Development Volume 100 ; 100 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Development Volume 101 ; 101 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Development Volume 102 ; 102 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Development Volume 103 ; 103 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Development Volume 104 ; 104 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Development Volume 105 ; 105 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Development Volume 106 ; 106 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Development Volume 107 ; 107 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Development Volume 108 ; 108 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Development Volume 109 ; 109 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Development Volume 110 ; 110 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Development Volume 111 ; 111 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Development Volume 112 ; 112 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Development Volume 113 ; 113 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Development Volume 114 ; 114 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Development Volume 115 ; 115 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Development Volume 116 ; 116 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Development Volume 117 ; 117 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Development Volume 118 ; 118 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Development Volume 119 ; 119 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Development Volume 120 ; 120 >
-    au < ClockssHighWirePressH20Plugin ; down ; finished ; 1995 ; Development Volume 121 ; 121 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1996 ; Development Volume 122 ; 122 >
-    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 1996 ; Development Volume 123 ; 123 >
-    au < ClockssHighWirePressH20Plugin ; down ; exists ; 1997 ; Development Volume 124 ; 124 >
-    au < ClockssHighWirePressH20Plugin ; down ; finished ; 1998 ; Development Volume 125 ; 125 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1999 ; Development Volume 126 ; 126 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2000 ; Development Volume 127 ; 127 >
-    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2001 ; Development Volume 128 ; 128 >
-    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2002 ; Development Volume 129 ; 129 >
-    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2003 ; Development Volume 130 ; 130 >
-    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2004 ; Development Volume 131 ; 131 >
-    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2005 ; Development Volume 132 ; 132 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2006 ; Development Volume 133 ; 133 >
-    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2007 ; Development Volume 134 ; 134 >
-    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2008 ; Development Volume 135 ; 135 >
-    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2009 ; Development Volume 136 ; 136 >
-    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2010 ; Development Volume 137 ; 137 >
-    au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2011 ; Development Volume 138 ; 138 >
-    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2012 ; Development Volume 139 ; 139 >
-    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2013 ; Development Volume 140 ; 140 >
-    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2014 ; Development Volume 141 ; 141 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2015 ; Development Volume 142 ; 142 >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1953 ; Development Volume 1 ; 1 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1954 ; Development Volume 2 ; 2 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1955 ; Development Volume 3 ; 3 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1956 ; Development Volume 4 ; 4 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1957 ; Development Volume 5 ; 5 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1958 ; Development Volume 6 ; 6 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1959 ; Development Volume 7 ; 7 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1960 ; Development Volume 8 ; 8 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1961 ; Development Volume 9 ; 9 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1962 ; Development Volume 10 ; 10 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1963 ; Development Volume 11 ; 11 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1964 ; Development Volume 12 ; 12 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1965 ; Development Volume 13 ; 13 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1965 ; Development Volume 14 ; 14 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1966 ; Development Volume 15 ; 15 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1966 ; Development Volume 16 ; 16 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1967 ; Development Volume 17 ; 17 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1967 ; Development Volume 18 ; 18 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1968 ; Development Volume 19 ; 19 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1968 ; Development Volume 20 ; 20 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1969 ; Development Volume 21 ; 21 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1969 ; Development Volume 22 ; 22 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1970 ; Development Volume 23 ; 23 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1970 ; Development Volume 24 ; 24 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1971 ; Development Volume 25 ; 25 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1971 ; Development Volume 26 ; 26 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1972 ; Development Volume 27 ; 27 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1972 ; Development Volume 28 ; 28 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1973 ; Development Volume 29 ; 29 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1973 ; Development Volume 30 ; 30 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1974 ; Development Volume 31 ; 31 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1974 ; Development Volume 32 ; 32 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1975 ; Development Volume 33 ; 33 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1975 ; Development Volume 34 ; 34 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1976 ; Development Volume 35 ; 35 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1976 ; Development Volume 36 ; 36 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Development Volume 37 ; 37 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Development Volume 38 ; 38 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Development Volume 39 ; 39 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Development Volume 40 ; 40 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Development Volume 41 ; 41 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Development Volume 42 ; 42 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Development Volume 43 ; 43 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Development Volume 44 ; 44 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Development Volume 45 ; 45 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Development Volume 46 ; 46 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Development Volume 47 ; 47 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Development Volume 48 ; 48 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Development Volume 49 ; 49 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Development Volume 50 ; 50 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Development Volume 51 ; 51 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Development Volume 52 ; 52 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Development Volume 53 ; 53 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Development Volume 54 ; 54 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Development Volume 55 ; 55 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Development Volume 56 ; 56 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Development Volume 57 ; 57 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Development Volume 58 ; 58 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Development Volume 59 ; 59 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Development Volume 60 ; 60 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Development Volume 61 ; 61 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Development Volume 62 ; 62 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Development Volume 63 ; 63 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Development Volume 64 ; 64 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Development Volume 65 ; 65 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Development Volume 66 ; 66 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Development Volume 67 ; 67 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Development Volume 68 ; 68 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Development Volume 69 ; 69 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Development Volume 70 ; 70 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Development Volume 71 ; 71 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Development Volume 72 ; 72 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Development Volume 73 ; 73 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Development Volume 74 ; 74 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Development Volume 75 ; 75 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Development Volume 76 ; 76 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Development Volume 77 ; 77 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Development Volume 78 ; 78 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Development Volume 79 ; 79 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Development Volume 80 ; 80 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Development Volume 81 ; 81 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Development Volume 82 ; 82 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Development Volume 83 ; 83 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Development Volume 84 ; 84 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Development Volume 85 ; 85 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Development Volume 86 ; 86 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Development Volume 87 ; 87 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Development Volume 88 ; 88 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Development Volume 89 ; 89 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Development Volume 90 ; 90 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Development Volume 91 ; 91 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Development Volume 92 ; 92 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Development Volume 93 ; 93 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Development Volume 94 ; 94 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Development Volume 95 ; 95 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Development Volume 96 ; 96 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Development Volume 97 ; 97 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Development Volume 98 ; 98 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Development Volume 99 ; 99 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Development Volume 100 ; 100 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Development Volume 101 ; 101 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Development Volume 102 ; 102 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Development Volume 103 ; 103 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Development Volume 104 ; 104 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Development Volume 105 ; 105 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Development Volume 106 ; 106 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Development Volume 107 ; 107 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Development Volume 108 ; 108 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Development Volume 109 ; 109 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Development Volume 110 ; 110 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Development Volume 111 ; 111 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Development Volume 112 ; 112 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Development Volume 113 ; 113 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Development Volume 114 ; 114 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Development Volume 115 ; 115 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Development Volume 116 ; 116 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Development Volume 117 ; 117 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Development Volume 118 ; 118 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Development Volume 119 ; 119 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Development Volume 120 ; 120 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; finished ; 1995 ; Development Volume 121 ; 121 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1996 ; Development Volume 122 ; 122 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 1996 ; Development Volume 123 ; 123 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 1997 ; Development Volume 124 ; 124 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; finished ; 1998 ; Development Volume 125 ; 125 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1999 ; Development Volume 126 ; 126 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2000 ; Development Volume 127 ; 127 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2001 ; Development Volume 128 ; 128 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2002 ; Development Volume 129 ; 129 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2003 ; Development Volume 130 ; 130 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2004 ; Development Volume 131 ; 131 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2005 ; Development Volume 132 ; 132 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2006 ; Development Volume 133 ; 133 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2007 ; Development Volume 134 ; 134 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2008 ; Development Volume 135 ; 135 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2009 ; Development Volume 136 ; 136 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2010 ; Development Volume 137 ; 137 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2011 ; Development Volume 138 ; 138 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2012 ; Development Volume 139 ; 139 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2013 ; Development Volume 140 ; 140 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2014 ; Development Volume 141 ; 141 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2015 ; Development Volume 142 ; 142 ; >
 
   }
 
@@ -195,14 +195,14 @@
 
     param[base_url] = http://dmm.biologists.org/
 
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2008 ; Disease Models & Mechanisms Volume 1 ; 1 >
-    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2009 ; Disease Models & Mechanisms Volume 2 ; 2 >
-    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2010 ; Disease Models & Mechanisms Volume 3 ; 3 >
-    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; Disease Models & Mechanisms Volume 4 ; 4 >
-    au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; Disease Models & Mechanisms Volume 5 ; 5 >
-    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Disease Models & Mechanisms Volume 6 ; 6 >
-    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2014 ; Disease Models & Mechanisms Volume 7 ; 7 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2015 ; Disease Models & Mechanisms Volume 8 ; 8 >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2008 ; Disease Models & Mechanisms Volume 1 ; 1 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2009 ; Disease Models & Mechanisms Volume 2 ; 2 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2010 ; Disease Models & Mechanisms Volume 3 ; 3 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; Disease Models & Mechanisms Volume 4 ; 4 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; Disease Models & Mechanisms Volume 5 ; 5 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Disease Models & Mechanisms Volume 6 ; 6 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2014 ; Disease Models & Mechanisms Volume 7 ; 7 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2015 ; Disease Models & Mechanisms Volume 8 ; 8 ; >
 
   }
 
@@ -219,134 +219,134 @@
 
     param[base_url] = http://jcs.biologists.org/
 
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1966 ; Journal of Cell Science Volume 1 ; 1 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1967 ; Journal of Cell Science Volume 2 ; 2 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1968 ; Journal of Cell Science Volume 3 ; 3 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1969 ; Journal of Cell Science Volume 4 ; 4 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1969 ; Journal of Cell Science Volume 5 ; 5 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1970 ; Journal of Cell Science Volume 6 ; 6 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1970 ; Journal of Cell Science Volume 7 ; 7 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1971 ; Journal of Cell Science Volume 8 ; 8 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1971 ; Journal of Cell Science Volume 9 ; 9 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1972 ; Journal of Cell Science Volume 10 ; 10 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1972 ; Journal of Cell Science Volume 11 ; 11 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1973 ; Journal of Cell Science Volume 12 ; 12 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1973 ; Journal of Cell Science Volume 13 ; 13 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1974 ; Journal of Cell Science Volume 14 ; 14 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1974 ; Journal of Cell Science Volume 15 ; 15 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1974 ; Journal of Cell Science Volume 16 ; 16 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1975 ; Journal of Cell Science Volume 17 ; 17 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1975 ; Journal of Cell Science Volume 18 ; 18 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1975 ; Journal of Cell Science Volume 19 ; 19 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1976 ; Journal of Cell Science Volume 20 ; 20 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1976 ; Journal of Cell Science Volume 21 ; 21 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1976 ; Journal of Cell Science Volume 22 ; 22 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Cell Science Volume 23 ; 23 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Cell Science Volume 24 ; 24 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Cell Science Volume 25 ; 25 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Cell Science Volume 26 ; 26 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Cell Science Volume 27 ; 27 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Cell Science Volume 28 ; 28 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Cell Science Volume 29 ; 29 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Cell Science Volume 30 ; 30 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Cell Science Volume 31 ; 31 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Cell Science Volume 32 ; 32 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Cell Science Volume 33 ; 33 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Cell Science Volume 34 ; 34 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Cell Science Volume 35 ; 35 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Cell Science Volume 36 ; 36 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Cell Science Volume 37 ; 37 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Cell Science Volume 38 ; 38 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Cell Science Volume 39 ; 39 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Cell Science Volume 40 ; 40 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Cell Science Volume 41 ; 41 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Cell Science Volume 42 ; 42 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Cell Science Volume 43 ; 43 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Cell Science Volume 44 ; 44 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Cell Science Volume 45 ; 45 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Cell Science Volume 46 ; 46 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Cell Science Volume 47 ; 47 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Cell Science Volume 48 ; 48 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Cell Science Volume 49 ; 49 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Cell Science Volume 50 ; 50 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Cell Science Volume 51 ; 51 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Cell Science Volume 52 ; 52 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Cell Science Volume 53 ; 53 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Cell Science Volume 54 ; 54 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Cell Science Volume 55 ; 55 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Cell Science Volume 56 ; 56 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Cell Science Volume 57 ; 57 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Cell Science Volume 58 ; 58 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Cell Science Volume 59 ; 59 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Cell Science Volume 60 ; 60 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Cell Science Volume 61 ; 61 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Cell Science Volume 62 ; 62 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Cell Science Volume 63 ; 63 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Cell Science Volume 64 ; 64 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Cell Science Volume 65 ; 65 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Cell Science Volume 66 ; 66 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Cell Science Volume 67 ; 67 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Cell Science Volume 68 ; 68 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Cell Science Volume 69 ; 69 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Cell Science Volume 70 ; 70 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Cell Science Volume 71 ; 71 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Cell Science Volume 72 ; 72 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Cell Science Volume 73 ; 73 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Cell Science Volume 74 ; 74 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Cell Science Volume 75 ; 75 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Cell Science Volume 76 ; 76 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Cell Science Volume 77 ; 77 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Cell Science Volume 78 ; 78 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Cell Science Volume 79 ; 79 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Cell Science Volume 80 ; 80 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Cell Science Volume 81 ; 81 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Cell Science Volume 82 ; 82 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Cell Science Volume 83 ; 83 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Cell Science Volume 84 ; 84 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Cell Science Volume 85 ; 85 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Cell Science Volume 86 ; 86 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Journal of Cell Science Volume 87 ; 87 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Journal of Cell Science Volume 88 ; 88 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Journal of Cell Science Volume 89 ; 89 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Journal of Cell Science Volume 90 ; 90 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Journal of Cell Science Volume 91 ; 91 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Journal of Cell Science Volume 92 ; 92 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Journal of Cell Science Volume 93 ; 93 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Journal of Cell Science Volume 94 ; 94 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Journal of Cell Science Volume 95 ; 95 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Journal of Cell Science Volume 96 ; 96 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Journal of Cell Science Volume 97 ; 97 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Journal of Cell Science Volume 98 ; 98 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Journal of Cell Science Volume 99 ; 99 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Journal of Cell Science Volume 100 ; 100 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Cell Science Volume 101 ; 101 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Cell Science Volume 102 ; 102 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Cell Science Volume 103 ; 103 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Cell Science Volume 104 ; 104 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Cell Science Volume 105 ; 105 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Cell Science Volume 106 ; 106 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Cell Science Volume 107 ; 107 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1995 ; Journal of Cell Science Volume 108 ; 108 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1996 ; Journal of Cell Science Volume 109 ; 109 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1997 ; Journal of Cell Science Volume 110 ; 110 >
-    au < ClockssHighWirePressH20Plugin ; down ; exists ; 1998 ; Journal of Cell Science Volume 111 ; 111 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1999 ; Journal of Cell Science Volume 112 ; 112 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2000 ; Journal of Cell Science Volume 113 ; 113 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2001 ; Journal of Cell Science Volume 114 ; 114 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2002 ; Journal of Cell Science Volume 115 ; 115 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2003 ; Journal of Cell Science Volume 116 ; 116 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2004 ; Journal of Cell Science Volume 117 ; 117 >
-    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2005 ; Journal of Cell Science Volume 118 ; 118 >
-    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2006 ; Journal of Cell Science Volume 119 ; 119 >
-    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2007 ; Journal of Cell Science Volume 120 ; 120 >
-    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2008 ; Journal of Cell Science Volume 121 ; 121 >
-    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2009 ; Journal of Cell Science Volume 122 ; 122 >
-    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2010 ; Journal of Cell Science Volume 123 ; 123 >
-    au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2011 ; Journal of Cell Science Volume 124 ; 124 >
-    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2012 ; Journal of Cell Science Volume 125 ; 125 >
-    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Journal of Cell Science Volume 126 ; 126 >
-    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2014 ; Journal of Cell Science Volume 127 ; 127 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2015 ; Journal of Cell Science Volume 128 ; 128 >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1966 ; Journal of Cell Science Volume 1 ; 1 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1967 ; Journal of Cell Science Volume 2 ; 2 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1968 ; Journal of Cell Science Volume 3 ; 3 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1969 ; Journal of Cell Science Volume 4 ; 4 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1969 ; Journal of Cell Science Volume 5 ; 5 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1970 ; Journal of Cell Science Volume 6 ; 6 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1970 ; Journal of Cell Science Volume 7 ; 7 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1971 ; Journal of Cell Science Volume 8 ; 8 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1971 ; Journal of Cell Science Volume 9 ; 9 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1972 ; Journal of Cell Science Volume 10 ; 10 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1972 ; Journal of Cell Science Volume 11 ; 11 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1973 ; Journal of Cell Science Volume 12 ; 12 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1973 ; Journal of Cell Science Volume 13 ; 13 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1974 ; Journal of Cell Science Volume 14 ; 14 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1974 ; Journal of Cell Science Volume 15 ; 15 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1974 ; Journal of Cell Science Volume 16 ; 16 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1975 ; Journal of Cell Science Volume 17 ; 17 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1975 ; Journal of Cell Science Volume 18 ; 18 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1975 ; Journal of Cell Science Volume 19 ; 19 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1976 ; Journal of Cell Science Volume 20 ; 20 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1976 ; Journal of Cell Science Volume 21 ; 21 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1976 ; Journal of Cell Science Volume 22 ; 22 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Cell Science Volume 23 ; 23 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Cell Science Volume 24 ; 24 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Cell Science Volume 25 ; 25 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Cell Science Volume 26 ; 26 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Cell Science Volume 27 ; 27 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Cell Science Volume 28 ; 28 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Cell Science Volume 29 ; 29 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Cell Science Volume 30 ; 30 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Cell Science Volume 31 ; 31 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Cell Science Volume 32 ; 32 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Cell Science Volume 33 ; 33 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Cell Science Volume 34 ; 34 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Cell Science Volume 35 ; 35 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Cell Science Volume 36 ; 36 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Cell Science Volume 37 ; 37 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Cell Science Volume 38 ; 38 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Cell Science Volume 39 ; 39 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Cell Science Volume 40 ; 40 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Cell Science Volume 41 ; 41 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Cell Science Volume 42 ; 42 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Cell Science Volume 43 ; 43 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Cell Science Volume 44 ; 44 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Cell Science Volume 45 ; 45 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Cell Science Volume 46 ; 46 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Cell Science Volume 47 ; 47 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Cell Science Volume 48 ; 48 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Cell Science Volume 49 ; 49 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Cell Science Volume 50 ; 50 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Cell Science Volume 51 ; 51 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Cell Science Volume 52 ; 52 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Cell Science Volume 53 ; 53 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Cell Science Volume 54 ; 54 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Cell Science Volume 55 ; 55 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Cell Science Volume 56 ; 56 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Cell Science Volume 57 ; 57 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Cell Science Volume 58 ; 58 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Cell Science Volume 59 ; 59 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Cell Science Volume 60 ; 60 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Cell Science Volume 61 ; 61 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Cell Science Volume 62 ; 62 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Cell Science Volume 63 ; 63 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Cell Science Volume 64 ; 64 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Cell Science Volume 65 ; 65 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Cell Science Volume 66 ; 66 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Cell Science Volume 67 ; 67 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Cell Science Volume 68 ; 68 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Cell Science Volume 69 ; 69 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Cell Science Volume 70 ; 70 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Cell Science Volume 71 ; 71 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Cell Science Volume 72 ; 72 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Cell Science Volume 73 ; 73 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Cell Science Volume 74 ; 74 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Cell Science Volume 75 ; 75 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Cell Science Volume 76 ; 76 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Cell Science Volume 77 ; 77 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Cell Science Volume 78 ; 78 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Cell Science Volume 79 ; 79 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Cell Science Volume 80 ; 80 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Cell Science Volume 81 ; 81 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Cell Science Volume 82 ; 82 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Cell Science Volume 83 ; 83 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Cell Science Volume 84 ; 84 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Cell Science Volume 85 ; 85 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Cell Science Volume 86 ; 86 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Journal of Cell Science Volume 87 ; 87 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Journal of Cell Science Volume 88 ; 88 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Journal of Cell Science Volume 89 ; 89 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Journal of Cell Science Volume 90 ; 90 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Journal of Cell Science Volume 91 ; 91 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Journal of Cell Science Volume 92 ; 92 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Journal of Cell Science Volume 93 ; 93 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Journal of Cell Science Volume 94 ; 94 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Journal of Cell Science Volume 95 ; 95 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Journal of Cell Science Volume 96 ; 96 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Journal of Cell Science Volume 97 ; 97 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Journal of Cell Science Volume 98 ; 98 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Journal of Cell Science Volume 99 ; 99 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Journal of Cell Science Volume 100 ; 100 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Cell Science Volume 101 ; 101 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Cell Science Volume 102 ; 102 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Cell Science Volume 103 ; 103 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Cell Science Volume 104 ; 104 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Cell Science Volume 105 ; 105 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Cell Science Volume 106 ; 106 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Cell Science Volume 107 ; 107 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1995 ; Journal of Cell Science Volume 108 ; 108 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1996 ; Journal of Cell Science Volume 109 ; 109 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1997 ; Journal of Cell Science Volume 110 ; 110 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 1998 ; Journal of Cell Science Volume 111 ; 111 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1999 ; Journal of Cell Science Volume 112 ; 112 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2000 ; Journal of Cell Science Volume 113 ; 113 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2001 ; Journal of Cell Science Volume 114 ; 114 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2002 ; Journal of Cell Science Volume 115 ; 115 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2003 ; Journal of Cell Science Volume 116 ; 116 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2004 ; Journal of Cell Science Volume 117 ; 117 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2005 ; Journal of Cell Science Volume 118 ; 118 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2006 ; Journal of Cell Science Volume 119 ; 119 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2007 ; Journal of Cell Science Volume 120 ; 120 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2008 ; Journal of Cell Science Volume 121 ; 121 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2009 ; Journal of Cell Science Volume 122 ; 122 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2010 ; Journal of Cell Science Volume 123 ; 123 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2011 ; Journal of Cell Science Volume 124 ; 124 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2012 ; Journal of Cell Science Volume 125 ; 125 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Journal of Cell Science Volume 126 ; 126 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2014 ; Journal of Cell Science Volume 127 ; 127 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2015 ; Journal of Cell Science Volume 128 ; 128 ; >
 
   }
 
@@ -361,224 +361,224 @@
 
     param[base_url] = http://jeb.biologists.org/
 
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1923-1924 ; Journal of Experimental Biology Volume 1 ; 1 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1924-1925 ; Journal of Experimental Biology Volume 2 ; 2 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1925-1926 ; Journal of Experimental Biology Volume 3 ; 3 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1926-1927 ; Journal of Experimental Biology Volume 4 ; 4 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1927-1928 ; Journal of Experimental Biology Volume 5 ; 5 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1928-1929 ; Journal of Experimental Biology Volume 6 ; 6 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1930 ; Journal of Experimental Biology Volume 7 ; 7 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1931 ; Journal of Experimental Biology Volume 8 ; 8 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1932 ; Journal of Experimental Biology Volume 9 ; 9 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1933 ; Journal of Experimental Biology Volume 10 ; 10 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1934 ; Journal of Experimental Biology Volume 11 ; 11 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1935 ; Journal of Experimental Biology Volume 12 ; 12 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1936 ; Journal of Experimental Biology Volume 13 ; 13 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1937 ; Journal of Experimental Biology Volume 14 ; 14 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1938 ; Journal of Experimental Biology Volume 15 ; 15 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1939 ; Journal of Experimental Biology Volume 16 ; 16 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1940 ; Journal of Experimental Biology Volume 17 ; 17 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1941-1942 ; Journal of Experimental Biology Volume 18 ; 18 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1942-1943 ; Journal of Experimental Biology Volume 19 ; 19 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1943-1944 ; Journal of Experimental Biology Volume 20 ; 20 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1945 ; Journal of Experimental Biology Volume 21 ; 21 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1945-1946 ; Journal of Experimental Biology Volume 22 ; 22 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1946 ; Journal of Experimental Biology Volume 23 ; 23 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1947 ; Journal of Experimental Biology Volume 24 ; 24 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1948 ; Journal of Experimental Biology Volume 25 ; 25 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1949-1950 ; Journal of Experimental Biology Volume 26 ; 26 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1950 ; Journal of Experimental Biology Volume 27 ; 27 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1951 ; Journal of Experimental Biology Volume 28 ; 28 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1952 ; Journal of Experimental Biology Volume 29 ; 29 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1953 ; Journal of Experimental Biology Volume 30 ; 30 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1954 ; Journal of Experimental Biology Volume 31 ; 31 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1955 ; Journal of Experimental Biology Volume 32 ; 32 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1956 ; Journal of Experimental Biology Volume 33 ; 33 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1957 ; Journal of Experimental Biology Volume 34 ; 34 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1958 ; Journal of Experimental Biology Volume 35 ; 35 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1959 ; Journal of Experimental Biology Volume 36 ; 36 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1960 ; Journal of Experimental Biology Volume 37 ; 37 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1961 ; Journal of Experimental Biology Volume 38 ; 38 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1962 ; Journal of Experimental Biology Volume 39 ; 39 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1963 ; Journal of Experimental Biology Volume 40 ; 40 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1964 ; Journal of Experimental Biology Volume 41 ; 41 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1965 ; Journal of Experimental Biology Volume 42 ; 42 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1965 ; Journal of Experimental Biology Volume 43 ; 43 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1966 ; Journal of Experimental Biology Volume 44 ; 44 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1966 ; Journal of Experimental Biology Volume 45 ; 45 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1967 ; Journal of Experimental Biology Volume 46 ; 46 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1967 ; Journal of Experimental Biology Volume 47 ; 47 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1968 ; Journal of Experimental Biology Volume 48 ; 48 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1968 ; Journal of Experimental Biology Volume 49 ; 49 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1969 ; Journal of Experimental Biology Volume 50 ; 50 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1969 ; Journal of Experimental Biology Volume 51 ; 51 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1970 ; Journal of Experimental Biology Volume 52 ; 52 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1970 ; Journal of Experimental Biology Volume 53 ; 53 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1971 ; Journal of Experimental Biology Volume 54 ; 54 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1971 ; Journal of Experimental Biology Volume 55 ; 55 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1972 ; Journal of Experimental Biology Volume 56 ; 56 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1972 ; Journal of Experimental Biology Volume 57 ; 57 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1973 ; Journal of Experimental Biology Volume 58 ; 58 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1973 ; Journal of Experimental Biology Volume 59 ; 59 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1974 ; Journal of Experimental Biology Volume 60 ; 60 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1974 ; Journal of Experimental Biology Volume 61 ; 61 >
-    au < ClockssHighWirePressH20Plugin ; down ; exists ; 1975 ; Journal of Experimental Biology Volume 62 ; 62 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1975 ; Journal of Experimental Biology Volume 63 ; 63 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1976 ; Journal of Experimental Biology Volume 64 ; 64 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1976 ; Journal of Experimental Biology Volume 65 ; 65 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Experimental Biology Volume 66 ; 66 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Experimental Biology Volume 67 ; 67 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Experimental Biology Volume 68 ; 68 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Experimental Biology Volume 69 ; 69 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Experimental Biology Volume 70 ; 70 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Experimental Biology Volume 71 ; 71 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Experimental Biology Volume 72 ; 72 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Experimental Biology Volume 73 ; 73 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Experimental Biology Volume 74 ; 74 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Experimental Biology Volume 75 ; 75 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Experimental Biology Volume 76 ; 76 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Experimental Biology Volume 77 ; 77 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Experimental Biology Volume 78 ; 78 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Experimental Biology Volume 79 ; 79 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Experimental Biology Volume 80 ; 80 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Experimental Biology Volume 81 ; 81 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Experimental Biology Volume 82 ; 82 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Experimental Biology Volume 83 ; 83 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Experimental Biology Volume 84 ; 84 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Experimental Biology Volume 85 ; 85 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Experimental Biology Volume 86 ; 86 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Experimental Biology Volume 87 ; 87 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Experimental Biology Volume 88 ; 88 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Experimental Biology Volume 89 ; 89 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Experimental Biology Volume 90 ; 90 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Experimental Biology Volume 91 ; 91 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Experimental Biology Volume 92 ; 92 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Experimental Biology Volume 93 ; 93 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Experimental Biology Volume 94 ; 94 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Experimental Biology Volume 95 ; 95 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Experimental Biology Volume 96 ; 96 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Experimental Biology Volume 97 ; 97 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Experimental Biology Volume 98 ; 98 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Experimental Biology Volume 99 ; 99 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Experimental Biology Volume 100 ; 100 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Experimental Biology Volume 101 ; 101 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Experimental Biology Volume 102 ; 102 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Experimental Biology Volume 103 ; 103 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Experimental Biology Volume 104 ; 104 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Experimental Biology Volume 105 ; 105 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Experimental Biology Volume 106 ; 106 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Experimental Biology Volume 107 ; 107 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Experimental Biology Volume 108 ; 108 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Experimental Biology Volume 109 ; 109 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Experimental Biology Volume 110 ; 110 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Experimental Biology Volume 111 ; 111 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Experimental Biology Volume 112 ; 112 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Experimental Biology Volume 113 ; 113 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Experimental Biology Volume 114 ; 114 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Experimental Biology Volume 115 ; 115 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Experimental Biology Volume 116 ; 116 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Experimental Biology Volume 117 ; 117 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Experimental Biology Volume 118 ; 118 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Experimental Biology Volume 119 ; 119 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Experimental Biology Volume 120 ; 120 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Experimental Biology Volume 121 ; 121 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Experimental Biology Volume 122 ; 122 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Experimental Biology Volume 123 ; 123 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Experimental Biology Volume 124 ; 124 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Experimental Biology Volume 125 ; 125 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Experimental Biology Volume 126 ; 126 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Journal of Experimental Biology Volume 127 ; 127 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Journal of Experimental Biology Volume 128 ; 128 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Journal of Experimental Biology Volume 129 ; 129 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Journal of Experimental Biology Volume 130 ; 130 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Journal of Experimental Biology Volume 131 ; 131 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Journal of Experimental Biology Volume 132 ; 132 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Journal of Experimental Biology Volume 133 ; 133 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Journal of Experimental Biology Volume 134 ; 134 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Journal of Experimental Biology Volume 135 ; 135 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Journal of Experimental Biology Volume 136 ; 136 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Journal of Experimental Biology Volume 137 ; 137 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Journal of Experimental Biology Volume 138 ; 138 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Journal of Experimental Biology Volume 139 ; 139 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Journal of Experimental Biology Volume 140 ; 140 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Journal of Experimental Biology Volume 141 ; 141 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Journal of Experimental Biology Volume 142 ; 142 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Journal of Experimental Biology Volume 143 ; 143 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Journal of Experimental Biology Volume 144 ; 144 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Journal of Experimental Biology Volume 145 ; 145 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Journal of Experimental Biology Volume 146 ; 146 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Journal of Experimental Biology Volume 147 ; 147 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Journal of Experimental Biology Volume 148 ; 148 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Journal of Experimental Biology Volume 149 ; 149 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Journal of Experimental Biology Volume 150 ; 150 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Journal of Experimental Biology Volume 151 ; 151 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Journal of Experimental Biology Volume 152 ; 152 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Journal of Experimental Biology Volume 153 ; 153 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Journal of Experimental Biology Volume 154 ; 154 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Journal of Experimental Biology Volume 155 ; 155 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Journal of Experimental Biology Volume 156 ; 156 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Journal of Experimental Biology Volume 157 ; 157 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Journal of Experimental Biology Volume 158 ; 158 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Journal of Experimental Biology Volume 159 ; 159 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Journal of Experimental Biology Volume 160 ; 160 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Journal of Experimental Biology Volume 161 ; 161 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 162 ; 162 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 163 ; 163 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 164 ; 164 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 165 ; 165 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 166 ; 166 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 167 ; 167 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 168 ; 168 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 169 ; 169 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 170 ; 170 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 171 ; 171 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 172 ; 172 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 173 ; 173 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 174 ; 174 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 175 ; 175 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 176 ; 176 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 177 ; 177 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 178 ; 178 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 179 ; 179 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 180 ; 180 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 181 ; 181 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 182 ; 182 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 183 ; 183 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 184 ; 184 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 185 ; 185 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 186 ; 186 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 187 ; 187 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 188 ; 188 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 189 ; 189 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 190 ; 190 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 191 ; 191 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 192 ; 192 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 193 ; 193 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 194 ; 194 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 195 ; 195 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 196 ; 196 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 197 ; 197 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1995 ; Journal of Experimental Biology Volume 198 ; 198 >
-    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 1996 ; Journal of Experimental Biology Volume 199 ; 199 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1997 ; Journal of Experimental Biology Volume 200 ; 200 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 1998 ; Journal of Experimental Biology Volume 201 ; 201 >
-    au < ClockssHighWirePressH20Plugin ; down ; exists ; 1999 ; Journal of Experimental Biology Volume 202 ; 202 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2000 ; Journal of Experimental Biology Volume 203 ; 203 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2001 ; Journal of Experimental Biology Volume 204 ; 204 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2002 ; Journal of Experimental Biology Volume 205 ; 205 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2003 ; Journal of Experimental Biology Volume 206 ; 206 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2004 ; Journal of Experimental Biology Volume 207 ; 207 >
-    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2005 ; Journal of Experimental Biology Volume 208 ; 208 >
-    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2006 ; Journal of Experimental Biology Volume 209 ; 209 >
-    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2007 ; Journal of Experimental Biology Volume 210 ; 210 >
-    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2008 ; Journal of Experimental Biology Volume 211 ; 211 >
-    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2009 ; Journal of Experimental Biology Volume 212 ; 212 >
-    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2010 ; Journal of Experimental Biology Volume 213 ; 213 >
-    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; Journal of Experimental Biology Volume 214 ; 214 >
-    au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; Journal of Experimental Biology Volume 215 ; 215 >
-    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Journal of Experimental Biology Volume 216 ; 216 >
-    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2014 ; Journal of Experimental Biology Volume 217 ; 217 >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2015 ; Journal of Experimental Biology Volume 218 ; 218 >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1923-1924 ; Journal of Experimental Biology Volume 1 ; 1 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1924-1925 ; Journal of Experimental Biology Volume 2 ; 2 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1925-1926 ; Journal of Experimental Biology Volume 3 ; 3 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1926-1927 ; Journal of Experimental Biology Volume 4 ; 4 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1927-1928 ; Journal of Experimental Biology Volume 5 ; 5 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1928-1929 ; Journal of Experimental Biology Volume 6 ; 6 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1930 ; Journal of Experimental Biology Volume 7 ; 7 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1931 ; Journal of Experimental Biology Volume 8 ; 8 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1932 ; Journal of Experimental Biology Volume 9 ; 9 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1933 ; Journal of Experimental Biology Volume 10 ; 10 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1934 ; Journal of Experimental Biology Volume 11 ; 11 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1935 ; Journal of Experimental Biology Volume 12 ; 12 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1936 ; Journal of Experimental Biology Volume 13 ; 13 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1937 ; Journal of Experimental Biology Volume 14 ; 14 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1938 ; Journal of Experimental Biology Volume 15 ; 15 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1939 ; Journal of Experimental Biology Volume 16 ; 16 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1940 ; Journal of Experimental Biology Volume 17 ; 17 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1941-1942 ; Journal of Experimental Biology Volume 18 ; 18 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1942-1943 ; Journal of Experimental Biology Volume 19 ; 19 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1943-1944 ; Journal of Experimental Biology Volume 20 ; 20 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1945 ; Journal of Experimental Biology Volume 21 ; 21 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1945-1946 ; Journal of Experimental Biology Volume 22 ; 22 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1946 ; Journal of Experimental Biology Volume 23 ; 23 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1947 ; Journal of Experimental Biology Volume 24 ; 24 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1948 ; Journal of Experimental Biology Volume 25 ; 25 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1949-1950 ; Journal of Experimental Biology Volume 26 ; 26 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1950 ; Journal of Experimental Biology Volume 27 ; 27 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1951 ; Journal of Experimental Biology Volume 28 ; 28 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1952 ; Journal of Experimental Biology Volume 29 ; 29 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1953 ; Journal of Experimental Biology Volume 30 ; 30 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1954 ; Journal of Experimental Biology Volume 31 ; 31 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1955 ; Journal of Experimental Biology Volume 32 ; 32 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1956 ; Journal of Experimental Biology Volume 33 ; 33 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1957 ; Journal of Experimental Biology Volume 34 ; 34 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1958 ; Journal of Experimental Biology Volume 35 ; 35 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1959 ; Journal of Experimental Biology Volume 36 ; 36 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1960 ; Journal of Experimental Biology Volume 37 ; 37 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1961 ; Journal of Experimental Biology Volume 38 ; 38 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1962 ; Journal of Experimental Biology Volume 39 ; 39 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1963 ; Journal of Experimental Biology Volume 40 ; 40 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1964 ; Journal of Experimental Biology Volume 41 ; 41 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1965 ; Journal of Experimental Biology Volume 42 ; 42 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1965 ; Journal of Experimental Biology Volume 43 ; 43 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1966 ; Journal of Experimental Biology Volume 44 ; 44 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1966 ; Journal of Experimental Biology Volume 45 ; 45 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1967 ; Journal of Experimental Biology Volume 46 ; 46 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1967 ; Journal of Experimental Biology Volume 47 ; 47 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1968 ; Journal of Experimental Biology Volume 48 ; 48 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1968 ; Journal of Experimental Biology Volume 49 ; 49 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1969 ; Journal of Experimental Biology Volume 50 ; 50 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1969 ; Journal of Experimental Biology Volume 51 ; 51 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1970 ; Journal of Experimental Biology Volume 52 ; 52 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1970 ; Journal of Experimental Biology Volume 53 ; 53 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1971 ; Journal of Experimental Biology Volume 54 ; 54 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1971 ; Journal of Experimental Biology Volume 55 ; 55 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1972 ; Journal of Experimental Biology Volume 56 ; 56 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1972 ; Journal of Experimental Biology Volume 57 ; 57 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1973 ; Journal of Experimental Biology Volume 58 ; 58 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1973 ; Journal of Experimental Biology Volume 59 ; 59 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1974 ; Journal of Experimental Biology Volume 60 ; 60 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1974 ; Journal of Experimental Biology Volume 61 ; 61 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 1975 ; Journal of Experimental Biology Volume 62 ; 62 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1975 ; Journal of Experimental Biology Volume 63 ; 63 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1976 ; Journal of Experimental Biology Volume 64 ; 64 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1976 ; Journal of Experimental Biology Volume 65 ; 65 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Experimental Biology Volume 66 ; 66 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Experimental Biology Volume 67 ; 67 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Experimental Biology Volume 68 ; 68 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Experimental Biology Volume 69 ; 69 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Experimental Biology Volume 70 ; 70 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1977 ; Journal of Experimental Biology Volume 71 ; 71 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Experimental Biology Volume 72 ; 72 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Experimental Biology Volume 73 ; 73 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Experimental Biology Volume 74 ; 74 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Experimental Biology Volume 75 ; 75 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Experimental Biology Volume 76 ; 76 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1978 ; Journal of Experimental Biology Volume 77 ; 77 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Experimental Biology Volume 78 ; 78 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Experimental Biology Volume 79 ; 79 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Experimental Biology Volume 80 ; 80 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Experimental Biology Volume 81 ; 81 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Experimental Biology Volume 82 ; 82 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1979 ; Journal of Experimental Biology Volume 83 ; 83 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Experimental Biology Volume 84 ; 84 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Experimental Biology Volume 85 ; 85 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Experimental Biology Volume 86 ; 86 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Experimental Biology Volume 87 ; 87 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Experimental Biology Volume 88 ; 88 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1980 ; Journal of Experimental Biology Volume 89 ; 89 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Experimental Biology Volume 90 ; 90 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Experimental Biology Volume 91 ; 91 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Experimental Biology Volume 92 ; 92 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Experimental Biology Volume 93 ; 93 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Experimental Biology Volume 94 ; 94 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1981 ; Journal of Experimental Biology Volume 95 ; 95 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Experimental Biology Volume 96 ; 96 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Experimental Biology Volume 97 ; 97 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Experimental Biology Volume 98 ; 98 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Experimental Biology Volume 99 ; 99 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Experimental Biology Volume 100 ; 100 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1982 ; Journal of Experimental Biology Volume 101 ; 101 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Experimental Biology Volume 102 ; 102 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Experimental Biology Volume 103 ; 103 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Experimental Biology Volume 104 ; 104 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Experimental Biology Volume 105 ; 105 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Experimental Biology Volume 106 ; 106 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1983 ; Journal of Experimental Biology Volume 107 ; 107 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Experimental Biology Volume 108 ; 108 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Experimental Biology Volume 109 ; 109 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Experimental Biology Volume 110 ; 110 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Experimental Biology Volume 111 ; 111 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Experimental Biology Volume 112 ; 112 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1984 ; Journal of Experimental Biology Volume 113 ; 113 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Experimental Biology Volume 114 ; 114 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Experimental Biology Volume 115 ; 115 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Experimental Biology Volume 116 ; 116 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Experimental Biology Volume 117 ; 117 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Experimental Biology Volume 118 ; 118 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1985 ; Journal of Experimental Biology Volume 119 ; 119 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Experimental Biology Volume 120 ; 120 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Experimental Biology Volume 121 ; 121 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Experimental Biology Volume 122 ; 122 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Experimental Biology Volume 123 ; 123 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Experimental Biology Volume 124 ; 124 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Experimental Biology Volume 125 ; 125 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1986 ; Journal of Experimental Biology Volume 126 ; 126 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Journal of Experimental Biology Volume 127 ; 127 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Journal of Experimental Biology Volume 128 ; 128 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Journal of Experimental Biology Volume 129 ; 129 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Journal of Experimental Biology Volume 130 ; 130 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Journal of Experimental Biology Volume 131 ; 131 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Journal of Experimental Biology Volume 132 ; 132 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1987 ; Journal of Experimental Biology Volume 133 ; 133 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Journal of Experimental Biology Volume 134 ; 134 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Journal of Experimental Biology Volume 135 ; 135 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Journal of Experimental Biology Volume 136 ; 136 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Journal of Experimental Biology Volume 137 ; 137 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Journal of Experimental Biology Volume 138 ; 138 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Journal of Experimental Biology Volume 139 ; 139 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1988 ; Journal of Experimental Biology Volume 140 ; 140 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Journal of Experimental Biology Volume 141 ; 141 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Journal of Experimental Biology Volume 142 ; 142 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Journal of Experimental Biology Volume 143 ; 143 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Journal of Experimental Biology Volume 144 ; 144 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Journal of Experimental Biology Volume 145 ; 145 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Journal of Experimental Biology Volume 146 ; 146 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1989 ; Journal of Experimental Biology Volume 147 ; 147 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Journal of Experimental Biology Volume 148 ; 148 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Journal of Experimental Biology Volume 149 ; 149 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Journal of Experimental Biology Volume 150 ; 150 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Journal of Experimental Biology Volume 151 ; 151 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Journal of Experimental Biology Volume 152 ; 152 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Journal of Experimental Biology Volume 153 ; 153 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1990 ; Journal of Experimental Biology Volume 154 ; 154 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Journal of Experimental Biology Volume 155 ; 155 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Journal of Experimental Biology Volume 156 ; 156 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Journal of Experimental Biology Volume 157 ; 157 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Journal of Experimental Biology Volume 158 ; 158 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Journal of Experimental Biology Volume 159 ; 159 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Journal of Experimental Biology Volume 160 ; 160 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1991 ; Journal of Experimental Biology Volume 161 ; 161 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 162 ; 162 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 163 ; 163 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 164 ; 164 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 165 ; 165 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 166 ; 166 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 167 ; 167 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 168 ; 168 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 169 ; 169 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 170 ; 170 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 171 ; 171 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 172 ; 172 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1992 ; Journal of Experimental Biology Volume 173 ; 173 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 174 ; 174 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 175 ; 175 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 176 ; 176 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 177 ; 177 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 178 ; 178 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 179 ; 179 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 180 ; 180 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 181 ; 181 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 182 ; 182 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 183 ; 183 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 184 ; 184 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1993 ; Journal of Experimental Biology Volume 185 ; 185 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 186 ; 186 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 187 ; 187 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 188 ; 188 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 189 ; 189 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 190 ; 190 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 191 ; 191 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 192 ; 192 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 193 ; 193 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 194 ; 194 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 195 ; 195 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 196 ; 196 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1994 ; Journal of Experimental Biology Volume 197 ; 197 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1995 ; Journal of Experimental Biology Volume 198 ; 198 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 1996 ; Journal of Experimental Biology Volume 199 ; 199 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1997 ; Journal of Experimental Biology Volume 200 ; 200 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 1998 ; Journal of Experimental Biology Volume 201 ; 201 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 1999 ; Journal of Experimental Biology Volume 202 ; 202 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2000 ; Journal of Experimental Biology Volume 203 ; 203 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2001 ; Journal of Experimental Biology Volume 204 ; 204 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2002 ; Journal of Experimental Biology Volume 205 ; 205 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2003 ; Journal of Experimental Biology Volume 206 ; 206 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2004 ; Journal of Experimental Biology Volume 207 ; 207 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2005 ; Journal of Experimental Biology Volume 208 ; 208 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2006 ; Journal of Experimental Biology Volume 209 ; 209 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2007 ; Journal of Experimental Biology Volume 210 ; 210 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2008 ; Journal of Experimental Biology Volume 211 ; 211 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2009 ; Journal of Experimental Biology Volume 212 ; 212 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2010 ; Journal of Experimental Biology Volume 213 ; 213 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; Journal of Experimental Biology Volume 214 ; 214 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; Journal of Experimental Biology Volume 215 ; 215 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Journal of Experimental Biology Volume 216 ; 216 ; >
+    au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2014 ; Journal of Experimental Biology Volume 217 ; 217 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2015 ; Journal of Experimental Biology Volume 218 ; 218 ; >
 
   }
 

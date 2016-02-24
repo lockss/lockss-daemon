@@ -10,7 +10,7 @@
   
   rights = openaccess
   param[base_url] = http://www.qscience.com/
-  implicit < status ; status2 ; year ; name ; param[volume_name] >
+  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
   {
   
@@ -23,8 +23,8 @@
     param[journal_id] = aabio
     comment[moved] = no longer accepting submissions. See http://www.qscience.com/page/archived_titles
 
-      au < down ; exists ; 2013 ; Advances in Applied Biomedicine Volume 2013 ; 2013 > 
-      au < down ; exists ; 2014 ; Advances in Applied Biomedicine Volume 2014 ; 2014 > 
+      au < down ; exists ; 2013 ; Advances in Applied Biomedicine Volume 2013 ; 2013 ; > 
+      au < down ; exists ; 2014 ; Advances in Applied Biomedicine Volume 2014 ; 2014 ; > 
   }
 
   {
@@ -38,20 +38,20 @@
       plugin = org.lockss.plugin.bloomsburyqatar.ClockssBloomsburyQatarPlugin
       param[journal_dir] = ahcsps
  
-      au < finished ; crawling ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 >
-      au < superseded ; down ; 2012 ; Aswan Heart Centre: Science and Practice Series Volume 2012 [to delete] ; 2012 >
-      au < zapped ; down ; 2013 ; Aswan Heart Centre: Science and Practice Series Volume 2013 [to delete] ; 2013 >
+      au < finished ; crawling ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 ; >
+      au < superseded ; down ; 2012 ; Aswan Heart Centre: Science and Practice Series Volume 2012 [to delete] ; 2012 ; >
+      au < zapped ; down ; 2013 ; Aswan Heart Centre: Science and Practice Series Volume 2013 [to delete] ; 2013 ; >
     }
     
     {
       plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
       param[journal_id] = gcsp
  
-      au < doNotProcess ; doNotProcess ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 >
-      au < frozen ; exists ; 2012 ; Aswan Heart Centre: Science and Practice Series Volume 2012 ; 2012 >
-      au < frozen ; crawling ; 2013 ; Aswan Heart Centre: Science and Practice Series Volume 2013 ; 2013 > 
-      au < finished ; crawling ; 2014 ; Aswan Heart Centre: Science and Practice Series Volume 2014 ; 2014 > 
-      au < frozen ; exists ; 2015 ; Aswan Heart Centre: Science and Practice Series Volume 2015 ; 2015 > 
+      au < doNotProcess ; doNotProcess ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 ; >
+      au < frozen ; exists ; 2012 ; Aswan Heart Centre: Science and Practice Series Volume 2012 ; 2012 ; >
+      au < frozen ; crawling ; 2013 ; Aswan Heart Centre: Science and Practice Series Volume 2013 ; 2013 ; > 
+      au < finished ; crawling ; 2014 ; Aswan Heart Centre: Science and Practice Series Volume 2014 ; 2014 ; > 
+      au < frozen ; exists ; 2015 ; Aswan Heart Centre: Science and Practice Series Volume 2015 ; 2015 ; > 
       
     }
   }
@@ -66,20 +66,20 @@
       plugin = org.lockss.plugin.bloomsburyqatar.ClockssBloomsburyQatarPlugin
       param[journal_dir] = avi
 
-      au < finished ; frozen ; 2010 ; Avicenna Volume 2010 ; 2010 >
-      au < finished ; frozen ; 2011 ; Avicenna Volume 2011 ; 2011 >
-      au < finished ; frozen ; 2012 ; Avicenna Volume 2012 ; 2012 >
+      au < finished ; frozen ; 2010 ; Avicenna Volume 2010 ; 2010 ; >
+      au < finished ; frozen ; 2011 ; Avicenna Volume 2011 ; 2011 ; >
+      au < finished ; frozen ; 2012 ; Avicenna Volume 2012 ; 2012 ; >
     }
     {
       plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
       param[journal_id] = avi
 
-      au < doNotProcess ; doNotProcess ; 2010 ; Avicenna Volume 2010 ; 2010 >
-      au < doNotProcess ; doNotProcess ; 2011 ; Avicenna Volume 2011 ; 2011 >
-      au < doNotProcess ; doNotProcess ; 2012 ; Avicenna Volume 2012 ; 2012 >
-      au < finished ; finished ; 2013 ; Avicenna Volume 2013 ; 2013 >
-      au < finished ; finished ; 2014 ; Avicenna Volume 2014 ; 2014 >
-      au < frozen ; exists ; 2015 ; Avicenna Volume 2015 ; 2015 >
+      au < doNotProcess ; doNotProcess ; 2010 ; Avicenna Volume 2010 ; 2010 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; Avicenna Volume 2011 ; 2011 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Avicenna Volume 2012 ; 2012 ; >
+      au < finished ; finished ; 2013 ; Avicenna Volume 2013 ; 2013 ; >
+      au < finished ; finished ; 2014 ; Avicenna Volume 2014 ; 2014 ; >
+      au < frozen ; exists ; 2015 ; Avicenna Volume 2015 ; 2015 ; >
 
     }
   }
@@ -94,18 +94,18 @@
       plugin = org.lockss.plugin.bloomsburyqatar.ClockssBloomsburyQatarPlugin
       param[journal_dir] = cis
 
-      au < finished ; crawling ; 2010 ; Contemporary Islamic Studies Volume 2010 ; 2010 >
-      au < finished ; frozen ; 2011 ; Contemporary Islamic Studies Volume 2011 ; 2011 >
-      au < finished ; frozen ; 2012 ; Contemporary Islamic Studies Volume 2012 ; 2012 >
+      au < finished ; crawling ; 2010 ; Contemporary Islamic Studies Volume 2010 ; 2010 ; >
+      au < finished ; frozen ; 2011 ; Contemporary Islamic Studies Volume 2011 ; 2011 ; >
+      au < finished ; frozen ; 2012 ; Contemporary Islamic Studies Volume 2012 ; 2012 ; >
     }
     {
       plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
       param[journal_id] = cis
 
-      au < doNotProcess ; doNotProcess ; 2010 ; Contemporary Islamic Studies Volume 2010 ; 2010 >
-      au < doNotProcess ; doNotProcess ; 2011 ; Contemporary Islamic Studies Volume 2011 ; 2011 >
-      au < doNotProcess ; doNotProcess ; 2012 ; Contemporary Islamic Studies Volume 2012 ; 2012 >
-      au < doNotProcess ; exists ; 2015 ; Contemporary Islamic Studies Volume 2015 ; 2015 >
+      au < doNotProcess ; doNotProcess ; 2010 ; Contemporary Islamic Studies Volume 2010 ; 2010 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; Contemporary Islamic Studies Volume 2011 ; 2011 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Contemporary Islamic Studies Volume 2012 ; 2012 ; >
+      au < doNotProcess ; exists ; 2015 ; Contemporary Islamic Studies Volume 2015 ; 2015 ; >
 
     }
   }
@@ -120,9 +120,9 @@
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = difi
 
-    au < frozen ; exists ; 2013 ; DIFI Family Research and Proceedings Volume 2013 ; 2013 >
-    au < finished ; finished ; 2014 ; DIFI Family Research and Proceedings Volume 2014 ; 2014 >
-    au < frozen ; exists ; 2015 ; DIFI Family Research and Proceedings Volume 2015 ; 2015 >
+    au < frozen ; exists ; 2013 ; DIFI Family Research and Proceedings Volume 2013 ; 2013 ; >
+    au < finished ; finished ; 2014 ; DIFI Family Research and Proceedings Volume 2014 ; 2014 ; >
+    au < frozen ; exists ; 2015 ; DIFI Family Research and Proceedings Volume 2015 ; 2015 ; >
 
   }
 
@@ -136,11 +136,11 @@
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = igmhe
 
-    au < doNotProcess ; exists ; 2011 ; Innovations in Global Medical and Health Education Volume 2011 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; Innovations in Global Medical and Health Education Volume 2012 ; 2012 >
-    au < finished ; finished ; 2013 ; Innovations in Global Medical and Health Education Volume 2013 ; 2013 >
-    au < finished ; finished ; 2014 ; Innovations in Global Medical and Health Education Volume 2014 ; 2014 >
-    au < doNotProcess ; exists ; 2015 ; Innovations in Global Medical and Health Education Volume 2015 ; 2015 >
+    au < doNotProcess ; exists ; 2011 ; Innovations in Global Medical and Health Education Volume 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; Innovations in Global Medical and Health Education Volume 2012 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Innovations in Global Medical and Health Education Volume 2013 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Innovations in Global Medical and Health Education Volume 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; Innovations in Global Medical and Health Education Volume 2015 ; 2015 ; >
 
   }
 
@@ -156,11 +156,11 @@
     
     comment[0] = Volume 2012 has no manifest page.
 
-    au < down ; exists ; 2012 ; International Review of Law Volume 2012 ; 2012 >
-    au < finished ; finished ; 2013 ; International Review of Law Volume 2013 ; 2013 >
-    au < doNotProcess ; doNotProcess ; 2013 ; International Review of Law Volume DomesticViolence ; DomesticViolence >
-    au < finished ; finished ; 2014 ; International Review of Law Volume 2014 ; 2014 >
-    au < frozen ; exists ; 2015 ; International Review of Law Volume 2015 ; 2015 >
+    au < down ; exists ; 2012 ; International Review of Law Volume 2012 ; 2012 ; >
+    au < finished ; finished ; 2013 ; International Review of Law Volume 2013 ; 2013 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; International Review of Law Volume DomesticViolence ; DomesticViolence ; >
+    au < finished ; finished ; 2014 ; International Review of Law Volume 2014 ; 2014 ; >
+    au < frozen ; exists ; 2015 ; International Review of Law Volume 2015 ; 2015 ; >
 
   }
 
@@ -174,10 +174,10 @@
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = jemtac
 
-    au < finished ; crawling ; 2012 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2012 ; 2012 >
-    au < finished ; finished ; 2013 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2013 ; 2013 >
-    au < finished ; finished ; 2014 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2014 ; 2014 >
-    au < frozen ; exists ; 2015 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2015 ; 2015 >
+    au < finished ; crawling ; 2012 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2012 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2013 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2014 ; 2014 ; >
+    au < frozen ; exists ; 2015 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2015 ; 2015 ; >
 
   }
 
@@ -191,8 +191,8 @@
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = jlghp
 
-    au < finished ; finished ; 2013 ; Journal of Local and Global Health Perspectives Volume 2013 ; 2013 >
-    au < frozen ; exists ; 2015 ; Journal of Local and Global Health Perspectives Volume 2015 ; 2015 >
+    au < finished ; finished ; 2013 ; Journal of Local and Global Health Perspectives Volume 2013 ; 2013 ; >
+    au < frozen ; exists ; 2015 ; Journal of Local and Global Health Perspectives Volume 2015 ; 2015 ; >
 
   }
 
@@ -206,10 +206,10 @@
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = jlghs
 
-    au < finished ; finished ; 2012 ; Journal of Local and Global Health Science Volume 2012 ; 2012 >
-    au < finished ; finished ; 2013 ; Journal of Local and Global Health Science Volume 2013 ; 2013 >
-    au < finished ; finished ; 2014 ; Journal of Local and Global Health Science Volume 2014 ; 2014 >
-    au < frozen ; exists ; 2015 ; Journal of Local and Global Health Science Volume 2015 ; 2015 >
+    au < finished ; finished ; 2012 ; Journal of Local and Global Health Science Volume 2012 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Journal of Local and Global Health Science Volume 2013 ; 2013 ; >
+    au < finished ; finished ; 2014 ; Journal of Local and Global Health Science Volume 2014 ; 2014 ; >
+    au < frozen ; exists ; 2015 ; Journal of Local and Global Health Science Volume 2015 ; 2015 ; >
 
   }
 
@@ -223,25 +223,25 @@
       plugin = org.lockss.plugin.bloomsburyqatar.ClockssBloomsburyQatarPlugin
       param[journal_dir] = nmejre
 
-      au < finished ; frozen ; 2006 ; Near and Middle Eastern Journal of Research in Education Volume 1 (2006) ; 1 >
-      au < finished ; frozen ; 2007 ; Near and Middle Eastern Journal of Research in Education Volume 2 (2007) ; 2 > 
-      au < finished ; frozen ; 2010 ; Near and Middle Eastern Journal of Research in Education Volume 2010 ; 2010 >
-      au < finished ; frozen ; 2011 ; Near and Middle Eastern Journal of Research in Education Volume 2011 ; 2011 > 
-      au < finished ; frozen ; 2012 ; Near and Middle Eastern Journal of Research in Education Volume 2012 ; 2012 > 
-      au < zapped ; down ; 2013 ; Near and Middle Eastern Journal of Research in Education Volume 2013 [to delete] ; 2013 > 
+      au < finished ; frozen ; 2006 ; Near and Middle Eastern Journal of Research in Education Volume 1 (2006) ; 1 ; >
+      au < finished ; frozen ; 2007 ; Near and Middle Eastern Journal of Research in Education Volume 2 (2007) ; 2 ; > 
+      au < finished ; frozen ; 2010 ; Near and Middle Eastern Journal of Research in Education Volume 2010 ; 2010 ; >
+      au < finished ; frozen ; 2011 ; Near and Middle Eastern Journal of Research in Education Volume 2011 ; 2011 ; > 
+      au < finished ; frozen ; 2012 ; Near and Middle Eastern Journal of Research in Education Volume 2012 ; 2012 ; > 
+      au < zapped ; down ; 2013 ; Near and Middle Eastern Journal of Research in Education Volume 2013 [to delete] ; 2013 ; > 
     }
     {
       plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
       param[journal_id] = nmejre
 
-      au < doNotProcess ; doNotProcess ; 2006 ; Near and Middle Eastern Journal of Research in Education Volume 1 (2006) ; 1 >
-      au < doNotProcess ; doNotProcess ; 2007 ; Near and Middle Eastern Journal of Research in Education Volume 2 (2007) ; 2 > 
-      au < doNotProcess ; doNotProcess ; 2010 ; Near and Middle Eastern Journal of Research in Education Volume 2010 ; 2010 >
-      au < doNotProcess ; doNotProcess ; 2011 ; Near and Middle Eastern Journal of Research in Education Volume 2011 ; 2011 > 
-      au < doNotProcess ; doNotProcess ; 2012 ; Near and Middle Eastern Journal of Research in Education Volume 2012 ; 2012 > 
-      au < finished ; crawling ; 2013 ; Near and Middle Eastern Journal of Research in Education Volume 2013 ; 2013 > 
-      au < finished ; finished ; 2014 ; Near and Middle Eastern Journal of Research in Education Volume 2014 ; 2014 >
-      au < frozen ; exists ; 2015 ; Near and Middle Eastern Journal of Research in Education Volume 2015 ; 2015 > 
+      au < doNotProcess ; doNotProcess ; 2006 ; Near and Middle Eastern Journal of Research in Education Volume 1 (2006) ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; Near and Middle Eastern Journal of Research in Education Volume 2 (2007) ; 2 ; > 
+      au < doNotProcess ; doNotProcess ; 2010 ; Near and Middle Eastern Journal of Research in Education Volume 2010 ; 2010 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; Near and Middle Eastern Journal of Research in Education Volume 2011 ; 2011 ; > 
+      au < doNotProcess ; doNotProcess ; 2012 ; Near and Middle Eastern Journal of Research in Education Volume 2012 ; 2012 ; > 
+      au < finished ; crawling ; 2013 ; Near and Middle Eastern Journal of Research in Education Volume 2013 ; 2013 ; > 
+      au < finished ; finished ; 2014 ; Near and Middle Eastern Journal of Research in Education Volume 2014 ; 2014 ; >
+      au < frozen ; exists ; 2015 ; Near and Middle Eastern Journal of Research in Education Volume 2015 ; 2015 ; > 
 
     }
   }
@@ -256,18 +256,18 @@
     plugin = org.lockss.plugin.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_dir] = pil
 
-    au < finished ; frozen ; 2010 ; Perspectives in International Librarianship Volume 2010 ; 2010 >
-    au < finished ; frozen ; 2011 ; Perspectives in International Librarianship Volume 2011 ; 2011 >
-    au < finished ; frozen ; 2012 ; Perspectives in International Librarianship Volume 2012 ; 2012 >
+    au < finished ; frozen ; 2010 ; Perspectives in International Librarianship Volume 2010 ; 2010 ; >
+    au < finished ; frozen ; 2011 ; Perspectives in International Librarianship Volume 2011 ; 2011 ; >
+    au < finished ; frozen ; 2012 ; Perspectives in International Librarianship Volume 2012 ; 2012 ; >
     }
     {
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = pil
 
-    au < doNotProcess ; doNotProcess ; 2010 ; Perspectives in International Librarianship Volume 2010 ; 2010 >
-    au < doNotProcess ; doNotProcess ; 2011 ; Perspectives in International Librarianship Volume 2011 ; 2011 >
-    au < doNotProcess ; doNotProcess ; 2012 ; Perspectives in International Librarianship Volume 2012 ; 2012 >
-    au < doNotProcess ; exists ; 2015 ; Perspectives in International Librarianship Volume 2015 ; 2015 >
+    au < doNotProcess ; doNotProcess ; 2010 ; Perspectives in International Librarianship Volume 2010 ; 2010 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Perspectives in International Librarianship Volume 2011 ; 2011 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Perspectives in International Librarianship Volume 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2015 ; Perspectives in International Librarianship Volume 2015 ; 2015 ; >
 
     }
   }
@@ -282,19 +282,19 @@
       plugin = org.lockss.plugin.bloomsburyqatar.ClockssBloomsburyQatarPlugin
       param[journal_dir] = qfarf
 
-      au < finished ; crawling ; 2010 ; Qatar Foundation Annual Research Forum Proceedings Volume 2010 ; 2010 >
-      au < finished ; crawling ; 2011 ; Qatar Foundation Annual Research Forum Proceedings Volume 2011 ; 2011 >
-      au < finished ; frozen ; 2012 ; Qatar Foundation Annual Research Forum Proceedings Volume 2012 ; 2012 >
+      au < finished ; crawling ; 2010 ; Qatar Foundation Annual Research Forum Proceedings Volume 2010 ; 2010 ; >
+      au < finished ; crawling ; 2011 ; Qatar Foundation Annual Research Forum Proceedings Volume 2011 ; 2011 ; >
+      au < finished ; frozen ; 2012 ; Qatar Foundation Annual Research Forum Proceedings Volume 2012 ; 2012 ; >
     }
     {
       plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
       param[journal_id] = qfarf
       comment[continued_by] = 2313-6030
 
-      au < doNotProcess ; doNotProcess ; 2010 ; Qatar Foundation Annual Research Forum Proceedings Volume 2010 ; 2010 >
-      au < doNotProcess ; doNotProcess ; 2011 ; Qatar Foundation Annual Research Forum Proceedings Volume 2011 ; 2011 >
-      au < doNotProcess ; doNotProcess ; 2012 ; Qatar Foundation Annual Research Forum Proceedings Volume 2012 ; 2012 >
-      au < frozen ; exists ; 2013 ; Qatar Foundation Annual Research Forum Proceedings Volume 2013 ; 2013 >
+      au < doNotProcess ; doNotProcess ; 2010 ; Qatar Foundation Annual Research Forum Proceedings Volume 2010 ; 2010 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; Qatar Foundation Annual Research Forum Proceedings Volume 2011 ; 2011 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Qatar Foundation Annual Research Forum Proceedings Volume 2012 ; 2012 ; >
+      au < frozen ; exists ; 2013 ; Qatar Foundation Annual Research Forum Proceedings Volume 2013 ; 2013 ; >
       
     }
   }
@@ -310,8 +310,8 @@
       param[journal_id] = qfarc
       comment[continues] = 2220-251X
 
-      au < finished ; crawling ; 2014 ; Qatar Foundation Annual Research Conference Proceedings Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2015 ; Qatar Foundation Annual Research Conference Proceedings Volume 2 ; 2 >
+      au < finished ; crawling ; 2014 ; Qatar Foundation Annual Research Conference Proceedings Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2015 ; Qatar Foundation Annual Research Conference Proceedings Volume 2 ; 2 ; >
 
   }
 
@@ -324,12 +324,12 @@
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = qmj
 
-    au < manifest ; exists ; 1997 ; Qatar Medical Journal Volume 1997 ; 1997 >
-    au < manifest ; exists ; 1998 ; Qatar Medical Journal Volume 1998 ; 1998 >
-    au < finished ; crawling ; 2012 ; Qatar Medical Journal Volume 2012 ; 2012 >
-    au < finished ; finished ; 2013 ; Qatar Medical Journal Volume 2013 ; 2013 >
-    au < frozen ; exists ; 2014 ; Qatar Medical Journal Volume 2014 ; 2014 >
-    au < frozen ; exists ; 2015 ; Qatar Medical Journal Volume 2015 ; 2015 >
+    au < manifest ; exists ; 1997 ; Qatar Medical Journal Volume 1997 ; 1997 ; >
+    au < manifest ; exists ; 1998 ; Qatar Medical Journal Volume 1998 ; 1998 ; >
+    au < finished ; crawling ; 2012 ; Qatar Medical Journal Volume 2012 ; 2012 ; >
+    au < finished ; finished ; 2013 ; Qatar Medical Journal Volume 2013 ; 2013 ; >
+    au < frozen ; exists ; 2014 ; Qatar Medical Journal Volume 2014 ; 2014 ; >
+    au < frozen ; exists ; 2015 ; Qatar Medical Journal Volume 2015 ; 2015 ; >
 
   }
 
@@ -342,19 +342,19 @@
       plugin = org.lockss.plugin.bloomsburyqatar.ClockssBloomsburyQatarPlugin
       param[journal_dir] = connect
 
-      au < finished ; frozen ; 2011 ; QScience Connect Volume 2011 ; 2011 >
-      au < finished ; frozen ; 2012 ; QScience Connect Volume 2012 ; 2012 >
-      au < zapped ; down ; 2013 ; QScience Connect Volume 2013 [to delete] ; 2013 >
+      au < finished ; frozen ; 2011 ; QScience Connect Volume 2011 ; 2011 ; >
+      au < finished ; frozen ; 2012 ; QScience Connect Volume 2012 ; 2012 ; >
+      au < zapped ; down ; 2013 ; QScience Connect Volume 2013 [to delete] ; 2013 ; >
     }
     {
       plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
       param[journal_id] = connect
 
-      au < doNotProcess ; doNotProcess ; 2011 ; QScience Connect Volume 2011 ; 2011 >
-      au < doNotProcess ; doNotProcess ; 2012 ; QScience Connect Volume 2012 ; 2012 >
-      au < frozen ; crawling ; 2013 ; QScience Connect Volume 2013 ; 2013 >
-      au < frozen ; exists ; 2014 ; QScience Connect Volume 2014 ; 2014 >
-      au < frozen ; exists ; 2015 ; QScience Connect Volume 2015 ; 2015 >
+      au < doNotProcess ; doNotProcess ; 2011 ; QScience Connect Volume 2011 ; 2011 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; QScience Connect Volume 2012 ; 2012 ; >
+      au < frozen ; crawling ; 2013 ; QScience Connect Volume 2013 ; 2013 ; >
+      au < frozen ; exists ; 2014 ; QScience Connect Volume 2014 ; 2014 ; >
+      au < frozen ; exists ; 2015 ; QScience Connect Volume 2015 ; 2015 ; >
       
     }
   }
@@ -370,11 +370,11 @@
     param[journal_id] = qproc
     comment[V2013] = 3 pdfs unavailable w 500 error. Example http://www.qscience.com/doi/pdfplus/10.5339/qproc.2013.fmd.3 also 5 & 8.
 
-    au < doNotProcess ; exists ; 2011 ; QScience Proceedings Volume 2011 ; 2011 >
-    au < finished ; crawling ; 2012 ; QScience Proceedings Volume 2012 ; 2012 >
-    au < ingNotReady ; exists ; 2013 ; QScience Proceedings Volume 2013 ; 2013 >
-    au < finished ; finished ; 2014 ; QScience Proceedings Volume 2014 ; 2014 >
-    au < frozen ; exists ; 2015 ; QScience Proceedings Volume 2015 ; 2015 >
+    au < doNotProcess ; exists ; 2011 ; QScience Proceedings Volume 2011 ; 2011 ; >
+    au < finished ; crawling ; 2012 ; QScience Proceedings Volume 2012 ; 2012 ; >
+    au < ingNotReady ; exists ; 2013 ; QScience Proceedings Volume 2013 ; 2013 ; >
+    au < finished ; finished ; 2014 ; QScience Proceedings Volume 2014 ; 2014 ; >
+    au < frozen ; exists ; 2015 ; QScience Proceedings Volume 2015 ; 2015 ; >
 
   }
 
@@ -388,9 +388,9 @@
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = rels
 
-    au < finished ; crawling ; 2012 ; Religions: A Scholarly Journal Volume 2012 ; 2012 >
-    au < finished ; finished ; 2014 ; Religions: A Scholarly Journal Volume 2014 ; 2014 >
-    au < frozen ; exists ; 2015 ; Religions: A Scholarly Journal Volume 2015 ; 2015 >
+    au < finished ; crawling ; 2012 ; Religions: A Scholarly Journal Volume 2012 ; 2012 ; >
+    au < finished ; finished ; 2014 ; Religions: A Scholarly Journal Volume 2014 ; 2014 ; >
+    au < frozen ; exists ; 2015 ; Religions: A Scholarly Journal Volume 2015 ; 2015 ; >
 
   }
 
@@ -404,17 +404,17 @@
       plugin = org.lockss.plugin.bloomsburyqatar.ClockssBloomsburyQatarPlugin
       param[journal_dir] = stsp
 
-      au < finished ; crawling ; 2010 ; Sustainable Technologies, Systems and Policies Volume 2010 ; 2010 >
-      au < finished ; crawling ; 2012 ; Sustainable Technologies, Systems and Policies Volume 2012 ; 2012 >
+      au < finished ; crawling ; 2010 ; Sustainable Technologies, Systems and Policies Volume 2010 ; 2010 ; >
+      au < finished ; crawling ; 2012 ; Sustainable Technologies, Systems and Policies Volume 2012 ; 2012 ; >
     }
     {
       plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
       param[journal_id] = stsp
       comment[journal] = stopped publishing.
 
-      au < doNotProcess ; doNotProcess ; 2010 ; Sustainable Technologies, Systems and Policies Volume 2010 ; 2010 >
-      au < doNotProcess ; doNotProcess ; 2012 ; Sustainable Technologies, Systems and Policies Volume 2012 ; 2012 >
-      au < doNotProcess ; exists ; 2012 ; Sustainable Technologies, Systems and Policies Volume CCS+Workshop ; CCS+Workshop >
+      au < doNotProcess ; doNotProcess ; 2010 ; Sustainable Technologies, Systems and Policies Volume 2010 ; 2010 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Sustainable Technologies, Systems and Policies Volume 2012 ; 2012 ; >
+      au < doNotProcess ; exists ; 2012 ; Sustainable Technologies, Systems and Policies Volume CCS+Workshop ; CCS+Workshop ; >
       
     }
   }
@@ -429,8 +429,8 @@
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = tasmeem
 
-    au < finished ; finished ; 2014 ; Tasmeem Volume 2014 ; 2014 >
-    au < frozen ; exists ; 2015 ; Tasmeem Volume 2015 ; 2015 >
+    au < finished ; finished ; 2014 ; Tasmeem Volume 2014 ; 2014 ; >
+    au < frozen ; exists ; 2015 ; Tasmeem Volume 2015 ; 2015 ; >
 
   }
 

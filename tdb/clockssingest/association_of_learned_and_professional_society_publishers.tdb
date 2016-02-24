@@ -11,7 +11,7 @@
   param[graphics_url] = http://graphics.ingentaconnect.com/
   param[publisher_id] = alpsp
   
-  implicit < status ; status2 ; year ; name ; param[volume_name] >
+  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
   
   {
   
@@ -24,25 +24,25 @@
     param[journal_id] = lp
     param[journal_issn] = 0953-1513
     
-    au < manifest ; exists ; 1997 ; Learned Publishing Volume 10 ; 10 >
-    au < manifest ; exists ; 1998 ; Learned Publishing Volume 11 ; 11 >
-    au < manifest ; exists ; 1999 ; Learned Publishing Volume 12 ; 12 >
-    au < manifest ; exists ; 2000 ; Learned Publishing Volume 13 ; 13 >
-    au < manifest ; exists ; 2001 ; Learned Publishing Volume 14 ; 14 >
-    au < manifest ; exists ; 2002 ; Learned Publishing Volume 15 ; 15 >
-    au < manifest ; exists ; 2003 ; Learned Publishing Volume 16 ; 16 >
-    au < manifest ; exists ; 2004 ; Learned Publishing Volume 17 ; 17 >
-    au < manifest ; exists ; 2005 ; Learned Publishing Volume 18 ; 18 >
-    au < manifest ; exists ; 2006 ; Learned Publishing Volume 19 ; 19 >
-    au < manifest ; exists ; 2007 ; Learned Publishing Volume 20 ; 20 >
-    au < manifest ; exists ; 2008 ; Learned Publishing Volume 21 ; 21 >
-    au < manifest ; exists ; 2009 ; Learned Publishing Volume 22 ; 22 >
-    au < manifest ; exists ; 2010 ; Learned Publishing Volume 23 ; 23 >
-    au < manifest ; exists ; 2011 ; Learned Publishing Volume 24 ; 24 >
-    au < finished ; crawling ; 2012 ; Learned Publishing Volume 25 ; 25 >
-    au < crawling ; exists ; 2013 ; Learned Publishing Volume 26 ; 26 >
-    au < finished ; crawling ; 2014 ; Learned Publishing Volume 27 ; 27 >
-    au < crawling ; exists ; 2015 ; Learned Publishing Volume 28 ; 28 >
+    au < manifest ; exists ; 1997 ; Learned Publishing Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1998 ; Learned Publishing Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1999 ; Learned Publishing Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2000 ; Learned Publishing Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2001 ; Learned Publishing Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2002 ; Learned Publishing Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2003 ; Learned Publishing Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2004 ; Learned Publishing Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2005 ; Learned Publishing Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2006 ; Learned Publishing Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2007 ; Learned Publishing Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2008 ; Learned Publishing Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2009 ; Learned Publishing Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2010 ; Learned Publishing Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2011 ; Learned Publishing Volume 24 ; 24 ; >
+    au < finished ; crawling ; 2012 ; Learned Publishing Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2013 ; Learned Publishing Volume 26 ; 26 ; >
+    au < finished ; crawling ; 2014 ; Learned Publishing Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2015 ; Learned Publishing Volume 28 ; 28 ; >
 
   }
 }

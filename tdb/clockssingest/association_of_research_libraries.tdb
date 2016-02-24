@@ -7,7 +7,7 @@
   >
 
   plugin = needs.plugin
-  implicit < status ; status2 ; year ; name ; volume ; param[year] >
+  implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
   param[base_url] = http://www.arl.org/
 
   {

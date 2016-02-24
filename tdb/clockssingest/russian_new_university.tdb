@@ -16,12 +16,12 @@
     plugin = needs.plugin
     param[base_url] = http://www.cardiometry.net/
     param[journal_id] = cardiometry
-    implicit < status ; status2 ; year ; param[year] ; name ; volume >
+    implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
     comment[nR] = publisher changing platforms
     
-    au < doNotProcess ; exists ; 2012 ; 2012 ; Cardiometry Volume 1 ; 1 >
-    au < doNotProcess ; exists ; 2013 ; 2013 ; Cardiometry Volume 2 ; 2 >
-    au < doNotProcess ; exists ; 2014 ; 2014 ; Cardiometry Volume 3 ; 3 >
+    au < doNotProcess ; exists ; 2012 ; 2012 ; Cardiometry Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 2013 ; 2013 ; Cardiometry Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 2014 ; 2014 ; Cardiometry Volume 3 ; 3 ; >
     
   }
  

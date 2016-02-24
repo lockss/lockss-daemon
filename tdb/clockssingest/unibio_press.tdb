@@ -19,22 +19,22 @@
 
       provider = Unibio Press
       plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin  
-      implicit < status ; status2 ; year ; name ; param[volume_name] >
+      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       param[base_url] = http://www.bioone.org/
       param[journal_id] = jche
       
-      au < manifest ; exists ; 2005 ; Current Herpetology Volume 24 ; 24 >
-      au < manifest ; exists ; 2006 ; Current Herpetology Volume 25 ; 25 >
-      au < manifest ; exists ; 2007 ; Current Herpetology Volume 26 ; 26 >
-      au < manifest ; exists ; 2008 ; Current Herpetology Volume 27 ; 27 >
-      au < manifest ; exists ; 2009 ; Current Herpetology Volume 28 ; 28 >
-      au < manifest ; exists ; 2010 ; Current Herpetology Volume 29 ; 29 >
-      au < manifest ; exists ; 2011 ; Current Herpetology Volume 30 ; 30 >
-      au < manifest ; exists ; 2012 ; Current Herpetology Volume 31 ; 31 >
-      au < crawling ; exists ; 2013 ; Current Herpetology Volume 32 ; 32 >
-      au < crawling ; exists ; 2014 ; Current Herpetology Volume 33 ; 33 >
-      au < crawling ; exists ; 2015 ; Current Herpetology Volume 34 ; 34 >
-      au < expected ; exists ; 2016 ; Current Herpetology Volume 35 ; 35 >
+      au < manifest ; exists ; 2005 ; Current Herpetology Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2006 ; Current Herpetology Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2007 ; Current Herpetology Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2008 ; Current Herpetology Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2009 ; Current Herpetology Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2010 ; Current Herpetology Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2011 ; Current Herpetology Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2012 ; Current Herpetology Volume 31 ; 31 ; >
+      au < crawling ; exists ; 2013 ; Current Herpetology Volume 32 ; 32 ; >
+      au < crawling ; exists ; 2014 ; Current Herpetology Volume 33 ; 33 ; >
+      au < crawling ; exists ; 2015 ; Current Herpetology Volume 34 ; 34 ; >
+      au < expected ; exists ; 2016 ; Current Herpetology Volume 35 ; 35 ; >
       
     }
 
@@ -59,23 +59,23 @@
 
     {
       provider = Unibio Press
-      implicit < status ; status2 ; year ; name ; param[volume_name] >
+      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = jmor
   
-      au < manifest ; exists ; 2005 ; Journal of Mammalian Ova Research Volume 22 ; 22 >
-      au < manifest ; exists ; 2006 ; Journal of Mammalian Ova Research Volume 23 ; 23 >
-      au < manifest ; exists ; 2007 ; Journal of Mammalian Ova Research Volume 24 ; 24 >
-      au < manifest ; exists ; 2008 ; Journal of Mammalian Ova Research Volume 25 ; 25 >
-      au < manifest ; exists ; 2009 ; Journal of Mammalian Ova Research Volume 26 ; 26 >
-      au < manifest ; exists ; 2010 ; Journal of Mammalian Ova Research Volume 27 ; 27 >
-      au < manifest ; exists ; 2011 ; Journal of Mammalian Ova Research Volume 28 ; 28 >
-      au < manifest ; exists ; 2012 ; Journal of Mammalian Ova Research Volume 29 ; 29 >
-      au < crawling ; exists ; 2013 ; Journal of Mammalian Ova Research Volume 30 ; 30 >
-      au < crawling ; exists ; 2014 ; Journal of Mammalian Ova Research Volume 31 ; 31 >
-      au < crawling ; exists ; 2015 ; Journal of Mammalian Ova Research Volume 32 ; 32 >
-      au < expected ; exists ; 2016 ; Journal of Mammalian Ova Research Volume 33 ; 33 >
+      au < manifest ; exists ; 2005 ; Journal of Mammalian Ova Research Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2006 ; Journal of Mammalian Ova Research Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2007 ; Journal of Mammalian Ova Research Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2008 ; Journal of Mammalian Ova Research Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2009 ; Journal of Mammalian Ova Research Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2010 ; Journal of Mammalian Ova Research Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2011 ; Journal of Mammalian Ova Research Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2012 ; Journal of Mammalian Ova Research Volume 29 ; 29 ; >
+      au < crawling ; exists ; 2013 ; Journal of Mammalian Ova Research Volume 30 ; 30 ; >
+      au < crawling ; exists ; 2014 ; Journal of Mammalian Ova Research Volume 31 ; 31 ; >
+      au < crawling ; exists ; 2015 ; Journal of Mammalian Ova Research Volume 32 ; 32 ; >
+      au < expected ; exists ; 2016 ; Journal of Mammalian Ova Research Volume 33 ; 33 ; >
 
     }
 
@@ -100,23 +100,23 @@
 
     {
       provider = Unibio Press
-      implicit < status ; status2 ; year ; name ; param[volume_name] >
+      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = jmam
   
-      au < manifest ; exists ; 2005 ; Mammal Study Volume 30 ; 30 >
-      au < manifest ; exists ; 2006 ; Mammal Study Volume 31 ; 31 >
-      au < manifest ; exists ; 2007 ; Mammal Study Volume 32 ; 32 >
-      au < manifest ; exists ; 2008 ; Mammal Study Volume 33 ; 33 >
-      au < manifest ; exists ; 2009 ; Mammal Study Volume 34 ; 34 >
-      au < manifest ; exists ; 2010 ; Mammal Study Volume 35 ; 35 >
-      au < manifest ; exists ; 2011 ; Mammal Study Volume 36 ; 36 >
-      au < manifest ; exists ; 2012 ; Mammal Study Volume 37 ; 37 >
-      au < crawling ; exists ; 2013 ; Mammal Study Volume 38 ; 38 >
-      au < crawling ; exists ; 2014 ; Mammal Study Volume 39 ; 39 >
-      au < crawling ; exists ; 2015 ; Mammal Study Volume 40 ; 40 >
-      au < expected ; exists ; 2016 ; Mammal Study Volume 41 ; 41 >
+      au < manifest ; exists ; 2005 ; Mammal Study Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2006 ; Mammal Study Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2007 ; Mammal Study Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2008 ; Mammal Study Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2009 ; Mammal Study Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2010 ; Mammal Study Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2011 ; Mammal Study Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2012 ; Mammal Study Volume 37 ; 37 ; >
+      au < crawling ; exists ; 2013 ; Mammal Study Volume 38 ; 38 ; >
+      au < crawling ; exists ; 2014 ; Mammal Study Volume 39 ; 39 ; >
+      au < crawling ; exists ; 2015 ; Mammal Study Volume 40 ; 40 ; >
+      au < expected ; exists ; 2016 ; Mammal Study Volume 41 ; 41 ; >
 
     }
 
@@ -140,23 +140,23 @@
 
     {
       provider = Unibio Press
-      implicit < status ; status2 ; year ; name ; param[volume_name] >
+      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = jorn
   
-      au < manifest ; exists ; 2005 ; Ornithological Science Volume 4 ; 4 >
-      au < manifest ; exists ; 2006 ; Ornithological Science Volume 5 ; 5 >
-      au < manifest ; exists ; 2007 ; Ornithological Science Volume 6 ; 6 >
-      au < manifest ; exists ; 2008 ; Ornithological Science Volume 7 ; 7 >
-      au < manifest ; exists ; 2009 ; Ornithological Science Volume 8 ; 8 >
-      au < manifest ; exists ; 2010 ; Ornithological Science Volume 9 ; 9 >
-      au < manifest ; exists ; 2011 ; Ornithological Science Volume 10 ; 10 >
-      au < manifest ; exists ; 2012 ; Ornithological Science Volume 11 ; 11 >
-      au < crawling ; exists ; 2013 ; Ornithological Science Volume 12 ; 12 >
-      au < crawling ; exists ; 2014 ; Ornithological Science Volume 13 ; 13 >
-      au < crawling ; exists ; 2015 ; Ornithological Science Volume 14 ; 14 >
-      au < manifest ; exists ; 2016 ; Ornithological Science Volume 15 ; 15 >
+      au < manifest ; exists ; 2005 ; Ornithological Science Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2006 ; Ornithological Science Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2007 ; Ornithological Science Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2008 ; Ornithological Science Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2009 ; Ornithological Science Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2010 ; Ornithological Science Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2011 ; Ornithological Science Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2012 ; Ornithological Science Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2013 ; Ornithological Science Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2014 ; Ornithological Science Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2015 ; Ornithological Science Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2016 ; Ornithological Science Volume 15 ; 15 ; >
 
     }
     
@@ -181,25 +181,25 @@
 
     {
       provider = Unibio Press
-      implicit < status ; status2 ; year ; name ; param[volume_name] >
+      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = jpal
   
-      au < manifest ; exists ; 2003 ; Paleontological Research Volume 7 ; 7 >
-      au < manifest ; exists ; 2004 ; Paleontological Research Volume 8 ; 8 >
-      au < manifest ; exists ; 2005 ; Paleontological Research Volume 9 ; 9 >
-      au < manifest ; exists ; 2006 ; Paleontological Research Volume 10 ; 10 >
-      au < manifest ; exists ; 2007 ; Paleontological Research Volume 11 ; 11 >
-      au < manifest ; exists ; 2008 ; Paleontological Research Volume 12 ; 12 >
-      au < manifest ; exists ; 2009 ; Paleontological Research Volume 13 ; 13 >
-      au < manifest ; exists ; 2010 ; Paleontological Research Volume 14 ; 14 >
-      au < manifest ; exists ; 2011 ; Paleontological Research Volume 15 ; 15 >
-      au < manifest ; exists ; 2012 ; Paleontological Research Volume 16 ; 16 >
-      au < crawling ; exists ; 2013 ; Paleontological Research Volume 17 ; 17 >
-      au < crawling ; exists ; 2014 ; Paleontological Research Volume 18 ; 18 >
-      au < crawling ; exists ; 2015 ; Paleontological Research Volume 19 ; 19 >
-      au < manifest ; exists ; 2016 ; Paleontological Research Volume 20 ; 20 >
+      au < manifest ; exists ; 2003 ; Paleontological Research Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2004 ; Paleontological Research Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2005 ; Paleontological Research Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2006 ; Paleontological Research Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2007 ; Paleontological Research Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2008 ; Paleontological Research Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2009 ; Paleontological Research Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2010 ; Paleontological Research Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2011 ; Paleontological Research Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2012 ; Paleontological Research Volume 16 ; 16 ; >
+      au < crawling ; exists ; 2013 ; Paleontological Research Volume 17 ; 17 ; >
+      au < crawling ; exists ; 2014 ; Paleontological Research Volume 18 ; 18 ; >
+      au < crawling ; exists ; 2015 ; Paleontological Research Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2016 ; Paleontological Research Volume 20 ; 20 ; >
 
     }
 
@@ -224,32 +224,32 @@
     {
       provider = Unibio Press
       plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin  
-      implicit < status ; status2 ; year ; name ; param[volume_name] >
+      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       param[base_url] = http://www.bioone.org/
       param[journal_id] = jzoo
       
-      au < manifest ; exists ; 1995 ; Zoological Science Volume 12 ; 12 >
-      au < manifest ; exists ; 1996 ; Zoological Science Volume 13 ; 13 >
-      au < manifest ; exists ; 1997 ; Zoological Science Volume 14 ; 14 >
-      au < manifest ; exists ; 1998 ; Zoological Science Volume 15 ; 15 >
-      au < manifest ; exists ; 1999 ; Zoological Science Volume 16 ; 16 >
-      au < manifest ; exists ; 2000 ; Zoological Science Volume 17 ; 17 >
-      au < manifest ; exists ; 2001 ; Zoological Science Volume 18 ; 18 >
-      au < manifest ; exists ; 2002 ; Zoological Science Volume 19 ; 19 >
-      au < manifest ; exists ; 2003 ; Zoological Science Volume 20 ; 20 >
-      au < manifest ; exists ; 2004 ; Zoological Science Volume 21 ; 21 >
-      au < manifest ; exists ; 2005 ; Zoological Science Volume 22 ; 22 >
-      au < manifest ; exists ; 2006 ; Zoological Science Volume 23 ; 23 >
-      au < manifest ; exists ; 2007 ; Zoological Science Volume 24 ; 24 >
-      au < manifest ; exists ; 2008 ; Zoological Science Volume 25 ; 25 >
-      au < manifest ; exists ; 2009 ; Zoological Science Volume 26 ; 26 >
-      au < manifest ; exists ; 2010 ; Zoological Science Volume 27 ; 27 >
-      au < manifest ; exists ; 2011 ; Zoological Science Volume 28 ; 28 >
-      au < manifest ; exists ; 2012 ; Zoological Science Volume 29 ; 29 >
-      au < crawling ; exists ; 2013 ; Zoological Science Volume 30 ; 30 >
-      au < crawling ; exists ; 2014 ; Zoological Science Volume 31 ; 31 >
-      au < crawling ; exists ; 2015 ; Zoological Science Volume 32 ; 32 >
-      au < manifest ; exists ; 2016 ; Zoological Science Volume 33 ; 33 >
+      au < manifest ; exists ; 1995 ; Zoological Science Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1996 ; Zoological Science Volume 13 ; 13 ; >
+      au < manifest ; exists ; 1997 ; Zoological Science Volume 14 ; 14 ; >
+      au < manifest ; exists ; 1998 ; Zoological Science Volume 15 ; 15 ; >
+      au < manifest ; exists ; 1999 ; Zoological Science Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2000 ; Zoological Science Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2001 ; Zoological Science Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2002 ; Zoological Science Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2003 ; Zoological Science Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2004 ; Zoological Science Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2005 ; Zoological Science Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2006 ; Zoological Science Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2007 ; Zoological Science Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2008 ; Zoological Science Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2009 ; Zoological Science Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2010 ; Zoological Science Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2011 ; Zoological Science Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2012 ; Zoological Science Volume 29 ; 29 ; >
+      au < crawling ; exists ; 2013 ; Zoological Science Volume 30 ; 30 ; >
+      au < crawling ; exists ; 2014 ; Zoological Science Volume 31 ; 31 ; >
+      au < crawling ; exists ; 2015 ; Zoological Science Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2016 ; Zoological Science Volume 33 ; 33 ; >
 
     }
 

@@ -7,7 +7,7 @@
   >
     
     plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
     
   {
  
@@ -18,25 +18,25 @@
     param[base_url] = http://emg.geoscienceworld.org/
     comment[abstracts] = only citation link found
     
-    au < exists ; exists ; 1992 ; Exploration and Mining Geology Volume 1 [abstracts only] ; 1 >
-    au < exists ; exists ; 1993 ; Exploration and Mining Geology Volume 2 [abstracts only] ; 2 >
-    au < exists ; exists ; 1994 ; Exploration and Mining Geology Volume 3 [abstracts only] ; 3 >
-    au < exists ; exists ; 1995 ; Exploration and Mining Geology Volume 4 [abstracts only] ; 4 >
-    au < exists ; exists ; 1996 ; Exploration and Mining Geology Volume 5 [abstracts only] ; 5 >
-    au < exists ; exists ; 1997 ; Exploration and Mining Geology Volume 6 [abstracts only] ; 6 >
-    au < exists ; exists ; 1998 ; Exploration and Mining Geology Volume 7 [abstracts only] ; 7 >
-    au < exists ; exists ; 1999 ; Exploration and Mining Geology Volume 8 [abstracts only] ; 8 >
-    au < exists ; exists ; 2000 ; Exploration and Mining Geology Volume 9 [abstracts only] ; 9 >
-    au < manifest ; exists ; 2001 ; Exploration and Mining Geology Volume 10 ; 10 >
-    au < manifest ; exists ; 2002 ; Exploration and Mining Geology Volume 11 ; 11 >
-    au < manifest ; exists ; 2003 ; Exploration and Mining Geology Volume 12 ; 12 >
-    au < manifest ; exists ; 2004 ; Exploration and Mining Geology Volume 13 ; 13 >
-    au < manifest ; exists ; 2005 ; Exploration and Mining Geology Volume 14 ; 14 >
-    au < manifest ; exists ; 2006 ; Exploration and Mining Geology Volume 15 ; 15 >
-    au < manifest ; exists ; 2007 ; Exploration and Mining Geology Volume 16 ; 16 >
-    au < manifest ; exists ; 2008 ; Exploration and Mining Geology Volume 17 ; 17 >
-    au < manifest ; exists ; 2009 ; Exploration and Mining Geology Volume 18 ; 18 >
-    au < manifest ; exists ; 2010 ; Exploration and Mining Geology Volume 19 ; 19 >
+    au < exists ; exists ; 1992 ; Exploration and Mining Geology Volume 1 [abstracts only] ; 1 ; >
+    au < exists ; exists ; 1993 ; Exploration and Mining Geology Volume 2 [abstracts only] ; 2 ; >
+    au < exists ; exists ; 1994 ; Exploration and Mining Geology Volume 3 [abstracts only] ; 3 ; >
+    au < exists ; exists ; 1995 ; Exploration and Mining Geology Volume 4 [abstracts only] ; 4 ; >
+    au < exists ; exists ; 1996 ; Exploration and Mining Geology Volume 5 [abstracts only] ; 5 ; >
+    au < exists ; exists ; 1997 ; Exploration and Mining Geology Volume 6 [abstracts only] ; 6 ; >
+    au < exists ; exists ; 1998 ; Exploration and Mining Geology Volume 7 [abstracts only] ; 7 ; >
+    au < exists ; exists ; 1999 ; Exploration and Mining Geology Volume 8 [abstracts only] ; 8 ; >
+    au < exists ; exists ; 2000 ; Exploration and Mining Geology Volume 9 [abstracts only] ; 9 ; >
+    au < manifest ; exists ; 2001 ; Exploration and Mining Geology Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2002 ; Exploration and Mining Geology Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2003 ; Exploration and Mining Geology Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2004 ; Exploration and Mining Geology Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2005 ; Exploration and Mining Geology Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2006 ; Exploration and Mining Geology Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2007 ; Exploration and Mining Geology Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2008 ; Exploration and Mining Geology Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2009 ; Exploration and Mining Geology Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2010 ; Exploration and Mining Geology Volume 19 ; 19 ; >
 
   } 
 }

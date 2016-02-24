@@ -8,7 +8,7 @@
   comment[contract] = Contract for Springer is 2008. Collect from 2013 for new publisher?
 
   rights = openaccess
-  implicit < status ; status2 ; year ; name ; param[volume_name] >
+  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
   {
       plugin = org.lockss.plugin.bmc.ClockssBioMedCentralPlugin
@@ -23,8 +23,8 @@
         param[journal_issn] = 2213-7467 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2014 ; Advanced Modeling and Simulation in Engineering Sciences Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2015 ; Advanced Modeling and Simulation in Engineering Sciences Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; Advanced Modeling and Simulation in Engineering Sciences Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2015 ; Advanced Modeling and Simulation in Engineering Sciences Volume 2 ; 2 ; >
   
     }
   
@@ -40,12 +40,12 @@
         param[journal_issn] = 1687-1839 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2010 ; Advances in Difference Equations Volume 2010 ; 2010 >
-        au < doNotProcess ; exists ; 2011 ; Advances in Difference Equations Volume 2011 ; 2011 >
-        au < doNotProcess ; exists ; 2012 ; Advances in Difference Equations Volume 2012 ; 2012 >
-        au < down ; exists ; 2013 ; Advances in Difference Equations Volume 2013 ; 2013 >
-        au < doNotProcess ; exists ; 2014 ; Advances in Difference Equations Volume 2014 ; 2014 >
-        au < doNotProcess ; exists ; 2015 ; Advances in Difference Equations Volume 2015 ; 2015 >
+        au < doNotProcess ; exists ; 2010 ; Advances in Difference Equations Volume 2010 ; 2010 ; >
+        au < doNotProcess ; exists ; 2011 ; Advances in Difference Equations Volume 2011 ; 2011 ; >
+        au < doNotProcess ; exists ; 2012 ; Advances in Difference Equations Volume 2012 ; 2012 ; >
+        au < down ; exists ; 2013 ; Advances in Difference Equations Volume 2013 ; 2013 ; >
+        au < doNotProcess ; exists ; 2014 ; Advances in Difference Equations Volume 2014 ; 2014 ; >
+        au < doNotProcess ; exists ; 2015 ; Advances in Difference Equations Volume 2015 ; 2015 ; >
   
     }
   
@@ -60,9 +60,9 @@
         param[journal_issn] = 2193-7532 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; Agricultural and Food Economics Volume 1 ; 1 >
-        au < down ; exists ; 2014 ; Agricultural and Food Economics Volume 2 ; 2 >
-        au < down ; exists ; 2015 ; Agricultural and Food Economics Volume 3 ; 3 >
+        au < down ; exists ; 2013 ; Agricultural and Food Economics Volume 1 ; 1 ; >
+        au < down ; exists ; 2014 ; Agricultural and Food Economics Volume 2 ; 2 ; >
+        au < down ; exists ; 2015 ; Agricultural and Food Economics Volume 3 ; 3 ; >
   
     }
   
@@ -77,11 +77,11 @@
         param[journal_issn] = 2191-0855 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2011 ; AMB Express Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2012 ; AMB Express Volume 2 ; 2 >
-        au < down ; exists ; 2013 ; AMB Express Volume 3 ; 3 >
-        au < down ; exists ; 2014 ; AMB Express Volume 4 ; 4 >
-        au < down ; exists ; 2015 ; AMB Express Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2011 ; AMB Express Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2012 ; AMB Express Volume 2 ; 2 ; >
+        au < down ; exists ; 2013 ; AMB Express Volume 3 ; 3 ; >
+        au < down ; exists ; 2014 ; AMB Express Volume 4 ; 4 ; >
+        au < down ; exists ; 2015 ; AMB Express Volume 5 ; 5 ; >
   
     }
   
@@ -96,11 +96,11 @@
         param[journal_issn] = 2110-5820 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2011 ; Annals of Intensive Care Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2012 ; Annals of Intensive Care Volume 2 ; 2 >
-        au < down ; exists ; 2013 ; Annals of Intensive Care Volume 3 ; 3 >
-        au < finished ; crawling ; 2014 ; Annals of Intensive Care Volume 4 ; 4 >
-        au < down ; exists ; 2015 ; Annals of Intensive Care Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2011 ; Annals of Intensive Care Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2012 ; Annals of Intensive Care Volume 2 ; 2 ; >
+        au < down ; exists ; 2013 ; Annals of Intensive Care Volume 3 ; 3 ; >
+        au < finished ; crawling ; 2014 ; Annals of Intensive Care Volume 4 ; 4 ; >
+        au < down ; exists ; 2015 ; Annals of Intensive Care Volume 5 ; 5 ; >
   
     }
 
@@ -115,9 +115,9 @@
         param[journal_issn] = 2196-4351 
         comment[platform] = BioMedCentralPlugin
 
-        au < down ; exists ; 2013 ; Applied Adhesion Science Volume 1 ; 1 >
-        au < finished ; crawling ; 2014 ; Applied Adhesion Science Volume 2 ; 2 >
-        au < down ; exists ; 2015 ; Applied Adhesion Science Volume 3 ; 3 >
+        au < down ; exists ; 2013 ; Applied Adhesion Science Volume 1 ; 1 ; >
+        au < finished ; crawling ; 2014 ; Applied Adhesion Science Volume 2 ; 2 ; >
+        au < down ; exists ; 2015 ; Applied Adhesion Science Volume 3 ; 3 ; >
 
     }
 
@@ -132,8 +132,8 @@
         param[journal_issn] = 2196-0089 
         comment[platform] = BioMedCentralPlugin
 
-        au < finished ; finished ; 2014 ; Applied Informatics Volume 1 ; 1 >
-        au < down ; exists ; 2015 ; Applied Informatics Volume 2 ; 2 >
+        au < finished ; finished ; 2014 ; Applied Informatics Volume 1 ; 1 ; >
+        au < down ; exists ; 2015 ; Applied Informatics Volume 2 ; 2 ; >
 
     }
 
@@ -148,8 +148,8 @@
         param[journal_issn] = 2196-1166
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2014 ; Asia Pacific Journal on Computational Engineering Volume 1 ; 1 >
-        au < down ; exists ; 2015 ; Asia Pacific Journal on Computational Engineering Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; Asia Pacific Journal on Computational Engineering Volume 1 ; 1 ; >
+        au < down ; exists ; 2015 ; Asia Pacific Journal on Computational Engineering Volume 2 ; 2 ; >
   
     }
 
@@ -164,9 +164,9 @@
         param[journal_issn] = 2195-3007 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; Asian Journal of Gambling Issues and Public Health Volume 3 ; 3 >
-        au < down ; exists ; 2014 ; Asian Journal of Gambling Issues and Public Health Volume 4 ; 4 >
-        au < down ; exists ; 2015 ; Asian Journal of Gambling Issues and Public Health Volume 5 ; 5 >
+        au < down ; exists ; 2013 ; Asian Journal of Gambling Issues and Public Health Volume 3 ; 3 ; >
+        au < down ; exists ; 2014 ; Asian Journal of Gambling Issues and Public Health Volume 4 ; 4 ; >
+        au < down ; exists ; 2015 ; Asian Journal of Gambling Issues and Public Health Volume 5 ; 5 ; >
   
     }
   
@@ -181,8 +181,8 @@
         param[journal_issn] = 2197-4365 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2014 ; Bioresources and Bioprocessing Volume 1 ; 1 > #crawl completed with no substance
-        au < down ; exists ; 2015 ; Bioresources and Bioprocessing Volume 2 ; 2 >
+        au < doNotProcess ; exists ; 2014 ; Bioresources and Bioprocessing Volume 1 ; 1 ; > #crawl completed with no substance
+        au < down ; exists ; 2015 ; Bioresources and Bioprocessing Volume 2 ; 2 ; >
   
     }
   
@@ -197,9 +197,9 @@
         param[journal_issn] = 1999-3110 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; Botanical Studies Volume 54 ; 54 >
-        au < down ; exists ; 2014 ; Botanical Studies Volume 55 ; 55 >
-        au < down ; exists ; 2015 ; Botanical Studies Volume 56 ; 56 >
+        au < down ; exists ; 2013 ; Botanical Studies Volume 54 ; 54 ; >
+        au < down ; exists ; 2014 ; Botanical Studies Volume 55 ; 55 ; >
+        au < down ; exists ; 2015 ; Botanical Studies Volume 56 ; 56 ; >
   
     }
   
@@ -216,17 +216,17 @@
         param[journal_issn] = 1687-2770 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2005 ; Boundary Value Problems Volume 2005 ; 2005 >
-        au < doNotProcess ; exists ; 2006 ; Boundary Value Problems Volume 2006 ; 2006 >
-        au < doNotProcess ; exists ; 2007 ; Boundary Value Problems Volume 2007 ; 2007 >
-        au < doNotProcess ; exists ; 2008 ; Boundary Value Problems Volume 2008 ; 2008 >
-        au < doNotProcess ; exists ; 2009 ; Boundary Value Problems Volume 2009 ; 2009 >
-        au < doNotProcess ; exists ; 2010 ; Boundary Value Problems Volume 2010 ; 2010 >
-        au < doNotProcess ; exists ; 2011 ; Boundary Value Problems Volume 2011 ; 2011 >
-        au < doNotProcess ; exists ; 2012 ; Boundary Value Problems Volume 2012 ; 2012 >
-        au < down ; exists ; 2013 ; Boundary Value Problems Volume 2013 ; 2013 >
-        au < down ; exists ; 2014 ; Boundary Value Problems Volume 2014 ; 2014 >
-        au < doNotProcess ; exists ; 2015 ; Boundary Value Problems Volume 2015 ; 2015 >
+        au < doNotProcess ; exists ; 2005 ; Boundary Value Problems Volume 2005 ; 2005 ; >
+        au < doNotProcess ; exists ; 2006 ; Boundary Value Problems Volume 2006 ; 2006 ; >
+        au < doNotProcess ; exists ; 2007 ; Boundary Value Problems Volume 2007 ; 2007 ; >
+        au < doNotProcess ; exists ; 2008 ; Boundary Value Problems Volume 2008 ; 2008 ; >
+        au < doNotProcess ; exists ; 2009 ; Boundary Value Problems Volume 2009 ; 2009 ; >
+        au < doNotProcess ; exists ; 2010 ; Boundary Value Problems Volume 2010 ; 2010 ; >
+        au < doNotProcess ; exists ; 2011 ; Boundary Value Problems Volume 2011 ; 2011 ; >
+        au < doNotProcess ; exists ; 2012 ; Boundary Value Problems Volume 2012 ; 2012 ; >
+        au < down ; exists ; 2013 ; Boundary Value Problems Volume 2013 ; 2013 ; >
+        au < down ; exists ; 2014 ; Boundary Value Problems Volume 2014 ; 2014 ; >
+        au < doNotProcess ; exists ; 2015 ; Boundary Value Problems Volume 2015 ; 2015 ; >
   
     }
 
@@ -241,8 +241,8 @@
         param[journal_issn] = 2196-288X 
         comment[platform] = BioMedCentralPlugin
 
-        au < down ; exists ; 2014 ; Brazilian Journal of Science and Technology Volume 1 ; 1 >
-        au < down ; exists ; 2015 ; Brazilian Journal of Science and Technology Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; Brazilian Journal of Science and Technology Volume 1 ; 1 ; >
+        au < down ; exists ; 2015 ; Brazilian Journal of Science and Technology Volume 2 ; 2 ; >
 
     }
 
@@ -257,8 +257,8 @@
         param[journal_issn] = 2196-5641 
         comment[platform] = BioMedCentralPlugin
 
-        au < doNotProcess ; exists ; 2014 ; Chemical and Biological Technologies in Agriculture Volume 1 ; 1 >
-        au < down ; exists ; 2015 ; Chemical and Biological Technologies in Agriculture Volume 2 ; 2 >
+        au < doNotProcess ; exists ; 2014 ; Chemical and Biological Technologies in Agriculture Volume 1 ; 1 ; >
+        au < down ; exists ; 2015 ; Chemical and Biological Technologies in Agriculture Volume 2 ; 2 ; >
 
     }
 
@@ -273,8 +273,8 @@
         param[journal_issn] = 2195-2701 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2014 ; City, Territory and Architecture Volume 1 ; 1 >
-        au < down ; exists ; 2015 ; City, Territory and Architecture Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; City, Territory and Architecture Volume 1 ; 1 ; >
+        au < down ; exists ; 2015 ; City, Territory and Architecture Volume 2 ; 2 ; >
   
     }
   
@@ -290,10 +290,10 @@
         comment[platform] = BioMedCentralPlugin
         #notReady - PD-1535
   
-        au < doNotProcess ; exists ; 2012 ; Clinical and Translational Medicine Volume 1 ; 1 >
-        au < finished ; finished ; 2013 ; Clinical and Translational Medicine Volume 2 ; 2 >
-        au < down ; exists ; 2014 ; Clinical and Translational Medicine Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2015 ; Clinical and Translational Medicine Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; Clinical and Translational Medicine Volume 1 ; 1 ; >
+        au < finished ; finished ; 2013 ; Clinical and Translational Medicine Volume 2 ; 2 ; >
+        au < down ; exists ; 2014 ; Clinical and Translational Medicine Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2015 ; Clinical and Translational Medicine Volume 4 ; 4 ; >
   
     }
   
@@ -308,10 +308,10 @@
         param[journal_issn] = 2196-873X 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; mUX: The Journal of Mobile User Experience Volume 1 ; 1 >
-        au < down ; exists ; 2013 ; mUX: The Journal of Mobile User Experience Volume 2 ; 2 >
-        au < doesNotExist ; doesNotExist ; 0 ; mUX: The Journal of Mobile User Experience Volume 3 ; 3 >
-        au < down ; exists ; 2015 ; mUX: The Journal of Mobile User Experience Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; mUX: The Journal of Mobile User Experience Volume 1 ; 1 ; >
+        au < down ; exists ; 2013 ; mUX: The Journal of Mobile User Experience Volume 2 ; 2 ; >
+        au < doesNotExist ; doesNotExist ; 0 ; mUX: The Journal of Mobile User Experience Volume 3 ; 3 ; >
+        au < down ; exists ; 2015 ; mUX: The Journal of Mobile User Experience Volume 4 ; 4 ; >
   
     }
   
@@ -326,9 +326,9 @@
         param[journal_issn] = 2194-3206 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; Complex Adaptive Systems Modeling Volume 1 ; 1 >
-        au < down ; exists ; 2014 ; Complex Adaptive Systems Modeling Volume 2 ; 2 >
-        au < down ; exists ; 2015 ; Complex Adaptive Systems Modeling Volume 3 ; 3 >
+        au < down ; exists ; 2013 ; Complex Adaptive Systems Modeling Volume 1 ; 1 ; >
+        au < down ; exists ; 2014 ; Complex Adaptive Systems Modeling Volume 2 ; 2 ; >
+        au < down ; exists ; 2015 ; Complex Adaptive Systems Modeling Volume 3 ; 3 ; >
   
     }
   
@@ -343,7 +343,7 @@
         param[journal_issn] = 2195-3961 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2015 ; Computational Cognitive Science Volume 1 ; 1 >
+        au < down ; exists ; 2015 ; Computational Cognitive Science Volume 1 ; 1 ; >
   
     }
   
@@ -358,10 +358,10 @@
         param[journal_issn] = 2193-7680 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; Crime Science Volume 1 ; 1 >
-        au < finished ; finished ; 2013 ; Crime Science Volume 2 ; 2 >
-        au < down ; exists ; 2014 ; Crime Science Volume 3 ; 3 >
-        au < down ; exists ; 2015 ; Crime Science Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; Crime Science Volume 1 ; 1 ; >
+        au < finished ; finished ; 2013 ; Crime Science Volume 2 ; 2 ; >
+        au < down ; exists ; 2014 ; Crime Science Volume 3 ; 3 ; >
+        au < down ; exists ; 2015 ; Crime Science Volume 4 ; 4 ; >
   
     }
   
@@ -377,10 +377,10 @@
         param[journal_issn] = 2036-7902
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; Critical Ultrasound Journal Volume 4 ; 4 >
-        au < down ; exists ; 2013 ; Critical Ultrasound Journal Volume 5 ; 5 >
-        au < down ; exists ; 2014 ; Critical Ultrasound Journal Volume 6 ; 6 >
-        au < down ; exists ; 2015 ; Critical Ultrasound Journal Volume 7 ; 7 >
+        au < doNotProcess ; exists ; 2012 ; Critical Ultrasound Journal Volume 4 ; 4 ; >
+        au < down ; exists ; 2013 ; Critical Ultrasound Journal Volume 5 ; 5 ; >
+        au < down ; exists ; 2014 ; Critical Ultrasound Journal Volume 6 ; 6 ; >
+        au < down ; exists ; 2015 ; Critical Ultrasound Journal Volume 7 ; 7 ; >
   
     }
   
@@ -395,8 +395,8 @@
         param[journal_issn] = 2193-8636 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2014 ; Decision Analytics Volume 1 ; 1 >
-        au < down ; exists ; 2015 ; Decision Analytics Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; Decision Analytics Volume 1 ; 1 ; >
+        au < down ; exists ; 2015 ; Decision Analytics Volume 2 ; 2 ; >
   
     }
   
@@ -411,8 +411,8 @@
         param[journal_issn] = 2194-6434 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2014 ; Earth Perspectives Volume 1 ; 1 >
-        au < down ; exists ; 2015 ; Earth Perspectives Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; Earth Perspectives Volume 1 ; 1 ; >
+        au < down ; exists ; 2015 ; Earth Perspectives Volume 2 ; 2 ; >
   
     }
 
@@ -427,8 +427,8 @@
         param[journal_issn] = 1880-5981 
         comment[platform] = BioMedCentralPlugin
 
-        au < down ; exists ; 2014 ; Earth, Planets and Space Volume 66 ; 66 >
-        au < doNotProcess ; exists ; 2015 ; Earth, Planets and Space Volume 67 ; 67 >
+        au < down ; exists ; 2014 ; Earth, Planets and Space Volume 66 ; 66 ; >
+        au < doNotProcess ; exists ; 2015 ; Earth, Planets and Space Volume 67 ; 67 ; >
 
     }
 
@@ -443,10 +443,10 @@
         param[journal_issn] = 2192-1709 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; Ecological Processes Volume 1 ; 1 >
-        au < down ; exists ; 2013 ; Ecological Processes Volume 2 ; 2 >
-        au < down ; exists ; 2014 ; Ecological Processes Volume 3 ; 3 >
-        au < down ; exists ; 2015 ; Ecological Processes Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; Ecological Processes Volume 1 ; 1 ; >
+        au < down ; exists ; 2013 ; Ecological Processes Volume 2 ; 2 ; >
+        au < down ; exists ; 2014 ; Ecological Processes Volume 3 ; 3 ; >
+        au < down ; exists ; 2015 ; Ecological Processes Volume 4 ; 4 ; >
   
     }
   
@@ -461,8 +461,8 @@
         param[journal_issn] = 2197-7364
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2014 ; EJNMMI Physics Volume 1 ; 1 >
-        au < down ; exists ; 2015 ; EJNMMI Physics Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; EJNMMI Physics Volume 1 ; 1 ; >
+        au < down ; exists ; 2015 ; EJNMMI Physics Volume 2 ; 2 ; >
   
     }
   
@@ -477,11 +477,11 @@
         param[journal_issn] = 2191-219X 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2011 ; EJNMMI Research Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2012 ; EJNMMI Research Volume 2 ; 2 >
-        au < down ; exists ; 2013 ; EJNMMI Research Volume 3 ; 3 >
-        au < down ; exists ; 2014 ; EJNMMI Research Volume 4 ; 4 >
-        au < down ; exists ; 2015 ; EJNMMI Research Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2011 ; EJNMMI Research Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2012 ; EJNMMI Research Volume 2 ; 2 ; >
+        au < down ; exists ; 2013 ; EJNMMI Research Volume 3 ; 3 ; >
+        au < down ; exists ; 2014 ; EJNMMI Research Volume 4 ; 4 ; >
+        au < down ; exists ; 2015 ; EJNMMI Research Volume 5 ; 5 ; >
   
     }
   
@@ -496,9 +496,9 @@
         param[journal_issn] = 1877-6345 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; Empirical Research in Vocational Education and Training Volume 5 ; 5 >
-        au < down ; exists ; 2014 ; Empirical Research in Vocational Education and Training Volume 6 ; 6 >
-        au < down ; exists ; 2015 ; Empirical Research in Vocational Education and Training Volume 7 ; 7 >
+        au < down ; exists ; 2013 ; Empirical Research in Vocational Education and Training Volume 5 ; 5 ; >
+        au < down ; exists ; 2014 ; Empirical Research in Vocational Education and Training Volume 6 ; 6 ; >
+        au < down ; exists ; 2015 ; Empirical Research in Vocational Education and Training Volume 7 ; 7 ; >
   
     }
   
@@ -513,11 +513,11 @@
         param[journal_issn] = 2192-0567 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2011 ; Energy, Sustainability and Society Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2012 ; Energy, Sustainability and Society Volume 2 ; 2 >
-        au < finished ; finished ; 2013 ; Energy, Sustainability and Society Volume 3 ; 3 >
-        au < down ; exists ; 2014 ; Energy, Sustainability and Society Volume 4 ; 4 >
-        au < down ; exists ; 2015 ; Energy, Sustainability and Society Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2011 ; Energy, Sustainability and Society Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2012 ; Energy, Sustainability and Society Volume 2 ; 2 ; >
+        au < finished ; finished ; 2013 ; Energy, Sustainability and Society Volume 3 ; 3 ; >
+        au < down ; exists ; 2014 ; Energy, Sustainability and Society Volume 4 ; 4 ; >
+        au < down ; exists ; 2015 ; Energy, Sustainability and Society Volume 5 ; 5 ; >
   
     }
   
@@ -532,11 +532,11 @@
         param[journal_issn] = 2190-4715 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2011 ; Environmental Sciences Europe Volume 23 ; 23 >
-        au < doNotProcess ; exists ; 2012 ; Environmental Sciences Europe Volume 24 ; 24 >
-        au < down ; exists ; 2013 ; Environmental Sciences Europe Volume 25 ; 25 >
-        au < down ; exists ; 2014 ; Environmental Sciences Europe Volume 26 ; 26 >
-        au < down ; exists ; 2015 ; Environmental Sciences Europe Volume 27 ; 27 >
+        au < doNotProcess ; exists ; 2011 ; Environmental Sciences Europe Volume 23 ; 23 ; >
+        au < doNotProcess ; exists ; 2012 ; Environmental Sciences Europe Volume 24 ; 24 ; >
+        au < down ; exists ; 2013 ; Environmental Sciences Europe Volume 25 ; 25 ; >
+        au < down ; exists ; 2014 ; Environmental Sciences Europe Volume 26 ; 26 ; >
+        au < down ; exists ; 2015 ; Environmental Sciences Europe Volume 27 ; 27 ; >
   
     }
   
@@ -551,10 +551,10 @@
         param[journal_issn] = 2193-2697 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; Environmental Systems Research Volume 1 ; 1 >
-        au < down ; exists ; 2013 ; Environmental Systems Research Volume 2 ; 2 >
-        au < down ; exists ; 2014 ; Environmental Systems Research Volume 3 ; 3 >
-        au < down ; exists ; 2015 ; Environmental Systems Research Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; Environmental Systems Research Volume 1 ; 1 ; >
+        au < down ; exists ; 2013 ; Environmental Systems Research Volume 2 ; 2 ; >
+        au < down ; exists ; 2014 ; Environmental Systems Research Volume 3 ; 3 ; >
+        au < down ; exists ; 2015 ; Environmental Systems Research Volume 4 ; 4 ; >
   
     }
   
@@ -569,10 +569,10 @@
         param[journal_issn] = 2193-1127 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; EPJ Data Science Volume 1 ; 1 >
-        au < down ; exists ; 2013 ; EPJ Data Science Volume 2 ; 2 >
-        au < down ; exists ; 2014 ; EPJ Data Science Volume 3 ; 3 >
-        au < down ; exists ; 2015 ; EPJ Data Science Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; EPJ Data Science Volume 1 ; 1 ; >
+        au < down ; exists ; 2013 ; EPJ Data Science Volume 2 ; 2 ; >
+        au < down ; exists ; 2014 ; EPJ Data Science Volume 3 ; 3 ; >
+        au < down ; exists ; 2015 ; EPJ Data Science Volume 4 ; 4 ; >
   
     }
   
@@ -587,9 +587,9 @@
         param[journal_issn] = 2195-0008 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; EPJ Nonlinear Biomedical Physics Volume 1 ; 1 >
-        au < down ; exists ; 2014 ; EPJ Nonlinear Biomedical Physics Volume 2 ; 2 >
-        au < down ; exists ; 2015 ; EPJ Nonlinear Biomedical Physics Volume 3 ; 3 >
+        au < down ; exists ; 2013 ; EPJ Nonlinear Biomedical Physics Volume 1 ; 1 ; >
+        au < down ; exists ; 2014 ; EPJ Nonlinear Biomedical Physics Volume 2 ; 2 ; >
+        au < down ; exists ; 2015 ; EPJ Nonlinear Biomedical Physics Volume 3 ; 3 ; >
   
     }
   
@@ -604,8 +604,8 @@
         param[journal_issn] = 2196-0763 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2014 ; EPJ Quantum Technology Volume 1 ; 1 >
-        au < down ; exists ; 2015 ; EPJ Quantum Technology Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; EPJ Quantum Technology Volume 1 ; 1 ; >
+        au < down ; exists ; 2015 ; EPJ Quantum Technology Volume 2 ; 2 ; >
   
     }
   
@@ -620,8 +620,8 @@
         param[journal_issn] = 2195-7045 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2014 ; EPJ Techniques and Instrumentation Volume 1 ; 1 >
-        au < down ; exists ; 2015 ; EPJ Techniques and Instrumentation Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; EPJ Techniques and Instrumentation Volume 1 ; 1 ; >
+        au < down ; exists ; 2015 ; EPJ Techniques and Instrumentation Volume 2 ; 2 ; >
   
     }
   
@@ -638,9 +638,9 @@
         param[journal_issn] = 1687-6172
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; EURASIP Journal on Advances in Signal Processing Volume 2013 ; 2013 >
-        au < down ; exists ; 2014 ; EURASIP Journal on Advances in Signal Processing Volume 2014 ; 2014 >
-        au < down ; exists ; 2015 ; EURASIP Journal on Advances in Signal Processing Volume 2015 ; 2015 >
+        au < down ; exists ; 2013 ; EURASIP Journal on Advances in Signal Processing Volume 2013 ; 2013 ; >
+        au < down ; exists ; 2014 ; EURASIP Journal on Advances in Signal Processing Volume 2014 ; 2014 ; >
+        au < down ; exists ; 2015 ; EURASIP Journal on Advances in Signal Processing Volume 2015 ; 2015 ; >
         }
 
         {
@@ -648,12 +648,12 @@
         param[journal_issn] = 1687-6172
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2010 ; EURASIP Journal on Advances in Signal Processing Volume 2010 ; 2010 >
-        au < doNotProcess ; exists ; 2011 ; EURASIP Journal on Advances in Signal Processing Volume 2011 ; 2011 >
-        au < doNotProcess ; exists ; 2012 ; EURASIP Journal on Advances in Signal Processing Volume 2012 ; 2012 >
-        au < doNotProcess ; exists ; 2013 ; EURASIP Journal on Advances in Signal Processing Volume 2013 ; 2013 >
-        au < doNotProcess ; exists ; 2014 ; EURASIP Journal on Advances in Signal Processing Volume 2014 ; 2014 >
-        au < doNotProcess ; exists ; 2015 ; EURASIP Journal on Advances in Signal Processing Volume 2015 ; 2015 >
+        au < doNotProcess ; exists ; 2010 ; EURASIP Journal on Advances in Signal Processing Volume 2010 ; 2010 ; >
+        au < doNotProcess ; exists ; 2011 ; EURASIP Journal on Advances in Signal Processing Volume 2011 ; 2011 ; >
+        au < doNotProcess ; exists ; 2012 ; EURASIP Journal on Advances in Signal Processing Volume 2012 ; 2012 ; >
+        au < doNotProcess ; exists ; 2013 ; EURASIP Journal on Advances in Signal Processing Volume 2013 ; 2013 ; >
+        au < doNotProcess ; exists ; 2014 ; EURASIP Journal on Advances in Signal Processing Volume 2014 ; 2014 ; >
+        au < doNotProcess ; exists ; 2015 ; EURASIP Journal on Advances in Signal Processing Volume 2015 ; 2015 ; >
         }
 
     }
@@ -671,9 +671,9 @@
         param[journal_issn] = 1687-4714
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2013 ; 2013 >
-        au < down ; exists ; 2014 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2014 ; 2014 >
-        au < down ; exists ; 2015 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2015 ; 2015 >
+        au < down ; exists ; 2013 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2013 ; 2013 ; >
+        au < down ; exists ; 2014 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2014 ; 2014 ; >
+        au < down ; exists ; 2015 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2015 ; 2015 ; >
         }
 
         {
@@ -681,15 +681,15 @@
         param[journal_issn] = 1687-4714
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2007 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2007 ; 2007 >
-        au < doNotProcess ; exists ; 2008 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2008 ; 2008 >
-        au < doNotProcess ; exists ; 2009 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2009 ; 2009 >
-        au < doNotProcess ; exists ; 2010 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2010 ; 2010 >
-        au < doNotProcess ; exists ; 2011 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2011 ; 2011 >
-        au < doNotProcess ; exists ; 2012 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2012 ; 2012 >
-        au < doNotProcess ; exists ; 2013 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2013 ; 2013 >
-        au < doNotProcess ; exists ; 2014 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2014 ; 2014 >
-        au < doNotProcess ; exists ; 2015 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2015 ; 2015 >
+        au < doNotProcess ; exists ; 2007 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2007 ; 2007 ; >
+        au < doNotProcess ; exists ; 2008 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2008 ; 2008 ; >
+        au < doNotProcess ; exists ; 2009 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2009 ; 2009 ; >
+        au < doNotProcess ; exists ; 2010 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2010 ; 2010 ; >
+        au < doNotProcess ; exists ; 2011 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2011 ; 2011 ; >
+        au < doNotProcess ; exists ; 2012 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2012 ; 2012 ; >
+        au < doNotProcess ; exists ; 2013 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2013 ; 2013 ; >
+        au < doNotProcess ; exists ; 2014 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2014 ; 2014 ; >
+        au < doNotProcess ; exists ; 2015 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2015 ; 2015 ; >
         }
     }
   
@@ -706,9 +706,9 @@
         param[journal_issn] = 1687-4145
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2013 ; 2013 >
-        au < down ; exists ; 2014 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2014 ; 2014 >
-        au < down ; exists ; 2015 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2015 ; 2015 >
+        au < down ; exists ; 2013 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2013 ; 2013 ; >
+        au < down ; exists ; 2014 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2014 ; 2014 ; >
+        au < down ; exists ; 2015 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2015 ; 2015 ; >
         }
 
         {
@@ -716,16 +716,16 @@
         param[journal_issn] = 1687-4145
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2006 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2006 ; 2006 >
-        au < doNotProcess ; exists ; 2007 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2007 ; 2007 >
-        au < doNotProcess ; exists ; 2008 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2008 ; 2008 >
-        au < doNotProcess ; exists ; 2009 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2009 ; 2009 >
-        au < doNotProcess ; exists ; 2010 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2010 ; 2010 >
-        au < doNotProcess ; exists ; 2011 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2011 ; 2011 >
-        au < doNotProcess ; exists ; 2012 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2012 ; 2012 >
-        au < doNotProcess ; exists ; 2013 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2013 ; 2013 >
-        au < doNotProcess ; exists ; 2014 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2014 ; 2014 >
-        au < doNotProcess ; exists ; 2015 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2015 ; 2015 >
+        au < doNotProcess ; exists ; 2006 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2006 ; 2006 ; >
+        au < doNotProcess ; exists ; 2007 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2007 ; 2007 ; >
+        au < doNotProcess ; exists ; 2008 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2008 ; 2008 ; >
+        au < doNotProcess ; exists ; 2009 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2009 ; 2009 ; >
+        au < doNotProcess ; exists ; 2010 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2010 ; 2010 ; >
+        au < doNotProcess ; exists ; 2011 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2011 ; 2011 ; >
+        au < doNotProcess ; exists ; 2012 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2012 ; 2012 ; >
+        au < doNotProcess ; exists ; 2013 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2013 ; 2013 ; >
+        au < doNotProcess ; exists ; 2014 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2014 ; 2014 ; >
+        au < doNotProcess ; exists ; 2015 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2015 ; 2015 ; >
         }
   
     }
@@ -743,9 +743,9 @@
         param[journal_issn] = 1687-3955
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; finished ; 2013 ; EURASIP Journal on Embedded Systems Volume 2013 ; 2013 >
-        au < down ; exists ; 2014 ; EURASIP Journal on Embedded Systems Volume 2014 ; 2014 >
-        au < down ; exists ; 2015 ; EURASIP Journal on Embedded Systems Volume 2015 ; 2015 >
+        au < down ; finished ; 2013 ; EURASIP Journal on Embedded Systems Volume 2013 ; 2013 ; >
+        au < down ; exists ; 2014 ; EURASIP Journal on Embedded Systems Volume 2014 ; 2014 ; >
+        au < down ; exists ; 2015 ; EURASIP Journal on Embedded Systems Volume 2015 ; 2015 ; >
         }
   
         {
@@ -753,16 +753,16 @@
         param[journal_issn] = 1687-3955
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2006 ; EURASIP Journal on Embedded Systems Volume 2006 ; 2006 >
-        au < doNotProcess ; exists ; 2007 ; EURASIP Journal on Embedded Systems Volume 2007 ; 2007 >
-        au < doNotProcess ; exists ; 2008 ; EURASIP Journal on Embedded Systems Volume 2008 ; 2008 >
-        au < doNotProcess ; exists ; 2009 ; EURASIP Journal on Embedded Systems Volume 2009 ; 2009 >
-        au < doNotProcess ; exists ; 2010 ; EURASIP Journal on Embedded Systems Volume 2010 ; 2010 >
-        au < doNotProcess ; exists ; 2011 ; EURASIP Journal on Embedded Systems Volume 2011 ; 2011 >
-        au < doNotProcess ; exists ; 2012 ; EURASIP Journal on Embedded Systems Volume 2012 ; 2012 >
-        au < doNotProcess ; doNotProcess ; 2013 ; EURASIP Journal on Embedded Systems Volume 2013 ; 2013 >
-        au < doNotProcess ; exists ; 2014 ; EURASIP Journal on Embedded Systems Volume 2014 ; 2014 >
-        au < doNotProcess ; exists ; 2015 ; EURASIP Journal on Embedded Systems Volume 2015 ; 2015 >
+        au < doNotProcess ; exists ; 2006 ; EURASIP Journal on Embedded Systems Volume 2006 ; 2006 ; >
+        au < doNotProcess ; exists ; 2007 ; EURASIP Journal on Embedded Systems Volume 2007 ; 2007 ; >
+        au < doNotProcess ; exists ; 2008 ; EURASIP Journal on Embedded Systems Volume 2008 ; 2008 ; >
+        au < doNotProcess ; exists ; 2009 ; EURASIP Journal on Embedded Systems Volume 2009 ; 2009 ; >
+        au < doNotProcess ; exists ; 2010 ; EURASIP Journal on Embedded Systems Volume 2010 ; 2010 ; >
+        au < doNotProcess ; exists ; 2011 ; EURASIP Journal on Embedded Systems Volume 2011 ; 2011 ; >
+        au < doNotProcess ; exists ; 2012 ; EURASIP Journal on Embedded Systems Volume 2012 ; 2012 ; >
+        au < doNotProcess ; doNotProcess ; 2013 ; EURASIP Journal on Embedded Systems Volume 2013 ; 2013 ; >
+        au < doNotProcess ; exists ; 2014 ; EURASIP Journal on Embedded Systems Volume 2014 ; 2014 ; >
+        au < doNotProcess ; exists ; 2015 ; EURASIP Journal on Embedded Systems Volume 2015 ; 2015 ; >
         }
 
     }
@@ -780,9 +780,9 @@
         param[journal_issn] = 1687-5176
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; EURASIP Journal on Image and Video Processing Volume 2013 ; 2013 >
-        au < down ; exists ; 2014 ; EURASIP Journal on Image and Video Processing Volume 2014 ; 2014 >
-        au < down ; exists ; 2015 ; EURASIP Journal on Image and Video Processing Volume 2015 ; 2015 >
+        au < down ; exists ; 2013 ; EURASIP Journal on Image and Video Processing Volume 2013 ; 2013 ; >
+        au < down ; exists ; 2014 ; EURASIP Journal on Image and Video Processing Volume 2014 ; 2014 ; >
+        au < down ; exists ; 2015 ; EURASIP Journal on Image and Video Processing Volume 2015 ; 2015 ; >
         }
   
         {
@@ -790,15 +790,15 @@
         param[journal_issn] = 1687-5176
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2007 ; EURASIP Journal on Image and Video Processing Volume 2007 ; 2007 >
-        au < doNotProcess ; exists ; 2008 ; EURASIP Journal on Image and Video Processing Volume 2008 ; 2008 >
-        au < doNotProcess ; exists ; 2009 ; EURASIP Journal on Image and Video Processing Volume 2009 ; 2009 >
-        au < doNotProcess ; exists ; 2010 ; EURASIP Journal on Image and Video Processing Volume 2010 ; 2010 >
-        au < doNotProcess ; exists ; 2011 ; EURASIP Journal on Image and Video Processing Volume 2011 ; 2011 >
-        au < doNotProcess ; exists ; 2012 ; EURASIP Journal on Image and Video Processing Volume 2012 ; 2012 >
-        au < doNotProcess ; exists ; 2013 ; EURASIP Journal on Image and Video Processing Volume 2013 ; 2013 >
-        au < doNotProcess ; exists ; 2014 ; EURASIP Journal on Image and Video Processing Volume 2014 ; 2014 >
-        au < doNotProcess ; exists ; 2015 ; EURASIP Journal on Image and Video Processing Volume 2015 ; 2015 >
+        au < doNotProcess ; exists ; 2007 ; EURASIP Journal on Image and Video Processing Volume 2007 ; 2007 ; >
+        au < doNotProcess ; exists ; 2008 ; EURASIP Journal on Image and Video Processing Volume 2008 ; 2008 ; >
+        au < doNotProcess ; exists ; 2009 ; EURASIP Journal on Image and Video Processing Volume 2009 ; 2009 ; >
+        au < doNotProcess ; exists ; 2010 ; EURASIP Journal on Image and Video Processing Volume 2010 ; 2010 ; >
+        au < doNotProcess ; exists ; 2011 ; EURASIP Journal on Image and Video Processing Volume 2011 ; 2011 ; >
+        au < doNotProcess ; exists ; 2012 ; EURASIP Journal on Image and Video Processing Volume 2012 ; 2012 ; >
+        au < doNotProcess ; exists ; 2013 ; EURASIP Journal on Image and Video Processing Volume 2013 ; 2013 ; >
+        au < doNotProcess ; exists ; 2014 ; EURASIP Journal on Image and Video Processing Volume 2014 ; 2014 ; >
+        au < doNotProcess ; exists ; 2015 ; EURASIP Journal on Image and Video Processing Volume 2015 ; 2015 ; >
         }
     }
   
@@ -816,15 +816,15 @@
         comment[platform] = BioMedCentralPlugin
         comment[notReady] = Crawl completed with no substance
   
-        au < doNotProcess ; exists ; 2007 ; EURASIP Journal on Information Security Volume 2007 ; 2007 >
-        au < doNotProcess ; exists ; 2008 ; EURASIP Journal on Information Security Volume 2008 ; 2008 >
-        au < doNotProcess ; exists ; 2009 ; EURASIP Journal on Information Security Volume 2009 ; 2009 >
-        au < doNotProcess ; exists ; 2010 ; EURASIP Journal on Information Security Volume 2010 ; 2010 >
-        au < doNotProcess ; exists ; 2011 ; EURASIP Journal on Information Security Volume 2011 ; 2011 >
-        au < doNotProcess ; exists ; 2012 ; EURASIP Journal on Information Security Volume 2012 ; 2012 >
-        au < doNotProcess ; exists ; 2013 ; EURASIP Journal on Information Security Volume 2013 ; 2013 >
-        au < doNotProcess ; exists ; 2014 ; EURASIP Journal on Information Security Volume 2014 ; 2014 >
-        au < doNotProcess ; exists ; 2015 ; EURASIP Journal on Information Security Volume 2015 ; 2015 >
+        au < doNotProcess ; exists ; 2007 ; EURASIP Journal on Information Security Volume 2007 ; 2007 ; >
+        au < doNotProcess ; exists ; 2008 ; EURASIP Journal on Information Security Volume 2008 ; 2008 ; >
+        au < doNotProcess ; exists ; 2009 ; EURASIP Journal on Information Security Volume 2009 ; 2009 ; >
+        au < doNotProcess ; exists ; 2010 ; EURASIP Journal on Information Security Volume 2010 ; 2010 ; >
+        au < doNotProcess ; exists ; 2011 ; EURASIP Journal on Information Security Volume 2011 ; 2011 ; >
+        au < doNotProcess ; exists ; 2012 ; EURASIP Journal on Information Security Volume 2012 ; 2012 ; >
+        au < doNotProcess ; exists ; 2013 ; EURASIP Journal on Information Security Volume 2013 ; 2013 ; >
+        au < doNotProcess ; exists ; 2014 ; EURASIP Journal on Information Security Volume 2014 ; 2014 ; >
+        au < doNotProcess ; exists ; 2015 ; EURASIP Journal on Information Security Volume 2015 ; 2015 ; >
         }
   
     }
@@ -842,9 +842,9 @@
         param[journal_issn] = 1687-1472
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; EURASIP Journal on Wireless Communications and Networking Volume 2013 ; 2013 >
-        au < down ; exists ; 2014 ; EURASIP Journal on Wireless Communications and Networking Volume 2014 ; 2014 >
-        au < down ; exists ; 2015 ; EURASIP Journal on Wireless Communications and Networking Volume 2015 ; 2015 >
+        au < down ; exists ; 2013 ; EURASIP Journal on Wireless Communications and Networking Volume 2013 ; 2013 ; >
+        au < down ; exists ; 2014 ; EURASIP Journal on Wireless Communications and Networking Volume 2014 ; 2014 ; >
+        au < down ; exists ; 2015 ; EURASIP Journal on Wireless Communications and Networking Volume 2015 ; 2015 ; >
         }
   
         {
@@ -852,12 +852,12 @@
         param[journal_issn] = 1687-1472
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2010 ; EURASIP Journal on Wireless Communications and Networking Volume 2010 ; 2010 >
-        au < doNotProcess ; exists ; 2011 ; EURASIP Journal on Wireless Communications and Networking Volume 2011 ; 2011 >
-        au < doNotProcess ; exists ; 2012 ; EURASIP Journal on Wireless Communications and Networking Volume 2012 ; 2012 >
-        au < doNotProcess ; exists ; 2013 ; EURASIP Journal on Wireless Communications and Networking Volume 2013 ; 2013 >
-        au < doNotProcess ; exists ; 2014 ; EURASIP Journal on Wireless Communications and Networking Volume 2014 ; 2014 >
-        au < doNotProcess ; exists ; 2015 ; EURASIP Journal on Wireless Communications and Networking Volume 2015 ; 2015 >
+        au < doNotProcess ; exists ; 2010 ; EURASIP Journal on Wireless Communications and Networking Volume 2010 ; 2010 ; >
+        au < doNotProcess ; exists ; 2011 ; EURASIP Journal on Wireless Communications and Networking Volume 2011 ; 2011 ; >
+        au < doNotProcess ; exists ; 2012 ; EURASIP Journal on Wireless Communications and Networking Volume 2012 ; 2012 ; >
+        au < doNotProcess ; exists ; 2013 ; EURASIP Journal on Wireless Communications and Networking Volume 2013 ; 2013 ; >
+        au < doNotProcess ; exists ; 2014 ; EURASIP Journal on Wireless Communications and Networking Volume 2014 ; 2014 ; >
+        au < doNotProcess ; exists ; 2015 ; EURASIP Journal on Wireless Communications and Networking Volume 2015 ; 2015 ; >
         }
 
     }
@@ -875,9 +875,9 @@
         param[journal_issn] = 1936-6434 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; Evolution: Education and Outreach Volume 6 ; 6 >
-        au < down ; exists ; 2014 ; Evolution: Education and Outreach Volume 7 ; 7 >
-        au < down ; exists ; 2015 ; Evolution: Education and Outreach Volume 8 ; 8 >
+        au < down ; exists ; 2013 ; Evolution: Education and Outreach Volume 6 ; 6 ; >
+        au < down ; exists ; 2014 ; Evolution: Education and Outreach Volume 7 ; 7 ; >
+        au < down ; exists ; 2015 ; Evolution: Education and Outreach Volume 8 ; 8 ; >
   
     }
   
@@ -892,10 +892,10 @@
         param[journal_issn] = 2193-0414 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; Fire Science Reviews Volume 1 ; 1 >
-        au < down ; exists ; 2013 ; Fire Science Reviews Volume 2 ; 2 >
-        au < down ; exists ; 2014 ; Fire Science Reviews Volume 3 ; 3 >
-        au < down ; exists ; 2015 ; Fire Science Reviews Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; Fire Science Reviews Volume 1 ; 1 ; >
+        au < down ; exists ; 2013 ; Fire Science Reviews Volume 2 ; 2 ; >
+        au < down ; exists ; 2014 ; Fire Science Reviews Volume 3 ; 3 ; >
+        au < down ; exists ; 2015 ; Fire Science Reviews Volume 4 ; 4 ; >
   
     }
   
@@ -912,18 +912,18 @@
         param[journal_issn] = 1687-1812 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2004 ; Fixed Point Theory and Applications Volume 2004 ; 2004 >
-        au < doNotProcess ; exists ; 2005 ; Fixed Point Theory and Applications Volume 2005 ; 2005 >
-        au < doNotProcess ; exists ; 2006 ; Fixed Point Theory and Applications Volume 2006 ; 2006 >
-        au < doNotProcess ; exists ; 2007 ; Fixed Point Theory and Applications Volume 2007 ; 2007 >
-        au < doNotProcess ; exists ; 2008 ; Fixed Point Theory and Applications Volume 2008 ; 2008 >
-        au < doNotProcess ; exists ; 2009 ; Fixed Point Theory and Applications Volume 2009 ; 2009 >
-        au < doNotProcess ; exists ; 2010 ; Fixed Point Theory and Applications Volume 2010 ; 2010 >
-        au < doNotProcess ; exists ; 2011 ; Fixed Point Theory and Applications Volume 2011 ; 2011 >
-        au < doNotProcess ; exists ; 2012 ; Fixed Point Theory and Applications Volume 2012 ; 2012 >
-        au < doNotProcess ; exists ; 2013 ; Fixed Point Theory and Applications Volume 2013 ; 2013 >
-        au < down ; exists ; 2014 ; Fixed Point Theory and Applications Volume 2014 ; 2014 >
-        au < down ; exists ; 2015 ; Fixed Point Theory and Applications Volume 2015 ; 2015 >
+        au < doNotProcess ; exists ; 2004 ; Fixed Point Theory and Applications Volume 2004 ; 2004 ; >
+        au < doNotProcess ; exists ; 2005 ; Fixed Point Theory and Applications Volume 2005 ; 2005 ; >
+        au < doNotProcess ; exists ; 2006 ; Fixed Point Theory and Applications Volume 2006 ; 2006 ; >
+        au < doNotProcess ; exists ; 2007 ; Fixed Point Theory and Applications Volume 2007 ; 2007 ; >
+        au < doNotProcess ; exists ; 2008 ; Fixed Point Theory and Applications Volume 2008 ; 2008 ; >
+        au < doNotProcess ; exists ; 2009 ; Fixed Point Theory and Applications Volume 2009 ; 2009 ; >
+        au < doNotProcess ; exists ; 2010 ; Fixed Point Theory and Applications Volume 2010 ; 2010 ; >
+        au < doNotProcess ; exists ; 2011 ; Fixed Point Theory and Applications Volume 2011 ; 2011 ; >
+        au < doNotProcess ; exists ; 2012 ; Fixed Point Theory and Applications Volume 2012 ; 2012 ; >
+        au < doNotProcess ; exists ; 2013 ; Fixed Point Theory and Applications Volume 2013 ; 2013 ; >
+        au < down ; exists ; 2014 ; Fixed Point Theory and Applications Volume 2014 ; 2014 ; >
+        au < down ; exists ; 2015 ; Fixed Point Theory and Applications Volume 2015 ; 2015 ; >
   
     }
 
@@ -938,8 +938,8 @@
         param[journal_issn] = 2197-5620 
         comment[platform] = BioMedCentralPlugin
 
-        au < down ; exists ; 2014 ; Forest Ecosystems Volume 1 ; 1 >
-        au < down ; exists ; 2015 ; Forest Ecosystems Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; Forest Ecosystems Volume 1 ; 1 ; >
+        au < down ; exists ; 2015 ; Forest Ecosystems Volume 2 ; 2 ; >
 
     }
 
@@ -954,8 +954,8 @@
         param[journal_issn] = 2196-419X 
         comment[platform] = BioMedCentralPlugin
 
-        au < down ; exists ; 2014 ; Functional Linguistics Volume 1 ; 1 >
-        au < down ; exists ; 2015 ; Functional Linguistics Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; Functional Linguistics Volume 1 ; 1 ; >
+        au < down ; exists ; 2015 ; Functional Linguistics Volume 2 ; 2 ; >
 
     }
 
@@ -970,8 +970,8 @@
         param[journal_issn] = 2196-4092 
         comment[platform] = BioMedCentralPlugin
 
-        au < down ; exists ; 2014 ; Geoscience Letters Volume 1 ; 1 >
-        au < down ; exists ; 2015 ; Geoscience Letters Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; Geoscience Letters Volume 1 ; 1 ; >
+        au < down ; exists ; 2015 ; Geoscience Letters Volume 2 ; 2 ; >
 
     }
 
@@ -986,9 +986,9 @@
         param[journal_issn] = 2195-9706 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; Geothermal Energy Volume 1 ; 1 >
-        au < finished ; finished ; 2014 ; Geothermal Energy Volume 2 ; 2 >
-        au < down ; exists ; 2015 ; Geothermal Energy Volume 3 ; 3 >
+        au < down ; exists ; 2013 ; Geothermal Energy Volume 1 ; 1 ; >
+        au < finished ; finished ; 2014 ; Geothermal Energy Volume 2 ; 2 ; >
+        au < down ; exists ; 2015 ; Geothermal Energy Volume 3 ; 3 ; >
   
     }
   
@@ -1003,9 +1003,9 @@
         param[journal_issn] = 2194-7899 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; Health & Justice Volume 1 ; 1 >
-        au < down ; exists ; 2014 ; Health & Justice Volume 2 ; 2 >
-        au < down ; exists ; 2015 ; Health & Justice Volume 3 ; 3 >
+        au < down ; exists ; 2013 ; Health & Justice Volume 1 ; 1 ; >
+        au < down ; exists ; 2014 ; Health & Justice Volume 2 ; 2 ; >
+        au < down ; exists ; 2015 ; Health & Justice Volume 3 ; 3 ; >
   
     }
   
@@ -1020,11 +1020,11 @@
         param[journal_issn] = 2191-1991 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2011 ; Health Economics Review Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2012 ; Health Economics Review Volume 2 ; 2 >
-        au < down ; exists ; 2013 ; Health Economics Review Volume 3 ; 3 >
-        au < down ; exists ; 2014 ; Health Economics Review Volume 4 ; 4 >
-        au < down ; exists ; 2015 ; Health Economics Review Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2011 ; Health Economics Review Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2012 ; Health Economics Review Volume 2 ; 2 ; >
+        au < down ; exists ; 2013 ; Health Economics Review Volume 3 ; 3 ; >
+        au < down ; exists ; 2014 ; Health Economics Review Volume 4 ; 4 ; >
+        au < down ; exists ; 2015 ; Health Economics Review Volume 5 ; 5 ; >
   
     }
   
@@ -1041,10 +1041,10 @@
         param[journal_issn] = 1877-6566
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; HUGO Journal Volume 6 ; 6 >
-        au < down ; exists ; 2013 ; HUGO Journal Volume 7 ; 7 >
-        au < down ; exists ; 2014 ; HUGO Journal Volume 8 ; 8 >
-        au < down ; exists ; 2015 ; HUGO Journal Volume 9 ; 9 >
+        au < doNotProcess ; exists ; 2012 ; HUGO Journal Volume 6 ; 6 ; >
+        au < down ; exists ; 2013 ; HUGO Journal Volume 7 ; 7 ; >
+        au < down ; exists ; 2014 ; HUGO Journal Volume 8 ; 8 ; >
+        au < down ; exists ; 2015 ; HUGO Journal Volume 9 ; 9 ; >
   
     }
   
@@ -1059,11 +1059,11 @@
         param[journal_issn] = 2192-1962 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2011 ; Human-centric Computing and Information Sciences Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2012 ; Human-centric Computing and Information Sciences Volume 2 ; 2 >
-        au < down ; exists ; 2013 ; Human-centric Computing and Information Sciences Volume 3 ; 3 >
-        au < down ; exists ; 2014 ; Human-centric Computing and Information Sciences Volume 4 ; 4 >
-        au < down ; exists ; 2015 ; Human-centric Computing and Information Sciences Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2011 ; Human-centric Computing and Information Sciences Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2012 ; Human-centric Computing and Information Sciences Volume 2 ; 2 ; >
+        au < down ; exists ; 2013 ; Human-centric Computing and Information Sciences Volume 3 ; 3 ; >
+        au < down ; exists ; 2014 ; Human-centric Computing and Information Sciences Volume 4 ; 4 ; >
+        au < down ; exists ; 2015 ; Human-centric Computing and Information Sciences Volume 5 ; 5 ; >
   
     }
   
@@ -1078,9 +1078,9 @@
         param[journal_issn] = 2193-9616 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; In Silico Pharmacology Volume 1 ; 1 >
-        au < down ; exists ; 2014 ; In Silico Pharmacology Volume 2 ; 2 >
-        au < down ; exists ; 2015 ; In Silico Pharmacology Volume 3 ; 3 >
+        au < down ; exists ; 2013 ; In Silico Pharmacology Volume 1 ; 1 ; >
+        au < down ; exists ; 2014 ; In Silico Pharmacology Volume 2 ; 2 ; >
+        au < down ; exists ; 2015 ; In Silico Pharmacology Volume 3 ; 3 ; >
   
     }
 
@@ -1095,8 +1095,8 @@
         param[journal_issn] = 2197-1714 
         comment[platform] = BioMedCentralPlugin
 
-        au < down ; exists ; 2014 ; Injury Epidemiology Volume 1 ; 1 >
-        au < down ; exists ; 2015 ; Injury Epidemiology Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; Injury Epidemiology Volume 1 ; 1 ; >
+        au < down ; exists ; 2015 ; Injury Epidemiology Volume 2 ; 2 ; >
 
     }
 
@@ -1112,10 +1112,10 @@
         param[journal_issn] = 2193-9772 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; Integrating Materials and Manufacturing Innovation Volume 1 ; 1 >
-        au < finished ; finished ; 2013 ; Integrating Materials and Manufacturing Innovation Volume 2 ; 2 >
-        au < down ; exists ; 2014 ; Integrating Materials and Manufacturing Innovation Volume 3 ; 3 >
-        au < down ; exists ; 2015 ; Integrating Materials and Manufacturing Innovation Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; Integrating Materials and Manufacturing Innovation Volume 1 ; 1 ; >
+        au < finished ; finished ; 2013 ; Integrating Materials and Manufacturing Innovation Volume 2 ; 2 ; >
+        au < down ; exists ; 2014 ; Integrating Materials and Manufacturing Innovation Volume 3 ; 3 ; >
+        au < down ; exists ; 2015 ; Integrating Materials and Manufacturing Innovation Volume 4 ; 4 ; >
   
     }
   
@@ -1130,9 +1130,9 @@
         param[journal_issn] = 2197-425X 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; Intensive Care Medicine Experimental Volume 1 ; 1 >
-        au < down ; exists ; 2014 ; Intensive Care Medicine Experimental Volume 2 ; 2 >
-        au < down ; exists ; 2015 ; Intensive Care Medicine Experimental Volume 3 ; 3 >
+        au < down ; exists ; 2013 ; Intensive Care Medicine Experimental Volume 1 ; 1 ; >
+        au < down ; exists ; 2014 ; Intensive Care Medicine Experimental Volume 2 ; 2 ; >
+        au < down ; exists ; 2015 ; Intensive Care Medicine Experimental Volume 3 ; 3 ; >
   
     }
   
@@ -1148,10 +1148,10 @@
         param[journal_issn] = 2008-6970 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; International Aquatic Research Volume 4 ; 4 >
-        au < down ; exists ; 2013 ; International Aquatic Research Volume 5 ; 5 >
-        au < down ; exists ; 2014 ; International Aquatic Research Volume 6 ; 6 >
-        au < down ; exists ; 2015 ; International Aquatic Research Volume 7 ; 7 >
+        au < doNotProcess ; exists ; 2012 ; International Aquatic Research Volume 4 ; 4 ; >
+        au < down ; exists ; 2013 ; International Aquatic Research Volume 5 ; 5 ; >
+        au < down ; exists ; 2014 ; International Aquatic Research Volume 6 ; 6 ; >
+        au < down ; exists ; 2015 ; International Aquatic Research Volume 7 ; 7 ; >
   
     }
   
@@ -1167,10 +1167,10 @@
         param[journal_issn] = 2008-6695 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; International Journal of Advanced Structural Engineering Volume 4 ; 4 >
-        au < down ; exists ; 2013 ; International Journal of Advanced Structural Engineering Volume 5 ; 5 >
-        au < down ; exists ; 2014 ; International Journal of Advanced Structural Engineering Volume 6 ; 6 >
-        au < doNotProcess ; exists ; 2015 ; International Journal of Advanced Structural Engineering Volume 7 ; 7 >
+        au < doNotProcess ; exists ; 2012 ; International Journal of Advanced Structural Engineering Volume 4 ; 4 ; >
+        au < down ; exists ; 2013 ; International Journal of Advanced Structural Engineering Volume 5 ; 5 ; >
+        au < down ; exists ; 2014 ; International Journal of Advanced Structural Engineering Volume 6 ; 6 ; >
+        au < doNotProcess ; exists ; 2015 ; International Journal of Advanced Structural Engineering Volume 7 ; 7 ; >
   
     }
   
@@ -1185,9 +1185,9 @@
         param[journal_issn] = 2194-7511 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2013 ; International Journal of Bipolar Disorders Volume 1 ; 1 >
-        au < down ; exists ; 2014 ; International Journal of Bipolar Disorders Volume 2 ; 2 >
-        au < down ; exists ; 2015 ; International Journal of Bipolar Disorders Volume 3 ; 3 >
+        au < doNotProcess ; exists ; 2013 ; International Journal of Bipolar Disorders Volume 1 ; 1 ; >
+        au < down ; exists ; 2014 ; International Journal of Bipolar Disorders Volume 2 ; 2 ; >
+        au < down ; exists ; 2015 ; International Journal of Bipolar Disorders Volume 3 ; 3 ; >
   
     }
   
@@ -1203,11 +1203,11 @@
         param[journal_issn] = 1865-1372
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2011 ; International Journal of Emergency Medicine Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2012 ; International Journal of Emergency Medicine Volume 5 ; 5 >
-        au < down ; exists ; 2013 ; International Journal of Emergency Medicine Volume 6 ; 6 >
-        au < down ; exists ; 2014 ; International Journal of Emergency Medicine Volume 7 ; 7 >
-        au < down ; exists ; 2015 ; International Journal of Emergency Medicine Volume 8 ; 8 >
+        au < doNotProcess ; exists ; 2011 ; International Journal of Emergency Medicine Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2012 ; International Journal of Emergency Medicine Volume 5 ; 5 ; >
+        au < down ; exists ; 2013 ; International Journal of Emergency Medicine Volume 6 ; 6 ; >
+        au < down ; exists ; 2014 ; International Journal of Emergency Medicine Volume 7 ; 7 ; >
+        au < down ; exists ; 2015 ; International Journal of Emergency Medicine Volume 8 ; 8 ; >
   
     }
   
@@ -1223,10 +1223,10 @@
         param[journal_issn] = 2251-6832 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; International Journal of Energy and Environmental Engineering Volume 3 ; 3 >
-        au < finished ; finished ; 2013 ; International Journal of Energy and Environmental Engineering Volume 4 ; 4 >
-        au < down ; exists ; 2014 ; International Journal of Energy and Environmental Engineering Volume 5 ; 5 >
-        au < doNotProcess ; exists ; 2015 ; International Journal of Energy and Environmental Engineering Volume 6 ; 6 >
+        au < doNotProcess ; exists ; 2012 ; International Journal of Energy and Environmental Engineering Volume 3 ; 3 ; >
+        au < finished ; finished ; 2013 ; International Journal of Energy and Environmental Engineering Volume 4 ; 4 ; >
+        au < down ; exists ; 2014 ; International Journal of Energy and Environmental Engineering Volume 5 ; 5 ; >
+        au < doNotProcess ; exists ; 2015 ; International Journal of Energy and Environmental Engineering Volume 6 ; 6 ; >
   
     }
   
@@ -1241,8 +1241,8 @@
         param[journal_issn] = 2196-2804 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2014 ; International Journal of Food Contamination Volume 1 ; 1 >
-        au < down ; exists ; 2015 ; International Journal of Food Contamination Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; International Journal of Food Contamination Volume 1 ; 1 ; >
+        au < down ; exists ; 2015 ; International Journal of Food Contamination Volume 2 ; 2 ; >
   
     }
   
@@ -1258,10 +1258,10 @@
         param[journal_issn] = 2228-5547 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; International Journal of Industrial Chemistry Volume 3 ; 3 >
-        au < down ; exists ; 2013 ; International Journal of Industrial Chemistry Volume 4 ; 4 >
-        au < down ; exists ; 2014 ; International Journal of Industrial Chemistry Volume 5 ; 5 >
-        au < down ; exists ; 2015 ; International Journal of Industrial Chemistry Volume 6 ; 6 >
+        au < doNotProcess ; exists ; 2012 ; International Journal of Industrial Chemistry Volume 3 ; 3 ; >
+        au < down ; exists ; 2013 ; International Journal of Industrial Chemistry Volume 4 ; 4 ; >
+        au < down ; exists ; 2014 ; International Journal of Industrial Chemistry Volume 5 ; 5 ; >
+        au < down ; exists ; 2015 ; International Journal of Industrial Chemistry Volume 6 ; 6 ; >
   
     }
   
@@ -1277,8 +1277,8 @@
         param[journal_issn] = 2251-7715 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; International Journal of Recycling of Organic Waste in Agriculture Volume 1 ; 1 >
-        au < down ; exists ; 2013 ; International Journal of Recycling of Organic Waste in Agriculture Volume 2 ; 2 >
+        au < doNotProcess ; exists ; 2012 ; International Journal of Recycling of Organic Waste in Agriculture Volume 1 ; 1 ; >
+        au < down ; exists ; 2013 ; International Journal of Recycling of Organic Waste in Agriculture Volume 2 ; 2 ; >
   
     }
   
@@ -1293,8 +1293,8 @@
         param[journal_issn] = 2196-7822 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2014 ; International Journal of STEM Education Volume 1 ; 1 >
-        au < down ; exists ; 2015 ; International Journal of STEM Education Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; International Journal of STEM Education Volume 1 ; 1 ; >
+        au < down ; exists ; 2015 ; International Journal of STEM Education Volume 2 ; 2 ; >
 
     }
 
@@ -1310,10 +1310,10 @@
         param[journal_issn] = 2228-5326 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; International Nano Letters Volume 2 ; 2 >
-        au < down ; exists ; 2013 ; International Nano Letters Volume 3 ; 3 >
-        au < down ; exists ; 2014 ; International Nano Letters Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2015 ; International Nano Letters Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2012 ; International Nano Letters Volume 2 ; 2 ; >
+        au < down ; exists ; 2013 ; International Nano Letters Volume 3 ; 3 ; >
+        au < down ; exists ; 2014 ; International Nano Letters Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2015 ; International Nano Letters Volume 5 ; 5 ; >
   
     }
   
@@ -1328,10 +1328,10 @@
         param[journal_issn] = 2193-9012 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; IZA Journal of European Labor Studies Volume 1 ; 1 >
-        au < down ; exists ; 2013 ; IZA Journal of European Labor Studies Volume 2 ; 2 >
-        au < down ; exists ; 2014 ; IZA Journal of European Labor Studies Volume 3 ; 3 >
-        au < down ; exists ; 2015 ; IZA Journal of European Labor Studies Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; IZA Journal of European Labor Studies Volume 1 ; 1 ; >
+        au < down ; exists ; 2013 ; IZA Journal of European Labor Studies Volume 2 ; 2 ; >
+        au < down ; exists ; 2014 ; IZA Journal of European Labor Studies Volume 3 ; 3 ; >
+        au < down ; exists ; 2015 ; IZA Journal of European Labor Studies Volume 4 ; 4 ; >
   
     }
   
@@ -1346,10 +1346,10 @@
         param[journal_issn] = 2193-9020 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; IZA Journal of Labor & Development Volume 1 ; 1 >
-        au < down ; exists ; 2013 ; IZA Journal of Labor & Development Volume 2 ; 2 >
-        au < down ; exists ; 2014 ; IZA Journal of Labor & Development Volume 3 ; 3 >
-        au < down ; exists ; 2015 ; IZA Journal of Labor & Development Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; IZA Journal of Labor & Development Volume 1 ; 1 ; >
+        au < down ; exists ; 2013 ; IZA Journal of Labor & Development Volume 2 ; 2 ; >
+        au < down ; exists ; 2014 ; IZA Journal of Labor & Development Volume 3 ; 3 ; >
+        au < down ; exists ; 2015 ; IZA Journal of Labor & Development Volume 4 ; 4 ; >
   
     }
   
@@ -1364,10 +1364,10 @@
         param[journal_issn] = 2193-8997 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; IZA Journal of Labor Economics Volume 1 ; 1 >
-        au < down ; exists ; 2013 ; IZA Journal of Labor Economics Volume 2 ; 2 >
-        au < down ; exists ; 2014 ; IZA Journal of Labor Economics Volume 3 ; 3 >
-        au < down ; exists ; 2015 ; IZA Journal of Labor Economics Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; IZA Journal of Labor Economics Volume 1 ; 1 ; >
+        au < down ; exists ; 2013 ; IZA Journal of Labor Economics Volume 2 ; 2 ; >
+        au < down ; exists ; 2014 ; IZA Journal of Labor Economics Volume 3 ; 3 ; >
+        au < down ; exists ; 2015 ; IZA Journal of Labor Economics Volume 4 ; 4 ; >
   
     }
   
@@ -1382,10 +1382,10 @@
         param[journal_issn] = 2193-9004 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; IZA Journal of Labor Policy Volume 1 ; 1 >
-        au < down ; exists ; 2013 ; IZA Journal of Labor Policy Volume 2 ; 2 >
-        au < down ; exists ; 2014 ; IZA Journal of Labor Policy Volume 3 ; 3 >
-        au < down ; exists ; 2015 ; IZA Journal of Labor Policy Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; IZA Journal of Labor Policy Volume 1 ; 1 ; >
+        au < down ; exists ; 2013 ; IZA Journal of Labor Policy Volume 2 ; 2 ; >
+        au < down ; exists ; 2014 ; IZA Journal of Labor Policy Volume 3 ; 3 ; >
+        au < down ; exists ; 2015 ; IZA Journal of Labor Policy Volume 4 ; 4 ; >
   
     }
   
@@ -1400,10 +1400,10 @@
         param[journal_issn] = 2193-9039 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; IZA Journal of Migration Volume 1 ; 1 >
-        au < down ; exists ; 2013 ; IZA Journal of Migration Volume 2 ; 2 >
-        au < down ; exists ; 2014 ; IZA Journal of Migration Volume 3 ; 3 >
-        au < down ; exists ; 2015 ; IZA Journal of Migration Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; IZA Journal of Migration Volume 1 ; 1 ; >
+        au < down ; exists ; 2013 ; IZA Journal of Migration Volume 2 ; 2 ; >
+        au < down ; exists ; 2014 ; IZA Journal of Migration Volume 3 ; 3 ; >
+        au < down ; exists ; 2015 ; IZA Journal of Migration Volume 4 ; 4 ; >
   
     }
   
@@ -1418,9 +1418,9 @@
         param[journal_issn] = 2093-3371 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; Journal of Analytical Science and Technology Volume 4 ; 4 >
-        au < down ; exists ; 2014 ; Journal of Analytical Science and Technology Volume 5 ; 5 >
-        au < down ; exists ; 2015 ; Journal of Analytical Science and Technology Volume 6 ; 6 >
+        au < down ; exists ; 2013 ; Journal of Analytical Science and Technology Volume 4 ; 4 ; >
+        au < down ; exists ; 2014 ; Journal of Analytical Science and Technology Volume 5 ; 5 ; >
+        au < down ; exists ; 2015 ; Journal of Analytical Science and Technology Volume 6 ; 6 ; >
   
     }
   
@@ -1435,10 +1435,10 @@
         param[journal_issn] = 2191-5040 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; Journal of Applied Volcanology Volume 1 ; 1 >
-        au < down ; exists ; 2013 ; Journal of Applied Volcanology Volume 2 ; 2 >
-        au < down ; exists ; 2014 ; Journal of Applied Volcanology Volume 3 ; 3 >
-        au < down ; exists ; 2015 ; Journal of Applied Volcanology Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; Journal of Applied Volcanology Volume 1 ; 1 ; >
+        au < down ; exists ; 2013 ; Journal of Applied Volcanology Volume 2 ; 2 ; >
+        au < down ; exists ; 2014 ; Journal of Applied Volcanology Volume 3 ; 3 ; >
+        au < down ; exists ; 2015 ; Journal of Applied Volcanology Volume 4 ; 4 ; >
   
     }
   
@@ -1453,8 +1453,8 @@
         param[journal_issn] = 2196-1115 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2014 ; Journal Of Big Data Volume 1 ; 1 >
-        au < down ; exists ; 2015 ; Journal Of Big Data Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; Journal Of Big Data Volume 1 ; 1 ; >
+        au < down ; exists ; 2015 ; Journal Of Big Data Volume 2 ; 2 ; >
   
     }
   
@@ -1469,10 +1469,10 @@
         param[journal_issn] = 2192-113X 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 1 ; 1 >
-        au < down ; exists ; 2013 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 2 ; 2 >
-        au < down ; exists ; 2014 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 3 ; 3 >
-        au < down ; exists ; 2015 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 1 ; 1 ; >
+        au < down ; exists ; 2013 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 2 ; 2 ; >
+        au < down ; exists ; 2014 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 3 ; 3 ; >
+        au < down ; exists ; 2015 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 4 ; 4 ; >
   
     }
   
@@ -1487,8 +1487,8 @@
         param[journal_issn] = 2194-3990 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2014 ; Journal of Computational Surgery Volume 1 ; 1 >
-        au < down ; exists ; 2015 ; Journal of Computational Surgery Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; Journal of Computational Surgery Volume 1 ; 1 ; >
+        au < down ; exists ; 2015 ; Journal of Computational Surgery Volume 2 ; 2 ; >
   
     }
   
@@ -1503,10 +1503,10 @@
         param[journal_issn] = 2193-2409 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; Journal of Economic Structures Volume 1 ; 1 >
-        au < down ; exists ; 2013 ; Journal of Economic Structures Volume 2 ; 2 >
-        au < down ; exists ; 2014 ; Journal of Economic Structures Volume 3 ; 3 >
-        au < down ; exists ; 2015 ; Journal of Economic Structures Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; Journal of Economic Structures Volume 1 ; 1 ; >
+        au < down ; exists ; 2013 ; Journal of Economic Structures Volume 2 ; 2 ; >
+        au < down ; exists ; 2014 ; Journal of Economic Structures Volume 3 ; 3 ; >
+        au < down ; exists ; 2015 ; Journal of Economic Structures Volume 4 ; 4 ; >
   
     }
   
@@ -1521,8 +1521,8 @@
         param[journal_issn] = 2197-1153 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2014 ; Journal of Experimental Orthopaedics Volume 1 ; 1 >
-        au < down ; exists ; 2015 ; Journal of Experimental Orthopaedics Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; Journal of Experimental Orthopaedics Volume 1 ; 1 ; >
+        au < down ; exists ; 2015 ; Journal of Experimental Orthopaedics Volume 2 ; 2 ; >
   
     }
 
@@ -1538,9 +1538,9 @@
         param[journal_issn] = 1129-2369
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2013 ; The Journal of Headache and Pain Volume 14 ; 14 >
-        au < down ; exists ; 2014 ; The Journal of Headache and Pain Volume 15 ; 15 >
-        au < doNotProcess ; exists ; 2015 ; The Journal of Headache and Pain Volume 16 ; 16 >
+        au < down ; exists ; 2013 ; The Journal of Headache and Pain Volume 14 ; 14 ; >
+        au < down ; exists ; 2014 ; The Journal of Headache and Pain Volume 15 ; 15 ; >
+        au < doNotProcess ; exists ; 2015 ; The Journal of Headache and Pain Volume 16 ; 16 ; >
   
     }
   
@@ -1555,10 +1555,10 @@
         param[journal_issn] = 2251-712X 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; Journal of Industrial Engineering International Volume 8 ; 8 >
-        au < down ; exists ; 2013 ; Journal of Industrial Engineering International Volume 9 ; 9 >
-        au < down ; exists ; 2014 ; Journal of Industrial Engineering International Volume 10 ; 10 >
-        au < doNotProcess ; exists ; 2015 ; Journal of Industrial Engineering International Volume 11 ; 11 >
+        au < doNotProcess ; exists ; 2012 ; Journal of Industrial Engineering International Volume 8 ; 8 ; >
+        au < down ; exists ; 2013 ; Journal of Industrial Engineering International Volume 9 ; 9 ; >
+        au < down ; exists ; 2014 ; Journal of Industrial Engineering International Volume 10 ; 10 ; >
+        au < doNotProcess ; exists ; 2015 ; Journal of Industrial Engineering International Volume 11 ; 11 ; >
   
     }
   
@@ -1575,17 +1575,17 @@
         param[journal_issn] = 1029-242X 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2005 ; Journal of Inequalities and Applications Volume 2005 ; 2005 >
-        au < doNotProcess ; exists ; 2006 ; Journal of Inequalities and Applications Volume 2006 ; 2006 >
-        au < doNotProcess ; exists ; 2007 ; Journal of Inequalities and Applications Volume 2007 ; 2007 >
-        au < doNotProcess ; exists ; 2008 ; Journal of Inequalities and Applications Volume 2008 ; 2008 >
-        au < doNotProcess ; exists ; 2009 ; Journal of Inequalities and Applications Volume 2009 ; 2009 >
-        au < doNotProcess ; exists ; 2010 ; Journal of Inequalities and Applications Volume 2010 ; 2010 >
-        au < doNotProcess ; exists ; 2011 ; Journal of Inequalities and Applications Volume 2011 ; 2011 >
-        au < doNotProcess ; exists ; 2012 ; Journal of Inequalities and Applications Volume 2012 ; 2012 >
-        au < doNotProcess ; exists ; 2013 ; Journal of Inequalities and Applications Volume 2013 ; 2013 >
-        au < down ; exists ; 2014 ; Journal of Inequalities and Applications Volume 2014 ; 2014 >
-        au < doNotProcess ; exists ; 2015 ; Journal of Inequalities and Applications Volume 2015 ; 2015 >
+        au < doNotProcess ; exists ; 2005 ; Journal of Inequalities and Applications Volume 2005 ; 2005 ; >
+        au < doNotProcess ; exists ; 2006 ; Journal of Inequalities and Applications Volume 2006 ; 2006 ; >
+        au < doNotProcess ; exists ; 2007 ; Journal of Inequalities and Applications Volume 2007 ; 2007 ; >
+        au < doNotProcess ; exists ; 2008 ; Journal of Inequalities and Applications Volume 2008 ; 2008 ; >
+        au < doNotProcess ; exists ; 2009 ; Journal of Inequalities and Applications Volume 2009 ; 2009 ; >
+        au < doNotProcess ; exists ; 2010 ; Journal of Inequalities and Applications Volume 2010 ; 2010 ; >
+        au < doNotProcess ; exists ; 2011 ; Journal of Inequalities and Applications Volume 2011 ; 2011 ; >
+        au < doNotProcess ; exists ; 2012 ; Journal of Inequalities and Applications Volume 2012 ; 2012 ; >
+        au < doNotProcess ; exists ; 2013 ; Journal of Inequalities and Applications Volume 2013 ; 2013 ; >
+        au < down ; exists ; 2014 ; Journal of Inequalities and Applications Volume 2014 ; 2014 ; >
+        au < doNotProcess ; exists ; 2015 ; Journal of Inequalities and Applications Volume 2015 ; 2015 ; >
   
     }
   
@@ -1600,10 +1600,10 @@
         param[journal_issn] = 2192-5372 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; Journal of Innovation and Entrepreneurship Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2013 ; Journal of Innovation and Entrepreneurship Volume 2 ; 2 >
-        au < down ; exists ; 2014 ; Journal of Innovation and Entrepreneurship Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2015 ; Journal of Innovation and Entrepreneurship Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; Journal of Innovation and Entrepreneurship Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2013 ; Journal of Innovation and Entrepreneurship Volume 2 ; 2 ; >
+        au < down ; exists ; 2014 ; Journal of Innovation and Entrepreneurship Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2015 ; Journal of Innovation and Entrepreneurship Volume 4 ; 4 ; >
   
     }
   
@@ -1618,9 +1618,9 @@
         param[journal_issn] = 2194-0827 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2013 ; Journal of Interaction Science Volume 1 ; 1 >
-        au < down ; exists ; 2014 ; Journal of Interaction Science Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2015 ; Journal of Interaction Science Volume 3 ; 3 >
+        au < doNotProcess ; exists ; 2013 ; Journal of Interaction Science Volume 1 ; 1 ; >
+        au < down ; exists ; 2014 ; Journal of Interaction Science Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2015 ; Journal of Interaction Science Volume 3 ; 3 ; >
   
     }
   
@@ -1637,9 +1637,9 @@
         param[journal_issn] = 1869-0238 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2013 ; Journal of Internet Services and Applications Volume 4 ; 4 >
-        au < down ; exists ; 2014 ; Journal of Internet Services and Applications Volume 5 ; 5 >
-        au < down ; exists ; 2015 ; Journal of Internet Services and Applications Volume 6 ; 6 >
+        au < doNotProcess ; exists ; 2013 ; Journal of Internet Services and Applications Volume 4 ; 4 ; >
+        au < down ; exists ; 2014 ; Journal of Internet Services and Applications Volume 5 ; 5 ; >
+        au < down ; exists ; 2015 ; Journal of Internet Services and Applications Volume 6 ; 6 ; >
   
     }
   
@@ -1654,11 +1654,11 @@
         param[journal_issn] = 2190-8567
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2011 ; Journal of Mathematical Neuroscience Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2012 ; Journal of Mathematical Neuroscience Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2013 ; Journal of Mathematical Neuroscience Volume 3 ; 3 >
-        au < down ; exists ; 2014 ; Journal of Mathematical Neuroscience Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2015 ; Journal of Mathematical Neuroscience Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2011 ; Journal of Mathematical Neuroscience Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2012 ; Journal of Mathematical Neuroscience Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2013 ; Journal of Mathematical Neuroscience Volume 3 ; 3 ; >
+        au < down ; exists ; 2014 ; Journal of Mathematical Neuroscience Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2015 ; Journal of Mathematical Neuroscience Volume 5 ; 5 ; >
   
     }
   
@@ -1673,11 +1673,11 @@
         param[journal_issn] = 2190-5983 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2011 ; Journal of Mathematics in Industry Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2012 ; Journal of Mathematics in Industry Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2013 ; Journal of Mathematics in Industry Volume 3 ; 3 >
-        au < down ; exists ; 2014 ; Journal of Mathematics in Industry Volume 4 ; 4 >
-        au < down ; exists ; 2015 ; Journal of Mathematics in Industry Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2011 ; Journal of Mathematics in Industry Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2012 ; Journal of Mathematics in Industry Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2013 ; Journal of Mathematics in Industry Volume 3 ; 3 ; >
+        au < down ; exists ; 2014 ; Journal of Mathematics in Industry Volume 4 ; 4 ; >
+        au < down ; exists ; 2015 ; Journal of Mathematics in Industry Volume 5 ; 5 ; >
   
     }
   
@@ -1692,7 +1692,7 @@
         param[journal_issn] = 2193-8865 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012-2013 ; Journal of Nanostructure in Chemistry Volume 3 ; 3 >
+        au < doNotProcess ; exists ; 2012-2013 ; Journal of Nanostructure in Chemistry Volume 3 ; 3 ; >
   
     }
   
@@ -1707,9 +1707,9 @@
         param[journal_issn] = 1869-5760 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2013 ; Journal of Ophthalmic Inflammation and Infection Volume 3 ; 3 >
-        au < down ; exists ; 2014 ; Journal of Ophthalmic Inflammation and Infection Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2015 ; Journal of Ophthalmic Inflammation and Infection Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2013 ; Journal of Ophthalmic Inflammation and Infection Volume 3 ; 3 ; >
+        au < down ; exists ; 2014 ; Journal of Ophthalmic Inflammation and Infection Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2015 ; Journal of Ophthalmic Inflammation and Infection Volume 5 ; 5 ; >
   
     }
   
@@ -1724,11 +1724,11 @@
         param[journal_issn] = 2210-4690 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2011 ; Journal of Remanufacturing Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2012 ; Journal of Remanufacturing Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2013 ; Journal of Remanufacturing Volume 3 ; 3 >
-        au < down ; exists ; 2014 ; Journal of Remanufacturing Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2015 ; Journal of Remanufacturing Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2011 ; Journal of Remanufacturing Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2012 ; Journal of Remanufacturing Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2013 ; Journal of Remanufacturing Volume 3 ; 3 ; >
+        au < down ; exists ; 2014 ; Journal of Remanufacturing Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2015 ; Journal of Remanufacturing Volume 5 ; 5 ; >
   
     }
   
@@ -1743,9 +1743,9 @@
         param[journal_issn] = 2195-1721 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2013 ; Journal of Software Engineering Research and Development Volume 1 ; 1 >
-        au < down ; exists ; 2014 ; Journal of Software Engineering Research and Development Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2015 ; Journal of Software Engineering Research and Development Volume 3 ; 3 >
+        au < doNotProcess ; exists ; 2013 ; Journal of Software Engineering Research and Development Volume 1 ; 1 ; >
+        au < down ; exists ; 2014 ; Journal of Software Engineering Research and Development Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2015 ; Journal of Software Engineering Research and Development Volume 3 ; 3 ; >
   
     }
   
@@ -1760,8 +1760,8 @@
         param[journal_issn] = 2196-1107
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2014 ; Journal of Solid State Lighting Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2015 ; Journal of Solid State Lighting Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; Journal of Solid State Lighting Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2015 ; Journal of Solid State Lighting Volume 2 ; 2 ; >
   
     }
 
@@ -1776,8 +1776,8 @@
         param[journal_issn] = 2195-5832 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2014 ; Journal of Statistical Distributions and Applications Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2015 ; Journal of Statistical Distributions and Applications Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; Journal of Statistical Distributions and Applications Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2015 ; Journal of Statistical Distributions and Applications Volume 2 ; 2 ; >
   
     }
   
@@ -1792,10 +1792,10 @@
         param[journal_issn] = 2251-7235 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; Journal of Theoretical and Applied Physics Volume 6 ; 6 >
-        au < doNotProcess ; exists ; 2013 ; Journal of Theoretical and Applied Physics Volume 7 ; 7 >
-        au < down ; exists ; 2014 ; Journal of Theoretical and Applied Physics Volume 8 ; 8 >
-        au < doNotProcess ; exists ; 2015 ; Journal of Theoretical and Applied Physics Volume 9 ; 9 >
+        au < doNotProcess ; exists ; 2012 ; Journal of Theoretical and Applied Physics Volume 6 ; 6 ; >
+        au < doNotProcess ; exists ; 2013 ; Journal of Theoretical and Applied Physics Volume 7 ; 7 ; >
+        au < down ; exists ; 2014 ; Journal of Theoretical and Applied Physics Volume 8 ; 8 ; >
+        au < doNotProcess ; exists ; 2015 ; Journal of Theoretical and Applied Physics Volume 9 ; 9 ; >
   
     }
   
@@ -1810,8 +1810,8 @@
         param[journal_issn] = 2196-064X 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2014 ; Journal of Trust Management Volume 1 ; 1 >
-        au < down ; exists ; 2015 ; Journal of Trust Management Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; Journal of Trust Management Volume 1 ; 1 ; >
+        au < down ; exists ; 2015 ; Journal of Trust Management Volume 2 ; 2 ; >
   
     }
   
@@ -1826,9 +1826,9 @@
         param[journal_issn] = 2195-5468 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2013 ; Journal of Uncertainty Analysis and Applications Volume 1 ; 1 >
-        au < down ; exists ; 2014 ; Journal of Uncertainty Analysis and Applications Volume 2 ; 2 >
-        au < down ; exists ; 2015 ; Journal of Uncertainty Analysis and Applications Volume 3 ; 3 >
+        au < doNotProcess ; exists ; 2013 ; Journal of Uncertainty Analysis and Applications Volume 1 ; 1 ; >
+        au < down ; exists ; 2014 ; Journal of Uncertainty Analysis and Applications Volume 2 ; 2 ; >
+        au < down ; exists ; 2015 ; Journal of Uncertainty Analysis and Applications Volume 3 ; 3 ; >
   
     }
   
@@ -1843,11 +1843,11 @@
         param[journal_issn] = 2229-0443 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2011 ; Language Testing in Asia Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2012 ; Language Testing in Asia Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2013 ; Language Testing in Asia Volume 3 ; 3 >
-        au < down ; exists ; 2014 ; Language Testing in Asia Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2015 ; Language Testing in Asia Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2011 ; Language Testing in Asia Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2012 ; Language Testing in Asia Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2013 ; Language Testing in Asia Volume 3 ; 3 ; >
+        au < down ; exists ; 2014 ; Language Testing in Asia Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2015 ; Language Testing in Asia Volume 5 ; 5 ; >
   
     }
   
@@ -1862,9 +1862,9 @@
         param[journal_issn] = 2195-7819 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2013 ; Life Sciences, Society and Policy Volume 9 ; 9 >
-        au < doNotProcess ; exists ; 2014 ; Life Sciences, Society and Policy Volume 10 ; 10 >
-        au < doNotProcess ; exists ; 2015 ; Life Sciences, Society and Policy Volume 11 ; 11 >
+        au < doNotProcess ; exists ; 2013 ; Life Sciences, Society and Policy Volume 9 ; 9 ; >
+        au < doNotProcess ; exists ; 2014 ; Life Sciences, Society and Policy Volume 10 ; 10 ; >
+        au < doNotProcess ; exists ; 2015 ; Life Sciences, Society and Policy Volume 11 ; 11 ; >
   
     }
 
@@ -1879,10 +1879,10 @@
         param[journal_issn] = 2212-9790 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; Maritime Studies Volume 11 ; 11 >
-        au < doNotProcess ; exists ; 2013 ; Maritime Studies Volume 12 ; 12 >
-        au < down ; exists ; 2014 ; Maritime Studies Volume 13 ; 13 >
-        au < doNotProcess ; exists ; 2015 ; Maritime Studies Volume 14 ; 14 >
+        au < doNotProcess ; exists ; 2012 ; Maritime Studies Volume 11 ; 11 ; >
+        au < doNotProcess ; exists ; 2013 ; Maritime Studies Volume 12 ; 12 ; >
+        au < down ; exists ; 2014 ; Maritime Studies Volume 13 ; 13 ; >
+        au < doNotProcess ; exists ; 2015 ; Maritime Studies Volume 14 ; 14 ; >
   
     }
   
@@ -1897,8 +1897,8 @@
         param[journal_issn] = 2251-7456 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; Mathematical Sciences Volume 6 ; 6 >
-        au < doNotProcess ; exists ; 2013 ; Mathematical Sciences Volume 7 ; 7 >
+        au < doNotProcess ; exists ; 2012 ; Mathematical Sciences Volume 6 ; 6 ; >
+        au < doNotProcess ; exists ; 2013 ; Mathematical Sciences Volume 7 ; 7 ; >
   
     }
   
@@ -1913,9 +1913,9 @@
         param[journal_issn] = 2213-9621 
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2013 ; Micro and Nano Systems Letters Volume 1 ; 1 >
-        au < down ; exists ; 2014 ; Micro and Nano Systems Letters Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2015 ; Micro and Nano Systems Letters Volume 3 ; 3 >
+        au < doNotProcess ; exists ; 2013 ; Micro and Nano Systems Letters Volume 1 ; 1 ; >
+        au < down ; exists ; 2014 ; Micro and Nano Systems Letters Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2015 ; Micro and Nano Systems Letters Volume 3 ; 3 ; >
   
     }
   
@@ -1930,11 +1930,11 @@
         param[journal_issn] = 2191-5059
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2011 ; Multilingual Education Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2012 ; Multilingual Education Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2013 ; Multilingual Education Volume 3 ; 3 >
-        au < down ; exists ; 2014 ; Multilingual Education Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2015 ; Multilingual Education Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2011 ; Multilingual Education Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2012 ; Multilingual Education Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2013 ; Multilingual Education Volume 3 ; 3 ; >
+        au < down ; exists ; 2014 ; Multilingual Education Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2015 ; Multilingual Education Volume 5 ; 5 ; >
   
     }
 
@@ -1950,9 +1950,9 @@
         param[journal_issn] = 2196-5404
         comment[platform] = BioMedCentralPlugin
 
-        au < doNotProcess ; exists ; 2014 ; Nano Convergence Volume 1 ; 1 >
+        au < doNotProcess ; exists ; 2014 ; Nano Convergence Volume 1 ; 1 ; >
         #PD-1535 xml page processing error
-        au < down ; exists ; 2015 ; Nano Convergence Volume 2 ; 2 >
+        au < down ; exists ; 2015 ; Nano Convergence Volume 2 ; 2 ; >
 
     }
 
@@ -1968,16 +1968,16 @@
         param[journal_issn] = 1931-7573
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2006 ; Nanoscale Research Letters Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2007 ; Nanoscale Research Letters Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2008 ; Nanoscale Research Letters Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2009 ; Nanoscale Research Letters Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2010 ; Nanoscale Research Letters Volume 5 ; 5 >
-        au < doNotProcess ; exists ; 2011 ; Nanoscale Research Letters Volume 6 ; 6 >
-        au < doNotProcess ; exists ; 2012 ; Nanoscale Research Letters Volume 7 ; 7 >
-        au < doNotProcess ; exists ; 2013 ; Nanoscale Research Letters Volume 8 ; 8 >
-        au < down ; exists ; 2014 ; Nanoscale Research Letters Volume 9 ; 9 >
-        au < doNotProcess ; exists ; 2015 ; Nanoscale Research Letters Volume 10 ; 10 >
+        au < doNotProcess ; exists ; 2006 ; Nanoscale Research Letters Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2007 ; Nanoscale Research Letters Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2008 ; Nanoscale Research Letters Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2009 ; Nanoscale Research Letters Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2010 ; Nanoscale Research Letters Volume 5 ; 5 ; >
+        au < doNotProcess ; exists ; 2011 ; Nanoscale Research Letters Volume 6 ; 6 ; >
+        au < doNotProcess ; exists ; 2012 ; Nanoscale Research Letters Volume 7 ; 7 ; >
+        au < doNotProcess ; exists ; 2013 ; Nanoscale Research Letters Volume 8 ; 8 ; >
+        au < down ; exists ; 2014 ; Nanoscale Research Letters Volume 9 ; 9 ; >
+        au < doNotProcess ; exists ; 2015 ; Nanoscale Research Letters Volume 10 ; 10 ; >
   
     }
   
@@ -1992,9 +1992,9 @@
         param[journal_issn] = 1179-5395
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2013 ; New Zealand Journal of Forestry Science Volume 43 ; 43 >
-        au < down ; exists ; 2014 ; New Zealand Journal of Forestry Science Volume 44 ; 44 >
-        au < down ; exists ; 2015 ; New Zealand Journal of Forestry Science Volume 45 ; 45 >
+        au < doNotProcess ; exists ; 2013 ; New Zealand Journal of Forestry Science Volume 43 ; 43 ; >
+        au < down ; exists ; 2014 ; New Zealand Journal of Forestry Science Volume 44 ; 44 ; >
+        au < down ; exists ; 2015 ; New Zealand Journal of Forestry Science Volume 45 ; 45 ; >
   
     }
   
@@ -2009,10 +2009,10 @@
         param[journal_issn] = 2192-2853
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; Optical Nanoscopy Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2013 ; Optical Nanoscopy Volume 2 ; 2 >
-        au < down ; exists ; 2014 ; Optical Nanoscopy Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2015 ; Optical Nanoscopy Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; Optical Nanoscopy Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2013 ; Optical Nanoscopy Volume 2 ; 2 ; >
+        au < down ; exists ; 2014 ; Optical Nanoscopy Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2015 ; Optical Nanoscopy Volume 4 ; 4 ; >
   
     }
   
@@ -2027,11 +2027,11 @@
         param[journal_issn] = 2191-2858
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2011 ; Organic and Medicinal Chemistry Letters Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2012 ; Organic and Medicinal Chemistry Letters Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2013 ; Organic and Medicinal Chemistry Letters Volume 3 ; 3 >
-        au < down ; exists ; 2014 ; Organic and Medicinal Chemistry Letters Volume 4 ; 4 >
-        au < down ; exists ; 2015 ; Organic and Medicinal Chemistry Letters Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2011 ; Organic and Medicinal Chemistry Letters Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2012 ; Organic and Medicinal Chemistry Letters Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2013 ; Organic and Medicinal Chemistry Letters Volume 3 ; 3 ; >
+        au < down ; exists ; 2014 ; Organic and Medicinal Chemistry Letters Volume 4 ; 4 ; >
+        au < down ; exists ; 2015 ; Organic and Medicinal Chemistry Letters Volume 5 ; 5 ; >
   
     }
   
@@ -2046,11 +2046,11 @@
         param[journal_issn] = 2041-7136
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2011 ; Pastoralism Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2012 ; Pastoralism Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2013 ; Pastoralism Volume 3 ; 3 >
-        au < down ; exists ; 2014 ; Pastoralism Volume 4 ; 4 >
-        au < down ; exists ; 2015 ; Pastoralism Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2011 ; Pastoralism Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2012 ; Pastoralism Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2013 ; Pastoralism Volume 3 ; 3 ; >
+        au < down ; exists ; 2014 ; Pastoralism Volume 4 ; 4 ; >
+        au < down ; exists ; 2015 ; Pastoralism Volume 5 ; 5 ; >
   
     }
   
@@ -2065,10 +2065,10 @@
         param[journal_issn] = 2191-2521
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; Planetary Science Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2013 ; Planetary Science Volume 2 ; 2 >
-        au < down ; exists ; 2014 ; Planetary Science Volume 3 ; 3 >
-        au < down ; exists ; 2015 ; Planetary Science Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; Planetary Science Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2013 ; Planetary Science Volume 2 ; 2 ; >
+        au < down ; exists ; 2014 ; Planetary Science Volume 3 ; 3 ; >
+        au < down ; exists ; 2015 ; Planetary Science Volume 4 ; 4 ; >
   
     }
   
@@ -2083,8 +2083,8 @@
         param[journal_issn] = 2194-0517
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; Progress in Biomaterials Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2013 ; Progress in Biomaterials Volume 2 ; 2 >
+        au < doNotProcess ; exists ; 2012 ; Progress in Biomaterials Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2013 ; Progress in Biomaterials Volume 2 ; 2 ; >
   
     }
   
@@ -2099,8 +2099,8 @@
         param[journal_issn] = 2197-4284
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2014 ; Progress in Earth and Planetary Science Volume 1 ; 1 >
-        au < down ; exists ; 2015 ; Progress in Earth and Planetary Science Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; Progress in Earth and Planetary Science Volume 1 ; 1 ; >
+        au < down ; exists ; 2015 ; Progress in Earth and Planetary Science Volume 2 ; 2 ; >
   
     }
   
@@ -2115,11 +2115,11 @@
         param[journal_issn] = 2211-1522
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2011 ; Psychology of Well-Being: Theory, Research and Practice Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2012 ; Psychology of Well-Being: Theory, Research and Practice Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2013 ; Psychology of Well-Being: Theory, Research and Practice Volume 3 ; 3 >
-        au < down ; exists ; 2014 ; Psychology of Well-Being: Theory, Research and Practice Volume 4 ; 4 >
-        au < down ; exists ; 2015 ; Psychology of Well-Being: Theory, Research and Practice Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2011 ; Psychology of Well-Being: Theory, Research and Practice Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2012 ; Psychology of Well-Being: Theory, Research and Practice Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2013 ; Psychology of Well-Being: Theory, Research and Practice Volume 3 ; 3 ; >
+        au < down ; exists ; 2014 ; Psychology of Well-Being: Theory, Research and Practice Volume 4 ; 4 ; >
+        au < down ; exists ; 2015 ; Psychology of Well-Being: Theory, Research and Practice Volume 5 ; 5 ; >
   
     }
 
@@ -2134,8 +2134,8 @@
         param[journal_issn] = 2197-9847
         comment[platform] = BioMedCentralPlugin
 
-        au < down ; exists ; 2014 ; Research in the Mathematical Sciences Volume 1 ; 1 >
-        au < down ; exists ; 2015 ; Research in the Mathematical Sciences Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; Research in the Mathematical Sciences Volume 1 ; 1 ; >
+        au < down ; exists ; 2015 ; Research in the Mathematical Sciences Volume 2 ; 2 ; >
 
     }
 
@@ -2151,8 +2151,8 @@
         param[journal_issn] = 0717-6317
         comment[platform] = BioMedCentralPlugin
 
-        au < down ; exists ; 2014 ; Revista Chilena de Historia Natural Volume 87 ; 87 >
-        au < down ; exists ; 2015 ; Revista Chilena de Historia Natural Volume 88 ; 88 >
+        au < down ; exists ; 2014 ; Revista Chilena de Historia Natural Volume 87 ; 87 ; >
+        au < down ; exists ; 2015 ; Revista Chilena de Historia Natural Volume 88 ; 88 ; >
 
     }
 
@@ -2169,10 +2169,10 @@
         param[journal_issn] = 1939-8433
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; Rice Volume 5 ; 5 >
-        au < doNotProcess ; exists ; 2013 ; Rice Volume 6 ; 6 >
-        au < down ; exists ; 2014 ; Rice Volume 7 ; 7 >
-        au < doNotProcess ; exists ; 2015 ; Rice Volume 8 ; 8 >
+        au < doNotProcess ; exists ; 2012 ; Rice Volume 5 ; 5 ; >
+        au < doNotProcess ; exists ; 2013 ; Rice Volume 6 ; 6 ; >
+        au < down ; exists ; 2014 ; Rice Volume 7 ; 7 ; >
+        au < doNotProcess ; exists ; 2015 ; Rice Volume 8 ; 8 ; >
   
     }
   
@@ -2187,8 +2187,8 @@
         param[journal_issn] = 2197-4225
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2014 ; ROBOMECH Journal Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2015 ; ROBOMECH Journal Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; ROBOMECH Journal Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2015 ; ROBOMECH Journal Volume 2 ; 2 ; >
   
     }
   
@@ -2203,8 +2203,8 @@
         param[journal_issn] = 2197-3768 
         comment[platform] = BioMedCentralPlugin
   
-        au < down ; exists ; 2014 ; Robotics and Biomimetics Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2015 ; Robotics and Biomimetics Volume 2 ; 2 >
+        au < down ; exists ; 2014 ; Robotics and Biomimetics Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2015 ; Robotics and Biomimetics Volume 2 ; 2 ; >
   
     }
   
@@ -2219,10 +2219,10 @@
         param[journal_issn] = 2190-8532
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; Security Informatics Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2013 ; Security Informatics Volume 2 ; 2 >
-        au < down ; exists ; 2014 ; Security Informatics Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2015 ; Security Informatics Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; Security Informatics Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2013 ; Security Informatics Volume 2 ; 2 ; >
+        au < down ; exists ; 2014 ; Security Informatics Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2015 ; Security Informatics Volume 4 ; 4 ; >
   
     }
   
@@ -2237,10 +2237,10 @@
         param[journal_issn] = 2193-1801
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2012 ; SpringerPlus Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2013 ; SpringerPlus Volume 2 ; 2 >
-        au < down ; exists ; 2014 ; SpringerPlus Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2015 ; SpringerPlus Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; SpringerPlus Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2013 ; SpringerPlus Volume 2 ; 2 ; >
+        au < down ; exists ; 2014 ; SpringerPlus Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2015 ; SpringerPlus Volume 4 ; 4 ; >
   
     }
   
@@ -2255,9 +2255,9 @@
         param[journal_issn] = 2213-0802
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2013 ; Translational Respiratory Medicine Volume 1 ; 1 >
-        au < down ; exists ; 2014 ; Translational Respiratory Medicine Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2015 ; Translational Respiratory Medicine Volume 3 ; 3 >
+        au < doNotProcess ; exists ; 2013 ; Translational Respiratory Medicine Volume 1 ; 1 ; >
+        au < down ; exists ; 2014 ; Translational Respiratory Medicine Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2015 ; Translational Respiratory Medicine Volume 3 ; 3 ; >
   
     }
   
@@ -2272,9 +2272,9 @@
         param[journal_issn] = 2213-7459
         comment[platform] = BioMedCentralPlugin
   
-        au < doNotProcess ; exists ; 2013 ; Visualization in Engineering Volume 1 ; 1 >
-        au < down ; exists ; 2014 ; Visualization in Engineering Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2015 ; Visualization in Engineering Volume 3 ; 3 >
+        au < doNotProcess ; exists ; 2013 ; Visualization in Engineering Volume 1 ; 1 ; >
+        au < down ; exists ; 2014 ; Visualization in Engineering Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2015 ; Visualization in Engineering Volume 3 ; 3 ; >
   
     }
 
@@ -2289,9 +2289,9 @@
         param[journal_issn] = 1810-522X
         comment[platform] = BioMedCentralPlugin
 
-        au < doNotProcess ; exists ; 2013 ; Zoological Studies Volume 52 ; 52 >
-        au < down ; exists ; 2014 ; Zoological Studies Volume 53 ; 53 >
-        au < down ; exists ; 2015 ; Zoological Studies Volume 54 ; 54 >
+        au < doNotProcess ; exists ; 2013 ; Zoological Studies Volume 52 ; 52 ; >
+        au < down ; exists ; 2014 ; Zoological Studies Volume 53 ; 53 ; >
+        au < down ; exists ; 2015 ; Zoological Studies Volume 54 ; 54 ; >
 
     }
 
@@ -2306,9 +2306,9 @@
       param[journal_issn] = 2095-4638
       comment[platform] = BioMedCentralPlugin
 
-      au < doNotProcess ; exists ; 2013 ; China Finance and Economic Review Volume 1 ; 1 >
-      au < down ; exists ; 2014 ; China Finance and Economic Review Volume 2 ; 2 >
-      au < doNotProcess ; exists ; 2015 ; China Finance and Economic Review Volume 3 ; 3 >
+      au < doNotProcess ; exists ; 2013 ; China Finance and Economic Review Volume 1 ; 1 ; >
+      au < down ; exists ; 2014 ; China Finance and Economic Review Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2015 ; China Finance and Economic Review Volume 3 ; 3 ; >
 
     }
 
@@ -2323,8 +2323,8 @@
       param[journal_issn] = 2197-4314
       comment[platform] = BioMedCentralPlugin
 
-      au < down ; exists ; 2014 ; Computational Social Networks Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2015 ; Computational Social Networks Volume 2 ; 2 >
+      au < down ; exists ; 2014 ; Computational Social Networks Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2015 ; Computational Social Networks Volume 2 ; 2 ; >
 
     }
 
@@ -2339,8 +2339,8 @@
       param[journal_issn] = 2197-8670
       comment[platform] = BioMedCentralPlugin
 
-      au < finished ; crawling ; 2014 ; Geoenvironmental Disasters Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2015 ; Geoenvironmental Disasters Volume 2 ; 2 >
+      au < finished ; crawling ; 2014 ; Geoenvironmental Disasters Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2015 ; Geoenvironmental Disasters Volume 2 ; 2 ; >
 
     }
 
@@ -2355,8 +2355,8 @@
       param[journal_issn] = 2196-050X
       comment[platform] = BioMedCentralPlugin
 
-      au < down ; exists ; 2014 ; In Silico Cell and Tissue Science Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2015 ; In Silico Cell and Tissue Science Volume 2 ; 2 >
+      au < down ; exists ; 2014 ; In Silico Cell and Tissue Science Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2015 ; In Silico Cell and Tissue Science Volume 2 ; 2 ; >
 
     }
 
@@ -2371,8 +2371,8 @@
       param[journal_issn] = 2195-9897
       comment[platform] = BioMedCentralPlugin
 
-      au < down ; exists ; 2014 ; Journal of Chinese Management Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2015 ; Journal of Chinese Management Volume 2 ; 2 >
+      au < down ; exists ; 2014 ; Journal of Chinese Management Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2015 ; Journal of Chinese Management Volume 2 ; 2 ; >
 
     }
 
@@ -2387,7 +2387,7 @@
       param[journal_issn] = 2198-2635
       comment[platform] = BioMedCentralPlugin
 
-      au < down ; exists ; 2015 ; Journal of Chinese Sociology Volume 2 ; 2 >
+      au < down ; exists ; 2015 ; Journal of Chinese Sociology Volume 2 ; 2 ; >
 
     }
 
@@ -2402,9 +2402,9 @@
       param[journal_issn] = 2251-7316
       comment[platform] = BioMedCentralPlugin
 
-      au < down ; exists ; 2014 ; Journal of Global Entrepreneurship Research Volume 2 ; 2 >
-      au < down ; exists ; 2014 ; Journal of Global Entrepreneurship Research Volume 4 ; 4 >
-      au < doNotProcess ; exists ; 2015 ; Journal of Global Entrepreneurship Research Volume 5 ; 5 >
+      au < down ; exists ; 2014 ; Journal of Global Entrepreneurship Research Volume 2 ; 2 ; >
+      au < down ; exists ; 2014 ; Journal of Global Entrepreneurship Research Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2015 ; Journal of Global Entrepreneurship Research Volume 5 ; 5 ; >
 
     }
 
@@ -2419,9 +2419,9 @@
       param[journal_issn] = 2196-0739
       comment[platform] = BioMedCentralPlugin
 
-      au < doNotProcess ; exists ; 2013 ; Large-scale Assessments in Education Volume 1 ; 1 >
-      au < down ; exists ; 2014 ; Large-scale Assessments in Education Volume 2 ; 2 >
-      au < down ; exists ; 2015 ; Large-scale Assessments in Education Volume 3 ; 3 >
+      au < doNotProcess ; exists ; 2013 ; Large-scale Assessments in Education Volume 1 ; 1 ; >
+      au < down ; exists ; 2014 ; Large-scale Assessments in Education Volume 2 ; 2 ; >
+      au < down ; exists ; 2015 ; Large-scale Assessments in Education Volume 3 ; 3 ; >
 
     }
 
@@ -2436,8 +2436,8 @@
       param[journal_issn] = 2194-7791
       comment[platform] = BioMedCentralPlugin
 
-      au < down ; exists ; 2014 ; Molecular and Cellular Pediatrics Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2015 ; Molecular and Cellular Pediatrics Volume 2 ; 2 >
+      au < down ; exists ; 2014 ; Molecular and Cellular Pediatrics Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2015 ; Molecular and Cellular Pediatrics Volume 2 ; 2 ; >
 
     }
 
@@ -2452,9 +2452,9 @@
       param[journal_issn] = 2198-4115
       comment[platform] = BioMedCentralPlugin
 
-      au < doNotProcess ; exists ; 2014 ; Pacific Journal of Mathematics for Industry Volume 6 ; 6 >
+      au < doNotProcess ; exists ; 2014 ; Pacific Journal of Mathematics for Industry Volume 6 ; 6 ; >
       #issue is not completed, 10/14/2015
-      au < doNotProcess ; exists ; 2015 ; Pacific Journal of Mathematics for Industry Volume 7 ; 7 >
+      au < doNotProcess ; exists ; 2015 ; Pacific Journal of Mathematics for Industry Volume 7 ; 7 ; >
 
     }
 
@@ -2469,9 +2469,9 @@
       param[journal_issn] = 2196-1042
       comment[platform] = BioMedCentralPlugin
 
-      au < doNotProcess ; exists ; 2013 ; Progress in Orthodontics Volume 14 ; 14 >
-      au < down ; exists ; 2014 ; Progress in Orthodontics Volume 15 ; 15 >
-      au < doNotProcess ; exists ; 2015 ; Progress in Orthodontics Volume 16 ; 16 >
+      au < doNotProcess ; exists ; 2013 ; Progress in Orthodontics Volume 14 ; 14 ; >
+      au < down ; exists ; 2014 ; Progress in Orthodontics Volume 15 ; 15 ; >
+      au < doNotProcess ; exists ; 2015 ; Progress in Orthodontics Volume 16 ; 16 ; >
 
     }
 
@@ -2486,8 +2486,8 @@
       param[journal_issn] = 2196-7091
       comment[platform] = BioMedCentralPlugin
 
-      au < down ; exists ; 2014 ; Smart Learning Environments Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2015 ; Smart Learning Environments Volume 2 ; 2 >
+      au < down ; exists ; 2014 ; Smart Learning Environments Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2015 ; Smart Learning Environments Volume 2 ; 2 ; >
 
     }
 
@@ -2503,7 +2503,7 @@
       param[journal_issn] = 2288-8586
       comment[platform] = BioMedCentralPlugin
 
-      au < down ; exists ; 2015 ; Maxillofacial Plastic and Reconstructive Surgery Volume 37 ; 37 >
+      au < down ; exists ; 2015 ; Maxillofacial Plastic and Reconstructive Surgery Volume 37 ; 37 ; >
 
     }
 
@@ -2526,11 +2526,11 @@
         param[journal_issn] = 2190-572X
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2011 ; 3 Biotech Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2012 ; 3 Biotech Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2013 ; 3 Biotech Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2014 ; 3 Biotech Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2015 ; 3 Biotech Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2011 ; 3 Biotech Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2012 ; 3 Biotech Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2013 ; 3 Biotech Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2014 ; 3 Biotech Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2015 ; 3 Biotech Volume 5 ; 5 ; >
   
     }
   
@@ -2545,7 +2545,7 @@
         param[journal_issn] = 0814-6039
         comment[platform] = Springer
 
-        au < doNotProcess ; exists ; 2015 ; Acoustics Australia Volume 43 ; 43 >
+        au < doNotProcess ; exists ; 2015 ; Acoustics Australia Volume 43 ; 43 ; >
 
     }
   
@@ -2561,11 +2561,11 @@
         param[journal_issn] = 2190-5509
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2011 ; Applied Nanoscience Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2012 ; Applied Nanoscience Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2013 ; Applied Nanoscience Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2014 ; Applied Nanoscience Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2015 ; Applied Nanoscience Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2011 ; Applied Nanoscience Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2012 ; Applied Nanoscience Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2013 ; Applied Nanoscience Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2014 ; Applied Nanoscience Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2015 ; Applied Nanoscience Volume 5 ; 5 ; >
   
     }
   
@@ -2581,11 +2581,11 @@
         param[journal_issn] = 2190-5525
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2012 ; Applied Petrochemical Research Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2012 ; Applied Petrochemical Research Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2013 ; Applied Petrochemical Research Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2014 ; Applied Petrochemical Research Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2015 ; Applied Petrochemical Research Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2012 ; Applied Petrochemical Research Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2012 ; Applied Petrochemical Research Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2013 ; Applied Petrochemical Research Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2014 ; Applied Petrochemical Research Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2015 ; Applied Petrochemical Research Volume 5 ; 5 ; >
   
     }
   
@@ -2601,11 +2601,11 @@
         param[journal_issn] = 2190-5487
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2011 ; Applied Water Science Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2012 ; Applied Water Science Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2013 ; Applied Water Science Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2014 ; Applied Water Science Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2015 ; Applied Water Science Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2011 ; Applied Water Science Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2012 ; Applied Water Science Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2013 ; Applied Water Science Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2014 ; Applied Water Science Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2015 ; Applied Water Science Volume 5 ; 5 ; >
   
     }
   
@@ -2621,10 +2621,10 @@
         param[journal_issn] = 2193-5343 
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2012 ; Arabian Journal of Mathematics Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2013 ; Arabian Journal of Mathematics Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2014 ; Arabian Journal of Mathematics Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2015 ; Arabian Journal of Mathematics Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; Arabian Journal of Mathematics Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2013 ; Arabian Journal of Mathematics Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2014 ; Arabian Journal of Mathematics Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2015 ; Arabian Journal of Mathematics Volume 4 ; 4 ; >
   
     }
   
@@ -2641,12 +2641,12 @@
       param[journal_issn] = 2038-0305
       comment[platform] = Springer
   
-      au < doNotProcess ; exists ; 2010 ; Autoimmunity Highlights Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2011 ; Autoimmunity Highlights Volume 2 ; 2 >
-      au < doNotProcess ; exists ; 2012 ; Autoimmunity Highlights Volume 3 ; 3 >
-      au < doNotProcess ; exists ; 2013 ; Autoimmunity Highlights Volume 4 ; 4 >
-      au < doNotProcess ; exists ; 2014 ; Autoimmunity Highlights Volume 5 ; 5 >
-      au < doNotProcess ; exists ; 2015 ; Autoimmunity Highlights Volume 6 ; 6 >
+      au < doNotProcess ; exists ; 2010 ; Autoimmunity Highlights Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2011 ; Autoimmunity Highlights Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2012 ; Autoimmunity Highlights Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2013 ; Autoimmunity Highlights Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2014 ; Autoimmunity Highlights Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2015 ; Autoimmunity Highlights Volume 6 ; 6 ; >
   
     }
 
@@ -2662,15 +2662,15 @@
         param[journal_issn] = 1559-4106 
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2006 ; Biointerphases Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2007 ; Biointerphases Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2008 ; Biointerphases Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2009 ; Biointerphases Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2010 ; Biointerphases Volume 5 ; 5 >
-        au < doNotProcess ; exists ; 2011 ; Biointerphases Volume 6 ; 6 >
-        au < doNotProcess ; exists ; 2012 ; Biointerphases Volume 7 ; 7 >
-        au < doNotProcess ; exists ; 2013 ; Biointerphases Volume 8 ; 8 >
-        au < doNotProcess ; exists ; 2014 ; Biointerphases Volume 9 ; 9 >
+        au < doNotProcess ; exists ; 2006 ; Biointerphases Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2007 ; Biointerphases Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2008 ; Biointerphases Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2009 ; Biointerphases Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2010 ; Biointerphases Volume 5 ; 5 ; >
+        au < doNotProcess ; exists ; 2011 ; Biointerphases Volume 6 ; 6 ; >
+        au < doNotProcess ; exists ; 2012 ; Biointerphases Volume 7 ; 7 ; >
+        au < doNotProcess ; exists ; 2013 ; Biointerphases Volume 8 ; 8 ; >
+        au < doNotProcess ; exists ; 2014 ; Biointerphases Volume 9 ; 9 ; >
   
     }
   
@@ -2686,7 +2686,7 @@
         param[journal_issn] = 2364-3439
         comment[platform] = Springer
 
-        au < doNotProcess ; exists ; 2015 ; Biophysics Reports Volume 1 ; 1 >
+        au < doNotProcess ; exists ; 2015 ; Biophysics Reports Volume 1 ; 1 ; >
     }
 
     {
@@ -2701,7 +2701,7 @@
         param[journal_issn] = 0126-6705
         comment[platform] = Springer
 
-        au < doNotProcess ; exists ; 2015 ; Bulletin of the Malaysian Mathematical Sciences Society Volume 38 ; 38 >
+        au < doNotProcess ; exists ; 2015 ; Bulletin of the Malaysian Mathematical Sciences Society Volume 38 ; 38 ; >
     }
   
     {
@@ -2715,11 +2715,11 @@
         param[journal_issn] = 1664-3615
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2011 ; Bulletin of Mathematical Sciences Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2012 ; Bulletin of Mathematical Sciences Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2013 ; Bulletin of Mathematical Sciences Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2014 ; Bulletin of Mathematical Sciences Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2015 ; Bulletin of Mathematical Sciences Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2011 ; Bulletin of Mathematical Sciences Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2012 ; Bulletin of Mathematical Sciences Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2013 ; Bulletin of Mathematical Sciences Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2014 ; Bulletin of Mathematical Sciences Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2015 ; Bulletin of Mathematical Sciences Volume 5 ; 5 ; >
   
     }
   
@@ -2734,9 +2734,9 @@
         param[journal_issn] = 2321-3876
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2013 ; Burns & Trauma Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2014 ; Burns & Trauma Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2015 ; Burns & Trauma Volume 3 ; 3 >
+        au < doNotProcess ; exists ; 2013 ; Burns & Trauma Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2014 ; Burns & Trauma Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2015 ; Burns & Trauma Volume 3 ; 3 ; >
   
     }
   
@@ -2751,7 +2751,7 @@
         param[journal_issn] = 2057-4967
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2015 ; Chinese Neurosurgical Journal Volume 1 ; 1 >
+        au < doNotProcess ; exists ; 2015 ; Chinese Neurosurgical Journal Volume 1 ; 1 ; >
   
     }
   
@@ -2768,24 +2768,24 @@
         comment[platform] = Springer
         comment[continued_by] = 2095-9273
   
-        au < doNotProcess ; exists ; 1997 ; Chinese Science Bulletin Volume 42 ; 42 >
-        au < doNotProcess ; exists ; 1998 ; Chinese Science Bulletin Volume 43 ; 43 >
-        au < doNotProcess ; exists ; 1999 ; Chinese Science Bulletin Volume 44 ; 44 >
-        au < doNotProcess ; exists ; 2000 ; Chinese Science Bulletin Volume 45 ; 45 >
-        au < doNotProcess ; exists ; 2001 ; Chinese Science Bulletin Volume 46 ; 46 >
-        au < doNotProcess ; exists ; 2002 ; Chinese Science Bulletin Volume 47 ; 47 >
-        au < doNotProcess ; exists ; 2003 ; Chinese Science Bulletin Volume 48 ; 48 >
-        au < doNotProcess ; exists ; 2004 ; Chinese Science Bulletin Volume 49 ; 49 >
-        au < doNotProcess ; exists ; 2005 ; Chinese Science Bulletin Volume 50 ; 50 >
-        au < doNotProcess ; exists ; 2006 ; Chinese Science Bulletin Volume 51 ; 51 >
-        au < doNotProcess ; exists ; 2007 ; Chinese Science Bulletin Volume 52 ; 52 >
-        au < doNotProcess ; exists ; 2008 ; Chinese Science Bulletin Volume 53 ; 53 >
-        au < doNotProcess ; exists ; 2009 ; Chinese Science Bulletin Volume 54 ; 54 >
-        au < doNotProcess ; exists ; 2010 ; Chinese Science Bulletin Volume 55 ; 55 >
-        au < doNotProcess ; exists ; 2011 ; Chinese Science Bulletin Volume 56 ; 56 >
-        au < doNotProcess ; exists ; 2012 ; Chinese Science Bulletin Volume 57 ; 57 >
-        au < doNotProcess ; exists ; 2013 ; Chinese Science Bulletin Volume 58 ; 58 >
-        au < doNotProcess ; exists ; 2014 ; Chinese Science Bulletin Volume 59 ; 59 >
+        au < doNotProcess ; exists ; 1997 ; Chinese Science Bulletin Volume 42 ; 42 ; >
+        au < doNotProcess ; exists ; 1998 ; Chinese Science Bulletin Volume 43 ; 43 ; >
+        au < doNotProcess ; exists ; 1999 ; Chinese Science Bulletin Volume 44 ; 44 ; >
+        au < doNotProcess ; exists ; 2000 ; Chinese Science Bulletin Volume 45 ; 45 ; >
+        au < doNotProcess ; exists ; 2001 ; Chinese Science Bulletin Volume 46 ; 46 ; >
+        au < doNotProcess ; exists ; 2002 ; Chinese Science Bulletin Volume 47 ; 47 ; >
+        au < doNotProcess ; exists ; 2003 ; Chinese Science Bulletin Volume 48 ; 48 ; >
+        au < doNotProcess ; exists ; 2004 ; Chinese Science Bulletin Volume 49 ; 49 ; >
+        au < doNotProcess ; exists ; 2005 ; Chinese Science Bulletin Volume 50 ; 50 ; >
+        au < doNotProcess ; exists ; 2006 ; Chinese Science Bulletin Volume 51 ; 51 ; >
+        au < doNotProcess ; exists ; 2007 ; Chinese Science Bulletin Volume 52 ; 52 ; >
+        au < doNotProcess ; exists ; 2008 ; Chinese Science Bulletin Volume 53 ; 53 ; >
+        au < doNotProcess ; exists ; 2009 ; Chinese Science Bulletin Volume 54 ; 54 ; >
+        au < doNotProcess ; exists ; 2010 ; Chinese Science Bulletin Volume 55 ; 55 ; >
+        au < doNotProcess ; exists ; 2011 ; Chinese Science Bulletin Volume 56 ; 56 ; >
+        au < doNotProcess ; exists ; 2012 ; Chinese Science Bulletin Volume 57 ; 57 ; >
+        au < doNotProcess ; exists ; 2013 ; Chinese Science Bulletin Volume 58 ; 58 ; >
+        au < doNotProcess ; exists ; 2014 ; Chinese Science Bulletin Volume 59 ; 59 ; >
   
     }
   
@@ -2801,7 +2801,7 @@
         param[journal_issn] = 0391-2078
         comment[platform] = Springer
 
-        au < doNotProcess ; exists ; 2015 ; Economia e Politica Industriale Volume 42 ; 42 >
+        au < doNotProcess ; exists ; 2015 ; Economia e Politica Industriale Volume 42 ; 42 ; >
     }
   
     {
@@ -2816,7 +2816,7 @@
         param[journal_issn] = 1120-2890
         comment[platform] = Springer
 
-        au < doNotProcess ; exists ; 2015 ; Economia Politica Volume 32 ; 32 >
+        au < doNotProcess ; exists ; 2015 ; Economia Politica Volume 32 ; 32 ; >
     }
 
     {
@@ -2831,22 +2831,22 @@
         param[journal_issn] = 1566-7529
         comment[platform] = Springer
 
-        au < doNotProcess ; exists ; 2000 ; European Business Organization Law Review Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2001 ; European Business Organization Law Review Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2002 ; European Business Organization Law Review Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2003 ; European Business Organization Law Review Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2004 ; European Business Organization Law Review Volume 5 ; 5 >
-        au < doNotProcess ; exists ; 2005 ; European Business Organization Law Review Volume 6 ; 6 >
-        au < doNotProcess ; exists ; 2006 ; European Business Organization Law Review Volume 7 ; 7 >
-        au < doNotProcess ; exists ; 2007 ; European Business Organization Law Review Volume 8 ; 8 >
-        au < doNotProcess ; exists ; 2008 ; European Business Organization Law Review Volume 9 ; 9 >
-        au < doNotProcess ; exists ; 2009 ; European Business Organization Law Review Volume 10 ; 10 >
-        au < doNotProcess ; exists ; 2010 ; European Business Organization Law Review Volume 11 ; 11 >
-        au < doNotProcess ; exists ; 2011 ; European Business Organization Law Review Volume 12 ; 12 >
-        au < doNotProcess ; exists ; 2012 ; European Business Organization Law Review Volume 13 ; 13 >
-        au < doNotProcess ; exists ; 2013 ; European Business Organization Law Review Volume 14 ; 14 >
-        au < doNotProcess ; exists ; 2014 ; European Business Organization Law Review Volume 15 ; 15 >
-        au < doNotProcess ; exists ; 2015 ; European Business Organization Law Review Volume 16 ; 16 >
+        au < doNotProcess ; exists ; 2000 ; European Business Organization Law Review Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2001 ; European Business Organization Law Review Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2002 ; European Business Organization Law Review Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2003 ; European Business Organization Law Review Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2004 ; European Business Organization Law Review Volume 5 ; 5 ; >
+        au < doNotProcess ; exists ; 2005 ; European Business Organization Law Review Volume 6 ; 6 ; >
+        au < doNotProcess ; exists ; 2006 ; European Business Organization Law Review Volume 7 ; 7 ; >
+        au < doNotProcess ; exists ; 2007 ; European Business Organization Law Review Volume 8 ; 8 ; >
+        au < doNotProcess ; exists ; 2008 ; European Business Organization Law Review Volume 9 ; 9 ; >
+        au < doNotProcess ; exists ; 2009 ; European Business Organization Law Review Volume 10 ; 10 ; >
+        au < doNotProcess ; exists ; 2010 ; European Business Organization Law Review Volume 11 ; 11 ; >
+        au < doNotProcess ; exists ; 2011 ; European Business Organization Law Review Volume 12 ; 12 ; >
+        au < doNotProcess ; exists ; 2012 ; European Business Organization Law Review Volume 13 ; 13 ; >
+        au < doNotProcess ; exists ; 2013 ; European Business Organization Law Review Volume 14 ; 14 ; >
+        au < doNotProcess ; exists ; 2014 ; European Business Organization Law Review Volume 15 ; 15 ; >
+        au < doNotProcess ; exists ; 2015 ; European Business Organization Law Review Volume 16 ; 16 ; >
     }
   
     {
@@ -2860,9 +2860,9 @@
         param[journal_issn] = 2195-2248
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2013 ; European Journal of Futures Research Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2014 ; European Journal of Futures Research Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2015 ; European Journal of Futures Research Volume 3 ; 3 >
+        au < doNotProcess ; exists ; 2013 ; European Journal of Futures Research Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2014 ; European Journal of Futures Research Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2015 ; European Journal of Futures Research Volume 3 ; 3 ; >
   
     }
   
@@ -2878,13 +2878,13 @@
         param[journal_issn] = 1867-0717
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2009 ; European Transport Research Review Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2010 ; European Transport Research Review Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2011 ; European Transport Research Review Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2012 ; European Transport Research Review Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2013 ; European Transport Research Review Volume 5 ; 5 >
-        au < doNotProcess ; exists ; 2014 ; European Transport Research Review Volume 6 ; 6 >
-        au < doNotProcess ; exists ; 2015 ; European Transport Research Review Volume 7 ; 7 >
+        au < doNotProcess ; exists ; 2009 ; European Transport Research Review Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2010 ; European Transport Research Review Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2011 ; European Transport Research Review Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2012 ; European Transport Research Review Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2013 ; European Transport Research Review Volume 5 ; 5 ; >
+        au < doNotProcess ; exists ; 2014 ; European Transport Research Review Volume 6 ; 6 ; >
+        au < doNotProcess ; exists ; 2015 ; European Transport Research Review Volume 7 ; 7 ; >
   
     }
   
@@ -2900,51 +2900,51 @@
         param[journal_issn] = 2190-7579
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 1971 ; Gold Bulletin Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 1972 ; Gold Bulletin Volume 5 ; 5 >
-        au < doNotProcess ; exists ; 1973 ; Gold Bulletin Volume 6 ; 6 >
-        au < doNotProcess ; exists ; 1974 ; Gold Bulletin Volume 7 ; 7 >
-        au < doNotProcess ; exists ; 1975 ; Gold Bulletin Volume 8 ; 8 >
-        au < doNotProcess ; exists ; 1976 ; Gold Bulletin Volume 9 ; 9 >
-        au < doNotProcess ; exists ; 1977 ; Gold Bulletin Volume 10 ; 10 >
-        au < doNotProcess ; exists ; 1978 ; Gold Bulletin Volume 11 ; 11 >
-        au < doNotProcess ; exists ; 1979 ; Gold Bulletin Volume 12 ; 12 >
-        au < doNotProcess ; exists ; 1980 ; Gold Bulletin Volume 13 ; 13 >
-        au < doNotProcess ; exists ; 1981 ; Gold Bulletin Volume 14 ; 14 >
-        au < doNotProcess ; exists ; 1982 ; Gold Bulletin Volume 15 ; 15 >
-        au < doNotProcess ; exists ; 1983 ; Gold Bulletin Volume 16 ; 16 >
-        au < doNotProcess ; exists ; 1984 ; Gold Bulletin Volume 17 ; 17 >
-        au < doNotProcess ; exists ; 1985 ; Gold Bulletin Volume 18 ; 18 >
-        au < doNotProcess ; exists ; 1986 ; Gold Bulletin Volume 19 ; 19 >
-        au < doNotProcess ; exists ; 1987 ; Gold Bulletin Volume 20 ; 20 >
-        au < doNotProcess ; exists ; 1988 ; Gold Bulletin Volume 21 ; 21 >
-        au < doNotProcess ; exists ; 1989 ; Gold Bulletin Volume 22 ; 22 >
-        au < doNotProcess ; exists ; 1990 ; Gold Bulletin Volume 23 ; 23 >
-        au < doNotProcess ; exists ; 1991 ; Gold Bulletin Volume 24 ; 24 >
-        au < doNotProcess ; exists ; 1992 ; Gold Bulletin Volume 25 ; 25 >
-        au < doNotProcess ; exists ; 1993 ; Gold Bulletin Volume 26 ; 26 >
-        au < doNotProcess ; exists ; 1994 ; Gold Bulletin Volume 27 ; 27 >
-        au < doNotProcess ; exists ; 1995 ; Gold Bulletin Volume 28 ; 28 >
-        au < doNotProcess ; exists ; 1996 ; Gold Bulletin Volume 29 ; 29 >
-        au < doNotProcess ; exists ; 1997 ; Gold Bulletin Volume 30 ; 30 >
-        au < doNotProcess ; exists ; 1998 ; Gold Bulletin Volume 31 ; 31 >
-        au < doNotProcess ; exists ; 1999 ; Gold Bulletin Volume 32 ; 32 >
-        au < doNotProcess ; exists ; 2000 ; Gold Bulletin Volume 33 ; 33 >
-        au < doNotProcess ; exists ; 2001 ; Gold Bulletin Volume 34 ; 34 >
-        au < doNotProcess ; exists ; 2002 ; Gold Bulletin Volume 35 ; 35 >
-        au < doNotProcess ; exists ; 2003 ; Gold Bulletin Volume 36 ; 36 >
-        au < doNotProcess ; exists ; 2004 ; Gold Bulletin Volume 37 ; 37 >
-        au < doNotProcess ; exists ; 2005 ; Gold Bulletin Volume 38 ; 38 >
-        au < doNotProcess ; exists ; 2006 ; Gold Bulletin Volume 39 ; 39 >
-        au < doNotProcess ; exists ; 2007 ; Gold Bulletin Volume 40 ; 40 >
-        au < doNotProcess ; exists ; 2008 ; Gold Bulletin Volume 41 ; 41 >
-        au < doNotProcess ; exists ; 2009 ; Gold Bulletin Volume 42 ; 42 >
-        au < doNotProcess ; exists ; 2010 ; Gold Bulletin Volume 43 ; 43 >
-        au < doNotProcess ; exists ; 2011 ; Gold Bulletin Volume 44 ; 44 >
-        au < doNotProcess ; exists ; 2012 ; Gold Bulletin Volume 45 ; 45 >
-        au < doNotProcess ; exists ; 2013 ; Gold Bulletin Volume 46 ; 46 >
-        au < doNotProcess ; exists ; 2014 ; Gold Bulletin Volume 47 ; 47 >
-        au < doNotProcess ; exists ; 2015 ; Gold Bulletin Volume 48 ; 48 >
+        au < doNotProcess ; exists ; 1971 ; Gold Bulletin Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 1972 ; Gold Bulletin Volume 5 ; 5 ; >
+        au < doNotProcess ; exists ; 1973 ; Gold Bulletin Volume 6 ; 6 ; >
+        au < doNotProcess ; exists ; 1974 ; Gold Bulletin Volume 7 ; 7 ; >
+        au < doNotProcess ; exists ; 1975 ; Gold Bulletin Volume 8 ; 8 ; >
+        au < doNotProcess ; exists ; 1976 ; Gold Bulletin Volume 9 ; 9 ; >
+        au < doNotProcess ; exists ; 1977 ; Gold Bulletin Volume 10 ; 10 ; >
+        au < doNotProcess ; exists ; 1978 ; Gold Bulletin Volume 11 ; 11 ; >
+        au < doNotProcess ; exists ; 1979 ; Gold Bulletin Volume 12 ; 12 ; >
+        au < doNotProcess ; exists ; 1980 ; Gold Bulletin Volume 13 ; 13 ; >
+        au < doNotProcess ; exists ; 1981 ; Gold Bulletin Volume 14 ; 14 ; >
+        au < doNotProcess ; exists ; 1982 ; Gold Bulletin Volume 15 ; 15 ; >
+        au < doNotProcess ; exists ; 1983 ; Gold Bulletin Volume 16 ; 16 ; >
+        au < doNotProcess ; exists ; 1984 ; Gold Bulletin Volume 17 ; 17 ; >
+        au < doNotProcess ; exists ; 1985 ; Gold Bulletin Volume 18 ; 18 ; >
+        au < doNotProcess ; exists ; 1986 ; Gold Bulletin Volume 19 ; 19 ; >
+        au < doNotProcess ; exists ; 1987 ; Gold Bulletin Volume 20 ; 20 ; >
+        au < doNotProcess ; exists ; 1988 ; Gold Bulletin Volume 21 ; 21 ; >
+        au < doNotProcess ; exists ; 1989 ; Gold Bulletin Volume 22 ; 22 ; >
+        au < doNotProcess ; exists ; 1990 ; Gold Bulletin Volume 23 ; 23 ; >
+        au < doNotProcess ; exists ; 1991 ; Gold Bulletin Volume 24 ; 24 ; >
+        au < doNotProcess ; exists ; 1992 ; Gold Bulletin Volume 25 ; 25 ; >
+        au < doNotProcess ; exists ; 1993 ; Gold Bulletin Volume 26 ; 26 ; >
+        au < doNotProcess ; exists ; 1994 ; Gold Bulletin Volume 27 ; 27 ; >
+        au < doNotProcess ; exists ; 1995 ; Gold Bulletin Volume 28 ; 28 ; >
+        au < doNotProcess ; exists ; 1996 ; Gold Bulletin Volume 29 ; 29 ; >
+        au < doNotProcess ; exists ; 1997 ; Gold Bulletin Volume 30 ; 30 ; >
+        au < doNotProcess ; exists ; 1998 ; Gold Bulletin Volume 31 ; 31 ; >
+        au < doNotProcess ; exists ; 1999 ; Gold Bulletin Volume 32 ; 32 ; >
+        au < doNotProcess ; exists ; 2000 ; Gold Bulletin Volume 33 ; 33 ; >
+        au < doNotProcess ; exists ; 2001 ; Gold Bulletin Volume 34 ; 34 ; >
+        au < doNotProcess ; exists ; 2002 ; Gold Bulletin Volume 35 ; 35 ; >
+        au < doNotProcess ; exists ; 2003 ; Gold Bulletin Volume 36 ; 36 ; >
+        au < doNotProcess ; exists ; 2004 ; Gold Bulletin Volume 37 ; 37 ; >
+        au < doNotProcess ; exists ; 2005 ; Gold Bulletin Volume 38 ; 38 ; >
+        au < doNotProcess ; exists ; 2006 ; Gold Bulletin Volume 39 ; 39 ; >
+        au < doNotProcess ; exists ; 2007 ; Gold Bulletin Volume 40 ; 40 ; >
+        au < doNotProcess ; exists ; 2008 ; Gold Bulletin Volume 41 ; 41 ; >
+        au < doNotProcess ; exists ; 2009 ; Gold Bulletin Volume 42 ; 42 ; >
+        au < doNotProcess ; exists ; 2010 ; Gold Bulletin Volume 43 ; 43 ; >
+        au < doNotProcess ; exists ; 2011 ; Gold Bulletin Volume 44 ; 44 ; >
+        au < doNotProcess ; exists ; 2012 ; Gold Bulletin Volume 45 ; 45 ; >
+        au < doNotProcess ; exists ; 2013 ; Gold Bulletin Volume 46 ; 46 ; >
+        au < doNotProcess ; exists ; 2014 ; Gold Bulletin Volume 47 ; 47 ; >
+        au < doNotProcess ; exists ; 2015 ; Gold Bulletin Volume 48 ; 48 ; >
   
     }
   
@@ -2960,7 +2960,7 @@
         param[journal_issn] = 0775-0501
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2015 ; Huisarts Nu Volume 44 ; 44 >
+        au < doNotProcess ; exists ; 2015 ; Huisarts Nu Volume 44 ; 44 ; >
   
     }
   
@@ -2975,12 +2975,12 @@
         param[journal_issn] = 1869-4101
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2010 ; Insights into Imaging Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2011 ; Insights into Imaging Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2012 ; Insights into Imaging Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2013 ; Insights into Imaging Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2014 ; Insights into Imaging Volume 5 ; 5 >
-        au < doNotProcess ; exists ; 2015 ; Insights into Imaging Volume 6 ; 6 >
+        au < doNotProcess ; exists ; 2010 ; Insights into Imaging Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2011 ; Insights into Imaging Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2012 ; Insights into Imaging Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2013 ; Insights into Imaging Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2014 ; Insights into Imaging Volume 5 ; 5 ; >
+        au < doNotProcess ; exists ; 2015 ; Insights into Imaging Volume 6 ; 6 ; >
   
     }
   
@@ -2997,10 +2997,10 @@
         comment[platform] = Springer
         comment[0] = content prior to 2012, not with Springer
   
-        au < doNotProcess ; exists ; 2012 ; International Journal of Concrete Structures and Materials Volume 6 ; 6 >
-        au < doNotProcess ; exists ; 2013 ; International Journal of Concrete Structures and Materials Volume 7 ; 7 >
-        au < doNotProcess ; exists ; 2014 ; International Journal of Concrete Structures and Materials Volume 8 ; 8 >
-        au < doNotProcess ; exists ; 2015 ; International Journal of Concrete Structures and Materials Volume 9 ; 9 >
+        au < doNotProcess ; exists ; 2012 ; International Journal of Concrete Structures and Materials Volume 6 ; 6 ; >
+        au < doNotProcess ; exists ; 2013 ; International Journal of Concrete Structures and Materials Volume 7 ; 7 ; >
+        au < doNotProcess ; exists ; 2014 ; International Journal of Concrete Structures and Materials Volume 8 ; 8 ; >
+        au < doNotProcess ; exists ; 2015 ; International Journal of Concrete Structures and Materials Volume 9 ; 9 ; >
   
     }
   
@@ -3016,12 +3016,12 @@
         param[journal_issn] = 2095-0055
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2010 ; International Journal of Disaster Risk Science Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2011 ; International Journal of Disaster Risk Science Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2012 ; International Journal of Disaster Risk Science Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2013 ; International Journal of Disaster Risk Science Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2014 ; International Journal of Disaster Risk Science Volume 5 ; 5 >
-        au < doNotProcess ; exists ; 2015 ; International Journal of Disaster Risk Science Volume 6 ; 6 >
+        au < doNotProcess ; exists ; 2010 ; International Journal of Disaster Risk Science Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2011 ; International Journal of Disaster Risk Science Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2012 ; International Journal of Disaster Risk Science Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2013 ; International Journal of Disaster Risk Science Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2014 ; International Journal of Disaster Risk Science Volume 5 ; 5 ; >
+        au < doNotProcess ; exists ; 2015 ; International Journal of Disaster Risk Science Volume 6 ; 6 ; >
   
     }
   
@@ -3037,7 +3037,7 @@
         param[journal_issn] = 1562-2479
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2015 ; International Journal of Fuzzy Systems Volume 17 ; 17 >
+        au < doNotProcess ; exists ; 2015 ; International Journal of Fuzzy Systems Volume 17 ; 17 ; >
 
     }
   
@@ -3053,8 +3053,8 @@
         param[journal_issn] = 1939-5981
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2007 ; International Journal of Metalcasting Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2008 ; International Journal of Metalcasting Volume 2 ; 2 >
+        au < doNotProcess ; exists ; 2007 ; International Journal of Metalcasting Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2008 ; International Journal of Metalcasting Volume 2 ; 2 ; >
 
     }
 
@@ -3069,7 +3069,7 @@
         param[journal_issn] = 2363-9024
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2015 ; JA Clinical Reports Volume 1 ; 1 >
+        au < doNotProcess ; exists ; 2015 ; JA Clinical Reports Volume 1 ; 1 ; >
 
     }
 
@@ -3084,10 +3084,10 @@
         param[journal_issn] = 2226-4108
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2012 ; Journal of Advanced Ceramics Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2013 ; Journal of Advanced Ceramics Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2014 ; Journal of Advanced Ceramics Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2015 ; Journal of Advanced Ceramics Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; Journal of Advanced Ceramics Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2013 ; Journal of Advanced Ceramics Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2014 ; Journal of Advanced Ceramics Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2015 ; Journal of Advanced Ceramics Volume 4 ; 4 ; >
   
     }
 
@@ -3103,15 +3103,15 @@
         param[journal_issn] = 1863-2521
         comment[platform] = Springer
 
-        au < doNotProcess ; exists ; 2007 ; Journal of Children's Orthopaedics Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2008 ; Journal of Children's Orthopaedics Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2009 ; Journal of Children's Orthopaedics Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2010 ; Journal of Children's Orthopaedics Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2011 ; Journal of Children's Orthopaedics Volume 5 ; 5 >
-        au < doNotProcess ; exists ; 2012 ; Journal of Children's Orthopaedics Volume 6 ; 6 >
-        au < doNotProcess ; exists ; 2013 ; Journal of Children's Orthopaedics Volume 7 ; 7 >
-        au < doNotProcess ; exists ; 2014 ; Journal of Children's Orthopaedics Volume 8 ; 8 >
-        au < doNotProcess ; exists ; 2015 ; Journal of Children's Orthopaedics Volume 9 ; 9 >
+        au < doNotProcess ; exists ; 2007 ; Journal of Children's Orthopaedics Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2008 ; Journal of Children's Orthopaedics Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2009 ; Journal of Children's Orthopaedics Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2010 ; Journal of Children's Orthopaedics Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2011 ; Journal of Children's Orthopaedics Volume 5 ; 5 ; >
+        au < doNotProcess ; exists ; 2012 ; Journal of Children's Orthopaedics Volume 6 ; 6 ; >
+        au < doNotProcess ; exists ; 2013 ; Journal of Children's Orthopaedics Volume 7 ; 7 ; >
+        au < doNotProcess ; exists ; 2014 ; Journal of Children's Orthopaedics Volume 8 ; 8 ; >
+        au < doNotProcess ; exists ; 2015 ; Journal of Children's Orthopaedics Volume 9 ; 9 ; >
 
     }
 
@@ -3126,7 +3126,7 @@
         param[journal_issn] = 2072-1315
         comment[platform] = Springer
 
-        au < doNotProcess ; exists ; 2015 ; Journal of Health, Population and Nutrition Volume 34 ; 34 >
+        au < doNotProcess ; exists ; 2015 ; Journal of Health, Population and Nutrition Volume 34 ; 34 ; >
 
     }
 
@@ -3142,7 +3142,7 @@
         param[journal_issn] = 0970-7794
         comment[platform] = Springer
 
-        au < doNotProcess ; exists ; 2015 ; Journal of Indian Council of Philosophical Research Volume 1 ; 1 >
+        au < doNotProcess ; exists ; 2015 ; Journal of Indian Council of Philosophical Research Volume 1 ; 1 ; >
 
     }
 
@@ -3157,7 +3157,7 @@
         param[journal_issn] = 2364-3404
         comment[platform] = Springer
 
-        au < doNotProcess ; exists ; 2015 ; Journal of International Humanitarian Action Volume 1 ; 1 >
+        au < doNotProcess ; exists ; 2015 ; Journal of International Humanitarian Action Volume 1 ; 1 ; >
 
     }
 
@@ -3173,7 +3173,7 @@
         param[journal_issn] = 1609-0985
         comment[platform] = Springer
 
-        au < doNotProcess ; exists ; 2015 ; Journal of Medical and Biological Engineering Volume 35 ; 35 >
+        au < doNotProcess ; exists ; 2015 ; Journal of Medical and Biological Engineering Volume 35 ; 35 ; >
 
     }
 
@@ -3189,22 +3189,22 @@
         param[journal_issn] = 1590-9921
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2000 ; Journal of Orthopaedics and Traumatology Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2001 ; Journal of Orthopaedics and Traumatology Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2002 ; Journal of Orthopaedics and Traumatology Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2003 ; Journal of Orthopaedics and Traumatology Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2004 ; Journal of Orthopaedics and Traumatology Volume 5 ; 5 >
-        au < doNotProcess ; exists ; 2005 ; Journal of Orthopaedics and Traumatology Volume 6 ; 6 >
-        au < doNotProcess ; exists ; 2006 ; Journal of Orthopaedics and Traumatology Volume 7 ; 7 >
-        au < doNotProcess ; exists ; 2007 ; Journal of Orthopaedics and Traumatology Volume 8 ; 8 >
-        au < doNotProcess ; exists ; 2008 ; Journal of Orthopaedics and Traumatology Volume 9 ; 9 >
-        au < doNotProcess ; exists ; 2009 ; Journal of Orthopaedics and Traumatology Volume 10 ; 10 >
-        au < doNotProcess ; exists ; 2010 ; Journal of Orthopaedics and Traumatology Volume 11 ; 11 >
-        au < doNotProcess ; exists ; 2011 ; Journal of Orthopaedics and Traumatology Volume 12 ; 12 >
-        au < doNotProcess ; exists ; 2012 ; Journal of Orthopaedics and Traumatology Volume 13 ; 13 >
-        au < doNotProcess ; exists ; 2013 ; Journal of Orthopaedics and Traumatology Volume 14 ; 14 >
-        au < doNotProcess ; exists ; 2014 ; Journal of Orthopaedics and Traumatology Volume 15 ; 15 >
-        au < doNotProcess ; exists ; 2015 ; Journal of Orthopaedics and Traumatology Volume 16 ; 16 >
+        au < doNotProcess ; exists ; 2000 ; Journal of Orthopaedics and Traumatology Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2001 ; Journal of Orthopaedics and Traumatology Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2002 ; Journal of Orthopaedics and Traumatology Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2003 ; Journal of Orthopaedics and Traumatology Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2004 ; Journal of Orthopaedics and Traumatology Volume 5 ; 5 ; >
+        au < doNotProcess ; exists ; 2005 ; Journal of Orthopaedics and Traumatology Volume 6 ; 6 ; >
+        au < doNotProcess ; exists ; 2006 ; Journal of Orthopaedics and Traumatology Volume 7 ; 7 ; >
+        au < doNotProcess ; exists ; 2007 ; Journal of Orthopaedics and Traumatology Volume 8 ; 8 ; >
+        au < doNotProcess ; exists ; 2008 ; Journal of Orthopaedics and Traumatology Volume 9 ; 9 ; >
+        au < doNotProcess ; exists ; 2009 ; Journal of Orthopaedics and Traumatology Volume 10 ; 10 ; >
+        au < doNotProcess ; exists ; 2010 ; Journal of Orthopaedics and Traumatology Volume 11 ; 11 ; >
+        au < doNotProcess ; exists ; 2011 ; Journal of Orthopaedics and Traumatology Volume 12 ; 12 ; >
+        au < doNotProcess ; exists ; 2012 ; Journal of Orthopaedics and Traumatology Volume 13 ; 13 ; >
+        au < doNotProcess ; exists ; 2013 ; Journal of Orthopaedics and Traumatology Volume 14 ; 14 ; >
+        au < doNotProcess ; exists ; 2014 ; Journal of Orthopaedics and Traumatology Volume 15 ; 15 ; >
+        au < doNotProcess ; exists ; 2015 ; Journal of Orthopaedics and Traumatology Volume 16 ; 16 ; >
   
     }
   
@@ -3220,11 +3220,11 @@
         param[journal_issn] = 2190-0558
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2011 ; Journal of Petroleum Exploration and Production Technologies Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2012 ; Journal of Petroleum Exploration and Production Technologies Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2013 ; Journal of Petroleum Exploration and Production Technologies Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2014 ; Journal of Petroleum Exploration and Production Technologies Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2015 ; Journal of Petroleum Exploration and Production Technologies Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2011 ; Journal of Petroleum Exploration and Production Technologies Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2012 ; Journal of Petroleum Exploration and Production Technologies Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2013 ; Journal of Petroleum Exploration and Production Technologies Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2014 ; Journal of Petroleum Exploration and Production Technologies Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2015 ; Journal of Petroleum Exploration and Production Technologies Volume 5 ; 5 ; >
   
     }
 
@@ -3240,14 +3240,14 @@
         param[journal_issn] = 1865-0368
         comment[platform] = Springer
 
-        au < doNotProcess ; exists ; 2009 ; Logistics Research Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2010 ; Logistics Research Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2011 ; Logistics Research Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2012 ; Logistics Research Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2012 ; Logistics Research Volume 5 ; 5 >
-        au < doNotProcess ; exists ; 2013 ; Logistics Research Volume 6 ; 6 >
-        au < doNotProcess ; exists ; 2014 ; Logistics Research Volume 7 ; 7 >
-        au < doNotProcess ; exists ; 2015 ; Logistics Research Volume 8 ; 8 >
+        au < doNotProcess ; exists ; 2009 ; Logistics Research Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2010 ; Logistics Research Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2011 ; Logistics Research Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2012 ; Logistics Research Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2012 ; Logistics Research Volume 5 ; 5 ; >
+        au < doNotProcess ; exists ; 2013 ; Logistics Research Volume 6 ; 6 ; >
+        au < doNotProcess ; exists ; 2014 ; Logistics Research Volume 7 ; 7 ; >
+        au < doNotProcess ; exists ; 2015 ; Logistics Research Volume 8 ; 8 ; >
 
     }
 
@@ -3263,10 +3263,10 @@
         param[journal_issn] = 2194-1459
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2012 ; Materials for Renewable and Sustainable Energy Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2013 ; Materials for Renewable and Sustainable Energy Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2014 ; Materials for Renewable and Sustainable Energy Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2015 ; Materials for Renewable and Sustainable Energy Volume 4 ; 4 >
+        au < doNotProcess ; exists ; 2012 ; Materials for Renewable and Sustainable Energy Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2013 ; Materials for Renewable and Sustainable Energy Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2014 ; Materials for Renewable and Sustainable Energy Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2015 ; Materials for Renewable and Sustainable Energy Volume 4 ; 4 ; >
   
     }
   
@@ -3281,11 +3281,11 @@
         param[journal_issn] = 2192-2209
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2011 ; Natural Products and Bioprospecting Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2012 ; Natural Products and Bioprospecting Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2013 ; Natural Products and Bioprospecting Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2014 ; Natural Products and Bioprospecting Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2015 ; Natural Products and Bioprospecting Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2011 ; Natural Products and Bioprospecting Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2012 ; Natural Products and Bioprospecting Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2013 ; Natural Products and Bioprospecting Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2014 ; Natural Products and Bioprospecting Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2015 ; Natural Products and Bioprospecting Volume 5 ; 5 ; >
   
     }
   
@@ -3301,24 +3301,24 @@
         param[journal_issn] = 0165-070X
         comment[platform] = Springer
 
-        au < doNotProcess ; exists ; 1998 ; Netherlands International Law Review Volume 45 ; 45 >
-        au < doNotProcess ; exists ; 1999 ; Netherlands International Law Review Volume 46 ; 46 >
-        au < doNotProcess ; exists ; 2000 ; Netherlands International Law Review Volume 47 ; 47 >
-        au < doNotProcess ; exists ; 2001 ; Netherlands International Law Review Volume 48 ; 48 >
-        au < doNotProcess ; exists ; 2002 ; Netherlands International Law Review Volume 49 ; 49 >
-        au < doNotProcess ; exists ; 2003 ; Netherlands International Law Review Volume 50 ; 50 >
-        au < doNotProcess ; exists ; 2004 ; Netherlands International Law Review Volume 51 ; 51 >
-        au < doNotProcess ; exists ; 2005 ; Netherlands International Law Review Volume 52 ; 52 >
-        au < doNotProcess ; exists ; 2006 ; Netherlands International Law Review Volume 53 ; 53 >
-        au < doNotProcess ; exists ; 2007 ; Netherlands International Law Review Volume 54 ; 54 >
-        au < doNotProcess ; exists ; 2008 ; Netherlands International Law Review Volume 55 ; 55 >
-        au < doNotProcess ; exists ; 2009 ; Netherlands International Law Review Volume 56 ; 56 >
-        au < doNotProcess ; exists ; 2010 ; Netherlands International Law Review Volume 57 ; 57 >
-        au < doNotProcess ; exists ; 2011 ; Netherlands International Law Review Volume 58 ; 58 >
-        au < doNotProcess ; exists ; 2012 ; Netherlands International Law Review Volume 59 ; 59 >
-        au < doNotProcess ; exists ; 2013 ; Netherlands International Law Review Volume 60 ; 60 >
-        au < doNotProcess ; exists ; 2014 ; Netherlands International Law Review Volume 61 ; 61 >
-        au < doNotProcess ; exists ; 2015 ; Netherlands International Law Review Volume 62 ; 62 >
+        au < doNotProcess ; exists ; 1998 ; Netherlands International Law Review Volume 45 ; 45 ; >
+        au < doNotProcess ; exists ; 1999 ; Netherlands International Law Review Volume 46 ; 46 ; >
+        au < doNotProcess ; exists ; 2000 ; Netherlands International Law Review Volume 47 ; 47 ; >
+        au < doNotProcess ; exists ; 2001 ; Netherlands International Law Review Volume 48 ; 48 ; >
+        au < doNotProcess ; exists ; 2002 ; Netherlands International Law Review Volume 49 ; 49 ; >
+        au < doNotProcess ; exists ; 2003 ; Netherlands International Law Review Volume 50 ; 50 ; >
+        au < doNotProcess ; exists ; 2004 ; Netherlands International Law Review Volume 51 ; 51 ; >
+        au < doNotProcess ; exists ; 2005 ; Netherlands International Law Review Volume 52 ; 52 ; >
+        au < doNotProcess ; exists ; 2006 ; Netherlands International Law Review Volume 53 ; 53 ; >
+        au < doNotProcess ; exists ; 2007 ; Netherlands International Law Review Volume 54 ; 54 ; >
+        au < doNotProcess ; exists ; 2008 ; Netherlands International Law Review Volume 55 ; 55 ; >
+        au < doNotProcess ; exists ; 2009 ; Netherlands International Law Review Volume 56 ; 56 ; >
+        au < doNotProcess ; exists ; 2010 ; Netherlands International Law Review Volume 57 ; 57 ; >
+        au < doNotProcess ; exists ; 2011 ; Netherlands International Law Review Volume 58 ; 58 ; >
+        au < doNotProcess ; exists ; 2012 ; Netherlands International Law Review Volume 59 ; 59 ; >
+        au < doNotProcess ; exists ; 2013 ; Netherlands International Law Review Volume 60 ; 60 ; >
+        au < doNotProcess ; exists ; 2014 ; Netherlands International Law Review Volume 61 ; 61 ; >
+        au < doNotProcess ; exists ; 2015 ; Netherlands International Law Review Volume 62 ; 62 ; >
 
     }
   
@@ -3334,7 +3334,7 @@
         param[journal_issn] = 0028-8276
         comment[platform] = Springer
 
-        au < doNotProcess ; exists ; 2015 ; New Zealand Journal of Educational Studies Volume 1 ; 1 >
+        au < doNotProcess ; exists ; 2015 ; New Zealand Journal of Educational Studies Volume 1 ; 1 ; >
 
     }
   
@@ -3350,20 +3350,20 @@
         param[journal_issn] = 1740-3812
         comment[platform] = Springer
 
-        au < doNotProcess ; exists ; 2001 ; Philosophy of Management Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2002 ; Philosophy of Management Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2003 ; Philosophy of Management Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2004 ; Philosophy of Management Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2005 ; Philosophy of Management Volume 5 ; 5 >
-        au < doNotProcess ; exists ; 2007-2008 ; Philosophy of Management Volume 6 ; 6 >
-        au < doNotProcess ; exists ; 2008-2009 ; Philosophy of Management Volume 7 ; 7 >
-        au < doNotProcess ; exists ; 2009 ; Philosophy of Management Volume 8 ; 8 >
-        au < doNotProcess ; exists ; 2010 ; Philosophy of Management Volume 9 ; 9 >
-        au < doNotProcess ; exists ; 2011 ; Philosophy of Management Volume 10 ; 10 >
-        au < doNotProcess ; exists ; 2012 ; Philosophy of Management Volume 11 ; 11 >
-        au < doNotProcess ; exists ; 2013 ; Philosophy of Management Volume 12 ; 12 >
-        au < doNotProcess ; exists ; 2014 ; Philosophy of Management Volume 13 ; 13 >
-        au < doNotProcess ; exists ; 2015 ; Philosophy of Management Volume 14 ; 14 >
+        au < doNotProcess ; exists ; 2001 ; Philosophy of Management Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2002 ; Philosophy of Management Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2003 ; Philosophy of Management Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2004 ; Philosophy of Management Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2005 ; Philosophy of Management Volume 5 ; 5 ; >
+        au < doNotProcess ; exists ; 2007-2008 ; Philosophy of Management Volume 6 ; 6 ; >
+        au < doNotProcess ; exists ; 2008-2009 ; Philosophy of Management Volume 7 ; 7 ; >
+        au < doNotProcess ; exists ; 2009 ; Philosophy of Management Volume 8 ; 8 ; >
+        au < doNotProcess ; exists ; 2010 ; Philosophy of Management Volume 9 ; 9 ; >
+        au < doNotProcess ; exists ; 2011 ; Philosophy of Management Volume 10 ; 10 ; >
+        au < doNotProcess ; exists ; 2012 ; Philosophy of Management Volume 11 ; 11 ; >
+        au < doNotProcess ; exists ; 2013 ; Philosophy of Management Volume 12 ; 12 ; >
+        au < doNotProcess ; exists ; 2014 ; Philosophy of Management Volume 13 ; 13 ; >
+        au < doNotProcess ; exists ; 2015 ; Philosophy of Management Volume 14 ; 14 ; >
 
     }
   
@@ -3379,11 +3379,11 @@
         param[journal_issn] = 1674-9251
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2011 ; Photonic Sensors Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2012 ; Photonic Sensors Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2013 ; Photonic Sensors Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2014 ; Photonic Sensors Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2015 ; Photonic Sensors Volume 5 ; 5 >
+        au < doNotProcess ; exists ; 2011 ; Photonic Sensors Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2012 ; Photonic Sensors Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2013 ; Photonic Sensors Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2014 ; Photonic Sensors Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2015 ; Photonic Sensors Volume 5 ; 5 ; >
 
     }
   
@@ -3401,15 +3401,15 @@
         comment[0] = no issue in 2007
         comment[moved] = This journal will be discontinued at the end of 2012
   
-        au < doNotProcess ; exists ; 2001-2003 ; Poiesis & Praxis Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2003-2004 ; Poiesis & Praxis Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2004-2005 ; Poiesis & Praxis Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2006 ; Poiesis & Praxis Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2008 ; Poiesis & Praxis Volume 5 ; 5 >
-        au < doNotProcess ; exists ; 2009 ; Poiesis & Praxis Volume 6 ; 6 >
-        au < doNotProcess ; exists ; 2010-2011 ; Poiesis & Praxis Volume 7 ; 7 >
-        au < doNotProcess ; exists ; 2011-2012 ; Poiesis & Praxis Volume 8 ; 8 >
-        au < doNotProcess ; exists ; 2012 ; Poiesis & Praxis Volume 9 ; 9 >
+        au < doNotProcess ; exists ; 2001-2003 ; Poiesis & Praxis Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2003-2004 ; Poiesis & Praxis Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2004-2005 ; Poiesis & Praxis Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2006 ; Poiesis & Praxis Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2008 ; Poiesis & Praxis Volume 5 ; 5 ; >
+        au < doNotProcess ; exists ; 2009 ; Poiesis & Praxis Volume 6 ; 6 ; >
+        au < doNotProcess ; exists ; 2010-2011 ; Poiesis & Praxis Volume 7 ; 7 ; >
+        au < doNotProcess ; exists ; 2011-2012 ; Poiesis & Praxis Volume 8 ; 8 ; >
+        au < doNotProcess ; exists ; 2012 ; Poiesis & Praxis Volume 9 ; 9 ; >
   
     }
 
@@ -3425,12 +3425,12 @@
         param[journal_issn] = 1674-8018
         comment[platform] = Springer
 
-        au < doNotProcess ; exists ; 2010 ; Protein & Cell Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2011 ; Protein & Cell Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2012 ; Protein & Cell Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2013 ; Protein & Cell Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2014 ; Protein & Cell Volume 5 ; 5 >
-        au < doNotProcess ; exists ; 2015 ; Protein & Cell Volume 6 ; 6 >
+        au < doNotProcess ; exists ; 2010 ; Protein & Cell Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2011 ; Protein & Cell Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2012 ; Protein & Cell Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2013 ; Protein & Cell Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2014 ; Protein & Cell Volume 5 ; 5 ; >
+        au < doNotProcess ; exists ; 2015 ; Protein & Cell Volume 6 ; 6 ; >
 
     }
 
@@ -3445,7 +3445,7 @@
         param[journal_issn] = 2107-6952
         comment[platform] = Springer
 
-        au < doNotProcess ; exists ; 2015 ; Public Health Reviews Volume 36 ; 36 >
+        au < doNotProcess ; exists ; 2015 ; Public Health Reviews Volume 36 ; 36 ; >
 
     }
 
@@ -3462,7 +3462,7 @@
         comment[platform] = Springer
         comment[continues] = 1001-6538
 
-        au < doNotProcess ; exists ; 2015 ; Science Bulletin Volume 60 ; 60 >
+        au < doNotProcess ; exists ; 2015 ; Science Bulletin Volume 60 ; 60 ; >
 
     }
 
@@ -3478,25 +3478,25 @@
         param[journal_issn] = 1674-7305
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 1997 ; SCIENCE CHINA Life Sciences Volume 40 ; 40 >
-        au < doNotProcess ; exists ; 1998 ; SCIENCE CHINA Life Sciences Volume 41 ; 41 >
-        au < doNotProcess ; exists ; 1999 ; SCIENCE CHINA Life Sciences Volume 42 ; 42 >
-        au < doNotProcess ; exists ; 2000 ; SCIENCE CHINA Life Sciences Volume 43 ; 43 >
-        au < doNotProcess ; exists ; 2001 ; SCIENCE CHINA Life Sciences Volume 44 ; 44 >
-        au < doNotProcess ; exists ; 2002 ; SCIENCE CHINA Life Sciences Volume 45 ; 45 >
-        au < doNotProcess ; exists ; 2003 ; SCIENCE CHINA Life Sciences Volume 46 ; 46 >
-        au < doNotProcess ; exists ; 2004 ; SCIENCE CHINA Life Sciences Volume 47 ; 47 >
-        au < doNotProcess ; exists ; 2005 ; SCIENCE CHINA Life Sciences Volume 48 ; 48 >
-        au < doNotProcess ; exists ; 2006 ; SCIENCE CHINA Life Sciences Volume 49 ; 49 >
-        au < doNotProcess ; exists ; 2007 ; SCIENCE CHINA Life Sciences Volume 50 ; 50 >
-        au < doNotProcess ; exists ; 2008 ; SCIENCE CHINA Life Sciences Volume 51 ; 51 >
-        au < doNotProcess ; exists ; 2009 ; SCIENCE CHINA Life Sciences Volume 52 ; 52 >
-        au < doNotProcess ; exists ; 2010 ; SCIENCE CHINA Life Sciences Volume 53 ; 53 >
-        au < doNotProcess ; exists ; 2011 ; SCIENCE CHINA Life Sciences Volume 54 ; 54 >
-        au < doNotProcess ; exists ; 2012 ; SCIENCE CHINA Life Sciences Volume 55 ; 55 >
-        au < doNotProcess ; exists ; 2013 ; SCIENCE CHINA Life Sciences Volume 56 ; 56 >
-        au < doNotProcess ; exists ; 2014 ; SCIENCE CHINA Life Sciences Volume 57 ; 57 >
-        au < doNotProcess ; exists ; 2015 ; SCIENCE CHINA Life Sciences Volume 58 ; 58 >
+        au < doNotProcess ; exists ; 1997 ; SCIENCE CHINA Life Sciences Volume 40 ; 40 ; >
+        au < doNotProcess ; exists ; 1998 ; SCIENCE CHINA Life Sciences Volume 41 ; 41 ; >
+        au < doNotProcess ; exists ; 1999 ; SCIENCE CHINA Life Sciences Volume 42 ; 42 ; >
+        au < doNotProcess ; exists ; 2000 ; SCIENCE CHINA Life Sciences Volume 43 ; 43 ; >
+        au < doNotProcess ; exists ; 2001 ; SCIENCE CHINA Life Sciences Volume 44 ; 44 ; >
+        au < doNotProcess ; exists ; 2002 ; SCIENCE CHINA Life Sciences Volume 45 ; 45 ; >
+        au < doNotProcess ; exists ; 2003 ; SCIENCE CHINA Life Sciences Volume 46 ; 46 ; >
+        au < doNotProcess ; exists ; 2004 ; SCIENCE CHINA Life Sciences Volume 47 ; 47 ; >
+        au < doNotProcess ; exists ; 2005 ; SCIENCE CHINA Life Sciences Volume 48 ; 48 ; >
+        au < doNotProcess ; exists ; 2006 ; SCIENCE CHINA Life Sciences Volume 49 ; 49 ; >
+        au < doNotProcess ; exists ; 2007 ; SCIENCE CHINA Life Sciences Volume 50 ; 50 ; >
+        au < doNotProcess ; exists ; 2008 ; SCIENCE CHINA Life Sciences Volume 51 ; 51 ; >
+        au < doNotProcess ; exists ; 2009 ; SCIENCE CHINA Life Sciences Volume 52 ; 52 ; >
+        au < doNotProcess ; exists ; 2010 ; SCIENCE CHINA Life Sciences Volume 53 ; 53 ; >
+        au < doNotProcess ; exists ; 2011 ; SCIENCE CHINA Life Sciences Volume 54 ; 54 ; >
+        au < doNotProcess ; exists ; 2012 ; SCIENCE CHINA Life Sciences Volume 55 ; 55 ; >
+        au < doNotProcess ; exists ; 2013 ; SCIENCE CHINA Life Sciences Volume 56 ; 56 ; >
+        au < doNotProcess ; exists ; 2014 ; SCIENCE CHINA Life Sciences Volume 57 ; 57 ; >
+        au < doNotProcess ; exists ; 2015 ; SCIENCE CHINA Life Sciences Volume 58 ; 58 ; >
   
     }
   
@@ -3512,12 +3512,12 @@
         param[journal_issn] = 1869-4187
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2010 ; SERIEs: Journal of the Spanish Economic Association Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2011 ; SERIEs: Journal of the Spanish Economic Association Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2012 ; SERIEs: Journal of the Spanish Economic Association Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2013 ; SERIEs: Journal of the Spanish Economic Association Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2014 ; SERIEs: Journal of the Spanish Economic Association Volume 5 ; 5 >
-        au < doNotProcess ; exists ; 2015 ; SERIEs: Journal of the Spanish Economic Association Volume 6 ; 6 >
+        au < doNotProcess ; exists ; 2010 ; SERIEs: Journal of the Spanish Economic Association Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2011 ; SERIEs: Journal of the Spanish Economic Association Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2012 ; SERIEs: Journal of the Spanish Economic Association Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2013 ; SERIEs: Journal of the Spanish Economic Association Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2014 ; SERIEs: Journal of the Spanish Economic Association Volume 5 ; 5 ; >
+        au < doNotProcess ; exists ; 2015 ; SERIEs: Journal of the Spanish Economic Association Volume 6 ; 6 ; >
   
     }
   
@@ -3533,16 +3533,16 @@
         param[journal_issn] = 1828-8936
         comment[platform] = Springer
   
-        au < doNotProcess ; exists ; 2006 ; Strategies in Trauma and Limb Reconstruction Volume 1 ; 1 >
-        au < doNotProcess ; exists ; 2007 ; Strategies in Trauma and Limb Reconstruction Volume 2 ; 2 >
-        au < doNotProcess ; exists ; 2008 ; Strategies in Trauma and Limb Reconstruction Volume 3 ; 3 >
-        au < doNotProcess ; exists ; 2009 ; Strategies in Trauma and Limb Reconstruction Volume 4 ; 4 >
-        au < doNotProcess ; exists ; 2010 ; Strategies in Trauma and Limb Reconstruction Volume 5 ; 5 >
-        au < doNotProcess ; exists ; 2011 ; Strategies in Trauma and Limb Reconstruction Volume 6 ; 6 >
-        au < doNotProcess ; exists ; 2012 ; Strategies in Trauma and Limb Reconstruction Volume 7 ; 7 >
-        au < doNotProcess ; exists ; 2013 ; Strategies in Trauma and Limb Reconstruction Volume 8 ; 8 >
-        au < doNotProcess ; exists ; 2014 ; Strategies in Trauma and Limb Reconstruction Volume 9 ; 9 >
-        au < doNotProcess ; exists ; 2015 ; Strategies in Trauma and Limb Reconstruction Volume 10 ; 10 >
+        au < doNotProcess ; exists ; 2006 ; Strategies in Trauma and Limb Reconstruction Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2007 ; Strategies in Trauma and Limb Reconstruction Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2008 ; Strategies in Trauma and Limb Reconstruction Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2009 ; Strategies in Trauma and Limb Reconstruction Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2010 ; Strategies in Trauma and Limb Reconstruction Volume 5 ; 5 ; >
+        au < doNotProcess ; exists ; 2011 ; Strategies in Trauma and Limb Reconstruction Volume 6 ; 6 ; >
+        au < doNotProcess ; exists ; 2012 ; Strategies in Trauma and Limb Reconstruction Volume 7 ; 7 ; >
+        au < doNotProcess ; exists ; 2013 ; Strategies in Trauma and Limb Reconstruction Volume 8 ; 8 ; >
+        au < doNotProcess ; exists ; 2014 ; Strategies in Trauma and Limb Reconstruction Volume 9 ; 9 ; >
+        au < doNotProcess ; exists ; 2015 ; Strategies in Trauma and Limb Reconstruction Volume 10 ; 10 ; >
   
     }
   
@@ -3558,7 +3558,7 @@
         param[journal_issn] = 1983-2052
         comment[platform] = Springer
 
-        au < doNotProcess ; exists ; 2015 ; Tropical Plant Pathology Volume 40 ; 40 >
+        au < doNotProcess ; exists ; 2015 ; Tropical Plant Pathology Volume 40 ; 40 ; >
 
     }
 
@@ -3574,7 +3574,7 @@
         param[journal_issn] =  2364-0014
         comment[platform] = Springer
 
-        au < doNotProcess ; exists ; 2015 ; Zeitschrift für Weiterbildungsforschung - Report Volume 38 ; 38 >
+        au < doNotProcess ; exists ; 2015 ; Zeitschrift für Weiterbildungsforschung - Report Volume 38 ; 38 ; >
 
     }
 
@@ -3589,8 +3589,8 @@
       param[journal_issn] = 2197-7909
       comment[platform] = Springer
 
-      au < doNotProcess ; exists ; 2014 ; Computational Astrophysics and Cosmology Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2015 ; Computational Astrophysics and Cosmology Volume 2 ; 2 >
+      au < doNotProcess ; exists ; 2014 ; Computational Astrophysics and Cosmology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2015 ; Computational Astrophysics and Cosmology Volume 2 ; 2 ; >
 
     }
 
@@ -3605,8 +3605,8 @@
       param[journal_issn] = 2198-0802
       comment[platform] = Springer
 
-      au < doNotProcess ; exists ; 2014 ; Fashion and Textiles Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2015 ; Fashion and Textiles Volume 2 ; 2 >
+      au < doNotProcess ; exists ; 2014 ; Fashion and Textiles Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2015 ; Fashion and Textiles Volume 2 ; 2 ; >
 
     }
 
@@ -3621,8 +3621,8 @@
       param[journal_issn] = 2196-3258
       comment[platform] = Springer
 
-      au < doNotProcess ; exists ; 2014 ; Infrastructure Complexity Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2015 ; Infrastructure Complexity Volume 2 ; 2 >
+      au < doNotProcess ; exists ; 2014 ; Infrastructure Complexity Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2015 ; Infrastructure Complexity Volume 2 ; 2 ; >
 
     }
 
@@ -3637,9 +3637,9 @@
       param[journal_issn] = 2196-8802
       comment[platform] = Springer
 
-      au < doNotProcess ; exists ; 2013 ; International Journal of Dharma Studies Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2014 ; International Journal of Dharma Studies Volume 2 ; 2 >
-      au < doNotProcess ; exists ; 2015 ; International Journal of Dharma Studies Volume 3 ; 3 >
+      au < doNotProcess ; exists ; 2013 ; International Journal of Dharma Studies Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2014 ; International Journal of Dharma Studies Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2015 ; International Journal of Dharma Studies Volume 3 ; 3 ; >
 
     }
 
@@ -3655,8 +3655,8 @@
       param[journal_issn] = 2198-2791
       comment[platform] = Springer
 
-      au < doNotProcess ; exists ; 2014 ; International Journal of Mechanical and Materials Engineering Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2015 ; International Journal of Mechanical and Materials Engineering Volume 2 ; 2 >
+      au < doNotProcess ; exists ; 2014 ; International Journal of Mechanical and Materials Engineering Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2015 ; International Journal of Mechanical and Materials Engineering Volume 2 ; 2 ; >
 
     }
 
@@ -3671,12 +3671,12 @@
       param[journal_issn] = 1759-2208
       comment[platform] = Springer
 
-      au < doNotProcess ; exists ; 2010 ; Journal of Systems Chemistry Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2011 ; Journal of Systems Chemistry Volume 2 ; 2 >
-      au < doNotProcess ; exists ; 2012 ; Journal of Systems Chemistry Volume 3 ; 3 >
-      au < doNotProcess ; exists ; 2013 ; Journal of Systems Chemistry Volume 4 ; 4 >
-      au < doNotProcess ; exists ; 2014 ; Journal of Systems Chemistry Volume 5 ; 5 >
-      au < doNotProcess ; exists ; 2015 ; Journal of Systems Chemistry Volume 6 ; 6 >
+      au < doNotProcess ; exists ; 2010 ; Journal of Systems Chemistry Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2011 ; Journal of Systems Chemistry Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2012 ; Journal of Systems Chemistry Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2013 ; Journal of Systems Chemistry Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2014 ; Journal of Systems Chemistry Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2015 ; Journal of Systems Chemistry Volume 6 ; 6 ; >
 
     }
 
@@ -3692,18 +3692,18 @@
       param[journal_issn] = 1678-4804
       comment[platform] = Springer
 
-      au < doNotProcess ; exists ; 2004 ; Journal of the Brazilian Computer Society Volume 10 ; 10 >
-      au < doNotProcess ; exists ; 2005 ; Journal of the Brazilian Computer Society Volume 11 ; 11 >
-      au < doNotProcess ; exists ; 2006 ; Journal of the Brazilian Computer Society Volume 12 ; 12 >
-      au < doNotProcess ; exists ; 2007 ; Journal of the Brazilian Computer Society Volume 13 ; 13 >
-      au < doNotProcess ; exists ; 2008 ; Journal of the Brazilian Computer Society Volume 14 ; 14 >
-      au < doNotProcess ; exists ; 2009 ; Journal of the Brazilian Computer Society Volume 15 ; 15 >
-      au < doNotProcess ; exists ; 2010 ; Journal of the Brazilian Computer Society Volume 16 ; 16 >
-      au < doNotProcess ; exists ; 2011 ; Journal of the Brazilian Computer Society Volume 17 ; 17 >
-      au < doNotProcess ; exists ; 2012 ; Journal of the Brazilian Computer Society Volume 18 ; 18 >
-      au < doNotProcess ; exists ; 2013 ; Journal of the Brazilian Computer Society Volume 19 ; 19 >
-      au < doNotProcess ; exists ; 2014 ; Journal of the Brazilian Computer Society Volume 20 ; 20 >
-      au < doNotProcess ; exists ; 2015 ; Journal of the Brazilian Computer Society Volume 21 ; 21 >
+      au < doNotProcess ; exists ; 2004 ; Journal of the Brazilian Computer Society Volume 10 ; 10 ; >
+      au < doNotProcess ; exists ; 2005 ; Journal of the Brazilian Computer Society Volume 11 ; 11 ; >
+      au < doNotProcess ; exists ; 2006 ; Journal of the Brazilian Computer Society Volume 12 ; 12 ; >
+      au < doNotProcess ; exists ; 2007 ; Journal of the Brazilian Computer Society Volume 13 ; 13 ; >
+      au < doNotProcess ; exists ; 2008 ; Journal of the Brazilian Computer Society Volume 14 ; 14 ; >
+      au < doNotProcess ; exists ; 2009 ; Journal of the Brazilian Computer Society Volume 15 ; 15 ; >
+      au < doNotProcess ; exists ; 2010 ; Journal of the Brazilian Computer Society Volume 16 ; 16 ; >
+      au < doNotProcess ; exists ; 2011 ; Journal of the Brazilian Computer Society Volume 17 ; 17 ; >
+      au < doNotProcess ; exists ; 2012 ; Journal of the Brazilian Computer Society Volume 18 ; 18 ; >
+      au < doNotProcess ; exists ; 2013 ; Journal of the Brazilian Computer Society Volume 19 ; 19 ; >
+      au < doNotProcess ; exists ; 2014 ; Journal of the Brazilian Computer Society Volume 20 ; 20 ; >
+      au < doNotProcess ; exists ; 2015 ; Journal of the Brazilian Computer Society Volume 21 ; 21 ; >
 
     }
 
@@ -3718,8 +3718,8 @@
       param[journal_issn] = 2197-1927
       comment[platform] = Springer
 
-      au < doNotProcess ; exists ; 2014 ; Triple Helix Volume 1 ; 1 >
-      au < doNotProcess ; exists ; 2015 ; Triple Helix Volume 2 ; 2 >
+      au < doNotProcess ; exists ; 2014 ; Triple Helix Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2015 ; Triple Helix Volume 2 ; 2 ; >
 
     }
 

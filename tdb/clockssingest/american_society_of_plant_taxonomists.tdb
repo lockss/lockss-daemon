@@ -21,20 +21,20 @@
     param[publisher_id] = aspt
     param[journal_id] = sb 
     param[journal_issn] = 0363-6445
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
   
-      au < manifest ; exists ; 2004 ; Systematic Botany Volume 29 ; 29 >
-      au < manifest ; exists ; 2005 ; Systematic Botany Volume 30 ; 30 >
-      au < manifest ; exists ; 2006 ; Systematic Botany Volume 31 ; 31 >
-      au < manifest ; exists ; 2007 ; Systematic Botany Volume 32 ; 32 >
-      au < manifest ; exists ; 2008 ; Systematic Botany Volume 33 ; 33 >
-      au < manifest ; exists ; 2009 ; Systematic Botany Volume 34 ; 34 >
-      au < manifest ; exists ; 2010 ; Systematic Botany Volume 35 ; 35 >
-      au < manifest ; exists ; 2011 ; Systematic Botany Volume 36 ; 36 >
-      au < manifest ; exists ; 2012 ; Systematic Botany Volume 37 ; 37 >
-      au < crawling ; exists ; 2013 ; Systematic Botany Volume 38 ; 38 >
-      au < finished ; crawling ; 2014 ; Systematic Botany Volume 39 ; 39 >
-      au < crawling ; exists ; 2015 ; Systematic Botany Volume 40 ; 40 >
+      au < manifest ; exists ; 2004 ; Systematic Botany Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2005 ; Systematic Botany Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2006 ; Systematic Botany Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2007 ; Systematic Botany Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2008 ; Systematic Botany Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2009 ; Systematic Botany Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2010 ; Systematic Botany Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2011 ; Systematic Botany Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2012 ; Systematic Botany Volume 37 ; 37 ; >
+      au < crawling ; exists ; 2013 ; Systematic Botany Volume 38 ; 38 ; >
+      au < finished ; crawling ; 2014 ; Systematic Botany Volume 39 ; 39 ; >
+      au < crawling ; exists ; 2015 ; Systematic Botany Volume 40 ; 40 ; >
 
     }
 
