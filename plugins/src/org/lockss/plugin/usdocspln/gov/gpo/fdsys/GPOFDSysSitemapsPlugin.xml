@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>33</string>
+    <string>34</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -141,6 +141,10 @@
   <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.HttpToHttpsUtil$HttpToHttpsUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.highwire.HttpToHttpsUtil$HttpToHttpsUrlFetcherFactory</string>
   </entry>
   <entry>
     <string>au_crawl_depth</string>

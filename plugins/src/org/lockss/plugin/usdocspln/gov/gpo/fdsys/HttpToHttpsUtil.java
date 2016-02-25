@@ -1,10 +1,10 @@
 /*
- * $Id: ProjectMuseArticleIteratorFactory.java 40690 2015-03-18 18:12:56Z thib_gc $
+ * $Id: $
  */
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,20 +34,25 @@ package org.lockss.plugin.usdocspln.gov.gpo.fdsys;
 
 import java.io.IOException;
 import java.net.*;
+import java.util.ArrayList;
 
+import org.lockss.config.CurrentConfig;
 import org.lockss.daemon.*;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.SimpleUrlConsumer;
-import org.lockss.util.StringUtil;
+import org.lockss.plugin.base.*;
+import org.lockss.util.*;
+import org.lockss.util.urlconn.CacheException;
 
 /**
- * @deprecated In 1.70, use functionality of HttpToHttpsUrlConsumer,
- *             BaseUrlHttpHttpsUrlNormalizer, etc.
+ * @deprecated In 1.70, use functionality of HttpToHttpsUrlFetcher,
+ *             HttpToHttpsUrlConsumer, BaseUrlHttpHttpsUrlNormalizer, etc.
  */
 @Deprecated
 public class HttpToHttpsUtil {
 
+  public static final int VERSION = 2; // to help diagnose copy-paste errors
+  
   /**
    * @deprecated In 1.70, use the real AuUtil
    */
@@ -154,6 +159,150 @@ public class HttpToHttpsUtil {
       return new HttpToHttpsUrlConsumer(crawlFacade, fud);
     }
 
+  }
+
+  /**
+   * @deprecated In 1.70, use the real HttpToHttpsUrlFetcher
+   */
+  @Deprecated
+  public static class HttpToHttpsUrlFetcher extends BaseUrlFetcher {
+
+    private static final Logger log = Logger.getLogger(HttpToHttpsUrlFetcher.class);
+    
+    public HttpToHttpsUrlFetcher(CrawlerFacade crawlFacade, String url) {
+      super(crawlFacade, url);
+    }
+    
+    /** Handle a single redirect response: determine whether it should be
+     * followed and change the state (fetchUrl) to set up for the next fetch.
+     * @return true if another request should be issued, false if not. */
+    protected boolean processRedirectResponse() throws CacheException {
+      //get the location header to find out where to redirect to
+      String location = conn.getResponseHeaderValue("location");
+      if (location == null) {
+        // got a redirect response, but no location header
+        log.siteError("Received redirect response " + conn.getResponseCode()
+                         + " but no location header");
+        return false;
+      }
+      if (log.isDebug3()) {
+        log.debug3("Redirect requested from '" + fetchUrl +
+                      "' to '" + location + "'");
+      }
+      // update the current location with the redirect location.
+      try {
+        String resolvedLocation = org.lockss.util.UrlUtil.resolveUri(fetchUrl, location);
+        String newUrlString = resolvedLocation;
+        if (CurrentConfig.getBooleanParam(PARAM_NORMALIZE_REDIRECT_URL,
+                                          DEFAULT_NORMALIZE_REDIRECT_URL)) {
+          try {
+            newUrlString = org.lockss.util.UrlUtil.normalizeUrl(resolvedLocation, au);
+            log.debug3("Normalized to '" + newUrlString + "'");
+            if (isHttpToHttpsRedirect(fetchUrl, resolvedLocation, newUrlString)) {
+              log.debug3("HTTP to HTTPS redirect normalized back to HTTP; keeping '"
+                         + resolvedLocation + "'");
+              newUrlString = resolvedLocation;
+            }
+          } catch (PluginBehaviorException e) {
+            log.warning("Couldn't normalize redirect URL: " + newUrlString, e);
+          }
+        }
+        // Check redirect to login page *before* crawl spec, else plugins
+        // would have to include login page URLs in crawl spec
+        if (au.isLoginPageUrl(newUrlString)) {
+          String msg = "Redirected to login page: " + newUrlString;
+          throw new CacheException.PermissionException(msg);
+        }
+        if (redirectScheme.isRedirectOption(RedirectScheme.REDIRECT_OPTION_IF_CRAWL_SPEC)) {
+          if (!au.shouldBeCached(newUrlString)) {
+            String msg = "Redirected to excluded URL: " + newUrlString;
+            log.warning(msg + " redirected from: " + origUrl);
+            throw new CacheException.RedirectOutsideCrawlSpecException(msg);
+          }
+        }
+
+        if (!org.lockss.util.UrlUtil.isSameHost(fetchUrl, newUrlString)) {
+          if (redirectScheme.isRedirectOption(RedirectScheme.REDIRECT_OPTION_ON_HOST_ONLY)) {
+            log.warning("Redirect to different host: " + newUrlString +
+                           " from: " + origUrl);
+            return false;
+          } else if (!crawlFacade.hasPermission(newUrlString)) {
+            log.warning("No permission for redirect to different host: "
+                           + newUrlString + " from: " + origUrl);
+            return false;
+          }
+        }
+        releaseConnection();
+
+        // XXX
+        // The names .../foo and .../foo/ map to the same repository node, so
+        // the case of a slash-appending redirect requires special handling.
+        // (Still. sigh.)  The node should be written only once, so don't add
+        // another entry for the slash redirection.
+
+        if (!org.lockss.util.UrlUtil.isDirectoryRedirection(fetchUrl, newUrlString)) {
+          if (redirectUrls == null) {
+            redirectUrls = new ArrayList();
+          }
+          redirectUrls.add(newUrlString);
+        }
+        fetchUrl = newUrlString;
+        log.debug2("Following redirect to " + newUrlString);
+        return true;
+      } catch (MalformedURLException e) {
+        log.siteWarning("Redirected location '" + location +
+                           "' is malformed", e);
+        return false;
+      }
+    }
+    
+    /**
+     * <p>
+     * Determines if the triple of a fetch URL, its redirect URL, and the
+     * normalized redirect URL is an HTTP-to-HTTPS redirect that is then
+     * normalized back to the HTTP URL. In {@link BaseUrlFetcher}, this is always
+     * false. In this class ({@link HttpToHttpsUrlFetcher}), this is true if the
+     * redirect is otherwise exact and the fetch URL and normalized redirect URL
+     * are identical. (If some site slightly alters the redirect URL, for example
+     * in case, or if the URL normalizer does, then this method needs to be
+     * overridden to allow for more flexibility.)
+     * </p>
+     * 
+     * @param fetched
+     *          The fetch URL
+     * @param redirect
+     *          The redirect URL (the URL the fetch redirected to)
+     * @param normalized
+     *          The normalized redirect URL
+     * @return True if and only if the given triple represents an exact
+     *         HTTP-HTTPS-HTTP loop
+     * @since 1.70
+     * @see HttpToHttpsUrlFetcher#isHttpToHttpsRedirect(String, String, String)
+     */
+    @Override
+    protected boolean isHttpToHttpsRedirect(String fetched,
+                                            String redirect,
+                                            String normalized) {
+      return UrlUtil.isHttpUrl(fetched)
+          && UrlUtil.isHttpsUrl(redirect)
+          && UrlUtil.isHttpUrl(normalized)
+          && UrlUtil.stripProtocol(fetched).equals(UrlUtil.stripProtocol(redirect))
+          && fetched.equals(normalized);
+    }
+    
+  }
+  
+  /**
+   * @deprecated In 1.70, use the real HttpToHttpsUrlFetcherFactory
+   */
+  @Deprecated
+  public static class HttpToHttpsUrlFetcherFactory implements UrlFetcherFactory {
+
+    @Override
+    public UrlFetcher createUrlFetcher(CrawlerFacade crawlFacade, String url) {
+      return new HttpToHttpsUrlFetcher(crawlFacade, url);
+    }
+    
   }
 
   /**
