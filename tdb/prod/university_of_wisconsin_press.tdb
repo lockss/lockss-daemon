@@ -128,7 +128,7 @@
       param[base_url] = http://cl.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 2003 ; Contemporary Literature Volume 44 ; 44 >
+      au < testing ; 2003 ; Contemporary Literature Volume 44 ; 44 >
       au < released ; 2004 ; Contemporary Literature Volume 45 ; 45 >
       au < released ; 2005 ; Contemporary Literature Volume 46 ; 46 >
       au < released ; 2006 ; Contemporary Literature Volume 47 ; 47 >
@@ -198,16 +198,16 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 1981-1983 ; Ecological Restoration Volume 1 ; 1 >
-      au < manifest ; 1984 ; Ecological Restoration Volume 2 ; 2 >
+      au < testing ; 1984 ; Ecological Restoration Volume 2 ; 2 >
       au < released ; 1985 ; Ecological Restoration Volume 3 ; 3 >
       au < released ; 1986 ; Ecological Restoration Volume 4 ; 4 >
       au < released ; 1987 ; Ecological Restoration Volume 5 ; 5 >
       au < released ; 1988 ; Ecological Restoration Volume 6 ; 6 >
       au < released ; 1989 ; Ecological Restoration Volume 7 ; 7 >
-      au < manifest ; 1990 ; Ecological Restoration Volume 8 ; 8 >
+      au < testing ; 1990 ; Ecological Restoration Volume 8 ; 8 >
       au < released ; 1991 ; Ecological Restoration Volume 9 ; 9 >
       au < released ; 1992 ; Ecological Restoration Volume 10 ; 10 >
-      au < manifest ; 1993 ; Ecological Restoration Volume 11 ; 11 >
+      au < testing ; 1993 ; Ecological Restoration Volume 11 ; 11 >
       au < released ; 1994 ; Ecological Restoration Volume 12 ; 12 >
       au < released ; 1995 ; Ecological Restoration Volume 13 ; 13 >
       au < released ; 1996 ; Ecological Restoration Volume 14 ; 14 >
@@ -285,7 +285,7 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < released ; 2014 ; Ghana Studies Volume 17 ; 17 >
-        au < manifest ; 2015 ; Ghana Studies Volume 18 ; 18 >
+        au < testing ; 2015 ; Ghana Studies Volume 18 ; 18 >
         au < expected ; 2016 ; Ghana Studies Volume 19 ; 19 >
 
       }
@@ -380,7 +380,7 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 2001 ; Land Economics Volume 77 ; 77 >
-      au < manifest ; 2002 ; Land Economics Volume 78 ; 78 >
+      au < testing ; 2002 ; Land Economics Volume 78 ; 78 >
       au < released ; 2003 ; Land Economics Volume 79 ; 79 >
       au < released ; 2004 ; Land Economics Volume 80 ; 80 >
       au < released ; 2005 ; Land Economics Volume 81 ; 81 >
