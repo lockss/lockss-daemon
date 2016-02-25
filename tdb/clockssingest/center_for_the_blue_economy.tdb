@@ -1,0 +1,28 @@
+{
+
+  publisher <
+    name = Center for the Blue Economy ;
+    info[contract] = 2015 ;
+    info[tester] = 5
+  >
+  
+  comment[0] = Do not add any titles with the DigitalCommons/BePress Plugin without Vicky's approval. Document Vicky's approval in PD-36.
+
+  {
+  
+    title < 
+      name = Journal of Ocean and Coastal Economies ;
+      issn = 2373-8456
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = http://cbe.miis.edu/
+    param[journal_abbr] = joce
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+    au < exists ; exists ; 2014 ; Journal of Ocean and Coastal Economies Volume 1 ; 2014 ; >
+    au < exists ; exists ; 2015 ; Journal of Ocean and Coastal Economies Volume 2 ; 2 ; >
+
+  }
+
+}
