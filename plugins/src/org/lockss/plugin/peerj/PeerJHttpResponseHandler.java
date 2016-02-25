@@ -43,23 +43,17 @@ public class PeerJHttpResponseHandler implements CacheResultHandler {
   
   private static final Logger logger = Logger.getLogger(PeerJHttpResponseHandler.class);
   
-  public static final class RetryableNetworkException_10M
+  public static final class RetryableNetworkException_2_10M
   extends CacheException.RetryableNetworkException_2_5M {
     
     private static final long serialVersionUID = 1L;
     
-    public RetryableNetworkException_10M() {
+    public RetryableNetworkException_2_10M() {
       super();
     }
     
-    public RetryableNetworkException_10M(String message) {
+    public RetryableNetworkException_2_10M(String message) {
       super(message);
-    }
-    
-    @Override
-    public int getRetryCount() {
-      // just retry once, otherwise fail
-      return 1;
     }
     
     @Override
@@ -94,7 +88,7 @@ public class PeerJHttpResponseHandler implements CacheResultHandler {
         return new CacheException.NoRetryDeadLinkException("403 Forbidden (non-fatal)");
       case 429:
         logger.debug2("429");
-        return new RetryableNetworkException_10M("429 Too Many Requests");
+        return new RetryableNetworkException_2_10M("429 Too Many Requests");
       case 500:
         logger.debug2("500");
         if (url.contains("/articles/index.html") ||

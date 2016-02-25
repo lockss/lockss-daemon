@@ -130,7 +130,7 @@ public class TestPeerJ2016ArchivalUnit extends LockssTestCase {
     conn.setURL(starturl);
     exc = ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn,
         429, "foo");
-    assertClass(PeerJHttpResponseHandler.RetryableNetworkException_10M.class, exc);
+    assertClass(PeerJHttpResponseHandler.RetryableNetworkException_2_10M.class, exc);
     
     conn.setURL("http://uuu17/");
     exc =
