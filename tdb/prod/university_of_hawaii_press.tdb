@@ -84,6 +84,7 @@
         au < released ; 2013 ; Asian Perspectives Volume 52 ; 52 >
         au < released ; 2014 ; Asian Perspectives Volume 53 ; 53 >
         au < released ; 2015 ; Asian Perspectives Volume 54 ; 54 >
+        au < expected ; 2016 ; Asian Perspectives Volume 55 ; 55 >
 
       }
 
@@ -133,6 +134,7 @@
 
         au < released ; 2014 ; Asian Theatre Journal Volume 31 ; 31 >
         au < released ; 2015 ; Asian Theatre Journal Volume 32 ; 32 >
+        au < expected ; 2016 ; Asian Theatre Journal Volume 33 ; 33 >
 
       }
 
@@ -173,6 +175,7 @@
 
         au < released ; 2014 ; Azalea: Journal of Korean Literature & Culture Volume 7 ; 7 >
         au < released ; 2015 ; Azalea: Journal of Korean Literature & Culture Volume 8 ; 8 >
+        au < expected ; 2016 ; Azalea: Journal of Korean Literature & Culture Volume 9 ; 9 >
 
       }
 
@@ -243,6 +246,7 @@
 
         au < released ; 2014 ; Biography Volume 37 ; 37 >
         au < released ; 2015 ; Biography Volume 38 ; 38 >
+        au < expected ; 2016 ; Biography Volume 39 ; 39 >
 
       }
 
@@ -291,6 +295,7 @@
 
         au < released ; 2014 ; Buddhist-Christian Studies Volume 34 ; 34 >
         au < released ; 2015 ; Buddhist-Christian Studies Volume 35 ; 35 >
+        au < expected ; 2016 ; Buddhist-Christian Studies Volume 36 ; 36 >
 
       }
 
@@ -424,6 +429,7 @@
 
         au < released ; 2014 ; Cross-Currents: East Asian History and Culture Review Volume 3 ; 3 >
         au < released ; 2015 ; Cross-Currents: East Asian History and Culture Review Volume 4 ; 4 >
+        au < expected ; 2016 ; Cross-Currents: East Asian History and Culture Review Volume 5 ; 5 >
 
       }
 
@@ -459,6 +465,7 @@
 
         au < released ; 2014 ; Journal of Korean Religions Volume 5 ; 5 >
         au < released ; 2015 ; Journal of Korean Religions Volume 6 ; 6 >
+        au < expected ; 2016 ; Journal of Korean Religions Volume 7 ; 7 >
 
       }
 
@@ -509,7 +516,6 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < released ; 2014 ; Journal of World History Volume 25 ; 25 >
-        au < expected ; 2015 ; Journal of World History Volume 26 ; 26 >
 
       }
 
@@ -610,6 +616,7 @@
 
         au < released ; 2014 ; Korean Studies Volume 38 ; 38 >
         au < testing ; 2015 ; Korean Studies Volume 39 ; 39 >
+        au < expected ; 2016 ; Korean Studies Volume 40 ; 40 >
 
       }
 
@@ -658,6 +665,7 @@
 
         au < released ; 2014 ; Manoa Volume 26 ; 26 >
         au < released ; 2015 ; Manoa Volume 27 ; 27 >
+        au < expected ; 2016 ; Manoa Volume 28 ; 28 >
 
       }
 
@@ -706,6 +714,7 @@
 
         au < released ; 2014 ; Oceanic Linguistics Volume 53 ; 53 >
         au < released ; 2015 ; Oceanic Linguistics Volume 54 ; 54 >
+        au < expected ; 2016 ; Oceanic Linguistics Volume 55 ; 55 >
 
       }
 
@@ -840,6 +849,9 @@
         param[base_url] = https://muse.jhu.edu/
 
         au < released ; 2013 ; Review of Japanese Culture and Society Volume 25 ; 25 >
+        au < testing ; 2014 ; Review of Japanese Culture and Society Volume 26 ; 26 >
+        au < testing ; 2015 ; Review of Japanese Culture and Society Volume 27 ; 27 >
+        au < expected ; 2016 ; Review of Japanese Culture and Society Volume 28 ; 28 >
 
       }
 
@@ -990,6 +1002,7 @@
 
         au < released ; 2014 ; Yearbook of the Association of Pacific Coast Geographers Volume 76 ; 76 >
         au < released ; 2015 ; Yearbook of the Association of Pacific Coast Geographers Volume 77 ; 77 >
+        au < expected ; 2016 ; Yearbook of the Association of Pacific Coast Geographers Volume 78 ; 78 >
 
       }
 
