@@ -77,7 +77,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbQueryBuilder:0.2.3]";
+  public static final String VERSION = "[TdbQueryBuilder:0.2.4]";
   
   /**
    * <p>
@@ -85,8 +85,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * </p>
    * 
    * @since 1.67
+   * @deprecated Use {@link #KEY_VIABLE} instead
    */
-  protected static final String KEY_ALL = "all"; // TODO: should be renamed --viable/-V
+  @Deprecated
+  protected static final String KEY_ALL = "all";
   
   /**
    * <p>
@@ -94,7 +96,9 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * </p>
    * 
    * @since 1.67
+   * @deprecated Use {@link #LETTER_VIABLE} instead
    */
+  @Deprecated
   protected static final char LETTER_ALL = 'A';
   
   /**
@@ -118,7 +122,9 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * @see Au#STATUS_RELEASED
    * @see Au#STATUS_DOWN
    * @see Au#STATUS_SUPERSEDED
+   * @deprecated Use {@link #VIABLE_STATUSES} instead
    */
+  @Deprecated
   public static final List<String> ALL_STATUSES =
       AppUtil.ul(Au.STATUS_MANIFEST,
                  Au.STATUS_WANTED,
@@ -142,13 +148,37 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * </p>
    * 
    * @since 1.67
+   * @deprecated Use {@link #OPTION_VIABLE} instead
    */
+  @Deprecated
   protected static final Option OPTION_ALL =
       Option.builder(Character.toString(LETTER_ALL))
             .longOpt(KEY_ALL)
-            .desc(String.format("include all testable (pre-production and production) statuses in secondary query %s", ALL_STATUSES))
+            .desc(String.format("(deprecated; use --viable/-V instead) include all viable (pre-production and production) statuses in secondary query %s", ALL_STATUSES))
             .build();
+
+  /**
+   * <p>
+   * Key for the any-and-all option ({@value}).
+   * </p>
+   * 
+   * @since 1.70
+   */
+  protected static final String KEY_ANY_AND_ALL = "any-and-all";
   
+  /**
+   * <p>
+   * The any-and-all option.
+   * </p>
+   * 
+   * @since 1.70
+   */
+  protected static final Option OPTION_ANY_AND_ALL =
+      Option.builder()
+            .longOpt(KEY_ANY_AND_ALL)
+            .desc("include any and all statuses (viable or not) in secondary query, i.e. ignore secondary query (on by default)")
+            .build();
+
   /**
    * <p>
    * Key for the alliance option ({@value}).
@@ -1094,6 +1124,76 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
 
   /**
    * <p>
+   * Key for the viable option ({@value}).
+   * </p>
+   * 
+   * @since 1.70
+   */
+  protected static final String KEY_VIABLE = "viable";
+  
+  /**
+   * <p>
+   * Single letter for the viable option ({@value}).
+   * </p>
+   * 
+   * @since 1.70
+   */
+  protected static final char LETTER_VIABLE = 'V';
+  
+  /**
+   * <p>
+   * Unmodifiable list of statuses associated with the all option.
+   * </p>
+   * 
+   * @since 1.70
+   * @see Au#STATUS_MANIFEST
+   * @see Au#STATUS_WANTED
+   * @see Au#STATUS_TESTING
+   * @see Au#STATUS_NOT_READY
+   * @see Au#STATUS_READY
+   * @see Au#STATUS_READY_SOURCE
+   * @see Au#STATUS_CRAWLING
+   * @see Au#STATUS_FROZEN
+   * @see Au#STATUS_DEEP_CRAWL
+   * @see Au#STATUS_ING_NOT_READY
+   * @see Au#STATUS_RELEASING
+   * @see Au#STATUS_FINISHED
+   * @see Au#STATUS_RELEASED
+   * @see Au#STATUS_DOWN
+   * @see Au#STATUS_SUPERSEDED
+   */
+  public static final List<String> VIABLE_STATUSES =
+      AppUtil.ul(Au.STATUS_MANIFEST,
+                 Au.STATUS_WANTED,
+                 Au.STATUS_TESTING,
+                 Au.STATUS_NOT_READY,
+                 Au.STATUS_READY,
+                 Au.STATUS_READY_SOURCE,
+                 Au.STATUS_CRAWLING,
+                 Au.STATUS_DEEP_CRAWL,
+                 Au.STATUS_FROZEN,
+                 Au.STATUS_ING_NOT_READY,
+                 Au.STATUS_RELEASING,
+                 Au.STATUS_FINISHED,
+                 Au.STATUS_RELEASED,
+                 Au.STATUS_DOWN,
+                 Au.STATUS_SUPERSEDED);
+  
+  /**
+   * <p>
+   * The viable option.
+   * </p>
+   * 
+   * @since 1.70
+   */
+  protected static final Option OPTION_VIABLE =
+      Option.builder(Character.toString(LETTER_VIABLE))
+            .longOpt(KEY_VIABLE)
+            .desc(String.format("include all viable (pre-production and production) statuses in secondary query %s", VIABLE_STATUSES))
+            .build();
+  
+  /**
+   * <p>
    * Key for the wanted option ({@value}).
    * </p>
    * 
@@ -1186,6 +1286,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
   public void addOptions(Options options) {
     options.addOption(OPTION_ALL);
     options.addOption(OPTION_ALLIANCE);
+    options.addOption(OPTION_ANY_AND_ALL);
     options.addOption(OPTION_CLOCKSS_INGEST);
     options.addOption(OPTION_CLOCKSS_PRESERVED);
     options.addOption(OPTION_CLOCKSS_PRODUCTION);
@@ -1210,6 +1311,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
     options.addOption(OPTION_SUPERSEDED);
     options.addOption(OPTION_TESTING);
     options.addOption(OPTION_UNRELEASED);
+    options.addOption(OPTION_VIABLE);
     options.addOption(OPTION_WANTED);
     options.addOption(OPTION_ZAPPED);
   }
@@ -1315,11 +1417,18 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
     if (cmd.hasOption(KEY_UNRELEASED)) {
       secondarySet.addAll(UNRELEASED_STATUSES);
     }
+    if (cmd.hasOption(KEY_VIABLE)) {
+      secondarySet.addAll(VIABLE_STATUSES);
+    }
     if (cmd.hasOption(KEY_WANTED)) {
       secondarySet.add(Au.STATUS_WANTED);
     }
     if (cmd.hasOption(KEY_ZAPPED)) {
       secondarySet.add(Au.STATUS_ZAPPED);
+    }
+    // Must be last
+    if (cmd.hasOption(KEY_ANY_AND_ALL)) {
+      secondarySet.clear();
     }
     if (secondarySet.size() > 0) {
       if (cmd.hasOption(KEY_STATUS2)) {

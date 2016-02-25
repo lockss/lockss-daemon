@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -163,10 +163,13 @@ public class TestTdbQueryBuilder extends LockssTestCase {
 
   public void testMultiStatusOptions() throws Exception {
     doStatusTest(TdbQueryBuilder.KEY_ALL, TdbQueryBuilder.ALL_STATUSES);
+    doStatusTest(TdbQueryBuilder.KEY_ANY_AND_ALL, Au.STATUSES);
+    doStatusTest(TdbQueryBuilder.KEY_CLOCKSS_INGEST, TdbQueryBuilder.CLOCKSS_INGEST_STATUSES);
     doStatusTest(TdbQueryBuilder.KEY_CLOCKSS_PRESERVED, TdbQueryBuilder.CLOCKSS_PRESERVED_STATUSES);
     doStatusTest(TdbQueryBuilder.KEY_CLOCKSS_PRODUCTION, TdbQueryBuilder.CLOCKSS_PRODUCTION_STATUSES);
     doStatusTest(TdbQueryBuilder.KEY_PRODUCTION, TdbQueryBuilder.PRODUCTION_STATUSES);
     doStatusTest(TdbQueryBuilder.KEY_UNRELEASED, TdbQueryBuilder.UNRELEASED_STATUSES);
+    doStatusTest(TdbQueryBuilder.KEY_VIABLE, TdbQueryBuilder.VIABLE_STATUSES);
   }
   
   protected void doStatusTest(String statusOpt,
@@ -190,7 +193,6 @@ public class TestTdbQueryBuilder extends LockssTestCase {
     tdbq.processCommandLine(options, cmd);
     Predicate<Au> predicate = tdbq.getAuPredicate(options);
     assertNotNull(predicate);
-    assertFalse(predicate instanceof TruePredicate);
     for (String status : Au.STATUSES) {
       Au au = new Au();
       au.put(Au.STATUS, status);
