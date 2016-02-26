@@ -41,8 +41,6 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.projmuse.HttpToHttpsUtil;
-
 
 public class GPOFDSysSitemapsHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger(GPOFDSysSitemapsHtmlMetadataExtractorFactory.class);
