@@ -3,7 +3,7 @@
   publisher <
     name = Practical Action Publishing ;
     info[contract] = 2013 ;
-    info[tester] = 6 ;
+    info[tester] = 0 ;
     info[platform] = Atypon
   >
 
@@ -31,7 +31,7 @@
     au < manifest ; exists ; 2011 ; Enterprise Development & Microfinance Volume 22 ; 22 ; >
     au < manifest ; exists ; 2012 ; Enterprise Development & Microfinance Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Enterprise Development & Microfinance Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2014 ; Enterprise Development & Microfinance Volume 25 ; 25 ; >
+    au < ready ; exists ; 2014 ; Enterprise Development & Microfinance Volume 25 ; 25 ; >
     au < manifest ; exists ; 2015 ; Enterprise Development & Microfinance Volume 26 ; 26 ; >
     au < expected ; exists ; 2016 ; Enterprise Development & Microfinance Volume 27 ; 27 ; >
 
@@ -50,7 +50,7 @@
     au < manifest ; exists ; 2012 ; Foodchain Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Foodchain Volume 3 ; 3 ; >
     au < manifest ; exists ; 2014 ; Foodchain Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2015 ; Foodchain Volume 5 ; 5 ; >
+    au < ready ; exists ; 2015 ; Foodchain Volume 5 ; 5 ; >
     au < expected ; exists ; 2016 ; Foodchain Volume 6 ; 6 ; >
 
   }
@@ -80,7 +80,7 @@
     au < manifest ; exists ; 2003 ; Small Enterprise Development Volume 14 ; 14 ; >
     au < manifest ; exists ; 2004 ; Small Enterprise Development Volume 15 ; 15 ; >
     au < manifest ; exists ; 2005 ; Small Enterprise Development Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2006 ; Small Enterprise Development Volume 17 ; 17 ; >
+    au < ready ; exists ; 2006 ; Small Enterprise Development Volume 17 ; 17 ; >
     au < manifest ; exists ; 2007 ; Small Enterprise Development Volume 18 ; 18 ; >
 
   }
@@ -127,7 +127,7 @@
     au < manifest ; exists ; 2012 ; Waterlines Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Waterlines Volume 32 ; 32 ; >
     au < manifest ; exists ; 2014 ; Waterlines Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2015 ; Waterlines Volume 34 ; 34 ; >
+    au < ready ; exists ; 2015 ; Waterlines Volume 34 ; 34 ; >
     au < manifest ; exists ; 2016 ; Waterlines Volume 35 ; 35 ; >
 
   }
