@@ -144,7 +144,7 @@
   </entry>
   <entry>
     <string>plugin_url_fetcher_factory</string>
-    <string>org.lockss.plugin.highwire.HttpToHttpsUtil$HttpToHttpsUrlFetcherFactory</string>
+    <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.HttpToHttpsUtil$HttpToHttpsUrlFetcherFactory</string>
   </entry>
   <entry>
     <string>au_crawl_depth</string>
