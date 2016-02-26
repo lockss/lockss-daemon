@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -17,7 +17,7 @@ furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in
 all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
 STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
@@ -61,18 +61,18 @@ public class TestPeerJHtmlFilterFactory
   PluginManager pluginMgr;
         
   private static final String filteredStr = 
-      "<div class=\"block\"></div>";
+      "A";
   
   // for hash filtering
   private static final String withHead = 
       "<html>"
-          + "<head>"
+          + "<head>X"
           + "<meta charset=\"utf-8\">"
           + "<title>The Article Title</title>"
           + "<meta name=\"citation_title\" content=\"Cloning\">"
-          + "</head>"
-          + "</html>";
-  private static final String filteredHead = "<html></html>";
+          + "X</head>"
+          + "A</html>";
+  private static final String filteredHead = "A";
   
   private static final String withScript =
      "<div class=\"block\">"
@@ -81,34 +81,34 @@ public class TestPeerJHtmlFilterFactory
          + "$(\"[rel=tooltip]\").tooltip({ placement: \"bottom\"});"
          + "$(\"[rel=popover]\").popover({ trigger: \"hover\"});"
          + "});"
-         + "</script>"
-         + "</div>";
+         + "X</script>"
+         + "A</div>";
   
   private static final String withNoscript = 
       "<div class=\"block\">"
         + "<noscript>"
-        + "<div class=\"alert alert-warning\"></div>"
+        + "<div class=\"alert alert-warning\">X</div>"
         + "</noscript>"
-        + "</div>";
+        + "A</div>";
   
   private static final String withComments =
       "<div class=\"block\">"
         + "<!-- empty element at the foot of the page -->"
-        + "</div>";
+        + "A</div>";
      
   private static final String withInstitutionAlert =
       "<div class=\"block\">"
         + "<div id=\"instit-alert\" "
         + "class=\"well paper-well announcement-fixed\" "
-        + "style=\"display: block;\">"
+        + "STYLE=\"display: block;\">"
         + "<i class=\"icon-remove announce-close\"></i>"
         + "<h2>Stanford University</h2>"
         + "Your institution has a plan for publish Open Access."
         + "<a id=\"instit-href\" class=\"open\" "
         + "href=\"/institutions/26/stanford-university/\">"
         + "See if you qualify <i class=\"icon-share-alt\"></i></a>"
-        + "</div>"
-        + "</div>";
+        + "X</div>"
+        + "A</div>";
   
   private static final String withReadAnnounceAlert =
       "<div class=\"block\">"
@@ -119,8 +119,8 @@ public class TestPeerJHtmlFilterFactory
         + "choosing to publish in XXX.<br> <strong><a class=\"open\" "
         + "href=\"/about/interviews/\">Interviews</a></strong> / <strong>"
         + "<a class=\"open\" href=\"/edu/\">case studies</a></strong>"
-        + "</div>"
-        + "</div>";
+        + "X</div>"
+        + "A</div>";
     
   private static final String withQaAnnounceAlert =
       "<div class=\"block\">"
@@ -130,8 +130,8 @@ public class TestPeerJHtmlFilterFactory
         + "<h2 class=\"slim\">Publish for <strong>free</strong></h2>"
         + "waive your author fee<br> <strong><a class=\"open\" "
         + "href=\"http://blog.com/yourownforfree\">Learn more</a></strong>"
-        + "</div>"
-        + "</div>";
+        + "X</div>"
+        + "A</div>";
   
   private static final String withSubmitAnnounceAlert =
       "<div class=\"block\">"
@@ -142,8 +142,8 @@ public class TestPeerJHtmlFilterFactory
      	+ "<strong><a class=\"open\""
         + "href=\"/about/interviews/\">Interviews</a></strong> / <strong>"
      	+ "<a class=\"open\" href=\"/edu/\">case studies</a></strong>"
-     	+ "</div>"
-    	+ "</div>";
+     	+ "X</div>"
+    	+ "A</div>";
   
   private static final String withTopNavbarFixedTop =
       "<div class=\"block\">"
@@ -153,8 +153,8 @@ public class TestPeerJHtmlFilterFactory
         + "<li class=\"divider\"></li>"
         + "</div>"
         + "</div>"
-        + "</div>"
-        + "</div>";
+        + "X</div>"
+        + "A</div>";
   
   private static final String withItemTopNavbar =
       "<div class=\"block\">"
@@ -167,8 +167,8 @@ public class TestPeerJHtmlFilterFactory
         + "href=\"http://twitter.com/share?url=https://xxxxx.com/9999/"
         + "&amp;via=thexxxx&amp;text=yyyyyyy\"</a>"
         + "</span>"
-        + "</div></div></div>"
-        + "</div>";
+        + "X</div></div></div>"
+        + "A</div>";
     
   private static final String withAllLeftColumnExceptDownloadAs =
       "<div class=\"block\">"
@@ -220,25 +220,17 @@ public class TestPeerJHtmlFilterFactory
         + "</div>" 
         + "</div>" 
         + "</div>" 
-        + "</div>";
+        + "A</div>";
 
   private static final String withoutAllLeftColumnExceptDownloadAs = 
-        "<div class=\"block\">"
-          + "<div class=\"article-item-leftbar\">"
-          + "<div class=\"btn-group notification-actions-btn\">"
-          + "<div class=\"btn-group\">"
-          + "<ul class=\"dropdown-menu\">"
-          + "<li><a href=\"/9999.pdf\">PDF</a></li>"
-          + "<li><a href=\"/9999.xml\">XML</a></li>"
-          + "<li><a href=\"/9999.ris\">RIS</a></li>"
-          + "<li><a href=\"/9999.bib\">BibTeX</a></li>"
-          + "<li><a href=\"http://www.mendeley.com/import/xxxx.9999\">"
-          + "Save to Mendeley</a></li>"
-          + "<li><a href=\"http://www.readcube.com/xxxx.9999\">"
-          + "Read in ReadCube</a></li>"
-          + "</ul>"
-          + "</div></div></div></div></div></div>"
-          + "</div>";
+        ""
+          + "PDF"
+          + "XML"
+          + "RIS"
+          + "BibTeX"
+          + "Save to Mendeley"
+          + "Read in ReadCube"
+          + "A";
   
   private static final String withAllRightColumnn =
       "<div class=\"block\">"
@@ -253,8 +245,8 @@ public class TestPeerJHtmlFilterFactory
         + "<h3 class=\"slim\">Similar Papers</h3>"
         + "<div class=\"row-fluid\" style=\"margin-top: 10px;\"></div>"
         + "<h3 class=\"slim\">Similar Academic Editors</h3>"
-        + "</div>"
-        + "</div>";
+        + "X</div>"
+        + "A</div>";
   
 private static final String withFlagModal =
       "<div class=\"block\">"
@@ -264,8 +256,8 @@ private static final String withFlagModal =
         + "aria-hidden=\"true\">yyyy</button>"
         + "<h3>Flag an issue</h3>"
         + "</div>"
-        + "</div>"
-        + "</div>";
+        + "X</div>"
+        + "A</div>";
 
   private static final String withFollowModal =
       "<div class=\"block\">"
@@ -275,8 +267,8 @@ private static final String withFlagModal =
         + "aria-hidden=\"true\">aaaa</button>"
         + "<h3>Follow this issue</h3>"
         + "</div>"
-        + "</div>"
-        + "</div>";
+        + "X</div>"
+        + "A</div>";
 
   private static final String withUnfollowModal =
       "<div class=\"block\">"
@@ -286,8 +278,8 @@ private static final String withFlagModal =
         + "aria-hidden=\"true\">aaaa</button>"
         + "<h3>Unfollow this issue</h3>"
         + "</div>"
-        + "</div>"
-        + "</div>";
+        + "X</div>"
+        + "A</div>";
 
   private static final String withMetricsModal =
       "<div class=\"block\">"
@@ -296,8 +288,8 @@ private static final String withFlagModal =
          + "style=\"max-height:330px;overflow-y:auto\">"
          + "<div class=\"row-fluid\">"
          + "<div class=\"span12\"><p>Usage update</p>"
-         + "</div></div></div></div>"
-         + "</div>";
+         + "X</div></div></div></div>"
+         + "A</div>";
   
   private static final String withShareModal =
       "<div class=\"block\">"
@@ -309,8 +301,8 @@ private static final String withFlagModal =
         + "<a href=\"https://twitter.com/share\""
         + "class=\"twitter-share-button\""
         + "data-url=\"https://xxxx.com/9999/\">Tweet</a>"
-        + "</div></div></div></div>"
-        + "</div>";
+        + "X</div></div></div></div>"
+        + "A</div>";
   
   private static final String withCitingModal =
       "<div class=\"block\">"
@@ -323,8 +315,8 @@ private static final String withFlagModal =
         + "</div>"
         + "<div class=\"modal-body\">Loading citing information ... "
         + "<i class=\"icon icon-spinner icon-spin\"></i></div>"
-        + "</div>"
-        + "</div>";
+        + "X</div>"
+        + "A</div>";
   
   private static final String withArticleLinksModal =
       "<div class=\"block\">"
@@ -341,8 +333,8 @@ private static final String withFlagModal =
         + "<button class=\"btn follow-close-btn\" data-dismiss=\"modal\""
         + "aria-hidden=\"true\">Close</button>"
         + "</div>"
-        + "</div>"
-        + "</div>";
+        + "X</div>"
+        + "A</div>";
   
   private static final String withFoot =
       "<div class=\"block\">"
@@ -352,8 +344,8 @@ private static final String withFlagModal =
 	+ "<div class=\"span7\">"
 	+ "<b>About us -</b> <a href=\"/about/\" class=\"aboutLink\""
 	+ "data-target=\"theAteam\">the A team</a>"
-	+ "</div></div></div></div>"
-	+ "</div>";
+	+ "X</div></div></div></div>"
+	+ "A</div>";
 
   private static final String withAnnotationTabsNav =
       "<div class=\"block\">"
@@ -362,8 +354,8 @@ private static final String withFlagModal =
         + "<i class=\"icon-thumbs-up-alt\"></i> Feedback</a></li>"
         + "<li><a href=\"#questions\" data-toggle=\"tab\">"
         + "<i class=\"icon-comments\"></i> Questions</a></li>"
-        + "</ul>"
-        + "</div>";
+        + "X</ul>"
+        + "A</div>";
     
   private static final String withAnnotationTabsContent =
       "<div class=\"block\">"
@@ -373,15 +365,22 @@ private static final String withFlagModal =
         + "<h2>Add your feedback</h2>"
         + "<div id=\"article-item-main-text\""
         + "class=\"article-item-section-toggle\">"
-        + "</div></div></div></div>"
-        + "</div>";
+        + "X</div></div></div></div>"
+        + "A</div>";
 
   private static final String withAnnotationsOuterHeapmap =
       "<div class=\"block\">"
         + "<div class=\"annotations-outer-heatmap\">"
         + "<div class=\"current-scroll\" "
-        + "style=\"height: 6.011233540001%; top: 0%;\"></div></div>"
-        + "</div>";
+        + "style=\"height: 6.011233540001%; top: 0%;\">"
+        + "X</div></div>"
+        + "A</div>";
+
+  private static final String withNav =
+      "<div class=\"block\">"
+        + "<nav class=\"navbar navbar-fixed-top navbar-inverse navbar-alpha\" role=\"navigation\">"
+        + "X</nav>"
+        + "A</div>";
 
   
   protected ArchivalUnit createAu(String pluginId)
@@ -468,6 +467,7 @@ private static final String withFlagModal =
           filteredStr);
       doFilterTest(variantArchivesAu, variantFact, withAnnotationsOuterHeapmap, 
           filteredStr);
+      doFilterTest(variantArchivesAu, variantFact, withNav, filteredStr);
     }
   }
    
