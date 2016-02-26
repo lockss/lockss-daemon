@@ -279,7 +279,6 @@ public class HttpToHttpsUtil {
      * @since 1.70
      * @see HttpToHttpsUrlFetcher#isHttpToHttpsRedirect(String, String, String)
      */
-    @Override
     protected boolean isHttpToHttpsRedirect(String fetched,
                                             String redirect,
                                             String normalized) {
