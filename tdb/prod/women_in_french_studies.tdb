@@ -20,14 +20,7 @@
     param[journal_dir] = women_in_french_studies
     attr[journal_id] = wfs
     
-    {
-
-      param[base_url] = https://muse.jhu.edu/
-
-      au < doNotProcess ; 2010 ; Women in French Studies Volume 18 ; 18 >
-      #malformed manifest page. No content.
-
-    }
+      #volume 17 and 18 malformed manifest page. No content.
 
     {
 
