@@ -98,8 +98,7 @@
     
     au < manifest ; exists ; 2011 ; 2011 ; International Journal of Myriapodology Volumes 4-6 ; 4-6 ; >
     au < manifest ; exists ; 2012 ; 2012 ; International Journal of Myriapodology Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; International Journal of Myriapodology Volume 8 ; 8 ; >
-    au < testing ; exists ; 2014 ; 2014 ; International Journal of Myriapodology Volume 9 ; 9 ; >
+    au < expected ; exists ; 2016 ; 2016 ; International Journal of Myriapodology Volume 8 ; 8 ; >
 
    }
   
@@ -189,7 +188,9 @@
     param[base_url] = http://nl.pensoft.net/
     
     au < crawling ; exists ; 2014 ; 2014 ; Nota Lepidopterologica Volumes 37 ; 37 ; >
-    au < testing ; exists ; 2015 ; 2015 ; Nota Lepidopterologica Volumes 38 ; 38 ; >
+    au < notReady ; exists ; 2015 ; 2015 ; Nota Lepidopterologica Volumes 38 ; 38 ; > # URL comparator error
+    au < exists ; exists ; 2015 ; 2015 ; Nota Lepidopterologica Volumes 39 ; 39 ; >
+
    }
     
    {
