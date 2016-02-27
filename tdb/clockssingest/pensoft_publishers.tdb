@@ -45,7 +45,7 @@
     au < manifest ; exists ; 2011 ; 2011 ; BioRisk Volume 6 ; 6 ; >
     au < manifest ; exists ; 2012 ; 2012 ; BioRisk Volume 7 ; 7 ; >
     au < manifest ; exists ; 2013 ; 2013 ; BioRisk Volume 8 ; 8 ; >
-    au < ready ; exists ; 2014 ; 2014 ; BioRisk Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; BioRisk Volume 9 ; 9 ; >
   
    }
    
@@ -65,7 +65,7 @@
     au < manifest ; exists ; 2011 ; 2011 ; Comparative Cytogenetics Volume 5 ; 5 ; >
     au < manifest ; exists ; 2012 ; 2012 ; Comparative Cytogenetics Volume 6 ; 6 ; >
     au < manifest ; exists ; 2013 ; 2013 ; Comparative Cytogenetics Volume 7 ; 7 ; >
-    au < ready ; exists ; 2014 ; 2014 ; Comparative Cytogenetics Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; Comparative Cytogenetics Volume 8 ; 8 ; >
   
    }
 
@@ -117,7 +117,7 @@
     au < manifest ; exists ; 2011 ; 2011 ; Journal of Hymenoptera Research Volumes 20-23 ; 20-23 ; >
     au < manifest ; exists ; 2012 ; 2012 ; Journal of Hymenoptera Research Volumes 24-29 ; 24-29 ; >
     au < manifest ; exists ; 2013 ; 2013 ; Journal of Hymenoptera Research Volumes 30-34 ; 30-34 ; >
-    au < ready ; exists ; 2014 ; 2014 ; Journal of Hymenoptera Research Volumes 35-40 ; 35-40 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; Journal of Hymenoptera Research Volumes 35-40 ; 35-40 ; >
   
    }
   
@@ -136,7 +136,7 @@
     au < manifest ; exists ; 2011 ; 2011 ; MycoKeys Volume 1 ; 1 ; >
     au < manifest ; exists ; 2012 ; 2012 ; MycoKeys Volumes 2-5 ; 2-5 ; >
     au < manifest ; exists ; 2013 ; 2013 ; MycoKeys Volumes 6-7 ; 6-7 ; >
-    au < ready ; exists ; 2014 ; 2014 ; MycoKeys Volumes 8-9 ; 8-9 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; MycoKeys Volumes 8-9 ; 8-9 ; >
   
    }
   
@@ -152,7 +152,7 @@
     
     au < manifest ; exists ; 2012 ; 2012 ; Nature Conservation Volume 1-3 ; 1-3 ; >
     au < manifest ; exists ; 2013 ; 2013 ; Nature Conservation Volume 4-6 ; 4-6 ; >
-    au < ready ; exists ; 2014 ; 2014 ; Nature Conservation Volume 7-9 ; 7-9 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; Nature Conservation Volume 7-9 ; 7-9 ; >
   
    }
   
@@ -228,7 +228,7 @@
     
     au < manifest ; exists ; 2011 ; 2011 ; Subterranean Biology Volumes 8-9 ; 8-9 ; >
     au < manifest ; exists ; 2013 ; 2013 ; Subterranean Biology Volumes 10-11 ; 10-11 ; >
-    au < ready ; exists ; 2014 ; 2014 ; Subterranean Biology Volumes 12-13 ; 12-13 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; Subterranean Biology Volumes 12-13 ; 12-13 ; >
 
   
    }
