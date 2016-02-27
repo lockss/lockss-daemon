@@ -78,7 +78,7 @@
     -->
     <list>
       <!-- cloudfront used for support files -->
-      <string>1,"^https?://(%s|[^.]+\.cloudfront\.net|[^.]+\.googleapis\.com)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
+      <string>1,"^https?://(%s|[^.]+\.cloudfront\.net|[^.]+\.(googleapis|gstatic)\.com)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
       <!-- fonts sometimes have argument; limit the options but allow simple arg -->
       <string>1,"^https?://%s/assets/[^?]*\.(eot|svg|ttf|woff)([?](v=|-)[^/&amp;]+)?$", url_host(base_url)</string>
       <!-- cloudfront also used for volume-specific supplemental content .docx, .gz, etc -->
