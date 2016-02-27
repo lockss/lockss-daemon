@@ -14465,9 +14465,42 @@
   {
 
     title <
+      name = German Journal of Human Resource Management ;
+      issn = 2397-0022 ;
+      eissn = 2397-0030
+    >
+
+      param[base_url] = http://gjh.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 1998 ; German Journal of Human Resource Management Volume 12 ; 12 >
+      au < exists ; 1999 ; German Journal of Human Resource Management Volume 13 ; 13 >
+      au < exists ; 2000 ; German Journal of Human Resource Management Volume 14 ; 14 >
+      au < exists ; 2001 ; German Journal of Human Resource Management Volume 15 ; 15 >
+      au < exists ; 2002 ; German Journal of Human Resource Management Volume 16 ; 16 >
+      au < exists ; 2003 ; German Journal of Human Resource Management Volume 17 ; 17 >
+      au < exists ; 2004 ; German Journal of Human Resource Management Volume 18 ; 18 >
+      au < exists ; 2005 ; German Journal of Human Resource Management Volume 19 ; 19 >
+      au < exists ; 2006 ; German Journal of Human Resource Management Volume 20 ; 20 >
+      au < exists ; 2007 ; German Journal of Human Resource Management Volume 21 ; 21 >
+      au < exists ; 2008 ; German Journal of Human Resource Management Volume 22 ; 22 >
+      au < exists ; 2009 ; German Journal of Human Resource Management Volume 23 ; 23 >
+      au < exists ; 2010 ; German Journal of Human Resource Management Volume 24 ; 24 >
+      au < exists ; 2011 ; German Journal of Human Resource Management Volume 25 ; 25 >
+      au < exists ; 2012 ; German Journal of Human Resource Management Volume 26 ; 26 >
+      au < exists ; 2013 ; German Journal of Human Resource Management Volume 27 ; 27 >
+      au < exists ; 2014 ; German Journal of Human Resource Management Volume 28 ; 28 >
+      au < exists ; 2015 ; German Journal of Human Resource Management Volume 29 ; 29 >
+      au < exists ; 2016 ; German Journal of Human Resource Management Volume 30 ; 30 >
+
+  }
+
+  {
+
+    title <
       name = Gerontology and Geriatric Medicine ;
-      eissn = 2333-7214 ;
-      issnl = 2333-7214
+      eissn = 2333-7214 
     >
 
       param[base_url] = http://ggm.sagepub.com/
@@ -31292,6 +31325,22 @@ comment[mpj] = now published by Brill
     }
 
     {
+  
+      title <
+        name = Perceptual and Motor Skills ;
+        issn = 0031-5125 ;
+        eissn = 1558-688X
+      >
+  
+      param[base_url] = http://pms.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+  
+      au < exists ; 2016 ; Perceptual and Motor Skills Volume 122 ; 122 >
+  
+    }
+
+    {
 
       title <
         name = Perspectives in Public Health ;
@@ -38768,6 +38817,22 @@ comment[mpj] = now published by Brill
 
       }
 
+    }
+
+    {
+  
+      title <
+        name = Psychological Reports ;
+        issn = 0033-2941 ;
+        eissn = 1558-691X
+      >
+  
+        param[base_url] = http://prx.sagepub.com/
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+  
+        au < exists ; 2016 ; Psychological Reports Volume 118 ; 118 >
+  
     }
 
     {
