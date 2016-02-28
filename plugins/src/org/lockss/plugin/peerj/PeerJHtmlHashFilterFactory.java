@@ -89,11 +89,13 @@ public class PeerJHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tag("script"),
       HtmlNodeFilters.tag("noscript"),
       HtmlNodeFilters.tag("nav"),
+      HtmlNodeFilters.tag("footer"),
       // stylesheets
       HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
       // filter out comments
       HtmlNodeFilters.comment(),
       // from preprints article - ex: https://peerj.com/preprints/13v1/
+      HtmlNodeFilters.tagWithAttribute("div", "id", "alerts"),
       // institution alert
       HtmlNodeFilters.tagWithAttribute("div", "id", "instit-alert"),
       // read annoucement alert
