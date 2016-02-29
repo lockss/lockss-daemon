@@ -2,7 +2,7 @@
 
 # $Id$
 
-# Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+# Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,7 +42,7 @@ import fix_auth_failure
 
 __author__ = "Barry Hayes"
 __maintainer__ = "Barry Hayes"
-__version__ = "1.0.3"
+__version__ = "1.0.4"
 
 
 def _parser():
@@ -97,7 +97,7 @@ def main():
     (options, host, port, auid_files) = _process_args()
     fix_auth_failure.fix_auth_failure()
     client = lockss_daemon.Client(host, port,
-                                  options.user, options.password)
+                                  options.username, options.password)
     aus = _aus(auid_files)
     has = list()
     missing = list()
