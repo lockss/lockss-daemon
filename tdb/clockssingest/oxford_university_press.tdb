@@ -24439,7 +24439,18 @@
 
       param[base_url] = http://ajlh.oxfordjournals.org/
       pluginSuffix = oup.ClockssOUPDrupalPlugin
+      #content available from 1957 volume 1 to 1999 volume 43
 
+      au < exists ; exists ; 2000 ; American Journal of Legal History Volume 44 ; 44 ; >
+      au < exists ; exists ; 2001 ; American Journal of Legal History Volume 45 ; 45 ; >
+      au < exists ; exists ; 2004 ; American Journal of Legal History Volume 46 ; 46 ; >
+      au < exists ; exists ; 2005 ; American Journal of Legal History Volume 47 ; 47 ; >
+      au < exists ; exists ; 2006 ; American Journal of Legal History Volume 48 ; 48 ; >
+      au < exists ; exists ; 2007 ; American Journal of Legal History Volume 49 ; 49 ; >
+      au < exists ; exists ; 2010 ; American Journal of Legal History Volume 50 ; 50 ; >
+      au < exists ; exists ; 2011 ; American Journal of Legal History Volume 51 ; 51 ; >
+      au < exists ; exists ; 2012 ; American Journal of Legal History Volume 52 ; 52 ; >
+      au < exists ; exists ; 2013 ; American Journal of Legal History Volume 53 ; 53 ; >
       au < manifest ; exists ; 2014 ; American Journal of Legal History Volume 54 ; 54 ; >
       au < manifest ; exists ; 2015 ; American Journal of Legal History Volume 55 ; 55 ; >
       au < exists ; exists ; 2016 ; American Journal of Legal History Volume 56 ; 56 ; >
@@ -24454,7 +24465,22 @@
 
       param[base_url] = http://aristoteliansupp.oxfordjournals.org/
       pluginSuffix = oup.ClockssOUPDrupalPlugin
+      #content available from 1918 volume 1 to 1999 volume 73
 
+      au < exists ; exists ; 2000 ; Aristotelian Society Supplementary Volume Volume 74 ; 74 ; >
+      au < exists ; exists ; 2001 ; Aristotelian Society Supplementary Volume Volume 75 ; 75 ; >
+      au < exists ; exists ; 2002 ; Aristotelian Society Supplementary Volume Volume 76 ; 76 ; >
+      au < exists ; exists ; 2003 ; Aristotelian Society Supplementary Volume Volume 77 ; 77 ; >
+      au < exists ; exists ; 2004 ; Aristotelian Society Supplementary Volume Volume 78 ; 78 ; >
+      au < exists ; exists ; 2005 ; Aristotelian Society Supplementary Volume Volume 79 ; 79 ; >
+      au < exists ; exists ; 2006 ; Aristotelian Society Supplementary Volume Volume 80 ; 80 ; >
+      au < exists ; exists ; 2007 ; Aristotelian Society Supplementary Volume Volume 81 ; 81 ; >
+      au < exists ; exists ; 2008 ; Aristotelian Society Supplementary Volume Volume 82 ; 82 ; >
+      au < exists ; exists ; 2009 ; Aristotelian Society Supplementary Volume Volume 83 ; 83 ; >
+      au < exists ; exists ; 2010 ; Aristotelian Society Supplementary Volume Volume 84 ; 84 ; >
+      au < exists ; exists ; 2011 ; Aristotelian Society Supplementary Volume Volume 85 ; 85 ; >
+      au < exists ; exists ; 2012 ; Aristotelian Society Supplementary Volume Volume 86 ; 86 ; >
+      au < exists ; exists ; 2013 ; Aristotelian Society Supplementary Volume Volume 87 ; 87 ; >
       au < exists ; exists ; 2014 ; Aristotelian Society Supplementary Volume Volume 88 ; 88 ; >
       au < manifest ; exists ; 2015 ; Aristotelian Society Supplementary Volume Volume 89 ; 89 ; >
       au < exists ; exists ; 2016 ; Aristotelian Society Supplementary Volume Volume 90 ; 90 ; >
@@ -24504,6 +24530,12 @@
       param[base_url] = http://criticalvalues.oxfordjournals.org/
       pluginSuffix = oup.ClockssOUPDrupalPlugin
 
+      au < exists ; exists ; 2008 ; Critical Values Volume 1 ; 1 ; >
+      au < exists ; exists ; 2009 ; Critical Values Volume 2 ; 2 ; >
+      au < exists ; exists ; 2010 ; Critical Values Volume 3 ; 3 ; >
+      au < exists ; exists ; 2011 ; Critical Values Volume 4 ; 4 ; >
+      au < exists ; exists ; 2012 ; Critical Values Volume 5 ; 5 ; >
+      au < exists ; exists ; 2013 ; Critical Values Volume 6 ; 6 ; >
       au < exists ; exists ; 2014 ; Critical Values Volume 7 ; 7 ; >
       au < manifest ; exists ; 2015 ; Critical Values Volume 8 ; 8 ; >
       au < manifest ; exists ; 2016 ; Critical Values Volume 9 ; 9 ; >
