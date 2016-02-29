@@ -20,6 +20,7 @@
     au < released ; 2013 ; 2013 ; BIBLIOS: Librarianship and Information Science Journal Volume 2013 ; 2013 >
     au < released ; 2014 ; 2014 ; BIBLIOS: Librarianship and Information Science Journal Volume 2014 ; 2014 >
     au < released ; 2015 ; 2015 ; BIBLIOS: Librarianship and Information Science Journal Volume 2015 ; 2015 >
+    au < expected ; 2016 ; 2016 ; BIBLIOS: Librarianship and Information Science Journal Volume 2016 ; 2016 >
 
   }
 
@@ -85,6 +86,7 @@
     au < released ; 2013 ; 2013 ; The Carl Beck Papers In Russian And East European Studies Volume 2013 ; 2013 >
     au < released ; 2014 ; 2014 ; The Carl Beck Papers In Russian And East European Studies Volume 2014 ; 2014 >
     au < released ; 2015 ; 2015 ; The Carl Beck Papers In Russian And East European Studies Volume 2015 ; 2015 >
+    au < expected ; 2016 ; 2016 ; The Carl Beck Papers In Russian And East European Studies Volume 2016 ; 2016 >
 
   }
 
@@ -101,6 +103,7 @@
       au < released ; 2013 ; 2013 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 1 ; 1 >
       au < released ; 2014 ; 2014 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 2 ; 2 >
       au < released ; 2015 ; 2015 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 3 ; 3 >
+      au < expected ; 2016 ; 2016 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 4 ; 4 >
 
   }
 
@@ -136,7 +139,8 @@
     au < released ; 2012 ; 2012 ; CINEJ Cinema e-Journal Volume 1-2 ; 1-2 >
     au < released ; 2013 ; 2013 ; CINEJ Cinema e-Journal Volume 2-3 ; 2-3 >
     au < released ; 2014 ; 2014 ; CINEJ Cinema e-Journal Volume 3-4 ; 3-4 >
-    au < manifest ; 2015 ; 2015 ; CINEJ Cinema e-Journal Volume 4-5 ; 4-5 >
+    au < testing ; 2015 ; 2015 ; CINEJ Cinema e-Journal Volume 4-5 ; 4-5 >
+    au < expected ; 2016 ; 2016 ; CINEJ Cinema e-Journal Volume 5-6 ; 5-6 >
 
   }
 
@@ -153,6 +157,7 @@
     au < released ; 2012 ; 2012 ; Contemporaneity: Historical Presence in Visual Culture Volume 2 ; 2 >
     au < released ; 2014 ; 2014 ; Contemporaneity: Historical Presence in Visual Culture Volume 3 ; 3 >
     au < released ; 2015 ; 2015 ; Contemporaneity: Historical Presence in Visual Culture Volume 4 ; 4 >
+    au < expected ; 2016 ; 2016 ; Contemporaneity: Historical Presence in Visual Culture Volume 5 ; 5 >
 
   }
 
@@ -167,8 +172,9 @@
     param[journal_id] = dentistry3000
 
     au < released ; 2013 ; 2013 ; Dentistry 3000 Volume 1 (2013) ; 1 >
-    au < released ; 2014 ; 2014 ; Dentistry 3000 Volume 1 (2014) ; 1 >
-    au < released ; 2015 ; 2015 ; Dentistry 3000 Volume 2 (2014) ; 2 >
+    au < released ; 2014 ; 2014 ; Dentistry 3000 Volume 2 (2014) ; 2 >
+    au < released ; 2015 ; 2015 ; Dentistry 3000 Volume 3 (2015) ; 3 >
+    au < expected ; 2016 ; 2016 ; Dentistry 3000 Volume 4 (2016) ; 4 >
 
   }
 
@@ -185,6 +191,7 @@
       au < released ; 2013 ; 2013 ; Dialogic Pedagogy: An International Online Journal Volume 1 ; 1 >
       au < released ; 2014 ; 2014 ; Dialogic Pedagogy: An International Online Journal Volume 2 ; 2 >
       au < released ; 2015 ; 2015 ; Dialogic Pedagogy: An International Online Journal Volume 3 ; 3 >
+      au < expected ; 2016 ; 2016 ; Dialogic Pedagogy: An International Online Journal Volume 4 ; 4 >
 
   }
 
@@ -201,8 +208,9 @@
     au < released ; 2011 ; 2011 ; EMAJ: Emerging Markets e-Journal of Management Volume 1 ; 1 >
     au < released ; 2012 ; 2012 ; EMAJ: Emerging Markets e-Journal of Management Volume 2 ; 2 >
     au < released ; 2013 ; 2013 ; EMAJ: Emerging Markets e-Journal of Management Volume 3 (2013) ; 3 >
-    au < released ; 2014 ; 2014 ; EMAJ: Emerging Markets e-Journal of Management Volume 3 (2014) ; 3 >
-    au < released ; 2015 ; 2015 ; EMAJ: Emerging Markets e-Journal of Management Volume 4 (2015) ; 4 >
+    au < released ; 2014 ; 2014 ; EMAJ: Emerging Markets e-Journal of Management Volume 3-4 (2014) ; 3-4 >
+    au < released ; 2015 ; 2015 ; EMAJ: Emerging Markets e-Journal of Management Volume 5 (2015) ; 5 >
+    au < exists ; 2016 ; 2016 ; EMAJ: Emerging Markets e-Journal of Management Volume 6 (2016) ; 6 >
 
   }
 
@@ -214,11 +222,13 @@
 
     param[base_url] = http://ethnology.pitt.edu/ojs/
     param[journal_id] = Ethnology
+    #Ethnology publication discontinued
 
     au < released ; 2008 ; 2008 ; Ethnology Volume 47 ; 47 >
     au < released ; 2009 ; 2009 ; Ethnology Volume 48 ; 48 >
     au < released ; 2010 ; 2010 ; Ethnology Volume 49 ; 49 >
     au < released ; 2011 ; 2011 ; Ethnology Volume 50 ; 50 >
+    au < exists ; 2012 ; 2012 ; Ethnology Volume 51 ; 51 >
 
   }
 
@@ -268,9 +278,10 @@
 
     au < released ; 2011 ; 2011 ; Health, Culture, and Society Volume 1 ; 1 >
     au < released ; 2012 ; 2012 ; Health, Culture, and Society Volume 2-3 ; 2-3 >
-    au < released ; 2013 ; 2013 ; Health, Culture, and Society Volume 4 ; 4 >
-    au < released ; 2014 ; 2014 ; Health, Culture, and Society Volume 5 ; 5 >
-    au < released ; 2015 ; 2015 ; Health, Culture, and Society Volume 6 ; 6 >
+    au < released ; 2013 ; 2013 ; Health, Culture, and Society Volume 4-5 ; 4-5 >
+    au < released ; 2014 ; 2014 ; Health, Culture, and Society Volume 6-7 ; 6-7 >
+    au < released ; 2015 ; 2015 ; Health, Culture, and Society Volume 8-9 ; 8-9 >
+    au < expected ; 2016 ; 2016 ; Health, Culture, and Society Volume 10-11 ; 10-11 >
 
   }
 
@@ -306,6 +317,7 @@
     au < released ; 2013 ; 2013 ; International Journal of Telerehabilitation Volume 5 ; 5 >
     au < released ; 2014 ; 2014 ; International Journal of Telerehabilitation Volume 6 ; 6 >
     au < released ; 2015 ; 2015 ; International Journal of Telerehabilitation Volume 7 ; 7 >
+    au < expected ; 2016 ; 2016 ; International Journal of Telerehabilitation Volume 8 ; 8 >
 
   }
 
@@ -342,6 +354,7 @@
     au < released ; 2013 ; 2013 ; Journal of French and Francophone Philosophy Volume 21 ; 21 >
     au < released ; 2014 ; 2014 ; Journal of French and Francophone Philosophy Volume 22 ; 22 >
     au < released ; 2015 ; 2015 ; Journal of French and Francophone Philosophy Volume 23 ; 23 >
+    au < expected ; 2016 ; 2016 ; Journal of French and Francophone Philosophy Volume 24 ; 24 >
 
   }
 
@@ -364,6 +377,7 @@
       au < released ; 2013 ; 2013 ; Journal of Law and Commerce Volume 31 ; 31 >
       au < released ; 2014 ; 2014 ; Journal of Law and Commerce Volume 32 ; 32 >
       au < released ; 2015 ; 2015 ; Journal of Law and Commerce Volume 33 ; 33 >
+      au < expected ; 2016 ; 2016 ; Journal of Law and Commerce Volume 34 ; 34 >
 
   }
 
@@ -378,7 +392,8 @@
       param[journal_id] = jwhi
 
       au < released ; 2013 ; 2013 ; Journal of World-Historical Information Volume 1 ; 1 >
-      au < expected ; 2014 ; 2014 ; Journal of World-Historical Information Volume 2 ; 2 >
+      au < exists ; 2015 ; 2015 ; Journal of World-Historical Information Volume 2-3 ; 2-3 >
+      au < expected ; 2016 ; 2016 ; Journal of World-Historical Information Volume 4 ; 4 >
 
   }
 

@@ -25,6 +25,7 @@
 
       au < released ; 2014 ; Anthropologica Volume 56 ; 56 >
       au < released ; 2015 ; Anthropologica Volume 57 ; 57 >
+      au < expected ; 2016 ; Anthropologica Volume 58 ; 58 >
 
     }
 
@@ -65,6 +66,7 @@
 
       au < released ; 2014 ; The Canadian Historical Review Volume 95 ; 95 >
       au < released ; 2015 ; The Canadian Historical Review Volume 96 ; 96 >
+      au < expected ; 2016 ; The Canadian Historical Review Volume 97 ; 97 >
 
     }
 
@@ -87,6 +89,7 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < released ; 2015 ; Canadian Journal of History Volume 50 ; 50 >
+      au < expected ; 2016 ; Canadian Journal of History Volume 51 ; 51 >
 
     }
 
@@ -125,6 +128,7 @@
 
       au < released ; 2014 ; Canadian Journal of Criminology and Criminal Justice Volume 56 ; 56 >
       au < released ; 2015 ; Canadian Journal of Criminology and Criminal Justice Volume 57 ; 57 >
+      au < expected ; 2016 ; Canadian Journal of Criminology and Criminal Justice Volume 58 ; 58 >
 
     }
 
@@ -148,6 +152,7 @@
 
       au < released ; 2014 ; The Canadian Journal of Human Sexuality Volume 23 ; 23 >
       au < released ; 2015 ; The Canadian Journal of Human Sexuality Volume 24 ; 24 >
+      au < expected ; 2016 ; The Canadian Journal of Human Sexuality Volume 25 ; 25 >
 
     }
 
@@ -182,6 +187,7 @@
 
       au < released ; 2014 ; Canadian Journal of Information and Library Science Volume 38 ; 38 >
       au < released ; 2015 ; Canadian Journal of Information and Library Science Volume 39 ; 39 >
+      au < expected ; 2016 ; Canadian Journal of Information and Library Science Volume 40 ; 40 >
 
     }
 
@@ -221,6 +227,7 @@
 
       au < released ; 2014 ; Canadian Journal of Law and Society Volume 29 ; 29 >
       au < released ; 2015 ; Canadian Journal of Law and Society Volume 30 ; 30 >
+      au < expected ; 2016 ; Canadian Journal of Law and Society Volume 31 ; 31 >
 
     }
 
@@ -262,6 +269,7 @@
 
       au < released ; 2014 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 59 ; 59 >
       au < released ; 2015 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 60 ; 60 >
+      au < expected ; 2016 ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 61 ; 61 >
 
     }
 
@@ -327,6 +335,7 @@
 
       au < released ; 2014 ; Canadian Journal of Women and the Law Volume 26 ; 26 >
       au < released ; 2015 ; Canadian Journal of Women and the Law Volume 27 ; 27 >
+      au < expected ; 2016 ; Canadian Journal of Women and the Law Volume 28 ; 28 >
 
     }
 
@@ -366,6 +375,7 @@
 
       au < released ; 2014 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 70 ; 70 >
       au < released ; 2015 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 71 ; 71 >
+      au < expected ; 2016 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 72 ; 72 >
 
     }
 
@@ -401,6 +411,7 @@
 
       au < released ; 2014 ; Canadian Public Policy Volume 40 ; 40 >
       au < released ; 2015 ; Canadian Public Policy Volume 41 ; 41 >
+      au < expected ; 2016 ; Canadian Public Policy Volume 42 ; 42 >
 
     }
 
@@ -441,6 +452,7 @@
 
       au < released ; 2014 ; Canadian Review of American Studies Volume 44 ; 44 >
       au < released ; 2015 ; Canadian Review of American Studies Volume 45 ; 45 >
+      au < expected ; 2016 ; Canadian Review of American Studies Volume 46 ; 46 >
 
     }
 
@@ -524,6 +536,7 @@
 
       au < released ; 2014 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 49 ; 49 >
       au < released ; 2015 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 50 ; 50 >
+      au < expected ; 2016 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 51 ; 51 >
 
     }
 
@@ -640,6 +653,7 @@
       au < released ; 2013 ; Eighteenth-Century Fiction Volume 26 ; 26 >
       au < released ; 2014 ; Eighteenth-Century Fiction Volume 27 ; 27 >
       au < released ; 2015 ; Eighteenth-Century Fiction Volume 28 ; 28 >
+      au < expected ; 2016 ; Eighteenth-Century Fiction Volume 29 ; 29 >
 
     }
 
@@ -752,6 +766,7 @@
 
       au < released ; 2014 ; Histoire sociale / Social History Volume 47 ; 47 >
       au < released ; 2015 ; Histoire sociale / Social History Volume 48 ; 48 >
+      au < expected ; 2016 ; Histoire sociale / Social History Volume 49 ; 49 >
 
     }
 
@@ -773,7 +788,7 @@
 
       param[base_url] = http://muse.jhu.edu/
 
-      au < released ; 2014 ; International Journal of Canadian Studies Volume 47 ; 47 >
+      au < released ; 2013 ; International Journal of Canadian Studies Volume 47 ; 47 >
 
     }
 
@@ -785,6 +800,7 @@
       au < released ; 2014 ; International Journal of Canadian Studies Volume 49 ; 49 >
       au < released ; 2014 ; International Journal of Canadian Studies Volume 50 ; 50 >
       au < released ; 2015 ; International Journal of Canadian Studies Volume 51 ; 51 >
+      au < expected ; 2016 ; International Journal of Canadian Studies Volume 52 ; 52 >
 
     }
 
@@ -823,10 +839,10 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < released ; 2014 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 48 ; 48 >
-      au < manifest ; 2015 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 49 ; 49 >
+      au < testing ; 2015 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 49 ; 49 >
+      au < expected ; 2016 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 50 ; 50 >
 
     }
-
 
   }
 
@@ -855,6 +871,7 @@
 
       au < released ; 2014 ; Journal of Religion and Popular Culture Volume 26 ; 26 >
       au < released ; 2015 ; Journal of Religion and Popular Culture Volume 27 ; 27 >
+      au < expected ; 2016 ; Journal of Religion and Popular Culture Volume 28 ; 28 >
 
     }
 
@@ -896,6 +913,7 @@
       au < released ; 2013-2014 ; Journal of Scholarly Publishing Volume 45 ; 45 >
       au < released ; 2014 ; Journal of Scholarly Publishing Volume 46 ; 46 >
       au < released ; 2015 ; Journal of Scholarly Publishing Volume 47 ; 47 >
+      au < expected ; 2016 ; Journal of Scholarly Publishing Volume 48 ; 48 >
 
     }
 
@@ -975,14 +993,15 @@
       au < manifest ; 1997 ; Modern Drama Volume 40 ; 40 >
       au < manifest ; 1998 ; Modern Drama Volume 41 ; 41 >
       au < manifest ; 1999 ; Modern Drama Volume 42 ; 42 >
-      au < manifest ; 2000 ; Modern Drama Volume 43 ; 43 >
-      au < manifest ; 2001 ; Modern Drama Volume 44 ; 44 >
-      au < manifest ; 2002 ; Modern Drama Volume 45 ; 45 >
-      au < manifest ; 2003 ; Modern Drama Volume 46 ; 46 >
-      au < manifest ; 2004 ; Modern Drama Volume 47 ; 47 >
+      au < testing ; 2000 ; Modern Drama Volume 43 ; 43 >
+      au < testing ; 2001 ; Modern Drama Volume 44 ; 44 >
+      au < testing ; 2002 ; Modern Drama Volume 45 ; 45 >
+      au < testing ; 2003 ; Modern Drama Volume 46 ; 46 >
+      au < testing ; 2004 ; Modern Drama Volume 47 ; 47 >
 
       au < released ; 2014 ; Modern Drama Volume 57 ; 57 >
       au < released ; 2015 ; Modern Drama Volume 58 ; 58 >
+      au < expected ; 2016 ; Modern Drama Volume 59 ; 59 >
 
     }
 
@@ -1021,6 +1040,7 @@
 
       au < released ; 2014 ; Seminar: A Journal of Germanic Studies Volume 50 ; 50 >
       au < released ; 2015 ; Seminar: A Journal of Germanic Studies Volume 51 ; 51 >
+      au < expected ; 2016 ; Seminar: A Journal of Germanic Studies Volume 52 ; 52 >
 
     }
 
@@ -1056,6 +1076,7 @@
 
       au < released ; 2014 ; The Tocqueville Review/La revue Tocqueville Volume 35 ; 35 >
       au < released ; 2015 ; The Tocqueville Review/La revue Tocqueville Volume 36 ; 36 >
+      au < expected ; 2016 ; The Tocqueville Review/La revue Tocqueville Volume 37 ; 37 >
 
     }
 
@@ -1089,6 +1110,7 @@
 
       au < released ; 2014 ; Toronto Journal of Theology Volume 30 ; 30 >
       au < released ; 2015 ; Toronto Journal of Theology Volume 31 ; 31 >
+      au < expected ; 2016 ; Toronto Journal of Theology Volume 32 ; 32 >
 
     }
 
@@ -1249,6 +1271,7 @@
 
       au < released ; 2014 ; University of Toronto Quarterly Volume 83 ; 83 >
       au < released ; 2015 ; University of Toronto Quarterly Volume 84 ; 84 >
+      au < expected ; 2016 ; University of Toronto Quarterly Volume 85 ; 85 >
 
     }
 
