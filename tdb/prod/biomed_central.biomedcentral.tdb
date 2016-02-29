@@ -777,6 +777,7 @@
       title <
         name = Breast Cancer Research ;
         issn = 1465-5411 ;
+        eissn = 1465-542X ;
         issnl = 1465-5411
       >
       param[journal_issn] = 1465-5411
@@ -1321,7 +1322,8 @@
 
       title <
         name = Clinical Epigenetics ;
-        issn = 1868-7083 ;
+        issn = 1868-7075 ;
+        eissn = 1868-7083 ;
         issnl = 1868-7083
       >
 
@@ -2105,7 +2107,7 @@
     {
       title <
         name = Genome Medicine ;
-        issn = 1756-994X ;
+        eissn = 1756-994X ;
         issnl = 1756-994X
       >
 
@@ -3214,7 +3216,7 @@
     {
       title <
         name = Journal of Experimental & Clinical Cancer Research ;
-        issn = 1756-9966 ;
+        eissn = 1756-9966 ;
         issnl = 1756-9966
       >
 

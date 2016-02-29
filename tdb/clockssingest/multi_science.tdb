@@ -163,7 +163,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Energy Exploration & Exploitation Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Energy Exploration & Exploitation Volume 31 ; 31 ; >
     au < crawling ; exists ; 2014 ; Energy Exploration & Exploitation Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2015 ; Energy Exploration & Exploitation Volume 33 ; 33 ; >
+    au < superseded ; exists ; 2015 ; Energy Exploration & Exploitation Volume 33 [superseded] ; 33 ; >
     au < expected ; exists ; 2016 ; Energy Exploration & Exploitation Volume 34 ; 34 ; >
 
   }
@@ -238,7 +238,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Architectural Computing Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Architectural Computing Volume 11 ; 11 ; >
     au < finished ; finished ; 2014 ; International Journal of Architectural Computing Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2015 ; International Journal of Architectural Computing Volume 13 ; 13 ; >
+    au < superseded ; exists ; 2015 ; International Journal of Architectural Computing Volume 13 [superseded] ; 13 ; >
     au < expected ; exists ; 2016 ; International Journal of Architectural Computing Volume 14 ; 14 ; >
 
   }
@@ -357,7 +357,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Micro Air Vehicles Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Micro Air Vehicles Volume 5 ; 5 ; >
     au < finished ; finished ; 2014 ; International Journal of Micro Air Vehicles Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2015 ; International Journal of Micro Air Vehicles Volume 7 ; 7 ; >
+    au < superseded ; exists ; 2015 ; International Journal of Micro Air Vehicles Volume 7 [superseded] ; 7 ; >
 
   }
 
@@ -517,7 +517,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Algorithms & Computational Technology Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Algorithms & Computational Technology Volume 7 ; 7 ; >
     au < finished ; crawling ; 2014 ; Journal of Algorithms & Computational Technology Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2015 ; Journal of Algorithms & Computational Technology Volume 9 ; 9 ; >
+    au < superseded ; exists ; 2015 ; Journal of Algorithms & Computational Technology Volume 9 [superseded] ; 9 ; >
 
   }
 
@@ -589,7 +589,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 32 ; 32 ; >
     au < finished ; crawling ; 2014 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2015 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 34 ; 34 ; >
+    au < superseded ; exists ; 2015 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 34 [superseded] ; 34 ; >
 
   }
 
@@ -703,7 +703,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; The Journal of Computational Multiphase Flows Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; The Journal of Computational Multiphase Flows Volume 5 ; 5 ; >
     au < finished ; crawling ; 2014 ; The Journal of Computational Multiphase Flows Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2015 ; The Journal of Computational Multiphase Flows Volume 7 ; 7 ; >
+    au < superseded ; exists ; 2015 ; The Journal of Computational Multiphase Flows Volume 7 [superseded] ; 7 ; >
 
   }
 
