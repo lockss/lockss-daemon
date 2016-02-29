@@ -1,7 +1,7 @@
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>testing</string>
+        <string>ready</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
@@ -9,14 +9,14 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>8</string>
+        <string>9</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
         <map>
             <entry>
                 <string>Poll</string>
-                <string>19</string>
+                <string>20</string>
             </entry>
             <entry>
                 <string>Substance</string>
@@ -78,7 +78,7 @@
             <string>1,"^%scombres\.axd/", base_url</string>
             <string>1,"^%svolume\.aspx/SetPDFLinkBasedOnAccess", base_url</string>
             <string>1,"^%spdfaccess\.ashx\?ResourceID", base_url</string>
-            <string>1,"^%sScriptResource\.axd?d", base_url</string>
+            <string>1,"^%sScriptResource\.axd\?d", base_url</string>
             <string>1,"^%sCSS/book.less", base_url</string>
         </list>
     </entry>
@@ -174,5 +174,14 @@
             <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.plugin.silverchair.ScHtmlHttpResponseHandler</string>
         </list>
     </entry>
-
+  <!-- The ScriptResource files have a hash in the url book,journals & proceedings -->    
+  <!-- base_url/ScriptResource.axd?d=8yhG95ORBCdFcnQMiG7SKCkD7fZE_-0QfrcOcMeSd0iByYMyQoN8n6P2Wockd7G3m_urLLH950OSn9bLbQ75XNXB2XfWbNDcxAGwQB7wJDBvcGPlDeYm-FLeqx7t2_Ae6wOe8Q2&t=6811d392 -->  
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <string>/ScriptResource\.axd\?d=[^/]+$</string>
+  </entry>
+  <entry>
+    <string>au_exclude_urls_from_polls_pattern</string>
+    <string>/ScriptResource\.axd\?d=[^/]+$</string>
+  </entry>   
 </map>
