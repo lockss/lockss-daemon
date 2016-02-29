@@ -6,9 +6,9 @@
     info[tester] = 8
   >
 
-    param[base_url] = http://scholarworks.iu.edu/journals/
+    #param[base_url] = http://scholarworks.iu.edu/journals/
     plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
-    implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
+    implicit < status ; status2 ; year ; param[year] ; name ; volume ; param[base_url] ; hidden[proxy] >
 
   {
     title <
@@ -19,11 +19,11 @@
 
       param[journal_id] = artifact
       
-      au < manifest ; exists ; 2007 ; 2007 ; Artifact Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; Artifact Volume 2 ; 2 ; >
-      au < finished ; crawling ; 2013 ; 2013 ; Artifact Volume 3 (2013) ; 3 ; >
-      au < finished ; finished ; 2014 ; 2014 ; Artifact Volume 3 (2014) ; 3 ; >
-      au < crawling ; exists ; 2015 ; 2015 ; Artifact Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Artifact Volume 1 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Artifact Volume 2 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
+      au < finished ; crawling ; 2013 ; 2013 ; Artifact Volume 3 (2013) ; 3 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2014 ; 2014 ; Artifact Volume 3 (2014) ; 3 ; http://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Artifact Volume 4 ; 4 ; http://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -36,38 +36,38 @@
       param[journal_id] = aeer
       comment[0] = no issue in 1992
 
-      au < manifest ; exists ; 1983 ; 1983 ; Anthropology of East Europe Review Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1984 ; 1984 ; Anthropology of East Europe Review Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1985 ; 1985 ; Anthropology of East Europe Review Volume 5 (1985) ; 5 (1985) ; >
-      au < manifest ; exists ; 1986 ; 1986 ; Anthropology of East Europe Review Volume 5 (1986) ; 5 (1986) ; >
-      au < manifest ; exists ; 1987 ; 1987 ; Anthropology of East Europe Review Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; Anthropology of East Europe Review Volume 7 ; 7 ; >
-      au < manifest ; exists ; 1989 ; 1989 ; Anthropology of East Europe Review Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1990 ; 1990 ; Anthropology of East Europe Review Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1991 ; 1991 ; Anthropology of East Europe Review Volume 10 ; 10 ; >
-      au < manifest ; exists ; 1993 ; 1993 ; Anthropology of East Europe Review Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1994 ; 1994 ; Anthropology of East Europe Review Volume 12 ; 12 ; >
-      au < manifest ; exists ; 1995 ; 1995 ; Anthropology of East Europe Review Volume 13 ; 13 ; >
-      au < manifest ; exists ; 1996 ; 1996 ; Anthropology of East Europe Review Volume 14 ; 14 ; >
-      au < manifest ; exists ; 1997 ; 1997 ; Anthropology of East Europe Review Volume 15 ; 15 ; >
-      au < manifest ; exists ; 1998 ; 1998 ; Anthropology of East Europe Review Volume 16 ; 16 ; >
-      au < manifest ; exists ; 1999 ; 1999 ; Anthropology of East Europe Review Volume 17 ; 17 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; Anthropology of East Europe Review Volume 18 ; 18 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; Anthropology of East Europe Review Volume 19 ; 19 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; Anthropology of East Europe Review Volume 20 ; 20 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; Anthropology of East Europe Review Volume 21 ; 21 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; Anthropology of East Europe Review Volume 22 ; 22 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; Anthropology of East Europe Review Volume 23 ; 23 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; Anthropology of East Europe Review Volume 24 ; 24 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; Anthropology of East Europe Review Volume 25 ; 25 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; Anthropology of East Europe Review Volume 26 ; 26 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; Anthropology of East Europe Review Volume 27 ; 27 ; >
-      au < manifest ; exists ; 2010 ; 2010 ; Anthropology of East Europe Review Volume 28 ; 28 ; >
-      au < manifest ; exists ; 2011 ; 2011 ; Anthropology of East Europe Review Volume 29 ; 29 ; >
-      au < finished ; finished ; 2012 ; 2012 ; Anthropology of East Europe Review Volume 30 ; 30 ; >
-      au < finished ; finished ; 2013 ; 2013 ; Anthropology of East Europe Review Volume 31 ; 31 ; >
-      au < finished ; finished ; 2014 ; 2014 ; Anthropology of East Europe Review Volume 32 ; 32 ; >
-      au < crawling ; exists ; 2015 ; 2015 ; Anthropology of East Europe Review Volume 33 ; 33 ; >
+      au < manifest ; exists ; 1983 ; 1983 ; Anthropology of East Europe Review Volume 3 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1984 ; 1984 ; Anthropology of East Europe Review Volume 4 ; 4 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1985 ; 1985 ; Anthropology of East Europe Review Volume 5 (1985) ; 5 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1986 ; 1986 ; Anthropology of East Europe Review Volume 5 (1986) ; 5 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1987 ; 1987 ; Anthropology of East Europe Review Volume 6 ; 6 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1988 ; 1988 ; Anthropology of East Europe Review Volume 7 ; 7 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1989 ; 1989 ; Anthropology of East Europe Review Volume 8 ; 8 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1990 ; 1990 ; Anthropology of East Europe Review Volume 9 ; 9 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1991 ; 1991 ; Anthropology of East Europe Review Volume 10 ; 10 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1993 ; 1993 ; Anthropology of East Europe Review Volume 11 ; 11 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1994 ; 1994 ; Anthropology of East Europe Review Volume 12 ; 12 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1995 ; 1995 ; Anthropology of East Europe Review Volume 13 ; 13 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1996 ; 1996 ; Anthropology of East Europe Review Volume 14 ; 14 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1997 ; 1997 ; Anthropology of East Europe Review Volume 15 ; 15 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1998 ; 1998 ; Anthropology of East Europe Review Volume 16 ; 16 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1999 ; 1999 ; Anthropology of East Europe Review Volume 17 ; 17 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2000 ; 2000 ; Anthropology of East Europe Review Volume 18 ; 18 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Anthropology of East Europe Review Volume 19 ; 19 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Anthropology of East Europe Review Volume 20 ; 20 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Anthropology of East Europe Review Volume 21 ; 21 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Anthropology of East Europe Review Volume 22 ; 22 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Anthropology of East Europe Review Volume 23 ; 23 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Anthropology of East Europe Review Volume 24 ; 24 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Anthropology of East Europe Review Volume 25 ; 25 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Anthropology of East Europe Review Volume 26 ; 26 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Anthropology of East Europe Review Volume 27 ; 27 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Anthropology of East Europe Review Volume 28 ; 28 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Anthropology of East Europe Review Volume 29 ; 29 ; https://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2012 ; 2012 ; Anthropology of East Europe Review Volume 30 ; 30 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2013 ; 2013 ; Anthropology of East Europe Review Volume 31 ; 31 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2014 ; 2014 ; Anthropology of East Europe Review Volume 32 ; 32 ; http://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Anthropology of East Europe Review Volume 33 ; 33 ; http://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -79,13 +79,13 @@
 
       param[journal_id] = bdr
 
-      au < manifest ; exists ; 2009 ; 2009 ; Black Diaspora Review Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2010 ; 2010 ; Black Diaspora Review Volume 1-2 ; 1-2 ; >
-      au < manifest ; exists ; 2011 ; 2011 ; Black Diaspora Review Volume 2 ; 2 ; >
-      au < finished ; finished ; 2012 ; 2012 ; Black Diaspora Review Volume 3 (2012) ; 3 ; >
-      au < finished ; finished ; 2013 ; 2013 ; Black Diaspora Review Volume 3 (2013) ; 3 ; >
-      au < finished ; finished ; 2014 ; 2014 ; Black Diaspora Review Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2015 ; 2015 ; Black Diaspora Review Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Black Diaspora Review Volume 1 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Black Diaspora Review Volume 1-2 ; 1-2 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Black Diaspora Review Volume 2 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2012 ; 2012 ; Black Diaspora Review Volume 3 (2012) ; 3 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2013 ; 2013 ; Black Diaspora Review Volume 3 (2013) ; 3 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2014 ; 2014 ; Black Diaspora Review Volume 4 ; 4 ; http://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Black Diaspora Review Volume 5 ; 5 ; http://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -98,8 +98,8 @@
       param[journal_id] = hindsight
       comment[continues] = 1948-4984
 
-      au < manifest ; exists ; 2010 ; 2010 ; Hindsight: Journal of Optemetry History Volume 41 ; 41 ; >
-      au < manifest ; exists ; 2011 ; 2011 ; Hindsight: Journal of Optemetry History Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Hindsight: Journal of Optemetry History Volume 41 ; 41 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Hindsight: Journal of Optemetry History Volume 42 ; 42 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -113,16 +113,16 @@
       comment[continued_by] = 2374-3271
       comment[0] = content available from 1970 volume 1 to 1999 volume 30
 
-      au < manifest ; exists ; 2000 ; 2000 ; Hindsight: newsletter of the Optometric Historical Society Volume 31 ; 31 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; Hindsight: newsletter of the Optometric Historical Society Volume 32 ; 32 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; Hindsight: newsletter of the Optometric Historical Society Volume 33 ; 33 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; Hindsight: newsletter of the Optometric Historical Society Volume 34 ; 34 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; Hindsight: newsletter of the Optometric Historical Society Volume 35 ; 35 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; Hindsight: newsletter of the Optometric Historical Society Volume 36 ; 36 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; Hindsight: newsletter of the Optometric Historical Society Volume 37 ; 37 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; Hindsight: newsletter of the Optometric Historical Society Volume 38 ; 38 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; Hindsight: newsletter of the Optometric Historical Society Volume 39 ; 39 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; Hindsight: newsletter of the Optometric Historical Society Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; Hindsight: newsletter of the Optometric Historical Society Volume 31 ; 31 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Hindsight: newsletter of the Optometric Historical Society Volume 32 ; 32 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Hindsight: newsletter of the Optometric Historical Society Volume 33 ; 33 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Hindsight: newsletter of the Optometric Historical Society Volume 34 ; 34 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Hindsight: newsletter of the Optometric Historical Society Volume 35 ; 35 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Hindsight: newsletter of the Optometric Historical Society Volume 36 ; 36 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Hindsight: newsletter of the Optometric Historical Society Volume 37 ; 37 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Hindsight: newsletter of the Optometric Historical Society Volume 38 ; 38 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Hindsight: newsletter of the Optometric Historical Society Volume 39 ; 39 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Hindsight: newsletter of the Optometric Historical Society Volume 40 ; 40 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -134,11 +134,11 @@
 
       param[journal_id] = illuminare
 
-      au < manifest ; exists ; 2011 ; 2011 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 9 ; 9 ; >
-      au < finished ; finished ; 2012 ; 2012 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 10 ; 10 ; >
-      au < finished ; finished ; 2013 ; 2013 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 11 ; 11 ; >
-      au < finished ; finished ; 2014 ; 2014 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 12 ; 12 ; >
-      au < crawling ; exists ; 2015 ; 2015 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 9 ; 9 ; https://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2012 ; 2012 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 10 ; 10 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2013 ; 2013 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 11 ; 11 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2014 ; 2014 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 12 ; 12 ; http://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies Volume 13 ; 13 ; http://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -151,22 +151,22 @@
       param[journal_id] = bookman
       comment[0] = published from 1956 to 1988
 
-      au < manifest ; exists ; 1956 ; 1956 ; Indiana University Bookman Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1957 ; 1957 ; Indiana University Bookman Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1958 ; 1958 ; Indiana University Bookman Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1960 ; 1960 ; Indiana University Bookman Volume 4-5 ; 4-5 ; >
-      au < manifest ; exists ; 1963 ; 1963 ; Indiana University Bookman Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1965 ; 1965 ; Indiana University Bookman Volume 7 ; 7 ; >
-      au < manifest ; exists ; 1967 ; 1967 ; Indiana University Bookman Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1968 ; 1968 ; Indiana University Bookman Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1969 ; 1969 ; Indiana University Bookman Volume 10 ; 10 ; >
-      au < manifest ; exists ; 1973 ; 1973 ; Indiana University Bookman Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1977 ; 1977 ; Indiana University Bookman Volume 12 ; 12 ; >
-      au < manifest ; exists ; 1979 ; 1979 ; Indiana University Bookman Volume 13 ; 13 ; >
-      au < manifest ; exists ; 1982 ; 1982 ; Indiana University Bookman Volume 14 ; 14 ; >
-      au < manifest ; exists ; 1983 ; 1983 ; Indiana University Bookman Volume 15 ; 15 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; Indiana University Bookman Volume 16 ; 16 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; Indiana University Bookman Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1956 ; 1956 ; Indiana University Bookman Volume 1 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1957 ; 1957 ; Indiana University Bookman Volume 2 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1958 ; 1958 ; Indiana University Bookman Volume 3 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1960 ; 1960 ; Indiana University Bookman Volume 4-5 ; 4-5 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1963 ; 1963 ; Indiana University Bookman Volume 6 ; 6 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1965 ; 1965 ; Indiana University Bookman Volume 7 ; 7 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1967 ; 1967 ; Indiana University Bookman Volume 8 ; 8 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1968 ; 1968 ; Indiana University Bookman Volume 9 ; 9 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1969 ; 1969 ; Indiana University Bookman Volume 10 ; 10 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1973 ; 1973 ; Indiana University Bookman Volume 11 ; 11 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1977 ; 1977 ; Indiana University Bookman Volume 12 ; 12 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1979 ; 1979 ; Indiana University Bookman Volume 13 ; 13 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1982 ; 1982 ; Indiana University Bookman Volume 14 ; 14 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1983 ; 1983 ; Indiana University Bookman Volume 15 ; 15 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1987 ; 1987 ; Indiana University Bookman Volume 16 ; 16 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1988 ; 1988 ; Indiana University Bookman Volume 17 ; 17 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -179,14 +179,14 @@
       param[journal_id] = ried
       comment[0] = no issue in 2011
 
-      au < manifest ; exists ; 2007 ; 2007 ; Inter-American Journal of Education for Democracy Volume 1 (2007) ; 1 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; Inter-American Journal of Education for Democracy Volume 1 (2008) ; 1 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; Inter-American Journal of Education for Democracy Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2010 ; 2010 ; Inter-American Journal of Education for Democracy Volume 3 ; 3 ; >
-      au < finished ; finished ; 2012 ; 2012 ; Inter-American Journal of Education for Democracy Volume 4 ; 4 ; >
-      au < finished ; finished ; 2013 ; 2013 ; Inter-American Journal of Education for Democracy Volume 5 ; 5 ; >
-      au < finished ; finished ; 2014 ; 2014 ; Inter-American Journal of Education for Democracy Volume 6 ; 6 ; >
-      au < expected ; exists ; 2015 ; 2015 ; Inter-American Journal of Education for Democracy Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Inter-American Journal of Education for Democracy Volume 1 (2007) ; 1 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Inter-American Journal of Education for Democracy Volume 1 (2008) ; 1 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Inter-American Journal of Education for Democracy Volume 2 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Inter-American Journal of Education for Democracy Volume 3 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2012 ; 2012 ; Inter-American Journal of Education for Democracy Volume 4 ; 4 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2013 ; 2013 ; Inter-American Journal of Education for Democracy Volume 5 ; 5 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2014 ; 2014 ; Inter-American Journal of Education for Democracy Volume 6 ; 6 ; http://scholarworks.iu.edu/journals/ ; >
+      au < expected ; exists ; 2015 ; 2015 ; Inter-American Journal of Education for Democracy Volume 7 ; 7 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -198,12 +198,12 @@
 
       param[journal_id] = ijdl
 
-      au < manifest ; exists ; 2010 ; 2010 ; International Journal of Designs for Learning Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2011 ; 2011 ; International Journal of Designs for Learning Volume 2 ; 2 ; >
-      au < finished ; finished ; 2012 ; 2012 ; International Journal of Designs for Learning Volume 3 ; 3 ; >
-      au < finished ; finished ; 2013 ; 2013 ; International Journal of Designs for Learning Volume 4 ; 4 ; >
-      au < finished ; finished ; 2014 ; 2014 ; International Journal of Designs for Learning Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2015 ; 2015 ; International Journal of Designs for Learning Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; International Journal of Designs for Learning Volume 1 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2011 ; 2011 ; International Journal of Designs for Learning Volume 2 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2012 ; 2012 ; International Journal of Designs for Learning Volume 3 ; 3 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2013 ; 2013 ; International Journal of Designs for Learning Volume 4 ; 4 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2014 ; 2014 ; International Journal of Designs for Learning Volume 5 ; 5 ; http://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2015 ; 2015 ; International Journal of Designs for Learning Volume 6 ; 6 ; http://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -215,23 +215,23 @@
       param[journal_id] = inula
       comment[0] = no issue in 2001, 2002, 2004
       
-      au < manifest ; exists ; 1996 ; 1996 ; InULA Notes: Indiana University Librarians Association Volume 12 ; 12 ; >
-      au < manifest ; exists ; 1997 ; 1997 ; InULA Notes: Indiana University Librarians Association Volume 13 ; 13 ; >
-      au < manifest ; exists ; 1998 ; 1998 ; InULA Notes: Indiana University Librarians Association Volume 14 ; 14 ; >
-      au < manifest ; exists ; 1999 ; 1999 ; InULA Notes: Indiana University Librarians Association Volume 15 ; 15 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; InULA Notes: Indiana University Librarians Association Volume 16 ; 16 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; InULA Notes: Indiana University Librarians Association Volume 17 ; 17 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; InULA Notes: Indiana University Librarians Association Volume 18 ; 18 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; InULA Notes: Indiana University Librarians Association Volume 19 (2006) ; 19 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; InULA Notes: Indiana University Librarians Association Volume 19-20 (2007) ; 19-20 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; InULA Notes: Indiana University Librarians Association Volume 20-21 (2008) ; 20-21 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; InULA Notes: Indiana University Librarians Association Volume 21 (2009) ; 21 ; >
-      au < manifest ; exists ; 2010 ; 2010 ; InULA Notes: Indiana University Librarians Association Volume 22 ; 22 ; >
-      au < manifest ; exists ; 2011 ; 2011 ; InULA Notes: Indiana University Librarians Association Volume 23 ; 23 ; >
-      au < finished ; finished ; 2012 ; 2012 ; InULA Notes: Indiana University Librarians Association Volume 24 ; 24 ; >
-      au < finished ; finished ; 2013 ; 2013 ; InULA Notes: Indiana University Librarians Association Volume 25 ; 25 ; >
-      au < finished ; finished ; 2014 ; 2014 ; InULA Notes: Indiana University Librarians Association Volume 26 ; 26 ; >
-      au < crawling ; exists ; 2015 ; 2015 ; InULA Notes: Indiana University Librarians Association Volume 27 ; 27 ; >
+      au < manifest ; exists ; 1996 ; 1996 ; InULA Notes: Indiana University Librarians Association Volume 12 ; 12 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1997 ; 1997 ; InULA Notes: Indiana University Librarians Association Volume 13 ; 13 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1998 ; 1998 ; InULA Notes: Indiana University Librarians Association Volume 14 ; 14 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 1999 ; 1999 ; InULA Notes: Indiana University Librarians Association Volume 15 ; 15 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2000 ; 2000 ; InULA Notes: Indiana University Librarians Association Volume 16 ; 16 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2003 ; 2003 ; InULA Notes: Indiana University Librarians Association Volume 17 ; 17 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2005 ; 2005 ; InULA Notes: Indiana University Librarians Association Volume 18 ; 18 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2006 ; 2006 ; InULA Notes: Indiana University Librarians Association Volume 19 (2006) ; 19 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2007 ; 2007 ; InULA Notes: Indiana University Librarians Association Volume 19-20 (2007) ; 19-20 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2008 ; 2008 ; InULA Notes: Indiana University Librarians Association Volume 20-21 (2008) ; 20-21 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2009 ; 2009 ; InULA Notes: Indiana University Librarians Association Volume 21 (2009) ; 21 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2010 ; 2010 ; InULA Notes: Indiana University Librarians Association Volume 22 ; 22 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2011 ; 2011 ; InULA Notes: Indiana University Librarians Association Volume 23 ; 23 ; https://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2012 ; 2012 ; InULA Notes: Indiana University Librarians Association Volume 24 ; 24 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2013 ; 2013 ; InULA Notes: Indiana University Librarians Association Volume 25 ; 25 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2014 ; 2014 ; InULA Notes: Indiana University Librarians Association Volume 26 ; 26 ; http://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2015 ; 2015 ; InULA Notes: Indiana University Librarians Association Volume 27 ; 27 ; http://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -244,10 +244,10 @@
       param[base_url] = http://jotlt.indiana.edu/
       param[journal_id] = jotlt
 
-      au < finished ; finished ; 2012 ; 2012 ; Journal of Teaching and Learning with Technology Volume 1 ; 1 ; >
-      au < finished ; finished ; 2013 ; 2013 ; Journal of Teaching and Learning with Technology Volume 2 ; 2 ; >
-      au < finished ; finished ; 2014 ; 2014 ; Journal of Teaching and Learning with Technology Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2015 ; 2015 ; Journal of Teaching and Learning with Technology Volume 4 ; 4 ; >
+      au < finished ; finished ; 2012 ; 2012 ; Journal of Teaching and Learning with Technology Volume 1 ; 1 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2013 ; 2013 ; Journal of Teaching and Learning with Technology Volume 2 ; 2 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2014 ; 2014 ; Journal of Teaching and Learning with Technology Volume 3 ; 3 ; http://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Journal of Teaching and Learning with Technology Volume 4 ; 4 ; http://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -259,12 +259,12 @@
       param[journal_id] = jiuspa
       comment[0] = no issue in 2007-2009
 
-      au < manifest ; exists ; 2006 ; 2006 ; Journal of the Indiana University Student Personnel Association Volume 2006 ; 2006 ; >
-      au < manifest ; exists ; 2011 ; 2011 ; Journal of the Indiana University Student Personnel Association Volume 2011 ; 2011 ; >
-      au < finished ; finished ; 2012 ; 2012 ; Journal of the Indiana University Student Personnel Association Volume 2012 ; 2012 ; >
-      au < finished ; finished ; 2013 ; 2013 ; Journal of the Indiana University Student Personnel Association Volume 2013 ; 2013 ; >
-      au < finished ; finished ; 2014 ; 2014 ; Journal of the Indiana University Student Personnel Association Volume 2014 ; 2014 ; >
-      au < expected ; exists ; 2015 ; 2015 ; Journal of the Indiana University Student Personnel Association Volume 2015 ; 2015 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Journal of the Indiana University Student Personnel Association Volume 2006 ; 2006 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Journal of the Indiana University Student Personnel Association Volume 2011 ; 2011 ; https://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2012 ; 2012 ; Journal of the Indiana University Student Personnel Association Volume 2012 ; 2012 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2013 ; 2013 ; Journal of the Indiana University Student Personnel Association Volume 2013 ; 2013 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2014 ; 2014 ; Journal of the Indiana University Student Personnel Association Volume 2014 ; 2014 ; http://scholarworks.iu.edu/journals/ ; >
+      au < expected ; exists ; 2015 ; 2015 ; Journal of the Indiana University Student Personnel Association Volume 2015 ; 2015 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -277,27 +277,27 @@
     {
       param[journal_id] = josotl
       comment[notReady] = no substance. base_url is incorrect.
-      au < superseded ; exists ; 2013 ; 2013 ; Journal of the Scholarship of Teaching and Learning Volume 13 [to delete] ; 13 ; >
+      au < superseded ; exists ; 2013 ; 2013 ; Journal of the Scholarship of Teaching and Learning Volume 13 [to delete] ; 13 ; http://scholarworks.iu.edu/journals/ ; >
     }
     {
       param[base_url] = http://josotl.indiana.edu/
       param[journal_id] = josotl
 
-      au < manifest ; exists ; 2001 ; 2001 ; Journal of the Scholarship of Teaching and Learning Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; Journal of the Scholarship of Teaching and Learning Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; Journal of the Scholarship of Teaching and Learning Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; Journal of the Scholarship of Teaching and Learning Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; Journal of the Scholarship of Teaching and Learning Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; Journal of the Scholarship of Teaching and Learning Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; Journal of the Scholarship of Teaching and Learning Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; Journal of the Scholarship of Teaching and Learning Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; Journal of the Scholarship of Teaching and Learning Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2010 ; 2010 ; Journal of the Scholarship of Teaching and Learning Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2011 ; 2011 ; Journal of the Scholarship of Teaching and Learning Volume 11 ; 11 ; >
-      au < finished ; finished ; 2012 ; 2012 ; Journal of the Scholarship of Teaching and Learning Volume 12 ; 12 ; >
-      au < finished ; finished ; 2013 ; 2013 ; Journal of the Scholarship of Teaching and Learning Volume 13 ; 13 ; >
-      au < finished ; finished ; 2014 ; 2014 ; Journal of the Scholarship of Teaching and Learning Volume 14 ; 14 ; >
-      au < crawling ; exists ; 2015 ; 2015 ; Journal of the Scholarship of Teaching and Learning Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Journal of the Scholarship of Teaching and Learning Volume 1 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Journal of the Scholarship of Teaching and Learning Volume 2 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Journal of the Scholarship of Teaching and Learning Volume 3 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Journal of the Scholarship of Teaching and Learning Volume 4 ; 4 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Journal of the Scholarship of Teaching and Learning Volume 5 ; 5 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Journal of the Scholarship of Teaching and Learning Volume 6 ; 6 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Journal of the Scholarship of Teaching and Learning Volume 7 ; 7 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Journal of the Scholarship of Teaching and Learning Volume 8 ; 8 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Journal of the Scholarship of Teaching and Learning Volume 9 ; 9 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Journal of the Scholarship of Teaching and Learning Volume 10 ; 10 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Journal of the Scholarship of Teaching and Learning Volume 11 ; 11 ; https://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2012 ; 2012 ; Journal of the Scholarship of Teaching and Learning Volume 12 ; 12 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2013 ; 2013 ; Journal of the Scholarship of Teaching and Learning Volume 13 ; 13 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2014 ; 2014 ; Journal of the Scholarship of Teaching and Learning Volume 14 ; 14 ; http://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Journal of the Scholarship of Teaching and Learning Volume 15 ; 15 ; http://scholarworks.iu.edu/journals/ ; >
 
     }
   }
@@ -310,15 +310,15 @@
 
       param[journal_id] = mar
 
-      au < manifest ; exists ; 2007 ; 2007 ; Museum Anthropology Review Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; Museum Anthropology Review Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; Museum Anthropology Review Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2010 ; 2010 ; Museum Anthropology Review Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2011 ; 2011 ; Museum Anthropology Review Volume 5 ; 5 ; >
-      au < finished ; finished ; 2012 ; 2012 ; Museum Anthropology Review Volume 6 ; 6 ; >
-      au < finished ; finished ; 2013 ; 2013 ; Museum Anthropology Review Volume 7 ; 7 ; >
-      au < finished ; finished ; 2014 ; 2014 ; Museum Anthropology Review Volume 8 ; 8 ; >
-      au < crawling ; exists ; 2015 ; 2015 ; Museum Anthropology Review Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Museum Anthropology Review Volume 1 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Museum Anthropology Review Volume 2 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Museum Anthropology Review Volume 3 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Museum Anthropology Review Volume 4 ; 4 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Museum Anthropology Review Volume 5 ; 5 ; https://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2012 ; 2012 ; Museum Anthropology Review Volume 6 ; 6 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2013 ; 2013 ; Museum Anthropology Review Volume 7 ; 7 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2014 ; 2014 ; Museum Anthropology Review Volume 8 ; 8 ; http://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Museum Anthropology Review Volume 9 ; 9 ; http://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -330,12 +330,12 @@
 
       param[journal_id] = ndif
 
-      au < manifest ; exists ; 2010 ; 2010 ; New Directions in Folklore Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2011 ; 2011 ; New Directions in Folklore Volume 9 ; 9 ; >
-      au < finished ; crawling ; 2012 ; 2012 ; New Directions in Folklore Volume 10 ; 10 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; New Directions in Folklore Volume 11 ; 11 ; >
-      au < finished ; finished ; 2014 ; 2014 ; New Directions in Folklore Volume 12 ; 12 ; >
-      au < crawling ; exists ; 2015 ; 2015 ; New Directions in Folklore Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; New Directions in Folklore Volume 8 ; 8 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2011 ; 2011 ; New Directions in Folklore Volume 9 ; 9 ; https://scholarworks.iu.edu/journals/ ; >
+      au < finished ; crawling ; 2012 ; 2012 ; New Directions in Folklore Volume 10 ; 10 ; http://scholarworks.iu.edu/journals/ ; >
+      au < frozen ; exists ; 2013 ; 2013 ; New Directions in Folklore Volume 11 ; 11 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2014 ; 2014 ; New Directions in Folklore Volume 12 ; 12 ; http://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2015 ; 2015 ; New Directions in Folklore Volume 13 ; 13 ; http://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -358,9 +358,9 @@
     
       param[journal_id] = 18cy
 
-      au < finished ; finished ; 2013 ; 2013 ; The Workshop Volume 0 ; 0000 ; >
-      au < finished ; finished ; 2014 ; 2014 ; The Workshop Volume 2014 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; 2015 ; The Workshop Volume 2015 ; 2015 ; >
+      au < finished ; finished ; 2013 ; 2013 ; The Workshop Volume 0 ; 0000 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2014 ; 2014 ; The Workshop Volume 2014 ; 2014 ; http://scholarworks.iu.edu/journals/ ; >
+      au < crawling ; exists ; 2015 ; 2015 ; The Workshop Volume 2015 ; 2015 ; http://scholarworks.iu.edu/journals/ ; >
 
   }
 
@@ -372,9 +372,9 @@
       param[journal_id] = BB
       comment[issn] = missing
 
-      au < manifest ; exists ; 2009 ; 2009 ; The World is Our Home Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2010 ; 2010 ; The World is Our Home Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2011 ; 2011 ; The World is Our Home Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; The World is Our Home Volume 1 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2010 ; 2010 ; The World is Our Home Volume 2 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2011 ; 2011 ; The World is Our Home Volume 3 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
 
   }
 }
