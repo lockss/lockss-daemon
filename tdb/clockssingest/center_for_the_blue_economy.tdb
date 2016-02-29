@@ -20,8 +20,8 @@
     param[journal_abbr] = joce
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < exists ; exists ; 2014 ; Journal of Ocean and Coastal Economies Volume 1 ; 2014 ; >
-    au < exists ; exists ; 2015 ; Journal of Ocean and Coastal Economies Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2014 ; Journal of Ocean and Coastal Economies Volume 1 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; Journal of Ocean and Coastal Economies Volume 2 ; 2 ; >
 
   }
 
