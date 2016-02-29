@@ -5,13 +5,17 @@
   >
 
   rights = openaccess
-  comment[down] = all content moved from http to https
+
+  ########
+  # Only AUs in production prior to 2016-02-28 can ever have the HTTP base URL
+  # http://www.gpo.gov/ . Any AU processed thereafter must have the HTTPS base
+  # URL https://www.gpo.gov/ .
+  ########
 
   {
 
   plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsPlugin
-  param[base_url] = http://www.gpo.gov/
-  implicit < status ; year ; name ; param[year] >
+  implicit < status ; year ; name ; param[base_url] ; param[year] >
 
   {
 
@@ -21,216 +25,216 @@
 
     param[collection_id] = GOVPUB
 
-    au < manifest ; 1793 ; Account of the Receipts and Expenditures of the United States 1793 ; 1793 >
-    au < manifest ; 1797 ; Account of the Receipts and Expenditures of the United States 1797 ; 1797 >
-    au < manifest ; 1805 ; Account of the Receipts and Expenditures of the United States 1805 ; 1805 >
-    au < manifest ; 1806 ; Account of the Receipts and Expenditures of the United States 1806 ; 1806 >
-    au < manifest ; 1808 ; Account of the Receipts and Expenditures of the United States 1808 ; 1808 >
-    au < manifest ; 1809 ; Account of the Receipts and Expenditures of the United States 1809 ; 1809 >
-    au < manifest ; 1812 ; Account of the Receipts and Expenditures of the United States 1812 ; 1812 >
-    au < manifest ; 1813 ; Account of the Receipts and Expenditures of the United States 1813 ; 1813 >
-    au < manifest ; 1814 ; Account of the Receipts and Expenditures of the United States 1814 ; 1814 >
-    au < manifest ; 1815 ; Account of the Receipts and Expenditures of the United States 1815 ; 1815 >
-    au < manifest ; 1816 ; Account of the Receipts and Expenditures of the United States 1816 ; 1816 >
-    au < manifest ; 1817 ; Account of the Receipts and Expenditures of the United States 1817 ; 1817 >
-    au < manifest ; 1818 ; Account of the Receipts and Expenditures of the United States 1818 ; 1818 >
-    au < manifest ; 1819 ; Account of the Receipts and Expenditures of the United States 1819 ; 1819 >
-    au < manifest ; 1820 ; Account of the Receipts and Expenditures of the United States 1820 ; 1820 >
-    au < manifest ; 1821 ; Account of the Receipts and Expenditures of the United States 1821 ; 1821 >
-    au < manifest ; 1822 ; Account of the Receipts and Expenditures of the United States 1822 ; 1822 >
-    au < manifest ; 1823 ; Account of the Receipts and Expenditures of the United States 1823 ; 1823 >
-    au < manifest ; 1824 ; Account of the Receipts and Expenditures of the United States 1824 ; 1824 >
-    au < manifest ; 1825 ; Account of the Receipts and Expenditures of the United States 1825 ; 1825 >
-    au < manifest ; 1826 ; Account of the Receipts and Expenditures of the United States 1826 ; 1826 >
-    au < manifest ; 1827 ; Account of the Receipts and Expenditures of the United States 1827 ; 1827 >
-    au < manifest ; 1828 ; Account of the Receipts and Expenditures of the United States 1828 ; 1828 >
-    au < manifest ; 1829 ; Account of the Receipts and Expenditures of the United States 1829 ; 1829 >
-    au < manifest ; 1830 ; Account of the Receipts and Expenditures of the United States 1830 ; 1830 >
-    au < manifest ; 1831 ; Account of the Receipts and Expenditures of the United States 1831 ; 1831 >
-    au < manifest ; 1832 ; Account of the Receipts and Expenditures of the United States 1832 ; 1832 >
-    au < manifest ; 1833 ; Account of the Receipts and Expenditures of the United States 1833 ; 1833 >
-    au < manifest ; 1834 ; Account of the Receipts and Expenditures of the United States 1834 ; 1834 >
-    au < manifest ; 1835 ; Account of the Receipts and Expenditures of the United States 1835 ; 1835 >
-    au < manifest ; 1836 ; Account of the Receipts and Expenditures of the United States 1836 ; 1836 >
-    au < manifest ; 1837 ; Account of the Receipts and Expenditures of the United States 1837 ; 1837 >
-    au < manifest ; 1838 ; Account of the Receipts and Expenditures of the United States 1838 ; 1838 >
-    au < manifest ; 1839 ; Account of the Receipts and Expenditures of the United States 1839 ; 1839 >
-    au < manifest ; 1840 ; Account of the Receipts and Expenditures of the United States 1840 ; 1840 >
-    au < manifest ; 1841 ; Account of the Receipts and Expenditures of the United States 1841 ; 1841 >
-    au < manifest ; 1842 ; Account of the Receipts and Expenditures of the United States 1842 ; 1842 >
-    au < manifest ; 1843 ; Account of the Receipts and Expenditures of the United States 1843 ; 1843 >
-    au < manifest ; 1844 ; Account of the Receipts and Expenditures of the United States 1844 ; 1844 >
-    au < manifest ; 1845 ; Account of the Receipts and Expenditures of the United States 1845 ; 1845 >
-    au < manifest ; 1846 ; Account of the Receipts and Expenditures of the United States 1846 ; 1846 >
-    au < manifest ; 1847 ; Account of the Receipts and Expenditures of the United States 1847 ; 1847 >
-    au < manifest ; 1848 ; Account of the Receipts and Expenditures of the United States 1848 ; 1848 >
-    au < manifest ; 1849 ; Account of the Receipts and Expenditures of the United States 1849 ; 1849 >
-    au < manifest ; 1850 ; Account of the Receipts and Expenditures of the United States 1850 ; 1850 >
-    au < manifest ; 1851 ; Account of the Receipts and Expenditures of the United States 1851 ; 1851 >
-    au < manifest ; 1852 ; Account of the Receipts and Expenditures of the United States 1852 ; 1852 >
-    au < manifest ; 1853 ; Account of the Receipts and Expenditures of the United States 1853 ; 1853 >
-    au < manifest ; 1854 ; Account of the Receipts and Expenditures of the United States 1854 ; 1854 >
-    au < manifest ; 1855 ; Account of the Receipts and Expenditures of the United States 1855 ; 1855 >
-    au < manifest ; 1856 ; Account of the Receipts and Expenditures of the United States 1856 ; 1856 >
-    au < manifest ; 1857 ; Account of the Receipts and Expenditures of the United States 1857 ; 1857 >
-    au < manifest ; 1858 ; Account of the Receipts and Expenditures of the United States 1858 ; 1858 >
-    au < manifest ; 1859 ; Account of the Receipts and Expenditures of the United States 1859 ; 1859 >
-    au < manifest ; 1860 ; Account of the Receipts and Expenditures of the United States 1860 ; 1860 >
-    au < manifest ; 1861 ; Account of the Receipts and Expenditures of the United States 1861 ; 1861 >
-    au < manifest ; 1862 ; Account of the Receipts and Expenditures of the United States 1862 ; 1862 >
-    au < manifest ; 1863 ; Account of the Receipts and Expenditures of the United States 1863 ; 1863 >
-    au < manifest ; 1864 ; Account of the Receipts and Expenditures of the United States 1864 ; 1864 >
-    au < manifest ; 1865 ; Account of the Receipts and Expenditures of the United States 1865 ; 1865 >
-    au < manifest ; 1866 ; Account of the Receipts and Expenditures of the United States 1866 ; 1866 >
-    au < manifest ; 1867 ; Account of the Receipts and Expenditures of the United States 1867 ; 1867 >
-    au < manifest ; 1868 ; Account of the Receipts and Expenditures of the United States 1868 ; 1868 >
-    au < manifest ; 1869 ; Account of the Receipts and Expenditures of the United States 1869 ; 1869 >
-    au < manifest ; 1871 ; Account of the Receipts and Expenditures of the United States 1871 ; 1871 >
-    au < manifest ; 1872 ; Account of the Receipts and Expenditures of the United States 1872 ; 1872 >
-    au < manifest ; 1873 ; Account of the Receipts and Expenditures of the United States 1873 ; 1873 >
-    au < manifest ; 1874 ; Account of the Receipts and Expenditures of the United States 1874 ; 1874 >
-    au < manifest ; 1875 ; Account of the Receipts and Expenditures of the United States 1875 ; 1875 >
-    au < manifest ; 1876 ; Account of the Receipts and Expenditures of the United States 1876 ; 1876 >
-    au < manifest ; 1877 ; Account of the Receipts and Expenditures of the United States 1877 ; 1877 >
-    au < manifest ; 1878 ; Account of the Receipts and Expenditures of the United States 1878 ; 1878 >
-    au < manifest ; 1879 ; Account of the Receipts and Expenditures of the United States 1879 ; 1879 >
-    au < manifest ; 1880 ; Account of the Receipts and Expenditures of the United States 1880 ; 1880 >
-    au < manifest ; 1881 ; Account of the Receipts and Expenditures of the United States 1881 ; 1881 >
-    au < manifest ; 1882 ; Account of the Receipts and Expenditures of the United States 1882 ; 1882 >
-    au < manifest ; 1883 ; Account of the Receipts and Expenditures of the United States 1883 ; 1883 >
-    au < manifest ; 1884 ; Account of the Receipts and Expenditures of the United States 1884 ; 1884 >
-    au < manifest ; 1885 ; Account of the Receipts and Expenditures of the United States 1885 ; 1885 >
-    au < manifest ; 1886 ; Account of the Receipts and Expenditures of the United States 1886 ; 1886 >
-    au < manifest ; 1887 ; Account of the Receipts and Expenditures of the United States 1887 ; 1887 >
-    au < manifest ; 1888 ; Account of the Receipts and Expenditures of the United States 1888 ; 1888 >
-    au < manifest ; 1889 ; Account of the Receipts and Expenditures of the United States 1889 ; 1889 >
-    au < manifest ; 1890 ; Account of the Receipts and Expenditures of the United States 1890 ; 1890 >
-    au < manifest ; 1891 ; Account of the Receipts and Expenditures of the United States 1891 ; 1891 >
-    au < manifest ; 1892 ; Account of the Receipts and Expenditures of the United States 1892 ; 1892 >
-    au < manifest ; 1893 ; Account of the Receipts and Expenditures of the United States 1893 ; 1893 >
-    au < manifest ; 1894 ; Account of the Receipts and Expenditures of the United States 1894 ; 1894 >
-    au < manifest ; 1895 ; Account of the Receipts and Expenditures of the United States 1895 ; 1895 >
-    au < manifest ; 1896 ; Account of the Receipts and Expenditures of the United States 1896 ; 1896 >
-    au < manifest ; 1897 ; Account of the Receipts and Expenditures of the United States 1897 ; 1897 >
-    au < manifest ; 1898 ; Account of the Receipts and Expenditures of the United States 1898 ; 1898 >
-    au < manifest ; 1899 ; Account of the Receipts and Expenditures of the United States 1899 ; 1899 >
-    au < manifest ; 1900 ; Account of the Receipts and Expenditures of the United States 1900 ; 1900 >
-    au < manifest ; 1901 ; Account of the Receipts and Expenditures of the United States 1901 ; 1901 >
-    au < manifest ; 1902 ; Account of the Receipts and Expenditures of the United States 1902 ; 1902 >
-    au < manifest ; 1903 ; Account of the Receipts and Expenditures of the United States 1903 ; 1903 >
-    au < manifest ; 1904 ; Account of the Receipts and Expenditures of the United States 1904 ; 1904 >
-    au < manifest ; 1905 ; Account of the Receipts and Expenditures of the United States 1905 ; 1905 >
-    au < manifest ; 1906 ; Account of the Receipts and Expenditures of the United States 1906 ; 1906 >
-    au < manifest ; 1907 ; Account of the Receipts and Expenditures of the United States 1907 ; 1907 >
-    au < manifest ; 1908 ; Account of the Receipts and Expenditures of the United States 1908 ; 1908 >
-    au < manifest ; 1909 ; Account of the Receipts and Expenditures of the United States 1909 ; 1909 >
-    au < manifest ; 1910 ; Account of the Receipts and Expenditures of the United States 1910 ; 1910 >
-    au < manifest ; 1911 ; Account of the Receipts and Expenditures of the United States 1911 ; 1911 >
-    au < manifest ; 1912 ; Account of the Receipts and Expenditures of the United States 1912 ; 1912 >
-    au < manifest ; 1913 ; Account of the Receipts and Expenditures of the United States 1913 ; 1913 >
-    au < manifest ; 1914 ; Account of the Receipts and Expenditures of the United States 1914 ; 1914 >
-    au < manifest ; 1915 ; Account of the Receipts and Expenditures of the United States 1915 ; 1915 >
-    au < manifest ; 1916 ; Account of the Receipts and Expenditures of the United States 1916 ; 1916 >
-    au < manifest ; 1917 ; Account of the Receipts and Expenditures of the United States 1917 ; 1917 >
-    au < manifest ; 1918 ; Account of the Receipts and Expenditures of the United States 1918 ; 1918 >
-    au < manifest ; 1919 ; Account of the Receipts and Expenditures of the United States 1919 ; 1919 >
-    au < manifest ; 1920 ; Account of the Receipts and Expenditures of the United States 1920 ; 1920 >
-    au < manifest ; 1921 ; Account of the Receipts and Expenditures of the United States 1921 ; 1921 >
-    au < manifest ; 1922 ; Account of the Receipts and Expenditures of the United States 1922 ; 1922 >
-    au < manifest ; 1923 ; Account of the Receipts and Expenditures of the United States 1923 ; 1923 >
-    au < manifest ; 1924 ; Account of the Receipts and Expenditures of the United States 1924 ; 1924 >
-    au < manifest ; 1925 ; Account of the Receipts and Expenditures of the United States 1925 ; 1925 >
-    au < manifest ; 1926 ; Account of the Receipts and Expenditures of the United States 1926 ; 1926 >
-    au < manifest ; 1927 ; Account of the Receipts and Expenditures of the United States 1927 ; 1927 >
-    au < manifest ; 1928 ; Account of the Receipts and Expenditures of the United States 1928 ; 1928 >
-    au < manifest ; 1929 ; Account of the Receipts and Expenditures of the United States 1929 ; 1929 >
-    au < manifest ; 1930 ; Account of the Receipts and Expenditures of the United States 1930 ; 1930 >
-    au < manifest ; 1931 ; Account of the Receipts and Expenditures of the United States 1931 ; 1931 >
-    au < manifest ; 1932 ; Account of the Receipts and Expenditures of the United States 1932 ; 1932 >
-    au < manifest ; 1933 ; Account of the Receipts and Expenditures of the United States 1933 ; 1933 >
-    au < manifest ; 1934 ; Account of the Receipts and Expenditures of the United States 1934 ; 1934 >
-    au < manifest ; 1935 ; Account of the Receipts and Expenditures of the United States 1935 ; 1935 >
-    au < manifest ; 1936 ; Account of the Receipts and Expenditures of the United States 1936 ; 1936 >
-    au < manifest ; 1937 ; Account of the Receipts and Expenditures of the United States 1937 ; 1937 >
-    au < manifest ; 1938 ; Account of the Receipts and Expenditures of the United States 1938 ; 1938 >
-    au < manifest ; 1939 ; Account of the Receipts and Expenditures of the United States 1939 ; 1939 >
-    au < manifest ; 1940 ; Account of the Receipts and Expenditures of the United States 1940 ; 1940 >
-    au < manifest ; 1941 ; Account of the Receipts and Expenditures of the United States 1941 ; 1941 >
-    au < manifest ; 1942 ; Account of the Receipts and Expenditures of the United States 1942 ; 1942 >
-    au < manifest ; 1943 ; Account of the Receipts and Expenditures of the United States 1943 ; 1943 >
-    au < manifest ; 1944 ; Account of the Receipts and Expenditures of the United States 1944 ; 1944 >
-    au < manifest ; 1945 ; Account of the Receipts and Expenditures of the United States 1945 ; 1945 >
-    au < manifest ; 1946 ; Account of the Receipts and Expenditures of the United States 1946 ; 1946 >
-    au < manifest ; 1947 ; Account of the Receipts and Expenditures of the United States 1947 ; 1947 >
-    au < manifest ; 1948 ; Account of the Receipts and Expenditures of the United States 1948 ; 1948 >
-    au < manifest ; 1949 ; Account of the Receipts and Expenditures of the United States 1949 ; 1949 >
-    au < manifest ; 1950 ; Account of the Receipts and Expenditures of the United States 1950 ; 1950 >
-    au < manifest ; 1951 ; Account of the Receipts and Expenditures of the United States 1951 ; 1951 >
-    au < manifest ; 1952 ; Account of the Receipts and Expenditures of the United States 1952 ; 1952 >
-    au < manifest ; 1953 ; Account of the Receipts and Expenditures of the United States 1953 ; 1953 >
-    au < manifest ; 1954 ; Account of the Receipts and Expenditures of the United States 1954 ; 1954 >
-    au < manifest ; 1955 ; Account of the Receipts and Expenditures of the United States 1955 ; 1955 >
-    au < manifest ; 1956 ; Account of the Receipts and Expenditures of the United States 1956 ; 1956 >
-    au < manifest ; 1957 ; Account of the Receipts and Expenditures of the United States 1957 ; 1957 >
-    au < manifest ; 1958 ; Account of the Receipts and Expenditures of the United States 1958 ; 1958 >
-    au < manifest ; 1959 ; Account of the Receipts and Expenditures of the United States 1959 ; 1959 >
-    au < manifest ; 1960 ; Account of the Receipts and Expenditures of the United States 1960 ; 1960 >
-    au < manifest ; 1961 ; Account of the Receipts and Expenditures of the United States 1961 ; 1961 >
-    au < manifest ; 1962 ; Account of the Receipts and Expenditures of the United States 1962 ; 1962 >
-    au < manifest ; 1963 ; Account of the Receipts and Expenditures of the United States 1963 ; 1963 >
-    au < manifest ; 1964 ; Account of the Receipts and Expenditures of the United States 1964 ; 1964 >
-    au < manifest ; 1965 ; Account of the Receipts and Expenditures of the United States 1965 ; 1965 >
-    au < manifest ; 1966 ; Account of the Receipts and Expenditures of the United States 1966 ; 1966 >
-    au < manifest ; 1967 ; Account of the Receipts and Expenditures of the United States 1967 ; 1967 >
-    au < manifest ; 1968 ; Account of the Receipts and Expenditures of the United States 1968 ; 1968 >
-    au < manifest ; 1969 ; Account of the Receipts and Expenditures of the United States 1969 ; 1969 >
-    au < manifest ; 1970 ; Account of the Receipts and Expenditures of the United States 1970 ; 1970 >
-    au < manifest ; 1971 ; Account of the Receipts and Expenditures of the United States 1971 ; 1971 >
-    au < manifest ; 1972 ; Account of the Receipts and Expenditures of the United States 1972 ; 1972 >
-    au < manifest ; 1973 ; Account of the Receipts and Expenditures of the United States 1973 ; 1973 >
-    au < manifest ; 1974 ; Account of the Receipts and Expenditures of the United States 1974 ; 1974 >
-    au < manifest ; 1975 ; Account of the Receipts and Expenditures of the United States 1975 ; 1975 >
-    au < manifest ; 1976 ; Account of the Receipts and Expenditures of the United States 1976 ; 1976 >
-    au < manifest ; 1977 ; Account of the Receipts and Expenditures of the United States 1977 ; 1977 >
-    au < manifest ; 1978 ; Account of the Receipts and Expenditures of the United States 1978 ; 1978 >
-    au < manifest ; 1979 ; Account of the Receipts and Expenditures of the United States 1979 ; 1979 >
-    au < manifest ; 1980 ; Account of the Receipts and Expenditures of the United States 1980 ; 1980 >
-    au < manifest ; 1981 ; Account of the Receipts and Expenditures of the United States 1981 ; 1981 >
-    au < manifest ; 1982 ; Account of the Receipts and Expenditures of the United States 1982 ; 1982 >
-    au < manifest ; 1983 ; Account of the Receipts and Expenditures of the United States 1983 ; 1983 >
-    au < manifest ; 1984 ; Account of the Receipts and Expenditures of the United States 1984 ; 1984 >
-    au < manifest ; 1985 ; Account of the Receipts and Expenditures of the United States 1985 ; 1985 >
-    au < manifest ; 1986 ; Account of the Receipts and Expenditures of the United States 1986 ; 1986 >
-    au < manifest ; 1987 ; Account of the Receipts and Expenditures of the United States 1987 ; 1987 >
-    au < manifest ; 1988 ; Account of the Receipts and Expenditures of the United States 1988 ; 1988 >
-    au < manifest ; 1989 ; Account of the Receipts and Expenditures of the United States 1989 ; 1989 >
-    au < manifest ; 1990 ; Account of the Receipts and Expenditures of the United States 1990 ; 1990 >
-    au < manifest ; 1991 ; Account of the Receipts and Expenditures of the United States 1991 ; 1991 >
-    au < manifest ; 1992 ; Account of the Receipts and Expenditures of the United States 1992 ; 1992 >
-    au < manifest ; 1993 ; Account of the Receipts and Expenditures of the United States 1993 ; 1993 >
-    au < manifest ; 1994 ; Account of the Receipts and Expenditures of the United States 1994 ; 1994 >
-    au < manifest ; 1995 ; Account of the Receipts and Expenditures of the United States 1995 ; 1995 >
-    au < manifest ; 1996 ; Account of the Receipts and Expenditures of the United States 1996 ; 1996 >
-    au < manifest ; 1997 ; Account of the Receipts and Expenditures of the United States 1997 ; 1997 >
-    au < manifest ; 1998 ; Account of the Receipts and Expenditures of the United States 1998 ; 1998 >
-    au < manifest ; 1999 ; Account of the Receipts and Expenditures of the United States 1999 ; 1999 >
-    au < manifest ; 2000 ; Account of the Receipts and Expenditures of the United States 2000 ; 2000 >
-    au < manifest ; 2001 ; Account of the Receipts and Expenditures of the United States 2001 ; 2001 >
-    au < manifest ; 2002 ; Account of the Receipts and Expenditures of the United States 2002 ; 2002 >
-    au < manifest ; 2003 ; Account of the Receipts and Expenditures of the United States 2003 ; 2003 >
-    au < manifest ; 2004 ; Account of the Receipts and Expenditures of the United States 2004 ; 2004 >
-    au < manifest ; 2005 ; Account of the Receipts and Expenditures of the United States 2005 ; 2005 >
-    au < manifest ; 2006 ; Account of the Receipts and Expenditures of the United States 2006 ; 2006 >
-    au < manifest ; 2007 ; Account of the Receipts and Expenditures of the United States 2007 ; 2007 >
-    au < manifest ; 2008 ; Account of the Receipts and Expenditures of the United States 2008 ; 2008 >
-    au < manifest ; 2009 ; Account of the Receipts and Expenditures of the United States 2009 ; 2009 >
-    au < manifest ; 2010 ; Account of the Receipts and Expenditures of the United States 2010 ; 2010 >
-    au < manifest ; 2011 ; Account of the Receipts and Expenditures of the United States 2011 ; 2011 >
-    au < manifest ; 2012 ; Account of the Receipts and Expenditures of the United States 2012 ; 2012 >
-    au < manifest ; 2013 ; Account of the Receipts and Expenditures of the United States 2013 ; 2013 >
-    au < manifest ; 2014 ; Account of the Receipts and Expenditures of the United States 2014 ; 2014 >
-    au < manifest ; 2015 ; Account of the Receipts and Expenditures of the United States 2015 ; 2015 >
-    au < expected ; 2016 ; Account of the Receipts and Expenditures of the United States 2016 ; 2016 >
+    au < manifest ; 1793 ; Account of the Receipts and Expenditures of the United States 1793 ; https://www.gpo.gov/ ; 1793 >
+    au < manifest ; 1797 ; Account of the Receipts and Expenditures of the United States 1797 ; https://www.gpo.gov/ ; 1797 >
+    au < manifest ; 1805 ; Account of the Receipts and Expenditures of the United States 1805 ; https://www.gpo.gov/ ; 1805 >
+    au < manifest ; 1806 ; Account of the Receipts and Expenditures of the United States 1806 ; https://www.gpo.gov/ ; 1806 >
+    au < manifest ; 1808 ; Account of the Receipts and Expenditures of the United States 1808 ; https://www.gpo.gov/ ; 1808 >
+    au < manifest ; 1809 ; Account of the Receipts and Expenditures of the United States 1809 ; https://www.gpo.gov/ ; 1809 >
+    au < manifest ; 1812 ; Account of the Receipts and Expenditures of the United States 1812 ; https://www.gpo.gov/ ; 1812 >
+    au < manifest ; 1813 ; Account of the Receipts and Expenditures of the United States 1813 ; https://www.gpo.gov/ ; 1813 >
+    au < manifest ; 1814 ; Account of the Receipts and Expenditures of the United States 1814 ; https://www.gpo.gov/ ; 1814 >
+    au < manifest ; 1815 ; Account of the Receipts and Expenditures of the United States 1815 ; https://www.gpo.gov/ ; 1815 >
+    au < manifest ; 1816 ; Account of the Receipts and Expenditures of the United States 1816 ; https://www.gpo.gov/ ; 1816 >
+    au < manifest ; 1817 ; Account of the Receipts and Expenditures of the United States 1817 ; https://www.gpo.gov/ ; 1817 >
+    au < manifest ; 1818 ; Account of the Receipts and Expenditures of the United States 1818 ; https://www.gpo.gov/ ; 1818 >
+    au < manifest ; 1819 ; Account of the Receipts and Expenditures of the United States 1819 ; https://www.gpo.gov/ ; 1819 >
+    au < manifest ; 1820 ; Account of the Receipts and Expenditures of the United States 1820 ; https://www.gpo.gov/ ; 1820 >
+    au < manifest ; 1821 ; Account of the Receipts and Expenditures of the United States 1821 ; https://www.gpo.gov/ ; 1821 >
+    au < manifest ; 1822 ; Account of the Receipts and Expenditures of the United States 1822 ; https://www.gpo.gov/ ; 1822 >
+    au < manifest ; 1823 ; Account of the Receipts and Expenditures of the United States 1823 ; https://www.gpo.gov/ ; 1823 >
+    au < manifest ; 1824 ; Account of the Receipts and Expenditures of the United States 1824 ; https://www.gpo.gov/ ; 1824 >
+    au < manifest ; 1825 ; Account of the Receipts and Expenditures of the United States 1825 ; https://www.gpo.gov/ ; 1825 >
+    au < manifest ; 1826 ; Account of the Receipts and Expenditures of the United States 1826 ; https://www.gpo.gov/ ; 1826 >
+    au < manifest ; 1827 ; Account of the Receipts and Expenditures of the United States 1827 ; https://www.gpo.gov/ ; 1827 >
+    au < manifest ; 1828 ; Account of the Receipts and Expenditures of the United States 1828 ; https://www.gpo.gov/ ; 1828 >
+    au < manifest ; 1829 ; Account of the Receipts and Expenditures of the United States 1829 ; https://www.gpo.gov/ ; 1829 >
+    au < manifest ; 1830 ; Account of the Receipts and Expenditures of the United States 1830 ; https://www.gpo.gov/ ; 1830 >
+    au < manifest ; 1831 ; Account of the Receipts and Expenditures of the United States 1831 ; https://www.gpo.gov/ ; 1831 >
+    au < manifest ; 1832 ; Account of the Receipts and Expenditures of the United States 1832 ; https://www.gpo.gov/ ; 1832 >
+    au < manifest ; 1833 ; Account of the Receipts and Expenditures of the United States 1833 ; https://www.gpo.gov/ ; 1833 >
+    au < manifest ; 1834 ; Account of the Receipts and Expenditures of the United States 1834 ; https://www.gpo.gov/ ; 1834 >
+    au < manifest ; 1835 ; Account of the Receipts and Expenditures of the United States 1835 ; https://www.gpo.gov/ ; 1835 >
+    au < manifest ; 1836 ; Account of the Receipts and Expenditures of the United States 1836 ; https://www.gpo.gov/ ; 1836 >
+    au < manifest ; 1837 ; Account of the Receipts and Expenditures of the United States 1837 ; https://www.gpo.gov/ ; 1837 >
+    au < manifest ; 1838 ; Account of the Receipts and Expenditures of the United States 1838 ; https://www.gpo.gov/ ; 1838 >
+    au < manifest ; 1839 ; Account of the Receipts and Expenditures of the United States 1839 ; https://www.gpo.gov/ ; 1839 >
+    au < manifest ; 1840 ; Account of the Receipts and Expenditures of the United States 1840 ; https://www.gpo.gov/ ; 1840 >
+    au < manifest ; 1841 ; Account of the Receipts and Expenditures of the United States 1841 ; https://www.gpo.gov/ ; 1841 >
+    au < manifest ; 1842 ; Account of the Receipts and Expenditures of the United States 1842 ; https://www.gpo.gov/ ; 1842 >
+    au < manifest ; 1843 ; Account of the Receipts and Expenditures of the United States 1843 ; https://www.gpo.gov/ ; 1843 >
+    au < manifest ; 1844 ; Account of the Receipts and Expenditures of the United States 1844 ; https://www.gpo.gov/ ; 1844 >
+    au < manifest ; 1845 ; Account of the Receipts and Expenditures of the United States 1845 ; https://www.gpo.gov/ ; 1845 >
+    au < manifest ; 1846 ; Account of the Receipts and Expenditures of the United States 1846 ; https://www.gpo.gov/ ; 1846 >
+    au < manifest ; 1847 ; Account of the Receipts and Expenditures of the United States 1847 ; https://www.gpo.gov/ ; 1847 >
+    au < manifest ; 1848 ; Account of the Receipts and Expenditures of the United States 1848 ; https://www.gpo.gov/ ; 1848 >
+    au < manifest ; 1849 ; Account of the Receipts and Expenditures of the United States 1849 ; https://www.gpo.gov/ ; 1849 >
+    au < manifest ; 1850 ; Account of the Receipts and Expenditures of the United States 1850 ; https://www.gpo.gov/ ; 1850 >
+    au < manifest ; 1851 ; Account of the Receipts and Expenditures of the United States 1851 ; https://www.gpo.gov/ ; 1851 >
+    au < manifest ; 1852 ; Account of the Receipts and Expenditures of the United States 1852 ; https://www.gpo.gov/ ; 1852 >
+    au < manifest ; 1853 ; Account of the Receipts and Expenditures of the United States 1853 ; https://www.gpo.gov/ ; 1853 >
+    au < manifest ; 1854 ; Account of the Receipts and Expenditures of the United States 1854 ; https://www.gpo.gov/ ; 1854 >
+    au < manifest ; 1855 ; Account of the Receipts and Expenditures of the United States 1855 ; https://www.gpo.gov/ ; 1855 >
+    au < manifest ; 1856 ; Account of the Receipts and Expenditures of the United States 1856 ; https://www.gpo.gov/ ; 1856 >
+    au < manifest ; 1857 ; Account of the Receipts and Expenditures of the United States 1857 ; https://www.gpo.gov/ ; 1857 >
+    au < manifest ; 1858 ; Account of the Receipts and Expenditures of the United States 1858 ; https://www.gpo.gov/ ; 1858 >
+    au < manifest ; 1859 ; Account of the Receipts and Expenditures of the United States 1859 ; https://www.gpo.gov/ ; 1859 >
+    au < manifest ; 1860 ; Account of the Receipts and Expenditures of the United States 1860 ; https://www.gpo.gov/ ; 1860 >
+    au < manifest ; 1861 ; Account of the Receipts and Expenditures of the United States 1861 ; https://www.gpo.gov/ ; 1861 >
+    au < manifest ; 1862 ; Account of the Receipts and Expenditures of the United States 1862 ; https://www.gpo.gov/ ; 1862 >
+    au < manifest ; 1863 ; Account of the Receipts and Expenditures of the United States 1863 ; https://www.gpo.gov/ ; 1863 >
+    au < manifest ; 1864 ; Account of the Receipts and Expenditures of the United States 1864 ; https://www.gpo.gov/ ; 1864 >
+    au < manifest ; 1865 ; Account of the Receipts and Expenditures of the United States 1865 ; https://www.gpo.gov/ ; 1865 >
+    au < manifest ; 1866 ; Account of the Receipts and Expenditures of the United States 1866 ; https://www.gpo.gov/ ; 1866 >
+    au < manifest ; 1867 ; Account of the Receipts and Expenditures of the United States 1867 ; https://www.gpo.gov/ ; 1867 >
+    au < manifest ; 1868 ; Account of the Receipts and Expenditures of the United States 1868 ; https://www.gpo.gov/ ; 1868 >
+    au < manifest ; 1869 ; Account of the Receipts and Expenditures of the United States 1869 ; https://www.gpo.gov/ ; 1869 >
+    au < manifest ; 1871 ; Account of the Receipts and Expenditures of the United States 1871 ; https://www.gpo.gov/ ; 1871 >
+    au < manifest ; 1872 ; Account of the Receipts and Expenditures of the United States 1872 ; https://www.gpo.gov/ ; 1872 >
+    au < manifest ; 1873 ; Account of the Receipts and Expenditures of the United States 1873 ; https://www.gpo.gov/ ; 1873 >
+    au < manifest ; 1874 ; Account of the Receipts and Expenditures of the United States 1874 ; https://www.gpo.gov/ ; 1874 >
+    au < manifest ; 1875 ; Account of the Receipts and Expenditures of the United States 1875 ; https://www.gpo.gov/ ; 1875 >
+    au < manifest ; 1876 ; Account of the Receipts and Expenditures of the United States 1876 ; https://www.gpo.gov/ ; 1876 >
+    au < manifest ; 1877 ; Account of the Receipts and Expenditures of the United States 1877 ; https://www.gpo.gov/ ; 1877 >
+    au < manifest ; 1878 ; Account of the Receipts and Expenditures of the United States 1878 ; https://www.gpo.gov/ ; 1878 >
+    au < manifest ; 1879 ; Account of the Receipts and Expenditures of the United States 1879 ; https://www.gpo.gov/ ; 1879 >
+    au < manifest ; 1880 ; Account of the Receipts and Expenditures of the United States 1880 ; https://www.gpo.gov/ ; 1880 >
+    au < manifest ; 1881 ; Account of the Receipts and Expenditures of the United States 1881 ; https://www.gpo.gov/ ; 1881 >
+    au < manifest ; 1882 ; Account of the Receipts and Expenditures of the United States 1882 ; https://www.gpo.gov/ ; 1882 >
+    au < manifest ; 1883 ; Account of the Receipts and Expenditures of the United States 1883 ; https://www.gpo.gov/ ; 1883 >
+    au < manifest ; 1884 ; Account of the Receipts and Expenditures of the United States 1884 ; https://www.gpo.gov/ ; 1884 >
+    au < manifest ; 1885 ; Account of the Receipts and Expenditures of the United States 1885 ; https://www.gpo.gov/ ; 1885 >
+    au < manifest ; 1886 ; Account of the Receipts and Expenditures of the United States 1886 ; https://www.gpo.gov/ ; 1886 >
+    au < manifest ; 1887 ; Account of the Receipts and Expenditures of the United States 1887 ; https://www.gpo.gov/ ; 1887 >
+    au < manifest ; 1888 ; Account of the Receipts and Expenditures of the United States 1888 ; https://www.gpo.gov/ ; 1888 >
+    au < manifest ; 1889 ; Account of the Receipts and Expenditures of the United States 1889 ; https://www.gpo.gov/ ; 1889 >
+    au < manifest ; 1890 ; Account of the Receipts and Expenditures of the United States 1890 ; https://www.gpo.gov/ ; 1890 >
+    au < manifest ; 1891 ; Account of the Receipts and Expenditures of the United States 1891 ; https://www.gpo.gov/ ; 1891 >
+    au < manifest ; 1892 ; Account of the Receipts and Expenditures of the United States 1892 ; https://www.gpo.gov/ ; 1892 >
+    au < manifest ; 1893 ; Account of the Receipts and Expenditures of the United States 1893 ; https://www.gpo.gov/ ; 1893 >
+    au < manifest ; 1894 ; Account of the Receipts and Expenditures of the United States 1894 ; https://www.gpo.gov/ ; 1894 >
+    au < manifest ; 1895 ; Account of the Receipts and Expenditures of the United States 1895 ; https://www.gpo.gov/ ; 1895 >
+    au < manifest ; 1896 ; Account of the Receipts and Expenditures of the United States 1896 ; https://www.gpo.gov/ ; 1896 >
+    au < manifest ; 1897 ; Account of the Receipts and Expenditures of the United States 1897 ; https://www.gpo.gov/ ; 1897 >
+    au < manifest ; 1898 ; Account of the Receipts and Expenditures of the United States 1898 ; https://www.gpo.gov/ ; 1898 >
+    au < manifest ; 1899 ; Account of the Receipts and Expenditures of the United States 1899 ; https://www.gpo.gov/ ; 1899 >
+    au < manifest ; 1900 ; Account of the Receipts and Expenditures of the United States 1900 ; https://www.gpo.gov/ ; 1900 >
+    au < manifest ; 1901 ; Account of the Receipts and Expenditures of the United States 1901 ; https://www.gpo.gov/ ; 1901 >
+    au < manifest ; 1902 ; Account of the Receipts and Expenditures of the United States 1902 ; https://www.gpo.gov/ ; 1902 >
+    au < manifest ; 1903 ; Account of the Receipts and Expenditures of the United States 1903 ; https://www.gpo.gov/ ; 1903 >
+    au < manifest ; 1904 ; Account of the Receipts and Expenditures of the United States 1904 ; https://www.gpo.gov/ ; 1904 >
+    au < manifest ; 1905 ; Account of the Receipts and Expenditures of the United States 1905 ; https://www.gpo.gov/ ; 1905 >
+    au < manifest ; 1906 ; Account of the Receipts and Expenditures of the United States 1906 ; https://www.gpo.gov/ ; 1906 >
+    au < manifest ; 1907 ; Account of the Receipts and Expenditures of the United States 1907 ; https://www.gpo.gov/ ; 1907 >
+    au < manifest ; 1908 ; Account of the Receipts and Expenditures of the United States 1908 ; https://www.gpo.gov/ ; 1908 >
+    au < manifest ; 1909 ; Account of the Receipts and Expenditures of the United States 1909 ; https://www.gpo.gov/ ; 1909 >
+    au < manifest ; 1910 ; Account of the Receipts and Expenditures of the United States 1910 ; https://www.gpo.gov/ ; 1910 >
+    au < manifest ; 1911 ; Account of the Receipts and Expenditures of the United States 1911 ; https://www.gpo.gov/ ; 1911 >
+    au < manifest ; 1912 ; Account of the Receipts and Expenditures of the United States 1912 ; https://www.gpo.gov/ ; 1912 >
+    au < manifest ; 1913 ; Account of the Receipts and Expenditures of the United States 1913 ; https://www.gpo.gov/ ; 1913 >
+    au < manifest ; 1914 ; Account of the Receipts and Expenditures of the United States 1914 ; https://www.gpo.gov/ ; 1914 >
+    au < manifest ; 1915 ; Account of the Receipts and Expenditures of the United States 1915 ; https://www.gpo.gov/ ; 1915 >
+    au < manifest ; 1916 ; Account of the Receipts and Expenditures of the United States 1916 ; https://www.gpo.gov/ ; 1916 >
+    au < manifest ; 1917 ; Account of the Receipts and Expenditures of the United States 1917 ; https://www.gpo.gov/ ; 1917 >
+    au < manifest ; 1918 ; Account of the Receipts and Expenditures of the United States 1918 ; https://www.gpo.gov/ ; 1918 >
+    au < manifest ; 1919 ; Account of the Receipts and Expenditures of the United States 1919 ; https://www.gpo.gov/ ; 1919 >
+    au < manifest ; 1920 ; Account of the Receipts and Expenditures of the United States 1920 ; https://www.gpo.gov/ ; 1920 >
+    au < manifest ; 1921 ; Account of the Receipts and Expenditures of the United States 1921 ; https://www.gpo.gov/ ; 1921 >
+    au < manifest ; 1922 ; Account of the Receipts and Expenditures of the United States 1922 ; https://www.gpo.gov/ ; 1922 >
+    au < manifest ; 1923 ; Account of the Receipts and Expenditures of the United States 1923 ; https://www.gpo.gov/ ; 1923 >
+    au < manifest ; 1924 ; Account of the Receipts and Expenditures of the United States 1924 ; https://www.gpo.gov/ ; 1924 >
+    au < manifest ; 1925 ; Account of the Receipts and Expenditures of the United States 1925 ; https://www.gpo.gov/ ; 1925 >
+    au < manifest ; 1926 ; Account of the Receipts and Expenditures of the United States 1926 ; https://www.gpo.gov/ ; 1926 >
+    au < manifest ; 1927 ; Account of the Receipts and Expenditures of the United States 1927 ; https://www.gpo.gov/ ; 1927 >
+    au < manifest ; 1928 ; Account of the Receipts and Expenditures of the United States 1928 ; https://www.gpo.gov/ ; 1928 >
+    au < manifest ; 1929 ; Account of the Receipts and Expenditures of the United States 1929 ; https://www.gpo.gov/ ; 1929 >
+    au < manifest ; 1930 ; Account of the Receipts and Expenditures of the United States 1930 ; https://www.gpo.gov/ ; 1930 >
+    au < manifest ; 1931 ; Account of the Receipts and Expenditures of the United States 1931 ; https://www.gpo.gov/ ; 1931 >
+    au < manifest ; 1932 ; Account of the Receipts and Expenditures of the United States 1932 ; https://www.gpo.gov/ ; 1932 >
+    au < manifest ; 1933 ; Account of the Receipts and Expenditures of the United States 1933 ; https://www.gpo.gov/ ; 1933 >
+    au < manifest ; 1934 ; Account of the Receipts and Expenditures of the United States 1934 ; https://www.gpo.gov/ ; 1934 >
+    au < manifest ; 1935 ; Account of the Receipts and Expenditures of the United States 1935 ; https://www.gpo.gov/ ; 1935 >
+    au < manifest ; 1936 ; Account of the Receipts and Expenditures of the United States 1936 ; https://www.gpo.gov/ ; 1936 >
+    au < manifest ; 1937 ; Account of the Receipts and Expenditures of the United States 1937 ; https://www.gpo.gov/ ; 1937 >
+    au < manifest ; 1938 ; Account of the Receipts and Expenditures of the United States 1938 ; https://www.gpo.gov/ ; 1938 >
+    au < manifest ; 1939 ; Account of the Receipts and Expenditures of the United States 1939 ; https://www.gpo.gov/ ; 1939 >
+    au < manifest ; 1940 ; Account of the Receipts and Expenditures of the United States 1940 ; https://www.gpo.gov/ ; 1940 >
+    au < manifest ; 1941 ; Account of the Receipts and Expenditures of the United States 1941 ; https://www.gpo.gov/ ; 1941 >
+    au < manifest ; 1942 ; Account of the Receipts and Expenditures of the United States 1942 ; https://www.gpo.gov/ ; 1942 >
+    au < manifest ; 1943 ; Account of the Receipts and Expenditures of the United States 1943 ; https://www.gpo.gov/ ; 1943 >
+    au < manifest ; 1944 ; Account of the Receipts and Expenditures of the United States 1944 ; https://www.gpo.gov/ ; 1944 >
+    au < manifest ; 1945 ; Account of the Receipts and Expenditures of the United States 1945 ; https://www.gpo.gov/ ; 1945 >
+    au < manifest ; 1946 ; Account of the Receipts and Expenditures of the United States 1946 ; https://www.gpo.gov/ ; 1946 >
+    au < manifest ; 1947 ; Account of the Receipts and Expenditures of the United States 1947 ; https://www.gpo.gov/ ; 1947 >
+    au < manifest ; 1948 ; Account of the Receipts and Expenditures of the United States 1948 ; https://www.gpo.gov/ ; 1948 >
+    au < manifest ; 1949 ; Account of the Receipts and Expenditures of the United States 1949 ; https://www.gpo.gov/ ; 1949 >
+    au < manifest ; 1950 ; Account of the Receipts and Expenditures of the United States 1950 ; https://www.gpo.gov/ ; 1950 >
+    au < manifest ; 1951 ; Account of the Receipts and Expenditures of the United States 1951 ; https://www.gpo.gov/ ; 1951 >
+    au < manifest ; 1952 ; Account of the Receipts and Expenditures of the United States 1952 ; https://www.gpo.gov/ ; 1952 >
+    au < manifest ; 1953 ; Account of the Receipts and Expenditures of the United States 1953 ; https://www.gpo.gov/ ; 1953 >
+    au < manifest ; 1954 ; Account of the Receipts and Expenditures of the United States 1954 ; https://www.gpo.gov/ ; 1954 >
+    au < manifest ; 1955 ; Account of the Receipts and Expenditures of the United States 1955 ; https://www.gpo.gov/ ; 1955 >
+    au < manifest ; 1956 ; Account of the Receipts and Expenditures of the United States 1956 ; https://www.gpo.gov/ ; 1956 >
+    au < manifest ; 1957 ; Account of the Receipts and Expenditures of the United States 1957 ; https://www.gpo.gov/ ; 1957 >
+    au < manifest ; 1958 ; Account of the Receipts and Expenditures of the United States 1958 ; https://www.gpo.gov/ ; 1958 >
+    au < manifest ; 1959 ; Account of the Receipts and Expenditures of the United States 1959 ; https://www.gpo.gov/ ; 1959 >
+    au < manifest ; 1960 ; Account of the Receipts and Expenditures of the United States 1960 ; https://www.gpo.gov/ ; 1960 >
+    au < manifest ; 1961 ; Account of the Receipts and Expenditures of the United States 1961 ; https://www.gpo.gov/ ; 1961 >
+    au < manifest ; 1962 ; Account of the Receipts and Expenditures of the United States 1962 ; https://www.gpo.gov/ ; 1962 >
+    au < manifest ; 1963 ; Account of the Receipts and Expenditures of the United States 1963 ; https://www.gpo.gov/ ; 1963 >
+    au < manifest ; 1964 ; Account of the Receipts and Expenditures of the United States 1964 ; https://www.gpo.gov/ ; 1964 >
+    au < manifest ; 1965 ; Account of the Receipts and Expenditures of the United States 1965 ; https://www.gpo.gov/ ; 1965 >
+    au < manifest ; 1966 ; Account of the Receipts and Expenditures of the United States 1966 ; https://www.gpo.gov/ ; 1966 >
+    au < manifest ; 1967 ; Account of the Receipts and Expenditures of the United States 1967 ; https://www.gpo.gov/ ; 1967 >
+    au < manifest ; 1968 ; Account of the Receipts and Expenditures of the United States 1968 ; https://www.gpo.gov/ ; 1968 >
+    au < manifest ; 1969 ; Account of the Receipts and Expenditures of the United States 1969 ; https://www.gpo.gov/ ; 1969 >
+    au < manifest ; 1970 ; Account of the Receipts and Expenditures of the United States 1970 ; https://www.gpo.gov/ ; 1970 >
+    au < manifest ; 1971 ; Account of the Receipts and Expenditures of the United States 1971 ; https://www.gpo.gov/ ; 1971 >
+    au < manifest ; 1972 ; Account of the Receipts and Expenditures of the United States 1972 ; https://www.gpo.gov/ ; 1972 >
+    au < manifest ; 1973 ; Account of the Receipts and Expenditures of the United States 1973 ; https://www.gpo.gov/ ; 1973 >
+    au < manifest ; 1974 ; Account of the Receipts and Expenditures of the United States 1974 ; https://www.gpo.gov/ ; 1974 >
+    au < manifest ; 1975 ; Account of the Receipts and Expenditures of the United States 1975 ; https://www.gpo.gov/ ; 1975 >
+    au < manifest ; 1976 ; Account of the Receipts and Expenditures of the United States 1976 ; https://www.gpo.gov/ ; 1976 >
+    au < manifest ; 1977 ; Account of the Receipts and Expenditures of the United States 1977 ; https://www.gpo.gov/ ; 1977 >
+    au < manifest ; 1978 ; Account of the Receipts and Expenditures of the United States 1978 ; https://www.gpo.gov/ ; 1978 >
+    au < manifest ; 1979 ; Account of the Receipts and Expenditures of the United States 1979 ; https://www.gpo.gov/ ; 1979 >
+    au < manifest ; 1980 ; Account of the Receipts and Expenditures of the United States 1980 ; https://www.gpo.gov/ ; 1980 >
+    au < manifest ; 1981 ; Account of the Receipts and Expenditures of the United States 1981 ; https://www.gpo.gov/ ; 1981 >
+    au < manifest ; 1982 ; Account of the Receipts and Expenditures of the United States 1982 ; https://www.gpo.gov/ ; 1982 >
+    au < manifest ; 1983 ; Account of the Receipts and Expenditures of the United States 1983 ; https://www.gpo.gov/ ; 1983 >
+    au < manifest ; 1984 ; Account of the Receipts and Expenditures of the United States 1984 ; https://www.gpo.gov/ ; 1984 >
+    au < manifest ; 1985 ; Account of the Receipts and Expenditures of the United States 1985 ; https://www.gpo.gov/ ; 1985 >
+    au < manifest ; 1986 ; Account of the Receipts and Expenditures of the United States 1986 ; https://www.gpo.gov/ ; 1986 >
+    au < manifest ; 1987 ; Account of the Receipts and Expenditures of the United States 1987 ; https://www.gpo.gov/ ; 1987 >
+    au < manifest ; 1988 ; Account of the Receipts and Expenditures of the United States 1988 ; https://www.gpo.gov/ ; 1988 >
+    au < manifest ; 1989 ; Account of the Receipts and Expenditures of the United States 1989 ; https://www.gpo.gov/ ; 1989 >
+    au < manifest ; 1990 ; Account of the Receipts and Expenditures of the United States 1990 ; https://www.gpo.gov/ ; 1990 >
+    au < manifest ; 1991 ; Account of the Receipts and Expenditures of the United States 1991 ; https://www.gpo.gov/ ; 1991 >
+    au < manifest ; 1992 ; Account of the Receipts and Expenditures of the United States 1992 ; https://www.gpo.gov/ ; 1992 >
+    au < manifest ; 1993 ; Account of the Receipts and Expenditures of the United States 1993 ; https://www.gpo.gov/ ; 1993 >
+    au < manifest ; 1994 ; Account of the Receipts and Expenditures of the United States 1994 ; https://www.gpo.gov/ ; 1994 >
+    au < manifest ; 1995 ; Account of the Receipts and Expenditures of the United States 1995 ; https://www.gpo.gov/ ; 1995 >
+    au < manifest ; 1996 ; Account of the Receipts and Expenditures of the United States 1996 ; https://www.gpo.gov/ ; 1996 >
+    au < manifest ; 1997 ; Account of the Receipts and Expenditures of the United States 1997 ; https://www.gpo.gov/ ; 1997 >
+    au < manifest ; 1998 ; Account of the Receipts and Expenditures of the United States 1998 ; https://www.gpo.gov/ ; 1998 >
+    au < manifest ; 1999 ; Account of the Receipts and Expenditures of the United States 1999 ; https://www.gpo.gov/ ; 1999 >
+    au < manifest ; 2000 ; Account of the Receipts and Expenditures of the United States 2000 ; https://www.gpo.gov/ ; 2000 >
+    au < manifest ; 2001 ; Account of the Receipts and Expenditures of the United States 2001 ; https://www.gpo.gov/ ; 2001 >
+    au < manifest ; 2002 ; Account of the Receipts and Expenditures of the United States 2002 ; https://www.gpo.gov/ ; 2002 >
+    au < manifest ; 2003 ; Account of the Receipts and Expenditures of the United States 2003 ; https://www.gpo.gov/ ; 2003 >
+    au < manifest ; 2004 ; Account of the Receipts and Expenditures of the United States 2004 ; https://www.gpo.gov/ ; 2004 >
+    au < manifest ; 2005 ; Account of the Receipts and Expenditures of the United States 2005 ; https://www.gpo.gov/ ; 2005 >
+    au < manifest ; 2006 ; Account of the Receipts and Expenditures of the United States 2006 ; https://www.gpo.gov/ ; 2006 >
+    au < manifest ; 2007 ; Account of the Receipts and Expenditures of the United States 2007 ; https://www.gpo.gov/ ; 2007 >
+    au < manifest ; 2008 ; Account of the Receipts and Expenditures of the United States 2008 ; https://www.gpo.gov/ ; 2008 >
+    au < manifest ; 2009 ; Account of the Receipts and Expenditures of the United States 2009 ; https://www.gpo.gov/ ; 2009 >
+    au < manifest ; 2010 ; Account of the Receipts and Expenditures of the United States 2010 ; https://www.gpo.gov/ ; 2010 >
+    au < manifest ; 2011 ; Account of the Receipts and Expenditures of the United States 2011 ; https://www.gpo.gov/ ; 2011 >
+    au < manifest ; 2012 ; Account of the Receipts and Expenditures of the United States 2012 ; https://www.gpo.gov/ ; 2012 >
+    au < manifest ; 2013 ; Account of the Receipts and Expenditures of the United States 2013 ; https://www.gpo.gov/ ; 2013 >
+    au < manifest ; 2014 ; Account of the Receipts and Expenditures of the United States 2014 ; https://www.gpo.gov/ ; 2014 >
+    au < manifest ; 2015 ; Account of the Receipts and Expenditures of the United States 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < expected ; 2016 ; Account of the Receipts and Expenditures of the United States 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -242,44 +246,44 @@
 
     param[collection_id] = GPO
 
-    au < down ; 1907 ; Additional Government Publications 1907 ; 1907 >
-    au < down ; 1936 ; Additional Government Publications 1936 ; 1936 >
-    au < manifest ; 1963 ; Additional Government Publications 1963 ; 1963 >
-    au < manifest ; 1964 ; Additional Government Publications 1964 ; 1964 >
-    au < down ; 1970 ; Additional Government Publications 1970 ; 1970 >
-    au < manifest ; 1971 ; Additional Government Publications 1971 ; 1971 >
-    au < manifest ; 1975 ; Additional Government Publications 1975 ; 1975 >
-    au < manifest ; 1981 ; Additional Government Publications 1981 ; 1981 >
-    au < down ; 1986 ; Additional Government Publications 1986 ; 1986 >
-    au < down ; 1987 ; Additional Government Publications 1987 ; 1987 >
-    au < down ; 1989 ; Additional Government Publications 1989 ; 1989 >
-    au < down ; 1990 ; Additional Government Publications 1990 ; 1990 >
-    au < manifest ; 1991 ; Additional Government Publications 1991 ; 1991 >
-    au < down ; 1992 ; Additional Government Publications 1992 ; 1992 >
-    au < manifest ; 1993 ; Additional Government Publications 1993 ; 1993 >
-    au < down ; 1994 ; Additional Government Publications 1994 ; 1994 >
-    au < down ; 1995 ; Additional Government Publications 1995 ; 1995 >
-    au < down ; 1996 ; Additional Government Publications 1996 ; 1996 >
-    au < down ; 1997 ; Additional Government Publications 1997 ; 1997 >
-    au < down ; 1998 ; Additional Government Publications 1998 ; 1998 >
-    au < down ; 1999 ; Additional Government Publications 1999 ; 1999 >
-    au < down ; 2000 ; Additional Government Publications 2000 ; 2000 >
-    au < down ; 2001 ; Additional Government Publications 2001 ; 2001 >
-    au < down ; 2002 ; Additional Government Publications 2002 ; 2002 >
-    au < down ; 2003 ; Additional Government Publications 2003 ; 2003 >
-    au < down ; 2004 ; Additional Government Publications 2004 ; 2004 >
-    au < down ; 2005 ; Additional Government Publications 2005 ; 2005 >
-    au < down ; 2006 ; Additional Government Publications 2006 ; 2006 >
-    au < down ; 2007 ; Additional Government Publications 2007 ; 2007 >
-    au < down ; 2008 ; Additional Government Publications 2008 ; 2008 >
-    au < down ; 2009 ; Additional Government Publications 2009 ; 2009 >
-    au < down ; 2010 ; Additional Government Publications 2010 ; 2010 >
-    au < down ; 2011 ; Additional Government Publications 2011 ; 2011 >
-    au < down ; 2012 ; Additional Government Publications 2012 ; 2012 >
-    au < down ; 2013 ; Additional Government Publications 2013 ; 2013 >
-    au < down ; 2014 ; Additional Government Publications 2014 ; 2014 >
-    au < manifest ; 2015 ; Additional Government Publications 2015 ; 2015 >
-    au < expected ; 2016 ; Additional Government Publications 2016 ; 2016 >
+    au < down ; 1907 ; Additional Government Publications 1907 ; http://www.gpo.gov/ ; 1907 >
+    au < down ; 1936 ; Additional Government Publications 1936 ; http://www.gpo.gov/ ; 1936 >
+    au < manifest ; 1963 ; Additional Government Publications 1963 ; https://www.gpo.gov/ ; 1963 >
+    au < manifest ; 1964 ; Additional Government Publications 1964 ; https://www.gpo.gov/ ; 1964 >
+    au < down ; 1970 ; Additional Government Publications 1970 ; http://www.gpo.gov/ ; 1970 >
+    au < manifest ; 1971 ; Additional Government Publications 1971 ; https://www.gpo.gov/ ; 1971 >
+    au < manifest ; 1975 ; Additional Government Publications 1975 ; https://www.gpo.gov/ ; 1975 >
+    au < manifest ; 1981 ; Additional Government Publications 1981 ; https://www.gpo.gov/ ; 1981 >
+    au < down ; 1986 ; Additional Government Publications 1986 ; http://www.gpo.gov/ ; 1986 >
+    au < down ; 1987 ; Additional Government Publications 1987 ; http://www.gpo.gov/ ; 1987 >
+    au < down ; 1989 ; Additional Government Publications 1989 ; http://www.gpo.gov/ ; 1989 >
+    au < down ; 1990 ; Additional Government Publications 1990 ; http://www.gpo.gov/ ; 1990 >
+    au < manifest ; 1991 ; Additional Government Publications 1991 ; https://www.gpo.gov/ ; 1991 >
+    au < down ; 1992 ; Additional Government Publications 1992 ; http://www.gpo.gov/ ; 1992 >
+    au < manifest ; 1993 ; Additional Government Publications 1993 ; https://www.gpo.gov/ ; 1993 >
+    au < down ; 1994 ; Additional Government Publications 1994 ; http://www.gpo.gov/ ; 1994 >
+    au < down ; 1995 ; Additional Government Publications 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < down ; 1996 ; Additional Government Publications 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1997 ; Additional Government Publications 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1998 ; Additional Government Publications 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 1999 ; Additional Government Publications 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; Additional Government Publications 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; Additional Government Publications 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; Additional Government Publications 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2003 ; Additional Government Publications 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; Additional Government Publications 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; Additional Government Publications 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; Additional Government Publications 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2007 ; Additional Government Publications 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2008 ; Additional Government Publications 2008 ; http://www.gpo.gov/ ; 2008 >
+    au < down ; 2009 ; Additional Government Publications 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < down ; 2010 ; Additional Government Publications 2010 ; http://www.gpo.gov/ ; 2010 >
+    au < down ; 2011 ; Additional Government Publications 2011 ; http://www.gpo.gov/ ; 2011 >
+    au < down ; 2012 ; Additional Government Publications 2012 ; http://www.gpo.gov/ ; 2012 >
+    au < down ; 2013 ; Additional Government Publications 2013 ; http://www.gpo.gov/ ; 2013 >
+    au < down ; 2014 ; Additional Government Publications 2014 ; http://www.gpo.gov/ ; 2014 >
+    au < manifest ; 2015 ; Additional Government Publications 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < expected ; 2016 ; Additional Government Publications 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -291,28 +295,28 @@
 
     param[collection_id] = BUDGET
 
-    au < manifest ; 1995 ; Budget of the United States Government 1995 ; 1995 >
-    au < manifest ; 1996 ; Budget of the United States Government 1996 ; 1996 >
-    au < manifest ; 1997 ; Budget of the United States Government 1997 ; 1997 >
-    au < manifest ; 1998 ; Budget of the United States Government 1998 ; 1998 >
-    au < manifest ; 1999 ; Budget of the United States Government 1999 ; 1999 >
-    au < manifest ; 2000 ; Budget of the United States Government 2000 ; 2000 >
-    au < manifest ; 2001 ; Budget of the United States Government 2001 ; 2001 >
-    au < manifest ; 2002 ; Budget of the United States Government 2002 ; 2002 >
-    au < manifest ; 2003 ; Budget of the United States Government 2003 ; 2003 >
-    au < manifest ; 2004 ; Budget of the United States Government 2004 ; 2004 >
-    au < manifest ; 2005 ; Budget of the United States Government 2005 ; 2005 >
-    au < manifest ; 2006 ; Budget of the United States Government 2006 ; 2006 >
-    au < manifest ; 2007 ; Budget of the United States Government 2007 ; 2007 >
-    au < manifest ; 2008 ; Budget of the United States Government 2008 ; 2008 >
-    au < down ; 2009 ; Budget of the United States Government 2009 ; 2009 >
-    au < down ; 2010 ; Budget of the United States Government 2010 ; 2010 >
-    au < down ; 2011 ; Budget of the United States Government 2011 ; 2011 >
-    au < down ; 2012 ; Budget of the United States Government 2012 ; 2012 >
-    au < down ; 2013 ; Budget of the United States Government 2013 ; 2013 >
-    au < down ; 2014 ; Budget of the United States Government 2014 ; 2014 >
-    au < manifest ; 2015 ; Budget of the United States Government 2015 ; 2015 >
-    au < manifest ; 2016 ; Budget of the United States Government 2016 ; 2016 >
+    au < manifest ; 1995 ; Budget of the United States Government 1995 ; https://www.gpo.gov/ ; 1995 >
+    au < manifest ; 1996 ; Budget of the United States Government 1996 ; https://www.gpo.gov/ ; 1996 >
+    au < manifest ; 1997 ; Budget of the United States Government 1997 ; https://www.gpo.gov/ ; 1997 >
+    au < manifest ; 1998 ; Budget of the United States Government 1998 ; https://www.gpo.gov/ ; 1998 >
+    au < manifest ; 1999 ; Budget of the United States Government 1999 ; https://www.gpo.gov/ ; 1999 >
+    au < manifest ; 2000 ; Budget of the United States Government 2000 ; https://www.gpo.gov/ ; 2000 >
+    au < manifest ; 2001 ; Budget of the United States Government 2001 ; https://www.gpo.gov/ ; 2001 >
+    au < manifest ; 2002 ; Budget of the United States Government 2002 ; https://www.gpo.gov/ ; 2002 >
+    au < manifest ; 2003 ; Budget of the United States Government 2003 ; https://www.gpo.gov/ ; 2003 >
+    au < manifest ; 2004 ; Budget of the United States Government 2004 ; https://www.gpo.gov/ ; 2004 >
+    au < manifest ; 2005 ; Budget of the United States Government 2005 ; https://www.gpo.gov/ ; 2005 >
+    au < manifest ; 2006 ; Budget of the United States Government 2006 ; https://www.gpo.gov/ ; 2006 >
+    au < manifest ; 2007 ; Budget of the United States Government 2007 ; https://www.gpo.gov/ ; 2007 >
+    au < manifest ; 2008 ; Budget of the United States Government 2008 ; https://www.gpo.gov/ ; 2008 >
+    au < down ; 2009 ; Budget of the United States Government 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < down ; 2010 ; Budget of the United States Government 2010 ; http://www.gpo.gov/ ; 2010 >
+    au < down ; 2011 ; Budget of the United States Government 2011 ; http://www.gpo.gov/ ; 2011 >
+    au < down ; 2012 ; Budget of the United States Government 2012 ; http://www.gpo.gov/ ; 2012 >
+    au < down ; 2013 ; Budget of the United States Government 2013 ; http://www.gpo.gov/ ; 2013 >
+    au < down ; 2014 ; Budget of the United States Government 2014 ; http://www.gpo.gov/ ; 2014 >
+    au < manifest ; 2015 ; Budget of the United States Government 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < manifest ; 2016 ; Budget of the United States Government 2016 ; https://www.gpo.gov/ ; 2016 >
 
 
   }
@@ -325,46 +329,46 @@
     comment[0] = ceased publication in 1999
     param[collection_id] = CZIC
 
-    au < down ; 1951 ; Coastal Zone Information Center 1951 ; 1951 >
-    au < down ; 1959 ; Coastal Zone Information Center 1959 ; 1959 >
-    au < down ; 1962 ; Coastal Zone Information Center 1962 ; 1962 >
-    au < down ; 1963 ; Coastal Zone Information Center 1963 ; 1963 >
-    au < down ; 1964 ; Coastal Zone Information Center 1964 ; 1964 >
-    au < down ; 1965 ; Coastal Zone Information Center 1965 ; 1965 >
-    au < down ; 1966 ; Coastal Zone Information Center 1966 ; 1966 >
-    au < down ; 1967 ; Coastal Zone Information Center 1967 ; 1967 >
-    au < down ; 1968 ; Coastal Zone Information Center 1968 ; 1968 >
-    au < down ; 1969 ; Coastal Zone Information Center 1969 ; 1969 >
-    au < down ; 1970 ; Coastal Zone Information Center 1970 ; 1970 >
-    au < down ; 1971 ; Coastal Zone Information Center 1971 ; 1971 >
-    au < down ; 1972 ; Coastal Zone Information Center 1972 ; 1972 >
-    au < down ; 1973 ; Coastal Zone Information Center 1973 ; 1973 >
-    au < down ; 1974 ; Coastal Zone Information Center 1974 ; 1974 >
-    au < down ; 1975 ; Coastal Zone Information Center 1975 ; 1975 >
-    au < down ; 1976 ; Coastal Zone Information Center 1976 ; 1976 >
-    au < down ; 1977 ; Coastal Zone Information Center 1977 ; 1977 >
-    au < down ; 1978 ; Coastal Zone Information Center 1978 ; 1978 >
-    au < down ; 1979 ; Coastal Zone Information Center 1979 ; 1979 >
-    au < down ; 1980 ; Coastal Zone Information Center 1980 ; 1980 >
-    au < down ; 1981 ; Coastal Zone Information Center 1981 ; 1981 >
-    au < down ; 1982 ; Coastal Zone Information Center 1982 ; 1982 >
-    au < down ; 1983 ; Coastal Zone Information Center 1983 ; 1983 >
-    au < down ; 1984 ; Coastal Zone Information Center 1984 ; 1984 >
-    au < down ; 1985 ; Coastal Zone Information Center 1985 ; 1985 >
-    au < down ; 1986 ; Coastal Zone Information Center 1986 ; 1986 >
-    au < down ; 1987 ; Coastal Zone Information Center 1987 ; 1987 >
-    au < down ; 1988 ; Coastal Zone Information Center 1988 ; 1988 >
-    au < down ; 1989 ; Coastal Zone Information Center 1989 ; 1989 >
-    au < down ; 1990 ; Coastal Zone Information Center 1990 ; 1990 >
-    au < down ; 1991 ; Coastal Zone Information Center 1991 ; 1991 >
-    au < down ; 1992 ; Coastal Zone Information Center 1992 ; 1992 >
-    au < down ; 1993 ; Coastal Zone Information Center 1993 ; 1993 >
-    au < down ; 1994 ; Coastal Zone Information Center 1994 ; 1994 >
-    au < down ; 1995 ; Coastal Zone Information Center 1995 ; 1995 >
-    au < down ; 1996 ; Coastal Zone Information Center 1996 ; 1996 >
-    au < down ; 1997 ; Coastal Zone Information Center 1997 ; 1997 >
-    au < down ; 1998 ; Coastal Zone Information Center 1998 ; 1998 >
-    au < down ; 1999 ; Coastal Zone Information Center 1999 ; 1999 >
+    au < down ; 1951 ; Coastal Zone Information Center 1951 ; http://www.gpo.gov/ ; 1951 >
+    au < down ; 1959 ; Coastal Zone Information Center 1959 ; http://www.gpo.gov/ ; 1959 >
+    au < down ; 1962 ; Coastal Zone Information Center 1962 ; http://www.gpo.gov/ ; 1962 >
+    au < down ; 1963 ; Coastal Zone Information Center 1963 ; http://www.gpo.gov/ ; 1963 >
+    au < down ; 1964 ; Coastal Zone Information Center 1964 ; http://www.gpo.gov/ ; 1964 >
+    au < down ; 1965 ; Coastal Zone Information Center 1965 ; http://www.gpo.gov/ ; 1965 >
+    au < down ; 1966 ; Coastal Zone Information Center 1966 ; http://www.gpo.gov/ ; 1966 >
+    au < down ; 1967 ; Coastal Zone Information Center 1967 ; http://www.gpo.gov/ ; 1967 >
+    au < down ; 1968 ; Coastal Zone Information Center 1968 ; http://www.gpo.gov/ ; 1968 >
+    au < down ; 1969 ; Coastal Zone Information Center 1969 ; http://www.gpo.gov/ ; 1969 >
+    au < down ; 1970 ; Coastal Zone Information Center 1970 ; http://www.gpo.gov/ ; 1970 >
+    au < down ; 1971 ; Coastal Zone Information Center 1971 ; http://www.gpo.gov/ ; 1971 >
+    au < down ; 1972 ; Coastal Zone Information Center 1972 ; http://www.gpo.gov/ ; 1972 >
+    au < down ; 1973 ; Coastal Zone Information Center 1973 ; http://www.gpo.gov/ ; 1973 >
+    au < down ; 1974 ; Coastal Zone Information Center 1974 ; http://www.gpo.gov/ ; 1974 >
+    au < down ; 1975 ; Coastal Zone Information Center 1975 ; http://www.gpo.gov/ ; 1975 >
+    au < down ; 1976 ; Coastal Zone Information Center 1976 ; http://www.gpo.gov/ ; 1976 >
+    au < down ; 1977 ; Coastal Zone Information Center 1977 ; http://www.gpo.gov/ ; 1977 >
+    au < down ; 1978 ; Coastal Zone Information Center 1978 ; http://www.gpo.gov/ ; 1978 >
+    au < down ; 1979 ; Coastal Zone Information Center 1979 ; http://www.gpo.gov/ ; 1979 >
+    au < down ; 1980 ; Coastal Zone Information Center 1980 ; http://www.gpo.gov/ ; 1980 >
+    au < down ; 1981 ; Coastal Zone Information Center 1981 ; http://www.gpo.gov/ ; 1981 >
+    au < down ; 1982 ; Coastal Zone Information Center 1982 ; http://www.gpo.gov/ ; 1982 >
+    au < down ; 1983 ; Coastal Zone Information Center 1983 ; http://www.gpo.gov/ ; 1983 >
+    au < down ; 1984 ; Coastal Zone Information Center 1984 ; http://www.gpo.gov/ ; 1984 >
+    au < down ; 1985 ; Coastal Zone Information Center 1985 ; http://www.gpo.gov/ ; 1985 >
+    au < down ; 1986 ; Coastal Zone Information Center 1986 ; http://www.gpo.gov/ ; 1986 >
+    au < down ; 1987 ; Coastal Zone Information Center 1987 ; http://www.gpo.gov/ ; 1987 >
+    au < down ; 1988 ; Coastal Zone Information Center 1988 ; http://www.gpo.gov/ ; 1988 >
+    au < down ; 1989 ; Coastal Zone Information Center 1989 ; http://www.gpo.gov/ ; 1989 >
+    au < down ; 1990 ; Coastal Zone Information Center 1990 ; http://www.gpo.gov/ ; 1990 >
+    au < down ; 1991 ; Coastal Zone Information Center 1991 ; http://www.gpo.gov/ ; 1991 >
+    au < down ; 1992 ; Coastal Zone Information Center 1992 ; http://www.gpo.gov/ ; 1992 >
+    au < down ; 1993 ; Coastal Zone Information Center 1993 ; http://www.gpo.gov/ ; 1993 >
+    au < down ; 1994 ; Coastal Zone Information Center 1994 ; http://www.gpo.gov/ ; 1994 >
+    au < down ; 1995 ; Coastal Zone Information Center 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < down ; 1996 ; Coastal Zone Information Center 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1997 ; Coastal Zone Information Center 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1998 ; Coastal Zone Information Center 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 1999 ; Coastal Zone Information Center 1999 ; http://www.gpo.gov/ ; 1999 >
     # stopped publication in 1999
 
   }
@@ -377,27 +381,27 @@
 
     param[collection_id] = CFR
 
-    au < down ; 1996 ; Code of Federal Regulations 1996 ; 1996 >
-    au < down ; 1997 ; Code of Federal Regulations 1997 ; 1997 >
-    au < down ; 1998 ; Code of Federal Regulations 1998 ; 1998 >
-    au < down ; 1999 ; Code of Federal Regulations 1999 ; 1999 >
-    au < down ; 2000 ; Code of Federal Regulations 2000 ; 2000 >
-    au < down ; 2001 ; Code of Federal Regulations 2001 ; 2001 >
-    au < down ; 2002 ; Code of Federal Regulations 2002 ; 2002 >
-    au < down ; 2003 ; Code of Federal Regulations 2003 ; 2003 >
-    au < down ; 2004 ; Code of Federal Regulations 2004 ; 2004 >
-    au < down ; 2005 ; Code of Federal Regulations 2005 ; 2005 >
-    au < down ; 2006 ; Code of Federal Regulations 2006 ; 2006 >
-    au < down ; 2007 ; Code of Federal Regulations 2007 ; 2007 >
-    au < down ; 2008 ; Code of Federal Regulations 2008 ; 2008 >
-    au < down ; 2009 ; Code of Federal Regulations 2009 ; 2009 >
-    au < down ; 2010 ; Code of Federal Regulations 2010 ; 2010 >
-    au < down ; 2011 ; Code of Federal Regulations 2011 ; 2011 >
-    au < down ; 2012 ; Code of Federal Regulations 2012 ; 2012 >
-    au < manifest ; 2013 ; Code of Federal Regulations 2013 ; 2013 >
-    au < manifest ; 2014 ; Code of Federal Regulations 2014 ; 2014 >
-    au < manifest ; 2015 ; Code of Federal Regulations 2015 ; 2015 >
-    au < expected ; 2016 ; Code of Federal Regulations 2016 ; 2016 >
+    au < down ; 1996 ; Code of Federal Regulations 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1997 ; Code of Federal Regulations 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1998 ; Code of Federal Regulations 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 1999 ; Code of Federal Regulations 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; Code of Federal Regulations 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; Code of Federal Regulations 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; Code of Federal Regulations 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2003 ; Code of Federal Regulations 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; Code of Federal Regulations 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; Code of Federal Regulations 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; Code of Federal Regulations 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2007 ; Code of Federal Regulations 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2008 ; Code of Federal Regulations 2008 ; http://www.gpo.gov/ ; 2008 >
+    au < down ; 2009 ; Code of Federal Regulations 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < down ; 2010 ; Code of Federal Regulations 2010 ; http://www.gpo.gov/ ; 2010 >
+    au < down ; 2011 ; Code of Federal Regulations 2011 ; http://www.gpo.gov/ ; 2011 >
+    au < down ; 2012 ; Code of Federal Regulations 2012 ; http://www.gpo.gov/ ; 2012 >
+    au < manifest ; 2013 ; Code of Federal Regulations 2013 ; https://www.gpo.gov/ ; 2013 >
+    au < manifest ; 2014 ; Code of Federal Regulations 2014 ; https://www.gpo.gov/ ; 2014 >
+    au < manifest ; 2015 ; Code of Federal Regulations 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < expected ; 2016 ; Code of Federal Regulations 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -412,7 +416,7 @@
    param[collection_id] = CDB
 
 
-       au < exists ; 1996 ; Code of Federal Regulations 1996 ; 1996 >
+       au < exists ; 1996 ; Code of Federal Regulations 1996 ; https://www.gpo.gov/ ; 1996 >
 
   }
 
@@ -427,31 +431,31 @@
 
     param[collection_id] = BILLS
 
-    au < manifest ; 1992 ; Congressional Bills 1992 ; 1992 >
-    au < down ; 1993 ; Congressional Bills 1993 ; 1993 >
-    au < down ; 1994 ; Congressional Bills 1994 ; 1994 >
-    au < down ; 1995 ; Congressional Bills 1995 ; 1995 >
-    au < down ; 1996 ; Congressional Bills 1996 ; 1996 >
-    au < down ; 1997 ; Congressional Bills 1997 ; 1997 >
-    au < down ; 1998 ; Congressional Bills 1998 ; 1998 >
-    au < down ; 1999 ; Congressional Bills 1999 ; 1999 >
-    au < down ; 2000 ; Congressional Bills 2000 ; 2000 >
-    au < down ; 2001 ; Congressional Bills 2001 ; 2001 >
-    au < down ; 2002 ; Congressional Bills 2002 ; 2002 >
-    au < down ; 2003 ; Congressional Bills 2003 ; 2003 >
-    au < down ; 2004 ; Congressional Bills 2004 ; 2004 >
-    au < down ; 2005 ; Congressional Bills 2005 ; 2005 >
-    au < down ; 2006 ; Congressional Bills 2006 ; 2006 >
-    au < down ; 2007 ; Congressional Bills 2007 ; 2007 >
-    au < down ; 2008 ; Congressional Bills 2008 ; 2008 >
-    au < down ; 2009 ; Congressional Bills 2009 ; 2009 >
-    au < down ; 2010 ; Congressional Bills 2010 ; 2010 >
-    au < down ; 2011 ; Congressional Bills 2011 ; 2011 >
-    au < down ; 2012 ; Congressional Bills 2012 ; 2012 >
-    au < down ; 2013 ; Congressional Bills 2013 ; 2013 >
-    au < down ; 2014 ; Congressional Bills 2014 ; 2014 >
-    au < manifest ; 2015 ; Congressional Bills 2015 ; 2015 >
-    au < manifest ; 2016 ; Congressional Bills 2016 ; 2016 >
+    au < manifest ; 1992 ; Congressional Bills 1992 ; https://www.gpo.gov/ ; 1992 >
+    au < down ; 1993 ; Congressional Bills 1993 ; http://www.gpo.gov/ ; 1993 >
+    au < down ; 1994 ; Congressional Bills 1994 ; http://www.gpo.gov/ ; 1994 >
+    au < down ; 1995 ; Congressional Bills 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < down ; 1996 ; Congressional Bills 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1997 ; Congressional Bills 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1998 ; Congressional Bills 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 1999 ; Congressional Bills 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; Congressional Bills 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; Congressional Bills 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; Congressional Bills 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2003 ; Congressional Bills 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; Congressional Bills 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; Congressional Bills 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; Congressional Bills 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2007 ; Congressional Bills 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2008 ; Congressional Bills 2008 ; http://www.gpo.gov/ ; 2008 >
+    au < down ; 2009 ; Congressional Bills 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < down ; 2010 ; Congressional Bills 2010 ; http://www.gpo.gov/ ; 2010 >
+    au < down ; 2011 ; Congressional Bills 2011 ; http://www.gpo.gov/ ; 2011 >
+    au < down ; 2012 ; Congressional Bills 2012 ; http://www.gpo.gov/ ; 2012 >
+    au < down ; 2013 ; Congressional Bills 2013 ; http://www.gpo.gov/ ; 2013 >
+    au < down ; 2014 ; Congressional Bills 2014 ; http://www.gpo.gov/ ; 2014 >
+    au < manifest ; 2015 ; Congressional Bills 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < manifest ; 2016 ; Congressional Bills 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -463,23 +467,23 @@
 
     param[collection_id] = CCAL
 
-    au < down ; 1996 ; Congressional Calendars 1996 ; 1996 >
-    au < down ; 1998 ; Congressional Calendars 1998 ; 1998 >
-    au < down ; 2000 ; Congressional Calendars 2000 ; 2000 >
-    au < down ; 2002 ; Congressional Calendars 2002 ; 2002 >
-    au < down ; 2004 ; Congressional Calendars 2004 ; 2004 >
-    au < down ; 2005 ; Congressional Calendars 2005 ; 2005 >
-    au < down ; 2006 ; Congressional Calendars 2006 ; 2006 >
-    au < down ; 2007 ; Congressional Calendars 2007 ; 2007 >
-    au < down ; 2008 ; Congressional Calendars 2008 ; 2008 >
-    au < down ; 2009 ; Congressional Calendars 2009 ; 2009 >
-    au < down ; 2010 ; Congressional Calendars 2010 ; 2010 >
-    au < down ; 2011 ; Congressional Calendars 2011 ; 2011 >
-    au < down ; 2012 ; Congressional Calendars 2012 ; 2012 >
-    au < down ; 2013 ; Congressional Calendars 2013 ; 2013 >
-    au < down ; 2014 ; Congressional Calendars 2014 ; 2014 >
-    au < manifest ; 2015 ; Congressional Calendars 2015 ; 2015 >
-    au < manifest ; 2016 ; Congressional Calendars 2016 ; 2016 >
+    au < down ; 1996 ; Congressional Calendars 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1998 ; Congressional Calendars 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 2000 ; Congressional Calendars 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2002 ; Congressional Calendars 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2004 ; Congressional Calendars 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; Congressional Calendars 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; Congressional Calendars 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2007 ; Congressional Calendars 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2008 ; Congressional Calendars 2008 ; http://www.gpo.gov/ ; 2008 >
+    au < down ; 2009 ; Congressional Calendars 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < down ; 2010 ; Congressional Calendars 2010 ; http://www.gpo.gov/ ; 2010 >
+    au < down ; 2011 ; Congressional Calendars 2011 ; http://www.gpo.gov/ ; 2011 >
+    au < down ; 2012 ; Congressional Calendars 2012 ; http://www.gpo.gov/ ; 2012 >
+    au < down ; 2013 ; Congressional Calendars 2013 ; http://www.gpo.gov/ ; 2013 >
+    au < down ; 2014 ; Congressional Calendars 2014 ; http://www.gpo.gov/ ; 2014 >
+    au < manifest ; 2015 ; Congressional Calendars 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < manifest ; 2016 ; Congressional Calendars 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -491,32 +495,32 @@
 
     param[collection_id] = CPRT
 
-    au < down ; 1968 ; Congressional Committee Prints 1968 ; 1968 >
-    au < manifest ; 1976 ; Congressional Committee Prints 1976 ; 1976 >
-    au < manifest ; 1991 ; Congressional Committee Prints 1991 ; 1991 >
-    au < manifest ; 1994 ; Congressional Committee Prints 1994 ; 1994 >
-    au < down ; 1995 ; Congressional Committee Prints 1995 ; 1995 >
-    au < down ; 1996 ; Congressional Committee Prints 1996 ; 1996 >
-    au < down ; 1997 ; Congressional Committee Prints 1997 ; 1997 >
-    au < down ; 1998 ; Congressional Committee Prints 1998 ; 1998 >
-    au < down ; 1999 ; Congressional Committee Prints 1999 ; 1999 >
-    au < down ; 2000 ; Congressional Committee Prints 2000 ; 2000 >
-    au < down ; 2001 ; Congressional Committee Prints 2001 ; 2001 >
-    au < down ; 2002 ; Congressional Committee Prints 2002 ; 2002 >
-    au < down ; 2003 ; Congressional Committee Prints 2003 ; 2003 >
-    au < down ; 2004 ; Congressional Committee Prints 2004 ; 2004 >
-    au < down ; 2005 ; Congressional Committee Prints 2005 ; 2005 >
-    au < down ; 2006 ; Congressional Committee Prints 2006 ; 2006 >
-    au < down ; 2007 ; Congressional Committee Prints 2007 ; 2007 >
-    au < down ; 2008 ; Congressional Committee Prints 2008 ; 2008 >
-    au < down ; 2009 ; Congressional Committee Prints 2009 ; 2009 >
-    au < down ; 2010 ; Congressional Committee Prints 2010 ; 2010 >
-    au < down ; 2011 ; Congressional Committee Prints 2011 ; 2011 >
-    au < down ; 2012 ; Congressional Committee Prints 2012 ; 2012 >
-    au < down ; 2013 ; Congressional Committee Prints 2013 ; 2013 >
-    au < down ; 2014 ; Congressional Committee Prints 2014 ; 2014 >
-    au < manifest ; 2015 ; Congressional Committee Prints 2015 ; 2015 >
-    au < manifest ; 2016 ; Congressional Committee Prints 2016 ; 2016 >
+    au < down ; 1968 ; Congressional Committee Prints 1968 ; http://www.gpo.gov/ ; 1968 >
+    au < manifest ; 1976 ; Congressional Committee Prints 1976 ; https://www.gpo.gov/ ; 1976 >
+    au < manifest ; 1991 ; Congressional Committee Prints 1991 ; https://www.gpo.gov/ ; 1991 >
+    au < manifest ; 1994 ; Congressional Committee Prints 1994 ; https://www.gpo.gov/ ; 1994 >
+    au < down ; 1995 ; Congressional Committee Prints 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < down ; 1996 ; Congressional Committee Prints 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1997 ; Congressional Committee Prints 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1998 ; Congressional Committee Prints 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 1999 ; Congressional Committee Prints 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; Congressional Committee Prints 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; Congressional Committee Prints 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; Congressional Committee Prints 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2003 ; Congressional Committee Prints 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; Congressional Committee Prints 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; Congressional Committee Prints 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; Congressional Committee Prints 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2007 ; Congressional Committee Prints 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2008 ; Congressional Committee Prints 2008 ; http://www.gpo.gov/ ; 2008 >
+    au < down ; 2009 ; Congressional Committee Prints 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < down ; 2010 ; Congressional Committee Prints 2010 ; http://www.gpo.gov/ ; 2010 >
+    au < down ; 2011 ; Congressional Committee Prints 2011 ; http://www.gpo.gov/ ; 2011 >
+    au < down ; 2012 ; Congressional Committee Prints 2012 ; http://www.gpo.gov/ ; 2012 >
+    au < down ; 2013 ; Congressional Committee Prints 2013 ; http://www.gpo.gov/ ; 2013 >
+    au < down ; 2014 ; Congressional Committee Prints 2014 ; http://www.gpo.gov/ ; 2014 >
+    au < manifest ; 2015 ; Congressional Committee Prints 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < manifest ; 2016 ; Congressional Committee Prints 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -528,22 +532,22 @@
 
     param[collection_id] = CDIR
 
-    au < down ; 1997 ; Congressional Directory 1997 ; 1997 >
-    au < down ; 1999 ; Congressional Directory 1999 ; 1999 >
-    au < down ; 2000 ; Congressional Directory 2000 ; 2000 >
-    au < down ; 2001 ; Congressional Directory 2001 ; 2001 >
-    au < down ; 2002 ; Congressional Directory 2002 ; 2002 >
-    au < down ; 2003 ; Congressional Directory 2003 ; 2003 >
-    au < down ; 2004 ; Congressional Directory 2004 ; 2004 >
-    au < down ; 2005 ; Congressional Directory 2005 ; 2005 >
-    au < down ; 2006 ; Congressional Directory 2006 ; 2006 >
-    au < down ; 2007 ; Congressional Directory 2007 ; 2007 >
-    au < down ; 2008 ; Congressional Directory 2008 ; 2008 >
-    au < down ; 2009 ; Congressional Directory 2009 ; 2009 >
-    au < down ; 2011 ; Congressional Directory 2011 ; 2011 >
-    au < manifest ; 2014 ; Congressional Directory 2014 ; 2014 >
-    au < expected ; 2015 ; Congressional Directory 2015 ; 2015 >
-    au < expected ; 2016 ; Congressional Directory 2016 ; 2016 >
+    au < down ; 1997 ; Congressional Directory 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1999 ; Congressional Directory 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; Congressional Directory 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; Congressional Directory 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; Congressional Directory 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2003 ; Congressional Directory 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; Congressional Directory 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; Congressional Directory 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; Congressional Directory 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2007 ; Congressional Directory 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2008 ; Congressional Directory 2008 ; http://www.gpo.gov/ ; 2008 >
+    au < down ; 2009 ; Congressional Directory 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < down ; 2011 ; Congressional Directory 2011 ; http://www.gpo.gov/ ; 2011 >
+    au < manifest ; 2014 ; Congressional Directory 2014 ; https://www.gpo.gov/ ; 2014 >
+    au < expected ; 2015 ; Congressional Directory 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < expected ; 2016 ; Congressional Directory 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -555,37 +559,37 @@
 
     param[collection_id] = CDOC
 
-    au < down ; 1862 ; Congressional Documents 1862 ; 1862 >
-    au < manifest ; 1913 ; Congressional Documents 1913 ; 1913 >
-    au < down ; 1936 ; Congressional Documents 1936 ; 1936 >
-    au < down ; 1960 ; Congressional Documents 1960 ; 1960 >
-    au < manifest ; 1976 ; Congressional Documents 1976 ; 1976 >
-    au < manifest ; 1979 ; Congressional Documents 1979 ; 1979 >
-    au < down ; 1986 ; Congressional Documents 1986 ; 1986 >
-    au < down ; 1992 ; Congressional Documents 1992 ; 1992 >
-    au < down ; 1994 ; Congressional Documents 1994 ; 1994 >
-    au < down ; 1995 ; Congressional Documents 1995 ; 1995 >
-    au < down ; 1996 ; Congressional Documents 1996 ; 1996 >
-    au < down ; 1997 ; Congressional Documents 1997 ; 1997 >
-    au < down ; 1998 ; Congressional Documents 1998 ; 1998 >
-    au < down ; 1999 ; Congressional Documents 1999 ; 1999 >
-    au < down ; 2000 ; Congressional Documents 2000 ; 2000 >
-    au < down ; 2001 ; Congressional Documents 2001 ; 2001 >
-    au < down ; 2002 ; Congressional Documents 2002 ; 2002 >
-    au < down ; 2003 ; Congressional Documents 2003 ; 2003 >
-    au < down ; 2004 ; Congressional Documents 2004 ; 2004 >
-    au < down ; 2005 ; Congressional Documents 2005 ; 2005 >
-    au < down ; 2006 ; Congressional Documents 2006 ; 2006 >
-    au < down ; 2007 ; Congressional Documents 2007 ; 2007 >
-    au < down ; 2008 ; Congressional Documents 2008 ; 2008 >
-    au < down ; 2009 ; Congressional Documents 2009 ; 2009 >
-    au < down ; 2010 ; Congressional Documents 2010 ; 2010 >
-    au < down ; 2011 ; Congressional Documents 2011 ; 2011 >
-    au < down ; 2012 ; Congressional Documents 2012 ; 2012 >
-    au < down ; 2013 ; Congressional Documents 2013 ; 2013 >
-    au < down ; 2014 ; Congressional Documents 2014 ; 2014 >
-    au < manifest ; 2015 ; Congressional Documents 2015 ; 2015 >
-    au < manifest ; 2016 ; Congressional Documents 2016 ; 2016 >
+    au < down ; 1862 ; Congressional Documents 1862 ; http://www.gpo.gov/ ; 1862 >
+    au < manifest ; 1913 ; Congressional Documents 1913 ; https://www.gpo.gov/ ; 1913 >
+    au < down ; 1936 ; Congressional Documents 1936 ; http://www.gpo.gov/ ; 1936 >
+    au < down ; 1960 ; Congressional Documents 1960 ; http://www.gpo.gov/ ; 1960 >
+    au < manifest ; 1976 ; Congressional Documents 1976 ; https://www.gpo.gov/ ; 1976 >
+    au < manifest ; 1979 ; Congressional Documents 1979 ; https://www.gpo.gov/ ; 1979 >
+    au < down ; 1986 ; Congressional Documents 1986 ; http://www.gpo.gov/ ; 1986 >
+    au < down ; 1992 ; Congressional Documents 1992 ; http://www.gpo.gov/ ; 1992 >
+    au < down ; 1994 ; Congressional Documents 1994 ; http://www.gpo.gov/ ; 1994 >
+    au < down ; 1995 ; Congressional Documents 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < down ; 1996 ; Congressional Documents 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1997 ; Congressional Documents 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1998 ; Congressional Documents 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 1999 ; Congressional Documents 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; Congressional Documents 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; Congressional Documents 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; Congressional Documents 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2003 ; Congressional Documents 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; Congressional Documents 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; Congressional Documents 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; Congressional Documents 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2007 ; Congressional Documents 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2008 ; Congressional Documents 2008 ; http://www.gpo.gov/ ; 2008 >
+    au < down ; 2009 ; Congressional Documents 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < down ; 2010 ; Congressional Documents 2010 ; http://www.gpo.gov/ ; 2010 >
+    au < down ; 2011 ; Congressional Documents 2011 ; http://www.gpo.gov/ ; 2011 >
+    au < down ; 2012 ; Congressional Documents 2012 ; http://www.gpo.gov/ ; 2012 >
+    au < down ; 2013 ; Congressional Documents 2013 ; http://www.gpo.gov/ ; 2013 >
+    au < down ; 2014 ; Congressional Documents 2014 ; http://www.gpo.gov/ ; 2014 >
+    au < manifest ; 2015 ; Congressional Documents 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < manifest ; 2016 ; Congressional Documents 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -597,34 +601,34 @@
 
     param[collection_id] = CHRG
 
-    au < manifest ; 1966 ; Congressional Hearings 1966 ; 1966 >
-    au < manifest ; 1972 ; Congressional Hearings 1972 ; 1972 >
-    au < manifest ; 1986 ; Congressional Hearings 1986 ; 1986 >
-    au < manifest ; 1987 ; Congressional Hearings 1987 ; 1987 >
-    au < manifest ; 1993 ; Congressional Hearings 1993 ; 1993 >
-    au < manifest ; 1994 ; Congressional Hearings 1994 ; 1994 >
-    au < down ; 1995 ; Congressional Hearings 1995 ; 1995 >
-    au < down ; 1996 ; Congressional Hearings 1996 ; 1996 >
-    au < down ; 1997 ; Congressional Hearings 1997 ; 1997 >
-    au < down ; 1998 ; Congressional Hearings 1998 ; 1998 >
-    au < down ; 1999 ; Congressional Hearings 1999 ; 1999 >
-    au < down ; 2000 ; Congressional Hearings 2000 ; 2000 >
-    au < down ; 2001 ; Congressional Hearings 2001 ; 2001 >
-    au < down ; 2002 ; Congressional Hearings 2002 ; 2002 >
-    au < down ; 2003 ; Congressional Hearings 2003 ; 2003 >
-    au < down ; 2004 ; Congressional Hearings 2004 ; 2004 >
-    au < down ; 2005 ; Congressional Hearings 2005 ; 2005 >
-    au < down ; 2006 ; Congressional Hearings 2006 ; 2006 >
-    au < down ; 2007 ; Congressional Hearings 2007 ; 2007 >
-    au < down ; 2008 ; Congressional Hearings 2008 ; 2008 >
-    au < down ; 2009 ; Congressional Hearings 2009 ; 2009 >
-    au < down ; 2010 ; Congressional Hearings 2010 ; 2010 >
-    au < down ; 2011 ; Congressional Hearings 2011 ; 2011 >
-    au < down ; 2012 ; Congressional Hearings 2012 ; 2012 >
-    au < down ; 2013 ; Congressional Hearings 2013 ; 2013 >
-    au < down ; 2014 ; Congressional Hearings 2014 ; 2014 >
-    au < manifest ; 2015 ; Congressional Hearings 2015 ; 2015 >
-    au < manifest ; 2016 ; Congressional Hearings 2016 ; 2016 >
+    au < manifest ; 1966 ; Congressional Hearings 1966 ; https://www.gpo.gov/ ; 1966 >
+    au < manifest ; 1972 ; Congressional Hearings 1972 ; https://www.gpo.gov/ ; 1972 >
+    au < manifest ; 1986 ; Congressional Hearings 1986 ; https://www.gpo.gov/ ; 1986 >
+    au < manifest ; 1987 ; Congressional Hearings 1987 ; https://www.gpo.gov/ ; 1987 >
+    au < manifest ; 1993 ; Congressional Hearings 1993 ; https://www.gpo.gov/ ; 1993 >
+    au < manifest ; 1994 ; Congressional Hearings 1994 ; https://www.gpo.gov/ ; 1994 >
+    au < down ; 1995 ; Congressional Hearings 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < down ; 1996 ; Congressional Hearings 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1997 ; Congressional Hearings 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1998 ; Congressional Hearings 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 1999 ; Congressional Hearings 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; Congressional Hearings 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; Congressional Hearings 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; Congressional Hearings 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2003 ; Congressional Hearings 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; Congressional Hearings 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; Congressional Hearings 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; Congressional Hearings 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2007 ; Congressional Hearings 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2008 ; Congressional Hearings 2008 ; http://www.gpo.gov/ ; 2008 >
+    au < down ; 2009 ; Congressional Hearings 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < down ; 2010 ; Congressional Hearings 2010 ; http://www.gpo.gov/ ; 2010 >
+    au < down ; 2011 ; Congressional Hearings 2011 ; http://www.gpo.gov/ ; 2011 >
+    au < down ; 2012 ; Congressional Hearings 2012 ; http://www.gpo.gov/ ; 2012 >
+    au < down ; 2013 ; Congressional Hearings 2013 ; http://www.gpo.gov/ ; 2013 >
+    au < down ; 2014 ; Congressional Hearings 2014 ; http://www.gpo.gov/ ; 2014 >
+    au < manifest ; 2015 ; Congressional Hearings 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < manifest ; 2016 ; Congressional Hearings 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -636,29 +640,29 @@
 
     param[collection_id] = CREC
 
-    au < down ; 1994 ; Congressional Record 1994 ; 1994 >
-    au < down ; 1995 ; Congressional Record 1995 ; 1995 >
-    au < down ; 1996 ; Congressional Record 1996 ; 1996 >
-    au < down ; 1997 ; Congressional Record 1997 ; 1997 >
-    au < down ; 1998 ; Congressional Record 1998 ; 1998 >
-    au < down ; 1999 ; Congressional Record 1999 ; 1999 >
-    au < down ; 2000 ; Congressional Record 2000 ; 2000 >
-    au < down ; 2001 ; Congressional Record 2001 ; 2001 >
-    au < down ; 2002 ; Congressional Record 2002 ; 2002 >
-    au < down ; 2003 ; Congressional Record 2003 ; 2003 >
-    au < down ; 2004 ; Congressional Record 2004 ; 2004 >
-    au < down ; 2005 ; Congressional Record 2005 ; 2005 >
-    au < down ; 2006 ; Congressional Record 2006 ; 2006 >
-    au < down ; 2007 ; Congressional Record 2007 ; 2007 >
-    au < down ; 2008 ; Congressional Record 2008 ; 2008 >
-    au < down ; 2009 ; Congressional Record 2009 ; 2009 >
-    au < down ; 2010 ; Congressional Record 2010 ; 2010 >
-    au < down ; 2011 ; Congressional Record 2011 ; 2011 >
-    au < down ; 2012 ; Congressional Record 2012 ; 2012 >
-    au < down ; 2013 ; Congressional Record 2013 ; 2013 >
-    au < down ; 2014 ; Congressional Record 2014 ; 2014 >
-    au < manifest ; 2015 ; Congressional Record 2015 ; 2015 >
-    au < manifest ; 2016 ; Congressional Record 2016 ; 2016 >
+    au < down ; 1994 ; Congressional Record 1994 ; http://www.gpo.gov/ ; 1994 >
+    au < down ; 1995 ; Congressional Record 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < down ; 1996 ; Congressional Record 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1997 ; Congressional Record 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1998 ; Congressional Record 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 1999 ; Congressional Record 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; Congressional Record 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; Congressional Record 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; Congressional Record 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2003 ; Congressional Record 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; Congressional Record 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; Congressional Record 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; Congressional Record 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2007 ; Congressional Record 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2008 ; Congressional Record 2008 ; http://www.gpo.gov/ ; 2008 >
+    au < down ; 2009 ; Congressional Record 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < down ; 2010 ; Congressional Record 2010 ; http://www.gpo.gov/ ; 2010 >
+    au < down ; 2011 ; Congressional Record 2011 ; http://www.gpo.gov/ ; 2011 >
+    au < down ; 2012 ; Congressional Record 2012 ; http://www.gpo.gov/ ; 2012 >
+    au < down ; 2013 ; Congressional Record 2013 ; http://www.gpo.gov/ ; 2013 >
+    au < down ; 2014 ; Congressional Record 2014 ; http://www.gpo.gov/ ; 2014 >
+    au < manifest ; 2015 ; Congressional Record 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < manifest ; 2016 ; Congressional Record 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -670,10 +674,10 @@
     comment[0] = published from 1999 to 2002
     param[collection_id] = CRECB
 
-    au < down ; 1999 ; Congressional Record (Bound) 1999 ; 1999 >
-    au < down ; 2000 ; Congressional Record (Bound) 2000 ; 2000 >
-    au < down ; 2001 ; Congressional Record (Bound) 2001 ; 2001 >
-    au < down ; 2002 ; Congressional Record (Bound) 2002 ; 2002 >
+    au < down ; 1999 ; Congressional Record (Bound) 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; Congressional Record (Bound) 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; Congressional Record (Bound) 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; Congressional Record (Bound) 2002 ; http://www.gpo.gov/ ; 2002 >
 
   }
 
@@ -685,39 +689,39 @@
 
     param[collection_id] = CRI
 
-    au < down ; 1983 ; Congressional Record Index 1983 ; 1983 >
-    au < down ; 1984 ; Congressional Record Index 1984 ; 1984 >
-    au < down ; 1985 ; Congressional Record Index 1985 ; 1985 >
-    au < down ; 1986 ; Congressional Record Index 1986 ; 1986 >
-    au < down ; 1987 ; Congressional Record Index 1987 ; 1987 >
-    au < down ; 1988 ; Congressional Record Index 1988 ; 1988 >
-    au < down ; 1989 ; Congressional Record Index 1989 ; 1989 >
-    au < down ; 1990 ; Congressional Record Index 1990 ; 1990 >
-    au < down ; 1991 ; Congressional Record Index 1991 ; 1991 >
-    au < down ; 1992 ; Congressional Record Index 1992 ; 1992 >
-    au < down ; 1993 ; Congressional Record Index 1993 ; 1993 >
-    au < down ; 1994 ; Congressional Record Index 1994 ; 1994 >
-    au < down ; 1995 ; Congressional Record Index 1995 ; 1995 >
-    au < down ; 1996 ; Congressional Record Index 1996 ; 1996 >
-    au < down ; 1997 ; Congressional Record Index 1997 ; 1997 >
-    au < down ; 1999 ; Congressional Record Index 1999 ; 1999 >
-    au < down ; 2000 ; Congressional Record Index 2000 ; 2000 >
-    au < down ; 2001 ; Congressional Record Index 2001 ; 2001 >
-    au < down ; 2002 ; Congressional Record Index 2002 ; 2002 >
-    au < down ; 2003 ; Congressional Record Index 2003 ; 2003 >
-    au < down ; 2004 ; Congressional Record Index 2004 ; 2004 >
-    au < down ; 2005 ; Congressional Record Index 2005 ; 2005 >
-    au < down ; 2006 ; Congressional Record Index 2006 ; 2006 >
-    au < down ; 2007 ; Congressional Record Index 2007 ; 2007 >
-    au < down ; 2008 ; Congressional Record Index 2008 ; 2008 >
-    au < down ; 2009 ; Congressional Record Index 2009 ; 2009 >
-    au < down ; 2010 ; Congressional Record Index 2010 ; 2010 >
-    au < down ; 2011 ; Congressional Record Index 2011 ; 2011 >
-    au < down ; 2012 ; Congressional Record Index 2012 ; 2012 >
-    au < down ; 2013 ; Congressional Record Index 2013 ; 2013 >
-    au < down ; 2014 ; Congressional Record Index 2014 ; 2014 >
-    au < manifest ; 2015 ; Congressional Record Index 2015 ; 2015 >
-    au < manifest ; 2016 ; Congressional Record Index 2016 ; 2016 >
+    au < down ; 1983 ; Congressional Record Index 1983 ; http://www.gpo.gov/ ; 1983 >
+    au < down ; 1984 ; Congressional Record Index 1984 ; http://www.gpo.gov/ ; 1984 >
+    au < down ; 1985 ; Congressional Record Index 1985 ; http://www.gpo.gov/ ; 1985 >
+    au < down ; 1986 ; Congressional Record Index 1986 ; http://www.gpo.gov/ ; 1986 >
+    au < down ; 1987 ; Congressional Record Index 1987 ; http://www.gpo.gov/ ; 1987 >
+    au < down ; 1988 ; Congressional Record Index 1988 ; http://www.gpo.gov/ ; 1988 >
+    au < down ; 1989 ; Congressional Record Index 1989 ; http://www.gpo.gov/ ; 1989 >
+    au < down ; 1990 ; Congressional Record Index 1990 ; http://www.gpo.gov/ ; 1990 >
+    au < down ; 1991 ; Congressional Record Index 1991 ; http://www.gpo.gov/ ; 1991 >
+    au < down ; 1992 ; Congressional Record Index 1992 ; http://www.gpo.gov/ ; 1992 >
+    au < down ; 1993 ; Congressional Record Index 1993 ; http://www.gpo.gov/ ; 1993 >
+    au < down ; 1994 ; Congressional Record Index 1994 ; http://www.gpo.gov/ ; 1994 >
+    au < down ; 1995 ; Congressional Record Index 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < down ; 1996 ; Congressional Record Index 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1997 ; Congressional Record Index 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1999 ; Congressional Record Index 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; Congressional Record Index 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; Congressional Record Index 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; Congressional Record Index 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2003 ; Congressional Record Index 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; Congressional Record Index 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; Congressional Record Index 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; Congressional Record Index 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2007 ; Congressional Record Index 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2008 ; Congressional Record Index 2008 ; http://www.gpo.gov/ ; 2008 >
+    au < down ; 2009 ; Congressional Record Index 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < down ; 2010 ; Congressional Record Index 2010 ; http://www.gpo.gov/ ; 2010 >
+    au < down ; 2011 ; Congressional Record Index 2011 ; http://www.gpo.gov/ ; 2011 >
+    au < down ; 2012 ; Congressional Record Index 2012 ; http://www.gpo.gov/ ; 2012 >
+    au < down ; 2013 ; Congressional Record Index 2013 ; http://www.gpo.gov/ ; 2013 >
+    au < down ; 2014 ; Congressional Record Index 2014 ; http://www.gpo.gov/ ; 2014 >
+    au < manifest ; 2015 ; Congressional Record Index 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < manifest ; 2016 ; Congressional Record Index 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -729,28 +733,28 @@
 
     param[collection_id] = CRPT
 
-    au < down ; 1995 ; Congressional Reports 1995 ; 1995 >
-    au < down ; 1996 ; Congressional Reports 1996 ; 1996 >
-    au < down ; 1997 ; Congressional Reports 1997 ; 1997 >
-    au < down ; 1998 ; Congressional Reports 1998 ; 1998 >
-    au < down ; 1999 ; Congressional Reports 1999 ; 1999 >
-    au < down ; 2000 ; Congressional Reports 2000 ; 2000 >
-    au < down ; 2001 ; Congressional Reports 2001 ; 2001 >
-    au < down ; 2002 ; Congressional Reports 2002 ; 2002 >
-    au < down ; 2003 ; Congressional Reports 2003 ; 2003 >
-    au < down ; 2004 ; Congressional Reports 2004 ; 2004 >
-    au < down ; 2005 ; Congressional Reports 2005 ; 2005 >
-    au < down ; 2006 ; Congressional Reports 2006 ; 2006 >
-    au < down ; 2007 ; Congressional Reports 2007 ; 2007 >
-    au < down ; 2008 ; Congressional Reports 2008 ; 2008 >
-    au < down ; 2009 ; Congressional Reports 2009 ; 2009 >
-    au < down ; 2010 ; Congressional Reports 2010 ; 2010 >
-    au < down ; 2011 ; Congressional Reports 2011 ; 2011 >
-    au < down ; 2012 ; Congressional Reports 2012 ; 2012 >
-    au < down ; 2013 ; Congressional Reports 2013 ; 2013 >
-    au < down ; 2014 ; Congressional Reports 2014 ; 2014 >
-    au < manifest ; 2015 ; Congressional Reports 2015 ; 2015 >
-    au < manifest ; 2016 ; Congressional Reports 2016 ; 2016 >
+    au < down ; 1995 ; Congressional Reports 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < down ; 1996 ; Congressional Reports 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1997 ; Congressional Reports 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1998 ; Congressional Reports 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 1999 ; Congressional Reports 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; Congressional Reports 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; Congressional Reports 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; Congressional Reports 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2003 ; Congressional Reports 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; Congressional Reports 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; Congressional Reports 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; Congressional Reports 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2007 ; Congressional Reports 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2008 ; Congressional Reports 2008 ; http://www.gpo.gov/ ; 2008 >
+    au < down ; 2009 ; Congressional Reports 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < down ; 2010 ; Congressional Reports 2010 ; http://www.gpo.gov/ ; 2010 >
+    au < down ; 2011 ; Congressional Reports 2011 ; http://www.gpo.gov/ ; 2011 >
+    au < down ; 2012 ; Congressional Reports 2012 ; http://www.gpo.gov/ ; 2012 >
+    au < down ; 2013 ; Congressional Reports 2013 ; http://www.gpo.gov/ ; 2013 >
+    au < down ; 2014 ; Congressional Reports 2014 ; http://www.gpo.gov/ ; 2014 >
+    au < manifest ; 2015 ; Congressional Reports 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < manifest ; 2016 ; Congressional Reports 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -762,14 +766,14 @@
 
     param[collection_id] = DCPD
 
-    au < down ; 2009 ; Daily Compilation of Presidential Documents 2009 ; 2009 >
-    au < down ; 2010 ; Daily Compilation of Presidential Documents 2010 ; 2010 >
-    au < down ; 2011 ; Daily Compilation of Presidential Documents 2011 ; 2011 >
-    au < down ; 2012 ; Daily Compilation of Presidential Documents 2012 ; 2012 >
-    au < down ; 2013 ; Daily Compilation of Presidential Documents 2013 ; 2013 >
-    au < down ; 2014 ; Daily Compilation of Presidential Documents 2014 ; 2014 >
-    au < manifest ; 2015 ; Daily Compilation of Presidential Documents 2015 ; 2015 >
-    au < manifest ; 2016 ; Daily Compilation of Presidential Documents 2016 ; 2016 >
+    au < down ; 2009 ; Daily Compilation of Presidential Documents 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < down ; 2010 ; Daily Compilation of Presidential Documents 2010 ; http://www.gpo.gov/ ; 2010 >
+    au < down ; 2011 ; Daily Compilation of Presidential Documents 2011 ; http://www.gpo.gov/ ; 2011 >
+    au < down ; 2012 ; Daily Compilation of Presidential Documents 2012 ; http://www.gpo.gov/ ; 2012 >
+    au < down ; 2013 ; Daily Compilation of Presidential Documents 2013 ; http://www.gpo.gov/ ; 2013 >
+    au < down ; 2014 ; Daily Compilation of Presidential Documents 2014 ; http://www.gpo.gov/ ; 2014 >
+    au < manifest ; 2015 ; Daily Compilation of Presidential Documents 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < manifest ; 2016 ; Daily Compilation of Presidential Documents 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -781,28 +785,28 @@
 
     param[collection_id] = ECONI
 
-    au < down ; 1995 ; Economic Indicators 1995 ; 1995 >
-    au < down ; 1996 ; Economic Indicators 1996 ; 1996 >
-    au < down ; 1997 ; Economic Indicators 1997 ; 1997 >
-    au < down ; 1998 ; Economic Indicators 1998 ; 1998 >
-    au < down ; 1999 ; Economic Indicators 1999 ; 1999 >
-    au < down ; 2000 ; Economic Indicators 2000 ; 2000 >
-    au < down ; 2001 ; Economic Indicators 2001 ; 2001 >
-    au < down ; 2002 ; Economic Indicators 2002 ; 2002 >
-    au < down ; 2003 ; Economic Indicators 2003 ; 2003 >
-    au < down ; 2004 ; Economic Indicators 2004 ; 2004 >
-    au < down ; 2005 ; Economic Indicators 2005 ; 2005 >
-    au < down ; 2006 ; Economic Indicators 2006 ; 2006 >
-    au < down ; 2007 ; Economic Indicators 2007 ; 2007 >
-    au < down ; 2008 ; Economic Indicators 2008 ; 2008 >
-    au < down ; 2009 ; Economic Indicators 2009 ; 2009 >
-    au < down ; 2010 ; Economic Indicators 2010 ; 2010 >
-    au < down ; 2011 ; Economic Indicators 2011 ; 2011 >
-    au < down ; 2012 ; Economic Indicators 2012 ; 2012 >
-    au < down ; 2013 ; Economic Indicators 2013 ; 2013 >
-    au < down ; 2014 ; Economic Indicators 2014 ; 2014 >
-    au < manifest ; 2015 ; Economic Indicators 2015 ; 2015 >
-    au < manifest ; 2016 ; Economic Indicators 2016 ; 2016 >
+    au < down ; 1995 ; Economic Indicators 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < down ; 1996 ; Economic Indicators 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1997 ; Economic Indicators 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1998 ; Economic Indicators 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 1999 ; Economic Indicators 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; Economic Indicators 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; Economic Indicators 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; Economic Indicators 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2003 ; Economic Indicators 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; Economic Indicators 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; Economic Indicators 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; Economic Indicators 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2007 ; Economic Indicators 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2008 ; Economic Indicators 2008 ; http://www.gpo.gov/ ; 2008 >
+    au < down ; 2009 ; Economic Indicators 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < down ; 2010 ; Economic Indicators 2010 ; http://www.gpo.gov/ ; 2010 >
+    au < down ; 2011 ; Economic Indicators 2011 ; http://www.gpo.gov/ ; 2011 >
+    au < down ; 2012 ; Economic Indicators 2012 ; http://www.gpo.gov/ ; 2012 >
+    au < down ; 2013 ; Economic Indicators 2013 ; http://www.gpo.gov/ ; 2013 >
+    au < down ; 2014 ; Economic Indicators 2014 ; http://www.gpo.gov/ ; 2014 >
+    au < manifest ; 2015 ; Economic Indicators 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < manifest ; 2016 ; Economic Indicators 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -814,27 +818,27 @@
 
     param[collection_id] = ERP
 
-    au < down ; 1996 ; Economic Report of the President 1996 ; 1996 >
-    au < down ; 1997 ; Economic Report of the President 1997 ; 1997 >
-    au < down ; 1998 ; Economic Report of the President 1998 ; 1998 >
-    au < down ; 1999 ; Economic Report of the President 1999 ; 1999 >
-    au < down ; 2000 ; Economic Report of the President 2000 ; 2000 >
-    au < down ; 2001 ; Economic Report of the President 2001 ; 2001 >
-    au < down ; 2002 ; Economic Report of the President 2002 ; 2002 >
-    au < down ; 2003 ; Economic Report of the President 2003 ; 2003 >
-    au < down ; 2004 ; Economic Report of the President 2004 ; 2004 >
-    au < down ; 2005 ; Economic Report of the President 2005 ; 2005 >
-    au < down ; 2006 ; Economic Report of the President 2006 ; 2006 >
-    au < down ; 2007 ; Economic Report of the President 2007 ; 2007 >
-    au < down ; 2008 ; Economic Report of the President 2008 ; 2008 >
-    au < down ; 2009 ; Economic Report of the President 2009 ; 2009 >
-    au < down ; 2010 ; Economic Report of the President 2010 ; 2010 >
-    au < down ; 2011 ; Economic Report of the President 2011 ; 2011 >
-    au < down ; 2012 ; Economic Report of the President 2012 ; 2012 >
-    au < down ; 2013 ; Economic Report of the President 2013 ; 2013 >
-    au < down ; 2014 ; Economic Report of the President 2014 ; 2014 >
-    au < manifest ; 2015 ; Economic Report of the President 2015 ; 2015 >
-    au < expected ; 2016 ; Economic Report of the President 2016 ; 2016 >
+    au < down ; 1996 ; Economic Report of the President 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1997 ; Economic Report of the President 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1998 ; Economic Report of the President 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 1999 ; Economic Report of the President 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; Economic Report of the President 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; Economic Report of the President 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; Economic Report of the President 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2003 ; Economic Report of the President 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; Economic Report of the President 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; Economic Report of the President 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; Economic Report of the President 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2007 ; Economic Report of the President 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2008 ; Economic Report of the President 2008 ; http://www.gpo.gov/ ; 2008 >
+    au < down ; 2009 ; Economic Report of the President 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < down ; 2010 ; Economic Report of the President 2010 ; http://www.gpo.gov/ ; 2010 >
+    au < down ; 2011 ; Economic Report of the President 2011 ; http://www.gpo.gov/ ; 2011 >
+    au < down ; 2012 ; Economic Report of the President 2012 ; http://www.gpo.gov/ ; 2012 >
+    au < down ; 2013 ; Economic Report of the President 2013 ; http://www.gpo.gov/ ; 2013 >
+    au < down ; 2014 ; Economic Report of the President 2014 ; http://www.gpo.gov/ ; 2014 >
+    au < manifest ; 2015 ; Economic Report of the President 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < expected ; 2016 ; Economic Report of the President 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -846,16 +850,16 @@
     comment[0] = published from 1995 to 2004
     param[collection_id] = ERIC
 
-    au < down ; 1995 ; Education Report from ERIC 1995 ; 1995 >
-    au < down ; 1996 ; Education Report from ERIC 1996 ; 1996 >
-    au < down ; 1997 ; Education Report from ERIC 1997 ; 1997 >
-    au < down ; 1998 ; Education Report from ERIC 1998 ; 1998 >
-    au < down ; 1999 ; Education Report from ERIC 1999 ; 1999 >
-    au < down ; 2000 ; Education Report from ERIC 2000 ; 2000 >
-    au < down ; 2001 ; Education Report from ERIC 2001 ; 2001 >
-    au < down ; 2002 ; Education Report from ERIC 2002 ; 2002 >
-    au < down ; 2003 ; Education Report from ERIC 2003 ; 2003 >
-    au < down ; 2004 ; Education Report from ERIC 2004 ; 2004 >
+    au < down ; 1995 ; Education Report from ERIC 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < down ; 1996 ; Education Report from ERIC 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1997 ; Education Report from ERIC 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1998 ; Education Report from ERIC 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 1999 ; Education Report from ERIC 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; Education Report from ERIC 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; Education Report from ERIC 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; Education Report from ERIC 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2003 ; Education Report from ERIC 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; Education Report from ERIC 2004 ; http://www.gpo.gov/ ; 2004 >
 
   }
 
@@ -867,29 +871,29 @@
 
     param[collection_id] = FR
 
-    au < down ; 1994 ; Federal Register 1994 ; 1994 >
-    au < down ; 1995 ; Federal Register 1995 ; 1995 >
-    au < down ; 1996 ; Federal Register 1996 ; 1996 >
-    au < down ; 1997 ; Federal Register 1997 ; 1997 >
-    au < down ; 1998 ; Federal Register 1998 ; 1998 >
-    au < down ; 1999 ; Federal Register 1999 ; 1999 >
-    au < down ; 2000 ; Federal Register 2000 ; 2000 >
-    au < down ; 2001 ; Federal Register 2001 ; 2001 >
-    au < down ; 2002 ; Federal Register 2002 ; 2002 >
-    au < down ; 2003 ; Federal Register 2003 ; 2003 >
-    au < down ; 2004 ; Federal Register 2004 ; 2004 >
-    au < down ; 2005 ; Federal Register 2005 ; 2005 >
-    au < down ; 2006 ; Federal Register 2006 ; 2006 >
-    au < down ; 2007 ; Federal Register 2007 ; 2007 >
-    au < down ; 2008 ; Federal Register 2008 ; 2008 >
-    au < down ; 2009 ; Federal Register 2009 ; 2009 >
-    au < down ; 2010 ; Federal Register 2010 ; 2010 >
-    au < down ; 2011 ; Federal Register 2011 ; 2011 >
-    au < down ; 2012 ; Federal Register 2012 ; 2012 >
-    au < down ; 2013 ; Federal Register 2013 ; 2013 >
-    au < manifest ; 2014 ; Federal Register 2014 ; 2014 >
-    au < manifest ; 2015 ; Federal Register 2015 ; 2015 >
-    au < manifest ; 2016 ; Federal Register 2016 ; 2016 >
+    au < down ; 1994 ; Federal Register 1994 ; http://www.gpo.gov/ ; 1994 >
+    au < down ; 1995 ; Federal Register 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < down ; 1996 ; Federal Register 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1997 ; Federal Register 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1998 ; Federal Register 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 1999 ; Federal Register 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; Federal Register 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; Federal Register 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; Federal Register 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2003 ; Federal Register 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; Federal Register 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; Federal Register 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; Federal Register 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2007 ; Federal Register 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2008 ; Federal Register 2008 ; http://www.gpo.gov/ ; 2008 >
+    au < down ; 2009 ; Federal Register 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < down ; 2010 ; Federal Register 2010 ; http://www.gpo.gov/ ; 2010 >
+    au < down ; 2011 ; Federal Register 2011 ; http://www.gpo.gov/ ; 2011 >
+    au < down ; 2012 ; Federal Register 2012 ; http://www.gpo.gov/ ; 2012 >
+    au < down ; 2013 ; Federal Register 2013 ; http://www.gpo.gov/ ; 2013 >
+    au < manifest ; 2014 ; Federal Register 2014 ; https://www.gpo.gov/ ; 2014 >
+    au < manifest ; 2015 ; Federal Register 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < manifest ; 2016 ; Federal Register 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -901,22 +905,22 @@
     comment[0] = published from 1994 to 2008
     param[collection_id] = GAOREPORTS
 
-    au < down ; 1993 ; Government Accountability Office Reports and Comptroller General Decisions 1993 ; 1993 >
-    au < down ; 1994 ; Government Accountability Office Reports and Comptroller General Decisions 1994 ; 1994 >
-    au < down ; 1995 ; Government Accountability Office Reports and Comptroller General Decisions 1995 ; 1995 >
-    au < down ; 1996 ; Government Accountability Office Reports and Comptroller General Decisions 1996 ; 1996 >
-    au < down ; 1997 ; Government Accountability Office Reports and Comptroller General Decisions 1997 ; 1997 >
-    au < down ; 1998 ; Government Accountability Office Reports and Comptroller General Decisions 1998 ; 1998 >
-    au < down ; 1999 ; Government Accountability Office Reports and Comptroller General Decisions 1999 ; 1999 >
-    au < down ; 2000 ; Government Accountability Office Reports and Comptroller General Decisions 2000 ; 2000 >
-    au < down ; 2001 ; Government Accountability Office Reports and Comptroller General Decisions 2001 ; 2001 >
-    au < down ; 2002 ; Government Accountability Office Reports and Comptroller General Decisions 2002 ; 2002 >
-    au < down ; 2003 ; Government Accountability Office Reports and Comptroller General Decisions 2003 ; 2003 >
-    au < down ; 2004 ; Government Accountability Office Reports and Comptroller General Decisions 2004 ; 2004 >
-    au < down ; 2005 ; Government Accountability Office Reports and Comptroller General Decisions 2005 ; 2005 >
-    au < down ; 2006 ; Government Accountability Office Reports and Comptroller General Decisions 2006 ; 2006 >
-    au < down ; 2007 ; Government Accountability Office Reports and Comptroller General Decisions 2007 ; 2007 >
-    au < down ; 2008 ; Government Accountability Office Reports and Comptroller General Decisions 2008 ; 2008 >
+    au < down ; 1993 ; Government Accountability Office Reports and Comptroller General Decisions 1993 ; http://www.gpo.gov/ ; 1993 >
+    au < down ; 1994 ; Government Accountability Office Reports and Comptroller General Decisions 1994 ; http://www.gpo.gov/ ; 1994 >
+    au < down ; 1995 ; Government Accountability Office Reports and Comptroller General Decisions 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < down ; 1996 ; Government Accountability Office Reports and Comptroller General Decisions 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1997 ; Government Accountability Office Reports and Comptroller General Decisions 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1998 ; Government Accountability Office Reports and Comptroller General Decisions 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 1999 ; Government Accountability Office Reports and Comptroller General Decisions 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; Government Accountability Office Reports and Comptroller General Decisions 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; Government Accountability Office Reports and Comptroller General Decisions 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; Government Accountability Office Reports and Comptroller General Decisions 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2003 ; Government Accountability Office Reports and Comptroller General Decisions 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; Government Accountability Office Reports and Comptroller General Decisions 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; Government Accountability Office Reports and Comptroller General Decisions 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; Government Accountability Office Reports and Comptroller General Decisions 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2007 ; Government Accountability Office Reports and Comptroller General Decisions 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2008 ; Government Accountability Office Reports and Comptroller General Decisions 2008 ; http://www.gpo.gov/ ; 2008 >
 
   }
 
@@ -928,40 +932,40 @@
 
     param[collection_id] = HOB
 
-    au < down ; 1983 ; History of Bills 1983 ; 1983 >
-    au < down ; 1984 ; History of Bills 1984 ; 1984 >
-    au < down ; 1985 ; History of Bills 1985 ; 1985 >
-    au < down ; 1986 ; History of Bills 1986 ; 1986 >
-    au < down ; 1987 ; History of Bills 1987 ; 1987 >
-    au < down ; 1988 ; History of Bills 1988 ; 1988 >
-    au < down ; 1989 ; History of Bills 1989 ; 1989 >
-    au < down ; 1990 ; History of Bills 1990 ; 1990 >
-    au < down ; 1991 ; History of Bills 1991 ; 1991 >
-    au < down ; 1992 ; History of Bills 1992 ; 1992 >
-    au < down ; 1993 ; History of Bills 1993 ; 1993 >
-    au < down ; 1994 ; History of Bills 1994 ; 1994 >
-    au < down ; 1995 ; History of Bills 1995 ; 1995 >
-    au < down ; 1996 ; History of Bills 1996 ; 1996 >
-    au < down ; 1997 ; History of Bills 1997 ; 1997 >
-    au < down ; 1998 ; History of Bills 1998 ; 1998 >
-    au < down ; 1999 ; History of Bills 1999 ; 1999 >
-    au < down ; 2000 ; History of Bills 2000 ; 2000 >
-    au < down ; 2001 ; History of Bills 2001 ; 2001 >
-    au < down ; 2002 ; History of Bills 2002 ; 2002 >
-    au < down ; 2003 ; History of Bills 2003 ; 2003 >
-    au < down ; 2004 ; History of Bills 2004 ; 2004 >
-    au < down ; 2005 ; History of Bills 2005 ; 2005 >
-    au < down ; 2006 ; History of Bills 2006 ; 2006 >
-    au < down ; 2007 ; History of Bills 2007 ; 2007 >
-    au < down ; 2008 ; History of Bills 2008 ; 2008 >
-    au < down ; 2009 ; History of Bills 2009 ; 2009 >
-    au < down ; 2010 ; History of Bills 2010 ; 2010 >
-    au < down ; 2011 ; History of Bills 2011 ; 2011 >
-    au < down ; 2012 ; History of Bills 2012 ; 2012 >
-    au < down ; 2013 ; History of Bills 2013 ; 2013 >
-    au < manifest ; 2014 ; History of Bills 2014 ; 2014 >
-    au < manifest ; 2015 ; History of Bills 2015 ; 2015 >
-    au < manifest ; 2016 ; History of Bills 2016 ; 2016 >
+    au < down ; 1983 ; History of Bills 1983 ; http://www.gpo.gov/ ; 1983 >
+    au < down ; 1984 ; History of Bills 1984 ; http://www.gpo.gov/ ; 1984 >
+    au < down ; 1985 ; History of Bills 1985 ; http://www.gpo.gov/ ; 1985 >
+    au < down ; 1986 ; History of Bills 1986 ; http://www.gpo.gov/ ; 1986 >
+    au < down ; 1987 ; History of Bills 1987 ; http://www.gpo.gov/ ; 1987 >
+    au < down ; 1988 ; History of Bills 1988 ; http://www.gpo.gov/ ; 1988 >
+    au < down ; 1989 ; History of Bills 1989 ; http://www.gpo.gov/ ; 1989 >
+    au < down ; 1990 ; History of Bills 1990 ; http://www.gpo.gov/ ; 1990 >
+    au < down ; 1991 ; History of Bills 1991 ; http://www.gpo.gov/ ; 1991 >
+    au < down ; 1992 ; History of Bills 1992 ; http://www.gpo.gov/ ; 1992 >
+    au < down ; 1993 ; History of Bills 1993 ; http://www.gpo.gov/ ; 1993 >
+    au < down ; 1994 ; History of Bills 1994 ; http://www.gpo.gov/ ; 1994 >
+    au < down ; 1995 ; History of Bills 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < down ; 1996 ; History of Bills 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1997 ; History of Bills 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1998 ; History of Bills 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 1999 ; History of Bills 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; History of Bills 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; History of Bills 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; History of Bills 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2003 ; History of Bills 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; History of Bills 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; History of Bills 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; History of Bills 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2007 ; History of Bills 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2008 ; History of Bills 2008 ; http://www.gpo.gov/ ; 2008 >
+    au < down ; 2009 ; History of Bills 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < down ; 2010 ; History of Bills 2010 ; http://www.gpo.gov/ ; 2010 >
+    au < down ; 2011 ; History of Bills 2011 ; http://www.gpo.gov/ ; 2011 >
+    au < down ; 2012 ; History of Bills 2012 ; http://www.gpo.gov/ ; 2012 >
+    au < down ; 2013 ; History of Bills 2013 ; http://www.gpo.gov/ ; 2013 >
+    au < manifest ; 2014 ; History of Bills 2014 ; https://www.gpo.gov/ ; 2014 >
+    au < manifest ; 2015 ; History of Bills 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < manifest ; 2016 ; History of Bills 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -973,17 +977,17 @@
 
     param[collection_id] = HMAN
 
-    au < down ; 1995 ; House Rules and Manual 1995 ; 1995 >
-    au < down ; 1999 ; House Rules and Manual 1999 ; 1999 >
-    au < down ; 2001 ; House Rules and Manual 2001 ; 2001 >
-    au < down ; 2005 ; House Rules and Manual 2005 ; 2005 >
-    au < down ; 2007 ; House Rules and Manual 2007 ; 2007 >
-    au < down ; 2009 ; House Rules and Manual 2009 ; 2009 >
-    au < down ; 2011 ; House Rules and Manual 2011 ; 2011 >
-    au < down ; 2013 ; House Rules and Manual 2013 ; 2013 >
-    au < expected ; 2014 ; House Rules and Manual 2014 ; 2014 >
-    au < manifest ; 2015 ; House Rules and Manual 2015 ; 2015 >
-    au < expected ; 2016 ; House Rules and Manual 2016 ; 2016 >
+    au < down ; 1995 ; House Rules and Manual 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < down ; 1999 ; House Rules and Manual 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2001 ; House Rules and Manual 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2005 ; House Rules and Manual 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2007 ; House Rules and Manual 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2009 ; House Rules and Manual 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < down ; 2011 ; House Rules and Manual 2011 ; http://www.gpo.gov/ ; 2011 >
+    au < down ; 2013 ; House Rules and Manual 2013 ; http://www.gpo.gov/ ; 2013 >
+    au < expected ; 2014 ; House Rules and Manual 2014 ; https://www.gpo.gov/ ; 2014 >
+    au < manifest ; 2015 ; House Rules and Manual 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < expected ; 2016 ; House Rules and Manual 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -995,14 +999,14 @@
     comment[0] = published from 1992 to 1999
     param[collection_id] = HJOURNAL
 
-    au < down ; 1992 ; Journal of the House of Representatives 1992 ; 1992 >
-    au < down ; 1993 ; Journal of the House of Representatives 1993 ; 1993 >
-    au < down ; 1994 ; Journal of the House of Representatives 1994 ; 1994 >
-    au < down ; 1995 ; Journal of the House of Representatives 1995 ; 1995 >
-    au < down ; 1996 ; Journal of the House of Representatives 1996 ; 1996 >
-    au < down ; 1997 ; Journal of the House of Representatives 1997 ; 1997 >
-    au < down ; 1998 ; Journal of the House of Representatives 1998 ; 1998 >
-    au < down ; 1999 ; Journal of the House of Representatives 1999 ; 1999 >
+    au < down ; 1992 ; Journal of the House of Representatives 1992 ; http://www.gpo.gov/ ; 1992 >
+    au < down ; 1993 ; Journal of the House of Representatives 1993 ; http://www.gpo.gov/ ; 1993 >
+    au < down ; 1994 ; Journal of the House of Representatives 1994 ; http://www.gpo.gov/ ; 1994 >
+    au < down ; 1995 ; Journal of the House of Representatives 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < down ; 1996 ; Journal of the House of Representatives 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1997 ; Journal of the House of Representatives 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1998 ; Journal of the House of Representatives 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 1999 ; Journal of the House of Representatives 1999 ; http://www.gpo.gov/ ; 1999 >
 
 
   }
@@ -1015,26 +1019,26 @@
 
     param[collection_id] = LSA
 
-    au < down ; 1997 ; List of CFR Sections Affected 1997 ; 1997 >
-    au < down ; 1998 ; List of CFR Sections Affected 1998 ; 1998 >
-    au < down ; 1999 ; List of CFR Sections Affected 1999 ; 1999 >
-    au < down ; 2000 ; List of CFR Sections Affected 2000 ; 2000 >
-    au < down ; 2001 ; List of CFR Sections Affected 2001 ; 2001 >
-    au < down ; 2002 ; List of CFR Sections Affected 2002 ; 2002 >
-    au < down ; 2003 ; List of CFR Sections Affected 2003 ; 2003 >
-    au < down ; 2004 ; List of CFR Sections Affected 2004 ; 2004 >
-    au < down ; 2005 ; List of CFR Sections Affected 2005 ; 2005 >
-    au < down ; 2006 ; List of CFR Sections Affected 2006 ; 2006 >
-    au < down ; 2007 ; List of CFR Sections Affected 2007 ; 2007 >
-    au < down ; 2008 ; List of CFR Sections Affected 2008 ; 2008 >
-    au < down ; 2009 ; List of CFR Sections Affected 2009 ; 2009 >
-    au < down ; 2010 ; List of CFR Sections Affected 2010 ; 2010 >
-    au < down ; 2011 ; List of CFR Sections Affected 2011 ; 2011 >
-    au < down ; 2012 ; List of CFR Sections Affected 2012 ; 2012 >
-    au < down ; 2013 ; List of CFR Sections Affected 2013 ; 2013 >
-    au < manifest ; 2014 ; List of CFR Sections Affected 2014 ; 2014 >
-    au < manifest ; 2015 ; List of CFR Sections Affected 2015 ; 2015 >
-    au < manifest ; 2016 ; List of CFR Sections Affected 2016 ; 2016 >
+    au < down ; 1997 ; List of CFR Sections Affected 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1998 ; List of CFR Sections Affected 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 1999 ; List of CFR Sections Affected 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; List of CFR Sections Affected 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; List of CFR Sections Affected 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; List of CFR Sections Affected 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2003 ; List of CFR Sections Affected 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; List of CFR Sections Affected 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; List of CFR Sections Affected 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; List of CFR Sections Affected 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2007 ; List of CFR Sections Affected 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2008 ; List of CFR Sections Affected 2008 ; http://www.gpo.gov/ ; 2008 >
+    au < down ; 2009 ; List of CFR Sections Affected 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < down ; 2010 ; List of CFR Sections Affected 2010 ; http://www.gpo.gov/ ; 2010 >
+    au < down ; 2011 ; List of CFR Sections Affected 2011 ; http://www.gpo.gov/ ; 2011 >
+    au < down ; 2012 ; List of CFR Sections Affected 2012 ; http://www.gpo.gov/ ; 2012 >
+    au < down ; 2013 ; List of CFR Sections Affected 2013 ; http://www.gpo.gov/ ; 2013 >
+    au < manifest ; 2014 ; List of CFR Sections Affected 2014 ; https://www.gpo.gov/ ; 2014 >
+    au < manifest ; 2015 ; List of CFR Sections Affected 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < manifest ; 2016 ; List of CFR Sections Affected 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -1046,15 +1050,15 @@
     comment[0] = published from 1995 to 2005
     param[collection_id] = PAI
 
-    au < down ; 1995 ; Privacy Act Issuances 1995 ; 1995 >
-    au < down ; 1997 ; Privacy Act Issuances 1997 ; 1997 >
-    au < down ; 1999 ; Privacy Act Issuances 1999 ; 1999 >
-    au < down ; 2001 ; Privacy Act Issuances 2001 ; 2001 >
-    au < down ; 2003 ; Privacy Act Issuances 2003 ; 2003 >
-    au < down ; 2005 ; Privacy Act Issuances 2005 ; 2005 >
+    au < down ; 1995 ; Privacy Act Issuances 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < down ; 1997 ; Privacy Act Issuances 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1999 ; Privacy Act Issuances 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2001 ; Privacy Act Issuances 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2003 ; Privacy Act Issuances 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2005 ; Privacy Act Issuances 2005 ; http://www.gpo.gov/ ; 2005 >
 
-    au < manifest ; 2013 ; Privacy Act Issuances 2013 ; 2013 >
-    au < expected ; 2014 ; Privacy Act Issuances 2014 ; 2014 >
+    au < manifest ; 2013 ; Privacy Act Issuances 2013 ; https://www.gpo.gov/ ; 2013 >
+    au < expected ; 2014 ; Privacy Act Issuances 2014 ; https://www.gpo.gov/ ; 2014 >
 
   }
 
@@ -1066,30 +1070,30 @@
 
     param[collection_id] = PLAW
 
-    au < manifest ; 1906 ; Public and Private Laws 1906 ; 1906 >
-    au < manifest ; 1941 ; Public and Private Laws 1941 ; 1941 >
-    au < down ; 1995 ; Public and Private Laws 1995 ; 1995 >
-    au < down ; 1996 ; Public and Private Laws 1996 ; 1996 >
-    au < down ; 1997 ; Public and Private Laws 1997 ; 1997 >
-    au < down ; 1998 ; Public and Private Laws 1998 ; 1998 >
-    au < down ; 1999 ; Public and Private Laws 1999 ; 1999 >
-    au < down ; 2000 ; Public and Private Laws 2000 ; 2000 >
-    au < down ; 2001 ; Public and Private Laws 2001 ; 2001 >
-    au < down ; 2002 ; Public and Private Laws 2002 ; 2002 >
-    au < down ; 2003 ; Public and Private Laws 2003 ; 2003 >
-    au < down ; 2004 ; Public and Private Laws 2004 ; 2004 >
-    au < down ; 2005 ; Public and Private Laws 2005 ; 2005 >
-    au < down ; 2006 ; Public and Private Laws 2006 ; 2006 >
-    au < down ; 2007 ; Public and Private Laws 2007 ; 2007 >
-    au < down ; 2008 ; Public and Private Laws 2008 ; 2008 >
-    au < down ; 2009 ; Public and Private Laws 2009 ; 2009 >
-    au < down ; 2010 ; Public and Private Laws 2010 ; 2010 >
-    au < down ; 2011 ; Public and Private Laws 2011 ; 2011 >
-    au < down ; 2012 ; Public and Private Laws 2012 ; 2012 >
-    au < down ; 2013 ; Public and Private Laws 2013 ; 2013 >
-    au < manifest ; 2014 ; Public and Private Laws 2014 ; 2014 >
-    au < manifest ; 2015 ; Public and Private Laws 2015 ; 2015 >
-    au < expected ; 2016 ; Public and Private Laws 2016 ; 2016 >
+    au < manifest ; 1906 ; Public and Private Laws 1906 ; https://www.gpo.gov/ ; 1906 >
+    au < manifest ; 1941 ; Public and Private Laws 1941 ; https://www.gpo.gov/ ; 1941 >
+    au < down ; 1995 ; Public and Private Laws 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < down ; 1996 ; Public and Private Laws 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1997 ; Public and Private Laws 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1998 ; Public and Private Laws 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 1999 ; Public and Private Laws 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; Public and Private Laws 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; Public and Private Laws 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; Public and Private Laws 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2003 ; Public and Private Laws 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; Public and Private Laws 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; Public and Private Laws 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; Public and Private Laws 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2007 ; Public and Private Laws 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2008 ; Public and Private Laws 2008 ; http://www.gpo.gov/ ; 2008 >
+    au < down ; 2009 ; Public and Private Laws 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < down ; 2010 ; Public and Private Laws 2010 ; http://www.gpo.gov/ ; 2010 >
+    au < down ; 2011 ; Public and Private Laws 2011 ; http://www.gpo.gov/ ; 2011 >
+    au < down ; 2012 ; Public and Private Laws 2012 ; http://www.gpo.gov/ ; 2012 >
+    au < down ; 2013 ; Public and Private Laws 2013 ; http://www.gpo.gov/ ; 2013 >
+    au < manifest ; 2014 ; Public and Private Laws 2014 ; https://www.gpo.gov/ ; 2014 >
+    au < manifest ; 2015 ; Public and Private Laws 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < expected ; 2016 ; Public and Private Laws 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -1101,26 +1105,26 @@
     comment[0] = published from 1991 to 2006 and 2009
     param[collection_id] = PPP
 
-    au < down ; 1991 ; Public Papers of the Presidents of the United States 1991 ; 1991 >
-    au < down ; 1992 ; Public Papers of the Presidents of the United States 1992 ; 1992 >
-    au < down ; 1993 ; Public Papers of the Presidents of the United States 1993 ; 1993 >
-    au < down ; 1994 ; Public Papers of the Presidents of the United States 1994 ; 1994 >
-    au < down ; 1995 ; Public Papers of the Presidents of the United States 1995 ; 1995 >
-    au < down ; 1996 ; Public Papers of the Presidents of the United States 1996 ; 1996 >
-    au < down ; 1997 ; Public Papers of the Presidents of the United States 1997 ; 1997 >
-    au < down ; 1998 ; Public Papers of the Presidents of the United States 1998 ; 1998 >
-    au < down ; 1999 ; Public Papers of the Presidents of the United States 1999 ; 1999 >
-    au < down ; 2000 ; Public Papers of the Presidents of the United States 2000 ; 2000 >
-    au < down ; 2001 ; Public Papers of the Presidents of the United States 2001 ; 2001 >
-    au < down ; 2002 ; Public Papers of the Presidents of the United States 2002 ; 2002 >
-    au < down ; 2003 ; Public Papers of the Presidents of the United States 2003 ; 2003 >
-    au < down ; 2004 ; Public Papers of the Presidents of the United States 2004 ; 2004 >
-    au < down ; 2005 ; Public Papers of the Presidents of the United States 2005 ; 2005 >
-    au < down ; 2006 ; Public Papers of the Presidents of the United States 2006 ; 2006 >
-    au < down ; 2009 ; Public Papers of the Presidents of the United States 2009 ; 2009 >
-    au < manifest ; 2010 ; Public Papers of the Presidents of the United States 2010 ; 2010 >
-    au < manifest ; 2011 ; Public Papers of the Presidents of the United States 2011 ; 2011 >
-    au < expected ; 2012 ; Public Papers of the Presidents of the United States 2012 ; 2012 >
+    au < down ; 1991 ; Public Papers of the Presidents of the United States 1991 ; http://www.gpo.gov/ ; 1991 >
+    au < down ; 1992 ; Public Papers of the Presidents of the United States 1992 ; http://www.gpo.gov/ ; 1992 >
+    au < down ; 1993 ; Public Papers of the Presidents of the United States 1993 ; http://www.gpo.gov/ ; 1993 >
+    au < down ; 1994 ; Public Papers of the Presidents of the United States 1994 ; http://www.gpo.gov/ ; 1994 >
+    au < down ; 1995 ; Public Papers of the Presidents of the United States 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < down ; 1996 ; Public Papers of the Presidents of the United States 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1997 ; Public Papers of the Presidents of the United States 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1998 ; Public Papers of the Presidents of the United States 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 1999 ; Public Papers of the Presidents of the United States 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; Public Papers of the Presidents of the United States 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; Public Papers of the Presidents of the United States 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; Public Papers of the Presidents of the United States 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2003 ; Public Papers of the Presidents of the United States 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; Public Papers of the Presidents of the United States 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; Public Papers of the Presidents of the United States 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; Public Papers of the Presidents of the United States 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2009 ; Public Papers of the Presidents of the United States 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < manifest ; 2010 ; Public Papers of the Presidents of the United States 2010 ; https://www.gpo.gov/ ; 2010 >
+    au < manifest ; 2011 ; Public Papers of the Presidents of the United States 2011 ; https://www.gpo.gov/ ; 2011 >
+    au < expected ; 2012 ; Public Papers of the Presidents of the United States 2012 ; https://www.gpo.gov/ ; 2012 >
 
   }
 
@@ -1132,11 +1136,11 @@
 
     param[collection_id] = SMAN
 
-    au < down ; 1996 ; Senate Manual 1996 ; 1996 >
-    au < down ; 2000 ; Senate Manual 2000 ; 2000 >
-    au < down ; 2002 ; Senate Manual 2002 ; 2002 >
-    au < down ; 2008 ; Senate Manual 2008 ; 2008 >
-    au < down ; 2012 ; Senate Manual 2012 ; 2012 >
+    au < down ; 1996 ; Senate Manual 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 2000 ; Senate Manual 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2002 ; Senate Manual 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2008 ; Senate Manual 2008 ; http://www.gpo.gov/ ; 2008 >
+    au < down ; 2012 ; Senate Manual 2012 ; http://www.gpo.gov/ ; 2012 >
 
   }
 
@@ -1150,7 +1154,7 @@
         param[collection_id] = SCD
 
 
-    au < exists ; 1937 ; Supreme Court Decisions 1937 ; 1937 >
+    au < exists ; 1937 ; Supreme Court Decisions 1937 ; https://www.gpo.gov/ ; 1937 >
 
     }
 
@@ -1162,26 +1166,26 @@
 
     param[collection_id] = USCODE
 
-    au < down ; 1994 ; United States Code 1994 ; 1994 >
-    au < down ; 1995 ; United States Code 1995 ; 1995 >
-    au < down ; 1996 ; United States Code 1996 ; 1996 >
-    au < down ; 1997 ; United States Code 1997 ; 1997 >
-    au < down ; 1998 ; United States Code 1998 ; 1998 >
-    au < down ; 1999 ; United States Code 1999 ; 1999 >
-    au < down ; 2000 ; United States Code 2000 ; 2000 >
-    au < down ; 2001 ; United States Code 2001 ; 2001 >
-    au < down ; 2002 ; United States Code 2002 ; 2002 >
-    au < down ; 2003 ; United States Code 2003 ; 2003 >
-    au < down ; 2004 ; United States Code 2004 ; 2004 >
-    au < down ; 2005 ; United States Code 2005 ; 2005 >
-    au < down ; 2006 ; United States Code 2006 ; 2006 >
-    au < down ; 2007 ; United States Code 2007 ; 2007 >
-    au < down ; 2008 ; United States Code 2008 ; 2008 >
-    au < down ; 2009 ; United States Code 2009 ; 2009 >
-    au < down ; 2010 ; United States Code 2010 ; 2010 >
-    au < down ; 2011 ; United States Code 2011 ; 2011 >
-    au < manifest ; 2012 ; United States Code 2012 ; 2012 >
-    au < manifest ; 2013 ; United States Code 2013 ; 2013 >
+    au < down ; 1994 ; United States Code 1994 ; http://www.gpo.gov/ ; 1994 >
+    au < down ; 1995 ; United States Code 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < down ; 1996 ; United States Code 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1997 ; United States Code 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1998 ; United States Code 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 1999 ; United States Code 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; United States Code 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; United States Code 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; United States Code 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2003 ; United States Code 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; United States Code 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; United States Code 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; United States Code 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2007 ; United States Code 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2008 ; United States Code 2008 ; http://www.gpo.gov/ ; 2008 >
+    au < down ; 2009 ; United States Code 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < down ; 2010 ; United States Code 2010 ; http://www.gpo.gov/ ; 2010 >
+    au < down ; 2011 ; United States Code 2011 ; http://www.gpo.gov/ ; 2011 >
+    au < manifest ; 2012 ; United States Code 2012 ; https://www.gpo.gov/ ; 2012 >
+    au < manifest ; 2013 ; United States Code 2013 ; https://www.gpo.gov/ ; 2013 >
 
   }
 
@@ -1192,46 +1196,46 @@
 
     param[collection_id] = USCOURTS
 
-    au < manifest ; 1977 ; United States Courts 1977 ; 1977 >
-    au < manifest ; 1978 ; United States Courts 1978 ; 1978 >
-    au < manifest ; 1979 ; United States Courts 1979 ; 1979 >
-    au < manifest ; 1980 ; United States Courts 1980 ; 1980 >
-    au < manifest ; 1981 ; United States Courts 1981 ; 1981 >
-    au < manifest ; 1982 ; United States Courts 1982 ; 1982 >
-    au < manifest ; 1983 ; United States Courts 1983 ; 1983 >
-    au < manifest ; 1984 ; United States Courts 1984 ; 1984 >
-    au < manifest ; 1985 ; United States Courts 1985 ; 1985 >
-    au < manifest ; 1986 ; United States Courts 1986 ; 1986 >
-    au < manifest ; 1987 ; United States Courts 1987 ; 1987 >
-    au < manifest ; 1988 ; United States Courts 1988 ; 1988 >
-    au < manifest ; 1989 ; United States Courts 1989 ; 1989 >
-    au < manifest ; 1990 ; United States Courts 1990 ; 1990 >
-    au < manifest ; 1991 ; United States Courts 1991 ; 1991 >
-    au < manifest ; 1992 ; United States Courts 1992 ; 1992 >
-    au < manifest ; 1993 ; United States Courts 1993 ; 1993 >
-    au < manifest ; 1994 ; United States Courts 1994 ; 1994 >
-    au < manifest ; 1995 ; United States Courts 1995 ; 1995 >
-    au < manifest ; 1996 ; United States Courts 1996 ; 1996 >
-    au < manifest ; 1997 ; United States Courts 1997 ; 1997 >
-    au < manifest ; 1998 ; United States Courts 1998 ; 1998 >
-    au < manifest ; 1999 ; United States Courts 1999 ; 1999 >
-    au < manifest ; 2000 ; United States Courts 2000 ; 2000 >
-    au < manifest ; 2001 ; United States Courts 2001 ; 2001 >
-    au < manifest ; 2002 ; United States Courts 2002 ; 2002 >
-    au < manifest ; 2003 ; United States Courts 2003 ; 2003 >
-    au < down ; 2004 ; United States Courts 2004 ; 2004 >
-    au < down ; 2005 ; United States Courts 2005 ; 2005 >
-    au < down ; 2006 ; United States Courts 2006 ; 2006 >
-    au < down ; 2007 ; United States Courts 2007 ; 2007 >
-    au < down ; 2008 ; United States Courts 2008 ; 2008 >
-    au < down ; 2009 ; United States Courts 2009 ; 2009 >
-    au < down ; 2010 ; United States Courts 2010 ; 2010 >
-    au < down ; 2011 ; United States Courts 2011 ; 2011 >
-    au < down ; 2012 ; United States Courts 2012 ; 2012 >
-    au < manifest ; 2013 ; United States Courts 2013 ; 2013 >
-    au < manifest ; 2014 ; United States Courts 2014 ; 2014 >
-    au < manifest ; 2015 ; United States Courts 2015 ; 2015 >
-    au < manifest ; 2016 ; United States Courts 2016 ; 2016 >
+    au < manifest ; 1977 ; United States Courts 1977 ; https://www.gpo.gov/ ; 1977 >
+    au < manifest ; 1978 ; United States Courts 1978 ; https://www.gpo.gov/ ; 1978 >
+    au < manifest ; 1979 ; United States Courts 1979 ; https://www.gpo.gov/ ; 1979 >
+    au < manifest ; 1980 ; United States Courts 1980 ; https://www.gpo.gov/ ; 1980 >
+    au < manifest ; 1981 ; United States Courts 1981 ; https://www.gpo.gov/ ; 1981 >
+    au < manifest ; 1982 ; United States Courts 1982 ; https://www.gpo.gov/ ; 1982 >
+    au < manifest ; 1983 ; United States Courts 1983 ; https://www.gpo.gov/ ; 1983 >
+    au < manifest ; 1984 ; United States Courts 1984 ; https://www.gpo.gov/ ; 1984 >
+    au < manifest ; 1985 ; United States Courts 1985 ; https://www.gpo.gov/ ; 1985 >
+    au < manifest ; 1986 ; United States Courts 1986 ; https://www.gpo.gov/ ; 1986 >
+    au < manifest ; 1987 ; United States Courts 1987 ; https://www.gpo.gov/ ; 1987 >
+    au < manifest ; 1988 ; United States Courts 1988 ; https://www.gpo.gov/ ; 1988 >
+    au < manifest ; 1989 ; United States Courts 1989 ; https://www.gpo.gov/ ; 1989 >
+    au < manifest ; 1990 ; United States Courts 1990 ; https://www.gpo.gov/ ; 1990 >
+    au < manifest ; 1991 ; United States Courts 1991 ; https://www.gpo.gov/ ; 1991 >
+    au < manifest ; 1992 ; United States Courts 1992 ; https://www.gpo.gov/ ; 1992 >
+    au < manifest ; 1993 ; United States Courts 1993 ; https://www.gpo.gov/ ; 1993 >
+    au < manifest ; 1994 ; United States Courts 1994 ; https://www.gpo.gov/ ; 1994 >
+    au < manifest ; 1995 ; United States Courts 1995 ; https://www.gpo.gov/ ; 1995 >
+    au < manifest ; 1996 ; United States Courts 1996 ; https://www.gpo.gov/ ; 1996 >
+    au < manifest ; 1997 ; United States Courts 1997 ; https://www.gpo.gov/ ; 1997 >
+    au < manifest ; 1998 ; United States Courts 1998 ; https://www.gpo.gov/ ; 1998 >
+    au < manifest ; 1999 ; United States Courts 1999 ; https://www.gpo.gov/ ; 1999 >
+    au < manifest ; 2000 ; United States Courts 2000 ; https://www.gpo.gov/ ; 2000 >
+    au < manifest ; 2001 ; United States Courts 2001 ; https://www.gpo.gov/ ; 2001 >
+    au < manifest ; 2002 ; United States Courts 2002 ; https://www.gpo.gov/ ; 2002 >
+    au < manifest ; 2003 ; United States Courts 2003 ; https://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; United States Courts 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; United States Courts 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; United States Courts 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2007 ; United States Courts 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2008 ; United States Courts 2008 ; http://www.gpo.gov/ ; 2008 >
+    au < down ; 2009 ; United States Courts 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < down ; 2010 ; United States Courts 2010 ; http://www.gpo.gov/ ; 2010 >
+    au < down ; 2011 ; United States Courts 2011 ; http://www.gpo.gov/ ; 2011 >
+    au < down ; 2012 ; United States Courts 2012 ; http://www.gpo.gov/ ; 2012 >
+    au < manifest ; 2013 ; United States Courts 2013 ; https://www.gpo.gov/ ; 2013 >
+    au < manifest ; 2014 ; United States Courts 2014 ; https://www.gpo.gov/ ; 2014 >
+    au < manifest ; 2015 ; United States Courts 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < manifest ; 2016 ; United States Courts 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -1243,28 +1247,28 @@
 
     param[collection_id] = GOVMAN
 
-    au < down ; 1995 ; United States Government Manual 1995 ; 1995 >
-    au < down ; 1996 ; United States Government Manual 1996 ; 1996 >
-    au < down ; 1997 ; United States Government Manual 1997 ; 1997 >
-    au < down ; 1998 ; United States Government Manual 1998 ; 1998 >
-    au < down ; 1999 ; United States Government Manual 1999 ; 1999 >
-    au < down ; 2000 ; United States Government Manual 2000 ; 2000 >
-    au < down ; 2001 ; United States Government Manual 2001 ; 2001 >
-    au < down ; 2002 ; United States Government Manual 2002 ; 2002 >
-    au < down ; 2003 ; United States Government Manual 2003 ; 2003 >
-    au < down ; 2004 ; United States Government Manual 2004 ; 2004 >
-    au < down ; 2005 ; United States Government Manual 2005 ; 2005 >
-    au < down ; 2006 ; United States Government Manual 2006 ; 2006 >
-    au < down ; 2007 ; United States Government Manual 2007 ; 2007 >
-    au < down ; 2008 ; United States Government Manual 2008 ; 2008 >
-    au < down ; 2009 ; United States Government Manual 2009 ; 2009 >
-    au < doesNotExist ; 2010 ; United States Government Manual 2010 ; 2010 >
-    au < down ; 2011 ; United States Government Manual 2011 ; 2011 >
-    au < manifest ; 2012 ; United States Government Manual 2012 ; 2012 >
-    au < down ; 2013 ; United States Government Manual 2013 ; 2013 >
-    au < manifest ; 2014 ; United States Government Manual 2014 ; 2014 >
-    au < expected ; 2015 ; United States Government Manual 2015 ; 2015 >
-    au < expected ; 2016 ; United States Government Manual 2016 ; 2016 >
+    au < down ; 1995 ; United States Government Manual 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < down ; 1996 ; United States Government Manual 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1997 ; United States Government Manual 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1998 ; United States Government Manual 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 1999 ; United States Government Manual 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; United States Government Manual 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; United States Government Manual 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; United States Government Manual 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2003 ; United States Government Manual 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; United States Government Manual 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; United States Government Manual 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; United States Government Manual 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2007 ; United States Government Manual 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2008 ; United States Government Manual 2008 ; http://www.gpo.gov/ ; 2008 >
+    au < down ; 2009 ; United States Government Manual 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < doesNotExist ; 2010 ; United States Government Manual 2010 ; https://www.gpo.gov/ ; 2010 >
+    au < down ; 2011 ; United States Government Manual 2011 ; http://www.gpo.gov/ ; 2011 >
+    au < manifest ; 2012 ; United States Government Manual 2012 ; https://www.gpo.gov/ ; 2012 >
+    au < down ; 2013 ; United States Government Manual 2013 ; http://www.gpo.gov/ ; 2013 >
+    au < manifest ; 2014 ; United States Government Manual 2014 ; https://www.gpo.gov/ ; 2014 >
+    au < expected ; 2015 ; United States Government Manual 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < expected ; 2016 ; United States Government Manual 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -1276,68 +1280,68 @@
     comment[0] = published from 1951 to 2002 and 2003 to 2008
     param[collection_id] = STATUTE
 
-    au < down ; 1951 ; United States Statutes at Large 1951 ; 1951 >
-    au < down ; 1952 ; United States Statutes at Large 1952 ; 1952 >
-    au < down ; 1953 ; United States Statutes at Large 1953 ; 1953 >
-    au < down ; 1954 ; United States Statutes at Large 1954 ; 1954 >
-    au < down ; 1955 ; United States Statutes at Large 1955 ; 1955 >
-    au < down ; 1956 ; United States Statutes at Large 1956 ; 1956 >
-    au < down ; 1957 ; United States Statutes at Large 1957 ; 1957 >
-    au < down ; 1958 ; United States Statutes at Large 1958 ; 1958 >
-    au < down ; 1959 ; United States Statutes at Large 1959 ; 1959 >
-    au < down ; 1960 ; United States Statutes at Large 1960 ; 1960 >
-    au < down ; 1961 ; United States Statutes at Large 1961 ; 1961 >
-    au < down ; 1962 ; United States Statutes at Large 1962 ; 1962 >
-    au < down ; 1963 ; United States Statutes at Large 1963 ; 1963 >
-    au < down ; 1964 ; United States Statutes at Large 1964 ; 1964 >
-    au < down ; 1965 ; United States Statutes at Large 1965 ; 1965 >
-    au < down ; 1966 ; United States Statutes at Large 1966 ; 1966 >
-    au < down ; 1967 ; United States Statutes at Large 1967 ; 1967 >
-    au < down ; 1968 ; United States Statutes at Large 1968 ; 1968 >
-    au < down ; 1969 ; United States Statutes at Large 1969 ; 1969 >
-    au < down ; 1970-1971 ; United States Statutes at Large 1970-1971 ; 1971 >
-    au < down ; 1972 ; United States Statutes at Large 1972 ; 1972 >
-    au < down ; 1973 ; United States Statutes at Large 1973 ; 1973 >
-    au < down ; 1974 ; United States Statutes at Large 1974 ; 1974 >
-    au < down ; 1975 ; United States Statutes at Large 1975 ; 1975 >
-    au < down ; 1976 ; United States Statutes at Large 1976 ; 1976 >
-    au < down ; 1977 ; United States Statutes at Large 1977 ; 1977 >
-    au < down ; 1978 ; United States Statutes at Large 1978 ; 1978 >
-    au < down ; 1979 ; United States Statutes at Large 1979 ; 1979 >
-    au < down ; 1980 ; United States Statutes at Large 1980 ; 1980 >
-    au < down ; 1981 ; United States Statutes at Large 1981 ; 1981 >
-    au < down ; 1982 ; United States Statutes at Large 1982 ; 1982 >
-    au < down ; 1983 ; United States Statutes at Large 1983 ; 1983 >
-    au < down ; 1984 ; United States Statutes at Large 1984 ; 1984 >
-    au < down ; 1985 ; United States Statutes at Large 1985 ; 1985 >
-    au < down ; 1986 ; United States Statutes at Large 1986 ; 1986 >
-    au < down ; 1987 ; United States Statutes at Large 1987 ; 1987 >
-    au < down ; 1988 ; United States Statutes at Large 1988 ; 1988 >
-    au < down ; 1989 ; United States Statutes at Large 1989 ; 1989 >
-    au < down ; 1990 ; United States Statutes at Large 1990 ; 1990 >
-    au < down ; 1991 ; United States Statutes at Large 1991 ; 1991 >
-    au < down ; 1992 ; United States Statutes at Large 1992 ; 1992 >
-    au < down ; 1993 ; United States Statutes at Large 1993 ; 1993 >
-    au < down ; 1994 ; United States Statutes at Large 1994 ; 1994 >
-    au < down ; 1995 ; United States Statutes at Large 1995 ; 1995 >
-    au < down ; 1996 ; United States Statutes at Large 1996 ; 1996 >
-    au < down ; 1997 ; United States Statutes at Large 1997 ; 1997 >
-    au < down ; 1998 ; United States Statutes at Large 1998 ; 1998 >
-    au < down ; 1999 ; United States Statutes at Large 1999 ; 1999 >
-    au < down ; 2000 ; United States Statutes at Large 2000 ; 2000 >
-    au < down ; 2001 ; United States Statutes at Large 2001 ; 2001 >
-    au < down ; 2002 ; United States Statutes at Large 2002 ; 2002 >
-    au < down ; 2003 ; United States Statutes at Large 2003 ; 2003 >
-    au < down ; 2004 ; United States Statutes at Large 2004 ; 2004 >
-    au < down ; 2005 ; United States Statutes at Large 2005 ; 2005 >
-    au < down ; 2006 ; United States Statutes at Large 2006 ; 2006 >
-    au < down ; 2007 ; United States Statutes at Large 2007 ; 2007 >
-    au < down ; 2008 ; United States Statutes at Large 2008 ; 2008 >
-    au < manifest ; 2009 ; United States Statutes at Large 2009 ; 2009 >
-    au < manifest ; 2010 ; United States Statutes at Large 2010 ; 2010 >
-    au < expected ; 2011 ; United States Statutes at Large 2011 ; 2011 >
-    au < manifest ; 2012 ; United States Statutes at Large 2012 ; 2012 >
-    au < expected ; 2013 ; United States Statutes at Large 2013 ; 2013 >
+    au < down ; 1951 ; United States Statutes at Large 1951 ; http://www.gpo.gov/ ; 1951 >
+    au < down ; 1952 ; United States Statutes at Large 1952 ; http://www.gpo.gov/ ; 1952 >
+    au < down ; 1953 ; United States Statutes at Large 1953 ; http://www.gpo.gov/ ; 1953 >
+    au < down ; 1954 ; United States Statutes at Large 1954 ; http://www.gpo.gov/ ; 1954 >
+    au < down ; 1955 ; United States Statutes at Large 1955 ; http://www.gpo.gov/ ; 1955 >
+    au < down ; 1956 ; United States Statutes at Large 1956 ; http://www.gpo.gov/ ; 1956 >
+    au < down ; 1957 ; United States Statutes at Large 1957 ; http://www.gpo.gov/ ; 1957 >
+    au < down ; 1958 ; United States Statutes at Large 1958 ; http://www.gpo.gov/ ; 1958 >
+    au < down ; 1959 ; United States Statutes at Large 1959 ; http://www.gpo.gov/ ; 1959 >
+    au < down ; 1960 ; United States Statutes at Large 1960 ; http://www.gpo.gov/ ; 1960 >
+    au < down ; 1961 ; United States Statutes at Large 1961 ; http://www.gpo.gov/ ; 1961 >
+    au < down ; 1962 ; United States Statutes at Large 1962 ; http://www.gpo.gov/ ; 1962 >
+    au < down ; 1963 ; United States Statutes at Large 1963 ; http://www.gpo.gov/ ; 1963 >
+    au < down ; 1964 ; United States Statutes at Large 1964 ; http://www.gpo.gov/ ; 1964 >
+    au < down ; 1965 ; United States Statutes at Large 1965 ; http://www.gpo.gov/ ; 1965 >
+    au < down ; 1966 ; United States Statutes at Large 1966 ; http://www.gpo.gov/ ; 1966 >
+    au < down ; 1967 ; United States Statutes at Large 1967 ; http://www.gpo.gov/ ; 1967 >
+    au < down ; 1968 ; United States Statutes at Large 1968 ; http://www.gpo.gov/ ; 1968 >
+    au < down ; 1969 ; United States Statutes at Large 1969 ; http://www.gpo.gov/ ; 1969 >
+    au < down ; 1970-1971 ; United States Statutes at Large 1970-1971 ; http://www.gpo.gov/ ; 1971 >
+    au < down ; 1972 ; United States Statutes at Large 1972 ; http://www.gpo.gov/ ; 1972 >
+    au < down ; 1973 ; United States Statutes at Large 1973 ; http://www.gpo.gov/ ; 1973 >
+    au < down ; 1974 ; United States Statutes at Large 1974 ; http://www.gpo.gov/ ; 1974 >
+    au < down ; 1975 ; United States Statutes at Large 1975 ; http://www.gpo.gov/ ; 1975 >
+    au < down ; 1976 ; United States Statutes at Large 1976 ; http://www.gpo.gov/ ; 1976 >
+    au < down ; 1977 ; United States Statutes at Large 1977 ; http://www.gpo.gov/ ; 1977 >
+    au < down ; 1978 ; United States Statutes at Large 1978 ; http://www.gpo.gov/ ; 1978 >
+    au < down ; 1979 ; United States Statutes at Large 1979 ; http://www.gpo.gov/ ; 1979 >
+    au < down ; 1980 ; United States Statutes at Large 1980 ; http://www.gpo.gov/ ; 1980 >
+    au < down ; 1981 ; United States Statutes at Large 1981 ; http://www.gpo.gov/ ; 1981 >
+    au < down ; 1982 ; United States Statutes at Large 1982 ; http://www.gpo.gov/ ; 1982 >
+    au < down ; 1983 ; United States Statutes at Large 1983 ; http://www.gpo.gov/ ; 1983 >
+    au < down ; 1984 ; United States Statutes at Large 1984 ; http://www.gpo.gov/ ; 1984 >
+    au < down ; 1985 ; United States Statutes at Large 1985 ; http://www.gpo.gov/ ; 1985 >
+    au < down ; 1986 ; United States Statutes at Large 1986 ; http://www.gpo.gov/ ; 1986 >
+    au < down ; 1987 ; United States Statutes at Large 1987 ; http://www.gpo.gov/ ; 1987 >
+    au < down ; 1988 ; United States Statutes at Large 1988 ; http://www.gpo.gov/ ; 1988 >
+    au < down ; 1989 ; United States Statutes at Large 1989 ; http://www.gpo.gov/ ; 1989 >
+    au < down ; 1990 ; United States Statutes at Large 1990 ; http://www.gpo.gov/ ; 1990 >
+    au < down ; 1991 ; United States Statutes at Large 1991 ; http://www.gpo.gov/ ; 1991 >
+    au < down ; 1992 ; United States Statutes at Large 1992 ; http://www.gpo.gov/ ; 1992 >
+    au < down ; 1993 ; United States Statutes at Large 1993 ; http://www.gpo.gov/ ; 1993 >
+    au < down ; 1994 ; United States Statutes at Large 1994 ; http://www.gpo.gov/ ; 1994 >
+    au < down ; 1995 ; United States Statutes at Large 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < down ; 1996 ; United States Statutes at Large 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1997 ; United States Statutes at Large 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1998 ; United States Statutes at Large 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 1999 ; United States Statutes at Large 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; United States Statutes at Large 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; United States Statutes at Large 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; United States Statutes at Large 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2003 ; United States Statutes at Large 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; United States Statutes at Large 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; United States Statutes at Large 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; United States Statutes at Large 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2007 ; United States Statutes at Large 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2008 ; United States Statutes at Large 2008 ; http://www.gpo.gov/ ; 2008 >
+    au < manifest ; 2009 ; United States Statutes at Large 2009 ; https://www.gpo.gov/ ; 2009 >
+    au < manifest ; 2010 ; United States Statutes at Large 2010 ; https://www.gpo.gov/ ; 2010 >
+    au < expected ; 2011 ; United States Statutes at Large 2011 ; https://www.gpo.gov/ ; 2011 >
+    au < manifest ; 2012 ; United States Statutes at Large 2012 ; https://www.gpo.gov/ ; 2012 >
+    au < expected ; 2013 ; United States Statutes at Large 2013 ; https://www.gpo.gov/ ; 2013 >
 
   }
 
@@ -1349,24 +1353,24 @@
 
     param[collection_id] = WCPD
 
-    au < down ; 1993 ; Weekly Compilation of Presidential Documents 1993 ; 1993 >
-    au < down ; 1994 ; Weekly Compilation of Presidential Documents 1994 ; 1994 >
-    au < down ; 1995 ; Weekly Compilation of Presidential Documents 1995 ; 1995 >
-    au < down ; 1996 ; Weekly Compilation of Presidential Documents 1996 ; 1996 >
-    au < down ; 1997 ; Weekly Compilation of Presidential Documents 1997 ; 1997 >
-    au < down ; 1998 ; Weekly Compilation of Presidential Documents 1998 ; 1998 >
-    au < down ; 1999 ; Weekly Compilation of Presidential Documents 1999 ; 1999 >
-    au < down ; 2000 ; Weekly Compilation of Presidential Documents 2000 ; 2000 >
-    au < down ; 2001 ; Weekly Compilation of Presidential Documents 2001 ; 2001 >
-    au < down ; 2002 ; Weekly Compilation of Presidential Documents 2002 ; 2002 >
-    au < down ; 2003 ; Weekly Compilation of Presidential Documents 2003 ; 2003 >
-    au < down ; 2004 ; Weekly Compilation of Presidential Documents 2004 ; 2004 >
-    au < down ; 2005 ; Weekly Compilation of Presidential Documents 2005 ; 2005 >
-    au < down ; 2006 ; Weekly Compilation of Presidential Documents 2006 ; 2006 >
-    au < down ; 2007 ; Weekly Compilation of Presidential Documents 2007 ; 2007 >
-    au < down ; 2008 ; Weekly Compilation of Presidential Documents 2008 ; 2008 >
-    au < down ; 2009 ; Weekly Compilation of Presidential Documents 2009 ; 2009 >
-    au < expected ; 2010 ; Weekly Compilation of Presidential Documents 2010 ; 2010 >
+    au < down ; 1993 ; Weekly Compilation of Presidential Documents 1993 ; http://www.gpo.gov/ ; 1993 >
+    au < down ; 1994 ; Weekly Compilation of Presidential Documents 1994 ; http://www.gpo.gov/ ; 1994 >
+    au < down ; 1995 ; Weekly Compilation of Presidential Documents 1995 ; http://www.gpo.gov/ ; 1995 >
+    au < down ; 1996 ; Weekly Compilation of Presidential Documents 1996 ; http://www.gpo.gov/ ; 1996 >
+    au < down ; 1997 ; Weekly Compilation of Presidential Documents 1997 ; http://www.gpo.gov/ ; 1997 >
+    au < down ; 1998 ; Weekly Compilation of Presidential Documents 1998 ; http://www.gpo.gov/ ; 1998 >
+    au < down ; 1999 ; Weekly Compilation of Presidential Documents 1999 ; http://www.gpo.gov/ ; 1999 >
+    au < down ; 2000 ; Weekly Compilation of Presidential Documents 2000 ; http://www.gpo.gov/ ; 2000 >
+    au < down ; 2001 ; Weekly Compilation of Presidential Documents 2001 ; http://www.gpo.gov/ ; 2001 >
+    au < down ; 2002 ; Weekly Compilation of Presidential Documents 2002 ; http://www.gpo.gov/ ; 2002 >
+    au < down ; 2003 ; Weekly Compilation of Presidential Documents 2003 ; http://www.gpo.gov/ ; 2003 >
+    au < down ; 2004 ; Weekly Compilation of Presidential Documents 2004 ; http://www.gpo.gov/ ; 2004 >
+    au < down ; 2005 ; Weekly Compilation of Presidential Documents 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < down ; 2006 ; Weekly Compilation of Presidential Documents 2006 ; http://www.gpo.gov/ ; 2006 >
+    au < down ; 2007 ; Weekly Compilation of Presidential Documents 2007 ; http://www.gpo.gov/ ; 2007 >
+    au < down ; 2008 ; Weekly Compilation of Presidential Documents 2008 ; http://www.gpo.gov/ ; 2008 >
+    au < down ; 2009 ; Weekly Compilation of Presidential Documents 2009 ; http://www.gpo.gov/ ; 2009 >
+    au < expected ; 2010 ; Weekly Compilation of Presidential Documents 2010 ; https://www.gpo.gov/ ; 2010 >
 
   }
 
@@ -1386,23 +1390,23 @@
 #      >
 #      param[collection_id] = CFR
 #
-#    au < doNotProcess ; 1996 ; Code of Federal Regulations (Annual Editions) - Bulk Data 1996 ; 1996 >
-#    au < doNotProcess ; 1997 ; Code of Federal Regulations (Annual Editions) - Bulk Data 1997 ; 1997 >
-#    au < doNotProcess ; 1998 ; Code of Federal Regulations (Annual Editions) - Bulk Data 1998 ; 1998 >
-#    au < doNotProcess ; 1999 ; Code of Federal Regulations (Annual Editions) - Bulk Data 1999 ; 1999 >
-#    au < doNotProcess ; 2000 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2000 ; 2000 >
-#    au < doNotProcess ; 2001 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2001 ; 2001 >
-#    au < doNotProcess ; 2002 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2002 ; 2002 >
-#    au < doNotProcess ; 2003 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2003 ; 2003 >
-#    au < doNotProcess ; 2004 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2004 ; 2004 >
-#    au < doNotProcess ; 2005 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2005 ; 2005 >
-#    au < doNotProcess ; 2006 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2006 ; 2006 >
-#    au < doNotProcess ; 2007 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2007 ; 2007 >
-#    au < doNotProcess ; 2008 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2008 ; 2008 >
-#    au < doNotProcess ; 2009 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2009 ; 2009 >
-#    au < doNotProcess ; 2010 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2010 ; 2010 >
-#    au < doNotProcess ; 2011 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2011 ; 2011 >
-#    au < doNotProcess ; 2012 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2012 ; 2012 >
+#    au < doNotProcess ; 1996 ; Code of Federal Regulations (Annual Editions) - Bulk Data 1996 ; https://www.gpo.gov/ ; 1996 >
+#    au < doNotProcess ; 1997 ; Code of Federal Regulations (Annual Editions) - Bulk Data 1997 ; https://www.gpo.gov/ ; 1997 >
+#    au < doNotProcess ; 1998 ; Code of Federal Regulations (Annual Editions) - Bulk Data 1998 ; https://www.gpo.gov/ ; 1998 >
+#    au < doNotProcess ; 1999 ; Code of Federal Regulations (Annual Editions) - Bulk Data 1999 ; https://www.gpo.gov/ ; 1999 >
+#    au < doNotProcess ; 2000 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2000 ; https://www.gpo.gov/ ; 2000 >
+#    au < doNotProcess ; 2001 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2001 ; https://www.gpo.gov/ ; 2001 >
+#    au < doNotProcess ; 2002 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2002 ; https://www.gpo.gov/ ; 2002 >
+#    au < doNotProcess ; 2003 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2003 ; https://www.gpo.gov/ ; 2003 >
+#    au < doNotProcess ; 2004 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2004 ; https://www.gpo.gov/ ; 2004 >
+#    au < doNotProcess ; 2005 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2005 ; https://www.gpo.gov/ ; 2005 >
+#    au < doNotProcess ; 2006 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2006 ; https://www.gpo.gov/ ; 2006 >
+#    au < doNotProcess ; 2007 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2007 ; https://www.gpo.gov/ ; 2007 >
+#    au < doNotProcess ; 2008 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2008 ; https://www.gpo.gov/ ; 2008 >
+#    au < doNotProcess ; 2009 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2009 ; https://www.gpo.gov/ ; 2009 >
+#    au < doNotProcess ; 2010 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2010 ; https://www.gpo.gov/ ; 2010 >
+#    au < doNotProcess ; 2011 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2011 ; https://www.gpo.gov/ ; 2011 >
+#    au < doNotProcess ; 2012 ; Code of Federal Regulations (Annual Editions) - Bulk Data 2012 ; https://www.gpo.gov/ ; 2012 >
 #
 #  }
 #
@@ -1414,12 +1418,12 @@
 #      >
 #      param[collection_id] = CBD
 #
-#    au < doNotProcess ; 1996 ; Commerce Business Daily - Bulk Data 1996 ; 1996 >
-#    au < doNotProcess ; 1997 ; Commerce Business Daily - Bulk Data 1997 ; 1997 >
-#    au < doNotProcess ; 1998 ; Commerce Business Daily - Bulk Data 1998 ; 1998 >
-#    au < doNotProcess ; 1999 ; Commerce Business Daily - Bulk Data 1999 ; 1999 >
-#    au < doNotProcess ; 2000 ; Commerce Business Daily - Bulk Data 2000 ; 2000 >
-#    au < doNotProcess ; 2001 ; Commerce Business Daily - Bulk Data 2001 ; 2001 >
+#    au < doNotProcess ; 1996 ; Commerce Business Daily - Bulk Data 1996 ; https://www.gpo.gov/ ; 1996 >
+#    au < doNotProcess ; 1997 ; Commerce Business Daily - Bulk Data 1997 ; https://www.gpo.gov/ ; 1997 >
+#    au < doNotProcess ; 1998 ; Commerce Business Daily - Bulk Data 1998 ; https://www.gpo.gov/ ; 1998 >
+#    au < doNotProcess ; 1999 ; Commerce Business Daily - Bulk Data 1999 ; https://www.gpo.gov/ ; 1999 >
+#    au < doNotProcess ; 2000 ; Commerce Business Daily - Bulk Data 2000 ; https://www.gpo.gov/ ; 2000 >
+#    au < doNotProcess ; 2001 ; Commerce Business Daily - Bulk Data 2001 ; https://www.gpo.gov/ ; 2001 >
 #
 #  }
 #
@@ -1431,19 +1435,19 @@
 #      >
 #      param[collection_id] = FR
 #
-#    au < doNotProcess ; 2000 ; Federal Regulations - Bulk Data 2000 ; 2000 >
-#    au < doNotProcess ; 2001 ; Federal Regulations - Bulk Data 2001 ; 2001 >
-#    au < doNotProcess ; 2002 ; Federal Regulations - Bulk Data 2002 ; 2002 >
-#    au < doNotProcess ; 2003 ; Federal Regulations - Bulk Data 2003 ; 2003 >
-#    au < doNotProcess ; 2004 ; Federal Regulations - Bulk Data 2004 ; 2004 >
-#    au < doNotProcess ; 2005 ; Federal Regulations - Bulk Data 2005 ; 2005 >
-#    au < doNotProcess ; 2006 ; Federal Regulations - Bulk Data 2006 ; 2006 >
-#    au < doNotProcess ; 2007 ; Federal Regulations - Bulk Data 2007 ; 2007 >
-#    au < doNotProcess ; 2008 ; Federal Regulations - Bulk Data 2008 ; 2008 >
-#    au < doNotProcess ; 2009 ; Federal Regulations - Bulk Data 2009 ; 2009 >
-#    au < doNotProcess ; 2010 ; Federal Regulations - Bulk Data 2010 ; 2010 >
-#    au < doNotProcess ; 2011 ; Federal Regulations - Bulk Data 2011 ; 2011 >
-#    au < doNotProcess ; 2012 ; Federal Regulations - Bulk Data 2012 ; 2012 >
+#    au < doNotProcess ; 2000 ; Federal Regulations - Bulk Data 2000 ; https://www.gpo.gov/ ; 2000 >
+#    au < doNotProcess ; 2001 ; Federal Regulations - Bulk Data 2001 ; https://www.gpo.gov/ ; 2001 >
+#    au < doNotProcess ; 2002 ; Federal Regulations - Bulk Data 2002 ; https://www.gpo.gov/ ; 2002 >
+#    au < doNotProcess ; 2003 ; Federal Regulations - Bulk Data 2003 ; https://www.gpo.gov/ ; 2003 >
+#    au < doNotProcess ; 2004 ; Federal Regulations - Bulk Data 2004 ; https://www.gpo.gov/ ; 2004 >
+#    au < doNotProcess ; 2005 ; Federal Regulations - Bulk Data 2005 ; https://www.gpo.gov/ ; 2005 >
+#    au < doNotProcess ; 2006 ; Federal Regulations - Bulk Data 2006 ; https://www.gpo.gov/ ; 2006 >
+#    au < doNotProcess ; 2007 ; Federal Regulations - Bulk Data 2007 ; https://www.gpo.gov/ ; 2007 >
+#    au < doNotProcess ; 2008 ; Federal Regulations - Bulk Data 2008 ; https://www.gpo.gov/ ; 2008 >
+#    au < doNotProcess ; 2009 ; Federal Regulations - Bulk Data 2009 ; https://www.gpo.gov/ ; 2009 >
+#    au < doNotProcess ; 2010 ; Federal Regulations - Bulk Data 2010 ; https://www.gpo.gov/ ; 2010 >
+#    au < doNotProcess ; 2011 ; Federal Regulations - Bulk Data 2011 ; https://www.gpo.gov/ ; 2011 >
+#    au < doNotProcess ; 2012 ; Federal Regulations - Bulk Data 2012 ; https://www.gpo.gov/ ; 2012 >
 #
 #  }
 #
@@ -1455,7 +1459,7 @@
 #      >
 #      param[collection_id] = PPP
 #
-#    au < doNotProcess ; 2009 ; Public Papers of Presidents of the United States - Bulk Data 2009 ; 2009 >
+#    au < doNotProcess ; 2009 ; Public Papers of Presidents of the United States - Bulk Data 2009 ; https://www.gpo.gov/ ; 2009 >
 #
 #
 #  }
@@ -1468,7 +1472,7 @@
 #      >
 #      param[collection_id] = SCD
 #
-#    au < doNotProcess ; 1937-1975 ; Supreme Court Decisions 1937-1975 (FLITE) - Bulk Data 1937-1975 ; 1937 >
+#    au < doNotProcess ; 1937-1975 ; Supreme Court Decisions 1937-1975 (FLITE) - Bulk Data 1937-1975 ; https://www.gpo.gov/ ; 1937 >
 #
 #  }
 #
@@ -1480,7 +1484,7 @@
 #      >
 #      param[collection_id] = GOVMAN
 #
-#     au < doNotProcess ; 2011 ; United States Government Manual - Bulk Data 2011 ; 2011 >
+#     au < doNotProcess ; 2011 ; United States Government Manual - Bulk Data 2011 ; https://www.gpo.gov/ ; 2011 >
 #
 #
 #    }
