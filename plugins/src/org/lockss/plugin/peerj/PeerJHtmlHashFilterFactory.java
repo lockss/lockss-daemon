@@ -99,7 +99,6 @@ public class PeerJHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "id", "alerts"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "article-preexisting"),
       // from preprints article - ex: https://peerj.com/preprints/13v1/
-      HtmlNodeFilters.tagWithAttribute("div", "id", "alerts"),
       // institution alert
       HtmlNodeFilters.tagWithAttribute("div", "id", "instit-alert"),
       // read annoucement alert
