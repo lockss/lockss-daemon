@@ -33,9 +33,9 @@
     au < manifest ; exists ; 2010 ; Anthropological Journal of European Cultures Volume 19 ; 19 ; >
     au < deepCrawl ; exists ; 2011 ; Anthropological Journal of European Cultures Volume 20 ; 20 ; >
     au < deepCrawl ; exists ; 2012 ; Anthropological Journal of European Cultures Volume 21 ; 21 ; >
-    au < deepCrawl ; exists ; 2013 ; Anthropological Journal of European Cultures Volume 22 ; 22 ; >
-    au < deepCrawl ; exists ; 2014 ; Anthropological Journal of European Cultures Volume 23 ; 23 ; >
-    au < deepCrawl ; exists ; 2015 ; Anthropological Journal of European Cultures Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2013 ; Anthropological Journal of European Cultures Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2014 ; Anthropological Journal of European Cultures Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2015 ; Anthropological Journal of European Cultures Volume 24 ; 24 ; >
     
   }
 
@@ -59,9 +59,9 @@
     au < manifest ; exists ; 2010 ; Anthropology in Action Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2011 ; Anthropology in Action Volume 18 ; 18 ; >
     au < finished ; finished ; 2012 ; Anthropology in Action Volume 19 ; 19 ; >
-    au < deepCrawl ; exists ; 2013 ; Anthropology in Action Volume 20 ; 20 ; >
-    au < deepCrawl ; exists ; 2014 ; Anthropology in Action Volume 21 ; 21 ; >
-    au < deepCrawl ; exists ; 2015 ; Anthropology in Action Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2013 ; Anthropology in Action Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2014 ; Anthropology in Action Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2015 ; Anthropology in Action Volume 22 ; 22 ; >
     
   }
 
@@ -84,9 +84,9 @@
     au < manifest ; exists ; 2010 ; Anthropology of the Middle East Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2011 ; Anthropology of the Middle East Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2012 ; Anthropology of the Middle East Volume 7 ; 7 ; >
-    au < deepCrawl ; exists ; 2013 ; Anthropology of the Middle East Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2013 ; Anthropology of the Middle East Volume 8 ; 8 ; >
     au < deepCrawl ; exists ; 2014 ; Anthropology of the Middle East Volume 9 ; 9 ; >
-    au < deepCrawl ; exists ; 2015 ; Anthropology of the Middle East Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2015 ; Anthropology of the Middle East Volume 10 ; 10 ; >
     
   }
 
@@ -127,10 +127,10 @@
     au < manifest ; exists ; 2009 ; Aspasia Volume 3 ; 3 ; >
     au < manifest ; exists ; 2010 ; Aspasia Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2011 ; Aspasia Volume 5 ; 5 ; >
-    au < deepCrawl ; exists ; 2012 ; Aspasia Volume 6 ; 6 ; >
-    au < deepCrawl ; exists ; 2013 ; Aspasia Volume 7 ; 7 ; >
-    au < deepCrawl ; exists ; 2014 ; Aspasia Volume 8 ; 8 ; >
-    au < deepCrawl ; exists ; 2015 ; Aspasia Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2012 ; Aspasia Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2013 ; Aspasia Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2014 ; Aspasia Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2015 ; Aspasia Volume 9 ; 9 ; >
     
   }
 
@@ -173,10 +173,10 @@
     param[journal_id] = ca
     param[journal_issn] = 0305-7674
 
-    au < deepCrawl ; exists ; 2012 ; The Cambridge Journal of Anthropology Volume 30 ; 30 ; >
-    au < deepCrawl ; exists ; 2013 ; The Cambridge Journal of Anthropology Volume 31 ; 31 ; >
-    au < deepCrawl ; exists ; 2014 ; The Cambridge Journal of Anthropology Volume 32 ; 32 ; >
-    au < deepCrawl ; exists ; 2015 ; The Cambridge Journal of Anthropology Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2012 ; The Cambridge Journal of Anthropology Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2013 ; The Cambridge Journal of Anthropology Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2014 ; The Cambridge Journal of Anthropology Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2015 ; The Cambridge Journal of Anthropology Volume 33 ; 33 ; >
 
   }
 
@@ -197,11 +197,11 @@
     au < manifest ; exists ; 2007 ; Contributions to the History of Concepts Volume 3 ; 3 ; >
     au < manifest ; exists ; 2008 ; Contributions to the History of Concepts Volume 4 ; 4 ; >
     au < manifest ; exists ; 2009 ; Contributions to the History of Concepts Volume 5 ; 5 ; >
-    au < deepCrawl ; exists ; 2011 ; Contributions to the History of Concepts Volume 6 ; 6 ; >
-    au < deepCrawl ; exists ; 2012 ; Contributions to the History of Concepts Volume 7 ; 7 ; >
-    au < deepCrawl ; exists ; 2013 ; Contributions to the History of Concepts Volume 8 ; 8 ; >
-    au < deepCrawl ; exists ; 2014 ; Contributions to the History of Concepts Volume 9 ; 9 ; >
-    au < deepCrawl ; exists ; 2015 ; Contributions to the History of Concepts Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2011 ; Contributions to the History of Concepts Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2012 ; Contributions to the History of Concepts Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2013 ; Contributions to the History of Concepts Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2014 ; Contributions to the History of Concepts Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2015 ; Contributions to the History of Concepts Volume 10 ; 10 ; >
 
   }
 
@@ -251,8 +251,8 @@
     param[journal_id] = demt
     param[journal_issn] = 2332-8894
 
-    au < deepCrawl ; exists ; 2014 ; Democratic Theory Volume 1 ; 1 ; >
-    au < deepCrawl ; exists ; 2015 ; Democratic Theory Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2014 ; Democratic Theory Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2015 ; Democratic Theory Volume 2 ; 2 ; >
     
   }
 
@@ -278,8 +278,8 @@
     au < manifest ; exists ; 2010 ; Durkheimian Studies Volume 16 ; 16 ; >
     au < deepCrawl ; exists ; 2011 ; Durkheimian Studies Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2012 ; Durkheimian Studies Volume 18 ; 18 ; >
-    au < deepCrawl ; exists ; 2013 ; Durkheimian Studies Volume 19 ; 19 ; >
-    au < deepCrawl ; exists ; 2014 ; Durkheimian Studies Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2013 ; Durkheimian Studies Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2014 ; Durkheimian Studies Volume 20 ; 20 ; >
     
   }
 
@@ -296,10 +296,10 @@
      
     au < manifest ; exists ; 2010 ; Environment and Society Volume 1 ; 1 ; >
     au < deepCrawl ; exists ; 2011 ; Environment and Society Volume 2 ; 2 ; >
-    au < deepCrawl ; exists ; 2012 ; Environment and Society Volume 3 ; 3 ; >
-    au < deepCrawl ; exists ; 2013 ; Environment and Society Volume 4 ; 4 ; >
-    au < deepCrawl ; exists ; 2014 ; Environment and Society Volume 5 ; 5 ; >
-    au < deepCrawl ; exists ; 2015 ; Environment and Society Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2012 ; Environment and Society Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2013 ; Environment and Society Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2014 ; Environment and Society Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2015 ; Environment and Society Volume 6 ; 6 ; >
     
   }
 
@@ -321,9 +321,9 @@
     au < manifest ; exists ; 2010 ; European Comic Art Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2011 ; European Comic Art Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2012 ; European Comic Art Volume 5 ; 5 ; >
-    au < deepCrawl ; exists ; 2013 ; European Comic Art Volume 6 ; 6 ; >
-    au < deepCrawl ; exists ; 2014 ; European Comic Art Volume 7 ; 7 ; >
-    au < deepCrawl ; exists ; 2015 ; European Comic Art Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2013 ; European Comic Art Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2014 ; European Comic Art Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2015 ; European Comic Art Volume 8 ; 8 ; >
     
   }
 
@@ -353,9 +353,9 @@
     au < manifest ; exists ; 2010 ; European Judaism Volume 43 ; 43 ; >
     au < deepCrawl ; exists ; 2011 ; European Judaism Volume 44 ; 44 ; >
     au < finished ; finished ; 2012 ; European Judaism Volume 45 ; 45 ; >
-    au < deepCrawl ; exists ; 2013 ; European Judaism Volume 46 ; 46 ; >
-    au < deepCrawl ; exists ; 2014 ; European Judaism Volume 47 ; 47 ; >
-    au < deepCrawl ; exists ; 2015 ; European Judaism Volume 48 ; 48 ; >
+    au < frozen ; exists ; 2013 ; European Judaism Volume 46 ; 46 ; >
+    au < frozen ; exists ; 2014 ; European Judaism Volume 47 ; 47 ; >
+    au < frozen ; exists ; 2015 ; European Judaism Volume 48 ; 48 ; >
   
   }
 
@@ -381,8 +381,8 @@
     au < deepCrawl ; exists ; 2011 ; Focaal Volume 2011 ; 2011 ; >
     au < deepCrawl ; exists ; 2012 ; Focaal Volume 2012 ; 2012 ; >
     au < finished ; finished ; 2013 ; Focaal Volume 2013 ; 2013 ; >
-    au < deepCrawl ; exists ; 2014 ; Focaal Volume 2014 ; 2014 ; >
-    au < deepCrawl ; exists ; 2015 ; Focaal Volume 2015 ; 2015 ; >
+    au < frozen ; exists ; 2014 ; Focaal Volume 2014 ; 2014 ; >
+    au < frozen ; exists ; 2015 ; Focaal Volume 2015 ; 2015 ; >
     
   }
 
@@ -412,9 +412,9 @@
     au < manifest ; exists ; 2010 ; French Politics, Culture & Society Volume 28 ; 28 ; >
     au < deepCrawl ; exists ; 2011 ; French Politics, Culture & Society Volume 29 ; 29 ; >
     au < deepCrawl ; exists ; 2012 ; French Politics, Culture & Society Volume 30 ; 30 ; >
-    au < deepCrawl ; exists ; 2013 ; French Politics, Culture & Society Volume 31 ; 31 ; >
-    au < deepCrawl ; exists ; 2014 ; French Politics, Culture & Society Volume 32 ; 32 ; >
-    au < deepCrawl ; exists ; 2015 ; French Politics, Culture & Society Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2013 ; French Politics, Culture & Society Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2014 ; French Politics, Culture & Society Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2015 ; French Politics, Culture & Society Volume 33 ; 33 ; >
     
   }
 
@@ -447,7 +447,7 @@
     au < deepCrawl ; exists ; 2012 ; German Politics and Society Volume 30 ; 30 ; >
     au < deepCrawl ; exists ; 2013 ; German Politics and Society Volume 31 ; 31 ; >
     au < finished ; crawling ; 2014 ; German Politics and Society Volume 32 ; 32 ; >
-    au < deepCrawl ; exists ; 2015 ; German Politics and Society Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2015 ; German Politics and Society Volume 33 ; 33 ; >
     
   }
 
@@ -468,9 +468,9 @@
     au < manifest ; exists ; 2010 ; Girlhood Studies Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2011 ; Girlhood Studies Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2012 ; Girlhood Studies Volume 5 ; 5 ; >
-    au < deepCrawl ; exists ; 2013 ; Girlhood Studies Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2013 ; Girlhood Studies Volume 6 ; 6 ; >
     au < finished ; crawling ; 2014 ; Girlhood Studies Volume 7 ; 7 ; >
-    au < deepCrawl ; exists ; 2015 ; Girlhood Studies Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2015 ; Girlhood Studies Volume 8 ; 8 ; >
     
   }
 
@@ -509,11 +509,11 @@
     param[journal_id] = ijsq
     param[journal_issn] = 1757-0344
     
-    au < deepCrawl ; exists ; 2011 ; International Journal of Social Quality Volume 1 ; 1 ; >
-    au < deepCrawl ; exists ; 2012 ; International Journal of Social Quality Volume 2 ; 2 ; >
-    au < deepCrawl ; exists ; 2013 ; International Journal of Social Quality Volume 3 ; 3 ; >
-    au < deepCrawl ; exists ; 2014 ; International Journal of Social Quality Volume 4 ; 4 ; >
-    au < deepCrawl ; exists ; 2015 ; International Journal of Social Quality Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2011 ; International Journal of Social Quality Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2012 ; International Journal of Social Quality Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2013 ; International Journal of Social Quality Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2014 ; International Journal of Social Quality Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2015 ; International Journal of Social Quality Volume 5 ; 5 ; >
     
   }
 
@@ -531,9 +531,9 @@
     
     au < deepCrawl ; exists ; 2011 ; Israel Studies Review Volume 26 ; 26 ; >
     au < deepCrawl ; exists ; 2012 ; Israel Studies Review Volume 27 ; 27 ; >
-    au < deepCrawl ; exists ; 2013 ; Israel Studies Review Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2013 ; Israel Studies Review Volume 28 ; 28 ; >
     au < finished ; crawling ; 2014 ; Israel Studies Review Volume 29 ; 29 ; >
-    au < deepCrawl ; exists ; 2015 ; Israel Studies Review Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2015 ; Israel Studies Review Volume 30 ; 30 ; >
     
   }
 
@@ -548,10 +548,10 @@
     param[journal_id] = itpol
     param[journal_issn] = 1086-4946 
     
-    au < deepCrawl ; exists ; 2012 ; Italian Politics Volume 27 ; 27 ; >
-    au < deepCrawl ; exists ; 2013 ; Italian Politics Volume 28 ; 28 ; >
-    au < deepCrawl ; exists ; 2014 ; Italian Politics Volume 29 ; 29 ; >
-    au < deepCrawl ; exists ; 2015 ; Italian Politics Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2012 ; Italian Politics Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2013 ; Italian Politics Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2014 ; Italian Politics Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2015 ; Italian Politics Volume 30 ; 30 ; >
     
   }
 
@@ -571,9 +571,9 @@
     au < manifest ; exists ; 2010 ; Journal of Educational Media, Memory, and Society Volume 2 ; 2 ; >
     au < deepCrawl ; exists ; 2011 ; Journal of Educational Media, Memory, and Society Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2012 ; Journal of Educational Media, Memory, and Society Volume 4 ; 4 ; >
-    au < deepCrawl ; exists ; 2013 ; Journal of Educational Media, Memory, and Society Volume 5 ; 5 ; >
-    au < deepCrawl ; exists ; 2014 ; Journal of Educational Media, Memory, and Society Volume 6 ; 6 ; >
-    au < deepCrawl ; exists ; 2015 ; Journal of Educational Media, Memory, and Society Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2013 ; Journal of Educational Media, Memory, and Society Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2014 ; Journal of Educational Media, Memory, and Society Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2015 ; Journal of Educational Media, Memory, and Society Volume 7 ; 7 ; >
     
   }
 
@@ -602,9 +602,9 @@
     au < manifest ; exists ; 2010 ; Journal of Romance Studies Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2011 ; Journal of Romance Studies Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2012 ; Journal of Romance Studies Volume 12 ; 12 ; >
-    au < deepCrawl ; exists ; 2013 ; Journal of Romance Studies Volume 13 ; 13 ; >
-    au < deepCrawl ; exists ; 2014 ; Journal of Romance Studies Volume 14 ; 14 ; >
-    au < deepCrawl ; exists ; 2015 ; Journal of Romance Studies Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2013 ; Journal of Romance Studies Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2014 ; Journal of Romance Studies Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2015 ; Journal of Romance Studies Volume 15 ; 15 ; >
     
   }
 
@@ -633,9 +633,9 @@
     au < manifest ; exists ; 2010 ; Journeys Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2011 ; Journeys Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2012 ; Journeys Volume 13 ; 13 ; >
-    au < deepCrawl ; exists ; 2013 ; Journeys Volume 14 ; 14 ; >
-    au < deepCrawl ; exists ; 2014 ; Journeys Volume 15 ; 15 ; >
-    au < deepCrawl ; exists ; 2015 ; Journeys Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2013 ; Journeys Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2014 ; Journeys Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2015 ; Journeys Volume 16 ; 16 ; >
     
   }
 
@@ -654,10 +654,10 @@
     au < manifest ; exists ; 2009 ; Learning and Teaching (LATISS) Volume 2 ; 2 ; >
     au < manifest ; exists ; 2010 ; Learning and Teaching (LATISS) Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2011 ; Learning and Teaching (LATISS) Volume 4 ; 4 ; >
-    au < deepCrawl ; exists ; 2012 ; Learning and Teaching (LATISS) Volume 5 ; 5 ; >
-    au < deepCrawl ; exists ; 2013 ; Learning and Teaching (LATISS) Volume 6 ; 6 ; >
-    au < deepCrawl ; exists ; 2014 ; Learning and Teaching (LATISS) Volume 7 ; 7 ; >
-    au < deepCrawl ; exists ; 2015 ; Learning and Teaching (LATISS) Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2012 ; Learning and Teaching (LATISS) Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2013 ; Learning and Teaching (LATISS) Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2014 ; Learning and Teaching (LATISS) Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2015 ; Learning and Teaching (LATISS) Volume 8 ; 8 ; >
     
   }
 
@@ -672,8 +672,8 @@
     param[journal_id] = armw
     param[journal_issn] = 2049-6729
 
-    au < deepCrawl ; exists ; 2013 ; Museum Worlds: Advances in Research Volume 1 ; 1 ; >
-    au < deepCrawl ; exists ; 2014 ; Museum Worlds: Advances in Research Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2013 ; Museum Worlds: Advances in Research Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2014 ; Museum Worlds: Advances in Research Volume 2 ; 2 ; >
     
   }
 
@@ -688,10 +688,10 @@
     param[journal_id] = mih
     param[journal_issn] = 2296-0503
 
-    au < deepCrawl ; exists ; 2013 ; Mobility in History Volume 4 ; 4 ; >
-    au < deepCrawl ; exists ; 2014 ; Mobility in History Volume 5 ; 5 ; >
-    au < deepCrawl ; exists ; 2015 ; Mobility in History Volume 6 ; 6 ; >
-    au < deepCrawl ; exists ; 2016 ; Mobility in History Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2013 ; Mobility in History Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2014 ; Mobility in History Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2015 ; Mobility in History Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2016 ; Mobility in History Volume 7 ; 7 ; >
     
   }
 
@@ -713,9 +713,9 @@
     au < manifest ; exists ; 2010 ; Nature and Culture Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2011 ; Nature and Culture Volume 6 ; 6 ; >
     au < finished ; crawling ; 2012 ; Nature and Culture Volume 7 ; 7 ; >
-    au < deepCrawl ; exists ; 2013 ; Nature and Culture Volume 8 ; 8 ; >
-    au < deepCrawl ; exists ; 2014 ; Nature and Culture Volume 9 ; 9 ; >
-    au < deepCrawl ; exists ; 2015 ; Nature and Culture Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2013 ; Nature and Culture Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2014 ; Nature and Culture Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2015 ; Nature and Culture Volume 10 ; 10 ; >
     
   }
 
@@ -771,9 +771,9 @@
     au < manifest ; exists ; 2010 ; Projections Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2011 ; Projections Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2012 ; Projections Volume 6 ; 6 ; >
-    au < deepCrawl ; exists ; 2013 ; Projections Volume 7 ; 7 ; >
-    au < deepCrawl ; exists ; 2014 ; Projections Volume 8 ; 8 ; >
-    au < deepCrawl ; exists ; 2015 ; Projections Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2013 ; Projections Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2014 ; Projections Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2015 ; Projections Volume 9 ; 9 ; >
     
   }
 
@@ -791,9 +791,9 @@
 
     au < deepCrawl ; exists ; 2011 ; Regions & Cohesion Volume 1 ; 1 ; >
     au < deepCrawl ; exists ; 2012 ; Regions & Cohesion Volume 2 ; 2 ; >
-    au < deepCrawl ; exists ; 2013 ; Regions & Cohesion Volume 3 ; 3 ; >
-    au < deepCrawl ; exists ; 2014 ; Regions & Cohesion Volume 4 ; 4 ; >
-    au < deepCrawl ; exists ; 2015 ; Regions & Cohesion Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2013 ; Regions & Cohesion Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2014 ; Regions & Cohesion Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2015 ; Regions & Cohesion Volume 5 ; 5 ; >
     
   }
 
@@ -811,10 +811,10 @@
 
     au < manifest ; exists ; 2010 ; Religion and Society: Advances in Research Volume 1 ; 1 ; >
     au < deepCrawl ; exists ; 2011 ; Religion and Society: Advances in Research Volume 2 ; 2 ; >
-    au < deepCrawl ; exists ; 2012 ; Religion and Society: Advances in Research Volume 3 ; 3 ; >
-    au < deepCrawl ; exists ; 2013 ; Religion and Society: Advances in Research Volume 4 ; 4 ; >
-    au < deepCrawl ; exists ; 2014 ; Religion and Society: Advances in Research Volume 5 ; 5 ; >
-    au < deepCrawl ; exists ; 2015 ; Religion and Society: Advances in Research Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2012 ; Religion and Society: Advances in Research Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2013 ; Religion and Society: Advances in Research Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2014 ; Religion and Society: Advances in Research Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2015 ; Religion and Society: Advances in Research Volume 6 ; 6 ; >
    
   }
 
@@ -846,8 +846,8 @@
     au < deepCrawl ; exists ; 2011 ; Sartre Studies International Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2012 ; Sartre Studies International Volume 18 ; 18 ; >
     au < deepCrawl ; exists ; 2013 ; Sartre Studies International Volume 19 ; 19 ; >
-    au < deepCrawl ; exists ; 2014 ; Sartre Studies International Volume 20 ; 20 ; >
-    au < deepCrawl ; exists ; 2015 ; Sartre Studies International Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2014 ; Sartre Studies International Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2015 ; Sartre Studies International Volume 21 ; 21 ; >
     
   }
 
@@ -872,9 +872,9 @@
     au < manifest ; exists ; 2010 ; Sibirica Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2011 ; Sibirica Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2012 ; Sibirica Volume 11 ; 11 ; >
-    au < deepCrawl ; exists ; 2013 ; Sibirica Volume 12 ; 12 ; >
-    au < deepCrawl ; exists ; 2014 ; Sibirica Volume 13 ; 13 ; >
-    au < deepCrawl ; exists ; 2015 ; Sibirica Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2013 ; Sibirica Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2014 ; Sibirica Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2015 ; Sibirica Volume 14 ; 14 ; >
     
   }
 
@@ -900,9 +900,9 @@
     au < manifest ; exists ; 2010 ; Social Analysis Volume 54 ; 54 ; >
     au < deepCrawl ; exists ; 2011 ; Social Analysis Volume 55 ; 55 ; >
     au < deepCrawl ; exists ; 2012 ; Social Analysis Volume 56 ; 56 ; >
-    au < deepCrawl ; exists ; 2013 ; Social Analysis Volume 57 ; 57 ; >
+    au < frozen ; exists ; 2013 ; Social Analysis Volume 57 ; 57 ; >
     au < deepCrawl ; exists ; 2014 ; Social Analysis Volume 58 ; 58 ; >
-    au < deepCrawl ; exists ; 2015 ; Social Analysis Volume 59 ; 59 ; >
+    au < frozen ; exists ; 2015 ; Social Analysis Volume 59 ; 59 ; >
     
   }
 
@@ -934,9 +934,9 @@
     au < manifest ; exists ; 2010 ; Theoria Volume 57 ; 57 ; >
     au < deepCrawl ; exists ; 2011 ; Theoria Volume 58 ; 58 ; >
     au < deepCrawl ; exists ; 2012 ; Theoria Volume 59 ; 59 ; >
-    au < deepCrawl ; exists ; 2013 ; Theoria Volume 60 ; 60 ; >
+    au < frozen ; exists ; 2013 ; Theoria Volume 60 ; 60 ; >
     au < finished ; crawling ; 2014 ; Theoria Volume 61 ; 61 ; >
-    au < deepCrawl ; exists ; 2015 ; Theoria Volume 62 ; 62 ; >
+    au < frozen ; exists ; 2015 ; Theoria Volume 62 ; 62 ; >
     
   }
 
@@ -954,9 +954,9 @@
 
     au < deepCrawl ; exists ; 2011 ; Transfers Volume 1 ; 1 ; >
     au < deepCrawl ; exists ; 2012 ; Transfers Volume 2 ; 2 ; >
-    au < deepCrawl ; exists ; 2013 ; Transfers Volume 3 ; 3 ; >
-    au < deepCrawl ; exists ; 2014 ; Transfers Volume 4 ; 4 ; >
-    au < deepCrawl ; exists ; 2015 ; Transfers Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2013 ; Transfers Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2014 ; Transfers Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2015 ; Transfers Volume 5 ; 5 ; >
     
   }
 }
