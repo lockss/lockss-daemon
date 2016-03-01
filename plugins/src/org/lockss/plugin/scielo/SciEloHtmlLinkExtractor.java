@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,39 +32,63 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.scielo;
 
-import java.io.IOException;
-import java.net.URL;
 import java.util.regex.*;
 
+import org.jsoup.nodes.*;
 import org.lockss.daemon.ConfigParamDescr;
-import org.lockss.extractor.GoslingHtmlLinkExtractor;
+import org.lockss.extractor.JsoupHtmlLinkExtractor;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.util.StringUtil;
 
-public class SciEloHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
+public class SciEloHtmlLinkExtractor extends JsoupHtmlLinkExtractor {
 
-  public static final String ONCLICK = "onclick";
-
-  @Override
-  protected String extractLinkFromTag(StringBuffer link,
-                                      ArchivalUnit au,
-                                      Callback cb)
-      throws IOException {
-    char ch = link.charAt(0);
-    if ((ch == 'a' || ch == 'A') && Character.isWhitespace(link.charAt(1))) {
-      String onclick = getAttributeValue(ONCLICK, link);
-      if (onclick != null) {
-        String base_url = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
-        Pattern onclickPat = Pattern.compile(String.format("[\"'][ \t]*(%s[^ \t\"']*)[ \t]*[\"']", base_url),
-                                             Pattern.CASE_INSENSITIVE);
-        Matcher onclickMat = onclickPat.matcher(onclick);
-        if (onclickMat.find()) {
-          if (baseUrl == null) { baseUrl = new URL(srcUrl); } // Copycat of parseLink()
-          return resolveUri(baseUrl, onclickMat.group(1));
-        }
-      }
-    }
-    
-    return super.extractLinkFromTag(link, au, cb);
+  public SciEloHtmlLinkExtractor() {
+    super();
+    registerAOnclickTagExtractor();
+    registerScriptTagExtractor();
   }
-	
+
+  protected void registerAOnclickTagExtractor() {
+    registerTagExtractor("a", new SimpleTagLinkExtractor("onclick") {
+      @Override
+      public void tagBegin(Node node, ArchivalUnit au, Callback cb) {
+        String onclick = node.attr("onclick");
+        if (!StringUtil.isNullString(onclick)) {
+          String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
+          Pattern onclickPat = Pattern.compile(String.format("[\"'][ \t]*(%s[^ \t\"']*)[ \t]*[\"']", baseUrl),
+                                               Pattern.CASE_INSENSITIVE);
+          Matcher onclickMat = onclickPat.matcher(onclick);
+          if (onclickMat.find()) {
+            cb.foundLink(onclickMat.group(1));
+            return;
+          }
+        }
+        super.tagBegin(node, au, cb);
+      }
+    });
+  }
+  
+  protected void registerScriptTagExtractor() {
+    registerTagExtractor("script", new ScriptTagLinkExtractor() {
+      @Override
+      public void tagBegin(Node node, ArchivalUnit au, Callback cb) {
+        if (node.baseUri().contains("scielo.php?script=sci_pdf")) {
+          String scriptHtml = ((Element)node).html();
+          if (!StringUtil.isNullString(scriptHtml)) {
+            String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
+            Pattern pat = Pattern.compile(String.format("window\\.location[ \t]*=[ \t]*[\"'][ \t]*(%s[^ \t\"']*)[ \t]*[\"'][ \t]*;", baseUrl),
+                                                 Pattern.CASE_INSENSITIVE);
+            Matcher mat = pat.matcher(scriptHtml);
+            if (mat.find()) {
+              cb.foundLink(mat.group(1));
+              return;
+            }
+          }
+        }
+        super.tagBegin(node, au, cb);
+      }
+    });
+
+  }
+  
 }

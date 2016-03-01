@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -122,10 +122,9 @@ public class TestSciELOArticleIteratorFactory extends ArticleIteratorTestCase {
     Pattern pat = getPattern(artIter);
     
     assertMatchesRE(pat, "http://www.scielo.br/scielo.php?script=sci_arttext&pid=sX090-999X2013000020022&lng=en");
-    // but not to ...
-    assertNotMatchesRE(pat, "http://www.scielo.br/scielo.php?script=sci_arttext&pid=sX090-999X2013000020022&lng=es");
-    assertNotMatchesRE(pat, "http://www.scielo.br/scielo.php?script=sci_arttext&pid=sX090-999X2013001&lng=en");
-    assertNotMatchesRE(pat, "http://www.scielo.br/scielo.php?script=sci_arttext&pid=X090-999X2013000020022");
+    assertMatchesRE(pat, "http://www.scielo.br/scielo.php?script=sci_arttext&pid=sX090-999X2013000020022&lng=es");
+    assertNotMatchesRE(pat, "http://www.scielo.br/scielo.php?script=sci_arttext&pid=sX090-999X2013001&lng=en"); // PID too short
+    assertNotMatchesRE(pat, "http://www.scielo.br/scielo.php?script=sci_arttext&pid=X090-999X2013000020022"); // no &lng=
     
     // wrong base url
     assertNotMatchesRE(pat, "http://ametsoc.org/bitstream/handle/foobar");
