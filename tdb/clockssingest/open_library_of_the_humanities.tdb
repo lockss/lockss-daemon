@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = Open Library of the Humanities
+    name = Open Library of the Humanities ;
+    info[contract] = 2015 ;
+    info[tester] = 0
   >
   
     rights = openaccess

@@ -4,7 +4,9 @@
 
   publisher <
     name = Penn State University Press ;
-    info[contract] = 2012
+    info[contract] = 2012 ;
+    info[tester] = 0
+
   >
   
   # from 2010 on, find Mediterranean Studies in pennsylvania_state_university_press.tdb (JSTOR)
