@@ -777,21 +777,23 @@
       issnl = 1024-5294 
     >
 
-    param[journal_id] = ycom20 
+    param[journal_id] = gcch20 
+    # moved to Sage in 2015, previously part of Maney and T&F
+    #content only available for volume 6 to 8 on T&F platform
 
     au < exists ; exists ; 2002 ; Competition & Change Volume 6 ; 6 ; >
     au < exists ; exists ; 2003 ; Competition & Change Volume 7 ; 7 ; >
     au < exists ; exists ; 2004 ; Competition & Change Volume 8 ; 8 ; >
-    au < exists ; exists ; 2005 ; Competition & Change Volume 9 ; 9 ; >
-    au < exists ; exists ; 2006 ; Competition & Change Volume 10 ; 10 ; >
-    au < exists ; exists ; 2007 ; Competition & Change Volume 11 ; 11 ; >
-    au < exists ; exists ; 2008 ; Competition & Change Volume 12 ; 12 ; >
-    au < exists ; exists ; 2009 ; Competition & Change Volume 13 ; 13 ; >
+    au < doesNotExist ; exists ; 2005 ; Competition & Change Volume 9 ; 9 ; >
+    au < doesNotExist ; exists ; 2006 ; Competition & Change Volume 10 ; 10 ; >
+    au < doesNotExist ; exists ; 2007 ; Competition & Change Volume 11 ; 11 ; >
+    au < doesNotExist ; exists ; 2008 ; Competition & Change Volume 12 ; 12 ; >
+    au < doesNotExist ; exists ; 2009 ; Competition & Change Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Competition & Change Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Competition & Change Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Competition & Change Volume 16 ; 16 ; >
-    au < exists ; exists ; 2013 ; Competition & Change Volume 17 ; 17 ; >
-    au < exists ; exists ; 2014 ; Competition & Change Volume 18 ; 18 ; >
+    au < doesNotExist ; exists ; 2013 ; Competition & Change Volume 17 ; 17 ; >
+    au < doesNotExist ; exists ; 2014 ; Competition & Change Volume 18 ; 18 ; >
 
   }
 

@@ -774,7 +774,9 @@
       issnl = 1024-5294 
     >
 
-    param[journal_id] = ycom20 
+    param[journal_id] = gcch20 
+    # moved to Sage in 2015, previously part of Maney and T&F
+    #content only available for volume 6 to 8 on T&F platform
 
     au < doNotProcess ; 2002 ; Competition & Change Volume 6 ; 6 >
     au < doNotProcess ; 2003 ; Competition & Change Volume 7 ; 7 >
