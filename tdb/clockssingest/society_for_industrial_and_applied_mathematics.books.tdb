@@ -2,6 +2,7 @@
   publisher <
     name = Society for Industrial and Applied Mathematics ;
     info[contract] = 2013 ;
+    info[back] = 2000 ;
     info[tester] = 8
   >
 
@@ -397,63 +398,63 @@
       au < manifest ; exists ; 2011 ; 978-1-61197-189-7 ; 978-1-61197-190-3 ; 9781611971903 ; Implicit Filtering (978-1-61197-190-3) ; >
       au < manifest ; exists ; 2011 ; 978-1-61197-191-0 ; 978-1-61197-192-7 ; 9781611971927 ; Polynomial Based Iteration Methods for Symmetric Linear Systems (978-1-61197-192-7) ; >
       au < manifest ; exists ; 2011 ; 978-1-61197-193-4 ; 978-1-61197-194-1 ; 9781611971941 ; Alternating Projection Methods (978-1-61197-194-1) ; >
-      au < manifest ; exists ; 2011 ; 978-1-61197-196-5 ; 978-1-61197-197-2 ; 9781611971972 ; The Mathematics of Diffusion (978-1-61197-197-2) ; >
-      au < manifest ; exists ; 2011 ; 978-1-61197-198-9 ; 978-1-61197-199-6 ; 9781611971996 ; Spectral Numerical Weather Prediction Models (978-1-61197-199-6) ; >
-      au < manifest ; exists ; 2011 ; 978-1-61197-200-9 ; 978-1-61197-201-6 ; 9781611972016 ; Taylor Approximations for Stochastic Partial Differential Equations (978-1-61197-201-6) ; >
-      au < manifest ; exists ; 2011 ; 978-1-61197-202-3 ; 978-1-61197-203-0 ; 9781611972030 ; Elliptic Problems in Nonsmooth Domains (978-1-61197-203-0) ; >
-      au < manifest ; exists ; 2011 ; 978-1-61197-204-7 ; 978-1-61197-205-4 ; 9781611972054 ; Computational Optimization of Systems Governed by Partial Differential Equations (978-1-61197-205-4) ; >
-      au < manifest ; exists ; 2011 ; 978-1-61197-206-1 ; 978-1-61197-207-8 ; 9781611972078 ; The Art of Differentiating Computer Programs (978-1-61197-207-8) ; >
-      au < manifest ; exists ; 2011 ; 978-1-61197-208-5 ; 978-1-61197-209-2 ; 9781611972092 ; Numerical Solution of Algebraic Riccati Equations (978-1-61197-209-2) ; >
-      au < manifest ; exists ; 2012 ; 978-1-61197-214-6 ; 978-1-61197-215-3 ; 9781611972153 ; Introduction to Optimization and Semidifferential Calculus (978-1-61197-215-3) ; >
-      au < manifest ; exists ; 2012 ; 978-1-61197-218-4 ; 978-1-61197-219-1 ; 9781611972191 ; The Statistical Theory of Linear Systems (978-1-61197-219-1) ; >
-      au < manifest ; exists ; 2012 ; 978-1-61197-222-1 ; 978-1-61197-223-8 ; 9781611972238 ; Assignment Problems (978-1-61197-223-8) ; >
-      au < manifest ; exists ; 2012 ; 978-1-61197-224-5 ; 978-1-61197-225-2 ; 9781611972252 ; Control and Optimization with Differential-Algebraic Constraints (978-1-61197-225-2) ; >
-      au < manifest ; exists ; 2012 ; 978-1-61197-228-3 ; 978-1-61197-229-0 ; 9781611972290 ; Semidefinite Optimization and Convex Algebraic Geometry (978-1-61197-229-0) ; >
-      au < manifest ; exists ; 2012 ; 978-1-61197-230-6 ; 978-1-61197-231-3 ; 9781611972313 ; From Vector Spaces to Function Spaces (978-1-61197-231-3) ; >
-      au < manifest ; exists ; 2012 ; 978-1-61197-233-7 ; 978-1-61197-234-4 ; 9781611972344 ; Linear and Nonlinear Inverse Problems with Practical Applications (978-1-61197-234-4) ; >
-      au < manifest ; exists ; 2012 ; 978-1-61197-235-1 ; 978-1-61197-236-8 ; 9781611972368 ; Applications to Regular and Bang-Bang Control (978-1-61197-236-8) ; >
-      au < manifest ; exists ; 2012 ; 978-1-61197-241-2 ; 978-1-61197-242-9 ; 9781611972429 ; Mathematical Models for Communicable Diseases (978-1-61197-242-9) ; >
-      au < manifest ; exists ; 2012 ; 978-1-61197-243-6 ; 978-1-61197-244-3 ; 9781611972443 ; Algebraic and Geometric Ideas in the Theory of Discrete Optimization (978-1-61197-244-3) ; >
-      au < manifest ; exists ; 2012 ; 978-1-61197-245-0 ; 978-1-61197-246-7 ; 9781611972467 ; Eigenvalues of Matrices (978-1-61197-246-7) ; >
-      au < manifest ; exists ; 2013 ; 978-1-61197-249-8 ; 978-1-61197-250-4 ; 9781611972504 ; A Primer on Mathematical Models in Biology (978-1-61197-250-4) ; >
-      au < manifest ; exists ; 2013 ; 978-1-61197-256-6 ; 978-1-61197-257-3 ; 9781611972573 ; Recipes for Continuation (978-1-61197-257-3) ; >
-      au < manifest ; exists ; 2013 ; 978-1-61197-260-3 ; 978-1-61197-261-0 ; 9781611972610 ; Mathematics and Climate (978-1-61197-261-0) ; >
-      au < manifest ; exists ; 2013 ; 978-1-61197-263-4 ; 978-1-61197-264-1 ; 9781611972641 ; Applied and Computational Measurable Dynamics (978-1-61197-264-1) ; >
-      au < manifest ; exists ; 2013 ; 978-1-61197-266-5 ; 978-1-61197-267-2 ; 9781611972672 ; Global Optimization (978-1-61197-267-2) ; >
-      au < manifest ; exists ; 2013 ; 978-1-61197-304-4 ; 978-1-61197-305-1 ; 9781611973051 ; Semi-Lagrangian Approximation Schemes for Linear and Hamilton—Jacobi Equations (978-1-61197-305-1) ; >
-      au < manifest ; exists ; 2013 ; 978-1-61197-313-6 ; 978-1-61197-314-3 ; 9781611973143 ; Analytic Perturbation Theory and Its Applications (978-1-61197-314-3) ; >
-      au < manifest ; exists ; 2013 ; 978-1-61197-315-0 ; 978-1-61197-316-7 ; 9781611973167 ; Integral Equation Methods in Scattering Theory (978-1-61197-316-7) ; >
-      au < manifest ; exists ; 2013 ; 978-1-61197-317-4 ; 978-1-61197-285-6 ; 9781611972856 ; Nonlinear Control Under Nonconstant Delays (978-1-61197-285-6) ; >
-      au < manifest ; exists ; 2013 ; 978-1-61197-323-5 ; 978-1-61197-324-2 ; 9781611973242 ; The Method of Weighted Residuals and Variational Principles (978-1-61197-324-2) ; >
-      au < manifest ; exists ; 2013 ; 978-1-61197-328-0 ; 978-1-61197-329-7 ; 9781611973297 ; The Radon Transform and Medical Imaging (978-1-61197-329-7) ; >
-      au < manifest ; exists ; 2013 ; 978-1-61197-349-5 ; 978-1-61197-350-1 ; 9781611973501 ; Programming Projects in C for Students of Engineering, Science, and Mathematics (978-1-61197-350-1) ; >
-      au < manifest ; exists ; 2013 ; 978-1-61197-366-2 ; 978-1-61197-367-9 ; 9781611973679 ; Arc Routing (978-1-61197-367-9) ; >
-      au < manifest ; exists ; 2014 ; 978-1-61197-333-4 ; 978-1-61197-334-1 ; 9781611973341 ; Nonlinear Time Scale Systems in Standard and Nonstandard Forms (978-1-61197-334-1) ; >
-      au < manifest ; exists ; 2014 ; 978-1-61197-335-8 ; 978-1-61197-336-5 ; 9781611973365 ; Practical Augmented Lagrangian Methods for Constrained Optimization (978-1-61197-336-5) ; >
-      au < manifest ; exists ; 2014 ; 978-1-61197-345-7 ; 978-1-61197-346-4 ; 9781611973464 ; Iterative Methods for Linear Systems (978-1-61197-346-4) ; >
-      au < manifest ; exists ; 2014 ; 978-1-61197-347-1 ; 978-1-61197-348-8 ; 9781611973488 ; Variational Analysis in Sobolev and BV Spaces (978-1-61197-348-8) ; >
-      au < manifest ; exists ; 2014 ; 978-1-61197-351-8 ; 978-1-61197-352-5 ; 9781611973525 ; Solving Transcendental Equations (978-1-61197-352-5) ; >
-      au < manifest ; exists ; 2014 ; 978-1-61197-353-2 ; 978-1-61197-354-9 ; 9781611973549 ; Climate Modeling for Scientists and Engineers (978-1-61197-354-9) ; >
-      au < manifest ; exists ; 2014 ; 978-1-61197-358-7 ; 978-1-61197-359-4 ; 9781611973594 ; Vehicle Routing (978-1-61197-359-4) ; >
-      au < manifest ; exists ; 2014 ; 978-1-61197-362-4 ; 978-1-61197-363-1 ; 9781611973631 ; Stability, Control, and Computation for Time-Delay Systems (978-1-61197-363-1) ; >
-      au < manifest ; exists ; 2014 ; 978-1-61197-364-8 ; 978-1-61197-365-5 ; 9781611973655 ; Introduction to Nonlinear Optimization (978-1-61197-365-5) ; >
-      au < manifest ; exists ; 2014 ; 978-1-61197-379-2 ; 978-1-61197-380-8 ; 9781611973808 ; Computational Methods in Geophysical Electromagnetics (978-1-61197-380-8) ; >
-      au < manifest ; exists ; 2014 ; 978-1-61197-381-5 ; 978-1-61197-382-2 ; 9781611973822 ; Unified Transform for Boundary Value Problems (978-1-61197-382-2) ; >
-      au < manifest ; exists ; 2014 ; 978-1-61197-383-9 ; 978-1-61197-384-6 ; 9781611973846 ; Preconditioning and the Conjugate Gradient Method in the Context of Solving PDEs (978-1-61197-384-6) ; >
-      au < manifest ; exists ; 2015 ; 978-1-61197-368-6 ; 978-1-61197-369-3 ; 9781611973693 ; Evaluating Gas Network Capacities (978-1-61197-369-3) ; >
-      au < manifest ; exists ; 2015 ; 978-1-61197-370-9 ; 978-1-61197-371-6 ; 9781611973716 ; Mathematics of Planet Earth (978-1-61197-371-6) ; >
-      au < manifest ; exists ; 2015 ; 978-1-61197-377-8 ; 978-1-61197-378-5 ; 9781611973785 ; Variational Methods for the Numerical Solution of Nonlinear Elliptic Problems (978-1-61197-378-5) ; >
-      au < manifest ; exists ; 2015 ; 978-1-61197-385-3 ; 978-1-61197-386-0 ; 9781611973860 ; Active Subspaces (978-1-61197-386-0) ; >
-      au < manifest ; exists ; 2015 ; 978-1-61197-387-7 ; 978-1-61197-388-4 ; 9781611973884 ; Finite Dimensional Linear Systems (978-1-61197-388-4) ; >
-      au < manifest ; exists ; 2015 ; 978-1-61197-389-1 ; 978-1-61197-390-7 ; 9781611973907 ; Spline Functions (978-1-61197-390-7) ; >
+      au < testing ; exists ; 2011 ; 978-1-61197-196-5 ; 978-1-61197-197-2 ; 9781611971972 ; The Mathematics of Diffusion (978-1-61197-197-2) ; >
+      au < testing ; exists ; 2011 ; 978-1-61197-198-9 ; 978-1-61197-199-6 ; 9781611971996 ; Spectral Numerical Weather Prediction Models (978-1-61197-199-6) ; >
+      au < testing ; exists ; 2011 ; 978-1-61197-200-9 ; 978-1-61197-201-6 ; 9781611972016 ; Taylor Approximations for Stochastic Partial Differential Equations (978-1-61197-201-6) ; >
+      au < testing ; exists ; 2011 ; 978-1-61197-202-3 ; 978-1-61197-203-0 ; 9781611972030 ; Elliptic Problems in Nonsmooth Domains (978-1-61197-203-0) ; >
+      au < testing ; exists ; 2011 ; 978-1-61197-204-7 ; 978-1-61197-205-4 ; 9781611972054 ; Computational Optimization of Systems Governed by Partial Differential Equations (978-1-61197-205-4) ; >
+      au < testing ; exists ; 2011 ; 978-1-61197-206-1 ; 978-1-61197-207-8 ; 9781611972078 ; The Art of Differentiating Computer Programs (978-1-61197-207-8) ; >
+      au < testing ; exists ; 2011 ; 978-1-61197-208-5 ; 978-1-61197-209-2 ; 9781611972092 ; Numerical Solution of Algebraic Riccati Equations (978-1-61197-209-2) ; >
+      au < testing ; exists ; 2012 ; 978-1-61197-214-6 ; 978-1-61197-215-3 ; 9781611972153 ; Introduction to Optimization and Semidifferential Calculus (978-1-61197-215-3) ; >
+      au < testing ; exists ; 2012 ; 978-1-61197-218-4 ; 978-1-61197-219-1 ; 9781611972191 ; The Statistical Theory of Linear Systems (978-1-61197-219-1) ; >
+      au < testing ; exists ; 2012 ; 978-1-61197-222-1 ; 978-1-61197-223-8 ; 9781611972238 ; Assignment Problems (978-1-61197-223-8) ; >
+      au < testing ; exists ; 2012 ; 978-1-61197-224-5 ; 978-1-61197-225-2 ; 9781611972252 ; Control and Optimization with Differential-Algebraic Constraints (978-1-61197-225-2) ; >
+      au < testing ; exists ; 2012 ; 978-1-61197-228-3 ; 978-1-61197-229-0 ; 9781611972290 ; Semidefinite Optimization and Convex Algebraic Geometry (978-1-61197-229-0) ; >
+      au < testing ; exists ; 2012 ; 978-1-61197-230-6 ; 978-1-61197-231-3 ; 9781611972313 ; From Vector Spaces to Function Spaces (978-1-61197-231-3) ; >
+      au < testing ; exists ; 2012 ; 978-1-61197-233-7 ; 978-1-61197-234-4 ; 9781611972344 ; Linear and Nonlinear Inverse Problems with Practical Applications (978-1-61197-234-4) ; >
+      au < testing ; exists ; 2012 ; 978-1-61197-235-1 ; 978-1-61197-236-8 ; 9781611972368 ; Applications to Regular and Bang-Bang Control (978-1-61197-236-8) ; >
+      au < testing ; exists ; 2012 ; 978-1-61197-241-2 ; 978-1-61197-242-9 ; 9781611972429 ; Mathematical Models for Communicable Diseases (978-1-61197-242-9) ; >
+      au < testing ; exists ; 2012 ; 978-1-61197-243-6 ; 978-1-61197-244-3 ; 9781611972443 ; Algebraic and Geometric Ideas in the Theory of Discrete Optimization (978-1-61197-244-3) ; >
+      au < testing ; exists ; 2012 ; 978-1-61197-245-0 ; 978-1-61197-246-7 ; 9781611972467 ; Eigenvalues of Matrices (978-1-61197-246-7) ; >
+      au < testing ; exists ; 2013 ; 978-1-61197-249-8 ; 978-1-61197-250-4 ; 9781611972504 ; A Primer on Mathematical Models in Biology (978-1-61197-250-4) ; >
+      au < testing ; exists ; 2013 ; 978-1-61197-256-6 ; 978-1-61197-257-3 ; 9781611972573 ; Recipes for Continuation (978-1-61197-257-3) ; >
+      au < testing ; exists ; 2013 ; 978-1-61197-260-3 ; 978-1-61197-261-0 ; 9781611972610 ; Mathematics and Climate (978-1-61197-261-0) ; >
+      au < testing ; exists ; 2013 ; 978-1-61197-263-4 ; 978-1-61197-264-1 ; 9781611972641 ; Applied and Computational Measurable Dynamics (978-1-61197-264-1) ; >
+      au < testing ; exists ; 2013 ; 978-1-61197-266-5 ; 978-1-61197-267-2 ; 9781611972672 ; Global Optimization (978-1-61197-267-2) ; >
+      au < testing ; exists ; 2013 ; 978-1-61197-304-4 ; 978-1-61197-305-1 ; 9781611973051 ; Semi-Lagrangian Approximation Schemes for Linear and Hamilton—Jacobi Equations (978-1-61197-305-1) ; >
+      au < testing ; exists ; 2013 ; 978-1-61197-313-6 ; 978-1-61197-314-3 ; 9781611973143 ; Analytic Perturbation Theory and Its Applications (978-1-61197-314-3) ; >
+      au < testing ; exists ; 2013 ; 978-1-61197-315-0 ; 978-1-61197-316-7 ; 9781611973167 ; Integral Equation Methods in Scattering Theory (978-1-61197-316-7) ; >
+      au < testing ; exists ; 2013 ; 978-1-61197-317-4 ; 978-1-61197-285-6 ; 9781611972856 ; Nonlinear Control Under Nonconstant Delays (978-1-61197-285-6) ; >
+      au < testing ; exists ; 2013 ; 978-1-61197-323-5 ; 978-1-61197-324-2 ; 9781611973242 ; The Method of Weighted Residuals and Variational Principles (978-1-61197-324-2) ; >
+      au < testing ; exists ; 2013 ; 978-1-61197-328-0 ; 978-1-61197-329-7 ; 9781611973297 ; The Radon Transform and Medical Imaging (978-1-61197-329-7) ; >
+      au < testing ; exists ; 2013 ; 978-1-61197-349-5 ; 978-1-61197-350-1 ; 9781611973501 ; Programming Projects in C for Students of Engineering, Science, and Mathematics (978-1-61197-350-1) ; >
+      au < testing ; exists ; 2013 ; 978-1-61197-366-2 ; 978-1-61197-367-9 ; 9781611973679 ; Arc Routing (978-1-61197-367-9) ; >
+      au < testing ; exists ; 2014 ; 978-1-61197-333-4 ; 978-1-61197-334-1 ; 9781611973341 ; Nonlinear Time Scale Systems in Standard and Nonstandard Forms (978-1-61197-334-1) ; >
+      au < testing ; exists ; 2014 ; 978-1-61197-335-8 ; 978-1-61197-336-5 ; 9781611973365 ; Practical Augmented Lagrangian Methods for Constrained Optimization (978-1-61197-336-5) ; >
+      au < testing ; exists ; 2014 ; 978-1-61197-345-7 ; 978-1-61197-346-4 ; 9781611973464 ; Iterative Methods for Linear Systems (978-1-61197-346-4) ; >
+      au < testing ; exists ; 2014 ; 978-1-61197-347-1 ; 978-1-61197-348-8 ; 9781611973488 ; Variational Analysis in Sobolev and BV Spaces (978-1-61197-348-8) ; >
+      au < testing ; exists ; 2014 ; 978-1-61197-351-8 ; 978-1-61197-352-5 ; 9781611973525 ; Solving Transcendental Equations (978-1-61197-352-5) ; >
+      au < testing ; exists ; 2014 ; 978-1-61197-353-2 ; 978-1-61197-354-9 ; 9781611973549 ; Climate Modeling for Scientists and Engineers (978-1-61197-354-9) ; >
+      au < testing ; exists ; 2014 ; 978-1-61197-358-7 ; 978-1-61197-359-4 ; 9781611973594 ; Vehicle Routing (978-1-61197-359-4) ; >
+      au < testing ; exists ; 2014 ; 978-1-61197-362-4 ; 978-1-61197-363-1 ; 9781611973631 ; Stability, Control, and Computation for Time-Delay Systems (978-1-61197-363-1) ; >
+      au < testing ; exists ; 2014 ; 978-1-61197-364-8 ; 978-1-61197-365-5 ; 9781611973655 ; Introduction to Nonlinear Optimization (978-1-61197-365-5) ; >
+      au < testing ; exists ; 2014 ; 978-1-61197-379-2 ; 978-1-61197-380-8 ; 9781611973808 ; Computational Methods in Geophysical Electromagnetics (978-1-61197-380-8) ; >
+      au < testing ; exists ; 2014 ; 978-1-61197-381-5 ; 978-1-61197-382-2 ; 9781611973822 ; Unified Transform for Boundary Value Problems (978-1-61197-382-2) ; >
+      au < testing ; exists ; 2014 ; 978-1-61197-383-9 ; 978-1-61197-384-6 ; 9781611973846 ; Preconditioning and the Conjugate Gradient Method in the Context of Solving PDEs (978-1-61197-384-6) ; >
+      au < testing ; exists ; 2015 ; 978-1-61197-368-6 ; 978-1-61197-369-3 ; 9781611973693 ; Evaluating Gas Network Capacities (978-1-61197-369-3) ; >
+      au < testing ; exists ; 2015 ; 978-1-61197-370-9 ; 978-1-61197-371-6 ; 9781611973716 ; Mathematics of Planet Earth (978-1-61197-371-6) ; >
+      au < testing ; exists ; 2015 ; 978-1-61197-377-8 ; 978-1-61197-378-5 ; 9781611973785 ; Variational Methods for the Numerical Solution of Nonlinear Elliptic Problems (978-1-61197-378-5) ; >
+      au < testing ; exists ; 2015 ; 978-1-61197-385-3 ; 978-1-61197-386-0 ; 9781611973860 ; Active Subspaces (978-1-61197-386-0) ; >
+      au < testing ; exists ; 2015 ; 978-1-61197-387-7 ; 978-1-61197-388-4 ; 9781611973884 ; Finite Dimensional Linear Systems (978-1-61197-388-4) ; >
+      au < testing ; exists ; 2015 ; 978-1-61197-389-1 ; 978-1-61197-390-7 ; 9781611973907 ; Spline Functions (978-1-61197-390-7) ; >
       au < crawling ; exists ; 2015 ; 978-1-61197-393-8 ; 978-1-61197-394-5 ; 9781611973945 ; The Defocusing Nonlinear Schrödinger Equation (978-1-61197-394-5) ; >
-      au < manifest ; exists ; 2015 ; 978-1-61197-395-2 ; 978-1-61197-396-9 ; 9781611973969 ; The Shapes of Things (978-1-61197-396-9) ; >
-      au < manifest ; exists ; 2015 ; 978-1-61197-402-7 ; 978-1-61197-404-1 ; 9781611974041 ; A Primer on Radial Basis Functions with Applications to the Geosciences (978-1-61197-404-1) ; >
-      au < manifest ; exists ; 2015 ; 978-1-61197-405-8 ; 978-1-61197-406-5 ; 9781611974065 ; An Introduction to Domain Decomposition Methods (978-1-61197-406-5) ; >
-      au < manifest ; exists ; 2015 ; 978-1-61197-408-9 ; 978-1-61197-409-6 ; 9781611974096 ; Ordinary Differential Equations and Linear Algebra (978-1-61197-409-6) ; >
-      au < manifest ; exists ; 2015 ; 978-1-61197-415-7 ; 978-1-61197-416-4 ; 9781611974164 ; Electrical Transmission System Cascades and Vulnerability (978-1-61197-416-4) ; >
-      au < manifest ; exists ; 2015 ; 978-1-61197-417-1 ; 978-1-61197-418-8 ; 9781611974188 ; Adaptive Treatment Strategies in Practice (978-1-61197-418-8) ; >
-      au < manifest ; exists ; 2015 ; 978-1-61197-419-5 ; 978-1-61197-420-1 ; 9781611974201 ; Riemann–Hilbert Problems, Their Numerical Solution, and the Computation of Nonlinear Special Functions (978-1-61197-420-1) ; >
+      au < testing ; exists ; 2015 ; 978-1-61197-395-2 ; 978-1-61197-396-9 ; 9781611973969 ; The Shapes of Things (978-1-61197-396-9) ; >
+      au < testing ; exists ; 2015 ; 978-1-61197-402-7 ; 978-1-61197-404-1 ; 9781611974041 ; A Primer on Radial Basis Functions with Applications to the Geosciences (978-1-61197-404-1) ; >
+      au < testing ; exists ; 2015 ; 978-1-61197-405-8 ; 978-1-61197-406-5 ; 9781611974065 ; An Introduction to Domain Decomposition Methods (978-1-61197-406-5) ; >
+      au < testing ; exists ; 2015 ; 978-1-61197-408-9 ; 978-1-61197-409-6 ; 9781611974096 ; Ordinary Differential Equations and Linear Algebra (978-1-61197-409-6) ; >
+      au < testing ; exists ; 2015 ; 978-1-61197-415-7 ; 978-1-61197-416-4 ; 9781611974164 ; Electrical Transmission System Cascades and Vulnerability (978-1-61197-416-4) ; >
+      au < testing ; exists ; 2015 ; 978-1-61197-417-1 ; 978-1-61197-418-8 ; 9781611974188 ; Adaptive Treatment Strategies in Practice (978-1-61197-418-8) ; >
+      au < testing ; exists ; 2015 ; 978-1-61197-419-5 ; 978-1-61197-420-1 ; 9781611974201 ; Riemann–Hilbert Problems, Their Numerical Solution, and the Computation of Nonlinear Special Functions (978-1-61197-420-1) ; >
       
 
   }
