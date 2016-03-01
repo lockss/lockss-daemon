@@ -229,11 +229,11 @@
     au < manifest ; 2008 ; Account of the Receipts and Expenditures of the United States 2008 ; https://www.gpo.gov/ ; 2008 >
     au < manifest ; 2009 ; Account of the Receipts and Expenditures of the United States 2009 ; https://www.gpo.gov/ ; 2009 >
     au < manifest ; 2010 ; Account of the Receipts and Expenditures of the United States 2010 ; https://www.gpo.gov/ ; 2010 >
-    au < manifest ; 2011 ; Account of the Receipts and Expenditures of the United States 2011 ; https://www.gpo.gov/ ; 2011 >
-    au < manifest ; 2012 ; Account of the Receipts and Expenditures of the United States 2012 ; https://www.gpo.gov/ ; 2012 >
-    au < manifest ; 2013 ; Account of the Receipts and Expenditures of the United States 2013 ; https://www.gpo.gov/ ; 2013 >
-    au < manifest ; 2014 ; Account of the Receipts and Expenditures of the United States 2014 ; https://www.gpo.gov/ ; 2014 >
-    au < manifest ; 2015 ; Account of the Receipts and Expenditures of the United States 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < testing ; 2011 ; Account of the Receipts and Expenditures of the United States 2011 ; https://www.gpo.gov/ ; 2011 >
+    au < testing ; 2012 ; Account of the Receipts and Expenditures of the United States 2012 ; https://www.gpo.gov/ ; 2012 >
+    au < testing ; 2013 ; Account of the Receipts and Expenditures of the United States 2013 ; https://www.gpo.gov/ ; 2013 >
+    au < testing ; 2014 ; Account of the Receipts and Expenditures of the United States 2014 ; https://www.gpo.gov/ ; 2014 >
+    au < testing ; 2015 ; Account of the Receipts and Expenditures of the United States 2015 ; https://www.gpo.gov/ ; 2015 >
     au < expected ; 2016 ; Account of the Receipts and Expenditures of the United States 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
@@ -282,7 +282,7 @@
     au < down ; 2012 ; Additional Government Publications 2012 ; http://www.gpo.gov/ ; 2012 >
     au < down ; 2013 ; Additional Government Publications 2013 ; http://www.gpo.gov/ ; 2013 >
     au < down ; 2014 ; Additional Government Publications 2014 ; http://www.gpo.gov/ ; 2014 >
-    au < manifest ; 2015 ; Additional Government Publications 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < testing ; 2015 ; Additional Government Publications 2015 ; https://www.gpo.gov/ ; 2015 >
     au < expected ; 2016 ; Additional Government Publications 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
@@ -315,7 +315,7 @@
     au < down ; 2012 ; Budget of the United States Government 2012 ; http://www.gpo.gov/ ; 2012 >
     au < down ; 2013 ; Budget of the United States Government 2013 ; http://www.gpo.gov/ ; 2013 >
     au < down ; 2014 ; Budget of the United States Government 2014 ; http://www.gpo.gov/ ; 2014 >
-    au < manifest ; 2015 ; Budget of the United States Government 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < testing ; 2015 ; Budget of the United States Government 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Budget of the United States Government 2016 ; https://www.gpo.gov/ ; 2016 >
 
 
@@ -398,9 +398,9 @@
     au < down ; 2010 ; Code of Federal Regulations 2010 ; http://www.gpo.gov/ ; 2010 >
     au < down ; 2011 ; Code of Federal Regulations 2011 ; http://www.gpo.gov/ ; 2011 >
     au < down ; 2012 ; Code of Federal Regulations 2012 ; http://www.gpo.gov/ ; 2012 >
-    au < manifest ; 2013 ; Code of Federal Regulations 2013 ; https://www.gpo.gov/ ; 2013 >
-    au < manifest ; 2014 ; Code of Federal Regulations 2014 ; https://www.gpo.gov/ ; 2014 >
-    au < manifest ; 2015 ; Code of Federal Regulations 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < testing ; 2013 ; Code of Federal Regulations 2013 ; https://www.gpo.gov/ ; 2013 >
+    au < testing ; 2014 ; Code of Federal Regulations 2014 ; https://www.gpo.gov/ ; 2014 >
+    au < testing ; 2015 ; Code of Federal Regulations 2015 ; https://www.gpo.gov/ ; 2015 >
     au < expected ; 2016 ; Code of Federal Regulations 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
@@ -454,7 +454,7 @@
     au < down ; 2012 ; Congressional Bills 2012 ; http://www.gpo.gov/ ; 2012 >
     au < down ; 2013 ; Congressional Bills 2013 ; http://www.gpo.gov/ ; 2013 >
     au < down ; 2014 ; Congressional Bills 2014 ; http://www.gpo.gov/ ; 2014 >
-    au < manifest ; 2015 ; Congressional Bills 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < testing ; 2015 ; Congressional Bills 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Congressional Bills 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
@@ -482,7 +482,7 @@
     au < down ; 2012 ; Congressional Calendars 2012 ; http://www.gpo.gov/ ; 2012 >
     au < down ; 2013 ; Congressional Calendars 2013 ; http://www.gpo.gov/ ; 2013 >
     au < down ; 2014 ; Congressional Calendars 2014 ; http://www.gpo.gov/ ; 2014 >
-    au < manifest ; 2015 ; Congressional Calendars 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < testing ; 2015 ; Congressional Calendars 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Congressional Calendars 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
@@ -519,7 +519,7 @@
     au < down ; 2012 ; Congressional Committee Prints 2012 ; http://www.gpo.gov/ ; 2012 >
     au < down ; 2013 ; Congressional Committee Prints 2013 ; http://www.gpo.gov/ ; 2013 >
     au < down ; 2014 ; Congressional Committee Prints 2014 ; http://www.gpo.gov/ ; 2014 >
-    au < manifest ; 2015 ; Congressional Committee Prints 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < testing ; 2015 ; Congressional Committee Prints 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Congressional Committee Prints 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
@@ -545,7 +545,7 @@
     au < down ; 2008 ; Congressional Directory 2008 ; http://www.gpo.gov/ ; 2008 >
     au < down ; 2009 ; Congressional Directory 2009 ; http://www.gpo.gov/ ; 2009 >
     au < down ; 2011 ; Congressional Directory 2011 ; http://www.gpo.gov/ ; 2011 >
-    au < manifest ; 2014 ; Congressional Directory 2014 ; https://www.gpo.gov/ ; 2014 >
+    au < testing ; 2014 ; Congressional Directory 2014 ; https://www.gpo.gov/ ; 2014 >
     au < expected ; 2015 ; Congressional Directory 2015 ; https://www.gpo.gov/ ; 2015 >
     au < expected ; 2016 ; Congressional Directory 2016 ; https://www.gpo.gov/ ; 2016 >
 
@@ -588,7 +588,7 @@
     au < down ; 2012 ; Congressional Documents 2012 ; http://www.gpo.gov/ ; 2012 >
     au < down ; 2013 ; Congressional Documents 2013 ; http://www.gpo.gov/ ; 2013 >
     au < down ; 2014 ; Congressional Documents 2014 ; http://www.gpo.gov/ ; 2014 >
-    au < manifest ; 2015 ; Congressional Documents 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < testing ; 2015 ; Congressional Documents 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Congressional Documents 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
@@ -627,7 +627,7 @@
     au < down ; 2012 ; Congressional Hearings 2012 ; http://www.gpo.gov/ ; 2012 >
     au < down ; 2013 ; Congressional Hearings 2013 ; http://www.gpo.gov/ ; 2013 >
     au < down ; 2014 ; Congressional Hearings 2014 ; http://www.gpo.gov/ ; 2014 >
-    au < manifest ; 2015 ; Congressional Hearings 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < testing ; 2015 ; Congressional Hearings 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Congressional Hearings 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
@@ -661,7 +661,7 @@
     au < down ; 2012 ; Congressional Record 2012 ; http://www.gpo.gov/ ; 2012 >
     au < down ; 2013 ; Congressional Record 2013 ; http://www.gpo.gov/ ; 2013 >
     au < down ; 2014 ; Congressional Record 2014 ; http://www.gpo.gov/ ; 2014 >
-    au < manifest ; 2015 ; Congressional Record 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < testing ; 2015 ; Congressional Record 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Congressional Record 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
@@ -720,7 +720,7 @@
     au < down ; 2012 ; Congressional Record Index 2012 ; http://www.gpo.gov/ ; 2012 >
     au < down ; 2013 ; Congressional Record Index 2013 ; http://www.gpo.gov/ ; 2013 >
     au < down ; 2014 ; Congressional Record Index 2014 ; http://www.gpo.gov/ ; 2014 >
-    au < manifest ; 2015 ; Congressional Record Index 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < testing ; 2015 ; Congressional Record Index 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Congressional Record Index 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
@@ -753,7 +753,7 @@
     au < down ; 2012 ; Congressional Reports 2012 ; http://www.gpo.gov/ ; 2012 >
     au < down ; 2013 ; Congressional Reports 2013 ; http://www.gpo.gov/ ; 2013 >
     au < down ; 2014 ; Congressional Reports 2014 ; http://www.gpo.gov/ ; 2014 >
-    au < manifest ; 2015 ; Congressional Reports 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < testing ; 2015 ; Congressional Reports 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Congressional Reports 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
@@ -772,7 +772,7 @@
     au < down ; 2012 ; Daily Compilation of Presidential Documents 2012 ; http://www.gpo.gov/ ; 2012 >
     au < down ; 2013 ; Daily Compilation of Presidential Documents 2013 ; http://www.gpo.gov/ ; 2013 >
     au < down ; 2014 ; Daily Compilation of Presidential Documents 2014 ; http://www.gpo.gov/ ; 2014 >
-    au < manifest ; 2015 ; Daily Compilation of Presidential Documents 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < testing ; 2015 ; Daily Compilation of Presidential Documents 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Daily Compilation of Presidential Documents 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
@@ -805,7 +805,7 @@
     au < down ; 2012 ; Economic Indicators 2012 ; http://www.gpo.gov/ ; 2012 >
     au < down ; 2013 ; Economic Indicators 2013 ; http://www.gpo.gov/ ; 2013 >
     au < down ; 2014 ; Economic Indicators 2014 ; http://www.gpo.gov/ ; 2014 >
-    au < manifest ; 2015 ; Economic Indicators 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < testing ; 2015 ; Economic Indicators 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Economic Indicators 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
@@ -837,7 +837,7 @@
     au < down ; 2012 ; Economic Report of the President 2012 ; http://www.gpo.gov/ ; 2012 >
     au < down ; 2013 ; Economic Report of the President 2013 ; http://www.gpo.gov/ ; 2013 >
     au < down ; 2014 ; Economic Report of the President 2014 ; http://www.gpo.gov/ ; 2014 >
-    au < manifest ; 2015 ; Economic Report of the President 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < testing ; 2015 ; Economic Report of the President 2015 ; https://www.gpo.gov/ ; 2015 >
     au < expected ; 2016 ; Economic Report of the President 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
@@ -891,8 +891,8 @@
     au < down ; 2011 ; Federal Register 2011 ; http://www.gpo.gov/ ; 2011 >
     au < down ; 2012 ; Federal Register 2012 ; http://www.gpo.gov/ ; 2012 >
     au < down ; 2013 ; Federal Register 2013 ; http://www.gpo.gov/ ; 2013 >
-    au < manifest ; 2014 ; Federal Register 2014 ; https://www.gpo.gov/ ; 2014 >
-    au < manifest ; 2015 ; Federal Register 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < testing ; 2014 ; Federal Register 2014 ; https://www.gpo.gov/ ; 2014 >
+    au < testing ; 2015 ; Federal Register 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; Federal Register 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
@@ -963,8 +963,8 @@
     au < down ; 2011 ; History of Bills 2011 ; http://www.gpo.gov/ ; 2011 >
     au < down ; 2012 ; History of Bills 2012 ; http://www.gpo.gov/ ; 2012 >
     au < down ; 2013 ; History of Bills 2013 ; http://www.gpo.gov/ ; 2013 >
-    au < manifest ; 2014 ; History of Bills 2014 ; https://www.gpo.gov/ ; 2014 >
-    au < manifest ; 2015 ; History of Bills 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < testing ; 2014 ; History of Bills 2014 ; https://www.gpo.gov/ ; 2014 >
+    au < testing ; 2015 ; History of Bills 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; History of Bills 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
@@ -986,7 +986,7 @@
     au < down ; 2011 ; House Rules and Manual 2011 ; http://www.gpo.gov/ ; 2011 >
     au < down ; 2013 ; House Rules and Manual 2013 ; http://www.gpo.gov/ ; 2013 >
     au < expected ; 2014 ; House Rules and Manual 2014 ; https://www.gpo.gov/ ; 2014 >
-    au < manifest ; 2015 ; House Rules and Manual 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < testing ; 2015 ; House Rules and Manual 2015 ; https://www.gpo.gov/ ; 2015 >
     au < expected ; 2016 ; House Rules and Manual 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
@@ -1036,8 +1036,8 @@
     au < down ; 2011 ; List of CFR Sections Affected 2011 ; http://www.gpo.gov/ ; 2011 >
     au < down ; 2012 ; List of CFR Sections Affected 2012 ; http://www.gpo.gov/ ; 2012 >
     au < down ; 2013 ; List of CFR Sections Affected 2013 ; http://www.gpo.gov/ ; 2013 >
-    au < manifest ; 2014 ; List of CFR Sections Affected 2014 ; https://www.gpo.gov/ ; 2014 >
-    au < manifest ; 2015 ; List of CFR Sections Affected 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < testing ; 2014 ; List of CFR Sections Affected 2014 ; https://www.gpo.gov/ ; 2014 >
+    au < testing ; 2015 ; List of CFR Sections Affected 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; List of CFR Sections Affected 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
@@ -1057,7 +1057,7 @@
     au < down ; 2003 ; Privacy Act Issuances 2003 ; http://www.gpo.gov/ ; 2003 >
     au < down ; 2005 ; Privacy Act Issuances 2005 ; http://www.gpo.gov/ ; 2005 >
 
-    au < manifest ; 2013 ; Privacy Act Issuances 2013 ; https://www.gpo.gov/ ; 2013 >
+    au < testing ; 2013 ; Privacy Act Issuances 2013 ; https://www.gpo.gov/ ; 2013 >
     au < expected ; 2014 ; Privacy Act Issuances 2014 ; https://www.gpo.gov/ ; 2014 >
 
   }
@@ -1091,8 +1091,8 @@
     au < down ; 2011 ; Public and Private Laws 2011 ; http://www.gpo.gov/ ; 2011 >
     au < down ; 2012 ; Public and Private Laws 2012 ; http://www.gpo.gov/ ; 2012 >
     au < down ; 2013 ; Public and Private Laws 2013 ; http://www.gpo.gov/ ; 2013 >
-    au < manifest ; 2014 ; Public and Private Laws 2014 ; https://www.gpo.gov/ ; 2014 >
-    au < manifest ; 2015 ; Public and Private Laws 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < testing ; 2014 ; Public and Private Laws 2014 ; https://www.gpo.gov/ ; 2014 >
+    au < testing ; 2015 ; Public and Private Laws 2015 ; https://www.gpo.gov/ ; 2015 >
     au < expected ; 2016 ; Public and Private Laws 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
@@ -1123,7 +1123,7 @@
     au < down ; 2006 ; Public Papers of the Presidents of the United States 2006 ; http://www.gpo.gov/ ; 2006 >
     au < down ; 2009 ; Public Papers of the Presidents of the United States 2009 ; http://www.gpo.gov/ ; 2009 >
     au < manifest ; 2010 ; Public Papers of the Presidents of the United States 2010 ; https://www.gpo.gov/ ; 2010 >
-    au < manifest ; 2011 ; Public Papers of the Presidents of the United States 2011 ; https://www.gpo.gov/ ; 2011 >
+    au < testing ; 2011 ; Public Papers of the Presidents of the United States 2011 ; https://www.gpo.gov/ ; 2011 >
     au < expected ; 2012 ; Public Papers of the Presidents of the United States 2012 ; https://www.gpo.gov/ ; 2012 >
 
   }
@@ -1184,8 +1184,8 @@
     au < down ; 2009 ; United States Code 2009 ; http://www.gpo.gov/ ; 2009 >
     au < down ; 2010 ; United States Code 2010 ; http://www.gpo.gov/ ; 2010 >
     au < down ; 2011 ; United States Code 2011 ; http://www.gpo.gov/ ; 2011 >
-    au < manifest ; 2012 ; United States Code 2012 ; https://www.gpo.gov/ ; 2012 >
-    au < manifest ; 2013 ; United States Code 2013 ; https://www.gpo.gov/ ; 2013 >
+    au < testing ; 2012 ; United States Code 2012 ; https://www.gpo.gov/ ; 2012 >
+    au < testing ; 2013 ; United States Code 2013 ; https://www.gpo.gov/ ; 2013 >
 
   }
 
@@ -1232,9 +1232,9 @@
     au < down ; 2010 ; United States Courts 2010 ; http://www.gpo.gov/ ; 2010 >
     au < down ; 2011 ; United States Courts 2011 ; http://www.gpo.gov/ ; 2011 >
     au < down ; 2012 ; United States Courts 2012 ; http://www.gpo.gov/ ; 2012 >
-    au < manifest ; 2013 ; United States Courts 2013 ; https://www.gpo.gov/ ; 2013 >
-    au < manifest ; 2014 ; United States Courts 2014 ; https://www.gpo.gov/ ; 2014 >
-    au < manifest ; 2015 ; United States Courts 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < testing ; 2013 ; United States Courts 2013 ; https://www.gpo.gov/ ; 2013 >
+    au < testing ; 2014 ; United States Courts 2014 ; https://www.gpo.gov/ ; 2014 >
+    au < testing ; 2015 ; United States Courts 2015 ; https://www.gpo.gov/ ; 2015 >
     au < manifest ; 2016 ; United States Courts 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
@@ -1264,9 +1264,9 @@
     au < down ; 2009 ; United States Government Manual 2009 ; http://www.gpo.gov/ ; 2009 >
     au < doesNotExist ; 2010 ; United States Government Manual 2010 ; https://www.gpo.gov/ ; 2010 >
     au < down ; 2011 ; United States Government Manual 2011 ; http://www.gpo.gov/ ; 2011 >
-    au < manifest ; 2012 ; United States Government Manual 2012 ; https://www.gpo.gov/ ; 2012 >
+    au < testing ; 2012 ; United States Government Manual 2012 ; https://www.gpo.gov/ ; 2012 >
     au < down ; 2013 ; United States Government Manual 2013 ; http://www.gpo.gov/ ; 2013 >
-    au < manifest ; 2014 ; United States Government Manual 2014 ; https://www.gpo.gov/ ; 2014 >
+    au < testing ; 2014 ; United States Government Manual 2014 ; https://www.gpo.gov/ ; 2014 >
     au < expected ; 2015 ; United States Government Manual 2015 ; https://www.gpo.gov/ ; 2015 >
     au < expected ; 2016 ; United States Government Manual 2016 ; https://www.gpo.gov/ ; 2016 >
 
@@ -1340,7 +1340,7 @@
     au < manifest ; 2009 ; United States Statutes at Large 2009 ; https://www.gpo.gov/ ; 2009 >
     au < manifest ; 2010 ; United States Statutes at Large 2010 ; https://www.gpo.gov/ ; 2010 >
     au < expected ; 2011 ; United States Statutes at Large 2011 ; https://www.gpo.gov/ ; 2011 >
-    au < manifest ; 2012 ; United States Statutes at Large 2012 ; https://www.gpo.gov/ ; 2012 >
+    au < testing ; 2012 ; United States Statutes at Large 2012 ; https://www.gpo.gov/ ; 2012 >
     au < expected ; 2013 ; United States Statutes at Large 2013 ; https://www.gpo.gov/ ; 2013 >
 
   }
