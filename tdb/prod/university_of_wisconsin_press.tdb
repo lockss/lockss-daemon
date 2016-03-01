@@ -200,16 +200,16 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 1981-1983 ; Ecological Restoration Volume 1 ; 1 >
-      au < testing ; 1984 ; Ecological Restoration Volume 2 ; 2 >
+      au < ready ; 1984 ; Ecological Restoration Volume 2 ; 2 >
       au < released ; 1985 ; Ecological Restoration Volume 3 ; 3 >
       au < released ; 1986 ; Ecological Restoration Volume 4 ; 4 >
       au < released ; 1987 ; Ecological Restoration Volume 5 ; 5 >
       au < released ; 1988 ; Ecological Restoration Volume 6 ; 6 >
       au < released ; 1989 ; Ecological Restoration Volume 7 ; 7 >
-      au < testing ; 1990 ; Ecological Restoration Volume 8 ; 8 >
+      au < ready ; 1990 ; Ecological Restoration Volume 8 ; 8 >
       au < released ; 1991 ; Ecological Restoration Volume 9 ; 9 >
       au < released ; 1992 ; Ecological Restoration Volume 10 ; 10 >
-      au < testing ; 1993 ; Ecological Restoration Volume 11 ; 11 >
+      au < ready ; 1993 ; Ecological Restoration Volume 11 ; 11 >
       au < released ; 1994 ; Ecological Restoration Volume 12 ; 12 >
       au < released ; 1995 ; Ecological Restoration Volume 13 ; 13 >
       au < released ; 1996 ; Ecological Restoration Volume 14 ; 14 >
@@ -383,7 +383,7 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 2001 ; Land Economics Volume 77 ; 77 >
-      au < testing ; 2002 ; Land Economics Volume 78 ; 78 >
+      au < ready ; 2002 ; Land Economics Volume 78 ; 78 >
       au < released ; 2003 ; Land Economics Volume 79 ; 79 >
       au < released ; 2004 ; Land Economics Volume 80 ; 80 >
       au < released ; 2005 ; Land Economics Volume 81 ; 81 >

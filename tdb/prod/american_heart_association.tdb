@@ -187,7 +187,7 @@
       au < ready ; 1993 ; Circulation Volume 88 ; 88 >
       au < ready ; 1994 ; Circulation Volume 89 ; 89 >
       au < ready ; 1994 ; Circulation Volume 90 ; 90 >
-      au < testing ; 1995 ; Circulation Volume 91 ; 91 >
+      au < ready ; 1995 ; Circulation Volume 91 ; 91 >
       au < released ; 1995 ; Circulation Volume 92 ; 92 >
       au < released ; 1996 ; Circulation Volume 93 ; 93 >
       au < released ; 1996 ; Circulation Volume 94 ; 94 >
@@ -227,9 +227,8 @@
       au < released ; 2013 ; Circulation Volume 128 ; 128 >
       au < released ; 2014 ; Circulation Volume 129 ; 129 >
       au < released ; 2014 ; Circulation Volume 130 ; 130 >
-      au < testing ; 2015 ; Circulation Volume 131 ; 131 >
-      au < notReady ; 2015 ; Circulation Volume 132 ; 132 >
-      #Found a login page
+      au < ready ; 2015 ; Circulation Volume 131 ; 131 >
+      au < testing ; 2015 ; Circulation Volume 132 ; 132 >
       au < manifest ; 2016 ; Circulation Volume 133 ; 133 >
       au < expected ; 2016 ; Circulation Volume 134 ; 134 >
 
@@ -336,13 +335,13 @@
       au < manifest ; 1998 ; Circulation Research Volume 83 ; 83 >
       au < manifest ; 1999 ; Circulation Research Volume 84 ; 84 >
       au < manifest ; 1999 ; Circulation Research Volume 85 ; 85 >
-      au < testing ; 2000 ; Circulation Research Volume 86 ; 86 >
-      au < testing ; 2000 ; Circulation Research Volume 87 ; 87 >
-      au < testing ; 2001 ; Circulation Research Volume 88 ; 88 >
-      au < testing ; 2001 ; Circulation Research Volume 89 ; 89 >
-      au < testing ; 2002 ; Circulation Research Volume 90 ; 90 >
-      au < testing ; 2002 ; Circulation Research Volume 91 ; 91 >
-      au < testing ; 2003 ; Circulation Research Volume 92 ; 92 >
+      au < ready ; 2000 ; Circulation Research Volume 86 ; 86 >
+      au < ready ; 2000 ; Circulation Research Volume 87 ; 87 >
+      au < ready ; 2001 ; Circulation Research Volume 88 ; 88 >
+      au < ready ; 2001 ; Circulation Research Volume 89 ; 89 >
+      au < ready ; 2002 ; Circulation Research Volume 90 ; 90 >
+      au < ready ; 2002 ; Circulation Research Volume 91 ; 91 >
+      au < ready ; 2003 ; Circulation Research Volume 92 ; 92 >
       au < testing ; 2003 ; Circulation Research Volume 93 ; 93 >
       au < testing ; 2004 ; Circulation Research Volume 94 ; 94 >
       au < testing ; 2004 ; Circulation Research Volume 95 ; 95 >
@@ -366,8 +365,8 @@
       au < released ; 2013 ; Circulation Research Volume 113 ; 113 >
       au < released ; 2014 ; Circulation Research Volume 114 ; 114 >
       au < released ; 2014 ; Circulation Research Volume 115 ; 115 >
-      au < testing ; 2015 ; Circulation Research Volume 116 ; 116 >
-      au < testing ; 2015 ; Circulation Research Volume 117 ; 117 >
+      au < ready ; 2015 ; Circulation Research Volume 116 ; 116 >
+      au < ready ; 2015 ; Circulation Research Volume 117 ; 117 >
       au < manifest ; 2016 ; Circulation Research Volume 118 ; 118 >
       au < expected ; 2016 ; Circulation Research Volume 119 ; 119 >
 
@@ -593,14 +592,14 @@
       au < manifest ; 1999 ; Hypertension Volume 34 ; 34 >
       au < testing ; 2000 ; Hypertension Volume 35 ; 35 >
       au < testing ; 2000 ; Hypertension Volume 36 ; 36 >
-      au < testing ; 2001 ; Hypertension Volume 37 ; 37 >
-      au < testing ; 2001 ; Hypertension Volume 38 ; 38 >
-      au < testing ; 2002 ; Hypertension Volume 39 ; 39 >
-      au < testing ; 2002 ; Hypertension Volume 40 ; 40 >
-      au < testing ; 2003 ; Hypertension Volume 41 ; 41 >
-      au < testing ; 2003 ; Hypertension Volume 42 ; 42 >
+      au < ready ; 2001 ; Hypertension Volume 37 ; 37 >
+      au < ready ; 2001 ; Hypertension Volume 38 ; 38 >
+      au < ready ; 2002 ; Hypertension Volume 39 ; 39 >
+      au < ready ; 2002 ; Hypertension Volume 40 ; 40 >
+      au < ready ; 2003 ; Hypertension Volume 41 ; 41 >
+      au < ready ; 2003 ; Hypertension Volume 42 ; 42 >
       au < testing ; 2004 ; Hypertension Volume 43 ; 43 >
-      au < testing ; 2004 ; Hypertension Volume 44 ; 44 >
+      au < ready ; 2004 ; Hypertension Volume 44 ; 44 >
       au < released ; 2005 ; Hypertension Volume 45 ; 45 >
       au < released ; 2005 ; Hypertension Volume 46 ; 46 >
       au < released ; 2006 ; Hypertension Volume 47 ; 47 >
@@ -674,7 +673,7 @@
       au < manifest ; 1987 ; Stroke Volume 28 ; 28 >
       au < manifest ; 1988 ; Stroke Volume 29 ; 29 >
       au < manifest ; 1999 ; Stroke Volume 30 ; 30 >
-      au < testing ; 2000 ; Stroke Volume 31 ; 31 >
+      au < ready ; 2000 ; Stroke Volume 31 ; 31 >
       au < testing ; 2001 ; Stroke Volume 32 ; 32 >
       au < testing ; 2002 ; Stroke Volume 33 ; 33 >
       au < testing ; 2003 ; Stroke Volume 34 ; 34 >
