@@ -56,9 +56,9 @@
     param[base_url] = http://hgp.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < released ; 2009 ; Human Genomics and Proteomics Volume 1 ; 1 >
-    au < released ; 2010 ; Human Genomics and Proteomics Volume 2 ; 2 >
-    au < released ; 2011 ; Human Genomics and Proteomics Volume 3 ; 3 >
+    au < down ; 2009 ; Human Genomics and Proteomics Volume 1 ; 1 >
+    au < down ; 2010 ; Human Genomics and Proteomics Volume 2 ; 2 >
+    au < down ; 2011 ; Human Genomics and Proteomics Volume 3 ; 3 >
 
   }
   
@@ -74,12 +74,12 @@
     param[base_url] = http://dbm.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < released ; 2010 ; Journal of Dental Biomechanics Volume 1 ; 1 >
-    au < released ; 2011 ; Journal of Dental Biomechanics Volume 2 ; 2 >
-    au < released ; 2012 ; Journal of Dental Biomechanics Volume 3 ; 3 >
-    au < released ; 2013 ; Journal of Dental Biomechanics Volume 4 ; 4 >
-    au < released ; 2014 ; Journal of Dental Biomechanics Volume 5 ; 5 >
-    au < released ; 2015 ; Journal of Dental Biomechanics Volume 6 ; 6 >
+    au < down ; 2010 ; Journal of Dental Biomechanics Volume 1 ; 1 >
+    au < down ; 2011 ; Journal of Dental Biomechanics Volume 2 ; 2 >
+    au < down ; 2012 ; Journal of Dental Biomechanics Volume 3 ; 3 >
+    au < down ; 2013 ; Journal of Dental Biomechanics Volume 4 ; 4 >
+    au < down ; 2014 ; Journal of Dental Biomechanics Volume 5 ; 5 >
+    au < down ; 2015 ; Journal of Dental Biomechanics Volume 6 ; 6 >
     
   }
   
@@ -96,14 +96,14 @@
     implicit < status ; year ; name ; param[volume_name] >
     param[journal_id] = BWSH
 
-    au < released ; 1999-2002 ; International Journal of Self Help and Self Care Volume 1 ; 1 >
-    au < released ; 2003-2004 ; International Journal of Self Help and Self Care Volume 2 ; 2 >
-    au < released ; 2005 ; International Journal of Self Help and Self Care Volume 3 ; 3 >
-    au < released ; 2005-2006 ; International Journal of Self Help and Self Care Volume 4 ; 4 >
-    au < released ; 2006-2007 ; International Journal of Self Help and Self Care Volume 5 ; 5 >
-    au < released ; 2012 ; International Journal of Self Help and Self Care Volume 6 ; 6 >
-    au < released ; 2013 ; International Journal of Self Help and Self Care Volume 7 ; 7 >
-    au < released ; 2014 ; International Journal of Self Help and Self Care Volume 8 ; 8 >
+    au < down ; 1999-2002 ; International Journal of Self Help and Self Care Volume 1 ; 1 >
+    au < down ; 2003-2004 ; International Journal of Self Help and Self Care Volume 2 ; 2 >
+    au < down ; 2005 ; International Journal of Self Help and Self Care Volume 3 ; 3 >
+    au < down ; 2005-2006 ; International Journal of Self Help and Self Care Volume 4 ; 4 >
+    au < down ; 2006-2007 ; International Journal of Self Help and Self Care Volume 5 ; 5 >
+    au < down ; 2012 ; International Journal of Self Help and Self Care Volume 6 ; 6 >
+    au < down ; 2013 ; International Journal of Self Help and Self Care Volume 7 ; 7 >
+    au < down ; 2014 ; International Journal of Self Help and Self Care Volume 8 ; 8 >
   
   }
 
@@ -123,39 +123,39 @@
     {
     #there are one or two singleton pdfs in an issue but for all intents Vol1 to Vol27 are abstract only
       attr[au_coverage_depth] = abstracts
-      au < released ; 1972 ; Journal of Collective Negotiations Volume 1 [abstracts only] ; 1 >
-      au < released ; 1973 ; Journal of Collective Negotiations Volume 2 [abstracts only] ; 2 >
-      au < released ; 1974 ; Journal of Collective Negotiations Volume 3 [abstracts only] ; 3 >
-      au < released ; 1975 ; Journal of Collective Negotiations Volume 4 [abstracts only] ; 4 >
-      au < released ; 1976 ; Journal of Collective Negotiations Volume 5 [abstracts only] ; 5 >
-      au < released ; 1977 ; Journal of Collective Negotiations Volume 6 [abstracts only] ; 6 >
-      au < released ; 1978 ; Journal of Collective Negotiations Volume 7 [abstracts only] ; 7 >
-      au < released ; 1979 ; Journal of Collective Negotiations Volume 8 [abstracts only] ; 8 >
-      au < released ; 1980 ; Journal of Collective Negotiations Volume 9 [abstracts only] ; 9 >
-      au < released ; 1981 ; Journal of Collective Negotiations Volume 10 [abstracts only] ; 10 >
-      au < released ; 1982 ; Journal of Collective Negotiations Volume 11 [abstracts only] ; 11 >
-      au < released ; 1983 ; Journal of Collective Negotiations Volume 12 [abstracts only] ; 12 >
-      au < released ; 1984 ; Journal of Collective Negotiations Volume 13 [abstracts only] ; 13 >
-      au < released ; 1985 ; Journal of Collective Negotiations Volume 14 [abstracts only] ; 14 >
-      au < released ; 1986 ; Journal of Collective Negotiations Volume 15 [abstracts only] ; 15 >
-      au < released ; 1987 ; Journal of Collective Negotiations Volume 16 [abstracts only] ; 16 >
-      au < released ; 1988 ; Journal of Collective Negotiations Volume 17 [abstracts only] ; 17 >
-      au < released ; 1989 ; Journal of Collective Negotiations Volume 18 [abstracts only] ; 18 >
-      au < released ; 1990 ; Journal of Collective Negotiations Volume 19 [abstracts only] ; 19 >
-      au < released ; 1991 ; Journal of Collective Negotiations Volume 20 [abstracts only] ; 20 >
-      au < released ; 1992 ; Journal of Collective Negotiations Volume 21 [abstracts only] ; 21 >
-      au < released ; 1993 ; Journal of Collective Negotiations Volume 22 [abstracts only] ; 22 >
-      au < released ; 1994 ; Journal of Collective Negotiations Volume 23 [abstracts only] ; 23 >
-      au < released ; 1995 ; Journal of Collective Negotiations Volume 24 [abstracts only] ; 24 >
-      au < released ; 1996 ; Journal of Collective Negotiations Volume 25 [abstracts only] ; 25 >
-      au < released ; 1997 ; Journal of Collective Negotiations Volume 26 [abstracts only] ; 26 >
-      au < released ; 1998 ; Journal of Collective Negotiations Volume 27 [abstracts only] ; 27 >
+      au < down ; 1972 ; Journal of Collective Negotiations Volume 1 [abstracts only] ; 1 >
+      au < down ; 1973 ; Journal of Collective Negotiations Volume 2 [abstracts only] ; 2 >
+      au < down ; 1974 ; Journal of Collective Negotiations Volume 3 [abstracts only] ; 3 >
+      au < down ; 1975 ; Journal of Collective Negotiations Volume 4 [abstracts only] ; 4 >
+      au < down ; 1976 ; Journal of Collective Negotiations Volume 5 [abstracts only] ; 5 >
+      au < down ; 1977 ; Journal of Collective Negotiations Volume 6 [abstracts only] ; 6 >
+      au < down ; 1978 ; Journal of Collective Negotiations Volume 7 [abstracts only] ; 7 >
+      au < down ; 1979 ; Journal of Collective Negotiations Volume 8 [abstracts only] ; 8 >
+      au < down ; 1980 ; Journal of Collective Negotiations Volume 9 [abstracts only] ; 9 >
+      au < down ; 1981 ; Journal of Collective Negotiations Volume 10 [abstracts only] ; 10 >
+      au < down ; 1982 ; Journal of Collective Negotiations Volume 11 [abstracts only] ; 11 >
+      au < down ; 1983 ; Journal of Collective Negotiations Volume 12 [abstracts only] ; 12 >
+      au < down ; 1984 ; Journal of Collective Negotiations Volume 13 [abstracts only] ; 13 >
+      au < down ; 1985 ; Journal of Collective Negotiations Volume 14 [abstracts only] ; 14 >
+      au < down ; 1986 ; Journal of Collective Negotiations Volume 15 [abstracts only] ; 15 >
+      au < down ; 1987 ; Journal of Collective Negotiations Volume 16 [abstracts only] ; 16 >
+      au < down ; 1988 ; Journal of Collective Negotiations Volume 17 [abstracts only] ; 17 >
+      au < down ; 1989 ; Journal of Collective Negotiations Volume 18 [abstracts only] ; 18 >
+      au < down ; 1990 ; Journal of Collective Negotiations Volume 19 [abstracts only] ; 19 >
+      au < down ; 1991 ; Journal of Collective Negotiations Volume 20 [abstracts only] ; 20 >
+      au < down ; 1992 ; Journal of Collective Negotiations Volume 21 [abstracts only] ; 21 >
+      au < down ; 1993 ; Journal of Collective Negotiations Volume 22 [abstracts only] ; 22 >
+      au < down ; 1994 ; Journal of Collective Negotiations Volume 23 [abstracts only] ; 23 >
+      au < down ; 1995 ; Journal of Collective Negotiations Volume 24 [abstracts only] ; 24 >
+      au < down ; 1996 ; Journal of Collective Negotiations Volume 25 [abstracts only] ; 25 >
+      au < down ; 1997 ; Journal of Collective Negotiations Volume 26 [abstracts only] ; 26 >
+      au < down ; 1998 ; Journal of Collective Negotiations Volume 27 [abstracts only] ; 27 >
     }
-    au < released ; 1999 ; Journal of Collective Negotiations Volume 28 ; 28 >
-    au < released ; 2000 ; Journal of Collective Negotiations Volume 29 ; 29 >
-    au < released ; 2003-2005 ; Journal of Collective Negotiations Volume 30 ; 30 >
-    au < released ; 2006-2007 ; Journal of Collective Negotiations Volume 31 ; 31 >
-    au < released ; 2008 ; Journal of Collective Negotiations Volume 32 ; 32 >
+    au < down ; 1999 ; Journal of Collective Negotiations Volume 28 ; 28 >
+    au < down ; 2000 ; Journal of Collective Negotiations Volume 29 ; 29 >
+    au < down ; 2003-2005 ; Journal of Collective Negotiations Volume 30 ; 30 >
+    au < down ; 2006-2007 ; Journal of Collective Negotiations Volume 31 ; 31 >
+    au < down ; 2008 ; Journal of Collective Negotiations Volume 32 ; 32 >
 
   }
 
@@ -172,39 +172,39 @@
     implicit < status ; year ; name ; param[volume_name] >
     param[journal_id] = BWES
       
-    au < released ; 1971 ; Journal of Environmental Systems Volume 1 ; 1 >
-    au < released ; 1972 ; Journal of Environmental Systems Volume 2 ; 2 >
-    au < released ; 1973 ; Journal of Environmental Systems Volume 3 ; 3 >
-    au < released ; 1974 ; Journal of Environmental Systems Volume 4 ; 4 >
-    au < released ; 1975 ; Journal of Environmental Systems Volume 5 ; 5 >
-    au < released ; 1976-1977 ; Journal of Environmental Systems Volume 6 ; 6 >
-    au < released ; 1977-1978 ; Journal of Environmental Systems Volume 7 ; 7 >
-    au < released ; 1978-1979 ; Journal of Environmental Systems Volume 8 ; 8 >
-    au < released ; 1979-1980 ; Journal of Environmental Systems Volume 9 ; 9 >
-    au < released ; 1980-1981 ; Journal of Environmental Systems Volume 10 ; 10 >
-    au < released ; 1981-1982 ; Journal of Environmental Systems Volume 11 ; 11 >
-    au < released ; 1982-1983 ; Journal of Environmental Systems Volume 12 ; 12 >
-    au < released ; 1983-1984 ; Journal of Environmental Systems Volume 13 ; 13 >
-    au < released ; 1985-1986 ; Journal of Environmental Systems Volume 14 ; 14 >
-    au < released ; 1986-1987 ; Journal of Environmental Systems Volume 15 ; 15 >
-    au < released ; 1987-1988 ; Journal of Environmental Systems Volume 16 ; 16 >
-    au < released ; 1988-1989 ; Journal of Environmental Systems Volume 17 ; 17 >
-    au < released ; 1989-1990 ; Journal of Environmental Systems Volume 18 ; 18 >
-    au < released ; 1990-1991 ; Journal of Environmental Systems Volume 19 ; 19 >
-    au < released ; 1991-1992 ; Journal of Environmental Systems Volume 20 ; 20 >
-    au < released ; 1992-1993 ; Journal of Environmental Systems Volume 21 ; 21 >
-    au < released ; 1993-1994 ; Journal of Environmental Systems Volume 22 ; 22 >
-    au < released ; 1994-1995 ; Journal of Environmental Systems Volume 23 ; 23 >
-    au < released ; 1995-1996 ; Journal of Environmental Systems Volume 24 ; 24 >
-    au < released ; 1996-1997 ; Journal of Environmental Systems Volume 25 ; 25 >
-    au < released ; 1997-1998 ; Journal of Environmental Systems Volume 26 ; 26 >
-    au < released ; 1999-2000 ; Journal of Environmental Systems Volume 27 ; 27 >
-    au < released ; 2000-2001 ; Journal of Environmental Systems Volume 28 ; 28 >
-    au < released ; 2002-2003 ; Journal of Environmental Systems Volume 29 ; 29 >
-    au < released ; 2003-2004 ; Journal of Environmental Systems Volume 30 ; 30 >
-    au < released ; 2004-2005 ; Journal of Environmental Systems Volume 31 ; 31 >
-    au < released ; 2005-2006 ; Journal of Environmental Systems Volume 32 ; 32 >
-    au < released ; 2011 ; Journal of Environmental Systems Volume 33 ; 33 >
+    au < down ; 1971 ; Journal of Environmental Systems Volume 1 ; 1 >
+    au < down ; 1972 ; Journal of Environmental Systems Volume 2 ; 2 >
+    au < down ; 1973 ; Journal of Environmental Systems Volume 3 ; 3 >
+    au < down ; 1974 ; Journal of Environmental Systems Volume 4 ; 4 >
+    au < down ; 1975 ; Journal of Environmental Systems Volume 5 ; 5 >
+    au < down ; 1976-1977 ; Journal of Environmental Systems Volume 6 ; 6 >
+    au < down ; 1977-1978 ; Journal of Environmental Systems Volume 7 ; 7 >
+    au < down ; 1978-1979 ; Journal of Environmental Systems Volume 8 ; 8 >
+    au < down ; 1979-1980 ; Journal of Environmental Systems Volume 9 ; 9 >
+    au < down ; 1980-1981 ; Journal of Environmental Systems Volume 10 ; 10 >
+    au < down ; 1981-1982 ; Journal of Environmental Systems Volume 11 ; 11 >
+    au < down ; 1982-1983 ; Journal of Environmental Systems Volume 12 ; 12 >
+    au < down ; 1983-1984 ; Journal of Environmental Systems Volume 13 ; 13 >
+    au < down ; 1985-1986 ; Journal of Environmental Systems Volume 14 ; 14 >
+    au < down ; 1986-1987 ; Journal of Environmental Systems Volume 15 ; 15 >
+    au < down ; 1987-1988 ; Journal of Environmental Systems Volume 16 ; 16 >
+    au < down ; 1988-1989 ; Journal of Environmental Systems Volume 17 ; 17 >
+    au < down ; 1989-1990 ; Journal of Environmental Systems Volume 18 ; 18 >
+    au < down ; 1990-1991 ; Journal of Environmental Systems Volume 19 ; 19 >
+    au < down ; 1991-1992 ; Journal of Environmental Systems Volume 20 ; 20 >
+    au < down ; 1992-1993 ; Journal of Environmental Systems Volume 21 ; 21 >
+    au < down ; 1993-1994 ; Journal of Environmental Systems Volume 22 ; 22 >
+    au < down ; 1994-1995 ; Journal of Environmental Systems Volume 23 ; 23 >
+    au < down ; 1995-1996 ; Journal of Environmental Systems Volume 24 ; 24 >
+    au < down ; 1996-1997 ; Journal of Environmental Systems Volume 25 ; 25 >
+    au < down ; 1997-1998 ; Journal of Environmental Systems Volume 26 ; 26 >
+    au < down ; 1999-2000 ; Journal of Environmental Systems Volume 27 ; 27 >
+    au < down ; 2000-2001 ; Journal of Environmental Systems Volume 28 ; 28 >
+    au < down ; 2002-2003 ; Journal of Environmental Systems Volume 29 ; 29 >
+    au < down ; 2003-2004 ; Journal of Environmental Systems Volume 30 ; 30 >
+    au < down ; 2004-2005 ; Journal of Environmental Systems Volume 31 ; 31 >
+    au < down ; 2005-2006 ; Journal of Environmental Systems Volume 32 ; 32 >
+    au < down ; 2011 ; Journal of Environmental Systems Volume 33 ; 33 >
     
   }    
   
@@ -221,7 +221,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     param[journal_id] = BWWR
     
-    au < released ; 2008 ; Journal of Workplace Rights Volume 13 ; 13 >
+    au < down ; 2008 ; Journal of Workplace Rights Volume 13 ; 13 >
     au < released ; 2009 ; Journal of Workplace Rights Volume 14 ; 14 >
     au < released ; 2010 ; Journal of Workplace Rights Volume 15 ; 15 >
     au < released ; 2011 ; Journal of Workplace Rights Volume 16 ; 16 >
@@ -242,18 +242,18 @@
     implicit < status ; year ; name ; param[volume_name] >
     param[journal_id] = BWIE
     
-    au < released ; 1992-1993 ; Journal of Individual Employment Rights Volume 1 ; 1 >
-    au < released ; 1993-1994 ; Journal of Individual Employment Rights Volume 2 ; 2 >
-    au < released ; 1994-1995 ; Journal of Individual Employment Rights Volume 3 ; 3 >
-    au < released ; 1995-1996 ; Journal of Individual Employment Rights Volume 4 ; 4 >
-    au < released ; 1996-1997 ; Journal of Individual Employment Rights Volume 5 ; 5 >
-    au < released ; 1997-1998 ; Journal of Individual Employment Rights Volume 6 ; 6 >
-    au < released ; 1998-1999 ; Journal of Individual Employment Rights Volume 7 ; 7 >
-    au < released ; 1999-2000 ; Journal of Individual Employment Rights Volume 8 ; 8 >
-    au < released ; 1999-2000 ; Journal of Individual Employment Rights Volume 9 ; 9 >
-    au < released ; 2001-2003 ; Journal of Individual Employment Rights Volume 10 ; 10 >
-    au < released ; 2003-2005 ; Journal of Individual Employment Rights Volume 11 ; 11 >
-    au < released ; 2005-2007 ; Journal of Individual Employment Rights Volume 12 ; 12 >
+    au < down ; 1992-1993 ; Journal of Individual Employment Rights Volume 1 ; 1 >
+    au < down ; 1993-1994 ; Journal of Individual Employment Rights Volume 2 ; 2 >
+    au < down ; 1994-1995 ; Journal of Individual Employment Rights Volume 3 ; 3 >
+    au < down ; 1995-1996 ; Journal of Individual Employment Rights Volume 4 ; 4 >
+    au < down ; 1996-1997 ; Journal of Individual Employment Rights Volume 5 ; 5 >
+    au < down ; 1997-1998 ; Journal of Individual Employment Rights Volume 6 ; 6 >
+    au < down ; 1998-1999 ; Journal of Individual Employment Rights Volume 7 ; 7 >
+    au < down ; 1999-2000 ; Journal of Individual Employment Rights Volume 8 ; 8 >
+    au < down ; 1999-2000 ; Journal of Individual Employment Rights Volume 9 ; 9 >
+    au < down ; 2001-2003 ; Journal of Individual Employment Rights Volume 10 ; 10 >
+    au < down ; 2003-2005 ; Journal of Individual Employment Rights Volume 11 ; 11 >
+    au < down ; 2005-2007 ; Journal of Individual Employment Rights Volume 12 ; 12 >
     
   }
   

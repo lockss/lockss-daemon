@@ -20,11 +20,11 @@
 
     param[journal_id] = ijai
 
-    au < released ; 2009 ; International Journal of Aerospace Innovations Volume 1 ; 1 >
-    au < released ; 2010 ; International Journal of Aerospace Innovations Volume 2 ; 2 >
-    au < released ; 2011 ; International Journal of Aerospace Innovations Volume 3 ; 3 >
-    au < released ; 2012 ; International Journal of Aerospace Innovations Volume 4 ; 4 >
-    au < released ; 2013 ; International Journal of Aerospace Innovations Volume 5 ; 5 >
+    au < down ; 2009 ; International Journal of Aerospace Innovations Volume 1 ; 1 >
+    au < down ; 2010 ; International Journal of Aerospace Innovations Volume 2 ; 2 >
+    au < down ; 2011 ; International Journal of Aerospace Innovations Volume 3 ; 3 >
+    au < down ; 2012 ; International Journal of Aerospace Innovations Volume 4 ; 4 >
+    au < down ; 2013 ; International Journal of Aerospace Innovations Volume 5 ; 5 >
 
   }
 
@@ -37,9 +37,9 @@
 
     param[journal_id] = ijemf
 
-    au < released ; 2009 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 1 ; 1 >
-    au < released ; 2010 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 2 ; 2 >
-    au < released ; 2011-2012 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 3 ; 3 >
+    au < down ; 2009 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 1 ; 1 >
+    au < down ; 2010 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 2 ; 2 >
+    au < down ; 2011-2012 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 3 ; 3 >
 
   }
 
@@ -52,12 +52,12 @@
 
     param[journal_id] = ijfc
 
-    au < released ; 2009 ; International Journal of Flow Control Volume 1 ; 1 >
-    au < released ; 2010 ; International Journal of Flow Control Volume 2 ; 2 >
-    au < released ; 2011 ; International Journal of Flow Control Volume 3 ; 3 >
-    au < released ; 2012 ; International Journal of Flow Control Volume 4 ; 4 >
-    au < released ; 2013 ; International Journal of Flow Control Volume 5 ; 5 >
-    au < released ; 2014 ; International Journal of Flow Control Volume 6 ; 6 >
+    au < down ; 2009 ; International Journal of Flow Control Volume 1 ; 1 >
+    au < down ; 2010 ; International Journal of Flow Control Volume 2 ; 2 >
+    au < down ; 2011 ; International Journal of Flow Control Volume 3 ; 3 >
+    au < down ; 2012 ; International Journal of Flow Control Volume 4 ; 4 >
+    au < down ; 2013 ; International Journal of Flow Control Volume 5 ; 5 >
+    au < down ; 2014 ; International Journal of Flow Control Volume 6 ; 6 >
     au < released ; 2015 ; International Journal of Flow Control Volume 7 ; 7 >
 
   }
@@ -71,8 +71,8 @@
 
     param[journal_id] = ijh
 
-    au < released ; 2010 ; International Journal of Hypersonics Volume 1 ; 1 >
-    au < released ; 2011 ; International Journal of Hypersonics Volume 2 ; 2 >
+    au < down ; 2010 ; International Journal of Hypersonics Volume 1 ; 1 >
+    au < down ; 2011 ; International Journal of Hypersonics Volume 2 ; 2 >
 
   }
 
@@ -85,11 +85,11 @@
 
     param[journal_id] = ijmnst
 
-    au < released ; 2010 ; International Journal of Micro-Nano Scale Transport Volume 1 ; 1 >
-    au < released ; 2011 ; International Journal of Micro-Nano Scale Transport Volume 2 ; 2 >
-    au < released ; 2012 ; International Journal of Micro-Nano Scale Transport Volume 3 ; 3 >
-    au < released ; 2013 ; International Journal of Micro-Nano Scale Transport Volume 4 ; 4 >
-    au < released ; 2014 ; International Journal of Micro-Nano Scale Transport Volume 5 ; 5 >
+    au < down ; 2010 ; International Journal of Micro-Nano Scale Transport Volume 1 ; 1 >
+    au < down ; 2011 ; International Journal of Micro-Nano Scale Transport Volume 2 ; 2 >
+    au < down ; 2012 ; International Journal of Micro-Nano Scale Transport Volume 3 ; 3 >
+    au < down ; 2013 ; International Journal of Micro-Nano Scale Transport Volume 4 ; 4 >
+    au < down ; 2014 ; International Journal of Micro-Nano Scale Transport Volume 5 ; 5 >
 
   }
 
@@ -102,19 +102,19 @@
 
     param[journal_id] = nn
 
-    au < released ; 2002 ; Noise Notes Volume 1 ; 1 >
-    au < released ; 2003 ; Noise Notes Volume 2 ; 2 >
-    au < released ; 2004 ; Noise Notes Volume 3 ; 3 >
-    au < released ; 2005 ; Noise Notes Volume 4 ; 4 >
-    au < released ; 2006 ; Noise Notes Volume 5 ; 5 >
-    au < released ; 2007 ; Noise Notes Volume 6 ; 6 >
-    au < released ; 2008 ; Noise Notes Volume 7 ; 7 >
-    au < released ; 2009 ; Noise Notes Volume 8 ; 8 >
-    au < released ; 2010 ; Noise Notes Volume 9 ; 9 >
-    au < released ; 2011 ; Noise Notes Volume 10 ; 10 >
-    au < released ; 2012 ; Noise Notes Volume 11 ; 11 >
-    au < released ; 2013 ; Noise Notes Volume 12 ; 12 >
-    au < released ; 2014 ; Noise Notes Volume 13 ; 13 >
+    au < down ; 2002 ; Noise Notes Volume 1 ; 1 >
+    au < down ; 2003 ; Noise Notes Volume 2 ; 2 >
+    au < down ; 2004 ; Noise Notes Volume 3 ; 3 >
+    au < down ; 2005 ; Noise Notes Volume 4 ; 4 >
+    au < down ; 2006 ; Noise Notes Volume 5 ; 5 >
+    au < down ; 2007 ; Noise Notes Volume 6 ; 6 >
+    au < down ; 2008 ; Noise Notes Volume 7 ; 7 >
+    au < down ; 2009 ; Noise Notes Volume 8 ; 8 >
+    au < down ; 2010 ; Noise Notes Volume 9 ; 9 >
+    au < down ; 2011 ; Noise Notes Volume 10 ; 10 >
+    au < down ; 2012 ; Noise Notes Volume 11 ; 11 >
+    au < down ; 2013 ; Noise Notes Volume 12 ; 12 >
+    au < down ; 2014 ; Noise Notes Volume 13 ; 13 >
 
   }
 
