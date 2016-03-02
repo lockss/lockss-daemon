@@ -609,6 +609,43 @@ public class TestMetadataManager extends LockssTestCase {
     assertTrue(auids.get(5).isNew);  // most recently added
     assertFalse(auids.get(5).needFullReindex);
 
+    // Modify the metadata manager to prioritize new AUs over existing ones.
+    newConf = ConfigManager.newConfiguration();
+    newConf.put("org.lockss.metadataManager.prioritizeIndexingNewAus", "true");
+    oldConf = ConfigManager.newConfiguration();
+    diffs = newConf.differences(oldConf);
+    metadataManager.setConfig(newConf, oldConf, diffs);
+
+    assertTrue(metadataManager.isPrioritizeIndexingNewAus());
+
+    // Verify that the the "new" AU is prioritized first.
+    auids = metadataManagerSql.getPrioritizedAuIdsToReindex(con,
+	Integer.MAX_VALUE, metadataManager.isPrioritizeIndexingNewAus());
+    assertTrue(auids.get(0).isNew);
+    assertFalse(auids.get(0).needFullReindex);
+
+    // Check that no AU has a priority of zero.
+    String countZeroPriorityQuery = "select count(*) from " + PENDING_AU_TABLE
+	+ " where " + PRIORITY_COLUMN + " = 0";
+    checkRowCount(con, countZeroPriorityQuery, 0);
+
+    // Change to zero the priority of an AU that is not "new".
+    String changePriorityToZeroQuery = "update " + PENDING_AU_TABLE
+	+ " set " + PRIORITY_COLUMN + " = 0 where " + PRIORITY_COLUMN + " = 3";
+
+    PreparedStatement stmt =
+	dbManager.prepareStatement(con, changePriorityToZeroQuery);
+    dbManager.executeUpdate(stmt);
+
+    // Check that one AU has a priority of zero.
+    checkRowCount(con, countZeroPriorityQuery, 1);
+
+    // Verify that the the "new" AU is no longer prioritized first.
+    auids = metadataManagerSql.getPrioritizedAuIdsToReindex(con,
+	Integer.MAX_VALUE, metadataManager.isPrioritizeIndexingNewAus());
+    assertFalse(auids.get(0).isNew);
+    assertTrue(auids.get(0).needFullReindex);
+
     // Clear the table of pending AUs.
     checkExecuteCount(con, "delete from " + PENDING_AU_TABLE, 6);
 
