@@ -164,7 +164,9 @@
     <int>2</int>
   </entry>
   <entry>
-    <!-- We do not poll for download figures -->
+    <!-- We do not poll for download figures at all,
+         we never should have collected them, plus they seem to change
+         either over time or depending on the server -->
     <string>au_exclude_urls_from_polls_pattern</string>
     <string>/download(HR)?Figure/figure/</string>
   </entry>
@@ -179,6 +181,10 @@
     <string>/(css|js)/[^?]+[.](css|js|png)$</string>
   </entry>
   <entry>
+    <!-- This will be changed to au_exclude_urls_from_poll_results_pattern
+         at some point in the future.
+         At which point if au_exclude_urls_from_polls_pattern is still supported
+         remove "/download(HR)?Figure/figure" -->
     <string>au_exclude_urls_from_polls_pattern</string>
     <string>/((css|js)/[^?]+[.](css|js|png)$|refs$|download(HR)?Figure/figure/)</string>
   </entry>
