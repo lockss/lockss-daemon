@@ -1467,26 +1467,42 @@
       eissn = 1809-4422
     >
 
-    param[base_url] = http://www.scielo.br/
     param[journal_issn] = 1414-753X
 
-    au < manifest ; exists ; 1999 ; 1999 ; Ambiente & Sociedade Volume 1999 ; 1999 ; >
-    au < manifest ; exists ; 2000 ; 2000 ; Ambiente & Sociedade Volume 2000 ; 2000 ; >
-    au < manifest ; exists ; 2001 ; 2001 ; Ambiente & Sociedade Volume 2001 ; 2001 ; >
-    au < manifest ; exists ; 2002 ; 2002 ; Ambiente & Sociedade Volume 2002 ; 2002 ; >
-    au < manifest ; exists ; 2003 ; 5-6 ; Ambiente & Sociedade Volume 5-6 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; 7 ; Ambiente & Sociedade Volume 7 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; 8 ; Ambiente & Sociedade Volume 8 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 9 ; Ambiente & Sociedade Volume 9 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 10 ; Ambiente & Sociedade Volume 10 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 11 ; Ambiente & Sociedade Volume 11 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 12 ; Ambiente & Sociedade Volume 12 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 13 ; Ambiente & Sociedade Volume 13 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 14 ; Ambiente & Sociedade Volume 14 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 15 ; Ambiente & Sociedade Volume 15 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 16 ; Ambiente & Sociedade Volume 16 ; 2013 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2014 ; 17 ; Ambiente & Sociedade Volume 17 ; 2014 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2015 ; 18 ; Ambiente & Sociedade Volume 18 ; 2015 ; reingest4.clockss.org:8082 >
+    {
+
+      param[base_url] = http://www.scielo.br/
+  
+      au < manifest ; exists ; 1999 ; 1999 ; Ambiente & Sociedade Volume 1999 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; Ambiente & Sociedade Volume 2000 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Ambiente & Sociedade Volume 2001 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Ambiente & Sociedade Volume 2002 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; 5-6 ; Ambiente & Sociedade Volume 5-6 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 7 ; Ambiente & Sociedade Volume 7 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 8 ; Ambiente & Sociedade Volume 8 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 9 ; Ambiente & Sociedade Volume 9 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 10 ; Ambiente & Sociedade Volume 10 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 11 ; Ambiente & Sociedade Volume 11 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 12 ; Ambiente & Sociedade Volume 12 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 13 ; Ambiente & Sociedade Volume 13 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 14 ; Ambiente & Sociedade Volume 14 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 15 ; Ambiente & Sociedade Volume 15 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; 16 ; Ambiente & Sociedade Volume 16 ; 2013 ; reingest2.clockss.org:8085 >
+      au < crawling ; exists ; 2014 ; 17 ; Ambiente & Sociedade Volume 17 ; 2014 ; reingest3.clockss.org:8083 >
+      au < crawling ; exists ; 2015 ; 18 ; Ambiente & Sociedade Volume 18 ; 2015 ; reingest4.clockss.org:8082 >
+  
+    }
+
+    {
+
+      param[base_url] = http://socialsciences.scielo.org/
+
+      au < manifest ; exists ; 2006 ; 1-2 ; Ambiente & Sociedade Special Edition Volume 1-2 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 3 ; Ambiente & Sociedade Special Edition Volume 3 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 4 ; Ambiente & Sociedade Special Edition Volume 4 ; 2008 ; >
+      au < manifest ; exists ; 2010 ; 5 ; Ambiente & Sociedade Special Edition Volume 5 ; 2010 ; >
+
+    }
 
   }
 
@@ -4902,13 +4918,29 @@
       eissn = 1981-3821
     >
 
-    param[base_url] = http://www.scielo.br/
     param[journal_issn] = 1981-3821
 
-    au < manifest ; exists ; 2012 ; 6 ; Brazilian Political Science Review Volume 6 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 7 ; Brazilian Political Science Review Volume 7 ; 2013 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2014 ; 8 ; Brazilian Political Science Review Volume 8 ; 2014 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2015 ; 9 ; Brazilian Political Science Review Volume 9 ; 2015 ; reingest4.clockss.org:8082 >
+    {
+
+      param[base_url] = http://www.scielo.br/
+  
+      au < manifest ; exists ; 2012 ; 6 ; Brazilian Political Science Review Volume 6 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; 7 ; Brazilian Political Science Review Volume 7 ; 2013 ; reingest2.clockss.org:8085 >
+      au < crawling ; exists ; 2014 ; 8 ; Brazilian Political Science Review Volume 8 ; 2014 ; reingest3.clockss.org:8083 >
+      au < crawling ; exists ; 2015 ; 9 ; Brazilian Political Science Review Volume 9 ; 2015 ; reingest4.clockss.org:8082 >
+  
+    }
+
+    {
+
+      param[base_url] = http://socialsciences.scielo.org/
+
+      au < manifest ; exists ; 2007 ; 1-2 ; Brazilian Political Science Review Special Edition Volume 1-2 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 3 ; Brazilian Political Science Review Special Edition Volume 3 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 4 ; Brazilian Political Science Review Special Edition Volume 4 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 5 ; Brazilian Political Science Review Special Edition Volume 5 ; 2010 ; >
+
+    }
 
   }
 
@@ -5175,24 +5207,38 @@
       eissn = 1809-4449
     >
 
-    param[base_url] = http://www.scielo.br/
     param[journal_issn] = 0104-8333
 
-    au < manifest ; exists ; 2001 ; 2001 ; Cadernos Pagu Volume 2001 ; 2001 ; >
-    au < manifest ; exists ; 2002 ; 2002 ; Cadernos Pagu Volume 2002 ; 2002 ; >
-    au < manifest ; exists ; 2003 ; 2003 ; Cadernos Pagu Volume 2003 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; 2004 ; Cadernos Pagu Volume 2004 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; 2005 ; Cadernos Pagu Volume 2005 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 2006 ; Cadernos Pagu Volume 2006 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 2007 ; Cadernos Pagu Volume 2007 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Cadernos Pagu Volume 2008 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Cadernos Pagu Volume 2009 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Cadernos Pagu Volume 2010 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Cadernos Pagu Volume 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Cadernos Pagu Volume 2012 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Cadernos Pagu Volume 2013 ; 2013 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2014 ; 2014 ; Cadernos Pagu Volume 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2015 ; 2015 ; Cadernos Pagu Volume 2015 ; 2015 ; reingest3.clockss.org:8083 >
+    {
+
+      param[base_url] = http://www.scielo.br/
+  
+      au < manifest ; exists ; 2001 ; 2001 ; Cadernos Pagu Volume 2001 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Cadernos Pagu Volume 2002 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Cadernos Pagu Volume 2003 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Cadernos Pagu Volume 2004 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Cadernos Pagu Volume 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Cadernos Pagu Volume 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Cadernos Pagu Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Cadernos Pagu Volume 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Cadernos Pagu Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Cadernos Pagu Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Cadernos Pagu Volume 2011 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; Cadernos Pagu Volume 2012 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Cadernos Pagu Volume 2013 ; 2013 ; reingest1.clockss.org:8082 >
+      au < crawling ; exists ; 2014 ; 2014 ; Cadernos Pagu Volume 2014 ; 2014 ; reingest2.clockss.org:8085 >
+      au < crawling ; exists ; 2015 ; 2015 ; Cadernos Pagu Volume 2015 ; 2015 ; reingest3.clockss.org:8083 >
+  
+    }
+
+    {
+
+      param[base_url] = http://socialsciences.scielo.org/
+
+      au < manifest ; exists ; 2008 ; 1 ; Cadernos Pagu Special Edition Volume 1 ; 2008 ; >
+      au < manifest ; exists ; 2010 ; 2 ; Cadernos Pagu Special Edition Volume 2 ; 2010 ; >
+
+    }
 
   }
 
@@ -6824,26 +6870,39 @@
       issn = 0121-4772
     >
 
-    param[base_url] = http://www.scielo.org.co/
     param[journal_issn] = 0121-4772
 
-    au < manifest ; exists ; 2000 ; 19 ; Cuadernos de Economía (0121-4772) Volume 19 ; 2000 ; >
-    au < manifest ; exists ; 2001 ; 20 ; Cuadernos de Economía (0121-4772) Volume 20 ; 2001 ; >
-    au < manifest ; exists ; 2002 ; 21 ; Cuadernos de Economía (0121-4772) Volume 21 ; 2002 ; >
-    au < manifest ; exists ; 2003 ; 22 ; Cuadernos de Economía (0121-4772) Volume 22 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; 23 ; Cuadernos de Economía (0121-4772) Volume 23 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; 24 ; Cuadernos de Economía (0121-4772) Volume 24 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 25 ; Cuadernos de Economía (0121-4772) Volume 25 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 26 ; Cuadernos de Economía (0121-4772) Volume 26 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 27 ; Cuadernos de Economía (0121-4772) Volume 27 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 28 ; Cuadernos de Economía (0121-4772) Volume 28 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 29 ; Cuadernos de Economía (0121-4772) Volume 29 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 30 ; Cuadernos de Economía (0121-4772) Volume 30 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 31 ; Cuadernos de Economía (0121-4772) Volume 31 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 32 ; Cuadernos de Economía (0121-4772) Volume 32 ; 2013 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2014 ; 33 ; Cuadernos de Economía (0121-4772) Volume 33 ; 2014 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2015 ; 34 ; Cuadernos de Economía (0121-4772) Volume 34 ; 2015 ; reingest3.clockss.org:8083 >
-    au < manifest ; exists ; 2016 ; 35 ; Cuadernos de Economía (0121-4772) Volume 35 ; 2016 ; >
+    {
+
+      param[base_url] = http://www.scielo.org.co/
+  
+      au < manifest ; exists ; 2000 ; 19 ; Cuadernos de Economía (0121-4772) Volume 19 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; 20 ; Cuadernos de Economía (0121-4772) Volume 20 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; 21 ; Cuadernos de Economía (0121-4772) Volume 21 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; 22 ; Cuadernos de Economía (0121-4772) Volume 22 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 23 ; Cuadernos de Economía (0121-4772) Volume 23 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 24 ; Cuadernos de Economía (0121-4772) Volume 24 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 25 ; Cuadernos de Economía (0121-4772) Volume 25 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 26 ; Cuadernos de Economía (0121-4772) Volume 26 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 27 ; Cuadernos de Economía (0121-4772) Volume 27 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 28 ; Cuadernos de Economía (0121-4772) Volume 28 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 29 ; Cuadernos de Economía (0121-4772) Volume 29 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 30 ; Cuadernos de Economía (0121-4772) Volume 30 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 31 ; Cuadernos de Economía (0121-4772) Volume 31 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; 32 ; Cuadernos de Economía (0121-4772) Volume 32 ; 2013 ; reingest1.clockss.org:8082 >
+      au < crawling ; exists ; 2014 ; 33 ; Cuadernos de Economía (0121-4772) Volume 33 ; 2014 ; reingest2.clockss.org:8085 >
+      au < crawling ; exists ; 2015 ; 34 ; Cuadernos de Economía (0121-4772) Volume 34 ; 2015 ; reingest3.clockss.org:8083 >
+      au < manifest ; exists ; 2016 ; 35 ; Cuadernos de Economía (0121-4772) Volume 35 ; 2016 ; >
+  
+    }
+
+    {
+
+      param[base_url] = http://socialsciences.scielo.org/
+
+      au < manifest ; exists ; 2008 ; 1 ; Cuadernos de Economía (0121-4772) Special Edition Volume 1 ; 2008 ; >
+
+    }
 
   }
 
@@ -7337,29 +7396,46 @@
       eissn = 1678-4588
     >
 
-    param[base_url] = http://www.scielo.br/
     param[journal_issn] = 0011-5258
 
-    au < manifest ; exists ; 1996 ; 39 ; Dados Volume 39 ; 1996 ; >
-    au < manifest ; exists ; 1997 ; 40 ; Dados Volume 40 ; 1997 ; >
-    au < manifest ; exists ; 1998 ; 41 ; Dados Volume 41 ; 1998 ; >
-    au < manifest ; exists ; 1999 ; 42 ; Dados Volume 42 ; 1999 ; >
-    au < manifest ; exists ; 2000 ; 43 ; Dados Volume 43 ; 2000 ; >
-    au < manifest ; exists ; 2001 ; 44 ; Dados Volume 44 ; 2001 ; >
-    au < manifest ; exists ; 2002 ; 45 ; Dados Volume 45 ; 2002 ; >
-    au < manifest ; exists ; 2003 ; 46 ; Dados Volume 46 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; 47 ; Dados Volume 47 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; 48 ; Dados Volume 48 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 49 ; Dados Volume 49 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 50 ; Dados Volume 50 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 51 ; Dados Volume 51 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 52 ; Dados Volume 52 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 53 ; Dados Volume 53 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 54 ; Dados Volume 54 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 55 ; Dados Volume 55 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 56 ; Dados Volume 56 ; 2013 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2014 ; 57 ; Dados Volume 57 ; 2014 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2015 ; 58 ; Dados Volume 58 ; 2015 ; reingest1.clockss.org:8082 >
+    {
+
+      param[base_url] = http://www.scielo.br/
+  
+      au < manifest ; exists ; 1996 ; 39 ; Dados Volume 39 ; 1996 ; >
+      au < manifest ; exists ; 1997 ; 40 ; Dados Volume 40 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; 41 ; Dados Volume 41 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; 42 ; Dados Volume 42 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; 43 ; Dados Volume 43 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; 44 ; Dados Volume 44 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; 45 ; Dados Volume 45 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; 46 ; Dados Volume 46 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 47 ; Dados Volume 47 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 48 ; Dados Volume 48 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 49 ; Dados Volume 49 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 50 ; Dados Volume 50 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 51 ; Dados Volume 51 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 52 ; Dados Volume 52 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 53 ; Dados Volume 53 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 54 ; Dados Volume 54 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 55 ; Dados Volume 55 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; 56 ; Dados Volume 56 ; 2013 ; reingest3.clockss.org:8083 >
+      au < crawling ; exists ; 2014 ; 57 ; Dados Volume 57 ; 2014 ; reingest4.clockss.org:8082 >
+      au < crawling ; exists ; 2015 ; 58 ; Dados Volume 58 ; 2015 ; reingest1.clockss.org:8082 >
+  
+    }
+
+    {
+
+      param[base_url] = http://socialsciences.scielo.org/
+
+      au < manifest ; exists ; 2005 ; 1 ; Dados Special Edition Volume 1 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 2 ; Dados Special Edition Volume 2 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 3 ; Dados Special Edition Volume 3 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 4 ; Dados Special Edition Volume 4 ; 2008 ; >
+      au < manifest ; exists ; 2010 ; 5 ; Dados Special Edition Volume 5 ; 2010 ; >
+
+    }
 
   }
 
@@ -10778,25 +10854,40 @@
       eissn = 0717-7194
     >
 
-    param[base_url] = http://www.scielo.cl/
     param[journal_issn] = 0717-7194
 
-    au < manifest ; exists ; 2000 ; 33 ; Historia (Santiago) Volume 33 ; 2000 ; >
-    au < manifest ; exists ; 2001 ; 34 ; Historia (Santiago) Volume 34 ; 2001 ; >
-    au < manifest ; exists ; 2002 ; 35 ; Historia (Santiago) Volume 35 ; 2002 ; >
-    au < manifest ; exists ; 2003 ; 36 ; Historia (Santiago) Volume 36 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; 37 ; Historia (Santiago) Volume 37 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; 38 ; Historia (Santiago) Volume 38 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 39 ; Historia (Santiago) Volume 39 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 40 ; Historia (Santiago) Volume 40 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 41 ; Historia (Santiago) Volume 41 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 42 ; Historia (Santiago) Volume 42 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 43 ; Historia (Santiago) Volume 43 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 44 ; Historia (Santiago) Volume 44 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 45 ; Historia (Santiago) Volume 45 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 46 ; Historia (Santiago) Volume 46 ; 2013 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2014 ; 47 ; Historia (Santiago) Volume 47 ; 2014 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2015 ; 48 ; Historia (Santiago) Volume 48 ; 2015 ; reingest4.clockss.org:8082 >
+    {
+
+      param[base_url] = http://www.scielo.cl/
+  
+      au < manifest ; exists ; 2000 ; 33 ; Historia (Santiago) Volume 33 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; 34 ; Historia (Santiago) Volume 34 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; 35 ; Historia (Santiago) Volume 35 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; 36 ; Historia (Santiago) Volume 36 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 37 ; Historia (Santiago) Volume 37 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 38 ; Historia (Santiago) Volume 38 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 39 ; Historia (Santiago) Volume 39 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 40 ; Historia (Santiago) Volume 40 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 41 ; Historia (Santiago) Volume 41 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 42 ; Historia (Santiago) Volume 42 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 43 ; Historia (Santiago) Volume 43 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 44 ; Historia (Santiago) Volume 44 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 45 ; Historia (Santiago) Volume 45 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; 46 ; Historia (Santiago) Volume 46 ; 2013 ; reingest2.clockss.org:8085 >
+      au < crawling ; exists ; 2014 ; 47 ; Historia (Santiago) Volume 47 ; 2014 ; reingest3.clockss.org:8083 >
+      au < crawling ; exists ; 2015 ; 48 ; Historia (Santiago) Volume 48 ; 2015 ; reingest4.clockss.org:8082 >
+  
+    }
+
+    {
+
+      param[base_url] = http://socialsciences.scielo.org/
+
+      au < manifest ; exists ; 2006 ; 1-2 ; Historia (Santiago) Special Edition Volume 1-2 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 3 ; Historia (Santiago) Special Edition Volume 3 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 4 ; Historia (Santiago) Special Edition Volume 4 ; 2008 ; >
+
+    }
 
   }
 
@@ -10808,22 +10899,37 @@
       eissn = 1980-4369
     >
 
-    param[base_url] = http://www.scielo.br/
     param[journal_issn] = 0101-9074
 
-    au < manifest ; exists ; 2003 ; 22 ; História (São Paulo) Volume 22 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; 23 ; História (São Paulo) Volume 23 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; 24 ; História (São Paulo) Volume 24 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 25 ; História (São Paulo) Volume 25 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 26 ; História (São Paulo) Volume 26 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 27 ; História (São Paulo) Volume 27 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 28 ; História (São Paulo) Volume 28 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 29 ; História (São Paulo) Volume 29 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 30 ; História (São Paulo) Volume 30 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 31 ; História (São Paulo) Volume 31 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 32 ; História (São Paulo) Volume 32 ; 2013 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2014 ; 33 ; História (São Paulo) Volume 33 ; 2014 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2015 ; 34 ; História (São Paulo) Volume 34 ; 2015 ; reingest1.clockss.org:8082 >
+    {
+
+      param[base_url] = http://www.scielo.br/
+  
+      au < manifest ; exists ; 2003 ; 22 ; História (São Paulo) Volume 22 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 23 ; História (São Paulo) Volume 23 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 24 ; História (São Paulo) Volume 24 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 25 ; História (São Paulo) Volume 25 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 26 ; História (São Paulo) Volume 26 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 27 ; História (São Paulo) Volume 27 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 28 ; História (São Paulo) Volume 28 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 29 ; História (São Paulo) Volume 29 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 30 ; História (São Paulo) Volume 30 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 31 ; História (São Paulo) Volume 31 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; 32 ; História (São Paulo) Volume 32 ; 2013 ; reingest3.clockss.org:8083 >
+      au < crawling ; exists ; 2014 ; 33 ; História (São Paulo) Volume 33 ; 2014 ; reingest4.clockss.org:8082 >
+      au < crawling ; exists ; 2015 ; 34 ; História (São Paulo) Volume 34 ; 2015 ; reingest1.clockss.org:8082 >
+  
+    }
+
+    {
+
+      param[base_url] = http://socialsciences.scielo.org/
+
+      au < manifest ; exists ; 2006 ; 1-2 ; História (São Paulo) Special Edition Volume 1-2 ; 2006 ; >
+      au < manifest ; exists ; 2008 ; 3 ; História (São Paulo) Special Edition Volume 3 ; 2008 ; >
+      au < manifest ; exists ; 2010 ; 4 ; História (São Paulo) Special Edition Volume 4 ; 2010 ; >
+
+    }
 
   }
 
@@ -11041,26 +11147,42 @@
       eissn = 1806-9983
     >
 
-    param[base_url] = http://www.scielo.br/
     param[journal_issn] = 0104-7183
 
-    au < manifest ; exists ; 1999 ; 5 ; Horizontes Antropológicos Volume 5 ; 1999 ; >
-    au < manifest ; exists ; 2000 ; 6 ; Horizontes Antropológicos Volume 6 ; 2000 ; >
-    au < manifest ; exists ; 2001 ; 7 ; Horizontes Antropológicos Volume 7 ; 2001 ; >
-    au < manifest ; exists ; 2002 ; 8 ; Horizontes Antropológicos Volume 8 ; 2002 ; >
-    au < manifest ; exists ; 2003 ; 9 ; Horizontes Antropológicos Volume 9 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; 10 ; Horizontes Antropológicos Volume 10 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; 11 ; Horizontes Antropológicos Volume 11 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 12 ; Horizontes Antropológicos Volume 12 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 13 ; Horizontes Antropológicos Volume 13 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 14 ; Horizontes Antropológicos Volume 14 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 15 ; Horizontes Antropológicos Volume 15 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 16 ; Horizontes Antropológicos Volume 16 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 17 ; Horizontes Antropológicos Volume 17 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 18 ; Horizontes Antropológicos Volume 18 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 19 ; Horizontes Antropológicos Volume 19 ; 2013 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2014 ; 20 ; Horizontes Antropológicos Volume 20 ; 2014 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2015 ; 21 ; Horizontes Antropológicos Volume 21 ; 2015 ; reingest2.clockss.org:8085 >
+    {
+
+      param[base_url] = http://www.scielo.br/
+  
+      au < manifest ; exists ; 1999 ; 5 ; Horizontes Antropológicos Volume 5 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; 6 ; Horizontes Antropológicos Volume 6 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; 7 ; Horizontes Antropológicos Volume 7 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; 8 ; Horizontes Antropológicos Volume 8 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; 9 ; Horizontes Antropológicos Volume 9 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 10 ; Horizontes Antropológicos Volume 10 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 11 ; Horizontes Antropológicos Volume 11 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 12 ; Horizontes Antropológicos Volume 12 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 13 ; Horizontes Antropológicos Volume 13 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 14 ; Horizontes Antropológicos Volume 14 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 15 ; Horizontes Antropológicos Volume 15 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 16 ; Horizontes Antropológicos Volume 16 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 17 ; Horizontes Antropológicos Volume 17 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 18 ; Horizontes Antropológicos Volume 18 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; 19 ; Horizontes Antropológicos Volume 19 ; 2013 ; reingest4.clockss.org:8082 >
+      au < crawling ; exists ; 2014 ; 20 ; Horizontes Antropológicos Volume 20 ; 2014 ; reingest1.clockss.org:8082 >
+      au < crawling ; exists ; 2015 ; 21 ; Horizontes Antropológicos Volume 21 ; 2015 ; reingest2.clockss.org:8085 >
+  
+    }
+
+    {
+
+      param[base_url] = http://socialsciences.scielo.org/
+
+      au < manifest ; exists ; 2006 ; 1-2 ; Horizontes Antropológicos Special Edition Volume 1-2 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 3 ; Horizontes Antropológicos Special Edition Volume 3 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 4 ; Horizontes Antropológicos Special Edition Volume 4 ; 2008 ; >
+      au < manifest ; exists ; 2010 ; 5 ; Horizontes Antropológicos Special Edition Volume 5 ; 2010 ; >
+
+    }
 
   }
 
@@ -11766,23 +11888,36 @@
       issn = 0121-5051
     >
 
-    param[base_url] = http://www.scielo.org.co/
     param[journal_issn] = 0121-5051
 
-    au < manifest ; exists ; 2002 ; 12 ; Innovar Volume 12 ; 2002 ; >
-    au < manifest ; exists ; 2003 ; 13 ; Innovar Volume 13 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; 14 ; Innovar Volume 14 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; 15 ; Innovar Volume 15 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 16 ; Innovar Volume 16 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 17 ; Innovar Volume 17 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 18 ; Innovar Volume 18 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 19 ; Innovar Volume 19 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 20 ; Innovar Volume 20 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 21 ; Innovar Volume 21 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 22 ; Innovar Volume 22 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 23 ; Innovar Volume 23 ; 2013 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2014 ; 24 ; Innovar Volume 24 ; 2014 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2015 ; 25 ; Innovar Volume 25 ; 2015 ; reingest2.clockss.org:8085 >
+    {
+
+      param[base_url] = http://www.scielo.org.co/
+  
+      au < manifest ; exists ; 2002 ; 12 ; Innovar Volume 12 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; 13 ; Innovar Volume 13 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 14 ; Innovar Volume 14 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 15 ; Innovar Volume 15 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 16 ; Innovar Volume 16 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 17 ; Innovar Volume 17 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 18 ; Innovar Volume 18 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 19 ; Innovar Volume 19 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 20 ; Innovar Volume 20 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 21 ; Innovar Volume 21 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 22 ; Innovar Volume 22 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; 23 ; Innovar Volume 23 ; 2013 ; reingest4.clockss.org:8082 >
+      au < crawling ; exists ; 2014 ; 24 ; Innovar Volume 24 ; 2014 ; reingest1.clockss.org:8082 >
+      au < crawling ; exists ; 2015 ; 25 ; Innovar Volume 25 ; 2015 ; reingest2.clockss.org:8085 >
+  
+    }
+
+    {
+
+      param[base_url] = http://socialsciences.scielo.org/
+
+      au < manifest ; exists ; 2008 ; 1 ; Innovar Special Edition Volume 1 ; 2008 ; >
+
+    }
 
   }
 
@@ -11907,29 +12042,45 @@
       eissn = 1807-5762
     >
 
-    param[base_url] = http://www.scielo.br/
     param[journal_issn] = 1414-3283
 
-    au < manifest ; exists ; 1997 ; 1 ; Interface - Comunicação, Saúde, Educação Volume 1 ; 1997 ; >
-    au < manifest ; exists ; 1998 ; 2 ; Interface - Comunicação, Saúde, Educação Volume 2 ; 1998 ; >
-    au < manifest ; exists ; 1999 ; 3 ; Interface - Comunicação, Saúde, Educação Volume 3 ; 1999 ; >
-    au < manifest ; exists ; 2000 ; 4 ; Interface - Comunicação, Saúde, Educação Volume 4 ; 2000 ; >
-    au < manifest ; exists ; 2001 ; 5 ; Interface - Comunicação, Saúde, Educação Volume 5 ; 2001 ; >
-    au < manifest ; exists ; 2002 ; 6 ; Interface - Comunicação, Saúde, Educação Volume 6 ; 2002 ; >
-    au < manifest ; exists ; 2003 ; 7 ; Interface - Comunicação, Saúde, Educação Volume 7 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; 8 ; Interface - Comunicação, Saúde, Educação Volume 8 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; 9 ; Interface - Comunicação, Saúde, Educação Volume 9 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 10 ; Interface - Comunicação, Saúde, Educação Volume 10 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 11 ; Interface - Comunicação, Saúde, Educação Volume 11 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 12 ; Interface - Comunicação, Saúde, Educação Volume 12 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 13 ; Interface - Comunicação, Saúde, Educação Volume 13 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 14 ; Interface - Comunicação, Saúde, Educação Volume 14 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 15 ; Interface - Comunicação, Saúde, Educação Volume 15 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 16 ; Interface - Comunicação, Saúde, Educação Volume 16 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 17 ; Interface - Comunicação, Saúde, Educação Volume 17 ; 2013 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2014 ; 18 ; Interface - Comunicação, Saúde, Educação Volume 18 ; 2014 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2015 ; 19 ; Interface - Comunicação, Saúde, Educação Volume 19 ; 2015 ; reingest1.clockss.org:8082 >
-    au < manifest ; exists ; 2016 ; 20 ; Interface - Comunicação, Saúde, Educação Volume 20 ; 2016 ; >
+    {
+
+      param[base_url] = http://www.scielo.br/
+  
+      au < manifest ; exists ; 1997 ; 1 ; Interface - Comunicação, Saúde, Educação Volume 1 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; 2 ; Interface - Comunicação, Saúde, Educação Volume 2 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; 3 ; Interface - Comunicação, Saúde, Educação Volume 3 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; 4 ; Interface - Comunicação, Saúde, Educação Volume 4 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; 5 ; Interface - Comunicação, Saúde, Educação Volume 5 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; 6 ; Interface - Comunicação, Saúde, Educação Volume 6 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; 7 ; Interface - Comunicação, Saúde, Educação Volume 7 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 8 ; Interface - Comunicação, Saúde, Educação Volume 8 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 9 ; Interface - Comunicação, Saúde, Educação Volume 9 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 10 ; Interface - Comunicação, Saúde, Educação Volume 10 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 11 ; Interface - Comunicação, Saúde, Educação Volume 11 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 12 ; Interface - Comunicação, Saúde, Educação Volume 12 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 13 ; Interface - Comunicação, Saúde, Educação Volume 13 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 14 ; Interface - Comunicação, Saúde, Educação Volume 14 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 15 ; Interface - Comunicação, Saúde, Educação Volume 15 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 16 ; Interface - Comunicação, Saúde, Educação Volume 16 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; 17 ; Interface - Comunicação, Saúde, Educação Volume 17 ; 2013 ; reingest3.clockss.org:8083 >
+      au < crawling ; exists ; 2014 ; 18 ; Interface - Comunicação, Saúde, Educação Volume 18 ; 2014 ; reingest4.clockss.org:8082 >
+      au < crawling ; exists ; 2015 ; 19 ; Interface - Comunicação, Saúde, Educação Volume 19 ; 2015 ; reingest1.clockss.org:8082 >
+      au < manifest ; exists ; 2016 ; 20 ; Interface - Comunicação, Saúde, Educação Volume 20 ; 2016 ; >
+  
+    }
+
+    {
+
+      param[base_url] = http://socialsciences.scielo.org/
+
+      au < manifest ; exists ; 2006 ; 1-2 ; Interface - Comunicação, Saúde, Educação Special Edition Volume 1-2 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 3 ; Interface - Comunicação, Saúde, Educação Special Edition Volume 3 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 4 ; Interface - Comunicação, Saúde, Educação Special Edition Volume 4 ; 2008 ; >
+      au < manifest ; exists ; 2010 ; 5 ; Interface - Comunicação, Saúde, Educação Special Edition Volume 5 ; 2010 ; >
+
+    }
 
   }
 
@@ -13432,24 +13583,39 @@
       eissn = 1981-5336
     >
 
-    param[base_url] = http://www.scielo.br/
     param[journal_issn] = 0100-512X
 
-    au < manifest ; exists ; 2001 ; 42 ; Kriterion: Revista de Filosofia Volume 42 ; 2001 ; >
-    au < manifest ; exists ; 2002 ; 43 ; Kriterion: Revista de Filosofia Volume 43 ; 2002 ; >
-    au < manifest ; exists ; 2003 ; 44 ; Kriterion: Revista de Filosofia Volume 44 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; 45 ; Kriterion: Revista de Filosofia Volume 45 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; 46 ; Kriterion: Revista de Filosofia Volume 46 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 47 ; Kriterion: Revista de Filosofia Volume 47 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 48 ; Kriterion: Revista de Filosofia Volume 48 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 49 ; Kriterion: Revista de Filosofia Volume 49 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 50 ; Kriterion: Revista de Filosofia Volume 50 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 51 ; Kriterion: Revista de Filosofia Volume 51 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 52 ; Kriterion: Revista de Filosofia Volume 52 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 53 ; Kriterion: Revista de Filosofia Volume 53 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 54 ; Kriterion: Revista de Filosofia Volume 54 ; 2013 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2014 ; 55 ; Kriterion: Revista de Filosofia Volume 55 ; 2014 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2015 ; 56 ; Kriterion: Revista de Filosofia Volume 56 ; 2015 ; reingest3.clockss.org:8083 >
+    {
+
+      param[base_url] = http://www.scielo.br/
+  
+      au < manifest ; exists ; 2001 ; 42 ; Kriterion: Revista de Filosofia Volume 42 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; 43 ; Kriterion: Revista de Filosofia Volume 43 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; 44 ; Kriterion: Revista de Filosofia Volume 44 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 45 ; Kriterion: Revista de Filosofia Volume 45 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 46 ; Kriterion: Revista de Filosofia Volume 46 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 47 ; Kriterion: Revista de Filosofia Volume 47 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 48 ; Kriterion: Revista de Filosofia Volume 48 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 49 ; Kriterion: Revista de Filosofia Volume 49 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 50 ; Kriterion: Revista de Filosofia Volume 50 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 51 ; Kriterion: Revista de Filosofia Volume 51 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 52 ; Kriterion: Revista de Filosofia Volume 52 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 53 ; Kriterion: Revista de Filosofia Volume 53 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; 54 ; Kriterion: Revista de Filosofia Volume 54 ; 2013 ; reingest1.clockss.org:8082 >
+      au < crawling ; exists ; 2014 ; 55 ; Kriterion: Revista de Filosofia Volume 55 ; 2014 ; reingest2.clockss.org:8085 >
+      au < crawling ; exists ; 2015 ; 56 ; Kriterion: Revista de Filosofia Volume 56 ; 2015 ; reingest3.clockss.org:8083 >
+  
+    }
+
+    {
+
+      param[base_url] = http://socialsciences.scielo.org/
+
+      au < manifest ; exists ; 2006 ; 1-2 ; Kriterion: Revista de Filosofia Special Edition Volume 1-2 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 3 ; Kriterion: Revista de Filosofia Special Edition Volume 3 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 4 ; Kriterion: Revista de Filosofia Special Edition Volume 4 ; 2008 ; >
+
+    }
 
   }
 
@@ -14163,29 +14329,45 @@
       eissn = 1678-4944
     >
 
-    param[base_url] = http://www.scielo.br/
     param[journal_issn] = 0104-9313
 
-    au < manifest ; exists ; 1996 ; 2 ; Mana Volume 2 ; 1996 ; >
-    au < manifest ; exists ; 1997 ; 3 ; Mana Volume 3 ; 1997 ; >
-    au < manifest ; exists ; 1998 ; 4 ; Mana Volume 4 ; 1998 ; >
-    au < manifest ; exists ; 1999 ; 5 ; Mana Volume 5 ; 1999 ; >
-    au < manifest ; exists ; 2000 ; 6 ; Mana Volume 6 ; 2000 ; >
-    au < manifest ; exists ; 2001 ; 7 ; Mana Volume 7 ; 2001 ; >
-    au < manifest ; exists ; 2002 ; 8 ; Mana Volume 8 ; 2002 ; >
-    au < manifest ; exists ; 2003 ; 9 ; Mana Volume 9 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; 10 ; Mana Volume 10 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; 11 ; Mana Volume 11 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 12 ; Mana Volume 12 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 13 ; Mana Volume 13 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 14 ; Mana Volume 14 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 15 ; Mana Volume 15 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 16 ; Mana Volume 16 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 17 ; Mana Volume 17 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 18 ; Mana Volume 18 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 19 ; Mana Volume 19 ; 2013 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2014 ; 20 ; Mana Volume 20 ; 2014 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2015 ; 21 ; Mana Volume 21 ; 2015 ; reingest4.clockss.org:8082 >
+    {
+
+      param[base_url] = http://www.scielo.br/
+  
+      au < manifest ; exists ; 1996 ; 2 ; Mana Volume 2 ; 1996 ; >
+      au < manifest ; exists ; 1997 ; 3 ; Mana Volume 3 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; 4 ; Mana Volume 4 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; 5 ; Mana Volume 5 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; 6 ; Mana Volume 6 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; 7 ; Mana Volume 7 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; 8 ; Mana Volume 8 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; 9 ; Mana Volume 9 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 10 ; Mana Volume 10 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 11 ; Mana Volume 11 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 12 ; Mana Volume 12 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 13 ; Mana Volume 13 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 14 ; Mana Volume 14 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 15 ; Mana Volume 15 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 16 ; Mana Volume 16 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 17 ; Mana Volume 17 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 18 ; Mana Volume 18 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; 19 ; Mana Volume 19 ; 2013 ; reingest2.clockss.org:8085 >
+      au < crawling ; exists ; 2014 ; 20 ; Mana Volume 20 ; 2014 ; reingest3.clockss.org:8083 >
+      au < crawling ; exists ; 2015 ; 21 ; Mana Volume 21 ; 2015 ; reingest4.clockss.org:8082 >
+  
+    }
+
+    {
+
+      param[base_url] = http://socialsciences.scielo.org/
+
+      au < manifest ; exists ; 2006 ; 1-2 ; Mana Special Edition Volume 1-2 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 3 ; Mana Special Edition Volume 3 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 4 ; Mana Special Edition Volume 4 ; 2008 ; >
+      au < manifest ; exists ; 2010 ; 5 ; Mana Special Edition Volume 5 ; 2010 ; >
+
+    }
 
   }
 
@@ -15236,20 +15418,36 @@
       eissn = 1980-5403
     >
 
-    param[base_url] = http://www.scielo.br/
     param[journal_issn] = 0101-3300
 
-    au < manifest ; exists ; 2005 ; 2005 ; Novos Estudos - CEBRAP Volume 2005 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 2006 ; Novos Estudos - CEBRAP Volume 2006 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 2007 ; Novos Estudos - CEBRAP Volume 2007 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Novos Estudos - CEBRAP Volume 2008 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Novos Estudos - CEBRAP Volume 2009 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Novos Estudos - CEBRAP Volume 2010 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Novos Estudos - CEBRAP Volume 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Novos Estudos - CEBRAP Volume 2012 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Novos Estudos - CEBRAP Volume 2013 ; 2013 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2014 ; 2014 ; Novos Estudos - CEBRAP Volume 2014 ; 2014 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2015 ; 2015 ; Novos Estudos - CEBRAP Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
+    {
+
+      param[base_url] = http://www.scielo.br/
+  
+      au < manifest ; exists ; 2005 ; 2005 ; Novos Estudos - CEBRAP Volume 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Novos Estudos - CEBRAP Volume 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Novos Estudos - CEBRAP Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Novos Estudos - CEBRAP Volume 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Novos Estudos - CEBRAP Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Novos Estudos - CEBRAP Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Novos Estudos - CEBRAP Volume 2011 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; Novos Estudos - CEBRAP Volume 2012 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Novos Estudos - CEBRAP Volume 2013 ; 2013 ; reingest3.clockss.org:8083 >
+      au < crawling ; exists ; 2014 ; 2014 ; Novos Estudos - CEBRAP Volume 2014 ; 2014 ; reingest4.clockss.org:8082 >
+      au < crawling ; exists ; 2015 ; 2015 ; Novos Estudos - CEBRAP Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
+  
+    }
+
+    {
+
+      param[base_url] = http://socialsciences.scielo.org/
+
+      au < manifest ; exists ; 2005 ; 1 ; Novos Estudos - CEBRAP Special Edition Volume 1 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 2 ; Novos Estudos - CEBRAP Special Edition Volume 2 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 3 ; Novos Estudos - CEBRAP Special Edition Volume 3 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 4 ; Novos Estudos - CEBRAP Special Edition Volume 4 ; 2008 ; >
+
+    }
 
   }
 
@@ -15492,16 +15690,29 @@
       issn = 1012-1587
     >
 
-    param[base_url] = http://www.scielo.org.ve/
     param[journal_issn] = 1012-1587
 
-    au < manifest ; exists ; 2003 ; 19 ; Opción Volume 19 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; 20 ; Opción Volume 20 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; 21 ; Opción Volume 21 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 22 ; Opción Volume 22 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 23 ; Opción Volume 23 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 24 ; Opción Volume 24 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 25 ; Opción Volume 25 ; 2009 ; >
+    {
+
+      param[base_url] = http://www.scielo.org.ve/
+  
+      au < manifest ; exists ; 2003 ; 19 ; Opción Volume 19 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 20 ; Opción Volume 20 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 21 ; Opción Volume 21 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 22 ; Opción Volume 22 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 23 ; Opción Volume 23 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 24 ; Opción Volume 24 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 25 ; Opción Volume 25 ; 2009 ; >
+  
+    }
+
+    {
+
+      param[base_url] = http://socialsciences.scielo.org/
+
+      au < manifest ; exists ; 2006 ; 1 ; Opción Special Edition Volume 1 ; 2006 ; >
+
+    }
 
   }
 
@@ -17999,18 +18210,32 @@
       eissn = 1984-0438
     >
 
-    param[base_url] = http://www.scielo.br/
     param[journal_issn] = 0100-8587
 
-    au < manifest ; exists ; 2007 ; 27 ; Religião & Sociedade Volume 27 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 28 ; Religião & Sociedade Volume 28 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 29 ; Religião & Sociedade Volume 29 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 30 ; Religião & Sociedade Volume 30 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 31 ; Religião & Sociedade Volume 31 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 32 ; Religião & Sociedade Volume 32 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 33 ; Religião & Sociedade Volume 33 ; 2013 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2014 ; 34 ; Religião & Sociedade Volume 34 ; 2014 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2015 ; 35 ; Religião & Sociedade Volume 35 ; 2015 ; reingest1.clockss.org:8082 >
+    {
+
+      param[base_url] = http://www.scielo.br/
+  
+      au < manifest ; exists ; 2007 ; 27 ; Religião & Sociedade Volume 27 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 28 ; Religião & Sociedade Volume 28 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 29 ; Religião & Sociedade Volume 29 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 30 ; Religião & Sociedade Volume 30 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 31 ; Religião & Sociedade Volume 31 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 32 ; Religião & Sociedade Volume 32 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; 33 ; Religião & Sociedade Volume 33 ; 2013 ; reingest3.clockss.org:8083 >
+      au < crawling ; exists ; 2014 ; 34 ; Religião & Sociedade Volume 34 ; 2014 ; reingest4.clockss.org:8082 >
+      au < crawling ; exists ; 2015 ; 35 ; Religião & Sociedade Volume 35 ; 2015 ; reingest1.clockss.org:8082 >
+  
+    }
+
+    {
+
+      param[base_url] = http://socialsciences.scielo.org/
+
+      au < manifest ; exists ; 2006 ; 1-2 ; Religião & Sociedade Special Edition Volume 1-2 ; 2006 ; >
+      au < manifest ; exists ; 2010 ; 3 ; Religião & Sociedade Special Edition Volume 3 ; 2010 ; >
+
+    }
 
   }
 
@@ -18657,28 +18882,45 @@
       eissn = 1806-9053
     >
 
-    param[base_url] = http://www.scielo.br/
     param[journal_issn] = 0102-6909
 
-    au < manifest ; exists ; 1997 ; 12 ; Revista Brasileira de Ciências Sociais Volume 12 ; 1997 ; >
-    au < manifest ; exists ; 1998 ; 13 ; Revista Brasileira de Ciências Sociais Volume 13 ; 1998 ; >
-    au < manifest ; exists ; 1999 ; 14 ; Revista Brasileira de Ciências Sociais Volume 14 ; 1999 ; >
-    au < manifest ; exists ; 2000 ; 15 ; Revista Brasileira de Ciências Sociais Volume 15 ; 2000 ; >
-    au < manifest ; exists ; 2001 ; 16 ; Revista Brasileira de Ciências Sociais Volume 16 ; 2001 ; >
-    au < manifest ; exists ; 2002 ; 17 ; Revista Brasileira de Ciências Sociais Volume 17 ; 2002 ; >
-    au < manifest ; exists ; 2003 ; 18 ; Revista Brasileira de Ciências Sociais Volume 18 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; 19 ; Revista Brasileira de Ciências Sociais Volume 19 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; 20 ; Revista Brasileira de Ciências Sociais Volume 20 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 21 ; Revista Brasileira de Ciências Sociais Volume 21 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 22 ; Revista Brasileira de Ciências Sociais Volume 22 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 23 ; Revista Brasileira de Ciências Sociais Volume 23 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 24 ; Revista Brasileira de Ciências Sociais Volume 24 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 25 ; Revista Brasileira de Ciências Sociais Volume 25 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 26 ; Revista Brasileira de Ciências Sociais Volume 26 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 27 ; Revista Brasileira de Ciências Sociais Volume 27 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 28 ; Revista Brasileira de Ciências Sociais Volume 28 ; 2013 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2014 ; 29 ; Revista Brasileira de Ciências Sociais Volume 29 ; 2014 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2015 ; 30 ; Revista Brasileira de Ciências Sociais Volume 30 ; 2015 ; reingest3.clockss.org:8083 >
+    {
+
+      param[base_url] = http://www.scielo.br/
+  
+      au < manifest ; exists ; 1997 ; 12 ; Revista Brasileira de Ciências Sociais Volume 12 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; 13 ; Revista Brasileira de Ciências Sociais Volume 13 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; 14 ; Revista Brasileira de Ciências Sociais Volume 14 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; 15 ; Revista Brasileira de Ciências Sociais Volume 15 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; 16 ; Revista Brasileira de Ciências Sociais Volume 16 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; 17 ; Revista Brasileira de Ciências Sociais Volume 17 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; 18 ; Revista Brasileira de Ciências Sociais Volume 18 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 19 ; Revista Brasileira de Ciências Sociais Volume 19 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 20 ; Revista Brasileira de Ciências Sociais Volume 20 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 21 ; Revista Brasileira de Ciências Sociais Volume 21 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 22 ; Revista Brasileira de Ciências Sociais Volume 22 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 23 ; Revista Brasileira de Ciências Sociais Volume 23 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 24 ; Revista Brasileira de Ciências Sociais Volume 24 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 25 ; Revista Brasileira de Ciências Sociais Volume 25 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 26 ; Revista Brasileira de Ciências Sociais Volume 26 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 27 ; Revista Brasileira de Ciências Sociais Volume 27 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; 28 ; Revista Brasileira de Ciências Sociais Volume 28 ; 2013 ; reingest1.clockss.org:8082 >
+      au < crawling ; exists ; 2014 ; 29 ; Revista Brasileira de Ciências Sociais Volume 29 ; 2014 ; reingest2.clockss.org:8085 >
+      au < crawling ; exists ; 2015 ; 30 ; Revista Brasileira de Ciências Sociais Volume 30 ; 2015 ; reingest3.clockss.org:8083 >
+  
+    }
+
+    {
+
+      param[base_url] = http://socialsciences.scielo.org/
+
+      au < manifest ; exists ; 2005 ; 1 ; Revista Brasileira de Ciências Sociais Special Edition Volume 1 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 2 ; Revista Brasileira de Ciências Sociais Special Edition Volume 2 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 3 ; Revista Brasileira de Ciências Sociais Special Edition Volume 3 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 4 ; Revista Brasileira de Ciências Sociais Special Edition Volume 4 ; 2008 ; >
+      au < manifest ; exists ; 2010 ; 5 ; Revista Brasileira de Ciências Sociais Special Edition Volume 5 ; 2010 ; >
+
+    }
 
   }
 
@@ -22629,26 +22871,39 @@
       issn = 0124-5996
     >
 
-    param[base_url] = http://www.scielo.org.co/
     param[journal_issn] = 0124-5996
 
-    au < manifest ; exists ; 1999 ; 1 ; Revista de Economía Institucional Volume 1 ; 1999 ; >
-    au < manifest ; exists ; 2000 ; 2 ; Revista de Economía Institucional Volume 2 ; 2000 ; >
-    au < manifest ; exists ; 2001 ; 3 ; Revista de Economía Institucional Volume 3 ; 2001 ; >
-    au < manifest ; exists ; 2002 ; 4 ; Revista de Economía Institucional Volume 4 ; 2002 ; >
-    au < manifest ; exists ; 2003 ; 5 ; Revista de Economía Institucional Volume 5 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; 6 ; Revista de Economía Institucional Volume 6 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; 7 ; Revista de Economía Institucional Volume 7 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 8 ; Revista de Economía Institucional Volume 8 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 9 ; Revista de Economía Institucional Volume 9 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 10 ; Revista de Economía Institucional Volume 10 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 11 ; Revista de Economía Institucional Volume 11 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 12 ; Revista de Economía Institucional Volume 12 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 13 ; Revista de Economía Institucional Volume 13 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 14 ; Revista de Economía Institucional Volume 14 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 15 ; Revista de Economía Institucional Volume 15 ; 2013 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2014 ; 16 ; Revista de Economía Institucional Volume 16 ; 2014 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2015 ; 17 ; Revista de Economía Institucional Volume 17 ; 2015 ; reingest2.clockss.org:8085 >
+    {
+
+      param[base_url] = http://www.scielo.org.co/
+  
+      au < manifest ; exists ; 1999 ; 1 ; Revista de Economía Institucional Volume 1 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; 2 ; Revista de Economía Institucional Volume 2 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; 3 ; Revista de Economía Institucional Volume 3 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; 4 ; Revista de Economía Institucional Volume 4 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; 5 ; Revista de Economía Institucional Volume 5 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 6 ; Revista de Economía Institucional Volume 6 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 7 ; Revista de Economía Institucional Volume 7 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 8 ; Revista de Economía Institucional Volume 8 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 9 ; Revista de Economía Institucional Volume 9 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 10 ; Revista de Economía Institucional Volume 10 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 11 ; Revista de Economía Institucional Volume 11 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 12 ; Revista de Economía Institucional Volume 12 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 13 ; Revista de Economía Institucional Volume 13 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 14 ; Revista de Economía Institucional Volume 14 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; 15 ; Revista de Economía Institucional Volume 15 ; 2013 ; reingest4.clockss.org:8082 >
+      au < crawling ; exists ; 2014 ; 16 ; Revista de Economía Institucional Volume 16 ; 2014 ; reingest1.clockss.org:8082 >
+      au < crawling ; exists ; 2015 ; 17 ; Revista de Economía Institucional Volume 17 ; 2015 ; reingest2.clockss.org:8085 >
+  
+    }
+
+    {
+
+      param[base_url] = http://socialsciences.scielo.org/
+
+      au < manifest ; exists ; 2008 ; 1 ; Revista de Economía Institucional Special Edition Volume 1 ; 2008 ; >
+
+    }
 
   }
 
@@ -24183,26 +24438,41 @@
       eissn = 1678-9873
     >
 
-    param[base_url] = http://www.scielo.br/
     param[journal_issn] = 0104-4478
 
-    au < manifest ; exists ; 1999 ; 1999 ; Revista de Sociologia e Política Volume 1999 ; 1999 ; >
-    au < manifest ; exists ; 2000 ; 2000 ; Revista de Sociologia e Política Volume 2000 ; 2000 ; >
-    au < manifest ; exists ; 2001 ; 2001 ; Revista de Sociologia e Política Volume 2001 ; 2001 ; >
-    au < manifest ; exists ; 2002 ; 2002 ; Revista de Sociologia e Política Volume 2002 ; 2002 ; >
-    au < manifest ; exists ; 2003 ; 2003 ; Revista de Sociologia e Política Volume 2003 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; 2004 ; Revista de Sociologia e Política Volume 2004 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; 2005 ; Revista de Sociologia e Política Volume 2005 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 2006 ; Revista de Sociologia e Política Volume 2006 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 2007 ; Revista de Sociologia e Política Volume 2007 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 16 ; Revista de Sociologia e Política Volume 16 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 17 ; Revista de Sociologia e Política Volume 17 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 18 ; Revista de Sociologia e Política Volume 18 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 19 ; Revista de Sociologia e Política Volume 19 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 20 ; Revista de Sociologia e Política Volume 20 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 21 ; Revista de Sociologia e Política Volume 21 ; 2013 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2014 ; 22 ; Revista de Sociologia e Política Volume 22 ; 2014 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2015 ; 23 ; Revista de Sociologia e Política Volume 23 ; 2015 ; reingest2.clockss.org:8085 >
+    {
+
+      param[base_url] = http://www.scielo.br/
+  
+      au < manifest ; exists ; 1999 ; 1999 ; Revista de Sociologia e Política Volume 1999 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; Revista de Sociologia e Política Volume 2000 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Revista de Sociologia e Política Volume 2001 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Revista de Sociologia e Política Volume 2002 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Revista de Sociologia e Política Volume 2003 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Revista de Sociologia e Política Volume 2004 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Revista de Sociologia e Política Volume 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Revista de Sociologia e Política Volume 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Revista de Sociologia e Política Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 16 ; Revista de Sociologia e Política Volume 16 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 17 ; Revista de Sociologia e Política Volume 17 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 18 ; Revista de Sociologia e Política Volume 18 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 19 ; Revista de Sociologia e Política Volume 19 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 20 ; Revista de Sociologia e Política Volume 20 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; 21 ; Revista de Sociologia e Política Volume 21 ; 2013 ; reingest4.clockss.org:8082 >
+      au < crawling ; exists ; 2014 ; 22 ; Revista de Sociologia e Política Volume 22 ; 2014 ; reingest1.clockss.org:8082 >
+      au < crawling ; exists ; 2015 ; 23 ; Revista de Sociologia e Política Volume 23 ; 2015 ; reingest2.clockss.org:8085 >
+  
+    }
+
+    {
+
+      param[base_url] = http://socialsciences.scielo.org/
+
+      au < manifest ; exists ; 2006 ; 1-2 ; Revista de Sociologia e Política Special Edition Volume 1-2 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 3 ; Revista de Sociologia e Política Special Edition Volume 3 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 4 ; Revista de Sociologia e Política Special Edition Volume 4 ; 2008 ; >
+
+    }
 
   }
 
@@ -24664,24 +24934,40 @@
       issn = 0104-026X
     >
 
-    param[base_url] = http://www.scielo.br/
     param[journal_issn] = 0104-026X
 
-    au < manifest ; exists ; 2001 ; 9 ; Revista Estudos Feministas Volume 9 ; 2001 ; >
-    au < manifest ; exists ; 2002 ; 10 ; Revista Estudos Feministas Volume 10 ; 2002 ; >
-    au < manifest ; exists ; 2003 ; 11 ; Revista Estudos Feministas Volume 11 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; 12 ; Revista Estudos Feministas Volume 12 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; 13 ; Revista Estudos Feministas Volume 13 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 14 ; Revista Estudos Feministas Volume 14 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 15 ; Revista Estudos Feministas Volume 15 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 16 ; Revista Estudos Feministas Volume 16 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 17 ; Revista Estudos Feministas Volume 17 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 18 ; Revista Estudos Feministas Volume 18 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 19 ; Revista Estudos Feministas Volume 19 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 20 ; Revista Estudos Feministas Volume 20 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 21 ; Revista Estudos Feministas Volume 21 ; 2013 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2014 ; 22 ; Revista Estudos Feministas Volume 22 ; 2014 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2015 ; 23 ; Revista Estudos Feministas Volume 23 ; 2015 ; reingest3.clockss.org:8083 >
+    {
+
+      param[base_url] = http://www.scielo.br/
+  
+      au < manifest ; exists ; 2001 ; 9 ; Revista Estudos Feministas Volume 9 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; 10 ; Revista Estudos Feministas Volume 10 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; 11 ; Revista Estudos Feministas Volume 11 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 12 ; Revista Estudos Feministas Volume 12 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 13 ; Revista Estudos Feministas Volume 13 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 14 ; Revista Estudos Feministas Volume 14 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 15 ; Revista Estudos Feministas Volume 15 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 16 ; Revista Estudos Feministas Volume 16 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 17 ; Revista Estudos Feministas Volume 17 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 18 ; Revista Estudos Feministas Volume 18 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 19 ; Revista Estudos Feministas Volume 19 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 20 ; Revista Estudos Feministas Volume 20 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; 21 ; Revista Estudos Feministas Volume 21 ; 2013 ; reingest1.clockss.org:8082 >
+      au < crawling ; exists ; 2014 ; 22 ; Revista Estudos Feministas Volume 22 ; 2014 ; reingest2.clockss.org:8085 >
+      au < crawling ; exists ; 2015 ; 23 ; Revista Estudos Feministas Volume 23 ; 2015 ; reingest3.clockss.org:8083 >
+  
+    }
+
+    {
+
+      param[base_url] = http://socialsciences.scielo.org/
+
+      au < manifest ; exists ; 2006 ; 1-2 ; Revista Estudos Feministas Special Edition Volume 1-2 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 3 ; Revista Estudos Feministas Special Edition Volume 3 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 4 ; Revista Estudos Feministas Special Edition Volume 4 ; 2008 ; >
+      au < manifest ; exists ; 2010 ; 5 ; Revista Estudos Feministas Special Edition Volume 5 ; 2010 ; >
+
+    }
 
   }
 
@@ -28158,25 +28444,41 @@
       eissn = 1807-0337
     >
 
-    param[base_url] = http://www.scielo.br/
     param[journal_issn] = 1517-4522
 
-    au < manifest ; exists ; 2000 ; 2000 ; Sociologias Volume 2000 ; 2000 ; >
-    au < manifest ; exists ; 2001 ; 2001 ; Sociologias Volume 2001 ; 2001 ; >
-    au < manifest ; exists ; 2002 ; 2002 ; Sociologias Volume 2002 ; 2002 ; >
-    au < manifest ; exists ; 2003 ; 2003 ; Sociologias Volume 2003 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; 2004 ; Sociologias Volume 2004 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; 2005 ; Sociologias Volume 2005 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 2006 ; Sociologias Volume 2006 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 2007 ; Sociologias Volume 2007 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Sociologias Volume 2008 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Sociologias Volume 2009 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 12 ; Sociologias Volume 12 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 13 ; Sociologias Volume 13 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 14 ; Sociologias Volume 14 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 15 ; Sociologias Volume 15 ; 2013 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2014 ; 16 ; Sociologias Volume 16 ; 2014 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2015 ; 17 ; Sociologias Volume 17 ; 2015 ; reingest3.clockss.org:8083 >
+    {
+
+      param[base_url] = http://www.scielo.br/
+  
+      au < manifest ; exists ; 2000 ; 2000 ; Sociologias Volume 2000 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Sociologias Volume 2001 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Sociologias Volume 2002 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Sociologias Volume 2003 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Sociologias Volume 2004 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Sociologias Volume 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Sociologias Volume 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Sociologias Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Sociologias Volume 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Sociologias Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 12 ; Sociologias Volume 12 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 13 ; Sociologias Volume 13 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 14 ; Sociologias Volume 14 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; 15 ; Sociologias Volume 15 ; 2013 ; reingest1.clockss.org:8082 >
+      au < crawling ; exists ; 2014 ; 16 ; Sociologias Volume 16 ; 2014 ; reingest2.clockss.org:8085 >
+      au < crawling ; exists ; 2015 ; 17 ; Sociologias Volume 17 ; 2015 ; reingest3.clockss.org:8083 >
+  
+    }
+
+    {
+
+      param[base_url] = http://socialsciences.scielo.org/
+
+      au < manifest ; exists ; 2006 ; 1-2 ; Sociologias Special Edition Volume 1-2 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 3 ; Sociologias Special Edition Volume 3 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 4 ; Sociologias Special Edition Volume 4 ; 2008 ; >
+      au < manifest ; exists ; 2010 ; 5 ; Sociologias Special Edition Volume 5 ; 2010 ; >
+
+    }
 
   }
 
@@ -28719,15 +29021,30 @@
       eissn = 1983-3342
     >
 
-    param[base_url] = http://www.scielo.br/
     param[journal_issn] = 1806-6445
 
-    au < manifest ; exists ; 2004 ; 1 ; Sur. Revista Internacional de Direitos Humanos Volume 1 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; 2 ; Sur. Revista Internacional de Direitos Humanos Volume 2 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 3 ; Sur. Revista Internacional de Direitos Humanos Volume 3 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 4 ; Sur. Revista Internacional de Direitos Humanos Volume 4 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 5 ; Sur. Revista Internacional de Direitos Humanos Volume 5 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 6 ; Sur. Revista Internacional de Direitos Humanos Volume 6 ; 2009 ; >
+    {
+
+      param[base_url] = http://www.scielo.br/
+  
+      au < manifest ; exists ; 2004 ; 1 ; Sur. Revista Internacional de Direitos Humanos Volume 1 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 2 ; Sur. Revista Internacional de Direitos Humanos Volume 2 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 3 ; Sur. Revista Internacional de Direitos Humanos Volume 3 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 4 ; Sur. Revista Internacional de Direitos Humanos Volume 4 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 5 ; Sur. Revista Internacional de Direitos Humanos Volume 5 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 6 ; Sur. Revista Internacional de Direitos Humanos Volume 6 ; 2009 ; >
+  
+    }
+
+    {
+
+      param[base_url] = http://socialsciences.scielo.org/
+
+      au < manifest ; exists ; 2006 ; 1-2 ; Sur. Revista Internacional de Direitos Humanos Special Edition Volume 1-2 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 3 ; Sur. Revista Internacional de Direitos Humanos Special Edition Volume 3 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 4 ; Sur. Revista Internacional de Direitos Humanos Special Edition Volume 4 ; 2008 ; >
+
+    }
 
   }
 
@@ -28994,36 +29311,52 @@
       eissn = 1809-4554
     >
 
-    param[base_url] = http://www.scielo.br/
     param[journal_issn] = 0103-2070
 
-    au < manifest ; exists ; 1989 ; 1 ; Tempo Social Volume 1 ; 1989 ; >
-    au < manifest ; exists ; 1990 ; 2 ; Tempo Social Volume 2 ; 1990 ; >
-    au < manifest ; exists ; 1991 ; 3 ; Tempo Social Volume 3 ; 1991 ; >
-    au < manifest ; exists ; 1992 ; 4 ; Tempo Social Volume 4 ; 1992 ; >
-    au < manifest ; exists ; 1993 ; 5 ; Tempo Social Volume 5 ; 1993 ; >
-    au < manifest ; exists ; 1994 ; 6 ; Tempo Social Volume 6 ; 1994 ; >
-    au < manifest ; exists ; 1995 ; 7 ; Tempo Social Volume 7 ; 1995 ; >
-    au < manifest ; exists ; 1996 ; 8 ; Tempo Social Volume 8 ; 1996 ; >
-    au < manifest ; exists ; 1997 ; 9 ; Tempo Social Volume 9 ; 1997 ; >
-    au < manifest ; exists ; 1998 ; 10 ; Tempo Social Volume 10 ; 1998 ; >
-    au < manifest ; exists ; 1999 ; 11 ; Tempo Social Volume 11 ; 1999 ; >
-    au < manifest ; exists ; 2000 ; 12 ; Tempo Social Volume 12 ; 2000 ; >
-    au < manifest ; exists ; 2001 ; 13 ; Tempo Social Volume 13 ; 2001 ; >
-    au < manifest ; exists ; 2002 ; 14 ; Tempo Social Volume 14 ; 2002 ; >
-    au < manifest ; exists ; 2003 ; 15 ; Tempo Social Volume 15 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; 16 ; Tempo Social Volume 16 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; 17 ; Tempo Social Volume 17 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 18 ; Tempo Social Volume 18 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 19 ; Tempo Social Volume 19 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 20 ; Tempo Social Volume 20 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 21 ; Tempo Social Volume 21 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 22 ; Tempo Social Volume 22 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 23 ; Tempo Social Volume 23 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 24 ; Tempo Social Volume 24 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 25 ; Tempo Social Volume 25 ; 2013 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2014 ; 26 ; Tempo Social Volume 26 ; 2014 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2015 ; 27 ; Tempo Social Volume 27 ; 2015 ; reingest1.clockss.org:8082 >
+    {
+
+      param[base_url] = http://www.scielo.br/
+  
+      au < manifest ; exists ; 1989 ; 1 ; Tempo Social Volume 1 ; 1989 ; >
+      au < manifest ; exists ; 1990 ; 2 ; Tempo Social Volume 2 ; 1990 ; >
+      au < manifest ; exists ; 1991 ; 3 ; Tempo Social Volume 3 ; 1991 ; >
+      au < manifest ; exists ; 1992 ; 4 ; Tempo Social Volume 4 ; 1992 ; >
+      au < manifest ; exists ; 1993 ; 5 ; Tempo Social Volume 5 ; 1993 ; >
+      au < manifest ; exists ; 1994 ; 6 ; Tempo Social Volume 6 ; 1994 ; >
+      au < manifest ; exists ; 1995 ; 7 ; Tempo Social Volume 7 ; 1995 ; >
+      au < manifest ; exists ; 1996 ; 8 ; Tempo Social Volume 8 ; 1996 ; >
+      au < manifest ; exists ; 1997 ; 9 ; Tempo Social Volume 9 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; 10 ; Tempo Social Volume 10 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; 11 ; Tempo Social Volume 11 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; 12 ; Tempo Social Volume 12 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; 13 ; Tempo Social Volume 13 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; 14 ; Tempo Social Volume 14 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; 15 ; Tempo Social Volume 15 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 16 ; Tempo Social Volume 16 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 17 ; Tempo Social Volume 17 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 18 ; Tempo Social Volume 18 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 19 ; Tempo Social Volume 19 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 20 ; Tempo Social Volume 20 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 21 ; Tempo Social Volume 21 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 22 ; Tempo Social Volume 22 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 23 ; Tempo Social Volume 23 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 24 ; Tempo Social Volume 24 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; 25 ; Tempo Social Volume 25 ; 2013 ; reingest3.clockss.org:8083 >
+      au < crawling ; exists ; 2014 ; 26 ; Tempo Social Volume 26 ; 2014 ; reingest4.clockss.org:8082 >
+      au < crawling ; exists ; 2015 ; 27 ; Tempo Social Volume 27 ; 2015 ; reingest1.clockss.org:8082 >
+  
+    }
+
+    {
+
+      param[base_url] = http://socialsciences.scielo.org/
+
+      au < manifest ; exists ; 2005 ; 1 ; Tempo Social Special Edition Volume 1 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 2 ; Tempo Social Special Edition Volume 2 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 3 ; Tempo Social Special Edition Volume 3 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 4 ; Tempo Social Special Edition Volume 4 ; 2008 ; >
+
+    }
 
   }
 
@@ -29274,19 +29607,35 @@
       eissn = 1990-7451
     >
 
-    param[base_url] = http://www.scielo.org.bo/
     param[journal_issn] = 1990-7451
 
-    au < manifest ; exists ; 2006 ; 9 ; Tinkazos Volume 9 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 10 ; Tinkazos Volume 10 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 11 ; Tinkazos Volume 11 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 12 ; Tinkazos Volume 12 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 13 ; Tinkazos Volume 13 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 14 ; Tinkazos Volume 14 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 15 ; Tinkazos Volume 15 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 16 ; Tinkazos Volume 16 ; 2013 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2014 ; 17 ; Tinkazos Volume 17 ; 2014 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2015 ; 18 ; Tinkazos Volume 18 ; 2015 ; reingest3.clockss.org:8083 >
+    {
+
+      param[base_url] = http://www.scielo.org.bo/
+  
+      au < manifest ; exists ; 2006 ; 9 ; Tinkazos Volume 9 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 10 ; Tinkazos Volume 10 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 11 ; Tinkazos Volume 11 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 12 ; Tinkazos Volume 12 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 13 ; Tinkazos Volume 13 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 14 ; Tinkazos Volume 14 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 15 ; Tinkazos Volume 15 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; 16 ; Tinkazos Volume 16 ; 2013 ; reingest1.clockss.org:8082 >
+      au < crawling ; exists ; 2014 ; 17 ; Tinkazos Volume 17 ; 2014 ; reingest2.clockss.org:8085 >
+      au < crawling ; exists ; 2015 ; 18 ; Tinkazos Volume 18 ; 2015 ; reingest3.clockss.org:8083 >
+  
+    }
+
+    {
+
+      param[base_url] = http://socialsciences.scielo.org/
+
+      au < manifest ; exists ; 2005 ; 1 ; Tinkazos Special Edition Volume 1 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 2 ; Tinkazos Special Edition Volume 2 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 3 ; Tinkazos Special Edition Volume 3 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 4 ; Tinkazos Special Edition Volume 4 ; 2008 ; >
+
+    }
 
   }
 
