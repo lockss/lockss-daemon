@@ -97,13 +97,12 @@ public class TestAPSDrupalPlugin extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     
     String starturl[] = {
-        "http://www.example.com/lockss-manifest/vol_303_manifest.html", 
-        "https://www.example.com/lockss-manifest/vol_303_manifest.html", 
+        "http://www.example.com/lockss-manifest/vol_303_manifest.html",
     };
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("American Physiological Society Plugin, Base URL http://www.example.com/, Volume 303",
         au.getName());
-    assertEquals(ListUtil.list(starturl[0], starturl[1]), au.getStartUrls());
+    assertEquals(ListUtil.list(starturl[0]), au.getStartUrls());
   }
   
   public void testGetPluginId() {

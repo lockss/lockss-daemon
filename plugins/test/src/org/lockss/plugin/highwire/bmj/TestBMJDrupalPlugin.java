@@ -94,16 +94,15 @@ public class TestBMJDrupalPlugin extends LockssTestCase {
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
     props.setProperty(VOL_KEY, "313");
-    props.setProperty(BASE_URL_KEY, "http://www.example.com/");
+    props.setProperty(BASE_URL_KEY, "https://www.example.com/");
     
     String starturl[] = {
-        "http://www.example.com/lockss-manifest/vol_313_manifest.html", 
         "https://www.example.com/lockss-manifest/vol_313_manifest.html", 
     };
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("BMJ Plugin, Base URL http://www.example.com/, Volume 313",
+    assertEquals("BMJ Plugin, Base URL https://www.example.com/, Volume 313",
         au.getName());
-    assertEquals(ListUtil.list(starturl[0],starturl[1]), au.getStartUrls());
+    assertEquals(ListUtil.list(starturl[0]), au.getStartUrls());
   }
   
   public void testGetPluginId() {
