@@ -1,5 +1,9 @@
-/* $Id$
- 
+/* 
+ * $Id$
+ */
+
+/*
+
 Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
@@ -40,12 +44,10 @@ import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
 public class SciELOArticleIteratorFactory
-      implements ArticleIteratorFactory, ArticleMetadataExtractorFactory
-{
+      implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
   private static final Logger log = Logger.getLogger(SciELOArticleIteratorFactory.class);
   
-
   /*
    * The fulltext URL:
    *  http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0102-67202014000400251&lng=en
@@ -66,32 +68,6 @@ public class SciELOArticleIteratorFactory
     "\"^%sscielo.php\\?script=sci_arttext&pid=[^&]{0,5}%s%d[0-9]{4,16}&lng=\", base_url, journal_issn, year";
 
   protected static final List<String> LANGUAGES = Arrays.asList("en", "es", "pt");
-  
-  protected static final List<Pattern> FULLTEXT_PATTERNS = new ArrayList<Pattern>();
-
-  protected static final List<String> FULLTEXT_REPLACEMENTS = new ArrayList<String>();
-
-  protected static final List<String> ABSTRACT_REPLACEMENTS = new ArrayList<String>();
-
-  protected static final List<String> PDF_LANDING_REPLACEMENTS = new ArrayList<String>();
-
-  static {
-    for (String lng : LANGUAGES) {
-      FULLTEXT_PATTERNS.add(Pattern.compile("scielo\\.php\\?script=(sci_arttext)&pid=([^&]{0,5}[0-9X-]{9}[0-9]{8,20})&lng=(" + lng + ")()$",
-                                            Pattern.CASE_INSENSITIVE));
-      FULLTEXT_REPLACEMENTS.add("scielo.php?script=sci_arttext&pid=$1&lng=" + lng);
-      ABSTRACT_REPLACEMENTS.add("scielo.php?script=sci_abstract&pid=$1&lng=" + lng);
-      PDF_LANDING_REPLACEMENTS.add("scielo.php?script=sci_pdf&pid=$1&lng=" + lng);
-    }
-    for (String lng : LANGUAGES) {
-      for (String tlng : LANGUAGES) {
-        FULLTEXT_PATTERNS.add(Pattern.compile("scielo\\.php\\?script=(sci_arttext)&pid=([^&]{0,5}[0-9X-]{9}[0-9]{8,20})&lng=(" + lng + ")&tlng=(" + tlng + ")$",
-                                              Pattern.CASE_INSENSITIVE));
-        FULLTEXT_REPLACEMENTS.add("scielo.php?script=sci_arttext&pid=$1&lng=" + lng + "&tlng=" + tlng);
-        ABSTRACT_REPLACEMENTS.add("scielo.php?script=sci_abstract&pid=$1&lng=" + lng + "&tlng=" + tlng);
-      }
-    }
-  }
   
   // http://www.scielo.br/scieloOrg/php/articleXML.php?pid=S0102-67202014000400233&lang=en
   // Note 'lang' instead of 'lng'
@@ -123,26 +99,55 @@ public class SciELOArticleIteratorFactory
     builder.setSpec(target,
                     ROOT_TEMPLATE,
                     PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+
+    // Full text HTML
+    List<String> full_text_html_roles = new ArrayList<String>();
+    for (String lng : LANGUAGES) {
+      builder.addAspect(Pattern.compile("scielo\\.php\\?script=sci_arttext&pid=([^&]{0,5}[0-9X-]{9}[0-9]{8,20})&lng=" + lng + "$",
+                                        Pattern.CASE_INSENSITIVE),
+                        "scielo.php?script=sci_arttext&pid=$1&lng=" + lng,
+                        ArticleFiles.ROLE_FULL_TEXT_HTML + lng);
+      full_text_html_roles.add(ArticleFiles.ROLE_FULL_TEXT_HTML + lng);
+    }
+    for (String lng : LANGUAGES) {
+      for (String tlng : LANGUAGES) {
+        builder.addAspect(Pattern.compile("scielo\\.php\\?script=sci_arttext&pid=([^&]{0,5}[0-9X-]{9}[0-9]{8,20})&lng=" + lng + "&tlng=" + tlng + "$",
+                                          Pattern.CASE_INSENSITIVE),
+                          "scielo.php?script=sci_arttext&pid=$1&lng=" + lng + "&tlng=" + tlng,
+                          ArticleFiles.ROLE_FULL_TEXT_HTML + lng + tlng);
+        full_text_html_roles.add(ArticleFiles.ROLE_FULL_TEXT_HTML + lng + tlng);
+      }
+    }
+    builder.setFullTextFromRoles(full_text_html_roles);
+    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_FULL_TEXT_HTML, full_text_html_roles);
     
-    builder.addAspect(FULLTEXT_PATTERNS,
-                      FULLTEXT_REPLACEMENTS,
-                      ArticleFiles.ROLE_FULL_TEXT_HTML);
+    // Abstract
+    List<String> abstract_roles = new ArrayList<String>();
+    for (String lng : LANGUAGES) {
+      builder.addAspect("scielo.php?script=sci_abstract&pid=$1&lng=" + lng,
+                        ArticleFiles.ROLE_ABSTRACT + lng);
+      abstract_roles.add(ArticleFiles.ROLE_ABSTRACT + lng);
+    }
+    for (String lng : LANGUAGES) {
+      for (String tlng : LANGUAGES) {
+        builder.addAspect("scielo.php?script=sci_abstract&pid=$1&lng=" + lng + "&tlng=" + tlng,
+                          ArticleFiles.ROLE_ABSTRACT + lng + tlng);
+        abstract_roles.add(ArticleFiles.ROLE_ABSTRACT + lng + tlng);
+      }
+    }
+    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ABSTRACT, abstract_roles);
     
-    builder.addAspect(ABSTRACT_REPLACEMENTS,
-                      ArticleFiles.ROLE_ABSTRACT);
-    
-    builder.addAspect(PDF_LANDING_REPLACEMENTS,
-                      ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
+    // PDF landing page
+    List<String> pdf_landing_page_roles = new ArrayList<String>();
+    for (String lng : LANGUAGES) {
+      builder.addAspect("scielo.php?script=sci_pdf&pid=$1&lng=" + lng,
+                        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE + lng);
+      pdf_landing_page_roles.add(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE + lng);
+    }
+    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdf_landing_page_roles);
     
     builder.addAspect(XML_REPLACEMENT,
                       ArticleFiles.ROLE_FULL_TEXT_XML);
-    
-//    builder.addAspect(FT_REPLACEMENT2i, ArticleFiles.ROLE_FULL_TEXT_HTML + "_en");
-//    builder.addAspect(FT_REPLACEMENT3e, ArticleFiles.ROLE_FULL_TEXT_HTML + "_es");
-//    builder.addAspect(FT_REPLACEMENT4p, ArticleFiles.ROLE_FULL_TEXT_HTML + "_pt");
-    
-//    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_HTML,
-//                                 ArticleFiles.ROLE_FULL_TEXT_PDF);
     
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
                                   ArticleFiles.ROLE_ABSTRACT,
