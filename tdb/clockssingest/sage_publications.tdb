@@ -3069,7 +3069,23 @@
 
   }
 
-    {
+  {
+
+    title <
+      name = Asian Journal of Comparative Politics ;
+      issn = 2057-8911 ;
+      eissn = 2057-892X ;
+      issnl = 2057-8911
+    >
+
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    param[base_url] = http://acp.sagepub.com/
+
+    au < exists ; exists ; 2016 ; Asian Journal of Comparative Politics Volume 1 ; 1 ; >
+
+  }
+
+  {
 
     title <
       name = Asian Journal of Legal Education ;
@@ -6492,6 +6508,22 @@
       au < finished ; finished ; 2014 ; Common Law World Review Volume 43 ; 43 ; >
       au < crawling ; exists ; 2015 ; Common Law World Review Volume 44 ; 44 ; >
       au < expected ; exists ; 2016 ; Common Law World Review Volume 45 ; 45 ; >
+
+  }
+
+  {
+
+    title <
+      name = Communication and the Public ;
+      issn = 2057-0473 ;
+      eissn = 2057-0481 ;
+      issnl = 2057-0473
+    >
+
+      param[base_url] = http://ctp.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2016 ; Communication and the Public Volume 1 ; 1 ; >
 
   }
 

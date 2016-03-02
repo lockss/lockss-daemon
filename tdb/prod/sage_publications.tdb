@@ -3565,6 +3565,23 @@
     }
 
     {
+  
+      title <
+        name = Asian Journal of Comparative Politics ;
+        issn = 2057-8911 ;
+        eissn = 2057-892X ;
+        issnl = 2057-8911
+      >
+  
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://acp.sagepub.com/
+  
+      au < exists ; 2016 ; Asian Journal of Comparative Politics Volume 1 ; 1 >
+  
+    }
+
+    {
 
       title <
         name = Asian Journal of Legal Education ;
@@ -7146,35 +7163,52 @@
 
     }
 
-  {
+    {
 
-    title <
-      name = Common Law World Review ;
-      issn = 1473-7795 ;
-      eissn = 1740-5556 ;
-      issnl = 1473-7795
-    >
+      title <
+        name = Common Law World Review ;
+        issn = 1473-7795 ;
+        eissn = 1740-5556 ;
+        issnl = 1473-7795
+      >
+    
+        param[base_url] = http://clw.sagepub.com/
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+    
+        au < exists ; 2003 ; Common Law World Review Volume 32 ; 32 >
+        au < exists ; 2004 ; Common Law World Review Volume 33 ; 33 >
+        au < exists ; 2005 ; Common Law World Review Volume 34 ; 34 >
+        au < exists ; 2006 ; Common Law World Review Volume 35 ; 35 >
+        au < exists ; 2007 ; Common Law World Review Volume 36 ; 36 >
+        au < exists ; 2008 ; Common Law World Review Volume 37 ; 37 >
+        au < exists ; 2009 ; Common Law World Review Volume 38 ; 38 >
+        au < exists ; 2010 ; Common Law World Review Volume 39 ; 39 >
+        au < exists ; 2011 ; Common Law World Review Volume 40 ; 40 >
+        au < exists ; 2012 ; Common Law World Review Volume 41 ; 41 >
+        au < exists ; 2013 ; Common Law World Review Volume 42 ; 42 >
+        au < released ; 2014 ; Common Law World Review Volume 43 ; 43 >
+        au < manifest ; 2015 ; Common Law World Review Volume 44 ; 44 >
+        au < expected ; 2016 ; Common Law World Review Volume 45 ; 45 >
 
-      param[base_url] = http://clw.sagepub.com/
-      pluginSuffix = HighWirePressH20Plugin
-      implicit < status ; year ; name ; param[volume_name] >
+    }
 
-      au < exists ; 2003 ; Common Law World Review Volume 32 ; 32 >
-      au < exists ; 2004 ; Common Law World Review Volume 33 ; 33 >
-      au < exists ; 2005 ; Common Law World Review Volume 34 ; 34 >
-      au < exists ; 2006 ; Common Law World Review Volume 35 ; 35 >
-      au < exists ; 2007 ; Common Law World Review Volume 36 ; 36 >
-      au < exists ; 2008 ; Common Law World Review Volume 37 ; 37 >
-      au < exists ; 2009 ; Common Law World Review Volume 38 ; 38 >
-      au < exists ; 2010 ; Common Law World Review Volume 39 ; 39 >
-      au < exists ; 2011 ; Common Law World Review Volume 40 ; 40 >
-      au < exists ; 2012 ; Common Law World Review Volume 41 ; 41 >
-      au < exists ; 2013 ; Common Law World Review Volume 42 ; 42 >
-      au < released ; 2014 ; Common Law World Review Volume 43 ; 43 >
-      au < manifest ; 2015 ; Common Law World Review Volume 44 ; 44 >
-      au < expected ; 2016 ; Common Law World Review Volume 45 ; 45 >
-
-  }
+    {
+  
+      title <
+        name = Communication and the Public ;
+        issn = 2057-0473 ;
+        eissn = 2057-0481 ;
+        issnl = 2057-0473
+      >
+  
+        param[base_url] = http://ctp.sagepub.com/
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+  
+        au < exists ; 2016 ; Communication and the Public Volume 1 ; 1 >
+  
+    }
 
     {
 
