@@ -9,34 +9,25 @@
   >
 
   {
-
+  
     title <
-      name = AMA Journal of Ethics ;
+      name = AMA Journal of Ethics WARC Content ;
       eissn = 2376-6980
     >
+    
+    # This content was collected using wget and provided for preservation as a
+    # set of WARC files
+    
+    plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
+    # param[base_url] = http://clockss-ingest.lockss.org/warcfiles/ama-journal-of-ethics-released/
+    param[base_url] = http://content5.lockss.org/warcfiles/ama-journal-of-ethics-released/
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
 
-    # This publication continues Virtual Mentor (ISSN 1937-7010) starting February 2015
-    # See http://journalofethics.ama-assn.org/
-   
-    #au < doNotProcess ; doNotProcess ; 1999 ; 1 ; AMA Journal of Ethics (formerly Virtual Mentor) Volume 1 >
-    #au < doNotProcess ; doNotProcess ; 2000 ; 2 ; AMA Journal of Ethics (formerly Virtual Mentor) Volume 2 >
-    #au < doNotProcess ; doNotProcess ; 2001 ; 3 ; AMA Journal of Ethics (formerly Virtual Mentor) Volume 3 >
-    #au < doNotProcess ; doNotProcess ; 2002 ; 4 ; AMA Journal of Ethics (formerly Virtual Mentor) Volume 4 >
-    #au < doNotProcess ; doNotProcess ; 2003 ; 5 ; AMA Journal of Ethics (formerly Virtual Mentor) Volume 5 >
-    #au < doNotProcess ; doNotProcess ; 2004 ; 6 ; AMA Journal of Ethics (formerly Virtual Mentor) Volume 6 >
-    #au < doNotProcess ; doNotProcess ; 2005 ; 7 ; AMA Journal of Ethics (formerly Virtual Mentor) Volume 7 >
-    #au < doNotProcess ; doNotProcess ; 2006 ; 8 ; AMA Journal of Ethics (formerly Virtual Mentor) Volume 8 >
-    #au < doNotProcess ; doNotProcess ; 2007 ; 9 ; AMA Journal of Ethics (formerly Virtual Mentor) Volume 9 >
-    #au < doNotProcess ; doNotProcess ; 2008 ; 10 ; AMA Journal of Ethics (formerly Virtual Mentor) Volume 10 >
-    #au < doNotProcess ; doNotProcess ; 2009 ; 11 ; AMA Journal of Ethics (formerly Virtual Mentor) Volume 11 >
-    #au < doNotProcess ; doNotProcess ; 2010 ; 12 ; AMA Journal of Ethics (formerly Virtual Mentor) Volume 12 >
-    #au < doNotProcess ; doNotProcess ; 2011 ; 13 ; AMA Journal of Ethics (formerly Virtual Mentor) Volume 13 >
-    #au < exists ; exists ; 2012 ; 14 ; AMA Journal of Ethics (formerly Virtual Mentor) Volume 14 >
-    #au < exists ; exists ; 2013 ; 15 ; AMA Journal of Ethics (formerly Virtual Mentor) Volume 15 >
-    #au < exists ; exists ; 2014 ; 16 ; AMA Journal of Ethics (formerly Virtual Mentor) Volume 16 >
-    #au < exists ; exists ; 2015 ; 17 ; AMA Journal of Ethics Volume 17 >
+    au < exists ; exists ; 2016 ; AMA Journal of Ethics WARC Content 2016 ; 2016 >
 
   }
+  
 
   {
 
