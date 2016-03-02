@@ -241,13 +241,13 @@
       eissn = 2165-2554
     >
 
-      param[base_url] = http://jotlt.indiana.edu/
+      #param[base_url] = http://jotlt.indiana.edu/
       param[journal_id] = jotlt
 
-      au < finished ; finished ; 2012 ; 2012 ; Journal of Teaching and Learning with Technology Volume 1 ; 1 ; http://scholarworks.iu.edu/journals/ ; >
-      au < finished ; finished ; 2013 ; 2013 ; Journal of Teaching and Learning with Technology Volume 2 ; 2 ; http://scholarworks.iu.edu/journals/ ; >
-      au < finished ; finished ; 2014 ; 2014 ; Journal of Teaching and Learning with Technology Volume 3 ; 3 ; http://scholarworks.iu.edu/journals/ ; >
-      au < crawling ; exists ; 2015 ; 2015 ; Journal of Teaching and Learning with Technology Volume 4 ; 4 ; http://scholarworks.iu.edu/journals/ ; >
+      au < finished ; finished ; 2012 ; 2012 ; Journal of Teaching and Learning with Technology Volume 1 ; 1 ; http://jotlt.indiana.edu/ ; >
+      au < finished ; finished ; 2013 ; 2013 ; Journal of Teaching and Learning with Technology Volume 2 ; 2 ; http://jotlt.indiana.edu/ ; >
+      au < finished ; finished ; 2014 ; 2014 ; Journal of Teaching and Learning with Technology Volume 3 ; 3 ; http://jotlt.indiana.edu/ ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Journal of Teaching and Learning with Technology Volume 4 ; 4 ; http://jotlt.indiana.edu/ ; >
 
   }
 
@@ -280,24 +280,24 @@
       au < superseded ; exists ; 2013 ; 2013 ; Journal of the Scholarship of Teaching and Learning Volume 13 [to delete] ; 13 ; http://scholarworks.iu.edu/journals/ ; >
     }
     {
-      param[base_url] = http://josotl.indiana.edu/
+      #param[base_url] = http://josotl.indiana.edu/
       param[journal_id] = josotl
 
-      au < manifest ; exists ; 2001 ; 2001 ; Journal of the Scholarship of Teaching and Learning Volume 1 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
-      au < manifest ; exists ; 2002 ; 2002 ; Journal of the Scholarship of Teaching and Learning Volume 2 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
-      au < manifest ; exists ; 2003 ; 2003 ; Journal of the Scholarship of Teaching and Learning Volume 3 ; 3 ; https://scholarworks.iu.edu/journals/ ; >
-      au < manifest ; exists ; 2004 ; 2004 ; Journal of the Scholarship of Teaching and Learning Volume 4 ; 4 ; https://scholarworks.iu.edu/journals/ ; >
-      au < manifest ; exists ; 2005 ; 2005 ; Journal of the Scholarship of Teaching and Learning Volume 5 ; 5 ; https://scholarworks.iu.edu/journals/ ; >
-      au < manifest ; exists ; 2006 ; 2006 ; Journal of the Scholarship of Teaching and Learning Volume 6 ; 6 ; https://scholarworks.iu.edu/journals/ ; >
-      au < manifest ; exists ; 2007 ; 2007 ; Journal of the Scholarship of Teaching and Learning Volume 7 ; 7 ; https://scholarworks.iu.edu/journals/ ; >
-      au < manifest ; exists ; 2008 ; 2008 ; Journal of the Scholarship of Teaching and Learning Volume 8 ; 8 ; https://scholarworks.iu.edu/journals/ ; >
-      au < manifest ; exists ; 2009 ; 2009 ; Journal of the Scholarship of Teaching and Learning Volume 9 ; 9 ; https://scholarworks.iu.edu/journals/ ; >
-      au < manifest ; exists ; 2010 ; 2010 ; Journal of the Scholarship of Teaching and Learning Volume 10 ; 10 ; https://scholarworks.iu.edu/journals/ ; >
-      au < manifest ; exists ; 2011 ; 2011 ; Journal of the Scholarship of Teaching and Learning Volume 11 ; 11 ; https://scholarworks.iu.edu/journals/ ; >
-      au < finished ; finished ; 2012 ; 2012 ; Journal of the Scholarship of Teaching and Learning Volume 12 ; 12 ; http://scholarworks.iu.edu/journals/ ; >
-      au < finished ; finished ; 2013 ; 2013 ; Journal of the Scholarship of Teaching and Learning Volume 13 ; 13 ; http://scholarworks.iu.edu/journals/ ; >
-      au < finished ; finished ; 2014 ; 2014 ; Journal of the Scholarship of Teaching and Learning Volume 14 ; 14 ; http://scholarworks.iu.edu/journals/ ; >
-      au < crawling ; exists ; 2015 ; 2015 ; Journal of the Scholarship of Teaching and Learning Volume 15 ; 15 ; http://scholarworks.iu.edu/journals/ ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Journal of the Scholarship of Teaching and Learning Volume 1 ; 1 ; http://josotl.indiana.edu/ ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Journal of the Scholarship of Teaching and Learning Volume 2 ; 2 ; http://josotl.indiana.edu/ ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Journal of the Scholarship of Teaching and Learning Volume 3 ; 3 ; http://josotl.indiana.edu/ ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Journal of the Scholarship of Teaching and Learning Volume 4 ; 4 ; http://josotl.indiana.edu/ ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Journal of the Scholarship of Teaching and Learning Volume 5 ; 5 ; http://josotl.indiana.edu/ ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Journal of the Scholarship of Teaching and Learning Volume 6 ; 6 ; http://josotl.indiana.edu/ ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Journal of the Scholarship of Teaching and Learning Volume 7 ; 7 ; http://josotl.indiana.edu/ ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Journal of the Scholarship of Teaching and Learning Volume 8 ; 8 ; http://josotl.indiana.edu/ ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Journal of the Scholarship of Teaching and Learning Volume 9 ; 9 ; http://josotl.indiana.edu/ ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Journal of the Scholarship of Teaching and Learning Volume 10 ; 10 ; http://josotl.indiana.edu/ ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Journal of the Scholarship of Teaching and Learning Volume 11 ; 11 ; http://josotl.indiana.edu/ ; >
+      au < finished ; finished ; 2012 ; 2012 ; Journal of the Scholarship of Teaching and Learning Volume 12 ; 12 ; http://josotl.indiana.edu/ ; >
+      au < finished ; finished ; 2013 ; 2013 ; Journal of the Scholarship of Teaching and Learning Volume 13 ; 13 ; http://josotl.indiana.edu/ ; >
+      au < finished ; finished ; 2014 ; 2014 ; Journal of the Scholarship of Teaching and Learning Volume 14 ; 14 ; http://josotl.indiana.edu/ ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Journal of the Scholarship of Teaching and Learning Volume 15 ; 15 ; http://josotl.indiana.edu/ ; >
 
     }
   }
