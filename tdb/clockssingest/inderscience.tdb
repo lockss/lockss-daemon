@@ -1129,7 +1129,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Biotechnology Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2011-2013 ; International Journal of Biotechnology Volume 12 ; 12 ; >
       au < finished ; finished ; 2014 ; International Journal of Biotechnology Volume 13 ; 13 ; >
-      au < testing ; exists ; 2015 ; International Journal of Biotechnology Volume 14 ; 14 ; >
+      au < ready ; exists ; 2015 ; International Journal of Biotechnology Volume 14 ; 14 ; >
       au < expected ; exists ; 2016 ; International Journal of Biotechnology Volume 15 ; 15 ; >
 
     }
@@ -8246,6 +8246,7 @@
       param[journal_id] = ijbeam
 
       au < finished ; finished ; 2011-2015 ; International Journal of the Built Environment and Asset Management Volume 1 ; 1 ; >
+      au < expected ; exists ; 2016 ; International Journal of the Built Environment and Asset Management Volume 2 ; 2 ; >
 
     }
 
@@ -8263,7 +8264,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 1 ; 1 ; >
       au < finished ; finished ; 2011-2013 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 2 ; 2 ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 3 ; 3 ; >
-      au < expected ; exists ; 2015-2016 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 4 ; 4 ; >
+      au < expected ; exists ; 2016-2017 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 4 ; 4 ; >
 
     }
 
@@ -8344,7 +8345,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Transitions and Innovation Systems Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Transitions and Innovation Systems Volume 2 ; 2 ; >
       au < finished ; manifest ; 2013-2014 ; International Journal of Transitions and Innovation Systems Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2015 ; International Journal of Transitions and Innovation Systems Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2015-2016 ; International Journal of Transitions and Innovation Systems Volume 4 ; 4 ; >
       au < expected ; exists ; 2016 ; International Journal of Transitions and Innovation Systems Volume 5 ; 5 ; >
 
     }
@@ -8381,6 +8382,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Ultra Wideband Communications and Systems Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Ultra Wideband Communications and Systems Volume 2 ; 2 ; >
       au < finished ; crawling ; 2014-2015 ; International Journal of Ultra Wideband Communications and Systems Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+      au < expected ; exists ; 2016 ; International Journal of Ultra Wideband Communications and Systems Volume 4 ; 4 ; >
 
     }
 
@@ -8496,6 +8498,8 @@
       au < crawling ; exists ; 2015 ; International Journal of Vehicle Design Volume 68 ; 68 ; >
       au < crawling ; exists ; 2015 ; International Journal of Vehicle Design Volume 69 ; 69 ; >
       au < manifest ; exists ; 2016 ; International Journal of Vehicle Design Volume 70 ; 70 ; >
+      au < expected ; exists ; 2016 ; International Journal of Vehicle Design Volume 71 ; 71 ; >
+      au < expected ; exists ; 2016 ; International Journal of Vehicle Design Volume 72 ; 72 ; >
 
     }
 
@@ -8555,7 +8559,7 @@
       param[journal_id] = ijvp
 
       au < finished ; finished ; 2013-2014 ; International Journal of Vehicle Performance Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Vehicle Performance Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2015-2016 ; International Journal of Vehicle Performance Volume 2 ; 2 ; >
 
     }
 
@@ -8774,7 +8778,7 @@
 
       param[journal_id] = ijwi
 
-      au < doNotProcess ; doNotProcess ; 2012-2015 ; International Journal of Work Innovation Volume 1 ; 1 ; >
+      au < ready ; exists ; 2012-2015 ; International Journal of Work Innovation Volume 1 ; 1 ; >
 
     }
 
