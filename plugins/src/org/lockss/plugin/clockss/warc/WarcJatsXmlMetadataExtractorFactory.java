@@ -37,6 +37,7 @@ import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 
 import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
@@ -84,6 +85,23 @@ public class WarcJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtrac
         CachedUrl cu, ArticleMetadata thisAM) {
       return true;
     }
+    
+    /*
+     * (non-Javadoc)
+     * WARC XML files are a little non-standard in that they store the actual access.url
+     * location in the "self-uri" field
+     * But we don't actually check for the existence in pre-emit check
+     * So just make the assignment here
+     */
+    @Override
+    protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
+        CachedUrl cu, ArticleMetadata thisAM) {
+
+      if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_self_uri) != null) {
+        thisAM.replace(MetadataField.FIELD_ACCESS_URL, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_self_uri));
+      }
+
+    }    
     
 
   }
