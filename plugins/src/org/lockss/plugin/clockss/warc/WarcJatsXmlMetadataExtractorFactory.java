@@ -90,15 +90,20 @@ public class WarcJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtrac
      * (non-Javadoc)
      * WARC XML files are a little non-standard in that they store the actual access.url
      * location in the "self-uri" field
-     * But we don't actually check for the existence in pre-emit check
-     * So just make the assignment here
+     * set the access_url to the self-uri 
+     * set the publisher as well. It may get replaced by the TDB value  
      */
     @Override
     protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
         CachedUrl cu, ArticleMetadata thisAM) {
-
-      if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_self_uri) != null) {
-        thisAM.replace(MetadataField.FIELD_ACCESS_URL, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_self_uri));
+      
+      String self_uri = thisAM.getRaw(JatsPublishingSchemaHelper.JATS_self_uri);
+      if (self_uri != null) {
+        thisAM.replace(MetadataField.FIELD_ACCESS_URL, self_uri);
+      }
+      String raw_pub = thisAM.getRaw(JatsPublishingSchemaHelper.JATS_pubname);
+      if (raw_pub != null) {
+        thisAM.replace(MetadataField.FIELD_PUBLISHER, raw_pub);
       }
 
     }    

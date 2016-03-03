@@ -286,7 +286,7 @@ implements SourceXmlSchemaHelper {
   //pub-type is deprecated; publication-format new, but we must handle all variant
   public static String JATS_pissn = JATS_jmeta + "/issn[@pub-type = \"ppub\" or @publication-format=\"print\"]";
   private static String JATS_eissn = JATS_jmeta + "/issn[@pub-type = \"epub\" or @publication-format=\"electronic\"]";
-  private static String JATS_pubname = JATS_jmeta + "/publisher/publisher-name";
+  public static String JATS_pubname = JATS_jmeta + "/publisher/publisher-name";
   
   private static String JATS_doi =  JATS_ameta + "/article-id[@pub-id-type = \"doi\"]";
   private static String JATS_atitle = JATS_ameta + "/title-group";
