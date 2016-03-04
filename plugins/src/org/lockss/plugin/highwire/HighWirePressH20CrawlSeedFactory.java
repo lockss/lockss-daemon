@@ -57,12 +57,12 @@ public class HighWirePressH20CrawlSeedFactory implements CrawlSeedFactory {
   
   private static final Logger log = Logger.getLogger(HighWirePressH20CrawlSeedFactory.class);
   
-  private static final String SPECIAL_JRNL1 = "eolj.bmj.com/";
-  private static final Pattern SPECIAL_PAT1 = Pattern.compile(
+  private static final String BMJ_EOLJ_JRNL = "eolj.bmj.com/";
+  private static final Pattern BMJ_EOLJ_PAT = Pattern.compile(
       "lockss-manifest/vol_eolcare/", Pattern.CASE_INSENSITIVE);
-  private static final String SPECIAL_REPL1 = "lockss-manifest/eolcare_vol_";
+  private static final String BMJ_EOLJ_REPL = "lockss-manifest/eolcare_vol_";
   
-  private static final String SPECIAL_JRNL2 = ".oxfordjournals.org/";
+  private static final String OUP_JRNL = ".oxfordjournals.org/";
   
   /**
    * <p>
@@ -71,9 +71,9 @@ public class HighWirePressH20CrawlSeedFactory implements CrawlSeedFactory {
    * to "lockss-manifest/eolcare_vol_1_manifest.dtl"
    * </p>
    */
-  public static class SpecialCrawlSeed1 extends BaseCrawlSeed {
+  public static class BmjEoljCrawlSeed extends BaseCrawlSeed {
     
-    public SpecialCrawlSeed1(CrawlerFacade crawlerFacade) {
+    public BmjEoljCrawlSeed(CrawlerFacade crawlerFacade) {
       super(crawlerFacade);
     }
     
@@ -93,9 +93,9 @@ public class HighWirePressH20CrawlSeedFactory implements CrawlSeedFactory {
       Collection<String> uUrls = new ArrayList<String>(sUrls.size());
       for (Iterator<String> iter = sUrls.iterator(); iter.hasNext();) {
         String sUrl = iter.next();
-        Matcher urlMat = SPECIAL_PAT1.matcher(sUrl); 
+        Matcher urlMat = BMJ_EOLJ_PAT.matcher(sUrl); 
         if (urlMat.find()) {
-          sUrl = urlMat.replaceFirst(SPECIAL_REPL1);
+          sUrl = urlMat.replaceFirst(BMJ_EOLJ_REPL);
           if (log.isDebug2()) {
             log.debug2(sUrl);
           }
@@ -106,9 +106,9 @@ public class HighWirePressH20CrawlSeedFactory implements CrawlSeedFactory {
     }
   }
   
-  public static class SpecialCrawlSeed2 extends BaseCrawlSeed {
+  public static class OUPCrawlSeed extends BaseCrawlSeed {
     
-    public SpecialCrawlSeed2(CrawlerFacade crawlerFacade) {
+    public OUPCrawlSeed(CrawlerFacade crawlerFacade) {
       super(crawlerFacade);
     }
     
@@ -132,11 +132,11 @@ public class HighWirePressH20CrawlSeedFactory implements CrawlSeedFactory {
   public CrawlSeed createCrawlSeed(CrawlerFacade facade) {
     String baseUrl = facade.getAu().getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
     if (baseUrl != null) {
-      if (baseUrl.contains(SPECIAL_JRNL2)) {
-        return new SpecialCrawlSeed2(facade);
+      if (baseUrl.contains(OUP_JRNL)) {
+        return new OUPCrawlSeed(facade);
       }
-      if (baseUrl.contains(SPECIAL_JRNL1)) {
-        return new SpecialCrawlSeed1(facade);
+      if (baseUrl.contains(BMJ_EOLJ_JRNL)) {
+        return new BmjEoljCrawlSeed(facade);
       }
     }
     return new BaseCrawlSeed(facade);

@@ -139,7 +139,7 @@
       <!-- may want to fix this: http://www.pnas.org/content/108/12/4748.full gets http://www.pnas.org/content/107/16/7347/suppl/DCSupplemental -->
       <string>1,"^https?://%s/[^?]*DC(Supplemental|[0-9])", url_host(base_url)</string>
       <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
-      <string>1, "%sc?lockss-manifest/[^.]*vol_[0-9]+_manifest.dtl", url_host(base_url)</string>
+      <string>1,"^https?://%s/c?lockss-manifest/[^.]*vol_[0-9]+_manifest.dtl", url_host(base_url)</string>
       <!-- TOCs made up of searches -->
       <string>1,"^https?://%s/search[?]submit=yes(?=.*&amp;tocsectionid=).*&amp;volume=%s[&amp;|$]", url_host(base_url), volume_name</string>
      </list>
@@ -256,7 +256,13 @@
     <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
          org.lockss.crawler.allowedPluginPermittedHosts -->
     <string>au_permitted_host_pattern</string>
-    <string>cdn[.]mathjax[.]org|[.]googleapis[.]com|(cdn.*|journals)[.]bmj[.]com|[.]cloudfront[.]net|.*[.]glencoesoftware[.]com</string>
+    <list>
+      <string>.+\.mathjax\.org</string>
+      <string>.+\.cloudfront\.net</string>
+      <string>.+\.glencoesoftware\.com</string>
+      <string>.+\.(googleapis|gstatic)\.com</string>
+      <string>(cdn.*|journals)\.bmj\.com</string>
+    </list>
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
