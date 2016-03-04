@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -57,10 +57,12 @@ public class HighWirePressH20CrawlSeedFactory implements CrawlSeedFactory {
   
   private static final Logger log = Logger.getLogger(HighWirePressH20CrawlSeedFactory.class);
   
-  private static final String SPECIAL_JRNL = "eolj.bmj.com/";
-  private static final Pattern SPECIAL_PAT = Pattern.compile(
+  private static final String SPECIAL_JRNL1 = "eolj.bmj.com/";
+  private static final Pattern SPECIAL_PAT1 = Pattern.compile(
       "lockss-manifest/vol_eolcare/", Pattern.CASE_INSENSITIVE);
-  private static final String SPECIAL_REPL = "lockss-manifest/eolcare_vol_";
+  private static final String SPECIAL_REPL1 = "lockss-manifest/eolcare_vol_";
+  
+  private static final String SPECIAL_JRNL2 = ".oxfordjournals.org/";
   
   /**
    * <p>
@@ -69,9 +71,9 @@ public class HighWirePressH20CrawlSeedFactory implements CrawlSeedFactory {
    * to "lockss-manifest/eolcare_vol_1_manifest.dtl"
    * </p>
    */
-  public static class SpecialCrawlSeed extends BaseCrawlSeed {
+  public static class SpecialCrawlSeed1 extends BaseCrawlSeed {
     
-    public SpecialCrawlSeed(CrawlerFacade crawlerFacade) {
+    public SpecialCrawlSeed1(CrawlerFacade crawlerFacade) {
       super(crawlerFacade);
     }
     
@@ -91,9 +93,9 @@ public class HighWirePressH20CrawlSeedFactory implements CrawlSeedFactory {
       Collection<String> uUrls = new ArrayList<String>(sUrls.size());
       for (Iterator<String> iter = sUrls.iterator(); iter.hasNext();) {
         String sUrl = iter.next();
-        Matcher urlMat = SPECIAL_PAT.matcher(sUrl); 
+        Matcher urlMat = SPECIAL_PAT1.matcher(sUrl); 
         if (urlMat.find()) {
-          sUrl = urlMat.replaceFirst(SPECIAL_REPL);
+          sUrl = urlMat.replaceFirst(SPECIAL_REPL1);
           if (log.isDebug2()) {
             log.debug2(sUrl);
           }
@@ -104,11 +106,38 @@ public class HighWirePressH20CrawlSeedFactory implements CrawlSeedFactory {
     }
   }
   
+  public static class SpecialCrawlSeed2 extends BaseCrawlSeed {
+    
+    public SpecialCrawlSeed2(CrawlerFacade crawlerFacade) {
+      super(crawlerFacade);
+    }
+    
+    @Override
+    public Collection<String> doGetStartUrls()
+        throws ConfigurationException, PluginException, IOException {
+      
+      Collection<String> sUrls = super.doGetStartUrls();
+      Collection<String> uUrls = new ArrayList<String>(sUrls.size() * 2);
+      for (Iterator<String> iter = sUrls.iterator(); iter.hasNext();) {
+        String url = iter.next();
+        uUrls.add(HttpToHttpsUtil.UrlUtil.replaceScheme(url, "https", "http"));
+        uUrls.add(HttpToHttpsUtil.UrlUtil.replaceScheme(url, "http", "https"));
+      }
+      return uUrls;
+    }
+    
+  }
+  
   @Override
   public CrawlSeed createCrawlSeed(CrawlerFacade facade) {
     String baseUrl = facade.getAu().getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
-    if (baseUrl != null && baseUrl.contains(SPECIAL_JRNL)) {
-      return new SpecialCrawlSeed(facade);
+    if (baseUrl != null) {
+      if (baseUrl.contains(SPECIAL_JRNL2)) {
+        return new SpecialCrawlSeed2(facade);
+      }
+      if (baseUrl.contains(SPECIAL_JRNL1)) {
+        return new SpecialCrawlSeed1(facade);
+      }
     }
     return new BaseCrawlSeed(facade);
   }

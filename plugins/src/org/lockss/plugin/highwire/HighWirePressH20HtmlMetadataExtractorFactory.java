@@ -86,14 +86,12 @@ public class HighWirePressH20HtmlMetadataExtractorFactory implements FileMetadat
         new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       am.cook(tagMap);
       String url = am.get(MetadataField.FIELD_ACCESS_URL);
-      if (url != null && !url.isEmpty()) {
-        CachedUrl val = cu.getArchivalUnit().makeCachedUrl(url);
-        if (!val.hasContent()) {
-          am.replace(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
-        }
-      } else {
-        am.replace(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
+      ArchivalUnit au = cu.getArchivalUnit();
+      if (url == null || url.isEmpty() || !au.makeCachedUrl(url).hasContent()) {
+        url = cu.getUrl();
       }
+      am.replace(MetadataField.FIELD_ACCESS_URL,
+                 HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(au, url));
       emitter.emitMetadata(cu, am);
     }
   }

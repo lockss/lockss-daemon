@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>111</string>
+    <string>112</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -28,7 +28,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>10</string>
+        <string>11</string>
       </entry>
     </map>
   </entry>
@@ -119,29 +119,29 @@
      -->
     <list>
       <!-- Do not crawl these variations -->
-      <string>2,"^%s.*[.]cover[.]gif$", base_url</string>
-      <string>2,"^%slookup/(volpage/%s(/[^/]+)?$|suppl/doi)", base_url, volume_name</string>
-      <string>2,"^%s.*\?tab=(metrics|related|responses)", base_url</string>
-      <string>2,"^%s(content|lookup/volpage)/%s/.*(cited-by|patientinform-links|related-urls)=yes", base_url, volume_name</string>
-      <string>2,"^%scontent/%s/.*/href/?$", base_url, volume_name</string>
-      <string>2,"^%scontent/%s/[Ss]uppl(ement)?_[0-9]*[.]author-index$", base_url, volume_name</string>
-      <string>2,"^%s(cgi/content/short|content)/%s/[^/]+/[^/]+[?&amp;](rss=)", base_url, volume_name</string>
+      <string>2,"^https?://%s/.*[.]cover[.]gif$", url_host(base_url)</string>
+      <string>2,"^https?://%s/lookup/(volpage/%s(/[^/]+)?$|suppl/doi)", url_host(base_url), volume_name</string>
+      <string>2,"^https?://%s/.*\?tab=(metrics|related|responses)", url_host(base_url)</string>
+      <string>2,"^https?://%s/(content|lookup/volpage)/%s/.*(cited-by|patientinform-links|related-urls)=yes", url_host(base_url), volume_name</string>
+      <string>2,"^https?://%s/content/%s/.*/href/?$", url_host(base_url), volume_name</string>
+      <string>2,"^https?://%s/content/%s/[Ss]uppl(ement)?_[0-9]*[.]author-index$", url_host(base_url), volume_name</string>
+      <string>2,"^https?://%s/(cgi/content/short|content)/%s/[^/]+/[^/]+[?&amp;](rss=)", url_host(base_url), volume_name</string>
       <!-- Do not crawl any most-read links -->
-      <string>2,"^%s.*/most-read", base_url</string>
-      <string>2,"^%shighwire/filestream/powerpoint/", base_url</string>
+      <string>2,"^https?://%s/.*/most-read", url_host(base_url)</string>
+      <string>2,"^https?://%s/highwire/filestream/powerpoint/", url_host(base_url)</string>
       <!-- otherwise, all content from CDN -->
       <string>1,"^https?://.+(cdn[.]mathjax[.]org|[.]googleapis[.]com|(cdn.*|journals)[.]bmj[.]com|[.]cloudfront[.]net|[.]glencoesoftware[.]com)[^?]*[.](css|gif|ico|jpe?g|js)"</string>
       <!-- all fonts, images, resources, css, js, etc. -->
       <string>1,"^https?://%s/[^?]*[.](bmp|gif|ico|jpe?g|png|tif?f|(css|js|eot|svg|ttf|woff)([?].*)?)$", url_host(base_url)</string>
-      <string>4,"^%s", base_url</string>
-      <string>1,"^%s(content|lookup/volpage)/%s(/|[.])", base_url, volume_name</string>
-      <string>1,"^%s(cgi/content/[^/]+/|content/vol)%s/", base_url, volume_name</string>
+      <string>4,"^https?://%s/", url_host(base_url)</string>
+      <string>1,"^https?://%s/(content|lookup/volpage)/%s(/|[.])", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/(cgi/content/[^/]+/|content/vol)%s/", url_host(base_url), volume_name</string>
       <!-- may want to fix this: http://www.pnas.org/content/108/12/4748.full gets http://www.pnas.org/content/107/16/7347/suppl/DCSupplemental -->
-      <string>1,"^%s[^?]*DC(Supplemental|[0-9])", base_url</string>
-      <string>1,"^%shighwire/filestream/", base_url</string>
-      <string>1, "%sc?lockss-manifest/[^.]*vol_[0-9]+_manifest.dtl", base_url</string>
+      <string>1,"^https?://%s/[^?]*DC(Supplemental|[0-9])", url_host(base_url)</string>
+      <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
+      <string>1, "%sc?lockss-manifest/[^.]*vol_[0-9]+_manifest.dtl", url_host(base_url)</string>
       <!-- TOCs made up of searches -->
-      <string>1,"^%ssearch[?]submit=yes(?=.*&amp;tocsectionid=).*&amp;volume=%s[&amp;|$]", base_url, volume_name</string>
+      <string>1,"^https?://%s/search[?]submit=yes(?=.*&amp;tocsectionid=).*&amp;volume=%s[&amp;|$]", url_host(base_url), volume_name</string>
      </list>
   </entry>
   <entry>
@@ -195,6 +195,14 @@
         <string>org.lockss.plugin.highwire.HighWirePressH20HtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.highwire.HttpToHttpsUtil$HttpToHttpsUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.highwire.HttpToHttpsUtil$HttpToHttpsUrlFetcherFactory</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>

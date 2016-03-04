@@ -46,12 +46,14 @@ import org.lockss.test.LockssTestCase;
  * http://www.fasebj.org/content/28/1_Supplement/LB31.abstract?sid=a166e1db-4d2a-4d45-b09e-aa2eaaf5bc21
  * to http://www.fasebj.org/content/28/1_Supplement/LB31.abstract
  */
+import org.lockss.test.MockArchivalUnit;
 
 public class TestHighWirePressH20UrlNormalizer extends LockssTestCase {
   
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   private DefinablePlugin plugin;
+  private MockArchivalUnit m_mau;
   
   @Override
   public void setUp() throws Exception {
@@ -64,20 +66,22 @@ public class TestHighWirePressH20UrlNormalizer extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     
     Configuration config = ConfigurationUtil.fromProps(props);
+    m_mau = new MockArchivalUnit();
+    m_mau.setConfiguration(config);
     plugin.configureAu(config, null);
-    }
+  }
   
   public void testUrlNormalizer() throws Exception {
     UrlNormalizer normalizer = new HighWirePressH20UrlNormalizer();
     
-    assertEquals("http://www.fasebj.org/content/28/1_Supplement/LB31.abstract",
-        normalizer.normalizeUrl("http://www.fasebj.org/content/28/1_Supplement/LB31.abstract?sid=a166e1db-4d2a-4d45-b09e-aa2eaaf5bc21", null));
+    assertEquals("http://www.example.com/content/28/1_Supplement/LB31.abstract",
+        normalizer.normalizeUrl("http://www.example.com/content/28/1_Supplement/LB31.abstract?sid=a166e1db-4d2a-4d45-b09e-aa2eaaf5bc21", m_mau));
     
-    assertEquals("http://ajpcell.physiology.org/content/303/1/C1?rss=foo",
-        normalizer.normalizeUrl("http://ajpcell.physiology.org/content/303/1/C1?rss=foo", null));
+    assertEquals("http://www.example.com/content/303/1/C1?rss=foo",
+        normalizer.normalizeUrl("http://www.example.com/content/303/1/C1?rss=foo", m_mau));
     
-    assertEquals("http://physrev.physiology.org/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.tiff?-2mifpm",
-        normalizer.normalizeUrl("http://physrev.physiology.org/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.tiff?-2mifpm", null));
+    assertEquals("http://www.example.com/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.tiff?-2mifpm",
+        normalizer.normalizeUrl("http://www.example.com/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.tiff?-2mifpm", m_mau));
   }
   
 }

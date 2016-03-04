@@ -34,7 +34,6 @@ package org.lockss.plugin.highwire;
 
 import java.util.Properties;
 
-import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.plugin.UrlNormalizer;

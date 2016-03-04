@@ -246,7 +246,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
           "<input type=\"hidden\" name=\"group-code\" value=\"gsw\" /><input type=\"hidden\"" +
           " name=\"resourcetype\" value=\"HWCIT\" /></form>";
   private static final String hiddenInputFiltered =
-      "<form action=\"http://www.example.org/search\" class=\"searchbox\" method=\"get\">" +
+      "<form action=\"https://www.example.org/search\" class=\"searchbox\" method=\"get\">" +
           "<input value=\"\" type=\"text\" name=\"fulltext\" id=\"header-qs-input\" maxlength=\"80\" " +
           "width=\"60\" class=\"field\" />" +
           " <input type=\"image\" value=\"GO\" alt=\"Link: Go\" id=\"header-qs-search-go\"" +
