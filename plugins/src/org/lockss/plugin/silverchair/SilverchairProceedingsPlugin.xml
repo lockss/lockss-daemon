@@ -9,7 +9,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>13</string>
+        <string>14</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
             </entry>
             <entry>
                 <string>Metadata</string>
-                <string>6</string>
+                <string>7</string>
             </entry>
         </map>
     </entry>
@@ -117,6 +117,16 @@
         <string>text/html_filter_factory</string>
         <string>org.lockss.plugin.silverchair.ScHtmlHashFilterFactory</string>
     </entry>
+<!--  waiting for fix in RisMetadataExtractor; workaround by filtering multi-line N2 -->    
+    <entry>
+      <string>application/x-research-info-systems_filter_factory</string>
+      <string>org.lockss.plugin.silverchair.ScRisFilterFactory</string>
+    </entry>
+<!--  RIS citation URLs come in as text/plain; we do additional RIS check in the factory -->
+    <entry>
+      <string>text/plain_filter_factory</string>
+      <string>org.lockss.plugin.silverchair.ScRisFilterFactory</string>
+    </entry>    
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
