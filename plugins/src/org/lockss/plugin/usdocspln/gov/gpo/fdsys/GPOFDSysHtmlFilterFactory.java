@@ -149,6 +149,8 @@ public class GPOFDSysHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("form", "action", "jsessionid="),
         // Differs over time in the presence and placement of rel="nofollow"
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^delivery/getpackage\\.action\\?packageId="),
+        // Links here can differ with each fetch (https://www.gpo.gov/fdsys/pkg/CFR-2013-title10-vol2/content-detail.html)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "browse-drilldown-mask"),
     };
   
     HtmlTransform xform = new HtmlTransform() {

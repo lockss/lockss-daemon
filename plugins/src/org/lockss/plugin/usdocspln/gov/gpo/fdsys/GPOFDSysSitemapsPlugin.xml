@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>35</string>
+    <string>36</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>16</string>
+        <string>17</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -94,7 +94,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%sfdsys/(granule|pkg)/%s[^/]+/(htm|pdf|html)/%s[^\.]+\.(htm|pdf|html)$", base_url, collection_id, collection_id</string>
+      <string>"^%sfdsys/(granule|pkg)/%s[^/]+/(pdf|html?)/%s[^/]+\.(pdf|html?)$", base_url, collection_id, collection_id</string>
     </list>
   </entry>
   <entry>
