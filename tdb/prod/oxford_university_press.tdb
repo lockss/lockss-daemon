@@ -15977,7 +15977,7 @@
   {
 
     title <
-      name = LabMedicine ;
+      name = Laboratory Medicine ;
       issn = 0007-5027 ;
       eissn = 1943-7730 ;
       issnl = 0007-5027
@@ -15988,23 +15988,23 @@
     implicit < status ; year ; name ; param[volume_name] >
     #content avaiable from 1970 volume 1 to 1999 volume 30
     
-    au < exists ; 2000 ; LabMedicine Volume 31 ; 31 >
-    au < exists ; 2001 ; LabMedicine Volume 32 ; 32 >
-    au < exists ; 2002 ; LabMedicine Volume 33 ; 33 >
-    au < exists ; 2003 ; LabMedicine Volume 34 ; 34 >
-    au < exists ; 2004 ; LabMedicine Volume 35 ; 35 >
-    au < exists ; 2005 ; LabMedicine Volume 36 ; 36 >
-    au < exists ; 2006 ; LabMedicine Volume 37 ; 37 >
-    au < exists ; 2007 ; LabMedicine Volume 38 ; 38 >
-    au < exists ; 2008 ; LabMedicine Volume 39 ; 39 >
-    au < exists ; 2009 ; LabMedicine Volume 40 ; 40 >
-    au < exists ; 2010 ; LabMedicine Volume 41 ; 41 >
-    au < exists ; 2011 ; LabMedicine Volume 42 ; 42 >
-    au < exists ; 2012 ; LabMedicine Volume 43 ; 43 >
-    au < exists ; 2013 ; LabMedicine Volume 44 ; 44 >
-    au < exists ; 2014 ; LabMedicine Volume 45 ; 45 >
-    au < exists ; 2015 ; LabMedicine Volume 46 ; 46 >
-    au < exists ; 2016 ; LabMedicine Volume 47 ; 47 >
+    au < exists ; 2000 ; Laboratory Medicine Volume 31 ; 31 >
+    au < exists ; 2001 ; Laboratory Medicine Volume 32 ; 32 >
+    au < exists ; 2002 ; Laboratory Medicine Volume 33 ; 33 >
+    au < exists ; 2003 ; Laboratory Medicine Volume 34 ; 34 >
+    au < exists ; 2004 ; Laboratory Medicine Volume 35 ; 35 >
+    au < exists ; 2005 ; Laboratory Medicine Volume 36 ; 36 >
+    au < exists ; 2006 ; Laboratory Medicine Volume 37 ; 37 >
+    au < exists ; 2007 ; Laboratory Medicine Volume 38 ; 38 >
+    au < exists ; 2008 ; Laboratory Medicine Volume 39 ; 39 >
+    au < exists ; 2009 ; Laboratory Medicine Volume 40 ; 40 >
+    au < exists ; 2010 ; Laboratory Medicine Volume 41 ; 41 >
+    au < exists ; 2011 ; Laboratory Medicine Volume 42 ; 42 >
+    au < exists ; 2012 ; Laboratory Medicine Volume 43 ; 43 >
+    au < exists ; 2013 ; Laboratory Medicine Volume 44 ; 44 >
+    au < exists ; 2014 ; Laboratory Medicine Volume 45 ; 45 >
+    au < exists ; 2015 ; Laboratory Medicine Volume 46 ; 46 >
+    au < exists ; 2016 ; Laboratory Medicine Volume 47 ; 47 >
 
   }
 
@@ -17534,6 +17534,14 @@
     au < manifest ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 454 ; 454 >
     au < manifest ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 455 ; 455 >
     au < manifest ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 456 ; 456 >
+    au < exists ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 457 ; 457 >
+    au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 458 ; 458 >
+    au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 459 ; 459 >
+    au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 460 ; 460 >
+    au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 461 ; 461 >
+    au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 462 ; 462 >
+    au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 463 ; 463 >
+    au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 464 ; 464 >
 
   }
 
