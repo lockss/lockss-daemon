@@ -148,16 +148,18 @@
 
     param[base_url] = http://berghahnonline.com/ojs/
     param[journal_id] = bhs
+    
+    comment[0] = no manifest pages. THIS http://berghahnonline.com/ojs/index.php/bhs/gateway/lockss?year=2007 REDIRECTS TO http://berghahnonline.com/ojs/index.php/bhs/index
        
-    au < exists ; exists ; 2007 ; Boyhood Studies Volume 1 ; 1 ; 2007 ; >
-    au < exists ; exists ; 2008 ; Boyhood Studies Volume 2 ; 2 ; 2008 ; >
-    au < exists ; exists ; 2009 ; Boyhood Studies Volume 3 ; 3 ; 2009 ; >
-    au < exists ; exists ; 2010 ; Boyhood Studies Volume 4 ; 4 ; 2010 ; >
-    au < exists ; exists ; 2011 ; Boyhood Studies Volume 5 ; 5 ; 2011 ; >
-    au < exists ; exists ; 2012 ; Boyhood Studies Volume 6 ; 6 ; 2012 ; >
-    au < exists ; exists ; 2013 ; Boyhood Studies Volume 7 ; 7 ; 2013 ; >
-    au < exists ; exists ; 2015 ; Boyhood Studies Volume 8 ; 8 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Boyhood Studies Volume 9 ; 9 ; 2016 ; >
+    au < doNotProcess ; exists ; 2007 ; Boyhood Studies Volume 1 ; 1 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; Boyhood Studies Volume 2 ; 2 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; Boyhood Studies Volume 3 ; 3 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; Boyhood Studies Volume 4 ; 4 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; Boyhood Studies Volume 5 ; 5 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; Boyhood Studies Volume 6 ; 6 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; Boyhood Studies Volume 7 ; 7 ; 2013 ; >
+    au < doNotProcess ; exists ; 2015 ; Boyhood Studies Volume 8 ; 8 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; Boyhood Studies Volume 9 ; 9 ; 2016 ; >
     
   }
 
