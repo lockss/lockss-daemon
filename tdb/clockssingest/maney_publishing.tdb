@@ -419,28 +419,6 @@
   {
 
     title <
-      name = Bubble Science, Engineering and Technology ;
-      issn = 1758-8960 ;
-      eissn = 1758-8979 ;
-      issnl = 1758-8960 
-    >
-
-    param[journal_id] = ybub20 
-    comment[dnp] = released for old plugin
-
-    au < exists ; exists ; 2009 ; Bubble Science, Engineering and Technology Volume 1 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 ; >
-    au < doNotProcess ; doNotProcess ; 2011 ; Bubble Science, Engineering and Technology Volume 3 ; 3 ; >
-    au < doNotProcess ; doNotProcess ; 2012 ; Bubble Science, Engineering and Technology Volume 4 ; 4 ; >
-    au < doNotProcess ; doNotProcess ; 2014 ; Bubble Science, Engineering and Technology Volume 5 ; 5 ; >
-    au < expected ; exists ; 2015 ; Bubble Science, Engineering and Technology Volume 6 ; 6 ; >
-    au < expected ; exists ; 2016 ; Bubble Science, Engineering and Technology Volume 7 ; 7 ; >
-
-  }
-
-  {
-
-    title <
       name = Bulletin of the Council for British Research in the Levant ;
       issn = 1752-7260 ;
       eissn = 1752-7279 ;
@@ -765,35 +743,6 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Comparative American Studies Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Comparative American Studies Volume 13 ; 13 ; >
     au < expected ; exists ; 2016 ; Comparative American Studies Volume 14 ; 14 ; >
-
-  }
-
-  {
-
-    title <
-      name = Competition & Change ;
-      issn = 1024-5294 ;
-      eissn = 1477-2221 ;
-      issnl = 1024-5294 
-    >
-
-    param[journal_id] = gcch20 
-    # moved to Sage in 2015, previously part of Maney and T&F
-    #content only available for volume 6 to 8 on T&F platform
-
-    au < exists ; exists ; 2002 ; Competition & Change Volume 6 ; 6 ; >
-    au < exists ; exists ; 2003 ; Competition & Change Volume 7 ; 7 ; >
-    au < exists ; exists ; 2004 ; Competition & Change Volume 8 ; 8 ; >
-    au < doesNotExist ; exists ; 2005 ; Competition & Change Volume 9 ; 9 ; >
-    au < doesNotExist ; exists ; 2006 ; Competition & Change Volume 10 ; 10 ; >
-    au < doesNotExist ; exists ; 2007 ; Competition & Change Volume 11 ; 11 ; >
-    au < doesNotExist ; exists ; 2008 ; Competition & Change Volume 12 ; 12 ; >
-    au < doesNotExist ; exists ; 2009 ; Competition & Change Volume 13 ; 13 ; >
-    au < doNotProcess ; doNotProcess ; 2010 ; Competition & Change Volume 14 ; 14 ; >
-    au < doNotProcess ; doNotProcess ; 2011 ; Competition & Change Volume 15 ; 15 ; >
-    au < doNotProcess ; doNotProcess ; 2012 ; Competition & Change Volume 16 ; 16 ; >
-    au < doesNotExist ; exists ; 2013 ; Competition & Change Volume 17 ; 17 ; >
-    au < doesNotExist ; exists ; 2014 ; Competition & Change Volume 18 ; 18 ; >
 
   }
 
@@ -1397,26 +1346,6 @@
     au < exists ; exists ; 1956-1957 ; Gwerin: A Half-Yearly Journal of Folk Life Volume 1 ; 1 ; >
     au < exists ; exists ; 1958-1959 ; Gwerin: A Half-Yearly Journal of Folk Life Volume 2 ; 2 ; >
     au < exists ; exists ; 1960-1962 ; Gwerin: A Half-Yearly Journal of Folk Life Volume 3 ; 3 ; >
-
-  }
-
-  {
-
-    title <
-      name = The Hardy Review ;
-      issn = 1934-8908 ;
-      eissn = 1934-8916 ;
-      issnl = 1934-8908 
-    >
-
-    param[journal_id] = yhdy20 
-    comment[1] = ceased publication in 2011
-    
-    au < exists ; exists ; 2007 ; The Hardy Review Volume 9 ; 9 ; >
-    au < exists ; exists ; 2008 ; The Hardy Review Volume 10 ; 10 ; >
-    au < exists ; exists ; 2009 ; The Hardy Review Volume 11 ; 11 ; >
-    au < doNotProcess ; doNotProcess ; 2010 ; The Hardy Review Volume 12 ; 12 ; >
-    au < doNotProcess ; doNotProcess ; 2011 ; The Hardy Review Volume 13 ; 13 ; > 
 
   }
 
@@ -2570,31 +2499,6 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of the British Archaeological Association Volume 167 ; 167 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of the British Archaeological Association Volume 168 ; 168 ; >
     au < expected ; exists ; 2016 ; Journal of the British Archaeological Association Volume 169 ; 169 ; >
-
-  }
-
-  {
-
-    title <
-      name = Journal of the Energy Institute ;
-      issn = 0144-2600 ;
-      eissn = 1746-0220 ;
-      issnl = 0144-2600 
-    >
-
-    param[journal_id] = yeni20 
-    comment[dnp] = released for old plugin
-    comment[0] = Published by Elsevier since January 2014
-    
-    au < exists ; exists ; 2005 ; Journal of the Energy Institute Volume 78 ; 78 ; >
-    au < exists ; exists ; 2006 ; Journal of the Energy Institute Volume 79 ; 79 ; >
-    au < exists ; exists ; 2007 ; Journal of the Energy Institute Volume 80 ; 80 ; >
-    au < exists ; exists ; 2008 ; Journal of the Energy Institute Volume 81 ; 81 ; >
-    au < exists ; exists ; 2009 ; Journal of the Energy Institute Volume 82 ; 82 ; >
-    au < doNotProcess ; doNotProcess ; 2010 ; Journal of the Energy Institute Volume 83 ; 83 ; >
-    au < doNotProcess ; doNotProcess ; 2011 ; Journal of the Energy Institute Volume 84 ; 84 ; >
-    au < doNotProcess ; doNotProcess ; 2012 ; Journal of the Energy Institute Volume 85 ; 85 ; >
-    au < doNotProcess ; doNotProcess ; 2013 ; Journal of the Energy Institute Volume 86 ; 86 ; >
 
   }
 
