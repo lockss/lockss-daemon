@@ -16,28 +16,25 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://pas.fass.org/
     implicit < status ; year ; name ; param[volume_name] >
-    comment[notReady] = Issues 4-6 have login pages.
+    # move to Elsevier
 
-    au < released ; 1997 ; The Professional Animal Scientist Volume 13 ; 13 >
-    au < released ; 1998 ; The Professional Animal Scientist Volume 14 ; 14 >
-    au < released ; 1999 ; The Professional Animal Scientist Volume 15 ; 15 >
-    au < released ; 2000 ; The Professional Animal Scientist Volume 16 ; 16 >
-    au < released ; 2001 ; The Professional Animal Scientist Volume 17 ; 17 >
-    au < released ; 2002 ; The Professional Animal Scientist Volume 18 ; 18 >
-    au < released ; 2003 ; The Professional Animal Scientist Volume 19 ; 19 >
-    au < released ; 2004 ; The Professional Animal Scientist Volume 20 ; 20 >
-    au < released ; 2005 ; The Professional Animal Scientist Volume 21 ; 21 >
-    au < released ; 2006 ; The Professional Animal Scientist Volume 22 ; 22 >
-    au < released ; 2007 ; The Professional Animal Scientist Volume 23 ; 23 >
-    au < released ; 2008 ; The Professional Animal Scientist Volume 24 ; 24 >
-    au < released ; 2009 ; The Professional Animal Scientist Volume 25 ; 25 >
-    au < released ; 2010 ; The Professional Animal Scientist Volume 26 ; 26 >
-    au < released ; 2011 ; The Professional Animal Scientist Volume 27 ; 27 >
-    au < released ; 2012 ; The Professional Animal Scientist Volume 28 ; 28 >
-    au < released ; 2013 ; The Professional Animal Scientist Volume 29 ; 29 >
-    au < notReady ; 2014 ; The Professional Animal Scientist Volume 30 ; 30 >
-    au < testing ; 2015 ; The Professional Animal Scientist Volume 31 ; 31 >
-    au < expected ; 2016 ; The Professional Animal Scientist Volume 32 ; 32 >
+    au < down ; 1997 ; The Professional Animal Scientist Volume 13 ; 13 >
+    au < down ; 1998 ; The Professional Animal Scientist Volume 14 ; 14 >
+    au < down ; 1999 ; The Professional Animal Scientist Volume 15 ; 15 >
+    au < down ; 2000 ; The Professional Animal Scientist Volume 16 ; 16 >
+    au < down ; 2001 ; The Professional Animal Scientist Volume 17 ; 17 >
+    au < down ; 2002 ; The Professional Animal Scientist Volume 18 ; 18 >
+    au < down ; 2003 ; The Professional Animal Scientist Volume 19 ; 19 >
+    au < down ; 2004 ; The Professional Animal Scientist Volume 20 ; 20 >
+    au < down ; 2005 ; The Professional Animal Scientist Volume 21 ; 21 >
+    au < down ; 2006 ; The Professional Animal Scientist Volume 22 ; 22 >
+    au < down ; 2007 ; The Professional Animal Scientist Volume 23 ; 23 >
+    au < down ; 2008 ; The Professional Animal Scientist Volume 24 ; 24 >
+    au < down ; 2009 ; The Professional Animal Scientist Volume 25 ; 25 >
+    au < down ; 2010 ; The Professional Animal Scientist Volume 26 ; 26 >
+    au < down ; 2011 ; The Professional Animal Scientist Volume 27 ; 27 >
+    au < down ; 2012 ; The Professional Animal Scientist Volume 28 ; 28 >
+    au < down ; 2013 ; The Professional Animal Scientist Volume 29 ; 29 >
 
   }
   
