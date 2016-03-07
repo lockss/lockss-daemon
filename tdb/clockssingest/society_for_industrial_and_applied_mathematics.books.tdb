@@ -2,7 +2,7 @@
   publisher <
     name = Society for Industrial and Applied Mathematics ;
     info[contract] = 2013 ;
-    info[back] = 2000 ;
+    info[back] = 1900 ;
     info[tester] = 8
   >
 
@@ -18,189 +18,189 @@
       type = bookSeries
       >
       
-      au < manifest ; exists ; 1971 ; 978-0-89871-003-8 ; 978-1-61197-064-7 ; 9781611970647 ; Functional Analysis and Approximation Theory in Numerical Analysis (978-1-61197-064-7) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1971 ; 978-0-89871-175-2 ; 978-1-61197-063-0 ; 9781611970630 ; Some Limit Theorems in Statistics (978-1-61197-063-0) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1971 ; 978-0-89871-176-9 ; 978-1-61197-062-3 ; 9781611970623 ; Weak Convergence of Measures (978-1-61197-062-3) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1972 ; 978-0-89871-001-4 ; 978-1-61197-066-1 ; 9781611970661 ; The Numerical Solution of Elliptic Equations (978-1-61197-066-1) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1972 ; 978-0-89871-002-1 ; 978-1-61197-065-4 ; 9781611970654 ; Bayesian Statistics (978-1-61197-065-4) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1972 ; 978-0-89871-004-5 ; 978-1-61197-061-6 ; 9781611970616 ; Some Aspects of the Optimal Control of Distributed Parameter Systems (978-1-61197-061-6) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1972 ; 978-0-89871-005-2 ; 978-1-61197-060-9 ; 9781611970609 ; Techniques in Differential Topology in Relativity (978-1-61197-060-9) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1971 ; 978-0-89871-003-8 ; 978-1-61197-064-7 ; 9781611970647 ; Functional Analysis and Approximation Theory in Numerical Analysis (978-1-61197-064-7) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1971 ; 978-0-89871-175-2 ; 978-1-61197-063-0 ; 9781611970630 ; Some Limit Theorems in Statistics (978-1-61197-063-0) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1971 ; 978-0-89871-176-9 ; 978-1-61197-062-3 ; 9781611970623 ; Weak Convergence of Measures (978-1-61197-062-3) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1972 ; 978-0-89871-001-4 ; 978-1-61197-066-1 ; 9781611970661 ; The Numerical Solution of Elliptic Equations (978-1-61197-066-1) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1972 ; 978-0-89871-002-1 ; 978-1-61197-065-4 ; 9781611970654 ; Bayesian Statistics (978-1-61197-065-4) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1972 ; 978-0-89871-004-5 ; 978-1-61197-061-6 ; 9781611970616 ; Some Aspects of the Optimal Control of Distributed Parameter Systems (978-1-61197-061-6) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1972 ; 978-0-89871-005-2 ; 978-1-61197-060-9 ; 9781611970609 ; Techniques in Differential Topology in Relativity (978-1-61197-060-9) ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 1972 ; 978-0-89871-006-9 ; 978-1-61197-059-3 ; 9781611970593 ; Sequential Analysis and Optimal Design (978-1-61197-059-3) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1973 ; 978-0-89871-007-6 ; 978-1-61197-058-6 ; 9781611970586 ; Distribution Theory for Tests Based on the Sample Distribution Function (978-1-61197-058-6) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1973 ; 978-0-89871-008-3 ; 978-1-61197-057-9 ; 9781611970579 ; Mathematical Problems in the Biological Sciences (978-1-61197-057-9) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1973 ; 978-0-89871-009-0 ; 978-1-61197-055-5 ; 9781611970555 ; Cardinal Spline Interpolation (978-1-61197-055-5) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1973 ; 978-0-89871-177-6 ; 978-1-61197-056-2 ; 9781611970562 ; Hyperbolic Systems of Conservation Laws and the Mathematical Theory of Shock Waves (978-1-61197-056-2) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1973 ; 978-0-89871-007-6 ; 978-1-61197-058-6 ; 9781611970586 ; Distribution Theory for Tests Based on the Sample Distribution Function (978-1-61197-058-6) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1973 ; 978-0-89871-008-3 ; 978-1-61197-057-9 ; 9781611970579 ; Mathematical Problems in the Biological Sciences (978-1-61197-057-9) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1973 ; 978-0-89871-009-0 ; 978-1-61197-055-5 ; 9781611970555 ; Cardinal Spline Interpolation (978-1-61197-055-5) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1973 ; 978-0-89871-177-6 ; 978-1-61197-056-2 ; 9781611970562 ; Hyperbolic Systems of Conservation Laws and the Mathematical Theory of Shock Waves (978-1-61197-056-2) ; reingest1.clockss.org:8082 >
       au < exists ; exists ; 1974 ; 978-0-89871-010-6 ; 978-1-61197-054-8 ; 9781611970548 ; The Theory of Best Approximation and Functional Analysis (978-1-61197-054-8) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1974 ; 978-0-89871-012-0 ; 978-1-61197-053-1 ; 9781611970531 ; Variational Methods for Eigenvalue Approximation (978-1-61197-053-1) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1974 ; 978-0-89871-013-7 ; 978-1-61197-052-4 ; 9781611970524 ; Conjugate Duality and Optimization (978-1-61197-052-4) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1975 ; 978-0-89871-014-4 ; 978-1-61197-051-7 ; 9781611970517 ; Mathematical Biofluiddynamics (978-1-61197-051-7) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1975 ; 978-0-89871-015-1 ; 978-1-61197-050-0 ; 9781611970500 ; A Theory of Indexing (978-1-61197-050-0) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1975 ; 978-0-89871-016-8 ; 978-1-61197-049-4 ; 9781611970494 ; Notes on Time Decay and Scattering for Some Hyperbolic Problems (978-1-61197-049-4) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1975 ; 978-0-89871-017-5 ; 978-1-61197-048-7 ; 9781611970487 ; Mathematical Theories of Populations (978-1-61197-048-7) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1975 ; 978-0-89871-018-2 ; 978-1-61197-047-0 ; 9781611970470 ; Orthogonal Polynomials and Special Functions (978-1-61197-047-0) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1975 ; 978-0-89871-019-9 ; 978-1-61197-046-3 ; 9781611970463 ; Improperly Posed Problems in Partial Differential Equations (978-1-61197-046-3) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1976 ; 978-0-89871-020-5 ; 978-1-61197-045-6 ; 9781611970456 ; Lectures on the Measurement and Evaluation of the Performance of Computing Systems (978-1-61197-045-6) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1976 ; 978-0-89871-021-2 ; 978-1-61197-044-9 ; 9781611970449 ; Numerical Solution of Two Point Boundary Value Problems (978-1-61197-044-9) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1976 ; 978-0-89871-022-9 ; 978-1-61197-043-2 ; 9781611970432 ; The Stability of Dynamical Systems (978-1-61197-043-2) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1977 ; 978-0-89871-023-6 ; 978-1-61197-042-5 ; 9781611970425 ; Numerical Analysis of Spectral Methods (978-1-61197-042-5) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1978 ; 978-0-89871-025-0 ; 978-1-61197-041-8 ; 9781611970418 ; Geometric Probability (978-1-61197-041-8) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1978 ; 978-0-89871-026-7 ; 978-1-61197-040-1 ; 9781611970401 ; Graph Theory and Its Applications to Problems of Society (978-1-61197-040-1) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1979 ; 978-0-89871-151-6 ; 978-1-61197-091-3 ; 9781611970913 ; Lie-Bäcklund Transformations in Applications (978-1-61197-091-3) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1979 ; 978-0-89871-161-5 ; 978-1-61197-090-6 ; 9781611970906 ; Methods and Applications of Interval Analysis (978-1-61197-090-6) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1979 ; 978-0-89871-172-1 ; 978-1-61197-181-1 ; 9781611971811 ; LINPACK Users' Guide (978-1-61197-181-1) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1980 ; 978-0-89871-162-2 ; 978-1-61197-037-1 ; 9781611970371 ; Integer Programming (978-1-61197-037-1) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1980 ; 978-0-89871-163-9 ; 978-1-61197-036-4 ; 9781611970364 ; Arithmetic Complexity of Computations (978-1-61197-036-4) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1980 ; 978-0-89871-164-6 ; 978-1-61197-038-8 ; 9781611970388 ; Lectures on the Logic of Computer Programming (978-1-61197-038-8) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1980 ; 978-0-89871-166-0 ; 978-1-61197-035-7 ; 9781611970357 ; Mathematics of Genetic Diversity (978-1-61197-035-7) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1981 ; 978-0-89871-168-4 ; 978-1-61197-034-0 ; 9781611970340 ; Topics in Finite Elasticity (978-1-61197-034-0) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1981 ; 978-0-89871-169-1 ; 978-1-61197-033-3 ; 9781611970333 ; Approximation of Population Processes (978-1-61197-033-3) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1981 ; 978-0-89871-170-7 ; 978-1-61197-032-6 ; 9781611970326 ; Lectures on Geometric Models in Mathematical Physics (978-1-61197-032-6) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1981 ; 978-0-89871-171-4 ; 978-1-61197-089-0 ; 9781611970890 ; Ill-Posed Problems for Integrodifferential Equations in Mechanics and Electromagnetic Theory (978-1-61197-089-0) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1981 ; 978-0-89871-174-5 ; 978-1-61197-088-3 ; 9781611970883 ; Solitons and the Inverse Scattering Transform (978-1-61197-088-3) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1982 ; 978-0-89871-179-0 ; 978-1-61197-031-9 ; 9781611970319 ; The Jackknife, the Bootstrap and Other Resampling Plans (978-1-61197-031-9) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1982 ; 978-0-89871-180-6 ; 978-1-61197-030-2 ; 9781611970302 ; Nonlinear Renewal Theory in Sequential Analysis (978-1-61197-030-2) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1982 ; 978-0-89871-181-3 ; 978-1-61197-087-6 ; 9781611970876 ; Fourier Analysis of Numerical Approximations of Hyperbolic Equations (978-1-61197-087-6) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1983 ; 978-0-89871-182-0 ; 978-1-61197-029-6 ; 9781611970296 ; Branching in the Presence of Symmetry (978-1-61197-029-6) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1983 ; 978-0-89871-185-1 ; 978-1-61197-028-9 ; 9781611970289 ; Quantile Processes with Statistical Applications (978-1-61197-028-9) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1983 ; 978-0-89871-186-8 ; 978-1-61197-027-2 ; 9781611970272 ; Lectures on Mathematical Combustion (978-1-61197-027-2) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1983 ; 978-0-89871-187-5 ; 978-1-61197-026-5 ; 9781611970265 ; Data Structures and Network Algorithms (978-1-61197-026-5) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1983 ; 978-0-89871-188-2 ; 978-1-61197-025-8 ; 9781611970258 ; Competition Models in Population Biology (978-1-61197-025-8) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1983 ; 978-0-89871-662-7 ; 978-1-61197-107-1 ; 9781611971071 ; The Mathematics of Reservoir Simulation (978-1-61197-107-1) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1984 ; 978-0-89871-189-9 ; 978-1-61197-024-1 ; 9781611970241 ; Large Deviations and Applications (978-1-61197-024-1) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1984 ; 978-0-89871-193-6 ; 978-1-61197-023-4 ; 9781611970234 ; Foundations of Stochastic Differential Equations in Infinite Dimensional Spaces (978-1-61197-023-4) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1984 ; 978-0-89871-476-0 ; 978-1-61197-086-9 ; 9781611970869 ; Numerical Solution of Elliptic Problems (978-1-61197-086-9) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1985 ; 978-0-89871-051-9 ; 978-1-61197-021-0 ; 9781611970210 ; Theory and Applications of Sequential Nonparametrics (978-1-61197-021-0) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1985 ; 978-0-89871-053-3 ; 978-1-61197-106-4 ; 9781611971064 ; The Mathematics of Combustion (978-1-61197-106-4) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1985 ; 978-0-89871-055-7 ; 978-1-61197-177-4 ; 9781611971774 ; Solution of Partial Differential Equations on Vector and Parallel Computers (978-1-61197-177-4) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1985 ; 978-0-89871-196-7 ; 978-1-61197-022-7 ; 9781611970227 ; Solitons in Mathematics and Physics (978-1-61197-022-7) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1985 ; 978-0-89871-198-1 ; 978-1-61197-085-2 ; 9781611970852 ; Analytical and Numerical Methods for Volterra Equations (978-1-61197-085-2) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1986 ; 978-0-89871-203-2 ; 978-1-61197-020-3 ; 9781611970203 ; An Algorithmic Theory of Numbers, Graphs and Convexity (978-1-61197-020-3) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1986 ; 978-0-89871-207-0 ; 978-1-61197-019-7 ; 9781611970197 ; Multivariate Approximation Theory (978-1-61197-019-7) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1987 ; 978-0-89871-204-9 ; 978-1-61197-176-7 ; 9781611971767 ; Mathematical Modelling: Classroom Notes in Applied Mathematics (978-1-61197-176-7) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1987 ; 978-1-61197-188-0 ; 978-1-61197-105-7 ; 9781611971057 ; Multigrid Methods (978-1-61197-105-7) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1988 ; 978-0-89871-225-4 ; 978-1-61197-018-0 ; 9781611970180 ; Dynamics of Internal Layers and Diffusive Interfaces (978-1-61197-018-0) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1988 ; 978-0-89871-226-1 ; 978-1-61197-017-3 ; 9781611970173 ; Multivariate Splines (978-1-61197-017-3) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1988 ; 978-0-89871-227-8 ; 978-1-61197-104-0 ; 9781611971040 ; Handbook for Matrix Computations (978-1-61197-104-0) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1988 ; 978-0-89871-229-2 ; 978-1-61197-134-7 ; 9781611971347 ; Mathematics Applied to Deterministic Problems in the Natural Sciences (978-1-61197-134-7) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1988 ; 978-0-89871-468-5 ; 978-1-61197-084-5 ; 9781611970845 ; Contact Problems in Elasticity (978-1-61197-084-5) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1989 ; 978-0-89871-027-4 ; 978-1-61197-039-5 ; 9781611970395 ; Feasible Computations and Provable Complexity Properties (978-1-61197-039-5) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1989 ; 978-0-89871-230-8 ; 978-1-61197-083-8 ; 9781611970838 ; Augmented Lagrangian and Operator-Splitting Methods in Nonlinear Mechanics (978-1-61197-083-8) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1989 ; 978-0-89871-231-5 ; 978-1-61197-016-6 ; 9781611970166 ; Combinatorial Algorithms (978-1-61197-016-6) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1974 ; 978-0-89871-012-0 ; 978-1-61197-053-1 ; 9781611970531 ; Variational Methods for Eigenvalue Approximation (978-1-61197-053-1) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1974 ; 978-0-89871-013-7 ; 978-1-61197-052-4 ; 9781611970524 ; Conjugate Duality and Optimization (978-1-61197-052-4) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1975 ; 978-0-89871-014-4 ; 978-1-61197-051-7 ; 9781611970517 ; Mathematical Biofluiddynamics (978-1-61197-051-7) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1975 ; 978-0-89871-015-1 ; 978-1-61197-050-0 ; 9781611970500 ; A Theory of Indexing (978-1-61197-050-0) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1975 ; 978-0-89871-016-8 ; 978-1-61197-049-4 ; 9781611970494 ; Notes on Time Decay and Scattering for Some Hyperbolic Problems (978-1-61197-049-4) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1975 ; 978-0-89871-017-5 ; 978-1-61197-048-7 ; 9781611970487 ; Mathematical Theories of Populations (978-1-61197-048-7) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1975 ; 978-0-89871-018-2 ; 978-1-61197-047-0 ; 9781611970470 ; Orthogonal Polynomials and Special Functions (978-1-61197-047-0) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1975 ; 978-0-89871-019-9 ; 978-1-61197-046-3 ; 9781611970463 ; Improperly Posed Problems in Partial Differential Equations (978-1-61197-046-3) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1976 ; 978-0-89871-020-5 ; 978-1-61197-045-6 ; 9781611970456 ; Lectures on the Measurement and Evaluation of the Performance of Computing Systems (978-1-61197-045-6) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1976 ; 978-0-89871-021-2 ; 978-1-61197-044-9 ; 9781611970449 ; Numerical Solution of Two Point Boundary Value Problems (978-1-61197-044-9) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1976 ; 978-0-89871-022-9 ; 978-1-61197-043-2 ; 9781611970432 ; The Stability of Dynamical Systems (978-1-61197-043-2) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1977 ; 978-0-89871-023-6 ; 978-1-61197-042-5 ; 9781611970425 ; Numerical Analysis of Spectral Methods (978-1-61197-042-5) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1978 ; 978-0-89871-025-0 ; 978-1-61197-041-8 ; 9781611970418 ; Geometric Probability (978-1-61197-041-8) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1978 ; 978-0-89871-026-7 ; 978-1-61197-040-1 ; 9781611970401 ; Graph Theory and Its Applications to Problems of Society (978-1-61197-040-1) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1979 ; 978-0-89871-151-6 ; 978-1-61197-091-3 ; 9781611970913 ; Lie-Bäcklund Transformations in Applications (978-1-61197-091-3) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1979 ; 978-0-89871-161-5 ; 978-1-61197-090-6 ; 9781611970906 ; Methods and Applications of Interval Analysis (978-1-61197-090-6) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1979 ; 978-0-89871-172-1 ; 978-1-61197-181-1 ; 9781611971811 ; LINPACK Users' Guide (978-1-61197-181-1) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1980 ; 978-0-89871-162-2 ; 978-1-61197-037-1 ; 9781611970371 ; Integer Programming (978-1-61197-037-1) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1980 ; 978-0-89871-163-9 ; 978-1-61197-036-4 ; 9781611970364 ; Arithmetic Complexity of Computations (978-1-61197-036-4) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1980 ; 978-0-89871-164-6 ; 978-1-61197-038-8 ; 9781611970388 ; Lectures on the Logic of Computer Programming (978-1-61197-038-8) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1980 ; 978-0-89871-166-0 ; 978-1-61197-035-7 ; 9781611970357 ; Mathematics of Genetic Diversity (978-1-61197-035-7) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1981 ; 978-0-89871-168-4 ; 978-1-61197-034-0 ; 9781611970340 ; Topics in Finite Elasticity (978-1-61197-034-0) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1981 ; 978-0-89871-169-1 ; 978-1-61197-033-3 ; 9781611970333 ; Approximation of Population Processes (978-1-61197-033-3) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1981 ; 978-0-89871-170-7 ; 978-1-61197-032-6 ; 9781611970326 ; Lectures on Geometric Models in Mathematical Physics (978-1-61197-032-6) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1981 ; 978-0-89871-171-4 ; 978-1-61197-089-0 ; 9781611970890 ; Ill-Posed Problems for Integrodifferential Equations in Mechanics and Electromagnetic Theory (978-1-61197-089-0) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1981 ; 978-0-89871-174-5 ; 978-1-61197-088-3 ; 9781611970883 ; Solitons and the Inverse Scattering Transform (978-1-61197-088-3) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1982 ; 978-0-89871-179-0 ; 978-1-61197-031-9 ; 9781611970319 ; The Jackknife, the Bootstrap and Other Resampling Plans (978-1-61197-031-9) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1982 ; 978-0-89871-180-6 ; 978-1-61197-030-2 ; 9781611970302 ; Nonlinear Renewal Theory in Sequential Analysis (978-1-61197-030-2) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1982 ; 978-0-89871-181-3 ; 978-1-61197-087-6 ; 9781611970876 ; Fourier Analysis of Numerical Approximations of Hyperbolic Equations (978-1-61197-087-6) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1983 ; 978-0-89871-182-0 ; 978-1-61197-029-6 ; 9781611970296 ; Branching in the Presence of Symmetry (978-1-61197-029-6) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1983 ; 978-0-89871-185-1 ; 978-1-61197-028-9 ; 9781611970289 ; Quantile Processes with Statistical Applications (978-1-61197-028-9) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1983 ; 978-0-89871-186-8 ; 978-1-61197-027-2 ; 9781611970272 ; Lectures on Mathematical Combustion (978-1-61197-027-2) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1983 ; 978-0-89871-187-5 ; 978-1-61197-026-5 ; 9781611970265 ; Data Structures and Network Algorithms (978-1-61197-026-5) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1983 ; 978-0-89871-188-2 ; 978-1-61197-025-8 ; 9781611970258 ; Competition Models in Population Biology (978-1-61197-025-8) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1983 ; 978-0-89871-662-7 ; 978-1-61197-107-1 ; 9781611971071 ; The Mathematics of Reservoir Simulation (978-1-61197-107-1) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1984 ; 978-0-89871-189-9 ; 978-1-61197-024-1 ; 9781611970241 ; Large Deviations and Applications (978-1-61197-024-1) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1984 ; 978-0-89871-193-6 ; 978-1-61197-023-4 ; 9781611970234 ; Foundations of Stochastic Differential Equations in Infinite Dimensional Spaces (978-1-61197-023-4) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1984 ; 978-0-89871-476-0 ; 978-1-61197-086-9 ; 9781611970869 ; Numerical Solution of Elliptic Problems (978-1-61197-086-9) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1985 ; 978-0-89871-051-9 ; 978-1-61197-021-0 ; 9781611970210 ; Theory and Applications of Sequential Nonparametrics (978-1-61197-021-0) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1985 ; 978-0-89871-053-3 ; 978-1-61197-106-4 ; 9781611971064 ; The Mathematics of Combustion (978-1-61197-106-4) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1985 ; 978-0-89871-055-7 ; 978-1-61197-177-4 ; 9781611971774 ; Solution of Partial Differential Equations on Vector and Parallel Computers (978-1-61197-177-4) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1985 ; 978-0-89871-196-7 ; 978-1-61197-022-7 ; 9781611970227 ; Solitons in Mathematics and Physics (978-1-61197-022-7) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1985 ; 978-0-89871-198-1 ; 978-1-61197-085-2 ; 9781611970852 ; Analytical and Numerical Methods for Volterra Equations (978-1-61197-085-2) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1986 ; 978-0-89871-203-2 ; 978-1-61197-020-3 ; 9781611970203 ; An Algorithmic Theory of Numbers, Graphs and Convexity (978-1-61197-020-3) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1986 ; 978-0-89871-207-0 ; 978-1-61197-019-7 ; 9781611970197 ; Multivariate Approximation Theory (978-1-61197-019-7) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1987 ; 978-0-89871-204-9 ; 978-1-61197-176-7 ; 9781611971767 ; Mathematical Modelling: Classroom Notes in Applied Mathematics (978-1-61197-176-7) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1987 ; 978-1-61197-188-0 ; 978-1-61197-105-7 ; 9781611971057 ; Multigrid Methods (978-1-61197-105-7) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1988 ; 978-0-89871-225-4 ; 978-1-61197-018-0 ; 9781611970180 ; Dynamics of Internal Layers and Diffusive Interfaces (978-1-61197-018-0) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1988 ; 978-0-89871-226-1 ; 978-1-61197-017-3 ; 9781611970173 ; Multivariate Splines (978-1-61197-017-3) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1988 ; 978-0-89871-227-8 ; 978-1-61197-104-0 ; 9781611971040 ; Handbook for Matrix Computations (978-1-61197-104-0) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1988 ; 978-0-89871-229-2 ; 978-1-61197-134-7 ; 9781611971347 ; Mathematics Applied to Deterministic Problems in the Natural Sciences (978-1-61197-134-7) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1988 ; 978-0-89871-468-5 ; 978-1-61197-084-5 ; 9781611970845 ; Contact Problems in Elasticity (978-1-61197-084-5) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1989 ; 978-0-89871-027-4 ; 978-1-61197-039-5 ; 9781611970395 ; Feasible Computations and Provable Complexity Properties (978-1-61197-039-5) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1989 ; 978-0-89871-230-8 ; 978-1-61197-083-8 ; 9781611970838 ; Augmented Lagrangian and Operator-Splitting Methods in Nonlinear Mechanics (978-1-61197-083-8) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1989 ; 978-0-89871-231-5 ; 978-1-61197-016-6 ; 9781611970166 ; Combinatorial Algorithms (978-1-61197-016-6) ; reingest1.clockss.org:8082 >
       au < ready ; exists ; 1989 ; 978-0-89871-232-2 ; 978-1-61197-015-9 ; 9781611970159 ; Stochastic Processes in the Neurosciences (978-1-61197-015-9) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1989 ; 978-0-89871-237-7 ; 978-1-61197-082-1 ; 9781611970821 ; Boundary Stabilization of Thin Plates (978-1-61197-082-1) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1989 ; 978-0-89871-239-1 ; 978-1-61197-103-3 ; 9781611971033 ; Symbolic Computation (978-1-61197-103-3) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1989 ; 978-0-89871-240-7 ; 978-1-61197-013-5 ; 9781611970135 ; The Method of Equivalence and Its Applications (978-1-61197-013-5) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1989 ; 978-0-89871-241-4 ; 978-1-61197-014-2 ; 9781611970142 ; Method of Dynamic and Nonsmooth Optimization (978-1-61197-014-2) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1989 ; 978-0-89871-243-8 ; 978-1-61197-133-0 ; 9781611971330 ; A Survey of Lie Groups and Lie Algebras with Applications and Computational Methods (978-1-61197-133-0) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1989 ; 978-0-89871-247-6 ; 978-1-61197-102-6 ; 9781611971026 ; Multilevel Adaptive Methods for Partial Differential Equations (978-1-61197-102-6) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1990 ; 978-0-89871-244-5 ; 978-1-61197-012-8 ; 9781611970128 ; Spline Models for Observational Data (978-1-61197-012-8) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1990 ; 978-0-89871-245-2 ; 978-1-61197-081-4 ; 9781611970814 ; Electro-Diffusion of Ions (978-1-61197-081-4) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1990 ; 978-0-89871-250-6 ; 978-1-61197-132-3 ; 9781611971323 ; Numerical Analysis (978-1-61197-132-3) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1990 ; 978-0-89871-254-4 ; 978-1-61197-131-6 ; 9781611971316 ; Nonlinear Programming (978-1-61197-131-6) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1990 ; 978-0-89871-256-8 ; 978-1-61197-130-9 ; 9781611971309 ; Optimization and Nonsmooth Analysis (978-1-61197-130-9) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1990 ; 978-0-89871-257-5 ; 978-1-61197-011-1 ; 9781611970111 ; Scientific Computation on Mathematical Problems and Conjectures (978-1-61197-011-1) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1990 ; 978-0-89871-259-9 ; 978-1-61197-172-9 ; 9781611971729 ; Problems in Applied Mathematics: Selections from (978-1-61197-172-9) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1990 ; 978-0-89871-260-5 ; 978-1-61197-170-5 ; 9781611971705 ; Parallel Algorithms for Matrix Computations (978-1-61197-170-5) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1990 ; 978-0-89871-261-2 ; 978-1-61197-171-2 ; 9781611971712 ; Nonparametric Function Estimation, Modeling, and Simulation (978-1-61197-171-2) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1991 ; 978-0-89871-258-2 ; 978-1-61197-173-6 ; 9781611971736 ; Vortex Methods and Vortex Motion (978-1-61197-173-6) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1991 ; 978-0-89871-263-6 ; 978-1-61197-167-5 ; 9781611971675 ; A Primer on Integral Equations of the First Kind (978-1-61197-167-5) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1991 ; 978-0-89871-265-0 ; 978-1-61197-129-3 ; 9781611971293 ; Ordinary Differential Equations (978-1-61197-129-3) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1991 ; 978-0-89871-267-4 ; 978-1-61197-101-9 ; 9781611971019 ; Mathematical Aspects of Numerical Grid Generation (978-1-61197-101-9) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1991 ; 978-0-89871-275-9 ; 978-1-61197-100-2 ; 9781611971002 ; The Total Least Squares Problem (978-1-61197-100-2) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1992 ; 978-0-89871-266-7 ; 978-1-61197-080-7 ; 9781611970807 ; Mathematical Problems in Linear Viscoelasticity (978-1-61197-080-7) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1992 ; 978-0-89871-274-2 ; 978-1-61197-010-4 ; 9781611970104 ; Ten Lectures on Wavelets (978-1-61197-010-4) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1992 ; 978-0-89871-280-3 ; 978-1-61197-166-8 ; 9781611971668 ; Geometry Processing for Design and Manufacturing (978-1-61197-166-8) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1992 ; 978-0-89871-281-0 ; 978-1-61197-165-1 ; 9781611971651 ; Curve and Surface Design (978-1-61197-165-1) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1992 ; 978-0-89871-282-7 ; 978-1-61197-164-4 ; 9781611971644 ; Topics in Surface Modeling (978-1-61197-164-4) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1992 ; 978-0-89871-285-8 ; 978-1-61197-099-9 ; 9781611970999 ; Computational Frameworks for the Fast Fourier Transform (978-1-61197-099-9) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1992 ; 978-0-89871-292-6 ; 978-1-61197-009-8 ; 9781611970098 ; Multilevel Projection Methods for Partial Differential Equations (978-1-61197-009-8) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1992 ; 978-0-89871-295-7 ; 978-1-61197-008-1 ; 9781611970081 ; Random Number Generation and Quasi-Monte Carlo Methods (978-1-61197-008-1) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1992 ; 978-0-89871-296-4 ; 978-1-61197-128-6 ; 9781611971286 ; Probability (978-1-61197-128-6) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1992 ; 978-0-89871-297-1 ; 978-1-61197-098-2 ; 9781611970982 ; Control and Estimation in Distributed Parameter Systems (978-1-61197-098-2) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1992 ; 978-0-89871-298-8 ; 978-1-61197-163-7 ; 9781611971637 ; Sinc Methods for Quadrature and Differential Equations (978-1-61197-163-7) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1992 ; 978-0-89871-304-6 ; 978-1-61197-127-9 ; 9781611971279 ; An Introduction to Invariant Imbedding (978-1-61197-127-9) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1992 ; 978-0-89871-306-0 ; 978-1-61197-158-3 ; 9781611971583 ; Knot Insertion and Deletion Algorithms for B-Spline Curves and Surfaces (978-1-61197-158-3) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1993 ; 978-0-89871-308-4 ; 978-1-61197-157-6 ; 9781611971576 ; Pitman's Measure of Closeness (978-1-61197-157-6) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1993 ; 978-0-89871-310-7 ; 978-1-61197-097-5 ; 9781611970975 ; Transonic Aerodynamics: Problems in Asymptotic Theory (978-1-61197-097-5) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1993 ; 978-0-89871-320-6 ; 978-1-61197-096-8 ; 9781611970968 ; Mathematical and Computational Techniques for Multilevel Adaptive Methods (978-1-61197-096-8) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1993 ; 978-0-89871-322-0 ; 978-1-61197-095-1 ; 9781611970951 ; Optimization Software Guide (978-1-61197-095-1) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1994 ; 978-0-89871-316-9 ; 978-1-61197-156-9 ; 9781611971569 ; Russian-English, English-Russian Dictionary on Proabability, Statistics, and Combinatorics (978-1-61197-156-9) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1994 ; 978-0-89871-319-0 ; 978-1-61197-079-1 ; 9781611970791 ; Interior-Point Polynomial Algorithms in Convex Programming (978-1-61197-079-1) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1994 ; 978-0-89871-321-3 ; 978-1-61197-126-2 ; 9781611971262 ; Nonnegative Matrices in the Mathematical Sciences (978-1-61197-126-2) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1994 ; 978-0-89871-323-7 ; 978-1-61197-155-2 ; 9781611971552 ; Contemporary Problems in Statistical Physics (978-1-61197-155-2) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1994 ; 978-0-89871-324-4 ; 978-1-61197-154-5 ; 9781611971545 ; Industrial Mathematics: A Course in Solving Real-World Problems (978-1-61197-154-5) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1994 ; 978-0-89871-325-1 ; 978-1-61197-007-4 ; 9781611970074 ; Ten Lectures on the Probabilistic Method (978-1-61197-007-4) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1994 ; 978-0-89871-328-2 ; 978-1-61197-153-8 ; 9781611971538 ; Templates for the Solution of Linear Systems: Building Blocks for Iterative Methods (978-1-61197-153-8) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1994 ; 978-0-89871-332-9 ; 978-1-61197-152-1 ; 9781611971521 ; Designing Fair Curves and Surfaces (978-1-61197-152-1) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1994 ; 978-0-89871-341-1 ; 978-1-61197-125-5 ; 9781611971255 ; Nonlinear Programming (978-1-61197-125-5) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1994 ; 978-0-89871-485-2 ; 978-1-61197-077-7 ; 9781611970777 ; Linear Matrix Inequalities in System and Control Theory (978-1-61197-077-7) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1995 ; 978-0-89871-331-2 ; 978-1-61197-006-7 ; 9781611970067 ; Mathematical Aspects of Geometric Modeling (978-1-61197-006-7) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1995 ; 978-0-89871-333-6 ; 978-1-61197-078-4 ; 9781611970784 ; The Boundary Function Method for Singular Perturbation Problems (978-1-61197-078-4) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1995 ; 978-0-89871-340-4 ; 978-1-61197-005-0 ; 9781611970050 ; Navier–Stokes Equations and Nonlinear Functional Analysis (978-1-61197-005-0) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1995 ; 978-0-89871-342-8 ; 978-1-61197-151-4 ; 9781611971514 ; The DFT: An Owner's Manual for the Discrete Fourier Transform (978-1-61197-151-4) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1995 ; 978-0-89871-347-3 ; 978-1-61197-124-8 ; 9781611971248 ; Theory of the Combination of Observations Least Subject to Errors, Part One, Part Two, Supplement (978-1-61197-124-8) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1995 ; 978-0-89871-348-0 ; 978-1-61197-150-7 ; 9781611971507 ; Domain-Based Parallelism and Problem Decomposition Methods in Computational Science and Engineering (978-1-61197-150-7) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1995 ; 978-0-89871-352-7 ; 978-1-61197-094-4 ; 9781611970944 ; Iterative Methods for Linear and Nonlinear Equations (978-1-61197-094-4) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1995 ; 978-0-89871-353-4 ; 978-1-61197-122-4 ; 9781611971224 ; Numerical Solution of Initial-Value Problems in Differential-Algebraic Equations (978-1-61197-122-4) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1995 ; 978-0-89871-354-1 ; 978-1-61197-123-1 ; 9781611971231 ; Numerical Solution of Boundary Value Problems for Ordinary Differential Equations (978-1-61197-123-1) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1995 ; 978-0-89871-356-5 ; 978-1-61197-121-7 ; 9781611971217 ; Solving Least Squares Problems (978-1-61197-121-7) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1996 ; 978-0-89871-358-9 ; 978-0-89871-967-3 ; 9780898719673 ; Lectures on Finite Precision Computations (978-0-89871-967-3) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1996 ; 978-0-89871-360-2 ; 978-1-61197-148-4 ; 9781611971484 ; Numerical Methods for Least Squares Problems (978-1-61197-148-4) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1996 ; 978-0-89871-362-6 ; 978-1-61197-149-1 ; 9781611971491 ; Afternotes on Numerical Analysis (978-1-61197-149-1) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1996 ; 978-0-89871-363-3 ; 978-0-89871-966-6 ; 9780898719666 ; The Science of Computer Benchmarking (978-0-89871-966-6) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1996 ; 978-0-89871-364-0 ; 978-1-61197-120-0 ; 9781611971200 ; Numerical Methods for Unconstrained Optimization and Nonlinear Equations (978-1-61197-120-0) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1996 ; 978-0-89871-367-1 ; 978-1-61197-147-7 ; 9781611971477 ; The Cauchy Problem in Kinetic Theory (978-1-61197-147-7) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1996 ; 978-0-89871-368-8 ; 978-0-89871-965-9 ; 9780898719659 ; Applications on Advanced Architecture Computers (978-0-89871-965-9) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1996 ; 978-0-89871-369-5 ; 978-1-61197-119-4 ; 9781611971194 ; Mathematical Theory of Reliability (978-1-61197-119-4) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1996 ; 978-0-89871-370-1 ; 978-1-61197-118-7 ; 9781611971187 ; Linear Differential Operators (978-1-61197-118-7) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1996 ; 978-0-89871-373-2 ; 978-1-61197-004-3 ; 9781611970043 ; Probabilistic Expert Systems (978-1-61197-004-3) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1996 ; 978-0-89871-379-4 ; 978-1-61197-003-6 ; 9781611970036 ; Robust Statistical Procedures (978-1-61197-003-6) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1997 ; 978-0-89871-380-0 ; 978-1-61197-002-9 ; 9781611970029 ; Probability Theory and Combinatorial Optimization (978-1-61197-002-9) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1997 ; 978-0-89871-382-4 ; 978-1-61197-145-3 ; 9781611971453 ; Primal-Dual Interior-Point Methods (978-1-61197-145-3) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1997 ; 978-0-89871-383-1 ; 978-0-89871-956-7 ; 9780898719567 ; Learning LaTex (978-0-89871-956-7) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1997 ; 978-0-89871-384-8 ; 978-0-89871-972-7 ; 9780898719727 ; Wavelets (978-0-89871-972-7) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1997 ; 978-0-89871-387-9 ; 978-0-89871-971-0 ; 9780898719710 ; An Introduction to Inverse Scattering and Inverse Spectral Problems (978-0-89871-971-0) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1997 ; 978-0-89871-388-6 ; 978-1-61197-143-9 ; 9781611971439 ; Linear Ordinary Differential Equations (978-1-61197-143-9) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1997 ; 978-0-89871-389-3 ; 978-1-61197-144-6 ; 9781611971446 ; Applied Numerical Linear Algebra (978-1-61197-144-6) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1997 ; 978-0-89871-394-7 ; 978-0-89871-976-5 ; 9780898719765 ; Statistical Case Studies for Industrial Process Improvement (978-0-89871-976-5) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1997 ; 978-0-89871-396-1 ; 978-1-61197-093-7 ; 9781611970937 ; Iterative Methods for Solving Linear Systems (978-1-61197-093-7) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1997 ; 978-0-89871-399-2 ; 978-1-61197-117-0 ; 9781611971170 ; Introduction to Matrix Analysis, Second Edition (978-1-61197-117-0) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1997 ; 978-0-89871-400-5 ; 978-0-89871-964-2 ; 9780898719642 ; ScaLAPACK Users' Guide (978-0-89871-964-2) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1998 ; 978-0-89871-374-9 ; 978-1-61197-146-0 ; 9781611971460 ; Computational Integration (978-1-61197-146-0) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1998 ; 978-0-89871-398-5 ; 978-0-89871-970-3 ; 9780898719703 ; Numerical Simulation in Fluid Dynamics (978-0-89871-970-3) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1998 ; 978-0-89871-402-9 ; 978-1-61197-116-3 ; 9781611971163 ; The Symmetric Eigenvalue Problem (978-1-61197-116-3) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1998 ; 978-0-89871-403-6 ; 978-0-89871-969-7 ; 9780898719697 ; Rank-Deficient and Discrete Ill-Posed Problems (978-0-89871-969-7) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1998 ; 978-0-89871-404-3 ; 978-1-61197-142-2 ; 9781611971422 ; Afternotes Goes to Graduates School (978-1-61197-142-2) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1998 ; 978-0-89871-405-0 ; 978-0-89871-975-8 ; 9780898719758 ; Engineering Reliability (978-0-89871-975-8) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1998 ; 978-0-89871-406-7 ; 978-1-61197-141-5 ; 9781611971415 ; Optimal Control of Viscous Flow (978-1-61197-141-5) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1998 ; 978-0-89871-407-4 ; 978-0-89871-962-8 ; 9780898719628 ; ARPACK Users' Guide (978-0-89871-962-8) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1998 ; 978-0-89871-408-1 ; 978-1-61197-115-6 ; 9781611971156 ; Mathematical Models: Mechanical Vibrations, Population Dynamics, and Traffic Flow (978-1-61197-115-6) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1998 ; 978-0-89871-409-8 ; 978-0-89871-963-5 ; 9780898719635 ; PLTMG: A Software Package for Solving Elliptic Partial Differential Equations (978-0-89871-963-5) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1998 ; 978-0-89871-414-2 ; 978-1-61197-140-8 ; 9781611971408 ; Matrix Algorithms (978-1-61197-140-8) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1998 ; 978-0-89871-415-9 ; 978-1-61197-001-2 ; 9781611970012 ; Methods for Solving Systems of Nonlinear Equations (978-1-61197-001-2) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1998 ; 978-0-89871-416-6 ; 978-1-61197-138-5 ; 9781611971385 ; Wavelets and Their Applications: Case Studies (978-1-61197-138-5) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1998 ; 978-0-89871-417-3 ; 978-1-61197-000-5 ; 9781611970005 ; An Introduction to Structured Population Dynamics (978-1-61197-000-5) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1998 ; 978-0-89871-419-7 ; 978-1-61197-136-1 ; 9781611971361 ; Classical Control Using H∞ Methods (978-1-61197-136-1) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1998 ; 978-0-89871-420-3 ; 978-0-89871-955-0 ; 9780898719550 ; Handbook of Writing for the Mathematical Sciences, Second Edition (978-0-89871-955-0) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1998 ; 978-0-89871-421-0 ; 978-0-89871-974-1 ; 9780898719741 ; Statistical Case Studies (978-0-89871-974-1) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1998 ; 978-0-89871-424-1 ; 978-1-61197-137-8 ; 9781611971378 ; Classical Control Using H-Infinity Methods (978-1-61197-137-8) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1998 ; 978-0-89871-427-2 ; 978-1-61197-114-9 ; 9781611971149 ; Statistical Design and Analysis of Experiments (978-1-61197-114-9) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1998 ; 978-0-89871-428-9 ; 978-0-89871-961-1 ; 9780898719611 ; Numerical Linear Algebra for High-Performance Computers (978-0-89871-961-1) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1998 ; 978-0-89871-429-6 ; 978-1-61197-113-2 ; 9781611971132 ; Dynamic Noncooperative Game Theory, 2nd Edition (978-1-61197-113-2) ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1999 ; 978-0-89871-411-1 ; 978-1-61197-076-0 ; 9781611970760 ; Indefinite-Quadratic Estimation and Control (978-1-61197-076-0) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1999 ; 978-0-89871-422-7 ; 978-0-89871-981-9 ; 9780898719819 ; Evaluation and Optimization of Electoral Systems (978-0-89871-981-9) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1999 ; 978-0-89871-425-8 ; 978-0-89871-973-4 ; 9780898719734 ; Introduction to Matrix Analytic Methods in Stochastic Modeling (978-0-89871-973-4) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1999 ; 978-0-89871-430-2 ; 978-0-89871-980-2 ; 9780898719802 ; Topics in Intersection Graph Theory (978-0-89871-980-2) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1999 ; 978-0-89871-431-9 ; 978-1-61197-135-4 ; 9781611971354 ; Fast Reliable Algorithms for Matrices with Structure (978-1-61197-135-4) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1999 ; 978-0-89871-432-6 ; 978-0-89871-979-6 ; 9780898719796 ; Graph Classes: A Survey (978-0-89871-979-6) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1999 ; 978-0-89871-433-3 ; 978-1-61197-092-0 ; 9781611970920 ; Iterative Methods for Optimization (978-1-61197-092-0) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1999 ; 978-0-89871-439-5 ; 978-1-61197-110-1 ; 9781611971101 ; Selecting and Ordering Populations: A New Statistical Methodology (978-1-61197-110-1) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1999 ; 978-0-89871-440-1 ; 978-0-89871-984-0 ; 9780898719840 ; Extending H (978-0-89871-984-0) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1999 ; 978-0-89871-441-8 ; 978-1-61197-112-5 ; 9781611971125 ; Stochastic Processes (978-1-61197-112-5) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1999 ; 978-0-89871-443-2 ; 978-1-61197-109-5 ; 9781611971095 ; Perturbations: Theory and Methods (978-1-61197-109-5) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1999 ; 978-0-89871-444-9 ; 978-1-61197-111-8 ; 9781611971118 ; Singular Perturbation Methods in Control: Analysis and Design (978-1-61197-111-8) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1999 ; 978-0-89871-447-0 ; 978-0-89871-960-4 ; 9780898719604 ; LAPACK Users' Guide (978-0-89871-960-4) ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 1999 ; 978-0-89871-450-0 ; 978-1-61197-108-8 ; 9781611971088 ; Convex Analysis and Variational Problems (978-1-61197-108-8) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1989 ; 978-0-89871-237-7 ; 978-1-61197-082-1 ; 9781611970821 ; Boundary Stabilization of Thin Plates (978-1-61197-082-1) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1989 ; 978-0-89871-239-1 ; 978-1-61197-103-3 ; 9781611971033 ; Symbolic Computation (978-1-61197-103-3) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1989 ; 978-0-89871-240-7 ; 978-1-61197-013-5 ; 9781611970135 ; The Method of Equivalence and Its Applications (978-1-61197-013-5) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1989 ; 978-0-89871-241-4 ; 978-1-61197-014-2 ; 9781611970142 ; Method of Dynamic and Nonsmooth Optimization (978-1-61197-014-2) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1989 ; 978-0-89871-243-8 ; 978-1-61197-133-0 ; 9781611971330 ; A Survey of Lie Groups and Lie Algebras with Applications and Computational Methods (978-1-61197-133-0) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1989 ; 978-0-89871-247-6 ; 978-1-61197-102-6 ; 9781611971026 ; Multilevel Adaptive Methods for Partial Differential Equations (978-1-61197-102-6) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1990 ; 978-0-89871-244-5 ; 978-1-61197-012-8 ; 9781611970128 ; Spline Models for Observational Data (978-1-61197-012-8) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1990 ; 978-0-89871-245-2 ; 978-1-61197-081-4 ; 9781611970814 ; Electro-Diffusion of Ions (978-1-61197-081-4) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1990 ; 978-0-89871-250-6 ; 978-1-61197-132-3 ; 9781611971323 ; Numerical Analysis (978-1-61197-132-3) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1990 ; 978-0-89871-254-4 ; 978-1-61197-131-6 ; 9781611971316 ; Nonlinear Programming (978-1-61197-131-6) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1990 ; 978-0-89871-256-8 ; 978-1-61197-130-9 ; 9781611971309 ; Optimization and Nonsmooth Analysis (978-1-61197-130-9) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1990 ; 978-0-89871-257-5 ; 978-1-61197-011-1 ; 9781611970111 ; Scientific Computation on Mathematical Problems and Conjectures (978-1-61197-011-1) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1990 ; 978-0-89871-259-9 ; 978-1-61197-172-9 ; 9781611971729 ; Problems in Applied Mathematics: Selections from (978-1-61197-172-9) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1990 ; 978-0-89871-260-5 ; 978-1-61197-170-5 ; 9781611971705 ; Parallel Algorithms for Matrix Computations (978-1-61197-170-5) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1990 ; 978-0-89871-261-2 ; 978-1-61197-171-2 ; 9781611971712 ; Nonparametric Function Estimation, Modeling, and Simulation (978-1-61197-171-2) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1991 ; 978-0-89871-258-2 ; 978-1-61197-173-6 ; 9781611971736 ; Vortex Methods and Vortex Motion (978-1-61197-173-6) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1991 ; 978-0-89871-263-6 ; 978-1-61197-167-5 ; 9781611971675 ; A Primer on Integral Equations of the First Kind (978-1-61197-167-5) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1991 ; 978-0-89871-265-0 ; 978-1-61197-129-3 ; 9781611971293 ; Ordinary Differential Equations (978-1-61197-129-3) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1991 ; 978-0-89871-267-4 ; 978-1-61197-101-9 ; 9781611971019 ; Mathematical Aspects of Numerical Grid Generation (978-1-61197-101-9) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1991 ; 978-0-89871-275-9 ; 978-1-61197-100-2 ; 9781611971002 ; The Total Least Squares Problem (978-1-61197-100-2) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1992 ; 978-0-89871-266-7 ; 978-1-61197-080-7 ; 9781611970807 ; Mathematical Problems in Linear Viscoelasticity (978-1-61197-080-7) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1992 ; 978-0-89871-274-2 ; 978-1-61197-010-4 ; 9781611970104 ; Ten Lectures on Wavelets (978-1-61197-010-4) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1992 ; 978-0-89871-280-3 ; 978-1-61197-166-8 ; 9781611971668 ; Geometry Processing for Design and Manufacturing (978-1-61197-166-8) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1992 ; 978-0-89871-281-0 ; 978-1-61197-165-1 ; 9781611971651 ; Curve and Surface Design (978-1-61197-165-1) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1992 ; 978-0-89871-282-7 ; 978-1-61197-164-4 ; 9781611971644 ; Topics in Surface Modeling (978-1-61197-164-4) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1992 ; 978-0-89871-285-8 ; 978-1-61197-099-9 ; 9781611970999 ; Computational Frameworks for the Fast Fourier Transform (978-1-61197-099-9) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1992 ; 978-0-89871-292-6 ; 978-1-61197-009-8 ; 9781611970098 ; Multilevel Projection Methods for Partial Differential Equations (978-1-61197-009-8) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1992 ; 978-0-89871-295-7 ; 978-1-61197-008-1 ; 9781611970081 ; Random Number Generation and Quasi-Monte Carlo Methods (978-1-61197-008-1) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1992 ; 978-0-89871-296-4 ; 978-1-61197-128-6 ; 9781611971286 ; Probability (978-1-61197-128-6) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1992 ; 978-0-89871-297-1 ; 978-1-61197-098-2 ; 9781611970982 ; Control and Estimation in Distributed Parameter Systems (978-1-61197-098-2) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1992 ; 978-0-89871-298-8 ; 978-1-61197-163-7 ; 9781611971637 ; Sinc Methods for Quadrature and Differential Equations (978-1-61197-163-7) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1992 ; 978-0-89871-304-6 ; 978-1-61197-127-9 ; 9781611971279 ; An Introduction to Invariant Imbedding (978-1-61197-127-9) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1992 ; 978-0-89871-306-0 ; 978-1-61197-158-3 ; 9781611971583 ; Knot Insertion and Deletion Algorithms for B-Spline Curves and Surfaces (978-1-61197-158-3) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1993 ; 978-0-89871-308-4 ; 978-1-61197-157-6 ; 9781611971576 ; Pitman's Measure of Closeness (978-1-61197-157-6) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1993 ; 978-0-89871-310-7 ; 978-1-61197-097-5 ; 9781611970975 ; Transonic Aerodynamics: Problems in Asymptotic Theory (978-1-61197-097-5) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1993 ; 978-0-89871-320-6 ; 978-1-61197-096-8 ; 9781611970968 ; Mathematical and Computational Techniques for Multilevel Adaptive Methods (978-1-61197-096-8) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1993 ; 978-0-89871-322-0 ; 978-1-61197-095-1 ; 9781611970951 ; Optimization Software Guide (978-1-61197-095-1) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1994 ; 978-0-89871-316-9 ; 978-1-61197-156-9 ; 9781611971569 ; Russian-English, English-Russian Dictionary on Proabability, Statistics, and Combinatorics (978-1-61197-156-9) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1994 ; 978-0-89871-319-0 ; 978-1-61197-079-1 ; 9781611970791 ; Interior-Point Polynomial Algorithms in Convex Programming (978-1-61197-079-1) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1994 ; 978-0-89871-321-3 ; 978-1-61197-126-2 ; 9781611971262 ; Nonnegative Matrices in the Mathematical Sciences (978-1-61197-126-2) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1994 ; 978-0-89871-323-7 ; 978-1-61197-155-2 ; 9781611971552 ; Contemporary Problems in Statistical Physics (978-1-61197-155-2) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1994 ; 978-0-89871-324-4 ; 978-1-61197-154-5 ; 9781611971545 ; Industrial Mathematics: A Course in Solving Real-World Problems (978-1-61197-154-5) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1994 ; 978-0-89871-325-1 ; 978-1-61197-007-4 ; 9781611970074 ; Ten Lectures on the Probabilistic Method (978-1-61197-007-4) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1994 ; 978-0-89871-328-2 ; 978-1-61197-153-8 ; 9781611971538 ; Templates for the Solution of Linear Systems: Building Blocks for Iterative Methods (978-1-61197-153-8) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1994 ; 978-0-89871-332-9 ; 978-1-61197-152-1 ; 9781611971521 ; Designing Fair Curves and Surfaces (978-1-61197-152-1) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1994 ; 978-0-89871-341-1 ; 978-1-61197-125-5 ; 9781611971255 ; Nonlinear Programming (978-1-61197-125-5) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1994 ; 978-0-89871-485-2 ; 978-1-61197-077-7 ; 9781611970777 ; Linear Matrix Inequalities in System and Control Theory (978-1-61197-077-7) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1995 ; 978-0-89871-331-2 ; 978-1-61197-006-7 ; 9781611970067 ; Mathematical Aspects of Geometric Modeling (978-1-61197-006-7) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1995 ; 978-0-89871-333-6 ; 978-1-61197-078-4 ; 9781611970784 ; The Boundary Function Method for Singular Perturbation Problems (978-1-61197-078-4) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1995 ; 978-0-89871-340-4 ; 978-1-61197-005-0 ; 9781611970050 ; Navier–Stokes Equations and Nonlinear Functional Analysis (978-1-61197-005-0) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1995 ; 978-0-89871-342-8 ; 978-1-61197-151-4 ; 9781611971514 ; The DFT: An Owner's Manual for the Discrete Fourier Transform (978-1-61197-151-4) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1995 ; 978-0-89871-347-3 ; 978-1-61197-124-8 ; 9781611971248 ; Theory of the Combination of Observations Least Subject to Errors, Part One, Part Two, Supplement (978-1-61197-124-8) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1995 ; 978-0-89871-348-0 ; 978-1-61197-150-7 ; 9781611971507 ; Domain-Based Parallelism and Problem Decomposition Methods in Computational Science and Engineering (978-1-61197-150-7) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1995 ; 978-0-89871-352-7 ; 978-1-61197-094-4 ; 9781611970944 ; Iterative Methods for Linear and Nonlinear Equations (978-1-61197-094-4) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1995 ; 978-0-89871-353-4 ; 978-1-61197-122-4 ; 9781611971224 ; Numerical Solution of Initial-Value Problems in Differential-Algebraic Equations (978-1-61197-122-4) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1995 ; 978-0-89871-354-1 ; 978-1-61197-123-1 ; 9781611971231 ; Numerical Solution of Boundary Value Problems for Ordinary Differential Equations (978-1-61197-123-1) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1995 ; 978-0-89871-356-5 ; 978-1-61197-121-7 ; 9781611971217 ; Solving Least Squares Problems (978-1-61197-121-7) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1996 ; 978-0-89871-358-9 ; 978-0-89871-967-3 ; 9780898719673 ; Lectures on Finite Precision Computations (978-0-89871-967-3) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1996 ; 978-0-89871-360-2 ; 978-1-61197-148-4 ; 9781611971484 ; Numerical Methods for Least Squares Problems (978-1-61197-148-4) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1996 ; 978-0-89871-362-6 ; 978-1-61197-149-1 ; 9781611971491 ; Afternotes on Numerical Analysis (978-1-61197-149-1) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1996 ; 978-0-89871-363-3 ; 978-0-89871-966-6 ; 9780898719666 ; The Science of Computer Benchmarking (978-0-89871-966-6) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1996 ; 978-0-89871-364-0 ; 978-1-61197-120-0 ; 9781611971200 ; Numerical Methods for Unconstrained Optimization and Nonlinear Equations (978-1-61197-120-0) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1996 ; 978-0-89871-367-1 ; 978-1-61197-147-7 ; 9781611971477 ; The Cauchy Problem in Kinetic Theory (978-1-61197-147-7) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1996 ; 978-0-89871-368-8 ; 978-0-89871-965-9 ; 9780898719659 ; Applications on Advanced Architecture Computers (978-0-89871-965-9) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1996 ; 978-0-89871-369-5 ; 978-1-61197-119-4 ; 9781611971194 ; Mathematical Theory of Reliability (978-1-61197-119-4) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1996 ; 978-0-89871-370-1 ; 978-1-61197-118-7 ; 9781611971187 ; Linear Differential Operators (978-1-61197-118-7) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1996 ; 978-0-89871-373-2 ; 978-1-61197-004-3 ; 9781611970043 ; Probabilistic Expert Systems (978-1-61197-004-3) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1996 ; 978-0-89871-379-4 ; 978-1-61197-003-6 ; 9781611970036 ; Robust Statistical Procedures (978-1-61197-003-6) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1997 ; 978-0-89871-380-0 ; 978-1-61197-002-9 ; 9781611970029 ; Probability Theory and Combinatorial Optimization (978-1-61197-002-9) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1997 ; 978-0-89871-382-4 ; 978-1-61197-145-3 ; 9781611971453 ; Primal-Dual Interior-Point Methods (978-1-61197-145-3) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1997 ; 978-0-89871-383-1 ; 978-0-89871-956-7 ; 9780898719567 ; Learning LaTex (978-0-89871-956-7) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1997 ; 978-0-89871-384-8 ; 978-0-89871-972-7 ; 9780898719727 ; Wavelets (978-0-89871-972-7) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1997 ; 978-0-89871-387-9 ; 978-0-89871-971-0 ; 9780898719710 ; An Introduction to Inverse Scattering and Inverse Spectral Problems (978-0-89871-971-0) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1997 ; 978-0-89871-388-6 ; 978-1-61197-143-9 ; 9781611971439 ; Linear Ordinary Differential Equations (978-1-61197-143-9) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1997 ; 978-0-89871-389-3 ; 978-1-61197-144-6 ; 9781611971446 ; Applied Numerical Linear Algebra (978-1-61197-144-6) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1997 ; 978-0-89871-394-7 ; 978-0-89871-976-5 ; 9780898719765 ; Statistical Case Studies for Industrial Process Improvement (978-0-89871-976-5) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1997 ; 978-0-89871-396-1 ; 978-1-61197-093-7 ; 9781611970937 ; Iterative Methods for Solving Linear Systems (978-1-61197-093-7) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1997 ; 978-0-89871-399-2 ; 978-1-61197-117-0 ; 9781611971170 ; Introduction to Matrix Analysis, Second Edition (978-1-61197-117-0) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1997 ; 978-0-89871-400-5 ; 978-0-89871-964-2 ; 9780898719642 ; ScaLAPACK Users' Guide (978-0-89871-964-2) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1998 ; 978-0-89871-374-9 ; 978-1-61197-146-0 ; 9781611971460 ; Computational Integration (978-1-61197-146-0) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1998 ; 978-0-89871-398-5 ; 978-0-89871-970-3 ; 9780898719703 ; Numerical Simulation in Fluid Dynamics (978-0-89871-970-3) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1998 ; 978-0-89871-402-9 ; 978-1-61197-116-3 ; 9781611971163 ; The Symmetric Eigenvalue Problem (978-1-61197-116-3) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1998 ; 978-0-89871-403-6 ; 978-0-89871-969-7 ; 9780898719697 ; Rank-Deficient and Discrete Ill-Posed Problems (978-0-89871-969-7) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1998 ; 978-0-89871-404-3 ; 978-1-61197-142-2 ; 9781611971422 ; Afternotes Goes to Graduates School (978-1-61197-142-2) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1998 ; 978-0-89871-405-0 ; 978-0-89871-975-8 ; 9780898719758 ; Engineering Reliability (978-0-89871-975-8) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1998 ; 978-0-89871-406-7 ; 978-1-61197-141-5 ; 9781611971415 ; Optimal Control of Viscous Flow (978-1-61197-141-5) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1998 ; 978-0-89871-407-4 ; 978-0-89871-962-8 ; 9780898719628 ; ARPACK Users' Guide (978-0-89871-962-8) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1998 ; 978-0-89871-408-1 ; 978-1-61197-115-6 ; 9781611971156 ; Mathematical Models: Mechanical Vibrations, Population Dynamics, and Traffic Flow (978-1-61197-115-6) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1998 ; 978-0-89871-409-8 ; 978-0-89871-963-5 ; 9780898719635 ; PLTMG: A Software Package for Solving Elliptic Partial Differential Equations (978-0-89871-963-5) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1998 ; 978-0-89871-414-2 ; 978-1-61197-140-8 ; 9781611971408 ; Matrix Algorithms (978-1-61197-140-8) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1998 ; 978-0-89871-415-9 ; 978-1-61197-001-2 ; 9781611970012 ; Methods for Solving Systems of Nonlinear Equations (978-1-61197-001-2) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1998 ; 978-0-89871-416-6 ; 978-1-61197-138-5 ; 9781611971385 ; Wavelets and Their Applications: Case Studies (978-1-61197-138-5) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1998 ; 978-0-89871-417-3 ; 978-1-61197-000-5 ; 9781611970005 ; An Introduction to Structured Population Dynamics (978-1-61197-000-5) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1998 ; 978-0-89871-419-7 ; 978-1-61197-136-1 ; 9781611971361 ; Classical Control Using H∞ Methods (978-1-61197-136-1) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1998 ; 978-0-89871-420-3 ; 978-0-89871-955-0 ; 9780898719550 ; Handbook of Writing for the Mathematical Sciences, Second Edition (978-0-89871-955-0) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1998 ; 978-0-89871-421-0 ; 978-0-89871-974-1 ; 9780898719741 ; Statistical Case Studies (978-0-89871-974-1) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1998 ; 978-0-89871-424-1 ; 978-1-61197-137-8 ; 9781611971378 ; Classical Control Using H-Infinity Methods (978-1-61197-137-8) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1998 ; 978-0-89871-427-2 ; 978-1-61197-114-9 ; 9781611971149 ; Statistical Design and Analysis of Experiments (978-1-61197-114-9) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1998 ; 978-0-89871-428-9 ; 978-0-89871-961-1 ; 9780898719611 ; Numerical Linear Algebra for High-Performance Computers (978-0-89871-961-1) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1998 ; 978-0-89871-429-6 ; 978-1-61197-113-2 ; 9781611971132 ; Dynamic Noncooperative Game Theory, 2nd Edition (978-1-61197-113-2) ; reingest2.clockss.org:8085 >
+      au < testing ; exists ; 1999 ; 978-0-89871-411-1 ; 978-1-61197-076-0 ; 9781611970760 ; Indefinite-Quadratic Estimation and Control (978-1-61197-076-0) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1999 ; 978-0-89871-422-7 ; 978-0-89871-981-9 ; 9780898719819 ; Evaluation and Optimization of Electoral Systems (978-0-89871-981-9) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1999 ; 978-0-89871-425-8 ; 978-0-89871-973-4 ; 9780898719734 ; Introduction to Matrix Analytic Methods in Stochastic Modeling (978-0-89871-973-4) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1999 ; 978-0-89871-430-2 ; 978-0-89871-980-2 ; 9780898719802 ; Topics in Intersection Graph Theory (978-0-89871-980-2) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1999 ; 978-0-89871-431-9 ; 978-1-61197-135-4 ; 9781611971354 ; Fast Reliable Algorithms for Matrices with Structure (978-1-61197-135-4) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1999 ; 978-0-89871-432-6 ; 978-0-89871-979-6 ; 9780898719796 ; Graph Classes: A Survey (978-0-89871-979-6) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1999 ; 978-0-89871-433-3 ; 978-1-61197-092-0 ; 9781611970920 ; Iterative Methods for Optimization (978-1-61197-092-0) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1999 ; 978-0-89871-439-5 ; 978-1-61197-110-1 ; 9781611971101 ; Selecting and Ordering Populations: A New Statistical Methodology (978-1-61197-110-1) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1999 ; 978-0-89871-440-1 ; 978-0-89871-984-0 ; 9780898719840 ; Extending H (978-0-89871-984-0) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1999 ; 978-0-89871-441-8 ; 978-1-61197-112-5 ; 9781611971125 ; Stochastic Processes (978-1-61197-112-5) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1999 ; 978-0-89871-443-2 ; 978-1-61197-109-5 ; 9781611971095 ; Perturbations: Theory and Methods (978-1-61197-109-5) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1999 ; 978-0-89871-444-9 ; 978-1-61197-111-8 ; 9781611971118 ; Singular Perturbation Methods in Control: Analysis and Design (978-1-61197-111-8) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1999 ; 978-0-89871-447-0 ; 978-0-89871-960-4 ; 9780898719604 ; LAPACK Users' Guide (978-0-89871-960-4) ; reingest1.clockss.org:8082 >
+      au < testing ; exists ; 1999 ; 978-0-89871-450-0 ; 978-1-61197-108-8 ; 9781611971088 ; Convex Analysis and Variational Problems (978-1-61197-108-8) ; reingest1.clockss.org:8082 >
       au < manifest ; exists ; 2000 ; 978-0-89871-436-4 ; 978-0-89871-942-0 ; 9780898719420 ; Hyperbolic and Viscous Conservation Laws (978-0-89871-942-0) ; reingest2.clockss.org:8085 >
       au < manifest ; exists ; 2000 ; 978-0-89871-438-8 ; 978-0-89871-983-3 ; 9780898719833 ; Advances in Linear Matrix Inequality Methods in Control (978-0-89871-983-3) ; reingest2.clockss.org:8085 >
       au < manifest ; exists ; 2000 ; 978-0-89871-442-5 ; 978-0-89871-954-3 ; 9780898719543 ; Numerical Methods for Bifurcations of Dynamical Equilibria (978-0-89871-954-3) ; reingest2.clockss.org:8085 >
@@ -398,63 +398,63 @@
       au < manifest ; exists ; 2011 ; 978-1-61197-189-7 ; 978-1-61197-190-3 ; 9781611971903 ; Implicit Filtering (978-1-61197-190-3) ; reingest1.clockss.org:8082 >
       au < manifest ; exists ; 2011 ; 978-1-61197-191-0 ; 978-1-61197-192-7 ; 9781611971927 ; Polynomial Based Iteration Methods for Symmetric Linear Systems (978-1-61197-192-7) ; reingest1.clockss.org:8082 >
       au < manifest ; exists ; 2011 ; 978-1-61197-193-4 ; 978-1-61197-194-1 ; 9781611971941 ; Alternating Projection Methods (978-1-61197-194-1) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2011 ; 978-1-61197-196-5 ; 978-1-61197-197-2 ; 9781611971972 ; The Mathematics of Diffusion (978-1-61197-197-2) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2011 ; 978-1-61197-198-9 ; 978-1-61197-199-6 ; 9781611971996 ; Spectral Numerical Weather Prediction Models (978-1-61197-199-6) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2011 ; 978-1-61197-200-9 ; 978-1-61197-201-6 ; 9781611972016 ; Taylor Approximations for Stochastic Partial Differential Equations (978-1-61197-201-6) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2011 ; 978-1-61197-202-3 ; 978-1-61197-203-0 ; 9781611972030 ; Elliptic Problems in Nonsmooth Domains (978-1-61197-203-0) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2011 ; 978-1-61197-204-7 ; 978-1-61197-205-4 ; 9781611972054 ; Computational Optimization of Systems Governed by Partial Differential Equations (978-1-61197-205-4) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2011 ; 978-1-61197-206-1 ; 978-1-61197-207-8 ; 9781611972078 ; The Art of Differentiating Computer Programs (978-1-61197-207-8) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2011 ; 978-1-61197-208-5 ; 978-1-61197-209-2 ; 9781611972092 ; Numerical Solution of Algebraic Riccati Equations (978-1-61197-209-2) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2012 ; 978-1-61197-214-6 ; 978-1-61197-215-3 ; 9781611972153 ; Introduction to Optimization and Semidifferential Calculus (978-1-61197-215-3) ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2012 ; 978-1-61197-218-4 ; 978-1-61197-219-1 ; 9781611972191 ; The Statistical Theory of Linear Systems (978-1-61197-219-1) ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2012 ; 978-1-61197-222-1 ; 978-1-61197-223-8 ; 9781611972238 ; Assignment Problems (978-1-61197-223-8) ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2012 ; 978-1-61197-224-5 ; 978-1-61197-225-2 ; 9781611972252 ; Control and Optimization with Differential-Algebraic Constraints (978-1-61197-225-2) ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2012 ; 978-1-61197-228-3 ; 978-1-61197-229-0 ; 9781611972290 ; Semidefinite Optimization and Convex Algebraic Geometry (978-1-61197-229-0) ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2012 ; 978-1-61197-230-6 ; 978-1-61197-231-3 ; 9781611972313 ; From Vector Spaces to Function Spaces (978-1-61197-231-3) ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2012 ; 978-1-61197-233-7 ; 978-1-61197-234-4 ; 9781611972344 ; Linear and Nonlinear Inverse Problems with Practical Applications (978-1-61197-234-4) ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2012 ; 978-1-61197-235-1 ; 978-1-61197-236-8 ; 9781611972368 ; Applications to Regular and Bang-Bang Control (978-1-61197-236-8) ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2012 ; 978-1-61197-241-2 ; 978-1-61197-242-9 ; 9781611972429 ; Mathematical Models for Communicable Diseases (978-1-61197-242-9) ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2012 ; 978-1-61197-243-6 ; 978-1-61197-244-3 ; 9781611972443 ; Algebraic and Geometric Ideas in the Theory of Discrete Optimization (978-1-61197-244-3) ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2012 ; 978-1-61197-245-0 ; 978-1-61197-246-7 ; 9781611972467 ; Eigenvalues of Matrices (978-1-61197-246-7) ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2013 ; 978-1-61197-249-8 ; 978-1-61197-250-4 ; 9781611972504 ; A Primer on Mathematical Models in Biology (978-1-61197-250-4) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2013 ; 978-1-61197-256-6 ; 978-1-61197-257-3 ; 9781611972573 ; Recipes for Continuation (978-1-61197-257-3) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2013 ; 978-1-61197-260-3 ; 978-1-61197-261-0 ; 9781611972610 ; Mathematics and Climate (978-1-61197-261-0) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2013 ; 978-1-61197-263-4 ; 978-1-61197-264-1 ; 9781611972641 ; Applied and Computational Measurable Dynamics (978-1-61197-264-1) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2013 ; 978-1-61197-266-5 ; 978-1-61197-267-2 ; 9781611972672 ; Global Optimization (978-1-61197-267-2) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2013 ; 978-1-61197-304-4 ; 978-1-61197-305-1 ; 9781611973051 ; Semi-Lagrangian Approximation Schemes for Linear and Hamilton—Jacobi Equations (978-1-61197-305-1) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2013 ; 978-1-61197-313-6 ; 978-1-61197-314-3 ; 9781611973143 ; Analytic Perturbation Theory and Its Applications (978-1-61197-314-3) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2013 ; 978-1-61197-315-0 ; 978-1-61197-316-7 ; 9781611973167 ; Integral Equation Methods in Scattering Theory (978-1-61197-316-7) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2013 ; 978-1-61197-317-4 ; 978-1-61197-285-6 ; 9781611972856 ; Nonlinear Control Under Nonconstant Delays (978-1-61197-285-6) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2013 ; 978-1-61197-323-5 ; 978-1-61197-324-2 ; 9781611973242 ; The Method of Weighted Residuals and Variational Principles (978-1-61197-324-2) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2013 ; 978-1-61197-328-0 ; 978-1-61197-329-7 ; 9781611973297 ; The Radon Transform and Medical Imaging (978-1-61197-329-7) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2013 ; 978-1-61197-349-5 ; 978-1-61197-350-1 ; 9781611973501 ; Programming Projects in C for Students of Engineering, Science, and Mathematics (978-1-61197-350-1) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2013 ; 978-1-61197-366-2 ; 978-1-61197-367-9 ; 9781611973679 ; Arc Routing (978-1-61197-367-9) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2014 ; 978-1-61197-333-4 ; 978-1-61197-334-1 ; 9781611973341 ; Nonlinear Time Scale Systems in Standard and Nonstandard Forms (978-1-61197-334-1) ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2014 ; 978-1-61197-335-8 ; 978-1-61197-336-5 ; 9781611973365 ; Practical Augmented Lagrangian Methods for Constrained Optimization (978-1-61197-336-5) ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2014 ; 978-1-61197-345-7 ; 978-1-61197-346-4 ; 9781611973464 ; Iterative Methods for Linear Systems (978-1-61197-346-4) ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2014 ; 978-1-61197-347-1 ; 978-1-61197-348-8 ; 9781611973488 ; Variational Analysis in Sobolev and BV Spaces (978-1-61197-348-8) ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2014 ; 978-1-61197-351-8 ; 978-1-61197-352-5 ; 9781611973525 ; Solving Transcendental Equations (978-1-61197-352-5) ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2014 ; 978-1-61197-353-2 ; 978-1-61197-354-9 ; 9781611973549 ; Climate Modeling for Scientists and Engineers (978-1-61197-354-9) ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2014 ; 978-1-61197-358-7 ; 978-1-61197-359-4 ; 9781611973594 ; Vehicle Routing (978-1-61197-359-4) ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2014 ; 978-1-61197-362-4 ; 978-1-61197-363-1 ; 9781611973631 ; Stability, Control, and Computation for Time-Delay Systems (978-1-61197-363-1) ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2014 ; 978-1-61197-364-8 ; 978-1-61197-365-5 ; 9781611973655 ; Introduction to Nonlinear Optimization (978-1-61197-365-5) ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2014 ; 978-1-61197-379-2 ; 978-1-61197-380-8 ; 9781611973808 ; Computational Methods in Geophysical Electromagnetics (978-1-61197-380-8) ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2014 ; 978-1-61197-381-5 ; 978-1-61197-382-2 ; 9781611973822 ; Unified Transform for Boundary Value Problems (978-1-61197-382-2) ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2014 ; 978-1-61197-383-9 ; 978-1-61197-384-6 ; 9781611973846 ; Preconditioning and the Conjugate Gradient Method in the Context of Solving PDEs (978-1-61197-384-6) ; reingest2.clockss.org:8085 >
-      au < testing ; exists ; 2015 ; 978-1-61197-368-6 ; 978-1-61197-369-3 ; 9781611973693 ; Evaluating Gas Network Capacities (978-1-61197-369-3) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2015 ; 978-1-61197-370-9 ; 978-1-61197-371-6 ; 9781611973716 ; Mathematics of Planet Earth (978-1-61197-371-6) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2015 ; 978-1-61197-377-8 ; 978-1-61197-378-5 ; 9781611973785 ; Variational Methods for the Numerical Solution of Nonlinear Elliptic Problems (978-1-61197-378-5) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2015 ; 978-1-61197-385-3 ; 978-1-61197-386-0 ; 9781611973860 ; Active Subspaces (978-1-61197-386-0) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2015 ; 978-1-61197-387-7 ; 978-1-61197-388-4 ; 9781611973884 ; Finite Dimensional Linear Systems (978-1-61197-388-4) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2015 ; 978-1-61197-389-1 ; 978-1-61197-390-7 ; 9781611973907 ; Spline Functions (978-1-61197-390-7) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2011 ; 978-1-61197-196-5 ; 978-1-61197-197-2 ; 9781611971972 ; The Mathematics of Diffusion (978-1-61197-197-2) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2011 ; 978-1-61197-198-9 ; 978-1-61197-199-6 ; 9781611971996 ; Spectral Numerical Weather Prediction Models (978-1-61197-199-6) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2011 ; 978-1-61197-200-9 ; 978-1-61197-201-6 ; 9781611972016 ; Taylor Approximations for Stochastic Partial Differential Equations (978-1-61197-201-6) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2011 ; 978-1-61197-202-3 ; 978-1-61197-203-0 ; 9781611972030 ; Elliptic Problems in Nonsmooth Domains (978-1-61197-203-0) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2011 ; 978-1-61197-204-7 ; 978-1-61197-205-4 ; 9781611972054 ; Computational Optimization of Systems Governed by Partial Differential Equations (978-1-61197-205-4) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2011 ; 978-1-61197-206-1 ; 978-1-61197-207-8 ; 9781611972078 ; The Art of Differentiating Computer Programs (978-1-61197-207-8) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2011 ; 978-1-61197-208-5 ; 978-1-61197-209-2 ; 9781611972092 ; Numerical Solution of Algebraic Riccati Equations (978-1-61197-209-2) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2012 ; 978-1-61197-214-6 ; 978-1-61197-215-3 ; 9781611972153 ; Introduction to Optimization and Semidifferential Calculus (978-1-61197-215-3) ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2012 ; 978-1-61197-218-4 ; 978-1-61197-219-1 ; 9781611972191 ; The Statistical Theory of Linear Systems (978-1-61197-219-1) ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2012 ; 978-1-61197-222-1 ; 978-1-61197-223-8 ; 9781611972238 ; Assignment Problems (978-1-61197-223-8) ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2012 ; 978-1-61197-224-5 ; 978-1-61197-225-2 ; 9781611972252 ; Control and Optimization with Differential-Algebraic Constraints (978-1-61197-225-2) ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2012 ; 978-1-61197-228-3 ; 978-1-61197-229-0 ; 9781611972290 ; Semidefinite Optimization and Convex Algebraic Geometry (978-1-61197-229-0) ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2012 ; 978-1-61197-230-6 ; 978-1-61197-231-3 ; 9781611972313 ; From Vector Spaces to Function Spaces (978-1-61197-231-3) ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2012 ; 978-1-61197-233-7 ; 978-1-61197-234-4 ; 9781611972344 ; Linear and Nonlinear Inverse Problems with Practical Applications (978-1-61197-234-4) ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2012 ; 978-1-61197-235-1 ; 978-1-61197-236-8 ; 9781611972368 ; Applications to Regular and Bang-Bang Control (978-1-61197-236-8) ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2012 ; 978-1-61197-241-2 ; 978-1-61197-242-9 ; 9781611972429 ; Mathematical Models for Communicable Diseases (978-1-61197-242-9) ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2012 ; 978-1-61197-243-6 ; 978-1-61197-244-3 ; 9781611972443 ; Algebraic and Geometric Ideas in the Theory of Discrete Optimization (978-1-61197-244-3) ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2012 ; 978-1-61197-245-0 ; 978-1-61197-246-7 ; 9781611972467 ; Eigenvalues of Matrices (978-1-61197-246-7) ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2013 ; 978-1-61197-249-8 ; 978-1-61197-250-4 ; 9781611972504 ; A Primer on Mathematical Models in Biology (978-1-61197-250-4) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2013 ; 978-1-61197-256-6 ; 978-1-61197-257-3 ; 9781611972573 ; Recipes for Continuation (978-1-61197-257-3) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2013 ; 978-1-61197-260-3 ; 978-1-61197-261-0 ; 9781611972610 ; Mathematics and Climate (978-1-61197-261-0) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2013 ; 978-1-61197-263-4 ; 978-1-61197-264-1 ; 9781611972641 ; Applied and Computational Measurable Dynamics (978-1-61197-264-1) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2013 ; 978-1-61197-266-5 ; 978-1-61197-267-2 ; 9781611972672 ; Global Optimization (978-1-61197-267-2) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2013 ; 978-1-61197-304-4 ; 978-1-61197-305-1 ; 9781611973051 ; Semi-Lagrangian Approximation Schemes for Linear and Hamilton—Jacobi Equations (978-1-61197-305-1) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2013 ; 978-1-61197-313-6 ; 978-1-61197-314-3 ; 9781611973143 ; Analytic Perturbation Theory and Its Applications (978-1-61197-314-3) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2013 ; 978-1-61197-315-0 ; 978-1-61197-316-7 ; 9781611973167 ; Integral Equation Methods in Scattering Theory (978-1-61197-316-7) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2013 ; 978-1-61197-317-4 ; 978-1-61197-285-6 ; 9781611972856 ; Nonlinear Control Under Nonconstant Delays (978-1-61197-285-6) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2013 ; 978-1-61197-323-5 ; 978-1-61197-324-2 ; 9781611973242 ; The Method of Weighted Residuals and Variational Principles (978-1-61197-324-2) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2013 ; 978-1-61197-328-0 ; 978-1-61197-329-7 ; 9781611973297 ; The Radon Transform and Medical Imaging (978-1-61197-329-7) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2013 ; 978-1-61197-349-5 ; 978-1-61197-350-1 ; 9781611973501 ; Programming Projects in C for Students of Engineering, Science, and Mathematics (978-1-61197-350-1) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2013 ; 978-1-61197-366-2 ; 978-1-61197-367-9 ; 9781611973679 ; Arc Routing (978-1-61197-367-9) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2014 ; 978-1-61197-333-4 ; 978-1-61197-334-1 ; 9781611973341 ; Nonlinear Time Scale Systems in Standard and Nonstandard Forms (978-1-61197-334-1) ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2014 ; 978-1-61197-335-8 ; 978-1-61197-336-5 ; 9781611973365 ; Practical Augmented Lagrangian Methods for Constrained Optimization (978-1-61197-336-5) ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2014 ; 978-1-61197-345-7 ; 978-1-61197-346-4 ; 9781611973464 ; Iterative Methods for Linear Systems (978-1-61197-346-4) ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2014 ; 978-1-61197-347-1 ; 978-1-61197-348-8 ; 9781611973488 ; Variational Analysis in Sobolev and BV Spaces (978-1-61197-348-8) ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2014 ; 978-1-61197-351-8 ; 978-1-61197-352-5 ; 9781611973525 ; Solving Transcendental Equations (978-1-61197-352-5) ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2014 ; 978-1-61197-353-2 ; 978-1-61197-354-9 ; 9781611973549 ; Climate Modeling for Scientists and Engineers (978-1-61197-354-9) ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2014 ; 978-1-61197-358-7 ; 978-1-61197-359-4 ; 9781611973594 ; Vehicle Routing (978-1-61197-359-4) ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2014 ; 978-1-61197-362-4 ; 978-1-61197-363-1 ; 9781611973631 ; Stability, Control, and Computation for Time-Delay Systems (978-1-61197-363-1) ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2014 ; 978-1-61197-364-8 ; 978-1-61197-365-5 ; 9781611973655 ; Introduction to Nonlinear Optimization (978-1-61197-365-5) ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2014 ; 978-1-61197-379-2 ; 978-1-61197-380-8 ; 9781611973808 ; Computational Methods in Geophysical Electromagnetics (978-1-61197-380-8) ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2014 ; 978-1-61197-381-5 ; 978-1-61197-382-2 ; 9781611973822 ; Unified Transform for Boundary Value Problems (978-1-61197-382-2) ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2014 ; 978-1-61197-383-9 ; 978-1-61197-384-6 ; 9781611973846 ; Preconditioning and the Conjugate Gradient Method in the Context of Solving PDEs (978-1-61197-384-6) ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2015 ; 978-1-61197-368-6 ; 978-1-61197-369-3 ; 9781611973693 ; Evaluating Gas Network Capacities (978-1-61197-369-3) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2015 ; 978-1-61197-370-9 ; 978-1-61197-371-6 ; 9781611973716 ; Mathematics of Planet Earth (978-1-61197-371-6) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2015 ; 978-1-61197-377-8 ; 978-1-61197-378-5 ; 9781611973785 ; Variational Methods for the Numerical Solution of Nonlinear Elliptic Problems (978-1-61197-378-5) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2015 ; 978-1-61197-385-3 ; 978-1-61197-386-0 ; 9781611973860 ; Active Subspaces (978-1-61197-386-0) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2015 ; 978-1-61197-387-7 ; 978-1-61197-388-4 ; 9781611973884 ; Finite Dimensional Linear Systems (978-1-61197-388-4) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2015 ; 978-1-61197-389-1 ; 978-1-61197-390-7 ; 9781611973907 ; Spline Functions (978-1-61197-390-7) ; reingest1.clockss.org:8082 >
       au < ready ; exists ; 2015 ; 978-1-61197-393-8 ; 978-1-61197-394-5 ; 9781611973945 ; The Defocusing Nonlinear Schrödinger Equation (978-1-61197-394-5) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2015 ; 978-1-61197-395-2 ; 978-1-61197-396-9 ; 9781611973969 ; The Shapes of Things (978-1-61197-396-9) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2015 ; 978-1-61197-402-7 ; 978-1-61197-404-1 ; 9781611974041 ; A Primer on Radial Basis Functions with Applications to the Geosciences (978-1-61197-404-1) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2015 ; 978-1-61197-405-8 ; 978-1-61197-406-5 ; 9781611974065 ; An Introduction to Domain Decomposition Methods (978-1-61197-406-5) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2015 ; 978-1-61197-408-9 ; 978-1-61197-409-6 ; 9781611974096 ; Ordinary Differential Equations and Linear Algebra (978-1-61197-409-6) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2015 ; 978-1-61197-415-7 ; 978-1-61197-416-4 ; 9781611974164 ; Electrical Transmission System Cascades and Vulnerability (978-1-61197-416-4) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2015 ; 978-1-61197-417-1 ; 978-1-61197-418-8 ; 9781611974188 ; Adaptive Treatment Strategies in Practice (978-1-61197-418-8) ; reingest1.clockss.org:8082 >
-      au < testing ; exists ; 2015 ; 978-1-61197-419-5 ; 978-1-61197-420-1 ; 9781611974201 ; Riemann–Hilbert Problems, Their Numerical Solution, and the Computation of Nonlinear Special Functions (978-1-61197-420-1) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2015 ; 978-1-61197-395-2 ; 978-1-61197-396-9 ; 9781611973969 ; The Shapes of Things (978-1-61197-396-9) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2015 ; 978-1-61197-402-7 ; 978-1-61197-404-1 ; 9781611974041 ; A Primer on Radial Basis Functions with Applications to the Geosciences (978-1-61197-404-1) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2015 ; 978-1-61197-405-8 ; 978-1-61197-406-5 ; 9781611974065 ; An Introduction to Domain Decomposition Methods (978-1-61197-406-5) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2015 ; 978-1-61197-408-9 ; 978-1-61197-409-6 ; 9781611974096 ; Ordinary Differential Equations and Linear Algebra (978-1-61197-409-6) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2015 ; 978-1-61197-415-7 ; 978-1-61197-416-4 ; 9781611974164 ; Electrical Transmission System Cascades and Vulnerability (978-1-61197-416-4) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2015 ; 978-1-61197-417-1 ; 978-1-61197-418-8 ; 9781611974188 ; Adaptive Treatment Strategies in Practice (978-1-61197-418-8) ; reingest1.clockss.org:8082 >
+      au < ready ; exists ; 2015 ; 978-1-61197-419-5 ; 978-1-61197-420-1 ; 9781611974201 ; Riemann–Hilbert Problems, Their Numerical Solution, and the Computation of Nonlinear Special Functions (978-1-61197-420-1) ; reingest1.clockss.org:8082 >
       
 
   }
