@@ -35,6 +35,7 @@ package org.lockss.plugin.usdocspln.gov.gpo.fdsys;
 import java.io.*;
 import java.util.regex.*;
 
+import org.apache.commons.compress.utils.IOUtils;
 import org.apache.commons.io.input.BoundedInputStream;
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
@@ -150,7 +151,14 @@ public class GPOFDSysHtmlFilterFactory implements FilterFactory {
         // Differs over time in the presence and placement of rel="nofollow"
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^delivery/getpackage\\.action\\?packageId="),
         // Links here can differ with each fetch (https://www.gpo.gov/fdsys/pkg/CFR-2013-title10-vol2/content-detail.html)
+        /* The following should work ... but it doesn't; the parser gets
+         * confused, closes an inner <table> soon into this <div> and then
+         * closes the <div>, leaving basically everything from it in the stream
+         * thereafter. */
         HtmlNodeFilters.tagWithAttribute("div", "id", "browse-drilldown-mask"),
+        /* So try to eradicate each row instead, with the following two: */
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "browse-level"),
+        HtmlNodeFilters.tag("input"),
     };
   
     HtmlTransform xform = new HtmlTransform() {
@@ -188,6 +196,15 @@ public class GPOFDSysHtmlFilterFactory implements FilterFactory {
     catch (UnsupportedEncodingException uee) {
       throw new PluginException(uee);
     }
-  }  
+  }
+  
+  public static void main(String[] args) throws Exception {
+    String file = "/tmp/Energy.html";
+    IOUtils.copy(new GPOFDSysHtmlFilterFactory().createFilteredInputStream(null,
+                                                                           new FileInputStream(file),
+                                                                           "UTF-8"),
+                 new FileOutputStream(file + ".out"));
+  }
+  
 }
    
