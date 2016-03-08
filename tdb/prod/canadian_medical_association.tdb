@@ -88,16 +88,16 @@
     au < HighWirePressH20Plugin ; manifest ; 1998 ; Canadian Medical Association Journal Volume 159 ; 159 >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; Canadian Medical Association Journal Volume 160 ; 160 >
     au < HighWirePressH20Plugin ; manifest ; 1999 ; Canadian Medical Association Journal Volume 161 ; 161 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; Canadian Medical Association Journal Volume 162 ; 162 >
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; Canadian Medical Association Journal Volume 163 ; 163 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; Canadian Medical Association Journal Volume 164 ; 164 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; Canadian Medical Association Journal Volume 165 ; 165 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Canadian Medical Association Journal Volume 166 ; 166 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Canadian Medical Association Journal Volume 167 ; 167 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; Canadian Medical Association Journal Volume 168 ; 168 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; Canadian Medical Association Journal Volume 169 ; 169 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; Canadian Medical Association Journal Volume 170 ; 170 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; Canadian Medical Association Journal Volume 171 ; 171 >
+    au < HighWirePressH20Plugin ; testing ; 2000 ; Canadian Medical Association Journal Volume 162 ; 162 >
+    au < HighWirePressH20Plugin ; testing ; 2000 ; Canadian Medical Association Journal Volume 163 ; 163 >
+    au < HighWirePressH20Plugin ; testing ; 2001 ; Canadian Medical Association Journal Volume 164 ; 164 >
+    au < HighWirePressH20Plugin ; testing ; 2001 ; Canadian Medical Association Journal Volume 165 ; 165 >
+    au < HighWirePressH20Plugin ; testing ; 2002 ; Canadian Medical Association Journal Volume 166 ; 166 >
+    au < HighWirePressH20Plugin ; testing ; 2002 ; Canadian Medical Association Journal Volume 167 ; 167 >
+    au < HighWirePressH20Plugin ; testing ; 2003 ; Canadian Medical Association Journal Volume 168 ; 168 >
+    au < HighWirePressH20Plugin ; testing ; 2003 ; Canadian Medical Association Journal Volume 169 ; 169 >
+    au < HighWirePressH20Plugin ; testing ; 2004 ; Canadian Medical Association Journal Volume 170 ; 170 >
+    au < HighWirePressH20Plugin ; testing ; 2004 ; Canadian Medical Association Journal Volume 171 ; 171 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Canadian Medical Association Journal Volume 172 ; 172 >
     au < HighWirePressPlugin ; superseded ; 2005 ; Canadian Medical Association Journal Volume 172 [superseded] ; 172 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Canadian Medical Association Journal Volume 173 ; 173 >
@@ -117,7 +117,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Canadian Medical Association Journal Volume 184 ; 184 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Canadian Medical Association Journal Volume 185 ; 185 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Canadian Medical Association Journal Volume 186 ; 186 >
-    au < HighWirePressH20Plugin ; manifest ; 2015 ; Canadian Medical Association Journal Volume 187 ; 187 >
+    au < HighWirePressH20Plugin ; testing ; 2015 ; Canadian Medical Association Journal Volume 187 ; 187 >
     au < HighWirePressH20Plugin ; manifest ; 2016 ; Canadian Medical Association Journal Volume 188 ; 188 >
 
   }
@@ -135,7 +135,7 @@
 
     au < released ; 2013 ; CMAJ Open Volume 1 ; 1 >
     au < released ; 2014 ; CMAJ Open Volume 2 ; 2 >
-    au < manifest ; 2015 ; CMAJ Open Volume 3 ; 3 >
+    au < testing ; 2015 ; CMAJ Open Volume 3 ; 3 >
     au < expected ; 2016 ; CMAJ Open Volume 4 ; 4 >
 
   }

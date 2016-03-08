@@ -750,8 +750,8 @@
     au < exists ; exists ; 2013 ; American Journal of Clinical Pathology Volume 140 ; 140 ; >
     au < exists ; exists ; 2014 ; American Journal of Clinical Pathology Volume 141 ; 141 ; >
     au < exists ; exists ; 2014 ; American Journal of Clinical Pathology Volume 142 ; 142 ; >
-    au < manifest ; exists ; 2015 ; American Journal of Clinical Pathology Volume 143 ; 143 ; >
-    au < manifest ; exists ; 2015 ; American Journal of Clinical Pathology Volume 144 ; 144 ; >
+    au < testing ; exists ; 2015 ; American Journal of Clinical Pathology Volume 143 ; 143 ; >
+    au < testing ; exists ; 2015 ; American Journal of Clinical Pathology Volume 144 ; 144 ; >
     au < manifest ; exists ; 2016 ; American Journal of Clinical Pathology Volume 145 ; 145 ; >
     au < expected ; exists ; 2016 ; American Journal of Clinical Pathology Volume 146 ; 146 ; >
 
@@ -6914,8 +6914,8 @@
     au < finished ; crawling ; 2014 ; FEMS Microbiology Ecology Volume 88 ; 88 ; >
     au < exists ; exists ; 2014 ; FEMS Microbiology Ecology Volume 89 ; 89 ; >
     au < exists ; exists ; 2014 ; FEMS Microbiology Ecology Volume 90 ; 90 ; >
-    au < manifest ; exists ; 2015 ; FEMS Microbiology Ecology Volume 91 ; 91 ; >
-    au < manifest ; exists ; 2015 ; FEMS Microbiology Ecology Volume 92 ; 92 ; >
+    au < testing ; exists ; 2015 ; FEMS Microbiology Ecology Volume 91 ; 91 ; >
+    au < testing ; exists ; 2015 ; FEMS Microbiology Ecology Volume 92 ; 92 ; >
     au < exists ; exists ; 2015 ; FEMS Microbiology Ecology Volume 93 ; 93 ; >
     au < exists ; exists ; 2015 ; FEMS Microbiology Ecology Volume 94 ; 94 ; >
     au < expected ; exists ; 2016 ; FEMS Microbiology Ecology Volume 95 ; 95 ; >
@@ -7251,7 +7251,7 @@
     au < exists ; exists ; 2012 ; Foreign Policy Analysis Volume 8 ; 8 ; >
     au < exists ; exists ; 2013 ; Foreign Policy Analysis Volume 9 ; 9 ; >
     au < exists ; exists ; 2014 ; Foreign Policy Analysis Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2015 ; Foreign Policy Analysis Volume 11 ; 11 ; >
+    au < testing ; exists ; 2015 ; Foreign Policy Analysis Volume 11 ; 11 ; >
     au < manifest ; exists ; 2016 ; Foreign Policy Analysis Volume 12 ; 12 ; >
 
   }
@@ -10559,7 +10559,7 @@
     au < exists ; exists ; 2012 ; International Political Sociology Volume 6 ; 6 ; >
     au < exists ; exists ; 2013 ; International Political Sociology Volume 7 ; 7 ; >
     au < exists ; exists ; 2014 ; International Political Sociology Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2015 ; International Political Sociology Volume 9 ; 9 ; >
+    au < testing ; exists ; 2015 ; International Political Sociology Volume 9 ; 9 ; >
     au < manifest ; exists ; 2016 ; International Political Sociology Volume 10 ; 10 ; >
 
   }
@@ -10636,7 +10636,7 @@
     au < exists ; exists ; 2012 ; International Studies Perspectives Volume 13 ; 13 ; >
     au < exists ; exists ; 2013 ; International Studies Perspectives Volume 14 ; 14 ; >
     au < exists ; exists ; 2014 ; International Studies Perspectives Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2015 ; International Studies Perspectives Volume 16 ; 16 ; >
+    au < testing ; exists ; 2015 ; International Studies Perspectives Volume 16 ; 16 ; >
     au < manifest ; exists ; 2016 ; International Studies Perspectives Volume 17 ; 17 ; >
 
   }
@@ -10702,7 +10702,7 @@
     au < exists ; exists ; 2012 ; International Studies Review Volume 14 ; 14 ; >
     au < exists ; exists ; 2013 ; International Studies Review Volume 15 ; 15 ; >
     au < exists ; exists ; 2014 ; International Studies Review Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2015 ; International Studies Review Volume 17 ; 17 ; >
+    au < testing ; exists ; 2015 ; International Studies Review Volume 17 ; 17 ; >
     au < expected ; exists ; 2016 ; International Studies Review Volume 18 ; 18 ; >
 
   }
@@ -11980,7 +11980,8 @@
     param[base_url] = http://cybersecurity.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < manifest ; exists ; 2015 ; Journal of Cybersecurity Volume 1 ; 1 ; >
+    au < testing ; exists ; 2015 ; Journal of Cybersecurity Volume 1 ; 1 ; >
+    au < expected ; exists ; 2016 ; Journal of Cybersecurity Volume 2 ; 2 ; >
 
   }
 
@@ -13324,7 +13325,7 @@
     param[base_url] = http://integrablesystems.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < manifest ; exists ; 2015 ; Journal of Integrable Systems Volume 1 ; 1 ; >
+    au < testing ; exists ; 2015 ; Journal of Integrable Systems Volume 1 ; 1 ; >
     au < expected ; exists ; 2016 ; Journal of Integrable Systems Volume 2 ; 2 ; >
 
     }
@@ -14305,7 +14306,7 @@
     au < frozen ; exists ; 2012 ; Journal of the National Cancer Institute: JNCI Volume 104 ; 104 ; >
     au < frozen ; exists ; 2013 ; Journal of the National Cancer Institute: JNCI Volume 105 ; 105 ; >
     au < finished ; finished ; 2014 ; Journal of the National Cancer Institute: JNCI Volume 106 ; 106 ; >
-    au < manifest ; exists ; 2015 ; Journal of the National Cancer Institute: JNCI Volume 107 ; 107 ; >
+    au < testing ; exists ; 2015 ; Journal of the National Cancer Institute: JNCI Volume 107 ; 107 ; >
     au < manifest ; exists ; 2016 ; Journal of the National Cancer Institute: JNCI Volume 108 ; 108 ; >
 
     }
@@ -15394,7 +15395,7 @@
     param[base_url] = http://jue.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < manifest ; exists ; 2015 ; Journal of Urban Ecology Volume 1 ; 1 ; >
+    au < testing ; exists ; 2015 ; Journal of Urban Ecology Volume 1 ; 1 ; >
     au < expected ; exists ; 2016 ; Journal of Urban Ecology Volume 2 ; 2 ; >
 
   }
@@ -15465,7 +15466,7 @@
     au < exists ; exists ; 2012 ; LabMedicine Volume 43 ; 43 ; >
     au < exists ; exists ; 2013 ; LabMedicine Volume 44 ; 44 ; >
     au < exists ; exists ; 2014 ; LabMedicine Volume 45 ; 45 ; >
-    au < manifest ; exists ; 2015 ; LabMedicine Volume 46 ; 46 ; >
+    au < testing ; exists ; 2015 ; LabMedicine Volume 46 ; 46 ; >
     au < exists ; exists ; 2016 ; LabMedicine Volume 47 ; 47 ; >
 
   }
@@ -18092,7 +18093,7 @@
     au < finished ; crawling ; 2012 ; Nucleic Acids Research Volume 40 ; 40 ; >
     au < frozen ; exists ; 2013 ; Nucleic Acids Research Volume 41 ; 41 ; >
     au < frozen ; exists ; 2014 ; Nucleic Acids Research Volume 42 ; 42 ; >
-    au < manifest ; exists ; 2015 ; Nucleic Acids Research Volume 43 ; 43 ; >
+    au < testing ; exists ; 2015 ; Nucleic Acids Research Volume 43 ; 43 ; >
     au < manifest ; exists ; 2016 ; Nucleic Acids Research Volume 44 ; 44 ; >
 
     }
@@ -18365,7 +18366,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < crawling ; exists ; 2014 ; Open Forum Infectious Diseases Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2015 ; Open Forum Infectious Diseases Volume 2 ; 2 ; >
+    au < testing ; exists ; 2015 ; Open Forum Infectious Diseases Volume 2 ; 2 ; >
     au < expected ; exists ; 2016 ; Open Forum Infectious Diseases Volume 3 ; 3 ; >
 
   }
@@ -21129,7 +21130,7 @@
     au < frozen ; crawling ; 2012 ; Review of Corporate Finance Studies Volume 1 ; 1 ; >
     au < finished ; finished ; 2013 ; Review of Corporate Finance Studies Volume 2 ; 2 ; >
     au < finished ; finished ; 2014 ; Review of Corporate Finance Studies Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2015 ; Review of Corporate Finance Studies Volume 4 ; 4 ; >
+    au < testing ; exists ; 2015 ; Review of Corporate Finance Studies Volume 4 ; 4 ; >
     au < expected ; exists ; 2016 ; Review of Corporate Finance Studies Volume 5 ; 5 ; >
 
   }
@@ -24469,12 +24470,12 @@
       au < manifest ; exists ; 2005 ; American Journal of Legal History Volume 47 ; 47 ; >
       au < manifest ; exists ; 2006 ; American Journal of Legal History Volume 48 ; 48 ; >
       au < manifest ; exists ; 2007 ; American Journal of Legal History Volume 49 ; 49 ; >
-      au < manifest ; exists ; 2010 ; American Journal of Legal History Volume 50 ; 50 ; >
-      au < manifest ; exists ; 2011 ; American Journal of Legal History Volume 51 ; 51 ; >
-      au < manifest ; exists ; 2012 ; American Journal of Legal History Volume 52 ; 52 ; >
-      au < manifest ; exists ; 2013 ; American Journal of Legal History Volume 53 ; 53 ; >
-      au < manifest ; exists ; 2014 ; American Journal of Legal History Volume 54 ; 54 ; >
-      au < manifest ; exists ; 2015 ; American Journal of Legal History Volume 55 ; 55 ; >
+      au < testing ; exists ; 2010 ; American Journal of Legal History Volume 50 ; 50 ; >
+      au < testing ; exists ; 2011 ; American Journal of Legal History Volume 51 ; 51 ; >
+      au < testing ; exists ; 2012 ; American Journal of Legal History Volume 52 ; 52 ; >
+      au < testing ; exists ; 2013 ; American Journal of Legal History Volume 53 ; 53 ; >
+      au < testing ; exists ; 2014 ; American Journal of Legal History Volume 54 ; 54 ; >
+      au < testing ; exists ; 2015 ; American Journal of Legal History Volume 55 ; 55 ; >
       au < expected ; exists ; 2016 ; American Journal of Legal History Volume 56 ; 56 ; >
 
   }
