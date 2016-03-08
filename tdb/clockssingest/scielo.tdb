@@ -407,6 +407,28 @@
   {
 
     title <
+      name = Acta Comportamentalia ;
+      issn = 0188-8145
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 0188-8145
+
+    au < manifest ; exists ; 2006 ; 14 ; Acta Comportamentalia Volume 14 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 15 ; Acta Comportamentalia Volume 15 ; 2007 ; >
+    au < manifest ; exists ; 2009 ; 17 ; Acta Comportamentalia Volume 17 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 18 ; Acta Comportamentalia Volume 18 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 19 ; Acta Comportamentalia Volume 19 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 20 ; Acta Comportamentalia Volume 20 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 21 ; Acta Comportamentalia Volume 21 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 22 ; Acta Comportamentalia Volume 22 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 23 ; Acta Comportamentalia Volume 23 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
       name = Acta de investigación psicológica ;
       issn = 2007-4832 ;
       eissn = 2007-4719
@@ -896,6 +918,29 @@
     au < crawling ; exists ; 2013 ; 35 ; Actualidades Biológicas Volume 35 ; 2013 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2014 ; 36 ; Actualidades Biológicas Volume 36 ; 2014 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; 37 ; Actualidades Biológicas Volume 37 ; 2015 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Actualidades en psicología ;
+      eissn = 0258-6444
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 0258-6444
+
+    au < manifest ; exists ; 2002 ; 18 ; Actualidades en psicología Volume 18 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 19 ; Actualidades en psicología Volume 19 ; 2003 ; >
+    au < manifest ; exists ; 2006 ; 20 ; Actualidades en psicología Volume 20 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 21 ; Actualidades en psicología Volume 21 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 22 ; Actualidades en psicología Volume 22 ; 2008 ; >
+    au < manifest ; exists ; 2010 ; 23-24 ; Actualidades en psicología Volume 23-24 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 25 ; Actualidades en psicología Volume 25 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 26 ; Actualidades en psicología Volume 26 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 27 ; Actualidades en psicología Volume 27 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 28 ; Actualidades en psicología Volume 28 ; 2014 ; >
 
   }
 
@@ -1398,6 +1443,30 @@
   {
 
     title <
+      name = Aletheia ;
+      issn = 1413-0394
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1413-0394
+
+    au < manifest ; exists ; 2004 ; 2004 ; Aletheia Volume 2004 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 2005 ; Aletheia Volume 2005 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 2006 ; Aletheia Volume 2006 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 2007 ; Aletheia Volume 2007 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; Aletheia Volume 2008 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Aletheia Volume 2009 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; Aletheia Volume 2010 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Aletheia Volume 2011 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Aletheia Volume 2012 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Aletheia Volume 2013 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 2014 ; Aletheia Volume 2014 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
       name = Alfa : Revista de Linguística (São José do Rio Preto) ;
       eissn = 1981-5794
     >
@@ -1456,6 +1525,24 @@
     au < manifest ; exists ; 2012 ; 22 ; Alteridades Volume 22 ; 2012 ; >
     au < crawling ; exists ; 2013 ; 23 ; Alteridades Volume 23 ; 2013 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2014 ; 24 ; Alteridades Volume 24 ; 2014 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Alternativas en Psicología ;
+      issn = 1405-339X
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1405-339X
+
+    au < manifest ; exists ; 2009 ; 14 ; Alternativas en Psicología Volume 14 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 15 ; Alternativas en Psicología Volume 15 ; 2010 ; >
+    au < manifest ; exists ; 2012 ; 16 ; Alternativas en Psicología Volume 16 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 17 ; Alternativas en Psicología Volume 17 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 18 ; Alternativas en Psicología Volume 18 ; 2014 ; >
 
   }
 
@@ -2074,6 +2161,22 @@
     au < crawling ; exists ; 2013 ; 26 ; Análisis Político Volume 26 ; 2013 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 27 ; Análisis Político Volume 27 ; 2014 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 28 ; Análisis Político Volume 28 ; 2015 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Analytica: Revista de Psicanálise ;
+      eissn = 2316-5197
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 2316-5197
+
+    au < manifest ; exists ; 2012 ; 1 ; Analytica: Revista de Psicanálise Volume 1 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 2 ; Analytica: Revista de Psicanálise Volume 2 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 3 ; Analytica: Revista de Psicanálise Volume 3 ; 2014 ; >
 
   }
 
@@ -3041,6 +3144,32 @@
   {
 
     title <
+      name = Arquivos Brasileiros de Psicologia ;
+      eissn = 1809-5267
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1809-5267
+
+    au < manifest ; exists ; 2003 ; 55 ; Arquivos Brasileiros de Psicologia Volume 55 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 56 ; Arquivos Brasileiros de Psicologia Volume 56 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 57 ; Arquivos Brasileiros de Psicologia Volume 57 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 58 ; Arquivos Brasileiros de Psicologia Volume 58 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 59 ; Arquivos Brasileiros de Psicologia Volume 59 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 60 ; Arquivos Brasileiros de Psicologia Volume 60 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 61 ; Arquivos Brasileiros de Psicologia Volume 61 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 62 ; Arquivos Brasileiros de Psicologia Volume 62 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 63 ; Arquivos Brasileiros de Psicologia Volume 63 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 64 ; Arquivos Brasileiros de Psicologia Volume 64 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 65 ; Arquivos Brasileiros de Psicologia Volume 65 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 66 ; Arquivos Brasileiros de Psicologia Volume 66 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 67 ; Arquivos Brasileiros de Psicologia Volume 67 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
       name = Arquivos de Gastroenterologia ;
       issn = 0004-2803 ;
       eissn = 1678-4219
@@ -3349,6 +3478,34 @@
   {
 
     title <
+      name = Avaliação Psicológica ;
+      issn = 1677-0471 ;
+      eissn = 2175-3431
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1677-0471
+
+    au < manifest ; exists ; 2002 ; 1 ; Avaliação Psicológica Volume 1 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 2 ; Avaliação Psicológica Volume 2 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 3 ; Avaliação Psicológica Volume 3 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 4 ; Avaliação Psicológica Volume 4 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 5 ; Avaliação Psicológica Volume 5 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 6 ; Avaliação Psicológica Volume 6 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 7 ; Avaliação Psicológica Volume 7 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 8 ; Avaliação Psicológica Volume 8 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 9 ; Avaliação Psicológica Volume 9 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 10 ; Avaliação Psicológica Volume 10 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 11 ; Avaliação Psicológica Volume 11 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 12 ; Avaliação Psicológica Volume 12 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 13 ; Avaliação Psicológica Volume 13 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 14 ; Avaliação Psicológica Volume 14 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
       name = Avaliação: Revista da Avaliação da Educação Superior (Campinas) ;
       issn = 1414-4077 ;
       eissn = 1982-5765
@@ -3531,6 +3688,23 @@
     au < crawling ; exists ; 2013 ; 10 ; BAR - Brazilian Administration Review Volume 10 ; 2013 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 11 ; BAR - Brazilian Administration Review Volume 11 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; 12 ; BAR - Brazilian Administration Review Volume 12 ; 2015 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Barbaroi ;
+      issn = 0104-6578
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 0104-6578
+
+    au < manifest ; exists ; 2010 ; 2010 ; Barbaroi Volume 2010 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Barbaroi Volume 2011 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Barbaroi Volume 2012 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Barbaroi Volume 2013 ; 2013 ; >
 
   }
 
@@ -3752,6 +3926,25 @@
   {
 
     title <
+      name = Boletim - Academia Paulista de Psicologia ;
+      issn = 1415-711X
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1415-711X
+
+    au < manifest ; exists ; 2007 ; 27 ; Boletim - Academia Paulista de Psicologia Volume 27 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 28 ; Boletim - Academia Paulista de Psicologia Volume 28 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 29 ; Boletim - Academia Paulista de Psicologia Volume 29 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 30 ; Boletim - Academia Paulista de Psicologia Volume 30 ; 2010 ; >
+    au < manifest ; exists ; 2013 ; 33 ; Boletim - Academia Paulista de Psicologia Volume 33 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 34 ; Boletim - Academia Paulista de Psicologia Volume 34 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
       name = Boletim de Ciências Geodésicas ;
       eissn = 1982-2170
     >
@@ -3765,6 +3958,29 @@
     au < crawling ; exists ; 2013 ; 19 ; Boletim de Ciências Geodésicas Volume 19 ; 2013 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2014 ; 20 ; Boletim de Ciências Geodésicas Volume 20 ; 2014 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 21 ; Boletim de Ciências Geodésicas Volume 21 ; 2015 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Boletim de Psicologia ;
+      issn = 0006-5943
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 0006-5943
+
+    au < manifest ; exists ; 2005 ; 55 ; Boletim de Psicologia Volume 55 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 56 ; Boletim de Psicologia Volume 56 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 57 ; Boletim de Psicologia Volume 57 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 58 ; Boletim de Psicologia Volume 58 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 59 ; Boletim de Psicologia Volume 59 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 60 ; Boletim de Psicologia Volume 60 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 61 ; Boletim de Psicologia Volume 61 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 62 ; Boletim de Psicologia Volume 62 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 63 ; Boletim de Psicologia Volume 63 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 64 ; Boletim de Psicologia Volume 64 ; 2014 ; >
 
   }
 
@@ -3859,6 +4075,22 @@
     au < crawling ; exists ; 2013 ; 8 ; Boletim do Museu Paraense Emílio Goeldi. Ciências Humanas Volume 8 ; 2013 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 9 ; Boletim do Museu Paraense Emílio Goeldi. Ciências Humanas Volume 9 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; 10 ; Boletim do Museu Paraense Emílio Goeldi. Ciências Humanas Volume 10 ; 2015 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Boletín (Sociedad de Psicología del Uruguay. En línea) ;
+      eissn = 1688-4337
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1688-4337
+
+    au < manifest ; exists ; 2006 ; 2006 ; Boletín (Sociedad de Psicología del Uruguay. En línea) Volume 2006 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 2007 ; Boletín (Sociedad de Psicología del Uruguay. En línea) Volume 2007 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; Boletín (Sociedad de Psicología del Uruguay. En línea) Volume 2008 ; 2008 ; >
 
   }
 
@@ -5098,6 +5330,64 @@
   {
 
     title <
+      name = Cadernos de psicanálise (Rio de Janeiro) ;
+      eissn = 1413-6295
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1413-6295
+
+    au < manifest ; exists ; 2012 ; 34 ; Cadernos de psicanálise (Rio de Janeiro) Volume 34 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 35 ; Cadernos de psicanálise (Rio de Janeiro) Volume 35 ; 2013 ; >
+
+  }
+
+  {
+
+    title <
+      name = Cadernos de Psicologia Social do Trabalho ;
+      issn = 1516-3717
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1516-3717
+
+    au < manifest ; exists ; 2006 ; 9 ; Cadernos de Psicologia Social do Trabalho Volume 9 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 10 ; Cadernos de Psicologia Social do Trabalho Volume 10 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 11 ; Cadernos de Psicologia Social do Trabalho Volume 11 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 12 ; Cadernos de Psicologia Social do Trabalho Volume 12 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 13 ; Cadernos de Psicologia Social do Trabalho Volume 13 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 14 ; Cadernos de Psicologia Social do Trabalho Volume 14 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 15 ; Cadernos de Psicologia Social do Trabalho Volume 15 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 16 ; Cadernos de Psicologia Social do Trabalho Volume 16 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 17 ; Cadernos de Psicologia Social do Trabalho Volume 17 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
+      name = Cadernos de Psicopedagogia ;
+      issn = 1676-1049
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1676-1049
+
+    au < manifest ; exists ; 2004 ; 3 ; Cadernos de Psicopedagogia Volume 3 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 5 ; Cadernos de Psicopedagogia Volume 5 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 6 ; Cadernos de Psicopedagogia Volume 6 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 6 ; Cadernos de Psicopedagogia Volume 6 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 7 ; Cadernos de Psicopedagogia Volume 7 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 7 ; Cadernos de Psicopedagogia Volume 7 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 8 ; Cadernos de Psicopedagogia Volume 8 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Cadernos de Psicopedagogia Volume 2011 ; 2011 ; >
+
+  }
+
+  {
+
+    title <
       name = Cadernos de Saúde Pública ;
       issn = 0102-311X ;
       eissn = 1678-4464
@@ -5900,6 +6190,27 @@
   {
 
     title <
+      name = Ciências & Cognição ;
+      eissn = 1806-5821
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1806-5821
+
+    au < manifest ; exists ; 2005 ; 5-6 ; Ciências & Cognição Volume 5-6 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 7 ; Ciências & Cognição Volume 7 ; 2006 ; >
+    au < manifest ; exists ; 2008 ; 13 ; Ciências & Cognição Volume 13 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 14 ; Ciências & Cognição Volume 14 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 15 ; Ciências & Cognição Volume 15 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 16 ; Ciências & Cognição Volume 16 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 17 ; Ciências & Cognição Volume 17 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 18 ; Ciências & Cognição Volume 18 ; 2013 ; >
+
+  }
+
+  {
+
+    title <
       name = Ciencias agronómicas ;
       eissn = 2250-8872
     >
@@ -6140,6 +6451,21 @@
   {
 
     title <
+      name = CliniCAPS ;
+      eissn = 1983-6007
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1983-6007
+
+    au < manifest ; exists ; 2007 ; 1 ; CliniCAPS Volume 1 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 2 ; CliniCAPS Volume 2 ; 2008 ; >
+
+  }
+
+  {
+
+    title <
       name = Clinics ;
       issn = 1807-5932 ;
       eissn = 1980-5322
@@ -6196,6 +6522,19 @@
     au < crawling ; exists ; 2013 ; 25 ; CoDAS Volume 25 ; 2013 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 26 ; CoDAS Volume 26 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; 27 ; CoDAS Volume 27 ; 2015 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Cógito ;
+      issn = 1519-9479
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1519-9479
+
 
   }
 
@@ -6513,6 +6852,30 @@
   {
 
     title <
+      name = Construção psicopedagógica ;
+      issn = 1415-6954
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1415-6954
+
+    au < manifest ; exists ; 2005 ; 13 ; Construção psicopedagógica Volume 13 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 14 ; Construção psicopedagógica Volume 14 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 15 ; Construção psicopedagógica Volume 15 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 16 ; Construção psicopedagógica Volume 16 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 17 ; Construção psicopedagógica Volume 17 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 18 ; Construção psicopedagógica Volume 18 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 19 ; Construção psicopedagógica Volume 19 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 20 ; Construção psicopedagógica Volume 20 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 21 ; Construção psicopedagógica Volume 21 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 22 ; Construção psicopedagógica Volume 22 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 23 ; Construção psicopedagógica Volume 23 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
       name = Contabilidad y Auditoría ;
       eissn = 1852-446X
     >
@@ -6570,6 +6933,25 @@
     au < crawling ; exists ; 2013 ; 35 ; Contexto Internacional Volume 35 ; 2013 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 36 ; Contexto Internacional Volume 36 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; 37 ; Contexto Internacional Volume 37 ; 2015 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Contextos Clínicos ;
+      issn = 1983-3482
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1983-3482
+
+    au < manifest ; exists ; 2008 ; 1 ; Contextos Clínicos Volume 1 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 2 ; Contextos Clínicos Volume 2 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 3 ; Contextos Clínicos Volume 3 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 4 ; Contextos Clínicos Volume 4 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 5 ; Contextos Clínicos Volume 5 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 6 ; Contextos Clínicos Volume 6 ; 2013 ; >
 
   }
 
@@ -6733,6 +7115,26 @@
     au < manifest ; exists ; 2012 ; 4-5 ; CT&F - Ciencia, Tecnología y Futuro Volume 4-5 (2012) ; 2012 ; >
     au < crawling ; exists ; 2013 ; 5 ; CT&F - Ciencia, Tecnología y Futuro Volume 5 (2013) ; 2013 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 5 ; CT&F - Ciencia, Tecnología y Futuro Volume 5 (2014) ; 2014 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Cuadernos de neuropsicología ;
+      eissn = 0718-4123
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 0718-4123
+
+    au < manifest ; exists ; 2007 ; 1 ; Cuadernos de neuropsicología Volume 1 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 2 ; Cuadernos de neuropsicología Volume 2 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 3 ; Cuadernos de neuropsicología Volume 3 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 4 ; Cuadernos de neuropsicología Volume 4 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 5 ; Cuadernos de neuropsicología Volume 5 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 6 ; Cuadernos de neuropsicología Volume 6 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 7 ; Cuadernos de neuropsicología Volume 7 ; 2013 ; >
 
   }
 
@@ -7664,6 +8066,19 @@
   {
 
     title <
+      name = Desidades ;
+      eissn = 2318-9282
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 2318-9282
+
+
+  }
+
+  {
+
+    title <
       name = Diaeta ;
       eissn = 1852-7337
     >
@@ -7790,6 +8205,23 @@
     au < manifest ; exists ; 2012 ; 13 ; Discusiones Filosóficas Volume 13 ; 2012 ; >
     au < crawling ; exists ; 2013 ; 14 ; Discusiones Filosóficas Volume 14 ; 2013 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2014 ; 15 ; Discusiones Filosóficas Volume 15 ; 2014 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Diversitas ;
+      issn = 1794-9998
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1794-9998
+
+    au < manifest ; exists ; 2005 ; 1 ; Diversitas Volume 1 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 2 ; Diversitas Volume 2 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 3 ; Diversitas Volume 3 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 4 ; Diversitas Volume 4 ; 2008 ; >
 
   }
 
@@ -9050,6 +9482,21 @@
   {
 
     title <
+      name = Epistemo-somática ;
+      issn = 1980-2005
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1980-2005
+
+    au < manifest ; exists ; 2006 ; 3 ; Epistemo-somática Volume 3 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 4 ; Epistemo-somática Volume 4 ; 2007 ; >
+
+  }
+
+  {
+
+    title <
       name = Ernstia ;
       issn = 0252-8274
     >
@@ -9144,6 +9591,21 @@
   {
 
     title <
+      name = Escritos sobre Educação ;
+      issn = 1677-9843
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1677-9843
+
+    au < manifest ; exists ; 2005 ; 4 ; Escritos sobre Educação Volume 4 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 5 ; Escritos sobre Educação Volume 5 ; 2006 ; >
+
+  }
+
+  {
+
+    title <
       name = Espacios en blanco. Serie indagaciones ;
       issn = 1515-9485 ;
       eissn = 2313-9927
@@ -9178,6 +9640,39 @@
     au < crawling ; exists ; 2013 ; 20 ; Espiral (Guadalajara) Volume 20 ; 2013 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2014 ; 21 ; Espiral (Guadalajara) Volume 21 ; 2014 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 22 ; Espiral (Guadalajara) Volume 22 ; 2015 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Estilos da Clinica ;
+      issn = 1415-7128
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1415-7128
+
+    au < manifest ; exists ; 1996 ; 1 ; Estilos da Clinica Volume 1 ; 1996 ; >
+    au < manifest ; exists ; 1997 ; 2 ; Estilos da Clinica Volume 2 ; 1997 ; >
+    au < manifest ; exists ; 1998 ; 3 ; Estilos da Clinica Volume 3 ; 1998 ; >
+    au < manifest ; exists ; 1999 ; 4 ; Estilos da Clinica Volume 4 ; 1999 ; >
+    au < manifest ; exists ; 2000 ; 5 ; Estilos da Clinica Volume 5 ; 2000 ; >
+    au < manifest ; exists ; 2001 ; 6 ; Estilos da Clinica Volume 6 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 7 ; Estilos da Clinica Volume 7 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 8 ; Estilos da Clinica Volume 8 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 9 ; Estilos da Clinica Volume 9 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 10 ; Estilos da Clinica Volume 10 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 11 ; Estilos da Clinica Volume 11 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 12 ; Estilos da Clinica Volume 12 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 13 ; Estilos da Clinica Volume 13 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 14 ; Estilos da Clinica Volume 14 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 15 ; Estilos da Clinica Volume 15 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 16 ; Estilos da Clinica Volume 16 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 17 ; Estilos da Clinica Volume 17 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 18 ; Estilos da Clinica Volume 18 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 19 ; Estilos da Clinica Volume 19 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 20 ; Estilos da Clinica Volume 20 ; 2015 ; >
 
   }
 
@@ -9775,6 +10270,31 @@
   {
 
     title <
+      name = Estudos de Psicanálise ;
+      issn = 0100-3437
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 0100-3437
+
+    au < manifest ; exists ; 2004 ; 2004 ; Estudos de Psicanálise Volume 2004 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 2005 ; Estudos de Psicanálise Volume 2005 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 2006 ; Estudos de Psicanálise Volume 2006 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 2007 ; Estudos de Psicanálise Volume 2007 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; Estudos de Psicanálise Volume 2008 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Estudos de Psicanálise Volume 2009 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; Estudos de Psicanálise Volume 2010 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Estudos de Psicanálise Volume 2011 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Estudos de Psicanálise Volume 2012 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Estudos de Psicanálise Volume 2013 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 2014 ; Estudos de Psicanálise Volume 2014 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; Estudos de Psicanálise Volume 2015 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
       name = Estudos de Psicologia (Campinas) ;
       issn = 0103-166X ;
       eissn = 1982-0275
@@ -9841,6 +10361,32 @@
   {
 
     title <
+      name = Estudos e Pesquisas em Psicologia ;
+      eissn = 1808-4281
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1808-4281
+
+    au < manifest ; exists ; 2003 ; 3 ; Estudos e Pesquisas em Psicologia Volume 3 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 4 ; Estudos e Pesquisas em Psicologia Volume 4 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 5 ; Estudos e Pesquisas em Psicologia Volume 5 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 6 ; Estudos e Pesquisas em Psicologia Volume 6 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 7 ; Estudos e Pesquisas em Psicologia Volume 7 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 8 ; Estudos e Pesquisas em Psicologia Volume 8 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 9 ; Estudos e Pesquisas em Psicologia Volume 9 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 10 ; Estudos e Pesquisas em Psicologia Volume 10 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 11 ; Estudos e Pesquisas em Psicologia Volume 11 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 12 ; Estudos e Pesquisas em Psicologia Volume 12 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 13 ; Estudos e Pesquisas em Psicologia Volume 13 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 14 ; Estudos e Pesquisas em Psicologia Volume 14 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 15 ; Estudos e Pesquisas em Psicologia Volume 15 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
       name = Estudos Econômicos (São Paulo) ;
       issn = 0101-4161 ;
       eissn = 1980-5357
@@ -9897,6 +10443,24 @@
     au < crawling ; exists ; 2013 ; 26 ; Estudos Históricos (Rio de Janeiro) Volume 26 ; 2013 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 27 ; Estudos Históricos (Rio de Janeiro) Volume 27 ; 2014 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 28 ; Estudos Históricos (Rio de Janeiro) Volume 28 ; 2015 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Estudos Interdisciplinares em Psicologia ;
+      eissn = 2236-6407
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 2236-6407
+
+    au < manifest ; exists ; 2010 ; 1 ; Estudos Interdisciplinares em Psicologia Volume 1 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 2 ; Estudos Interdisciplinares em Psicologia Volume 2 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 3 ; Estudos Interdisciplinares em Psicologia Volume 3 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 4 ; Estudos Interdisciplinares em Psicologia Volume 4 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 5 ; Estudos Interdisciplinares em Psicologia Volume 5 ; 2014 ; >
 
   }
 
@@ -9970,6 +10534,22 @@
     au < crawling ; exists ; 2013 ; 39 ; EURE (Santiago) Volume 39 ; 2013 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 40 ; EURE (Santiago) Volume 40 ; 2014 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 41 ; EURE (Santiago) Volume 41 ; 2015 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Eureka (Asunción) en Línea ;
+      eissn = 2220-9026
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 2220-9026
+
+    au < manifest ; exists ; 2011 ; 8 ; Eureka (Asunción) en Línea Volume 8 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 9 ; Eureka (Asunción) en Línea Volume 9 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 10 ; Eureka (Asunción) en Línea Volume 10 ; 2013 ; >
 
   }
 
@@ -10717,6 +11297,26 @@
   {
 
     title <
+      name = Gerais : Revista Interinstitucional de Psicologia ;
+      eissn = 1983-8220
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1983-8220
+
+    au < manifest ; exists ; 2008 ; 1 ; Gerais : Revista Interinstitucional de Psicologia Volume 1 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 2 ; Gerais : Revista Interinstitucional de Psicologia Volume 2 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 3 ; Gerais : Revista Interinstitucional de Psicologia Volume 3 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 4 ; Gerais : Revista Interinstitucional de Psicologia Volume 4 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 5 ; Gerais : Revista Interinstitucional de Psicologia Volume 5 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 6 ; Gerais : Revista Interinstitucional de Psicologia Volume 6 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 7 ; Gerais : Revista Interinstitucional de Psicologia Volume 7 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
       name = Gerokomos ;
       issn = 1134-928X
     >
@@ -11381,6 +11981,28 @@
   {
 
     title <
+      name = Ide ;
+      issn = 0101-3106
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 0101-3106
+
+    au < manifest ; exists ; 2007 ; 30 ; Ide Volume 30 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 31 ; Ide Volume 31 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 32 ; Ide Volume 32 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 33 ; Ide Volume 33 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 34 ; Ide Volume 34 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 35 ; Ide Volume 35 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 35-36 ; Ide Volume 35-36 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 36-37 ; Ide Volume 36-37 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 37 ; Ide Volume 37 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
       name = Ideas y Valores ;
       issn = 0120-0062
     >
@@ -11489,6 +12111,22 @@
     au < crawling ; exists ; 2013 ; 2013 ; Ilha do Desterro Volume 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 2014 ; Ilha do Desterro Volume 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 68 ; Ilha do Desterro Volume 68 ; 2015 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Imaginário ;
+      issn = 1413-666X
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1413-666X
+
+    au < manifest ; exists ; 2005 ; 11 ; Imaginário Volume 11 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 12 ; Imaginário Volume 12 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 13 ; Imaginário Volume 13 ; 2007 ; >
 
   }
 
@@ -11995,6 +12633,24 @@
   {
 
     title <
+      name = Interações ;
+      issn = 1413-2907
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1413-2907
+
+    au < manifest ; exists ; 2002 ; 7 ; Interações Volume 7 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 8 ; Interações Volume 8 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 9 ; Interações Volume 9 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 10 ; Interações Volume 10 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 11 ; Interações Volume 11 ; 2006 ; >
+
+  }
+
+  {
+
+    title <
       name = Interações (Campo Grande) ;
       issn = 1518-7012 ;
       eissn = 1984-042X
@@ -12013,6 +12669,23 @@
     au < crawling ; exists ; 2013 ; 14 ; Interações (Campo Grande) Volume 14 ; 2013 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2014 ; 15 ; Interações (Campo Grande) Volume 15 ; 2014 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; 16 ; Interações (Campo Grande) Volume 16 ; 2015 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Interamerican Journal of Psychology ;
+      issn = 0034-9690
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 0034-9690
+
+    au < manifest ; exists ; 2006 ; 40 ; Interamerican Journal of Psychology Volume 40 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 41 ; Interamerican Journal of Psychology Volume 41 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 42 ; Interamerican Journal of Psychology Volume 42 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 43 ; Interamerican Journal of Psychology Volume 43 ; 2009 ; >
 
   }
 
@@ -12054,6 +12727,20 @@
     au < crawling ; exists ; 2013 ; 36 ; Intercom: Revista Brasileira de Ciências da Comunicação Volume 36 ; 2013 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 37 ; Intercom: Revista Brasileira de Ciências da Comunicação Volume 37 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; 38 ; Intercom: Revista Brasileira de Ciências da Comunicação Volume 38 ; 2015 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Interdisciplinaria ;
+      issn = 0325-8203
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 0325-8203
+
+    au < manifest ; exists ; 2007 ; 24 ; Interdisciplinaria Volume 24 ; 2007 ; >
 
   }
 
@@ -12920,6 +13607,29 @@
     au < manifest ; exists ; 2001 ; 27 ; Jornal de Pneumologia Volume 27 ; 2001 ; >
     au < manifest ; exists ; 2002 ; 28 ; Jornal de Pneumologia Volume 28 ; 2002 ; >
     au < manifest ; exists ; 2003 ; 29 ; Jornal de Pneumologia Volume 29 ; 2003 ; >
+
+  }
+
+  {
+
+    title <
+      name = Jornal de Psicanálise ;
+      issn = 0103-5835
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 0103-5835
+
+    au < manifest ; exists ; 2006 ; 39 ; Jornal de Psicanálise Volume 39 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 40 ; Jornal de Psicanálise Volume 40 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 41 ; Jornal de Psicanálise Volume 41 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 42 ; Jornal de Psicanálise Volume 42 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 43 ; Jornal de Psicanálise Volume 43 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 44 ; Jornal de Psicanálise Volume 44 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 45 ; Jornal de Psicanálise Volume 45 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 46 ; Jornal de Psicanálise Volume 46 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 47 ; Jornal de Psicanálise Volume 47 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 48 ; Jornal de Psicanálise Volume 48 ; 2015 ; >
 
   }
 
@@ -13839,6 +14549,21 @@
   {
 
     title <
+      name = Latin American Journal of Fundamental Psychopathology On Line ;
+      eissn = 1677-0358
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1677-0358
+
+    au < manifest ; exists ; 2007 ; 4 ; Latin American Journal of Fundamental Psychopathology On Line Volume 4 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 5 ; Latin American Journal of Fundamental Psychopathology On Line Volume 5 ; 2008 ; >
+
+  }
+
+  {
+
+    title <
       name = Latin American journal of sedimentology and basin analysis ;
       eissn = 1851-4979
     >
@@ -14043,6 +14768,26 @@
 
     au < crawling ; exists ; 2014 ; 38 ; Lexis Volume 38 ; 2014 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 39 ; Lexis Volume 39 ; 2015 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Liberabit ;
+      issn = 1729-4827
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1729-4827
+
+    au < manifest ; exists ; 2005 ; 11 ; Liberabit Volume 11 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 12 ; Liberabit Volume 12 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 13 ; Liberabit Volume 13 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 14 ; Liberabit Volume 14 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 15 ; Liberabit Volume 15 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 16 ; Liberabit Volume 16 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 17 ; Liberabit Volume 17 ; 2011 ; >
 
   }
 
@@ -14954,6 +15699,30 @@
   {
 
     title <
+      name = Mental ;
+      issn = 1679-4427
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1679-4427
+
+    au < manifest ; exists ; 2003 ; 1 ; Mental Volume 1 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 2 ; Mental Volume 2 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 3 ; Mental Volume 3 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 4 ; Mental Volume 4 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 5 ; Mental Volume 5 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 6 ; Mental Volume 6 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 7 ; Mental Volume 7 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 8 ; Mental Volume 8 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 9 ; Mental Volume 9 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 10 ; Mental Volume 10 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 10 ; Mental Volume 10 ; 2013 ; >
+
+  }
+
+  {
+
+    title <
       name = Mercator (Fortaleza) ;
       eissn = 1984-2201
     >
@@ -14963,6 +15732,21 @@
 
     au < crawling ; exists ; 2014 ; 13 ; Mercator (Fortaleza) Volume 13 ; 2014 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 14 ; Mercator (Fortaleza) Volume 14 ; 2015 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Metaphora ;
+      issn = 2072-0696
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 2072-0696
+
+    au < manifest ; exists ; 2002 ; 2002 ; Metaphora Volume 2002 ; 2002 ; >
+    au < manifest ; exists ; 2004 ; 2004 ; Metaphora Volume 2004 ; 2004 ; >
 
   }
 
@@ -15218,6 +16002,34 @@
   {
 
     title <
+      name = Natureza humana ;
+      issn = 1517-2430
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1517-2430
+
+    au < manifest ; exists ; 1999 ; 1 ; Natureza humana Volume 1 ; 1999 ; >
+    au < manifest ; exists ; 2000 ; 2 ; Natureza humana Volume 2 ; 2000 ; >
+    au < manifest ; exists ; 2001 ; 3 ; Natureza humana Volume 3 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 4 ; Natureza humana Volume 4 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 5 ; Natureza humana Volume 5 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 6 ; Natureza humana Volume 6 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 7 ; Natureza humana Volume 7 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 8 ; Natureza humana Volume 8 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 9 ; Natureza humana Volume 9 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 10 ; Natureza humana Volume 10 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 11 ; Natureza humana Volume 11 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 12 ; Natureza humana Volume 12 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 13 ; Natureza humana Volume 13 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 14 ; Natureza humana Volume 14 ; 2012 ; >
+    au < manifest ; exists ; 2015 ; 17 ; Natureza humana Volume 17 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
       name = Nauplius ;
       issn = 0104-6497 ;
       eissn = 2358-2936
@@ -15338,6 +16150,22 @@
     au < manifest ; exists ; 2009 ; 20 ; Neurocirugía Volume 20 ; 2009 ; >
     au < manifest ; exists ; 2010 ; 21 ; Neurocirugía Volume 21 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 22 ; Neurocirugía Volume 22 ; 2011 ; >
+
+  }
+
+  {
+
+    title <
+      name = Neuropsicologia Latinoamericana ;
+      eissn = 2075-9479
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 2075-9479
+
+    au < manifest ; exists ; 2009 ; 1 ; Neuropsicologia Latinoamericana Volume 1 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 2 ; Neuropsicologia Latinoamericana Volume 2 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 3 ; Neuropsicologia Latinoamericana Volume 3 ; 2011 ; >
 
   }
 
@@ -16308,6 +17136,22 @@
   {
 
     title <
+      name = Pensando familias ;
+      issn = 1679-494X
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1679-494X
+
+    au < manifest ; exists ; 2013 ; 17 ; Pensando familias Volume 17 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 18 ; Pensando familias Volume 18 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 19 ; Pensando familias Volume 19 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
       name = PER: Potchefstroomse Elektroniese Regsblad ;
       eissn = 1727-3781
     >
@@ -16470,6 +17314,25 @@
     au < crawling ; exists ; 2013 ; 17 ; Persona y Bioética Volume 17 ; 2013 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2014 ; 18 ; Persona y Bioética Volume 18 ; 2014 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 19 ; Persona y Bioética Volume 19 ; 2015 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Perspectivas em análise do comportamento ;
+      eissn = 2177-3548
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 2177-3548
+
+    au < manifest ; exists ; 2010 ; 1 ; Perspectivas em análise do comportamento Volume 1 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 2 ; Perspectivas em análise do comportamento Volume 2 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 3 ; Perspectivas em análise do comportamento Volume 3 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 4 ; Perspectivas em análise do comportamento Volume 4 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 5 ; Perspectivas em análise do comportamento Volume 5 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 6 ; Perspectivas em análise do comportamento Volume 6 ; 2015 ; >
 
   }
 
@@ -17417,6 +18280,26 @@
   {
 
     title <
+      name = Psic: revista da Vetor Editora ;
+      issn = 1676-7314
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1676-7314
+
+    au < manifest ; exists ; 2002 ; 3 ; Psic: revista da Vetor Editora Volume 3 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 4 ; Psic: revista da Vetor Editora Volume 4 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 5 ; Psic: revista da Vetor Editora Volume 5 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 6 ; Psic: revista da Vetor Editora Volume 6 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 7 ; Psic: revista da Vetor Editora Volume 7 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 8 ; Psic: revista da Vetor Editora Volume 8 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 9 ; Psic: revista da Vetor Editora Volume 9 ; 2008 ; >
+
+  }
+
+  {
+
+    title <
       name = Psico-USF ;
       issn = 1413-8271 ;
       eissn = 2175-3563
@@ -17488,6 +18371,217 @@
   {
 
     title <
+      name = Psicologia Clínica ;
+      issn = 0103-5665
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 0103-5665
+
+    au < manifest ; exists ; 2005 ; 17 ; Psicologia Clínica Volume 17 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 18 ; Psicologia Clínica Volume 18 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 19 ; Psicologia Clínica Volume 19 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 20 ; Psicologia Clínica Volume 20 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 21 ; Psicologia Clínica Volume 21 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 22 ; Psicologia Clínica Volume 22 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 23 ; Psicologia Clínica Volume 23 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 24 ; Psicologia Clínica Volume 24 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 25 ; Psicologia Clínica Volume 25 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 26 ; Psicologia Clínica Volume 26 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 27 ; Psicologia Clínica Volume 27 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
+      name = Psicologia da Educação ;
+      issn = 1414-6975 ;
+      eissn = 2175-3520
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1414-6975
+
+    au < manifest ; exists ; 2004 ; 2004 ; Psicologia da Educação Volume 2004 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 2005 ; Psicologia da Educação Volume 2005 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 2006 ; Psicologia da Educação Volume 2006 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 2007 ; Psicologia da Educação Volume 2007 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; Psicologia da Educação Volume 2008 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Psicologia da Educação Volume 2009 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; Psicologia da Educação Volume 2010 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Psicologia da Educação Volume 2011 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Psicologia da Educação Volume 2012 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Psicologia da Educação Volume 2013 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 2014 ; Psicologia da Educação Volume 2014 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; Psicologia da Educação Volume 2015 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
+      name = Psicologia em Pesquisa ;
+      eissn = 1982-1247
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1982-1247
+
+    au < manifest ; exists ; 2007 ; 1 ; Psicologia em Pesquisa Volume 1 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 2 ; Psicologia em Pesquisa Volume 2 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 3 ; Psicologia em Pesquisa Volume 3 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 4 ; Psicologia em Pesquisa Volume 4 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 5 ; Psicologia em Pesquisa Volume 5 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 6 ; Psicologia em Pesquisa Volume 6 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 7 ; Psicologia em Pesquisa Volume 7 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 8 ; Psicologia em Pesquisa Volume 8 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
+      name = Psicologia em Revista ;
+      issn = 1677-1168
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1677-1168
+
+    au < manifest ; exists ; 2005 ; 11 ; Psicologia em Revista Volume 11 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 12 ; Psicologia em Revista Volume 12 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 13 ; Psicologia em Revista Volume 13 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 14 ; Psicologia em Revista Volume 14 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 15 ; Psicologia em Revista Volume 15 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 16 ; Psicologia em Revista Volume 16 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 17 ; Psicologia em Revista Volume 17 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 18 ; Psicologia em Revista Volume 18 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 19 ; Psicologia em Revista Volume 19 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 20 ; Psicologia em Revista Volume 20 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
+      name = Psicologia Ensino & Formação ;
+      issn = 2177-2061
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 2177-2061
+
+    au < manifest ; exists ; 2010 ; 1 ; Psicologia Ensino & Formação Volume 1 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 2 ; Psicologia Ensino & Formação Volume 2 ; 2011 ; >
+    au < manifest ; exists ; 2013 ; 4 ; Psicologia Ensino & Formação Volume 4 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 5 ; Psicologia Ensino & Formação Volume 5 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 6 ; Psicologia Ensino & Formação Volume 6 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
+      name = Psicologia Escolar e Educacional ;
+      issn = 1413-8557
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1413-8557
+
+    au < manifest ; exists ; 1996 ; 1 ; Psicologia Escolar e Educacional Volume 1 ; 1996 ; >
+    au < manifest ; exists ; 1997 ; 1 ; Psicologia Escolar e Educacional Volume 1 ; 1997 ; >
+    au < manifest ; exists ; 1998 ; 2 ; Psicologia Escolar e Educacional Volume 2 ; 1998 ; >
+    au < manifest ; exists ; 1999 ; 3 ; Psicologia Escolar e Educacional Volume 3 ; 1999 ; >
+    au < manifest ; exists ; 2000 ; 4 ; Psicologia Escolar e Educacional Volume 4 ; 2000 ; >
+    au < manifest ; exists ; 2001 ; 5 ; Psicologia Escolar e Educacional Volume 5 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 6 ; Psicologia Escolar e Educacional Volume 6 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 7 ; Psicologia Escolar e Educacional Volume 7 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 8 ; Psicologia Escolar e Educacional Volume 8 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 9 ; Psicologia Escolar e Educacional Volume 9 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 10 ; Psicologia Escolar e Educacional Volume 10 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 11 ; Psicologia Escolar e Educacional Volume 11 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 12 ; Psicologia Escolar e Educacional Volume 12 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 13 ; Psicologia Escolar e Educacional Volume 13 ; 2009 ; >
+
+  }
+
+  {
+
+    title <
+      name = Psicologia Hospitalar ;
+      issn = 1677-7409
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1677-7409
+
+    au < manifest ; exists ; 2004 ; 2 ; Psicologia Hospitalar Volume 2 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 3 ; Psicologia Hospitalar Volume 3 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 4 ; Psicologia Hospitalar Volume 4 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 5 ; Psicologia Hospitalar Volume 5 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 6 ; Psicologia Hospitalar Volume 6 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 7 ; Psicologia Hospitalar Volume 7 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 8 ; Psicologia Hospitalar Volume 8 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 9 ; Psicologia Hospitalar Volume 9 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 10 ; Psicologia Hospitalar Volume 10 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 11 ; Psicologia Hospitalar Volume 11 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 12 ; Psicologia Hospitalar Volume 12 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
+      name = Psicologia para América Latina ;
+      eissn = 1870-350X
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1870-350X
+
+    au < manifest ; exists ; 2002 ; 2002 ; Psicologia para América Latina Volume 2002 ; 2002 ; >
+    au < manifest ; exists ; 2004 ; 2004 ; Psicologia para América Latina Volume 2004 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 2005 ; Psicologia para América Latina Volume 2005 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 2006 ; Psicologia para América Latina Volume 2006 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 2007 ; Psicologia para América Latina Volume 2007 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; Psicologia para América Latina Volume 2008 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Psicologia para América Latina Volume 2009 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; Psicologia para América Latina Volume 2010 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Psicologia para América Latina Volume 2011 ; 2011 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Psicologia para América Latina Volume 2013 ; 2013 ; >
+
+  }
+
+  {
+
+    title <
+      name = Psicologia USP ;
+      eissn = 1678-5177
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1678-5177
+
+    au < manifest ; exists ; 1990 ; 1 ; Psicologia USP Volume 1 ; 1990 ; >
+    au < manifest ; exists ; 1991 ; 2 ; Psicologia USP Volume 2 ; 1991 ; >
+    au < manifest ; exists ; 1992 ; 3 ; Psicologia USP Volume 3 ; 1992 ; >
+    au < manifest ; exists ; 1993 ; 4 ; Psicologia USP Volume 4 ; 1993 ; >
+    au < manifest ; exists ; 1994 ; 5 ; Psicologia USP Volume 5 ; 1994 ; >
+    au < manifest ; exists ; 1995 ; 6 ; Psicologia USP Volume 6 ; 1995 ; >
+    au < manifest ; exists ; 1996 ; 7 ; Psicologia USP Volume 7 ; 1996 ; >
+    au < manifest ; exists ; 2005 ; 16 ; Psicologia USP Volume 16 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 17 ; Psicologia USP Volume 17 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 18 ; Psicologia USP Volume 18 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 19 ; Psicologia USP Volume 19 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 20 ; Psicologia USP Volume 20 ; 2009 ; >
+
+  }
+
+  {
+
+    title <
       name = Psicología, Conocimiento y Sociedad ;
       eissn = 1688-7026
     >
@@ -17524,6 +18618,50 @@
     au < crawling ; exists ; 2013 ; 14 ; Psicologia, Saúde & Doenças Volume 14 ; 2013 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2014 ; 15 ; Psicologia, Saúde & Doenças Volume 15 ; 2014 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; 16 ; Psicologia, Saúde & Doenças Volume 16 ; 2015 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Psicologia: ciência e profissão ;
+      issn = 1414-9893
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1414-9893
+
+    au < manifest ; exists ; 1979 ; 1979 ; Psicologia: ciência e profissão Volume 1979 ; 1979 ; >
+    au < manifest ; exists ; 1981 ; 1 ; Psicologia: ciência e profissão Volume 1 ; 1981 ; >
+    au < manifest ; exists ; 1982 ; 3 ; Psicologia: ciência e profissão Volume 3 ; 1982 ; >
+    au < manifest ; exists ; 1983 ; 3 ; Psicologia: ciência e profissão Volume 3 ; 1983 ; >
+    au < manifest ; exists ; 1984 ; 4 ; Psicologia: ciência e profissão Volume 4 ; 1984 ; >
+    au < manifest ; exists ; 1985 ; 5 ; Psicologia: ciência e profissão Volume 5 ; 1985 ; >
+    au < manifest ; exists ; 1986 ; 6 ; Psicologia: ciência e profissão Volume 6 ; 1986 ; >
+    au < manifest ; exists ; 1987 ; 7 ; Psicologia: ciência e profissão Volume 7 ; 1987 ; >
+    au < manifest ; exists ; 1988 ; 8 ; Psicologia: ciência e profissão Volume 8 ; 1988 ; >
+    au < manifest ; exists ; 1989 ; 9 ; Psicologia: ciência e profissão Volume 9 ; 1989 ; >
+    au < manifest ; exists ; 1990 ; 10 ; Psicologia: ciência e profissão Volume 10 ; 1990 ; >
+    au < manifest ; exists ; 1991 ; 11 ; Psicologia: ciência e profissão Volume 11 ; 1991 ; >
+    au < manifest ; exists ; 1992 ; 12 ; Psicologia: ciência e profissão Volume 12 ; 1992 ; >
+    au < manifest ; exists ; 1993 ; 13 ; Psicologia: ciência e profissão Volume 13 ; 1993 ; >
+    au < manifest ; exists ; 1994 ; 14 ; Psicologia: ciência e profissão Volume 14 ; 1994 ; >
+    au < manifest ; exists ; 1995 ; 15 ; Psicologia: ciência e profissão Volume 15 ; 1995 ; >
+    au < manifest ; exists ; 1996 ; 16 ; Psicologia: ciência e profissão Volume 16 ; 1996 ; >
+    au < manifest ; exists ; 1997 ; 17 ; Psicologia: ciência e profissão Volume 17 ; 1997 ; >
+    au < manifest ; exists ; 1998 ; 18 ; Psicologia: ciência e profissão Volume 18 ; 1998 ; >
+    au < manifest ; exists ; 1999 ; 19 ; Psicologia: ciência e profissão Volume 19 ; 1999 ; >
+    au < manifest ; exists ; 2000 ; 20 ; Psicologia: ciência e profissão Volume 20 ; 2000 ; >
+    au < manifest ; exists ; 2001 ; 21 ; Psicologia: ciência e profissão Volume 21 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 22 ; Psicologia: ciência e profissão Volume 22 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 23 ; Psicologia: ciência e profissão Volume 23 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 24 ; Psicologia: ciência e profissão Volume 24 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 25 ; Psicologia: ciência e profissão Volume 25 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 26 ; Psicologia: ciência e profissão Volume 26 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 27 ; Psicologia: ciência e profissão Volume 27 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 28 ; Psicologia: ciência e profissão Volume 28 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 29 ; Psicologia: ciência e profissão Volume 29 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 30 ; Psicologia: ciência e profissão Volume 30 ; 2010 ; >
 
   }
 
@@ -17807,6 +18945,54 @@
   {
 
     title <
+      name = Psicologia: teoria e prática ;
+      issn = 1516-3687
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1516-3687
+
+    au < manifest ; exists ; 2002 ; 4 ; Psicologia: teoria e prática Volume 4 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 5 ; Psicologia: teoria e prática Volume 5 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 6 ; Psicologia: teoria e prática Volume 6 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 7 ; Psicologia: teoria e prática Volume 7 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 8 ; Psicologia: teoria e prática Volume 8 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 9 ; Psicologia: teoria e prática Volume 9 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 10 ; Psicologia: teoria e prática Volume 10 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 11 ; Psicologia: teoria e prática Volume 11 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 12 ; Psicologia: teoria e prática Volume 12 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 13 ; Psicologia: teoria e prática Volume 13 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 14 ; Psicologia: teoria e prática Volume 14 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 15 ; Psicologia: teoria e prática Volume 15 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 16 ; Psicologia: teoria e prática Volume 16 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 17 ; Psicologia: teoria e prática Volume 17 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
+      name = Psicologo informacao ;
+      issn = 1415-8809
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1415-8809
+
+    au < manifest ; exists ; 2006 ; 10 ; Psicologo informacao Volume 10 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 11 ; Psicologo informacao Volume 11 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 12 ; Psicologo informacao Volume 12 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 13 ; Psicologo informacao Volume 13 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 14 ; Psicologo informacao Volume 14 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 15 ; Psicologo informacao Volume 15 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 16 ; Psicologo informacao Volume 16 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 17 ; Psicologo informacao Volume 17 ; 2013 ; >
+
+  }
+
+  {
+
+    title <
       name = Psicoperspectivas ;
       eissn = 0718-6924
     >
@@ -17820,6 +19006,46 @@
     au < crawling ; exists ; 2013 ; 12 ; Psicoperspectivas Volume 12 ; 2013 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2014 ; 13 ; Psicoperspectivas Volume 13 ; 2014 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; 14 ; Psicoperspectivas Volume 14 ; 2015 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = PsicoUSF ;
+      issn = 1413-8271
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1413-8271
+
+    au < manifest ; exists ; 2001 ; 6 ; PsicoUSF Volume 6 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 7 ; PsicoUSF Volume 7 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 8 ; PsicoUSF Volume 8 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 9 ; PsicoUSF Volume 9 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 10 ; PsicoUSF Volume 10 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 11 ; PsicoUSF Volume 11 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 12 ; PsicoUSF Volume 12 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 13 ; PsicoUSF Volume 13 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 14 ; PsicoUSF Volume 14 ; 2009 ; >
+
+  }
+
+  {
+
+    title <
+      name = Psychê ;
+      issn = 1415-1138
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1415-1138
+
+    au < manifest ; exists ; 2004 ; 8 ; Psychê Volume 8 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 9 ; Psychê Volume 9 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 10 ; Psychê Volume 10 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 11 ; Psychê Volume 11 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 12 ; Psychê Volume 12 ; 2008 ; >
 
   }
 
@@ -18361,6 +19587,31 @@
     param[journal_issn] = 2446-4740
 
     au < crawling ; exists ; 2015 ; 31 ; Research on Biomedical Engineering Volume 31 ; 2015 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Reverso ;
+      issn = 0102-7395
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 0102-7395
+
+    au < manifest ; exists ; 2004 ; 26 ; Reverso Volume 26 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 27 ; Reverso Volume 27 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 28 ; Reverso Volume 28 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 29 ; Reverso Volume 29 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 30 ; Reverso Volume 30 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 31 ; Reverso Volume 31 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 32 ; Reverso Volume 32 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 33 ; Reverso Volume 33 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 34 ; Reverso Volume 34 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 35 ; Reverso Volume 35 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 36 ; Reverso Volume 36 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 37 ; Reverso Volume 37 ; 2015 ; >
 
   }
 
@@ -19040,6 +20291,30 @@
     au < manifest ; exists ; 2009 ; 29 ; Revista Brasileira de Coloproctologia Volume 29 ; 2009 ; >
     au < manifest ; exists ; 2010 ; 30 ; Revista Brasileira de Coloproctologia Volume 30 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 31 ; Revista Brasileira de Coloproctologia Volume 31 ; 2011 ; >
+
+  }
+
+  {
+
+    title <
+      name = Revista brasileira de crescimento e desenvolvimento humano ;
+      issn = 0104-1282
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 0104-1282
+
+    au < manifest ; exists ; 2005 ; 15 ; Revista brasileira de crescimento e desenvolvimento humano Volume 15 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 16 ; Revista brasileira de crescimento e desenvolvimento humano Volume 16 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 17 ; Revista brasileira de crescimento e desenvolvimento humano Volume 17 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 18 ; Revista brasileira de crescimento e desenvolvimento humano Volume 18 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 19 ; Revista brasileira de crescimento e desenvolvimento humano Volume 19 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 20 ; Revista brasileira de crescimento e desenvolvimento humano Volume 20 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 21 ; Revista brasileira de crescimento e desenvolvimento humano Volume 21 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 22 ; Revista brasileira de crescimento e desenvolvimento humano Volume 22 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 23 ; Revista brasileira de crescimento e desenvolvimento humano Volume 23 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 24 ; Revista brasileira de crescimento e desenvolvimento humano Volume 24 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 25 ; Revista brasileira de crescimento e desenvolvimento humano Volume 25 ; 2015 ; >
 
   }
 
@@ -19758,6 +21033,32 @@
   {
 
     title <
+      name = Revista Brasileira de Orientação Profissional ;
+      issn = 1679-3390
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1679-3390
+
+    au < manifest ; exists ; 2003 ; 4 ; Revista Brasileira de Orientação Profissional Volume 4 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 5 ; Revista Brasileira de Orientação Profissional Volume 5 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 6 ; Revista Brasileira de Orientação Profissional Volume 6 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 7 ; Revista Brasileira de Orientação Profissional Volume 7 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 8 ; Revista Brasileira de Orientação Profissional Volume 8 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 9 ; Revista Brasileira de Orientação Profissional Volume 9 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 10 ; Revista Brasileira de Orientação Profissional Volume 10 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 11 ; Revista Brasileira de Orientação Profissional Volume 11 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 12 ; Revista Brasileira de Orientação Profissional Volume 12 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 13 ; Revista Brasileira de Orientação Profissional Volume 13 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 14 ; Revista Brasileira de Orientação Profissional Volume 14 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 15 ; Revista Brasileira de Orientação Profissional Volume 15 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 16 ; Revista Brasileira de Orientação Profissional Volume 16 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
       name = Revista Brasileira de Ortopedia ;
       issn = 0102-3616 ;
       eissn = 1982-4378
@@ -19873,6 +21174,60 @@
     au < crawling ; exists ; 2013 ; 56 ; Revista Brasileira de Política Internacional Volume 56 ; 2013 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2014 ; 57 ; Revista Brasileira de Política Internacional Volume 57 ; 2014 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 58 ; Revista Brasileira de Política Internacional Volume 58 ; 2015 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Revista Brasileira de Psicanálise ;
+      issn = 0486-641X
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 0486-641X
+
+    au < manifest ; exists ; 2007 ; 41 ; Revista Brasileira de Psicanálise Volume 41 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 42 ; Revista Brasileira de Psicanálise Volume 42 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 43 ; Revista Brasileira de Psicanálise Volume 43 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 44 ; Revista Brasileira de Psicanálise Volume 44 ; 2010 ; >
+
+  }
+
+  {
+
+    title <
+      name = Revista Brasileira de Psicodrama ;
+      issn = 0104-5393 ;
+      eissn = 2318-0498
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 0104-5393
+
+    au < manifest ; exists ; 2009 ; 17 ; Revista Brasileira de Psicodrama Volume 17 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 18 ; Revista Brasileira de Psicodrama Volume 18 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 19 ; Revista Brasileira de Psicodrama Volume 19 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 20 ; Revista Brasileira de Psicodrama Volume 20 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 21 ; Revista Brasileira de Psicodrama Volume 21 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 22 ; Revista Brasileira de Psicodrama Volume 22 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 23 ; Revista Brasileira de Psicodrama Volume 23 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
+      name = Revista Brasileira de Psicologia do Esporte ;
+      eissn = 1981-9145
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1981-9145
+
+    au < manifest ; exists ; 2007 ; 1 ; Revista Brasileira de Psicologia do Esporte Volume 1 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 2 ; Revista Brasileira de Psicologia do Esporte Volume 2 ; 2008 ; >
+    au < manifest ; exists ; 2010 ; 3 ; Revista Brasileira de Psicologia do Esporte Volume 3 ; 2010 ; >
 
   }
 
@@ -20034,6 +21389,35 @@
   {
 
     title <
+      name = Revista Brasileira de Terapia Comportamental e Cognitiva ;
+      issn = 1517-5545
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1517-5545
+
+    au < manifest ; exists ; 1999 ; 1 ; Revista Brasileira de Terapia Comportamental e Cognitiva Volume 1 ; 1999 ; >
+    au < manifest ; exists ; 2000 ; 2 ; Revista Brasileira de Terapia Comportamental e Cognitiva Volume 2 ; 2000 ; >
+    au < manifest ; exists ; 2001 ; 3 ; Revista Brasileira de Terapia Comportamental e Cognitiva Volume 3 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 4 ; Revista Brasileira de Terapia Comportamental e Cognitiva Volume 4 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 5 ; Revista Brasileira de Terapia Comportamental e Cognitiva Volume 5 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 6 ; Revista Brasileira de Terapia Comportamental e Cognitiva Volume 6 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 7 ; Revista Brasileira de Terapia Comportamental e Cognitiva Volume 7 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 8 ; Revista Brasileira de Terapia Comportamental e Cognitiva Volume 8 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 9 ; Revista Brasileira de Terapia Comportamental e Cognitiva Volume 9 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 10 ; Revista Brasileira de Terapia Comportamental e Cognitiva Volume 10 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 11 ; Revista Brasileira de Terapia Comportamental e Cognitiva Volume 11 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 12 ; Revista Brasileira de Terapia Comportamental e Cognitiva Volume 12 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 13 ; Revista Brasileira de Terapia Comportamental e Cognitiva Volume 13 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 14 ; Revista Brasileira de Terapia Comportamental e Cognitiva Volume 14 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 15 ; Revista Brasileira de Terapia Comportamental e Cognitiva Volume 15 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 16 ; Revista Brasileira de Terapia Comportamental e Cognitiva Volume 16 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
       name = Revista Brasileira de Terapia Intensiva ;
       issn = 0103-507X ;
       eissn = 1982-4335
@@ -20052,6 +21436,29 @@
     au < crawling ; exists ; 2013 ; 25 ; Revista Brasileira de Terapia Intensiva Volume 25 ; 2013 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 26 ; Revista Brasileira de Terapia Intensiva Volume 26 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; 27 ; Revista Brasileira de Terapia Intensiva Volume 27 ; 2015 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Revista Brasileira de Terapias Cognitivas ;
+      issn = 1808-5687
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1808-5687
+
+    au < manifest ; exists ; 2005 ; 1 ; Revista Brasileira de Terapias Cognitivas Volume 1 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 2 ; Revista Brasileira de Terapias Cognitivas Volume 2 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 3 ; Revista Brasileira de Terapias Cognitivas Volume 3 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 4 ; Revista Brasileira de Terapias Cognitivas Volume 4 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 5 ; Revista Brasileira de Terapias Cognitivas Volume 5 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 6 ; Revista Brasileira de Terapias Cognitivas Volume 6 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 7 ; Revista Brasileira de Terapias Cognitivas Volume 7 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 8 ; Revista Brasileira de Terapias Cognitivas Volume 8 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 9 ; Revista Brasileira de Terapias Cognitivas Volume 9 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 10 ; Revista Brasileira de Terapias Cognitivas Volume 10 ; 2014 ; >
 
   }
 
@@ -22160,6 +23567,44 @@
   {
 
     title <
+      name = Revista da ABOP ;
+      issn = 1414-8889
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1414-8889
+
+    au < manifest ; exists ; 1997 ; 1 ; Revista da ABOP Volume 1 ; 1997 ; >
+    au < manifest ; exists ; 1998 ; 2 ; Revista da ABOP Volume 2 ; 1998 ; >
+    au < manifest ; exists ; 1999 ; 3 ; Revista da ABOP Volume 3 ; 1999 ; >
+
+  }
+
+  {
+
+    title <
+      name = Revista da Abordagem Gestáltica ;
+      issn = 1809-6867
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1809-6867
+
+    au < manifest ; exists ; 2007 ; 13 ; Revista da Abordagem Gestáltica Volume 13 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 14 ; Revista da Abordagem Gestáltica Volume 14 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 15 ; Revista da Abordagem Gestáltica Volume 15 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 16 ; Revista da Abordagem Gestáltica Volume 16 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 17 ; Revista da Abordagem Gestáltica Volume 17 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 18 ; Revista da Abordagem Gestáltica Volume 18 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 19 ; Revista da Abordagem Gestáltica Volume 19 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 20 ; Revista da Abordagem Gestáltica Volume 20 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 21 ; Revista da Abordagem Gestáltica Volume 21 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
       name = Revista da Associação Médica Brasileira ;
       issn = 0104-4230 ;
       eissn = 1806-9282
@@ -22260,6 +23705,30 @@
   {
 
     title <
+      name = Revista da SBPH ;
+      issn = 1516-0858
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1516-0858
+
+    au < manifest ; exists ; 2004 ; 7 ; Revista da SBPH Volume 7 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 8 ; Revista da SBPH Volume 8 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 9 ; Revista da SBPH Volume 9 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 10 ; Revista da SBPH Volume 10 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 11 ; Revista da SBPH Volume 11 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 12 ; Revista da SBPH Volume 12 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 13 ; Revista da SBPH Volume 13 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 14 ; Revista da SBPH Volume 14 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 15 ; Revista da SBPH Volume 15 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 16 ; Revista da SBPH Volume 16 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 17 ; Revista da SBPH Volume 17 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
       name = Revista da Sociedade Brasileira de Fonoaudiologia ;
       issn = 1516-8034 ;
       eissn = 1982-0232
@@ -22336,6 +23805,34 @@
     au < crawling ; exists ; 2013 ; 46 ; Revista da Sociedade Brasileira de Medicina Tropical Volume 46 ; 2013 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 47 ; Revista da Sociedade Brasileira de Medicina Tropical Volume 47 ; 2014 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 48 ; Revista da Sociedade Brasileira de Medicina Tropical Volume 48 ; 2015 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Revista da SPAGESP ;
+      issn = 1677-2970
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1677-2970
+
+    au < manifest ; exists ; 2000 ; 1 ; Revista da SPAGESP Volume 1 ; 2000 ; >
+    au < manifest ; exists ; 2001 ; 2 ; Revista da SPAGESP Volume 2 ; 2001 ; >
+    au < manifest ; exists ; 2003 ; 4 ; Revista da SPAGESP Volume 4 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 5 ; Revista da SPAGESP Volume 5 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 6 ; Revista da SPAGESP Volume 6 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 7 ; Revista da SPAGESP Volume 7 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 8 ; Revista da SPAGESP Volume 8 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 9 ; Revista da SPAGESP Volume 9 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 10 ; Revista da SPAGESP Volume 10 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 11 ; Revista da SPAGESP Volume 11 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 12 ; Revista da SPAGESP Volume 12 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 13 ; Revista da SPAGESP Volume 13 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 14 ; Revista da SPAGESP Volume 14 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 15 ; Revista da SPAGESP Volume 15 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 16 ; Revista da SPAGESP Volume 16 ; 2015 ; >
 
   }
 
@@ -23098,6 +24595,28 @@
     au < crawling ; exists ; 2013 ; 2013 ; Revista de Estudios Sociales Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2014 ; 2014 ; Revista de Estudios Sociales Volume 2014 ; 2014 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; 2015 ; Revista de Estudios Sociales Volume 2015 ; 2015 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Revista de Etologia ;
+      issn = 1517-2805
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1517-2805
+
+    au < manifest ; exists ; 2002 ; 4 ; Revista de Etologia Volume 4 ; 2002 ; >
+    au < manifest ; exists ; 2004 ; 6 ; Revista de Etologia Volume 6 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 7 ; Revista de Etologia Volume 7 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 8 ; Revista de Etologia Volume 8 ; 2006 ; >
+    au < manifest ; exists ; 2010 ; 9 ; Revista de Etologia Volume 9 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 10 ; Revista de Etologia Volume 10 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 11 ; Revista de Etologia Volume 11 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 12 ; Revista de Etologia Volume 12 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 13 ; Revista de Etologia Volume 13 ; 2014 ; >
 
   }
 
@@ -23928,6 +25447,57 @@
   {
 
     title <
+      name = Revista de Psicología (Lima) ;
+      issn = 0254-9247
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 0254-9247
+
+    au < manifest ; exists ; 2007 ; 25 ; Revista de Psicología (Lima) Volume 25 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 26 ; Revista de Psicología (Lima) Volume 26 ; 2008 ; >
+    au < manifest ; exists ; 2011 ; 29 ; Revista de Psicología (Lima) Volume 29 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 30 ; Revista de Psicología (Lima) Volume 30 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 31 ; Revista de Psicología (Lima) Volume 31 ; 2013 ; >
+
+  }
+
+  {
+
+    title <
+      name = Revista de Psicologia da UNESP ;
+      eissn = 1984-9044
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1984-9044
+
+    au < manifest ; exists ; 2013 ; 12 ; Revista de Psicologia da UNESP Volume 12 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 13 ; Revista de Psicologia da UNESP Volume 13 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
+      name = Revista de Psicología Universidad de Antioquia ;
+      eissn = 2145-4892
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 2145-4892
+
+    au < manifest ; exists ; 2009 ; 1 ; Revista de Psicología Universidad de Antioquia Volume 1 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 2 ; Revista de Psicología Universidad de Antioquia Volume 2 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 3 ; Revista de Psicología Universidad de Antioquia Volume 3 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 4 ; Revista de Psicología Universidad de Antioquia Volume 4 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 5 ; Revista de Psicología Universidad de Antioquia Volume 5 ; 2013 ; >
+
+  }
+
+  {
+
+    title <
       name = Revista del Instituto Nacional de Enfermedades Respiratorias ;
       issn = 0187-7585
     >
@@ -24731,6 +26301,25 @@
   {
 
     title <
+      name = Revista do NUFEN ;
+      eissn = 2175-2591
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 2175-2591
+
+    au < manifest ; exists ; 2009 ; 1 ; Revista do NUFEN Volume 1 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 2 ; Revista do NUFEN Volume 2 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 3 ; Revista do NUFEN Volume 3 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 4 ; Revista do NUFEN Volume 4 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 5 ; Revista do NUFEN Volume 5 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 6 ; Revista do NUFEN Volume 6 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
       name = Revista Dor ;
       issn = 1806-0013 ;
       eissn = 2317-6393
@@ -24854,6 +26443,19 @@
   {
 
     title <
+      name = Revista Eletrônica de Psicologia e Políticas Públicas ;
+      eissn = 1984-9079
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1984-9079
+
+
+  }
+
+  {
+
+    title <
       name = Revista Encontros Científicos - Tourism & Management Studies ;
       issn = 1646-2408
     >
@@ -24863,6 +26465,24 @@
 
     au < manifest ; exists ; 2009 ; 2009 ; Revista Encontros Científicos - Tourism & Management Studies Volume 2009 ; 2009 ; >
     au < manifest ; exists ; 2010 ; 2010 ; Revista Encontros Científicos - Tourism & Management Studies Volume 2010 ; 2010 ; >
+
+  }
+
+  {
+
+    title <
+      name = Revista EPOS ;
+      eissn = 2178-700X
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 2178-700X
+
+    au < manifest ; exists ; 2010 ; 1 ; Revista EPOS Volume 1 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 2 ; Revista EPOS Volume 2 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 3 ; Revista EPOS Volume 3 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 4 ; Revista EPOS Volume 4 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 5 ; Revista EPOS Volume 5 ; 2014 ; >
 
   }
 
@@ -25049,6 +26669,22 @@
       au < manifest ; exists ; 2010 ; 5 ; Revista Estudos Feministas Special Edition Volume 5 ; 2010 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Revista Estudos Lacanianos ;
+      issn = 1983-0769
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1983-0769
+
+    au < manifest ; exists ; 2008 ; 1 ; Revista Estudos Lacanianos Volume 1 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 2 ; Revista Estudos Lacanianos Volume 2 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 3 ; Revista Estudos Lacanianos Volume 3 ; 2010 ; >
 
   }
 
@@ -25910,6 +27546,23 @@
       issn = 0120-0534
     >
 
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 0120-0534
+
+    au < manifest ; exists ; 2005 ; 37 ; Revista Latinoamericana de Psicología Volume 37 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 38 ; Revista Latinoamericana de Psicología Volume 38 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 39 ; Revista Latinoamericana de Psicología Volume 39 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 40 ; Revista Latinoamericana de Psicología Volume 40 ; 2008 ; >
+
+  }
+
+  {
+
+    title <
+      name = Revista Latinoamericana de Psicología ;
+      issn = 0120-0534
+    >
+
     param[base_url] = http://www.scielo.org.co/
     param[journal_issn] = 0120-0534
 
@@ -25985,6 +27638,33 @@
     au < manifest ; exists ; 2012 ; 2012 ; Revista Lusófona de Educação Volume 2012 ; 2012 ; >
     au < crawling ; exists ; 2013 ; 2013 ; Revista Lusófona de Educação Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2014 ; 2014 ; Revista Lusófona de Educação Volume 2014 ; 2014 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Revista Mal Estar e Subjetividade ;
+      issn = 1518-6148
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1518-6148
+
+    au < manifest ; exists ; 2001 ; 1 ; Revista Mal Estar e Subjetividade Volume 1 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 2 ; Revista Mal Estar e Subjetividade Volume 2 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 3 ; Revista Mal Estar e Subjetividade Volume 3 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 4 ; Revista Mal Estar e Subjetividade Volume 4 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 5 ; Revista Mal Estar e Subjetividade Volume 5 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 6 ; Revista Mal Estar e Subjetividade Volume 6 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 7 ; Revista Mal Estar e Subjetividade Volume 7 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 8 ; Revista Mal Estar e Subjetividade Volume 8 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 9 ; Revista Mal Estar e Subjetividade Volume 9 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 10 ; Revista Mal Estar e Subjetividade Volume 10 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 11 ; Revista Mal Estar e Subjetividade Volume 11 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 12 ; Revista Mal Estar e Subjetividade Volume 12 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 13 ; Revista Mal Estar e Subjetividade Volume 13 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 14 ; Revista Mal Estar e Subjetividade Volume 14 ; 2014 ; >
 
   }
 
@@ -26541,6 +28221,26 @@
     au < manifest ; exists ; 2012 ; 35-36 ; Revista mexicana de micología Volume 35-36 ; 2012 ; >
     au < crawling ; exists ; 2013 ; 37-38 ; Revista mexicana de micología Volume 37-38 ; 2013 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 39 ; Revista mexicana de micología Volume 39 ; 2014 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Revista Mexicana de Orientación Educativa ;
+      issn = 1665-7527
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1665-7527
+
+    au < manifest ; exists ; 2007 ; 4-5 ; Revista Mexicana de Orientación Educativa Volume 4-5 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 5-6 ; Revista Mexicana de Orientación Educativa Volume 5-6 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 6 ; Revista Mexicana de Orientación Educativa Volume 6 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 7 ; Revista Mexicana de Orientación Educativa Volume 7 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 8 ; Revista Mexicana de Orientación Educativa Volume 8 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 9 ; Revista Mexicana de Orientación Educativa Volume 9 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 10 ; Revista Mexicana de Orientación Educativa Volume 10 ; 2013 ; >
 
   }
 
@@ -27108,6 +28808,112 @@
     au < crawling ; exists ; 2013 ; 12 ; Revista Portuguesa e Brasileira de Gestão Volume 12 ; 2013 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2014 ; 13 ; Revista Portuguesa e Brasileira de Gestão Volume 13 ; 2014 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; 14 ; Revista Portuguesa e Brasileira de Gestão Volume 14 ; 2015 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Revista Psicologia e Saúde ;
+      eissn = 2177-093X
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 2177-093X
+
+    au < manifest ; exists ; 2012 ; 4 ; Revista Psicologia e Saúde Volume 4 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 5 ; Revista Psicologia e Saúde Volume 5 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 6 ; Revista Psicologia e Saúde Volume 6 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 7 ; Revista Psicologia e Saúde Volume 7 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
+      name = Revista Psicologia Organizações e Trabalho ;
+      eissn = 1984-6657
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1984-6657
+
+    au < manifest ; exists ; 2001 ; 1 ; Revista Psicologia Organizações e Trabalho Volume 1 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 2 ; Revista Psicologia Organizações e Trabalho Volume 2 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 3 ; Revista Psicologia Organizações e Trabalho Volume 3 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 4 ; Revista Psicologia Organizações e Trabalho Volume 4 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 5 ; Revista Psicologia Organizações e Trabalho Volume 5 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 6 ; Revista Psicologia Organizações e Trabalho Volume 6 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 7 ; Revista Psicologia Organizações e Trabalho Volume 7 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 8 ; Revista Psicologia Organizações e Trabalho Volume 8 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 9 ; Revista Psicologia Organizações e Trabalho Volume 9 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 10 ; Revista Psicologia Organizações e Trabalho Volume 10 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 11 ; Revista Psicologia Organizações e Trabalho Volume 11 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 12 ; Revista Psicologia Organizações e Trabalho Volume 12 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 13 ; Revista Psicologia Organizações e Trabalho Volume 13 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 14 ; Revista Psicologia Organizações e Trabalho Volume 14 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 15 ; Revista Psicologia Organizações e Trabalho Volume 15 ; 2015 ; >
+    au < manifest ; exists ; 2016 ; 16 ; Revista Psicologia Organizações e Trabalho Volume 16 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Revista Psicologia Política ;
+      issn = 1519-549X
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1519-549X
+
+    au < manifest ; exists ; 2007 ; 7 ; Revista Psicologia Política Volume 7 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 8 ; Revista Psicologia Política Volume 8 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 9 ; Revista Psicologia Política Volume 9 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 10 ; Revista Psicologia Política Volume 10 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 11 ; Revista Psicologia Política Volume 11 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 12 ; Revista Psicologia Política Volume 12 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 13 ; Revista Psicologia Política Volume 13 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 14 ; Revista Psicologia Política Volume 14 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
+      name = Revista Psicopedagogia ;
+      issn = 0103-8486
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 0103-8486
+
+    au < manifest ; exists ; 2003 ; 20 ; Revista Psicopedagogia Volume 20 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 21 ; Revista Psicopedagogia Volume 21 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 22 ; Revista Psicopedagogia Volume 22 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 23 ; Revista Psicopedagogia Volume 23 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 24 ; Revista Psicopedagogia Volume 24 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 25 ; Revista Psicopedagogia Volume 25 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 26 ; Revista Psicopedagogia Volume 26 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 27 ; Revista Psicopedagogia Volume 27 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 28 ; Revista Psicopedagogia Volume 28 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 29 ; Revista Psicopedagogia Volume 29 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 30 ; Revista Psicopedagogia Volume 30 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 31 ; Revista Psicopedagogia Volume 31 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 32 ; Revista Psicopedagogia Volume 32 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
+      name = Revista Puertorriqueña de Psicología ;
+      issn = 1946-2026
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1946-2026
+
 
   }
 
@@ -27701,6 +29507,22 @@
   {
 
     title <
+      name = Salud & Sociedad: investigaciones en psicologia de la salud y psicologia social ;
+      eissn = 0718-7475
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 0718-7475
+
+    au < manifest ; exists ; 2012 ; 3 ; Salud & Sociedad: investigaciones en psicologia de la salud y psicologia social Volume 3 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 4 ; Salud & Sociedad: investigaciones en psicologia de la salud y psicologia social Volume 4 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 5 ; Salud & Sociedad: investigaciones en psicologia de la salud y psicologia social Volume 5 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
       name = Salud colectiva ;
       eissn = 1851-8265
     >
@@ -27927,6 +29749,22 @@
     au < crawling ; exists ; 2013 ; 12 ; SA Orthopaedic Journal Volume 12 ; 2013 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 13 ; SA Orthopaedic Journal Volume 13 ; 2014 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 14 ; SA Orthopaedic Journal Volume 14 ; 2015 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Saúde & Transformação Social ;
+      eissn = 2178-7085
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 2178-7085
+
+    au < manifest ; exists ; 2012 ; 3 ; Saúde & Transformação Social Volume 3 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 4 ; Saúde & Transformação Social Volume 4 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 5 ; Saúde & Transformação Social Volume 5 ; 2014 ; >
 
   }
 
@@ -28362,6 +30200,30 @@
     au < crawling ; exists ; 2013 ; 13 ; Si Somos Americanos Volume 13 ; 2013 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 14 ; Si Somos Americanos Volume 14 ; 2014 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 15 ; Si Somos Americanos Volume 15 ; 2015 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = SMAD. Revista eletrônica saúde mental álcool e drogas ;
+      eissn = 1806-6976
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1806-6976
+
+    au < manifest ; exists ; 2005 ; 1 ; SMAD. Revista eletrônica saúde mental álcool e drogas Volume 1 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 2 ; SMAD. Revista eletrônica saúde mental álcool e drogas Volume 2 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 3 ; SMAD. Revista eletrônica saúde mental álcool e drogas Volume 3 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 4 ; SMAD. Revista eletrônica saúde mental álcool e drogas Volume 4 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 5 ; SMAD. Revista eletrônica saúde mental álcool e drogas Volume 5 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 6 ; SMAD. Revista eletrônica saúde mental álcool e drogas Volume 6 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 7 ; SMAD. Revista eletrônica saúde mental álcool e drogas Volume 7 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 8 ; SMAD. Revista eletrônica saúde mental álcool e drogas Volume 8 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 9 ; SMAD. Revista eletrônica saúde mental álcool e drogas Volume 9 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 10 ; SMAD. Revista eletrônica saúde mental álcool e drogas Volume 10 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 11 ; SMAD. Revista eletrônica saúde mental álcool e drogas Volume 11 ; 2015 ; >
 
   }
 
@@ -29063,6 +30925,23 @@
   {
 
     title <
+      name = Stylus (Rio de Janeiro) ;
+      issn = 1676-157X
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1676-157X
+
+    au < manifest ; exists ; 2012 ; 2012 ; Stylus (Rio de Janeiro) Volume 2012 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Stylus (Rio de Janeiro) Volume 2013 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 2014 ; Stylus (Rio de Janeiro) Volume 2014 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; Stylus (Rio de Janeiro) Volume 2015 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
       name = Subjetividad y procesos cognitivos ;
       eissn = 1852-7310
     >
@@ -29118,6 +30997,23 @@
     au < crawling ; exists ; 2013 ; 39 ; Summa Phytopathologica Volume 39 ; 2013 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 40 ; Summa Phytopathologica Volume 40 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; 41 ; Summa Phytopathologica Volume 41 ; 2015 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Summa psicológica UST (En línea) ;
+      issn = 0719-448X ;
+      eissn = 0718-0446
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 0719-448X
+
+    au < manifest ; exists ; 2012 ; 9 ; Summa psicológica UST (En línea) Volume 9 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 10 ; Summa psicológica UST (En línea) Volume 10 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 11 ; Summa psicológica UST (En línea) Volume 11 ; 2014 ; >
 
   }
 
@@ -29370,6 +31266,42 @@
   {
 
     title <
+      name = Temas em Psicologia ;
+      issn = 1413-389X
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1413-389X
+
+    au < manifest ; exists ; 1993 ; 1 ; Temas em Psicologia Volume 1 ; 1993 ; >
+    au < manifest ; exists ; 1994 ; 2 ; Temas em Psicologia Volume 2 ; 1994 ; >
+    au < manifest ; exists ; 1995 ; 3 ; Temas em Psicologia Volume 3 ; 1995 ; >
+    au < manifest ; exists ; 1996 ; 4 ; Temas em Psicologia Volume 4 ; 1996 ; >
+    au < manifest ; exists ; 1997 ; 5 ; Temas em Psicologia Volume 5 ; 1997 ; >
+    au < manifest ; exists ; 1998 ; 6 ; Temas em Psicologia Volume 6 ; 1998 ; >
+    au < manifest ; exists ; 1999 ; 7 ; Temas em Psicologia Volume 7 ; 1999 ; >
+    au < manifest ; exists ; 2000 ; 8 ; Temas em Psicologia Volume 8 ; 2000 ; >
+    au < manifest ; exists ; 2001 ; 9 ; Temas em Psicologia Volume 9 ; 2001 ; >
+    au < manifest ; exists ; 2002 ; 10 ; Temas em Psicologia Volume 10 ; 2002 ; >
+    au < manifest ; exists ; 2003 ; 11 ; Temas em Psicologia Volume 11 ; 2003 ; >
+    au < manifest ; exists ; 2004 ; 12 ; Temas em Psicologia Volume 12 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 13 ; Temas em Psicologia Volume 13 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 14 ; Temas em Psicologia Volume 14 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 15 ; Temas em Psicologia Volume 15 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 16 ; Temas em Psicologia Volume 16 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 17 ; Temas em Psicologia Volume 17 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 18 ; Temas em Psicologia Volume 18 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 19 ; Temas em Psicologia Volume 19 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 20 ; Temas em Psicologia Volume 20 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 21 ; Temas em Psicologia Volume 21 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 22 ; Temas em Psicologia Volume 22 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 23 ; Temas em Psicologia Volume 23 ; 2015 ; >
+
+  }
+
+  {
+
+    title <
       name = Temas medievales ;
       issn = 0327-5094 ;
       eissn = 1850-2628
@@ -29429,6 +31361,25 @@
     au < crawling ; exists ; 2013 ; 19 ; Tempo Volume 19 ; 2013 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 20 ; Tempo Volume 20 ; 2014 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 2015 ; Tempo Volume 2015 ; 2015 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Tempo psicanalitico ;
+      issn = 0101-4838 ;
+      eissn = 2316-6576
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 0101-4838
+
+    au < manifest ; exists ; 2010 ; 42 ; Tempo psicanalitico Volume 42 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 43 ; Tempo psicanalitico Volume 43 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 44 ; Tempo psicanalitico Volume 44 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 45 ; Tempo psicanalitico Volume 45 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 46 ; Tempo psicanalitico Volume 46 ; 2014 ; >
 
   }
 
@@ -30099,6 +32050,22 @@
   {
 
     title <
+      name = TransFormações em Psicologia (Online) ;
+      eissn = 2176-106X
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 2176-106X
+
+    au < manifest ; exists ; 2009 ; 2 ; TransFormações em Psicologia (Online) Volume 2 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 3 ; TransFormações em Psicologia (Online) Volume 3 ; 2010 ; >
+    au < manifest ; exists ; 2012 ; 4 ; TransFormações em Psicologia (Online) Volume 4 ; 2012 ; >
+
+  }
+
+  {
+
+    title <
       name = Transinformação ;
       issn = 0103-3786 ;
       eissn = 2318-0889
@@ -30142,6 +32109,24 @@
     au < crawling ; exists ; 2013 ; 35 ; Trends in Psychiatry and Psychotherapy Volume 35 ; 2013 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2014 ; 36 ; Trends in Psychiatry and Psychotherapy Volume 36 ; 2014 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; 37 ; Trends in Psychiatry and Psychotherapy Volume 37 ; 2015 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Trivium - Estudos Interdisciplinares ;
+      eissn = 2176-4891
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 2176-4891
+
+    au < manifest ; exists ; 2011 ; 3 ; Trivium - Estudos Interdisciplinares Volume 3 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 4 ; Trivium - Estudos Interdisciplinares Volume 4 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 5 ; Trivium - Estudos Interdisciplinares Volume 5 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 6 ; Trivium - Estudos Interdisciplinares Volume 6 ; 2014 ; >
+    au < manifest ; exists ; 2015 ; 7 ; Trivium - Estudos Interdisciplinares Volume 7 ; 2015 ; >
 
   }
 
@@ -30426,6 +32411,24 @@
       issn = 1657-9267
     >
 
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1657-9267
+
+    au < manifest ; exists ; 2005 ; 4 ; Universitas Psychologica Volume 4 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 5 ; Universitas Psychologica Volume 5 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 6 ; Universitas Psychologica Volume 6 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 7 ; Universitas Psychologica Volume 7 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 9 ; Universitas Psychologica Volume 9 ; 2009 ; >
+
+  }
+
+  {
+
+    title <
+      name = Universitas Psychologica ;
+      issn = 1657-9267
+    >
+
     param[base_url] = http://www.scielo.org.co/
     param[journal_issn] = 1657-9267
 
@@ -30668,6 +32671,30 @@
   {
 
     title <
+      name = Vínculo ;
+      issn = 1806-2490
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1806-2490
+
+    au < manifest ; exists ; 2004 ; 1 ; Vínculo Volume 1 ; 2004 ; >
+    au < manifest ; exists ; 2005 ; 2 ; Vínculo Volume 2 ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 3 ; Vínculo Volume 3 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 4 ; Vínculo Volume 4 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 5 ; Vínculo Volume 5 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 6 ; Vínculo Volume 6 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 7 ; Vínculo Volume 7 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 8 ; Vínculo Volume 8 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 9 ; Vínculo Volume 9 ; 2012 ; >
+    au < manifest ; exists ; 2013 ; 10 ; Vínculo Volume 10 ; 2013 ; >
+    au < manifest ; exists ; 2014 ; 11 ; Vínculo Volume 11 ; 2014 ; >
+
+  }
+
+  {
+
+    title <
       name = Visión de futuro ;
       issn = 1668-8708 ;
       eissn = 1669-7634
@@ -30749,6 +32776,27 @@
     au < crawling ; exists ; 2013 ; 39 ; Water SA Volume 39 ; 2013 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 40 ; Water SA Volume 40 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; 41 ; Water SA Volume 41 ; 2015 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Winnicott e-prints ;
+      eissn = 1679-432X
+    >
+
+    param[base_url] = http://pepsic.bvsalud.org/
+    param[journal_issn] = 1679-432X
+
+    au < manifest ; exists ; 2006 ; 1 ; Winnicott e-prints Volume 1 ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 2 ; Winnicott e-prints Volume 2 ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 3 ; Winnicott e-prints Volume 3 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 4 ; Winnicott e-prints Volume 4 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 5 ; Winnicott e-prints Volume 5 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 6 ; Winnicott e-prints Volume 6 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 7 ; Winnicott e-prints Volume 7 ; 2012 ; >
+    au < manifest ; exists ; 2015 ; 10 ; Winnicott e-prints Volume 10 ; 2015 ; >
 
   }
 
