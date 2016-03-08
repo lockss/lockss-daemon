@@ -724,9 +724,9 @@
     au < exists ; 2013 ; American Journal of Clinical Pathology Volume 140 ; 140 >
     au < exists ; 2014 ; American Journal of Clinical Pathology Volume 141 ; 141 >
     au < exists ; 2014 ; American Journal of Clinical Pathology Volume 142 ; 142 >
-    au < exists ; 2015 ; American Journal of Clinical Pathology Volume 143 ; 143 >
+    au < manifest ; 2015 ; American Journal of Clinical Pathology Volume 143 ; 143 >
     au < manifest ; 2015 ; American Journal of Clinical Pathology Volume 144 ; 144 >
-    au < exists ; 2016 ; American Journal of Clinical Pathology Volume 145 ; 145 >
+    au < manifest ; 2016 ; American Journal of Clinical Pathology Volume 145 ; 145 >
     au < expected ; 2016 ; American Journal of Clinical Pathology Volume 146 ; 146 >
 
   }
@@ -1886,7 +1886,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Applied Mathematics Research eXpress (AMRX) Volume 2013 ; 2013 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Applied Mathematics Research eXpress (AMRX) Volume 2014 ; 2014 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Applied Mathematics Research eXpress (AMRX) Volume 2015 ; 2015 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Applied Mathematics Research eXpress (AMRX) Volume 2016 ; 2016 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Applied Mathematics Research eXpress (AMRX) Volume 2016 ; 2016 >
 
   }
 
@@ -2332,7 +2332,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; Biometrika Volume 100 ; 100 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Biometrika Volume 101 ; 101 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Biometrika Volume 102 ; 102 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Biometrika Volume 103 ; 103 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Biometrika Volume 103 ; 103 >
 
     }
 
@@ -3679,7 +3679,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Cambridge Journal of Regions, Economy and Society Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Cambridge Journal of Regions, Economy and Society Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Cambridge Journal of Regions, Economy and Society Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Cambridge Journal of Regions, Economy and Society Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Cambridge Journal of Regions, Economy and Society Volume 9 ; 9 >
 
     }
 
@@ -4115,7 +4115,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2013 ; CESifo Economic Studies Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; released ; 2014 ; CESifo Economic Studies Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; CESifo Economic Studies Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; CESifo Economic Studies Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; CESifo Economic Studies Volume 62 ; 62 >
 
     }
 
@@ -4333,7 +4333,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2013 ; The Chinese Journal of International Politics Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; The Chinese Journal of International Politics Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; The Chinese Journal of International Politics Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; The Chinese Journal of International Politics Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; The Chinese Journal of International Politics Volume 9 ; 9 >
 
     }
 
@@ -6182,8 +6182,8 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2015 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 1 ; 1 >
-    au < exists ; 2016 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 2 ; 2 >
+    au < manifest ; 2015 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 1 ; 1 >
+    au < manifest ; 2016 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 2 ; 2 >
 
   }
 
@@ -6247,7 +6247,7 @@
     au < oup.OUPDrupalPlugin ; doesNotExist ; 2013 ; European Heart Journal Supplements Volume 15 ; 15 >
     au < oup.OUPDrupalPlugin ; manifest ; 2014 ; European Heart Journal Supplements Volume 16 ; 16 >
     au < oup.OUPDrupalPlugin ; manifest ; 2015 ; European Heart Journal Supplements Volume 17 ; 17 >
-    au < oup.OUPDrupalPlugin ; expected ; 2016 ; European Heart Journal Supplements Volume 18 ; 18 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2016 ; European Heart Journal Supplements Volume 18 ; 18 >
 
     }
 
@@ -7389,8 +7389,8 @@
     au < exists ; 2012 ; Foreign Policy Analysis Volume 8 ; 8 >
     au < exists ; 2013 ; Foreign Policy Analysis Volume 9 ; 9 >
     au < exists ; 2014 ; Foreign Policy Analysis Volume 10 ; 10 >
-    au < exists ; 2015 ; Foreign Policy Analysis Volume 11 ; 11 >
-    au < expected ; 2016 ; Foreign Policy Analysis Volume 12 ; 12 >
+    au < manifest ; 2015 ; Foreign Policy Analysis Volume 11 ; 11 >
+    au < manifest ; 2016 ; Foreign Policy Analysis Volume 12 ; 12 >
 
   }
 
@@ -7707,7 +7707,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2013 ; French History Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; released ; 2014 ; French History Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; French History Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; French History Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; French History Volume 30 ; 30 >
 
     }
 
@@ -8244,7 +8244,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; German History Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; German History Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; German History Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; German History Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; German History Volume 34 ; 34 >
 
     }
 
@@ -9858,7 +9858,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; Industrial Law Journal Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Industrial Law Journal Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Industrial Law Journal Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Industrial Law Journal Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Industrial Law Journal Volume 45 ; 45 >
 
     }
 
@@ -9882,7 +9882,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; Information and Inference: A Journal of the IMA Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Information and Inference: A Journal of the IMA Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Information and Inference: A Journal of the IMA Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Information and Inference: A Journal of the IMA Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Information and Inference: A Journal of the IMA Volume 5 ; 5 >
 
     }
 
@@ -10111,7 +10111,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; International Data Privacy Law Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; International Data Privacy Law Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; International Data Privacy Law Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; International Data Privacy Law Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; International Data Privacy Law Volume 6 ; 6 >
 
   }
 
@@ -10483,7 +10483,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; International Journal of Lexicography Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; International Journal of Lexicography Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; International Journal of Lexicography Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; International Journal of Lexicography Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; International Journal of Lexicography Volume 29 ; 29 >
 
     }
 
@@ -10607,7 +10607,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; International Journal of Public Opinion Research Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; International Journal of Public Opinion Research Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; International Journal of Public Opinion Research Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; International Journal of Public Opinion Research Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; International Journal of Public Opinion Research Volume 28 ; 28 >
 
     }
 
@@ -10665,7 +10665,7 @@
     au < oup.OUPDrupalPlugin ; ready ; 2013 ; International Journal for Quality in Health Care Volume 25 ; 25 >
     au < oup.OUPDrupalPlugin ; manifest ; 2014 ; International Journal for Quality in Health Care Volume 26 ; 26 >
     au < oup.OUPDrupalPlugin ; manifest ; 2015 ; International Journal for Quality in Health Care Volume 27 ; 27 >
-    au < oup.OUPDrupalPlugin ; expected ; 2016 ; International Journal for Quality in Health Care Volume 28 ; 28 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2016 ; International Journal for Quality in Health Care Volume 28 ; 28 >
 
     }
 
@@ -10870,8 +10870,8 @@
     au < exists ; 2012 ; International Political Sociology Volume 6 ; 6 >
     au < exists ; 2013 ; International Political Sociology Volume 7 ; 7 >
     au < exists ; 2014 ; International Political Sociology Volume 8 ; 8 >
-    au < exists ; 2015 ; International Political Sociology Volume 9 ; 9 >
-    au < expected ; 2016 ; International Political Sociology Volume 10 ; 10 >
+    au < manifest ; 2015 ; International Political Sociology Volume 9 ; 9 >
+    au < manifest ; 2016 ; International Political Sociology Volume 10 ; 10 >
 
   }
 
@@ -10951,8 +10951,8 @@
     au < exists ; 2012 ; International Studies Perspectives Volume 13 ; 13 >
     au < exists ; 2013 ; International Studies Perspectives Volume 14 ; 14 >
     au < exists ; 2014 ; International Studies Perspectives Volume 15 ; 15 >
-    au < exists ; 2015 ; International Studies Perspectives Volume 16 ; 16 >
-    au < expected ; 2016 ; International Studies Perspectives Volume 17 ; 17 >
+    au < manifest ; 2015 ; International Studies Perspectives Volume 16 ; 16 >
+    au < manifest ; 2016 ; International Studies Perspectives Volume 17 ; 17 >
 
   }
 
@@ -10985,7 +10985,7 @@
     au < exists ; 2012 ; International Studies Quarterly Volume 56 ; 56 >
     au < exists ; 2013 ; International Studies Quarterly Volume 57 ; 57 >
     au < exists ; 2014 ; International Studies Quarterly Volume 58 ; 58 >
-    au < exists ; 2015 ; International Studies Quarterly Volume 59 ; 59 >
+    au < manifest ; 2015 ; International Studies Quarterly Volume 59 ; 59 >
     au < expected ; 2016 ; International Studies Quarterly Volume 60 ; 60 >
 
   }
@@ -11019,7 +11019,7 @@
     au < exists ; 2012 ; International Studies Review Volume 14 ; 14 >
     au < exists ; 2013 ; International Studies Review Volume 15 ; 15 >
     au < exists ; 2014 ; International Studies Review Volume 16 ; 16 >
-    au < exists ; 2015 ; International Studies Review Volume 17 ; 17 >
+    au < manifest ; 2015 ; International Studies Review Volume 17 ; 17 >
     au < expected ; 2016 ; International Studies Review Volume 18 ; 18 >
 
   }
@@ -11182,7 +11182,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Jerusalem Review of Legal Studies Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Jerusalem Review of Legal Studies Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Jerusalem Review of Legal Studies Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Jerusalem Review of Legal Studies Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Jerusalem Review of Legal Studies Volume 12 ; 12 >
 
   }
 
@@ -12168,7 +12168,7 @@
     au < released ; 2013 ; Journal of Complex Networks Volume 1 ; 1 >
     au < released ; 2014 ; Journal of Complex Networks Volume 2 ; 2 >
     au < manifest ; 2015 ; Journal of Complex Networks Volume 3 ; 3 >
-    au < expected ; 2016 ; Journal of Complex Networks Volume 4 ; 4 >
+    au < manifest ; 2016 ; Journal of Complex Networks Volume 4 ; 4 >
 
     }
 
@@ -12383,7 +12383,7 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2015 ; Journal of Cybersecurity Volume 1 ; 1 >
+    au < manifest ; 2015 ; Journal of Cybersecurity Volume 1 ; 1 >
   }
 
   {
@@ -13295,7 +13295,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; Journal of the History of Collections Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Journal of the History of Collections Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of the History of Collections Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Journal of the History of Collections Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Journal of the History of Collections Volume 28 ; 28 >
 
     }
 
@@ -13792,7 +13792,7 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2015 ; Journal of Integrable Systems Volume 1 ; 1 >
+    au < manifest ; 2015 ; Journal of Integrable Systems Volume 1 ; 1 >
     au < expected ; 2016 ; Journal of Integrable Systems Volume 2 ; 2 >
 
     }
@@ -14800,8 +14800,8 @@
     au < exists ; 2012 ; Journal of Neuropathology & Experimental Neurology Volume 71 ; 71 >
     au < exists ; 2013 ; Journal of Neuropathology & Experimental Neurology Volume 72 ; 72 >
     au < exists ; 2014 ; Journal of Neuropathology & Experimental Neurology Volume 73 ; 73 >
-    au < exists ; 2015 ; Journal of Neuropathology & Experimental Neurology Volume 74 ; 74 >
-    au < exists ; 2016 ; Journal of Neuropathology & Experimental Neurology Volume 75 ; 75 >
+    au < manifest ; 2015 ; Journal of Neuropathology & Experimental Neurology Volume 74 ; 74 >
+    au < manifest ; 2016 ; Journal of Neuropathology & Experimental Neurology Volume 75 ; 75 >
 
   }
 
@@ -14824,7 +14824,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of the Pediatric Infectious Diseases Society Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of the Pediatric Infectious diseases Society Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of the Pediatric Infectious diseases Society Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Journal of the Pediatric Infectious diseases Society Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Journal of the Pediatric Infectious diseases Society Volume 5 ; 5 >
 
     }
 
@@ -15792,7 +15792,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; Journal of Topology Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Journal of Topology Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of Topology Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Journal of Topology Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Journal of Topology Volume 9 ; 9 >
 
     }
 
@@ -15810,29 +15810,29 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 1994 ; Journal of Travel Medicine Volume 1 ; 1 >
-    au < exists ; 1995 ; Journal of Travel Medicine Volume 2 ; 2 >
-    au < exists ; 1996 ; Journal of Travel Medicine Volume 3 ; 3 >
-    au < exists ; 1997 ; Journal of Travel Medicine Volume 4 ; 4 >
-    au < exists ; 1998 ; Journal of Travel Medicine Volume 5 ; 5 >
-    au < exists ; 1999 ; Journal of Travel Medicine Volume 6 ; 6 >
-    au < exists ; 2000 ; Journal of Travel Medicine Volume 7 ; 7 >
-    au < exists ; 2001 ; Journal of Travel Medicine Volume 8 ; 8 >
-    au < exists ; 2002 ; Journal of Travel Medicine Volume 9 ; 9 >
-    au < exists ; 2003 ; Journal of Travel Medicine Volume 10 ; 10 >
-    au < exists ; 2004 ; Journal of Travel Medicine Volume 11 ; 11 >
-    au < exists ; 2005 ; Journal of Travel Medicine Volume 12 ; 12 >
-    au < exists ; 2006 ; Journal of Travel Medicine Volume 13 ; 13 >
-    au < exists ; 2007 ; Journal of Travel Medicine Volume 14 ; 14 >
-    au < exists ; 2008 ; Journal of Travel Medicine Volume 15 ; 15 >
-    au < exists ; 2009 ; Journal of Travel Medicine Volume 16 ; 16 >
-    au < exists ; 2010 ; Journal of Travel Medicine Volume 17 ; 17 >
-    au < exists ; 2011 ; Journal of Travel Medicine Volume 18 ; 18 >
-    au < exists ; 2012 ; Journal of Travel Medicine Volume 19 ; 19 >
-    au < exists ; 2013 ; Journal of Travel Medicine Volume 20 ; 20 >
-    au < exists ; 2014 ; Journal of Travel Medicine Volume 21 ; 21 >
-    au < exists ; 2015 ; Journal of Travel Medicine Volume 22 ; 22 >
-    au < exists ; 2016 ; Journal of Travel Medicine Volume 23 ; 23 >
+    au < manifest ; 1994 ; Journal of Travel Medicine Volume 1 ; 1 >
+    au < manifest ; 1995 ; Journal of Travel Medicine Volume 2 ; 2 >
+    au < manifest ; 1996 ; Journal of Travel Medicine Volume 3 ; 3 >
+    au < manifest ; 1997 ; Journal of Travel Medicine Volume 4 ; 4 >
+    au < manifest ; 1998 ; Journal of Travel Medicine Volume 5 ; 5 >
+    au < manifest ; 1999 ; Journal of Travel Medicine Volume 6 ; 6 >
+    au < manifest ; 2000 ; Journal of Travel Medicine Volume 7 ; 7 >
+    au < manifest ; 2001 ; Journal of Travel Medicine Volume 8 ; 8 >
+    au < manifest ; 2002 ; Journal of Travel Medicine Volume 9 ; 9 >
+    au < manifest ; 2003 ; Journal of Travel Medicine Volume 10 ; 10 >
+    au < manifest ; 2004 ; Journal of Travel Medicine Volume 11 ; 11 >
+    au < manifest ; 2005 ; Journal of Travel Medicine Volume 12 ; 12 >
+    au < manifest ; 2006 ; Journal of Travel Medicine Volume 13 ; 13 >
+    au < manifest ; 2007 ; Journal of Travel Medicine Volume 14 ; 14 >
+    au < manifest ; 2008 ; Journal of Travel Medicine Volume 15 ; 15 >
+    au < manifest ; 2009 ; Journal of Travel Medicine Volume 16 ; 16 >
+    au < manifest ; 2010 ; Journal of Travel Medicine Volume 17 ; 17 >
+    au < manifest ; 2011 ; Journal of Travel Medicine Volume 18 ; 18 >
+    au < manifest ; 2012 ; Journal of Travel Medicine Volume 19 ; 19 >
+    au < manifest ; 2013 ; Journal of Travel Medicine Volume 20 ; 20 >
+    au < manifest ; 2014 ; Journal of Travel Medicine Volume 21 ; 21 >
+    au < manifest ; 2015 ; Journal of Travel Medicine Volume 22 ; 22 >
+    au < manifest ; 2016 ; Journal of Travel Medicine Volume 23 ; 23 >
 
   }
 
@@ -15940,7 +15940,7 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2015 ; Journal of Urban Ecology Volume 1 ; 1 >
+    au < manifest ; 2015 ; Journal of Urban Ecology Volume 1 ; 1 >
     au < expected ; 2016 ; Journal of Urban Ecology Volume 2 ; 2 >
 
   }
@@ -16003,8 +16003,8 @@
     au < exists ; 2012 ; LabMedicine Volume 43 ; 43 >
     au < exists ; 2013 ; LabMedicine Volume 44 ; 44 >
     au < exists ; 2014 ; LabMedicine Volume 45 ; 45 >
-    au < exists ; 2015 ; LabMedicine Volume 46 ; 46 >
-    au < exists ; 2016 ; LabMedicine Volume 47 ; 47 >
+    au < manifest ; 2015 ; LabMedicine Volume 46 ; 46 >
+    au < manifest ; 2016 ; LabMedicine Volume 47 ; 47 >
 
   }
 
@@ -16047,7 +16047,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; Law, Probability and Risk Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Law, Probability and Risk Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Law, Probability and Risk Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Law, Probability and Risk Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Law, Probability and Risk Volume 15 ; 15 >
 
     }
 
@@ -16859,7 +16859,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; released ; 2014 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 41 ; 41 >
 
   }
 
@@ -17534,7 +17534,7 @@
     au < manifest ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 454 ; 454 >
     au < manifest ; 2015 ; Monthly Notices of the Royal Astronomical Society Volume 455 ; 455 >
     au < manifest ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 456 ; 456 >
-    au < exists ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 457 ; 457 >
+    au < manifest ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 457 ; 457 >
     au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 458 ; 458 >
     au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 459 ; 459 >
     au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 460 ; 460 >
@@ -17891,7 +17891,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; Journal of Music Therapy Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Music Therapy Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of Music Therapy Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Journal of Music Therapy Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Journal of Music Therapy Volume 53 ; 53 >
 
     }
 
@@ -19532,7 +19532,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; Oxford Journal of Legal Studies Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Oxford Journal of Legal Studies Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Oxford Journal of Legal Studies Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Oxford Journal of Legal Studies Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Oxford Journal of Legal Studies Volume 36 ; 36 >
 
 
     }
@@ -19635,19 +19635,19 @@
     au < exists ; 2001 ; Pain Medicine Volume 2 ; 2 >
     au < exists ; 2002 ; Pain Medicine Volume 3 ; 3 >
     au < exists ; 2003 ; Pain Medicine Volume 4 ; 4 >
-    au < exists ; 2004 ; Pain Medicine Volume 5 ; 5 >
+    au < manifest ; 2004 ; Pain Medicine Volume 5 ; 5 >
     au < exists ; 2005 ; Pain Medicine Volume 6 ; 6 >
-    au < exists ; 2006 ; Pain Medicine Volume 7 ; 7 >
+    au < manifest ; 2006 ; Pain Medicine Volume 7 ; 7 >
     au < exists ; 2007 ; Pain Medicine Volume 8 ; 8 >
     au < exists ; 2008 ; Pain Medicine Volume 9 ; 9 >
-    au < exists ; 2009 ; Pain Medicine Volume 10 ;10 >
+    au < manifest ; 2009 ; Pain Medicine Volume 10 ;10 >
     au < exists ; 2010 ; Pain Medicine Volume 11 ;11 >
-    au < exists ; 2011 ; Pain Medicine Volume 12 ;12 >
+    au < manifest ; 2011 ; Pain Medicine Volume 12 ;12 >
     au < exists ; 2012 ; Pain Medicine Volume 13 ;13 >
     au < exists ; 2013 ; Pain Medicine Volume 14 ;14 >
     au < exists ; 2014 ; Pain Medicine Volume 15 ;15 >
-    au < exists ; 2015 ; Pain Medicine Volume 16 ;16 >
-    au < exists ; 2016 ; Pain Medicine Volume 17 ;17 >
+    au < manifest ; 2015 ; Pain Medicine Volume 16 ;16 >
+    au < manifest ; 2016 ; Pain Medicine Volume 17 ;17 >
 
   }
 
@@ -20031,7 +20031,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Past & Present Volume 227 ; 227 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Past & Present Volume 228 ; 228 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Past & Present Volume 229 ; 229 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Past & Present Volume 230 ; 230 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Past & Present Volume 230 ; 230 >
 
     }
 
@@ -20448,7 +20448,7 @@
     au < exists ; 2012 ; Proceedings of the Aristotelian Society Volume 112 ; 112 >
     au < exists ; 2013 ; Proceedings of the Aristotelian Society Volume 113 ; 113 >
     au < exists ; 2014 ; Proceedings of the Aristotelian Society Volume 114 ; 114 >
-    au < exists ; 2015 ; Proceedings of the Aristotelian Society Volume 115 ; 115 >
+    au < manifest ; 2015 ; Proceedings of the Aristotelian Society Volume 115 ; 115 >
     au < expected ; 2016 ; Proceedings of the Aristotelian Society Volume 116 ; 116 >
 
   }
@@ -20934,7 +20934,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Public Health Ethics Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Public Health Ethics Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Public Health Ethics Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Public Health Ethics Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Public Health Ethics Volume 9 ; 9 >
 
     }
 
@@ -21471,7 +21471,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2013 ; The Quarterly Journal of Mathematics Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; released ; 2014 ; The Quarterly Journal of Mathematics Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; The Quarterly Journal of Mathematics Volume 66 ; 66 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; The Quarterly Journal of Mathematics Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; The Quarterly Journal of Mathematics Volume 67 ; 67 >
 
     }
 
@@ -23164,7 +23164,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Social Work Research Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Social Work Research Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Social Work Research Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Social Work Research Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Social Work Research Volume 40 ; 40 >
 
   }
 
@@ -23238,7 +23238,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; Socio-Economic Review Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Socio-Economic Review Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Socio-Economic Review Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Socio-Economic Review Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Socio-Economic Review Volume 14 ; 14 >
 
     }
 
@@ -23708,7 +23708,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Toxicological Sciences Volume 147 ; 147 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Toxicological Sciences Volume 148 ; 148 >
     au < HighWirePressH20Plugin ; manifest ; 2016 ; Toxicological Sciences Volume 149 ; 149 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Toxicological Sciences Volume 150 ; 150 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Toxicological Sciences Volume 150 ; 150 >
     au < HighWirePressH20Plugin ; expected ; 2016 ; Toxicological Sciences Volume 151 ; 151 >
 
     }
@@ -24128,7 +24128,7 @@
     au < exists ; 2012 ; Western Historical Quarterly Volume 43 ; 43 >
     au < exists ; 2013 ; Western Historical Quarterly Volume 44 ; 44 >
     au < exists ; 2014 ; Western Historical Quarterly Volume 45 ; 45 >
-    au < exists ; 2015 ; Western Historical Quarterly Volume 46 ; 46 >
+    au < manifest ; 2015 ; Western Historical Quarterly Volume 46 ; 46 >
     au < exists ; 2016 ; Western Historical Quarterly Volume 47 ; 47 >
     
   }
@@ -25071,7 +25071,7 @@
       au < manifest ; 2013 ; The Quarterly Journal of Economics Volume 128 ; 128 >
       au < manifest ; 2014 ; The Quarterly Journal of Economics Volume 129 ; 129 >
       au < manifest ; 2015 ; The Quarterly Journal of Economics Volume 130 ; 130 >
-      au < expected ; 2016 ; The Quarterly Journal of Economics Volume 131 ; 131 >
+      au < manifest ; 2016 ; The Quarterly Journal of Economics Volume 131 ; 131 >
 
     }
 
@@ -25430,18 +25430,18 @@
       implicit < status ; year ; name ; param[volume_name] >
       #content available from 1957 volume 1 to 1999 volume 43
 
-      au < exists ; 2000 ; American Journal of Legal History Volume 44 ; 44 >
-      au < exists ; 2001 ; American Journal of Legal History Volume 45 ; 45 >
-      au < exists ; 2004 ; American Journal of Legal History Volume 46 ; 46 >
-      au < exists ; 2005 ; American Journal of Legal History Volume 47 ; 47 >
-      au < exists ; 2006 ; American Journal of Legal History Volume 48 ; 48 >
-      au < exists ; 2007 ; American Journal of Legal History Volume 49 ; 49 >
-      au < exists ; 2010 ; American Journal of Legal History Volume 50 ; 50 >
-      au < exists ; 2011 ; American Journal of Legal History Volume 51 ; 51 >
-      au < exists ; 2012 ; American Journal of Legal History Volume 52 ; 52 >
-      au < exists ; 2013 ; American Journal of Legal History Volume 53 ; 53 >
-      au < exists ; 2014 ; American Journal of Legal History Volume 54 ; 54 >
-      au < exists ; 2015 ; American Journal of Legal History Volume 55 ; 55 >
+      au < manifest ; 2000 ; American Journal of Legal History Volume 44 ; 44 >
+      au < manifest ; 2001 ; American Journal of Legal History Volume 45 ; 45 >
+      au < manifest ; 2004 ; American Journal of Legal History Volume 46 ; 46 >
+      au < manifest ; 2005 ; American Journal of Legal History Volume 47 ; 47 >
+      au < manifest ; 2006 ; American Journal of Legal History Volume 48 ; 48 >
+      au < manifest ; 2007 ; American Journal of Legal History Volume 49 ; 49 >
+      au < manifest ; 2010 ; American Journal of Legal History Volume 50 ; 50 >
+      au < manifest ; 2011 ; American Journal of Legal History Volume 51 ; 51 >
+      au < manifest ; 2012 ; American Journal of Legal History Volume 52 ; 52 >
+      au < manifest ; 2013 ; American Journal of Legal History Volume 53 ; 53 >
+      au < manifest ; 2014 ; American Journal of Legal History Volume 54 ; 54 >
+      au < manifest ; 2015 ; American Journal of Legal History Volume 55 ; 55 >
       au < expected ; 2016 ; American Journal of Legal History Volume 56 ; 56 >
 
   }
@@ -25472,7 +25472,7 @@
       au < exists ; 2012 ; Aristotelian Society Supplementary Volume Volume 86 ; 86 >
       au < exists ; 2013 ; Aristotelian Society Supplementary Volume Volume 87 ; 87 >
       au < exists ; 2014 ; Aristotelian Society Supplementary Volume Volume 88 ; 88 >
-      au < exists ; 2015 ; Aristotelian Society Supplementary Volume Volume 89 ; 89 >
+      au < manifest ; 2015 ; Aristotelian Society Supplementary Volume Volume 89 ; 89 >
       au < expected ; 2016 ; Aristotelian Society Supplementary Volume Volume 90 ; 90 >
 
   }
@@ -25530,8 +25530,8 @@
       au < exists ; 2012 ; Critical Values Volume 5 ; 5 >
       au < exists ; 2013 ; Critical Values Volume 6 ; 6 >
       au < exists ; 2014 ; Critical Values Volume 7 ; 7 >
-      au < exists ; 2015 ; Critical Values Volume 8 ; 8 >
-      au < exists ; 2016 ; Critical Values Volume 9 ; 9 >
+      au < manifest ; 2015 ; Critical Values Volume 8 ; 8 >
+      au < manifest ; 2016 ; Critical Values Volume 9 ; 9 >
 
   }
 

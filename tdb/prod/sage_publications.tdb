@@ -302,7 +302,7 @@
         au < manifest ; 2013 ; Action Research Volume 11 ; 11 >
         au < released ; 2014 ; Action Research Volume 12 ; 12 >
         au < manifest ; 2015 ; Action Research Volume 13 ; 13 >
-        au < expected ; 2016 ; Action Research Volume 14 ; 14 >
+        au < manifest ; 2016 ; Action Research Volume 14 ; 14 >
 
       }
 
@@ -821,7 +821,7 @@
         au < released ; 2013 ; Advances in Dental Research Volume 25 ; 25 >
         au < released ; 2014 ; Advances in Dental Research Volume 26 ; 26 >
         au < manifest ; 2015 ; Advances in Dental Research Volume 27 ; 27 >
-        au < expected ; 2016 ; Advances in Dental Research Volume 28 ; 28 >
+        au < manifest ; 2016 ; Advances in Dental Research Volume 28 ; 28 >
 
       }
 
@@ -918,7 +918,7 @@
       au < exists ; 2013 ; Advances in Structural Engineering Volume 16 ; 16 >
       au < exists ; 2014 ; Advances in Structural Engineering Volume 17 ; 17 >
       au < manifest ; 2015 ; Advances in Structural Engineering Volume 18 ; 18 >
-      au < expected ; 2016 ; Advances in Structural Engineering Volume 19 ; 19 >
+      au < manifest ; 2016 ; Advances in Structural Engineering Volume 19 ; 19 >
 
   }
 
@@ -1301,7 +1301,7 @@
         au < manifest ; 2013 ; American Educational Research Journal Volume 50 ; 50 >
         au < manifest ; 2014 ; American Educational Research Journal Volume 51 ; 51 >
         au < manifest ; 2015 ; American Educational Research Journal Volume 52 ; 52 >
-        au < expected ; 2016 ; American Educational Research Journal Volume 53 ; 53 >
+        au < manifest ; 2016 ; American Educational Research Journal Volume 53 ; 53 >
 
       }
 
@@ -2943,7 +2943,7 @@
 
     au < released ; 2014 ; The Anthropocene Review Volume 1 ; 1 >
     au < manifest ; 2015 ; The Anthropocene Review Volume 2 ; 2 >
-    au < expected ; 2016 ; The Anthropocene Review Volume 3 ; 3 >
+    au < manifest ; 2016 ; The Anthropocene Review Volume 3 ; 3 >
 
   }
 
@@ -2990,7 +2990,7 @@
         au < released ; 2013 ; Anthropological Theory Volume 13 ; 13 >
         au < released ; 2014 ; Anthropological Theory Volume 14 ; 14 >
         au < manifest ; 2015 ; Anthropological Theory Volume 15 ; 15 >
-        au < expected ; 2016 ; Anthropological Theory Volume 16 ; 16 >
+        au < manifest ; 2016 ; Anthropological Theory Volume 16 ; 16 >
 
       }
 
@@ -3577,7 +3577,7 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://acp.sagepub.com/
   
-      au < exists ; 2016 ; Asian Journal of Comparative Politics Volume 1 ; 1 >
+      au < manifest ; 2016 ; Asian Journal of Comparative Politics Volume 1 ; 1 >
   
     }
 
@@ -6169,7 +6169,7 @@
         au < released ; 2013 ; China Information Volume 27 ; 27 >
         au < released ; 2014 ; China Information Volume 28 ; 28 >
         au < manifest ; 2015 ; China Information Volume 29 ; 29 >
-        au < expected ; 2016 ; China Information Volume 30 ; 30 >
+        au < manifest ; 2016 ; China Information Volume 30 ; 30 >
 
       }
 
@@ -6273,7 +6273,7 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2015 ; Chinese Journal of Sociology Volume 1 ; 1 >
-    au < expected ; 2016 ; Chinese Journal of Sociology Volume 2 ; 2 >
+    au < manifest ; 2016 ; Chinese Journal of Sociology Volume 2 ; 2 >
 
   }
 
@@ -6396,7 +6396,7 @@
         au < released ; 2013 ; Chronic Illness Volume 9 ; 9 >
         au < released ; 2014 ; Chronic Illness Volume 10 ; 10 >
         au < manifest ; 2015 ; Chronic Illness Volume 11 ; 11 >
-        au < expected ; 2016 ; Chronic Illness Volume 12 ; 12 >
+        au < manifest ; 2016 ; Chronic Illness Volume 12 ; 12 >
 
       }
 
@@ -7189,7 +7189,7 @@
         au < exists ; 2013 ; Common Law World Review Volume 42 ; 42 >
         au < released ; 2014 ; Common Law World Review Volume 43 ; 43 >
         au < manifest ; 2015 ; Common Law World Review Volume 44 ; 44 >
-        au < expected ; 2016 ; Common Law World Review Volume 45 ; 45 >
+        au < manifest ; 2016 ; Common Law World Review Volume 45 ; 45 >
 
     }
 
@@ -7206,7 +7206,7 @@
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
   
-        au < exists ; 2016 ; Communication and the Public Volume 1 ; 1 >
+        au < manifest ; 2016 ; Communication and the Public Volume 1 ; 1 >
   
     }
 
@@ -7942,7 +7942,7 @@
       au < exists ; 2013 ; Contemporary Issues in Early Childhood Volume 14 ; 14 >
       au < manifest ; 2014 ; Contemporary Issues in Early Childhood Volume 15 ; 15 >
       au < manifest ; 2015 ; Contemporary Issues in Early Childhood Volume 16 ; 16 >
-      au < expected ; 2016 ; Contemporary Issues in Early Childhood Volume 17 ; 17 >
+      au < manifest ; 2016 ; Contemporary Issues in Early Childhood Volume 17 ; 17 >
 
     }
 
@@ -10571,7 +10571,7 @@
         au < released ; 2013 ; The Economic and Labour Relations Review Volume 24 ; 24 >
         au < released ; 2014 ; The Economic and Labour Relations Review Volume 25 ; 25 >
         au < manifest ; 2015 ; The Economic and Labour Relations Review Volume 26 ; 26 >
-        au < expected ; 2016 ; The Economic and Labour Relations Review Volume 27 ; 27 >
+        au < manifest ; 2016 ; The Economic and Labour Relations Review Volume 27 ; 27 >
 
       }
 
@@ -11301,7 +11301,7 @@
         au < manifest ; 2013 ; Educational Researcher Volume 42 ; 42 >
         au < released ; 2014 ; Educational Researcher Volume 43 ; 43 >
         au < manifest ; 2015 ; Educational Researcher Volume 44 ; 44 >
-        au < expected ; 2016 ; Educational Researcher Volume 45 ; 45 >
+        au < manifest ; 2016 ; Educational Researcher Volume 45 ; 45 >
 
       }
 
@@ -11871,7 +11871,7 @@
         au < manifest ; 2013 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 21 ; 21 >
         au < released ; 2014 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 22 ; 22 >
         au < manifest ; 2015 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 23 ; 23 >
-        au < expected ; 2016 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 24 ; 24 >
+        au < manifest ; 2016 ; Ergonomics in Design: The Quarterly of Human Factors Applications Volume 24 ; 24 >
 
       }
 
@@ -11983,7 +11983,7 @@
         au < released ; 2013 ; Ethnography Volume 14 ; 14 >
         au < released ; 2014 ; Ethnography Volume 15 ; 15 >
         au < manifest ; 2015 ; Ethnography Volume 16 ; 16 >
-        au < expected ; 2016 ; Ethnography Volume 17 ; 17 >
+        au < manifest ; 2016 ; Ethnography Volume 17 ; 17 >
 
       }
 
@@ -13838,7 +13838,7 @@
         au < manifest ; 2013 ; Feminist Theory Volume 14 ; 14 >
         au < released ; 2014 ; Feminist Theory Volume 15 ; 15 >
         au < manifest ; 2015 ; Feminist Theory Volume 16 ; 16 >
-        au < expected ; 2016 ; Feminist Theory Volume 17 ; 17 >
+        au < manifest ; 2016 ; Feminist Theory Volume 17 ; 17 >
 
       }
 
@@ -14527,7 +14527,7 @@
       au < exists ; 2013 ; German Journal of Human Resource Management Volume 27 ; 27 >
       au < exists ; 2014 ; German Journal of Human Resource Management Volume 28 ; 28 >
       au < exists ; 2015 ; German Journal of Human Resource Management Volume 29 ; 29 >
-      au < exists ; 2016 ; German Journal of Human Resource Management Volume 30 ; 30 >
+      au < manifest ; 2016 ; German Journal of Human Resource Management Volume 30 ; 30 >
 
   }
 
@@ -14783,7 +14783,7 @@
       au < exists ; 2013 ; Global Studies of Childhood Volume 3 ; 3 >
       au < manifest ; 2014 ; Global Studies of Childhood Volume 4 ; 4 >
       au < manifest ; 2015 ; Global Studies of Childhood Volume 5 ; 5 >
-      au < expected ; 2016 ; Global Studies of Childhood Volume 6 ; 6 >
+      au < manifest ; 2016 ; Global Studies of Childhood Volume 6 ; 6 >
 
   }
 
@@ -15195,7 +15195,7 @@
         au < released ; 2013 ; Group Analysis Volume 46 ; 46 >
         au < released ; 2014 ; Group Analysis Volume 47 ; 47 >
         au < manifest ; 2015 ; Group Analysis Volume 48 ; 48 >
-        au < expected ; 2016 ; Group Analysis Volume 49 ; 49 >
+        au < manifest ; 2016 ; Group Analysis Volume 49 ; 49 >
 
       }
 
@@ -16385,7 +16385,7 @@
         au < released ; 2013 ; History of Psychiatry Volume 24 ; 24 >
         au < released ; 2014 ; History of Psychiatry Volume 25 ; 25 >
         au < manifest ; 2015 ; History of Psychiatry Volume 26 ; 26 >
-        au < expected ; 2016 ; History of Psychiatry Volume 27 ; 27 >
+        au < manifest ; 2016 ; History of Psychiatry Volume 27 ; 27 >
 
       }
 
@@ -17062,7 +17062,7 @@
       au < exists ; 2013 ; i-Perception Volume 4 ; 4 >
       au < manifest ; 2014 ; i-Perception Volume 5 ; 5 >
       au < manifest ; 2015 ; i-Perception Volume 6 ; 6 >
-      au < expected ; 2016 ; i-Perception Volume 7 ; 7 >
+      au < manifest ; 2016 ; i-Perception Volume 7 ; 7 >
 
   }
 
@@ -17308,7 +17308,7 @@
         au < released ; 2013 ; Improving Schools Volume 16 ; 16 >
         au < released ; 2014 ; Improving Schools Volume 17 ; 17 >
         au < manifest ; 2015 ; Improving Schools Volume 18 ; 18 >
-        au < expected ; 2016 ; Improving Schools Volume 19 ; 19 >
+        au < manifest ; 2016 ; Improving Schools Volume 19 ; 19 >
 
       }
 
@@ -17500,7 +17500,7 @@
         au < manifest ; 2013 ; Indian Economic & Social History Review Volume 50 ; 50 >
         au < released ; 2014 ; Indian Economic & Social History Review Volume 51 ; 51 >
         au < manifest ; 2015 ; Indian Economic & Social History Review Volume 52 ; 52 >
-        au < expected ; 2016 ; Indian Economic & Social History Review Volume 53 ; 53 >
+        au < manifest ; 2016 ; Indian Economic & Social History Review Volume 53 ; 53 >
 
       }
 
@@ -18297,7 +18297,7 @@
       au < released ; 2014 ; The International Journal of Aging and Human Development Volume 79 ; 79 >
       au < manifest ; 2015 ; The International Journal of Aging and Human Development Volume 80 ; 80 >
       au < manifest ; 2015 ; The International Journal of Aging and Human Development Volume 81 ; 81 >
-      au < expected ; 2016 ; The International Journal of Aging and Human Development Volume 82 ; 82 >
+      au < manifest ; 2016 ; The International Journal of Aging and Human Development Volume 82 ; 82 >
 
     }
 
@@ -18326,7 +18326,7 @@
       au < exists ; 2013 ; International Journal of Architectural Computing Volume 11 ; 11 >
       au < exists ; 2014 ; International Journal of Architectural Computing Volume 12 ; 12 >
       au < manifest ; 2015 ; International Journal of Architectural Computing Volume 13 ; 13 >
-      au < expected ; 2016 ; International Journal of Architectural Computing Volume 14 ; 14 >
+      au < manifest ; 2016 ; International Journal of Architectural Computing Volume 14 ; 14 >
 
     }
 
@@ -19063,7 +19063,7 @@
         au < manifest ; 2013 ; The International Journal of Lower Extremity Wounds Volume 12 ; 12 >
         au < released ; 2014 ; The International Journal of Lower Extremity Wounds Volume 13 ; 13 >
         au < manifest ; 2015 ; The International Journal of Lower Extremity Wounds Volume 14 ; 14 >
-        au < expected ; 2016 ; The International Journal of Lower Extremity Wounds Volume 15 ; 15 >
+        au < manifest ; 2016 ; The International Journal of Lower Extremity Wounds Volume 15 ; 15 >
 
       }
 
@@ -19763,7 +19763,7 @@
         au < manifest ; 2013 ; International Political Science Abstracts Volume 63 ; 63 >
         au < released ; 2014 ; International Political Science Abstracts Volume 64 ; 64 >
         au < manifest ; 2015 ; International Political Science Abstracts Volume 65 ; 65 >
-        au < expected ; 2016 ; International Political Science Abstracts Volume 66 ; 66 >
+        au < manifest ; 2016 ; International Political Science Abstracts Volume 66 ; 66 >
 
       }
 
@@ -23224,7 +23224,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2013 ; Journal of Cognitive Engineering and Decision Making Volume 7 ; 7 >
         au < manifest ; 2014 ; Journal of Cognitive Engineering and Decision Making Volume 8 ; 8 >
         au < manifest ; 2015 ; Journal of Cognitive Engineering and Decision Making Volume 9 ; 9 >
-        au < expected ; 2016 ; Journal of Cognitive Engineering and Decision Making Volume 10 ; 10 >
+        au < manifest ; 2016 ; Journal of Cognitive Engineering and Decision Making Volume 10 ; 10 >
 
       }
 
@@ -23351,7 +23351,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2013 ; The Journal of Commonwealth Literature Volume 48 ; 48 >
         au < released ; 2014 ; The Journal of Commonwealth Literature Volume 49 ; 49 >
         au < manifest ; 2015 ; The Journal of Commonwealth Literature Volume 50 ; 50 >
-        au < expected ; 2016 ; The Journal of Commonwealth Literature Volume 51 ; 51 >
+        au < manifest ; 2016 ; The Journal of Commonwealth Literature Volume 51 ; 51 >
 
       }
 
@@ -24631,7 +24631,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2013 ; Journal of Early Childhood Literacy Volume 13 ; 13 >
         au < released ; 2014 ; Journal of Early Childhood Literacy Volume 14 ; 14 >
         au < manifest ; 2015 ; Journal of Early Childhood Literacy Volume 15 ; 15 >
-        au < expected ; 2016 ; Journal of Early Childhood Literacy Volume 16 ; 16 >
+        au < manifest ; 2016 ; Journal of Early Childhood Literacy Volume 16 ; 16 >
 
       }
 
@@ -25418,7 +25418,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2013 ; Journal of Entrepreneurship Volume 22 ; 22 >
         au < released ; 2014 ; Journal of Entrepreneurship Volume 23 ; 23 >
         au < manifest ; 2015 ; Journal of Entrepreneurship Volume 24 ; 24 >
-        au < expected ; 2016 ; Journal of Entrepreneurship Volume 25 ; 25 >
+        au < manifest ; 2016 ; Journal of Entrepreneurship Volume 25 ; 25 >
 
       }
 
@@ -29147,7 +29147,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2013 ; Journal of Planning Education and Research Volume 33 ; 33 >
         au < manifest ; 2014 ; Journal of Planning Education and Research Volume 34 ; 34 >
         au < manifest ; 2015 ; Journal of Planning Education and Research Volume 35 ; 35 >
-        au < expected ; 2016 ; Journal of Planning Education and Research Volume 36 ; 36 >
+        au < manifest ; 2016 ; Journal of Planning Education and Research Volume 36 ; 36 >
 
       }
 
@@ -29923,7 +29923,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2013 ; Journal of Research in Nursing Volume 18 ; 18 >
         au < released ; 2014 ; Journal of Research in Nursing Volume 19 ; 19 >
         au < manifest ; 2015 ; Journal of Research in Nursing Volume 20 ; 20 >
-        au < expected ; 2016 ; Journal of Research in Nursing Volume 21 ; 21 >
+        au < manifest ; 2016 ; Journal of Research in Nursing Volume 21 ; 21 >
 
       }
 
@@ -30947,7 +30947,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2013 ; Journal of the American Psychiatric Nurses Association Volume 19 ; 19 >
         au < released ; 2014 ; Journal of the American Psychiatric Nurses Association Volume 20 ; 20 >
         au < manifest ; 2015 ; Journal of the American Psychiatric Nurses Association Volume 21 ; 21 >
-        au < expected ; 2016 ; Journal of the American Psychiatric Nurses Association Volume 22 ; 22 >
+        au < manifest ; 2016 ; Journal of the American Psychiatric Nurses Association Volume 22 ; 22 >
 
       }
 
@@ -31042,7 +31042,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2013 ; Journal of the American Psychoanalytic Association Volume 61 ; 61 >
         au < released ; 2014 ; Journal of the American Psychoanalytic Association Volume 62 ; 62 >
         au < manifest ; 2015 ; Journal of the American Psychoanalytic Association Volume 63 ; 63 >
-        au < expected ; 2016 ; Journal of the American Psychoanalytic Association Volume 64 ; 64 >
+        au < manifest ; 2016 ; Journal of the American Psychoanalytic Association Volume 64 ; 64 >
 
       }
 
@@ -31412,7 +31412,7 @@ comment[mpj] = now published by Brill
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
   
-      au < exists ; 2016 ; Perceptual and Motor Skills Volume 122 ; 122 >
+      au < manifest ; 2016 ; Perceptual and Motor Skills Volume 122 ; 122 >
   
     }
 
@@ -33686,7 +33686,7 @@ comment[mpj] = now published by Brill
         au < released ; 2013 ; Measurement and Control Volume 46 ; 46 >
         au < released ; 2014 ; Measurement and Control Volume 47 ; 47 >
         au < manifest ; 2015 ; Measurement and Control Volume 48 ; 48 >
-        au < expected ; 2016 ; Measurement and Control Volume 49 ; 49 >
+        au < manifest ; 2016 ; Measurement and Control Volume 49 ; 49 >
 
       }
 
@@ -34380,7 +34380,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2013 ; Men and Masculinities Volume 16 ; 16 >
         au < released ; 2014 ; Men and Masculinities Volume 17 ; 17 >
         au < manifest ; 2015 ; Men and Masculinities Volume 18 ; 18 >
-        au < expected ; 2016 ; Men and Masculinities Volume 19 ; 19 >
+        au < manifest ; 2016 ; Men and Masculinities Volume 19 ; 19 >
 
       }
 
@@ -35778,7 +35778,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2013 ; Nordic Journal of Nursing Research Volume 33 ; 33 >
         au < manifest ; 2014 ; Nordic Journal of Nursing Research Volume 34 ; 34 >
         au < manifest ; 2015 ; Nordic Journal of Nursing Research Volume 35 ; 35 >
-        au < expected ; 2016 ; Nordic Journal of Nursing Research Volume 36 ; 36 >
+        au < manifest ; 2016 ; Nordic Journal of Nursing Research Volume 36 ; 36 >
 
   }
 
@@ -36609,7 +36609,7 @@ comment[mpj] = now published by Brill
       implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 2015 ; Pedagogy in Health Promotion Volume 1 ; 1 >
-      au < expected ; 2016 ; Pedagogy in Health Promotion Volume 2 ; 2 >
+      au < manifest ; 2016 ; Pedagogy in Health Promotion Volume 2 ; 2 >
 
   }
 
@@ -38908,7 +38908,7 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
   
-        au < exists ; 2016 ; Psychological Reports Volume 118 ; 118 >
+        au < manifest ; 2016 ; Psychological Reports Volume 118 ; 118 >
   
     }
 
@@ -39049,7 +39049,7 @@ comment[mpj] = now published by Brill
         au < released ; 2013 ; Psychology & Developing Societies Volume 25 ; 25 >
         au < released ; 2014 ; Psychology & Developing Societies Volume 26 ; 26 >
         au < manifest ; 2015 ; Psychology & Developing Societies Volume 27 ; 27 >
-        au < expected ; 2016 ; Psychology & Developing Societies Volume 28 ; 28 >
+        au < manifest ; 2016 ; Psychology & Developing Societies Volume 28 ; 28 >
 
       }
 
@@ -39213,7 +39213,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2013 ; Psychology of Women Quarterly Volume 37 ; 37 >
         au < released ; 2014 ; Psychology of Women Quarterly Volume 38 ; 38 >
         au < manifest ; 2015 ; Psychology of Women Quarterly Volume 39 ; 39 >
-        au < expected ; 2016 ; Psychology of Women Quarterly Volume 40 ; 40 >
+        au < manifest ; 2016 ; Psychology of Women Quarterly Volume 40 ; 40 >
 
       }
 
@@ -39349,7 +39349,7 @@ comment[mpj] = now published by Brill
       au < manifest ; 2013 ; Public Personnel Management Volume 42 ; 42 >
       au < released ; 2014 ; Public Personnel Management Volume 43 ; 43 >
       au < manifest ; 2015 ; Public Personnel Management Volume 44 ; 44 >
-      au < expected ; 2016 ; Public Personnel Management Volume 45 ; 45 >
+      au < manifest ; 2016 ; Public Personnel Management Volume 45 ; 45 >
 
     }
 
@@ -40346,7 +40346,7 @@ comment[mpj] = now published by Brill
       au < exists ; 2013 ; Research in Comparative and International Education Volume 8 ; 8 >
       au < manifest ; 2014 ; Research in Comparative and International Education Volume 9 ; 9 >
       au < manifest ; 2015 ; Research in Comparative and International Education Volume 10 ; 10 >
-      au < expected ; 2016 ; Research in Comparative and International Education Volume 11 ; 11 >
+      au < manifest ; 2016 ; Research in Comparative and International Education Volume 11 ; 11 >
 
     }
 
@@ -41492,7 +41492,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2013 ; Science Technology & Society Volume 18 ; 18 >
         au < released ; 2014 ; Science Technology & Society Volume 19 ; 19 >
         au < manifest ; 2015 ; Science Technology & Society Volume 20 ; 20 >
-        au < expected ; 2016 ; Science Technology & Society Volume 21 ; 21 >
+        au < manifest ; 2016 ; Science Technology & Society Volume 21 ; 21 >
 
       }
 
@@ -43021,7 +43021,7 @@ comment[mpj] = now published by Brill
         au < released ; 2013 ; South Asia Economic Journal Volume 14 ; 14 >
         au < released ; 2014 ; South Asia Economic Journal Volume 15 ; 15 >
         au < manifest ; 2015 ; South Asia Economic Journal Volume 16 ; 16 >
-        au < expected ; 2016 ; South Asia Economic Journal Volume 17 ; 17 >
+        au < manifest ; 2016 ; South Asia Economic Journal Volume 17 ; 17 >
 
       }
 
@@ -44032,7 +44032,7 @@ comment[mpj] = now published by Brill
         au < released ; 2013 ; Teaching Public Administration Volume 31 ; 31 >
         au < released ; 2014 ; Teaching Public Administration Volume 32 ; 32 >
         au < manifest ; 2015 ; Teaching Public Administration Volume 33 ; 33 >
-        au < expected ; 2016 ; Teaching Public Administration Volume 34 ; 34 >
+        au < manifest ; 2016 ; Teaching Public Administration Volume 34 ; 34 >
 
       }
 
@@ -45593,7 +45593,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2013 ; Tourist Studies Volume 13 ; 13 >
         au < manifest ; 2014 ; Tourist Studies Volume 14 ; 14 >
         au < manifest ; 2015 ; Tourist Studies Volume 15 ; 15 >
-        au < expected ; 2016 ; Tourist Studies Volume 16 ; 16 >
+        au < manifest ; 2016 ; Tourist Studies Volume 16 ; 16 >
 
       }
 
@@ -48485,7 +48485,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2013 ; Social Change Volume 43 ; 43 >
         au < manifest ; 2014 ; Social Change Volume 44 ; 44 >
         au < manifest ; 2015 ; Social Change Volume 45 ; 45 >
-        au < expected ; 2016 ; Social Change Volume 46 ; 46 >
+        au < manifest ; 2016 ; Social Change Volume 46 ; 46 >
 
       }
 
@@ -48884,7 +48884,7 @@ comment[mpj] = now published by Brill
       au < exists ; 2013 ; ASN NEURO Volume 5 ; 5 >
       au < manifest ; 2014 ; ASN NEURO Volume 6 ; 6 >
       au < manifest ; 2015 ; ASN NEURO Volume 7 ; 7 >
-      au < expected ; 2016 ; ASN NEURO Volume 8 ; 8 >
+      au < manifest ; 2016 ; ASN NEURO Volume 8 ; 8 >
 
     }
 
@@ -51784,7 +51784,7 @@ comment[mpj] = now published by Brill
 
         au < released ; 2014 ; Post Reproductive Health Volume 20 ; 20 >
         au < manifest ; 2015 ; Post Reproductive Health Volume 21 ; 21 >
-        au < expected ; 2016 ; Post Reproductive Health Volume 22 ; 22 >
+        au < manifest ; 2016 ; Post Reproductive Health Volume 22 ; 22 >
 
     }
 
