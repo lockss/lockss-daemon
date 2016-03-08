@@ -16185,6 +16185,22 @@
     }
 
     {
+  
+      title <
+        name = Hispanic Health Care International ;
+        issn = 1540-4153 ;
+        eissn = 1938-8993
+      >
+  
+        param[base_url] = http://hci.sagepub.com/
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+  
+        au < exists ; 2016 ; Hispanic Health Care International Volume 14 ; 14 >
+  
+    }
+
+    {
 
       title <
         name = Hispanic Journal of Behavioral Sciences ;
@@ -27351,8 +27367,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       title <
         name = Journal of Intelligent Material Systems and Structures ;
         issn = 1045-389X ;
-        eissn = 1530-8138 ;
-        issnl = 1045-389X
+        eissn = 1530-8138 
       >
 
       {
@@ -27412,8 +27427,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       title <
         name = Journal of Intensive Care Medicine ;
         issn = 0885-0666 ;
-        eissn = 1525-1489 ;
-        issnl = 0885-0666
+        eissn = 1525-1489 
       >
 
       {
@@ -27476,8 +27490,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       title <
         name = Journal of the Intensive Care Society ;
-        issn = 1751-1437 ;
-        issnl = 1751-1437
+        issn = 1751-1437 
       >
 
       param[base_url] = http://inc.sagepub.com/
@@ -27505,8 +27518,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       title <
         name = Journal of Interdisciplinary Economics ;
-        issn = 0260-1079 ;
-        issnl = 0260-1079
+        issn = 0260-1079 
       >
 
       {
@@ -27556,8 +27568,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       title <
         name = Journal of Interpersonal Violence ;
         issn = 0886-2605 ;
-        eissn = 1552-6518 ;
-        issnl = 0886-2605
+        eissn = 1552-6518 
       >
 
       {
@@ -27621,8 +27632,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         title <
           name = JALA (Charlottesville, Va.) ;
           issn = 1535-5535 ;
-          eissn = 1540-2452 ;
-          issnl = 1535-5535
+          eissn = 1540-2452 
       >
 
       {
@@ -27699,8 +27709,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       title <
         name = Journal of Language and Social Psychology ;
         issn = 0261-927X ;
-        eissn = 1552-6526 ;
-        issnl = 0261-927X
+        eissn = 1552-6526 
       >
 
       {
@@ -27766,10 +27775,42 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     {
 
       title <
+        name = The Journal of Law, Medicine & Ethics ;
+        issn = 1073-1105 ;
+        eissn = 1748-720X 
+      >
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://lme.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+        #content available from 1973 volume 1 to 1999 volume 27
+
+        au < exists ; 2000 ; The Journal of Law, Medicine & Ethics Volume 28 ; 28 >
+        au < exists ; 2001 ; The Journal of Law, Medicine & Ethics Volume 29 ; 29 >
+        au < exists ; 2002 ; The Journal of Law, Medicine & Ethics Volume 30 ; 30 >
+        au < exists ; 2003 ; The Journal of Law, Medicine & Ethics Volume 31 ; 31 >
+        au < exists ; 2004 ; The Journal of Law, Medicine & Ethics Volume 32 ; 32 >
+        au < exists ; 2005 ; The Journal of Law, Medicine & Ethics Volume 33 ; 33 >
+        au < exists ; 2006 ; The Journal of Law, Medicine & Ethics Volume 34 ; 34 >
+        au < exists ; 2007 ; The Journal of Law, Medicine & Ethics Volume 35 ; 35 >
+        au < exists ; 2008 ; The Journal of Law, Medicine & Ethics Volume 36 ; 36 >
+        au < exists ; 2009 ; The Journal of Law, Medicine & Ethics Volume 37 ; 37 >
+        au < exists ; 2010 ; The Journal of Law, Medicine & Ethics Volume 38 ; 38 >
+        au < exists ; 2011 ; The Journal of Law, Medicine & Ethics Volume 39 ; 39 >
+        au < exists ; 2012 ; The Journal of Law, Medicine & Ethics Volume 40 ; 40 >
+        au < exists ; 2013 ; The Journal of Law, Medicine & Ethics Volume 41 ; 41 >
+        au < exists ; 2014 ; The Journal of Law, Medicine & Ethics Volume 42 ; 42 >
+        au < exists ; 2015 ; The Journal of Law, Medicine & Ethics Volume 43 ; 43 >
+        au < expected ; 2016 ; The Journal of Law, Medicine & Ethics Volume 44 ; 44 >
+
+    }
+
+    {
+
+      title <
         name = Journal of Leadership & Organizational Studies ;
         issn = 1548-0518 ;
-        eissn = 1939-7089 ;
-        issnl = 1548-0518
+        eissn = 1939-7089 
       >
 
       {
