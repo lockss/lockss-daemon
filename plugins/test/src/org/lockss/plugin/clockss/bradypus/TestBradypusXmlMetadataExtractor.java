@@ -84,7 +84,7 @@ public class TestBradypusXmlMetadataExtractor extends LockssTestCase {
     mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
     mau.addUrl(pdfUrl1, true, true, xmlHeader);
 
-    me = new BradypusOnix2XmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
+    me = new BradypusOnix3XmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
     mle = new FileMetadataListExtractor(me);
     
   }
@@ -109,7 +109,7 @@ public class TestBradypusXmlMetadataExtractor extends LockssTestCase {
 
 
   
-  public void testFromNAPXMLFile() throws Exception {
+  public void testFromXMLFile() throws Exception {
     InputStream file_input = null;
     try {
       file_input = getResourceAsStream(realXMLFile);

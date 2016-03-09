@@ -39,32 +39,32 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.clockss.Onix2BooksSchemaHelper;
+import org.lockss.plugin.clockss.Onix3BooksSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
 
-public class BradypusOnix2XmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-  private static final Logger log = Logger.getLogger(BradypusOnix2XmlMetadataExtractorFactory.class);
+public class BradypusOnix3XmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+  private static final Logger log = Logger.getLogger(BradypusOnix3XmlMetadataExtractorFactory.class);
 
-  private static SourceXmlSchemaHelper Onix2Helper = null;
+  private static SourceXmlSchemaHelper Onix3Helper = null;
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
           throws PluginException {
-    return new BradypusOnix2XmlMetadataExtractor();
+    return new BradypusOnix3XmlMetadataExtractor();
   }
 
-  public class BradypusOnix2XmlMetadataExtractor extends SourceXmlMetadataExtractor {
+  public class BradypusOnix3XmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.
-      if (Onix2Helper == null) {
-        Onix2Helper = new Onix2BooksSchemaHelper();
+      if (Onix3Helper == null) {
+        Onix3Helper = new Onix3BooksSchemaHelper();
       }
-      return Onix2Helper;
+      return Onix3Helper;
     }
 
 
@@ -82,6 +82,17 @@ public class BradypusOnix2XmlMetadataExtractorFactory extends SourceXmlMetadataE
       returnList.add(filenameValue);
       return returnList;
     }
+    
+    
+    /*
+     * Bradypus is sending bogus dois...leave
+     * There is no way to remove a cooked value
+     * We could add a custom pre-commit check that removes the raw value
+     * but what happens if it just goes forward? Will it just not emit that
+     * value or will the extraction fail??
+     * 
+     */
+ 
 
   }
 }
