@@ -6,7 +6,7 @@ in TDB files from one or more old values to a new value.'''
 # $Id$
 
 __copyright__ = '''\
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 '''
 
@@ -120,6 +120,13 @@ settings to change from and a proxy setting to change to, specified with
 --from-proxy or --to-proxy to specify an unset proxy setting. The special value
 'ANY' can be used in --from-proxy to mean any current value (set or unset).
 
+Alternatively, the request can be to change the proxy setting to one of several
+values. With --to-proxy-round-robin, the various comma-separated values given
+are used one after the other to set the proxy setting. With --to-proxy-random,
+one of the comma-separated values given is picked at random to set the proxy
+setting of each target AU. 'NONE' can be used (but it is not expected to have a
+practical application in this context).
+
 Note that in TDB parlance, the name of the proxy trait is 'hidden[proxy]' rather
 than 'proxy'.
 
@@ -136,11 +143,12 @@ backup copy is made under 'a.tdb.bak'. If that backup file already exists, it is
 overwritten.
 '''
 
-__version__ = '0.2.0'
+__version__ = '0.3.0'
 
 import cStringIO
 import optparse
 import os.path
+import random
 import re
 import subprocess
 import sys
@@ -157,22 +165,24 @@ class _TdbEditOptions(object):
     Makes a command line parser suitable for the command abstraction defined by
     this class.
     '''
-    usage = '%prog [--from-status=CSSTATUS --to-status=STATUS] [--from-status2=CSSTATUS --to-status2=STATUS] [--from-proxy=CSPROXY --to-proxy=PROXY] [--auids=AFILE|--auid=AUID] FILE...'
+    usage = '%prog [--from-status=CSSTATUS --to-status=STATUS] [--from-status2=CSSTATUS --to-status2=STATUS] [--from-proxy=CSPROXY [--to-proxy=PROXY|--to-proxy-round-robin=CSPROXY]] [--auids=AFILE|--auid=AUID] FILE...'
     parser = optparse.OptionParser(version=__version__, usage=usage, description=__doc__)
     parser.add_option('--tutorial', action='store_true', help='show tutorial and exit')
     group = optparse.OptionGroup(parser, 'AUIDs')
     group.add_option('--auid', action='append', default=list(), help='add AUID to list of target AUIDs')
     group.add_option('--auids', action='append', default=list(), metavar='AFILE', help='add AUIDs in AFILE to list of target AUIDs')
     parser.add_option_group(group)
-    group = optparse.OptionGroup(parser, 'Status changes (--from/--to and --from2/--to2 are deprecated)')
-    group.add_option('--from-status', '--from', default=None, metavar='CSSTATUS', help='status values to update from (comma-separated)')
-    group.add_option('--from-status2', '--from2', default=None, metavar='STATUS', help='status2 values to update from (comma-separated)')
-    group.add_option('--to-status', '--to', default=None, metavar='CSSTATUS', help='status value to update to')
-    group.add_option('--to-status2', '--to2', default=None, metavar='STATUS', help='status2 value to update to')
+    group = optparse.OptionGroup(parser, 'Status changes')
+    group.add_option('--from-status', default=None, metavar='CSSTATUS', help='status values to update from (comma-separated)')
+    group.add_option('--from-status2', default=None, metavar='CSSTATUS', help='status2 values to update from (comma-separated)')
+    group.add_option('--to-status', default=None, metavar='STATUS', help='status value to update to')
+    group.add_option('--to-status2', default=None, metavar='STATUS', help='status2 value to update to')
     parser.add_option_group(group)
     group = optparse.OptionGroup(parser, 'Proxy changes')
     group.add_option('--from-proxy', metavar='CSPROXY', help='proxy settings to update from (comma-separated; can include %s, %s)' % (_NONE, _ANY))
     group.add_option('--to-proxy', metavar='PROXY', help='proxy setting to update to (can be %s)' % (_NONE,))
+    group.add_option('--to-proxy-random', metavar='CSPROXY', help='proxy settings to update to, assigned randomly')
+    group.add_option('--to-proxy-round-robin', metavar='CSPROXY', help='proxy settings to update to, assigned in round robin')
     parser.add_option_group(group)
     return parser
 
@@ -187,13 +197,19 @@ class _TdbEditOptions(object):
     - opts: the first half of the tuple returned by optparse (options)
     - args: the second half of the tuple returned by optparse (other arguments)
     Defines these fields:
-    - from_status (list of strings) and to_status (string): if acting on status,
-    statuses to change from and status to change to (or both None)
-    - from_status2 (list of strings) and to_status2 (string): if acting on
-    status2, statuses to change from and status to change to (or both None)
-    - from_proxy (list of strings) and to_proxy (string): if acting on the proxy
-    setting, proxies to change from (including _NONE, _ANY) and proxy to change
-    to (possibly _NONE)
+    - status_change (boolean): if acting on status
+    - status2_change (boolean): if acting on status2
+    - proxy_change (boolean): if acting on proxy setting
+    - from_status (set of strings) and to_status (string): if acting on status,
+    statuses to change from and status to change to
+    - from_status2 (set of strings) and to_status2 (string): if acting on
+    status2, statuses to change from and status to change to
+    - from_proxy (set of strings) and to_proxy (list of strings): if acting on
+    the proxy setting, proxies to change from (including _NONE, _ANY) and
+    possible proxies to change to (possibly _NONE)
+    - __proxy (generator of strings): bottomless generator of values from
+    to_proxy based on the requested type of proxy change; see __proxy_random(),
+    __proxy_round_robin() and next_proxy()
     - auids (list of strings): AUIDs the changes apply to
     - files (list of strings): files the changes apply to
     '''
@@ -203,24 +219,32 @@ class _TdbEditOptions(object):
       parser.print_help()
       print __tutorial__
       sys.exit()
-    # from_status/to_status
+    # status_change/from_status/to_status
     if (opts.from_status is None) != (opts.to_status is None):
       parser.error('--from-status and --to-status must be specified together')
-    if opts.from_status is None: self.from_status = None
-    else: self.from_status = [x.strip() for x in opts.from_status.split(',')]
-    self.to_status = opts.to_status
-    # from_status2/to_status2
+    self.status_change = opts.from_status is not None
+    if self.status_change:
+      self.from_status = set([x.strip() for x in opts.from_status.split(',')])
+      self.to_status = opts.to_status
+    # status2_change/from_status2/to_status2
     if (opts.from_status2 is None) != (opts.to_status2 is None):
       parser.error('--from-status2 and --to-status2 must be specified together')
-    if opts.from_status2 is None: self.from_status2 = None
-    else: self.from_status2 = [x.strip() for x in opts.from_status2.split(',')]
-    self.to_status2 = opts.to_status2
-    # from_proxy/to_proxy
-    if (opts.from_proxy is None) != (opts.to_proxy is None):
-      parser.error('--from-proxy and --to-proxy must be specified together')
-    if opts.from_proxy is None: self.from_proxy = None
-    else: self.from_proxy = [x.strip() for x in opts.from_proxy.split(',')]
-    self.to_proxy = opts.to_proxy
+    self.status2_change = opts.from_status2 is not None
+    if self.status2_change:
+      self.from_status2 = set([x.strip() for x in opts.from_status2.split(',')])
+      self.to_status2 = opts.to_status2
+    # proxy_change/from_proxy/to_proxy/__proxy
+    _toproxy = [opts.to_proxy, opts.to_proxy_random, opts.to_proxy_round_robin]
+    if (opts.from_proxy is None) != (not any(_toproxy)):
+      parser.error('--from-proxy and --to-proxy/--to-proxy-random/-to-proxy-round-robin must be specified together')
+    if len(filter(None, _toproxy)) > 1:
+      parser.error('only one of --to-proxy, --to-proxy-random, -to-proxy-round-robin can be requested')
+    self.proxy_change = opts.from_proxy is not None
+    if self.proxy_change:
+      self.from_proxy = set([x.strip() for x in opts.from_proxy.split(',')])
+      self.to_proxy = [x.strip() for x in opts.to_proxy or (opts.to_proxy_random or opts.to_proxy_round_robin).split(',')]
+      if opts.to_proxy_random is not None: self.__proxy = self.__proxy_random()
+      else: self.__proxy = self.__proxy_round_robin()
     # files
     if len(args) == 0: parser.error('at least one file is required')
     self.files = args[:]
@@ -228,6 +252,19 @@ class _TdbEditOptions(object):
     self.auids = opts.auid[:]
     for f in opts.auids: self.auids.extend(_file_lines(f))
     if len(self.auids) == 0: parser.error('at least one target AUID is required')
+
+  def __proxy_random(self):
+    '''Bottomless generator of strings returning random values from to_proxy.'''
+    while True: yield random.choice(self.to_proxy)
+    
+  def __proxy_round_robin(self):
+    '''Bottomless generator over the values from to_proxy in a round robin.'''
+    while True:
+      for x in self.to_proxy: yield x
+
+  def next_proxy(self):
+    '''Returns the next desired proxy setting value.'''
+    return next(self.__proxy)
 
 class _Au(object):
   '''An internal class to represent an AU entry.'''
@@ -374,7 +411,7 @@ def _build_au_index(options):
             sys.stderr.write('%s:%s: implicit statement does not specify \'status\'\n' % (fstr, lineindex + 1))
             continue1 = True # next file
             break
-          if options.from_status2 is not None and 'status2' not in implmap:
+          if options.status2_change is not None and 'status2' not in implmap:
             errors = errors + 1
             sys.stderr.write('%s:%s: implicit statement does not specify \'status2\'\n' % (fstr, lineindex + 1))
             continue1 = True # next file
@@ -409,26 +446,27 @@ def _change_aus(options, auids, aus):
       continue # next AUID
     # Check that the changes are valid
     au = aus[index]
-    if options.from_status is not None and au.get_status() not in options.from_status:
+    if options.status_change and au.get_status() not in options.from_status:
       errors = errors + 1
       sys.stderr.write('%s:%s: %s: status \'%s\' is not one of %s\n' % (au.filestr, au.lineindex + 1, au.get_name(), au.get_status(), ', '.join(options.from_status)))
       continue # next AUID
-    if options.from_status2 is not None and au.get_status2() not in options.from_status2:
+    if options.status2_change and au.get_status2() not in options.from_status2:
       errors = errors + 1
       sys.stderr.write('%s:%s: %s: status2 \'%s\' is not one of %s\n' % (au.filestr, au.lineindex + 1, au.get_name(), au.get_status2(), ', '.join(options.from_status2)))
       continue # next AUID
-    if options.from_proxy is not None and _ANY not in options.from_proxy:
+    if options.proxy_change and _ANY not in options.from_proxy:
       found = au.get_proxy() or _NONE
       if found not in options.from_proxy:
         errors = errors + 1
         sys.stderr.write('%s:%s: %s: proxy \'%s\' is not one of %s\n' % (au.filestr, au.lineindex + 1, au.get_name(), found, ', '.join(options.from_proxy)))
         continue # next AUID
     # Perform requested changes if necessary
-    if options.from_status is not None: au.set_status(options.to_status)
-    if options.from_status2 is not None: au.set_status2(options.to_status2)
-    if options.from_proxy is not None:
-      if options.to_proxy == _NONE: au.set_proxy(None)
-      else: au.set_proxy(options.to_proxy)
+    if options.status_change: au.set_status(options.to_status)
+    if options.status2_change: au.set_status2(options.to_status2)
+    if options.proxy_change:
+      target = options.next_proxy()
+      if target == _NONE: target = None
+      au.set_proxy(target)
   if errors > 0: sys.exit('%d %s; exiting' % (errors, 'error' if errors == 1 else 'errors'))
 
 def _alter_files(options, aus):
@@ -460,14 +498,6 @@ def _alter_files(options, aus):
     # Write out modified file
     with open(touch_file, 'w') as f: f.writelines(lines)
 
-def _deprecation_warning():
-  '''Displays a deprecation warning to standard error if necessary.'''
-  for arg in sys.argv[1:]:
-    for dep in ['--from=', '--to=', '--from2=', '--to2=']:
-      if arg.startswith(dep):
-        sys.stderr.write('Warning: --from/--to and --from2/--to2 are deprecated\n')
-        return
-
 def _file_lines(fstr):
   '''
   Returns an array of all the lines in the file fstr that do not begin
@@ -481,8 +511,6 @@ def _file_lines(fstr):
 
 def _main():
   '''Main method.'''
-  # Deprecation warning
-  _deprecation_warning()
   # Parse command line
   parser = _TdbEditOptions.make_parser()
   (opts, args) = parser.parse_args()
