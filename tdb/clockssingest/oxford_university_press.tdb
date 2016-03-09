@@ -15395,7 +15395,7 @@
     param[base_url] = http://jue.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < testing ; exists ; 2015 ; Journal of Urban Ecology Volume 1 ; 1 ; >
+    au < ready ; exists ; 2015 ; Journal of Urban Ecology Volume 1 ; 1 ; >
     au < expected ; exists ; 2016 ; Journal of Urban Ecology Volume 2 ; 2 ; >
 
   }
@@ -24475,7 +24475,7 @@
       au < testing ; exists ; 2012 ; American Journal of Legal History Volume 52 ; 52 ; >
       au < testing ; exists ; 2013 ; American Journal of Legal History Volume 53 ; 53 ; >
       au < testing ; exists ; 2014 ; American Journal of Legal History Volume 54 ; 54 ; >
-      au < testing ; exists ; 2015 ; American Journal of Legal History Volume 55 ; 55 ; >
+      au < ready ; exists ; 2015 ; American Journal of Legal History Volume 55 ; 55 ; >
       au < expected ; exists ; 2016 ; American Journal of Legal History Volume 56 ; 56 ; >
 
   }
