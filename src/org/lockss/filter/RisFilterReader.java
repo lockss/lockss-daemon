@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,6 +37,7 @@ import java.util.*;
 import java.util.regex.*;
 
 import org.apache.commons.io.input.ReaderInputStream;
+import org.lockss.extractor.RisMetadataExtractor;
 import org.lockss.util.LineRewritingReader;
 
 /**
@@ -51,12 +52,15 @@ public class RisFilterReader extends LineRewritingReader {
 
   /**
    * <p>
-   * The default (preferred) pattern for recognizing tag lines.
+   * The default (preferred) pattern for recognizing tag lines. Currently this
+   * is {@link RisMetadataExtractor#DEFAULT_RIS_PATTERN} which captures the two-
+   * character tag as group 1.
    * </p>
    * 
    * @since 1.66
+   * @see RisMetadataExtractor#DEFAULT_RIS_PATTERN
    */
-  protected static final Pattern DEFAULT_TAG_PATTERN = Pattern.compile("^([A-Z][A-Z0-9])  - ");
+  protected static final Pattern DEFAULT_TAG_PATTERN = RisMetadataExtractor.DEFAULT_RIS_PATTERN;
   
   /**
    * <p>
