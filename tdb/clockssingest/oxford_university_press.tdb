@@ -6936,13 +6936,7 @@
     au < exists ; exists ; 2014 ; FEMS Microbiology Ecology Volume 89 ; 89 ; >
     au < exists ; exists ; 2014 ; FEMS Microbiology Ecology Volume 90 ; 90 ; >
     au < testing ; exists ; 2015 ; FEMS Microbiology Ecology Volume 91 ; 91 ; >
-    au < testing ; exists ; 2015 ; FEMS Microbiology Ecology Volume 92 ; 92 ; >
-    au < exists ; exists ; 2015 ; FEMS Microbiology Ecology Volume 93 ; 93 ; >
-    au < exists ; exists ; 2015 ; FEMS Microbiology Ecology Volume 94 ; 94 ; >
-    au < expected ; exists ; 2016 ; FEMS Microbiology Ecology Volume 95 ; 95 ; >
-    au < expected ; exists ; 2016 ; FEMS Microbiology Ecology Volume 96 ; 96 ; >
-    au < expected ; exists ; 2016 ; FEMS Microbiology Ecology Volume 97 ; 97 ; >
-    au < expected ; exists ; 2016 ; FEMS Microbiology Ecology Volume 98 ; 98 ; >
+    au < testing ; exists ; 2016 ; FEMS Microbiology Ecology Volume 92 ; 92 ; >
 
   }
 
@@ -17708,7 +17702,8 @@
     param[base_url] = http://nc.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < exists ; exists ; 2015 ; Neuroscience of Consciousness Volume 1 ; 1 ; >
+    au < exists ; exists ; 2015 ; Neuroscience of Consciousness Volume 2015 ; 2015 ; >
+    au < exists ; exists ; 2016 ; Neuroscience of Consciousness Volume 2016 ; 2016 ; >
 
   }
 
@@ -24687,8 +24682,7 @@
       param[base_url] = http://jole.oxfordjournals.org/
       pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-      au < exists ; exists ; 2015 ; Journal of Language Evolution Volume 2015 ; 2015 ; >
-      au < exists ; exists ; 2016 ; Journal of Language Evolution Volume 2016 ; 2016 ; >
+      au < exists ; exists ; 2016 ; Journal of Language Evolution Volume 1 ; 1 ; >
 
   }
 
