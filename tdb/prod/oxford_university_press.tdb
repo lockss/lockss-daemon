@@ -713,17 +713,38 @@
     param[base_url] = http://ajcp.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
+    #content available from 1931 volume 1 to 1999 volume 112
     
-    au < exists ; 2010 ; American Journal of Clinical Pathology Volume 133 ; 133 >
-    au < exists ; 2010 ; American Journal of Clinical Pathology Volume 134 ; 134 >
-    au < exists ; 2011 ; American Journal of Clinical Pathology Volume 135 ; 135 >
-    au < exists ; 2011 ; American Journal of Clinical Pathology Volume 136 ; 136 >
-    au < exists ; 2012 ; American Journal of Clinical Pathology Volume 137 ; 137 >
-    au < exists ; 2012 ; American Journal of Clinical Pathology Volume 138 ; 138 >
-    au < exists ; 2013 ; American Journal of Clinical Pathology Volume 139 ; 139 >
-    au < exists ; 2013 ; American Journal of Clinical Pathology Volume 140 ; 140 >
-    au < exists ; 2014 ; American Journal of Clinical Pathology Volume 141 ; 141 >
-    au < exists ; 2014 ; American Journal of Clinical Pathology Volume 142 ; 142 >
+    au < doNotProcess ; 2000 ; American Journal of Clinical Pathology Volume 113 ; 113 >
+    au < doNotProcess ; 2000 ; American Journal of Clinical Pathology Volume 114 ; 114 >
+    au < doNotProcess ; 2001 ; American Journal of Clinical Pathology Volume 115 ; 115 >
+    au < doNotProcess ; 2001 ; American Journal of Clinical Pathology Volume 116 ; 116 >
+    au < doNotProcess ; 2002 ; American Journal of Clinical Pathology Volume 117 ; 117 >
+    au < doNotProcess ; 2002 ; American Journal of Clinical Pathology Volume 118 ; 118 >
+    au < doNotProcess ; 2003 ; American Journal of Clinical Pathology Volume 119 ; 119 >
+    au < doNotProcess ; 2003 ; American Journal of Clinical Pathology Volume 120 ; 120 >
+    au < doNotProcess ; 2004 ; American Journal of Clinical Pathology Volume 121 ; 121 >
+    au < doNotProcess ; 2004 ; American Journal of Clinical Pathology Volume 122 ; 122 >
+    au < doNotProcess ; 2005 ; American Journal of Clinical Pathology Volume 123 ; 123 >
+    au < doNotProcess ; 2005 ; American Journal of Clinical Pathology Volume 124 ; 124 >
+    au < doNotProcess ; 2006 ; American Journal of Clinical Pathology Volume 125 ; 125 >
+    au < doNotProcess ; 2006 ; American Journal of Clinical Pathology Volume 126 ; 126 >
+    au < doNotProcess ; 2007 ; American Journal of Clinical Pathology Volume 127 ; 127 >
+    au < doNotProcess ; 2007 ; American Journal of Clinical Pathology Volume 128 ; 128 >
+    au < doNotProcess ; 2008 ; American Journal of Clinical Pathology Volume 129 ; 129 >
+    au < doNotProcess ; 2008 ; American Journal of Clinical Pathology Volume 130 ; 130 >
+    au < doNotProcess ; 2009 ; American Journal of Clinical Pathology Volume 131 ; 131 >
+    au < doNotProcess ; 2009 ; American Journal of Clinical Pathology Volume 132 ; 132 >
+    au < doNotProcess ; 2010 ; American Journal of Clinical Pathology Volume 133 ; 133 >
+    au < doNotProcess ; 2010 ; American Journal of Clinical Pathology Volume 134 ; 134 >
+    au < doNotProcess ; 2011 ; American Journal of Clinical Pathology Volume 135 ; 135 >
+    au < doNotProcess ; 2011 ; American Journal of Clinical Pathology Volume 136 ; 136 >
+    au < doNotProcess ; 2012 ; American Journal of Clinical Pathology Volume 137 ; 137 >
+    au < doNotProcess ; 2012 ; American Journal of Clinical Pathology Volume 138 ; 138 >
+    au < doNotProcess ; 2013 ; American Journal of Clinical Pathology Volume 139 ; 139 >
+    au < doNotProcess ; 2013 ; American Journal of Clinical Pathology Volume 140 ; 140 >
+    au < doNotProcess ; 2014 ; American Journal of Clinical Pathology Volume 141 ; 141 >
+    au < doNotProcess ; 2014 ; American Journal of Clinical Pathology Volume 142 ; 142 >
     au < manifest ; 2015 ; American Journal of Clinical Pathology Volume 143 ; 143 >
     au < manifest ; 2015 ; American Journal of Clinical Pathology Volume 144 ; 144 >
     au < manifest ; 2016 ; American Journal of Clinical Pathology Volume 145 ; 145 >
@@ -8167,6 +8188,9 @@
     au < manifest ; 2015 ; Geophysical Journal International Volume 202 ; 202 >
     au < manifest ; 2015 ; Geophysical Journal International Volume 203 ; 203 >
     au < manifest ; 2016 ; Geophysical Journal International Volume 204 ; 204 >
+    au < manifest ; 2016 ; Geophysical Journal International Volume 205 ; 205 >
+    au < expected ; 2016 ; Geophysical Journal International Volume 206 ; 206 >
+    au < expected ; 2016 ; Geophysical Journal International Volume 207 ; 207 >
 
   }
 
@@ -17658,6 +17682,15 @@
     au < manifest ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 454 ; 454 >
     au < manifest ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 455 ; 455 >
     au < manifest ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 456 ; 456 >
+    au < manifest ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 457 ; 457 >
+    au < exists ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 458 ; 458 >
+    au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 459 ; 459 >
+    au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 460 ; 460 >
+    au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 461 ; 461 >
+    au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 462 ; 462 >
+    au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 463 ; 463 >
+    au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 464 ; 464 >
+    au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 465 ; 465 >
 
   }
 

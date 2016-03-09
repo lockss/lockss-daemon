@@ -739,7 +739,28 @@
     
     param[base_url] = http://ajcp.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
+    #content available from 1931 volume 1 to 1999 volume 112
     
+    au < exists ; exists ; 2000 ; American Journal of Clinical Pathology Volume 113 ; 113 ; >
+    au < exists ; exists ; 2000 ; American Journal of Clinical Pathology Volume 114 ; 114 ; >
+    au < exists ; exists ; 2001 ; American Journal of Clinical Pathology Volume 115 ; 115 ; >
+    au < exists ; exists ; 2001 ; American Journal of Clinical Pathology Volume 116 ; 116 ; >
+    au < exists ; exists ; 2002 ; American Journal of Clinical Pathology Volume 117 ; 117 ; >
+    au < exists ; exists ; 2002 ; American Journal of Clinical Pathology Volume 118 ; 118 ; >
+    au < exists ; exists ; 2003 ; American Journal of Clinical Pathology Volume 119 ; 119 ; >
+    au < exists ; exists ; 2003 ; American Journal of Clinical Pathology Volume 120 ; 120 ; >
+    au < exists ; exists ; 2004 ; American Journal of Clinical Pathology Volume 121 ; 121 ; >
+    au < exists ; exists ; 2004 ; American Journal of Clinical Pathology Volume 122 ; 122 ; >
+    au < exists ; exists ; 2005 ; American Journal of Clinical Pathology Volume 123 ; 123 ; >
+    au < exists ; exists ; 2005 ; American Journal of Clinical Pathology Volume 124 ; 124 ; >
+    au < exists ; exists ; 2006 ; American Journal of Clinical Pathology Volume 125 ; 125 ; >
+    au < exists ; exists ; 2006 ; American Journal of Clinical Pathology Volume 126 ; 126 ; >
+    au < exists ; exists ; 2007 ; American Journal of Clinical Pathology Volume 127 ; 127 ; >
+    au < exists ; exists ; 2007 ; American Journal of Clinical Pathology Volume 128 ; 128 ; >
+    au < exists ; exists ; 2008 ; American Journal of Clinical Pathology Volume 129 ; 129 ; >
+    au < exists ; exists ; 2008 ; American Journal of Clinical Pathology Volume 130 ; 130 ; >
+    au < exists ; exists ; 2009 ; American Journal of Clinical Pathology Volume 131 ; 131 ; >
+    au < exists ; exists ; 2009 ; American Journal of Clinical Pathology Volume 132 ; 132 ; >
     au < exists ; exists ; 2010 ; American Journal of Clinical Pathology Volume 133 ; 133 ; >
     au < exists ; exists ; 2010 ; American Journal of Clinical Pathology Volume 134 ; 134 ; >
     au < exists ; exists ; 2011 ; American Journal of Clinical Pathology Volume 135 ; 135 ; >
@@ -7981,6 +8002,9 @@
     au < crawling ; exists ; 2015 ; Geophysical Journal International Volume 202 ; 202 ; >
     au < crawling ; exists ; 2015 ; Geophysical Journal International Volume 203 ; 203 ; >
     au < manifest ; exists ; 2016 ; Geophysical Journal International Volume 204 ; 204 ; >
+    au < manifest ; exists ; 2016 ; Geophysical Journal International Volume 205 ; 205 ; >
+    au < expected ; exists ; 2016 ; Geophysical Journal International Volume 206 ; 206 ; >
+    au < expected ; exists ; 2016 ; Geophysical Journal International Volume 207 ; 207 ; >
 
   }
 
@@ -17028,6 +17052,15 @@
     au < crawling ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 454 ; 454 ; >
     au < crawling ; exists ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 455 ; 455 ; >
     au < manifest ; exists ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 456 ; 456 ; >
+    au < manifest ; exists ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 457 ; 457 ; >
+    au < exists ; exists ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 458 ; 458 ; >
+    au < expected ; exists ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 459 ; 459 ; >
+    au < expected ; exists ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 460 ; 460 ; >
+    au < expected ; exists ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 461 ; 461 ; >
+    au < expected ; exists ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 462 ; 462 ; >
+    au < expected ; exists ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 463 ; 463 ; >
+    au < expected ; exists ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 464 ; 464 ; >
+    au < expected ; exists ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 465 ; 465 ; >
 
   }
 
