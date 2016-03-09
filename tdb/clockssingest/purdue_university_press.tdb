@@ -44,11 +44,12 @@
     au < manifest ; exists ; 2008 ; Against the Grain Volume 20 ; 20 ; >
     au < manifest ; exists ; 2009 ; Against the Grain Volume 21 ; 21 ; >
     au < manifest ; exists ; 2010 ; Against the Grain Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2011 ; Against the Grain Volume 23 ; 23 ; >
+    au < testing ; exists ; 2011 ; Against the Grain Volume 23 ; 23 ; >
     au < expected ; exists ; 2012 ; Against the Grain Volume 24 ; 24 ; >
     au < expected ; exists ; 2013 ; Against the Grain Volume 25 ; 25 ; >
     au < expected ; exists ; 2014 ; Against the Grain Volume 26 ; 26 ; >
     au < expected ; exists ; 2015 ; Against the Grain Volume 27 ; 27 ; > #embargoed 4 years.
+    au < expected ; exists ; 2016 ; Against the Grain Volume 28 ; 28 ; > #embargoed 4 years.
 
   }
   
@@ -81,6 +82,7 @@
     au < crawling ; exists ; 2013 ; CLCWeb: Comparative Literature and Culture Volume 15 ; 15 ; >
     au < finished ; crawling ; 2014 ; CLCWeb: Comparative Literature and Culture Volume 16 ; 16 ; >
     au < crawling ; exists ; 2015 ; CLCWeb: Comparative Literature and Culture Volume 17 ; 17 ; >
+    au < expected ; exists ; 2016 ; CLCWeb: Comparative Literature and Culture Volume 18 ; 18 ; >
  
   }
 
@@ -126,6 +128,7 @@
     au < crawling ; exists ; 2013 ; Interdisciplinary Journal of Problem-Based Learning Volume 7 ; 7 ; >
     au < finished ; finished ; 2014 ; Interdisciplinary Journal of Problem-Based Learning Volume 8 ; 8 ; >
     au < crawling ; exists ; 2015 ; Interdisciplinary Journal of Problem-Based Learning Volume 9 ; 9 ; >
+    au < expected ; exists ; 2016 ; Interdisciplinary Journal of Problem-Based Learning Volume 10 ; 10 ; >
 
   }
   
@@ -146,6 +149,7 @@
     au < crawling ; exists ; 2013 ; Journal of Aviation Technology and Engineering Volume 3 ; 3 ; >
     au < finished ; finished ; 2014 ; Journal of Aviation Technology and Engineering Volume 4 ; 4 ; >
     au < crawling ; exists ; 2015 ; Journal of Aviation Technology and Engineering Volume 5 ; 5 ; >
+    au < expected ; exists ; 2016 ; Journal of Aviation Technology and Engineering Volume 6 ; 6 ; >
 
   }
   
@@ -190,6 +194,7 @@
     au < crawling ; exists ; 2013 ; Journal of Pre-College Engineering Education Research Volume 3 ; 3 ; >
     au < finished ; finished ; 2014 ; Journal of Pre-College Engineering Education Research Volume 4 ; 4 ; >
     au < crawling ; exists ; 2015 ; Journal of Pre-College Engineering Education Research Volume 5 ; 5 ; >
+    au < expected ; exists ; 2016 ; Journal of Pre-College Engineering Education Research Volume 6 ; 6 ; >
     
   }
 
@@ -213,6 +218,7 @@
     au < finished ; crawling ; 2013 ; Journal of Problem Solving Research Volume 6 ; 6 ; >
     au < finished ; finished ; 2014 ; Journal of Problem Solving Research Volume 7 ; 7 ; >
     au < crawling ; exists ; 2015 ; Journal of Problem Solving Research Volume 8 ; 8 ; >
+    au < expected ; exists ; 2016 ; Journal of Problem Solving Research Volume 9 ; 9 ; >
 
   }
   
@@ -238,6 +244,7 @@
     au < finished ; finished ; 2013 ; Journal of Southeast Asian American Education and Advancement Volume 8 ; 8 ; >
     au < finished ; finished ; 2014 ; Journal of Southeast Asian American Education and Advancement Volume 9 ; 9 ; >
     au < crawling ; exists ; 2015 ; Journal of Southeast Asian American Education and Advancement Volume 10 ; 10 ; >
+    au < expected ; exists ; 2016 ; Journal of Southeast Asian American Education and Advancement Volume 11 ; 11 ; >
 
   }
   
