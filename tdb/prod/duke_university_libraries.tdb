@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Duke University Libraries
+
+  >
+  
+  plugin = org.lockss.plugin.ojs2.OJS2Plugin
+  param[base_url] = http://grbs.library.duke.edu/
+  implicit < status ; year ; name ; volume ; param[year] >
+
+  
+  {
+
+    title < 
+      name = Greek, Roman and Byzantine Studies ;
+      eissn = 2159-3159 ;
+      issnl = 0017-3916
+      
+    >
+    param[journal_id] = grbs
+
+    au < exists ; 2010 ; Greek, Roman and Byzantine Studies Volume 50 ; 50 ; 2010 >
+    au < exists ; 2011 ; Greek, Roman and Byzantine Studies Volume 51 ; 51 ; 2011 >
+    au < exists ; 2012 ; Greek, Roman and Byzantine Studies Volume 52 ; 52 ; 2012 >
+    au < exists ; 2013 ; Greek, Roman and Byzantine Studies Volume 53 ; 53 ; 2013 >
+    au < exists ; 2014 ; Greek, Roman and Byzantine Studies Volume 54 ; 54 ; 2014 >
+    au < exists ; 2015 ; Greek, Roman and Byzantine Studies Volume 55 ; 55 ; 2015 >
+    au < testing ; 2016 ; Greek, Roman and Byzantine Studies Volume 56 ; 56 ; 2016 >
+   
+  }
+  
+}
