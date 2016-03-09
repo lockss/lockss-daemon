@@ -420,9 +420,9 @@
     au < manifest ; exists ; 2010 ; 18 ; Acta Comportamentalia Volume 18 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 19 ; Acta Comportamentalia Volume 19 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 20 ; Acta Comportamentalia Volume 20 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 21 ; Acta Comportamentalia Volume 21 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 22 ; Acta Comportamentalia Volume 22 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 23 ; Acta Comportamentalia Volume 23 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 21 ; Acta Comportamentalia Volume 21 ; 2013 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 22 ; Acta Comportamentalia Volume 22 ; 2014 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2015 ; 23 ; Acta Comportamentalia Volume 23 ; 2015 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -939,8 +939,8 @@
     au < manifest ; exists ; 2010 ; 23-24 ; Actualidades en psicología Volume 23-24 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 25 ; Actualidades en psicología Volume 25 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 26 ; Actualidades en psicología Volume 26 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 27 ; Actualidades en psicología Volume 27 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 28 ; Actualidades en psicología Volume 28 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 27 ; Actualidades en psicología Volume 27 ; 2013 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 28 ; Actualidades en psicología Volume 28 ; 2014 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -1459,8 +1459,8 @@
     au < manifest ; exists ; 2010 ; 2010 ; Aletheia Volume 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Aletheia Volume 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 2012 ; Aletheia Volume 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Aletheia Volume 2013 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Aletheia Volume 2014 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 2013 ; Aletheia Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2014 ; 2014 ; Aletheia Volume 2014 ; 2014 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -1541,8 +1541,8 @@
     au < manifest ; exists ; 2009 ; 14 ; Alternativas en Psicología Volume 14 ; 2009 ; >
     au < manifest ; exists ; 2010 ; 15 ; Alternativas en Psicología Volume 15 ; 2010 ; >
     au < manifest ; exists ; 2012 ; 16 ; Alternativas en Psicología Volume 16 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 17 ; Alternativas en Psicología Volume 17 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 18 ; Alternativas en Psicología Volume 18 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 17 ; Alternativas en Psicología Volume 17 ; 2013 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 18 ; Alternativas en Psicología Volume 18 ; 2014 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -2175,8 +2175,8 @@
     param[journal_issn] = 2316-5197
 
     au < manifest ; exists ; 2012 ; 1 ; Analytica: Revista de Psicanálise Volume 1 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 2 ; Analytica: Revista de Psicanálise Volume 2 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 3 ; Analytica: Revista de Psicanálise Volume 3 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 2 ; Analytica: Revista de Psicanálise Volume 2 ; 2013 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2014 ; 3 ; Analytica: Revista de Psicanálise Volume 3 ; 2014 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -3161,9 +3161,9 @@
     au < manifest ; exists ; 2010 ; 62 ; Arquivos Brasileiros de Psicologia Volume 62 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 63 ; Arquivos Brasileiros de Psicologia Volume 63 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 64 ; Arquivos Brasileiros de Psicologia Volume 64 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 65 ; Arquivos Brasileiros de Psicologia Volume 65 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 66 ; Arquivos Brasileiros de Psicologia Volume 66 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 67 ; Arquivos Brasileiros de Psicologia Volume 67 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 65 ; Arquivos Brasileiros de Psicologia Volume 65 ; 2013 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 66 ; Arquivos Brasileiros de Psicologia Volume 66 ; 2014 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2015 ; 67 ; Arquivos Brasileiros de Psicologia Volume 67 ; 2015 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -3497,9 +3497,9 @@
     au < manifest ; exists ; 2010 ; 9 ; Avaliação Psicológica Volume 9 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 10 ; Avaliação Psicológica Volume 10 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 11 ; Avaliação Psicológica Volume 11 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 12 ; Avaliação Psicológica Volume 12 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 13 ; Avaliação Psicológica Volume 13 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 14 ; Avaliação Psicológica Volume 14 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 12 ; Avaliação Psicológica Volume 12 ; 2013 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 2014 ; 13 ; Avaliação Psicológica Volume 13 ; 2014 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2015 ; 14 ; Avaliação Psicológica Volume 14 ; 2015 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -3704,7 +3704,7 @@
     au < manifest ; exists ; 2010 ; 2010 ; Barbaroi Volume 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Barbaroi Volume 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 2012 ; Barbaroi Volume 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Barbaroi Volume 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; 2013 ; Barbaroi Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -3937,8 +3937,8 @@
     au < manifest ; exists ; 2008 ; 28 ; Boletim - Academia Paulista de Psicologia Volume 28 ; 2008 ; >
     au < manifest ; exists ; 2009 ; 29 ; Boletim - Academia Paulista de Psicologia Volume 29 ; 2009 ; >
     au < manifest ; exists ; 2010 ; 30 ; Boletim - Academia Paulista de Psicologia Volume 30 ; 2010 ; >
-    au < manifest ; exists ; 2013 ; 33 ; Boletim - Academia Paulista de Psicologia Volume 33 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 34 ; Boletim - Academia Paulista de Psicologia Volume 34 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 33 ; Boletim - Academia Paulista de Psicologia Volume 33 ; 2013 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 2014 ; 34 ; Boletim - Academia Paulista de Psicologia Volume 34 ; 2014 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -3979,8 +3979,8 @@
     au < manifest ; exists ; 2010 ; 60 ; Boletim de Psicologia Volume 60 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 61 ; Boletim de Psicologia Volume 61 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 62 ; Boletim de Psicologia Volume 62 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 63 ; Boletim de Psicologia Volume 63 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 64 ; Boletim de Psicologia Volume 64 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 63 ; Boletim de Psicologia Volume 63 ; 2013 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 64 ; Boletim de Psicologia Volume 64 ; 2014 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -5338,7 +5338,7 @@
     param[journal_issn] = 1413-6295
 
     au < manifest ; exists ; 2012 ; 34 ; Cadernos de psicanálise (Rio de Janeiro) Volume 34 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 35 ; Cadernos de psicanálise (Rio de Janeiro) Volume 35 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; 35 ; Cadernos de psicanálise (Rio de Janeiro) Volume 35 ; 2013 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -5359,8 +5359,8 @@
     au < manifest ; exists ; 2010 ; 13 ; Cadernos de Psicologia Social do Trabalho Volume 13 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 14 ; Cadernos de Psicologia Social do Trabalho Volume 14 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 15 ; Cadernos de Psicologia Social do Trabalho Volume 15 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 16 ; Cadernos de Psicologia Social do Trabalho Volume 16 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 17 ; Cadernos de Psicologia Social do Trabalho Volume 17 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 16 ; Cadernos de Psicologia Social do Trabalho Volume 16 ; 2013 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 17 ; Cadernos de Psicologia Social do Trabalho Volume 17 ; 2014 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -6204,7 +6204,7 @@
     au < manifest ; exists ; 2010 ; 15 ; Ciências & Cognição Volume 15 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 16 ; Ciências & Cognição Volume 16 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 17 ; Ciências & Cognição Volume 17 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 18 ; Ciências & Cognição Volume 18 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; 18 ; Ciências & Cognição Volume 18 ; 2013 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -6867,9 +6867,9 @@
     au < manifest ; exists ; 2010 ; 18 ; Construção psicopedagógica Volume 18 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 19 ; Construção psicopedagógica Volume 19 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 20 ; Construção psicopedagógica Volume 20 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 21 ; Construção psicopedagógica Volume 21 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 22 ; Construção psicopedagógica Volume 22 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 23 ; Construção psicopedagógica Volume 23 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 21 ; Construção psicopedagógica Volume 21 ; 2013 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 2014 ; 22 ; Construção psicopedagógica Volume 22 ; 2014 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2015 ; 23 ; Construção psicopedagógica Volume 23 ; 2015 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -6951,7 +6951,7 @@
     au < manifest ; exists ; 2010 ; 3 ; Contextos Clínicos Volume 3 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 4 ; Contextos Clínicos Volume 4 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 5 ; Contextos Clínicos Volume 5 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 6 ; Contextos Clínicos Volume 6 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; 6 ; Contextos Clínicos Volume 6 ; 2013 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -7134,7 +7134,7 @@
     au < manifest ; exists ; 2010 ; 4 ; Cuadernos de neuropsicología Volume 4 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 5 ; Cuadernos de neuropsicología Volume 5 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 6 ; Cuadernos de neuropsicología Volume 6 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 7 ; Cuadernos de neuropsicología Volume 7 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; 7 ; Cuadernos de neuropsicología Volume 7 ; 2013 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -9670,9 +9670,9 @@
     au < manifest ; exists ; 2010 ; 15 ; Estilos da Clinica Volume 15 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 16 ; Estilos da Clinica Volume 16 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 17 ; Estilos da Clinica Volume 17 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 18 ; Estilos da Clinica Volume 18 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 19 ; Estilos da Clinica Volume 19 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 20 ; Estilos da Clinica Volume 20 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 18 ; Estilos da Clinica Volume 18 ; 2013 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 19 ; Estilos da Clinica Volume 19 ; 2014 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2015 ; 20 ; Estilos da Clinica Volume 20 ; 2015 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -10286,9 +10286,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; Estudos de Psicanálise Volume 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Estudos de Psicanálise Volume 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 2012 ; Estudos de Psicanálise Volume 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Estudos de Psicanálise Volume 2013 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Estudos de Psicanálise Volume 2014 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Estudos de Psicanálise Volume 2015 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 2013 ; Estudos de Psicanálise Volume 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 2014 ; 2014 ; Estudos de Psicanálise Volume 2014 ; 2014 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2015 ; 2015 ; Estudos de Psicanálise Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -10378,9 +10378,9 @@
     au < manifest ; exists ; 2010 ; 10 ; Estudos e Pesquisas em Psicologia Volume 10 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 11 ; Estudos e Pesquisas em Psicologia Volume 11 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 12 ; Estudos e Pesquisas em Psicologia Volume 12 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 13 ; Estudos e Pesquisas em Psicologia Volume 13 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 14 ; Estudos e Pesquisas em Psicologia Volume 14 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 15 ; Estudos e Pesquisas em Psicologia Volume 15 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 13 ; Estudos e Pesquisas em Psicologia Volume 13 ; 2013 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2014 ; 14 ; Estudos e Pesquisas em Psicologia Volume 14 ; 2014 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 2015 ; 15 ; Estudos e Pesquisas em Psicologia Volume 15 ; 2015 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -10459,8 +10459,8 @@
     au < manifest ; exists ; 2010 ; 1 ; Estudos Interdisciplinares em Psicologia Volume 1 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 2 ; Estudos Interdisciplinares em Psicologia Volume 2 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 3 ; Estudos Interdisciplinares em Psicologia Volume 3 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 4 ; Estudos Interdisciplinares em Psicologia Volume 4 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 5 ; Estudos Interdisciplinares em Psicologia Volume 5 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 4 ; Estudos Interdisciplinares em Psicologia Volume 4 ; 2013 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 5 ; Estudos Interdisciplinares em Psicologia Volume 5 ; 2014 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -10549,7 +10549,7 @@
 
     au < manifest ; exists ; 2011 ; 8 ; Eureka (Asunción) en Línea Volume 8 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 9 ; Eureka (Asunción) en Línea Volume 9 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 10 ; Eureka (Asunción) en Línea Volume 10 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; 10 ; Eureka (Asunción) en Línea Volume 10 ; 2013 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -11309,8 +11309,8 @@
     au < manifest ; exists ; 2010 ; 3 ; Gerais : Revista Interinstitucional de Psicologia Volume 3 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 4 ; Gerais : Revista Interinstitucional de Psicologia Volume 4 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 5 ; Gerais : Revista Interinstitucional de Psicologia Volume 5 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 6 ; Gerais : Revista Interinstitucional de Psicologia Volume 6 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 7 ; Gerais : Revista Interinstitucional de Psicologia Volume 7 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 6 ; Gerais : Revista Interinstitucional de Psicologia Volume 6 ; 2013 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 7 ; Gerais : Revista Interinstitucional de Psicologia Volume 7 ; 2014 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -11994,9 +11994,9 @@
     au < manifest ; exists ; 2010 ; 33 ; Ide Volume 33 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 34 ; Ide Volume 34 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 35 ; Ide Volume 35 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 35-36 ; Ide Volume 35-36 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 36-37 ; Ide Volume 36-37 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 37 ; Ide Volume 37 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 35-36 ; Ide Volume 35-36 ; 2013 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2014 ; 36-37 ; Ide Volume 36-37 ; 2014 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 2015 ; 37 ; Ide Volume 37 ; 2015 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -13627,9 +13627,9 @@
     au < manifest ; exists ; 2010 ; 43 ; Jornal de Psicanálise Volume 43 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 44 ; Jornal de Psicanálise Volume 44 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 45 ; Jornal de Psicanálise Volume 45 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 46 ; Jornal de Psicanálise Volume 46 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 47 ; Jornal de Psicanálise Volume 47 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 48 ; Jornal de Psicanálise Volume 48 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 46 ; Jornal de Psicanálise Volume 46 ; 2013 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 47 ; Jornal de Psicanálise Volume 47 ; 2014 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2015 ; 48 ; Jornal de Psicanálise Volume 48 ; 2015 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -15716,7 +15716,7 @@
     au < manifest ; exists ; 2010 ; 8 ; Mental Volume 8 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 9 ; Mental Volume 9 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 10 ; Mental Volume 10 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 10 ; Mental Volume 10 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; 10 ; Mental Volume 10 ; 2013 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -16023,7 +16023,7 @@
     au < manifest ; exists ; 2010 ; 12 ; Natureza humana Volume 12 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 13 ; Natureza humana Volume 13 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 14 ; Natureza humana Volume 14 ; 2012 ; >
-    au < manifest ; exists ; 2015 ; 17 ; Natureza humana Volume 17 ; 2015 ; >
+    au < crawling ; exists ; 2015 ; 17 ; Natureza humana Volume 17 ; 2015 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -17143,9 +17143,9 @@
     param[base_url] = http://pepsic.bvsalud.org/
     param[journal_issn] = 1679-494X
 
-    au < manifest ; exists ; 2013 ; 17 ; Pensando familias Volume 17 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 18 ; Pensando familias Volume 18 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 19 ; Pensando familias Volume 19 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 17 ; Pensando familias Volume 17 ; 2013 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2014 ; 18 ; Pensando familias Volume 18 ; 2014 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 2015 ; 19 ; Pensando familias Volume 19 ; 2015 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -17330,9 +17330,9 @@
     au < manifest ; exists ; 2010 ; 1 ; Perspectivas em análise do comportamento Volume 1 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 2 ; Perspectivas em análise do comportamento Volume 2 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 3 ; Perspectivas em análise do comportamento Volume 3 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 4 ; Perspectivas em análise do comportamento Volume 4 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 5 ; Perspectivas em análise do comportamento Volume 5 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 6 ; Perspectivas em análise do comportamento Volume 6 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 4 ; Perspectivas em análise do comportamento Volume 4 ; 2013 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 5 ; Perspectivas em análise do comportamento Volume 5 ; 2014 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2015 ; 6 ; Perspectivas em análise do comportamento Volume 6 ; 2015 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -18386,9 +18386,9 @@
     au < manifest ; exists ; 2010 ; 22 ; Psicologia Clínica Volume 22 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 23 ; Psicologia Clínica Volume 23 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 24 ; Psicologia Clínica Volume 24 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 25 ; Psicologia Clínica Volume 25 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 26 ; Psicologia Clínica Volume 26 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 27 ; Psicologia Clínica Volume 27 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 25 ; Psicologia Clínica Volume 25 ; 2013 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 26 ; Psicologia Clínica Volume 26 ; 2014 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2015 ; 27 ; Psicologia Clínica Volume 27 ; 2015 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -18412,9 +18412,9 @@
     au < manifest ; exists ; 2010 ; 2010 ; Psicologia da Educação Volume 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Psicologia da Educação Volume 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 2012 ; Psicologia da Educação Volume 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Psicologia da Educação Volume 2013 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Psicologia da Educação Volume 2014 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Psicologia da Educação Volume 2015 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 2013 ; Psicologia da Educação Volume 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 2014 ; 2014 ; Psicologia da Educação Volume 2014 ; 2014 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2015 ; 2015 ; Psicologia da Educação Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -18434,8 +18434,8 @@
     au < manifest ; exists ; 2010 ; 4 ; Psicologia em Pesquisa Volume 4 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 5 ; Psicologia em Pesquisa Volume 5 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 6 ; Psicologia em Pesquisa Volume 6 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 7 ; Psicologia em Pesquisa Volume 7 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 8 ; Psicologia em Pesquisa Volume 8 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 7 ; Psicologia em Pesquisa Volume 7 ; 2013 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2014 ; 8 ; Psicologia em Pesquisa Volume 8 ; 2014 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -18457,8 +18457,8 @@
     au < manifest ; exists ; 2010 ; 16 ; Psicologia em Revista Volume 16 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 17 ; Psicologia em Revista Volume 17 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 18 ; Psicologia em Revista Volume 18 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 19 ; Psicologia em Revista Volume 19 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 20 ; Psicologia em Revista Volume 20 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 19 ; Psicologia em Revista Volume 19 ; 2013 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 20 ; Psicologia em Revista Volume 20 ; 2014 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -18474,9 +18474,9 @@
 
     au < manifest ; exists ; 2010 ; 1 ; Psicologia Ensino & Formação Volume 1 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 2 ; Psicologia Ensino & Formação Volume 2 ; 2011 ; >
-    au < manifest ; exists ; 2013 ; 4 ; Psicologia Ensino & Formação Volume 4 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 5 ; Psicologia Ensino & Formação Volume 5 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 6 ; Psicologia Ensino & Formação Volume 6 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 4 ; Psicologia Ensino & Formação Volume 4 ; 2013 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2014 ; 5 ; Psicologia Ensino & Formação Volume 5 ; 2014 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 2015 ; 6 ; Psicologia Ensino & Formação Volume 6 ; 2015 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -18526,8 +18526,8 @@
     au < manifest ; exists ; 2010 ; 8 ; Psicologia Hospitalar Volume 8 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 9 ; Psicologia Hospitalar Volume 9 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 10 ; Psicologia Hospitalar Volume 10 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 11 ; Psicologia Hospitalar Volume 11 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 12 ; Psicologia Hospitalar Volume 12 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 11 ; Psicologia Hospitalar Volume 11 ; 2013 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 12 ; Psicologia Hospitalar Volume 12 ; 2014 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -18550,7 +18550,7 @@
     au < manifest ; exists ; 2009 ; 2009 ; Psicologia para América Latina Volume 2009 ; 2009 ; >
     au < manifest ; exists ; 2010 ; 2010 ; Psicologia para América Latina Volume 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Psicologia para América Latina Volume 2011 ; 2011 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Psicologia para América Latina Volume 2013 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; 2013 ; Psicologia para América Latina Volume 2013 ; 2013 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -18963,9 +18963,9 @@
     au < manifest ; exists ; 2010 ; 12 ; Psicologia: teoria e prática Volume 12 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 13 ; Psicologia: teoria e prática Volume 13 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 14 ; Psicologia: teoria e prática Volume 14 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 15 ; Psicologia: teoria e prática Volume 15 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 16 ; Psicologia: teoria e prática Volume 16 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 17 ; Psicologia: teoria e prática Volume 17 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 15 ; Psicologia: teoria e prática Volume 15 ; 2013 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 16 ; Psicologia: teoria e prática Volume 16 ; 2014 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2015 ; 17 ; Psicologia: teoria e prática Volume 17 ; 2015 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -18986,7 +18986,7 @@
     au < manifest ; exists ; 2010 ; 14 ; Psicologo informacao Volume 14 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 15 ; Psicologo informacao Volume 15 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 16 ; Psicologo informacao Volume 16 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 17 ; Psicologo informacao Volume 17 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; 17 ; Psicologo informacao Volume 17 ; 2013 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -19609,9 +19609,9 @@
     au < manifest ; exists ; 2010 ; 32 ; Reverso Volume 32 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 33 ; Reverso Volume 33 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 34 ; Reverso Volume 34 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 35 ; Reverso Volume 35 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 36 ; Reverso Volume 36 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 37 ; Reverso Volume 37 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 35 ; Reverso Volume 35 ; 2013 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 36 ; Reverso Volume 36 ; 2014 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2015 ; 37 ; Reverso Volume 37 ; 2015 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -20312,9 +20312,9 @@
     au < manifest ; exists ; 2010 ; 20 ; Revista brasileira de crescimento e desenvolvimento humano Volume 20 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 21 ; Revista brasileira de crescimento e desenvolvimento humano Volume 21 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 22 ; Revista brasileira de crescimento e desenvolvimento humano Volume 22 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 23 ; Revista brasileira de crescimento e desenvolvimento humano Volume 23 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 24 ; Revista brasileira de crescimento e desenvolvimento humano Volume 24 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 25 ; Revista brasileira de crescimento e desenvolvimento humano Volume 25 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 23 ; Revista brasileira de crescimento e desenvolvimento humano Volume 23 ; 2013 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 2014 ; 24 ; Revista brasileira de crescimento e desenvolvimento humano Volume 24 ; 2014 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2015 ; 25 ; Revista brasileira de crescimento e desenvolvimento humano Volume 25 ; 2015 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -21050,9 +21050,9 @@
     au < manifest ; exists ; 2010 ; 11 ; Revista Brasileira de Orientação Profissional Volume 11 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 12 ; Revista Brasileira de Orientação Profissional Volume 12 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 13 ; Revista Brasileira de Orientação Profissional Volume 13 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 14 ; Revista Brasileira de Orientação Profissional Volume 14 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 15 ; Revista Brasileira de Orientação Profissional Volume 15 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 16 ; Revista Brasileira de Orientação Profissional Volume 16 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 14 ; Revista Brasileira de Orientação Profissional Volume 14 ; 2013 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2014 ; 15 ; Revista Brasileira de Orientação Profissional Volume 15 ; 2014 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 2015 ; 16 ; Revista Brasileira de Orientação Profissional Volume 16 ; 2015 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -21209,9 +21209,9 @@
     au < manifest ; exists ; 2010 ; 18 ; Revista Brasileira de Psicodrama Volume 18 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 19 ; Revista Brasileira de Psicodrama Volume 19 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 20 ; Revista Brasileira de Psicodrama Volume 20 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 21 ; Revista Brasileira de Psicodrama Volume 21 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 22 ; Revista Brasileira de Psicodrama Volume 22 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 23 ; Revista Brasileira de Psicodrama Volume 23 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 21 ; Revista Brasileira de Psicodrama Volume 21 ; 2013 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 22 ; Revista Brasileira de Psicodrama Volume 22 ; 2014 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2015 ; 23 ; Revista Brasileira de Psicodrama Volume 23 ; 2015 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -21410,8 +21410,8 @@
     au < manifest ; exists ; 2010 ; 12 ; Revista Brasileira de Terapia Comportamental e Cognitiva Volume 12 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 13 ; Revista Brasileira de Terapia Comportamental e Cognitiva Volume 13 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 14 ; Revista Brasileira de Terapia Comportamental e Cognitiva Volume 14 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 15 ; Revista Brasileira de Terapia Comportamental e Cognitiva Volume 15 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 16 ; Revista Brasileira de Terapia Comportamental e Cognitiva Volume 16 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 15 ; Revista Brasileira de Terapia Comportamental e Cognitiva Volume 15 ; 2013 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 16 ; Revista Brasileira de Terapia Comportamental e Cognitiva Volume 16 ; 2014 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -21457,8 +21457,8 @@
     au < manifest ; exists ; 2010 ; 6 ; Revista Brasileira de Terapias Cognitivas Volume 6 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 7 ; Revista Brasileira de Terapias Cognitivas Volume 7 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 8 ; Revista Brasileira de Terapias Cognitivas Volume 8 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 9 ; Revista Brasileira de Terapias Cognitivas Volume 9 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 10 ; Revista Brasileira de Terapias Cognitivas Volume 10 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 9 ; Revista Brasileira de Terapias Cognitivas Volume 9 ; 2013 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2014 ; 10 ; Revista Brasileira de Terapias Cognitivas Volume 10 ; 2014 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -23596,9 +23596,9 @@
     au < manifest ; exists ; 2010 ; 16 ; Revista da Abordagem Gestáltica Volume 16 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 17 ; Revista da Abordagem Gestáltica Volume 17 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 18 ; Revista da Abordagem Gestáltica Volume 18 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 19 ; Revista da Abordagem Gestáltica Volume 19 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 20 ; Revista da Abordagem Gestáltica Volume 20 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 21 ; Revista da Abordagem Gestáltica Volume 21 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 19 ; Revista da Abordagem Gestáltica Volume 19 ; 2013 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 20 ; Revista da Abordagem Gestáltica Volume 20 ; 2014 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2015 ; 21 ; Revista da Abordagem Gestáltica Volume 21 ; 2015 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -23721,8 +23721,8 @@
     au < manifest ; exists ; 2010 ; 13 ; Revista da SBPH Volume 13 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 14 ; Revista da SBPH Volume 14 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 15 ; Revista da SBPH Volume 15 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 16 ; Revista da SBPH Volume 16 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 17 ; Revista da SBPH Volume 17 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 16 ; Revista da SBPH Volume 16 ; 2013 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 2014 ; 17 ; Revista da SBPH Volume 17 ; 2014 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -23830,9 +23830,9 @@
     au < manifest ; exists ; 2010 ; 11 ; Revista da SPAGESP Volume 11 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 12 ; Revista da SPAGESP Volume 12 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 13 ; Revista da SPAGESP Volume 13 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 14 ; Revista da SPAGESP Volume 14 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 15 ; Revista da SPAGESP Volume 15 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 16 ; Revista da SPAGESP Volume 16 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 14 ; Revista da SPAGESP Volume 14 ; 2013 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 15 ; Revista da SPAGESP Volume 15 ; 2014 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2015 ; 16 ; Revista da SPAGESP Volume 16 ; 2015 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -24615,8 +24615,8 @@
     au < manifest ; exists ; 2010 ; 9 ; Revista de Etologia Volume 9 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 10 ; Revista de Etologia Volume 10 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 11 ; Revista de Etologia Volume 11 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 12 ; Revista de Etologia Volume 12 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 13 ; Revista de Etologia Volume 13 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 12 ; Revista de Etologia Volume 12 ; 2013 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 13 ; Revista de Etologia Volume 13 ; 2014 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -25458,7 +25458,7 @@
     au < manifest ; exists ; 2008 ; 26 ; Revista de Psicología (Lima) Volume 26 ; 2008 ; >
     au < manifest ; exists ; 2011 ; 29 ; Revista de Psicología (Lima) Volume 29 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 30 ; Revista de Psicología (Lima) Volume 30 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 31 ; Revista de Psicología (Lima) Volume 31 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; 31 ; Revista de Psicología (Lima) Volume 31 ; 2013 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -25472,8 +25472,8 @@
     param[base_url] = http://pepsic.bvsalud.org/
     param[journal_issn] = 1984-9044
 
-    au < manifest ; exists ; 2013 ; 12 ; Revista de Psicologia da UNESP Volume 12 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 13 ; Revista de Psicologia da UNESP Volume 13 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 12 ; Revista de Psicologia da UNESP Volume 12 ; 2013 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 2014 ; 13 ; Revista de Psicologia da UNESP Volume 13 ; 2014 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -25491,7 +25491,7 @@
     au < manifest ; exists ; 2010 ; 2 ; Revista de Psicología Universidad de Antioquia Volume 2 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 3 ; Revista de Psicología Universidad de Antioquia Volume 3 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 4 ; Revista de Psicología Universidad de Antioquia Volume 4 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 5 ; Revista de Psicología Universidad de Antioquia Volume 5 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; 5 ; Revista de Psicología Universidad de Antioquia Volume 5 ; 2013 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -26312,8 +26312,8 @@
     au < manifest ; exists ; 2010 ; 2 ; Revista do NUFEN Volume 2 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 3 ; Revista do NUFEN Volume 3 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 4 ; Revista do NUFEN Volume 4 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 5 ; Revista do NUFEN Volume 5 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 6 ; Revista do NUFEN Volume 6 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 5 ; Revista do NUFEN Volume 5 ; 2013 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2014 ; 6 ; Revista do NUFEN Volume 6 ; 2014 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -26481,8 +26481,8 @@
     au < manifest ; exists ; 2010 ; 1 ; Revista EPOS Volume 1 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 2 ; Revista EPOS Volume 2 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 3 ; Revista EPOS Volume 3 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 4 ; Revista EPOS Volume 4 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 5 ; Revista EPOS Volume 5 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 4 ; Revista EPOS Volume 4 ; 2013 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 5 ; Revista EPOS Volume 5 ; 2014 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -27663,8 +27663,8 @@
     au < manifest ; exists ; 2010 ; 10 ; Revista Mal Estar e Subjetividade Volume 10 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 11 ; Revista Mal Estar e Subjetividade Volume 11 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 12 ; Revista Mal Estar e Subjetividade Volume 12 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 13 ; Revista Mal Estar e Subjetividade Volume 13 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 14 ; Revista Mal Estar e Subjetividade Volume 14 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 13 ; Revista Mal Estar e Subjetividade Volume 13 ; 2013 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2014 ; 14 ; Revista Mal Estar e Subjetividade Volume 14 ; 2014 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -28240,7 +28240,7 @@
     au < manifest ; exists ; 2010 ; 7 ; Revista Mexicana de Orientación Educativa Volume 7 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 8 ; Revista Mexicana de Orientación Educativa Volume 8 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 9 ; Revista Mexicana de Orientación Educativa Volume 9 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 10 ; Revista Mexicana de Orientación Educativa Volume 10 ; 2013 ; >
+    au < crawling ; exists ; 2013 ; 10 ; Revista Mexicana de Orientación Educativa Volume 10 ; 2013 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -28822,9 +28822,9 @@
     param[journal_issn] = 2177-093X
 
     au < manifest ; exists ; 2012 ; 4 ; Revista Psicologia e Saúde Volume 4 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 5 ; Revista Psicologia e Saúde Volume 5 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 6 ; Revista Psicologia e Saúde Volume 6 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 7 ; Revista Psicologia e Saúde Volume 7 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 5 ; Revista Psicologia e Saúde Volume 5 ; 2013 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 6 ; Revista Psicologia e Saúde Volume 6 ; 2014 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2015 ; 7 ; Revista Psicologia e Saúde Volume 7 ; 2015 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -28850,9 +28850,9 @@
     au < manifest ; exists ; 2010 ; 10 ; Revista Psicologia Organizações e Trabalho Volume 10 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 11 ; Revista Psicologia Organizações e Trabalho Volume 11 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 12 ; Revista Psicologia Organizações e Trabalho Volume 12 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 13 ; Revista Psicologia Organizações e Trabalho Volume 13 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 14 ; Revista Psicologia Organizações e Trabalho Volume 14 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 15 ; Revista Psicologia Organizações e Trabalho Volume 15 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 13 ; Revista Psicologia Organizações e Trabalho Volume 13 ; 2013 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 14 ; Revista Psicologia Organizações e Trabalho Volume 14 ; 2014 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2015 ; 15 ; Revista Psicologia Organizações e Trabalho Volume 15 ; 2015 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2016 ; 16 ; Revista Psicologia Organizações e Trabalho Volume 16 ; 2016 ; >
 
   }
@@ -28873,8 +28873,8 @@
     au < manifest ; exists ; 2010 ; 10 ; Revista Psicologia Política Volume 10 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 11 ; Revista Psicologia Política Volume 11 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 12 ; Revista Psicologia Política Volume 12 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 13 ; Revista Psicologia Política Volume 13 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 14 ; Revista Psicologia Política Volume 14 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 13 ; Revista Psicologia Política Volume 13 ; 2013 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 2014 ; 14 ; Revista Psicologia Política Volume 14 ; 2014 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -28898,9 +28898,9 @@
     au < manifest ; exists ; 2010 ; 27 ; Revista Psicopedagogia Volume 27 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 28 ; Revista Psicopedagogia Volume 28 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 29 ; Revista Psicopedagogia Volume 29 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 30 ; Revista Psicopedagogia Volume 30 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 31 ; Revista Psicopedagogia Volume 31 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 32 ; Revista Psicopedagogia Volume 32 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 30 ; Revista Psicopedagogia Volume 30 ; 2013 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 31 ; Revista Psicopedagogia Volume 31 ; 2014 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2015 ; 32 ; Revista Psicopedagogia Volume 32 ; 2015 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -29515,8 +29515,8 @@
     param[journal_issn] = 0718-7475
 
     au < manifest ; exists ; 2012 ; 3 ; Salud & Sociedad: investigaciones en psicologia de la salud y psicologia social Volume 3 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 4 ; Salud & Sociedad: investigaciones en psicologia de la salud y psicologia social Volume 4 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 5 ; Salud & Sociedad: investigaciones en psicologia de la salud y psicologia social Volume 5 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 4 ; Salud & Sociedad: investigaciones en psicologia de la salud y psicologia social Volume 4 ; 2013 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 5 ; Salud & Sociedad: investigaciones en psicologia de la salud y psicologia social Volume 5 ; 2014 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -29763,8 +29763,8 @@
     param[journal_issn] = 2178-7085
 
     au < manifest ; exists ; 2012 ; 3 ; Saúde & Transformação Social Volume 3 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 4 ; Saúde & Transformação Social Volume 4 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 5 ; Saúde & Transformação Social Volume 5 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 4 ; Saúde & Transformação Social Volume 4 ; 2013 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2014 ; 5 ; Saúde & Transformação Social Volume 5 ; 2014 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -30221,9 +30221,9 @@
     au < manifest ; exists ; 2010 ; 6 ; SMAD. Revista eletrônica saúde mental álcool e drogas Volume 6 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 7 ; SMAD. Revista eletrônica saúde mental álcool e drogas Volume 7 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 8 ; SMAD. Revista eletrônica saúde mental álcool e drogas Volume 8 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 9 ; SMAD. Revista eletrônica saúde mental álcool e drogas Volume 9 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 10 ; SMAD. Revista eletrônica saúde mental álcool e drogas Volume 10 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 11 ; SMAD. Revista eletrônica saúde mental álcool e drogas Volume 11 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 9 ; SMAD. Revista eletrônica saúde mental álcool e drogas Volume 9 ; 2013 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 10 ; SMAD. Revista eletrônica saúde mental álcool e drogas Volume 10 ; 2014 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2015 ; 11 ; SMAD. Revista eletrônica saúde mental álcool e drogas Volume 11 ; 2015 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -30933,9 +30933,9 @@
     param[journal_issn] = 1676-157X
 
     au < manifest ; exists ; 2012 ; 2012 ; Stylus (Rio de Janeiro) Volume 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Stylus (Rio de Janeiro) Volume 2013 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Stylus (Rio de Janeiro) Volume 2014 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Stylus (Rio de Janeiro) Volume 2015 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 2013 ; Stylus (Rio de Janeiro) Volume 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 2014 ; 2014 ; Stylus (Rio de Janeiro) Volume 2014 ; 2014 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2015 ; 2015 ; Stylus (Rio de Janeiro) Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -31012,8 +31012,8 @@
     param[journal_issn] = 0719-448X
 
     au < manifest ; exists ; 2012 ; 9 ; Summa psicológica UST (En línea) Volume 9 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 10 ; Summa psicológica UST (En línea) Volume 10 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 11 ; Summa psicológica UST (En línea) Volume 11 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 10 ; Summa psicológica UST (En línea) Volume 10 ; 2013 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2014 ; 11 ; Summa psicológica UST (En línea) Volume 11 ; 2014 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -31293,9 +31293,9 @@
     au < manifest ; exists ; 2010 ; 18 ; Temas em Psicologia Volume 18 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 19 ; Temas em Psicologia Volume 19 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 20 ; Temas em Psicologia Volume 20 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 21 ; Temas em Psicologia Volume 21 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 22 ; Temas em Psicologia Volume 22 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 23 ; Temas em Psicologia Volume 23 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 21 ; Temas em Psicologia Volume 21 ; 2013 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 22 ; Temas em Psicologia Volume 22 ; 2014 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2015 ; 23 ; Temas em Psicologia Volume 23 ; 2015 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -31378,8 +31378,8 @@
     au < manifest ; exists ; 2010 ; 42 ; Tempo psicanalitico Volume 42 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 43 ; Tempo psicanalitico Volume 43 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 44 ; Tempo psicanalitico Volume 44 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 45 ; Tempo psicanalitico Volume 45 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 46 ; Tempo psicanalitico Volume 46 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 45 ; Tempo psicanalitico Volume 45 ; 2013 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 2014 ; 46 ; Tempo psicanalitico Volume 46 ; 2014 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -32124,9 +32124,9 @@
 
     au < manifest ; exists ; 2011 ; 3 ; Trivium - Estudos Interdisciplinares Volume 3 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 4 ; Trivium - Estudos Interdisciplinares Volume 4 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 5 ; Trivium - Estudos Interdisciplinares Volume 5 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 6 ; Trivium - Estudos Interdisciplinares Volume 6 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 7 ; Trivium - Estudos Interdisciplinares Volume 7 ; 2015 ; >
+    au < crawling ; exists ; 2013 ; 5 ; Trivium - Estudos Interdisciplinares Volume 5 ; 2013 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 6 ; Trivium - Estudos Interdisciplinares Volume 6 ; 2014 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2015 ; 7 ; Trivium - Estudos Interdisciplinares Volume 7 ; 2015 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -32687,8 +32687,8 @@
     au < manifest ; exists ; 2010 ; 7 ; Vínculo Volume 7 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 8 ; Vínculo Volume 8 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 9 ; Vínculo Volume 9 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 10 ; Vínculo Volume 10 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 11 ; Vínculo Volume 11 ; 2014 ; >
+    au < crawling ; exists ; 2013 ; 10 ; Vínculo Volume 10 ; 2013 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 11 ; Vínculo Volume 11 ; 2014 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -32796,7 +32796,7 @@
     au < manifest ; exists ; 2010 ; 5 ; Winnicott e-prints Volume 5 ; 2010 ; >
     au < manifest ; exists ; 2011 ; 6 ; Winnicott e-prints Volume 6 ; 2011 ; >
     au < manifest ; exists ; 2012 ; 7 ; Winnicott e-prints Volume 7 ; 2012 ; >
-    au < manifest ; exists ; 2015 ; 10 ; Winnicott e-prints Volume 10 ; 2015 ; >
+    au < crawling ; exists ; 2015 ; 10 ; Winnicott e-prints Volume 10 ; 2015 ; reingest2.clockss.org:8085 >
 
   }
 
