@@ -56,6 +56,7 @@
     au < manifest ; 2013 ; African Journal of Paediatric Surgery Volume 10 ; 2013 ; 10 >
     au < manifest ; 2014 ; African Journal of Paediatric Surgery Volume 11 ; 2014 ; 11 >
     au < manifest ; 2015 ; African Journal of Paediatric Surgery Volume 12 ; 2015 ; 12 >
+    au < expected ; 2016 ; African Journal of Paediatric Surgery Volume 13 ; 2016 ; 13 >
 
   }
   
@@ -3430,6 +3431,8 @@
     au < manifest ; 2012 ; Oman Journal of Ophthalmology Volume 5 ; 2012 ; 5 >
     au < manifest ; 2013 ; Oman Journal of Ophthalmology Volume 6 ; 2013 ; 6 >
     au < manifest ; 2014 ; Oman Journal of Ophthalmology Volume 7 ; 2014 ; 7 >
+    au < exists ; 2015 ; Oman Journal of Ophthalmology Volume 8 ; 2015 ; 8 >
+    au < exists ; 2016 ; Oman Journal of Ophthalmology Volume 9 ; 2016 ; 9 >
 
   }
 
@@ -3449,6 +3452,8 @@
     au < manifest ; 2012 ; Perspectives in Clinical Research Volume 3 ; 2012 ; 3 >
     au < manifest ; 2013 ; Perspectives in Clinical Research Volume 4 ; 2013 ; 4 >
     au < manifest ; 2014 ; Perspectives in Clinical Research Volume 5 ; 2014 ; 5 >
+    au < exists ; 2015 ; Perspectives in Clinical Research Volume 6 ; 2015 ; 6 >
+    au < exists ; 2016 ; Perspectives in Clinical Research Volume 7 ; 2016 ; 7 >
 
   }
 
@@ -3492,6 +3497,8 @@
     au < manifest ; 2012 ; Pharmacognosy Magazine Volume 8 ; 2012 ; 8 >
     au < manifest ; 2013 ; Pharmacognosy Magazine Volume 9 ; 2013 ; 9 >
     au < manifest ; 2014 ; Pharmacognosy Magazine Volume 10 ; 2014 ; 10 >
+    au < exists ; 2015 ; Pharmacognosy Magazine Volume 11 ; 2015 ; 11 >
+    au < exists ; 2016 ; Pharmacognosy Magazine Volume 12 ; 2016 ; 12 >
 
   }
 
@@ -3534,6 +3541,8 @@
     au < manifest ; 2012 ; Pharmacognosy Reviews Volume 6 ; 2012 ; 6 >
     au < manifest ; 2013 ; Pharmacognosy Reviews Volume 7 ; 2013 ; 7 >
     au < manifest ; 2014 ; Pharmacognosy Reviews Volume 8 ; 2014 ; 8 >
+    au < exists ; 2015 ; Pharmacognosy Reviews Volume 9 ; 2015 ; 9 >
+    au < exists ; 2016 ; Pharmacognosy Reviews Volume 10 ; 2016 ; 10 >
 
   }  
 
@@ -3652,6 +3661,8 @@
     au < manifest ; 2012 ; Saudi Journal of Anaesthesia Volume 6 ; 2012 ; 6 >
     au < manifest ; 2013 ; Saudi Journal of Anaesthesia Volume 7 ; 2013 ; 7 >
     au < manifest ; 2014 ; Saudi Journal of Anaesthesia Volume 8 ; 2014 ; 8 >
+    au < exists ; 2015 ; Saudi Journal of Anaesthesia Volume 9 ; 2015 ; 9 >
+    au < exists ; 2016 ; Saudi Journal of Anaesthesia Volume 10 ; 2016 ; 10 >
 
   }
     
@@ -3686,6 +3697,8 @@
     au < manifest ; 2012 ; Saudi Journal of Gastroenterology Volume 18 ; 2012 ; 18 >
     au < manifest ; 2013 ; Saudi Journal of Gastroenterology Volume 19 ; 2013 ; 19 >
     au < manifest ; 2014 ; Saudi Journal of Gastroenterology Volume 20 ; 2014 ; 20 >
+    au < exists ; 2015 ; Saudi Journal of Gastroenterology Volume 21 ; 2015 ; 21 >
+    au < exists ; 2016 ; Saudi Journal of Gastroenterology Volume 22 ; 2016 ; 22 >
 
   }
     
@@ -3776,6 +3789,8 @@
     au < manifest ; 2012 ; Toxicology International Volume 19 ; 2012 ; 19 >
     au < manifest ; 2013 ; Toxicology International Volume 20 ; 2013 ; 20 >
     au < manifest ; 2014 ; Toxicology International Volume 21 ; 2014 ; 21 >
+    au < exists ; 2015 ; Toxicology International Volume 22 ; 2015 ; 22 >
+    au < exists ; 2016 ; Toxicology International Volume 23 ; 2016 ; 23 >
 
   }
   
@@ -3794,9 +3809,11 @@
     au < manifest ; 2012 ; Tropical Parasitology Volume 2 ; 2012 ; 2 >
     au < manifest ; 2013 ; Tropical Parasitology Volume 3 ; 2013 ; 3 >
     au < manifest ; 2014 ; Tropical Parasitology Volume 4 ; 2014 ; 4 >
+    au < exists ; 2015 ; Tropical Parasitology Volume 5 ; 2015 ; 5 >
+    au < exists ; 2016 ; Tropical Parasitology Volume 6 ; 2016 ; 6 >
 
   }
-            
+
   {
     title <
       name = Urology Annals ;
@@ -3814,9 +3831,11 @@
     au < manifest ; 2012 ; Urology Annals Volume 4 ; 2012 ; 4 >
     au < manifest ; 2013 ; Urology Annals Volume 5 ; 2013 ; 5 >
     au < manifest ; 2014 ; Urology Annals Volume 6 ; 2014 ; 6 >
+    au < exists ; 2015 ; Urology Annals Volume 7 ; 2015 ; 7 >
+    au < exists ; 2016 ; Urology Annals Volume 8 ; 2016 ; 8 >
 
   }
-            
+
   {
     title <
       name = World Journal of Nuclear Medicine ;
@@ -3838,6 +3857,8 @@
     au < ready ; 2012 ; World Journal of Nuclear Medicine Volume 11 ; 2012 ; 11 >
     au < manifest ; 2013 ; World Journal of Nuclear Medicine Volume 12 ; 2013 ; 12 >
     au < manifest ; 2014 ; World Journal of Nuclear Medicine Volume 13 ; 2014 ; 13 >
+    au < exists ; 2015 ; World Journal of Nuclear Medicine Volume 14 ; 2015 ; 14 >
+    au < exists ; 2016 ; World Journal of Nuclear Medicine Volume 15 ; 2016 ; 15 >
 
   }
   
