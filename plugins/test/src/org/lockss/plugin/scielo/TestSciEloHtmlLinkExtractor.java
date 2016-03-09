@@ -56,7 +56,7 @@ public class TestSciEloHtmlLinkExtractor extends LockssTestCase {
   }
   
   public void testAOnclick() throws Exception {
-    String str1 = "<a onclick=\"setTimeout(&quot;window.open('http://www.scielo.org.co/scielo.php?script=sci_pdf&amp;pid=S1657-70272014000200002&amp;lng=en&amp;nrm=iso&amp;tlng=es ','_self')&quot;, 3000);\" href=\"javascript:%20void(0);%20\">pdf in  Spanish</a>";
+    String str1 = "<a onclick=\"setTimeout(&quot;window.open('http://www.scielo.org.co/scielo.php?script=sci_pdf&amp;pid=S1657-70272014000200002&amp;lng=en&amp;nrm=iso&amp;tlng=es ','_self')&quot;, 3000);\" href=\"foo.pdf\">pdf in  Spanish</a>";
     final List<String> urlList = new ArrayList<String>();
     new SciEloHtmlLinkExtractor().extractUrls(mau,
                                               new StringInputStream(str1),
@@ -68,8 +68,9 @@ public class TestSciEloHtmlLinkExtractor extends LockssTestCase {
                                                   urlList.add(url);
                                                 }
                                               });
-    assertEquals(1, urlList.size());
-    assertEquals("http://www.scielo.org.co/scielo.php?script=sci_pdf&pid=S1657-70272014000200002&lng=en&nrm=iso&tlng=es", urlList.get(0));
+    assertEquals(2, urlList.size());
+    assertContains(urlList, "http://www.scielo.org.co/scielo.php?script=sci_pdf&pid=S1657-70272014000200002&lng=en&nrm=iso&tlng=es");
+    assertContains(urlList, "http://www.scielo.org.co/foo.pdf");
   }
   
   public void testScript() throws Exception {
