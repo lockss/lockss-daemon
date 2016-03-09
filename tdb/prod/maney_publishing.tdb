@@ -125,7 +125,7 @@
       issnl = 0003-4983 
     >
 
-    param[journal_id] = yatm20
+    param[journal_id] = ypgh19
     comment[continued_by] = 2047-7724
 
     au < exists ; 2002 ; Annals of Tropical Medicine and Parasitology Volume 96 ; 96 >
@@ -150,7 +150,7 @@
       issnl = 0272-4936 
     >
 
-    param[journal_id] = yatp20 
+    param[journal_id] = ypch19 
     comment[continued_by] = 2046-9047 
 
     au < exists ; 2002 ; Annals of Tropical Paediatrics: International Child Health Volume 22 ; 22 >
@@ -233,7 +233,7 @@
       issnl = 0967-9782 
     >
 
-    param[journal_id] = ybct20 
+    param[journal_id] = yaac19 
     comment[continued_by] = 1743-6753
 
     au < exists ; 1999 ; British Ceramic Transactions Volume 98 ; 98 >
@@ -252,7 +252,7 @@
       issn = 0007-0599 
     >
 
-    param[journal_id] = ybcj20
+    param[journal_id] = ycst19
     comment[continued_by] = 1478-422X
 
     au < doNotProcess ; 1999 ; British Corrosion Journal Volume 34 ; 34 >
@@ -269,7 +269,7 @@
       issn = 0969-7950
     >
 
-    param[journal_id] = ybjdd20 
+    param[journal_id] = yjdd19 
     comment[continus] = 0374-633X
     comment[continued_by] = 2047-3869 in 2012
 
@@ -299,29 +299,42 @@
   {
 
     title <
+      name = The Journal of Mental Subnormality ;
+      issn = 0022-2666
+    >
+
+    param[journal_id] = yjdd17
+    comment[continued_by] = 0374-633X
+    
+    au < exists ; 1955 ; The Journal of Mental Subnormality Volume 1 ; 1 >
+    au < exists ; 1956 ; The Journal of Mental Subnormality Volume 2 ; 2 >
+    au < exists ; 1957 ; The Journal of Mental Subnormality Volume 3 ; 3 >
+    au < exists ; 1958 ; The Journal of Mental Subnormality Volume 4 ; 4 >
+    au < exists ; 1959 ; The Journal of Mental Subnormality Volume 5 ; 5 >
+    au < exists ; 1960 ; The Journal of Mental Subnormality Volume 6 ; 6 >
+    au < exists ; 1961 ; The Journal of Mental Subnormality Volume 7 ; 7 >
+    au < exists ; 1962 ; The Journal of Mental Subnormality Volume 8 ; 8 >
+    au < exists ; 1963 ; The Journal of Mental Subnormality Volume 9 ; 9 >
+    au < exists ; 1964 ; The Journal of Mental Subnormality Volume 10 ; 10 >
+    au < exists ; 1965 ; The Journal of Mental Subnormality Volume 11 ; 11 >
+    au < exists ; 1966 ; The Journal of Mental Subnormality Volume 12 ; 12 >
+    au < exists ; 1967 ; The Journal of Mental Subnormality Volume 13 ; 13 >
+    au < exists ; 1968 ; The Journal of Mental Subnormality Volume 14 ; 14 >
+    au < exists ; 1969 ; The Journal of Mental Subnormality Volume 15 ; 15 >
+    au < exists ; 1970 ; The Journal of Mental Subnormality Volume 16 ; 16 >
+
+  }
+
+  {
+
+    title <
       name = The British Journal of Mental Subnormality ;
       issn = 0374-633X
     >
 
-    param[journal_id] = ybjms20 
+    param[journal_id] = yjdd18 
     comment[continued_by] = 0969-7950
     
-    au < exists ; 1955 ; The British Journal of Mental Subnormality Volume 1 ; 1 >
-    au < exists ; 1956 ; The British Journal of Mental Subnormality Volume 2 ; 2 >
-    au < exists ; 1957 ; The British Journal of Mental Subnormality Volume 3 ; 3 >
-    au < exists ; 1958 ; The British Journal of Mental Subnormality Volume 4 ; 4 >
-    au < exists ; 1959 ; The British Journal of Mental Subnormality Volume 5 ; 5 >
-    au < exists ; 1960 ; The British Journal of Mental Subnormality Volume 6 ; 6 >
-    au < exists ; 1961 ; The British Journal of Mental Subnormality Volume 7 ; 7 >
-    au < exists ; 1962 ; The British Journal of Mental Subnormality Volume 8 ; 8 >
-    au < exists ; 1963 ; The British Journal of Mental Subnormality Volume 9 ; 9 >
-    au < exists ; 1964 ; The British Journal of Mental Subnormality Volume 10 ; 10 >
-    au < exists ; 1965 ; The British Journal of Mental Subnormality Volume 11 ; 11 >
-    au < exists ; 1966 ; The British Journal of Mental Subnormality Volume 12 ; 12 >
-    au < exists ; 1967 ; The British Journal of Mental Subnormality Volume 13 ; 13 >
-    au < exists ; 1968 ; The British Journal of Mental Subnormality Volume 14 ; 14 >
-    au < exists ; 1969 ; The British Journal of Mental Subnormality Volume 15 ; 15 >
-    au < exists ; 1970 ; The British Journal of Mental Subnormality Volume 16 ; 16 >
     au < exists ; 1971 ; The British Journal of Mental Subnormality Volume 17 ; 17 >
     au < exists ; 1972 ; The British Journal of Mental Subnormality Volume 18 ; 18 >
     au < exists ; 1973 ; The British Journal of Mental Subnormality Volume 19 ; 19 >
@@ -353,7 +366,7 @@
       issn = 0309-7765 
     >
 
-    param[journal_id] = ybronsoc20
+    param[journal_id] = ybst19
     comment[continued_by] = 1474-8932
  
     au < exists ; 1895-1898 ; Brontë Society Transactions: The Journal of Brontë Studies Volume 1 ; 1 >
@@ -424,7 +437,7 @@
       issnl = 1752-7260 
     >
 
-    param[journal_id] = ycbrl20 
+    param[journal_id] = ycbr20 
     comment[journal_id] = both brl & cbrl point to same title
 
     au < doNotProcess ; 2006 ; Bulletin of the Council for British Research in the Levant Volume 1 ; 1 >
@@ -692,7 +705,7 @@
       issnl = 1467-0100
     >
 
-    param[journal_id] = ycim20 
+    param[journal_id] = ycii20 
     comment[journal_id] = both cii & cim point to same title
     
 
@@ -785,7 +798,7 @@
       issnl = 1478-422X 
     >
 
-    param[journal_id] = ycest20 
+    param[journal_id] = ycst20 
     comment[jounral_id] = both cest & cst point to same title
     comment[continues] = 0007-0599
 
@@ -1173,7 +1186,7 @@
       issnl = 0965-7665
     >
 
-    param[journal_id] =  yjea20
+    param[journal_id] =  yeja19
     comment[continued_by] = 1461-9571
 
     au < exists ; 1993 ; Journal of European Archaeology Volume 1 ; 1 >
@@ -1260,7 +1273,7 @@
       issnl = 0430-8778 
     >
 
-    param[journal_id] = yflk20 
+    param[journal_id] = yfol20 
     comment[continues] = 0434-9725
 
     au < exists ; 1963 ; Folk Life: Journal of Ethnological Studies Volume 1 ; 1 >
@@ -1328,7 +1341,7 @@
       issnl = 0434-9725 
     >
 
-    param[journal_id] = ygwr20 
+    param[journal_id] = yfol19 
     comment[continued_by] = 0430-8778
 
     au < exists ; 1956-1957 ; Gwerin: A Half-Yearly Journal of Folk Life Volume 1 ; 1 >
@@ -1562,7 +1575,7 @@
       issnl = 1749-5148 
     >
 
-    param[journal_id] = yiht20 
+    param[journal_id] = yhse20 
 
     au < exists ; 2007 ; International Heat Treatment and Surface Engineering Volume 1 ; 1 >
     au < exists ; 2008 ; International Heat Treatment and Surface Engineering Volume 2 ; 2 >
@@ -1609,7 +1622,7 @@
       issnl = 1364-0461 
     >
 
-    param[journal_id] = yijc20 
+    param[journal_id] = ycmr20 
     comment[journal_id] = both ijcmr & ijc point to same title
 
     au < exists ; 2004 ; International Journal of Cast Metals Research Volume 17 ; 17 >
@@ -1674,7 +1687,7 @@
       eissn = 2049-3967
     >
 
-    param[journal_id] = yoeh20
+    param[journal_id] = yjoh20
     
     au < exists ; 1995 ; International Journal of Occupational and Environmental Health Volume 1 ; 1 > 
     au < exists ; 1996 ; International Journal of Occupational and Environmental Health Volume 2 ; 2 > 
@@ -1756,7 +1769,7 @@
       issnl = 0367-9020 
     >
 
-    param[journal_id] = yimtlr20 
+    param[journal_id] = yimr18 
     comment[continues] = 0076-6690
     comment[continued_by] = 0308-4590
     comment[historical_titles] = see 0076-6690 for vols 1-16, 0367-9020 for vols 17-20, 0308-4590 for vols 21-31 and 0950-6608 for vols 32 onwards
@@ -1777,7 +1790,7 @@
       issnl = 0308-4590  
     >
 
-    param[journal_id] = yimtr20 
+    param[journal_id] = yimr19 
     comment[continues] = 0367-9020
     comment[continued_by] = 0950-6608
     comment[historical_titles] = see 0076-6690 for vols 1-16, 0367-9020 for vols 17-20, 0308-4590 for vols 21-31 and 0950-6608 for vols 32 onwards
@@ -1847,7 +1860,7 @@
       eissn = 1743-2812
     >
 
-    param[journal_id] = yias20 
+    param[journal_id] = yirs20 
     
     au < exists ; 1999 ; Ironmaking & Steelmaking Volume 26 ; 26 >
     au < exists ; 2000 ; Ironmaking & Steelmaking Volume 27 ; 27 >
@@ -2105,7 +2118,7 @@
       issn = 0068-1385 
     >
 
-    param[journal_id] = ytbbs20 
+    param[journal_id] = yjbr19 
     comment[continued_by] = 0373-6687
     
     au < exists ; 1947-1951 ; Transactions of the British Bryological Society Volume 1 ; 1 >
@@ -2334,7 +2347,7 @@
       eissn = 1753-304X
     >
 
-    param[journal_id] = ymmh20 
+    param[journal_id] = yjhm19 
     comment[continued_by] = 2047-9700 in 2012
     
     au < exists ; 2007-2008 ; Journal of Management & Marketing in Healthcare Volume 1 ; 1 >
@@ -2389,7 +2402,7 @@
       eissn = 1465-3133
     >
 
-    param[journal_id] = yjorthod20 
+    param[journal_id] = yjor20 
 
     au < doNotProcess ; 2009 ; Journal of Orthodontics Volume 36 ; 36 >
     au < exists ; 2010 ; Journal of Orthodontics Volume 37 ; 37 >
@@ -2480,7 +2493,7 @@
       issnl = 0020-3203 
     >
 
-    param[journal_id] = ywsc20 
+    param[journal_id] = ywpj19 
     comment[continued_by] = 2042-6445
 
     au < exists ; 2005-2007 ; Journal of the Institute of Wood Science Volume 17 ; 17 >
@@ -2530,29 +2543,6 @@
     au < manifest ; 2014 ; The Keats-Shelley Review Volume 28 ; 28 >
     au < manifest ; 2015 ; The Keats-Shelley Review Volume 29 ; 29 >
     au < expected ; 2016 ; The Keats-Shelley Review Volume 30 ; 30 >
-
-  }
-
-  {
-
-    title <
-      name = Labour History Review ;
-      issn = 0961-5652 ;
-      eissn = 1745-8188 ;
-      issnl = 0961-5652 
-    >
-
-    param[journal_id] = ylhr20 
-    comment[0] = ceased publication 2011
-
-    au < exists ; 2005 ; Labour History Review Volume 70 ; 70 >
-    au < exists ; 2006 ; Labour History Review Volume 71 ; 71 >
-    au < exists ; 2007 ; Labour History Review Volume 72 ; 72 >
-    au < exists ; 2008 ; Labour History Review Volume 73 ; 73 >
-    au < exists ; 2009 ; Labour History Review Volume 74 ; 74 >
-    au < doNotProcess ; 2010 ; Labour History Review Volume 75 ; 75 >
-    au < doNotProcess ; 2011 ; Labour History Review Volume 76 ; 76 >
-
 
   }
 
@@ -2647,7 +2637,7 @@
       issn = 0024-2306 
     >
 
-    param[journal_id] = ylib20
+    param[journal_id] = ylbh19
     comment[continued_by] = 1758-3489
 
     au < exists ; 2005 ; Library History Volume 21 ; 21 >
@@ -2910,20 +2900,33 @@
   {
 
     title <
+      name = Metal Science Journal ;
+      issn = 0026-0681 
+    >
+
+    param[journal_id] = ymst17
+    comment[merged_into] = 0306-3453
+
+    au < exists ; 1967 ; Metal Science Journal Volume 1 ; 1 >
+    au < exists ; 1968 ; Metal Science Journal Volume 2 ; 2 >
+    au < exists ; 1969 ; Metal Science Journal Volume 3 ; 3 >
+    au < exists ; 1970 ; Metal Science Journal Volume 4 ; 4 >
+    au < exists ; 1971 ; Metal Science Journal Volume 5 ; 5 >
+    au < exists ; 1972 ; Metal Science Journal Volume 6 ; 6 >
+    au < exists ; 1973 ; Metal Science Journal Volume 7 ; 7 >
+
+  }
+
+  {
+
+    title <
       name = Metal Science ;
       issn = 0306-3453 
     >
 
-    param[journal_id] = ymsc20 
+    param[journal_id] = ymst18 
     comment[merged_into] = 0267-0836
 
-    au < exists ; 1967 ; Metal Science Volume 1 ; 1 >
-    au < exists ; 1968 ; Metal Science Volume 2 ; 2 >
-    au < exists ; 1969 ; Metal Science Volume 3 ; 3 >
-    au < exists ; 1970 ; Metal Science Volume 4 ; 4 >
-    au < exists ; 1971 ; Metal Science Volume 5 ; 5 >
-    au < exists ; 1972 ; Metal Science Volume 6 ; 6 >
-    au < exists ; 1973 ; Metal Science Volume 7 ; 7 >
     au < exists ; 1974 ; Metal Science Volume 8 ; 8 >
     au < exists ; 1975 ; Metal Science Volume 9 ; 9 >
     au < exists ; 1976 ; Metal Science Volume 10 ; 10 >
@@ -2945,7 +2948,7 @@
       issn = 0076-6690 
     >
 
-    param[journal_id] = ymtlr20 
+    param[journal_id] = yimr17 
     comment[continued_by] = 0367-9020
     comment[historical_titles] = see 0076-6690 for vols 1-16, 0367-9020 for vols 17-20, 0308-4590 for vols 21-31 and 0950-6608 for vols 32 onwards
     
@@ -3434,7 +3437,7 @@
       issnl = 1746-5095 
     >
 
-    param[journal_id] = yprm20 
+    param[journal_id] = ypts20 
     comment[journal_id] = both ptssrm and prm point to same title
     
     au < exists ; 2004 ; Packaging, Transport, Storage & Security of Radioactive Material Volume 15 ; 15 >
@@ -3825,7 +3828,7 @@
       issn = 0893-2344 
     >
 
-    param[journal_id] = yrepc20
+    param[journal_id] = ytcc19
     comment[continued_by] = 1521-5385 
     
     au < exists ; 1994-1995 ; Republican China Volume 20 ; 20 >
@@ -3921,20 +3924,31 @@
   {
 
     title <
+      name = Seventeenth-Century French Studies Newsletter ;
+      issn = 0142-5080
+    >
+
+    param[journal_id] = yemf18
+
+    au < exists ; 1979 ; Seventeenth-Century French Studies Newsletter Volume 1 ; 1 >
+    au < exists ; 1980 ; Seventeenth-Century French Studies Newsletter Volume 2 ; 2 >
+    au < exists ; 1981 ; Seventeenth-Century French Studies Newsletter Volume 3 ; 3 >
+    au < exists ; 1982 ; Seventeenth-Century French Studies Newsletter Volume 4 ; 4 >
+    au < exists ; 1983 ; Seventeenth-Century French Studies Newsletter Volume 5 ; 5 >
+
+  }
+
+  {
+
+    title <
       name = Seventeenth-Century French Studies ;
       issn = 0265-1068 ;
       eissn = 1752-2692 ;
       issnl = 0265-1068 
     >
 
-    param[journal_id] = ysfs20 
-    comment[journal_id] = both c17 and sfs point to same title
+    param[journal_id] = yemf19
 
-    au < exists ; 1979 ; Seventeenth-Century French Studies Volume 1 ; 1 >
-    au < exists ; 1980 ; Seventeenth-Century French Studies Volume 2 ; 2 >
-    au < exists ; 1981 ; Seventeenth-Century French Studies Volume 3 ; 3 >
-    au < exists ; 1982 ; Seventeenth-Century French Studies Volume 4 ; 4 >
-    au < exists ; 1983 ; Seventeenth-Century French Studies Volume 5 ; 5 >
     au < exists ; 1984 ; Seventeenth-Century French Studies Volume 6 ; 6 >
     au < exists ; 1985 ; Seventeenth-Century French Studies Volume 7 ; 7 >
     au < exists ; 1986 ; Seventeenth-Century French Studies Volume 8 ; 8 >
@@ -3966,8 +3980,22 @@
     au < doNotProcess ; 2012 ; Seventeenth-Century French Studies Volume 34 ; 34 >
     au < exists ; 2013 ; Seventeenth-Century French Studies Volume 35 ; 35 >
     au < exists ; 2014 ; Seventeenth-Century French Studies Volume 36 ; 36 >
-    au < expected ; 2015 ; Seventeenth-Century French Studies Volume 37 ; 37 >
-    au < expected ; 2016 ; Seventeenth-Century French Studies Volume 38 ; 38 >
+
+  }
+
+  {
+
+    title <
+      name = Early Modern French Studies ;
+      issn = 2056-3035 ;
+      eissn = 2056-3043 ;
+      issnl = 2056-3035
+    >
+
+    param[journal_id] = yemf20
+
+    au < expected ; 2015 ; Early Modern French Studies Volume 37 ; 37 >
+    au < expected ; 2016 ; Early Modern French Studies Volume 38 ; 38 >
 
   }
 
@@ -4090,7 +4118,7 @@
       issnl = 0267-0844 
     >
 
-    param[journal_id] = ysur20 
+    param[journal_id] = ysue20 
     comment[journal_id] = both se and sur point to same title 
 
     au < exists ; 1985 ; Surface Engineering Volume 1 ; 1 >
@@ -4131,6 +4159,35 @@
   {
 
     title <
+      name = Empire Survey Review ;
+      issn = 0267-1034 ;
+      issnl = 0267-1034 
+    >
+
+    param[journal_id] = ysre19 
+
+    au < exists ; 1931-1932 ; Empire Survey Review Volume 1 ; 1 >
+    au < exists ; 1933-1934 ; Empire Survey Review Volume 2 ; 2 >
+    au < exists ; 1935-1936 ; Empire Survey Review Volume 3 ; 3 >
+    au < exists ; 1937-1938 ; Empire Survey Review Volume 4 ; 4 >
+    au < exists ; 1939-1940 ; Empire Survey Review Volume 5 ; 5 >
+    au < exists ; 1941-1942 ; Empire Survey Review Volume 6 ; 6 >
+    au < exists ; 1943-1944 ; Empire Survey Review Volume 7 ; 7 >
+    au < exists ; 1945-1946 ; Empire Survey Review Volume 8 ; 8 >
+    au < exists ; 1947-1948 ; Empire Survey Review Volume 9 ; 9 >
+    au < exists ; 1949-1950 ; Empire Survey Review Volume 10 ; 10 >
+    au < exists ; 1951-1952 ; Empire Survey Review Volume 11 ; 11 >
+    au < exists ; 1953-1954 ; Empire Survey Review Volume 12 ; 12 >
+    au < exists ; 1955-1956 ; Empire Survey Review Volume 13 ; 13 >
+    au < exists ; 1957-1958 ; Empire Survey Review Volume 14 ; 14 >
+    au < exists ; 1959-1960 ; Empire Survey Review Volume 15 ; 15 >
+    au < exists ; 1961-1962 ; Empire Survey Review Volume 16 ; 16 >
+
+  }
+
+  {
+
+    title <
       name = Survey Review ;
       issn = 0039-6265 ;
       eissn = 1752-2706 ;
@@ -4139,22 +4196,6 @@
 
     param[journal_id] = ysre20 
 
-    au < exists ; 1931-1932 ; Survey Review Volume 1 ; 1 >
-    au < exists ; 1933-1934 ; Survey Review Volume 2 ; 2 >
-    au < exists ; 1935-1936 ; Survey Review Volume 3 ; 3 >
-    au < exists ; 1937-1938 ; Survey Review Volume 4 ; 4 >
-    au < exists ; 1939-1940 ; Survey Review Volume 5 ; 5 >
-    au < exists ; 1941-1942 ; Survey Review Volume 6 ; 6 >
-    au < exists ; 1943-1944 ; Survey Review Volume 7 ; 7 >
-    au < exists ; 1945-1946 ; Survey Review Volume 8 ; 8 >
-    au < exists ; 1947-1948 ; Survey Review Volume 9 ; 9 >
-    au < exists ; 1949-1950 ; Survey Review Volume 10 ; 10 >
-    au < exists ; 1951-1952 ; Survey Review Volume 11 ; 11 >
-    au < exists ; 1953-1954 ; Survey Review Volume 12 ; 12 >
-    au < exists ; 1955-1956 ; Survey Review Volume 13 ; 13 >
-    au < exists ; 1957-1958 ; Survey Review Volume 14 ; 14 >
-    au < exists ; 1959-1960 ; Survey Review Volume 15 ; 15 >
-    au < exists ; 1961-1962 ; Survey Review Volume 16 ; 16 >
     au < manifest ; 1963-1964 ; Survey Review Volume 17 ; 17 >
     au < manifest ; 1965-1966 ; Survey Review Volume 18 ; 18 >
     au < manifest ; 1967-1968 ; Survey Review Volume 19 ; 19 >
@@ -4245,50 +4286,42 @@
     param[journal_id] = ytav20 
     comment[volume1] = publisher has two volume 1 in 1974 & 1986, they both directly 1986 
 
-    au < doesNotExist ; 1974 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1 ; 0 >
-    au < exists ; 1974 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1974 ; 1974 >
+    au < exists ; 1974 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1 ; 1 >
     au < manifest ; 1975 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 2 ; 2 >
-    au < exists ; 1975 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1975 ; 1975 >
     au < manifest ; 1976 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 3 ; 3 >
-    au < exists ; 1976 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1976 ; 1976 >
     au < manifest ; 1977 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 4 ; 4 >
-    au < exists ; 1977 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1977 ; 1977 >
     au < manifest ; 1978 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 5 ; 5 >
-    au < exists ; 1978 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1978 ; 1978 >
     au < manifest ; 1979 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 6 ; 6 >
-    au < exists ; 1979 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1979 ; 1979 >
     au < manifest ; 1980 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 7 ; 7 >
-    au < exists ; 1980 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1980 ; 1980 >
     au < manifest ; 1981 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 8 ; 8 >
-    au < exists ; 1981 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1981 ; 1981 >
     au < manifest ; 1982 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 9 ; 9 >
-    au < exists ; 1982 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1982 ; 1982 >
-    au < exists ; 1983 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1983 ; 1983 >
-    au < exists ; 1984 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1984 ; 1984 >
-    au < exists ; 1985 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1985 ; 1985 >
-    au < manifest ; 1986 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1 ; 1 >
-    au < exists ; 1986 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1986 ; 1986 >
-    au < exists ; 1988 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1988 ; 1988 >
-    au < exists ; 1990 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1990 ; 1990 >
-    au < exists ; 1991 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1991 ; 1991 >
-    au < exists ; 1992 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1992 ; 1992 >
-    au < exists ; 1993 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1993 ; 1993 >
-    au < exists ; 1994 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1994 ; 1994 >
-    au < exists ; 1995 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1995 ; 1995 >
-    au < exists ; 1996 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1996 ; 1996 >
-    au < exists ; 1997 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1997 ; 1997 >
-    au < exists ; 1998 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1998 ; 1998 >
-    au < exists ; 1999 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1999 ; 1999 >
-    au < exists ; 2000 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 2000 ; 2000 >
-    au < exists ; 2001 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 2001 ; 2001 >
-    au < exists ; 2002 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 2002 ; 2002 >
-    au < exists ; 2003 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 2003 ; 2003 >
-    au < exists ; 2004 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 2004 ; 2004 >
-    au < exists ; 2005 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 2005 ; 2005 >
-    au < exists ; 2006 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 2006 ; 2006 >
-    au < exists ; 2007 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 2007 ; 2007 >
-    au < exists ; 2008 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 2008 ; 2008 >
-    au < exists ; 2009 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 2009 ; 2009 >
+    au < exists ; 1983 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 10 ; 10 >
+    au < exists ; 1984 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 11 ; 11 >
+    au < exists ; 1985 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 12 ; 12 >
+    au < exists ; 1986 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 13 ; 13 >
+    au < exists ; 1987 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 14 ; 14 >
+    au < exists ; 1988 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 15 ; 15 >
+    au < exists ; 1989 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 16 ; 16 >
+    au < exists ; 1990 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 17 ; 17 >
+    au < exists ; 1991 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 18 ; 18 >
+    au < exists ; 1992 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 19 ; 19 >
+    au < exists ; 1993 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 20 ; 20 >
+    au < exists ; 1994 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 21 ; 21 >
+    au < exists ; 1995 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 22 ; 22 >
+    au < exists ; 1996 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 23 ; 23 >
+    au < exists ; 1997 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 24 ; 24 >
+    au < exists ; 1998 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 25 ; 25 >
+    au < exists ; 1999 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 26 ; 26 >
+    au < exists ; 2000 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 27 ; 27 >
+    au < exists ; 2001 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 28 ; 28 >
+    au < exists ; 2002 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 29 ; 29 >
+    au < exists ; 2003 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 30 ; 30 >
+    au < exists ; 2004 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 31 ; 31 >
+    au < exists ; 2005 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 32 ; 32 >
+    au < exists ; 2006 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 33 ; 33 >
+    au < exists ; 2007 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 34 ; 34 >
+    au < exists ; 2008 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 35 ; 35 >
+    au < exists ; 2009 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 36 ; 36 >
     au < doNotProcess ; 2010 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 37 ; 37 >
     au < doNotProcess ; 2011 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 38 ; 38 >
     au < doNotProcess ; 2012 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 39 ; 39 >
@@ -4425,26 +4458,26 @@
   {
 
     title <
-      name = Transactions of the Institute of Metal Finishing ;
+      name = Transactions of the IMF ;
       issn = 0020-2967 ;
       eissn = 1745-9192 ;
       issnl = 0020-2967 
     >
 
-    param[journal_id] = yimf20 
+    param[journal_id] = ytim20 
     
-    au < doNotProcess ; 2005 ; Transactions of the Institute of Metal Finishing Volume 83 ; 83 >
-    au < doNotProcess ; 2006 ; Transactions of the Institute of Metal Finishing Volume 84 ; 84 >
-    au < doNotProcess ; 2007 ; Transactions of the Institute of Metal Finishing Volume 85 ; 85 >
-    au < doNotProcess ; 2008 ; Transactions of the Institute of Metal Finishing Volume 86 ; 86 >
-    au < doNotProcess ; 2009 ; Transactions of the Institute of Metal Finishing Volume 87 ; 87 >
-    au < doNotProcess ; 2010 ; Transactions of the Institute of Metal Finishing Volume 88 ; 88 >
-    au < doNotProcess ; 2011 ; Transactions of the Institute of Metal Finishing Volume 89 ; 89 >
-    au < doNotProcess ; 2012 ; Transactions of the Institute of Metal Finishing Volume 90 ; 90 >
-    au < exists ; 2013 ; Transactions of the Institute of Metal Finishing Volume 91 ; 91 >
-    au < exists ; 2014 ; Transactions of the Institute of Metal Finishing Volume 92 ; 92 >
-    au < exists ; 2015 ; Transactions of the Institute of Metal Finishing Volume 93 ; 93 >
-    au < expected ; 2016 ; Transactions of the Institute of Metal Finishing Volume 94 ; 94 >
+    au < doNotProcess ; 2005 ; Transactions of the IMF Volume 83 ; 83 >
+    au < doNotProcess ; 2006 ; Transactions of the IMF Volume 84 ; 84 >
+    au < doNotProcess ; 2007 ; Transactions of the IMF Volume 85 ; 85 >
+    au < doNotProcess ; 2008 ; Transactions of the IMF Volume 86 ; 86 >
+    au < doNotProcess ; 2009 ; Transactions of the IMF Volume 87 ; 87 >
+    au < doNotProcess ; 2010 ; Transactions of the IMF Volume 88 ; 88 >
+    au < doNotProcess ; 2011 ; Transactions of the IMF Volume 89 ; 89 >
+    au < doNotProcess ; 2012 ; Transactions of the IMF Volume 90 ; 90 >
+    au < exists ; 2013 ; Transactions of the IMF Volume 91 ; 91 >
+    au < exists ; 2014 ; Transactions of the IMF Volume 92 ; 92 >
+    au < exists ; 2015 ; Transactions of the IMF Volume 93 ; 93 >
+    au < expected ; 2016 ; Transactions of the IMF Volume 94 ; 94 >
 
   }
 
@@ -4457,7 +4490,7 @@
       issnl = 0372-0187 
     >
 
-    param[journal_id] = ytns20 
+    param[journal_id] = yhet19 
     comment[continued_by] = 1758-1214 
     
     au < exists ; 1920 ; Transactions of the Newcomen Society Volume 1 ; 1 >

@@ -2941,13 +2941,13 @@
     param[journal_id] = ymst17
     comment[merged_into] = 0306-3453
 
-    au < exists ; exists ; 1967 ; Metal Science Volume 1 ; 1 ; >
-    au < exists ; exists ; 1968 ; Metal Science Volume 2 ; 2 ; >
-    au < exists ; exists ; 1969 ; Metal Science Volume 3 ; 3 ; >
-    au < exists ; exists ; 1970 ; Metal Science Volume 4 ; 4 ; >
-    au < exists ; exists ; 1971 ; Metal Science Volume 5 ; 5 ; >
-    au < exists ; exists ; 1972 ; Metal Science Volume 6 ; 6 ; >
-    au < exists ; exists ; 1973 ; Metal Science Volume 7 ; 7 ; >
+    au < exists ; exists ; 1967 ; Metal Science Journal Volume 1 ; 1 ; >
+    au < exists ; exists ; 1968 ; Metal Science Journal Volume 2 ; 2 ; >
+    au < exists ; exists ; 1969 ; Metal Science Journal Volume 3 ; 3 ; >
+    au < exists ; exists ; 1970 ; Metal Science Journal Volume 4 ; 4 ; >
+    au < exists ; exists ; 1971 ; Metal Science Journal Volume 5 ; 5 ; >
+    au < exists ; exists ; 1972 ; Metal Science Journal Volume 6 ; 6 ; >
+    au < exists ; exists ; 1973 ; Metal Science Journal Volume 7 ; 7 ; >
 
   }
 
@@ -4027,8 +4027,6 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Seventeenth-Century French Studies Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Seventeenth-Century French Studies Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Seventeenth-Century French Studies Volume 36 ; 36 ; >
-    au < expected ; exists ; 2015 ; Seventeenth-Century French Studies Volume 37 ; 37 ; >
-    au < expected ; exists ; 2016 ; Seventeenth-Century French Studies Volume 38 ; 38 ; >
 
   }
 
