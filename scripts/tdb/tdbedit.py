@@ -143,7 +143,7 @@ backup copy is made under 'a.tdb.bak'. If that backup file already exists, it is
 overwritten.
 '''
 
-__version__ = '0.3.0'
+__version__ = '0.3.1'
 
 import cStringIO
 import optparse
@@ -411,7 +411,7 @@ def _build_au_index(options):
             sys.stderr.write('%s:%s: implicit statement does not specify \'status\'\n' % (fstr, lineindex + 1))
             continue1 = True # next file
             break
-          if options.status2_change is not None and 'status2' not in implmap:
+          if options.status2_change and 'status2' not in implmap:
             errors = errors + 1
             sys.stderr.write('%s:%s: implicit statement does not specify \'status2\'\n' % (fstr, lineindex + 1))
             continue1 = True # next file
