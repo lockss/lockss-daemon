@@ -6,23 +6,19 @@
     info[tester] = S
   >
 
-    plugin = needs.SourcePlugin
-    param[base_url] = http://books.bradypus.net/
+    plugin = org.lockss.plugin.clockss.bradypus.ClockssBradypusBooksSourcePlugin
+    param[base_url] = http://content5.lockss.org/sourcefiles/bradypus-released/
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
 
     {
       title <
       name = BraDypUS Books Source Content ;
       type = bookSeries
       >
-    
-      implicit < status ; status2 ; year ; name ; param[year] ; hidden[proxy] >
+ 
+      au < testing ; exists ; 2016 ; BraDypUS Books Source Content 2016 ; 2016 >
 
-      au < exists ; exists ; 2010 ; BraDypUS Books Source Content 2010 ; 2010 ; >
-      au < exists ; exists ; 2011 ; BraDypUS Books Source Content 2011 ; 2011 ; >
-      au < exists ; exists ; 2012 ; BraDypUS Books Source Content 2012 ; 2012 ; >
-      au < exists ; exists ; 2013 ; BraDypUS Books Source Content 2013 ; 2013 ; >
-      au < exists ; exists ; 2014 ; BraDypUS Books Source Content 2014 ; 2014 ; >
-
-  }
+    }
 
 }
