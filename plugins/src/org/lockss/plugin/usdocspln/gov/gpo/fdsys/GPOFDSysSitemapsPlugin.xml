@@ -94,7 +94,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%sfdsys/(granule|pkg)/%s[^/]+/(pdf|html?)/%s[^/]+\.(pdf|html?)$", base_url, collection_id, collection_id</string>
+      <string>"^%sfdsys/(granule|pkg)/%s[^/]+/(html?|pdf|xml)/%s[^/]+\.(html?|pdf|xml)$", base_url, collection_id, collection_id</string>
     </list>
   </entry>
   <entry>
@@ -140,7 +140,7 @@
   </entry>
   <entry>
     <string>application/xml_filter_factory</string>
-    <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysXmlFilterFactory</string>
+    <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysXmlHashFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_url_consumer_factory</string>
