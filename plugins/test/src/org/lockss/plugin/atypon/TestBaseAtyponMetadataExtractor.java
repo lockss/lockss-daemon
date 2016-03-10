@@ -261,7 +261,7 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
     sb.append(goodDOI);
     sb.append("\nUR  - ");
     sb.append(doiURL);
-    sb.append("\nER  -");
+    sb.append("\nER  - ");
     return sb.toString();
   }
   /**
@@ -315,7 +315,7 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
     sb.append(goodTitle);
     sb.append("\nPB  - ");
     sb.append(goodPublisher);
-    sb.append("\nER  -");
+    sb.append("\nER  - ");
     return sb.toString();
   }
   /**

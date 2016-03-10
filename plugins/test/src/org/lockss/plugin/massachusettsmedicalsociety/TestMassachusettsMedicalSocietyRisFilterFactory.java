@@ -54,7 +54,7 @@ public class TestMassachusettsMedicalSocietyRisFilterFactory extends LockssTestC
 		  sb.append("\nM3  - doi: 10.1056/NEJM197901183000301");
 		  sb.append("\nUR  - http://dx.doi.org/10.1056/NEJM197901183000301");
 		  sb.append("\nY2  - 2012/02/29");
-		  sb.append("\nER  -");
+		  sb.append("\nER  - ");
 		  risData = sb.toString();
 	  }
 	public static String risDataFiltered;
@@ -64,7 +64,7 @@ public class TestMassachusettsMedicalSocietyRisFilterFactory extends LockssTestC
 		  sb.append("\nJO  - N Engl J Med");
 		  sb.append("\nM3  - doi: 10.1056/NEJM197901183000301");
 		  sb.append("\nUR  - http://dx.doi.org/10.1056/NEJM197901183000301");
-		  sb.append("\nER  -");
+		  sb.append("\nER  - ");
 		  risDataFiltered = sb.toString();
 	  }
 	  

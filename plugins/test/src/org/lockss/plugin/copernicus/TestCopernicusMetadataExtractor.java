@@ -169,7 +169,7 @@ public class TestCopernicusMetadataExtractor extends LockssTestCase {
     sb.append(goodDOI);
     sb.append("\nUR  - ");
     sb.append(accessUrl);
-    sb.append("\nER  -");
+    sb.append("\nER  - ");
     return sb.toString();
   }
 

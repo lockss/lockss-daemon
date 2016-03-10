@@ -179,7 +179,7 @@ public class TestMassachusettsMedicalSocietyMetadataExtractor extends LockssTest
 	  sb.append("\nM3  - doi: " + goodDoi);
 	  //sb.append("\nUR  - http://dx.doi.org/" + goodDoi);
 	  sb.append("\nY2  - 2012/02/29");
-	  sb.append("\nER  -");
+	  sb.append("\nER  - ");
 	  return sb.toString();
   }
   // MostlyGoodContent has no access url
@@ -218,7 +218,7 @@ public class TestMassachusettsMedicalSocietyMetadataExtractor extends LockssTest
     sb.append(goodArticleTitle);
     sb.append("\nM3  - doi: " + goodDoi);
     sb.append("\nY2  - 2012/02/29");
-    sb.append("\nER  -");
+    sb.append("\nER  - ");
     return sb.toString();
 }
   /**

@@ -169,7 +169,7 @@ ER  -
     sb.append("\nM1  - ");
     sb.append("ArticleType: research-article / Full publication date: November/December 2010 / Copyright &#169; 2010 National Association of Biology Teachers");
 
-    sb.append("\nER  -");
+    sb.append("\nER  - ");
     return sb.toString();
   }
   /**
@@ -237,7 +237,7 @@ ER  -
     sb.append("\nSP  - ");
     sb.append("\nM1  - ");
     sb.append("ArticleType: / Full publication date: /");
-    sb.append("\nER  -");
+    sb.append("\nER  - ");
     return sb.toString();
   }
   /**

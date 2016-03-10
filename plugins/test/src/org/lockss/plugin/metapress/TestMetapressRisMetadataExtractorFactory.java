@@ -152,7 +152,7 @@ public class TestMetapressRisMetadataExtractorFactory extends LockssTestCase {
 	  sb.append(goodIssn);
 	  sb.append("\nT1  - ");
 	  sb.append(goodArticleTitle);
-	  sb.append("\nER  -");
+	  sb.append("\nER  - ");
 	  return sb.toString();
   }
   /**
