@@ -197,14 +197,4 @@ public class GPOFDSysHtmlFilterFactory implements FilterFactory {
       throw new PluginException(uee);
     }
   }
-  
-  public static void main(String[] args) throws Exception {
-    String file = "/tmp/Energy.html";
-    IOUtils.copy(new GPOFDSysHtmlFilterFactory().createFilteredInputStream(null,
-                                                                           new FileInputStream(file),
-                                                                           "UTF-8"),
-                 new FileOutputStream(file + ".out"));
-  }
-  
 }
-   
