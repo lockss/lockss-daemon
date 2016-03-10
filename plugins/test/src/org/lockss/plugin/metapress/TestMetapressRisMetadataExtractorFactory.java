@@ -189,6 +189,55 @@ public class TestMetapressRisMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
   }
 
+  
+  String multiLineRis = 
+      "" +
+          "TY  - JOUR\n" +
+          "JF  - International Journal of Nanomanufacturing\n" +
+          "T1  - Synthesis and properties of Eu\n" +
+          " &lt;sup&gt;3+&lt;/sup&gt;\n" +
+          " -doped LaPO\n" +
+          " &lt;sub&gt;4&lt;/sub&gt;\n" +
+          " powders\n" +
+          "VL  - 9\n" +
+          "IS  - 2\n" +
+          "SP  - 130\n" +
+          "EP  - 136\n" +
+          "PY  - 2013/01/01/\n" +
+          "UR  - http://dx.doi.org/10.1504/IJNM.2013.055139\n" +
+          "DO  - 10.1504/IJNM.2013.055139\n" +
+          "AU  - Yang, Yuguo\n" +
+          "N2  - Eu 3+ -doped LaPO 4 powders were produced from direct liquid-liquid reaction of lanthanum chloride (LaCl 3 ) and ammonium phosphate ((NH 4 ) 2 HPO\n" + 
+          "4 ). The sample was characterised by XRD and FTIR, which reveal that there is a phase transformation after the heat-treatment at 700ºC. The optical proper\n" +
+          "-doped LaPO 4 powders were investigated. Meanwhile, the influence of the dosage concentration of Eu 3+ on the luminescent properties was stu\n" +
+          "died. When above 5 mol%, the luminescence intensity decreases.\n" +
+          "ER  -\n";
+      
+  
+  public void testExtractFromMultiLineContent() throws Exception {
+    String url = "http://inderscience.metapress.com/content/kv824m8x38336011";
+    MockCachedUrl cu = new MockCachedUrl(url, bau);
+    cu.setContent(multiLineRis);
+    cu.setContentSize(multiLineRis.length());
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, Constants.MIME_TYPE_RIS);
+    FileMetadataExtractor me = new MetapressRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any, Constants.MIME_TYPE_RIS);
+    FileMetadataListExtractor mle =
+        new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    //log.info(md.ppString(2));
+    assertNotNull(md);
+    assertEquals("9", md.get(MetadataField.FIELD_VOLUME));
+    assertEquals("2", md.get(MetadataField.FIELD_ISSUE));
+    assertEquals("130", md.get(MetadataField.FIELD_START_PAGE));
+    assertEquals("Synthesis and properties of Eu" +
+          " &lt;sup&gt;3+&lt;/sup&gt;" +
+          " -doped LaPO" +
+          " &lt;sub&gt;4&lt;/sub&gt;" +
+          " powders", md.get(MetadataField.FIELD_ARTICLE_TITLE));
+  }
+  
   /**
    * Inner class that where a number of Archival Units can be created
    *

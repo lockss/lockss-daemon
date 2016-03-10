@@ -36,15 +36,11 @@ package org.lockss.plugin.silverchair;
 import java.io.InputStream;
 import java.util.*;
 
-import org.apache.commons.io.IOUtils;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.atypon.BaseAtyponRisFilterFactory;
-import org.lockss.plugin.clockss.onixbooks.Onix2LongSourceXmlMetadataExtractorFactory;
 
 
 public class TestSilverchairRisFile extends LockssTestCase {
@@ -52,7 +48,6 @@ public class TestSilverchairRisFile extends LockssTestCase {
   static Logger log = Logger.getLogger(TestSilverchairRisFile.class);
 
   private ScRisMetadataExtractorFactory extfact;
-  private ScRisFilterFactory filtfact;
   private MockArchivalUnit mau;
   private MockLockssDaemon theDaemon;
 
@@ -76,7 +71,7 @@ public class TestSilverchairRisFile extends LockssTestCase {
     theDaemon.getCrawlManager();
     mau.setConfiguration(auConfig());    
     extfact = new ScRisMetadataExtractorFactory();
-    filtfact = new ScRisFilterFactory();
+    //filtfact = new ScRisFilterFactory();
   }
   
   Configuration auConfig() {
@@ -90,36 +85,14 @@ public class TestSilverchairRisFile extends LockssTestCase {
     theDaemon.stopDaemon();
     super.tearDown();
   }
-
   
-  private static final String spieContent =      
-      "\n\n\n\n    TY - CONF\nY1 - gooddate  \nN2  - baddate\n - hypehated extra line\nER  - \n"; // extra spaces before TY
-  private static final String spieContent_expected =      
-      "\n\n\n\n    TY - CONF\nY1 - gooddate  \nER  - \n"; // extra spaces before TY
-  
-  
-  public void testSPIEContent() throws Exception {
-    InputStream actIn;
-
-
-    //should get filtered
-    actIn = filtfact.createFilteredInputStream(mau,  new StringInputStream(spieContent), Constants.DEFAULT_ENCODING);
-    assertEquals(spieContent_expected, StringUtil.fromInputStream(actIn));
-    
-
-  }
 
   public void testFromRisFile() throws Exception {
       InputStream file_input = null;
-      InputStream filtered_input = null;
       try {
         file_input = getResourceAsStream(realRisFile);
         String string_input = StringUtil.fromInputStream(file_input);
-        // filter the string and put it back in string_input
-        filtered_input = filtfact.createFilteredInputStream(mau,  new StringInputStream(string_input), Constants.DEFAULT_ENCODING);
-        string_input = StringUtil.fromInputStream(filtered_input);
         IOUtil.safeClose(file_input);
-        IOUtil.safeClose(filtered_input);
 
         CIProperties risHeader = new CIProperties();   
         String ris_url = BASE_URL + "downloadCitation.aspx?format=ris&articleid=1225362";

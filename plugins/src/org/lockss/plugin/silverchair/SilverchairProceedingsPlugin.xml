@@ -9,7 +9,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>16</string>
+        <string>17</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
             </entry>
             <entry>
                 <string>Metadata</string>
-                <string>8</string>
+                <string>9</string>
             </entry>
         </map>
     </entry>
@@ -117,17 +117,6 @@
         <string>text/html_filter_factory</string>
         <string>org.lockss.plugin.silverchair.ScHtmlHashFilterFactory</string>
     </entry>    
-<!--  waiting for fix in RisMetadataExtractor; workaround by filtering multi-line N2 -->    
-<!-- back this out pending more testing -->
-    <entry>
-      <string>application/x-research-info-systems_filter_factory</string>
-      <string>org.lockss.plugin.silverchair.ScRisFilterFactory</string>
-    </entry>
-    <entry>
-      <string>text/plain_filter_factory</string>
-      <string>org.lockss.plugin.silverchair.ScRisFilterFactory</string>
-    </entry>    
-<!--  -->    
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
