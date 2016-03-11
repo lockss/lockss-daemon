@@ -272,7 +272,7 @@
     <!-- these will not count towards poll results but will replicate from peer if above -->
     <string>au_url_poll_result_weight</string>
     <list>
-      <string>[.](css|js)$</string>
+      <string>"[.](css|js)$", 0</string>
     </list>
   </entry>
 </map>
