@@ -165,16 +165,16 @@
     <string>title_attribute:highwire_crawl_pool:HighWire</string>
   </entry>
   <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.highwire.HttpToHttpsUtil$BaseUrlHttpHttpsUrlNormalizer</string>
+  </entry>
+  <entry>
     <string>plugin_crawl_seed_factory</string>
     <string>org.lockss.plugin.highwire.HighWirePressCrawlSeedFactory</string>
   </entry>
   <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.highwire.HttpToHttpsUtil$HttpToHttpsUrlConsumerFactory</string>
-  </entry>
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.highwire.HttpToHttpsUtil.BaseUrlHttpHttpsUrlNormalizer</string>
   </entry>
   <entry>
     <string>plugin_url_fetcher_factory</string>
