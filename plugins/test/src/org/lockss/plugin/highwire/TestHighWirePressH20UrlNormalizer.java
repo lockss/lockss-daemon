@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -75,10 +75,10 @@ public class TestHighWirePressH20UrlNormalizer extends LockssTestCase {
     UrlNormalizer normalizer = new HighWirePressH20UrlNormalizer();
     
     assertEquals("http://www.example.com/content/28/1_Supplement/LB31.abstract",
-        normalizer.normalizeUrl("http://www.example.com/content/28/1_Supplement/LB31.abstract?sid=a166e1db-4d2a-4d45-b09e-aa2eaaf5bc21", m_mau));
+        normalizer.normalizeUrl("https://www.example.com/content/28/1_Supplement/LB31.abstract?sid=a166e1db-4d2a-4d45-b09e-aa2eaaf5bc21", m_mau));
     
     assertEquals("http://www.example.com/content/303/1/C1?rss=foo",
-        normalizer.normalizeUrl("http://www.example.com/content/303/1/C1?rss=foo", m_mau));
+        normalizer.normalizeUrl("https://www.example.com/content/303/1/C1?rss=foo", m_mau));
     
     assertEquals("http://www.example.com/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.tiff?-2mifpm",
         normalizer.normalizeUrl("http://www.example.com/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.tiff?-2mifpm", m_mau));

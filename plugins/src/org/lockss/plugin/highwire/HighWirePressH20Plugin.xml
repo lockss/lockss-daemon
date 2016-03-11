@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>112</string>
+    <string>113</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>34</string>
+        <string>35</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -269,7 +269,10 @@
     <string>[.](css|js)$</string>
   </entry>
   <entry>
-    <string>au_exclude_urls_from_polls_pattern</string>
-    <string>[.](css|js)$</string>
+    <!-- these will not count towards poll results but will replicate from peer if above -->
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>[.](css|js)$</string>
+    </list>
   </entry>
 </map>

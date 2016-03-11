@@ -36,8 +36,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import org.lockss.crawler.*;
 import org.lockss.daemon.Crawler.CrawlerFacade;
@@ -48,67 +46,20 @@ import org.lockss.util.Logger;
 
 /**
  * <p>
- * A custom crawl seed factory for HighWirePressH20
+ * A custom crawl seed factory for HighWirePress H10a/b/c
  * </p>
  * 
  * @since 1.67.5
  */
-public class HighWirePressH20CrawlSeedFactory implements CrawlSeedFactory {
+public class HighWirePressCrawlSeedFactory implements CrawlSeedFactory {
   
-  private static final Logger log = Logger.getLogger(HighWirePressH20CrawlSeedFactory.class);
-  
-  private static final String BMJ_EOLJ_JRNL = "eolj.bmj.com/";
-  private static final Pattern BMJ_EOLJ_PAT = Pattern.compile(
-      "lockss-manifest/vol_eolcare/", Pattern.CASE_INSENSITIVE);
-  private static final String BMJ_EOLJ_REPL = "lockss-manifest/eolcare_vol_";
+  private static final Logger log = Logger.getLogger(HighWirePressCrawlSeedFactory.class);
   
   private static final String OUP_JRNL = ".oxfordjournals.org/";
   
-  /**
-   * <p>
-   * The class is only needed for eolcare AUs
-   * So "lockss-manifest/vol_eolcare/1_manifest.dtl" is transformed
-   * to "lockss-manifest/eolcare_vol_1_manifest.dtl"
-   * </p>
-   */
-  public static class BmjEoljCrawlSeed extends BaseCrawlSeed {
+  public static class OUPCrawlSeed extends BaseCrawlSeed {
     
-    public BmjEoljCrawlSeed(CrawlerFacade crawlerFacade) {
-      super(crawlerFacade);
-    }
-    
-    @Override
-    public Collection<String> doGetPermissionUrls() throws ConfigurationException,
-        PluginException, IOException {
-      return checkUrls(super.doGetPermissionUrls());
-    }
-    
-    @Override
-    public Collection<String> doGetStartUrls() throws ConfigurationException,
-        PluginException, IOException {
-      return checkUrls(super.doGetStartUrls());
-    }
-    
-    protected Collection<String> checkUrls(Collection<String> sUrls) {
-      Collection<String> uUrls = new ArrayList<String>(sUrls.size());
-      for (Iterator<String> iter = sUrls.iterator(); iter.hasNext();) {
-        String sUrl = iter.next();
-        Matcher urlMat = BMJ_EOLJ_PAT.matcher(sUrl); 
-        if (urlMat.find()) {
-          sUrl = urlMat.replaceFirst(BMJ_EOLJ_REPL);
-          if (log.isDebug2()) {
-            log.debug2(sUrl);
-          }
-        }
-        uUrls.add(sUrl);
-      }
-      return uUrls;
-    }
-  }
-  
-  public static class OUPH20CrawlSeed extends BaseCrawlSeed {
-    
-    public OUPH20CrawlSeed(CrawlerFacade crawlerFacade) {
+    public OUPCrawlSeed(CrawlerFacade crawlerFacade) {
       super(crawlerFacade);
     }
     
@@ -133,10 +84,7 @@ public class HighWirePressH20CrawlSeedFactory implements CrawlSeedFactory {
     String baseUrl = facade.getAu().getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
     if (baseUrl != null) {
       if (baseUrl.contains(OUP_JRNL)) {
-        return new OUPH20CrawlSeed(facade);
-      }
-      if (baseUrl.contains(BMJ_EOLJ_JRNL)) {
-        return new BmjEoljCrawlSeed(facade);
+        return new OUPCrawlSeed(facade);
       }
     }
     return new BaseCrawlSeed(facade);

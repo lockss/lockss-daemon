@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>102</string>
+    <string>103</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -168,6 +168,18 @@
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
     <string>title_attribute:highwire_crawl_pool:HighWire</string>
+  </entry>
+  <entry>
+    <string>plugin_crawl_seed_factory</string>
+    <string>org.lockss.plugin.highwire.HighWirePressCrawlSeedFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.highwire.HttpToHttpsUtil$HttpToHttpsUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.highwire.HttpToHttpsUtil$HttpToHttpsUrlFetcherFactory</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,12 +45,14 @@ import org.lockss.test.LockssTestCase;
  * map H20 links on manifest pages to H10 links
  * <base_url>content/168/1.toc to <base_url>content/vol168/issue1/
  */
+import org.lockss.test.MockArchivalUnit;
 
 public class TestHighWireUrlNormalizer extends LockssTestCase {
   
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   private DefinablePlugin plugin;
+  private MockArchivalUnit mau;
   
   @Override
   public void setUp() throws Exception {
@@ -64,16 +66,18 @@ public class TestHighWireUrlNormalizer extends LockssTestCase {
     
     Configuration config = ConfigurationUtil.fromProps(props);
     plugin.configureAu(config, null);
-    }
+    mau = new MockArchivalUnit();
+    mau.setConfiguration(config);
+  }
   
   public void testUrlNormalizer() throws Exception {
     UrlNormalizer normalizer = new HighWireUrlNormalizer();
     
-    assertEquals("http://ajpcell.physiology.org/content/vol303/issue1/",
-        normalizer.normalizeUrl("http://ajpcell.physiology.org/content/303/1.toc", null));
+    assertEquals("http://www.example.com/content/vol303/issue1/",
+        normalizer.normalizeUrl("https://www.example.com/content/303/1.toc", mau));
     
-    assertEquals("http://ajpcell.physiology.org/content/303/1/",
-        normalizer.normalizeUrl("http://ajpcell.physiology.org/content/303/1/", null));
+    assertEquals("http://www.example.com/content/303/1/",
+        normalizer.normalizeUrl("http://www.example.com/content/303/1/", mau));
     
   }
 }

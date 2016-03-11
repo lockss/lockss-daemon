@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,14 +39,14 @@ import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-public class HighWireUrlNormalizer implements UrlNormalizer {
+public class HighWireUrlNormalizer extends HttpToHttpsUtil.BaseUrlHttpHttpsUrlNormalizer {
   
   protected static final Logger log = Logger.getLogger(HighWireUrlNormalizer.class);
   protected static final String TOC_SUFFIX = ".toc";
   protected static final Pattern H20_LINK = Pattern.compile("(https?://[^/]+)/content/([^/]+)/([^/]+)[.]toc");
   
   @Override
-  public String normalizeUrl(String url, ArchivalUnit au)
+  public String additionalNormalization(String url, ArchivalUnit au)
       throws PluginException {
     
     // map H20 links on manifest pages to H10 links
