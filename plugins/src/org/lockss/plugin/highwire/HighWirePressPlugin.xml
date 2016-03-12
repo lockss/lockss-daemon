@@ -104,17 +104,17 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://%s/[^?]+\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url)</string>
-      <string>4,"^%s", base_url</string>
-      <string>1,"^%scontent/%s/[^/]+[.]toc$", base_url, volume_name</string>
-      <string>2,"^%s.*/search[.]dtl", base_url</string>
-      <string>1,"^%scontent/vol%s/", base_url, volume_name</string>
-      <string>1,"^%scgi/(content|content-nw|issue_pdf)/[^/]+/([^/]+;)?%s/", base_url, volume_name</string>
-      <string>1,"^%scgi/(data|eletters|entire_issue_pdf|framedreprint|issue_pdf|pdftoc|reprint|reprintds|reprintframed|reprintframedds|reprintsidebar|screenpdf|video|video_dl)/([^/]+;)?%s/", base_url, volume_name</string>
-      <string>1,"^%scgi/(?:lookup|spanish_pdf/)", base_url</string>
-      <string>1,"^%s(this_week)/([^/]+;)?%s/", base_url, volume_name</string>
-      <string>1,"^%scgi/(content/full|data)/[^/]+/DC[0-9]*", base_url</string>
-      <string>1,"^%scontent/vol[^/]+/issue[^/]+/images/data/([^/]+/)?DC[0-9]*", base_url</string>
-      <string>1,"^%sarticletopbar\.dtl", base_url</string>
+      <string>4,"^https?://%s/", url_host(base_url)</string>
+      <string>1,"^https?://%s/content/%s/[^/]+[.]toc$", url_host(base_url), volume_name</string>
+      <string>2,"^https?://%s/.*/search[.]dtl", url_host(base_url)</string>
+      <string>1,"^https?://%s/content/vol%s/", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/cgi/(content|content-nw|issue_pdf)/[^/]+/([^/]+;)?%s/", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/cgi/(data|eletters|entire_issue_pdf|framedreprint|issue_pdf|pdftoc|reprint|reprintds|reprintframed|reprintframedds|reprintsidebar|screenpdf|video|video_dl)/([^/]+;)?%s/", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/cgi/(?:lookup|spanish_pdf/)", url_host(base_url)</string>
+      <string>1,"^https?://%s/(this_week)/([^/]+;)?%s/", url_host(base_url), volume_name</string>
+      <string>1,"^https?://%s/cgi/(content/full|data)/[^/]+/DC[0-9]*", url_host(base_url)</string>
+      <string>1,"^https?://%s/content/vol[^/]+/issue[^/]+/images/data/([^/]+/)?DC[0-9]*", url_host(base_url)</string>
+      <string>1,"^https?://%s/articletopbar\.dtl", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
