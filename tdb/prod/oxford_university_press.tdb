@@ -118,9 +118,9 @@
 
     plugin = org.lockss.plugin.highwire.HighWirePlugin
     param[base_url] = http://afraf.oxfordjournals.org/
-    implicit < status ; year ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] ; proxy >
 
-    au < down ; 2006 ; African Affairs Volume 105 ; 105 >
+    au < down ; 2006 ; African Affairs Volume 105 ; 105 ; delta1.lockss.org:8080 >
 
     }
 
@@ -2704,25 +2704,25 @@
 
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://bib.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; proxy >
 
-    au < HighWirePressH20Plugin ; manifest ; 2000 ; Briefings in Bioinformatics Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 2001 ; Briefings in Bioinformatics Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 2002 ; Briefings in Bioinformatics Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; Briefings in Bioinformatics Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 2004 ; Briefings in Bioinformatics Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; Briefings in Bioinformatics Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Briefings in Bioinformatics Volume 7 ; 7 >
-    au < HighWireStrVolPlugin ; down ; 2007 ; Briefings in Bioinformatics Volume 8 ; 8 >
-    au < HighWirePressPlugin ; down ; 2008 ; Briefings in Bioinformatics Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; released ; 2009 ; Briefings in Bioinformatics Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; released ; 2010 ; Briefings in Bioinformatics Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; released ; 2011 ; Briefings in Bioinformatics Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; released ; 2012 ; Briefings in Bioinformatics Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 2013 ; Briefings in Bioinformatics Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; released ; 2014 ; Briefings in Bioinformatics Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 2015 ; Briefings in Bioinformatics Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 2016 ; Briefings in Bioinformatics Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; manifest ; 2000 ; Briefings in Bioinformatics Volume 1 ; 1 ; >
+    au < HighWirePressH20Plugin ; manifest ; 2001 ; Briefings in Bioinformatics Volume 2 ; 2 ; >
+    au < HighWirePressH20Plugin ; manifest ; 2002 ; Briefings in Bioinformatics Volume 3 ; 3 ; >
+    au < HighWirePressH20Plugin ; manifest ; 2003 ; Briefings in Bioinformatics Volume 4 ; 4 ; >
+    au < HighWirePressH20Plugin ; manifest ; 2004 ; Briefings in Bioinformatics Volume 5 ; 5 ; >
+    au < HighWirePressH20Plugin ; manifest ; 2005 ; Briefings in Bioinformatics Volume 6 ; 6 ; >
+    au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Briefings in Bioinformatics Volume 7 ; 7 ; >
+    au < HighWireStrVolPlugin ; down ; 2007 ; Briefings in Bioinformatics Volume 8 ; 8 ; >
+    au < HighWirePressPlugin ; down ; 2008 ; Briefings in Bioinformatics Volume 9 ; 9 ; delta1.lockss.org:8080 >
+    au < HighWirePressH20Plugin ; released ; 2009 ; Briefings in Bioinformatics Volume 10 ; 10 ; >
+    au < HighWirePressH20Plugin ; released ; 2010 ; Briefings in Bioinformatics Volume 11 ; 11 ; >
+    au < HighWirePressH20Plugin ; released ; 2011 ; Briefings in Bioinformatics Volume 12 ; 12 ; >
+    au < HighWirePressH20Plugin ; released ; 2012 ; Briefings in Bioinformatics Volume 13 ; 13 ; >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; Briefings in Bioinformatics Volume 14 ; 14 ; >
+    au < HighWirePressH20Plugin ; released ; 2014 ; Briefings in Bioinformatics Volume 15 ; 15 ; >
+    au < HighWirePressH20Plugin ; manifest ; 2015 ; Briefings in Bioinformatics Volume 16 ; 16 ; >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Briefings in Bioinformatics Volume 17 ; 17 ; >
 
 
     }
@@ -9391,10 +9391,10 @@
 
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://ietisy.oxfordjournals.org/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; proxy >
 
-    au < HighWireStrVolPlugin ; down ; 2006 ; IEICE Transactions on Information and Systems Volume E89-D ; E89-D >
-    au < HighWireStrVolPlugin ; down ; 2007 ; IEICE Transactions on Information and Systems Volume E90-D ; E90-D >
+    au < HighWireStrVolPlugin ; down ; 2006 ; IEICE Transactions on Information and Systems Volume E89-D ; E89-D ; delta.lokcss.org:8080 >
+    au < HighWireStrVolPlugin ; down ; 2007 ; IEICE Transactions on Information and Systems Volume E90-D ; E90-D ; >
 
    }
 
