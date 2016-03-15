@@ -87,6 +87,7 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
           HtmlNodeFilters.tagWithAttribute("div", "id", "cboxOverlay"),
           HtmlNodeFilters.tagWithAttribute("div", "id", "gimme-satisfaction"),
           HtmlNodeFilters.tagWithAttribute("div", "class", "crossmark-tooltip"),
+          HtmlNodeFilters.tagWithAttribute("div", "id", "crossMark"),
           
           //CSS links in body
           HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
