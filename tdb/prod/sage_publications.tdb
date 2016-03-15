@@ -67,9 +67,9 @@
         pluginSuffix = HighWirePlugin
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         param[base_url] = http://ach.sagepub.com/
-        implicit < status ; year ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume] ; proxy >
 
-        au < down ; 2000 ; Accounting History Volume 5 ; 5 >
+        au < down ; 2000 ; Accounting History Volume 5 ; 5 ; delta1.lockss.org:8080 >
 
       }
 
@@ -22668,12 +22668,12 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       {
 
         param[base_url] = http://jcd.sagepub.com/
-        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; proxy >
 
 
-        au < HighWireStrVolPlugin ; down ; 2006-2007 ; Journal of Career Development Volume 33 ; 33 >
-        au < HighWireStrVolPlugin ; down ; 2007-2008 ; Journal of Career Development Volume 34 ; 34 >
-        au < HighWirePressPlugin ; down ; 2008-2009 ; Journal of Career Development Volume 35 ; 35 >
+        au < HighWireStrVolPlugin ; down ; 2006-2007 ; Journal of Career Development Volume 33 ; 33 ; delta1.lockss.org:8080 >
+        au < HighWireStrVolPlugin ; down ; 2007-2008 ; Journal of Career Development Volume 34 ; 34 ; >
+        au < HighWirePressPlugin ; down ; 2008-2009 ; Journal of Career Development Volume 35 ; 35 ; >
 
       }
 
