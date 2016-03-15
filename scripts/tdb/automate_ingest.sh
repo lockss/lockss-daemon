@@ -56,6 +56,6 @@ head -n50 $t/tmp_Misc >> $t/tmp_All
 
 exit 0
 
-# ./scripts/tdb/tdbedit --from-status=manifest,ready --to-status=crawling --auids=tmp_All tdb/clockssingest/*.tdb
+# ./scripts/tdb/tdbedit --from-status=manifest,ready --to-status=crawling --auids=../SageEdits/tmp tdb/clockssingest/*.tdb
 # ./scripts/tdb/tdbedit --from-status=exists --to-status=manifest --auids=../SageEdits/tmp tdb/clockssingest/multi_science.tdb
 # ./scripts/tdb/tdbedit --from-status=exists,expected --to-status=manifest --auids=../SageEdits/tmp tdb/ibictpln/*.tdb
