@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,82 +42,67 @@ import org.lockss.daemon.PluginException;
 
 public class GPOFDSysSitemapsArticleIteratorFactory
   implements ArticleIteratorFactory,
-       ArticleMetadataExtractorFactory {
+             ArticleMetadataExtractorFactory {
   
   protected static Logger log = 
-    Logger.getLogger("GPOFDSysSitemapsArticleIteratorFactory");
+    Logger.getLogger(GPOFDSysSitemapsArticleIteratorFactory.class);
   
   protected static final String ROOT_TEMPLATE =
     "\"%sfdsys/pkg/\", base_url";
 
   protected static final String PATTERN_TEMPLATE =
-    "\"^%sfdsys/pkg/([^/]+)/(html|pdf)/([^/]+)\\.htm$\", base_url";
+    "\"^%sfdsys/pkg/([^/]+)/(html?|pdf|xml)/([^/]+)\\.(html?|pdf|xml)$\", base_url";
+  
+  protected static final Pattern HTML_PATTERN = 
+      Pattern.compile("([^/]+)/html/([^/]+)\\.htm$",
+          Pattern.CASE_INSENSITIVE);
+  
+  protected static final Pattern PDF_PATTERN = 
+      Pattern.compile("([^/]+)/pdf/([^/]+)\\.pdf$",
+          Pattern.CASE_INSENSITIVE);
+  
+  protected static final Pattern XML_PATTERN = 
+      Pattern.compile("([^/]+)/xml/([^/]+)\\.xml$",
+          Pattern.CASE_INSENSITIVE);
+  
+  protected static final String HTML_REPLACEMENT = "$1/html/$2.htm";
+  protected static final String PDF_REPLACEMENT = "$1/pdf/$2.pdf";
+  protected static final String XML_REPLACEMENT = "$1/xml/$2.xml";
+
   
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
       throws PluginException {
-    return new 
-      GPOFDSysSitemapsArticleIterator(au,
-              new SubTreeArticleIterator.Spec()
-              .setTarget(target)
-              .setRootTemplate(ROOT_TEMPLATE)
-              .setPatternTemplate(PATTERN_TEMPLATE));
+    
+    SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
+    
+    builder.setSpec(target, ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+    
+    // set up html, pdf, xml to be an aspects that will trigger an ArticleFiles
+    builder.addAspect(
+        HTML_PATTERN, HTML_REPLACEMENT, 
+        ArticleFiles.ROLE_FULL_TEXT_HTML);
+    
+    builder.addAspect(
+        PDF_PATTERN, PDF_REPLACEMENT, 
+        ArticleFiles.ROLE_FULL_TEXT_PDF);
+    
+    builder.addAspect(
+        XML_PATTERN, XML_REPLACEMENT, 
+        ArticleFiles.ROLE_FULL_TEXT_XML);
+    
+    // add metadata role from html, xml, or pdf (NOTE: pdf metadata is the access url)
+    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, Arrays.asList(
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_FULL_TEXT_XML,
+        ArticleFiles.ROLE_FULL_TEXT_PDF));
+    
+    return builder.getSubTreeArticleIterator();
   }
   
-  protected static class GPOFDSysSitemapsArticleIterator
-    extends SubTreeArticleIterator {
-    
-    protected static Pattern HTML_PATTERN = 
-      Pattern.compile("fdsys/pkg/([^/]+)/html/([^/]+)\\.htm$",
-        Pattern.CASE_INSENSITIVE);
-    
-    protected static Pattern PDF_PATTERN = 
-      Pattern.compile("fdsys/pkg/([^/]+)/pdf/([^/]+)\\.pdf$",
-        Pattern.CASE_INSENSITIVE);
-    
-    public GPOFDSysSitemapsArticleIterator(ArchivalUnit au,
-                                  SubTreeArticleIterator.Spec spec) {
-      super(au, spec);
-    }
-    
-    @Override
-    protected ArticleFiles createArticleFiles(CachedUrl cu) {
-      String url = cu.getUrl();
-      Matcher mat;
-      
-      mat = HTML_PATTERN.matcher(url);
-      if (mat.find()) {
-        return processFullTextHtml(cu, mat);
-      }
-        
-      mat = PDF_PATTERN.matcher(url);
-      if (mat.find()) {
-        return processFullTextPdf(cu, mat);
-      }
-      
-      log.warning("Mismatch between article iterator factory and article iterator: " + url);
-      return null;
-    }
-    
-    protected ArticleFiles processFullTextHtml(CachedUrl htmlCu,
-        Matcher htmlMat) {
-      ArticleFiles af = new ArticleFiles();
-      af.setFullTextCu(htmlCu);
-      af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
-      return af;
-    }
-
-    protected ArticleFiles processFullTextPdf(CachedUrl pdfCu,
-        Matcher pdfMat) {
-      ArticleFiles af = new ArticleFiles();
-      af.setFullTextCu(pdfCu);
-      af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-      return af;
-    }
-  }
   
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new BaseArticleMetadataExtractor(null);
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
 }
