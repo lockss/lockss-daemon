@@ -4881,7 +4881,7 @@
         au < manifest ; 2013 ; British Journalism Review Volume 24 ; 24 >
         au < released ; 2014 ; British Journalism Review Volume 25 ; 25 >
         au < manifest ; 2015 ; British Journalism Review Volume 26 ; 26 >
-        au < expected ; 2016 ; British Journalism Review Volume 27 ; 27 >
+        au < manifest ; 2016 ; British Journalism Review Volume 27 ; 27 >
 
       }
 
@@ -5559,7 +5559,7 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 2015 ; Cahiers Élisabéthains Volume 88 ; 88 >
-      au < expected ; 2016 ; Cahiers Élisabéthains Volume 89 ; 89 >
+      au < manifest ; 2016 ; Cahiers Élisabéthains Volume 89 ; 89 >
 
   }
 
@@ -9090,7 +9090,7 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 2015 ; Critical Studies in Television Volume 10 ; 10 >
-      au < expected ; 2016 ; Critical Studies in Television Volume 11 ; 11 >
+      au < manifest ; 2016 ; Critical Studies in Television Volume 11 ; 11 >
 
   }
 
@@ -11830,7 +11830,7 @@
       au < exists ; 2013 ; Environmental Law Review Volume 15 ; 15 >
       au < manifest ; 2014 ; Environmental Law Review Volume 16 ; 16 >
       au < manifest ; 2015 ; Environmental Law Review Volume 17 ; 17 >
-      au < expected ; 2016 ; Environmental Law Review Volume 18 ; 18 >
+      au < manifest ; 2016 ; Environmental Law Review Volume 18 ; 18 >
 
   }
 
@@ -14916,7 +14916,7 @@
         au < manifest ; 2013 ; Global Media and Communication Volume 9 ; 9 >
         au < released ; 2014 ; Global Media and Communication Volume 10 ; 10 >
         au < manifest ; 2015 ; Global Media and Communication Volume 11 ; 11 >
-        au < expected ; 2016 ; Global Media and Communication Volume 12 ; 12 >
+        au < manifest ; 2016 ; Global Media and Communication Volume 12 ; 12 >
 
       }
 
@@ -15002,7 +15002,7 @@
         au < manifest ; 2013 ; Global Social Policy Volume 13 ; 13 >
         au < released ; 2014 ; Global Social Policy Volume 14 ; 14 >
         au < manifest ; 2015 ; Global Social Policy Volume 15 ; 15 >
-        au < expected ; 2016 ; Global Social Policy Volume 16 ; 16 >
+        au < manifest ; 2016 ; Global Social Policy Volume 16 ; 16 >
 
       }
 
@@ -15347,7 +15347,7 @@
       au < exists ; 2013 ; International Journal of Protective Structures Volume 4 ; 4 >
       au < manifest ; 2014 ; International Journal of Protective Structures Volume 5 ; 5 >
       au < manifest ; 2015 ; International Journal of Protective Structures Volume 6 ; 6 >
-      au < expected ; 2016 ; International Journal of Protective Structures Volume 7 ; 7 >
+      au < manifest ; 2016 ; International Journal of Protective Structures Volume 7 ; 7 >
 
   }
 
@@ -15465,7 +15465,7 @@
         au < manifest ; 2013 ; International Journal of Toxicology Volume 32 ; 32 >
         au < manifest ; 2014 ; International Journal of Toxicology Volume 33 ; 33 >
         au < manifest ; 2015 ; International Journal of Toxicology Volume 34 ; 34 >
-        au < expected ; 2016 ; International Journal of Toxicology Volume 35 ; 35 >
+        au < manifest ; 2016 ; International Journal of Toxicology Volume 35 ; 35 >
 
       }
 
@@ -16194,7 +16194,7 @@
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
   
-        au < exists ; 2016 ; Hispanic Health Care International Volume 14 ; 14 >
+        au < manifest ; 2016 ; Hispanic Health Care International Volume 14 ; 14 >
   
     }
 
@@ -19096,7 +19096,7 @@
       au < exists ; 2013 ; International Journal of Mechanical Engineering Education Volume 41 ; 41 >
       au < manifest ; 2014 ; International Journal of Mechanical Engineering Education Volume 42 ; 42 >
       au < manifest ; 2015 ; International Journal of Mechanical Engineering Education Volume 43 ; 43 >
-      au < expected ; 2016 ; International Journal of Mechanical Engineering Education Volume 44 ; 44 >
+      au < manifest ; 2016 ; International Journal of Mechanical Engineering Education Volume 44 ; 44 >
 
     }
 
@@ -20223,7 +20223,7 @@
         au < released ; 2013 ; International Review of Administrative Sciences Volume 79 ; 79 >
         au < released ; 2014 ; International Review of Administrative Sciences Volume 80 ; 80 >
         au < manifest ; 2015 ; International Review of Administrative Sciences Volume 81 ; 81 >
-        au < expected ; 2016 ; International Review of Administrative Sciences Volume 82 ; 82 >
+        au < manifest ; 2016 ; International Review of Administrative Sciences Volume 82 ; 82 >
 
       }
 
@@ -24048,7 +24048,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2013 ; Journal of Creative Communications Volume 8 ; 8 >
         au < released ; 2014 ; Journal of Creative Communications Volume 9 ; 9 >
         au < manifest ; 2015 ; Journal of Creative Communications Volume 10 ; 10 >
-        au < expected ; 2016 ; Journal of Creative Communications Volume 11 ; 11 >
+        au < manifest ; 2016 ; Journal of Creative Communications Volume 11 ; 11 >
 
       }
 
@@ -24806,7 +24806,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2013 ; Journal of Education for Sustainable Development Volume 7 ; 7 >
         au < released ; 2014 ; Journal of Education for Sustainable Development Volume 8 ; 8 >
         au < manifest ; 2015 ; Journal of Education for Sustainable Development Volume 9 ; 9 >
-        au < expected ; 2016 ; Journal of Education for Sustainable Development Volume 10 ; 10 >
+        au < manifest ; 2016 ; Journal of Education for Sustainable Development Volume 10 ; 10 >
 
       }
 
@@ -25665,7 +25665,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2013 ; Journal of European Studies Volume 43 ; 43 >
         au < released ; 2014 ; Journal of European Studies Volume 44 ; 44 >
         au < manifest ; 2015 ; Journal of European Studies Volume 45 ; 45 >
-        au < expected ; 2016 ; Journal of European Studies Volume 46 ; 46 >
+        au < manifest ; 2016 ; Journal of European Studies Volume 46 ; 46 >
 
       }
 
@@ -26239,7 +26239,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2013 ; Journal of Health and Social Behavior Volume 54 ; 54 >
         au < manifest ; 2014 ; Journal of Health and Social Behavior Volume 55 ; 55 >
         au < manifest ; 2015 ; Journal of Health and Social Behavior Volume 56 ; 56 >
-        au < expected ; 2016 ; Journal of Health and Social Behavior Volume 57 ; 57 >
+        au < manifest ; 2016 ; Journal of Health and Social Behavior Volume 57 ; 57 >
 
       }
 
@@ -27798,7 +27798,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < exists ; 2012 ; The Journal of Law, Medicine & Ethics Volume 40 ; 40 >
         au < exists ; 2013 ; The Journal of Law, Medicine & Ethics Volume 41 ; 41 >
         au < exists ; 2014 ; The Journal of Law, Medicine & Ethics Volume 42 ; 42 >
-        au < exists ; 2015 ; The Journal of Law, Medicine & Ethics Volume 43 ; 43 >
+        au < manifest ; 2015 ; The Journal of Law, Medicine & Ethics Volume 43 ; 43 >
         au < expected ; 2016 ; The Journal of Law, Medicine & Ethics Volume 44 ; 44 >
 
     }
@@ -28452,7 +28452,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2013 ; Journal of Marketing Education Volume 35 ; 35 >
         au < released ; 2014 ; Journal of Marketing Education Volume 36 ; 36 >
         au < manifest ; 2015 ; Journal of Marketing Education Volume 37 ; 37 >
-        au < expected ; 2016 ; Journal of Marketing Education Volume 38 ; 38 >
+        au < manifest ; 2016 ; Journal of Marketing Education Volume 38 ; 38 >
 
       }
 
@@ -28507,7 +28507,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2013 ; Journal of Material Culture Volume 18 ; 18 >
         au < released ; 2014 ; Journal of Material Culture Volume 19 ; 19 >
         au < manifest ; 2015 ; Journal of Material Culture Volume 20 ; 20 >
-        au < expected ; 2016 ; Journal of Material Culture Volume 21 ; 21 >
+        au < manifest ; 2016 ; Journal of Material Culture Volume 21 ; 21 >
 
       }
 
@@ -28893,7 +28893,7 @@ comment[mpj] = now published by Brill
       au < exists ; 2013 ; Journal of Pastoral Care & Counseling Volume 67 ; 67 >
       au < manifest ; 2014 ; Journal of Pastoral Care & Counseling Volume 68 ; 68 >
       au < manifest ; 2015 ; Journal of Pastoral Care & Counseling Volume 69 ; 69 >
-      au < expected ; 2016 ; Journal of Pastoral Care & Counseling Volume 70 ; 70 >
+      au < manifest ; 2016 ; Journal of Pastoral Care & Counseling Volume 70 ; 70 >
 
     }
 
@@ -37853,7 +37853,7 @@ comment[mpj] = now published by Brill
         au < released ; 2013 ; Probation Journal Volume 60 ; 60 >
         au < released ; 2014 ; Probation Journal Volume 61 ; 61 >
         au < manifest ; 2015 ; Probation Journal Volume 62 ; 62 >
-        au < expected ; 2016 ; Probation Journal Volume 63 ; 63 >
+        au < manifest ; 2016 ; Probation Journal Volume 63 ; 63 >
 
       }
 
@@ -38615,7 +38615,7 @@ comment[mpj] = now published by Brill
         au < released ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 227 ; 227 >
         au < released ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 228 ; 228 >
         au < manifest ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 229 ; 229 >
-        au < expected ; 2016 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 230 ; 230 >
+        au < manifest ; 2016 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 230 ; 230 >
 
     }
 
@@ -39433,7 +39433,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2013 ; Public Relations Inquiry Volume 2 ; 2 >
         au < released ; 2014 ; Public Relations Inquiry Volume 3 ; 3 >
         au < manifest ; 2015 ; Public Relations Inquiry Volume 4 ; 4 >
-        au < expected ; 2016 ; Public Relations Inquiry Volume 5 ; 5 >
+        au < manifest ; 2016 ; Public Relations Inquiry Volume 5 ; 5 >
 
       }
 
@@ -41279,7 +41279,7 @@ comment[mpj] = now published by Brill
       au < manifest ; 2013 ; Scandinavian Journal of Surgery Volume 102 ; 102 >
       au < released ; 2014 ; Scandinavian Journal of Surgery Volume 103 ; 103 >
       au < manifest ; 2015 ; Scandinavian Journal of Surgery Volume 104 ; 104 >
-      au < expected ; 2016 ; Scandinavian Journal of Surgery Volume 105 ; 105 >
+      au < manifest ; 2016 ; Scandinavian Journal of Surgery Volume 105 ; 105 >
 
     }
 
@@ -44788,7 +44788,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2013 ; Theory and Research in Education Volume 11 ; 11 >
         au < released ; 2014 ; Theory and Research in Education Volume 12 ; 12 >
         au < manifest ; 2015 ; Theory and Research in Education Volume 13 ; 13 >
-        au < expected ; 2016 ; Theory and Research in Education Volume 14 ; 14 >
+        au < manifest ; 2016 ; Theory and Research in Education Volume 14 ; 14 >
 
       }
 
@@ -51805,7 +51805,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; released ; 2013 ; Obstetric Medicine Volume 6 ; 6 >
         au < HighWirePressH20Plugin ; released ; 2014 ; Obstetric Medicine Volume 7 ; 7 >
         au < HighWirePressH20Plugin ; manifest ; 2015 ; Obstetric Medicine Volume 8 ; 8 >
-        au < HighWirePressH20Plugin ; expected ; 2016 ; Obstetric Medicine Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; manifest ; 2016 ; Obstetric Medicine Volume 9 ; 9 >
 
       }
 

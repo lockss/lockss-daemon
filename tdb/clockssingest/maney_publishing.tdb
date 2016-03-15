@@ -307,22 +307,22 @@
     param[journal_id] = yjdd17
     comment[continued_by] = 0374-633X
     
-    au < exists ; exists ; 1955 ; The Journal of Mental Subnormality Volume 1 ; 1 ; >
-    au < exists ; exists ; 1956 ; The Journal of Mental Subnormality Volume 2 ; 2 ; >
-    au < exists ; exists ; 1957 ; The Journal of Mental Subnormality Volume 3 ; 3 ; >
-    au < exists ; exists ; 1958 ; The Journal of Mental Subnormality Volume 4 ; 4 ; >
-    au < exists ; exists ; 1959 ; The Journal of Mental Subnormality Volume 5 ; 5 ; >
-    au < exists ; exists ; 1960 ; The Journal of Mental Subnormality Volume 6 ; 6 ; >
-    au < exists ; exists ; 1961 ; The Journal of Mental Subnormality Volume 7 ; 7 ; >
-    au < exists ; exists ; 1962 ; The Journal of Mental Subnormality Volume 8 ; 8 ; >
-    au < exists ; exists ; 1963 ; The Journal of Mental Subnormality Volume 9 ; 9 ; >
-    au < exists ; exists ; 1964 ; The Journal of Mental Subnormality Volume 10 ; 10 ; >
-    au < exists ; exists ; 1965 ; The Journal of Mental Subnormality Volume 11 ; 11 ; >
-    au < exists ; exists ; 1966 ; The Journal of Mental Subnormality Volume 12 ; 12 ; >
-    au < exists ; exists ; 1967 ; The Journal of Mental Subnormality Volume 13 ; 13 ; >
-    au < exists ; exists ; 1968 ; The Journal of Mental Subnormality Volume 14 ; 14 ; >
-    au < exists ; exists ; 1969 ; The Journal of Mental Subnormality Volume 15 ; 15 ; >
-    au < exists ; exists ; 1970 ; The Journal of Mental Subnormality Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1955 ; The Journal of Mental Subnormality Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1956 ; The Journal of Mental Subnormality Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1957 ; The Journal of Mental Subnormality Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1958 ; The Journal of Mental Subnormality Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1959 ; The Journal of Mental Subnormality Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1960 ; The Journal of Mental Subnormality Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1961 ; The Journal of Mental Subnormality Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1962 ; The Journal of Mental Subnormality Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1963 ; The Journal of Mental Subnormality Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1964 ; The Journal of Mental Subnormality Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1965 ; The Journal of Mental Subnormality Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1966 ; The Journal of Mental Subnormality Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1967 ; The Journal of Mental Subnormality Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1968 ; The Journal of Mental Subnormality Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1969 ; The Journal of Mental Subnormality Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1970 ; The Journal of Mental Subnormality Volume 16 ; 16 ; >
 
   }
 
@@ -883,7 +883,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Costume Volume 47 ; 47 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Costume Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Costume Volume 49 ; 49 ; >
-    au < expected ; exists ; 2016 ; Costume Volume 50 ; 50 ; >
+    au < manifest ; exists ; 2016 ; Costume Volume 50 ; 50 ; >
 
     }
   
@@ -956,7 +956,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Dix-Neuf Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Dix-Neuf Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Dix-Neuf Volume 19 ; 19 ; >
-    au < expected ; exists ; 2016 ; Dix-Neuf Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2016 ; Dix-Neuf Volume 20 ; 20 ; >
 
   }
 
@@ -1388,7 +1388,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Hematology Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Hematology Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Hematology Volume 20 ; 20 ; >
-    au < expected ; exists ; 2016 ; Hematology Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2016 ; Hematology Volume 21 ; 21 ; >
 
   }
 
@@ -2311,7 +2311,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Field Archaeology Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Field Archaeology Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Field Archaeology Volume 40 ; 40 ; >
-    au < expected ; exists ; 2016 ; Journal of Field Archaeology Volume 41 ; 41 ; >
+    au < manifest ; exists ; 2016 ; Journal of Field Archaeology Volume 41 ; 41 ; >
 
   }
 
@@ -2752,7 +2752,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; The London Journal Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; The London Journal Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; The London Journal Volume 40 ; 40 ; >
-    au < expected ; exists ; 2016 ; The London Journal Volume 41 ; 41 ; >
+    au < manifest ; exists ; 2016 ; The London Journal Volume 41 ; 41 ; >
 
   }
 
@@ -2941,13 +2941,13 @@
     param[journal_id] = ymst17
     comment[merged_into] = 0306-3453
 
-    au < exists ; exists ; 1967 ; Metal Science Journal Volume 1 ; 1 ; >
-    au < exists ; exists ; 1968 ; Metal Science Journal Volume 2 ; 2 ; >
-    au < exists ; exists ; 1969 ; Metal Science Journal Volume 3 ; 3 ; >
-    au < exists ; exists ; 1970 ; Metal Science Journal Volume 4 ; 4 ; >
-    au < exists ; exists ; 1971 ; Metal Science Journal Volume 5 ; 5 ; >
-    au < exists ; exists ; 1972 ; Metal Science Journal Volume 6 ; 6 ; >
-    au < exists ; exists ; 1973 ; Metal Science Journal Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1967 ; Metal Science Journal Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1968 ; Metal Science Journal Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1969 ; Metal Science Journal Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1970 ; Metal Science Journal Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1971 ; Metal Science Journal Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1972 ; Metal Science Journal Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1973 ; Metal Science Journal Volume 7 ; 7 ; >
 
   }
 
@@ -3977,11 +3977,11 @@
 
     param[journal_id] = yemf18
 
-    au < exists ; exists ; 1979 ; Seventeenth-Century French Studies Newsletter Volume 1 ; 1 ; >
-    au < exists ; exists ; 1980 ; Seventeenth-Century French Studies Newsletter Volume 2 ; 2 ; >
-    au < exists ; exists ; 1981 ; Seventeenth-Century French Studies Newsletter Volume 3 ; 3 ; >
-    au < exists ; exists ; 1982 ; Seventeenth-Century French Studies Newsletter Volume 4 ; 4 ; >
-    au < exists ; exists ; 1983 ; Seventeenth-Century French Studies Newsletter Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1979 ; Seventeenth-Century French Studies Newsletter Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1980 ; Seventeenth-Century French Studies Newsletter Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1981 ; Seventeenth-Century French Studies Newsletter Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1982 ; Seventeenth-Century French Studies Newsletter Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1983 ; Seventeenth-Century French Studies Newsletter Volume 5 ; 5 ; >
 
   }
 
@@ -4041,7 +4041,7 @@
 
     param[journal_id] = yemf20
 
-    au < expected ; exists ; 2015 ; Early Modern French Studies Volume 37 ; 37 ; >
+    au < manifest ; exists ; 2015 ; Early Modern French Studies Volume 37 ; 37 ; >
     au < expected ; exists ; 2016 ; Early Modern French Studies Volume 38 ; 38 ; >
 
   }
@@ -4334,7 +4334,7 @@
     param[journal_id] = ytav20 
     comment[volume1] = publisher has two volume 1 in 1974 & 1986, they both directly 1986 
 
-    au < exists ; exists ; 1974 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1974 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 1 ; 1 ; >
     au < manifest ; exists ; 1975 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 2 ; 2 ; >
     au < manifest ; exists ; 1976 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 3 ; 3 ; >
     au < manifest ; exists ; 1977 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 4 ; 4 ; >
@@ -4343,33 +4343,33 @@
     au < manifest ; exists ; 1980 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 7 ; 7 ; >
     au < manifest ; exists ; 1981 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 8 ; 8 ; >
     au < manifest ; exists ; 1982 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 9 ; 9 ; >
-    au < exists ; exists ; 1983 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 10 ; 10 ; >
-    au < exists ; exists ; 1984 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 11 ; 11 ; >
-    au < exists ; exists ; 1985 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 12 ; 12 ; >
-    au < exists ; exists ; 1986 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 13 ; 13 ; >
-    au < exists ; exists ; 1987 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 14 ; 14 ; >
-    au < exists ; exists ; 1988 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 15 ; 15 ; >
-    au < exists ; exists ; 1989 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 16 ; 16 ; >
-    au < exists ; exists ; 1990 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 17 ; 17 ; >
-    au < exists ; exists ; 1991 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 18 ; 18 ; >
-    au < exists ; exists ; 1992 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 19 ; 19 ; >
-    au < exists ; exists ; 1993 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 20 ; 20 ; >
-    au < exists ; exists ; 1994 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 21 ; 21 ; >
-    au < exists ; exists ; 1995 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 22 ; 22 ; >
-    au < exists ; exists ; 1996 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 23 ; 23 ; >
-    au < exists ; exists ; 1997 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 24 ; 24 ; >
-    au < exists ; exists ; 1998 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 25 ; 25 ; >
-    au < exists ; exists ; 1999 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 26 ; 26 ; >
-    au < exists ; exists ; 2000 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 27 ; 27 ; >
-    au < exists ; exists ; 2001 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 28 ; 28 ; >
-    au < exists ; exists ; 2002 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 29 ; 29 ; >
-    au < exists ; exists ; 2003 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 30 ; 30 ; >
-    au < exists ; exists ; 2004 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 31 ; 31 ; >
-    au < exists ; exists ; 2005 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 32 ; 32 ; >
-    au < exists ; exists ; 2006 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 33 ; 33 ; >
-    au < exists ; exists ; 2007 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 34 ; 34 ; >
-    au < exists ; exists ; 2008 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 35 ; 35 ; >
-    au < exists ; exists ; 2009 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 36 ; 36 ; >
+    au < manifest ; exists ; 1983 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1984 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1985 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1986 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1987 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1988 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1989 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1990 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1991 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1992 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1993 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1994 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1995 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1996 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1997 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1998 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1999 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2000 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2001 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2002 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2003 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2004 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2005 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 32 ; 32 ; >
+    au < manifest ; exists ; 2006 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 33 ; 33 ; >
+    au < manifest ; exists ; 2007 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 34 ; 34 ; >
+    au < manifest ; exists ; 2008 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 35 ; 35 ; >
+    au < manifest ; exists ; 2009 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Tel Aviv: Journal of the Institute of Archaeology of Tel Aviv University Volume 39 ; 39 ; >
@@ -4514,18 +4514,18 @@
 
     param[journal_id] = ytim20 
     
-    au < exists ; exists ; 2005 ; Transactions of the IMF Volume 83 ; 83 ; >
-    au < exists ; exists ; 2006 ; Transactions of the IMF Volume 84 ; 84 ; >
-    au < exists ; exists ; 2007 ; Transactions of the IMF Volume 85 ; 85 ; >
-    au < exists ; exists ; 2008 ; Transactions of the IMF Volume 86 ; 86 ; >
-    au < exists ; exists ; 2009 ; Transactions of the IMF Volume 87 ; 87 ; >
+    au < manifest ; exists ; 2005 ; Transactions of the IMF Volume 83 ; 83 ; >
+    au < manifest ; exists ; 2006 ; Transactions of the IMF Volume 84 ; 84 ; >
+    au < manifest ; exists ; 2007 ; Transactions of the IMF Volume 85 ; 85 ; >
+    au < manifest ; exists ; 2008 ; Transactions of the IMF Volume 86 ; 86 ; >
+    au < manifest ; exists ; 2009 ; Transactions of the IMF Volume 87 ; 87 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Transactions of the IMF Volume 88 ; 88 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Transactions of the IMF Volume 89 ; 89 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Transactions of the IMF Volume 90 ; 90 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Transactions of the IMF Volume 91 ; 91 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Transactions of the IMF Volume 92 ; 92 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Transactions of the IMF Volume 93 ; 93 ; >
-    au < expected ; exists ; 2016 ; Transactions of the IMF Volume 94 ; 94 ; >
+    au < manifest ; exists ; 2016 ; Transactions of the IMF Volume 94 ; 94 ; >
 
   }
 
@@ -4681,7 +4681,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Twentieth-Century China Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Twentieth-Century China Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Twentieth-Century China Volume 40 ; 40 ; >
-    au < expected ; exists ; 2016 ; Twentieth-Century China Volume 41 ; 41 ; >
+    au < manifest ; exists ; 2016 ; Twentieth-Century China Volume 41 ; 41 ; >
 
   }
 
