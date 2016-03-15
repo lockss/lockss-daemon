@@ -89,11 +89,11 @@
       param[base_url] = http://est.tempsite.ws/periodicos/
       param[journal_id] = identidade
 
-      au < testing ; 2010 ; 15 ; Identidade! Volume 15 ; 2010 ; >
-      au < testing ; 2011 ; 16 ; Identidade! Volume 16 ; 2011 ; >
-      au < testing ; 2012 ; 17 ; Identidade! Volume 17 ; 2012 ; >
-      au < testing ; 2013 ; 18 ; Identidade! Volume 18 ; 2013 ; >
-      au < testing ; 2014 ; 19 ; Identidade! Volume 19 ; 2014 ; >
+      au < ready ; 2010 ; 15 ; Identidade! Volume 15 ; 2010 ; >
+      au < ready ; 2011 ; 16 ; Identidade! Volume 16 ; 2011 ; >
+      au < ready ; 2012 ; 17 ; Identidade! Volume 17 ; 2012 ; >
+      au < ready ; 2013 ; 18 ; Identidade! Volume 18 ; 2013 ; >
+      au < ready ; 2014 ; 19 ; Identidade! Volume 19 ; 2014 ; >
 
   }
 
@@ -108,11 +108,11 @@
       param[base_url] = http://est.tempsite.ws/periodicos/
       param[journal_id] = nepp
 
-      au < testing ; 2010 ; 1 ; Protestantismo em Revista Volume 1 ; 2010 ; >
-      au < testing ; 2011 ; 2 ; Protestantismo em Revista Volume 2 ; 2011 ; >
-      au < testing ; 2012 ; 3 ; Protestantismo em Revista Volume 3 ; 2012 ; >
-      au < testing ; 2013 ; 4 ; Protestantismo em Revista Volume 4 ; 2013 ; >
-      au < testing ; 2014 ; 5 ; Protestantismo em Revista Volume 5 ; 2014 ; >
+      au < ready ; 2010 ; 1 ; Protestantismo em Revista Volume 1 ; 2010 ; >
+      au < ready ; 2011 ; 2 ; Protestantismo em Revista Volume 2 ; 2011 ; >
+      au < ready ; 2012 ; 3 ; Protestantismo em Revista Volume 3 ; 2012 ; >
+      au < ready ; 2013 ; 4 ; Protestantismo em Revista Volume 4 ; 2013 ; >
+      au < ready ; 2014 ; 5 ; Protestantismo em Revista Volume 5 ; 2014 ; >
 
   }
 
@@ -145,22 +145,22 @@
       param[base_url] = http://periodicos.est.edu.br/
       param[journal_id] = identidade
 
-      au < testing ; 2000 ; 1 ; Identidade! Volume 2000 ; 2000 ; >
-      au < testing ; 2001 ; 2 ; Identidade! Volume 2001 ; 2001 ; >
-      au < testing ; 2002 ; 3 ; Identidade! Volume 2002 ; 2002 ; >
-      au < testing ; 2003 ; 4 ; Identidade! Volume 2003 ; 2003 ; >
-      au < testing ; 2004 ; 5 ; Identidade! Volume 2004 ; 2004 ; >
-      au < testing ; 2005 ; 6 ; Identidade! Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 7 ; Identidade! Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 8 ; Identidade! Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 9 ; Identidade! Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 10 ; Identidade! Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 11 ; Identidade! Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 12 ; Identidade! Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 13 ; Identidade! Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 14 ; Identidade! Volume 2013 ; 2013 ; >
-      au < testing ; 2014 ; 15 ; Identidade! Volume 2014 ; 2014 ; >
-      au < testing ; 2015 ; 16 ; Identidade! Volume 2015 ; 2015 ; >
+      au < ready ; 2000 ; 1 ; Identidade! Volume 2000 ; 2000 ; >
+      au < ready ; 2001 ; 2 ; Identidade! Volume 2001 ; 2001 ; >
+      au < ready ; 2002 ; 3 ; Identidade! Volume 2002 ; 2002 ; >
+      au < ready ; 2003 ; 4 ; Identidade! Volume 2003 ; 2003 ; >
+      au < ready ; 2004 ; 5 ; Identidade! Volume 2004 ; 2004 ; >
+      au < ready ; 2005 ; 6 ; Identidade! Volume 2005 ; 2005 ; >
+      au < ready ; 2006 ; 7 ; Identidade! Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 8 ; Identidade! Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 9 ; Identidade! Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 10 ; Identidade! Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 11 ; Identidade! Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 12 ; Identidade! Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 13 ; Identidade! Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 14 ; Identidade! Volume 2013 ; 2013 ; >
+      au < ready ; 2014 ; 15 ; Identidade! Volume 2014 ; 2014 ; >
+      au < ready ; 2015 ; 16 ; Identidade! Volume 2015 ; 2015 ; >
 
   }
 
@@ -175,20 +175,20 @@
       param[base_url] = http://periodicos.est.edu.br/
       param[journal_id] = nepp
 
-      au < testing ; 2002 ; 1 ; Protestantismo em Revista Volume 2002 ; 2002 ; >
-      au < testing ; 2003 ; 2 ; Protestantismo em Revista Volume 2003 ; 2003 ; >
-      au < testing ; 2004 ; 3 ; Protestantismo em Revista Volume 2004 ; 2004 ; >
-      au < testing ; 2005 ; 4 ; Protestantismo em Revista Volume 2005 ; 2005 ; >
-      au < testing ; 2006 ; 5 ; Protestantismo em Revista Volume 2006 ; 2006 ; >
-      au < testing ; 2007 ; 6 ; Protestantismo em Revista Volume 2007 ; 2007 ; >
-      au < testing ; 2008 ; 7 ; Protestantismo em Revista Volume 2008 ; 2008 ; >
-      au < testing ; 2009 ; 8 ; Protestantismo em Revista Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 9 ; Protestantismo em Revista Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 10 ; Protestantismo em Revista Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 11 ; Protestantismo em Revista Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 12 ; Protestantismo em Revista Volume 2013 ; 2013 ; >
-      au < testing ; 2014 ; 13 ; Protestantismo em Revista Volume 2014 ; 2014 ; >
-      au < testing ; 2015 ; 14 ; Protestantismo em Revista Volume 2015 ; 2015 ; >
+      au < ready ; 2002 ; 1 ; Protestantismo em Revista Volume 2002 ; 2002 ; >
+      au < ready ; 2003 ; 2 ; Protestantismo em Revista Volume 2003 ; 2003 ; >
+      au < ready ; 2004 ; 3 ; Protestantismo em Revista Volume 2004 ; 2004 ; >
+      au < ready ; 2005 ; 4 ; Protestantismo em Revista Volume 2005 ; 2005 ; >
+      au < ready ; 2006 ; 5 ; Protestantismo em Revista Volume 2006 ; 2006 ; >
+      au < ready ; 2007 ; 6 ; Protestantismo em Revista Volume 2007 ; 2007 ; >
+      au < ready ; 2008 ; 7 ; Protestantismo em Revista Volume 2008 ; 2008 ; >
+      au < ready ; 2009 ; 8 ; Protestantismo em Revista Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 9 ; Protestantismo em Revista Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 10 ; Protestantismo em Revista Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 11 ; Protestantismo em Revista Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 12 ; Protestantismo em Revista Volume 2013 ; 2013 ; >
+      au < ready ; 2014 ; 13 ; Protestantismo em Revista Volume 2014 ; 2014 ; >
+      au < ready ; 2015 ; 14 ; Protestantismo em Revista Volume 2015 ; 2015 ; >
 
   }
 
