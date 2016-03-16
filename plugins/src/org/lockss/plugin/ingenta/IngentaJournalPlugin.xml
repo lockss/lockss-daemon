@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>58</string>
+    <string>59</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -57,10 +57,13 @@
       <string>1,"^https?://(%s|%s|%s|docserver[.]ingentaconnect[.]com)/.*[.](css|js|eot|svg|ttf|woff.?)([?].*)?$", base_url_host, api_url_host, graphics_url_host</string>
       <string>1,"^https?://(%s|%s|%s|docserver[.]ingentaconnect[.]com)/.*[.](bmp|gif|ico|jpe?g|png|tif?f)$", base_url_host, api_url_host, graphics_url_host</string>
       <string>4,"^(?:%s|%s|%s)", base_url, api_url, graphics_url</string>
-      <string>2,"^%scontent/%s/%s/[0-9]{4}/0*%s/.{8}$", api_url, publisher_id, journal_id, volume_name</string>
-      <string>2,"^%scontent/%s/%s/[0-9]{4}/0*%s/.{8}/.{8}$", api_url, publisher_id, journal_id, volume_name</string>
-      <string>2,"^(?:%s|%s)content/%s/%s/[0-9]{4}/0*%s/.*(?:/trial(?:[?]crawler=true)?|/citations|[?]format=rss)$", base_url, api_url, publisher_id, journal_id, volume_name</string>
-      <string>1,"^(?:%s|%s)content/%s/%s/[0-9]{4}/0*%s/", base_url, api_url, publisher_id, journal_id, volume_name</string>
+      <!--  allow option of contentone in place of content, normalized off -->
+      <!--  these guard against duplicate URLS from the api_url -->
+      <string>2,"^%scontent(one)?/%s/%s/[0-9]{4}/0*%s/.{8}(\?format=.*)?$", api_url, publisher_id, journal_id, volume_name</string>
+      <string>2,"^%scontent(one)?/%s/%s/[0-9]{4}/0*%s/.{8}/.{8}(\?format=.*)?$", api_url, publisher_id, journal_id, volume_name</string>
+      <!--  these guard against unwanted variants -->
+      <string>2,"^(?:%s|%s)content(one)?/%s/%s/[0-9]{4}/0*%s/.*(?:/trial(?:[?]crawler=true)?|/citations|[?]format=rss)$", base_url, api_url, publisher_id, journal_id, volume_name</string>
+      <string>1,"^(?:%s|%s)content(one)?/%s/%s/[0-9]{4}/0*%s/", base_url, api_url, publisher_id, journal_id, volume_name</string>
       <!-- special crawl rule for Maney Medieval Sermon Studies -->
       <string>1,"^(?:%s|%s)content/%s/%s/%s$", base_url, api_url, publisher_id, journal_id, volume_name</string>
       <string>1,"^%s", graphics_url</string>
