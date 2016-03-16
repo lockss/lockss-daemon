@@ -34,9 +34,6 @@ package org.lockss.plugin.usdocspln.gov.gpo.fdsys;
 
 import java.io.*;
 
-import org.apache.commons.collections.MultiMap;
-import org.apache.commons.collections.map.MultiValueMap;
-
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;

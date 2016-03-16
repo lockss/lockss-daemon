@@ -65,7 +65,8 @@ public class GPOFDSysSitemapsArticleIteratorFactory
       Pattern.compile("([^/]+)/xml/([^/]+)\\.xml$",
           Pattern.CASE_INSENSITIVE);
   
-  protected static final String HTML_REPLACEMENT = "$1/html/$2.htm";
+  protected static final String HTML_REPLACEMENT1 = "$1/html/$2.htm";
+  protected static final String HTML_REPLACEMENT2 = "$1/html/$2.html";
   protected static final String PDF_REPLACEMENT = "$1/pdf/$2.pdf";
   protected static final String XML_REPLACEMENT = "$1/xml/$2.xml";
 
@@ -80,7 +81,7 @@ public class GPOFDSysSitemapsArticleIteratorFactory
     
     // set up html, pdf, xml to be an aspects that will trigger an ArticleFiles
     builder.addAspect(
-        HTML_PATTERN, HTML_REPLACEMENT, 
+        HTML_PATTERN, Arrays.asList(HTML_REPLACEMENT1, HTML_REPLACEMENT2),
         ArticleFiles.ROLE_FULL_TEXT_HTML);
     
     builder.addAspect(
@@ -94,8 +95,8 @@ public class GPOFDSysSitemapsArticleIteratorFactory
     // add metadata role from html, xml, or pdf (NOTE: pdf metadata is the access url)
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, Arrays.asList(
         ArticleFiles.ROLE_FULL_TEXT_HTML,
-        ArticleFiles.ROLE_FULL_TEXT_XML,
-        ArticleFiles.ROLE_FULL_TEXT_PDF));
+        ArticleFiles.ROLE_FULL_TEXT_PDF,
+        ArticleFiles.ROLE_FULL_TEXT_XML));
     
     return builder.getSubTreeArticleIterator();
   }
