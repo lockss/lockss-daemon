@@ -51,11 +51,11 @@
     
     param[journal_id] = aj
 
-    au < manifest ; exists ; 2005 ; Agronomy Journal Volume 97 ; 97 ; >
-    au < manifest ; exists ; 2006 ; Agronomy Journal Volume 98 ; 98 ; >
-    au < manifest ; exists ; 2007 ; Agronomy Journal Volume 99 ; 99 ; >
-    au < manifest ; exists ; 2008 ; Agronomy Journal Volume 100 ; 100 ; >
-    au < manifest ; exists ; 2009 ; Agronomy Journal Volume 101 ; 101 ; >
+    au < testing ; exists ; 2005 ; Agronomy Journal Volume 97 ; 97 ; >
+    au < testing ; exists ; 2006 ; Agronomy Journal Volume 98 ; 98 ; >
+    au < testing ; exists ; 2007 ; Agronomy Journal Volume 99 ; 99 ; >
+    au < testing ; exists ; 2008 ; Agronomy Journal Volume 100 ; 100 ; >
+    au < testing ; exists ; 2009 ; Agronomy Journal Volume 101 ; 101 ; >
     au < manifest ; exists ; 2010 ; Agronomy Journal Volume 102 ; 102 ; >
     au < manifest ; exists ; 2011 ; Agronomy Journal Volume 103 ; 103 ; >
     au < manifest ; exists ; 2012 ; Agronomy Journal Volume 104 ; 104 ; >
@@ -79,11 +79,11 @@
     
     param[journal_id] = cns
 
-    au < manifest ; exists ; 2005 ; Crops & Soils Magazine Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2006 ; Crops & Soils Magazine Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2007 ; Crops & Soils Magazine Volume 40 ; 40 ; >
-    au < manifest ; exists ; 2008 ; Crops & Soils Magazine Volume 41 ; 41 ; >
-    au < manifest ; exists ; 2009 ; Crops & Soils Magazine Volume 42 ; 42 ; >
+    au < testing ; exists ; 2005 ; Crops & Soils Magazine Volume 38 ; 38 ; >
+    au < testing ; exists ; 2006 ; Crops & Soils Magazine Volume 39 ; 39 ; >
+    au < testing ; exists ; 2007 ; Crops & Soils Magazine Volume 40 ; 40 ; >
+    au < testing ; exists ; 2008 ; Crops & Soils Magazine Volume 41 ; 41 ; >
+    au < testing ; exists ; 2009 ; Crops & Soils Magazine Volume 42 ; 42 ; >
     au < manifest ; exists ; 2010 ; Crops & Soils Magazine Volume 43 ; 43 ; >
     au < manifest ; exists ; 2011 ; Crops & Soils Magazine Volume 44 ; 44 ; >
     au < manifest ; exists ; 2012 ; Crops & Soils Magazine Volume 45 ; 45 ; >
@@ -108,11 +108,11 @@
 
     param[journal_id] = cs
 
-    au < manifest ; exists ; 2005 ; Crop Science Volume 45 ; 45 ; >
-    au < manifest ; exists ; 2006 ; Crop Science Volume 46 ; 46 ; >
-    au < manifest ; exists ; 2007 ; Crop Science Volume 47 ; 47 ; >
-    au < manifest ; exists ; 2008 ; Crop Science Volume 48 ; 48 ; >
-    au < manifest ; exists ; 2009 ; Crop Science Volume 49 ; 49 ; >
+    au < testing ; exists ; 2005 ; Crop Science Volume 45 ; 45 ; >
+    au < testing ; exists ; 2006 ; Crop Science Volume 46 ; 46 ; >
+    au < testing ; exists ; 2007 ; Crop Science Volume 47 ; 47 ; >
+    au < testing ; exists ; 2008 ; Crop Science Volume 48 ; 48 ; >
+    au < testing ; exists ; 2009 ; Crop Science Volume 49 ; 49 ; >
     au < manifest ; exists ; 2010 ; Crop Science Volume 50 ; 50 ; >
     au < manifest ; exists ; 2011 ; Crop Science Volume 51 ; 51 ; >
     au < manifest ; exists ; 2012 ; Crop Science Volume 52 ; 52 ; >
@@ -136,11 +136,11 @@
     
     param[journal_id] = csa
 
-    au < manifest ; exists ; 2005 ; CSA News Volume 50 ; 50 ; >
-    au < manifest ; exists ; 2006 ; CSA News Volume 51 ; 51 ; >
-    au < manifest ; exists ; 2007 ; CSA News Volume 52 ; 52 ; >
-    au < manifest ; exists ; 2008 ; CSA News Volume 53 ; 53 ; >
-    au < manifest ; exists ; 2009 ; CSA News Volume 54 ; 54 ; >
+    au < testing ; exists ; 2005 ; CSA News Volume 50 ; 50 ; >
+    au < testing ; exists ; 2006 ; CSA News Volume 51 ; 51 ; >
+    au < testing ; exists ; 2007 ; CSA News Volume 52 ; 52 ; >
+    au < testing ; exists ; 2008 ; CSA News Volume 53 ; 53 ; >
+    au < testing ; exists ; 2009 ; CSA News Volume 54 ; 54 ; >
     au < manifest ; exists ; 2010 ; CSA News Volume 55 ; 55 ; >
     au < manifest ; exists ; 2011 ; CSA News Volume 56 ; 56 ; >
     au < manifest ; exists ; 2012 ; CSA News Volume 57 ; 57 ; >
@@ -165,11 +165,11 @@
     
     param[journal_id] = jeq
 
-    au < manifest ; exists ; 2005 ; Journal of Environmental Quality Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2006 ; Journal of Environmental Quality Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2007 ; Journal of Environmental Quality Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2008 ; Journal of Environmental Quality Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2009 ; Journal of Environmental Quality Volume 38 ; 38 ; >
+    au < testing ; exists ; 2005 ; Journal of Environmental Quality Volume 34 ; 34 ; >
+    au < testing ; exists ; 2006 ; Journal of Environmental Quality Volume 35 ; 35 ; >
+    au < testing ; exists ; 2007 ; Journal of Environmental Quality Volume 36 ; 36 ; >
+    au < testing ; exists ; 2008 ; Journal of Environmental Quality Volume 37 ; 37 ; >
+    au < testing ; exists ; 2009 ; Journal of Environmental Quality Volume 38 ; 38 ; >
     au < manifest ; exists ; 2010 ; Journal of Environmental Quality Volume 39 ; 39 ; >
     au < manifest ; exists ; 2011 ; Journal of Environmental Quality Volume 40 ; 40 ; >
     au < manifest ; exists ; 2012 ; Journal of Environmental Quality Volume 41 ; 41 ; >
@@ -193,9 +193,9 @@
     
     param[journal_id] = jpr
 
-    au < manifest ; exists ; 2007 ; Journal of Plant Registrations Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2008 ; Journal of Plant Registrations Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2009 ; Journal of Plant Registrations Volume 3 ; 3 ; >
+    au < testing ; exists ; 2007 ; Journal of Plant Registrations Volume 1 ; 1 ; >
+    au < testing ; exists ; 2008 ; Journal of Plant Registrations Volume 2 ; 2 ; >
+    au < testing ; exists ; 2009 ; Journal of Plant Registrations Volume 3 ; 3 ; >
     au < manifest ; exists ; 2010 ; Journal of Plant Registrations Volume 4 ; 4 ; >
     au < manifest ; exists ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 ; >
     au < manifest ; exists ; 2012 ; Journal of Plant Registrations Volume 6 ; 6 ; >
@@ -236,11 +236,11 @@
     
     param[journal_id] = nse
 
-    au < manifest ; exists ; 2005 ; Natural Sciences Education Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2006 ; Natural Sciences Education Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2007 ; Natural Sciences Education Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2008 ; Natural Sciences Education Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2009 ; Natural Sciences Education Volume 38 ; 38 ; >
+    au < testing ; exists ; 2005 ; Natural Sciences Education Volume 34 ; 34 ; >
+    au < testing ; exists ; 2006 ; Natural Sciences Education Volume 35 ; 35 ; >
+    au < testing ; exists ; 2007 ; Natural Sciences Education Volume 36 ; 36 ; >
+    au < testing ; exists ; 2008 ; Natural Sciences Education Volume 37 ; 37 ; >
+    au < testing ; exists ; 2009 ; Natural Sciences Education Volume 38 ; 38 ; >
     au < manifest ; exists ; 2010 ; Natural Sciences Education Volume 39 ; 39 ; >
     au < manifest ; exists ; 2011 ; Natural Sciences Education Volume 40 ; 40 ; >
     au < manifest ; exists ; 2012 ; Natural Sciences Education Volume 41 ; 41 ; >
@@ -263,8 +263,8 @@
     
     param[journal_id] = tpg
 
-    au < manifest ; exists ; 2008 ; The Plant Genome Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2009 ; The Plant Genome Volume 2 ; 2 ; >
+    au < testing ; exists ; 2008 ; The Plant Genome Volume 1 ; 1 ; >
+    au < testing ; exists ; 2009 ; The Plant Genome Volume 2 ; 2 ; >
     au < manifest ; exists ; 2010 ; The Plant Genome Volume 3 ; 3 ; >
     au < manifest ; exists ; 2011 ; The Plant Genome Volume 4 ; 4 ; >
     au < manifest ; exists ; 2012 ; The Plant Genome Volume 5 ; 5 ; >
@@ -287,7 +287,11 @@
     
     param[journal_id] = sh
 
-    au < manifest ; exists ; 2009 ; Soil Horizons Volume 50 ; 50 ; >
+    au < exists ; exists ; 2005 ; Soil Horizons Volume 46 ; 46 ; >
+    au < exists ; exists ; 2006 ; Soil Horizons Volume 47 ; 47 ; >
+    au < exists ; exists ; 2007 ; Soil Horizons Volume 48 ; 48 ; >
+    au < exists ; exists ; 2008 ; Soil Horizons Volume 49 ; 49 ; >
+    au < testing ; exists ; 2009 ; Soil Horizons Volume 50 ; 50 ; >
     au < manifest ; exists ; 2010 ; Soil Horizons Volume 51 ; 51 ; >
     au < manifest ; exists ; 2011 ; Soil Horizons Volume 52 ; 52 ; >
     au < manifest ; exists ; 2012 ; Soil Horizons Volume 53 ; 53 ; >
@@ -312,6 +316,11 @@
     
     param[journal_id] = sssaj
 
+    au < exists ; exists ; 2005 ; Soil Science Society of America Journal Volume 69 ; 69 ; >
+    au < exists ; exists ; 2006 ; Soil Science Society of America Journal Volume 70 ; 70 ; >
+    au < exists ; exists ; 2007 ; Soil Science Society of America Journal Volume 71 ; 71 ; >
+    au < exists ; exists ; 2008 ; Soil Science Society of America Journal Volume 72 ; 72 ; >
+    au < exists ; exists ; 2009 ; Soil Science Society of America Journal Volume 73 ; 73 ; >
     au < manifest ; exists ; 2010 ; Soil Science Society of America Journal Volume 74 ; 74 ; >
     au < manifest ; exists ; 2011 ; Soil Science Society of America Journal Volume 75 ; 75 ; >
     au < manifest ; exists ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 ; >
@@ -335,11 +344,11 @@
     
     param[journal_id] = vzj
 
-    au < manifest ; exists ; 2005 ; Vadose Zone Journal Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2006 ; Vadose Zone Journal Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2007 ; Vadose Zone Journal Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2008 ; Vadose Zone Journal Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2009 ; Vadose Zone Journal Volume 8 ; 8 ; >
+    au < testing ; exists ; 2005 ; Vadose Zone Journal Volume 4 ; 4 ; >
+    au < testing ; exists ; 2006 ; Vadose Zone Journal Volume 5 ; 5 ; >
+    au < testing ; exists ; 2007 ; Vadose Zone Journal Volume 6 ; 6 ; >
+    au < testing ; exists ; 2008 ; Vadose Zone Journal Volume 7 ; 7 ; >
+    au < testing ; exists ; 2009 ; Vadose Zone Journal Volume 8 ; 8 ; >
     au < manifest ; exists ; 2010 ; Vadose Zone Journal Volume 9 ; 9 ; >
     au < manifest ; exists ; 2011 ; Vadose Zone Journal Volume 10 ; 10 ; >
     au < manifest ; exists ; 2012 ; Vadose Zone Journal Volume 11 ; 11 ; >
