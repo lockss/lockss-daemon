@@ -1220,6 +1220,40 @@
     }
 
     {
+  
+      title <
+        name = The American Economist ;
+        issn = 0569-4345 ;
+        eissn = 2328-1235 
+      >
+  
+      param[base_url] = http://aex.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      #content available from 1960 volume 4 to 1999 volume 43
+  
+        au < exists ; 2000 ; The American Economist Volume 44 ; 44 >
+        au < exists ; 2001 ; The American Economist Volume 45 ; 45 >
+        au < exists ; 2002 ; The American Economist Volume 46 ; 46 >
+        au < exists ; 2003 ; The American Economist Volume 47 ; 47 >
+        au < exists ; 2004 ; The American Economist Volume 48 ; 48 >
+        au < exists ; 2005 ; The American Economist Volume 49 ; 49 >
+        au < exists ; 2006 ; The American Economist Volume 50 ; 50 >
+        au < exists ; 2007 ; The American Economist Volume 51 ; 51 >
+        au < exists ; 2008 ; The American Economist Volume 52 ; 52 >
+        au < exists ; 2009 ; The American Economist Volume 53 ; 53 >
+        au < exists ; 2009 ; The American Economist Volume 54 ; 54 >
+        au < doesNotExist ; 2010 ; The American Economist Volume 55 ; 55 >
+        au < doesNotExist ; 2011 ; The American Economist Volume 56 ; 56 >
+        au < doesNotExist ; 2012 ; The American Economist Volume 57 ; 57 >
+        au < doesNotExist ; 2013 ; The American Economist Volume 58 ; 58 >
+        au < doesNotExist ; 2014 ; The American Economist Volume 59 ; 59 >
+        au < doesNotExist ; 2015 ; The American Economist Volume 60 ; 60 >
+        au < exists ; 2016 ; The American Economist Volume 61 ; 61 >
+  
+    }
+
+    {
 
       title <
         name = American Educational Research Journal ;
@@ -7737,7 +7771,22 @@
 
     }
 
-    {
+   {
+
+      title <
+        name = Comprehensive Psychology ;
+        eissn = 2165-2228
+      >
+    
+      param[base_url] = http://cop.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < expected ; 2016 ; Comprehensive Psychology Volume 1 ; 1 >
+
+    }
+ 
+   {
 
       title <
         name = Concurrent Engineering ;
