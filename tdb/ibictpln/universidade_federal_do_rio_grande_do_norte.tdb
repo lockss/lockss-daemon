@@ -18,7 +18,7 @@
       param[journal_id] = artresearchjournal
 
       au < released ; 2014 ; 1 ; ARJ - Art Research Journal Volume 1 ; 2014 ; >
-      au < testing ; 2015 ; 2 ; ARJ - Art Research Journal Volume 2 ; 2015 ; >
+      au < ready ; 2015 ; 2 ; ARJ - Art Research Journal Volume 2 ; 2015 ; >
       au < expected ; 2016 ; 3 ; ARJ - Art Research Journal Volume 3 ; 2016 ; >
 
   }
@@ -40,7 +40,7 @@
       au < released ; 2012 ; 4 ; Revista Ambiente Contábil Volume 4 ; 2012 ; >
       au < released ; 2013 ; 5 ; Revista Ambiente Contábil Volume 5 ; 2013 ; >
       au < released ; 2014 ; 6 ; Revista Ambiente Contábil Volume 6 ; 2014 ; >
-      au < testing ; 2015 ; 7 ; Revista Ambiente Contábil Volume 7 ; 2015 ; >
+      au < ready ; 2015 ; 7 ; Revista Ambiente Contábil Volume 7 ; 2015 ; >
       au < manifest ; 2016 ; 8 ; Revista Ambiente Contábil Volume 8 ; 2016 ; >
 
   }
@@ -86,7 +86,7 @@
       au < released ; 2012 ; 6 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2012 ; 2012 ; >
       au < expected ; 2013 ; 7 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 8 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2014 ; 2014 ; >
-      au < testing ; 2015 ; 9 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2015 ; 2015 ; >
+      au < ready ; 2015 ; 9 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 10 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2016 ; 2016 ; >
 
   }
@@ -131,7 +131,7 @@
 
       au < released ; 2013 ; 1 ; Revista Alétheia Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 2 ; Revista Alétheia Volume 2014 ; 2014 ; >
-      au < testing ; 2015 ; 3 ; Revista Alétheia Volume 2015 ; 2015 ; >
+      au < ready ; 2015 ; 3 ; Revista Alétheia Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 4 ; Revista Alétheia Volume 2016 ; 2016 ; >
 
   }
@@ -146,7 +146,7 @@
       param[base_url] = http://ufrn.emnuvens.com.br/
       param[journal_id] = educacaoemquestao
 
-      au < testing ; 2003 ; 18 ; Revista Educação em Questão Volume 2003 ; 2003 ; >
+      au < ready ; 2003 ; 18 ; Revista Educação em Questão Volume 2003 ; 2003 ; >
       au < ready ; 2004 ; 19-21 ; Revista Educação em Questão Volume 2004 ; 2004 ; >
       au < ready ; 2005 ; 22-24 ; Revista Educação em Questão Volume 2005 ; 2005 ; >
       au < released ; 2006 ; 25-27 ; Revista Educação em Questão Volume 2006 ; 2006 ; >
@@ -158,7 +158,7 @@
       au < released ; 2012 ; 42-44 ; Revista Educação em Questão Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 45-47 ; Revista Educação em Questão Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 48-50 ; Revista Educação em Questão Volume 2014 ; 2014 ; >
-      au < testing ; 2015 ; 51-53 ; Revista Educação em Questão Volume 2015 ; 2015 ; >
+      au < ready ; 2015 ; 51-53 ; Revista Educação em Questão Volume 2015 ; 2015 ; >
       au < manifest ; 2016 ; 54-56 ; Revista Educação em Questão Volume 2016 ; 2016 ; >
 
   }
@@ -219,7 +219,7 @@
       au < ready ; 2012 ; 3 ; The Journal of Surgical and Clinical Research, Volume 2012 ; 2012 ; >
       au < ready ; 2013 ; 4 ; The Journal of Surgical and Clinical Research, Volume 2013 ; 2013 ; >
       au < ready ; 2014 ; 5 ; The Journal of Surgical and Clinical Research, Volume 2014 ; 2014 ; >
-      au < testing ; 2015 ; 6 ; The Journal of Surgical and Clinical Research, Volume 2015 ; 2015 ; >
+      au < ready ; 2015 ; 6 ; The Journal of Surgical and Clinical Research, Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 7 ; The Journal of Surgical and Clinical Research, Volume 2016 ; 2016 ; >
 
   }
@@ -249,7 +249,7 @@
       au < released ; 2012 ; 12 ; Mneme-Revista de Humanidades Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 13 ; Mneme-Revista de Humanidades Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 14 ; Mneme-Revista de Humanidades Volume 2014 ; 2014 ; >
-      au < testing ; 2015 ; 15 ; Mneme-Revista de Humanidades Volume 2015 ; 2015 ; >
+      au < ready ; 2015 ; 15 ; Mneme-Revista de Humanidades Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 16 ; Mneme-Revista de Humanidades Volume 2016 ; 2016 ; >
 
   }
@@ -307,7 +307,7 @@
       au < released ; 2012 ; 19 ; Princípios: Revista de Filosofia (UFRN) Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 20 ; Princípios: Revista de Filosofia (UFRN) Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 21 ; Princípios: Revista de Filosofia (UFRN) Volume 2014 ; 2014 ; >
-      au < testing ; 2015 ; 22 ; Princípios: Revista de Filosofia (UFRN) Volume 2015 ; 2015 ; >
+      au < ready ; 2015 ; 22 ; Princípios: Revista de Filosofia (UFRN) Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 23 ; Princípios: Revista de Filosofia (UFRN) Volume 2016 ; 2016 ; >
 
   }
@@ -325,7 +325,7 @@
 
       au < released ; 2013 ; 1 ; Revista de Turismo Contemporâneo Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 2 ; Revista de Turismo Contemporâneo Volume 2014 ; 2014 ; >
-      au < testing ; 2015 ; 3 ; Revista de Turismo Contemporâneo Volume 2015 ; 2015 ; >
+      au < ready ; 2015 ; 3 ; Revista de Turismo Contemporâneo Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 4 ; Revista de Turismo Contemporâneo Volume 2016 ; 2016 ; >
 
   }
@@ -366,7 +366,7 @@
       au < released ; 2012 ; 2 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 3 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 4 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2014 ; 2014 ; >
-      au < testing ; 2015 ; 5 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2015 ; 2015 ; >
+      au < ready ; 2015 ; 5 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 6 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2016 ; 2016 ; >
 
   }
@@ -405,7 +405,7 @@
       au < released ; 2012 ; 4 ; Sociedade e Território Volume 2012 ; 2012 ; >
       au < ready ; 2013 ; 5 ; Sociedade e Território Volume 2013 ; 2013 ; >
       au < ready ; 2014 ; 6 ; Sociedade e Território Volume 2014 ; 2014 ; >
-      au < testing ; 2015 ; 7 ; Sociedade e Território Volume 2015 ; 2015 ; >
+      au < ready ; 2015 ; 7 ; Sociedade e Território Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 8 ; Sociedade e Território Volume 2016 ; 2016 ; >
 
   }
@@ -424,7 +424,7 @@
       au < ready ; 2012 ; 39-40 ; Vivência: Revista de Antropologia Volume 2012 ; 2012 ; >
       au < ready ; 2013 ; 41 ; Vivência: Revista de Antropologia Volume 2013 ; 2013 ; >
       au < ready ; 2014 ; 42 ; Vivência: Revista de Antropologia Volume 2014 ; 2014 ; >
-      au < testing ; 2015 ; 43 ; Vivência: Revista de Antropologia Volume 2015 ; 2015 ; >
+      au < ready ; 2015 ; 43 ; Vivência: Revista de Antropologia Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 44 ; Vivência: Revista de Antropologia Volume 2016 ; 2016 ; >
 
   }
@@ -447,7 +447,7 @@
       au < ready ; 2012 ; 5 ; Revista Constituição e Garantia de Direitos Volume 2012 ; 2012 ; >
       au < ready ; 2013 ; 6 ; Revista Constituição e Garantia de Direitos Volume 2013 ; 2013 ; >
       au < ready ; 2014 ; 7 ; Revista Constituição e Garantia de Direitos Volume 2014 ; 2014 ; >
-      au < testing ; 2015 ; 8 ; Revista Constituição e Garantia de Direitos Volume 2015 ; 2015 ; >
+      au < ready ; 2015 ; 8 ; Revista Constituição e Garantia de Direitos Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 9 ; Revista Constituição e Garantia de Direitos Volume 2016 ; 2016 ; >
 
   }
@@ -531,7 +531,7 @@
       au < released ; 2012 ; 5 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 6 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 7 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2014 ; 2014 ; >
-      au < testing ; 2015 ; 8 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2015 ; 2015 ; >
+      au < ready ; 2015 ; 8 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 9 ; Saberes: revista interdisciplinar de Filosofia e Educação Volume 2016 ; 2016 ; >
 
   }
