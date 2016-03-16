@@ -168,7 +168,7 @@
     au < ready ; 2007 ; Contributions to the History of Concepts Volume 3 ; 3 >
     au < ready ; 2008 ; Contributions to the History of Concepts Volume 4 ; 4 >
     au < ready ; 2009 ; Contributions to the History of Concepts Volume 5 ; 5 >
-    au < manifest ; 2011 ; Contributions to the History of Concepts Volume 6 ; 6 >
+    au < ready ; 2011 ; Contributions to the History of Concepts Volume 6 ; 6 >
     au < ready ; 2012 ; Contributions to the History of Concepts Volume 7 ; 7 >
     au < ready ; 2013 ; Contributions to the History of Concepts Volume 8 ; 8 >
     au < ready ; 2014 ; Contributions to the History of Concepts Volume 9 ; 9 >
@@ -370,7 +370,7 @@
     param[journal_id] = fpcs
     param[journal_issn] = 1537-6370
 
-    au < manifest ; 1999 ; French Politics, Culture & Society Volume 17 ; 17 >
+    au < ready ; 1999 ; French Politics, Culture & Society Volume 17 ; 17 >
     au < released ; 2000 ; French Politics, Culture & Society Volume 18 ; 18 >
     au < released ; 2001 ; French Politics, Culture & Society Volume 19 ; 19 >
     au < released ; 2002 ; French Politics, Culture & Society Volume 20 ; 20 >
@@ -481,7 +481,7 @@
     param[journal_id] = ijsq
     param[journal_issn] = 1757-0344
     
-    au < manifest ; 2011 ; International Journal of Social Quality Volume 1 ; 1 >
+    au < ready ; 2011 ; International Journal of Social Quality Volume 1 ; 1 >
     au < ready ; 2012 ; International Journal of Social Quality Volume 2 ; 2 >
     au < ready ; 2013 ; International Journal of Social Quality Volume 3 ; 3 >
     au < ready ; 2014 ; International Journal of Social Quality Volume 4 ; 4 >
@@ -636,22 +636,6 @@
   {
   
     title <
-      name = Museum Worlds: Advances in Research ;
-      issn = 2049-6729 ;
-      eissn = 2049-6737 ;
-      issnl = 2049-6729
-    >
-    param[journal_id] = armw
-    param[journal_issn] = 2049-6729
-
-    au < ready ; 2013 ; Museum Worlds: Advances in Research Volume 1 ; 1 >
-    au < ready ; 2014 ; Museum Worlds: Advances in Research Volume 2 ; 2 >
-    
-  }
-
-  {
-  
-    title <
       name = Mobility in History ;
       issn = 2296-0503 ;
       eissn = 2050-9197 ;
@@ -664,6 +648,22 @@
     au < ready ; 2014 ; Mobility in History Volume 5 ; 5 >
     au < ready ; 2015 ; Mobility in History Volume 6 ; 6 >
     au < manifest ; 2016 ; Mobility in History Volume 7 ; 7 >
+    
+  }
+
+  {
+  
+    title <
+      name = Museum Worlds: Advances in Research ;
+      issn = 2049-6729 ;
+      eissn = 2049-6737 ;
+      issnl = 2049-6729
+    >
+    param[journal_id] = armw
+    param[journal_issn] = 2049-6729
+
+    au < ready ; 2013 ; Museum Worlds: Advances in Research Volume 1 ; 1 >
+    au < ready ; 2014 ; Museum Worlds: Advances in Research Volume 2 ; 2 >
     
   }
 
