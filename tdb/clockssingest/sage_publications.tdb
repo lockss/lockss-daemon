@@ -13971,6 +13971,36 @@
   {
 
     title <
+      name = Health Information Management Journal ;
+      issn = 1833-3583 ;
+      eissn = 1833-3575
+    >
+
+      param[base_url] = http://him.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2002 ; Health Information Management Journal Volume 30 ; 30 ; >
+      au < exists ; exists ; 2003 ; Health Information Management Journal Volume 31 ; 31 ; >
+      au < exists ; exists ; 2004 ; Health Information Management Journal Volume 32 ; 32 ; >
+      au < exists ; exists ; 2004 ; Health Information Management Journal Volume 33 ; 33 ; >
+      au < exists ; exists ; 2005 ; Health Information Management Journal Volume 34 ; 34 ; >
+      au < exists ; exists ; 2006 ; Health Information Management Journal Volume 35 ; 35 ; >
+      au < exists ; exists ; 2007 ; Health Information Management Journal Volume 36 ; 36 ; >
+      au < exists ; exists ; 2008 ; Health Information Management Journal Volume 37 ; 37 ; >
+      au < exists ; exists ; 2009 ; Health Information Management Journal Volume 38 ; 38 ; >
+      au < exists ; exists ; 2010 ; Health Information Management Journal Volume 39 ; 39 ; >
+      au < exists ; exists ; 2011 ; Health Information Management Journal Volume 40 ; 40 ; >
+      au < exists ; exists ; 2012 ; Health Information Management Journal Volume 41 ; 41 ; >
+      au < exists ; exists ; 2013 ; Health Information Management Journal Volume 42 ; 42 ; >
+      au < exists ; exists ; 2014 ; Health Information Management Journal Volume 43 ; 43 ; >
+      au < exists ; exists ; 2015 ; Health Information Management Journal Volume 44 ; 44 ; >
+      au < expected ; exists ; 2016 ; Health Information Management Journal Volume 45 ; 45 ; >
+
+  }
+
+  {
+
+    title <
       name = Health Promotion Practice ;
       issn = 1524-8399 ;
       eissn = 1552-6372
@@ -35580,15 +35610,47 @@
   {
 
     title <
+      name = Progress in Transplantation ;
+      issn = 1526-9248 ;
+      eissn = 2164-6708 
+    >
+
+      param[base_url] = http://pit.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 1996 ; Progress in Transplantation Volume 6 ; 6 ; >
+      au < exists ; exists ; 1997 ; Progress in Transplantation Volume 7 ; 7 ; >
+      au < exists ; exists ; 1998 ; Progress in Transplantation Volume 8 ; 8 ; >
+      au < exists ; exists ; 1999 ; Progress in Transplantation Volume 9 ; 9 ; >
+      au < exists ; exists ; 2000 ; Progress in Transplantation Volume 10 ; 10 ; >
+      au < exists ; exists ; 2001 ; Progress in Transplantation Volume 11 ; 11 ; >
+      au < exists ; exists ; 2002 ; Progress in Transplantation Volume 12 ; 12 ; >
+      au < exists ; exists ; 2003 ; Progress in Transplantation Volume 13 ; 13 ; >
+      au < exists ; exists ; 2004 ; Progress in Transplantation Volume 14 ; 14 ; >
+      au < exists ; exists ; 2005 ; Progress in Transplantation Volume 15 ; 15 ; >
+      au < exists ; exists ; 2006 ; Progress in Transplantation Volume 16 ; 16 ; >
+      au < exists ; exists ; 2007 ; Progress in Transplantation Volume 17 ; 17 ; >
+      au < exists ; exists ; 2008 ; Progress in Transplantation Volume 18 ; 18 ; >
+      au < exists ; exists ; 2009 ; Progress in Transplantation Volume 19 ; 19 ; >
+      au < exists ; exists ; 2010 ; Progress in Transplantation Volume 20 ; 20 ; >
+      au < exists ; exists ; 2011 ; Progress in Transplantation Volume 21 ; 21 ; >
+      au < exists ; exists ; 2012 ; Progress in Transplantation Volume 22 ; 22 ; >
+      au < exists ; exists ; 2013 ; Progress in Transplantation Volume 23 ; 23 ; >
+      au < exists ; exists ; 2014 ; Progress in Transplantation Volume 24 ; 24 ; >
+      au < exists ; exists ; 2015 ; Progress in Transplantation Volume 25 ; 25 ; >
+      au < exists ; exists ; 2016 ; Progress in Transplantation Volume 26 ; 26 ; >
+
+  }
+
+  {
+
+    title <
       name = Prosthetics and Orthotics International ;
       issn = 0309-3646 ;
       eissn = 1746-1553
     >
 
-    param[base_url] = http://poi.sagepub.com/
-
-    {
-
+      param[base_url] = http://poi.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 1977 ; Prosthetics and Orthotics International Volume 1 ; 1 ; >
@@ -35631,8 +35693,6 @@
       au < finished ; finished ; 2014 ; Prosthetics and Orthotics International Volume 38 ; 38 ; >
       au < crawling ; exists ; 2015 ; Prosthetics and Orthotics International Volume 39 ; 39 ; >
       au < manifest ; exists ; 2016 ; Prosthetics and Orthotics International Volume 40 ; 40 ; >
-
-    }
 
   }
 
