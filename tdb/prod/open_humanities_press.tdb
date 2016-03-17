@@ -32,7 +32,7 @@
       au < released ; 2012 ; Cosmos and History Volume 8 ; 8 ; 2012 >
       au < released ; 2013 ; Cosmos and History Volume 9 ; 9 ; 2013 >
       au < released ; 2014 ; Cosmos and History Volume 10 ; 10 ; 2014 >
-      au < ready ; 2015 ; Cosmos and History Volume 11 ; 11 ; 2015 >
+      au < releasing ; 2015 ; Cosmos and History Volume 11 ; 11 ; 2015 >
     
     }
   
@@ -64,7 +64,7 @@
       au < released ; 2012 ; Culture Machine Volume 13 ; 13 ; 2012 >
       au < released ; 2013 ; Culture Machine Volume 14 ; 14 ; 2013 >
       au < released ; 2014 ; Culture Machine Volume 15 ; 15 ; 2014 >
-      au < ready ; 2015 ; Culture Machine Volume 16 ; 16 ; 2015 >
+      au < releasing ; 2015 ; Culture Machine Volume 16 ; 16 ; 2015 >
     
     }
   
@@ -154,7 +154,7 @@
       au < released ; 2012 ; Image and Narrative Volume 13 ; 13 ; 2012 >
       au < released ; 2013 ; Image and Narrative Volume 14 ; 14 ; 2013 >
       au < released ; 2014 ; Image and Narrative Volume 15 ; 15 ; 2014 >
-      au < ready ; 2015 ; Image and Narrative Volume 16 ; 16 ; 2015 >
+      au < releasing ; 2015 ; Image and Narrative Volume 16 ; 16 ; 2015 >
       
     }
 
@@ -169,8 +169,8 @@
       param[base_url] = http://www.zizekstudies.org/
       param[journal_id] = ijzs
 
-      au < ready ; 2007 ; International Journal of Žižek Studies Volume 1 ; 1 ; 2007 >
-      au < ready ; 2008 ; International Journal of Žižek Studies Volume 2 ; 2 ; 2008 >
+      au < releasing ; 2007 ; International Journal of Žižek Studies Volume 1 ; 1 ; 2007 >
+      au < releasing ; 2008 ; International Journal of Žižek Studies Volume 2 ; 2 ; 2008 >
       au < exists ; 2009 ; International Journal of Žižek Studies Volume 3 ; 3 ; 2009 >
       au < exists ; 2010 ; International Journal of Žižek Studies Volume 4 ; 4 ; 2010 >
       au < exists ; 2011 ; International Journal of Žižek Studies Volume 5 ; 5 ; 2011 >

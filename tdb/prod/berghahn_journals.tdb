@@ -30,9 +30,9 @@
     au < released ; 2010 ; Anthropological Journal of European Cultures Volume 19 ; 19 >
     au < released ; 2011 ; Anthropological Journal of European Cultures Volume 20 ; 20 >
     au < released ; 2012 ; Anthropological Journal of European Cultures Volume 21 ; 21 >
-    au < ready ; 2013 ; Anthropological Journal of European Cultures Volume 22 ; 22 >
-    au < ready ; 2014 ; Anthropological Journal of European Cultures Volume 23 ; 23 >
-    au < ready ; 2015 ; Anthropological Journal of European Cultures Volume 24 ; 24 >
+    au < releasing ; 2013 ; Anthropological Journal of European Cultures Volume 22 ; 22 >
+    au < releasing ; 2014 ; Anthropological Journal of European Cultures Volume 23 ; 23 >
+    au < releasing ; 2015 ; Anthropological Journal of European Cultures Volume 24 ; 24 >
     
   }
 
@@ -56,9 +56,9 @@
     au < released ; 2010 ; Anthropology in Action Volume 17 ; 17 >
     au < released ; 2011 ; Anthropology in Action Volume 18 ; 18 >
     au < released ; 2012 ; Anthropology in Action Volume 19 ; 19 >
-    au < ready ; 2013 ; Anthropology in Action Volume 20 ; 20 >
-    au < ready ; 2014 ; Anthropology in Action Volume 21 ; 21 >
-    au < ready ; 2015 ; Anthropology in Action Volume 22 ; 22 >
+    au < releasing ; 2013 ; Anthropology in Action Volume 20 ; 20 >
+    au < releasing ; 2014 ; Anthropology in Action Volume 21 ; 21 >
+    au < releasing ; 2015 ; Anthropology in Action Volume 22 ; 22 >
     
   }
 
@@ -81,9 +81,9 @@
     au < released ; 2010 ; Anthropology of the Middle East Volume 5 ; 5 >
     au < released ; 2011 ; Anthropology of the Middle East Volume 6 ; 6 >
     au < released ; 2012 ; Anthropology of the Middle East Volume 7 ; 7 >
-    au < ready ; 2013 ; Anthropology of the Middle East Volume 8 ; 8 >
-    au < ready ; 2014 ; Anthropology of the Middle East Volume 9 ; 9 >
-    au < ready ; 2015 ; Anthropology of the Middle East Volume 10 ; 10 >
+    au < releasing ; 2013 ; Anthropology of the Middle East Volume 8 ; 8 >
+    au < releasing ; 2014 ; Anthropology of the Middle East Volume 9 ; 9 >
+    au < releasing ; 2015 ; Anthropology of the Middle East Volume 10 ; 10 >
     
   }
 
@@ -126,9 +126,9 @@
     au < released ; 2010 ; Aspasia Volume 4 ; 4 >
     au < released ; 2011 ; Aspasia Volume 5 ; 5 >
     au < released ; 2012 ; Aspasia Volume 6 ; 6 >
-    au < ready ; 2013 ; Aspasia Volume 7 ; 7 >
-    au < ready ; 2014 ; Aspasia Volume 8 ; 8 >
-    au < ready ; 2015 ; Aspasia Volume 9 ; 9 >
+    au < releasing ; 2013 ; Aspasia Volume 7 ; 7 >
+    au < releasing ; 2014 ; Aspasia Volume 8 ; 8 >
+    au < releasing ; 2015 ; Aspasia Volume 9 ; 9 >
     
   }
 
@@ -144,10 +144,10 @@
     param[journal_id] = ca
     param[journal_issn] = 0305-7674
 
-    au < ready ; 2012 ; The Cambridge Journal of Anthropology Volume 30 ; 30 >
-    au < ready ; 2013 ; The Cambridge Journal of Anthropology Volume 31 ; 31 >
-    au < ready ; 2014 ; The Cambridge Journal of Anthropology Volume 32 ; 32 >
-    au < ready ; 2015 ; The Cambridge Journal of Anthropology Volume 33 ; 33 >
+    au < releasing ; 2012 ; The Cambridge Journal of Anthropology Volume 30 ; 30 >
+    au < releasing ; 2013 ; The Cambridge Journal of Anthropology Volume 31 ; 31 >
+    au < releasing ; 2014 ; The Cambridge Journal of Anthropology Volume 32 ; 32 >
+    au < releasing ; 2015 ; The Cambridge Journal of Anthropology Volume 33 ; 33 >
 
   }
 
@@ -163,16 +163,16 @@
     param[journal_id] = coco
     param[journal_issn] = 1807-9326
 
-    au < ready ; 2005 ; Contributions to the History of Concepts Volume 1 ; 1 >
-    au < ready ; 2006 ; Contributions to the History of Concepts Volume 2 ; 2 >
-    au < ready ; 2007 ; Contributions to the History of Concepts Volume 3 ; 3 >
-    au < ready ; 2008 ; Contributions to the History of Concepts Volume 4 ; 4 >
-    au < ready ; 2009 ; Contributions to the History of Concepts Volume 5 ; 5 >
-    au < ready ; 2011 ; Contributions to the History of Concepts Volume 6 ; 6 >
-    au < ready ; 2012 ; Contributions to the History of Concepts Volume 7 ; 7 >
-    au < ready ; 2013 ; Contributions to the History of Concepts Volume 8 ; 8 >
-    au < ready ; 2014 ; Contributions to the History of Concepts Volume 9 ; 9 >
-    au < ready ; 2015 ; Contributions to the History of Concepts Volume 10 ; 10 >
+    au < releasing ; 2005 ; Contributions to the History of Concepts Volume 1 ; 1 >
+    au < releasing ; 2006 ; Contributions to the History of Concepts Volume 2 ; 2 >
+    au < releasing ; 2007 ; Contributions to the History of Concepts Volume 3 ; 3 >
+    au < releasing ; 2008 ; Contributions to the History of Concepts Volume 4 ; 4 >
+    au < releasing ; 2009 ; Contributions to the History of Concepts Volume 5 ; 5 >
+    au < releasing ; 2011 ; Contributions to the History of Concepts Volume 6 ; 6 >
+    au < releasing ; 2012 ; Contributions to the History of Concepts Volume 7 ; 7 >
+    au < releasing ; 2013 ; Contributions to the History of Concepts Volume 8 ; 8 >
+    au < releasing ; 2014 ; Contributions to the History of Concepts Volume 9 ; 9 >
+    au < releasing ; 2015 ; Contributions to the History of Concepts Volume 10 ; 10 >
 
   }
 
@@ -204,9 +204,9 @@
     au < released ; 2010 ; Critical Survey Volume 22 ; 22 >
     au < released ; 2011 ; Critical Survey Volume 23 ; 23 >
     au < released ; 2012 ; Critical Survey Volume 24 ; 24 >
-    au < ready ; 2013 ; Critical Survey Volume 25 ; 25 >
-    au < ready ; 2014 ; Critical Survey Volume 26 ; 26 >
-    au < ready ; 2015 ; Critical Survey Volume 27 ; 27 >
+    au < releasing ; 2013 ; Critical Survey Volume 25 ; 25 >
+    au < releasing ; 2014 ; Critical Survey Volume 26 ; 26 >
+    au < releasing ; 2015 ; Critical Survey Volume 27 ; 27 >
     
   }
 
@@ -222,8 +222,8 @@
     param[journal_id] = demt
     param[journal_issn] = 2332-8894
 
-    au < ready ; 2014 ; Democratic Theory Volume 1 ; 1 >
-    au < ready ; 2015 ; Democratic Theory Volume 2 ; 2 >
+    au < releasing ; 2014 ; Democratic Theory Volume 1 ; 1 >
+    au < releasing ; 2015 ; Democratic Theory Volume 2 ; 2 >
     
   }
 
@@ -249,8 +249,8 @@
     au < released ; 2010 ; Durkheimian Studies Volume 16 ; 16 >
     au < released ; 2011 ; Durkheimian Studies Volume 17 ; 17 >
     au < released ; 2012 ; Durkheimian Studies Volume 18 ; 18 >
-    au < ready ; 2013 ; Durkheimian Studies Volume 19 ; 19 >
-    au < ready ; 2014 ; Durkheimian Studies Volume 20 ; 20 >
+    au < releasing ; 2013 ; Durkheimian Studies Volume 19 ; 19 >
+    au < releasing ; 2014 ; Durkheimian Studies Volume 20 ; 20 >
     
   }
 
@@ -268,9 +268,9 @@
     au < released ; 2010 ; Environment and Society Volume 1 ; 1 >
     au < released ; 2011 ; Environment and Society Volume 2 ; 2 >
     au < released ; 2012 ; Environment and Society Volume 3 ; 3 >
-    au < ready ; 2013 ; Environment and Society Volume 4 ; 4 >
-    au < ready ; 2014 ; Environment and Society Volume 5 ; 5 >
-    au < ready ; 2015 ; Environment and Society Volume 6 ; 6 >
+    au < releasing ; 2013 ; Environment and Society Volume 4 ; 4 >
+    au < releasing ; 2014 ; Environment and Society Volume 5 ; 5 >
+    au < releasing ; 2015 ; Environment and Society Volume 6 ; 6 >
     
   }
 
@@ -293,9 +293,9 @@
     au < released ; 2010 ; European Comic Art Volume 3 ; 3 >
     au < released ; 2011 ; European Comic Art Volume 4 ; 4 >
     au < released ; 2012 ; European Comic Art Volume 5 ; 5 >
-    au < ready ; 2013 ; European Comic Art Volume 6 ; 6 >
-    au < ready ; 2014 ; European Comic Art Volume 7 ; 7 >
-    au < ready ; 2015 ; European Comic Art Volume 8 ; 8 >
+    au < releasing ; 2013 ; European Comic Art Volume 6 ; 6 >
+    au < releasing ; 2014 ; European Comic Art Volume 7 ; 7 >
+    au < releasing ; 2015 ; European Comic Art Volume 8 ; 8 >
     
   }
 
@@ -325,9 +325,9 @@
     au < released ; 2010 ; European Judaism Volume 43 ; 43 >
     au < released ; 2011 ; European Judaism Volume 44 ; 44 >
     au < released ; 2012 ; European Judaism Volume 45 ; 45 >
-    au < ready ; 2013 ; European Judaism Volume 46 ; 46 >
-    au < ready ; 2014 ; European Judaism Volume 47 ; 47 >
-    au < ready ; 2015 ; European Judaism Volume 48 ; 48 >
+    au < releasing ; 2013 ; European Judaism Volume 46 ; 46 >
+    au < releasing ; 2014 ; European Judaism Volume 47 ; 47 >
+    au < releasing ; 2015 ; European Judaism Volume 48 ; 48 >
   
   }
 
@@ -353,8 +353,8 @@
     au < released ; 2011 ; Focaal Volume 2011 ; 2011 >
     au < released ; 2012 ; Focaal Volume 2012 ; 2012 >
     au < released ; 2013 ; Focaal Volume 2013 ; 2013 >
-    au < ready ; 2014 ; Focaal Volume 2014 ; 2014 >
-    au < ready ; 2015 ; Focaal Volume 2015 ; 2015 >
+    au < releasing ; 2014 ; Focaal Volume 2014 ; 2014 >
+    au < releasing ; 2015 ; Focaal Volume 2015 ; 2015 >
     
   }
 
@@ -370,7 +370,7 @@
     param[journal_id] = fpcs
     param[journal_issn] = 1537-6370
 
-    au < ready ; 1999 ; French Politics, Culture & Society Volume 17 ; 17 >
+    au < releasing ; 1999 ; French Politics, Culture & Society Volume 17 ; 17 >
     au < released ; 2000 ; French Politics, Culture & Society Volume 18 ; 18 >
     au < released ; 2001 ; French Politics, Culture & Society Volume 19 ; 19 >
     au < released ; 2002 ; French Politics, Culture & Society Volume 20 ; 20 >
@@ -384,9 +384,9 @@
     au < released ; 2010 ; French Politics, Culture & Society Volume 28 ; 28 >
     au < released ; 2011 ; French Politics, Culture & Society Volume 29 ; 29 >
     au < released ; 2012 ; French Politics, Culture & Society Volume 30 ; 30 >
-    au < ready ; 2013 ; French Politics, Culture & Society Volume 31 ; 31 >
-    au < ready ; 2014 ; French Politics, Culture & Society Volume 32 ; 32 >
-    au < ready ; 2015 ; French Politics, Culture & Society Volume 33 ; 33 >
+    au < releasing ; 2013 ; French Politics, Culture & Society Volume 31 ; 31 >
+    au < releasing ; 2014 ; French Politics, Culture & Society Volume 32 ; 32 >
+    au < releasing ; 2015 ; French Politics, Culture & Society Volume 33 ; 33 >
     
   }
 
@@ -417,9 +417,9 @@
     au < released ; 2010 ; German Politics and Society Volume 28 ; 28 >
     au < released ; 2011 ; German Politics and Society Volume 29 ; 29 >
     au < released ; 2012 ; German Politics and Society Volume 30 ; 30 >
-    au < ready ; 2013 ; German Politics and Society Volume 31 ; 31 >
+    au < releasing ; 2013 ; German Politics and Society Volume 31 ; 31 >
     au < released ; 2014 ; German Politics and Society Volume 32 ; 32 >
-    au < ready ; 2015 ; German Politics and Society Volume 33 ; 33 >
+    au < releasing ; 2015 ; German Politics and Society Volume 33 ; 33 >
     
   }
 
@@ -440,9 +440,9 @@
     au < released ; 2010 ; Girlhood Studies Volume 3 ; 3 >
     au < released ; 2011 ; Girlhood Studies Volume 4 ; 4 >
     au < released ; 2012 ; Girlhood Studies Volume 5 ; 5 >
-    au < ready ; 2013 ; Girlhood Studies Volume 6 ; 6 >
+    au < releasing ; 2013 ; Girlhood Studies Volume 6 ; 6 >
     au < released ; 2014 ; Girlhood Studies Volume 7 ; 7 >
-    au < ready ; 2015 ; Girlhood Studies Volume 8 ; 8 >
+    au < releasing ; 2015 ; Girlhood Studies Volume 8 ; 8 >
     
   }
 
@@ -463,9 +463,9 @@
     au < released ; 2010 ; Historical Reflections/Reflexions Historiques Volume 36 ; 36 >
     au < released ; 2011 ; Historical Reflections/Reflexions Historiques Volume 37 ; 37 >
     au < released ; 2012 ; Historical Reflections/Reflexions Historiques Volume 38 ; 38 >
-    au < ready ; 2013 ; Historical Reflections/Reflexions Historiques Volume 39 ; 39 >
-    au < ready ; 2014 ; Historical Reflections/Reflexions Historiques Volume 40 ; 40 >
-    au < ready ; 2015 ; Historical Reflections/Reflexions Historiques Volume 41 ; 41 >
+    au < releasing ; 2013 ; Historical Reflections/Reflexions Historiques Volume 39 ; 39 >
+    au < releasing ; 2014 ; Historical Reflections/Reflexions Historiques Volume 40 ; 40 >
+    au < releasing ; 2015 ; Historical Reflections/Reflexions Historiques Volume 41 ; 41 >
     
   }
 
@@ -481,11 +481,11 @@
     param[journal_id] = ijsq
     param[journal_issn] = 1757-0344
     
-    au < ready ; 2011 ; International Journal of Social Quality Volume 1 ; 1 >
-    au < ready ; 2012 ; International Journal of Social Quality Volume 2 ; 2 >
-    au < ready ; 2013 ; International Journal of Social Quality Volume 3 ; 3 >
-    au < ready ; 2014 ; International Journal of Social Quality Volume 4 ; 4 >
-    au < ready ; 2015 ; International Journal of Social Quality Volume 5 ; 5 >
+    au < releasing ; 2011 ; International Journal of Social Quality Volume 1 ; 1 >
+    au < releasing ; 2012 ; International Journal of Social Quality Volume 2 ; 2 >
+    au < releasing ; 2013 ; International Journal of Social Quality Volume 3 ; 3 >
+    au < releasing ; 2014 ; International Journal of Social Quality Volume 4 ; 4 >
+    au < releasing ; 2015 ; International Journal of Social Quality Volume 5 ; 5 >
     
   }
 
@@ -503,9 +503,9 @@
     
     au < released ; 2011 ; Israel Studies Review Volume 26 ; 26 >
     au < released ; 2012 ; Israel Studies Review Volume 27 ; 27 >
-    au < ready ; 2013 ; Israel Studies Review Volume 28 ; 28 >
+    au < releasing ; 2013 ; Israel Studies Review Volume 28 ; 28 >
     au < released ; 2014 ; Israel Studies Review Volume 29 ; 29 >
-    au < ready ; 2015 ; Israel Studies Review Volume 30 ; 30 >
+    au < releasing ; 2015 ; Israel Studies Review Volume 30 ; 30 >
     
   }
 
@@ -520,10 +520,10 @@
     param[journal_id] = itpol
     param[journal_issn] = 1086-4946 
     
-    au < ready ; 2012 ; Italian Politics Volume 27 ; 27 >
-    au < ready ; 2013 ; Italian Politics Volume 28 ; 28 >
-    au < ready ; 2014 ; Italian Politics Volume 29 ; 29 >
-    au < ready ; 2015 ; Italian Politics Volume 30 ; 30 >
+    au < releasing ; 2012 ; Italian Politics Volume 27 ; 27 >
+    au < releasing ; 2013 ; Italian Politics Volume 28 ; 28 >
+    au < releasing ; 2014 ; Italian Politics Volume 29 ; 29 >
+    au < releasing ; 2015 ; Italian Politics Volume 30 ; 30 >
     
   }
  
@@ -543,9 +543,9 @@
     au < released ; 2010 ; Journal of Educational Media, Memory, and Society Volume 2 ; 2 >
     au < released ; 2011 ; Journal of Educational Media, Memory, and Society Volume 3 ; 3 >
     au < released ; 2012 ; Journal of Educational Media, Memory, and Society Volume 4 ; 4 >
-    au < ready ; 2013 ; Journal of Educational Media, Memory, and Society Volume 5 ; 5 >
-    au < ready ; 2014 ; Journal of Educational Media, Memory, and Society Volume 6 ; 6 >
-    au < ready ; 2015 ; Journal of Educational Media, Memory, and Society Volume 7 ; 7 >
+    au < releasing ; 2013 ; Journal of Educational Media, Memory, and Society Volume 5 ; 5 >
+    au < releasing ; 2014 ; Journal of Educational Media, Memory, and Society Volume 6 ; 6 >
+    au < releasing ; 2015 ; Journal of Educational Media, Memory, and Society Volume 7 ; 7 >
     
   }
 
@@ -574,9 +574,9 @@
     au < released ; 2010 ; Journal of Romance Studies Volume 10 ; 10 >
     au < released ; 2011 ; Journal of Romance Studies Volume 11 ; 11 >
     au < released ; 2012 ; Journal of Romance Studies Volume 12 ; 12 >
-    au < ready ; 2013 ; Journal of Romance Studies Volume 13 ; 13 >
-    au < ready ; 2014 ; Journal of Romance Studies Volume 14 ; 14 >
-    au < ready ; 2015 ; Journal of Romance Studies Volume 15 ; 15 >
+    au < releasing ; 2013 ; Journal of Romance Studies Volume 13 ; 13 >
+    au < releasing ; 2014 ; Journal of Romance Studies Volume 14 ; 14 >
+    au < releasing ; 2015 ; Journal of Romance Studies Volume 15 ; 15 >
     
   }
 
@@ -605,9 +605,9 @@
     au < released ; 2010 ; Journeys Volume 11 ; 11 >
     au < released ; 2011 ; Journeys Volume 12 ; 12 >
     au < released ; 2012 ; Journeys Volume 13 ; 13 >
-    au < ready ; 2013 ; Journeys Volume 14 ; 14 >
-    au < ready ; 2014 ; Journeys Volume 15 ; 15 >
-    au < ready ; 2015 ; Journeys Volume 16 ; 16 >
+    au < releasing ; 2013 ; Journeys Volume 14 ; 14 >
+    au < releasing ; 2014 ; Journeys Volume 15 ; 15 >
+    au < releasing ; 2015 ; Journeys Volume 16 ; 16 >
     
   }
 
@@ -627,9 +627,9 @@
     au < released ; 2010 ; Learning and Teaching (LATISS) Volume 3 ; 3 >
     au < released ; 2011 ; Learning and Teaching (LATISS) Volume 4 ; 4 >
     au < released ; 2012 ; Learning and Teaching (LATISS) Volume 5 ; 5 >
-    au < ready ; 2013 ; Learning and Teaching (LATISS) Volume 6 ; 6 >
-    au < ready ; 2014 ; Learning and Teaching (LATISS) Volume 7 ; 7 >
-    au < ready ; 2015 ; Learning and Teaching (LATISS) Volume 8 ; 8 >
+    au < releasing ; 2013 ; Learning and Teaching (LATISS) Volume 6 ; 6 >
+    au < releasing ; 2014 ; Learning and Teaching (LATISS) Volume 7 ; 7 >
+    au < releasing ; 2015 ; Learning and Teaching (LATISS) Volume 8 ; 8 >
     
   }
 
@@ -644,9 +644,9 @@
     param[journal_id] = mih
     param[journal_issn] = 2296-0503
 
-    au < ready ; 2013 ; Mobility in History Volume 4 ; 4 >
-    au < ready ; 2014 ; Mobility in History Volume 5 ; 5 >
-    au < ready ; 2015 ; Mobility in History Volume 6 ; 6 >
+    au < releasing ; 2013 ; Mobility in History Volume 4 ; 4 >
+    au < releasing ; 2014 ; Mobility in History Volume 5 ; 5 >
+    au < releasing ; 2015 ; Mobility in History Volume 6 ; 6 >
     au < manifest ; 2016 ; Mobility in History Volume 7 ; 7 >
     
   }
@@ -662,8 +662,8 @@
     param[journal_id] = armw
     param[journal_issn] = 2049-6729
 
-    au < ready ; 2013 ; Museum Worlds: Advances in Research Volume 1 ; 1 >
-    au < ready ; 2014 ; Museum Worlds: Advances in Research Volume 2 ; 2 >
+    au < releasing ; 2013 ; Museum Worlds: Advances in Research Volume 1 ; 1 >
+    au < releasing ; 2014 ; Museum Worlds: Advances in Research Volume 2 ; 2 >
     
   }
 
@@ -685,9 +685,9 @@
     au < released ; 2010 ; Nature and Culture Volume 5 ; 5 >
     au < released ; 2011 ; Nature and Culture Volume 6 ; 6 >
     au < released ; 2012 ; Nature and Culture Volume 7 ; 7 >
-    au < ready ; 2013 ; Nature and Culture Volume 8 ; 8 >
-    au < ready ; 2014 ; Nature and Culture Volume 9 ; 9 >
-    au < ready ; 2015 ; Nature and Culture Volume 10 ; 10 >
+    au < releasing ; 2013 ; Nature and Culture Volume 8 ; 8 >
+    au < releasing ; 2014 ; Nature and Culture Volume 9 ; 9 >
+    au < releasing ; 2015 ; Nature and Culture Volume 10 ; 10 >
     
   }
 
@@ -742,9 +742,9 @@
     au < released ; 2010 ; Projections Volume 4 ; 4 >
     au < released ; 2011 ; Projections Volume 5 ; 5 >
     au < released ; 2012 ; Projections Volume 6 ; 6 >
-    au < ready ; 2013 ; Projections Volume 7 ; 7 >
-    au < ready ; 2014 ; Projections Volume 8 ; 8 >
-    au < ready ; 2015 ; Projections Volume 9 ; 9 >
+    au < releasing ; 2013 ; Projections Volume 7 ; 7 >
+    au < releasing ; 2014 ; Projections Volume 8 ; 8 >
+    au < releasing ; 2015 ; Projections Volume 9 ; 9 >
     
   }
 
@@ -762,9 +762,9 @@
 
     au < released ; 2011 ; Regions & Cohesion Volume 1 ; 1 >
     au < released ; 2012 ; Regions & Cohesion Volume 2 ; 2 >
-    au < ready ; 2013 ; Regions & Cohesion Volume 3 ; 3 >
-    au < ready ; 2014 ; Regions & Cohesion Volume 4 ; 4 >
-    au < ready ; 2015 ; Regions & Cohesion Volume 5 ; 5 >
+    au < releasing ; 2013 ; Regions & Cohesion Volume 3 ; 3 >
+    au < releasing ; 2014 ; Regions & Cohesion Volume 4 ; 4 >
+    au < releasing ; 2015 ; Regions & Cohesion Volume 5 ; 5 >
     
   }
 
@@ -782,10 +782,10 @@
 
     au < released ; 2010 ; Religion and Society: Advances in Research Volume 1 ; 1 >
     au < released ; 2011 ; Religion and Society: Advances in Research Volume 2 ; 2 >
-    au < ready ; 2012 ; Religion and Society: Advances in Research Volume 3 ; 3 >
-    au < ready ; 2013 ; Religion and Society: Advances in Research Volume 4 ; 4 >
-    au < ready ; 2014 ; Religion and Society: Advances in Research Volume 5 ; 5 >
-    au < ready ; 2015 ; Religion and Society: Advances in Research Volume 6 ; 6 >
+    au < releasing ; 2012 ; Religion and Society: Advances in Research Volume 3 ; 3 >
+    au < releasing ; 2013 ; Religion and Society: Advances in Research Volume 4 ; 4 >
+    au < releasing ; 2014 ; Religion and Society: Advances in Research Volume 5 ; 5 >
+    au < releasing ; 2015 ; Religion and Society: Advances in Research Volume 6 ; 6 >
   }
 
   {
@@ -815,9 +815,9 @@
     au < released ; 2010 ; Sartre Studies International Volume 16 ; 16 >
     au < released ; 2011 ; Sartre Studies International Volume 17 ; 17 >
     au < released ; 2012 ; Sartre Studies International Volume 18 ; 18 >
-    au < ready ; 2013 ; Sartre Studies International Volume 19 ; 19 >
-    au < ready ; 2014 ; Sartre Studies International Volume 20 ; 20 >
-    au < ready ; 2015 ; Sartre Studies International Volume 21 ; 21 >
+    au < releasing ; 2013 ; Sartre Studies International Volume 19 ; 19 >
+    au < releasing ; 2014 ; Sartre Studies International Volume 20 ; 20 >
+    au < releasing ; 2015 ; Sartre Studies International Volume 21 ; 21 >
     
   }
 
@@ -842,9 +842,9 @@
     au < released ; 2010 ; Sibirica Volume 9 ; 9 >
     au < released ; 2011 ; Sibirica Volume 10 ; 10 >
     au < released ; 2012 ; Sibirica Volume 11 ; 11 >
-    au < ready ; 2013 ; Sibirica Volume 12 ; 12 >
-    au < ready ; 2014 ; Sibirica Volume 13 ; 13 >
-    au < ready ; 2015 ; Sibirica Volume 14 ; 14 >
+    au < releasing ; 2013 ; Sibirica Volume 12 ; 12 >
+    au < releasing ; 2014 ; Sibirica Volume 13 ; 13 >
+    au < releasing ; 2015 ; Sibirica Volume 14 ; 14 >
     
   }
 
@@ -870,9 +870,9 @@
     au < released ; 2010 ; Social Analysis Volume 54 ; 54 >
     au < released ; 2011 ; Social Analysis Volume 55 ; 55 >
     au < released ; 2012 ; Social Analysis Volume 56 ; 56 >
-    au < ready ; 2013 ; Social Analysis Volume 57 ; 57 >
-    au < ready ; 2014 ; Social Analysis Volume 58 ; 58 >
-    au < ready ; 2015 ; Social Analysis Volume 59 ; 59 >
+    au < releasing ; 2013 ; Social Analysis Volume 57 ; 57 >
+    au < releasing ; 2014 ; Social Analysis Volume 58 ; 58 >
+    au < releasing ; 2015 ; Social Analysis Volume 59 ; 59 >
     
   }
 
@@ -904,9 +904,9 @@
     au < released ; 2010 ; Theoria Volume 57 ; 57 >
     au < released ; 2011 ; Theoria Volume 58 ; 58 >
     au < released ; 2012 ; Theoria Volume 59 ; 59 >
-    au < ready ; 2013 ; Theoria Volume 60 ; 60 >
+    au < releasing ; 2013 ; Theoria Volume 60 ; 60 >
     au < released ; 2014 ; Theoria Volume 61 ; 61 >
-    au < ready ; 2015 ; Theoria Volume 62 ; 62 >
+    au < releasing ; 2015 ; Theoria Volume 62 ; 62 >
     
   }
 
@@ -924,9 +924,9 @@
 
     au < released ; 2011 ; Transfers Volume 1 ; 1 >
     au < released ; 2012 ; Transfers Volume 2 ; 2 >
-    au < ready ; 2013 ; Transfers Volume 3 ; 3 >
-    au < ready ; 2014 ; Transfers Volume 4 ; 4 >
-    au < ready ; 2015 ; Transfers Volume 5 ; 5 >
+    au < releasing ; 2013 ; Transfers Volume 3 ; 3 >
+    au < releasing ; 2014 ; Transfers Volume 4 ; 4 >
+    au < releasing ; 2015 ; Transfers Volume 5 ; 5 >
     
   }
 }
