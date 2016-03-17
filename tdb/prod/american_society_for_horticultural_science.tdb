@@ -41,7 +41,7 @@
       au < released ; 2012 ; HortScience Volume 47 ; 47 >
       au < released ; 2013 ; HortScience Volume 48 ; 48 >
       au < released ; 2014 ; HortScience Volume 49 ; 49 >
-      au < manifest ; 2015 ; HortScience Volume 50 ; 50 >
+      au < testing ; 2015 ; HortScience Volume 50 ; 50 >
       au < manifest ; 2016 ; HortScience Volume 51 ; 51 >
 
     }
@@ -61,8 +61,6 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://horttech.ashspublications.org/
       implicit < status ; year ; name ; param[volume_name] >
-      
-      comment[nR] = need permission RT 5512
 
       au < released ; 1991 ; HortTechnology Volume 1 ; 1 >
       au < released ; 1992 ; HortTechnology Volume 2 ; 2 >
@@ -88,7 +86,7 @@
       au < released ; 2012 ; HortTechnology Volume 22 ; 22 >
       au < released ; 2013 ; HortTechnology Volume 23 ; 23 >
       au < released ; 2014 ; HortTechnology Volume 24 ; 24 >
-      au < manifest ; 2015 ; HortTechnology Volume 25 ; 25 >
+      au < testing ; 2015 ; HortTechnology Volume 25 ; 25 >
       au < manifest ; 2016 ; HortTechnology Volume 26 ; 26 >
 
     }
@@ -133,7 +131,7 @@
       au < released ; 2012 ; Journal of the American Society for Horticultural Science Volume 137 ; 137 >
       au < released ; 2013 ; Journal of the American Society for Horticultural Science Volume 138 ; 138 >
       au < released ; 2014 ; Journal of the American Society for Horticultural Science Volume 139 ; 139 >
-      au < manifest ; 2015 ; Journal of the American Society for Horticultural Science Volume 140 ; 140 >
+      au < testing ; 2015 ; Journal of the American Society for Horticultural Science Volume 140 ; 140 >
       au < expected ; 2016 ; Journal of the American Society for Horticultural Science Volume 141 ; 141 >
 
     }
