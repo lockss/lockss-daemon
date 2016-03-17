@@ -7261,7 +7261,7 @@
     au < manifest ; exists ; 2007 ; Foreign Policy Analysis Volume 3 ; 3 ; >
     au < manifest ; exists ; 2008 ; Foreign Policy Analysis Volume 4 ; 4 ; >
     au < testing ; exists ; 2009 ; Foreign Policy Analysis Volume 5 ; 5 ; >
-    au < testing ; exists ; 2010 ; Foreign Policy Analysis Volume 6 ; 6 ; >
+    au < ready ; exists ; 2010 ; Foreign Policy Analysis Volume 6 ; 6 ; >
     au < testing ; exists ; 2011 ; Foreign Policy Analysis Volume 7 ; 7 ; >
     au < testing ; exists ; 2012 ; Foreign Policy Analysis Volume 8 ; 8 ; >
     au < testing ; exists ; 2013 ; Foreign Policy Analysis Volume 9 ; 9 ; >
@@ -10574,9 +10574,9 @@
     au < testing ; exists ; 2009 ; International Political Sociology Volume 3 ; 3 ; >
     au < testing ; exists ; 2010 ; International Political Sociology Volume 4 ; 4 ; >
     au < testing ; exists ; 2011 ; International Political Sociology Volume 5 ; 5 ; >
-    au < testing ; exists ; 2012 ; International Political Sociology Volume 6 ; 6 ; >
+    au < ready ; exists ; 2012 ; International Political Sociology Volume 6 ; 6 ; >
     au < testing ; exists ; 2013 ; International Political Sociology Volume 7 ; 7 ; >
-    au < testing ; exists ; 2014 ; International Political Sociology Volume 8 ; 8 ; >
+    au < ready ; exists ; 2014 ; International Political Sociology Volume 8 ; 8 ; >
     au < crawling ; exists ; 2015 ; International Political Sociology Volume 9 ; 9 ; >
     au < manifest ; exists ; 2016 ; International Political Sociology Volume 10 ; 10 ; >
 
@@ -10650,8 +10650,8 @@
     au < manifest ; exists ; 2008 ; International Studies Perspectives Volume 9 ; 9 ; >
     au < testing ; exists ; 2009 ; International Studies Perspectives Volume 10 ; 10 ; >
     au < testing ; exists ; 2010 ; International Studies Perspectives Volume 11 ; 11 ; >
-    au < testing ; exists ; 2011 ; International Studies Perspectives Volume 12 ; 12 ; >
-    au < testing ; exists ; 2012 ; International Studies Perspectives Volume 13 ; 13 ; >
+    au < ready ; exists ; 2011 ; International Studies Perspectives Volume 12 ; 12 ; >
+    au < ready ; exists ; 2012 ; International Studies Perspectives Volume 13 ; 13 ; >
     au < testing ; exists ; 2013 ; International Studies Perspectives Volume 14 ; 14 ; >
     au < testing ; exists ; 2014 ; International Studies Perspectives Volume 15 ; 15 ; >
     au < crawling ; exists ; 2015 ; International Studies Perspectives Volume 16 ; 16 ; >
@@ -10715,11 +10715,11 @@
     au < manifest ; exists ; 2007 ; International Studies Review Volume 9 ; 9 ; >
     au < manifest ; exists ; 2008 ; International Studies Review Volume 10 ; 10 ; >
     au < testing ; exists ; 2009 ; International Studies Review Volume 11 ; 11 ; >
-    au < testing ; exists ; 2010 ; International Studies Review Volume 12 ; 12 ; >
+    au < ready ; exists ; 2010 ; International Studies Review Volume 12 ; 12 ; >
     au < testing ; exists ; 2011 ; International Studies Review Volume 13 ; 13 ; >
     au < testing ; exists ; 2012 ; International Studies Review Volume 14 ; 14 ; >
     au < testing ; exists ; 2013 ; International Studies Review Volume 15 ; 15 ; >
-    au < testing ; exists ; 2014 ; International Studies Review Volume 16 ; 16 ; >
+    au < ready ; exists ; 2014 ; International Studies Review Volume 16 ; 16 ; >
     au < crawling ; exists ; 2015 ; International Studies Review Volume 17 ; 17 ; >
     au < expected ; exists ; 2016 ; International Studies Review Volume 18 ; 18 ; >
 
@@ -13343,7 +13343,8 @@
     param[base_url] = http://integrablesystems.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < testing ; exists ; 2015 ; Journal of Integrable Systems Volume 1 ; 1 ; >
+    au < notReady ; exists ; 2015 ; Journal of Integrable Systems Volume 1 ; 1 ; >
+    #Unable to fetch probe permission page
     au < expected ; exists ; 2016 ; Journal of Integrable Systems Volume 2 ; 2 ; >
 
     }
@@ -17702,7 +17703,7 @@
     param[base_url] = http://nc.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < testing ; exists ; 2015 ; Neuroscience of Consciousness Volume 2015 ; 2015 ; >
+    au < ready ; exists ; 2015 ; Neuroscience of Consciousness Volume 2015 ; 2015 ; >
     au < exists ; exists ; 2016 ; Neuroscience of Consciousness Volume 2016 ; 2016 ; >
 
   }
@@ -24527,7 +24528,7 @@
       au < manifest ; exists ; 2006 ; Aristotelian Society Supplementary Volume Volume 80 ; 80 ; >
       au < manifest ; exists ; 2007 ; Aristotelian Society Supplementary Volume Volume 81 ; 81 ; >
       au < manifest ; exists ; 2008 ; Aristotelian Society Supplementary Volume Volume 82 ; 82 ; >
-      au < testing ; exists ; 2009 ; Aristotelian Society Supplementary Volume Volume 83 ; 83 ; >
+      au < ready ; exists ; 2009 ; Aristotelian Society Supplementary Volume Volume 83 ; 83 ; >
       au < testing ; exists ; 2010 ; Aristotelian Society Supplementary Volume Volume 84 ; 84 ; >
       au < testing ; exists ; 2011 ; Aristotelian Society Supplementary Volume Volume 85 ; 85 ; >
       au < testing ; exists ; 2012 ; Aristotelian Society Supplementary Volume Volume 86 ; 86 ; >
