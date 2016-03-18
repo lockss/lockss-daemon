@@ -1,10 +1,10 @@
 /*
- * $Id: OaiPmhHtmlFilterFactory.java,v 1.1.2.1 2014/05/05 17:32:30 wkwilson Exp $
+ * $Id: $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,70 +38,71 @@ import java.io.Reader;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
 import org.lockss.filter.FilterUtil;
+import org.lockss.filter.StringFilter;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.ReaderInputStream;
 
 public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
-
-    public InputStream createFilteredInputStream(ArchivalUnit au,
-                                                 InputStream in,
-                                                 String encoding) {
-        NodeFilter[] filters = new NodeFilter[] {
-          HtmlNodeFilters.tag("script"),
-          HtmlNodeFilters.tag("noscript"),
-          HtmlNodeFilters.tag("input"),
-          HtmlNodeFilters.tag("head"),
-
-          //google iframes with weird ids
-          HtmlNodeFilters.tag("iframe"),
-
-          //footer
-          HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
-          
-          //more links to pdf and article
-          HtmlNodeFilters.tagWithAttribute("div", "class", "bar-dock"),
-
-          //weird meta tag
-          HtmlNodeFilters.tagWithAttribute("meta", "name", "nolard"),
-
-          //adds on the side
-          HtmlNodeFilters.tagWithAttribute("div", "class", "banner-advert"),
-          HtmlNodeFilters.tagWithAttribute("div", "id", "doubleclick-ad"),
-
-          //header and search box
-          HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
-          HtmlNodeFilters.tagWithAttribute("div", "role", "banner"),
-
-          //non essentials like metrics and related links
-          HtmlNodeFilters.tagWithAttribute("div", "role", "complementary"),
-          HtmlNodeFilters.tagWithAttribute("div", "class", "col-aside"),
-          HtmlNodeFilters.tagWithAttribute("div", "class", "document-aside"),
-
-          //random divs floating around
-          HtmlNodeFilters.tagWithAttribute("div", "id", "MathJax_Message"),
-          HtmlNodeFilters.tagWithAttribute("div", "id", "web-trekk-abstract"),
-          HtmlNodeFilters.tagWithAttribute("div", "class", "look-inside-interrupt"),
-          HtmlNodeFilters.tagWithAttribute("div", "id", "colorbox"),
-          HtmlNodeFilters.tagWithAttribute("div", "id", "cboxOverlay"),
-          HtmlNodeFilters.tagWithAttribute("div", "id", "gimme-satisfaction"),
-          HtmlNodeFilters.tagWithAttribute("div", "class", "crossmark-tooltip"),
-          HtmlNodeFilters.tagWithAttribute("div", "id", "crossMark"),
-          
-          //CSS links in body
-          HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
-                                                 
-        };
-        
-        HtmlFilterInputStream filteredStream = new HtmlFilterInputStream(in,
-                                          encoding,
-                                          HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-        
-        Reader filteredReader = FilterUtil.getReader(filteredStream, encoding);
-        
-        // Remove white space
-        return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
-    }
+  
+  private static final NodeFilter[] filters = new NodeFilter[] {
+      HtmlNodeFilters.tag("script"),
+      HtmlNodeFilters.tag("noscript"),
+      HtmlNodeFilters.tag("input"),
+      HtmlNodeFilters.tag("head"),
+      
+      //google iframes with weird ids
+      HtmlNodeFilters.tag("iframe"),
+      
+      //footer
+      HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+      
+      //more links to pdf and article
+      HtmlNodeFilters.tagWithAttribute("div", "class", "bar-dock"),
+      
+      //weird meta tag
+      HtmlNodeFilters.tagWithAttribute("meta", "name", "nolard"),
+      
+      //adds on the side
+      HtmlNodeFilters.tagWithAttribute("div", "class", "banner-advert"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "doubleclick-ad"),
+      
+      //header and search box
+      HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+      HtmlNodeFilters.tagWithAttribute("div", "role", "banner"),
+      
+      //non essentials like metrics and related links
+      HtmlNodeFilters.tagWithAttribute("div", "role", "complementary"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "col-aside"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "document-aside"),
+      
+      //random divs floating around
+      HtmlNodeFilters.tagWithAttribute("div", "id", "MathJax_Message"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "web-trekk-abstract"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "look-inside-interrupt"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "colorbox"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "cboxOverlay"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "gimme-satisfaction"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "crossmark-tooltip"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "crossMark"),
+      
+      //CSS links in body
+      HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
+      
+  };
+  
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+      InputStream in, String encoding) {
     
+    HtmlFilterInputStream filteredStream = new HtmlFilterInputStream(in, encoding,
+        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    
+    Reader filteredReader = FilterUtil.getReader(filteredStream, encoding);
+    Reader httpFilter = new StringFilter(filteredReader, "http:", "https:");
+    
+    // Remove white space
+    return new ReaderInputStream(new WhiteSpaceFilter(httpFilter));
+  }
+  
 }

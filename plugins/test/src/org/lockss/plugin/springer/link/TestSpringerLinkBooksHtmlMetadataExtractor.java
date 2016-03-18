@@ -35,18 +35,24 @@ package org.lockss.plugin.springer.link;
 
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.extractor.*;
 
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.PluginTestUtil;
+import org.lockss.plugin.definable.DefinableArchivalUnit;
+import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
 import org.lockss.plugin.simulated.SimulatedPlugin;
+import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockCachedUrl;
 import org.lockss.test.MockLockssDaemon;
 import org.lockss.util.Logger;
+
+import java.net.URL;
 import java.util.*;
 
 /**
@@ -66,10 +72,31 @@ public class TestSpringerLinkBooksHtmlMetadataExtractor extends LockssTestCase {
   private ArchivalUnit bau;		// RSC AU
   
   private static String PLUGIN_NAME = "org.lockss.plugin.springer.link.SpringerLinkBooksPlugin";
+
+  private static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  private static final String DOWNLOAD_URL_KEY = "download_url";
+  private static final String BOOK_EISBN_KEY = "book_eisbn";
   
   private static String BASE_URL = "http://www.example.org/";
   private static String DOWNLOAD_URL = "http://www.example.download.org/";
   private static String BOOK_EISBN = "1234-1234";
+  
+  private DefinablePlugin plugin;
+  
+  private DefinableArchivalUnit makeAu()
+      throws Exception {
+
+    Properties props = new Properties();
+    props.setProperty(BASE_URL_KEY, BASE_URL);
+    props.setProperty(DOWNLOAD_URL_KEY, DOWNLOAD_URL);
+    props.setProperty(BOOK_EISBN_KEY, BOOK_EISBN);
+    Configuration config = ConfigurationUtil.fromProps(props);
+
+    plugin = new DefinablePlugin();
+    plugin.initPlugin(getMockLockssDaemon(), PLUGIN_NAME);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)plugin.createAu(config);
+    return au;
+  }
   
   public void setUp() throws Exception {
     super.setUp();
@@ -83,6 +110,7 @@ public class TestSpringerLinkBooksHtmlMetadataExtractor extends LockssTestCase {
     theDaemon.getCrawlManager();
     
     sau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class, simAuConfig(tempDirPath));
+    bau = makeAu();
   }
   
   public void tearDown() throws Exception {

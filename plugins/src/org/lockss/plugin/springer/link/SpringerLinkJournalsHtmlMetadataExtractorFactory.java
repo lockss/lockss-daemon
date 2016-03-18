@@ -1,10 +1,10 @@
 /*
- * $Id: NatureHtmlMetadataExtractorFactory.java 40402 2015-03-10 22:37:41Z alexandraohlson $
+ * $Id: $
  */
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,11 +43,13 @@ import org.lockss.extractor.FileMetadataExtractorFactory;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.extractor.SimpleHtmlMetaTagMetadataExtractor;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 
 public class SpringerLinkJournalsHtmlMetadataExtractorFactory
   implements FileMetadataExtractorFactory {
+  
   private static final Logger log = Logger.getLogger(SpringerLinkJournalsHtmlMetadataExtractorFactory.class);
 
   @Override
@@ -81,6 +83,13 @@ public class SpringerLinkJournalsHtmlMetadataExtractorFactory
     throws IOException {
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
+      String url = am.get(MetadataField.FIELD_ACCESS_URL);
+      ArchivalUnit au = cu.getArchivalUnit();
+      if (url == null || url.isEmpty() || !au.makeCachedUrl(url).hasContent()) {
+        url = cu.getUrl();
+      }
+      am.replace(MetadataField.FIELD_ACCESS_URL,
+                 HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(au, url));
       return am;
     }
   }
