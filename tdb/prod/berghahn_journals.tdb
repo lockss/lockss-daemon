@@ -186,28 +186,53 @@
     >  
          
     param[journal_id] = csurv
-    param[journal_issn] = 0011-1570
+    {
+      param[journal_issn] = 0011-1570
           
-    au < released ; 1997 ; Critical Survey Volume 9 ; 9 >
-    au < released ; 1998 ; Critical Survey Volume 10 ; 10 >
-    au < released ; 1999 ; Critical Survey Volume 11 ; 11 >
-    au < released ; 2000 ; Critical Survey Volume 12 ; 12 >
-    au < released ; 2001 ; Critical Survey Volume 13 ; 13 >
-    au < released ; 2002 ; Critical Survey Volume 14 ; 14 >
-    au < released ; 2003 ; Critical Survey Volume 15 ; 15 >
-    au < released ; 2004 ; Critical Survey Volume 16 ; 16 >
-    au < released ; 2005 ; Critical Survey Volume 17 ; 17 >
-    au < released ; 2006 ; Critical Survey Volume 18 ; 18 >
-    au < released ; 2007 ; Critical Survey Volume 19 ; 19 >
-    au < released ; 2008 ; Critical Survey Volume 20 ; 20 >
-    au < released ; 2009 ; Critical Survey Volume 21 ; 21 >
-    au < released ; 2010 ; Critical Survey Volume 22 ; 22 >
-    au < released ; 2011 ; Critical Survey Volume 23 ; 23 >
-    au < released ; 2012 ; Critical Survey Volume 24 ; 24 >
-    au < released ; 2013 ; Critical Survey Volume 25 ; 25 >
-    au < released ; 2014 ; Critical Survey Volume 26 ; 26 >
-    au < released ; 2015 ; Critical Survey Volume 27 ; 27 >
-    
+      au < down ; 1997 ; Critical Survey Volume 9 ; 9 >
+      au < down ; 1998 ; Critical Survey Volume 10 ; 10 >
+      au < down ; 1999 ; Critical Survey Volume 11 ; 11 >
+      au < down ; 2000 ; Critical Survey Volume 12 ; 12 >
+      au < down ; 2001 ; Critical Survey Volume 13 ; 13 >
+      au < down ; 2002 ; Critical Survey Volume 14 ; 14 >
+      au < down ; 2003 ; Critical Survey Volume 15 ; 15 >
+      au < down ; 2004 ; Critical Survey Volume 16 ; 16 >
+      au < down ; 2005 ; Critical Survey Volume 17 ; 17 >
+      au < down ; 2006 ; Critical Survey Volume 18 ; 18 >
+      au < down ; 2007 ; Critical Survey Volume 19 ; 19 >
+      au < down ; 2008 ; Critical Survey Volume 20 ; 20 >
+      au < down ; 2009 ; Critical Survey Volume 21 ; 21 >
+      au < down ; 2010 ; Critical Survey Volume 22 ; 22 >
+      au < down ; 2011 ; Critical Survey Volume 23 ; 23 >
+      au < down ; 2012 ; Critical Survey Volume 24 ; 24 >
+      au < down ; 2013 ; Critical Survey Volume 25 ; 25 >
+      au < down ; 2014 ; Critical Survey Volume 26 ; 26 >
+      au < down ; 2015 ; Critical Survey Volume 27 ; 27 >
+    }
+    {
+      #they moved to eissn just before going offline
+      param[journal_issn] = 1752-2293
+          
+      au < exists ; 1997 ; Critical Survey Volume 9 ; 9 >
+      au < exists ; 1998 ; Critical Survey Volume 10 ; 10 >
+      au < exists ; 1999 ; Critical Survey Volume 11 ; 11 >
+      au < exists ; 2000 ; Critical Survey Volume 12 ; 12 >
+      au < exists ; 2001 ; Critical Survey Volume 13 ; 13 >
+      au < exists ; 2002 ; Critical Survey Volume 14 ; 14 >
+      au < exists ; 2003 ; Critical Survey Volume 15 ; 15 >
+      au < exists ; 2004 ; Critical Survey Volume 16 ; 16 >
+      au < exists ; 2005 ; Critical Survey Volume 17 ; 17 >
+      au < exists ; 2006 ; Critical Survey Volume 18 ; 18 >
+      au < exists ; 2007 ; Critical Survey Volume 19 ; 19 >
+      au < exists ; 2008 ; Critical Survey Volume 20 ; 20 >
+      au < exists ; 2009 ; Critical Survey Volume 21 ; 21 >
+      au < exists ; 2010 ; Critical Survey Volume 22 ; 22 >
+      au < exists ; 2011 ; Critical Survey Volume 23 ; 23 >
+      au < exists ; 2012 ; Critical Survey Volume 24 ; 24 >
+      au < exists ; 2013 ; Critical Survey Volume 25 ; 25 >
+      au < exists ; 2014 ; Critical Survey Volume 26 ; 26 >
+      au < exists ; 2015 ; Critical Survey Volume 27 ; 27 >
+    }
   }
 
   {

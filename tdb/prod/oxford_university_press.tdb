@@ -14064,8 +14064,7 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2015 ; Journal of Language Evolution Volume 2015 ; 2015 >
-    au < exists ; 2016 ; Journal of Language Evolution Volume 2016 ; 2016 >
+    au < exists ; 2016 ; Journal of Language Evolution Volume 1 ; 1 >
 
   }
 
@@ -18412,7 +18411,9 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2015 ; Neuroscience of Consciousness Volume 1 ; 1 >
+    au < exists ; 2015 ; Neuroscience of Consciousness Volume 2015 ; 2015 >
+    au < exists ; 2016 ; Neuroscience of Consciousness Volume 2016 ; 2016 >
+
   }
 
   {

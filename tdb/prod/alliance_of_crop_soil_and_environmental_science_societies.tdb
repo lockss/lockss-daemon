@@ -22,6 +22,20 @@
   {
 
     title <
+      name = Agricultural & Environmental Letters
+    >
+
+    # See https://dl.sciencesocieties.org/publications/ael
+    
+    param[journal_id] = ael
+
+    au < exists ; 2016 ; Agricultural & Environmental Letters Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
       name = Agronomy Journal ;
       issn = 0002-1962 ;
       eissn = 1435-0645 ;
