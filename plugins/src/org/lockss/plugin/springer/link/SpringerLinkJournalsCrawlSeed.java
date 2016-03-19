@@ -71,6 +71,7 @@ public class SpringerLinkJournalsCrawlSeed extends BaseSpringerLinkCrawlSeed {
    * @since 1.67.5
    */
   protected String eissn;
+  
   public static final String JOURNAL_EISSN_KEY = "journal_eissn";
   /**
    * <p>

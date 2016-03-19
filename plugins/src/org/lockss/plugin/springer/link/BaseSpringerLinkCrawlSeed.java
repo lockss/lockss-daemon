@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -135,10 +135,13 @@ public abstract class BaseSpringerLinkCrawlSeed extends BaseCrawlSeed {
    * <p>
    * The API URL (<code>api_url</code>) of this crawl seed's AU.
    * </p>
+   * <p>
+   * The protocol was changed to HTTPS on 2016-03-18.
+   * </p>
    * 
    * @since 1.67.5
    */
-  protected static final String API_URL = "http://api.springer.com/";
+  protected static final String API_URL = "https://api.springer.com/";
   
   protected CrawlerFacade facade;
 
@@ -150,6 +153,7 @@ public abstract class BaseSpringerLinkCrawlSeed extends BaseCrawlSeed {
    * @since 1.67.5
    */
   protected List<String> urlList;
+  
   protected String baseUrl;
 
   /**
@@ -181,7 +185,7 @@ public abstract class BaseSpringerLinkCrawlSeed extends BaseCrawlSeed {
     if (urlList == null) {
       populateUrlList();
     }
-    if(urlList.isEmpty()) {
+    if (urlList.isEmpty()) {
       throw new CacheException.UnexpectedNoRetryFailException("Found no start urls");
     }
     return urlList;
@@ -361,7 +365,7 @@ public abstract class BaseSpringerLinkCrawlSeed extends BaseCrawlSeed {
   }
   
   public boolean isFailOnStartUrlError() {
-	  return false;
+    return false;
   }
   
   /**

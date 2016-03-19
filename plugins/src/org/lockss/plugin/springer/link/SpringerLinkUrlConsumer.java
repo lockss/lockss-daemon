@@ -61,8 +61,7 @@ public class SpringerLinkUrlConsumer extends HttpToHttpsUtil.HttpToHttpsUrlConsu
   public SpringerLinkUrlConsumer(CrawlerFacade facade,
                                 FetchedUrlData fud) {
     super(facade, fud);
-    origPdfPat = makeOrigPdfPattern(au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()));
-    destPdfPat = makeDestPdfPattern(au.getConfiguration().get(DOWNLOAD_URL_KEY));
+    makePatterns();
   }
 
   @Override
@@ -89,34 +88,37 @@ public class SpringerLinkUrlConsumer extends HttpToHttpsUtil.HttpToHttpsUrlConsu
    * @since 1.67.5
    */
   public boolean shouldStoreAtOrigUrl() {
-    return super.shouldStoreAtOrigUrl() || (
-        destPdfPat.matcher(fud.fetchUrl).find() &&
-        origPdfPat.matcher(fud.origUrl).find()
-        );
+    return super.shouldStoreAtOrigUrl()
+        || (   fud.redirectUrls != null
+            && fud.redirectUrls.size() == 1
+            && fud.redirectUrls.get(0).equals(fud.fetchUrl)
+            && origPdfPat.matcher(fud.origUrl).find()
+            && destPdfPat.matcher(fud.fetchUrl).find());
   }
   
-  /**
-   * 
-   * @param baseUrl
-   * @return
-   * @since 1.67.5
-   */
-  protected static Pattern makeOrigPdfPattern(String baseUrl) {
-    return Pattern.compile(String.format("^%s(content|download)/(pdf|epub)/.*\\.(pdf|epub)$",
-                                         baseUrl),
-                           Pattern.CASE_INSENSITIVE);
+  protected void makePatterns() {
+    String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
+    origPdfPat = makeOrigPdfPattern(baseUrl);
+    String downloadUrl = au.getConfiguration().get(DOWNLOAD_URL_KEY);
+    destPdfPat = makeDestPdfPattern(downloadUrl);
   }
 
-  /**
-   * 
-   * @param downloadUrl
-   * @return
-   * @since 1.67.5
-   */
+  protected static Pattern makeOrigPdfPattern(String baseUrl) {
+    return Pattern.compile(String.format("^https?://%s/(content|download)/(pdf|epub)/.*\\.(pdf|epub)$",
+                                         urlHost(baseUrl)),
+                           Pattern.CASE_INSENSITIVE);
+  }
+  
   protected static Pattern makeDestPdfPattern(String downloadUrl) {
     return Pattern.compile(String.format("^%sstatic/(pdf|epub)/.*\\.(pdf|epub)\\?[^=]*=[^&]*",
                                          downloadUrl),
                            Pattern.CASE_INSENSITIVE);
+  }
+
+  public static String urlHost(String url) {
+    url = url.substring(url.indexOf("://") + 3);
+    url = url.substring(0, url.indexOf('/'));
+    return url;
   }
   
 }

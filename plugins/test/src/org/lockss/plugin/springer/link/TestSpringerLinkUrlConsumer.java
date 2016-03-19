@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.springer.link;
 
+import java.util.Arrays;
 import java.util.regex.Pattern;
 
 import org.lockss.plugin.springer.link.SpringerLinkUrlConsumer;
@@ -40,17 +41,29 @@ import org.lockss.test.LockssTestCase;
 public class TestSpringerLinkUrlConsumer extends LockssTestCase {
 
   public void testOrigPdfPattern() throws Exception {
-    Pattern origPdfPat = SpringerLinkUrlConsumer.makeOrigPdfPattern("http://www.example.com/");
-    assertMatchesRE(origPdfPat, "http://www.example.com/content/pdf/10.1007%2Fs00125-013-3090-y.pdf");
-    assertMatchesRE(origPdfPat, "http://www.example.com/content/pdf/10.1007/s00125-013-3090-y.pdf");
-    assertMatchesRE(origPdfPat, "http://www.example.com/content/pdf/10.1007/a/b/c.pdf");
-    assertMatchesRE(origPdfPat, "http://www.example.com/content/pdf/10.1007/a(1)b[2]c{3}d.pdf");
-    assertMatchesRE(origPdfPat, "http://www.example.com/content/pdf/10.1007%2Fa%281%29b%5B2%5Dc%7B3%7Dd.pdf");
-    assertNotMatchesRE(origPdfPat, "http://www.example.com/article/10.1007%2Fs00125-013-3090-y");
-    assertNotMatchesRE(origPdfPat, "http://www.example.com/article/10.1007%2Fs00125-013-3090-y/fulltext.html");
-    assertNotMatchesRE(origPdfPat, "http://www.example.com/esm/art%3A10.1007%2Fs00125-013-3090-y/MediaObjects/125_2013_3090_MOESM1_ESM.pdf");
-    assertNotMatchesRE(origPdfPat, "http://static-content.example.com/esm/art%3A10.1007%2Fs00125-013-3090-y/MediaObjects/125_2013_3090_MOESM1_ESM.pdf");
-    assertNotMatchesRE(origPdfPat, "http://download.example.com/static/pdf/371/art%253A10.1007%252Fs00125-013-3090-y.pdf?auth66=0000028291_00004acfc1773d7b4cf8393f4201ce39&ext=.pdf");
+    for (String str : Arrays.asList("http://www.example.com/", "https://www.example.com/")) {
+      Pattern origPdfPat = SpringerLinkUrlConsumer.makeOrigPdfPattern(str);
+      assertMatchesRE(origPdfPat, "http://www.example.com/content/pdf/10.1007%2Fs00125-013-3090-y.pdf");
+      assertMatchesRE(origPdfPat, "https://www.example.com/content/pdf/10.1007%2Fs00125-013-3090-y.pdf");
+      assertMatchesRE(origPdfPat, "http://www.example.com/content/pdf/10.1007/s00125-013-3090-y.pdf");
+      assertMatchesRE(origPdfPat, "https://www.example.com/content/pdf/10.1007/s00125-013-3090-y.pdf");
+      assertMatchesRE(origPdfPat, "http://www.example.com/content/pdf/10.1007/a/b/c.pdf");
+      assertMatchesRE(origPdfPat, "https://www.example.com/content/pdf/10.1007/a/b/c.pdf");
+      assertMatchesRE(origPdfPat, "http://www.example.com/content/pdf/10.1007/a(1)b[2]c{3}d.pdf");
+      assertMatchesRE(origPdfPat, "https://www.example.com/content/pdf/10.1007/a(1)b[2]c{3}d.pdf");
+      assertMatchesRE(origPdfPat, "http://www.example.com/content/pdf/10.1007%2Fa%281%29b%5B2%5Dc%7B3%7Dd.pdf");
+      assertMatchesRE(origPdfPat, "https://www.example.com/content/pdf/10.1007%2Fa%281%29b%5B2%5Dc%7B3%7Dd.pdf");
+      assertNotMatchesRE(origPdfPat, "http://www.example.com/article/10.1007%2Fs00125-013-3090-y");
+      assertNotMatchesRE(origPdfPat, "https://www.example.com/article/10.1007%2Fs00125-013-3090-y");
+      assertNotMatchesRE(origPdfPat, "http://www.example.com/article/10.1007%2Fs00125-013-3090-y/fulltext.html");
+      assertNotMatchesRE(origPdfPat, "https://www.example.com/article/10.1007%2Fs00125-013-3090-y/fulltext.html");
+      assertNotMatchesRE(origPdfPat, "http://www.example.com/esm/art%3A10.1007%2Fs00125-013-3090-y/MediaObjects/125_2013_3090_MOESM1_ESM.pdf");
+      assertNotMatchesRE(origPdfPat, "https://www.example.com/esm/art%3A10.1007%2Fs00125-013-3090-y/MediaObjects/125_2013_3090_MOESM1_ESM.pdf");
+      assertNotMatchesRE(origPdfPat, "http://static-content.example.com/esm/art%3A10.1007%2Fs00125-013-3090-y/MediaObjects/125_2013_3090_MOESM1_ESM.pdf");
+      assertNotMatchesRE(origPdfPat, "https://static-content.example.com/esm/art%3A10.1007%2Fs00125-013-3090-y/MediaObjects/125_2013_3090_MOESM1_ESM.pdf");
+      assertNotMatchesRE(origPdfPat, "http://download.example.com/static/pdf/371/art%253A10.1007%252Fs00125-013-3090-y.pdf?auth66=0000028291_00004acfc1773d7b4cf8393f4201ce39&ext=.pdf");
+      assertNotMatchesRE(origPdfPat, "https://download.example.com/static/pdf/371/art%253A10.1007%252Fs00125-013-3090-y.pdf?auth66=0000028291_00004acfc1773d7b4cf8393f4201ce39&ext=.pdf");
+    }
   }
   
   public void testDestPdfPattern() throws Exception {
