@@ -457,11 +457,11 @@
     au < manifest ; exists ; 2006 ; American Entomologist Volume 52 ; 52 ; >
     au < manifest ; exists ; 2007 ; American Entomologist Volume 53 ; 53 ; >
     au < manifest ; exists ; 2008 ; American Entomologist Volume 54 ; 54 ; >
-    au < testing ; exists ; 2009 ; American Entomologist Volume 55 ; 55 ; >
-    au < testing ; exists ; 2010 ; American Entomologist Volume 56 ; 56 ; >
+    au < ready ; exists ; 2009 ; American Entomologist Volume 55 ; 55 ; >
+    au < ready ; exists ; 2010 ; American Entomologist Volume 56 ; 56 ; >
     au < testing ; exists ; 2011 ; American Entomologist Volume 57 ; 57 ; >
     au < testing ; exists ; 2012 ; American Entomologist Volume 58 ; 58 ; >
-    au < testing ; exists ; 2013 ; American Entomologist Volume 59 ; 59 ; >
+    au < ready ; exists ; 2013 ; American Entomologist Volume 59 ; 59 ; >
     au < crawling ; exists ; 2014 ; American Entomologist Volume 60 ; 60 ; >
     au < crawling ; exists ; 2015 ; American Entomologist Volume 61 ; 61 ; >
     au < manifest ; exists ; 2016 ; American Entomologist Volume 62 ; 62 ; >
@@ -1941,9 +1941,9 @@
     au < manifest ; exists ; 2006 ; Arbitration International Volume 22 ; 22 ; >
     au < manifest ; exists ; 2007 ; Arbitration International Volume 23 ; 23 ; >
     au < manifest ; exists ; 2008 ; Arbitration International Volume 24 ; 24 ; >
-    au < testing ; exists ; 2009 ; Arbitration International Volume 25 ; 25 ; >
+    au < ready ; exists ; 2009 ; Arbitration International Volume 25 ; 25 ; >
     au < testing ; exists ; 2010 ; Arbitration International Volume 26 ; 26 ; >
-    au < testing ; exists ; 2011 ; Arbitration International Volume 27 ; 27 ; >
+    au < ready ; exists ; 2011 ; Arbitration International Volume 27 ; 27 ; >
     au < crawling ; exists ; 2012 ; Arbitration International Volume 28 ; 28 ; >
     au < crawling ; exists ; 2013 ; Arbitration International Volume 29 ; 29 ; >
     au < crawling ; exists ; 2014 ; Arbitration International Volume 30 ; 30 ; >
@@ -6934,9 +6934,9 @@
     au < crawling ; exists ; 2014 ; FEMS Microbiology Ecology Volume 87 ; 87 ; >
     au < finished ; crawling ; 2014 ; FEMS Microbiology Ecology Volume 88 ; 88 ; >
     au < testing ; exists ; 2014 ; FEMS Microbiology Ecology Volume 89 ; 89 ; >
-    au < testing ; exists ; 2014 ; FEMS Microbiology Ecology Volume 90 ; 90 ; >
+    au < ready ; exists ; 2014 ; FEMS Microbiology Ecology Volume 90 ; 90 ; >
     au < crawling ; exists ; 2015 ; FEMS Microbiology Ecology Volume 91 ; 91 ; >
-    au < manifest ; exists ; 2015 ; FEMS Microbiology Ecology Volume 92 ; 92 ; >
+    au < boost ; exists ; 2015 ; FEMS Microbiology Ecology Volume 92 ; 92 ; >
     au < exists ; exists ; 2015 ; FEMS Microbiology Ecology Volume 93 ; 93 ; >
     au < exists ; exists ; 2015 ; FEMS Microbiology Ecology Volume 94 ; 94 ; >
     au < expected ; exists ; 2016 ; FEMS Microbiology Ecology Volume 95 ; 95 ; >
@@ -13941,9 +13941,9 @@
     au < manifest ; exists ; 2007 ; Journal of Mammalogy Volume 88 ; 88 ; >
     au < manifest ; exists ; 2008 ; Journal of Mammalogy Volume 89 ; 89 ; >
     au < testing ; exists ; 2009 ; Journal of Mammalogy Volume 90 ; 90 ; >
-    au < testing ; exists ; 2010 ; Journal of Mammalogy Volume 91 ; 91 ; >
-    au < testing ; exists ; 2011 ; Journal of Mammalogy Volume 92 ; 92 ; >
-    au < testing ; exists ; 2012 ; Journal of Mammalogy Volume 93 ; 93 ; >
+    au < ready ; exists ; 2010 ; Journal of Mammalogy Volume 91 ; 91 ; >
+    au < ready ; exists ; 2011 ; Journal of Mammalogy Volume 92 ; 92 ; >
+    au < ready ; exists ; 2012 ; Journal of Mammalogy Volume 93 ; 93 ; >
     au < crawling ; exists ; 2013 ; Journal of Mammalogy Volume 94 ; 94 ; >
     au < crawling ; exists ; 2014 ; Journal of Mammalogy Volume 95 ; 95 ; >
     au < crawling ; exists ; 2015 ; Journal of Mammalogy Volume 96 ; 96 ; >
@@ -13974,11 +13974,11 @@
     au < manifest ; exists ; 2007 ; Journal of Medical Entomology Volume 44 ; 44 ; >
     au < manifest ; exists ; 2008 ; Journal of Medical Entomology Volume 45 ; 45 ; >
     au < ready ; exists ; 2009 ; Journal of Medical Entomology Volume 46 ; 46 ; >
-    au < testing ; exists ; 2010 ; Journal of Medical Entomology Volume 47 ; 47 ; >
-    au < testing ; exists ; 2011 ; Journal of Medical Entomology Volume 48 ; 48 ; >
+    au < ready ; exists ; 2010 ; Journal of Medical Entomology Volume 47 ; 47 ; >
+    au < ready ; exists ; 2011 ; Journal of Medical Entomology Volume 48 ; 48 ; >
     au < testing ; exists ; 2012 ; Journal of Medical Entomology Volume 49 ; 49 ; >
     au < testing ; exists ; 2013 ; Journal of Medical Entomology Volume 50 ; 50 ; >
-    au < testing ; exists ; 2014 ; Journal of Medical Entomology Volume 51 ; 51 ; >
+    au < ready ; exists ; 2014 ; Journal of Medical Entomology Volume 51 ; 51 ; >
     au < crawling ; exists ; 2015 ; Journal of Medical Entomology Volume 52 ; 52 ; >
     au < manifest ; exists ; 2016 ; Journal of Medical Entomology Volume 53 ; 53 ; >
 
@@ -16038,7 +16038,7 @@
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < testing ; exists ; 2010 ; Mammalian Species Volume 42 ; 42 ; >
-    au < testing ; exists ; 2011 ; Mammalian Species Volume 43 ; 43 ; >
+    au < ready ; exists ; 2011 ; Mammalian Species Volume 43 ; 43 ; >
     au < frozen ; exists ; 2012 ; Mammalian Species Volume 44 ; 44 ; >
     au < frozen ; exists ; 2013 ; Mammalian Species Volume 45 ; 45 ; >
     au < crawling ; exists ; 2014 ; Mammalian Species Volume 46 ; 46 ; >
@@ -16728,9 +16728,9 @@
     au < manifest ; exists ; 2006 ; The Monist Volume 89 ; 89 ; >
     au < manifest ; exists ; 2007 ; The Monist Volume 90 ; 90 ; >
     au < manifest ; exists ; 2008 ; The Monist Volume 91 ; 91 ; >
-    au < testing ; exists ; 2009 ; The Monist Volume 92 ; 92 ; >
-    au < testing ; exists ; 2010 ; The Monist Volume 93 ; 93 ; >
-    au < testing ; exists ; 2011 ; The Monist Volume 94 ; 94 ; >
+    au < ready ; exists ; 2009 ; The Monist Volume 92 ; 92 ; >
+    au < ready ; exists ; 2010 ; The Monist Volume 93 ; 93 ; >
+    au < ready ; exists ; 2011 ; The Monist Volume 94 ; 94 ; >
     au < testing ; exists ; 2012 ; The Monist Volume 95 ; 95 ; >
     au < crawling ; exists ; 2013 ; The Monist Volume 96 ; 96 ; >
     au < crawling ; exists ; 2014 ; The Monist Volume 97 ; 97 ; >
@@ -24507,7 +24507,7 @@
       au < manifest ; exists ; 2007 ; American Journal of Legal History Volume 49 ; 49 ; >
       au < crawling ; exists ; 2010 ; American Journal of Legal History Volume 50 ; 50 ; >
       au < crawling ; exists ; 2011 ; American Journal of Legal History Volume 51 ; 51 ; >
-      au < testing ; exists ; 2012 ; American Journal of Legal History Volume 52 ; 52 ; >
+      au < ready ; exists ; 2012 ; American Journal of Legal History Volume 52 ; 52 ; >
       au < crawling ; exists ; 2013 ; American Journal of Legal History Volume 53 ; 53 ; >
       au < crawling ; exists ; 2014 ; American Journal of Legal History Volume 54 ; 54 ; >
       au < crawling ; exists ; 2015 ; American Journal of Legal History Volume 55 ; 55 ; >
