@@ -3774,7 +3774,7 @@
     au < finished ; finished ; 2013 ; The Cambridge Quarterly Volume 42 ; 42 ; >
     au < crawling ; exists ; 2014 ; The Cambridge Quarterly Volume 43 ; 43 ; >
     au < crawling ; exists ; 2015 ; The Cambridge Quarterly Volume 44 ; 44 ; >
-    au < expected ; exists ; 2016 ; The Cambridge Quarterly Volume 45 ; 45 ; >
+    au < manifest ; exists ; 2016 ; The Cambridge Quarterly Volume 45 ; 45 ; >
 
     }
 
@@ -4953,7 +4953,7 @@
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < crawling ; exists ; 2015 ; Digital Scholarship in the Humanities Volume 30 ; 30 ; >
-    au < expected ; exists ; 2016 ; Digital Scholarship in the Humanities Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2016 ; Digital Scholarship in the Humanities Volume 31 ; 31 ; >
 
   }
 
@@ -9371,7 +9371,7 @@
     au < finished ; finished ; 2013 ; IMA Journal of Mathematical Control and Information Volume 30 ; 30 ; >
     au < frozen ; exists ; 2014 ; IMA Journal of Mathematical Control and Information Volume 31 ; 31 ; >
     au < crawling ; exists ; 2015 ; IMA Journal of Mathematical Control and Information Volume 32 ; 32 ; >
-    au < expected ; exists ; 2016 ; IMA Journal of Mathematical Control and Information Volume 33 ; 33 ; >
+    au < manifest ; exists ; 2016 ; IMA Journal of Mathematical Control and Information Volume 33 ; 33 ; >
 
     }
 
@@ -9995,7 +9995,7 @@
     au < frozen ; exists ; 2013 ; International Journal of Epidemiology Volume 42 ; 42 ; >
     au < crawling ; exists ; 2014 ; International Journal of Epidemiology Volume 43 ; 43 ; >
     au < crawling ; exists ; 2015 ; International Journal of Epidemiology Volume 44 ; 44 ; >
-    au < expected ; exists ; 2016 ; International Journal of Epidemiology Volume 45 ; 45 ; >
+    au < manifest ; exists ; 2016 ; International Journal of Epidemiology Volume 45 ; 45 ; >
 
     }
 
@@ -13455,7 +13455,7 @@
     au < frozen ; exists ; 2013 ; Journal of International Criminal Justice Volume 11 ; 11 ; >
     au < frozen ; exists ; 2014 ; Journal of International Criminal Justice Volume 12 ; 12 ; >
     au < crawling ; exists ; 2015 ; Journal of International Criminal Justice Volume 13 ; 13 ; >
-    au < expected ; exists ; 2016 ; Journal of International Criminal Justice Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2016 ; Journal of International Criminal Justice Volume 14 ; 14 ; >
 
     }
 
@@ -18587,7 +18587,7 @@
     au < finished ; finished ; 2013 ; Oxford Art Journal Volume 36 ; 36 ; >
     au < finished ; crawling ; 2014 ; Oxford Art Journal Volume 37 ; 37 ; >
     au < crawling ; exists ; 2015 ; Oxford Art Journal Volume 38 ; 38 ; >
-    au < expected ; exists ; 2016 ; Oxford Art Journal Volume 39 ; 39 ; >
+    au < manifest ; exists ; 2016 ; Oxford Art Journal Volume 39 ; 39 ; >
 
     }
 
@@ -22442,7 +22442,7 @@
     au < finished ; crawling ; 2013 ; Sociology of Religion Volume 74 ; 74 ; >
     au < finished ; crawling ; 2014 ; Sociology of Religion Volume 75 ; 75 ; >
     au < crawling ; exists ; 2015 ; Sociology of Religion Volume 76 ; 76 ; >
-    au < expected ; exists ; 2016 ; Sociology of Religion Volume 77 ; 77 ; >
+    au < manifest ; exists ; 2016 ; Sociology of Religion Volume 77 ; 77 ; >
 
     }
 
@@ -24689,7 +24689,7 @@
       param[base_url] = http://jole.oxfordjournals.org/
       pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-      au < exists ; exists ; 2016 ; Journal of Language Evolution Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2016 ; Journal of Language Evolution Volume 1 ; 1 ; >
 
   }
 
