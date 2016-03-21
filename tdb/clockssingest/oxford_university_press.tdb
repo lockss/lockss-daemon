@@ -457,11 +457,11 @@
     au < manifest ; exists ; 2006 ; American Entomologist Volume 52 ; 52 ; >
     au < manifest ; exists ; 2007 ; American Entomologist Volume 53 ; 53 ; >
     au < manifest ; exists ; 2008 ; American Entomologist Volume 54 ; 54 ; >
-    au < ready ; exists ; 2009 ; American Entomologist Volume 55 ; 55 ; >
-    au < ready ; exists ; 2010 ; American Entomologist Volume 56 ; 56 ; >
+    au < crawling ; exists ; 2009 ; American Entomologist Volume 55 ; 55 ; >
+    au < crawling ; exists ; 2010 ; American Entomologist Volume 56 ; 56 ; >
     au < testing ; exists ; 2011 ; American Entomologist Volume 57 ; 57 ; >
     au < testing ; exists ; 2012 ; American Entomologist Volume 58 ; 58 ; >
-    au < ready ; exists ; 2013 ; American Entomologist Volume 59 ; 59 ; >
+    au < crawling ; exists ; 2013 ; American Entomologist Volume 59 ; 59 ; >
     au < crawling ; exists ; 2014 ; American Entomologist Volume 60 ; 60 ; >
     au < crawling ; exists ; 2015 ; American Entomologist Volume 61 ; 61 ; >
     au < manifest ; exists ; 2016 ; American Entomologist Volume 62 ; 62 ; >
@@ -1941,9 +1941,9 @@
     au < manifest ; exists ; 2006 ; Arbitration International Volume 22 ; 22 ; >
     au < manifest ; exists ; 2007 ; Arbitration International Volume 23 ; 23 ; >
     au < manifest ; exists ; 2008 ; Arbitration International Volume 24 ; 24 ; >
-    au < ready ; exists ; 2009 ; Arbitration International Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2009 ; Arbitration International Volume 25 ; 25 ; >
     au < testing ; exists ; 2010 ; Arbitration International Volume 26 ; 26 ; >
-    au < ready ; exists ; 2011 ; Arbitration International Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2011 ; Arbitration International Volume 27 ; 27 ; >
     au < crawling ; exists ; 2012 ; Arbitration International Volume 28 ; 28 ; >
     au < crawling ; exists ; 2013 ; Arbitration International Volume 29 ; 29 ; >
     au < crawling ; exists ; 2014 ; Arbitration International Volume 30 ; 30 ; >
@@ -6934,7 +6934,7 @@
     au < crawling ; exists ; 2014 ; FEMS Microbiology Ecology Volume 87 ; 87 ; >
     au < finished ; crawling ; 2014 ; FEMS Microbiology Ecology Volume 88 ; 88 ; >
     au < testing ; exists ; 2014 ; FEMS Microbiology Ecology Volume 89 ; 89 ; >
-    au < ready ; exists ; 2014 ; FEMS Microbiology Ecology Volume 90 ; 90 ; >
+    au < crawling ; exists ; 2014 ; FEMS Microbiology Ecology Volume 90 ; 90 ; >
     au < crawling ; exists ; 2015 ; FEMS Microbiology Ecology Volume 91 ; 91 ; >
     au < boost ; exists ; 2015 ; FEMS Microbiology Ecology Volume 92 ; 92 ; >
     au < exists ; exists ; 2015 ; FEMS Microbiology Ecology Volume 93 ; 93 ; >
@@ -7266,12 +7266,12 @@
     au < manifest ; exists ; 2006 ; Foreign Policy Analysis Volume 2 ; 2 ; >
     au < manifest ; exists ; 2007 ; Foreign Policy Analysis Volume 3 ; 3 ; >
     au < manifest ; exists ; 2008 ; Foreign Policy Analysis Volume 4 ; 4 ; >
-    au < ready ; exists ; 2009 ; Foreign Policy Analysis Volume 5 ; 5 ; >
-    au < ready ; exists ; 2010 ; Foreign Policy Analysis Volume 6 ; 6 ; >
-    au < ready ; exists ; 2011 ; Foreign Policy Analysis Volume 7 ; 7 ; >
-    au < ready ; exists ; 2012 ; Foreign Policy Analysis Volume 8 ; 8 ; >
-    au < ready ; exists ; 2013 ; Foreign Policy Analysis Volume 9 ; 9 ; >
-    au < ready ; exists ; 2014 ; Foreign Policy Analysis Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2009 ; Foreign Policy Analysis Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2010 ; Foreign Policy Analysis Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2011 ; Foreign Policy Analysis Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2012 ; Foreign Policy Analysis Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2013 ; Foreign Policy Analysis Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2014 ; Foreign Policy Analysis Volume 10 ; 10 ; >
     au < crawling ; exists ; 2015 ; Foreign Policy Analysis Volume 11 ; 11 ; >
     au < manifest ; exists ; 2016 ; Foreign Policy Analysis Volume 12 ; 12 ; >
 
@@ -10577,12 +10577,12 @@
 
     au < manifest ; exists ; 2007 ; International Political Sociology Volume 1 ; 1 ; >
     au < manifest ; exists ; 2008 ; International Political Sociology Volume 2 ; 2 ; >
-    au < ready ; exists ; 2009 ; International Political Sociology Volume 3 ; 3 ; >
-    au < ready ; exists ; 2010 ; International Political Sociology Volume 4 ; 4 ; >
-    au < ready ; exists ; 2011 ; International Political Sociology Volume 5 ; 5 ; >
-    au < ready ; exists ; 2012 ; International Political Sociology Volume 6 ; 6 ; >
-    au < ready ; exists ; 2013 ; International Political Sociology Volume 7 ; 7 ; >
-    au < ready ; exists ; 2014 ; International Political Sociology Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2009 ; International Political Sociology Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2010 ; International Political Sociology Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2011 ; International Political Sociology Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2012 ; International Political Sociology Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2013 ; International Political Sociology Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2014 ; International Political Sociology Volume 8 ; 8 ; >
     au < crawling ; exists ; 2015 ; International Political Sociology Volume 9 ; 9 ; >
     au < manifest ; exists ; 2016 ; International Political Sociology Volume 10 ; 10 ; >
 
@@ -10654,12 +10654,12 @@
     au < manifest ; exists ; 2006 ; International Studies Perspectives Volume 7 ; 7 ; >
     au < manifest ; exists ; 2007 ; International Studies Perspectives Volume 8 ; 8 ; >
     au < manifest ; exists ; 2008 ; International Studies Perspectives Volume 9 ; 9 ; >
-    au < ready ; exists ; 2009 ; International Studies Perspectives Volume 10 ; 10 ; >
-    au < ready ; exists ; 2010 ; International Studies Perspectives Volume 11 ; 11 ; >
-    au < ready ; exists ; 2011 ; International Studies Perspectives Volume 12 ; 12 ; >
-    au < ready ; exists ; 2012 ; International Studies Perspectives Volume 13 ; 13 ; >
-    au < ready ; exists ; 2013 ; International Studies Perspectives Volume 14 ; 14 ; >
-    au < ready ; exists ; 2014 ; International Studies Perspectives Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2009 ; International Studies Perspectives Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2010 ; International Studies Perspectives Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2011 ; International Studies Perspectives Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2012 ; International Studies Perspectives Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2013 ; International Studies Perspectives Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2014 ; International Studies Perspectives Volume 15 ; 15 ; >
     au < crawling ; exists ; 2015 ; International Studies Perspectives Volume 16 ; 16 ; >
     au < manifest ; exists ; 2016 ; International Studies Perspectives Volume 17 ; 17 ; >
 
@@ -10687,13 +10687,13 @@
     au < manifest ; exists ; 2006 ; International Studies Quarterly Volume 50 ; 50 ; >
     au < manifest ; exists ; 2007 ; International Studies Quarterly Volume 51 ; 51 ; >
     au < manifest ; exists ; 2008 ; International Studies Quarterly Volume 52 ; 52 ; >
-    au < ready ; exists ; 2009 ; International Studies Quarterly Volume 53 ; 53 ; >
-    au < ready ; exists ; 2010 ; International Studies Quarterly Volume 54 ; 54 ; >
-    au < ready ; exists ; 2011 ; International Studies Quarterly Volume 55 ; 55 ; >
-    au < ready ; exists ; 2012 ; International Studies Quarterly Volume 56 ; 56 ; >
+    au < crawling ; exists ; 2009 ; International Studies Quarterly Volume 53 ; 53 ; >
+    au < crawling ; exists ; 2010 ; International Studies Quarterly Volume 54 ; 54 ; >
+    au < crawling ; exists ; 2011 ; International Studies Quarterly Volume 55 ; 55 ; >
+    au < crawling ; exists ; 2012 ; International Studies Quarterly Volume 56 ; 56 ; >
     au < testing ; exists ; 2013 ; International Studies Quarterly Volume 57 ; 57 ; >
-    au < ready ; exists ; 2014 ; International Studies Quarterly Volume 58 ; 58 ; >
-    au < ready ; exists ; 2015 ; International Studies Quarterly Volume 59 ; 59 ; >
+    au < crawling ; exists ; 2014 ; International Studies Quarterly Volume 58 ; 58 ; >
+    au < crawling ; exists ; 2015 ; International Studies Quarterly Volume 59 ; 59 ; >
     au < manifest ; exists ; 2016 ; International Studies Quarterly Volume 60 ; 60 ; >
 
   }
@@ -10720,12 +10720,12 @@
     au < manifest ; exists ; 2006 ; International Studies Review Volume 8 ; 8 ; >
     au < manifest ; exists ; 2007 ; International Studies Review Volume 9 ; 9 ; >
     au < manifest ; exists ; 2008 ; International Studies Review Volume 10 ; 10 ; >
-    au < ready ; exists ; 2009 ; International Studies Review Volume 11 ; 11 ; >
-    au < ready ; exists ; 2010 ; International Studies Review Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2009 ; International Studies Review Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2010 ; International Studies Review Volume 12 ; 12 ; >
     au < testing ; exists ; 2011 ; International Studies Review Volume 13 ; 13 ; >
-    au < ready ; exists ; 2012 ; International Studies Review Volume 14 ; 14 ; >
-    au < ready ; exists ; 2013 ; International Studies Review Volume 15 ; 15 ; >
-    au < ready ; exists ; 2014 ; International Studies Review Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2012 ; International Studies Review Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2013 ; International Studies Review Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2014 ; International Studies Review Volume 16 ; 16 ; >
     au < crawling ; exists ; 2015 ; International Studies Review Volume 17 ; 17 ; >
     au < expected ; exists ; 2016 ; International Studies Review Volume 18 ; 18 ; >
 
@@ -13941,9 +13941,9 @@
     au < manifest ; exists ; 2007 ; Journal of Mammalogy Volume 88 ; 88 ; >
     au < manifest ; exists ; 2008 ; Journal of Mammalogy Volume 89 ; 89 ; >
     au < testing ; exists ; 2009 ; Journal of Mammalogy Volume 90 ; 90 ; >
-    au < ready ; exists ; 2010 ; Journal of Mammalogy Volume 91 ; 91 ; >
-    au < ready ; exists ; 2011 ; Journal of Mammalogy Volume 92 ; 92 ; >
-    au < ready ; exists ; 2012 ; Journal of Mammalogy Volume 93 ; 93 ; >
+    au < crawling ; exists ; 2010 ; Journal of Mammalogy Volume 91 ; 91 ; >
+    au < crawling ; exists ; 2011 ; Journal of Mammalogy Volume 92 ; 92 ; >
+    au < crawling ; exists ; 2012 ; Journal of Mammalogy Volume 93 ; 93 ; >
     au < crawling ; exists ; 2013 ; Journal of Mammalogy Volume 94 ; 94 ; >
     au < crawling ; exists ; 2014 ; Journal of Mammalogy Volume 95 ; 95 ; >
     au < crawling ; exists ; 2015 ; Journal of Mammalogy Volume 96 ; 96 ; >
@@ -13973,12 +13973,12 @@
     au < manifest ; exists ; 2006 ; Journal of Medical Entomology Volume 43 ; 43 ; >
     au < manifest ; exists ; 2007 ; Journal of Medical Entomology Volume 44 ; 44 ; >
     au < manifest ; exists ; 2008 ; Journal of Medical Entomology Volume 45 ; 45 ; >
-    au < ready ; exists ; 2009 ; Journal of Medical Entomology Volume 46 ; 46 ; >
-    au < ready ; exists ; 2010 ; Journal of Medical Entomology Volume 47 ; 47 ; >
-    au < ready ; exists ; 2011 ; Journal of Medical Entomology Volume 48 ; 48 ; >
+    au < crawling ; exists ; 2009 ; Journal of Medical Entomology Volume 46 ; 46 ; >
+    au < crawling ; exists ; 2010 ; Journal of Medical Entomology Volume 47 ; 47 ; >
+    au < crawling ; exists ; 2011 ; Journal of Medical Entomology Volume 48 ; 48 ; >
     au < testing ; exists ; 2012 ; Journal of Medical Entomology Volume 49 ; 49 ; >
     au < testing ; exists ; 2013 ; Journal of Medical Entomology Volume 50 ; 50 ; >
-    au < ready ; exists ; 2014 ; Journal of Medical Entomology Volume 51 ; 51 ; >
+    au < crawling ; exists ; 2014 ; Journal of Medical Entomology Volume 51 ; 51 ; >
     au < crawling ; exists ; 2015 ; Journal of Medical Entomology Volume 52 ; 52 ; >
     au < manifest ; exists ; 2016 ; Journal of Medical Entomology Volume 53 ; 53 ; >
 
@@ -16038,7 +16038,7 @@
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < testing ; exists ; 2010 ; Mammalian Species Volume 42 ; 42 ; >
-    au < ready ; exists ; 2011 ; Mammalian Species Volume 43 ; 43 ; >
+    au < crawling ; exists ; 2011 ; Mammalian Species Volume 43 ; 43 ; >
     au < frozen ; exists ; 2012 ; Mammalian Species Volume 44 ; 44 ; >
     au < frozen ; exists ; 2013 ; Mammalian Species Volume 45 ; 45 ; >
     au < crawling ; exists ; 2014 ; Mammalian Species Volume 46 ; 46 ; >
@@ -16728,9 +16728,9 @@
     au < manifest ; exists ; 2006 ; The Monist Volume 89 ; 89 ; >
     au < manifest ; exists ; 2007 ; The Monist Volume 90 ; 90 ; >
     au < manifest ; exists ; 2008 ; The Monist Volume 91 ; 91 ; >
-    au < ready ; exists ; 2009 ; The Monist Volume 92 ; 92 ; >
-    au < ready ; exists ; 2010 ; The Monist Volume 93 ; 93 ; >
-    au < ready ; exists ; 2011 ; The Monist Volume 94 ; 94 ; >
+    au < crawling ; exists ; 2009 ; The Monist Volume 92 ; 92 ; >
+    au < crawling ; exists ; 2010 ; The Monist Volume 93 ; 93 ; >
+    au < crawling ; exists ; 2011 ; The Monist Volume 94 ; 94 ; >
     au < testing ; exists ; 2012 ; The Monist Volume 95 ; 95 ; >
     au < crawling ; exists ; 2013 ; The Monist Volume 96 ; 96 ; >
     au < crawling ; exists ; 2014 ; The Monist Volume 97 ; 97 ; >
@@ -17709,7 +17709,7 @@
     param[base_url] = http://nc.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < ready ; exists ; 2015 ; Neuroscience of Consciousness Volume 2015 ; 2015 ; >
+    au < crawling ; exists ; 2015 ; Neuroscience of Consciousness Volume 2015 ; 2015 ; >
     au < exists ; exists ; 2016 ; Neuroscience of Consciousness Volume 2016 ; 2016 ; >
 
   }
@@ -24507,7 +24507,7 @@
       au < manifest ; exists ; 2007 ; American Journal of Legal History Volume 49 ; 49 ; >
       au < crawling ; exists ; 2010 ; American Journal of Legal History Volume 50 ; 50 ; >
       au < crawling ; exists ; 2011 ; American Journal of Legal History Volume 51 ; 51 ; >
-      au < ready ; exists ; 2012 ; American Journal of Legal History Volume 52 ; 52 ; >
+      au < crawling ; exists ; 2012 ; American Journal of Legal History Volume 52 ; 52 ; >
       au < crawling ; exists ; 2013 ; American Journal of Legal History Volume 53 ; 53 ; >
       au < crawling ; exists ; 2014 ; American Journal of Legal History Volume 54 ; 54 ; >
       au < crawling ; exists ; 2015 ; American Journal of Legal History Volume 55 ; 55 ; >
@@ -24534,12 +24534,12 @@
       au < manifest ; exists ; 2006 ; Aristotelian Society Supplementary Volume Volume 80 ; 80 ; >
       au < manifest ; exists ; 2007 ; Aristotelian Society Supplementary Volume Volume 81 ; 81 ; >
       au < manifest ; exists ; 2008 ; Aristotelian Society Supplementary Volume Volume 82 ; 82 ; >
-      au < ready ; exists ; 2009 ; Aristotelian Society Supplementary Volume Volume 83 ; 83 ; >
-      au < ready ; exists ; 2010 ; Aristotelian Society Supplementary Volume Volume 84 ; 84 ; >
-      au < ready ; exists ; 2011 ; Aristotelian Society Supplementary Volume Volume 85 ; 85 ; >
-      au < ready ; exists ; 2012 ; Aristotelian Society Supplementary Volume Volume 86 ; 86 ; >
-      au < ready ; exists ; 2013 ; Aristotelian Society Supplementary Volume Volume 87 ; 87 ; >
-      au < ready ; exists ; 2014 ; Aristotelian Society Supplementary Volume Volume 88 ; 88 ; >
+      au < crawling ; exists ; 2009 ; Aristotelian Society Supplementary Volume Volume 83 ; 83 ; >
+      au < crawling ; exists ; 2010 ; Aristotelian Society Supplementary Volume Volume 84 ; 84 ; >
+      au < crawling ; exists ; 2011 ; Aristotelian Society Supplementary Volume Volume 85 ; 85 ; >
+      au < crawling ; exists ; 2012 ; Aristotelian Society Supplementary Volume Volume 86 ; 86 ; >
+      au < crawling ; exists ; 2013 ; Aristotelian Society Supplementary Volume Volume 87 ; 87 ; >
+      au < crawling ; exists ; 2014 ; Aristotelian Society Supplementary Volume Volume 88 ; 88 ; >
       au < crawling ; exists ; 2015 ; Aristotelian Society Supplementary Volume Volume 89 ; 89 ; >
       au < exists ; exists ; 2016 ; Aristotelian Society Supplementary Volume Volume 90 ; 90 ; >
 
@@ -24866,12 +24866,12 @@
       au < manifest ; exists ; 2006 ; Proceedings of the Aristotelian Society Volume 106 ; 106 ; >
       au < manifest ; exists ; 2007 ; Proceedings of the Aristotelian Society Volume 107 ; 107 ; >
       au < manifest ; exists ; 2008 ; Proceedings of the Aristotelian Society Volume 108 ; 108 ; >
-      au < ready ; exists ; 2009 ; Proceedings of the Aristotelian Society Volume 109 ; 109 ; >
-      au < ready ; exists ; 2010 ; Proceedings of the Aristotelian Society Volume 110 ; 110 ; >
-      au < ready ; exists ; 2011 ; Proceedings of the Aristotelian Society Volume 111 ; 111 ; >
-      au < ready ; exists ; 2012 ; Proceedings of the Aristotelian Society Volume 112 ; 112 ; >
-      au < ready ; exists ; 2013 ; Proceedings of the Aristotelian Society Volume 113 ; 113 ; >
-      au < ready ; exists ; 2014 ; Proceedings of the Aristotelian Society Volume 114 ; 114 ; >
+      au < crawling ; exists ; 2009 ; Proceedings of the Aristotelian Society Volume 109 ; 109 ; >
+      au < crawling ; exists ; 2010 ; Proceedings of the Aristotelian Society Volume 110 ; 110 ; >
+      au < crawling ; exists ; 2011 ; Proceedings of the Aristotelian Society Volume 111 ; 111 ; >
+      au < crawling ; exists ; 2012 ; Proceedings of the Aristotelian Society Volume 112 ; 112 ; >
+      au < crawling ; exists ; 2013 ; Proceedings of the Aristotelian Society Volume 113 ; 113 ; >
+      au < crawling ; exists ; 2014 ; Proceedings of the Aristotelian Society Volume 114 ; 114 ; >
       au < crawling ; exists ; 2015 ; Proceedings of the Aristotelian Society Volume 115 ; 115 ; >
       au < expected ; exists ; 2016 ; Proceedings of the Aristotelian Society Volume 116 ; 116 ; >
 
