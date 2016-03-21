@@ -21,14 +21,15 @@
 
     param[base_url] = http://www.ajobe.org/
     param[journal_issn] = 1817-7417
+    comment[0] =  base url doesn't exit
 
-    au < exists ; 2005 ; African Journal of Business Ethics Volume 1 ; 2005 ; 1 >
-    au < exists ; 2007 ; African Journal of Business Ethics Volume 2 ; 2007 ; 2 >
-    au < exists ; 2008 ; African Journal of Business Ethics Volume 3 ; 2008 ; 3 >
-    au < exists ; 2009 ; African Journal of Business Ethics Volume 4 ; 2009 ; 4 >
-    au < exists ; 2011 ; African Journal of Business Ethics Volume 5 ; 2011 ; 5 >
-    au < exists ; 2012 ; African Journal of Business Ethics Volume 6 ; 2012 ; 6 >
-    au < expected ; 2013 ; African Journal of Business Ethics Volume 7 ; 2013 ; 7 >
+    au < doNotProcess ; 2005 ; African Journal of Business Ethics Volume 1 ; 2005 ; 1 >
+    au < doNotProcess ; 2007 ; African Journal of Business Ethics Volume 2 ; 2007 ; 2 >
+    au < doNotProcess ; 2008 ; African Journal of Business Ethics Volume 3 ; 2008 ; 3 >
+    au < doNotProcess ; 2009 ; African Journal of Business Ethics Volume 4 ; 2009 ; 4 >
+    au < doNotProcess ; 2011 ; African Journal of Business Ethics Volume 5 ; 2011 ; 5 >
+    au < doNotProcess ; 2012 ; African Journal of Business Ethics Volume 6 ; 2012 ; 6 >
+    au < doNotProcess ; 2013 ; African Journal of Business Ethics Volume 7 ; 2013 ; 7 >
     au < expected ; 2014 ; African Journal of Business Ethics Volume 8 ; 2014 ; 8 >
 
   }
@@ -89,6 +90,8 @@
     au < manifest ; 2012 ; Anesthesia: Essays and Researches Volume 6 ; 2012 ; 6 >
     au < manifest ; 2013 ; Anesthesia: Essays and Researches Volume 7 ; 2013 ; 7 >
     au < manifest ; 2014 ; Anesthesia: Essays and Researches Volume 8 ; 2014 ; 8 >
+    au < exists ; 2015 ; Anesthesia: Essays and Researches Volume 9 ; 2015 ; 9 >
+    au < exists ; 2016 ; Anesthesia: Essays and Researches Volume 10 ; 2016 ; 10 >
 
   }
   
@@ -111,6 +114,8 @@
     au < manifest ; 2012 ; Annals of African Medicine Volume 11 ; 2012 ; 11 >
     au < manifest ; 2013 ; Annals of African Medicine Volume 12 ; 2013 ; 12 >
     au < manifest ; 2014 ; Annals of African Medicine Volume 13 ; 2014 ; 13 >
+    au < exists ; 2015 ; Annals of African Medicine Volume 14 ; 2015 ; 14 >
+    au < exists ; 2016 ; Annals of African Medicine Volume 15 ; 2016 ; 15 >
 
   }
   
@@ -138,6 +143,8 @@
     au < manifest ; 2012 ; Annals of Cardiac Anaesthesia Volume 15 ; 2012 ; 15 >
     au < manifest ; 2013 ; Annals of Cardiac Anaesthesia Volume 16 ; 2013 ; 16 >
     au < manifest ; 2014 ; Annals of Cardiac Anaesthesia Volume 17 ; 2014 ; 17 >
+    au < exists ; 2015 ; Annals of Cardiac Anaesthesia Volume 18 ; 2015 ; 18 >
+    au < exists ; 2016 ; Annals of Cardiac Anaesthesia Volume 19 ; 2016 ; 19 >
 
 
   }
@@ -170,6 +177,8 @@
     au < manifest ; 2012 ; Annals of Indian Academy of Neurology Volume 15 ; 2012 ; 15 >
     au < manifest ; 2013 ; Annals of Indian Academy of Neurology Volume 16 ; 2013 ; 16 >
     au < manifest ; 2014 ; Annals of Indian Academy of Neurology Volume 17 ; 2014 ; 17 >
+    au < exists ; 2015 ; Annals of Indian Academy of Neurology Volume 18 ; 2015 ; 18 >
+    au < exists ; 2016 ; Annals of Indian Academy of Neurology Volume 19 ; 2016 ; 19 >
 
   }
 
@@ -188,6 +197,8 @@
     au < manifest ; 2012 ; Annals of Maxillofacial Surgery Volume 2 ; 2012 ; 2 >
     au < manifest ; 2013 ; Annals of Maxillofacial Surgery Volume 3 ; 2013 ; 3 >
     au < manifest ; 2014 ; Annals of Maxillofacial Surgery Volume 4 ; 2014 ; 4 >
+    au < exists ; 2015 ; Annals of Maxillofacial Surgery Volume 5 ; 2015 ; 5 >
+    au < exists ; 2016 ; Annals of Maxillofacial Surgery Volume 6 ; 2016 ; 6 >
 
   }
 
@@ -207,6 +218,8 @@
     au < manifest ; 2012 ; Annals of Nigerian Medicine Volume 6 ; 2012 ; 6 >
     au < manifest ; 2013 ; Annals of Nigerian Medicine Volume 7 ; 2013 ; 7 >
     au < manifest ; 2014 ; Annals of Nigerian Medicine Volume 8 ; 2014 ; 8 >
+    au < exists ; 2015 ; Annals of Nigerian Medicine Volume 9 ; 2015 ; 9 >
+    au < expected ; 2016 ; Annals of Nigerian Medicine Volume 10 ; 2016 ; 10 >
 
   }
   
@@ -228,6 +241,8 @@
     au < manifest ; 2012 ; Annals of Pediatric Cardiology Volume 5 ; 2012 ; 5 >
     au < manifest ; 2013 ; Annals of Pediatric Cardiology Volume 6 ; 2013 ; 6 >
     au < manifest ; 2014 ; Annals of Pediatric Cardiology Volume 7 ; 2014 ; 7 >
+    au < exists ; 2015 ; Annals of Pediatric Cardiology Volume 8 ; 2015 ; 8 >
+    au < exists ; 2016 ; Annals of Pediatric Cardiology Volume 9 ; 2016 ; 9 >
 
   }
 
@@ -266,6 +281,8 @@
     au < manifest ; 2012 ; Annals of Thoracic Medicine Volume 7 ; 2012 ; 7 >
     au < manifest ; 2013 ; Annals of Thoracic Medicine Volume 8 ; 2013 ; 8 >
     au < manifest ; 2014 ; Annals of Thoracic Medicine Volume 9 ; 2014 ; 9 >
+    au < exists ; 2015 ; Annals of Thoracic Medicine Volume 10 ; 2015 ; 10 >
+    au < exists ; 2016 ; Annals of Thoracic Medicine Volume 11 ; 2016 ; 11 >
 
   }
 
@@ -287,6 +304,8 @@
     au < manifest ; 2012 ; Annals of Tropical Medicine and Public Health Volume 5 ; 2012 ; 5 >
     au < manifest ; 2013 ; Annals of Tropical Medicine and Public Health Volume 6 ; 2013 ; 6 >
     au < manifest ; 2014 ; Annals of Tropical Medicine and Public Health Volume 7 ; 2014 ; 7 >
+    au < exists ; 2015 ; Annals of Tropical Medicine and Public Health Volume 8 ; 2015 ; 8 >
+    au < exists ; 2016 ; Annals of Tropical Medicine and Public Health Volume 9 ; 2016 ; 9 >
 
   }
 
@@ -305,6 +324,8 @@
     param[journal_issn] = 1008-682X
 
     au < manifest ; 2014 ; Asian Journal of Andrology Volume 16 ; 2014 ; 16 >
+    au < exists ; 2015 ; Asian Journal of Andrology Volume 17 ; 2015 ; 17 >
+    au < exists ; 2016 ; Asian Journal of Andrology Volume 18 ; 2016 ; 18 >
 
   }
 
@@ -324,6 +345,8 @@
     au < manifest ; 2012 ; Asian Journal of Neurosurgery Volume 7 ; 2012 ; 7 >
     au < manifest ; 2013 ; Asian Journal of Neurosurgery Volume 8 ; 2013 ; 8 >
     au < manifest ; 2014 ; Asian Journal of Neurosurgery Volume 9 ; 2014 ; 9 >
+    au < exists ; 2015 ; Asian Journal of Neurosurgery Volume 10 ; 2015 ; 10 >
+    au < exists ; 2016 ; Asian Journal of Neurosurgery Volume 11 ; 2016 ; 11 >
 
   }
   
@@ -337,14 +360,17 @@
 
     param[base_url] = http://www.asiapharmaceutics.info/
     param[journal_issn] = 0973-8398
+    #website looks like ojs2
 
     au < exists ; 2008 ; Asian Journal of Pharmaceutics Volume 2 ; 2008 ; 2 >
     au < exists ; 2009 ; Asian Journal of Pharmaceutics Volume 3 ; 2009 ; 3 >
     au < exists ; 2010 ; Asian Journal of Pharmaceutics Volume 4 ; 2010 ; 4 >
     au < exists ; 2011 ; Asian Journal of Pharmaceutics Volume 5 ; 2011 ; 5 >
     au < exists ; 2012 ; Asian Journal of Pharmaceutics Volume 6 ; 2012 ; 6 >
-    au < expected ; 2013 ; Asian Journal of Pharmaceutics Volume 7 ; 2013 ; 7 >
-    au < expected ; 2014 ; Asian Journal of Pharmaceutics Volume 8 ; 2014 ; 8 >
+    au < exists ; 2013 ; Asian Journal of Pharmaceutics Volume 7 ; 2013 ; 7 >
+    au < exists ; 2014 ; Asian Journal of Pharmaceutics Volume 8 ; 2014 ; 8 >
+    au < exists ; 2015 ; Asian Journal of Pharmaceutics Volume 9 ; 2015 ; 9 >
+    au < exists ; 2016 ; Asian Journal of Pharmaceutics Volume 10 ; 2016 ; 10 >
 
   }
 
@@ -367,6 +393,8 @@
     au < manifest ; 2012 ; Asian Journal of Transfusion Science Volume 6 ; 2012 ; 6 >
     au < manifest ; 2013 ; Asian Journal of Transfusion Science Volume 7 ; 2013 ; 7 >
     au < manifest ; 2014 ; Asian Journal of Transfusion Science Volume 8 ; 2014 ; 8 >
+    au < exists ; 2015 ; Asian Journal of Transfusion Science Volume 9 ; 2015 ; 9 >
+    au < exists ; 2016 ; Asian Journal of Transfusion Science Volume 10 ; 2016 ; 10 >
 
   }
 
@@ -385,6 +413,8 @@
     au < manifest ; 2012 ; Avicenna Journal of Medicine Volume 2 ; 2012 ; 2 >
     au < manifest ; 2013 ; Avicenna Journal of Medicine Volume 3 ; 2013 ; 3 >
     au < manifest ; 2014 ; Avicenna Journal of Medicine Volume 4 ; 2014 ; 4 >
+    au < exists ; 2015 ; Avicenna Journal of Medicine Volume 5 ; 2015 ; 5 >
+    au < exists ; 2016 ; Avicenna Journal of Medicine Volume 6 ; 2016 ; 6 >
 
   }
 
@@ -408,6 +438,8 @@
     au < manifest ; 2012 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 33 ; 2012 ; 33 >
     au < manifest ; 2013 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 34 ; 2013 ; 34 >
     au < manifest ; 2014 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 35 ; 2014 ; 35 >
+    au < exists ; 2015 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 36 ; 2015 ; 36 >
+    au < expected ; 2016 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 37 ; 2016 ; 37 >
 
   }
     
@@ -453,6 +485,8 @@
     au < released ; 2012 ; Conservation and Society Volume 10 ; 2012 ; 10 >
     au < manifest ; 2013 ; Conservation and Society Volume 11 ; 2013 ; 11 >
     au < manifest ; 2014 ; Conservation and Society Volume 12 ; 2014 ; 12 >
+    au < exists ; 2015 ; Conservation and Society Volume 13 ; 2015 ; 13 >
+    au < expected ; 2016 ; Conservation and Society Volume 14 ; 2016 ; 14 >
 
   }
         
@@ -472,8 +506,10 @@
     au < manifest ; 2012 ; Contemporary Clinical Dentistry Volume 3 ; 2012 ; 3 >
     au < manifest ; 2013 ; Contemporary Clinical Dentistry Volume 4 ; 2013 ; 4 >
     au < manifest ; 2014 ; Contemporary Clinical Dentistry Volume 5 ; 2014 ; 5 >
+    au < exists ; 2015 ; Contemporary Clinical Dentistry Volume 6 ; 2015 ; 6 >
+    au < exists ; 2016 ; Contemporary Clinical Dentistry Volume 7 ; 2016 ; 7 >
 
-  }        
+  }
   
   {
     title <
@@ -495,8 +531,10 @@
     au < exists ; 2010 ; CytoJournal Volume 2010 ; 2010 ; 2010 >
     au < exists ; 2011 ; CytoJournal Volume 2011 ; 2011 ; 2011 >
     au < exists ; 2012 ; CytoJournal Volume 2012 ; 2012 ; 2012 >
-    au < expected ; 2013 ; CytoJournal Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; CytoJournal Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2013 ; CytoJournal Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; CytoJournal Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2015 ; CytoJournal Volume 2015 ; 2015 ; 2015 >
+    au < exists ; 2016 ; CytoJournal Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -521,8 +559,10 @@
     au < exists ; 2010 ; Dental Research Journal Volume 7 ; 2010 ; 7 >
     au < exists ; 2011 ; Dental Research Journal Volume 8 ; 2011 ; 8 >
     au < exists ; 2012 ; Dental Research Journal Volume 9 ; 2012 ; 9 >
-    au < expected ; 2013 ; Dental Research Journal Volume 10 ; 2013 ; 10 >
-    au < expected ; 2014 ; Dental Research Journal Volume 11 ; 2014 ; 11 >
+    au < exists ; 2013 ; Dental Research Journal Volume 10 ; 2013 ; 10 >
+    au < exists ; 2014 ; Dental Research Journal Volume 11 ; 2014 ; 11 >
+    au < exists ; 2015 ; Dental Research Journal Volume 12 ; 2015 ; 12 >
+    au < exists ; 2016 ; Dental Research Journal Volume 13 ; 2016 ; 13 >
 
   }
 
