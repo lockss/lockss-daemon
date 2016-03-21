@@ -139,7 +139,7 @@
     au < released ; 2012 ; 2012 ; CINEJ Cinema e-Journal Volume 1-2 ; 1-2 >
     au < released ; 2013 ; 2013 ; CINEJ Cinema e-Journal Volume 2-3 ; 2-3 >
     au < released ; 2014 ; 2014 ; CINEJ Cinema e-Journal Volume 3-4 ; 3-4 >
-    au < testing ; 2015 ; 2015 ; CINEJ Cinema e-Journal Volume 4-5 ; 4-5 >
+    au < ready ; 2015 ; 2015 ; CINEJ Cinema e-Journal Volume 4-5 ; 4-5 >
     au < expected ; 2016 ; 2016 ; CINEJ Cinema e-Journal Volume 5-6 ; 5-6 >
 
   }
@@ -228,7 +228,7 @@
     au < released ; 2009 ; 2009 ; Ethnology Volume 48 ; 48 >
     au < released ; 2010 ; 2010 ; Ethnology Volume 49 ; 49 >
     au < released ; 2011 ; 2011 ; Ethnology Volume 50 ; 50 >
-    au < testing ; 2012 ; 2012 ; Ethnology Volume 51 ; 51 >
+    au < ready ; 2012 ; 2012 ; Ethnology Volume 51 ; 51 >
 
   }
 
@@ -392,7 +392,7 @@
       param[journal_id] = jwhi
 
       au < released ; 2013 ; 2013 ; Journal of World-Historical Information Volume 1 ; 1 >
-      au < testing ; 2015 ; 2015 ; Journal of World-Historical Information Volume 2-3 ; 2-3 >
+      au < ready ; 2015 ; 2015 ; Journal of World-Historical Information Volume 2-3 ; 2-3 >
       au < expected ; 2016 ; 2016 ; Journal of World-Historical Information Volume 4 ; 4 >
 
   }

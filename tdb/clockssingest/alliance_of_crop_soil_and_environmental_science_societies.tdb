@@ -51,11 +51,11 @@
     
     param[journal_id] = aj
 
-    au < testing ; exists ; 2005 ; Agronomy Journal Volume 97 ; 97 ; >
-    au < testing ; exists ; 2006 ; Agronomy Journal Volume 98 ; 98 ; >
-    au < testing ; exists ; 2007 ; Agronomy Journal Volume 99 ; 99 ; >
-    au < testing ; exists ; 2008 ; Agronomy Journal Volume 100 ; 100 ; >
-    au < testing ; exists ; 2009 ; Agronomy Journal Volume 101 ; 101 ; >
+    au < ready ; exists ; 2005 ; Agronomy Journal Volume 97 ; 97 ; >
+    au < ready ; exists ; 2006 ; Agronomy Journal Volume 98 ; 98 ; >
+    au < ready ; exists ; 2007 ; Agronomy Journal Volume 99 ; 99 ; >
+    au < ready ; exists ; 2008 ; Agronomy Journal Volume 100 ; 100 ; >
+    au < ready ; exists ; 2009 ; Agronomy Journal Volume 101 ; 101 ; >
     au < manifest ; exists ; 2010 ; Agronomy Journal Volume 102 ; 102 ; >
     au < manifest ; exists ; 2011 ; Agronomy Journal Volume 103 ; 103 ; >
     au < manifest ; exists ; 2012 ; Agronomy Journal Volume 104 ; 104 ; >
@@ -108,11 +108,11 @@
 
     param[journal_id] = cs
 
-    au < testing ; exists ; 2005 ; Crop Science Volume 45 ; 45 ; >
-    au < testing ; exists ; 2006 ; Crop Science Volume 46 ; 46 ; >
-    au < testing ; exists ; 2007 ; Crop Science Volume 47 ; 47 ; >
-    au < testing ; exists ; 2008 ; Crop Science Volume 48 ; 48 ; >
-    au < testing ; exists ; 2009 ; Crop Science Volume 49 ; 49 ; >
+    au < ready ; exists ; 2005 ; Crop Science Volume 45 ; 45 ; >
+    au < ready ; exists ; 2006 ; Crop Science Volume 46 ; 46 ; >
+    au < ready ; exists ; 2007 ; Crop Science Volume 47 ; 47 ; >
+    au < ready ; exists ; 2008 ; Crop Science Volume 48 ; 48 ; >
+    au < ready ; exists ; 2009 ; Crop Science Volume 49 ; 49 ; >
     au < manifest ; exists ; 2010 ; Crop Science Volume 50 ; 50 ; >
     au < manifest ; exists ; 2011 ; Crop Science Volume 51 ; 51 ; >
     au < manifest ; exists ; 2012 ; Crop Science Volume 52 ; 52 ; >
@@ -165,11 +165,11 @@
     
     param[journal_id] = jeq
 
-    au < testing ; exists ; 2005 ; Journal of Environmental Quality Volume 34 ; 34 ; >
-    au < testing ; exists ; 2006 ; Journal of Environmental Quality Volume 35 ; 35 ; >
-    au < testing ; exists ; 2007 ; Journal of Environmental Quality Volume 36 ; 36 ; >
-    au < testing ; exists ; 2008 ; Journal of Environmental Quality Volume 37 ; 37 ; >
-    au < testing ; exists ; 2009 ; Journal of Environmental Quality Volume 38 ; 38 ; >
+    au < ready ; exists ; 2005 ; Journal of Environmental Quality Volume 34 ; 34 ; >
+    au < ready ; exists ; 2006 ; Journal of Environmental Quality Volume 35 ; 35 ; >
+    au < ready ; exists ; 2007 ; Journal of Environmental Quality Volume 36 ; 36 ; >
+    au < ready ; exists ; 2008 ; Journal of Environmental Quality Volume 37 ; 37 ; >
+    au < ready ; exists ; 2009 ; Journal of Environmental Quality Volume 38 ; 38 ; >
     au < manifest ; exists ; 2010 ; Journal of Environmental Quality Volume 39 ; 39 ; >
     au < manifest ; exists ; 2011 ; Journal of Environmental Quality Volume 40 ; 40 ; >
     au < manifest ; exists ; 2012 ; Journal of Environmental Quality Volume 41 ; 41 ; >
@@ -193,9 +193,9 @@
     
     param[journal_id] = jpr
 
-    au < testing ; exists ; 2007 ; Journal of Plant Registrations Volume 1 ; 1 ; >
-    au < testing ; exists ; 2008 ; Journal of Plant Registrations Volume 2 ; 2 ; >
-    au < testing ; exists ; 2009 ; Journal of Plant Registrations Volume 3 ; 3 ; >
+    au < ready ; exists ; 2007 ; Journal of Plant Registrations Volume 1 ; 1 ; >
+    au < ready ; exists ; 2008 ; Journal of Plant Registrations Volume 2 ; 2 ; >
+    au < ready ; exists ; 2009 ; Journal of Plant Registrations Volume 3 ; 3 ; >
     au < manifest ; exists ; 2010 ; Journal of Plant Registrations Volume 4 ; 4 ; >
     au < manifest ; exists ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 ; >
     au < manifest ; exists ; 2012 ; Journal of Plant Registrations Volume 6 ; 6 ; >
@@ -237,10 +237,10 @@
     param[journal_id] = nse
 
     au < testing ; exists ; 2005 ; Natural Sciences Education Volume 34 ; 34 ; >
-    au < testing ; exists ; 2006 ; Natural Sciences Education Volume 35 ; 35 ; >
-    au < testing ; exists ; 2007 ; Natural Sciences Education Volume 36 ; 36 ; >
-    au < testing ; exists ; 2008 ; Natural Sciences Education Volume 37 ; 37 ; >
-    au < testing ; exists ; 2009 ; Natural Sciences Education Volume 38 ; 38 ; >
+    au < ready ; exists ; 2006 ; Natural Sciences Education Volume 35 ; 35 ; >
+    au < ready ; exists ; 2007 ; Natural Sciences Education Volume 36 ; 36 ; >
+    au < ready ; exists ; 2008 ; Natural Sciences Education Volume 37 ; 37 ; >
+    au < ready ; exists ; 2009 ; Natural Sciences Education Volume 38 ; 38 ; >
     au < manifest ; exists ; 2010 ; Natural Sciences Education Volume 39 ; 39 ; >
     au < manifest ; exists ; 2011 ; Natural Sciences Education Volume 40 ; 40 ; >
     au < manifest ; exists ; 2012 ; Natural Sciences Education Volume 41 ; 41 ; >
@@ -291,7 +291,7 @@
     au < exists ; exists ; 2006 ; Soil Horizons Volume 47 ; 47 ; >
     au < exists ; exists ; 2007 ; Soil Horizons Volume 48 ; 48 ; >
     au < exists ; exists ; 2008 ; Soil Horizons Volume 49 ; 49 ; >
-    au < testing ; exists ; 2009 ; Soil Horizons Volume 50 ; 50 ; >
+    au < ready ; exists ; 2009 ; Soil Horizons Volume 50 ; 50 ; >
     au < manifest ; exists ; 2010 ; Soil Horizons Volume 51 ; 51 ; >
     au < manifest ; exists ; 2011 ; Soil Horizons Volume 52 ; 52 ; >
     au < manifest ; exists ; 2012 ; Soil Horizons Volume 53 ; 53 ; >
@@ -344,11 +344,11 @@
     
     param[journal_id] = vzj
 
-    au < testing ; exists ; 2005 ; Vadose Zone Journal Volume 4 ; 4 ; >
-    au < testing ; exists ; 2006 ; Vadose Zone Journal Volume 5 ; 5 ; >
-    au < testing ; exists ; 2007 ; Vadose Zone Journal Volume 6 ; 6 ; >
-    au < testing ; exists ; 2008 ; Vadose Zone Journal Volume 7 ; 7 ; >
-    au < testing ; exists ; 2009 ; Vadose Zone Journal Volume 8 ; 8 ; >
+    au < ready ; exists ; 2005 ; Vadose Zone Journal Volume 4 ; 4 ; >
+    au < ready ; exists ; 2006 ; Vadose Zone Journal Volume 5 ; 5 ; >
+    au < ready ; exists ; 2007 ; Vadose Zone Journal Volume 6 ; 6 ; >
+    au < ready ; exists ; 2008 ; Vadose Zone Journal Volume 7 ; 7 ; >
+    au < ready ; exists ; 2009 ; Vadose Zone Journal Volume 8 ; 8 ; >
     au < manifest ; exists ; 2010 ; Vadose Zone Journal Volume 9 ; 9 ; >
     au < manifest ; exists ; 2011 ; Vadose Zone Journal Volume 10 ; 10 ; >
     au < manifest ; exists ; 2012 ; Vadose Zone Journal Volume 11 ; 11 ; >
