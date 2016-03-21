@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>8</string>
+        <string>9</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -111,14 +111,6 @@
     <string>"^%sstatic/[^/]+/.+[.](png|js|css|gif)$", base_url</string>
   </entry>
   <entry>
-    <string>au_exclude_urls_from_polls_pattern</string>
-    <string>"^%sstatic/[^/]+/.+[.](png|js|css|gif)$", base_url</string>
-  </entry>
-  <entry>
-    <string>au_exclude_urls_from_poll_results_pattern</string> 
-    <string>"^%sstatic/[^/]+/.+[.](png|js|css|gif)$", base_url</string>
-  </entry>
-  <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.springer.link.SpringerLinkUrlNormalizer</string>
   </entry>
@@ -175,5 +167,16 @@
   <entry>
     <string>au_def_pause_time</string>
     <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <string>"^%sstatic/[^/]+/.+[.](png|js|css|gif)$", base_url</string>
+  </entry>
+  <entry>
+    <!-- these will not count towards poll results but will replicate from peer if above -->
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>"^%sstatic/[^/]+/.+[.](png|js|css|gif)$", base_url, 0</string>
+    </list>
   </entry>
 </map>
