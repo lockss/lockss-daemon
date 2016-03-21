@@ -228,7 +228,7 @@
     au < released ; 2009 ; 2009 ; Ethnology Volume 48 ; 48 >
     au < released ; 2010 ; 2010 ; Ethnology Volume 49 ; 49 >
     au < released ; 2011 ; 2011 ; Ethnology Volume 50 ; 50 >
-    au < manifest ; 2012 ; 2012 ; Ethnology Volume 51 ; 51 >
+    au < testing ; 2012 ; 2012 ; Ethnology Volume 51 ; 51 >
 
   }
 
@@ -392,7 +392,7 @@
       param[journal_id] = jwhi
 
       au < released ; 2013 ; 2013 ; Journal of World-Historical Information Volume 1 ; 1 >
-      au < manifest ; 2015 ; 2015 ; Journal of World-Historical Information Volume 2-3 ; 2-3 >
+      au < testing ; 2015 ; 2015 ; Journal of World-Historical Information Volume 2-3 ; 2-3 >
       au < expected ; 2016 ; 2016 ; Journal of World-Historical Information Volume 4 ; 4 >
 
   }
