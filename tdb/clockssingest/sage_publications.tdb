@@ -1231,6 +1231,26 @@
   {
 
     title <
+      name = The American Journal of Cosmetic Surgery ;
+      issn = 0748-8068 ;
+      eissn = 2374-7722
+    >
+
+      param[base_url] = http://acs.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2011 ; The American Journal of Cosmetic Surgery Volume 28 ; 28 ; >
+      au < exists ; exists ; 2012 ; The American Journal of Cosmetic Surgery Volume 29 ; 29 ; >
+      au < exists ; exists ; 2013 ; The American Journal of Cosmetic Surgery Volume 30 ; 30 ; >
+      au < exists ; exists ; 2014 ; The American Journal of Cosmetic Surgery Volume 31 ; 31 ; >
+      au < exists ; exists ; 2015 ; The American Journal of Cosmetic Surgery Volume 32 ; 32 ; >
+      au < expected ; exists ; 2016 ; The American Journal of Cosmetic Surgery Volume 33 ; 33 ; >
+
+  }
+
+  {
+
+    title <
       name = American Journal of Evaluation ;
       issn = 1098-2140 ;
       eissn = 1557-0878
@@ -5051,6 +5071,41 @@
 
       au < exists ; exists ; 2015 ; Cahiers Élisabéthains Volume 88 ; 88 ; >
       au < manifest ; exists ; 2016 ; Cahiers Élisabéthains Volume 89 ; 89 ; >
+
+  }
+
+  {
+
+    title <
+      name = The Canadian Journal of Psychiatry ;
+      issn = 0706-7437 ;
+      eissn = 1497-0015
+    >
+
+      param[base_url] = http://cpa.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 1996 ; The Canadian Journal of Psychiatry Volume 41 ; 41 ; >
+      au < exists ; exists ; 1997 ; The Canadian Journal of Psychiatry Volume 42 ; 42 ; >
+      au < exists ; exists ; 1998 ; The Canadian Journal of Psychiatry Volume 43 ; 43 ; >
+      au < exists ; exists ; 1999 ; The Canadian Journal of Psychiatry Volume 44 ; 44 ; >
+      au < exists ; exists ; 2000 ; The Canadian Journal of Psychiatry Volume 45 ; 45 ; >
+      au < exists ; exists ; 2001 ; The Canadian Journal of Psychiatry Volume 46 ; 46 ; >
+      au < exists ; exists ; 2002 ; The Canadian Journal of Psychiatry Volume 47 ; 47 ; >
+      au < exists ; exists ; 2003 ; The Canadian Journal of Psychiatry Volume 48 ; 48 ; >
+      au < exists ; exists ; 2004 ; The Canadian Journal of Psychiatry Volume 49 ; 49 ; >
+      au < exists ; exists ; 2005 ; The Canadian Journal of Psychiatry Volume 50 ; 50 ; >
+      au < exists ; exists ; 2006 ; The Canadian Journal of Psychiatry Volume 51 ; 51 ; >
+      au < exists ; exists ; 2007 ; The Canadian Journal of Psychiatry Volume 52 ; 52 ; >
+      au < exists ; exists ; 2008 ; The Canadian Journal of Psychiatry Volume 53 ; 53 ; >
+      au < exists ; exists ; 2009 ; The Canadian Journal of Psychiatry Volume 54 ; 54 ; >
+      au < exists ; exists ; 2010 ; The Canadian Journal of Psychiatry Volume 55 ; 55 ; >
+      au < exists ; exists ; 2011 ; The Canadian Journal of Psychiatry Volume 56 ; 56 ; >
+      au < exists ; exists ; 2012 ; The Canadian Journal of Psychiatry Volume 57 ; 57 ; >
+      au < exists ; exists ; 2013 ; The Canadian Journal of Psychiatry Volume 58 ; 58 ; >
+      au < exists ; exists ; 2014 ; The Canadian Journal of Psychiatry Volume 59 ; 59 ; >
+      au < exists ; exists ; 2015 ; The Canadian Journal of Psychiatry Volume 60 ; 60 ; >
+      au < exists ; exists ; 2016 ; The Canadian Journal of Psychiatry Volume 61 ; 61 ; >
 
   }
 
@@ -11752,6 +11807,20 @@
 
     }
 
+  }
+
+  {
+
+    title <
+      name = European Stroke Journal ;
+      issn = 2396-9873 ;
+      eissn = 2396-9881
+    >
+
+      param[base_url] = http://eso.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2016 ; European Stroke Journal Volume 1 ; 1 ; >
   }
 
   {
@@ -34123,6 +34192,27 @@
   {
 
     title <
+      name = Political Insight ;
+      issn = 2041-9058 ;
+      eissn = 2041-9066
+    >
+
+      param[base_url] = http://pli.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2010 ; Political Insight Volume 1 ; 1 ; >
+      au < exists ; exists ; 2011 ; Political Insight Volume 2 ; 2 ; >
+      au < exists ; exists ; 2012 ; Political Insight Volume 3 ; 3 ; >
+      au < exists ; exists ; 2013 ; Political Insight Volume 4 ; 4 ; >
+      au < exists ; exists ; 2014 ; Political Insight Volume 5 ; 5 ; >
+      au < exists ; exists ; 2015 ; Political Insight Volume 6 ; 6 ; >
+      au < exists ; exists ; 2016 ; Political Insight Volume 7 ; 7 ; >
+
+  }
+
+  {
+
+    title <
       name = Political Research Quarterly ;
       issn = 1065-9129 ;
       eissn = 1938-274X
@@ -34221,6 +34311,66 @@
   {
 
     title <
+      name = Political Studies ;
+      issn = 0032-3217 ;
+      eissn = 1467-9248
+    >
+
+      param[base_url] = http://psx.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      #content available from 1953 volume 1 to 1999 volume 47
+
+      au < exists ; exists ; 2000 ; Political Studies Volume 48 ; 48 ; >
+      au < exists ; exists ; 2001 ; Political Studies Volume 49 ; 49 ; >
+      au < exists ; exists ; 2002 ; Political Studies Volume 50 ; 50 ; >
+      au < exists ; exists ; 2003 ; Political Studies Volume 51 ; 51 ; >
+      au < exists ; exists ; 2004 ; Political Studies Volume 52 ; 52 ; >
+      au < exists ; exists ; 2005 ; Political Studies Volume 53 ; 53 ; >
+      au < exists ; exists ; 2006 ; Political Studies Volume 54 ; 54 ; >
+      au < exists ; exists ; 2007 ; Political Studies Volume 55 ; 55 ; >
+      au < exists ; exists ; 2008 ; Political Studies Volume 56 ; 56 ; >
+      au < exists ; exists ; 2009 ; Political Studies Volume 57 ; 57 ; >
+      au < exists ; exists ; 2010 ; Political Studies Volume 58 ; 58 ; >
+      au < exists ; exists ; 2011 ; Political Studies Volume 59 ; 59 ; >
+      au < exists ; exists ; 2012 ; Political Studies Volume 60 ; 60 ; >
+      au < exists ; exists ; 2013 ; Political Studies Volume 61 ; 61 ; >
+      au < exists ; exists ; 2014 ; Political Studies Volume 62 ; 62 ; >
+      au < exists ; exists ; 2015 ; Political Studies Volume 63 ; 63 ; >
+      au < exists ; exists ; 2016 ; Political Studies Volume 64 ; 64 ; >
+
+  }
+
+  {
+
+    title <
+      name = Political Studies Review ;
+      issn = 1478-9299 ;
+      eissn = 1478-9302
+    >
+
+      param[base_url] = http://psw.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2003 ; Political Studies Review Volume 1 ; 1 ; >
+      au < exists ; exists ; 2004 ; Political Studies Review Volume 2 ; 2 ; >
+      au < exists ; exists ; 2005 ; Political Studies Review Volume 3 ; 3 ; >
+      au < exists ; exists ; 2006 ; Political Studies Review Volume 4 ; 4 ; >
+      au < exists ; exists ; 2007 ; Political Studies Review Volume 5 ; 5 ; >
+      au < exists ; exists ; 2008 ; Political Studies Review Volume 6 ; 6 ; >
+      au < exists ; exists ; 2009 ; Political Studies Review Volume 7 ; 7 ; >
+      au < exists ; exists ; 2010 ; Political Studies Review Volume 8 ; 8 ; >
+      au < exists ; exists ; 2011 ; Political Studies Review Volume 9 ; 9 ; >
+      au < exists ; exists ; 2012 ; Political Studies Review Volume 10 ; 10 ; >
+      au < exists ; exists ; 2013 ; Political Studies Review Volume 11 ; 11 ; >
+      au < exists ; exists ; 2014 ; Political Studies Review Volume 12 ; 12 ; >
+      au < exists ; exists ; 2015 ; Political Studies Review Volume 13 ; 13 ; >
+      au < exists ; exists ; 2016 ; Political Studies Review Volume 14 ; 14 ; >
+
+  }
+
+  {
+
+    title <
       name = Political Theory ;
       issn = 0090-5917 ;
       eissn = 1552-7476
@@ -34288,6 +34438,38 @@
       au < manifest ; exists ; 2016 ; Political Theory Volume 44 ; 44 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = politics ;
+      issn = 0263-3957 ;
+      eissn = 1467-9256
+    >
+
+      param[base_url] = http://pol.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      #content available from 1981 volume 1 to 1999 19
+
+      au < exists ; exists ; 2000 ; politics Volume 20 ; 20 ; >
+      au < exists ; exists ; 2001 ; politics Volume 21 ; 21 ; >
+      au < exists ; exists ; 2002 ; politics Volume 22 ; 22 ; >
+      au < exists ; exists ; 2003 ; politics Volume 23 ; 23 ; >
+      au < exists ; exists ; 2004 ; politics Volume 24 ; 24 ; >
+      au < exists ; exists ; 2005 ; politics Volume 25 ; 25 ; >
+      au < exists ; exists ; 2006 ; politics Volume 26 ; 26 ; >
+      au < exists ; exists ; 2007 ; politics Volume 27 ; 27 ; >
+      au < exists ; exists ; 2008 ; politics Volume 28 ; 28 ; >
+      au < exists ; exists ; 2009 ; politics Volume 29 ; 29 ; >
+      au < exists ; exists ; 2010 ; politics Volume 30 ; 30 ; >
+      au < exists ; exists ; 2011 ; politics Volume 31 ; 31 ; >
+      au < exists ; exists ; 2012 ; politics Volume 32 ; 32 ; >
+      au < exists ; exists ; 2013 ; politics Volume 33 ; 33 ; >
+      au < exists ; exists ; 2014 ; politics Volume 34 ; 34 ; >
+      au < exists ; exists ; 2015 ; politics Volume 35 ; 35 ; >
+      au < exists ; exists ; 2016 ; politics Volume 36 ; 36 ; >
 
   }
 
