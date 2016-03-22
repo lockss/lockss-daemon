@@ -362,7 +362,7 @@
       au < released ; 2013 ; Active Learning in Higher Education Volume 14 ; 14 >
       au < released ; 2014 ; Active Learning in Higher Education Volume 15 ; 15 >
       au < manifest ; 2015 ; Active Learning in Higher Education Volume 16 ; 16 >
-      au < expected ; 2016 ; Active Learning in Higher Education Volume 17 ; 17 >
+      au < manifest ; 2016 ; Active Learning in Higher Education Volume 17 ; 17 >
 
     }
   }
@@ -1249,7 +1249,7 @@
         au < doesNotExist ; 2013 ; The American Economist Volume 58 ; 58 >
         au < doesNotExist ; 2014 ; The American Economist Volume 59 ; 59 >
         au < doesNotExist ; 2015 ; The American Economist Volume 60 ; 60 >
-        au < exists ; 2016 ; The American Economist Volume 61 ; 61 >
+        au < manifest ; 2016 ; The American Economist Volume 61 ; 61 >
   
     }
 
@@ -5488,7 +5488,7 @@
 
         au < released ; 2014 ; Business and Professional Communication Quarterly Volume 77 ; 77 >
         au < manifest ; 2015 ; Business and Professional Communication Quarterly Volume 78 ; 78 >
-        au < expected ; 2016 ; Business and Professional Communication Quarterly Volume 79 ; 79 >
+        au < manifest ; 2016 ; Business and Professional Communication Quarterly Volume 79 ; 79 >
 
       }
 
@@ -9218,7 +9218,7 @@
         au < manifest ; 2013 ; Critique of Anthropology Volume 33 ; 33 >
         au < released ; 2014 ; Critique of Anthropology Volume 34 ; 34 >
         au < manifest ; 2015 ; Critique of Anthropology Volume 35 ; 35 >
-        au < expected ; 2016 ; Critique of Anthropology Volume 36 ; 36 >
+        au < manifest ; 2016 ; Critique of Anthropology Volume 36 ; 36 >
 
       }
 
@@ -9375,7 +9375,7 @@
         au < released ; 2013 ; Cultural Dynamics Volume 25 ; 25 >
         au < released ; 2014 ; Cultural Dynamics Volume 26 ; 26 >
         au < manifest ; 2015 ; Cultural Dynamics Volume 27 ; 27 >
-        au < expected ; 2016 ; Cultural Dynamics Volume 28 ; 28 >
+        au < manifest ; 2016 ; Cultural Dynamics Volume 28 ; 28 >
 
       }
 
@@ -10000,7 +10000,7 @@
         au < released ; 2013 ; Dialogues in Human Geography Volume 3 ; 3 >
         au < released ; 2014 ; Dialogues in Human Geography Volume 4 ; 4 >
         au < manifest ; 2015 ; Dialogues in Human Geography Volume 5 ; 5 >
-        au < expected ; 2016 ; Dialogues in Human Geography Volume 6 ; 6 >
+        au < manifest ; 2016 ; Dialogues in Human Geography Volume 6 ; 6 >
 
       }
 
@@ -12594,7 +12594,7 @@
       au < exists ; 2013 ; European Journal of Inflammation Volume 11 ; 11 >
       au < manifest ; 2014 ; European Journal of Inflammation Volume 12 ; 12 >
       au < manifest ; 2015 ; European Journal of Inflammation Volume 13 ; 13 >
-      au < expected ; 2016 ; European Journal of Inflammation Volume 14 ; 14 >
+      au < manifest ; 2016 ; European Journal of Inflammation Volume 14 ; 14 >
 
   }
 
@@ -15963,7 +15963,7 @@
         au < exists ; 2012 ; Health Information Management Journal Volume 41 ; 41 >
         au < exists ; 2013 ; Health Information Management Journal Volume 42 ; 42 >
         au < exists ; 2014 ; Health Information Management Journal Volume 43 ; 43 >
-        au < exists ; 2015 ; Health Information Management Journal Volume 44 ; 44 >
+        au < manifest ; 2015 ; Health Information Management Journal Volume 44 ; 44 >
         au < expected ; 2016 ; Health Information Management Journal Volume 45 ; 45 >
   
     }
@@ -16485,7 +16485,7 @@
 
       au < released ; 2014 ; History of Science Volume 52 ; 52 >
       au < manifest ; 2015 ; History of Science Volume 53 ; 53 >
-      au < expected ; 2016 ; History of Science Volume 54 ; 54 >
+      au < manifest ; 2016 ; History of Science Volume 54 ; 54 >
 
     }
 
@@ -17089,7 +17089,7 @@
         au < released ; 2013 ; Human Resource Development Review Volume 12 ; 12 >
         au < released ; 2014 ; Human Resource Development Review Volume 13 ; 13 >
         au < manifest ; 2015 ; Human Resource Development Review Volume 14 ; 14 >
-        au < expected ; 2016 ; Human Resource Development Review Volume 15 ; 15 >
+        au < manifest ; 2016 ; Human Resource Development Review Volume 15 ; 15 >
 
       }
 
@@ -18101,7 +18101,7 @@
         au < released ; 2013 ; International Area Studies Review Volume 16 ; 16 >
         au < released ; 2014 ; International Area Studies Review Volume 17 ; 17 >
         au < manifest ; 2015 ; International Area Studies Review Volume 18 ; 18 >
-        au < expected ; 2016 ; International Area Studies Review Volume 19 ; 19 >
+        au < manifest ; 2016 ; International Area Studies Review Volume 19 ; 19 >
 
       }
 
@@ -20792,7 +20792,7 @@
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < expected ; 2016 ; JDR Clinical & Translational Research Volume 1 ; 1 >
+      au < manifest ; 2016 ; JDR Clinical & Translational Research Volume 1 ; 1 >
 
     }
 
@@ -24815,7 +24815,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2013 ; Journal of Early Intervention Volume 35 ; 35 >
         au < released ; 2014 ; Journal of Early Intervention Volume 36 ; 36 >
         au < manifest ; 2015 ; Journal of Early Intervention Volume 37 ; 37 >
-        au < expected ; 2016 ; Journal of Early Intervention Volume 38 ; 38 >
+        au < manifest ; 2016 ; Journal of Early Intervention Volume 38 ; 38 >
 
       }
 
@@ -25175,7 +25175,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2013 ; Journal of Emerging Market Finance Volume 12 ; 12 >
         au < released ; 2014 ; Journal of Emerging Market Finance Volume 13 ; 13 >
         au < manifest ; 2015 ; Journal of Emerging Market Finance Volume 14 ; 14 >
-        au < expected ; 2016 ; Journal of Emerging Market Finance Volume 15 ; 15 >
+        au < manifest ; 2016 ; Journal of Emerging Market Finance Volume 15 ; 15 >
 
       }
 
@@ -29946,7 +29946,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2013 ; Journal of Research in Music Education Volume 61 ; 61 >
         au < released ; 2014 ; Journal of Research in Music Education Volume 62 ; 62 >
         au < manifest ; 2015 ; Journal of Research in Music Education Volume 63 ; 63 >
-        au < expected ; 2016 ; Journal of Research in Music Education Volume 64 ; 64 >
+        au < manifest ; 2016 ; Journal of Research in Music Education Volume 64 ; 64 >
 
       }
 
@@ -32450,7 +32450,7 @@ comment[mpj] = now published by Brill
         au < released ; 2013 ; Journalism & Mass Communication Quarterly Volume 90 ; 90 >
         au < manifest ; 2014 ; Journalism & Mass Communication Quarterly Volume 91 ; 91 >
         au < manifest ; 2015 ; Journalism & Mass Communication Quarterly Volume 92 ; 92 >
-        au < expected ; 2016 ; Journalism & Mass Communication Quarterly Volume 93 ; 93 >
+        au < manifest ; 2016 ; Journalism & Mass Communication Quarterly Volume 93 ; 93 >
 
       }
 
@@ -32744,7 +32744,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2013 ; Language and Speech Volume 56 ; 56 >
         au < manifest ; 2014 ; Language and Speech Volume 57 ; 57 >
         au < manifest ; 2015 ; Language and Speech Volume 58 ; 58 >
-        au < expected ; 2016 ; Language and Speech Volume 59 ; 59 >
+        au < manifest ; 2016 ; Language and Speech Volume 59 ; 59 >
 
       }
 
@@ -43884,7 +43884,7 @@ comment[mpj] = now published by Brill
         au < released ; 2013 ; Studies in Religion/Sciences Religieuses Volume 42 ; 42 >
         au < released ; 2014 ; Studies in Religion/Sciences Religieuses Volume 43 ; 43 >
         au < manifest ; 2015 ; Studies in Religion/Sciences Religieuses Volume 44 ; 44 >
-        au < expected ; 2016 ; Studies in Religion/Sciences Religieuses Volume 45 ; 45 >
+        au < manifest ; 2016 ; Studies in Religion/Sciences Religieuses Volume 45 ; 45 >
 
       }
 
@@ -45566,7 +45566,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2013 ; Time & Society Volume 22 ; 22 >
         au < manifest ; 2014 ; Time & Society Volume 23 ; 23 >
         au < manifest ; 2015 ; Time & Society Volume 24 ; 24 >
-        au < expected ; 2016 ; Time & Society Volume 25 ; 25 >
+        au < manifest ; 2016 ; Time & Society Volume 25 ; 25 >
 
       }
 
@@ -47739,7 +47739,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2013 ; Youth Justice Volume 13 ; 13 >
         au < released ; 2014 ; Youth Justice Volume 14 ; 14 >
         au < manifest ; 2015 ; Youth Justice Volume 15 ; 15 >
-        au < expected ; 2016 ; Youth Justice Volume 16 ; 16 >
+        au < manifest ; 2016 ; Youth Justice Volume 16 ; 16 >
 
       }
 
@@ -49925,7 +49925,7 @@ comment[mpj] = now published by Brill
     au < manifest ; 2013 ; World Future Review Volume 5 ; 5 >
     au < released ; 2014 ; World Future Review Volume 6 ; 6 >
     au < manifest ; 2015 ; World Future Review Volume 7 ; 7 >
-    au < expected ; 2016 ; World Future Review Volume 8 ; 8 >
+    au < manifest ; 2016 ; World Future Review Volume 8 ; 8 >
 
     }
 

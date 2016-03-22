@@ -3807,7 +3807,7 @@
 
       au < released ; 2014 ; The Cambridge Quarterly Volume 43 [Project MUSE] ; 43 >
       au < released ; 2015 ; The Cambridge Quarterly Volume 44 [Project MUSE] ; 44 >
-      au < expected ; 2016 ; The Cambridge Quarterly Volume 45 [Project MUSE] ; 45 >
+      au < manifest ; 2016 ; The Cambridge Quarterly Volume 45 [Project MUSE] ; 45 >
 
       }
 
@@ -4992,7 +4992,7 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2015 ; Digital Scholarship in the Humanities Volume 30 ; 30 >
-    au < expected ; 2016 ; Digital Scholarship in the Humanities Volume 31 ; 31 >
+    au < manifest ; 2016 ; Digital Scholarship in the Humanities Volume 31 ; 31 >
 
   }
 
@@ -9679,7 +9679,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; IMA Journal of Mathematical Control and Information Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; IMA Journal of Mathematical Control and Information Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; IMA Journal of Mathematical Control and Information Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; IMA Journal of Mathematical Control and Information Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; IMA Journal of Mathematical Control and Information Volume 33 ; 33 >
 
     }
 
@@ -10334,7 +10334,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2013 ; International Journal of Epidemiology Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; International Journal of Epidemiology Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; International Journal of Epidemiology Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; International Journal of Epidemiology Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; International Journal of Epidemiology Volume 45 ; 45 >
 
     }
 
@@ -13914,7 +13914,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of International Criminal Justice Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of International Criminal Justice Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of International Criminal Justice Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Journal of International Criminal Justice Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Journal of International Criminal Justice Volume 14 ; 14 >
 
     }
 
@@ -14064,7 +14064,7 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2016 ; Journal of Language Evolution Volume 1 ; 1 >
+    au < manifest ; 2016 ; Journal of Language Evolution Volume 1 ; 1 >
 
   }
 
@@ -16328,7 +16328,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; The Library Volume 14 ; 14 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; The Library Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; The Library Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; The Library Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; The Library Volume 17 ; 17 >
 
     }
 
@@ -18411,8 +18411,8 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2015 ; Neuroscience of Consciousness Volume 2015 ; 2015 >
-    au < exists ; 2016 ; Neuroscience of Consciousness Volume 2016 ; 2016 >
+    au < manifest ; 2015 ; Neuroscience of Consciousness Volume 2015 ; 2015 >
+    au < manifest ; 2016 ; Neuroscience of Consciousness Volume 2016 ; 2016 >
 
   }
 
@@ -19368,7 +19368,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; Oxford Art Journal Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Oxford Art Journal Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Oxford Art Journal Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Oxford Art Journal Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Oxford Art Journal Volume 39 ; 39 >
 
 
     }
@@ -23345,7 +23345,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; Sociology of Religion Volume 74 ; 74 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Sociology of Religion Volume 75 ; 75 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Sociology of Religion Volume 76 ; 76 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Sociology of Religion Volume 77 ; 77 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Sociology of Religion Volume 77 ; 77 >
 
     }
 
