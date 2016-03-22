@@ -32,11 +32,18 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.springer.link;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
 
 import org.htmlparser.NodeFilter;
+import org.htmlparser.Tag;
 import org.htmlparser.filters.*;
+import org.htmlparser.tags.BodyTag;
+import org.htmlparser.tags.CompositeTag;
+import org.htmlparser.util.NodeList;
+import org.htmlparser.util.ParserException;
+import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.filter.FilterUtil;
 import org.lockss.filter.StringFilter;
 import org.lockss.filter.WhiteSpaceFilter;
@@ -45,12 +52,21 @@ import org.lockss.plugin.*;
 import org.lockss.util.ReaderInputStream;
 
 public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
+  /**
+   * TODO - remove after 1.70 when the daemon recognizes this as an html composite tag
+   */
+  public static class MyButtonTag extends CompositeTag {
+    private static final String[] mIds = new String[] {"button"};
+    public String[] getIds() { return mIds; }
+  }
   
   private static final NodeFilter[] filters = new NodeFilter[] {
       HtmlNodeFilters.tag("script"),
       HtmlNodeFilters.tag("noscript"),
       HtmlNodeFilters.tag("input"),
       HtmlNodeFilters.tag("head"),
+      // filter out comments
+      HtmlNodeFilters.comment(),
       
       //google iframes with weird ids
       HtmlNodeFilters.tag("iframe"),
@@ -86,18 +102,50 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "id", "gimme-satisfaction"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "crossmark-tooltip"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "crossMark"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "banner"),   
+
+      // unnecessary button
+      HtmlNodeFilters.tagWithAttribute("button", "id", "chat-widget"),
       
       //CSS links in body
       HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
       
   };
   
+  HtmlTransform xform = new HtmlTransform() {
+    @Override
+    public NodeList transform(NodeList nodeList) throws IOException {
+      try {
+        nodeList.visitAllNodesWith(new NodeVisitor() {
+          @Override
+          // the <body '<body class="company XYZ" data-name="XYZ"'>
+          // tag has changed to XYZ from abc- pruning those attributes
+          //the "rel" attribute on link tags are using variable named values
+          public void visitTag(Tag tag) {
+            if (tag instanceof BodyTag && tag.getAttribute("class") != null) {
+              tag.removeAttribute("class");
+            }
+            if (tag instanceof BodyTag && tag.getAttribute("data-name") != null) {
+              tag.removeAttribute("data-name");
+            }
+          }
+        });
+      } catch (ParserException pe) {
+        IOException ioe = new IOException();
+        ioe.initCause(pe);
+        throw ioe;
+      }
+      return nodeList;
+    }
+};
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in, String encoding) {
     
+    //HtmlFilterInputStream filteredStream = new HtmlFilterInputStream(in, encoding,
+      //  HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
     HtmlFilterInputStream filteredStream = new HtmlFilterInputStream(in, encoding,
-        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-    
+      new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xform));
+    filteredStream.registerTag(new MyButtonTag());
     Reader filteredReader = FilterUtil.getReader(filteredStream, encoding);
     Reader httpFilter = new StringFilter(filteredReader, "http:", "https:");
     
