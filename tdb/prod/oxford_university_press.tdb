@@ -4037,6 +4037,9 @@
     au < oup.OUPDrupalPlugin ; manifest ; 2015 ; Cardiovascular Research Volume 107 ; 107 >
     au < oup.OUPDrupalPlugin ; manifest ; 2015 ; Cardiovascular Research Volume 108 ; 108 >
     au < oup.OUPDrupalPlugin ; manifest ; 2016 ; Cardiovascular Research Volume 109 ; 109 >
+    au < OUPDrupalPlugin ; exists ; 2016 ; Cardiovascular Research Volume 110 ; 110 >
+    au < OUPDrupalPlugin ; expected ; 2016 ; Cardiovascular Research Volume 111 ; 111 >
+    au < OUPDrupalPlugin ; expected ; 2016 ; Cardiovascular Research Volume 112 ; 112 >
 
     }
 
@@ -24396,6 +24399,9 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Yearbook of International Environmental Law Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Yearbook of International Environmental Law Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Yearbook of International Environmental Law Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; exists ; 2014 ; Yearbook of International Environmental Law Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; expected ; 2015 ; Yearbook of International Environmental Law Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; expected ; 2016 ; Yearbook of International Environmental Law Volume 27 ; 27 >
 
   }
 
