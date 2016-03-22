@@ -3366,4 +3366,31 @@
 
   }
 
+  {
+
+    title <
+      name = World Policy Journal ;
+      issn = 0740-2775 ;
+      eissn = 1936-0924
+    >
+
+      param[base_url] = http://wpj.dukejournals.org/
+      pluginPrefix = org.lockss.plugin.highwire.
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+      #move from Oxford University Press 
+
+      au < HighWirePressH20Plugin ; exists ; 2006 ; World Policy Journal Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; exists ; 2007 ; World Policy Journal Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; World Policy Journal Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; World Policy Journal Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; World Policy Journal Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; World Policy Journal Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; World Policy Journal Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; World Policy Journal Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; exists ; 2014 ; World Policy Journal Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; exists ; 2015 ; World Policy Journal Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; expected ; 2016 ; World Policy Journal Volume 33 ; 33 >
+
+  }
+  
 }

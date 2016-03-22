@@ -47433,18 +47433,18 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://wpj.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+      #move to Duke University Press 
 
-        au < manifest ; 2006 ; World Policy Journal Volume 23 ; 23 >
-        au < manifest ; 2007 ; World Policy Journal Volume 24 ; 24 >
-        au < released ; 2008 ; World Policy Journal Volume 25 ; 25 >
-        au < released ; 2009 ; World Policy Journal Volume 26 ; 26 >
-        au < released ; 2010 ; World Policy Journal Volume 27 ; 27 >
-        au < released ; 2011 ; World Policy Journal Volume 28 ; 28 >
-        au < released ; 2012 ; World Policy Journal Volume 29 ; 29 >
-        au < released ; 2013 ; World Policy Journal Volume 30 ; 30 >
-        au < manifest ; 2014 ; World Policy Journal Volume 31 ; 31 >
-        au < manifest ; 2015 ; World Policy Journal Volume 32 ; 32 >
-        au < expected ; 2016 ; World Policy Journal Volume 33 ; 33 >
+        au < doNotProcess ; 2006 ; World Policy Journal Volume 23 ; 23 >
+        au < doNotProcess ; 2007 ; World Policy Journal Volume 24 ; 24 >
+        au < down ; 2008 ; World Policy Journal Volume 25 ; 25 >
+        au < down ; 2009 ; World Policy Journal Volume 26 ; 26 >
+        au < down ; 2010 ; World Policy Journal Volume 27 ; 27 >
+        au < down ; 2011 ; World Policy Journal Volume 28 ; 28 >
+        au < down ; 2012 ; World Policy Journal Volume 29 ; 29 >
+        au < down ; 2013 ; World Policy Journal Volume 30 ; 30 >
+        au < doNotProcess ; 2014 ; World Policy Journal Volume 31 ; 31 >
+        au < doNotProcess ; 2015 ; World Policy Journal Volume 32 ; 32 >
 
       }
 

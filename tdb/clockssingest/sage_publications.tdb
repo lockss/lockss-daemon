@@ -43919,18 +43919,18 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      #move to Duke University Press 
 
-      au < manifest ; exists ; 2006 ; World Policy Journal Volume 23 ; 23 ; >
-      au < manifest ; exists ; 2007 ; World Policy Journal Volume 24 ; 24 ; >
-      au < finished ; finished ; 2008 ; World Policy Journal Volume 25 ; 25 ; >
+      au < doNotProcess ; exists ; 2006 ; World Policy Journal Volume 23 ; 23 ; >
+      au < doNotProcess ; exists ; 2007 ; World Policy Journal Volume 24 ; 24 ; >
+      au < down ; finished ; 2008 ; World Policy Journal Volume 25 ; 25 ; >
       au < zapped ; finished ; 2009 ; World Policy Journal Volume 26 ; 26 ; >
       au < zapped ; finished ; 2010 ; World Policy Journal Volume 27 ; 27 ; >
-      au < finished ; finished ; 2011 ; World Policy Journal Volume 28 ; 28 ; >
-      au < finished ; frozen ; 2012 ; World Policy Journal Volume 29 ; 29 ; >
-      au < finished ; finished ; 2013 ; World Policy Journal Volume 30 ; 30 ; >
-      au < crawling ; exists ; 2014 ; World Policy Journal Volume 31 ; 31 ; >
-      au < crawling ; exists ; 2015 ; World Policy Journal Volume 32 ; 32 ; >
-      au < expected ; exists ; 2016 ; World Policy Journal Volume 33 ; 33 ; >
+      au < down ; finished ; 2011 ; World Policy Journal Volume 28 ; 28 ; >
+      au < down ; frozen ; 2012 ; World Policy Journal Volume 29 ; 29 ; >
+      au < down ; finished ; 2013 ; World Policy Journal Volume 30 ; 30 ; >
+      au < down ; exists ; 2014 ; World Policy Journal Volume 31 ; 31 ; >
+      au < down ; exists ; 2015 ; World Policy Journal Volume 32 ; 32 ; >
 
 
     }
