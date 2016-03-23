@@ -931,13 +931,35 @@
 
       param[base_url] = http://www.vulnerablegroupsandinclusion.net/
       param[journal_id] = vgi
+    #change name to Society, Health & Vulnerability with new domain
 
-      au < released ; 2010 ; Vulnerable Groups & Inclusion Volume 1 ; 1 ; 2010 >
-      au < released ; 2011 ; Vulnerable Groups & Inclusion Volume 2 ; 2 ; 2011 >
-      au < released ; 2012 ; Vulnerable Groups & Inclusion Volume 3 ; 3 ; 2012 >
-      au < manifest ; 2013 ; Vulnerable Groups & Inclusion Volume 4 ; 4 ; 2013 >
-      au < manifest ; 2014 ; Vulnerable Groups & Inclusion Volume 5 ; 5 ; 2014 >
-      au < manifest ; 2015 ; Vulnerable Groups & Inclusion Volume 6 ; 6 ; 2015 >
+      au < down ; 2010 ; Vulnerable Groups & Inclusion Volume 1 ; 1 ; 2010 >
+      au < down ; 2011 ; Vulnerable Groups & Inclusion Volume 2 ; 2 ; 2011 >
+      au < down ; 2012 ; Vulnerable Groups & Inclusion Volume 3 ; 3 ; 2012 >
+      au < doNotProcess ; 2013 ; Vulnerable Groups & Inclusion Volume 4 ; 4 ; 2013 >
+      au < doNotProcess ; 2014 ; Vulnerable Groups & Inclusion Volume 5 ; 5 ; 2014 >
+      au < doNotProcess ; 2015 ; Vulnerable Groups & Inclusion Volume 6 ; 6 ; 2015 >
+  }
+
+  {
+
+    title <
+      name = Society, Health & Vulnerability ;
+      eissn = 2002-1518 ;
+      issnl = 2002-1518
+    >
+
+    param[base_url] = http://www.societyhealthvulnerability.net
+    param[journal_id] = shv
+
+    au < doNotProcess ; 2010 ; Society, Health & Vulnerability Volume 1 ; 1 ; 2010 >
+    au < doNotProcess ; 2011 ; Society, Health & Vulnerability Volume 2 ; 2 ; 2011 >
+    au < doNotProcess ; 2012 ; Society, Health & Vulnerability Volume 3 ; 3 ; 2012 >
+    au < exists ; 2013 ; Society, Health & Vulnerability Volume 4 ; 4 ; 2013 >
+    au < exists ; 2014 ; Society, Health & Vulnerability Volume 5 ; 5 ; 2014 >
+    au < exists ; 2015 ; Society, Health & Vulnerability Volume 6 ; 6 ; 2015 >
+    au < exists ; 2016 ; Society, Health & Vulnerability Volume 7 ; 7 ; 2016 >
+
   }
 
 }
