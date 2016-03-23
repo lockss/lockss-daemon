@@ -25587,7 +25587,12 @@
       plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < expected ; 2016 ; Current Zoology Volume 1 ; 1 >
+      au < exists ; 2011 ; Current Zoology Volume 57 ; 57 >
+      au < exists ; 2012 ; Current Zoology Volume 58 ; 58 >
+      au < exists ; 2013 ; Current Zoology Volume 59 ; 59 >
+      au < exists ; 2014 ; Current Zoology Volume 60 ; 60 >
+      au < exists ; 2015 ; Current Zoology Volume 61 ; 61 >
+      au < exists ; 2016 ; Current Zoology Volume 62 ; 62 >
 
   }
 

@@ -32317,7 +32317,23 @@
 
       param[base_url] = http://nrj.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
+      #content available from 1979 volume 1 to 1999 volume 20
 
+      au < exists ; exists ; 2000 ; Newspaper Research Journal Volume 21 ; 21 ; >
+      au < exists ; exists ; 2001 ; Newspaper Research Journal Volume 22 ; 22 ; >
+      au < exists ; exists ; 2002 ; Newspaper Research Journal Volume 23 ; 23 ; >
+      au < exists ; exists ; 2003 ; Newspaper Research Journal Volume 24 ; 24 ; >
+      au < exists ; exists ; 2004 ; Newspaper Research Journal Volume 25 ; 25 ; >
+      au < exists ; exists ; 2005 ; Newspaper Research Journal Volume 26 ; 26 ; >
+      au < exists ; exists ; 2006 ; Newspaper Research Journal Volume 27 ; 27 ; >
+      au < exists ; exists ; 2007 ; Newspaper Research Journal Volume 28 ; 28 ; >
+      au < exists ; exists ; 2008 ; Newspaper Research Journal Volume 29 ; 29 ; >
+      au < exists ; exists ; 2009 ; Newspaper Research Journal Volume 30 ; 30 ; >
+      au < exists ; exists ; 2010 ; Newspaper Research Journal Volume 31 ; 31 ; >
+      au < exists ; exists ; 2011 ; Newspaper Research Journal Volume 32 ; 32 ; >
+      au < exists ; exists ; 2012 ; Newspaper Research Journal Volume 33 ; 33 ; >
+      au < exists ; exists ; 2013 ; Newspaper Research Journal Volume 34 ; 34 ; >
+      au < exists ; exists ; 2014 ; Newspaper Research Journal Volume 35 ; 35 ; >
       au < crawling ; exists ; 2015 ; Newspaper Research Journal Volume 36 ; 36 ; >
       au < expected ; exists ; 2016 ; Newspaper Research Journal Volume 37 ; 37 ; >
 
