@@ -51,10 +51,14 @@ public class GPOFDSysSitemapsArticleIteratorFactory
     "\"%sfdsys/pkg/\", base_url";
 
   protected static final String PATTERN_TEMPLATE =
-    "\"^%sfdsys/pkg/([^/]+)/(html?|pdf|xml)/([^/]+)\\.(html?|pdf|xml)$\", base_url";
+    "\"^%sfdsys/pkg/([^/]+)/(html?|mp3|pdf|xml)/([^/]+)\\.(html?|mp3|pdf|xml)$\", base_url";
   
   protected static final Pattern HTML_PATTERN = 
       Pattern.compile("([^/]+)/html/([^/]+)\\.htm$",
+          Pattern.CASE_INSENSITIVE);
+  
+  protected static final Pattern MP3_PATTERN = 
+      Pattern.compile("([^/]+)/mp3/([^/]+)\\.mp3$",
           Pattern.CASE_INSENSITIVE);
   
   protected static final Pattern PDF_PATTERN = 
@@ -67,9 +71,11 @@ public class GPOFDSysSitemapsArticleIteratorFactory
   
   protected static final String HTML_REPLACEMENT1 = "$1/html/$2.htm";
   protected static final String HTML_REPLACEMENT2 = "$1/html/$2.html";
+  protected static final String MP3_REPLACEMENT = "$1/mp3/$2.mp3";
   protected static final String PDF_REPLACEMENT = "$1/pdf/$2.pdf";
   protected static final String XML_REPLACEMENT = "$1/xml/$2.xml";
-
+  
+  protected static final String ROLE_AUDIO_FILE = "AudioFile";
   
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
@@ -92,11 +98,16 @@ public class GPOFDSysSitemapsArticleIteratorFactory
         XML_PATTERN, XML_REPLACEMENT, 
         ArticleFiles.ROLE_FULL_TEXT_XML);
     
+    builder.addAspect(
+        MP3_PATTERN, MP3_REPLACEMENT, 
+        ROLE_AUDIO_FILE);
+    
     // add metadata role from html, xml, or pdf (NOTE: pdf metadata is the access url)
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, Arrays.asList(
         ArticleFiles.ROLE_FULL_TEXT_HTML,
         ArticleFiles.ROLE_FULL_TEXT_PDF,
-        ArticleFiles.ROLE_FULL_TEXT_XML));
+        ArticleFiles.ROLE_FULL_TEXT_XML,
+        ROLE_AUDIO_FILE));
     
     return builder.getSubTreeArticleIterator();
   }
