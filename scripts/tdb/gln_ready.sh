@@ -3,13 +3,13 @@
 # Script that creates a list of auids that are ready to be pushed to the gln
 #
 
-tpath="~/tmp"
+tpath="/home/$LOGNAME/tmp"
 #mkdir -p $tpath
 
 # Make a list of AUids that are on ingest machine(s), and 'Yes' have substance, have crawled successfully.
    # Date of last successful crawl is unimportant because many good AUs have been frozen or finished.
    # Run this separately.
-   #./scripts/tdb/ws_get_healthy.py | sort > $tpath/gr_ingest_healthy.txt
+   #./scripts/tdb/ws_get_healthy.py machine login pw | sort > $tpath/gr_ingest_healthy.txt
 
 # Make a list of AUids that are crawling in clockssingest, manifest in gln
    # Make a list of AUids from clockss
