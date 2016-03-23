@@ -364,26 +364,34 @@ public class HtmlFilterInputStream
 
   protected PrototypicalNodeFactory makeNodeFactory() {
     PrototypicalNodeFactory factory = new PrototypicalNodeFactory();
-    factory.registerTag(new HtmlTags.Iframe());
-    factory.registerTag(new HtmlTags.Noscript());
-    factory.registerTag(new HtmlTags.Font());
-    factory.registerTag(new HtmlTags.MyTableRow());
-    factory.registerTag(new HtmlTags.Header()); // added in 1.65
-    factory.registerTag(new HtmlTags.Footer()); // added in 1.65
-    factory.registerTag(new HtmlTags.Section()); // added in 1.65
-    factory.registerTag(new HtmlTags.Aside()); // added in 1.65
-    factory.registerTag(new HtmlTags.Datalist()); // added in 1.66
+    factory.registerTag(new HtmlTags.Article()); // added in 1.69
+    factory.registerTag(new HtmlTags.Aside()); // created in 1.64, added in 1.65
+    factory.registerTag(new HtmlTags.Audio()); // added in 1.70
+    factory.registerTag(new HtmlTags.Button()); // added in 1.70
+    factory.registerTag(new HtmlTags.Canvas()); // added in 1.70
+    factory.registerTag(new HtmlTags.Center()); // added in 1.67.4
+    factory.registerTag(new HtmlTags.DataList()); // added in 1.66
     factory.registerTag(new HtmlTags.Details()); // added in 1.66
     factory.registerTag(new HtmlTags.Dialog()); // added in 1.66
+    factory.registerTag(new HtmlTags.FigCaption()); // added in 1.70
+    factory.registerTag(new HtmlTags.Figure()); // added in 1.70
+    factory.registerTag(new HtmlTags.Font());
+    factory.registerTag(new HtmlTags.Footer()); // created in 1.64, added in 1.65
+    factory.registerTag(new HtmlTags.Header()); // created in 1.64, added in 1.65
+    factory.registerTag(new HtmlTags.Iframe());
+    factory.registerTag(new HtmlTags.Main()); // added in 1.70
+    factory.registerTag(new HtmlTags.Mark()); // added in 1.70
     factory.registerTag(new HtmlTags.Menu()); // added in 1.66
-    factory.registerTag(new HtmlTags.Menuitem()); // added in 1.66
+    factory.registerTag(new HtmlTags.MenuItem()); // added in 1.66
     factory.registerTag(new HtmlTags.Meter()); // added in 1.66
     factory.registerTag(new HtmlTags.Nav()); // added in 1.66
+    factory.registerTag(new HtmlTags.NoScript());
     factory.registerTag(new HtmlTags.Progress()); // added in 1.66
+    factory.registerTag(new HtmlTags.Section()); // created in 1.64, added in 1.65
     factory.registerTag(new HtmlTags.Summary()); // added in 1.66
+    factory.registerTag(new HtmlTags.MyTableRow());
     factory.registerTag(new HtmlTags.Time()); // added in 1.66
-    factory.registerTag(new HtmlTags.Center()); // added in 1.67.4
-    factory.registerTag(new HtmlTags.Article()); // added in 1.69
+    factory.registerTag(new HtmlTags.Video()); // added in 1.70
     return factory;
   }
 
