@@ -18,17 +18,17 @@
       param[base_url] = http://revistas.unicentro.br/
       param[journal_id] = ambiencia
 
-      au < ready ; 2005 ; 1 ; Ambiência Volume 2005 ; 2005 ; >
-      au < ready ; 2006 ; 2 ; Ambiência Volume 2006 ; 2006 ; >
-      au < ready ; 2007 ; 3 ; Ambiência Volume 2007 ; 2007 ; >
-      au < ready ; 2008 ; 4 ; Ambiência Volume 2008 ; 2008 ; >
-      au < ready ; 2009 ; 5 ; Ambiência Volume 2009 ; 2009 ; >
-      au < ready ; 2010 ; 6 ; Ambiência Volume 2010 ; 2010 ; >
-      au < ready ; 2011 ; 7 ; Ambiência Volume 2011 ; 2011 ; >
-      au < ready ; 2012 ; 8 ; Ambiência Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 9 ; Ambiência Volume 2013 ; 2013 ; >
-      au < ready ; 2014 ; 10 ; Ambiência Volume 2014 ; 2014 ; >
-      au < ready ; 2015 ; 11 ; Ambiência Volume 2015 ; 2015 ; >
+      au < releasing ; 2005 ; 1 ; Ambiência Volume 2005 ; 2005 ; >
+      au < releasing ; 2006 ; 2 ; Ambiência Volume 2006 ; 2006 ; >
+      au < releasing ; 2007 ; 3 ; Ambiência Volume 2007 ; 2007 ; >
+      au < releasing ; 2008 ; 4 ; Ambiência Volume 2008 ; 2008 ; >
+      au < releasing ; 2009 ; 5 ; Ambiência Volume 2009 ; 2009 ; >
+      au < releasing ; 2010 ; 6 ; Ambiência Volume 2010 ; 2010 ; >
+      au < releasing ; 2011 ; 7 ; Ambiência Volume 2011 ; 2011 ; >
+      au < releasing ; 2012 ; 8 ; Ambiência Volume 2012 ; 2012 ; >
+      au < releasing ; 2013 ; 9 ; Ambiência Volume 2013 ; 2013 ; >
+      au < releasing ; 2014 ; 10 ; Ambiência Volume 2014 ; 2014 ; >
+      au < releasing ; 2015 ; 11 ; Ambiência Volume 2015 ; 2015 ; >
 
   }
 
@@ -148,7 +148,7 @@
       au < released ; 2012 ; 3 ; Revista Interfaces Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 4 ; Revista Interfaces Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 5 ; Revista Interfaces Volume 2014 ; 2014 ; >
-      au < ready ; 2015 ; 6 ; Revista Interfaces Volume 2015 ; 2015 ; >
+      au < releasing ; 2015 ; 6 ; Revista Interfaces Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 7 ; Revista Interfaces Volume 2016 ; 2016 ; >
 
   }

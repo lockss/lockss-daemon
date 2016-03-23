@@ -35,11 +35,11 @@
       param[base_url] = http://periodicos.sbu.unicamp.br/ojs/
       param[journal_id] = pit500
 
-      au < ready ; 2011 ; 1 ; Pitágoras 500 Volume 2011 ; 2011 ; >
-      au < ready ; 2012 ; 2 ; Pitágoras 500 Volume 2012 ; 2012 ; >
-      au < ready ; 2013 ; 3 ; Pitágoras 500 Volume 2013 ; 2013 ; >
-      au < ready ; 2014 ; 4 ; Pitágoras 500 Volume 2014 ; 2014 ; >
-      au < ready ; 2015 ; 5 ; Pitágoras 500 Volume 2015 ; 2015 ; >
+      au < releasing ; 2011 ; 1 ; Pitágoras 500 Volume 2011 ; 2011 ; >
+      au < releasing ; 2012 ; 2 ; Pitágoras 500 Volume 2012 ; 2012 ; >
+      au < releasing ; 2013 ; 3 ; Pitágoras 500 Volume 2013 ; 2013 ; >
+      au < releasing ; 2014 ; 4 ; Pitágoras 500 Volume 2014 ; 2014 ; >
+      au < releasing ; 2015 ; 5 ; Pitágoras 500 Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 6 ; Pitágoras 500 Volume 2016 ; 2016 ; >
       }
       {

@@ -34,7 +34,7 @@
     au < released ; 2012 ; 14 ; ETD - Educação Temática Digital Volume 14 ; 2012 ; >
     au < released ; 2013 ; 15 ; ETD - Educação Temática Digital Volume 15 ; 2013 ; >
     au < released ; 2014 ; 16 ; ETD - Educação Temática Digital Volume 16 ; 2014 ; >
-    au < ready ; 2015 ; 17 ; ETD - Educação Temática Digital Volume 17 ; 2015 ; >
+    au < releasing ; 2015 ; 17 ; ETD - Educação Temática Digital Volume 17 ; 2015 ; >
     au < expected ; 2016 ; 18 ; ETD - Educação Temática Digital Volume 18 ; 2016 ; >
     }
     {
@@ -75,7 +75,7 @@
     au < notReady ; 2012 ; 12 ; Revista HISTEDBR On-Line Volume 12 ; 2012 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert: unrecognized_name>
     au < released ; 2013 ; 13 ; Revista HISTEDBR On-Line Volume 13 ; 2013 ; >
     au < notReady ; 2014 ; 14 ; Revista HISTEDBR On-Line Volume 14 ; 2014 ; Unmapped exception: javax.net.ssl.SSLProtocolException: handshake alert: unrecognized_name>
-    au < ready ; 2015 ; 15 ; Revista HISTEDBR On-Line Volume 15 ; 2015 ; >
+    au < releasing ; 2015 ; 15 ; Revista HISTEDBR On-Line Volume 15 ; 2015 ; >
     au < expected ; 2016 ; 16 ; Revista HISTEDBR On-Line Volume 16 ; 2016 ; >
     }
 
@@ -224,7 +224,7 @@
       au < released ; 2009 ; 8 ; Physicae Volume 2009 ; 2009 ; >
       au < released ; 2010 ; 9 ; Physicae Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 10 ; Physicae Volume 2011 ; 2011 ; >
-      au < ready ; 2015 ; 11 ; Physicae Volume 2015 ; 2015 ; >
+      au < releasing ; 2015 ; 11 ; Physicae Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 12 ; Physicae Volume 2016 ; 2016 ; >
 
   }
@@ -375,7 +375,7 @@
       au < exists ; 2012 ; 20 ; Cadernos Pagu Volume 2012 ; 2012 ; >
       au < exists ; 2013 ; 21 ; Cadernos Pagu Volume 2013 ; 2013 ; >
       au < exists ; 2014 ; 22 ; Cadernos Pagu Volume 2014 ; 2014 ; >
-      au < ready ; 2015 ; 23 ; Cadernos Pagu Volume 2015 ; 2015 ; >
+      au < releasing ; 2015 ; 23 ; Cadernos Pagu Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 24 ; Cadernos Pagu Volume 2016 ; 2016 ; >
 
   }
@@ -406,7 +406,7 @@
       au < released ; 2012 ; 10 ; Conexões Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 11 ; Conexões Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 12 ; Conexões Volume 2014 ; 2014 ; >
-      au < ready ; 2015 ; 13 ; Conexões Volume 2015 ; 2015 ; >
+      au < releasing ; 2015 ; 13 ; Conexões Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 14 ; Conexões Volume 2016 ; 2016 ; >
 
   }
@@ -430,7 +430,7 @@
       au < released ; 2012 ; 6 ; Labor & Engenho Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 7 ; Labor & Engenho Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 8 ; Labor & Engenho Volume 2014 ; 2014 ; >
-      au < ready ; 2015 ; 9 ; Labor & Engenho Volume 2015 ; 2015 ; >
+      au < releasing ; 2015 ; 9 ; Labor & Engenho Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 10 ; Labor & Engenho Volume 2016 ; 2016 ; >
 
   }
@@ -454,7 +454,7 @@
       au < released ; 2012 ; 3 ; PARC Pesquisa em Arquitetura e Construção Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 4 ; PARC Pesquisa em Arquitetura e Construção Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 5 ; PARC Pesquisa em Arquitetura e Construção Volume 2014 ; 2014 ; >
-      au < ready ; 2015 ; 6 ; PARC Pesquisa em Arquitetura e Construção Volume 2015 ; 2015 ; >
+      au < releasing ; 2015 ; 6 ; PARC Pesquisa em Arquitetura e Construção Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 7 ; PARC Pesquisa em Arquitetura e Construção Volume 2016 ; 2016 ; >
 
   }
@@ -495,7 +495,7 @@
       au < released ; 2012 ; 23 ; Resgate Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 24 ; Resgate Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 25 ; Resgate Volume 2014 ; 2014 ; >
-      au < ready ; 2015 ; 26 ; Resgate Volume 2015 ; 2015 ; >
+      au < releasing ; 2015 ; 26 ; Resgate Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 27 ; Resgate Volume 2016 ; 2016 ; >
 
   }
@@ -520,7 +520,7 @@
       au < released ; 2012 ; 7 ; Revista Arqueologia Pública Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 8 ; Revista Arqueologia Pública Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 9 ; Revista Arqueologia Pública Volume 2014 ; 2014 ; >
-      au < ready ; 2015 ; 10 ; Revista Arqueologia Pública Volume 2015 ; 2015 ; >
+      au < releasing ; 2015 ; 10 ; Revista Arqueologia Pública Volume 2015 ; 2015 ; >
       au < manifest ; 2016 ; 11 ; Revista Arqueologia Pública Volume 2016 ; 2016 ; >
 
   }
@@ -544,7 +544,7 @@
       au < released ; 2012 ; 18 ; RUA Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 19 ; RUA Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 20 ; RUA Volume 2014 ; 2014 ; >
-      au < ready ; 2015 ; 21 ; RUA Volume 2015 ; 2015 ; >
+      au < releasing ; 2015 ; 21 ; RUA Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 22 ; RUA Volume 2016 ; 2016 ; >
 
   }
@@ -569,7 +569,7 @@
       au < released ; 2012 ; 19 ; Segurança Alimentar e Nutricional Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 20 ; Segurança Alimentar e Nutricional Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 21 ; Segurança Alimentar e Nutricional Volume 2014 ; 2014 ; >
-      au < ready ; 2015 ; 22 ; Segurança Alimentar e Nutricional Volume 2015 ; 2015 ; >
+      au < releasing ; 2015 ; 22 ; Segurança Alimentar e Nutricional Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 23 ; Segurança Alimentar e Nutricional Volume 2016 ; 2016 ; >
 
   }
@@ -597,7 +597,7 @@
       au < released ; 2012 ; 11 ; Serviço Social & Saúde Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 12 ; Serviço Social & Saúde Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 13 ; Serviço Social & Saúde Volume 2014 ; 2014 ; >
-      au < ready ; 2015 ; 14 ; Serviço Social & Saúde Volume 2015 ; 2015 ; >
+      au < releasing ; 2015 ; 14 ; Serviço Social & Saúde Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 15 ; Serviço Social & Saúde Volume 2016 ; 2016 ; >
 
   }
@@ -622,7 +622,7 @@
       au < released ; 2012 ; 7 ; Terrae Didatica Volume 2012 ; 2012 ; >
       au < released ; 2013 ; 8 ; Terrae Didatica Volume 2013 ; 2013 ; >
       au < released ; 2014 ; 9 ; Terrae Didatica Volume 2014 ; 2014 ; >
-      au < ready ; 2015 ; 10 ; Terrae Didatica Volume 2015 ; 2015 ; >
+      au < releasing ; 2015 ; 10 ; Terrae Didatica Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 11 ; Terrae Didatica Volume 2016 ; 2016 ; >
 
   }
