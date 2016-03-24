@@ -27162,7 +27162,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     >
 
       param[base_url] = http://iem.sagepub.com/
-      pluginSuffix = ClockssHighWirePressH20Plugin
+      pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 2013 ; Journal of Inborn Errors of Metabolism and Screening Volume 1 ; 1 >
