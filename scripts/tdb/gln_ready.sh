@@ -20,8 +20,8 @@ tpath="/home/$LOGNAME/tmp"
    cat $tpath/gr_gln_m.txt | sed -e 's/HighWirePressH20Plugin/ClockssHighWirePressH20Plugin/' > $tpath/gr_gln_mc.txt
    # Find common items on the clockss list and the clockss-formatted gln list
    comm -12 $tpath/gr_clockss_c.txt $tpath/gr_gln_mc.txt > $tpath/gr_common.txt
-   # Select a random collection of 300 clockss AUids
-   shuf $tpath/gr_common.txt | head -300 > $tpath/gr_common_shuf.txt
+   # Select a random collection of 10 clockss AUids
+   shuf $tpath/gr_common.txt | head -10 > $tpath/gr_common_shuf.txt
 
 
 # Does AU have a clockss and gln manifest page?
