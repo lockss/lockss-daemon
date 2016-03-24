@@ -1379,6 +1379,33 @@
   {
 
     title <
+      name = American Journal of Law & Medicine ;
+      issn = 1559-8276 ;
+      eissn = 1559-8284
+    >
+
+      param[base_url] = http://jlm.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2004 ; American Journal of Law & Medicine Volume 30 ; 30 ; >
+      au < exists ; exists ; 2005 ; American Journal of Law & Medicine Volume 31 ; 31 ; >
+      au < exists ; exists ; 2006 ; American Journal of Law & Medicine Volume 32 ; 32 ; >
+      au < exists ; exists ; 2007 ; American Journal of Law & Medicine Volume 33 ; 33 ; >
+      au < exists ; exists ; 2008 ; American Journal of Law & Medicine Volume 34 ; 34 ; >
+      au < exists ; exists ; 2009 ; American Journal of Law & Medicine Volume 35 ; 35 ; >
+      au < exists ; exists ; 2010 ; American Journal of Law & Medicine Volume 36 ; 36 ; >
+      au < exists ; exists ; 2011 ; American Journal of Law & Medicine Volume 37 ; 37 ; >
+      au < exists ; exists ; 2012 ; American Journal of Law & Medicine Volume 38 ; 38 ; >
+      au < exists ; exists ; 2013 ; American Journal of Law & Medicine Volume 39 ; 39 ; >
+      au < exists ; exists ; 2014 ; American Journal of Law & Medicine Volume 40 ; 40 ; >
+      au < exists ; exists ; 2015 ; American Journal of Law & Medicine Volume 41 ; 41 ; >
+      au < expected ; exists ; 2016 ; American Journal of Law & Medicine Volume 42 ; 42 ; >
+
+  }
+
+  {
+
+    title <
       name = American Journal of Lifestyle Medicine ;
       issn = 1559-8276 ;
       eissn = 1559-8284
@@ -8761,8 +8788,24 @@
 
       param[base_url] = http://cba.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
-      comment[0] = content available from 1968 volume 1 to 1972 volume 5
+      #content available from 1968 volume 1 to 1999 volume 29
+      #missing volume 36 to 39
 
+      au < exists ; exists ; 1999-2000 ; A Current Bibliography on African Affairs Volume 30 ; 30 ; >
+      au < exists ; exists ; 2000-2001 ; A Current Bibliography on African Affairs Volume 31 ; 31 ; >
+      au < exists ; exists ; 2001-2002 ; A Current Bibliography on African Affairs Volume 32 ; 32 ; >
+      au < exists ; exists ; 2002-2003 ; A Current Bibliography on African Affairs Volume 33 ; 33 ; >
+      au < exists ; exists ; 2003-2004 ; A Current Bibliography on African Affairs Volume 34 ; 34 ; >
+      au < exists ; exists ; 2004-2005 ; A Current Bibliography on African Affairs Volume 35 ; 35 ; >
+      au < doesNotExist ; doesNotExist ; 2005-2006 ; A Current Bibliography on African Affairs Volume 36 ; 36 ; >
+      au < doesNotExist ; doesNotExist ; 2006-2007 ; A Current Bibliography on African Affairs Volume 37 ; 37 ; >
+      au < exists ; exists ; 2007-2008 ; A Current Bibliography on African Affairs Volume 40 ; 40 ; >
+      au < exists ; exists ; 2008-2009 ; A Current Bibliography on African Affairs Volume 41 ; 41 ; >
+      au < exists ; exists ; 2009-2010 ; A Current Bibliography on African Affairs Volume 42 ; 42 ; >
+      au < exists ; exists ; 2010-2011 ; A Current Bibliography on African Affairs Volume 43 ; 43 ; >
+      au < exists ; exists ; 2011-2012 ; A Current Bibliography on African Affairs Volume 44 ; 44 ; >
+      au < exists ; exists ; 2012-2013 ; A Current Bibliography on African Affairs Volume 45 ; 45 ; >
+      au < exists ; exists ; 2013-2014 ; A Current Bibliography on African Affairs Volume 46 ; 46 ; >
       au < finished ; crawling ; 2014-2015 ; A Current Bibliography on African Affairs Volume 47 ; 47 ; >
       au < manifest ; exists ; 2015-2016 ; A Current Bibliography on African Affairs Volume 48 ; 48 ; >
       au < expected ; exists ; 2016-2017 ; A Current Bibliography on African Affairs Volume 49 ; 49 ; >
@@ -15088,19 +15131,33 @@
   {
 
     title <
-      name = ILRReview: Industrial & Labor Relations Review ;
+      name = ILR Review: Industrial & Labor Relations Review ;
       issn = 0019-7939 ;
       eissn = 2162-271X
     >
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://ilr.sagepub.com/
+      #content available from 1947 volume 1 to 1999 volume 52
 
-      au < exists ; exists ; 2012 ; ILRReview: Industrial & Labor Relations Review Volume 65 ; 65 ; >
-      au < finished ; finished ; 2013 ; ILRReview: Industrial & Labor Relations Review Volume 66 ; 66 ; >
-      au < finished ; finished ; 2014 ; ILRReview: Industrial & Labor Relations Review Volume 67 ; 67 ; >
-      au < crawling ; exists ; 2015 ; ILRReview: Industrial & Labor Relations Review Volume 68 ; 68 ; >
-      au < manifest ; exists ; 2016 ; ILRReview: Industrial & Labor Relations Review Volume 69 ; 69 ; >
+      au < exists ; exists ; 1999 ; ILR Review: Industrial & Labor Relations Review Volume 52 ; 52 ; >
+      au < exists ; exists ; 2000 ; ILR Review: Industrial & Labor Relations Review Volume 53 ; 53 ; >
+      au < exists ; exists ; 2001 ; ILR Review: Industrial & Labor Relations Review Volume 54 ; 54 ; >
+      au < exists ; exists ; 2002 ; ILR Review: Industrial & Labor Relations Review Volume 55 ; 55 ; >
+      au < exists ; exists ; 2003 ; ILR Review: Industrial & Labor Relations Review Volume 56 ; 56 ; >
+      au < exists ; exists ; 2004 ; ILR Review: Industrial & Labor Relations Review Volume 57 ; 57 ; >
+      au < exists ; exists ; 2005 ; ILR Review: Industrial & Labor Relations Review Volume 58 ; 58 ; >
+      au < exists ; exists ; 2006 ; ILR Review: Industrial & Labor Relations Review Volume 59 ; 59 ; >
+      au < exists ; exists ; 2007 ; ILR Review: Industrial & Labor Relations Review Volume 60 ; 60 ; >
+      au < exists ; exists ; 2008 ; ILR Review: Industrial & Labor Relations Review Volume 61 ; 61 ; >
+      au < exists ; exists ; 2009 ; ILR Review: Industrial & Labor Relations Review Volume 62 ; 62 ; >
+      au < exists ; exists ; 2010 ; ILR Review: Industrial & Labor Relations Review Volume 63 ; 63 ; >
+      au < exists ; exists ; 2011 ; ILR Review: Industrial & Labor Relations Review Volume 64 ; 64 ; >
+      au < exists ; exists ; 2012 ; ILR Review: Industrial & Labor Relations Review Volume 65 ; 65 ; >
+      au < finished ; finished ; 2013 ; ILR Review: Industrial & Labor Relations Review Volume 66 ; 66 ; >
+      au < finished ; finished ; 2014 ; ILR Review: Industrial & Labor Relations Review Volume 67 ; 67 ; >
+      au < crawling ; exists ; 2015 ; ILR Review: Industrial & Labor Relations Review Volume 68 ; 68 ; >
+      au < manifest ; exists ; 2016 ; ILR Review: Industrial & Labor Relations Review Volume 69 ; 69 ; >
 
   }
 
@@ -15603,6 +15660,13 @@
       param[base_url] = http://ijc.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 2008 ; Indian Journal of Corporate Governance Volume 1 ; 1 ; >
+      au < exists ; exists ; 2009 ; Indian Journal of Corporate Governance Volume 2 ; 2 ; >
+      au < exists ; exists ; 2010 ; Indian Journal of Corporate Governance Volume 3 ; 3 ; >
+      au < exists ; exists ; 2011 ; Indian Journal of Corporate Governance Volume 4 ; 4 ; >
+      au < exists ; exists ; 2012 ; Indian Journal of Corporate Governance Volume 5 ; 5 ; >
+      au < exists ; exists ; 2013 ; Indian Journal of Corporate Governance Volume 6 ; 6 ; >
+      au < exists ; exists ; 2014 ; Indian Journal of Corporate Governance Volume 7 ; 7 ; >
       au < crawling ; exists ; 2015 ; Indian Journal of Corporate Governance Volume 8 ; 8 ; >
       au < expected ; exists ; 2016 ; Indian Journal of Corporate Governance Volume 9 ; 9 ; >
 
@@ -16748,7 +16812,22 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://ije.sagepub.com/
+      #content available from 1963 volume 1 to 1999 volume 36
 
+     au < exists ; exists ; 2000 ; International Journal of Electrical Engineering Education Volume 37 ; 37 ; >
+     au < exists ; exists ; 2001 ; International Journal of Electrical Engineering Education Volume 38 ; 38 ; >
+     au < exists ; exists ; 2002 ; International Journal of Electrical Engineering Education Volume 39 ; 39 ; >
+     au < exists ; exists ; 2003 ; International Journal of Electrical Engineering Education Volume 40 ; 40 ; >
+     au < exists ; exists ; 2004 ; International Journal of Electrical Engineering Education Volume 41 ; 41 ; >
+     au < exists ; exists ; 2005 ; International Journal of Electrical Engineering Education Volume 42 ; 42 ; >
+     au < exists ; exists ; 2006 ; International Journal of Electrical Engineering Education Volume 43 ; 43 ; >
+     au < exists ; exists ; 2007 ; International Journal of Electrical Engineering Education Volume 44 ; 44 ; >
+     au < exists ; exists ; 2008 ; International Journal of Electrical Engineering Education Volume 45 ; 45 ; >
+     au < exists ; exists ; 2009 ; International Journal of Electrical Engineering Education Volume 46 ; 46 ; >
+     au < exists ; exists ; 2010 ; International Journal of Electrical Engineering Education Volume 47 ; 47 ; >
+     au < exists ; exists ; 2011 ; International Journal of Electrical Engineering Education Volume 48 ; 48 ; >
+     au < exists ; exists ; 2012 ; International Journal of Electrical Engineering Education Volume 49 ; 49 ; >
+     au < exists ; exists ; 2013 ; International Journal of Electrical Engineering Education Volume 50 ; 50 ; >
      au < crawling ; exists ; 2014 ; International Journal of Electrical Engineering Education Volume 51 ; 51 ; >
      au < crawling ; exists ; 2015 ; International Journal of Electrical Engineering Education Volume 52 ; 52 ; >
      au < manifest ; exists ; 2016 ; International Journal of Electrical Engineering Education Volume 53 ; 53 ; >
@@ -16938,7 +17017,23 @@
 
       param[base_url] = http://iji.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
+      #content available from 1988 volume 1 to 1999 volume 12
 
+      au < exists ; exists ; 2000 ; International Journal of Immunopathology and Pharmacology Volume 13 ; 13 ; >
+      au < exists ; exists ; 2001 ; International Journal of Immunopathology and Pharmacology Volume 14 ; 14 ; >
+      au < exists ; exists ; 2002 ; International Journal of Immunopathology and Pharmacology Volume 15 ; 15 ; >
+      au < exists ; exists ; 2003 ; International Journal of Immunopathology and Pharmacology Volume 16 ; 16 ; >
+      au < exists ; exists ; 2004 ; International Journal of Immunopathology and Pharmacology Volume 17 ; 17 ; >
+      au < exists ; exists ; 2005 ; International Journal of Immunopathology and Pharmacology Volume 18 ; 18 ; >
+      au < exists ; exists ; 2006 ; International Journal of Immunopathology and Pharmacology Volume 19 ; 19 ; >
+      au < exists ; exists ; 2007 ; International Journal of Immunopathology and Pharmacology Volume 20 ; 20 ; >
+      au < exists ; exists ; 2008 ; International Journal of Immunopathology and Pharmacology Volume 21 ; 21 ; >
+      au < exists ; exists ; 2009 ; International Journal of Immunopathology and Pharmacology Volume 22 ; 22 ; >
+      au < exists ; exists ; 2010 ; International Journal of Immunopathology and Pharmacology Volume 23 ; 23 ; >
+      au < exists ; exists ; 2011 ; International Journal of Immunopathology and Pharmacology Volume 24 ; 24 ; >
+      au < exists ; exists ; 2012 ; International Journal of Immunopathology and Pharmacology Volume 25 ; 25 ; >
+      au < exists ; exists ; 2013 ; International Journal of Immunopathology and Pharmacology Volume 26 ; 26 ; >
+      au < exists ; exists ; 2014 ; International Journal of Immunopathology and Pharmacology Volume 27 ; 27 ; >
       au < crawling ; exists ; 2015 ; International Journal of Immunopathology and Pharmacology Volume 28 ; 28 ; >
       au < manifest ; exists ; 2016 ; International Journal of Immunopathology and Pharmacology Volume 29 ; 29 ; >
 
@@ -25775,6 +25870,44 @@
   {
 
     title <
+      name = The Journal of Men's Studies ;
+      issn = 1060-8265 ;
+      eissn = 1933-0251
+    >
+
+      param[base_url] = http://men.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 1992-1993 ; The Journal of Men's Studies Volume 1 ; 1 ; >
+      au < exists ; exists ; 1993-1994 ; The Journal of Men's Studies Volume 2 ; 2 ; >
+      au < exists ; exists ; 1994-1995 ; The Journal of Men's Studies Volume 3 ; 3 ; >
+      au < exists ; exists ; 1995-1996 ; The Journal of Men's Studies Volume 4 ; 4 ; >
+      au < exists ; exists ; 1996-1997 ; The Journal of Men's Studies Volume 5 ; 5 ; >
+      au < exists ; exists ; 1997-1998 ; The Journal of Men's Studies Volume 6 ; 6 ; >
+      au < exists ; exists ; 1998-1999 ; The Journal of Men's Studies Volume 7 ; 7 ; >
+      au < exists ; exists ; 1999-2000 ; The Journal of Men's Studies Volume 8 ; 8 ; >
+      au < exists ; exists ; 2000-2001 ; The Journal of Men's Studies Volume 9 ; 9 ; >
+      au < exists ; exists ; 2001-2002 ; The Journal of Men's Studies Volume 10 ; 10 ; >
+      au < exists ; exists ; 2002-2003 ; The Journal of Men's Studies Volume 11 ; 11 ; >
+      au < exists ; exists ; 2003-2004 ; The Journal of Men's Studies Volume 12 ; 12 ; >
+      au < exists ; exists ; 2004-2005 ; The Journal of Men's Studies Volume 13 ; 13 ; >
+      au < exists ; exists ; 2005-2007 ; The Journal of Men's Studies Volume 14 ; 14 ; >
+      au < exists ; exists ; 2007-2008 ; The Journal of Men's Studies Volume 15 ; 15 ; >
+      au < exists ; exists ; 2008-2009 ; The Journal of Men's Studies Volume 16 ; 16 ; >
+      au < exists ; exists ; 2009-2010 ; The Journal of Men's Studies Volume 17 ; 17 ; >
+      au < exists ; exists ; 2010 ; The Journal of Men's Studies Volume 18 ; 18 ; >
+      au < exists ; exists ; 2011 ; The Journal of Men's Studies Volume 19 ; 19 ; >
+      au < exists ; exists ; 2012 ; The Journal of Men's Studies Volume 20 ; 20 ; >
+      au < exists ; exists ; 2013 ; The Journal of Men's Studies Volume 21 ; 21 ; >
+      au < exists ; exists ; 2014 ; The Journal of Men's Studies Volume 22 ; 22 ; >
+      au < exists ; exists ; 2015 ; The Journal of Men's Studies Volume 23 ; 23 ; >
+      au < exists ; exists ; 2016 ; The Journal of Men's Studies Volume 24 ; 24 ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Mixed Methods Research ;
       issn = 1558-6898 ;
       eissn = 1558-6901
@@ -25996,7 +26129,17 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://pcc.sagepub.com/
+      #content available from 1968 volume 22 to 1999 volume 53
 
+      au < exists ; exists ; 2000 ; Journal of Pastoral Care & Counseling Volume 54 ; 54 ; >
+      au < exists ; exists ; 2001 ; Journal of Pastoral Care & Counseling Volume 55 ; 55 ; >
+      au < exists ; exists ; 2002 ; Journal of Pastoral Care & Counseling Volume 56 ; 56 ; >
+      au < exists ; exists ; 2003 ; Journal of Pastoral Care & Counseling Volume 57 ; 57 ; >
+      au < exists ; exists ; 2004 ; Journal of Pastoral Care & Counseling Volume 58 ; 58 ; >
+      au < exists ; exists ; 2005 ; Journal of Pastoral Care & Counseling Volume 59 ; 59 ; >
+      au < exists ; exists ; 2006 ; Journal of Pastoral Care & Counseling Volume 60 ; 60 ; >
+      au < exists ; exists ; 2007 ; Journal of Pastoral Care & Counseling Volume 61 ; 61 ; >
+      au < exists ; exists ; 2008 ; Journal of Pastoral Care & Counseling Volume 62 ; 62 ; >
       au < exists ; exists ; 2009 ; Journal of Pastoral Care & Counseling Volume 63 ; 63 ; >
       au < exists ; exists ; 2010 ; Journal of Pastoral Care & Counseling Volume 64 ; 64 ; >
       au < exists ; exists ; 2011 ; Journal of Pastoral Care & Counseling Volume 65 ; 65 ; >
@@ -43543,6 +43686,7 @@
 
       param[base_url] = http://vik.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
+      #content available from 1976 volume 1 to 1999 volume 24
 
       au < crawling ; exists ; 2015 ; Vikalpa Volume 40 ; 40 ; >
       au < expected ; exists ; 2016 ; Vikalpa Volume 41 ; 41 ; >

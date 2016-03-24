@@ -10694,7 +10694,7 @@
     au < crawling ; exists ; 2010 ; International Studies Quarterly Volume 54 ; 54 ; >
     au < crawling ; exists ; 2011 ; International Studies Quarterly Volume 55 ; 55 ; >
     au < crawling ; exists ; 2012 ; International Studies Quarterly Volume 56 ; 56 ; >
-    au < testing ; exists ; 2013 ; International Studies Quarterly Volume 57 ; 57 ; >
+    au < ready ; exists ; 2013 ; International Studies Quarterly Volume 57 ; 57 ; >
     au < crawling ; exists ; 2014 ; International Studies Quarterly Volume 58 ; 58 ; >
     au < crawling ; exists ; 2015 ; International Studies Quarterly Volume 59 ; 59 ; >
     au < manifest ; exists ; 2016 ; International Studies Quarterly Volume 60 ; 60 ; >
@@ -13352,8 +13352,7 @@
     param[base_url] = http://integrablesystems.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < notReady ; exists ; 2015 ; Journal of Integrable Systems Volume 1 ; 1 ; >
-    #Unable to fetch probe permission page
+    au < notReady ; exists ; 2015 ; Journal of Integrable Systems Volume 1 ; 1 ; > #PD-1731 probe link error
     au < expected ; exists ; 2016 ; Journal of Integrable Systems Volume 2 ; 2 ; >
 
     }
@@ -16039,14 +16038,108 @@
 
     param[base_url] = http://mspecies.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
+    #content available from 1969 volume 1 to 1999 volume 631
 
-    au < testing ; exists ; 2010 ; Mammalian Species Volume 42 ; 42 ; >
+    au < exists ; exists ; 2000 ; Mammalian Species Volume 632 ; 632 ; >
+    au < exists ; exists ; 2000 ; Mammalian Species Volume 633 ; 633 ; >
+    au < exists ; exists ; 2000 ; Mammalian Species Volume 634 ; 634 ; >
+    au < exists ; exists ; 2000 ; Mammalian Species Volume 635 ; 635 ; >
+    au < exists ; exists ; 2000 ; Mammalian Species Volume 636 ; 636 ; >
+    au < exists ; exists ; 2000 ; Mammalian Species Volume 637 ; 637 ; >
+    au < exists ; exists ; 2000 ; Mammalian Species Volume 638 ; 638 ; >
+    au < exists ; exists ; 2000 ; Mammalian Species Volume 639 ; 639 ; >
+    au < exists ; exists ; 2000 ; Mammalian Species Volume 640 ; 640 ; >
+    au < exists ; exists ; 2000 ; Mammalian Species Volume 641 ; 641 ; >
+    au < exists ; exists ; 2000 ; Mammalian Species Volume 642 ; 642 ; >
+    au < exists ; exists ; 2000 ; Mammalian Species Volume 643 ; 643 ; >
+    au < exists ; exists ; 2000 ; Mammalian Species Volume 644 ; 644 ; >
+    au < exists ; exists ; 2000 ; Mammalian Species Volume 645 ; 645 ; >
+    au < exists ; exists ; 2000 ; Mammalian Species Volume 646 ; 646 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 647 ; 647 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 648 ; 648 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 649 ; 649 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 650 ; 650 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 651 ; 651 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 652 ; 652 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 653 ; 653 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 654 ; 654 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 655 ; 655 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 656 ; 656 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 657 ; 657 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 658 ; 658 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 659 ; 659 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 660 ; 660 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 661 ; 661 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 662 ; 662 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 663 ; 663 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 664 ; 664 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 665 ; 665 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 666 ; 666 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 667 ; 667 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 668 ; 668 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 667 ; 667 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 668 ; 668 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 669 ; 669 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 670 ; 670 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 671 ; 671 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 672 ; 672 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 673 ; 673 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 674 ; 674 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 675 ; 675 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 676 ; 676 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 677 ; 677 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 678 ; 678 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 679 ; 679 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 680 ; 680 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 681 ; 681 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 682 ; 682 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 683 ; 683 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 684 ; 684 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 685 ; 685 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 686 ; 686 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 687 ; 687 ; >
+    au < exists ; exists ; 2001 ; Mammalian Species Volume 688 ; 688 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 689 ; 689 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 690 ; 690 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 691 ; 691 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 692 ; 692 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 693 ; 693 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 694 ; 694 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 695 ; 695 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 696 ; 696 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 697 ; 697 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 698 ; 698 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 699 ; 699 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 700 ; 700 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 701 ; 701 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 702 ; 702 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 703 ; 703 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 704 ; 704 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 705 ; 705 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 706 ; 706 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 707 ; 707 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 708 ; 708 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 707 ; 707 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 708 ; 708 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 709 ; 709 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 710 ; 710 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 711 ; 711 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 712 ; 712 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 713 ; 713 ; >
+    au < exists ; exists ; 2002 ; Mammalian Species Volume 714 ; 714 ; >
+    au < exists ; exists ; 2003 ; Mammalian Species Volume 715 ; 715 ; >
+    au < exists ; exists ; 2003 ; Mammalian Species Volume 716 ; 716 ; >
+    au < exists ; exists ; 2003 ; Mammalian Species Volume 717 ; 717 ; >
+    au < exists ; exists ; 2003 ; Mammalian Species Volume 718 ; 718 ; >
+    au < exists ; exists ; 2003 ; Mammalian Species Volume 719 ; 719 ; >
+    
+    au < notReady ; exists ; 2010 ; Mammalian Species Volume 42 ; 42 ; > #PD-1731 probe link error
     au < crawling ; exists ; 2011 ; Mammalian Species Volume 43 ; 43 ; >
     au < frozen ; exists ; 2012 ; Mammalian Species Volume 44 ; 44 ; >
     au < frozen ; exists ; 2013 ; Mammalian Species Volume 45 ; 45 ; >
     au < crawling ; exists ; 2014 ; Mammalian Species Volume 46 ; 46 ; >
     au < crawling ; exists ; 2015 ; Mammalian Species Volume 47 ; 47 ; >
-    au < expected ; exists ; 2016 ; Mammalian Species Volume 48 ; 48 ; >
+    au < exists ; exists ; 2016 ; Mammalian Species Volume 48 ; 48 ; >
 
   }
 
@@ -24945,7 +25038,7 @@
       au < manifest ; exists ; 2012 ; Western Historical Quarterly Volume 43 ; 43 ; >
       au < manifest ; exists ; 2013 ; Western Historical Quarterly Volume 44 ; 44 ; >
       au < manifest ; exists ; 2014 ; Western Historical Quarterly Volume 45 ; 45 ; >
-      au < testing ; exists ; 2015 ; Western Historical Quarterly Volume 46 ; 46 ; >
+      au < notReady ; exists ; 2015 ; Western Historical Quarterly Volume 46 ; 46 ; > #PD-1731 probe link error
       au < exists ; exists ; 2016 ; Western Historical Quarterly Volume 47 ; 47 ; >
 
   }

@@ -18378,17 +18378,17 @@
     param[base_url] = http://pepsic.bvsalud.org/
     param[journal_issn] = 0103-5665
 
-    au < manifest ; exists ; 2005 ; 17 ; Psicologia Clínica Volume 17 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 18 ; Psicologia Clínica Volume 18 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 19 ; Psicologia Clínica Volume 19 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 20 ; Psicologia Clínica Volume 20 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 21 ; Psicologia Clínica Volume 21 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 22 ; Psicologia Clínica Volume 22 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 23 ; Psicologia Clínica Volume 23 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 24 ; Psicologia Clínica Volume 24 ; 2012 ; >
-    au < crawling ; exists ; 2013 ; 25 ; Psicologia Clínica Volume 25 ; 2013 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2014 ; 26 ; Psicologia Clínica Volume 26 ; 2014 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2015 ; 27 ; Psicologia Clínica Volume 27 ; 2015 ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 2005 ; 17 ; Psicologia Clínica Volume 17 [pepsic] ; 2005 ; >
+    au < manifest ; exists ; 2006 ; 18 ; Psicologia Clínica Volume 18 [pepsic] ; 2006 ; >
+    au < manifest ; exists ; 2007 ; 19 ; Psicologia Clínica Volume 19 [pepsic] ; 2007 ; >
+    au < manifest ; exists ; 2008 ; 20 ; Psicologia Clínica Volume 20 [pepsic] ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 21 ; Psicologia Clínica Volume 21 [pepsic] ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 22 ; Psicologia Clínica Volume 22 [pepsic] ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 23 ; Psicologia Clínica Volume 23 [pepsic] ; 2011 ; >
+    au < manifest ; exists ; 2012 ; 24 ; Psicologia Clínica Volume 24 [pepsic] ; 2012 ; >
+    au < crawling ; exists ; 2013 ; 25 ; Psicologia Clínica Volume 25 [pepsic] ; 2013 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2014 ; 26 ; Psicologia Clínica Volume 26 [pepsic] ; 2014 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2015 ; 27 ; Psicologia Clínica Volume 27 [pepsic] ; 2015 ; reingest2.clockss.org:8085 >
 
   }
 
