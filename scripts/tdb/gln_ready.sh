@@ -34,7 +34,7 @@ tpath="/home/$LOGNAME/tmp"
    # Convert the list from gln to clockss
    cat $tpath/gr_common_shuf_c.txt | sed -e 's/HighWirePressH20Plugin/ClockssHighWirePressH20Plugin/' | sort > $tpath/gr_common_manifest.txt
    # Find common items on the list of AUs with manifest pages, and the list of healthy AUs on the ingest machines.
-   comm -12 $tpath/gr_ingest_healthy.txt $tpath/gr_common_manifest.txt
+   comm -12 $tpath/gr_ingest_healthy.txt $tpath/gr_common_manifest.txt | sed -e 's/ClockssHighWirePressH20Plugin/HighWirePressH20Plugin/'
 
 exit 0
 
