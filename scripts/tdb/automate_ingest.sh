@@ -50,9 +50,9 @@ echo "*********************" >> $t/tmp_Misc
 echo "###Ready Misc Ingest4" >> $t/tmp_Misc
 ./scripts/tdb/tdbout -Y -a -Q 'au:hidden[proxy] is "reingest4.clockss.org:8082"' tdb/clockssingest/*.tdb | grep -v highwire | grep -v ClockssTaylorAndFrancisPlugin | shuf >> $t/tmp_Misc
 
-head -n40 $t/tmp_HW > $t/tmp_All
+head -n30 $t/tmp_HW > $t/tmp_All
 head -n100 $t/tmp_Atypon >> $t/tmp_All
-head -n60 $t/tmp_Misc >> $t/tmp_All
+head -n70 $t/tmp_Misc >> $t/tmp_All
 
 exit 0
 
