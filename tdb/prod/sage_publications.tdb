@@ -239,7 +239,7 @@
        implicit < status ; year ; name ; param[volume_name] >
 
        au < exists ; 2012 ; Acta Radiologica Short Reports Volume 1 ; 1 >
-       au < manifest ; 2013 ; Acta Radiologica Short Reports Volume 2 ; 2 >
+       au < ready ; 2013 ; Acta Radiologica Short Reports Volume 2 ; 2 >
        au < released ; 2014 ; Acta Radiologica Short Reports Volume 3 ; 3 >
        au < manifest ; 2015 ; Acta Radiologica Short Reports Volume 4 ; 4 >
        au < manifest ; 2016 ; Acta Radiologica Short Reports Volume 5 ; 5 >
@@ -557,7 +557,7 @@
         au < released ; 2012 ; Administrative Science Quarterly Volume 57 ; 57 >
         au < released ; 2013 ; Administrative Science Quarterly Volume 58 ; 58 >
         au < released ; 2014 ; Administrative Science Quarterly Volume 59 ; 59 >
-        au < manifest ; 2015 ; Administrative Science Quarterly Volume 60 ; 60 >
+        au < ready ; 2015 ; Administrative Science Quarterly Volume 60 ; 60 >
         au < manifest ; 2016 ; Administrative Science Quarterly Volume 61 ; 61 >
 
     }
@@ -1684,7 +1684,7 @@
         au < released ; 2010 ; American Journal of Medical Quality Volume 25 ; 25 >
         au < released ; 2011 ; American Journal of Medical Quality Volume 26 ; 26 >
         au < released ; 2012 ; American Journal of Medical Quality Volume 27 ; 27 >
-        au < manifest ; 2013 ; American Journal of Medical Quality Volume 28 ; 28 >
+        au < ready ; 2013 ; American Journal of Medical Quality Volume 28 ; 28 >
         au < released ; 2014 ; American Journal of Medical Quality Volume 29 ; 29 >
         au < manifest ; 2015 ; American Journal of Medical Quality Volume 30 ; 30 >
         au < manifest ; 2016 ; American Journal of Medical Quality Volume 31 ; 31 >
@@ -3066,7 +3066,7 @@
         au < exists ; 2011 ; The Antitrust Bulletin Volume 56 ; 56 >
         au < exists ; 2012 ; The Antitrust Bulletin Volume 57 ; 57 >
         au < exists ; 2013 ; The Antitrust Bulletin Volume 58 ; 58 >
-        au < manifest ; 2014 ; The Antitrust Bulletin Volume 59 ; 59 >
+        au < ready ; 2014 ; The Antitrust Bulletin Volume 59 ; 59 >
         au < ready ; 2015 ; The Antitrust Bulletin Volume 60 ; 60 >
         au < expected ; 2016 ; The Antitrust Bulletin Volume 61 ; 61 >
 
@@ -3261,7 +3261,7 @@
       au < exists ; 2011 ; Applied Spectroscopy Volume 65 ; 65 >
       au < exists ; 2012 ; Applied Spectroscopy Volume 66 ; 66 >
       au < exists ; 2013 ; Applied Spectroscopy Volume 67 ; 67 >
-      au < manifest ; 2014 ; Applied Spectroscopy Volume 68 ; 68 >
+      au < ready ; 2014 ; Applied Spectroscopy Volume 68 ; 68 >
       au < manifest ; 2015 ; Applied Spectroscopy Volume 69 ; 69 >
       au < manifest ; 2016 ; Applied Spectroscopy Volume 70 ; 70 >
 
@@ -4745,7 +4745,7 @@
         au < released ; 2012 ; The British Journal of Occupational Therapy Volume 75 ; 75 >
         au < released ; 2013 ; The British Journal of Occupational Therapy Volume 76 ; 76 >
         au < released ; 2014 ; The British Journal of Occupational Therapy Volume 77 ; 77 >
-        au < manifest ; 2015 ; The British Journal of Occupational Therapy Volume 78 ; 78 >
+        au < ready ; 2015 ; The British Journal of Occupational Therapy Volume 78 ; 78 >
         au < manifest ; 2016 ; The British Journal of Occupational Therapy Volume 79 ; 79 >
 
     }
@@ -5486,7 +5486,7 @@
         au < released ; 2010 ; Business Communication Quarterly Volume 73 ; 73 >
         au < released ; 2011 ; Business Communication Quarterly Volume 74 ; 74 >
         au < released ; 2012 ; Business Communication Quarterly Volume 75 ; 75 >
-        au < manifest ; 2013 ; Business Communication Quarterly Volume 76 ; 76 >
+        au < ready ; 2013 ; Business Communication Quarterly Volume 76 ; 76 >
 
       }
 
@@ -5891,7 +5891,7 @@
         implicit < status ; year ; name ; param[volume_name] >
 
         au < released ; 2012 ; Career Development and Transition for Exceptional Individuals Volume 35 ; 35 >
-        au < manifest ; 2013 ; Career Development and Transition for Exceptional Individuals Volume 36 ; 36 >
+        au < ready ; 2013 ; Career Development and Transition for Exceptional Individuals Volume 36 ; 36 >
         au < released ; 2014 ; Career Development and Transition for Exceptional Individuals Volume 37 ; 37 >
         au < manifest ; 2015 ; Career Development and Transition for Exceptional Individuals Volume 38 ; 38 >
         au < manifest ; 2016 ; Career Development and Transition for Exceptional Individuals Volume 39 ; 39 >
@@ -5983,7 +5983,7 @@
         au < released ; 2010 ; Cephalalgia Volume 30 ; 30 >
         au < released ; 2011 ; Cephalalgia Volume 31 ; 31 >
         au < released ; 2012 ; Cephalalgia Volume 32 ; 32 >
-        au < manifest ; 2013 ; Cephalalgia Volume 33 ; 33 >
+        au < ready ; 2013 ; Cephalalgia Volume 33 ; 33 >
         au < released ; 2014 ; Cephalalgia Volume 34 ; 34 >
         au < manifest ; 2015 ; Cephalalgia Volume 35 ; 35 >
         au < manifest ; 2016 ; Cephalalgia Volume 36 ; 36 >
@@ -6361,7 +6361,7 @@
     pluginSuffix = HighWirePressH20Plugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 2015 ; Chinese Journal of Sociology Volume 1 ; 1 >
+    au < ready ; 2015 ; Chinese Journal of Sociology Volume 1 ; 1 >
     au < manifest ; 2016 ; Chinese Journal of Sociology Volume 2 ; 2 >
 
   }
@@ -6562,7 +6562,7 @@
         au < exists ; 2012 ; Citizenship, Social and Economics Education Volume 11 ; 11 >
         au < exists ; 2013 ; Citizenship, Social and Economics Education Volume 12 ; 12 >
         au < manifest ; 2014 ; Citizenship, Social and Economics Education Volume 13 ; 13 >
-        au < manifest ; 2015 ; Citizenship, Social and Economics Education Volume 14 ; 14 >
+        au < ready ; 2015 ; Citizenship, Social and Economics Education Volume 14 ; 14 >
         au < expected ; 2016 ; Citizenship, Social and Economics Education Volume 15 ; 15 >
 
     }
@@ -6705,7 +6705,7 @@
         au < released ; 2012 ; Clinical and Applied Thrombosis/Hemostasis Volume 18 ; 18 >
         au < manifest ; 2013 ; Clinical and Applied Thrombosis/Hemostasis Volume 19 ; 19 >
         au < released ; 2014 ; Clinical and Applied Thrombosis/Hemostasis Volume 20 ; 20 >
-        au < manifest ; 2015 ; Clinical and Applied Thrombosis/Hemostasis Volume 21 ; 21 >
+        au < ready ; 2015 ; Clinical and Applied Thrombosis/Hemostasis Volume 21 ; 21 >
         au < manifest ; 2016 ; Clinical and Applied Thrombosis/Hemostasis Volume 22 ; 22 >
 
       }
@@ -7905,7 +7905,7 @@
         au < released ; 2012 ; Concurrent Engineering Volume 20 ; 20 >
         au < ready ; 2013 ; Concurrent Engineering Volume 21 ; 21 >
         au < released ; 2014 ; Concurrent Engineering Volume 22 ; 22 >
-        au < manifest ; 2015 ; Concurrent Engineering Volume 23 ; 23 >
+        au < ready ; 2015 ; Concurrent Engineering Volume 23 ; 23 >
         au < manifest ; 2016 ; Concurrent Engineering Volume 24 ; 24 >
 
       }
@@ -8011,7 +8011,7 @@
         au < released ; 2012 ; Contemporary Education Dialogue Volume 9 ; 9 >
         au < manifest ; 2013 ; Contemporary Education Dialogue Volume 10 ; 10 >
         au < released ; 2014 ; Contemporary Education Dialogue Volume 11 ; 11 >
-        au < manifest ; 2015 ; Contemporary Education Dialogue Volume 12 ; 12 >
+        au < ready ; 2015 ; Contemporary Education Dialogue Volume 12 ; 12 >
         au < manifest ; 2016 ; Contemporary Education Dialogue Volume 13 ; 13 >
 
       }
@@ -9646,7 +9646,7 @@
         au < released ; 2012 ; Culture & Psychology Volume 18 ; 18 >
         au < manifest ; 2013 ; Culture & Psychology Volume 19 ; 19 >
         au < released ; 2014 ; Culture & Psychology Volume 20 ; 20 >
-        au < manifest ; 2015 ; Culture & Psychology Volume 21 ; 21 >
+        au < ready ; 2015 ; Culture & Psychology Volume 21 ; 21 >
         au < manifest ; 2016 ; Culture & Psychology Volume 22 ; 22 >
 
       }
@@ -10167,7 +10167,7 @@
         au < released ; 2010 ; Diogenes Volume 57 ; 57 >
         au < released ; 2011 ; Diogenes Volume 58 ; 58 >
         au < released ; 2012 ; Diogenes Volume 59 ; 59 >
-        au < manifest ; 2013 ; Diogenes Volume 60 ; 60 >
+        au < ready ; 2013 ; Diogenes Volume 60 ; 60 >
         au < manifest ; 2014 ; Diogenes Volume 61 ; 61 >
 
       }
@@ -12388,7 +12388,7 @@
         au < released ; 2012 ; European Journal of Preventive Cardiology Volume 19 ; 19 >
         au < manifest ; 2013 ; European Journal of Preventive Cardiology Volume 20 ; 20 >
         au < released ; 2014 ; European Journal of Preventive Cardiology Volume 21 ; 21 >
-        au < manifest ; 2015 ; European Journal of Preventive Cardiology Volume 22 ; 22 >
+        au < ready ; 2015 ; European Journal of Preventive Cardiology Volume 22 ; 22 >
         au < manifest ; 2016 ; European Journal of Preventive Cardiology Volume 23 ; 23 >
 
       }
@@ -12453,7 +12453,7 @@
         au < released ; 2012 ; European Journal of Communication Volume 27 ; 27 >
         au < released ; 2013 ; European Journal of Communication Volume 28 ; 28 >
         au < released ; 2014 ; European Journal of Communication Volume 29 ; 29 >
-        au < manifest ; 2015 ; European Journal of Communication Volume 30 ; 30 >
+        au < ready ; 2015 ; European Journal of Communication Volume 30 ; 30 >
         au < manifest ; 2016 ; European Journal of Communication Volume 31 ; 31 >
 
       }
@@ -12500,7 +12500,7 @@
         au < released ; 2012 ; European Journal of Criminology Volume 9 ; 9 >
         au < released ; 2013 ; European Journal of Criminology Volume 10 ; 10 >
         au < released ; 2014 ; European Journal of Criminology Volume 11 ; 11 >
-        au < manifest ; 2015 ; European Journal of Criminology Volume 12 ; 12 >
+        au < ready ; 2015 ; European Journal of Criminology Volume 12 ; 12 >
         au < manifest ; 2016 ; European Journal of Criminology Volume 13 ; 13 >
 
       }
@@ -12650,7 +12650,7 @@
       au < exists ; 2012 ; European Journal of Inflammation Volume 10 ; 10 >
       au < exists ; 2013 ; European Journal of Inflammation Volume 11 ; 11 >
       au < manifest ; 2014 ; European Journal of Inflammation Volume 12 ; 12 >
-      au < manifest ; 2015 ; European Journal of Inflammation Volume 13 ; 13 >
+      au < ready ; 2015 ; European Journal of Inflammation Volume 13 ; 13 >
       au < manifest ; 2016 ; European Journal of Inflammation Volume 14 ; 14 >
 
   }
@@ -13370,7 +13370,7 @@
       au < exists ; 2012 ; Evolutionary Psychology Volume 10 ; 10 >
       au < exists ; 2013 ; Evolutionary Psychology Volume 11 ; 11 >
       au < manifest ; 2014 ; Evolutionary Psychology Volume 12 ; 12 >
-      au < manifest ; 2015 ; Evolutionary Psychology Volume 13 ; 13 >
+      au < ready ; 2015 ; Evolutionary Psychology Volume 13 ; 13 >
       au < expected ; 2016 ; Evolutionary Psychology Volume 14 ; 14 >
 
   }
@@ -14344,7 +14344,7 @@
         au < released ; 2012 ; French Cultural Studies Volume 23 ; 23 >
         au < manifest ; 2013 ; French Cultural Studies Volume 24 ; 24 >
         au < released ; 2014 ; French Cultural Studies Volume 25 ; 25 >
-        au < manifest ; 2015 ; French Cultural Studies Volume 26 ; 26 >
+        au < ready ; 2015 ; French Cultural Studies Volume 26 ; 26 >
         au < manifest ; 2016 ; French Cultural Studies Volume 27 ; 27 >
 
       }
@@ -14826,7 +14826,7 @@
         au < released ; 2010-2011 ; Gifted Education International Volume 27 ; 27 >
         au < released ; 2012 ; Gifted Education International Volume 28 ; 28 >
         au < manifest ; 2013 ; Gifted Education International Volume 29 ; 29 >
-        au < manifest ; 2014 ; Gifted Education International Volume 30 ; 30 >
+        au < ready ; 2014 ; Gifted Education International Volume 30 ; 30 >
         au < manifest ; 2015 ; Gifted Education International Volume 31 ; 31 >
         au < manifest ; 2016 ; Gifted Education International Volume 32 ; 32 >
 
@@ -15375,7 +15375,7 @@
         au < released ; 2010 ; Group Processes & Intergroup Relations Volume 13 ; 13 >
         au < released ; 2011 ; Group Processes & Intergroup Relations Volume 14 ; 14 >
         au < released ; 2012 ; Group Processes & Intergroup Relations Volume 15 ; 15 >
-        au < manifest ; 2013 ; Group Processes & Intergroup Relations Volume 16 ; 16 >
+        au < ready ; 2013 ; Group Processes & Intergroup Relations Volume 16 ; 16 >
         au < released ; 2014 ; Group Processes & Intergroup Relations Volume 17 ; 17 >
         au < ready ; 2015 ; Group Processes & Intergroup Relations Volume 18 ; 18 >
         au < manifest ; 2016 ; Group Processes & Intergroup Relations Volume 19 ; 19 >
@@ -15466,7 +15466,7 @@
       au < exists ; 2011 ; International Journal of Protective Structures Volume 2 ; 2 >
       au < exists ; 2012 ; International Journal of Protective Structures Volume 3 ; 3 >
       au < exists ; 2013 ; International Journal of Protective Structures Volume 4 ; 4 >
-      au < manifest ; 2014 ; International Journal of Protective Structures Volume 5 ; 5 >
+      au < ready ; 2014 ; International Journal of Protective Structures Volume 5 ; 5 >
       au < manifest ; 2015 ; International Journal of Protective Structures Volume 6 ; 6 >
       au < manifest ; 2016 ; International Journal of Protective Structures Volume 7 ; 7 >
 
@@ -15534,7 +15534,7 @@
       au < exists ; 2012 ; International Journal of Qualitative Methods Volume 11 ; 11 >
       au < exists ; 2013 ; International Journal of Qualitative Methods Volume 12 ; 12 >
       au < exists ; 2014 ; International Journal of Qualitative Methods Volume 13 ; 13 >
-      au < manifest ; 2015 ; International Journal of Qualitative Methods Volume 14 ; 14 >
+      au < ready ; 2015 ; International Journal of Qualitative Methods Volume 14 ; 14 >
       au < expected ; 2016 ; International Journal of Qualitative Methods Volume 15 ; 15 >
 
   }
@@ -16247,7 +16247,7 @@
       au < exists ; 2010-2011 ; HERD: Health Environments Research & Design Journal Volume 4 ; 4 >
       au < exists ; 2011-2012 ; HERD: Health Environments Research & Design Journal Volume 5 ; 5 >
       au < exists ; 2012-2013 ; HERD: Health Environments Research & Design Journal Volume 6 ; 6 >
-      au < manifest ; 2013-2014 ; HERD: Health Environments Research & Design Journal Volume 7 ; 7 >
+      au < ready ; 2013-2014 ; HERD: Health Environments Research & Design Journal Volume 7 ; 7 >
       au < manifest ; 2014-2015 ; HERD: Health Environments Research & Design Journal Volume 8 ; 8 >
       au < manifest ; 2015-2016 ; HERD: Health Environments Research & Design Journal Volume 9 ; 9 >
       au < expected ; 2016-2017 ; HERD: Health Environments Research & Design Journal Volume 10 ; 10 >
@@ -16462,7 +16462,7 @@
         au < released ; 2012 ; History and Sociology of South Asia Volume 6 ; 6 >
         au < released ; 2013 ; History and Sociology of South Asia Volume 7 ; 7 >
         au < released ; 2014 ; History and Sociology of South Asia Volume 8 ; 8 >
-        au < manifest ; 2015 ; History and Sociology of South Asia Volume 9 ; 9 >
+        au < ready ; 2015 ; History and Sociology of South Asia Volume 9 ; 9 >
         au < manifest ; 2016 ; History and Sociology of South Asia Volume 10 ; 10 >
 
       }
@@ -17552,7 +17552,7 @@
         au < released ; 2012 ; India Quarterly: A Journal of International Affairs Volume 68 ; 68 >
         au < manifest ; 2013 ; India Quarterly: A Journal of International Affairs Volume 69 ; 69 >
         au < released ; 2014 ; India Quarterly: A Journal of International Affairs Volume 70 ; 70 >
-        au < manifest ; 2015 ; India Quarterly: A Journal of International Affairs Volume 71 ; 71 >
+        au < ready ; 2015 ; India Quarterly: A Journal of International Affairs Volume 71 ; 71 >
         au < manifest ; 2016 ; India Quarterly: A Journal of International Affairs Volume 72 ; 72 >
 
       }
@@ -18365,7 +18365,7 @@
         au < released ; 2012 ; International Criminal Justice Review Volume 22 ; 22 >
         au < released ; 2013 ; International Criminal Justice Review Volume 23 ; 23 >
         au < released ; 2014 ; International Criminal Justice Review Volume 24 ; 24 >
-        au < manifest ; 2015 ; International Criminal Justice Review Volume 25 ; 25 >
+        au < ready ; 2015 ; International Criminal Justice Review Volume 25 ; 25 >
         au < manifest ; 2016 ; International Criminal Justice Review Volume 26 ; 26 >
 
       }
@@ -20640,7 +20640,7 @@
         au < released ; 2012 ; International Sociology Volume 27 ; 27 >
         au < released ; 2013 ; International Sociology Volume 28 ; 28 >
         au < released ; 2014 ; International Sociology Volume 29 ; 29 >
-        au < manifest ; 2015 ; International Sociology Volume 30 ; 30 >
+        au < ready ; 2015 ; International Sociology Volume 30 ; 30 >
         au < manifest ; 2016 ; International Sociology Volume 31 ; 31 >
 
       }
@@ -23408,7 +23408,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < exists ; 2012 ; Journal of College Student Retention: Research, Theory & Practice Volume 14 ; 14 >
       au < exists ; 2013 ; Journal of College Student Retention: Research, Theory & Practice Volume 15 ; 15 >
       au < released ; 2014 ; Journal of College Student Retention: Research, Theory & Practice Volume 16 ; 16 >
-      au < manifest ; 2015 ; Journal of College Student Retention: Research, Theory & Practice Volume 17 ; 17 >
+      au < ready ; 2015 ; Journal of College Student Retention: Research, Theory & Practice Volume 17 ; 17 >
       au < expected ; 2016 ; Journal of College Student Retention: Research, Theory & Practice Volume 18 ; 18 >
 
   }
@@ -24615,7 +24615,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < exists ; 2012 ; Journal of Drug Education Volume 42 ; 42 >
       au < manifest ; 2013 ; Journal of Drug Education Volume 43 ; 43 >
       au < released ; 2014 ; Journal of Drug Education Volume 44 ; 44 >
-      au < manifest ; 2015 ; Journal of Drug Education Volume 45 ; 45 >
+      au < ready ; 2015 ; Journal of Drug Education Volume 45 ; 45 >
       au < expected ; 2016 ; Journal of Drug Education Volume 46 ; 46 >
 
   }
@@ -25116,7 +25116,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < exists ; 2011-2012 ; Journal of Educational Technology Systems Volume 40 ; 40 >
       au < exists ; 2012-2013 ; Journal of Educational Technology Systems Volume 41 ; 41 >
       au < manifest ; 2013-2014 ; Journal of Educational Technology Systems Volume 42 ; 42 >
-      au < manifest ; 2014-2015 ; Journal of Educational Technology Systems Volume 43 ; 43 >
+      au < ready ; 2014-2015 ; Journal of Educational Technology Systems Volume 43 ; 43 >
       au < manifest ; 2015-2016 ; Journal of Educational Technology Systems Volume 44 ; 44 >
       au < expected ; 2016-2017 ; Journal of Educational Technology Systems Volume 45 ; 45 >
       
@@ -25497,7 +25497,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2012 ; Journal of English Linguistics Volume 40 ; 40 >
         au < released ; 2013 ; Journal of English Linguistics Volume 41 ; 41 >
         au < released ; 2014 ; Journal of English Linguistics Volume 42 ; 42 >
-        au < manifest ; 2015 ; Journal of English Linguistics Volume 43 ; 43 >
+        au < ready ; 2015 ; Journal of English Linguistics Volume 43 ; 43 >
         au < manifest ; 2016 ; Journal of English Linguistics Volume 44 ; 44 >
 
       }
@@ -25725,7 +25725,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2012 ; Journal of European Social Policy Volume 22 ; 22 >
         au < ready ; 2013 ; Journal of European Social Policy Volume 23 ; 23 >
         au < released ; 2014 ; Journal of European Social Policy Volume 24 ; 24 >
-        au < manifest ; 2015 ; Journal of European Social Policy Volume 25 ; 25 >
+        au < ready ; 2015 ; Journal of European Social Policy Volume 25 ; 25 >
         au < manifest ; 2016 ; Journal of European Social Policy Volume 26 ; 26 >
 
       }
@@ -26388,7 +26388,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2010 ; Journal of Health and Social Behavior Volume 51 ; 51 >
         au < released ; 2011 ; Journal of Health and Social Behavior Volume 52 ; 52 >
         au < released ; 2012 ; Journal of Health and Social Behavior Volume 53 ; 53 >
-        au < manifest ; 2013 ; Journal of Health and Social Behavior Volume 54 ; 54 >
+        au < ready ; 2013 ; Journal of Health and Social Behavior Volume 54 ; 54 >
         au < ready ; 2014 ; Journal of Health and Social Behavior Volume 55 ; 55 >
         au < manifest ; 2015 ; Journal of Health and Social Behavior Volume 56 ; 56 >
         au < manifest ; 2016 ; Journal of Health and Social Behavior Volume 57 ; 57 >
@@ -26503,7 +26503,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2012 ; Journal of Hand Surgery (European Volume) Volume 37 ; 37 >
         au < manifest ; 2013 ; Journal of Hand Surgery (European Volume) Volume 38 ; 38 >
         au < manifest ; 2014 ; Journal of Hand Surgery (European Volume) Volume 39 ; 39 >
-        au < manifest ; 2015 ; Journal of Hand Surgery (European Volume) Volume 40 ; 40 >
+        au < ready ; 2015 ; Journal of Hand Surgery (European Volume) Volume 40 ; 40 >
         au < manifest ; 2016 ; Journal of Hand Surgery (European Volume) Volume 41 ; 41 >
 
       }
@@ -26618,7 +26618,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2012 ; Journal of Hispanic Higher Education Volume 11 ; 11 >
         au < manifest ; 2013 ; Journal of Hispanic Higher Education Volume 12 ; 12 >
         au < released ; 2014 ; Journal of Hispanic Higher Education Volume 13 ; 13 >
-        au < manifest ; 2015 ; Journal of Hispanic Higher Education Volume 14 ; 14 >
+        au < ready ; 2015 ; Journal of Hispanic Higher Education Volume 14 ; 14 >
         au < manifest ; 2016 ; Journal of Hispanic Higher Education Volume 15 ; 15 >
 
       }
@@ -28470,9 +28470,9 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2010 ; Journal of Management Education Volume 34 ; 34 >
         au < released ; 2011 ; Journal of Management Education Volume 35 ; 35 >
         au < released ; 2012 ; Journal of Management Education Volume 36 ; 36 >
-        au < manifest ; 2013 ; Journal of Management Education Volume 37 ; 37 >
+        au < ready ; 2013 ; Journal of Management Education Volume 37 ; 37 >
         au < released ; 2014 ; Journal of Management Education Volume 38 ; 38 >
-        au < manifest ; 2015 ; Journal of Management Education Volume 39 ; 39 >
+        au < ready ; 2015 ; Journal of Management Education Volume 39 ; 39 >
         au < manifest ; 2016 ; Journal of Management Education Volume 40 ; 40 >
 
       }
@@ -29190,7 +29190,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Journal of Pharmacy Practice Volume 25 ; 25 >
         au < released ; 2013 ; Journal of Pharmacy Practice Volume 26 ; 26 >
         au < released ; 2014 ; Journal of Pharmacy Practice Volume 27 ; 27 >
-        au < manifest ; 2015 ; Journal of Pharmacy Practice Volume 28 ; 28 >
+        au < ready ; 2015 ; Journal of Pharmacy Practice Volume 28 ; 28 >
         au < manifest ; 2016 ; Journal of Pharmacy Practice Volume 29 ; 29 >
 
       }
@@ -29647,7 +29647,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Journal of Psychoeducational Assessment Volume 29 ; 29 >
         au < released ; 2012 ; Journal of Psychoeducational Assessment Volume 30 ; 30 >
         au < manifest ; 2013 ; Journal of Psychoeducational Assessment Volume 31 ; 31 >
-        au < manifest ; 2014 ; Journal of Psychoeducational Assessment Volume 32 ; 32 >
+        au < ready ; 2014 ; Journal of Psychoeducational Assessment Volume 32 ; 32 >
         au < manifest ; 2015 ; Journal of Psychoeducational Assessment Volume 33 ; 33 >
         au < manifest ; 2016 ; Journal of Psychoeducational Assessment Volume 34 ; 34 >
 
@@ -30780,7 +30780,7 @@ comment[mpj] = now published by Brill
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 2015 ; Journal of Strategic Contracting and Negotiation Volume 1 ; 1 >
+      au < ready ; 2015 ; Journal of Strategic Contracting and Negotiation Volume 1 ; 1 >
       au < expected ; 2016 ; Journal of Strategic Contracting and Negotiation Volume 2 ; 2 >
 
   }
@@ -31618,7 +31618,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Perspectives on Psychological Science Volume 7 ; 7 >
         au < manifest ; 2013 ; Perspectives on Psychological Science Volume 8 ; 8 >
         au < released ; 2014 ; Perspectives on Psychological Science Volume 9 ; 9 >
-        au < manifest ; 2015 ; Perspectives on Psychological Science Volume 10 ; 10 >
+        au < ready ; 2015 ; Perspectives on Psychological Science Volume 10 ; 10 >
         au < manifest ; 2016 ; Perspectives on Psychological Science Volume 11 ; 11 >
 
       }
@@ -31861,7 +31861,7 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; Journal of Transcultural Nursing Volume 21 ; 21 >
         au < released ; 2011 ; Journal of Transcultural Nursing Volume 22 ; 22 >
         au < released ; 2012 ; Journal of Transcultural Nursing Volume 23 ; 23 >
-        au < manifest ; 2013 ; Journal of Transcultural Nursing Volume 24 ; 24 >
+        au < ready ; 2013 ; Journal of Transcultural Nursing Volume 24 ; 24 >
         au < released ; 2014 ; Journal of Transcultural Nursing Volume 25 ; 25 >
         au < manifest ; 2015 ; Journal of Transcultural Nursing Volume 26 ; 26 >
         au < manifest ; 2016 ; Journal of Transcultural Nursing Volume 27 ; 27 >
@@ -32678,7 +32678,7 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 2014 ; Language and Linguistics Volume 15 ; 15 >
-        au < manifest ; 2015 ; Language and Linguistics Volume 16 ; 16 >
+        au < ready ; 2015 ; Language and Linguistics Volume 16 ; 16 >
         au < manifest ; 2016 ; Language and Linguistics Volume 17 ; 17 >
 
       }
@@ -33537,7 +33537,7 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; Management in Education Volume 24 ; 24 >
         au < released ; 2011 ; Management in Education Volume 25 ; 25 >
         au < released ; 2012 ; Management in Education Volume 26 ; 26 >
-        au < manifest ; 2013 ; Management in Education Volume 27 ; 27 >
+        au < ready ; 2013 ; Management in Education Volume 27 ; 27 >
         au < released ; 2014 ; Management in Education Volume 28 ; 28 >
         au < manifest ; 2015 ; Management in Education Volume 29 ; 29 >
         au < manifest ; 2016 ; Management in Education Volume 30 ; 30 >
@@ -35496,7 +35496,7 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; Neurorehabilitation and Neural Repair Volume 24 ; 24 >
         au < released ; 2011 ; Neurorehabilitation and Neural Repair Volume 25 ; 25 >
         au < released ; 2012 ; Neurorehabilitation and Neural Repair Volume 26 ; 26 >
-        au < manifest ; 2013 ; Neurorehabilitation and Neural Repair Volume 27 ; 27 >
+        au < ready ; 2013 ; Neurorehabilitation and Neural Repair Volume 27 ; 27 >
         au < released ; 2014 ; Neurorehabilitation and Neural Repair Volume 28 ; 28 >
         au < manifest ; 2015 ; Neurorehabilitation and Neural Repair Volume 29 ; 29 >
         au < manifest ; 2016 ; Neurorehabilitation and Neural Repair Volume 30 ; 30 >
@@ -35695,7 +35695,7 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; New Media & Society Volume 12 ; 12 >
         au < released ; 2011 ; New Media & Society Volume 13 ; 13 >
         au < released ; 2012 ; New Media & Society Volume 14 ; 14 >
-        au < manifest ; 2013 ; New Media & Society Volume 15 ; 15 >
+        au < ready ; 2013 ; New Media & Society Volume 15 ; 15 >
         au < released ; 2014 ; New Media & Society Volume 16 ; 16 >
         au < ready ; 2015 ; New Media & Society Volume 17 ; 17 >
         au < manifest ; 2016 ; New Media & Society Volume 18 ; 18 >
@@ -35730,7 +35730,7 @@ comment[mpj] = now published by Brill
       au < exists ; 2010 ; New Solutions Volume 20 ; 20 >
       au < exists ; 2011 ; New Solutions Volume 21 ; 21 >
       au < exists ; 2012 ; New Solutions Volume 22 ; 22 >
-      au < manifest ; 2013 ; New Solutions Volume 23 ; 23 >
+      au < ready ; 2013 ; New Solutions Volume 23 ; 23 >
       au < manifest ; 2014 ; New Solutions Volume 24 ; 24 >
       au < manifest ; 2015 ; New Solutions Volume 25 ; 25 >
       au < expected ; 2016 ; New Solutions Volume 26 ; 26 >
@@ -35942,7 +35942,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2011 ; Nordic Journal of Nursing Research Volume 31 ; 31 >
         au < exists ; 2012 ; Nordic Journal of Nursing Research Volume 32 ; 32 >
         au < exists ; 2013 ; Nordic Journal of Nursing Research Volume 33 ; 33 >
-        au < manifest ; 2014 ; Nordic Journal of Nursing Research Volume 34 ; 34 >
+        au < ready ; 2014 ; Nordic Journal of Nursing Research Volume 34 ; 34 >
         au < ready ; 2015 ; Nordic Journal of Nursing Research Volume 35 ; 35 >
         au < manifest ; 2016 ; Nordic Journal of Nursing Research Volume 36 ; 36 >
 
@@ -36185,7 +36185,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Nutrition in Clinical Practice Volume 27 ; 27 >
         au < manifest ; 2013 ; Nutrition in Clinical Practice Volume 28 ; 28 >
         au < released ; 2014 ; Nutrition in Clinical Practice Volume 29 ; 29 >
-        au < manifest ; 2015 ; Nutrition in Clinical Practice Volume 30 ; 30 >
+        au < ready ; 2015 ; Nutrition in Clinical Practice Volume 30 ; 30 >
         au < manifest ; 2016 ; Nutrition in Clinical Practice Volume 31 ; 31 >
 
       }
@@ -36502,7 +36502,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Organizational Psychology Review Volume 2 ; 2 >
         au < manifest ; 2013 ; Organizational Psychology Review Volume 3 ; 3 >
         au < released ; 2014 ; Organizational Psychology Review Volume 4 ; 4 >
-        au < manifest ; 2015 ; Organizational Psychology Review Volume 5 ; 5 >
+        au < ready ; 2015 ; Organizational Psychology Review Volume 5 ; 5 >
         au < manifest ; 2016 ; Organizational Psychology Review Volume 6 ; 6 >
 
       }
@@ -36554,7 +36554,7 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; Organizational Research Methods Volume 13 ; 13 >
         au < released ; 2011 ; Organizational Research Methods Volume 14 ; 14 >
         au < released ; 2012 ; Organizational Research Methods Volume 15 ; 15 >
-        au < manifest ; 2013 ; Organizational Research Methods Volume 16 ; 16 >
+        au < ready ; 2013 ; Organizational Research Methods Volume 16 ; 16 >
         au < released ; 2014 ; Organizational Research Methods Volume 17 ; 17 >
         au < manifest ; 2015 ; Organizational Research Methods Volume 18 ; 18 >
         au < manifest ; 2016 ; Organizational Research Methods Volume 19 ; 19 >
@@ -36798,7 +36798,7 @@ comment[mpj] = now published by Brill
       au < manifest ; 2008 ; Perception Volume 37 ; 37 >
       au < manifest ; 2009 ; Perception Volume 38 ; 38 >
       au < released ; 2010 ; Perception Volume 39 ; 39 >
-      au < manifest ; 2011 ; Perception Volume 40 ; 40 >
+      au < ready ; 2011 ; Perception Volume 40 ; 40 >
       au < manifest ; 2012 ; Perception Volume 41 ; 41 >
       au < ready ; 2013 ; Perception Volume 42 ; 42 >
       au < manifest ; 2014 ; Perception Volume 43 ; 43 >
@@ -37157,7 +37157,7 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; Philosophy & Social Criticism Volume 36 ; 36 >
         au < released ; 2011 ; Philosophy & Social Criticism Volume 37 ; 37 >
         au < released ; 2012 ; Philosophy & Social Criticism Volume 38 ; 38 >
-        au < manifest ; 2013 ; Philosophy & Social Criticism Volume 39 ; 39 >
+        au < ready ; 2013 ; Philosophy & Social Criticism Volume 39 ; 39 >
         au < released ; 2014 ; Philosophy & Social Criticism Volume 40 ; 40 >
         au < manifest ; 2015 ; Philosophy & Social Criticism Volume 41 ; 41 >
         au < manifest ; 2016 ; Philosophy & Social Criticism Volume 42 ; 42 >
@@ -37589,7 +37589,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Political Research Quarterly Volume 65 ; 65 >
         au < manifest ; 2013 ; Political Research Quarterly Volume 66 ; 66 >
         au < released ; 2014 ; Political Research Quarterly Volume 67 ; 67 >
-        au < manifest ; 2015 ; Political Research Quarterly Volume 68 ; 68 >
+        au < ready ; 2015 ; Political Research Quarterly Volume 68 ; 68 >
         au < manifest ; 2016 ; Political Research Quarterly Volume 69 ; 69 >
 
       }
@@ -37840,7 +37840,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Politics & Society Volume 40 ; 40 >
         au < manifest ; 2013 ; Politics & Society Volume 41 ; 41 >
         au < released ; 2014 ; Politics & Society Volume 42 ; 42 >
-        au < manifest ; 2015 ; Politics & Society Volume 43 ; 43 >
+        au < ready ; 2015 ; Politics & Society Volume 43 ; 43 >
         au < manifest ; 2016 ; Politics & Society Volume 44 ; 44 >
 
       }
@@ -39745,7 +39745,7 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < released ; 2012 ; Public Relations Inquiry Volume 1 ; 1 >
-        au < manifest ; 2013 ; Public Relations Inquiry Volume 2 ; 2 >
+        au < ready ; 2013 ; Public Relations Inquiry Volume 2 ; 2 >
         au < released ; 2014 ; Public Relations Inquiry Volume 3 ; 3 >
         au < ready ; 2015 ; Public Relations Inquiry Volume 4 ; 4 >
         au < manifest ; 2016 ; Public Relations Inquiry Volume 5 ; 5 >
@@ -39914,7 +39914,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Punishment & Society Volume 14 ; 14 >
         au < released ; 2013 ; Punishment & Society Volume 15 ; 15 >
         au < released ; 2014 ; Punishment & Society Volume 16 ; 16 >
-        au < manifest ; 2015 ; Punishment & Society Volume 17 ; 17 >
+        au < ready ; 2015 ; Punishment & Society Volume 17 ; 17 >
         au < manifest ; 2016 ; Punishment & Society Volume 18 ; 18 >
 
       }
@@ -40126,7 +40126,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Qualitative Social Work Volume 11 ; 11 >
         au < manifest ; 2013 ; Qualitative Social Work Volume 12 ; 12 >
         au < released ; 2014 ; Qualitative Social Work Volume 13 ; 13 >
-        au < manifest ; 2015 ; Qualitative Social Work Volume 14 ; 14 >
+        au < ready ; 2015 ; Qualitative Social Work Volume 14 ; 14 >
         au < manifest ; 2016 ; Qualitative Social Work Volume 15 ; 15 >
 
       }
@@ -40628,7 +40628,7 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; Research Ethics Volume 6 ; 6 >
         au < released ; 2011 ; Research Ethics Volume 7 ; 7 >
         au < released ; 2012 ; Research Ethics Volume 8 ; 8 >
-        au < manifest ; 2013 ; Research Ethics Volume 9 ; 9 >
+        au < ready ; 2013 ; Research Ethics Volume 9 ; 9 >
         au < released ; 2014 ; Research Ethics Volume 10 ; 10 >
         au < manifest ; 2015 ; Research Ethics Volume 11 ; 11 >
         au < manifest ; 2016 ; Research Ethics Volume 12 ; 12 >
@@ -40759,9 +40759,9 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; Research on Aging Volume 32 ; 32 >
         au < released ; 2011 ; Research on Aging Volume 33 ; 33 >
         au < released ; 2012 ; Research on Aging Volume 34 ; 34 >
-        au < manifest ; 2013 ; Research on Aging Volume 35 ; 35 >
+        au < ready ; 2013 ; Research on Aging Volume 35 ; 35 >
         au < released ; 2014 ; Research on Aging Volume 36 ; 36 >
-        au < manifest ; 2015 ; Research on Aging Volume 37 ; 37 >
+        au < ready ; 2015 ; Research on Aging Volume 37 ; 37 >
         au < manifest ; 2016 ; Research on Aging Volume 38 ; 38 >
 
       }
@@ -41875,7 +41875,7 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; Science, Technology & Human Values Volume 35 ; 35 >
         au < released ; 2011 ; Science, Technology & Human Values Volume 36 ; 36 >
         au < released ; 2012 ; Science, Technology & Human Values Volume 37 ; 37 >
-        au < manifest ; 2013 ; Science, Technology & Human Values Volume 38 ; 38 >
+        au < ready ; 2013 ; Science, Technology & Human Values Volume 38 ; 38 >
         au < released ; 2014 ; Science, Technology & Human Values Volume 39 ; 39 >
         au < manifest ; 2015 ; Science, Technology & Human Values Volume 40 ; 40 >
         au < manifest ; 2016 ; Science, Technology & Human Values Volume 41 ; 41 >
@@ -42495,7 +42495,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Small Group Research Volume 43 ; 43 >
         au < manifest ; 2013 ; Small Group Research Volume 44 ; 44 >
         au < released ; 2014 ; Small Group Research Volume 45 ; 45 >
-        au < manifest ; 2015 ; Small Group Research Volume 46 ; 46 >
+        au < ready ; 2015 ; Small Group Research Volume 46 ; 46 >
         au < manifest ; 2016 ; Small Group Research Volume 47 ; 47 >
 
       }
@@ -43087,7 +43087,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Sociological Methods & Research Volume 41 ; 41 >
         au < ready ; 2013 ; Sociological Methods & Research Volume 42 ; 42 >
         au < released ; 2014 ; Sociological Methods & Research Volume 43 ; 43 >
-        au < manifest ; 2015 ; Sociological Methods & Research Volume 44 ; 44 >
+        au < ready ; 2015 ; Sociological Methods & Research Volume 44 ; 44 >
         au < manifest ; 2016 ; Sociological Methods & Research Volume 45 ; 45 >
 
       }
@@ -43608,7 +43608,7 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; State and Local Government Review Volume 42 ; 42 >
         au < released ; 2011 ; State and Local Government Review Volume 43 ; 43 >
         au < released ; 2012 ; State and Local Government Review Volume 44 ; 44 >
-        au < manifest ; 2013 ; State and Local Government Review Volume 45 ; 45 >
+        au < ready ; 2013 ; State and Local Government Review Volume 45 ; 45 >
         au < released ; 2014 ; State and Local Government Review Volume 46 ; 46 >
         au < manifest ; 2015 ; State and Local Government Review Volume 47 ; 47 >
         au < expected ; 2016 ; State and Local Government Review Volume 48 ; 48 >
@@ -44408,7 +44408,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2012 ; Technology in Cancer Research & Treatment Volume 11 ; 11 >
         au < released ; 2013 ; Technology in Cancer Research & Treatment Volume 12 ; 12 >
         au < released ; 2014 ; Technology in Cancer Research & Treatment Volume 13 ; 13 >
-        au < manifest ; 2015 ; Technology in Cancer Research & Treatment Volume 14 ; 14 >
+        au < ready ; 2015 ; Technology in Cancer Research & Treatment Volume 14 ; 14 >
         au < manifest ; 2016 ; Technology in Cancer Research & Treatment Volume 15 ; 15 >
 
     }
@@ -45206,7 +45206,7 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; Therapeutic Advances in Cardiovascular Disease Volume 4 ; 4 >
         au < released ; 2011 ; Therapeutic Advances in Cardiovascular Disease Volume 5 ; 5 >
         au < released ; 2012 ; Therapeutic Advances in Cardiovascular Disease Volume 6 ; 6 >
-        au < manifest ; 2013 ; Therapeutic Advances in Cardiovascular Disease Volume 7 ; 7 >
+        au < ready ; 2013 ; Therapeutic Advances in Cardiovascular Disease Volume 7 ; 7 >
         au < released ; 2014 ; Therapeutic Advances in Cardiovascular Disease Volume 8 ; 8 >
         au < manifest ; 2015 ; Therapeutic Advances in Cardiovascular Disease Volume 9 ; 9 >
         au < manifest ; 2016 ; Therapeutic Advances in Cardiovascular Disease Volume 10 ; 10 >
@@ -45392,7 +45392,7 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; Therapeutic Advances in Musculoskeletal Disease Volume 2 ; 2 >
         au < released ; 2011 ; Therapeutic Advances in Musculoskeletal Disease Volume 3 ; 3 >
         au < released ; 2012 ; Therapeutic Advances in Musculoskeletal Disease Volume 4 ; 4 >
-        au < manifest ; 2013 ; Therapeutic Advances in Musculoskeletal Disease Volume 5 ; 5 >
+        au < ready ; 2013 ; Therapeutic Advances in Musculoskeletal Disease Volume 5 ; 5 >
         au < ready ; 2014 ; Therapeutic Advances in Musculoskeletal Disease Volume 6 ; 6 >
         au < manifest ; 2015 ; Therapeutic Advances in Musculoskeletal Disease Volume 7 ; 7 >
         au < manifest ; 2016 ; Therapeutic Advances in Musculoskeletal Disease Volume 8 ; 8 >
@@ -45769,7 +45769,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Time & Society Volume 21 ; 21 >
         au < manifest ; 2013 ; Time & Society Volume 22 ; 22 >
         au < manifest ; 2014 ; Time & Society Volume 23 ; 23 >
-        au < manifest ; 2015 ; Time & Society Volume 24 ; 24 >
+        au < ready ; 2015 ; Time & Society Volume 24 ; 24 >
         au < manifest ; 2016 ; Time & Society Volume 25 ; 25 >
 
       }
@@ -45904,7 +45904,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Tourist Studies Volume 11 ; 11 >
         au < released ; 2012 ; Tourist Studies Volume 12 ; 12 >
         au < manifest ; 2013 ; Tourist Studies Volume 13 ; 13 >
-        au < manifest ; 2014 ; Tourist Studies Volume 14 ; 14 >
+        au < ready ; 2014 ; Tourist Studies Volume 14 ; 14 >
         au < manifest ; 2015 ; Tourist Studies Volume 15 ; 15 >
         au < manifest ; 2016 ; Tourist Studies Volume 16 ; 16 >
 
@@ -45969,7 +45969,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Toxicology and Industrial Health Volume 28 ; 28 >
         au < manifest ; 2013 ; Toxicology and Industrial Health Volume 29 ; 29 >
         au < released ; 2014 ; Toxicology and Industrial Health Volume 30 ; 30 >
-        au < manifest ; 2015 ; Toxicology and Industrial Health Volume 31 ; 31 >
+        au < ready ; 2015 ; Toxicology and Industrial Health Volume 31 ; 31 >
         au < manifest ; 2016 ; Toxicology and Industrial Health Volume 32 ; 32 >
 
       }
@@ -46345,7 +46345,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Trauma Volume 14 ; 14 >
         au < manifest ; 2013 ; Trauma Volume 15 ; 15 >
         au < ready ; 2014 ; Trauma Volume 16 ; 16 >
-        au < manifest ; 2015 ; Trauma Volume 17 ; 17 >
+        au < ready ; 2015 ; Trauma Volume 17 ; 17 >
         au < manifest ; 2016 ; Trauma Volume 18 ; 18 >
 
       }
@@ -47020,7 +47020,7 @@ comment[mpj] = now published by Brill
         au < released ; 2012 ; Veterinary Pathology Volume 49 ; 49 >
         au < manifest ; 2013 ; Veterinary Pathology Volume 50 ; 50 >
         au < manifest ; 2014 ; Veterinary Pathology Volume 51 ; 51 >
-        au < manifest ; 2015 ; Veterinary Pathology Volume 52 ; 52 >
+        au < ready ; 2015 ; Veterinary Pathology Volume 52 ; 52 >
         au < manifest ; 2016 ; Veterinary Pathology Volume 53 ; 53 >
 
     }
@@ -47592,7 +47592,7 @@ comment[mpj] = now published by Brill
       au < exists ; 2011 ; Workplace Health & Safety Volume 59 ; 59 >
       au < exists ; 2012 ; Workplace Health & Safety Volume 60 ; 60 >
       au < exists ; 2013 ; Workplace Health & Safety Volume 61 ; 61 >
-      au < manifest ; 2014 ; Workplace Health & Safety Volume 62 ; 62 >
+      au < ready ; 2014 ; Workplace Health & Safety Volume 62 ; 62 >
       au < manifest ; 2015 ; Workplace Health & Safety Volume 63 ; 63 >
       au < manifest ; 2016 ; Workplace Health & Safety Volume 64 ; 64 >
 
@@ -48795,7 +48795,7 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; Social Change Volume 40 ; 40 >
         au < released ; 2011 ; Social Change Volume 41 ; 41 >
         au < released ; 2012 ; Social Change Volume 42 ; 42 >
-        au < manifest ; 2013 ; Social Change Volume 43 ; 43 >
+        au < ready ; 2013 ; Social Change Volume 43 ; 43 >
         au < manifest ; 2014 ; Social Change Volume 44 ; 44 >
         au < manifest ; 2015 ; Social Change Volume 45 ; 45 >
         au < manifest ; 2016 ; Social Change Volume 46 ; 46 >
@@ -49140,7 +49140,7 @@ comment[mpj] = now published by Brill
     au < manifest ; 2007 ; Adoption & Fostering Volume 31 ; 31 >
     au < released ; 2008 ; Adoption & Fostering Volume 32 ; 32 >
     au < released ; 2009 ; Adoption & Fostering Volume 33 ; 33 >
-    au < manifest ; 2010 ; Adoption & Fostering Volume 34 ; 34 >
+    au < ready ; 2010 ; Adoption & Fostering Volume 34 ; 34 >
     au < released ; 2011 ; Adoption & Fostering Volume 35 ; 35 >
     au < released ; 2012 ; Adoption & Fostering Volume 36 ; 36 >
     au < released ; 2013 ; Adoption & Fostering Volume 37 ; 37 >
@@ -49521,7 +49521,7 @@ comment[mpj] = now published by Brill
     au < exists ; 2012 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 145 ; 145 >
     au < released ; 2013 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 146 ; 146 >
     au < manifest ; 2014 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 147 ; 147 >
-    au < manifest ; 2015 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 148 ; 148 >
+    au < ready ; 2015 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 148 ; 148 >
     au < manifest ; 2016 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 149 ; 149 >
 
     }
@@ -50077,7 +50077,7 @@ comment[mpj] = now published by Brill
     param[base_url] = http://ueg.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 2013 ; United European Gastroenterology Journal Volume 1 ; 1 >
+    au < ready ; 2013 ; United European Gastroenterology Journal Volume 1 ; 1 >
     au < released ; 2014 ; United European Gastroenterology Journal Volume 2 ; 2 >
     au < ready ; 2015 ; United European Gastroenterology Journal Volume 3 ; 3 >
     au < manifest ; 2016 ; United European Gastroenterology Journal Volume 4 ; 4 >
@@ -50206,7 +50206,7 @@ comment[mpj] = now published by Brill
     au < manifest ; 2012 ; Transactional Analysis Journal Volume 42 ; 42 >
     au < released ; 2013 ; Transactional Analysis Journal Volume 43 ; 43 >
     au < manifest ; 2014 ; Transactional Analysis Journal Volume 44 ; 44 >
-    au < manifest ; 2015 ; Transactional Analysis Journal Volume 45 ; 45 >
+    au < ready ; 2015 ; Transactional Analysis Journal Volume 45 ; 45 >
     au < manifest ; 2016 ; Transactional Analysis Journal Volume 46 ; 46 >
 
     }
@@ -51952,7 +51952,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Laboratory Animals Volume 45 ; 45 >
         au < HighWirePressH20Plugin ; exists ; 2012 ; Laboratory Animals Volume 46 ; 46 >
         au < HighWirePressH20Plugin ; released ; 2013 ; Laboratory Animals Volume 47 ; 47 >
-        au < HighWirePressH20Plugin ; manifest ; 2014 ; Laboratory Animals Volume 48 ; 48 >
+        au < HighWirePressH20Plugin ; ready ; 2014 ; Laboratory Animals Volume 48 ; 48 >
         au < HighWirePressH20Plugin ; manifest ; 2015 ; Laboratory Animals Volume 49 ; 49 >
         au < HighWirePressH20Plugin ; manifest ; 2016 ; Laboratory Animals Volume 50 ; 50 >
 
@@ -52170,7 +52170,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; exists ; 2012 ; Phlebology Volume 27 ; 27 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Phlebology Volume 28 ; 28 >
         au < HighWirePressH20Plugin ; released ; 2014 ; Phlebology Volume 29 ; 29 >
-        au < HighWirePressH20Plugin ; manifest ; 2015 ; Phlebology Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; ready ; 2015 ; Phlebology Volume 30 ; 30 >
         au < HighWirePressH20Plugin ; manifest ; 2016 ; Phlebology Volume 31 ; 31 >
 
       }
