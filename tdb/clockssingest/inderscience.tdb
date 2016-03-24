@@ -1338,6 +1338,7 @@
       param[journal_id] = ijbfmi
 
       au < doNotProcess ; doNotProcess ; 2008-2010 ; International Journal of Business Forecasting and Marketing Intelligence Volume 1 ; 1 ; >
+      au < exists ; exists ; 2015 ; International Journal of Business Forecasting and Marketing Intelligence Volume 2 ; 2 ; >
 
     }
 
@@ -8763,7 +8764,8 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Wireless and Mobile Computing Volume 6 ; 6 ; >
       au < finished ; crawling ; 2014 ; International Journal of Wireless and Mobile Computing Volume 7 ; 7 ; >
       au < crawling ; exists ; 2015 ; International Journal of Wireless and Mobile Computing Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Wireless and Mobile Computing Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2015 ; International Journal of Wireless and Mobile Computing Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Wireless and Mobile Computing Volume 10 ; 10 ; >
 
     }
 
