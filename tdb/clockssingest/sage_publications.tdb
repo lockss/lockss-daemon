@@ -5253,7 +5253,7 @@
       param[base_url] = http://cto.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2015 ; Cardiovascular and Thoracic Open Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2015 ; Cardiovascular and Thoracic Open Volume 1 ; 1 ; >
       au < expected ; exists ; 2016 ; Cardiovascular and Thoracic Open Volume 2 ; 2 ; >
 
   }
@@ -9228,7 +9228,7 @@
       au < zapped ; finished ; 2011 ; Diogenes Volume 58 ; 58 ; >
       au < finished ; finished ; 2012 ; Diogenes Volume 59 ; 59 ; >
       au < crawling ; exists ; 2013 ; Diogenes Volume 60 ; 60 ; >
-      au < manifest ; exists ; 2014 ; Diogenes Volume 61 ; 61 ; >
+      au < crawling ; exists ; 2014 ; Diogenes Volume 61 ; 61 ; >
 
     }
 
