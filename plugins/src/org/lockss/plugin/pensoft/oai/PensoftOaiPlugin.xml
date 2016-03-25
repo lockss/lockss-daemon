@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -57,14 +57,14 @@
     <list>
       <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?v=)?$", url_host(base_url)</string>
       <string>1,"^%s(articles|article_preview)\.php\?id=[0-9]+$", base_url</string>
-      <string>1,"^%slib/ajax_srv/article_elements_srv.php\?action=download_pdf&amp;item_id=[0-9]+$", base_url</string>
-      <string>1,"^%slib/ajax_srv/generate_pdf.php\?document_id=[0-9]+&amp;(readonly_preview=1)?$", base_url</string>
+      <string>1,"^%slib/ajax_srv/article_elements_srv\.php\?action=download_pdf&amp;item_id=[0-9]+$", base_url</string>
+      <string>1,"^%slib/ajax_srv/generate_pdf\.php\?document_id=[0-9]+&amp;(readonly_preview=1)?$", base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%slib/ajax_srv/article_elements_srv.php\?action=download_pdf&amp;item_id=[0-9]+$", base_url</string>
+      <string>"^%slib/ajax_srv/generate_pdf\.php\?document_id=[0-9]+&amp;(readonly_preview=1)?$", base_url</string>
     </list>
   </entry>
   <entry>
