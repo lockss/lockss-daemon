@@ -38,15 +38,18 @@ import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 
 public class IUCrOaiHtmlCrawlFilterFactory implements FilterFactory {
+
+  private static final Logger log = Logger.getLogger(IUCrOaiHtmlCrawlFilterFactory.class);
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding) {
     NodeFilter[] filters = new NodeFilter[] {
      //filter out script
-     new TagNameFilter("p"),
+     HtmlNodeFilters.tag("p"),
      HtmlNodeFilters.tagWithAttribute("a", "title", "Previous article"),
      HtmlNodeFilters.tagWithAttribute("a", "title", "Next article"),
     };
