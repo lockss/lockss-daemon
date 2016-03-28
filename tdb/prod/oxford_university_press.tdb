@@ -4037,9 +4037,9 @@
     au < oup.OUPDrupalPlugin ; manifest ; 2015 ; Cardiovascular Research Volume 107 ; 107 >
     au < oup.OUPDrupalPlugin ; manifest ; 2015 ; Cardiovascular Research Volume 108 ; 108 >
     au < oup.OUPDrupalPlugin ; manifest ; 2016 ; Cardiovascular Research Volume 109 ; 109 >
-    au < OUPDrupalPlugin ; exists ; 2016 ; Cardiovascular Research Volume 110 ; 110 >
-    au < OUPDrupalPlugin ; expected ; 2016 ; Cardiovascular Research Volume 111 ; 111 >
-    au < OUPDrupalPlugin ; expected ; 2016 ; Cardiovascular Research Volume 112 ; 112 >
+    au < oup.OUPDrupalPlugin ; exists ; 2016 ; Cardiovascular Research Volume 110 ; 110 >
+    au < oup.OUPDrupalPlugin ; expected ; 2016 ; Cardiovascular Research Volume 111 ; 111 >
+    au < oup.OUPDrupalPlugin ; expected ; 2016 ; Cardiovascular Research Volume 112 ; 112 >
 
     }
 
@@ -16635,8 +16635,6 @@
     au < exists ; 2001 ; Mammalian Species Volume 666 ; 666 >
     au < exists ; 2001 ; Mammalian Species Volume 667 ; 667 >
     au < exists ; 2001 ; Mammalian Species Volume 668 ; 668 >
-    au < exists ; 2001 ; Mammalian Species Volume 667 ; 667 >
-    au < exists ; 2001 ; Mammalian Species Volume 668 ; 668 >
     au < exists ; 2001 ; Mammalian Species Volume 669 ; 669 >
     au < exists ; 2001 ; Mammalian Species Volume 670 ; 670 >
     au < exists ; 2001 ; Mammalian Species Volume 671 ; 671 >
@@ -16677,8 +16675,6 @@
     au < exists ; 2002 ; Mammalian Species Volume 706 ; 706 >
     au < exists ; 2002 ; Mammalian Species Volume 707 ; 707 >
     au < exists ; 2002 ; Mammalian Species Volume 708 ; 708 >
-    au < exists ; 2002 ; Mammalian Species Volume 707 ; 707 >
-    au < exists ; 2002 ; Mammalian Species Volume 708 ; 708 >
     au < exists ; 2002 ; Mammalian Species Volume 709 ; 709 >
     au < exists ; 2002 ; Mammalian Species Volume 710 ; 710 >
     au < exists ; 2002 ; Mammalian Species Volume 711 ; 711 >
@@ -16697,8 +16693,6 @@
     au < exists ; 2003 ; Mammalian Species Volume 724 ; 724 >
     au < exists ; 2003 ; Mammalian Species Volume 725 ; 725 >
     au < exists ; 2003 ; Mammalian Species Volume 726 ; 726 >
-    au < exists ; 2003 ; Mammalian Species Volume 727 ; 727 >
-    au < exists ; 2003 ; Mammalian Species Volume 728 ; 728 >
     au < exists ; 2003 ; Mammalian Species Volume 727 ; 727 >
     au < exists ; 2003 ; Mammalian Species Volume 728 ; 728 >
     au < exists ; 2003 ; Mammalian Species Volume 729 ; 729 >
@@ -16741,8 +16735,6 @@
     au < exists ; 2005 ; Mammalian Species Volume 766 ; 766 >
     au < exists ; 2005 ; Mammalian Species Volume 767 ; 767 >
     au < exists ; 2005 ; Mammalian Species Volume 768 ; 768 >
-    au < exists ; 2005 ; Mammalian Species Volume 767 ; 767 >
-    au < exists ; 2005 ; Mammalian Species Volume 768 ; 768 >
     au < exists ; 2005 ; Mammalian Species Volume 769 ; 769 >
     au < exists ; 2005 ; Mammalian Species Volume 770 ; 770 >
     au < exists ; 2005 ; Mammalian Species Volume 771 ; 771 >
@@ -16781,8 +16773,6 @@
     au < exists ; 2007 ; Mammalian Species Volume 804 ; 804 >
     au < exists ; 2007 ; Mammalian Species Volume 805 ; 805 >
     au < exists ; 2007 ; Mammalian Species Volume 806 ; 806 >
-    au < exists ; 2007 ; Mammalian Species Volume 807 ; 807 >
-    au < exists ; 2008 ; Mammalian Species Volume 808 ; 808 >
     au < exists ; 2008 ; Mammalian Species Volume 807 ; 807 >
     au < exists ; 2008 ; Mammalian Species Volume 808 ; 808 >
     au < exists ; 2008 ; Mammalian Species Volume 809 ; 809 >
@@ -16803,8 +16793,6 @@
     au < exists ; 2009 ; Mammalian Species Volume 824 ; 824 >
     au < exists ; 2009 ; Mammalian Species Volume 825 ; 825 >
     au < exists ; 2009 ; Mammalian Species Volume 826 ; 826 >
-    au < exists ; 2009 ; Mammalian Species Volume 827 ; 827 >
-    au < exists ; 2009 ; Mammalian Species Volume 828 ; 828 >
     au < exists ; 2009 ; Mammalian Species Volume 827 ; 827 >
     au < exists ; 2009 ; Mammalian Species Volume 828 ; 828 >
     au < exists ; 2009 ; Mammalian Species Volume 829 ; 829 >
