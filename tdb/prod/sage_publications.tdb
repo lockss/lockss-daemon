@@ -15181,7 +15181,7 @@
       >
 
       rights = openaccess
-      plugin = org.lockss.plugin.highwire.HighWireTriggeredPlugin
+      pluginSuffix = HighWireTriggeredPlugin
       param[base_url] = http://graft.stanford.clockss.org/
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
       comment[access] = open access triggered CLOCKSS content
@@ -34421,7 +34421,7 @@ comment[mpj] = now published by Brill
 
       {
 
-        pluginPrefix = org.lockss.plugin.highwire.
+        #pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://mlj.rsmjournals.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -36382,9 +36382,10 @@ comment[mpj] = now published by Brill
       au < exists ; 2013 ; OMEGA - Journal of Death and Dying Volume 67 ; 67 >
       au < manifest ; 2013-2014 ; OMEGA - Journal of Death and Dying Volume 68 ; 68 >
       au < manifest ; 2014 ; OMEGA - Journal of Death and Dying Volume 69 ; 69 >
-      au < released ; 2014-2015 ; OMEGA - Journal of Death and Dying Volume 70 ; 70 >
+      au < released ; 2015 ; OMEGA - Journal of Death and Dying Volume 70 ; 70 >
       au < manifest ; 2015 ; OMEGA - Journal of Death and Dying Volume 71 ; 71 >
       au < manifest ; 2016 ; OMEGA - Journal of Death and Dying Volume 72 ; 72 >
+      au < manifest ; 2016 ; OMEGA - Journal of Death and Dying Volume 73 ; 73 >
 
   }
 
@@ -50374,7 +50375,7 @@ comment[mpj] = now published by Brill
         issnl = 0284-1851
       >
 
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
       {
@@ -50481,7 +50482,7 @@ comment[mpj] = now published by Brill
 
       {
 
-        pluginPrefix = org.lockss.plugin.highwire.
+        #pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
         param[base_url] = http://acb.rsmjournals.com/
 
@@ -50503,7 +50504,7 @@ comment[mpj] = now published by Brill
 
       {
 
-        pluginPrefix = org.lockss.plugin.highwire.
+        #pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
         param[base_url] = http://acb.sagepub.com/
 
@@ -50543,7 +50544,7 @@ comment[mpj] = now published by Brill
 
       {
 
-        pluginPrefix = org.lockss.plugin.highwire.
+        #pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       {
@@ -50591,7 +50592,7 @@ comment[mpj] = now published by Brill
         issnl = 1356-2622
       >
 
-        pluginPrefix = org.lockss.plugin.highwire.
+        #pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       {
@@ -50648,7 +50649,7 @@ comment[mpj] = now published by Brill
 
       {
 
-        plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+        pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
         param[base_url] = http://ebm.rsmjournals.com/
 
@@ -50894,7 +50895,7 @@ comment[mpj] = now published by Brill
 
       {
 
-        plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+        pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
         param[base_url] = http://ebm.sagepub.com/
 
@@ -51154,7 +51155,7 @@ comment[mpj] = now published by Brill
       >
 
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-      pluginPrefix = org.lockss.plugin.highwire.
+      #pluginPrefix = org.lockss.plugin.highwire.
 
       {
 
@@ -51210,7 +51211,7 @@ comment[mpj] = now published by Brill
 
       {
 
-        pluginPrefix = org.lockss.plugin.highwire.
+        #pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://hsmr.rsmjournals.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -51230,7 +51231,7 @@ comment[mpj] = now published by Brill
 
       {
 
-        pluginPrefix = org.lockss.plugin.highwire.
+        #pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://hsm.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -51265,7 +51266,7 @@ comment[mpj] = now published by Brill
 
       {
 
-        plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+        pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://ijx.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
@@ -51353,7 +51354,7 @@ comment[mpj] = now published by Brill
         issnl = 2053-4353
       >
 
-        plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+        pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://icp.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
@@ -51378,7 +51379,7 @@ comment[mpj] = now published by Brill
 
       {
 
-        pluginPrefix = org.lockss.plugin.highwire.
+        #pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://icp.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -51408,7 +51409,7 @@ comment[mpj] = now published by Brill
 
       {
 
-        pluginPrefix = org.lockss.plugin.highwire.
+        #pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://nan.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -51474,7 +51475,7 @@ comment[mpj] = now published by Brill
         issnl = 0956-4624
       >
 
-        pluginPrefix = org.lockss.plugin.highwire.
+        #pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       {
@@ -51539,7 +51540,7 @@ comment[mpj] = now published by Brill
         issnl = 1355-8196
       >
 
-        pluginPrefix = org.lockss.plugin.highwire.
+        #pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
         comment[RSM] = from Royal Society of Medicine. http://jhsrp.rsmjournals.com/
@@ -51581,7 +51582,7 @@ comment[mpj] = now published by Brill
       comment[RSM] = from Royal Society of Medicine. http://jmb.rsmjournals.com/
 
       {
-        pluginPrefix = org.lockss.plugin.highwire.
+        #pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://jmb.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -51611,7 +51612,7 @@ comment[mpj] = now published by Brill
         issnl = 0969-1413
       >
         comment[RSM] = from Royal Society of Medicine. http://jms.rsmjournals.com/
-        pluginPrefix = org.lockss.plugin.highwire.
+        #pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       {
@@ -51659,7 +51660,7 @@ comment[mpj] = now published by Brill
 
       {
 
-        pluginPrefix = org.lockss.plugin.highwire.
+        #pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://jtt.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -51699,7 +51700,7 @@ comment[mpj] = now published by Brill
         issnl = 0141-0768
       >
 
-        pluginPrefix = org.lockss.plugin.highwire.
+        #pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
         comment[RSM] = from Royal Society of Medicine. http://jrsm.rsmjournals.com/
@@ -51919,7 +51920,7 @@ comment[mpj] = now published by Brill
         eissn = 2048-0040
       >
 
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://cvd.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -51938,7 +51939,7 @@ comment[mpj] = now published by Brill
         eissn = 2042-5333
       >
 
-        plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+        pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
 
       {
@@ -51972,7 +51973,7 @@ comment[mpj] = now published by Brill
         eissn = 2054-2704
       >
 
-        plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+        pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
         param[base_url] = http://shr.sagepub.com/
         comment[continues] = 2042-5333
@@ -51992,7 +51993,7 @@ comment[mpj] = now published by Brill
         issnl = 0023-6772
       >
 
-        pluginPrefix = org.lockss.plugin.highwire.
+        #pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       {
@@ -52114,7 +52115,7 @@ comment[mpj] = now published by Brill
         eissn = 2042-1818
       >
 
-        plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+        pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
 
       {
@@ -52165,7 +52166,7 @@ comment[mpj] = now published by Brill
         issnl = 1754-0453
       >
 
-        pluginPrefix = org.lockss.plugin.highwire.
+        #pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       {
@@ -52219,7 +52220,7 @@ comment[mpj] = now published by Brill
         issnl = 2053-3691
       >
 
-        plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+        pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
         param[base_url] = http://min.sagepub.com/
         comment[continues] = 1754-0453
@@ -52241,7 +52242,7 @@ comment[mpj] = now published by Brill
 
       {
 
-        pluginPrefix = org.lockss.plugin.highwire.
+        #pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://obmed.rsmjournals.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -52254,7 +52255,7 @@ comment[mpj] = now published by Brill
 
       {
 
-        pluginPrefix = org.lockss.plugin.highwire.
+        #pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://obm.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -52281,7 +52282,7 @@ comment[mpj] = now published by Brill
         issnl = 0268-3555
       >
 
-        pluginPrefix = org.lockss.plugin.highwire.
+        #pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       {
@@ -52333,7 +52334,7 @@ comment[mpj] = now published by Brill
 
       {
 
-        plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+        pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://smj.rsmjournals.com/
         implicit < status ; year ; name ; param[volume_name] >
 
@@ -52348,7 +52349,7 @@ comment[mpj] = now published by Brill
 
       {
 
-        plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+        pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://scm.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
@@ -52376,7 +52377,7 @@ comment[mpj] = now published by Brill
         eissn = 1758-1133 ;
         issnl = 0049-4755
       >
-        pluginPrefix = org.lockss.plugin.highwire.
+        #pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       {
@@ -52424,7 +52425,7 @@ comment[mpj] = now published by Brill
 
       {
 
-        plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+        pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://ult.rsmjournals.com/
         implicit < status ; year ; name ; param[volume_name] >
 
@@ -52441,7 +52442,7 @@ comment[mpj] = now published by Brill
 
       {
 
-        plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+        pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://ult.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
@@ -52471,7 +52472,7 @@ comment[mpj] = now published by Brill
         eissn = 1708-539X
       >
 
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
      {
@@ -52517,7 +52518,7 @@ comment[mpj] = now published by Brill
         eissn = 2047-718X
       >
 
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://hpm.sagepub.com/
       implicit < status ; year ; isbn ; name ; param[volume_name] >
 
