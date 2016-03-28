@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,13 +40,13 @@ import org.lockss.util.*;
 import org.lockss.filter.*;
 
 public class StringPermissionChecker extends BasePermissionChecker {
-  static Logger m_logger = Logger.getLogger("PermissionCheck");
+  static Logger m_logger = Logger.getLogger(StringPermissionChecker.class);
   public static final int IGNORE_CASE = 0;
 
   String m_matchString;
   BitSet m_flags = new BitSet(8);
   FilterRule m_filter;
-  String m_encoding;
+  String m_encoding;  // XXX this is initialized, can be set, however, does not seem to be used
   AuState.AccessType accessType;
   boolean setAccessType = false;
 
@@ -125,7 +125,7 @@ public class StringPermissionChecker extends BasePermissionChecker {
   static public class StringFilterRule implements FilterRule {
     public Reader createFilteredReader(Reader reader) {
       Reader filteredReader = StringFilter.makeNestedFilter(reader,
-          new String[][] { {"<br>", " "} , {"&nbsp;", " "} } , true);
+          new String[][] { {"<br>", " "} , {"&nbsp;", " "}, {"\u00a0", " "} } , true);
       return new WhiteSpaceFilter(filteredReader);
     }
   }

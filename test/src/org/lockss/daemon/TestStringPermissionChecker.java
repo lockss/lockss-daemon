@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -111,14 +111,26 @@ public class TestStringPermissionChecker extends LockssTestCase {
     sb.append("\n\nTheEnd!");
     String testStr = sb.toString();
     checker = new StringPermissionChecker(PERMISSION_STRING,
-                                          new WhiteSpaceFilterRule());
+                                          new StringPermissionChecker.StringFilterRule());
+
     Reader reader = new StringReader(testStr);
     assertTrue(checker.checkPermission(null, reader, null));
 
     // different whitespace
     sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
     sb.append(subStr1);
-    sb.append("\n");
+    sb.append("\n<br>&nbsp;");
+    sb.append(subStr2);
+    sb.append("\n\nTheEnd!");
+    testStr = sb.toString();
+
+    reader = new StringReader(testStr);
+    assertTrue(checker.checkPermission(null, reader, null));
+
+    // NBSP whitespace
+    sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
+    sb.append(subStr1);
+    sb.append("\n\u00a0");
     sb.append(subStr2);
     sb.append("\n\nTheEnd!");
     testStr = sb.toString();
