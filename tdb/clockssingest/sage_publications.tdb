@@ -4780,6 +4780,9 @@
       au < crawling ; exists ; 2015 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 127 ; 127 ; >
       au < crawling ; exists ; 2015 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 128 ; 128 ; >
       au < manifest ; exists ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 129 ; 129 ; >
+      au < manifest ; exists ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 130 ; 130 ; >
+      au < expected ; exists ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 131 ; 131 ; >
+      au < expected ; exists ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 132 ; 132 ; >
 
     }
 
@@ -32941,9 +32944,10 @@
       au < doNotProcess ; exists ; 2013 ; OMEGA - Journal of Death and Dying Volume 67 ; 67 ; >
       au < crawling ; exists ; 2013-2014 ; OMEGA - Journal of Death and Dying Volume 68 ; 68 ; >
       au < crawling ; exists ; 2014 ; OMEGA - Journal of Death and Dying Volume 69 ; 69 ; >
-      au < finished ; finished ; 2014-2015 ; OMEGA - Journal of Death and Dying Volume 70 ; 70 ; >
+      au < finished ; finished ; 2015 ; OMEGA - Journal of Death and Dying Volume 70 ; 70 ; >
       au < crawling ; exists ; 2015 ; OMEGA - Journal of Death and Dying Volume 71 ; 71 ; >
       au < manifest ; exists ; 2016 ; OMEGA - Journal of Death and Dying Volume 72 ; 72 ; >
+      au < manifest ; exists ; 2016 ; OMEGA - Journal of Death and Dying Volume 73 ; 73 ; >
 
   }
 
@@ -44261,7 +44265,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      #move to Duke University Press 
+      #moved to Duke University Press 
 
       au < doNotProcess ; exists ; 2006 ; World Policy Journal Volume 23 ; 23 ; >
       au < doNotProcess ; exists ; 2007 ; World Policy Journal Volume 24 ; 24 ; >
