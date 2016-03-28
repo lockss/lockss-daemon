@@ -53,6 +53,7 @@ import org.lockss.daemon.LockssRunnable;
 import org.lockss.daemon.status.StatusService;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
+import org.lockss.db.PkNamePair;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
@@ -4019,12 +4020,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * Provides the ISSNs for the publications in the database with more than two
    * ISSNS.
    * 
-   * @return a Map<String, Collection<Issn>> with the ISSNs keyed by the
-   *         publication name.
+   * @return a Map<PkNamePair, Collection<Issn>> with the ISSNs keyed by the
+   *         publication PK/name pair.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  public Map<String, Collection<Issn>> getPublicationsWithMoreThan2Issns()
+  public Map<PkNamePair, Collection<Issn>> getPublicationsWithMoreThan2Issns()
       throws DbException {
     return getMetadataManagerSql().getPublicationsWithMoreThan2Issns();
   }
@@ -4400,5 +4401,25 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   public Collection<Map<String, String>> getNoAccessUrlItems()
       throws DbException {
     return getMetadataManagerSql().getNoAccessUrlItems();
+  }
+
+  /**
+   * Deletes an ISSN linked to a publication.
+   * 
+   * @param mdItemSeq
+   *          A Long with the publication metadata identifier.
+   * @param issn
+   *          A String with the ISSN.
+   * @param issnType
+   *          A String with the ISSN type.
+   * @return a boolean with <code>true</code> if the ISSN was deleted,
+   *         <code>false</code> otherwise.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public boolean deletePublicationIssn(Long mdItemSeq, String issn,
+      String issnType) throws DbException {
+    return getMetadataManagerSql().deletePublicationIssn(mdItemSeq, issn,
+	issnType);
   }
 }

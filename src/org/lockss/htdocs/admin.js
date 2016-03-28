@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -283,6 +283,34 @@ function publicationSubscriptionChanged(pubSubId, subscribedRangesId,
 		// No: Enable the unsubscribed ranges.
 		if (unsubscribedRanges !== undefined) {
 			unsubscribedRanges.disabled = false;
+		}
+	}
+}
+
+// Sets the parameters passed from the MetadataMonitor forms to the
+// MetadataControl servlet.
+function setMonCtrlParams(id1, value1, id2, value2, id3, value3) {
+	if (id1 != null) {
+		var param = document.getElementById(id1);
+
+		if (param != null) {
+			param.value = value1;
+		}
+	}
+
+	if (id2 != null) {
+		var param = document.getElementById(id2);
+
+		if (param != null) {
+			param.value = value2;
+		}
+	}
+
+	if (id3 != null) {
+		var param = document.getElementById(id3);
+
+		if (param != null) {
+			param.value = value3;
 		}
 	}
 }

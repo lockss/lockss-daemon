@@ -49,6 +49,7 @@ import java.util.Set;
 import java.util.TreeMap;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
+import org.lockss.db.PkNamePair;
 import org.lockss.metadata.MetadataManager.PrioritizedAuId;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
@@ -943,6 +944,7 @@ public class MetadataManagerSql {
   // than 2 ISSNs.
   private static final String GET_PUBLICATIONS_MORE_2_ISSNS_QUERY = "select"
       + " distinct mn." + NAME_COLUMN
+      + ", issn." + MD_ITEM_SEQ_COLUMN
       + ", issn." + ISSN_COLUMN
       + ", issn." + ISSN_TYPE_COLUMN
       + " from " + MD_ITEM_NAME_TABLE + " mn"
@@ -1467,6 +1469,13 @@ public class MetadataManagerSql {
       + " or mit1." + MD_ITEM_TYPE_SEQ_COLUMN + " = 8)"
       + " and " + URL_TABLE + "." + FEATURE_COLUMN + " is null"
       + " order by \"col7\", \"col6\", \"col5\", \"col3\", \"col1\"";
+
+  // Query to delete an ISSN linked to a publication.
+  private static final String DELETE_ISSN_QUERY = "delete from "
+      + ISSN_TABLE
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?"
+      + " and " + ISSN_COLUMN + " = ?"
+      + " and " + ISSN_TYPE_COLUMN + " = ?";
 
   private DbManager dbManager;
   private MetadataManager metadataManager;
@@ -5297,16 +5306,16 @@ public class MetadataManagerSql {
    * Provides the ISSNs for the publications in the database with more than two
    * ISSNS.
    * 
-   * @return a Map<String, Collection<Issn>> with the ISSNs keyed by the
-   *         publication name.
+   * @return a Map<PkNamePair, Collection<Issn>> with the ISSNs keyed by the
+   *         publication PK/name pair.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  public Map<String, Collection<Issn>> getPublicationsWithMoreThan2Issns()
+  public Map<PkNamePair, Collection<Issn>> getPublicationsWithMoreThan2Issns()
       throws DbException {
     final String DEBUG_HEADER = "getPublicationsWithMoreThan2Issns(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
-    Map<String, Collection<Issn>> publicationsIssns = null;
+    Map<PkNamePair, Collection<Issn>> publicationsIssns = null;
     Connection conn = null;
 
     try {
@@ -5330,23 +5339,23 @@ public class MetadataManagerSql {
    * 
    * @param conn
    *          A Connection with the database connection to be used.
-   * @return a Map<String, Collection<Issn>> with the ISSNs keyed by the
-   *         publication name.
+   * @return a Map<PkNamePair, Collection<Issn>> with the ISSNs keyed by the
+   *         publication PK/name pair.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  public Map<String, Collection<Issn>> getPublicationsWithMoreThan2Issns(
+  public Map<PkNamePair, Collection<Issn>> getPublicationsWithMoreThan2Issns(
       Connection conn) throws DbException {
     final String DEBUG_HEADER = "getPublicationsWithMoreThan2Issns(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
-    Map<String, Collection<Issn>> publicationsIssns =
-	new TreeMap<String, Collection<Issn>>();
+    Map<PkNamePair, Collection<Issn>> publicationsIssns =
+	new TreeMap<PkNamePair, Collection<Issn>>();
 
     PreparedStatement stmt = null;
     ResultSet resultSet = null;
 
     try {
-      String previousPublicationName = null;
+      PkNamePair previousPair = null;
 
       // Get the publication ISSNs.
       stmt = dbManager.prepareStatement(conn,
@@ -5359,19 +5368,24 @@ public class MetadataManagerSql {
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
 
+	Long pk = resultSet.getLong(MD_ITEM_SEQ_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pk = " + pk);
+
+	PkNamePair pair = new PkNamePair(pk, publicationName);
+
 	String issn = resultSet.getString(ISSN_COLUMN);
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "issn = " + issn);
 
 	String issnType = resultSet.getString(ISSN_TYPE_COLUMN);
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "issnType = " + issnType);
 
-	if (publicationName.equals(previousPublicationName)) {
-	  publicationsIssns.get(publicationName).add(new Issn(issn, issnType));
+	if (pair.equals(previousPair)) {
+	  publicationsIssns.get(pair).add(new Issn(issn, issnType));
 	} else {
 	  Collection<Issn> publicationIssns = new ArrayList<Issn>();
 	  publicationIssns.add(new Issn(issn, issnType));
-	  publicationsIssns.put(publicationName, publicationIssns);
-	  previousPublicationName = publicationName;
+	  publicationsIssns.put(pair, publicationIssns);
+	  previousPair = pair;
 	}
       }
     } catch (SQLException sqle) {
@@ -6587,5 +6601,92 @@ public class MetadataManagerSql {
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "noAccessUrlItems.size() = "
 	+ noAccessUrlItems.size());
     return noAccessUrlItems;
+  }
+
+  /**
+   * Deletes an ISSN linked to a publication.
+   * 
+   * @param mdItemSeq
+   *          A Long with the publication metadata identifier.
+   * @param issn
+   *          A String with the ISSN.
+   * @param issnType
+   *          A String with the ISSN type.
+   * @return a boolean with <code>true</code> if the ISSN was deleted,
+   *         <code>false</code> otherwise.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  boolean deletePublicationIssn(Long mdItemSeq, String issn, String issnType)
+      throws DbException {
+    final String DEBUG_HEADER = "deletePublicationIssn(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    boolean deleted = false;
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Delete the ISSN.
+      deleted = deletePublicationIssn(conn, mdItemSeq, issn, issnType);
+      DbManager.commitOrRollback(conn, log);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "deleted = " + deleted);
+    return deleted;
+  }
+
+  /**
+   * Deletes an ISSN linked to a publication.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the publication metadata identifier.
+   * @param issn
+   *          A String with the ISSN.
+   * @param issnType
+   *          A String with the ISSN type.
+   * @return a boolean with <code>true</code> if the ISSN was deleted,
+   *         <code>false</code> otherwise.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private boolean deletePublicationIssn(Connection conn, Long mdItemSeq,
+      String issn, String issnType) throws DbException {
+    final String DEBUG_HEADER = "deletePublicationIssn(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "issn = " + issn);
+      log.debug2(DEBUG_HEADER + "issnType = " + issnType);
+    }
+
+    int deletedCount = -1;
+    PreparedStatement deleteIssn =
+	dbManager.prepareStatement(conn, DELETE_ISSN_QUERY);
+
+    try {
+      deleteIssn.setLong(1, mdItemSeq);
+      deleteIssn.setString(2, issn);
+      deleteIssn.setString(3, issnType);
+      deletedCount = dbManager.executeUpdate(deleteIssn);
+    } catch (SQLException sqle) {
+      String message = "Cannot delete ISSN";
+      log.error(message, sqle);
+      log.error("mdItemSeq = '" + mdItemSeq + "'.");
+      log.error("issn = '" + issn + "'.");
+      log.error("issnType = '" + issnType + "'.");
+      log.error("SQL = '" + DELETE_ISSN_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseStatement(deleteIssn);
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "result = " + (deletedCount > 0));
+    return deletedCount > 0;
   }
 }

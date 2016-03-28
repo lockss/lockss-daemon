@@ -49,6 +49,8 @@ import org.lockss.ws.entities.IdNamePair;
 import org.lockss.ws.entities.LockssWebServicesFault;
 import org.lockss.ws.entities.MetadataItemWsResult;
 import org.lockss.ws.entities.MismatchedMetadataChildWsResult;
+import org.lockss.ws.entities.PkNamePair;
+import org.lockss.ws.entities.PkNamePairIdNamePairListPair;
 import org.lockss.ws.entities.UnnamedItemWsResult;
 
 /**
@@ -289,10 +291,10 @@ public class MetadataMonitorServiceImpl implements MetadataMonitorService {
       List<KeyIdNamePairListPair> results =
 	  new ArrayList<KeyIdNamePairListPair>();
 
-      Map<String, Collection<Issn>> publicationsIssns =
+      Map<org.lockss.db.PkNamePair, Collection<Issn>> publicationsIssns =
 	  getMetadataManager().getPublicationsWithMoreThan2Issns();
 
-      for (String publication : publicationsIssns.keySet()) {
+      for (org.lockss.db.PkNamePair publication : publicationsIssns.keySet()) {
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "publication = " + publication);
 
@@ -303,7 +305,52 @@ public class MetadataMonitorServiceImpl implements MetadataMonitorService {
 	  issnResults.add(new IdNamePair(issn.getValue(), issn.getType()));
 	}
 
-        results.add(new KeyIdNamePairListPair(publication, issnResults));
+        results.add(new KeyIdNamePairListPair(publication.getName(),
+            issnResults));
+      }
+
+      return results;
+    } catch (Exception e) {
+      throw new LockssWebServicesFault(e);
+    }
+  }
+
+  /**
+   * Provides the ISSNs for the publications in the database with more than two
+   * ISSNS.
+   * 
+   * @return a List<PkNamePairIdNamePairListPair> with the ISSNs keyed by the
+   *         publication PK/name pair. The IdNamePair objects contain the ISSN
+   *         as the identifier and the ISSN type as the name.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<PkNamePairIdNamePairListPair>
+  getIdPublicationsWithMoreThan2Issns() throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "getPublicationsWithMoreThan2Issns(): ";
+
+    try {
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Invoked.");
+      List<PkNamePairIdNamePairListPair> results =
+	  new ArrayList<PkNamePairIdNamePairListPair>();
+
+      Map<org.lockss.db.PkNamePair, Collection<Issn>> publicationsIssns =
+	  getMetadataManager().getPublicationsWithMoreThan2Issns();
+
+      for (org.lockss.db.PkNamePair publication : publicationsIssns.keySet()) {
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "publication = " + publication);
+
+	ArrayList<IdNamePair> issnResults = new ArrayList<IdNamePair>();
+
+	for (Issn issn : publicationsIssns.get(publication)) {
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "issn = " + issn);
+	  issnResults.add(new IdNamePair(issn.getValue(), issn.getType()));
+	}
+
+        results.add(new PkNamePairIdNamePairListPair(
+            new PkNamePair(publication.getPk(), publication.getName()),
+            issnResults));
       }
 
       return results;
