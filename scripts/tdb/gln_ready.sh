@@ -13,9 +13,9 @@ tpath="/home/$LOGNAME/tmp"
 
 # Make a list of AUids that are crawling in clockssingest, manifest in gln
    # Make a list of AUids from clockss
-   ./scripts/tdb/tdbout -C -a -Q 'year ~ "201" and plugin ~ "HighWirePressH20Plugin"' tdb/clockssingest/sage_publications.tdb | sort > $tpath/gr_clockss_c.txt
+   ./scripts/tdb/tdbout -C -a -Q 'year ~ "201" and plugin ~ "HighWirePressH20Plugin" and year != "2016"' tdb/clockssingest/sage_publications.tdb | sort > $tpath/gr_clockss_c.txt
    # Make a list of AUids from gln
-   ./scripts/tdb/tdbout -M -a -Q 'year ~ "201" and plugin ~ "HighWirePressH20Plugin"' tdb/prod/sage_publications.tdb | sort > $tpath/gr_gln_m.txt
+   ./scripts/tdb/tdbout -M -a -Q 'year ~ "201" and plugin ~ "HighWirePressH20Plugin" and year != "2016"' tdb/prod/sage_publications.tdb | sort > $tpath/gr_gln_m.txt
    # Convert the gln list to clockss format
    cat $tpath/gr_gln_m.txt | sed -e 's/HighWirePressH20Plugin/ClockssHighWirePressH20Plugin/' > $tpath/gr_gln_mc.txt
    # Find common items on the clockss list and the clockss-formatted gln list
@@ -24,6 +24,8 @@ tpath="/home/$LOGNAME/tmp"
    echo "********ERRORS********" > $tpath/gr_errors.txt
    echo "***Manifest in GLN, but not Crawling in Clockss***" >> $tpath/gr_errors.txt
    comm -13 $tpath/gr_clockss_c.txt $tpath/gr_gln_mc.txt >> $tpath/gr_errors.txt
+   echo "***Not Manifest in GLN, but Crawling in Clockss***" >> $tpath/gr_errors.txt
+   comm -23 $tpath/gr_clockss_c.txt $tpath/gr_gln_mc.txt >> $tpath/gr_errors.txt
    # Select a random collection of clockss AUids
    shuf $tpath/gr_common.txt | head -10 > $tpath/gr_common_shuf.txt
 
@@ -42,7 +44,7 @@ tpath="/home/$LOGNAME/tmp"
    # Convert the list from gln to clockss
    cat $tpath/gr_found_gln.txt | sed -e 's/HighWirePressH20Plugin/ClockssHighWirePressH20Plugin/' | sort > $tpath/gr_common_manifest.txt
    # Find items not healthy on the ingest machines.
-   echo "***M on gln. C on clockss. Manifest pages for both. Not healthy on ingest machines.***"
+   echo "***M on gln. C on clockss. Manifest pages for both. Not healthy on ingest machines.***" >> gr_errors.txt
    comm -13 $tpath/gr_ingest_healthy.txt $tpath/gr_common_manifest.txt >> gr_errors.txt
    # Find common items on the list of AUs with manifest pages, and the list of healthy AUs on the ingest machines.
    comm -12 $tpath/gr_ingest_healthy.txt $tpath/gr_common_manifest.txt | sed -e 's/ClockssHighWirePressH20Plugin/HighWirePressH20Plugin/'
