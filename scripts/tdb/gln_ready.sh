@@ -22,12 +22,12 @@ tpath="/home/$LOGNAME/tmp"
    comm -12 $tpath/gr_clockss_c.txt $tpath/gr_gln_mc.txt > $tpath/gr_common.txt
    # Document AUs that are in the GLN but not in clockss
    echo "********ERRORS********" > $tpath/gr_errors.txt
-   echo "***Manifest in GLN, but not Crawling in Clockss***" >> $tpath/gr_errors.txt
-   comm -13 $tpath/gr_clockss_c.txt $tpath/gr_gln_mc.txt >> $tpath/gr_errors.txt
-   echo "***Not Manifest in GLN, but Crawling in Clockss***" >> $tpath/gr_errors.txt
-   comm -23 $tpath/gr_clockss_c.txt $tpath/gr_gln_mc.txt >> $tpath/gr_errors.txt
+   #echo "***Manifest in GLN, but not Crawling in Clockss***" >> $tpath/gr_errors.txt
+   #comm -13 $tpath/gr_clockss_c.txt $tpath/gr_gln_mc.txt >> $tpath/gr_errors.txt
+   #echo "***Not Manifest in GLN, but Crawling in Clockss***" >> $tpath/gr_errors.txt
+   #comm -23 $tpath/gr_clockss_c.txt $tpath/gr_gln_mc.txt >> $tpath/gr_errors.txt
    # Select a random collection of clockss AUids
-   shuf $tpath/gr_common.txt | head -10 > $tpath/gr_common_shuf.txt
+   shuf $tpath/gr_common.txt | head -200 > $tpath/gr_common_shuf.txt
 
 
 # Does AU have a clockss and gln manifest page?
@@ -44,8 +44,8 @@ tpath="/home/$LOGNAME/tmp"
    # Convert the list from gln to clockss
    cat $tpath/gr_found_gln.txt | sed -e 's/HighWirePressH20Plugin/ClockssHighWirePressH20Plugin/' | sort > $tpath/gr_common_manifest.txt
    # Find items not healthy on the ingest machines.
-   echo "***M on gln. C on clockss. Manifest pages for both. Not healthy on ingest machines.***" >> gr_errors.txt
-   comm -13 $tpath/gr_ingest_healthy.txt $tpath/gr_common_manifest.txt >> gr_errors.txt
+   echo "***M on gln. C on clockss. Manifest pages for both. Not healthy on ingest machines.***" >> $tpath/gr_errors.txt
+   comm -13 $tpath/gr_ingest_healthy.txt $tpath/gr_common_manifest.txt >> $tpath/gr_errors.txt
    # Find common items on the list of AUs with manifest pages, and the list of healthy AUs on the ingest machines.
    comm -12 $tpath/gr_ingest_healthy.txt $tpath/gr_common_manifest.txt | sed -e 's/ClockssHighWirePressH20Plugin/HighWirePressH20Plugin/'
    cat $tpath/gr_errors.txt
