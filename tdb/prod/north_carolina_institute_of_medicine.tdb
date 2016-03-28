@@ -17,8 +17,8 @@
     comment[0] = 2002-2013 content on http://classic.ncmedicaljournal.com/
     comment[notReady] = need subscription. Login for V75 at http://www.ncmedicaljournal.com/content/75/1/15/suppl/DCSupplemental
 
-    au < notReady ; 2014 ; North Carolina Medical Journal Volume 75 ; 75 >
-    au < notReady ; 2015 ; North Carolina Medical Journal Volume 76 ; 76 >
+    au < testing ; 2014 ; North Carolina Medical Journal Volume 75 ; 75 >
+    au < testing ; 2015 ; North Carolina Medical Journal Volume 76 ; 76 >
     au < manifest ; 2016 ; North Carolina Medical Journal Volume 77 ; 77 >
 
   }
