@@ -1,0 +1,113 @@
+{
+
+  publisher <
+    name = International Union of Crystallography ;
+    info[contract] = 2010 ;
+    info[tester] = 
+  >
+  
+  {
+  
+    title <
+      name = Acta Crystallographica Section E: Crystallographic Communications ;
+      eissn = 2056-9890
+    >
+    
+    plugin = org.lockss.plugin.internationalunionofcrystallography.oai.ClockssIUCrOaiPlugin
+    param[base_url] = http://journals.iucr.org/
+    param[scripts_url] = http://scripts.iucr.org/
+    implicit < status ; year ; volume ; name ; param[au_oai_date] >
+    comment[name] = Changed the subtitle from Structure Reports Online to Crystallographic Communications, from 1600-5368 to 2056-9890
+    comment[date] = Date is a year month published date in the form yyyy-mm. Not all months have material published
+    
+    param[au_oai_set] = actacryste
+    
+    au < expected ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 1 ; 2015-01 >
+    au < expected ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 2 ; 2015-02 >
+    au < expected ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 3 ; 2015-03 >
+    au < expected ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 4 ; 2015-04 >
+    au < expected ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 5 ; 2015-05 >
+    au < expected ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 6 ; 2015-06 >
+    au < expected ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 7 ; 2015-07 >
+    au < expected ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 8 ; 2015-08 >
+    au < expected ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 9 ; 2015-09 >
+    au < expected ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 10 ; 2015-10 >
+    au < expected ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 11 ; 2015-11 >
+    au < expected ; 2015 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 12 ; 2015-12 >
+  
+  }
+
+  {
+  
+    title <
+      name = Acta Crystallographica Section E: Structure Reports Online ;
+      eissn = 1600-5368
+    >
+    
+    plugin = org.lockss.plugin.internationalunionofcrystallography.oai.ClockssIUCrOaiPlugin
+    param[base_url] = http://journals.iucr.org/
+    param[scripts_url] = http://scripts.iucr.org/
+    implicit < status ; year ; volume ; name ; param[au_oai_date] >
+    comment[date] = Date is a year month published date in the form yyyy-mm. Not all months have material published
+    
+    param[au_oai_set] = actacryste
+    
+    au < exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 1 ; 2014-01 >
+    au < exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 2 ; 2014-02 >
+    au < exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 3 ; 2014-03 >
+    au < exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 4 ; 2014-04 >
+    au < exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 5 ; 2014-05 >
+    au < exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 6 ; 2014-06 >
+    au < exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 7 ; 2014-07 >
+    au < exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 8 ; 2014-08 >
+    au < exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 9 ; 2014-09 >
+    au < exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 10 ; 2014-10 >
+    au < exists ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 11 ; 2014-11 >
+    au < doesNotExist ; 2014 ; 70 ; Acta Crystallographica Section E: Structure Reports Online Volume 70 Part 12 ; 2014-12 >
+  
+  }
+
+  {
+  
+    title <
+      name =  IUCrJ ;
+      eissn = 2052-2525 ;
+      issnl = 2052-2525
+    >
+    
+    plugin = org.lockss.plugin.internationalunionofcrystallography.oai.ClockssIUCrOaiPlugin
+    param[base_url] = http://journals.iucr.org/
+    param[scripts_url] = http://scripts.iucr.org/
+    implicit < status ; year ; volume ; name ; param[au_oai_date] >
+    comment[date] = Date is a year month published date in the form yyyy-mm. Not all months have material published
+    
+    param[au_oai_set] = iucrj
+    
+    
+    au < doesNotExist ; 2014 ; 1 ; IUCrJ Volume 1 Part 1 ; 2014-01 >
+    au < exists ; 2014 ; 1 ; IUCrJ Volume 1 Part 2 ; 2014-02 >
+    au < doesNotExist ; 2014 ; 1 ; IUCrJ Volume 1 Part 3 ; 2014-03 >
+    au < exists ; 2014 ; 1 ; IUCrJ Volume 1 Part 4 ; 2014-04 >
+    au < exists ; 2014 ; 1 ; IUCrJ Volume 1 Part 5 ; 2014-05 >
+    au < exists ; 2014 ; 1 ; IUCrJ Volume 1 Part 6 ; 2014-06 >
+    au < exists ; 2014 ; 1 ; IUCrJ Volume 1 Part 7 ; 2014-07 >
+    au < exists ; 2014 ; 1 ; IUCrJ Volume 1 Part 8 ; 2014-08 >
+    au < exists ; 2014 ; 1 ; IUCrJ Volume 1 Part 9 ; 2014-09 >
+    au < exists ; 2014 ; 1 ; IUCrJ Volume 1 Part 10 ; 2014-10 >
+    au < doesNotExist ; 2014 ; 1 ; IUCrJ Volume 1 Part 11 ; 2014-11 >
+    au < doesNotExist ; 2014 ; 1 ; IUCrJ Volume 1 Part 12 ; 2014-12 >
+    au < expected ; 2015 ; 2 ; IUCrJ Volume 2 Part 1 ; 2015-01 >
+    au < expected ; 2015 ; 2 ; IUCrJ Volume 2 Part 2 ; 2015-02 >
+    au < expected ; 2015 ; 2 ; IUCrJ Volume 2 Part 3 ; 2015-03 >
+    au < expected ; 2015 ; 2 ; IUCrJ Volume 2 Part 4 ; 2015-04 >
+    au < expected ; 2015 ; 2 ; IUCrJ Volume 2 Part 5 ; 2015-05 >
+    au < expected ; 2015 ; 2 ; IUCrJ Volume 2 Part 6 ; 2015-06 >
+    au < expected ; 2015 ; 2 ; IUCrJ Volume 2 Part 7 ; 2015-07 >
+    au < expected ; 2015 ; 2 ; IUCrJ Volume 2 Part 8 ; 2015-08 >
+    au < expected ; 2015 ; 2 ; IUCrJ Volume 2 Part 9 ; 2015-09 >
+    au < expected ; 2015 ; 2 ; IUCrJ Volume 2 Part 10 ; 2015-10 >
+    au < expected ; 2015 ; 2 ; IUCrJ Volume 2 Part 11 ; 2015-11 >
+    au < expected ; 2015 ; 2 ; IUCrJ Volume 2 Part 12 ; 2015-12 >
+
+  }
+}
