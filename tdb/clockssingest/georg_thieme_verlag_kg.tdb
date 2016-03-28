@@ -48,7 +48,7 @@
     au < finished ; crawling ; 2013 ; 2013 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 48 ; 48 ; >
     au < finished ; crawling ; 2014 ; 2014 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 49 ; 49 ; >
     au < crawling ; exists ; 2015 ; 2015 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 50 ; 50 ; >
-    au < expected ; exists ; 2016 ; 2016 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 51 ; 51 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 51 ; 51 ; >
 
   }
 
@@ -103,7 +103,7 @@
     au < crawling ; exists ; 2013 ; 2013 ; Aktuelle Dermatologie Volume 39 ; 39 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Aktuelle Dermatologie Volume 40 ; 40 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; 2015 ; Aktuelle Dermatologie Volume 41 ; 41 ; >
-    au < expected ; exists ; 2016 ; 2016 ; Aktuelle Dermatologie Volume 42 ; 42 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Aktuelle Dermatologie Volume 42 ; 42 ; >
 
   }
 
@@ -133,7 +133,7 @@
     au < finished ; crawling ; 2013 ; 2013 ; Aktuelle Ernährungsmedizin Volume 38 ; 38 ; >
     au < finished ; manifest ; 2014 ; 2014 ; Aktuelle Ernährungsmedizin Volume 39 ; 39 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Aktuelle Ernährungsmedizin Volume 40 ; 40 ; >
-    au < expected ; exists ; 2016 ; 2016 ; Aktuelle Ernährungsmedizin Volume 41 ; 41 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Aktuelle Ernährungsmedizin Volume 41 ; 41 ; >
 
   }
 
@@ -152,7 +152,7 @@
     au < finished ; crawling ; 2013 ; 2013 ; Aktuelle Kardiologie Volume 2 ; 2 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Aktuelle Kardiologie Volume 3 ; 3 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Aktuelle Kardiologie Volume 4 ; 4 ; >
-    au < expected ; exists ; 2016 ; 2016 ; Aktuelle Kardiologie Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Aktuelle Kardiologie Volume 5 ; 5 ; >
 
   }
 
@@ -203,7 +203,7 @@
     au < finished ; finished ; 2013 ; 2013 ; Aktuelle Neurologie Volume 2013 ; 40 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Aktuelle Neurologie Volume 2014 ; 41 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Aktuelle Neurologie Volume 2015 ; 42 ; >
-    au < expected ; exists ; 2016 ; 2016 ; Aktuelle Neurologie Volume 2016 ; 43 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Aktuelle Neurologie Volume 2016 ; 43 ; >
 
   }
 
@@ -252,7 +252,7 @@
     au < finished ; crawling ; 2013 ; 2013 ; Aktuelle Rheumatologie Volume 40 ; 40 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Aktuelle Rheumatologie Volume 41 ; 41 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Aktuelle Rheumatologie Volume 42 ; 42 ; >
-    au < expected ; exists ; 2016 ; 2016 ; Aktuelle Rheumatologie Volume 43 ; 43 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Aktuelle Rheumatologie Volume 43 ; 43 ; >
 
   }
 
@@ -326,7 +326,7 @@
     au < finished ; crawling ; 2013 ; 2013 ; Aktuelle Urologie Volume 2013 ; 44 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; 2014 ; Aktuelle Urologie Volume 2014 ; 45 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 2015 ; Aktuelle Urologie Volume 2015 ; 46 ; >
-    au < expected ; exists ; 2016 ; 2016 ; Aktuelle Urologie Volume 2016 ; 47 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Aktuelle Urologie Volume 2016 ; 47 ; >
 
    }
 
@@ -411,7 +411,7 @@
     au < finished ; crawling ; 2013 ; 2013 ; Allgemein- und Viszeralchirurgie up2date Volume 2013 ; 7 ; >
     au < finished ; finished ; 2014 ; 2014 ; Allgemein- und Viszeralchirurgie up2date Volume 2014 ; 8 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Allgemein- und Viszeralchirurgie up2date Volume 2015 ; 9 ; >
-    au < expected ; exists ; 2016 ; 2016 ; Allgemein- und Viszeralchirurgie up2date Volume 2016 ; 10 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Allgemein- und Viszeralchirurgie up2date Volume 2016 ; 10 ; >
 
    }
 
@@ -459,7 +459,7 @@
     au < finished ; crawling ; 2013 ; 2013 ; American Journal of Perinatology Volume 2013 ; 30 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2014 ; 2014 ; American Journal of Perinatology Volume 2014 ; 31 ; >
     au < crawling ; exists ; 2015 ; 2015 ; American Journal of Perinatology Volume 2015 ; 32 ; >
-    au < expected ; exists ; 2016 ; 2016 ; American Journal of Perinatology Volume 2016 ; 33 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; American Journal of Perinatology Volume 2016 ; 33 ; >
 
    }
 
@@ -479,7 +479,7 @@
     au < finished ; crawling ; 2013 ; 2013 ; American Journal of Perinatology Reports Volume 2013 ; 3 ; >
     au < finished ; crawling ; 2014 ; 2014 ; American Journal of Perinatology Reports Volume 2014 ; 4 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 2015 ; American Journal of Perinatology Reports Volume 2015 ; 5 ; >
-    au < expected ; exists ; 2016 ; 2016 ; American Journal of Perinatology Reports Volume 2016 ; 6 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; American Journal of Perinatology Reports Volume 2016 ; 6 ; >
 
    }
 
@@ -559,7 +559,7 @@
     au < finished ; crawling ; 2013 ; 2013 ; Drug Research Volume 2013 ; 63 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Drug Research Volume 2014 ; 64 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Drug Research Volume 2015 ; 65 ; >
-    au < expected ; exists ; 2016 ; 2016 ; Drug Research Volume 2016 ; 66 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Drug Research Volume 2016 ; 66 ; >
 
    }
 
@@ -579,7 +579,7 @@
     au < finished ; crawling ; 2013 ; 2013 ; Augenheilkunde up2date Volume 2013 ; 3 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Augenheilkunde up2date Volume 2014 ; 4 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Augenheilkunde up2date Volume 2015 ; 5 ; >
-    au < expected ; exists ; 2016 ; 2016 ; Augenheilkunde up2date Volume 2016 ; 6 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Augenheilkunde up2date Volume 2016 ; 6 ; >
 
   }
 
@@ -606,7 +606,7 @@
         au < finished ; crawling ; 2013 ; 2013 ; B&G Bewegungstherapie und Gesundheitssport Volume 2013 ; 29 ; >
         au < finished ; finished ; 2014 ; 2014 ; B&G Bewegungstherapie und Gesundheitssport Volume 2014 ; 30 ; >
         au < crawling ; exists ; 2015 ; 2015 ; B&G Bewegungstherapie und Gesundheitssport Volume 2015 ; 31 ; >
-        au < expected ; exists ; 2016 ; 2016 ; B&G Bewegungstherapie und Gesundheitssport Volume 2016 ; 32 ; >
+        au < manifest ; exists ; 2016 ; 2016 ; B&G Bewegungstherapie und Gesundheitssport Volume 2016 ; 32 ; >
 
   }
 
@@ -695,7 +695,7 @@
     au < finished ; crawling ; 2013 ; 2013 ; Clinics in Colon and Rectal Surgery Volume 2013 ; 026 ; >
     au < finished ; manifest ; 2014 ; 2014 ; Clinics in Colon and Rectal Surgery Volume 2014 ; 027 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Clinics in Colon and Rectal Surgery Volume 2015 ; 028 ; >
-    au < expected ; exists ; 2016 ; 2016 ; Clinics in Colon and Rectal Surgery Volume 2016 ; 029 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Clinics in Colon and Rectal Surgery Volume 2016 ; 029 ; >
 
   }
 
@@ -719,7 +719,7 @@
     au < finished ; crawling ; 2013 ; 2013 ; Craniomaxillofacial Trauma & Reconstruction Volume 2013 ; 6 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; 2014 ; Craniomaxillofacial Trauma & Reconstruction Volume 2014 ; 7 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Craniomaxillofacial Trauma & Reconstruction Volume 2015 ; 8 ; >
-    au < expected ; exists ; 2016 ; 2016 ; Craniomaxillofacial Trauma & Reconstruction Volume 2016 ; 9 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Craniomaxillofacial Trauma & Reconstruction Volume 2016 ; 9 ; >
 
   }
 
@@ -2770,7 +2770,7 @@
    au < crawling ; exists ; 2013 ; 2013 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2013 ; 2013 ; >
    au < crawling ; exists ; 2014 ; 2014 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2014 ; 2014 ; >
    au < crawling ; exists ; 2015 ; 2015 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2015 ; 2015 ; >
-   au < expected ; exists ; 2016 ; 2016 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2016 ; 2016 ; >
+   au < manifest ; exists ; 2016 ; 2016 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2016 ; 2016 ; >
 
   }
 
