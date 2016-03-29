@@ -3,9 +3,9 @@
     name = Evergreen Review
   >
   
-  plugin = org.lockss.plugin.evergreenreview.EvergreenReviewPlugin
-  implicit < status ; year ; name ; param[volume_name] >
-  param[base_url] = http://www.evergreenreview.com/ 
+  #plugin = org.lockss.plugin.evergreenreview.EvergreenReviewPlugin
+  #implicit < status ; year ; name ; param[volume_name] >
+  #param[base_url] = http://www.evergreenreview.com/ 
   
   {
   

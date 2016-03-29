@@ -4,7 +4,7 @@
 
 /*
 
- Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -602,6 +602,13 @@ public class AdminServletManager extends BaseServletManager {
 	  	       ServletDescr.NEED_ROLE_DEBUG,
 	  	       "Metadata Monitor");
 
+  protected static final ServletDescr SERVLET_MD_CONTROL =
+      new ServletDescr("MetadataControl",
+	  	       MetadataControl.class,
+	  	       "Metadata Control",
+	  	       ServletDescr.NEED_ROLE_AU_ADMIN,
+	  	       "Metadata Control");
+
   protected static final ServletDescr SERVLET_OIOSAML =
       new ServletDescr("SAMLDispatcherServlet",
 	  		DispatcherServlet.class,
@@ -666,6 +673,7 @@ public class AdminServletManager extends BaseServletManager {
     LOGIN_FORM,
     SERVLET_CXF_WEB_SERVICES,
     SERVLET_MD_MONITOR,
+    SERVLET_MD_CONTROL,
     SERVLET_OIOSAML
   };
 
@@ -712,6 +720,7 @@ public class AdminServletManager extends BaseServletManager {
     LOGIN_FORM,
     SERVLET_CXF_WEB_SERVICES,
     SERVLET_MD_MONITOR,
+    SERVLET_MD_CONTROL,
     SERVLET_OIOSAML
   };
   // XXXUI List of servlets to show in transitional UI: combine main list with new versions
@@ -757,6 +766,7 @@ public class AdminServletManager extends BaseServletManager {
     LOGIN_FORM,
     SERVLET_CXF_WEB_SERVICES,
     SERVLET_MD_MONITOR,
+    SERVLET_MD_CONTROL,
     SERVLET_OIOSAML
   };
 

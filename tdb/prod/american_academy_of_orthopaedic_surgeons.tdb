@@ -17,7 +17,7 @@
     param[base_url] = http://www.jaaos.org/
     implicit < status ; year ; name ; param[volume_name] >
     
-    comment[0] = publisher moved to Wolters Kluwer. see http://journals.lww.com/jaaos/
+    # publisher moved to Wolters Kluwer. see http://journals.lww.com/jaaos/
 
     au < down ; 1993 ; Journal of the American Academy of Orthopaedic Surgeons Volume 1 ; 1 >
     au < down ; 1994 ; Journal of the American Academy of Orthopaedic Surgeons Volume 2 ; 2 >

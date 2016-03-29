@@ -435,22 +435,21 @@
     >
     
     param[journal_id] = cag
-    implicit < status ; year ; name ; param[volume_name] ; volume >
+    #implicit < status ; year ; name ; param[volume_name] >
     
-
-    au < down ; 1995 ; Culture & Agriculture Volume 1-17 ; -  ; 17 >
-    au < down ; 1996 ; Culture & Agriculture Volume 18 ; 18 ; 18 >
-    au < down ; 1997 ; Culture & Agriculture Volume 19 ; 19 ; 19 >
-    au < down ; 1998 ; Culture & Agriculture Volume 20 ; 20 ; 20 >
-    au < down ; 1999 ; Culture & Agriculture Volume 21 ; 21 ; 21 >
-    au < down ; 2000 ; Culture & Agriculture Volume 22 ; 22 ; 22 >
-    au < down ; 2001 ; Culture & Agriculture Volume 23 ; 23 ; 23 >
-    au < down ; 2002 ; Culture & Agriculture Volume 24 ; 24 ; 24 >
-    au < down ; 2003 ; Culture & Agriculture Volume 25 ; 25 ; 25 >
-    au < down ; 2004 ; Culture & Agriculture Volume 26 ; 26 ; 26 >
-    au < down ; 2005 ; Culture & Agriculture Volume 27 ; 27 ; 27 >
-    au < down ; 2006 ; Culture & Agriculture Volume 28 ; 28 ; 28 >
-    au < down ; 2007 ; Culture & Agriculture Volume 29 ; 29 ; 29 >
+    au < down ; 1995 ; Culture & Agriculture Volume 1-17 ; - >
+    au < down ; 1996 ; Culture & Agriculture Volume 18 ; 18 >
+    au < down ; 1997 ; Culture & Agriculture Volume 19 ; 19 >
+    au < down ; 1998 ; Culture & Agriculture Volume 20 ; 20 >
+    au < down ; 1999 ; Culture & Agriculture Volume 21 ; 21 >
+    au < down ; 2000 ; Culture & Agriculture Volume 22 ; 22 >
+    au < down ; 2001 ; Culture & Agriculture Volume 23 ; 23 >
+    au < down ; 2002 ; Culture & Agriculture Volume 24 ; 24 >
+    au < down ; 2003 ; Culture & Agriculture Volume 25 ; 25 >
+    au < down ; 2004 ; Culture & Agriculture Volume 26 ; 26 >
+    au < down ; 2005 ; Culture & Agriculture Volume 27 ; 27 >
+    au < down ; 2006 ; Culture & Agriculture Volume 28 ; 28 >
+    au < down ; 2007 ; Culture & Agriculture Volume 29 ; 29 >
    
   }
 

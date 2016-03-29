@@ -388,7 +388,7 @@
       >
 
       param[journal_issn] = 1741-8003
-      comment[0] = no issue in 2011 & 2012
+      # no issue in 2011 & 2012
       
       au < down ; 2005-2007 ; International Journal of Advanced Media and Communication Volume 1 ; 1 >
       au < down ; 2008 ; International Journal of Advanced Media and Communication Volume 2 ; 2 >
@@ -446,7 +446,7 @@
       >
 
       param[journal_issn] = 1746-1383
-      comment[0] = no issue in 2012
+      # no issue in 2012
       
       au < down ; 2007 ; International Journal of Agent-Oriented Software Engineering Volume 1 ; 1 >
       au < down ; 2008 ; International Journal of Agent-Oriented Software Engineering Volume 2 ; 2 >
@@ -501,7 +501,7 @@
       >
 
       param[journal_issn] = 1741-5004
-      comment[0] = no issue in 2010, 2013
+      # no issue in 2010, 2013
       
       au < down ; 2000-2001 ; International Journal of Agricultural Resources, Governance and Ecology Volume 1 ; 1 >
       au < down ; 2002-2003 ; International Journal of Agricultural Resources, Governance and Ecology Volume 2 ; 2 >
@@ -742,7 +742,7 @@
       >
 
       param[journal_issn] = 2049-6753
-      comment[0] = title is not yet published on 9/19/2013
+      # title is not yet published on 9/19/2013
       
       au < doNotProcess ; 2013 ; International Journal of Automation and Logistics Volume 1 ; 1 >
 
@@ -5209,7 +5209,7 @@
       >
 
       param[journal_issn] = 2042-3470
-      comment[0] = no issue in 2012
+      # no issue in 2012
       
       au < down ; 2010 ; International Journal of Multimedia Intelligence and Security Volume 1 ; 1 >
       au < down ; 2011 ; International Journal of Multimedia Intelligence and Security Volume 2 ; 2 >
@@ -5344,7 +5344,7 @@
       >
 
       param[journal_issn] = 1741-9204
-      comment[0] = no issue in 2012
+      # no issue in 2012
       
       au < down ; 2003-2005 ; International Journal of Nuclear Desalination Volume 1 ; 1 >
       au < down ; 2006-2007 ; International Journal of Nuclear Desalination Volume 2 ; 2 >
@@ -5403,7 +5403,7 @@
       >
 
       param[journal_issn] = 1743-4947
-      comment[0] = no issue in 2012
+      # no issue in 2012
       
       au < down ; 2006-2008 ; International Journal of Nuclear Hydrogen Production and Applications Volume 1 ; 1 >
       au < down ; 2009-2011 ; International Journal of Nuclear Hydrogen Production and Applications Volume 2 ; 2 >
@@ -5420,7 +5420,7 @@
       >
 
       param[journal_issn] = 1479-5418
-      comment[0] = no issue in 2012
+      # no issue in 2012
       
       au < down ; 2004-2005 ; International Journal of Nuclear Knowledge Management Volume 1 ; 1 >
       au < down ; 2006-2007 ; International Journal of Nuclear Knowledge Management Volume 2 ; 2 >
@@ -6912,7 +6912,7 @@
       >
 
       param[journal_issn] = 1746-5389
-      comment[0] = no issue in 2012, 2013
+      # no issue in 2012, 2013
       
       au < down ; 2007-2008 ; International Journal of Technoentrepreneurship Volume 1 ; 1 >
       au < down ; 2009-2011 ; International Journal of Technoentrepreneurship Volume 2 ; 2 >

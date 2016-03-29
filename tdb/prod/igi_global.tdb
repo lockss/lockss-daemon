@@ -377,7 +377,7 @@
       issnl = 2155-6962
     >
     param[journal_issn] = 2155-6962
-    comment[0] = out of print. no substance on 2012
+    # out of print. no substance on 2012
 
     au < released ; 2011 ; International Journal of Aviation Technology, Engineering and Management (IJATEM) Volume 1 ; 1 >
     au < superseded ; 2012 ; International Journal of Aviation Technology, Engineering and Management (IJATEM) Volume 2 [superseded] ; 2 >
@@ -395,7 +395,7 @@
     >
 
     param[journal_issn] = 1947-3575
-    comment[0] = out of print. no substance on 2012
+    # out of print. no substance on 2012
 
     au < released ; 2011 ; International Journal of Biomaterials Research and Engineering (IJBRE) Volume 1 ; 1 >
     au < superseded ; 2012 ; International Journal of Biomaterials Research and Engineering (IJBRE) Volume 2 [superseded] ; 2 >
@@ -749,7 +749,7 @@
       issnl = 1947-9050
     >
     param[journal_issn] = 1947-9050
-    comment[0] = out of print. no substance on 2012
+    # out of print. no substance on 2012
 
     au < released ; 2010 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 2 ; 2 >
@@ -1248,7 +1248,7 @@
       issnl = 1938-0216
     >
     param[journal_issn] = 1938-0216
-    comment[0] = out of print. no substance on 2012
+    # out of print. no substance on 2012
 
     au < released ; 2009 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 1 ; 1 >
     au < released ; 2010 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 2 ; 2 >
@@ -1615,7 +1615,7 @@
       issnl = 2156-1664
     >
     param[journal_issn] = 2156-1664
-    comment[0] = out of print
+    # out of print
 
     au < released ; 2011 ; International Journal of Intelligent Mechatronics and Robotics (IJIMR) Volume 1 ; 1 >
     au < released ; 2012 ; International Journal of Intelligent Mechatronics and Robotics (IJIMR) Volume 2 ; 2 >
@@ -1945,7 +1945,7 @@
     >
     
     param[journal_issn] = 1941-6318
-    comment[0] = out of print
+    # out of print
 
     au < manifest ; 2009 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 1 ; 1 >
     au < manifest ; 2010 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 2 ; 2 >
@@ -2190,7 +2190,7 @@
       eissn = 2166-7209
     >
 
-    comment[0] = forthcoming 2013
+    # forthcoming 2013
     param[journal_issn] = 2166-7195
 
     au < manifest ; 2013 ; International Journal of Robotics Applications and Technologies (IJRAT) Volume 1 ; 1 >
@@ -2339,7 +2339,7 @@
       issnl = 2155-6350
     >
     param[journal_issn] = 2155-6350
-    comment[0] = out of print
+    # out of print
 
     au < released ; 2011 ; International Journal of Space Technology Management and Innovation (IJSTMI) Volume 1 ; 1 >
     au < released ; 2012 ; International Journal of Space Technology Management and Innovation (IJSTMI) Volume 2 ; 2 >

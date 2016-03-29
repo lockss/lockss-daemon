@@ -15,12 +15,11 @@
 
     comment[platform] = Moved from HW to Allen Press.
 
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    param[base_url] = http://www.japmaonline.org/
-    implicit < status ; year ; name ; param[volume_name] >
-    
     {
-    
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://www.japmaonline.org/
+      implicit < status ; year ; name ; param[volume_name] >
+        
       au < down ; 1965 ; Journal of the American Podiatric Medical Association Volume 55 [tables of contents only] ; 55 >
       au < down ; 1966 ; Journal of the American Podiatric Medical Association Volume 56 [tables of contents only] ; 56 >
       au < down ; 1967 ; Journal of the American Podiatric Medical Association Volume 57 [tables of contents only] ; 57 >
@@ -83,7 +82,7 @@
   
     {
   
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.atypon.allenpress.AllenPressJournalsPlugin
       param[base_url] = http://www.japmaonline.org/
       implicit < status ; year ; name ; param[volume_name] >
       comment[platform] = Allen Press

@@ -2818,7 +2818,7 @@
     au < manifest ; 2013 ; Materials Technology: Advanced Performance Materials Volume 28 ; 28 >
     au < manifest ; 2014 ; Materials Technology: Advanced Performance Materials Volume 29 ; 29 >
     au < manifest ; 2015 ; Materials Technology: Advanced Performance Materials Volume 30 ; 30 >
-    au < expected ; 2016 ; Materials Technology: Advanced Performance Materials Volume 31 ; 31 >
+    au < manifest ; 2016 ; Materials Technology: Advanced Performance Materials Volume 31 ; 31 >
 
   }
 
@@ -3336,7 +3336,7 @@
     au < manifest ; 2013 ; Northern History Volume 50 ; 50 >
     au < manifest ; 2014 ; Northern History Volume 51 ; 51 >
     au < manifest ; 2015 ; Northern History Volume 52 ; 52 >
-    au < expected ; 2016 ; Northern History Volume 53 ; 53 >
+    au < manifest ; 2016 ; Northern History Volume 53 ; 53 >
 
   }
 
@@ -3484,7 +3484,7 @@
     >
 
     param[journal_id] = ypai20 
-    comment[0] = ceased publication in 2007
+    # ceased publication in 2007
 
     au < manifest ; 2000 ; The Pain Clinic Volume 12 ; 12 >
     au < manifest ; 2001-2002 ; The Pain Clinic Volume 13 ; 13 >
@@ -3535,7 +3535,7 @@
     >
 
     param[journal_id] = ypvr20 
-    comment[0] = ceased publication in 2005
+    # ceased publication in 2005
 
     au < manifest ; 2003 ; Papillomavirus Report Volume 14 ; 14 >
     au < manifest ; 2004 ; Papillomavirus Report Volume 15 ; 15 >
@@ -3571,7 +3571,7 @@
     >
 
     param[journal_id] = ypha20 
-    comment[0] = ceased publication 2012
+    # ceased publication 2012
 
     au < manifest ; 2008 ; Pharmaceutical Programming Volume 1 ; 1 >
     au < manifest ; 2009 ; Pharmaceutical Programming Volume 2 ; 2 >
@@ -4390,7 +4390,7 @@
     au < manifest ; 2013 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 45 ; 45 >
     au < manifest ; 2014 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 46 ; 46 >
     au < manifest ; 2015 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 47 ; 47 >
-    au < expected ; 2016 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 48 ; 48 >
+    au < manifest ; 2016 ; Terrae Incognitae: Journal of the Society for the History of Discoveries Volume 48 ; 48 >
 
   }
 
@@ -4646,7 +4646,7 @@
     >
 
     param[journal_id] = yusu20 
-    comment[0] = publication ceased December 31, 2012
+    # publication ceased December 31, 2012
     
     au < doNotProcess ; 2010 ; Usus Antiquior Volume 1 ; 1 >
     au < doNotProcess ; 2011 ; Usus Antiquior Volume 2 ; 2 > 

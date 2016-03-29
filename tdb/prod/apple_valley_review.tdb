@@ -17,7 +17,7 @@
     implicit < status ; name ; volume ; param[year] >
     param[base_url] = http://www.leahbrowning.net/
     
-    comment[0] = Plugin needs review. Journal has moved to http://www.applevalleyreview.com/.
+    # Plugin needs review. Journal has moved to http://www.applevalleyreview.com/.
 
     au < released ; Apple Valley Review Volume 1 ; 1 ; 2006 >
     au < released ; Apple Valley Review Volume 2 ; 2 ; 2007 >

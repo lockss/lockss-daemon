@@ -31,6 +31,7 @@
  */
 package org.lockss.servlet;
 
+import static org.lockss.servlet.MetadataControl.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -42,6 +43,7 @@ import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
+import org.lockss.db.PkNamePair;
 import org.lockss.metadata.Isbn;
 import org.lockss.metadata.Issn;
 import org.lockss.metadata.MetadataManager;
@@ -51,6 +53,8 @@ import org.lockss.servlet.ServletUtil.LinkWithExplanation;
 import org.lockss.util.Logger;
 import org.mortbay.html.Block;
 import org.mortbay.html.Composite;
+import org.mortbay.html.Form;
+import org.mortbay.html.Input;
 import org.mortbay.html.Page;
 import org.mortbay.html.Table;
 
@@ -62,6 +66,8 @@ import org.mortbay.html.Table;
 @SuppressWarnings("serial")
 public class MetadataMonitor extends LockssServlet {
   private static final Logger log = Logger.getLogger(MetadataMonitor.class);
+
+  static final String REDIRECT_URL_TAG = "redirectUrl";
 
   private static final String LIST_PUBLISHER_NAMES_LINK = "Publisher Names";
   private static final String LIST_PUBLISHER_NAMES_ACTION =
@@ -245,10 +251,15 @@ public class MetadataMonitor extends LockssServlet {
       } else if (LIST_ITEMS_WITHOUT_ACCESS_URL_ACTION.equals(action)) {
 	listMetadataItemsWithoutAccessUrl();
       } else {
+	if (action != null) {
+	  errMsg = "Invalid operation '" + action + "'";
+	}
+
 	displayMainPage();
       }
-    } catch (DbException dbe) {
-      throw new RuntimeException(dbe);
+    } catch (Exception e) {
+      errMsg = "Exception caught: " + e.getMessage();
+      displayMainPage();
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -404,6 +415,22 @@ public class MetadataMonitor extends LockssServlet {
   }
 
   /**
+   * Creates a page with a form or table of results.
+   * 
+   * @param heading
+   *          A String with the page heading.
+   * @param form
+   *          A Form with the results to be displayed.
+   * @param results
+   *          A Table with the results to be displayed.
+   * @throws IOException
+   */
+  private void makePage(String heading, Form form, Table results)
+      throws IOException {
+    makePage(heading, form, results, null, null);
+  }
+
+  /**
    * Creates a page with a table of results.
    * 
    * @param heading
@@ -414,6 +441,26 @@ public class MetadataMonitor extends LockssServlet {
    */
   private void makeTablePage(String heading, Table results) throws IOException {
     makeTablePage(heading, results, null);
+  }
+
+  /**
+   * Creates a page with two forms or tables of results.
+   * 
+   * @param heading
+   *          A String with the page heading.
+   * @param form1
+   *          A Form with the first results to be displayed.
+   * @param results1
+   *          A Table with the first results to be displayed.
+   * @param form2
+   *          A Form with the last results to be displayed.
+   * @param results2
+   *          A Table with the last results to be displayed.
+   * @throws IOException
+   */
+  private void makePage(String heading, Form form1, Table results1, Form form2,
+      Table results2) throws IOException {
+    makePage(heading, form1, results1, form2, results2, null, null);
   }
 
   /**
@@ -430,6 +477,88 @@ public class MetadataMonitor extends LockssServlet {
   private void makeTablePage(String heading, Table results1, Table results2)
       throws IOException {
     makeTablePage(heading, results1, results2, null);
+  }
+
+  /**
+   * Creates a page with three forms or tables of results.
+   * 
+   * @param heading
+   *          A String with the page heading.
+   * @param form1
+   *          A Form with the first results to be displayed.
+   * @param results1
+   *          A Table with the first results to be displayed.
+   * @param form2
+   *          A Form with the second results to be displayed.
+   * @param results2
+   *          A Table with the second results to be displayed.
+   * @param form3
+   *          A Form with the last results to be displayed.
+   * @param results3
+   *          A Table with the last results to be displayed.
+   * @throws IOException
+   */
+  private void makePage(String heading, Form form1, Table results1, Form form2,
+      Table results2, Form form3, Table results3) throws IOException {
+    final String DEBUG_HEADER = "makePage(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "heading = " + heading);
+
+    Page page = newPage();
+    addJavaScript(page);
+    layoutErrorBlock(page);
+
+    String attributes = "align=\"center\" cellspacing=\"4\" cellpadding=\"5\"";
+
+    Table mainTable = new Table(0, attributes);
+    mainTable.addHeading(heading);
+    mainTable.newRow();
+    mainTable.newCell();
+    mainTable.newRow();
+    mainTable.newCell();
+
+    if (form1 != null) {
+      mainTable.add(form1);
+    } else if (results1 != null) {
+      mainTable.add(results1);
+    }
+
+    if (form2 != null || results2 != null) {
+      mainTable.newRow();
+      mainTable.newCell();
+      mainTable.newRow();
+      mainTable.newCell();
+
+      if (form2 != null) {
+	mainTable.add(form2);
+      } else {
+	mainTable.add(results2);
+      }
+
+      if (form3 != null || results3 != null) {
+	mainTable.newRow();
+	mainTable.newCell();
+	mainTable.newRow();
+	mainTable.newCell();
+
+	if (form3 != null) {
+	  mainTable.add(form3);
+	} else {
+	  mainTable.add(results3);
+	}
+      }
+    }
+
+    Composite comp = new Block(Block.Center);
+    comp.add(mainTable);
+    comp.add("<br>");
+    page.add(comp);
+
+    ServletUtil.layoutBackLink(page,
+	  srvLink(AdminServletManager.SERVLET_MD_MONITOR, BACK_LINK_PREFIX
+	          + getHeading(AdminServletManager.SERVLET_MD_MONITOR)));
+
+    endPage(page);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 
   /**
@@ -697,6 +826,13 @@ public class MetadataMonitor extends LockssServlet {
     final String DEBUG_HEADER = "listMultipleIsbsnPublications(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
+    Form form1 = null;
+
+    // Determine whether the user is allowed to make changes.
+    boolean isMutable =
+	isServletAllowed(AdminServletManager.SERVLET_MD_CONTROL);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "isMutable = " + isMutable);
+
     String attributes = "align=\"left\" cellspacing=\"4\" cellpadding=\"5\"";
 
     // Create the ISSN results table.
@@ -708,33 +844,88 @@ public class MetadataMonitor extends LockssServlet {
     results1.add("ISSNs");
 
     // Get the ISSNs linked to the publications.
-    Map<String, Collection<Issn>> publicationsIssns =
+    Map<PkNamePair, Collection<Issn>> publicationsIssns =
 	mdManager.getPublicationsWithMoreThan2Issns();
     if (log.isDebug3()) log.debug3(DEBUG_HEADER
 	+ "publicationsIssns.size() = " + publicationsIssns.size());
 
     // Check whether there are results to display.
     if (publicationsIssns.size() > 0) {
-      // Yes: Loop through the publications.
-      for (String publicationName : publicationsIssns.keySet()) {
+      // Yes: Check whether the user is allowed to make changes.
+      if (isMutable) {
+	// Yes: Create the form that allows the user to delete an ISSN linked to
+	// a publication.
+	form1 = ServletUtil.newForm(
+	    srvURL(AdminServletManager.SERVLET_MD_CONTROL,
+		"lockssAction=" + DELETE_PUBLICATION_ISSN_ACTION));
+
+	// Create the hidden text field with the redirect URL.
+	String redirectTo = srvURL(myServletDescr(),
+	    "lockssAction=" + req.getParameter(ACTION_TAG));
 	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
+	  log.debug3(DEBUG_HEADER + "redirectTo = " + redirectTo);
+
+	Input redirectUrl =
+	    new Input(Input.Hidden, REDIRECT_URL_TAG, redirectTo);
+	results1.add(redirectUrl);
+
+	// Create the hidden text fields that will post the data to be deleted.
+	Input pubId = new Input(Input.Hidden, "pubId", "unset");
+	pubId.attribute("id", "pubId");
+	results1.add(pubId);
+
+	Input issnValue = new Input(Input.Hidden, "issnValue", "unset");
+	issnValue.attribute("id", "issnValue");
+	results1.add(issnValue);
+
+	Input issnType = new Input(Input.Hidden, "issnType", "unset");
+	issnType.attribute("id", "issnType");
+	results1.add(issnType);
+      }
+
+      // Loop through the publications.
+      for (PkNamePair pair : publicationsIssns.keySet()) {
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pair = " + pair);
 
 	results1.newRow();
 	results1.newCell("align=\"right\"");
-	results1.add(publicationName);
+	results1.add(pair.getName());
 	results1.newCell("align=\"left\"");
 
 	Table issns = new Table(1, attributes);
 
-	for (Issn issn : publicationsIssns.get(publicationName)) {
+	// Loop through all the publication ISSNs.
+	for (Issn issn : publicationsIssns.get(pair)) {
 	  issns.newRow();
 	  issns.newCell("align=\"left\"");
 	  issns.add(issn.getValue() + " [" + issn.getType().substring(0, 1)
 	      + "]");
+
+	  // Check whether the user is allowed to make changes.
+	  if (isMutable) {
+	    // Yes: Add the 'Delete' button.
+	    issns.newCell("align=\"center\"");
+
+	    Input deletePubIssn =
+		new Input(Input.Submit, "action", "Delete ISSN");
+
+	    deletePubIssn.attribute("onClick",
+		"setMonCtrlParams('pubId', '" + pair.getPk()
+		+ "', 'issnValue', '" + issn.getValue() + "', 'issnType', '"
+		+ issn.getType() + "')");
+
+	    setTabOrder(deletePubIssn);
+	    issns.add(deletePubIssn);
+	  }
 	}
 
 	results1.add(issns);
+      }
+
+      // Check whether the user is allowed to make changes.
+      if (isMutable) {
+	// Yes: Add the table to the form.
+	form1.add(results1);
       }
     } else {
       // No.
@@ -793,7 +984,8 @@ public class MetadataMonitor extends LockssServlet {
       results2.add("No publications are linked to more than two ISBNs");
     }
 
-    makeTablePage(LIST_MULTIPLE_ISBSN_PUBLICATIONS_HEADER, results1, results2);
+    makePage(LIST_MULTIPLE_ISBSN_PUBLICATIONS_HEADER, form1, results1, null,
+	results2);
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 
@@ -916,7 +1108,6 @@ public class MetadataMonitor extends LockssServlet {
   private void listMismatchedPublicationTypeIsbsns()
       throws DbException, IOException {
     final String DEBUG_HEADER = "listMismatchedPublicationTypeIsbsns(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
     String attributes = "align=\"left\" cellspacing=\"4\" cellpadding=\"5\"";

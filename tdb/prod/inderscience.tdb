@@ -624,7 +624,7 @@
       au < manifest ; 2013 ; International Journal of Applied Management Science Volume 5 ; 5 >
       au < released ; 2014 ; International Journal of Applied Management Science Volume 6 ; 6 >
       au < manifest ; 2015 ; International Journal of Applied Management Science Volume 7 ; 7 >
-      au < expected ; 2016 ; International Journal of Applied Management Science Volume 8 ; 8 >
+      au < manifest ; 2016 ; International Journal of Applied Management Science Volume 8 ; 8 >
 
     }
 
@@ -736,7 +736,7 @@
       au < manifest ; 2013 ; International Journal of Arts and Technology Volume 6 ; 6 >
       au < manifest ; 2014 ; International Journal of Arts and Technology Volume 7 ; 7 >
       au < manifest ; 2015 ; International Journal of Arts and Technology Volume 8 ; 8 >
-      au < expected ; 2016 ; International Journal of Arts and Technology Volume 9 ; 9 >
+      au < manifest ; 2016 ; International Journal of Arts and Technology Volume 9 ; 9 >
 
     }
 
@@ -863,7 +863,7 @@
       au < manifest ; 2013 ; International Journal of Autonomous and Adaptive Communications Systems Volume 6 ; 6 >
       au < released ; 2014 ; International Journal of Autonomous and Adaptive Communications Systems Volume 7 ; 7 >
       au < manifest ; 2015 ; International Journal of Autonomous and Adaptive Communications Systems Volume 8 ; 8 >
-      au < expected ; 2016 ; International Journal of Autonomous and Adaptive Communications Systems Volume 9 ; 9 >
+      au < manifest ; 2016 ; International Journal of Autonomous and Adaptive Communications Systems Volume 9 ; 9 >
 
     }
 
@@ -985,7 +985,7 @@
       au < manifest ; 2013 ; International Journal of Bioinformatics Research and Applications Volume 9 ; 9 >
       au < released ; 2014 ; International Journal of Bioinformatics Research and Applications Volume 10 ; 10 >
       au < manifest ; 2015 ; International Journal of Bioinformatics Research and Applications Volume 11 ; 11 >
-      au < expected ; 2016 ; International Journal of Bioinformatics Research and Applications Volume 12 ; 12 >
+      au < manifest ; 2016 ; International Journal of Bioinformatics Research and Applications Volume 12 ; 12 >
 
     }
 
@@ -1339,7 +1339,7 @@
       param[journal_id] = ijbfmi
 
       au < doNotProcess ; 2008-2010 ; International Journal of Business Forecasting and Marketing Intelligence Volume 1 ; 1 >
-      au < exists ; 2015 ; International Journal of Business Forecasting and Marketing Intelligence Volume 2 ; 2 >
+      au < manifest ; 2015 ; International Journal of Business Forecasting and Marketing Intelligence Volume 2 ; 2 >
 
     }
 
@@ -1684,7 +1684,7 @@
       >
 
       param[journal_id] = ijcast
-      comment[0] = title is not yet published on 4/11/2013
+      # title is not yet published on 4/11/2013
 
       au < expected ; 2016 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 >
 
@@ -1741,7 +1741,7 @@
       >
 
       param[journal_id] = ijccia
-      comment[0] = title is not yet published on 9/19/2013
+      # title is not yet published on 9/19/2013
 
       au < expected ; 2016 ; International Journal of Computational Complexity and Intelligent Algorithms Volume 1 ; 1 >
 
@@ -1832,7 +1832,7 @@
       >
 
       param[journal_id] = ijcmh
-      comment[0] = title is not yet published on 9/19/2013
+      # title is not yet published on 9/19/2013
 
       au < expected ; 2016 ; International Journal of Computational Medicine and Healthcare Volume 1 ; 1 >
 
@@ -1848,7 +1848,7 @@
       >
 
       param[journal_id] = ijcmme
-      comment[0] = title is not yet published on 9/19/2013
+      # title is not yet published on 9/19/2013
 
       au < expected ; 2016 ; International Journal of Computational Microbiology and Medical Ecology Volume 1 ; 1 >
 
@@ -2201,7 +2201,7 @@
       >
 
       param[journal_id] = ijcm
-      comment[0] = title is not yet published on 9/30/2013
+      # title is not yet published on 9/30/2013
 
       au < expected ; 2016 ; International Journal of Cultural Management Volume 1 ; 1 >
 
@@ -2362,7 +2362,7 @@
       >
 
       param[journal_id] = ijdet
-      comment[0] = title is not yet published on 9/19/2013
+      # title is not yet published on 9/19/2013
 
       au < expected ; 2016 ; International Journal of Digital Enterprise Technology Volume 1 ; 1 >
 
@@ -2735,7 +2735,7 @@
       >
 
       param[journal_id] = ijetrade
-      comment[0] = title is not yet published on 9/20/2013
+      # title is not yet published on 9/20/2013
 
       au < expected ; 2016 ; International Journal of Electronic Trade Volume 1 ; 1 >
 
@@ -2903,7 +2903,7 @@
       >
 
       param[journal_id] = ijesii
-      comment[0] = title is not yet published on 9/20/2013
+      # title is not yet published on 9/20/2013
 
       au < expected ; 2016 ; International Journal of Enterprise Systems Integration and Interoperability Volume 1 ; 1 >
 
@@ -2919,7 +2919,7 @@
       >
 
       param[journal_id] = ijenttm
-      comment[0] = title is not yet published on 9/20/2013
+      # title is not yet published on 9/20/2013
 
       au < expected ; 2016 ; International Journal of Entertainment Technology and Management Volume 1 ; 1 >
 
@@ -3442,8 +3442,8 @@
         issnl = 1478-1476
       >
 
-    comment[0] = no journal page on Apr 23, 2012. journal_id may be issn or eissn
-    comment[1] = title is not yet published on 4/30/2014
+    # no journal page on Apr 23, 2012. journal_id may be issn or eissn
+    # title is not yet published on 4/30/2014
       param[journal_id] = ijfem
 
     }
@@ -3457,8 +3457,8 @@
         issnl = 1743-5099
       >
 
-    comment[0] = no journal page on Apr 23, 2012. journal_id may be issn or eissn
-    comment[1] = title is not yet published on 4/30/2014
+    # no journal page on Apr 23, 2012. journal_id may be issn or eissn
+    # title is not yet published on 4/30/2014
       param[journal_id] = ijfse
 
     }
@@ -3902,7 +3902,7 @@
       au < manifest ; 2013 ; International Journal of Human Resources Development and Management Volume 13 ; 13 >
       au < released ; 2014 ; International Journal of Human Resources Development and Management Volume 14 ; 14 >
       au < manifest ; 2015 ; International Journal of Human Resources Development and Management Volume 15 ; 15 >
-      au < expected ; 2016 ; International Journal of Human Resources Development and Management Volume 16 ; 16 >
+      au < manifest ; 2016 ; International Journal of Human Resources Development and Management Volume 16 ; 16 >
 
     }
 
@@ -4378,7 +4378,7 @@
       au < doNotProcess ; 2012 ; International Journal of Innovative Computing and Applications Volume 4 ; 4 >
       au < manifest ; 2013 ; International Journal of Innovative Computing and Applications Volume 5 ; 5 >
       au < released ; 2014-2015 ; International Journal of Innovative Computing and Applications Volume 6 ; 6 >
-      au < expected ; 2016 ; International Journal of Innovative Computing and Applications Volume 7 ; 7 >
+      au < manifest ; 2016 ; International Journal of Innovative Computing and Applications Volume 7 ; 7 >
 
     }
 
@@ -4767,7 +4767,7 @@
       au < manifest ; 2013 ; International Journal of Knowledge-Based Development Volume 4 ; 4 >
       au < released ; 2014 ; International Journal of Knowledge-Based Development Volume 5 ; 5 >
       au < manifest ; 2015 ; International Journal of Knowledge-Based Development Volume 6 ; 6 >
-      au < expected ; 2016 ; International Journal of Knowledge-Based Development Volume 7 ; 7 >
+      au < manifest ; 2016 ; International Journal of Knowledge-Based Development Volume 7 ; 7 >
 
     }
 
@@ -4819,7 +4819,7 @@
       >
 
       param[journal_id] = ijkmth
-      comment[0] = title is not yet published on 4/11/2013
+      # title is not yet published on 4/11/2013
 
       au < expected ; 2016 ; International Journal of Knowledge Management in Tourism and Hospitality Volume 1 ; 1 >
 
@@ -4947,7 +4947,7 @@
       >
 
       param[journal_id] = ijlid
-      comment[0] = title is not yet published on 9/20/2013
+      # title is not yet published on 9/20/2013
 
       au < expected ; 2016 ; International Journal of Legal Information Design Volume 1 ; 1 >
 
@@ -5143,7 +5143,7 @@
       au < released ; 2014 ; International Journal of Machining and Machinability of Materials Volume 15 ; 15 >
       au < released ; 2014 ; International Journal of Machining and Machinability of Materials Volume 16 ; 16 >
       au < manifest ; 2015 ; International Journal of Machining and Machinability of Materials Volume 17 ; 17 >
-      au < expected ; 2015 ; International Journal of Machining and Machinability of Materials Volume 18 ; 18 >
+      au < manifest ; 2015 ; International Journal of Machining and Machinability of Materials Volume 18 ; 18 >
       au < expected ; 2016 ; International Journal of Machining and Machinability of Materials Volume 19 ; 19 >
 
     }
@@ -5634,7 +5634,7 @@
       au < manifest ; 2013 ; International Journal of Mechatronics and Manufacturing Systems Volume 6 ; 6 >
       au < released ; 2014 ; International Journal of Mechatronics and Manufacturing Systems Volume 7 ; 7 >
       au < manifest ; 2015 ; International Journal of Mechatronics and Manufacturing Systems Volume 8 ; 8 >
-      au < expected ; 2016 ; International Journal of Mechatronics and Manufacturing Systems Volume 9 ; 9 >
+      au < manifest ; 2016 ; International Journal of Mechatronics and Manufacturing Systems Volume 9 ; 9 >
 
     }
 
@@ -5909,7 +5909,7 @@
       >
 
       param[journal_id] = ijme
-      comment[0] = title is not yet published up on 4/11/2013
+      # title is not yet published up on 4/11/2013
 
       au < expected ; 2016 ; International Journal of Molecular Engineering Volume 1 ; 1 >
 
@@ -6084,7 +6084,7 @@
       >
 
       param[journal_id] = ijns
-      comment[0] = title is not yet published, 9/19/2013
+      # title is not yet published, 9/19/2013
 
       au < manifest ; 2015 ; International Journal of Network Science Volume 1 ; 1 >
       au < expected ; 2016 ; International Journal of Network Science Volume 2 ; 2 >
@@ -6250,7 +6250,7 @@
       >
 
       param[journal_id] = ijnss
-      comment[0] = title is not yet published on 4/11/2013
+      # title is not yet published on 4/11/2013
 
       au < expected ; 2016 ; International Journal of Nuclear Safety and Security Volume 1 ; 1 >
 
@@ -6383,7 +6383,7 @@
       >
 
       param[journal_id] = ijplp
-      comment[0] = title is not yet published on 9/26/2013
+      # title is not yet published on 9/26/2013
 
       au < expected ; 2016 ; International Journal of Physiotherapy and Life Physics Volume 1 ; 1 >
 
@@ -6698,7 +6698,7 @@
       >
 
       param[journal_id] = ijpsq
-      comment[0] = title is not yet published on 9/26/2013
+      # title is not yet published on 9/26/2013
 
       au < expected ; 2016 ; International Journal of Product Sound Quality Volume 1 ; 1 >
 
@@ -6971,7 +6971,7 @@
       >
 
       param[journal_id] = ijrem
-      comment[0] = title is not yet published on 9/26/2013
+      # title is not yet published on 9/26/2013
 
       au < expected ; 2016 ; International Journal of Remanufacturing Volume 1 ; 1 >
 
@@ -7142,7 +7142,7 @@
       param[journal_id] = ijscom
 
       au < released ; 2013-2014 ; International Journal of Service and Computing Oriented Manufacturing Volume 1 ; 1 >
-      au < expected ; 2015 ; International Journal of Service and Computing Oriented Manufacturing Volume 2 ; 2 >
+      au < manifest ; 2015 ; International Journal of Service and Computing Oriented Manufacturing Volume 2 ; 2 >
       au < expected ; 2016 ; International Journal of Service and Computing Oriented Manufacturing Volume 3 ; 3 >
 
     }
@@ -7667,7 +7667,7 @@
       >
 
       comment[doNotProcess] = missing, page does not exist.
-      comment[0] = title is not yet published on 9/26/2013
+      # title is not yet published on 9/26/2013
 
       param[journal_id] = ijsrpsd
 
@@ -8771,7 +8771,7 @@
       au < released ; 2014 ; International Journal of Wireless and Mobile Computing Volume 7 ; 7 >
       au < manifest ; 2015 ; International Journal of Wireless and Mobile Computing Volume 8 ; 8 >
       au < manifest ; 2015 ; International Journal of Wireless and Mobile Computing Volume 9 ; 9 >
-      au < exists ; 2016 ; International Journal of Wireless and Mobile Computing Volume 10 ; 10 >
+      au < manifest ; 2016 ; International Journal of Wireless and Mobile Computing Volume 10 ; 10 >
 
     }
 
@@ -8822,7 +8822,7 @@
       >
 
       param[journal_id] = ier
-      comment[0] = content available from 1999 volume 1 to 2009 volume 10
+      # content available from 1999 volume 1 to 2009 volume 10
 
       au < manifest ; 2007 ; Interdisciplinary Environmental Review Volume 9 ; 9 >
       au < manifest ; 2008-2009 ; Interdisciplinary Environmental Review Volume 10 ; 10 >

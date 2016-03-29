@@ -4,7 +4,7 @@
     name = Annual Reviews
   >
 
-  comment[0] = doNotProcess--used for title list generation (original in prod-uk folder)
+  # doNotProcess--used for title list generation (original in prod-uk folder)
   param[base_url] = http://www.annualreviews.org/
   implicit < status ; year ; name ; param[volume_name] >
 

@@ -518,7 +518,7 @@
     plugin = needs.plugin
     comment[plugin] = possibly org.lockss.plugin.jscm.JSCMPlugin
     comment[platform] = hosted by the University of Illinois. See RT 5725
-    param[base_url] = http://paq.press.illinois.edu/
+    #param[base_url] = http://paq.press.illinois.edu/
     implicit < status ; year ; name ; param[volume_name] >
 
     {

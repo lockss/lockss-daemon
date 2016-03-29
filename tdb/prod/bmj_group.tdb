@@ -8,7 +8,7 @@
   implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified
   
-  comment[0] = Some journals possibly moving to Drupal. Marking AUs doNotProcess while waiting for response.
+  # Some journals possibly moving to Drupal. Marking AUs doNotProcess while waiting for response.
 
   {
   
@@ -865,7 +865,7 @@
 
     param[base_url] = http://eolj.bmj.com/
     comment[continued_by] = 2047-6361
-    comment[0] = requires special CrawlSeed. duplicate volume numbers. see https://na7.salesforce.com/500A000000Q4Ua3
+    # requires special CrawlSeed. duplicate volume numbers. see https://na7.salesforce.com/500A000000Q4Ua3
 
     au < HighWirePressH20Plugin ; released ; 2007 ; End of Life Care Volume 1 ; eolcare/1 >
     au < HighWirePressH20Plugin ; released ; 2008 ; End of Life Care Volume 2 ; eolcare/2 >
@@ -1992,7 +1992,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     >
 
     param[base_url] = http://mp.bmj.com/
-    comment[0] = merged with Clinical Pathology after Jan 2004.
+    # merged with Clinical Pathology after Jan 2004.
 
     au < HighWirePressH20Plugin ; manifest ; 1995 ; Molecular Pathology Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; manifest ; 1996 ; Molecular Pathology Volume 49 ; 49 >

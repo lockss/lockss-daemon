@@ -325,7 +325,7 @@
      >
       
       comment[continues] = 1546-3222
-      comment[0] = name changed from Proceedings of the American Thoracic Society to Annals of the American Thoracic Society in 2013
+      # name changed from Proceedings of the American Thoracic Society to Annals of the American Thoracic Society in 2013
 
       plugin = needs.plugin
       implicit < status ; year ; name ; param[volume_name] >

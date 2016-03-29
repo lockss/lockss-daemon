@@ -39,6 +39,7 @@ import org.lockss.ws.entities.KeyValueListPair;
 import org.lockss.ws.entities.LockssWebServicesFault;
 import org.lockss.ws.entities.MetadataItemWsResult;
 import org.lockss.ws.entities.MismatchedMetadataChildWsResult;
+import org.lockss.ws.entities.PkNamePairIdNamePairListPair;
 import org.lockss.ws.entities.UnnamedItemWsResult;
 
 /**
@@ -115,6 +116,19 @@ public interface MetadataMonitorService {
    */
   @WebMethod
   List<KeyIdNamePairListPair> getPublicationsWithMoreThan2Issns()
+      throws LockssWebServicesFault;
+
+  /**
+   * Provides the ISSNs for the publications in the database with more than two
+   * ISSNS.
+   * 
+   * @return a List<PkNamePairIdNamePairListPair> with the ISSNs keyed by the
+   *         publication PK/name pair. The IdNamePair objects contain the ISSN
+   *         as the identifier and the ISSN type as the name.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<PkNamePairIdNamePairListPair> getIdPublicationsWithMoreThan2Issns()
       throws LockssWebServicesFault;
 
   /**

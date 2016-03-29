@@ -1571,7 +1571,7 @@
     param[base_url] = http://aesa.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
-    comment[0] = content available from 1908 volume 1 to 1989 volume 82
+    # content available from 1908 volume 1 to 1989 volume 82
 
     au < manifest ; 1990 ; Annals of the Entomological Society of America Volume 83 ; 83 >
     au < manifest ; 1991 ; Annals of the Entomological Society of America Volume 84 ; 84 >
@@ -3445,7 +3445,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://bybil.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    comment[0] = no issue in 2013
+    # no issue in 2013
 
     au < HighWirePressH20Plugin ; manifest ; 1976 ; British Yearbook of International Law Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; manifest ; 1977 ; British Yearbook of International Law Volume 48 ; 48 >
@@ -4037,9 +4037,9 @@
     au < oup.OUPDrupalPlugin ; manifest ; 2015 ; Cardiovascular Research Volume 107 ; 107 >
     au < oup.OUPDrupalPlugin ; manifest ; 2015 ; Cardiovascular Research Volume 108 ; 108 >
     au < oup.OUPDrupalPlugin ; manifest ; 2016 ; Cardiovascular Research Volume 109 ; 109 >
-    au < OUPDrupalPlugin ; exists ; 2016 ; Cardiovascular Research Volume 110 ; 110 >
-    au < OUPDrupalPlugin ; expected ; 2016 ; Cardiovascular Research Volume 111 ; 111 >
-    au < OUPDrupalPlugin ; expected ; 2016 ; Cardiovascular Research Volume 112 ; 112 >
+    au < oup.OUPDrupalPlugin ; exists ; 2016 ; Cardiovascular Research Volume 110 ; 110 >
+    au < oup.OUPDrupalPlugin ; expected ; 2016 ; Cardiovascular Research Volume 111 ; 111 >
+    au < oup.OUPDrupalPlugin ; expected ; 2016 ; Cardiovascular Research Volume 112 ; 112 >
 
     }
 
@@ -4800,7 +4800,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; Contemporary Women's Writing Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Contemporary Women's Writing Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Contemporary Women's Writing Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Contemporary Women's Writing Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Contemporary Women's Writing Volume 10 ; 10 >
 
     }
 
@@ -5666,7 +5666,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://es.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    comment[0] = moved to Cambridge University Press
+    # moved to Cambridge University Press
 
     au < HighWirePressH20Plugin ; down ; 2000 ; Enterprise & Society Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; down ; 2001 ; Enterprise & Society Volume 2 ; 2 >
@@ -5741,7 +5741,7 @@
     param[base_url] = http://ee.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
-    comment[0] = content available from 1972 volume 1 to 1989 volume 18
+    # content available from 1972 volume 1 to 1989 volume 18
 
     au < manifest ; 1990 ; Environmental Entomology Volume 19 ; 19 >
     au < manifest ; 1991 ; Environmental Entomology Volume 20 ; 20 >
@@ -12535,7 +12535,7 @@
     param[base_url] = http://jee.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
-    comment[0] = content available from 1908 volume 1 to 1989 volume 82
+    # content available from 1908 volume 1 to 1989 volume 82
 
     au < manifest ; 1990 ; Journal of Economic Entomology Volume 83 ; 83 >
     au < manifest ; 1991 ; Journal of Economic Entomology Volume 84 ; 84 >
@@ -13069,7 +13069,7 @@
     param[base_url] = http://jogss.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
-    comment[0] = expected to be online on 6 Jan 2016
+    # expected to be online on 6 Jan 2016
 
     au < expected ; 2016 ; Journal of Global Security Studies Volume 1 ; 1 >
 
@@ -14444,7 +14444,7 @@
     param[base_url] = http://jme.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
-    comment[0] = content available from 1976 volume 13 to 1999 volume 36
+    # content available from 1976 volume 13 to 1999 volume 36
 
     au < manifest ; 2000 ; Journal of Medical Entomology Volume 37 ; 37 >
     au < manifest ; 2001 ; Journal of Medical Entomology Volume 38 ; 38 >
@@ -15266,7 +15266,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://jrr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    comment[0] = content available from 1960 volume 1 to 1999 volume 40
+    # content available from 1960 volume 1 to 1999 volume 40
 
     au < HighWirePressH20Plugin ; exists ; 2000 ; Journal of Radiation Research Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of Radiation Research Volume 42 ; 42 >
@@ -15341,7 +15341,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; Journal of Refugee Studies Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Journal of Refugee Studies Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of Refugee Studies Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Journal of Refugee Studies Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Journal of Refugee Studies Volume 29 ; 29 >
 
     }
 
@@ -16003,7 +16003,7 @@
   {
 
     title <
-      name = LabMedicine ;
+      name = Laboratory Medicine ;
       issn = 0007-5027 ;
       eissn = 1943-7730 ;
       issnl = 0007-5027
@@ -16012,25 +16012,23 @@
     param[base_url] = http://labmed.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
-    #content avaiable from 1970 volume 1 to 1999 volume 30
+    #content avaiable from 1970 volume 1 to 1999 volume 30 and present.
     
-    au < exists ; 2000 ; LabMedicine Volume 31 ; 31 >
-    au < exists ; 2001 ; LabMedicine Volume 32 ; 32 >
-    au < exists ; 2002 ; LabMedicine Volume 33 ; 33 >
-    au < exists ; 2003 ; LabMedicine Volume 34 ; 34 >
-    au < exists ; 2004 ; LabMedicine Volume 35 ; 35 >
-    au < exists ; 2005 ; LabMedicine Volume 36 ; 36 >
-    au < exists ; 2006 ; LabMedicine Volume 37 ; 37 >
-    au < exists ; 2007 ; LabMedicine Volume 38 ; 38 >
-    au < exists ; 2008 ; LabMedicine Volume 39 ; 39 >
-    au < exists ; 2009 ; LabMedicine Volume 40 ; 40 >
-    au < exists ; 2010 ; LabMedicine Volume 41 ; 41 >
-    au < exists ; 2011 ; LabMedicine Volume 42 ; 42 >
-    au < exists ; 2012 ; LabMedicine Volume 43 ; 43 >
-    au < exists ; 2013 ; LabMedicine Volume 44 ; 44 >
-    au < exists ; 2014 ; LabMedicine Volume 45 ; 45 >
-    au < manifest ; 2015 ; LabMedicine Volume 46 ; 46 >
-    au < manifest ; 2016 ; LabMedicine Volume 47 ; 47 >
+    au < exists ; 2002 ; Laboratory Medicine Volume 33 ; 33 >
+    au < exists ; 2003 ; Laboratory Medicine Volume 34 ; 34 >
+    au < exists ; 2004 ; Laboratory Medicine Volume 35 ; 35 >
+    au < exists ; 2005 ; Laboratory Medicine Volume 36 ; 36 >
+    au < exists ; 2006 ; Laboratory Medicine Volume 37 ; 37 >
+    au < exists ; 2007 ; Laboratory Medicine Volume 38 ; 38 >
+    au < exists ; 2008 ; Laboratory Medicine Volume 39 ; 39 >
+    au < exists ; 2009 ; Laboratory Medicine Volume 40 ; 40 >
+    au < exists ; 2010 ; Laboratory Medicine Volume 41 ; 41 >
+    au < exists ; 2011 ; Laboratory Medicine Volume 42 ; 42 >
+    au < exists ; 2012 ; Laboratory Medicine Volume 43 ; 43 >
+    au < exists ; 2013 ; Laboratory Medicine Volume 44 ; 44 >
+    au < exists ; 2014 ; Laboratory Medicine Volume 45 ; 45 >
+    au < manifest ; 2015 ; Laboratory Medicine Volume 46 ; 46 >
+    au < manifest ; 2016 ; Laboratory Medicine Volume 47 ; 47 >
 
   }
 
@@ -16635,8 +16633,6 @@
     au < exists ; 2001 ; Mammalian Species Volume 666 ; 666 >
     au < exists ; 2001 ; Mammalian Species Volume 667 ; 667 >
     au < exists ; 2001 ; Mammalian Species Volume 668 ; 668 >
-    au < exists ; 2001 ; Mammalian Species Volume 667 ; 667 >
-    au < exists ; 2001 ; Mammalian Species Volume 668 ; 668 >
     au < exists ; 2001 ; Mammalian Species Volume 669 ; 669 >
     au < exists ; 2001 ; Mammalian Species Volume 670 ; 670 >
     au < exists ; 2001 ; Mammalian Species Volume 671 ; 671 >
@@ -16677,8 +16673,6 @@
     au < exists ; 2002 ; Mammalian Species Volume 706 ; 706 >
     au < exists ; 2002 ; Mammalian Species Volume 707 ; 707 >
     au < exists ; 2002 ; Mammalian Species Volume 708 ; 708 >
-    au < exists ; 2002 ; Mammalian Species Volume 707 ; 707 >
-    au < exists ; 2002 ; Mammalian Species Volume 708 ; 708 >
     au < exists ; 2002 ; Mammalian Species Volume 709 ; 709 >
     au < exists ; 2002 ; Mammalian Species Volume 710 ; 710 >
     au < exists ; 2002 ; Mammalian Species Volume 711 ; 711 >
@@ -16697,8 +16691,6 @@
     au < exists ; 2003 ; Mammalian Species Volume 724 ; 724 >
     au < exists ; 2003 ; Mammalian Species Volume 725 ; 725 >
     au < exists ; 2003 ; Mammalian Species Volume 726 ; 726 >
-    au < exists ; 2003 ; Mammalian Species Volume 727 ; 727 >
-    au < exists ; 2003 ; Mammalian Species Volume 728 ; 728 >
     au < exists ; 2003 ; Mammalian Species Volume 727 ; 727 >
     au < exists ; 2003 ; Mammalian Species Volume 728 ; 728 >
     au < exists ; 2003 ; Mammalian Species Volume 729 ; 729 >
@@ -16741,8 +16733,6 @@
     au < exists ; 2005 ; Mammalian Species Volume 766 ; 766 >
     au < exists ; 2005 ; Mammalian Species Volume 767 ; 767 >
     au < exists ; 2005 ; Mammalian Species Volume 768 ; 768 >
-    au < exists ; 2005 ; Mammalian Species Volume 767 ; 767 >
-    au < exists ; 2005 ; Mammalian Species Volume 768 ; 768 >
     au < exists ; 2005 ; Mammalian Species Volume 769 ; 769 >
     au < exists ; 2005 ; Mammalian Species Volume 770 ; 770 >
     au < exists ; 2005 ; Mammalian Species Volume 771 ; 771 >
@@ -16781,8 +16771,6 @@
     au < exists ; 2007 ; Mammalian Species Volume 804 ; 804 >
     au < exists ; 2007 ; Mammalian Species Volume 805 ; 805 >
     au < exists ; 2007 ; Mammalian Species Volume 806 ; 806 >
-    au < exists ; 2007 ; Mammalian Species Volume 807 ; 807 >
-    au < exists ; 2008 ; Mammalian Species Volume 808 ; 808 >
     au < exists ; 2008 ; Mammalian Species Volume 807 ; 807 >
     au < exists ; 2008 ; Mammalian Species Volume 808 ; 808 >
     au < exists ; 2008 ; Mammalian Species Volume 809 ; 809 >
@@ -16803,8 +16791,6 @@
     au < exists ; 2009 ; Mammalian Species Volume 824 ; 824 >
     au < exists ; 2009 ; Mammalian Species Volume 825 ; 825 >
     au < exists ; 2009 ; Mammalian Species Volume 826 ; 826 >
-    au < exists ; 2009 ; Mammalian Species Volume 827 ; 827 >
-    au < exists ; 2009 ; Mammalian Species Volume 828 ; 828 >
     au < exists ; 2009 ; Mammalian Species Volume 827 ; 827 >
     au < exists ; 2009 ; Mammalian Species Volume 828 ; 828 >
     au < exists ; 2009 ; Mammalian Species Volume 829 ; 829 >
@@ -17546,7 +17532,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://mplant.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    comment[0] = move to Elsevier 2015-01-01
+    # move to Elsevier 2015-01-01
 
     au < HighWirePressH20Plugin ; down ; 2009 ; Molecular Plant Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; down ; 2010 ; Molecular Plant Volume 3 ; 3 >
@@ -17571,7 +17557,7 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     param[base_url] = http://monist.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
-    comment[0] = content available from 1890 volume 1 to 1997 volume 80
+    # content available from 1890 volume 1 to 1997 volume 80
 
     au < manifest ; 1997 ; The Monist Volume 80 ; 80 >
     au < manifest ; 1998 ; The Monist Volume 81 ; 81 >
@@ -17609,7 +17595,7 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://mnras.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
-    comment[0] = max 5 AU testing at a time 
+    # max 5 AU testing at a time 
 
     au < manifest ; 1996 ; Monthly Notices of the Royal Astronomical Society Volume 278 ; 278 >
     au < manifest ; 1996 ; Monthly Notices of the Royal Astronomical Society Volume 279 ; 279 >
@@ -17791,7 +17777,7 @@
     au < manifest ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 455 ; 455 >
     au < manifest ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 456 ; 456 >
     au < manifest ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 457 ; 457 >
-    au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 458 ; 458 >
+    au < manifest ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 458 ; 458 >
     au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 459 ; 459 >
     au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 460 ; 460 >
     au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society Volume 461 ; 461 >
@@ -17915,7 +17901,7 @@
     au < manifest ; 2015 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 455 ; 455 >
     au < manifest ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 456 ; 456 >
     au < manifest ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 457 ; 457 >
-    au < exists ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 458 ; 458 >
+    au < manifest ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 458 ; 458 >
     au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 459 ; 459 >
     au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 460 ; 460 >
     au < expected ; 2016 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 461 ; 461 >
@@ -19072,7 +19058,7 @@
       issnl = 0261-3166
     >
 
-    comment[0] = series ends in 2009
+    # series ends in 2009
 
     {
 
@@ -24629,7 +24615,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Yearbook of International Environmental Law Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Yearbook of International Environmental Law Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Yearbook of International Environmental Law Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; exists ; 2014 ; Yearbook of International Environmental Law Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; Yearbook of International Environmental Law Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; expected ; 2015 ; Yearbook of International Environmental Law Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; expected ; 2016 ; Yearbook of International Environmental Law Volume 27 ; 27 >
 
@@ -24836,7 +24822,7 @@
       au < manifest ; 2013 ; Journal of Antitrust Enforcement Volume 1 ; 1 >
       au < released ; 2014 ; Journal of Antitrust Enforcement Volume 2 ; 2 >
       au < manifest ; 2015 ; Journal of Antitrust Enforcement Volume 3 ; 3 >
-      au < expected ; 2016 ; Journal of Antitrust Enforcement Volume 4 ; 4 >
+      au < manifest ; 2016 ; Journal of Antitrust Enforcement Volume 4 ; 4 >
 
     }
 
@@ -24988,8 +24974,8 @@
     param[base_url] = http://ptps.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     implicit < status ; year ; name ; param[volume_name] >
-    comment[0] = PTP Supplement terminated in December 2012 and merged into PTEP in January 2013,
-    comment[1] = including the Supplements content.
+    # PTP Supplement terminated in December 2012 and merged into PTEP in January 2013,
+    # including the Supplements content.
 
     {
 
@@ -25579,7 +25565,7 @@
     param[base_url] = http://ps.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     implicit < status ; year ; name ; param[volume_name] >
-    comment[0] = No content was published in 1909 - 1913
+    # No content was published in 1909 - 1913
 
     au < doNotProcess ; 1908 ; Poultry Science Volume 1-1 ; 1-1 >
     au < doNotProcess ; 1914-1915 ; Poultry Science Volume 2-1 ; 2-1 >

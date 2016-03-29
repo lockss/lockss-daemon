@@ -32,7 +32,7 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
       param[journal_id] = ansp
-      comment[0] = no issue in 2012
+      #no issue in 2012
 
       au < doNotProcess ; 2002 ; Proceedings of the Academy of Natural Sciences of Philadelphia Volume 151 ; 151 >
       au < doNotProcess ; 2003 ; Proceedings of the Academy of Natural Sciences of Philadelphia Volume 152 ; 152 >

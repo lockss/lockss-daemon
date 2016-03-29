@@ -5,7 +5,7 @@
     info[tester] = 5
   >
   
-    comment[0] = RT3894 
+    #RT3894 
 
   {
   
@@ -22,7 +22,7 @@
     param[journal_abbr] = geologia
     implicit < status ; year ; name ; param[volume] >
 
-    comment[0] = This journal is leaving Digital Commons. Do not process any further content.
+    #This journal is leaving Digital Commons. Do not process any further content.
 
     au < released ; 2007 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 52 ; 52 >
     au < released ; 2008 ; Studia Universitatis Babeş-Bolyai, Geologia Volume 53 ; 53 >

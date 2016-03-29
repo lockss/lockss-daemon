@@ -17,7 +17,7 @@
     param[base_url] = http://www.othervoices.org/
     implicit < status ; year ; name ; param[volume] >
     
-    comment[0] = plugin needs review.
+    # plugin needs review.
     
     au < doNotProcess ; 1997-1999 ; Other Voices: The eJournal of Cultural Criticism Volume 1 ; 1 >
     au < down ; 2000-2005 ; Other Voices: The eJournal of Cultural Criticism Volume 2 ; 2 >

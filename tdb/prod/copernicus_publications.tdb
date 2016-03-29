@@ -654,7 +654,7 @@
       attr[journal_id] = FR
       param[base_url] = http://www.foss-rec.net/
       param[home_url] = http://www.fossil-record.net/
-      comment[0] = Abstract only, not Open Access, from volume 1 to 16, eissn 1860-1014
+      # Abstract only, not Open Access, from volume 1 to 16, eissn 1860-1014
 
       {
       attr[au_coverage_depth] = abstracts
@@ -976,7 +976,7 @@
       attr[journal_id] = 
       param[base_url] = http://www.isprs.org/proceedings/
       param[home_url] = http://www.isprs.org/proceedings/
-      comment[0] = needs review on file structure on website
+      # needs review on file structure on website
 
       au < expected ; 1978 ; 1978 ; ISPRS Archives Volume XXII ; XXII >
       au < exists ; 1980 ; 1980 ; ISPRS Archives Volume XXIII ; XXIII >
@@ -1319,7 +1319,7 @@
       attr[journal_id] = SG
       param[base_url] = http://www.soc-geogr.net/
       param[home_url] = http://www.social-geography.net/
-      comment[0] = stopped publishing as of 2012.
+      # stopped publishing as of 2012.
 
       au < released ; 2005 ; 2005 ; Social Geography Volume 1 ; 1 >
       au < released ; 2007 ; 2007 ; Social Geography Volume 2 ; 2 >

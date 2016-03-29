@@ -15468,7 +15468,7 @@
   {
 
     title <
-      name = LabMedicine ;
+      name = Laboratory Medicine ;
       issn = 0007-5027 ;
       eissn = 1943-7730 ;
       issnl = 0007-5027
@@ -15476,25 +15476,23 @@
 
     param[base_url] = http://labmed.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
-    #content avaiable from 1970 volume 1 to 1999 volume 30
+    #content avaiable from 1970 volume 1 to 1999 volume 30 and present
     
-    au < exists ; exists ; 2000 ; LabMedicine Volume 31 ; 31 ; >
-    au < exists ; exists ; 2001 ; LabMedicine Volume 32 ; 32 ; >
-    au < exists ; exists ; 2002 ; LabMedicine Volume 33 ; 33 ; >
-    au < exists ; exists ; 2003 ; LabMedicine Volume 34 ; 34 ; >
-    au < exists ; exists ; 2004 ; LabMedicine Volume 35 ; 35 ; >
-    au < exists ; exists ; 2005 ; LabMedicine Volume 36 ; 36 ; >
-    au < exists ; exists ; 2006 ; LabMedicine Volume 37 ; 37 ; >
-    au < exists ; exists ; 2007 ; LabMedicine Volume 38 ; 38 ; >
-    au < exists ; exists ; 2008 ; LabMedicine Volume 39 ; 39 ; >
-    au < exists ; exists ; 2009 ; LabMedicine Volume 40 ; 40 ; >
-    au < exists ; exists ; 2010 ; LabMedicine Volume 41 ; 41 ; >
-    au < exists ; exists ; 2011 ; LabMedicine Volume 42 ; 42 ; >
-    au < exists ; exists ; 2012 ; LabMedicine Volume 43 ; 43 ; >
-    au < exists ; exists ; 2013 ; LabMedicine Volume 44 ; 44 ; >
-    au < exists ; exists ; 2014 ; LabMedicine Volume 45 ; 45 ; >
-    au < crawling ; exists ; 2015 ; LabMedicine Volume 46 ; 46 ; >
-    au < exists ; exists ; 2016 ; LabMedicine Volume 47 ; 47 ; >
+    au < exists ; exists ; 2002 ; Laboratory Medicine Volume 33 ; 33 ; >
+    au < exists ; exists ; 2003 ; Laboratory Medicine Volume 34 ; 34 ; >
+    au < exists ; exists ; 2004 ; Laboratory Medicine Volume 35 ; 35 ; >
+    au < exists ; exists ; 2005 ; Laboratory Medicine Volume 36 ; 36 ; >
+    au < exists ; exists ; 2006 ; Laboratory Medicine Volume 37 ; 37 ; >
+    au < exists ; exists ; 2007 ; Laboratory Medicine Volume 38 ; 38 ; >
+    au < exists ; exists ; 2008 ; Laboratory Medicine Volume 39 ; 39 ; >
+    au < exists ; exists ; 2009 ; Laboratory Medicine Volume 40 ; 40 ; >
+    au < exists ; exists ; 2010 ; Laboratory Medicine Volume 41 ; 41 ; >
+    au < exists ; exists ; 2011 ; Laboratory Medicine Volume 42 ; 42 ; >
+    au < exists ; exists ; 2012 ; Laboratory Medicine Volume 43 ; 43 ; >
+    au < exists ; exists ; 2013 ; Laboratory Medicine Volume 44 ; 44 ; >
+    au < exists ; exists ; 2014 ; Laboratory Medicine Volume 45 ; 45 ; >
+    au < crawling ; exists ; 2015 ; Laboratory Medicine Volume 46 ; 46 ; >
+    au < exists ; exists ; 2016 ; Laboratory Medicine Volume 47 ; 47 ; >
 
   }
 
@@ -16077,8 +16075,6 @@
     au < exists ; exists ; 2001 ; Mammalian Species Volume 666 ; 666 ; >
     au < exists ; exists ; 2001 ; Mammalian Species Volume 667 ; 667 ; >
     au < exists ; exists ; 2001 ; Mammalian Species Volume 668 ; 668 ; >
-    au < exists ; exists ; 2001 ; Mammalian Species Volume 667 ; 667 ; >
-    au < exists ; exists ; 2001 ; Mammalian Species Volume 668 ; 668 ; >
     au < exists ; exists ; 2001 ; Mammalian Species Volume 669 ; 669 ; >
     au < exists ; exists ; 2001 ; Mammalian Species Volume 670 ; 670 ; >
     au < exists ; exists ; 2001 ; Mammalian Species Volume 671 ; 671 ; >
@@ -16119,8 +16115,6 @@
     au < exists ; exists ; 2002 ; Mammalian Species Volume 706 ; 706 ; >
     au < exists ; exists ; 2002 ; Mammalian Species Volume 707 ; 707 ; >
     au < exists ; exists ; 2002 ; Mammalian Species Volume 708 ; 708 ; >
-    au < exists ; exists ; 2002 ; Mammalian Species Volume 707 ; 707 ; >
-    au < exists ; exists ; 2002 ; Mammalian Species Volume 708 ; 708 ; >
     au < exists ; exists ; 2002 ; Mammalian Species Volume 709 ; 709 ; >
     au < exists ; exists ; 2002 ; Mammalian Species Volume 710 ; 710 ; >
     au < exists ; exists ; 2002 ; Mammalian Species Volume 711 ; 711 ; >
@@ -16139,8 +16133,6 @@
     au < exists ; exists ; 2003 ; Mammalian Species Volume 724 ; 724 ; >
     au < exists ; exists ; 2003 ; Mammalian Species Volume 725 ; 725 ; >
     au < exists ; exists ; 2003 ; Mammalian Species Volume 726 ; 726 ; >
-    au < exists ; exists ; 2003 ; Mammalian Species Volume 727 ; 727 ; >
-    au < exists ; exists ; 2003 ; Mammalian Species Volume 728 ; 728 ; >
     au < exists ; exists ; 2003 ; Mammalian Species Volume 727 ; 727 ; >
     au < exists ; exists ; 2003 ; Mammalian Species Volume 728 ; 728 ; >
     au < exists ; exists ; 2003 ; Mammalian Species Volume 729 ; 729 ; >
@@ -16183,8 +16175,6 @@
     au < exists ; exists ; 2005 ; Mammalian Species Volume 766 ; 766 ; >
     au < exists ; exists ; 2005 ; Mammalian Species Volume 767 ; 767 ; >
     au < exists ; exists ; 2005 ; Mammalian Species Volume 768 ; 768 ; >
-    au < exists ; exists ; 2005 ; Mammalian Species Volume 767 ; 767 ; >
-    au < exists ; exists ; 2005 ; Mammalian Species Volume 768 ; 768 ; >
     au < exists ; exists ; 2005 ; Mammalian Species Volume 769 ; 769 ; >
     au < exists ; exists ; 2005 ; Mammalian Species Volume 770 ; 770 ; >
     au < exists ; exists ; 2005 ; Mammalian Species Volume 771 ; 771 ; >
@@ -16223,8 +16213,6 @@
     au < exists ; exists ; 2007 ; Mammalian Species Volume 804 ; 804 ; >
     au < exists ; exists ; 2007 ; Mammalian Species Volume 805 ; 805 ; >
     au < exists ; exists ; 2007 ; Mammalian Species Volume 806 ; 806 ; >
-    au < exists ; exists ; 2007 ; Mammalian Species Volume 807 ; 807 ; >
-    au < exists ; exists ; 2008 ; Mammalian Species Volume 808 ; 808 ; >
     au < exists ; exists ; 2008 ; Mammalian Species Volume 807 ; 807 ; >
     au < exists ; exists ; 2008 ; Mammalian Species Volume 808 ; 808 ; >
     au < exists ; exists ; 2008 ; Mammalian Species Volume 809 ; 809 ; >
@@ -16245,8 +16233,6 @@
     au < exists ; exists ; 2009 ; Mammalian Species Volume 824 ; 824 ; >
     au < exists ; exists ; 2009 ; Mammalian Species Volume 825 ; 825 ; >
     au < exists ; exists ; 2009 ; Mammalian Species Volume 826 ; 826 ; >
-    au < exists ; exists ; 2009 ; Mammalian Species Volume 827 ; 827 ; >
-    au < exists ; exists ; 2009 ; Mammalian Species Volume 828 ; 828 ; >
     au < exists ; exists ; 2009 ; Mammalian Species Volume 827 ; 827 ; >
     au < exists ; exists ; 2009 ; Mammalian Species Volume 828 ; 828 ; >
     au < exists ; exists ; 2009 ; Mammalian Species Volume 829 ; 829 ; >

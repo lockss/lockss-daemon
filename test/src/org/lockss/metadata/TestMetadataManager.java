@@ -222,6 +222,7 @@ public class TestMetadataManager extends LockssTestCase {
     runMetadataMonitorTest();
     runPublicationIntervalTest();
     runTestMandatoryMetadataFields();
+    runMetadataControlTest();
   }
 
   private void runCreateMetadataTest() throws Exception {
@@ -1577,6 +1578,11 @@ public class TestMetadataManager extends LockssTestCase {
     assertEquals(2, mandatoryFields.size());
     assertEquals("abc", mandatoryFields.get(0));
     assertEquals("xyz", mandatoryFields.get(1));
+  }
+
+  private void runMetadataControlTest() throws Exception {
+    assertFalse(metadataManager.deletePublicationIssn(123456L, "Nonexistent",
+	"e_issn"));
   }
 
   public static class MySubTreeArticleIteratorFactory

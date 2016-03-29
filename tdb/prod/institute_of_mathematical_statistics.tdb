@@ -134,7 +134,7 @@
     
       plugin = org.lockss.plugin.ojs.OJSPlugin
       param[base_url] = http://www.i-journals.org/ps/
-      comment[0] = checked that this journal use OJSPlugin in 11/19/2012. Plugin deprecated.
+      # checked that this journal use OJSPlugin in 11/19/2012. Plugin deprecated.
       
       au < released ; 2004 ; Probability Surveys Volume 1 ; 1 ; 2004 >
       au < released ; 2005 ; Probability Surveys Volume 2 ; 2 ; 2005 >

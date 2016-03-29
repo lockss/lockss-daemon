@@ -51,7 +51,7 @@
 
       param[journal_id] = aps
       param[journal_issn] = 2042-793X
-      comment[0] = content published 2 years later
+      # content published 2 years later
       
       au < released ; 2011 ; Art & the Public Sphere Volume 1 ; 1 >
       au < released ; 2012 ; Art & the Public Sphere Volume 2 ; 2 >
@@ -717,7 +717,7 @@
       param[journal_id] = padm
       param[journal_issn] = 1479-4713
       
-      comment[0] = No manifest pages at all. Moved to Routledge. http://www.ingentaconnect.com/content/1479-4713
+      # No manifest pages at all. Moved to Routledge. http://www.ingentaconnect.com/content/1479-4713
 
       au < down ; 2005 ; International Journal of Performance Arts and Digital Media Volume 1 ; 1 >
       au < down ; 2006-2007 ; International Journal of Performance Arts and Digital Media Volume 2 ; 2 >
@@ -1030,7 +1030,7 @@
       param[journal_id] = jmp
       param[journal_issn] = 1468-2753
 
-      comment[0] = No manifest pages at all. Moved to Routledge. http://www.ingentaconnect.com/content/1468-2753
+      # No manifest pages at all. Moved to Routledge. http://www.ingentaconnect.com/content/1468-2753
 
       au < down ; 2001-2002 ; Journal of Media Practice Volume 2 ; 2 >
       au < down ; 2002-2003 ; Journal of Media Practice Volume 3 ; 3 >

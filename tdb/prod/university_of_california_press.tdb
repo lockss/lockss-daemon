@@ -4,7 +4,7 @@
     name = University of California Press
   >
 
-  comment[moving] = end 2014 or 2015
+  # Moving end 2014 or 2015
 
   {
 
@@ -3330,7 +3330,7 @@
       param[base_url] = http://www.jstor.org/
       param[journal_code] = socialproblems
       implicit < status ; year ; name ; param[volume_name] >
-      comment[moving] = moving to OUP, Effective Transfer Date 2015-01-01
+      #moving to OUP, Effective Transfer Date 2015-01-01
 
       au < manifest ; 1953-1954 ; Social Problems Volume 1 ; 1 >
       au < manifest ; 1954-1955 ; Social Problems Volume 2 ; 2 >

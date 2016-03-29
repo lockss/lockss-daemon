@@ -4,7 +4,7 @@
     name = Mineralogical Society of Great Britain and Ireland
   >
   
-  comment[0] = Publisher prefers to preserve content from HW. See RT 2695
+  # Publisher prefers to preserve content from HW. See RT 2695
 
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin 

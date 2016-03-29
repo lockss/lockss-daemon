@@ -106,7 +106,7 @@
       param[journal_dir] = bulletin_of_hispanic_studies
       attr[journal_id] = bhs
       
-      comment[0] = Only 2009 and 2010 are found on ProjectMuse web page. 
+      # Only 2009 and 2010 are found on ProjectMuse web page. 
 
       {
 
@@ -344,7 +344,7 @@
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       implicit < status ; year ; name ; param[volume] >
       
-      comment[0] = forthcoming
+      # forthcoming
       
     }
     {

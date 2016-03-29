@@ -52,7 +52,7 @@
     >
 
     param[journal_id] = apec
-    comment[0] = no issue in 2005 & 2006
+    # no issue in 2005 & 2006
 
     au < manifest ; 1974 ; Active and Passive Electronic Components Volume 1 (1974) ; 1974 ; 1 >
     au < manifest ; 1975 ; Active and Passive Electronic Components Volume 2 (1975) ; 1975 ; 2 >
@@ -767,7 +767,7 @@
     >
 
     param[journal_id] = ame
-    comment[0] = move to Sage in 2015
+    # move to Sage in 2015
 
     au < down ; 2009 ; Advances in Mechanical Engineering Volume 2009 ; 2009 ; 2009 >
     au < down ; 2010 ; Advances in Mechanical Engineering Volume 2010 ; 2010 ; 2010 >
@@ -1965,7 +1965,7 @@
     >
 
     param[journal_id] = crial
-    comment[2] = redirects to /crim subdir
+    # redirects to /crim subdir
 
     au < down ; 2011 ; Case Reports in Allergy Volume 2011 ; 2011 ; 2011 >
 
@@ -2070,7 +2070,7 @@
     >
 
     param[journal_id] = criem
-    comment[2] = redirects to /crim subdir
+    # redirects to /crim subdir
 
     au < manifest ; 2011 ; Case Reports in Emergency Medicine Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; Case Reports in Emergency Medicine Volume 2012 ; 2012 ; 2012 >
@@ -2215,7 +2215,7 @@
     >
 
     param[journal_id] = crim
-    comment[1] = redirects to crim/medicine/2012 as opposed to expected crawl rules
+    # redirects to crim/medicine/2012 as opposed to expected crawl rules
 
     au < released ; 2009 ; Case Reports in Medicine Volume 2009 ; 2009 ; 2009 >
     au < released ; 2010 ; Case Reports in Medicine Volume 2010 ; 2010 ; 2010 >
@@ -2948,7 +2948,7 @@
     >
 
     param[journal_id] = dte
-    comment[0] = no issue from 2002 to 2007
+    # no issue from 2002 to 2007
 
     au < manifest ; 1994 ; Diagnostic and Therapeutic Endoscopy Volume 1 (1994) ; 1994 ; 1 >
     au < manifest ; 1995 ; Diagnostic and Therapeutic Endoscopy Volume 1-2 (1995) ; 1995 ; 1-2 >
@@ -3035,7 +3035,7 @@
     >
 
     param[journal_id] = dm
-    comment[0] = no issue in 1995, 1997
+    # no issue in 1995, 1997
 
     au < manifest ; 1993 ; Disease Markers Volume 11 (1993) ; 1993 ; 11 >
     au < manifest ; 1994 ; Disease Markers Volume 12 (1994) ; 1994 ; 12 >
@@ -3224,7 +3224,7 @@
     >
 
     param[journal_id] = asp
-    comment[1] = Doesn't seem to exist anymore?
+    # Doesn't seem to exist anymore?
 
     au < down ; 2001 ; EURASIP Journal on Advances in Signal Processing Volume 2001 ; 2001 ; 2001 >
     au < down ; 2002 ; EURASIP Journal on Advances in Signal Processing Volume 2002 ; 2002 ; 2002 >
@@ -3249,7 +3249,7 @@
     >
 
     param[journal_id] = asmp
-    comment[0] = not exist online
+    # not exist online
 
     au < down ; 2007 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2007 ; 2007 ; 2007 >
     au < down ; 2008 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2008 ; 2008 ; 2008 >
@@ -3268,7 +3268,7 @@
     >
 
     param[journal_id] = bsb
-    comment[0] = not exist online
+    # not exist online
 
     au < down ; 2006 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2006 ; 2006 ; 2006 >
     au < down ; 2007 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2007 ; 2007 ; 2007 >
@@ -3288,7 +3288,7 @@
     >
 
     param[journal_id] = es
-    comment[0] = not exist online
+    # not exist online
 
     au < down ; 2006 ; EURASIP Journal on Embedded Systems Volume 2006 ; 2006 ; 2006 >
     au < down ; 2007 ; EURASIP Journal on Embedded Systems Volume 2007 ; 2007 ; 2007 >
@@ -3308,7 +3308,7 @@
     >
 
     param[journal_id] = ivp
-    comment[0] = not exist online
+    # not exist online
 
     au < down ; 2007 ; EURASIP Journal on Image and Video Processing Volume 2007 ; 2007 ; 2007 >
     au < down ; 2008 ; EURASIP Journal on Image and Video Processing Volume 2008 ; 2008 ; 2008 >
@@ -3327,7 +3327,7 @@
     >
 
     param[journal_id] = is
-    comment[0] = not exist online
+    # not exist online
 
     au < down ; 2007 ; EURASIP Journal on Information Security Volume 2007 ; 2007 ; 2007 >
     au < down ; 2008 ; EURASIP Journal on Information Security Volume 2008 ; 2008 ; 2008 >
@@ -3346,7 +3346,7 @@
     >
 
     param[journal_id] = wcn
-    comment[0] = not exist online
+    # not exist online
 
     au < down ; 2004 ; EURASIP Journal on Wireless Communications and Networking Volume 2004 ; 2004 ; 2004 >
     au < down ; 2005 ; EURASIP Journal on Wireless Communications and Networking Volume 2005 ; 2005 ; 2005 >
@@ -5440,7 +5440,7 @@
       issnl = 2356-7872
     >
     
-    comment[0] = The ISRN journal will be collected as a single journal. The individual topics listed in the contract will not be separate.
+    # The ISRN journal will be collected as a single journal. The individual topics listed in the contract will not be separate.
 
     param[journal_id] = isrn
 
@@ -5744,8 +5744,8 @@
 
     param[journal_id] = jamsa
     
-    comment[0] = These AUs were never added to the delta machines, and now jamsa redirects to ijsa.
-    comment[1] = Moved from superseded to doesNotExist.
+    # These AUs were never added to the delta machines, and now jamsa redirects to ijsa.
+    # Moved from superseded to doesNotExist.
 
     au < doesNotExist ; 1988 ; Journal of Applied Mathematics and Stochastic Analysis Volume 1 (1988) ; 1988 ; 1 >
     au < doesNotExist ; 1989 ; Journal of Applied Mathematics and Stochastic Analysis Volume 2 (1989) ; 1989 ; 2 >
@@ -6487,7 +6487,7 @@
 
     comment[jdr] = see journal id 'edr'
     param[journal_id] = jdr 
-    comment[0] = no issue in 2005, 2006
+    # no issue in 2005, 2006
 
     au < manifest ; 2000 ; Experimental Diabetes Research Volume 1 (2000) ; 2000 ; 1 >
     au < manifest ; 2001 ; Experimental Diabetes Research Volume 2 (2001) ; 2001 ; 2 >
@@ -6915,7 +6915,7 @@
       issnl = 1025-5834
     >
     
-    comment[0] = Moved to SpringerOpen
+    # Moved to SpringerOpen
 
     param[journal_id] = jia
 

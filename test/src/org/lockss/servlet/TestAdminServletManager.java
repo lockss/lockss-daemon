@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.servlet;
 
 import java.util.*;
-
 import static org.lockss.servlet.AdminServletManager.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -81,7 +80,8 @@ public class TestAdminServletManager extends LockssTestCase {
     SERVLET_AU_CONFIG,
     SERVLET_PLUGIN_CONFIG,
     SERVLET_DEBUG_PANEL,
-    SERVLET_SUB_MANAGEMENT
+    SERVLET_SUB_MANAGEMENT,
+    SERVLET_MD_CONTROL
 };
 
   ServletDescr contentAdminDescrs[] = {

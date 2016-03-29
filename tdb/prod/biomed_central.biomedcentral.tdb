@@ -189,7 +189,7 @@
       }
       {
         param[base_url] = http://alzres.com/
-        comment[0] = journal moved to http://www.alzres.com/
+        # journal moved to http://www.alzres.com/
 
         au < down ; 2009 ; Alzheimer's Research & Therapy Volume 1 ; 1 >
         au < down ; 2010 ; Alzheimer's Research & Therapy Volume 2 ; 2 >
@@ -367,7 +367,7 @@
 
       {
       param[base_url] = http://www.arthritis-research.com/
-      comment[0] = base url changed to add www.
+      # base url changed to add www.
 
       au < doNotProcess ; 1999 ; Arthritis Research & Therapy Volume 1 ; 1 >
       au < doNotProcess ; 2000 ; Arthritis Research & Therapy Volume 2 ; 2 >
@@ -440,7 +440,7 @@
       param[base_url] = http://www.anzhealthpolicy.com/
       param[journal_issn] = 1743-8462
 
-      comment[0] = Journal stopped publishing with BioMedCentral after 2010.
+      # Journal stopped publishing with BioMedCentral after 2010.
 
       au < down ; 2004 ; Australia and New Zealand Health Policy Volume 1 ; 1 >
       au < down ; 2005 ; Australia and New Zealand Health Policy Volume 2 ; 2 >
@@ -784,7 +784,7 @@
 
       {
       param[base_url] = http://www.breast-cancer-research.com/
-      comment[0] = base url changed to add www.
+      # base url changed to add www.
 
       au < doNotProcess ; 1999 ; Breast Cancer Research Volume 1 ; 1 >
       au < doNotProcess ; 2000 ; Breast Cancer Research Volume 2 ; 2 >
@@ -1201,7 +1201,7 @@
 
       {
       param[base_url] = http://chiromt.com/
-      comment[0] = wrong base_url, now changed to http://www.chiromt.com
+      # wrong base_url, now changed to http://www.chiromt.com
 
       au < superseded ; 2011 ; Chiropractic & Manual Therapies Volume 19 [superseded] ; 19 >
 
@@ -1402,7 +1402,7 @@
 
       param[base_url] = http://www.comparative-hepatology.com/
       param[journal_issn] = 1476-5926
-      comment[0] = no publication after 2012
+      # no publication after 2012
 
       au < down ; 2002 ; Comparative Hepatology Volume 1 ; 1 >
       au < down ; 2003 ; Comparative Hepatology Volume 2 ; 2 >
@@ -1501,7 +1501,7 @@
 
       {
       param[base_url] = http://www.ccforum.com/
-      comment[0] = base url changed to add www.
+      # base url changed to add www.
 
       au < doNotProcess ; 1997 ; Critical Care Volume 1 (English) ; 1 >
       au < doNotProcess ; 1998 ; Critical Care Volume 2 (English) ; 2 >
@@ -1525,7 +1525,7 @@
       }
       {
       param[base_url] = http://ccforum.com/
-      comment[0] = base url changed to add www.
+      # base url changed to add www.
 
       au < down ; 1997 ; Critical Care Volume 1 (English) ; 1 >
       au < down ; 1998 ; Critical Care Volume 2 (English) ; 2 >
@@ -1621,7 +1621,7 @@
       param[base_url] = http://www.dynamic-med.com/
       param[journal_issn] = 1476-5918
 
-      comment[0] = This journal stopped publishing through BioMedCentral after 2009.
+      # This journal stopped publishing through BioMedCentral after 2009.
 
       au < down ; 2002 ; Dynamic Medicine Volume 1 ; 1 >
       au < down ; 2003 ; Dynamic Medicine Volume 2 ; 2 >
@@ -1957,7 +1957,7 @@
 
       param[base_url] = http://www.gvt-journal.com/
       param[journal_issn] = 1479-0556
-      comment[0] = no publication after 2012
+      # no publication after 2012
 
       au < down ; 2003 ; Genetic Vaccines and Therapy Volume 1 ; 1 >
       au < down ; 2004 ; Genetic Vaccines and Therapy Volume 2 ; 2 >
@@ -2044,7 +2044,7 @@
 
       {
       param[base_url] = http://www.genomebiology.com/
-      comment[0] = base url changed to add www.
+      # base url changed to add www.
 
       au < doNotProcess ; 2000 ; Genome Biology Volume 1 ; 1 >
       au < doNotProcess ; 2001 ; Genome Biology Volume 2 ; 2 >
@@ -2065,7 +2065,7 @@
       }
       {
       param[base_url] = http://genomebiology.com/
-      comment[0] = base url changed to add www.
+      # base url changed to add www.
 
       au < down ; 2000 ; Genome Biology Volume 1 ; 1 >
       au < down ; 2001 ; Genome Biology Volume 2 ; 2 >
@@ -2115,7 +2115,7 @@
 
       {
       param[base_url] = http://www.genomemedicine.com/
-      comment[0] = base url changed to add www.
+      # base url changed to add www.
 
       au < doNotProcess ; 2009 ; Genome Medicine Volume 1 ; 1 >
       au < doNotProcess ; 2010 ; Genome Medicine Volume 2 ; 2 >
@@ -2127,7 +2127,7 @@
       }
       {
       param[base_url] = http://genomemedicine.com/
-      comment[0] = base url changed to add www.
+      # base url changed to add www.
 
       au < doNotProcess ; 2013 ; Genome Medicine Volume 5 ; 5 >
       au < doNotProcess ; 2014 ; Genome Medicine Volume 6 ; 6 >
@@ -2349,7 +2349,7 @@
 
       param[base_url] = http://www.herpesviridae.org/
       param[journal_issn] = 2042-4280
-      comment[0] = stopped publishing.
+      # stopped publishing.
 
       au < doNotProcess ; 2010 ; Herpesviridae Volume 1 ; 1 >
       au < doNotProcess ; 2011 ; Herpesviridae Volume 2 ; 2 >
@@ -2442,7 +2442,7 @@
       param[base_url] = http://www.immunome-research.com/
       param[journal_issn] = 1745-7580
 
-      comment[0] = Moved to Springer
+      # Moved to Springer
 
       au < down ; 2005 ; Immunome Research Volume 1 ; 1 >
       au < down ; 2006 ; Immunome Research Volume 2 ; 2 >
@@ -2528,7 +2528,7 @@
 
       param[base_url] = http://www.intarchmed.com/
       param[journal_issn] = 1755-7682
-      comment[0] = leaving to iMedPub on 2014-12-31
+      # leaving to iMedPub on 2014-12-31
 
       au < down ; 2008 ; International Archives of Medicine Volume 1 ; 1 >
       au < down ; 2009 ; International Archives of Medicine Volume 2 ; 2 >
@@ -2939,7 +2939,7 @@
       param[base_url] = http://jbiol.com/
       param[journal_issn] = 1475-4924
       comment[continued_by] = BMC Biology
-      comment[0] = no publication after 2010. Journal archived and moved to http://www.jbiol.com/
+      # no publication after 2010. Journal archived and moved to http://www.jbiol.com/
 
       au < down ; 2002 ; Journal of Biology Volume 1 ; 1 >
       au < down ; 2003 ; Journal of Biology Volume 2 ; 2 >
@@ -3072,7 +3072,7 @@
 
         param[base_url] = http://jcmr-online.com/
 
-        comment[0] = down by accident with the wrong base_url, lacking the www.
+        # down by accident with the wrong base_url, lacking the www.
 
         au < superseded ; 1999 ; Journal of Cardiovascular Magnetic Resonance Volume 1 [superseded] ; 1 >
         au < superseded ; 2000 ; Journal of Cardiovascular Magnetic Resonance Volume 2 [superseded] ; 2 >
@@ -4146,7 +4146,7 @@
 
       param[base_url] = http://www.nonlinearbiomedphys.com/
       param[journal_issn] = 1753-4631
-      comment[0] = no publication after 2012
+      # no publication after 2012
 
       au < down ; 2007 ; Nonlinear Biomedical Physics Volume 1 ; 1 >
       au < down ; 2008 ; Nonlinear Biomedical Physics Volume 2 ; 2 >
@@ -4566,7 +4566,7 @@
 
       {
       param[base_url] = http://www.respiratory-research.com/
-      comment[0] = base url changed to add www.
+      # base url changed to add www.
 
       au < doNotProcess ; 2000 ; Respiratory Research Volume 1 ; 1 >
       au < doNotProcess ; 2001 ; Respiratory Research Volume 2 ; 2 >
@@ -4587,7 +4587,7 @@
       }
       {
       param[base_url] = http://respiratory-research.com/
-      comment[0] = base url changed to add www.
+      # base url changed to add www.
 
       au < doNotProcess ; 2008 ; Respiratory Research Volume 9 ; 9 >
       au < doNotProcess ; 2009 ; Respiratory Research Volume 10 ; 10 >
@@ -4780,7 +4780,7 @@
 
       {
       param[base_url] = http://www.stemcellres.com/
-      comment[0] = base url changed to add www.
+      # base url changed to add www.
 
       au < doNotProcess ; 2010 ; Stem Cell Research & Therapy Volume 1 ; 1 >
       au < doNotProcess ; 2011 ; Stem Cell Research & Therapy Volume 2 ; 2 >
@@ -4791,7 +4791,7 @@
       }
       {
       param[base_url] = http://stemcellres.com/
-      comment[0] = base url changed to add www.
+      # base url changed to add www.
 
       au < doNotProcess ; 2013 ; Stem Cell Research & Therapy Volume 4 ; 4 >
       }

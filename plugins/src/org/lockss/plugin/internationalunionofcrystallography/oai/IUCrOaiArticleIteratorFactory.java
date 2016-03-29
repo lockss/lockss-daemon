@@ -57,17 +57,16 @@ implements ArticleIteratorFactory,
   protected static final String PATTERN_TEMPLATE =
       "\"^%s\", script_url";
   
+  //http://scripts.iucr.org/cgi-bin/paper?S0365110X59001475
+  protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
+     "cgi-bin/paper\\?([^/]+)$",
+     Pattern.CASE_INSENSITIVE);		
+  protected static final String ABSTRACT_REPLACEMENT = "cgi-bin/paper\\?$1";
+  
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) 
       throws PluginException {
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
-
-//http://scripts.iucr.org/cgi-bin/paper?S0365110X59001475
-    final Pattern ABSTRACT_PATTERN = Pattern.compile(
-       "cgi-bin/paper\\?([^/]+)$",
-       Pattern.CASE_INSENSITIVE);		
-    final String ABSTRACT_REPLACEMENT = "cgi-bin/paper\\?$1";
-
 
     builder.setSpec(target,
         ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);

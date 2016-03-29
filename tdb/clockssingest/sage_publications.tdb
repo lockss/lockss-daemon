@@ -1380,8 +1380,8 @@
 
     title <
       name = American Journal of Law & Medicine ;
-      issn = 1559-8276 ;
-      eissn = 1559-8284
+      issn = 0098-8588 ;
+      eissn = 2375-835X
     >
 
       param[base_url] = http://jlm.sagepub.com/
@@ -1398,7 +1398,7 @@
       au < exists ; exists ; 2012 ; American Journal of Law & Medicine Volume 38 ; 38 ; >
       au < exists ; exists ; 2013 ; American Journal of Law & Medicine Volume 39 ; 39 ; >
       au < exists ; exists ; 2014 ; American Journal of Law & Medicine Volume 40 ; 40 ; >
-      au < manifest ; exists ; 2015 ; American Journal of Law & Medicine Volume 41 ; 41 ; >
+      au < crawling ; exists ; 2015 ; American Journal of Law & Medicine Volume 41 ; 41 ; >
       au < expected ; exists ; 2016 ; American Journal of Law & Medicine Volume 42 ; 42 ; >
 
   }
@@ -4780,6 +4780,9 @@
       au < crawling ; exists ; 2015 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 127 ; 127 ; >
       au < crawling ; exists ; 2015 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 128 ; 128 ; >
       au < manifest ; exists ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 129 ; 129 ; >
+      au < manifest ; exists ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 130 ; 130 ; >
+      au < expected ; exists ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 131 ; 131 ; >
+      au < expected ; exists ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 132 ; 132 ; >
 
     }
 
@@ -25900,7 +25903,7 @@
       au < exists ; exists ; 2012 ; The Journal of Men's Studies Volume 20 ; 20 ; >
       au < exists ; exists ; 2013 ; The Journal of Men's Studies Volume 21 ; 21 ; >
       au < exists ; exists ; 2014 ; The Journal of Men's Studies Volume 22 ; 22 ; >
-      au < manifest ; exists ; 2015 ; The Journal of Men's Studies Volume 23 ; 23 ; >
+      au < crawling ; exists ; 2015 ; The Journal of Men's Studies Volume 23 ; 23 ; >
       au < manifest ; exists ; 2016 ; The Journal of Men's Studies Volume 24 ; 24 ; >
 
   }
@@ -32941,9 +32944,10 @@
       au < doNotProcess ; exists ; 2013 ; OMEGA - Journal of Death and Dying Volume 67 ; 67 ; >
       au < crawling ; exists ; 2013-2014 ; OMEGA - Journal of Death and Dying Volume 68 ; 68 ; >
       au < crawling ; exists ; 2014 ; OMEGA - Journal of Death and Dying Volume 69 ; 69 ; >
-      au < finished ; finished ; 2014-2015 ; OMEGA - Journal of Death and Dying Volume 70 ; 70 ; >
+      au < finished ; finished ; 2015 ; OMEGA - Journal of Death and Dying Volume 70 ; 70 ; >
       au < crawling ; exists ; 2015 ; OMEGA - Journal of Death and Dying Volume 71 ; 71 ; >
       au < manifest ; exists ; 2016 ; OMEGA - Journal of Death and Dying Volume 72 ; 72 ; >
+      au < manifest ; exists ; 2016 ; OMEGA - Journal of Death and Dying Volume 73 ; 73 ; >
 
   }
 
@@ -44261,7 +44265,7 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      #move to Duke University Press 
+      #moved to Duke University Press 
 
       au < doNotProcess ; exists ; 2006 ; World Policy Journal Volume 23 ; 23 ; >
       au < doNotProcess ; exists ; 2007 ; World Policy Journal Volume 24 ; 24 ; >
@@ -47421,10 +47425,8 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://nan.sagepub.com/
 
-        au < finished ; finished ; 2013 ; International Journal of Green Nanotechnology Volume 1 ; 1 ; >
-        au < finished ; crawling ; 2014 ; International Journal of Green Nanotechnology Volume 2 ; 2 ; >
-        au < expected ; exists ; 2015 ; International Journal of Green Nanotechnology Volume 3 ; 3 ; >
-        au < expected ; exists ; 2016 ; International Journal of Green Nanotechnology Volume 4 ; 4 ; >
+        au < superseded ; finished ; 2013 ; International Journal of Green Nanotechnology Volume 1 [superseded] ; 1 ; >
+        au < superseded ; crawling ; 2014 ; International Journal of Green Nanotechnology Volume 2 [superseded] ; 2 ; >
 
       }
 

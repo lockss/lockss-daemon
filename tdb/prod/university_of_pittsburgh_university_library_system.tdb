@@ -38,7 +38,8 @@
     au < released ; 2011 ; 2011 ; Blivian Studies Journal Volume 18 ; 18 >
     au < released ; 2012-2013 ; 2012 ; Bolivian Studies Journal Volume 19 ; 19 >
     au < released ; 2014 ; 2014 ; Bolivian Studies Journal Volume 20 ; 20 >
-    au < manifest ; 2015 ; 2015 ; Bolivian Studies Journal Volume 21 ; 21 >
+    au < testing ; 2015 ; 2015 ; Bolivian Studies Journal Volume 21 ; 21 >
+    au < expected ; 2016 ; 2016 ; Bolivian Studies Journal Volume 22 ; 22 >
 
   }
 
@@ -462,8 +463,6 @@
 
     au < released ; 2011 ; 2011 ; Pitt Political Review Volume 8 ; 8 >
     au < released ; 2012 ; 2012 ; Pitt Political Review Volume 9 ; 9 >
-    au < expected ; 2013 ; 2013 ; Pitt Political Review Volume 10 ; 10 >
-    au < expected ; 2014 ; 2014 ; Pitt Political Review Volume 11 ; 11 >
 
   }
 
@@ -515,6 +514,7 @@
       au < released ; 2013 ; 2013 ; Pittsburgh Journal of Technology Law and Policy Volume 13 ; 13 >
       au < released ; 2014 ; 2014 ; Pittsburgh Journal of Technology Law and Policy Volume 14 ; 14 >
       au < released ; 2015 ; 2015 ; Pittsburgh Journal of Technology Law and Policy Volume 15 ; 15 >
+      au < expected ; 2016 ; 2016 ; Pittsburgh Journal of Technology Law and Policy Volume 16 ; 16 >
 
   }
 
@@ -549,6 +549,7 @@
     au < released ; 2013 ; 2013 ; Pittsburgh Tax Review Volume 2 ; 2 >
     au < released ; 2014 ; 2014 ; Pittsburgh Tax Review Volume 3 ; 3 >
     au < released ; 2015 ; 2015 ; Pittsburgh Tax Review Volume 4 ; 4 >
+    au < expected ; 2016 ; 2016 ; Pittsburgh Tax Review Volume 5 ; 5 >
 
   }
 
@@ -565,6 +566,7 @@
     au < released ; 2013 ; 2013 ; Radical Teacher Volume 1 ; 1 >
     au < released ; 2014 ; 2014 ; Radical Teacher Volume 2 ; 2 >
     au < released ; 2015 ; 2015 ; Radical Teacher Volume 3 ; 3 >
+    au < expected ; 2016 ; 2016 ; Radical Teacher Volume 4 ; 4 >
 
   }
 
@@ -655,7 +657,7 @@
     au < released ; 2013 ; 2013 ; Revista Iberoamericana Volume LXXIX ; LXXIX >
     au < released ; 2014 ; 2014 ; Revista Iberoamericana Volume LXXX ; LXXX >
     au < released ; 2015 ; 2015 ; Revista Iberoamericana Volume LXXXI ; LXXXI >
-
+    au < expected ; 2016 ; 2016 ; Revista Iberoamericana Volume LXXXII ; LXXXII >
 
   }
 
@@ -674,6 +676,7 @@
     au < released ; 2013 ; 2013 ; Ricoeur Studies Volume 4 ; 4 >
     au < released ; 2014 ; 2014 ; Ricoeur Studies Volume 5 ; 5 >
     au < released ; 2015 ; 2015 ; Ricoeur Studies Volume 6 ; 6 >
+    au < expected ; 2016 ; 2016 ; Ricoeur Studies Volume 7 ; 7 >
 
   }
 
@@ -705,7 +708,6 @@
       param[journal_id] = timely
 
       au < released ; 2013 ; 2013 ; Timely Interventions Volume 1 ; 1 >
-      au < expected ; 2014 ; 2014 ; Timely Interventions Volume 2 ; 2 >
 
   }
 

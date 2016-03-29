@@ -17,7 +17,7 @@
     param[base_url] = http://www.disputatio.com/
     implicit < status ; year ; name ; param[year] ; volume ; nondefparam[issues] >
     
-    comment[0] = AUs down see RU2977 RT2391
+    # AUs down see RU2977 RT2391
     
     au < down ; 1996 ; Disputatio 1996 ; 1996 ; ; 001 >
     au < down ; 1997 ; Disputatio 1997 ; 1997 ; ; 002,003 >

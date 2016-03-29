@@ -87,7 +87,7 @@
     >
     param[journal_id] = 10.1055/s-00000165
     comment[years] = 2010-current
-    comment[0] = continuation of Evidence-Based Spine Surgery
+    # continuation of Evidence-Based Spine Surgery
 
 
    au < exists ; 2010 ; 2010 ; Evidence-Based Spine-Care Journal Volume 2010 ; 1 >
@@ -109,8 +109,8 @@
 
 
     param[journal_id] = 10.1055/s-00025479 
-    comment[0] = https://www.thieme-connect.com/products/ejournals/journal/10.1055/s-00025479   Experimental and Clinical Endocrinology & Diabetes Reports
-    comment[1] = First issue online will be available soon.
+    # https://www.thieme-connect.com/products/ejournals/journal/10.1055/s-00025479   Experimental and Clinical Endocrinology & Diabetes Reports
+    # First issue online will be available soon.
 
     au < exists ; 2014 ; 2014 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 1 ; 1 >
     au < exists ; 2015 ; 2015 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 2 ; 2 >
@@ -178,7 +178,7 @@
 
     >
     param[journal_id] = 10.1055/s-00027212
-    comment[0] = moved from BioMedCentral.
+    # moved from BioMedCentral.
 
    au < exists ; 2006 ; 2006 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2006 ; 1 >
    au < exists ; 2007 ; 2007 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2007 ; 2 >
@@ -204,8 +204,8 @@
 
 
     param[journal_id] = 10.1055/s-00028776 
-    comment[0] = https://www.thieme-connect.com/products/ejournals/journal/10.1055/s-00028776   Journal of Clinical &amp\; Academic Ophthalmology
-    comment[1] = First issue online will be available soon.
+    # https://www.thieme-connect.com/products/ejournals/journal/10.1055/s-00028776   Journal of Clinical &amp\; Academic Ophthalmology
+    # First issue online will be available soon.
 
     au < expected ; 2015 ; 2015 ; Journal of Clinical & Academic Ophthalmology Volume 1 ; 1 >
 
@@ -221,7 +221,7 @@
 
     >
     param[journal_id] = 10.1055/s-00025473
-    comment[0] = Currently only eFirst is online
+    # Currently only eFirst is online
 
     au < expected ; 2016 ; 2016 ; Journal of Knee Surgery Reports Volume 1 ; 1 >
 
@@ -257,8 +257,8 @@
   
 
     param[journal_id] = 10.1055/s-00029352 
-    comment[0] = https://www.thieme-connect.de/products/ejournals/journal/10.1055/s-00029352   Journal of Reconstructive Microsurgery Open
-    comment[1] = First issue online will be available soon.
+    # https://www.thieme-connect.de/products/ejournals/journal/10.1055/s-00029352   Journal of Reconstructive Microsurgery Open
+    # First issue online will be available soon.
 
     au < expected ; 2015 ; 2015 ; Journal of Reconstructive Microsurgery Open Volume 1 ; 1 >
 
@@ -305,7 +305,7 @@
 
     >
     param[journal_id] = 10.1055/s-00028781
-    comment[0] = Currently only eFirst is online
+    # Currently only eFirst is online
 
     au < expected ; 2015 ; 2015 ; The Surgery Journal Volume 1 ; 1 >
 

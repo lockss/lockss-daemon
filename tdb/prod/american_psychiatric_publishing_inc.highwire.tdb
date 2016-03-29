@@ -20,7 +20,7 @@
       param[base_url] = http://ap.psychiatryonline.org/
       pluginPrefix = org.lockss.plugin.highwire.
       implicit < pluginSuffix ; status ; year ; volume ; name ; param[volume_name] >
-      comment[0] = move to Springer
+      # move to Springer
 
       au < HighWirePressPlugin ; down ; 1998 ; 22 ; Academic Psychiatry Volume 22 ; 22 >
       au < HighWirePressPlugin ; down ; 1999 ; 23 ; Academic Psychiatry Volume 23 ; 23 >
