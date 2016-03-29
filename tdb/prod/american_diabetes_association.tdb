@@ -49,7 +49,7 @@
       param[base_url] = http://diabetes.diabetesjournals.org/
 
 
-      implicit < status ; year ; name ; param[volume_name] >
+      #implicit < status ; year ; name ; param[volume_name] >
       comment[supplement] = Scientific Sessions Abstract Book - this is published as a supplement to Diabetes journal
 
 
@@ -124,7 +124,7 @@
 
       param[base_url] = http://care.diabetesjournals.org/
 
-      implicit < status ; year ; name ; param[volume_name] >
+      #implicit < status ; year ; name ; param[volume_name] >
       comment[supplement] = Clinical Practice Recommendations - is published as a supplement to Diabetes Care journal
 
 
@@ -214,7 +214,7 @@
     >
 
       param[base_url] = http://docnews.diabetesjournals.org/
-      comment[0] = farewell issue Jan 2008. Journals no longer at this address.
+      # farewell issue Jan 2008. Journals no longer at this address.
 
       au < down ; 2004 ; DOC News Volume 1 ; 1 >
       au < down ; 2005 ; DOC News Volume 2 ; 2 >

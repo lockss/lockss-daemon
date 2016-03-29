@@ -47,7 +47,7 @@
     
       param[base_url] = http://journals.co-action.net/
       param[journal_id] = aie
-      comment[0] = discontinued in 2013
+      # discontinued in 2013
     
       au < manifest ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 >
       au < manifest ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; 2011 >
@@ -201,7 +201,7 @@
     param[base_url] = http://www.eurojnlofpsychotraumatol.net/
     param[journal_id] = ejpt
     
-    comment[0] = European Journal of Psychotraumatology [Supplements] are all in this title. 
+    # European Journal of Psychotraumatology [Supplements] are all in this title. 
     comment[supplement_issn_and_eissn] = issn = 2000-8198 eissn = 2000-818X
      
      
@@ -466,7 +466,7 @@
 
     param[base_url] = http://www.mechanicalcirculatorysupport.net/
     param[journal_id] = mcs
-    comment[0] = discontinued in 2014
+    # discontinued in 2014
 
     au < released ; 2010 ; Mechanical Circulatory Support Volume 1 ; 1 ; 2010 >
     au < released ; 2011 ; Mechanical Circulatory Support Volume 2 ; 2 ; 2011 >

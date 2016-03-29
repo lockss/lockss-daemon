@@ -398,9 +398,9 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     pluginPrefix = org.lockss.plugin.highwire.
 
-    comment[0] = This is a serialized book. As of 8/2012 HW has not defined how book manifests will work.
+    # This is a serialized book. As of 8/2012 HW has not defined how book manifests will work.
     
-    comment[online] = The 2012 Volume is located at http://aapredbook.aappublications.org/
+    # The 2012 Volume is located at http://aapredbook.aappublications.org/
     
     {
       param[base_url] = http://redbookarchive.aappublications.org/

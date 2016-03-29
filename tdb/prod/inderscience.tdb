@@ -1684,7 +1684,7 @@
       >
 
       param[journal_id] = ijcast
-      comment[0] = title is not yet published on 4/11/2013
+      # title is not yet published on 4/11/2013
 
       au < expected ; 2016 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 >
 
@@ -1741,7 +1741,7 @@
       >
 
       param[journal_id] = ijccia
-      comment[0] = title is not yet published on 9/19/2013
+      # title is not yet published on 9/19/2013
 
       au < expected ; 2016 ; International Journal of Computational Complexity and Intelligent Algorithms Volume 1 ; 1 >
 
@@ -1832,7 +1832,7 @@
       >
 
       param[journal_id] = ijcmh
-      comment[0] = title is not yet published on 9/19/2013
+      # title is not yet published on 9/19/2013
 
       au < expected ; 2016 ; International Journal of Computational Medicine and Healthcare Volume 1 ; 1 >
 
@@ -1848,7 +1848,7 @@
       >
 
       param[journal_id] = ijcmme
-      comment[0] = title is not yet published on 9/19/2013
+      # title is not yet published on 9/19/2013
 
       au < expected ; 2016 ; International Journal of Computational Microbiology and Medical Ecology Volume 1 ; 1 >
 
@@ -2201,7 +2201,7 @@
       >
 
       param[journal_id] = ijcm
-      comment[0] = title is not yet published on 9/30/2013
+      # title is not yet published on 9/30/2013
 
       au < expected ; 2016 ; International Journal of Cultural Management Volume 1 ; 1 >
 
@@ -2362,7 +2362,7 @@
       >
 
       param[journal_id] = ijdet
-      comment[0] = title is not yet published on 9/19/2013
+      # title is not yet published on 9/19/2013
 
       au < expected ; 2016 ; International Journal of Digital Enterprise Technology Volume 1 ; 1 >
 
@@ -2735,7 +2735,7 @@
       >
 
       param[journal_id] = ijetrade
-      comment[0] = title is not yet published on 9/20/2013
+      # title is not yet published on 9/20/2013
 
       au < expected ; 2016 ; International Journal of Electronic Trade Volume 1 ; 1 >
 
@@ -2903,7 +2903,7 @@
       >
 
       param[journal_id] = ijesii
-      comment[0] = title is not yet published on 9/20/2013
+      # title is not yet published on 9/20/2013
 
       au < expected ; 2016 ; International Journal of Enterprise Systems Integration and Interoperability Volume 1 ; 1 >
 
@@ -2919,7 +2919,7 @@
       >
 
       param[journal_id] = ijenttm
-      comment[0] = title is not yet published on 9/20/2013
+      # title is not yet published on 9/20/2013
 
       au < expected ; 2016 ; International Journal of Entertainment Technology and Management Volume 1 ; 1 >
 
@@ -3442,8 +3442,8 @@
         issnl = 1478-1476
       >
 
-    comment[0] = no journal page on Apr 23, 2012. journal_id may be issn or eissn
-    comment[1] = title is not yet published on 4/30/2014
+    # no journal page on Apr 23, 2012. journal_id may be issn or eissn
+    # title is not yet published on 4/30/2014
       param[journal_id] = ijfem
 
     }
@@ -3457,8 +3457,8 @@
         issnl = 1743-5099
       >
 
-    comment[0] = no journal page on Apr 23, 2012. journal_id may be issn or eissn
-    comment[1] = title is not yet published on 4/30/2014
+    # no journal page on Apr 23, 2012. journal_id may be issn or eissn
+    # title is not yet published on 4/30/2014
       param[journal_id] = ijfse
 
     }
@@ -4819,7 +4819,7 @@
       >
 
       param[journal_id] = ijkmth
-      comment[0] = title is not yet published on 4/11/2013
+      # title is not yet published on 4/11/2013
 
       au < expected ; 2016 ; International Journal of Knowledge Management in Tourism and Hospitality Volume 1 ; 1 >
 
@@ -4947,7 +4947,7 @@
       >
 
       param[journal_id] = ijlid
-      comment[0] = title is not yet published on 9/20/2013
+      # title is not yet published on 9/20/2013
 
       au < expected ; 2016 ; International Journal of Legal Information Design Volume 1 ; 1 >
 
@@ -5909,7 +5909,7 @@
       >
 
       param[journal_id] = ijme
-      comment[0] = title is not yet published up on 4/11/2013
+      # title is not yet published up on 4/11/2013
 
       au < expected ; 2016 ; International Journal of Molecular Engineering Volume 1 ; 1 >
 
@@ -6084,7 +6084,7 @@
       >
 
       param[journal_id] = ijns
-      comment[0] = title is not yet published, 9/19/2013
+      # title is not yet published, 9/19/2013
 
       au < manifest ; 2015 ; International Journal of Network Science Volume 1 ; 1 >
       au < expected ; 2016 ; International Journal of Network Science Volume 2 ; 2 >
@@ -6250,7 +6250,7 @@
       >
 
       param[journal_id] = ijnss
-      comment[0] = title is not yet published on 4/11/2013
+      # title is not yet published on 4/11/2013
 
       au < expected ; 2016 ; International Journal of Nuclear Safety and Security Volume 1 ; 1 >
 
@@ -6383,7 +6383,7 @@
       >
 
       param[journal_id] = ijplp
-      comment[0] = title is not yet published on 9/26/2013
+      # title is not yet published on 9/26/2013
 
       au < expected ; 2016 ; International Journal of Physiotherapy and Life Physics Volume 1 ; 1 >
 
@@ -6698,7 +6698,7 @@
       >
 
       param[journal_id] = ijpsq
-      comment[0] = title is not yet published on 9/26/2013
+      # title is not yet published on 9/26/2013
 
       au < expected ; 2016 ; International Journal of Product Sound Quality Volume 1 ; 1 >
 
@@ -6971,7 +6971,7 @@
       >
 
       param[journal_id] = ijrem
-      comment[0] = title is not yet published on 9/26/2013
+      # title is not yet published on 9/26/2013
 
       au < expected ; 2016 ; International Journal of Remanufacturing Volume 1 ; 1 >
 
@@ -7667,7 +7667,7 @@
       >
 
       comment[doNotProcess] = missing, page does not exist.
-      comment[0] = title is not yet published on 9/26/2013
+      # title is not yet published on 9/26/2013
 
       param[journal_id] = ijsrpsd
 
@@ -8822,7 +8822,7 @@
       >
 
       param[journal_id] = ier
-      comment[0] = content available from 1999 volume 1 to 2009 volume 10
+      # content available from 1999 volume 1 to 2009 volume 10
 
       au < manifest ; 2007 ; Interdisciplinary Environmental Review Volume 9 ; 9 >
       au < manifest ; 2008-2009 ; Interdisciplinary Environmental Review Volume 10 ; 10 >

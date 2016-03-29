@@ -727,7 +727,7 @@
 
     param[journal_dir] = comparative_technology_transfer_and_society
     attr[journal_id] = ctt
-    comment[0] = no issue after 2009
+    # no issue after 2009
 
     {
 
@@ -2269,7 +2269,7 @@
 
     param[journal_dir] = milton_quarterly
     attr[journal_id] = mq
-    comment[0] = no issue after 2000
+    # no issue after 2000
 
     {
 
@@ -3270,7 +3270,7 @@
 
     param[journal_dir] = sirena_poesia_arte_y_critica
     attr[journal_id] = sir
-    comment[0] = no issue after 2010
+    # no issue after 2010
 
     {
 
@@ -3830,7 +3830,7 @@
 
     param[journal_dir] = yale_journal_of_criticism
     attr[journal_id] = yale
-    comment[0] = no issue after 2005
+    # no issue after 2005
 
     {
 
@@ -4124,7 +4124,7 @@
 
     param[journal_dir] = wide_angle
     attr[journal_id] = wan
-    comment[0] = no issue after 1999
+    # no issue after 1999
 
     {
 

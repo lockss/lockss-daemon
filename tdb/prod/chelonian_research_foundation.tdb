@@ -69,7 +69,7 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
       param[journal_id] = turt
-      comment[0] = no publishing after 2010, checked on 4/29/2013
+      # no publishing after 2010, checked on 4/29/2013
       
       au < doNotProcess ; 2006 ; Turtle and Tortoise Newsletter Volume 9 ; 9 >
       au < doNotProcess ; 2007 ; Turtle and Tortoise Newsletter Volume 10 ; 10 >   

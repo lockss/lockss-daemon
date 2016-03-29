@@ -32,7 +32,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://newprairiepress.org/
       param[journal_abbr] = biyclc
-      comment[0] = no volume published in 2011
+      # no volume published in 2011
 
       au < doNotProcess ; 2005 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 1 ; 1 >
       au < doNotProcess ; 2006 ; The Baltic International Yearbook of Cognition, Logic and Communication Volume 2 ; 2 >
@@ -92,7 +92,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://newprairiepress.org/
       param[journal_abbr] = gdr
-      comment[0] = ceased publication in 1999 at volume 26
+      # ceased publication in 1999 at volume 26
 
       au < doNotProcess ; 1975 ; GDR Bulletin Volume 1 ; 1 >
       au < doNotProcess ; 1976 ; GDR Bulletin Volume 2 ; 2 >
@@ -134,7 +134,7 @@
       implicit < status ; year ; name ; volume ; param[year] >
       param[base_url] = http://jhaponline.org/journals/
       param[journal_id] = jhap
-      comment[0] = Journal moved in 2013. to https://jhaponline.org/
+      # Journal moved in 2013. to https://jhaponline.org/
 
       au < down ; 2011 ; Journal for the History of Analytical Philosophy Volume 1 (2011) ; 1 ; 2011 >
       au < doNotProcess ; 2012 ; Journal for the History of Analytical Philosophy Volume 1 (2012) ; 1 ; 2012 >

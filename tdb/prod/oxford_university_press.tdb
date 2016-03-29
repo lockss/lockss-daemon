@@ -1571,7 +1571,7 @@
     param[base_url] = http://aesa.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
-    comment[0] = content available from 1908 volume 1 to 1989 volume 82
+    # content available from 1908 volume 1 to 1989 volume 82
 
     au < manifest ; 1990 ; Annals of the Entomological Society of America Volume 83 ; 83 >
     au < manifest ; 1991 ; Annals of the Entomological Society of America Volume 84 ; 84 >
@@ -3445,7 +3445,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://bybil.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    comment[0] = no issue in 2013
+    # no issue in 2013
 
     au < HighWirePressH20Plugin ; manifest ; 1976 ; British Yearbook of International Law Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; manifest ; 1977 ; British Yearbook of International Law Volume 48 ; 48 >
@@ -5666,7 +5666,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://es.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    comment[0] = moved to Cambridge University Press
+    # moved to Cambridge University Press
 
     au < HighWirePressH20Plugin ; down ; 2000 ; Enterprise & Society Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; down ; 2001 ; Enterprise & Society Volume 2 ; 2 >
@@ -5741,7 +5741,7 @@
     param[base_url] = http://ee.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
-    comment[0] = content available from 1972 volume 1 to 1989 volume 18
+    # content available from 1972 volume 1 to 1989 volume 18
 
     au < manifest ; 1990 ; Environmental Entomology Volume 19 ; 19 >
     au < manifest ; 1991 ; Environmental Entomology Volume 20 ; 20 >
@@ -12535,7 +12535,7 @@
     param[base_url] = http://jee.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
-    comment[0] = content available from 1908 volume 1 to 1989 volume 82
+    # content available from 1908 volume 1 to 1989 volume 82
 
     au < manifest ; 1990 ; Journal of Economic Entomology Volume 83 ; 83 >
     au < manifest ; 1991 ; Journal of Economic Entomology Volume 84 ; 84 >
@@ -13069,7 +13069,7 @@
     param[base_url] = http://jogss.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
-    comment[0] = expected to be online on 6 Jan 2016
+    # expected to be online on 6 Jan 2016
 
     au < expected ; 2016 ; Journal of Global Security Studies Volume 1 ; 1 >
 
@@ -14444,7 +14444,7 @@
     param[base_url] = http://jme.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
-    comment[0] = content available from 1976 volume 13 to 1999 volume 36
+    # content available from 1976 volume 13 to 1999 volume 36
 
     au < manifest ; 2000 ; Journal of Medical Entomology Volume 37 ; 37 >
     au < manifest ; 2001 ; Journal of Medical Entomology Volume 38 ; 38 >
@@ -15266,7 +15266,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://jrr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    comment[0] = content available from 1960 volume 1 to 1999 volume 40
+    # content available from 1960 volume 1 to 1999 volume 40
 
     au < HighWirePressH20Plugin ; exists ; 2000 ; Journal of Radiation Research Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of Radiation Research Volume 42 ; 42 >
@@ -17534,7 +17534,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://mplant.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    comment[0] = move to Elsevier 2015-01-01
+    # move to Elsevier 2015-01-01
 
     au < HighWirePressH20Plugin ; down ; 2009 ; Molecular Plant Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; down ; 2010 ; Molecular Plant Volume 3 ; 3 >
@@ -17559,7 +17559,7 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     param[base_url] = http://monist.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
-    comment[0] = content available from 1890 volume 1 to 1997 volume 80
+    # content available from 1890 volume 1 to 1997 volume 80
 
     au < manifest ; 1997 ; The Monist Volume 80 ; 80 >
     au < manifest ; 1998 ; The Monist Volume 81 ; 81 >
@@ -17597,7 +17597,7 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://mnras.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
-    comment[0] = max 5 AU testing at a time 
+    # max 5 AU testing at a time 
 
     au < manifest ; 1996 ; Monthly Notices of the Royal Astronomical Society Volume 278 ; 278 >
     au < manifest ; 1996 ; Monthly Notices of the Royal Astronomical Society Volume 279 ; 279 >
@@ -19060,7 +19060,7 @@
       issnl = 0261-3166
     >
 
-    comment[0] = series ends in 2009
+    # series ends in 2009
 
     {
 
@@ -24976,8 +24976,8 @@
     param[base_url] = http://ptps.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     implicit < status ; year ; name ; param[volume_name] >
-    comment[0] = PTP Supplement terminated in December 2012 and merged into PTEP in January 2013,
-    comment[1] = including the Supplements content.
+    # PTP Supplement terminated in December 2012 and merged into PTEP in January 2013,
+    # including the Supplements content.
 
     {
 
@@ -25567,7 +25567,7 @@
     param[base_url] = http://ps.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     implicit < status ; year ; name ; param[volume_name] >
-    comment[0] = No content was published in 1909 - 1913
+    # No content was published in 1909 - 1913
 
     au < doNotProcess ; 1908 ; Poultry Science Volume 1-1 ; 1-1 >
     au < doNotProcess ; 1914-1915 ; Poultry Science Volume 2-1 ; 2-1 >

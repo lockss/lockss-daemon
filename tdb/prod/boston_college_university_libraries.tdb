@@ -88,7 +88,7 @@
       >
     
       param[journal_id] = jtla
-      comment[0] = no publication after 2010
+      # no publication after 2010
       
       au < released ; 2002 ; The Journal of Technology, Learning and Assessment Volume 1 (2002) ; 1 ; 2002 >
       au < released ; 2003 ; The Journal of Technology, Learning and Assessment Volume 2 (2003) ; 2 ; 2003 >
@@ -109,7 +109,7 @@
         
         >
       param[journal_id] = levantine
-      comment[0] = no issue on volume 3
+      # no issue on volume 3
 
       au < released ; 2012 ; Levantine Review Volume 1 (2012) ; 1 ; 2012 >
       au < released ; 2013 ; Levantine Review Volume 2 (2013) ; 2 ; 2013 >

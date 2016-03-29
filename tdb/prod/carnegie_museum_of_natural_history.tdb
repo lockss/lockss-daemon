@@ -71,7 +71,7 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
       param[journal_id] = carb
-      comment[0] = no new publication after 2009. checked on 4/22/2013
+      # no new publication after 2009. checked on 4/22/2013
       
       au < doNotProcess ; 2004 ; Bulletin of Carnegie Museum of Natural History Volume 35 ; 35 >
       au < doNotProcess ; 2004 ; Bulletin of Carnegie Museum of Natural History Volume 36 ; 36 >

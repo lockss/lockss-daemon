@@ -8,9 +8,9 @@
   param[base_url] = http://www.magonlinelibrary.com/
   implicit < status ; year ; name ; param[volume_name] >
 
-  comment[doNotProcess] = 5 to 7 Educator. issn 1746-7500, eissn 2052-4595. moved to Primary Teacher Update 2047-8917
-  comment[doNotProcess] = Children & Young People Now. issn 1755-8093. http://www.cypnow.co.uk/ not on Atypon platform.
-  comment[doNotProcess] = Five to Eleven. issn 1744-7240. Old journal.
+  comment[doNotProcess1] = 5 to 7 Educator. issn 1746-7500, eissn 2052-4595. moved to Primary Teacher Update 2047-8917
+  comment[doNotProcess2] = Children & Young People Now. issn 1755-8093. http://www.cypnow.co.uk/ not on Atypon platform.
+  comment[doNotProcess3] = Five to Eleven. issn 1744-7240. Old journal.
 
   {
     title <
@@ -266,7 +266,7 @@
     >
 
     comment[base_url] = http://www.britishjournalofwellbeing.com/
-    comment[0] = website is not up yet
+    # website is not up yet
 
 
   }
@@ -691,7 +691,7 @@
     >
 
     comment[base_url] =
-    comment[0] = This supplement is included with British Journal of Community Nursing.
+    # This supplement is included with British Journal of Community Nursing.
 
 
   }
@@ -704,7 +704,7 @@
     >
 
     comment[base_url] = http://www.practicalpreschool.com/magazine/childcare.shtml
-    comment[0] = need to update base_url, website is down 
+    # need to update base_url, website is down 
     param[journal_id] = chca
 
     au < manifest ; 2007-2008 ; Child Care Volume 4 ; 4 >

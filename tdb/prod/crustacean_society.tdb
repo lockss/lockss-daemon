@@ -18,7 +18,7 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0278-0372
 
-      comment[0] = No issues will be added after the end of 2012. New issues will be added to Brill.
+      # No issues will be added after the end of 2012. New issues will be added to Brill.
       
       au < down ; 1981 ; Journal of Crustacean Biology Volume 1 ; 1 >
       au < down ; 1982 ; Journal of Crustacean Biology Volume 2 ; 2 >
@@ -56,7 +56,7 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = crus
       
-      comment[0] = No issues will be added after the end of 2012. New issues will be added to Brill.
+      # No issues will be added after the end of 2012. New issues will be added to Brill.
       
       au < doNotProcess ; 1981 ; Journal of Crustacean Biology Volume 1 ; 1 >
       au < doNotProcess ; 1982 ; Journal of Crustacean Biology Volume 2 ; 2 >

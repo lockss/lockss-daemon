@@ -15,7 +15,7 @@
     >
     
     param[journal_id] = noat
-    comment[0] = stop processing volume 1 to volume 3, publisher reuse the volume numbers on special issues
+    # stop processing volume 1 to volume 3, publisher reuse the volume numbers on special issues
     
     au < released ; 2008 ; Journal of the North Atlantic Volume A ; 1 > #content may contain volume 1 and/or sp1/1
     au < released ; 2009 ; Journal of the North Atlantic Volume B ; 2 > #content may contain volume 2 and/or sp2/1 and sp2/2

@@ -49,7 +49,7 @@
 
     comment[journal_issn] = 1030-9616
     param[journal_id] = arj
-    comment[0] = online from 2005
+    # online from 2005
 
     au < doNotProcess ; 2005 ; Accounting Research Journal Volume 18 ; 18 >
     au < doNotProcess ; 2006 ; Accounting Research Journal Volume 19 ; 19 >
@@ -202,7 +202,7 @@
 
     comment[journal_issn] = 0002-1466
     param[journal_id] = afr
-    comment[0] = online from 2000
+    # online from 2000
 
     au < doNotProcess ; 2000 ; Agricultural Finance Review Volume 60 ; 60 >
     au < doNotProcess ; 2001 ; Agricultural Finance Review Volume 61 ; 61 >
@@ -378,7 +378,7 @@
 
     comment[journal_issn] = 0735-8547
     param[journal_id] = ajp
-    comment[0] = online from 1995
+    # online from 1995
     comment[merged_into] = 1363-951X
 
     au < doNotProcess ; 1995 ; American Journal of Police Volume 14 ; 14 >
@@ -638,7 +638,7 @@
 
     comment[journal_issn] = 1017-6748
     param[journal_id] = al
-    comment[0] = online from 1997
+    # online from 1997
     comment[merged_into] = 0307-4803
 
     au < doNotProcess ; 1997 ; Asian Libraries Volume 6 ; 6 >
@@ -827,7 +827,7 @@
 
     comment[journal_issn] = 0965-7967
     param[journal_id] = bs
-    comment[0] = online from 2000
+    # online from 2000
     comment[merged_into] = 1526-5943
 
     au < doNotProcess ; 2000 ; Balance Sheet Volume 8 ; 8 >
@@ -1195,7 +1195,7 @@
 
     comment[journal_issn] = 1751-5637
     param[journal_id] = bss
-    comment[0] = online from 2007
+    # online from 2007
 
     au < doNotProcess ; 2007 ; Business Strategy Series Volume 8 ; 8 >
     au < doNotProcess ; 2008 ; Business Strategy Series Volume 9 ; 9 >
@@ -1422,7 +1422,7 @@
 
     comment[journal_issn] = 1477-7274
     param[journal_id] = cgij
-    comment[0] = online from 2003
+    # online from 2003
 
     au < doNotProcess ; 2003 ; Clinical Governance: An International Journal Volume 8 ; 8 >
     au < doNotProcess ; 2004 ; Clinical Governance: An International Journal Volume 9 ; 9 >
@@ -1450,7 +1450,7 @@
 
     comment[journal_issn] = 1063-0279
     param[journal_id] = cpqhc
-    comment[0] = online from 1999
+    # online from 1999
     comment[merged_into] = 1466-4100
 
     au < doNotProcess ; 1999 ; Clinical Performance and Quality Healthcare Volume 7 ; 7 >
@@ -1761,7 +1761,7 @@
 
     comment[journal_issn] = 1477-7282
     param[journal_id] = dlo
-    comment[0] = online from 2003
+    # online from 2003
 
     au < doNotProcess ; 2003 ; Development and Learning in Organizations Volume 17 ; 17 >
     au < doNotProcess ; 2004 ; Development and Learning in Organizations Volume 18 ; 18 >
@@ -2266,7 +2266,7 @@
 
     comment[journal_issn] = 2040-7149
     param[journal_id] = edi
-    comment[0] = online from 2010
+    # online from 2010
 
     au < doNotProcess ; 2010 ; Equality, Diversity and Inclusion: An International Journal Volume 29 ; 29 >
     au < doNotProcess ; 2011 ; Equality, Diversity and Inclusion: An International Journal Volume 30 ; 30 >
@@ -2336,7 +2336,7 @@
 
     comment[journal_issn] = 0955-534X
     param[journal_id] = ebr
-    comment[0] = online from 1989
+    # online from 1989
 
     au < doNotProcess ; 1989 ; European Business Review Volume 89 ; 89 >
     au < doNotProcess ; 1990 ; European Business Review Volume 90 ; 90 >
@@ -2476,7 +2476,7 @@
 
     comment[journal_issn] = 0953-3230
     param[journal_id] = ed
-    comment[0] = online from 1989
+    # online from 1989
     comment[merged_into] = 1362-0436
 
     au < doNotProcess ; 1989 ; Executive Development Volume 2 ; 2 >
@@ -2580,7 +2580,7 @@
 
     comment[journal_issn] = 1754-2413
     param[journal_id] = gm
-    comment[0] = online from 2008
+    # online from 2008
 
     au < doNotProcess ; 2008 ; Gender in Management: An International Journal Volume 23 ; 23 >
     au < doNotProcess ; 2009 ; Gender in Management: An International Journal Volume 24 ; 24 >
@@ -2644,7 +2644,7 @@
 
     comment[journal_issn] = 0965-4283
     param[journal_id] = he
-    comment[0] = online from 1992
+    # online from 1992
 
     au < doNotProcess ; 1992 ; Health Education Volume 92 ; 92 >
     au < doNotProcess ; 1993 ; Health Education Volume 93 ; 93 >
@@ -2684,7 +2684,7 @@
 
     comment[journal_issn] = 0955-2065
     param[journal_id] = hmm
-    comment[0] = online from 1992
+    # online from 1992
     comment[merged_into] = 0268-9235
 
     au < doNotProcess ; 1992 ; Health Manpower Management Volume 18 ; 18 >
@@ -2723,7 +2723,7 @@
     issnl = 0819-8691
     >
 
-    comment[0] = online from 2004
+    # online from 2004
     comment[journal_issn] = 0819-8691
     param[journal_id] = her
 
@@ -2786,7 +2786,7 @@
 
     comment[journal_issn] = 0967-0734
     param[journal_id] = hrmid
-    comment[0] = online from 2002
+    # online from 2002
 
     au < doNotProcess ; 2002 ; Human Resource Management International Digest Volume 10 ; 10 >
     au < doNotProcess ; 2003 ; Human Resource Management International Digest Volume 11 ; 11 >
@@ -2816,7 +2816,7 @@
 
     comment[journal_issn] = 0828-8666
     param[journal_id] = h
-    comment[0] = online from 1989
+    # online from 1989
 
     au < doNotProcess ; 1989 ; Humanomics Volume 5 ; 5 >
     au < doNotProcess ; 1990 ; Humanomics Volume 6 ; 6 >
@@ -3027,7 +3027,7 @@
 
     comment[journal_issn] = 0263-5577
     param[journal_id] = imds
-    comment[0] = online from 1970
+    # online from 1970
 
     au < doNotProcess ; 1970 ; Industrial Management & Data Systems Volume 70 ; 70 >
     au < doNotProcess ; 1971 ; Industrial Management & Data Systems Volume 71 ; 71 >
@@ -3412,7 +3412,7 @@
 
     comment[journal_issn] = 1834-7649
     param[journal_id] = ijaim
-    comment[0] =  online from 2007
+    #  online from 2007
 
     au < doNotProcess ; 2007 ; International Journal of Accounting & Information Management Volume 15 ; 15 >
     au < doNotProcess ; 2008 ; International Journal of Accounting & Information Management Volume 16 ; 16 >
@@ -3502,7 +3502,7 @@
 
     comment[journal_issn] = 0955-6214
     param[journal_id] = ijcm
-    comment[0] =  online from 1990
+    #  online from 1990
     comment[continued_by] = 1362-0436
 
     au < doNotProcess ; 1990 ; International Journal of Career Management Volume 2 ; 2 >
@@ -3735,7 +3735,7 @@
 
     comment[journal_issn] = 1446-8956
     param[journal_id] = ijdi
-    comment[0] = online from 2003
+    # online from 2003
 
     au < doNotProcess ; 2003 ; International Journal of Development Issues Volume 2 ; 2 >
     au < doNotProcess ; 2004 ; International Journal of Development Issues Volume 3 ; 3 >
@@ -4085,7 +4085,7 @@
 
     comment[journal_issn] = 1754-243X
     param[journal_id] = ijlma
-    comment[0] = online from 2008
+    # online from 2008
 
     au < doNotProcess ; 2008 ; International Journal of Law and Management Volume 50 ; 50 >
     au < doNotProcess ; 2009 ; International Journal of Law and Management Volume 51 ; 51 >
@@ -4600,7 +4600,7 @@
     >
     comment[journal_issn] = 1744-9200
     param[journal_id] = ijph
-    comment[0] = online from 2005
+    # online from 2005
 
     au < doNotProcess ; 2005 ; International Journal of Prisoner Health Volume 1 ; 1 >
     au < doNotProcess ; 2006 ; International Journal of Prisoner Health Volume 2 ; 2 >
@@ -4627,7 +4627,7 @@
 
     comment[journal_issn] = 1741-0401
     param[journal_id] = ijppm
-    comment[0] = online from 2004
+    # online from 2004
 
     au < doNotProcess ; 2004 ; International Journal of Productivity and Performance Management Volume 53 ; 53 >
     au < doNotProcess ; 2005 ; International Journal of Productivity and Performance Management Volume 54 ; 54 >
@@ -5061,7 +5061,7 @@
 
     comment[journal_issn] = 1751-1062
     param[journal_id] = ijwbr
-    comment[0] =  online from 2007
+    #  online from 2007
 
     au < doNotProcess ; 2007 ; International Journal of Wine Business Research Volume 19 ; 19 >
     au < doNotProcess ; 2008 ; International Journal of Wine Business Research Volume 20 ; 20 >
@@ -5347,7 +5347,7 @@
 
     comment[journal_issn] = 1759-6599
     param[journal_id] = jacpr
-    comment[0] =  online from 2009
+    #  online from 2009
 
     au < doNotProcess ; 2009 ; Journal of Aggression, Conflict and Peace Research Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; Journal of Aggression, Conflict and Peace Research Volume 2 ; 2 >
@@ -5390,7 +5390,7 @@
 
     comment[journal_issn] = 0967-5426
     param[journal_id] = jaar
-    comment[0] = online from 2000
+    # online from 2000
 
     au < doNotProcess ; 2000 ; Journal of Applied Accounting Research Volume 5 ; 5 >
     au < doNotProcess ; 2002 ; Journal of Applied Accounting Research Volume 6 ; 6 >
@@ -5418,7 +5418,7 @@
 
     comment[journal_issn] = 2050-7003
     param[journal_id] = jarhe
-    comment[0] = online from 2009
+    # online from 2009
 
     au < doNotProcess ; 2009 ; Journal of Applied Research in Higher Education Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; Journal of Applied Research in Higher Education Volume 2 ; 2 >
@@ -6089,7 +6089,7 @@
 
     comment[journal_issn] = 1741-0398
     param[journal_id] = jeim
-    comment[0] = online from 2004
+    # online from 2004
 
     au < doNotProcess ; 2004 ; Journal of Enterprise Information Management Volume 17 ; 17 >
     au < doNotProcess ; 2005 ; Journal of Enterprise Information Management Volume 18 ; 18 >
@@ -6375,7 +6375,7 @@
 
     comment[journal_issn] = 1366-4387
     param[journal_id] = jfmpc
-    comment[0] = online from 2005
+    # online from 2005
 
     au < doNotProcess ; 2005 ; Journal of Financial Management of Property and Construction Volume 10 ; 10 >
     au < doNotProcess ; 2006 ; Journal of Financial Management of Property and Construction Volume 11 ; 11 >
@@ -6489,7 +6489,7 @@
 
     comment[journal_issn] = 1477-7266
     param[journal_id] = jhom
-    comment[0] =  online from 2003
+    #  online from 2003
 
     au < doNotProcess ; 2003 ; Journal of Health Organization and Management Volume 17 ; 17 >
     au < doNotProcess ; 2004 ; Journal of Health Organization and Management Volume 18 ; 18 >
@@ -6979,7 +6979,7 @@
 
     comment[journal_issn] = 1751-1348
     param[journal_id] = jmh
-    comment[0] = online from 2006
+    # online from 2006
 
     au < doNotProcess ; 2006 ; Journal of Management History Volume 12 ; 12 >
     au < doNotProcess ; 2007 ; Journal of Management History Volume 13 ; 13 >
@@ -7102,7 +7102,7 @@
 
     comment[journal_issn] = 1741-038X
     param[journal_id] = jmtm
-    comment[0] = online from 2004
+    # online from 2004
 
     au < doNotProcess ; 2004 ; Journal of Manufacturing Technology Management Volume 15 ; 15 >
     au < doNotProcess ; 2005 ; Journal of Manufacturing Technology Management Volume 16 ; 16 >
@@ -7380,7 +7380,7 @@
 
     comment[journal_issn] = 1463-578X
     param[journal_id] = jpif
-    comment[0] = online from 1999
+    # online from 1999
 
     au < doNotProcess ; 1999 ; Journal of Property Investment & Finance Volume 17 ; 17 >
     au < doNotProcess ; 2000 ; Journal of Property Investment & Finance Volume 18 ; 18 >
@@ -7508,7 +7508,7 @@
 
     comment[journal_issn] = 2040-7122
     param[journal_id] = jrim
-    comment[0] = online from 2010
+    # online from 2010
 
     au < doNotProcess ; 2010 ; Journal of Research in Interactive Marketing Volume 4 ; 4 >
     au < doNotProcess ; 2011 ; Journal of Research in Interactive Marketing Volume 5 ; 5 >
@@ -7613,7 +7613,7 @@
 
     comment[journal_issn] = 1757-5818
     param[journal_id] = josm
-    comment[0] = online from 2009
+    # online from 2009
 
     au < doNotProcess ; 2009 ; Journal of Service Management Volume 20 ; 20 >
     au < doNotProcess ; 2010 ; Journal of Service Management Volume 21 ; 21 >
@@ -7967,7 +7967,7 @@
 
     comment[journal_issn] = 1751-1879
     param[journal_id] = lhs
-    comment[0] = online from 1997
+    # online from 1997
 
     au < doNotProcess ; 1997 ; Leadership in Health Services Volume 10 ; 10 >
     au < doNotProcess ; 1998 ; Leadership in Health Services Volume 11 ; 11 >
@@ -8379,7 +8379,7 @@
 
     comment[journal_issn] = 0962-2519
     param[journal_id] = mdr
-    comment[0] = online from 1992
+    # online from 1992
     comment[merged_into] = 0967-0734
 
     au < doNotProcess ; 1992 ; Management Development Review Volume 5 ; 5 >
@@ -8401,7 +8401,7 @@
 
     comment[journal_issn] = 1477-7835
     param[journal_id] = meq
-    comment[0] = online from 2003
+    # online from 2003
 
     au < doNotProcess ; 2003 ; Management of Environmental Quality: An International Journal Volume 14 ; 14 >
     au < doNotProcess ; 2004 ; Management of Environmental Quality: An International Journal Volume 15 ; 15 >
@@ -8476,7 +8476,7 @@
 
     comment[journal_issn] = 2040-8269
     param[journal_id] = mrr
-    comment[0] = online from 2010
+    # online from 2010
 
     au < doNotProcess ; 2010 ; Management Research Review Volume 33 ; 33 >
     au < doNotProcess ; 2011 ; Management Research Review Volume 34 ; 34 >
@@ -8849,7 +8849,7 @@
 
     comment[journal_issn] = 2042-8308
     param[journal_id] = mhsi
-    comment[0] = formerly A Life in the Day
+    # formerly A Life in the Day
 
     au < doNotProcess ; 1997 ; Mental Health and Social Inclusion Volume 1 ; 1 >
     au < doNotProcess ; 1998 ; Mental Health and Social Inclusion Volume 2 ; 2 >
@@ -8990,7 +8990,7 @@
 
     comment[journal_issn] = 1573-6105
     param[journal_id] = mmms
-    comment[0] = online from 2005
+    # online from 2005
 
     au < doNotProcess ; 2005 ; Multidiscipline Modeling in Materials and Structures Volume 1 ; 1 >
     au < doNotProcess ; 2006 ; Multidiscipline Modeling in Materials and Structures Volume 2 ; 2 >
@@ -9016,7 +9016,7 @@
 
     comment[journal_issn] = 1525-383X
     param[journal_id] = mbr
-    comment[0] = online from 2007
+    # online from 2007
 
     au < doNotProcess ; 2007 ; Multinational Business Review Volume 15 ; 15 >
     au < doNotProcess ; 2008 ; Multinational Business Review Volume 16 ; 16 >
@@ -9194,7 +9194,7 @@
 
     comment[journal_issn] = 0034-6659
     param[journal_id] = nfs
-    comment[0] = online from 1971
+    # online from 1971
 
     au < doNotProcess ; 1971 ; Nutrition & Food Science Volume 71 ; 71 >
     au < doNotProcess ; 1972 ; Nutrition & Food Science Volume 72 ; 72 >
@@ -9300,7 +9300,7 @@
 
     comment[journal_issn] = 1074-8121
     param[journal_id] = oth
-    comment[0] = online from 2000
+    # online from 2000
 
     au < doNotProcess ; 2000 ; On The Horizon Volume 8 ; 8 >
     au < doNotProcess ; 2001 ; On The Horizon Volume 9 ; 9 >
@@ -9386,7 +9386,7 @@
 
     comment[journal_issn] = 0114-0582
     param[journal_id] = par
-    comment[0] = online from 1997
+    # online from 1997
 
     au < doNotProcess ; 1997 ; Pacific Accounting Review Volume 9 ; 9 >
     au < doesNotExist ; 1998 ; Pacific Accounting Review Volume 10 ; 10 >
@@ -9419,7 +9419,7 @@
 
     comment[journal_issn] = 1463-4449
     param[journal_id] = pe
-    comment[0] = online from 1999
+    # online from 1999
 
     au < doNotProcess ; 1999 ; Participation and Empowerment: An International Journal Volume 7 ; 7 >
 
@@ -9584,7 +9584,7 @@
 
     comment[journal_issn] = 0141-2949
     param[journal_id] = ps
-    comment[0] = online from 1995
+    # online from 1995
     comment[continued_by] = 1363-951X
 
     au < doNotProcess ; 1995 ; Police Studies: International Review of Police Development Volume 18 ; 18 >
@@ -9636,7 +9636,7 @@
 
     comment[journal_issn] = 0968-4905
     param[journal_id] = psp
-    comment[0] = online from 1997
+    # online from 1997
     comment[merged_into] = 1061-0421
 
     au < doNotProcess ; 1997 ; Pricing Strategy and Practice Volume 5 ; 5 >
@@ -10039,7 +10039,7 @@
 
     comment[journal_issn] = 0950-4125
     param[journal_id] = rr
-    comment[0] = online from 1997
+    # online from 1997
 
     au < doNotProcess ; 1997 ; Reference Reviews Volume 11 ; 11 >
     au < doNotProcess ; 1998 ; Reference Reviews Volume 12 ; 12 >
@@ -10458,7 +10458,7 @@
 
     comment[journal_issn] = 0258-0543
     param[journal_id] = sd
-    comment[0] = online from 2002
+    # online from 2002
 
     au < doNotProcess ; 2002 ; Strategic Direction Volume 18 ; 18 >
     au < doNotProcess ; 2003 ; Strategic Direction Volume 19 ; 19 >
@@ -10488,7 +10488,7 @@
 
     comment[journal_issn] = 1475-4398
     param[journal_id] = shr
-    comment[0] = online from 2005
+    # online from 2005
 
     au < doNotProcess ; 2004-2005 ; Strategic HR Review Volume 4 ; 4 >
     au < doNotProcess ; 2006 ; Strategic HR Review Volume 5 ; 5 >
@@ -10539,7 +10539,7 @@
 
     comment[journal_issn] = 1087-8572
     param[journal_id] = sl
-    comment[0] = online from 1975
+    # online from 1975
 
     au < doNotProcess ; 1975 ; Strategy & Leadership Volume 3 ; 3 >
     au < doNotProcess ; 1976 ; Strategy & Leadership Volume 4 ; 4 >
@@ -10820,7 +10820,7 @@
 
     comment[journal_issn] = 0964-1866
     param[journal_id] = tc
-    comment[0] = Online from 2012
+    # Online from 2012
 
     au < doNotProcess ; 2012 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 33 ; 33 >
     au < released ; 2013 ; Therapeutic Communities: The International Journal of Therapeutic Communities Volume 34 ; 34 >
@@ -10926,7 +10926,7 @@
 
     comment[journal_issn] = 1754-2731
     param[journal_id] = tqm
-    comment[0] = online from 2008
+    # online from 2008
     comment[continues] = 0954-478X
 
     au < doNotProcess ; 2008 ; The TQM Journal Volume 20 ; 20 >
@@ -11005,7 +11005,7 @@
 
     comment[journal_issn] = 1369-7234
     param[journal_id] = tst
-    comment[0] = online from 2002
+    # online from 2002
     comment[continued_by] = 1477-7282
 
     au < doNotProcess ; 2002 ; Training Strategies for Tomorrow Volume 16 ; 16 >

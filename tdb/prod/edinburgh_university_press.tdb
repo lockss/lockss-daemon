@@ -165,7 +165,7 @@
 
     {
         param[journal_id] = brs
-        comment[0] = old title used
+        # old title used
 
         au < released ; 2008-2009 ; British Scholar Volume 1 ; 1 >
         au < released ; 2009-2010 ; British Scholar Volume 2 ; 2 >
@@ -634,7 +634,7 @@
       implicit < status ; year ; name ; param[volume_name] >
       
       comment[changed_name] = formerly History and Computing until 2002
-      comment[0] = old journal id volumes consolidated with new journal id volumes
+      # old journal id volumes consolidated with new journal id volumes
       
       au < released ; 2007 ; International Journal of Humanities and Arts Computing Volume 1 (2007) ; 1 >
       au < released ; 2008 ; International Journal of Humanities and Arts Computing Volume 2 (2008) ; 2 >
@@ -995,7 +995,7 @@
       plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
       param[base_url] = http://www.euppublishing.com/
       param[journal_id] = kms
-      comment[0] = From 2013, this journal is available as an annual book publication
+      # From 2013, this journal is available as an annual book publication
       implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 2009 ; Katherine Mansfield Studies Volume 1 ; 1 >
@@ -1494,7 +1494,7 @@
 
     {
       param[journal_id] = gas
-      comment[0] = Journal changes to Scottish Archaeological Journal at Volume 22 with new journal id saj
+      # Journal changes to Scottish Archaeological Journal at Volume 22 with new journal id saj
       
       au < released ; 1969 ; Glasgow Archaeological Journal Volume 1 ; 1 >
       au < released ; 1971 ; Glasgow Archaeological Journal Volume 2 ; 2 >
@@ -1523,7 +1523,7 @@
     {
 
       param[journal_id] = saj
-      comment[0] = Journal changes to Scottish Archaeological Journal at Volume 22 with new journal id saj
+      # Journal changes to Scottish Archaeological Journal at Volume 22 with new journal id saj
 
       au < superseded ; 1969 ; Scottish Archaeological Journal Volume 1 [superseded] ; 1 >
       au < superseded ; 1971 ; Scottish Archaeological Journal Volume 2 [superseded] ; 2 >

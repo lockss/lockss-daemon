@@ -18,7 +18,7 @@
     >
 
     param[base_url] = http://hr.iwaponline.com/
-    comment[001to038] = formerly Nordic Hydrology
+    # V1-V38 were formerly Nordic Hydrology
 
     au < exists ; 1970 ; Nordic Hydrology Volume 1 ; 1 >
     au < exists ; 1971 ; Nordic Hydrology Volume 2 ; 2 >

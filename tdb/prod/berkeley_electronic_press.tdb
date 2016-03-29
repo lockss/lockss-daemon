@@ -176,7 +176,7 @@
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = bejeap
     comment[continues] = 1538-0629, 1538-0637, 1538-0645 and 1538-0653
-    comment[0] = volumes 1-6 really do not exist (manifest pages point to arbitrary preceding titles)
+    # volumes 1-6 really do not exist (manifest pages point to arbitrary preceding titles)
     comment[bejeap1] = duplicate of 1538-0629 volume 1
     comment[bejeap2] = manifest page has no links
     comment[bejeap3] = duplicate of 1538-0645 volume 3
@@ -211,7 +211,7 @@
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = bejm
     comment[continues] = 1534-5998, 1534-6005, 1534-6013 and 1534-6021
-    comment[0] = volumes 1-6 really do not exist (manifest pages point to arbitrary preceding titles)
+    # volumes 1-6 really do not exist (manifest pages point to arbitrary preceding titles)
     
     au < down ; 2004 ; The B.E. Journal of Macroeconomics Volume 1 ; 1 >
     au < down ; 2006 ; The B.E. Journal of Macroeconomics Volume 2 ; 2 >
@@ -240,7 +240,7 @@
     param[base_url] = http://www.bepress.com/ 
     param[journal_abbr] = bejte
     comment[continues] = 1534-5955, 1534-5963, 1534-5971 and 1534-598X
-    comment[0] = volumes 1-6 really do not exist (manifest pages point to arbitrary preceding titles)
+    # volumes 1-6 really do not exist (manifest pages point to arbitrary preceding titles)
 
     au < down ; 2002 ; The B.E. Journal of Theoretical Economics Volume 1 ; 1 >
     au < down ; 2006 ; The B.E. Journal of Theoretical Economics Volume 2 ; 2 >

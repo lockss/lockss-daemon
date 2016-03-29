@@ -1759,8 +1759,8 @@
       param[base_url] =  http://projecteuclid.org/kjm/
       param[journal_id] = kjm_3
       implicit < status ; year ; name ; param[volume_name] >
-      comment[0] = formerly The Journal of Mathematics of Kyoto University, 1961-2009
-      comment[1] = formerly Memoirs of the College of Science, University of Kyoto. Series A: Mathematics, 1950-1961
+      # formerly The Journal of Mathematics of Kyoto University, 1961-2009
+      # formerly Memoirs of the College of Science, University of Kyoto. Series A: Mathematics, 1950-1961
 
 
       au < exists ; 2010 ; Kyoto Journal of Mathematics Volume 50 ; 50 >
@@ -2171,7 +2171,7 @@
       param[base_url] = http://projecteuclid.org/euclid.nmj/
       param[journal_id] = nmj
       implicit < status ; year ; name ; param[volume_name] >
-      comment[0] = volume # do not match, need to re-work
+      # volume # do not match, need to re-work
       #moving to Cambridge University Press in 2016
 
       au < exists ; 2012 ; Nagoya Mathematical Journal Volume 205 ; 205 >
@@ -2707,7 +2707,7 @@
 
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://pads.dukejournals.org/
-      comment[0] = no content in 2012
+      # no content in 2012
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < HighWirePressH20Plugin ; released ; 2000 ; Publication of the American Dialect Society Volume 84 ; 84 >

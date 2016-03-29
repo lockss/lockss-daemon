@@ -217,7 +217,7 @@
     {
 
       plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
-      param[base_url] = http://lshss.asha.org/
+      #param[base_url] = http://lshss.asha.org/
       param[resource_id] = 143
       implicit < status ; year ; name ; param[year] >
 

@@ -1156,7 +1156,7 @@
       param[base_url2] = https://www.jstor.org/
       implicit < status ; year ; name ; param[volume_name] >
       
-      comment[0] = Volume 14. links only to older content. No links to current content. Publisher won't fix. PD-1119
+      # Volume 14. links only to older content. No links to current content. Publisher won't fix. PD-1119
 
       param[journal_id] = jmorahist
 

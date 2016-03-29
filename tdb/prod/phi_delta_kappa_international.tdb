@@ -17,7 +17,7 @@
     implicit < status ; year ; name ; param[volume_name] >
     param[base_url] = http://www.kappanmagazine.org/
     
-    comment[0] = moved to sage http://pdk.sagepub.com
+    # moved to sage http://pdk.sagepub.com
 
     au < down ; 2002-2003 ; Phi Delta Kappan Volume 84 ; 84 >
     au < down ; 2003-2004 ; Phi Delta Kappan Volume 85 ; 85 >

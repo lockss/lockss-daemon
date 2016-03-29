@@ -21,7 +21,7 @@
 
     param[base_url] = http://www.ajobe.org/
     param[journal_issn] = 1817-7417
-    comment[0] =  base url doesn't exit
+    # base url doesn't exit
 
     au < doNotProcess ; 2005 ; African Journal of Business Ethics Volume 1 ; 2005 ; 1 >
     au < doNotProcess ; 2007 ; African Journal of Business Ethics Volume 2 ; 2007 ; 2 >
@@ -70,7 +70,7 @@
 
     param[base_url] = http://www.ayurvedajournals.org/scienceoflife/asl/index.php/asl/
     comment[asl] = the url structure is the new version
-    comment[0] = base_url & journal are not up yet.
+    # base_url & journal are not up yet.
 
   }
 
@@ -256,7 +256,7 @@
 
     param[base_url] = http://www.saudiannals.net/
     param[journal_issn] = 0256-4947 
-    comment[0] = base_url & journal are not up yet
+    # base_url & journal are not up yet
 
 
   }
@@ -2089,7 +2089,7 @@
 
     param[base_url] = 
     param[journal_issn] = 0974-1224
-    comment[0] = base_url & journal are not up yet
+    # base_url & journal are not up yet
 
 
   }
@@ -3231,7 +3231,7 @@
 
     param[base_url] = http://www.mlcdentists.in/
     param[journal_issn] = 0976-2531
-    comment[0] = base_url & journal are not up yet
+    # base_url & journal are not up yet
 
 
   }
@@ -3651,7 +3651,7 @@
 
     param[base_url] = http://www.rljae.org/
     param[journal_issn] = 2013-8393
-    comment[0] = no issue in 2012
+    # no issue in 2012
 
     au < exists ; 2011 ; Ramon Llull Journal of Applied Ethics Volume 1 ; 2011 ; 1 >
     au < exists ; 2013 ; Ramon Llull Journal of Applied Ethics Volume 2 ; 2013 ; 2 >
@@ -3750,7 +3750,7 @@
 
     param[base_url] = http://www.saudioj.org/
     comment[soj] = the website info for this journal is incorrect in Medknow Publications website.
-    comment[0] = base_url & journal are not up yet
+    # base_url & journal are not up yet
 
 
   }

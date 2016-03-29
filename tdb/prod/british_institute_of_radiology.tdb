@@ -270,7 +270,7 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.birpublications.org/
       param[journal_id] = img
-      comment[0] = no issue in 2010-2012
+      # no issue in 2010-2012
     
       au < doNotProcess ; 2000 ; Imaging Volume 12 ; 12 >
       au < doNotProcess ; 2001 ; Imaging Volume 13 ; 13 >

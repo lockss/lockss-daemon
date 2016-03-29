@@ -967,7 +967,7 @@
 
     comment[current_plugin] = aps.APSDrupalPlugin
     param[base_url] = http://ajprenal.physiology.org/
-    comment[0] = other possible issn 0363-6127
+    # other possible issn 0363-6127
     {
 
       pluginSuffix = HighWireStrVolPlugin

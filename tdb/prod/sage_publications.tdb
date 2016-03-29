@@ -21,7 +21,7 @@
       param[base_url] = http://aax.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
-      comment[0] = content available from 1970 volume 1 to 1999 volume 39
+      # content available from 1970 volume 1 to 1999 volume 39
 
       au < exists ; 2000 ; Abstracts in Anthropology Volume 40 ; 40 >
       au < exists ; 2000 ; Abstracts in Anthropology Volume 41 ; 41 >
@@ -945,7 +945,7 @@
       >
 
       {
-    comment[0] = move to OUP 2015-01-01
+    # move to OUP 2015-01-01
 
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://aes.sagepub.com/
@@ -2946,7 +2946,7 @@
       param[base_url] = http://aor.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
-      comment[0] = content available from 1911 volume 20 to 1999 volume 108
+      # content available from 1911 volume 20 to 1999 volume 108
 
       au < exists ; 2000 ; Annals of Otology, Rhinology & Laryngology Volume 109 ; 109 >
       au < exists ; 2001 ; Annals of Otology, Rhinology & Laryngology Volume 110 ; 110 >
@@ -5315,7 +5315,7 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://bos.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        comment[0] = moving to Taylor and Francis effective on 2016-01-01
+        # moving to Taylor and Francis effective on 2016-01-01
 
         au < manifest ; 1999 ; Bulletin of the Atomic Scientists Volume 55 ; 55 >
         au < manifest ; 2000 ; Bulletin of the Atomic Scientists Volume 56 ; 56 >
@@ -5812,7 +5812,7 @@
         param[base_url] = http://ccl.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        comment[0] = Ceasing publication but still online as of Jan 2012.
+        # Ceasing publication but still online as of Jan 2012.
 
         au < released ; 2011 ; Cardiac Cath Lab Director Volume 1 ; 1 >
 
@@ -10415,7 +10415,7 @@
         param[base_url] = http://dij.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        comment[0] = Jan 2013 name changed from Drug Information Journal to Therapeutic Innovation & Regulatory Science
+        # Jan 2013 name changed from Drug Information Journal to Therapeutic Innovation & Regulatory Science
 
         au < manifest ; 1970 ; Drug Information Journal Volume 4 ; 4 >
         au < doesNotExist ; 0 ; Drug Information Journal Volume 5 ; 5 >
@@ -10479,7 +10479,7 @@
         param[base_url] = http://dij.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        comment[0] = Jan 2013 name changed from Drug Information Journal to Therapeutic Innovation & Regulatory Science
+        # Jan 2013 name changed from Drug Information Journal to Therapeutic Innovation & Regulatory Science
 
         au < manifest ; 2013 ; Therapeutic Innovation & Regulatory Science Volume 47 ; 47 >
         au < released ; 2014 ; Therapeutic Innovation & Regulatory Science Volume 48 ; 48 >
@@ -11537,7 +11537,7 @@
       param[base_url] = http://art.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
-      comment[0] = content available from 1983 volume 1 to 1999 volume 17
+      # content available from 1983 volume 1 to 1999 volume 17
 
       au < exists ; 2000 ; Empirical Studies of the Arts Volume 18 ; 18 >
       au < exists ; 2001 ; Empirical Studies of the Arts Volume 19 ; 19 >
@@ -12427,7 +12427,7 @@
         implicit < status ; year ; name ; param[volume_name] >
 
         comment[continues] = European Journal of Cardiovascular Prevention & Rehabilitation, 1741-8267
-        comment[0] = Previous issues are at the same url.
+        # Previous issues are at the same url.
 
         au < released ; 2012 ; European Journal of Preventive Cardiology Volume 19 ; 19 >
         au < manifest ; 2013 ; European Journal of Preventive Cardiology Volume 20 ; 20 >
@@ -17421,7 +17421,7 @@
       param[base_url] = http://ica.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
-      comment[0] = content available from 1981 volume 1 to 1999 volume 18
+      # content available from 1981 volume 1 to 1999 volume 18
 
       au < exists ; 1999-2000 ; Imagination, Cognition and Personality Volume 19 ; 19 >
       au < exists ; 2000-2001 ; Imagination, Cognition and Personality Volume 20 ; 20 >
@@ -18478,7 +18478,7 @@
       param[base_url] = http://ahd.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
-      comment[0] = content available from 1970 volume 1 to 1999 volume 49
+      # content available from 1970 volume 1 to 1999 volume 49
 
       au < exists ; 2000 ; The International Journal of Aging and Human Development Volume 50 ; 50 >
       au < exists ; 2000 ; The International Journal of Aging and Human Development Volume 51 ; 51 >
@@ -22507,7 +22507,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         param[base_url] = http://dbm.sagepub.com/
         rights = openaccess
         implicit < status ; year ; name ; param[volume_name] >
-        comment[0] = Triggered and moved to clockss.
+        # Triggered and moved to clockss.
 
         au < down ; 2010 ; Journal of Dental Biomechanics Volume 1 ; 1 >
         au < down ; 2011 ; Journal of Dental Biomechanics Volume 2 ; 2 >
@@ -23292,7 +23292,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
       comment[merged_into] = 2056-9971
-      comment[0] = content available 1974 volume 17, missing content from 1975 to 2000
+      # content available 1974 volume 17, missing content from 1975 to 2000
       
       au < exists ; 2001 ; Journal of Christian Education Volume 44 ; 44 >
       au < exists ; 2002 ; Journal of Christian Education Volume 45 ; 45 >
@@ -24313,7 +24313,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       param[base_url] = http://clj.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
-      comment[0] = content available from 1939 volume 3 to 1999 volume 63
+      # content available from 1939 volume 3 to 1999 volume 63
      
       au < exists ; 2003 ; The Journal of Criminal Law Volume 67 ; 67 >
       au < exists ; 2004 ; The Journal of Criminal Law Volume 68 ; 68 >
@@ -25195,7 +25195,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       param[base_url] = http://ets.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
-      comment[0] = content available from 1975 volume 4 to 1999 volume 27
+      # content available from 1975 volume 4 to 1999 volume 27
 
       au < exists ; 1999-2000 ; Journal of Educational Technology Systems Volume 28 ; 28 >
       au < exists ; 2000-2001 ; Journal of Educational Technology Systems Volume 29 ; 29 >
@@ -28267,7 +28267,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://jlr.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        comment[0] = no issue in 1973
+        # no issue in 1973
 
         au < doNotProcess ; 1969 ; Journal of Literacy Research Volume 1 ; 1 >
         au < doNotProcess ; 1970 ; Journal of Literacy Research Volume 2 ; 2 >
@@ -31472,7 +31472,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jia.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        comment[0] = Jan 2013 name changed from "Physicians in" to "Providers of"
+        # Jan 2013 name changed from "Physicians in" to "Providers of"
 
         au < manifest ; 2002 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 1 ; 1 >
         au < manifest ; 2003 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 2 ; 2 >
@@ -33550,7 +33550,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://moh.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        comment[0] = Leaving Sage for Taylor & Francis in 2013.
+        # Leaving Sage for Taylor & Francis in 2013.
 
         au < doNotProcess ; 2006 ; Management & Organizational History Volume 1 ; 1 >
         au < doNotProcess ; 2007 ; Management & Organizational History Volume 2 ; 2 >
@@ -34433,7 +34433,7 @@ comment[mpj] = now published by Brill
       pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://mlj.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
-      comment[0] = no issue MLST-24
+      # no issue MLST-24
 
         au < doNotProcess ; 1903 ; Medico-Legal Journal Volume MLST-1 ; MLST-1 >
         au < doNotProcess ; 1904 ; Medico-Legal Journal Volume MLST-2 ; MLST-2 >
@@ -35686,7 +35686,7 @@ comment[mpj] = now published by Brill
       param[base_url] = http://neu.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
-      comment[0] = no issue on 1997 & 1998
+      # no issue on 1997 & 1998
 
       au < exists ; 1988 ; The Neuroradiology Journal Volume 1 ; 1 >
       au < exists ; 1989 ; The Neuroradiology Journal Volume 2 ; 2 >
@@ -44432,7 +44432,7 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://top.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        comment[0] = content available from 1974 volume 1 to 2010 volume 37
+        # content available from 1974 volume 1 to 2010 volume 37
 
         au < released ; 2011 ; Teaching of Psychology Volume 38 ; 38 >
         au < released ; 2012 ; Teaching of Psychology Volume 39 ; 39 >
@@ -44458,7 +44458,7 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://tpa.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
-        comment[0] = no issue in 1981, 2008-2011
+        # no issue in 1981, 2008-2011
 
         au < manifest ; 1977-1980 ; Teaching Public Administration Volume 1 ; 1 >
         au < manifest ; 1982 ; Teaching Public Administration Volume 2 ; 2 >
@@ -48857,7 +48857,7 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
 
-        comment[0] = Volume numbering jumps from V16 in 1962 to V178 in 1963
+        # Volume numbering jumps from V16 in 1962 to V178 in 1963
 
         au < doNotProcess ; 1947 ; Proceedings of the Institution of Mechanical Engineers: Automobile Division Volume 1 ; 1 >
         au < doNotProcess ; 1948 ; Proceedings of the Institution of Mechanical Engineers: Automobile Division Volume 2 ; 2 >
@@ -49309,7 +49309,7 @@ comment[mpj] = now published by Brill
     param[base_url] = http://abr.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    comment[0] = Jan 2012 name changed from Asia Pacific Business Review to Asia-Pacific Journal of Management Research and Innovation
+    # Jan 2012 name changed from Asia Pacific Business Review to Asia-Pacific Journal of Management Research and Innovation
 
     au < manifest ; 2005 ; Asia Pacific Business Review Volume 1 ; 1 >
     au < manifest ; 2006 ; Asia Pacific Business Review Volume 2 ; 2 >
@@ -50243,7 +50243,7 @@ comment[mpj] = now published by Brill
       param[base_url] = http://uro.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      comment[0] = Jan 2013 name changed from British Journal of Medical and Surgical Urology to Journal of Clinical Urology
+      # Jan 2013 name changed from British Journal of Medical and Surgical Urology to Journal of Clinical Urology
 
       au < released ; 2008 ; British Journal of Medical and Surgical Urology Volume 1 ; 1 >
       au < released ; 2009 ; British Journal of Medical and Surgical Urology Volume 2 ; 2 >
@@ -51952,7 +51952,7 @@ comment[mpj] = now published by Brill
       {
 
         param[base_url] = http://shr.sagepub.com/
-        comment[0] = Title change in 2014, same base_url
+        # Title change in 2014, same base_url
         comment[continued_by] = 2054-2704
 
         au < doNotProcess ; 2010 ; JRSM Short Reports Volume 1 ; 1 >
