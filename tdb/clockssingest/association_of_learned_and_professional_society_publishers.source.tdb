@@ -1,0 +1,24 @@
+{
+
+  publisher <
+    name = Association of Learned and Professional Society Publishers (ALPSP) ;
+    info[contract] = 2012 ;
+    info[tester] = 5
+  >
+  
+  {
+  
+    title <
+      name = Association of Learned and Professional Society Publishers (ALPSP) Books Source Content
+    >
+      
+    plugin = org.lockss.plugin.clockss.alpsp.ClockssAssociationOfLearnedAndProfessionalSocietyPublishersSourcePlugin
+#    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/alpsp-released/
+    param[base_url] = http://content5.lockss.org/sourcefiles/alpsp-released/
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+    
+    au < testing ; exists ; 2016 ; Association of Learned and Professional Society Publishers (ALPSP) Books Source Content 2016 ; 2016 >
+        
+  }
+}
