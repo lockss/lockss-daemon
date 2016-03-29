@@ -233,7 +233,7 @@
     au < ready ; 2012 ; Account of the Receipts and Expenditures of the United States 2012 ; https://www.gpo.gov/ ; 2012 >
     au < ready ; 2013 ; Account of the Receipts and Expenditures of the United States 2013 ; https://www.gpo.gov/ ; 2013 >
     au < ready ; 2014 ; Account of the Receipts and Expenditures of the United States 2014 ; https://www.gpo.gov/ ; 2014 >
-    au < testing ; 2015 ; Account of the Receipts and Expenditures of the United States 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < doesNotExist ; 2015 ; Account of the Receipts and Expenditures of the United States 2015 ; https://www.gpo.gov/ ; 2015 > # empty sitemap
     au < expected ; 2016 ; Account of the Receipts and Expenditures of the United States 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
@@ -1070,8 +1070,8 @@
 
     param[collection_id] = PLAW
 
-    au < testing ; 1906 ; Public and Private Laws 1906 ; https://www.gpo.gov/ ; 1906 >
-    au < testing ; 1941 ; Public and Private Laws 1941 ; https://www.gpo.gov/ ; 1941 >
+    au < doesNotExist ; 1906 ; Public and Private Laws 1906 ; https://www.gpo.gov/ ; 1906 > # no such sitemap
+    au < doesNotExist ; 1941 ; Public and Private Laws 1941 ; https://www.gpo.gov/ ; 1941 > # empty sitemap
     au < released ; 1995 ; Public and Private Laws 1995 ; http://www.gpo.gov/ ; 1995 >
     au < released ; 1996 ; Public and Private Laws 1996 ; http://www.gpo.gov/ ; 1996 >
     au < released ; 1997 ; Public and Private Laws 1997 ; http://www.gpo.gov/ ; 1997 >
@@ -1199,14 +1199,14 @@
     au < ready ; 1977 ; United States Courts 1977 ; https://www.gpo.gov/ ; 1977 >
     au < ready ; 1978 ; United States Courts 1978 ; https://www.gpo.gov/ ; 1978 >
     au < ready ; 1979 ; United States Courts 1979 ; https://www.gpo.gov/ ; 1979 >
-    au < testing ; 1980 ; United States Courts 1980 ; https://www.gpo.gov/ ; 1980 >
-    au < testing ; 1981 ; United States Courts 1981 ; https://www.gpo.gov/ ; 1981 >
+    au < doesNotExist ; 1980 ; United States Courts 1980 ; https://www.gpo.gov/ ; 1980 > # no such sitemap
+    au < doesNotExist ; 1981 ; United States Courts 1981 ; https://www.gpo.gov/ ; 1981 > # no such sitemap
     au < ready ; 1982 ; United States Courts 1982 ; https://www.gpo.gov/ ; 1982 >
-    au < testing ; 1983 ; United States Courts 1983 ; https://www.gpo.gov/ ; 1983 >
-    au < testing ; 1984 ; United States Courts 1984 ; https://www.gpo.gov/ ; 1984 >
+    au < doesNotExist ; 1983 ; United States Courts 1983 ; https://www.gpo.gov/ ; 1983 > # no such sitemap
+    au < doesNotExist ; 1984 ; United States Courts 1984 ; https://www.gpo.gov/ ; 1984 > # no such sitemap
     au < ready ; 1985 ; United States Courts 1985 ; https://www.gpo.gov/ ; 1985 >
     au < ready ; 1986 ; United States Courts 1986 ; https://www.gpo.gov/ ; 1986 >
-    au < testing ; 1987 ; United States Courts 1987 ; https://www.gpo.gov/ ; 1987 >
+    au < doesNotExist ; 1987 ; United States Courts 1987 ; https://www.gpo.gov/ ; 1987 > # no such sitemap
     au < ready ; 1988 ; United States Courts 1988 ; https://www.gpo.gov/ ; 1988 >
     au < ready ; 1989 ; United States Courts 1989 ; https://www.gpo.gov/ ; 1989 >
     au < ready ; 1990 ; United States Courts 1990 ; https://www.gpo.gov/ ; 1990 >
