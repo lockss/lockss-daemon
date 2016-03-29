@@ -47425,10 +47425,8 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://nan.sagepub.com/
 
-        au < finished ; finished ; 2013 ; International Journal of Green Nanotechnology Volume 1 ; 1 ; >
-        au < finished ; crawling ; 2014 ; International Journal of Green Nanotechnology Volume 2 ; 2 ; >
-        au < expected ; exists ; 2015 ; International Journal of Green Nanotechnology Volume 3 ; 3 ; >
-        au < expected ; exists ; 2016 ; International Journal of Green Nanotechnology Volume 4 ; 4 ; >
+        au < superseded ; finished ; 2013 ; International Journal of Green Nanotechnology Volume 1 [superseded] ; 1 ; >
+        au < superseded ; crawling ; 2014 ; International Journal of Green Nanotechnology Volume 2 [superseded] ; 2 ; >
 
       }
 
