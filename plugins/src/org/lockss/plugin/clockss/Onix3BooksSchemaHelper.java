@@ -254,7 +254,8 @@ implements SourceXmlSchemaHelper {
         // not a type of date role we care about 
         return null;
       } 
-      if (dFormat.equals("00")) { 
+      if (dFormat.equals("00") && (dDate.length() > 7)) {
+        // do a length check in case the date format is mis-labeled
         // make it W3C format instead of YYYYMMDD
         StringBuilder dBuilder = new StringBuilder();
         dBuilder.append(dDate.substring(0, 4)); //YYYY
@@ -263,7 +264,12 @@ implements SourceXmlSchemaHelper {
         dBuilder.append("-");
         dBuilder.append(dDate.substring(6, 8)); //DD
         return dBuilder.toString();
-      } else {
+      } else if (dFormat.equals("01") || dFormat.equals("02") 
+          || dFormat.equals("03") 
+          || dFormat.equals("04") || dFormat.equals("05")) {
+        // the year is the first four chars of the string in any of these 
+        return (dDate.substring(0, 4)); //YYYY
+      } else    {
         return dDate; //not sure what the format is, just return it as is
       }
     }
