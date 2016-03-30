@@ -216,6 +216,8 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("span", "class", "highwire-journal-article-marker-end"),
       //sage - toc may have extra div block within this <div class="gca-buttons">
       HtmlNodeFilters.tagWithAttribute("div", "class", "gca-buttons"),
+      // <div id="trendmd-suggestions"> http://cjasn.asnjournals.org/content/10/1/111.short
+      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "trend"),
       
       // There is an "Impact factor" but it is only ctext in an H3 tag
       // and the parent <div> is generic. Use a combination of the grandparent <div> plus the ctext
