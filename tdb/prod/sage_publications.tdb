@@ -5298,6 +5298,9 @@
         au < ready ; 2015 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 127 ; 127 >
         au < manifest ; 2015 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 128 ; 128 >
         au < manifest ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 129 ; 129 >
+        au < manifest ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 130 ; 130 >
+        au < expected ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 131 ; 131 >
+        au < expected ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 132 ; 132 >
 
       }
 
@@ -47786,8 +47789,6 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
       #move to Duke University Press 
 
-        au < doNotProcess ; 2006 ; World Policy Journal Volume 23 ; 23 >
-        au < doNotProcess ; 2007 ; World Policy Journal Volume 24 ; 24 >
         au < down ; 2008 ; World Policy Journal Volume 25 ; 25 >
         au < down ; 2009 ; World Policy Journal Volume 26 ; 26 >
         au < down ; 2010 ; World Policy Journal Volume 27 ; 27 >
