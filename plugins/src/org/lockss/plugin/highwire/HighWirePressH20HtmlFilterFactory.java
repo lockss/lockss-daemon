@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,6 +43,7 @@ import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.Tag;
 import org.htmlparser.filters.*;
+import org.htmlparser.nodes.TextNode;
 import org.htmlparser.tags.CompositeTag;
 import org.htmlparser.tags.Div;
 import org.htmlparser.util.NodeList;
@@ -68,6 +69,7 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tag("head"),
       HtmlNodeFilters.tag("script"),
       HtmlNodeFilters.tag("noscript"),
+      HtmlNodeFilters.tag("iframe"),
       HtmlNodeFilters.comment(),
       HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
@@ -234,42 +236,19 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
       }
   };
   
-  // HTML transform to remove attributes in content body, div, and h1 tags
-  private static final HtmlTransform xform = new HtmlTransform() {
+  // HTML transform to convert all remaining nodes to plaintext nodes
+  // cannot keep up with continual changes to css
+  // http://fh.oxfordjournals.org/content/25/1/114.short on ingest1 & 3
+  protected static HtmlTransform xformAllTags = new HtmlTransform() {
     @Override
     public NodeList transform(NodeList nodeList) throws IOException {
-      try {
-        nodeList.visitAllNodesWith(new NodeVisitor() {
-          @Override
-          public void visitTag(Tag tag) {
-            String tagName = tag.getTagName().toLowerCase();
-            try {
-              if ("body".equals(tagName) ||
-                  "div".equals(tagName) ||
-                  "li".equals(tagName) ||
-                  "h1".equals(tagName)) {
-                Attribute a = tag.getAttributeEx(tagName);
-                Vector<Attribute> v = new Vector<Attribute>();
-                v.add(a);
-                if (tag.isEmptyXmlTag()) {
-                  Attribute end = tag.getAttributeEx("/");
-                  v.add(end);
-                }
-                tag.setAttributesEx(v);
-              }
-            }
-            catch (Exception exc) {
-              log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
-            }
-            // Always
-            super.visitTag(tag);
-          }
-        });
+      NodeList nl = new NodeList();
+      for (int sx = 0; sx < nodeList.size(); sx++) {
+        Node snode = nodeList.elementAt(sx);
+        TextNode tn = new TextNode(snode.toPlainTextString());
+        nl.add(tn);
       }
-      catch (ParserException pe) {
-        log.debug2("Internal error (parser)", pe); // Bail
-      }
-      return nodeList;
+      return nl;
     }
   };
   
@@ -289,7 +268,7 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
     InputStream inb = new BufferedInputStream(new ReaderInputStream(tagfilter, encoding));
     InputStream filtered =  new HtmlFilterInputStream(inb, encoding,
         new HtmlCompoundTransform(
-            HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xform));
+            HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xformAllTags));
     Reader filteredReader = FilterUtil.getReader(filtered, encoding);
     Reader httpFilter = new StringFilter(filteredReader, "http:", "https:");
     return new ReaderInputStream(new WhiteSpaceFilter(httpFilter));
