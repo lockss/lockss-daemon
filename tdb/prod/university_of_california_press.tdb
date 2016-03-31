@@ -1293,7 +1293,7 @@
     comment[continued_by] = 0890-9997
     comment[continues] = 0095-9367
     comment[dNP] = manifest page includes extraneous links
-    comment[0] = also for v1-10 correctly labelled links in manifest page don't work
+    # also for v1-10 correctly labelled links in manifest page don't work
 
     au < doNotProcess ; 1969 ; Historical Studies in the Physical Sciences Volume 1 ; 1 >
     au < doNotProcess ; 1970 ; Historical Studies in the Physical Sciences Volume 2 ; 2 >

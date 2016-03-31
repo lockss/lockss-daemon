@@ -79,7 +79,7 @@
     >
 
     param[journal_abbr] = jea
-    comment[0] = titles changed in 2000
+    # titles changed in 2000
 
     au < released ; 1997 ; Georgia Journal of Ecological Anthropology Volume 1 ; 1 >
     au < released ; 1998 ; Georgia Journal of Ecological Anthropology Volume 2 ; 2 >

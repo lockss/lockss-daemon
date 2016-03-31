@@ -25,7 +25,7 @@
       eissn = 1822-4202 ;
       issnl = 1648-0627
     >
-    comment[0] = This journal is not open access
+    # This journal is not open access
     
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
     param[base_url] = http://www.btp.vgtu.lt/

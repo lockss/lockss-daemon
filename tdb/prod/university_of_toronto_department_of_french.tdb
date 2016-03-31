@@ -15,7 +15,7 @@
     rights = openaccess
     plugin = edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin
     implicit < status ; year ; name ; volume ; param[issue_dir] ; param[issue_no.] >
-    comment[0] = missing manifest pages. plugin needs review -- see RU3572 
+    # missing manifest pages. plugin needs review -- see RU3572 
     
     {
 

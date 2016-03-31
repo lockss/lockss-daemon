@@ -21,7 +21,7 @@
       param[journal_id] = ojac
       implicit < status ; year ; name ; volume ; param[year] >
       
-      comment[0] = gone from this url. See http://www.math.rochester.edu/ojac/
+      # gone from this url. See http://www.math.rochester.edu/ojac/
     
       au < down ; 2006 ; Online Journal of Analytic Combinatorics Volume 1 ; 1 ; 2006 >
       au < down ; 2007 ; Online Journal of Analytic Combinatorics Volume 2 ; 2 ; 2007 >

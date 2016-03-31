@@ -4,7 +4,7 @@
     name = Science Reviews 2000
   >
 
-  comment[0] = mirror sites http://stl.publisher.ingentaconnect.com/content/stl/journal_id
+  # mirror sites http://stl.publisher.ingentaconnect.com/content/stl/journal_id
 
   plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
   param[base_url] = http://www.ingentaconnect.com/

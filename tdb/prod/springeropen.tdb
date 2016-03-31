@@ -2968,7 +2968,7 @@
         param[base_url] = http://www.springer.com/40069/
         param[journal_issn] = 2234-1315
         comment[platform] = Springer
-        comment[0] = content prior to 2012, not with Springer
+        # content prior to 2012, not with Springer
   
         au < exists ; 2012 ; International Journal of Concrete Structures and Materials Volume 6 ; 6 >
         au < exists ; 2013 ; International Journal of Concrete Structures and Materials Volume 7 ; 7 >
@@ -3370,7 +3370,7 @@
         param[base_url] = http://www.springer.com/10202/
         param[journal_issn] = 1615-6609
         comment[platform] = Springer
-        comment[0] = no issue in 2007
+        # no issue in 2007
         comment[moved] = This journal will be discontinued at the end of 2012
   
         au < exists ; 2001-2003 ; Poiesis & Praxis Volume 1 ; 1 >

@@ -33,7 +33,7 @@
       eissn = 1791-2423
     >
     
-    comment[0] = there are 43 volumes as of 2013
+    # there are 43 volumes as of 2013
     param[journal_id] = ijo
 
     au < exists ; 1992 ; International Journal of Oncology Volume 1 ; 1 >

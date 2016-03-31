@@ -83,7 +83,7 @@
       issnl = 1932-6203
     >
     
-    comment[0] = repository error, too many files for Vol 1-3
+    # repository error, too many files for Vol 1-3
     
     param[base_url] = http://www.plosone.org/    
     param[journal_id] = plosone

@@ -17,7 +17,7 @@
     param[base_url] = http://www.globalbuddhism.org/
     implicit < status ; year ; name ; param[volume] ; param[year] >
     
-    comment[0] = plugin needs review.
+    # plugin needs review.
 
     au < released ; 2000 ; Journal of Global Buddhism Volume 1 ; 1 ; 2000 >
     au < released ; 2001 ; Journal of Global Buddhism Volume 2 ; 2 ; 2001 >

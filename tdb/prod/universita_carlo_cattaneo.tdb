@@ -19,7 +19,7 @@
       param[base_url] = http://eaces.liuc.it/
       implicit < status ; year ; name ; volume ; param[year] >
       
-      comment[0] = no manifest pages online after 2008 as of 2013/10.
+      # no manifest pages online after 2008 as of 2013/10.
       comment[doNotProcess] = plugin needs review before more processing.
       
       au < released ; 2004 ; European Journal of Comparative Economics 2004 ; 1 ; 2004 >
@@ -42,7 +42,7 @@
       param[base_url] = http://e-journal.liuc.it/
       param[journal_id] = ejce
       implicit < status ; year ; name ; volume ; param[year] >
-      comment[0] = No content online yet, AUs from old website http://eaces.liuc.it/
+      # No content online yet, AUs from old website http://eaces.liuc.it/
       
       au < exists ; 2004 ; European Journal of Comparative Economics Volume 1 ; 1 ; 2004 >
       au < exists ; 2005 ; European Journal of Comparative Economics Volume 2 ; 2 ; 2005 >

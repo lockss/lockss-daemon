@@ -699,7 +699,7 @@
       param[journal_dir] = native_plants_journal
       attr[journal_id] = npj
       implicit < status ; year ; name ; param[volume] >
-      comment[0] = vols. 5-11 released under U of Illinois Press (also Project Muse)
+      # vols. 5-11 released under U of Illinois Press (also Project Muse)
 
       {
 
