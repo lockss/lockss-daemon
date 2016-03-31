@@ -6,7 +6,6 @@
     info[tester] = 8
   >
   
-    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
   {
@@ -17,6 +16,7 @@
       eissn = 2041-4730 ;
       issnl = 0267-9914
     >
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     param[base_url] = http://egsp.lyellcollection.org/
 
     au < exists ; exists ; 1986 ; Engineering Geology Special Publications Volume 1 ; 1 ; >
@@ -56,6 +56,7 @@
       eissn = 2041-4943 ;
       issnl = 1467-7873
     >
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     param[base_url] = http://geea.lyellcollection.org/
 
     au < manifest ; exists ; 2001 ; Geochemistry: Exploration, Environment, Analysis Volume 1 ; 1 ; >
@@ -85,6 +86,7 @@
       eissn = 2041-4722 ;
       issnl = 0435-4052
     >
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     param[base_url] = http://mem.lyellcollection.org/
 
     au < manifest ; exists ; 1958 ; Geological Society of London Memoirs Volume 1 ; 1 ; >
@@ -146,6 +148,7 @@
       eissn = 2041-4927 ;
       issnl = 0305-8719
     >
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     param[base_url] = http://sp.lyellcollection.org/
 
     au < manifest ; exists ; 1964 ; Geological Society of London Special Publications Volume 1 ; 1 ; >
@@ -590,6 +593,7 @@
       issnl = 0016-7649
     >
 
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     param[base_url] = http://jgs.lyellcollection.org/
 
     au < manifest ; exists ; 1971 ; Journal of the Geological Society of London Volume 127 ; 127 ; >
@@ -650,6 +654,7 @@
       eissn = 2041-496X
     >
 
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       param[base_url] = http://pg.lyellcollection.org/
 
       au < manifest ; exists ; 1995 ; Petroleum Geoscience Volume 1 ; 1 ; >
@@ -686,6 +691,7 @@
       issnl = 1470-9236
     >
 
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     param[base_url] = http://qjegh.lyellcollection.org/
 
     au < manifest ; exists ; 1967-1969 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 1 ; 1 ; >
@@ -750,6 +756,7 @@
 
     {
 
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       param[base_url] = http://trned.lyellcollection.org/
 
       au < manifest ; exists ; 1868-1871 ; Transactions of the Edinburgh Geological Society Volume 1 ; 1 ; >
@@ -821,6 +828,7 @@
       name = Transactions of the Geological Society of London ;
       eissn = 2042-5295 
     >
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     param[base_url] = http://trn.lyellcollection.org/
 
     au < manifest ; exists ; 1811 ; Transactions of the Geological Society of London Series 1 Volume 1 ; s1-1 ; >

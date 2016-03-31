@@ -6,11 +6,10 @@
     info[tester] = 8
   >
 
-  comment[notReady] = RU 4449
   plugin = org.lockss.plugin.coactionpublishing.ClockssCoActionPublishingPlugin
   implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
   
-  comment[permissionStatement] = This publisher has a Creative Commons license on the start pages, unlike other CLOCKSS OJS publishers, so no separate CLOCKSS permission sentence is needed
+  # IMPORTANT This publisher has a Creative Commons license on the start pages, unlike other CLOCKSS OJS publishers, so no separate CLOCKSS permission sentence is needed
 
    {
 
@@ -94,7 +93,7 @@
       param[base_url] = http://www.diabeticfootandankle.net/
       param[journal_id] = dfa
       # includes supplements
-      comment[1] = AUs mistakenly released with 'www': ingested content has no substance
+      # AUs mistakenly released with 'www': ingested content has no substance
 
       au < superseded ; down ; 2010 ; Diabetic Foot & Ankle Volume 1 [including Supplements] [superseded] ; 1 ; 2010 ; >
       au < superseded ; down ; 2011 ; Diabetic Foot & Ankle Volume 2 [including Supplements] [superseded] ; 2 ; 2011 ; >
@@ -127,7 +126,7 @@
 
     param[base_url] = http://www.education-inquiry.net/
     param[journal_id] = edui
-    comment[notReady] = Unknown Host
+    # notReady V4 Unknown Host
 
     au < finished ; finished ; 2010 ; Education Inquiry Volume 1 ; 1 ; 2010 ; >
     au < finished ; finished ; 2011 ; Education Inquiry Volume 2 ; 2 ; 2011 ; >
@@ -223,7 +222,7 @@
       param[base_url] = http://www.ejpt.net/
       param[journal_id] = ejpt
       # includes supplements
-      comment[error] = V6. 403 Forbidden to fetch author photo, stops crawl. http://www.ejpt.net/coaction/public/site/images/rensvandeschoot/photo_rens1.JPG   From page http://www.ejpt.net/index.php/ejpt/article/view/25216
+      # V6. 403 Forbidden to fetch author photo, stops crawl. http://www.ejpt.net/coaction/public/site/images/rensvandeschoot/photo_rens1.JPG   From page http://www.ejpt.net/index.php/ejpt/article/view/25216
 
       au < crawling ; exists ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 ; >
       au < crawling ; exists ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 ; >
@@ -246,7 +245,6 @@
     comment[continues] = 1748-2976
     param[base_url] = http://www.foodandnutritionresearch.net/
     param[journal_id] = fnr
-    comment[issn] = for supplements
 
     au < finished ; crawling ; 2008 ; Food & Nutrition Research Volume 52 ; 52 ; 2008 ; >
     au < finished ; crawling ; 2009 ; Food & Nutrition Research [including Supplements] Volume 53 ; 53 ; 2009 ; >
@@ -270,7 +268,6 @@
 
     param[base_url] = http://www.globalhealthaction.net/
     param[journal_id] = gha
-    comment[issn] = for supplements
     
     au < finished ; crawling ; 2008 ; Global Health Action Volume 1 ; 1 ; 2008 ; >
     au < finished ; crawling ; 2009 ; Global Health Action [including Supplements] Volume 2 ; 2 ; 2009 ; >
@@ -339,7 +336,7 @@
 
     param[base_url] = http://www.ijqhw.net/
     param[journal_id] = qhw
-    comment[issn] = volumes 1-4, 2006-2009
+    # issn volumes 1-4, 2006-2009
 
     au < crawling ; exists ; 2006 ; International Journal of Qualitative Studies on Health and Well-being Volume 1 ; 1 ; 2006 ; >
     au < finished ; finished ; 2007 ; International Journal of Qualitative Studies on Health and Well-being Volume 2 ; 2 ; 2007 ; >
@@ -481,11 +478,11 @@
       issnl = 2000-6993
     >
     
-    comment[archived] = journal is being archived.
+    # journal is being archived.
 
     param[base_url] = http://www.mechanicalcirculatorysupport.net/
     param[journal_id] = mcs
-    comment[notReady] = no substance
+    # V4 no substance
     # discontinued in 2014
 
     au < finished ; crawling ; 2010 ; Mechanical Circulatory Support Volume 1 ; 1 ; 2010 ; >
@@ -567,7 +564,7 @@
 
     param[base_url] = http://www.microbecolhealthdis.net/
     param[journal_id] = mehd
-    comment[issn] = volumes 1-21
+    # issn volumes 1-21
 
     au < finished ; crawling ; 1988 ; Microbial Ecology in Health and Disease Volume 1 ; 1 ; 1988 ; >
     au < finished ; finished ; 1989 ; Microbial Ecology in Health and Disease Volume 2 ; 2 ; 1989 ; >

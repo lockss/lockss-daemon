@@ -18,9 +18,6 @@
       issnl = 1752-153X
     >
 
-    param[journal_issn] = 1752-153X
-    
-    {
       param[base_url] = http://journal.chemistrycentral.com/
       param[journal_issn] = 1752-153X
       
@@ -34,8 +31,6 @@
       au < down ; exists ; 2014 ; Chemistry Central Journal Volume 8 ; 8 ; >
       au < down ; exists ; 2015 ; Chemistry Central Journal Volume 9 ; 9 ; >
       
-    }
-  
   }
   
   {

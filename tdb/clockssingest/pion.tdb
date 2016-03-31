@@ -6,7 +6,7 @@
     info[tester] = 8
   >
   
-  comment[errors] = Waiting for Pion to fix no substance errors for V27-31 for HTHP, and no permission statement error or ingest3 and 4. RT5760 PD-482 
+  # Waiting for Pion to fix no substance errors for V27-31 for HTHP, and no permission statement error or ingest3 and 4. RT5760 PD-482 
 
   
   {
@@ -194,7 +194,7 @@
       param[journal_code] = epd
       param[short_journal_code] = D
       
-      comment[errors] = Waiting for Pion to fix no substance errors for V27-31, and no permission statement error or ingest3 and 4.      
+      # Waiting for Pion to fix no substance errors for V27-31, and no permission statement error or ingest3 and 4.      
       
       au < finished ; finished ; 1983 ; Environment and Planning D: Society and Space Volume 1 ; 1 ; >
       au < finished ; finished ; 1984 ; Environment and Planning D: Society and Space Volume 2 ; 2 ; >
@@ -244,10 +244,10 @@
       param[journal_code] = hthp
       param[short_journal_code] = H
       implicit < status ; status2 ; year ; name ; volume ; param[volume_name] ; hidden[proxy] >
-      comment[hthp] = journal at this url 1995-2007, vols 27-36.
-      comment[moved] = newer content at http://www.oldcitypublishing.com/index.html, 2008-present, vols. 37-?
+      # journal at this url 1995-2007, vols 27-36.
+      # moved: newer content at http://www.oldcitypublishing.com/index.html, 2008-present, vols. 37-?
       
-      comment[errors] = Waiting for Pion to fix no substance errors for V27-31, and no permission statement error or ingest3 and 4.      
+      # Waiting for Pion to fix no substance errors for V27-31, and no permission statement error or ingest3 and 4.      
 
       au < superseded ; exists ; 1995-1996 ; High Temperatures - High Pressures Volume 27/28 [superseded] ; 27-28 ; 27 ; >
       au < superseded ; exists ; 1997 ; High Temperatures - High Pressures Volume 29 [superseded] ; 29 ; 29 ; >

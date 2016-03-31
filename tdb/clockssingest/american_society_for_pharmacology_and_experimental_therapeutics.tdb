@@ -449,9 +449,7 @@
       issnl = 1534-0384
     >
 
-    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     param[base_url] = http://molinterv.aspetjournals.org/
-    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
     au < zapped ; finished ; 2001 ; Molecular Interventions Volume 1 ; 1 ; >
     au < zapped ; finished ; 2002 ; Molecular Interventions Volume 2 ; 2 ; >

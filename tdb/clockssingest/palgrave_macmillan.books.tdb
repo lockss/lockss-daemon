@@ -13323,8 +13323,8 @@
         type = bookSeries
       >
 
-        comment[doNotProcess] = No access to 2010 and 2011. Also, 2012 is a consolidation of 2010 and 2011. See RT 6491
-        comment[doNotProcess] = 2012: does not contain a single pdf/epub as other Palgrave books (presumed too big?).  May have to handle with a separate plugin?
+        comment[doNotProcess1] = No access to 2010 and 2011. Also, 2012 is a consolidation of 2010 and 2011. See RT 6491
+        comment[doNotProcess2] = 2012: does not contain a single pdf/epub as other Palgrave books (presumed too big?).  May have to handle with a separate plugin?
      {
 
       au < doNotProcess ; doNotProcess ; 1987 ; 9780230279803 ; 10.1057/9780230279803 ; 9780230279803 ; The New Palgrave: A Dictionary of Economics, First Edition, 1987 (9780230279803) ; Edited By John Eatwell, Murray Milgate and Peter Newman ; > 
