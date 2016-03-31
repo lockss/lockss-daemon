@@ -7,7 +7,7 @@
   >
   
     plugin = needs.plugin
-    comment[0] = Needs updated e-book list with fulltext e-books only.
+    # Needs updated e-book list with fulltext e-books only.
     param[base_url] = http://centrofilosofia.org/
     implicit < status ; status2 ; param[isbn] ; name ; hidden[proxy] >
     

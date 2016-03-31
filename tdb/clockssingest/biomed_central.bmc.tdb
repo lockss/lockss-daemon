@@ -324,7 +324,7 @@
 
       param[journal_issn] = 1472-6769
       comment[journal_code] = bmcchembiol
-      comment[0] = BMC Chemical Biology has now been fused with BMC Biochemistry, no publication after 2012
+      # BMC Chemical Biology has now been fused with BMC Biochemistry, no publication after 2012
       comment[1] = no longer any table of contents. no substance ever collected on ingest1.
       
       au < doNotProcess ; doNotProcess ; 2001 ; BMC Chemical Biology Volume 1 ; 1 ; >
@@ -381,7 +381,7 @@
       comment[continued_by] = 2050-6511
       
       comment[journal_code] = was bmcclinpharmacol. bmcpharmacoltoxicol after vol 12 in 2012
-      comment[0] = This journal stopped publishing after Vol 12 in 2012. 
+      # This journal stopped publishing after Vol 12 in 2012. 
       comment[1] = This journal merged with another and is available through this journal_code and issn.
 
       au < doNotProcess ; exists ; 2001 ; BMC Clinical Pharmacology Volume 1 ; 1 ; >
@@ -1080,7 +1080,7 @@
 
       param[journal_issn] = 1756-6649
       comment[journal_code] = bmcmedphys
-      comment[0] = This journal started at start of 2008. Continuation of BMC Nuclear Medicine
+      # This journal started at start of 2008. Continuation of BMC Nuclear Medicine
       comment[1] = This journal archived.
 
       au < down ; exists ; 2008 ; BMC Medical Physics Volume 8 ; 8 ; >
@@ -1300,7 +1300,7 @@
 
       param[journal_issn] = 1471-2385
       comment[journal_code] = bmcmedphys
-      comment[0] = This journal terminated at the end of 2007. Continued by BMC Medical Physics
+      # This journal terminated at the end of 2007. Continued by BMC Medical Physics
 
       au < doNotProcess ; exists ; 2001 ; BMC Nuclear Medicine Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2002 ; BMC Nuclear Medicine Volume 2 ; 2 ; >
@@ -1478,7 +1478,7 @@
 
       param[journal_issn] = 1471-2210
       comment[journal_code] = bmcpharmacol
-      comment[0] = Journal stopped at the end of 2012, merged with BMC Clinical Parmacology, and became BMC Pharmacology & Toxicology
+      # Journal stopped at the end of 2012, merged with BMC Clinical Parmacology, and became BMC Pharmacology & Toxicology
       comment[1] = Volume 10 & 11 have no content on ingest machines or production machines.
 
       au < doNotProcess ; doNotProcess ; 2001 ; BMC Pharmacology Volume 1 ; 1 ; >
@@ -1504,7 +1504,7 @@
 
       param[journal_issn] = 2050-6511
       comment[journal_code] = bmcpharmacoltoxicol
-      comment[0] = This journal and issn start at Volume 13 in 2012, other volumes use another issn
+      # This journal and issn start at Volume 13 in 2012, other volumes use another issn
 
       au < superseded ; exists ; 2007 ; BMC Pharmacology and Toxicology Volume 8 [to delete] ; 8 ; >
       au < superseded ; exists ; 2008 ; BMC Pharmacology and Toxicology Volume 9 [to delete] ; 9 ; >

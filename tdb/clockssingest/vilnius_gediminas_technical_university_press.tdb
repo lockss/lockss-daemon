@@ -6,7 +6,7 @@
     info[tester] = 8
   >
   
-  comment[0] = do not include Aviation technologies, eissn 2029-9974
+  # do not include Aviation technologies, eissn 2029-9974
 
   {
 
@@ -29,7 +29,7 @@
       eissn = 1822-4202 ;
       issnl = 1648-0627
     >
-    comment[0] = This journal is not open access
+    # This journal is not open access
     
     plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
     param[base_url] = http://www.btp.vgtu.lt/

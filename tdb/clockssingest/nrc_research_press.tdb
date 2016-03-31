@@ -20,7 +20,7 @@
       eissn = 1715-5320
       >
     
-    comment[0] = As of 2006, name changed from Canadian Journal of Applied Physiology
+    # As of 2006, name changed from Canadian Journal of Applied Physiology
     param[journal_id] = apnm 
 
     au < manifest ; exists ; 2006 ; Applied Physiology, Nutrition, and Metabolism Volume 31 ; 31 ; >
@@ -150,7 +150,7 @@
       eissn = 1916-2804
     >
 
-    comment[0] = formerly Canadian Journal of Botany (1951 - 2007)
+    # formerly Canadian Journal of Botany (1951 - 2007)
     
     {
     
@@ -308,7 +308,7 @@
       eissn = 1543-2718
       >
       
-    comment[0] = published through 2005, changed name to Applied Physiology, Nutrition, and Metabolism
+    # published through 2005, changed name to Applied Physiology, Nutrition, and Metabolism
     param[journal_id] = cjap
     
     au < manifest ; exists ; 1993 ; Canadian Journal of Applied Physiology Volume 18 ; 18 ; >
@@ -536,7 +536,7 @@
       eissn = 1205-7533
       >
 
-    comment[0] = formerly Contributions to Canadian Biology and Fisheries (1901 - 1933) journal_id = ccbf
+    # formerly Contributions to Canadian Biology and Fisheries (1901 - 1933) journal_id = ccbf
     comment[1] = formerly Journal of the Biological Board of Canada (1934 - 1937) journal_id = jbbc
     comment[2] = formerly Journal of the Fisheries Research Board of Canada (1938 - 1979) journal_id = jfrbc
     comment[3] = now journal_id = cjfas
@@ -893,7 +893,7 @@
       eissn = 1205-7541
       >
      
-     comment[0] = formerly part of Canadian Journal of Biochemistry and Physiology (1954 - 1963)
+     # formerly part of Canadian Journal of Biochemistry and Physiology (1954 - 1963)
 
     param[journal_id] = cjpp
 
@@ -1111,7 +1111,7 @@
       eissn = 1480-3321
       >
      
-    comment[0] = formerly known as Canadian Journal of Genetics and Cytology (1959 - 1986)
+    # formerly known as Canadian Journal of Genetics and Cytology (1959 - 1986)
     
     {
     
@@ -1214,7 +1214,7 @@
       >
      
     param[journal_id] = juvs
-    comment[0] = quarterly journal expected to launch April 1 2013
+    # quarterly journal expected to launch April 1 2013
     #Volume 1 and early part of 2 used non-standard 0 in front of number
 
     au < crawling ; exists ; 2013 ; Journal of Unmanned Vehicle Systems Volume 1 ; 01 ; >

@@ -255,7 +255,7 @@
       plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin 
       implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       param[base_url] = http://imaging.birjournals.org/
-      comment[0] = last published volume in 2009  
+      # last published volume in 2009  
     
       au < down ; crawling ; 1999 ; Imaging Volume 11 ; 11 ; >
       au < down ; finished ; 2000 ; Imaging Volume 12 ; 12 ; >
@@ -278,7 +278,7 @@
       implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       param[base_url] = http://www.birpublications.org/
       param[journal_id] = img
-      comment[0] = no issue in 2010-2012
+      # no issue in 2010-2012
 
       au < doNotProcess ; doNotProcess ; 2000 ; Imaging Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2001 ; Imaging Volume 13 ; 13 ; >

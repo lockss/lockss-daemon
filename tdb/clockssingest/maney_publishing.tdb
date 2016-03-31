@@ -3525,7 +3525,7 @@
     >
 
     param[journal_id] = ypai20
-    comment[0] = publication ceased in 2007
+    # publication ceased in 2007
         
     au < manifest ; exists ; 2000 ; The Pain Clinic Volume 12 ; 12 ; >
     au < manifest ; exists ; 2001-2002 ; The Pain Clinic Volume 13 ; 13 ; >
@@ -3576,7 +3576,7 @@
     >
 
     param[journal_id] = ypvr20 
-    comment[0] = ceased publication in 2005
+    # ceased publication in 2005
 
     au < manifest ; exists ; 2003 ; Papillomavirus Report Volume 14 ; 14 ; >
     au < manifest ; exists ; 2004 ; Papillomavirus Report Volume 15 ; 15 ; >
@@ -3612,7 +3612,7 @@
     >
 
     param[journal_id] = ypha20 
-    comment[0] = ceased publication 2012
+    # ceased publication 2012
 
     au < manifest ; exists ; 2008 ; Pharmaceutical Programming Volume 1 ; 1 ; >
     au < manifest ; exists ; 2009 ; Pharmaceutical Programming Volume 2 ; 2 ; >
@@ -4695,7 +4695,7 @@
     >
 
     param[journal_id] = yusu20 
-    comment[0] = publication ceased December 31, 2012
+    # publication ceased December 31, 2012
     
     au < doNotProcess ; doNotProcess ; 2010 ; Usus Antiquior Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Usus Antiquior Volume 2 ; 2 ; > 

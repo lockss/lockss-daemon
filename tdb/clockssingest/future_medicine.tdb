@@ -380,7 +380,7 @@
     
     param[journal_id] = hiv
     comment[continues] = 1746-9600
-    comment[0] = no content after 2010
+    # no content after 2010
 
     au < manifest ; exists ; 2009 ; HIV Therapy Volume 3 ; 3 ; >
     au < manifest ; exists ; 2010 ; HIV Therapy Volume 4 ; 4 ; >
@@ -657,7 +657,7 @@
     >
     
     param[journal_id] = phe
-    comment[0] = no content after 2010
+    # no content after 2010
 
     au < manifest ; exists ; 2007 ; Pediatric Health Volume 1 ; 1 ; >
     au < manifest ; exists ; 2008 ; Pediatric Health Volume 2 ; 2 ; >

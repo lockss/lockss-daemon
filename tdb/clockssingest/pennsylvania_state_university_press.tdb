@@ -329,7 +329,7 @@
       eissn = 2161-6310 ;
       issnl = 1933-6632
     >
-      comment[0] = volume 14 has urls for issues from an older, different journal. http://www.jstor.org/clockss/jmorahist/14/index.html
+      # volume 14 has urls for issues from an older, different journal. http://www.jstor.org/clockss/jmorahist/14/index.html
       comment[1] = Publisher reports that they cannot fix this issue.
       param[journal_id] = jmorahist
 
@@ -556,7 +556,7 @@
     >
 
       param[journal_id] = shaw
-      comment[0] = Volume 30 has an error
+      # Volume 30 has an error
 
       au < doNotProcess ; exists ; 2010 ; SHAW The Annual of Bernard Shaw Studies Volume 30 ; 30 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; SHAW The Annual of Bernard Shaw Studies Volume 31 ; 31 ; >

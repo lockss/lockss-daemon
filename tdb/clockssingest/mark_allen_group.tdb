@@ -279,7 +279,7 @@
     >
 
     comment[base_url] = http://www.britishjournalofwellbeing.com/
-    comment[0] = website is not up yet
+    # website is not up yet
 
 
   }
@@ -705,7 +705,7 @@
     >
 
     comment[base_url] =
-    comment[0] = This supplement is included with British Journal of Community Nursing.
+    # This supplement is included with British Journal of Community Nursing.
 
 
   }
@@ -718,7 +718,7 @@
     >
 
     comment[base_url] = http://www.practicalpreschool.com/magazine/childcare.shtml
-    comment[0] = need to update base_url 
+    # need to update base_url 
     param[journal_id] = chca
 
     au < manifest ; exists ; 2007-2008 ; Child Care Volume 4 ; 4 ; >

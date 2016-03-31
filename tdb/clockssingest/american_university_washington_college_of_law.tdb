@@ -6,7 +6,7 @@
     info[tester] = 5
   >
   
-  comment[0] = Do not add any titles with the DigitalCommons/BePress Plugin without Vicky's approval. Document Vicky's approval in PD-36.
+  # Do not add any titles with the DigitalCommons/BePress Plugin without Vicky's approval. Document Vicky's approval in PD-36.
   
   plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
   param[base_url] = http://digitalcommons.wcl.american.edu/
@@ -20,7 +20,7 @@
     >
 
     param[journal_abbr] = alr
-    comment[0] = publishing has apparently stopped as of Oct 2014.
+    # publishing has apparently stopped as of Oct 2014.
 
     au < finished ; frozen ; 2010 ; Administrative Law Review Volume 62 ; 62 ; >
     au < finished ; finished ; 2011 ; Administrative Law Review Volume 63 ; 63 ; >
@@ -78,7 +78,7 @@
       name = Intellectual Property Brief
     >
     
-    comment[0] = no issn
+    # no issn
 
     param[journal_abbr] = ipbrief
 
@@ -153,7 +153,7 @@
 
     param[journal_abbr] = jgspl
     
-    comment[0] = Volumes 1-7 have no substance on some ingest machines. Need recrawling.
+    # Volumes 1-7 have no substance on some ingest machines. Need recrawling.
 
     au < crawling ; crawling ; 1993 ; The Journal of Gender, Social Policy & the Law Volume 1 ; 1 ; >
     au < crawling ; crawling ; 1994 ; The Journal of Gender, Social Policy & the Law Volume 2 ; 2 ; >

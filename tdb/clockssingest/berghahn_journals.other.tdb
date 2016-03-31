@@ -23,7 +23,7 @@
 
     param[journal_id] = bhs
     
-    comment[0] = no manifest pages. THIS http://berghahnonline.com/ojs/index.php/bhs/gateway/lockss?year=2007 REDIRECTS TO http://berghahnonline.com/ojs/index.php/bhs/index
+    # no manifest pages. THIS http://berghahnonline.com/ojs/index.php/bhs/gateway/lockss?year=2007 REDIRECTS TO http://berghahnonline.com/ojs/index.php/bhs/index
        
     au < doNotProcess ; exists ; 2007 ; Boyhood Studies Volume 1 ; 1 ; 2007 ; >
     au < doNotProcess ; exists ; 2008 ; Boyhood Studies Volume 2 ; 2 ; 2008 ; >

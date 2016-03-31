@@ -2201,7 +2201,7 @@
       >
 
       param[journal_id] = ijcm
-      comment[0] = title is not yet published on 9/30/2013, 1/5/2016
+      # title is not yet published on 9/30/2013, 1/5/2016
 
       au < expected ; exists ; 2016 ; International Journal of Cultural Management Volume 1 ; 1 ; >
 
@@ -3439,7 +3439,7 @@
         issnl = 1478-1476
       >
 
-    comment[0] = no journal page on Apr 23, 2012. journal_issn may be issn or eissn
+    # no journal page on Apr 23, 2012. journal_issn may be issn or eissn
     comment[1] = title is not yet published on 9/20/2013
       param[journal_id] = ijfem
 
@@ -3454,7 +3454,7 @@
         issnl = 1743-5099
       >
 
-    comment[0] = no journal page on Apr 23, 2012. journal_issn may be issn or eissn
+    # no journal page on Apr 23, 2012. journal_issn may be issn or eissn
     comment[1] = title is not yet published on 9/20/2013
       param[journal_id] = ijfse
 
@@ -7660,7 +7660,7 @@
         issnl = 2040-4247
       >
 
-      comment[0] = title is not yet published on 9/26/2013
+      # title is not yet published on 9/26/2013
 
       param[journal_id] = ijsrpsd
 
@@ -8816,7 +8816,7 @@
       >
 
       param[journal_id] = ier
-      comment[0] = content available from 1999 volume 1 to 2009 volume 10
+      # content available from 1999 volume 1 to 2009 volume 10
 
       au < manifest ; exists ; 2007 ; Interdisciplinary Environmental Review Volume 9 ; 9 ; >
       au < manifest ; exists ; 2008-2009 ; Interdisciplinary Environmental Review Volume 10 ; 10 ; >

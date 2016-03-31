@@ -53,7 +53,7 @@
     >
 
     param[journal_id] = apec
-    comment[0] = no issue in 2005 & 2006
+    # no issue in 2005 & 2006
 
     au < manifest ; exists ; 1974 ; Active and Passive Electronic Components Volume 1 (1974) ; 1974 ; 1 ; >
     au < manifest ; exists ; 1975 ; Active and Passive Electronic Components Volume 2 (1975) ; 1975 ; 2 ; >
@@ -2548,7 +2548,7 @@
     >
 
     param[journal_id] = cmmm
-    comment[0] = no issue in 2004
+    # no issue in 2004
 
     au < manifest ; exists ; 1997 ; Computational and Mathematical Methods in Medicine Volume 1 (1997) ; 1997 ; 1 ; >
     au < manifest ; exists ; 1998 ; Computational and Mathematical Methods in Medicine Volume 1 (1998) ; 1998 ; 1 ; >
@@ -2743,7 +2743,7 @@
     >
 
     param[journal_id] = dte
-    comment[0] = no issue from 2002 to 2007
+    # no issue from 2002 to 2007
     
     au < manifest ; exists ; 1994 ; Diagnostic and Therapeutic Endoscopy Volume 1 (1994) ; 1994 ; 1 ; >
     au < manifest ; exists ; 1995 ; Diagnostic and Therapeutic Endoscopy Volume 1-2 (1995) ; 1995 ; 1-2 ; >
@@ -2805,7 +2805,7 @@
     >
 
     param[journal_id] = dm
-    comment[0] = no issue in 1995, 1997
+    # no issue in 1995, 1997
 
     au < manifest ; exists ; 1993 ; Disease Markers Volume 11 (1993) ; 1993 ; 11 ; >
     au < manifest ; exists ; 1994 ; Disease Markers Volume 12 (1994) ; 1994 ; 12 ; >
@@ -3087,7 +3087,7 @@
     >
 
     param[journal_id] = hpb
-    comment[0] = no issue from 2001 to 2007
+    # no issue from 2001 to 2007
 
     au < manifest ; exists ; 1988 ; HPB Surgery Volume 1 (1988) ; 1988 ; 1 ; >
     au < manifest ; exists ; 1989 ; HPB Surgery Volume 1 (1989) ; 1989 ; 1 ; >
@@ -3894,7 +3894,7 @@
     >
 
     param[journal_id] = ijg
-    comment[0] = no issue in 2006
+    # no issue in 2006
 
     au < manifest ; exists ; 2000 ; Comparative and Functional Genomics Volume 1 (2000) ; 2000 ; 1 ; >
     au < manifest ; exists ; 2001 ; Comparative and Functional Genomics Volume 2 (2001) ; 2001 ; 2 ; >
@@ -4822,7 +4822,7 @@
       issnl = 2356-7872
     >
 
-    comment[0] = The ISRN journal will be collected as a single journal. The individual topics listed in the contract will not be separate.
+    # The ISRN journal will be collected as a single journal. The individual topics listed in the contract will not be separate.
 
     param[journal_id] = isrn
 
@@ -5659,7 +5659,7 @@
     >
 
     param[journal_id] = jdr 
-    comment[0] = no issue in 2005, 2006
+    # no issue in 2005, 2006
 
     au < manifest ; exists ; 2000 ; Experimental Diabetes Research Volume 1 (2000) ; 2000 ; 1 ; >
     au < manifest ; exists ; 2001 ; Experimental Diabetes Research Volume 2 (2001) ; 2001 ; 2 ; >
@@ -8539,7 +8539,7 @@
     >
 
     param[journal_id] = vlsi
-    comment[0] = no volume 6, 2003, 2004, 2005
+    # no volume 6, 2003, 2004, 2005
 
     au < manifest ; exists ; 1993 ; VLSI Design Volume 1 (1993) ; 1993 ; 1 ; >
     au < manifest ; exists ; 1994 ; VLSI Design Volume 1-2 (1994) ; 1994 ; 1-2 ; >

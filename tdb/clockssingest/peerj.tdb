@@ -21,7 +21,7 @@
     {
     
     plugin = org.lockss.plugin.peerj.ClockssPeerJPlugin
-    comment[0] = see PD-1266
+    # see PD-1266
     
     au < finished ; crawling ; 2013 ; PeerJ Volume 2013 ; 2013 ; > 
     }

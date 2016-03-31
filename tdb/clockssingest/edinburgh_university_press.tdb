@@ -95,7 +95,7 @@
 
     comment[issue] = single issue per year, comes out in November . 
     param[journal_id] = arch
-    comment[0] = Volumes 19 and 20 are currently represented as Arabic numerals on the website.
+    # Volumes 19 and 20 are currently represented as Arabic numerals on the website.
 
     au < finished ; finished ; 2003 ; Architectural Heritage Volume 14 ; 14 >
     au < finished ; finished ; 2004 ; Architectural Heritage Volume 15 ; 15 >
@@ -188,7 +188,7 @@
     }
     {
     param[journal_id] = brs
-    comment[0] = old title used
+    # old title used
 
     au < crawling ; exists ; 2008-2009 ; British Scholar Volume 1 ; 1 >
     au < finished ; crawling ; 2009-2010 ; British Scholar Volume 2 ; 2 >
@@ -356,7 +356,7 @@
       eissn = 1750-0117 ;
       issnl = 1742-3600 
      >
-    comment[0] = Published by Cambridge in 2012
+    # Published by Cambridge in 2012
     param[journal_id] = epi
     comment[down] = content no longer available on eup website
 
@@ -455,7 +455,7 @@
     
     param[journal_id] = hac
     comment[continued_by] = 1753-8548
-    comment[0] = names changes to International Journal of Humanities and Arts Computing in 2007
+    # names changes to International Journal of Humanities and Arts Computing in 2007
     comment[1] = History and Computing from 1994 to 2002
     comment[3] = AU not added to ingest machines, but added to production machines in error.
     
@@ -486,7 +486,7 @@
     
     param[journal_id] = ijhac
     comment[continues] = 0957-0144
-    comment[0] = current journal id is ijhac V1/2007 to present. Old journal_id = hac 1994-2002, V6-14
+    # current journal id is ijhac V1/2007 to present. Old journal_id = hac 1994-2002, V6-14
     comment[1] = future AUs added by accident.
 
     au < finished ; crawling ; 2007 ; International Journal of Humanities and Arts Computing Volume 1 (2007) ; 1 >
@@ -763,7 +763,7 @@
 
     param[journal_id] = kms
     comment[continued_by] = isbn 9780748669097, journal_id of kmsj
-    comment[0] = From 2013, this journal is available as an annual book publication
+    # From 2013, this journal is available as an annual book publication
     comment[1] = We are not preserving books from this publisher.
 
     au < finished ; finished ; 2009 ; Katherine Mansfield Studies Volume 1 ; 1 >
@@ -1129,7 +1129,7 @@
      
   {
     param[journal_id] = gas
-    comment[0] = Journal changes to Scottish Archaeological Journal at Volume 22 with new journal id saj
+    # Journal changes to Scottish Archaeological Journal at Volume 22 with new journal id saj
     
     au < manifest ; exists ; 1969 ; Glasgow Archaeological Journal Volume 1 ; 1 >
     au < manifest ; exists ; 1971 ; Glasgow Archaeological Journal Volume 2 ; 2 >
@@ -1157,7 +1157,7 @@
   
   {
     param[journal_id] = saj
-    comment[0] = Journal changes to Scottish Archaeological Journal at Volume 22 with new journal id saj
+    # Journal changes to Scottish Archaeological Journal at Volume 22 with new journal id saj
     comment[1] = Volume 1-22 released incorrectly.
     
     au < superseded ; down ; 1969 ; Scottish Archaeological Journal Volume 1 [to delete] ; 1 >

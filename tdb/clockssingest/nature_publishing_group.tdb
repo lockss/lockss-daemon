@@ -1295,7 +1295,7 @@
     >
 
     param[journal_id] = ijosup
-    comment[0] = 2011 fixed.
+    # 2011 fixed.
 
     au < finished ; crawling ; 2011 ; International Journal of Obesity Supplements Volume 1 ; 2011 ; 1 ; >
     au < finished ; crawling ; 2012 ; International Journal of Obesity Supplements Volume 2 ; 2012 ; 2 ; >
@@ -3825,7 +3825,7 @@
       issnl = 2045-2322
     >
     
-    comment[0] = not standard format. Conference papers.
+    # not standard format. Conference papers.
 
     param[journal_id] = srep
 
@@ -3840,7 +3840,7 @@
       eissn = 1945-3477
     >
     
-    comment[0] = moving to BioCentury as of 1/1/2015
+    # moving to BioCentury as of 1/1/2015
 
     param[journal_id] = scibx
 
@@ -3946,7 +3946,7 @@
       issnl = 1741-7503
     >
     
-    comment[0] = stopped publishing 2013. Moved to BDJ Team.
+    # stopped publishing 2013. Moved to BDJ Team.
     
     param[journal_id] = vital
 

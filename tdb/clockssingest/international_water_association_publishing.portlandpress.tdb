@@ -368,7 +368,7 @@
 
     param[journal_id] = ws
     comment[018] = Previously published Water Supply
-    comment[0] = RU4683, doNotProcess page pattern
+    # RU4683, doNotProcess page pattern
     
 
     au < doNotProcess ; exists ; 2000 ; Water Supply Volume 18 ; 018 ; >  

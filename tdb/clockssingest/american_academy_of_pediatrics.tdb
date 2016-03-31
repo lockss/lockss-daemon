@@ -456,7 +456,7 @@
       issnl = 1080-0131
     >
     
-    comment[0] = This is a serialized book. 
+    # This is a serialized book. 
     comment[1] = Moving to Silverchair in 2014
 
     #implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >

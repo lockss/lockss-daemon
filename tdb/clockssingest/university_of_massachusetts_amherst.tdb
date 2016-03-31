@@ -6,7 +6,7 @@
     info[tester] = 5
   >
   
-  comment[0] = Do not add any titles with the DigitalCommons/BePress Plugin without Vicky's approval. Document Vicky's approval in PD-36.
+  # Do not add any titles with the DigitalCommons/BePress Plugin without Vicky's approval. Document Vicky's approval in PD-36.
 
   {
   
@@ -147,7 +147,7 @@
       issn = 1940-3259
 
     >
-    comment[0] = this title is no longer being published according to bepress site
+    # this title is no longer being published according to bepress site
     
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
     param[base_url] = http://scholarworks.umass.edu/

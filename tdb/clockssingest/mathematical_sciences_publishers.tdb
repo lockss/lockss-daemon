@@ -10,7 +10,7 @@
     param[base_url] = http://msp.org/
     implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
     
-    comment[0] = Do not include Annals of Mathematics, hosted by Princeton.
+    # Do not include Annals of Mathematics, hosted by Princeton.
     comment[1] = Only has manifest pages for completed years. So for example, 2013 must be processed in 2014.
     
   {

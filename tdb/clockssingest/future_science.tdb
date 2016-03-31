@@ -42,7 +42,7 @@
     comment[1] = Publisher no longer providing title after 2013
     param[journal_id] = bfs
     
-    comment[0] = Volume 3 added to ingest 1,2,4 only. This journal moved to T&F.
+    # Volume 3 added to ingest 1,2,4 only. This journal moved to T&F.
 
     au < doNotProcess ; doNotProcess ; 2010 ; Biofuels Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Biofuels Volume 2 ; 2 ; >

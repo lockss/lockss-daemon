@@ -8,7 +8,7 @@
 
   plugin = org.lockss.plugin.highwire.ClockssHWDrupalPlugin
   implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
-  comment[0] = all moving to Drupal by July 15 2015
+  # all moving to Drupal by July 15 2015
     
   {
 

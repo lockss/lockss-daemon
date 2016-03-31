@@ -2265,7 +2265,7 @@
     param[journal_id] = lhr 
     param[journal_issn] = 0961-5652
 
-    comment[0] = ceased publication 2011
+    # ceased publication 2011
     
     au < doNotProcess ; doNotProcess ; 2005 ; Labour History Review Volume 70 ; 70 ; > 
     au < doNotProcess ; doNotProcess ; 2006 ; Labour History Review Volume 71 ; 71 ; > 
@@ -3136,7 +3136,7 @@
     param[journal_id] = tpc 
     param[journal_issn] = 0169-1112
     
-    comment[0] = publication ceased in 2007
+    # publication ceased in 2007
         
     au < doNotProcess ; doNotProcess ; 2000 ; The Pain Clinic Volume 12 ; 12 ; > 
     au < doNotProcess ; doNotProcess ; 2001-2002 ; The Pain Clinic Volume 13 ; 13 ; > 
@@ -3187,7 +3187,7 @@
     param[journal_id] = pvr 
     param[journal_issn] = 0957-4190
     
-    comment[0] = ceased publication in 2005
+    # ceased publication in 2005
 
     au < doNotProcess ; doNotProcess ; 2003 ; Papillomavirus Report Volume 14 ; 14 ; > 
     au < doNotProcess ; doNotProcess ; 2004 ; Papillomavirus Report Volume 15 ; 15 ; > 
@@ -3224,7 +3224,7 @@
     param[journal_id] = pha 
     param[journal_issn] = 1757-0921
 
-    comment[0] = ceased publication 2012
+    # ceased publication 2012
 
     au < doNotProcess ; doNotProcess ; 2008 ; Pharmaceutical Programming Volume 1 ; 1 ; > 
     au < doNotProcess ; doNotProcess ; 2009 ; Pharmaceutical Programming Volume 2 ; 2 ; > 
@@ -4093,7 +4093,7 @@
     param[journal_id] = usu 
     param[journal_issn] = 1757-8949
 
-    comment[0] = publication ceased December 31, 2012
+    # publication ceased December 31, 2012
 
     au < finished ; finished ; 2010 ; Usus Antiquior Volume 1 ; 1 ; >
     au < finished ; finished ; 2011 ; Usus Antiquior Volume 2 ; 2 ; >

@@ -2524,7 +2524,7 @@
 
     param[journal_id] = eni 
     comment[dnp] = released for old plugin
-    comment[0] = Published by Elsevier since January 2014
+    # Published by Elsevier since January 2014
     
     au < exists ; exists ; 2005 ; Journal of the Energy Institute Volume 78 ; 78 ; >
     au < exists ; exists ; 2006 ; Journal of the Energy Institute Volume 79 ; 79 ; >
@@ -2609,7 +2609,7 @@
     >
 
     param[journal_id] = lhr 
-    comment[0] = ceased publication 2011
+    # ceased publication 2011
     
     au < exists ; exists ; 2005 ; Labour History Review Volume 70 ; 70 ; >
     au < exists ; exists ; 2006 ; Labour History Review Volume 71 ; 71 ; >
@@ -3534,7 +3534,7 @@
     >
 
     param[journal_id] = pai
-    comment[0] = publication ceased in 2007
+    # publication ceased in 2007
         
     au < exists ; exists ; 2000 ; The Pain Clinic Volume 12 ; 12 ; >
     au < exists ; exists ; 2001-2002 ; The Pain Clinic Volume 13 ; 13 ; >
@@ -3584,7 +3584,7 @@
     >
 
     param[journal_id] = pvr 
-    comment[0] = ceased publication in 2005
+    # ceased publication in 2005
 
     au < exists ; exists ; 2003 ; Papillomavirus Report Volume 14 ; 14 ; >
     au < exists ; exists ; 2004 ; Papillomavirus Report Volume 15 ; 15 ; >
@@ -3619,7 +3619,7 @@
     >
 
     param[journal_id] = pha 
-    comment[0] = ceased publication 2012
+    # ceased publication 2012
 
     au < exists ; exists ; 2008 ; Pharmaceutical Programming Volume 1 ; 1 ; >
     au < exists ; exists ; 2009 ; Pharmaceutical Programming Volume 2 ; 2 ; >
@@ -4651,7 +4651,7 @@
     >
 
     param[journal_id] = usu 
-    comment[0] = publication ceased December 31, 2012
+    # publication ceased December 31, 2012
     
     au < doNotProcess ; doNotProcess ; 2010 ; Usus Antiquior Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Usus Antiquior Volume 2 ; 2 ; > 

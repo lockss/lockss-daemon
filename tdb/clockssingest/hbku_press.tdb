@@ -154,7 +154,7 @@
     plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
     param[journal_id] = irl
     
-    comment[0] = Volume 2012 has no manifest page.
+    # Volume 2012 has no manifest page.
 
     au < down ; exists ; 2012 ; International Review of Law Volume 2012 ; 2012 ; >
     au < finished ; finished ; 2013 ; International Review of Law Volume 2013 ; 2013 ; >

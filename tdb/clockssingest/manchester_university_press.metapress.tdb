@@ -173,7 +173,7 @@
       issnl = 1748-1317
     >
     
-     comment[0] = Journal not online yet 10/4/2013
+     # Journal not online yet 10/4/2013
      param[journal_issn] = 1748-1325
 
     }
@@ -466,7 +466,7 @@
     param[journal_id] = tsc 
     param[journal_issn] = 0268-117X 
 
-    comment[0] = Moving off of Ingenta Dec 2012 and picked up by T&F
+    # Moving off of Ingenta Dec 2012 and picked up by T&F
 
     au < superseded ; down ; 2012 ; The Seventeenth Century Volume 27 [superseded] ; 27 ; >
 
@@ -482,7 +482,7 @@
 
     param[journal_id] = vcb 
     param[journal_issn] = 1471-4787 
-    comment[0] = Moving off of Ingenta Dec 2012 and picked up by T&F
+    # Moving off of Ingenta Dec 2012 and picked up by T&F
 
     au < down ; finished ; 2004 ; Visual Culture in Britain Volume 5 ; 5 ; >
     au < down ; finished ; 2005 ; Visual Culture in Britain Volume 6 ; 6 ; >

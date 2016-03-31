@@ -803,7 +803,7 @@
 
     param[base_url] = http://aje.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[0] = includes supplements
+    # includes supplements
 
     au < manifest ; exists ; 1921 ; American Journal of Epidemiology Volume 1 ; 1 ; >
     au < manifest ; exists ; 1922 ; American Journal of Epidemiology Volume 2 ; 2 ; >
@@ -1561,7 +1561,7 @@
 
     param[base_url] = http://aesa.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
-    comment[0] = content available from 1908 volume 1 to 1989 volume 82
+    # content available from 1908 volume 1 to 1989 volume 82
 
     au < manifest ; exists ; 1990 ; Annals of the Entomological Society of America Volume 83 ; 83 ; >
     au < manifest ; exists ; 1991 ; Annals of the Entomological Society of America Volume 84 ; 84 ; >
@@ -1965,7 +1965,7 @@
 
     param[base_url] = http://alrr.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[0] = doesn't seem to be published past 2006
+    # doesn't seem to be published past 2006
 
     au < manifest ; exists ; 2001 ; Arbitration Law Reports and Review 2001 ; 2001 ; >
     au < manifest ; exists ; 2002 ; Arbitration Law Reports and Review 2002 ; 2002 ; >
@@ -3428,7 +3428,7 @@
 
     param[base_url] = http://bybil.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[0] = no issue in 2013
+    # no issue in 2013
 
     au < manifest ; exists ; 1976 ; British Yearbook of International Law Volume 47 ; 47 ; >
     au < manifest ; exists ; 1977 ; British Yearbook of International Law Volume 48 ; 48 ; >
@@ -5541,7 +5541,7 @@
 
     param[base_url] = http://es.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[0] = moved to Cambridge University Press
+    # moved to Cambridge University Press
 
     au < down ; exists ; 2000 ; Enterprise & Society Volume 1 ; 1 ; >
     au < down ; exists ; 2001 ; Enterprise & Society Volume 2 ; 2 ; >
@@ -5574,7 +5574,7 @@
 
     param[base_url] = http://ee.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
-    comment[0] = content available from 1972 volume 1 to 1989 volume 18
+    # content available from 1972 volume 1 to 1989 volume 18
 
     au < manifest ; exists ; 1990 ; Environmental Entomology Volume 19 ; 19 ; >
     au < manifest ; exists ; 1991 ; Environmental Entomology Volume 20 ; 20 ; >
@@ -5751,7 +5751,7 @@
       issnl = 1477-741X
     >
 
-    comment[0] = only 2002-2008 volumes available online as of 2/14/12
+    # only 2002-2008 volumes available online as of 2/14/12
 
     {
 
@@ -12131,7 +12131,7 @@
 
     param[base_url] = http://jee.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
-    comment[0] = content available from 1908 volume 1 to 1989 volume 82
+    # content available from 1908 volume 1 to 1989 volume 82
 
     au < manifest ; exists ; 1990 ; Journal of Economic Entomology Volume 83 ; 83 ; >
     au < manifest ; exists ; 1991 ; Journal of Economic Entomology Volume 84 ; 84 ; >
@@ -12673,7 +12673,7 @@
 
     param[base_url] = http://jogss.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
-    comment[0] = expected to be online on 6 Jan 2016
+    # expected to be online on 6 Jan 2016
 
     au < expected ; exists ; 2016 ; Journal of Global Security Studies Volume 1 ; 1 ; >
 
@@ -13964,7 +13964,7 @@
 
     param[base_url] = http://jme.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
-    comment[0] = content available from 1976 volume 13 to 1999 volume 36
+    # content available from 1976 volume 13 to 1999 volume 36
 
     au < manifest ; exists ; 2000 ; Journal of Medical Entomology Volume 37 ; 37 ; >
     au < manifest ; exists ; 2001 ; Journal of Medical Entomology Volume 38 ; 38 ; >
@@ -14801,7 +14801,7 @@
 
     param[base_url] = http://jrr.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[0] = content available from 1960 volume 1 to 1999 volume 40
+    # content available from 1960 volume 1 to 1999 volume 40
 
     au < exists ; exists ; 2000 ; Journal of Radiation Research Volume 41 ; 41 ; >
     au < exists ; exists ; 2001 ; Journal of Radiation Research Volume 42 ; 42 ; >
@@ -16908,7 +16908,7 @@
 
     param[base_url] = http://mplant.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[0] = move to Cell Press 2015-01-01
+    # move to Cell Press 2015-01-01
 
     au < down ; frozen ; 2009 ; Molecular Plant Volume 2 ; 2 ; >
     au < down ; crawling ; 2010 ; Molecular Plant Volume 3 ; 3 ; >
@@ -16932,7 +16932,7 @@
 
     pluginSuffix = oup.ClockssOUPDrupalPlugin
     param[base_url] = http://monist.oxfordjournals.org/
-    comment[0] = content available from 1890 volume 1 to 1997 volume 80
+    # content available from 1890 volume 1 to 1997 volume 80
 
     au < manifest ; exists ; 1997 ; The Monist Volume 80 ; 80 ; >
     au < manifest ; exists ; 1998 ; The Monist Volume 81 ; 81 ; >
@@ -16968,7 +16968,7 @@
 
     param[base_url] = http://mnras.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[0] = max 5 AU testing at a time 
+    # max 5 AU testing at a time 
 
     au < manifest ; exists ; 1996 ; Monthly Notices of the Royal Astronomical Society Volume 278 ; 278 ; >
     au < manifest ; exists ; 1996 ; Monthly Notices of the Royal Astronomical Society Volume 279 ; 279 ; >
@@ -19496,7 +19496,7 @@
     param[base_url] = http://philmat.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    comment[0] = manifests are duplicated i.e. volume s1-8 and volume 18
+    # manifests are duplicated i.e. volume s1-8 and volume 18
 
     au < manifest ; exists ; 1964 ; Philosophia Mathematica Volume s1-1 ; s1-1 ; >
     au < manifest ; exists ; 1965 ; Philosophia Mathematica Volume s1-2 ; s1-2 ; >
@@ -24033,7 +24033,7 @@
     >
 
     param[base_url] = http://ptps.oxfordjournals.org/
-    comment[0] = PTP Supplement terminated in December 2012 and merged into PTEP in January 2013,
+    # PTP Supplement terminated in December 2012 and merged into PTEP in January 2013,
     comment[1] = including the Supplements content.
 
     {
@@ -24600,7 +24600,7 @@
 
     param[base_url] = http://ps.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[0] = No content was published in 1909 - 1913
+    # No content was published in 1909 - 1913
 
     au < exists ; exists ; 1908 ; Poultry Science Volume 1-1 ; 1-1 ; >
     au < exists ; exists ; 1914-1915 ; Poultry Science Volume 2-1 ; 2-1 ; >

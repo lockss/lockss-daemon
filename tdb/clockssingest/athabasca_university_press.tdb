@@ -123,7 +123,7 @@
     {
       param[base_url] = http://www.oralhistoryforum.ca/
       param[journal_id] = ohf
-      comment[0] = V35 2015. Redirected to login page.
+      # V35 2015. Redirected to login page.
 
       au < finished ; finished ; 2012 ; Oral History Forum d'histoire orale Volume 32 ; 32 ; 2012 ; >
       au < finished ; finished ; 2013 ; Oral History Forum d'histoire orale Volume 33 ; 33 ; 2013 ; >

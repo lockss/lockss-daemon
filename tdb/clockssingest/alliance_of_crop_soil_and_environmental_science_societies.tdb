@@ -215,7 +215,7 @@
 
     # On behalf of Soil Science Society of America
     # See https://dl.sciencesocieties.org/publications/jpa
-    comment[0] = stopped publication after 1999
+    # stopped publication after 1999
 
     param[journal_id] = jpa
 

@@ -52,7 +52,7 @@
     
       param[base_url] = http://journals.co-action.net/
       param[journal_id] = aie
-      comment[0] = discontinued in 2013
+      # discontinued in 2013
 
       au < finished ; finished ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 ; >
       au < finished ; finished ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; 2011 ; >
@@ -93,7 +93,7 @@
     {
       param[base_url] = http://www.diabeticfootandankle.net/
       param[journal_id] = dfa
-      comment[0] = includes supplements
+      # includes supplements
       comment[1] = AUs mistakenly released with 'www': ingested content has no substance
 
       au < superseded ; down ; 2010 ; Diabetic Foot & Ankle Volume 1 [including Supplements] [superseded] ; 1 ; 2010 ; >
@@ -104,7 +104,7 @@
     {
       param[base_url] = http://diabeticfootandankle.net/
       param[journal_id] = dfa
-      comment[0] = includes supplements
+      # includes supplements
 
       au < finished ; crawling ; 2010 ; Diabetic Foot & Ankle [including Supplements] Volume 1 ; 1 ; 2010 ; >
       au < finished ; finished ; 2011 ; Diabetic Foot & Ankle [including Supplements] Volume 2 ; 2 ; 2011 ; >
@@ -148,7 +148,7 @@
 
     param[base_url] = http://www.eht-journal.net/
     param[journal_id] = ehtj
-    comment[0] = vol. 4 includes Supplements 1
+    # vol. 4 includes Supplements 1
 
     au < finished ; finished ; 2008 ; Emerging Health Threats Journal Volume 1 ; 1 ; 2008 ; >
     au < finished ; finished ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 ; 2009 ; >
@@ -211,7 +211,7 @@
     {
       param[base_url] = http://www.eurojnlofpsychotraumatol.net/
       param[journal_id] = ejpt
-      comment[0] = includes supplements
+      # includes supplements
 
 
       au < superseded ; exists ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 [to delete] ; 1 ; 2010 ; >
@@ -222,7 +222,7 @@
     {
       param[base_url] = http://www.ejpt.net/
       param[journal_id] = ejpt
-      comment[0] = includes supplements
+      # includes supplements
       comment[error] = V6. 403 Forbidden to fetch author photo, stops crawl. http://www.ejpt.net/coaction/public/site/images/rensvandeschoot/photo_rens1.JPG   From page http://www.ejpt.net/index.php/ejpt/article/view/25216
 
       au < crawling ; exists ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 ; >
@@ -486,7 +486,7 @@
     param[base_url] = http://www.mechanicalcirculatorysupport.net/
     param[journal_id] = mcs
     comment[notReady] = no substance
-    comment[0] = discontinued in 2014
+    # discontinued in 2014
 
     au < finished ; crawling ; 2010 ; Mechanical Circulatory Support Volume 1 ; 1 ; 2010 ; >
     au < finished ; finished ; 2011 ; Mechanical Circulatory Support Volume 2 ; 2 ; 2011 ; >
@@ -506,7 +506,7 @@
     {
       param[base_url] = http://www.med-ed-online.net/
       param[journal_id] = meo
-      comment[0] = AUs mistakenly released with 'www': ingested content has no substance
+      # AUs mistakenly released with 'www': ingested content has no substance
       
       
       au < superseded ; exists ; 1996 ; Medical Education Online Volume 1 [to delete] ; 1 ; 1996 ; >

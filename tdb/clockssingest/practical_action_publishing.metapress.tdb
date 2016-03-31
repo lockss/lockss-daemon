@@ -6,7 +6,7 @@
     info[tester] = 5
   >
   
-  comment[0] = moving from Metapress to Atypon Feb or March 2015
+  # moving from Metapress to Atypon Feb or March 2015
   
   plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
   param[base_url] = http://practicalaction.metapress.com/
