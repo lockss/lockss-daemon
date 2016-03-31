@@ -27,7 +27,7 @@ tpath="/home/$LOGNAME/tmp"
    #echo "***Not Manifest in GLN, but Crawling in Clockss***" >> $tpath/gr_errors.txt
    #comm -23 $tpath/gr_clockss_c.txt $tpath/gr_gln_mc.txt >> $tpath/gr_errors.txt
    # Select a random collection of clockss AUids
-   shuf $tpath/gr_common.txt | head -300 > $tpath/gr_common_shuf.txt
+   shuf $tpath/gr_common.txt | head -500 > $tpath/gr_common_shuf.txt
 
 
 # Does AU have a clockss and gln manifest page?
