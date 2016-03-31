@@ -346,7 +346,7 @@ public abstract class BaseSpringerLinkCrawlSeed extends BaseCrawlSeed {
             }
             catch (IOException ioe) {
               log.debug2("Link extractor threw", ioe);
-              throw new IOException("Error while parsing PAM response for " + url, ioe);
+              throw new IOException("Error while parsing PAM response for " + loggerUrl, ioe);
             }
             finally {
               // Logging

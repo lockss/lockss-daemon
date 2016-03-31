@@ -13,7 +13,7 @@ tpath="/home/$LOGNAME/tmp"
 
 # Make a list of AUids that are crawling in clockssingest, manifest in gln
    # Make a list of AUids from clockss
-   ./scripts/tdb/tdbout -C -a -Q 'year ~ "201" and plugin ~ "HighWirePressH20Plugin" and year != "2016"' tdb/clockssingest/sage_publications.tdb | sort > $tpath/gr_clockss_c.txt
+   ./scripts/tdb/tdbout -CZLI -a -Q 'year ~ "201" and plugin ~ "HighWirePressH20Plugin" and year != "2016"' tdb/clockssingest/sage_publications.tdb | sort > $tpath/gr_clockss_c.txt
    # Make a list of AUids from gln
    ./scripts/tdb/tdbout -M -a -Q 'year ~ "201" and plugin ~ "HighWirePressH20Plugin" and year != "2016"' tdb/prod/sage_publications.tdb | sort > $tpath/gr_gln_m.txt
    # Convert the gln list to clockss format
@@ -27,7 +27,7 @@ tpath="/home/$LOGNAME/tmp"
    #echo "***Not Manifest in GLN, but Crawling in Clockss***" >> $tpath/gr_errors.txt
    #comm -23 $tpath/gr_clockss_c.txt $tpath/gr_gln_mc.txt >> $tpath/gr_errors.txt
    # Select a random collection of clockss AUids
-   shuf $tpath/gr_common.txt | head -200 > $tpath/gr_common_shuf.txt
+   shuf $tpath/gr_common.txt | head -300 > $tpath/gr_common_shuf.txt
 
 
 # Does AU have a clockss and gln manifest page?

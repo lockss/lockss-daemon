@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.springer.link;
 
 import org.lockss.daemon.PluginException;
-import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 import org.lockss.util.urlconn.*;
 
@@ -52,7 +52,7 @@ public class SpringerLinkHttpResponseHandler implements CacheResultHandler {
                                      String url,
                                      int responseCode)
       throws PluginException {
-    logger.debug2(url);
+    logger.debug2(String.format("URL %s with %d", url, responseCode));
     switch (responseCode) {
       case 404:
         logger.debug3("404");
@@ -61,7 +61,7 @@ public class SpringerLinkHttpResponseHandler implements CacheResultHandler {
         }
         return new CacheException.RetryDeadLinkException("404 Not Found");
       case 500:
-        logger.debug2("500");
+        logger.debug3("500");
         return new CacheException.RetrySameUrlException("500 Internal Server Error");
       default:
         logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
@@ -74,22 +74,29 @@ public class SpringerLinkHttpResponseHandler implements CacheResultHandler {
                                      String url,
                                      Exception ex)
       throws PluginException {
-    logger.warning("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
-    throw new UnsupportedOperationException("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
+    logger.debug2(String.format("URL %s with %s", url, ex.getClass().getName()));
+    if (ex instanceof ContentValidationException.WrongLength) {
+      logger.debug3("Wrong length");
+      return new SpringerLinkRetryDeadLinkException(ex.getMessage());
+    }
+    logger.warning("Unexpected error type (" + ex.getClass().getName() + ") in handleResult(): AU " + au.getName() + "; URL " + url);
+    throw new UnsupportedOperationException("Unexpected error type", ex);
   }
   
   class SpringerLinkRetryDeadLinkException extends CacheException.RetryDeadLinkException {
-	  public SpringerLinkRetryDeadLinkException() {
-	      super();
-	  }
+    
+    public SpringerLinkRetryDeadLinkException() {
+      super();
+    }
 
-	  public SpringerLinkRetryDeadLinkException(String message) {
-	      super(message);
-	  }
-	  
-	  public int getRetryCount() {
-	      return 7;
-	  }
+    public SpringerLinkRetryDeadLinkException(String message) {
+      super(message);
+    }
+
+    public int getRetryCount() {
+      return 7;
+    }
+    
   }
   
 }
