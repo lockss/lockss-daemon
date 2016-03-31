@@ -1941,10 +1941,10 @@
     title <
       name = Social Science History ;
       issn = 0145-5532 ;
-      eissn = 1527-8034 ;
-      # seee RT 6211, due to legal dispute, vol 2014 is unavailable indefinitely as of 4/11/14
-
+      eissn = 1527-8034
       >
+
+      # seee RT 6211, due to legal dispute, vol 2014 is unavailable indefinitely as of 4/11/14
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ssh.dukejournals.org/
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
