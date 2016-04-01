@@ -2511,8 +2511,7 @@
   
   {
     plugin = needs.plugin
-
-      param[base_url] = http://link.springer.com/
+    param[base_url] = http://link.springer.com/
 
     {
   
@@ -2522,7 +2521,7 @@
           eissn = 2190-5738
         >
   
-        param[base_url] = http://www.springer.com/13205/
+        # param[base_url] = http://www.springer.com/13205/
         param[journal_issn] = 2190-572X
         comment[platform] = Springer
   
@@ -2541,7 +2540,7 @@
           eissn = 0814-6039 
         >
   
-        param[base_url] = http://www.springer.com/40857/
+        # param[base_url] = http://www.springer.com/40857/
         param[journal_issn] = 0814-6039
         comment[platform] = Springer
 
@@ -2557,7 +2556,7 @@
           eissn = 2190-5517 
         >
   
-        param[base_url] = http://www.springer.com/13204/
+        # param[base_url] = http://www.springer.com/13204/
         param[journal_issn] = 2190-5509
         comment[platform] = Springer
   
@@ -2577,7 +2576,7 @@
           eissn = 2190-5533 
         >
   
-        param[base_url] = http://www.springer.com/13203/
+        # param[base_url] = http://www.springer.com/13203/
         param[journal_issn] = 2190-5525
         comment[platform] = Springer
   
@@ -2597,7 +2596,7 @@
           eissn = 2190-5495 
         >
   
-        param[base_url] = http://www.springer.com/13201/
+        # param[base_url] = http://www.springer.com/13201/
         param[journal_issn] = 2190-5487
         comment[platform] = Springer
   
@@ -2617,7 +2616,7 @@
           eissn = 2193-5351 
         >
   
-        param[base_url] = http://www.springer.com/40065/
+        # param[base_url] = http://www.springer.com/40065/
         param[journal_issn] = 2193-5343 
         comment[platform] = Springer
   
@@ -2637,7 +2636,7 @@
         issnl = 2038-0305
       >
   
-      param[base_url] = http://www.springer.com/13317/
+      # param[base_url] = http://www.springer.com/13317/
       param[journal_issn] = 2038-0305
       comment[platform] = Springer
   
@@ -2658,7 +2657,7 @@
           eissn = 1559-4106 
         >
   
-        param[base_url] = http://www.springer.com/13758/
+        # param[base_url] = http://www.springer.com/13758/
         param[journal_issn] = 1559-4106 
         comment[platform] = Springer
   
@@ -2682,7 +2681,7 @@
           eissn = 2364-3420
         >
   
-        param[base_url] = http://www.springer.com/41048/
+        # param[base_url] = http://www.springer.com/41048/
         param[journal_issn] = 2364-3439
         comment[platform] = Springer
 
@@ -2697,7 +2696,7 @@
           eissn = 2180-4206
         >
   
-        param[base_url] = http://www.springer.com/40840/
+        # param[base_url] = http://www.springer.com/40840/
         param[journal_issn] = 0126-6705
         comment[platform] = Springer
 
@@ -2711,7 +2710,7 @@
           eissn = 1664-3615
         >
   
-        param[base_url] = http://www.springer.com/13373/
+        # param[base_url] = http://www.springer.com/13373/
         param[journal_issn] = 1664-3615
         comment[platform] = Springer
   
@@ -2730,7 +2729,7 @@
           eissn = 2321-3876
         >
   
-        param[base_url] = http://www.springer.com/41038/
+        # param[base_url] = http://www.springer.com/41038/
         param[journal_issn] = 2321-3876
         comment[platform] = Springer
   
@@ -2747,7 +2746,7 @@
           eissn = 2057-4967
         >
   
-        param[base_url] = http://www.springer.com/41016/
+        # param[base_url] = http://www.springer.com/41016/
         param[journal_issn] = 2057-4967
         comment[platform] = Springer
   
@@ -2763,7 +2762,7 @@
           eissn = 1861-9541
         >
   
-        param[base_url] = http://www.springer.com/11434/
+        # param[base_url] = http://www.springer.com/11434/
         param[journal_issn] = 1001-6538
         comment[platform] = Springer
         comment[continued_by] = 2095-9273
@@ -2797,7 +2796,7 @@
           eissn = 1972-4977
         >
   
-        param[base_url] = http://www.springer.com/40812/
+        # param[base_url] = http://www.springer.com/40812/
         param[journal_issn] = 0391-2078
         comment[platform] = Springer
 
@@ -2812,7 +2811,7 @@
           eissn = 1973-820X
         >
   
-        param[base_url] = http://www.springer.com/40888/
+        # param[base_url] = http://www.springer.com/40888/
         param[journal_issn] = 1120-2890
         comment[platform] = Springer
 
@@ -2827,7 +2826,7 @@
           eissn = 1741-6205
         >
   
-        param[base_url] = http://www.springer.com/40804/
+        # param[base_url] = http://www.springer.com/40804/
         param[journal_issn] = 1566-7529
         comment[platform] = Springer
 
@@ -2856,7 +2855,7 @@
           eissn = 2195-2248
         >
   
-        param[base_url] = http://www.springer.com/40309/
+        # param[base_url] = http://www.springer.com/40309/
         param[journal_issn] = 2195-2248
         comment[platform] = Springer
   
@@ -2874,7 +2873,7 @@
           eissn = 1866-8887
         >
   
-        param[base_url] = http://www.springer.com/12544/
+        # param[base_url] = http://www.springer.com/12544/
         param[journal_issn] = 1867-0717
         comment[platform] = Springer
   
@@ -2896,7 +2895,7 @@
           eissn = 2190-7579
         >
   
-        param[base_url] = http://www.springer.com/13404/
+        # param[base_url] = http://www.springer.com/13404/
         param[journal_issn] = 2190-7579
         comment[platform] = Springer
   
@@ -2956,7 +2955,7 @@
           eissn = 2405-7827
         >
   
-        param[base_url] = http://www.springer.com/40954/
+        # param[base_url] = http://www.springer.com/40954/
         param[journal_issn] = 0775-0501
         comment[platform] = Springer
   
@@ -2971,7 +2970,7 @@
           issn = 1869-4101
         >
   
-        param[base_url] = http://www.springer.com/13244/
+        # param[base_url] = http://www.springer.com/13244/
         param[journal_issn] = 1869-4101
         comment[platform] = Springer
   
@@ -2992,7 +2991,7 @@
           eissn = 2234-1315
         >
   
-        param[base_url] = http://www.springer.com/40069/
+        # param[base_url] = http://www.springer.com/40069/
         param[journal_issn] = 2234-1315
         comment[platform] = Springer
         # content prior to 2012, not with Springer
@@ -3012,7 +3011,7 @@
           eissn = 2192-6395
         >
   
-        param[base_url] = http://www.springer.com/13753/
+        # param[base_url] = http://www.springer.com/13753/
         param[journal_issn] = 2095-0055
         comment[platform] = Springer
   
@@ -3033,7 +3032,7 @@
           eissn = 2199-3211
         >
   
-        param[base_url] = http://www.springer.com/40815/
+        # param[base_url] = http://www.springer.com/40815/
         param[journal_issn] = 1562-2479
         comment[platform] = Springer
   
@@ -3049,7 +3048,7 @@
           eissn = 2163-3193
         >
   
-        param[base_url] = http://www.springer.com/40962/
+        # param[base_url] = http://www.springer.com/40962/
         param[journal_issn] = 1939-5981
         comment[platform] = Springer
   
@@ -3065,7 +3064,7 @@
           eissn = 2363-9024
         >
   
-        param[base_url] = http://www.springer.com/40981/
+        # param[base_url] = http://www.springer.com/40981/
         param[journal_issn] = 2363-9024
         comment[platform] = Springer
   
@@ -3080,7 +3079,7 @@
           issn = 2226-4108
         >
   
-        param[base_url] = http://www.springer.com/40145/
+        # param[base_url] = http://www.springer.com/40145/
         param[journal_issn] = 2226-4108
         comment[platform] = Springer
   
@@ -3099,7 +3098,7 @@
           eissn = 1863-2548
         >
   
-        param[base_url] = http://www.springer.com/11832/
+        # param[base_url] = http://www.springer.com/11832/
         param[journal_issn] = 1863-2521
         comment[platform] = Springer
 
@@ -3122,7 +3121,7 @@
           eissn = 2072-1315
         >
   
-        param[base_url] = http://www.springer.com/41043/
+        # param[base_url] = http://www.springer.com/41043/
         param[journal_issn] = 2072-1315
         comment[platform] = Springer
 
@@ -3138,7 +3137,7 @@
           eissn = 2363-9962
         >
   
-        param[base_url] = http://www.springer.com/40961/
+        # param[base_url] = http://www.springer.com/40961/
         param[journal_issn] = 0970-7794
         comment[platform] = Springer
 
@@ -3153,7 +3152,7 @@
           eissn = 2364-3404
         >
   
-        param[base_url] = http://www.springer.com/41018/
+        # param[base_url] = http://www.springer.com/41018/
         param[journal_issn] = 2364-3404
         comment[platform] = Springer
 
@@ -3169,7 +3168,7 @@
           eissn = 2199-4757
         >
   
-        param[base_url] = http://www.springer.com/40846/
+        # param[base_url] = http://www.springer.com/40846/
         param[journal_issn] = 1609-0985
         comment[platform] = Springer
 
@@ -3185,7 +3184,7 @@
           eissn = 1590-9999
         >
   
-        param[base_url] = http://www.springer.com/10195/
+        # param[base_url] = http://www.springer.com/10195/
         param[journal_issn] = 1590-9921
         comment[platform] = Springer
   
@@ -3216,7 +3215,7 @@
           eissn = 2190-0566
         >
   
-        param[base_url] = http://www.springer.com/13202/
+        # param[base_url] = http://www.springer.com/13202/
         param[journal_issn] = 2190-0558
         comment[platform] = Springer
   
@@ -3236,7 +3235,7 @@
           eissn = 1865-0368 
         >
   
-        param[base_url] = http://www.springer.com/12159/
+        # param[base_url] = http://www.springer.com/12159/
         param[journal_issn] = 1865-0368
         comment[platform] = Springer
 
@@ -3277,7 +3276,7 @@
           eissn = 2192-2209
         >
   
-        param[base_url] = http://www.springer.com/13659/
+        # param[base_url] = http://www.springer.com/13659/
         param[journal_issn] = 2192-2209
         comment[platform] = Springer
   
@@ -3297,7 +3296,7 @@
           eissn = 1741-6191
         >
   
-        param[base_url] = http://www.springer.com/40802/
+        # param[base_url] = http://www.springer.com/40802/
         param[journal_issn] = 0165-070X
         comment[platform] = Springer
 
@@ -3330,7 +3329,7 @@
           eissn = 2199-4714
         >
   
-        param[base_url] = http://www.springer.com/40841/
+        # param[base_url] = http://www.springer.com/40841/
         param[journal_issn] = 0028-8276
         comment[platform] = Springer
 
@@ -3346,7 +3345,7 @@
           eissn = 2052-9597
         >
   
-        param[base_url] = http://www.springer.com/40926/
+        # param[base_url] = http://www.springer.com/40926/
         param[journal_issn] = 1740-3812
         comment[platform] = Springer
 
@@ -3375,7 +3374,7 @@
           eissn = 2190-7439
         >
   
-        param[base_url] = http://www.springer.com/13320/
+        # param[base_url] = http://www.springer.com/13320/
         param[journal_issn] = 1674-9251
         comment[platform] = Springer
   
@@ -3395,7 +3394,7 @@
           eissn = 1615-6617
         >
   
-        param[base_url] = http://www.springer.com/10202/
+        # param[base_url] = http://www.springer.com/10202/
         param[journal_issn] = 1615-6609
         comment[platform] = Springer
         # no issue in 2007
@@ -3421,7 +3420,7 @@
           eissn = 1674-8018 
         >
   
-        param[base_url] = http://www.springer.com/13238/
+        # param[base_url] = http://www.springer.com/13238/
         param[journal_issn] = 1674-8018
         comment[platform] = Springer
 
@@ -3441,7 +3440,7 @@
           eissn = 2107-6952
         >
   
-        param[base_url] = http://www.springer.com/40985/
+        # param[base_url] = http://www.springer.com/40985/
         param[journal_issn] = 2107-6952
         comment[platform] = Springer
 
@@ -3457,7 +3456,7 @@
           eissn = 2095-9281
         >
   
-        param[base_url] = http://www.springer.com/11434/
+        # param[base_url] = http://www.springer.com/11434/
         param[journal_issn] = 2095-9273
         comment[platform] = Springer
         comment[continues] = 1001-6538
@@ -3474,7 +3473,7 @@
           eissn = 1869-1889
         >
   
-        param[base_url] = http://www.springer.com/11427/
+        # param[base_url] = http://www.springer.com/11427/
         param[journal_issn] = 1674-7305
         comment[platform] = Springer
   
@@ -3508,7 +3507,7 @@
           eissn = 1869-4195
         >
   
-        param[base_url] = http://www.springer.com/13209/
+        # param[base_url] = http://www.springer.com/13209/
         param[journal_issn] = 1869-4187
         comment[platform] = Springer
   
@@ -3529,7 +3528,7 @@
           eissn = 1828-8928
         >
   
-        param[base_url] = http://www.springer.com/11751/
+        # param[base_url] = http://www.springer.com/11751/
         param[journal_issn] = 1828-8936
         comment[platform] = Springer
   
@@ -3554,7 +3553,7 @@
           eissn = 1983-2052
         >
   
-        param[base_url] = http://www.springer.com/40858/
+        # param[base_url] = http://www.springer.com/40858/
         param[journal_issn] = 1983-2052
         comment[platform] = Springer
 
@@ -3570,7 +3569,7 @@
           eissn = 2364-0022
         >
   
-        param[base_url] = http://www.springer.com/40955/
+        # param[base_url] = http://www.springer.com/40955/
         param[journal_issn] =  2364-0014
         comment[platform] = Springer
 
@@ -3585,7 +3584,7 @@
         eissn = 2197-7909
       >
 
-      param[base_url] = http://link.springer.com/journal/40668/
+      # param[base_url] = http://link.springer.com/journal/40668/
       param[journal_issn] = 2197-7909
       comment[platform] = Springer
 
@@ -3601,7 +3600,7 @@
         eissn = 2198-0802
       >
 
-      param[base_url] = http://link.springer.com/journal/40691/
+      # param[base_url] = http://link.springer.com/journal/40691/
       param[journal_issn] = 2198-0802
       comment[platform] = Springer
 
@@ -3617,7 +3616,7 @@
         eissn = 2196-3258
       >
 
-      param[base_url] = http://link.springer.com/journal/40551/
+      # param[base_url] = http://link.springer.com/journal/40551/
       param[journal_issn] = 2196-3258
       comment[platform] = Springer
 
@@ -3633,7 +3632,7 @@
         eissn = 2196-8802
       >
 
-      param[base_url] = http://link.springer.com/journal/40613/
+      # param[base_url] = http://link.springer.com/journal/40613/
       param[journal_issn] = 2196-8802
       comment[platform] = Springer
 
@@ -3651,7 +3650,7 @@
         eissn = 2198-2791
       >
 
-      param[base_url] = http://link.springer.com/journal/40712/
+      # param[base_url] = http://link.springer.com/journal/40712/
       param[journal_issn] = 2198-2791
       comment[platform] = Springer
 
@@ -3667,7 +3666,7 @@
         eissn = 1759-2208
       >
 
-      param[base_url] = http://link.springer.com/journal/13322/
+      # param[base_url] = http://link.springer.com/journal/13322/
       param[journal_issn] = 1759-2208
       comment[platform] = Springer
 
@@ -3688,7 +3687,7 @@
         eissn = 1678-4804
       >
 
-      param[base_url] = http://link.springer.com/journal/13173/
+      # param[base_url] = http://link.springer.com/journal/13173/
       param[journal_issn] = 1678-4804
       comment[platform] = Springer
 
@@ -3714,7 +3713,7 @@
         issn = 2197-1927
       >
 
-      param[base_url] = http://link.springer.com/journal/40604/
+      # param[base_url] = http://link.springer.com/journal/40604/
       param[journal_issn] = 2197-1927
       comment[platform] = Springer
 

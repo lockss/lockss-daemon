@@ -341,17 +341,6 @@
 
   {
     title <
-      name = Palaeontologica Electronica ;
-      eissn = 1094-8074
-    >
-    
-    plugin = needs.plugin
-    param[base_url] = http://palaeo-electronica.org/
-
-  }
-
-  {
-    title <
       name = The Workshop ;
       eissn = 2372-5931 
     >

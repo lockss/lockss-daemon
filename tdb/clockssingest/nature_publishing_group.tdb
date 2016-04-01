@@ -193,32 +193,6 @@
   {
 
     title <
-      name = BoneKEy Reports ;
-      eissn = 2047-6396
-
-    >
-
-    param[journal_id] = bonekey/bonekeyreports
-    plugin = needs.plugin
-
-    au < doNotProcess ; doNotProcess ; 2004 ; BoneKEy Reports Volume 1 ; 2004 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 2005 ; BoneKEy Reports Volume 2 ; 2005 ; 2 ; >
-    au < doNotProcess ; doNotProcess ; 2006 ; BoneKEy Reports Volume 3 ; 2006 ; 3 ; >
-    au < doNotProcess ; doNotProcess ; 2007 ; BoneKEy Reports Volume 4 ; 2007 ; 4 ; >
-    au < exists ; exists ; 2008 ; BoneKEy Reports Volume 5 ; 2008 ; 5 ; >
-    au < exists ; exists ; 2009 ; BoneKEy Reports Volume 6 ; 2009 ; 6 ; >
-    au < exists ; exists ; 2010 ; BoneKEy Reports Volume 7 ; 2010 ; 7 ; >
-    au < exists ; exists ; 2011 ; BoneKEy Reports Volume 8 ; 2011 ; 8 ; >
-    au < exists ; exists ; 2012 ; BoneKEy Reports Volume 9 ; 2012 ; 9 ; >
-    au < exists ; exists ; 2013 ; BoneKEy Reports Volume 10 ; 2013 ; 10 ; >
-    au < exists ; exists ; 2014 ; BoneKEy Reports Volume 11 ; 2014 ; 11 ; >
-    au < exists ; exists ; 2015 ; BoneKEy Reports Volume 12 ; 2015 ; 12 ; >
-
-  }
-
-  {
-
-    title <
       name = British Dental Journal ;
       issn = 0007-0610 ;
       eissn = 1476-5373
@@ -1091,27 +1065,6 @@
     au < crawling ; exists ; 2014 ; Hypertension Research Volume 37 ; 2014 ; 37 ; >
     au < crawling ; exists ; 2015 ; Hypertension Research Volume 38 ; 2015 ; 38 ; >
  
-  }
-
-  {
-
-    title <
-      name = IBMS BoneKEy ;
-      eissn = 1940-8692
-    >
-
-    param[journal_id] = bonekey
-    plugin = needs.plugin
-
-    au < exists ; exists ; 2008 ; IBMS BoneKEy 10 ; 2008 ; 10 ; >
-    au < exists ; exists ; 2009 ; IBMS BoneKEy 11 ; 2009 ; 11 ; >
-    au < exists ; exists ; 2010 ; IBMS BoneKEy Volume 12 ; 2010 ; 12 ; >
-    au < exists ; exists ; 2011 ; IBMS BoneKEy Volume 13 ; 2011 ; 13 ; >
-    au < exists ; exists ; 2012 ; IBMS BoneKEy Volume 14 ; 2012 ; 14 ; >
-    au < exists ; exists ; 2013 ; IBMS BoneKEy Volume 15 ; 2013 ; 15 ; >
-    au < exists ; exists ; 2014 ; IBMS BoneKEy Volume 16 ; 2014 ; 16 ; >
-    au < exists ; exists ; 2015 ; IBMS BoneKEy Volume 17 ; 2015 ; 17 ; >
-
   }
 
   {
