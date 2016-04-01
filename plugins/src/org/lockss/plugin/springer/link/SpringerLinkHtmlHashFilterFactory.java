@@ -104,8 +104,9 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "id", "crossMark"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "banner"),   
 
-      // unnecessary button
-      HtmlNodeFilters.tagWithAttribute("button", "id", "chat-widget"),
+      // button - let's get rid of all of them...
+      HtmlNodeFilters.tag("button"),
+     /*class="StickySideButton_left StickySideButton_left--feedback"*/
       
       //CSS links in body
       HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),

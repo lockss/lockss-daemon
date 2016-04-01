@@ -58,6 +58,7 @@ public class TestSpringerLinkHtmlHashFilterFactory extends LockssTestCase {
   //      <div id="footer">, <div id="doubleclick">, <div id="header">, <div id="crossMark"
   //      <link rel="stylesheet"
   //      <!-- html comments --> , <button id="chat-widget">
+  //       <button class="StickySideButton_left StickySideButton_left--feedback">Support</button>
   private static final String withCrossMark =
       "<head></head>" +
       "<div id=\"footer\">hello world</div>" +
@@ -74,6 +75,7 @@ public class TestSpringerLinkHtmlHashFilterFactory extends LockssTestCase {
       "<!-- html comment -->" +
       "<button id=\"chat-widget\">Chatty Button</button>" +
       "<!--[if !(IE 8)]><!-->" +
+      "<button class=\"StickySideButton_left StickySideButton_left--feedback\">Sticky</button>"+
       "</div> ";
   private static final String withoutCrossMark =
       "<div id=\"content\">" +
@@ -110,7 +112,6 @@ public class TestSpringerLinkHtmlHashFilterFactory extends LockssTestCase {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withCrossMark), Constants.DEFAULT_ENCODING);
     String str = StringUtil.fromInputStream(actIn);
-
     assertEquals(withoutCrossMark, str);
     
   }
@@ -122,7 +123,6 @@ public class TestSpringerLinkHtmlHashFilterFactory extends LockssTestCase {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withBodyAttr), Constants.DEFAULT_ENCODING);
     String str = StringUtil.fromInputStream(actIn);
-System.out.println(withBodyAttr);
     assertEquals(withoutBodyAttr, str);
   }
 }
