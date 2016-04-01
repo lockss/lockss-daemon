@@ -38,7 +38,6 @@ import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.iop.IOPScienceHtmlHashFilterFactory;
 import org.lockss.util.Logger;
 
 public class IUCrOaiHtmlHashFilterFactory implements FilterFactory {
