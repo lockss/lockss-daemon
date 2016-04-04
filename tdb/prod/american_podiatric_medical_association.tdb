@@ -13,7 +13,7 @@
       issnl = 1930-8264
     >
 
-    comment[platform] = Moved from HW to Allen Press.
+    # platform moved from HW to Allen Press.
 
     {
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
@@ -85,7 +85,7 @@
       plugin = org.lockss.plugin.atypon.allenpress.AllenPressJournalsPlugin
       param[base_url] = http://www.japmaonline.org/
       implicit < status ; year ; name ; param[volume_name] >
-      comment[platform] = Allen Press
+      # platform Allen Press
       param[journal_id] = apms
 
       au < exists ; 2013 ; Journal of the American Podiatric Medical Association Volume 103 ; 103 >

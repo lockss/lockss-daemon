@@ -243,26 +243,26 @@
       param[base_url] = http://www.hthpweb.com/
       param[journal_code] = hthp
       param[short_journal_code] = H
-      implicit < status ; status2 ; year ; name ; volume ; param[volume_name] ; hidden[proxy] >
+      # implicit < status ; status2 ; year ; name ; volume ; param[volume_name] ; hidden[proxy] >
       # journal at this url 1995-2007, vols 27-36.
       # moved: newer content at http://www.oldcitypublishing.com/index.html, 2008-present, vols. 37-?
       
       # Waiting for Pion to fix no substance errors for V27-31, and no permission statement error or ingest3 and 4.      
 
-      au < superseded ; exists ; 1995-1996 ; High Temperatures - High Pressures Volume 27/28 [superseded] ; 27-28 ; 27 ; >
-      au < superseded ; exists ; 1997 ; High Temperatures - High Pressures Volume 29 [superseded] ; 29 ; 29 ; >
-      au < superseded ; exists ; 1998 ; High Temperatures - High Pressures Volume 30 [superseded] ; 30 ; 30 ; >
-      au < superseded ; exists ; 1999 ; High Temperatures - High Pressures Volume 31 [superseded] ; 31 ; 31 ; >
-      au < down ; exists ; 2000 ; High Temperatures - High Pressures Volume 32 ; 32 ; 32 ; >
-      au < down ; exists ; 2001 ; High Temperatures - High Pressures Volume 33 ; 33 ; 33 ; >
-      au < down ; exists ; 2002 ; High Temperatures - High Pressures Volume 34 ; 34 ; 34 ; >
-      au < down ; exists ; 2003-2007 ; High Temperatures - High Pressures Volume 35/36 ; 35-36 ; 35 ; >
+      au < superseded ; exists ; 1995-1996 ; High Temperatures - High Pressures Volume 27/28 [superseded] ; 27 ; >
+      au < superseded ; exists ; 1997 ; High Temperatures - High Pressures Volume 29 [superseded] ; 29 ; >
+      au < superseded ; exists ; 1998 ; High Temperatures - High Pressures Volume 30 [superseded] ; 30 ; >
+      au < superseded ; exists ; 1999 ; High Temperatures - High Pressures Volume 31 [superseded] ; 31 ; >
+      au < down ; exists ; 2000 ; High Temperatures - High Pressures Volume 32 ; 32 ; >
+      au < down ; exists ; 2001 ; High Temperatures - High Pressures Volume 33 ; 33 ; >
+      au < down ; exists ; 2002 ; High Temperatures - High Pressures Volume 34 ; 34 ; >
+      au < down ; exists ; 2003-2007 ; High Temperatures - High Pressures Volume 35/36 ; 35 ; >
 
-      au < superseded ; exists ; 2010 ; High Temperatures - High Pressures Volume 37 [to delete] ; 37 ; 37 ; >
-      au < superseded ; exists ; 2010 ; High Temperatures - High Pressures Volume 38 [to delete] ; 38 ; 38 ; >
-      au < zapped ; superseded ; 2010 ; High Temperatures - High Pressures Volume 39 [to delete] ; 39 ; 39 ; >
-      au < zapped ; superseded ; 2011 ; High Temperatures - High Pressures Volume 40 [to delete] ; 40 ; 40 ; >
-      au < superseded ; exists ; 2011 ; High Temperatures - High Pressures Volume 41 [to delete] ; 41 ; 41 ; >
+      au < superseded ; exists ; 2010 ; High Temperatures - High Pressures Volume 37 [to delete] ; 37 ; >
+      au < superseded ; exists ; 2010 ; High Temperatures - High Pressures Volume 38 [to delete] ; 38 ; >
+      au < zapped ; superseded ; 2010 ; High Temperatures - High Pressures Volume 39 [to delete] ; 39 ; >
+      au < zapped ; superseded ; 2011 ; High Temperatures - High Pressures Volume 40 [to delete] ; 40 ; >
+      au < superseded ; exists ; 2011 ; High Temperatures - High Pressures Volume 41 [to delete] ; 41 ; >
   
     }
   
