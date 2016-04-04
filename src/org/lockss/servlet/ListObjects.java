@@ -43,6 +43,7 @@ import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
+import org.lockss.config.*;
 import org.mortbay.html.*;
 
 /** Plain output of various lists - AUs, URLs, metadata, etc.  Mostly for
@@ -105,6 +106,8 @@ public class ListObjects extends LockssServlet {
 	new FileMemberList().execute();
       } else if (type.equalsIgnoreCase("suburls")) {
 	new SubstanceUrlList().execute();
+      } else if (type.equalsIgnoreCase("suburlsdetail")) {
+	new SubstanceUrlListWithExplanations().execute();
       } else if (type.equalsIgnoreCase("subfiles")) {
 	new SubstanceFileList().execute();
       } else if (type.equalsIgnoreCase("articles")) {
@@ -294,10 +297,65 @@ public class ListObjects extends LockssServlet {
 
     protected void processCu(CachedUrl cu) {
       if (cu.hasContent()) {
-	String url = cu.getUrl();
-	if (subChecker.isSubstanceUrl(url)) {
-	  wrtr.println(url);
+ 	String cuUrl = cu.getUrl();
+	List<String> urls = subChecker.getUrlsToCheck(cu);
+	for (String url : urls) {
+	  if (subChecker.isSubstanceUrl(url)) {
+	    wrtr.println(url);
+	    itemCnt++;
+	    break;
+	  }
+	}
+      }
+    }
+
+    void processContentCu(CachedUrl cu) {
+      throw new IllegalStateException("Shouldn't be called");
+    }
+  }
+
+  /** List substance URLs in AU */
+  class SubstanceUrlListWithExplanations extends SubstanceList {
+
+    SubstanceUrlListWithExplanations() {
+      super();
+    }
+
+    void printHeader() {
+      wrtr.println("# Substance URLs (with redirect detail) in " +
+		   au.getName());
+      wrtr.println("# Substance checker mode is " + subChecker.getMode());
+    }
+
+    String units(int n) {
+      return StringUtil.numberOfUnits(n, "substance URL", "substance URLs");
+    }
+
+    protected void processCu(CachedUrl cu) {
+      if (cu.hasContent()) {
+ 	String cuUrl = cu.getUrl();
+	List<String> urls = subChecker.getUrlsToCheck(cu);
+	Map<String,Boolean> res =
+	  (Map<String,Boolean>)new HashMap<String,Boolean>();
+	boolean hasSubst = false;
+	for (String url : urls) {
+	  boolean urlSubst = subChecker.isSubstanceUrl(url);
+	  res.put(url, urlSubst);
+	  hasSubst = hasSubst || urlSubst;
+	}
+	if (hasSubst) {
 	  itemCnt++;
+	}
+	wrtr.println((hasSubst ? "Yes" : "No ") + "  " + cuUrl);
+	if (urls.size() != 1 || cuUrl != urls.get(0)) {
+	  wrtr.println("  Redirect chain:");
+	  for (String url : AuUtil.getRedirectChain(cu)) {
+	    if (res.containsKey(url)) {
+	      wrtr.println((hasSubst ? "  Yes" : "  No ") + "   " + url);
+	    } else {
+	      wrtr.println("        " + url);
+	    }
+	  }
 	}
       }
     }
@@ -367,16 +425,22 @@ public class ListObjects extends LockssServlet {
 
     protected void processCu(CachedUrl cu) {
       if (cu.hasContent()) {
-	String url = cu.getUrl();
-	if (subChecker.isSubstanceUrl(url)) {
-	  String contentType = cu.getContentType();
-	  long bytes = cu.getContentSize();
-	  if (contentType == null) {
-	    contentType = "unknown";
+ 	String cuUrl = cu.getUrl();
+	List<String> urls = subChecker.getUrlsToCheck(cu);
+	for (String url : urls) {
+	  if (subChecker.isSubstanceUrl(url)) {
+	    String contentType = cu.getContentType();
+	    long bytes = cu.getContentSize();
+	    if (contentType == null) {
+	      contentType = "unknown";
+	    }
+	    wrtr.println(cuUrl + "\t" + contentType + "\t" + bytes);
+	    wrtr.println(url);
+	    itemCnt++;
+	    break;
 	  }
-	  wrtr.println(url + "\t" + contentType + "\t" + bytes);
-	  itemCnt++;
 	}
+
       }
     }
 
