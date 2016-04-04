@@ -482,25 +482,6 @@
   {
   
     title <
-      name = Modern Languages Open ;
-      eissn = 2052-5397
-    >
-
-    {
-    plugin = org.lockss.plugin.ojs2.OJS2Plugin
-    implicit < status ; year ; name ; volume ; param[year] >
-    param[base_url] = http://www.modernlanguagesopen.org/
-    param[journal_id] = mlo
-    
-    au < manifest ; 2014 ; Modern Languages Open Volume 1 ; 1 ; 2014 >
-    au < manifest ; 2015 ; Modern Languages Open Volume 2 ; 2 ; 2015 >
-    
-    }
-  }
-
-  {
-  
-    title <
       name = Music, Sound, and the Moving Image ;
       issn = 1753-0768 ;
       eissn = 1753-0776 ;
