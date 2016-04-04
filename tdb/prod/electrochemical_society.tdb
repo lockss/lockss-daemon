@@ -255,7 +255,8 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; released ; 2014 ; Interface Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; manifest ; 2015 ; Interface Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; testing ; 2015 ; Interface Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; expected ; 2016 ; Interface Volume 25 ; 25 >
 
   }
 
@@ -287,7 +288,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of the Electrochemical Society Volume 159 ; 159 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Journal of the Electrochemical Society Volume 160 ; 160 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Journal of the Electrochemical Society Volume 161 ; 161 >
-    au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of the Electrochemical Society Volume 162 ; 162 >
+    au < HighWirePressH20Plugin ; testing ; 2015 ; Journal of the Electrochemical Society Volume 162 ; 162 >
     au < HighWirePressH20Plugin ; manifest ; 2016 ; Journal of the Electrochemical Society Volume 163 ; 163 >
 
   }

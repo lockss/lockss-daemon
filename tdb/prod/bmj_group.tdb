@@ -53,7 +53,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Acupuncture in Medicine Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Acupuncture in Medicine Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Acupuncture in Medicine Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; manifest ; 2015 ; Acupuncture in Medicine Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; testing ; 2015 ; Acupuncture in Medicine Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; manifest ; 2016 ; Acupuncture in Medicine Volume 34 ; 34 >
 
   }
@@ -143,7 +143,7 @@
     au < HighWirePressH20Plugin ; notReady ; 2013 ; Annals of the Rheumatic Diseases Volume 73 ; 73 >
     #login page found
     au < HighWirePressH20Plugin ; released ; 2014 ; Annals of the Rheumatic Diseases Volume 74 ; 74 >
-    au < HighWirePressH20Plugin ; manifest ; 2015 ; Annals of the Rheumatic Diseases Volume 75 ; 75 >
+    au < HighWirePressH20Plugin ; testing ; 2015 ; Annals of the Rheumatic Diseases Volume 75 ; 75 >
     au < HighWirePressH20Plugin ; expected ; 2016 ; Annals of the Rheumatic Diseases Volume 76 ; 76 >
 
   }
@@ -258,7 +258,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Archives of Disease in Childhood Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Archives of Disease in Childhood Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Archives of Disease in Childhood Volume 99 ; 99 >
-    au < HighWirePressH20Plugin ; manifest ; 2015 ; Archives of Disease in Childhood Volume 100 ; 100 >
+    au < HighWirePressH20Plugin ; testing ; 2015 ; Archives of Disease in Childhood Volume 100 ; 100 >
     au < HighWirePressH20Plugin ; manifest ; 2016 ; Archives of Disease in Childhood Volume 101 ; 101 >
 
   }
@@ -285,7 +285,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Archives of Disease in Childhood - Education and Practice Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Archives of Disease in Childhood - Education and Practice Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Archives of Disease in Childhood - Education and Practice Volume 99 ; 99 >
-    au < HighWirePressH20Plugin ; manifest ; 2015 ; Archives of Disease in Childhood - Education and Practice Volume 100 ; 100 >
+    au < HighWirePressH20Plugin ; testing ; 2015 ; Archives of Disease in Childhood - Education and Practice Volume 100 ; 100 >
     au < HighWirePressH20Plugin ; manifest ; 2016 ; Archives of Disease in Childhood - Education and Practice Volume 101 ; 101 >
 
   }
@@ -331,7 +331,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 99 ; 99 >
-    au < HighWirePressH20Plugin ; manifest ; 2015 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 100 ; 100 >
+    au < HighWirePressH20Plugin ; testing ; 2015 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 100 ; 100 >
     au < HighWirePressH20Plugin ; manifest ; 2016 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 101 ; 101 >
 
   }
@@ -445,8 +445,8 @@
     au < bmj.BMJDrupalPlugin ; released ; 2014 ; BMJ Volume 347 ; 347 >
     au < bmj.BMJDrupalPlugin ; testing ; 2014 ; BMJ Volume 348 ; 348 >
     au < bmj.BMJDrupalPlugin ; released ; 2014 ; BMJ Volume 349 ; 349 >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2015 ; BMJ Volume 350 ; 350 >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2015 ; BMJ Volume 351 ; 351 >
+    au < bmj.BMJDrupalPlugin ; testing ; 2015 ; BMJ Volume 350 ; 350 >
+    au < bmj.BMJDrupalPlugin ; testing ; 2015 ; BMJ Volume 351 ; 351 >
     au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; BMJ Volume 352 ; 352 >
     au < bmj.BMJDrupalPlugin ; expected ; 2016 ; BMJ Volume 353 ; 353 >
 
@@ -462,7 +462,7 @@
 
     param[base_url] = http://innovations.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 2015 ; BMJ Innovations Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; testing ; 2015 ; BMJ Innovations Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2016 ; BMJ Innovations Volume 2 ; 2 >
 
   }
@@ -479,7 +479,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; BMJ Open Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2013 ; BMJ Open Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2014 ; BMJ Open Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 2015 ; BMJ Open Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; testing ; 2015 ; BMJ Open Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; manifest ; 2016 ; BMJ Open Volume 6 ; 6 >
 
   }
@@ -509,7 +509,7 @@
     param[base_url] = http://bmjopenrespres.bmj.com/
 
     au < HighWirePressH20Plugin ; released ; 2014 ; BMJ Open Respiratory Research Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 2015 ; BMJ Open Respiratory Research Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; testing ; 2015 ; BMJ Open Respiratory Research Volume 2 ; 2 >
 
   }
   
@@ -556,7 +556,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; BMJ Supportive & Palliative Care Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2013 ; BMJ Supportive & Palliative Care Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2014 ; BMJ Supportive & Palliative Care Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 2015 ; BMJ Supportive & Palliative Care Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; testing ; 2015 ; BMJ Supportive & Palliative Care Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; manifest ; 2016 ; BMJ Supportive & Palliative Care Volume 6 ; 6 >
 
   }
@@ -671,7 +671,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; British Journal of Ophthalmology Volume 96 ; 96 >
     au < HighWirePressH20Plugin ; released ; 2013 ; British Journal of Ophthalmology Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; released ; 2014 ; British Journal of Ophthalmology Volume 98 ; 98 >
-    au < HighWirePressH20Plugin ; manifest ; 2015 ; British Journal of Ophthalmology Volume 99 ; 99 >
+    au < HighWirePressH20Plugin ; testing ; 2015 ; British Journal of Ophthalmology Volume 99 ; 99 >
     au < HighWirePressH20Plugin ; manifest ; 2016 ; British Journal of Ophthalmology Volume 100 ; 100 >
 
   }
@@ -734,7 +734,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; British Journal of Sports Medicine Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; released ; 2013 ; British Journal of Sports Medicine Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; released ; 2014 ; British Journal of Sports Medicine Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; manifest ; 2015 ; British Journal of Sports Medicine Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; testing ; 2015 ; British Journal of Sports Medicine Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; manifest ; 2016 ; British Journal of Sports Medicine Volume 50 ; 50 >
 
   }
@@ -804,7 +804,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Drug and Therapeutics Bulletin Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Drug and Therapeutics Bulletin Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Drug and Therapeutics Bulletin Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; manifest ; 2015 ; Drug and Therapeutics Bulletin Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; testing ; 2015 ; Drug and Therapeutics Bulletin Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; manifest ; 2016 ; Drug and Therapeutics Bulletin Volume 54 ; 54 >
 
   }
@@ -852,7 +852,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Emergency Medicine Journal Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Emergency Medicine Journal Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Emergency Medicine Journal Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; manifest ; 2015 ; Emergency Medicine Journal Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; testing ; 2015 ; Emergency Medicine Journal Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; manifest ; 2016 ; Emergency Medicine Journal Volume 33 ; 33 >
 
   }
