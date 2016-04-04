@@ -1271,6 +1271,13 @@ public class ArchivalUnitStatus
 
 	addLink(urlLinks,
 		new StatusTable
+		.SrvLink("(detail)",
+			 AdminServletManager.SERVLET_LIST_OBJECTS,
+			 PropUtil.fromArgs("type", "suburlsdetail",
+					   "auid", au.getAuId())));
+
+	addLink(urlLinks,
+		new StatusTable
 		.SrvLink("Substance Files",
 			 AdminServletManager.SERVLET_LIST_OBJECTS,
 			 PropUtil.fromArgs("type", "subfiles",
@@ -2114,7 +2121,7 @@ public class ArchivalUnitStatus
 	for (Map.Entry<PeerIdentity,Map<AgreementType,PeerAgreement>> ent :
 	       buildCacheStats(au, idMgr).entrySet()) {
 	  PeerIdentity peer = ent.getKey();
-	  for (AgreementType type : AgreementType.primaryTypes()) {
+	  for (AgreementType type : AgreementType.primaryAndWeightedTypes()) {
 	    Map<AgreementType,PeerAgreement> typeMap = ent.getValue();
 	    PeerAgreement pa = typeMap.get(type);
 	    PeerAgreement pahint = typeMap.get(AgreementType.getHintType(type));

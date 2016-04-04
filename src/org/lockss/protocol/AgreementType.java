@@ -109,6 +109,12 @@ public enum AgreementType {
     return new AgreementType[] { POR, POP, SYMMETRIC_POR, SYMMETRIC_POP };
   }
 
+  public static AgreementType[] primaryAndWeightedTypes() {
+    return new AgreementType[] { POR, POP, SYMMETRIC_POR, SYMMETRIC_POP,
+				 W_POR, W_POP, W_SYMMETRIC_POR, W_SYMMETRIC_POP,
+    };
+  }
+
   public static AgreementType getHintType(AgreementType type) {
     switch (type) {
     case POR: return AgreementType.POR_HINT;

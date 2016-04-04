@@ -41,7 +41,7 @@ package org.lockss.ws.entities;
  * are used to decide if a repair request should be honored, and hints are used
  * to try to find willing repairers likely to honor repair requests.
  */
-// The enumerated values in this class need to be match those in class
+// The enumerated values in this class need to match those in class
 // {@link org.lockss.protocol.AgreementType}.
 public enum AgreementTypeWsResult {
   /**
@@ -80,5 +80,33 @@ public enum AgreementTypeWsResult {
    * The hint given a poller by a voter after a symmetric POP poll. Recorded by
    * poller.
    */
-  SYMMETRIC_POP_HINT
+  SYMMETRIC_POP_HINT,
+
+  // Weighted results for each of the above poll types
+
+  /** Weighted result of poll with all content hashed and tallied. Recorded
+   * by poller. */
+  W_POR,
+  /** Weighted result of poll with a selection of the content hashed and
+   * tallied. Recorded by poller. */
+  W_POP,
+  /** Weighted result of POR poll where a voter has called for the poller's
+   * hashes. Recorded by voter. */
+  W_SYMMETRIC_POR,
+  /** Weighted result of POP poll where a voter has called for the poller's
+   * hashes. Recorded by voter. */
+  W_SYMMETRIC_POP,
+  /** The weighted hint given a voter by the poller after a POR
+   * poll. Recorded by voter. */
+  W_POR_HINT,
+  /** The weighted hint given a voter by the poller after a POP
+   * poll. Recorded by voter. */
+  W_POP_HINT,
+  /** The weighted hint given a poller by a voter after a symmetric POR
+   * poll. Recorded by poller. */
+  W_SYMMETRIC_POR_HINT,
+  /** The weighted hint given a poller by a voter after a symmetric POP
+   * poll. Recorded by poller. */
+  W_SYMMETRIC_POP_HINT;
+
 }
