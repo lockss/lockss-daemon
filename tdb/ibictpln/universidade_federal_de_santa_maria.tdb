@@ -7,8 +7,6 @@
   plugin = org.lockss.plugin.ojs2.OJS2Plugin
   implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
-    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
-
   {
 
     title <
@@ -17,6 +15,7 @@
       eissn = 2358-1980
     >
 
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
     param[journal_id] = balduinia
 
     au < released ; 2005 ; 1 ; Balduinia Volume 2005 ; 2005 ; >
@@ -42,6 +41,7 @@
       eissn = 1984-6444
     >
 
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
     param[journal_id] = reveducacao
 
     au < released ; 2000 ; 1 ; Educação Volume 1 ; 2000 ; >
@@ -72,6 +72,7 @@
       eissn = 2179-2194
     >
 
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
     param[journal_id] = fragmentum
 
     au < released ; 2001 ; 1 ; Fragmentum Volume 1 ; 2001 ; >
@@ -100,6 +101,7 @@
       eissn = 2179-7692 
     >
 
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
     param[journal_id] = reufsm
 
     au < released ; 2011 ; 1 ; Revista de Enfermagem da UFSM Volume 1 ; 2011 ; >
@@ -117,6 +119,7 @@
       issn = 1981-3694
     >
 
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
     param[journal_id] = revistadireito
 
     au < released ; 2006 ; 1 ; Revista Eletrônica do Curso de Direito da UFSM Volume 1 ; 2006 ; >
@@ -139,6 +142,7 @@
       eissn = 2236-1308 
     >
 
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
     param[journal_id] = remoa
 
     au < released ; 2010 ; 1 ; Revista Monografias Ambientais Volume 1 ; 2010 ; >
@@ -157,6 +161,7 @@
       issn = 2357-7975
     >
 
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
     param[journal_id] = interacao
 
     au < released ; 2010 ; 1 ; Revista InterAção Volume 1 ; 2010 ; >
@@ -176,6 +181,7 @@
       eissn = 2318-1338 
     >
 
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
     param[journal_id] = regae
 
     au < released ; 2013 ; 1 ; Revista de Gestão e Avaliação Educacional Volume 1 ; 2013 ; >
@@ -192,6 +198,7 @@
       eissn = 2316-3054 
     >
 
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
     param[journal_id] = REDESG
 
     au < released ; 2012 ; 1 ; Revista Direitos Emergentes na Sociedade Global Volume 1 ; 2012 ; >
@@ -210,6 +217,7 @@
       eissn = 1980-5098 
     >
 
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
     param[journal_id] = cienciaflorestal
 
     au < released ; 1991 ; 1 ; Ciência Florestal Volume 1 ; 1991 ; >
@@ -248,6 +256,7 @@
       eissn = 2236-1170 
     >
 
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
     param[journal_id] = reget
 
     au < released ; 2010 ; 1 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 1 ; 2010 ; >
@@ -267,6 +276,7 @@
       issn = 1984-686X
     >
 
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
     param[journal_id] = educacaoespecial
 
     au < released ; 2000 ; 13 ; Revista Educação Especial Volume 13 ; 2000 ; >
@@ -296,6 +306,7 @@
       eissn = 1983-7348 
     >
 
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
     param[journal_id] = revislav
 
     au < exists ; 2008 ; 0001 ; Revista Digital do LAV Volume 1 ; 0001 ; >
@@ -317,6 +328,7 @@
       eissn = 2316-980X
     >
 
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
     param[journal_id] = enflo
 
     au < released ; 2013 ; 1 ; Revista Ecologia e Nutrição Florestal - ENFLO Volume 1 ; 2013 ; >
@@ -334,6 +346,7 @@
       eissn = 2236-4994 
     >
 
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
     param[journal_id] = geografia
 
     au < released ; 2011 ; 15 ; Geografia Ensino & Pesquisa Volume 15 ; 2011 ; >
@@ -353,6 +366,7 @@
       >
 
       comment[publisher] = Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
       param[journal_id] = animus
 
       au < released ; 2002 ; 1 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2002 ; 2002 ; >
@@ -382,6 +396,7 @@
       >
 
       comment[publisher] = Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
       param[journal_id] = ccomunicacao
 
       au < released ; 1996 ; 1 ; Cadernos de Comunicação Volume 1996 ; 1996 ; >
@@ -416,6 +431,7 @@
       >
 
       comment[publisher] = Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
       param[journal_id] = rgc
 
       au < released ; 2014 ; 1 ; Revista de Gestão e Organizações Cooperativasa Volume 2014 ; 2014 ; >
@@ -433,6 +449,7 @@
       >
 
       comment[publisher] = Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
       param[journal_id] = cienciaenatura
 
       au < released ; 2004 ; 1 ; Ciência e Natura Volume 2004 ; 2004 ; >
@@ -459,6 +476,7 @@
       >
 
       comment[publisher] = Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
       param[journal_id] = eed
 
       au < released ; 1999 ; 1 ; ECONOMIA E DESENVOLVIMENTO Volume 1999 ; 1999 ; >
@@ -490,6 +508,7 @@
       >
 
       comment[publisher] = Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
       param[journal_id] = LA
 
       au < released ; 2013 ; 1 ; Literatura e Autoritarismo Volume 2013 ; 2013 ; >
@@ -508,6 +527,7 @@
       >
 
       comment[publisher] = Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
       param[journal_id] = extensaorural
 
       au < released ; 1993 ; 1 ; Extensão Rural Volume 1993 ; 1993 ; >
@@ -546,6 +566,7 @@
       >
 
       comment[publisher] = Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
       param[journal_id] = letras
 
       au < released ; 1991 ; 1 ; Letras Volume 1991 ; 1991 ; >
@@ -585,6 +606,7 @@
       >
 
       comment[publisher] = Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
       param[journal_id] = sociaisehumanas
 
       au < released ; 1998 ; 1 ; Revista Sociais e Humanas Volume 1998 ; 1998 ; >
@@ -617,6 +639,7 @@
       >
 
       comment[publisher] = Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
       param[journal_id] = reaufsm
 
       au < released ; 2008 ; 1 ; Revista de Administração da UFSM Volume 2008 ; 2008 ; >
@@ -639,6 +662,7 @@
       >
 
       comment[publisher] = Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
       param[journal_id] = contabilidade
 
       au < released ; 2004 ; 1 ; Revista Eletrônica de Contabilidade Volume 2004 ; 2004 ; >
@@ -663,6 +687,7 @@
       >
 
       comment[publisher] = Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
       param[journal_id] = nope
 
       au < released ; 2011 ; 1 ; Notas de Pesquisa Volume 2011 ; 2011 ; >
@@ -678,6 +703,7 @@
       >
 
       comment[publisher] = Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
       param[journal_id] = kinesis
 
       au < released ; 1984 ; 1 ; Revista Kinesis Volume 1984 ; 1984 ; >
@@ -725,6 +751,7 @@
       >
 
       comment[publisher] = Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
       param[journal_id] = revistasaude
 
       au < released ; 2004 ; 1 ; Revista Saúde Volume 2004 ; 2004 ; >
@@ -752,6 +779,7 @@
       >
 
       comment[publisher] = Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
       param[journal_id] = seculoxxi
 
       au < released ; 2011 ; 1 ; Século XXI: Revista de Ciências Sociais Volume 2011 ; 2011 ; >

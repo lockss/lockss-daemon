@@ -5,7 +5,6 @@
   >
 
   plugin = org.lockss.plugin.ojs2.OJS2Plugin
-  param[base_url] = http://periodicos.ufpb.br/ojs2/
   implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
   {
@@ -15,6 +14,7 @@
       issn = 0102-4264
     >
 
+    param[base_url] = http://periodicos.ufpb.br/ojs2/
     param[journal_id] = actas
 
     au < released ; 1977 ; 1 ; Acta Semiótica et Lingvistica Volume 1; 1977 ; >
@@ -46,6 +46,7 @@
       issn = 2318-6186
     >
 
+    param[base_url] = http://periodicos.ufpb.br/ojs2/
     param[journal_id] = archeion
 
     au < released ; 2013 ; 1 ; Archeion Online Volume 2013 ; 2013 ; >
@@ -63,6 +64,7 @@
       eissn = 2318-9428
     >
 
+    param[base_url] = http://periodicos.ufpb.br/ojs2/
     param[journal_id] = arf
 
     au < released ; 2014 ; 1 ; Aufklärung: Revista de Filosofia Volume 1; 2014 ; >
@@ -78,6 +80,7 @@
       eissn = 1809-4775
     >
 
+    param[base_url] = http://periodicos.ufpb.br/ojs2/
     param[journal_id] = biblio
 
     au < released ; 2005 ; 1 ; Biblionline Volume 1 ; 2005 ; >
@@ -102,6 +105,7 @@
       issn = 2316-2937
     >
 
+    param[base_url] = http://periodicos.ufpb.br/ojs2/
     param[journal_id] = ci
 
     au < released ; 2010 ; 6 ; Cadernos Imbondeiro Volume 2010 ; 2010 ; >
@@ -118,6 +122,7 @@
       issn = 2238-9059
     >
 
+    param[base_url] = http://periodicos.ufpb.br/ojs2/
     param[journal_id] = ct
 
     au < released ; 2011 ; 1 ; Cultura e Tradução Volume 2011 ; 2011 ; >
@@ -133,6 +138,7 @@
       issn = 2237-7522
     >
 
+    param[base_url] = http://periodicos.ufpb.br/ojs2/
     param[journal_id] = logepa
 
     au < released ; 2002 ; 1 ; CADERNOS DO LOGEPA Volume 2002 ; 2002 ; >
@@ -154,6 +160,7 @@
       eissn = 2358-5021
     >
 
+    param[base_url] = http://periodicos.ufpb.br/ojs2/
     param[journal_id] = co
 
     au < released ; 2014 ; 1 ; Cultura Oriental Volume 1 ; 2014 ; >
@@ -169,6 +176,7 @@
       issn = 1983-5930
     >
 
+    param[base_url] = http://periodicos.ufpb.br/ojs2/
     param[journal_id] = cm
 
     au < released ; 2008 ; 1 ; Culturas Midiáticas Volume 2008 ; 2008 ; >
@@ -191,6 +199,7 @@
       eissn = 1809-4783
     >
 
+    param[base_url] = http://periodicos.ufpb.br/ojs2/
     param[journal_id] = ies
 
     au < released ; 1991 ; 1 ; Informação & Sociedade: Estudos Volume 1 ; 1991 ; >
@@ -229,6 +238,7 @@
       eissn = 2236-417X
     >
 
+    param[base_url] = http://periodicos.ufpb.br/ojs2/
     param[journal_id] = pgc
 
     au < released ; 2011 ; 1 ; Perspectivas em Gestão & Conhecimento Volume 1 ; 2011 ; >
@@ -247,6 +257,7 @@
       eissn = 2238-104X
     >
 
+    param[base_url] = http://periodicos.ufpb.br/ojs2/
     param[journal_id] = tpa
 
     au < released ; 2011 ; 1 ; Teoria e Prática em Administração Volume 1 ; 2011 ; >
