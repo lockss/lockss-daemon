@@ -69,7 +69,7 @@ public class KeyStoreUtil {
   public static final String PROP_CERT_ALIAS = "CertAlias";
   /** Default RSA */
   public static final String PROP_KEY_ALGORITHM = "KeyAlgorithm";
-  /** Default MD5WithRSA */
+  /** Default SHA256WithRSA */
   public static final String PROP_SIG_ALGORITHM = "SigAlgorithm";
   /** X500Name.  Default 5 years */
   public static final String PROP_X500_NAME = "X500Name";
@@ -85,7 +85,7 @@ public class KeyStoreUtil {
   public static final String DEFAULT_KEY_ALIAS = "MyKey";
   public static final String DEFAULT_CERT_ALIAS = "MyCert";
   public static final String DEFAULT_KEY_ALGORITHM = "RSA";
-  public static final String DEFAULT_SIG_ALGORITHM = "MD5WithRSA";
+  public static final String DEFAULT_SIG_ALGORITHM = "SHA256WithRSA";
   public static final String DEFAULT_X500_NAME = "CN=LOCKSS box";
   public static final int DEFAULT_KEY_BITS = 1024;
   public static final long DEFAULT_EXPIRE_IN = 5 * Constants.YEAR / 1000;
@@ -462,8 +462,8 @@ public class KeyStoreUtil {
       log.debug("Key store file " + keyStoreFileName + " exists");
       throw new IOException("Key store file " + keyStoreFileName + " exists");
     }
-    String keyAlgName = "RSA";
-    String sigAlgName = "MD5WithRSA";
+    String keyAlgName = DEFAULT_KEY_ALGORITHM;
+    String sigAlgName = DEFAULT_SIG_ALGORITHM;
     log.debug("About to create a CertAndKeyGen: " + keyAlgName + " " + sigAlgName);
     CertAndKeyGen keypair;
     try {
