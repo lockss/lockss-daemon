@@ -290,9 +290,9 @@
 
       param[journal_id] = extr
 
-      au < manifest ; exists ; 2008 ; Extrapolation Volume 49 ; 49 ; >
-      au < manifest ; exists ; 2009 ; Extrapolation Volume 50 ; 50 ; >
-      au < manifest ; exists ; 2010 ; Extrapolation Volume 51 ; 51 ; >
+      au < testing ; exists ; 2008 ; Extrapolation Volume 49 ; 49 ; >
+      au < testing ; exists ; 2009 ; Extrapolation Volume 50 ; 50 ; >
+      au < testing ; exists ; 2010 ; Extrapolation Volume 51 ; 51 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Extrapolation Volume 52 ; 52 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Extrapolation Volume 53 ; 53 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Extrapolation Volume 54 ; 54 ; >
@@ -473,8 +473,8 @@
 
     param[journal_id] = mb
 
-    au < manifest ; exists ; 2008 ; Modern Believing Volume 49 ; 49 ; >
-    au < manifest ; exists ; 2009 ; Modern Believing Volume 50 ; 50 ; >
+    au < testing ; exists ; 2008 ; Modern Believing Volume 49 ; 49 ; >
+    au < testing ; exists ; 2009 ; Modern Believing Volume 50 ; 50 ; >
     au < crawling ; exists ; 2010 ; Modern Believing Volume 51 ; 51 ; >
     au < finished ; crawling ; 2011 ; Modern Believing Volume 52 ; 52 ; >
     au < crawling ; exists ; 2012 ; Modern Believing Volume 53 ; 53 ; >
@@ -586,12 +586,12 @@
 
     param[journal_id] = quaker
 
-    au < manifest ; exists ; 2010-2011 ; Quaker Studies Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2011-2012 ; Quaker Studies Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2012-2013 ; Quaker Studies Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2013-2014 ; Quaker Studies Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2014-2015 ; Quaker Studies Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2015-2016 ; Quaker Studies Volume 20 ; 20 ; >
+    au < testing ; exists ; 2010-2011 ; Quaker Studies Volume 15 ; 15 ; >
+    au < testing ; exists ; 2011-2012 ; Quaker Studies Volume 16 ; 16 ; >
+    au < testing ; exists ; 2012-2013 ; Quaker Studies Volume 17 ; 17 ; >
+    au < testing ; exists ; 2013-2014 ; Quaker Studies Volume 18 ; 18 ; >
+    au < testing ; exists ; 2014-2015 ; Quaker Studies Volume 19 ; 19 ; >
+    au < testing ; exists ; 2015-2016 ; Quaker Studies Volume 20 ; 20 ; >
 
   }
 
