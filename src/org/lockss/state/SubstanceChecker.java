@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -105,7 +105,7 @@ public class SubstanceChecker {
    *
    * <dl><lh>Set to one of::</lh>
    *
-   * <dt>First</dt><dd>The first URL (the only directly linked to) is
+   * <dt>First</dt><dd>The first URL (the one directly linked to) is
    * tested.</dd>
    *
    * <dt>Last</dt><dd>The last URL (the one that actually retrieved a file)
@@ -169,6 +169,10 @@ public class SubstanceChecker {
 		     DEFAULT_DETECT_NO_SUBSTANCE_REDIRECT_URL);
   }
 
+  public String getMode() {
+    return detectNoSubstanceRedirectUrl.toString();
+  }
+
   /** If called, puts SubstanceChecker into counting mode, where it counts
    * up to the specified minimum then stops checking */
   public void setSubstanceMin(int min) {
@@ -215,46 +219,30 @@ public class SubstanceChecker {
     if (isStateFullyDetermined()) {
       return;
     }
+    for (String u : getUrlsToCheck(cu)) {
+      checkSubstanceUrl(u);
+    }
+  }
+
+  /** Return list of URLs to check for substance depending on the redirect
+   * mode */
+  public List<String> getUrlsToCheck(CachedUrl cu) {
+    List<String> res = new ArrayList<String>(3);
     Properties props;
     switch (detectNoSubstanceRedirectUrl) {
     case First:
-      checkSubstanceUrl(cu.getUrl());
-      break;
+      return ListUtil.list(cu.getUrl());
     case Last:
       props = cu.getProperties();
       String url = props.getProperty(CachedUrl.PROPERTY_CONTENT_URL);
       if (url == null) {
 	url = cu.getUrl();
       }
-      checkSubstanceUrl(url);
-      break;
+      return ListUtil.list(url);
     case All:
-      props = cu.getProperties();
-      String redirUrl = props.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO);
-      if (redirUrl == null) {
-	checkSubstanceUrl(cu.getUrl());
-      } else {
-	List<String> urls = new ArrayList<String>();
-	do {
-	  urls.add(redirUrl);
-	  CachedUrl redirCu = au.makeCachedUrl(redirUrl);
-	  if (redirCu == null) {
-	    break;
-	  }
-	  try {
-	    Properties redirProps = redirCu.getProperties();
-	    redirUrl = redirProps.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO);
-	  } finally {
-	    AuUtil.safeRelease(redirCu);
-	  }
-	} while (redirUrl != null);
-
-	for (String u : urls) {
-	  checkSubstanceUrl(u);
-	}
-      }
-      break;
+      return AuUtil.getRedirectChain(cu);
     }
+    return res;
   }
 
   /** If substance not detected yet, check whether this URL is a substance

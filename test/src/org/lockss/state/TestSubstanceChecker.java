@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,6 +43,8 @@ import org.lockss.crawler.*;
 import org.lockss.plugin.*;
 
 import static org.lockss.state.SubstanceChecker.State;
+import static org.lockss.state.SubstanceChecker.NoSubstanceRedirectUrl;
+import static org.lockss.state.SubstanceChecker.NoSubstanceRedirectUrl.*;
 
 public class TestSubstanceChecker extends LockssTestCase {
 
@@ -213,7 +215,7 @@ public class TestSubstanceChecker extends LockssTestCase {
     assertEquals(State.No, checker.hasSubstance());
     check("http://four/");
     assertEquals(State.No, checker.hasSubstance());
-    check("http://two/", "http://reddd/");
+    check("http://two/", "http://reddd/", Last);
     assertEquals(State.Yes, checker.hasSubstance());
   }
 
@@ -224,9 +226,9 @@ public class TestSubstanceChecker extends LockssTestCase {
     assertEquals(State.No, checker.hasSubstance());
     check("http://four/");
     assertEquals(State.No, checker.hasSubstance());
-    check("http://two/", "http://reddd/");
+    check("http://two/", "http://reddd/", First);
     assertEquals(State.No, checker.hasSubstance());
-    check("http://reddd/", "http://three/");
+    check("http://reddd/", "http://three/", First);
     assertEquals(State.Yes, checker.hasSubstance());
   }
 
@@ -237,9 +239,20 @@ public class TestSubstanceChecker extends LockssTestCase {
     assertEquals(State.No, checker.hasSubstance());
     check("http://four/");
     assertEquals(State.No, checker.hasSubstance());
-    check("http://two/", "http://reddd/");
+    check("http://two/", "http://xxx/", All);
     assertEquals(State.No, checker.hasSubstance());
-    check(ListUtil.list("http://frob/", "http://reddd/", "http://three/"));
+    check(ListUtil.list("http://frob/", "http://reddd/", "http://three/"), All);
+    assertEquals(State.Yes, checker.hasSubstance());
+  }
+
+  public void testRedirSubstAll2() throws Exception {
+    ConfigurationUtil.setFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_REDIRECT_URL, "All");
+    mau.setSubstanceUrlPatterns(compileRegexps(ListUtil.list("one", "redd" )));
+    checker = new SubstanceChecker(mau);
+    assertEquals(State.No, checker.hasSubstance());
+    check("http://four/");
+    assertEquals(State.No, checker.hasSubstance());
+    check("http://one/", "http://xxx/", All);
     assertEquals(State.Yes, checker.hasSubstance());
   }
 
@@ -249,9 +262,9 @@ public class TestSubstanceChecker extends LockssTestCase {
     assertEquals(State.No, checker.hasSubstance());
     check("http://one/");
     assertEquals(State.No, checker.hasSubstance());
-    check("http://two/", "http://one/");
+    check("http://two/", "http://one/", Last);
     assertEquals(State.No, checker.hasSubstance());
-    check("http://two/", "http://six/");
+    check("http://two/", "http://six/", Last);
     assertEquals(State.Yes, checker.hasSubstance());
   }
 
@@ -262,9 +275,9 @@ public class TestSubstanceChecker extends LockssTestCase {
     assertEquals(State.No, checker.hasSubstance());
     check("http://one/");
     assertEquals(State.No, checker.hasSubstance());
-    check("http://redd/", "http://two/");
+    check("http://redd/", "http://two/", First);
     assertEquals(State.No, checker.hasSubstance());
-    check("http://three/", "http://one/");
+    check("http://three/", "http://one/", First);
     assertEquals(State.Yes, checker.hasSubstance());
   }
 
@@ -277,54 +290,78 @@ public class TestSubstanceChecker extends LockssTestCase {
     assertEquals(State.No, checker.hasSubstance());
     check("http://one/");
     assertEquals(State.No, checker.hasSubstance());
-    check("http://redd/", "http://two/");
+    check("http://redd/", "http://green/", All);
     assertEquals(State.No, checker.hasSubstance());
-    check("http://one/", "http://redd/");
+    check("http://one/", "http://redddd/", All);
     assertEquals(State.No, checker.hasSubstance());
-    check(ListUtil.list("http://one/", "http://redd/", "http://green/"));
+    check(ListUtil.list("http://one/", "http://redd/", "http://green/"), All);
     assertEquals(State.No, checker.hasSubstance());
-    check(ListUtil.list("http://one/", "http://splortch/", "http://green/"));
+    check(ListUtil.list("http://twu/", "http://splortch/", "http://green/"),
+	  All);
     assertEquals(State.Yes, checker.hasSubstance());
   }
 
   void check(String url) {
-    checker.checkSubstance(new MockCachedUrl(url));
-  }
-
-  void check(String url, String redirTo) {
-    CIProperties props = new CIProperties();
-    props.put(CachedUrl.PROPERTY_CONTENT_URL, redirTo);
     MockCachedUrl mcu = new MockCachedUrl(url);
-    mcu.setProperties(props);
+    assertEquals(ListUtil.list(url), checker.getUrlsToCheck(mcu));
     checker.checkSubstance(mcu);
   }
 
-  void check(List<String> urls) {
-    MockCachedUrl first = mau.addUrl(urls.get(0));
+  void check(String url, String redirTo, NoSubstanceRedirectUrl mode) {
+    MockCachedUrl first = mau.addUrl(url);
     CIProperties props = new CIProperties();
-    props.put(CachedUrl.PROPERTY_CONTENT_URL, urls.get(urls.size() - 1));
-    List<MockCachedUrl> mcus = new ArrayList<MockCachedUrl>();
-    mcus.add(first);
-    MockCachedUrl mcu = first;
+    props.put(CachedUrl.PROPERTY_REDIRECTED_TO, redirTo);
+    props.put(CachedUrl.PROPERTY_CONTENT_URL, redirTo);
+    first.setProperties(props);
+    switch (mode) {
+    case First:
+      assertEquals(ListUtil.list(url), checker.getUrlsToCheck(first));
+      break;
+    case Last:
+      assertEquals(ListUtil.list(redirTo), checker.getUrlsToCheck(first));
+      break;
+    case All:
+      assertEquals(ListUtil.list(url, redirTo), checker.getUrlsToCheck(first));
+      break;
+    }
+    checker.checkSubstance(first);
+  }
 
-    for (String url : urls) {
-      if (props == null) {
-	props = new CIProperties();
-      }
+  void check(List<String> urls, NoSubstanceRedirectUrl mode) {
+    List<String> remUrls = new ArrayList(urls);
+    String first = remUrls.remove(0);
+    String last = urls.get(urls.size() - 1);
+    MockCachedUrl firstCu = mau.addUrl(first);
+    List<MockCachedUrl> mcus = new ArrayList<MockCachedUrl>();
+    mcus.add(firstCu);
+    MockCachedUrl mcu = firstCu;
+
+    for (String url : remUrls) {
+      CIProperties props = new CIProperties();
       props.put(CachedUrl.PROPERTY_REDIRECTED_TO, url);
+      props.put(CachedUrl.PROPERTY_CONTENT_URL, last);
       mcu.setProperties(props);
-      props = null;
+      props = new CIProperties();
       mcu = mau.addUrl(url);
       mcus.add(mcu);
     }
-    checker.checkSubstance(first);
+    switch (mode) {
+    case First:
+      assertEquals(ListUtil.list(first), checker.getUrlsToCheck(firstCu));
+      break;
+    case Last:
+      assertEquals(ListUtil.list(last), checker.getUrlsToCheck(firstCu));
+      break;
+    case All:
+      assertEquals(urls, checker.getUrlsToCheck(firstCu));
+      break;
+    }
+    checker.checkSubstance(firstCu);
     for (MockCachedUrl amcu : mcus) {
-      log.critical("amcu: " + amcu);
-      if (amcu != first) {
+      if (amcu != firstCu) {
 	assertFalse("CU left open: " + amcu, amcu.isOpen());
       };
     }      
-
   }
 
   List<Pattern> compileRegexps(List<String> regexps)
