@@ -623,6 +623,58 @@ public class TestAuUtil extends LockssTestCase {
     assertEquals(url, cu2.getUrl());
   }
 
+  public void testGetRedirectChainOne() {
+    String url = "http://foo/";
+    MockArchivalUnit mau = new MockArchivalUnit();
+    MockCachedUrl first = mau.addUrl(url);
+    assertEquals(ListUtil.list(url), AuUtil.getRedirectChain(first));
+  }
+
+  public void testGetRedirectChainTwo() {
+    String url1 = "http://foo/";
+    String url2 = "http://bar/";
+    MockArchivalUnit mau = new MockArchivalUnit();
+    MockCachedUrl first = mau.addUrl(url1);
+    CIProperties props = new CIProperties();
+    props.put(CachedUrl.PROPERTY_REDIRECTED_TO, url2);
+    props.put(CachedUrl.PROPERTY_CONTENT_URL, url2);
+    first.setProperties(props);
+    assertEquals(ListUtil.list(url1, url2), AuUtil.getRedirectChain(first));
+    MockCachedUrl second = mau.addUrl(url2);
+    assertEquals(ListUtil.list(url1, url2), AuUtil.getRedirectChain(first));
+  }
+
+  public void testGetRedirectChainN() {
+    String url1 = "http://foo1/";
+    String url2 = "http://foo2/";
+    String url3 = "http://foo3/";
+    List<String> urls = ListUtil.list(url1, url2, url3);
+    MockArchivalUnit mau = new MockArchivalUnit();
+    setupRedirects(mau, urls);
+    assertEquals(urls, AuUtil.getRedirectChain(mau.makeCachedUrl(url1)));
+  }
+
+  void setupRedirects(MockArchivalUnit mau, List<String> urls) {
+    List<String> remUrls = new ArrayList(urls);
+    String first = remUrls.remove(0);
+    String last = urls.get(urls.size() - 1);
+    MockCachedUrl firstCu = mau.addUrl(first);
+    List<MockCachedUrl> mcus = new ArrayList<MockCachedUrl>();
+    mcus.add(firstCu);
+    MockCachedUrl mcu = firstCu;
+
+    for (String url : remUrls) {
+      CIProperties props = new CIProperties();
+      props.put(CachedUrl.PROPERTY_REDIRECTED_TO, url);
+      props.put(CachedUrl.PROPERTY_CONTENT_URL, last);
+      mcu.setProperties(props);
+      props = new CIProperties();
+      mcu = mau.addUrl(url);
+      mcus.add(mcu);
+    }
+  }
+
+
   public void assertGetCharsetOrDefault(String expCharset, Properties props) {
     CIProperties cip  = null;
     if (props != null) {

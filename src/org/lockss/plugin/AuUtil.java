@@ -697,6 +697,31 @@ public class AuUtil {
     return null;
   }
 
+  public static List<String> getRedirectChain(CachedUrl cu) {
+    ArchivalUnit au = cu.getArchivalUnit();
+    List<String> res = new ArrayList<String>(3);
+    res.add(cu.getUrl());
+    Properties props = cu.getProperties();
+    String redirUrl = props.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO);
+    if (redirUrl != null) {
+      do {
+	res.add(redirUrl);
+	CachedUrl redirCu = au.makeCachedUrl(redirUrl);
+	if (redirCu == null) {
+	  break;
+	}
+	try {
+	  Properties redirProps = redirCu.getProperties();
+	  redirUrl = redirProps.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO);
+	} finally {
+	  AuUtil.safeRelease(redirCu);
+	}
+      } while (redirUrl != null);
+    }
+    return res;
+  }
+
+
   /** Return the charset specified in the UC's response headers, or the
    * default charset.  Never returns null. */
   public static String getCharsetOrDefault(CIProperties props) {
