@@ -3948,6 +3948,7 @@
     >
 
     param[journal_id] = yemf19
+    #continued_by = 2056-3035
 
     au < manifest ; 1984 ; Seventeenth-Century French Studies Volume 6 ; 6 >
     au < manifest ; 1985 ; Seventeenth-Century French Studies Volume 7 ; 7 >
@@ -3993,6 +3994,7 @@
     >
 
     param[journal_id] = yemf20
+    #continues = 0265-1068
 
     au < manifest ; 2015 ; Early Modern French Studies Volume 37 ; 37 >
     au < expected ; 2016 ; Early Modern French Studies Volume 38 ; 38 >
