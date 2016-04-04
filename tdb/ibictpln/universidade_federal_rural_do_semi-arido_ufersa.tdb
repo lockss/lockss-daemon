@@ -13,7 +13,7 @@
         issn = 1981-5484
       >
 
-      comment[publisher] = Universidade Federal Rural do Semi-Árido-UFERSA-
+      # Publisher: Universidade Federal Rural do Semi-Árido-UFERSA-
       param[base_url] = http://periodicos.ufersa.edu.br/revistas/
       param[journal_id] = acta
 
@@ -34,7 +34,7 @@
         issn = 2318-1265
       >
 
-      comment[publisher] = Universidade Federal Rural do Semi-Árido-UFERSA-
+      # Publisher: Universidade Federal Rural do Semi-Árido-UFERSA-
       param[base_url] = http://periodicos.ufersa.edu.br/revistas/
       param[journal_id] = jabb
 
@@ -53,7 +53,7 @@
         eissn = 1983-2125
       >
 
-      comment[publisher] = Universidade Federal Rural do Semi-Árido-UFERSA-
+      # Publisher: Universidade Federal Rural do Semi-Árido-UFERSA-
       param[base_url] = http://periodicos.ufersa.edu.br/revistas/
       param[journal_id] = sistema
 

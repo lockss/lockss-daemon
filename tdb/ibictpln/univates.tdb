@@ -13,7 +13,7 @@
         issn = 1983-0882
       >
 
-      comment[publisher] = UNIVATES
+      # Publisher: UNIVATES
       param[base_url] = http://www.univates.br/revistas/
       param[journal_id] = cadped
 
@@ -32,7 +32,7 @@
         issn = 2176-3070
       >
 
-      comment[publisher] = UNIVATES
+      # Publisher: UNIVATES
       param[base_url] = http://www.univates.br/revistas/
       param[journal_id] = destaques
 
@@ -52,7 +52,7 @@
         issn = 1983-036X
       >
 
-      comment[publisher] = UNIVATES
+      # Publisher: UNIVATES
       param[base_url] = http://www.univates.br/revistas/
       param[journal_id] = estudoedebate
 
@@ -71,7 +71,7 @@
         issn = 1983-0378
       >
 
-      comment[publisher] = UNIVATES
+      # Publisher: UNIVATES
       param[base_url] = http://www.univates.br/revistas/
       param[journal_id] = signos
 

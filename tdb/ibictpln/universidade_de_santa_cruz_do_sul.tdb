@@ -14,7 +14,7 @@
         eissn = 1982-2022
       >
 
-      comment[publisher] = Universidade de Santa Cruz do Sul
+      # Publisher: Universidade de Santa Cruz do Sul
       param[base_url] = http://online.unisc.br/seer/
       param[journal_id] = barbaroi
 
@@ -38,7 +38,7 @@
         eissn = 1982-6729
       >
 
-      comment[publisher] = Universidade de Santa Cruz do Sul
+      # Publisher: Universidade de Santa Cruz do Sul
       param[base_url] = http://online.unisc.br/seer/
       param[journal_id] = cepe
 

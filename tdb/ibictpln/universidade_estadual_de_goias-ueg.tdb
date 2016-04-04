@@ -13,7 +13,7 @@
         issn = 2317-4641
       >
 
-      comment[publisher] = Universidade Estadual de Goiás-UEG
+      # Publisher: Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = anais_congresso
 
@@ -28,7 +28,7 @@
         issn = 2317-1421
       >
 
-      comment[publisher] = Universidade Estadual de Goiás-UEG
+      # Publisher: Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = anais_itaberai
 
@@ -43,7 +43,7 @@
         issn = 2238-3735
       >
 
-      comment[publisher] = Universidade Estadual de Goiás-UEG
+      # Publisher: Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = selt
 
@@ -58,7 +58,7 @@
         issn = 2317-4951
       >
 
-      comment[publisher] = Universidade Estadual de Goiás-UEG
+      # Publisher: Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = simposiocieaa
 
@@ -73,7 +73,7 @@
         issn = 2238-1015
       >
 
-      comment[publisher] = Universidade Estadual de Goiás-UEG
+      # Publisher: Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = sineep
 
@@ -88,7 +88,7 @@
         issn = 2316-8390
       >
 
-      comment[publisher] = Universidade Estadual de Goiás-UEG
+      # Publisher: Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = srhjussara
 
@@ -103,7 +103,7 @@
         issn = 2316-8307
       >
 
-      comment[publisher] = Universidade Estadual de Goiás-UEG
+      # Publisher: Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = ppub
 
@@ -118,7 +118,7 @@
         issn = 2316-6428
       >
 
-      comment[publisher] = Universidade Estadual de Goiás-UEG
+      # Publisher: Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = historiaporangatu
 
@@ -133,7 +133,7 @@
         issn = 2237-2571
       >
 
-      comment[publisher] = Universidade Estadual de Goiás-UEG
+      # Publisher: Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = congresso_acac
 
@@ -148,7 +148,7 @@
         issn = 2237-2075
       >
 
-      comment[publisher] = Universidade Estadual de Goiás-UEG
+      # Publisher: Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = buildingtheway
 
@@ -165,7 +165,7 @@
         issn = 2316-4360
       >
 
-      comment[publisher] = Universidade Estadual de Goiás-UEG
+      # Publisher: Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = elisee
 
@@ -181,7 +181,7 @@
         issn = 1984-6576
       >
 
-      comment[publisher] = Universidade Estadual de Goiás-UEG
+      # Publisher: Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = revelli
 
@@ -196,7 +196,7 @@
         issn = 2179-5959
       >
 
-      comment[publisher] = Universidade Estadual de Goiás-UEG
+      # Publisher: Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = agrotecnologia
 
@@ -214,7 +214,7 @@
         issn = 2236-1197
       >
 
-      comment[publisher] = Universidade Estadual de Goiás-UEG
+      # Publisher: Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = revista_administracao
 
@@ -232,7 +232,7 @@
         issn = 2238-6629
       >
 
-      comment[publisher] = Universidade Estadual de Goiás-UEG
+      # Publisher: Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = biociencia
 
@@ -248,10 +248,10 @@
         issn = 1809-970X
       >
 
-      comment[publisher] = Universidade Estadual de Goiás-UEG
+      # Publisher: Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = economia
-      comment[notReady] = no permission from publisher
+      # notReady: no permission from publisher
 
       au < exists ; 2005 ; 1 ; Revista de Economia da UEG Volume 1 ; 2005 ; >
       au < exists ; 2006 ; 2 ; Revista de Economia da UEG Volume 2 ; 2006 ; >
@@ -273,7 +273,7 @@
         issn = 2316-4379
       >
 
-      comment[publisher] = Universidade Estadual de Goiás-UEG
+      # Publisher: Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = revistahistoria
 
@@ -289,7 +289,7 @@
         issn = 2179-6386
       >
 
-      comment[publisher] = Universidade Estadual de Goiás-UEG
+      # Publisher: Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = revista_geth
 
@@ -307,7 +307,7 @@
         issn = 2238-3751
       >
 
-      comment[publisher] = Universidade Estadual de Goiás-UEG
+      # Publisher: Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = revistapluraisvirtual
 
@@ -324,7 +324,7 @@
         issn = 2317-0360
       >
 
-      comment[publisher] = Universidade Estadual de Goiás-UEG
+      # Publisher: Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = territorial
 
@@ -340,7 +340,7 @@
         issn = 2317-7357
       >
 
-      comment[publisher] = Universidade Estadual de Goiás-UEG
+      # Publisher: Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = praxia
 
@@ -356,7 +356,7 @@
         issn = 2175-2605
       >
 
-      comment[publisher] = Universidade Estadual de Goiás-UEG
+      # Publisher: Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = spp_jic_unucseh
 
@@ -372,7 +372,7 @@
         issn = 2317-5516
       >
 
-      comment[publisher] = Universidade Estadual de Goiás-UEG
+      # Publisher: Universidade Estadual de Goiás-UEG
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = temporisacao
 

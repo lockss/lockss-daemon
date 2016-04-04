@@ -14,7 +14,7 @@
         eissn = 2237-6461
       >
 
-      comment[publisher] = Faculdades da Escola Superior de Teologia
+      # Publisher: Faculdades da Escola Superior de Teologia
       param[base_url] = http://est.tempsite.ws/periodicos/
       param[journal_id] = estudos_teologicos
 
@@ -85,7 +85,7 @@
         eissn = 2178-437X
       >
 
-      comment[publisher] = Faculdades da Escola Superior de Teologia
+      # Publisher: Faculdades da Escola Superior de Teologia
       param[base_url] = http://est.tempsite.ws/periodicos/
       param[journal_id] = identidade
 
@@ -116,7 +116,7 @@
         eissn = 1678-6408
       >
 
-      comment[publisher] = Faculdades da Escola Superior de Teologia
+      # Publisher: Faculdades da Escola Superior de Teologia
       param[base_url] = http://est.tempsite.ws/periodicos/
       param[journal_id] = nepp
 
@@ -145,7 +145,7 @@
         eissn = 2238-8516
       >
 
-      comment[publisher] = Faculdades da Escola Superior de Teologia
+      # Publisher: Faculdades da Escola Superior de Teologia
       param[base_url] = http://est.tempsite.ws/periodicos/
       param[journal_id] = tear
 
@@ -163,7 +163,7 @@
         eissn = 2178-437X
       >
 
-      comment[publisher] = Escola Superior de Teologia, São Leopoldo
+      # Publisher: Escola Superior de Teologia, São Leopoldo
       param[base_url] = http://periodicos.est.edu.br/
       param[journal_id] = identidade
 
@@ -194,7 +194,7 @@
         eissn = 1678-6408
       >
 
-      comment[publisher] = Escola Superior de Teologia, São Leopoldo
+      # Publisher: Escola Superior de Teologia, São Leopoldo
       param[base_url] = http://periodicos.est.edu.br/
       param[journal_id] = nepp
 
@@ -223,7 +223,7 @@
         eissn = 1519-5546
       >
 
-      comment[publisher] = Escola Superior de Teologia, São Leopoldo
+      # Publisher: Escola Superior de Teologia, São Leopoldo
       param[base_url] = http://periodicos.est.edu.br/
       param[journal_id] = tear
 

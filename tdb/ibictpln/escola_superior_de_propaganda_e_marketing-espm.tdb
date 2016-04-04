@@ -13,7 +13,7 @@
         eissn = 1980-4865
       >
 
-      comment[publisher] = Escola Superior de Propaganda e Marketing-ESPM
+      # Publisher: Escola Superior de Propaganda e Marketing-ESPM
       param[base_url] = http://internext.espm.br/
       param[journal_id] = internext
 
@@ -38,7 +38,7 @@
         eissn = 1983-7070
       >
 
-      comment[publisher] = Escola Superior de Propaganda e Marketing-ESPM
+      # Publisher: Escola Superior de Propaganda e Marketing-ESPM
       param[base_url] = http://revistacmc.espm.br/
       param[journal_id] = revistacmc
 

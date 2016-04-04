@@ -13,7 +13,7 @@
         eissn = 1981-2132
       >
 
-      comment[publisher] = Portal de Revistas Eletrônicas-UCB
+      # Publisher: Portal de Revistas Eletrônicas-UCB
       param[base_url] = http://portalrevistas.ucb.br/
       param[journal_id] = comunicologia
 
@@ -33,10 +33,10 @@
         issn = 2178-0587
       >
 
-      comment[publisher] = Portal de Revistas Eletrônicas-UCB
+      # Publisher: Portal de Revistas Eletrônicas-UCB
       param[base_url] = http://portalrevistas.ucb.br/
       param[journal_id] = EALR
-      comment[notReady] = recursive link http://portalrevistas.ucb.br/index.php/EALR/rt/bio/4%20EALR%2035/www.angelfire.com/ky2/www.angelfire.com/ky2/www.angelfire.com/ky2/...
+      # notReady: recursive link http://portalrevistas.ucb.br/index.php/EALR/rt/bio/4%20EALR%2035/www.angelfire.com/ky2/www.angelfire.com/ky2/www.angelfire.com/ky2/...
 
       au < released ; 2010 ; 1 ; Economic Analysis of Law Review Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 2 ; Economic Analysis of Law Review Volume 2011 ; 2011 ; >
@@ -54,7 +54,7 @@
         issn = 1983-6643
       >
 
-      comment[publisher] = Portal de Revistas Eletrônicas-UCB
+      # Publisher: Portal de Revistas Eletrônicas-UCB
       param[base_url] = http://portalrevistas.ucb.br/
       param[journal_id] = efr
       comment[v2008] = http://portalrevistas.ucb.br/index.php/efr/rt/bio/923
@@ -78,7 +78,7 @@
         issn = 2316-7122
       >
 
-      comment[publisher] = Portal de Revistas Eletrônicas-UCB
+      # Publisher: Portal de Revistas Eletrônicas-UCB
       param[base_url] = http://portalrevistas.ucb.br/
       param[journal_id] = esf
 
@@ -94,7 +94,7 @@
         issn = 1808-8821
       >
 
-      comment[publisher] = Portal de Revistas Eletrônicas-UCB
+      # Publisher: Portal de Revistas Eletrônicas-UCB
       param[base_url] = http://portalrevistas.ucb.br/
       param[journal_id] = oralsciences
 
@@ -113,7 +113,7 @@
         issn = 0103-1716
       >
 
-      comment[publisher] = Portal de Revistas Eletrônicas-UCB
+      # Publisher: Portal de Revistas Eletrônicas-UCB
       param[base_url] = http://portalrevistas.ucb.br/
       param[journal_id] = RBCM
       comment[v2009] = no http for url on this page: http://portalrevistas.ucb.br/index.php/RBCM/rt/bio/798
@@ -152,7 +152,7 @@
         issn = 1676-8000
       >
 
-      comment[publisher] = Portal de Revistas Eletrônicas-UCB
+      # Publisher: Portal de Revistas Eletrônicas-UCB
       param[base_url] = http://portalrevistas.ucb.br/
       param[journal_id] = rbee
 
@@ -173,7 +173,7 @@
         issn = 1677-8898
       >
 
-      comment[publisher] = Portal de Revistas Eletrônicas-UCB
+      # Publisher: Portal de Revistas Eletrônicas-UCB
       param[base_url] = http://portalrevistas.ucb.br/
       param[journal_id] = RDL
 
@@ -199,7 +199,7 @@
         issn = 1982-842X
       >
 
-      comment[publisher] = Portal de Revistas Eletrônicas-UCB
+      # Publisher: Portal de Revistas Eletrônicas-UCB
       param[base_url] = http://portalrevistas.ucb.br/
       param[journal_id] = RL
 
@@ -221,7 +221,7 @@
         issn = 2238-5339
       >
 
-      comment[publisher] = Portal de Revistas Eletrônicas-UCB
+      # Publisher: Portal de Revistas Eletrônicas-UCB
       param[base_url] = http://portalrevistas.ucb.br/
       param[journal_id] = rmsbr
 
@@ -237,7 +237,7 @@
         issn = 1980-8860
       >
 
-      comment[publisher] = Portal de Revistas Eletrônicas-UCB
+      # Publisher: Portal de Revistas Eletrônicas-UCB
       param[base_url] = http://portalrevistas.ucb.br/
       param[journal_id] = rvmd
 

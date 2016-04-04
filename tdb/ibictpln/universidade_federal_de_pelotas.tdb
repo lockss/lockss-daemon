@@ -13,7 +13,7 @@
         eissn = 2236-1987
       >
 
-      comment[publisher] = Universidade Federal de Pelotas
+      # Publisher: Universidade Federal de Pelotas
       param[base_url] = http://www2.ufpel.tche.br/revistas/
       param[journal_id] = enfermagemesaude
 
@@ -31,7 +31,7 @@
         eissn = 2177-6830
       >
       
-      comment[publisher] = Universidade Federal de Pelotas
+      # Publisher: Universidade Federal de Pelotas
       {
       param[base_url] = http://periodicos.ufpel.edu.br/ojs2/
       param[journal_id] = cienciadamadeira
@@ -62,7 +62,7 @@
         eissn = 2316-5812
       >
 
-      comment[publisher] = Universidade Federal de Pelotas
+      # Publisher: Universidade Federal de Pelotas
       param[base_url] = http://periodicos.ufpel.edu.br/ojs2/
       param[journal_id] = AT
 

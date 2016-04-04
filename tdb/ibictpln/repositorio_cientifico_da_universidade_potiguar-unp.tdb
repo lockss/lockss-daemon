@@ -13,7 +13,7 @@
         issn = 2237-3608
       >
 
-      comment[publisher] = Repositório Científico da Universidade Potiguar-UnP
+      # Publisher: Repositório Científico da Universidade Potiguar-UnP
       param[base_url] = https://repositorio.unp.br/
       param[journal_id] = catussaba
 
@@ -30,9 +30,9 @@
         issn = 2236-8760
       >
 
-      comment[publisher] = Repositório Científico da Universidade Potiguar-UnP
+      # Publisher: Repositório Científico da Universidade Potiguar-UnP
       param[journal_id] = connexio
-      comment[0] = journal moved from http to https
+      # journal moved from http to https
 
     {
       param[base_url] = https://repositorio.unp.br/
@@ -64,7 +64,7 @@
         issn = 2237-4469
       >
 
-      comment[publisher] = Repositório Científico da Universidade Potiguar-UnP
+      # Publisher: Repositório Científico da Universidade Potiguar-UnP
       param[base_url] = https://repositorio.unp.br/
       param[journal_id] = juris
 
@@ -81,7 +81,7 @@
         issn = 2237-8987
       >
 
-      comment[publisher] = Repositório Científico da Universidade Potiguar-UnP
+      # Publisher: Repositório Científico da Universidade Potiguar-UnP
       param[journal_id] = quipus
 
     {
@@ -113,7 +113,7 @@
         issn = 1984-4204
       >
 
-      comment[publisher] = Repositório Científico da Universidade Potiguar-UnP
+      # Publisher: Repositório Científico da Universidade Potiguar-UnP
       param[journal_id] = raunp
     {
       param[base_url] = https://repositorio.unp.br/
@@ -147,7 +147,7 @@
         issn = 2316-6681
       >
 
-      comment[publisher] = Repositório Científico da Universidade Potiguar-UnP
+      # Publisher: Repositório Científico da Universidade Potiguar-UnP
       param[base_url] = https://repositorio.unp.br/
       param[journal_id] = runpetro
 

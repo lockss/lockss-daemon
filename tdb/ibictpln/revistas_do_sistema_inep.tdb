@@ -14,7 +14,7 @@
         eissn = 2176-6673
       >
 
-      comment[publisher] = Revistas do Sistema INEP
+      # Publisher: Revistas do Sistema INEP
       param[base_url] = http://www.rbep.inep.gov.br/
       param[journal_id] = emaberto
 
@@ -59,7 +59,7 @@
         eissn = 2176-6681
       >
 
-      comment[publisher] = Revistas do Sistema INEP
+      # Publisher: Revistas do Sistema INEP
       param[base_url] = http://www.rbep.inep.gov.br/
       param[journal_id] = RBEP
 

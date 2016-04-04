@@ -14,7 +14,7 @@
         eissn = 2179-7943
       >
 
-      comment[publisher] = Universidade do Oeste de Santa Catarina
+      # Publisher: Universidade do Oeste de Santa Catarina
       param[journal_id] = espacojuridico
       param[base_url] = http://editora.unoesc.edu.br/
 
@@ -41,7 +41,7 @@
         eissn = 2236-6059
       >
 
-      comment[publisher] = Universidade do Oeste de Santa Catarina
+      # Publisher: Universidade do Oeste de Santa Catarina
       param[journal_id] = evidencia
       param[base_url] = http://editora.unoesc.edu.br/
 
@@ -65,7 +65,7 @@
         eissn = 2179-4936
       >
 
-      comment[publisher] = Universidade do Oeste de Santa Catarina
+      # Publisher: Universidade do Oeste de Santa Catarina
       param[journal_id] = race
       param[base_url] = http://editora.unoesc.edu.br/
 
@@ -91,7 +91,7 @@
         eissn = 2177-6059
       >
 
-      comment[publisher] = Universidade do Oeste de Santa Catarina
+      # Publisher: Universidade do Oeste de Santa Catarina
       param[journal_id] = roteiro
       param[base_url] = http://editora.unoesc.edu.br/
 

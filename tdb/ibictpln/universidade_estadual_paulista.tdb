@@ -13,10 +13,10 @@
         eissn = 2179-4286
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://periodicos.franca.unesp.br/
       param[journal_id] = cardernopesquisa
-      comment[0] = possibly cadernopesquisa ?
+      # possibly cadernopesquisa ?
 
       au < exists ; 2010 ; 1 ; Caderno de Pesquisa Volume 2010 ; 2010 ; >
 
@@ -29,7 +29,7 @@
         eissn = 2175-4217
       >
       
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
 
       {
       param[base_url] = http://seer.franca.unesp.br/
@@ -64,7 +64,7 @@
         eissn = 2236-7950
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://periodicos.franca.unesp.br/
       param[journal_id] = direitoalternativo
 
@@ -81,7 +81,7 @@
         eissn = 2179-4359
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://periodicos.franca.unesp.br/
       param[journal_id] = direitounesp
 
@@ -100,7 +100,7 @@
         eissn = 2179-5177
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://periodicos.franca.unesp.br/
       param[journal_id] = estudosjuridicosunesp
 
@@ -120,7 +120,7 @@
         eissn = 2238-6270
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://periodicos.franca.unesp.br/
       param[journal_id] = historiaecultura
 
@@ -140,7 +140,7 @@
         eissn = 2176-0896
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://periodicos.franca.unesp.br/
       param[journal_id] = SSR
 
@@ -158,7 +158,7 @@
         eissn = 1981-5794
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://seer.fclar.unesp.br/
       param[journal_id] = alfa
 
@@ -222,7 +222,7 @@
         eissn = 1679-3404
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://seer.fclar.unesp.br/
       param[journal_id] = casa
 
@@ -250,7 +250,7 @@
         eissn = 1982-4718
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://seer.fclar.unesp.br/
       param[journal_id] = estudos
 
@@ -285,7 +285,7 @@
         eissn = 1982-5587
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://seer.fclar.unesp.br/
       param[journal_id] = iberoamericana
 
@@ -310,7 +310,7 @@
         issn = 0103-815X
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://seer.fclar.unesp.br/
       param[journal_id] = itinerarios
 
@@ -352,7 +352,7 @@
         eissn = 1981-7886
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://seer.fclar.unesp.br/
       param[journal_id] = letras
 
@@ -418,7 +418,7 @@
         issn = 1414-025X
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://seer.fclar.unesp.br/
       param[journal_id] = lettres
 
@@ -454,7 +454,7 @@
         eissn = 1984-0241
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://seer.fclar.unesp.br/
       param[journal_id] = perspectivas
 
@@ -499,7 +499,7 @@
         eissn = 1984-1736
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://seer.fclar.unesp.br/
       param[journal_id] = redd
 
@@ -520,7 +520,7 @@
         eissn = 1984-5103
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://seer.fclar.unesp.br/
       param[journal_id] = seguranca
 
@@ -541,7 +541,7 @@
         eissn = 2179-4448
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://serv-bib.fcfar.unesp.br/seer/
       param[journal_id] = alimentos
 
@@ -581,7 +581,7 @@
         eissn = 2179-443X
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://serv-bib.fcfar.unesp.br/seer/
       param[journal_id] = Cien_Farm
 
@@ -607,7 +607,7 @@
         eissn = 1983-8700
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
       param[journal_id] = ageteo
 
@@ -662,7 +662,7 @@
         eissn = 1980-4415
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
       param[journal_id] = bolema
 
@@ -694,7 +694,7 @@
         eissn = 1980-654X
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
       param[journal_id] = climatologia
 
@@ -717,7 +717,7 @@
         eissn = 1981-8106
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
       param[journal_id] = educacao
 
@@ -748,7 +748,7 @@
         eissn = 1982-2049
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
       param[journal_id] = espacoacao
 
@@ -763,7 +763,7 @@
         eissn = 1678-698X
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
       param[journal_id] = estgeo
 
@@ -788,7 +788,7 @@
         eissn = 1980-900X
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
       param[journal_id] = geociencias
 
@@ -834,7 +834,7 @@
         eissn = 1519-8634
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
       param[journal_id] = holos
 
@@ -861,7 +861,7 @@
         issn = 1980-6574
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
       param[journal_id] = motriz
 
@@ -898,7 +898,7 @@
         eissn = 2177-0727
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
       param[journal_id] = naturalia
 
@@ -920,7 +920,7 @@
         eissn = 1982-7784
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
       param[journal_id] = olam
 
@@ -944,7 +944,7 @@
         issn = 2177-580X
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
       param[journal_id] = pesquisa
 
@@ -966,7 +966,7 @@
         eissn = 1982-8004
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = aurora
 
@@ -987,7 +987,7 @@
         eissn = 1808-8473
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = baleianarede
 
@@ -1010,7 +1010,7 @@
         eissn = 2237-7743
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = bjir
 
@@ -1026,7 +1026,7 @@
         eissn = 1981-1640
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = bjis
 
@@ -1048,7 +1048,7 @@
         eissn = 2236-0247
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = cedem
 
@@ -1067,7 +1067,7 @@
         eissn = 2236-5192
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = educacaoemrevista
 
@@ -1096,7 +1096,7 @@
         eissn = 1983-2192
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = levs
 
@@ -1116,7 +1116,7 @@
         eissn = 0102-5864
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = novosrumos
 
@@ -1132,7 +1132,7 @@
         eissn = 2238-5703
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = orgdemo
 
@@ -1160,7 +1160,7 @@
         eissn = 1807-8281
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = reic
 
@@ -1180,7 +1180,7 @@
         eissn = 1415-8612
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = ric
 
@@ -1205,7 +1205,7 @@
         eissn = 1984-1655
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = scheme
 
@@ -1221,7 +1221,7 @@
         eissn = 0101-3173
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = transformacao
 
@@ -1242,7 +1242,7 @@
         eissn = 1984-1647
       >
 
-      comment[publisher] = Universidade Estadual Paulista
+      # Publisher: Universidade Estadual Paulista
       param[base_url] = http://revista.fct.unesp.br/
       param[journal_id] = geografiaematos
 

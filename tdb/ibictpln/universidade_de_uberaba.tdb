@@ -13,7 +13,7 @@
         issn = 2237-8022
       >
 
-      comment[publisher] = Universidade de Uberaba
+      # Publisher: Universidade de Uberaba
       param[base_url] = http://revistas.uniube.br/
       param[journal_id] = anais
 
@@ -38,7 +38,7 @@
         eissn = 2178-0226
       >
 
-      comment[publisher] = Universidade de Uberaba
+      # Publisher: Universidade de Uberaba
       param[base_url] = http://revistas.uniube.br/
       param[journal_id] = ddc
 
@@ -57,7 +57,7 @@
         eissn = 1519-0919
       >
 
-      comment[publisher] = Universidade de Uberaba
+      # Publisher: Universidade de Uberaba
       param[base_url] = http://revistas.uniube.br/
       param[journal_id] = rpd
 

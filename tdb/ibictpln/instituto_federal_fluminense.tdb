@@ -13,7 +13,7 @@
         issn = 2177-4560
       >
 
-      comment[publisher] = Instituto Federal Fluminense
+      # Publisher: Instituto Federal Fluminense
       param[base_url] = http://essentiaeditora.iff.edu.br/
       param[journal_id] = boletim
 
@@ -34,7 +34,7 @@
         issn = 2179-6971
       >
 
-      comment[publisher] = Instituto Federal Fluminense
+      # Publisher: Instituto Federal Fluminense
       param[base_url] = http://essentiaeditora.iff.edu.br/
       param[journal_id] = BolsistaDeValor
 
@@ -51,7 +51,7 @@
         issn = 1809-2667
       >
 
-      comment[publisher] = Instituto Federal Fluminense
+      # Publisher: Instituto Federal Fluminense
       param[base_url] = http://essentiaeditora.iff.edu.br/
       param[journal_id] = vertices
 

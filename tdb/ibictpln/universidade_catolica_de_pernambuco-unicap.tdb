@@ -13,7 +13,7 @@
         issn = 1982-999X
       >
 
-      comment[publisher] = Universidade Católica de Pernambuco-UNICAP
+      # Publisher: Universidade Católica de Pernambuco-UNICAP
       param[base_url] = http://www.unicap.br/ojs-2.3.4/
       param[journal_id] = agora
 
@@ -34,7 +34,7 @@
         issn = 2178-8162
       >
 
-      comment[publisher] = Universidade Católica de Pernambuco-UNICAP
+      # Publisher: Universidade Católica de Pernambuco-UNICAP
       param[base_url] = http://www.unicap.br/ojs-2.3.4/
       param[journal_id] = paralellus
 
@@ -53,7 +53,7 @@
         eissn = 2237-907X
       >
 
-      comment[publisher] = Universidade Católica de Pernambuco-UNICAP
+      # Publisher: Universidade Católica de Pernambuco-UNICAP
       param[base_url] = http://www.unicap.br/ojs-2.3.4/
       param[journal_id] = theo
 

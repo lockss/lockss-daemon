@@ -13,12 +13,12 @@
         issn = 1981-3759
       >
 
-      comment[publisher] = Instituto Brasiliense de Direito Público-IDP
+      # Publisher: Instituto Brasiliense de Direito Público-IDP
       param[base_url] = http://www.portaldeperiodicos.idp.edu.br/
       param[journal_id] = cadernovirtual
       
       comment[AU] = No volume for 2006
-      comment[notReady] = error on accessing abstracts eg http://www.portaldeperiodicos.idp.edu.br/index.php/cadernovirtual/article/view/45
+      # notReady: error on accessing abstracts eg http://www.portaldeperiodicos.idp.edu.br/index.php/cadernovirtual/article/view/45
 
       au < notReady ; 2003 ; 3-4 ; Caderno Virtual Volume 3-4 ; 2003 ; crawl error on abstract >
       au < notReady ; 2004 ; 7-9 ; Caderno Virtual Volume 7-9 ; 2004 ; crawl error on abstract >
@@ -43,7 +43,7 @@
         issn = 2236-1766
       >
 
-      comment[publisher] = Instituto Brasiliense de Direito Público-IDP
+      # Publisher: Instituto Brasiliense de Direito Público-IDP
       param[base_url] = http://www.direitopublico.idp.edu.br/
       param[journal_id] = direitopublico
 
@@ -70,11 +70,11 @@
         issn = 1982-4564
       >
 
-      comment[publisher] = Instituto Brasiliense de Direito Público-IDP
+      # Publisher: Instituto Brasiliense de Direito Público-IDP
       param[base_url] = http://www.portaldeperiodicos.idp.edu.br/
       param[journal_id] = observatorio
       
-      comment[notReady] = Check to see if abstracts are available. eg http://www.portaldeperiodicos.idp.edu.br/index.php/observatorio/article/view/103
+      # notReady: Check to see if abstracts are available. eg http://www.portaldeperiodicos.idp.edu.br/index.php/observatorio/article/view/103
 
       au < exists ; 2007-2010 ; 0 ; Observatório da Jurisdição Constitucional Volume 0 ; 0000 ; >
       au < exists ; 2010-2011 ; 4 ; Observatório da Jurisdição Constitucional Volume 4 ; 0004 ; >

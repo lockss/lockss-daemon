@@ -13,7 +13,7 @@
         issn = 2177-756X
       >
 
-      comment[publisher] = Universidade Federal Rural do Rio de Janeiro
+      # Publisher: Universidade Federal Rural do Rio de Janeiro
       param[base_url] = http://www.ufrrj.br/
       param[journal_id] = journal=chsr
 
@@ -46,7 +46,7 @@
         eissn = 2176-2988
       >
 
-      comment[publisher] = Universidade Federal Rural do Rio de Janeiro
+      # Publisher: Universidade Federal Rural do Rio de Janeiro
       param[base_url] = http://www.ufrrj.br/
       param[journal_id] = journal=gepem
 
@@ -86,7 +86,7 @@
         issn = 2238-7102
       >
 
-      comment[publisher] = Universidade Federal Rural do Rio de Janeiro
+      # Publisher: Universidade Federal Rural do Rio de Janeiro
       param[base_url] = http://www.ufrrj.br/
       param[journal_id] = journal=rce
 
@@ -112,7 +112,7 @@
         issn = 2177-7551
       >
 
-      comment[publisher] = Universidade Federal Rural do Rio de Janeiro
+      # Publisher: Universidade Federal Rural do Rio de Janeiro
       param[base_url] = http://www.ufrrj.br/
       param[journal_id] = journal=rcv
 

@@ -14,7 +14,7 @@
         eissn = 2177-1766
       >
 
-      comment[publisher] = Escola da Magistratura do Rio Grande do Norte-Esmarn
+      # Publisher: Escola da Magistratura do Rio Grande do Norte-Esmarn
       param[base_url] = http://www.esmarn.tjrn.jus.br/revistas/
       param[journal_id] = revista_da_esmarn
 
@@ -30,10 +30,10 @@
         eissn = 2177-1758
       >
 
-      comment[publisher] = Escola da Magistratura do Rio Grande do Norte-Esmarn
+      # Publisher: Escola da Magistratura do Rio Grande do Norte-Esmarn
       param[base_url] = http://www.esmarn.tjrn.jus.br/revistas/
       param[journal_id] = revista_direito_e_liberdade
-      comment[notReady] = no permission from publisher
+      # notReady: no permission from publisher
 
       au < exists ; ; 1 ; Revista Direito e Liberdade Volume 1 ; 0001 ; >
       au < exists ; ; 2-4 ; Revista Direito e Liberdade Volume 2 ; 0002 ; >

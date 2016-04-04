@@ -13,7 +13,7 @@
         issn = 1982-0186
       >
 
-      comment[publisher] = Universidade Federal de Goiás-Campus Jataí
+      # Publisher: Universidade Federal de Goiás-Campus Jataí
       param[base_url] = http://revistas.jatai.ufg.br/
       param[journal_id] = acp
 
@@ -33,7 +33,7 @@
         issn = 2177-5095
       >
 
-      comment[publisher] = Universidade Federal de Goiás-Campus Jataí
+      # Publisher: Universidade Federal de Goiás-Campus Jataí
       param[base_url] = http://revistas.jatai.ufg.br/
       param[journal_id] = matematica
       comment[journal] = deleted?
@@ -51,7 +51,7 @@
         issn = 2176-9125
       >
 
-      comment[publisher] = Universidade Federal de Goiás-Campus Jataí
+      # Publisher: Universidade Federal de Goiás-Campus Jataí
       param[base_url] = http://revistas.jatai.ufg.br/
       param[journal_id] = revlet
 

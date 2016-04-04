@@ -13,7 +13,7 @@
         issn = 2316-381X
       >
 
-      comment[publisher] = Grupo Tiradentes
+      # Publisher: Grupo Tiradentes
       param[base_url] = https://periodicos.set.edu.br/
       param[journal_id] = direito
 
@@ -31,7 +31,7 @@
         issn = 2316-3828
       >
 
-      comment[publisher] = Grupo Tiradentes
+      # Publisher: Grupo Tiradentes
       param[base_url] = https://periodicos.set.edu.br/
       param[journal_id] = educacao
 
@@ -47,7 +47,7 @@
         issn = 2316-3801
       >
 
-      comment[publisher] = Grupo Tiradentes
+      # Publisher: Grupo Tiradentes
       param[base_url] = https://periodicos.set.edu.br/
       param[journal_id] = humanas
 
@@ -63,7 +63,7 @@
         issn = 2316-3798
       >
 
-      comment[publisher] = Grupo Tiradentes
+      # Publisher: Grupo Tiradentes
       param[base_url] = https://periodicos.set.edu.br/
       param[journal_id] = saude
 

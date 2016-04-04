@@ -14,7 +14,7 @@
         eissn = 2179-488X
       >
 
-      comment[publisher] = Centro Universitário de Brasília-UNICEUB
+      # Publisher: Centro Universitário de Brasília-UNICEUB
       param[base_url] = http://www.publicacoesacademicas.uniceub.br/
       param[journal_id] = arqcom
 
@@ -37,10 +37,10 @@
         eissn = 1981-9730
       >
 
-      comment[publisher] = Centro Universitário de Brasília-UNICEUB
+      # Publisher: Centro Universitário de Brasília-UNICEUB
       param[base_url] = http://www.publicacoesacademicas.uniceub.br/
       param[journal_id] = cienciasaude
-      comment[notReady] = no consistent access to content - "Host did not respond"
+      # notReady: no consistent access to content - "Host did not respond"
       comment[notReady2] = When host does respond, there is an download counter on every article
 
       au < notReady ; 2003 ; 1 ; Universitas: Ciências da Saúde Volume 2003 ; 2003 ; slow response. custom download counter >
@@ -68,7 +68,7 @@
         eissn = 2179-832X
       >
 
-      comment[publisher] = Centro Universitário de Brasília-UNICEUB
+      # Publisher: Centro Universitário de Brasília-UNICEUB
       param[base_url] = http://www.publicacoesacademicas.uniceub.br/
       param[journal_id] = gti
 
@@ -88,7 +88,7 @@
         eissn = 1982-8268
       >
 
-      comment[publisher] = Centro Universitário de Brasília-UNICEUB
+      # Publisher: Centro Universitário de Brasília-UNICEUB
       param[base_url] = http://www.publicacoesacademicas.uniceub.br/
       param[journal_id] = jus
 
@@ -111,7 +111,7 @@
         eissn = 1980-8887
       >
 
-      comment[publisher] = Centro Universitário de Brasília-UNICEUB
+      # Publisher: Centro Universitário de Brasília-UNICEUB
       param[base_url] = http://www.publicacoesacademicas.uniceub.br/
       param[journal_id] = pade
 
@@ -132,10 +132,10 @@
         eissn = 1808-7477
       >
 
-      comment[publisher] = Centro Universitário de Brasília-UNICEUB
+      # Publisher: Centro Universitário de Brasília-UNICEUB
       param[base_url] = http://www.publicacoesacademicas.uniceub.br/
       param[journal_id] = prisma
-      comment[0] = No permission from publisher
+      # No permission from publisher
 
       au < exists ; 2004 ; 1 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2004 ; 2004 ; >
       au < exists ; 2005 ; 2 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2005 ; 2005 ; >
@@ -160,7 +160,7 @@
         eissn = 2236-1677
       >
 
-      comment[publisher] = Centro Universitário de Brasília-UNICEUB
+      # Publisher: Centro Universitário de Brasília-UNICEUB
       param[base_url] = http://www.publicacoesacademicas.uniceub.br/
       param[journal_id] = RBPP
 
@@ -181,7 +181,7 @@
         eissn = 2237-1036
       >
 
-      comment[publisher] = Centro Universitário de Brasília-UNICEUB
+      # Publisher: Centro Universitário de Brasília-UNICEUB
       param[base_url] = http://www.publicacoesacademicas.uniceub.br/
       param[journal_id] = rdi
 
@@ -201,7 +201,7 @@
         eissn = 2175-7488
       >
 
-      comment[publisher] = Centro Universitário de Brasília-UNICEUB
+      # Publisher: Centro Universitário de Brasília-UNICEUB
       param[base_url] = http://www.publicacoesacademicas.uniceub.br/
       param[journal_id] = universitashumanas
 

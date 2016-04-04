@@ -13,7 +13,7 @@
         issn = 2317-7136
       >
 
-      comment[publisher] = Universidade Federal do Triângulo Mineiro
+      # Publisher: Universidade Federal do Triângulo Mineiro
       param[base_url] = http://www.periodicos.ufes.br/
       param[journal_id] = aces
 
@@ -28,7 +28,7 @@
         issn = 2317-1154
       >
 
-      comment[publisher] = Universidade Federal do Triângulo Mineiro
+      # Publisher: Universidade Federal do Triângulo Mineiro
       param[base_url] = http://www.periodicos.ufes.br/
       param[journal_id] = enfer
 
@@ -44,7 +44,7 @@
         issn = 1981-0601
       >
 
-      comment[publisher] = Universidade Federal do Triângulo Mineiro
+      # Publisher: Universidade Federal do Triângulo Mineiro
       param[base_url] = http://www.periodicos.ufes.br/
       param[journal_id] = intertexto
 
@@ -64,7 +64,7 @@
         issn = 2175-1609
       >
 
-      comment[publisher] = Universidade Federal do Triângulo Mineiro
+      # Publisher: Universidade Federal do Triângulo Mineiro
       param[base_url] = http://www.periodicos.ufes.br/
       param[journal_id] = revistatriangulo
 
@@ -84,7 +84,7 @@
         issn = 1983-3873
       >
 
-      comment[publisher] = Universidade Federal do Triângulo Mineiro
+      # Publisher: Universidade Federal do Triângulo Mineiro
       param[base_url] = http://www.periodicos.ufes.br/
       param[journal_id] = sell
 

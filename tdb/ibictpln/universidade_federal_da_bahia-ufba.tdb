@@ -6,7 +6,7 @@
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
     implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
     
-    comment[notReady] = Records load times causing low agreement. See PD-1104.
+    # notReady: Records load times causing low agreement. See PD-1104.
 
   {
 
@@ -15,7 +15,7 @@
         issn = 0365-2262
       >
 
-      comment[publisher] = Universidade Federal da Bahia-UFBA
+      # Publisher: Universidade Federal da Bahia-UFBA
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = afmbahia
 
@@ -30,7 +30,7 @@
         issn = 0365-8139
       >
 
-      comment[publisher] = Universidade Federal da Bahia-UFBA
+      # Publisher: Universidade Federal da Bahia-UFBA
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = arqmedicina
 
@@ -45,7 +45,7 @@
         issn = 0570-1147
       >
 
-      comment[publisher] = Universidade Federal da Bahia-UFBA
+      # Publisher: Universidade Federal da Bahia-UFBA
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = angulos
 
@@ -60,7 +60,7 @@
         issn = 2238-0361
       >
 
-      comment[publisher] = Universidade Federal da Bahia-UFBA
+      # Publisher: Universidade Federal da Bahia-UFBA
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = cadernosaa
 
@@ -76,7 +76,7 @@
         issn = 2317-3777
       >
 
-      comment[publisher] = Universidade Federal da Bahia-UFBA
+      # Publisher: Universidade Federal da Bahia-UFBA
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = revistadanca
 
@@ -92,7 +92,7 @@
         issn = 2317-4552
       >
 
-      comment[publisher] = Universidade Federal da Bahia-UFBA
+      # Publisher: Universidade Federal da Bahia-UFBA
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = RBDA
 
@@ -108,7 +108,7 @@
         eissn = 2318-504X
       >
 
-      comment[publisher] = Universidade Federal da Bahia-UFBA
+      # Publisher: Universidade Federal da Bahia-UFBA
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = revcaititu
 
@@ -123,7 +123,7 @@
         issn = 1806-3225
       >
 
-      comment[publisher] = Universidade Federal da Bahia-UFBA
+      # Publisher: Universidade Federal da Bahia-UFBA
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = revcetrama
 
@@ -138,7 +138,7 @@
         issn = 2317-563X
       >
 
-      comment[publisher] = Universidade Federal da Bahia-UFBA
+      # Publisher: Universidade Federal da Bahia-UFBA
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = gesta
 
@@ -156,7 +156,7 @@
         eissn = 2179-5355
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = anaiseneq2012
 
@@ -173,7 +173,7 @@
         eissn = 1981-8122
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.museu-goeldi.br/editora/
       param[journal_id] = humanas
 
@@ -196,7 +196,7 @@
         eissn = 1981-8114
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.museu-goeldi.br/editora/
       param[journal_id] = naturais
 
@@ -219,7 +219,7 @@
         eissn = 2238-4960
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = cadgeoc
 
@@ -240,7 +240,7 @@
         eissn = 1807-9318
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = cppgav
 
@@ -256,7 +256,7 @@
         eissn = 1983-1358
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = nit
 
@@ -272,7 +272,7 @@
         eissn = 1679-6861
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = ppgau
 
@@ -295,7 +295,7 @@
         eissn = 1809-9386
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = contemporaneaposcom
 
@@ -322,7 +322,7 @@
         eissn = 2175-084X
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = rcvisual
 
@@ -345,7 +345,7 @@
         eissn = 1984-5537
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = geotextos
 
@@ -369,7 +369,7 @@
         eissn = 2175-5604
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = revistagerminal
 
@@ -391,7 +391,7 @@
         eissn = 2238-6599
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = ictus
 
@@ -409,7 +409,7 @@
         eissn = 1984-9230
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = revistaoes
 
@@ -447,7 +447,7 @@
         eissn = 1983-3717
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = pculturais
 
@@ -468,7 +468,7 @@
         eissn = 1981-6766
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = revistaici
       comment[v2008] = bio has url with no http.  http://www.portalseer.ufba.br/index.php/revistaici/rt/bio/1779
@@ -494,7 +494,7 @@
         eissn = 2175-8131
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = revteatro
 
@@ -518,7 +518,7 @@
         eissn = 0102-5430
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = enfermagem
 
@@ -545,7 +545,7 @@
         eissn = 2236-5222
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = cmbio
 
@@ -574,7 +574,7 @@
         eissn = 1984-3704
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = rcontabilidade
 
@@ -598,7 +598,7 @@
         issn = 2358-2006 
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = mapad2
 
@@ -614,7 +614,7 @@
         eissn = 1980-6620
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = entreideias
 
@@ -649,7 +649,7 @@
         issn = 1516-9022
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = revnexeco
 
@@ -666,7 +666,7 @@
         issn = 2358-0844
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = revistaperiodicus
 
@@ -683,7 +683,7 @@
         issn = 0103-1651
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = rua
 
@@ -704,7 +704,7 @@
         eissn = 0041-9052
       >
 
-      comment[publisher] = Universidade Federal da Bahia
+      # Publisher: Universidade Federal da Bahia
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = universitas
 

@@ -13,7 +13,7 @@
         eissn = 2177-6288
       >
 
-      comment[publisher] = UNIABEU Centro Universitário
+      # Publisher: UNIABEU Centro Universitário
       param[base_url] = http://www.uniabeu.edu.br/publica/
       param[journal_id] = re
 
@@ -34,7 +34,7 @@
         eissn = 2179-5037
       >
 
-      comment[publisher] = UNIABEU Centro Universitário
+      # Publisher: UNIABEU Centro Universitário
       param[base_url] = http://www.uniabeu.edu.br/publica/
       param[journal_id] = RU
 

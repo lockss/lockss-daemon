@@ -14,7 +14,7 @@
         eissn = 2176-9192
       >
 
-      comment[publisher] = Centro Universitário Cesumar
+      # Publisher: Centro Universitário Cesumar
       param[journal_id] = iccesumar
       {
       param[base_url] = http://www.cesumar.br/pesquisa/periodicos/
@@ -67,7 +67,7 @@
         eissn = 2176-9176
       >
 
-      comment[publisher] = Centro Universitário Cesumar
+      # Publisher: Centro Universitário Cesumar
       param[journal_id] = revcesumar
       {
       param[base_url] = http://www.cesumar.br/pesquisa/periodicos/
@@ -123,7 +123,7 @@
         eissn = 2176-9168
       >
 
-      comment[publisher] = Centro Universitário Cesumar
+      # Publisher: Centro Universitário Cesumar
       param[journal_id] = rama
       {
       param[base_url] = http://www.cesumar.br/pesquisa/periodicos/
@@ -159,7 +159,7 @@
         eissn = 2176-9184
       >
 
-      comment[publisher] = Centro Universitário Cesumar
+      # Publisher: Centro Universitário Cesumar
       param[journal_id] = revjuridica
       {
       param[base_url] = http://www.cesumar.br/pesquisa/periodicos/
@@ -209,7 +209,7 @@
         eissn = 2176-9206
       >
 
-      comment[publisher] = Centro Universitário Cesumar
+      # Publisher: Centro Universitário Cesumar
       param[journal_id] = saudpesq
       {
       param[base_url] = http://www.cesumar.br/pesquisa/periodicos/

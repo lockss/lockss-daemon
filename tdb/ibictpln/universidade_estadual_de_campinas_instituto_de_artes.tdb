@@ -13,7 +13,7 @@
         eissn = 2316-7858
       >
 
-      comment[publisher] = Universidade Estadual de Campinas, Instituto de Artes
+      # Publisher: Universidade Estadual de Campinas, Instituto de Artes
       param[base_url] = http://www.publionline.iar.unicamp.br/
       param[journal_id] = muspop
 
@@ -30,7 +30,7 @@
         eissn = 2237-387X
       >
 
-      comment[publisher] = Universidade Estadual de Campinas, Instituto de Artes
+      # Publisher: Universidade Estadual de Campinas, Instituto de Artes
       {
       param[base_url] = http://periodicos.sbu.unicamp.br/ojs/
       param[journal_id] = pit500
@@ -60,7 +60,7 @@
         eissn = 2317-5737
       >
 
-      comment[publisher] = Universidade Estadual de Campinas, Instituto de Artes
+      # Publisher: Universidade Estadual de Campinas, Instituto de Artes
       param[base_url] = http://www.publionline.iar.unicamp.br/
       param[journal_id] = ppgac
 
@@ -76,7 +76,7 @@
         issn = 1809-1652
       >
 
-      comment[publisher] = Universidade Estadual de Campinas, Instituto de Artes
+      # Publisher: Universidade Estadual de Campinas, Instituto de Artes
       param[base_url] = http://www.sonora.iar.unicamp.br/
       param[journal_id] = sonora1
 

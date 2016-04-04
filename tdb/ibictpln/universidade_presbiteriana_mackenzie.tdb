@@ -13,7 +13,7 @@
         issn = 2317-3653
       >
 
-      comment[publisher] = Universidade Presbiteriana Mackenzie
+      # Publisher: Universidade Presbiteriana Mackenzie
       param[base_url] = http://editorarevistas.mackenzie.br/
       param[journal_id] = cade
 
@@ -29,7 +29,7 @@
         issn = 1980-9425
       >
 
-      comment[publisher] = Universidade Presbiteriana Mackenzie
+      # Publisher: Universidade Presbiteriana Mackenzie
       param[base_url] = http://editorarevistas.mackenzie.br/
       param[journal_id] = cr
 
@@ -58,7 +58,7 @@
         eissn = 1678-6971
       >
 
-      comment[publisher] = Universidade Presbiteriana Mackenzie
+      # Publisher: Universidade Presbiteriana Mackenzie
       param[base_url] = http://editorarevistas.mackenzie.br/
       param[journal_id] = RAM
 
@@ -86,7 +86,7 @@
         issn = 1678-5002
       >
 
-      comment[publisher] = Universidade Presbiteriana Mackenzie
+      # Publisher: Universidade Presbiteriana Mackenzie
       param[base_url] = http://editorarevistas.mackenzie.br/
       param[journal_id] = rem
 
@@ -111,7 +111,7 @@
         issn = 1517-6851
       >
 
-      comment[publisher] = Universidade Presbiteriana Mackenzie
+      # Publisher: Universidade Presbiteriana Mackenzie
       param[base_url] = http://editorarevistas.mackenzie.br/
       param[journal_id] = rmd
 
@@ -132,7 +132,7 @@
         eissn = 1980-6892
       >
 
-      comment[publisher] = Universidade Presbiteriana Mackenzie
+      # Publisher: Universidade Presbiteriana Mackenzie
       param[base_url] = http://editorarevistas.mackenzie.br/
       param[journal_id] = remef
 
@@ -158,7 +158,7 @@
         issn = 2236-9813
       >
 
-      comment[publisher] = Universidade Presbiteriana Mackenzie
+      # Publisher: Universidade Presbiteriana Mackenzie
       param[base_url] = http://editorarevistas.mackenzie.br/
       param[journal_id] = rmec
 
@@ -183,7 +183,7 @@
         eissn = 1980-6914
       >
 
-      comment[publisher] = Universidade Presbiteriana Mackenzie
+      # Publisher: Universidade Presbiteriana Mackenzie
       param[base_url] = http://editorarevistas.mackenzie.br/
       param[journal_id] = tl
 
@@ -212,7 +212,7 @@
         issn = 2177-5672
       >
 
-      comment[publisher] = Universidade Presbiteriana Mackenzie
+      # Publisher: Universidade Presbiteriana Mackenzie
       param[base_url] = http://editorarevistas.mackenzie.br/
       param[journal_id] = tint
 
@@ -233,7 +233,7 @@
         issn = 1809-4120
       >
 
-      comment[publisher] = Universidade Presbiteriana Mackenzie
+      # Publisher: Universidade Presbiteriana Mackenzie
       param[base_url] = http://www.mackenzie.br/dhtm/seer/
       param[journal_id] = cpgau
 
@@ -261,7 +261,7 @@
         issn = 1806-8634
       >
 
-      comment[publisher] = Universidade Presbiteriana Mackenzie
+      # Publisher: Universidade Presbiteriana Mackenzie
       param[base_url] = http://www.mackenzie.br/dhtm/seer/
       param[journal_id] = jovenspesquisadores
 

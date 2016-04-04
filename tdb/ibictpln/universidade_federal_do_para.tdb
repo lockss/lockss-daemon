@@ -13,7 +13,7 @@
         eissn = 2176-0675
       >
 
-      comment[publisher] = Universidade Federal do Pará
+      # Publisher: Universidade Federal do Pará
       param[base_url] = http://www.periodicos.ufpa.br/
       param[journal_id] = amazonica
 
@@ -35,7 +35,7 @@
         issn = 2236-6334
       >
 
-      comment[publisher] = Universidade Federal do Pará
+      # Publisher: Universidade Federal do Pará
       param[base_url] = http://www.periodicos.ufpa.br/
       param[journal_id] = hendu
 
@@ -54,7 +54,7 @@
         eissn = 2179-7536
       >
 
-      comment[publisher] = Universidade Federal do Pará
+      # Publisher: Universidade Federal do Pará
       param[base_url] = http://www.periodicos.ufpa.br/
       param[journal_id] = ncn
 
@@ -87,7 +87,7 @@
         issn = 1807-8338
       >
 
-      comment[publisher] = Universidade Federal do Pará
+      # Publisher: Universidade Federal do Pará
       param[base_url] = http://www.periodicos.ufpa.br/
       param[journal_id] = rebac
 
@@ -107,7 +107,7 @@
         issn = 1413-1498
       >
 
-      comment[publisher] = Universidade Federal do Pará
+      # Publisher: Universidade Federal do Pará
       param[base_url] = http://www.periodicos.ufpa.br/
       param[journal_id] = rve
 

@@ -6,7 +6,7 @@
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
     implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
 
-  comment[0] = base_url is blacklisted. New base_url is: http://sustenere.co/journals/
+  # base_url is blacklisted. New base_url is: http://sustenere.co/journals/
 
 
   {
@@ -16,7 +16,7 @@
         issn = 2237-9290
       >
 
-      comment[publisher] = Escola Superior de Sustentabilidade
+      # Publisher: Escola Superior de Sustentabilidade
       param[journal_id] = naturalresources
       {
       param[base_url] = http://www.arvore.org.br/seer/
@@ -43,7 +43,7 @@
         issn = 1983-8344
       >
 
-      comment[publisher] = Escola Superior de Sustentabilidade
+      # Publisher: Escola Superior de Sustentabilidade
       param[journal_id] = nature
       {
       param[base_url] = http://www.arvore.org.br/seer/
@@ -75,7 +75,7 @@
         issn = 2179-684X
       >
 
-      comment[publisher] = Escola Superior de Sustentabilidade
+      # Publisher: Escola Superior de Sustentabilidade
       param[journal_id] = rbadm
       {
       param[base_url] = http://www.arvore.org.br/seer/
@@ -104,7 +104,7 @@
         issn = 2179-6858
       >
 
-      comment[publisher] = Escola Superior de Sustentabilidade
+      # Publisher: Escola Superior de Sustentabilidade
       param[journal_id] = rica
       {
       param[base_url] = http://www.arvore.org.br/seer/
@@ -132,7 +132,7 @@
         issn = 2236-9600
       >
 
-      comment[publisher] = Escola Superior de Sustentabilidade
+      # Publisher: Escola Superior de Sustentabilidade
       param[journal_id] = sciresalutis
       {
       param[base_url] = http://www.arvore.org.br/seer/

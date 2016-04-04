@@ -13,7 +13,7 @@
         eissn = 2237-9010
       >
 
-      comment[publisher] = Universidade do Contestado
+      # Publisher: Universidade do Contestado
       param[base_url] = http://www.periodicos.unc.br/
       param[journal_id] = agora
 
@@ -32,7 +32,7 @@
         eissn = 2237-9029
       >
 
-      comment[publisher] = Universidade do Contestado
+      # Publisher: Universidade do Contestado
       param[base_url] = http://www.periodicos.unc.br/
       param[journal_id] = drd
 
@@ -49,7 +49,7 @@
         eissn = 2316-347X
       >
 
-      comment[publisher] = Universidade do Contestado
+      # Publisher: Universidade do Contestado
       param[base_url] = http://www.periodicos.unc.br/
       param[journal_id] = sma
 

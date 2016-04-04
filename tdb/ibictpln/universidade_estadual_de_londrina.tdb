@@ -13,7 +13,7 @@
         eissn = 1984-3356
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = antiteses
 
@@ -36,7 +36,7 @@
         eissn = 2177-9333
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = rebrafis
 
@@ -55,7 +55,7 @@
         eissn = 2316-5200
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = bbr
 
@@ -74,7 +74,7 @@
         eissn = 1984-7939
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = discursosfotograficos
 
@@ -100,7 +100,7 @@
         eissn = 2317-627X
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = ecoreg
 
@@ -118,7 +118,7 @@
         eissn = 1519-5392
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = entretextos
 
@@ -143,7 +143,7 @@
         eissn = 1517-7130
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = espacoparasaude
 
@@ -164,7 +164,7 @@
         eissn = 2236-6407
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = eip
 
@@ -185,7 +185,7 @@
         eissn = 0102-3888
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = geografia
 
@@ -217,7 +217,7 @@
         eissn = 2175-5604
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = germinal
 
@@ -235,7 +235,7 @@
         eissn = 2238-3018
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = histensino
 
@@ -268,7 +268,7 @@
         eissn = 1981-8920
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = informacao
 
@@ -303,7 +303,7 @@
         eissn = 2317-4390
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = infoprof
 
@@ -320,10 +320,10 @@
         eissn = 2176-6665
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = mediacoes
-      comment[notReady] = Unmapped exception: org.apache.commons.httpclient.ProtocolException: The server www.uel.br failed to respond with a valid HTTP response
+      # notReady: Unmapped exception: org.apache.commons.httpclient.ProtocolException: The server www.uel.br failed to respond with a valid HTTP response
 
       au < released ; 1996 ; 1 ; Mediações Volume 1 ; 1996 ; >
       au < released ; 1997 ; 2 ; Mediações Volume 2 ; 1997 ; >
@@ -356,7 +356,7 @@
         eissn = 1983-6546 
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = portalcartografia
 
@@ -373,7 +373,7 @@
         eissn = 2236-2207
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = projetica
 
@@ -394,7 +394,7 @@
         eissn = 2237-0099
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = rec
 
@@ -412,7 +412,7 @@
         eissn = 1980-511X
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = direitopub
 
@@ -438,7 +438,7 @@
         eissn = 2178-8189
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = iuris
 
@@ -470,10 +470,10 @@
         eissn = 1679-0359
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = semagrarias
-      comment[notReady] = Can't store page: java.lang.IllegalArgumentException: Unavailable au manager:NodeManager
+      # notReady: Can't store page: java.lang.IllegalArgumentException: Unavailable au manager:NodeManager
 
       au < released ; 1978 ; 1 ; Semina: Ciências Agrárias Volume 1 (1978) ; 1978 ; >
       au < released ; 1979 ; 1 ; Semina: Ciências Agrárias Volume 1 (1979) ; 1979 ; >
@@ -525,7 +525,7 @@
         eissn = 1679-0367
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = seminabio
 
@@ -578,7 +578,7 @@
         eissn = 1679-0375
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = semexatas
 
@@ -629,7 +629,7 @@
         eissn = 1679-0383
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = seminasoc
 
@@ -670,7 +670,7 @@
         eissn = 1679-4842
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = ssrevista
       comment[status] = all pages direct to a login page. Mark down? 20151103
@@ -693,10 +693,10 @@
         eissn = 2237-4876
       >
 
-      comment[publisher] = Universidade Estadual de Londrina
+      # Publisher: Universidade Estadual de Londrina
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = signum
-      comment[notReady] = Unmapped exception: org.apache.commons.httpclient.ProtocolException: The server www.uel.br failed to respond with a valid HTTP response
+      # notReady: Unmapped exception: org.apache.commons.httpclient.ProtocolException: The server www.uel.br failed to respond with a valid HTTP response
 
       au < released ; 1998 ; 1 ; Signum: Estudos da Linguagem Volume 1 ; 1998 ; >
       au < released ; 1999 ; 2 ; Signum: Estudos da Linguagem Volume 2 ; 1999 ; >

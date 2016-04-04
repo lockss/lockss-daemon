@@ -13,7 +13,7 @@
         issn = 2238-2259
       >
 
-      comment[publisher] = CentroParaná
+      # Publisher: CentroParaná
       param[base_url] = http://revista.ulbrajp.edu.br/ojs/
       param[journal_id] = actabrasileira
 
@@ -32,7 +32,7 @@
         issn = 1980-5152
       >
 
-      comment[publisher] = CentroParaná
+      # Publisher: CentroParaná
       param[base_url] = http://revista.ulbrajp.edu.br/ojs/
       param[journal_id] = ciencia
 
@@ -51,7 +51,7 @@
         eissn = 1981-4550
       >
 
-      comment[publisher] = CentroParaná
+      # Publisher: CentroParaná
       param[base_url] = http://revista.ulbrajp.edu.br/ojs/
       param[journal_id] = jussocietas
 
@@ -75,7 +75,7 @@
         eissn = 2238-1376
       >
 
-      comment[publisher] = CentroParaná
+      # Publisher: CentroParaná
       param[base_url] = http://revista.ulbrajp.edu.br/ojs/
       param[journal_id] = contabeis
 
@@ -93,7 +93,7 @@
         eissn = 1807-5770
       >
 
-      comment[publisher] = CentroParaná
+      # Publisher: CentroParaná
       param[base_url] = http://revista.ulbrajp.edu.br/ojs/
       param[journal_id] = salao
 

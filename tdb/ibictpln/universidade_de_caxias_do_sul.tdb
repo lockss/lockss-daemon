@@ -13,7 +13,7 @@
         issn = 1984-4921
       >
 
-      comment[publisher] = Universidade de Caxias do Sul
+      # Publisher: Universidade de Caxias do Sul
       param[base_url] = http://www.ucs.br/etc/revistas/
       param[journal_id] = antares
 
@@ -34,7 +34,7 @@
         name = Anuário de Pesquisa do Programa de Pós-Graduação em Turismo
       >
 
-      comment[publisher] = Universidade de Caxias do Sul
+      # Publisher: Universidade de Caxias do Sul
       param[base_url] = http://www.ucs.br/etc/revistas/
       param[journal_id] = dossierosadosventos
 
@@ -50,7 +50,7 @@
         eissn = 2178-2687
       >
 
-      comment[publisher] = Universidade de Caxias do Sul
+      # Publisher: Universidade de Caxias do Sul
       param[base_url] = http://www.ucs.br/etc/revistas/
       param[journal_id] = conexao
 
@@ -80,7 +80,7 @@
         eissn = 2178-4612
       >
 
-      comment[publisher] = Universidade de Caxias do Sul
+      # Publisher: Universidade de Caxias do Sul
       param[base_url] = http://www.ucs.br/etc/revistas/
       param[journal_id] = conjectura
 
@@ -102,7 +102,7 @@
         issn = 2238-1546
       >
 
-      comment[publisher] = Universidade de Caxias do Sul
+      # Publisher: Universidade de Caxias do Sul
       param[base_url] = http://www.ucs.br/etc/revistas/
       param[journal_id] = docorpo
 
@@ -121,7 +121,7 @@
         eissn = 2237-0021
       >
 
-      comment[publisher] = Universidade de Caxias do Sul
+      # Publisher: Universidade de Caxias do Sul
       param[base_url] = http://www.ucs.br/etc/revistas/
       param[journal_id] = direitoambiental
 
@@ -142,7 +142,7 @@
         eissn = 2236-2762
       >
 
-      comment[publisher] = Universidade de Caxias do Sul
+      # Publisher: Universidade de Caxias do Sul
       param[base_url] = http://www.ucs.br/etc/revistas/
       param[journal_id] = metis
 
@@ -171,7 +171,7 @@
         eissn = 2178-9061
       >
 
-      comment[publisher] = Universidade de Caxias do Sul
+      # Publisher: Universidade de Caxias do Sul
       param[base_url] = http://www.ucs.br/etc/revistas/
       param[journal_id] = rosadosventos
 

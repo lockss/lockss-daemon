@@ -14,7 +14,7 @@
         eissn = 2236-2029
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = EconRev
 
@@ -34,7 +34,7 @@
         eissn = 1807-8621
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = ActaSciAgron
 
@@ -68,7 +68,7 @@
         eissn = 1807-8672
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = ActaSciAnimSci
 
@@ -102,10 +102,10 @@
         eissn = 1807-863X
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = ActaSciBiolSci
-      comment[notReady] = Can't store page: java.lang.IllegalArgumentException: Unavailable au manager:NodeManager
+      # notReady: Can't store page: java.lang.IllegalArgumentException: Unavailable au manager:NodeManager
 
       au < released ; 1998 ; 1 ; Acta Scientiarum. Biological Sciences Volume 1998 ; 1998 ; >
       au < released ; 1999 ; 2 ; Acta Scientiarum. Biological Sciences Volume 1999 ; 1999 ; >
@@ -137,7 +137,7 @@
         eissn = 2178-5201
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = ActaSciEduc
 
@@ -157,7 +157,7 @@
         eissn = 1807-8648
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = ActaSciHealthSci
 
@@ -189,7 +189,7 @@
         eissn = 1807-8656
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = ActaSciHumanSocSci
 
@@ -221,7 +221,7 @@
         eissn = 1983-4683
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = ActaSciLangCult
 
@@ -245,7 +245,7 @@
         eissn = 1807-8664
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = ActaSciTechnol
 
@@ -277,7 +277,7 @@
         eissn = 1980-959X
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = ArqMudi
 
@@ -312,7 +312,7 @@
         eissn = 2175-1188
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = BSocParanMat
 
@@ -335,7 +335,7 @@
         issn = 1677-4450
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = BConjEcon
 
@@ -358,10 +358,10 @@
         eissn = 2176-4786
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = BolGeogr
-      comment[notReady] = Can't store page: java.lang.IllegalArgumentException: Unavailable au manager:NodeManager
+      # notReady: Can't store page: java.lang.IllegalArgumentException: Unavailable au manager:NodeManager
 
       au < released ; 1983 ; 1 ; Boletim de Geografia Volume 1983 ; 1983 ; >
       au < released ; 1984 ; 2 ; Boletim de Geografia Volume 1984 ; 1984 ; >
@@ -407,7 +407,7 @@
         issn = 1516-1803
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = CadAdm
 
@@ -432,7 +432,7 @@
         eissn = 1984-7513
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = CiencCuidSaude
 
@@ -459,7 +459,7 @@
         eissn = 1984-882X
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = Enfoque
 
@@ -483,7 +483,7 @@
         eissn = 2175-862X
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = Geoinga
 
@@ -503,7 +503,7 @@
         eissn = 2179-8427
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = ImagensEduc
 
@@ -522,7 +522,7 @@
         eissn = 1983-3083
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = RevEducFis
 
@@ -565,7 +565,7 @@
         eissn = 2179-1511
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = RevCiencJurid
 
@@ -583,7 +583,7 @@
         issn = 1519-6186
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = EspacoAcademico
 
@@ -603,7 +603,7 @@
         eissn = 2177-3300
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = Percurso
 
@@ -623,7 +623,7 @@
         issn = 1517-8048
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = RevTecnol
 
@@ -645,7 +645,7 @@
         issn = 0100-9354
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = RevUNIMAR
 
@@ -660,7 +660,7 @@
         eissn = 1519-6178
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = Urutagua
 
@@ -682,7 +682,7 @@
         eissn = 2237-8707
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = TeorPratEduc
 
@@ -702,7 +702,7 @@
         eissn = 2238-0094
       >
 
-      comment[publisher] = Universidade Estadual de Maringá
+      # Publisher: Universidade Estadual de Maringá
       param[base_url] = http://www.rbhe.sbhe.org.br/
       param[journal_id] = rbhe
 

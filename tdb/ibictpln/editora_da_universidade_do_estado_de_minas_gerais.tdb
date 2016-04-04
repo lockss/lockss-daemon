@@ -13,7 +13,7 @@
         issn = 2317-0093
       >
 
-      comment[publisher] = Editora da Universidade do Estado de Minas Gerais
+      # Publisher: Editora da Universidade do Estado de Minas Gerais
       param[base_url] = http://www.uemg.br/openjournal/
       param[journal_id] = educacaoemfoco
 
@@ -36,7 +36,7 @@
         eissn = 2238-2801
       >
 
-      comment[publisher] = Editora da Universidade do Estado de Minas Gerais
+      # Publisher: Editora da Universidade do Estado de Minas Gerais
       param[base_url] = http://www.uemg.br/openjournal/
       param[journal_id] = malestar
 

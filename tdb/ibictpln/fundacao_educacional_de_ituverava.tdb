@@ -14,7 +14,7 @@
         eissn = 2175-1463
       >
 
-      comment[publisher] = Fundação Educacional de Ituverava
+      # Publisher: Fundação Educacional de Ituverava
       param[base_url] = http://www.nucleus.feituverava.com.br/
       param[journal_id] = animalium
 
@@ -37,10 +37,10 @@
         eissn = 1982-2278
       >
 
-      comment[publisher] = Fundação Educacional de Ituverava
+      # Publisher: Fundação Educacional de Ituverava
       param[base_url] = http://www.nucleus.feituverava.com.br/
       param[journal_id] = nucleus
-      comment[notReady] = Fetch Error. 2012 Redirects to a login page. http://www.nucleus.feituverava.com.br/index.php/nucleus/article/view/759/871
+      # notReady: Fetch Error. 2012 Redirects to a login page. http://www.nucleus.feituverava.com.br/index.php/nucleus/article/view/759/871
 
       au < notReady ; 2003 ; 1 ; Revista Nucleus Volume 2003 ; 2003 ; articles need login >
       au < notReady ; 2004 ; 2 ; Revista Nucleus Volume 2004 ; 2004 ; articles need login >

@@ -14,7 +14,7 @@
         eissn = 2178-7727
       >
 
-      comment[publisher] = Universidade Luterana do Brasil
+      # Publisher: Universidade Luterana do Brasil
       param[base_url] = http://www.periodicos.ulbra.br/
       param[journal_id] = acta
 
@@ -41,7 +41,7 @@
         eissn = 2317-4323
       >
 
-      comment[publisher] = Universidade Luterana do Brasil
+      # Publisher: Universidade Luterana do Brasil
       param[base_url] = http://www.periodicos.ulbra.br/
       param[journal_id] = ic
 
@@ -59,7 +59,7 @@
         issn = 2236-8396
       >
 
-      comment[publisher] = Universidade Luterana do Brasil
+      # Publisher: Universidade Luterana do Brasil
       param[base_url] = http://www.periodicos.ulbra.br/
       param[journal_id] = stomatos
 

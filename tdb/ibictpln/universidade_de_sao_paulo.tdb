@@ -130,7 +130,7 @@
         issn = 1808-057X
       >
 
-      comment[publisher] = Universidade de São Paulo
+      # Publisher: Universidade de São Paulo
       param[base_url] = http://www.atena.org.br/revista/ojs-2.2.3-06/
       param[journal_id] = RCF-USP
 
@@ -145,7 +145,7 @@
         eissn = 2178-2075
       >
 
-      comment[publisher] = Universidade de São Paulo
+      # Publisher: Universidade de São Paulo
       param[base_url] = http://www.revistas.usp.br/
       param[journal_id] = incid
 
@@ -166,7 +166,7 @@
         eissn = 2176-1507
       >
 
-      comment[publisher] = Universidade de São Paulo
+      # Publisher: Universidade de São Paulo
       param[base_url] = http://www.usp.br/alterjor/ojs/
       param[journal_id] = alterjor
 

@@ -13,7 +13,7 @@
         issn = 1980-6582
       >
 
-      comment[publisher] = Universidade Tecnológica Federal do Paraná-Pato Branco
+      # Publisher: Universidade Tecnológica Federal do Paraná-Pato Branco
       param[base_url] = http://revistas.utfpr.edu.br/pb/
       param[journal_id] = BolsTecnUTFPR
 
@@ -30,7 +30,7 @@
         issn = 2238-4901
       >
 
-      comment[publisher] = Universidade Tecnológica Federal do Paraná-Pato Branco
+      # Publisher: Universidade Tecnológica Federal do Paraná-Pato Branco
       param[base_url] = http://revistas.utfpr.edu.br/pb/
       param[journal_id] = CAP
 
@@ -54,7 +54,7 @@
         eissn = 2179-6122
       >
 
-      comment[publisher] = Universidade Tecnológica Federal do Paraná-Pato Branco
+      # Publisher: Universidade Tecnológica Federal do Paraná-Pato Branco
       param[base_url] = http://revistas.utfpr.edu.br/pb/
       param[journal_id] = revedutec-ct
 
@@ -79,7 +79,7 @@
         eissn = 1984-7378
       >
 
-      comment[publisher] = Universidade Tecnológica Federal do Paraná-Pato Branco
+      # Publisher: Universidade Tecnológica Federal do Paraná-Pato Branco
       param[base_url] = http://revistas.utfpr.edu.br/pb/
       param[journal_id] = ecap
 
@@ -99,10 +99,10 @@
         eissn = 2316-4689
       >
 
-      comment[publisher] = Universidade Tecnológica Federal do Paraná-Pato Branco
+      # Publisher: Universidade Tecnológica Federal do Paraná-Pato Branco
       param[base_url] = http://revistas.utfpr.edu.br/pb/
       param[journal_id] = SysScy
-      comment[notReady] = Recursive author links: http://revistas.utfpr.edu.br/pb/index.php/SysScy/rt/bio/690/www.pessoal.utfpr.edu.br/eustaquio http://revistas.utfpr.edu.br/pb/index.php/SysScy/rt/bio/690/www.mat.ufpr.br/~karas  http://revistas.utfpr.edu.br/pb/index.php/SysScy/rt/bio/690/www.mat.ufpr.br/~ademir
+      # notReady: Recursive author links: http://revistas.utfpr.edu.br/pb/index.php/SysScy/rt/bio/690/www.pessoal.utfpr.edu.br/eustaquio http://revistas.utfpr.edu.br/pb/index.php/SysScy/rt/bio/690/www.mat.ufpr.br/~karas  http://revistas.utfpr.edu.br/pb/index.php/SysScy/rt/bio/690/www.mat.ufpr.br/~ademir
 
       au < released ; 2007 ; 1 ; Synergismus scyentifica UTFPR Volume 2007 ; 2007 ; >
       au < released ; 2008 ; 2 ; Synergismus scyentifica UTFPR Volume 2008 ; 2008 ; >

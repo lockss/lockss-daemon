@@ -5,7 +5,7 @@
 
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
     implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
-    comment[notReady] = No permission statement on manifest page.
+    # notReady: No permission statement on manifest page.
 
   {
 
@@ -14,7 +14,7 @@
         eissn = 2316-2651
       >
 
-      comment[publisher] = Faculdades Metropolitanas Unidas
+      # Publisher: Faculdades Metropolitanas Unidas
       param[base_url] = http://www.revistaseletronicas.fmu.br/
       param[journal_id] = remades
 
@@ -31,7 +31,7 @@
         eissn = 2316-1515
       >
 
-      comment[publisher] = Faculdades Metropolitanas Unidas
+      # Publisher: Faculdades Metropolitanas Unidas
       param[base_url] = http://www.revistaseletronicas.fmu.br/
       param[journal_id] = RMDIR
 

@@ -13,7 +13,7 @@
         issn = 1678-765X
       >
 
-      comment[publisher] = Universidade Estadual de Campinas, Sistema de Bibliotecas
+      # Publisher: Universidade Estadual de Campinas, Sistema de Bibliotecas
       {
       param[base_url] = http://periodicos.sbu.unicamp.br/ojs/
       param[journal_id] = rbci

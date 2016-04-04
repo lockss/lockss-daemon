@@ -13,7 +13,7 @@
         issn = 2237-6836
       >
 
-      comment[publisher] = Universidade Federal de Minas Gerais
+      # Publisher: Universidade Federal de Minas Gerais
       param[base_url] = http://www.periodicos.letras.ufmg.br/
       param[journal_id] = anais_coloquio
 
@@ -30,7 +30,7 @@
         issn = 2317-0239
       >
 
-      comment[publisher] = Universidade Federal de Minas Gerais
+      # Publisher: Universidade Federal de Minas Gerais
       param[base_url] = http://www.periodicos.letras.ufmg.br/
       param[journal_id] = anais_linguagem_tecnologia
 
@@ -47,7 +47,7 @@
         eissn = 2238-3824
       >
 
-      comment[publisher] = Universidade Federal de Minas Gerais
+      # Publisher: Universidade Federal de Minas Gerais
       param[base_url] = http://www.periodicos.letras.ufmg.br/
       param[journal_id] = caligrama
 
@@ -85,7 +85,7 @@
         eissn = 1982-0739
       >
 
-      comment[publisher] = Universidade Federal de Minas Gerais
+      # Publisher: Universidade Federal de Minas Gerais
       param[base_url] = http://www.periodicos.letras.ufmg.br/
       param[journal_id] = emtese
 
@@ -116,7 +116,7 @@
         issn = 1982-3053
       >
 
-      comment[publisher] = Universidade Federal de Minas Gerais
+      # Publisher: Universidade Federal de Minas Gerais
       param[base_url] = http://www.periodicos.letras.ufmg.br/
       param[journal_id] = maaravi
 
@@ -137,7 +137,7 @@
         issn = 1983-3636
       >
 
-      comment[publisher] = Universidade Federal de Minas Gerais
+      # Publisher: Universidade Federal de Minas Gerais
       param[base_url] = http://www.periodicos.letras.ufmg.br/
       param[journal_id] = nuntius_antiquus
 
@@ -157,7 +157,7 @@
         eissn = 2317-4242
       >
 
-      comment[publisher] = Universidade Federal de Minas Gerais
+      # Publisher: Universidade Federal de Minas Gerais
       param[base_url] = http://www.periodicos.letras.ufmg.br/
       param[journal_id] = revele
 
@@ -175,7 +175,7 @@
         issn = 2317-0247
       >
 
-      comment[publisher] = Universidade Federal de Minas Gerais
+      # Publisher: Universidade Federal de Minas Gerais
       param[base_url] = http://www.periodicos.letras.ufmg.br/
       param[journal_id] = stis
 
@@ -191,7 +191,7 @@
         issn = 1983-3652
       >
 
-      comment[publisher] = Universidade Federal de Minas Gerais
+      # Publisher: Universidade Federal de Minas Gerais
       param[base_url] = http://www.periodicos.letras.ufmg.br/
       param[journal_id] = textolivre
 
@@ -214,7 +214,7 @@
         issn = 2317-0220
       >
 
-      comment[publisher] = Universidade Federal de Minas Gerais
+      # Publisher: Universidade Federal de Minas Gerais
       param[base_url] = http://www.periodicos.letras.ufmg.br/
       param[journal_id] = ueadsl
 
@@ -233,7 +233,7 @@
         eissn = 2238-037X
       >
 
-      comment[publisher] = Universidade Federal de Minas Gerais
+      # Publisher: Universidade Federal de Minas Gerais
       param[base_url] = http://www.portal.fae.ufmg.br/
       param[journal_id] = trabedu
 
@@ -266,7 +266,7 @@
         eissn = 2317-2096
       >
 
-      comment[publisher] = Universidade Federal de Minas Gerais
+      # Publisher: Universidade Federal de Minas Gerais
       param[base_url] = http://www.uemg.br/openjournal/
       param[journal_id] = aletria
 

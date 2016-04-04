@@ -14,7 +14,7 @@
         issn = 2179-5746
       >
 
-      comment[publisher] = Universidade Federal do Amapá
+      # Publisher: Universidade Federal do Amapá
       param[journal_id] = biota
 
     {
@@ -44,7 +44,7 @@
         issn = 2179-9563
       >
 
-      comment[publisher] = Universidade Federal do Amapá
+      # Publisher: Universidade Federal do Amapá
       param[journal_id] = cienciaequatorial
     {
       param[base_url] = https://periodicos.unifap.br/
@@ -68,7 +68,7 @@
         issn = 2179-1902
       >
 
-      comment[publisher] = Universidade Federal do Amapá
+      # Publisher: Universidade Federal do Amapá
       param[journal_id] = estacao
     {
       param[base_url] = https://periodicos.unifap.br/
@@ -96,7 +96,7 @@
         issn = 2238-8060
       >
 
-      comment[publisher] = Universidade Federal do Amapá
+      # Publisher: Universidade Federal do Amapá
       param[journal_id] = letras
     {
       param[base_url] = https://periodicos.unifap.br/
@@ -125,7 +125,7 @@
         issn = 2177-1642
       >
 
-      comment[publisher] = Universidade Federal do Amapá
+      # Publisher: Universidade Federal do Amapá
       param[journal_id] = planeta
     {
       param[base_url] = https://periodicos.unifap.br/
@@ -156,7 +156,7 @@
         eissn = 1984-4352
       >
 
-      comment[publisher] = Universidade Federal do Amapá
+      # Publisher: Universidade Federal do Amapá
       param[journal_id] = pracs
     {
       param[base_url] = https://periodicos.unifap.br/
@@ -191,7 +191,7 @@
         issn = 1519-5228
       >
 
-      comment[publisher] = Universidade Federal do Amapá
+      # Publisher: Universidade Federal do Amapá
       param[base_url] = https://periodicos.unifap.br/
       param[journal_id] = bioterra
 

@@ -13,7 +13,7 @@
         issn = 1809-8363
       >
 
-      comment[publisher] = Universidade Federal de Juiz de Fora
+      # Publisher: Universidade Federal de Juiz de Fora
       param[base_url] = http://www.aps.ufjf.br/
       param[journal_id] = aps
       comment[base_url] = website down?
@@ -35,7 +35,7 @@
         issn = 1982-8047
       >
 
-      comment[publisher] = Universidade Federal de Juiz de Fora
+      # Publisher: Universidade Federal de Juiz de Fora
       param[base_url] = http://www.aps.ufjf.br/
       param[journal_id] = hurevista
       comment[base_url] = website down?
@@ -60,7 +60,7 @@
         eissn = 1982-2243
       >
 
-      comment[publisher] = Universidade Federal de Juiz de Fora
+      # Publisher: Universidade Federal de Juiz de Fora
       param[base_url] = http://www.ufjf.br/
       param[journal_id] = revistaveredas
 

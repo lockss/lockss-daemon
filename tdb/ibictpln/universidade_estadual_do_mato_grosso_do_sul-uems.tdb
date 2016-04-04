@@ -13,7 +13,7 @@
         issn = 2237-2431
       >
 
-      comment[publisher] = Universidade Estadual do Mato Grosso do Sul-UEMS
+      # Publisher: Universidade Estadual do Mato Grosso do Sul-UEMS
       param[base_url] = http://periodicos.uems.br/novo/
       param[journal_id] = cdcs
 
@@ -30,7 +30,7 @@
         issn = 2178-1818
       >
 
-      comment[publisher] = Universidade Estadual do Mato Grosso do Sul-UEMS
+      # Publisher: Universidade Estadual do Mato Grosso do Sul-UEMS
       param[base_url] = http://periodicos.uems.br/novo/
       param[journal_id] = direitoedireitos
 
@@ -47,7 +47,7 @@
         issn = 2237-518X
       >
 
-      comment[publisher] = Universidade Estadual do Mato Grosso do Sul-UEMS
+      # Publisher: Universidade Estadual do Mato Grosso do Sul-UEMS
       param[base_url] = http://periodicos.uems.br/novo/
       param[journal_id] = ecaeco
 
@@ -64,7 +64,7 @@
         issn = 2179-7773
       >
 
-      comment[publisher] = Universidade Estadual do Mato Grosso do Sul-UEMS
+      # Publisher: Universidade Estadual do Mato Grosso do Sul-UEMS
       param[base_url] = http://periodicos.uems.br/novo/
       param[journal_id] = egrad
 
@@ -81,7 +81,7 @@
         issn = 2316-2686
       >
 
-      comment[publisher] = Universidade Estadual do Mato Grosso do Sul-UEMS
+      # Publisher: Universidade Estadual do Mato Grosso do Sul-UEMS
       param[base_url] = http://periodicos.uems.br/novo/
       param[journal_id] = encontrointernacional
 
@@ -98,7 +98,7 @@
         issn = 2179-7447
       >
 
-      comment[publisher] = Universidade Estadual do Mato Grosso do Sul-UEMS
+      # Publisher: Universidade Estadual do Mato Grosso do Sul-UEMS
       param[base_url] = http://periodicos.uems.br/novo/
       param[journal_id] = enic
 
@@ -116,10 +116,10 @@
         issn = 2177-7691
       >
 
-      comment[publisher] = Universidade Estadual do Mato Grosso do Sul-UEMS
+      # Publisher: Universidade Estadual do Mato Grosso do Sul-UEMS
       param[base_url] = http://periodicos.uems.br/novo/
       param[journal_id] = interfaces
-      comment[notReady] = no permission from publisher
+      # notReady: no permission from publisher
 
       au < exists ; 2010 ; 1 ; Revista Interfaces da Educação Volume 1 ; 0001 ; >
       au < exists ; 2011 ; 2 ; Revista Interfaces da Educação Volume 2 ; 0002 ; >
@@ -137,7 +137,7 @@
         issn = 2177-904X
       >
 
-      comment[publisher] = Universidade Estadual do Mato Grosso do Sul-UEMS
+      # Publisher: Universidade Estadual do Mato Grosso do Sul-UEMS
       param[base_url] = http://periodicos.uems.br/novo/
       param[journal_id] = semex
 

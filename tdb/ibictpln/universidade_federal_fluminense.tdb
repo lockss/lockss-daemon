@@ -13,7 +13,7 @@
         issn = 2179-7331
       >
 
-      comment[publisher] = Universidade Federal Fluminense
+      # Publisher: Universidade Federal Fluminense
       param[base_url] = http://www.revistas.uff.br/
       param[journal_id] = antropolitica
 
@@ -32,7 +32,7 @@
         issn = 2237-941X
       >
 
-      comment[publisher] = Universidade Federal Fluminense
+      # Publisher: Universidade Federal Fluminense
       param[base_url] = http://www.uff.br/periodicoshumanas/
       param[journal_id] = ecos
 
@@ -49,7 +49,7 @@
         issn = 2175-0564
       >
 
-      comment[publisher] = Universidade Federal Fluminense
+      # Publisher: Universidade Federal Fluminense
       param[base_url] = http://www.uff.br/periodicoshumanas/
       param[journal_id] = ensaios
 
@@ -71,7 +71,7 @@
         issn = 1984-0292
       >
 
-      comment[publisher] = Universidade Federal Fluminense
+      # Publisher: Universidade Federal Fluminense
       param[base_url] = http://www.uff.br/periodicoshumanas/
       param[journal_id] = Fractal
 
@@ -112,7 +112,7 @@
         eissn = 2318-4558
       >
 
-      comment[publisher] = Universidade Federal Fluminense
+      # Publisher: Universidade Federal Fluminense
       param[base_url] = http://www.confluencias.uff.br/
       param[journal_id] = confluencias
 
@@ -139,7 +139,7 @@
         eissn = 1983-4152
       >
 
-      comment[publisher] = Universidade Federal Fluminense
+      # Publisher: Universidade Federal Fluminense
       param[base_url] = http://www.uff.br/jsncare/
       param[journal_id] = jsncare
 
@@ -162,7 +162,7 @@
         eissn = 1984-7130
       >
 
-      comment[publisher] = Universidade Federal Fluminense
+      # Publisher: Universidade Federal Fluminense
       param[base_url] = http://www.uff.br/rbcv/ojs/
       param[journal_id] = rbcv
 
@@ -199,7 +199,7 @@
         eissn = 2316-1108
       >
 
-      comment[publisher] = Universidade Federal Fluminense
+      # Publisher: Universidade Federal Fluminense
       param[base_url] = http://www.revistagenero.uff.br/
       param[journal_id] = revistagenero
 
@@ -229,7 +229,7 @@
         eissn = 1982-2596
       >
 
-      comment[publisher] = Universidade Federal Fluminense
+      # Publisher: Universidade Federal Fluminense
       param[base_url] = http://www.uff.br/pae/
       param[journal_id] = pca
 

@@ -13,7 +13,7 @@
         issn = 1984-3801
       >
 
-      comment[publisher] = Instituto Federal Goiano-Campus Rio Verde
+      # Publisher: Instituto Federal Goiano-Campus Rio Verde
       param[base_url] = http://rioverde.ifgoiano.edu.br/periodicos/
       param[journal_id] = gst
 
@@ -33,7 +33,7 @@
         issn = 2175-6325
       >
 
-      comment[publisher] = Instituto Federal Goiano-Campus Rio Verde
+      # Publisher: Instituto Federal Goiano-Campus Rio Verde
       param[base_url] = http://rioverde.ifgoiano.edu.br/periodicos/
       param[journal_id] = vidadeensino
 
