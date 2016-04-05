@@ -89,23 +89,23 @@
       param[base_url] = http://est.tempsite.ws/periodicos/
       param[journal_id] = identidade
 
-      au < exists ; 2000 ; 1 ; Identidade! Volume 2000 ; 2000 ; >
-      au < manifest ; 2001 ; 2 ; Identidade! Volume 2001 ; 2001 ; >
-      au < manifest ; 2002 ; 3 ; Identidade! Volume 2002 ; 2002 ; >
-      au < manifest ; 2003 ; 4 ; Identidade! Volume 2003 ; 2003 ; >
-      au < manifest ; 2004 ; 5-6 ; Identidade! Volume 2004 ; 2004 ; >
-      au < manifest ; 2005 ; 7-8 ; Identidade! Volume 2005 ; 2005 ; >
-      au < manifest ; 2006 ; 9-10 ; Identidade! Volume 2006 ; 2006 ; >
-      au < manifest ; 2007 ; 11-12 ; Identidade! Volume 2007 ; 2007 ; >
-      au < manifest ; 2008 ; 13 ; Identidade! Volume 2008 ; 2008 ; >
-      au < manifest ; 2009 ; 14 ; Identidade! Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 15 ; Identidade! Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 16 ; Identidade! Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 17 ; Identidade! Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 18 ; Identidade! Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 19 ; Identidade! Volume 2014 ; 2014 ; >
-      au < manifest ; 2015 ; 20 ; Identidade! Volume 2015 ; 2015 ; >
-      au < expected ; 2016 ; 21 ; Identidade! Volume 2016 ; 2016 ; >
+      au < exists ; 2000 ; 1 ; Identidade! Volume 2000 [tempsite.ws] ; 2000 ; >
+      au < manifest ; 2001 ; 2 ; Identidade! Volume 2001 [tempsite.ws] ; 2001 ; >
+      au < manifest ; 2002 ; 3 ; Identidade! Volume 2002 [tempsite.ws] ; 2002 ; >
+      au < manifest ; 2003 ; 4 ; Identidade! Volume 2003 [tempsite.ws] ; 2003 ; >
+      au < manifest ; 2004 ; 5-6 ; Identidade! Volume 2004 [tempsite.ws] ; 2004 ; >
+      au < manifest ; 2005 ; 7-8 ; Identidade! Volume 2005 [tempsite.ws] ; 2005 ; >
+      au < manifest ; 2006 ; 9-10 ; Identidade! Volume 2006 [tempsite.ws] ; 2006 ; >
+      au < manifest ; 2007 ; 11-12 ; Identidade! Volume 2007 [tempsite.ws] ; 2007 ; >
+      au < manifest ; 2008 ; 13 ; Identidade! Volume 2008 [tempsite.ws] ; 2008 ; >
+      au < manifest ; 2009 ; 14 ; Identidade! Volume 2009 [tempsite.ws] ; 2009 ; >
+      au < released ; 2010 ; 15 ; Identidade! Volume 2010 [tempsite.ws] ; 2010 ; >
+      au < released ; 2011 ; 16 ; Identidade! Volume 2011 [tempsite.ws] ; 2011 ; >
+      au < released ; 2012 ; 17 ; Identidade! Volume 2012 [tempsite.ws] ; 2012 ; >
+      au < released ; 2013 ; 18 ; Identidade! Volume 2013 [tempsite.ws] ; 2013 ; >
+      au < released ; 2014 ; 19 ; Identidade! Volume 2014 [tempsite.ws] ; 2014 ; >
+      au < manifest ; 2015 ; 20 ; Identidade! Volume 2015 [tempsite.ws] ; 2015 ; >
+      au < expected ; 2016 ; 21 ; Identidade! Volume 2016 [tempsite.ws] ; 2016 ; >
 
   }
 
