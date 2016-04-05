@@ -965,12 +965,10 @@
       eissn = 1522-1466
     >
 
-    comment[current_plugin] = aps.APSDrupalPlugin
+    # The current plugin is aps.APSDrupalPlugin
     param[base_url] = http://ajprenal.physiology.org/
     # other possible issn 0363-6127
     {
-
-      pluginSuffix = HighWireStrVolPlugin
 
       au < HighWireStrVolPlugin ; down ; 2005 ; American Journal of Physiology - Renal Physiology Volume 288 ; 288 >
       au < HighWireStrVolPlugin ; down ; 2005 ; American Journal of Physiology - Renal Physiology Volume 289 ; 289 >

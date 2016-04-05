@@ -6,7 +6,6 @@
   >
 
     pluginPrefix = org.lockss.plugin.highwire.
-    pluginSuffix = HighWirePressH20Plugin
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     
     comment[moved] = all moved to Drupal platform

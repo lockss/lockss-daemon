@@ -442,56 +442,6 @@
   {
   
     title <
-      name = Molecular Interventions ;
-      issn = 1534-0384 ;
-      eissn = 1543-2548 ;
-      issnl = 1534-0384
-    >
-
-    {
-      plugin = org.lockss.plugin.highwire.HighWirePressH20TriggeredPlugin
-      param[base_url] = http://molinterv.aspetjournals.org/
-      comment[access] = open access triggered CLOCKSS content
-
-      implicit < status ; year ; name ; param[volume_name] ; proxy >
-
-      au < released ; 2001 ; Molecular Interventions Volume 1 ; 1 ; reingest.lockss.org:80 >
-      au < released ; 2002 ; Molecular Interventions Volume 2 ; 2 ; reingest.lockss.org:80 >
-      au < released ; 2003 ; Molecular Interventions Volume 3 ; 3 ; reingest.lockss.org:80 >
-      au < released ; 2004 ; Molecular Interventions Volume 4 ; 4 ; reingest.lockss.org:80 >
-      au < released ; 2005 ; Molecular Interventions Volume 5 ; 5 ; reingest.lockss.org:80 >
-      au < released ; 2006 ; Molecular Interventions Volume 6 ; 6 ; reingest.lockss.org:80 >
-      au < released ; 2007 ; Molecular Interventions Volume 7 ; 7 ; reingest.lockss.org:80 >
-      au < released ; 2008 ; Molecular Interventions Volume 8 ; 8 ; reingest.lockss.org:80 >
-      au < released ; 2009 ; Molecular Interventions Volume 9 ; 9 ; reingest.lockss.org:80 >
-      au < released ; 2010 ; Molecular Interventions Volume 10 ; 10 ; reingest.lockss.org:80 >
-      au < released ; 2011 ; Molecular Interventions Volume 11 ; 11 ; reingest.lockss.org:80 >
-    }
-    {
-    
-      pluginPrefix = org.lockss.plugin.highwire.
-      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-      comment[down] = ceased publication, offline as of 2011-08-15
-      param[base_url] = http://molinterv.aspetjournals.org/
-
-      au < HighWirePressH20Plugin ; superseded ; 2001 ; Molecular Interventions Volume 1 [superseded] ; 1 >
-      au < HighWirePressH20Plugin ; superseded ; 2002 ; Molecular Interventions Volume 2 [superseded] ; 2 >
-      au < HighWirePressH20Plugin ; superseded ; 2003 ; Molecular Interventions Volume 3 [superseded] ; 3 >
-      au < HighWirePressH20Plugin ; superseded ; 2004 ; Molecular Interventions Volume 4 [superseded] ; 4 >
-      au < HighWirePressH20Plugin ; superseded ; 2005 ; Molecular Interventions Volume 5 [superseded] ; 5 >
-      au < HighWirePressH20Plugin ; superseded ; 2006 ; Molecular Interventions Volume 6 [superseded] ; 6 >
-      au < HighWirePressH20Plugin ; superseded ; 2007 ; Molecular Interventions Volume 7 [superseded] ; 7 >
-      au < HighWirePressH20Plugin ; superseded ; 2008 ; Molecular Interventions Volume 8 [superseded] ; 8 >
-      au < HighWirePressH20Plugin ; superseded ; 2009 ; Molecular Interventions Volume 9 [superseded] ; 9 >
-      au < HighWirePressH20Plugin ; superseded ; 2010 ; Molecular Interventions Volume 10 [superseded] ; 10 >
-      au < HighWirePressH20Plugin ; superseded ; 2011 ; Molecular Interventions Volume 11 [superseded] ; 11 >
-    }
-
-  }
-
-  {
-  
-    title <
       name = Molecular Pharmacology ;
       issn = 0026-895X ;
       eissn = 1521-0111 ;

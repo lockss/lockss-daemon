@@ -328,7 +328,6 @@
 
    {
 
-      param[base_url] = http://alh.sagepub.com/
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 

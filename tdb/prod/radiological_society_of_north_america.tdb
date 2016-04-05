@@ -5,10 +5,8 @@
     info[tester] = 8
   >
   
-  pluginPrefix = org.lockss.plugin.highwire.
-  implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   
-  comment[moving] = moving to Atypon on 20131024
+  # moving to Atypon on 20131024
   
   {
 
@@ -21,6 +19,8 @@
 
     {
 
+      pluginPrefix = org.lockss.plugin.highwire.
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       param[base_url] = http://radiographics.rsnajnls.org/
 
       au < HighWireStrVolPlugin ; superseded ; 2006 ; RadioGraphics Volume 26 [superseded] ; 26 >
@@ -29,6 +29,8 @@
 
     {
 
+      pluginPrefix = org.lockss.plugin.highwire.
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       param[base_url] = http://radiographics.rsna.org/
 
       au < HighWirePressH20Plugin ; down ; 1981 ; RadioGraphics Volume 1 ; 1 >
@@ -94,6 +96,8 @@
 
     {
 
+      pluginPrefix = org.lockss.plugin.highwire.
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       param[base_url] = http://radiology.rsnajnls.org/
 
       au < HighWireStrVolPlugin ; down ; 2006 ; Radiology Volume 241 ; 241 >
@@ -102,6 +106,8 @@
 
     {
 
+      pluginPrefix = org.lockss.plugin.highwire.
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       param[base_url] = http://radiology.rsna.org/
 
       au < HighWirePressH20Plugin ; doNotProcess ; 1923 ; Radiology Volume 1 ; 1 >

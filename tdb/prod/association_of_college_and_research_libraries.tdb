@@ -112,7 +112,6 @@
 
     {
 
-      pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://crln.acrl.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -144,7 +143,6 @@
 
     {
 
-      pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://rbm.acrl.org/
       implicit < status ; year ; name ; param[volume_name] >
 
