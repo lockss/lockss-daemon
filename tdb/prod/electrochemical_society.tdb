@@ -255,7 +255,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; released ; 2014 ; Interface Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; testing ; 2015 ; Interface Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; ready ; 2015 ; Interface Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; expected ; 2016 ; Interface Volume 25 ; 25 >
 
   }

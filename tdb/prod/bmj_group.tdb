@@ -143,7 +143,7 @@
     au < HighWirePressH20Plugin ; notReady ; 2013 ; Annals of the Rheumatic Diseases Volume 73 ; 73 >
     #login page found
     au < HighWirePressH20Plugin ; released ; 2014 ; Annals of the Rheumatic Diseases Volume 74 ; 74 >
-    au < HighWirePressH20Plugin ; testing ; 2015 ; Annals of the Rheumatic Diseases Volume 75 ; 75 >
+    au < HighWirePressH20Plugin ; ready ; 2015 ; Annals of the Rheumatic Diseases Volume 75 ; 75 >
     au < HighWirePressH20Plugin ; expected ; 2016 ; Annals of the Rheumatic Diseases Volume 76 ; 76 >
 
   }
@@ -285,7 +285,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Archives of Disease in Childhood - Education and Practice Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Archives of Disease in Childhood - Education and Practice Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Archives of Disease in Childhood - Education and Practice Volume 99 ; 99 >
-    au < HighWirePressH20Plugin ; testing ; 2015 ; Archives of Disease in Childhood - Education and Practice Volume 100 ; 100 >
+    au < HighWirePressH20Plugin ; ready ; 2015 ; Archives of Disease in Childhood - Education and Practice Volume 100 ; 100 >
     au < HighWirePressH20Plugin ; manifest ; 2016 ; Archives of Disease in Childhood - Education and Practice Volume 101 ; 101 >
 
   }
@@ -331,7 +331,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 97 ; 97 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 99 ; 99 >
-    au < HighWirePressH20Plugin ; testing ; 2015 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 100 ; 100 >
+    au < HighWirePressH20Plugin ; ready ; 2015 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 100 ; 100 >
     au < HighWirePressH20Plugin ; manifest ; 2016 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 101 ; 101 >
 
   }
@@ -462,7 +462,7 @@
 
     param[base_url] = http://innovations.bmj.com/
 
-    au < HighWirePressH20Plugin ; testing ; 2015 ; BMJ Innovations Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 2015 ; BMJ Innovations Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 2016 ; BMJ Innovations Volume 2 ; 2 >
 
   }
@@ -509,7 +509,7 @@
     param[base_url] = http://bmjopenrespres.bmj.com/
 
     au < HighWirePressH20Plugin ; released ; 2014 ; BMJ Open Respiratory Research Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; testing ; 2015 ; BMJ Open Respiratory Research Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 2015 ; BMJ Open Respiratory Research Volume 2 ; 2 >
 
   }
   
@@ -852,7 +852,7 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Emergency Medicine Journal Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Emergency Medicine Journal Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Emergency Medicine Journal Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; testing ; 2015 ; Emergency Medicine Journal Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; ready ; 2015 ; Emergency Medicine Journal Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; manifest ; 2016 ; Emergency Medicine Journal Volume 33 ; 33 >
 
   }
