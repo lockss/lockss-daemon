@@ -3906,7 +3906,6 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://tbt.sagepub.com/
-        implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
         au < manifest ; exists ; 2006 ; The Bible Translator Volume 57 ; 57 ; >
         au < manifest ; exists ; 2007 ; The Bible Translator Volume 58 ; 58 ; >
@@ -9681,7 +9680,6 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://elr.sagepub.com/
-        implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
         au < manifest ; exists ; 1990 ; The Economic and Labour Relations Review Volume 1 ; 1 ; >
         au < manifest ; exists ; 1991 ; The Economic and Labour Relations Review Volume 2 ; 2 ; >
@@ -30484,7 +30482,6 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://mac.sagepub.com/
-        implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
         au < manifest ; exists ; 1968 ; Measurement and Control Volume 1 ; 1 ; >
         au < manifest ; exists ; 1969 ; Measurement and Control Volume 2 ; 2 ; >
@@ -37051,7 +37048,6 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://rme.sagepub.com/
-        implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
         au < manifest ; exists ; 2007 ; Recherche et Applications en Marketing (English Edition) Volume 22 ; 22 ; >
         au < finished ; finished ; 2008 ; Recherche et Applications en Marketing (English Edition) Volume 23 ; 23 ; >
@@ -37080,7 +37076,6 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://ram.sagepub.com/
-        implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
         au < manifest ; exists ; 2007 ; Recherche et Applications en Marketing Volume 22 ; 22 ; >
         au < finished ; finished ; 2008 ; Recherche et Applications en Marketing Volume 23 ; 23 ; >
@@ -46043,7 +46038,6 @@
 
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://cph.sagepub.com/
-    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
     au < exists ; exists ; 2004 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 137 ; 137 ; >
     au < exists ; exists ; 2005 ; Canadian Pharmacists Journal / Revue des Pharmaciens du Canada Volume 138 ; 138 ; >
@@ -48153,8 +48147,6 @@
         eissn = 1743-1344
       >
 
-      {
-
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://ult.sagepub.com/
 
@@ -48172,8 +48164,6 @@
         au < crawling ; exists ; 2015 ; Ultrasound Volume 23 ; 23 ; >
         au < manifest ; exists ; 2016 ; Ultrasound Volume 24 ; 24 ; >
 
-      }
-
     }
 
     {
@@ -48185,8 +48175,6 @@
       >
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-
-     {
       param[base_url] = http://vas.sagepub.com/
 
       au < exists ; exists ; 2004 ; Vascular Volume 12 ; 12 ; >
@@ -48202,25 +48190,6 @@
       au < finished ; finished ; 2014 ; Vascular Volume 22 ; 22 ; >
       au < crawling ; exists ; 2015 ; Vascular Volume 23 ; 23 ; >
       au < manifest ; exists ; 2016 ; Vascular Volume 24 ; 24 ; >
-
-     }
-
-    }
-
-    {
-
-      title <
-        name = Handbook of Practice Management ;
-        type = bookSeries ;
-        issn = 0962-144X ;
-        eissn = 2047-718X
-      >
-
-      pluginSuffix = ClockssHighWirePressH20Plugin
-      param[base_url] = http://hpm.sagepub.com/
-      implicit < status ; status2 ; year ; isbn ; name ; param[volume_name] ; hidden[proxy] >
-
-      au < exists ; exists ; 2009 ; 0-443-04576-3 ; Handbook of Practice Management Volume 71 ; 71 ; >
 
     }
 

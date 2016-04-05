@@ -113,7 +113,6 @@
     {
 
       param[base_url] = http://crln.acrl.org/
-      implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 2004 ; College & Research Libraries News Volume 65 ; 65 >
       au < released ; 2005 ; College & Research Libraries News Volume 66 ; 66 >
@@ -144,7 +143,6 @@
     {
 
       param[base_url] = http://rbm.acrl.org/
-      implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 2000 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 1 ; 1 >
       au < released ; 2001 ; RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage Volume 2 ; 2 >
