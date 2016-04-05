@@ -729,6 +729,7 @@
 
     comment[base_url] = http://www.earlyyearseducator.co.uk/
     param[journal_id] = eyed
+    # volume 17 and 18 are both from 2016.
 
     au < manifest ; 2008 ; Early Years Educator (EYE) Volume 9 ; 9 >
     au < manifest ; 2009 ; Early Years Educator (EYE) Volume 10 ; 10 >
@@ -739,6 +740,7 @@
     au < manifest ; 2014 ; Early Years Educator (EYE) Volume 15 ; 15 >
     au < manifest ; 2015 ; Early Years Educator (EYE) Volume 16 ; 16 >
     au < manifest ; 2016 ; Early Years Educator (EYE) Volume 17 ; 17 >
+    au < manifest ; 2016 ; Early Years Educator (EYE) Volume 18 ; 18 >
 
   }
 
