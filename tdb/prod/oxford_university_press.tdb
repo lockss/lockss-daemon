@@ -1356,7 +1356,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; Analysis Volume 73 ; 73 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Analysis Volume 74 ; 74 >
     au < HighWirePressH20Plugin ; released ; 2015 ; Analysis Volume 75 ; 75 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Analysis Volume 76 ; 76 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Analysis Volume 76 ; 76 >
 
     }
 
@@ -4037,7 +4037,7 @@
     au < oup.OUPDrupalPlugin ; manifest ; 2015 ; Cardiovascular Research Volume 107 ; 107 >
     au < oup.OUPDrupalPlugin ; manifest ; 2015 ; Cardiovascular Research Volume 108 ; 108 >
     au < oup.OUPDrupalPlugin ; manifest ; 2016 ; Cardiovascular Research Volume 109 ; 109 >
-    au < oup.OUPDrupalPlugin ; exists ; 2016 ; Cardiovascular Research Volume 110 ; 110 >
+    au < oup.OUPDrupalPlugin ; manifest ; 2016 ; Cardiovascular Research Volume 110 ; 110 >
     au < oup.OUPDrupalPlugin ; expected ; 2016 ; Cardiovascular Research Volume 111 ; 111 >
     au < oup.OUPDrupalPlugin ; expected ; 2016 ; Cardiovascular Research Volume 112 ; 112 >
 
@@ -5532,7 +5532,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; English Historical Review Volume 128 ; 128 >
     au < HighWirePressH20Plugin ; released ; 2014 ; English Historical Review Volume 129 ; 129 >
     au < HighWirePressH20Plugin ; released ; 2015 ; English Historical Review Volume 130 ; 130 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; English Historical Review Volume 131 ; 131 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; English Historical Review Volume 131 ; 131 >
 
     }
 
@@ -9446,7 +9446,7 @@
     au < released ; 2013-2014 ; ILAR Journal Volume 54 ; 54 >
     au < released ; 2014 ; ILAR Journal Volume 55 ; 55 >
     au < released ; 2015 ; ILAR Journal Volume 56 ; 56 >
-    au < expected ; 2016 ; ILAR Journal Volume 57 ; 57 >
+    au < manifest ; 2016 ; ILAR Journal Volume 57 ; 57 >
 
    }
 
@@ -10750,7 +10750,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; International Journal of Refugee Law Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2014 ; International Journal of Refugee Law Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; International Journal of Refugee Law Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; International Journal of Refugee Law Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; International Journal of Refugee Law Volume 28 ; 28 >
 
     }
 
@@ -12348,7 +12348,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; Journal of Conflict and Security Law Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Journal of Conflict and Security Law Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; manifest ; 2015 ; Journal of Conflict and Security Law Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Journal of Conflict and Security Law Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Journal of Conflict and Security Law Volume 21 ; 21 >
 
     }
 
@@ -13493,7 +13493,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; Journal of Human Rights Practice Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Journal of Human Rights Practice Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; released ; 2015 ; Journal of Human Rights Practice Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Journal of Human Rights Practice Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Journal of Human Rights Practice Volume 8 ; 8 >
 
     }
 
@@ -17293,7 +17293,7 @@
     au < HighWirePressH20Plugin ; released ; 2013 ; Mind Volume 122 ; 122 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Mind Volume 123 ; 123 >
     au < HighWirePressH20Plugin ; released ; 2015 ; Mind Volume 124 ; 124 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Mind Volume 125 ; 125 >
+    au < HighWirePressH20Plugin ; manifest ; 2016 ; Mind Volume 125 ; 125 >
 
     }
 
@@ -25452,7 +25452,7 @@
 
       au < released ; 2013 ; National Science Review Volume 1 ; 1 >
       au < released ; 2014 ; National Science Review Volume 2 ; 2 >
-      au < expected ; 2015 ; National Science Review Volume 3 ; 3 >
+      au < manifest ; 2015 ; National Science Review Volume 3 ; 3 >
       au < expected ; 2016 ; National Science Review Volume 4 ; 4 >
 
   }
@@ -25700,7 +25700,7 @@
       au < manifest ; 2013 ; American Journal of Legal History Volume 53 ; 53 >
       au < manifest ; 2014 ; American Journal of Legal History Volume 54 ; 54 >
       au < manifest ; 2015 ; American Journal of Legal History Volume 55 ; 55 >
-      au < expected ; 2016 ; American Journal of Legal History Volume 56 ; 56 >
+      au < manifest ; 2016 ; American Journal of Legal History Volume 56 ; 56 >
 
   }
 
