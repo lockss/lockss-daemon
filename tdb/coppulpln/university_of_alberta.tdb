@@ -567,10 +567,11 @@
     {
     
       title <
-        name = History of Science in South Asia
+        name = History of Science in South Asia ;
+        eissn = 2369-775X
       >
 
-      param[base_url] = https://journals.library.ualberta.ca/
+      param[base_url] = https://journals.library.ualberta.ca/hssa/
       param[journal_id] = hssa
 
       au < exists ; 2013 ; History of Science in South Asia Volume 1 ; 2013 ; 1 >
