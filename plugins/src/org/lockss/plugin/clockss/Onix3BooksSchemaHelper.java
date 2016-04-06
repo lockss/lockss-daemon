@@ -292,9 +292,9 @@ implements SourceXmlSchemaHelper {
       "DescriptiveDetail";  
   private static String ONIX_product_form =
       ONIX_product_descrip + "/ProductFormDetail";
-  /* only pick up level01 title element */
+  /* only pick up level01 title element - allow for no leading 0...(bradypus) */
   private static String ONIX_product_title =
-      ONIX_product_descrip + "/TitleDetail[TitleType = '01']/TitleElement[TitleElementLevel = '01']";
+      ONIX_product_descrip + "/TitleDetail[TitleType = '01' or TitleType = '1']/TitleElement[TitleElementLevel = '01']";
   private static String ONIX_product_contrib =
       ONIX_product_descrip + "/Contributor";
   private static String ONIX_product_comp =
