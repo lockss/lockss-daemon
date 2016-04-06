@@ -89,7 +89,7 @@
       param[base_url] = http://est.tempsite.ws/periodicos/
       param[journal_id] = identidade
 
-      au < exists ; 2000 ; 1 ; Identidade! Volume 2000 [tempsite.ws] ; 2000 ; >
+      au < manifest ; 2000 ; 1 ; Identidade! Volume 2000 [tempsite.ws] ; 2000 ; >
       au < manifest ; 2001 ; 2 ; Identidade! Volume 2001 [tempsite.ws] ; 2001 ; >
       au < manifest ; 2002 ; 3 ; Identidade! Volume 2002 [tempsite.ws] ; 2002 ; >
       au < manifest ; 2003 ; 4 ; Identidade! Volume 2003 [tempsite.ws] ; 2003 ; >
