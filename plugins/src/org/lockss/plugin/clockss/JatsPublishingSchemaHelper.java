@@ -280,6 +280,10 @@ implements SourceXmlSchemaHelper {
   private static String JATS_ameta =  "front/article-meta";
   
   private static String JATS_jtitle = JATS_jmeta + "/journal-title-group";
+  // early versions of JATS (2.2 see CambridgePress) have title/subtitle as
+  // direct journal-meta children 
+  private static String JATS_jtitle_early = JATS_jmeta + "/journal-title";
+  private static String JATS_jsubtitle_early = JATS_jmeta + "/journal-subtitle";
   // no attribute at all, or might specify type of issn
   private static String JATS_issn = JATS_jmeta + "/issn[not(@*)]";
   // leave public for post-processing
@@ -317,6 +321,10 @@ implements SourceXmlSchemaHelper {
       new HashMap<String,XPathValue>();
   static {
     JATS_articleMap.put(JATS_jtitle, JATS_TITLE_VALUE);
+    // only in earlier versions
+    JATS_articleMap.put(JATS_jtitle_early, XmlDomMetadataExtractor.TEXT_VALUE);
+    JATS_articleMap.put(JATS_jsubtitle_early, XmlDomMetadataExtractor.TEXT_VALUE);
+
     JATS_articleMap.put(JATS_issn, JATS_ISSN_VALUE);
     JATS_articleMap.put(JATS_pissn, JATS_ISSN_VALUE);
     JATS_articleMap.put(JATS_eissn, JATS_ISSN_VALUE);
@@ -347,7 +355,9 @@ implements SourceXmlSchemaHelper {
   private static final MultiValueMap cookMap = new MultiValueMap();
   static {
     // do NOT cook publisher_name; get from TDB file for consistency
+    // you either get the jtitle or the jtitle_early, not both
     cookMap.put(JATS_jtitle, MetadataField.FIELD_PUBLICATION_TITLE);
+    cookMap.put(JATS_jtitle_early, MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put(JATS_atitle, MetadataField.FIELD_ARTICLE_TITLE);
     cookMap.put(JATS_doi, MetadataField.FIELD_DOI);
     // pick up both pissn and issn...unlikely both are present
