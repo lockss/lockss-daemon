@@ -1,0 +1,130 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>development</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.elifesciences.ELifeSciencesPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>eLife Sciences New Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"eLife Sciences Plugin, Base URL %s, Month %s", base_url, year_month</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sarchive/%s", base_url, year_month</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
+      <string>1,"^%scontent/[0-9]+/[^/]+(\?panels_ajax_tab_tab=elife_article_(data|info)&amp;panels_ajax_tab_trigger=article-(data|info)|/article-data|/article-info)?$", base_url</string>
+      <string>1,"^%selife/citation/[^/]+/ris$", base_url</string>
+      <string>1,"^%spanels_ajax_tab/elife_article(_auther|_figdata)?/node:[0-9]+/[0-9]$", base_url</string>
+      <string>1,"^https?://elife-publishing-cdn\.s3\.amazonaws\.com/[0-9]+/[^/]+\.[^/]+$"</string>
+      <string>1,"^https?://cdn\.elifesciences\.org/(elife-articles/)?[0-9]+/(figures-pdf/)?[^/+]+\.[^/]+$"</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year_month</key>
+        <displayName>Month</displayName>
+        <description>Month in the form yyyy/mm</description>
+        <type>1</type>
+        <size>6</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^https?://elife-publishing-cdn\.s3\.amazonaws\.com/[0-9]+/[^/+]+\.pdf$"</string>
+    </list>
+  </entry>
+    <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts -->
+    <string>au_permitted_host_pattern</string>
+    <string>cdn\.elifesciences\.org|elife-publishing-cdn\.s3\.amazonaws\.com</string>
+  </entry>
+    <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <string>sites/default/files/(css|js)/(css|js)_[^/]+\.(css|js)$</string>
+  </entry>
+  <entry>
+    <string>au_exclude_urls_from_polls_pattern</string>
+    <string>sites/default/files/(css|js)/(css|js)_[^/]+\.(css|js)$</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.elifesciences.ELifeHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.elifesciences.ELifeHtmlCrawlFilterFactory</string>
+  </entry>
+    <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.elifesciences.ELifeArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.elifesciences.ELifeArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.elifesciences.ELifeHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>18000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+</map>
