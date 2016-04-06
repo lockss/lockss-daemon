@@ -4,8 +4,8 @@
     info[tester] = 2
   >
 
-  plugin = org.lockss.plugin.highwire.elife.ELifeDrupalPlugin
-  implicit < status ; year ; name ; param[volume_name] >
+  plugin = org.lockss.plugin.elifesciences.ELifeSciencesPlugin
+  implicit < status ; year ; name ; param[year_month] >
   
   {
     title <
@@ -13,18 +13,24 @@
       issn = 2050-084X  
     >
 
-    comment[platform] = HighWire Drupal
+    comment[platform] = Custom
     param[base_url] = http://elifesciences.org/
 
     # moving to new platform fall 2015
 
     {
-      au < doNotProcess ; 2012 ; eLife Volume 2012 ; 2012 >
-      au < doNotProcess ; 2013 ; eLife Volume 2013 ; 2013 >
-      au < doNotProcess ; 2014 ; eLife Volume 2014 ; 2014 >
-      au < testing ; 2015 ; eLife Volume 2015 ; 2015 >
-      au < expected ; 2016 ; eLife Volume 2016 ; 2016 >
-
+      au < exists ; 2015 ; eLife January 2015 ; 2015/01 >
+      au < exists ; 2015 ; eLife February 2015 ; 2015/02 >
+      au < exists ; 2015 ; eLife March 2015 ; 2015/03 >
+      au < exists ; 2015 ; eLife April 2015 ; 2015/04 >
+      au < exists ; 2015 ; eLife May 2015 ; 2015/05 >
+      au < exists ; 2015 ; eLife June 2015 ; 2015/06 >
+      au < exists ; 2015 ; eLife July 2015 ; 2015/07 >
+      au < exists ; 2015 ; eLife August 2015 ; 2015/08 >
+      au < exists ; 2015 ; eLife September 2015 ; 2015/09 >
+      au < exists ; 2015 ; eLife October 2015 ; 2015/10 >
+      au < exists ; 2015 ; eLife November 2015 ; 2015/11 >
+      au < exists ; 2015 ; eLife December 2015 ; 2015/12 >
     }
   }
 }
