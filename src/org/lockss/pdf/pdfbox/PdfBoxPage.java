@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,6 +48,7 @@ import org.lockss.util.Logger;
  * <p>
  * This class acts as an adapter for the {@link PDPage} class.
  * </p>
+ * 
  * @author Thib Guicherd-Callin
  * @since 1.56
  * @see PdfBoxDocumentFactory
@@ -58,6 +59,7 @@ public class PdfBoxPage implements PdfPage {
    * <p>
    * Logger for use by this class.
    * </p>
+   * 
    * @since 1.56
    */
   private static final Logger log = Logger.getLogger(PdfBoxPage.class);
@@ -97,6 +99,7 @@ public class PdfBoxPage implements PdfPage {
    * Determines if the given {@link PDXObject} instance is a byte
    * stream (as opposed to a token stream).
    * </p>
+   * 
    * @param xObject A {@link PDXObject} instance.
    * @return <code>true</code> if and only if the argument is a byte
    *         stream.
@@ -112,6 +115,7 @@ public class PdfBoxPage implements PdfPage {
    * Determines if the given {@link PDXObject} instance is a token
    * stream (as opposed to a byte stream).
    * </p>
+   * 
    * @param xObject A {@link PDXObject} instance.
    * @return <code>true</code> if and only if the argument is a token
    *         stream.
@@ -133,6 +137,7 @@ public class PdfBoxPage implements PdfPage {
    * <p>
    * The parent {@link PdfBoxDocument} instance.
    * </p>
+   * 
    * @since 1.56
    */
   protected final PdfBoxDocument pdfBoxDocument;
@@ -141,22 +146,23 @@ public class PdfBoxPage implements PdfPage {
    * <p>
    * The {@link PDPage) instance this instance represents.
    * </p>
+   * 
    * @since 1.56
    */
   protected final PDPage pdPage;
 
   /**
    * <p>
-   * This constructor is accessible to classes in this package and
-   * subclasses.
+   * Constructor.
    * </p>
+   * 
    * @param pdfBoxDocument The parent {@link PdfBoxDocument} instance.
    * @param pdPage The {@link PDPage} instance underpinning this PDF
    *          page.
    * @since 1.56
    */
-  protected PdfBoxPage(PdfBoxDocument pdfBoxDocument,
-                       PDPage pdPage) {
+  public PdfBoxPage(PdfBoxDocument pdfBoxDocument,
+                    PDPage pdPage) {
     this.pdfBoxDocument = pdfBoxDocument;
     this.pdPage = pdPage;
   }
@@ -203,25 +209,20 @@ public class PdfBoxPage implements PdfPage {
   }
 
   @Override
-  public PdfDocument getDocument() {
+  public PdfBoxDocument getDocument() {
     return pdfBoxDocument;
   }
   
   @Override
   public PdfTokenStream getPageTokenStream() throws PdfException {
     try {
-      return new PdfBoxPageTokenStream(this, pdPage.getContents());
+      return getDocument().getDocumentFactory().makePageTokenStream(this, pdPage.getContents());
     }
     catch (IOException ioe) {
       throw new PdfException("Failed to get the page content stream", ioe);
     }
   }
   
-  @Override
-  public PdfTokenFactory getTokenFactory() throws PdfException {
-    return getDocument().getTokenFactory();
-  }
-
   @Override
   public void setAnnotations(List<PdfToken> annotations) {
     pdPage.getCOSDictionary().setItem(COSName.ANNOTS, PdfBoxTokens.asCOSArray(annotations));
@@ -277,10 +278,10 @@ public class PdfBoxPage implements PdfPage {
             else {
               PDXObjectForm pdxObjectForm = (PDXObjectForm)xObject;
               PdfBoxXObjectTokenStream referencedTokenStream =
-                  new PdfBoxXObjectTokenStream(PdfBoxPage.this,
-                                               pdxObjectForm,
-                                               pdResources,
-                                               pdxObjectForm.getResources());
+                  getDocument().getDocumentFactory().makeXObjectTokenStream(PdfBoxPage.this,
+                                                                            Arrays.asList(pdxObjectForm,
+                                                                                          pdResources,
+                                                                                          pdxObjectForm.getResources()));
               recursivelyFindByteStreams(referencedTokenStream,
                                          referencedTokenStream.getStreamResources(), // pdxObjectForm.getResources() or pdResources if null
                                          ret);
@@ -325,10 +326,10 @@ public class PdfBoxPage implements PdfPage {
             if (isTokenStream(xObject)) {
               PDXObjectForm pdxObjectForm = (PDXObjectForm)xObject;
               PdfBoxXObjectTokenStream referencedTokenStream =
-                  new PdfBoxXObjectTokenStream(PdfBoxPage.this,
-                                               pdxObjectForm,
-                                               pdResources,
-                                               pdxObjectForm.getResources());
+                  getDocument().getDocumentFactory().makeXObjectTokenStream(PdfBoxPage.this,
+                                                                            Arrays.asList(pdxObjectForm,
+                                                                                          pdResources,
+                                                                                          pdxObjectForm.getResources()));
               ret.add(referencedTokenStream);
               recursivelyFindTokenStreams(referencedTokenStream,
                                           referencedTokenStream.getStreamResources(), // pdxObjectForm.getResources() or pdResources if null

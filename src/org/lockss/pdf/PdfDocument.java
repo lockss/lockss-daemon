@@ -4,31 +4,31 @@
 
 /*
 
- Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
- all rights reserved.
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
 
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
- STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
- IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
- Except as contained in this notice, the name of Stanford University shall not
- be used in advertising or otherwise to promote the sale, use or other dealings
- in this Software without prior written authorization from Stanford University.
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
 
- */
+*/
 
 package org.lockss.pdf;
 
@@ -84,6 +84,7 @@ import org.w3c.dom.Document;
  * <li>{@link #getTrailer()} / {@link #setTrailer(Map)}</li>
  * <li>{@link #save(OutputStream)}</li>
  * </ul>
+ * 
  * @author Thib Guicherd-Callin
  * @since 1.56
  */
@@ -95,6 +96,7 @@ public interface PdfDocument {
    * longer in use. The behavior of this object if operations are
    * performed on it after it is closed is undefined.
    * </p>
+   * 
    * @throws PdfException If there is a major error releasing
    *           resources associated with this object.
    * @since 1.56
@@ -105,6 +107,7 @@ public interface PdfDocument {
    * <p>
    * Retrieves the author field from the given document.
    * </p>
+   * 
    * @return The author field, or <code>null</code> if unset.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
@@ -115,6 +118,7 @@ public interface PdfDocument {
    * <p>
    * Retrieves the creation date field from the given document.
    * </p>
+   * 
    * @return The creation date field, or <code>null</code> if unset.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
@@ -125,6 +129,7 @@ public interface PdfDocument {
    * <p>
    * Retrieves the creator field from the given document.
    * </p>
+   * 
    * @return The creator field, or <code>null</code> if unset.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
@@ -133,8 +138,19 @@ public interface PdfDocument {
 
   /**
    * <p>
+   * Returns a PDF document factory instance suitable for this document.
+   * </p>
+   * 
+   * @return A PDF document factory instance.
+   * @since 1.70
+   */
+  PdfDocumentFactory getDocumentFactory();
+  
+  /**
+   * <p>
    * Retrieves the keywords field from the given document.
    * </p>
+   * 
    * @return The keywords field, or <code>null</code> if unset.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
@@ -145,6 +161,7 @@ public interface PdfDocument {
    * <p>
    * Retrieves the language field from the given document.
    * </p>
+   * 
    * @return The language field, or <code>null</code> if unset.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
@@ -159,6 +176,7 @@ public interface PdfDocument {
    * Note that in PDF parlance, "metadata" is a field you can get and
    * set, just like "author" is a field you can get and set.
    * </p>
+   * 
    * @return The metadata as a string, or <code>null</code> if unset.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
@@ -173,6 +191,7 @@ public interface PdfDocument {
    * Note that in PDF parlance, "metadata" is a field you can get and
    * set, just like "author" is a field you can get and set.
    * </p>
+   * 
    * @return The metadata as an XMP document, or <code>null</code> if
    *         unset.
    * @throws PdfException If PDF processing fails.
@@ -184,6 +203,7 @@ public interface PdfDocument {
    * <p>
    * Retrieves the modification date field from the given document.
    * </p>
+   * 
    * @return The creation date field, or <code>null</code> if unset.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
@@ -194,6 +214,7 @@ public interface PdfDocument {
    * <p>
    * Returns the number of pages in this document.
    * </p>
+   * 
    * @return The document's number of pages.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
@@ -204,6 +225,7 @@ public interface PdfDocument {
    * <p>
    * Gets the page at the given zero-based index.
    * </p>
+   * 
    * @param index The page's index in the range from <code>0</code>
    *          inclusive to {@link #getNumberOfPages()} exclusive.
    * @return A {@link PdfPage} instance corresponding to the requested
@@ -217,6 +239,7 @@ public interface PdfDocument {
    * <p>
    * Gets a list of the pages in this document.
    * </p>
+   * 
    * @return A list of {@link PdfPage} instances 
    * @throws PdfException
    * @since 1.56
@@ -227,6 +250,7 @@ public interface PdfDocument {
    * <p>
    * Retrieves the producer field from the given document.
    * </p>
+   * 
    * @return The producer field, or <code>null</code> if unset.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
@@ -237,6 +261,7 @@ public interface PdfDocument {
    * <p>
    * Retrieves the subject field from the given document.
    * </p>
+   * 
    * @return The subject field, or <code>null</code> if unset.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
@@ -247,6 +272,7 @@ public interface PdfDocument {
    * <p>
    * Retrieves the title field from the given document.
    * </p>
+   * 
    * @return The title field, or <code>null</code> if unset.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
@@ -255,18 +281,9 @@ public interface PdfDocument {
 
   /**
    * <p>
-   * Returns a PDF token factory associated with this document.
-   * </p>
-   * @return A PDF token factory.
-   * @throws PdfException If PDF processing fails.
-   * @since 1.56
-   */
-  PdfTokenFactory getTokenFactory() throws PdfException;
-
-  /**
-   * <p>
    * Retrieves the document's trailer dictionary.
    * </p>
+   * 
    * @return The non-<code>null</code> trailer dictionary, possibly
    *         empty.
    * @throws PdfException If PDF processing fails.
@@ -284,6 +301,7 @@ public interface PdfDocument {
    * This affects the result of {@link #getNumberOfPages()},
    * {@link #getPage(int)} and {@link #getPages()}.
    * </p>
+   * 
    * @param index The page's index in the range from <code>0</code>
    *          inclusive to {@link #getNumberOfPages()} exclusive.
    * @throws PdfException If PDF processing fails.
@@ -297,6 +315,7 @@ public interface PdfDocument {
    * output stream is not closed at the end of this call; it is the
    * caller's responsibility to close it.
    * </p>
+   * 
    * @param outputStream An output stream.
    * @throws IOException If the operation fails on the I/O level.
    * @throws PdfException If the operation fails on the PDF level.
@@ -308,6 +327,7 @@ public interface PdfDocument {
    * <p>
    * Sets the author field in the given document.
    * </p>
+   * 
    * @param author The non-<code>null</code> author string.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
@@ -318,6 +338,7 @@ public interface PdfDocument {
    * <p>
    * Sets the creation date field in the given document.
    * </p>
+   * 
    * @param author The non-<code>null</code> creation date.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
@@ -328,6 +349,7 @@ public interface PdfDocument {
    * <p>
    * Sets the creator field in the given document.
    * </p>
+   * 
    * @param author The non-<code>null</code> creator string.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
@@ -338,6 +360,7 @@ public interface PdfDocument {
    * <p>
    * Sets the keywords field in the given document.
    * </p>
+   * 
    * @param author The non-<code>null</code> keywords string.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
@@ -348,6 +371,7 @@ public interface PdfDocument {
    * <p>
    * Sets the language field in the given document.
    * </p>
+   * 
    * @param author The non-<code>null</code> language string.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
@@ -362,6 +386,7 @@ public interface PdfDocument {
    * Note that in PDF parlance, "metadata" is a field you can get and
    * set, just like "author" is a field you can get and set.
    * </p>
+   * 
    * @throws PdfException If PDF processing fails.
    * @since 1.56
    */
@@ -375,6 +400,7 @@ public interface PdfDocument {
    * Note that in PDF parlance, "metadata" is a field you can get and
    * set, just like "author" is a field you can get and set.
    * </p>
+   * 
    * @throws PdfException If PDF processing fails.
    * @since 1.56
    */
@@ -384,6 +410,7 @@ public interface PdfDocument {
    * <p>
    * Sets the modification date field in the given document.
    * </p>
+   * 
    * @param author The non-<code>null</code> modification date.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
@@ -394,6 +421,7 @@ public interface PdfDocument {
    * <p>
    * Sets the producer field in the given document.
    * </p>
+   * 
    * @param author The non-<code>null</code> producer string.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
@@ -404,6 +432,7 @@ public interface PdfDocument {
    * <p>
    * Sets the subject field in the given document.
    * </p>
+   * 
    * @param author The non-<code>null</code> subject string.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
@@ -414,6 +443,7 @@ public interface PdfDocument {
    * <p>
    * Sets the title field in the given document.
    * </p>
+   * 
    * @param author The non-<code>null</code> title string.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
@@ -424,6 +454,7 @@ public interface PdfDocument {
    * <p>
    * Retrieves the document's trailer dictionary.
    * </p>
+   * 
    * @param trailerMapping The trailer dictionary.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
@@ -436,6 +467,7 @@ public interface PdfDocument {
    * Unsets the author field in the given document, such that
    * {@link #getAuthor()} returns <code>null</code>.
    * </p>
+   * 
    * @throws PdfException If PDF processing fails.
    * @since 1.56
    */
@@ -446,6 +478,7 @@ public interface PdfDocument {
    * Unsets the creation date field in the given document, such that
    * {@link #getCreationDate()} returns <code>null</code>.
    * </p>
+   * 
    * @throws PdfException If PDF processing fails.
    * @since 1.56
    */
@@ -456,6 +489,7 @@ public interface PdfDocument {
    * Unsets the creator field in the given document, such that
    * {@link #getCreator()} returns <code>null</code>.
    * </p>
+   * 
    * @throws PdfException If PDF processing fails.
    * @since 1.56
    */
@@ -466,6 +500,7 @@ public interface PdfDocument {
    * Unsets the keywords field in the given document, such that
    * {@link #getKeywords()} returns <code>null</code>.
    * </p>
+   * 
    * @throws PdfException If PDF processing fails.
    * @since 1.56
    */
@@ -476,6 +511,7 @@ public interface PdfDocument {
    * Unsets the language field in the given document, such that
    * {@link #getLanguage()} returns <code>null</code>.
    * </p>
+   * 
    * @throws PdfException If PDF processing fails.
    * @since 1.56
    */
@@ -486,6 +522,7 @@ public interface PdfDocument {
    * Unsets the document metadata, such that {@link #getMetadata()}
    * returns <code>null</code>.
    * </p>
+   * 
    * @throws PdfException If PDF processing fails.
    * @since 1.56
    */
@@ -496,6 +533,7 @@ public interface PdfDocument {
    * Unsets the modification date field in the given document, such
    * that {@link #getModificationDate()} returns <code>null</code>.
    * </p>
+   * 
    * @throws PdfException If PDF processing fails.
    * @since 1.56
    */
@@ -506,6 +544,7 @@ public interface PdfDocument {
    * Unsets the producer field in the given document, such that
    * {@link #getProducer()} returns <code>null</code>.
    * </p>
+   * 
    * @throws PdfException If PDF processing fails.
    * @since 1.56
    */
@@ -516,6 +555,7 @@ public interface PdfDocument {
    * Unsets the subject field in the given document, such that
    * {@link #getSubject()} returns <code>null</code>.
    * </p>
+   * 
    * @throws PdfException If PDF processing fails.
    * @since 1.56
    */
@@ -526,6 +566,7 @@ public interface PdfDocument {
    * Unsets the title field in the given document, such that
    * {@link #getTitle()} returns <code>null</code>.
    * </p>
+   * 
    * @throws PdfException If PDF processing fails.
    * @since 1.56
    */

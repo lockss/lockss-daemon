@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,6 +48,7 @@ import org.lockss.pdf.*;
  * <p>
  * This class acts as a direct adapter for the {@link PDStream} class.
  * </p>
+ * 
  * @author Thib Guicherd-Callin
  * @since 1.56
  * @see PdfBoxDocumentFactory
@@ -58,21 +59,22 @@ public class PdfBoxPageTokenStream extends PdfBoxTokenStream {
    * <p>
    * The {@link PDStream} instance underpinning this instance.
    * </p>
+   * 
    * @since 1.56
    */
   protected PDStream pdStream;
   
   /**
    * <p>
-   * This constructor is accessible to classes in this package and
-   * subclasses.
+   * Constructor.
    * </p>
+   * 
    * @param pdfBoxPage The parent PDF page.
    * @param pdStream The {@link PDStream} being wrapped.
    * @since 1.56
    */
-  protected PdfBoxPageTokenStream(PdfBoxPage pdfBoxPage,
-                                  PDStream pdStream) {
+  public PdfBoxPageTokenStream(PdfBoxPage pdfBoxPage,
+                               PDStream pdStream) {
     super(pdfBoxPage);
     this.pdStream = pdStream;
   }

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -99,9 +99,6 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
    * <p>
    * Builds a new instance using the given parent and own resources.
    * </p>
-   * <p>
-   * This constructor is accessible to classes in this package and subclasses.
-   * </p>
    * 
    * @param pdfBoxPage
    *          The parent PDF page.
@@ -113,10 +110,10 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
    *          The form's own resources.
    * @since 1.67.6
    */
-  protected PdfBoxXObjectTokenStream(PdfBoxPage pdfBoxPage,
-                                     PDXObjectForm pdXObjectForm,
-                                     PDResources parentResources,
-                                     PDResources ownResources) {
+  public PdfBoxXObjectTokenStream(PdfBoxPage pdfBoxPage,
+                                  PDXObjectForm pdXObjectForm,
+                                  PDResources parentResources,
+                                  PDResources ownResources) {
     super(pdfBoxPage);
     this.pdXObjectForm = pdXObjectForm;
     this.parentResources = parentResources;
@@ -134,7 +131,7 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
       pdXObjectForm = new PDXObjectForm(newPdStream);
       pdXObjectForm.setResources(getStreamResources());
       Map<String, PDXObject> xobjects = parentResources.getXObjects();
-      boolean found = true;
+      boolean found = true; // Bug? False here then true before 'break'? (Harmless)
       for (Map.Entry<String, PDXObject> ent : xobjects.entrySet()) {
         String key = ent.getKey();
         PDXObject val = ent.getValue();

@@ -66,34 +66,34 @@ public class TestPdfUtil extends LockssTestCase {
       PdfToken operator = tf.makeOperator(opcode);
       for (String other : OPCODES) {
         assertEquals(opcode.equals(other),
-                     PdfUtil.isOpcode(operator, other));
+                     PdfOpcodes.isOpcode(operator, other));
       }
       assertEquals(PdfOpcodes.BEGIN_IMAGE_DATA.equals(opcode),
-                   PdfUtil.isBeginImageData(operator));
+                   PdfOpcodes.isBeginImageData(operator));
       assertEquals(PdfOpcodes.BEGIN_IMAGE_OBJECT.equals(opcode),
-                   PdfUtil.isBeginImageObject(operator));
+                   PdfOpcodes.isBeginImageObject(operator));
       assertEquals(PdfOpcodes.BEGIN_TEXT_OBJECT.equals(opcode),
-                   PdfUtil.isBeginTextObject(operator));
+                   PdfOpcodes.isBeginTextObject(operator));
       assertEquals(PdfOpcodes.END_TEXT_OBJECT.equals(opcode),
-                   PdfUtil.isEndTextObject(operator));
+                   PdfOpcodes.isEndTextObject(operator));
       assertEquals(PdfOpcodes.INVOKE_XOBJECT.equals(opcode),
-                   PdfUtil.isInvokeXObject(operator));
+                   PdfOpcodes.isInvokeXObject(operator));
       assertEquals(PdfOpcodes.NEXT_LINE_SHOW_TEXT.equals(opcode),
-                   PdfUtil.isNextLineShowText(operator));
+                   PdfOpcodes.isNextLineShowText(operator));
       assertEquals(PdfOpcodes.RESTORE_GRAPHICS_STATE.equals(opcode),
-                   PdfUtil.isRestoreGraphicsState(operator));
+                   PdfOpcodes.isRestoreGraphicsState(operator));
       assertEquals(PdfOpcodes.SAVE_GRAPHICS_STATE.equals(opcode),
-                   PdfUtil.isSaveGraphicsState(operator));
+                   PdfOpcodes.isSaveGraphicsState(operator));
       assertEquals(PdfOpcodes.SET_SPACING_NEXT_LINE_SHOW_TEXT.equals(opcode),
-                   PdfUtil.isSetSpacingNextLineShowText(operator));
+                   PdfOpcodes.isSetSpacingNextLineShowText(operator));
       assertEquals(PdfOpcodes.SET_TEXT_FONT.equals(opcode),
-                   PdfUtil.isSetTextFont(operator));
+                   PdfOpcodes.isSetTextFont(operator));
       assertEquals(PdfOpcodes.SET_TEXT_MATRIX.equals(opcode),
-                   PdfUtil.isSetTextMatrix(operator));
+                   PdfOpcodes.isSetTextMatrix(operator));
       assertEquals(PdfOpcodes.SHOW_TEXT.equals(opcode),
-                   PdfUtil.isShowText(operator));
+                   PdfOpcodes.isShowText(operator));
       assertEquals(PdfOpcodes.SHOW_TEXT_GLYPH_POSITIONING.equals(opcode),
-                   PdfUtil.isShowTextGlyphPositioning(operator));
+                   PdfOpcodes.isShowTextGlyphPositioning(operator));
     }
   }
   
@@ -123,22 +123,22 @@ public class TestPdfUtil extends LockssTestCase {
         new StringOpcodeTester(tf.makeOperator(PdfOpcodes.SHOW_TEXT),
                                tf.makeString("foobarqux")) {
             @Override boolean contains(String substr) {
-              return PdfUtil.isShowTextContains(operator, operand, substr);
+              return PdfOpcodes.isShowTextContains(operator, operand, substr);
             }
             @Override boolean endsWith(String suffix) {
-              return PdfUtil.isShowTextEndsWith(operator, operand, suffix);
+              return PdfOpcodes.isShowTextEndsWith(operator, operand, suffix);
             }
             @Override boolean equals(String str) {
-              return PdfUtil.isShowTextEquals(operator, operand, str);
+              return PdfOpcodes.isShowTextEquals(operator, operand, str);
             }
             @Override boolean equalsIgnoreCase(String str) {
-              return PdfUtil.isShowTextEqualsIgnoreCase(operator, operand, str);
+              return PdfOpcodes.isShowTextEqualsIgnoreCase(operator, operand, str);
             }
             @Override boolean find(Pattern pattern) {
-              return PdfUtil.isShowTextFind(operator, operand, pattern);
+              return PdfOpcodes.isShowTextFind(operator, operand, pattern);
             }
             @Override boolean startsWith(String prefix) {
-              return PdfUtil.isShowTextStartsWith(operator, operand, prefix);
+              return PdfOpcodes.isShowTextStartsWith(operator, operand, prefix);
             }
     };
 
@@ -150,22 +150,22 @@ public class TestPdfUtil extends LockssTestCase {
                                                           tf.makeInteger(2),
                                                           tf.makeString("qux")))) {
             @Override boolean contains(String substr) {
-              return PdfUtil.isShowTextGlyphPositioningContains(operator, operand, substr);
+              return PdfOpcodes.isShowTextGlyphPositioningContains(operator, operand, substr);
             }
             @Override boolean endsWith(String suffix) {
-              return PdfUtil.isShowTextGlyphPositioningEndsWith(operator, operand, suffix);
+              return PdfOpcodes.isShowTextGlyphPositioningEndsWith(operator, operand, suffix);
             }
             @Override boolean equals(String str) {
-              return PdfUtil.isShowTextGlyphPositioningEquals(operator, operand, str);
+              return PdfOpcodes.isShowTextGlyphPositioningEquals(operator, operand, str);
             }
             @Override boolean equalsIgnoreCase(String str) {
-              return PdfUtil.isShowTextGlyphPositioningEqualsIgnoreCase(operator, operand, str);
+              return PdfOpcodes.isShowTextGlyphPositioningEqualsIgnoreCase(operator, operand, str);
             }
             @Override boolean find(Pattern pattern) {
-              return PdfUtil.isShowTextGlyphPositioningFind(operator, operand, pattern);
+              return PdfOpcodes.isShowTextGlyphPositioningFind(operator, operand, pattern);
             }
             @Override boolean startsWith(String prefix) {
-              return PdfUtil.isShowTextGlyphPositioningStartsWith(operator, operand, prefix);
+              return PdfOpcodes.isShowTextGlyphPositioningStartsWith(operator, operand, prefix);
             }
     };
     

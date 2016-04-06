@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -56,21 +56,12 @@ import org.lockss.pdf.pdfbox.PdfBoxDocumentFactory;
  * <li>{@link #getAnnotations()} / {@link #setAnnotations(List)}</li>
  * <li>{@link #getPageTokenStream()} / {@link #getAllTokenStreams()}</li>
  * </ul>
+ * 
  * @author Thib Guicherd-Callin
  * @since 1.56
  * @see PdfBoxDocumentFactory
  */
 public interface PdfPage {
-  
-  /**
-   * <p>
-   * Returns a PDF token factory associated with this PDF page.
-   * </p>
-   * @return A PDF token factory.
-   * @throws PdfException If PDF processing fails.
-   * @since 1.56
-   */
-  PdfTokenFactory getTokenFactory() throws PdfException;
   
   /**
    * <p>
@@ -94,6 +85,7 @@ public interface PdfPage {
    * stream is no longer required.) The order of the byte streams is
    * undefined.
    * </p>
+   * 
    * @return A list of input streams for each byte stream.
    * @throws PdfException If PDF processing fails.
    * @since 1.56
@@ -121,6 +113,7 @@ public interface PdfPage {
    * position of the page token stream within the returned list is
    * undefined.
    * </p>
+   * 
    * @return A list of {@link PdfTokenStream} instances (possibly
    *         empty).
    * @throws PdfException If PDF processing fails.
@@ -140,6 +133,7 @@ public interface PdfPage {
    * annotations of the page; only a call to
    * {@link #setAnnotations(List)} does.
    * </p>
+   * 
    * @return A non-<code>null</code>, possibly empty, list of PDF
    *         dictionaries, one for each annotation.
    * @throws PdfException
@@ -152,6 +146,7 @@ public interface PdfPage {
    * <p>
    * Returns the PDF document associated with this PDF page.
    * </p>
+   * 
    * @return The parent PDF document.
    * @since 1.56
    */
@@ -161,6 +156,7 @@ public interface PdfPage {
    * <p>
    * Returns the designated page token stream.
    * </p>
+   * 
    * @return The page token stream (possibly empty).
    * @throws PdfException If PDF processing fails.
    * @since 1.56
@@ -177,6 +173,7 @@ public interface PdfPage {
    * malformed annotations are passed to the page, the behavior is
    * undefined.
    * </p>
+   * 
    * @param annotations A list of PDF annotations (PDF dictionaries).
    * @throws PdfException If PDF processing fails.
    * @since 1.56

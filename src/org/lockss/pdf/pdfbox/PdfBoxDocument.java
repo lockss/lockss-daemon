@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -70,6 +70,7 @@ import org.w3c.dom.Document;
  * should an {@link UnsupportedEncodingException} arise, a message is
  * recorded at {@link Logger#LEVEL_WARNING} level.</li>
  * </ul>
+ * 
  * @author Thib Guicherd-Callin
  * @since 1.56
  * @see PdfBoxDocumentFactory
@@ -82,12 +83,22 @@ public class PdfBoxDocument implements PdfDocument {
    * </p>
    * @since 1.56
    */
-  private static Logger logger = Logger.getLogger(PdfBoxDocument.class);
+  private static final Logger log = Logger.getLogger(PdfBoxDocument.class);
 
+  /**
+   * <p>
+   * The PDF document factory instance that created this PDf document instance.
+   * </p>
+   * 
+   * @since 1.70
+   */
+  protected PdfBoxDocumentFactory pdfBoxDocumentFactory;
+  
   /**
    * <p>
    * The {@link PDDocument} instance this instance represents.
    * </p>
+   * 
    * @since 1.56
    */
   protected final PDDocument pdDocument;
@@ -96,6 +107,7 @@ public class PdfBoxDocument implements PdfDocument {
    * <p>
    * Whether this instance has been closed.
    * </p>
+   * 
    * @since 1.56
    */
   private volatile boolean closed;
@@ -110,14 +122,33 @@ public class PdfBoxDocument implements PdfDocument {
   
   /**
    * <p>
-   * This constructor is accessible to classes in this package and
-   * subclasses.
+   * Constructor. <b>Deprectaed in 1.70.</b>
    * </p>
-   * @param pdDocument The {@link PDDocument} instance underpinning
-   *          this PDF document.
+   * 
+   * @param pdDocument
+   *          The {@link PDDocument} instance underpinning this PDF document
    * @since 1.56
+   * @deprecated Deprecated since 1.70. Use
+   *             {@link #PdfBoxDocument(PdfDocumentFactory, PDDocument)}
+   *             instead.
    */
-  protected PdfBoxDocument(PDDocument pdDocument) {
+  @Deprecated
+  public PdfBoxDocument(PDDocument pdDocument) {
+    this(null, pdDocument);
+  }
+
+  /**
+   * <p>
+   * Constructor.
+   * </p>
+   * 
+   * @param pdDocument The {@link PDDocument} instance underpinning
+   *          this PDF document
+   * @since 1.70
+   */
+  public PdfBoxDocument(PdfBoxDocumentFactory pdfBoxDocumentFactory,
+                        PDDocument pdDocument) {
+    this.pdfBoxDocumentFactory = pdfBoxDocumentFactory;
     this.pdDocument = pdDocument;
     this.closed = false;
 
@@ -133,12 +164,12 @@ public class PdfBoxDocument implements PdfDocument {
   @Override
   public void close() throws PdfException {
     try {
-      logger.debug2("Closing PDF document explicitly");
+      log.debug2("Closing PDF document explicitly");
       closed = true;
       pdDocument.close();
     }
     catch (IOException ioe) {
-      logger.debug2("Exception closing PDF document explicitly", ioe);
+      log.debug2("Exception closing PDF document explicitly", ioe);
       throw new PdfException(ioe);
     }
   }
@@ -163,6 +194,11 @@ public class PdfBoxDocument implements PdfDocument {
     return pdDocument.getDocumentInformation().getCreator();
   }
 
+  @Override
+  public PdfBoxDocumentFactory getDocumentFactory() {
+    return pdfBoxDocumentFactory;
+  }
+  
   @Override
   public String getKeywords() {
     return pdDocument.getDocumentInformation().getKeywords();
@@ -217,7 +253,7 @@ public class PdfBoxDocument implements PdfDocument {
   }
 
   @Override
-  public PdfPage getPage(int index) {
+  public PdfPage getPage(int index) throws PdfException {
     /*
      * IMPLEMENTATION NOTE
      * 
@@ -225,11 +261,11 @@ public class PdfBoxDocument implements PdfDocument {
      * PDDocumentCatalog line 205) states that all the elements in the
      * returned list are of type PDPage.
      */
-    return new PdfBoxPage(this, (PDPage)pdDocument.getDocumentCatalog().getAllPages().get(index));
+    return getDocumentFactory().makePage(this, /*(PDPage)*/pdDocument.getDocumentCatalog().getAllPages().get(index));
   }
 
   @Override
-  public List<PdfPage> getPages() {
+  public List<PdfPage> getPages() throws PdfException {
     /*
      * IMPLEMENTATION NOTE
      * 
@@ -239,7 +275,7 @@ public class PdfBoxDocument implements PdfDocument {
      */
     List<PdfPage> ret = new ArrayList<PdfPage>();
     for (Object obj : pdDocument.getDocumentCatalog().getAllPages()) {
-      ret.add(new PdfBoxPage(this, (PDPage)obj));
+      ret.add(getDocumentFactory().makePage(this, /*(PDPage)*/obj));
     }
     return ret;
   }
@@ -259,11 +295,6 @@ public class PdfBoxDocument implements PdfDocument {
     return pdDocument.getDocumentInformation().getTitle();
   }
 
-  @Override
-  public PdfTokenFactory getTokenFactory() {
-    return PdfBoxTokens.getAdapterInstance();
-  }
-  
   @Override
   public Map<String, PdfToken> getTrailer() {
     COSDictionary trailer = pdDocument.getDocument().getTrailer();
@@ -287,7 +318,7 @@ public class PdfBoxDocument implements PdfDocument {
       pdDocument.save(outputStream);
     }
     catch (COSVisitorException cve) {
-      logger.debug2("Error saving PDF document", cve);
+      log.debug2("Error saving PDF document", cve);
       throw new PdfException("Error saving PDF document", cve);
     }
   }
@@ -333,7 +364,7 @@ public class PdfBoxDocument implements PdfDocument {
     }
     catch (UnsupportedEncodingException uee) {
       // Shouldn't happen, ISO-8859-1 is guaranteed to exist
-      logger.warning("Unexpected unsupported encoding exception: " + Constants.ENCODING_ISO_8859_1, uee);
+      log.warning("Unexpected unsupported encoding exception: " + Constants.ENCODING_ISO_8859_1, uee);
       throw new PdfException("Unexpected error converting metadata string to stream", uee);
     }
     catch (IOException ioe) {
@@ -434,12 +465,12 @@ public class PdfBoxDocument implements PdfDocument {
     try {
       if (!closed) {
         // Starts with newline, doesn't end with one, see constructor
-        logger.warning("Closing PDF document implicitly in finalizer; creation context:" + openStackTrace);
+        log.warning("Closing PDF document implicitly in finalizer; creation context:" + openStackTrace);
         pdDocument.close();
       }
     }
     catch (Exception exc) {
-      logger.debug2("Exception closing PDF document implicitly in finalizer", exc);
+      log.debug2("Exception closing PDF document implicitly in finalizer", exc);
       // Don't rethrow
     }
   }

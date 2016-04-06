@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,16 +33,19 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.pdf.pdfbox;
 
 import java.io.*;
+import java.util.List;
 
 import org.apache.pdfbox.exceptions.*;
 import org.apache.pdfbox.pdfparser.PDFParser;
-import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.*;
+import org.apache.pdfbox.pdmodel.common.PDStream;
+import org.apache.pdfbox.pdmodel.graphics.xobject.PDXObjectForm;
 import org.lockss.pdf.*;
 import org.lockss.util.IOUtil;
 
 /**
  * <p>
- * A {@link PdfDocumentFactory} implementation based on PDFBox 1.6.0.
+ * A {@link PdfDocumentFactory} implementation based on PDFBox 1.8.11.
  * </p>
  * 
  * @author Thib Guicherd-Callin
@@ -52,17 +55,19 @@ import org.lockss.util.IOUtil;
 public class PdfBoxDocumentFactory implements PdfDocumentFactory {
 
   @Override
-  public PdfDocument parse(InputStream pdfInputStream)
+  public PdfTokenFactory getTokenFactory() {
+    return PdfBoxTokens.getAdapterInstance();
+  }
+  
+  @Override
+  public PdfBoxDocument makeDocument(InputStream pdfInputStream)
       throws IOException,
              PdfCryptographyException,
              PdfException {
     try {
-      // Parse the input stream
-      PDFParser pdfParser = new PDFParser(pdfInputStream);
-      pdfParser.parse(); // Probably closes the input stream
-      PDDocument pdDocument = pdfParser.getPDDocument();
+      PDDocument pdDocument = makePdDocument(pdfInputStream);
       processAfterParse(pdDocument);
-      return new PdfBoxDocument(pdDocument);
+      return makeDocument(this, pdDocument);
     }
     catch (CryptographyException ce) {
       throw new PdfCryptographyException(ce);
@@ -75,7 +80,104 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
       IOUtil.safeClose(pdfInputStream);
     }
   }
+  
+  @Override
+  public PdfBoxDocument makeDocument(PdfDocumentFactory pdfDocumentFactory,
+                                     Object pdfDocumentObject)
+      throws PdfException {
+    return new PdfBoxDocument(this, (PDDocument)pdfDocumentObject);
+  }
 
+  @Override
+  public PdfBoxPage makePage(PdfDocument pdfDocument,
+                             Object pdfPageObject)
+      throws PdfException {
+    return new PdfBoxPage((PdfBoxDocument)pdfDocument, (PDPage)pdfPageObject);
+  }
+  
+  /**
+   * <p>
+   * Makes a new PDF page token stream instance from the given PDF page instance
+   * and from the given PDF token stream object data suitable for this PDF
+   * implementation.
+   * </p>
+   * 
+   * @param pdfPage
+   *          The PDF page the XObject token stream comes from
+   * @param pdfTokenStreamObject
+   *          The PDF token stream object data (implementation-dependent)
+   * @return A PDF page token stream instance suitable for this PDF
+   *         implementation
+   * @throws PdfException
+   *           If an error occurs
+   * @since 1.70
+   */
+  public PdfBoxPageTokenStream makePageTokenStream(PdfPage pdfPage,
+                                                   Object pdfTokenStreamObject)
+      throws PdfException {
+    return new PdfBoxPageTokenStream((PdfBoxPage)pdfPage, (PDStream)pdfTokenStreamObject);
+  }
+
+  @Override
+  public PdfTokenStream makeTokenStream(PdfPage pdfPage,
+                                        Object pdfToenStreamObject)
+      throws PdfException {
+    throw new UnsupportedOperationException("Not supported by this class; use makePageTokenStream and makeXObjectTokenStream instead");
+  }
+  
+  /**
+   * <p>
+   * Makes a new PDF XObject token stream instance from the given PDF page
+   * instance and from the given PDF token stream object data suitable for this
+   * PDF implementation (a list made of the {@link PDXObjectForm} instance, the
+   * parent {@link PDResources} instance and the proper {@link PDResources}
+   * instance).
+   * </p>
+   * 
+   * @param pdfPage
+   *          The PDF page the XObject token stream comes from
+   * @param pdfTokenStreamObject
+   *          The PDF token stream object data (implementation-dependent)
+   * @return A PDF XObject token stream instance suitable for this PDF
+   *         implementation
+   * @throws PdfException
+   *           If an error occurs
+   * @since 1.70
+   */
+  public PdfBoxXObjectTokenStream makeXObjectTokenStream(PdfPage pdfPage,
+                                                         Object pdfTokenStreamObject)
+      throws PdfException {
+    List<?> varargs = (List<?>)pdfTokenStreamObject;
+    return new PdfBoxXObjectTokenStream((PdfBoxPage)pdfPage,
+                                        (PDXObjectForm)varargs.get(0),
+                                        (PDResources)varargs.get(1),
+                                        (PDResources)varargs.get(2));
+  }
+  
+  @Override
+  @Deprecated
+  public PdfDocument parse(InputStream pdfInputStream)
+      throws IOException,
+             PdfCryptographyException,
+             PdfException {
+    return makeDocument(pdfInputStream);
+  }
+
+  /**
+   * 
+   * @param pdfInputStream
+   * @return
+   * @throws IOException
+   * @since 1.70
+   */
+  protected PDDocument makePdDocument(InputStream pdfInputStream)
+      throws IOException {
+    PDFParser pdfParser = new PDFParser(pdfInputStream);
+    pdfParser.parse(); // Probably closes the input stream
+    PDDocument pdDocument = pdfParser.getPDDocument();
+    return pdDocument;
+  }
+  
   /**
    * <p>
    * Override this method to alter the processing of the {@link PDDocument}

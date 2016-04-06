@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,6 +40,7 @@ import java.util.List;
  * represented by this package, a PDF token stream is in a PDF page
  * and is a sequence of PDF tokens ({@link PdfToken}).
  * </p>
+ * 
  * @author Thib Guicherd-Callin
  * @since 1.56
  */
@@ -49,21 +50,12 @@ public interface PdfTokenStream {
    * <p>
    * Returns the PDF page associated with this PDF token stream.
    * </p>
+   * 
    * @return The parent PDF page.
    * @since 1.56
    */
   PdfPage getPage();
 
-  /**
-   * <p>
-   * Returns a PDF token factory associated with this PDF token stream.
-   * </p>
-   * @return A PDF token factory.
-   * @throws PdfException If PDF processing fails.
-   * @since 1.56
-   */
-  PdfTokenFactory getTokenFactory() throws PdfException;
-  
   /**
    * <p>
    * Returns the sequence of PDF tokens contained in this PDF token
@@ -73,6 +65,7 @@ public interface PdfTokenStream {
    * Note that changing the resulting list does not change the tokens
    * of the stream; only a call to {@link #setTokens(List)} does.
    * </p>
+   * 
    * @return A list of PDF tokens (possibly empty).
    * @throws PdfException If PDF processing fails.
    */
@@ -82,6 +75,7 @@ public interface PdfTokenStream {
    * <p>
    * Replaces the tokens in the token stream with the given ones.
    * </p>
+   * 
    * @param newTokens A list of PDF tokens for this stream.
    * @throws PdfException If PDF processing fails.
    */

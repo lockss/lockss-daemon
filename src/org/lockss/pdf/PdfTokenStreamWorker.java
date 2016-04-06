@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -344,7 +344,7 @@ public abstract class PdfTokenStreamWorker {
    * @see #process(List, PdfTokenFactory)
    */
   public void process(PdfTokenStream pdfTokenStream) throws PdfException {
-    process(pdfTokenStream.getTokens(), pdfTokenStream.getTokenFactory());
+    process(pdfTokenStream.getTokens(), PdfUtil.getTokenFactory(pdfTokenStream));
   }
   
   /**
@@ -413,7 +413,8 @@ public abstract class PdfTokenStreamWorker {
 
   /**
    * <p>
-   * Gets the current PDF token factory.
+   * Gets the current PDF token factory. <b>Renamed {@link #getTokenFactory()}
+   * in 1.60.</b>
    * </p>
    * 
    * @return the current PDF token factory.
@@ -422,7 +423,7 @@ public abstract class PdfTokenStreamWorker {
    */
   @Deprecated
   protected PdfTokenFactory getFactory() {
-    return factory;
+    return getTokenFactory();
   }
 
   /**
@@ -522,7 +523,7 @@ public abstract class PdfTokenStreamWorker {
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isBeginImageData(PdfToken)}
+   * {@link PdfOpcodes#isBeginImageData(PdfToken)}
    * using the current operator.
    * </p>
    * 
@@ -531,13 +532,13 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.60
    */
   protected boolean isBeginImageData() {
-    return PdfUtil.isBeginImageData(getOperator());
+    return PdfOpcodes.isBeginImageData(getOperator());
   }
 
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isBeginImageObject(PdfToken)}
+   * {@link PdfOpcodes#isBeginImageObject(PdfToken)}
    * using the current operator.
    * </p>
    * 
@@ -546,13 +547,13 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.60
    */
   protected boolean isBeginImageObject() {
-    return PdfUtil.isBeginImageObject(getOperator());
+    return PdfOpcodes.isBeginImageObject(getOperator());
   }
 
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isBeginTextObject(PdfToken)}
+   * {@link PdfOpcodes#isBeginTextObject(PdfToken)}
    * using the current operator.
    * </p>
    * 
@@ -561,13 +562,13 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.60
    */
   protected boolean isBeginTextObject() {
-    return PdfUtil.isBeginTextObject(getOperator());
+    return PdfOpcodes.isBeginTextObject(getOperator());
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isEndTextObject(PdfToken)}
+   * {@link PdfOpcodes#isEndTextObject(PdfToken)}
    * using the current operator.
    * </p>
    * 
@@ -576,13 +577,13 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.60
    */
   protected boolean isEndTextObject() {
-    return PdfUtil.isEndTextObject(getOperator());
+    return PdfOpcodes.isEndTextObject(getOperator());
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isInvokeXObject(PdfToken)}
+   * {@link PdfOpcodes#isInvokeXObject(PdfToken)}
    * using the current operator.
    * </p>
    * 
@@ -591,13 +592,13 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.60
    */
   protected boolean isInvokeXObject() {
-    return PdfUtil.isInvokeXObject(getOperator());
+    return PdfOpcodes.isInvokeXObject(getOperator());
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isNextLineShowText(PdfToken)}
+   * {@link PdfOpcodes#isNextLineShowText(PdfToken)}
    * using the current operator.
    * </p>
    * 
@@ -606,13 +607,13 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.60
    */
   protected boolean isNextLineShowText() {
-    return PdfUtil.isNextLineShowText(getOperator());
+    return PdfOpcodes.isNextLineShowText(getOperator());
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isRestoreGraphicsState(PdfToken)}
+   * {@link PdfOpcodes#isRestoreGraphicsState(PdfToken)}
    * using the current operator.
    * </p>
    * 
@@ -621,13 +622,13 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.60
    */
   protected boolean isRestoreGraphicsState() {
-    return PdfUtil.isRestoreGraphicsState(getOperator());
+    return PdfOpcodes.isRestoreGraphicsState(getOperator());
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isSaveGraphicsState(PdfToken)}
+   * {@link PdfOpcodes#isSaveGraphicsState(PdfToken)}
    * using the current operator.
    * </p>
    * 
@@ -636,13 +637,13 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.60
    */
   protected boolean isSaveGraphicsState() {
-    return PdfUtil.isSaveGraphicsState(getOperator());
+    return PdfOpcodes.isSaveGraphicsState(getOperator());
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isSetSpacingNextLineShowText(PdfToken)}
+   * {@link PdfOpcodes#isSetSpacingNextLineShowText(PdfToken)}
    * using the current operator.
    * </p>
    * 
@@ -651,13 +652,13 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.60
    */
   protected boolean isSetSpacingNextLineShowText() {
-    return PdfUtil.isSetSpacingNextLineShowText(getOperator());
+    return PdfOpcodes.isSetSpacingNextLineShowText(getOperator());
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isSetTextFont(PdfToken)}
+   * {@link PdfOpcodes#isSetTextFont(PdfToken)}
    * using the current operator.
    * </p>
    * 
@@ -666,13 +667,13 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.62
    */
   protected boolean isSetTextFont() {
-    return PdfUtil.isSetTextFont(getOperator());
+    return PdfOpcodes.isSetTextFont(getOperator());
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isSetTextMatrix(PdfToken)}
+   * {@link PdfOpcodes#isSetTextMatrix(PdfToken)}
    * using the current operator.
    * </p>
    * 
@@ -681,13 +682,13 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.62
    */
   protected boolean isSetTextMatrix() {
-    return PdfUtil.isSetTextMatrix(getOperator());
+    return PdfOpcodes.isSetTextMatrix(getOperator());
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isShowText(PdfToken)}
+   * {@link PdfOpcodes#isShowText(PdfToken)}
    * using the current operator.
    * </p>
    * 
@@ -696,13 +697,13 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.60
    */
   protected boolean isShowText() {
-    return PdfUtil.isShowText(getOperator());
+    return PdfOpcodes.isShowText(getOperator());
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isShowTextContains(PdfToken, PdfToken, String)}
+   * {@link PdfOpcodes#isShowTextContains(PdfToken, PdfToken, String)}
    * using the current operator, its single operand and the given substring.
    * </p>
    * 
@@ -714,13 +715,13 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.67
    */
   protected boolean isShowTextContains(String substr) {
-    return PdfUtil.isShowTextContains(getOperator(), getSingleOperand(), substr);
+    return PdfOpcodes.isShowTextContains(getOperator(), getSingleOperand(), substr);
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isShowTextEndsWith(PdfToken, PdfToken, String)}
+   * {@link PdfOpcodes#isShowTextEndsWith(PdfToken, PdfToken, String)}
    * using the current operator, its single operand and the given suffix.
    * </p>
    * 
@@ -732,13 +733,13 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.60
    */
   protected boolean isShowTextEndsWith(String suffix) {
-    return PdfUtil.isShowTextEndsWith(getOperator(), getSingleOperand(), suffix);
+    return PdfOpcodes.isShowTextEndsWith(getOperator(), getSingleOperand(), suffix);
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isShowTextEquals(PdfToken, PdfToken, String)}
+   * {@link PdfOpcodes#isShowTextEquals(PdfToken, PdfToken, String)}
    * using the current operator, its single operand and the given string.
    * </p>
    * 
@@ -750,13 +751,13 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.60
    */
   protected boolean isShowTextEquals(String str) {
-    return PdfUtil.isShowTextEquals(getOperator(), getSingleOperand(), str);
+    return PdfOpcodes.isShowTextEquals(getOperator(), getSingleOperand(), str);
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isShowTextEqualsIgnoreCase(PdfToken, PdfToken, String)}
+   * {@link PdfOpcodes#isShowTextEqualsIgnoreCase(PdfToken, PdfToken, String)}
    * using the current operator, its single operand and the given string.
    * </p>
    * 
@@ -768,13 +769,13 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.60
    */
   protected boolean isShowTextEqualsIgnoreCase(String str) {
-    return PdfUtil.isShowTextEqualsIgnoreCase(getOperator(), getSingleOperand(), str);
+    return PdfOpcodes.isShowTextEqualsIgnoreCase(getOperator(), getSingleOperand(), str);
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isShowTextFind(PdfToken, PdfToken, Pattern)}
+   * {@link PdfOpcodes#isShowTextFind(PdfToken, PdfToken, Pattern)}
    * using the current operator, its single operand and the given pattern.
    * </p>
    * 
@@ -788,13 +789,13 @@ public abstract class PdfTokenStreamWorker {
    * @see Matcher#find()
    */
   protected boolean isShowTextFind(Pattern pattern) {
-    return PdfUtil.isShowTextFind(getOperator(), getSingleOperand(), pattern);
+    return PdfOpcodes.isShowTextFind(getOperator(), getSingleOperand(), pattern);
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isShowTextGlyphPositioning(PdfToken)}
+   * {@link PdfOpcodes#isShowTextGlyphPositioning(PdfToken)}
    * using the current operator.
    * </p>
    * 
@@ -803,13 +804,13 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.60
    */
   protected boolean isShowTextGlyphPositioning() {
-    return PdfUtil.isShowTextGlyphPositioning(getOperator());
+    return PdfOpcodes.isShowTextGlyphPositioning(getOperator());
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isShowTextGlyphPositioningContains(PdfToken, PdfToken, String)}
+   * {@link PdfOpcodes#isShowTextGlyphPositioningContains(PdfToken, PdfToken, String)}
    * using the current operator, its single operand and the given substring.
    * </p>
    * 
@@ -821,13 +822,13 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.67
    */
   protected boolean isShowTextGlyphPositioningContains(String substr) {
-    return PdfUtil.isShowTextGlyphPositioningContains(getOperator(), getSingleOperand(), substr);
+    return PdfOpcodes.isShowTextGlyphPositioningContains(getOperator(), getSingleOperand(), substr);
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isShowTextGlyphPositioningEndsWith(PdfToken, PdfToken, String)}
+   * {@link PdfOpcodes#isShowTextGlyphPositioningEndsWith(PdfToken, PdfToken, String)}
    * using the current operator, its single operand and the given suffix.
    * </p>
    * 
@@ -839,13 +840,13 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.60
    */
   protected boolean isShowTextGlyphPositioningEndsWith(String suffix) {
-    return PdfUtil.isShowTextGlyphPositioningEndsWith(getOperator(), getSingleOperand(), suffix);
+    return PdfOpcodes.isShowTextGlyphPositioningEndsWith(getOperator(), getSingleOperand(), suffix);
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isShowTextGlyphPositioningEquals(PdfToken, PdfToken, String)}
+   * {@link PdfOpcodes#isShowTextGlyphPositioningEquals(PdfToken, PdfToken, String)}
    * using the current operator, its single operand and the given suffix.
    * </p>
    * 
@@ -857,13 +858,13 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.60
    */
   protected boolean isShowTextGlyphPositioningEquals(String str) {
-    return PdfUtil.isShowTextGlyphPositioningEquals(getOperator(), getSingleOperand(), str);
+    return PdfOpcodes.isShowTextGlyphPositioningEquals(getOperator(), getSingleOperand(), str);
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isShowTextGlyphPositioningEqualsIgnoreCase(PdfToken, PdfToken, String)}
+   * {@link PdfOpcodes#isShowTextGlyphPositioningEqualsIgnoreCase(PdfToken, PdfToken, String)}
    * using the current operator, its single operand and the given suffix.
    * </p>
    * 
@@ -875,13 +876,13 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.60
    */
   protected boolean isShowTextGlyphPositioningEqualsIgnoreCase(String str) {
-    return PdfUtil.isShowTextGlyphPositioningEqualsIgnoreCase(getOperator(), getSingleOperand(), str);
+    return PdfOpcodes.isShowTextGlyphPositioningEqualsIgnoreCase(getOperator(), getSingleOperand(), str);
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isShowTextGlyphPositioningFind(PdfToken, PdfToken, Pattern)
+   * {@link PdfOpcodes#isShowTextGlyphPositioningFind(PdfToken, PdfToken, Pattern)
    * using the current operator, its single operand and the givenpattern.
    * </p>
    * 
@@ -895,88 +896,13 @@ public abstract class PdfTokenStreamWorker {
    * @see Matcher#find()
    */
   protected boolean isShowTextGlyphPositioningFind(Pattern pattern) {
-    return PdfUtil.isShowTextGlyphPositioningFind(getOperator(), getSingleOperand(), pattern);
-  }
-  
-  /**
-   * <p>
-   * Determines if the current operator is
-   * {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its string operand
-   * matches the given pattern according to {@link Matcher#matches()}.
-   * </p>
-   * <p>
-   * This method uses {@link Matcher#matches()}, which implicitly anchors at the
-   * beginning of the input string.
-   * </p>
-   * 
-   * @param pattern
-   *          A regular expression expressed as a {@link Pattern}.
-   * @return <code>true</code> if the current operator is
-   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its string
-   *         operand matches <code>regex</code>.
-   * @since 1.60
-   * @see Matcher#matches()
-   * @deprecated Adapt your code to using
-   *             {@link #isShowTextGlyphPositioningFind(Pattern)} instead.
-   *             This method will be removed in a future release.
-   */
-  @Deprecated
-  protected boolean isShowTextGlyphPositioningMatches(Pattern pattern) {
-    if (!isShowTextGlyphPositioning()) {
-      return false;
-    }
-    StringBuilder sb = new StringBuilder();
-    for (PdfToken tok : getSingleOperand().getArray()) {
-      if (tok.isString()) {
-        sb.append(tok.getString());
-      }
-    }
-    return pattern.matcher(sb.toString()).matches();
-  }
-  
-  /**
-   * <p>
-   * Determines if the current operator is
-   * {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its string operand
-   * matches the given regular expression.
-   * </p>
-   * <p>
-   * This method uses {@link String#matches(String)} which compiles the regular
-   * expression each time, so it may be inefficient compared to
-   * {@link #isShowTextGlyphPositioningMatches(Pattern)}, and also implicitly
-   * anchors at the beginning of the input string.
-   * </p>
-   * 
-   * @param regex
-   *          A regular expression expressed as a string.
-   * @return <code>true</code> if the current operator is
-   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its string
-   *         operand matches <code>regex</code>.
-   * @since 1.60
-   * @see #isShowTextGlyphPositioningMatches(Pattern)
-   * @see String#matches(String)
-   * @deprecated Adapt your code to using
-   *             {@link #isShowTextGlyphPositioningFind(Pattern)} instead.
-   *             This method will be removed in a future release.
-   */
-  @Deprecated
-  protected boolean isShowTextGlyphPositioningMatches(String regex) {
-    if (!isShowTextGlyphPositioning()) {
-      return false;
-    }
-    StringBuilder sb = new StringBuilder();
-    for (PdfToken tok : getSingleOperand().getArray()) {
-      if (tok.isString()) {
-        sb.append(tok.getString());
-      }
-    }
-    return sb.toString().matches(regex);
+    return PdfOpcodes.isShowTextGlyphPositioningFind(getOperator(), getSingleOperand(), pattern);
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isShowTextGlyphPositioningStartsWith(PdfToken, PdfToken, String)
+   * {@link PdfOpcodes#isShowTextGlyphPositioningStartsWith(PdfToken, PdfToken, String)
    * using the current operator, its single operand and the given prefix.
    * </p>
    * 
@@ -988,67 +914,13 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.60
    */
   protected boolean isShowTextGlyphPositioningStartsWith(String prefix) {
-    return PdfUtil.isShowTextGlyphPositioningStartsWith(getOperator(), getSingleOperand(), prefix);
-  }
-  
-  /**
-   * <p>
-   * Determines if the current operator is {@link PdfOpcodes#SHOW_TEXT} and its
-   * string operand matches the given pattern according to
-   * {@link Matcher#matches()}.
-   * </p>
-   * <p>
-   * This method uses {@link Matcher#matches()}, which implicitly anchors at the
-   * beginning of the input string.
-   * </p>
-   * 
-   * @param pattern
-   *          A regular expression expressed as a {@link Pattern}.
-   * @return <code>true</code> if the current operator is
-   *         {@link PdfOpcodes#SHOW_TEXT} and its string operand matches
-   *         <code>pattern</code>.
-   * @since 1.60
-   * @see Matcher#matches()
-   * @deprecated Adapt your code to using {@link #isShowTextFind(Pattern)}
-   *             instead. This method will be removed in a future release.
-   */
-  @Deprecated
-  protected boolean isShowTextMatches(Pattern pattern) {
-    return isShowText() && pattern.matcher(getSingleOperand().getString()).matches();
-  }
-  
-  /**
-   * <p>
-   * Determines if the current operator is {@link PdfOpcodes#SHOW_TEXT} and its
-   * string operand matches the given regular expression.
-   * </p>
-   * <p>
-   * This method uses {@link String#matches(String)} which compiles the regular
-   * expression each time, so it may be inefficient compared to
-   * {@link #isShowTextMatches(Pattern)}, and also implicitly anchors at the
-   * beginning of the input string.
-   * </p>
-   * 
-   * @param regex
-   *          A regular expression expressed as a string.
-   * @return <code>true</code> if the current operator is
-   *         {@link PdfOpcodes#SHOW_TEXT} and its string operand matches
-   *         <code>regex</code>.
-   * @since 1.60
-   * @see #isShowTextMatches(Pattern)
-   * @see String#matches(String)
-   * @deprecated Adapt your code to using {@link #isShowTextFind(Pattern)}
-   *             instead. This method will be removed in a future release.
-   */
-  @Deprecated
-  protected boolean isShowTextMatches(String regex) {
-    return isShowText() && getSingleOperand().getString().matches(regex);
+    return PdfOpcodes.isShowTextGlyphPositioningStartsWith(getOperator(), getSingleOperand(), prefix);
   }
   
   /**
    * <p>
    * Convenience call to
-   * {@link PdfUtil#isShowTextStartsWith(PdfToken, PdfToken, String)}
+   * {@link PdfOpcodes#isShowTextStartsWith(PdfToken, PdfToken, String)}
    * using the current operator, its single operand and the given prefix.
    * </p>
    * 
@@ -1060,7 +932,7 @@ public abstract class PdfTokenStreamWorker {
    * @since 1.60
    */
   protected boolean isShowTextStartsWith(String prefix) {
-    return PdfUtil.isShowTextStartsWith(getOperator(), getSingleOperand(), prefix);
+    return PdfOpcodes.isShowTextStartsWith(getOperator(), getSingleOperand(), prefix);
   }
   
   /**

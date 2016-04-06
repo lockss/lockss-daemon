@@ -32,49 +32,51 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.pdf;
 
-import org.lockss.pdf.pdfbox.PdfBoxDocumentFactory;
-
 /**
  * <p>
- * The LOCKSS system provides at least one PDF implementation, by default
- * accessed through this class. As of this writing, the default implementation
- * is based on PDFBox 1.8.11 and provided by {@link PdfBoxDocumentFactory}.
+ * A convenience class for the constant strings for useful PDF names.
  * </p>
  * 
  * @author Thib Guicherd-Callin
- * @since 1.56
+ * @since 1.70
  */
-public class DefaultPdfDocumentFactory {
+public class PdfNames {
 
   /**
    * <p>
-   * Our singleton instance.
+   * The constant string for the PDF name {@value}.
    * </p>
    * 
-   * @since 1.56
+   * @since 1.70
    */
-  private static final PdfDocumentFactory singleton = new PdfBoxDocumentFactory();
+  public static final String ID = "ID";
 
   /**
    * <p>
-   * Obtains a default PDF document factory.
+   * The constant string for the PDF name {@value}.
    * </p>
    * 
-   * @return A {@link PdfDocumentFactory} instance.
-   * @since 1.56
+   * @since 1.70
    */
-  public static PdfDocumentFactory getInstance() {
-    return singleton;
-  }
-  
+  public static final String LINK = "Link";
+
+  /**
+   * <p>
+   * The constant string for the PDF name {@value}.
+   * </p>
+   * 
+   * @since 1.70
+   */
+  public static final String SUBTYPE = "Subtype";
+
   /**
    * <p>
    * This class cannot be instantiated.
    * </p>
    * 
-   * @since 1.56
+   * @since 1.70
    */
-  private DefaultPdfDocumentFactory() {
+  private PdfNames() {
     // Prevent instantiation
   }
   
