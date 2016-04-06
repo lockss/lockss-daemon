@@ -2440,7 +2440,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of Orthodontics Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Orthodontics Volume 39 ; 39 ; >
     au < testing ; exists ; 2013 ; Journal of Orthodontics Volume 40 ; 40 ; >
-    au < testing ; exists ; 2014 ; Journal of Orthodontics Volume 41 ; 41 ; >
+    au < ready ; exists ; 2014 ; Journal of Orthodontics Volume 41 ; 41 ; >
     au < testing ; exists ; 2015 ; Journal of Orthodontics Volume 42 ; 42 ; >
     au < expected ; exists ; 2016 ; Journal of Orthodontics Volume 43 ; 43 ; >
 
@@ -2901,7 +2901,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Medieval Archaeology Volume 56 ; 56 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Medieval Archaeology Volume 57 ; 57 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Medieval Archaeology Volume 58 ; 58 ; >
-    au < testing ; exists ; 2015 ; Medieval Archaeology Volume 59 ; 59 ; >
+    au < ready ; exists ; 2015 ; Medieval Archaeology Volume 59 ; 59 ; >
     au < expected ; exists ; 2016 ; Medieval Archaeology Volume 60 ; 60 ; >
 
   }
@@ -4043,7 +4043,7 @@
     param[journal_id] = yemf20
     #continues = 0265-1068
 
-    au < testing ; exists ; 2015 ; Early Modern French Studies Volume 37 ; 37 ; >
+    au < ready ; exists ; 2015 ; Early Modern French Studies Volume 37 ; 37 ; >
     au < expected ; exists ; 2016 ; Early Modern French Studies Volume 38 ; 38 ; >
 
   }
