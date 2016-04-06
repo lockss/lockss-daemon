@@ -15,8 +15,8 @@ hostport, uiuser, uipass = sys.argv[1:]
 url = 'http://%s/ws/DaemonStatusService?wsdl' % (hostport,)
 client = Client(url, username=uiuser, password=uipass)
 #query = 'select auId,lastCrawl,contentSize where substanceState = "Yes" and lastCrawlResult = "Successful"'
-#query = 'select auId,contentSize,lastCrawl,availableFromPublisher where substanceState = "Yes" and lastCrawlResult = "Successful" and auId like "%HighWirePressH20Plugin%"'
-query = 'select auId where substanceState = "Yes" and lastCrawlResult = "Successful" and auId like "%HighWirePressH20Plugin%"'
+#query = 'select auId,contentSize,lastCrawl,availableFromPublisher where substanceState = "Yes" and lastCrawlResult = "Successful" and auId like "%TaylorAndFrancisPlugin%"'
+query = 'select auId where substanceState = "Yes" and lastCrawlResult = "Successful" and auId like "%TaylorAndFrancisPlugin%"'
 #query = 'select auId,lastCrawl where substanceState = "Yes"'
 results = client.service.queryAus(query)
 #for result in results: 
