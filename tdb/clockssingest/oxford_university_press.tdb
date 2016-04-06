@@ -9882,8 +9882,10 @@
 
     param[base_url] = http://intimmabs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    
+    # Fatal error http://intimmabs.oxfordjournals.org/content/22/Suppl_1_Pt_1.author-index   ;   Connection reset
 
-    au < frozen ; exists ; 2010 ; International Immunology Meeting Abstracts Volume 22 ; 22 ; >
+    au < ingNotReady ; exists ; 2010 ; International Immunology Meeting Abstracts Volume 22 ; 22 ; >
 
   }
 
