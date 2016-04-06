@@ -47236,7 +47236,7 @@
 
       {
 
-        plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+        pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://ijx.sagepub.com/
 
         au < manifest ; exists ; 1946 ; International Journal: Canada's Journal of Global Policy Analysis Volume 1 ; 1 ; >
