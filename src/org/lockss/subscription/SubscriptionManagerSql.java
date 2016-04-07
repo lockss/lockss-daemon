@@ -148,6 +148,32 @@ public class SubscriptionManagerSql {
       + " order by pu." + PUBLISHER_NAME_COLUMN
       + ",n." + NAME_COLUMN
       + ",pr." + PROVIDER_NAME_COLUMN;
+  
+//Query to find all the subscriptions and their publisher.
+ private static final String 
+   FIND_ALL_SUBSCRIPTIONS_AND_PUBLISHERS_QUERY(String start, String end) {
+     return "select distinct"
+     + " pu." + PUBLISHER_NAME_COLUMN
+     + ",n." + NAME_COLUMN
+     + ",pr." + PROVIDER_LID_COLUMN
+     + ",pr." + PROVIDER_NAME_COLUMN
+     + " from " + SUBSCRIPTION_RANGE_TABLE + " sr"
+     + "," + SUBSCRIPTION_TABLE + " s"
+     + "," + PUBLISHER_TABLE + " pu"
+     + "," + PUBLICATION_TABLE + " p"
+     + "," + MD_ITEM_NAME_TABLE + " n"
+     + "," + PROVIDER_TABLE + " pr"
+     + " where sr." + SUBSCRIPTION_SEQ_COLUMN + " = s."
+     + SUBSCRIPTION_SEQ_COLUMN
+     + " and s." + PUBLICATION_SEQ_COLUMN + " = p." + PUBLICATION_SEQ_COLUMN
+     + " and p." + PUBLISHER_SEQ_COLUMN + " = pu." + PUBLISHER_SEQ_COLUMN
+     + " and p." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
+     + " and s." + PROVIDER_SEQ_COLUMN + " = pr." + PROVIDER_SEQ_COLUMN
+     + " and pu." + PUBLISHER_NAME_COLUMN + " like '[" + start + "-" + end + "]%'"
+     + " order by pu." + PUBLISHER_NAME_COLUMN
+     + ",n." + NAME_COLUMN
+     + ",pr." + PROVIDER_NAME_COLUMN;
+  }
 
   // Query to find all the subscriptions and their ranges.
   private static final String FIND_ALL_SUBSCRIPTIONS_AND_RANGES_QUERY = "select"
@@ -883,6 +909,11 @@ public class SubscriptionManagerSql {
    */
   Map<String, PublisherSubscription> findAllSubscribedPublishers()
       throws DbException {
+    return findAllSubscribedPublishers("A", "Z");
+  }
+  
+  Map<String, PublisherSubscription> findAllSubscribedPublishers(String start, String end)
+      throws DbException {
     final String DEBUG_HEADER = "findAllSubscribedPublishers(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
@@ -892,7 +923,8 @@ public class SubscriptionManagerSql {
     // Get a connection to the database.
     Connection conn = dbManager.getConnection();
 
-    String query = FIND_ALL_SUBSCRIBED_PUBLISHERS_QUERY;
+    String query = FIND_ALL_SUBSCRIBED_PUBLISHERS_QUERY
+        + " and pu." + PUBLISHER_NAME_COLUMN + " like '[" + start + "-" + end + "]%'";
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "SQL = " + query);
 
     PreparedStatement getAllSubscribedPublishers =
@@ -947,7 +979,13 @@ public class SubscriptionManagerSql {
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  List<Subscription> findAllSubscriptionsAndPublishers() throws DbException {
+  List<Subscription> findAllSubscriptionsAndPublishers() 
+      throws DbException {
+    return findAllSubscriptionsAndPublishers("A", "Z");
+  }
+  
+  List<Subscription> findAllSubscriptionsAndPublishers(String start, String end) 
+      throws DbException {
     final String DEBUG_HEADER = "findAllSubscriptionsAndPublishers(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
@@ -962,7 +1000,7 @@ public class SubscriptionManagerSql {
     // Get a connection to the database.
     Connection conn = dbManager.getConnection();
 
-    String query = FIND_ALL_SUBSCRIPTIONS_AND_PUBLISHERS_QUERY;
+    String query = FIND_ALL_SUBSCRIPTIONS_AND_PUBLISHERS_QUERY(start, end);
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "SQL = " + query);
 
     PreparedStatement getAllSubscriptionsAndPublishers =

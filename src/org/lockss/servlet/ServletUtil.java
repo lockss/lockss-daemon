@@ -124,7 +124,9 @@ public class ServletUtil {
 
   /** URL of third party logo image */
   static final String PARAM_THIRD_PARTY_LOGO_IMAGE = PREFIX + "logo.img";
-
+  
+  static final String LOADING_SPINNER = "images/ajax-loader.gif";
+  
   /** URL of third party logo link */
   static final String PARAM_THIRD_PARTY_LOGO_LINK = PREFIX + "logo.link";
 
@@ -2129,10 +2131,10 @@ public class ServletUtil {
 
     // Create the spans required by jQuery to build the desired tabs.
     org.mortbay.html.List tabList =
-	createTabList(lettersPerTabCount, tabLetters, tabLetterPopulationMap);
+	createTabList(lettersPerTabCount, tabLetters, tabLetterPopulationMap, tabsDiv);
 
     // Add them to the tabs container.
-    tabsDiv.add(tabList);
+//    tabsDiv.add(tabList);
 
     // The start and end letters of a tab letter group.
     Map.Entry<Character, Character> letterPair;
@@ -2166,10 +2168,10 @@ public class ServletUtil {
       tabDiv = new Block("div", "id=\"" + startLetter.toString() + "\"");
 
       // Add the table to the tab.
-      tabDiv.add(divTable);
+//      tabDiv.add(divTable);
 
       // Add the tab to the tabs container.
-      tabsDiv.add(tabDiv);
+//      tabsDiv.add(tabDiv);
 
       // Map the tab table by the first letter.
       divTableMap.put(startLetter.toString(), divTable);
@@ -2260,7 +2262,8 @@ public class ServletUtil {
    */
   private static org.mortbay.html.List createTabList(int lettersPerTabCount,
       Map<Character, Character> tabLetters,
-      Map<String, Boolean> tabLetterPopulationMap) {
+      Map<String, Boolean> tabLetterPopulationMap,
+      Block tabsDiv) {
     final String DEBUG_HEADER = "createTabList(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
@@ -2277,7 +2280,10 @@ public class ServletUtil {
 
     Iterator<Map.Entry<Character, Character>> iterator =
 	tabLetters.entrySet().iterator();
-
+    
+    int tabCount = 1;
+    List<Block> loadingDivs = new ArrayList<Block>();
+    
     // Loop through all the tab letter groups.
     while (iterator.hasNext()) {
       // Get the start and end letters of the tab letter group.
@@ -2305,15 +2311,28 @@ public class ServletUtil {
       }
 
       // Set up the tab link.
-      tabLink = new Link("#" + startLetter);
+//      tabLink = new Link("#" + startLetter);
+      tabLink = new Link("SubscriptionManagement?lockssAction=showTab&start=" + startLetter + "&amp;end=" + endLetter);
       tabLink.add(tabSpan);
-
+      
       // Add the tab to the list.
       tabListItem = tabList.newItem();
       tabListItem.add(tabLink);
+      
+      Block loadingDiv = new Block(Block.Div, "id='ui-tabs-" + tabCount++ + "'");
+      Image loadingImage = new Image(LOADING_SPINNER);
+      loadingImage.alt("Loading...");
+      loadingDiv.add(loadingImage);
+      loadingDiv.add(" Loading...");
+      loadingDivs.add(loadingDiv);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+    
+    tabsDiv.add(tabList);
+    for(Block loadingDiv : loadingDivs){
+      tabsDiv.add(loadingDiv);
+    }
     return tabList;
   }
 
@@ -2369,7 +2388,7 @@ public class ServletUtil {
    *          A List<String> with the CSS classes to use for the column headers.
    * @return a Table to be added to the page.
    */
-  private static Table createTabTable(String letter,
+  public static Table createTabTable(String letter,
       List<String> columnHeaderNames, String rowTitleCssClass,
       List<String> columnHeaderCssClasses) {
     final String DEBUG_HEADER = "createTabTable(): ";
@@ -2377,7 +2396,6 @@ public class ServletUtil {
 
     Table divTable = new Table(0, "class=\"status-table\"");
     divTable.newRow();
-
     if (StringUtil.isNullString(rowTitleCssClass)) {
       divTable.addCell("");
     } else {

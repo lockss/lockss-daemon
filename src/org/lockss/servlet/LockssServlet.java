@@ -1284,7 +1284,7 @@ public abstract class LockssServlet extends HttpServlet
    *          A Page representing the HTML page.
    */
   protected void addCssLocations(Page page) {
-    page.add(new StyleLink("/css/lockss.css"));
+    page.add(new StyleLink("/css/lockss-new.css"));
     page.add(new StyleLink("/css/jquery-ui-1.8.css"));
   }
 
@@ -1297,8 +1297,9 @@ public abstract class LockssServlet extends HttpServlet
   protected void addJQueryLocations(Page page) {
     addJavaScriptLocation(page, "js/jquery-1.6.2.js");
     addJavaScriptLocation(page, "js/jquery-ui.min-1.8.js");
-    addJavaScriptLocation(page, "js/auDetails.js");
+    addJavaScriptLocation(page, "js/auDetails-new.js");
     addJavaScriptLocation(page, "js/jquery.tristate.js");
+    addJavaScriptLocation(page, "js/jquery.shiftclick.js");
   }
 
   /**

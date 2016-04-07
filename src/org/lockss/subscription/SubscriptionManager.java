@@ -1483,20 +1483,28 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    */
   public List<SerialPublication> getUndecidedPublications(
       Map<String, Publisher> undecidedPublicationsPublishers)
-	  throws DbException {
+    throws DbException {
+    return getUndecidedPublications(undecidedPublicationsPublishers, 
+        "A", "Z");
+  }
+  
+  public List<SerialPublication> getUndecidedPublications(
+      Map<String, Publisher> undecidedPublicationsPublishers, 
+      String start, String end)
+          throws DbException {
     final String DEBUG_HEADER = "getUndecidedPublications(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
     // Get the publishers for which a subscription decision has been made.
     Map<String, PublisherSubscription> subscribedPublishers =
-	subManagerSql.findAllSubscribedPublishers();
+        subManagerSql.findAllSubscribedPublishers(start, end);
 
     List<SerialPublication> unsubscribedPublications =
-	new ArrayList<SerialPublication>();
+        new ArrayList<SerialPublication>();
 
     // Get the existing subscriptions with publisher names.
     MultiValueMap subscriptionMap = mapSubscriptionsByPublisher(subManagerSql
-	.findAllSubscriptionsAndPublishers());
+        .findAllSubscriptionsAndPublishers(start, end));
 
     Collection<Subscription> publisherSubscriptions = null;
     String publisherName;
@@ -1507,7 +1515,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
     // Loop through all the publishers.
     for (TdbPublisher publisher :
-      TdbUtil.getTdb().getAllTdbPublishers().values()) {
+      TdbUtil.getTdb().getAllTdbPublishers(start, end).values()) {
       publisherName = publisher.getName();
       if (log.isDebug3())
 	log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);

@@ -48,7 +48,6 @@ import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
 /**
- * Static utility methods for getting lists of Tdb entities. Sometimes the 
  * process of retrieving a list of entities that meet particular criteria 
  * (for example only those TdbAus which are configured or preserved) can be 
  * convoluted and require going through other formats such as ArchivalUnit.
