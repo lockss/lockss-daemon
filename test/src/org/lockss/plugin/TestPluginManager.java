@@ -1102,6 +1102,7 @@ public class TestPluginManager extends LockssTestCase {
     String url2 = "http://foo.bar/222";
     String url3 = "http://foo.bar/333";
     String url4 = "http://foo.bar/444";
+    String url5 = "http://foo.bar/555";
     doConfig();
     ConfigurationUtil.addFromArgs(PluginManager.PARAM_AU_SEARCH_404_CACHE_SIZE,
 				  "[1,2]",
@@ -1202,12 +1203,23 @@ public class TestPluginManager extends LockssTestCase {
     Plugin plug1 = au1.getPlugin();
     Configuration au1conf = au1.getConfiguration();
 
+    au1.addUrl(url5, true, true, null);
+
     // stop and start AU1
     mgr.stopAu(au1, new AuEvent(AuEvent.Type.Deactivate, false));
+
+    // Ensure this one is in 404 cache
+    assertEquals(null, mgr.findCachedUrl(url5, CuContentReq.HasContent));
+
     MockArchivalUnit xmau1 =
       (MockArchivalUnit)mgr.createAu(plug1, au1conf,
                                      new AuEvent(AuEvent.Type.RestartCreate,
                                                  false));
+    // Ensure the 404 cache was flushed when AU created
+    xmau1.addUrl(url5, true, true, null);
+    CachedUrl cu555 = mgr.findCachedUrl(url5, CuContentReq.HasContent);
+    assertEquals(xmau1, cu555.getArchivalUnit());
+
     CachedUrl xcu1 = xmau1.addUrl(url1, true, true, null);
     CachedUrl xcu31 = xmau1.addUrl(url3, true, true, null);
 
@@ -1215,7 +1227,7 @@ public class TestPluginManager extends LockssTestCase {
     CachedUrl rcu8 = mgr.findCachedUrl(url1);
     assertEquals(url1, rcu8.getUrl());
     assertSame(xmau1, rcu8.getArchivalUnit());
-    assertEquals(13, mgr.getRecentCuMisses());
+    assertEquals(15, mgr.getRecentCuMisses());
     assertEquals(2, mgr.getRecentCuHits());
 
     assertEquals(3, mgr.getRecent404Hits());

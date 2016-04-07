@@ -1075,7 +1075,11 @@ public class PluginManager
 	flush404Cache(au);
       };
     }
+    @Override public void auCreated(AuEvent event, ArchivalUnit au) {
+      flush404Cache(au);
+    }
   }
+
   private AuEventHandler myAuEventHandler = new PlugMgrAuEventHandler();
 
   boolean shouldFlush404Cache(ArchivalUnit au,
