@@ -43,6 +43,7 @@ import java.util.regex.Pattern;
 import org.apache.commons.collections.*;
 import org.apache.commons.lang3.mutable.*;
 import org.apache.commons.lang3.time.FastDateFormat;
+import org.eclipse.jetty.http.HttpTester.Request;
 import org.lockss.config.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
@@ -2121,7 +2122,8 @@ public class ServletUtil {
   public static Map<String, Table> createTabsWithTable(int alphabetLetterCount,
       int lettersPerTabCount, List<String> columnHeaderNames,
       String rowTitleCssClass, List<String> columnHeaderCssClasses,
-      Map<String, Boolean> tabLetterPopulationMap, Block tabsDiv) {
+      Map<String, Boolean> tabLetterPopulationMap, Block tabsDiv,
+      String action) {
     final String DEBUG_HEADER = "createTabsWithTable(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
@@ -2131,10 +2133,12 @@ public class ServletUtil {
 
     // Create the spans required by jQuery to build the desired tabs.
     org.mortbay.html.List tabList =
-	createTabList(lettersPerTabCount, tabLetters, tabLetterPopulationMap, tabsDiv);
-
-    // Add them to the tabs container.
-//    tabsDiv.add(tabList);
+	createTabList(lettersPerTabCount, tabLetters, tabLetterPopulationMap, tabsDiv, action);
+    
+    if(!SubscriptionManagement.SHOW_ADD_PAGE_ACTION.equals(action)){
+      // Add them to the tabs container.
+      tabsDiv.add(tabList);
+    }
 
     // The start and end letters of a tab letter group.
     Map.Entry<Character, Character> letterPair;
@@ -2166,12 +2170,14 @@ public class ServletUtil {
 
       // Create the tab for this letter group.
       tabDiv = new Block("div", "id=\"" + startLetter.toString() + "\"");
-
-      // Add the table to the tab.
-//      tabDiv.add(divTable);
-
-      // Add the tab to the tabs container.
-//      tabsDiv.add(tabDiv);
+      
+      if(!SubscriptionManagement.SHOW_ADD_PAGE_ACTION.equals(action)){
+        // Add the table to the tab.
+        tabDiv.add(divTable);
+        
+        // Add the tab to the tabs container.
+        tabsDiv.add(tabDiv);
+      }
 
       // Map the tab table by the first letter.
       divTableMap.put(startLetter.toString(), divTable);
@@ -2263,7 +2269,8 @@ public class ServletUtil {
   private static org.mortbay.html.List createTabList(int lettersPerTabCount,
       Map<Character, Character> tabLetters,
       Map<String, Boolean> tabLetterPopulationMap,
-      Block tabsDiv) {
+      Block tabsDiv,
+      String action) {
     final String DEBUG_HEADER = "createTabList(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
@@ -2280,7 +2287,7 @@ public class ServletUtil {
 
     Iterator<Map.Entry<Character, Character>> iterator =
 	tabLetters.entrySet().iterator();
-    
+
     int tabCount = 1;
     List<Block> loadingDivs = new ArrayList<Block>();
     
@@ -2311,8 +2318,11 @@ public class ServletUtil {
       }
 
       // Set up the tab link.
-//      tabLink = new Link("#" + startLetter);
-      tabLink = new Link("SubscriptionManagement?lockssAction=showTab&start=" + startLetter + "&amp;end=" + endLetter);
+      if(SubscriptionManagement.SHOW_ADD_PAGE_ACTION.equals(action)){
+        tabLink = new Link("SubscriptionManagement?lockssAction=" + action + "&start=" + startLetter + "&amp;end=" + endLetter);
+      }else{
+        tabLink = new Link("#" + startLetter);
+      }
       tabLink.add(tabSpan);
       
       // Add the tab to the list.
@@ -2329,10 +2339,13 @@ public class ServletUtil {
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
     
-    tabsDiv.add(tabList);
-    for(Block loadingDiv : loadingDivs){
-      tabsDiv.add(loadingDiv);
+    if(SubscriptionManagement.SHOW_ADD_PAGE_ACTION.equals(action)){
+      tabsDiv.add(tabList);
+      for(Block loadingDiv : loadingDivs){
+        tabsDiv.add(loadingDiv);
+      }
     }
+    
     return tabList;
   }
 

@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
     $("#tabs").tabs({
         beforeLoad: function (event, ui) {
             ui.panel.html('<img src="images/ajax-loader.gif" width="24" height="24" style="vertical-align:middle;">Loading..</img>');
@@ -21,7 +22,8 @@ $(document).ready(function () {
             var selectedPanel = $("#tabs div.ui-tabs-panel:not(.ui-tabs-hide)");
             initTribox(selectedPanel);
             selectedPanel.find(".shift-click-box").shiftSelectable();
-        }
+        },
+        cache: true
     });
 });
 

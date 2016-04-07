@@ -115,7 +115,6 @@ public class SubscriptionManagement extends LockssServlet {
   public static final String SHOW_UPDATE_PAGE_ACTION = "showUpdate";
   public static final String SHOW_UPDATE_PAGE_HELP_TEXT =
       "Change existing title subscription options";
-  public static final String SHOW_TAB_ACTION = "showTab";
   public static final String TRI_STATE_WIDGET_HIDDEN_ID_SUFFIX = "Hidden";
   public static final String TRI_STATE_WIDGET_HIDDEN_ID_UNSET_VALUE = "unset";
   private static final String ADD_SUBSCRIPTIONS_ACTION = "Add";
@@ -239,9 +238,16 @@ public class SubscriptionManagement extends LockssServlet {
     // The operation to be performed.
     String action = req.getParameter(ACTION_TAG);
 
+    String start = req.getParameter("start");
+    String end = req.getParameter("end");
+
     try {
       if (SHOW_ADD_PAGE_ACTION.equals(action)) {
-	displayAddPage();
+        if(start != null && end != null){
+          this.writePage(this.populateTab(start, end));
+        }else{
+          displayAddPage();
+        }
       } else if (SHOW_UPDATE_PAGE_ACTION.equals(action)) {
 	displayUpdatePage();
       } else if (ADD_SUBSCRIPTIONS_ACTION.equals(action)) {
@@ -256,11 +262,7 @@ public class SubscriptionManagement extends LockssServlet {
 	// fall in subscribed ranges and do not fall in any unsubscribed range.
 	status = subManager.subscribeAllConfiguredAus();
 	displayResults(status, AUTO_ADD_SUBSCRIPTIONS_LINK_TEXT, null);
-      } else if (SHOW_TAB_ACTION.equals(action)){
-        String start = req.getParameter("start");
-        String end = req.getParameter("end");
-        this.writePage(this.populateTab(start, end));
-      }else {
+      } else {
 	displayAddPage();
       }
     } catch (DbException dbe) {
@@ -392,7 +394,8 @@ public class SubscriptionManagement extends LockssServlet {
 	Map<String, Table> divTableMap =
 	    ServletUtil.createTabsWithTable(LETTERS_IN_ALPHABET, lettersPerTab,
 		getTabColumnHeaderNames(), "sub-row-title",
-		getColumnHeaderCssClasses(), tabLetterPopulationMap, tabsDiv);
+		getColumnHeaderCssClasses(), tabLetterPopulationMap, tabsDiv,
+		SHOW_ADD_PAGE_ACTION);
 
 	// Populate the tabs content with the publications for which no
 	// subscription decision has been made.
@@ -2029,7 +2032,8 @@ public class SubscriptionManagement extends LockssServlet {
 	Map<String, Table> divTableMap =
 	    ServletUtil.createTabsWithTable(LETTERS_IN_ALPHABET, lettersPerTab,
 		getTabColumnHeaderNames(), "sub-row-title",
-		getColumnHeaderCssClasses(), tabLetterPopulationMap, tabsDiv);
+		getColumnHeaderCssClasses(), tabLetterPopulationMap, tabsDiv,
+		SHOW_UPDATE_PAGE_ACTION);
 
 	// Populate the tabs content with the publications for which
 	// subscription decisions have already been made.
