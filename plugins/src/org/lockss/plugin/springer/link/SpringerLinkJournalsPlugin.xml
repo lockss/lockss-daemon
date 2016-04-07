@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>25</string>
+    <string>26</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>17</string>
+        <string>18</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -110,4 +110,17 @@
       </entry>
     </map>
   </entry>
+  <!-- The css, images, js and sites files have a changing number in the url for journals -->    
+  <!-- eg:(base_url)static/201602081740-1199/css/print.css -->  
+  <!-- don't count it in the poll, but do collect and share versions -->  
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <string>/static/[0-9]+-[0-9]+/(images|js|css|sites)/.*\.(png|css|js|gif)$</string>
+  </entry>
+  <entry>
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>/static/[0-9]+-[0-9]+/(images|js|css|sites)/.*\.(png|css|js|gif)$</string>
+    </list>
+  </entry> 
 </map>
