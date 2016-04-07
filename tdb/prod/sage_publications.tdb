@@ -1508,6 +1508,51 @@
     }
 
     {
+  
+      title <
+        name = American Journal of Health Promotion ;
+        issn = 0890-1171 ;
+        eissn = 2168-6602
+      >
+  
+        param[base_url] = http://ajh.sagepub.com/
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+  
+        au < exists ; 1986-1987 ; American Journal of Health Promotion Volume 1 ; 1 >
+        au < exists ; 1987 ; American Journal of Health Promotion Volume 2 ; 2 >
+        au < exists ; 1988-1989 ; American Journal of Health Promotion Volume 3 ; 3 >
+        au < exists ; 1989-1990 ; American Journal of Health Promotion Volume 4 ; 4 >
+        au < doesNotExist ; 0 ; American Journal of Health Promotion Volume 5 ; 5 >
+        au < doesNotExist ; 0 ; American Journal of Health Promotion Volume 6 ; 6 >
+        au < doesNotExist ; 0 ; American Journal of Health Promotion Volume 7 ; 7 >
+        au < doesNotExist ; 0 ; American Journal of Health Promotion Volume 8 ; 8 >
+        au < exists ; 1994-1995 ; American Journal of Health Promotion Volume 9 ; 9 >
+        au < exists ; 1995-1996 ; American Journal of Health Promotion Volume 10 ; 10 >
+        au < exists ; 1996-1997 ; American Journal of Health Promotion Volume 11 ; 11 >
+        au < doesNotExist ; 0 ; American Journal of Health Promotion Volume 12 ; 12 >
+        au < doesNotExist ; 0 ; American Journal of Health Promotion Volume 13 ; 13 >
+        au < doesNotExist ; 0 ; American Journal of Health Promotion Volume 14 ; 14 >
+        au < doesNotExist ; 0 ; American Journal of Health Promotion Volume 15 ; 15 >
+        au < doesNotExist ; 0 ; American Journal of Health Promotion Volume 16 ; 16 >
+        au < doesNotExist ; 0 ; American Journal of Health Promotion Volume 17 ; 17 >
+        au < doesNotExist ; 0 ; American Journal of Health Promotion Volume 18 ; 18 >
+        au < exists ; 2004-2005 ; American Journal of Health Promotion Volume 19 ; 19 >
+        au < exists ; 2005-2006 ; American Journal of Health Promotion Volume 20 ; 20 >
+        au < exists ; 2007 ; American Journal of Health Promotion Volume 21 ; 21 >
+        au < exists ; 2008 ; American Journal of Health Promotion Volume 22 ; 22 >
+        au < exists ; 2008-2009 ; American Journal of Health Promotion Volume 23 ; 23 >
+        au < doesNotExist ; 0 ; American Journal of Health Promotion Volume 24 ; 24 >
+        au < doesNotExist ; 0 ; American Journal of Health Promotion Volume 25 ; 25 >
+        au < doesNotExist ; 0 ; American Journal of Health Promotion Volume 26 ; 26 >
+        au < doesNotExist ; 0 ; American Journal of Health Promotion Volume 27 ; 27 >
+        au < doesNotExist ; 0 ; American Journal of Health Promotion Volume 28 ; 28 >
+        au < doesNotExist ; 0 ; American Journal of Health Promotion Volume 29 ; 29 >
+        au < exists ; 2016 ; American Journal of Health Promotion Volume 30 ; 30 >
+  
+    }
+
+    {
 
       title <
         name = American Journal of Hospice and Palliative Medicine ;
