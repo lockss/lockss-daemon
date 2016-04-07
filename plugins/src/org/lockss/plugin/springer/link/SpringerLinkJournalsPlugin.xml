@@ -120,7 +120,7 @@
   <entry>
     <string>au_url_poll_result_weight</string>
     <list>
-      <string>/static/[0-9]+-[0-9]+/(images|js|css|sites)/.*\.(png|css|js|gif)$</string>
+      <string>"/static/[0-9]+-[0-9]+/(images|js|css|sites)/.*\.(png|css|js|gif)$", 0</string>
     </list>
   </entry> 
 </map>
