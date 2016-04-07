@@ -31514,12 +31514,13 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      # moved to OJS http://mmd.iammonline.com/index.php/musmed/index
 
       au < doNotProcess ; doNotProcess ; 2009 ; Music and Medicine Volume 1 ; 1 ; >
-      au < finished ; crawling ; 2010 ; Music and Medicine Volume 2 ; 2 ; >
-      au < finished ; crawling ; 2011 ; Music and Medicine Volume 3 ; 3 ; >
-      au < finished ; frozen ; 2012 ; Music and Medicine Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2013 ; Music and Medicine Volume 5 ; 5 ; >
+      au < down ; crawling ; 2010 ; Music and Medicine Volume 2 ; 2 ; >
+      au < down ; crawling ; 2011 ; Music and Medicine Volume 3 ; 3 ; >
+      au < down ; frozen ; 2012 ; Music and Medicine Volume 4 ; 4 ; >
+      au < down ; exists ; 2013 ; Music and Medicine Volume 5 ; 5 ; >
 
     }
 
