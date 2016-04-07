@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -98,6 +98,36 @@ public class TestPeerAgreement extends LockssTestCase {
 
     // Negative time? Sure!
     PeerAgreement.NO_AGREEMENT.signalAgreement(1.0f, -100);
+  }
+
+  public void testMerge() {
+    assertEquals(PeerAgreement.NO_AGREEMENT,
+		 PeerAgreement.NO_AGREEMENT.mergeWith(null));
+    assertEquals(PeerAgreement.NO_AGREEMENT,
+		 PeerAgreement.NO_AGREEMENT.mergeWith(PeerAgreement.NO_AGREEMENT));
+
+    PeerAgreement a1 =
+      PeerAgreement.NO_AGREEMENT.signalAgreement(0.5f, 100);
+    assertEquals(a1, a1.mergeWith(a1));
+    assertEquals(a1, a1.mergeWith(PeerAgreement.NO_AGREEMENT));
+    assertEquals(a1, PeerAgreement.NO_AGREEMENT.mergeWith(a1));
+    assertEquals(a1, a1.mergeWith(null));
+
+    PeerAgreement a2 =
+      PeerAgreement.NO_AGREEMENT.signalAgreement(0.75f, 200);
+    assertEquals(a2, a2.mergeWith(a1));
+    assertEquals(a2, a1.mergeWith(a2));
+    assertEquals(a2, a2.mergeWith(a1));
+
+    PeerAgreement a3 =
+      PeerAgreement.NO_AGREEMENT.signalAgreement(0.6f, 50);
+    PeerAgreement a13 =
+      PeerAgreement.NO_AGREEMENT
+      .signalAgreement(0.6f, 50)
+      .signalAgreement(0.5f, 100);
+    assertEquals(a3, a3.mergeWith(a3));
+    assertEquals(a13, a1.mergeWith(a3));
+    assertEquals(a13, a3.mergeWith(a1));
   }
 
   // Test the conversion from IdentityAgreement to PeerAgreement.

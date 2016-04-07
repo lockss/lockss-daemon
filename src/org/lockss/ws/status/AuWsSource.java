@@ -38,6 +38,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import org.lockss.app.LockssDaemon;
+import org.lockss.config.CurrentConfig;
 import org.lockss.crawler.CrawlManagerStatus;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.CrawlWindow;
@@ -53,12 +54,14 @@ import org.lockss.plugin.CachedUrlSetNode;
 import org.lockss.plugin.CuIterator;
 import org.lockss.plugin.Plugin;
 import org.lockss.poller.Poll;
+import org.lockss.poller.ReputationTransfers;
 import org.lockss.protocol.AgreementType;
 import org.lockss.protocol.IdentityManager;
 import org.lockss.protocol.PeerAgreement;
 import org.lockss.protocol.PeerIdentity;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.repository.RepositoryNode;
+import org.lockss.state.ArchivalUnitStatus;
 import org.lockss.state.AuState;
 import org.lockss.state.NodeManager;
 import org.lockss.state.SubstanceChecker;
@@ -600,6 +603,11 @@ public class AuWsSource extends AuWsResult {
   public List<PeerAgreementsWsResult> getPeerAgreements() {
     if (!peerAgreementsPopulated) {
       IdentityManager idManager = getTheDaemon().getIdentityManager();
+      ReputationTransfers repXfer = null;
+      if (CurrentConfig.getBooleanParam(ArchivalUnitStatus.PARAM_PEER_ARGEEMENTS_USE_REPUTATION_TRANSFERS,
+					ArchivalUnitStatus. DEFAULT_PEER_ARGEEMENTS_USE_REPUTATION_TRANSFERS)) {
+	repXfer = new ReputationTransfers(idManager);
+      }
 
       // Initialize the the map of agreements by type by peer.
       Map<String, Map<AgreementType, PeerAgreement>>
@@ -620,16 +628,25 @@ public class AuWsSource extends AuWsResult {
 	  // past.
 	  if (agreement != null
 	      && agreement.getHighestPercentAgreement() >= 0.0) {
+	    if (repXfer != null) {
+	      // If this peer's reputation has been transferred, report
+	      // this agreement for the transferred-to peer
+	      pid = repXfer.getPeerInheritingReputation(pid);
+	    }
+
 	    // Yes: Create the map of agreements for this peer in the map of
 	    // agreements by type by peer if it does not exist already.
-	    if (!allAgreementsByPeer.containsKey(pid.getIdString())) {
-	      allAgreementsByPeer.put(pid.getIdString(),
-		  new HashMap<AgreementType, PeerAgreement>());
+	    Map<AgreementType,PeerAgreement> typeMap =
+	      allAgreementsByPeer.get(pid.getIdString());
+	    if (typeMap == null) {
+	      typeMap = new HashMap<AgreementType, PeerAgreement>();
+	      allAgreementsByPeer.put(pid.getIdString(), typeMap);
 	    }
 
 	    // Add this type of agreement to the map of agreements for this peer
 	    // in the map of by type by peer.
-	    allAgreementsByPeer.get(pid.getIdString()).put(type, agreement);
+// 	    allAgreementsByPeer.get(pid.getIdString()).put(type, agreement);
+	    typeMap.put(type, agreement.mergeWith(typeMap.get(type)));
 	  }
 	}
       }

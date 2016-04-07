@@ -35,13 +35,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.poller.ReputationTransfers;
 import org.lockss.protocol.AgreementType;
 import org.lockss.protocol.IdentityManagerImpl;
 import org.lockss.protocol.MockPeerIdentity;
 import org.lockss.protocol.PeerAgreement;
 import org.lockss.protocol.PeerIdentity;
+import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockLockssDaemon;
+import org.lockss.util.*;
 import org.lockss.ws.entities.AgreementTypeWsResult;
 import org.lockss.ws.entities.PeerAgreementWsResult;
 import org.lockss.ws.entities.PeerAgreementsWsResult;
@@ -53,6 +56,19 @@ import org.lockss.ws.entities.PeerAgreementsWsResult;
  */
 public class TestAuWsSource extends LockssTestCase {
 
+  final String p1 = "TCP:[127.0.0.1]:12";
+  final String p2 = "TCP:[127.0.0.2]:12";
+  final String p3 = "TCP:[127.0.0.3]:12";
+  final String p4 = "TCP:[127.0.0.4]:12";
+  final String p5 = "TCP:[127.0.0.5]:12";
+
+  PeerIdentity peer1;
+  PeerIdentity peer2;
+  PeerIdentity peer3;
+  PeerIdentity peer4;
+  PeerIdentity peer5;
+
+
   public void setUp() throws Exception {
     super.setUp();
 
@@ -62,6 +78,11 @@ public class TestAuWsSource extends LockssTestCase {
 
     MyIdentityManager idMgr = new MyIdentityManager();
     theDaemon.setIdentityManager(idMgr);
+    peer1 = idMgr.stringToPeerIdentity(p1);
+    peer2 = idMgr.stringToPeerIdentity(p2);
+    peer3 = idMgr.stringToPeerIdentity(p3);
+    peer4 = idMgr.stringToPeerIdentity(p4);
+    peer5 = idMgr.stringToPeerIdentity(p5);
   }
 
   public void testGetPeerAgreements() throws Exception {
@@ -74,12 +95,27 @@ public class TestAuWsSource extends LockssTestCase {
     }
   }
 
+  public void testGetPeerAgreementsWithReputationTransfer() throws Exception {
+    String xfermap = p1 + "," + p3 + ";"
+      + p3 + "," + p2;
+    ConfigurationUtil.addFromArgs(
+      ReputationTransfers.PARAM_REPUTATION_TRANSFER_MAP, xfermap);
+
+    AuWsSource source = new AuWsSource(null);
+    List<PeerAgreementsWsResult> peerAgreements = source.getPeerAgreements();
+    assertEquals(3, peerAgreements.size());
+
+    for (PeerAgreementsWsResult result : peerAgreements) {
+      validateWithReputationTransfer(result);
+    }
+  }
+
   private void validate(PeerAgreementsWsResult result) {
     String peerId = result.getPeerId();
     Map<AgreementTypeWsResult, PeerAgreementWsResult> agreements =
 	result.getAgreements();
 
-    if ("tcp:[1.2.3.4]:12".equals(peerId)) {
+    if (p1.equals(peerId)) {
       assertEquals(3, agreements.size());
       assertTrue(agreements.keySet().contains(AgreementTypeWsResult.POR));
       assertTrue(agreements.keySet().contains(AgreementTypeWsResult.POP));
@@ -103,7 +139,7 @@ public class TestAuWsSource extends LockssTestCase {
       assertEquals(222L, pa.getPercentAgreementTimestamp().longValue());
       assertEquals(0.222f, pa.getHighestPercentAgreement());
       assertEquals(222L, pa.getHighestPercentAgreementTimestamp().longValue());
-    } else if ("tcp:[2.3.4.5]:23".equals(peerId)) {
+    } else if (p4.equals(peerId)) {
       assertEquals(1, agreements.size());
       assertTrue(agreements.keySet().contains(AgreementTypeWsResult
 	  .SYMMETRIC_POP_HINT));
@@ -114,7 +150,7 @@ public class TestAuWsSource extends LockssTestCase {
       assertEquals(2345L, pa.getPercentAgreementTimestamp().longValue());
       assertEquals(0.234f, pa.getHighestPercentAgreement());
       assertEquals(234L, pa.getHighestPercentAgreementTimestamp().longValue());
-    } else if ("tcp:[7.6.5.4]:76".equals(peerId)) {
+    } else if (p5.equals(peerId)) {
       assertEquals(1, agreements.size());
       assertTrue(agreements.keySet().contains(AgreementTypeWsResult
 	  .SYMMETRIC_POP_HINT));
@@ -125,7 +161,7 @@ public class TestAuWsSource extends LockssTestCase {
       assertEquals(5454L, pa.getPercentAgreementTimestamp().longValue());
       assertEquals(0.76f, pa.getHighestPercentAgreement());
       assertEquals(76L, pa.getHighestPercentAgreementTimestamp().longValue());
-    } else if ("tcp:[8.9.0.1]:89".equals(peerId)) {
+    } else if (p2.equals(peerId)) {
       assertEquals(1, agreements.size());
       assertTrue(agreements.keySet().contains(AgreementTypeWsResult.POR));
 
@@ -134,7 +170,7 @@ public class TestAuWsSource extends LockssTestCase {
       assertEquals(9L, pa.getPercentAgreementTimestamp().longValue());
       assertEquals(0.9f, pa.getHighestPercentAgreement());
       assertEquals(9L, pa.getHighestPercentAgreementTimestamp().longValue());
-    } else if ("tcp:[9.8.7.6]:98".equals(peerId)) {
+    } else if (p3.equals(peerId)) {
       assertEquals(2, agreements.size());
       assertTrue(agreements.keySet().contains(AgreementTypeWsResult.POP));
 
@@ -152,56 +188,90 @@ public class TestAuWsSource extends LockssTestCase {
     }
   }
 
-  public static class MyIdentityManager extends IdentityManagerImpl {
+  private void validateWithReputationTransfer(PeerAgreementsWsResult result) {
+    String peerId = result.getPeerId();
+    Map<AgreementTypeWsResult, PeerAgreementWsResult> agreements =
+	result.getAgreements();
+    if (p1.equals(peerId)) {
+      fail("p1 shouldn't appear in result");
+    } else if (p3.equals(peerId)) {
+      fail("p3 shouldn't appear in result");
+    } else if (p2.equals(peerId)) {
+      assertEquals(SetUtil.set(AgreementTypeWsResult.POR,
+			       AgreementTypeWsResult.POP,
+			       AgreementTypeWsResult.SYMMETRIC_POR_HINT),
+		   agreements.keySet());
+
+      PeerAgreementWsResult pa = agreements.get(AgreementTypeWsResult.POR);
+      assertEquals(0.9f, pa.getPercentAgreement());
+      assertEquals(9L, pa.getPercentAgreementTimestamp().longValue());
+      assertEquals(0.9f, pa.getHighestPercentAgreement());
+      assertEquals(9L, pa.getHighestPercentAgreementTimestamp().longValue());
+      pa = agreements.get(AgreementTypeWsResult.POP);
+      assertEquals(0.888f, pa.getPercentAgreement());
+      assertEquals(888L, pa.getPercentAgreementTimestamp().longValue());
+      assertEquals(0.99f, pa.getHighestPercentAgreement());
+      assertEquals(99L, pa.getHighestPercentAgreementTimestamp().longValue());
+      pa = agreements.get(AgreementTypeWsResult.SYMMETRIC_POR_HINT);
+      assertEquals(0.8888f, pa.getPercentAgreement());
+      assertEquals(8888L, pa.getPercentAgreementTimestamp().longValue());
+      assertEquals(0.999f, pa.getHighestPercentAgreement());
+      assertEquals(999L, pa.getHighestPercentAgreementTimestamp().longValue());
+    } else {
+      validate(result);
+    }
+  }
+
+  public class MyIdentityManager extends IdentityManagerImpl {
     public Map<PeerIdentity, PeerAgreement> getAgreements(ArchivalUnit au,
 	AgreementType type) {
       Map<PeerIdentity, PeerAgreement> agreements =
 	  new HashMap<PeerIdentity, PeerAgreement>();
 
       if (AgreementType.POR.equals(type)) {
-	PeerIdentity pi1 = new MockPeerIdentity("tcp:[1.2.3.4]:12");
+	PeerIdentity pi1 = peer1;
 	PeerAgreement pa1 = PeerAgreement.NO_AGREEMENT;
 	pa1 = pa1.signalAgreement(0.1f, 1L);
 	pa1 = pa1.signalAgreement(0.2f, 2L);
 	agreements.put(pi1, pa1);
 
-	PeerIdentity pi2 = new MockPeerIdentity("tcp:[8.9.0.1]:89");
+	PeerIdentity pi2 = peer2;
 	PeerAgreement pa2 = PeerAgreement.NO_AGREEMENT;
 	pa2 = pa2.signalAgreement(0.8f, 8L);
 	pa2 = pa2.signalAgreement(0.9f, 9L);
 	agreements.put(pi2, pa2);
       } else if (AgreementType.POP.equals(type)) {
-	PeerIdentity pi1 = new MockPeerIdentity("tcp:[1.2.3.4]:12");
+	PeerIdentity pi1 = peer1;
 	PeerAgreement pa1 = PeerAgreement.NO_AGREEMENT;
 	pa1 = pa1.signalAgreement(0.11f, 11L);
 	pa1 = pa1.signalAgreement(0.22f, 22L);
 	agreements.put(pi1, pa1);
 
-	PeerIdentity pi2 = new MockPeerIdentity("tcp:[9.8.7.6]:98");
+	PeerIdentity pi2 = peer3;
 	PeerAgreement pa2 = PeerAgreement.NO_AGREEMENT;
 	pa2 = pa2.signalAgreement(0.99f, 99L);
 	pa2 = pa2.signalAgreement(0.888f, 888L);
 	agreements.put(pi2, pa2);
       }	if (AgreementType.SYMMETRIC_POR_HINT.equals(type)) {
-	PeerIdentity pi1 = new MockPeerIdentity("tcp:[1.2.3.4]:12");
+	PeerIdentity pi1 = peer1;
 	PeerAgreement pa1 = PeerAgreement.NO_AGREEMENT;
 	pa1 = pa1.signalAgreement(0.111f, 111L);
 	pa1 = pa1.signalAgreement(0.222f, 222L);
 	agreements.put(pi1, pa1);
 
-	PeerIdentity pi2 = new MockPeerIdentity("tcp:[9.8.7.6]:98");
+	PeerIdentity pi2 = peer3;
 	PeerAgreement pa2 = PeerAgreement.NO_AGREEMENT;
 	pa2 = pa2.signalAgreement(0.999f, 999L);
 	pa2 = pa2.signalAgreement(0.8888f, 8888L);
 	agreements.put(pi2, pa2);
       } else if (AgreementType.SYMMETRIC_POP_HINT.equals(type)) {
-	PeerIdentity pi1 = new MockPeerIdentity("tcp:[2.3.4.5]:23");
+	PeerIdentity pi1 = peer4;
 	PeerAgreement pa1 = PeerAgreement.NO_AGREEMENT;
 	pa1 = pa1.signalAgreement(0.234f, 234L);
 	pa1 = pa1.signalAgreement(0.23f, 2345L);
 	agreements.put(pi1, pa1);
 
-	PeerIdentity pi2 = new MockPeerIdentity("tcp:[7.6.5.4]:76");
+	PeerIdentity pi2 = peer5;
 	PeerAgreement pa2 = PeerAgreement.NO_AGREEMENT;
 	pa2 = pa2.signalAgreement(0.76f, 76L);
 	pa2 = pa2.signalAgreement(0.54f, 5454L);

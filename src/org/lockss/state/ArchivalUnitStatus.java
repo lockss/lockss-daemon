@@ -79,6 +79,15 @@ public class ArchivalUnitStatus
     PREFIX + "includeNeedsRecrawl";
   static final boolean DEFAULT_INCLUDE_NEEDS_RECRAWL = true;
 
+  /**
+   * If true, Peer Agreement tables will take reputation transfers into
+   * account.
+   */
+  public static final String PARAM_PEER_ARGEEMENTS_USE_REPUTATION_TRANSFERS =
+    PREFIX + "peerArgeementsUseReputationTransfers";
+  public static final boolean DEFAULT_PEER_ARGEEMENTS_USE_REPUTATION_TRANSFERS =
+    true;
+
   public static final String SERVICE_STATUS_TABLE_NAME =
       "ArchivalUnitStatusTable";
   public static final String AUIDS_TABLE_NAME = "AuIds";
@@ -98,6 +107,8 @@ public class ArchivalUnitStatus
   private static int defaultNumRows = DEFAULT_MAX_NODES_TO_DISPLAY;
   private static boolean isContentIsLink = DEFAULT_CONTENT_IS_LINK;
   private static boolean includeNeedsRecrawl = DEFAULT_INCLUDE_NEEDS_RECRAWL;
+  private static boolean peerArgeementsUseReputationTransfers =
+    DEFAULT_PEER_ARGEEMENTS_USE_REPUTATION_TRANSFERS;
   
   private static final DecimalFormat agreementFormat =
     new DecimalFormat("0.00");
@@ -168,6 +179,9 @@ public class ArchivalUnitStatus
 					DEFAULT_CONTENT_IS_LINK);
     includeNeedsRecrawl = config.getBoolean(PARAM_INCLUDE_NEEDS_RECRAWL,
 					    DEFAULT_INCLUDE_NEEDS_RECRAWL);
+    peerArgeementsUseReputationTransfers =
+      config.getBoolean(PARAM_PEER_ARGEEMENTS_USE_REPUTATION_TRANSFERS,
+			DEFAULT_PEER_ARGEEMENTS_USE_REPUTATION_TRANSFERS);
   }
 
   static CrawlManagerStatus getCMStatus(LockssDaemon daemon) {
@@ -2106,6 +2120,7 @@ public class ArchivalUnitStatus
     protected String getTitle(ArchivalUnit au) {
       return "Peer Agreements for AU: " + au.getName();
     }
+
     protected void populateTable(StatusTable table, ArchivalUnit au)
         throws StatusService.NoSuchTableException {
       IdentityManager idMgr = theDaemon.getIdentityManager();
@@ -2134,8 +2149,14 @@ public class ArchivalUnitStatus
       }
     }
 
+
     public Map<PeerIdentity,Map<AgreementType,PeerAgreement>>
 	  buildCacheStats(ArchivalUnit au, IdentityManager idMgr) {
+
+      ReputationTransfers repXfer = null;
+      if (peerArgeementsUseReputationTransfers) {
+	repXfer = new ReputationTransfers(idMgr);
+      }
 
       Map<PeerIdentity,Map<AgreementType,PeerAgreement>> res =
 	new HashMap<PeerIdentity,Map<AgreementType,PeerAgreement>>();
@@ -2144,13 +2165,19 @@ public class ArchivalUnitStatus
 	  idMgr.getAgreements(au, type);
 	if (peerMap != null) {
 	  for (Map.Entry<PeerIdentity,PeerAgreement> ent : peerMap.entrySet()) {
-	    Map<AgreementType,PeerAgreement> typeMap = res.get(ent.getKey());
+	    PeerIdentity pid = ent.getKey();
+	    if (repXfer != null) {
+	      pid = repXfer.getPeerInheritingReputation(pid);
+	    }
+	    Map<AgreementType,PeerAgreement> typeMap = res.get(pid);
 	    if (typeMap == null) {
 	      typeMap =
 		new EnumMap<AgreementType,PeerAgreement>(AgreementType.class);
-	      res.put(ent.getKey(), typeMap);
+	      res.put(pid, typeMap);
 	    }
-	    typeMap.put(type, ent.getValue());
+
+// 	    typeMap.put(type, ent.getValue());
+ 	    typeMap.put(type, ent.getValue().mergeWith(typeMap.get(type)));
 	  }
 	}
       }

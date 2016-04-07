@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -100,7 +100,7 @@ final public class PeerAgreement implements LockssSerializable {
       "]";
   }
 
-@Override
+  @Override
   public boolean equals(Object o) {
     if (o instanceof PeerAgreement) {
       PeerAgreement other = (PeerAgreement)o;
@@ -112,7 +112,7 @@ final public class PeerAgreement implements LockssSerializable {
     return false;
   }
 
-@Override
+  @Override
   public int hashCode() {
     return (int)(getPercentAgreementTime()+getHighestPercentAgreementTime());
   }
@@ -169,5 +169,35 @@ final public class PeerAgreement implements LockssSerializable {
     return new PeerAgreement(
       percentAgreement, time,
       highestPercentAgreement, highestPercentAgreementTime);
+  }
+
+  /** Return a PeerAgreement with the latest agreement and highest highest
+   * agreement of this and other */
+  public PeerAgreement mergeWith(PeerAgreement other) {
+    if (other == null) {
+      return this;
+    }
+    float agr = -1.0f;
+    long agrTime;
+    float high = -1.0f;
+    long highTime;
+ 
+    if (getPercentAgreementTime() < other.getPercentAgreementTime()) {
+      agr = other.getPercentAgreement();
+      agrTime = other.getPercentAgreementTime();
+    } else {
+      agr = getPercentAgreement();
+      agrTime = getPercentAgreementTime();
+    }
+
+    if (getHighestPercentAgreement() < other.getHighestPercentAgreement()) {
+      high = other.getHighestPercentAgreement();
+      highTime = other.getHighestPercentAgreementTime();
+    } else {
+      high = getHighestPercentAgreement();
+      highTime = getHighestPercentAgreementTime();
+    }
+
+    return new PeerAgreement(agr, agrTime, high, highTime);
   }
 }
