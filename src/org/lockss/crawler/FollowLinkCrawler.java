@@ -323,6 +323,12 @@ public class FollowLinkCrawler extends BaseCrawler {
       //logger.error("Crawl aborted", e);
       crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR, "Out of memory error");
       throw oome;
+    } catch (Error err) {
+      // daemon may keep running after this, so make sure crawl doesn't
+      // appear to be successful
+      //logger.error("Crawl aborted", e);
+      crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR, "Java error");
+      throw err;
     } catch (ConfigurationException|PluginException|IOException e) {
       log.error("Unable to compute start URLs", e);
       crawlStatus.setCrawlStatus(Crawler.STATUS_PLUGIN_ERROR, 
