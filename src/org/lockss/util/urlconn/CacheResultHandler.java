@@ -38,13 +38,46 @@ import org.lockss.plugin.*;
 
 public interface CacheResultHandler extends PluginFetchEventResponse {
 
+  /** Unused */
+  @Deprecated
   public void init(CacheResultMap map) throws PluginException;
 
+  /** Determine what action to take in response to HTTP result codes.
+   *
+   * The handler should return a CacheException with attributes specifying
+   * the number and timing of retries, if any, and the action the crawler
+   * should take (ignore, warning, error, abort).  See
+   * HttpReaultHandler.initExceptionTable()} for the default actions.
+   */
   public CacheException handleResult(ArchivalUnit au,
 				     String url,
 				     int code)
       throws PluginException;
 
+  /** Determine what action to take when an exception is thrown while
+   * fetching content from the network or writing to the repository.  The
+   * exception may be:<ul>
+   *
+   * <li>An IOException thrown while opening a socket (e.g.,
+   * UnknownHostException, SocketException)</li>
+   *
+   * <li>An IOException thrown while reading data from a socket (e.g.,
+   * LockssUrlConnection.ConnectionTimeoutException,
+   * SocketTimeoutException)</li>
+   *
+   * <li>a CacheException.RepositoryException wrapping an exception thrown
+   * while storing data in the repository</li>
+   *
+   * <li>a ContentValidationException throws by DefaultUrlCacher or a
+   * plugin FileValidator</li>
+   *
+   * </ul>
+   *
+   * The handler should return a CacheException with attributes specifying
+   * the number and timing of retries, if any, and the action the crawler
+   * should take (ignore, warning, error, abort).  See
+   * HttpReaultHandler.initExceptionTable()} for the default actions.
+   */
   public CacheException handleResult(ArchivalUnit au,
 				     String url,
 				     Exception ex)
