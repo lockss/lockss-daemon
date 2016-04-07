@@ -208,7 +208,9 @@ public class PdfUtil {
    * @since 1.70
    */
   public static PdfTokenFactory getTokenFactory(PdfTokenStream pdfTokenStream) {
-    return getTokenFactory(pdfTokenStream.getPage());
+    // Null check to accommodate fake token streams like MockPdfTokenStream
+    PdfPage pdfPage = pdfTokenStream.getPage();
+    return pdfPage == null ? null : getTokenFactory(pdfPage);
   }
   
   /**
