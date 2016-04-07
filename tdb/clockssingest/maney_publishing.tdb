@@ -812,11 +812,11 @@
     au < manifest ; exists ; 2008 ; Corrosion Engineering, Science and Technology Volume 43 ; 43 ; >
     au < manifest ; exists ; 2009 ; Corrosion Engineering, Science and Technology Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Corrosion Engineering, Science and Technology Volume 45 ; 45 ; >
-    au < testing ; exists ; 2011 ; Corrosion Engineering, Science and Technology Volume 46 ; 46 ; >
+    au < ready ; exists ; 2011 ; Corrosion Engineering, Science and Technology Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Corrosion Engineering, Science and Technology Volume 47 ; 47 ; >
-    au < testing ; exists ; 2013 ; Corrosion Engineering, Science and Technology Volume 48 ; 48 ; >
-    au < testing ; exists ; 2014 ; Corrosion Engineering, Science and Technology Volume 49 ; 49 ; >
-    au < testing ; exists ; 2015 ; Corrosion Engineering, Science and Technology Volume 50 ; 50 ; >
+    au < ready ; exists ; 2013 ; Corrosion Engineering, Science and Technology Volume 48 ; 48 ; >
+    au < ready ; exists ; 2014 ; Corrosion Engineering, Science and Technology Volume 49 ; 49 ; >
+    au < ready ; exists ; 2015 ; Corrosion Engineering, Science and Technology Volume 50 ; 50 ; >
     au < expected ; exists ; 2016 ; Corrosion Engineering, Science and Technology Volume 51 ; 51 ; >
 
   }
@@ -1894,12 +1894,12 @@
     au < manifest ; exists ; 2007 ; Ironmaking & Steelmaking Volume 34 ; 34 ; >
     au < manifest ; exists ; 2008 ; Ironmaking & Steelmaking Volume 35 ; 35 ; >
     au < manifest ; exists ; 2009 ; Ironmaking & Steelmaking Volume 36 ; 36 ; >
-    au < testing ; exists ; 2010 ; Ironmaking & Steelmaking Volume 37 ; 37 ; >
+    au < ready ; exists ; 2010 ; Ironmaking & Steelmaking Volume 37 ; 37 ; >
     au < testing ; exists ; 2011 ; Ironmaking & Steelmaking Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Ironmaking & Steelmaking Volume 39 ; 39 ; >
     au < notReady ; exists ; 2013 ; Ironmaking & Steelmaking Volume 40 ; 40 ; > # 500 Internal Server Error
     au < notReady ; exists ; 2014 ; Ironmaking & Steelmaking Volume 41 ; 41 ; > # 500 Internal Server Error
-    au < testing ; exists ; 2015 ; Ironmaking & Steelmaking Volume 42 ; 42 ; >
+    au < ready ; exists ; 2015 ; Ironmaking & Steelmaking Volume 42 ; 42 ; >
     au < manifest ; exists ; 2016 ; Ironmaking & Steelmaking Volume 43 ; 43 ; >
 
   }
@@ -2439,7 +2439,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Journal of Orthodontics Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of Orthodontics Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Orthodontics Volume 39 ; 39 ; >
-    au < testing ; exists ; 2013 ; Journal of Orthodontics Volume 40 ; 40 ; >
+    au < ready ; exists ; 2013 ; Journal of Orthodontics Volume 40 ; 40 ; >
     au < ready ; exists ; 2014 ; Journal of Orthodontics Volume 41 ; 41 ; >
     au < testing ; exists ; 2015 ; Journal of Orthodontics Volume 42 ; 42 ; >
     au < expected ; exists ; 2016 ; Journal of Orthodontics Volume 43 ; 43 ; >
@@ -3804,7 +3804,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Public Archaeology Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Public Archaeology Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Public Archaeology Volume 13 ; 13 ; >
-    au < testing ; exists ; 2015 ; Public Archaeology Volume 14 ; 14 ; >
+    au < ready ; exists ; 2015 ; Public Archaeology Volume 14 ; 14 ; >
     au < expected ; exists ; 2016 ; Public Archaeology Volume 15 ; 15 ; >
 
   }
