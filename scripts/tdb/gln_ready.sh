@@ -34,13 +34,13 @@ tpath="/home/$LOGNAME/tmp"
    # Look for clockss manifest pages for the previously selected set.
    ./scripts/tdb/read_auid_new.pl $tpath/gr_common_shuf.txt > $tpath/gr_man_clks.txt
    cat $tpath/gr_man_clks.txt | grep "*N" >> $tpath/gr_errors.txt
-   cat $tpath/gr_man_clks.txt | grep "*M" | sed -e 's/.*, \(org|lockss|plugin|highwire|[^,]*\), .*/\1/' > $tpath/gr_found_cl.txt
+   cat $tpath/gr_man_clks.txt | grep "*M" | sed -e 's/.*, \(org|lockss|plugin|[^,]*\), .*/\1/' > $tpath/gr_found_cl.txt
    # Convert the list from clockss to gln
    cat $tpath/gr_found_cl.txt | sed -e 's/ClockssTaylorAndFrancisPlugin/TaylorAndFrancisPlugin/' > $tpath/gr_found_cl_g.txt
    # Look for lockss manifest pages for AUids that have clockss manifest pages.
    ./scripts/tdb/read_auid_new.pl $tpath/gr_found_cl_g.txt > $tpath/gr_man_gln.txt
    cat $tpath/gr_man_gln.txt | grep "*N" >> $tpath/gr_errors.txt
-   cat $tpath/gr_man_gln.txt | grep "*M" | sed -e 's/.*, \(org|lockss|plugin|highwire|[^,]*\), .*/\1/' > $tpath/gr_found_gln.txt
+   cat $tpath/gr_man_gln.txt | grep "*M" | sed -e 's/.*, \(org|lockss|plugin|[^,]*\), .*/\1/' > $tpath/gr_found_gln.txt
    # Convert the list from gln to clockss
    cat $tpath/gr_found_gln.txt | sed -e 's/TaylorAndFrancisPlugin/ClockssTaylorAndFrancisPlugin/' | sort > $tpath/gr_common_manifest.txt
    # Find items not healthy on the ingest machines.
