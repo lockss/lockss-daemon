@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2012-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -62,7 +62,9 @@ public class ReputationTransfers {
 
   /** A map, indexed by new PID, of the collection of old PIDs. The
    * value of map will change when the configuration changes. */
-  private Map<PeerIdentity, Collection<PeerIdentity>> map;
+  private Map<PeerIdentity, Collection<PeerIdentity>> idToOldIds;
+  /** Map Id to its most recent new Id. */
+  private Map<PeerIdentity, PeerIdentity> idToNewId;
 
   /** The IdentityManager */
   private final IdentityManager idManager;
@@ -72,14 +74,17 @@ public class ReputationTransfers {
    * transfers present in peerPairs. Ignore the second time a peer is
    * listed as a source or destination.
    */
-  private Map<PeerIdentity, Collection<PeerIdentity>>
-    makeMap(Collection<String> peerPairs, IdentityManager idManager) {
+  private void makeMaps(Collection<String> peerPairs,
+			IdentityManager idManager) {
     if (peerPairs == null) {
-      return Collections.EMPTY_MAP;
+      this.idToOldIds = Collections.EMPTY_MAP;
+      this.idToNewId = Collections.EMPTY_MAP;
     } else {
-      HashMap<PeerIdentity, PeerIdentity> pidPidMap =
+      Map<PeerIdentity, PeerIdentity> backMap =
 	new HashMap<PeerIdentity, PeerIdentity>();
-      for (String onePair : peerPairs) {
+      Map<PeerIdentity, PeerIdentity> forMap =
+	new HashMap<PeerIdentity, PeerIdentity>();
+      for (String onePair : peerPairs) { // 
 	// discardEmptyStrings = true, trimEachString = true
 	List<String> list = StringUtil.breakAt(onePair, ',', -1, true, true);
 	if (list.size() == 2) {
@@ -91,18 +96,19 @@ public class ReputationTransfers {
 			  oldPid);
 	      continue;
 	    }
-	    if (pidPidMap.containsKey(newPid)) {
+	    if (backMap.containsKey(newPid)) {
 	      log.warning("Ignoring second transfer from "+oldPid+" to "+newPid+
 			  ". Keeping "+oldPid+" to "+
-			  pidPidMap.get(oldPid)+".");
+			  backMap.get(oldPid)+".");
 	      continue;
 	    }
-	    if (pidPidMap.containsValue(oldPid)) {
+	    if (backMap.containsValue(oldPid)) {
 	      log.warning("Ignoring second transfer from "+oldPid+" to "+newPid+
 			  ". "+newPid+" has a reputation donor.");
 	      continue;
 	    }
-	    pidPidMap.put(newPid, oldPid);
+	    backMap.put(newPid, oldPid);
+	    forMap.put(oldPid, newPid);
 	    if (log.isDebug2()) {
 	      log.debug2("Extend reputation from " + oldPid + " to " + newPid);
 	    }
@@ -114,14 +120,17 @@ public class ReputationTransfers {
 	}
       }
 
-      HashMap<PeerIdentity, Collection<PeerIdentity>> pidColMap =
+      Map<PeerIdentity, Collection<PeerIdentity>> pidColMap =
 	new HashMap<PeerIdentity, Collection<PeerIdentity>>();
-      for (PeerIdentity rootPid: pidPidMap.keySet()) {
+      Map<PeerIdentity, PeerIdentity> oldNewMap =
+	new HashMap<PeerIdentity, PeerIdentity>();
+      for (PeerIdentity rootPid: backMap.keySet()) {
+
 	Collection<PeerIdentity> oldPids = new ArrayList<PeerIdentity>();
 	PeerIdentity newPid = rootPid;
 	while (newPid != null) {
 	  oldPids.add(newPid);
-	  newPid = pidPidMap.get(newPid);
+	  newPid = backMap.get(newPid);
 	  // Found a loop; stop.
 	  if (oldPids.contains(newPid)) {
 	    log.warning("Found cycle: "+rootPid);
@@ -132,7 +141,22 @@ public class ReputationTransfers {
 	// unmodifiable.
 	pidColMap.put(rootPid, Collections.unmodifiableCollection(oldPids));
       }
-      return Collections.unmodifiableMap(pidColMap);
+
+      for (PeerIdentity fromPid: forMap.keySet()) {
+	Set<PeerIdentity> cycleDetect = new HashSet<PeerIdentity>();
+	PeerIdentity aPid = fromPid;
+	PeerIdentity toPid;
+	while ((toPid = forMap.get(aPid)) != null) {
+	  aPid = toPid;
+	  if (!cycleDetect.add(aPid)) {
+	    break;
+	  }
+	}
+	oldNewMap.put(fromPid, aPid);
+
+      }
+      this.idToOldIds = Collections.unmodifiableMap(pidColMap);
+      this.idToNewId = Collections.unmodifiableMap(oldNewMap);
     }
   }
 
@@ -141,7 +165,7 @@ public class ReputationTransfers {
     // In production, the PollManager's initial setConfig call will
     // end up calling our setConfig, and setMap there. This setMap is
     // needed for testing.
-    setMap();
+    setMaps();
   }
 
   /**
@@ -151,18 +175,18 @@ public class ReputationTransfers {
 			Configuration oldConfig,
 			Configuration.Differences changedKeys) {
     if (changedKeys.contains(PARAM_REPUTATION_TRANSFER_MAP)) {
-      setMap(newConfig.getList(PARAM_REPUTATION_TRANSFER_MAP));
+      setMaps(newConfig.getList(PARAM_REPUTATION_TRANSFER_MAP));
     }
   }
 
-  /** Set the map from the parameter in CurrentConfig. */
-  private void setMap() {
-    setMap(CurrentConfig.getList(PARAM_REPUTATION_TRANSFER_MAP));
+  /** Set the idToOldIds from the parameter in CurrentConfig. */
+  private void setMaps() {
+    setMaps(CurrentConfig.getList(PARAM_REPUTATION_TRANSFER_MAP));
   }
 
-  /** Set the map from the given parameter. */
-  private void setMap(Collection<String> mapParam) {
-    this.map = makeMap(mapParam, idManager);
+  /** Set the maps from the given parameter. */
+  private void setMaps(Collection<String> mapParam) {
+    makeMaps(mapParam, idManager);
   }
 
   /**
@@ -179,10 +203,25 @@ public class ReputationTransfers {
    */
   public Collection<PeerIdentity>
       getAllReputationsTransferredFrom(PeerIdentity newPid) {
-    if (map.containsKey(newPid)) {
-      return map.get(newPid);
+    if (idToOldIds.containsKey(newPid)) {
+      return idToOldIds.get(newPid);
     } else {
       return Collections.singletonList(newPid);
     }
   }
+
+  /** Return the peer that fromPid's reputation has been transferred to, if
+   * any.  If there is a chain of transfers, returns the last peer in the
+   * chain. */
+  public PeerIdentity getTransferredTo(PeerIdentity fromPid) {
+    return idToNewId.get(fromPid);
+  }
+
+  /** Return the peer that fromPid's reputation has been transferred to, or
+   * fromPid if no transfer. */
+  public PeerIdentity getPeerInheritingReputation(PeerIdentity fromPid) {
+    PeerIdentity xferredTo = getTransferredTo(fromPid);
+    return xferredTo != null ? xferredTo : fromPid;
+  }
+
 }

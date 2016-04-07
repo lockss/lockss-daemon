@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2012-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -135,6 +135,18 @@ public class TestReputationTransfers extends LockssTestCase {
     assertSameElements(list3, rpm.getAllReputationsTransferredFrom(peer3));
     assertSameElements(list34, rpm.getAllReputationsTransferredFrom(peer4));
     assertSameElements(list5, rpm.getAllReputationsTransferredFrom(peer5));
+
+    assertEquals(peer2, rpm.getTransferredTo(peer1));
+    assertEquals(null, rpm.getTransferredTo(peer2));
+    assertEquals(peer4, rpm.getTransferredTo(peer3));
+    assertEquals(null, rpm.getTransferredTo(peer4));
+    assertEquals(null, rpm.getTransferredTo(peer5));
+
+    assertEquals(peer2, rpm.getPeerInheritingReputation(peer1));
+    assertEquals(peer2, rpm.getPeerInheritingReputation(peer2));
+    assertEquals(peer4, rpm.getPeerInheritingReputation(peer3));
+    assertEquals(peer4, rpm.getPeerInheritingReputation(peer4));
+    assertEquals(peer5, rpm.getPeerInheritingReputation(peer5));
   }
 
   public void testUnmodifiable() throws Exception {
@@ -175,6 +187,10 @@ public class TestReputationTransfers extends LockssTestCase {
     // No transfer in the param for this peer.
     assertSameElements(list4,
 		       rpm.getAllReputationsTransferredFrom(peer4));
+
+    assertEquals(peer3, rpm.getTransferredTo(peer1));
+    assertEquals(peer3, rpm.getTransferredTo(peer2));
+    assertEquals(null, rpm.getTransferredTo(peer3));
   }
 
   public void testEmptyMapping() throws Exception {
