@@ -37,7 +37,7 @@ import java.util.regex.Pattern;
 
 import org.lockss.test.LockssTestCase;
 
-public class TestPdfUtil extends LockssTestCase {
+public class TestPdfOpcodes extends LockssTestCase {
 
   protected static final String[] OPCODES = {PdfOpcodes.BEGIN_IMAGE_DATA,
                                              PdfOpcodes.BEGIN_IMAGE_OBJECT,
