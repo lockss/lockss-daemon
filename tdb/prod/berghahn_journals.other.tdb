@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Berghahn Journals
+  >
+
+  {
+  
+    title <
+      name = Boyhood Studies ;
+      issn = 2375-9240 ;
+      eissn = 2375-9267 ;
+      issnl = 2375-9240
+    > 
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    param[base_url] = http://berghahnonline.com/ojs/
+    param[journal_id] = bhs
+    implicit < status ; year ; name ; volume ; param[year] >
+       
+    au < exists ; 2007 ; Boyhood Studies Volume 1 ; 1 ; 2007 >
+    au < exists ; 2008 ; Boyhood Studies Volume 2 ; 2 ; 2008 >
+    au < exists ; 2009 ; Boyhood Studies Volume 3 ; 3 ; 2009 >
+    au < exists ; 2010 ; Boyhood Studies Volume 4 ; 4 ; 2010 >
+    au < exists ; 2011 ; Boyhood Studies Volume 5 ; 5 ; 2011 >
+    au < exists ; 2012 ; Boyhood Studies Volume 6 ; 6 ; 2012 >
+    au < exists ; 2013 ; Boyhood Studies Volume 7 ; 7 ; 2013 >
+    au < exists ; 2015 ; Boyhood Studies Volume 8 ; 8 ; 2015 >
+    au < expected ; 2016 ; Boyhood Studies Volume 9 ; 9 ; 2016 >
+    
+  }
+
+}

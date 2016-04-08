@@ -1,0 +1,158 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.internationalunionofcrystallography.oai.IUCrOaiPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>4</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>2</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>International Union of Crystallography OAI Plugin</string>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.68.0</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <!-- manifest to issue to articles -->
+    <string>au_refetch_depth</string>
+    <int>1</int>
+  </entry> 
+  http://scripts.iucr.org/cgi-bin/paper?S1600536805000310
+  <entry>
+    <string>au_name</string>
+    <string>"International Union of Crystallography OAI Plugin, Base URL %s, Script URL %s, OAI Set %s, OAI Date %s", base_url, script_url, au_oai_set, au_oai_date</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <list>
+    	<string>"%slockss.html", script_url</string>
+    	<string>"%se/issues/2010/lockss.html", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://(%s|%s)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url), url_host(script_url)</string>
+      <string>2,"^(%s|%s).*buy=yes$", script_url, base_url</string>
+      <string>1,"^(%s|%s)[^/]+/issues/[^/]+/[^/]+/[^/]+/[^/]+/(.+\.pdf|index\.html|.+fig[0-9]+\.html)$", base_url, script_url</string>
+      <string>1,"^(%s|%s)cgi-bin/paper\?[^/]+$", script_url, base_url</string>
+      <string>1,"^(%s|%s)cgi-bin/(sendsupfiles|sendsup|sendcif)\?.+$", script_url, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%s[^/]+/issues/[^/]+/[^/]+/[^/]+/[^/]+/.+\.pdf$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>script_url</key>
+        <displayName>Script URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>au_oai_set</key>
+        <displayName>OAI Set</displayName>
+        <description>OAI PMH set of this AU. [NONE] if you would like to include all sets</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>au_oai_date</key>
+        <displayName>OAI Date</displayName>
+        <description>Rules to filter records based upon metadata</description>
+        <type>1</type>
+        <size>128</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_exclude_urls_from_polls_pattern</string>
+    <string>"^%soai/request\?verb=GetRecord&amp;.+$", base_url</string>
+  </entry>
+  <entry>
+    <string>au_exclude_urls_from_poll_results_pattern</string> 
+    <string>"^%soai/request\?verb=GetRecord&amp;.+$", base_url</string>
+  </entry>
+  <entry>
+    <string>plugin_crawl_seed_factory</string>
+    <string>org.lockss.plugin.internationalunionofcrystallography.oai.IUCrOaiCrawlSeedFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.internationalunionofcrystallography.oai.IUCrOaiHtmlHashFilterFactory</string>
+  </entry>
+    <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.internationalunionofcrystallography.oai.IUCrOaiHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.internationalunionofcrystallography.oai.IUCrOaiArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.internationalunionofcrystallography.oai.IUCrOaiArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.internationalunionofcrystallography.oai.IUCrOaiHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+</map>

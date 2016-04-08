@@ -60,7 +60,9 @@ public class MetapressRisMetadataExtractorFactory implements FileMetadataExtract
   
     log.debug3("In createFileMetadataExtractor");
     
-    RisMetadataExtractor ris = new RisMetadataExtractor();
+    //TODO 1.70 - remove LocalRisMetadataExtractor and go back to using daemon class RisMetadataExtarctor
+    // newer version handles multi-line values
+    LocalRisMetadataExtractor ris = new LocalRisMetadataExtractor();
     ris.addRisTag("PY", MetadataField.FIELD_DATE);
     
     return ris;

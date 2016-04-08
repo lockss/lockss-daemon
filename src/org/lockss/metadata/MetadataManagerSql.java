@@ -111,7 +111,8 @@ public class MetadataManagerSql {
   
   // Query to find enabled pending AUs sorted by priority. Subsitute "true"
   // to prioritize indexing new AUs ahead of reindexing existing ones, "false"
-  // to index in the order they were added to the queue
+  // to index in the order they were added to the queue. AUs with a priority of
+  // zero (requested from the Debug Panel) are always sorted first.
   private static final String FIND_PRIORITIZED_ENABLED_PENDING_AUS_QUERY =
         "select "
       +       PENDING_AU_TABLE + "." + PLUGIN_ID_COLUMN
@@ -132,9 +133,9 @@ public class MetadataManagerSql {
       + "     on " + AU_MD_TABLE + "." + AU_SEQ_COLUMN
       + "        = " + AU_TABLE + "." + AU_SEQ_COLUMN
       + " where " + PRIORITY_COLUMN + " >= 0"
-      + " order by (true = ? and "
-      +            AU_MD_TABLE + "." + AU_SEQ_COLUMN + " is not null)," 
-      +            PENDING_AU_TABLE + "." + PRIORITY_COLUMN;
+      + " order by (" + PENDING_AU_TABLE + "." + PRIORITY_COLUMN + " > 0),"
+      + "(true = ? and " + AU_MD_TABLE + "." + AU_SEQ_COLUMN + " is not null)," 
+      + PENDING_AU_TABLE + "." + PRIORITY_COLUMN;
 
   // Query to delete a pending AU by its key and plugin identifier.
   private static final String DELETE_PENDING_AU_QUERY = "delete from "

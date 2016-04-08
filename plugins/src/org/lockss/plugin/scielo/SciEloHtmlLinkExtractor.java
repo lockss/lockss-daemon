@@ -49,7 +49,7 @@ public class SciEloHtmlLinkExtractor extends JsoupHtmlLinkExtractor {
   }
 
   protected void registerAOnclickTagExtractor() {
-    registerTagExtractor("a", new SimpleTagLinkExtractor("onclick") {
+    registerTagExtractor("a", new SimpleTagLinkExtractor(new String[] {"href", "download"}) {
       @Override
       public void tagBegin(Node node, ArchivalUnit au, Callback cb) {
         String onclick = node.attr("onclick");
@@ -59,8 +59,7 @@ public class SciEloHtmlLinkExtractor extends JsoupHtmlLinkExtractor {
                                                Pattern.CASE_INSENSITIVE);
           Matcher onclickMat = onclickPat.matcher(onclick);
           if (onclickMat.find()) {
-            cb.foundLink(onclickMat.group(1));
-            return;
+            cb.foundLink(onclickMat.group(1).trim());
           }
         }
         super.tagBegin(node, au, cb);
@@ -81,7 +80,6 @@ public class SciEloHtmlLinkExtractor extends JsoupHtmlLinkExtractor {
             Matcher mat = pat.matcher(scriptHtml);
             if (mat.find()) {
               cb.foundLink(mat.group(1));
-              return;
             }
           }
         }

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -71,6 +71,7 @@ public class SpringerLinkJournalsCrawlSeed extends BaseSpringerLinkCrawlSeed {
    * @since 1.67.5
    */
   protected String eissn;
+  
   public static final String JOURNAL_EISSN_KEY = "journal_eissn";
   /**
    * <p>

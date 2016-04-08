@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,13 +33,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.springer.link;
 
 import java.io.IOException;
-import java.net.URL;
 import java.util.regex.Pattern;
 
 import org.lockss.daemon.*;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.SimpleUrlConsumer;
 import org.lockss.util.urlconn.CacheException;
 
 /**
@@ -51,7 +49,7 @@ import org.lockss.util.urlconn.CacheException;
  * 
  * @since 1.67.5
  */
-public class SpringerLinkUrlConsumer extends SimpleUrlConsumer {
+public class SpringerLinkUrlConsumer extends HttpToHttpsUtil.HttpToHttpsUrlConsumer {
   
   public static final String DOWNLOAD_URL_KEY = "download_url";
   public static final String ACCESS_STRING = "accesspage";
@@ -63,8 +61,7 @@ public class SpringerLinkUrlConsumer extends SimpleUrlConsumer {
   public SpringerLinkUrlConsumer(CrawlerFacade facade,
                                 FetchedUrlData fud) {
     super(facade, fud);
-    origPdfPat = makeOrigPdfPattern(au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()));
-    destPdfPat = makeDestPdfPattern(au.getConfiguration().get(DOWNLOAD_URL_KEY));
+    makePatterns();
   }
 
   @Override
@@ -90,36 +87,38 @@ public class SpringerLinkUrlConsumer extends SimpleUrlConsumer {
    *         origin URL.
    * @since 1.67.5
    */
-  protected boolean shouldStoreAtOrigUrl() {
-    return fud.redirectUrls != null
-        && fud.redirectUrls.size() == 1
-        && fud.redirectUrls.get(0).equals(fud.fetchUrl)
-        && destPdfPat.matcher(fud.fetchUrl).find()
-        && origPdfPat.matcher(fud.origUrl).find();
+  public boolean shouldStoreAtOrigUrl() {
+    return super.shouldStoreAtOrigUrl()
+        || (   fud.redirectUrls != null
+            && fud.redirectUrls.size() == 1
+            && fud.redirectUrls.get(0).equals(fud.fetchUrl)
+            && origPdfPat.matcher(fud.origUrl).find()
+            && destPdfPat.matcher(fud.fetchUrl).find());
   }
   
-  /**
-   * 
-   * @param baseUrl
-   * @return
-   * @since 1.67.5
-   */
-  protected static Pattern makeOrigPdfPattern(String baseUrl) {
-    return Pattern.compile(String.format("^%s(content|download)/(pdf|epub)/.*\\.(pdf|epub)$",
-                                         baseUrl),
-                           Pattern.CASE_INSENSITIVE);
+  protected void makePatterns() {
+    String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
+    origPdfPat = makeOrigPdfPattern(baseUrl);
+    String downloadUrl = au.getConfiguration().get(DOWNLOAD_URL_KEY);
+    destPdfPat = makeDestPdfPattern(downloadUrl);
   }
 
-  /**
-   * 
-   * @param downloadUrl
-   * @return
-   * @since 1.67.5
-   */
+  protected static Pattern makeOrigPdfPattern(String baseUrl) {
+    return Pattern.compile(String.format("^https?://%s/(content|download)/(pdf|epub)/.*\\.(pdf|epub)$",
+                                         urlHost(baseUrl)),
+                           Pattern.CASE_INSENSITIVE);
+  }
+  
   protected static Pattern makeDestPdfPattern(String downloadUrl) {
     return Pattern.compile(String.format("^%sstatic/(pdf|epub)/.*\\.(pdf|epub)\\?[^=]*=[^&]*",
                                          downloadUrl),
                            Pattern.CASE_INSENSITIVE);
+  }
+
+  public static String urlHost(String url) {
+    url = url.substring(url.indexOf("://") + 3);
+    url = url.substring(0, url.indexOf('/'));
+    return url;
   }
   
 }

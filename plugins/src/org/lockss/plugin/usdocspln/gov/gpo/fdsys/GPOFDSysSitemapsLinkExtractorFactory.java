@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,7 +45,7 @@ import org.xml.sax.*;
 
 public class GPOFDSysSitemapsLinkExtractorFactory implements LinkExtractorFactory {
 
-  protected static Logger logger = Logger.getLogger("GPOFDSysSitemapsLinkExtractorFactory");
+  protected static Logger log = Logger.getLogger(GPOFDSysSitemapsLinkExtractorFactory.class);
   
   protected static class NoNeedToContinueException extends SAXException {
     
@@ -133,15 +133,15 @@ public class GPOFDSysSitemapsLinkExtractorFactory implements LinkExtractorFactor
         if ("loc".equalsIgnoreCase(qName)) {
           String url = locBuilder.toString();
           locBuilder = null;
-          if (logger.isDebug2()) {
-            logger.debug2("Found at " + baseUrl.toString() + ": " + url);
+          if (log.isDebug2()) {
+            log.debug2("Found at " + baseUrl.toString() + ": " + url);
           }
           try {
             String resolved = UrlUtil.resolveUri(baseUrl, url);
             callback.foundLink(resolved);
           }
           catch (MalformedURLException mue) {
-            logger.warning("Malformed URL at " + baseUrl.toString() + ": " + url, mue);
+            log.warning("Malformed URL at " + baseUrl.toString() + ": " + url, mue);
           }
         }
       }
@@ -194,8 +194,8 @@ public class GPOFDSysSitemapsLinkExtractorFactory implements LinkExtractorFactor
       }));
       }
       catch (NoNeedToContinueException nntce) {
-        if (logger.isDebug2()) {
-          logger.debug2("No need to parse " + srcUrl);
+        if (log.isDebug2()) {
+          log.debug2("No need to parse " + srcUrl);
         }
       }
       catch (SAXException se) {

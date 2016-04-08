@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
-import java.io.File;
 import java.net.URL;
 import java.util.Properties;
 
@@ -42,7 +41,6 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.definable.*;
 import org.lockss.plugin.wrapper.WrapperUtil;
-import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.state.AuState;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -112,7 +110,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     theDaemon.getLockssRepository(hwAu);
     theDaemon.getNodeManager(hwAu);
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
-    BaseCachedUrlSet cus = new BaseCachedUrlSet(hwAu, spec);
+    new BaseCachedUrlSet(hwAu, spec);
     assertFalse(hwAu.shouldBeCached("http://shadow1.stanford.edu/"));
   }
 
@@ -124,7 +122,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     theDaemon.getLockssRepository(hwAu);
     theDaemon.getNodeManager(hwAu);
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
-    BaseCachedUrlSet cus = new BaseCachedUrlSet(hwAu, spec);
+    new BaseCachedUrlSet(hwAu, spec);
     assertFalse(hwAu.shouldBeCached(
         "http://shadow2.stanford.edu/lockss-manifest/vol_322_manifest.dtl"));
   }
@@ -132,6 +130,13 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
   public void testStartUrlConstruction() throws Exception {
     URL url = new URL("http://www.example.com/");
     String expectedStr = "http://www.example.com/lockss-manifest/vol_10_manifest.dtl";
+    DefinableArchivalUnit hwau = makeAu(url, 10);
+    assertEquals(ListUtil.list(expectedStr), hwau.getStartUrls());
+  }
+
+  public void testOupStartUrlConstruction() throws Exception {
+    URL url = new URL("http://www.oxfordjournals.org/");
+    String expectedStr = "http://www.oxfordjournals.org/lockss-manifest/vol_10_manifest.dtl";
     DefinableArchivalUnit hwau = makeAu(url, 10);
     assertEquals(ListUtil.list(expectedStr), hwau.getStartUrls());
   }

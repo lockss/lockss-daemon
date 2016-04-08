@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,278 +38,128 @@ import org.htmlparser.Node;
 import org.htmlparser.tags.*;
 import org.htmlparser.util.NodeList;
 import org.lockss.test.*;
-import org.lockss.util.*;
+import org.lockss.util.ListUtil;
 
 public class TestHtmlTags extends LockssTestCase {
   
-  // Ensure <header>...</header> gets parsed as an HtmlTags.Header
-  // composite tag, not as the default sequence of TagNodes
-  public void testHeaderTag() throws IOException {
-    String in = "<header class=\"special\"><i>iii</i></header>";
-    MockHtmlTransform xform =
-        new MockHtmlTransform(ListUtil.list(new NodeList()));
-    InputStream ins =
-        new HtmlFilterInputStream(new StringInputStream(in), xform);
+  public void doTestCompositeTag(Class<?> clazz) throws IOException {
+    String tagName = clazz.getSimpleName().toLowerCase();
+    String in = String.format("<%s class=\"foo\"><i>iii</i><div id=\"bar\"><b>bbb</b></div></%s>", tagName, tagName);
+    MockHtmlTransform xform = new MockHtmlTransform(ListUtil.list(new NodeList()));
+    InputStream ins = new HtmlFilterInputStream(new StringInputStream(in), xform);
     assertInputStreamMatchesString("", ins);
     NodeList nl = xform.getArg(0);
     Node node = nl.elementAt(0);
-    assertTrue(node instanceof HtmlTags.Header);
+    assertTrue(clazz.isInstance(node));
     assertEquals(1, nl.size());
   }
   
-  // Ensure <footer>...</footer> gets parsed as an HtmlTags.Footer
-  // composite tag, not as the default sequence of TagNodes
-  public void testFooterTag() throws IOException {
-    String in = "<footer class=\"special\"><i>iii</i></footer>";
-    MockHtmlTransform xform =
-        new MockHtmlTransform(ListUtil.list(new NodeList()));
-    InputStream ins =
-        new HtmlFilterInputStream(new StringInputStream(in), xform);
-    assertInputStreamMatchesString("", ins);
-    NodeList nl = xform.getArg(0);
-    Node node = nl.elementAt(0);
-    assertTrue(node instanceof HtmlTags.Footer);
-    assertEquals(1, nl.size());
+  public void testArticle() throws Exception {
+    doTestCompositeTag(HtmlTags.Article.class);
   }
   
-  // Ensure <section>...</section> gets parsed as an HtmlTags.Section
-  // composite tag, not as the default sequence of TagNodes
-  public void testSectionTag() throws IOException {
-    String in = "<section class=\"special\"><i>iii</i></section>";
-    MockHtmlTransform xform =
-        new MockHtmlTransform(ListUtil.list(new NodeList()));
-    InputStream ins =
-        new HtmlFilterInputStream(new StringInputStream(in), xform);
-    assertInputStreamMatchesString("", ins);
-    NodeList nl = xform.getArg(0);
-    Node node = nl.elementAt(0);
-    assertTrue(node instanceof HtmlTags.Section);
-    assertEquals(1, nl.size());
+  public void testAside() throws Exception {
+    doTestCompositeTag(HtmlTags.Aside.class);
   }
   
-  // Ensure <aside>...</aside> gets parsed as an HtmlTags.Aside
-  // composite tag, not as the default sequence of TagNodes
-  public void testAsideTag() throws IOException {
-    String in = "<aside class=\"special\"><i>iii</i></section>";
-    MockHtmlTransform xform =
-        new MockHtmlTransform(ListUtil.list(new NodeList()));
-    InputStream ins =
-        new HtmlFilterInputStream(new StringInputStream(in), xform);
-    assertInputStreamMatchesString("", ins);
-    NodeList nl = xform.getArg(0);
-    Node node = nl.elementAt(0);
-    assertTrue(node instanceof HtmlTags.Aside);
-    assertEquals(1, nl.size());
+  public void testAudio() throws Exception {
+    doTestCompositeTag(HtmlTags.Audio.class);
   }
   
-  // Ensure <datalist>...</datalist> gets parsed as an HtmlTags.
-  // composite tag, not as the default sequence of TagNodes
-  public void testDatalistTag() throws IOException {
-    String in = "<datalist class=\"special\"><i>iii</i></datalist>";
-    MockHtmlTransform xform =
-        new MockHtmlTransform(ListUtil.list(new NodeList()));
-    InputStream ins =
-        new HtmlFilterInputStream(new StringInputStream(in), xform);
-    assertInputStreamMatchesString("", ins);
-    NodeList nl = xform.getArg(0);
-    Node node = nl.elementAt(0);
-    assertTrue(node instanceof HtmlTags.Datalist);
-    assertEquals(1, nl.size());
+  public void testButton() throws Exception {
+    doTestCompositeTag(HtmlTags.Button.class);
   }
   
-  // Ensure <details>...</details> gets parsed as an HtmlTags.
-  // composite tag, not as the default sequence of TagNodes
-  public void testDetailsTag() throws IOException {
-    String in = "<details class=\"special\"><i>iii</i></details>";
-    MockHtmlTransform xform =
-        new MockHtmlTransform(ListUtil.list(new NodeList()));
-    InputStream ins =
-        new HtmlFilterInputStream(new StringInputStream(in), xform);
-    assertInputStreamMatchesString("", ins);
-    NodeList nl = xform.getArg(0);
-    Node node = nl.elementAt(0);
-    assertTrue(node instanceof HtmlTags.Details);
-    assertEquals(1, nl.size());
+  public void testCanvas() throws Exception {
+    doTestCompositeTag(HtmlTags.Canvas.class);
   }
   
-  // Ensure <dialog>...</dialog> gets parsed as an HtmlTags.
-  // composite tag, not as the default sequence of TagNodes
-  public void testDialogTag() throws IOException {
-    String in = "<dialog class=\"special\"><i>iii</i></dialog>";
-    MockHtmlTransform xform =
-        new MockHtmlTransform(ListUtil.list(new NodeList()));
-    InputStream ins =
-        new HtmlFilterInputStream(new StringInputStream(in), xform);
-    assertInputStreamMatchesString("", ins);
-    NodeList nl = xform.getArg(0);
-    Node node = nl.elementAt(0);
-    assertTrue(node instanceof HtmlTags.Dialog);
-    assertEquals(1, nl.size());
+  public void testCenter() throws Exception {
+    doTestCompositeTag(HtmlTags.Center.class);
   }
   
-  // Ensure <menu>...</menu> gets parsed as an HtmlTags.
-  // composite tag, not as the default sequence of TagNodes
-  public void testMenuTag() throws IOException {
-    String in = "<menu class=\"special\"><i>iii</i></menu>";
-    MockHtmlTransform xform =
-        new MockHtmlTransform(ListUtil.list(new NodeList()));
-    InputStream ins =
-        new HtmlFilterInputStream(new StringInputStream(in), xform);
-    assertInputStreamMatchesString("", ins);
-    NodeList nl = xform.getArg(0);
-    Node node = nl.elementAt(0);
-    assertTrue(node instanceof HtmlTags.Menu);
-    assertEquals(1, nl.size());
+  public void testDataList() throws Exception {
+    doTestCompositeTag(HtmlTags.DataList.class);
   }
   
-  // Ensure <menuitem>...</menuitem> gets parsed as an HtmlTags.
-  // composite tag, not as the default sequence of TagNodes
-  public void testMenuitemTag() throws IOException {
-    String in = "<menuitem class=\"special\"><i>iii</i></menuitem>";
-    MockHtmlTransform xform =
-        new MockHtmlTransform(ListUtil.list(new NodeList()));
-    InputStream ins =
-        new HtmlFilterInputStream(new StringInputStream(in), xform);
-    assertInputStreamMatchesString("", ins);
-    NodeList nl = xform.getArg(0);
-    Node node = nl.elementAt(0);
-    assertTrue(node instanceof HtmlTags.Menuitem);
-    assertEquals(1, nl.size());
+  public void testDetails() throws Exception {
+    doTestCompositeTag(HtmlTags.Details.class);
   }
   
-  // Ensure <meter>...</meter> gets parsed as an HtmlTags.
-  // composite tag, not as the default sequence of TagNodes
-  public void testMeterTag() throws IOException {
-    String in = "<meter class=\"special\"><i>iii</i></meter>";
-    MockHtmlTransform xform =
-        new MockHtmlTransform(ListUtil.list(new NodeList()));
-    InputStream ins =
-        new HtmlFilterInputStream(new StringInputStream(in), xform);
-    assertInputStreamMatchesString("", ins);
-    NodeList nl = xform.getArg(0);
-    Node node = nl.elementAt(0);
-    assertTrue(node instanceof HtmlTags.Meter);
-    assertEquals(1, nl.size());
+  public void testDialog() throws Exception {
+    doTestCompositeTag(HtmlTags.Dialog.class);
   }
   
-  // Ensure <nav>...</nav> gets parsed as an HtmlTags.
-  // composite tag, not as the default sequence of TagNodes
-  public void testNavTag() throws IOException {
-    String in = "<nav class=\"special\"><i>iii</i></nav>";
-    MockHtmlTransform xform =
-        new MockHtmlTransform(ListUtil.list(new NodeList()));
-    InputStream ins =
-        new HtmlFilterInputStream(new StringInputStream(in), xform);
-    assertInputStreamMatchesString("", ins);
-    NodeList nl = xform.getArg(0);
-    Node node = nl.elementAt(0);
-    assertTrue(node instanceof HtmlTags.Nav);
-    assertEquals(1, nl.size());
+  public void testFigCaption() throws Exception {
+    doTestCompositeTag(HtmlTags.FigCaption.class);
   }
   
-  // Ensure <progress>...</progress> gets parsed as an HtmlTags.
-  // composite tag, not as the default sequence of TagNodes
-  public void testProgressTag() throws IOException {
-    String in = "<progress class=\"special\"><i>iii</i></progress>";
-    MockHtmlTransform xform =
-        new MockHtmlTransform(ListUtil.list(new NodeList()));
-    InputStream ins =
-        new HtmlFilterInputStream(new StringInputStream(in), xform);
-    assertInputStreamMatchesString("", ins);
-    NodeList nl = xform.getArg(0);
-    Node node = nl.elementAt(0);
-    assertTrue(node instanceof HtmlTags.Progress);
-    assertEquals(1, nl.size());
+  public void testFigure() throws Exception {
+    doTestCompositeTag(HtmlTags.Figure.class);
   }
   
-  // Ensure <summary>...</summary> gets parsed as an HtmlTags.
-  // composite tag, not as the default sequence of TagNodes
-  public void testSummaryTag() throws IOException {
-    String in = "<summary class=\"special\"><i>iii</i></summary>";
-    MockHtmlTransform xform =
-        new MockHtmlTransform(ListUtil.list(new NodeList()));
-    InputStream ins =
-        new HtmlFilterInputStream(new StringInputStream(in), xform);
-    assertInputStreamMatchesString("", ins);
-    NodeList nl = xform.getArg(0);
-    Node node = nl.elementAt(0);
-    assertTrue(node instanceof HtmlTags.Summary);
-    assertEquals(1, nl.size());
+  public void testFont() throws Exception {
+    doTestCompositeTag(HtmlTags.Font.class);
   }
   
-  // Ensure <time>...</time> gets parsed as an HtmlTags.
-  // composite tag, not as the default sequence of TagNodes
-  public void testTimeTag() throws IOException {
-    String in = "<time class=\"special\"><i>iii</i></time>";
-    MockHtmlTransform xform =
-        new MockHtmlTransform(ListUtil.list(new NodeList()));
-    InputStream ins =
-        new HtmlFilterInputStream(new StringInputStream(in), xform);
-    assertInputStreamMatchesString("", ins);
-    NodeList nl = xform.getArg(0);
-    Node node = nl.elementAt(0);
-    assertTrue(node instanceof HtmlTags.Time);
-    assertEquals(1, nl.size());
+  public void testFooter() throws Exception {
+    doTestCompositeTag(HtmlTags.Footer.class);
   }
   
-  // Ensure <iframe>...</iframe> gets parsed as an HtmlTags.Iframe
-  // composite tag, not as the default sequence of TagNodes
-  public void testIframeTag() throws IOException {
-    String in = "<iframe src=\"http://foo.bar\"><i>iii</i></iframe>";
-    MockHtmlTransform xform =
-      new MockHtmlTransform(ListUtil.list(new NodeList()));
-    InputStream ins =
-      new HtmlFilterInputStream(new StringInputStream(in), xform);
-    assertInputStreamMatchesString("", ins);
-    NodeList nl = xform.getArg(0);
-    Node node = nl.elementAt(0);
-    assertTrue(node instanceof HtmlTags.Iframe);
-    assertEquals(1, nl.size());
+  public void testHeader() throws Exception {
+    doTestCompositeTag(HtmlTags.Header.class);
+  }
+  
+  public void testIframe() throws Exception {
+    doTestCompositeTag(HtmlTags.Iframe.class);
   }
 
-  // Ensure <noscript>...</noscript> gets parsed as an HtmlTags.Noscript
-  // composite tag, not as the default sequence of TagNodes
-  public void testNoscriptTag() throws IOException {
-    String in = "<noscript><i>iii</i></noscript>";
-    MockHtmlTransform xform =
-      new MockHtmlTransform(ListUtil.list(new NodeList()));
-    InputStream ins =
-      new HtmlFilterInputStream(new StringInputStream(in), xform);
-    assertInputStreamMatchesString("", ins);
-    NodeList nl = xform.getArg(0);
-    Node node = nl.elementAt(0);
-    assertTrue(node instanceof HtmlTags.Noscript);
-    assertEquals(1, nl.size());
+  public void testMain() throws Exception {
+    doTestCompositeTag(HtmlTags.Main.class);
   }
 
-  // Ensure <center>...</center> gets parsed as an HtmlTags.Center
-  // composite tag, not as the default sequence of TagNodes
-  public void testCenterTag() throws IOException {
-    String in = "<center><i>iii</i></center>";
-    MockHtmlTransform xform =
-      new MockHtmlTransform(ListUtil.list(new NodeList()));
-    InputStream ins =
-      new HtmlFilterInputStream(new StringInputStream(in), xform);
-    assertInputStreamMatchesString("", ins);
-    NodeList nl = xform.getArg(0);
-    Node node = nl.elementAt(0);
-    assertTrue(node instanceof HtmlTags.Center);
-    assertEquals(1, nl.size());
+  public void testMark() throws Exception {
+    doTestCompositeTag(HtmlTags.Mark.class);
   }
 
-  // Ensure <article>...</article> gets parsed as an HtmlTags.Article
-  // composite tag, not as the default sequence of TagNodes
-  public void testArticleTag() throws IOException {
-    String in = "<article><i>iii</i></article>";
-    MockHtmlTransform xform =
-      new MockHtmlTransform(ListUtil.list(new NodeList()));
-    InputStream ins =
-      new HtmlFilterInputStream(new StringInputStream(in), xform);
-    assertInputStreamMatchesString("", ins);
-    NodeList nl = xform.getArg(0);
-    Node node = nl.elementAt(0);
-    assertTrue(node instanceof HtmlTags.Article);
-    assertEquals(1, nl.size());
+  public void testMenu() throws Exception {
+    doTestCompositeTag(HtmlTags.Menu.class);
+  }
+
+  public void testMenuItem() throws Exception {
+    doTestCompositeTag(HtmlTags.MenuItem.class);
+  }
+
+  public void testMeter() throws Exception {
+    doTestCompositeTag(HtmlTags.Meter.class);
+  }
+
+  public void testNav() throws Exception {
+    doTestCompositeTag(HtmlTags.Nav.class);
+  }
+
+  public void testNoScript() throws Exception {
+    doTestCompositeTag(HtmlTags.NoScript.class);
+  }
+
+  public void testProgress() throws Exception {
+    doTestCompositeTag(HtmlTags.Progress.class);
+  }
+
+  public void testSection() throws Exception {
+    doTestCompositeTag(HtmlTags.Section.class);
+  }
+
+  public void testSummary() throws Exception {
+    doTestCompositeTag(HtmlTags.Summary.class);
+  }
+
+  public void testTime() throws Exception {
+    doTestCompositeTag(HtmlTags.Time.class);
+  }
+
+  public void testVideo() throws Exception {
+    doTestCompositeTag(HtmlTags.Video.class);
   }
 
   // Ensure <tr> closes a previous unclosed <tr>

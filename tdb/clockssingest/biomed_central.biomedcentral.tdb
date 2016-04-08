@@ -784,6 +784,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       title <
         name = Breast Cancer Research ;
         issn = 1465-5411 ;
+        eissn = 1465-542X ;
         issnl = 1465-5411
       >
       param[journal_issn] = 1465-5411
@@ -934,7 +935,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
     {
       title <
         name = Cardiovascular Diabetology ;
-        issn = 1475-2840 ;
+        eissn = 1475-2840 ;
         issnl = 1475-2840
       >
       
@@ -1296,7 +1297,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
     {
       title <
         name = Clinical Epigenetics ;
-        issn = 1868-7083 ;
+        issn = 1868-7075 ;
+        eissn = 1868-7083 ;
         issnl = 1868-7083
       >
 
@@ -2085,7 +2087,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
     {
       title <
         name = Genome Medicine ;
-        issn = 1756-994X ;
+        eissn = 1756-994X ;
         issnl = 1756-994X
       >
 
@@ -2485,7 +2487,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       title <
         name = Infectious Diseases of Poverty ;
-        issn = 2049-9957 ;
+        eissn = 2049-9957 ;
         issnl = 2049-9957
       >
 
@@ -3186,7 +3188,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
     {
       title <
         name = Journal of Experimental & Clinical Cancer Research ;
-        issn = 1756-9966 ;
+        eissn = 1756-9966 ;
         issnl = 1756-9966
       >
 

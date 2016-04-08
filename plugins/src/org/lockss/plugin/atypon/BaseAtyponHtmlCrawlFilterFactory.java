@@ -86,6 +86,16 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     //on TOC left column with listing of all volumes/issues
     HtmlNodeFilters.tagWithAttribute("ul", "class", "volumeIssues"),
     
+    //have started finding cases of direct in-publication links within references
+    // there are a variety of ways these blocks are identified, but 
+    // these are unlikely to be used anywhere else so put in parent
+    // emerald, AIAA
+    HtmlNodeFilters.tagWithAttribute("div",  "class", "references"),
+    // ASCE
+    HtmlNodeFilters.tagWithAttribute("li",  "class", "reference"),
+    //maney, future-science (also in child...will remove later)
+    HtmlNodeFilters.tagWithAttribute("table", "class", "references"),    
+    
     // Not all Atypon plugins necessarily need this but MANY do and it is
     // an insidious source of over crawling
     new NodeFilter() {

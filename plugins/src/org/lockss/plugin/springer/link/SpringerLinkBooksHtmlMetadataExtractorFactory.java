@@ -1,10 +1,10 @@
 /*
- * $Id: SimpleHtmlMetaTagMetadataExtractor.java 39864 2015-02-18 09:10:24Z thib_gc $
+ * $Id: $
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -49,7 +49,6 @@ import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.extractor.SimpleFileMetadataExtractor;
 import org.lockss.plugin.*;
-import org.lockss.plugin.springer.SpringerLinkBookMetadataExtractorFactory.SpringerLinkBookMetadataExtractor;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -112,6 +111,13 @@ public class SpringerLinkBooksHtmlMetadataExtractorFactory
         putValue(ret, "author", editor.text());
       }
       ret.cook(tagMap);
+      String url = ret.get(MetadataField.FIELD_ACCESS_URL);
+      ArchivalUnit au = cu.getArchivalUnit();
+      if (url == null || url.isEmpty() || !au.makeCachedUrl(url).hasContent()) {
+        url = cu.getUrl();
+      }
+      ret.replace(MetadataField.FIELD_ACCESS_URL,
+                 HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(au, url));
       return ret;
     }
     

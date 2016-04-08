@@ -38,7 +38,9 @@ import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringUtils;
 import org.lockss.config.TdbAu;
+import org.lockss.config.TdbPublisher;
 import org.lockss.daemon.ConfigParamDescr;
+import org.lockss.daemon.TitleConfig;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.MetadataField;
 import org.lockss.plugin.ArchivalUnit;
@@ -58,14 +60,17 @@ public class BaseAtyponMetadataUtil {
   private static final Logger log = Logger.getLogger(BaseAtyponMetadataUtil.class);
   
   private static final String BOOK_EISBN_PARAM = "book_eisbn";
+  private static final String AU_TYPE = "type";
   private static final Pattern PROTOCOL_PATTERN = Pattern.compile("^(e)isbn:(\\s)*", Pattern.CASE_INSENSITIVE);
   /**
    * html "dc.*" information may not contain publication title and volume
    * ris information usually does.
+   * If the publication type doesn't match the article type (book v journal)
+   * If the AU lists BOTH issn & eissn and the metadata has one that doesn'tm atch
    * If the volume is available, check against the TDB information
    * If the volume wasn't available but the year was, try that 
    * If we're still valid and the publication title is available, check 
-   *   a normalized version of that against a normalized version of tdb pub title   
+   *   a normalized version of that against a normalized version of tdb pub title
    * @param au
    * @param am
    * @return true if the metadata matches the TDB information
@@ -74,18 +79,52 @@ public class BaseAtyponMetadataUtil {
       ArticleMetadata am) { 
 
     boolean isInAu = true;
+    
+    //Initial check - are we of the expected type
+    // We're only in this method if the type was NOT book or book_chapter
+    // or if the article didn't indicate its type (html)
+    TdbAu tdbau = au.getTdbAu();
+    String au_type = (tdbau == null) ? null : tdbau.getPublicationType();
+    // if the tdb publication type is a book or book chapter, then we don't belong
+    if ( au_type != null && (MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(au_type)
+          || MetadataField.PUBLICATION_TYPE_BOOK.equals(au_type)) ) {
+        // we probably overcrawled and got a journal or proceedings article
+        // while preserving a book
+        return false;
+    }
+    
+    String AU_ISSN = (tdbau == null) ? null : normalize_isbn(tdbau.getPrintIsbn());
+    String AU_EISSN = (tdbau == null) ? null : normalize_isbn(tdbau.getEissn());
+    // If the tdb lists both values for issn, then check with our found values
+    // If we only list one value then don't use this check - what if the au
+    // only had the EISSN and the article only listed the ISSN - false negative
+    if ( !(StringUtils.isEmpty(AU_ISSN) || StringUtils.isEmpty(AU_EISSN)) ){
+      String foundEISSN = normalize_isbn(am.get(MetadataField.FIELD_EISSN));
+      String foundISSN = normalize_isbn(am.get(MetadataField.FIELD_ISSN));
+      // don't go crazy. If the EISSN is there and matches, just move on
+      if (foundEISSN != null) { 
+        if (!(foundEISSN.equals(AU_EISSN) || foundEISSN.equals(AU_ISSN)) ) {
+          return false;
+        }
+      } else if (foundISSN != null) {
+        // there wasn't an EISSN, so let's check the ISSN
+        if (!(foundISSN.equals(AU_ISSN) || foundEISSN.equals(AU_EISSN)) ) {
+          return false;
+        }
+      }
+    }
 
     // Use the journalTitle and volume name from the ArticleMetadata
     String foundJournalTitle = am.get(MetadataField.FIELD_PUBLICATION_TITLE);
     String foundVolume = am.get(MetadataField.FIELD_VOLUME);
     String foundDate = am.get(MetadataField.FIELD_DATE);
 
-    // If we got nothing, just return, we can't validate
+    // If we got nothing, just return, we can't validate further
     if (StringUtils.isEmpty(foundVolume) && StringUtils.isEmpty(foundDate) &&
         StringUtils.isEmpty(foundDate)) {
       return isInAu; //return true, we have no way of knowing
     }
-
+    
     // Check VOLUME/YEAR
     if (!(StringUtils.isEmpty(foundVolume) || StringUtils.isEmpty(foundDate))) {
 
@@ -103,7 +142,6 @@ public class BaseAtyponMetadataUtil {
       // this is more complicated because date format is variable
     }
 
-    TdbAu tdbau = au.getTdbAu();
     String AU_journal_title = (tdbau == null) ? null : tdbau.getPublicationTitle();
 
     // Now check journalTitle with some flexibility for string differences
@@ -137,6 +175,9 @@ public class BaseAtyponMetadataUtil {
   }
 
   /**
+   * First check - 
+   *   If the publication type doesn't match the article type (book v journal)
+   * Then  
    * Books have some trickier issues - chapter vs. whole book vs book in series
    * If the year is available check against the TDB information - quick fail
    * If the eisbn is availalble, check against the TDB information 
@@ -151,6 +192,17 @@ public class BaseAtyponMetadataUtil {
       ArticleMetadata am) { 
 
     boolean isInAu = false;
+    
+    // We're only in this method if the type was BOOK or BOOK_CHAPTER
+    TdbAu tdbau = au.getTdbAu();
+    String au_type = (tdbau == null) ? null : tdbau.getPublicationType();
+    // if the tdb publication type is NOT a book or book chapter, then we don't belong
+    if ( au_type != null && !( MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(au_type)
+          || MetadataField.PUBLICATION_TYPE_BOOK.equals(au_type)) ) {
+        // we probably overcrawled and got a BOOK_CHAP or BOOK while 
+        // collecting a journal or proceedings 
+        return false;
+    }
 
     // Use the book information from the ArticleMetadata
     // remove leading protocol and "-" and extraneous spaces
@@ -167,7 +219,6 @@ public class BaseAtyponMetadataUtil {
     // Get the AU's volume name from the AU properties. This must be set
     TypedEntryMap tfProps = au.getProperties();
     String AU_EISBN = tfProps.getString(BOOK_EISBN_PARAM);
-    TdbAu tdbau = au.getTdbAu();
     String AU_ISBN = (tdbau == null) ? null : normalize_isbn(tdbau.getPrintIsbn());
     
     // this is a param...it can't be null, but be safe

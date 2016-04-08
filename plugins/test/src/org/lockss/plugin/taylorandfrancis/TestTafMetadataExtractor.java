@@ -394,7 +394,7 @@ public class TestTafMetadataExtractor extends LockssTestCase {
     sb.append(goodDOI);
     sb.append("\nUR  - ");
     sb.append(doiURL);
-    sb.append("\nER  -");
+    sb.append("\nER  - ");
     return sb.toString();
   }
   /**
@@ -455,7 +455,7 @@ public class TestTafMetadataExtractor extends LockssTestCase {
     sb.append(alternateJournalTitle);
     sb.append("\nVL  - ");
     sb.append(goodVolume);
-    sb.append("\nER  -");
+    sb.append("\nER  - ");
     return sb.toString();
   }
   

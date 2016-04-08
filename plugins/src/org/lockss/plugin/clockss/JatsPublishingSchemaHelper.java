@@ -286,7 +286,7 @@ implements SourceXmlSchemaHelper {
   //pub-type is deprecated; publication-format new, but we must handle all variant
   public static String JATS_pissn = JATS_jmeta + "/issn[@pub-type = \"ppub\" or @publication-format=\"print\"]";
   private static String JATS_eissn = JATS_jmeta + "/issn[@pub-type = \"epub\" or @publication-format=\"electronic\"]";
-  private static String JATS_pubname = JATS_jmeta + "/publisher/publisher-name";
+  public static String JATS_pubname = JATS_jmeta + "/publisher/publisher-name";
   
   private static String JATS_doi =  JATS_ameta + "/article-id[@pub-id-type = \"doi\"]";
   private static String JATS_atitle = JATS_ameta + "/title-group";
@@ -294,6 +294,8 @@ implements SourceXmlSchemaHelper {
   private static String JATS_issue = JATS_ameta + "/issue";
   private static String JATS_fpage = JATS_ameta + "/fpage";
   private static String JATS_lpage = JATS_ameta + "/lpage";
+  // used by WARC in post-commit
+  public static String JATS_self_uri = JATS_ameta + "/self-uri";
   
   public static String JATS_copydate = JATS_ameta + "/permissions/copyright-year";
   // The date could be identified by new or by older tag attributes
@@ -325,6 +327,7 @@ implements SourceXmlSchemaHelper {
     JATS_articleMap.put(JATS_issue, XmlDomMetadataExtractor.TEXT_VALUE);
     JATS_articleMap.put(JATS_fpage, XmlDomMetadataExtractor.TEXT_VALUE);
     JATS_articleMap.put(JATS_lpage, XmlDomMetadataExtractor.TEXT_VALUE);
+    JATS_articleMap.put(JATS_self_uri, XmlDomMetadataExtractor.TEXT_VALUE);
     JATS_articleMap.put(JATS_date, JATS_DATE_VALUE);
     JATS_articleMap.put(JATS_edate, JATS_DATE_VALUE);
     JATS_articleMap.put(JATS_copydate, XmlDomMetadataExtractor.TEXT_VALUE); 

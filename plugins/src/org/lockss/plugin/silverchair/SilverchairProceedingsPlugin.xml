@@ -9,14 +9,14 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>13</string>
+        <string>17</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
         <map>
             <entry>
                 <string>Poll</string>
-                <string>6</string>
+                <string>7</string>
             </entry>
             <entry>
                 <string>Substance</string>
@@ -24,7 +24,7 @@
             </entry>
             <entry>
                 <string>Metadata</string>
-                <string>6</string>
+                <string>9</string>
             </entry>
         </map>
     </entry>
@@ -116,7 +116,7 @@
     <entry>
         <string>text/html_filter_factory</string>
         <string>org.lockss.plugin.silverchair.ScHtmlHashFilterFactory</string>
-    </entry>
+    </entry>    
     <entry>
         <string>au_substance_url_pattern</string>
         <list>

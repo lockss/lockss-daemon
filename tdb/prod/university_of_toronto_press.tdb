@@ -66,7 +66,7 @@
 
       au < released ; 2014 ; The Canadian Historical Review Volume 95 ; 95 >
       au < released ; 2015 ; The Canadian Historical Review Volume 96 ; 96 >
-      au < expected ; 2016 ; The Canadian Historical Review Volume 97 ; 97 >
+      au < manifest ; 2016 ; The Canadian Historical Review Volume 97 ; 97 >
 
     }
 
@@ -128,7 +128,7 @@
 
       au < released ; 2014 ; Canadian Journal of Criminology and Criminal Justice Volume 56 ; 56 >
       au < released ; 2015 ; Canadian Journal of Criminology and Criminal Justice Volume 57 ; 57 >
-      au < expected ; 2016 ; Canadian Journal of Criminology and Criminal Justice Volume 58 ; 58 >
+      au < manifest ; 2016 ; Canadian Journal of Criminology and Criminal Justice Volume 58 ; 58 >
 
     }
 
@@ -187,7 +187,7 @@
 
       au < released ; 2014 ; Canadian Journal of Information and Library Science Volume 38 ; 38 >
       au < released ; 2015 ; Canadian Journal of Information and Library Science Volume 39 ; 39 >
-      au < expected ; 2016 ; Canadian Journal of Information and Library Science Volume 40 ; 40 >
+      au < manifest ; 2016 ; Canadian Journal of Information and Library Science Volume 40 ; 40 >
 
     }
 
@@ -375,7 +375,7 @@
 
       au < released ; 2014 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 70 ; 70 >
       au < released ; 2015 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 71 ; 71 >
-      au < expected ; 2016 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 72 ; 72 >
+      au < manifest ; 2016 ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 72 ; 72 >
 
     }
 
@@ -411,7 +411,7 @@
 
       au < released ; 2014 ; Canadian Public Policy Volume 40 ; 40 >
       au < released ; 2015 ; Canadian Public Policy Volume 41 ; 41 >
-      au < expected ; 2016 ; Canadian Public Policy Volume 42 ; 42 >
+      au < manifest ; 2016 ; Canadian Public Policy Volume 42 ; 42 >
 
     }
 
@@ -536,7 +536,7 @@
 
       au < released ; 2014 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 49 ; 49 >
       au < released ; 2015 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 50 ; 50 >
-      au < expected ; 2016 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 51 ; 51 >
+      au < manifest ; 2016 ; Cartographica: The International Journal for Geographic Information and Geovisualization Volume 51 ; 51 >
 
     }
 
@@ -800,7 +800,7 @@
       au < released ; 2014 ; International Journal of Canadian Studies Volume 49 ; 49 >
       au < released ; 2014 ; International Journal of Canadian Studies Volume 50 ; 50 >
       au < released ; 2015 ; International Journal of Canadian Studies Volume 51 ; 51 >
-      au < expected ; 2016 ; International Journal of Canadian Studies Volume 52 ; 52 >
+      au < manifest ; 2016 ; International Journal of Canadian Studies Volume 52 ; 52 >
 
     }
 
@@ -839,7 +839,7 @@
       param[base_url] = https://muse.jhu.edu/
 
       au < released ; 2014 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 48 ; 48 >
-      au < ready ; 2015 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 49 ; 49 >
+      au < released ; 2015 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 49 ; 49 >
       au < expected ; 2016 ; Journal of Canadian Studies / Revue d'études canadiennes Volume 50 ; 50 >
 
     }
@@ -983,25 +983,25 @@
       au < manifest ; 1987 ; Modern Drama Volume 30 ; 30 >
       au < manifest ; 1988 ; Modern Drama Volume 31 ; 31 >
       au < manifest ; 1989 ; Modern Drama Volume 32 ; 32 >
-      au < testing ; 1990 ; Modern Drama Volume 33 ; 33 >
-      au < testing ; 1991 ; Modern Drama Volume 34 ; 34 >
-      au < testing ; 1992 ; Modern Drama Volume 35 ; 35 >
-      au < testing ; 1993 ; Modern Drama Volume 36 ; 36 >
-      au < testing ; 1994 ; Modern Drama Volume 37 ; 37 >
-      au < testing ; 1995 ; Modern Drama Volume 38 ; 38 >
-      au < testing ; 1996 ; Modern Drama Volume 39 ; 39 >
-      au < testing ; 1997 ; Modern Drama Volume 40 ; 40 >
-      au < testing ; 1998 ; Modern Drama Volume 41 ; 41 >
-      au < testing ; 1999 ; Modern Drama Volume 42 ; 42 >
-      au < ready ; 2000 ; Modern Drama Volume 43 ; 43 >
-      au < ready ; 2001 ; Modern Drama Volume 44 ; 44 >
-      au < ready ; 2002 ; Modern Drama Volume 45 ; 45 >
-      au < ready ; 2003 ; Modern Drama Volume 46 ; 46 >
-      au < ready ; 2004 ; Modern Drama Volume 47 ; 47 >
+      au < released ; 1990 ; Modern Drama Volume 33 ; 33 >
+      au < released ; 1991 ; Modern Drama Volume 34 ; 34 >
+      au < released ; 1992 ; Modern Drama Volume 35 ; 35 >
+      au < released ; 1993 ; Modern Drama Volume 36 ; 36 >
+      au < released ; 1994 ; Modern Drama Volume 37 ; 37 >
+      au < released ; 1995 ; Modern Drama Volume 38 ; 38 >
+      au < released ; 1996 ; Modern Drama Volume 39 ; 39 >
+      au < released ; 1997 ; Modern Drama Volume 40 ; 40 >
+      au < released ; 1998 ; Modern Drama Volume 41 ; 41 >
+      au < released ; 1999 ; Modern Drama Volume 42 ; 42 >
+      au < released ; 2000 ; Modern Drama Volume 43 ; 43 >
+      au < released ; 2001 ; Modern Drama Volume 44 ; 44 >
+      au < released ; 2002 ; Modern Drama Volume 45 ; 45 >
+      au < released ; 2003 ; Modern Drama Volume 46 ; 46 >
+      au < released ; 2004 ; Modern Drama Volume 47 ; 47 >
 
       au < released ; 2014 ; Modern Drama Volume 57 ; 57 >
       au < released ; 2015 ; Modern Drama Volume 58 ; 58 >
-      au < expected ; 2016 ; Modern Drama Volume 59 ; 59 >
+      au < manifest ; 2016 ; Modern Drama Volume 59 ; 59 >
 
     }
 
@@ -1040,7 +1040,7 @@
 
       au < released ; 2014 ; Seminar: A Journal of Germanic Studies Volume 50 ; 50 >
       au < released ; 2015 ; Seminar: A Journal of Germanic Studies Volume 51 ; 51 >
-      au < expected ; 2016 ; Seminar: A Journal of Germanic Studies Volume 52 ; 52 >
+      au < manifest ; 2016 ; Seminar: A Journal of Germanic Studies Volume 52 ; 52 >
 
     }
 
@@ -1271,7 +1271,7 @@
 
       au < released ; 2014 ; University of Toronto Quarterly Volume 83 ; 83 >
       au < released ; 2015 ; University of Toronto Quarterly Volume 84 ; 84 >
-      au < expected ; 2016 ; University of Toronto Quarterly Volume 85 ; 85 >
+      au < manifest ; 2016 ; University of Toronto Quarterly Volume 85 ; 85 >
 
     }
 

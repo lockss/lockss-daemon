@@ -335,7 +335,7 @@
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; Comparative Literature Volume 65 ; 65 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2014 ; Comparative Literature Volume 66 ; 66 ; >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2015 ; Comparative Literature Volume 67 ; 67 ; >
-      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2016 ; Comparative Literature Volume 68 ; 68 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2016 ; Comparative Literature Volume 68 ; 68 ; >
 
     }
 
@@ -817,7 +817,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Genre: Forms of Discourse and Culture Volume 46 ; 46 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Genre: Forms of Discourse and Culture Volume 47 ; 47 ; >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2015 ; Genre: Forms of Discourse and Culture Volume 48 ; 48 ; >
-      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2016 ; Genre: Forms of Discourse and Culture Volume 49 ; 49 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2016 ; Genre: Forms of Discourse and Culture Volume 49 ; 49 ; >
 
   }
 
@@ -1764,7 +1764,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; positions: asia critique Volume 21 ; 21 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; positions: asia critique Volume 22 ; 22 ; >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2015 ; positions: asia critique Volume 23 ; 23 ; >
-      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2016 ; positions: asia critique Volume 24 ; 24 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2016 ; positions: asia critique Volume 24 ; 24 ; >
 
   }
 
@@ -1932,7 +1932,7 @@
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2013 ; Small Axe Volume 17 ; 17 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Small Axe Volume 18 ; 18 ; >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2015 ; Small Axe Volume 19 ; 19 ; >
-      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2016 ; Small Axe Volume 20 ; 20 ; >
+      au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2016 ; Small Axe Volume 20 ; 20 ; >
 
     }
 
@@ -2153,4 +2153,31 @@
 
     }
 
+  {
+
+    title <
+      name = World Policy Journal ;
+      issn = 0740-2775 ;
+      eissn = 1936-0924
+    >
+
+      param[base_url] = http://wpj.dukejournals.org/
+      pluginPrefix = org.lockss.plugin.highwire.
+      implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+      #move from Oxford University Press 
+
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2006 ; World Policy Journal Volume 23 ; 23 ; >
+      au < ClockssHighWirePressH20Plugin ; exists ; exists ; 2007 ; World Policy Journal Volume 24 ; 24 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2008 ; World Policy Journal Volume 25 ; 25 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2009 ; World Policy Journal Volume 26 ; 26 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2010 ; World Policy Journal Volume 27 ; 27 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2011 ; World Policy Journal Volume 28 ; 28 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2012 ; World Policy Journal Volume 29 ; 29 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2013 ; World Policy Journal Volume 30 ; 30 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2014 ; World Policy Journal Volume 31 ; 31 ; >
+      au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2015 ; World Policy Journal Volume 32 ; 32 ; >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2016 ; World Policy Journal Volume 33 ; 33 ; >
+
+  }
+  
 }

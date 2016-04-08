@@ -63,6 +63,7 @@ import org.lockss.state.*;
 import org.lockss.subscription.SubscriptionManager;
 import org.lockss.util.*;
 import org.lockss.clockss.*;
+import org.lockss.safenet.*;
 
 public class MockLockssDaemon extends LockssDaemon {
   private static Logger log = Logger.getLogger("MockLockssDaemon");
@@ -100,6 +101,7 @@ public class MockLockssDaemon extends LockssDaemon {
   CounterReportsManager counterReportsManager = null;
   SubscriptionManager subscriptionManager = null;
   Cron cron = null;
+  EntitlementRegistryClient entitlementRegistryClient = null;
   private boolean suppressStartAuManagers = true;
 
   /** Unit tests that need a MockLockssDaemon should use {@link
@@ -853,6 +855,15 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setCron(Cron cron) {
     this.cron = cron;
     managerMap.put(LockssDaemon.CRON, cron);
+  }
+
+  /**
+   * Set the EntitlementRegistryClient
+   * @param pluginMan the new manager
+   */
+  public void setEntitlementRegistryClient(EntitlementRegistryClient entitlementRegistryClient) {
+    this.entitlementRegistryClient = entitlementRegistryClient;
+    managerMap.put(LockssDaemon.SAFENET_MANAGER, entitlementRegistryClient);
   }
 
   // AU managers

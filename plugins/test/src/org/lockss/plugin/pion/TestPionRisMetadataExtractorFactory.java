@@ -142,7 +142,7 @@ public class TestPionRisMetadataExtractorFactory extends LockssTestCase {
     sb.append(goodJournalTitle);
     sb.append("\nSN  - ");
     sb.append(goodIssn);
-    sb.append("\nER  -");
+    sb.append("\nER  - ");
     return sb.toString();
   }
       

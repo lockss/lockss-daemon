@@ -111,7 +111,8 @@ public class ScRisMetadataExtractorFactory implements FileMetadataExtractorFacto
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
                                                            String contentType)
       throws PluginException {
-    return new RisMetadataExtractor() {
+    //TODO 1.70 make - remove LocalRisMetadataExtractor and use daemon's RisMetadataExtractor class
+    return new LocalRisMetadataExtractor() {
       @Override
       public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
           throws IOException, PluginException {

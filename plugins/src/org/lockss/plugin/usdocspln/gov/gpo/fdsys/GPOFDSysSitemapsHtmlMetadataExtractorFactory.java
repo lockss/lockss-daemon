@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,9 +34,6 @@ package org.lockss.plugin.usdocspln.gov.gpo.fdsys;
 
 import java.io.*;
 
-import org.apache.commons.collections.MultiMap;
-import org.apache.commons.collections.map.MultiValueMap;
-
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -55,16 +52,14 @@ public class GPOFDSysSitemapsHtmlMetadataExtractorFactory implements FileMetadat
     implements FileMetadataExtractor {
 
     // No reasonable metadata to extract for now
-    private static MultiMap tagMap = new MultiValueMap();
-      static {
-    }
-
+    //    private static MultiMap tagMap = new MultiValueMap();
+    //    static {
+    //    }
+    
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
         throws IOException {
-      ArticleMetadata am = 
-        new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
-      am.cook(tagMap);
+      ArticleMetadata am = new ArticleMetadata();
       String url = am.get(MetadataField.FIELD_ACCESS_URL);
       ArchivalUnit au = cu.getArchivalUnit();
       if (url == null || url.isEmpty() || !au.makeCachedUrl(url).hasContent()) {

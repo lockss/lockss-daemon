@@ -245,7 +245,7 @@
       au < crawling ; exists ; 2013 ; Action Research Volume 11 ; 11 ; >
       au < finished ; finished ; 2014 ; Action Research Volume 12 ; 12 ; >
       au < crawling ; exists ; 2015 ; Action Research Volume 13 ; 13 ; >
-      au < expected ; exists ; 2016 ; Action Research Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2016 ; Action Research Volume 14 ; 14 ; >
 
     }
 
@@ -291,7 +291,7 @@
       au < finished ; finished ; 2013 ; Active Learning in Higher Education Volume 14 ; 14 ; >
       au < finished ; finished ; 2014 ; Active Learning in Higher Education Volume 15 ; 15 ; >
       au < crawling ; exists ; 2015 ; Active Learning in Higher Education Volume 16 ; 16 ; >
-      au < expected ; exists ; 2016 ; Active Learning in Higher Education Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2016 ; Active Learning in Higher Education Volume 17 ; 17 ; >
 
     }
 
@@ -696,7 +696,7 @@
       au < finished ; finished ; 2013 ; Advances in Dental Research Volume 25 ; 25 ; >
       au < finished ; finished ; 2014 ; Advances in Dental Research Volume 26 ; 26 ; >
       au < crawling ; exists ; 2015 ; Advances in Dental Research Volume 27 ; 27 ; >
-      au < expected ; exists ; 2016 ; Advances in Dental Research Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2016 ; Advances in Dental Research Volume 28 ; 28 ; >
 
     }
 
@@ -776,7 +776,7 @@
       au < exists ; exists ; 2013 ; Advances in Structural Engineering Volume 16 ; 16 ; >
       au < exists ; exists ; 2014 ; Advances in Structural Engineering Volume 17 ; 17 ; >
       au < exists ; exists ; 2015 ; Advances in Structural Engineering Volume 18 ; 18 ; >
-      au < expected ; exists ; 2016 ; Advances in Structural Engineering Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2016 ; Advances in Structural Engineering Volume 19 ; 19 ; >
 
   }
 
@@ -1058,6 +1058,39 @@
   {
 
     title <
+      name = The American Economist ;
+      issn = 0569-4345 ;
+      eissn = 2328-1235 
+    >
+
+    param[base_url] = http://aex.sagepub.com/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    #content available from 1960 volume 4 to 1999 volume 43
+
+      au < exists ; exists ; 2000 ; The American Economist Volume 44 ; 44 ; >
+      au < exists ; exists ; 2001 ; The American Economist Volume 45 ; 45 ; >
+      au < exists ; exists ; 2002 ; The American Economist Volume 46 ; 46 ; >
+      au < exists ; exists ; 2003 ; The American Economist Volume 47 ; 47 ; >
+      au < exists ; exists ; 2004 ; The American Economist Volume 48 ; 48 ; >
+      au < exists ; exists ; 2005 ; The American Economist Volume 49 ; 49 ; >
+      au < exists ; exists ; 2006 ; The American Economist Volume 50 ; 50 ; >
+      au < exists ; exists ; 2007 ; The American Economist Volume 51 ; 51 ; >
+      au < exists ; exists ; 2008 ; The American Economist Volume 52 ; 52 ; >
+      au < exists ; exists ; 2009 ; The American Economist Volume 53 ; 53 ; >
+      au < exists ; exists ; 2009 ; The American Economist Volume 54 ; 54 ; >
+      au < doesNotExist ; doesNotExist ; 2010 ; The American Economist Volume 55 ; 55 ; >
+      au < doesNotExist ; doesNotExist ; 2011 ; The American Economist Volume 56 ; 56 ; >
+      au < doesNotExist ; doesNotExist ; 2012 ; The American Economist Volume 57 ; 57 ; >
+      au < doesNotExist ; doesNotExist ; 2013 ; The American Economist Volume 58 ; 58 ; >
+      au < doesNotExist ; doesNotExist ; 2014 ; The American Economist Volume 59 ; 59 ; >
+      au < doesNotExist ; doesNotExist ; 2015 ; The American Economist Volume 60 ; 60 ; >
+      au < exists ; exists ; 2016 ; The American Economist Volume 61 ; 61 ; >
+
+  }
+
+  {
+
+    title <
       name = American Educational Research Journal ;
       issn = 0002-8312 ;
       eissn = 1935-1011
@@ -1130,7 +1163,7 @@
       au < crawling ; exists ; 2013 ; American Educational Research Journal Volume 50 ; 50 ; >
       au < crawling ; exists ; 2014 ; American Educational Research Journal Volume 51 ; 51 ; >
       au < crawling ; exists ; 2015 ; American Educational Research Journal Volume 52 ; 52 ; >
-      au < expected ; exists ; 2016 ; American Educational Research Journal Volume 53 ; 53 ; >
+      au < manifest ; exists ; 2016 ; American Educational Research Journal Volume 53 ; 53 ; >
 
     }
 
@@ -1192,6 +1225,26 @@
       au < manifest ; exists ; 2016 ; American Journal of Alzheimer's Disease and Other Dementias Volume 31 ; 31 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = The American Journal of Cosmetic Surgery ;
+      issn = 0748-8068 ;
+      eissn = 2374-7722
+    >
+
+      param[base_url] = http://acs.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2011 ; The American Journal of Cosmetic Surgery Volume 28 ; 28 ; >
+      au < exists ; exists ; 2012 ; The American Journal of Cosmetic Surgery Volume 29 ; 29 ; >
+      au < exists ; exists ; 2013 ; The American Journal of Cosmetic Surgery Volume 30 ; 30 ; >
+      au < exists ; exists ; 2014 ; The American Journal of Cosmetic Surgery Volume 31 ; 31 ; >
+      au < exists ; exists ; 2015 ; The American Journal of Cosmetic Surgery Volume 32 ; 32 ; >
+      au < expected ; exists ; 2016 ; The American Journal of Cosmetic Surgery Volume 33 ; 33 ; >
 
   }
 
@@ -2673,7 +2726,7 @@
       au < finished ; finished ; 2013 ; Anthropological Theory Volume 13 ; 13 ; >
       au < finished ; finished ; 2014 ; Anthropological Theory Volume 14 ; 14 ; >
       au < crawling ; exists ; 2015 ; Anthropological Theory Volume 15 ; 15 ; >
-      au < expected ; exists ; 2016 ; Anthropological Theory Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2016 ; Anthropological Theory Volume 16 ; 16 ; >
 
     }
 
@@ -4388,7 +4441,7 @@
       au < crawling ; exists ; 2013 ; British Journalism Review Volume 24 ; 24 ; >
       au < finished ; finished ; 2014 ; British Journalism Review Volume 25 ; 25 ; >
       au < crawling ; exists ; 2015 ; British Journalism Review Volume 26 ; 26 ; >
-      au < expected ; exists ; 2016 ; British Journalism Review Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2016 ; British Journalism Review Volume 27 ; 27 ; >
 
     }
 
@@ -4919,7 +4972,7 @@
       
       au < finished ; finished ; 2014 ; Business and Professional Communication Quarterly Volume 77 ; 77 ; >
       au < crawling ; exists ; 2015 ; Business and Professional Communication Quarterly Volume 78 ; 78 ; >
-      au < expected ; exists ; 2016 ; Business and Professional Communication Quarterly Volume 79 ; 79 ; >
+      au < manifest ; exists ; 2016 ; Business and Professional Communication Quarterly Volume 79 ; 79 ; >
 
     }
 
@@ -5017,7 +5070,42 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2015 ; Cahiers Élisabéthains Volume 88 ; 88 ; >
-      au < expected ; exists ; 2016 ; Cahiers Élisabéthains Volume 89 ; 89 ; >
+      au < manifest ; exists ; 2016 ; Cahiers Élisabéthains Volume 89 ; 89 ; >
+
+  }
+
+  {
+
+    title <
+      name = The Canadian Journal of Psychiatry ;
+      issn = 0706-7437 ;
+      eissn = 1497-0015
+    >
+
+      param[base_url] = http://cpa.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 1996 ; The Canadian Journal of Psychiatry Volume 41 ; 41 ; >
+      au < exists ; exists ; 1997 ; The Canadian Journal of Psychiatry Volume 42 ; 42 ; >
+      au < exists ; exists ; 1998 ; The Canadian Journal of Psychiatry Volume 43 ; 43 ; >
+      au < exists ; exists ; 1999 ; The Canadian Journal of Psychiatry Volume 44 ; 44 ; >
+      au < exists ; exists ; 2000 ; The Canadian Journal of Psychiatry Volume 45 ; 45 ; >
+      au < exists ; exists ; 2001 ; The Canadian Journal of Psychiatry Volume 46 ; 46 ; >
+      au < exists ; exists ; 2002 ; The Canadian Journal of Psychiatry Volume 47 ; 47 ; >
+      au < exists ; exists ; 2003 ; The Canadian Journal of Psychiatry Volume 48 ; 48 ; >
+      au < exists ; exists ; 2004 ; The Canadian Journal of Psychiatry Volume 49 ; 49 ; >
+      au < exists ; exists ; 2005 ; The Canadian Journal of Psychiatry Volume 50 ; 50 ; >
+      au < exists ; exists ; 2006 ; The Canadian Journal of Psychiatry Volume 51 ; 51 ; >
+      au < exists ; exists ; 2007 ; The Canadian Journal of Psychiatry Volume 52 ; 52 ; >
+      au < exists ; exists ; 2008 ; The Canadian Journal of Psychiatry Volume 53 ; 53 ; >
+      au < exists ; exists ; 2009 ; The Canadian Journal of Psychiatry Volume 54 ; 54 ; >
+      au < exists ; exists ; 2010 ; The Canadian Journal of Psychiatry Volume 55 ; 55 ; >
+      au < exists ; exists ; 2011 ; The Canadian Journal of Psychiatry Volume 56 ; 56 ; >
+      au < exists ; exists ; 2012 ; The Canadian Journal of Psychiatry Volume 57 ; 57 ; >
+      au < exists ; exists ; 2013 ; The Canadian Journal of Psychiatry Volume 58 ; 58 ; >
+      au < exists ; exists ; 2014 ; The Canadian Journal of Psychiatry Volume 59 ; 59 ; >
+      au < exists ; exists ; 2015 ; The Canadian Journal of Psychiatry Volume 60 ; 60 ; >
+      au < exists ; exists ; 2016 ; The Canadian Journal of Psychiatry Volume 61 ; 61 ; >
 
   }
 
@@ -5165,7 +5253,7 @@
       param[base_url] = http://cto.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2015 ; Cardiovascular and Thoracic Open Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2015 ; Cardiovascular and Thoracic Open Volume 1 ; 1 ; >
       au < expected ; exists ; 2016 ; Cardiovascular and Thoracic Open Volume 2 ; 2 ; >
 
   }
@@ -5582,7 +5670,7 @@
       au < finished ; finished ; 2013 ; China Information Volume 27 ; 27 ; >
       au < finished ; finished ; 2014 ; China Information Volume 28 ; 28 ; >
       au < crawling ; exists ; 2015 ; China Information Volume 29 ; 29 ; >
-      au < expected ; exists ; 2016 ; China Information Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2016 ; China Information Volume 30 ; 30 ; >
 
     }
 
@@ -5671,7 +5759,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < crawling ; exists ; 2015 ; Chinese Journal of Sociology Volume 1 ; 1 ; >
-      au < expected ; exists ; 2016 ; Chinese Journal of Sociology Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2016 ; Chinese Journal of Sociology Volume 2 ; 2 ; >
 
   }
 
@@ -5789,7 +5877,7 @@
       au < finished ; finished ; 2013 ; Chronic Illness Volume 9 ; 9 ; >
       au < finished ; finished ; 2014 ; Chronic Illness Volume 10 ; 10 ; >
       au < crawling ; exists ; 2015 ; Chronic Illness Volume 11 ; 11 ; >
-      au < expected ; exists ; 2016 ; Chronic Illness Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2016 ; Chronic Illness Volume 12 ; 12 ; >
 
     }
 
@@ -6507,7 +6595,7 @@
       au < doNotProcess ; exists ; 2013 ; Common Law World Review Volume 42 ; 42 ; >
       au < finished ; finished ; 2014 ; Common Law World Review Volume 43 ; 43 ; >
       au < crawling ; exists ; 2015 ; Common Law World Review Volume 44 ; 44 ; >
-      au < expected ; exists ; 2016 ; Common Law World Review Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2016 ; Common Law World Review Volume 45 ; 45 ; >
 
   }
 
@@ -7018,6 +7106,20 @@
       au < manifest ; exists ; 2016 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 21 ; 21 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Comprehensive Psychology ;
+      eissn = 2165-2228
+    >
+
+    param[base_url] = http://cop.sagepub.com/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < expected ; exists ; 2016 ; Comprehensive Psychology Volume 1 ; 1 ; >
 
   }
 
@@ -8257,7 +8359,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2015 ; Critical Studies in Television Volume 10 ; 10 ; >
-      au < expected ; exists ; 2016 ; Critical Studies in Television Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2016 ; Critical Studies in Television Volume 11 ; 11 ; >
 
   }
 
@@ -8320,7 +8422,7 @@
       au < crawling ; exists ; 2013 ; Critique of Anthropology Volume 33 ; 33 ; >
       au < finished ; finished ; 2014 ; Critique of Anthropology Volume 34 ; 34 ; >
       au < crawling ; exists ; 2015 ; Critique of Anthropology Volume 35 ; 35 ; >
-      au < expected ; exists ; 2016 ; Critique of Anthropology Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2016 ; Critique of Anthropology Volume 36 ; 36 ; >
 
     }
 
@@ -8456,7 +8558,7 @@
       au < finished ; finished ; 2013 ; Cultural Dynamics Volume 25 ; 25 ; >
       au < finished ; finished ; 2014 ; Cultural Dynamics Volume 26 ; 26 ; >
       au < crawling ; exists ; 2015 ; Cultural Dynamics Volume 27 ; 27 ; >
-      au < expected ; exists ; 2016 ; Cultural Dynamics Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2016 ; Cultural Dynamics Volume 28 ; 28 ; >
 
     }
 
@@ -9021,7 +9123,7 @@
       au < finished ; finished ; 2013 ; Dialogues in Human Geography Volume 3 ; 3 ; >
       au < finished ; finished ; 2014 ; Dialogues in Human Geography Volume 4 ; 4 ; >
       au < crawling ; exists ; 2015 ; Dialogues in Human Geography Volume 5 ; 5 ; >
-      au < expected ; exists ; 2016 ; Dialogues in Human Geography Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2016 ; Dialogues in Human Geography Volume 6 ; 6 ; >
 
     }
 
@@ -9126,7 +9228,7 @@
       au < zapped ; finished ; 2011 ; Diogenes Volume 58 ; 58 ; >
       au < finished ; finished ; 2012 ; Diogenes Volume 59 ; 59 ; >
       au < crawling ; exists ; 2013 ; Diogenes Volume 60 ; 60 ; >
-      au < manifest ; exists ; 2014 ; Diogenes Volume 61 ; 61 ; >
+      au < crawling ; exists ; 2014 ; Diogenes Volume 61 ; 61 ; >
 
     }
 
@@ -9582,7 +9684,7 @@
         au < finished ; finished ; 2013 ; The Economic and Labour Relations Review Volume 24 ; 24 ; >
         au < finished ; crawling ; 2014 ; The Economic and Labour Relations Review Volume 25 ; 25 ; >
         au < crawling ; exists ; 2015 ; The Economic and Labour Relations Review Volume 26 ; 26 ; >
-        au < expected ; exists ; 2016 ; The Economic and Labour Relations Review Volume 27 ; 27 ; >
+        au < manifest ; exists ; 2016 ; The Economic and Labour Relations Review Volume 27 ; 27 ; >
 
       }
 
@@ -10712,7 +10814,7 @@
       au < doNotProcess ; exists ; 2013 ; Environmental Law Review Volume 15 ; 15 ; >
       au < crawling ; exists ; 2014 ; Environmental Law Review Volume 16 ; 16 ; >
       au < crawling ; exists ; 2015 ; Environmental Law Review Volume 17 ; 17 ; >
-      au < expected ; exists ; 2016 ; Environmental Law Review Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2016 ; Environmental Law Review Volume 18 ; 18 ; >
 
   }
 
@@ -11710,6 +11812,20 @@
   {
 
     title <
+      name = European Stroke Journal ;
+      issn = 2396-9873 ;
+      eissn = 2396-9881
+    >
+
+      param[base_url] = http://eso.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2016 ; European Stroke Journal Volume 1 ; 1 ; >
+  }
+
+  {
+
+    title <
       name = Evaluation ;
       issn = 1356-3890 ;
       eissn = 1461-7153
@@ -12418,7 +12534,7 @@
       au < crawling ; exists ; 2013 ; Feminist Theory Volume 14 ; 14 ; >
       au < finished ; finished ; 2014 ; Feminist Theory Volume 15 ; 15 ; >
       au < crawling ; exists ; 2015 ; Feminist Theory Volume 16 ; 16 ; >
-      au < expected ; exists ; 2016 ; Feminist Theory Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2016 ; Feminist Theory Volume 17 ; 17 ; >
 
     }
 
@@ -13394,7 +13510,7 @@
       au < crawling ; exists ; 2013 ; Global Media and Communication Volume 9 ; 9 ; >
       au < finished ; finished ; 2014 ; Global Media and Communication Volume 10 ; 10 ; >
       au < crawling ; exists ; 2015 ; Global Media and Communication Volume 11 ; 11 ; >
-      au < expected ; exists ; 2016 ; Global Media and Communication Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2016 ; Global Media and Communication Volume 12 ; 12 ; >
 
     }
 
@@ -13473,7 +13589,7 @@
       au < crawling ; exists ; 2013 ; Global Social Policy Volume 13 ; 13 ; >
       au < finished ; finished ; 2014 ; Global Social Policy Volume 14 ; 14 ; >
       au < crawling ; exists ; 2015 ; Global Social Policy Volume 15 ; 15 ; >
-      au < expected ; exists ; 2016 ; Global Social Policy Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2016 ; Global Social Policy Volume 16 ; 16 ; >
 
     }
 
@@ -13924,6 +14040,36 @@
   {
 
     title <
+      name = Health Information Management Journal ;
+      issn = 1833-3583 ;
+      eissn = 1833-3575
+    >
+
+      param[base_url] = http://him.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2002 ; Health Information Management Journal Volume 30 ; 30 ; >
+      au < exists ; exists ; 2003 ; Health Information Management Journal Volume 31 ; 31 ; >
+      au < exists ; exists ; 2004 ; Health Information Management Journal Volume 32 ; 32 ; >
+      au < exists ; exists ; 2004 ; Health Information Management Journal Volume 33 ; 33 ; >
+      au < exists ; exists ; 2005 ; Health Information Management Journal Volume 34 ; 34 ; >
+      au < exists ; exists ; 2006 ; Health Information Management Journal Volume 35 ; 35 ; >
+      au < exists ; exists ; 2007 ; Health Information Management Journal Volume 36 ; 36 ; >
+      au < exists ; exists ; 2008 ; Health Information Management Journal Volume 37 ; 37 ; >
+      au < exists ; exists ; 2009 ; Health Information Management Journal Volume 38 ; 38 ; >
+      au < exists ; exists ; 2010 ; Health Information Management Journal Volume 39 ; 39 ; >
+      au < exists ; exists ; 2011 ; Health Information Management Journal Volume 40 ; 40 ; >
+      au < exists ; exists ; 2012 ; Health Information Management Journal Volume 41 ; 41 ; >
+      au < exists ; exists ; 2013 ; Health Information Management Journal Volume 42 ; 42 ; >
+      au < exists ; exists ; 2014 ; Health Information Management Journal Volume 43 ; 43 ; >
+      au < exists ; exists ; 2015 ; Health Information Management Journal Volume 44 ; 44 ; >
+      au < expected ; exists ; 2016 ; Health Information Management Journal Volume 45 ; 45 ; >
+
+  }
+
+  {
+
+    title <
       name = Health Promotion Practice ;
       issn = 1524-8399 ;
       eissn = 1552-6372
@@ -14177,6 +14323,21 @@
   {
 
     title <
+      name = Hispanic Health Care International ;
+      issn = 1540-4153 ;
+      eissn = 1938-8993
+    >
+
+      param[base_url] = http://hci.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2016 ; Hispanic Health Care International Volume 14 ; 14 ; >
+
+  }
+
+  {
+
+    title <
       name = Hispanic Journal of Behavioral Sciences ;
       issn = 0739-9863 ;
       eissn = 1552-6364
@@ -14320,7 +14481,7 @@
       au < finished ; finished ; 2013 ; History of Psychiatry Volume 24 ; 24 ; >
       au < finished ; finished ; 2014 ; History of Psychiatry Volume 25 ; 25 ; >
       au < crawling ; exists ; 2015 ; History of Psychiatry Volume 26 ; 26 ; >
-      au < expected ; exists ; 2016 ; History of Psychiatry Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2016 ; History of Psychiatry Volume 27 ; 27 ; >
 
     }
 
@@ -14339,7 +14500,7 @@
 
       au < finished ; finished ; 2014 ; History of Science Volume 52 ; 52 ; >
       au < crawling ; exists ; 2015 ; History of Science Volume 53 ; 53 ; >
-      au < expected ; exists ; 2016 ; History of Science Volume 54 ; 54 ; >
+      au < manifest ; exists ; 2016 ; History of Science Volume 54 ; 54 ; >
 
   }
 
@@ -14871,7 +15032,7 @@
       au < finished ; finished ; 2013 ; Human Resource Development Review Volume 12 ; 12 ; >
       au < finished ; finished ; 2014 ; Human Resource Development Review Volume 13 ; 13 ; >
       au < crawling ; exists ; 2015 ; Human Resource Development Review Volume 14 ; 14 ; >
-      au < expected ; exists ; 2016 ; Human Resource Development Review Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2016 ; Human Resource Development Review Volume 15 ; 15 ; >
 
     }
 
@@ -14920,7 +15081,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; i-Perception Volume 4 ; 4 ; >
       au < crawling ; exists ; 2014 ; i-Perception Volume 5 ; 5 ; >
       au < crawling ; exists ; 2015 ; i-Perception Volume 6 ; 6 ; >
-      au < expected ; exists ; 2016 ; i-Perception Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2016 ; i-Perception Volume 7 ; 7 ; >
 
   }
 
@@ -15209,7 +15370,7 @@
       au < finished ; finished ; 2013 ; Improving Schools Volume 16 ; 16 ; >
       au < finished ; finished ; 2014 ; Improving Schools Volume 17 ; 17 ; >
       au < crawling ; exists ; 2015 ; Improving Schools Volume 18 ; 18 ; >
-      au < expected ; exists ; 2016 ; Improving Schools Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2016 ; Improving Schools Volume 19 ; 19 ; >
 
     }
 
@@ -15394,7 +15555,7 @@
       au < crawling ; exists ; 2013 ; Indian Economic & Social History Review Volume 50 ; 50 ; >
       au < finished ; finished ; 2014 ; Indian Economic & Social History Review Volume 51 ; 51 ; >
       au < crawling ; exists ; 2015 ; Indian Economic & Social History Review Volume 52 ; 52 ; >
-      au < expected ; exists ; 2016 ; Indian Economic & Social History Review Volume 53 ; 53 ; >
+      au < manifest ; exists ; 2016 ; Indian Economic & Social History Review Volume 53 ; 53 ; >
 
     }
 
@@ -15729,7 +15890,7 @@
       au < finished ; finished ; 2013 ; International Area Studies Review Volume 16 ; 16 ; >
       au < finished ; finished ; 2014 ; International Area Studies Review Volume 17 ; 17 ; >
       au < crawling ; exists ; 2015 ; International Area Studies Review Volume 18 ; 18 ; >
-      au < expected ; exists ; 2016 ; International Area Studies Review Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2016 ; International Area Studies Review Volume 19 ; 19 ; >
 
     }
 
@@ -16115,7 +16276,7 @@
       au < exists ; exists ; 2013 ; International Journal of Architectural Computing Volume 11 ; 11 ; >
       au < exists ; exists ; 2014 ; International Journal of Architectural Computing Volume 12 ; 12 ; >
       au < crawling ; exists ; 2015 ; International Journal of Architectural Computing Volume 13 ; 13 ; >
-      au < expected ; exists ; 2016 ; International Journal of Architectural Computing Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Architectural Computing Volume 14 ; 14 ; >
 
   }
 
@@ -16821,7 +16982,7 @@
       au < crawling ; exists ; 2013 ; The International Journal of Lower Extremity Wounds Volume 12 ; 12 ; >
       au < finished ; finished ; 2014 ; The International Journal of Lower Extremity Wounds Volume 13 ; 13 ; >
       au < crawling ; exists ; 2015 ; The International Journal of Lower Extremity Wounds Volume 14 ; 14 ; >
-      au < expected ; exists ; 2016 ; The International Journal of Lower Extremity Wounds Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2016 ; The International Journal of Lower Extremity Wounds Volume 15 ; 15 ; >
 
     }
 
@@ -16856,7 +17017,7 @@
       au < doNotProcess ; exists ; 2013 ; International Journal of Mechanical Engineering Education Volume 41 ; 41 ; >
       au < crawling ; exists ; 2014 ; International Journal of Mechanical Engineering Education Volume 42 ; 42 ; >
       au < crawling ; exists ; 2015 ; International Journal of Mechanical Engineering Education Volume 43 ; 43 ; >
-      au < expected ; exists ; 2016 ; International Journal of Mechanical Engineering Education Volume 44 ; 44 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Mechanical Engineering Education Volume 44 ; 44 ; >
 
   }
 
@@ -17166,7 +17327,7 @@
       au < exists ; exists ; 2013 ; International Journal of Protective Structures Volume 4 ; 4 ; >
       au < crawling ; exists ; 2014 ; International Journal of Protective Structures Volume 5 ; 5 ; >
       au < crawling ; exists ; 2015 ; International Journal of Protective Structures Volume 6 ; 6 ; >
-      au < expected ; exists ; 2016 ; International Journal of Protective Structures Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Protective Structures Volume 7 ; 7 ; >
 
   }
 
@@ -17635,7 +17796,7 @@
       au < crawling ; exists ; 2013 ; International Journal of Toxicology Volume 32 ; 32 ; >
       au < crawling ; exists ; 2014 ; International Journal of Toxicology Volume 33 ; 33 ; >
       au < crawling ; exists ; 2015 ; International Journal of Toxicology Volume 34 ; 34 ; >
-      au < expected ; exists ; 2016 ; International Journal of Toxicology Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Toxicology Volume 35 ; 35 ; >
 
     }
 
@@ -18088,7 +18249,7 @@
       au < finished ; crawling ; 2013 ; International Review of Administrative Sciences Volume 79 ; 79 ; >
       au < finished ; finished ; 2014 ; International Review of Administrative Sciences Volume 80 ; 80 ; >
       au < crawling ; exists ; 2015 ; International Review of Administrative Sciences Volume 81 ; 81 ; >
-      au < expected ; exists ; 2016 ; International Review of Administrative Sciences Volume 82 ; 82 ; >
+      au < manifest ; exists ; 2016 ; International Review of Administrative Sciences Volume 82 ; 82 ; >
 
     }
 
@@ -18714,7 +18875,7 @@
       param[base_url] = http://jct.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < expected ; exists ; 2016 ; JDR Clinical & Translational Research Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2016 ; JDR Clinical & Translational Research Volume 1 ; 1 ; >
 
   }
 
@@ -20709,7 +20870,7 @@
       au < crawling ; exists ; 2013 ; Journal of Cognitive Engineering and Decision Making Volume 7 ; 7 ; >
       au < crawling ; exists ; 2014 ; Journal of Cognitive Engineering and Decision Making Volume 8 ; 8 ; >
       au < crawling ; exists ; 2015 ; Journal of Cognitive Engineering and Decision Making Volume 9 ; 9 ; >
-      au < expected ; exists ; 2016 ; Journal of Cognitive Engineering and Decision Making Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2016 ; Journal of Cognitive Engineering and Decision Making Volume 10 ; 10 ; >
 
     }
 
@@ -20811,7 +20972,7 @@
       au < crawling ; exists ; 2013 ; The Journal of Commonwealth Literature Volume 48 ; 48 ; >
       au < finished ; finished ; 2014 ; The Journal of Commonwealth Literature Volume 49 ; 49 ; >
       au < crawling ; exists ; 2015 ; The Journal of Commonwealth Literature Volume 50 ; 50 ; >
-      au < expected ; exists ; 2016 ; The Journal of Commonwealth Literature Volume 51 ; 51 ; >
+      au < manifest ; exists ; 2016 ; The Journal of Commonwealth Literature Volume 51 ; 51 ; >
 
     }
 
@@ -21403,7 +21564,7 @@
       au < finished ; finished ; 2013 ; Journal of Creative Communications Volume 8 ; 8 ; >
       au < finished ; finished ; 2014 ; Journal of Creative Communications Volume 9 ; 9 ; >
       au < crawling ; exists ; 2015 ; Journal of Creative Communications Volume 10 ; 10 ; >
-      au < expected ; exists ; 2016 ; Journal of Creative Communications Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2016 ; Journal of Creative Communications Volume 11 ; 11 ; >
 
     }
 
@@ -22098,7 +22259,7 @@
       au < finished ; finished ; 2013 ; Journal of Early Childhood Literacy Volume 13 ; 13 ; >
       au < finished ; finished ; 2014 ; Journal of Early Childhood Literacy Volume 14 ; 14 ; >
       au < crawling ; exists ; 2015 ; Journal of Early Childhood Literacy Volume 15 ; 15 ; >
-      au < expected ; exists ; 2016 ; Journal of Early Childhood Literacy Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2016 ; Journal of Early Childhood Literacy Volume 16 ; 16 ; >
 
     }
 
@@ -22209,7 +22370,7 @@
       au < finished ; finished ; 2013 ; Journal of Early Intervention Volume 35 ; 35 ; >
       au < finished ; crawling ; 2014 ; Journal of Early Intervention Volume 36 ; 36 ; >
       au < crawling ; exists ; 2015 ; Journal of Early Intervention Volume 37 ; 37 ; >
-      au < expected ; exists ; 2016 ; Journal of Early Intervention Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2016 ; Journal of Early Intervention Volume 38 ; 38 ; >
 
     }
 
@@ -22248,7 +22409,7 @@
       au < crawling ; exists ; 2013 ; Journal of Education for Sustainable Development Volume 7 ; 7 ; >
       au < finished ; finished ; 2014 ; Journal of Education for Sustainable Development Volume 8 ; 8 ; >
       au < crawling ; exists ; 2015 ; Journal of Education for Sustainable Development Volume 9 ; 9 ; >
-      au < expected ; exists ; 2016 ; Journal of Education for Sustainable Development Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2016 ; Journal of Education for Sustainable Development Volume 10 ; 10 ; >
 
     }
 
@@ -22739,7 +22900,7 @@
       au < finished ; finished ; 2013 ; Journal of Entrepreneurship Volume 22 ; 22 ; >
       au < finished ; finished ; 2014 ; Journal of Entrepreneurship Volume 23 ; 23 ; >
       au < crawling ; exists ; 2015 ; Journal of Entrepreneurship Volume 24 ; 24 ; >
-      au < expected ; exists ; 2016 ; Journal of Entrepreneurship Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2016 ; Journal of Entrepreneurship Volume 25 ; 25 ; >
 
     }
 
@@ -22939,7 +23100,7 @@
       au < finished ; finished ; 2013 ; Journal of European Studies Volume 43 ; 43 ; >
       au < finished ; crawling ; 2014 ; Journal of European Studies Volume 44 ; 44 ; >
       au < crawling ; exists ; 2015 ; Journal of European Studies Volume 45 ; 45 ; >
-      au < expected ; exists ; 2016 ; Journal of European Studies Volume 46 ; 46 ; >
+      au < manifest ; exists ; 2016 ; Journal of European Studies Volume 46 ; 46 ; >
 
     }
 
@@ -23514,7 +23675,7 @@
       au < crawling ; exists ; 2013 ; Journal of Health and Social Behavior Volume 54 ; 54 ; >
       au < crawling ; exists ; 2014 ; Journal of Health and Social Behavior Volume 55 ; 55 ; >
       au < crawling ; exists ; 2015 ; Journal of Health and Social Behavior Volume 56 ; 56 ; >
-      au < expected ; exists ; 2016 ; Journal of Health and Social Behavior Volume 57 ; 57 ; >
+      au < manifest ; exists ; 2016 ; Journal of Health and Social Behavior Volume 57 ; 57 ; >
 
     }
 
@@ -24603,8 +24764,7 @@
 
       title <
         name = Journal of the Intensive Care Society ;
-        issn = 1751-1437 ;
-        issnl = 1751-1437
+        issn = 1751-1437 
       >
 
       param[base_url] = http://inc.sagepub.com/
@@ -24631,14 +24791,10 @@
 
       title <
         name = Journal of Interdisciplinary Economics ;
-        issn = 0260-1079 ;
-        issnl = 0260-1079
+        issn = 0260-1079 
       >
 
-    param[base_url] = http://jie.sagepub.com/
-
-      {
-
+      param[base_url] = http://jie.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < finished ; finished ; 2012 ; Journal of Interdisciplinary Economics Volume 24 ; 24 ; >
@@ -24646,8 +24802,6 @@
       au < finished ; finished ; 2014 ; Journal of Interdisciplinary Economics Volume 26 ; 26 ; >
       au < crawling ; exists ; 2015 ; Journal of Interdisciplinary Economics Volume 27 ; 27 ; >
       au < manifest ; exists ; 2016 ; Journal of Interdisciplinary Economics Volume 28 ; 28 ; >
-
-      }
 
     }
 
@@ -24742,8 +24896,7 @@
         title <
           name = JALA (Charlottesville, Va.) ;
           issn = 1535-5535 ;
-          eissn = 1540-2452 ;
-          issnl = 1535-5535
+          eissn = 1540-2452 
       >
 
       {
@@ -24874,6 +25027,38 @@
       au < manifest ; exists ; 2016 ; Journal of Language and Social Psychology Volume 35 ; 35 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Law, Medicine & Ethics ;
+      issn = 1073-1105 ;
+      eissn = 1748-720X 
+    >
+
+      param[base_url] = http://lme.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      #content available from 1973 volume 1 to 1999 volume 27
+
+      au < exists ; exists ; 2000 ; The Journal of Law, Medicine & Ethics Volume 28 ; 28 ; >
+      au < exists ; exists ; 2001 ; The Journal of Law, Medicine & Ethics Volume 29 ; 29 ; >
+      au < exists ; exists ; 2002 ; The Journal of Law, Medicine & Ethics Volume 30 ; 30 ; >
+      au < exists ; exists ; 2003 ; The Journal of Law, Medicine & Ethics Volume 31 ; 31 ; >
+      au < exists ; exists ; 2004 ; The Journal of Law, Medicine & Ethics Volume 32 ; 32 ; >
+      au < exists ; exists ; 2005 ; The Journal of Law, Medicine & Ethics Volume 33 ; 33 ; >
+      au < exists ; exists ; 2006 ; The Journal of Law, Medicine & Ethics Volume 34 ; 34 ; >
+      au < exists ; exists ; 2007 ; The Journal of Law, Medicine & Ethics Volume 35 ; 35 ; >
+      au < exists ; exists ; 2008 ; The Journal of Law, Medicine & Ethics Volume 36 ; 36 ; >
+      au < exists ; exists ; 2009 ; The Journal of Law, Medicine & Ethics Volume 37 ; 37 ; >
+      au < exists ; exists ; 2010 ; The Journal of Law, Medicine & Ethics Volume 38 ; 38 ; >
+      au < exists ; exists ; 2011 ; The Journal of Law, Medicine & Ethics Volume 39 ; 39 ; >
+      au < exists ; exists ; 2012 ; The Journal of Law, Medicine & Ethics Volume 40 ; 40 ; >
+      au < exists ; exists ; 2013 ; The Journal of Law, Medicine & Ethics Volume 41 ; 41 ; >
+      au < exists ; exists ; 2014 ; The Journal of Law, Medicine & Ethics Volume 42 ; 42 ; >
+      au < exists ; exists ; 2015 ; The Journal of Law, Medicine & Ethics Volume 43 ; 43 ; >
+      au < expected ; exists ; 2016 ; The Journal of Law, Medicine & Ethics Volume 44 ; 44 ; >
 
   }
 
@@ -25496,7 +25681,7 @@
       au < crawling ; exists ; 2013 ; Journal of Marketing Education Volume 35 ; 35 ; >
       au < finished ; finished ; 2014 ; Journal of Marketing Education Volume 36 ; 36 ; >
       au < crawling ; exists ; 2015 ; Journal of Marketing Education Volume 37 ; 37 ; >
-      au < expected ; exists ; 2016 ; Journal of Marketing Education Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2016 ; Journal of Marketing Education Volume 38 ; 38 ; >
 
     }
 
@@ -25546,7 +25731,7 @@
       au < crawling ; exists ; 2013 ; Journal of Material Culture Volume 18 ; 18 ; >
       au < finished ; finished ; 2014 ; Journal of Material Culture Volume 19 ; 19 ; >
       au < crawling ; exists ; 2015 ; Journal of Material Culture Volume 20 ; 20 ; >
-      au < expected ; exists ; 2016 ; Journal of Material Culture Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2016 ; Journal of Material Culture Volume 21 ; 21 ; >
 
     }
 
@@ -25819,7 +26004,7 @@
       au < doNotProcess ; exists ; 2013 ; Journal of Pastoral Care & Counseling Volume 67 ; 67 ; >
       au < crawling ; exists ; 2014 ; Journal of Pastoral Care & Counseling Volume 68 ; 68 ; >
       au < crawling ; exists ; 2015 ; Journal of Pastoral Care & Counseling Volume 69 ; 69 ; >
-      au < expected ; exists ; 2016 ; Journal of Pastoral Care & Counseling Volume 70 ; 70 ; >
+      au < manifest ; exists ; 2016 ; Journal of Pastoral Care & Counseling Volume 70 ; 70 ; >
 
     }
 
@@ -26135,7 +26320,7 @@
       au < crawling ; exists ; 2013 ; Journal of Planning Education and Research Volume 33 ; 33 ; >
       au < crawling ; exists ; 2014 ; Journal of Planning Education and Research Volume 34 ; 34 ; >
       au < crawling ; exists ; 2015 ; Journal of Planning Education and Research Volume 35 ; 35 ; >
-      au < expected ; exists ; 2016 ; Journal of Planning Education and Research Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2016 ; Journal of Planning Education and Research Volume 36 ; 36 ; >
 
     }
 
@@ -26875,7 +27060,7 @@
       au < crawling ; exists ; 2013 ; Journal of Research in Music Education Volume 61 ; 61 ; >
       au < finished ; finished ; 2014 ; Journal of Research in Music Education Volume 62 ; 62 ; >
       au < crawling ; exists ; 2015 ; Journal of Research in Music Education Volume 63 ; 63 ; >
-      au < expected ; exists ; 2016 ; Journal of Research in Music Education Volume 64 ; 64 ; >
+      au < manifest ; exists ; 2016 ; Journal of Research in Music Education Volume 64 ; 64 ; >
 
     }
 
@@ -27917,7 +28102,7 @@
       au < crawling ; exists ; 2013 ; Journal of the American Psychiatric Nurses Association Volume 19 ; 19 ; >
       au < finished ; finished ; 2014 ; Journal of the American Psychiatric Nurses Association Volume 20 ; 20 ; >
       au < crawling ; exists ; 2015 ; Journal of the American Psychiatric Nurses Association Volume 21 ; 21 ; >
-      au < expected ; exists ; 2016 ; Journal of the American Psychiatric Nurses Association Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2016 ; Journal of the American Psychiatric Nurses Association Volume 22 ; 22 ; >
 
     }
 
@@ -28010,7 +28195,7 @@
       au < crawling ; exists ; 2013 ; Journal of the American Psychoanalytic Association Volume 61 ; 61 ; >
       au < finished ; finished ; 2014 ; Journal of the American Psychoanalytic Association Volume 62 ; 62 ; >
       au < crawling ; exists ; 2015 ; Journal of the American Psychoanalytic Association Volume 63 ; 63 ; >
-      au < expected ; exists ; 2016 ; Journal of the American Psychoanalytic Association Volume 64 ; 64 ; >
+      au < manifest ; exists ; 2016 ; Journal of the American Psychoanalytic Association Volume 64 ; 64 ; >
 
     }
 
@@ -29001,7 +29186,7 @@
       au < finished ; finished ; 2013 ; Journalism & Mass Communication Quarterly Volume 90 ; 90 ; >
       au < crawling ; exists ; 2014 ; Journalism & Mass Communication Quarterly Volume 91 ; 91 ; >
       au < crawling ; exists ; 2015 ; Journalism & Mass Communication Quarterly Volume 92 ; 92 ; >
-      au < expected ; exists ; 2016 ; Journalism & Mass Communication Quarterly Volume 93 ; 93 ; >
+      au < manifest ; exists ; 2016 ; Journalism & Mass Communication Quarterly Volume 93 ; 93 ; >
 
   }
 
@@ -29284,7 +29469,7 @@
       au < crawling ; exists ; 2013 ; Language and Speech Volume 56 ; 56 ; >
       au < crawling ; exists ; 2014 ; Language and Speech Volume 57 ; 57 ; >
       au < crawling ; exists ; 2015 ; Language and Speech Volume 58 ; 58 ; >
-      au < expected ; exists ; 2016 ; Language and Speech Volume 59 ; 59 ; >
+      au < manifest ; exists ; 2016 ; Language and Speech Volume 59 ; 59 ; >
 
     }
 
@@ -30921,7 +31106,7 @@
       au < crawling ; exists ; 2013 ; Men and Masculinities Volume 16 ; 16 ; >
       au < finished ; finished ; 2014 ; Men and Masculinities Volume 17 ; 17 ; >
       au < crawling ; exists ; 2015 ; Men and Masculinities Volume 18 ; 18 ; >
-      au < expected ; exists ; 2016 ; Men and Masculinities Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2016 ; Men and Masculinities Volume 19 ; 19 ; >
 
     }
 
@@ -32132,7 +32317,23 @@
 
       param[base_url] = http://nrj.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
+      #content available from 1979 volume 1 to 1999 volume 20
 
+      au < exists ; exists ; 2000 ; Newspaper Research Journal Volume 21 ; 21 ; >
+      au < exists ; exists ; 2001 ; Newspaper Research Journal Volume 22 ; 22 ; >
+      au < exists ; exists ; 2002 ; Newspaper Research Journal Volume 23 ; 23 ; >
+      au < exists ; exists ; 2003 ; Newspaper Research Journal Volume 24 ; 24 ; >
+      au < exists ; exists ; 2004 ; Newspaper Research Journal Volume 25 ; 25 ; >
+      au < exists ; exists ; 2005 ; Newspaper Research Journal Volume 26 ; 26 ; >
+      au < exists ; exists ; 2006 ; Newspaper Research Journal Volume 27 ; 27 ; >
+      au < exists ; exists ; 2007 ; Newspaper Research Journal Volume 28 ; 28 ; >
+      au < exists ; exists ; 2008 ; Newspaper Research Journal Volume 29 ; 29 ; >
+      au < exists ; exists ; 2009 ; Newspaper Research Journal Volume 30 ; 30 ; >
+      au < exists ; exists ; 2010 ; Newspaper Research Journal Volume 31 ; 31 ; >
+      au < exists ; exists ; 2011 ; Newspaper Research Journal Volume 32 ; 32 ; >
+      au < exists ; exists ; 2012 ; Newspaper Research Journal Volume 33 ; 33 ; >
+      au < exists ; exists ; 2013 ; Newspaper Research Journal Volume 34 ; 34 ; >
+      au < exists ; exists ; 2014 ; Newspaper Research Journal Volume 35 ; 35 ; >
       au < crawling ; exists ; 2015 ; Newspaper Research Journal Volume 36 ; 36 ; >
       au < expected ; exists ; 2016 ; Newspaper Research Journal Volume 37 ; 37 ; >
 
@@ -33104,7 +33305,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < crawling ; exists ; 2015 ; Pedagogy in Health Promotion Volume 1 ; 1 ; >
-      au < expected ; exists ; 2016 ; Pedagogy in Health Promotion Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2016 ; Pedagogy in Health Promotion Volume 2 ; 2 ; >
 
   }
 
@@ -34007,6 +34208,27 @@
   {
 
     title <
+      name = Political Insight ;
+      issn = 2041-9058 ;
+      eissn = 2041-9066
+    >
+
+      param[base_url] = http://pli.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2010 ; Political Insight Volume 1 ; 1 ; >
+      au < exists ; exists ; 2011 ; Political Insight Volume 2 ; 2 ; >
+      au < exists ; exists ; 2012 ; Political Insight Volume 3 ; 3 ; >
+      au < exists ; exists ; 2013 ; Political Insight Volume 4 ; 4 ; >
+      au < exists ; exists ; 2014 ; Political Insight Volume 5 ; 5 ; >
+      au < exists ; exists ; 2015 ; Political Insight Volume 6 ; 6 ; >
+      au < exists ; exists ; 2016 ; Political Insight Volume 7 ; 7 ; >
+
+  }
+
+  {
+
+    title <
       name = Political Research Quarterly ;
       issn = 1065-9129 ;
       eissn = 1938-274X
@@ -34105,6 +34327,66 @@
   {
 
     title <
+      name = Political Studies ;
+      issn = 0032-3217 ;
+      eissn = 1467-9248
+    >
+
+      param[base_url] = http://psx.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      #content available from 1953 volume 1 to 1999 volume 47
+
+      au < exists ; exists ; 2000 ; Political Studies Volume 48 ; 48 ; >
+      au < exists ; exists ; 2001 ; Political Studies Volume 49 ; 49 ; >
+      au < exists ; exists ; 2002 ; Political Studies Volume 50 ; 50 ; >
+      au < exists ; exists ; 2003 ; Political Studies Volume 51 ; 51 ; >
+      au < exists ; exists ; 2004 ; Political Studies Volume 52 ; 52 ; >
+      au < exists ; exists ; 2005 ; Political Studies Volume 53 ; 53 ; >
+      au < exists ; exists ; 2006 ; Political Studies Volume 54 ; 54 ; >
+      au < exists ; exists ; 2007 ; Political Studies Volume 55 ; 55 ; >
+      au < exists ; exists ; 2008 ; Political Studies Volume 56 ; 56 ; >
+      au < exists ; exists ; 2009 ; Political Studies Volume 57 ; 57 ; >
+      au < exists ; exists ; 2010 ; Political Studies Volume 58 ; 58 ; >
+      au < exists ; exists ; 2011 ; Political Studies Volume 59 ; 59 ; >
+      au < exists ; exists ; 2012 ; Political Studies Volume 60 ; 60 ; >
+      au < exists ; exists ; 2013 ; Political Studies Volume 61 ; 61 ; >
+      au < exists ; exists ; 2014 ; Political Studies Volume 62 ; 62 ; >
+      au < exists ; exists ; 2015 ; Political Studies Volume 63 ; 63 ; >
+      au < exists ; exists ; 2016 ; Political Studies Volume 64 ; 64 ; >
+
+  }
+
+  {
+
+    title <
+      name = Political Studies Review ;
+      issn = 1478-9299 ;
+      eissn = 1478-9302
+    >
+
+      param[base_url] = http://psw.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2003 ; Political Studies Review Volume 1 ; 1 ; >
+      au < exists ; exists ; 2004 ; Political Studies Review Volume 2 ; 2 ; >
+      au < exists ; exists ; 2005 ; Political Studies Review Volume 3 ; 3 ; >
+      au < exists ; exists ; 2006 ; Political Studies Review Volume 4 ; 4 ; >
+      au < exists ; exists ; 2007 ; Political Studies Review Volume 5 ; 5 ; >
+      au < exists ; exists ; 2008 ; Political Studies Review Volume 6 ; 6 ; >
+      au < exists ; exists ; 2009 ; Political Studies Review Volume 7 ; 7 ; >
+      au < exists ; exists ; 2010 ; Political Studies Review Volume 8 ; 8 ; >
+      au < exists ; exists ; 2011 ; Political Studies Review Volume 9 ; 9 ; >
+      au < exists ; exists ; 2012 ; Political Studies Review Volume 10 ; 10 ; >
+      au < exists ; exists ; 2013 ; Political Studies Review Volume 11 ; 11 ; >
+      au < exists ; exists ; 2014 ; Political Studies Review Volume 12 ; 12 ; >
+      au < exists ; exists ; 2015 ; Political Studies Review Volume 13 ; 13 ; >
+      au < exists ; exists ; 2016 ; Political Studies Review Volume 14 ; 14 ; >
+
+  }
+
+  {
+
+    title <
       name = Political Theory ;
       issn = 0090-5917 ;
       eissn = 1552-7476
@@ -34172,6 +34454,38 @@
       au < manifest ; exists ; 2016 ; Political Theory Volume 44 ; 44 ; >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = politics ;
+      issn = 0263-3957 ;
+      eissn = 1467-9256
+    >
+
+      param[base_url] = http://pol.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      #content available from 1981 volume 1 to 1999 19
+
+      au < exists ; exists ; 2000 ; politics Volume 20 ; 20 ; >
+      au < exists ; exists ; 2001 ; politics Volume 21 ; 21 ; >
+      au < exists ; exists ; 2002 ; politics Volume 22 ; 22 ; >
+      au < exists ; exists ; 2003 ; politics Volume 23 ; 23 ; >
+      au < exists ; exists ; 2004 ; politics Volume 24 ; 24 ; >
+      au < exists ; exists ; 2005 ; politics Volume 25 ; 25 ; >
+      au < exists ; exists ; 2006 ; politics Volume 26 ; 26 ; >
+      au < exists ; exists ; 2007 ; politics Volume 27 ; 27 ; >
+      au < exists ; exists ; 2008 ; politics Volume 28 ; 28 ; >
+      au < exists ; exists ; 2009 ; politics Volume 29 ; 29 ; >
+      au < exists ; exists ; 2010 ; politics Volume 30 ; 30 ; >
+      au < exists ; exists ; 2011 ; politics Volume 31 ; 31 ; >
+      au < exists ; exists ; 2012 ; politics Volume 32 ; 32 ; >
+      au < exists ; exists ; 2013 ; politics Volume 33 ; 33 ; >
+      au < exists ; exists ; 2014 ; politics Volume 34 ; 34 ; >
+      au < exists ; exists ; 2015 ; politics Volume 35 ; 35 ; >
+      au < exists ; exists ; 2016 ; politics Volume 36 ; 36 ; >
 
   }
 
@@ -34526,7 +34840,7 @@
       au < finished ; finished ; 2013 ; Probation Journal Volume 60 ; 60 ; >
       au < finished ; finished ; 2014 ; Probation Journal Volume 61 ; 61 ; >
       au < crawling ; exists ; 2015 ; Probation Journal Volume 62 ; 62 ; >
-      au < expected ; exists ; 2016 ; Probation Journal Volume 63 ; 63 ; >
+      au < manifest ; exists ; 2016 ; Probation Journal Volume 63 ; 63 ; >
 
     }
 
@@ -35283,7 +35597,7 @@
       au < finished ; finished ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 227 ; 227 ; >
       au < finished ; finished ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 228 ; 228 ; >
       au < crawling ; exists ; 2015 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 229 ; 229 ; >
-      au < expected ; exists ; 2016 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 230 ; 230 ; >
+      au < manifest ; exists ; 2016 ; Proceedings of the Institution of Mechanical Engineers, Part P: Journal of Sports Engineering and Technology Volume 230 ; 230 ; >
 
   }
 
@@ -35494,15 +35808,47 @@
   {
 
     title <
+      name = Progress in Transplantation ;
+      issn = 1526-9248 ;
+      eissn = 2164-6708 
+    >
+
+      param[base_url] = http://pit.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 1996 ; Progress in Transplantation Volume 6 ; 6 ; >
+      au < exists ; exists ; 1997 ; Progress in Transplantation Volume 7 ; 7 ; >
+      au < exists ; exists ; 1998 ; Progress in Transplantation Volume 8 ; 8 ; >
+      au < exists ; exists ; 1999 ; Progress in Transplantation Volume 9 ; 9 ; >
+      au < exists ; exists ; 2000 ; Progress in Transplantation Volume 10 ; 10 ; >
+      au < exists ; exists ; 2001 ; Progress in Transplantation Volume 11 ; 11 ; >
+      au < exists ; exists ; 2002 ; Progress in Transplantation Volume 12 ; 12 ; >
+      au < exists ; exists ; 2003 ; Progress in Transplantation Volume 13 ; 13 ; >
+      au < exists ; exists ; 2004 ; Progress in Transplantation Volume 14 ; 14 ; >
+      au < exists ; exists ; 2005 ; Progress in Transplantation Volume 15 ; 15 ; >
+      au < exists ; exists ; 2006 ; Progress in Transplantation Volume 16 ; 16 ; >
+      au < exists ; exists ; 2007 ; Progress in Transplantation Volume 17 ; 17 ; >
+      au < exists ; exists ; 2008 ; Progress in Transplantation Volume 18 ; 18 ; >
+      au < exists ; exists ; 2009 ; Progress in Transplantation Volume 19 ; 19 ; >
+      au < exists ; exists ; 2010 ; Progress in Transplantation Volume 20 ; 20 ; >
+      au < exists ; exists ; 2011 ; Progress in Transplantation Volume 21 ; 21 ; >
+      au < exists ; exists ; 2012 ; Progress in Transplantation Volume 22 ; 22 ; >
+      au < exists ; exists ; 2013 ; Progress in Transplantation Volume 23 ; 23 ; >
+      au < exists ; exists ; 2014 ; Progress in Transplantation Volume 24 ; 24 ; >
+      au < exists ; exists ; 2015 ; Progress in Transplantation Volume 25 ; 25 ; >
+      au < exists ; exists ; 2016 ; Progress in Transplantation Volume 26 ; 26 ; >
+
+  }
+
+  {
+
+    title <
       name = Prosthetics and Orthotics International ;
       issn = 0309-3646 ;
       eissn = 1746-1553
     >
 
-    param[base_url] = http://poi.sagepub.com/
-
-    {
-
+      param[base_url] = http://poi.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 1977 ; Prosthetics and Orthotics International Volume 1 ; 1 ; >
@@ -35545,8 +35891,6 @@
       au < finished ; finished ; 2014 ; Prosthetics and Orthotics International Volume 38 ; 38 ; >
       au < crawling ; exists ; 2015 ; Prosthetics and Orthotics International Volume 39 ; 39 ; >
       au < manifest ; exists ; 2016 ; Prosthetics and Orthotics International Volume 40 ; 40 ; >
-
-    }
 
   }
 
@@ -35698,7 +36042,7 @@
       au < finished ; finished ; 2013 ; Psychology & Developing Societies Volume 25 ; 25 ; >
       au < finished ; finished ; 2014 ; Psychology & Developing Societies Volume 26 ; 26 ; >
       au < crawling ; exists ; 2015 ; Psychology & Developing Societies Volume 27 ; 27 ; >
-      au < expected ; exists ; 2016 ; Psychology & Developing Societies Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2016 ; Psychology & Developing Societies Volume 28 ; 28 ; >
 
     }
 
@@ -35855,7 +36199,7 @@
         au < crawling ; exists ; 2013 ; Psychology of Women Quarterly Volume 37 ; 37 ; >
         au < finished ; finished ; 2014 ; Psychology of Women Quarterly Volume 38 ; 38 ; >
         au < crawling ; exists ; 2015 ; Psychology of Women Quarterly Volume 39 ; 39 ; >
-        au < expected ; exists ; 2016 ; Psychology of Women Quarterly Volume 40 ; 40 ; >
+        au < manifest ; exists ; 2016 ; Psychology of Women Quarterly Volume 40 ; 40 ; >
 
       }
 
@@ -35987,7 +36331,7 @@
       au < crawling ; exists ; 2013 ; Public Personnel Management Volume 42 ; 42 ; >
       au < finished ; finished ; 2014 ; Public Personnel Management Volume 43 ; 43 ; >
       au < crawling ; exists ; 2015 ; Public Personnel Management Volume 44 ; 44 ; >
-      au < expected ; exists ; 2016 ; Public Personnel Management Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2016 ; Public Personnel Management Volume 45 ; 45 ; >
 
   }
 
@@ -36070,7 +36414,7 @@
       au < crawling ; exists ; 2013 ; Public Relations Inquiry Volume 2 ; 2 ; >
       au < finished ; finished ; 2014 ; Public Relations Inquiry Volume 3 ; 3 ; >
       au < crawling ; exists ; 2015 ; Public Relations Inquiry Volume 4 ; 4 ; >
-      au < expected ; exists ; 2016 ; Public Relations Inquiry Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2016 ; Public Relations Inquiry Volume 5 ; 5 ; >
 
     }
 
@@ -36611,7 +36955,7 @@
         au < crawling ; exists ; 2013 ; Recherche et Applications en Marketing (English Edition) Volume 28 ; 28 ; >
         au < finished ; finished ; 2014 ; Recherche et Applications en Marketing (English Edition) Volume 29 ; 29 ; >
         au < crawling ; exists ; 2015 ; Recherche et Applications en Marketing (English Edition) Volume 30 ; 30 ; >
-        au < expected ; exists ; 2016 ; Recherche et Applications en Marketing (English Edition) Volume 31 ; 31 ; >
+        au < manifest ; exists ; 2016 ; Recherche et Applications en Marketing (English Edition) Volume 31 ; 31 ; >
 
       }
 
@@ -36950,7 +37294,7 @@
       au < doNotProcess ; exists ; 2013 ; Research in Comparative and International Education Volume 8 ; 8 ; >
       au < crawling ; exists ; 2014 ; Research in Comparative and International Education Volume 9 ; 9 ; >
       au < crawling ; exists ; 2015 ; Research in Comparative and International Education Volume 10 ; 10 ; >
-      au < expected ; exists ; 2016 ; Research in Comparative and International Education Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2016 ; Research in Comparative and International Education Volume 11 ; 11 ; >
 
   }
 
@@ -37856,7 +38200,7 @@
     au < crawling ; exists ; 2013 ; Scandinavian Journal of Surgery Volume 102 ; 102 ; >
     au < finished ; finished ; 2014 ; Scandinavian Journal of Surgery Volume 103 ; 103 ; >
     au < crawling ; exists ; 2015 ; Scandinavian Journal of Surgery Volume 104 ; 104 ; >
-    au < expected ; exists ; 2016 ; Scandinavian Journal of Surgery Volume 105 ; 105 ; >
+    au < manifest ; exists ; 2016 ; Scandinavian Journal of Surgery Volume 105 ; 105 ; >
 
   }
 
@@ -38051,7 +38395,7 @@
       au < crawling ; exists ; 2013 ; Science Technology & Society Volume 18 ; 18 ; >
       au < finished ; finished ; 2014 ; Science Technology & Society Volume 19 ; 19 ; >
       au < crawling ; exists ; 2015 ; Science Technology & Society Volume 20 ; 20 ; >
-      au < expected ; exists ; 2016 ; Science Technology & Society Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2016 ; Science Technology & Society Volume 21 ; 21 ; >
 
     }
 
@@ -39548,7 +39892,7 @@
       au < finished ; finished ; 2013 ; South Asia Economic Journal Volume 14 ; 14 ; >
       au < finished ; crawling ; 2014 ; South Asia Economic Journal Volume 15 ; 15 ; >
       au < crawling ; exists ; 2015 ; South Asia Economic Journal Volume 16 ; 16 ; >
-      au < expected ; exists ; 2016 ; South Asia Economic Journal Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2016 ; South Asia Economic Journal Volume 17 ; 17 ; >
 
     }
 
@@ -40267,7 +40611,7 @@
       au < finished ; finished ; 2013 ; Studies in Religion/Sciences Religieuses Volume 42 ; 42 ; >
       au < finished ; crawling ; 2014 ; Studies in Religion/Sciences Religieuses Volume 43 ; 43 ; >
       au < crawling ; exists ; 2015 ; Studies in Religion/Sciences Religieuses Volume 44 ; 44 ; >
-      au < expected ; exists ; 2016 ; Studies in Religion/Sciences Religieuses Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2016 ; Studies in Religion/Sciences Religieuses Volume 45 ; 45 ; >
 
   }
 
@@ -40525,7 +40869,7 @@
       au < finished ; finished ; 2013 ; Teaching Public Administration Volume 31 ; 31 ; >
       au < finished ; finished ; 2014 ; Teaching Public Administration Volume 32 ; 32 ; >
       au < crawling ; exists ; 2015 ; Teaching Public Administration Volume 33 ; 33 ; >
-      au < expected ; exists ; 2016 ; Teaching Public Administration Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2016 ; Teaching Public Administration Volume 34 ; 34 ; >
 
     }
 
@@ -41248,7 +41592,7 @@
       au < crawling ; exists ; 2013 ; Theory and Research in Education Volume 11 ; 11 ; >
       au < finished ; finished ; 2014 ; Theory and Research in Education Volume 12 ; 12 ; >
       au < crawling ; exists ; 2015 ; Theory and Research in Education Volume 13 ; 13 ; >
-      au < expected ; exists ; 2016 ; Theory and Research in Education Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2016 ; Theory and Research in Education Volume 14 ; 14 ; >
 
     }
 
@@ -41930,7 +42274,7 @@
       au < crawling ; exists ; 2013 ; Time & Society Volume 22 ; 22 ; >
       au < crawling ; exists ; 2014 ; Time & Society Volume 23 ; 23 ; >
       au < crawling ; exists ; 2015 ; Time & Society Volume 24 ; 24 ; >
-      au < expected ; exists ; 2016 ; Time & Society Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2016 ; Time & Society Volume 25 ; 25 ; >
 
     }
 
@@ -42070,7 +42414,7 @@
       au < crawling ; exists ; 2013 ; Tourist Studies Volume 13 ; 13 ; >
       au < crawling ; exists ; 2014 ; Tourist Studies Volume 14 ; 14 ; >
       au < crawling ; exists ; 2015 ; Tourist Studies Volume 15 ; 15 ; >
-      au < expected ; exists ; 2016 ; Tourist Studies Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2016 ; Tourist Studies Volume 16 ; 16 ; >
 
     }
 
@@ -43773,18 +44117,18 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
+      #move to Duke University Press 
 
-      au < manifest ; exists ; 2006 ; World Policy Journal Volume 23 ; 23 ; >
-      au < manifest ; exists ; 2007 ; World Policy Journal Volume 24 ; 24 ; >
-      au < finished ; finished ; 2008 ; World Policy Journal Volume 25 ; 25 ; >
+      au < doNotProcess ; exists ; 2006 ; World Policy Journal Volume 23 ; 23 ; >
+      au < doNotProcess ; exists ; 2007 ; World Policy Journal Volume 24 ; 24 ; >
+      au < down ; finished ; 2008 ; World Policy Journal Volume 25 ; 25 ; >
       au < zapped ; finished ; 2009 ; World Policy Journal Volume 26 ; 26 ; >
       au < zapped ; finished ; 2010 ; World Policy Journal Volume 27 ; 27 ; >
-      au < finished ; finished ; 2011 ; World Policy Journal Volume 28 ; 28 ; >
-      au < finished ; frozen ; 2012 ; World Policy Journal Volume 29 ; 29 ; >
-      au < finished ; finished ; 2013 ; World Policy Journal Volume 30 ; 30 ; >
-      au < crawling ; exists ; 2014 ; World Policy Journal Volume 31 ; 31 ; >
-      au < crawling ; exists ; 2015 ; World Policy Journal Volume 32 ; 32 ; >
-      au < expected ; exists ; 2016 ; World Policy Journal Volume 33 ; 33 ; >
+      au < down ; finished ; 2011 ; World Policy Journal Volume 28 ; 28 ; >
+      au < down ; frozen ; 2012 ; World Policy Journal Volume 29 ; 29 ; >
+      au < down ; finished ; 2013 ; World Policy Journal Volume 30 ; 30 ; >
+      au < down ; exists ; 2014 ; World Policy Journal Volume 31 ; 31 ; >
+      au < down ; exists ; 2015 ; World Policy Journal Volume 32 ; 32 ; >
 
 
     }
@@ -44059,7 +44403,7 @@
       au < crawling ; exists ; 2013 ; Youth Justice Volume 13 ; 13 ; >
       au < finished ; crawling ; 2014 ; Youth Justice Volume 14 ; 14 ; >
       au < crawling ; exists ; 2015 ; Youth Justice Volume 15 ; 15 ; >
-      au < expected ; exists ; 2016 ; Youth Justice Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2016 ; Youth Justice Volume 16 ; 16 ; >
 
 
     }
@@ -44902,7 +45246,7 @@
       au < crawling ; exists ; 2013 ; Social Change Volume 43 ; 43 ; >
       au < crawling ; exists ; 2014 ; Social Change Volume 44 ; 44 ; >
       au < crawling ; exists ; 2015 ; Social Change Volume 45 ; 45 ; >
-      au < expected ; exists ; 2016 ; Social Change Volume 46 ; 46 ; >
+      au < manifest ; exists ; 2016 ; Social Change Volume 46 ; 46 ; >
 
     }
 
@@ -45287,7 +45631,7 @@
     au < crawling ; exists ; 2013 ; ASN NEURO Volume 5 ; 5 ; >
     au < crawling ; exists ; 2014 ; ASN NEURO Volume 6 ; 6 ; >
     au < crawling ; exists ; 2015 ; ASN NEURO Volume 7 ; 7 ; >
-    au < expected ; exists ; 2016 ; ASN NEURO Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2016 ; ASN NEURO Volume 8 ; 8 ; >
 
     }
 
@@ -46204,7 +46548,7 @@
     au < crawling ; exists ; 2013 ; World Future Review Volume 5 ; 5 ; >
     au < finished ; crawling ; 2014 ; World Future Review Volume 6 ; 6 ; >
     au < crawling ; exists ; 2015 ; World Future Review Volume 7 ; 7 ; >
-    au < expected ; exists ; 2016 ; World Future Review Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2016 ; World Future Review Volume 8 ; 8 ; >
 
     }
 
@@ -46744,23 +47088,6 @@
         au < finished ; crawling ; 2014 ; Hand Therapy Volume 19 ; 19 ; >
         au < crawling ; exists ; 2015 ; Hand Therapy Volume 20 ; 20 ; >
         au < manifest ; exists ; 2016 ; Hand Therapy Volume 21 ; 21 ; >
-
-    }
-
-    {
-
-      title <
-        name = Handbook of Practice Management ;
-        type = bookSeries ;
-        issn = 0962-144X ;
-        eissn = 2047-718X
-      >
-
-      pluginSuffix = ClockssHighWirePressH20Plugin
-      param[base_url] = http://hpm.sagepub.com/
-      implicit < status ; status2 ; year ; isbn ; name ; param[volume_name] ; hidden[proxy] >
-
-      au < exists ; exists ; 2009 ; 0-443-04576-3 ; Handbook of Practice Management Volume 71 ; 71 ; >
 
     }
 
@@ -47592,7 +47919,7 @@
 
         au < finished ; finished ; 2014 ; Post Reproductive Health Volume 20 ; 20 ; >
         au < crawling ; exists ; 2015 ; Post Reproductive Health Volume 21 ; 21 ; >
-        au < expected ; exists ; 2016 ; Post Reproductive Health Volume 22 ; 22 ; >
+        au < manifest ; exists ; 2016 ; Post Reproductive Health Volume 22 ; 22 ; >
 
     }
 
@@ -47618,7 +47945,7 @@
         au < finished ; crawling ; 2013 ; Obstetric Medicine Volume 6 ; 6 ; >
         au < finished ; finished ; 2014 ; Obstetric Medicine Volume 7 ; 7 ; >
         au < crawling ; exists ; 2015 ; Obstetric Medicine Volume 8 ; 8 ; >
-        au < expected ; exists ; 2016 ; Obstetric Medicine Volume 9 ; 9 ; >
+        au < manifest ; exists ; 2016 ; Obstetric Medicine Volume 9 ; 9 ; >
 
       }
 
@@ -47776,5 +48103,21 @@
 
     }
 
+    {
+
+      title <
+        name = Handbook of Practice Management ;
+        type = bookSeries ;
+        issn = 0962-144X ;
+        eissn = 2047-718X
+      >
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://hpm.sagepub.com/
+      implicit < status ; status2 ; year ; isbn ; name ; param[volume_name] ; hidden[proxy] >
+
+      au < exists ; exists ; 2009 ; 0-443-04576-3 ; Handbook of Practice Management Volume 71 ; 71 ; >
+
+    }
 
 }

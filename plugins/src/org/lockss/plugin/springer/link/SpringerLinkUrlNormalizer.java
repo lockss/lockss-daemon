@@ -1,10 +1,10 @@
 /*
- * $Id: ScUrlNormalizer.java 39864 2015-02-18 09:10:24Z thib_gc $
+ * $Id: $
  */
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,7 +40,7 @@ import org.lockss.util.StringUtil;
 
 /**
  */
-public class SpringerLinkUrlNormalizer implements UrlNormalizer {
+public class SpringerLinkUrlNormalizer extends HttpToHttpsUtil.BaseUrlHttpHttpsUrlNormalizer {
 
   public static final String SLASH_ENCODED = "%2F";
   public static final String SLASH = "/";
@@ -49,7 +49,8 @@ public class SpringerLinkUrlNormalizer implements UrlNormalizer {
   public static final String DOWNLOAD_URL_KEY = "download_url";
   
   @Override
-  public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
+  public String additionalNormalization(String url, ArchivalUnit au) throws PluginException {
+    
     String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
     String downloadUrl = au.getConfiguration().get(DOWNLOAD_URL_KEY);
     if(url.startsWith(baseUrl) || url.startsWith(downloadUrl)) {

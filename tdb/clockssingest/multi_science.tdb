@@ -207,11 +207,11 @@
     param[journal_id] = ijai
     # triggering
 
-    au < finished ; crawling ; 2009 ; International Journal of Aerospace Innovations Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2010 ; International Journal of Aerospace Innovations Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2011 ; International Journal of Aerospace Innovations Volume 3 ; 3 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2012 ; International Journal of Aerospace Innovations Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2013 ; International Journal of Aerospace Innovations Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2009 ; International Journal of Aerospace Innovations Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2010 ; International Journal of Aerospace Innovations Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2011 ; International Journal of Aerospace Innovations Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2012 ; International Journal of Aerospace Innovations Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; International Journal of Aerospace Innovations Volume 5 ; 5 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -254,9 +254,9 @@
     param[journal_id] = ijemf
     # triggering
 
-    au < finished ; crawling ; 2009 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2010 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2011-2012 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2009 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2010 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2011-2012 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 3 ; 3 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -271,13 +271,13 @@
     param[journal_id] = ijfc
     # triggering
 
-    au < finished ; crawling ; 2009 ; International Journal of Flow Control Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2010 ; International Journal of Flow Control Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2011 ; International Journal of Flow Control Volume 3 ; 3 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2012 ; International Journal of Flow Control Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2013 ; International Journal of Flow Control Volume 5 ; 5 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2014 ; International Journal of Flow Control Volume 6 ; 6 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2015 ; International Journal of Flow Control Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2009 ; International Journal of Flow Control Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2010 ; International Journal of Flow Control Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2011 ; International Journal of Flow Control Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2012 ; International Journal of Flow Control Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; International Journal of Flow Control Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2014 ; International Journal of Flow Control Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; International Journal of Flow Control Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     #OCLC is not up for crawling - must add later
 
   }
@@ -312,8 +312,8 @@
     param[journal_id] = ijh
     # triggering
 
-    au < finished ; crawling ; 2010 ; International Journal of Hypersonics Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2011 ; International Journal of Hypersonics Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2010 ; International Journal of Hypersonics Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2011 ; International Journal of Hypersonics Volume 2 ; 2 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -372,11 +372,11 @@
     param[journal_id] = ijmnst
     # triggering
 
-    au < finished ; crawling ; 2010 ; International Journal of Micro-Nano Scale Transport Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2011 ; International Journal of Micro-Nano Scale Transport Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2012 ; International Journal of Micro-Nano Scale Transport Volume 3 ; 3 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2013 ; International Journal of Micro-Nano Scale Transport Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2014 ; International Journal of Micro-Nano Scale Transport Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2010 ; International Journal of Micro-Nano Scale Transport Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2011 ; International Journal of Micro-Nano Scale Transport Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2012 ; International Journal of Micro-Nano Scale Transport Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; International Journal of Micro-Nano Scale Transport Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2014 ; International Journal of Micro-Nano Scale Transport Volume 5 ; 5 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -627,18 +627,18 @@
     param[journal_id] = nn
     # triggering
 
-    au < finished ; crawling ; 2002 ; Noise Notes Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2003 ; Noise Notes Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2004 ; Noise Notes Volume 3 ; 3 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2005 ; Noise Notes Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2006 ; Noise Notes Volume 5 ; 5 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2007 ; Noise Notes Volume 6 ; 6 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2008 ; Noise Notes Volume 7 ; 7 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2009 ; Noise Notes Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2010 ; Noise Notes Volume 9 ; 9 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2011 ; Noise Notes Volume 10 ; 10 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2012 ; Noise Notes Volume 11 ; 11 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2013 ; Noise Notes Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2002 ; Noise Notes Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2003 ; Noise Notes Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2004 ; Noise Notes Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2005 ; Noise Notes Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2006 ; Noise Notes Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2007 ; Noise Notes Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2008 ; Noise Notes Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2009 ; Noise Notes Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2010 ; Noise Notes Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2011 ; Noise Notes Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2012 ; Noise Notes Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Noise Notes Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Noise Notes Volume 13 ; 13 ; reingest3.clockss.org:8083 >
 
   }

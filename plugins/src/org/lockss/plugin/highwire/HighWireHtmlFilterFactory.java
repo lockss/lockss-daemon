@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,24 +39,25 @@ import org.htmlparser.*;
 import org.htmlparser.filters.*;
 import org.lockss.util.*;
 import org.lockss.filter.*;
+import org.lockss.filter.StringFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
 public class HighWireHtmlFilterFactory implements FilterFactory {
+  
   // Remove everything on the line after these comments
-  static HtmlTagFilter.TagPair[] tagpairs = {
-    new HtmlTagFilter.TagPair("<STRONG>Institution:", "</A>", true),
-    new HtmlTagFilter.TagPair("<A NAME=\"relation_type_", "</HTML>",
-                              true, false),
-    new HtmlTagFilter.TagPair("<A NAME=\"otherarticles\">", "</HTML>"),
-    new HtmlTagFilter.TagPair("<", ">"),
+  static  HtmlTagFilter.TagPair[] tagpairs = {
+      new HtmlTagFilter.TagPair("<STRONG>Institution:", "</A>", true),
+      new HtmlTagFilter.TagPair("<A NAME=\"relation_type_", "</HTML>", true, false),
+      new HtmlTagFilter.TagPair("<A NAME=\"otherarticles\">", "</HTML>"),
+      new HtmlTagFilter.TagPair("<", ">"),
   };
   static List<HtmlTagFilter.TagPair> tagList = ListUtil.fromArray(tagpairs);
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
-					       InputStream in,
-					       String encoding) {
-
+                                               InputStream in,
+                                               String encoding) {
+    
     NodeFilter[] filters = new NodeFilter[] {
         // filter head for Red Book
         HtmlNodeFilters.tag("head"),
@@ -108,21 +109,22 @@ public class HighWireHtmlFilterFactory implements FilterFactory {
         // filter ads & institution for Red Book
         HtmlNodeFilters.tagWithAttribute("div", "class", "leaderboard-ad"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
-        
     };
-
-
+    
+    
     // First filter with HtmlParser
     OrFilter orFilter = new OrFilter(filters);
-    InputStream filtered = new HtmlFilterInputStream(in,
-                                                     encoding,
-                                                     HtmlNodeFilterTransform.exclude(orFilter));
-
+    InputStream filtered = 
+        new HtmlFilterInputStream(in,
+            encoding,
+            HtmlNodeFilterTransform.exclude(orFilter));
+    
     // Then filter with HighWireFilterRule
     Reader rdr = FilterUtil.getReader(filtered, encoding);
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(rdr, tagList);
-    return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
+    Reader httpFilter = new StringFilter(tagFilter, "http:", "https:");
+    return new ReaderInputStream(new WhiteSpaceFilter(httpFilter));
   }
-
+  
 }
 

@@ -1,10 +1,10 @@
 /*
- * $Id: OaiPmhHtmlCrawlFilterFactory.java,v 1.1.2.1 2014/05/05 17:32:29 wkwilson Exp $
+ * $Id: $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,16 +42,11 @@ import org.lockss.plugin.*;
 
 
 public class SpringerLinkHtmlCrawlFilterFactory implements FilterFactory {
-
-  @Override
-  public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {      
+  
+  private static final NodeFilter[] filters = new NodeFilter[] {
       //footer
       HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
-
+      
       //adds on the side
       HtmlNodeFilters.tagWithAttribute("div", "class", "banner-advert"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "doubleclick-ad"),
@@ -65,7 +60,14 @@ public class SpringerLinkHtmlCrawlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "class", "col-aside"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "document-aside"),
       
-    };
+  };
+  
+  @Override
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+                                               InputStream in,
+                                               String encoding)
+      throws PluginException {
+    
     return new HtmlFilterInputStream(in,
                                      encoding,
                                      HtmlNodeFilterTransform.exclude(new OrFilter(filters)));

@@ -74,7 +74,7 @@
       param[base_url] = https://periodicos.unifap.br/
 
       au < exists ; 2011 ; 1 ; Estação Científica Volume 1 ; 2011 ; >
-      au < exists ; 2012 ; 2 ; Estação Científica Volume 2 ; 2012 ; >
+      au < manifest ; 2012 ; 2 ; Estação Científica Volume 2 ; 2012 ; >
       au < exists ; 2013 ; 3 ; Estação Científica Volume 3 ; 2013 ; >
       au < notReady ; 2014 ; 4 ; Estação Científica Volume 4 ; 2014 ; no substance > 
       au < exists ; 2015 ; 5 ; Estação Científica Volume 5 ; 2015 ; > 
@@ -135,7 +135,7 @@
       au < exists ; 2011 ; 3 ; Planeta Amazônia Volume 3 ; 2011 ; >
       au < exists ; 2012 ; 4 ; Planeta Amazônia Volume 4 ; 2012 ; >
       au < exists ; 2013 ; 5 ; Planeta Amazônia Volume 5 ; 2013 ; >
-      au < exists ; 2014 ; 6 ; Planeta Amazônia Volume 6 ; 2014 ; >
+      au < manifest ; 2014 ; 6 ; Planeta Amazônia Volume 6 ; 2014 ; >
       au < expected ; 2015 ; 7 ; Planeta Amazônia Volume 7 ; 2015 ; >
     }
     {

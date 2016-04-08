@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -50,13 +50,16 @@ public class TestHighWirePressH20CrawlSeedFactory extends LockssTestCase {
   
   protected MockLockssDaemon theDaemon;
   protected MockArchivalUnit mau = null;
+  protected MockArchivalUnit oup_mau = null;
   protected MockAuState aus = new MockAuState();
   protected MockCrawlRule crawlRule = null;
   protected String permissionUrl = "http://www.example.com/permission.html";
   protected List<String> permissionUrls;
+  protected String startUrl = "http://www.example.com/lockss-manifest/vol_20_manifest.dtl";
+  protected List<String> startUrls;
   protected MockLinkExtractor extractor = new MockLinkExtractor();
   protected HighWirePressH20CrawlSeedFactory csf;
-  protected CrawlSeed cs;
+  protected CrawlSeed cs, oup_cs;
   protected MockServiceProvider msp;
   protected Configuration config;
   protected DateFormat df;
@@ -64,14 +67,18 @@ public class TestHighWirePressH20CrawlSeedFactory extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     
-
     theDaemon = getMockLockssDaemon();
-
     mau = new MockArchivalUnit();
     mau.setPlugin(new MockPlugin(theDaemon));
     mau.setAuId("MyMockTestAu");
     permissionUrls = ListUtil.list(permissionUrl);
-    mau.setPermissionUrls(permissionUrls);    
+    startUrls = ListUtil.list(startUrl);
+    mau.setPermissionUrls(permissionUrls);
+    mau.setStartUrls(startUrls);
+    
+    oup_mau = new MockArchivalUnit();
+    oup_mau.setPlugin(new MockPlugin(theDaemon));
+    oup_mau.setAuId("MyMockTestAu");
     
     config = ConfigManager.newConfiguration();
     config.put(ConfigParamDescr.YEAR.getKey(), "1988");
@@ -79,6 +86,9 @@ public class TestHighWirePressH20CrawlSeedFactory extends LockssTestCase {
     mau.setConfiguration(config);
     csf = new HighWirePressH20CrawlSeedFactory();
     cs = csf.createCrawlSeed(new MockCrawler().new MockCrawlerFacade(mau));
+    config.put(ConfigParamDescr.BASE_URL.getKey(), "http://www.oxfordjournals.org/");
+    oup_mau.setConfiguration(config);
+    oup_cs = csf.createCrawlSeed(new MockCrawler().new MockCrawlerFacade(oup_mau));
   }
   
   public void testNullAu() throws PluginException, ConfigurationException {
@@ -92,6 +102,7 @@ public class TestHighWirePressH20CrawlSeedFactory extends LockssTestCase {
   public void testBadPermissionUrlListThrows() 
       throws ConfigurationException, PluginException, IOException {
     
+    mau.setStartUrls(null);
     mau.setPermissionUrls(null);
     try {
       cs.getPermissionUrls();
@@ -112,6 +123,19 @@ public class TestHighWirePressH20CrawlSeedFactory extends LockssTestCase {
   public void testPermissionUrl() 
       throws ConfigurationException, PluginException, IOException {
     assertEquals(permissionUrls, cs.getPermissionUrls());
+  }
+  
+  public void testStartUrl() 
+      throws ConfigurationException, PluginException, IOException {
+    assertEquals(startUrls, cs.getStartUrls());
+  }
+  
+  public void testOupStartUrl() 
+      throws ConfigurationException, PluginException, IOException {
+    List<String> startUrls = ListUtil.list("http://www.oxfordjournals.org/lockss-manifest/vol_20_manifest.dtl", 
+                                          "https://www.oxfordjournals.org/lockss-manifest/vol_20_manifest.dtl");
+    oup_mau.setStartUrls(ListUtil.list("http://www.oxfordjournals.org/lockss-manifest/vol_20_manifest.dtl"));
+    assertEquals(startUrls, oup_cs.getStartUrls());
   }
   
   public void testIsFailOnStartUrl() {

@@ -8,7 +8,7 @@
   >
 
   plugin = org.lockss.plugin.springer.link.ClockssSpringerLinkBooksPlugin
-  param[base_url] = http://link.springer.com/
+  param[base_url] = https://link.springer.com/
   param[download_url] = http://download.springer.com/
   implicit < status ; status2 ; year ; isbn ; eisbn ;  name ; param[book_eisbn] ; hidden[proxy] >
 

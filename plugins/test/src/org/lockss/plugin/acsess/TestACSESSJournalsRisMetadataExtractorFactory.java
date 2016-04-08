@@ -134,7 +134,7 @@ public class TestACSESSJournalsRisMetadataExtractorFactory extends LockssTestCas
     sb.append("\nAB  - " + goodAbstract);
     sb.append("\nVL  - " + goodVolume);
     sb.append("\nM1  - " + goodIssue);
-    sb.append("\nER  -");
+    sb.append("\nER  - ");
     return sb.toString();
   }
       

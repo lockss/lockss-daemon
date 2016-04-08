@@ -44,6 +44,7 @@ public class TestSpringerLinkHtmlHashFilterFactory extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     fact = new SpringerLinkHtmlHashFilterFactory();
+    mau = new MockArchivalUnit();
   }
   
   private static final String withWhiteSpace =
@@ -53,7 +54,43 @@ public class TestSpringerLinkHtmlHashFilterFactory extends LockssTestCase {
   private static final String withoutWhiteSpace =
       " ";
   
-  
+  // this tests <head>, <input>, <script>, <noscript>, <input>
+  //      <div id="footer">, <div id="doubleclick">, <div id="header">, <div id="crossMark"
+  //      <link rel="stylesheet"
+  //      <!-- html comments --> , <button id="chat-widget">
+  private static final String withCrossMark =
+      "<head></head>" +
+      "<div id=\"footer\">hello world</div>" +
+      "<noscript>hello world</noscript>" +
+      "<script src=\"/static/js/test/test_v3.js\"></script>" +
+      "<div id=\"doubleclick-ad\" class=\"banner-advert\">foo bar</div>" +
+      "<div id=\"header\" role=\"banner\">refrigerator</div>" +
+      "<link rel=\"stylesheet\" media=\"print\" href=\"/static/201602081740-1149/css/print.css\"/>" +
+      "<div id=\"content\">" +
+      "<input id=\"leafContentType\" type=\"hidden\" value=\"Article\"/>" +
+      "<div id=\"crossMark\" class=\"fulltext\">" +
+      "  <a id=\"open-crossmark\" target=\"_blank\" href=\"https://crossmark.crossref.org/dialog/?doi=10.1007%2Fs00360-014-0804-5\" style=\"padding: 3px 0 13px 0;\"><img style=\"border: 0;\" id=\"crossmark-icon\" src=\"https://crossmark.crossref.org/images/crossmark_button.png\" /></a>" +
+      "</div> " +
+      "<!-- html comment -->" +
+      "<button id=\"chat-widget\">Chatty Button</button>" +
+      "<!--[if !(IE 8)]><!-->" +
+      "</div> ";
+  private static final String withoutCrossMark =
+      "<div id=\"content\">" +
+      " </div> ";
+  private static final String withBodyAttr =
+      "<body id=\"something\" class=\"company rd\" data-name=\"rd\">" +
+      "<button id=\"chat-widget\">Chatty Button</button>" +
+      "<div class=\"banner\">" +
+      "<div class=\"banner-content \">" +
+      "<p class=\"banner-content__message\">this is new.</p>" +
+      "<a class=\"banner-content__link\" href=\"https://link\" title=\"Visit me\">Lookit!</a>" +
+      "</div>" +
+      "</div>" +
+      "</body>";
+  private static final String withoutBodyAttr =
+      "<body id=\"something\" >" +
+      "</body>";
   
   /*
    *  Compare Html and HtmlHashFiltered
@@ -61,7 +98,31 @@ public class TestSpringerLinkHtmlHashFilterFactory extends LockssTestCase {
   public void testWhiteSpace() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withWhiteSpace), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutWhiteSpace, StringUtil.fromInputStream(actIn));
+    String str = StringUtil.fromInputStream(actIn);
+    assertEquals(withoutWhiteSpace, str);
   }
   
+  /*
+   * Compare with/without crossMark plus a whole bunch of other filters
+   */
+
+  public void testCrossMark() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withCrossMark), Constants.DEFAULT_ENCODING);
+    String str = StringUtil.fromInputStream(actIn);
+
+    assertEquals(withoutCrossMark, str);
+    
+  }
+  
+  /* 
+   * Compare with/without the body attributes
+   */
+  public void testBodyAttrs() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withBodyAttr), Constants.DEFAULT_ENCODING);
+    String str = StringUtil.fromInputStream(actIn);
+System.out.println(withBodyAttr);
+    assertEquals(withoutBodyAttr, str);
+  }
 }

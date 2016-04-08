@@ -137,7 +137,7 @@ public class TestPalgraveBookRisMetadataExtractorFactory extends LockssTestCase 
     sb.append(goodDoi);
     sb.append("\nL1  - ");
     sb.append(goodAccessUrl);
-    sb.append("\nER  -");
+    sb.append("\nER  - ");
     return sb.toString();
   }
       

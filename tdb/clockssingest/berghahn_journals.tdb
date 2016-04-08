@@ -137,33 +137,6 @@
   {
   
     title <
-      name = Boyhood Studies ;
-      issn = 2375-9240 ;
-      eissn = 2375-9267 ;
-      issnl = 2375-9240
-    > 
-
-    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
-    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
-
-    param[base_url] = http://berghahnonline.com/ojs/
-    param[journal_id] = bhs
-       
-    au < exists ; exists ; 2007 ; Boyhood Studies Volume 1 ; 1 ; 2007 ; >
-    au < exists ; exists ; 2008 ; Boyhood Studies Volume 2 ; 2 ; 2008 ; >
-    au < exists ; exists ; 2009 ; Boyhood Studies Volume 3 ; 3 ; 2009 ; >
-    au < exists ; exists ; 2010 ; Boyhood Studies Volume 4 ; 4 ; 2010 ; >
-    au < exists ; exists ; 2011 ; Boyhood Studies Volume 5 ; 5 ; 2011 ; >
-    au < exists ; exists ; 2012 ; Boyhood Studies Volume 6 ; 6 ; 2012 ; >
-    au < exists ; exists ; 2013 ; Boyhood Studies Volume 7 ; 7 ; 2013 ; >
-    au < exists ; exists ; 2015 ; Boyhood Studies Volume 8 ; 8 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Boyhood Studies Volume 9 ; 9 ; 2016 ; >
-    
-  }
-
-  {
-  
-    title <
       name = The Cambridge Journal of Anthropology ;
       issn = 0305-7674 ;
       eissn = 2047-7716 ;
@@ -215,27 +188,58 @@
     >  
          
     param[journal_id] = csurv
-    param[journal_issn] = 0011-1570
-          
-    au < manifest ; exists ; 1997 ; Critical Survey Volume 9 ; 9 ; >
-    au < manifest ; exists ; 1998 ; Critical Survey Volume 10 ; 10 ; >
-    au < manifest ; exists ; 1999 ; Critical Survey Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2000 ; Critical Survey Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2001 ; Critical Survey Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2002 ; Critical Survey Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2003 ; Critical Survey Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2004 ; Critical Survey Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2005 ; Critical Survey Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2006 ; Critical Survey Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2007 ; Critical Survey Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2008 ; Critical Survey Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2009 ; Critical Survey Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2010 ; Critical Survey Volume 22 ; 22 ; >
-    au < deepCrawl ; exists ; 2011 ; Critical Survey Volume 23 ; 23 ; >
-    au < finished ; finished ; 2012 ; Critical Survey Volume 24 ; 24 ; >
-    au < deepCrawl ; exists ; 2013 ; Critical Survey Volume 25 ; 25 ; >
-    au < deepCrawl ; exists ; 2014 ; Critical Survey Volume 26 ; 26 ; >
-    au < deepCrawl ; exists ; 2015 ; Critical Survey Volume 27 ; 27 ; >
+    
+    {
+      param[journal_issn] = 0011-1570
+            
+      au < doNotProcess ; doNotProcess ; 1997 ; Critical Survey Volume 9 ; 9 ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; Critical Survey Volume 10 ; 10 ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; Critical Survey Volume 11 ; 11 ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; Critical Survey Volume 12 ; 12 ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; Critical Survey Volume 13 ; 13 ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; Critical Survey Volume 14 ; 14 ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; Critical Survey Volume 15 ; 15 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; Critical Survey Volume 16 ; 16 ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; Critical Survey Volume 17 ; 17 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; Critical Survey Volume 18 ; 18 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; Critical Survey Volume 19 ; 19 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; Critical Survey Volume 20 ; 20 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Critical Survey Volume 21 ; 21 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; Critical Survey Volume 22 ; 22 ; >
+      au < deepCrawl ; exists ; 2011 ; Critical Survey Volume 23 [superseded] ; 23 ; >
+      au < finished ; finished ; 2012 ; Critical Survey Volume 24 [superseded] ; 24 ; >
+      au < deepCrawl ; exists ; 2013 ; Critical Survey Volume 25 [superseded] ; 25 ; >
+      au < deepCrawl ; exists ; 2014 ; Critical Survey Volume 26 [superseded] ; 26 ; >
+      au < deepCrawl ; exists ; 2015 ; Critical Survey Volume 27 [superseded] ; 27 ; >
+    
+    }
+    
+    {
+    
+      #they moved to eissn just before going offline
+      param[journal_issn] = 1752-2293
+            
+      au < manifest ; exists ; 1997 ; Critical Survey Volume 9 ; 9 ; >
+      au < manifest ; exists ; 1998 ; Critical Survey Volume 10 ; 10 ; >
+      au < manifest ; exists ; 1999 ; Critical Survey Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2000 ; Critical Survey Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2001 ; Critical Survey Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2002 ; Critical Survey Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2003 ; Critical Survey Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2004 ; Critical Survey Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2005 ; Critical Survey Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2006 ; Critical Survey Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2007 ; Critical Survey Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2008 ; Critical Survey Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2009 ; Critical Survey Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2010 ; Critical Survey Volume 22 ; 22 ; >
+      au < frozen ; exists ; 2011 ; Critical Survey Volume 23 ; 23 ; >
+      au < frozen ; exists ; 2012 ; Critical Survey Volume 24 ; 24 ; >
+      au < frozen ; exists ; 2013 ; Critical Survey Volume 25 ; 25 ; >
+      au < frozen ; exists ; 2014 ; Critical Survey Volume 26 ; 26 ; >
+      au < frozen ; exists ; 2015 ; Critical Survey Volume 27 ; 27 ; >    
+      
+    }
     
   }
 

@@ -129,7 +129,7 @@
       param[base_url] = http://cl.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 2003 ; Contemporary Literature Volume 44 ; 44 >
+      au < released ; 2003 ; Contemporary Literature Volume 44 ; 44 >
       au < released ; 2004 ; Contemporary Literature Volume 45 ; 45 >
       au < released ; 2005 ; Contemporary Literature Volume 46 ; 46 >
       au < released ; 2006 ; Contemporary Literature Volume 47 ; 47 >
@@ -200,16 +200,16 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 1981-1983 ; Ecological Restoration Volume 1 ; 1 >
-      au < ready ; 1984 ; Ecological Restoration Volume 2 ; 2 >
+      au < released ; 1984 ; Ecological Restoration Volume 2 ; 2 >
       au < released ; 1985 ; Ecological Restoration Volume 3 ; 3 >
       au < released ; 1986 ; Ecological Restoration Volume 4 ; 4 >
       au < released ; 1987 ; Ecological Restoration Volume 5 ; 5 >
       au < released ; 1988 ; Ecological Restoration Volume 6 ; 6 >
       au < released ; 1989 ; Ecological Restoration Volume 7 ; 7 >
-      au < ready ; 1990 ; Ecological Restoration Volume 8 ; 8 >
+      au < released ; 1990 ; Ecological Restoration Volume 8 ; 8 >
       au < released ; 1991 ; Ecological Restoration Volume 9 ; 9 >
       au < released ; 1992 ; Ecological Restoration Volume 10 ; 10 >
-      au < ready ; 1993 ; Ecological Restoration Volume 11 ; 11 >
+      au < released ; 1993 ; Ecological Restoration Volume 11 ; 11 >
       au < released ; 1994 ; Ecological Restoration Volume 12 ; 12 >
       au < released ; 1995 ; Ecological Restoration Volume 13 ; 13 >
       au < released ; 1996 ; Ecological Restoration Volume 14 ; 14 >
@@ -260,7 +260,7 @@
 
         au < released ; 2014 ; Ecological Restoration Volume 32 [Project MUSE] ; 32 >
         au < released ; 2015 ; Ecological Restoration Volume 33 [Project MUSE] ; 33 >
-        au < exists ; 2016 ; Ecological Restoration Volume 34 [Project MUSE] ; 34 >
+        au < manifest ; 2016 ; Ecological Restoration Volume 34 [Project MUSE] ; 34 >
 
       }
 
@@ -359,7 +359,7 @@
 
         au < released ; 2014 ; The Journal of Human Resources Volume 49 [Project MUSE] ; 49 >
         au < released ; 2015 ; The Journal of Human Resources Volume 50 [Project MUSE] ; 50 >
-        au < exists ; 2016 ; The Journal of Human Resources Volume 51 [Project MUSE] ; 51 >
+        au < manifest ; 2016 ; The Journal of Human Resources Volume 51 [Project MUSE] ; 51 >
 
       }
 
@@ -383,7 +383,7 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 2001 ; Land Economics Volume 77 ; 77 >
-      au < ready ; 2002 ; Land Economics Volume 78 ; 78 >
+      au < released ; 2002 ; Land Economics Volume 78 ; 78 >
       au < released ; 2003 ; Land Economics Volume 79 ; 79 >
       au < released ; 2004 ; Land Economics Volume 80 ; 80 >
       au < released ; 2005 ; Land Economics Volume 81 ; 81 >
@@ -619,7 +619,7 @@
       au < released ; 2013 ; Monatshefte Volume 105 ; 105 >
       au < released ; 2014 ; Monatshefte Volume 106 ; 106 >
       au < released ; 2015 ; Monatshefte Volume 107 ; 107 >
-      au < expected ; 2016 ; Monatshefte Volume 108 ; 108 >
+      au < manifest ; 2016 ; Monatshefte Volume 108 ; 108 >
 
     }
 
@@ -650,7 +650,7 @@
 
         au < released ; 2014 ; Monatshefte Volume 106 [Project MUSE] ; 106 >
         au < released ; 2015 ; Monatshefte Volume 107 [Project MUSE] ; 107 >
-        au < expected ; 2016 ; Monatshefte Volume 108 [Project MUSE] ; 108 >
+        au < manifest ; 2016 ; Monatshefte Volume 108 [Project MUSE] ; 108 >
 
       }
 
@@ -760,7 +760,7 @@
       au < released ; 2013 ; SubStance Volume 42 ; 42 >
       au < released ; 2014 ; SubStance Volume 43 ; 43 >
       au < released ; 2015 ; SubStance Volume 44 ; 44 >
-      au < expected ; 2016 ; SubStance Volume 45 ; 45 >
+      au < manifest ; 2016 ; SubStance Volume 45 ; 45 >
 
     }
 
@@ -799,7 +799,7 @@
 
         au < released ; 2014 ; SubStance Volume 43 [Project MUSE] ; 43 >
         au < released ; 2015 ; SubStance Volume 44 [Project MUSE] ; 44 >
-        au < expected ; 2016 ; SubStance Volume 45 [Project MUSE] ; 45 >
+        au < manifest ; 2016 ; SubStance Volume 45 [Project MUSE] ; 45 >
 
       }
 

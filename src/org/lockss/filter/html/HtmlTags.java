@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,396 +37,232 @@ import org.htmlparser.tags.*;
 /**
  * Collection of additional simple HtmlParser tags.
  * @see HtmlFilterInputStream#makeParser()
+ * @see HtmlFilterInputStream#registerTag(org.htmlparser.Tag)
  */
 public class HtmlTags {
 
   /**
-   * A header tag.  Can be registered with registerTag() to cause header
-   * to be a CompositeTag.  See code samples in org.htmlparser.tags.
-   * @since 1.64
+   * The ARTICLE tag (HTML5).
+   * @since 1.69 
    */
-  public static class Header extends CompositeTag {
-    
-    /**
-     * The set of names handled by this tag.
-     */
-    private static final String[] mIds = new String[] {"header"};
-    
-    /**
-     * Return the set of names handled by this tag.
-     * @return The names to be matched that create tags of this type.
-     */
-    public String[] getIds() {
-      return mIds;
-    }
-    
+  public static class Article extends CompositeTag {
+    private static final String[] mIds = new String[] {"ARTICLE"};
+    public String[] getIds() { return mIds; }
   }
-  
+
   /**
-   * A footer tag.  Can be registered with registerTag() to cause footer
-   * to be a CompositeTag.  See code samples in org.htmlparser.tags.
-   * @since 1.64
-   */
-  public static class Footer extends CompositeTag {
-    
-    /**
-     * The set of names handled by this tag.
-     */
-    private static final String[] mIds = new String[] {"footer"};
-    
-    /**
-     * Return the set of names handled by this tag.
-     * @return The names to be matched that create tags of this type.
-     */
-    public String[] getIds() {
-      return mIds;
-    }
-    
-  }
-  
-  /**
-   * A section tag.  Can be registered with registerTag() to cause section
-   * to be a CompositeTag.  See code samples in org.htmlparser.tags.
-   * @since 1.64
-   */
-  public static class Section extends CompositeTag {
-    
-    /**
-     * The set of names handled by this tag.
-     */
-    private static final String[] mIds = new String[] {"section"};
-    
-    /**
-     * Return the set of names handled by this tag.
-     * @return The names to be matched that create tags of this type.
-     */
-    public String[] getIds() {
-      return mIds;
-    }
-    
-  }
-  
-  /**
-   * An aside tag.  Can be registered with registerTag() to cause section
-   * to be a CompositeTag.  See code samples in org.htmlparser.tags.
+   * The ASIDE tag (HTML5).
    * @since 1.64
    */
   public static class Aside extends CompositeTag {
-    
-    /**
-     * The set of names handled by this tag.
-     */
     private static final String[] mIds = new String[] {"aside"};
-    
-    /**
-     * Return the set of names handled by this tag.
-     * @return The names to be matched that create tags of this type.
-     */
-    public String[] getIds() {
-      return mIds;
-    }
-    
+    public String[] getIds() { return mIds; }
   }
   
   /**
-   * A datalist tag.  Can be registered with registerTag() to cause datalist
-   * to be a CompositeTag.
-   * @since 1.66
+   * The AUDIO tag (HTML5).
+   * @since 1.70
    */
-  public static class Datalist extends CompositeTag {
-    
-    /**
-     * The set of names handled by this tag.
-     */
-    private static final String[] mIds = new String[] {"datalist"};
-    
-    /**
-     * Return the set of names handled by this tag.
-     * @return The names to be matched that create tags of this type.
-     */
-    public String[] getIds() {
-      return mIds;
-    }
-    
+  public static class Audio extends CompositeTag {
+    private static final String[] mIds = new String[] {"audio"};
+    public String[] getIds() { return mIds; }
   }
   
   /**
-   * A details tag.  Can be registered with registerTag() to cause details
-   * to be a CompositeTag.
-   * @since 1.66
+   * The BUTTON tag.
+   * @since 1.70 
    */
-  public static class Details extends CompositeTag {
-    
-    /**
-     * The set of names handled by this tag.
-     */
-    private static final String[] mIds = new String[] {"details"};
-    
-    /**
-     * Return the set of names handled by this tag.
-     * @return The names to be matched that create tags of this type.
-     */
-    public String[] getIds() {
-      return mIds;
-    }
-    
-  }
-  
-  /**
-   * A dialog tag.  Can be registered with registerTag() to cause dialog
-   * to be a CompositeTag.
-   * @since 1.66
-   */
-  public static class Dialog extends CompositeTag {
-    
-    /**
-     * The set of names handled by this tag.
-     */
-    private static final String[] mIds = new String[] {"dialog"};
-    
-    /**
-     * Return the set of names handled by this tag.
-     * @return The names to be matched that create tags of this type.
-     */
-    public String[] getIds() {
-      return mIds;
-    }
-    
-  }
-  
-  /**
-   * A menu tag.  Can be registered with registerTag() to cause menu
-   * to be a CompositeTag.
-   * @since 1.66
-   */
-  public static class Menu extends CompositeTag {
-    
-    /**
-     * The set of names handled by this tag.
-     */
-    private static final String[] mIds = new String[] {"menu"};
-    
-    /**
-     * Return the set of names handled by this tag.
-     * @return The names to be matched that create tags of this type.
-     */
-    public String[] getIds() {
-      return mIds;
-    }
-    
-  }
-  
-  /**
-   * A menuitem tag.  Can be registered with registerTag() to cause menuitem
-   * to be a CompositeTag.
-   * @since 1.66
-   */
-  public static class Menuitem extends CompositeTag {
-    
-    /**
-     * The set of names handled by this tag.
-     */
-    private static final String[] mIds = new String[] {"menuitem"};
-    
-    /**
-     * Return the set of names handled by this tag.
-     * @return The names to be matched that create tags of this type.
-     */
-    public String[] getIds() {
-      return mIds;
-    }
-    
-  }
-  
-  /**
-   * A meter tag.  Can be registered with registerTag() to cause meter
-   * to be a CompositeTag.
-   * @since 1.66
-   */
-  public static class Meter extends CompositeTag {
-    
-    /**
-     * The set of names handled by this tag.
-     */
-    private static final String[] mIds = new String[] {"meter"};
-    
-    /**
-     * Return the set of names handled by this tag.
-     * @return The names to be matched that create tags of this type.
-     */
-    public String[] getIds() {
-      return mIds;
-    }
-    
-  }
-  
-  /**
-   * A nav tag.  Can be registered with registerTag() to cause nav
-   * to be a CompositeTag.
-   * @since 1.66
-   */
-  public static class Nav extends CompositeTag {
-    
-    /**
-     * The set of names handled by this tag.
-     */
-    private static final String[] mIds = new String[] {"nav"};
-    
-    /**
-     * Return the set of names handled by this tag.
-     * @return The names to be matched that create tags of this type.
-     */
-    public String[] getIds() {
-      return mIds;
-    }
-    
-  }
-  
-  /**
-   * A progress tag.  Can be registered with registerTag() to cause progress
-   * to be a CompositeTag.
-   * @since 1.66
-   */
-  public static class Progress extends CompositeTag {
-    
-    /**
-     * The set of names handled by this tag.
-     */
-    private static final String[] mIds = new String[] {"progress"};
-    
-    /**
-     * Return the set of names handled by this tag.
-     * @return The names to be matched that create tags of this type.
-     */
-    public String[] getIds() {
-      return mIds;
-    }
-    
-  }
-  
-  /**
-   * A summary tag.  Can be registered with registerTag() to cause summary
-   * to be a CompositeTag.
-   * @since 1.66
-   */
-  public static class Summary extends CompositeTag {
-    
-    /**
-     * The set of names handled by this tag.
-     */
-    private static final String[] mIds = new String[] {"summary"};
-    
-    /**
-     * Return the set of names handled by this tag.
-     * @return The names to be matched that create tags of this type.
-     */
-    public String[] getIds() {
-      return mIds;
-    }
-    
-  }
-  
-  /**
-   * A time tag.  Can be registered with registerTag() to cause time
-   * to be a CompositeTag.
-   * @since 1.66
-   */
-  public static class Time extends CompositeTag {
-    
-    /**
-     * The set of names handled by this tag.
-     */
-    private static final String[] mIds = new String[] {"time"};
-    
-    /**
-     * Return the set of names handled by this tag.
-     * @return The names to be matched that create tags of this type.
-     */
-    public String[] getIds() {
-      return mIds;
-    }
-    
-  }
-  
-  /**
-   * An IFRAME tag.  Registered with PrototypicalNodeFactory to cause iframe
-   * to be a CompositeTag.  See code samples in org.htmlparser.tags.
-   * @see HtmlFilterInputStream#makeParser()
-   */
-  public static class Iframe extends CompositeTag {
-
-    /**
-     * The set of names handled by this tag.
-     */
-    private static final String[] mIds = new String[] {"IFRAME"};
-
-    /**
-     * Return the set of names handled by this tag.
-     * @return The names to be matched that create tags of this type.
-     */
-    public String[] getIds() {
-      return mIds;
-    }
-
+  public static class Button extends CompositeTag {
+    private static final String[] mIds = new String[] {"button"};
+    public String[] getIds() { return mIds; }
   }
 
   /**
+   * The CANVAS tag (HTML5).
+   * @since 1.70
+   */
+  public static class Canvas extends CompositeTag {
+    private static final String[] mIds = new String[] {"canvas"};
+    public String[] getIds() { return mIds; }
+  }
+  
+  /**
+   * The CENTER tag.
    * @since 1.67.4 
    */
   public static class Center extends CompositeTag {
-
     private static final String[] mIds = new String[] {"CENTER"};
-
-    public String[] getIds() {
-      return mIds;
-    }
-
+    public String[] getIds() { return mIds; }
   }
 
   /**
-   * A NOSCRIPT tag.  Registered with PrototypicalNodeFactory to cause noscript
-   * to be a CompositeTag.  See code samples in org.htmlparser.tags.
-   * @see HtmlFilterInputStream#makeParser()
+   * The DATALIST tag (HTML5).
+   * @since 1.66
    */
-  public static class Noscript extends CompositeTag {
-
-    /**
-     * The set of names handled by this tag.
-     */
-    private static final String[] mIds = new String[] {"NOSCRIPT"};
-
-    /**
-     * Return the set of names handled by this tag.
-     * @return The names to be matched that create tags of this type.
-     */
-    public String[] getIds() {
-      return mIds;
-    }
-
+  public static class DataList extends CompositeTag {
+    private static final String[] mIds = new String[] {"datalist"};
+    public String[] getIds() { return mIds; }
   }
-
+  
   /**
-   * A FONT tag.  Registered with PrototypicalNodeFactory to cause iframe
-   * to be a CompositeTag.  See code samples in org.htmlparser.tags.
-   * @see HtmlFilterInputStream#makeParser()
+   * The DETAILS tag (HTML5).
+   * @since 1.66
+   */
+  public static class Details extends CompositeTag {
+    private static final String[] mIds = new String[] {"details"};
+    public String[] getIds() { return mIds; }
+  }
+  
+  /**
+   * The DIALOG tag (HTML5).
+   * @since 1.66
+   */
+  public static class Dialog extends CompositeTag {
+    private static final String[] mIds = new String[] {"dialog"};
+    public String[] getIds() { return mIds; }
+  }
+  
+  /**
+   * The FIGCAPTION tag (HTML5).
+   * @since 1.70
+   */
+  public static class FigCaption extends CompositeTag {
+    private static final String[] mIds = new String[] {"figcaption"};
+    public String[] getIds() { return mIds; }
+  }
+  
+  /**
+   * The FIGURE tag (HTML5).
+   * @since 1.70
+   */
+  public static class Figure extends CompositeTag {
+    private static final String[] mIds = new String[] {"figure"};
+    public String[] getIds() { return mIds; }
+  }
+  
+  /**
+   * The FONT tag.
    */
   public static class Font extends CompositeTag {
-
-    /**
-     * The set of names handled by this tag.
-     */
     private static final String[] mIds = new String[] {"FONT"};
-
-    /**
-     * Return the set of names handled by this tag.
-     * @return The names to be matched that create tags of this type.
-     */
-    public String[] getIds() {
-      return mIds;
-    }
-
+    public String[] getIds() { return mIds; }
   }
 
+  /**
+   * The FOOTER tag (HTML5).
+   * @since 1.64
+   */
+  public static class Footer extends CompositeTag {
+    private static final String[] mIds = new String[] {"footer"};
+    public String[] getIds() { return mIds; }
+  }
+  
+  /**
+   * The HEADER tag (HTML5).
+   * @since 1.64
+   */
+  public static class Header extends CompositeTag {
+    private static final String[] mIds = new String[] {"header"};
+    public String[] getIds() { return mIds; }
+  }
+  
+  /**
+   * The IFRAME tag.
+   */
+  public static class Iframe extends CompositeTag {
+    private static final String[] mIds = new String[] {"IFRAME"};
+    public String[] getIds() { return mIds; }
+  }
+
+  /**
+   * The MAIN tag (HTML5).
+   * @since 1.70
+   */
+  public static class Main extends CompositeTag {
+    private static final String[] mIds = new String[] {"main"};
+    public String[] getIds() { return mIds; }
+  }
+  
+  /**
+   * The MARK tag (HTML5).
+   * @since 1.70
+   */
+  public static class Mark extends CompositeTag {
+    private static final String[] mIds = new String[] {"mark"};
+    public String[] getIds() { return mIds; }
+  }
+  
+  /**
+   * The MENU tag (HTML5).
+   * @since 1.66
+   */
+  public static class Menu extends CompositeTag {
+    private static final String[] mIds = new String[] {"menu"};
+    public String[] getIds() { return mIds; }
+  }
+  
+  /**
+   * The MENUITEM tag (HTML5).
+   * @since 1.66
+   */
+  public static class MenuItem extends CompositeTag {
+    private static final String[] mIds = new String[] {"menuitem"};
+    public String[] getIds() { return mIds; }
+  }
+  
+  /**
+   * The METER tag (HTML5).
+   * @since 1.66
+   */
+  public static class Meter extends CompositeTag {
+    private static final String[] mIds = new String[] {"meter"};
+    public String[] getIds() { return mIds; }
+  }
+  
+  /**
+   * The NAV tag (HTML5).
+   * @since 1.66
+   */
+  public static class Nav extends CompositeTag {
+    private static final String[] mIds = new String[] {"nav"};
+    public String[] getIds() { return mIds; }
+  }
+  
+  /**
+   * The NOSCRIPT tag.
+   */
+  public static class NoScript extends CompositeTag {
+    private static final String[] mIds = new String[] {"NOSCRIPT"};
+    public String[] getIds() { return mIds; }
+  }
+
+  /**
+   * The PROGRESS tag (HTML5).
+   * @since 1.66
+   */
+  public static class Progress extends CompositeTag {
+    private static final String[] mIds = new String[] {"progress"};
+    public String[] getIds() { return mIds; }
+  }
+  
+  /**
+   * The SECTION tag (HTML5).
+   * @since 1.64
+   */
+  public static class Section extends CompositeTag {
+    private static final String[] mIds = new String[] {"section"};
+    public String[] getIds() { return mIds; }
+  }
+  
+  /**
+   * The SUMMARY tag (HTML5)
+   * @since 1.66
+   */
+  public static class Summary extends CompositeTag {
+    private static final String[] mIds = new String[] {"summary"};
+    public String[] getIds() { return mIds; }
+  }
+  
   /** Overridden to add TR as an additional ender.  */
   public static class MyTableRow extends TableRow {
     /**
@@ -464,26 +300,21 @@ public class HtmlTags {
   }
 
   /**
-   * @since 1.69 
+   * The TIME tag (HTML5).
+   * @since 1.66
    */
-  /**
-   * An ARTICLE tag.  Registered with PrototypicalNodeFactory to cause article
-   * to be a CompositeTag.  See code samples in org.htmlparser.tags.
-   * @see HtmlFilterInputStream#makeParser()
-   */
-  public static class Article extends CompositeTag {
-    /**
-     * The set of names handled by this tag.
-     */
-    private static final String[] mIds = new String[] {"ARTICLE"};
-
-    /**
-     * Return the set of names handled by this tag.
-     * @return The names to be matched that create tags of this type.
-     */
-    public String[] getIds() {
-      return mIds;
-    }
+  public static class Time extends CompositeTag {
+    private static final String[] mIds = new String[] {"time"};
+    public String[] getIds() { return mIds; }
   }
-
+  
+  /**
+   * The VIDEO tag (HTML5).
+   * @since 1.70
+   */
+  public static class Video extends CompositeTag {
+    private static final String[] mIds = new String[] {"video"};
+    public String[] getIds() { return mIds; }
+  }
+  
 }

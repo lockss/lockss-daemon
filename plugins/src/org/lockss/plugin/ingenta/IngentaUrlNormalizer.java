@@ -56,6 +56,18 @@ public class IngentaUrlNormalizer implements UrlNormalizer {
       url = url.replaceFirst(";jsessionid=[^?]+", "");
     }
     
+    /* 
+     * It's not clear if this is a temporary (error) or if it's in transition
+     * but across all of ingenta all article landing pages are now at 
+     * contentone instead of content (though both pages still exist).
+     * In order not to collect duplicates, we will normalize
+     * /contentone/ to /content/
+     * 
+     */
+    if (url.contains("/contentone/")) {
+      url = url.replace("/contentone/", "/content/");
+    }
+    
     /*
      * The IngentaConnect platform is organized somewhat like an
      * interactive process, whereby one must click through to articles
