@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -103,7 +103,7 @@ public class TestPdfUtil extends LockssTestCase {
      */
     // Operator is an opcode with the complement of 6 string-related operations
     // Operand is, or is equivalent to, the string "foobarqux"
-    // The 6 abstract methods call the right PdfUtil methods for the opcode 
+    // The 6 abstract methods call the right PdfOpcodes methods for the opcode 
     abstract class StringOpcodeTester {
       PdfToken operator;
       PdfToken operand;
