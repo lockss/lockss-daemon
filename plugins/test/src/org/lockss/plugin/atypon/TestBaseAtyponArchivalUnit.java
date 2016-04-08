@@ -118,8 +118,9 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     // Taylor & Francis' use of fastly.net revealed missing slash in boilerplate rule
     shouldCacheTest("http://" + ROOT_HOST + "/foo/bar/baz/qux.js", true, ABAu, cus);
     shouldCacheTest("https://" + ROOT_HOST + "/foo/bar/baz/qux.js", true, ABAu, cus);
-    shouldCacheTest("http://" + ROOT_HOST + ".global.prod.fastly.net/foo/bar/baz/qux.js", false, ABAu, cus);
-    shouldCacheTest("https://" + ROOT_HOST + ".global.prod.fastly.net/foo/bar/baz/qux.js", false, ABAu, cus);
+    // now allowed; emerald also uses fastly
+    shouldCacheTest("http://" + ROOT_HOST + ".global.prod.fastly.net/foo/bar/baz/qux.js", true, ABAu, cus);
+    shouldCacheTest("https://" + ROOT_HOST + ".global.prod.fastly.net/foo/bar/baz/qux.js", true, ABAu, cus);
     // toc page for an issue
     shouldCacheTest(ROOT_URL+"toc/xxxx/123/5", true, ABAu, cus);
     // special issue
