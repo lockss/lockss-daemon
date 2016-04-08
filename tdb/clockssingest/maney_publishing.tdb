@@ -1117,7 +1117,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; English Heritage Historical Review Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; English Heritage Historical Review Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; English Heritage Historical Review Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2014 ; English Heritage Historical Review Volume 9 ; 9 ; >
+    au < testing ; exists ; 2014 ; English Heritage Historical Review Volume 9 ; 9 ; >
    
   }
 
@@ -1895,7 +1895,7 @@
     au < manifest ; exists ; 2008 ; Ironmaking & Steelmaking Volume 35 ; 35 ; >
     au < manifest ; exists ; 2009 ; Ironmaking & Steelmaking Volume 36 ; 36 ; >
     au < ready ; exists ; 2010 ; Ironmaking & Steelmaking Volume 37 ; 37 ; >
-    au < testing ; exists ; 2011 ; Ironmaking & Steelmaking Volume 38 ; 38 ; >
+    au < ready ; exists ; 2011 ; Ironmaking & Steelmaking Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Ironmaking & Steelmaking Volume 39 ; 39 ; >
     au < notReady ; exists ; 2013 ; Ironmaking & Steelmaking Volume 40 ; 40 ; > # 500 Internal Server Error
     au < notReady ; exists ; 2014 ; Ironmaking & Steelmaking Volume 41 ; 41 ; > # 500 Internal Server Error
@@ -2441,7 +2441,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Orthodontics Volume 39 ; 39 ; >
     au < ready ; exists ; 2013 ; Journal of Orthodontics Volume 40 ; 40 ; >
     au < ready ; exists ; 2014 ; Journal of Orthodontics Volume 41 ; 41 ; >
-    au < testing ; exists ; 2015 ; Journal of Orthodontics Volume 42 ; 42 ; >
+    au < ready ; exists ; 2015 ; Journal of Orthodontics Volume 42 ; 42 ; >
     au < expected ; exists ; 2016 ; Journal of Orthodontics Volume 43 ; 43 ; >
 
   }
