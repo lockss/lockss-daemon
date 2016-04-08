@@ -43,8 +43,7 @@
     }
 
     {
-      #plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
       implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       param[base_url] = http://ijs.microbiologyresearch.org/
       param[journal_id] = ijsem
@@ -122,8 +121,7 @@
     }
       
     {
-      #plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
       implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       param[base_url] = http://ijs.microbiologyresearch.org/
       param[journal_id] = ijsem
@@ -202,8 +200,7 @@
 
     {
       
-      #plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
       implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       param[base_url] = http://ijs.microbiologyresearch.org/
       param[journal_id] = ijsem
@@ -223,7 +220,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Systematic and Evolutionary Microbiology Volume 62 ; 62 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Systematic and Evolutionary Microbiology Volume 63 ; 63 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; International Journal of Systematic and Evolutionary Microbiology Volume 64 ; 64 ; >
-      au < exists ; exists ; 2015 ; International Journal of Systematic and Evolutionary Microbiology Volume 65 ; 65 ; >
+      au < testing ; exists ; 2015 ; International Journal of Systematic and Evolutionary Microbiology Volume 65 ; 65 ; >
       au < expected ; exists ; 2016 ; International Journal of Systematic and Evolutionary Microbiology Volume 66 ; 66 ; >
 
     }
@@ -386,8 +383,7 @@
     }
       
     {
-      #plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
       implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       param[base_url] = http://mic.microbiologyresearch.org/
       param[journal_id] = micro
@@ -648,8 +644,7 @@
     }
 
     {
-      #plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
       implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       param[base_url] = http://jgv.microbiologyresearch.org/
       param[journal_id] = jgv
@@ -749,7 +744,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of General Virology Volume 93 ; 93 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of General Virology Volume 94 ; 94 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of General Virology Volume 95 ; 95 ; >
-      au < exists ; exists ; 2015 ; Journal of General Virology Volume 96 ; 96 ; >
+      au < testing ; exists ; 2015 ; Journal of General Virology Volume 96 ; 96 ; >
       au < exists ; exists ; 2016 ; Journal of General Virology Volume 97 ; 97 ; >
 
     }
@@ -837,8 +832,7 @@
     }
     
     {
-      #plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
       implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       param[base_url] = http://jmm.microbiologyresearch.org/
       param[journal_id] = jmm
@@ -906,7 +900,7 @@
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Medical Microbiology Volume 61 ; 61 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Medical Microbiology Volume 62 ; 62 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Medical Microbiology Volume 63 ; 63 ; >
-      au < exists ; exists ; 2015 ; Journal of Medical Microbiology Volume 64 ; 64 ; >
+      au < testing ; exists ; 2015 ; Journal of Medical Microbiology Volume 64 ; 64 ; >
       au < exists ; exists ; 2016 ; Journal of Medical Microbiology Volume 65 ; 65 ; >
 
     }
@@ -921,8 +915,7 @@
 
     {
       rights = openaccess
-      #plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
       implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       param[base_url] = http://jmmcr.microbiologyresearch.org/
       param[journal_id] = jmmcr
@@ -943,8 +936,7 @@
 
     {
       rights = openaccess
-      #plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
       implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       param[base_url] = http://mgen.microbiologyresearch.org/
       param[journal_id] = mgen
@@ -997,8 +989,7 @@
     }
 
     {
-      #plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
-      plugin = needs.plugin
+      plugin = org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin
       implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       param[base_url] = http://mic.microbiologyresearch.org/
       param[journal_id] = micro
