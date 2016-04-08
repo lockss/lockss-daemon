@@ -148,32 +148,6 @@ public class SubscriptionManagerSql {
       + " order by pu." + PUBLISHER_NAME_COLUMN
       + ",n." + NAME_COLUMN
       + ",pr." + PROVIDER_NAME_COLUMN;
-  
-//Query to find all the subscriptions and their publisher.
- private static final String 
-   FIND_ALL_SUBSCRIPTIONS_AND_PUBLISHERS_QUERY(String start, String end) {
-     return "select distinct"
-     + " pu." + PUBLISHER_NAME_COLUMN
-     + ",n." + NAME_COLUMN
-     + ",pr." + PROVIDER_LID_COLUMN
-     + ",pr." + PROVIDER_NAME_COLUMN
-     + " from " + SUBSCRIPTION_RANGE_TABLE + " sr"
-     + "," + SUBSCRIPTION_TABLE + " s"
-     + "," + PUBLISHER_TABLE + " pu"
-     + "," + PUBLICATION_TABLE + " p"
-     + "," + MD_ITEM_NAME_TABLE + " n"
-     + "," + PROVIDER_TABLE + " pr"
-     + " where sr." + SUBSCRIPTION_SEQ_COLUMN + " = s."
-     + SUBSCRIPTION_SEQ_COLUMN
-     + " and s." + PUBLICATION_SEQ_COLUMN + " = p." + PUBLICATION_SEQ_COLUMN
-     + " and p." + PUBLISHER_SEQ_COLUMN + " = pu." + PUBLISHER_SEQ_COLUMN
-     + " and p." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
-     + " and s." + PROVIDER_SEQ_COLUMN + " = pr." + PROVIDER_SEQ_COLUMN
-     + " and pu." + PUBLISHER_NAME_COLUMN + " like '[" + start + "-" + end + "]%'"
-     + " order by pu." + PUBLISHER_NAME_COLUMN
-     + ",n." + NAME_COLUMN
-     + ",pr." + PROVIDER_NAME_COLUMN;
-  }
 
   // Query to find all the subscriptions and their ranges.
   private static final String FIND_ALL_SUBSCRIPTIONS_AND_RANGES_QUERY = "select"
@@ -1000,7 +974,7 @@ public class SubscriptionManagerSql {
     // Get a connection to the database.
     Connection conn = dbManager.getConnection();
 
-    String query = FIND_ALL_SUBSCRIPTIONS_AND_PUBLISHERS_QUERY(start, end);
+    String query = FIND_ALL_SUBSCRIPTIONS_AND_PUBLISHERS_QUERY; //(start, end);
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "SQL = " + query);
 
     PreparedStatement getAllSubscriptionsAndPublishers =

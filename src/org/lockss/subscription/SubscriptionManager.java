@@ -1497,14 +1497,14 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
     // Get the publishers for which a subscription decision has been made.
     Map<String, PublisherSubscription> subscribedPublishers =
-        subManagerSql.findAllSubscribedPublishers(start, end);
+        subManagerSql.findAllSubscribedPublishers();
 
     List<SerialPublication> unsubscribedPublications =
         new ArrayList<SerialPublication>();
 
     // Get the existing subscriptions with publisher names.
     MultiValueMap subscriptionMap = mapSubscriptionsByPublisher(subManagerSql
-        .findAllSubscriptionsAndPublishers(start, end));
+        .findAllSubscriptionsAndPublishers());
 
     Collection<Subscription> publisherSubscriptions = null;
     String publisherName;
