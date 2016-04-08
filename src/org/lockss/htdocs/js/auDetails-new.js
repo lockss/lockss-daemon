@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    
     $("#tabs").tabs({
         beforeLoad: function (event, ui) {
             ui.panel.html('<img src="images/ajax-loader.gif" width="24" height="24" style="vertical-align:middle;">Loading..</img>');
