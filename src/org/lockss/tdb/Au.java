@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -68,6 +68,7 @@ public class Au {
    * @since 1.67
    */
   public Au(Au other) {
+    this.computedPlugin = other.computedPlugin;
     this.eisbn = other.eisbn;
     this.implicit = other.implicit;
     this.isbn = other.isbn;
@@ -197,51 +198,59 @@ public class Au {
    * key-value pair in a designated map (definitional parameters,
    * non-definitional parameters, attributes), or in the general storage map.
    * </p>
+   * <p>
+   * Since 1.70, this method returns a value (the previous value for the key
+   * being assigned).
+   * </p>
    * 
    * @param key
    *          A key.
    * @param value
    *          The value for the key.
+   * @return The value previously associated with the key, or null if there was
+   *         no previous value for this key.
    * @since 1.67
    */
-  public void put(String key, String value) {
+  public String put(String key, String value) {
     switch (key.charAt(0)) {
       case 'a': {
         if (key.startsWith(ATTR_PREFIX)) {
           if (attrsMap == null) {
             attrsMap = new HashMap<String, String>();
           }
-          attrsMap.put(key.substring(ATTR_PREFIX.length(), key.length() - 1), value);
-          return;
+          return attrsMap.put(key.substring(ATTR_PREFIX.length(), key.length() - 1), value);
         }
       } break;
       case 'e': {
         if (EDITION.equals(key)) {
+          String ret = edition;
           edition = value;
-          return;
+          return ret;
         }
         else if (EISBN.equals(key)) {
+          String ret = eisbn;
           eisbn = value;
-          return;
+          return ret;
         }
       } break;
       case 'i': {
         if (ISBN.equals(key)) {
+          String ret = isbn;
           isbn = value;
-          return;
+          return ret;
         }
       } break;
       case 'n': {
         if (NAME.equals(key)) {
+          String ret = name;
           name = value;
-          return;
+          return ret;
         }
         else if (key.startsWith(NONDEFPARAM_PREFIX)) {
           if (nondefParamsMap == null) {
             nondefParamsMap = new HashMap<String, String>();
           }
-          nondefParamsMap.put(key.substring(NONDEFPARAM_PREFIX.length(), key.length() - 1), value);
-          return;
+          return nondefParamsMap.put(key.substring(NONDEFPARAM_PREFIX.length(), key.length() - 1), value);
         }
       } break;
       case 'p': {
@@ -249,60 +258,70 @@ public class Au {
           if (paramsMap == null) {
             paramsMap = new HashMap<String, String>();
           }
-          paramsMap.put(key.substring(PARAM_PREFIX.length(), key.length() - 1), value);
-          return;
+          return paramsMap.put(key.substring(PARAM_PREFIX.length(), key.length() - 1), value);
         }
         else if (PLUGIN.equals(key)) {
+          String ret = plugin;
           plugin = value;
-          return;
+          return ret;
         }
         else if (PLUGIN_PREFIX.equals(key)) {
+          String ret = pluginPrefix;
           pluginPrefix = value;
-          return;
+          return ret;
         }
         else if (PLUGIN_SUFFIX.equals(key)) {
+          String ret = pluginSuffix;
           pluginSuffix = value;
-          return;
+          return ret;
         }
         else if (PROVIDER.equals(key)) {
+          String ret = provider;
           provider = value;
-          return;
+          return ret;
         }
         else if (PROXY.equals(key)) {
+          String ret = proxy;
           proxy = value;
-          return;
+          return ret;
         }
       } break;
       case 'r': {
         if (RIGHTS.equals(key)) {
+          String ret = rights;
           rights = value;
-          return;
+          return ret;
         }
       } break;
       case 's': {
         if (STATUS.equals(key)) {
+          String ret = status;
           status = value;
-          return;
+          return ret;
         }
         else if (STATUS1.equals(key)) {
+          String ret = status1;
           status1 = value;
-          return;
+          return ret;
         }
         else if (STATUS2.equals(key)) {
+          String ret = status2;
           status2 = value;
-          return;
+          return ret;
         }
       } break;
       case 'v': {
         if (VOLUME.equals(key)) {
+          String ret = volume;
           volume = value;
-          return;
+          return ret;
         }
       } break;
       case 'y': {
         if (YEAR.equals(key)) {
+          String ret = year;
           year = value;
-          return;
+          return ret;
         }
       } break;
     }
@@ -311,7 +330,7 @@ public class Au {
     if (map == null) {
       map = new HashMap<String, String>();
     }
-    map.put(key, value);
+    return map.put(key, value);
   }
   
   /**
@@ -377,7 +396,7 @@ public class Au {
    */
   public String getAuid() {
     if (auid == null) {
-      String plugin = getPlugin();
+      String plugin = getComputedPlugin();
       Map<String, String> params = getParams();
       if (plugin != null && params != null && params.size() > 0) {
         auid = PluginManager.generateAuId(plugin, PropUtil.propsToCanonicalEncodedString(params));
@@ -426,6 +445,35 @@ public class Au {
       }
     }
     return auidplus;
+  }
+  
+  /**
+   * <p>
+   * The AU's computed plugin (field).
+   * </p>
+   * 
+   * @since 1.70
+   */
+  protected String computedPlugin = null;
+  
+  /**
+   * <p>
+   * Retrieves the AU's computed plugin.
+   * </p>
+   * 
+   * @return The AU's computed plugin.
+   * @since 1.70
+   */
+  public String getComputedPlugin() {
+    if (computedPlugin == null) {
+      if (plugin != null) {
+        computedPlugin = plugin;
+      }
+      else if (pluginPrefix != null && pluginSuffix != null) {
+        computedPlugin = pluginPrefix + pluginSuffix;
+      }
+    }
+    return computedPlugin;
   }
   
   /**
@@ -635,13 +683,6 @@ public class Au {
    * @since 1.67
    */
   public String getPlugin() {
-    if (plugin == null) {
-      String prefix = getPluginPrefix();
-      String suffix = getPluginSuffix();
-      if (prefix != null && suffix != null) {
-        plugin = prefix + suffix;
-      }
-    }
     return plugin;
   }
   
@@ -1178,7 +1219,7 @@ public class Au {
     m.put("au:eisbn", new A() { @Override String a(Au a) { return a.getEisbn(); } });
     m.put("au:isbn", new A() { @Override String a(Au a) { return a.getIsbn(); } });
     m.put("au:name", new A() { @Override String a(Au a) { return a.getName(); } });
-    m.put("au:plugin", new A() { @Override String a(Au a) { return a.getPlugin(); } });
+    m.put("au:plugin", new A() { @Override String a(Au a) { return a.getComputedPlugin(); } });
     m.put("au:pluginPrefix", new A() { @Override String a(Au a) { return a.getPluginPrefix(); } });
     m.put("au:pluginSuffix", new A() { @Override String a(Au a) { return a.getPluginSuffix(); } });
     m.put("au:provider", new A() { @Override String a(Au a) { return a.getProvider(); } });

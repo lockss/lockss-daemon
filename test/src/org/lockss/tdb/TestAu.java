@@ -131,6 +131,7 @@ public class TestAu extends LockssTestCase {
     assertNull(au.getName());
     assertNull(au.getAuid());
     assertNull(au.getAuidPlus());
+    assertNull(au.getComputedPlugin());
     assertNull(au.getEdition());
     assertNull(au.getEisbn());
     assertNull(au.getIsbn());
@@ -204,13 +205,15 @@ public class TestAu extends LockssTestCase {
     assertEquals(PLUGIN_VALUE, au1.getPlugin());
     assertNull(au1.getPluginPrefix());
     assertNull(au1.getPluginSuffix());
+    assertEquals(PLUGIN_VALUE, au1.getComputedPlugin());
 
     Au au2 = new Au();
     au2.put(Au.PLUGIN_PREFIX, PLUGIN_PREFIX_VALUE);
     au2.put(Au.PLUGIN_SUFFIX, PLUGIN_SUFFIX_VALUE);
-    assertEquals(PLUGIN_PREFIX_VALUE + PLUGIN_SUFFIX_VALUE, au2.getPlugin());
+    assertNull(au2.getPlugin());
     assertEquals(PLUGIN_PREFIX_VALUE, au2.getPluginPrefix());
     assertEquals(PLUGIN_SUFFIX_VALUE, au2.getPluginSuffix());
+    assertEquals(PLUGIN_PREFIX_VALUE + PLUGIN_SUFFIX_VALUE, au2.getComputedPlugin());
     
     // Other combinations are illegal but have the following behavior:
 
@@ -220,6 +223,7 @@ public class TestAu extends LockssTestCase {
     assertEquals(PLUGIN_VALUE, au3.getPlugin());
     assertEquals(PLUGIN_PREFIX_VALUE, au3.getPluginPrefix());
     assertNull(au3.getPluginSuffix());
+    assertEquals(PLUGIN_VALUE, au3.getComputedPlugin());
 
     Au au4 = new Au();
     au4.put(Au.PLUGIN, PLUGIN_VALUE);
@@ -227,18 +231,21 @@ public class TestAu extends LockssTestCase {
     assertEquals(PLUGIN_VALUE, au4.getPlugin());
     assertNull(au4.getPluginPrefix());
     assertEquals(PLUGIN_SUFFIX_VALUE, au4.getPluginSuffix());
+    assertEquals(PLUGIN_VALUE, au4.getComputedPlugin());
 
     Au au5 = new Au();
     au5.put(Au.PLUGIN_PREFIX, PLUGIN_PREFIX_VALUE);
     assertNull(au5.getPlugin());
     assertEquals(PLUGIN_PREFIX_VALUE, au5.getPluginPrefix());
     assertNull(au5.getPluginSuffix());
+    assertNull(au5.getComputedPlugin());
 
     Au au6 = new Au();
     au6.put(Au.PLUGIN_SUFFIX, PLUGIN_SUFFIX_VALUE);
     assertNull(au6.getPlugin());
     assertNull(au6.getPluginPrefix());
     assertEquals(PLUGIN_SUFFIX_VALUE, au6.getPluginSuffix());
+    assertNull(au6.getComputedPlugin());
   }
 
   public void testAuid() throws Exception {
@@ -274,6 +281,7 @@ public class TestAu extends LockssTestCase {
     assertEquals(EISBN_VALUE, au3.getEisbn());
     assertEquals(ISBN_VALUE, au3.getIsbn());
     assertEquals(PLUGIN_VALUE, au3.getPlugin());
+    assertEquals(PLUGIN_VALUE, au3.getComputedPlugin());
     assertEquals(PARAM1_VALUE, au3.getParams().get(PARAM1_KEY));
     assertEquals(NONDEFPARAM1_VALUE, au3.getNondefParams().get(NONDEFPARAM1_KEY));
     assertEquals(ATTR1_VALUE, au3.getAttrs().get(ATTR1_KEY));

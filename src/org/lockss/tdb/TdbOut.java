@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,7 +48,7 @@ public class TdbOut {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbOut:0.2.3]";
+  public static final String VERSION = "[TdbOut:0.2.4]";
   
   /**
    * <p>

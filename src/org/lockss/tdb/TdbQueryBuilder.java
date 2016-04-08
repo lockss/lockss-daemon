@@ -1456,7 +1456,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
       nonAlliancePredicate = new Predicate<Au>() {
         @Override
         public boolean test(Au a) {
-          return nonAllianceSet.contains(a.getPlugin());
+          return nonAllianceSet.contains(a.getComputedPlugin());
         }
       };
     }
@@ -1464,7 +1464,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
       nonAlliancePredicate = new Predicate<Au>() {
         @Override
         public boolean test(Au a) {
-          return !nonAllianceSet.contains(a.getPlugin());
+          return !nonAllianceSet.contains(a.getComputedPlugin());
         }
       };
     }

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.tdb;
 
 import java.io.*;
-import java.nio.charset.Charset;
 
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.misc.*;

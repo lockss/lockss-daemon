@@ -54,7 +54,7 @@ public class TdbXml {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbXml:0.2.4]";
+  public static final String VERSION = "[TdbXml:0.2.5]";
   
   /**
    * <p>
@@ -442,7 +442,7 @@ public class TdbXml {
        * Per-AU stuff
        */
       // AU name
-      String plugin = au.getPlugin();
+      String plugin = au.getComputedPlugin();
       String auName = au.getName();
       String escapedAuName = xmlEscaper.translate(auName);
       StringBuilder ausb = new StringBuilder();

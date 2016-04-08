@@ -68,7 +68,7 @@ public class TdbBuilder extends TdbParserBaseListener {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbBuilder:0.2.3]";
+  public static final String VERSION = "[TdbBuilder:0.3.0]";
   
   /**
    * <p>
@@ -148,7 +148,7 @@ public class TdbBuilder extends TdbParserBaseListener {
     for (AssignmentContext actx : pcctx.assignment()) {
       SimpleAssignmentContext sactx = actx.simpleAssignment();
       if (sactx != null) {
-        au.put(sactx.IDENTIFIER().getText(), sactx.STRING().getText());
+        processAssignment(au, sactx.IDENTIFIER().getText(), sactx.STRING().getText(), sactx.getStart());
       }
     }
   }
@@ -185,7 +185,7 @@ public class TdbBuilder extends TdbParserBaseListener {
     for (AssignmentContext actx : tcctx.assignment()) {
       SimpleAssignmentContext sactx = actx.simpleAssignment();
       if (sactx != null) {
-        au.put(sactx.IDENTIFIER().getText(), sactx.STRING().getText());
+        processAssignment(au, sactx.IDENTIFIER().getText(), sactx.STRING().getText(), sactx.getStart());
       }
     }
   }
@@ -222,7 +222,7 @@ public class TdbBuilder extends TdbParserBaseListener {
     for (AssignmentContext actx : acctx.assignment()) {
       SimpleAssignmentContext sactx = actx.simpleAssignment();
       if (sactx != null) {
-        au.put(sactx.IDENTIFIER().getText(), sactx.STRING().getText());
+        processAssignment(au, sactx.IDENTIFIER().getText(), sactx.STRING().getText(), sactx.getStart());
       }
     }
   }
@@ -311,7 +311,7 @@ public class TdbBuilder extends TdbParserBaseListener {
       AntlrUtil.syntaxError(actx.getStart(), "expected %d implicit assignments but got %d", sizeImplicit, sizeListOfStrings);
     }
     for (int i = 0 ; i < sizeListOfStrings ; ++i) {
-      au.put(currentImplicit.get(i), listOfStrings.get(i).getText());
+      processAssignment(au, currentImplicit.get(i), listOfStrings.get(i).getText(), listOfStrings.get(i).getSymbol());
     }
     tdb.addAu(au);
   }
@@ -328,12 +328,36 @@ public class TdbBuilder extends TdbParserBaseListener {
    */
   @Override
   public void enterImplicit(@NotNull ImplicitContext ictx) {
+    if (stack.peek().getImplicit() != null) {
+      AntlrUtil.syntaxError(ictx.getStart(), "implicit statement already in scope");
+    }
     List<TerminalNode> identifiers = ictx.listOfIdentifiers().IDENTIFIER();
     List<String> implicit = new ArrayList<String>(identifiers.size());
     for (TerminalNode identifier : identifiers) {
       implicit.add(identifier.getText());
     }
     stack.peek().setImplicit(implicit);
+  }
+
+  /**
+   * @since 1.70
+   */
+  public void processAssignment(Au au, String key, String value, Token startToken) {
+    String oldVal = au.put(key, value);
+    if (oldVal != null) {
+      AntlrUtil.syntaxError(startToken, "'%s' is already set to '%s'", key, oldVal);
+    }
+    String oldKey = null;
+    if (Au.PLUGIN.equals(key)) {
+      if (au.getPluginPrefix() != null) { oldKey = Au.PLUGIN_PREFIX; }
+      else if (au.getPluginSuffix() != null) { oldKey = Au.PLUGIN_SUFFIX; }
+    }
+    else if ((Au.PLUGIN_PREFIX.equals(key) || Au.PLUGIN_SUFFIX.equals(key)) && au.getPlugin() != null) {
+      oldKey = Au.PLUGIN;
+    }
+    if (oldKey != null) {
+      AntlrUtil.syntaxError(startToken, "'%s' cannot be set when '%s' is already set", key, oldKey);
+    }
   }
   
   /**
