@@ -38,6 +38,7 @@ import org.lockss.extractor.JsoupHtmlLinkExtractor;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
+import org.lockss.test.StringInputStream;
 import org.lockss.util.Constants;
 import org.lockss.util.IOUtil;
 import org.lockss.util.SetUtil;
@@ -75,6 +76,13 @@ public class TestMsHtmlLinkExtractorFactory extends LockssTestCase {
           "</body>" +
           "</html>";
   
+  
+  public void testPlaceholder() throws Exception {
+    InputStream inStream;
+ //placeholder - took out real world file tests
+    assertEquals(true,true);
+
+  }
   
   private void testExpectedAgainstParsedUrls(Set<String> expectedUrls, 
       String source, String srcUrl) throws Exception {
