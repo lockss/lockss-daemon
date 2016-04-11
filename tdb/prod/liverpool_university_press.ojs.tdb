@@ -18,8 +18,9 @@
     param[base_url] = http://www.modernlanguagesopen.org/
     param[journal_id] = mlo
     
-    au < manifest ; 2014 ; Modern Languages Open Volume 1 ; 1 ; 2014 >
-    au < manifest ; 2015 ; Modern Languages Open Volume 2 ; 2 ; 2015 >
+    au < testing ; 2014 ; Modern Languages Open Volume 1 ; 1 ; 2014 >
+    au < testing ; 2015 ; Modern Languages Open Volume 2 ; 2 ; 2015 >
+    au < expected ; 2016 ; Modern Languages Open Volume 3 ; 3 ; 2016 >
     
   }
 
