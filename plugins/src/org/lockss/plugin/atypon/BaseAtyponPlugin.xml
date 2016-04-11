@@ -19,7 +19,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>46</string>
+    <string>47</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -268,9 +268,11 @@
        org.lockss.crawler.allowedPluginPermittedHosts =cdn\.nejm\.org -->
   <entry>
     <string>au_permitted_host_pattern</string>
-    <string>"cdn\.nejm\.org"</string>
-    <!-- www.emeraldinsight.com.global.prod.fastly.net for some js files -->
-    <string>"%s\.global\.prod\.fastly\.net", url_host(base_url)</string>
+    <list>
+      <string>"cdn\.nejm\.org"</string>
+      <!-- www.emeraldinsight.com.global.prod.fastly.net for some js files -->
+      <string>"%s\.global\.prod\.fastly\.net", url_host(base_url)</string>
+    </list>
   </entry>  
   <!-- if use a global host AND that url differs from (eg) ip to ip, may need to 
        use these patterns to either repair/exclude files from polling 
