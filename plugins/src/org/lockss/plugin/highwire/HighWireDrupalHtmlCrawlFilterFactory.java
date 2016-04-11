@@ -49,13 +49,16 @@ public class HighWireDrupalHtmlCrawlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tag("footer"),
     // Do not crawl for links from aside in BMJ, etc
     HtmlNodeFilters.tag("aside"),
+    HtmlNodeFilters.tag("script"),
     // Do not crawl reference section, right sidebar for links; common with APS & OUP
     HtmlNodeFilters.tagWithAttribute("div", "class", "section ref-list"),
-    // Because manifest pages are incomplete often enough to be a problem, going to keep issue pager links
-    // <div class="pager highwire-pager pager-mini clearfix highwire-node-pager highwire-issue-pager">
-    HtmlNodeFilters.allExceptSubtree(
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "highwire-issue-pager")),
+    // Title bar on toc with link to current issue
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "title-menu-and-about"),
+    // Right side and all other links to prev & next
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pager"),
+    HtmlNodeFilters.tagWithAttributeRegex("span", "class", "prev"),
+    HtmlNodeFilters.tagWithAttributeRegex("span", "class", "next"),
     // messages now contain correction lists
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "messages"),
   };

@@ -30,53 +30,30 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.highwire.elife;
+package org.lockss.plugin.highwire.aaas;
 
 import java.io.InputStream;
 
 import org.htmlparser.NodeFilter;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.html.*;
+import org.lockss.filter.html.HtmlFilterInputStream;
+import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.highwire.HighWireDrupalHtmlFilterFactory;
+import org.lockss.plugin.highwire.HighWireDrupalHtmlCrawlFilterFactory;
 import org.lockss.util.Logger;
 
-public class ELifeDrupalHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFactory {
+public class AAASHtmlCrawlFilterFactory extends HighWireDrupalHtmlCrawlFilterFactory {
   
-  private static final Logger log = Logger.getLogger(ELifeDrupalHtmlHashFilterFactory.class);
+  private static final Logger log = Logger.getLogger(AAASHtmlCrawlFilterFactory.class);
   
   protected static NodeFilter[] filters = new NodeFilter[] {
-    // Do not hash responsive header (from crawl filter)
-    HtmlNodeFilters.tagWithAttribute("div", "id", "region-responsive-header"),
-    // this replaces references filter as references should not change
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "elife-reflink-links-wrapper"),
-    // this was a source of over-crawl & can be simpler than (from crawl filter)
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-wrapper"),
-    // The next filter is not needed, we care about the correction for the hash
-    // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "elife-article-corrections"),
-    // Decision-letter, author response & comments are dynamic and change
-    //  http://elifesciences.org/content/3/e04094.full
-    HtmlNodeFilters.tagWithAttribute("div", "id", "decision-letter"),
-    HtmlNodeFilters.tagWithAttribute("div", "id", "author-response"),
-    HtmlNodeFilters.tagWithAttribute("div", "id", "comments"),
-    // No relevant content in these headers
-    HtmlNodeFilters.tagWithAttribute("div", "id", "zone-header-wrapper"),
-    HtmlNodeFilters.tagWithAttribute("div", "class", "page_header"),
-    HtmlNodeFilters.tagWithAttribute("ul", "class", "elife-article-categories"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pager"),
+    HtmlNodeFilters.tagWithAttribute("div", "class", "section notes"),
+    HtmlNodeFilters.tagWithAttribute("div", "class", "section fn-group"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-articles"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cited-by"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "additional-link"),
   };
-  
-  @Override
-  public boolean doWSFiltering() {
-    return true;
-  }
-  @Override
-  public boolean doTagAttributeFiltering() {
-    return false;
-  }
-  @Override
-  public boolean doXformToText() {
-    return true;
-  }
   
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
@@ -84,7 +61,8 @@ public class ELifeDrupalHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFa
                                                String encoding)
       throws PluginException {
     
-    return super.createFilteredInputStream(au, in, encoding, filters);
+    HtmlFilterInputStream filtered =
+        (HtmlFilterInputStream) super.createFilteredInputStream(au, in, encoding, filters);
+    return filtered;
   }
-  
 }

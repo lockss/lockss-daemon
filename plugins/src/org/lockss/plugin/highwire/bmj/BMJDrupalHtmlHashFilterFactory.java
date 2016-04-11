@@ -54,47 +54,6 @@ public class BMJDrupalHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFact
   
   private static final Logger log = Logger.getLogger(BMJDrupalHtmlHashFilterFactory.class);
   
-  // Transform to modify select attribute from select tag ( a )
-  // href attributes change over time, use UrlNormalizer <a href
-  protected static final HtmlTransform xformHref = new HtmlTransform() {
-    @Override
-    public NodeList transform(NodeList nodeList) throws IOException {
-      try {
-        nodeList.visitAllNodesWith(new NodeVisitor() {
-          @Override
-          public void visitTag(Tag tag) {
-            String tagName = tag.getTagName().toLowerCase();
-            try {
-              if ("a".equals(tagName)) {
-                Attribute ha = tag.getAttributeEx("href");
-                if (ha != null) {
-                  String url = ha.getValue();
-                  if (url.contains(BMJDrupalUrlNormalizer.BMJ_UN_STATIC) && 
-                      url.contains(BMJDrupalUrlNormalizer.BMJ_UN_PARTIAL)) {
-                    Matcher mat = BMJDrupalUrlNormalizer.BMJ_UN_PREFIX_PAT.matcher(url);
-                    if (mat.find()) {
-                      url = mat.replaceFirst(BMJDrupalUrlNormalizer.BMJ_UN_REPLACE);
-                      ha.setValue(url);
-                    }
-                  }
-                }
-              }
-            }
-            catch (Exception exc) {
-              log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
-            }
-            // Always
-            super.visitTag(tag);
-          }
-        });
-      }
-      catch (ParserException pe) {
-        log.debug2("Internal error (parser)", pe); // Bail
-      }
-      return nodeList;
-    }
-  };
-  
   protected static NodeFilter[] filters = new NodeFilter[] {
     HtmlNodeFilters.tag("head"),
     // only highwire-markup contents are hashed
@@ -115,8 +74,7 @@ public class BMJDrupalHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFact
                                                String encoding)
       throws PluginException {
     
-    HtmlFilterInputStream his = new HtmlFilterInputStream(in, encoding, xformHref);
-    InputStream filtered = super.createFilteredInputStream(au, his, encoding, filters);
+    InputStream filtered = super.createFilteredInputStream(au, in, encoding, filters);
     return filtered;
   }
   

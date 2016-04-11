@@ -1,20 +1,19 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>testing</string>
   </entry>
-  <!-- compare to ClockssAPSDrupalPlugin, the added entries should be in synch -->
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.highwire.aps.APSDrupalPlugin</string>
+    <string>org.lockss.plugin.highwire.aaas.AAASDrupalPlugin</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Physiological Society Plugin</string>
+    <string>American Association for the Advancement of Science Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -29,32 +28,32 @@
     <map>
       <entry>
         <string>Substance</string>
-        <string>2</string>
+        <string>1</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>11</string>
+        <string>1</string>
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>3</string>
+        <string>1</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Physiological Society Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"American Association for the Advancement of Science Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%slockss-manifest/vol_%s_manifest.html", base_url, volume_name</string>
+    <string>"%scontent/by/year/%s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.highwire.aps.APSHtmlCrawlFilterFactory</string>
+    <string>org.lockss.plugin.highwire.aaas.AAASHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.highwire.aps.APSHtmlHashFilterFactory</string>
+    <string>org.lockss.plugin.highwire.aaas.AAASHtmlHashFilterFactory</string>
   </entry>
 </map>

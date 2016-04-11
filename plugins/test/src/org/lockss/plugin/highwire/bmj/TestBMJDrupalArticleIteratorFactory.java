@@ -119,7 +119,7 @@ public class TestBMJDrupalArticleIteratorFactory extends ArticleIteratorTestCase
     Pattern pat = getPattern(artIter);
     
     assertMatchesRE(pat, "http://www.bmj.org/content/347/bmj.f3757");
-    assertMatchesRE(pat, "http://www.bmj.org/content/347/7373/1164.1");
+    assertMatchesRE(pat, "http://www.bmj.org/content/347/7373/1164");
     // but not to ...
     assertNotMatchesRE(pat, "http://www.bmj.org/content/bmj/347");
     assertNotMatchesRE(pat, "http://www.bmj.org/content/bmj/347.1");

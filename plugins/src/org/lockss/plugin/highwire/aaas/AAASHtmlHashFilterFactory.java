@@ -30,28 +30,25 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.highwire.elife;
+package org.lockss.plugin.highwire.aaas;
 
 import java.io.InputStream;
 
 import org.htmlparser.NodeFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
-import org.lockss.plugin.*;
-import org.lockss.plugin.highwire.HighWireDrupalHtmlCrawlFilterFactory;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.highwire.HighWireDrupalHtmlFilterFactory;
+import org.lockss.util.Logger;
 
-public class ELifeDrupalHtmlCrawlFilterFactory extends HighWireDrupalHtmlCrawlFilterFactory {
+public class AAASHtmlHashFilterFactory extends HighWireDrupalHtmlFilterFactory {
   
-  protected static NodeFilter[] filters = new NodeFilter[] {
-    // Do not crawl responsive header or references as links not wanted here
-    HtmlNodeFilters.tagWithAttribute("div", "id", "region-responsive-header"),
-    HtmlNodeFilters.tagWithAttribute("div", "id", "references"),
-    // The following sections were a source of over-crawl (http://elifesciences.org/content/1/e00067)
-    HtmlNodeFilters.allExceptSubtree(
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-wrapper"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-elife-article-toolbox")),
-    // possible links out of AU
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "elife-article-(corrections|criticalrelation)"),
+  private static final Logger log = Logger.getLogger(AAASHtmlHashFilterFactory.class);
+  
+  private static NodeFilter[] filters = new NodeFilter[] {
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cite-access"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "comments"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "highwire-stats"),
   };
   
   @Override
@@ -60,7 +57,20 @@ public class ELifeDrupalHtmlCrawlFilterFactory extends HighWireDrupalHtmlCrawlFi
                                                String encoding)
       throws PluginException {
     
-    return super.createFilteredInputStream(au, in, encoding, filters);
+    InputStream filtered = super.createFilteredInputStream(au, in, encoding, filters);
+    return filtered;
   }
-
+  
+  @Override
+  public boolean doWSFiltering() {
+    return true;
+  }
+  @Override
+  public boolean doTagAttributeFiltering() {
+    return true;
+  }
+  @Override
+  public boolean doXformToText() {
+    return false;
+  }
 }

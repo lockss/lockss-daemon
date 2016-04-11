@@ -180,38 +180,38 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     // article files
     shouldCacheTest(ROOT_URL + "content/2015/1/2", true, au);
     shouldCacheTest(ROOT_URL2 + "content/2015/1/2", true, au);
-    shouldCacheTest(ROOT_URL + "content/2015/1/2.abstract", true, au);
-    shouldCacheTest(ROOT_URL + "content/2015/1/2.extract", true, au);
-    shouldCacheTest(ROOT_URL + "content/2015/1/2.full", true, au);
+    shouldCacheTest(ROOT_URL + "content/2015/1/2.abstract", false, au);
+    shouldCacheTest(ROOT_URL + "content/2015/1/2.extract", false, au);
+    shouldCacheTest(ROOT_URL + "content/2015/1/2.full", false, au);
     shouldCacheTest(ROOT_URL + "content/2015/1/2.full.pdf", true, au);
     shouldCacheTest(ROOT_URL + "content/2015/1/2.full.pdf+html", true, au);
     shouldCacheTest(ROOT_URL + "content/2015/1/2.full-text.pdf+html", true, au);
-    shouldCacheTest(ROOT_URL + "content/2015/1/2/DC1", true, au);
+    shouldCacheTest(ROOT_URL + "content/2015/1/DC1", true, au);
     
     shouldCacheTest(ROOT_URL + "content/2015/1/2.print", false, au);
     shouldCacheTest(ROOT_URL + "content/2015/1/2.explore", false, au);
     shouldCacheTest(ROOT_URL + "content/2015/1/2/article-info", false, au);
     shouldCacheTest(ROOT_URL + "content/2015/1/2/submit?param=12", false, au);
     
-    shouldCacheTest(ROOT_URL + "panels_ajax_tab/hw_tab_data/node:80746/1", true, au);
+    shouldCacheTest(ROOT_URL + "panels_ajax_tab/hw_tab_data/node:80746/1", false, au);
     shouldCacheTest(ROOT_URL + "panels_ajax_tab/hw_tab_art/node:80746/1", false, au);
     
-    shouldCacheTest(ROOT_URL + "highwire/citation/12/ris", true, au);
+    shouldCacheTest(ROOT_URL + "highwire/citation/12/ris", false, au);
     shouldCacheTest(ROOT_URL + "highwire/citation/9/1/ris", false, au);
-    shouldCacheTest(ROOT_URL + "highwire/markup/113/expansion", true, au);
+    shouldCacheTest(ROOT_URL + "highwire/markup/113/expansion", false, au);
     
-    shouldCacheTest(ROOT_URL + "sites/all/libraries/modernizr/modernizr.min.js", true, au);
-    shouldCacheTest(ROOT_URL + "sites/default/files/js/js_0j8_f76rvZ212f4rg.js", true, au);
-    shouldCacheTest(ROOT_URL + "sites/default/themes/hw/font/fontawesome-webfont.eot", true, au);
-    shouldCacheTest(ROOT_URL + "sites/default/themes/font/fontawesome-webfont.eot", true, au);
+    shouldCacheTest(ROOT_URL + "sites/all/libraries/modernizr/modernizr.min.js", false, au);
+    shouldCacheTest(ROOT_URL + "sites/default/files/js/js_0j8_f76rvZ212f4rg.js", false, au);
+    shouldCacheTest(ROOT_URL + "sites/default/themes/hw/font/fontawesome-webfont.eot", false, au);
+    shouldCacheTest(ROOT_URL + "sites/default/themes/font/fontawesome-webfont.eot", false, au);
     
     shouldCacheTest(ROOT_URL + "content/hw/suppl/2014/04/23/hw.02130.DC1/hw02130_Supplemental_files.zip", true, au);
     shouldCacheTest(ROOT_URL2 + "content/hw/suppl/2014/04/23/hw.02130.DC1/hw02130_Supplemental_files.zip", true, au);
-    shouldCacheTest("http://cdn.cloudfront.net/content/2015/1/3/F1.medium.gif", true, au);
-    shouldCacheTest("https://cdn.cloudfront.net/content/2015/1/3/F1.medium.gif", true, au);
+    shouldCacheTest("http://cdn.cloudfront.net/content/2015/1/3/F1.medium.gif", false, au);
+    shouldCacheTest("https://cdn.cloudfront.net/content/2015/1/3/F1.medium.gif", false, au);
     shouldCacheTest("http://cdn.cloudfront.net/content/2015/1/3/F1.medium.gif?width=400", false, au);
-    shouldCacheTest("http://cdn.mathjax.org/mathjax/latest/MathJax.js", true, au);
-    shouldCacheTest("https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js", true, au);
+    shouldCacheTest("http://cdn.mathjax.org/mathjax/latest/MathJax.js", false, au);
+    shouldCacheTest("https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js", false, au);
     shouldCacheTest("", false, au);
     
     // should not get crawled - LOCKSS

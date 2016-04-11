@@ -289,7 +289,7 @@ public class TestAPSDrupalArticleIteratorFactory extends ArticleIteratorTestCase
     
     Stack<String[]> expStack = new Stack<String[]>();
     String [] af1 = {
-        BASE_URL + "content/1/1/C1.full",
+        BASE_URL + "content/1/1/C1",
         BASE_URL + "content/1/1/C1.full.pdf+html",
         BASE_URL + "content/1/1/C1.full.pdf",
         BASE_URL + "content/1/1/C1.full.pdf+html"};

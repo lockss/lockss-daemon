@@ -167,21 +167,21 @@ http://ajpregu.physiology.org/content/304/1/R23.full.pdf+html
     shouldCacheTest(ROOT_URL + "content/303/2.toc", true, au);
     // article files
     shouldCacheTest(ROOT_URL + "content/303/2/X3", true, au);
-    shouldCacheTest(ROOT_URL + "content/303/2/X3.abstract", true, au);
-    shouldCacheTest(ROOT_URL + "content/303/2/X3.extract", true, au);
-    shouldCacheTest(ROOT_URL + "content/303/2/X3.full", true, au);
+    shouldCacheTest(ROOT_URL + "content/303/2/X3.abstract", false, au);
+    shouldCacheTest(ROOT_URL + "content/303/2/X3.extract", false, au);
+    shouldCacheTest(ROOT_URL + "content/303/2/X3.full", false, au);
     shouldCacheTest(ROOT_URL + "content/303/2/X3.full.pdf", true, au);
     shouldCacheTest(ROOT_URL + "content/303/2/X3.full.pdf+html", true, au);
     shouldCacheTest(ROOT_URL + "content/303/2/X3.long", true, au);
     shouldCacheTest(ROOT_URL + "content/303/2/X3.figures-only", true, au);
-    shouldCacheTest(ROOT_URL + "content/303/2/X3.", true, au);
+    shouldCacheTest(ROOT_URL + "content/303/2/X3.", false, au);
     
-    shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_ex_tab_data/node:433/1", true, au);
-    shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_ex_tab_info/node:433/1", true, au);
-    shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_ex_tab_pdf/node:433/1", true, au);
+    shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_ex_tab_data/node:433/1", false, au);
+    shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_ex_tab_info/node:433/1", false, au);
+    shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_ex_tab_pdf/node:433/1", false, au);
     
-    shouldCacheTest(ROOT_URL + "highwire/markup/58493/expansion", true, au);
-    shouldCacheTest(ROOT_URL + "highwire/article_citation_preview/19403", true, au);
+    shouldCacheTest(ROOT_URL + "highwire/markup/58493/expansion", false, au);
+    shouldCacheTest(ROOT_URL + "highwire/article_citation_preview/19403", false, au);
     
     shouldCacheTest(ROOT_URL + "node/34", false, au);
     shouldCacheTest(ROOT_URL + "content/by/year", false, au);
@@ -191,9 +191,9 @@ http://ajpregu.physiology.org/content/304/1/R23.full.pdf+html
     shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_ex_tab_art/node:433/1", false, au);
     shouldCacheTest(ROOT_URL + "content/303/2/X3.article-info", false, au);
     
-    shouldCacheTest("http://cdn-site.elifesciences.org/content/elife/1/e00003/F1.medium.gif", true, au);
-    shouldCacheTest("http://cdn.mathjax.org/mathjax/latest/MathJax.js", true, au);
-    shouldCacheTest("https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js", true, au);
+    shouldCacheTest("http://cdn-site.elifesciences.org/content/elife/1/e00003/F1.medium.gif", false, au);
+    shouldCacheTest("http://cdn.mathjax.org/mathjax/latest/MathJax.js", false, au);
+    shouldCacheTest("https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js", false, au);
     shouldCacheTest("", false, au);
     
     // should not get crawled - LOCKSS

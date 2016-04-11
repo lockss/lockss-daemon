@@ -116,13 +116,7 @@ public class TestBMJDrupalHtmlCrawlFilterFactory extends LockssTestCase {
       "<link media=\"all\" href=\"http://www.bmj.com/sites/default/files/cdn/css/http/css_LCvCQQenOZftP9DGmJQ1AC-c57eFSh7UXDLv8OVdeZg.css\" rel=\"stylesheet\" type=\"text/css\">\n" + 
       "<link media=\"print\" href=\"http://www.bmj.com/sites/default/files/cdn/css/http/css_VXn5JR586SULWVDL67jN01tt5YpX724gC2Q9rYfH9wg.css\" rel=\"stylesheet\" type=\"text/css\">\n" + 
       "<link media=\"screen\" href=\"http://www.bmj.com/sites/default/files/cdn/css/http/css_GmB3cCWgpK2q5ihUSSCapsAyFPHt-j4AyUGHyqXhLe0.css\" rel=\"stylesheet\" type=\"text/css\">\n" + 
-      "  <link type=\"text/css\" media=\"all\" rel=\"stylesheet\" href=\"/sites/default/themes/bmj/the_bmj/css/fonts.css\">\n" + 
-      "<script src=\"http://static.www.bmj.com/sites/default/files/js/js_-z-2lAhufzBeVjYseT6cTzSICUy9vnoLBpu1sF_zZrs.js\"></script>\n" + 
-      "<script src=\"http://static.www.bmj.com/sites/default/files/js/js_8cesDs51kIWO42f3ZOLrsAfi9EEUt1q0P0uHVRja86Y.js\"></script>\n" + 
-      "<script src=\"http://static.www.bmj.com/sites/default/files/js/js_Sh2UgvOvuSU9-K8qwk3-2k4jaFfLVCvAG5OTqQOumXM.js\"></script>\n" + 
-      "<script src=\"http://static.www.bmj.com/sites/default/files/js/js_kTXHXdUjbRT6JXrj3C5k6w5lLUdroufD6DGU1pLvKl4.js\"></script>\n" + 
-      "<script src=\"http://static.www.bmj.com/sites/default/files/js/js_d8nvZsNcH9M1AdbeKkecL0ZPaRgMfWLhCmktg3wHDu4.js\"></script>" +
-      "<script src=\"http://oas.services.bmj.com/RealMedia/ads/adstream_mjx.ads/www.bmj.com/content/347/7915.toc/1716469929@Middle1,Middle2,Top,Top2?\" language=\"JavaScript1.1\"></script>\n" + 
+      "  <link type=\"text/css\" media=\"all\" rel=\"stylesheet\" href=\"/sites/default/themes/bmj/the_bmj/css/fonts.css\">\n\n\n\n\n\n" + 
       "</head>" +
       "<body>text</body>" +
       "</html>";

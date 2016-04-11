@@ -159,21 +159,21 @@ public class TestBMJDrupalPlugin extends LockssTestCase {
     // toc page for an issue
     shouldCacheTest(ROOT_URL + "content/321/7915.toc", true, au);
     shouldCacheTest(ROOT_URL + "content/321/7915", true, au);
-    shouldCacheTest(ROOT_URL + "content/347/7915.toc", false, au);
+    shouldCacheTest(ROOT_URL + "content/347/7915.toc", true, au);
     // article files
     shouldCacheTest(ROOT_URL + "content/321/bmj.f6056.long", true, au);
     shouldCacheTest(ROOT_URL + "content/321/bmj.f4270", true, au);
-    shouldCacheTest(ROOT_URL + "content/321/bmj.f4270.full", true, au);
+    shouldCacheTest(ROOT_URL + "content/321/bmj.f4270.full", false, au);
     shouldCacheTest(ROOT_URL + "content/321/bmj.f4270.full.pdf", true, au);
     shouldCacheTest(ROOT_URL + "content/321/bmj.f4270.full.pdf+html", true, au);
     // only for data supplements
     shouldCacheTest(ROOT_URL + "content/347/bmj.f4547/related", true, au);
     
-    shouldCacheTest(ROOT_URL + "content/suppl/2014/05/16/bmj.f6123.DC1", true, au);
-    shouldCacheTest(ROOT_URL + "highwire/markup/185154/expansion", true, au);
+    shouldCacheTest(ROOT_URL + "content/suppl/2014/05/16/bmj.f6123.DC1", false, au);
+    shouldCacheTest(ROOT_URL + "highwire/markup/185154/expansion", false, au);
     
-    shouldCacheTest(ROOT_URL + "sites/default/themes/bmj/the_bmj/css/fonts.css", true, au);
-    shouldCacheTest(ROOT_URL + "sites/default/files/cdn/css/http/css_nZpqy9LysFSwGKJ7v4z11U9YB9kpVSWL_JhlIW3O5FI.css", true, au);
+    shouldCacheTest(ROOT_URL + "sites/default/themes/bmj/the_bmj/css/fonts.css", false, au);
+    shouldCacheTest(ROOT_URL + "sites/default/files/cdn/css/http/css_nZpqy9LysFSwGKJ7v4z11U9YB9kpVSWL_JhlIW3O5FI.css", false, au);
     
     // should not get crawled - LOCKSS
     shouldCacheTest("http://lockss.stanford.edu", false, au);
@@ -189,7 +189,7 @@ public class TestBMJDrupalPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "panels_ajax_tab/bmj_rapid_responses_form/node:185147/1", false, au);
     shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_bmj_tab_art/node:725123/1", false, au);
     shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_bmj_tab_info/node:728958/1", false, au);
-    shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_bmj_tab_related_art/node:735423/1", true, au);
+    shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_bmj_tab_related_art/node:735423/1", false, au);
     shouldCacheTest(ROOT_URL + "panels_ajax_tab/jnl_bmj_tab_peer_review/node:735423/1", false, au);
     shouldCacheTest(ROOT_URL + "", false, au);
   }
