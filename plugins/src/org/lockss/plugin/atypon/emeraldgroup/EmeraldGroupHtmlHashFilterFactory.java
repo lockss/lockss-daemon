@@ -71,10 +71,21 @@ public class EmeraldGroupHtmlHashFilterFactory
                   }
                 }
               }
+            } else if (HtmlNodeFilters.tagWithAttributeRegex("a", "href", 
+                                                      "/doi/book/").accept(node)) {
+            // book manifest page has single doi/book ref whose parent is just the <body> element
+            // http://emeraldinsight.com/clockss/eisbn/9780080549910
+              Node liParent = node.getParent();
+              if (liParent instanceof BodyTag) {
+                return true;
+              }  
             }
             return false;
           }
         },
+        // book - landing page main contents chapter list and synopsis)
+        // http://emeraldinsight.com/doi/book/10.1108/9780080549910
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBookDetailsWidget"),
         // toc - contents only
         // http://www.emeraldinsight.com/toc/aaaj/26/8
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
