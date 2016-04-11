@@ -130,7 +130,7 @@ public class SpringerLinkJournalsCrawlSeed extends BaseSpringerLinkCrawlSeed {
  * consitent with the href links within the article pages
  */
   @Override
-  protected List<String> convertDoisToUrls(List<String> dois) {
+  protected List<String> convertDoisToUrls(Collection<String> dois) {
     List<String> urls = new ArrayList<String>();
     for(String doi:dois) {
       // Encode the doi, then revert the FIRST %2F (slash) back to a "/":

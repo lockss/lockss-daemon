@@ -322,7 +322,7 @@ public abstract class BaseSpringerLinkCrawlSeed extends BaseCrawlSeed {
           @Override
           public void consume() throws IOException {
             // Apply link extractor to URL and output results into a list
-            final List<String> partial = new ArrayList<String>();
+            final Set<String> partial = new LinkedHashSet<String>();
             try {
               String au_cset = AuUtil.getCharsetOrDefault(fud.headers);
               String cset = CharsetUtil.guessCharsetFromStream(fud.input,au_cset);
@@ -395,6 +395,6 @@ public abstract class BaseSpringerLinkCrawlSeed extends BaseCrawlSeed {
   }
   
 
-  protected abstract List<String> convertDoisToUrls(List<String> dois);
+  protected abstract List<String> convertDoisToUrls(Collection<String> dois);
   
 }
