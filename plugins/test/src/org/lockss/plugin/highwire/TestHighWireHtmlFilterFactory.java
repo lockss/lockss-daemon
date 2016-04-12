@@ -96,7 +96,7 @@ public class TestHighWireHtmlFilterFactory extends LockssTestCase {
       "<table class=\"content_box_outer_table\" align=\"right\">" +
       "  <tr><td>xx" +
       "<!-- beginning of inner table -->"+
-      "<table class=\"content_box_inner_table\">" +
+      "<table class=\"content_box_inner\">" +
       "   <tr><td width=\"4\" class=\"content_box_arrow\" valign=\"top\"><img alt=\"Right arrow\" width=\"4\" height=\"11\" border=\"0\" src=\"/icons/shared/misc/arrowTtrim.gif\" /></td><td class=\"content_box_item\">" +
       "             <strong><a target=\"_blank\" href=\"http://scholar.google.com/scholar?q=%22author%3AM. L.+author%3AWahl%22\">" +
       "             Articles by Wahl, M. L.</a></strong></td></tr>" +
@@ -109,6 +109,17 @@ public class TestHighWireHtmlFilterFactory extends LockssTestCase {
       "           /cgi/content/abstract/59/1/73" +
       "         &link_type=GOOGLESCHOLARRELATED\">Search for Related Content</a></strong>" +
       "           </td></tr>    " +
+      "not found</td></tr></table>yy</td></tr></table>zz", 
+      // lowestLevelMatchFilter(HtmlNodeFilters.tagWithText("table", "Citing Articles", false)),
+      "<table class=\"content_box_outer_table\" align=\"right\">" +
+      "  <tr><td>xx" +
+      "<!-- beginning of inner table -->" +
+      "<table cellspacing=\"0\" cellpadding=\"0\" width=\"140\" border=\"0\" marginwidth=\"0\" marginheight=\"0\" leftmargin=\"0\" topmargin=\"0\">" +
+      "  <tbody>" +
+      "<tr><td colspan=\"2\" height=\"20\" valign=\"middle\"><strong>&nbsp;Citing Articles</strong></td></tr>\n" +
+      "<tr><td valign=\"TOP\" width=\"5\"></td><td valign=\"top\"><a href=\"/foo\" class=\"contentbox\">Citing articles on Web of Science (5)</a></td></tr>\n" +
+      "<tr><td valign=\"TOP\" width=\"5\"></td><td valign=\"top\"><a href=\"/cgi/alerts/ctalert\" class=\"contentbox\">Contact me when this article is cited</a></td></tr>\n" +
+      "  </tbody>" +
       "not found</td></tr></table>yy</td></tr></table>zz", 
       // Contains the current year (e.g. Oxford University Press)
       "<div id = \"copyright\"></div>xxyyzz",

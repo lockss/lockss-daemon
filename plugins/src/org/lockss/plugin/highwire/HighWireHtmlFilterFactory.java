@@ -86,6 +86,7 @@ public class HighWireHtmlFilterFactory implements FilterFactory {
         // to be an instanceof CompositeTag, <strong> is not a CompositeTag, 
         //   HtmlNodeFilters.tagWithText("strong", "related", true),
         HtmlNodeFilters.lowestLevelMatchFilter(HtmlNodeFilters.tagWithText("table", "Related Content", false)),
+        HtmlNodeFilters.lowestLevelMatchFilter(HtmlNodeFilters.tagWithText("table", "Citing Articles", false)),
         // Contains the current year (e.g. Oxford University Press)
         HtmlNodeFilters.tagWithAttribute("div", "id", "copyright"),
         // Contains the current year (e.g. SAGE Publications)
