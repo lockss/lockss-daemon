@@ -1515,7 +1515,7 @@
         eissn = 2168-6602
       >
   
-        param[base_url] = http://ajh.sagepub.com/
+        param[base_url] = http://ahp.sagepub.com/
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
   
