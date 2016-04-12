@@ -16,7 +16,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>53</string>
+    <string>54</string>
   </entry>
   <!--  This is a list of OJS2 Child plugins - be sure to update
         the child's plugin_parent_version number to match, then
@@ -38,11 +38,11 @@
     <map>
       <entry>
         <string>Poll</string>
-        <string>25</string>
+        <string>26</string>
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>8</string>
+        <string>9</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -60,7 +60,10 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sindex.php/%s/gateway/lockss?year=%d", base_url, journal_id, year</string>
+    <list>
+      <string>"%sindex.php/%s/gateway/lockss?year=%d", to_http(base_url), journal_id, year</string>
+      <string>"%sindex.php/%s/gateway/lockss?year=%d", to_https(base_url), journal_id, year</string>
+    </list>
   </entry>
   <entry>
    <string>au_feature_urls</string>
@@ -129,17 +132,17 @@
     <string>au_crawlrules</string>
     <list>
       <!-- all content from CDN -->
-      <string>1,"^https?://(.+[.]cloudfront[.]net|cdn[.]mathjax[.]org|fonts[.]gstatic[.]com)/."</string>
+      <string>1,"^https?://(.+\.cloudfront\.net|cdn\.mathjax\.org|.+\.(gstatic|googleapis|jquery)\.com)/."</string>
       <!-- new - making index.php and journal_id optional, removed [0-9]+ for some rules -->
-      <string>1,"^https?://%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f)$", base_url_host</string>
-      <string>4,"^%s", base_url</string>
-      <string>1,"^%s(index\.php/)?(%s/)?(gateway/lockss\?year=%d|about/editorialPolicies)$", base_url, journal_id, year</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?)([?]((itok|v)=)?[^&amp;]+)?$", url_host(base_url)</string>
+      <string>4,"^https?://%s/", url_host(base_url)</string>
+      <string>1,"^https?://%s/(index\.php/)?(%s/)?(gateway/lockss\?year=%d|about/editorialPolicies)$", url_host(base_url), journal_id, year</string>
       <string>2,"\?acceptCookies="</string>
       <string>2,"/([^.?/]+)/\1/\1/"</string>
-      <string>2,"^%s(index\.php/)?(%s/)?(article|issue)/viewFile/[0-9]+(/[0-9]+)?/%%20http:", base_url, journal_id</string>
-      <string>1,"^%s(index\.php/)?(%s/)?(article|issue)/(download(SuppFile)?|view(Article|File|(Download|PDF)Interstitial|RST)?)/", base_url, journal_id</string>
-      <string>1,"^%s(index\.php/)?(%s/)?rt/(bio|findingReferences|metadata|printerFriendly|suppFileMetadata|suppFiles)/", base_url, journal_id</string>
-      <string>1,"^%splugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=", base_url</string>
+      <string>2,"^https?://%s/(index\.php/)?(%s/)?(article|issue)/viewFile/[0-9]+(/[0-9]+)?/%%20http:", url_host(base_url), journal_id</string>
+      <string>1,"^https?://%s/(index\.php/)?(%s/)?(article|issue)/(download(SuppFile)?|view(Article|File|(Download|PDF)Interstitial|RST)?)/", url_host(base_url), journal_id</string>
+      <string>1,"^https?://%s/(index\.php/)?(%s/)?rt/(bio|findingReferences|metadata|printerFriendly|suppFileMetadata|suppFiles)/", url_host(base_url), journal_id</string>
+      <string>1,"^https?://%s/plugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
@@ -207,18 +210,35 @@
     <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
          org.lockss.crawler.allowedPluginPermittedHosts= -->
     <string>au_permitted_host_pattern</string>
-    <string>".*[.]cloudfront[.]net|cdn[.]mathjax[.]org|fonts[.]gstatic[.]com"</string>
+    <list>
+      <string>.+\.cloudfront\.net</string>
+      <string>.+\.mathjax\.org</string>
+      <string>.+\.gstatic\.com</string>
+      <string>.+\.googleapis\.com</string>
+      <string>.+\.jquery\.com</string>
+    </list>
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
-    <string>/(lib|site|images|js|public|ads)/.+[.](css|png|gif|js)$</string>
+    <string>/(lib|site|images|js|public|ads)/.+[.](css|gif|png|jpe?g|js)([?]((itok|v)=)?[^&amp;]+)?$</string>
   </entry>
   <entry>
-    <string>au_exclude_urls_from_poll_results_pattern</string>
-    <string>/(lib|site|images|js|public|ads)/.+[.](css|png|gif|js)$</string>
+    <!-- these will not count towards poll results but will replicate from peer if above -->
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>"/(lib|site|images|js|public|ads)/.+[.](css|gif|png|jpe?g|js)([?]((itok|v)=)?[^&amp;]+)?$", 0</string>
+    </list>
   </entry>
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.ojs2.OJS2UrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.ojs2.HttpToHttpsUtil$HttpToHttpsUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.ojs2.HttpToHttpsUtil$HttpToHttpsUrlFetcherFactory</string>
   </entry>
 </map>

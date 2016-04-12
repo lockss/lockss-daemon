@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,10 +36,9 @@ import org.apache.commons.lang.StringUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 
-public class OJS2UrlNormalizer implements UrlNormalizer {
+public class OJS2UrlNormalizer extends HttpToHttpsUtil.BaseUrlHttpHttpsUrlNormalizer {
 
-  public String normalizeUrl(String url,
-                             ArchivalUnit au)
+  public String additionalNormalization(String url, ArchivalUnit au)
       throws PluginException {
     // EU-style cookies disclosure banner e.g. http://ojs.statsbiblioteket.dk/
     return StringUtils.substringBeforeLast(url, "?acceptCookies=1");

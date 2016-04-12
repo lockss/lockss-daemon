@@ -41,6 +41,7 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.projmuse.HttpToHttpsUtil;
 
 /*
  * OJS2HtmlMetadataExtractorFactory extracts metadata from each article.
@@ -100,6 +101,13 @@ public class OJS2HtmlMetadataExtractorFactory implements
       
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
+      String url = am.get(MetadataField.FIELD_ACCESS_URL);
+      ArchivalUnit au = cu.getArchivalUnit();
+      if (url == null || url.isEmpty() || !au.makeCachedUrl(url).hasContent()) {
+        url = cu.getUrl();
+      }
+      am.replace(MetadataField.FIELD_ACCESS_URL,
+                 HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(au, url));
       return am;
       
     } // extract

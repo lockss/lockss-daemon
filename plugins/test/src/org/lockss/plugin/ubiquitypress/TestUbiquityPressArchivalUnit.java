@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.ubiquitypress;
 
-import java.io.File;
 import java.net.URL;
 import java.util.Properties;
 import org.lockss.config.Configuration;
@@ -41,7 +40,6 @@ import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.BaseCachedUrlSet;
-import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.plugin.definable.*;
 
 public class TestUbiquityPressArchivalUnit extends LockssTestCase {
@@ -54,7 +52,7 @@ public class TestUbiquityPressArchivalUnit extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = setUpDiskSpace();
+    setUpDiskSpace();
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getHashService();

@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>45</string>
+    <string>54</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -35,6 +35,10 @@
         <string>6</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sindex.php/%s/gateway/lockss?year=%d", base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>au_url_normalizer</string>

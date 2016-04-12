@@ -212,6 +212,17 @@ public class TestOJS2Plugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "j_id/article/view/23854/Background_files/Background_files/Background_files/filelist.xml", false, au);
     shouldCacheTest(ROOT_URL + "j_id/article/view/23854/Background_files/Background_files/Background_files/Background_files/filelist.xml", false, au);
     
+    shouldCacheTest(ROOT_URL + "modules/user/user.css?nzdhiu", true, au);
+    shouldCacheTest(ROOT_URL + "modules/user/user.css?nzdhiu&id=1", false, au);
+    shouldCacheTest(ROOT_URL + "sites/all/modules/contrib/views/css/views.css?nzdhiu", true, au);
+    shouldCacheTest(ROOT_URL + "misc/jquery.js?v=1.4.4", true, au);
+    shouldCacheTest(ROOT_URL + "misc/jquery.js?v=1.4.4&id=1", false, au);
+    shouldCacheTest(ROOT_URL + "sites/files/styles/journals/cover%20%282%29_0.png?itok=qGTU4GfX", true, au);
+    shouldCacheTest(ROOT_URL + "sites/files/styles/journals/cover%20%282%29_0.png?itok=qGTU4GfX&v=1.1", false, au);
+    shouldCacheTest(ROOT_URL + "sites/themes/js/j_id.js?nzdhiu", true, au);
+    shouldCacheTest(ROOT_URL + "sites/themes/js/j_id.js?nzdhiu&v=1.2", false, au);
+    /*
+     */
   }
   
   private void shouldCacheTest(String url, boolean shouldCache, ArchivalUnit au) {

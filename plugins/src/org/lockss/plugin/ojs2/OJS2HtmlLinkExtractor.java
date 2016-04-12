@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.ojs2;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -58,6 +59,25 @@ public class OJS2HtmlLinkExtractor extends GoslingHtmlLinkExtractor {
   
   protected static final Pattern JLA_ARTICLE_PATTERN = Pattern.compile(
       "(http://www[.]logicandanalysis[.]org/index.php/jla/article/view/[\\d]+)/[\\d]+$");
+  
+  @Override
+  public void extractUrls(final ArchivalUnit au, InputStream in, String encoding, final String srcUrl,
+      final Callback cb) throws IOException {
+    // TODO Auto-generated method stub
+    super.extractUrls(au, in, encoding, srcUrl,
+        new Callback() {
+          @Override
+          public void foundLink(String url) {
+            if (au != null) {
+              if (HttpToHttpsUtil.UrlUtil.isSameHost(srcUrl, url)) {
+                url = HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(au, url);
+              }
+            }
+            cb.foundLink(url);
+          }
+        }
+    );
+  }
   
   @Override
   protected String extractLinkFromTag(StringBuffer link,

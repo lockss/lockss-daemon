@@ -1,10 +1,10 @@
 /*
- * $Id$
+ * $Id: OJS2HtmlFilterFactory.java 43329 2015-07-31 18:27:18Z thib_gc $
  */
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -74,7 +74,10 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
   protected static NodeFilter[] baseFilters = new NodeFilter[] {
     // Boilerplate
     HtmlNodeFilters.comment(),
+    // the order of <meta> tags changes capriciously, which slows down testing
+    HtmlNodeFilters.tag("head"),
     HtmlNodeFilters.tag("style"),
+    // Site customizations often involve Javascript (e.g. Google Analytics), which can change over time
     HtmlNodeFilters.tag("script"),
     HtmlNodeFilters.tag("noscript"),
     // No need to hash these tags in OJS sites, not content and things change
@@ -86,7 +89,8 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("div", "id", "alm"),
     HtmlNodeFilters.tagWithAttribute("div", "class", "separator"),
     HtmlNodeFilters.tagWithTextRegex("span", "Metrics powered by.+PLOS ALM", true),
-    new TagNameFilter("br"),
+    HtmlNodeFilters.tag("br"),
+    // <div id="articleSubject">
     // Some OJS sites have a tag cloud, sidebar filter above removes this tag
     // HtmlNodeFilters.tagWithAttribute("div", "id", "sidebarKeywordCloud"),
     // Some OJS sites have a subscription status area
@@ -97,10 +101,6 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("div", "id", "navbar"),
     // Popular location for sidebar customizations
     HtmlNodeFilters.tagWithAttribute("div", "id", "custom"),
-    //  the order of <meta> tags changes capriciously, which slows down testing
-    new TagNameFilter("head"),
-    // Site customizations often involve Javascript (e.g. Google Analytics), which can change over time
-    new TagNameFilter("script"),
     // Date accessed is a variable
     HtmlNodeFilters.tagWithTextRegex("div", "Date accessed: "),
     // The version of the OJS software, which can change over time, appears in a tag
