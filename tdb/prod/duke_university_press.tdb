@@ -1866,7 +1866,7 @@
 
         au < released ; 2014 ; Mediterranean Quarterly Volume 25 [Project MUSE] ; 25 >
         au < released ; 2015 ; Mediterranean Quarterly Volume 26 [Project MUSE] ; 26 >
-        au < expected ; 2016 ; Mediterranean Quarterly Volume 27 [Project MUSE] ; 27 >
+        au < manifest ; 2016 ; Mediterranean Quarterly Volume 27 [Project MUSE] ; 27 >
 
       }
 
@@ -1894,7 +1894,7 @@
       au < HighWirePressH20Plugin ; released ; 2013 ; Mediterranean Quarterly Volume 24 ; 24 >
       au < HighWirePressH20Plugin ; ready ; 2014 ; Mediterranean Quarterly Volume 25 ; 25 >
       au < HighWirePressH20Plugin ; ready ; 2015 ; Mediterranean Quarterly Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; expected ; 2016 ; Mediterranean Quarterly Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; manifest ; 2016 ; Mediterranean Quarterly Volume 27 ; 27 >
 
     }
 
@@ -3358,7 +3358,7 @@
         param[base_url] = https://muse.jhu.edu/
 
       au < released ; 2015 ; Twentieth-Century Literature Volume 61 [Project MUSE] ; 61 >
-      au < expected ; 2016 ; Twentieth-Century Literature Volume 62 [Project MUSE] ; 62 >
+      au < manifest ; 2016 ; Twentieth-Century Literature Volume 62 [Project MUSE] ; 62 >
 
       }
 
