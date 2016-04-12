@@ -34,6 +34,8 @@ package org.lockss.plugin.atypon;
 
 import java.net.URL;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringUtils;
 import org.lockss.config.Configuration;
@@ -60,6 +62,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
   private static final Logger log = Logger.getLogger(TestBaseAtyponArchivalUnit.class);
 
   static final String PLUGIN_ID = "org.lockss.plugin.atypon.BaseAtyponPlugin";
+  static final String BOOK_PLUGIN_ID = "org.lockss.plugin.atypon.BaseAtyponBooksPlugin";
   static final String PluginName = "Base Atypon Plugin";
 
   public void setUp() throws Exception {
@@ -90,6 +93,23 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     DefinableArchivalUnit au = (DefinableArchivalUnit)ap.createAu(config);
     return au;
   }
+  
+  private DefinableArchivalUnit makeBookAu(URL url, String book_eisbn)
+      throws Exception {
+
+    Properties props = new Properties();
+    props.setProperty("book_eisbn", book_eisbn);
+    if (url != null) {
+      props.setProperty(BASE_URL_KEY, url.toString());
+    }
+    Configuration config = ConfigurationUtil.fromProps(props);
+
+    DefinablePlugin ap = new DefinablePlugin();
+    ap.initPlugin(getMockLockssDaemon(),
+        BOOK_PLUGIN_ID);
+    DefinableArchivalUnit au = (DefinableArchivalUnit)ap.createAu(config);
+    return au;
+  }  
 
   public void testConstructNullUrl() throws Exception {
     try {
@@ -245,6 +265,87 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
 
     assertTrue(ABAu.shouldCrawlForNewContent(aus));
   }
+  
+  public void testPollSpecial() throws Exception {
+    ArchivalUnit FooAu = makeAu(new URL("http://www.emeraldinsight.com/"), 33, "yyyy");
+    theDaemon.getLockssRepository(FooAu);
+    theDaemon.getNodeManager(FooAu);
+
+
+    String REPAIR_REGEXP="(/(templates/jsp|(css|img|js)Jawr)/|/(css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)$)";
+    assertEquals(ListUtil.list(
+        REPAIR_REGEXP),
+        RegexpUtil.regexpCollection(FooAu.makeRepairFromPeerIfMissingUrlPatterns()));
+    
+    // make sure that's the regexp that will match to the expected url string
+    // this also tests the regexp (which is the same) for the weighted poll map
+    List <String> repairList = ListUtil.list(
+        "http://www.emeraldinsight.com.global.prod.fastly.net/jsJawr/1470752845/bundles/core.js",
+        "http://www.emeraldinsight.com.global.prod.fastly.net/jsJawr/N315410081/script.js",
+        "http://www.emeraldinsight.com.global.prod.fastly.net/wro/9pi3~product.js",
+        "http://www.emeraldinsight.com/templates/jsp/_style2/_emerald/images/access_free.jpg",
+        "http://www.emeraldinsight.com/templates/jsp/images/sfxbutton.gif",
+        "http://www.emeraldinsight.com/resources/page-builder/img/widget-placeholder.png",
+        "http://www.emeraldinsight.com/resources/page-builder/img/playPause.gif",
+        "http://www.emeraldinsight.com/pb/css/t1459270391157-v1459207566000/head_14_18_329.css");
+     Pattern p = Pattern.compile(REPAIR_REGEXP);
+     for (String urlString : repairList) {
+       Matcher m = p.matcher(urlString);
+       assertEquals(true, m.find());
+     }
+     //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
+     String notString ="http://www.emeraldinsight.com/na101/home/literatum/publisher/emerald/books/content/books/2013/9781781902868/9781781902868-007/20160215/images/small/figure1.gif";
+     Matcher m = p.matcher(notString);
+     assertEquals(false, m.find());
+
+     
+    PatternFloatMap urlPollResults = FooAu.makeUrlPollResultWeightMap();
+    assertNotNull(urlPollResults);
+    assertEquals(0.0,
+        urlPollResults.getMatch("http://www.emeraldinsight.com/resources/page-builder/img/widget-placeholder.png"),
+        .0001);
+  }
+  
+  public void testPollSpecialBooks() throws Exception {
+    ArchivalUnit FooBookAu = makeBookAu(new URL("http://www.emeraldinsight.com/"), "9780585475226");
+    theDaemon.getLockssRepository(FooBookAu);
+    theDaemon.getNodeManager(FooBookAu);
+
+
+    String REPAIR_REGEXP="(/(templates/jsp|(css|img|js)Jawr)/|/(css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)$)";
+    assertEquals(ListUtil.list(
+        REPAIR_REGEXP),
+        RegexpUtil.regexpCollection(FooBookAu.makeRepairFromPeerIfMissingUrlPatterns()));
+    
+    // make sure that's the regexp that will match to the expected url string
+    // this also tests the regexp (which is the same) for the weighted poll map
+    List <String> repairList = ListUtil.list(
+        "http://www.emeraldinsight.com.global.prod.fastly.net/jsJawr/1470752845/bundles/core.js",
+        "http://www.emeraldinsight.com.global.prod.fastly.net/jsJawr/N315410081/script.js",
+        "http://www.emeraldinsight.com.global.prod.fastly.net/wro/9pi3~product.js",
+        "http://www.emeraldinsight.com/templates/jsp/_style2/_emerald/images/access_free.jpg",
+        "http://www.emeraldinsight.com/templates/jsp/images/sfxbutton.gif",
+        "http://www.emeraldinsight.com/resources/page-builder/img/widget-placeholder.png",
+        "http://www.emeraldinsight.com/resources/page-builder/img/playPause.gif",
+        "http://www.emeraldinsight.com/pb/css/t1459270391157-v1459207566000/head_14_18_329.css");
+     Pattern p = Pattern.compile(REPAIR_REGEXP);
+     for (String urlString : repairList) {
+       Matcher m = p.matcher(urlString);
+       assertEquals(true, m.find());
+     }
+     //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
+     String notString ="http://www.emeraldinsight.com/na101/home/literatum/publisher/emerald/books/content/books/2013/9781781902868/9781781902868-007/20160215/images/small/figure1.gif";
+     Matcher m = p.matcher(notString);
+     assertEquals(false, m.find());
+
+     
+    PatternFloatMap urlPollResults = FooBookAu.makeUrlPollResultWeightMap();
+    assertNotNull(urlPollResults);
+    assertEquals(0.0,
+        urlPollResults.getMatch("http://www.emeraldinsight.com/resources/page-builder/img/widget-placeholder.png"),
+        .0001);
+  }
+
 
 
   public void testGetName() throws Exception {
