@@ -36,10 +36,12 @@ import java.io.IOException;
 import java.text.*;
 import java.util.*;
 
+import org.apache.commons.collections.ListUtils;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.crawler.CrawlSeed;
 import org.lockss.daemon.*;
+import org.lockss.daemon.PluginException.InvalidDefinition;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -51,6 +53,7 @@ public class TestOJS2CrawlSeedFactory extends LockssTestCase {
   protected MockArchivalUnit dual_mau = null;
   protected MockAuState aus = new MockAuState();
   protected MockCrawlRule crawlRule = null;
+  protected String permissionUri = "index.php/jid/about/editorialPolicies";
   protected List<String> permissionUrls;
   protected String startUrl = "http://www.example.com/index.php/jid/gateway/lockss?year=2020";
   protected List<String> startUrls;
@@ -94,6 +97,41 @@ public class TestOJS2CrawlSeedFactory extends LockssTestCase {
     } catch(IllegalArgumentException e) {
       assertMatchesRE("Valid ArchivalUnit", e.getMessage());
     }
+  }
+  
+  public void testBadPermissionUrlListThrows() 
+      throws ConfigurationException, PluginException, IOException {
+    
+    mau.setStartUrls(null);
+    mau.setPermissionUrls(null);
+    try {
+      cs.getPermissionUrls();
+      fail("null permission url list should have thrown");
+    } catch(InvalidDefinition e) {
+      assertMatchesRE("non-null permission URL list", e.getMessage());
+    }
+    
+    mau.setPermissionUrls(ListUtils.EMPTY_LIST);
+    try {
+      cs.getPermissionUrls();
+      fail("empty permission url list should have thrown");
+    } catch(InvalidDefinition e) {
+      assertMatchesRE("non-null permission URL list", e.getMessage());
+    }
+  }
+  
+  public void testPermissionUrl() 
+      throws ConfigurationException, PluginException, IOException {
+    assertEquals(startUrls, cs.getPermissionUrls());
+  }
+  
+  public void testDualPermissionUrl() 
+      throws ConfigurationException, PluginException, IOException {
+    permissionUrls = ListUtil.list("https://ejournals.library.ualberta.ca/" + permissionUri);
+    dual_mau.setPermissionUrls(permissionUrls);
+    List<String> dualUrls = ListUtil.list("http://ejournals.library.ualberta.ca/" + permissionUri,
+                                         "https://ejournals.library.ualberta.ca/" + permissionUri);
+    assertEquals(dualUrls, dual_cs.getPermissionUrls());
   }
   
   public void testStartUrl() 
