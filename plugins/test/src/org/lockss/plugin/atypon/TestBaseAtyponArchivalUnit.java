@@ -58,6 +58,10 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   static final String ROOT_URL = "http://www.BaseAtypon.com/"; //this is not a real url
   static final String ROOT_HOST = "www.BaseAtypon.com"; //this is not a real url
+  
+  // these two are currently the same, but for future possible divergence
+  static final String BASE_REPAIR_FROM_PEER_REGEXP = "(/(templates/jsp|(css|img|js)Jawr)/|/(css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$)";
+  static final String BOOK_REPAIR_FROM_PEER_REGEXP = "(/(templates/jsp|(css|img|js)Jawr)/|/(css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$)";
 
   private static final Logger log = Logger.getLogger(TestBaseAtyponArchivalUnit.class);
 
@@ -272,9 +276,9 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     theDaemon.getNodeManager(FooAu);
 
 
-    String REPAIR_REGEXP="(/(templates/jsp|(css|img|js)Jawr)/|/(css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)$)";
+    // if it changes in the plugin, you might need to change the test, so verify
     assertEquals(ListUtil.list(
-        REPAIR_REGEXP),
+        BASE_REPAIR_FROM_PEER_REGEXP),
         RegexpUtil.regexpCollection(FooAu.makeRepairFromPeerIfMissingUrlPatterns()));
     
     // make sure that's the regexp that will match to the expected url string
@@ -282,13 +286,14 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     List <String> repairList = ListUtil.list(
         "http://www.emeraldinsight.com.global.prod.fastly.net/jsJawr/1470752845/bundles/core.js",
         "http://www.emeraldinsight.com.global.prod.fastly.net/jsJawr/N315410081/script.js",
+        "http://www.emeraldinsight.com.global.prod.fastly.net/jsJawr/N315410081/script.js_v1",
         "http://www.emeraldinsight.com.global.prod.fastly.net/wro/9pi3~product.js",
         "http://www.emeraldinsight.com/templates/jsp/_style2/_emerald/images/access_free.jpg",
         "http://www.emeraldinsight.com/templates/jsp/images/sfxbutton.gif",
         "http://www.emeraldinsight.com/resources/page-builder/img/widget-placeholder.png",
         "http://www.emeraldinsight.com/resources/page-builder/img/playPause.gif",
         "http://www.emeraldinsight.com/pb/css/t1459270391157-v1459207566000/head_14_18_329.css");
-     Pattern p = Pattern.compile(REPAIR_REGEXP);
+     Pattern p = Pattern.compile(BASE_REPAIR_FROM_PEER_REGEXP);
      for (String urlString : repairList) {
        Matcher m = p.matcher(urlString);
        assertEquals(true, m.find());
@@ -301,9 +306,11 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
      
     PatternFloatMap urlPollResults = FooAu.makeUrlPollResultWeightMap();
     assertNotNull(urlPollResults);
-    assertEquals(0.0,
-        urlPollResults.getMatch("http://www.emeraldinsight.com/resources/page-builder/img/widget-placeholder.png"),
-        .0001);
+    for (String urlString : repairList) {
+      assertEquals(0.0,
+          urlPollResults.getMatch(urlString),
+          .0001);
+    }
   }
   
   public void testPollSpecialBooks() throws Exception {
@@ -312,9 +319,8 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     theDaemon.getNodeManager(FooBookAu);
 
 
-    String REPAIR_REGEXP="(/(templates/jsp|(css|img|js)Jawr)/|/(css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)$)";
     assertEquals(ListUtil.list(
-        REPAIR_REGEXP),
+        BOOK_REPAIR_FROM_PEER_REGEXP),
         RegexpUtil.regexpCollection(FooBookAu.makeRepairFromPeerIfMissingUrlPatterns()));
     
     // make sure that's the regexp that will match to the expected url string
@@ -328,7 +334,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
         "http://www.emeraldinsight.com/resources/page-builder/img/widget-placeholder.png",
         "http://www.emeraldinsight.com/resources/page-builder/img/playPause.gif",
         "http://www.emeraldinsight.com/pb/css/t1459270391157-v1459207566000/head_14_18_329.css");
-     Pattern p = Pattern.compile(REPAIR_REGEXP);
+     Pattern p = Pattern.compile(BOOK_REPAIR_FROM_PEER_REGEXP);
      for (String urlString : repairList) {
        Matcher m = p.matcher(urlString);
        assertEquals(true, m.find());
@@ -341,9 +347,12 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
      
     PatternFloatMap urlPollResults = FooBookAu.makeUrlPollResultWeightMap();
     assertNotNull(urlPollResults);
-    assertEquals(0.0,
-        urlPollResults.getMatch("http://www.emeraldinsight.com/resources/page-builder/img/widget-placeholder.png"),
-        .0001);
+    for (String urlString : repairList) {
+      assertEquals(0.0,
+          urlPollResults.getMatch(urlString),
+          .0001);
+    }
+
   }
 
 

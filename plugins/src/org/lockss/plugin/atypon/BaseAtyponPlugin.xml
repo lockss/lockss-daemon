@@ -279,14 +279,14 @@
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <!-- base_url host or cdn host + templates/jsp/. or any of (img|css|js)Jawr/
          OR /(img|css|js)/ if ends .css, .js, etc -->
-    <string>(/(templates/jsp|(css|img|js)Jawr)/|/(css|img|js|wro)/.+\.(css|gif|jpe?g|js|png)$)</string>
+    <string>(/(templates/jsp|(css|img|js)Jawr)/|/(css|img|js|wro)/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$)</string>
   </entry>
   <!-- don't worry about polling for those low-importance files that will 
        repair from peer in time (eg due to versioning, etc)  -->
    <entry>
     <string>au_url_poll_result_weight</string>
     <list>
-      <string>(/(templates/jsp|(css|img|js)Jawr)/|/(css|img|js|wro)/.+\.(css|gif|jpe?g|js|png)$), 0</string>
+      <string>(/(templates/jsp|(css|img|js)Jawr)/|/(css|img|js|wro)/.+\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$), 0</string>
     </list>
   </entry>
   <!-- GLN children require a plugin_au_config_user_msg, which is a printf -->
