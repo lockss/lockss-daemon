@@ -48,9 +48,10 @@ public class ELifeHtmlHashFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding) {
     NodeFilter[] filters = new NodeFilter[] {
-     //filter out script
+     //filter out script, noscript
      HtmlNodeFilters.tag("script"),
      HtmlNodeFilters.tagWithAttribute("header", "class", "section-header"),
+     HtmlNodeFilters.tagWithAttribute("header", "id", "section-header"),
      HtmlNodeFilters.tagWithAttribute("footer", "id", "section-footer"),
      // Do not hash responsive header (from crawl filter)
      HtmlNodeFilters.tagWithAttribute("div", "id", "region-responsive-header"),
@@ -70,6 +71,11 @@ public class ELifeHtmlHashFilterFactory implements FilterFactory {
      HtmlNodeFilters.tagWithAttribute("div", "id", "zone-header-wrapper"),
      HtmlNodeFilters.tagWithAttribute("div", "class", "page_header"),
      HtmlNodeFilters.tagWithAttribute("ul", "class", "elife-article-categories"),
+     // Remove from TOC 
+     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "form-item"),
+     // Remove the changeable portion of "Comments" section
+     HtmlNodeFilters.tagWithAttribute("div", "id", "disqus_thread")
+
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
