@@ -1,0 +1,172 @@
+{
+
+  publisher <
+    name = International Union of Crystallography
+  >
+  
+  {
+  
+    title <
+      name = Acta Crystallographica Section E: Crystallographic Communications ;
+      eissn = 2056-9890
+    >
+    
+    plugin = needs.plugin
+    #plugin = org.lockss.plugin.internationalunionofcrystallography.oai.IUCrOaiPlugin
+    param[base_url] = http://journals.iucr.org/
+    param[scripts_url] = http://scripts.iucr.org/
+    implicit < status ; year ; volume ; name ; param[au_oai_date] >
+    comment[name] = Changed the subtitle from Structure Reports Online to Crystallographic Communications, from 1600-5368 to 2056-9890
+    comment[date] = Date is a year month published date in the form yyyy-mm. Not all months have material published
+    
+    comment[continues] = Structure Reports Online 1600-5368 [2001-2014]
+    param[au_oai_set] = actacryste
+    
+    au < manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 Part 1 ; 2015-01 >
+    au < manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 Part 2 ; 2015-02 >
+    au < manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 Part 3 ; 2015-03 >
+    au < manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 Part 4 ; 2015-04 >
+    au < manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 Part 5 ; 2015-05 >
+    au < manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 Part 6 ; 2015-06 >
+    au < manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 Part 7 ; 2015-07 >
+    au < manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 Part 8 ; 2015-08 >
+    au < manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 Part 9 ; 2015-09 >
+    au < manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 Part 10 ; 2015-10 >
+    au < manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 Part 11 ; 2015-11 >
+    au < manifest ; 2015 ; 71 ; Acta Crystallographica Section E: Crystallographic Communications Volume 71 Part 12 ; 2015-12 >
+    au < manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 Part 1 ; 2016-01 >
+    au < manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 Part 2 ; 2016-02 >
+    au < manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 Part 3 ; 2016-03 >
+    au < manifest ; 2016 ; 72 ; Acta Crystallographica Section E: Crystallographic Communications Volume 72 Part 4 ; 2016-04 >
+
+  }
+
+  {
+  
+    title <
+      name = Acta Crystallographica Section E: Structure Reports Online ;
+      eissn = 1600-5368
+    >
+    
+    plugin = needs.plugin
+    #plugin = org.lockss.plugin.internationalunionofcrystallography.oai.IUCrOaiPlugin
+    param[base_url] = http://journals.iucr.org/
+    param[scripts_url] = http://scripts.iucr.org/
+    implicit < status ; year ; volume ; name ; param[au_oai_date] >
+    comment[name] = Changed the subtitle from Structure Reports Online to Crystallographic Communications, from 1600-5368 to 2056-9890
+    comment[date] = Date is a year month published date in the form yyyy-mm. Not all months have material published
+    
+    # already processed 2010-2013 on previous platform.
+    
+    comment[continued_by] = Crystallographic Communications 2056-9890 [2015-onward]
+    param[au_oai_set] = actacryste
+    
+    au < doNotProcess ; 2010 ; 66 ; Acta Crystallographica Section E: Crystallographic Communications Volume 66 Part 1 ; 2010-01 >
+    au < doNotProcess ; 2010 ; 66 ; Acta Crystallographica Section E: Crystallographic Communications Volume 66 Part 2 ; 2010-02 >
+    au < doNotProcess ; 2010 ; 66 ; Acta Crystallographica Section E: Crystallographic Communications Volume 66 Part 3 ; 2010-03 >
+    au < doNotProcess ; 2010 ; 66 ; Acta Crystallographica Section E: Crystallographic Communications Volume 66 Part 4 ; 2010-04 >
+    au < doNotProcess ; 2010 ; 66 ; Acta Crystallographica Section E: Crystallographic Communications Volume 66 Part 5 ; 2010-05 >
+    au < doNotProcess ; 2010 ; 66 ; Acta Crystallographica Section E: Crystallographic Communications Volume 66 Part 6 ; 2010-06 >
+    au < doNotProcess ; 2010 ; 66 ; Acta Crystallographica Section E: Crystallographic Communications Volume 66 Part 7 ; 2010-07 >
+    au < doNotProcess ; 2010 ; 66 ; Acta Crystallographica Section E: Crystallographic Communications Volume 66 Part 8 ; 2010-08 >
+    au < doNotProcess ; 2010 ; 66 ; Acta Crystallographica Section E: Crystallographic Communications Volume 66 Part 9 ; 2010-09 >
+    au < doNotProcess ; 2010 ; 66 ; Acta Crystallographica Section E: Crystallographic Communications Volume 66 Part 10 ; 2010-10 >
+    au < doNotProcess ; 2010 ; 66 ; Acta Crystallographica Section E: Crystallographic Communications Volume 66 Part 11 ; 2010-11 >
+    au < doNotProcess ; 2010 ; 66 ; Acta Crystallographica Section E: Crystallographic Communications Volume 66 Part 12 ; 2010-12 >
+    au < doNotProcess ; 2011 ; 67 ; Acta Crystallographica Section E: Crystallographic Communications Volume 67 Part 1 ; 2011-01 >
+    au < doNotProcess ; 2011 ; 67 ; Acta Crystallographica Section E: Crystallographic Communications Volume 67 Part 2 ; 2011-02 >
+    au < doNotProcess ; 2011 ; 67 ; Acta Crystallographica Section E: Crystallographic Communications Volume 67 Part 3 ; 2011-03 >
+    au < doNotProcess ; 2011 ; 67 ; Acta Crystallographica Section E: Crystallographic Communications Volume 67 Part 4 ; 2011-04 >
+    au < doNotProcess ; 2011 ; 67 ; Acta Crystallographica Section E: Crystallographic Communications Volume 67 Part 5 ; 2011-05 >
+    au < doNotProcess ; 2011 ; 67 ; Acta Crystallographica Section E: Crystallographic Communications Volume 67 Part 6 ; 2011-06 >
+    au < doNotProcess ; 2011 ; 67 ; Acta Crystallographica Section E: Crystallographic Communications Volume 67 Part 7 ; 2011-07 >
+    au < doNotProcess ; 2011 ; 67 ; Acta Crystallographica Section E: Crystallographic Communications Volume 67 Part 8 ; 2011-08 >
+    au < doNotProcess ; 2011 ; 67 ; Acta Crystallographica Section E: Crystallographic Communications Volume 67 Part 9 ; 2011-09 >
+    au < doNotProcess ; 2011 ; 67 ; Acta Crystallographica Section E: Crystallographic Communications Volume 67 Part 10 ; 2011-10 >
+    au < doNotProcess ; 2011 ; 67 ; Acta Crystallographica Section E: Crystallographic Communications Volume 67 Part 11 ; 2011-11 >
+    au < doNotProcess ; 2011 ; 67 ; Acta Crystallographica Section E: Crystallographic Communications Volume 67 Part 12 ; 2011-12 >
+    au < doNotProcess ; 2012 ; 68 ; Acta Crystallographica Section E: Crystallographic Communications Volume 68 Part 1 ; 2012-01 >
+    au < doNotProcess ; 2012 ; 68 ; Acta Crystallographica Section E: Crystallographic Communications Volume 68 Part 2 ; 2012-02 >
+    au < doNotProcess ; 2012 ; 68 ; Acta Crystallographica Section E: Crystallographic Communications Volume 68 Part 3 ; 2012-03 >
+    au < doNotProcess ; 2012 ; 68 ; Acta Crystallographica Section E: Crystallographic Communications Volume 68 Part 4 ; 2012-04 >
+    au < doNotProcess ; 2012 ; 68 ; Acta Crystallographica Section E: Crystallographic Communications Volume 68 Part 5 ; 2012-05 >
+    au < doNotProcess ; 2012 ; 68 ; Acta Crystallographica Section E: Crystallographic Communications Volume 68 Part 6 ; 2012-06 >
+    au < doNotProcess ; 2012 ; 68 ; Acta Crystallographica Section E: Crystallographic Communications Volume 68 Part 7 ; 2012-07 >
+    au < doNotProcess ; 2012 ; 68 ; Acta Crystallographica Section E: Crystallographic Communications Volume 68 Part 8 ; 2012-08 >
+    au < doNotProcess ; 2012 ; 68 ; Acta Crystallographica Section E: Crystallographic Communications Volume 68 Part 9 ; 2012-09 >
+    au < doNotProcess ; 2012 ; 68 ; Acta Crystallographica Section E: Crystallographic Communications Volume 68 Part 10 ; 2012-10 >
+    au < doNotProcess ; 2012 ; 68 ; Acta Crystallographica Section E: Crystallographic Communications Volume 68 Part 11 ; 2012-11 >
+    au < doNotProcess ; 2012 ; 68 ; Acta Crystallographica Section E: Crystallographic Communications Volume 68 Part 12 ; 2012-12 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Crystallographic Communications Volume 69 Part 1 ; 2013-01 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Crystallographic Communications Volume 69 Part 2 ; 2013-02 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Crystallographic Communications Volume 69 Part 3 ; 2013-03 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Crystallographic Communications Volume 69 Part 4 ; 2013-04 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Crystallographic Communications Volume 69 Part 5 ; 2013-05 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Crystallographic Communications Volume 69 Part 6 ; 2013-06 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Crystallographic Communications Volume 69 Part 7 ; 2013-07 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Crystallographic Communications Volume 69 Part 8 ; 2013-08 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Crystallographic Communications Volume 69 Part 9 ; 2013-09 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Crystallographic Communications Volume 69 Part 10 ; 2013-10 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Crystallographic Communications Volume 69 Part 11 ; 2013-11 >
+    au < doNotProcess ; 2013 ; 69 ; Acta Crystallographica Section E: Crystallographic Communications Volume 69 Part 12 ; 2013-12 >
+    au < manifest ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 1 ; 2014-01 >
+    au < manifest ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 2 ; 2014-02 >
+    au < manifest ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 3 ; 2014-03 >
+    au < manifest ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 4 ; 2014-04 >
+    au < manifest ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 5 ; 2014-05 >
+    au < manifest ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 6 ; 2014-06 >
+    au < manifest ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 7 ; 2014-07 >
+    au < manifest ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 8 ; 2014-08 >
+    au < manifest ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 9 ; 2014-09 >
+    au < manifest ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 10 ; 2014-10 >
+    au < manifest ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 11 ; 2014-11 >
+    au < manifest ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 Part 12 ; 2014-12 >
+    # changed name and issn.
+  
+  }
+
+  {
+  
+    title <
+      name =  IUCrJ ;
+      eissn = 2052-2525 ;
+      issnl = 2052-2525
+    >
+    
+    plugin = needs.plugin
+    #plugin = org.lockss.plugin.internationalunionofcrystallography.oai.IUCrOaiPlugin
+    param[base_url] = http://journals.iucr.org/
+    param[scripts_url] = http://scripts.iucr.org/
+    implicit < status ; year ; volume ; name ; param[au_oai_date] >
+    comment[date] = Date is a year month published date in the form yyyy-mm. Not all months have material published
+    
+    param[au_oai_set] = iucrj
+    
+    
+    au < doesNotExist ; 2014 ; 1 ; IUCrJ Volume 1 Part 1 ; 2014-01 >
+    au < manifest ; 2014 ; 1 ; IUCrJ Volume 1 Part 2 ; 2014-02 >
+    au < doesNotExist ; 2014 ; 1 ; IUCrJ Volume 1 Part 3 ; 2014-03 >
+    au < manifest ; 2014 ; 1 ; IUCrJ Volume 1 Part 4 ; 2014-04 >
+    au < manifest ; 2014 ; 1 ; IUCrJ Volume 1 Part 5 ; 2014-05 >
+    au < manifest ; 2014 ; 1 ; IUCrJ Volume 1 Part 6 ; 2014-06 >
+    au < manifest ; 2014 ; 1 ; IUCrJ Volume 1 Part 7 ; 2014-07 >
+    au < manifest ; 2014 ; 1 ; IUCrJ Volume 1 Part 8 ; 2014-08 >
+    au < manifest ; 2014 ; 1 ; IUCrJ Volume 1 Part 9 ; 2014-09 >
+    au < manifest ; 2014 ; 1 ; IUCrJ Volume 1 Part 10 ; 2014-10 >
+    au < doesNotExist ; 2014 ; 1 ; IUCrJ Volume 1 Part 11 ; 2014-11 >
+    au < doesNotExist ; 2014 ; 1 ; IUCrJ Volume 1 Part 12 ; 2014-12 >
+    au < manifest ; 2015 ; 2 ; IUCrJ Volume 2 Part 1 ; 2015-01 >
+    au < manifest ; 2015 ; 2 ; IUCrJ Volume 2 Part 2 ; 2015-02 >
+    au < manifest ; 2015 ; 2 ; IUCrJ Volume 2 Part 3 ; 2015-03 >
+    au < manifest ; 2015 ; 2 ; IUCrJ Volume 2 Part 4 ; 2015-04 >
+    au < manifest ; 2015 ; 2 ; IUCrJ Volume 2 Part 5 ; 2015-05 >
+    au < manifest ; 2015 ; 2 ; IUCrJ Volume 2 Part 6 ; 2015-06 >
+    au < manifest ; 2015 ; 2 ; IUCrJ Volume 2 Part 7 ; 2015-07 >
+    au < manifest ; 2015 ; 2 ; IUCrJ Volume 2 Part 8 ; 2015-08 >
+    au < manifest ; 2015 ; 2 ; IUCrJ Volume 2 Part 9 ; 2015-09 >
+    au < manifest ; 2015 ; 2 ; IUCrJ Volume 2 Part 10 ; 2015-10 >
+    au < manifest ; 2015 ; 2 ; IUCrJ Volume 2 Part 11 ; 2015-11 >
+    au < manifest ; 2015 ; 2 ; IUCrJ Volume 2 Part 12 ; 2015-12 >
+
+  }
+}
