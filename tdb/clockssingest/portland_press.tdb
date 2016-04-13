@@ -572,42 +572,42 @@
 
     param[base_url] = http://www.bioscirep.org/
 
-    au < doNotProcess ; exists ; 1981 ; Bioscience Reports Volume 1981 ; 1981 ; >
-    au < doNotProcess ; exists ; 1982 ; Bioscience Reports Volume 1982 ; 1982 ; >
-    au < doNotProcess ; exists ; 1983 ; Bioscience Reports Volume 1983 ; 1983 ; >
-    au < doNotProcess ; exists ; 1984 ; Bioscience Reports Volume 1984 ; 1984 ; >
-    au < doNotProcess ; exists ; 1985 ; Bioscience Reports Volume 1985 ; 1985 ; >
-    au < doNotProcess ; exists ; 1986 ; Bioscience Reports Volume 1986 ; 1986 ; >
-    au < doNotProcess ; exists ; 1987 ; Bioscience Reports Volume 1987 ; 1987 ; >
-    au < doNotProcess ; exists ; 1988 ; Bioscience Reports Volume 1988 ; 1988 ; >
-    au < doNotProcess ; exists ; 1989 ; Bioscience Reports Volume 1989 ; 1989 ; >
-    au < doNotProcess ; exists ; 1990 ; Bioscience Reports Volume 1990 ; 1990 ; >
-    au < doNotProcess ; exists ; 1991 ; Bioscience Reports Volume 1991 ; 1991 ; >
-    au < doNotProcess ; exists ; 1992 ; Bioscience Reports Volume 1992 ; 1992 ; >
-    au < doNotProcess ; exists ; 1993 ; Bioscience Reports Volume 1993 ; 1993 ; >
-    au < doNotProcess ; exists ; 1994 ; Bioscience Reports Volume 1994 ; 1994 ; >
-    au < doNotProcess ; exists ; 1995 ; Bioscience Reports Volume 1995 ; 1995 ; >
-    au < doNotProcess ; exists ; 1996 ; Bioscience Reports Volume 1996 ; 1996 ; >
-    au < doNotProcess ; exists ; 1997 ; Bioscience Reports Volume 1997 ; 1997 ; >
-    au < doNotProcess ; exists ; 1998 ; Bioscience Reports Volume 1998 ; 1998 ; >
-    au < doNotProcess ; exists ; 1999 ; Bioscience Reports Volume 1999 ; 1999 ; >
-    au < exists ; exists ; 2000 ; Bioscience Reports Volume 2000 ; 2000 ; >
-    au < exists ; exists ; 2001 ; Bioscience Reports Volume 2001 ; 2001 ; >
-    au < exists ; exists ; 2002 ; Bioscience Reports Volume 2002 ; 2002 ; >
-    au < exists ; exists ; 2003 ; Bioscience Reports Volume 2003 ; 2003 ; >
-    au < exists ; exists ; 2004 ; Bioscience Reports Volume 2004 ; 2004 ; >
-    au < exists ; exists ; 2005 ; Bioscience Reports Volume 2005 ; 2005 ; >
-    au < exists ; exists ; 2006 ; Bioscience Reports Volume 2006 ; 2006 ; >
-    au < exists ; exists ; 2007 ; Bioscience Reports Volume 2007 ; 2007 ; >
-    au < exists ; exists ; 2008 ; Bioscience Reports Volume 2008 ; 2008 ; >
-    au < exists ; exists ; 2009 ; Bioscience Reports Volume 2009 ; 2009 ; >
-    au < exists ; exists ; 2010 ; Bioscience Reports Volume 2010 ; 2010 ; >
-    au < exists ; exists ; 2011 ; Bioscience Reports Volume 2011 ; 2011 ; >
-    au < doNotProcess ; doNotProcess ; 2012 ; Bioscience Reports Volume 2012 ; 2012 ; >
-    au < doNotProcess ; doNotProcess ; 2013 ; Bioscience Reports Volume 2013 ; 2013 ; >
-    au < exists ; exists ; 2014 ; Bioscience Reports Volume 2014 ; 2014 ; >
-    au < exists ; exists ; 2015 ; Bioscience Reports Volume 2015 ; 2015 ; >
-    au < exists ; exists ; 2016 ; Bioscience Reports Volume 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 1981 ; Bioscience Reports Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 1982 ; Bioscience Reports Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 1983 ; Bioscience Reports Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 1984 ; Bioscience Reports Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 1985 ; Bioscience Reports Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 1986 ; Bioscience Reports Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 1987 ; Bioscience Reports Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 1988 ; Bioscience Reports Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 1989 ; Bioscience Reports Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 1990 ; Bioscience Reports Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 1991 ; Bioscience Reports Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 1992 ; Bioscience Reports Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 1993 ; Bioscience Reports Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 1994 ; Bioscience Reports Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 1995 ; Bioscience Reports Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 1996 ; Bioscience Reports Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 1997 ; Bioscience Reports Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 1998 ; Bioscience Reports Volume 18 ; 18 ; >
+    au < doNotProcess ; exists ; 1999 ; Bioscience Reports Volume 19 ; 19 ; >
+    au < exists ; exists ; 2000 ; Bioscience Reports Volume 20 ; 20 ; >
+    au < exists ; exists ; 2001 ; Bioscience Reports Volume 21 ; 21 ; >
+    au < exists ; exists ; 2002 ; Bioscience Reports Volume 22 ; 22 ; >
+    au < exists ; exists ; 2003 ; Bioscience Reports Volume 23 ; 23 ; >
+    au < exists ; exists ; 2004 ; Bioscience Reports Volume 24 ; 24 ; >
+    au < exists ; exists ; 2005 ; Bioscience Reports Volume 25 ; 25 ; >
+    au < exists ; exists ; 2006 ; Bioscience Reports Volume 26 ; 26 ; >
+    au < exists ; exists ; 2007 ; Bioscience Reports Volume 27 ; 27 ; >
+    au < exists ; exists ; 2008 ; Bioscience Reports Volume 28 ; 28 ; >
+    au < exists ; exists ; 2009 ; Bioscience Reports Volume 29 ; 29 ; >
+    au < exists ; exists ; 2010 ; Bioscience Reports Volume 30 ; 30 ; >
+    au < exists ; exists ; 2011 ; Bioscience Reports Volume 31 ; 31 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Bioscience Reports Volume 32 ; 32 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Bioscience Reports Volume 33 ; 33 ; >
+    au < exists ; exists ; 2014 ; Bioscience Reports Volume 34 ; 34 ; >
+    au < exists ; exists ; 2015 ; Bioscience Reports Volume 35 ; 35 ; >
+    au < exists ; exists ; 2016 ; Bioscience Reports Volume 36 ; 36 ; >
 
   }
 
@@ -643,23 +643,23 @@
     au < doNotProcess ; exists ; 1997 ; Clinical Science Volume 1997 ; 1997 ; >
     au < doNotProcess ; exists ; 1998 ; Clinical Science Volume 1998 ; 1998 ; >
     au < doNotProcess ; exists ; 1999 ; Clinical Science Volume 1999 ; 1999 ; >
-    au < exists ; exists ; 2000 ; Clinical Science Volume 2000 ; 2000 ; >
-    au < exists ; exists ; 2001 ; Clinical Science Volume 2001 ; 2001 ; >
-    au < exists ; exists ; 2002 ; Clinical Science Volume 2002 ; 2002 ; >
-    au < exists ; exists ; 2003 ; Clinical Science Volume 2003 ; 2003 ; >
-    au < exists ; exists ; 2004 ; Clinical Science Volume 2004 ; 2004 ; >
-    au < exists ; exists ; 2005 ; Clinical Science Volume 2005 ; 2005 ; >
-    au < exists ; exists ; 2006 ; Clinical Science Volume 2006 ; 2006 ; >
-    au < exists ; exists ; 2007 ; Clinical Science Volume 2007 ; 2007 ; >
-    au < exists ; exists ; 2008 ; Clinical Science Volume 2008 ; 2008 ; >
-    au < exists ; exists ; 2009 ; Clinical Science Volume 2009 ; 2009 ; >
-    au < exists ; exists ; 2010 ; Clinical Science Volume 2010 ; 2010 ; >
-    au < exists ; exists ; 2011 ; Clinical Science Volume 2011 ; 2011 ; >
-    au < doNotProcess ; doNotProcess ; 2012 ; Clinical Science Volume 2012 ; 2012 ; >
-    au < doNotProcess ; doNotProcess ; 2013 ; Clinical Science Volume 2013 ; 2013 ; >
-    au < exists ; exists ; 2014 ; Clinical Science Volume 2014 ; 2014 ; >
-    au < exists ; exists ; 2015 ; Clinical Science Volume 2015 ; 2015 ; >
-    au < exists ; exists ; 2016 ; Clinical Science Volume 2016 ; 2016 ; >
+    au < exists ; exists ; 2000 ; Clinical Science Volume 114 ; 114 ; >
+    au < exists ; exists ; 2001 ; Clinical Science Volume 115 ; 115 ; >
+    au < exists ; exists ; 2002 ; Clinical Science Volume 116 ; 116 ; >
+    au < exists ; exists ; 2003 ; Clinical Science Volume 117 ; 117 ; >
+    au < exists ; exists ; 2004 ; Clinical Science Volume 118 ; 118 ; >
+    au < exists ; exists ; 2005 ; Clinical Science Volume 119 ; 119 ; >
+    au < exists ; exists ; 2006 ; Clinical Science Volume 120 ; 120 ; >
+    au < exists ; exists ; 2007 ; Clinical Science Volume 121 ; 121 ; >
+    au < exists ; exists ; 2008 ; Clinical Science Volume 122 ; 122 ; >
+    au < exists ; exists ; 2009 ; Clinical Science Volume 123 ; 123 ; >
+    au < exists ; exists ; 2010 ; Clinical Science Volume 124 ; 124 ; >
+    au < exists ; exists ; 2011 ; Clinical Science Volume 125 ; 125 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Clinical Science Volume 126 ; 126 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Clinical Science Volume 127 ; 127 ; >
+    au < exists ; exists ; 2014 ; Clinical Science Volume 128 ; 128 ; >
+    au < exists ; exists ; 2015 ; Clinical Science Volume 129 ; 129 ; >
+    au < exists ; exists ; 2016 ; Clinical Science Volume 130 ; 130 ; >
 
   }
   
