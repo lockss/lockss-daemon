@@ -111,8 +111,7 @@ public class TestELifeHtmlHashFilterFactory extends LockssTestCase {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withStuffToHashOut), Constants.DEFAULT_ENCODING);
     String str = StringUtil.fromInputStream(actIn);
-    System.out.println(str);
-    System.out.println(withoutStuffToHashOut);
+
     assertEquals(withoutStuffToHashOut, str);
     
   }
@@ -120,8 +119,7 @@ public class TestELifeHtmlHashFilterFactory extends LockssTestCase {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withCommentSection), Constants.DEFAULT_ENCODING);
     String str = StringUtil.fromInputStream(actIn);
-    System.out.println(str);
-    System.out.println(withoutCommentSection);
+
     assertEquals(withoutCommentSection, str);
     
   }
