@@ -86,6 +86,7 @@ public class TestOJS2CrawlSeedFactory extends LockssTestCase {
     mau.setConfiguration(config);
     csf = new OJS2CrawlSeedFactory();
     cs = csf.createCrawlSeed(new MockCrawler().new MockCrawlerFacade(mau));
+    // currently the only host that causes a special CrawlSeed to be created is ejournals.library.ualberta.ca
     config.put(ConfigParamDescr.BASE_URL.getKey(), "https://ejournals.library.ualberta.ca/");
     dual_mau.setConfiguration(config);
     dual_cs = csf.createCrawlSeed(new MockCrawler().new MockCrawlerFacade(dual_mau));
@@ -142,9 +143,9 @@ public class TestOJS2CrawlSeedFactory extends LockssTestCase {
   public void testDualStartUrl() 
       throws ConfigurationException, PluginException, IOException {
     dual_mau.setStartUrls(ListUtil.list("https://ejournals.library.ualberta.ca/index.php/jid/gateway/lockss?year=2020"));
-    List<String> startUrls = ListUtil.list("http://ejournals.library.ualberta.ca/index.php/jid/gateway/lockss?year=2020", 
+    List<String> dualUrls = ListUtil.list("http://ejournals.library.ualberta.ca/index.php/jid/gateway/lockss?year=2020", 
                                           "https://ejournals.library.ualberta.ca/index.php/jid/gateway/lockss?year=2020");
-    assertEquals(startUrls, dual_cs.getStartUrls());
+    assertEquals(dualUrls, dual_cs.getStartUrls());
   }
   
   public void testIsFailOnStartUrl() {
