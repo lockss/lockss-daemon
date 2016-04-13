@@ -52,8 +52,4 @@
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.highwire.aaas.AAASHtmlCrawlFilterFactory</string>
   </entry>
-  <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.highwire.aaas.AAASHtmlHashFilterFactory</string>
-  </entry>
 </map>

@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>22</string>
+    <string>23</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>28</string>
+    <string>33</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -33,7 +33,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>18</string>
+        <string>19</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -65,10 +65,6 @@
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.highwire.elife.ELifeDrupalArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.highwire.elife.ELifeDrupalHtmlHashFilterFactory</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>

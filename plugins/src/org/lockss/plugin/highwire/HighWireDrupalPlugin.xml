@@ -166,16 +166,8 @@
     </map>
   </entry>
   <entry>
-    <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalHtmlLinkExtractorFactory</string>
-  </entry>
-  <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.highwire.HighWireDrupalHtmlCrawlFilterFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalHtmlFilterFactory</string>
   </entry>
   <entry>
     <string>au_url_normalizer</string>
