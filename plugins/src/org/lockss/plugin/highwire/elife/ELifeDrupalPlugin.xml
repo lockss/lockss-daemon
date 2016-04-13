@@ -1,0 +1,98 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>ready</string>
+  </entry>
+  <!-- compare to ClockssELifeDrupalPlugin, the added entries should be in synch -->
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.highwire.elife.ELifeDrupalPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>eLife Sciences Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>22</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>28</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>3</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>18</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>5</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"eLife Sciences Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <list>
+      <string>"%slockss-manifest/%s.html", base_url, volume_name</string>
+      <string>"%slockss-manifest/elife_%s.html", base_url, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%scontent(/elife)?/[^/]+/e[^./]+([.]full([.]pdf)?)?$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.highwire.elife.ELifeDrupalArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.highwire.elife.ELifeDrupalArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.highwire.elife.ELifeDrupalHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.highwire.elife.ELifeDrupalHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>403=org.lockss.plugin.highwire.elife.ELifeDrupalHttpResponseHandler</string>
+      <string>500=org.lockss.plugin.highwire.elife.ELifeDrupalHttpResponseHandler</string>
+      <string>504=org.lockss.plugin.highwire.elife.ELifeDrupalHttpResponseHandler</string>
+    </list>
+  </entry>
+  <entry>
+    <!-- manifest to articles -->
+    <string>au_refetch_depth</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>plugin_crawl_url_comparator_factory</string>
+    <org.lockss.util.Default />
+  </entry>
+  <entry>
+    <string>au_permission_checker_factory</string>
+    <org.lockss.util.Default />
+  </entry>
+</map>
