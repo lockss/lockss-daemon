@@ -274,8 +274,17 @@ public class OJS2ArticleIteratorFactory
         LinkTag link = (LinkTag)iter.nextNode();
         CachedUrl linkCu = null;
         
+        String url = link.extractLink();
         try {
-          linkCu = au.makeCachedUrl(UrlUtil.normalizeUrl(link.extractLink(), au));
+          // Need to normalizeUrl() for HttpHttps
+          if (au != null) {
+            try {
+              url = new HttpToHttpsUtil.BaseUrlHttpHttpsUrlNormalizer().normalizeUrl(url, au);
+            } catch (PluginException pe) {
+              log.debug3("Could not create instance of BaseUrlHttpHttpsUrlNormalizer", pe);
+            }
+          }
+          linkCu = au.makeCachedUrl(UrlUtil.normalizeUrl(url, au));
         }
         catch (PluginBehaviorException pbe) {
           log.debug3("Plugin behavior exception", pbe);

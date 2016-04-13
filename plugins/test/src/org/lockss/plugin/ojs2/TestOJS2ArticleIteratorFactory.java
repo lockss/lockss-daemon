@@ -183,7 +183,7 @@ public class TestOJS2ArticleIteratorFactory extends ArticleIteratorTestCase {
       // assert article 1
       String[] actualUrls1 = { af1.getRoleUrl(ArticleFiles.ROLE_ABSTRACT),
                                af1.getRoleUrl(ArticleFiles.ROLE_ARTICLE_METADATA),
-                               af1.getFullTextUrl(),                                                                      
+                               af1.getFullTextUrl(),
                                af1.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_HTML),
                                af1.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF) };
 

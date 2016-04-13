@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -60,7 +60,7 @@ public class TestOJS2HtmlLinkExtractorFactory extends LockssTestCase {
   
   static final String testLinkInputRelPath1 = 
       "<div>\n"
-    + "  <a href=\"javascript:openRTWindow('/path/leaf');\">http://www.xyz.com/path/leaf</a>\n"
+    + "  <a href=\"javascript:openRTWindow('/path/leaf');\">https://www.xyz.com/path/leaf</a>\n"
     + "</div>";
   
   static final String testLinkInputRelPath2 = 
@@ -70,7 +70,7 @@ public class TestOJS2HtmlLinkExtractorFactory extends LockssTestCase {
   
   static final String testRefreshInputAbsPath =
       "<head>\n"
-    + "  <meta http-equiv=\"refresh\" content=\"2;url=javascript:openRTWindow('http://www.xyz.com/path/leaf');\">\n"
+    + "  <meta http-equiv=\"refresh\" content=\"2;url=javascript:openRTWindow('https://www.xyz.com/path/leaf');\">\n"
     + "</head>";
   
   static final String testRefreshInputRelPath1 =
@@ -86,9 +86,9 @@ public class TestOJS2HtmlLinkExtractorFactory extends LockssTestCase {
   static final String testMetaInput =
       "<head>\n" +
       "  <meta name=\"citation_pdf_url\"           content=\"http://www.xyz.com/index.php/edui/article/download/2850/5314\"/>\n" + 
-      "  <meta name=\"citation_fulltext_html_url\" content=\"http://www.xyz.com/index.php/edui/article/view/2850/5315\"/>\n" + 
+      "  <meta name=\"citation_fulltext_html_url\" content=\"https://www.xyz.com/index.php/edui/article/view/2850/5315\"/>\n" + 
       "  <meta name=\"citation_fulltext_html_url\" content=\"http://www.xyz.com/index.php/edui/article/view/2850/5317\"/>\n" + 
-      "  <meta name=\"citation_fulltext_html_url\" content=\"http://www.xyz.com/index.php/edui/article/view/2850/5318\"/>\n" + 
+      "  <meta name=\"citation_fulltext_html_url\" content=\"https://www.xyz.com/index.php/edui/article/view/2850/5318\"/>\n" + 
       "  <meta name=\"citation_abstract_url\"      content=\"http://www.xyz.com/index.php/edui/article/view/2850\"/>\n" + 
       "</head>";
   
@@ -98,11 +98,11 @@ public class TestOJS2HtmlLinkExtractorFactory extends LockssTestCase {
   static final String iframePdfViewerUrl =
       "<iframe width=\"100%\" height=\"100%\" webkitallowfullscreen=\"\" " + 
       "allowfullscreen=\"\" style=\"min-height: 500px;\" " +
-      "src=\"http://www.xyz.com/plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=http%3A%2F%2Fwww.xyz.com%2Findex.php%2Fedui%2Farticle%2FviewFile%2F19759%2F18125\"></iframe>";
+      "src=\"https://www.xyz.com/plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=https%3A%2F%2Fwww.xyz.com%2Findex.php%2Fedui%2Farticle%2FviewFile%2F19759%2F18125\"></iframe>";
   static final String expectedIframePdfViewerUrl1 =
       "http://www.xyz.com/index.php/edui/article/viewFile/19759/18125";
   static final String expectedIframePdfViewerUrl2 =
-      "http://www.xyz.com/plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=http%3A%2F%2Fwww.xyz.com%2Findex.php%2Fedui%2Farticle%2FviewFile%2F19759%2F18125";
+      "http://www.xyz.com/plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=https%3A%2F%2Fwww.xyz.com%2Findex.php%2Fedui%2Farticle%2FviewFile%2F19759%2F18125";
   
   
   /**

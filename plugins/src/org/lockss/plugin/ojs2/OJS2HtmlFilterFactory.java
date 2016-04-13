@@ -41,6 +41,7 @@ import org.htmlparser.filters.*;
 import org.htmlparser.tags.CompositeTag;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
+import org.lockss.filter.StringFilter;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -161,7 +162,8 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
     filteredStream.registerTag(new bTag());
     Reader filteredReader = FilterUtil.getReader(filteredStream, encoding);
-    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
+    Reader httpFilter = new StringFilter(filteredReader, "http:", "https:");
+    return new ReaderInputStream(new WhiteSpaceFilter(httpFilter));
   }
   
   /** Create an array of NodeFilters that combines the parent with the given array

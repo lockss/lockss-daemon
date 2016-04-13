@@ -63,7 +63,7 @@ public class OJS2HtmlLinkExtractor extends GoslingHtmlLinkExtractor {
   @Override
   public void extractUrls(final ArchivalUnit au, InputStream in, String encoding, final String srcUrl,
       final Callback cb) throws IOException {
-    // TODO Auto-generated method stub
+    
     super.extractUrls(au, in, encoding, srcUrl,
         new Callback() {
           @Override

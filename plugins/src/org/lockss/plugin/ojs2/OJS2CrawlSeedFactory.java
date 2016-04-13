@@ -57,9 +57,9 @@ public class OJS2CrawlSeedFactory implements CrawlSeedFactory {
   
   private static final Logger log = Logger.getLogger(OJS2CrawlSeedFactory.class);
   
-  protected static final HashSet<String> dualBaseUrlJrnls = new HashSet<String>();
+  protected static final HashSet<String> dualBaseUrlHosts = new HashSet<String>();
   static {
-    dualBaseUrlJrnls.add("ejournals.library.ualberta.ca");
+    dualBaseUrlHosts.add("ejournals.library.ualberta.ca");
   }
   
   
@@ -70,10 +70,18 @@ public class OJS2CrawlSeedFactory implements CrawlSeedFactory {
     }
     
     @Override
-    public Collection<String> doGetStartUrls()
-        throws ConfigurationException, PluginException, IOException {
-      
-      Collection<String> sUrls = super.doGetStartUrls();
+    public Collection<String> doGetPermissionUrls() throws ConfigurationException,
+        PluginException, IOException {
+      return dupUrls(super.doGetPermissionUrls());
+    }
+    
+    @Override
+    public Collection<String> doGetStartUrls() throws ConfigurationException,
+        PluginException, IOException {
+      return dupUrls(super.doGetStartUrls());
+    }
+
+    private Collection<String> dupUrls(Collection<String> sUrls) {
       Collection<String> uUrls = new ArrayList<String>(sUrls.size() * 2);
       for (Iterator<String> iter = sUrls.iterator(); iter.hasNext();) {
         String url = iter.next();
@@ -90,7 +98,7 @@ public class OJS2CrawlSeedFactory implements CrawlSeedFactory {
     try {
       String baseUrl = facade.getAu().getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
       if (baseUrl != null) {
-        if (dualBaseUrlJrnls.contains(UrlUtil.getHost(baseUrl))) {
+        if (dualBaseUrlHosts.contains(UrlUtil.getHost(baseUrl))) {
           return new DualBaseUrlCrawlSeed(facade);
         }
       }

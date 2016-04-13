@@ -104,13 +104,13 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
       "<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><script type=\"text/javascript\" " +
       "async=\"\" src=\"http://www.google-analytics.com/ga.js\"></script></head";
   private static final String scriptHtmlFiltered =
-      "<html xmlns=\"http://www.w3.org/1999/xhtml\">";
+      "<html xmlns=\"https://www.w3.org/1999/xhtml\">";
   
   private static final String dateAccessedHtml = 
     "<div class=\"separator\">" +
   		"</div><div id=\"citation\">SMITH, J., DOE, J..Article " +
   		"title that goes on for a little ways.<strong>Journal Title</strong>, North America, " +
-  		"1,may. 2010. Available at: &lt;<a href=\"http://sampleurl." +
+  		"1,may. 2010. Available at: &lt;<a href=\"https://sampleurl." +
   		"net/index.php/more/path/here\" target=\"_new\">http://sampleurl" +
   		".net/index.php/more/path/here</a>&gt;. Date accessed" +
   		": 13 Jul. 2012.</div></div><div class=\"separator\"></div>";
@@ -120,7 +120,7 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
   private static final String generatorHtml =
       "<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta name=\"generator\"></head>";
   private static final String generatorHtmlFiltered =
-      "<html xmlns=\"http://www.w3.org/1999/xhtml\">";
+      "<html xmlns=\"https://www.w3.org/1999/xhtml\">";
   
   private static final String headerImageHtml =
     "<div id=\"headerTitle\"><h1>" +
