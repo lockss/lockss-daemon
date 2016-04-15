@@ -51,7 +51,7 @@ public class TestELifeDrupalArticleIteratorFactory extends ArticleIteratorTestCa
   
   private SimulatedArchivalUnit sau;	// Simulated AU to generate content
   
-  private final String PLUGIN_NAME = "org.lockss.plugin.highwire.elife.ELifeDrupalPlugin";
+  private final String PLUGIN_NAME = "org.lockss.plugin.highwire.elife.ClockssELifeDrupalPlugin";
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String VOLUME_NAME_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   private final String BASE_URL = "http://elifesciences.org/";

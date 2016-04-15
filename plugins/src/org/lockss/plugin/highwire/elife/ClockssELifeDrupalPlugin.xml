@@ -11,7 +11,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>eLife Sciences Plugin (CLOCKSS)</string>
+    <string>eLife Sciences Plugin (retired site for CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -19,15 +19,32 @@
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.highwire.elife.ELifeDrupalPlugin</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalPlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>23</string>
+    <string>33</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>3</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>19</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>5</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"eLife Sciences Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"eLife Sciences Plugin (retired site for CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -37,17 +54,43 @@
     </list>
   </entry>
   <entry>
-    <string>au_def_pause_time</string>
-    <long>3000</long>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%scontent(/elife)?/[^/]+/e[^./]+([.]full([.]pdf)?)?$", base_url</string>
+    </list>
   </entry>
   <entry>
-    <string>au_mime_rate_limiter_map</string>
-    <map>
-      <entry>
-        <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
-        <string>1/3000</string>
-      </entry>
-    </map>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.highwire.elife.ELifeDrupalArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.highwire.elife.ELifeDrupalArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.highwire.elife.ELifeDrupalHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>403=org.lockss.plugin.highwire.elife.ELifeDrupalHttpResponseHandler</string>
+      <string>500=org.lockss.plugin.highwire.elife.ELifeDrupalHttpResponseHandler</string>
+      <string>504=org.lockss.plugin.highwire.elife.ELifeDrupalHttpResponseHandler</string>
+    </list>
+  </entry>
+  <entry>
+    <!-- manifest to articles -->
+    <string>au_refetch_depth</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>plugin_crawl_url_comparator_factory</string>
+    <org.lockss.util.Default />
+  </entry>
+  <entry>
+    <string>au_permission_checker_factory</string>
+    <org.lockss.util.Default />
   </entry>
   <entry>
     <string>clockss_override</string>

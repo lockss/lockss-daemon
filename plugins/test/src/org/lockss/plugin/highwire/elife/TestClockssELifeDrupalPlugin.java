@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,7 +45,7 @@ import org.lockss.util.ListUtil;
 import org.lockss.util.urlconn.CacheException;
 import org.lockss.util.urlconn.HttpResultMap;
 
-public class TestELifeDrupalPlugin extends LockssTestCase {
+public class TestClockssELifeDrupalPlugin extends LockssTestCase {
   
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
@@ -53,7 +53,7 @@ public class TestELifeDrupalPlugin extends LockssTestCase {
   private MockLockssDaemon theDaemon;
   private DefinablePlugin plugin;
   
-  public TestELifeDrupalPlugin(String msg) {
+  public TestClockssELifeDrupalPlugin(String msg) {
     super(msg);
   }
   
@@ -64,7 +64,7 @@ public class TestELifeDrupalPlugin extends LockssTestCase {
     theDaemon = getMockLockssDaemon();
     plugin = new DefinablePlugin();
     plugin.initPlugin(getMockLockssDaemon(),
-        "org.lockss.plugin.highwire.elife.ELifeDrupalPlugin");
+        "org.lockss.plugin.highwire.elife.ClockssELifeDrupalPlugin");
     
   }
   
@@ -97,18 +97,18 @@ public class TestELifeDrupalPlugin extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     
     String[] starturl = new String[]{
-        "http://www.example.com/lockss-manifest/2013.html",
-        "http://www.example.com/lockss-manifest/elife_2013.html",
+        "http://www.example.com/clockss-manifest/2013.html",
+        "http://www.example.com/clockss-manifest/elife_2013.html",
     };
     
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("eLife Sciences Plugin, Base URL http://www.example.com/, Volume 2013",
+    assertEquals("eLife Sciences Plugin (retired site for CLOCKSS), Base URL http://www.example.com/, Volume 2013",
         au.getName());
     assertEquals(ListUtil.fromArray(starturl), au.getStartUrls());
   }
   
   public void testGetPluginId() {
-    assertEquals("org.lockss.plugin.highwire.elife.ELifeDrupalPlugin",
+    assertEquals("org.lockss.plugin.highwire.elife.ClockssELifeDrupalPlugin",
         plugin.getPluginId());
   }
   
@@ -178,8 +178,8 @@ public class TestELifeDrupalPlugin extends LockssTestCase {
     
     // Test for pages that should get crawled or not
     // permission page/start url
-    shouldCacheTest(ROOT_URL + "lockss-manifest/2013.html", true, au);
-    shouldCacheTest(ROOT_URL + "clockss-manifest/elife_2013.html", false, au);
+    shouldCacheTest(ROOT_URL + "lockss-manifest/2013.html", false, au);
+    shouldCacheTest(ROOT_URL + "clockss-manifest/elife_2013.html", true, au);
     shouldCacheTest(ROOT_URL + "manifest/year=2013", false, au);
     // toc page for an issue, there is no issue
     shouldCacheTest(ROOT_URL + "content/1", false, au);
