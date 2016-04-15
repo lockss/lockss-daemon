@@ -13,11 +13,11 @@
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.ojs2.OJS2Plugin</string>
+    <string>org.lockss.plugin.ojs2.ClockssOJS2Plugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>45</string>
+    <string>54</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -47,10 +47,6 @@
         <string>&quot;^%sindex\.php/%s/article/download/%s\.[0-9]+/[0-9]+$&quot;, base_url, journal_id, journal_id </string>
         <string>&quot;^%s/article/view/[^/]+/[^/]+&quot;, base_url</string>
       </list>
-  </entry>
-  <entry>
-    <string>au_manifest</string>
-    <string>&quot;%sindex.php/%s/about/editorialPolicies&quot;, base_url, journal_id</string>
   </entry>
   <entry>
     <string>plugin_name</string>

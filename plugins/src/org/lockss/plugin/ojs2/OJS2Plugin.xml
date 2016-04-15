@@ -18,21 +18,21 @@
     <string>plugin_version</string>
     <string>54</string>
   </entry>
-  <!--  This is a list of OJS2 Child plugins - be sure to update
-        the child's plugin_parent_version number to match, then
-        update the child's plugin_version number:
-        ClockssOJS2Plugin.xml
-        CoActionPublishingPlugin.xml
-        ClockssCoActionPublishingPlugin.xml
-        JournalOfResearchPracticePlugin.xml      (ca.athabascau.plugin.jrp.)
-        ScholarlyExchangeOSJ2Plugin.xml          (defunct?)
-        ClockssUniversityOfAlbertaPlugin.xml     (defunct)
-        ClockssBiologicInstitutePlugin.xml       (defunct)
-        UbiquityPressPlugin.xml                  (defunct?)
-        ClockssUbiquityPressPlugin.xml           (defunct?)
+<!--
+This is a list of OJS2 Child plugins - be sure to update the child's
+plugin_parent_version number to match, then update the child's plugin_version
+number:
+
+org.lockss.plugin.ojs2.ClockssOJS2Plugin
+ca.athabascau.plugin.jrp.JournalOfResearchPracticePlugin               (coppulpln, synergiespln?)
+org.lockss.plugin.biologicinstitute.ClockssBiologicInstitutePlugin
+org.lockss.plugin.coactionpublishing.CoActionPublishingPlugin
+org.lockss.plugin.coactionpublishing.ClockssCoActionPublishingPlugin
+org.lockss.plugin.universityofalberta.ClockssUniversityOfAlbertaPlugin
+org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
         
-        Note: push plugin to coppulpln, ibictpln, synergiespln; as well as c/lockss
-   -->
+Note: also push this plugin to coppulpln, dkdemopln, ibictpln, italytestpln, synergiespln
+-->
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
