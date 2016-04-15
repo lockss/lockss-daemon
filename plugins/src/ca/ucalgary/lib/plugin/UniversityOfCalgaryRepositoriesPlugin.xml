@@ -1,0 +1,104 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing - EJ</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>ca.ucalgary.lib.plugin.UniversityOfCalgaryRepositoriesPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>University of Calgary Repositories Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry> ???
+    <string>required_daemon_version</string>
+    <string>1.67.0</string> ???
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"University of Calgary Repositories Plugin, Base URL %s, Collection ID %s", base_url, collection_id</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string> http://ahdp.lib.ucalgary.ca/lockss/thevault/index.html
+    <string>"%slockss/%s/index.html", base_url, collection_id</string>
+  </entry>
+  <entry>
+   <string>au_feature_urls</string>
+    <map>
+    <entry>
+      <string>au_title</string>
+      <list>
+        <string>"%slockss/%s/index.html", base_url, collection_id</string>
+      </list>
+    </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>collection_id</key>
+        <displayName>Collection Identifier</displayName>
+        <description>Identifier for Collection (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^https?://%s/", url_host(base_url)</string>
+      <string>1,"^https?://%s/lockss/%s/", url_host(base_url), collection_id</string>
+      <!-- Or can collect only zip (7z) content -->
+      
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^https?://%s/lockss/%s/[^/.]+\.(7z)$", url_host(base_url), collection_id</string>
+    </list>
+  </entry>
+</map>
