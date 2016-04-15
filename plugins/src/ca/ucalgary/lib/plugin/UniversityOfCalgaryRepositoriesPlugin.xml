@@ -32,10 +32,6 @@
       </entry>
     </map>
   </entry>
-  <entry> ???
-    <string>required_daemon_version</string>
-    <string>1.67.0</string> ???
-  </entry>
   <entry>
     <string>au_name</string>
     <string>"University of Calgary Repositories Plugin, Base URL %s, Collection ID %s", base_url, collection_id</string>
@@ -92,7 +88,6 @@
       <string>4,"^https?://%s/", url_host(base_url)</string>
       <string>1,"^https?://%s/lockss/%s/", url_host(base_url), collection_id</string>
       <!-- Or can collect only zip (7z) content -->
-      
     </list>
   </entry>
   <entry>
