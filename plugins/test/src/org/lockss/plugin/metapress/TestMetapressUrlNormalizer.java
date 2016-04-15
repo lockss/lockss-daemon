@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,16 +32,28 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.metapress;
 
-import org.lockss.test.LockssTestCase;
+import java.util.*;
+
+import org.lockss.test.*;
 
 public class TestMetapressUrlNormalizer extends LockssTestCase {
 
   protected MetapressUrlNormalizer norm;
   
+  protected MockArchivalUnit mau;
+
+  protected static final String START_URL = "http://www.example.com/openurl.asp?genre=volume&eissn=1234-3398&volume=83";
+  
   @Override
   public void setUp() throws Exception {
     super.setUp();
     this.norm = new MetapressUrlNormalizer();
+    this.mau = new MockArchivalUnit() {
+      @Override
+      public Collection<String> getStartUrls() {
+        return Arrays.asList(START_URL);
+      }
+    };
   }
   
   public void testNormalizeQuery() {
@@ -106,17 +118,20 @@ public class TestMetapressUrlNormalizer extends LockssTestCase {
   
   public void testNormalizeUrl() throws Exception {
     assertEquals("http://www.example.com/foo",
-                 norm.normalizeUrl("http://www.example.com/foo", null));
+                 norm.normalizeUrl("http://www.example.com/foo", mau));
     assertEquals("http://www.example.com/foo",
-                 norm.normalizeUrl("http://www.example.com/foo?", null));
+                 norm.normalizeUrl("http://www.example.com/foo?", mau));
     assertEquals("http://www.example.com/foo?ok1=good1",
-                 norm.normalizeUrl("http://www.example.com/foo?ok1=good1", null));
+                 norm.normalizeUrl("http://www.example.com/foo?ok1=good1", mau));
     assertEquals("http://www.example.com/foo?p_o=ok_p_o",
-                 norm.normalizeUrl("http://www.example.com/foo?p=badp&pi=badpi&p_o=ok_p_o&mark=badmark&sw=badsw", null));
+                 norm.normalizeUrl("http://www.example.com/foo?p=badp&pi=badpi&p_o=ok_p_o&mark=badmark&sw=badsw", mau));
     assertEquals("http://www.example.com/foo",
-                 norm.normalizeUrl("http://www.example.com/foo?p=badp&pi=badpi&mark=badmark&sw=badsw", null));
+                 norm.normalizeUrl("http://www.example.com/foo?p=badp&pi=badpi&mark=badmark&sw=badsw", mau));
     assertEquals("http://www.example.com/foo?ok1=good1&ok2=good2&ok3=good3&ok4=good4&ok5=good5&ok6=good6",
-                 norm.normalizeUrl("http://www.example.com/foo?ok1=good1&p=badp&ok2=good2&pi=badpi&ok3=good3&ok4=good4&mark=badmark&ok5=good5&sw=badsw&ok6=good6", null));
+                 norm.normalizeUrl("http://www.example.com/foo?ok1=good1&p=badp&ok2=good2&pi=badpi&ok3=good3&ok4=good4&mark=badmark&ok5=good5&sw=badsw&ok6=good6", mau));
+    // Test special case for start URL
+    assertEquals(START_URL,
+                 norm.normalizeUrl(START_URL, mau));
   }
   
 }

@@ -62,6 +62,11 @@ public class MetapressUrlNormalizer implements UrlNormalizer {
   
   @Override
   public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
+    if (au.getStartUrls().contains(url)) {
+      // DO NOT NORMALIZE THE START URL (same as the crawler's behavior)
+      return url;
+    }
+
     int questionMark = url.indexOf('?');
     if (questionMark < 0) {
       return url;
@@ -124,6 +129,14 @@ public class MetapressUrlNormalizer implements UrlNormalizer {
       sb.append(map.get(key));
     }
     return sb.toString();
+  }
+  
+  public static void main(String[] args) throws Exception {
+    UrlNormalizer norm = new MetapressUrlNormalizer();
+    for (String u : Arrays.asList("http://liverpool.metapress.com/openurl.asp?genre=volume&eissn=1478-3398&volume=83",
+                                  "http://liverpool.metapress.com/openurl.asp?eissn=1478-3398&genre=volume&volume=83")) {
+      System.out.format("from: %s%n  to: %s%n%n", u, norm.normalizeUrl(u, null));
+    }
   }
   
 }
