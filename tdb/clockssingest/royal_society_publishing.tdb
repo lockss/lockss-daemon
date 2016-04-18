@@ -80,8 +80,8 @@
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2011 ; Biographical Memoirs of Fellows of the Royal Society Volume 57 ; 57 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2012 ; Biographical Memoirs of Fellows of the Royal Society Volume 58 ; 58 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Biographical Memoirs of Fellows of the Royal Society Volume 59 ; 59 ; >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2014 ; Biographical Memoirs of Fellows of the Royal Society Volume 60 ; 60 ; >
-    au < ClockssHWDrupalPlugin ; expected ; exists ; 2015 ; Biographical Memoirs of Fellows of the Royal Society Volume 61 ; 61 ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2014 ; Biographical Memoirs of Fellows of the Royal Society Volume 60 ; 60 ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2015 ; Biographical Memoirs of Fellows of the Royal Society Volume 61 ; 61 ; >
 
   }
 
@@ -105,8 +105,8 @@
     au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2011 ; Biology Letters Volume 7 ; 7 ; >
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; Biology Letters Volume 8 ; 8 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Biology Letters Volume 9 ; 9 ; >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2014 ; Biology Letters Volume 10 ; 10 ; >
-    au < ClockssHWDrupalPlugin ; expected ; exists ; 2015 ; Biology Letters Volume 11 ; 11 ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2014 ; Biology Letters Volume 10 ; 10 ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2015 ; Biology Letters Volume 11 ; 11 ; >
 
   }
 
@@ -128,7 +128,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; frozen ; 2012 ; Interface Focus Volume 2 ; 2 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Interface Focus Volume 3 ; 3 ; >
     au < ClockssHWDrupalPlugin ; exists ; exists ; 2014 ; Interface Focus Volume 4 ; 4 ; >
-    au < ClockssHWDrupalPlugin ; expected ; exists ; 2015 ; Interface Focus Volume 5 ; 5 ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2015 ; Interface Focus Volume 5 ; 5 ; >
 
   }
   
@@ -255,9 +255,9 @@
     au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; Open Biology Volume 1 ; 1 ; >
     au < ClockssHighWirePressH20Plugin ; down ; crawling ; 2012 ; Open Biology Volume 2 ; 2 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Open Biology Volume 3 [superseded] ; 3 ; >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2013 ; Open Biology Volume 3 ; 3 ; >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2014 ; Open Biology Volume 4 ; 4 ; >
-    au < ClockssHWDrupalPlugin ; exists ; exists ; 2015 ; Open Biology Volume 5 ; 5 ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2013 ; Open Biology Volume 3 ; 3 ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2014 ; Open Biology Volume 4 ; 4 ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2015 ; Open Biology Volume 5 ; 5 ; >
     
   }
 
@@ -1274,7 +1274,7 @@
     au < ClockssHighWirePressH20Plugin ; finished ; crawling ; 2012 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 468 ; 468 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 469 ; 469 ; >
     au < ClockssHWDrupalPlugin ; exists ; exists ; 2014 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 470 ; 470 ; >
-    au < ClockssHWDrupalPlugin ; expected ; exists ; 2015 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 471 ; 471 ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2015 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 471 ; 471 ; >
 
   }
 

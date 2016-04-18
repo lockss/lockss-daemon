@@ -49,14 +49,14 @@
     
       param[base_url] = http://stke.sciencemag.org/
 
-      au < exists ; exists ; 2008 ; Science Signaling Volume 1 ; 1 ; >
-      au < exists ; exists ; 2009 ; Science Signaling Volume 2 ; 2 ; >
-      au < exists ; exists ; 2010 ; Science Signaling Volume 3 ; 3 ; >
-      au < exists ; exists ; 2011 ; Science Signaling Volume 4 ; 4 ; >
-      au < exists ; exists ; 2012 ; Science Signaling Volume 5 ; 5 ; >
-      au < exists ; exists ; 2013 ; Science Signaling Volume 6 ; 6 ; >
-      au < exists ; exists ; 2014 ; Science Signaling Volume 7 ; 7 ; >
-      au < exists ; exists ; 2015 ; Science Signaling Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2008 ; Science Signaling Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2009 ; Science Signaling Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2010 ; Science Signaling Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2011 ; Science Signaling Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2012 ; Science Signaling Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2013 ; Science Signaling Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2014 ; Science Signaling Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2015 ; Science Signaling Volume 8 ; 8 ; >
 
   }
 
@@ -76,7 +76,7 @@
       au < exists ; exists ; 2012 ; Science Translational Medicine Volume 4 ; 4 ; >
       au < exists ; exists ; 2013 ; Science Translational Medicine Volume 5 ; 5 ; >
       au < exists ; exists ; 2014 ; Science Translational Medicine Volume 6 ; 6 ; >
-      au < exists ; exists ; 2015 ; Science Translational Medicine Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2015 ; Science Translational Medicine Volume 7 ; 7 ; >
 
   }
 
@@ -89,7 +89,7 @@
     
       param[base_url] = http://advances.sciencemag.org/
 
-      au < exists ; exists ; 2015 ; Science Advances Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2015 ; Science Advances Volume 1 ; 1 ; >
 
   }
 

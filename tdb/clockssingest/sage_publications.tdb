@@ -2661,7 +2661,7 @@
       au < crawling ; exists ; 2015 ; The Annals of the American Academy of Political and Social Science Volume 662 ; 662 ; >
       au < manifest ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 663 ; 663 ; >
       au < manifest ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 664 ; 664 ; >
-      au < expected ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 665 ; 665 ; >
+      au < manifest ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 665 ; 665 ; >
       au < expected ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 666 ; 666 ; >
       au < expected ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 667 ; 667 ; >
       au < expected ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 668 ; 668 ; >
@@ -4051,8 +4051,8 @@
       pluginSuffix = ClockssHWDrupalPlugin
       param[base_url] = http://bds.sagepub.com/
 
-      au < exists ; exists ; 2014 ; Big Data & Society Volume 1 ; 1 ; >
-      au < exists ; exists ; 2015 ; Big Data & Society Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2014 ; Big Data & Society Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2015 ; Big Data & Society Volume 2 ; 2 ; >
       au < expected ; exists ; 2016 ; Big Data & Society Volume 3 ; 3 ; >
 
   }
@@ -4173,7 +4173,7 @@
       au < crawling ; exists ; 2013 ; Body & Society Volume 19 ; 19 ; >
       au < finished ; finished ; 2014 ; Body & Society Volume 20 ; 20 ; >
       au < crawling ; exists ; 2015 ; Body & Society Volume 21 ; 21 ; >
-      au < expected ; exists ; 2016 ; Body & Society Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2016 ; Body & Society Volume 22 ; 22 ; >
 
     }
 
@@ -10553,7 +10553,7 @@
       au < exists ; exists ; 2013 ; Energy & Environment Volume 24 ; 24 ; >
       au < exists ; exists ; 2014 ; Energy & Environment Volume 25 ; 25 ; >
       au < exists ; exists ; 2015 ; Energy & Environment Volume 26 ; 26 ; >
-      au < expected ; exists ; 2016 ; Energy & Environment Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2016 ; Energy & Environment Volume 27 ; 27 ; >
 
   }
 
@@ -12723,7 +12723,7 @@
       au < finished ; finished ; 2013 ; First Language Volume 33 ; 33 ; >
       au < finished ; finished ; 2014 ; First Language Volume 34 ; 34 ; >
       au < crawling ; exists ; 2015 ; First Language Volume 35 ; 35 ; >
-      au < expected ; exists ; 2016 ; First Language Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2016 ; First Language Volume 36 ; 36 ; >
 
     }
 
@@ -25158,7 +25158,7 @@
       au < exists ; exists ; 2013 ; The Journal of Law, Medicine & Ethics Volume 41 ; 41 ; >
       au < exists ; exists ; 2014 ; The Journal of Law, Medicine & Ethics Volume 42 ; 42 ; >
       au < exists ; exists ; 2015 ; The Journal of Law, Medicine & Ethics Volume 43 ; 43 ; >
-      au < expected ; exists ; 2016 ; The Journal of Law, Medicine & Ethics Volume 44 ; 44 ; >
+      au < manifest ; exists ; 2016 ; The Journal of Law, Medicine & Ethics Volume 44 ; 44 ; >
 
   }
 
@@ -29125,7 +29125,7 @@
       au < finished ; finished ; 2013 ; Journal of Visual Culture Volume 12 ; 12 ; >
       au < finished ; finished ; 2014 ; Journal of Visual Culture Volume 13 ; 13 ; >
       au < crawling ; exists ; 2015 ; Journal of Visual Culture Volume 14 ; 14 ; >
-      au < expected ; exists ; 2016 ; Journal of Visual Culture Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2016 ; Journal of Visual Culture Volume 15 ; 15 ; >
 
     }
 
@@ -32451,7 +32451,7 @@
       au < crawling ; exists ; 2013 ; New Solutions Volume 23 ; 23 ; >
       au < crawling ; exists ; 2014 ; New Solutions Volume 24 ; 24 ; >
       au < crawling ; exists ; 2015 ; New Solutions Volume 25 ; 25 ; >
-      au < expected ; exists ; 2016 ; New Solutions Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2016 ; New Solutions Volume 26 ; 26 ; >
 
   }
 
@@ -37383,9 +37383,9 @@
       pluginSuffix = ClockssHWDrupalPlugin
       param[base_url] = http://rap.sagepub.com/
 
-      au < exists ; exists ; 2014 ; Research & Politics Volume 1 ; 1 ; >
-      au < exists ; exists ; 2015 ; Research & Politics Volume 2 ; 2 ; >
-      au < expected ; exists ; 2016 ; Research & Politics Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2014 ; Research & Politics Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2015 ; Research & Politics Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2016 ; Research & Politics Volume 3 ; 3 ; >
 
   }
 
@@ -38225,10 +38225,10 @@
 
           au < doNotProcess ; exists ; 2011 ; Sage Open Volume 1 ; 1 ; >
           au < doNotProcess ; exists ; 2012 ; Sage Open Volume 2 ; 2 ; >
-          au < exists ; exists ; 2013 ; Sage Open Volume 3 ; 3 ; >
-          au < exists ; exists ; 2014 ; Sage Open Volume 4 ; 4 ; >
-          au < expected ; exists ; 2015 ; Sage Open Volume 5 ; 5 ; >
-          au < expected ; exists ; 2016 ; Sage Open Volume 6 ; 6 ; >
+          au < manifest ; exists ; 2013 ; Sage Open Volume 3 ; 3 ; >
+          au < manifest ; exists ; 2014 ; Sage Open Volume 4 ; 4 ; >
+          au < manifest ; exists ; 2015 ; Sage Open Volume 5 ; 5 ; >
+          au < manifest ; exists ; 2016 ; Sage Open Volume 6 ; 6 ; >
 
         }
 
