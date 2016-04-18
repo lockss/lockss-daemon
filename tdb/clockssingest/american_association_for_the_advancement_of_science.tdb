@@ -3,7 +3,7 @@
   publisher <
     name = American Association for the Advancement of Science ;
     info[contract] = 2015 ;
-    info[tester] = 0
+    info[tester] = 8
   >
 
   plugin = org.lockss.plugin.highwire.ClockssHWDrupalPlugin
@@ -36,6 +36,7 @@
       au < exists ; exists ; 2015 ; Science Volume 348 ; 348 ; >
       au < expected ; exists ; 2015 ; Science Volume 349 ; 349 ; >
       au < expected ; exists ; 2015 ; Science Volume 350 ; 350 ; >
+      au < expected ; exists ; 2016 ; Science Volume 351 ; 351 ; >
 
   }
 
@@ -57,6 +58,7 @@
       au < manifest ; exists ; 2013 ; Science Signaling Volume 6 ; 6 ; >
       au < manifest ; exists ; 2014 ; Science Signaling Volume 7 ; 7 ; >
       au < manifest ; exists ; 2015 ; Science Signaling Volume 8 ; 8 ; >
+      au < expected ; exists ; 2016 ; Science Signaling Volume 9 ; 9 ; >
 
   }
 
@@ -77,6 +79,7 @@
       au < exists ; exists ; 2013 ; Science Translational Medicine Volume 5 ; 5 ; >
       au < exists ; exists ; 2014 ; Science Translational Medicine Volume 6 ; 6 ; >
       au < manifest ; exists ; 2015 ; Science Translational Medicine Volume 7 ; 7 ; >
+      au < expected ; exists ; 2016 ; Science Translational Medicine Volume 8 ; 8 ; >
 
   }
 
@@ -90,6 +93,7 @@
       param[base_url] = http://advances.sciencemag.org/
 
       au < manifest ; exists ; 2015 ; Science Advances Volume 1 ; 1 ; >
+      au < expected ; exists ; 2016 ; Science Advances Volume 2 ; 2 ; >
 
   }
 
