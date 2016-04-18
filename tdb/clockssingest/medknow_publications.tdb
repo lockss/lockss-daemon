@@ -92,7 +92,7 @@
     au < doNotProcess ; exists ; 2012 ; Anesthesia: Essays and Researches Volume 6 ; 2012 ; 6 ; >
     au < doNotProcess ; exists ; 2013 ; Anesthesia: Essays and Researches Volume 7 ; 2013 ; 7 ; >
     au < doNotProcess ; exists ; 2014 ; Anesthesia: Essays and Researches Volume 8 ; 2014 ; 8 ; >
-    au < testing ; exists ; 2015 ; Anesthesia: Essays and Researches Volume 9 ; 2015 ; 9 ; >
+    au < ready ; exists ; 2015 ; Anesthesia: Essays and Researches Volume 9 ; 2015 ; 9 ; >
     au < manifest ; exists ; 2016 ; Anesthesia: Essays and Researches Volume 10 ; 2016 ; 10 ; >
 
   }
@@ -145,7 +145,7 @@
     au < crawling ; exists ; 2012 ; Annals of Cardiac Anaesthesia Volume 15 ; 2012 ; 15 ; >
     au < crawling ; exists ; 2013 ; Annals of Cardiac Anaesthesia Volume 16 ; 2013 ; 16 ; >
     au < crawling ; exists ; 2014 ; Annals of Cardiac Anaesthesia Volume 17 ; 2014 ; 17 ; >
-    au < testing ; exists ; 2015 ; Annals of Cardiac Anaesthesia Volume 18 ; 2015 ; 18 ; >
+    au < ready ; exists ; 2015 ; Annals of Cardiac Anaesthesia Volume 18 ; 2015 ; 18 ; >
     au < manifest ; exists ; 2016 ; Annals of Cardiac Anaesthesia Volume 19 ; 2016 ; 19 ; >
 
   }
@@ -178,7 +178,7 @@
     au < crawling ; exists ; 2012 ; Annals of Indian Academy of Neurology Volume 15 ; 2012 ; 15 ; >
     au < notReady ; exists ; 2013 ; Annals of Indian Academy of Neurology Volume 16 ; 2013 ; 16 ; >
     au < crawling ; exists ; 2014 ; Annals of Indian Academy of Neurology Volume 17 ; 2014 ; 17 ; >
-    au < testing ; exists ; 2015 ; Annals of Indian Academy of Neurology Volume 18 ; 2015 ; 18 ; >
+    au < ready ; exists ; 2015 ; Annals of Indian Academy of Neurology Volume 18 ; 2015 ; 18 ; >
     au < manifest ; exists ; 2016 ; Annals of Indian Academy of Neurology Volume 19 ; 2016 ; 19 ; >
 
   }
@@ -198,7 +198,7 @@
     au < crawling ; exists ; 2012 ; Annals of Maxillofacial Surgery Volume 2 ; 2012 ; 2 ; >
     au < crawling ; exists ; 2013 ; Annals of Maxillofacial Surgery Volume 3 ; 2013 ; 3 ; >
     au < crawling ; exists ; 2014 ; Annals of Maxillofacial Surgery Volume 4 ; 2014 ; 4 ; >
-    au < testing ; exists ; 2015 ; Annals of Maxillofacial Surgery Volume 5 ; 2015 ; 5 ; >
+    au < ready ; exists ; 2015 ; Annals of Maxillofacial Surgery Volume 5 ; 2015 ; 5 ; >
     au < manifest ; exists ; 2016 ; Annals of Maxillofacial Surgery Volume 6 ; 2016 ; 6 ; >
 
   }
@@ -219,7 +219,7 @@
     au < crawling ; exists ; 2012 ; Annals of Nigerian Medicine Volume 6 ; 2012 ; 6 ; >
     au < crawling ; exists ; 2013 ; Annals of Nigerian Medicine Volume 7 ; 2013 ; 7 ; >
     au < crawling ; exists ; 2014 ; Annals of Nigerian Medicine Volume 8 ; 2014 ; 8 ; >
-    au < testing ; exists ; 2015 ; Annals of Nigerian Medicine Volume 9 ; 2015 ; 9 ; >
+    au < ready ; exists ; 2015 ; Annals of Nigerian Medicine Volume 9 ; 2015 ; 9 ; >
     au < expected ; exists ; 2016 ; Annals of Nigerian Medicine Volume 10 ; 2016 ; 10 ; >
 
   }
@@ -242,7 +242,7 @@
     au < crawling ; exists ; 2012 ; Annals of Pediatric Cardiology Volume 5 ; 2012 ; 5 ; >
     au < crawling ; exists ; 2013 ; Annals of Pediatric Cardiology Volume 6 ; 2013 ; 6 ; >
     au < crawling ; exists ; 2014 ; Annals of Pediatric Cardiology Volume 7 ; 2014 ; 7 ; >
-    au < testing ; exists ; 2015 ; Annals of Pediatric Cardiology Volume 8 ; 2015 ; 8 ; >
+    au < ready ; exists ; 2015 ; Annals of Pediatric Cardiology Volume 8 ; 2015 ; 8 ; >
     au < manifest ; exists ; 2016 ; Annals of Pediatric Cardiology Volume 9 ; 2016 ; 9 ; >
 
   }
@@ -282,7 +282,7 @@
     au < crawling ; exists ; 2012 ; Annals of Thoracic Medicine Volume 7 ; 2012 ; 7 ; >
     au < crawling ; exists ; 2013 ; Annals of Thoracic Medicine Volume 8 ; 2013 ; 8 ; >
     au < crawling ; exists ; 2014 ; Annals of Thoracic Medicine Volume 9 ; 2014 ; 9 ; >
-    au < testing ; exists ; 2015 ; Annals of Thoracic Medicine Volume 10 ; 2015 ; 10 ; >
+    au < ready ; exists ; 2015 ; Annals of Thoracic Medicine Volume 10 ; 2015 ; 10 ; >
     au < manifest ; exists ; 2016 ; Annals of Thoracic Medicine Volume 11 ; 2016 ; 11 ; >
 
   }
@@ -305,7 +305,7 @@
     au < crawling ; exists ; 2012 ; Annals of Tropical Medicine and Public Health Volume 5 ; 2012 ; 5 ; >
     au < crawling ; exists ; 2013 ; Annals of Tropical Medicine and Public Health Volume 6 ; 2013 ; 6 ; >
     au < crawling ; exists ; 2014 ; Annals of Tropical Medicine and Public Health Volume 7 ; 2014 ; 7 ; >
-    au < testing ; exists ; 2015 ; Annals of Tropical Medicine and Public Health Volume 8 ; 2015 ; 8 ; >
+    au < ready ; exists ; 2015 ; Annals of Tropical Medicine and Public Health Volume 8 ; 2015 ; 8 ; >
     au < manifest ; exists ; 2016 ; Annals of Tropical Medicine and Public Health Volume 9 ; 2016 ; 9 ; >
 
   }
@@ -325,7 +325,7 @@
     param[journal_issn] = 1008-682X
 
     au < crawling ; exists ; 2014 ; Asian Journal of Andrology Volume 16 ; 2014 ; 16 ; >
-    au < testing ; exists ; 2015 ; Asian Journal of Andrology Volume 17 ; 2015 ; 17 ; >
+    au < ready ; exists ; 2015 ; Asian Journal of Andrology Volume 17 ; 2015 ; 17 ; >
     au < manifest ; exists ; 2016 ; Asian Journal of Andrology Volume 18 ; 2016 ; 18 ; >
 
   }
@@ -346,7 +346,7 @@
     au < crawling ; exists ; 2012 ; Asian Journal of Neurosurgery Volume 7 ; 2012 ; 7 ; >
     au < crawling ; exists ; 2013 ; Asian Journal of Neurosurgery Volume 8 ; 2013 ; 8 ; >
     au < crawling ; exists ; 2014 ; Asian Journal of Neurosurgery Volume 9 ; 2014 ; 9 ; >
-    au < testing ; exists ; 2015 ; Asian Journal of Neurosurgery Volume 10 ; 2015 ; 10 ; >
+    au < ready ; exists ; 2015 ; Asian Journal of Neurosurgery Volume 10 ; 2015 ; 10 ; >
     au < manifest ; exists ; 2016 ; Asian Journal of Neurosurgery Volume 11 ; 2016 ; 11 ; >
 
   }
@@ -394,7 +394,7 @@
     au < crawling ; exists ; 2012 ; Asian Journal of Transfusion Science Volume 6 ; 2012 ; 6 ; >
     au < crawling ; exists ; 2013 ; Asian Journal of Transfusion Science Volume 7 ; 2013 ; 7 ; >
     au < crawling ; exists ; 2014 ; Asian Journal of Transfusion Science Volume 8 ; 2014 ; 8 ; >
-    au < testing ; exists ; 2015 ; Asian Journal of Transfusion Science Volume 9 ; 2015 ; 9 ; >
+    au < ready ; exists ; 2015 ; Asian Journal of Transfusion Science Volume 9 ; 2015 ; 9 ; >
     au < manifest ; exists ; 2016 ; Asian Journal of Transfusion Science Volume 10 ; 2016 ; 10 ; >
 
   }
@@ -414,7 +414,7 @@
     au < manifest ; exists ; 2012 ; Avicenna Journal of Medicine Volume 2 ; 2012 ; 2 ; >
     au < manifest ; exists ; 2013 ; Avicenna Journal of Medicine Volume 3 ; 2013 ; 3 ; >
     au < manifest ; exists ; 2014 ; Avicenna Journal of Medicine Volume 4 ; 2014 ; 4 ; >
-    au < testing ; exists ; 2015 ; Avicenna Journal of Medicine Volume 5 ; 2015 ; 5 ; >
+    au < ready ; exists ; 2015 ; Avicenna Journal of Medicine Volume 5 ; 2015 ; 5 ; >
     au < manifest ; exists ; 2016 ; Avicenna Journal of Medicine Volume 6 ; 2016 ; 6 ; >
 
   }
@@ -439,7 +439,7 @@
     au < manifest ; exists ; 2012 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 33 ; 2012 ; 33 ; >
     au < manifest ; exists ; 2013 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 34 ; 2013 ; 34 ; >
     au < manifest ; exists ; 2014 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 35 ; 2014 ; 35 ; >
-    au < testing ; exists ; 2015 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 36 ; 2015 ; 36 ; >
+    au < ready ; exists ; 2015 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 36 ; 2015 ; 36 ; >
     au < expected ; exists ; 2016 ; AYU (An International Quarterly Journal of Research in Ayurveda) Volume 37 ; 2016 ; 37 ; >
 
   }
@@ -489,7 +489,7 @@
     au < manifest ; exists ; 2012 ; Conservation and Society Volume 10 ; 2012 ; 10 ; >
     au < manifest ; exists ; 2013 ; Conservation and Society Volume 11 ; 2013 ; 11 ; >
     au < manifest ; exists ; 2014 ; Conservation and Society Volume 12 ; 2014 ; 12 ; >
-    au < testing ; exists ; 2015 ; Conservation and Society Volume 13 ; 2015 ; 13 ; >
+    au < ready ; exists ; 2015 ; Conservation and Society Volume 13 ; 2015 ; 13 ; >
     au < expected ; exists ; 2016 ; Conservation and Society Volume 14 ; 2016 ; 14 ; >
 
   }
@@ -510,7 +510,7 @@
     au < manifest ; exists ; 2012 ; Contemporary Clinical Dentistry Volume 3 ; 2012 ; 3 ; >
     au < manifest ; exists ; 2013 ; Contemporary Clinical Dentistry Volume 4 ; 2013 ; 4 ; >
     au < manifest ; exists ; 2014 ; Contemporary Clinical Dentistry Volume 5 ; 2014 ; 5 ; >
-    au < testing ; exists ; 2015 ; Contemporary Clinical Dentistry Volume 6 ; 2015 ; 6 ; >
+    au < ready ; exists ; 2015 ; Contemporary Clinical Dentistry Volume 6 ; 2015 ; 6 ; >
     au < expected ; exists ; 2016 ; Contemporary Clinical Dentistry Volume 7 ; 2015 ; 7 ; >
 
   }
@@ -594,7 +594,7 @@
     au < manifest ; exists ; 2012 ; Heart Views Volume 13 ; 2012 ; 13 ; >
     au < manifest ; exists ; 2013 ; Heart Views Volume 14 ; 2013 ; 14 ; >
     au < manifest ; exists ; 2014 ; Heart Views Volume 15 ; 2014 ; 15 ; >
-    au < testing ; exists ; 2015 ; Heart Views Volume 16 ; 2015 ; 16 ; >
+    au < ready ; exists ; 2015 ; Heart Views Volume 16 ; 2015 ; 16 ; >
     au < expected ; exists ; 2016 ; Heart Views Volume 17 ; 2016 ; 17 ; >
 
   }
@@ -636,7 +636,7 @@
     au < manifest ; exists ; 2012 ; Indian Dermatology Online Journal Volume 3 ; 2012 ; 3 ; >
     au < manifest ; exists ; 2013 ; Indian Dermatology Online Journal Volume 4 ; 2013 ; 4 ; >
     au < manifest ; exists ; 2014 ; Indian Dermatology Online Journal Volume 5 ; 2014 ; 5 ; >
-    au < testing ; exists ; 2015 ; Indian Dermatology Online Journal Volume 6 ; 2015 ; 6 ; >
+    au < ready ; exists ; 2015 ; Indian Dermatology Online Journal Volume 6 ; 2015 ; 6 ; >
     au < manifest ; exists ; 2016 ; Indian Dermatology Online Journal Volume 7 ; 2016 ; 7 ; >
 
   }
@@ -665,7 +665,7 @@
     au < manifest ; exists ; 2012 ; Indian Journal of Anaesthesia Volume 56 ; 2012 ; 56 ; >
     au < manifest ; exists ; 2013 ; Indian Journal of Anaesthesia Volume 57 ; 2013 ; 57 ; >
     au < manifest ; exists ; 2014 ; Indian Journal of Anaesthesia Volume 58 ; 2014 ; 58 ; >
-    au < testing ; exists ; 2015 ; Indian Journal of Anaesthesia Volume 59 ; 2015 ; 59 ; >
+    au < ready ; exists ; 2015 ; Indian Journal of Anaesthesia Volume 59 ; 2015 ; 59 ; >
     au < manifest ; exists ; 2016 ; Indian Journal of Anaesthesia Volume 60 ; 2016 ; 60 ; >
 
   }
@@ -693,7 +693,7 @@
     au < manifest ; exists ; 2012 ; Indian Journal of Cancer Volume 49 ; 2012 ; 49 ; >
     au < manifest ; exists ; 2013 ; Indian Journal of Cancer Volume 50 ; 2013 ; 50 ; >
     au < manifest ; exists ; 2014 ; Indian Journal of Cancer Volume 51 ; 2014 ; 51 ; >
-    au < testing ; exists ; 2015 ; Indian Journal of Cancer Volume 52 ; 2015 ; 52 ; >
+    au < ready ; exists ; 2015 ; Indian Journal of Cancer Volume 52 ; 2015 ; 52 ; >
     au < expected ; exists ; 2016 ; Indian Journal of Cancer Volume 53 ; 2016 ; 53 ; >
 
   }
@@ -739,7 +739,7 @@
     au < manifest ; exists ; 2012 ; Indian Journal of Community Medicine Volume 37 ; 2012 ; 37 ; >
     au < manifest ; exists ; 2013 ; Indian Journal of Community Medicine Volume 38 ; 2013 ; 38 ; >
     au < manifest ; exists ; 2014 ; Indian Journal of Community Medicine Volume 39 ; 2014 ; 39 ; >
-    au < testing ; exists ; 2015 ; Indian Journal of Community Medicine Volume 40 ; 2015 ; 40 ; >
+    au < ready ; exists ; 2015 ; Indian Journal of Community Medicine Volume 40 ; 2015 ; 40 ; >
     au < manifest ; exists ; 2016 ; Indian Journal of Community Medicine Volume 41 ; 2016 ; 41 ; >
 
   }
@@ -789,11 +789,11 @@
     au < manifest ; exists ; 2008 ; Indian Journal of Dental Research Volume 19 ; 2008 ; 19 ; >
     au < manifest ; exists ; 2009 ; Indian Journal of Dental Research Volume 20 ; 2009 ; 20 ; >
     au < manifest ; exists ; 2010 ; Indian Journal of Dental Research Volume 21 ; 2010 ; 21 ; >
-    au < testing ; exists ; 2011 ; Indian Journal of Dental Research Volume 22 ; 2011 ; 22 ; >
+    au < ready ; exists ; 2011 ; Indian Journal of Dental Research Volume 22 ; 2011 ; 22 ; >
     au < manifest ; exists ; 2012 ; Indian Journal of Dental Research Volume 23 ; 2012 ; 23 ; >
     au < manifest ; exists ; 2013 ; Indian Journal of Dental Research Volume 24 ; 2013 ; 24 ; >
     au < manifest ; exists ; 2014 ; Indian Journal of Dental Research Volume 25 ; 2014 ; 25 ; >
-    au < testing ; exists ; 2015 ; Indian Journal of Dental Research Volume 26 ; 2015 ; 26 ; >
+    au < ready ; exists ; 2015 ; Indian Journal of Dental Research Volume 26 ; 2015 ; 26 ; >
     au < manifest ; exists ; 2016 ; Indian Journal of Dental Research Volume 27 ; 2016 ; 27 ; >
 
   }
@@ -846,7 +846,7 @@
     au < manifest ; exists ; 2008 ; Indian Journal of Dermatology Volume 53 ; 2008 ; 53 ; >
     au < manifest ; exists ; 2009 ; Indian Journal of Dermatology Volume 54 ; 2009 ; 54 ; >
     au < crawling ; exists ; 2010 ; Indian Journal of Dermatology Volume 55 ; 2010 ; 55 ; >
-    au < testing ; exists ; 2011 ; Indian Journal of Dermatology Volume 56 ; 2011 ; 56 ; >
+    au < ready ; exists ; 2011 ; Indian Journal of Dermatology Volume 56 ; 2011 ; 56 ; >
     au < manifest ; exists ; 2012 ; Indian Journal of Dermatology Volume 57 ; 2012 ; 57 ; >
     au < manifest ; exists ; 2013 ; Indian Journal of Dermatology Volume 58 ; 2013 ; 58 ; >
     au < manifest ; exists ; 2014 ; Indian Journal of Dermatology Volume 59 ; 2014 ; 59 ; >
@@ -920,7 +920,7 @@
     au < manifest ; exists ; 2012 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 78 ; 2012 ; 78 ; >
     au < manifest ; exists ; 2013 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 79 ; 2013 ; 79 ; >
     au < manifest ; exists ; 2014 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 80 ; 2014 ; 80 ; >
-    au < testing ; exists ; 2015 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 81 ; 2015 ; 81 ; >
+    au < ready ; exists ; 2015 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 81 ; 2015 ; 81 ; >
     au < manifest ; exists ; 2016 ; Indian Journal of Dermatology, Venereology, and Leprology Volume 82 ; 2016 ; 82 ; >
 
   }
@@ -954,7 +954,7 @@
     au < manifest ; exists ; 2012 ; Indian Journal of Endocrinology and Metabolism Volume 16 ; 2012 ; 16 ; >
     au < manifest ; exists ; 2013 ; Indian Journal of Endocrinology and Metabolism Volume 17 ; 2013 ; 17 ; >
     au < manifest ; exists ; 2014 ; Indian Journal of Endocrinology and Metabolism Volume 18 ; 2014 ; 18 ; >
-    au < testing ; exists ; 2015 ; Indian Journal of Endocrinology and Metabolism Volume 19 ; 2015 ; 19 ; >
+    au < ready ; exists ; 2015 ; Indian Journal of Endocrinology and Metabolism Volume 19 ; 2015 ; 19 ; >
     au < manifest ; exists ; 2016 ; Indian Journal of Endocrinology and Metabolism Volume 20 ; 2016 ; 20 ; >
 
   }
@@ -986,7 +986,7 @@
     au < manifest ; exists ; 2008 ; Indian Journal of Human Genetics Volume 14 ; 2008 ; 14 ; >
     au < manifest ; exists ; 2009 ; Indian Journal of Human Genetics Volume 15 ; 2009 ; 15 ; >
     au < manifest ; exists ; 2010 ; Indian Journal of Human Genetics Volume 16 ; 2010 ; 16 ; >
-    au < testing ; exists ; 2011 ; Indian Journal of Human Genetics Volume 17 ; 2011 ; 17 ; >
+    au < ready ; exists ; 2011 ; Indian Journal of Human Genetics Volume 17 ; 2011 ; 17 ; >
     au < manifest ; exists ; 2012 ; Indian Journal of Human Genetics Volume 18 ; 2012 ; 18 ; >
     au < manifest ; exists ; 2013 ; Indian Journal of Human Genetics Volume 19 ; 2013 ; 19 ; >
     au < manifest ; exists ; 2014 ; Indian Journal of Human Genetics Volume 20 ; 2014 ; 20 ; >
@@ -1027,7 +1027,7 @@
     au < manifest ; exists ; 2012 ; Indian Journal of Medical and Paediatric Oncology Volume 33 ; 2012 ; 33 ; >
     au < manifest ; exists ; 2013 ; Indian Journal of Medical and Paediatric Oncology Volume 34 ; 2013 ; 34 ; >
     au < manifest ; exists ; 2014 ; Indian Journal of Medical and Paediatric Oncology Volume 35 ; 2014 ; 35 ; >
-    au < testing ; exists ; 2015 ; Indian Journal of Medical and Paediatric Oncology Volume 36 ; 2015 ; 36 ; >
+    au < ready ; exists ; 2015 ; Indian Journal of Medical and Paediatric Oncology Volume 36 ; 2015 ; 36 ; >
     au < manifest ; exists ; 2016 ; Indian Journal of Medical and Paediatric Oncology Volume 37 ; 2016 ; 37 ; >
 
   }
@@ -1074,7 +1074,7 @@
     au < manifest ; exists ; 2012 ; Indian Journal of Medical Microbiology Volume 30 ; 2012 ; 30 ; >
     au < manifest ; exists ; 2013 ; Indian Journal of Medical Microbiology Volume 31 ; 2013 ; 31 ; >
     au < manifest ; exists ; 2014 ; Indian Journal of Medical Microbiology Volume 32 ; 2014 ; 32 ; >
-    au < testing ; exists ; 2015 ; Indian Journal of Medical Microbiology Volume 33 ; 2015 ; 33 ; >
+    au < ready ; exists ; 2015 ; Indian Journal of Medical Microbiology Volume 33 ; 2015 ; 33 ; >
     au < manifest ; exists ; 2016 ; Indian Journal of Medical Microbiology Volume 34 ; 2016 ; 34 ; >
 
   }
@@ -1143,7 +1143,7 @@
     au < manifest ; exists ; 2012 ; Indian Journal of Nephrology Volume 22 ; 2012 ; 22 ; >
     au < manifest ; exists ; 2013 ; Indian Journal of Nephrology Volume 23 ; 2013 ; 23 ; >
     au < manifest ; exists ; 2014 ; Indian Journal of Nephrology Volume 24 ; 2014 ; 24 ; >
-    au < testing ; exists ; 2015 ; Indian Journal of Nephrology Volume 25 ; 2015 ; 25 ; >
+    au < ready ; exists ; 2015 ; Indian Journal of Nephrology Volume 25 ; 2015 ; 25 ; >
     au < manifest ; exists ; 2016 ; Indian Journal of Nephrology Volume 26 ; 2016 ; 26 ; >
 
   }
@@ -1168,7 +1168,7 @@
     au < manifest ; exists ; 2012 ; Indian Journal of Nuclear Medicine Volume 27 ; 2012 ; 27 ; >
     au < manifest ; exists ; 2013 ; Indian Journal of Nuclear Medicine Volume 28 ; 2013 ; 28 ; >
     au < manifest ; exists ; 2014 ; Indian Journal of Nuclear Medicine Volume 29 ; 2014 ; 29 ; >
-    au < testing ; exists ; 2015 ; Indian Journal of Nuclear Medicine Volume 30 ; 2015 ; 30 ; >
+    au < ready ; exists ; 2015 ; Indian Journal of Nuclear Medicine Volume 30 ; 2015 ; 30 ; >
     au < manifest ; exists ; 2016 ; Indian Journal of Nuclear Medicine Volume 31 ; 2016 ; 31 ; >
 
   }
@@ -1273,7 +1273,7 @@
     au < manifest ; exists ; 2012 ; Indian Journal of Ophthalmology Volume 60 ; 2012 ; 60 ; >
     au < manifest ; exists ; 2013 ; Indian Journal of Ophthalmology Volume 61 ; 2013 ; 61 ; >
     au < manifest ; exists ; 2014 ; Indian Journal of Ophthalmology Volume 62 ; 2014 ; 62 ; >
-    au < manifest ; exists ; 2015 ; Indian Journal of Ophthalmology Volume 63 ; 2015 ; 63 ; >
+    au < boost ; exists ; 2015 ; Indian Journal of Ophthalmology Volume 63 ; 2015 ; 63 ; >
     au < manifest ; exists ; 2016 ; Indian Journal of Ophthalmology Volume 64 ; 2016 ; 64 ; >
 
   }
@@ -1337,7 +1337,7 @@
     au < manifest ; exists ; 2012 ; Indian Journal of Orthopaedics Volume 46 ; 2012 ; 46 ; >
     au < manifest ; exists ; 2013 ; Indian Journal of Orthopaedics Volume 47 ; 2013 ; 47 ; >
     au < manifest ; exists ; 2014 ; Indian Journal of Orthopaedics Volume 48 ; 2014 ; 48 ; >
-    au < manifest ; exists ; 2015 ; Indian Journal of Orthopaedics Volume 49 ; 2015 ; 49 ; >
+    au < boost ; exists ; 2015 ; Indian Journal of Orthopaedics Volume 49 ; 2015 ; 49 ; >
     au < manifest ; exists ; 2016 ; Indian Journal of Orthopaedics Volume 50 ; 2016 ; 50 ; >
 
   }
@@ -1357,7 +1357,7 @@
     au < manifest ; exists ; 2012 ; Indian Journal of Otology Volume 18 ; 2012 ; 18 ; >
     au < manifest ; exists ; 2013 ; Indian Journal of Otology Volume 19 ; 2013 ; 19 ; >
     au < manifest ; exists ; 2014 ; Indian Journal of Otology Volume 20 ; 2014 ; 20 ; >
-    au < manifest ; exists ; 2015 ; Indian Journal of Otology Volume 21 ; 2015 ; 21 ; >
+    au < boost ; exists ; 2015 ; Indian Journal of Otology Volume 21 ; 2015 ; 21 ; >
     au < manifest ; exists ; 2016 ; Indian Journal of Otology Volume 22 ; 2016 ; 22 ; >
 
   }
@@ -1376,7 +1376,7 @@
     au < manifest ; exists ; 2012 ; Indian Journal of Paediatric Dermatology Volume 13 ; 2012 ; 13 ; >
     au < manifest ; exists ; 2013 ; Indian Journal of Paediatric Dermatology Volume 14 ; 2013 ; 14 ; >
     au < manifest ; exists ; 2014 ; Indian Journal of Paediatric Dermatology Volume 15 ; 2014 ; 15 ; >
-    au < manifest ; exists ; 2015 ; Indian Journal of Paediatric Dermatology Volume 16 ; 2015 ; 16 ; >
+    au < boost ; exists ; 2015 ; Indian Journal of Paediatric Dermatology Volume 16 ; 2015 ; 16 ; >
     au < manifest ; exists ; 2016 ; Indian Journal of Paediatric Dermatology Volume 17 ; 2016 ; 17 ; >
 
   }
@@ -1404,7 +1404,7 @@
     au < manifest ; exists ; 2012 ; Indian Journal of Palliative Care Volume 18 ; 2012 ; 18 ; >
     au < manifest ; exists ; 2013 ; Indian Journal of Palliative Care Volume 19 ; 2013 ; 19 ; >
     au < manifest ; exists ; 2014 ; Indian Journal of Palliative Care Volume 20 ; 2014 ; 20 ; >
-    au < manifest ; exists ; 2015 ; Indian Journal of Palliative Care Volume 21 ; 2015 ; 21 ; >
+    au < boost ; exists ; 2015 ; Indian Journal of Palliative Care Volume 21 ; 2015 ; 21 ; >
     au < manifest ; exists ; 2016 ; Indian Journal of Palliative Care Volume 22 ; 2016 ; 22 ; >
 
   }
@@ -1440,7 +1440,7 @@
     au < manifest ; exists ; 2012 ; Indian Journal of Pathology and Microbiology Volume 55 ; 2012 ; 55 ; >
     au < manifest ; exists ; 2013 ; Indian Journal of Pathology and Microbiology Volume 56 ; 2013 ; 56 ; >
     au < manifest ; exists ; 2014 ; Indian Journal of Pathology and Microbiology Volume 57 ; 2014 ; 57 ; >
-    au < manifest ; exists ; 2015 ; Indian Journal of Pathology and Microbiology Volume 58 ; 2015 ; 58 ; >
+    au < boost ; exists ; 2015 ; Indian Journal of Pathology and Microbiology Volume 58 ; 2015 ; 58 ; >
     au < manifest ; exists ; 2016 ; Indian Journal of Pathology and Microbiology Volume 59 ; 2016 ; 59 ; >
 
   }
@@ -1959,6 +1959,8 @@
     au < manifest ; exists ; 2012 ; International Journal of Pharmaceutical Investigation Volume 2 ; 2012 ; 2 ; >
     au < manifest ; exists ; 2013 ; International Journal of Pharmaceutical Investigation Volume 3 ; 2013 ; 3 ; >
     au < manifest ; exists ; 2014 ; International Journal of Pharmaceutical Investigation Volume 4 ; 2014 ; 4 ; >
+    au < exists ; exists ; 2015 ; International Journal of Pharmaceutical Investigation Volume 5 ; 2015 ; 5 ; >
+    au < exists ; exists ; 2016 ; International Journal of Pharmaceutical Investigation Volume 6 ; 2016 ; 6 ; >
 
   }
 
@@ -1999,6 +2001,8 @@
     au < manifest ; exists ; 2012 ; International Journal of Shoulder Surgery Volume 6 ; 2012 ; 6 ; >
     au < manifest ; exists ; 2013 ; International Journal of Shoulder Surgery Volume 7 ; 2013 ; 7 ; >
     au < manifest ; exists ; 2014 ; International Journal of Shoulder Surgery Volume 8 ; 2014 ; 8 ; >
+    au < exists ; exists ; 2015 ; International Journal of Shoulder Surgery Volume 9 ; 2015 ; 9 ; >
+    au < exists ; exists ; 2016 ; International Journal of Shoulder Surgery Volume 10 ; 2016 ; 10 ; >
 
   }
 
@@ -2019,6 +2023,8 @@
     au < manifest ; exists ; 2012 ; International Journal of Trichology Volume 4 ; 2012 ; 4 ; >
     au < manifest ; exists ; 2013 ; International Journal of Trichology Volume 5 ; 2013 ; 5 ; >
     au < manifest ; exists ; 2014 ; International Journal of Trichology Volume 6 ; 2014 ; 6 ; >
+    au < exists ; exists ; 2015 ; International Journal of Trichology Volume 7 ; 2015 ; 7 ; >
+    au < exists ; exists ; 2016 ; International Journal of Trichology Volume 8 ; 2016 ; 8 ; >
 
   }
 
@@ -2040,6 +2046,8 @@
     au < manifest ; exists ; 2012 ; International Journal of Yoga Volume 5 ; 2012 ; 5 ; >
     au < manifest ; exists ; 2013 ; International Journal of Yoga Volume 6 ; 2013 ; 6 ; >
     au < manifest ; exists ; 2014 ; International Journal of Yoga Volume 7 ; 2014 ; 7 ; >
+    au < exists ; exists ; 2015 ; International Journal of Yoga Volume 8 ; 2015 ; 8 ; >
+    au < exists ; exists ; 2016 ; International Journal of Yoga Volume 9 ; 2016 ; 9 ; >
 
   }
 
@@ -2102,6 +2110,8 @@
     au < manifest ; exists ; 2012 ; Journal of Advanced Pharmaceutical Technology & Research Volume 3 ; 2012 ; 3 ; >
     au < manifest ; exists ; 2013 ; Journal of Advanced Pharmaceutical Technology & Research Volume 4 ; 2013 ; 4 ; >
     au < manifest ; exists ; 2014 ; Journal of Advanced Pharmaceutical Technology & Research Volume 5 ; 2014 ; 5 ; >
+    au < exists ; exists ; 2015 ; Journal of Advanced Pharmaceutical Technology & Research Volume 6 ; 2015 ; 6 ; >
+    au < exists ; exists ; 2016 ; Journal of Advanced Pharmaceutical Technology & Research Volume 7 ; 2016 ; 7 ; >
 
   }
 
@@ -2126,6 +2136,8 @@
     au < manifest ; exists ; 2012 ; Journal of Anaesthesiology Clinical Pharmacology Volume 28 ; 2012 ; 28 ; >
     au < manifest ; exists ; 2013 ; Journal of Anaesthesiology Clinical Pharmacology Volume 29 ; 2013 ; 29 ; >
     au < manifest ; exists ; 2014 ; Journal of Anaesthesiology Clinical Pharmacology Volume 30 ; 2014 ; 30 ; >
+    au < exists ; exists ; 2015 ; Journal of Anaesthesiology Clinical Pharmacology Volume 31 ; 2015 ; 31 ; >
+    au < exists ; exists ; 2016 ; Journal of Anaesthesiology Clinical Pharmacology Volume 32 ; 2016 ; 32 ; >
 
   }
 
@@ -2159,6 +2171,8 @@
     au < manifest ; exists ; 2012 ; Journal of Ayurveda and Integrative Medicine Volume 3 ; 2012 ; 3 ; >
     au < manifest ; exists ; 2013 ; Journal of Ayurveda and Integrative Medicine Volume 4 ; 2013 ; 4 ; >
     au < manifest ; exists ; 2014 ; Journal of Ayurveda and Integrative Medicine Volume 5 ; 2014 ; 5 ; >
+    au < exists ; exists ; 2015 ; Journal of Ayurveda and Integrative Medicine Volume 6 ; 2015 ; 6 ; >
+    au < exists ; exists ; 2016 ; Journal of Ayurveda and Integrative Medicine Volume 7 ; 2016 ; 7 ; >
 
   }
 
@@ -2183,7 +2197,7 @@
     au < manifest ; exists ; 2012 ; Journal of Cancer Research and Therapeutics Volume 8 ; 2012 ; 8 ; >
     au < manifest ; exists ; 2013 ; Journal of Cancer Research and Therapeutics Volume 9 ; 2013 ; 9 ; >
     au < manifest ; exists ; 2014 ; Journal of Cancer Research and Therapeutics Volume 10 ; 2014 ; 10 ; >
-    au < manifest ; exists ; 2015 ; Journal of Cancer Research and Therapeutics Volume 11 ; 2015 ; 11 ; >
+    au < boost ; exists ; 2015 ; Journal of Cancer Research and Therapeutics Volume 11 ; 2015 ; 11 ; >
     au < manifest ; exists ; 2016 ; Journal of Cancer Research and Therapeutics Volume 12 ; 2016 ; 12 ; >
 
   }
@@ -2266,7 +2280,7 @@
     au < manifest ; exists ; 2012 ; Journal of Clinical Neonatology Volume 1 ; 2012 ; 1 ; >
     au < manifest ; exists ; 2013 ; Journal of Clinical Neonatology Volume 2 ; 2013 ; 2 ; >
     au < manifest ; exists ; 2014 ; Journal of Clinical Neonatology Volume 3 ; 2014 ; 3 ; >
-    au < manifest ; exists ; 2015 ; Journal of Clinical Neonatology Volume 4 ; 2015 ; 4 ; >
+    au < boost ; exists ; 2015 ; Journal of Clinical Neonatology Volume 4 ; 2015 ; 4 ; >
     au < manifest ; exists ; 2016 ; Journal of Clinical Neonatology Volume 5 ; 2016 ; 5 ; >
 
   }
@@ -2317,7 +2331,7 @@
     au < manifest ; exists ; 2012 ; Journal of Conservative Dentistry Volume 15 ; 2012 ; 15 ; >
     au < manifest ; exists ; 2013 ; Journal of Conservative Dentistry Volume 16 ; 2013 ; 16 ; >
     au < manifest ; exists ; 2014 ; Journal of Conservative Dentistry Volume 17 ; 2014 ; 17 ; >
-    au < manifest ; exists ; 2015 ; Journal of Conservative Dentistry Volume 18 ; 2015 ; 18 ; >
+    au < boost ; exists ; 2015 ; Journal of Conservative Dentistry Volume 18 ; 2015 ; 18 ; >
     au < manifest ; exists ; 2016 ; Journal of Conservative Dentistry Volume 19 ; 2016 ; 19 ; >
 
   }
@@ -2338,7 +2352,7 @@
     au < manifest ; exists ; 2012 ; Journal of Craniovertebral Junction and Spine Volume 3 ; 2012 ; 3 ; >
     au < manifest ; exists ; 2013 ; Journal of Craniovertebral Junction and Spine Volume 4 ; 2013 ; 4 ; >
     au < manifest ; exists ; 2014 ; Journal of Craniovertebral Junction and Spine Volume 5 ; 2014 ; 5 ; >
-    au < manifest ; exists ; 2015 ; Journal of Craniovertebral Junction and Spine Volume 6 ; 2015 ; 6 ; >
+    au < boost ; exists ; 2015 ; Journal of Craniovertebral Junction and Spine Volume 6 ; 2015 ; 6 ; >
     au < manifest ; exists ; 2016 ; Journal of Craniovertebral Junction and Spine Volume 7 ; 2016 ; 7 ; >
 
   }
@@ -2383,7 +2397,7 @@
     au < manifest ; exists ; 2012 ; Journal of Cytology Volume 29 ; 2012 ; 29 ; >
     au < manifest ; exists ; 2013 ; Journal of Cytology Volume 30 ; 2013 ; 30 ; >
     au < manifest ; exists ; 2014 ; Journal of Cytology Volume 31 ; 2014 ; 31 ; >
-    au < manifest ; exists ; 2015 ; Journal of Cytology Volume 32 ; 2015 ; 32 ; >
+    au < boost ; exists ; 2015 ; Journal of Cytology Volume 32 ; 2015 ; 32 ; >
     au < manifest ; exists ; 2016 ; Journal of Cytology Volume 33 ; 2016 ; 33 ; >
 
   }
@@ -2403,7 +2417,7 @@
     au < manifest ; exists ; 2012 ; Journal of Dental Implants Volume 2 ; 2012 ; 2 ; >
     au < manifest ; exists ; 2013 ; Journal of Dental Implants Volume 3 ; 2013 ; 3 ; >
     au < manifest ; exists ; 2014 ; Journal of Dental Implants Volume 4 ; 2014 ; 4 ; >
-    au < manifest ; exists ; 2015 ; Journal of Dental Implants Volume 5 ; 2015 ; 5 ; >
+    au < boost ; exists ; 2015 ; Journal of Dental Implants Volume 5 ; 2015 ; 5 ; >
     au < exists ; exists ; 2016 ; Journal of Dental Implants Volume 6 ; 2016 ; 6 ; >
 
   }
@@ -2461,7 +2475,7 @@
     au < manifest ; exists ; 2012 ; Journal of Emergencies, Trauma, and Shock Volume 5 ; 2012 ; 5 ; >
     au < manifest ; exists ; 2013 ; Journal of Emergencies, Trauma, and Shock Volume 6 ; 2013 ; 6 ; >
     au < manifest ; exists ; 2014 ; Journal of Emergencies, Trauma, and Shock Volume 7 ; 2014 ; 7 ; >
-    au < manifest ; exists ; 2015 ; Journal of Emergencies, Trauma, and Shock Volume 8 ; 2015 ; 8 ; >
+    au < boost ; exists ; 2015 ; Journal of Emergencies, Trauma, and Shock Volume 8 ; 2015 ; 8 ; >
     au < manifest ; exists ; 2016 ; Journal of Emergencies, Trauma, and Shock Volume 9 ; 2016 ; 9 ; >
 
   }
@@ -2481,7 +2495,7 @@
     au < manifest ; exists ; 2012 ; Journal of Engineering and Technology Volume 2 ; 2012 ; 2 ; >
     au < manifest ; exists ; 2013 ; Journal of Engineering and Technology Volume 3 ; 2013 ; 3 ; >
     au < manifest ; exists ; 2014 ; Journal of Engineering and Technology Volume 4 ; 2014 ; 4 ; >
-    au < manifest ; exists ; 2015 ; Journal of Engineering and Technology Volume 5 ; 2015 ; 5 ; >
+    au < boost ; exists ; 2015 ; Journal of Engineering and Technology Volume 5 ; 2015 ; 5 ; >
     au < exists ; exists ; 2016 ; Journal of Engineering and Technology Volume 6 ; 2016 ; 6 ; >
 
   }
@@ -2518,7 +2532,7 @@
     au < manifest ; exists ; 2012 ; Journal of Family and Community Medicine Volume 19 ; 2012 ; 19 ; >
     au < manifest ; exists ; 2013 ; Journal of Family and Community Medicine Volume 20 ; 2013 ; 20 ; >
     au < manifest ; exists ; 2014 ; Journal of Family and Community Medicine Volume 21 ; 2014 ; 21 ; >
-    au < manifest ; exists ; 2015 ; Journal of Family and Community Medicine Volume 22 ; 2015 ; 22 ; >
+    au < boost ; exists ; 2015 ; Journal of Family and Community Medicine Volume 22 ; 2015 ; 22 ; >
     au < manifest ; exists ; 2016 ; Journal of Family and Community Medicine Volume 23 ; 2016 ; 23 ; >
 
   }
@@ -2536,7 +2550,7 @@
     au < manifest ; exists ; 2012 ; Journal of Family Medicine and Primary Care Volume 1 ; 2012 ; 1 ; >
     au < manifest ; exists ; 2013 ; Journal of Family Medicine and Primary Care Volume 2 ; 2013 ; 2 ; >
     au < manifest ; exists ; 2014 ; Journal of Family Medicine and Primary Care Volume 3 ; 2014 ; 3 ; >
-    au < manifest ; exists ; 2015 ; Journal of Family Medicine and Primary Care Volume 4 ; 2015 ; 4 ; >
+    au < boost ; exists ; 2015 ; Journal of Family Medicine and Primary Care Volume 4 ; 2015 ; 4 ; >
     au < exists ; exists ; 2016 ; Journal of Family Medicine and Primary Care Volume 5 ; 2016 ; 5 ; >
 
   }
@@ -2558,7 +2572,7 @@
     au < manifest ; exists ; 2012 ; Journal of Forensic Dental Sciences Volume 4 ; 2012 ; 4 ; >
     au < manifest ; exists ; 2013 ; Journal of Forensic Dental Sciences Volume 5 ; 2013 ; 5 ; >
     au < manifest ; exists ; 2014 ; Journal of Forensic Dental Sciences Volume 6 ; 2014 ; 6 ; >
-    au < manifest ; exists ; 2015 ; Journal of Forensic Dental Sciences Volume 7 ; 2015 ; 7 ; >
+    au < boost ; exists ; 2015 ; Journal of Forensic Dental Sciences Volume 7 ; 2015 ; 7 ; >
     au < manifest ; exists ; 2016 ; Journal of Forensic Dental Sciences Volume 8 ; 2016 ; 8 ; >
 
   }
@@ -2580,7 +2594,7 @@
     au < manifest ; exists ; 2012 ; Journal of Global Infectious Diseases Volume 4 ; 2012 ; 4 ; >
     au < manifest ; exists ; 2013 ; Journal of Global Infectious Diseases Volume 5 ; 2013 ; 5 ; >
     au < manifest ; exists ; 2014 ; Journal of Global Infectious Diseases Volume 6 ; 2014 ; 6 ; >
-    au < manifest ; exists ; 2015 ; Journal of Global Infectious Diseases Volume 7 ; 2015 ; 7 ; >
+    au < boost ; exists ; 2015 ; Journal of Global Infectious Diseases Volume 7 ; 2015 ; 7 ; >
     au < manifest ; exists ; 2016 ; Journal of Global Infectious Diseases Volume 8 ; 2016 ; 8 ; >
 
   }
@@ -2619,7 +2633,7 @@
     au < manifest ; exists ; 2012 ; Journal of Human Reproductive Sciences Volume 5 ; 2012 ; 5 ; >
     au < manifest ; exists ; 2013 ; Journal of Human Reproductive Sciences Volume 6 ; 2013 ; 6 ; >
     au < manifest ; exists ; 2014 ; Journal of Human Reproductive Sciences Volume 7 ; 2014 ; 7 ; >
-    au < manifest ; exists ; 2015 ; Journal of Human Reproductive Sciences Volume 8 ; 2015 ; 8 ; >
+    au < boost ; exists ; 2015 ; Journal of Human Reproductive Sciences Volume 8 ; 2015 ; 8 ; >
     au < manifest ; exists ; 2016 ; Journal of Human Reproductive Sciences Volume 9 ; 2016 ; 9 ; >
 
   }
@@ -2654,7 +2668,7 @@
     au < manifest ; exists ; 2012 ; Journal of Indian Association of Pediatric Surgeons Volume 17 ; 2012 ; 17 ; >
     au < manifest ; exists ; 2013 ; Journal of Indian Association of Pediatric Surgeons Volume 18 ; 2013 ; 18 ; >
     au < manifest ; exists ; 2014 ; Journal of Indian Association of Pediatric Surgeons Volume 19 ; 2014 ; 19 ; >
-    au < manifest ; exists ; 2015 ; Journal of Indian Association of Pediatric Surgeons Volume 20 ; 2015 ; 20 ; >
+    au < boost ; exists ; 2015 ; Journal of Indian Association of Pediatric Surgeons Volume 20 ; 2015 ; 20 ; >
     au < manifest ; exists ; 2016 ; Journal of Indian Association of Pediatric Surgeons Volume 21 ; 2016 ; 21 ; >
 
   }
@@ -2689,7 +2703,7 @@
     au < manifest ; exists ; 2012 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 30 ; 2012 ; 30 ; >
     au < manifest ; exists ; 2013 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 31 ; 2013 ; 31 ; >
     au < manifest ; exists ; 2014 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 32 ; 2014 ; 32 ; >
-    au < manifest ; exists ; 2015 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 33 ; 2015 ; 33 ; >
+    au < boost ; exists ; 2015 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 33 ; 2015 ; 33 ; >
     au < manifest ; exists ; 2016 ; Journal of Indian Society of Pedodontics and Preventive Dentistry Volume 34 ; 2016 ; 34 ; >
 
   }
@@ -2712,7 +2726,7 @@
     au < manifest ; exists ; 2012 ; Journal of Indian Society of Periodontology Volume 16 ; 2012 ; 16 ; >
     au < manifest ; exists ; 2013 ; Journal of Indian Society of Periodontology Volume 17 ; 2013 ; 17 ; >
     au < manifest ; exists ; 2014 ; Journal of Indian Society of Periodontology Volume 18 ; 2014 ; 18 ; >
-    au < manifest ; exists ; 2015 ; Journal of Indian Society of Periodontology Volume 19 ; 2015 ; 19 ; >
+    au < boost ; exists ; 2015 ; Journal of Indian Society of Periodontology Volume 19 ; 2015 ; 19 ; >
     au < manifest ; exists ; 2016 ; Journal of Indian Society of Periodontology Volume 20 ; 2016 ; 20 ; >
 
   }
@@ -2732,7 +2746,7 @@
     au < manifest ; exists ; 2012 ; Journal of Interdisciplinary Dentistry Volume 2 ; 2012 ; 2 ; >
     au < manifest ; exists ; 2013 ; Journal of Interdisciplinary Dentistry Volume 3 ; 2013 ; 3 ; >
     au < manifest ; exists ; 2014 ; Journal of Interdisciplinary Dentistry Volume 4 ; 2014 ; 4 ; >
-    au < manifest ; exists ; 2015 ; Journal of Interdisciplinary Dentistry Volume 5 ; 2015 ; 5 ; >
+    au < boost ; exists ; 2015 ; Journal of Interdisciplinary Dentistry Volume 5 ; 2015 ; 5 ; >
     au < expected ; exists ; 2016 ; Journal of Interdisciplinary Dentistry Volume 6 ; 2016 ; 6 ; >
 
   }
@@ -2752,7 +2766,7 @@
     au < manifest ; exists ; 2012 ; Journal of International Society of Preventive and Community Dentistry Volume 2 ; 2012 ; 2 ; >
     au < manifest ; exists ; 2013 ; Journal of International Society of Preventive and Community Dentistry Volume 3 ; 2013 ; 3 ; >
     au < manifest ; exists ; 2014 ; Journal of International Society of Preventive and Community Dentistry Volume 4 ; 2014 ; 4 ; >
-    au < manifest ; exists ; 2015 ; Journal of International Society of Preventive and Community Dentistry Volume 5 ; 2015 ; 5 ; >
+    au < boost ; exists ; 2015 ; Journal of International Society of Preventive and Community Dentistry Volume 5 ; 2015 ; 5 ; >
     au < manifest ; exists ; 2016 ; Journal of International Society of Preventive and Community Dentistry Volume 6 ; 2016 ; 6 ; >
 
   }
@@ -2774,7 +2788,7 @@
     au < manifest ; exists ; 2012 ; Journal of Laboratory Physicians Volume 4 ; 2012 ; 4 ; >
     au < manifest ; exists ; 2013 ; Journal of Laboratory Physicians Volume 5 ; 2013 ; 5 ; >
     au < manifest ; exists ; 2014 ; Journal of Laboratory Physicians Volume 6 ; 2014 ; 6 ; >
-    au < manifest ; exists ; 2015 ; Journal of Laboratory Physicians Volume 7 ; 2015 ; 7 ; >
+    au < boost ; exists ; 2015 ; Journal of Laboratory Physicians Volume 7 ; 2015 ; 7 ; >
     au < manifest ; exists ; 2016 ; Journal of Laboratory Physicians Volume 8 ; 2016 ; 8 ; >
 
   }
@@ -2794,7 +2808,7 @@
     au < manifest ; exists ; 2012 ; Journal of Laryngology and Voice Volume 2 ; 2012 ; 2 ; >
     au < manifest ; exists ; 2013 ; Journal of Laryngology and Voice Volume 3 ; 2013 ; 3 ; >
     au < manifest ; exists ; 2014 ; Journal of Laryngology and Voice Volume 4 ; 2014 ; 4 ; >
-    au < manifest ; exists ; 2015 ; Journal of Laryngology and Voice Volume 5 ; 2015 ; 5 ; >
+    au < boost ; exists ; 2015 ; Journal of Laryngology and Voice Volume 5 ; 2015 ; 5 ; >
     au < expected ; exists ; 2016 ; Journal of Laryngology and Voice Volume 6 ; 2016 ; 6 ; >
 
   }
@@ -2847,7 +2861,7 @@
     au < manifest ; exists ; 2012 ; Journal of Medical Physics Volume 37 ; 2012 ; 37 ; >
     au < manifest ; exists ; 2013 ; Journal of Medical Physics Volume 38 ; 2013 ; 38 ; >
     au < manifest ; exists ; 2014 ; Journal of Medical Physics Volume 39 ; 2014 ; 39 ; >
-    au < manifest ; exists ; 2015 ; Journal of Medical Physics Volume 40 ; 2015 ; 40 ; >
+    au < boost ; exists ; 2015 ; Journal of Medical Physics Volume 40 ; 2015 ; 40 ; >
     au < manifest ; exists ; 2016 ; Journal of Medical Physics Volume 41 ; 2016 ; 41 ; >
 
   }
@@ -2885,7 +2899,7 @@
     au < manifest ; exists ; 2012 ; Journal of Mid-life Health Volume 3 ; 2012 ; 3 ; >
     au < manifest ; exists ; 2013 ; Journal of Mid-life Health Volume 4 ; 2013 ; 4 ; >
     au < manifest ; exists ; 2014 ; Journal of Mid-life Health Volume 5 ; 2014 ; 5 ; >
-    au < manifest ; exists ; 2015 ; Journal of Mid-life Health Volume 6 ; 2015 ; 6 ; >
+    au < boost ; exists ; 2015 ; Journal of Mid-life Health Volume 6 ; 2015 ; 6 ; >
     au < manifest ; exists ; 2016 ; Journal of Mid-life Health Volume 7 ; 2016 ; 7 ; >
 
   }
@@ -2911,7 +2925,7 @@
     au < manifest ; exists ; 2012 ; Journal of Minimal Access Surgery Volume 8 ; 2012 ; 8 ; >
     au < manifest ; exists ; 2013 ; Journal of Minimal Access Surgery Volume 9 ; 2013 ; 9 ; >
     au < manifest ; exists ; 2014 ; Journal of Minimal Access Surgery Volume 10 ; 2014 ; 10 ; >
-    au < manifest ; exists ; 2015 ; Journal of Minimal Access Surgery Volume 11 ; 2015 ; 11 ; >
+    au < boost ; exists ; 2015 ; Journal of Minimal Access Surgery Volume 11 ; 2015 ; 11 ; >
     au < manifest ; exists ; 2016 ; Journal of Minimal Access Surgery Volume 12 ; 2016 ; 12 ; >
 
   }
@@ -2952,7 +2966,7 @@
     au < manifest ; exists ; 2012 ; Journal of Natural Science, Biology and Medicine Volume 3 ; 2012 ; 3 ; >
     au < manifest ; exists ; 2013 ; Journal of Natural Science, Biology and Medicine Volume 4 ; 2013 ; 4 ; >
     au < manifest ; exists ; 2014 ; Journal of Natural Science, Biology and Medicine Volume 5 ; 2014 ; 5 ; >
-    au < manifest ; exists ; 2015 ; Journal of Natural Science, Biology and Medicine Volume 6 ; 2015 ; 6 ; >
+    au < boost ; exists ; 2015 ; Journal of Natural Science, Biology and Medicine Volume 6 ; 2015 ; 6 ; >
     au < manifest ; exists ; 2016 ; Journal of Natural Science, Biology and Medicine Volume 7 ; 2016 ; 7 ; >
 
   }
@@ -2973,7 +2987,7 @@
     au < manifest ; exists ; 2012 ; Journal of Neurosciences in Rural Practice Volume 3 ; 2012 ; 3 ; >
     au < manifest ; exists ; 2013 ; Journal of Neurosciences in Rural Practice Volume 4 ; 2013 ; 4 ; >
     au < manifest ; exists ; 2014 ; Journal of Neurosciences in Rural Practice Volume 5 ; 2014 ; 5 ; >
-    au < manifest ; exists ; 2015 ; Journal of Neurosciences in Rural Practice Volume 6 ; 2015 ; 6 ; >
+    au < boost ; exists ; 2015 ; Journal of Neurosciences in Rural Practice Volume 6 ; 2015 ; 6 ; >
     au < manifest ; exists ; 2016 ; Journal of Neurosciences in Rural Practice Volume 7 ; 2016 ; 7 ; >
 
   }
@@ -2992,7 +3006,7 @@
     au < manifest ; exists ; 2012 ; Journal of Obstetric Anaesthesia and Critical Care Volume 2 ; 2012 ; 2 ; >
     au < manifest ; exists ; 2013 ; Journal of Obstetric Anaesthesia and Critical Care Volume 3 ; 2013 ; 3 ; >
     au < manifest ; exists ; 2014 ; Journal of Obstetric Anaesthesia and Critical Care Volume 4 ; 2014 ; 4 ; >
-    au < manifest ; exists ; 2015 ; Journal of Obstetric Anaesthesia and Critical Care Volume 5 ; 2015 ; 5 ; >
+    au < boost ; exists ; 2015 ; Journal of Obstetric Anaesthesia and Critical Care Volume 5 ; 2015 ; 5 ; >
     au < expected ; exists ; 2016 ; Journal of Obstetric Anaesthesia and Critical Care Volume 6 ; 2016 ; 6 ; >
 
   }
@@ -3020,7 +3034,7 @@
     au < manifest ; exists ; 2012 ; Journal of Oral and Maxillofacial Pathology Volume 16 ; 2012 ; 16 ; >
     au < manifest ; exists ; 2013 ; Journal of Oral and Maxillofacial Pathology Volume 17 ; 2013 ; 17 ; >
     au < manifest ; exists ; 2014 ; Journal of Oral and Maxillofacial Pathology Volume 18 ; 2014 ; 18 ; >
-    au < manifest ; exists ; 2015 ; Journal of Oral and Maxillofacial Pathology Volume 19 ; 2015 ; 19 ; >
+    au < boost ; exists ; 2015 ; Journal of Oral and Maxillofacial Pathology Volume 19 ; 2015 ; 19 ; >
     au < expected ; exists ; 2016 ; Journal of Oral and Maxillofacial Pathology Volume 20 ; 2016 ; 20 ; >
 
   }
@@ -3064,7 +3078,7 @@
     au < manifest ; exists ; 2012 ; Journal of Pediatric Neurosciences Volume 7 ; 2012 ; 7 ; >
     au < crawling ; exists ; 2013 ; Journal of Pediatric Neurosciences Volume 8 ; 2013 ; 8 ; >
     au < manifest ; exists ; 2014 ; Journal of Pediatric Neurosciences Volume 9 ; 2014 ; 9 ; >
-    au < manifest ; exists ; 2015 ; Journal of Pediatric Neurosciences Volume 10 ; 2015 ; 10 ; >
+    au < boost ; exists ; 2015 ; Journal of Pediatric Neurosciences Volume 10 ; 2015 ; 10 ; >
     au < expected ; exists ; 2016 ; Journal of Pediatric Neurosciences Volume 11 ; 2016 ; 11 ; >
 
   }
@@ -3085,7 +3099,7 @@
     au < manifest ; exists ; 2012 ; Journal of Pharmaceutical Negative Results Volume 3 ; 2012 ; 3 ; >
     au < manifest ; exists ; 2013 ; Journal of Pharmaceutical Negative Results Volume 4 ; 2013 ; 4 ; >
     au < manifest ; exists ; 2014 ; Journal of Pharmaceutical Negative Results Volume 5 ; 2014 ; 5 ; >
-    au < manifest ; exists ; 2015 ; Journal of Pharmaceutical Negative Results Volume 6 ; 2015 ; 6 ; >
+    au < boost ; exists ; 2015 ; Journal of Pharmaceutical Negative Results Volume 6 ; 2015 ; 6 ; >
     au < manifest ; exists ; 2016 ; Journal of Pharmaceutical Negative Results Volume 7 ; 2016 ; 7 ; >
 
   }
@@ -3106,7 +3120,7 @@
     au < manifest ; exists ; 2012 ; Journal of Pharmacology and Pharmacotherapeutics Volume 3 ; 2012 ; 3 ; >
     au < manifest ; exists ; 2013 ; Journal of Pharmacology and Pharmacotherapeutics Volume 4 ; 2013 ; 4 ; >
     au < manifest ; exists ; 2014 ; Journal of Pharmacology and Pharmacotherapeutics Volume 5 ; 2014 ; 5 ; >
-    au < manifest ; exists ; 2015 ; Journal of Pharmacology and Pharmacotherapeutics Volume 6 ; 2015 ; 6 ; >
+    au < boost ; exists ; 2015 ; Journal of Pharmacology and Pharmacotherapeutics Volume 6 ; 2015 ; 6 ; >
     au < manifest ; exists ; 2016 ; Journal of Pharmacology and Pharmacotherapeutics Volume 7 ; 2016 ; 7 ; >
 
   }
@@ -3181,7 +3195,7 @@
     au < manifest ; exists ; 2012 ; Journal of Postgraduate Medicine Volume 58 ; 2012 ; 58 ; >
     au < manifest ; exists ; 2013 ; Journal of Postgraduate Medicine Volume 59 ; 2013 ; 59 ; >
     au < manifest ; exists ; 2014 ; Journal of Postgraduate Medicine Volume 60 ; 2014 ; 60 ; >
-    au < manifest ; exists ; 2015 ; Journal of Postgraduate Medicine Volume 61 ; 2015 ; 61 ; >
+    au < boost ; exists ; 2015 ; Journal of Postgraduate Medicine Volume 61 ; 2015 ; 61 ; >
     au < manifest ; exists ; 2016 ; Journal of Postgraduate Medicine Volume 62 ; 2016 ; 62 ; >
 
   }
@@ -3340,7 +3354,7 @@
     au < manifest ; exists ; 2012 ; Lung India Volume 29 ; 2012 ; 29 ; >
     au < manifest ; exists ; 2013 ; Lung India Volume 30 ; 2013 ; 30 ; >
     au < manifest ; exists ; 2014 ; Lung India Volume 31 ; 2014 ; 31 ; >
-    au < manifest ; exists ; 2015 ; Lung India Volume 32 ; 2015 ; 32 ; >
+    au < boost ; exists ; 2015 ; Lung India Volume 32 ; 2015 ; 32 ; >
     au < manifest ; exists ; 2016 ; Lung India Volume 33 ; 2016 ; 33 ; >
 
   }
@@ -3377,7 +3391,7 @@
     au < doNotProcess ; exists ; 2012 ; Medical Law Cases - For Doctors Volume 5 ; 2012 ; 5 ; >
     au < doNotProcess ; exists ; 2013 ; Medical Law Cases - For Doctors Volume 6 ; 2013 ; 6 ; >
     au < manifest ; exists ; 2014 ; Medical Law Cases - For Doctors Volume 7 ; 2014 ; 7 ; >
-    au < manifest ; exists ; 2015 ; Medical Law Cases - For Doctors Volume 8 ; 2015 ; 8 ; >
+    au < boost ; exists ; 2015 ; Medical Law Cases - For Doctors Volume 8 ; 2015 ; 8 ; >
     au < manifest ; exists ; 2016 ; Medical Law Cases - For Doctors Volume 9 ; 2016 ; 9 ; >
 
   }
@@ -3405,7 +3419,7 @@
     au < doNotProcess ; exists ; 2012 ; Mens Sana Monographs Volume 10 ; 2012 ; 10 ; >
     au < doNotProcess ; exists ; 2013 ; Mens Sana Monographs Volume 11 ; 2013 ; 11 ; >
     au < manifest ; exists ; 2014 ; Mens Sana Monographs Volume 12 ; 2014 ; 12 ; >
-    au < manifest ; exists ; 2015 ; Mens Sana Monographs Volume 13 ; 2015 ; 13 ; >
+    au < boost ; exists ; 2015 ; Mens Sana Monographs Volume 13 ; 2015 ; 13 ; >
     au < expected ; exists ; 2016 ; Mens Sana Monographs Volume 14 ; 2016 ; 14 ; >
 
   }
