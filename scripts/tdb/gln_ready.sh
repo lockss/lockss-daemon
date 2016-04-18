@@ -7,7 +7,7 @@ tpath="/home/$LOGNAME/tmp"
 #mkdir -p $tpath
 
 plugin="TaylorAndFrancisPlugin"
-count=10
+count=200
 
 # Make a list of AUids that are on ingest machine(s), and 'Yes' have substance, have crawled successfully.
    # Date of last successful crawl is unimportant because many good AUs have been frozen or finished.
