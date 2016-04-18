@@ -22,8 +22,8 @@
 
       param[base_url] = http://muse.jhu.edu/
 
-      au < released ; 2004 ; Steinbeck Studies Volume 15 ; 15 >
-      au < released ; 2005 ; Steinbeck Studies Volume 16 ; 16 >
+      au < down ; 2004 ; Steinbeck Studies Volume 15 ; 15 >
+      au < down ; 2005 ; Steinbeck Studies Volume 16 ; 16 >
 
     }
 
@@ -46,8 +46,8 @@
 
       param[base_url] = http://muse.jhu.edu/
 
-      au < released ; 2006 ; Steinbeck Review Volume 3 ; 3 >
-      au < released ; 2007 ; Steinbeck Review Volume 4 ; 4 >
+      au < down ; 2006 ; Steinbeck Review Volume 3 ; 3 >
+      au < down ; 2007 ; Steinbeck Review Volume 4 ; 4 >
 
     }
 
@@ -55,9 +55,9 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < released ; 2013 ; Steinbeck Review Volume 10 ; 10 >
-      au < released ; 2014 ; Steinbeck Review Volume 11 ; 11 >
-      au < released ; 2015 ; Steinbeck Review Volume 12 ; 12 >
+      au < down ; 2013 ; Steinbeck Review Volume 10 ; 10 >
+      au < down ; 2014 ; Steinbeck Review Volume 11 ; 11 >
+      au < down ; 2015 ; Steinbeck Review Volume 12 ; 12 >
 
     }
 

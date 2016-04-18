@@ -49,15 +49,15 @@
 
       param[base_url] = http://muse.jhu.edu/
 
-      au < released ; 2005 ; Tenso Volume 20 ; 20 >
-      au < released ; 2006 ; Tenso Volume 21 ; 21 >
-      au < released ; 2007 ; Tenso Volume 22 ; 22 >
-      au < released ; 2008 ; Tenso Volume 23 ; 23 >
-      au < released ; 2009 ; Tenso Volume 24 ; 24 >
-      au < released ; 2010 ; Tenso Volume 25 ; 25 >
-      au < released ; 2011 ; Tenso Volume 26 ; 26 >
-      au < released ; 2012 ; Tenso Volume 27 ; 27 >
-      au < released ; 2013 ; Tenso Volume 28 ; 28 >
+      au < down ; 2005 ; Tenso Volume 20 ; 20 >
+      au < down ; 2006 ; Tenso Volume 21 ; 21 >
+      au < down ; 2007 ; Tenso Volume 22 ; 22 >
+      au < down ; 2008 ; Tenso Volume 23 ; 23 >
+      au < down ; 2009 ; Tenso Volume 24 ; 24 >
+      au < down ; 2010 ; Tenso Volume 25 ; 25 >
+      au < down ; 2011 ; Tenso Volume 26 ; 26 >
+      au < down ; 2012 ; Tenso Volume 27 ; 27 >
+      au < down ; 2013 ; Tenso Volume 28 ; 28 >
 
     }
 
@@ -65,8 +65,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < released ; 2014 ; Tenso Volume 29 ; 29 >
-      au < released ; 2015 ; Tenso Volume 30 ; 30 >
+      au < down ; 2014 ; Tenso Volume 29 ; 29 >
+      au < down ; 2015 ; Tenso Volume 30 ; 30 >
 
     }
 

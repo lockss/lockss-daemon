@@ -23,10 +23,10 @@
 
       param[base_url] = http://muse.jhu.edu/
 
-      au < released ; 2002 ; Studies in Bibliography Volume 55 ; 55 >
-      au < released ; 2003-2004 ; Studies in Bibliography Volume 56 ; 56 >
-      au < released ; 2005-2006 ; Studies in Bibliography Volume 57 ; 57 >
-      au < released ; 2007-2008 ; Studies in Bibliography Volume 58 ; 58 >
+      au < down ; 2002 ; Studies in Bibliography Volume 55 ; 55 >
+      au < down ; 2003-2004 ; Studies in Bibliography Volume 56 ; 56 >
+      au < down ; 2005-2006 ; Studies in Bibliography Volume 57 ; 57 >
+      au < down ; 2007-2008 ; Studies in Bibliography Volume 58 ; 58 >
 
     }
 
@@ -34,7 +34,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < released ; 2015 ; Studies in Bibliography Volume 59 ; 59 >
+      au < down ; 2015 ; Studies in Bibliography Volume 59 ; 59 >
 
     }
 

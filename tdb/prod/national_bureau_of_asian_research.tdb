@@ -20,22 +20,22 @@
 
       param[base_url] = http://muse.jhu.edu/
 
-      au < released ; 2006 ; Asia Policy Number 1 ; 1 >
-      au < released ; 2006 ; Asia Policy Number 2 ; 2 >
-      au < released ; 2007 ; Asia Policy Number 3 ; 3 >
-      au < released ; 2007 ; Asia Policy Number 4 ; 4 >
-      au < released ; 2008 ; Asia Policy Number 5 ; 5 >
-      au < released ; 2008 ; Asia Policy Number 6 ; 6 >
-      au < released ; 2009 ; Asia Policy Number 7 ; 7 >
-      au < released ; 2009 ; Asia Policy Number 8 ; 8 >
-      au < released ; 2010 ; Asia Policy Number 9 ; 9 >
-      au < released ; 2010 ; Asia Policy Number 10 ; 10 >
-      au < released ; 2011 ; Asia Policy Number 11 ; 11 >
-      au < released ; 2011 ; Asia Policy Number 12 ; 12 >
-      au < released ; 2012 ; Asia Policy Number 13 ; 13 >
-      au < released ; 2012 ; Asia Policy Number 14 ; 14 >
-      au < released ; 2013 ; Asia Policy Number 15 ; 15 >
-      au < released ; 2013 ; Asia Policy Number 16 ; 16 >
+      au < down ; 2006 ; Asia Policy Number 1 ; 1 >
+      au < down ; 2006 ; Asia Policy Number 2 ; 2 >
+      au < down ; 2007 ; Asia Policy Number 3 ; 3 >
+      au < down ; 2007 ; Asia Policy Number 4 ; 4 >
+      au < down ; 2008 ; Asia Policy Number 5 ; 5 >
+      au < down ; 2008 ; Asia Policy Number 6 ; 6 >
+      au < down ; 2009 ; Asia Policy Number 7 ; 7 >
+      au < down ; 2009 ; Asia Policy Number 8 ; 8 >
+      au < down ; 2010 ; Asia Policy Number 9 ; 9 >
+      au < down ; 2010 ; Asia Policy Number 10 ; 10 >
+      au < down ; 2011 ; Asia Policy Number 11 ; 11 >
+      au < down ; 2011 ; Asia Policy Number 12 ; 12 >
+      au < down ; 2012 ; Asia Policy Number 13 ; 13 >
+      au < down ; 2012 ; Asia Policy Number 14 ; 14 >
+      au < down ; 2013 ; Asia Policy Number 15 ; 15 >
+      au < down ; 2013 ; Asia Policy Number 16 ; 16 >
 
     }
 
@@ -43,10 +43,10 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < released ; 2014 ; Asia Policy Number 17 ; 17 >
-      au < released ; 2014 ; Asia Policy Number 18 ; 18 >
-      au < released ; 2015 ; Asia Policy Number 19 ; 19 >
-      au < released ; 2015 ; Asia Policy Number 20 ; 20 >
+      au < down ; 2014 ; Asia Policy Number 17 ; 17 >
+      au < down ; 2014 ; Asia Policy Number 18 ; 18 >
+      au < down ; 2015 ; Asia Policy Number 19 ; 19 >
+      au < down ; 2015 ; Asia Policy Number 20 ; 20 >
 
     }
 

@@ -20,11 +20,11 @@
 
       param[base_url] = http://muse.jhu.edu/
 
-      au < released ; 2008 ; Dublin James Joyce Journal Volume 1 ; 1 >
-      au < released ; 2009 ; Dublin James Joyce Journal Volume 2 ; 2 >
-      au < released ; 2010 ; Dublin James Joyce Journal Volume 3 ; 3 >
-      au < released ; 2011 ; Dublin James Joyce Journal Volume 4 ; 4 >
-      au < released ; 2012 ; Dublin James Joyce Journal Volume 5 ; 5 >
+      au < down ; 2008 ; Dublin James Joyce Journal Volume 1 ; 1 >
+      au < down ; 2009 ; Dublin James Joyce Journal Volume 2 ; 2 >
+      au < down ; 2010 ; Dublin James Joyce Journal Volume 3 ; 3 >
+      au < down ; 2011 ; Dublin James Joyce Journal Volume 4 ; 4 >
+      au < down ; 2012 ; Dublin James Joyce Journal Volume 5 ; 5 >
 
     }
 
@@ -32,7 +32,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < released ; 2013-2014 ; Dublin James Joyce Journal Volume 6-7 ; 6 >
+      au < down ; 2013-2014 ; Dublin James Joyce Journal Volume 6-7 ; 6 >
 
     }
 

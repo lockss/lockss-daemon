@@ -23,20 +23,20 @@
 
       param[base_url] = http://muse.jhu.edu/
 
-      au < released ; 2000-2001 ; Notes Volume 57 ; 57 >
-      au < released ; 2001-2002 ; Notes Volume 58 ; 58 >
-      au < released ; 2002-2003 ; Notes Volume 59 ; 59 >
-      au < released ; 2003-2004 ; Notes Volume 60 ; 60 >
-      au < released ; 2004-2005 ; Notes Volume 61 ; 61 >
-      au < released ; 2005-2006 ; Notes Volume 62 ; 62 >
-      au < released ; 2006-2007 ; Notes Volume 63 ; 63 >
-      au < released ; 2007-2008 ; Notes Volume 64 ; 64 >
-      au < released ; 2008-2009 ; Notes Volume 65 ; 65 >
-      au < released ; 2009-2010 ; Notes Volume 66 ; 66 >
-      au < released ; 2010-2011 ; Notes Volume 67 ; 67 >
-      au < released ; 2011-2012 ; Notes Volume 68 ; 68 >
-      au < released ; 2012-2013 ; Notes Volume 69 ; 69 >
-      au < released ; 2013-2014 ; Notes Volume 70 ; 70 >
+      au < down ; 2000-2001 ; Notes Volume 57 ; 57 >
+      au < down ; 2001-2002 ; Notes Volume 58 ; 58 >
+      au < down ; 2002-2003 ; Notes Volume 59 ; 59 >
+      au < down ; 2003-2004 ; Notes Volume 60 ; 60 >
+      au < down ; 2004-2005 ; Notes Volume 61 ; 61 >
+      au < down ; 2005-2006 ; Notes Volume 62 ; 62 >
+      au < down ; 2006-2007 ; Notes Volume 63 ; 63 >
+      au < down ; 2007-2008 ; Notes Volume 64 ; 64 >
+      au < down ; 2008-2009 ; Notes Volume 65 ; 65 >
+      au < down ; 2009-2010 ; Notes Volume 66 ; 66 >
+      au < down ; 2010-2011 ; Notes Volume 67 ; 67 >
+      au < down ; 2011-2012 ; Notes Volume 68 ; 68 >
+      au < down ; 2012-2013 ; Notes Volume 69 ; 69 >
+      au < down ; 2013-2014 ; Notes Volume 70 ; 70 >
 
     }
 
@@ -44,7 +44,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < released ; 2014-2015 ; Notes Volume 71 ; 71 >
+      au < down ; 2014-2015 ; Notes Volume 71 ; 71 >
       au < manifest ; 2015-2016 ; Notes Volume 72 ; 72 >
 
     }

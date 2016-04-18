@@ -23,10 +23,10 @@
 
       param[base_url] = http://muse.jhu.edu/
 
-      au < released ; 2008 ; Nuevo Texto Crítico Volume 21 ; 21 >
-      au < released ; 2009 ; Nuevo Texto Crítico Volume 22 ; 22 >
-      au < released ; 2010 ; Nuevo Texto Crítico Volume 23 ; 23 >
-      au < released ; 2011-2012 ; Nuevo Texto Crítico Volume 24-25 ; 24 >
+      au < down ; 2008 ; Nuevo Texto Crítico Volume 21 ; 21 >
+      au < down ; 2009 ; Nuevo Texto Crítico Volume 22 ; 22 >
+      au < down ; 2010 ; Nuevo Texto Crítico Volume 23 ; 23 >
+      au < down ; 2011-2012 ; Nuevo Texto Crítico Volume 24-25 ; 24 >
 
     }
 
@@ -34,7 +34,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < released ; 2013-2014 ; Nuevo Texto Crítico Volume 26-27 ; 26 >
+      au < down ; 2013-2014 ; Nuevo Texto Crítico Volume 26-27 ; 26 >
 
     }
 

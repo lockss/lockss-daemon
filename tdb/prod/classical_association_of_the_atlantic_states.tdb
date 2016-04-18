@@ -21,14 +21,14 @@
 
       param[base_url] = http://muse.jhu.edu/
 
-      au < released ; 2005-2006 ; Classical World Volume 99 ; 99 >
-      au < released ; 2006-2007 ; Classical World Volume 100 ; 100 >
-      au < released ; 2007-2008 ; Classical World Volume 101 ; 101 >
-      au < released ; 2008-2009 ; Classical World Volume 102 ; 102 >
-      au < released ; 2009-2010 ; Classical World Volume 103 ; 103 >
-      au < released ; 2010-2011 ; Classical World Volume 104 ; 104 >
-      au < released ; 2011-2012 ; Classical World Volume 105 ; 105 >
-      au < released ; 2012-2013 ; Classical World Volume 106 ; 106 >
+      au < down ; 2005-2006 ; Classical World Volume 99 ; 99 >
+      au < down ; 2006-2007 ; Classical World Volume 100 ; 100 >
+      au < down ; 2007-2008 ; Classical World Volume 101 ; 101 >
+      au < down ; 2008-2009 ; Classical World Volume 102 ; 102 >
+      au < down ; 2009-2010 ; Classical World Volume 103 ; 103 >
+      au < down ; 2010-2011 ; Classical World Volume 104 ; 104 >
+      au < down ; 2011-2012 ; Classical World Volume 105 ; 105 >
+      au < down ; 2012-2013 ; Classical World Volume 106 ; 106 >
 
     }
 
@@ -36,8 +36,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < released ; 2013-2014 ; Classical World Volume 107 ; 107 >
-      au < released ; 2014-2015 ; Classical World Volume 108 ; 108 >
+      au < down ; 2013-2014 ; Classical World Volume 107 ; 107 >
+      au < down ; 2014-2015 ; Classical World Volume 108 ; 108 >
       au < manifest ; 2015-2016 ; Classical World Volume 109 ; 109 >
 
     }

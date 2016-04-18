@@ -23,11 +23,11 @@
 
       param[base_url] = http://muse.jhu.edu/
 
-      au < released ; 2009 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 34 [Project MUSE] ; 34 >
-      au < released ; 2010 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 35 [Project MUSE] ; 35 >
-      au < released ; 2011 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 36 [Project MUSE] ; 36 >
-      au < released ; 2012 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 37 [Project MUSE] ; 37 >
-      au < released ; 2013 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 38 [Project MUSE] ; 38 >
+      au < down ; 2009 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 34 [Project MUSE] ; 34 >
+      au < down ; 2010 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 35 [Project MUSE] ; 35 >
+      au < down ; 2011 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 36 [Project MUSE] ; 36 >
+      au < down ; 2012 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 37 [Project MUSE] ; 37 >
+      au < down ; 2013 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 38 [Project MUSE] ; 38 >
 
     }
 
@@ -35,8 +35,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < released ; 2014 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 39 [Project MUSE] ; 39 >
-      au < released ; 2015 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 40 [Project MUSE] ; 40 >
+      au < down ; 2014 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 39 [Project MUSE] ; 39 >
+      au < down ; 2015 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 40 [Project MUSE] ; 40 >
 
     }
 

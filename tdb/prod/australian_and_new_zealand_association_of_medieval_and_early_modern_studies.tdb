@@ -50,15 +50,15 @@
 
       param[base_url] = http://muse.jhu.edu/
 
-      au < released ; 2005 ; Parergon Volume 22 ; 22 >
-      au < released ; 2006 ; Parergon Volume 23 ; 23 >
-      au < released ; 2007 ; Parergon Volume 24 ; 24 >
-      au < released ; 2008 ; Parergon Volume 25 ; 25 >
-      au < released ; 2009 ; Parergon Volume 26 ; 26 >
-      au < released ; 2010 ; Parergon Volume 27 ; 27 >
-      au < released ; 2011 ; Parergon Volume 28 ; 28 >
-      au < released ; 2012 ; Parergon Volume 29 ; 29 >
-      au < released ; 2013 ; Parergon Volume 30 ; 30 >
+      au < down ; 2005 ; Parergon Volume 22 ; 22 >
+      au < down ; 2006 ; Parergon Volume 23 ; 23 >
+      au < down ; 2007 ; Parergon Volume 24 ; 24 >
+      au < down ; 2008 ; Parergon Volume 25 ; 25 >
+      au < down ; 2009 ; Parergon Volume 26 ; 26 >
+      au < down ; 2010 ; Parergon Volume 27 ; 27 >
+      au < down ; 2011 ; Parergon Volume 28 ; 28 >
+      au < down ; 2012 ; Parergon Volume 29 ; 29 >
+      au < down ; 2013 ; Parergon Volume 30 ; 30 >
 
     }
 
@@ -66,8 +66,8 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < released ; 2014 ; Parergon Volume 31 ; 31 >
-      au < released ; 2015 ; Parergon Volume 32 ; 32 >
+      au < down ; 2014 ; Parergon Volume 31 ; 31 >
+      au < down ; 2015 ; Parergon Volume 32 ; 32 >
 
     }
 
