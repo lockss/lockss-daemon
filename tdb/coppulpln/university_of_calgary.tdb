@@ -28,8 +28,8 @@
     param[base_url] = http://ahdp.lib.ucalgary.ca/
     implicit < status ; name ; param[collection_id] >
 
-    au < releasing ; University of Calgary Repositories: The Vault ; thevault >
-    au < releasing ; University of Calgary Repositories: PRISM ; prism >
+    au < released ; University of Calgary Repositories: The Vault ; thevault >
+    au < released ; University of Calgary Repositories: PRISM ; prism >
     
   }
 
