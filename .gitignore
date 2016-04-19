@@ -56,6 +56,12 @@ local.properties
 .texlipse
 .springBeans
 
+# Common editor backup file patterns #
+######################
+*~
+\#*
+.#*
+
 # Preliminary .gitignore
 ######################
 
