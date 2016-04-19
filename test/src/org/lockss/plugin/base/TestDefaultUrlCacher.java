@@ -59,7 +59,7 @@ import static org.lockss.util.DateTimeUtil.GMT_DATE_FORMATTER;
  */
 public class TestDefaultUrlCacher extends LockssTestCase {
 
-  protected static Logger logger = Logger.getLogger("TestBaseUrlCacher");
+  protected static Logger logger = Logger.getLogger("TestDefaultUrlCacher");
 
   private static final int REFETCH_FLAG = 0;
 
@@ -69,7 +69,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     GMT_DATE_PARSER.setTimeZone(TimeZone.getTimeZone("GMT"));
   }
 
-  MyMockBaseUrlCacher cacher;
+  MyDefaultUrlCacher cacher;
   MockCachedUrlSet mcus;
   MockPlugin plugin;
 
@@ -138,7 +138,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
                      new CIProperties(), TEST_URL);
     mau.setStartUrls(ListUtil.list(TEST_URL));
     long origChange = maus.getLastContentChange();
-    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher = new MyDefaultUrlCacher(mau, ud);
     cacher.storeContent();
     long finalChange = maus.getLastContentChange();
     assertEquals(origChange, finalChange);
@@ -148,7 +148,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     ud = new UrlData(new StringInputStream("test stream"), 
         new CIProperties(), TEST_URL);
     long origChange = maus.getLastContentChange();
-    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher = new MyDefaultUrlCacher(mau, ud);
     // should cache
     cacher.storeContent();
     long finalChange = maus.getLastContentChange();
@@ -159,7 +159,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
   public void testCacheEmpty() throws IOException {
     ud = new UrlData(new StringInputStream(""), 
         new CIProperties(), TEST_URL);
-    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher = new MyDefaultUrlCacher(mau, ud);
     // should cache
     cacher.storeContent();
     assertTrue(cacher.wasStored);
@@ -175,7 +175,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
 			    CacheSuccess.class);
     ud = new UrlData(new StringInputStream(""), 
         new CIProperties(), TEST_URL);
-    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher = new MyDefaultUrlCacher(mau, ud);
     // should cache
     cacher.storeContent();
     assertTrue(cacher.wasStored);
@@ -186,7 +186,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     ud = new UrlData(new StringInputStream("test stream"), 
         null, TEST_URL);
     try {
-      cacher = new MyMockBaseUrlCacher(mau, ud);
+      cacher = new MyDefaultUrlCacher(mau, ud);
       fail("Should have thrown NullPointerException.");
     } catch (NullPointerException npe) {
     }
@@ -194,14 +194,14 @@ public class TestDefaultUrlCacher extends LockssTestCase {
 
     // no exceptions from null inputstream
     ud = new UrlData(null, new CIProperties(), TEST_URL);
-    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher = new MyDefaultUrlCacher(mau, ud);
     cacher.storeContent();
     // should simply skip
     assertFalse(cacher.wasStored);
 
     ud = new UrlData(new StringInputStream("test stream"),
         new CIProperties(), TEST_URL);
-    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher = new MyDefaultUrlCacher(mau, ud);
     cacher.storeContent();
     assertTrue(cacher.wasStored);
   }
@@ -231,7 +231,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     CIProperties props = new CIProperties();
     props.setProperty("Content-Length", "8");
     ud = new UrlData(new StringInputStream("123456789"), props, TEST_URL);
-    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher = new MyDefaultUrlCacher(mau, ud);
     try {
       cacher.storeContent();
       switch (mode) {
@@ -300,12 +300,12 @@ public class TestDefaultUrlCacher extends LockssTestCase {
   public void testNewVersionAlert() throws IOException {
     CIProperties props = new CIProperties();
     ud = new UrlData(new StringInputStream("123456789"), props, TEST_URL);
-    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher = new MyDefaultUrlCacher(mau, ud);
     cacher.storeContent();
     assertTrue(cacher.wasStored);
     assertEquals(0, alertMgr.getAlerts().size());
     ud = new UrlData(new StringInputStream("987"), props, TEST_URL);
-    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher = new MyDefaultUrlCacher(mau, ud);
     cacher.storeContent();
     assertEquals(1, alertMgr.getAlerts().size());
     Alert alert = alertMgr.getAlerts().get(0);
@@ -322,7 +322,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     CIProperties props = new CIProperties();
     props.setProperty("Content-Length", "9");
     ud = new UrlData(new StringInputStream("123456789"), props, TEST_URL);
-    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher = new MyDefaultUrlCacher(mau, ud);
     cacher.storeContent();
     assertTrue(cacher.wasStored);
     assertEquals(0, alertMgr.getAlerts().size());
@@ -333,7 +333,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     props.setProperty("test1", "value1");
     ud = new UrlData(new StringInputStream("test content"), 
         props, TEST_URL);
-    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher = new MyDefaultUrlCacher(mau, ud);
     cacher.storeContent();
 
     CachedUrl url = new BaseCachedUrl(mau, TEST_URL);
@@ -351,7 +351,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     props.setProperty("test1", "value1");
     ud = new UrlData(new StringInputStream("test content"), 
         props, TEST_URL);
-    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher = new MyDefaultUrlCacher(mau, ud);
     cacher.storeContent();;
 
     CachedUrl url = new BaseCachedUrl(mau, TEST_URL);
@@ -366,7 +366,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
   public void testSubstanceCount() throws IOException {
     ud = new UrlData(new StringInputStream("test stream"), 
 		     new CIProperties(), TEST_URL);
-    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher = new MyDefaultUrlCacher(mau, ud);
     cacher.storeContent();
     CachedUrl cu = new BaseCachedUrl(mau, TEST_URL);
     mau.addCu(cu);
@@ -378,7 +378,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     assertEquals(1, aus.recomputeNumCurrentSuspectVersions());
     ud = new UrlData(new StringInputStream("different content"), 
 		     new CIProperties(), TEST_URL);
-    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher = new MyDefaultUrlCacher(mau, ud);
     cacher.storeContent();
     assertFalse(asuv.isEmpty());
     assertTrue(asuv.isSuspect(TEST_URL, 1));
@@ -389,7 +389,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     assertEquals(4, aus.getNumCurrentSuspectVersions());
     ud = new UrlData(new StringInputStream("more different content"), 
 		     new CIProperties(), TEST_URL);
-    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher = new MyDefaultUrlCacher(mau, ud);
     cacher.storeContent();
     // previously current version wasn't suspect, count should not decrease
     assertEquals(4, aus.getNumCurrentSuspectVersions());
@@ -403,7 +403,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
 				       new IOException("Malformed chunk"),
 				       null);
     ud = new UrlData(input, new CIProperties(), TEST_URL);
-    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher = new MyDefaultUrlCacher(mau, ud);
     try {
       cacher.storeContent();
       fail("Copy should have thrown");
@@ -421,7 +421,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
                new StringInputStream("will throw"),
 				       null, new IOException("CRLF expected at end of chunk: -1/-1"));
     ud = new UrlData(input, new CIProperties(), TEST_URL);
-    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher = new MyDefaultUrlCacher(mau, ud);
     try {
       cacher.storeContent();
       fail("Copy should have thrown");
@@ -443,7 +443,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
         new StringInputStream("will throw"), null, 
             new IOException("Exception should be ignored on close()"));
     ud = new UrlData(input, new CIProperties(), TEST_URL);
-    cacher = new MyMockBaseUrlCacher(mau, ud);
+    cacher = new MyDefaultUrlCacher(mau, ud);
     cacher.storeContent();
   }
   
@@ -472,28 +472,19 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     assertEquals(expected, cu.getUrl());
   }
 
-  // Mock BaseUrlCacher that fakes the connection
-  private class MyMockBaseUrlCacher extends DefaultUrlCacher {
+  // DefaultUrlCacher that remembers that it stored
+  private class MyDefaultUrlCacher extends DefaultUrlCacher {
     boolean wasStored = false;
-    BaseArchivalUnit.ParamHandlerMap pMap;
 
     List inputList;
 
-    public MyMockBaseUrlCacher(ArchivalUnit owner, UrlData ud) {
+    public MyDefaultUrlCacher(ArchivalUnit owner, UrlData ud) {
       super(owner, ud);
     }
 
-    public MyMockBaseUrlCacher(ArchivalUnit owner, UrlData ud, List inputList) {
+    public MyDefaultUrlCacher(ArchivalUnit owner, UrlData ud, List inputList) {
       super(owner, ud);
       this.inputList = inputList;
-    }
-
-    protected BaseArchivalUnit.ParamHandlerMap getParamMap() {
-      return pMap;
-    }
-
-    public void setParamMap(BaseArchivalUnit.ParamHandlerMap pMap) {
-      this.pMap = pMap;
     }
 
     @Override
