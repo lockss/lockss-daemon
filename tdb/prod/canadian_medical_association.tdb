@@ -137,8 +137,8 @@
 
       au < doNotProcess ; 2013 ; CMAJ Open Volume 1 ; 1 >
       au < doNotProcess ; 2014 ; CMAJ Open Volume 2 ; 2 >
-      au < exists ; 2015 ; CMAJ Open Volume 3 ; 3 >
-      au < exists ; 2016 ; CMAJ Open Volume 4 ; 4 >
+      au < manifest ; 2015 ; CMAJ Open Volume 3 ; 3 >
+      au < manifest ; 2016 ; CMAJ Open Volume 4 ; 4 >
     }
     {
       param[base_url] = http://www.cmajopen.ca/
