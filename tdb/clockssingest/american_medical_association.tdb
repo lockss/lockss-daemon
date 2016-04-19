@@ -25,6 +25,7 @@
     au < crawling ; exists ; 2013 ; JAMA Dermatology Volume 149 ; 2013 ; >
     au < crawling ; exists ; 2014 ; JAMA Dermatology Volume 150 ; 2014 ; >
     au < crawling ; exists ; 2015 ; JAMA Dermatology Volume 151 ; 2015 ; >
+    au < expected ; exists ; 2016 ; JAMA Dermatology Volume 152 ; 2016 ; >
   
   }
 
@@ -44,6 +45,7 @@
     au < crawling ; exists ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 2013 ; >
     au < crawling ; exists ; 2014 ; JAMA Facial Plastic Surgery Volume 16 ; 2014 ; >
     au < crawling ; exists ; 2015 ; JAMA Facial Plastic Surgery Volume 17 ; 2015 ; >
+    au < expected ; exists ; 2016 ; JAMA Facial Plastic Surgery Volume 18 ; 2016 ; >
   
   }
 
@@ -63,6 +65,7 @@
     au < crawling ; exists ; 2013 ; JAMA Internal Medicine Volume 173 ; 2013 ; >
     au < crawling ; exists ; 2014 ; JAMA Internal Medicine Volume 174 ; 2014 ; >
     au < crawling ; exists ; 2015 ; JAMA Internal Medicine Volume 175 ; 2015 ; >
+    au < expected ; exists ; 2016 ; JAMA Internal Medicine Volume 176 ; 2016 ; >
 
   }
 
@@ -82,6 +85,7 @@
     au < crawling ; exists ; 2013 ; JAMA Neurology Volume 70 ; 2013 ; >
     au < crawling ; exists ; 2014 ; JAMA Neurology Volume 71 ; 2014 ; >
     au < crawling ; exists ; 2015 ; JAMA Neurology Volume 72 ; 2015 ; >
+    au < expected ; exists ; 2016 ; JAMA Neurology Volume 73 ; 2016 ; >
   
   }
 
@@ -113,6 +117,7 @@
     au < crawling ; exists ; 2013 ; JAMA Ophthalmology Volume 131 ; 2013 ; >
     au < crawling ; exists ; 2014 ; JAMA Ophthalmology Volume 132 ; 2014 ; >
     au < crawling ; exists ; 2015 ; JAMA Ophthalmology Volume 133 ; 2015 ; >
+    au < expected ; exists ; 2016 ; JAMA Ophthalmology Volume 134 ; 2016 ; >
     
   }
 
@@ -132,6 +137,7 @@
     au < crawling ; exists ; 2013 ; JAMA Otolaryngology - Head & Neck Surgery Volume 139 ; 2013 ; >
     au < crawling ; exists ; 2014 ; JAMA Otolaryngology - Head & Neck Surgery Volume 140 ; 2014 ; >
     au < crawling ; exists ; 2015 ; JAMA Otolaryngology - Head & Neck Surgery Volume 141 ; 2015 ; >
+    au < expected ; exists ; 2016 ; JAMA Otolaryngology - Head & Neck Surgery Volume 142 ; 2016 ; >
     
   }
 
@@ -151,6 +157,7 @@
     au < crawling ; exists ; 2013 ; JAMA Pediatrics Volume 167 ; 2013 ; >
     au < crawling ; exists ; 2014 ; JAMA Pediatrics Volume 168 ; 2014 ; >
     au < crawling ; exists ; 2015 ; JAMA Pediatrics Volume 169 ; 2015 ; >
+    au < expected ; exists ; 2016 ; JAMA Pediatrics Volume 170 ; 2016 ; >
     
   }
 
@@ -170,6 +177,7 @@
     au < crawling ; exists ; 2013 ; JAMA Psychiatry Volume 70 ; 2013 ; >
     au < crawling ; exists ; 2014 ; JAMA Psychiatry Volume 71 ; 2014 ; >
     au < crawling ; exists ; 2015 ; JAMA Psychiatry Volume 72 ; 2015 ; >
+    au < expected ; exists ; 2016 ; JAMA Psychiatry Volume 73 ; 2016 ; >
   
   }
 
@@ -189,6 +197,7 @@
     au < crawling ; exists ; 2013 ; JAMA Surgery Volume 148 ; 2013 ; >
     au < crawling ; exists ; 2014 ; JAMA Surgery Volume 149 ; 2014 ; >
     au < crawling ; exists ; 2015 ; JAMA Surgery Volume 150 ; 2015 ; >
+    au < expected ; exists ; 2016 ; JAMA Surgery Volume 151 ; 2016 ; >
   
   }
 
@@ -208,7 +217,8 @@
     au < crawling ; exists ; 2012 ; JAMA: The Journal of the American Medical Association Volume 307-308 ; 2012 ; >
     au < crawling ; exists ; 2013 ; JAMA: The Journal of the American Medical Association Volume 309-310 ; 2013 ; >
     au < crawling ; exists ; 2014 ; JAMA: The Journal of the American Medical Association Volume 311-312 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; JAMA: The Journal of the American Medical Association Volume 313-314 ; 2015 ; >
+    au < testing ; exists ; 2015 ; JAMA: The Journal of the American Medical Association Volume 313-314 ; 2015 ; >
+    au < expected ; exists ; 2016 ; JAMA: The Journal of the American Medical Association Volume 315-316 ; 2016 ; >
   
   }
 
