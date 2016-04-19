@@ -290,7 +290,7 @@
 
       param[journal_id] = extr
 
-      au < ready ; exists ; 2008 ; Extrapolation Volume 49 ; 49 ; >
+      au < crawling ; exists ; 2008 ; Extrapolation Volume 49 ; 49 ; >
       au < ready ; exists ; 2009 ; Extrapolation Volume 50 ; 50 ; >
       au < ready ; exists ; 2010 ; Extrapolation Volume 51 ; 51 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Extrapolation Volume 52 ; 52 ; >
@@ -473,7 +473,7 @@
 
     param[journal_id] = mb
 
-    au < ready ; exists ; 2008 ; Modern Believing Volume 49 ; 49 ; >
+    au < crawling ; exists ; 2008 ; Modern Believing Volume 49 ; 49 ; >
     au < ready ; exists ; 2009 ; Modern Believing Volume 50 ; 50 ; >
     au < crawling ; exists ; 2010 ; Modern Believing Volume 51 ; 51 ; >
     au < finished ; crawling ; 2011 ; Modern Believing Volume 52 ; 52 ; >
@@ -586,12 +586,12 @@
 
     param[journal_id] = quaker
 
-    au < ready ; exists ; 2010-2011 ; Quaker Studies Volume 15 ; 15 ; >
-    au < ready ; exists ; 2011-2012 ; Quaker Studies Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2010-2011 ; Quaker Studies Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2011-2012 ; Quaker Studies Volume 16 ; 16 ; >
     au < ready ; exists ; 2012-2013 ; Quaker Studies Volume 17 ; 17 ; >
     au < ready ; exists ; 2013-2014 ; Quaker Studies Volume 18 ; 18 ; >
-    au < ready ; exists ; 2014-2015 ; Quaker Studies Volume 19 ; 19 ; >
-    au < ready ; exists ; 2015-2016 ; Quaker Studies Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2014-2015 ; Quaker Studies Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2015-2016 ; Quaker Studies Volume 20 ; 20 ; >
 
   }
 
