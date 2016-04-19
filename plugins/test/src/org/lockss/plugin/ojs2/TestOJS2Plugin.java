@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -113,13 +113,13 @@ public class TestOJS2Plugin extends LockssTestCase {
   public void testGetAuConstructsProperAu()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
-    props.setProperty(BASE_URL_KEY, "http://www.example.com/");
+    props.setProperty(BASE_URL_KEY, "http://www.example.com/ojs2/");
     props.setProperty(JOURNAL_ID_KEY, "j_id");
     props.setProperty(YEAR_KEY, "2014");
     
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("Open Journal Systems Plugin (OJS 2.x for CLOCKSS), " +
-        "Base URL http://www.example.com/, " +
+        "Base URL http://www.example.com/ojs2/, " +
         "Journal ID j_id, Year 2014", au.getName());
   }
   
@@ -221,8 +221,63 @@ public class TestOJS2Plugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "sites/files/styles/journals/cover%20%282%29_0.png?itok=qGTU4GfX&v=1.1", false, au);
     shouldCacheTest(ROOT_URL + "sites/themes/js/j_id.js?nzdhiu", true, au);
     shouldCacheTest(ROOT_URL + "sites/themes/js/j_id.js?nzdhiu&v=1.2", false, au);
-    /*
-     */
+  }
+  
+  // Same tests with path on base_url
+  public void testShouldCacheProperPagesOJS2() throws Exception {
+    String ROOT_URL = "http://www.example.com/ojs2/";
+    Properties props = new Properties();
+    props.setProperty(BASE_URL_KEY, ROOT_URL);
+    props.setProperty(JOURNAL_ID_KEY, "j_id");
+    props.setProperty(YEAR_KEY, "2016");
+    DefinableArchivalUnit au = null;
+    try {
+      au = makeAuFromProps(props);
+    }
+    catch (ConfigurationException ex) {
+    }
+    theDaemon.getLockssRepository(au);
+    
+    // Test for pages that should get crawled
+    // permission page/start url
+    shouldCacheTest(ROOT_URL + "j_id/gateway/lockss?year=2016", true, au);
+    shouldCacheTest(ROOT_URL + "j_id/gateway/clockss?year=2016", false, au);
+    // toc page for an issue
+    shouldCacheTest(ROOT_URL + "index.php/j_id/issue/view/123", true, au);
+    shouldCacheTest(ROOT_URL + "index.php/issue/view/123", true, au);
+    shouldCacheTest(ROOT_URL + "j_id/issue/view/123", true, au);
+    // article files
+    shouldCacheTest(ROOT_URL + "index.php/j_id/article/view/123", true, au);
+    shouldCacheTest(ROOT_URL + "index.php/j_id/article/view/123/456", true, au);
+    shouldCacheTest(ROOT_URL + "j_id/article/view/123", true, au);
+    shouldCacheTest(ROOT_URL + "j_id/article/view/123/456", true, au);
+    shouldCacheTest(ROOT_URL + "index.php/j_id/article/download/123/456", true, au);
+    shouldCacheTest(ROOT_URL + "j_id/article/download/123/456", true, au);
+    shouldCacheTest(ROOT_URL + "index.php/article/download/123/456", true, au);
+    shouldCacheTest(ROOT_URL + "index.php/j_id/article/download/123", true, au);
+    shouldCacheTest(ROOT_URL + "j_id/article/view/123/456", true, au);
+    
+    // should not get crawled - wrong journal/year
+    shouldCacheTest(ROOT_URL + "j_id/gateway/lockss?year=2004", false, au);
+    // should not get crawled - LOCKSS
+    shouldCacheTest("http://lockss.stanford.edu", false, au);
+    
+    shouldCacheTest(ROOT_URL + "index.php/j_id/article/viewFile/123/456/%20http://foo.edu", false, au);
+    
+    shouldCacheTest(ROOT_URL + "j_id/article/view/23854/Background_files/filelist.xml", true, au);
+    shouldCacheTest(ROOT_URL + "j_id/article/view/23854/Background_files/Background_files/filelist.xml", true, au);
+    shouldCacheTest(ROOT_URL + "j_id/article/view/23854/Background_files/Background_files/Background_files/filelist.xml", false, au);
+    shouldCacheTest(ROOT_URL + "j_id/article/view/23854/Background_files/Background_files/Background_files/Background_files/filelist.xml", false, au);
+    
+    shouldCacheTest(ROOT_URL + "modules/user/user.css?nzdhiu", true, au);
+    shouldCacheTest(ROOT_URL + "modules/user/user.css?nzdhiu&id=1", false, au);
+    shouldCacheTest(ROOT_URL + "sites/all/modules/contrib/views/css/views.css?nzdhiu", true, au);
+    shouldCacheTest(ROOT_URL + "misc/jquery.js?v=1.4.4", true, au);
+    shouldCacheTest(ROOT_URL + "misc/jquery.js?v=1.4.4&id=1", false, au);
+    shouldCacheTest(ROOT_URL + "sites/files/styles/journals/cover%20%282%29_0.png?itok=qGTU4GfX", true, au);
+    shouldCacheTest(ROOT_URL + "sites/files/styles/journals/cover%20%282%29_0.png?itok=qGTU4GfX&v=1.1", false, au);
+    shouldCacheTest(ROOT_URL + "sites/themes/js/j_id.js?nzdhiu", true, au);
+    shouldCacheTest(ROOT_URL + "sites/themes/js/j_id.js?nzdhiu&v=1.2", false, au);
   }
   
   private void shouldCacheTest(String url, boolean shouldCache, ArchivalUnit au) {

@@ -16,7 +16,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>54</string>
+    <string>55</string>
   </entry>
 <!--
 This is a list of OJS2 Child plugins - be sure to update the child's
@@ -131,15 +131,15 @@ Note: also push this plugin to coppulpln, dkdemopln, ibictpln, italytestpln, syn
       <!-- all content from CDN -->
       <string>1,"^https?://(.+\.cloudfront\.net|cdn\.mathjax\.org|.+\.(gstatic|googleapis|jquery)\.com)/."</string>
       <!-- new - making index.php and journal_id optional, removed [0-9]+ for some rules -->
-      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?)([?]((itok|v)=)?[^&amp;]+)?$", url_host(base_url)</string>
-      <string>4,"^https?://%s/", url_host(base_url)</string>
-      <string>1,"^https?://%s/(index\.php/)?(%s/)?(gateway/lockss\?year=%d|about/editorialPolicies)$", url_host(base_url), journal_id, year</string>
+      <string>1,"^https?://%s%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?)([?]((itok|v)=)?[^&amp;]+)?$", url_host(base_url), url_path(base_url)</string>
+      <string>4,"^https?://%s%s", url_host(base_url), url_path(base_url)</string>
+      <string>1,"^https?://%s%s(index\.php/)?(%s/)?(gateway/lockss\?year=%d|about/editorialPolicies)$", url_host(base_url), url_path(base_url), journal_id, year</string>
       <string>2,"\?acceptCookies="</string>
       <string>2,"/([^.?/]+)/\1/\1/"</string>
-      <string>2,"^https?://%s/(index\.php/)?(%s/)?(article|issue)/viewFile/[0-9]+(/[0-9]+)?/%%20http:", url_host(base_url), journal_id</string>
-      <string>1,"^https?://%s/(index\.php/)?(%s/)?(article|issue)/(download(SuppFile)?|view(Article|File|(Download|PDF)Interstitial|RST)?)/", url_host(base_url), journal_id</string>
-      <string>1,"^https?://%s/(index\.php/)?(%s/)?rt/(bio|findingReferences|metadata|printerFriendly|suppFileMetadata|suppFiles)/", url_host(base_url), journal_id</string>
-      <string>1,"^https?://%s/plugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=", url_host(base_url)</string>
+      <string>2,"^https?://%s%s(index\.php/)?(%s/)?(article|issue)/viewFile/[0-9]+(/[0-9]+)?/%%20http:", url_host(base_url), url_path(base_url), journal_id</string>
+      <string>1,"^https?://%s%s(index\.php/)?(%s/)?(article|issue)/(download(SuppFile)?|view(Article|File|(Download|PDF)Interstitial|RST)?)/", url_host(base_url), url_path(base_url), journal_id</string>
+      <string>1,"^https?://%s%s(index\.php/)?(%s/)?rt/(bio|findingReferences|metadata|printerFriendly|suppFileMetadata|suppFiles)/", url_host(base_url), url_path(base_url), journal_id</string>
+      <string>1,"^https?://%s%splugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=", url_host(base_url), url_path(base_url)</string>
     </list>
   </entry>
   <entry>
