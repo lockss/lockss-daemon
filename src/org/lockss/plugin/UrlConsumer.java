@@ -45,7 +45,4 @@ public interface UrlConsumer {
    * @throws IOException
    */
   public void consume() throws IOException;
-  
-  public void setWatchdog(LockssWatchdog wdog);
-  
 }

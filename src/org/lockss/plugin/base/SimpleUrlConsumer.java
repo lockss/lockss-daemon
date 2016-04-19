@@ -53,7 +53,6 @@ public class SimpleUrlConsumer implements UrlConsumer {
   protected CrawlerFacade crawlFacade;
   protected CrawlerStatus crawlStatus;
   protected FetchedUrlData fud;
-  protected LockssWatchdog wdog;
   
   public SimpleUrlConsumer(CrawlerFacade crawlFacade, FetchedUrlData fud){
     this.crawlFacade = crawlFacade;
@@ -65,7 +64,7 @@ public class SimpleUrlConsumer implements UrlConsumer {
   @Override
   public void consume() throws IOException {
     if (cacher == null) {
-      cacher = au.makeUrlCacher(fud.getUrlData());
+      cacher = crawlFacade.makeUrlCacher(fud.getUrlData());
     }
     if (fud.fetchUrl != null) {
       cacher.setFetchUrl(fud.fetchUrl);
@@ -77,11 +76,6 @@ public class SimpleUrlConsumer implements UrlConsumer {
     cacher.storeContent();
   }
   
-  @Override
-  public void setWatchdog(LockssWatchdog wdog) {
-    this.wdog = wdog;
-  }
-
   /**
    * <p>
    * Causes {@link DefaultUrlCacher} to store a redirect chain at the origin URL

@@ -272,7 +272,7 @@ public class MockCrawler extends NullCrawler {
 
     @Override
     public UrlCacher makeUrlCacher(UrlData ud) {
-      return new MockUrlCacher((MockArchivalUnit)au, ud);
+      return au.makeUrlCacher(ud);
     }
 
     @Override

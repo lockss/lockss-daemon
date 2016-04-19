@@ -16,13 +16,6 @@ public class PassiveUrlConsumerFactory implements UrlConsumerFactory {
     public void consume() throws IOException {
       //Do nothing
     }
-
-    @Override
-    public void setWatchdog(LockssWatchdog wdog) {
-      //Do nothing
-      
-    }
-  
   }
 
   @Override
