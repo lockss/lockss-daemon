@@ -264,15 +264,10 @@ public class TestSimpleUrlConsumer extends LockssTestCase {
   }
 
   private class TestableBaseCrawler extends BaseCrawler {
-//     RuntimeException crawlExceptionToThrow = null;
-//     boolean isWholeAU = false;
-//     boolean result = true;
-//     List<PermissionChecker> daemonPermissionCheckers;
 
     protected TestableBaseCrawler(ArchivalUnit au, AuState aus) {
       super(au, aus);
       crawlStatus = new MockCrawlStatus();
-//       setCrawlManager(TestBaseCrawler.this.crawlMgr);
     }
 
     public Crawler.Type getType() {
@@ -287,38 +282,9 @@ public class TestSimpleUrlConsumer extends LockssTestCase {
       return true;
     }
 
-//     void setWholeAu(boolean val) {
-//       isWholeAU = val;
-//     }
-
     protected boolean doCrawl0() {
       return true;
     }
-//     protected boolean doCrawl0() {
-//       if (crawlExceptionToThrow != null) {
-// 	throw crawlExceptionToThrow;
-//       }
-//       return result;
-//     }
-
-//     public void setResult(boolean val) {
-//       result = val;
-//     }
-    
-//     List<PermissionChecker> getDaemonPermissionCheckers() {
-//       if(daemonPermissionCheckers != null) {
-//         return daemonPermissionCheckers;
-//       }
-//       return super.getDaemonPermissionCheckers();
-//     }
-    
-//     public void setDaemonPermissionCheckers(List<PermissionChecker> pc) {
-//       this.daemonPermissionCheckers = pc;
-//     }
-
-//     public void setDoCrawlThrowException(RuntimeException e) {
-//       crawlExceptionToThrow = e;
-//     }
   }
 
   static class MySimpleUrlConsumer extends SimpleUrlConsumer {
