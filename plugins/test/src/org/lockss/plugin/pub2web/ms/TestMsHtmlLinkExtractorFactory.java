@@ -34,11 +34,9 @@ package org.lockss.plugin.pub2web.ms;
 import java.io.InputStream;
 import java.util.Set;
 
-import org.lockss.extractor.JsoupHtmlLinkExtractor;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
-import org.lockss.test.StringInputStream;
 import org.lockss.util.Constants;
 import org.lockss.util.IOUtil;
 import org.lockss.util.SetUtil;
@@ -52,7 +50,7 @@ public class TestMsHtmlLinkExtractorFactory extends LockssTestCase {
   private MyLinkExtractorCallback m_callback;
   static String ENC = Constants.DEFAULT_ENCODING;
   private MockArchivalUnit m_mau;
-  private final String BASE_URL = "http://www.asmscience.org/";
+  private final String BASE_URL = "http://www.mstest.org/";
   private final String JID = "microbiolspec";
 
   
@@ -64,8 +62,8 @@ public class TestMsHtmlLinkExtractorFactory extends LockssTestCase {
       m_callback = new MyLinkExtractorCallback();
 
       msfact = new MsHtmlLinkExtractorFactory();
-      //m_extractor = msfact.createLinkExtractor("html");
-      m_extractor = new JsoupHtmlLinkExtractor(); 
+      m_extractor = msfact.createLinkExtractor("html");
+      //m_extractor = new JsoupHtmlLinkExtractor(); 
   }
   
   public static final String htmlSnippet =
@@ -84,14 +82,39 @@ public class TestMsHtmlLinkExtractorFactory extends LockssTestCase {
 
   }
   
+  private static final String TEST_URL = "http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/foo.blah.000280";
+  private static final String realHtmlFile = "testLinks.txt";
+  public void testRealHtmlFile() throws Exception {
+    Set<String> expected = SetUtil.set(
+        "http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/foo/site.css",
+        "http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/foo/spinner.gif",
+        "http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/foo.blah.000280/supp-data",
+        "http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/foo.blah.000280#",
+        "http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/foo/referencematching.js",
+        "http://jgv.microbiologyresearch.org/deliver/fulltext/jgv/96/11/3204.html?itemId=/content/journal/jgv/10.1099/foo.blah.000280&mimeType=html&fmt=ahah"
+        );
+log.setLevel("debug3");
+    InputStream file_input = null;
+    try {
+      file_input = getResourceAsStream(realHtmlFile);
+      String string_input = StringUtil.fromInputStream(file_input);
+      IOUtil.safeClose(file_input);
+
+      testExpectedAgainstParsedUrls(expected,string_input, TEST_URL);
+    }finally {
+      IOUtil.safeClose(file_input);
+    }
+  }
+
+  
   private void testExpectedAgainstParsedUrls(Set<String> expectedUrls, 
       String source, String srcUrl) throws Exception {
 
     Set<String> result_strings = parseSingleSource(source, srcUrl);
-    //assertEquals(expectedUrls.size(), result_strings.size());
+    assertEquals(expectedUrls.size(), result_strings.size());
     for (String url : result_strings) {
       log.debug3("URL: " + url);
-      //assertTrue(expectedUrls.contains(url));
+      assertTrue(expectedUrls.contains(url));
     }
   }
   private Set<String> parseSingleSource(String source, String srcUrl)

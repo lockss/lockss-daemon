@@ -34,6 +34,8 @@ package org.lockss.plugin.pub2web.ms;
 
 import java.net.URL;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringUtils;
 import org.lockss.config.Configuration;
@@ -56,6 +58,9 @@ public class TestMsArchivalUnit extends LockssTestCase {
 
   static final String PLUGIN_ID = "org.lockss.plugin.pub2web.ms.ClockssMicrobiologySocietyJournalsPlugin";
   static final String PluginName = "Microbiology Society Journals Plugin (CLOCKSS)";
+  
+  static final String MS_REPAIR_FROM_PEER_REGEXP = "(.+\\.mathjax\\.org|code\\.jquery\\.com|/css/.*\\.css(\\?[^/]+)?$|/(css|images|js)/(sgm|jp)/)";
+  
 
   public void setUp() throws Exception {
     super.setUp();
@@ -106,15 +111,44 @@ public class TestMsArchivalUnit extends LockssTestCase {
 
     //manifest page
     shouldCacheTest(REAL_ROOT+"content/journal/jgv/clockssissues?volume=96", true, msau, cus);    
-    //pdf links    
+    //toc
+    //http://jgv.microbiologyresearch.org/content/journal/jgv/96/9
+    shouldCacheTest(REAL_ROOT+"content/journal/jgv/96/12", true, msau, cus);    
+    //toc contents
+    shouldCacheTest(REAL_ROOT+"articles/renderlist.action?fmt=ahah&items=http://sgm.metastore.ingenta.com/content/journal/jgv/10.1099/jgv.0.000294,http://sgm.metastore.ingenta.com/content/journal/jgv/10.1099/jgv.0.000314", true, msau,cus);
+   
+    // article landing page/abstract
+    // http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/vir.0.070979-0
+    shouldCacheTest(REAL_ROOT+"content/journal/jgv/10.1099/vir.0.070979-0", true, msau, cus);
+ 
+    // citation files
+    // http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/vir.0.070979-0/cite/endnote
+    shouldCacheTest(REAL_ROOT+"content/journal/jgv/10.1099/vir.0.070979-0/cite/endnote", true, msau, cus);
+    shouldCacheTest(REAL_ROOT+"content/journal/jgv/10.1099/vir.0.070979-0/cite/refworks", true, msau, cus);
+    shouldCacheTest(REAL_ROOT+"content/journal/jgv/10.1099/vir.0.070979-0/cite/bibtex", true, msau, cus);
+    shouldCacheTest(REAL_ROOT+"content/journal/jgv/10.1099/vir.0.070979-0/cite/plaintext", true, msau, cus);
+
+    //but not the citation links off the toc
+    shouldCacheTest(REAL_ROOT+"content/journal/jgv/96/12/cite/refworks", false, msau, cus);
+    
+    //FULL-TEXT
+    //crawler friendly
+    // http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/vir.0.069872-0?crawler=true&mimetype=application/pdf
+    shouldCacheTest(REAL_ROOT+"content/journal/jgv/10.1099/vir.0.069872-0?crawler=true&mimetype=application/pdf", true, msau, cus);
+    shouldCacheTest(REAL_ROOT+"content/journal/jgv/10.1099/vir.0.069872-0?crawler=true&mimetype=html", true, msau, cus);
+   
+    //pdf links with redirection - leave in this because this type of link handles toc and supplemental data    
     shouldCacheTest(REAL_ROOT+"deliver/fulltext/jgv/96/10/3090_jgv000250.pdf?itemId=/content/journal/jgv/10.1099/jgv.0.000250&mimeType=pdf&isFastTrackArticle=", true, msau, cus);    
     shouldCacheTest(REAL_ROOT+"deliver/fulltext/jgv/96/12/3457_jgv000286.pdf?itemId=/content/journal/jgv/10.1099/jgv.0.000286&mimeType=pdf", true, msau, cus);    
     //redirects to:
-    shouldCacheTest(OTHER_ROOT+"docserver/fulltext/jgv/96/12/3457_jgv000286.pdf?expires=1458588778&id=id&accname=guest&checksum=06E5E7675BC310642B40D918B52C8A42", true, msau, cus);    
-    //toc
-    //http://jgv.microbiologyresearch.org/content/journal/jgv/96/9
-    //toc contents
-    shouldCacheTest(REAL_ROOT+"articles/renderlist.action?fmt=ahah&items=http://sgm.metastore.ingenta.com/content/journal/jgv/10.1099/jgv.0.000294,http://sgm.metastore.ingenta.com/content/journal/jgv/10.1099/jgv.0.000314", true, msau,cus);
+    shouldCacheTest(OTHER_ROOT+"docserver/fulltext/jgv/96/12/3457_jgv000286.pdf?expires=1458588778&id=id&accname=guest&checksum=06E5E7675BC310642B40D918B52C8A42", true, msau, cus);     
+    
+    //supplemental data
+    //http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/jgv.0.000003/supp-data
+    //http://jgv.microbiologyresearch.org/deliver/fulltext/jgv/96/1/64816a.pdf?itemId=/content/suppdata/jgv/10.1099/vir.0.064816-0-1&mimeType=pdf
+    shouldCacheTest(REAL_ROOT+"content/journal/jgv/10.1099/jgv.0.000003/supp-data", true, msau, cus);
+    shouldCacheTest(REAL_ROOT+"deliver/fulltext/jgv/96/1/64816a.pdf?itemId=/content/suppdata/jgv/10.1099/vir.0.064816-0-1&mimeType=pdf", true, msau, cus);
+    
     // images (etc.) 
     shouldCacheTest(REAL_ROOT+"content/jgv/10.1099/vir.0.000205.vir000205-f01", true, msau, cus);
     shouldCacheTest(REAL_ROOT+"docserver/fulltext/jgv/96/9/vir000205-f1_thmb.gif", true, msau, cus);
@@ -148,7 +182,54 @@ public class TestMsArchivalUnit extends LockssTestCase {
     assertEquals(ListUtil.list(expected), au.getStartUrls());
   }
 
+  public void testPollSpecial() throws Exception {
+    ArchivalUnit FooAu = makeAu(new URL("http://jgv.microbiologyresearch.org/"), 96, "jgv");
+    theDaemon.getLockssRepository(FooAu);
+    theDaemon.getNodeManager(FooAu);
 
+
+    // if it changes in the plugin, you might need to change the test, so verify
+    assertEquals(ListUtil.list(
+        MS_REPAIR_FROM_PEER_REGEXP),
+        RegexpUtil.regexpCollection(FooAu.makeRepairFromPeerIfMissingUrlPatterns()));
+    
+    // make sure that's the regexp that will match to the expected url string
+    // this also tests the regexp (which is the same) for the weighted poll map
+    List <String> repairList = ListUtil.list(
+        "http://jgv.microbiologyresearch.org/images/jp/uibg_glass_75_ffffff_1x400.png",
+          "http://jgv.microbiologyresearch.org/css/sgm/bespoke-fonts/fontawesome-webfont.svg?v=4.1.0",
+          "http://jgv.microbiologyresearch.org/images/jp/ui-icons_222222_256x240.png",
+          "http://jgv.microbiologyresearch.org/images/sgm/Header-shapes-small.png",
+          "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML",
+          "http://jgv.microbiologyresearch.org/images/sgm/ijsem_banner.png",
+          "https://code.jquery.com/jquery-1.11.1.min.js",
+          "http://jgv.microbiologyresearch.org/css/sgm/fulltext-html-tab.css",
+          "http://jgv.microbiologyresearch.org/css/sgm/site.css?2",
+          "http://jgv.microbiologyresearch.org/css/contentpreview/preview.css",
+          "http://jgv.microbiologyresearch.org/css/jp/ViewNLM.css",
+          "http://jgv.microbiologyresearch.org/css/jp/ingenta-branding-new.css",
+          "http://jgv.microbiologyresearch.org/css/jp/shopping.css",
+          "http://jgv.microbiologyresearch.org/css/metrics/metrics.css");
+     Pattern p = Pattern.compile(MS_REPAIR_FROM_PEER_REGEXP);
+     for (String urlString : repairList) {
+       Matcher m = p.matcher(urlString);
+       assertEquals(true, m.find());
+     }
+     //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
+     String notString ="http://jgv.microbiologyresearch.org/docserver/fulltext/jgv/96/1/064816-f1.gif";
+     Matcher m = p.matcher(notString);
+     assertEquals(false, m.find());
+
+     
+    PatternFloatMap urlPollResults = FooAu.makeUrlPollResultWeightMap();
+    assertNotNull(urlPollResults);
+    for (String urlString : repairList) {
+      assertEquals(0.0,
+          urlPollResults.getMatch(urlString),
+          .0001);
+    }
+  }
+  
   public void testGetName() throws Exception {
     DefinableArchivalUnit au =
         makeAu(new URL("http://www.ajrnl.com/"), 33, "blah");

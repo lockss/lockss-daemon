@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html style="" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" class="no-js" lang="en"><!--<![endif]--><head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="foo/site.css" type="text/css">
+</head>
+<body id="article" class="body">
+<div id="wrapper" class="siteWrapper">
+<script type="text/javascript" src="foo/referencematching.js"></script>
+
+<div id="tab9" class="citations hidden-js-div tabbedsection tab-pane">
+<div class="hiddenjsdiv" id="itemIdForCitations">http://sgm.metastore.ingenta.com/content/journal/jgv/10.1099/foo.blah.000280</div>
+<img class="citingArticlesLoading" src="foo/spinner.gif" alt="Loading">
+<div id="citationContent"></div>
+</div>
+<div id="tab5" class="supplements hidden-js-div tabbedsection tab-pane" data-ajaxurl="/content/journal/jgv/10.1099/foo.blah.000280/supp-data">
+<h2>Supplementary Data</h2>
+<p class="loading-message"><i class="fa fa-spinner fa-spin fa-2x"></i> &nbsp;Data loading....</p>
+</div>
+<div id="tab2" class="articlefulltext fullTextHtmlTab hidden-js-div tabbedsection tab-pane">
+<div class="itemFullTextLoading">
+<img src="foo/spinner.gif" alt="Loading full text...">
+<p>Full text loading...</p>
+</div>
+<div id="itemFullTextId" class="itemFullTextHtml retrieveFullTextHtml hidden-js-div" data-fulltexturl="/deliver/fulltext/jgv/96/11/3204.html?itemId=/content/journal/jgv/10.1099/foo.blah.000280&amp;mimeType=html&amp;fmt=ahah">
+/deliver/fulltext/jgv/96/11/3204.html?itemId=/content/journal/jgv/10.1099/foo.blah.000280&amp;mimeType=html&amp;fmt=ahah
+</div>
+
+</div>
+<div id="tab6" class="authors hidden-js-div tabbedsection tab-pane">
+<div class="articleInformation">
+<h2>Author and Article Information</h2>
+</div>
+</div> 
+<div id="tab8" class="relatedContent hidden-js-div tabbedsection tab-pane">
+<ul class="list-unstyled">
+<li>
+<h4 class="thisJournal">
+<a href="#" class="js-related-content-load plus-minus-toggle-icon" data-target="#relatedcontent" data-toggle="collapse">
+<i class="fa fa-plus-square"></i> This Journal
+</a>
+</h4>
+<div id="relatedcontent" class="hidden-js-toggle related-content">
+</div>
+</li>
+</ul></div>
+</div></body></html>

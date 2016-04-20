@@ -1,0 +1,221 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.pub2web.ms.MicrobiologySocietyJournalsPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Microbiology Society Journals Plugin</string>
+  </entry>
+  <entry>
+    <!--  for the SimpleUrlConsumer -->
+    <string>required_daemon_version</string>
+    <string>1.67.5</string>
+  </entry>  
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Microbiology Society Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%scontent/journal/%s/lockssissues?volume=%s", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <!-- examples
+      start: http://jmm.microbiologyresearch.org/content/journal/jmm/clockssissues?volume=64
+      issue toc: http://jmm.microbiologyresearch.org/content/journal/jmm/64/11
+      but article lists on TOC actually live at:
+        http://jmm.microbiologyresearch.org/articles/renderlist.action?fmt=ahah&items=%2Fcontent%2Fjournal%2Fjmm%2F10.1099%2Fjmm.0.000171
+      article landing: http://jmm.microbiologyresearch.org/content/journal/jmm/10.1099/jmm.0.000171
+         note that the above doesn't limit with current volume, restrict with crawl filter
+      full-text pdf and html links are normalized to crawler-stable versions
+         http://jmm.microbiologyresearch.org/deliver/fulltext/jmm/64/11/1270.html?itemId=/content/journal/jmm/10.1099/jmm.0.000151&mimeType=html&fmt=ahah
+      Other pdf links go through a one-time expiring URL which we swallow (consumer) but which must be allowed 
+         <otherbase>/docserver/ahah/fulltext/jmm/64/11/1270.html?expires=1455321894&id=id&accname=sgid025717&checksum=42B1AAC0FBAC08BB4EF42D7D0BED4696
+      citation:http://jmm.microbiologyresearch.org/content/journal/jmm/10.1099/jmm.0.000171/cite/(bibtex, endnote, plaintext, refworks)
+         but don't pick up the citation links (which are bogus) at the toc level
+         eg. http://jgv.microbiologyresearch.org/content/journal/jgv/96/3/cite/endnote
+      supporting:http://jmm.microbiologyresearch.org/docserver/preview/fulltext/jmm/64/11/1261_jmm000171-1.gif
+      Table/figure pages don't have the "/journal/" part of the url
+        http://jmm.microbiologyresearch.org/content/jmm/10.1099/jmm.0.000171.jmm000171-f01
+        http://jmm.microbiologyresearch.org/content/jmm/10.1099/jmm.0.000171.jmm000171-f01
+    -->
+    <list>
+      <!-- treat the publisher's base host as a cdn, but only for fulltext -->
+      <string>1,"^https?://www.microbiologyresearch.org/docserver(/ahah)?/fulltext/%s/%s/", journal_id, volume_name</string>    
+      <string>1,"^https?://(%s|cdn[.]mathjax[.]org|code[.]jquery[.]com)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(\?([0-9]+|config=|v=).*)?$", url_host(base_url)</string>
+      <string>2,"^%scontent/journal/%s/%s/[^/]+/cite/", base_url, journal_id, volume_name</string>
+      <string>1,"^%scontent/journal/%s/%s/", base_url, journal_id, volume_name</string>
+      <!--  article lists on the toc are rendered on the fly in subsections -->
+      <string>1,"^%sarticles/renderlist\.action\?fmt=ahah&amp;items=.*", base_url</string>
+      <!-- individual article landing doi based -->
+      <!-- pick up articles -->
+      <string>2,"^%scontent/journal/%s/[0-9]{2}\.[0-9]{4}/[^?]+\?term=.*&amp;db=pubmed$", base_url, journal_id</string>
+      <string>1,"^%scontent/(journal|suppddata)/%s/[0-9]{2}\.[0-9]{4}/", base_url, journal_id</string>
+      <!--  for media, no journal subdir - trying to keep it restricted to media -->
+      <string>1,"^%scontent/%s/[0-9]{2}\.[0-9]{4}/[^/]+\.(ufig|fig||tab|T)[A-Za-z0-9-]+$", base_url, journal_id</string>
+      <!-- deliver/fulltext is starting URL for full-text - we normalize it to something else -->
+      <string>1,"^%sdeliver/fulltext/%s/%s/", base_url, journal_id, volume_name</string>
+      <!--  some PDF files redirected and the content gets picked up from here -->
+      <string>1,"^%sdocserver(/ahah)?/fulltext/%s/%s/", base_url, journal_id, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <!-- examples
+       article PDF content gets normalized to the crawler version
+       http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/vir.0.070219-0?crawwler=true&mimetype=application/pdf
+    -->
+    <list>
+      <string>"^%scontent/journal/%s/[^/]+/[^/]+\?crawler=true&amp;mimetype=application/pdf$", base_url, journal_id</string>
+    </list>
+  </entry>
+  <!--  recrawl depth is 3 because the start_url lists the issue TOCs but
+  the actual article listing is on another page that is extracted from the TOC landing page
+  e.g.
+    http://ijs.microbiologyresearch.org/content/journal/ijsem/clockssissues?volume=65
+    http://ijs.microbiologyresearch.org/content/journal/ijsem/65/10
+    http://ijs.microbiologyresearch.org/articles/renderlist.action?fmt=ahah&items=/content/journal/ijsem/10.1099/ijs.0.000212
+    articleIds=http://sgm.metastore.ingenta.com/content/journal/ijsem/10.1099/ijs.0.000191&fmt=ahah&ahahcontent=toc
+       -->
+ <entry>
+    <string>au_crawl_depth</string>
+    <int>3</int>
+  </entry>
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config                                                                                                                         
+         org.lockss.crawler.allowedPluginPermittedHosts -->
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>www\.microbiologyresearch\.org</string>
+      <string>.+\.mathjax\.org</string>
+      <string>code\.jquery\.com</string>
+    </list>    
+  </entry>
+  <!-- repair from peer
+      non-host support files, css, fonts, support images, etc -->
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <string>(.+\.mathjax\.org|code\.jquery\.com|/css/.*\.css(\?[^/]+)?$|/(css|images|js)/(sgm|jp)/)</string>
+  </entry>
+  <!-- don't worry about polling for those low-importance files that will 
+       repair from peer in time (eg due to versioning, etc)  -->
+   <entry>
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>(.+\.mathjax\.org|code\.jquery\.com|/css/.*\.css(\?[^/]+)?$|/(css|images|js)/(sgm|jp)/), 0</string>
+    </list>
+  </entry>  
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+      <string>Microbiology Society</string>
+    <!--<string>key:pub2web</string>-->
+    <!--<string>host:base_url</string>-->
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.pub2web.Pub2WebUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.pub2web.Pub2WebPdfFilterFactory</string>
+  </entry>    
+  <entry>
+    <string>text/html_crawl_filter_factory</string> 
+    <string>org.lockss.plugin.pub2web.ms.MsHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.pub2web.ms.MsUrlNormalizer</string>
+  </entry>      
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.pub2web.ms.MsHtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.pub2web.ms.MsHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.pub2web.ms.MsArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.pub2web.ms.MsArticleIteratorFactory</string>
+  </entry>
+   <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.pub2web.Pub2WebHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry> 
+</map>

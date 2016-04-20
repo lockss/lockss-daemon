@@ -55,10 +55,13 @@ public class MsUrlNormalizer implements UrlNormalizer {
 
    
 /*
- * NEW PLAN:
- * take a PDF or HTML full text url which go through expiring 
- * URLS to get to the content
- * and normalize them to the stable crawler version
+ * 1. Simple normalizations:
+ *   remove unnecessary "&isFastTrackArticle=" from end of any url
+ *   
+ * 2. Complicated transformations  
+ *    turn one-time expiring URLS in to crawler friendly stable urls
+ *    This occurs for both full-text HTML and full-text PDF of the article
+ *    It does not occur for full-text version of the TOC which has no crawler version
  * 
  * pdf link: 
  * http://jgv.microbiologyresearch.org/deliver/fulltext/jgv/96/2/390_vir070219.pdf?itemId=/content/journal/jgv/10.1099/vir.0.070219-0&mimeType=pdf&isFastTrackArticle=
@@ -71,11 +74,13 @@ public class MsUrlNormalizer implements UrlNormalizer {
  *       (GROUP1)/deliver/fulltext/jgv/96/1/183.(GROUP2)?itemId=(GROUP3)&mimeType=(GROUP4)&fmt=ahah
  *   becomes: 
  *     http://jgv.microbiologyresearch.org/content/journal/jgv/10.1099/vir.0.064816-0?crawler=true&mimetype=html
- *     
+ * 
+ * Other PDF links will go through a URL consumer to attach the one-time redirect to the original URL:
  * TOC pdf - special case this out as it doesn't have crawler version...just swallow the redirect with a consumer
  * Supplementary Data - won't get picked up by this because it is under "/content/suppdata - let it get consumed
  *    links on a page could look like this:
  *    /deliver/fulltext/jgv/96/1/67363.pdf?itemId=/content/suppdata/jgv/10.1099/vir.0.067363-0-1&amp;mimeType=pdf&amp;isFastTrackArticle=
+ * 
  * Figures - won't get picked up by this because it doesn't have mimetype...it's a direct link   
  *     content/journal/jgv/10.1099/vir.0.067363-0/figures?fmt=ahah 
  *     
@@ -89,10 +94,10 @@ public class MsUrlNormalizer implements UrlNormalizer {
     if (ftMat.matches() && (!(url.contains("/toc.pdf")))) {
       log.debug3("full text url: " + url);
       // create the crawler equivalent
-      //group1 is the base_url
+      // group1 is the base_url
       // group2 is the extension...html or pdf - use to determing mimetype
       // group3 is the article identifier
-      // note that group4 isn't correct mimetype. pdf must be application/pdf for fulltext
+      // note that group4 isn't complete mimetype. pdf must be application/pdf for fulltext
       String mt;
       if ("pdf".equals(ftMat.group(2))) {
         mt = "application/pdf";
