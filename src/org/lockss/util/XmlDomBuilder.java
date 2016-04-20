@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -72,7 +72,7 @@ public class XmlDomBuilder {
 
       return factory.newDocumentBuilder();
     } catch (Exception e) {
-      logger.debug2("Error getting DocumentBuilder.");
+      logger.debug2("Error getting DocumentBuilder", e);
       throw new XmlDomException(e.toString());
     }
   }
@@ -86,7 +86,7 @@ public class XmlDomBuilder {
     try {
       return getDocumentBuilder().newDocument();
     } catch (Exception e) {
-      logger.debug2("Error creating Document.");
+      logger.debug2("Error creating Document", e);
       throw new XmlDomException(e.toString());
     }
   }
@@ -256,7 +256,7 @@ public class XmlDomBuilder {
     try {
       return getDocumentBuilder().parse(xmlStream);
     } catch (Exception e) {
-      logger.debug2("Error parsing XML stream.");
+      logger.debug2("Error parsing XML stream", e);
       throw new XmlDomException(e.toString());
     }
   }
@@ -272,7 +272,7 @@ public class XmlDomBuilder {
     try {
       return getDocumentBuilder().parse(new InputSource(xmlStream));
     } catch (Exception e) {
-      logger.debug2("Error parsing XML stream from reader.");
+      logger.debug2("Error parsing XML stream from reader", e);
       throw new XmlDomException(e.toString());
     }
   }
@@ -297,7 +297,7 @@ public class XmlDomBuilder {
     try {
       return getDocumentBuilder().parse(filename);
     } catch (Exception e) {
-      logger.debug2("Error parsing from file '"+filename+"'.");
+      logger.debug2("Error parsing from file '"+filename+"'", e);
       throw new XmlDomException(e.toString());
     }
   }
@@ -328,7 +328,7 @@ public class XmlDomBuilder {
       XMLSerializer xmlSerial = new XMLSerializer(target, getFormatter());
       xmlSerial.asDOMSerializer().serialize(document);
     } catch (Exception e) {
-      logger.debug2("Error writing document to stream.");
+      logger.debug2("Error writing document to stream", e);
       throw new XmlDomException(e.toString());
     }
   }
@@ -345,7 +345,7 @@ public class XmlDomBuilder {
       XMLSerializer xmlSerial = new XMLSerializer(writer, getFormatter());
       xmlSerial.asDOMSerializer().serialize(document);
     } catch (Exception e) {
-      logger.debug2("Error writing document to writer.");
+      logger.debug2("Error writing document to writer", e);
       throw new XmlDomException(e.toString());
     }
   }
@@ -366,7 +366,7 @@ public class XmlDomBuilder {
       writer = new OutputStreamWriter(stream, ENCODING);
       serialize(document, writer);
     } catch (Exception e) {
-      logger.debug2("Error writing document to file '"+filename+"'.");
+      logger.debug2("Error writing document to file '"+filename+"'", e);
       throw new XmlDomException(e.toString());
     } finally {
       try { if (writer != null) writer.close(); } catch (Exception ignore) { }
@@ -390,7 +390,7 @@ public class XmlDomBuilder {
       serialize(document, writer);
       return stream.toString();
     } catch (Exception e) {
-      logger.debug2("Error writing document to string.");
+      logger.debug2("Error writing document to string", e);
       throw new XmlDomException(e.toString());
     } finally {
       try { if (writer != null) writer.close(); } catch (Exception ignore) { }
