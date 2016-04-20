@@ -28,6 +28,7 @@
     au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012-2013 ; Breathe Volume 9 ; 9 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2014 ; Breathe Volume 10 ; 10 ; >
     au < ClockssHWDrupalPlugin ; exists ; exists ; 2015 ; Breathe Volume 11 ; 11 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2016 ; Breathe Volume 12 ; 12 ; >
 
   }
 
@@ -42,6 +43,7 @@
     param[base_url] = http://openres.ersjournals.com/
 
     au < ClockssHWDrupalPlugin ; exists ; exists ; 2015 ; ERJ Open Research Volume 1 ; 1 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2016 ; ERJ Open Research Volume 2 ; 2 ; >
 
   }
 
@@ -109,6 +111,8 @@
       au < ClockssHighWirePressH20Plugin ; down ; exists ; 2014 ; European Respiratory Journal Volume 44 ; 44 ; >
       au < ClockssHWDrupalPlugin ; exists ; exists ; 2015 ; European Respiratory Journal Volume 45 ; 45 ; >
       au < ClockssHWDrupalPlugin ; exists ; exists ; 2015 ; European Respiratory Journal Volume 46 ; 46 ; >
+      au < ClockssHWDrupalPlugin ; exists ; exists ; 2016 ; European Respiratory Journal Volume 47 ; 47 ; >
+      au < ClockssHWDrupalPlugin ; expected ; exists ; 2016 ; European Respiratory Journal Volume 48 ; 48 ; >
 
     }
 
@@ -136,6 +140,7 @@
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; European Respiratory Review Volume 22 ; 22 ; >
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2014 ; European Respiratory Review Volume 23 ; 23 ; >
     au < ClockssHWDrupalPlugin ; exists ; exists ; 2015 ; European Respiratory Review Volume 24 ; 24 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2016 ; European Respiratory Review Volume 25 ; 25 ; >
 
   }
 
