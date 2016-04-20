@@ -61,14 +61,6 @@ public class TestDefaultUrlCacher extends LockssTestCase {
 
   protected static Logger logger = Logger.getLogger("TestDefaultUrlCacher");
 
-  private static final int REFETCH_FLAG = 0;
-
-  private static final SimpleDateFormat GMT_DATE_PARSER =
-    new SimpleDateFormat ("EEE, dd MMM yyyy HH:mm:ss 'GMT'");
-  static {
-    GMT_DATE_PARSER.setTimeZone(TimeZone.getTimeZone("GMT"));
-  }
-
   MyDefaultUrlCacher cacher;
   MockCachedUrlSet mcus;
   MockPlugin plugin;
@@ -196,6 +188,25 @@ public class TestDefaultUrlCacher extends LockssTestCase {
       // expected
     }
     assertFalse(cacher.wasStored);
+    assertNull(cacher.getInfoException());
+  }
+
+  void setSuppressValidation(UrlCacher uc) {
+    BitSet fetchFlags = new BitSet();
+    fetchFlags.set(UrlCacher.SUPPRESS_CONTENT_VALIDATION);
+    uc.setFetchFlags(fetchFlags);
+  }
+
+  public void testCacheEmptySuppressValidation() throws IOException {
+    HttpResultMap resultMap = (HttpResultMap)plugin.getCacheResultMap();
+    resultMap.storeMapEntry(ContentValidationException.EmptyFile.class,
+			    CacheException.RetryableNetworkException_2.class);
+    ud = new UrlData(new StringInputStream(""), 
+        new CIProperties(), TEST_URL);
+    cacher = new MyDefaultUrlCacher(mau, ud);
+    setSuppressValidation(cacher);
+    cacher.storeContent();
+    assertTrue(cacher.wasStored);
     assertNull(cacher.getInfoException());
   }
 

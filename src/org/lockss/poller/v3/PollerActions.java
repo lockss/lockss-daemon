@@ -305,6 +305,12 @@ public class PollerActions {
           new UrlData(msg.getRepairDataInputStream(), props, repairTarget);
       UrlCacher uc =
           ud.getCachedUrlSet().getArchivalUnit().makeUrlCacher(urlData);
+
+      // Suppress content validation when storing repair from peer
+      BitSet repairFetchFlags = uc.getFetchFlags();
+      repairFetchFlags.set(UrlCacher.SUPPRESS_CONTENT_VALIDATION);
+      uc.setFetchFlags(repairFetchFlags);
+
       uc.storeContent();
       ud.getPoller().receivedRepair(msg.getTargetUrl());
     } catch (IOException ex) {

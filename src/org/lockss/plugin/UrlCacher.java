@@ -50,6 +50,7 @@ public interface UrlCacher {
   public static final int REFETCH_FLAG = 1;
   public static final int DONT_CLOSE_INPUT_STREAM_FLAG = 4;
   public static final int IS_PERMISSION_FETCH = 8;
+  public static final int SUPPRESS_CONTENT_VALIDATION = 16;
 
 
   /**
