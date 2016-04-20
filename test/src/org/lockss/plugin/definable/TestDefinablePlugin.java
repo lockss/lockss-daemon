@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -111,21 +111,23 @@ public class TestDefinablePlugin extends LockssTestCase {
     MimeTypeInfo mti;
 
     mti = definablePlugin.getMimeTypeInfo("text/html");
-    assertTrue(mti.getLinkExtractorFactory()
-	       instanceof GoslingHtmlLinkExtractor.Factory);
-    assertTrue(""+mti.getLinkRewriterFactory().getClass(),
-	       mti.getLinkRewriterFactory() instanceof
-	       NodeFilterHtmlLinkRewriterFactory);
+    assertClass(GoslingHtmlLinkExtractor.Factory.class,
+		mti.getLinkExtractorFactory());
+    assertClass(""+mti.getLinkRewriterFactory().getClass(),
+		NodeFilterHtmlLinkRewriterFactory.class,
+		mti.getLinkRewriterFactory());
     assertNull(mti.getFileMetadataExtractorFactory());
+    assertNull(mti.getContentValidatorFactory());
     mti = definablePlugin.getMimeTypeInfo("text/css");
-    assertTrue(mti.getLinkExtractorFactory()
-	       instanceof RegexpCssLinkExtractor.Factory);
-    assertTrue(mti.getLinkRewriterFactory()
-	       instanceof RegexpCssLinkRewriterFactory);
+    assertClass(RegexpCssLinkExtractor.Factory.class,
+		mti.getLinkExtractorFactory());
+    assertClass(RegexpCssLinkRewriterFactory.class,
+		mti.getLinkRewriterFactory());
     mti = definablePlugin.getMimeTypeInfo("application/pdf");
     assertNull(mti.getHashFilterFactory());
     assertNull(mti.getCrawlFilterFactory());
     assertNull(mti.getLinkRewriterFactory()); // XXX 
+    assertNull(mti.getContentValidatorFactory());
 
     defMap.putString(  ("application/pdf"
 			+ DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY),
@@ -139,6 +141,16 @@ public class TestDefinablePlugin extends LockssTestCase {
     defMap.putString(  ("text/html"
 			+ DefinableArchivalUnit.SUFFIX_LINK_REWRITER_FACTORY),
 		     "org.lockss.test.MockLinkRewriterFactory");
+    defMap.putString(  ("text/html"
+			+ DefinableArchivalUnit.SUFFIX_CONTENT_VALIDATOR_FACTORY),
+		       "org.lockss.test.MockContentValidatorFactory");
+    // au.getContentValidatorFactory() supports wildcards
+    defMap.putString(  ("text/*"
+			+ DefinableArchivalUnit.SUFFIX_CONTENT_VALIDATOR_FACTORY),
+		       Validator1.class.getName());
+    defMap.putString(  ("*/*"
+			+ DefinableArchivalUnit.SUFFIX_CONTENT_VALIDATOR_FACTORY),
+		       Validator2.class.getName());
     Map factMap = new HashMap();
     factMap.put(MimeTypeInfo.DEFAULT_METADATA_TYPE,
 		"org.lockss.test.MockFileMetadataExtractorFactory");
@@ -148,49 +160,61 @@ public class TestDefinablePlugin extends LockssTestCase {
     definablePlugin.initPlugin(daemon, defMap);
 
     mti = definablePlugin.getMimeTypeInfo("text/html");
-    assertTrue(mti.getLinkExtractorFactory()
-	       instanceof LinkExtractorFactoryWrapper);
-    assertTrue(WrapperUtil.unwrap(mti.getLinkExtractorFactory())
-	       instanceof MockLinkExtractorFactory);
-    assertTrue(mti.getLinkRewriterFactory()
-	       instanceof LinkRewriterFactoryWrapper);
-    assertTrue(WrapperUtil.unwrap(mti.getLinkRewriterFactory())
-	       instanceof MockLinkRewriterFactory);
-    assertTrue(mti.getFileMetadataExtractorFactory()
-	       instanceof FileMetadataExtractorFactoryWrapper);
-    assertTrue(WrapperUtil.unwrap(mti.getFileMetadataExtractorFactory())
-	       instanceof MockFileMetadataExtractorFactory);
+    assertClass(LinkExtractorFactoryWrapper.class,
+		mti.getLinkExtractorFactory());
+    assertClass(MockLinkExtractorFactory.class,
+		WrapperUtil.unwrap(mti.getLinkExtractorFactory()));
+    assertClass(LinkRewriterFactoryWrapper.class,
+		mti.getLinkRewriterFactory());
+    assertClass(MockLinkRewriterFactory.class,
+		WrapperUtil.unwrap(mti.getLinkRewriterFactory()));
+    assertClass(MockContentValidatorFactory.class,
+		WrapperUtil.unwrap(mti.getContentValidatorFactory()));
+    assertClass(FileMetadataExtractorFactoryWrapper.class,
+		mti.getFileMetadataExtractorFactory());
+    assertClass(MockFileMetadataExtractorFactory.class,
+		WrapperUtil.unwrap(mti.getFileMetadataExtractorFactory()));
     mti = definablePlugin.getMimeTypeInfo("text/css");
-    assertTrue(mti.getLinkExtractorFactory()
-	       instanceof RegexpCssLinkExtractor.Factory);
+    assertClass(RegexpCssLinkExtractor.Factory.class,
+		mti.getLinkExtractorFactory());
     mti = definablePlugin.getMimeTypeInfo("application/pdf");
-    assertTrue(mti.getHashFilterFactory()
-	       instanceof FilterFactoryWrapper);
-    assertTrue(mti.getCrawlFilterFactory()
-	       instanceof FilterFactoryWrapper);
-    assertTrue(WrapperUtil.unwrap(mti.getHashFilterFactory())
-	       instanceof MockFilterFactory);
-    assertTrue(WrapperUtil.unwrap(mti.getCrawlFilterFactory())
-	       instanceof MockFilterFactory);
+    assertClass(FilterFactoryWrapper.class,
+		mti.getHashFilterFactory());
+    assertClass(FilterFactoryWrapper.class,
+		mti.getCrawlFilterFactory());
+    assertClass(MockFilterFactory.class,
+		WrapperUtil.unwrap(mti.getHashFilterFactory()));
+    assertClass(MockFilterFactory.class,
+		WrapperUtil.unwrap(mti.getCrawlFilterFactory()));
+
+    
+    mti = definablePlugin.getMimeTypeInfo("text/foo");
+    assertNull(WrapperUtil.unwrap(mti.getContentValidatorFactory()));
+    assertClass(Validator1.class,
+		WrapperUtil.unwrap(definablePlugin.getContentValidatorFactory("text/foo")));
+    assertClass(Validator2.class,
+		WrapperUtil.unwrap(definablePlugin.getContentValidatorFactory("application/foo")));
+
 
     // verify 2nd plugin still has mime defaults
     mti = p2.getMimeTypeInfo("text/html");
-    assertTrue(mti.getLinkExtractorFactory()
-	       instanceof GoslingHtmlLinkExtractor.Factory);
-    assertTrue(""+mti.getLinkRewriterFactory().getClass(),
-	       mti.getLinkRewriterFactory() instanceof
-	       NodeFilterHtmlLinkRewriterFactory);
+    assertClass(GoslingHtmlLinkExtractor.Factory.class,
+		mti.getLinkExtractorFactory());
+    assertClass(""+mti.getLinkRewriterFactory().getClass(),
+		NodeFilterHtmlLinkRewriterFactory.class,
+		mti.getLinkRewriterFactory());
     assertNull(mti.getFileMetadataExtractorFactory());
     mti = p2.getMimeTypeInfo("text/css");
-    assertTrue(mti.getLinkExtractorFactory()
-	       instanceof RegexpCssLinkExtractor.Factory);
-    assertTrue(mti.getLinkRewriterFactory()
-	       instanceof RegexpCssLinkRewriterFactory);
+    assertClass(RegexpCssLinkExtractor.Factory.class,
+		mti.getLinkExtractorFactory());
+    assertClass(RegexpCssLinkRewriterFactory.class,
+		mti.getLinkRewriterFactory());
 
     mti = p2.getMimeTypeInfo("application/pdf");
     assertNull(mti.getHashFilterFactory());
     assertNull(mti.getCrawlFilterFactory());
     assertNull(mti.getLinkRewriterFactory()); // XXX 
+
   }
 
   public void testCreateAu() throws ArchivalUnit.ConfigurationException {
@@ -208,7 +232,7 @@ public class TestDefinablePlugin extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
     Configuration auConfig = CurrentConfig.getCurrentConfig();
     ArchivalUnit actualReturn = definablePlugin.createAu(auConfig);
-    assertTrue(actualReturn instanceof DefinableArchivalUnit);
+    assertClass(DefinableArchivalUnit.class, actualReturn);
     assertEquals("configuration", auConfig, actualReturn.getConfiguration());
   }
 
@@ -473,8 +497,8 @@ public class TestDefinablePlugin extends LockssTestCase {
     map.putString(DefinablePlugin.KEY_EXCEPTION_HANDLER,name);
     plugin.initResultMap();
     CacheResultHandler hand = plugin.getCacheResultHandler();
-    assertTrue(hand instanceof CacheResultHandlerWrapper);
-    assertTrue(WrapperUtil.unwrap(hand) instanceof MockHttpResultHandler);
+    assertClass(CacheResultHandlerWrapper.class, hand);
+    assertClass(MockHttpResultHandler.class, WrapperUtil.unwrap(hand));
 
   }
 
@@ -580,8 +604,8 @@ public class TestDefinablePlugin extends LockssTestCase {
     defMap.putString(ArchivalUnit.KEY_AU_URL_NORMALIZER,
 		     "org.lockss.plugin.definable.TestDefinablePlugin$MyNormalizer");
     UrlNormalizer urlNormalizer = definablePlugin.getUrlNormalizer();
-    assertTrue(urlNormalizer instanceof UrlNormalizerWrapper);
-    assertTrue(WrapperUtil.unwrap(urlNormalizer) instanceof MyNormalizer);
+    assertClass(UrlNormalizerWrapper.class, urlNormalizer);
+    assertClass(MyNormalizer.class, WrapperUtil.unwrap(urlNormalizer));
   }
 
   public void testMakeUrlNormalizerThrowsOnBadClass()
@@ -601,7 +625,7 @@ public class TestDefinablePlugin extends LockssTestCase {
 		     "org.lockss.plugin.definable.TestDefinablePlugin$MyCrawlUrlComparatorFactory");
     MockArchivalUnit mau = new MockArchivalUnit();
     Comparator<CrawlUrl> comparator = definablePlugin.getCrawlUrlComparator(mau);
-    assertTrue(comparator instanceof MyCrawlUrlComparator);
+    assertClass(MyCrawlUrlComparator.class, comparator);
     assertSame(mau, ((MyCrawlUrlComparator)comparator).getAu());
   }
 
@@ -737,5 +761,8 @@ public class TestDefinablePlugin extends LockssTestCase {
       this.triggerException = triggerException;
     }
   }
+
+  public static class Validator1 extends MockContentValidatorFactory {};
+  public static class Validator2 extends MockContentValidatorFactory {};
 
 }

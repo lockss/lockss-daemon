@@ -3,7 +3,7 @@
  */
 
 /*
- Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -144,6 +144,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
     "_crawl_filter_factory";
   public static final String SUFFIX_LINK_REWRITER_FACTORY =
     "_link_rewriter_factory";
+  public static final String SUFFIX_CONTENT_VALIDATOR_FACTORY =
+    "_content_validator_factory";
   public static final String SUFFIX_ARTICLE_MIME_TYPE =
     "_article_mime_type";
   public static final String SUFFIX_METADATA_EXTRACTOR_FACTORY_MAP =

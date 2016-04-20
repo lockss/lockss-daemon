@@ -656,6 +656,11 @@ public class NullPlugin {
       throw new UnsupportedOperationException("Not implemented");
     }
 
+    public ContentValidatorFactory getContentValidatorFactory(String
+							      contentType){
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
     public Iterator<ArticleFiles> getArticleIterator() {
       throw new UnsupportedOperationException("Not implemented");
     }

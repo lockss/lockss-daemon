@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -798,6 +798,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertClass(NodeFilterHtmlLinkRewriterFactory.class,
 		au.getLinkRewriterFactory(Constants.MIME_TYPE_HTML));
     assertNull(au.getLinkRewriterFactory("text/alphabet"));
+    assertNull(au.getContentValidatorFactory("application/pdf"));
 
     assertFalse(au.isBulkContent());
     assertNull(au.getArchiveFileTypes());
@@ -1412,6 +1413,12 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
       defplug.getLinkRewriterFactory("text/javascript");
     assertClass(LinkRewriterFactoryWrapper.class, jsfact);
     assertClass(MockFactories.JsRewriterFact.class, WrapperUtil.unwrap(jsfact));
+
+    assertClass(MockFactories.PdfContentValidatorFactory.class,
+		au.getContentValidatorFactory("application/pdf"));
+    assertClass(MockContentValidatorFactory.class,
+		au.getContentValidatorFactory("text/plain"));
+
 
     MimeTypeInfo mti = defplug.getMimeTypeInfo("text/xml");
     FileMetadataExtractorFactory mfact = mti.getFileMetadataExtractorFactory();

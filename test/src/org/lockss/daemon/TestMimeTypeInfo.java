@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -52,6 +52,7 @@ public class TestMimeTypeInfo extends LockssTestCase {
     assertNull(mti.getHashFilterFactory());
     assertNull(mti.getCrawlFilterFactory());
     assertNull(mti.getLinkExtractorFactory());
+    assertNull(mti.getContentValidatorFactory());
 
     FilterFactory ff = new MockFilterFactory();
     mti.setHashFilterFactory(ff);
@@ -69,6 +70,10 @@ public class TestMimeTypeInfo extends LockssTestCase {
     mti.setLinkRewriterFactory(lr);
     assertSame(lr, mti.getLinkRewriterFactory());
 
+    ContentValidatorFactory cv = new MockContentValidatorFactory();
+    mti.setContentValidatorFactory(cv);
+    assertSame(cv, mti.getContentValidatorFactory());
+
     Map factMap = new HashMap();
     FileMetadataExtractorFactory me = new MockFileMetadataExtractorFactory();
     factMap.put(MimeTypeInfo.DEFAULT_METADATA_TYPE, me);
@@ -83,6 +88,7 @@ public class TestMimeTypeInfo extends LockssTestCase {
     assertSame(cff, m2.getCrawlFilterFactory());
     assertSame(uf, m2.getLinkExtractorFactory());
     assertSame(lr, m2.getLinkRewriterFactory());
+    assertSame(cv, m2.getContentValidatorFactory());
     assertSame(factMap, m2.getFileMetadataExtractorFactoryMap());
     assertSame(me, m2.getFileMetadataExtractorFactory());
 

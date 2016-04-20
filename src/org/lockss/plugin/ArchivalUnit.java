@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -368,6 +368,13 @@ public interface ArchivalUnit {
    * there is none
    */
   public LinkRewriterFactory getLinkRewriterFactory(String contentType);
+
+  /**
+   * Returns the ContentValidatorFactory specified by the plugin, or null
+   * @param contentType the content type
+   * @return the ContentValidatorFactory for that content type
+   */
+  public ContentValidatorFactory getContentValidatorFactory(String contentType);
 
   /** Return true if the AU contains bulk content.  <i>Ie</i>, the content
    * belongs to several logical collections (titles, volumes, etc.), not

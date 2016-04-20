@@ -88,6 +88,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   private FilterFactory hashFilterFactory = null;
   private FilterFactory crawlFilterFactory = null;
   private LinkRewriterFactory rewriterFactory = null;
+  private ContentValidatorFactory validatorFactory = null;
   private Iterator<ArticleFiles> articleIterator = null;
   private Map extractors = new HashMap();
   private Map fileMetadataExtractors = new HashMap();
@@ -673,6 +674,14 @@ public class MockArchivalUnit implements ArchivalUnit {
   public void setLinkRewriterFactory(String mimeType,
 				     LinkRewriterFactory rewriterFactory) {
     rewriterMap.put(mimeType, rewriterFactory);
+  }
+
+  public void setContentValidatorFactory(ContentValidatorFactory fact) {
+    validatorFactory = fact;
+  }
+
+  public ContentValidatorFactory getContentValidatorFactory(String contentType){
+    return validatorFactory;
   }
 
   public Iterator<ArticleFiles> getArticleIterator() {

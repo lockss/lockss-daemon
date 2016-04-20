@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -73,7 +73,7 @@ public class ContentValidationException extends Exception {
     }
   }
 
-  /** The actuall length of the received file differs from the
+  /** The actual length of the received file differs from the
    * Content-Length header. */
   public static class WrongLength extends ContentValidationException {
 
@@ -90,6 +90,28 @@ public class ContentValidationException extends Exception {
     }
 
     public WrongLength(String msg, Throwable cause) {
+      super(msg, cause);
+    }
+  }
+
+  /** An unexpected exception (not a subclass of
+   * ContentValidationException) was thrown by a plugin-specified
+   * ContentValidator. */
+  public static class ValidatorExeception extends ContentValidationException {
+
+    public ValidatorExeception() {
+      super();
+    }
+
+    public ValidatorExeception(String msg) {
+      super(msg);
+    }
+
+    public ValidatorExeception(Throwable cause) {
+      super(cause);
+    }
+
+    public ValidatorExeception(String msg, Throwable cause) {
       super(msg, cause);
     }
   }

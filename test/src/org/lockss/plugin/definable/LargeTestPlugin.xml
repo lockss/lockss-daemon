@@ -183,6 +183,18 @@
     <string>org.lockss.plugin.definable.MockFactories$JsRewriterFact</string>
   </entry>
   <entry>
+    <string>text/*_content_validator_factory</string>
+    <string>org.lockss.test.MockContentValidatorFactory</string>
+  </entry>
+  <entry>
+    <string>*/*_content_validator_factory</string>
+    <string>org.lockss.plugin.definable.MockFactories$AllContentValidatorFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_content_validator_factory</string>
+    <string>org.lockss.plugin.definable.MockFactories$PdfContentValidatorFactory</string>
+  </entry>
+  <entry>
     <string>plugin_substance_predicate_factory</string>
     <string>org.lockss.plugin.definable.MockFactories$SubstPredFact</string>
   </entry>

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -682,6 +682,19 @@ public class DefinablePlugin extends BasePlugin {
 	    (LinkRewriterFactory)newAuxClass(factName,
 					     LinkRewriterFactory.class);
 	  mti.setLinkRewriterFactory(fact);
+	}
+      } else if ((mime = getMimeFromCompoundKey(key, val, DefinableArchivalUnit.SUFFIX_CONTENT_VALIDATOR_FACTORY)) != null) {
+	MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
+	if (val instanceof org.lockss.util.None) {
+	  log.debug2(mime + " no content validator");
+	  mti.setContentValidatorFactory(null);
+	} else if (val instanceof String) {
+	  String factName = (String)val;
+	  log.debug2(mime + " content validator: " + factName);
+	  ContentValidatorFactory fact =
+	    (ContentValidatorFactory)newAuxClass(factName,
+						 ContentValidatorFactory.class);
+	  mti.setContentValidatorFactory(fact);
 	}
       } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_METADATA_EXTRACTOR_FACTORY_MAP) && ((mime = stripSuffix(key, DefinableArchivalUnit.SUFFIX_METADATA_EXTRACTOR_FACTORY_MAP)) != null)) {
 	// add None processing if/when default md extractors exist

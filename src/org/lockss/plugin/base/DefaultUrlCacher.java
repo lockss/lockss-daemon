@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import org.apache.commons.lang3.tuple.*;
 
 import org.lockss.state.*;
 import org.lockss.alert.*;
@@ -373,7 +374,10 @@ public class DefaultUrlCacher implements UrlCacher {
   // XXX need to make it possible for validator to access CU before seal(),
   // so it can prevent file from being committed.
   protected CacheException validate(long size) throws CacheException {
-    LinkedList<Exception> validationFailures = new LinkedList<Exception>();
+    LinkedList<Pair<String,Exception>> validationFailures =
+      new LinkedList<Pair<String,Exception>>();
+
+    // First check actual length = Content-Length header if any
     long contLen = getContentLength();
     if (contLen >= 0 && contLen != size) {
       Alert alert = Alert.auAlert(Alert.FILE_VERIFICATION, au);
@@ -383,24 +387,54 @@ public class DefaultUrlCacher implements UrlCacher {
 	+ getFetchUrl();
       alert.setAttribute(Alert.ATTR_TEXT, msg);
       raiseAlert(alert);
-      validationFailures.add(new ContentValidationException.WrongLength(msg));
+      validationFailures.add(new ImmutablePair(getUrl(),
+				      new ContentValidationException.WrongLength(msg)));
     }
-//     try {
-      if (size == 0) {
-        Exception ex =
-            new ContentValidationException.EmptyFile("Empty file stored");
-	validationFailures.addFirst(ex);
+
+    // 2nd, empty file
+    if (size == 0) {
+      Exception ex =
+	new ContentValidationException.EmptyFile("Empty file stored");
+      validationFailures.add(new ImmutablePair(getUrl(), ex));
+    }
+
+    // 3rd plugin-supplied ContentValidator.  Any
+    // ContentValidationException it throws will take precedence over the
+    // previous (wrong length, empty), but an unexpected exception will not
+    // take precedence.
+    String contentType = getContentType();
+    ContentValidatorFactory cvfact = au.getContentValidatorFactory(contentType);
+    if (cvfact != null) {
+      ContentValidator cv = cvfact.createContentValidator(au, contentType);
+      if (cv != null) {
+	CachedUrl cu = getCachedUrl();
+	try {
+	  cv.validate(cu);
+	} catch (ContentValidationException e) {
+	  logger.debug2("Validation error1", e);
+	  // Plugin-triggered ContentValidationException goes first
+	  validationFailures.addFirst(new ImmutablePair(getUrl(), e));
+	} catch (Exception e) {
+	  logger.debug2("Validation error2", e);
+	  // Unexpected error in validator is last
+	  validationFailures.add(new ImmutablePair(getUrl(), e));
+	} finally {
+	  cu.release();
+	}
       }
-      return firstMappedException(validationFailures);
-//     } catch (Exception e) {
-//       throw resultMap.mapException(au, conn, e, null);
-//     }
+    }
+    return firstMappedException(validationFailures);
   }
 
-
-  private CacheException firstMappedException(List<Exception> exps) {
-    for (Exception ex : exps) {
-      CacheException mapped = resultMap.mapException(au, fetchUrl, ex, null);
+  private CacheException firstMappedException(List<Pair<String,Exception>> exps) {
+    if (logger.isDebug3()) {
+      logger.debug3("firstMappedException: " + exps);
+    }
+    for (Pair<String,Exception> p : exps) {
+      CacheException mapped = resultMap.mapException(au,
+						     p.getLeft(),
+						     p.getRight(),
+						     null);
       if (mapped != null) {
 	return mapped;
       }
@@ -423,5 +457,9 @@ public class DefaultUrlCacher implements UrlCacher {
     } catch (Exception e) {
       return -1;
     }
+  }  
+
+  private String getContentType() {
+    return headers.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
   }  
 }

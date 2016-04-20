@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -563,6 +563,48 @@ public abstract class BasePlugin
     if (log.isDebug3())
       log.debug3(contentType + " rewriter: " + mti.getLinkRewriterFactory());
     return mti.getLinkRewriterFactory();
+  }
+
+  /**
+   * Returns the ContentValidatorFactory specified by the plugin, or null
+   * 
+   * @param contentType the content type
+   * @return the ContentValidatorFactory
+   */
+  public ContentValidatorFactory
+    getContentValidatorFactory(String contentType) {
+
+    String mime = HeaderUtil.getMimeTypeFromContentType(contentType);
+    MimeTypeInfo mti = getMimeTypeInfo(mime);
+    if (mti != null) {
+      ContentValidatorFactory fact = mti.getContentValidatorFactory();
+      if (fact != null) {
+	if (log.isDebug3())
+	  log.debug3(contentType + " validator: " + fact);
+	return fact;
+      }
+    }
+    // If none try wild subtype
+    mti = getMimeTypeInfo(MimeTypeMap.wildSubType(mime));
+    if (mti != null) {
+      ContentValidatorFactory fact = mti.getContentValidatorFactory();
+      if (fact != null) {
+	if (log.isDebug3())
+	  log.debug3(contentType + " validator: " + fact);
+	return fact;
+      }
+    }
+    // If none try wildcard
+    mti = getMimeTypeInfo(MimeTypeMap.WILD_CARD);
+    if (mti != null) {
+      ContentValidatorFactory fact = mti.getContentValidatorFactory();
+      if (fact != null) {
+	if (log.isDebug3())
+	  log.debug3(contentType + " validator: " + fact);
+	return fact;
+      }
+    }
+    return null;
   }
 
   /**

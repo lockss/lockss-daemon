@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -241,25 +241,31 @@ public class TestBasePlugin extends LockssTestCase {
     assertSame(MimeTypeInfo.NULL_INFO, mbp.getMimeTypeInfo(""));
     assertSame(MimeTypeInfo.NULL_INFO, mbp.getMimeTypeInfo("foo/bar"));
     MimeTypeInfo mti = mbp.getMimeTypeInfo("text/html");
-    assertTrue(mti.getLinkExtractorFactory()
-	       instanceof GoslingHtmlLinkExtractor.Factory);
+    assertClass(GoslingHtmlLinkExtractor.Factory.class,
+		mti.getLinkExtractorFactory());
+    assertClass(org.lockss.rewriter.NodeFilterHtmlLinkRewriterFactory.class,
+		mti.getLinkRewriterFactory());
     assertNull(mti.getHashFilterFactory());
     assertNull(mti.getCrawlFilterFactory());
+    assertNull(mti.getContentValidatorFactory());
     mti = mbp.getMimeTypeInfo("text/css");
-    assertTrue(mti.getLinkExtractorFactory()
-	       instanceof RegexpCssLinkExtractor.Factory);
+    assertClass(RegexpCssLinkExtractor.Factory.class,
+		mti.getLinkExtractorFactory());
+    assertClass(org.lockss.rewriter.RegexpCssLinkRewriterFactory.class,
+		mti.getLinkRewriterFactory());
     assertNull(mti.getHashFilterFactory());
     assertNull(mti.getCrawlFilterFactory());
+    assertNull(mti.getContentValidatorFactory());
 
     ConfigurationUtil.setFromArgs(MimeTypeMap.PARAM_DEFAULT_CSS_EXTRACTOR_FACTORY,
 				  "org.lockss.extractor.RegexpCssLinkExtractor$Factory");
-    assertTrue(mti.getLinkExtractorFactory()
-	       instanceof RegexpCssLinkExtractor.Factory);
+    assertClass(RegexpCssLinkExtractor.Factory.class,
+	       mti.getLinkExtractorFactory());
   }
 
   public void testGetLinkExtractor() throws IOException {
     LinkExtractor ue = mbp.getLinkExtractor("text/html");
-    assertTrue(ue instanceof GoslingHtmlLinkExtractor);
+    assertClass(GoslingHtmlLinkExtractor.class, ue);
   }
 
   public void testFilterRuleCaching() throws IOException {

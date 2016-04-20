@@ -182,6 +182,23 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     assertNull(cacher.getInfoException());
   }
 
+  public void testCacheEmptyRetry() throws IOException {
+    HttpResultMap resultMap = (HttpResultMap)plugin.getCacheResultMap();
+    resultMap.storeMapEntry(ContentValidationException.EmptyFile.class,
+			    CacheException.RetryableNetworkException_2.class);
+    ud = new UrlData(new StringInputStream(""), 
+        new CIProperties(), TEST_URL);
+    cacher = new MyDefaultUrlCacher(mau, ud);
+    try {
+      cacher.storeContent();
+      fail("Should have thrown CacheException.RetryableNetworkException_2");
+    } catch (CacheException.RetryableNetworkException_2 e) {
+      // expected
+    }
+    assertFalse(cacher.wasStored);
+    assertNull(cacher.getInfoException());
+  }
+
   public void testCacheExceptions() throws IOException {
     ud = new UrlData(new StringInputStream("test stream"), 
         null, TEST_URL);
@@ -205,6 +222,195 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     cacher.storeContent();
     assertTrue(cacher.wasStored);
   }
+
+  public void testValidate() throws IOException {
+    HttpResultMap resultMap = (HttpResultMap)plugin.getCacheResultMap();
+    resultMap.storeMapEntry(MyContentValidationException1.class,
+			    CacheSuccess.class);
+    resultMap.storeMapEntry(MyContentValidationException2.class,
+			    CacheException.WarningOnly.class);
+    resultMap.storeMapEntry(MyContentValidationException3.class,
+			    CacheException.RetryableNetworkException_2.class);
+    mau.setContentValidatorFactory(new MyContentValidatorFactory());
+    MockCachedUrl mcu = mau.addUrl(TEST_URL, "invalid_1");
+
+    doStore("not invalid", null);
+    assertNull(cacher.getInfoException());
+    // Success
+    doStore("invalid_1", null);
+    assertNull(cacher.getInfoException());
+    // Warning
+    doStore("invalid_2", null);
+    assertEquals("v ex 2",
+		 cacher.getInfoException().getMessage());
+
+    try {
+      doStore("invalid_3", null);
+      fail("Should have thrown CacheException.RetryableNetworkException_2");
+    } catch (CacheException.RetryableNetworkException_2 e) {
+      // expected
+      assertEquals("v ex 3", e.getMessage());
+      assertNull(cacher.getInfoException());
+    }
+    
+    // Not explicitly mapped, maps to ContentValidationException default in
+    // HttpResultMap
+
+    try {
+      doStore("invalid_4", null);
+      fail("Should have thrown CacheException.UnretryableException");
+    } catch (CacheException.UnretryableException e) {
+      // expected
+      assertEquals("v ex 4", e.getMessage());
+      assertNull(cacher.getInfoException());
+    }
+
+    doStore("valid", null);
+    assertNull(cacher.getInfoException());
+
+    // Unmapped
+    try {
+      doStore("valid", "plug_err");
+      fail("Should have thrown CacheException.UnknownExceptionException");
+    } catch (CacheException.UnknownExceptionException e) {
+      // expected
+      assertEquals("Unmapped exception: org.lockss.daemon.PluginException: random plugin exception",
+		   e.getMessage());
+      assertNull(cacher.getInfoException());
+    }
+
+    try {
+      doStore("IOException", null);
+      fail("Should have thrown CacheException.UnknownExceptionException");
+    } catch (CacheException.UnknownExceptionException e) {
+      // expected
+      assertEquals("Unmapped exception: java.io.IOException: EIEIO",
+		   e.getMessage());
+      assertNull(cacher.getInfoException());
+    }
+
+    try {
+      doStore("PluginException", null);
+      fail("Should have thrown CacheException.UnknownExceptionException");
+    } catch (CacheException.UnknownExceptionException e) {
+      // expected
+      assertEquals("Unmapped exception: org.lockss.daemon.PluginException: nickel",
+		   e.getMessage());
+      assertNull(cacher.getInfoException());
+    }
+
+
+    // Empty combined with validation failure - exception thrown by plugin
+    // validator should take precedence
+
+    doStore("", "invalid_1");
+    assertMatchesRE("WarningOnly: Empty file stored",
+		    cacher.getInfoException().toString());
+
+    doStore("", "invalid_2");
+    assertMatchesRE("WarningOnly: v ex 2",
+		    cacher.getInfoException().toString());
+    try {
+      doStore("", "invalid_3");
+      fail("Should have thrown CacheException.RetryableNetworkException_2");
+    } catch (CacheException.RetryableNetworkException_2 e) {
+      // expected
+      assertEquals("v ex 3", e.getMessage());
+      assertNull(cacher.getInfoException());
+    }
+
+    doStore("", null);
+    assertMatchesRE("WarningOnly: Empty file stored",
+		    cacher.getInfoException().toString());
+  }
+
+  void doStore(String content, String prop)
+      throws IOException {
+    ud = new UrlData(new StringInputStream(content), 
+		     new CIProperties(), TEST_URL);
+    cacher = new MyDefaultUrlCacher(mau, ud);
+    MockCachedUrl mcu = mau.addUrl(TEST_URL, content);
+    if (prop != null) {
+      mcu.addProperty("prop_name", prop);
+    }
+    mcu.addProperty("other_prop_name", "foo");
+    cacher = new MyDefaultUrlCacher(mau, ud);
+    cacher.storeContent();
+  }
+
+  static class MyContentValidatorFactory implements ContentValidatorFactory {
+    public ContentValidator createContentValidator(ArchivalUnit au,
+						   String contentType) {
+    return new MyContentValidator();
+    }
+  }
+    
+  static class MyContentValidator implements ContentValidator {
+    public void validate(CachedUrl cu)
+	throws ContentValidationException, PluginException, IOException {
+      CIProperties props = cu.getProperties();
+      String prop = props.getProperty("prop_name");
+      if (prop != null) {
+	switch (prop) {
+	case "plug_err":
+	  throw new PluginException("random plugin exception");
+	case "invalid_1":
+	  throw new MyContentValidationException1("v ex 1");
+	case "invalid_2":
+	  throw new MyContentValidationException2("v ex 2");
+	case "invalid_3":
+	  throw new MyContentValidationException3("v ex 3");
+	case "invalid_4":
+	  throw new MyContentValidationException4("v ex 4");
+	}
+      }
+      String cont = StringUtil.fromInputStream(cu.getUnfilteredInputStream());
+      switch (cont) {
+      case "invalid_1":
+	throw new MyContentValidationException1("v ex 1");
+      case "invalid_2":
+	throw new MyContentValidationException2("v ex 2");
+      case "invalid_3":
+	throw new MyContentValidationException3("v ex 3");
+      case "invalid_4":
+	throw new MyContentValidationException4("v ex 4");
+      case "IOException":
+	throw new IOException("EIEIO");
+      case "PluginException":
+	throw new PluginException("nickel");
+      }
+    }
+  }
+
+  static class MyContentValidationException1
+    extends ContentValidationException {
+    MyContentValidationException1(String msg) {
+      super(msg);
+    }
+  }
+
+  static class MyContentValidationException2
+    extends ContentValidationException {
+    MyContentValidationException2(String msg) {
+      super(msg);
+    }
+  }
+
+  static class MyContentValidationException3
+    extends ContentValidationException {
+    MyContentValidationException3(String msg) {
+      super(msg);
+    }
+  }
+
+  static class MyContentValidationException4
+    extends ContentValidationException {
+    MyContentValidationException4(String msg) {
+      super(msg);
+    }
+  }
+
+
 
   enum DisagreeTest {Default, Ignore, Warning, Error};
 

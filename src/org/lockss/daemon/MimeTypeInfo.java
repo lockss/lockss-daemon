@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -66,6 +66,8 @@ public interface MimeTypeInfo {
   /** Returns the FileMetadataExtractorFactoryMap, or null */
   public Map<String,FileMetadataExtractorFactory>
     getFileMetadataExtractorFactoryMap();
+  /** Returns the ContentValidatorFactory, or null */
+  public ContentValidatorFactory getContentValidatorFactory();
 
   /** Sub interface adds setters */
   public interface Mutable extends MimeTypeInfo {
@@ -74,6 +76,7 @@ public interface MimeTypeInfo {
     public Impl setLinkExtractorFactory(LinkExtractorFactory fact);
     public Impl setLinkRewriterFactory(LinkRewriterFactory fact);
     public Impl setFileMetadataExtractorFactoryMap(Map<String,FileMetadataExtractorFactory> map);
+    public Impl setContentValidatorFactory(ContentValidatorFactory fact);
   }
 
   class Impl implements Mutable {
@@ -85,6 +88,7 @@ public interface MimeTypeInfo {
     private LinkRewriterFactory linkFactory;
     private Map<String,FileMetadataExtractorFactory>
       metadataExtractorFactoryMap;
+    private ContentValidatorFactory validatorFactory ;
 
     public Impl() {
     }
@@ -97,6 +101,7 @@ public interface MimeTypeInfo {
 	linkFactory = toClone.getLinkRewriterFactory();
 	metadataExtractorFactoryMap =
 	  toClone.getFileMetadataExtractorFactoryMap();
+	validatorFactory = toClone.getContentValidatorFactory();
       }
     }
 
@@ -157,6 +162,16 @@ public interface MimeTypeInfo {
       metadataExtractorFactoryMap = map;
       return this;
     }
+
+    public ContentValidatorFactory getContentValidatorFactory() {
+      return validatorFactory;
+    }
+
+    public Impl setContentValidatorFactory (ContentValidatorFactory fact) {
+      validatorFactory = fact;
+      return this;
+    }
+
 
     public String toString() {
       StringBuilder sb = new StringBuilder();

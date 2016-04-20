@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -331,6 +331,10 @@ public class HttpResultMap implements CacheResultMap {
     storeMapEntry(java.nio.channels.ClosedChannelException.class,
  		  CacheException.RetryableNetworkException_3_30S.class);
 
+    // Default ContentValidationException
+    storeMapEntry(ContentValidationException.class,
+		  CacheException.UnretryableException.class);
+    // Specific ContentValidationException s
     storeMapEntry(ContentValidationException.EmptyFile.class,
 		  CacheException.WarningOnly.class);
     storeMapEntry(ContentValidationException.WrongLength.class,

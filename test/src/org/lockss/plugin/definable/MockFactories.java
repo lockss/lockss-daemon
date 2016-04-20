@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -111,6 +111,22 @@ public class MockFactories {
 					  String srcUrl,
 					  ServletUtil.LinkTransform srvLinkXform)
 	throws PluginException, IOException {
+      return null;
+    }
+  }
+
+  public static class PdfContentValidatorFactory
+    implements ContentValidatorFactory {
+    public ContentValidator createContentValidator(ArchivalUnit au,
+						   String contentType) {
+      return null;
+    }
+  }
+
+  public static class AllContentValidatorFactory
+    implements ContentValidatorFactory {
+    public ContentValidator createContentValidator(ArchivalUnit au,
+						   String contentType) {
       return null;
     }
   }

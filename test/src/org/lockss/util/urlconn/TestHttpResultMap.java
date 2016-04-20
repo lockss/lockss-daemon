@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -194,6 +194,18 @@ public class TestHttpResultMap extends LockssTestCase {
 				       new ContentValidationException.EmptyFile("Empty File 42"),
 				       "foo");
     assertTrue(exception instanceof CacheException.WarningOnly);
+
+    // Unmapped subclass of ContentValidationException should map to what
+    // ContentValidationException maps to
+    exception = resultMap.mapException(null, "",
+				       new UnmappedContentValidationException(),
+				       "foo");
+    assertClass(CacheException.UnretryableException.class, exception);
+
+  }
+
+  static class UnmappedContentValidationException
+    extends ContentValidationException {
   }
 
   public void testInitExceptionTable() {
