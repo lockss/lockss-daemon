@@ -301,9 +301,9 @@
     >
 
     param[journal_id] = abm
+    #archived
 
     au < finished ; crawling ; 2014 ; Advances in Biomaterials Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < expected ; exists ; 2015 ; Advances in Biomaterials Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -4178,9 +4178,9 @@
     >
 
     param[journal_id] = ijm
+    #archived
 
     au < finished ; crawling ; 2014 ; International Journal of Mineralogy Volume 2014 ; 2014 ; 2014 ; >
-    au < expected ; exists ; 2015 ; International Journal of Mineralogy Volume 2015 ; 2015 ; 2015 ; >
 
   }
   
@@ -4859,9 +4859,9 @@
     >
 
     param[journal_id] = jaer
+    #archived
 
     au < finished ; crawling ; 2014 ; Journal of Aerodynamics Volume 2014 ; 2014 ; 2014 ; >
-    au < expected ; exists ; 2015 ; Journal of Aerodynamics Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -5012,9 +5012,9 @@
     >
 
     param[journal_id] = jani
+    #archived
     
     au < finished ; crawling ; 2014 ; Journal of Animals Volume 2014 ; 2014 ; 2014 ; >
-    au < expected ; exists ; 2015 ; Journal of Animals Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -5089,10 +5089,10 @@
     >
 
     param[journal_id] = jarchae
+    #not archived as of 20160420
     
     au < manifest ; exists ; 2013 ; Journal of Archaeology Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Journal of Archaeology Volume 2014 ; 2014 ; 2014 ; >
-    au < expected ; exists ; 2015 ; Journal of Archaeology Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -5121,6 +5121,7 @@
     >
 
     param[journal_id] = jamp
+    #not archived. no 2015 content. 20160420
 
     au < manifest ; exists ; 2009 ; Journal of Atomic, Molecular, and Optical Physics Volume 2009 ; 2009 ; 2009 ; >
     au < manifest ; exists ; 2010 ; Journal of Atomic, Molecular, and Optical Physics Volume 2010 ; 2010 ; 2010 ; >
@@ -5128,7 +5129,6 @@
     au < manifest ; exists ; 2012 ; Journal of Atomic, Molecular, and Optical Physics Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Atomic and Molecular Physics Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Journal of Atomic and Molecular Physics Volume 2014 ; 2014 ; 2014 ; >
-    au < expected ; exists ; 2015 ; Journal of Atomic and Molecular Physics Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -5302,7 +5302,6 @@
     param[journal_id] = jcad
     
     au < finished ; crawling ; 2014 ; Journal of Cell Adhesion Volume 2014 ; 2014 ; 2014 ; >
-    au < expected ; exists ; 2015 ; Journal of Cell Adhesion Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -5334,7 +5333,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Chaos Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Journal of Chaos Volume 2014 ; 2014 ; 2014 ; >
-    au < expected ; exists ; 2015 ; Journal of Chaos Volume 2015 ; 2015 ; 2015 ; >
+    au < exists ; exists ; 2016 ; Journal of Chaos Volume 2016 ; 2016 ; 2016 ; >
 
   }
 
@@ -5388,10 +5387,10 @@
     >
 
     param[journal_id] = jcoat
+    #not archived. no 2015 content. 20160420
     
     au < manifest ; exists ; 2013 ; Journal of Coatings Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Journal of Coatings Volume 2014 ; 2014 ; 2014 ; >
-    au < expected ; exists ; 2015 ; Journal of Coatings Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -5524,7 +5523,7 @@
     
     au < manifest ; exists ; 2013 ; Journal of Computational Methods in Physics Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Journal of Computational Methods in Physics Volume 2014 ; 2014 ; 2014 ; >
-    au < expected ; exists ; 2015 ; Journal of Computational Methods in Physics Volume 2015 ; 2015 ; 2015 ; >
+    au < exists ; exists ; 2016 ; Journal of Computational Methods in Physics Volume 2016 ; 2016 ; 2015 ; >
 
   }
 
@@ -6122,10 +6121,10 @@
     >
 
     param[journal_id] = jic
+    #not archived. no 2015 content. 20160420
     
     au < manifest ; exists ; 2013 ; Journal of Inorganic Chemistry Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Journal of Inorganic Chemistry Volume 2014 ; 2014 ; 2014 ; >
-    au < expected ; exists ; 2015 ; Journal of Inorganic Chemistry Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
@@ -6401,10 +6400,9 @@
     >
 
     param[journal_id] = jnc
+    #archived
     
-    au < manifest ; exists ; 2013 ; Journal of Nuclear Chemistry Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Journal of Nuclear Chemistry Volume 2014 ; 2014 ; 2014 ; >
-    au < expected ; exists ; 2015 ; Journal of Nuclear Chemistry Volume 2015 ; 2015 ; 2015 ; >
 
   }
 
