@@ -33603,9 +33603,9 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2007 ; Management & Organizational History Volume 2 ; 2 >
         au < doNotProcess ; 2008 ; Management & Organizational History Volume 3 ; 3 >
         au < doNotProcess ; 2009 ; Management & Organizational History Volume 4 ; 4 >
-        au < released ; 2010 ; Management & Organizational History Volume 5 ; 5 >
-        au < released ; 2011 ; Management & Organizational History Volume 6 ; 6 >
-        au < released ; 2012 ; Management & Organizational History Volume 7 ; 7 >
+        au < down ; 2010 ; Management & Organizational History Volume 5 ; 5 >
+        au < superseded ; 2011 ; Management & Organizational History Volume 6 [superseded] ; 6 >
+        au < superseded ; 2012 ; Management & Organizational History Volume 7 [superseded] ; 7 >
 
       }
 
@@ -51462,9 +51462,10 @@ comment[mpj] = now published by Brill
         #pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://nan.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+        # no new content after 2014. Now published on T&F.
 
-        au < HighWirePressH20Plugin ; released ; 2013 ; International Journal of Green Nanotechnology Volume 1 ; 1 >
-        au < HighWirePressH20Plugin ; released ; 2014 ; International Journal of Green Nanotechnology Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; released ; 2013 ; International Journal of Green Nanotechnology Volume 1 [Sage] ; 1 >
+        au < HighWirePressH20Plugin ; released ; 2014 ; International Journal of Green Nanotechnology Volume 2 [Sage] ; 2 >
 
       }
 
