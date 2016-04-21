@@ -48,7 +48,7 @@ count=50
    cat $tpath/gr_man_clks.txt | grep "*N" >> $tpath/gr_errors.txt
    cat $tpath/gr_man_clks.txt | grep "*M" | sed -e 's/.*, \(org|lockss|plugin|[^,]*\), .*/\1/' > $tpath/gr_found_cl.txt
    # Convert the list from clockss to gln
-   cat $tpath/gr_found_cl.txt | sed -e "s/Clockss$plugin/$plugin/" > $tpath/gr_found_cl_g.txt
+   cat $tpath/gr_found_cl.txt | sed -e 's/Clockss\([^\|]*\)Plugin/\1Plugin/' > $tpath/gr_found_cl_g.txt
    # Look for lockss manifest pages for AUids that have clockss manifest pages.
    ./scripts/tdb/read_auid_new.pl $tpath/gr_found_cl_g.txt > $tpath/gr_man_gln.txt
    cat $tpath/gr_man_gln.txt | grep "*N" >> $tpath/gr_errors.txt
