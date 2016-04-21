@@ -82,6 +82,7 @@
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Biographical Memoirs of Fellows of the Royal Society Volume 59 ; 59 ; >
     au < ClockssHWDrupalPlugin ; manifest ; exists ; 2014 ; Biographical Memoirs of Fellows of the Royal Society Volume 60 ; 60 ; >
     au < ClockssHWDrupalPlugin ; manifest ; exists ; 2015 ; Biographical Memoirs of Fellows of the Royal Society Volume 61 ; 61 ; >
+    au < ClockssHWDrupalPlugin ; expected ; exists ; 2016 ; Biographical Memoirs of Fellows of the Royal Society Volume 62 ; 62 ; >
 
   }
 
@@ -107,6 +108,7 @@
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Biology Letters Volume 9 ; 9 ; >
     au < ClockssHWDrupalPlugin ; manifest ; exists ; 2014 ; Biology Letters Volume 10 ; 10 ; >
     au < ClockssHWDrupalPlugin ; manifest ; exists ; 2015 ; Biology Letters Volume 11 ; 11 ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2016 ; Biology Letters Volume 12 ; 12 ; >
 
   }
 
@@ -129,6 +131,7 @@
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Interface Focus Volume 3 ; 3 ; >
     au < ClockssHWDrupalPlugin ; exists ; exists ; 2014 ; Interface Focus Volume 4 ; 4 ; >
     au < ClockssHWDrupalPlugin ; manifest ; exists ; 2015 ; Interface Focus Volume 5 ; 5 ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2016 ; Interface Focus Volume 6 ; 6 ; >
 
   }
   
@@ -258,6 +261,7 @@
     au < ClockssHWDrupalPlugin ; manifest ; exists ; 2013 ; Open Biology Volume 3 ; 3 ; >
     au < ClockssHWDrupalPlugin ; manifest ; exists ; 2014 ; Open Biology Volume 4 ; 4 ; >
     au < ClockssHWDrupalPlugin ; manifest ; exists ; 2015 ; Open Biology Volume 5 ; 5 ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2016 ; Open Biology Volume 6 ; 6 ; >
     
   }
 
@@ -1275,6 +1279,7 @@
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 469 ; 469 ; >
     au < ClockssHWDrupalPlugin ; exists ; exists ; 2014 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 470 ; 470 ; >
     au < ClockssHWDrupalPlugin ; manifest ; exists ; 2015 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 471 ; 471 ; >
+    au < ClockssHWDrupalPlugin ; manifest ; exists ; 2016 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 472 ; 472 ; >
 
   }
 
