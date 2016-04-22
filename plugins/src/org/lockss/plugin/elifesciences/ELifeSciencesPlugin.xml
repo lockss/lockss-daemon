@@ -42,11 +42,12 @@
   </entry>
   <entry>
     <string>au_crawlrules</string>
+
     <list>
       <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
       <string>1,"^%scontent/[0-9]+/[^/]+(\?panels_ajax_tab_tab=elife_article_(data|info)&amp;panels_ajax_tab_trigger=article-(data|info)|/article-data|/article-info)?$", base_url</string>
       <string>1,"^%selife/citation/[^/]+/ris$", base_url</string>
-      <string>1,"^%spanels_ajax_tab/elife_article(_auther|_figdata)?/node:[0-9]+/[0-9]$", base_url</string>
+      <string>2,"^%spanels_ajax_tab/elife_article(_auther|_figdata)?/node:[0-9]+/[0-9]$", base_url</string>
       <string>1,"^https?://elife-publishing-cdn\.s3\.amazonaws\.com/[0-9]+/[^/]+\.[^/]+$"</string>
       <string>1,"^https?://cdn\.elifesciences\.org/(elife-articles/)?[0-9]+/(figures-pdf/)?[^/+]+\.[^/]+$"</string>
     </list>
