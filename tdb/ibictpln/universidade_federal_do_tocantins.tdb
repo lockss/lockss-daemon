@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = Universidade Federal do Tocantins
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
+
+  {
+
+      title <
+        name = Revista Observatório ;
+        eissn = 2447-4266
+      >
+
+      comment[publisher] = Universidade Federal do Tocantins
+      param[base_url] = http://revista.uft.edu.br/
+      param[journal_id] = observatorio
+
+      au < exists ; 2015 ; 1 ; Revista Observatório Volume 2015 ; 2015 ; >
+      au < expected ; 2016 ; 2 ; Revista Observatório Volume 2016 ; 2016 ; >
+
+  }
+
+}
