@@ -74,6 +74,7 @@
       au < exists ; exists ; 2003 ; 978-0-08-044103-0 ; 978-1-78635-969-8 ; 9781786359698 ; Handbook of Transport and the Environment (978-1-78635-969-8) ; >
       au < exists ; exists ; 2004 ; 978-0-08-044108-5 ; 978-1-61583-253-8 ; 9781615832538 ; Handbook of Transport Geography and Spatial Systems (978-1-61583-253-8) ; >
       au < ready ; exists ; 2005 ; 978-0-08-044115-3 ; 978-0-08-045604-1 ; 9780080456041 ; Handbook of Transport Strategy, Policy and Institutions (978-0-08-045604-1) ; >
+      # the above and below are tested but have pdf hashing issues outside of our control
       au < ready ; exists ; 2007 ; 978-0-08-045376-7 ; 978-0-85724-567-0 ; 9780857245670 ; Handbook of Transport Modelling: 2nd Edition (978-0-85724-567-0) ; >
 
     }
