@@ -23,8 +23,8 @@
       param[journal_id] = jib
 
       au < down ; exists ; 2013 ; Journal of Insect Biodiversity Volume 1 ; 1 ; 2013 ; > #waiting for daemon fix to filter non-printing characters PD-1417
-      au < exists ; exists ; 2014 ; Journal of Insect Biodiversity Volume 2 ; 2 ; 2014 ; >
-      au < exists ; exists ; 2015 ; Journal of Insect Biodiversity Volume 3 ; 3 ; 2015 ; >
+      au < manifest ; exists ; 2014 ; Journal of Insect Biodiversity Volume 2 ; 2 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Journal of Insect Biodiversity Volume 3 ; 3 ; 2015 ; >
 
     }
     
