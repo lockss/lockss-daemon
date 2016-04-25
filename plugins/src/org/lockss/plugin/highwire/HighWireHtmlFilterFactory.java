@@ -110,6 +110,14 @@ public class HighWireHtmlFilterFactory implements FilterFactory {
         // filter ads & institution for Red Book
         HtmlNodeFilters.tagWithAttribute("div", "class", "leaderboard-ad"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+        // Need more extreme filtering for OUP agreement, mostly due to missing otherarticles
+        // tag, which left tags & text till </HTML> (see above)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumbs"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "disclaimer"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "(article|_)nav"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "_footer"),
+        // Changing external reference links, for example to CrossRef & Medline
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/cgi/external_ref"),
     };
     
     

@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>106</string>
+    <string>107</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -106,6 +106,7 @@
       <string>1,"^https?://%s/[^?]+\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url)</string>
       <string>4,"^https?://%s/", url_host(base_url)</string>
       <string>2,"^https?://%s/.*/search[.]dtl", url_host(base_url)</string>
+      <string>2,"^https?://%s/cgi/content/(abstract|extract)/[^?]+\?.*lookupType=volpage", url_host(base_url)</string>
       <string>1,"^https?://%s/content/vol%d/", url_host(base_url), volume</string>
       <string>1,"^https?://%s/cgi/(content|content-nw|issue_pdf)/[^/]+/([^/]+;)?%d/", url_host(base_url), volume</string>
       <string>1,"^https?://%s/cgi/(data|eletters|entire_issue_pdf|framedreprint|issue_pdf|pdftoc|reprint|reprintds|reprintframed|reprintframedds|reprintsidebar|screenpdf|video|video_dl)/([^/]+;)?%d/", url_host(base_url), volume</string>
