@@ -234,7 +234,7 @@
     au < released ; 2013 ; Account of the Receipts and Expenditures of the United States 2013 ; https://www.gpo.gov/ ; 2013 >
     au < released ; 2014 ; Account of the Receipts and Expenditures of the United States 2014 ; https://www.gpo.gov/ ; 2014 >
     au < doesNotExist ; 2015 ; Account of the Receipts and Expenditures of the United States 2015 ; https://www.gpo.gov/ ; 2015 > # empty sitemap
-    au < expected ; 2016 ; Account of the Receipts and Expenditures of the United States 2016 ; https://www.gpo.gov/ ; 2016 >
+    au < manifest ; 2016 ; Account of the Receipts and Expenditures of the United States 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -283,7 +283,7 @@
     au < released ; 2013 ; Additional Government Publications 2013 ; http://www.gpo.gov/ ; 2013 >
     au < released ; 2014 ; Additional Government Publications 2014 ; http://www.gpo.gov/ ; 2014 >
     au < released ; 2015 ; Additional Government Publications 2015 ; https://www.gpo.gov/ ; 2015 >
-    au < expected ; 2016 ; Additional Government Publications 2016 ; https://www.gpo.gov/ ; 2016 >
+    au < manifest ; 2016 ; Additional Government Publications 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
 
@@ -1267,7 +1267,7 @@
     au < released ; 2012 ; United States Government Manual 2012 ; https://www.gpo.gov/ ; 2012 >
     au < released ; 2013 ; United States Government Manual 2013 ; http://www.gpo.gov/ ; 2013 >
     au < released ; 2014 ; United States Government Manual 2014 ; https://www.gpo.gov/ ; 2014 >
-    au < expected ; 2015 ; United States Government Manual 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < manifest ; 2015 ; United States Government Manual 2015 ; https://www.gpo.gov/ ; 2015 >
     au < expected ; 2016 ; United States Government Manual 2016 ; https://www.gpo.gov/ ; 2016 >
 
   }
