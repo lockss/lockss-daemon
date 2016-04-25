@@ -39,6 +39,7 @@
     
     param[au_oai_set] = biorisk
     param[base_url] = http://biorisk.pensoft.net/
+    #notReady: V10 no substance. 
     
     au < manifest ; exists ; 2008 ; 2008 ; BioRisk Volume 1 ; 1 ; >
     au < manifest ; exists ; 2009 ; 2009 ; BioRisk Volumes 2-3 ; 2-3 ; >
@@ -47,7 +48,7 @@
     au < crawling ; exists ; 2012 ; 2012 ; BioRisk Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; 2013 ; BioRisk Volume 8 ; 8 ; >
     au < crawling ; exists ; 2014 ; 2014 ; BioRisk Volume 9 ; 9 ; >
-    au < testing ; exists ; 2015 ; 2015 ; BioRisk Volume 10 ; 10 ; >
+    au < notReady ; exists ; 2015 ; 2015 ; BioRisk Volume 10 ; 10 ; >
     au < expected ; exists ; 2016 ; 2016 ; BioRisk Volume 11 ; 11 ; >
   
    }
@@ -102,8 +103,9 @@
     
     param[au_oai_set] = ijm
     param[base_url] = http://ijm.pensoft.net/
+    #notReady: V2011, no substance.
     
-    au < manifest ; exists ; 2011 ; 2011 ; International Journal of Myriapodology Volumes 4-6 ; 4-6 ; >
+    au < notReady ; exists ; 2011 ; 2011 ; International Journal of Myriapodology Volumes 4-6 ; 4-6 ; >
     au < crawling ; exists ; 2012 ; 2012 ; International Journal of Myriapodology Volume 7 ; 7 ; >
 
    }
@@ -161,7 +163,7 @@
     au < crawling ; exists ; 2012 ; 2012 ; Nature Conservation Volume 1-3 ; 1-3 ; >
     au < crawling ; exists ; 2013 ; 2013 ; Nature Conservation Volume 4-6 ; 4-6 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Nature Conservation Volume 7-9 ; 7-9 ; >
-    au < testing ; exists ; 2015 ; 2015 ; Nature Conservation Volume 10-13 ; 10-13 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Nature Conservation Volume 10-13 ; 10-13 ; >
   
    }
   
@@ -256,13 +258,14 @@
     
     param[au_oai_set] = zookeys
     param[base_url] = http://zookeys.pensoft.net/
+    #V2013 no substance. 
     
     au < manifest ; exists ; 2008 ; 2008 ; ZooKeys Volumes 1-4 ; 1-4 ; >
     au < manifest ; exists ; 2009 ; 2009 ; ZooKeys Volumes 5-31 ; 5-31 ; >
     au < manifest ; exists ; 2010 ; 2010 ; ZooKeys Volumes 32-73 ; 32-73 ; >
     au < manifest ; exists ; 2011 ; 2011 ; ZooKeys Volumes 74-160 ; 74-160 ; >
     au < crawling ; exists ; 2012 ; 2012 ; ZooKeys Volumes 161-255 ; 161-255 ; >
-    au < testing ; exists ; 2013 ; 2013 ; ZooKeys Volumes 256-366 ; 256-366 ; >
+    au < notReady ; exists ; 2013 ; 2013 ; ZooKeys Volumes 256-366 ; 256-366 ; >
     au < crawling ; exists ; 2014 ; 2014 ; ZooKeys Volumes 367-468 ; 343-468 ; >
     au < crawling ; exists ; 2015 ; 2015 ; ZooKeys Volumes 469-548 ; 469-548 ; >
   
@@ -279,9 +282,11 @@
 
     param[au_oai_set] = zse
     param[base_url] = http://zse.pensoft.net/
+    #V90 has substance on ingest machines? Fails on content2.
+    #notReady: V91 has not substance and has a crawl error which is undefined.
 
     au < crawling ; exists ; 2014 ; 2014 ; Zoosystematics and Evolution Volume 90 ; 90 ; >
-    au < testing ; exists ; 2015 ; 2015 ; Zoosystematics and Evolution Volume 91 ; 91 ; >
+    au < notReady ; exists ; 2015 ; 2015 ; Zoosystematics and Evolution Volume 91 ; 91 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Zoosystematics and Evolution Volume 92 ; 92 ; >
 
     }
