@@ -1207,9 +1207,12 @@ public class LockssTestCase extends TestCase {
 	sb.append(" ");
       }
       sb.append(obj);
-      sb.append(" (a ");
-      sb.append(obj.getClass().getName());
-      sb.append(") is not a ");
+      if (obj != null) {
+	sb.append(" (a ");
+	sb.append(obj.getClass().getName());
+	sb.append(")");
+      }
+      sb.append(" is not a ");
       sb.append(expClass.getName());
       fail(sb.toString());
     }
