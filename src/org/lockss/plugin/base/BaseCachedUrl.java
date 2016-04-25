@@ -371,7 +371,7 @@ public class BaseCachedUrl implements CachedUrl {
     }
   }
 
-  private void ensureRnc() {
+  protected void ensureRnc() {
     if (rnc == null) {
       rnc = getNodeVersion().getNodeContents();
     }

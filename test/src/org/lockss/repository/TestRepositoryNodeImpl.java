@@ -1279,6 +1279,47 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals(1, leaf.getCurrentVersion());
   }
 
+  public void testUnsealedRnc() throws Exception {
+    String url = "http://www.example.com/foo.html";
+    String content = "test test test";
+    Properties props = new Properties();
+    props.setProperty("test 1", "value 1");
+    RepositoryNode leaf = repo.createNewNode(url);
+    try {
+      leaf.getUnsealedRnc();
+      fail("Should throw");
+    } catch (IllegalStateException e) {
+    }
+    leaf.makeNewVersion();
+    writeToLeaf(leaf, content);
+    RepositoryNode.RepositoryNodeContents rnc = leaf.getUnsealedRnc();
+    assertInputStreamMatchesString(content, rnc.getInputStream());
+    assertInputStreamMatchesString(content, rnc.getInputStream());
+
+    try {
+      rnc.getProperties();
+      fail("Should throw");
+    } catch (UnsupportedOperationException e) {
+    }
+    try {
+      rnc.addProperty("foo", "bar");
+      fail("Should throw");
+    } catch (UnsupportedOperationException e) {
+    }
+    rnc.release();
+
+    leaf.setNewProperties(props);
+    leaf.sealNewVersion();
+    try {
+      rnc.getInputStream();
+      fail("Should throw");
+    } catch (IllegalStateException e) {
+    }
+    RepositoryNode.RepositoryNodeContents rncSealed = leaf.getNodeContents();
+    assertInputStreamMatchesString(content, rncSealed.getInputStream());
+  }
+
+
   public void testGetInputStream() throws Exception {
     RepositoryNode leaf =
         createLeaf("http://www.example.com/testDir/test.cache",

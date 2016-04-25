@@ -38,10 +38,9 @@ import org.lockss.daemon.*;
 /** Validate a received file; determine whether to accept or reject it.  To
  * accept, just return.  To reject, throw a ContentValidationException or
  * subclass, the response to which is determined by the plugin's (and the
- * default) mapping of exceptions to CacheExceptions.  Currently the
- * CachedUrl is not deleted from the repository even if rejected by the
- * validator - it may be overwritten if the exception thrown is mapped to a
- * RetryableException.
+ * default) mapping of exceptions to CacheExceptions.  If the validator
+ * throws an exception (that is mapped to CacheException with either
+ * ATTRIBUTE_FAIL or ATTRIBUTE_FATAL set) then the content is not sture.
  */
 public interface ContentValidator {
 

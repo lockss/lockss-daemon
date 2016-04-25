@@ -1830,6 +1830,66 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return sb.toString();
   }
 
+  public RepositoryNodeContents getUnsealedRnc() {
+    if (!newVersionOpen) {
+      throw new IllegalStateException("UnsealedNodeContents available only when new version open");
+    }
+    return new UnsealedNodeContents();
+  }
+
+  class UnsealedRepositoryNodeImpl extends RepositoryNodeImpl {
+    
+    UnsealedRepositoryNodeImpl(String url, String nodeLocation,
+			       LockssRepositoryImpl repository) {
+      super(url, nodeLocation, repository);
+    }
+    
+  }
+
+  class UnsealedNodeContents implements RepositoryNodeContents {
+    List<InputStream> isLst = new ArrayList<InputStream>();
+
+    @Override
+    public InputStream getInputStream() {
+      if (!newVersionOpen) {
+	throw new IllegalStateException("UnsealedNodeContents not usable after seal()");
+      }
+      try {
+	InputStream is =
+	  new BufferedInputStream(new FileInputStream(tempCacheFile));
+	if (CurrentConfig.getBooleanParam(PARAM_MONITOR_INPUT_STREAMS,
+					  DEFAULT_MONITOR_INPUT_STREAMS)) {
+	  is = new MonitoringInputStream(is, tempCacheFile.toString());
+	}
+	isLst.add(is);
+	return is;
+      } catch (IOException e) {
+	logger.error("Couldn't get inputstream for tempCacheFile: " +
+		     tempCacheFile, e);
+	throw new LockssRepository.RepositoryStateException ("Couldn't open TempInputStream: " + e.toString());
+      }
+    }
+
+
+    @Override
+    public Properties getProperties() {
+      throw new UnsupportedOperationException("Not allowed for UnsealedNodeContents");
+    }
+
+    @Override
+    public void addProperty(String key, String value) {
+      throw new UnsupportedOperationException("Not allowed for UnsealedNodeContents");
+    }
+
+    @Override
+    public void release() {
+      for (InputStream is : isLst) {
+        IOUtil.safeClose(is);
+      }
+      isLst = new ArrayList<InputStream>();
+    }
+  }
+
   public class RepositoryNodeVersionImpl implements RepositoryNodeVersion {
     private int version;
     private File contentFile = null;

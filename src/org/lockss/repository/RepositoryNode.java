@@ -210,6 +210,16 @@ public interface RepositoryNode extends RepositoryNodeVersion {
   public RepositoryNodeContents getNodeContents();
 
   /**
+   * Return a <code>RepositoryNodeContents</code> object which accesses the
+   * content written to the node but not yet sealed..  Throws if called on
+   * a node that doesn't have a new version open.
+   * @return an {@link RepositoryNodeContents} object from which the contents of
+   *         the unsealed node can be read.
+   * @throws UnsupportedOperationException
+   */
+  public RepositoryNodeContents getUnsealedRnc();
+
+  /**
    * Return an <code>OutputStream</code> object which writes to a new version
    * in the cache.
    * Throws an exception if called before <code>makeNewVersion()</code> or

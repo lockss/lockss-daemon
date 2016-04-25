@@ -178,11 +178,15 @@ public class MockRepositoryNode implements RepositoryNode {
     throw new UnsupportedOperationException("Not supported.");
   }
 
-  public synchronized RepositoryNode.RepositoryNodeContents getNodeContents() {
+  public synchronized RepositoryNodeContents getNodeContents() {
     if (!hasContent()) {
       throw new UnsupportedOperationException("No content for url '"+url+"'");
     }
     return new MockRepositoryNodeContents(curInput, curProps);
+  }
+
+  public RepositoryNodeContents getUnsealedRnc() {
+    throw new UnsupportedOperationException("Not supported.");
   }
 
   public void signalAgreement(Collection ids) {

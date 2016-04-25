@@ -36,6 +36,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import java.text.*;
+import org.apache.commons.lang3.tuple.*;
 
 import org.lockss.plugin.*;
 import org.lockss.daemon.*;
@@ -243,17 +244,21 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     resultMap.storeMapEntry(MyContentValidationException3.class,
 			    CacheException.RetryableNetworkException_2.class);
     mau.setContentValidatorFactory(new MyContentValidatorFactory());
-    MockCachedUrl mcu = mau.addUrl(TEST_URL, "invalid_1");
+    List<String> expVers = new ArrayList<String>();
 
+    // no error
     doStore("not invalid", null);
     assertNull(cacher.getInfoException());
-    // Success
+    expVers.add("not invalid");
+    // Mapped to Success
     doStore("invalid_1", null);
     assertNull(cacher.getInfoException());
+    expVers.add("invalid_1");
     // Warning
     doStore("invalid_2", null);
     assertEquals("v ex 2",
 		 cacher.getInfoException().getMessage());
+    expVers.add("invalid_2");
 
     try {
       doStore("invalid_3", null);
@@ -276,36 +281,34 @@ public class TestDefaultUrlCacher extends LockssTestCase {
       assertNull(cacher.getInfoException());
     }
 
-    doStore("valid", null);
-    assertNull(cacher.getInfoException());
-
-    // Unmapped
+    // Other plugin exception is wrapped in
+    // ContentValidationException.ValidatorExeception
     try {
       doStore("valid", "plug_err");
-      fail("Should have thrown CacheException.UnknownExceptionException");
-    } catch (CacheException.UnknownExceptionException e) {
+      fail("Should have thrown CacheException.UnretryableException");
+    } catch (CacheException.UnretryableException e) {
       // expected
-      assertEquals("Unmapped exception: org.lockss.daemon.PluginException: random plugin exception",
+      assertEquals("org.lockss.daemon.PluginException: random plugin exception",
 		   e.getMessage());
       assertNull(cacher.getInfoException());
     }
 
     try {
       doStore("IOException", null);
-      fail("Should have thrown CacheException.UnknownExceptionException");
-    } catch (CacheException.UnknownExceptionException e) {
+      fail("Should have thrown CacheException.UnretryableException");
+    } catch (CacheException.UnretryableException e) {
       // expected
-      assertEquals("Unmapped exception: java.io.IOException: EIEIO",
+      assertEquals("java.io.IOException: EIEIOException",
 		   e.getMessage());
       assertNull(cacher.getInfoException());
     }
 
     try {
       doStore("PluginException", null);
-      fail("Should have thrown CacheException.UnknownExceptionException");
-    } catch (CacheException.UnknownExceptionException e) {
+      fail("Should have thrown CacheException.UnretryableException");
+    } catch (CacheException.UnretryableException e) {
       // expected
-      assertEquals("Unmapped exception: org.lockss.daemon.PluginException: nickel",
+      assertEquals("org.lockss.daemon.PluginException: nickel",
 		   e.getMessage());
       assertNull(cacher.getInfoException());
     }
@@ -317,6 +320,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     doStore("", "invalid_1");
     assertMatchesRE("WarningOnly: Empty file stored",
 		    cacher.getInfoException().toString());
+    expVers.add("");
 
     doStore("", "invalid_2");
     assertMatchesRE("WarningOnly: v ex 2",
@@ -330,6 +334,20 @@ public class TestDefaultUrlCacher extends LockssTestCase {
       assertNull(cacher.getInfoException());
     }
 
+    // Check that files with validation failure weren't written, and that
+    // all those without (or warning) were written.  Use a real
+    // BaseCachedUrl to access repo - MockArchivalUnit would return a
+    // MockCachedUrl.
+
+    CachedUrl cu = new BaseCachedUrl(mau, TEST_URL);
+    CachedUrl[] vers = cu.getCuVersions();
+    assertEquals(4, vers.length);
+    int ix = 3;
+    for (CachedUrl ver : vers) {
+      assertInputStreamMatchesString(expVers.get(ix--),
+				     ver.getUnfilteredInputStream());
+    }
+
     doStore("", null);
     assertMatchesRE("WarningOnly: Empty file stored",
 		    cacher.getInfoException().toString());
@@ -337,14 +355,13 @@ public class TestDefaultUrlCacher extends LockssTestCase {
 
   void doStore(String content, String prop)
       throws IOException {
-    ud = new UrlData(new StringInputStream(content), 
-		     new CIProperties(), TEST_URL);
-    cacher = new MyDefaultUrlCacher(mau, ud);
-    MockCachedUrl mcu = mau.addUrl(TEST_URL, content);
+    CIProperties props = new CIProperties();
     if (prop != null) {
-      mcu.addProperty("prop_name", prop);
+      props.setProperty("prop_name", prop);
     }
-    mcu.addProperty("other_prop_name", "foo");
+    props.setProperty("other_prop_name", "foo");
+    ud = new UrlData(new StringInputStream(content), 
+		     props, TEST_URL);
     cacher = new MyDefaultUrlCacher(mau, ud);
     cacher.storeContent();
   }
@@ -386,7 +403,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
       case "invalid_4":
 	throw new MyContentValidationException4("v ex 4");
       case "IOException":
-	throw new IOException("EIEIO");
+	throw new IOException("EIEIOException");
       case "PluginException":
 	throw new PluginException("nickel");
       }
@@ -421,7 +438,35 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     }
   }
 
+  public void testFirstMappedException() {
+    HttpResultMap resultMap = (HttpResultMap)plugin.getCacheResultMap();
+    resultMap.storeMapEntry(MyContentValidationException1.class,
+			    CacheSuccess.class);
+    resultMap.storeMapEntry(MyContentValidationException2.class,
+			    CacheException.RetryableNetworkException_2.class);
 
+    Pair<String,Exception> e1 =
+      new ImmutablePair("1", new MyContentValidationException1("1"));
+    Pair<String,Exception> e2 =
+      new ImmutablePair("1", new MyContentValidationException2("2"));
+    Pair<String,Exception> e3 =
+      new ImmutablePair("1", new MyContentValidationException3("3"));
+
+    ud = new UrlData(new StringInputStream("test stream"),
+		     new CIProperties(), TEST_URL);
+    cacher = new MyDefaultUrlCacher(mau, ud);
+
+    // CacheSuccess is treated as null
+    assertNull(cacher.firstMappedException(ListUtil.list(e1)));
+    assertClass(CacheException.RetryableNetworkException_2.class,
+		cacher.firstMappedException(ListUtil.list(e2, e1)));
+    assertClass(CacheException.RetryableNetworkException_2.class,
+		cacher.firstMappedException(ListUtil.list(e1, e2)));
+    assertClass(CacheException.UnretryableException.class,
+		cacher.firstMappedException(ListUtil.list(e3, e1)));
+    assertClass(CacheException.UnretryableException.class,
+		cacher.firstMappedException(ListUtil.list(e3)));
+  }
 
   enum DisagreeTest {Default, Ignore, Warning, Error};
 
@@ -531,7 +576,7 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     assertEquals(TEST_URL, alert.getAttribute(Alert.ATTR_URL));
     assertEquals(Alert.SEVERITY_INFO,
 		 alert.getAttribute(Alert.ATTR_SEVERITY));
-    assertEquals("Collected an edditional version: " + TEST_URL,
+    assertEquals("Collected an additional version: " + TEST_URL,
 		 alert.getAttribute(Alert.ATTR_TEXT));
   }
 

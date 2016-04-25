@@ -47,6 +47,9 @@ import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.daemon.*;
 
+import org.lockss.rewriter.*;
+import org.lockss.extractor.*;
+
 /**
  * Basic, fully functional UrlCacher.  Utilizes the LockssRepository for
  * caching, and {@link LockssUrlConnection}s for fetching.  Plugins may
@@ -298,10 +301,11 @@ public class DefaultUrlCacher implements UrlCacher {
       }
       os.close();
       if (!fetchFlags.get(SUPPRESS_CONTENT_VALIDATION)) {
-	CacheException vExp = validate(bytes);
+	CacheException vExp = validate(headers, leaf, bytes);
 	if (vExp != null) {
 	  if (vExp.isAttributeSet(CacheException.ATTRIBUTE_FAIL) ||
 	      vExp.isAttributeSet(CacheException.ATTRIBUTE_FATAL)) {
+	    abandonNewVersion(leaf);
 	    throw vExp;
 	  } else {
 	    infoException = vExp;
@@ -327,28 +331,16 @@ public class DefaultUrlCacher implements UrlCacher {
       if (alreadyHasContent) {
 	Alert alert = Alert.auAlert(Alert.NEW_FILE_VERSION, au);
 	alert.setAttribute(Alert.ATTR_URL, getFetchUrl());
-	String msg = "Collected an edditional version: " + getFetchUrl();
+	String msg = "Collected an additional version: " + getFetchUrl();
 	alert.setAttribute(Alert.ATTR_TEXT, msg);
 	raiseAlert(alert);
       }
     } catch (StreamUtil.OutputException ex) {
-      if (leaf != null) {
-        try {
-          leaf.abandonNewVersion();
-        } catch (Exception e) {
-          // just being paranoid
-        }
-      }
+      abandonNewVersion(leaf);
       throw resultMap.getRepositoryException(ex.getIOCause());
     } catch (IOException ex) {
       logger.debug("storeContentIn1", ex);
-      if (leaf != null) {
-        try {
-          leaf.abandonNewVersion();
-        } catch (Exception e) {
-          // just being paranoid
-        }
-      }
+      abandonNewVersion(leaf);
       // XXX some code below here maps the exception
       throw ex instanceof CacheException
 	? ex : resultMap.mapException(au, url, ex, null);
@@ -357,6 +349,16 @@ public class DefaultUrlCacher implements UrlCacher {
     }
   }
   
+  void abandonNewVersion(RepositoryNode node) {
+    if (node != null) {
+      try {
+	node.abandonNewVersion();
+      } catch (Exception e) {
+	// just being paranoid
+      }
+    }
+  }
+
   /**
    * Overrides normal <code>toString()</code> to return a string like
    * "BUC: <url>"
@@ -373,9 +375,10 @@ public class DefaultUrlCacher implements UrlCacher {
     return infoException;
   }
 
-  // XXX need to make it possible for validator to access CU before seal(),
-  // so it can prevent file from being committed.
-  protected CacheException validate(long size) throws CacheException {
+  protected CacheException validate(CIProperties headers,
+				    RepositoryNode node,
+				    long size)
+      throws CacheException {
     LinkedList<Pair<String,Exception>> validationFailures =
       new LinkedList<Pair<String,Exception>>();
 
@@ -409,7 +412,7 @@ public class DefaultUrlCacher implements UrlCacher {
     if (cvfact != null) {
       ContentValidator cv = cvfact.createContentValidator(au, contentType);
       if (cv != null) {
-	CachedUrl cu = getCachedUrl();
+	CachedUrl cu = getTempCachedUrl(headers, size, node);
 	try {
 	  cv.validate(cu);
 	} catch (ContentValidationException e) {
@@ -419,7 +422,8 @@ public class DefaultUrlCacher implements UrlCacher {
 	} catch (Exception e) {
 	  logger.debug2("Validation error2", e);
 	  // Unexpected error in validator is last
-	  validationFailures.add(new ImmutablePair(getUrl(), e));
+	  validationFailures.add(new ImmutablePair(getUrl(),
+						   new ContentValidationException.ValidatorExeception(e)));
 	} finally {
 	  cu.release();
 	}
@@ -428,20 +432,30 @@ public class DefaultUrlCacher implements UrlCacher {
     return firstMappedException(validationFailures);
   }
 
-  private CacheException firstMappedException(List<Pair<String,Exception>> exps) {
+  CachedUrl getTempCachedUrl(CIProperties headers, long size,
+			     RepositoryNode node) {
+    return new TempCachedUrl(au, getUrl(), headers, size, node);
+  }
+
+  CacheException firstMappedException(List<Pair<String,Exception>> exps) {
     if (logger.isDebug3()) {
       logger.debug3("firstMappedException: " + exps);
+    }
+    if (exps.isEmpty()) {
+      return null;
     }
     for (Pair<String,Exception> p : exps) {
       CacheException mapped = resultMap.mapException(au,
 						     p.getLeft(),
 						     p.getRight(),
 						     null);
-      if (mapped != null) {
+      if (mapped != null &&
+	  ! (mapped instanceof CacheException.UnknownExceptionException)) {
 	return mapped;
       }
     }
-    return null;
+    Pair<String,Exception> first = exps.get(0);
+    return resultMap.mapException(au, first.getLeft(), first.getRight(), null);
   }
 
 
@@ -464,4 +478,106 @@ public class DefaultUrlCacher implements UrlCacher {
   private String getContentType() {
     return headers.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
   }  
+
+  /** A CachedUrl that can access the contents and properties that were
+   * just written by this UrlCacher.  It is intended for use only by
+   * content validators and supports only a subset of the CachedUrl
+   * methods */
+  class TempCachedUrl extends BaseCachedUrl {
+    private long size;
+    private CIProperties headers;
+    private RepositoryNode node;
+
+    TempCachedUrl(ArchivalUnit owner, String url,
+		  CIProperties headers, long size, RepositoryNode node) {
+      super(owner, url);
+      this.headers = headers;
+      this.node = node;
+    }
+
+    @Override
+    protected void ensureRnc() {
+      if (rnc == null) {
+	rnc = node.getUnsealedRnc();
+      }
+    }
+
+    @Override
+    public boolean hasContent() {
+      return true;
+    }
+
+    @Override
+    public CachedUrl getCuVersion(int version) {
+      throw new UnsupportedOperationException("Not allowed for TempCachedUrl");
+    }
+
+    @Override
+    public CachedUrl[] getCuVersions() {
+      throw new UnsupportedOperationException("Not allowed for TempCachedUrl");
+    }
+
+    @Override
+    public CachedUrl[] getCuVersions(int maxVersions) {
+      throw new UnsupportedOperationException("Not allowed for TempCachedUrl");
+    }
+
+    @Override
+    public int getVersion() {
+      throw new UnsupportedOperationException("Not allowed for TempCachedUrl");
+    }
+  
+    @Override
+    public void setOption(String option, String val) {
+      throw new UnsupportedOperationException("Not allowed for TempCachedUrl");
+    }
+
+    @Override
+    public InputStream openForHashing() {
+      throw new UnsupportedOperationException("Not allowed for TempCachedUrl");
+    }
+
+    @Override
+    public InputStream openForHashing(HashedInputStream.Hasher hasher) {
+      throw new UnsupportedOperationException("Not allowed for TempCachedUrl");
+    }
+
+    @Override
+    public LinkRewriterFactory getLinkRewriterFactory() {
+      throw new UnsupportedOperationException("Not allowed for TempCachedUrl");
+    }
+
+    @Override
+    public CIProperties getProperties() {
+      return headers;
+    }
+
+    @Override
+    public void addProperty(String key, String value) {
+      throw new UnsupportedOperationException("Not allowed for TempCachedUrl");
+    }
+
+    @Override
+    public long getContentSize() {
+      return size;
+    }
+
+    @Override
+    public FileMetadataExtractor getFileMetadataExtractor(MetadataTarget
+							  target) {
+      throw new UnsupportedOperationException("Not allowed for TempCachedUrl");
+    }
+
+    @Override
+    public CachedUrl getArchiveMemberCu(ArchiveMemberSpec ams) {
+      throw new UnsupportedOperationException("Not allowed for TempCachedUrl");
+    }
+
+    @Override
+    public boolean isArchiveMember() {
+      throw new UnsupportedOperationException("Not allowed for TempCachedUrl");
+    }
+  }
+
+
 }
