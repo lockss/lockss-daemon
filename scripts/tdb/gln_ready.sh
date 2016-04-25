@@ -6,7 +6,7 @@
 tpath="/home/$LOGNAME/tmp"
 #mkdir -p $tpath
 
-plugin="atypon"
+plugin="typon"
 count=500
 
 # Make a list of AUids that are on ingest machine(s), and 'Yes' have substance, have crawled successfully.
