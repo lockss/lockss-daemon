@@ -6,6 +6,8 @@
 *.exe
 *.o
 *.so
+*.pyc
+*.pyo
 
 # Logs and databases #
 ######################
@@ -144,14 +146,6 @@ lib/run-props
 
 # /rpms/RPMS/
 /rpms/RPMS/noarch
-
-# /scripts/slurp/
-/scripts/slurp/*.pyc
-/scripts/slurp/*.pyo
-
-# /scripts/tdb/
-/scripts/tdb/*.pyc
-/scripts/tdb/*.pyo
 
 # /scripts/ws/
 /scripts/ws/*.hosts
@@ -403,8 +397,6 @@ lib/run-props
 /test/frameworks/run_stf/testsuite.opt
 
 # /test/scripts/
-/test/scripts/*.pyc
-/test/scripts/*.pyo
 /test/scripts/run-burp.sh
 
 # /test/src/org/lockss/repository/jcr/
