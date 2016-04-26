@@ -183,6 +183,7 @@
       au < manifest ; 2013 ; International Journal of Žižek Studies Volume 7 ; 7 ; 2013 >
       au < exists ; 2014 ; International Journal of Žižek Studies Volume 8 ; 8 ; 2014 >
       au < expected ; 2015 ; International Journal of Žižek Studies Volume 9 ; 9 ; 2015 >
+      au < exists ; 2016 ; International Journal of Žižek Studies Volume 10 ; 10 ; 2016 >
        
     }
     
@@ -200,7 +201,7 @@
       param[base_url] = http://journals.sfu.ca/pocol/
       param[journal_id] = pct
       
-      au < down ; 2005 ; Postcolonial Text Volume 1 [superseded] ; 1 ; 2005 >
+      au < down ; 2005 ; Postcolonial Text Volume 1 (2005) [superseded] ; 1 ; 2005 >
       au < down ; 2006 ; Postcolonial Text Volume 2 [superseded] ; 2 ; 2006 >
       au < down ; 2007 ; Postcolonial Text Volume 3 [superseded] ; 3 ; 2007 >
       au < doNotProcess ; 2008 ; Postcolonial Text Volume 4 [superseded] ; 4 ; 2008 >
@@ -214,12 +215,18 @@
       param[base_url] = http://www.postcolonial.org/
       param[journal_id] = pct
       
-      au < doNotProcess ; 2005 ; Postcolonial Text Volume 1 ; 1 ; 2005 >
+      au < exists ; 2004 ; Postcolonial Text Volume 1 (2004) ; 1 ; 2004 >
+      au < doNotProcess ; 2005 ; Postcolonial Text Volume 1 (2005) ; 1 ; 2005 >
       au < doNotProcess ; 2006 ; Postcolonial Text Volume 2 ; 2 ; 2006 >
       au < doNotProcess ; 2007 ; Postcolonial Text Volume 3 ; 3 ; 2007 >
       au < released ; 2008 ; Postcolonial Text Volume 4 ; 4 ; 2008 >
       au < doNotProcess ; 2009 ; Postcolonial Text Volume 5 ; 5 ; 2009 >
       au < doNotProcess ; 2011 ; Postcolonial Text Volume 6 ; 6 ; 2011 >
+      au < exists ; 2012 ; Postcolonial Text Volume 7 ; 7 ; 2012 >
+      au < exists ; 2013 ; Postcolonial Text Volume 8 ; 8 ; 2013 >
+      au < exists ; 2014 ; Postcolonial Text Volume 9 ; 9 ; 2014 >
+      au < exists ; 2015 ; Postcolonial Text Volume 10 ; 10 ; 2015 >
+      au < exists ; 2016 ; Postcolonial Text Volume 11 ; 11 ; 2016 >
       
       }
     }
