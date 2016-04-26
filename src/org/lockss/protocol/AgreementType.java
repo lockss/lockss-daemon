@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-  Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
+  Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
   all rights reserved.
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,7 +42,7 @@ package org.lockss.protocol;
  * requests.
  * 
  * The enumerated values in this class need to be match those in class
- * {@link org.lockss.ws.entities.AgreementTypeWs}.
+ * {@link org.lockss.ws.entities.AgreementTypeWsResult}.
  */
 public enum AgreementType {
   /** A poll with all content hashed and tallied. Recorded by

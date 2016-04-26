@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,9 +36,9 @@ package org.lockss.ws.entities;
  * participant's recorded percent agreement, the calculated percent agreements
  * are used to decide if a repair request should be honored, and hints are used
  * to try to find willing repairers likely to honor repair requests.
+ * The enumerated values in this class need to match those in class
+ * {@link org.lockss.protocol.AgreementType}.
  */
-// The enumerated values in this class need to match those in class
-// {@link org.lockss.protocol.AgreementType}.
 public enum AgreementTypeWsResult {
   /**
    * A poll with all content hashed and tallied. Recorded by poller.
