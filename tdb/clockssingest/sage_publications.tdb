@@ -38244,7 +38244,7 @@
       param[base_url] = http://son.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 2015 ; SAGE Open Nursing Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2015 ; SAGE Open Nursing Volume 1 ; 1 ; >
       au < expected ; exists ; 2016 ; SAGE Open Nursing Volume 2 ; 2 ; >
 
   }
