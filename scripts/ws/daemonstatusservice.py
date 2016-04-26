@@ -6,7 +6,7 @@ service via its Web Services API.'''
 # $Id$
 
 __copyright__ = '''\
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 '''
 
@@ -33,7 +33,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.3.6'
+__version__ = '0.3.7'
 
 import getpass
 import itertools
@@ -69,6 +69,7 @@ def get_au_status(host, auth, auid):
   - LastPoll (numeric)
   - LastPollResult (string)
   - PluginName (string)
+  - Provider (string)
   - Publisher (string)
   - PublishingPlatform (string)
   - RecentPollAgreement (floating point)
@@ -115,6 +116,14 @@ def get_peer_agreements(host, auth, auid):
               - "POP_HINT"
               - "SYMMETRIC_POR_HINT"
               - "SYMMETRIC_POP_HINT"
+              - "W_POR"
+              - "W_POP"
+              - "W_SYMMETRIC_POR"
+              - "W_SYMMETRIC_POP"
+              - "W_POR_HINT"
+              - "W_POP_HINT"
+              - "W_SYMMETRIC_POR_HINT"
+              - "W_SYMMETRIC_POP_HINT"
           - Value, a record with these fields:
               - HighestPercentAgreement (floating point)
               - HighestPercentAgreementTimestamp (numeric)
@@ -184,6 +193,7 @@ def query_aus(host, auth, select, where=None):
   WHERE clause, and returns a list of records with these fields (populated or
   not depending on the SELECT clause):
   - AccessType (string)
+  - ArticleUrls (list of strings)
   - AuConfiguration, a record with these fields:
       - DefParams, a list of records with these fields:
           - Key (string)
@@ -201,7 +211,9 @@ def query_aus(host, auth, select, where=None):
   - CurrentlyCrawling (boolean)
   - CurrentlyPolling (boolean)
   - DiskUsage (numeric)
+  - HighestPollAgreement (numeric)
   - IsBulkContent (boolean)
+  - JournalTitle (string)
   - LastCompletedCrawl (numeric)
   - LastCompletedPoll (numeric)
   - LastCrawl (numeric)
@@ -222,6 +234,14 @@ def query_aus(host, auth, select, where=None):
                   - "POP_HINT"
                   - "SYMMETRIC_POR_HINT"
                   - "SYMMETRIC_POP_HINT"
+                  - "W_POR"
+                  - "W_POP"
+                  - "W_SYMMETRIC_POR"
+                  - "W_SYMMETRIC_POP"
+                  - "W_POR_HINT"
+                  - "W_POP_HINT"
+                  - "W_SYMMETRIC_POR_HINT"
+                  - "W_SYMMETRIC_POP_HINT"
               - Value, a record with these fields:
                   - HighestPercentAgreement (floating point)
                   - HighestPercentAgreementTimestamp (numeric)
@@ -234,9 +254,14 @@ def query_aus(host, auth, select, where=None):
   - RepositoryPath (string)
   - SubscriptionStatus (string)
   - SubstanceState (string)
+  - TdbProvider (string)
   - TdbPublisher (string)
   - TdbYear (string)
   - UrlStems (list of strings)
+  - Urls, a list of records with these fields:
+      - CureentVersionSize (numeric)
+      - Url (string)
+      - VersionCount (numeric)
   - Volume (string)
   Parameters:
   - host (string): a host:port pair
@@ -294,7 +319,7 @@ class _DaemonStatusServiceOptions(object):
     parser.add_option_group(group)
     # AU operations
     group = optparse.OptionGroup(parser, 'AU operations')
-    group.add_option('--get-au-status', action='store_true', help='output AU status information; narrow down with --select if specified (%s)' % (', '.join(sorted(_AU_STATUS)),))
+    group.add_option('--get-au-status', action='store_true', help='output AU status information; narrow down with optional --select (%s)' % (', '.join(sorted(_AU_STATUS)),))
     group.add_option('--get-peer-agreements', action='store_true', help='output peer agreements')
     parser.add_option_group(group)
     # Query operations
@@ -397,6 +422,7 @@ _AU_STATUS = {
   'lastPoll': ('Last poll', lambda r: datetimems(r.LastPoll)),
   'lastPollResult': ('Last poll result', lambda r: r.LastPollResult),
   'pluginName': ('Plugin name', lambda r: r.PluginName),
+  'provider': ('Provider', lambda r: r.Provider),
   'publisher': ('Publisher', lambda r: r.Publisher),
   'publishingPlatform': ('Publishing platform', lambda r: r.PublishingPlatform),
   'recentPollAgreement': ('Recent poll agreement', lambda r: r.RecentPollAgreement),
@@ -526,6 +552,7 @@ def _do_is_daemon_ready_quiet(options):
 
 _QUERY_AUS = {
   'accessType': ('Access type', lambda r: r.AccessType),
+  'articleUrls': ('Article URLs', lambda r: '<ArticleUrls>'),
   'auConfiguration': ('AU configuration', lambda r: '<AuConfiguration>'),
   'auId': ('AUID', lambda r: r.AuId),
   'availableFromPublisher': ('Available from publisher', lambda r: r.AvailableFromPublisher),
@@ -537,7 +564,9 @@ _QUERY_AUS = {
   'currentlyCrawling': ('Currently crawling', lambda r: r.CurrentlyCrawling),
   'currentlyPolling': ('Currently polling', lambda r: r.CurrentlyPolling),
   'diskUsage': ('Disk usage', lambda r: r.DiskUsage),
+  'highestPollAgreement': ('Highest poll agreement', lambda r: r.HighestPollAgreement),
   'isBulkContent': ('Is bulk content', lambda r: r.IsBulkContent),
+  'journalTitle': ('Title', lambda r: r.JournalTitle),
   'lastCompletedCrawl': ('Last completed crawl', lambda r: datetimems(r.LastCompletedCrawl)),
   'lastCompletedPoll': ('Last completed poll', lambda r: datetimems(r.LastCompletedPoll)),
   'lastCrawl': ('Last crawl', lambda r: datetimems(r.LastCrawl)),
@@ -545,7 +574,7 @@ _QUERY_AUS = {
   'lastPoll': ('Last poll', lambda r: datetimems(r.LastPoll)),
   'lastPollResult': ('Last poll result', lambda r: r.LastPollResult),
   'name': ('', lambda r: r.Name),
-  'newContentCrawlUrls': ('New content crawl URLs', lambda r: r.NewContentCrawlUrls),
+  'newContentCrawlUrls': ('New content crawl URLs', '<NewContentCrawlUrls>'),
   'peerAgreements': ('Peer agreements', lambda r: '<PeerAgreements>'),
   'pluginName': ('Plugin name', lambda r: r.PluginName),
   'publishingPlatform': ('Publishing platform', lambda r: r.PublishingPlatform),
@@ -553,9 +582,11 @@ _QUERY_AUS = {
   'repositoryPath': ('Repository path', lambda r: r.RepositoryPath),
   'subscriptionStatus': ('Subscription status', lambda r: r.SubscriptionStatus),
   'substanceState': ('Substance state', lambda r: r.SubstanceState),
+  'tdbProvider': ('TDB provider', lambda r: r.TdbProvider),
   'tdbPublisher': ('TDB publisher', lambda r: r.TdbPublisher),
   'tdbYear': ('TDB year', lambda r: r.TdbYear),
-  'urlStems': ('URL stems', lambda r: r.UrlStems),
+  'urlStems': ('URL stems', lambda r: '<UrlStems>'),
+  'urls': ('URLs', lambda r: '<Urls>'),
   'volume': ('Volume', lambda r: r.Volume)
 }
 
@@ -570,10 +601,10 @@ def _do_query_aus(options):
         data[(auid, host, head)] = lamb(r)
   if options.group_by_field:
     data = dict([(((k[0],), (k[2], k[1])), v) for k, v in data.iteritems()])
-    _output_table(options, data, ['AUID'], [[_QUERY_AUS[k][0] for k in options.select], sorted(options.hosts)])
+    _output_table(options, data, ['AUID'], [[_QUERY_AUS[k][0] for k in select], sorted(options.hosts)])
   else:
     data = dict([(((k[0],), (k[1], k[2])), v) for k, v in data.iteritems()])
-    _output_table(options, data, ['AUID'], [sorted(options.hosts), [_QUERY_AUS[k][0] for k in options.select]])
+    _output_table(options, data, ['AUID'], [sorted(options.hosts), [_QUERY_AUS[k][0] for k in select]])
 
 # Last modified 2015-08-31
 def _file_lines(fstr):
