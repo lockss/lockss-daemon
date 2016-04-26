@@ -33,7 +33,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.3.7'
+__version__ = '0.3.8'
 
 import getpass
 import itertools
@@ -479,7 +479,11 @@ def _do_get_auids_names(options, do_names=True):
     _output_table(options, display, ['AUID'], [sorted(options.hosts)])
 
 def _do_get_peer_agreements(options):
-  pa = get_peer_agreements(options.host, options.auth, options.auid)
+  if len(options.hosts) > 1:
+    sys.stderr.write('Warning: only processing first host %s\n' % (options.hosts[0],))
+  if len(options.auids) > 1:
+    sys.stderr.write('Warning: only processing first AUID %s\n' % (options.auids[0],))
+  pa = get_peer_agreements(options.hosts[0], options.auth, options.auids[0])
   if pa is None:
     print 'No such AUID'
     return
