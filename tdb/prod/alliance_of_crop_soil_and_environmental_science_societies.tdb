@@ -47,6 +47,11 @@
     
     param[journal_id] = aj
 
+    au < exists ; 2005 ; Agronomy Journal Volume 97 ; 97 >
+    au < exists ; 2006 ; Agronomy Journal Volume 98 ; 98 >
+    au < exists ; 2007 ; Agronomy Journal Volume 99 ; 99 >
+    au < exists ; 2008 ; Agronomy Journal Volume 100 ; 100 >
+    au < exists ; 2009 ; Agronomy Journal Volume 101 ; 101 >
     au < manifest ; 2010 ; Agronomy Journal Volume 102 ; 102 >
     au < manifest ; 2011 ; Agronomy Journal Volume 103 ; 103 >
     au < manifest ; 2012 ; Agronomy Journal Volume 104 ; 104 >
@@ -70,9 +75,18 @@
     
     param[journal_id] = cns
 
+    au < doNotProcess ; 2005 ; Crops & Soils Magazine Volume 38 ; 38 > #no issues on manifest page.
+    au < doNotProcess ; 2006 ; Crops & Soils Magazine Volume 39 ; 39 > #no issues on manifest page.
+    au < doNotProcess ; 2007 ; Crops & Soils Magazine Volume 40 ; 40 > #no issues on manifest page.
+    au < doNotProcess ; 2008 ; Crops & Soils Magazine Volume 41 ; 41 > #no issues on manifest page.
+    au < doNotProcess ; 2009 ; Crops & Soils Magazine Volume 42 ; 42 > #no issues on manifest page.
+    au < doNotProcess ; 2010 ; Crops & Soils Magazine Volume 43 ; 43 > #no issues on manifest page.
+    au < doNotProcess ; 2011 ; Crops & Soils Magazine Volume 44 ; 44 > #no issues on manifest page.
+    au < doNotProcess ; 2012 ; Crops & Soils Magazine Volume 45 ; 45 > #no issues on manifest page.
     au < manifest ; 2013 ; Crops & Soils Magazine Volume 46 ; 46 >
     au < manifest ; 2014 ; Crops & Soils Magazine Volume 47 ; 47 >
     au < manifest ; 2015 ; Crops & Soils Magazine Volume 48 ; 48 >
+    au < expected ; 2016 ; Crops & Soils Magazine Volume 49 ; 49 >
 
 
   }
@@ -96,6 +110,7 @@
     au < manifest ; 2013 ; Crop Science Volume 53 ; 53 >
     au < released ; 2014 ; Crop Science Volume 54 ; 54 >
     au < manifest ; 2015 ; Crop Science Volume 55 ; 55 >
+    au < expected ; 2016 ; Crop Science Volume 56 ; 56 >
 
   }
 
@@ -112,9 +127,18 @@
     
     param[journal_id] = csa
 
+    au < doNotProcess ; 2005 ; CSA News Volume 50 ; 50 > # no issues on manifest page
+    au < doNotProcess ; 2006 ; CSA News Volume 51 ; 51 > # no issues on manifest page
+    au < doNotProcess ; 2007 ; CSA News Volume 52 ; 52 > # no issues on manifest page
+    au < doNotProcess ; 2008 ; CSA News Volume 53 ; 53 > # no issues on manifest page
+    au < doNotProcess ; 2009 ; CSA News Volume 54 ; 54 > # no issues on manifest page
+    au < doNotProcess ; 2010 ; CSA News Volume 55 ; 55 > # no issues on manifest page
+    au < doNotProcess ; 2011 ; CSA News Volume 56 ; 56 > # no issues on manifest page
+    au < doNotProcess ; 2012 ; CSA News Volume 57 ; 57 > # no issues on manifest page
     au < manifest ; 2013 ; CSA News Volume 58 ; 58 >
     au < released ; 2014 ; CSA News Volume 59 ; 59 >
     au < manifest ; 2015 ; CSA News Volume 60 ; 60 >
+    au < expected ; 2016 ; CSA News Volume 61 ; 61 >
 
   }
 
@@ -138,6 +162,7 @@
     au < manifest ; 2013 ; Journal of Environmental Quality Volume 42 ; 42 >
     au < released ; 2014 ; Journal of Environmental Quality Volume 43 ; 43 >
     au < manifest ; 2015 ; Journal of Environmental Quality Volume 44 ; 44 >
+    au < expected ; 2016 ; Journal of Environmental Quality Volume 45 ; 45 >
 
 
   }
@@ -160,6 +185,7 @@
     au < released ; 2013 ; Journal of Plant Registrations Volume 7 ; 7 >
     au < released ; 2014 ; Journal of Plant Registrations Volume 8 ; 8 >
     au < manifest ; 2015 ; Journal of Plant Registrations Volume 9 ; 9 >
+    au < expected ; 2016 ; Journal of Plant Registrations Volume 10 ; 10 >
 
   }
 
@@ -198,6 +224,7 @@
     au < released ; 2013 ; Natural Sciences Education Volume 42 ; 42 >
     au < released ; 2014 ; Natural Sciences Education Volume 43 ; 43 >
     au < manifest ; 2015 ; Natural Sciences Education Volume 44 ; 44 >
+    au < expected ; 2016 ; Natural Sciences Education Volume 45 ; 45 >
 
   }
 
@@ -219,6 +246,7 @@
     au < released ; 2013 ; The Plant Genome Volume 6 ; 6 >
     au < manifest ; 2014 ; The Plant Genome Volume 7 ; 7 >
     au < manifest ; 2015 ; The Plant Genome Volume 8 ; 8 >
+    au < expected ; 2016 ; The Plant Genome Volume 9 ; 9 >
 
   }
 
@@ -238,6 +266,7 @@
     au < manifest ; 2013 ; Soil Horizons Volume 54 ; 54 >
     au < manifest ; 2014 ; Soil Horizons Volume 55 ; 55 >
     au < manifest ; 2015 ; Soil Horizons Volume 56 ; 56 >
+    au < expected ; 2016 ; Soil Horizons Volume 57 ; 57 >
 
   }
 
@@ -261,6 +290,7 @@
     au < manifest ; 2013 ; Soil Science Society of America Journal Volume 77 ; 77 >
     au < released ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 >
     au < manifest ; 2015 ; Soil Science Society of America Journal Volume 79 ; 79 >
+    au < expected ; 2016 ; Soil Science Society of America Journal Volume 80 ; 80 >
 
   }
 
@@ -283,6 +313,7 @@
     au < manifest ; 2013 ; Vadose Zone Journal Volume 12 ; 12 >
     au < manifest ; 2014 ; Vadose Zone Journal Volume 13 ; 13 >
     au < manifest ; 2015 ; Vadose Zone Journal Volume 14 ; 14 >
+    au < expected ; 2016 ; Vadose Zone Journal Volume 15 ; 15 >
 
   }
 

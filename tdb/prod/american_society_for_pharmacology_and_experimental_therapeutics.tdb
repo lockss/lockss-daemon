@@ -442,6 +442,31 @@
   {
   
     title <
+      name = Molecular Interventions ;
+      issn = 1534-0384 ;
+      eissn = 1543-2548 ;
+      issnl = 1534-0384
+    >
+
+    param[base_url] = http://molinterv.aspetjournals.org/
+
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Molecular Interventions Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Molecular Interventions Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Molecular Interventions Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Molecular Interventions Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 2005 ; Molecular Interventions Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 2006 ; Molecular Interventions Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 2007 ; Molecular Interventions Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 2008 ; Molecular Interventions Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 2009 ; Molecular Interventions Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 2010 ; Molecular Interventions Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 2011 ; Molecular Interventions Volume 11 ; 11 >
+
+  }
+
+  {
+  
+    title <
       name = Molecular Pharmacology ;
       issn = 0026-895X ;
       eissn = 1521-0111 ;
