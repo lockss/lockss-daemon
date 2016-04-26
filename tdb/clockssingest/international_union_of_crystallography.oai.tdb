@@ -6,6 +6,11 @@
     info[tester] = 8
   >
   
+  plugin = org.lockss.plugin.internationalunionofcrystallography.oai.ClockssIUCrOaiPlugin
+  param[base_url] = http://journals.iucr.org/
+  param[script_url] = http://scripts.iucr.org/
+  implicit < status ; status2 ; year ; volume ; name ; param[au_oai_date] ; hidden[proxy] >
+
   {
   
     title <
@@ -13,10 +18,6 @@
       eissn = 2056-9890
     >
     
-    plugin = org.lockss.plugin.internationalunionofcrystallography.oai.ClockssIUCrOaiPlugin
-    param[base_url] = http://journals.iucr.org/
-    param[scripts_url] = http://scripts.iucr.org/
-    implicit < status ; status2 ; year ; volume ; name ; param[au_oai_date] ; hidden[proxy] >
     comment[name] = Changed the subtitle from Structure Reports Online to Crystallographic Communications, from 1600-5368 to 2056-9890
     comment[date] = Date is a year month published date in the form yyyy-mm. Not all months have material published
     
@@ -49,10 +50,6 @@
       eissn = 1600-5368
     >
     
-    plugin = org.lockss.plugin.internationalunionofcrystallography.oai.ClockssIUCrOaiPlugin
-    param[base_url] = http://journals.iucr.org/
-    param[scripts_url] = http://scripts.iucr.org/
-    implicit < status ; status2 ; year ; volume ; name ; param[au_oai_date] ; hidden[proxy] >
     comment[name] = Changed the subtitle from Structure Reports Online to Crystallographic Communications, from 1600-5368 to 2056-9890
     comment[date] = Date is a year month published date in the form yyyy-mm. Not all months have material published
     
@@ -133,10 +130,6 @@
       issnl = 2052-2525
     >
     
-    plugin = org.lockss.plugin.internationalunionofcrystallography.oai.ClockssIUCrOaiPlugin
-    param[base_url] = http://journals.iucr.org/
-    param[scripts_url] = http://scripts.iucr.org/
-    implicit < status ; status2 ; year ; volume ; name ; param[au_oai_date] ; hidden[proxy] >
     comment[date] = Date is a year month published date in the form yyyy-mm. Not all months have material published
     
     param[au_oai_set] = iucrj
