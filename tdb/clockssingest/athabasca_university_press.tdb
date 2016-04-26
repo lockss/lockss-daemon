@@ -21,10 +21,23 @@
       param[base_url] = http://www.canfolkmusic.ca/
       param[journal_id] = cfmb
 
+      au < exists ; exists ; 2000 ; Canadian Folk Music / Musique folklorique canadienne Volume 34 ; 34 ; 2000 ; >
+      au < exists ; exists ; 2001 ; Canadian Folk Music / Musique folklorique canadienne Volume 35 ; 35 ; 2001 ; >
+      au < exists ; exists ; 2002 ; Canadian Folk Music / Musique folklorique canadienne Volume 36 ; 36 ; 2002 ; >
+      au < exists ; exists ; 2003 ; Canadian Folk Music / Musique folklorique canadienne Volume 37 ; 37 ; 2003 ; >
+      au < exists ; exists ; 2004 ; Canadian Folk Music / Musique folklorique canadienne Volume 38 ; 38 ; 2004 ; >
+      au < exists ; exists ; 2005 ; Canadian Folk Music / Musique folklorique canadienne Volume 39 ; 39 ; 2005 ; >
+      au < exists ; exists ; 2006 ; Canadian Folk Music / Musique folklorique canadienne Volume 40 ; 40 ; 2006 ; >
+      au < exists ; exists ; 2007 ; Canadian Folk Music / Musique folklorique canadienne Volume 41 ; 41 ; 2007 ; >
+      au < exists ; exists ; 2008 ; Canadian Folk Music / Musique folklorique canadienne Volume 42 ; 42 ; 2008 ; >
+      au < exists ; exists ; 2009 ; Canadian Folk Music / Musique folklorique canadienne Volume 43 ; 43 ; 2009 ; >
+      au < exists ; exists ; 2010 ; Canadian Folk Music / Musique folklorique canadienne Volume 44 ; 44 ; 2010 ; >
+      au < exists ; exists ; 2011 ; Canadian Folk Music / Musique folklorique canadienne Volume 45 ; 45 ; 2011 ; >
       au < finished ; finished ; 2012 ; Canadian Folk Music / Musique folklorique canadienne Volume 46 ; 46 ; 2012 ; >
       au < finished ; finished ; 2013 ; Canadian Folk Music / Musique folklorique canadienne Volume 47 ; 47 ; 2013 ; >
       au < finished ; crawling ; 2014  ; Canadian Folk Music / Musique folklorique canadienne Volume 48 ; 48 ; 2014 ; >
       au < expected ; exists ; 2015 ; Canadian Folk Music / Musique folklorique canadienne Volume 49 ; 49 ; 2015 ; >
+      au < expected ; exists ; 2016 ; Canadian Folk Music / Musique folklorique canadienne Volume 50 ; 50 ; 2016 ; >
 
     }
     
@@ -64,6 +77,7 @@
       param[base_url] = http://www.ijede.ca/
       param[journal_id] = jde
 
+      au < exists ; exists ; 2014 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 28 ; 28 ; 2014 ; >
       au < crawling ; exists ; 2015 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 29 ; 29 ; 2015 ; >
       au < expected ; exists ; 2016 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 30 ; 30 ; 2016 ; >
 
@@ -82,6 +96,13 @@
       param[base_url] = http://jrp.icaap.org/
       param[journal_id] = jrp
 
+      au < exists ; exists ; 2005 ; Journal of Research Practice Volume 1 ; 1 ; 2005 ; >
+      au < exists ; exists ; 2006 ; Journal of Research Practice Volume 2 ; 2 ; 2006 ; >
+      au < exists ; exists ; 2007 ; Journal of Research Practice Volume 3 ; 3 ; 2007 ; >
+      au < exists ; exists ; 2008 ; Journal of Research Practice Volume 4 ; 4 ; 2008 ; >
+      au < exists ; exists ; 2009 ; Journal of Research Practice Volume 5 ; 5 ; 2009 ; >
+      au < exists ; exists ; 2010 ; Journal of Research Practice Volume 6 ; 6 ; 2010 ; >
+      au < exists ; exists ; 2011 ; Journal of Research Practice Volume 7 ; 7 ; 2011 ; >
       au < finished ; crawling ; 2012 ; Journal of Research Practice Volume 8 ; 8 ; 2012 ; >
       au < finished ; crawling ; 2013 ; Journal of Research Practice Volume 9 ; 9 ; 2013 ; >
       au < finished ; crawling ; 2014  ; Journal of Research Practice Volume 10 ; 10 ; 2014 ; >
@@ -153,6 +174,19 @@
       param[base_url] = http://trumpeter.athabascau.ca/
       param[journal_id] = trumpet
 
+      au < exists ; exists ; 1998 ; The Trumpeter Volume 14 ; 14 ; 1998 ; >
+      au < exists ; exists ; 1999 ; The Trumpeter Volume 15 ; 15 ; 1999 ; >
+      au < exists ; exists ; 2000 ; The Trumpeter Volume 16 ; 16 ; 2000 ; >
+      au < exists ; exists ; 2001 ; The Trumpeter Volume 17 ; 17 ; 2001 ; >
+      au < exists ; exists ; 2002 ; The Trumpeter Volume 18 ; 18 ; 2002 ; >
+      au < exists ; exists ; 2003 ; The Trumpeter Volume 19 ; 19 ; 2003 ; >
+      au < exists ; exists ; 2004 ; The Trumpeter Volume 20 ; 20 ; 2004 ; >
+      au < exists ; exists ; 2005 ; The Trumpeter Volume 21 ; 21 ; 2005 ; >
+      au < exists ; exists ; 2006 ; The Trumpeter Volume 22 ; 22 ; 2006 ; >
+      au < exists ; exists ; 2007 ; The Trumpeter Volume 23 ; 23 ; 2007 ; >
+      au < exists ; exists ; 2008 ; The Trumpeter Volume 24 ; 24 ; 2008 ; >
+      au < exists ; exists ; 2009 ; The Trumpeter Volume 25 ; 25 ; 2009 ; >
+      au < exists ; exists ; 2010 ; The Trumpeter Volume 26 ; 26 ; 2010 ; >
       au < exists ; exists ; 2011 ; The Trumpeter Volume 27 ; 27 ; 2011 ; >
       au < crawling ; exists ; 2012 ; The Trumpeter Volume 28 ; 28 ; 2012 ; >
       au < finished ; crawling ; 2013 ; The Trumpeter Volume 29 ; 29 ; 2013 ; >
