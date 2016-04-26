@@ -61,7 +61,7 @@
     param[journal_id] = bmt
 
     au < released ; 2012 ; Breast Cancer Management Volume 1 ; 1 >
-    au < manifest ; 2013 ; Breast Cancer Management Volume 2 ; 2 >
+    au < ready ; 2013 ; Breast Cancer Management Volume 2 ; 2 >
     au < ready ; 2014 ; Breast Cancer Management Volume 3 ; 3 >
     au < ready ; 2015 ; Breast Cancer Management Volume 4 ; 4 >
     au < manifest ; 2016 ; Breast Cancer Management Volume 5 ; 5 >
@@ -169,7 +169,7 @@
     param[journal_id] = crc
 
     au < released ; 2012 ; Colorectal Cancer Volume 1 ; 1 >
-    au < manifest ; 2013 ; Colorectal Cancer Volume 2 ; 2 >
+    au < ready ; 2013 ; Colorectal Cancer Volume 2 ; 2 >
     au < released ; 2014 ; Colorectal Cancer Volume 3 ; 3 >
     au < ready ; 2015 ; Colorectal Cancer Volume 4 ; 4 >
     au < manifest ; 2016 ; Colorectal Cancer Volume 5 ; 5 >
@@ -235,7 +235,7 @@
     au < ready ; 2012 ; Future Cardiology Volume 8 ; 8 >
     au < ready ; 2013 ; Future Cardiology Volume 9 ; 9 >
     au < ready ; 2014 ; Future Cardiology Volume 10 ; 10 >
-    au < manifest ; 2015 ; Future Cardiology Volume 11 ; 11 >
+    au < ready ; 2015 ; Future Cardiology Volume 11 ; 11 >
     au < manifest ; 2016 ; Future Cardiology Volume 12 ; 12 >
 
   }
@@ -256,7 +256,7 @@
     au < manifest ; 2010 ; Future Microbiology Volume 5 ; 5 >
     au < manifest ; 2011 ; Future Microbiology Volume 6 ; 6 >
     au < ready ; 2012 ; Future Microbiology Volume 7 ; 7 >
-    au < manifest ; 2013 ; Future Microbiology Volume 8 ; 8 >
+    au < ready ; 2013 ; Future Microbiology Volume 8 ; 8 >
     au < ready ; 2014 ; Future Microbiology Volume 9 ; 9 >
     au < ready ; 2015 ; Future Microbiology Volume 10 ; 10 >
     au < manifest ; 2016 ; Future Microbiology Volume 11 ; 11 >
@@ -394,8 +394,8 @@
     au < manifest ; 2009 ; Imaging in Medicine Volume 1 ; 1 >
     au < manifest ; 2010 ; Imaging in Medicine Volume 2 ; 2 >
     au < manifest ; 2011 ; Imaging in Medicine Volume 3 ; 3 >
-    au < manifest ; 2012 ; Imaging in Medicine Volume 4 ; 4 >
-    au < manifest ; 2013 ; Imaging in Medicine Volume 5 ; 5 >
+    au < ready ; 2012 ; Imaging in Medicine Volume 4 ; 4 >
+    au < ready ; 2013 ; Imaging in Medicine Volume 5 ; 5 >
     au < ready ; 2014 ; Imaging in Medicine Volume 6 ; 6 >
     au < expected ; 2015 ; Imaging in Medicine Volume 7 ; 7 >
     au < expected ; 2016 ; Imaging in Medicine Volume 8 ; 8 >
@@ -416,7 +416,7 @@
     au < manifest ; 2010 ; Immunotherapy Volume 2 ; 2 >
     au < manifest ; 2011 ; Immunotherapy Volume 3 ; 3 >
     au < ready ; 2012 ; Immunotherapy Volume 4 ; 4 >
-    au < manifest ; 2013 ; Immunotherapy Volume 5 ; 5 >
+    au < ready ; 2013 ; Immunotherapy Volume 5 ; 5 >
     au < ready ; 2014 ; Immunotherapy Volume 6 ; 6 >
     au < manifest ; 2015 ; Immunotherapy Volume 7 ; 7 >
     au < manifest ; 2016 ; Immunotherapy Volume 8 ; 8 >
@@ -488,7 +488,7 @@
     au < ready ; 2012 ; International Journal of Hematologic Oncology Volume 1 ; 1 >
     au < ready ; 2013 ; International Journal of Hematologic Oncology Volume 2 ; 2 >
     au < ready ; 2014 ; International Journal of Hematologic Oncology Volume 3 ; 3 >
-    au < manifest ; 2015 ; International Journal of Hematologic Oncology Volume 4 ; 4 >
+    au < ready ; 2015 ; International Journal of Hematologic Oncology Volume 4 ; 4 >
     au < expected ; 2016 ; International Journal of Hematologic Oncology Volume 5 ; 5 >
 
   }
@@ -509,7 +509,7 @@
     au < released ; 2012 ; Interventional Cardiology Volume 4 ; 4 >
     au < ready ; 2013 ; Interventional Cardiology Volume 5 ; 5 >
     au < ready ; 2014 ; Interventional Cardiology Volume 6 ; 6 >
-    au < manifest ; 2015 ; Interventional Cardiology Volume 7 ; 7 >
+    au < ready ; 2015 ; Interventional Cardiology Volume 7 ; 7 >
     au < expected ; 2016 ; Interventional Cardiology Volume 8 ; 8 >
 
   }
@@ -541,8 +541,8 @@
     param[journal_id] = lmt
 
     au < released ; 2012 ; Lung Cancer Management Volume 1 ; 1 >
-    au < manifest ; 2013 ; Lung Cancer Management Volume 2 ; 2 >
-    au < manifest ; 2014 ; Lung Cancer Management Volume 3 ; 3 >
+    au < ready ; 2013 ; Lung Cancer Management Volume 2 ; 2 >
+    au < ready ; 2014 ; Lung Cancer Management Volume 3 ; 3 >
     au < ready ; 2015 ; Lung Cancer Management Volume 4 ; 4 >
     au < manifest ; 2016 ; Lung Cancer Management Volume 5 ; 5 >
 
@@ -617,9 +617,9 @@
     param[journal_id] = npy
 
     au < manifest ; 2011 ; Neuropsychiatry Volume 1 ; 1 >
-    au < manifest ; 2012 ; Neuropsychiatry Volume 2 ; 2 >
+    au < ready ; 2012 ; Neuropsychiatry Volume 2 ; 2 >
     au < ready ; 2013 ; Neuropsychiatry Volume 3 ; 3 >
-    au < manifest ; 2014 ; Neuropsychiatry Volume 4 ; 4 >
+    au < ready ; 2014 ; Neuropsychiatry Volume 4 ; 4 >
     au < expected ; 2015 ; Neuropsychiatry Volume 5 ; 5 >
     au < expected ; 2016 ; Neuropsychiatry Volume 6 ; 6 >
 
@@ -733,7 +733,7 @@
     au < manifest ; 2010 ; Regenerative Medicine Volume 5 ; 5 >
     au < manifest ; 2011 ; Regenerative Medicine Volume 6 ; 6 >
     au < ready ; 2012 ; Regenerative Medicine Volume 7 ; 7 >
-    au < manifest ; 2013 ; Regenerative Medicine Volume 8 ; 8 >
+    au < ready ; 2013 ; Regenerative Medicine Volume 8 ; 8 >
     au < released ; 2014 ; Regenerative Medicine Volume 9 ; 9 >
     au < ready ; 2015 ; Regenerative Medicine Volume 10 ; 10 >
     au < manifest ; 2016 ; Regenerative Medicine Volume 11 ; 11 >
@@ -759,7 +759,7 @@
     au < ready ; 2012 ; Women's Health Volume 8 ; 8 >
     au < ready ; 2013 ; Women's Health Volume 9 ; 9 >
     au < released ; 2014 ; Women's Health Volume 10 ; 10 >
-    au < manifest ; 2015 ; Women's Health Volume 11 ; 11 >
+    au < ready ; 2015 ; Women's Health Volume 11 ; 11 >
     au < manifest ; 2016 ; Women's Health Volume 12 ; 12 >
 
   }
