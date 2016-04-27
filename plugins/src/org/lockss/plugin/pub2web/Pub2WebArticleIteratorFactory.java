@@ -26,7 +26,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.pub2web.ms;
+package org.lockss.plugin.pub2web;
 
 import java.util.Iterator;
 import java.util.regex.*;
@@ -43,10 +43,10 @@ import org.lockss.util.Logger;
 
  */
 
-public class MsArticleIteratorFactory
+public class Pub2WebArticleIteratorFactory
   implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-  private static final Logger log = Logger.getLogger(MsArticleIteratorFactory.class);
+  private static final Logger log = Logger.getLogger(Pub2WebArticleIteratorFactory.class);
   
 
   /*

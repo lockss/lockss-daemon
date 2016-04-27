@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.pub2web.ms;
+package org.lockss.plugin.pub2web;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -41,9 +41,9 @@ import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
 
-public class MsUrlNormalizer implements UrlNormalizer {
+public class Pub2WebUrlNormalizer implements UrlNormalizer {
   protected static Logger log = 
-      Logger.getLogger(MsUrlNormalizer.class);
+      Logger.getLogger(Pub2WebUrlNormalizer.class);
   protected static final String SUFFIX = "&isFastTrackArticle=";
   protected static final String EXPIRINGSUFFIX = "?expires=";
   protected static final String CONTENT_URL = "/deliver/fulltext/"; // how we identify these URLs 
