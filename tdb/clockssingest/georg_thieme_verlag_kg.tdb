@@ -100,7 +100,7 @@
     au < finished ; crawling ; 2010 ; 2010 ; Aktuelle Dermatologie Volume 36 ; 36 ; >
     au < finished ; finished ; 2011 ; 2011 ; Aktuelle Dermatologie Volume 37 ; 37 ; >
     au < finished ; crawling ; 2012 ; 2012 ; Aktuelle Dermatologie Volume 38 ; 38 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2013 ; 2013 ; Aktuelle Dermatologie Volume 39 ; 39 ; >
+    au < finished ; manifest ; 2013 ; 2013 ; Aktuelle Dermatologie Volume 39 ; 39 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Aktuelle Dermatologie Volume 40 ; 40 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; 2015 ; Aktuelle Dermatologie Volume 41 ; 41 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Aktuelle Dermatologie Volume 42 ; 42 ; >
@@ -1585,7 +1585,7 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Fortschritte der Neurologie - Psychiatrie Volume 2007 ; 75 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Fortschritte der Neurologie - Psychiatrie Volume 2008 ; 76 ; >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Fortschritte der Neurologie - Psychiatrie Volume 2009 ; 77 ; >
-   au < crawling ; exists ; 2010 ; 2010 ; Fortschritte der Neurologie - Psychiatrie Volume 2010 ; 78 ; >
+   au < finished ; manifest ; 2010 ; 2010 ; Fortschritte der Neurologie - Psychiatrie Volume 2010 ; 78 ; >
    au < finished ; crawling ; 2011 ; 2011 ; Fortschritte der Neurologie - Psychiatrie Volume 2011 ; 79 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2012 ; 2012 ; Fortschritte der Neurologie - Psychiatrie Volume 2012 ; 80 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2013 ; 2013 ; Fortschritte der Neurologie - Psychiatrie Volume 2013 ; 81 ; >
@@ -5279,7 +5279,7 @@
     au < doNotProcess ; exists ; 2009 ; 2009 ; Via medici Volume 2009 ; 14 ; >
     au < finished ; crawling ; 2010 ; 2010 ; Via medici Volume 2010 ; 15 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2011 ; 2011 ; Via medici Volume 2011 ; 16 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2012 ; 2012 ; Via medici Volume 2012 ; 17 ; >
+    au < finished ; manifest ; 2012 ; 2012 ; Via medici Volume 2012 ; 17 ; >
     au < finished ; crawling ; 2013 ; 2013 ; Via medici Volume 2013 ; 18 ; >
     au < finished ; crawling ; 2014 ; 2014 ; Via medici Volume 2014 ; 19 ; >
     au < expected ; exists ; 2015 ; 2015 ; Via medici Volume 2015 ; 20 ; >
