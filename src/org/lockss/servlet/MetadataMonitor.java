@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
  Copyright (c) 2015-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -35,10 +31,9 @@ import static org.lockss.servlet.MetadataControl.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import org.lockss.db.DbException;
@@ -50,11 +45,13 @@ import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.PluginManager;
 import org.lockss.servlet.ServletUtil.LinkWithExplanation;
+import org.lockss.state.ArchivalUnitStatus;
 import org.lockss.util.Logger;
 import org.mortbay.html.Block;
 import org.mortbay.html.Composite;
 import org.mortbay.html.Form;
 import org.mortbay.html.Input;
+import org.mortbay.html.Link;
 import org.mortbay.html.Page;
 import org.mortbay.html.Table;
 
@@ -88,7 +85,7 @@ public class MetadataMonitor extends LockssServlet {
   private static final String LIST_MULTIPLE_DOI_PREFIX_AUS_ACTION =
       "listMultipleDoiPrefixAus";
   private static final String LIST_MULTIPLE_DOI_PREFIX_AUS_HELP =
-      "Lists the names of Archival Units with more than one DOI prefix";
+      "Lists the Archival Units with more than one DOI prefix";
   private static final String LIST_MULTIPLE_DOI_PREFIX_AUS_HEADER =
       "Archival Units With Multiple DOI Prefixes";
   private static final String LIST_MULTIPLE_PUBLISHER_DOI_PREFIXES_LINK =
@@ -128,7 +125,7 @@ public class MetadataMonitor extends LockssServlet {
   private static final String LIST_UNKNOWN_PROVIDER_AUS_ACTION =
       "listUnknownProviderAus";
   private static final String LIST_UNKNOWN_PROVIDER_AUS_HELP =
-      "Lists the names of Archival Units with an unknown provider";
+      "Lists the Archival Units with an unknown provider";
   private static final String LIST_UNKNOWN_PROVIDER_AUS_HEADER =
       "Archival Units With Unknown Provider";
   private static final String LIST_MISMATCHED_PARENT_TO_CHILDREN_LINK =
@@ -144,7 +141,7 @@ public class MetadataMonitor extends LockssServlet {
   private static final String LIST_MULTIPLE_PUBLISHER_AUS_ACTION =
       "listMultiplePublisherAus";
   private static final String LIST_MULTIPLE_PUBLISHER_AUS_HELP =
-      "Lists the names of Archival Units with more than one publisher";
+      "Lists the Archival Units with more than one publisher";
   private static final String LIST_MULTIPLE_PUBLISHER_AUS_HEADER =
       "Archival Units With Multiple Publishers";
   private static final String LIST_ITEMS_WITHOUT_NAME_LINK =
@@ -179,6 +176,14 @@ public class MetadataMonitor extends LockssServlet {
       "Lists the non-parent metadata items that have no Access URL";
   private static final String LIST_ITEMS_WITHOUT_ACCESS_URL_HEADER =
       "Non-Parent Metadata Items Without Access URL";
+  private static final String LIST_AUS_WITHOUT_ITEMS_LINK =
+      "Archival Units Without Metadata Items";
+  private static final String LIST_AUS_WITHOUT_ITEMS_ACTION =
+      "listAusWithoutMetadataItems";
+  private static final String LIST_AUS_WITHOUT_ITEMS_HELP =
+      "Lists the Archival Units that have no metadata items";
+  private static final String LIST_AUS_WITHOUT_ITEMS_HEADER =
+      "Archival Units Without Metadata Items";
 
   private static final String BACK_LINK_PREFIX = "Back to ";
 
@@ -250,6 +255,8 @@ public class MetadataMonitor extends LockssServlet {
 	listMetadataItemsWithoutDoi();
       } else if (LIST_ITEMS_WITHOUT_ACCESS_URL_ACTION.equals(action)) {
 	listMetadataItemsWithoutAccessUrl();
+      } else if (LIST_AUS_WITHOUT_ITEMS_ACTION.equals(action)) {
+	listAusWithoutMetadataItems();
       } else {
 	if (action != null) {
 	  errMsg = "Invalid operation '" + action + "'";
@@ -373,6 +380,12 @@ public class MetadataMonitor extends LockssServlet {
 	LIST_ITEMS_WITHOUT_ACCESS_URL_LINK,
 	ACTION + LIST_ITEMS_WITHOUT_ACCESS_URL_ACTION,
 	LIST_ITEMS_WITHOUT_ACCESS_URL_HELP));
+
+    // List the Archival Units that have no metadata items.
+    list.add(getMenuDescriptor(myDescr,
+	LIST_AUS_WITHOUT_ITEMS_LINK,
+	ACTION + LIST_AUS_WITHOUT_ITEMS_ACTION,
+	LIST_AUS_WITHOUT_ITEMS_HELP));
 
     return list.iterator();
   }
@@ -771,28 +784,43 @@ public class MetadataMonitor extends LockssServlet {
     Table results = new Table(0, attributes);
     results.newRow();
     results.newCell("align=\"right\" class=\"colhead\"");
-    results.add("Archival Unit Name");
+    results.add("Archival Unit");
     results.newCell("align=\"left\" class=\"colhead\"");
     results.add("DOI Prefixes");
 
-    // The Archival Units that have multiple DOI prefixes, sorted by name.
+    // The Archival Units that have multiple DOI prefixes, sorted by identifier.
     Map<String, Collection<String>> ausToList =
-	mdManager.getAuNamesWithMultipleDoiPrefixes();
+	mdManager.getAuIdsWithMultipleDoiPrefixes();
     if (log.isDebug3()) log.debug3(DEBUG_HEADER
 	+ "ausToList.size() = " + ausToList.size());
 
     // Check whether there are results to display.
-    if (ausToList.size() > 0) {
-      // Yes: Loop through the Archival Units to be listed.
-      for (String auName : ausToList.keySet()) {
+    if (ausToList != null && ausToList.size() > 0) {
+      // Yes.
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "ausToList.size() = " + ausToList.size());
+
+      // Loop through the Archival Units to be listed.
+      for (String auId : ausToList.keySet()) {
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
 	results.newRow();
 	results.newCell("align=\"right\"");
-	results.add(auName);
+
+	ArchivalUnit au = pluginManager.getAuFromId(auId);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+	if (au != null) {
+	  results.add(getAuLink(auId, au.getName()));
+	} else {
+	  results.add(auId);
+	}
+
 	results.newCell("align=\"left\"");
       
 	Table prefixes = new Table(1, attributes);
 
-	for (String prefix : ausToList.get(auName)) {
+	for (String prefix : ausToList.get(auId)) {
 	  prefixes.newRow();
 	  prefixes.newCell("align=\"left\"");
 	  prefixes.add(prefix);
@@ -1220,31 +1248,6 @@ public class MetadataMonitor extends LockssServlet {
     final String DEBUG_HEADER = "listUnknownProviderAus(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
-    // The Archival Units that have an unknown provider.
-    List<String> ausToList = new ArrayList<String>();
-
-    // Get the identifiers of the Archival Units with an unknown provider.
-    Collection<String> unknownProviderAuIds =
-	mdManager.getUnknownProviderAuIds();
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER
-	+ "unknownProviderAuIds.size() = " + unknownProviderAuIds.size());
-
-    // Loop through the Archival Units.
-    for (String auId : unknownProviderAuIds) {
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
-
-      ArchivalUnit au = pluginManager.getAuFromId(auId);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
-
-      if (au != null) {
-	ausToList.add(au.getName());
-      } else {
-	ausToList.add(auId);
-      }
-    }
-
-    Collections.sort(ausToList);
-
     String attributes = "align=\"center\" cellspacing=\"4\" cellpadding=\"5\"";
 
     // Create the results table.
@@ -1253,13 +1256,33 @@ public class MetadataMonitor extends LockssServlet {
     results.newCell("align=\"center\" class=\"colhead\"");
     results.add("Archival Unit Name");
 
+    // Get the identifiers of the Archival Units with an unknown provider.
+    Collection<String> unknownProviderAuIds =
+	mdManager.getUnknownProviderAuIds();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "unknownProviderAuIds.size() = " + unknownProviderAuIds.size());
+
     // Check whether there are results to display.
-    if (ausToList.size() > 0) {
-      // Yes: Loop through the Archival Units to be listed.
-      for (String auName : ausToList) {
+    if (unknownProviderAuIds != null && unknownProviderAuIds.size() > 0) {
+      // Yes.
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + "unknownProviderAuIds.size() = " + unknownProviderAuIds.size());
+
+      // Loop through the Archival Units.
+      for (String auId : unknownProviderAuIds) {
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
 	results.newRow();
 	results.newCell("align=\"center\"");
-	results.add(auName);
+
+	ArchivalUnit au = pluginManager.getAuFromId(auId);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+	if (au != null) {
+	  results.add(getAuLink(auId, au.getName()));
+	} else {
+	  results.add(auId);
+	}
       }
     } else {
       // No.
@@ -1483,28 +1506,43 @@ public class MetadataMonitor extends LockssServlet {
     Table results = new Table(0, attributes);
     results.newRow();
     results.newCell("align=\"right\" class=\"colhead\"");
-    results.add("Archival Unit Name");
+    results.add("Archival Unit");
     results.newCell("align=\"left\" class=\"colhead\"");
     results.add("Publishers");
 
-    // The Archival Units that have multiple publishers, sorted by name.
+    // The Archival Units that have multiple publishers, sorted by identifier.
     Map<String, Collection<String>> ausToList =
-	mdManager.getAuNamesWithMultiplePublishers();
+	mdManager.getAuIdsWithMultiplePublishers();
     if (log.isDebug3()) log.debug3(DEBUG_HEADER
 	+ "ausToList.size() = " + ausToList.size());
 
     // Check whether there are results to display.
-    if (ausToList.size() > 0) {
-      // Yes: Loop through the Archival Units to be listed.
-      for (String auName : ausToList.keySet()) {
+    if (ausToList != null && ausToList.size() > 0) {
+      // Yes.
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "ausToList.size() = " + ausToList.size());
+
+      // Loop through the Archival Units to be listed.
+      for (String auId : ausToList.keySet()) {
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
 	results.newRow();
 	results.newCell("align=\"right\"");
-	results.add(auName);
+
+	ArchivalUnit au = pluginManager.getAuFromId(auId);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+	if (au != null) {
+	  results.add(getAuLink(auId, au.getName()));
+	} else {
+	  results.add(auId);
+	}
+
 	results.newCell("align=\"left\"");
       
 	Table publishers = new Table(1, attributes);
 
-	for (String publisher : ausToList.get(auName)) {
+	for (String publisher : ausToList.get(auId)) {
 	  publishers.newRow();
 	  publishers.newCell("align=\"left\"");
 	  publishers.add(publisher);
@@ -1840,5 +1878,90 @@ public class MetadataMonitor extends LockssServlet {
 
     makeTablePage(LIST_ITEMS_WITHOUT_ACCESS_URL_HEADER, results);
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Displays the Archival Units that have no metadata items.
+   *
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   * @throws IOException
+   */
+  private void listAusWithoutMetadataItems() throws DbException, IOException {
+    final String DEBUG_HEADER = "listAusWithoutMetadataItems(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    String attributes = "align=\"center\" cellspacing=\"4\" cellpadding=\"5\"";
+
+    // Create the results table.
+    Table results = new Table(0, attributes);
+    results.newRow();
+    results.newCell("align=\"center\" class=\"colhead\"");
+    results.add("Archival Unit Name");
+
+    // Get the identifiers of the Archival Units with no metadata items.
+    Collection<String> noItemsAuIds = mdManager.getNoItemsAuIds();
+
+    // Check whether there are results to display.
+    if (noItemsAuIds != null && noItemsAuIds.size() > 0) {
+      // Yes.
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "noItemsAuIds.size() = "
+	  + noItemsAuIds.size());
+
+      // Loop through the Archival Units to be listed.
+      for (String auId : noItemsAuIds) {
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+	results.newRow();
+	results.newCell("align=\"center\"");
+
+	ArchivalUnit au = pluginManager.getAuFromId(auId);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+	if (au != null) {
+	  results.add(getAuLink(auId, au.getName()));
+	} else {
+	  results.add(auId);
+	}
+      }
+    } else {
+      // No.
+      results.newRow();
+      results.newCell();
+      results.add("");
+      results.newRow();
+      results.newCell("align=\"center\"");
+      results.add("No Archival Units without metadata items");
+    }
+
+    makeTablePage(LIST_AUS_WITHOUT_ITEMS_HEADER, results);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides a link to a page that displays the properties of an Archival Unit.
+   * 
+   * @param auId
+   *          A String with the Archival Unit identifier.
+   * @param auName
+   *          A String with the name of the Archival Unit.
+   * @return a Link with the link to a page that displays the properties of an
+   *         Archival Unit.
+   */
+  private Link getAuLink(String auId, String auName) {
+    final String DEBUG_HEADER = "getAuLink(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "auId = " + auId);
+      log.debug2(DEBUG_HEADER + "auName = " + auName);
+    }
+
+    Properties urlParams = new Properties();
+    urlParams.setProperty("table", ArchivalUnitStatus.AU_STATUS_TABLE_NAME);
+    urlParams.setProperty("key", auId);
+
+    Link link = new Link(srvURL(AdminServletManager.SERVLET_DAEMON_STATUS,
+	urlParams), auName);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "link = " + link);
+    return link;
   }
 }

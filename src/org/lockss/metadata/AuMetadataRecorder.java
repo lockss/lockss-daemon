@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
  Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -1201,36 +1197,8 @@ public class AuMetadataRecorder {
       }
     }
 
-    // Check whether the plugin has not been located in the database.
-    if (pluginSeq == null) {
-      // Yes: Find the publishing platform or create it.
-      Long platformSeq = mdManager.findOrCreatePlatform(conn, platform);
-      log.debug3(DEBUG_HEADER + "platformSeq = " + platformSeq);
-
-      // Find the plugin or create it.
-      pluginSeq = mdManagerSql.findOrCreatePlugin(conn, pluginId, platformSeq,
-	  isBulkContent);
-      log.debug3(DEBUG_HEADER + "pluginSeq = " + pluginSeq);
-
-      // Skip it if the plugin could not be found or created.
-      if (pluginSeq == null) {
-        log.debug3(DEBUG_HEADER + "Done: pluginSeq is null.");
-        return;
-      }
-    }
-
-    // Check whether the Archival Unit has not been located in the database.
-    if (auSeq == null) {
-      // Yes: Find it or create it.
-      auSeq = mdManager.findOrCreateAu(conn, pluginSeq, auKey);
-      log.debug3(DEBUG_HEADER + "auSeq = " + auSeq);
-
-      // Skip it if the Archival Unit could not be found or created.
-      if (auSeq == null) {
-        log.debug3(DEBUG_HEADER + "Done: auSeq is null.");
-        return;
-      }
-    }
+    // Populate in the database any necessary Archival Unit dependencies.
+    populateAuDbDependencies(conn);
 
     // Check whether the Archival Unit metadata has not been located in the
     // database.
@@ -1242,35 +1210,31 @@ public class AuMetadataRecorder {
 
     // Check whether it is a new Archival Unit metadata.
     if (auMdSeq == null) {
-      long creationTime = 0;
-
-      // Check whether it is possible to obtain the Archival Unit creation time.
-      if (au != null && AuUtil.getAuState(au) != null) {
-	// Yes: Get it.
-	creationTime = AuUtil.getAuCreationTime(au);
-      }
-
-      // Get the provider.
-      Long providerSeq = findOrCreateProvider(conn, mdinfo);
+      // Get the name of the provider received in the metadata.
+      String providerName = mdinfo.provider;
       if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "providerSeq = " + providerSeq);
+	log.debug3(DEBUG_HEADER + "providerName = " + providerName);
 
-      // Add to the database the new Archival Unit metadata.
-      auMdSeq = mdManagerSql.addAuMd(conn, auSeq, pluginVersion,
-	  NEVER_EXTRACTED_EXTRACTION_TIME, creationTime, providerSeq);
-      log.debug3(DEBUG_HEADER + "new auSeq = " + auMdSeq);
-
-      // Skip it if the new Archival Unit metadata could not be created.
-      if (auMdSeq == null) {
-	log.debug3(DEBUG_HEADER + "Done: auMdSeq is null.");
-	return;
+      // Check whether no provider name was received in the metadata.
+      if (StringUtil.isNullString(providerName)) {
+	// Yes: Use the publisher name.
+	providerName = publisherName;
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "providerName = " + providerName);
       }
+
+      // TODO: Replace the second argument with mdinfo.providerLid when
+      // available.
+      addAuMd(conn, null, providerName);
 
       newAu = true;
     } else {
       // No: Update the Archival Unit metadata ancillary data.
       updateAuMd(conn, auMdSeq, pluginVersion);
       log.debug3(DEBUG_HEADER + "updated AU.");
+
+      // Update any unknown provider.
+      updateAuUnknownProvider(conn, auMdSeq, mdinfo);
     }
 
     // Replace or create the metadata item.
@@ -1480,44 +1444,6 @@ public class AuMetadataRecorder {
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
     return result;
-  }
-
-  /**
-   * Finds the provider in the database or creates a new one.
-   * 
-   * @param conn
-   *          A Connection with the connection to the database
-   * @param mdinfo
-   *          An ArticleMetadataInfo providing the metadata.
-   * @return a Long with the identifier of the provider.
-   * @throws MetadataException
-   *           if any problem is detected with the passed metadata.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  private Long findOrCreateProvider(Connection conn,
-      ArticleMetadataInfo mdinfo) throws MetadataException, DbException {
-    final String DEBUG_HEADER = "findOrCreateProvider(): ";
-
-    // Get the name of the provider received in the metadata.
-    String providerName = mdinfo.provider;
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "providerName = " + providerName);
-
-    // Check whether no provider name was received in the metadata.
-    if (StringUtil.isNullString(providerName)) {
-      // Yes: Use the publisher name.
-      providerName = publisherName;
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "providerName = " + providerName);
-    }
-
-    // Find or create the provider.
-    // TODO: Replace the second argument with mdinfo.providerLid when available.
-    Long providerSeq = dbManager.findOrCreateProvider(conn, null, providerName);
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
-    return providerSeq;
   }
 
   /**
@@ -2599,5 +2525,202 @@ public class AuMetadataRecorder {
 
     log.debug3(DEBUG_HEADER + "count = " + count);
     return count;
+  }
+
+  /**
+   * Populates in the database any needed Archival Unit dependencies.
+   *
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   * @throws MetadataException
+   *           if the plugin could neither be found in the database nor added to
+   *           it.
+   */
+  private void populateAuDbDependencies(Connection conn)
+      throws DbException, MetadataException {
+    final String DEBUG_HEADER = "populateAuDbDependencies(): ";
+    // Check whether the plugin has not been located in the database.
+    if (pluginSeq == null) {
+      // Yes: Find the publishing platform or create it.
+      Long platformSeq = mdManager.findOrCreatePlatform(conn, platform);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "platformSeq = " + platformSeq);
+
+      if (platformSeq == null) {
+        String message = "Cannot find or create platform '" + platform + "'";
+        log.error(message);
+        throw new MetadataException(message);
+      }
+
+      // Find the plugin or create it.
+      pluginSeq = mdManagerSql.findOrCreatePlugin(conn, pluginId, platformSeq,
+	  isBulkContent);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginSeq = " + pluginSeq);
+
+      if (pluginSeq == null) {
+  	String message = "Cannot find or create plugin '" + pluginId
+  	    + "' for platform '" + platform + "'";
+  	log.error(message);
+  	log.error("platformSeq = " + platformSeq);
+  	throw new MetadataException(message);
+      }
+    }
+
+    // Check whether the Archival Unit has not been located in the database.
+    if (auSeq == null) {
+      // Yes: Find it or create it.
+      auSeq = mdManager.findOrCreateAu(conn, pluginSeq, auKey);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auSeq = " + auSeq);
+
+      if (auSeq == null) {
+  	String message = "Cannot find or create AU '" + auKey + "' for plugin '"
+  	    + pluginId + "'";
+  	log.error(message);
+  	log.error("pluginSeq = " + pluginSeq);
+  	throw new MetadataException(message);
+      }
+    }
+  }
+
+  /**
+   * Populates the identifier of the current Archival Unit metadata if existing
+   * or after creating it otherwise.
+   *
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param providerLid
+   *          A String with the provider LOCKSS identifier.
+   * @param providerName
+   *          A String with the provider name.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   * @throws MetadataException
+   *           if the current Archival Unit metadata could neither be found in
+   *           the database nor added to it.
+   */
+  private void addAuMd(Connection conn, String providerLid, String providerName)
+      throws DbException, MetadataException {
+    final String DEBUG_HEADER = "addAuMd(): ";
+    long creationTime = 0;
+
+    // Check whether it is possible to obtain the Archival Unit creation time.
+    if (au != null && AuUtil.getAuState(au) != null) {
+      // Yes: Get it.
+      creationTime = AuUtil.getAuCreationTime(au);
+    }
+
+    // Get the unknown provider, as it can only be obtained from the metadata.
+    Long providerSeq =
+	dbManager.findOrCreateProvider(conn, providerLid, providerName);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "providerSeq = " + providerSeq);
+
+    // Add to the database the new Archival Unit metadata extraction data.
+    auMdSeq = mdManagerSql.addAuMd(conn, auSeq, pluginVersion,
+	NEVER_EXTRACTED_EXTRACTION_TIME, creationTime, providerSeq);
+    log.debug3(DEBUG_HEADER + "new auSeq = " + auMdSeq);
+
+    if (auMdSeq == null) {
+      String message = "Cannot create AuMd for '" + auKey + "' and plugin '"
+	  + pluginId + "'";
+      log.error(message);
+      throw new MetadataException(message);
+    }
+  }
+
+  /**
+   * Writes to the database a record of the archival unit metadata extraction
+   * when no metadata has been found.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   * @throws MetadataException
+   *           if some element could neither be found in the database nor added
+   *           to it.
+   */
+  public void recordMetadataExtraction(Connection conn)
+      throws DbException, MetadataException {
+    final String DEBUG_HEADER = "recordMetadataExtraction(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Invoked.");
+
+    // Find the AU in the database.
+    auSeq = mdManagerSql.findAuByAuId(conn, auId);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auSeq = " + auSeq);
+
+    // Check whether the AU was not found.
+    if (auSeq == null) {
+      // Yes: Populate in the database any necessary Archival Unit dependencies.
+      populateAuDbDependencies(conn);
+    }
+
+    // Find the Archival Unit metadata in the database.
+    auMdSeq = findAuMd(conn, auSeq);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auMdSeq = " + auMdSeq);
+
+    // Check whether it is a new Archival Unit metadata.
+    if (auMdSeq == null) {
+      // Yes: Create it.
+      addAuMd(conn, null, UNKNOWN_PROVIDER_NAME);
+    } else {
+      // No: Update the Archival Unit metadata ancillary data.
+      updateAuMd(conn, auMdSeq, pluginVersion);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Updated AU plugin version.");
+    }
+
+    // Update the last extraction time.
+    mdManager.updateAuLastExtractionTime(au, conn, auMdSeq);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "Updated AU last extraction time.");
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates in the database the unknown provider of an archival unit.
+   * 
+   * @param conn
+   *          A Connection with the connection to the database
+   * @param auMdSeq
+   *          a Long with the database identifier of the archival unit metadata.
+   * @param mdinfo
+   *          An ArticleMetadataInfo providing the metadata, including the
+   *          provider.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private void updateAuUnknownProvider(Connection conn, Long auMdSeq,
+      ArticleMetadataInfo mdinfo) throws DbException {
+    final String DEBUG_HEADER = "findOrCreateProvider(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Invoked.");
+
+    // Get the name of the provider received in the metadata.
+    String providerName = mdinfo.provider;
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "providerName = " + providerName);
+
+    // Check whether no provider name was received in the metadata.
+    if (StringUtil.isNullString(providerName)) {
+      // Yes: Use the publisher name.
+      providerName = publisherName;
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "providerName = " + providerName);
+    }
+
+    // Find or create the provider.
+    // TODO: Replace the second argument with mdinfo.providerLid when available.
+    Long providerSeq = dbManager.findOrCreateProvider(conn, null, providerName);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "providerSeq = " + providerSeq);
+
+    boolean updated =
+	mdManagerSql.updateAuUnknownProvider(conn, auMdSeq, providerSeq);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "updated = " + updated);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 }

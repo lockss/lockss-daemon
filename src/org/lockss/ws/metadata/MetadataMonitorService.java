@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
  Copyright (c) 2015-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -34,6 +30,7 @@ package org.lockss.ws.metadata;
 import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
+import org.lockss.ws.entities.AuMetadataWsResult;
 import org.lockss.ws.entities.KeyIdNamePairListPair;
 import org.lockss.ws.entities.KeyValueListPair;
 import org.lockss.ws.entities.LockssWebServicesFault;
@@ -78,6 +75,18 @@ public interface MetadataMonitorService {
    */
   @WebMethod
   List<KeyValueListPair> getDoiPrefixesWithMultiplePublishers()
+      throws LockssWebServicesFault;
+
+  /**
+   * Provides the DOI prefixes for the Archival Units in the database with
+   * multiple DOI prefixes.
+   * 
+   * @return a List<KeyValueListPair> with the DOI prefixes keyed by the
+   *         Archival Unit identifier.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<KeyValueListPair> getAuIdsWithMultipleDoiPrefixes()
       throws LockssWebServicesFault;
 
   /**
@@ -179,7 +188,7 @@ public interface MetadataMonitorService {
   /**
    * Provides the Archival Units in the database with an unknown provider.
    * 
-   * @return a List<String> with the sorted Archival Unit names.
+   * @return a List<String> with the sorted Archival Unit identifiers.
    * @throws LockssWebServicesFault
    */
   @WebMethod
@@ -219,6 +228,18 @@ public interface MetadataMonitorService {
    */
   @WebMethod
   List<MismatchedMetadataChildWsResult> getMismatchedParentBookVolumes()
+      throws LockssWebServicesFault;
+
+  /**
+   * Provides the publishers for the Archival Units in the database with
+   * multiple publishers.
+   * 
+   * @return a List<KeyValueListPair> with the publishers keyed by the Archival
+   *         Unit identifier.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<KeyValueListPair> getAuIdsWithMultiplePublishers()
       throws LockssWebServicesFault;
 
   /**
@@ -279,4 +300,24 @@ public interface MetadataMonitorService {
   @WebMethod
   List<MetadataItemWsResult> getNoAccessUrlItems()
       throws LockssWebServicesFault;
+
+  /**
+   * Provides the Archival Units in the database with no metadata items.
+   * 
+   * @return a List<String> with the sorted Archival Unit identifiers.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  List<String> getNoItemsAuIds() throws LockssWebServicesFault;
+
+  /**
+   * Provides the metadata information of an archival unit in the system.
+   * 
+   * @param auId
+   *          A String with the identifier of the archival unit.
+   * @return an AuMetadataWsResult with the metadata information of the archival unit.
+   * @throws LockssWebServicesFault
+   */
+  @WebMethod
+  AuMetadataWsResult getAuMetadata(String auId) throws LockssWebServicesFault;
 }

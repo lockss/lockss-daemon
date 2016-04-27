@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -753,6 +749,9 @@ public class ReindexingTask extends StepTask {
             // Get a connection to the database.
             conn = dbManager.getConnection();
 
+            if (log.isDebug3())
+              log.debug3(DEBUG_HEADER + "needFullReindex = " + needFullReindex);
+
             // Check whether the reindexing task is not incremental.
             if (needFullReindex) { 
               // Yes: Remove the old Archival Unit metadata before adding the
@@ -760,20 +759,31 @@ public class ReindexingTask extends StepTask {
               removedArticleCount =
         	  mdManagerSql.removeAuMetadataItems(conn, auId);
               log.info("Reindexing task for AU '" + auName + "' removed "
-        	  + removedArticleCount + " database articles.");
+        	  + removedArticleCount + " database items.");
             }
 
             Iterator<ArticleMetadataInfo> mditr =
                 articleMetadataInfoBuffer.iterator();
 
+            // Check whether the reindexing task is not incremental and no
+            // items were extracted.
+            if (needFullReindex && !mditr.hasNext()) { 
+              // Yes: Report the problem.
+              log.warning("Non-incremental reindexing task for AU '" + auName
+        	  + "' failed to extract any items.");
+            }
+
             // Check whether there is any metadata to record.
             if (mditr.hasNext()) {
-
               // Yes: Write the AU metadata to the database.
               new AuMetadataRecorder((ReindexingTask) task, mdManager, au)
                   .recordMetadata(conn, mditr);
               
               pokeWDog();
+            } else {
+              // No: Record the extraction in the database.
+              new AuMetadataRecorder((ReindexingTask) task, mdManager, au)
+              .recordMetadataExtraction(conn);
             }
 
             // Remove the AU just re-indexed from the list of AUs pending to be

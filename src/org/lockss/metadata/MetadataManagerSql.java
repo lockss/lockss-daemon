@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
  Copyright (c) 2015-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -1072,7 +1068,9 @@ public class MetadataManagerSql {
       + " and au." + AU_SEQ_COLUMN + " = am." + AU_SEQ_COLUMN
       + " and am." + PROVIDER_SEQ_COLUMN + " = pr." + PROVIDER_SEQ_COLUMN
       + " and pr." + PROVIDER_NAME_COLUMN
-      + " = '" + UNKNOWN_PROVIDER_NAME + "'";
+      + " = '" + UNKNOWN_PROVIDER_NAME + "'"
+      + " order by pl." + PLUGIN_ID_COLUMN
+      + ", au." + AU_KEY_COLUMN;
 
   // Query to retrieve all the journal articles in the database whose parent
   // is not a journal.
@@ -1476,6 +1474,53 @@ public class MetadataManagerSql {
       + " where " + MD_ITEM_SEQ_COLUMN + " = ?"
       + " and " + ISSN_COLUMN + " = ?"
       + " and " + ISSN_TYPE_COLUMN + " = ?";
+
+  // Query to update the unknown provider of an Archival Unit.
+  private static final String UPDATE_AU_MD_UNKNOWN_PROVIDER_QUERY = "update "
+      + AU_MD_TABLE
+      + " set " + PROVIDER_SEQ_COLUMN + " = ?"
+      + " where " + AU_MD_SEQ_COLUMN + " IN ("
+      + "select am." + AU_MD_SEQ_COLUMN
+      + " from " + AU_MD_TABLE + " am"
+      + "," + PROVIDER_TABLE + " p"
+      + " where am." + PROVIDER_SEQ_COLUMN + " = p." + PROVIDER_SEQ_COLUMN
+      + " and p." + PROVIDER_NAME_COLUMN + " = '" + UNKNOWN_PROVIDER_NAME + "'"
+      + " and am." + AU_MD_SEQ_COLUMN + " = ?"
+      + ")";
+
+  // Query to retrieve all the Archival Units with no metadata items.
+  private static final String GET_NO_ITEMS_AUS_QUERY = "select"
+      + " pl." + PLUGIN_ID_COLUMN
+      + ", au." + AU_KEY_COLUMN
+      + ", count(mi." + MD_ITEM_SEQ_COLUMN + ")"
+      + " from " + PLUGIN_TABLE + " pl"
+      + ", " + AU_TABLE
+      + ", " + AU_MD_TABLE + " am"
+      + " left outer join " + MD_ITEM_TABLE + " mi"
+      + " on am." + AU_MD_SEQ_COLUMN + " = mi."+ AU_MD_SEQ_COLUMN
+      + " where pl." + PLUGIN_SEQ_COLUMN + " = au." + PLUGIN_SEQ_COLUMN
+      + " and au." + AU_SEQ_COLUMN + " = am." + AU_SEQ_COLUMN
+      + " group by pl." + PLUGIN_ID_COLUMN
+      + ", au." + AU_KEY_COLUMN
+      + " having count(mi." + MD_ITEM_SEQ_COLUMN + ") = 0"
+      + " order by pl." + PLUGIN_ID_COLUMN
+      + ", au." + AU_KEY_COLUMN;
+
+  // Query to get the metadata information of an Archival Unit.
+  private static final String GET_AU_MD_QUERY = "select "
+      + "m." + AU_MD_SEQ_COLUMN
+      + ", m." + AU_SEQ_COLUMN
+      + ", m." + MD_VERSION_COLUMN
+      + ", m." + EXTRACT_TIME_COLUMN
+      + ", m." + CREATION_TIME_COLUMN
+      + ", m." + PROVIDER_SEQ_COLUMN
+      + " from " + AU_MD_TABLE + " m,"
+      + AU_TABLE + " a,"
+      + PLUGIN_TABLE + " p"
+      + " where m." + AU_SEQ_COLUMN + " = " + " a." + AU_SEQ_COLUMN
+      + " and a." + PLUGIN_SEQ_COLUMN + " = " + " p." + PLUGIN_SEQ_COLUMN
+      + " and p." + PLUGIN_ID_COLUMN + " = ?"
+      + " and a." + AU_KEY_COLUMN + " = ?";
 
   private DbManager dbManager;
   private MetadataManager metadataManager;
@@ -6688,5 +6733,233 @@ public class MetadataManagerSql {
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "result = " + (deletedCount > 0));
     return deletedCount > 0;
+  }
+
+  /**
+   * Updates the unknown provider of an archival unit.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auMdSeq
+   *          A Long with the archival unit metadata identifier.
+   * @param providerSeq
+   *          A Long with the provider identifier.
+   * @return a boolean with <code>true</code> if the unknown provider was
+   *         updated, <code>false</code> otherwise.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  boolean updateAuUnknownProvider(Connection conn, Long auMdSeq,
+      Long providerSeq) throws DbException {
+    final String DEBUG_HEADER = "updateAuUnknownProvider(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "auMdSeq = " + auMdSeq);
+      log.debug2(DEBUG_HEADER + "providerSeq = " + providerSeq);
+    }
+
+    int updatedCount = -1;
+    PreparedStatement updateUnknownProvider =
+	dbManager.prepareStatement(conn, UPDATE_AU_MD_UNKNOWN_PROVIDER_QUERY);
+
+    try {
+      updateUnknownProvider.setLong(1, providerSeq);
+      updateUnknownProvider.setLong(2, auMdSeq);
+      updatedCount = dbManager.executeUpdate(updateUnknownProvider);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "updatedCount = " + updatedCount);
+    } catch (SQLException sqle) {
+      String message = "Cannot update unknown provider";
+      log.error(message, sqle);
+      log.error("auMdSeq = '" + auMdSeq + "'.");
+      log.error("providerSeq = '" + providerSeq + "'.");
+      log.error("SQL = '" + UPDATE_AU_MD_UNKNOWN_PROVIDER_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseStatement(updateUnknownProvider);
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "result = " + (updatedCount > 0));
+    return updatedCount > 0;
+  }
+
+  /**
+   * Provides the Archival Units in the database with no metadata items.
+   * 
+   * @return a Collection<String> with the sorted Archival Unit identifiers.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Collection<String> getNoItemsAuIds() throws DbException {
+    final String DEBUG_HEADER = "getNoItemsAuIds(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Collection<String> noItemsAuIds = null;
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+
+      // Get the identifiers of the Archival Units with no metadata items.
+      noItemsAuIds = getNoItemsAuIds(conn);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "noItemsAuIds.size() = " + noItemsAuIds.size());
+    return noItemsAuIds;
+  }
+
+  /**
+   * Provides the Archival Units in the database with no metadata items.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a Collection<String> with the sorted Archival Unit identifiers.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Collection<String> getNoItemsAuIds(Connection conn) throws DbException {
+    final String DEBUG_HEADER = "getNoItemsAuIds(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Collection<String> noItemsAuIds = new ArrayList<String>();
+
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+
+    try {
+      stmt = dbManager.prepareStatement(conn, GET_NO_ITEMS_AUS_QUERY);
+      resultSet = dbManager.executeQuery(stmt);
+
+      // Loop through the Archival Unit DOI prefixes. 
+      while (resultSet.next()) {
+	String pluginId = resultSet.getString(PLUGIN_ID_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+
+	String auKey = resultSet.getString(AU_KEY_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+	String auId = PluginManager.generateAuId(pluginId, auKey);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+	noItemsAuIds.add(auId);
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get the Archival Units with no metadata items";
+      log.error(message, sqle);
+      log.error("SQL = '" + GET_NO_ITEMS_AUS_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(stmt);
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "noItemsAuIds.size() = " + noItemsAuIds.size());
+    return noItemsAuIds;
+  }
+
+  /**
+   * Provides the metadata information of an Archival Unit.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auId
+   *          A String with the Archival Unit identifier.
+   * @return a Map<String, Object> with the metadata information of the Archival
+   *         Unit.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  Map<String, Object> getAuMetadata(Connection conn, String auId)
+      throws DbException {
+    final String DEBUG_HEADER = "getAuMetadata(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
+
+    Map<String, Object> result = null;
+    String pluginId = null;
+    String auKey = null;
+
+    PreparedStatement getAuMetadata =
+	dbManager.prepareStatement(conn, GET_AU_MD_QUERY);
+
+    ResultSet resultSet = null;
+
+    try {
+      pluginId = PluginManager.pluginIdFromAuId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId() = " + pluginId);
+
+      auKey = PluginManager.auKeyFromAuId(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+      getAuMetadata.setString(1, pluginId);
+      getAuMetadata.setString(2, auKey);
+      resultSet = dbManager.executeQuery(getAuMetadata);
+
+      if (resultSet.next()) {
+	result = new HashMap<String, Object>();
+
+	Long auMdSeq = resultSet.getLong(AU_MD_SEQ_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auMdSeq = " + auMdSeq);
+
+	if (!resultSet.wasNull()) {
+	  result.put(AU_MD_SEQ_COLUMN, auMdSeq);
+	}
+
+	Long auSeq = resultSet.getLong(AU_SEQ_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auSeq = " + auSeq);
+
+	if (!resultSet.wasNull()) {
+	  result.put(AU_SEQ_COLUMN, auSeq);
+	}
+
+	Integer mdVersion = resultSet.getInt(MD_VERSION_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "mdVersion = " + mdVersion);
+
+	if (!resultSet.wasNull()) {
+	  result.put(MD_VERSION_COLUMN, mdVersion);
+	}
+
+	Long extractTime = resultSet.getLong(EXTRACT_TIME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "extractTime = " + extractTime);
+
+	if (!resultSet.wasNull()) {
+	  result.put(EXTRACT_TIME_COLUMN, extractTime);
+	}
+
+	Long creationTime = resultSet.getLong(CREATION_TIME_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "creationTime = " + creationTime);
+
+	if (!resultSet.wasNull()) {
+	  result.put(CREATION_TIME_COLUMN, creationTime);
+	}
+
+	Long providerSeq = resultSet.getLong(PROVIDER_SEQ_COLUMN);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "providerSeq = " + providerSeq);
+
+	if (!resultSet.wasNull()) {
+	  result.put(PROVIDER_SEQ_COLUMN, providerSeq);
+	}
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get AU extraction time";
+      log.error(message, sqle);
+      log.error("auId = '" + auId + "'.");
+      log.error("SQL = '" + GET_AU_MD_QUERY + "'.");
+      log.error("pluginId = '" + pluginId + "'.");
+      log.error("auKey = '" + auKey + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(getAuMetadata);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
   }
 }

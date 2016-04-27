@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
  Copyright (c) 2015-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -237,5 +233,6 @@ public class FuncMetadataMonitorService extends LockssTestCase {
     assertNull(proxy.getPublicationsWithMultiplePids());
     assertNull(proxy.getNoDoiItems());
     assertNull(proxy.getNoAccessUrlItems());
+    assertNull(proxy.getNoItemsAuIds());
   }
 }

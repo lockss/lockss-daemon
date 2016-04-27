@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
  Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -3997,7 +3993,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private Map<String, Collection<String>> getAuIdsWithMultipleDoiPrefixes()
+  public Map<String, Collection<String>> getAuIdsWithMultipleDoiPrefixes()
       throws DbException {
     return getMetadataManagerSql().getAuIdsWithMultipleDoiPrefixes();
   }
@@ -4256,7 +4252,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private Map<String, Collection<String>> getAuIdsWithMultiplePublishers()
+  public Map<String, Collection<String>> getAuIdsWithMultiplePublishers()
       throws DbException {
     return getMetadataManagerSql().getAuIdsWithMultiplePublishers();
   }
@@ -4421,5 +4417,58 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       String issnType) throws DbException {
     return getMetadataManagerSql().deletePublicationIssn(mdItemSeq, issn,
 	issnType);
+  }
+
+  /**
+   * Provides the Archival Units in the database with no metadata items.
+   * 
+   * @return a Collection<String> with the sorted Archival Unit identifiers.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Collection<String> getNoItemsAuIds() throws DbException {
+    return getMetadataManagerSql().getNoItemsAuIds();
+  }
+
+  /**
+   * Provides the metadata information of an Archival Unit.
+   * 
+   * @param auId
+   *          A String with the Archival Unit identifier.
+   * @return a Map<String, Object> with the metadata information of the Archival
+   *         Unit.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, Object> getAuMetadata(String auId) throws DbException {
+    final String DEBUG_HEADER = "getAuMetadata(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
+
+    Map<String, Object> result = null;
+    Connection conn = null;
+
+    try {
+      conn = dbManager.getConnection();
+
+      if (conn == null) {
+	String message = "Cannot get metadata for AU '" + auId
+	    + "' - Cannot connect to database";
+	log.error(message);
+	throw new DbException(message);
+      }
+
+      result = getMetadataManagerSql().getAuMetadata(conn, auId);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "result = '" + result + "'");
+    } catch (DbException dbe) {
+      String message = "Cannot get metadata for AU '" + auId + "'";
+      log.error(message, dbe);
+      throw dbe;
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = '" + result + "'");
+    return result;
   }
 }

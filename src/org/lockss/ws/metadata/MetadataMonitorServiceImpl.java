@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
  Copyright (c) 2015-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -31,6 +27,7 @@
  */
 package org.lockss.ws.metadata;
 
+import static org.lockss.db.SqlConstants.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -43,10 +40,13 @@ import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.PluginManager;
 import org.lockss.util.Logger;
+import org.lockss.util.StringUtil;
+import org.lockss.ws.entities.AuMetadataWsResult;
 import org.lockss.ws.entities.KeyIdNamePairListPair;
 import org.lockss.ws.entities.KeyValueListPair;
 import org.lockss.ws.entities.IdNamePair;
 import org.lockss.ws.entities.LockssWebServicesFault;
+import org.lockss.ws.entities.LockssWebServicesFaultInfo;
 import org.lockss.ws.entities.MetadataItemWsResult;
 import org.lockss.ws.entities.MismatchedMetadataChildWsResult;
 import org.lockss.ws.entities.PkNamePair;
@@ -174,6 +174,53 @@ public class MetadataMonitorServiceImpl implements MetadataMonitorService {
           }
 
           results.add(new KeyValueListPair(prefix, publisherNames));
+        }
+      }
+
+      return results;
+    } catch (Exception e) {
+      throw new LockssWebServicesFault(e);
+    }
+  }
+
+  /**
+   * Provides the DOI prefixes for the Archival Units in the database with
+   * multiple DOI prefixes.
+   * 
+   * @return a List<KeyValueListPair> with the DOI prefixes keyed by the
+   *         Archival Unit identifier.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<KeyValueListPair> getAuIdsWithMultipleDoiPrefixes()
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "getAuIdsWithMultipleDoiPrefixes(): ";
+
+    try {
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Invoked.");
+      List<KeyValueListPair> results = new ArrayList<KeyValueListPair>();
+
+      // Get the DOI prefixes linked to the Archival Units.
+      Map<String, Collection<String>> ausDoiPrefixes =
+	  getMetadataManager().getAuIdsWithMultipleDoiPrefixes();
+
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+  	+ "ausDoiPrefixes.size() = " + ausDoiPrefixes.size());
+
+      // Check whether there are results to display.
+      if (ausDoiPrefixes.size() > 0) {
+        // Yes: Loop through the Archival Unit identifiers.
+        for (String auId : ausDoiPrefixes.keySet()) {
+          if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+          ArrayList<String> prefixes = new ArrayList<String>();
+
+          for (String prefix : ausDoiPrefixes.get(auId)) {
+            if (log.isDebug3()) log.debug3(DEBUG_HEADER + "prefix = " + prefix);
+            prefixes.add(prefix);
+          }
+
+          results.add(new KeyValueListPair(auId, prefixes));
         }
       }
 
@@ -710,6 +757,54 @@ public class MetadataMonitorServiceImpl implements MetadataMonitorService {
    * multiple publishers.
    * 
    * @return a List<KeyValueListPair> with the publishers keyed by the Archival
+   *         Unit identifier.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<KeyValueListPair> getAuIdsWithMultiplePublishers()
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "getAuIdsWithMultiplePublishers(): ";
+
+    try {
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Invoked.");
+      List<KeyValueListPair> results = new ArrayList<KeyValueListPair>();
+
+      // Get the publishers linked to the Archival Units.
+      Map<String, Collection<String>> ausPublishers =
+	  getMetadataManager().getAuIdsWithMultiplePublishers();
+
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "ausPublishers.size() = "
+	  + ausPublishers.size());
+
+      // Check whether there are results to display.
+      if (ausPublishers.size() > 0) {
+        // Yes: Loop through the Archival Unit identifiers.
+        for (String auId : ausPublishers.keySet()) {
+          if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+          ArrayList<String> publishers = new ArrayList<String>();
+
+          for (String publisher : ausPublishers.get(auId)) {
+            if (log.isDebug3())
+              log.debug3(DEBUG_HEADER + "publisher = " + publisher);
+            publishers.add(publisher);
+          }
+
+          results.add(new KeyValueListPair(auId, publishers));
+        }
+      }
+
+      return results;
+    } catch (Exception e) {
+      throw new LockssWebServicesFault(e);
+    }
+  }
+
+  /**
+   * Provides the publishers for the Archival Units in the database with
+   * multiple publishers.
+   * 
+   * @return a List<KeyValueListPair> with the publishers keyed by the Archival
    *         Unit name.
    * @throws LockssWebServicesFault
    */
@@ -949,6 +1044,70 @@ public class MetadataMonitorServiceImpl implements MetadataMonitorService {
       }
 
       return noAccessUrlItems;
+    } catch (Exception e) {
+      throw new LockssWebServicesFault(e);
+    }
+  }
+
+  /**
+   * Provides the Archival Units in the database with no metadata items.
+   * 
+   * @return a List<String> with the sorted Archival Unit names.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public List<String> getNoItemsAuIds() throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "getNoItemsAuIds(): ";
+
+    try {
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Invoked.");
+      return ((List<String>)(getMetadataManager().getNoItemsAuIds()));
+    } catch (Exception e) {
+      throw new LockssWebServicesFault(e);
+    }
+  }
+
+  /**
+   * Provides the metadata information of an archival unit in the system.
+   * 
+   * @param auId
+   *          A String with the identifier of the archival unit.
+   * @return an AuMetadataWsResult with the metadata information of the archival
+   *         unit.
+   * @throws LockssWebServicesFault
+   */
+  @Override
+  public AuMetadataWsResult getAuMetadata(String auId)
+      throws LockssWebServicesFault {
+    final String DEBUG_HEADER = "getAuMetadata(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
+
+    // Input validation.
+    if (StringUtil.isNullString(auId)) {
+      throw new LockssWebServicesFault(
+	  new IllegalArgumentException("Invalid Archival Unit identifier"),
+	  new LockssWebServicesFaultInfo("Archival Unit identifier = " + auId));
+    }
+
+    try {
+      AuMetadataWsResult result = new AuMetadataWsResult();
+      result.setAuId(auId);
+
+      // Get the metadata.
+      Map<String, Object> sqlResult = getMetadataManager().getAuMetadata(auId);
+
+      if (sqlResult != null) {
+	result.setAuMdSeq((Long)sqlResult.get(AU_MD_SEQ_COLUMN));
+	result.setAuSeq((Long)sqlResult.get(AU_SEQ_COLUMN));
+	result.setMdVersion((Integer)sqlResult.get(MD_VERSION_COLUMN));
+	result.setExtractTime((Long)sqlResult.get(EXTRACT_TIME_COLUMN));
+	result.setCreationTime((Long)sqlResult.get(CREATION_TIME_COLUMN));
+	result.setProviderSeq((Long)sqlResult.get(PROVIDER_SEQ_COLUMN));
+      }
+
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+
+      return result;
     } catch (Exception e) {
       throw new LockssWebServicesFault(e);
     }
