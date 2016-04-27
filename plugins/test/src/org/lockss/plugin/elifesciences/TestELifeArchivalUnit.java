@@ -114,11 +114,9 @@ public class TestELifeArchivalUnit extends LockssTestCase {
     
     //excluded
     shouldCacheTest(REAL_ROOT+"panels_ajax_tab/elife_article_figdata/node:51048/1", false, msau,cus);    
+    shouldCacheTest(REAL_ROOT+"panels_ajax_tab/elife_article/node:97986/0", false, msau,cus);    
 
   }
-
-  
-
 
   private void shouldCacheTest(String url, boolean shouldCache,
       ArchivalUnit au, CachedUrlSet cus) {
