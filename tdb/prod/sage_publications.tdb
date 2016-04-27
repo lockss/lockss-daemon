@@ -8861,7 +8861,7 @@
         au < released ; 2012 ; Criminology and Criminal Justice Volume 12 ; 12 >
         au < released ; 2013 ; Criminology and Criminal Justice Volume 13 ; 13 >
         au < released ; 2014 ; Criminology and Criminal Justice Volume 14 ; 14 >
-        au < manifest ; 2015 ; Criminology and Criminal Justice Volume 15 ; 15 >
+        au < ready ; 2015 ; Criminology and Criminal Justice Volume 15 ; 15 >
         au < manifest ; 2016 ; Criminology and Criminal Justice Volume 16 ; 16 >
 
       }
@@ -41693,7 +41693,7 @@ comment[mpj] = now published by Brill
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 2015 ; SAGE Open Nursing Volume 1 ; 1 >
+      au < ready ; 2015 ; SAGE Open Nursing Volume 1 ; 1 >
       au < expected ; 2016 ; SAGE Open Nursing Volume 2 ; 2 >
 
   }
@@ -49434,7 +49434,7 @@ comment[mpj] = now published by Brill
     au < released ; 2012 ; Australian Journal of Career Development Volume 21 ; 21 >
     au < released ; 2013 ; Australian Journal of Career Development Volume 22 ; 22 >
     au < released ; 2014 ; Australian Journal of Career Development Volume 23 ; 23 >
-    au < manifest ; 2015 ; Australian Journal of Career Development Volume 24 ; 24 >
+    au < ready ; 2015 ; Australian Journal of Career Development Volume 24 ; 24 >
     au < manifest ; 2016 ; Australian Journal of Career Development Volume 25 ; 25 >
 
     }
