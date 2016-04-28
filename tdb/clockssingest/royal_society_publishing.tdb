@@ -158,6 +158,7 @@
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Journal of the Royal Society Interface Volume 10 ; 10 ; >
     au < ClockssHWDrupalPlugin ; exists ; exists ; 2014 ; Journal of the Royal Society Interface Volume 11 ; 11 ; >
     au < ClockssHWDrupalPlugin ; expected ; exists ; 2015 ; Journal of the Royal Society Interface Volume 12 ; 12 ; >
+    au < ClockssHWDrupalPlugin ; expected ; exists ; 2016 ; Journal of the Royal Society Interface Volume 13 ; 13 ; >
 
   }
 
@@ -242,6 +243,7 @@
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Notes and Records of the Royal Society Volume 67 ; 67 ; >
     au < ClockssHWDrupalPlugin ; exists ; exists ; 2014 ; Notes and Records the Royal Society Journal of the History of Science Volume 68 ; 68 ; >
     au < ClockssHWDrupalPlugin ; exists ; exists ; 2015 ; Notes and Records the Royal Society Journal of the History of Science Volume 69 ; 69 ; >
+    au < ClockssHWDrupalPlugin ; exists ; exists ; 2016 ; Notes and Records the Royal Society Journal of the History of Science Volume 70 ; 70 ; >
     
   }
 
@@ -472,6 +474,7 @@
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 371 ; 371 ; >
     au < ClockssHWDrupalPlugin ; exists ; exists ; 2014 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 372 ; 372 ; >
     au < ClockssHWDrupalPlugin ; expected ; exists ; 2015 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 373 ; 373 ; >
+    au < ClockssHWDrupalPlugin ; expected ; exists ; 2016 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 374 ; 374 ; >
 
   }
 
@@ -679,6 +682,7 @@
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 368 ; 368 ; >
     au < ClockssHWDrupalPlugin ; exists ; exists ; 2014 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 369 ; 369 ; >
     au < ClockssHWDrupalPlugin ; expected ; exists ; 2015 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 370 ; 370 ; >
+    au < ClockssHWDrupalPlugin ; expected ; exists ; 2016 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 371 ; 371 ; >
 
   }
 

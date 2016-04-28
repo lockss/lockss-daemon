@@ -30178,9 +30178,9 @@
       au < manifest ; exists ; 2007 ; Management & Organizational History Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; Management & Organizational History Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Management & Organizational History Volume 4 ; 4 ; >
-      au < zapped ; finished ; 2010 ; Management & Organizational History Volume 5 ; 5 ; >
-      au < superseded ; down ; 2011 ; Management & Organizational History Volume 6 [superseded] ; 6 ; >
-      au < superseded ; down ; 2012 ; Management & Organizational History Volume 7 [superseded] ; 7 ; >
+      au < zapped ; finished ; 2010 ; Management & Organizational History Volume 5 [Sage] ; 5 ; >
+      au < finished ; crawling ; 2011 ; Management & Organizational History Volume 6 [Sage] ; 6 ; >
+      au < finished ; crawling ; 2012 ; Management & Organizational History Volume 7 [Sage] ; 7 ; >
 
     }
 
@@ -47427,8 +47427,8 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://nan.sagepub.com/
 
-        au < superseded ; finished ; 2013 ; International Journal of Green Nanotechnology Volume 1 [superseded] ; 1 ; >
-        au < superseded ; crawling ; 2014 ; International Journal of Green Nanotechnology Volume 2 [superseded] ; 2 ; >
+        au < finished ; finished ; 2013 ; International Journal of Green Nanotechnology Volume 1 [Sage] ; 1 ; >
+        au < finished ; crawling ; 2014 ; International Journal of Green Nanotechnology Volume 2 [Sage] ; 2 ; >
 
       }
 
