@@ -70,16 +70,30 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.extractor;
 
-import java.util.*;
-import java.net.*;
-import java.io.*;
-
 import org.apache.commons.io.IOUtils;
-import org.htmlparser.util.*;
-
+import org.htmlparser.util.Translate;
+import org.lockss.config.Configuration;
+import org.lockss.config.CurrentConfig;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.util.*;
-import org.lockss.config.*;
+import org.lockss.util.CharRing;
+import org.lockss.util.DataUri;
+import org.lockss.util.HtmlUtil;
+import org.lockss.util.IOUtil;
+import org.lockss.util.Logger;
+import org.lockss.util.ReaderInputStream;
+import org.lockss.util.StringUtil;
+import org.lockss.util.TypedEntryMap;
+import org.lockss.util.UrlUtil;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.Reader;
+import java.io.StringReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.StringTokenizer;
 
 public class GoslingHtmlLinkExtractor implements LinkExtractor {
 
@@ -125,7 +139,8 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
   protected static final String CODEBASE = "codebase";
   protected static final String HREF = "href";
   protected static final String SRC = "src";
-  
+  protected static final String DATA = "data";
+
   /*
           Two Different charset specifications
    4.01: <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -652,7 +667,12 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
       throws IOException, MalformedURLException {
     String returnStr = extractAllLinksFromTag(link, au, cb);
     if (returnStr != null) {
-      resolveAndEmit(cb, returnStr);
+      if(DataUri.isDataUri(returnStr)) {
+        DataUri.dispatchToLinkExtractor(returnStr,baseUrl.toString(),au,cb);
+      }
+      else {
+        resolveAndEmit(cb, returnStr);
+      }
     }
     return true;
   }

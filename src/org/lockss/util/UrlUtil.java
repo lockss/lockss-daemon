@@ -30,20 +30,35 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-import java.io.*;
-import java.net.*;
-import java.util.*;
-import java.util.regex.*;
-
-import javax.servlet.http.HttpServletRequest;
-
-import org.apache.commons.httpclient.*;
-
-import org.lockss.config.*;
+import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.URIException;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.PluginBehaviorException;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.util.urlconn.*;
+import org.lockss.util.urlconn.HttpClientUrlConnection;
+import org.lockss.util.urlconn.JavaHttpUrlConnection;
+import org.lockss.util.urlconn.JavaUrlConnection;
+import org.lockss.util.urlconn.LockssUrlConnection;
+import org.lockss.util.urlconn.LockssUrlConnectionPool;
 import org.springframework.web.util.UriUtils;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringTokenizer;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import javax.servlet.http.HttpServletRequest;
 
 /** Utilities for URLs and URLConnections
  */
@@ -751,6 +766,10 @@ public class UrlUtil {
       throws MalformedURLException {
     possiblyRelativeUrl =
         trimNewlinesAndLeadingWhitespace(possiblyRelativeUrl);
+    if(DataUri.isDataUri(possiblyRelativeUrl)) {
+      // don't encode & don't resolve just return it.
+      return possiblyRelativeUrl;
+    }
     String encodedChild = possiblyRelativeUrl;
     if (minimallyEncode) {
       encodedChild = minimallyEncodeUrl(encodedChild);

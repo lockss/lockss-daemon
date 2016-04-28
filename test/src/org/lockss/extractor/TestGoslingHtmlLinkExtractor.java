@@ -32,11 +32,21 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.extractor;
 
-import java.io.*;
-import java.util.*;
-import org.lockss.util.*;
-import org.lockss.test.*;
-import org.lockss.plugin.*;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.test.ConfigurationUtil;
+import org.lockss.test.LockssTestCase;
+import org.lockss.test.MockArchivalUnit;
+import org.lockss.test.MockCachedUrl;
+import org.lockss.test.StringInputStream;
+import org.lockss.util.Constants;
+import org.lockss.util.ListUtil;
+import org.lockss.util.SetUtil;
+import org.lockss.util.TypedEntryMap;
+
+import java.io.IOException;
+import java.util.HashSet;
+import java.util.Properties;
+import java.util.Set;
 
 public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
 
@@ -108,6 +118,35 @@ public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
     // test parssing the tag with attriutes before the link
     singleTagShouldParse("http://www.example.com/web_link.jpg",
                          "<img\nwidth='280' hight='90' src=", "</img>");
+  }
+
+  public void testDoesNotParsesImageData() throws Exception {
+    String data_uri = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA" +
+        "AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO" +
+        "9TXL0Y4OHwAAAABJRU5ErkJggg==";
+    String src =
+        "<img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA" +
+            "AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO" +
+            "9TXL0Y4OHwAAAABJRU5ErkJggg==\" alt=\"Red dot\" />";
+    singleTagShouldNotParse(data_uri, "<img src=","</img>");
+    assertEquals(SetUtil.set(), parseSingleSource(src));
+  }
+
+  public void testParsesDataUri() throws Exception {
+    String url= "http://www.example.com/link3.html";
+    String data_uri = "data:text/html;charset=utf-8," +
+        "%3Ca+href%3D%22http%3A%2F%2Fwww.example.com%2Flink3.html%22%3Elink3%3C%2Fa%3E";
+    String source =
+        "<html><head><title>Test</title></head><body>"+
+            "<a href=\"" + data_uri + "\">link3</a>";
+    MockArchivalUnit mau = new MockArchivalUnit();
+    mau.setLinkExtractor("text/html", new GoslingHtmlLinkExtractor());
+    MockCachedUrl mcu = new MockCachedUrl("http://www.example.com", mau);
+    mcu.setContent(source);
+    cb.reset();
+    extractor.extractUrls(mau, new StringInputStream(source), ENC,
+        "http://www.example.com", cb);
+    assertEquals(SetUtil.set(url), cb.getFoundUrls());
   }
 
   public void testParsesIFrame() throws IOException {

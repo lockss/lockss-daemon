@@ -42,6 +42,7 @@ import org.lockss.config.CurrentConfig;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.LinkExtractorStatisticsManager;
+import org.lockss.util.DataUri;
 import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 import org.lockss.util.StringUtil;
@@ -322,7 +323,12 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
   public static void checkLink(final Node node, final Callback cb,
                                final String attr) {
     if (node.hasAttr(attr) && !StringUtil.isNullString(node.attr(attr))) {
-      cb.foundLink(node.attr("abs:" + attr));
+      if(DataUri.isDataUri(node.attr(attr))) {
+        cb.foundLink(node.attr(attr));
+      }
+      else {
+        cb.foundLink(node.attr("abs:" + attr));
+      }
     }
   }
 
@@ -664,7 +670,13 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
     public void tagBegin(Node node, ArchivalUnit au, Callback cb) {
       super.tagBegin(node, au, cb);
       for (String attr : m_Attrs) {
-        checkLink(node, cb, attr);
+        if(DataUri.isDataUri(node.attr(attr))) {
+          DataUri.dispatchToLinkExtractor(node.attr(attr),node.baseUri(),au,
+              cb);
+        }
+        else {
+          checkLink(node, cb, attr);
+        }
       }
 
     }
@@ -689,6 +701,10 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
                          final Callback cb) {
       super.tagBegin(node, au, cb);
       m_nodeVisitor.setInScript(true);
+      if(DataUri.isDataUri(node.attr("src"))) {
+        DataUri.dispatchToLinkExtractor(node.attr("src"),node.baseUri(),au,
+            cb);
+      }
       checkLink(node, cb, "src");
     }
 
@@ -719,6 +735,7 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
                           final Callback cb) {
       InputStream in = new ReaderInputStream(new StringReader(text),
                                              m_encoding);
+
       try {
         org.lockss.extractor.LinkExtractor cssExtractor =
             au.getLinkExtractor("text/css");
