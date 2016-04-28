@@ -104,6 +104,11 @@
 
     param[journal_id] = cs
 
+    au < exists ; 2005 ; Crop Science Volume 45 ; 45 >
+    au < exists ; 2006 ; Crop Science Volume 46 ; 46 >
+    au < exists ; 2007 ; Crop Science Volume 47 ; 47 >
+    au < exists ; 2008 ; Crop Science Volume 48 ; 48 >
+    au < exists ; 2009 ; Crop Science Volume 49 ; 49 >
     au < manifest ; 2010 ; Crop Science Volume 50 ; 50 >
     au < manifest ; 2011 ; Crop Science Volume 51 ; 51 >
     au < manifest ; 2012 ; Crop Science Volume 52 ; 52 >
@@ -156,6 +161,11 @@
     
     param[journal_id] = jeq
 
+    au < exists ; 2005 ; Journal of Environmental Quality Volume 34 ; 34 >
+    au < exists ; 2006 ; Journal of Environmental Quality Volume 35 ; 35 >
+    au < exists ; 2007 ; Journal of Environmental Quality Volume 36 ; 36 >
+    au < exists ; 2008 ; Journal of Environmental Quality Volume 37 ; 37 >
+    au < exists ; 2009 ; Journal of Environmental Quality Volume 38 ; 38 >
     au < manifest ; 2010 ; Journal of Environmental Quality Volume 39 ; 39 >
     au < manifest ; 2011 ; Journal of Environmental Quality Volume 40 ; 40 >
     au < manifest ; 2012 ; Journal of Environmental Quality Volume 41 ; 41 >
@@ -179,6 +189,9 @@
     
     param[journal_id] = jpr
 
+    au < exists ; 2007 ; Journal of Plant Registrations Volume 1 ; 1 >
+    au < exists ; 2008 ; Journal of Plant Registrations Volume 2 ; 2 >
+    au < exists ; 2009 ; Journal of Plant Registrations Volume 3 ; 3 >
     au < manifest ; 2010 ; Journal of Plant Registrations Volume 4 ; 4 >
     au < manifest ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 >
     au < manifest ; 2012 ; Journal of Plant Registrations Volume 6 ; 6 >
@@ -218,6 +231,11 @@
     
     param[journal_id] = nse
 
+    au < doNotProcess ; 2005 ; Natural Sciences Education Volume 34 ; 34 > # no issues on manifest page
+    au < exists ; 2006 ; Natural Sciences Education Volume 35 ; 35 >
+    au < exists ; 2007 ; Natural Sciences Education Volume 36 ; 36 >
+    au < exists ; 2008 ; Natural Sciences Education Volume 37 ; 37 >
+    au < exists ; 2009 ; Natural Sciences Education Volume 38 ; 38 >
     au < manifest ; 2010 ; Natural Sciences Education Volume 39 ; 39 >
     au < manifest ; 2011 ; Natural Sciences Education Volume 40 ; 40 >
     au < manifest ; 2012 ; Natural Sciences Education Volume 41 ; 41 >
@@ -262,6 +280,13 @@
     
     param[journal_id] = sh
 
+    au < exists ; 2005 ; Soil Horizons Volume 46 ; 46 >
+    au < exists ; 2006 ; Soil Horizons Volume 47 ; 47 >
+    au < exists ; 2007 ; Soil Horizons Volume 48 ; 48 >
+    au < exists ; 2008 ; Soil Horizons Volume 49 ; 49 >
+    au < exists ; 2009 ; Soil Horizons Volume 50 ; 50 >
+    au < exists ; 2010 ; Soil Horizons Volume 51 ; 51 >
+    au < exists ; 2011 ; Soil Horizons Volume 52 ; 52 >
     au < manifest ; 2012 ; Soil Horizons Volume 53 ; 53 >
     au < manifest ; 2013 ; Soil Horizons Volume 54 ; 54 >
     au < manifest ; 2014 ; Soil Horizons Volume 55 ; 55 >
