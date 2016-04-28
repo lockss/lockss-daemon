@@ -17,7 +17,7 @@
       param[base_url] = http://revista.uft.edu.br/
       param[journal_id] = observatorio
 
-      au < testing ; 2015 ; 1 ; Revista Observatório Volume 2015 ; 2015 ; >
+      au < ready ; 2015 ; 1 ; Revista Observatório Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 2 ; Revista Observatório Volume 2016 ; 2016 ; >
 
   }

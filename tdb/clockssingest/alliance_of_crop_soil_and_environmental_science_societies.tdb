@@ -56,9 +56,9 @@
     au < crawling ; exists ; 2007 ; Agronomy Journal Volume 99 ; 99 ; >
     au < crawling ; exists ; 2008 ; Agronomy Journal Volume 100 ; 100 ; >
     au < crawling ; exists ; 2009 ; Agronomy Journal Volume 101 ; 101 ; >
-    au < testing ; exists ; 2010 ; Agronomy Journal Volume 102 ; 102 ; >
-    au < testing ; exists ; 2011 ; Agronomy Journal Volume 103 ; 103 ; >
-    au < testing ; exists ; 2012 ; Agronomy Journal Volume 104 ; 104 ; >
+    au < notReady ; exists ; 2010 ; Agronomy Journal Volume 102 ; 102 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/aj/articles/102/1/www.usask.ca/agriculture/plantsci/winter_cereals/Winter_wheat/CHAPT10/cvchpt10.php
+    au < notReady ; exists ; 2011 ; Agronomy Journal Volume 103 ; 103 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/aj/articles/103/6/https/attra.ncat.org/attra-pub/summaries/summary.php?pub=87
+    au < testing ; exists ; 2012 ; Agronomy Journal Volume 104 ; 104 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/aj/articles/104/2/agroclimate.org/forestry/wildfire/wildfire.php   
     au < crawling ; exists ; 2013 ; Agronomy Journal Volume 105 ; 105 ; >
     au < finished ; crawling ; 2014 ; Agronomy Journal Volume 106 ; 106 ; >
     au < crawling ; exists ; 2015 ; Agronomy Journal Volume 107 ; 107 ; >
@@ -113,9 +113,9 @@
     au < crawling ; exists ; 2007 ; Crop Science Volume 47 ; 47 ; >
     au < crawling ; exists ; 2008 ; Crop Science Volume 48 ; 48 ; >
     au < crawling ; exists ; 2009 ; Crop Science Volume 49 ; 49 ; >
-    au < testing ; exists ; 2010 ; Crop Science Volume 50 ; 50 ; >
-    au < testing ; exists ; 2011 ; Crop Science Volume 51 ; 51 ; >
-    au < testing ; exists ; 2012 ; Crop Science Volume 52 ; 52 ; >
+    au < notReady ; exists ; 2010 ; Crop Science Volume 50 ; 50 ; > #403 error. likely malformed url.
+    au < notReady ; exists ; 2011 ; Crop Science Volume 51 ; 51 ; > #403 error. likely malformed url.
+    au < notReady ; exists ; 2012 ; Crop Science Volume 52 ; 52 ; > #403 error. likely malformed url.
     au < crawling ; exists ; 2013 ; Crop Science Volume 53 ; 53 ; >
     au < finished ; crawling ; 2014 ; Crop Science Volume 54 ; 54 ; >
     au < crawling ; exists ; 2015 ; Crop Science Volume 55 ; 55 ; >
@@ -171,7 +171,7 @@
     au < crawling ; exists ; 2008 ; Journal of Environmental Quality Volume 37 ; 37 ; >
     au < crawling ; exists ; 2009 ; Journal of Environmental Quality Volume 38 ; 38 ; >
     au < ready ; exists ; 2010 ; Journal of Environmental Quality Volume 39 ; 39 ; >
-    au < testing ; exists ; 2011 ; Journal of Environmental Quality Volume 40 ; 40 ; >
+    au < notReady ; exists ; 2011 ; Journal of Environmental Quality Volume 40 ; 40 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/jeq/articles/40/4/www.losc.lsu.edu/stations.php?Id=msy  
     au < ready ; exists ; 2012 ; Journal of Environmental Quality Volume 41 ; 41 ; >
     au < crawling ; exists ; 2013 ; Journal of Environmental Quality Volume 42 ; 42 ; >
     au < finished ; crawling ; 2014 ; Journal of Environmental Quality Volume 43 ; 43 ; >
@@ -242,7 +242,7 @@
     au < crawling ; exists ; 2008 ; Natural Sciences Education Volume 37 ; 37 ; >
     au < crawling ; exists ; 2009 ; Natural Sciences Education Volume 38 ; 38 ; >
     au < ready ; exists ; 2010 ; Natural Sciences Education Volume 39 ; 39 ; >
-    au < testing ; exists ; 2011 ; Natural Sciences Education Volume 40 ; 40 ; >
+    au < notReady ; exists ; 2011 ; Natural Sciences Education Volume 40 ; 40 ; > #malformed url. 403 Error: https://dl.sciencesocieties.org/publications/nse/articles/40/1/www.nap.edu/openbook.php?record_id=12602&;page=155   
     au < ready ; exists ; 2012 ; Natural Sciences Education Volume 41 ; 41 ; >
     au < finished ; crawling ; 2013 ; Natural Sciences Education Volume 42 ; 42 ; >
     au < finished ; finished ; 2014 ; Natural Sciences Education Volume 43 ; 43 ; >
@@ -322,7 +322,7 @@
     au < manifest ; exists ; 2008 ; Soil Science Society of America Journal Volume 72 ; 72 ; >
     au < manifest ; exists ; 2009 ; Soil Science Society of America Journal Volume 73 ; 73 ; >
     au < notReady ; exists ; 2010 ; Soil Science Society of America Journal Volume 74 ; 74 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/sssaj/articles/74/1/www.rothamsted.ac.uk/aen/smbweb1/methods.php?id=896
-    au < testing ; exists ; 2011 ; Soil Science Society of America Journal Volume 75 ; 75 ; >
+    au < notReady ; exists ; 2011 ; Soil Science Society of America Journal Volume 75 ; 75 ; > #malformed url. 403 error:   https://dl.sciencesocieties.org/publications/sssaj/articles/75/1/lter.kbs.msu.edu/about/experimental_design.php
     au < ready ; exists ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 ; >
     au < finished ; manifest ; 2013 ; Soil Science Society of America Journal Volume 77 ; 77 ; >
     au < finished ; crawling ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 ; >
@@ -349,7 +349,7 @@
     au < crawling ; exists ; 2007 ; Vadose Zone Journal Volume 6 ; 6 ; >
     au < crawling ; exists ; 2008 ; Vadose Zone Journal Volume 7 ; 7 ; >
     au < crawling ; exists ; 2009 ; Vadose Zone Journal Volume 8 ; 8 ; >
-    au < testing ; exists ; 2010 ; Vadose Zone Journal Volume 9 ; 9 ; >
+    au < notReady ; exists ; 2010 ; Vadose Zone Journal Volume 9 ; 9 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/vzj/articles/9/2/www.alglib.net/eigen/symmetric/tdevd.php   
     au < ready ; exists ; 2011 ; Vadose Zone Journal Volume 10 ; 10 ; >
     au < ready ; exists ; 2012 ; Vadose Zone Journal Volume 11 ; 11 ; >
     au < crawling ; exists ; 2013 ; Vadose Zone Journal Volume 12 ; 12 ; >

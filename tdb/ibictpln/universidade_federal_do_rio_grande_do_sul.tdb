@@ -250,7 +250,7 @@
       au < released ; 2010 ; 3 ; Cadernos do Aplicação Volume 2010 ; 2010 ; >
       au < released ; 2011 ; 4 ; Cadernos do Aplicação Volume 2011 ; 2011 ; >
       au < released ; 2012 ; 5 ; Cadernos do Aplicação Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 6 ; Cadernos do Aplicação Volume 2013 ; 2013 ; >
+      au < ready ; 2013 ; 6 ; Cadernos do Aplicação Volume 2013 ; 2013 ; >
       au < expected ; 2014 ; 7 ; Cadernos do Aplicação Volume 2014 ; 2014 ; >
 
   }
@@ -1261,7 +1261,7 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = read
 
-      au < testing ; 2001 ; 7 ; Revista Eletrônica de Administração Volume 2001 ; 2001 ; >
+      au < ready ; 2001 ; 7 ; Revista Eletrônica de Administração Volume 2001 ; 2001 ; >
       au < released ; 2002 ; 8 ; Revista Eletrônica de Administração Volume 2002 ; 2002 ; >
       au < released ; 2003 ; 9 ; Revista Eletrônica de Administração Volume 2003 ; 2003 ; >
       au < released ; 2004 ; 10 ; Revista Eletrônica de Administração Volume 2004 ; 2004 ; >
@@ -1477,13 +1477,13 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = webmosaica
 
-      au < testing ; 2009 ; 1 ; WebMosaica Volume 2009 ; 2009 ; >
-      au < testing ; 2010 ; 2 ; WebMosaica Volume 2010 ; 2010 ; >
-      au < testing ; 2011 ; 3 ; WebMosaica Volume 2011 ; 2011 ; >
-      au < testing ; 2012 ; 4 ; WebMosaica Volume 2012 ; 2012 ; >
-      au < testing ; 2013 ; 5 ; WebMosaica Volume 2013 ; 2013 ; >
-      au < testing ; 2014 ; 6 ; WebMosaica Volume 2014 ; 2014 ; >
-      au < testing ; 2015 ; 7 ; WebMosaica Volume 2015 ; 2015 ; >
+      au < ready ; 2009 ; 1 ; WebMosaica Volume 2009 ; 2009 ; >
+      au < ready ; 2010 ; 2 ; WebMosaica Volume 2010 ; 2010 ; >
+      au < ready ; 2011 ; 3 ; WebMosaica Volume 2011 ; 2011 ; >
+      au < ready ; 2012 ; 4 ; WebMosaica Volume 2012 ; 2012 ; >
+      au < ready ; 2013 ; 5 ; WebMosaica Volume 2013 ; 2013 ; >
+      au < ready ; 2014 ; 6 ; WebMosaica Volume 2014 ; 2014 ; >
+      au < ready ; 2015 ; 7 ; WebMosaica Volume 2015 ; 2015 ; >
       au < expected ; 2016 ; 8 ; WebMosaica Volume 2016 ; 2016 ; >
 
   }
