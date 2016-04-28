@@ -325,6 +325,14 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     doStore("", "invalid_2");
     assertMatchesRE("WarningOnly: v ex 2",
 		    cacher.getInfoException().toString());
+
+    // Store a non-empty version so repository doesn't suppress next empty
+    // store.
+    doStore("not empty", null);
+    expVers.add("not empty");
+
+    expVers.add("");
+
     try {
       doStore("", "invalid_3");
       fail("Should have thrown CacheException.RetryableNetworkException_2");
@@ -341,8 +349,9 @@ public class TestDefaultUrlCacher extends LockssTestCase {
 
     CachedUrl cu = new BaseCachedUrl(mau, TEST_URL);
     CachedUrl[] vers = cu.getCuVersions();
-    assertEquals(4, vers.length);
-    int ix = 3;
+    int expN = 5;
+    assertEquals(expN, vers.length);
+    int ix = expN-1;
     for (CachedUrl ver : vers) {
       assertInputStreamMatchesString(expVers.get(ix--),
 				     ver.getUnfilteredInputStream());

@@ -421,9 +421,9 @@ public class DefaultUrlCacher implements UrlCacher {
 	  validationFailures.addFirst(new ImmutablePair(getUrl(), e));
 	} catch (Exception e) {
 	  logger.debug2("Validation error2", e);
-	  // Unexpected error in validator is last
-	  validationFailures.add(new ImmutablePair(getUrl(),
-						   new ContentValidationException.ValidatorExeception(e)));
+	  // Unexpected error in validator goes first
+	  validationFailures.addFirst(new ImmutablePair(getUrl(),
+							new ContentValidationException.ValidatorExeception(e)));
 	} finally {
 	  cu.release();
 	}

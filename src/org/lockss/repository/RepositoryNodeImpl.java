@@ -1837,17 +1837,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return new UnsealedNodeContents();
   }
 
-  class UnsealedRepositoryNodeImpl extends RepositoryNodeImpl {
-    
-    UnsealedRepositoryNodeImpl(String url, String nodeLocation,
-			       LockssRepositoryImpl repository) {
-      super(url, nodeLocation, repository);
-    }
-    
-  }
-
   class UnsealedNodeContents implements RepositoryNodeContents {
-    List<InputStream> isLst = new ArrayList<InputStream>();
+    List<InputStream> streams = new ArrayList<InputStream>();
 
     @Override
     public InputStream getInputStream() {
@@ -1861,7 +1852,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 					  DEFAULT_MONITOR_INPUT_STREAMS)) {
 	  is = new MonitoringInputStream(is, tempCacheFile.toString());
 	}
-	isLst.add(is);
+	streams.add(is);
 	return is;
       } catch (IOException e) {
 	logger.error("Couldn't get inputstream for tempCacheFile: " +
@@ -1883,10 +1874,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
     @Override
     public void release() {
-      for (InputStream is : isLst) {
+      for (InputStream is : streams) {
         IOUtil.safeClose(is);
       }
-      isLst = new ArrayList<InputStream>();
+      streams = new ArrayList<InputStream>();
     }
   }
 
