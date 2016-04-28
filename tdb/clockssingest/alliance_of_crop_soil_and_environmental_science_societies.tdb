@@ -263,10 +263,10 @@
     
     param[journal_id] = tpg
 
-    au < testing ; exists ; 2008 ; The Plant Genome Volume 1 ; 1 ; >
+    au < notReady ; exists ; 2008 ; The Plant Genome Volume 1 ; 1 ; > #403 error: https://dl.sciencesocieties.org/publications/tpg/supplements/1/1-2-p%20111b.txt
     au < testing ; exists ; 2009 ; The Plant Genome Volume 2 ; 2 ; >
     au < ready ; exists ; 2010 ; The Plant Genome Volume 3 ; 3 ; >
-    au < testing ; exists ; 2011 ; The Plant Genome Volume 4 ; 4 ; >
+    au < notReady ; exists ; 2011 ; The Plant Genome Volume 4 ; 4 ; > #malformed url: https://dl.sciencesocieties.org/publications/tpg/articles/4/1/www.phytozome.net/soybean.php
     au < ready ; exists ; 2012 ; The Plant Genome Volume 5 ; 5 ; >
     au < finished ; finished ; 2013 ; The Plant Genome Volume 6 ; 6 ; >
     au < crawling ; exists ; 2014 ; The Plant Genome Volume 7 ; 7 ; >
@@ -294,7 +294,7 @@
     au < crawling ; exists ; 2009 ; Soil Horizons Volume 50 ; 50 ; >
     au < ready ; exists ; 2010 ; Soil Horizons Volume 51 ; 51 ; >
     au < ready ; exists ; 2011 ; Soil Horizons Volume 52 ; 52 ; >
-    au < testing ; exists ; 2012 ; Soil Horizons Volume 53 ; 53 ; >
+    au < notReady ; exists ; 2012 ; Soil Horizons Volume 53 ; 53 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/sh/articles/53/5/www.phdcomics.com/comics.php
     au < crawling ; exists ; 2013 ; Soil Horizons Volume 54 ; 54 ; >
     au < finished ; manifest ; 2014 ; Soil Horizons Volume 55 ; 55 ; >
     au < crawling ; exists ; 2015 ; Soil Horizons Volume 56 ; 56 ; >
@@ -321,7 +321,7 @@
     au < manifest ; exists ; 2007 ; Soil Science Society of America Journal Volume 71 ; 71 ; >
     au < manifest ; exists ; 2008 ; Soil Science Society of America Journal Volume 72 ; 72 ; >
     au < manifest ; exists ; 2009 ; Soil Science Society of America Journal Volume 73 ; 73 ; >
-    au < testing ; exists ; 2010 ; Soil Science Society of America Journal Volume 74 ; 74 ; >
+    au < notReady ; exists ; 2010 ; Soil Science Society of America Journal Volume 74 ; 74 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/sssaj/articles/74/1/www.rothamsted.ac.uk/aen/smbweb1/methods.php?id=896
     au < testing ; exists ; 2011 ; Soil Science Society of America Journal Volume 75 ; 75 ; >
     au < ready ; exists ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 ; >
     au < finished ; manifest ; 2013 ; Soil Science Society of America Journal Volume 77 ; 77 ; >

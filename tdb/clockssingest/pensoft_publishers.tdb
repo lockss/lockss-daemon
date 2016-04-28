@@ -103,9 +103,9 @@
     
     param[au_oai_set] = ijm
     param[base_url] = http://ijm.pensoft.net/
-    #notReady: V2011, no substance.
+    #notReady: V2011, no substance?
     
-    au < notReady ; exists ; 2011 ; 2011 ; International Journal of Myriapodology Volumes 4-6 ; 4-6 ; >
+    au < exists ; exists ; 2011 ; 2011 ; International Journal of Myriapodology Volumes 4-6 ; 4-6 ; >
     au < crawling ; exists ; 2012 ; 2012 ; International Journal of Myriapodology Volume 7 ; 7 ; >
 
    }
