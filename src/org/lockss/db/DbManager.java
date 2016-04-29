@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
  Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -1027,8 +1023,9 @@ public class DbManager extends BaseLockssDaemonManager
 	log.debug3(DEBUG_HEADER + "databaseName = " + databaseName);
 
       try {
-      // Create the schema if it does not exist.
-	dbManagerSql.createPostgresqlSchemaIfMissing(databaseName, dataSource);
+	// Create the schema if it does not exist.
+	dbManagerSql.createPostgresqlSchemaIfMissing(dataSourceUser,
+	    dataSource);
       } catch (SQLException sqle) {
 	String msg = "Error creating PostgreSQL schema if missing";
 	log.error(msg, sqle);
