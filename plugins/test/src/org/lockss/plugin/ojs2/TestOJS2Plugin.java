@@ -34,9 +34,13 @@ package org.lockss.plugin.ojs2;
 
 import java.net.*;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.lockss.test.*;
 import org.lockss.util.ListUtil;
+import org.lockss.util.PatternFloatMap;
+import org.lockss.util.RegexpUtil;
 import org.lockss.plugin.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
@@ -49,6 +53,12 @@ public class TestOJS2Plugin extends LockssTestCase {
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String JOURNAL_ID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
   static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
+  
+  // from au_url_poll_result_weight in plugins/src/org/lockss/plugin/ojs2/OJS2Plugin.xml
+  // Note diff: java regex & vs. xml &amp;
+  // if it changes in the plugin, you will likely need to change the test, so verify
+  static final String  OJS2_REPAIR_FROM_PEER_REGEXP = 
+      "/(lib|site|images|js|public|ads)/.+[.](css|gif|png|jpe?g|js)([?]((itok|v)=)?[^&]+)?$";
   
   private MockLockssDaemon theDaemon;
   private DefinablePlugin plugin;
@@ -283,6 +293,61 @@ public class TestOJS2Plugin extends LockssTestCase {
   private void shouldCacheTest(String url, boolean shouldCache, ArchivalUnit au) {
     log.info ("shouldCacheTest url: " + url);
     assertEquals(shouldCache, au.shouldBeCached(url));
+  }
+  
+  public void testPollSpecial() throws Exception {
+    String ROOT_URL = "http://www.example.com/";
+    Properties props = new Properties();
+    props.setProperty(BASE_URL_KEY, ROOT_URL);
+    props.setProperty(JOURNAL_ID_KEY, "asdf");
+    props.setProperty(YEAR_KEY, "2014");
+    DefinableArchivalUnit au = null;
+    try {
+      au = makeAuFromProps(props);
+    }
+    catch (ConfigurationException ex) {
+    }
+    theDaemon.getLockssRepository(au);
+    
+    // if it changes in the plugin, you will likely need to change the test, so verify
+    assertEquals(ListUtil.list(
+        OJS2_REPAIR_FROM_PEER_REGEXP),
+        RegexpUtil.regexpCollection(au.makeRepairFromPeerIfMissingUrlPatterns()));
+    
+    // make sure that's the regexp that will match to the expected url string
+    // this also tests the regexp (which is the same) for the weighted poll map
+    // Add to pattern these urls? Has not been seen as problem, yet
+    //  "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML",
+    //  "https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js",
+    //  "https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js",
+    //  ROOT_URL + "global/styles/common.css",
+    //  ROOT_URL + "styles/common.css",
+    
+    List <String> repairList = ListUtil.list(
+        ROOT_URL + "public/journals/1/cover_issue_50_en_US.jpg",
+        ROOT_URL + "global/images/button_facebook.png",
+        ROOT_URL + "global/images/icon_mendeley_16x16b.gif",
+        ROOT_URL + "global/js/opentip-jquery-excanvas.js",
+        ROOT_URL + "lib/pkp/js/functions/jqueryValidatorI18n.js",
+        ROOT_URL + "lib/pkp/styles/lib/jqueryUi/images/ui-bg_glass_95_fef1ec_1x400.png",
+        ROOT_URL + "templates/images/progbg.gif",
+        ROOT_URL + "submission/public/journals/2/cover_issue_3_en_US.jpg",
+        ROOT_URL + "public/site/crosscheck_it_trans1.gif");
+     Pattern p = Pattern.compile(OJS2_REPAIR_FROM_PEER_REGEXP);
+     for (String urlString : repairList) {
+       Matcher m = p.matcher(urlString);
+       assertEquals(urlString, true, m.find());
+     }
+     //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
+     String notString = ROOT_URL + "index.php/aa/about/editorialPolicies";
+     Matcher m = p.matcher(notString);
+     assertEquals(false, m.find());
+     
+    PatternFloatMap urlPollResults = au.makeUrlPollResultWeightMap();
+    assertNotNull(urlPollResults);
+    for (String urlString : repairList) {
+      assertEquals(0.0, urlPollResults.getMatch(urlString), .0001);
+    }
   }
   
 }
