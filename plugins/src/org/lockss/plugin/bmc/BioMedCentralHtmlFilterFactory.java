@@ -72,7 +72,7 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
       // right-hand area next to the article - Extreme Hash filtering!
       HtmlNodeFilters.tagWithAttribute("div", "id", "article-navigation-bar"),
       // alert signup - Extreme Hash filtering!
-      HtmlNodeFilters.tagWithAttribute("div", "class", "article-alert-signup-div"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "-signup"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "primary-content hide-on-print"),
       // Extreme Hash filtering!
       HtmlNodeFilters.tagWithAttribute("div", "class", "wrap-nav"),
