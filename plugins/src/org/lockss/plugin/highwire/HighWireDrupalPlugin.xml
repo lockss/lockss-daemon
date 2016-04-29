@@ -27,7 +27,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>33</string>
+    <string>34</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -38,7 +38,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>19</string>
+        <string>20</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -116,7 +116,7 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://%s/content(?:/[^0-9][^/]+)?/[0-9]+/(?:(?:[0-9]+|bmj)(?:/[^/.]+|\.toc|\.[^/.]+)?(?:/related)?|[^/.]+)$", url_host(base_url)</string>
+      <string>1,"^https?://%s/content(?:/[^0-9][^/]+)?/[0-9]+/(?:(?:[0-9]+|bmj)(?:/[^/.]+(?:\.[0-9]+)?|\.toc|\.[^/.]+)?(?:/related)?|[^/.]+)$", url_host(base_url)</string>
       <string>1,"^https?://%s/content(?:/[^0-9][^/]+)?/[0-9]+/(?:(?:suppl_)?([0-9]+/|bmj\.))?[^/]+\.(?:long|figures-only|full(?:-text)?\.pdf)(?:\+html)?$", url_host(base_url)</string>
       <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
       <string>1,"^https?://%s/content(?:/[^0-9][^/]+)?/[^/]+/suppl/", url_host(base_url)</string>
