@@ -202,6 +202,6 @@
   <entry>
     <!-- these will not count towards poll results but will replicate from peer if above 1.69.5 -->
     <string>au_url_poll_result_weight</string>
-    <string>(\.(css|js)|-toc.gif|/images/.+\.(png|gif))$</string>
+    <string>"(\.(css|js)|-toc.gif|/images/.+\.(png|gif))$", 0</string>
   </entry>
 </map>
