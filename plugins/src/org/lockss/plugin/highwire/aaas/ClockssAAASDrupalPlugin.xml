@@ -8,6 +8,10 @@
     <string>org.lockss.plugin.highwire.aaas.ClockssAAASDrupalPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>plugin_name</string>
     <string>American Association for the Advancement of Science Plugin (CLOCKSS)</string>
   </entry>
@@ -18,10 +22,6 @@
   <entry>
     <string>plugin_parent_version</string>
     <string>34</string>
-  </entry>
-  <entry>
-    <string>plugin_version</string>
-    <string>1</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
