@@ -264,7 +264,7 @@
     param[journal_id] = tpg
 
     au < notReady ; exists ; 2008 ; The Plant Genome Volume 1 ; 1 ; > #403 error: https://dl.sciencesocieties.org/publications/tpg/supplements/1/1-2-p%20111b.txt
-    au < testing ; exists ; 2009 ; The Plant Genome Volume 2 ; 2 ; >
+    au < ready ; exists ; 2009 ; The Plant Genome Volume 2 ; 2 ; >
     au < ready ; exists ; 2010 ; The Plant Genome Volume 3 ; 3 ; >
     au < notReady ; exists ; 2011 ; The Plant Genome Volume 4 ; 4 ; > #malformed url: https://dl.sciencesocieties.org/publications/tpg/articles/4/1/www.phytozome.net/soybean.php
     au < ready ; exists ; 2012 ; The Plant Genome Volume 5 ; 5 ; >
