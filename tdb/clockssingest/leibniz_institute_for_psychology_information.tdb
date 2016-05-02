@@ -83,7 +83,7 @@
       param[journal_id] = jnc
 
       au < crawling ; exists ; 2015 ; Journal of Numerical Cognition Volume 1 ; 1 ; 2015 ; >
-      au < expected ; exists ; 2016 ; Journal of Numerical Cognition Volume 2 ; 2 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; Journal of Numerical Cognition Volume 2 ; 2 ; 2016 ; >
 
   }
 
@@ -116,7 +116,7 @@
       au < crawling ; exists ; 2013 ; Psychological Thought Volume 6 ; 6 ; 2013 ; >
       au < finished ; finished ; 2014 ; Psychological Thought Volume 7 ; 7 ; 2014 ; >
       au < crawling ; exists ; 2015 ; Psychological Thought Volume 8 ; 8 ; 2015 ; >
-      au < expected ; exists ; 2016 ; Psychological Thought Volume 9 ; 9 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; Psychological Thought Volume 9 ; 9 ; 2016 ; >
 
   }
 
