@@ -199,6 +199,7 @@ while (my $line = <>) {
 
   } elsif ($plugin eq "ClockssOUPDrupalPlugin" ||
            $plugin eq "ClockssAPSDrupalPlugin" ||
+           $plugin eq "ClockssAAASDrupalPlugin" ||
            $plugin eq "ClockssHWDrupalPlugin") {
         $url = sprintf("%sclockss-manifest/vol_%s_manifest.html",
             $param{base_url}, $param{volume_name});
