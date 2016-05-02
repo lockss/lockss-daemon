@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>19</string>
+    <string>20</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>11</string>
+        <string>12</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -177,10 +177,10 @@
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
-    <string>messages[.]js$</string>
+    <string>(/js/.+|messages)[.]js$</string>
   </entry>
   <entry>
-    <string>au_exclude_urls_from_polls_pattern</string>
-    <string>(/js/.+|messages)[.]js$</string>
+    <string>au_url_poll_result_weight</string>
+    <string>"(/js/.+|messages)[.]js$", 0</string>
   </entry>
 </map>

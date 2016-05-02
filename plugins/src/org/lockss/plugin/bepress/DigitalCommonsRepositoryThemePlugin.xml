@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -28,7 +28,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>3</string>
+        <string>4</string>
       </entry>
     </map>
   </entry>
@@ -137,6 +137,14 @@
     <list>
       <string>"^%sassets/", base_url</string> <!-- images, stylesheets, Javascript -->
       <string>"^%s[^/]+\.css$", base_url</string> <!-- stylesheets -->
+    </list>
+  </entry>
+  <entry>
+    <!-- these will not count towards poll results but will replicate from peer if above -->
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>"^%sassets/", base_url, 0</string> <!-- images, stylesheets, Javascript -->
+      <string>"^%s[^/]+\.css$", base_url, 0</string> <!-- stylesheets -->
     </list>
   </entry>
   <entry>

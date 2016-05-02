@@ -14,7 +14,7 @@
   <entry>
     <!-- allows for multiple journals under peerj host, but no preprints -->
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <!-- to use new feature of HtmlNodeFilters in the html hash filter - allExceptSubtree() -->
@@ -30,7 +30,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -210,7 +210,7 @@
     <string>/((css|js)/[^.]+[.](css|js)|images/.+[.](jpg|gif|png))$</string>
   </entry>
   <entry>
-    <string>au_exclude_urls_from_polls_pattern</string>
-    <string>/((css|js)/[^.]+[.](css|js)|images/.+[.](jpg|gif|png))$</string>
+    <string>au_url_poll_result_weight</string>
+    <string>"/((css|js)/[^.]+[.](css|js)|images/.+[.](jpg|gif|png))$", 0</string>
   </entry>
 </map>

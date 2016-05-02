@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,6 +33,10 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.igiglobal;
 
 
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.RangeCachedUrlSetSpec;
@@ -43,6 +47,8 @@ import org.lockss.state.AuState;
 import org.lockss.test.*;
 import org.lockss.util.Constants;
 import org.lockss.util.ListUtil;
+import org.lockss.util.PatternFloatMap;
+import org.lockss.util.RegexpUtil;
 import org.lockss.util.TimeBase;
 
 public class TestIgiGlobalPlugin extends LockssPluginTestCase {
@@ -59,6 +65,12 @@ public class TestIgiGlobalPlugin extends LockssPluginTestCase {
 										 		BASE_URL_KEY, BASE_URL,
 										 		VOLUME_NUMBER_KEY, VOLUME,
 										 		JOURNAL_ISSN_KEY, JOURNAL_ISSN);
+	
+	// from au_url_poll_result_weight in plugins/src/org/lockss/plugin/igiglobal/IgiGlobalPlugin.xml
+	// if it changes in the plugin, you will likely need to change the test, so verify
+	static final String  IGI_REPAIR_FROM_PEER_REGEXP1 = "[^/]+/(images|sourcecontent)/.*[.](bmp|gif|ico|jpe?g|png|tif?f)$";
+	static final String  IGI_REPAIR_FROM_PEER_REGEXP2 = "[.](css|js)$";
+
   public void setUp() throws Exception {
     super.setUp();
   }
@@ -80,7 +92,7 @@ public class TestIgiGlobalPlugin extends LockssPluginTestCase {
   public void testCreateAu() {
 
 	    try {
-	      ArchivalUnit au = createAu(ConfigurationUtil.fromArgs(
+	      createAu(ConfigurationUtil.fromArgs(
 	    		  						BASE_URL_KEY, BASE_URL,
 	    		  						VOLUME_NUMBER_KEY, VOLUME));
 	      fail("Bad AU configuration should throw configuration exception");
@@ -186,4 +198,50 @@ public class TestIgiGlobalPlugin extends LockssPluginTestCase {
 	    assertEquals("IGI Global Journals Plugin, Base URL " + BASE_URL + ", Journal ISSN " + JOURNAL_ISSN + ", Volume " + VOLUME, au.getName());
 	  }
 
+	  public void testPollSpecial() throws Exception {
+	    ArchivalUnit au = createAu();
+	    
+	    // if it changes in the plugin, you will likely need to change the test, so verify
+	    assertEquals(ListUtil.list(
+	        IGI_REPAIR_FROM_PEER_REGEXP1, IGI_REPAIR_FROM_PEER_REGEXP2),
+	        RegexpUtil.regexpCollection(au.makeRepairFromPeerIfMissingUrlPatterns()));
+	    
+	    // make sure that's the regexp that will match to the expected url string
+	    // this also tests the regexp (which is the same) for the weighted poll map
+	    // Add to pattern these urls? Has not been seen as problem, yet
+	    //  http://www.igi-global.com/favicon.ico
+	    
+	    List <String> repairList1 = ListUtil.list(
+	        BASE_URL + "sourcecontent/9781466601161_58264/978-1-4666-0116-1.ch002.f01.png",
+                BASE_URL + "images/workflow-wizard-hand-circle-medium-gray.png",
+                BASE_URL + "jQuery/css/blitzer/images/ui-icons_004276_256x240.png",
+                BASE_URL + "images/erl-2015.png");
+	    Pattern p = Pattern.compile(IGI_REPAIR_FROM_PEER_REGEXP1);
+	    for (String urlString : repairList1) {
+	      Matcher m = p.matcher(urlString);
+	      assertEquals(urlString, true, m.find());
+	    }
+	    List <String> repairList2 = ListUtil.list(
+	        BASE_URL + "includes/gateway.61113.js",
+	        BASE_URL + "includes/main.02052016.css",
+	        BASE_URL + "Scripts/tipped/tipped.css",
+	        BASE_URL + "Scripts/tipped/tipped.js");
+	    p = Pattern.compile(IGI_REPAIR_FROM_PEER_REGEXP2);
+	    for (String urlString : repairList2) {
+	      Matcher m = p.matcher(urlString);
+	      assertEquals(urlString, true, m.find());
+	    }
+	    
+	    //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
+	    String notString = BASE_URL + "favicon.ico";
+	    Matcher m = p.matcher(notString);
+	    assertEquals(false, m.find());
+	    
+	    PatternFloatMap urlPollResults = au.makeUrlPollResultWeightMap();
+	    assertNotNull(urlPollResults);
+	    for (String urlString : repairList2) {
+	      assertEquals(0.0, urlPollResults.getMatch(urlString), .0001);
+	    }
+	  }
+	  
 }

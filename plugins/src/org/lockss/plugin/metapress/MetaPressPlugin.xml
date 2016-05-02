@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>24</string>
+    <string>25</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>14</string>
+        <string>15</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -175,8 +175,9 @@ export.mpx line is for citation information; mode is ris, txt, etc.; dynamic-fil
     <string>/dynamic-file[.]axd[?]id=</string>
   </entry>
   <entry>
-    <string>au_exclude_urls_from_polls_pattern</string>
-    <string>/dynamic-file[.]axd[?]id=</string>
+    <!-- these will not count towards poll results but will replicate from peer if above -->
+    <string>au_url_poll_result_weight</string>
+    <string>"/dynamic-file[.]axd[?]id=", 0</string>
   </entry>
   <entry>
     <string>au_refetch_depth</string>

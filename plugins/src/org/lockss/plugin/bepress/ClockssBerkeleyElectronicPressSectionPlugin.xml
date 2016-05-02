@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>34</string>
+    <string>35</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -21,11 +21,11 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>34</string>
+    <string>35</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Digital Commons Plugin (Serials by Section for CLOCKSS), Base URL %s, Journal Code %s, Journal Section %s, Volume %d&quot;, base_url, journal_abbr, journal_section, volume</string>
+    <string>"Digital Commons Plugin (Serials by Section for CLOCKSS), Base URL %s, Journal Code %s, Journal Section %s, Volume %d", base_url, journal_abbr, journal_section, volume</string>
   </entry>
   <entry>
     <string>clockss_override</string>

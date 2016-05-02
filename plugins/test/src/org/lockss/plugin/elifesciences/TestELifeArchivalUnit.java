@@ -31,14 +31,14 @@ package org.lockss.plugin.elifesciences;
 
 import java.net.URL;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import org.apache.commons.lang.StringUtils;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.plugin.definable.*;
-import org.lockss.state.AuState;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -52,7 +52,9 @@ public class TestELifeArchivalUnit extends LockssTestCase {
 
   static final String PLUGIN_ID = "org.lockss.plugin.elifesciences.ELifeSciencesPlugin";
   static final String PluginName = "eLife Sciences Plugin";
-
+  
+  static final String  METAPRESS_REPAIR_FROM_PEER_REGEXP = "sites/default/files/(css|js)/(css|js)_[^/]+\\.(css|js)$";
+  
   public void setUp() throws Exception {
     super.setUp();
     setUpDiskSpace();
@@ -140,7 +142,46 @@ public class TestELifeArchivalUnit extends LockssTestCase {
     //eLife Sciences Plugin, Base URL %s, Month %s
     assertEquals(PluginName + ", Base URL http://www.ajrnl.com/, Month 2012/03", au.getName());
   }
-
- 
+  
+  public void testPollSpecial() throws Exception {
+    String REAL_ROOT= "http://elifesciences.org/";
+    String OTHER_ROOT = "https://elife-publishing-cdn.s3.amazonaws.com/";
+    String OTHER_OTHER_ROOT = "http://cdn.elifesciences.org/";
+    
+    URL base = new URL(REAL_ROOT);
+    ArchivalUnit  au = makeAu(base, "2015/04");
+    
+    // if it changes in the plugin, you will likely need to change the test, so verify
+    assertEquals(ListUtil.list(
+        METAPRESS_REPAIR_FROM_PEER_REGEXP),
+        RegexpUtil.regexpCollection(au.makeRepairFromPeerIfMissingUrlPatterns()));
+    
+    // make sure that's the regexp that will match to the expected url string
+    // this also tests the regexp (which is the same) for the weighted poll map
+    List <String> repairList = ListUtil.list(
+        REAL_ROOT + "sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css",
+        REAL_ROOT + "sites/default/files/js/js_9xhttD4CLtluGwHnuEz_uVz7OnsXLXJ3WZVHYkHd3kI.js",
+        OTHER_ROOT + "sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css",
+        OTHER_ROOT + "sites/default/files/js/js_9xhttD4CLtluGwHnuEz_uVz7OnsXLXJ3WZVHYkHd3kI.js",
+        OTHER_OTHER_ROOT + "sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css",
+        OTHER_OTHER_ROOT + "sites/default/files/js/js_9xhttD4CLtluGwHnuEz_uVz7OnsXLXJ3WZVHYkHd3kI.js");
+    Pattern p = Pattern.compile(METAPRESS_REPAIR_FROM_PEER_REGEXP);
+    for (String urlString : repairList) {
+      Matcher m = p.matcher(urlString);
+      assertEquals(urlString, true, m.find());
+    }
+    
+    //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
+    String notString = REAL_ROOT + "print.css";
+    Matcher m = p.matcher(notString);
+    assertEquals(false, m.find());
+    
+    PatternFloatMap urlPollResults = au.makeUrlPollResultWeightMap();
+    assertNotNull(urlPollResults);
+    for (String urlString : repairList) {
+      assertEquals(0.0, urlPollResults.getMatch(urlString), .0001);
+    }
+  }
+  
 }
 

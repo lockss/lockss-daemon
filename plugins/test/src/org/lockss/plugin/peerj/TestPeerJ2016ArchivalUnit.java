@@ -33,7 +33,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.peerj;
 
 import java.net.URL;
+import java.util.List;
 import java.util.Properties;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.RangeCachedUrlSetSpec;
@@ -46,7 +50,10 @@ import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockLockssDaemon;
 import org.lockss.test.MockLockssUrlConnection;
+import org.lockss.util.ListUtil;
 import org.lockss.util.Logger;
+import org.lockss.util.PatternFloatMap;
+import org.lockss.util.RegexpUtil;
 import org.lockss.util.urlconn.CacheException;
 import org.lockss.util.urlconn.HttpResultMap;
 import org.lockss.util.urlconn.CacheException.RetrySameUrlException;
@@ -59,7 +66,12 @@ public class TestPeerJ2016ArchivalUnit extends LockssTestCase {
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String JID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
-  static final String ROOT_URL = "https://peerj.com/"; 
+  static final String ROOT_URL = "https://peerj.com/";
+  
+  // from au_url_poll_result_weight in plugins/src/org/lockss/plugin/peerj/PeerJ2016Plugin.xml
+  // if it changes in the plugin, you will likely need to change the test, so verify
+  static final String  PEERJ_REPAIR_FROM_PEER_REGEXP = 
+      "/((css|js)/[^.]+[.](css|js)|images/.+[.](jpg|gif|png))$";
 
   private static final Logger log = Logger.getLogger(TestPeerJ2016ArchivalUnit.class);
 
@@ -241,6 +253,39 @@ public class TestPeerJ2016ArchivalUnit extends LockssTestCase {
       ArchivalUnit au, CachedUrlSet cus) {
     //log.info ("shouldCacheTest url: " + url);
     assertEquals(shouldCache, au.shouldBeCached(url));
+  }
+  
+  public void testPollSpecial() throws Exception {
+    String ROOT_URL = "http://www.example.com/";
+    URL base = new URL(ROOT_URL);
+    ArchivalUnit PJAu = makeAu(base, "2014", "peerj");
+    theDaemon.getLockssRepository(PJAu);
+    
+    // if it changes in the plugin, you will likely need to change the test, so verify
+    assertEquals(ListUtil.list(
+        PEERJ_REPAIR_FROM_PEER_REGEXP),
+        RegexpUtil.regexpCollection(PJAu.makeRepairFromPeerIfMissingUrlPatterns()));
+    
+    // make sure that's the regexp that will match to the expected url string
+    // this also tests the regexp (which is the same) for the weighted poll map
+    List <String> repairList = ListUtil.list(
+        ROOT_URL + "css/ffc05d8-5868266.css",
+        ROOT_URL + "js/2fdf27f-295bb34.js");
+     Pattern p = Pattern.compile(PEERJ_REPAIR_FROM_PEER_REGEXP);
+     for (String urlString : repairList) {
+       Matcher m = p.matcher(urlString);
+       assertEquals(urlString, true, m.find());
+     }
+     //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
+     String notString = ROOT_URL + "assets/icomoon/fonts/icomoon.woff?-90lpjv";
+     Matcher m = p.matcher(notString);
+     assertEquals(false, m.find());
+     
+    PatternFloatMap urlPollResults = PJAu.makeUrlPollResultWeightMap();
+    assertNotNull(urlPollResults);
+    for (String urlString : repairList) {
+      assertEquals(0.0, urlPollResults.getMatch(urlString), .0001);
+    }
   }
   
 }

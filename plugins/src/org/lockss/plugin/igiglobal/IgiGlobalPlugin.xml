@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>22</string>
+    <string>23</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>12</string>
+        <string>13</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -153,10 +153,14 @@
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
-    <string>[^/]+/(images|sourcecontent)/.*[.](bmp|gif|ico|jpe?g|png|tif?f)$</string>
+    <list>
+      <string>[^/]+/(images|sourcecontent)/.*[.](bmp|gif|ico|jpe?g|png|tif?f)$</string>
+      <string>[.](css|js)$</string>
+    </list>
   </entry>
   <entry>
-    <string>au_exclude_urls_from_polls_pattern</string>
-    <string>[.](css|js)$</string>
+    <!-- these will not count towards poll results but will replicate from peer if above 1.69.5 -->
+    <string>au_url_poll_result_weight</string>
+    <string>"[.](css|js)$", 0</string>
   </entry>
 </map>

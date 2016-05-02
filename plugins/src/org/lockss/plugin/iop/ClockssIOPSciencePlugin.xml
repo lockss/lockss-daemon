@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>40</string>
+    <string>41</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -21,7 +21,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>27</string>
+        <string>28</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -167,26 +167,30 @@
     <!-- We do not poll for download figures at all,
          we never should have collected them, plus they seem to change
          either over time or depending on the server -->
+    <!-- Should not have collected /refs -->
     <string>au_exclude_urls_from_polls_pattern</string>
-    <string>/download(HR)?Figure/figure/</string>
+    <list>
+      <string>/download(HR)?Figure/figure/</string>
+      <string>/refs$</string>
+    </list>
   </entry>
   <entry>
     <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
          org.lockss.crawler.allowedPluginPermittedHosts -->
     <string>au_permitted_host_pattern</string>
-    <string>cdn[.]mathjax[.]org|cdn[^.]*[.]iopscience[.]com</string>
+    <list>
+      <string>.+\.mathjax\.org</string>
+      <string>cdn[^.]*[.]iopscience[.]com</string>
+    </list>
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <string>/(css|js)/[^?]+[.](css|js|png)$</string>
   </entry>
   <entry>
-    <!-- This will be changed to au_exclude_urls_from_poll_results_pattern
-         at some point in the future.
-         At which point if au_exclude_urls_from_polls_pattern is still supported
-         remove "/download(HR)?Figure/figure" -->
-    <string>au_exclude_urls_from_polls_pattern</string>
-    <string>/((css|js)/[^?]+[.](css|js|png)$|refs$|download(HR)?Figure/figure/)</string>
+    <!-- these will not count towards poll results but will replicate from peer if above 1.69.5 -->
+    <string>au_url_poll_result_weight</string>
+    <string>"/(css|js)/[^?]+[.](css|js|png)$", 0</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
