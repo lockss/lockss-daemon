@@ -61,7 +61,7 @@
       au < doNotProcess ; 2008 ; The Analyst Volume 133 ; 133 ; 2008 >
       au < doNotProcess ; 2009 ; The Analyst Volume 134 ; 134 ; 2009 >
       au < manifest ; 2010 ; The Analyst Volume 135 ; 135 ; 2010 >
-      au < manifest ; 2011 ; The Analyst Volume 136 ; 136 ; 2011 >
+      au < ready ; 2011 ; The Analyst Volume 136 ; 136 ; 2011 >
       au < ready ; 2012 ; The Analyst Volume 137 ; 137 ; 2012 >
       au < released ; 2013 ; The Analyst Volume 138 ; 138 ; 2013 >
       au < ready ; 2014 ; The Analyst Volume 139 ; 139 ; 2014 >
@@ -119,7 +119,7 @@
       param[base_url2] = http://www.rsc.org/
       
       au < released ; 2010 ; Analytical Methods Volume 2 ; 2 ; 2010 >
-      au < manifest ; 2011 ; Analytical Methods Volume 3 ; 3 ; 2011 >
+      au < ready ; 2011 ; Analytical Methods Volume 3 ; 3 ; 2011 >
       au < released ; 2012 ; Analytical Methods Volume 4 ; 4 ; 2012 >
       au < released ; 2013 ; Analytical Methods Volume 5 ; 5 ; 2013 >
       au < ready ; 2014 ; Analytical Methods Volume 6 ; 6 ; 2014 >
@@ -296,7 +296,7 @@
       param[base_url2] = http://www.rsc.org/
       
       au < manifest ; 2010 ; Chemical Communications Volume 46 ; 46 ; 2010 >
-      au < manifest ; 2011 ; Chemical Communications Volume 47 ; 47 ; 2011 >
+      au < ready ; 2011 ; Chemical Communications Volume 47 ; 47 ; 2011 >
       au < manifest ; 2012 ; Chemical Communications Volume 48 ; 48 ; 2012 >
       au < released ; 2013 ; Chemical Communications Volume 49 ; 49 ; 2013 >
       au < manifest ; 2014 ; Chemical Communications Volume 50 ; 50 ; 2014 >
@@ -588,7 +588,7 @@
       au < released ; 2011 ; Faraday Discussions Volume 148 ; 148 ; 2011 >
       au < released ; 2011 ; Faraday Discussions Volume 149 ; 149 ; 2011 >
       au < released ; 2011 ; Faraday Discussions Volume 150 ; 150 ; 2011 >
-      au < manifest ; 2011 ; Faraday Discussions Volume 151 ; 151 ; 2011 >
+      au < ready ; 2011 ; Faraday Discussions Volume 151 ; 151 ; 2011 >
       au < released ; 2011 ; Faraday Discussions Volume 152 ; 152 ; 2011 >
       au < released ; 2011 ; Faraday Discussions Volume 153 ; 153 ; 2011 >
       
@@ -729,7 +729,7 @@
       param[base_url2] = http://www.rsc.org/
       
       au < released ; 2010 ; Integrative Biology Volume 2 ; 2 ; 2010 >
-      au < manifest ; 2011 ; Integrative Biology Volume 3 ; 3 ; 2011 >
+      au < ready ; 2011 ; Integrative Biology Volume 3 ; 3 ; 2011 >
       au < ready ; 2012 ; Integrative Biology Volume 4 ; 4 ; 2012 >
       au < released ; 2013 ; Integrative Biology Volume 5 ; 5 ; 2013 >
       au < released ; 2014 ; Integrative Biology Volume 6 ; 6 ; 2014 >
@@ -929,7 +929,7 @@
       param[base_url2] = http://www.rsc.org/
       
       au < manifest ; 2010 ; Journal of Environmental Monitoring Volume 12 ; 12 ; 2010 >
-      au < manifest ; 2011 ; Journal of Environmental Monitoring Volume 13 ; 13 ; 2011 >
+      au < ready ; 2011 ; Journal of Environmental Monitoring Volume 13 ; 13 ; 2011 >
       au < ready ; 2012 ; Journal of Environmental Monitoring Volume 14 ; 14 ; 2012 >
       au < released ; 2013 ; Journal of Environmental Monitoring Volume 15 ; 15 ; 2013 >
       au < released ; 2014 ; Journal of Environmental Monitoring Volume 16 ; 16 ; 2014 >
@@ -977,7 +977,7 @@
       param[base_url2] = http://www.rsc.org/
       
       au < manifest ; 2010 ; Journal of Materials Chemistry Volume 20 ; 20 ; 2010 >
-      au < manifest ; 2011 ; Journal of Materials Chemistry Volume 21 ; 21 ; 2011 >
+      au < ready ; 2011 ; Journal of Materials Chemistry Volume 21 ; 21 ; 2011 >
       au < ready ; 2012 ; Journal of Materials Chemistry Volume 22 ; 22 ; 2012 >
     }
   }
@@ -1017,7 +1017,7 @@
       param[base_url2] = http://www.rsc.org/
       
       au < manifest ; 2010 ; Lab on a Chip Volume 10 ; 10 ; 2010 >
-      au < manifest ; 2011 ; Lab on a Chip Volume 11 ; 11 ; 2011 >
+      au < ready ; 2011 ; Lab on a Chip Volume 11 ; 11 ; 2011 >
       au < ready ; 2012 ; Lab on a Chip Volume 12 ; 12 ; 2012 >
       au < released ; 2013 ; Lab on a Chip Volume 13 ; 13 ; 2013 >
       au < released ; 2014 ; Lab on a Chip Volume 14 ; 14 ; 2014 >
@@ -1054,7 +1054,7 @@
       param[base_url2] = http://www.rsc.org/
       
       au < manifest ; 2010 ; Metallomics Volume 2 ; 2 ; 2010 >
-      au < manifest ; 2011 ; Metallomics Volume 3 ; 3 ; 2011 >
+      au < ready ; 2011 ; Metallomics Volume 3 ; 3 ; 2011 >
       au < ready ; 2012 ; Metallomics Volume 4 ; 4 ; 2012 >
       au < released ; 2013 ; Metallomics Volume 5 ; 5 ; 2013 >
       au < released ; 2014 ; Metallomics Volume 6 ; 6 ; 2014 >
@@ -1095,7 +1095,7 @@
       param[base_url2] = http://www.rsc.org/
       
       au < released ; 2010 ; Molecular BioSystems Volume 6 ; 6 ; 2010 >
-      au < manifest ; 2011 ; Molecular BioSystems Volume 7 ; 7 ; 2011 >
+      au < ready ; 2011 ; Molecular BioSystems Volume 7 ; 7 ; 2011 >
       au < ready ; 2012 ; Molecular BioSystems Volume 8 ; 8 ; 2012 >
       au < released ; 2013 ; Molecular BioSystems Volume 9 ; 9 ; 2013 >
       au < ready ; 2014 ; Molecular BioSystems Volume 10 ; 10 ; 2014 >
@@ -1132,7 +1132,7 @@
       param[base_url2] = http://www.rsc.org/
       
       au < manifest ; 2010 ; Nanoscale Volume 2 ; 2 ; 2010 >
-      au < manifest ; 2011 ; Nanoscale Volume 3 ; 3 ; 2011 >
+      au < ready ; 2011 ; Nanoscale Volume 3 ; 3 ; 2011 >
       au < ready ; 2012 ; Nanoscale Volume 4 ; 4 ; 2012 >
       au < released ; 2013 ; Nanoscale Volume 5 ; 5 ; 2013 >
       au < ready ; 2014 ; Nanoscale Volume 6 ; 6 ; 2014 >
@@ -1181,7 +1181,7 @@
       param[base_url2] = http://www.rsc.org/
       
       au < manifest ; 2010 ; Natural Product Reports Volume 27 ; 27 ; 2010 >
-      au < manifest ; 2011 ; Natural Product Reports Volume 28 ; 28 ; 2011 >
+      au < ready ; 2011 ; Natural Product Reports Volume 28 ; 28 ; 2011 >
       au < ready ; 2012 ; Natural Product Reports Volume 29 ; 29 ; 2012 >
       au < released ; 2013 ; Natural Product Reports Volume 30 ; 30 ; 2013 >
       au < released ; 2014 ; Natural Product Reports Volume 31 ; 31 ; 2014 >
@@ -1230,7 +1230,7 @@
       
       au < manifest ; 2009 ; New Journal of Chemistry Volume 33 ; 33 ; 2009 >
       au < manifest ; 2010 ; New Journal of Chemistry Volume 34 ; 34 ; 2010 >
-      au < manifest ; 2011 ; New Journal of Chemistry Volume 35 ; 35 ; 2011 >
+      au < ready ; 2011 ; New Journal of Chemistry Volume 35 ; 35 ; 2011 >
       au < ready ; 2012 ; New Journal of Chemistry Volume 36 ; 36 ; 2012 >
       au < released ; 2013 ; New Journal of Chemistry Volume 37 ; 37 ; 2013 >
       au < released ; 2014 ; New Journal of Chemistry Volume 38 ; 38 ; 2014 >
@@ -1274,7 +1274,7 @@
       
       au < manifest ; 2009 ; Organic & Biomolecular Chemistry Volume 7 ; 7 ; 2009 >
       au < manifest ; 2010 ; Organic & Biomolecular Chemistry Volume 8 ; 8 ; 2010 >
-      au < manifest ; 2011 ; Organic & Biomolecular Chemistry Volume 9 ; 9 ; 2011 >
+      au < ready ; 2011 ; Organic & Biomolecular Chemistry Volume 9 ; 9 ; 2011 >
       au < ready ; 2012 ; Organic & Biomolecular Chemistry Volume 10 ; 10 ; 2012 >
       au < released ; 2013 ; Organic & Biomolecular Chemistry Volume 11 ; 11 ; 2013 >
       au < ready ; 2014 ; Organic & Biomolecular Chemistry Volume 12 ; 12 ; 2014 >
@@ -1341,7 +1341,7 @@
       
       au < manifest ; 2009 ; Photochemical & Photobiological Sciences Volume 8 ; 8 ; 2009 >
       au < manifest ; 2010 ; Photochemical & Photobiological Sciences Volume 9 ; 9 ; 2010 >
-      au < manifest ; 2011 ; Photochemical & Photobiological Sciences Volume 10 ; 10 ; 2011 >
+      au < ready ; 2011 ; Photochemical & Photobiological Sciences Volume 10 ; 10 ; 2011 >
       au < ready ; 2012 ; Photochemical & Photobiological Sciences Volume 11 ; 11 ; 2012 >
       au < released ; 2013 ; Photochemical & Photobiological Sciences Volume 12 ; 12 ; 2013 >
       au < ready ; 2014 ; Photochemical & Photobiological Sciences Volume 13 ; 13 ; 2014 >
@@ -1476,7 +1476,7 @@
       param[base_url2] = http://www.rsc.org/
       
       au < manifest ; 2010 ; Soft Matter Volume 6 ; 6 ; 2010 >
-      au < manifest ; 2011 ; Soft Matter Volume 7 ; 7 ; 2011 >
+      au < ready ; 2011 ; Soft Matter Volume 7 ; 7 ; 2011 >
       au < ready ; 2012 ; Soft Matter Volume 8 ; 8 ; 2012 >
       au < released ; 2013 ; Soft Matter Volume 9 ; 9 ; 2013 >
       au < ready ; 2014 ; Soft Matter Volume 10 ; 10 ; 2014 >
