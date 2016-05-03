@@ -8151,8 +8151,6 @@
         eissn = 1939-8638
       >
 
-      {
-
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://csx.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
@@ -8171,8 +8169,28 @@
         au < released ; 2015 ; Contemporary Sociology: A Journal of Reviews Volume 44 ; 44 >
         au < manifest ; 2016 ; Contemporary Sociology: A Journal of Reviews Volume 45 ; 45 >
 
-      }
+    }
 
+     {
+  
+      title <
+        name = Contemporary Voice of Dalit ;
+        issn = 2455-328X 
+      >
+  
+        param[base_url] = http://vod.sagepub.com/
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+  
+        au < exists ; 2008 ; Contemporary Voice of Dalit Volume 1 ; 1 >
+        au < exists ; 2009 ; Contemporary Voice of Dalit Volume 2 ; 2 >
+        au < exists ; 2010 ; Contemporary Voice of Dalit Volume 3 ; 3 >
+        au < exists ; 2011 ; Contemporary Voice of Dalit Volume 4 ; 4 >
+        au < exists ; 2012 ; Contemporary Voice of Dalit Volume 5 ; 5 >
+        au < exists ; 2013 ; Contemporary Voice of Dalit Volume 6 ; 6 >
+        au < exists ; 2014 ; Contemporary Voice of Dalit Volume 7 ; 7 >
+        au < exists ; 2016 ; Contemporary Voice of Dalit Volume 8 ; 8 >
+  
     }
 
     {

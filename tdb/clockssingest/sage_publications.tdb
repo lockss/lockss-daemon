@@ -7401,10 +7401,7 @@
       eissn = 1939-8638
     >
 
-    param[base_url] = http://csx.sagepub.com/
-
-    {
-
+      param[base_url] = http://csx.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 2004 ; Contemporary Sociology: A Journal of Reviews Volume 33 ; 33 ; >
@@ -7421,7 +7418,26 @@
       au < crawling ; exists ; 2015 ; Contemporary Sociology: A Journal of Reviews Volume 44 ; 44 ; >
       au < manifest ; exists ; 2016 ; Contemporary Sociology: A Journal of Reviews Volume 45 ; 45 ; >
 
-    }
+  }
+
+  {
+
+    title <
+      name = Contemporary Voice of Dalit ;
+      issn = 2455-328X 
+    >
+
+      param[base_url] = http://vod.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2008 ; Contemporary Voice of Dalit Volume 1 ; 1 ; >
+      au < exists ; exists ; 2009 ; Contemporary Voice of Dalit Volume 2 ; 2 ; >
+      au < exists ; exists ; 2010 ; Contemporary Voice of Dalit Volume 3 ; 3 ; >
+      au < exists ; exists ; 2011 ; Contemporary Voice of Dalit Volume 4 ; 4 ; >
+      au < exists ; exists ; 2012 ; Contemporary Voice of Dalit Volume 5 ; 5 ; >
+      au < exists ; exists ; 2013 ; Contemporary Voice of Dalit Volume 6 ; 6 ; >
+      au < exists ; exists ; 2014 ; Contemporary Voice of Dalit Volume 7 ; 7 ; >
+      au < exists ; exists ; 2016 ; Contemporary Voice of Dalit Volume 8 ; 8 ; >
 
   }
 
@@ -7433,10 +7449,7 @@
       eissn = 1537-6052
     >
 
-    param[base_url] = http://ctx.sagepub.com/
-
-    {
-
+      param[base_url] = http://ctx.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 2002 ; Contexts Volume 1 ; 1 ; >
@@ -7454,8 +7467,6 @@
       au < finished ; finished ; 2014 ; Contexts Volume 13 ; 13 ; >
       au < crawling ; exists ; 2015 ; Contexts Volume 14 ; 14 ; >
       au < manifest ; exists ; 2016 ; Contexts Volume 15 ; 15 ; >
-
-    }
 
   }
 
