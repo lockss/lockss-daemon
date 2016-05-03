@@ -16,7 +16,7 @@ from ZSI.generate.pyclass import pyclass_type
 
 # Locator
 class DaemonStatusServiceImplServiceLocator:
-    DaemonStatusServiceImplPort_address = "http://localhost:8081/ws/DaemonStatusService"
+    DaemonStatusServiceImplPort_address = "http://ingest2.clockss.org:8081/ws/DaemonStatusService"
     def getDaemonStatusServiceImplPortAddress(self):
         return DaemonStatusServiceImplServiceLocator.DaemonStatusServiceImplPort_address
     def getDaemonStatusServiceImplPort(self, url=None, **kw):
@@ -131,16 +131,6 @@ class DaemonStatusServiceImplServiceSoapBindingSOAP:
         response = self.binding.Receive(isDaemonReadyResponse.typecode)
         return response
 
-    # op: queryCrawls
-    def queryCrawls(self, request, **kw):
-        if isinstance(request, queryCrawls) is False:
-            raise TypeError, "%s incorrect request type" % (request.__class__)
-        # no input wsaction
-        self.binding.Send(None, None, request, soapaction="", **kw)
-        # no output wsaction
-        response = self.binding.Receive(queryCrawlsResponse.typecode)
-        return response
-
     # op: queryTdbTitles
     def queryTdbTitles(self, request, **kw):
         if isinstance(request, queryTdbTitles) is False:
@@ -179,6 +169,26 @@ class DaemonStatusServiceImplServiceSoapBindingSOAP:
         self.binding.Send(None, None, request, soapaction="", **kw)
         # no output wsaction
         response = self.binding.Receive(queryTdbPublishersResponse.typecode)
+        return response
+
+    # op: queryCrawls
+    def queryCrawls(self, request, **kw):
+        if isinstance(request, queryCrawls) is False:
+            raise TypeError, "%s incorrect request type" % (request.__class__)
+        # no input wsaction
+        self.binding.Send(None, None, request, soapaction="", **kw)
+        # no output wsaction
+        response = self.binding.Receive(queryCrawlsResponse.typecode)
+        return response
+
+    # op: getAuUrls
+    def getAuUrls(self, request, **kw):
+        if isinstance(request, getAuUrls) is False:
+            raise TypeError, "%s incorrect request type" % (request.__class__)
+        # no input wsaction
+        self.binding.Send(None, None, request, soapaction="", **kw)
+        # no output wsaction
+        response = self.binding.Receive(getAuUrlsResponse.typecode)
         return response
 
 queryTdbAus = GED("http://status.ws.lockss.org/", "queryTdbAus").pyclass
@@ -221,10 +231,6 @@ isDaemonReady = GED("http://status.ws.lockss.org/", "isDaemonReady").pyclass
 
 isDaemonReadyResponse = GED("http://status.ws.lockss.org/", "isDaemonReadyResponse").pyclass
 
-queryCrawls = GED("http://status.ws.lockss.org/", "queryCrawls").pyclass
-
-queryCrawlsResponse = GED("http://status.ws.lockss.org/", "queryCrawlsResponse").pyclass
-
 queryTdbTitles = GED("http://status.ws.lockss.org/", "queryTdbTitles").pyclass
 
 queryTdbTitlesResponse = GED("http://status.ws.lockss.org/", "queryTdbTitlesResponse").pyclass
@@ -240,3 +246,11 @@ queryRepositorySpacesResponse = GED("http://status.ws.lockss.org/", "queryReposi
 queryTdbPublishers = GED("http://status.ws.lockss.org/", "queryTdbPublishers").pyclass
 
 queryTdbPublishersResponse = GED("http://status.ws.lockss.org/", "queryTdbPublishersResponse").pyclass
+
+queryCrawls = GED("http://status.ws.lockss.org/", "queryCrawls").pyclass
+
+queryCrawlsResponse = GED("http://status.ws.lockss.org/", "queryCrawlsResponse").pyclass
+
+getAuUrls = GED("http://status.ws.lockss.org/", "getAuUrls").pyclass
+
+getAuUrlsResponse = GED("http://status.ws.lockss.org/", "getAuUrlsResponse").pyclass

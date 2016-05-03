@@ -647,7 +647,7 @@ class ns0:
         type = (schema, "auStatus")
         def __init__(self, pname, ofwhat=(), attributes=None, extend=False, restrict=False, **kw):
             ns = ns0.auStatus_Def.schema
-            TClist = [ZSI.TC.String(pname="accessType", aname="_accessType", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.Boolean(pname="availableFromPublisher", aname="_availableFromPublisher", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="contentSize", aname="_contentSize", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="crawlPool", aname="_crawlPool", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="crawlProxy", aname="_crawlProxy", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="crawlWindow", aname="_crawlWindow", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="creationTime", aname="_creationTime", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.Boolean(pname="currentlyCrawling", aname="_currentlyCrawling", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.Boolean(pname="currentlyPolling", aname="_currentlyPolling", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="diskUsage", aname="_diskUsage", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="journalTitle", aname="_journalTitle", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="lastCompletedCrawl", aname="_lastCompletedCrawl", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="lastCompletedPoll", aname="_lastCompletedPoll", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="lastCrawl", aname="_lastCrawl", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="lastCrawlResult", aname="_lastCrawlResult", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="lastPoll", aname="_lastPoll", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="lastPollResult", aname="_lastPollResult", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="pluginName", aname="_pluginName", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="publisher", aname="_publisher", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="publishingPlatform", aname="_publishingPlatform", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.FPdouble(pname="recentPollAgreement", aname="_recentPollAgreement", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="repository", aname="_repository", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="status", aname="_status", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="subscriptionStatus", aname="_subscriptionStatus", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="substanceState", aname="_substanceState", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="volume", aname="_volume", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="year", aname="_year", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded"))]
+            TClist = [ZSI.TC.String(pname="accessType", aname="_accessType", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.Boolean(pname="availableFromPublisher", aname="_availableFromPublisher", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="contentSize", aname="_contentSize", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="crawlPool", aname="_crawlPool", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="crawlProxy", aname="_crawlProxy", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="crawlWindow", aname="_crawlWindow", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="creationTime", aname="_creationTime", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.Boolean(pname="currentlyCrawling", aname="_currentlyCrawling", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.Boolean(pname="currentlyPolling", aname="_currentlyPolling", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="diskUsage", aname="_diskUsage", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="journalTitle", aname="_journalTitle", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="lastCompletedCrawl", aname="_lastCompletedCrawl", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="lastCompletedPoll", aname="_lastCompletedPoll", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="lastCrawl", aname="_lastCrawl", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="lastCrawlResult", aname="_lastCrawlResult", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="lastPoll", aname="_lastPoll", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="lastPollResult", aname="_lastPollResult", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="pluginName", aname="_pluginName", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="provider", aname="_provider", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="publisher", aname="_publisher", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="publishingPlatform", aname="_publishingPlatform", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.FPdouble(pname="recentPollAgreement", aname="_recentPollAgreement", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="repository", aname="_repository", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="status", aname="_status", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="subscriptionStatus", aname="_subscriptionStatus", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="substanceState", aname="_substanceState", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="volume", aname="_volume", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="year", aname="_year", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded"))]
             self.attribute_typecode_dict = attributes or {}
             if extend: TClist += ofwhat
             if restrict: TClist = ofwhat
@@ -675,6 +675,7 @@ class ns0:
                     self._lastPoll = None
                     self._lastPollResult = None
                     self._pluginName = None
+                    self._provider = None
                     self._publisher = None
                     self._publishingPlatform = None
                     self._recentPollAgreement = None
@@ -910,7 +911,7 @@ class ns0:
         type = (schema, "auWsResult")
         def __init__(self, pname, ofwhat=(), attributes=None, extend=False, restrict=False, **kw):
             ns = ns0.auWsResult_Def.schema
-            TClist = [ZSI.TC.String(pname="accessType", aname="_accessType", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), GTD("http://status.ws.lockss.org/","auConfigurationWsResult",lazy=False)(pname="auConfiguration", aname="_auConfiguration", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="auId", aname="_auId", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.Boolean(pname="availableFromPublisher", aname="_availableFromPublisher", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="contentSize", aname="_contentSize", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="crawlPool", aname="_crawlPool", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="crawlProxy", aname="_crawlProxy", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="crawlWindow", aname="_crawlWindow", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="creationTime", aname="_creationTime", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.Boolean(pname="currentlyCrawling", aname="_currentlyCrawling", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.Boolean(pname="currentlyPolling", aname="_currentlyPolling", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="diskUsage", aname="_diskUsage", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.Boolean(pname="isBulkContent", aname="_isBulkContent", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="lastCompletedCrawl", aname="_lastCompletedCrawl", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="lastCompletedPoll", aname="_lastCompletedPoll", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="lastCrawl", aname="_lastCrawl", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="lastCrawlResult", aname="_lastCrawlResult", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="lastPoll", aname="_lastPoll", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="lastPollResult", aname="_lastPollResult", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="name", aname="_name", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="newContentCrawlUrls", aname="_newContentCrawlUrls", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), GTD("http://status.ws.lockss.org/","peerAgreementsWsResult",lazy=False)(pname="peerAgreements", aname="_peerAgreements", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="pluginName", aname="_pluginName", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="publishingPlatform", aname="_publishingPlatform", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.FPdouble(pname="recentPollAgreement", aname="_recentPollAgreement", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="repositoryPath", aname="_repositoryPath", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="subscriptionStatus", aname="_subscriptionStatus", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="substanceState", aname="_substanceState", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="tdbPublisher", aname="_tdbPublisher", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="tdbYear", aname="_tdbYear", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="urlStems", aname="_urlStems", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="volume", aname="_volume", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded"))]
+            TClist = [ZSI.TC.String(pname="accessType", aname="_accessType", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="articleUrls", aname="_articleUrls", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), GTD("http://status.ws.lockss.org/","auConfigurationWsResult",lazy=False)(pname="auConfiguration", aname="_auConfiguration", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="auId", aname="_auId", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.Boolean(pname="availableFromPublisher", aname="_availableFromPublisher", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="contentSize", aname="_contentSize", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="crawlPool", aname="_crawlPool", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="crawlProxy", aname="_crawlProxy", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="crawlWindow", aname="_crawlWindow", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="creationTime", aname="_creationTime", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.Boolean(pname="currentlyCrawling", aname="_currentlyCrawling", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.Boolean(pname="currentlyPolling", aname="_currentlyPolling", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="diskUsage", aname="_diskUsage", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.FPdouble(pname="highestPollAgreement", aname="_highestPollAgreement", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.Boolean(pname="isBulkContent", aname="_isBulkContent", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="journalTitle", aname="_journalTitle", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="lastCompletedCrawl", aname="_lastCompletedCrawl", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="lastCompletedPoll", aname="_lastCompletedPoll", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="lastCrawl", aname="_lastCrawl", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="lastCrawlResult", aname="_lastCrawlResult", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="lastPoll", aname="_lastPoll", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="lastPollResult", aname="_lastPollResult", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="name", aname="_name", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="newContentCrawlUrls", aname="_newContentCrawlUrls", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), GTD("http://status.ws.lockss.org/","peerAgreementsWsResult",lazy=False)(pname="peerAgreements", aname="_peerAgreements", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="pluginName", aname="_pluginName", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="publishingPlatform", aname="_publishingPlatform", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.FPdouble(pname="recentPollAgreement", aname="_recentPollAgreement", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="repositoryPath", aname="_repositoryPath", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="subscriptionStatus", aname="_subscriptionStatus", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="substanceState", aname="_substanceState", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="substanceUrls", aname="_substanceUrls", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="tdbProvider", aname="_tdbProvider", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="tdbPublisher", aname="_tdbPublisher", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="tdbYear", aname="_tdbYear", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="urlStems", aname="_urlStems", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), GTD("http://status.ws.lockss.org/","urlWsResult",lazy=False)(pname="urls", aname="_urls", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="volume", aname="_volume", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded"))]
             self.attribute_typecode_dict = attributes or {}
             if extend: TClist += ofwhat
             if restrict: TClist = ofwhat
@@ -921,6 +922,7 @@ class ns0:
                 def __init__(self):
                     # pyclass
                     self._accessType = None
+                    self._articleUrls = []
                     self._auConfiguration = None
                     self._auId = None
                     self._availableFromPublisher = None
@@ -932,7 +934,9 @@ class ns0:
                     self._currentlyCrawling = None
                     self._currentlyPolling = None
                     self._diskUsage = None
+                    self._highestPollAgreement = None
                     self._isBulkContent = None
+                    self._journalTitle = None
                     self._lastCompletedCrawl = None
                     self._lastCompletedPoll = None
                     self._lastCrawl = None
@@ -948,9 +952,12 @@ class ns0:
                     self._repositoryPath = None
                     self._subscriptionStatus = None
                     self._substanceState = None
+                    self._substanceUrls = []
+                    self._tdbProvider = None
                     self._tdbPublisher = None
                     self._tdbYear = None
                     self._urlStems = []
+                    self._urls = []
                     self._volume = None
                     return
             Holder.__name__ = "auWsResult_Holder"
@@ -1166,6 +1173,28 @@ class ns0:
                     self._percentAgreementTimestamp = None
                     return
             Holder.__name__ = "peerAgreementWsResult_Holder"
+            self.pyclass = Holder
+
+    class urlWsResult_Def(ZSI.TCcompound.ComplexType, TypeDefinition):
+        schema = "http://status.ws.lockss.org/"
+        type = (schema, "urlWsResult")
+        def __init__(self, pname, ofwhat=(), attributes=None, extend=False, restrict=False, **kw):
+            ns = ns0.urlWsResult_Def.schema
+            TClist = [ZSI.TCnumbers.Ilong(pname="currentVersionSize", aname="_currentVersionSize", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="url", aname="_url", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Iint(pname="versionCount", aname="_versionCount", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded"))]
+            self.attribute_typecode_dict = attributes or {}
+            if extend: TClist += ofwhat
+            if restrict: TClist = ofwhat
+            ZSI.TCcompound.ComplexType.__init__(self, None, TClist, pname=pname, inorder=0, **kw)
+            class Holder:
+                __metaclass__ = pyclass_type
+                typecode = self
+                def __init__(self):
+                    # pyclass
+                    self._currentVersionSize = None
+                    self._url = None
+                    self._versionCount = None
+                    return
+            Holder.__name__ = "urlWsResult_Holder"
             self.pyclass = Holder
 
     class queryPolls_Def(ZSI.TCcompound.ComplexType, TypeDefinition):
@@ -1402,114 +1431,6 @@ class ns0:
                     self._return = []
                     return
             Holder.__name__ = "queryTdbTitlesResponse_Holder"
-            self.pyclass = Holder
-
-    class queryCrawls_Def(ZSI.TCcompound.ComplexType, TypeDefinition):
-        schema = "http://status.ws.lockss.org/"
-        type = (schema, "queryCrawls")
-        def __init__(self, pname, ofwhat=(), attributes=None, extend=False, restrict=False, **kw):
-            ns = ns0.queryCrawls_Def.schema
-            TClist = [ZSI.TC.String(pname="crawlQuery", aname="_crawlQuery", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded"))]
-            self.attribute_typecode_dict = attributes or {}
-            if extend: TClist += ofwhat
-            if restrict: TClist = ofwhat
-            ZSI.TCcompound.ComplexType.__init__(self, None, TClist, pname=pname, inorder=0, **kw)
-            class Holder:
-                __metaclass__ = pyclass_type
-                typecode = self
-                def __init__(self):
-                    # pyclass
-                    self._crawlQuery = None
-                    return
-            Holder.__name__ = "queryCrawls_Holder"
-            self.pyclass = Holder
-
-    class queryCrawlsResponse_Def(ZSI.TCcompound.ComplexType, TypeDefinition):
-        schema = "http://status.ws.lockss.org/"
-        type = (schema, "queryCrawlsResponse")
-        def __init__(self, pname, ofwhat=(), attributes=None, extend=False, restrict=False, **kw):
-            ns = ns0.queryCrawlsResponse_Def.schema
-            TClist = [GTD("http://status.ws.lockss.org/","crawlWsResult",lazy=False)(pname="return", aname="_return", minOccurs=0, maxOccurs="unbounded", nillable=False, typed=False, encoded=kw.get("encoded"))]
-            self.attribute_typecode_dict = attributes or {}
-            if extend: TClist += ofwhat
-            if restrict: TClist = ofwhat
-            ZSI.TCcompound.ComplexType.__init__(self, None, TClist, pname=pname, inorder=0, **kw)
-            class Holder:
-                __metaclass__ = pyclass_type
-                typecode = self
-                def __init__(self):
-                    # pyclass
-                    self._return = []
-                    return
-            Holder.__name__ = "queryCrawlsResponse_Holder"
-            self.pyclass = Holder
-
-    class crawlWsResult_Def(ZSI.TCcompound.ComplexType, TypeDefinition):
-        schema = "http://status.ws.lockss.org/"
-        type = (schema, "crawlWsResult")
-        def __init__(self, pname, ofwhat=(), attributes=None, extend=False, restrict=False, **kw):
-            ns = ns0.crawlWsResult_Def.schema
-            TClist = [ZSI.TC.String(pname="auId", aname="_auId", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="auName", aname="_auName", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="bytesFetchedCount", aname="_bytesFetchedCount", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="crawlKey", aname="_crawlKey", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="crawlStatus", aname="_crawlStatus", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="crawlType", aname="_crawlType", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="duration", aname="_duration", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Iint(pname="linkDepth", aname="_linkDepth", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Iint(pname="mimeTypeCount", aname="_mimeTypeCount", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="mimeTypes", aname="_mimeTypes", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Iint(pname="offSiteUrlsExcludedCount", aname="_offSiteUrlsExcludedCount", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="pagesExcluded", aname="_pagesExcluded", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Iint(pname="pagesExcludedCount", aname="_pagesExcludedCount", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="pagesFetched", aname="_pagesFetched", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Iint(pname="pagesFetchedCount", aname="_pagesFetchedCount", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="pagesNotModified", aname="_pagesNotModified", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Iint(pname="pagesNotModifiedCount", aname="_pagesNotModifiedCount", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="pagesParsed", aname="_pagesParsed", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Iint(pname="pagesParsedCount", aname="_pagesParsedCount", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="pagesPending", aname="_pagesPending", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Iint(pname="pagesPendingCount", aname="_pagesPendingCount", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), GTD("http://status.ws.lockss.org/","urlErrorWsResult",lazy=False)(pname="pagesWithErrors", aname="_pagesWithErrors", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Iint(pname="pagesWithErrorsCount", aname="_pagesWithErrorsCount", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Iint(pname="refetchDepth", aname="_refetchDepth", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="sources", aname="_sources", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="startTime", aname="_startTime", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="startingUrls", aname="_startingUrls", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded"))]
-            self.attribute_typecode_dict = attributes or {}
-            if extend: TClist += ofwhat
-            if restrict: TClist = ofwhat
-            ZSI.TCcompound.ComplexType.__init__(self, None, TClist, pname=pname, inorder=0, **kw)
-            class Holder:
-                __metaclass__ = pyclass_type
-                typecode = self
-                def __init__(self):
-                    # pyclass
-                    self._auId = None
-                    self._auName = None
-                    self._bytesFetchedCount = None
-                    self._crawlKey = None
-                    self._crawlStatus = None
-                    self._crawlType = None
-                    self._duration = None
-                    self._linkDepth = None
-                    self._mimeTypeCount = None
-                    self._mimeTypes = []
-                    self._offSiteUrlsExcludedCount = None
-                    self._pagesExcluded = []
-                    self._pagesExcludedCount = None
-                    self._pagesFetched = []
-                    self._pagesFetchedCount = None
-                    self._pagesNotModified = []
-                    self._pagesNotModifiedCount = None
-                    self._pagesParsed = []
-                    self._pagesParsedCount = None
-                    self._pagesPending = []
-                    self._pagesPendingCount = None
-                    self._pagesWithErrors = []
-                    self._pagesWithErrorsCount = None
-                    self._refetchDepth = None
-                    self._sources = []
-                    self._startTime = None
-                    self._startingUrls = []
-                    return
-            Holder.__name__ = "crawlWsResult_Holder"
-            self.pyclass = Holder
-
-    class urlErrorWsResult_Def(ZSI.TCcompound.ComplexType, TypeDefinition):
-        schema = "http://status.ws.lockss.org/"
-        type = (schema, "urlErrorWsResult")
-        def __init__(self, pname, ofwhat=(), attributes=None, extend=False, restrict=False, **kw):
-            ns = ns0.urlErrorWsResult_Def.schema
-            TClist = [ZSI.TC.String(pname="message", aname="_message", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="severity", aname="_severity", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="url", aname="_url", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded"))]
-            self.attribute_typecode_dict = attributes or {}
-            if extend: TClist += ofwhat
-            if restrict: TClist = ofwhat
-            ZSI.TCcompound.ComplexType.__init__(self, None, TClist, pname=pname, inorder=0, **kw)
-            class Holder:
-                __metaclass__ = pyclass_type
-                typecode = self
-                def __init__(self):
-                    # pyclass
-                    self._message = None
-                    self._severity = None
-                    self._url = None
-                    return
-            Holder.__name__ = "urlErrorWsResult_Holder"
             self.pyclass = Holder
 
     class isDaemonReady_Def(ZSI.TCcompound.ComplexType, TypeDefinition):
@@ -1775,6 +1696,155 @@ class ns0:
             Holder.__name__ = "queryTdbPublishersResponse_Holder"
             self.pyclass = Holder
 
+    class queryCrawls_Def(ZSI.TCcompound.ComplexType, TypeDefinition):
+        schema = "http://status.ws.lockss.org/"
+        type = (schema, "queryCrawls")
+        def __init__(self, pname, ofwhat=(), attributes=None, extend=False, restrict=False, **kw):
+            ns = ns0.queryCrawls_Def.schema
+            TClist = [ZSI.TC.String(pname="crawlQuery", aname="_crawlQuery", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded"))]
+            self.attribute_typecode_dict = attributes or {}
+            if extend: TClist += ofwhat
+            if restrict: TClist = ofwhat
+            ZSI.TCcompound.ComplexType.__init__(self, None, TClist, pname=pname, inorder=0, **kw)
+            class Holder:
+                __metaclass__ = pyclass_type
+                typecode = self
+                def __init__(self):
+                    # pyclass
+                    self._crawlQuery = None
+                    return
+            Holder.__name__ = "queryCrawls_Holder"
+            self.pyclass = Holder
+
+    class queryCrawlsResponse_Def(ZSI.TCcompound.ComplexType, TypeDefinition):
+        schema = "http://status.ws.lockss.org/"
+        type = (schema, "queryCrawlsResponse")
+        def __init__(self, pname, ofwhat=(), attributes=None, extend=False, restrict=False, **kw):
+            ns = ns0.queryCrawlsResponse_Def.schema
+            TClist = [GTD("http://status.ws.lockss.org/","crawlWsResult",lazy=False)(pname="return", aname="_return", minOccurs=0, maxOccurs="unbounded", nillable=False, typed=False, encoded=kw.get("encoded"))]
+            self.attribute_typecode_dict = attributes or {}
+            if extend: TClist += ofwhat
+            if restrict: TClist = ofwhat
+            ZSI.TCcompound.ComplexType.__init__(self, None, TClist, pname=pname, inorder=0, **kw)
+            class Holder:
+                __metaclass__ = pyclass_type
+                typecode = self
+                def __init__(self):
+                    # pyclass
+                    self._return = []
+                    return
+            Holder.__name__ = "queryCrawlsResponse_Holder"
+            self.pyclass = Holder
+
+    class crawlWsResult_Def(ZSI.TCcompound.ComplexType, TypeDefinition):
+        schema = "http://status.ws.lockss.org/"
+        type = (schema, "crawlWsResult")
+        def __init__(self, pname, ofwhat=(), attributes=None, extend=False, restrict=False, **kw):
+            ns = ns0.crawlWsResult_Def.schema
+            TClist = [ZSI.TC.String(pname="auId", aname="_auId", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="auName", aname="_auName", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="bytesFetchedCount", aname="_bytesFetchedCount", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="crawlKey", aname="_crawlKey", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="crawlStatus", aname="_crawlStatus", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="crawlType", aname="_crawlType", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="duration", aname="_duration", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Iint(pname="linkDepth", aname="_linkDepth", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Iint(pname="mimeTypeCount", aname="_mimeTypeCount", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="mimeTypes", aname="_mimeTypes", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Iint(pname="offSiteUrlsExcludedCount", aname="_offSiteUrlsExcludedCount", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="pagesExcluded", aname="_pagesExcluded", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Iint(pname="pagesExcludedCount", aname="_pagesExcludedCount", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="pagesFetched", aname="_pagesFetched", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Iint(pname="pagesFetchedCount", aname="_pagesFetchedCount", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="pagesNotModified", aname="_pagesNotModified", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Iint(pname="pagesNotModifiedCount", aname="_pagesNotModifiedCount", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="pagesParsed", aname="_pagesParsed", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Iint(pname="pagesParsedCount", aname="_pagesParsedCount", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="pagesPending", aname="_pagesPending", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Iint(pname="pagesPendingCount", aname="_pagesPendingCount", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), GTD("http://status.ws.lockss.org/","urlErrorWsResult",lazy=False)(pname="pagesWithErrors", aname="_pagesWithErrors", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Iint(pname="pagesWithErrorsCount", aname="_pagesWithErrorsCount", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Iint(pname="refetchDepth", aname="_refetchDepth", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="sources", aname="_sources", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded")), ZSI.TCnumbers.Ilong(pname="startTime", aname="_startTime", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="startingUrls", aname="_startingUrls", minOccurs=0, maxOccurs="unbounded", nillable=True, typed=False, encoded=kw.get("encoded"))]
+            self.attribute_typecode_dict = attributes or {}
+            if extend: TClist += ofwhat
+            if restrict: TClist = ofwhat
+            ZSI.TCcompound.ComplexType.__init__(self, None, TClist, pname=pname, inorder=0, **kw)
+            class Holder:
+                __metaclass__ = pyclass_type
+                typecode = self
+                def __init__(self):
+                    # pyclass
+                    self._auId = None
+                    self._auName = None
+                    self._bytesFetchedCount = None
+                    self._crawlKey = None
+                    self._crawlStatus = None
+                    self._crawlType = None
+                    self._duration = None
+                    self._linkDepth = None
+                    self._mimeTypeCount = None
+                    self._mimeTypes = []
+                    self._offSiteUrlsExcludedCount = None
+                    self._pagesExcluded = []
+                    self._pagesExcludedCount = None
+                    self._pagesFetched = []
+                    self._pagesFetchedCount = None
+                    self._pagesNotModified = []
+                    self._pagesNotModifiedCount = None
+                    self._pagesParsed = []
+                    self._pagesParsedCount = None
+                    self._pagesPending = []
+                    self._pagesPendingCount = None
+                    self._pagesWithErrors = []
+                    self._pagesWithErrorsCount = None
+                    self._refetchDepth = None
+                    self._sources = []
+                    self._startTime = None
+                    self._startingUrls = []
+                    return
+            Holder.__name__ = "crawlWsResult_Holder"
+            self.pyclass = Holder
+
+    class urlErrorWsResult_Def(ZSI.TCcompound.ComplexType, TypeDefinition):
+        schema = "http://status.ws.lockss.org/"
+        type = (schema, "urlErrorWsResult")
+        def __init__(self, pname, ofwhat=(), attributes=None, extend=False, restrict=False, **kw):
+            ns = ns0.urlErrorWsResult_Def.schema
+            TClist = [ZSI.TC.String(pname="message", aname="_message", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="severity", aname="_severity", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="url", aname="_url", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded"))]
+            self.attribute_typecode_dict = attributes or {}
+            if extend: TClist += ofwhat
+            if restrict: TClist = ofwhat
+            ZSI.TCcompound.ComplexType.__init__(self, None, TClist, pname=pname, inorder=0, **kw)
+            class Holder:
+                __metaclass__ = pyclass_type
+                typecode = self
+                def __init__(self):
+                    # pyclass
+                    self._message = None
+                    self._severity = None
+                    self._url = None
+                    return
+            Holder.__name__ = "urlErrorWsResult_Holder"
+            self.pyclass = Holder
+
+    class getAuUrls_Def(ZSI.TCcompound.ComplexType, TypeDefinition):
+        schema = "http://status.ws.lockss.org/"
+        type = (schema, "getAuUrls")
+        def __init__(self, pname, ofwhat=(), attributes=None, extend=False, restrict=False, **kw):
+            ns = ns0.getAuUrls_Def.schema
+            TClist = [ZSI.TC.String(pname="auId", aname="_auId", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded")), ZSI.TC.String(pname="url", aname="_url", minOccurs=0, maxOccurs=1, nillable=False, typed=False, encoded=kw.get("encoded"))]
+            self.attribute_typecode_dict = attributes or {}
+            if extend: TClist += ofwhat
+            if restrict: TClist = ofwhat
+            ZSI.TCcompound.ComplexType.__init__(self, None, TClist, pname=pname, inorder=0, **kw)
+            class Holder:
+                __metaclass__ = pyclass_type
+                typecode = self
+                def __init__(self):
+                    # pyclass
+                    self._auId = None
+                    self._url = None
+                    return
+            Holder.__name__ = "getAuUrls_Holder"
+            self.pyclass = Holder
+
+    class getAuUrlsResponse_Def(ZSI.TCcompound.ComplexType, TypeDefinition):
+        schema = "http://status.ws.lockss.org/"
+        type = (schema, "getAuUrlsResponse")
+        def __init__(self, pname, ofwhat=(), attributes=None, extend=False, restrict=False, **kw):
+            ns = ns0.getAuUrlsResponse_Def.schema
+            TClist = [ZSI.TC.String(pname="return", aname="_return", minOccurs=0, maxOccurs="unbounded", nillable=False, typed=False, encoded=kw.get("encoded"))]
+            self.attribute_typecode_dict = attributes or {}
+            if extend: TClist += ofwhat
+            if restrict: TClist = ofwhat
+            ZSI.TCcompound.ComplexType.__init__(self, None, TClist, pname=pname, inorder=0, **kw)
+            class Holder:
+                __metaclass__ = pyclass_type
+                typecode = self
+                def __init__(self):
+                    # pyclass
+                    self._return = []
+                    return
+            Holder.__name__ = "getAuUrlsResponse_Holder"
+            self.pyclass = Holder
+
     class agreementTypeWsResult_Def(ZSI.TC.String, TypeDefinition):
         schema = "http://status.ws.lockss.org/"
         type = (schema, "agreementTypeWsResult")
@@ -1843,6 +1913,36 @@ class ns0:
 
             ns0.getAuStatusResponse_Def.__init__(self, **kw)
             if self.pyclass is not None: self.pyclass.__name__ = "getAuStatusResponse_Dec_Holder"
+
+    class getAuUrls_Dec(ElementDeclaration):
+        literal = "getAuUrls"
+        schema = "http://status.ws.lockss.org/"
+        substitutionGroup = None
+        def __init__(self, **kw):
+            kw["pname"] = ("http://status.ws.lockss.org/","getAuUrls")
+            kw["aname"] = "_getAuUrls"
+            if ns0.getAuUrls_Def not in ns0.getAuUrls_Dec.__bases__:
+                bases = list(ns0.getAuUrls_Dec.__bases__)
+                bases.insert(0, ns0.getAuUrls_Def)
+                ns0.getAuUrls_Dec.__bases__ = tuple(bases)
+
+            ns0.getAuUrls_Def.__init__(self, **kw)
+            if self.pyclass is not None: self.pyclass.__name__ = "getAuUrls_Dec_Holder"
+
+    class getAuUrlsResponse_Dec(ElementDeclaration):
+        literal = "getAuUrlsResponse"
+        schema = "http://status.ws.lockss.org/"
+        substitutionGroup = None
+        def __init__(self, **kw):
+            kw["pname"] = ("http://status.ws.lockss.org/","getAuUrlsResponse")
+            kw["aname"] = "_getAuUrlsResponse"
+            if ns0.getAuUrlsResponse_Def not in ns0.getAuUrlsResponse_Dec.__bases__:
+                bases = list(ns0.getAuUrlsResponse_Dec.__bases__)
+                bases.insert(0, ns0.getAuUrlsResponse_Def)
+                ns0.getAuUrlsResponse_Dec.__bases__ = tuple(bases)
+
+            ns0.getAuUrlsResponse_Def.__init__(self, **kw)
+            if self.pyclass is not None: self.pyclass.__name__ = "getAuUrlsResponse_Dec_Holder"
 
     class getPlatformConfiguration_Dec(ElementDeclaration):
         literal = "getPlatformConfiguration"

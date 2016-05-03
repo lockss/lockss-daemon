@@ -60,7 +60,8 @@ def datems(ms):
 
 def durationms(ms):
   '''Returns an approximate text representation of the number of milliseconds
-  given. The result is of one of the following forms:
+  given. The result is of one of the following forms (or None if the argument is
+  None):
   - 123ms (milliseconds)
   - 12s (seconds)
   - 12m34s (minutes and seconds)
@@ -68,8 +69,9 @@ def durationms(ms):
   - 1d23h45m (days, hours and minutes)
   - 4w3d21h (weeks, days and hours)
   Parameters:
-  - ms (numeric): a number of milliseconds
+  - ms (numeric): a number of milliseconds (or None)
   '''
+  if ms is None: return None
   s, ms = divmod(ms, 1000)
   if s == 0: return '%dms' % (ms,)
   m, s = divmod(s, 60)

@@ -33,7 +33,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.3.8'
+__version__ = '0.4.0'
 
 import getpass
 import itertools
@@ -87,6 +87,22 @@ def get_au_status(host, auth, auid):
   req = DaemonStatusServiceImplService_client.getAuStatus()
   req.AuId = auid
   return _ws_port(host, auth).getAuStatus(req).Return
+
+def get_au_urls(host, auth, auid, prefix=None):
+  '''Performs a getAuUrls operation on the given host for the given AUID and
+  returns a list of URLs (strings) in the AU. If the optional prefix argument is
+  given, limits the results to URLs with that prefix (including the URL itself).
+
+  Parameters:
+  - host (string): a host:port pair
+  - auth (ZSI authentication object): an authentication object
+  - auid (string): an AUID
+  - prefix (string): a URL prefix (default: None)
+  '''
+  req = DaemonStatusServiceImplService_client.getAuUrls()
+  req.AuId = auid
+  if prefix is not None: req.url = prefix
+  return _ws_port(host, auth).getAuUrls(req).Return
 
 def get_auids(host, auth):
   '''Performs a getAuids operation on the given host, which really produces a
@@ -281,6 +297,50 @@ def query_aus(host, auth, select, where=None):
   req.AuQuery = query
   return _ws_port(host, auth).queryAus(req).Return
 
+def query_crawls(host, auth, select, where=None):
+  '''Performs a queryCrawls operation on the given host, using the given field
+  names to build a SELECT clause, optionally using the given string to build a
+  WHERE clause, and returns a list of records with these fields (populated or
+  not depending on the SELECT clause):
+  - AuId (string)
+  - AuName (string)
+  - BytesFetchedCount (long)
+  - CrawlKey (string)
+  - CrawlStatus (string)
+  - CrawlType (string)
+  - Duration (long)
+  - LinkDepth (int)
+  - MimeTypeCount (int)
+  - MimeTypes (list of strings)
+  - OffSiteUrlsExcludedCount (int)
+  - PagesExcluded (list of strings)
+  - PagesExcludedCount (int)
+  - PagesFetched (list of strings)
+  - PagesFetchedCount (int)
+  - PagesNotModified (list of strings)
+  - PagesNotModifiedCount (int)
+  - PagesParsed (list of strings)
+  - PagesParsedCount (int)
+  - PagesPending (list of strings)
+  - PagesPendingCount (int)
+  - PagesWithErrors, a list of records with these fields:
+      - Message (string)
+      - Severity (string)
+      - Url (string)
+  - PagesWithErrorsCount (int)
+  - RefetchDepth (int)
+  - Sources (list of strings)
+  - StartTime (long)
+  - StartingUrls (list of strings)
+  '''
+  if type(select) is list: query = 'SELECT %s' % (', '.join(select))
+  elif type(select) is str: query = 'SELECT %s' % (select,)
+  else: raise ValueError, 'invalid type for select parameter: %s' % (type(select),)
+  if where is not None: query = '%s WHERE %s' % (query, where)
+  req = DaemonStatusServiceImplService_client.queryCrawls()
+  req.CrawlQuery = query
+  return _ws_port(host, auth).queryCrawls(req).Return
+
 def _ws_port(host, auth, tracefile=None):
   url = 'http://%s/ws/DaemonStatusService' % (host,)
   locator = DaemonStatusServiceImplService_client.DaemonStatusServiceImplServiceLocator()
@@ -311,41 +371,43 @@ class _DaemonStatusServiceOptions(object):
     parser.add_option_group(group)
     # Daemon operations
     group = optparse.OptionGroup(parser, 'Daemon operations')
-    group.add_option('--get-auids', action='store_true', help='output True/False table of all AUIDs (or target AUIDs if specified) present')
-    group.add_option('--get-auids-names', action='store_true', help='output True/False table of all AUIDs (or target AUIDs if specified) present and their names')
-    group.add_option('--get-platform-configuration', action='store_true', help='output platform configuration information; narrow down with --select if specified (%s)' % (', '.join(sorted(_PLATFORM_CONFIGURATION)),))
+    group.add_option('--get-platform-configuration', action='store_true', help='output platform configuration information for target hosts; narrow down with optional --select list chosen among %s' % (', '.join(sorted(_PLATFORM_CONFIGURATION)),))
     group.add_option('--is-daemon-ready', action='store_true', help='output True/False table of ready status of target hosts; always exit with 0')
     group.add_option('--is-daemon-ready-quiet', action='store_true', help='output nothing; exit with 0 if all target hosts are ready, 1 otherwise')
     parser.add_option_group(group)
-    # AU operations
+    # AUID operations
     group = optparse.OptionGroup(parser, 'AU operations')
-    group.add_option('--get-au-status', action='store_true', help='output AU status information; narrow down with optional --select (%s)' % (', '.join(sorted(_AU_STATUS)),))
-    group.add_option('--get-peer-agreements', action='store_true', help='output peer agreements')
+    group.add_option('--get-au-status', action='store_true', help='output status information about target AUIDs; narrow down output with optional --select list chosen among %s' % (', '.join(sorted(_AU_STATUS)),))
+    group.add_option('--get-au-urls', action='store_true', help='output URLs in one AU on one host')
+    group.add_option('--get-auids', action='store_true', help='output True/False table of all AUIDs (or target AUIDs if specified) present on target hosts')
+    group.add_option('--get-auids-names', action='store_true', help='output True/False table of all AUIDs (or target AUIDs if specified) and their names present on target hosts')
+    group.add_option('--get-peer-agreements', action='store_true', help='output peer agreements for one AU on one hosts')
+    group.add_option('--query-aus', action='store_true', help='perform AU query (with optional --where clause) with --select list chosen among %s' % (', '.join(sorted(_QUERY_AUS)),))
     parser.add_option_group(group)
-    # Query operations
-    group = optparse.OptionGroup(parser, 'Query operations')
-    group.add_option('--query-aus', action='store_true', help='perform AU query with optional --where clause; narrow down output with optional --select list chosen among %s' % (', '.join(sorted(_QUERY_AUS)),))
-    group.add_option('--where', help='optional WHERE clause for query operations')
+    # Crawl operations
+    group = optparse.OptionGroup(parser, 'Crawl operations')
+    group.add_option('--query-crawls', action='store_true', help='perform crawl query (with optional --where clause) with --select list chosen among %s' % (', '.join(sorted(_QUERY_CRAWLS)),))
     parser.add_option_group(group)
-    # Output
-    group = optparse.OptionGroup(parser, 'Output')
+    # Other
+    group = optparse.OptionGroup(parser, 'Other options')
     group.add_option('--group-by-field', action='store_true', help='group results by field instead of host')
     group.add_option('--no-special-output', action='store_true', help='no special output format for a single target host')
     group.add_option('--select', metavar='FIELDS', help='comma-separated list of fields for narrower output')
+    group.add_option('--where', help='optional WHERE clause for query operations')
     parser.add_option_group(group)
     return parser
 
   def __init__(self, parser, opts, args):
     super(_DaemonStatusServiceOptions, self).__init__()
     if len(args) > 0: parser.error('extraneous arguments: %s' % (' '.join(args)))
-    if len(filter(None, [opts.get_au_status, opts.get_auids, opts.get_auids_names, opts.get_peer_agreements, opts.get_platform_configuration, opts.is_daemon_ready, opts.is_daemon_ready_quiet, opts.query_aus])) != 1:
-      parser.error('exactly one of --get-au-status, --get-auids, --get-auids-names, --get-peer-agreements, --get-platform-configuration, --is-daemon-ready, --is-daemon-ready-quiet, --query-aus is required')
-    if len(opts.auid) + len(opts.auids) > 0 and not any([opts.get_au_status, opts.get_auids, opts.get_auids_names, opts.get_peer_agreements]):
-      parser.error('--auid, --auids can only be applied to --get-au-status, --get-auids, --get-auids-names, --get-peer-agreements')
-    if opts.select and not any([opts.get_au_status, opts.get_platform_configuration, opts.query_aus]):
-      parser.error('--select can only be applied to --get-au-status, --get-platform-configuration, --query-aus')
-    if opts.where and not any([opts.query_aus]):
-      parser.error('--where can only be applied to --query-aus')
+    if len(filter(None, [opts.get_au_status, opts.get_au_urls, opts.get_auids, opts.get_auids_names, opts.get_peer_agreements, opts.get_platform_configuration, opts.is_daemon_ready, opts.is_daemon_ready_quiet, opts.query_aus, opts.query_crawls])) != 1:
+      parser.error('exactly one of --get-au-status, --get-au-urls, --get-auids, --get-auids-names, --get-peer-agreements, --get-platform-configuration, --is-daemon-ready, --is-daemon-ready-quiet, --query-aus --query-crawls is required')
+    if len(opts.auid) + len(opts.auids) > 0 and not any([opts.get_au_status, opts.get_au_urls, opts.get_auids, opts.get_auids_names, opts.get_peer_agreements]):
+      parser.error('--auid, --auids can only be applied to --get-au-status, --get-au-urls, --get-auids, --get-auids-names, --get-peer-agreements')
+    if opts.select and not any([opts.get_au_status, opts.get_platform_configuration, opts.query_aus, opts.query_crawls]):
+      parser.error('--select can only be applied to --get-au-status, --get-platform-configuration, --query-aus, --query-crawls')
+    if opts.where and not any([opts.query_au, opts.query_crawls]):
+      parser.error('--where can only be applied to --query-aus, --query-crawls')
     if opts.group_by_field and not any([opts.get_au_status, opts.query_aus]):
       parser.error('--group-by-field can only be applied to --get-au-status, --query-aus')
     # hosts
@@ -362,17 +424,34 @@ class _DaemonStatusServiceOptions(object):
     self.is_daemon_ready_quiet = opts.is_daemon_ready_quiet
     # get_platform_configuration/select
     self.get_platform_configuration = opts.get_platform_configuration
-    if self.get_platform_configuration: self.select = self.__init_select(parser, opts, _PLATFORM_CONFIGURATION)
-    # get_au_status/get_peer_agreements
+    if self.get_platform_configuration:
+      self.select = self.__init_select(parser, opts, _PLATFORM_CONFIGURATION)
+    # get_au_status/select
     self.get_au_status = opts.get_au_status
     if self.get_au_status:
       if len(self.auids) == 0: parser.error('at least one target AUID is required with --get-au-status')
       self.select = self.__init_select(parser, opts, _AU_STATUS)
+    # get_au_urls
+    self.get_au_urls = opts.get_au_urls
+    if self.get_au_urls:
+      if len(self.hosts) != 1: parser.error('only one target host is allowed with --get-au-urls')
+      if len(self.auids) != 1: parser.error('only one target AUID is allowed with --get-au-urls')
+    # get_peer_agreements
     self.get_peer_agreements = opts.get_peer_agreements
-    # query_aus/where/select
-    self.where = opts.where
+    if self.get_peer_agreements:
+      if len(self.hosts) != 1: parser.error('only one target host is allowed with --get-peer-agreements')
+      if len(self.auids) != 1: parser.error('only one target AUID is allowed with --get-peer-agreements')
+    # query_aus/select/where
     self.query_aus = opts.query_aus
-    if self.query_aus: self.select = self.__init_select(parser, opts, _QUERY_AUS)
+    if self.query_aus:
+      self.select = self.__init_select(parser, opts, _QUERY_AUS)
+      self.where = opts.where
+    # query_crawls/select/where
+    self.query_crawls = opts.query_crawls
+    if self.query_crawls:
+      if len(self.hosts) != 1: parser.error('only one target host is allowed with --query-crawls')
+      self.select = self.__init_select(parser, opts, _QUERY_CRAWLS)
+      self.where = opts.where
     # group_by_field/no_special_output
     self.group_by_field = opts.group_by_field
     self.no_special_output = opts.no_special_output
@@ -386,8 +465,8 @@ class _DaemonStatusServiceOptions(object):
     fields = [s.strip() for s in opts.select.split(',')]
     errfields = filter(lambda f: f not in field_dict, fields)
     if len(errfields) == 1: parser.error('unknown field: %s' % (errfields[0],))
-    elif len(errfields) > 1: parser.error('unknown fields: %s' % (', '.join(errfields),))
-    else: return fields
+    if len(errfields) > 1: parser.error('unknown fields: %s' % (', '.join(errfields),))
+    return fields
 
 # Last modified 2015-08-05
 def _output_record(options, lst):
@@ -452,6 +531,10 @@ def _do_get_au_status(options):
     display = dict([(((k[0],), (k[1], k[2])), v) for k, v in data.iteritems()])
     _output_table(options, display, ['AUID'], [sorted(options.hosts), [_AU_STATUS[k][0] for k in options.select]])
 
+def _do_get_au_urls(options):
+  r = get_au_urls(options.hosts[0], options.auth, options.auids[0])
+  for url in sorted(r): _output_record(options, [url])
+
 def _do_get_auids(options):
   _do_get_auids_names(options, False)
 
@@ -479,10 +562,6 @@ def _do_get_auids_names(options, do_names=True):
     _output_table(options, display, ['AUID'], [sorted(options.hosts)])
 
 def _do_get_peer_agreements(options):
-  if len(options.hosts) > 1:
-    sys.stderr.write('Warning: only processing first host %s\n' % (options.hosts[0],))
-  if len(options.auids) > 1:
-    sys.stderr.write('Warning: only processing first AUID %s\n' % (options.auids[0],))
   pa = get_peer_agreements(options.hosts[0], options.auth, options.auids[0])
   if pa is None:
     print 'No such AUID'
@@ -541,7 +620,7 @@ def _do_is_daemon_ready(options):
   '''
   # Special case
   if len(options.hosts) == 1 and not options.no_special_output:
-    print str(is_daemon_ready(options.hosts[0], options.auth))
+    _output_record(options, [str(is_daemon_ready(options.hosts[0], options.auth))])
     return
   for host in sorted(options.hosts):
     _output_record(options, [host, str(is_daemon_ready(host, options.auth))])
@@ -577,7 +656,7 @@ _QUERY_AUS = {
   'lastCrawlResult': ('Last crawl result', lambda r: r.LastCrawlResult),
   'lastPoll': ('Last poll', lambda r: datetimems(r.LastPoll)),
   'lastPollResult': ('Last poll result', lambda r: r.LastPollResult),
-  'name': ('', lambda r: r.Name),
+  'name': ('Name', lambda r: r.Name),
   'newContentCrawlUrls': ('New content crawl URLs', '<NewContentCrawlUrls>'),
   'peerAgreements': ('Peer agreements', lambda r: '<PeerAgreements>'),
   'pluginName': ('Plugin name', lambda r: r.PluginName),
@@ -604,11 +683,52 @@ def _do_query_aus(options):
         head, lamb = _QUERY_AUS[x]      
         data[(auid, host, head)] = lamb(r)
   if options.group_by_field:
-    data = dict([(((k[0],), (k[2], k[1])), v) for k, v in data.iteritems()])
-    _output_table(options, data, ['AUID'], [[_QUERY_AUS[k][0] for k in select], sorted(options.hosts)])
+    display = dict([(((k[0],), (k[2], k[1])), v) for k, v in data.iteritems()])
+    _output_table(options, display, ['AUID'], [[_QUERY_AUS[k][0] for k in select], sorted(options.hosts)])
   else:
-    data = dict([(((k[0],), (k[1], k[2])), v) for k, v in data.iteritems()])
-    _output_table(options, data, ['AUID'], [sorted(options.hosts), [_QUERY_AUS[k][0] for k in select]])
+    display = dict([(((k[0],), (k[1], k[2])), v) for k, v in data.iteritems()])
+    _output_table(options, display, ['AUID'], [sorted(options.hosts), [_QUERY_AUS[k][0] for k in select]])
+
+_QUERY_CRAWLS = {
+  'auId': ('AUID', lambda r: r.AuId),
+  'auName': ('AU name', lambda r: r.AuName),
+  'bytesFetchedCount': ('Bytes Fetched', lambda r: r.BytesFetchedCount),
+  'crawlKey': ('Crawl key', lambda r: r.CrawlKey),
+  'crawlStatus': ('Crawl status', lambda r: r.CrawlStatus),
+  'crawlType': ('Crawl type', lambda r: r.CrawlType),
+  'duration': ('Duration', lambda r: durationms(r.Duration)),
+  'linkDepth': ('Link depth', lambda r: r.LinkDepth),
+  'mimeTypeCount': ('MIME type count', lambda r: r.MimeTypeCount),
+  'mimeTypes': ('MIME types', lambda r: '<MIME types>'),
+  'offSiteUrlsExcludedCount': ('Off-site URLs excluded count', lambda r: r.OffSiteUrlsExcludedCount),
+  'pagesExcluded': ('Pages excluded', lambda r: '<Pages excluded>'),
+  'pagesExcludedCount': ('Pages excluded count', lambda r: r.PagesExcludedCount),
+  'pagesFetched': ('Pages fetched', lambda r: '<Pages fetched>'),
+  'pagesFetchedCount': ('Pages fetched count', lambda r: r.PagesFetchedCount),
+  'pagesNotModified': ('Pages not modified', lambda r: '<Pages not modified>'),
+  'pagesNotModifiedCount': ('Pages not modified count', lambda r: r.PagesNotModifiedCount),
+  'pagesParsed': ('Pages parsed', lambda r: '<Pages parsed>'),
+  'pagesParsedCount': ('Pages parsed count', lambda r: r.PagesParsedCount),
+  'pagesPending': ('Pages pending', lambda r: '<Pages pending>'),
+  'pagesPendingCount': ('Pages pending count', lambda r: r.PagesPendingCount),
+  'pagesWithErrors': ('Pages with errors', lambda r: '<Pages with errors>'),
+  'pagesWithErrorsCount': ('Pages with errors count', lambda r: r.PagesWithErrors),
+  'refetchDepth': ('RefetchDepth', lambda r: r.RefetchDepth),
+  'sources': ('Sources', lambda r: '<Sources>'),
+  'startTime': ('Start time', lambda r: datetimems(r.StartTime)),
+  'startingUrls': ('Starting URLs', lambda r: '<Starting URLs>')
+}
+
+def _do_query_crawls(options):
+  select = filter(lambda x: x != 'auId', options.select)
+  data = dict()
+  for r in query_crawls(options.hosts[0], options.auth, ['auId'] + select, options.where):
+    auid = r.AuId
+    for x in select:
+      head, lamb = _QUERY_CRAWLS[x]
+      data[(auid, head)] = lamb(r)
+  display = dict([(((k[0],), (k[1],)), v) for k, v in data.iteritems()])
+  _output_table(options, display, ['AUID'], [[_QUERY_CRAWLS[k][0] for k in select]])
 
 # Last modified 2015-08-31
 def _file_lines(fstr):
@@ -624,6 +744,7 @@ def _main():
   options = _DaemonStatusServiceOptions(parser, opts, args)
   # Dispatch
   if options.get_au_status: _do_get_au_status(options)
+  elif options.get_au_urls: _do_get_au_urls(options)
   elif options.get_auids: _do_get_auids(options)
   elif options.get_auids_names: _do_get_auids_names(options)
   elif options.get_peer_agreements: _do_get_peer_agreements(options)
@@ -631,6 +752,7 @@ def _main():
   elif options.is_daemon_ready: _do_is_daemon_ready(options)
   elif options.is_daemon_ready_quiet: _do_is_daemon_ready_quiet(options)
   elif options.query_aus: _do_query_aus(options)
+  elif options.query_crawls: _do_query_crawls(options)
   else: raise RuntimeError, 'Unreachable'
 
 # Main entry point
