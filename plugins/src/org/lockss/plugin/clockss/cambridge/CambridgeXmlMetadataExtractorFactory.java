@@ -38,46 +38,82 @@ import java.util.List;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
-
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
+import org.lockss.plugin.clockss.XPathXmlMetadataParser;
+
+/*
+ * Cambridge back content comes with the metadata in foo.sgm files
+ * Cambridge front content comes with the metadata in JATS based xml files
+ * 
+ * We handle both - identifying the schema based on the file suffix.
+ * If sgml, we filter it to complete non-terminating tags before turning it in 
+ * to a parsable Doc. 
+ * 
+ * 
+ */
 
 
-
-
-public class CambridgeJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
-  private static final Logger log = Logger.getLogger(CambridgeJatsXmlMetadataExtractorFactory.class);
+public class CambridgeXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+  private static final Logger log = Logger.getLogger(CambridgeXmlMetadataExtractorFactory.class);
 
   private static SourceXmlSchemaHelper JatsPublishingHelper = null;
+  private static SourceXmlSchemaHelper CambridgeSgmlPublishingHelper = null;
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
           throws PluginException {
-    return new JatsPublishingSourceXmlMetadataExtractor();
+    return new CambridgeXmlMetadataExtractor();
   }
 
-  public class JatsPublishingSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
+  public class CambridgeXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
+    
+    /*
+     * (non-Javadoc)
+     *Support both XML (JATS) schema and 
+     *SGML (proprietary) which has been sanitized into valid XML
+     */
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
+      String url = cu.getUrl();
+      if ((url != null) && url.endsWith(".sgm")) {
+        // Once you have it, just keep returning the same one. It won't change.
+        if (CambridgeSgmlPublishingHelper == null) {
+          CambridgeSgmlPublishingHelper = new CambridgeSgmlSchemaHelper();
+        }
+        return CambridgeSgmlPublishingHelper;
+      } else {
       // Once you have it, just keep returning the same one. It won't change.
       if (JatsPublishingHelper == null) {
         JatsPublishingHelper = new JatsPublishingSchemaHelper();
       }
       return JatsPublishingHelper;
     }
-
+    }
+    
+    @Override
+    protected XPathXmlMetadataParser createXpathXmlMetadataParser() {
+      // the doXmlFiltering is false, so this doesn't need an argument...
+      return new CambridgeXPathXmlMetadataParser();
+    }
 
     /* 
-     * XML filename is <article_number>h.xml
+     * metadata filename is <article_number>h.xml or <article_number>h.sgm
      * PDF filename is <article_number>a.pdf
      * in the same directory
      * we have excluded the <article_number>w.xml files from the iterator
      * we don't care about the <article_number>a_hi.pdf which are hi-resolution pdf files
      * So far in the sample there is a 1:1 corresondence from h.xml files and a.pdf files
+     * 
+     * There is a special case for run-on articles (eg a column of book reviews or letters)
+     * where there is one pdf for multiple sgm files.  We aren't handling this properly for now.
+     * Identifying the PDF is more complicated, and in many cases we seem to be missing the pdf.
+     * I need to do more investigation, but these aren't the research articles...
+     * 
      */
     /* In this case, the filename is the same as the xml filename
      */
@@ -97,17 +133,20 @@ public class CambridgeJatsXmlMetadataExtractorFactory extends SourceXmlMetadataE
     @Override
     protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
         CachedUrl cu, ArticleMetadata thisAM) {
-
-      log.debug3("in Cambridge postCookProcess");
-      //If we didn't get a valid date value, use the copyright year if it's there
-      if (thisAM.get(MetadataField.FIELD_DATE) == null) {
-        if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date) != null) {
-          thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date));
-        } else {// last chance
-          thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_edate));
+      
+      if (schemaHelper == JatsPublishingHelper) {
+        log.debug3("in Cambridge postCookProcess for an XML file");
+        //If we didn't get a valid date value, use the copyright year if it's there
+        if (thisAM.get(MetadataField.FIELD_DATE) == null) {
+          if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date) != null) {
+            thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date));
+          } else {// last chance
+            thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_edate));
+          }
         }
       }
     }
 
   }
 }
+

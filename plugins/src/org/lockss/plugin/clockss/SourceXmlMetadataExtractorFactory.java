@@ -89,7 +89,7 @@ implements FileMetadataExtractorFactory {
         SourceXmlSchemaHelper schemaHelper;
         // 1. Create the xmlParser without setting a schema yet 
         // XPathXmlMetadataParser is not thread safe, must be called each time
-        XPathXmlMetadataParser xmlParser = new XPathXmlMetadataParser(getDoXmlFiltering());
+        XPathXmlMetadataParser xmlParser = createXpathXmlMetadataParser();             
         // 2. create an XML document tree using the parser
         Document xmlDoc = xmlParser. createDocumentTree(cu);
         // 3. Set an xml parsing schema on the parser before extracting metadata
@@ -132,6 +132,13 @@ implements FileMetadataExtractorFactory {
       }
 
 
+    }
+    
+    // overrideable method for creating the parser
+    // this is used by plugins that need to create a parser that filters
+    // sgml to legit xml as they are read in line by line.
+    protected XPathXmlMetadataParser createXpathXmlMetadataParser() {
+      return new XPathXmlMetadataParser(getDoXmlFiltering());
     }
 
     // Overrideable method for plugins that want to catch and handle

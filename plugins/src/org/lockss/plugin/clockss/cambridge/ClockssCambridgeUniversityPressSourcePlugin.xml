@@ -9,14 +9,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -28,6 +28,18 @@
       </entry>
     </map>
   </entry>
+<!--  TESTING ONLY -->
+   <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>2,"^%s%d/.*;O=[AD]$", base_url, year</string>
+      <!--  allow only EAP22_03.zip -->
+      <string>2,"^%s%d/[BCDEFGHIJKLMNOPQRSTUVWXYZ].*", base_url, year</string>
+      <string>2,"^%s%d/A.*-JATS\.zip", base_url, year</string>
+      <string>1,"^%s%d/A.*", base_url, year</string>
+    </list>
+    </entry>    
   <entry>
     <string>plugin_parent</string>
     <string>org.lockss.plugin.clockss.ClockssSourcePlugin</string>
@@ -72,7 +84,7 @@
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.clockss.cambridge.CambridgeJatsXmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.clockss.cambridge.CambridgeXmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
@@ -81,8 +93,18 @@
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.clockss.cambridge.CambridgeJatsXmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.clockss.cambridge.CambridgeXmlMetadataExtractorFactory</string>
       </entry>
     </map>
-  </entry>    
+  </entry>
+<!--  we turn the sgml in to conforming xml -->  
+  <entry>
+    <string>application/sgml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.clockss.cambridge.CambridgeXmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>       
 </map>    
