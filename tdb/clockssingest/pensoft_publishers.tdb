@@ -160,10 +160,10 @@
     param[au_oai_set] = natureconservation
     param[base_url] = http://natureconservation.pensoft.net/
     
-    au < crawling ; exists ; 2012 ; 2012 ; Nature Conservation Volume 1-3 ; 1-3 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Nature Conservation Volume 4-6 ; 4-6 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Nature Conservation Volume 7-9 ; 7-9 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; Nature Conservation Volume 10-13 ; 10-13 ; >
+    au < crawling ; exists ; 2012 ; 2012 ; Nature Conservation Volumes 1-3 ; 1-3 ; >
+    au < crawling ; exists ; 2013 ; 2013 ; Nature Conservation Volumes 4-6 ; 4-6 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; Nature Conservation Volumes 7-9 ; 7-9 ; >
+    au < crawling ; exists ; 2015 ; 2015 ; Nature Conservation Volumes 10-13 ; 10-13 ; >
   
    }
   
