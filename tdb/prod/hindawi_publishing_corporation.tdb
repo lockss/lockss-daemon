@@ -302,9 +302,9 @@
     >
 
     param[journal_id] = abm
+    #archived
 
     au < released ; 2014 ; Advances in Biomaterials Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; Advances in Biomaterials Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -999,7 +999,6 @@
     param[journal_id] = ao
 
     au < released ; 2014 ; Advances in Optics Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; Advances in Optics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -1237,7 +1236,6 @@
     param[journal_id] = arm
 
     au < released ; 2014 ; Advances in Regenerative Medicine Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; Advances in Regenerative Medicine Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -2622,7 +2620,7 @@
 
     au < manifest ; 2013 ; Chinese Journal of Engineering Volume 2013 ; 2013 ; 2013 >
     au < released ; 2014 ; Chinese Journal of Engineering Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; Chinese Journal of Engineering Volume 2015 ; 2015 ; 2015 >
+    au < expected ; 2016 ; Chinese Journal of Engineering Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -2935,7 +2933,6 @@
 
     au < manifest ; 2013 ; Developmental Biology Journal Volume 2013 ; 2013 ; 2013 >
     au < released ; 2014 ; Developmental Biology Journal Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; Developmental Biology Journal Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4244,7 +4241,6 @@
     param[journal_id] = ijembry
 
     au < released ; 2014 ; International Journal of Embryology Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; International Journal of Embryology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4699,7 +4695,6 @@
     param[journal_id] = ijm
 
     au < released ; 2014 ; International Journal of Mineralogy Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; International Journal of Mineralogy Volume 2015 ; 2015 ; 2015 >
 
   }
   
@@ -5479,7 +5474,6 @@
     param[journal_id] = jaer
 
     au < released ; 2014 ; Journal of Aerodynamics Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; Journal of Aerodynamics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5630,9 +5624,9 @@
     >
 
     param[journal_id] = jani
-    
-    au < released ; 2014 ; Journal of Animals Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; Journal of Animals Volume 2015 ; 2015 ; 2015 >
+    #archived
+
+    au < down ; 2014 ; Journal of Animals Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -5783,10 +5777,10 @@
     >
 
     param[journal_id] = jarchae
-    
+    #not archived as of 20160420
+
     au < manifest ; 2013 ; Journal of Archaeology Volume 2013 ; 2013 ; 2013 >
     au < released ; 2014 ; Journal of Archaeology Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; Journal of Archaeology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -5864,9 +5858,13 @@
     param[journal_id] = jamp
     comment[continues] = 1687-9228
 
+    au < exists ; 2009 ; Journal of Atomic, Molecular, and Optical Physics Volume 2009 ; 2009 ; 2009 >
+    au < exists ; 2010 ; Journal of Atomic, Molecular, and Optical Physics Volume 2010 ; 2010 ; 2010 >
+    au < exists ; 2011 ; Journal of Atomic, Molecular, and Optical Physics Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2012 ; Journal of Atomic, Molecular, and Optical Physics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Journal of Atomic and Molecular Physics Volume 2013 ; 2013 ; 2013 >
     au < released ; 2014 ; Journal of Atomic and Molecular Physics Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; Journal of Atomic and Molecular Physics Volume 2015 ; 2015 ; 2015 >
+
     }
   }
 
@@ -6110,7 +6108,6 @@
     param[journal_id] = jcad
     
     au < released ; 2014 ; Journal of Cell Adhesion Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; Journal of Cell Adhesion Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6142,7 +6139,7 @@
     
     au < manifest ; 2013 ; Journal of Chaos Volume 2013 ; 2013 ; 2013 >
     au < released ; 2014 ; Journal of Chaos Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; Journal of Chaos Volume 2015 ; 2015 ; 2015 >
+    au < expected ; 2016 ; Journal of Chaos Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -6199,7 +6196,6 @@
     
     au < manifest ; 2013 ; Journal of Coatings Volume 2013 ; 2013 ; 2013 >
     au < released ; 2014 ; Journal of Coatings Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; Journal of Coatings Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6333,7 +6329,7 @@
     
     au < manifest ; 2013 ; Journal of Computational Methods in Physics Volume 2013 ; 2013 ; 2013 >
     au < released ; 2014 ; Journal of Computational Methods in Physics Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; Journal of Computational Methods in Physics Volume 2015 ; 2015 ; 2015 >
+    au < expected ; 2016 ; Journal of Computational Methods in Physics Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -6980,7 +6976,6 @@
     
     au < manifest ; 2013 ; Journal of Inorganic Chemistry Volume 2013 ; 2013 ; 2013 >
     au < released ; 2014 ; Journal of Inorganic Chemistry Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; Journal of Inorganic Chemistry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7257,10 +7252,9 @@
     >
 
     param[journal_id] = jnc
-    
-    au < manifest ; 2013 ; Journal of Nuclear Chemistry Volume 2013 ; 2013 ; 2013 >
-    au < released ; 2014 ; Journal of Nuclear Chemistry Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; Journal of Nuclear Chemistry Volume 2015 ; 2015 ; 2015 >
+    #archived
+
+    au < down ; 2014 ; Journal of Nuclear Chemistry Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -7713,7 +7707,6 @@
     param[journal_id] = jqc
 
     au < released ; 2014 ; Journal of Quantum Chemistry Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; Journal of Quantum Chemistry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7869,7 +7862,6 @@
 
     au < manifest ; 2013 ; Journal of Soft Matter Volume 2013 ; 2013 ; 2013 >
     au < released ; 2014 ; Journal of Soft Matter Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; Journal of Soft Matter Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7963,7 +7955,6 @@
     param[journal_id] = jsto
 
     au < released ; 2014 ; Journal of Stochastics Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; Journal of Stochastics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -8195,20 +8186,6 @@
     au < manifest ; 2013 ; Journal of Vaccines Volume 2013 ; 2013 ; 2013 >
     au < released ; 2014 ; Journal of Vaccines Volume 2014 ; 2014 ; 2014 >
     au < released ; 2015 ; Journal of Vaccines Volume 2015 ; 2015 ; 2015 >
-
-  }
-
-  {
-    title <
-      name = Journal of Venereology ;
-      issn = 2356-7694 ;
-      eissn = 2314-8268 ;
-      issnl = 2356-7694
-    >
-
-    param[journal_id] = jve
-
-    au < expected ; 2015 ; Journal of Venereology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -8668,7 +8645,6 @@
     param[journal_id] = njos
 
     au < released ; 2014 ; New Journal of Science Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; New Journal of Science Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -8816,7 +8792,6 @@
 
     au < manifest ; 2013 ; Paleontology Journal Volume 2013 ; 2013 ; 2013 >
     au < released ; 2014 ; Paleontology Journal Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2015 ; Paleontology Journal Volume 2015 ; 2015 ; 2015 >
 
   }
 
