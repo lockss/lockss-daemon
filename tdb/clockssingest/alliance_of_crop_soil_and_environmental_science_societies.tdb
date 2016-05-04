@@ -170,7 +170,7 @@
     au < finished ; manifest ; 2007 ; Journal of Environmental Quality Volume 36 ; 36 ; >
     au < crawling ; exists ; 2008 ; Journal of Environmental Quality Volume 37 ; 37 ; >
     au < crawling ; exists ; 2009 ; Journal of Environmental Quality Volume 38 ; 38 ; >
-    au < ready ; exists ; 2010 ; Journal of Environmental Quality Volume 39 ; 39 ; >
+    au < crawling ; exists ; 2010 ; Journal of Environmental Quality Volume 39 ; 39 ; >
     au < notReady ; exists ; 2011 ; Journal of Environmental Quality Volume 40 ; 40 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/jeq/articles/40/4/www.losc.lsu.edu/stations.php?Id=msy  
     au < ready ; exists ; 2012 ; Journal of Environmental Quality Volume 41 ; 41 ; >
     au < crawling ; exists ; 2013 ; Journal of Environmental Quality Volume 42 ; 42 ; >
@@ -196,8 +196,8 @@
     au < crawling ; exists ; 2007 ; Journal of Plant Registrations Volume 1 ; 1 ; >
     au < crawling ; exists ; 2008 ; Journal of Plant Registrations Volume 2 ; 2 ; >
     au < crawling ; exists ; 2009 ; Journal of Plant Registrations Volume 3 ; 3 ; >
-    au < ready ; exists ; 2010 ; Journal of Plant Registrations Volume 4 ; 4 ; >
-    au < ready ; exists ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2010 ; Journal of Plant Registrations Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 ; >
     au < ready ; exists ; 2012 ; Journal of Plant Registrations Volume 6 ; 6 ; >
     au < finished ; finished ; 2013 ; Journal of Plant Registrations Volume 7 ; 7 ; >
     au < finished ; crawling ; 2014 ; Journal of Plant Registrations Volume 8 ; 8 ; >
@@ -241,9 +241,9 @@
     au < crawling ; exists ; 2007 ; Natural Sciences Education Volume 36 ; 36 ; >
     au < crawling ; exists ; 2008 ; Natural Sciences Education Volume 37 ; 37 ; >
     au < crawling ; exists ; 2009 ; Natural Sciences Education Volume 38 ; 38 ; >
-    au < ready ; exists ; 2010 ; Natural Sciences Education Volume 39 ; 39 ; >
+    au < crawling ; exists ; 2010 ; Natural Sciences Education Volume 39 ; 39 ; >
     au < notReady ; exists ; 2011 ; Natural Sciences Education Volume 40 ; 40 ; > #malformed url. 403 Error: https://dl.sciencesocieties.org/publications/nse/articles/40/1/www.nap.edu/openbook.php?record_id=12602&;page=155   
-    au < ready ; exists ; 2012 ; Natural Sciences Education Volume 41 ; 41 ; >
+    au < crawling ; exists ; 2012 ; Natural Sciences Education Volume 41 ; 41 ; >
     au < finished ; crawling ; 2013 ; Natural Sciences Education Volume 42 ; 42 ; >
     au < finished ; finished ; 2014 ; Natural Sciences Education Volume 43 ; 43 ; >
     au < crawling ; exists ; 2015 ; Natural Sciences Education Volume 44 ; 44 ; >
@@ -264,7 +264,7 @@
     param[journal_id] = tpg
 
     au < notReady ; exists ; 2008 ; The Plant Genome Volume 1 ; 1 ; > #403 error: https://dl.sciencesocieties.org/publications/tpg/supplements/1/1-2-p%20111b.txt
-    au < ready ; exists ; 2009 ; The Plant Genome Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2009 ; The Plant Genome Volume 2 ; 2 ; >
     au < ready ; exists ; 2010 ; The Plant Genome Volume 3 ; 3 ; >
     au < notReady ; exists ; 2011 ; The Plant Genome Volume 4 ; 4 ; > #malformed url: https://dl.sciencesocieties.org/publications/tpg/articles/4/1/www.phytozome.net/soybean.php
     au < ready ; exists ; 2012 ; The Plant Genome Volume 5 ; 5 ; >
@@ -293,7 +293,7 @@
     au < manifest ; exists ; 2008 ; Soil Horizons Volume 49 ; 49 ; >
     au < crawling ; exists ; 2009 ; Soil Horizons Volume 50 ; 50 ; >
     au < ready ; exists ; 2010 ; Soil Horizons Volume 51 ; 51 ; >
-    au < ready ; exists ; 2011 ; Soil Horizons Volume 52 ; 52 ; >
+    au < crawling ; exists ; 2011 ; Soil Horizons Volume 52 ; 52 ; >
     au < notReady ; exists ; 2012 ; Soil Horizons Volume 53 ; 53 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/sh/articles/53/5/www.phdcomics.com/comics.php
     au < crawling ; exists ; 2013 ; Soil Horizons Volume 54 ; 54 ; >
     au < finished ; manifest ; 2014 ; Soil Horizons Volume 55 ; 55 ; >
@@ -323,7 +323,7 @@
     au < manifest ; exists ; 2009 ; Soil Science Society of America Journal Volume 73 ; 73 ; >
     au < notReady ; exists ; 2010 ; Soil Science Society of America Journal Volume 74 ; 74 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/sssaj/articles/74/1/www.rothamsted.ac.uk/aen/smbweb1/methods.php?id=896
     au < notReady ; exists ; 2011 ; Soil Science Society of America Journal Volume 75 ; 75 ; > #malformed url. 403 error:   https://dl.sciencesocieties.org/publications/sssaj/articles/75/1/lter.kbs.msu.edu/about/experimental_design.php
-    au < ready ; exists ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 ; >
+    au < crawling ; exists ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 ; >
     au < finished ; manifest ; 2013 ; Soil Science Society of America Journal Volume 77 ; 77 ; >
     au < finished ; crawling ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 ; >
     au < crawling ; exists ; 2015 ; Soil Science Society of America Journal Volume 79 ; 79 ; >

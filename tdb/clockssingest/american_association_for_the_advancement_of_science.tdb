@@ -56,7 +56,7 @@
       au < manifest ; exists ; 2011 ; Science Signaling Volume 4 ; 4 ; >
       au < manifest ; exists ; 2012 ; Science Signaling Volume 5 ; 5 ; >
       au < testing ; exists ; 2013 ; Science Signaling Volume 6 ; 6 ; >
-      au < ready ; exists ; 2014 ; Science Signaling Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2014 ; Science Signaling Volume 7 ; 7 ; >
       au < manifest ; exists ; 2015 ; Science Signaling Volume 8 ; 8 ; >
       au < expected ; exists ; 2016 ; Science Signaling Volume 9 ; 9 ; >
 
@@ -78,7 +78,7 @@
       au < exists ; exists ; 2012 ; Science Translational Medicine Volume 4 ; 4 ; >
       au < exists ; exists ; 2013 ; Science Translational Medicine Volume 5 ; 5 ; >
       au < exists ; exists ; 2014 ; Science Translational Medicine Volume 6 ; 6 ; >
-      au < ready ; exists ; 2015 ; Science Translational Medicine Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2015 ; Science Translational Medicine Volume 7 ; 7 ; >
       au < manifest ; exists ; 2016 ; Science Translational Medicine Volume 8 ; 8 ; >
 
   }
@@ -92,7 +92,7 @@
     
       param[base_url] = http://advances.sciencemag.org/
 
-      au < ready ; exists ; 2015 ; Science Advances Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2015 ; Science Advances Volume 1 ; 1 ; >
       au < expected ; exists ; 2016 ; Science Advances Volume 2 ; 2 ; >
 
   }
