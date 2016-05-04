@@ -39,6 +39,7 @@
     au < HighWirePressH20Plugin ; down ; 2013 ; Advances in Psychiatric Treatment Volume 19 ; 19 >
     au < HWDrupalPlugin ; exists ; 2014 ; Advances in Psychiatric Treatment Volume 20 ; 20 >
     au < HWDrupalPlugin ; exists ; 2015 ; Advances in Psychiatric Treatment Volume 21 ; 21 >
+    au < HWDrupalPlugin ; expected ; 2016 ; Advances in Psychiatric Treatment Volume 22 ; 22 >
 
   }
 
@@ -53,6 +54,7 @@
     param[base_url] = http://bjpo.rcpsych.org/
 
     au < HWDrupalPlugin ; exists ; 2015 ; BJPsych Open Volume 1 ; 1 >
+    au < HWDrupalPlugin ; expected ; 2016 ; BJPsych Open Volume 2 ; 2 >
 
   }
 
@@ -273,6 +275,8 @@
     au < HWDrupalPlugin ; exists ; 2014 ; The British Journal of Psychiatry Volume 205 ; 205 >
     au < HWDrupalPlugin ; exists ; 2015 ; The British Journal of Psychiatry Volume 206 ; 206 >
     au < HWDrupalPlugin ; expected ; 2015 ; The British Journal of Psychiatry Volume 207 ; 207 >
+    au < HWDrupalPlugin ; expected ; 2016 ; The British Journal of Psychiatry Volume 208 ; 208 >
+    au < HWDrupalPlugin ; expected ; 2016 ; The British Journal of Psychiatry Volume 209 ; 209 >
 
   }
 
@@ -326,6 +330,7 @@
     au < HighWirePressH20Plugin ; down ; 2013 ; Psychiatric Bulletin Volume 37 ; 37 >
     au < HWDrupalPlugin ; exists ; 2014 ; Psychiatric Bulletin Volume 38 ; 38 >
     au < HWDrupalPlugin ; exists ; 2015 ; Psychiatric Bulletin Volume 39 ; 39 >
+    au < HWDrupalPlugin ; expected ; 2016 ; Psychiatric Bulletin Volume 40 ; 40 >
   
   }
 
