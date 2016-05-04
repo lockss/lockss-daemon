@@ -3804,12 +3804,12 @@
       issnl = 2373-6658
     >
 
-      param[base_url] = http://psm.sagepub.com/
+      param[base_url] = http://apn.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2014 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 >
-      au < expected ; 2015 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 >
+      au < exists ; 2014 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 >
+      au < exists ; 2015 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 >
       au < expected ; 2016 ; Asian/Pacific Island Nursing Journal Volume 3 ; 3 >
 
   }
@@ -10183,8 +10183,7 @@
       pluginSuffix = HWDrupalPlugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2015 ; Digital Health Volume 1 ; 1 >
-      au < expected ; 2016 ; Digital Health Volume 2 ; 2 >
+      au < exists ; 2016 ; Digital Health Volume 1 ; 1 >
 
   }
 
@@ -11285,8 +11284,6 @@
       au < exists ; 2012-2013 ; Educational Horizons Volume 91 ; 91 >
       au < exists ; 2013-2014 ; Educational Horizons Volume 92 ; 92 >
       au < released ; 2014-2015 ; Educational Horizons Volume 93 ; 93 >
-      au < expected ; 2015-2016 ; Educational Horizons Volume 94 ; 94 >
-      au < expected ; 2016-2017 ; Educational Horizons Volume 95 ; 95 >
 
     }
 
@@ -19639,6 +19636,9 @@
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
+      au < released ; 1998-1999 ; International Journal of Police Science & Management Volume 1 ; 1 >
+      au < exists ; 2000 ; International Journal of Police Science & Management Volume 2 ; 2 >
+      au < exists ; 2001 ; International Journal of Police Science & Management Volume 3 ; 3 >
       au < exists ; 2002 ; International Journal of Police Science & Management Volume 4 ; 4 >
       au < exists ; 2003 ; International Journal of Police Science & Management Volume 5 ; 5 >
       au < exists ; 2004 ; International Journal of Police Science & Management Volume 6 ; 6 >
@@ -28853,8 +28853,6 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2012 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 12 ; 12 >
         au < released ; 2013 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 13 ; 13 >
         au < released ; 2014 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 14 ; 14 >
-        au < expected ; 2015 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 15 ; 15 >
-        au < expected ; 2016 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 16 ; 16 >
 
       }
 
@@ -34250,7 +34248,7 @@ comment[mpj] = now published by Brill
       au < exists ; 2014 ; Media International Australia Volume 150 ; 150 >
       au < exists ; 2014 ; Media International Australia Volume 151 ; 151 >
       au < exists ; 2014 ; Media International Australia Volume 152 ; 152 >
-      au < exists ; 2014 ; Media International Australia Volume 153 ; 153 >
+      au < doesNotExist ; 0 ; Media International Australia Volume 153 ; 153 >
       au < exists ; 2015 ; Media International Australia Volume 154 ; 154 >
       au < manifest ; 2015 ; Media International Australia Volume 155 ; 155 >
       au < expected ; 2015 ; Media International Australia Volume 156 ; 156 >
@@ -36005,8 +36003,6 @@ comment[mpj] = now published by Brill
       au < exists ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 >
       au < exists ; 2013 ; Nineteenth Century Theatre and Film Volume 40 ; 40 >
       au < released ; 2014 ; Nineteenth Century Theatre and Film Volume 41 ; 41 >
-      au < expected ; 2015 ; Nineteenth Century Theatre and Film Volume 42 ; 42 >
-      au < expected ; 2016 ; Nineteenth Century Theatre and Film Volume 43 ; 43 >
 
     }
 
@@ -49792,9 +49788,8 @@ comment[mpj] = now published by Brill
     param[base_url] = http://dsp.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < released ; 2013 ; Drug Science, Policy and Law Volume 1 ; 1 >
-    au < expected ; 2015 ; Drug Science, Policy and Law Volume 2 ; 2 >
-    au < expected ; 2016 ; Drug Science, Policy and Law Volume 3 ; 3 >
+    au < released ; 2013-2014 ; Drug Science, Policy and Law Volume 1 ; 1 >
+    au < exists ; 2016 ; Drug Science, Policy and Law Volume 2 ; 2 >
 
     }
 

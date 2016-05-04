@@ -791,7 +791,7 @@
       pluginSuffix = ClockssHWDrupalPlugin
 
       au < exists ; exists ; 2015 ; AERA Open Volume 1 ; 1 ; >
-      au < expected ; exists ; 2016 ; AERA Open Volume 2 ; 2 ; >
+      au < exists ; exists ; 2016 ; AERA Open Volume 2 ; 2 ; >
 
   }
 
@@ -1641,8 +1641,8 @@
       au < zapped ; finished ; 2012 ; The American Journal of Sports Medicine Volume 40 ; 40 ; >
       au < finished ; finished ; 2013 ; The American Journal of Sports Medicine Volume 41 ; 41 ; >
       au < finished ; finished ; 2014 ; The American Journal of Sports Medicine Volume 42 ; 42 ; >
-      au < expected ; exists ; 2015 ; The American Journal of Sports Medicine Volume 43 ; 43 ; >
-      au < expected ; exists ; 2016 ; The American Journal of Sports Medicine Volume 44 ; 44 ; >
+      au < exists ; exists ; 2015 ; The American Journal of Sports Medicine Volume 43 ; 43 ; >
+      au < exists ; exists ; 2016 ; The American Journal of Sports Medicine Volume 44 ; 44 ; >
 
     }
 
@@ -3433,11 +3433,11 @@
       issnl = 2373-6658
     >
 
-      param[base_url] = http://psm.sagepub.com/
+      param[base_url] = http://apn.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < crawling ; exists ; 2014 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 ; >
-      au < expected ; exists ; 2015 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 ; >
+      au < exists ; exists ; 2014 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 ; >
+      au < exists ; exists ; 2015 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 ; >
       au < expected ; exists ; 2016 ; Asian/Pacific Island Nursing Journal Volume 3 ; 3 ; >
 
   }
@@ -9218,8 +9218,7 @@
       param[base_url] = http://dhj.sagepub.com/
       pluginSuffix = ClockssHWDrupalPlugin
 
-      au < exists ; exists ; 2015 ; Digital Health Volume 1 ; 1 ; >
-      au < expected ; exists ; 2016 ; Digital Health Volume 2 ; 2 ; >
+      au < exists ; exists ; 2016 ; Digital Health Volume 1 ; 1 ; >
 
   }
 
@@ -10213,8 +10212,6 @@
     au < crawling ; exists ; 2012-2013 ; Educational Horizons Volume 91 ; 91 ; >
     au < finished ; finished ; 2013-2014 ; Educational Horizons Volume 92 ; 92 ; >
     au < finished ; finished ; 2014-2015 ; Educational Horizons Volume 93 ; 93 ; >
-    au < expected ; exists ; 2015-2016 ; Educational Horizons Volume 94 ; 94 ; >
-    au < expected ; exists ; 2016-2017 ; Educational Horizons Volume 95 ; 95 ; >
 
   }
 
@@ -13607,7 +13604,7 @@
 
       au < finished ; finished ; 2014 ; Global Pediatric Health Volume 1 ; 1 ; >
       au < exists ; exists ; 2015 ; Global Pediatric Health Volume 2 ; 2 ; >
-      au < expected ; exists ; 2016 ; Global Pediatric Health Volume 3 ; 3 ; >
+      au < exists ; exists ; 2016 ; Global Pediatric Health Volume 3 ; 3 ; >
 
   }
 
@@ -17353,6 +17350,9 @@
       param[base_url] = http://psm.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < crawling ; exists ; 1998-1999 ; International Journal of Police Science & Management Volume 1 ; 1 ; >
+      au < exists ; exists ; 2000 ; International Journal of Police Science & Management Volume 2 ; 2 ; >
+      au < exists ; exists ; 2001 ; International Journal of Police Science & Management Volume 3 ; 3 ; >
       au < exists ; exists ; 2002 ; International Journal of Police Science & Management Volume 4 ; 4 ; >
       au < exists ; exists ; 2003 ; International Journal of Police Science & Management Volume 5 ; 5 ; >
       au < exists ; exists ; 2004 ; International Journal of Police Science & Management Volume 6 ; 6 ; >
@@ -24044,7 +24044,7 @@
       au < exists ; exists ; 2012-2013 ; Journal of Historical Research in Music Education Volume 34 ; 34 ; >
       au < exists ; exists ; 2013-2014 ; Journal of Historical Research in Music Education Volume 35 ; 35 ; >
       au < exists ; exists ; 2014-2015 ; Journal of Historical Research in Music Education Volume 36 ; 36 ; >
-      au < exists ; exists ; 2015-2016 ; Journal of Historical Research in Music Education Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2015-2016 ; Journal of Historical Research in Music Education Volume 37 ; 37 ; >
       au < expected ; exists ; 2016-2017 ; Journal of Historical Research in Music Education Volume 38 ; 38 ; >
 
    }
@@ -25876,8 +25876,6 @@
       au < finished ; finished ; 2012 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 12 ; 12 ; >
       au < finished ; manifest ; 2013 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 13 ; 13 ; >
       au < finished ; finished ; 2014 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 14 ; 14 ; >
-      au < expected ; exists ; 2015 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 15 ; 15 ; >
-      au < expected ; exists ; 2016 ; Journal of Medical Marketing: Device, Diagnostic and Pharmaceutical Marketing Volume 16 ; 16 ; >
 
     }
 
@@ -30802,11 +30800,11 @@
       au < exists ; exists ; 2014 ; Media International Australia Volume 150 ; 150 ; >
       au < exists ; exists ; 2014 ; Media International Australia Volume 151 ; 151 ; >
       au < exists ; exists ; 2014 ; Media International Australia Volume 152 ; 152 ; >
-      au < exists ; exists ; 2014 ; Media International Australia Volume 153 ; 153 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Media International Australia Volume 153 ; 153 ; >
       au < exists ; exists ; 2015 ; Media International Australia Volume 154 ; 154 ; >
       au < exists ; exists ; 2015 ; Media International Australia Volume 155 ; 155 ; >
-      au < expected ; exists ; 2015 ; Media International Australia Volume 156 ; 156 ; >
-      au < expected ; exists ; 2015 ; Media International Australia Volume 157 ; 157 ; >
+      au < exists ; exists ; 2015 ; Media International Australia Volume 156 ; 156 ; >
+      au < exists ; exists ; 2015 ; Media International Australia Volume 157 ; 157 ; >
       au < manifest ; exists ; 2016 ; Media International Australia Volume 158 ; 158 ; >
       au < expected ; exists ; 2016 ; Media International Australia Volume 159 ; 159 ; >
       au < expected ; exists ; 2016 ; Media International Australia Volume 160 ; 160 ; >
@@ -31132,8 +31130,8 @@
         au < finished ; finished ; 2012 ; Medico-Legal Journal Volume 80 ; 80 ; >
         au < finished ; finished ; 2013 ; Medico-Legal Journal Volume 81 ; 81 ; >
         au < crawling ; exists ; 2014 ; Medico-Legal Journal Volume 82 ; 82 ; >
-        au < expected ; exists ; 2015 ; Medico-Legal Journal Volume 83 ; 83 ; >
-        au < expected ; exists ; 2016 ; Medico-Legal Journal Volume 84 ; 84 ; >
+        au < exists ; exists ; 2015 ; Medico-Legal Journal Volume 83 ; 83 ; >
+        au < exists ; exists ; 2016 ; Medico-Legal Journal Volume 84 ; 84 ; >
 
     }
 
@@ -32522,8 +32520,6 @@
       au < exists ; exists ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 ; >
       au < exists ; exists ; 2013 ; Nineteenth Century Theatre and Film Volume 40 ; 40 ; >
       au < finished ; manifest ; 2014 ; Nineteenth Century Theatre and Film Volume 41 ; 41 ; >
-      au < expected ; exists ; 2015 ; Nineteenth Century Theatre and Film Volume 42 ; 42 ; >
-      au < expected ; exists ; 2016 ; Nineteenth Century Theatre and Film Volume 43 ; 43 ; >
 
   }
 
@@ -45598,8 +45594,8 @@
       au < finished ; finished ; 2012 ; Vision: The Journal of Business Perspective Volume 16 ; 16 ; >
       au < finished ; finished ; 2013 ; Vision: The Journal of Business Perspective Volume 17 ; 17 ; >
       au < finished ; finished ; 2014 ; Vision: The Journal of Business Perspective Volume 18 ; 18 ; >
-      au < expected ; exists ; 2015 ; Vision: The Journal of Business Perspective Volume 19 ; 19 ; >
-      au < expected ; exists ; 2016 ; Vision: The Journal of Business Perspective Volume 20 ; 20 ; >
+      au < exists ; exists ; 2015 ; Vision: The Journal of Business Perspective Volume 19 ; 19 ; >
+      au < exists ; exists ; 2016 ; Vision: The Journal of Business Perspective Volume 20 ; 20 ; >
 
   }
 
@@ -46163,11 +46159,9 @@
 
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://dsp.sagepub.com/
-    # 2013 content published in 2014
     
-    au < finished ; finished ; 2013 ; Drug Science, Policy and Law Volume 1 ; 1 ; >
-    au < expected ; exists ; 2015 ; Drug Science, Policy and Law Volume 2 ; 2 ; >
-    au < expected ; exists ; 2016 ; Drug Science, Policy and Law Volume 3 ; 3 ; >
+    au < finished ; finished ; 2013-2014 ; Drug Science, Policy and Law Volume 1 ; 1 ; >
+    au < exists ; exists ; 2016 ; Drug Science, Policy and Law Volume 2 ; 2 ; >
 
     }
 
@@ -46319,8 +46313,8 @@
 
     au < finished ; finished ; 2013 ; Foreign Trade Review Volume 48 ; 48 ; >
     au < finished ; crawling ; 2014 ; Foreign Trade Review Volume 49 ; 49 ; >
-    au < expected ; exists ; 2015 ; Foreign Trade Review Volume 50 ; 50 ; >
-    au < expected ; exists ; 2016 ; Foreign Trade Review Volume 51 ; 51 ; >
+    au < exists ; exists ; 2015 ; Foreign Trade Review Volume 50 ; 50 ; >
+    au < exists ; exists ; 2016 ; Foreign Trade Review Volume 51 ; 51 ; >
 
     }
 
@@ -46929,8 +46923,8 @@
         au < exists ; exists ; 2012 ; Clinical Ethics Volume 7 ; 7 ; >
         au < finished ; finished ; 2013 ; Clinical Ethics Volume 8 ; 8 ; >
         au < finished ; finished ; 2014 ; Clinical Ethics Volume 9 ; 9 ; >
-        au < expected ; exists ; 2015 ; Clinical Ethics Volume 10 ; 10 ; >
-        au < expected ; exists ; 2016 ; Clinical Ethics Volume 11 ; 11 ; >
+        au < exists ; exists ; 2015 ; Clinical Ethics Volume 10 ; 10 ; >
+        au < exists ; exists ; 2016 ; Clinical Ethics Volume 11 ; 11 ; >
 
     }
 
@@ -47391,7 +47385,7 @@
         # skips 2013
         
         au < crawling ; exists ; 2014 ; International Journal of Care Coordination Volume 17 ; 17 ; >
-        au < expected ; exists ; 2015 ; International Journal of Care Coordination Volume 18 ; 18 ; >
+        au < exists ; exists ; 2015 ; International Journal of Care Coordination Volume 18 ; 18 ; >
         au < expected ; exists ; 2016 ; International Journal of Care Coordination Volume 19 ; 19 ; >
 
     }
@@ -47550,8 +47544,8 @@
         au < finished ; finished ; 2012 ; Journal of Health Services Research & Policy Volume 17 ; 17 ; >
         au < finished ; finished ; 2013 ; Journal of Health Services Research & Policy Volume 18 ; 18 ; >
         au < finished ; finished ; 2014 ; Journal of Health Services Research & Policy Volume 19 ; 19 ; >
-        au < expected ; exists ; 2015 ; Journal of Health Services Research & Policy Volume 20 ; 20 ; >
-        au < expected ; exists ; 2016 ; Journal of Health Services Research & Policy Volume 21 ; 21 ; >
+        au < exists ; exists ; 2015 ; Journal of Health Services Research & Policy Volume 20 ; 20 ; >
+        au < exists ; exists ; 2016 ; Journal of Health Services Research & Policy Volume 21 ; 21 ; >
 
     }
 
@@ -47998,8 +47992,8 @@
         au < exists ; exists ; 2012 ; Laboratory Animals Volume 46 ; 46 ; >
         au < finished ; finished ; 2013 ; Laboratory Animals Volume 47 ; 47 ; >
         au < finished ; manifest ; 2014 ; Laboratory Animals Volume 48 ; 48 ; >
-        au < expected ; exists ; 2015 ; Laboratory Animals Volume 49 ; 49 ; >
-        au < expected ; exists ; 2016 ; Laboratory Animals Volume 50 ; 50 ; >
+        au < exists ; exists ; 2015 ; Laboratory Animals Volume 49 ; 49 ; >
+        au < exists ; exists ; 2016 ; Laboratory Animals Volume 50 ; 50 ; >
 
       }
 
