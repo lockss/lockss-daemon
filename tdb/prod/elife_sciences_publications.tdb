@@ -1,34 +1,44 @@
 {
   publisher <
-    name = eLife Sciences Publications ;
-    info[tester] = 2
+    name = eLife Sciences Publications
   >
 
   plugin = org.lockss.plugin.elifesciences.ELifeSciencesPlugin
   implicit < status ; year ; name ; param[year_month] >
-  
+
   {
     title <
       name = eLife ;
-      issn = 2050-084X  
+      eissn = 2050-084X
     >
 
-    comment[platform] = Custom
     param[base_url] = http://elifesciences.org/
 
-    {
+
       au < manifest ; 2015 ; eLife January 2015 ; 2015/01 >
       au < ready ; 2015 ; eLife February 2015 ; 2015/02 >
-      au < exists ; 2015 ; eLife March 2015 ; 2015/03 >
+      au < manifest ; 2015 ; eLife March 2015 ; 2015/03 >
       au < manifest ; 2015 ; eLife April 2015 ; 2015/04 >
       au < manifest ; 2015 ; eLife May 2015 ; 2015/05 >
-      au < exists ; 2015 ; eLife June 2015 ; 2015/06 >
-      au < exists ; 2015 ; eLife July 2015 ; 2015/07 >
+      au < manifest ; 2015 ; eLife June 2015 ; 2015/06 >
+      au < manifest ; 2015 ; eLife July 2015 ; 2015/07 >
       au < manifest ; 2015 ; eLife August 2015 ; 2015/08 >
       au < manifest ; 2015 ; eLife September 2015 ; 2015/09 >
-      au < exists ; 2015 ; eLife October 2015 ; 2015/10 >
-      au < exists ; 2015 ; eLife November 2015 ; 2015/11 >
+      au < manifest ; 2015 ; eLife October 2015 ; 2015/10 >
+      au < manifest ; 2015 ; eLife November 2015 ; 2015/11 >
       au < manifest ; 2015 ; eLife December 2015 ; 2015/12 >
-    }
+
+      au < manifest ; 2016 ; eLife January 2016 ; 2016/01 >
+      au < manifest ; 2016 ; eLife February 2016 ; 2016/02 >
+      au < manifest ; 2016 ; eLife March 2016 ; 2016/03 >
+      au < manifest ; 2016 ; eLife April 2016 ; 2016/04 >
+      au < exists ; 2016 ; eLife May 2016 ; 2016/05 >
+      au < expected ; 2016 ; eLife June 2016 ; 2016/06 >
+      au < expected ; 2016 ; eLife July 2016 ; 2016/07 >
+      au < expected ; 2016 ; eLife August 2016 ; 2016/08 >
+      au < expected ; 2016 ; eLife September 2016 ; 2016/09 >
+      au < expected ; 2016 ; eLife October 2016 ; 2016/10 >
+      au < expected ; 2016 ; eLife November 2016 ; 2016/11 >
+      au < expected ; 2016 ; eLife December 2016 ; 2016/12 >
   }
 }
