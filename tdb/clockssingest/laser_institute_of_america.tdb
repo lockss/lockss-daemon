@@ -33,8 +33,8 @@
       implicit < status ; status2 ; year ; name ; param[year] >
     
       au < readySource ; finished ; 2014 ; Laser Institute of America Source Content 2014 ; 2014 >
-      au < readySource ; crawling ; 2015 ; Laser Institute of America Source Content 2015 ; 2015 >
-      au < readySource ; crawling ; 2016 ; Laser Institute of America Source Content 2016 ; 2016 >
+      au < readySource ; finished ; 2015 ; Laser Institute of America Source Content 2015 ; 2015 >
+      au < readySource ; finished ; 2016 ; Laser Institute of America Source Content 2016 ; 2016 >
 
     }
 

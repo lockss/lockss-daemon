@@ -152,7 +152,7 @@
     au < finished ; finished ; 2008 ; Emerging Health Threats Journal Volume 1 ; 1 ; 2008 ; >
     au < finished ; finished ; 2009 ; Emerging Health Threats Journal Volume 2 ; 2 ; 2009 ; >
     au < finished ; finished ; 2010 ; Emerging Health Threats Journal Volume 3 ; 3 ; 2010 ; >
-    au < finished ; frozen ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 ; 2011 ; >
+    au < finished ; finished ; 2011 ; Emerging Health Threats Journal [including Supplements] Volume 4 ; 4 ; 2011 ; >
     au < finished ; finished ; 2012 ; Emerging Health Threats Journal [including Supplements] Volume 5 ; 5 ; 2012 ; >
     au < finished ; finished ; 2013 ; Emerging Health Threats Journal [including Supplements] Volume 6 ; 6 ; 2013 ; >
     au < finished ; finished ; 2014 ; Emerging Health Threats Journal [including Supplements] Volume 7 ; 7 ; 2014 ; >
@@ -275,7 +275,7 @@
     au < finished ; frozen ; 2011 ; Global Health Action [including Supplements] Volume 4 ; 4 ; 2011 ; >
     au < finished ; crawling ; 2012 ; Global Health Action [including Supplements] Volume 5 ; 5 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Global Health Action [including Supplements] Volume 6 ; 6 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Global Health Action [including Supplements] Volume 7 ; 7 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Global Health Action [including Supplements] Volume 7 ; 7 ; 2014 ; >
     au < crawling ; exists ; 2015 ; Global Health Action [including Supplements] Volume 8 ; 8 ; 2015 ; >
   }
 
@@ -362,11 +362,11 @@
     param[journal_id] = jac
 
     au < finished ; finished ; 2009 ; Journal of Aesthetics & Culture Volume 1 ; 1 ; 2009 ; >
-    au < finished ; crawling ; 2010 ; Journal of Aesthetics & Culture Volume 2 ; 2 ; 2010 ; >
+    au < finished ; finished ; 2010 ; Journal of Aesthetics & Culture Volume 2 ; 2 ; 2010 ; >
     au < finished ; crawling ; 2011 ; Journal of Aesthetics & Culture Volume 3 ; 3 ; 2011 ; >
     au < finished ; finished ; 2012 ; Journal of Aesthetics & Culture Volume 4 ; 4 ; 2012 ; >
     au < finished ; finished ; 2013 ; Journal of Aesthetics & Culture Volume 5 ; 5 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Journal of Aesthetics & Culture Volume 6 ; 6 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Journal of Aesthetics & Culture Volume 6 ; 6 ; 2014 ; >
     au < crawling ; exists ; 2015 ; Journal of Aesthetics & Culture Volume 7 ; 7 ; 2015 ; >
   }
 
@@ -384,7 +384,7 @@
     au < finished ; crawling ; 2011 ; Journal of Community Hospital Internal Medicine Perspectives Volume 1 ; 1 ; 2011 ; >
     au < finished ; crawling ; 2012 ; Journal of Community Hospital Internal Medicine Perspectives Volume 2 ; 2 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Journal of Community Hospital Internal Medicine Perspectives Volume 3 ; 3 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Journal of Community Hospital Internal Medicine Perspectives Volume 4 ; 4 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Journal of Community Hospital Internal Medicine Perspectives Volume 4 ; 4 ; 2014 ; >
     au < crawling ; exists ; 2015 ; Journal of Community Hospital Internal Medicine Perspectives Volume 5 ; 5 ; 2015 ; >
 
   }
@@ -566,10 +566,10 @@
     param[journal_id] = mehd
     # issn volumes 1-21
 
-    au < finished ; crawling ; 1988 ; Microbial Ecology in Health and Disease Volume 1 ; 1 ; 1988 ; >
+    au < finished ; finished ; 1988 ; Microbial Ecology in Health and Disease Volume 1 ; 1 ; 1988 ; >
     au < finished ; finished ; 1989 ; Microbial Ecology in Health and Disease Volume 2 ; 2 ; 1989 ; >
     au < crawling ; exists ; 1990 ; Microbial Ecology in Health and Disease Volume 3 ; 3 ; 1990 ; >
-    au < finished ; crawling ; 1991 ; Microbial Ecology in Health and Disease Volume 4 ; 4 ; 1991 ; >
+    au < finished ; finished ; 1991 ; Microbial Ecology in Health and Disease Volume 4 ; 4 ; 1991 ; >
     au < finished ; finished ; 1992 ; Microbial Ecology in Health and Disease Volume 5 ; 5 ; 1992 ; >
     au < finished ; finished ; 1993 ; Microbial Ecology in Health and Disease Volume 6 ; 6 ; 1993 ; >
     au < finished ; finished ; 1994 ; Microbial Ecology in Health and Disease Volume 7 ; 7 ; 1994 ; >
@@ -581,11 +581,11 @@
     au < crawling ; exists ; 2001 ; Microbial Ecology in Health and Disease Volume 13 ; 13 ; 2001 ; >
     au < finished ; finished ; 2002 ; Microbial Ecology in Health and Disease Volume 14 ; 14 ; 2002 ; >
     au < finished ; finished ; 2003 ; Microbial Ecology in Health and Disease Volume 15 ; 15 ; 2003 ; >
-    au < finished ; frozen ; 2004 ; Microbial Ecology in Health and Disease Volume 16 ; 16 ; 2004 ; >
+    au < finished ; finished ; 2004 ; Microbial Ecology in Health and Disease Volume 16 ; 16 ; 2004 ; >
     au < finished ; finished ; 2005 ; Microbial Ecology in Health and Disease Volume 17 ; 17 ; 2005 ; >
     au < finished ; finished ; 2006 ; Microbial Ecology in Health and Disease Volume 18 ; 18 ; 2006 ; >
     au < finished ; crawling ; 2007 ; Microbial Ecology in Health and Disease Volume 19 ; 19 ; 2007 ; >
-    au < finished ; frozen ; 2008 ; Microbial Ecology in Health and Disease Volume 20 ; 20 ; 2008 ; >
+    au < finished ; finished ; 2008 ; Microbial Ecology in Health and Disease Volume 20 ; 20 ; 2008 ; >
     au < finished ; finished ; 2009 ; Microbial Ecology in Health and Disease Volume 21 ; 21 ; 2009 ; >
     au < finished ; finished ; 2011 ; Microbial Ecology in Health and Disease Volume 22 ; 22 ; 2011 ; >
     au < finished ; finished ; 2012 ; Microbial Ecology in Health and Disease Volume 23 ; 23 ; 2012 ; >
@@ -754,7 +754,7 @@
     au < finished ; crawling ; 1996 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 40 ; 40 ; 1996 ; >
     au < finished ; finished ; 1997 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 41 ; 41 ; 1997 ; >
     au < finished ; frozen ; 1998 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 42 ; 42 ; 1998 ; >
-    au < finished ; frozen ; 1999 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 43 ; 43 ; 1999 ; >
+    au < finished ; finished ; 1999 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 43 ; 43 ; 1999 ; >
     au < finished ; frozen ; 2000 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 44 ; 44 ; 2000 ; >
     au < finished ; finished ; 2001 ; Scandinavian Journal of Nutrition/Näringsforskning Volume 45 ; 45 ; 2001 ; >
     au < finished ; frozen ; 2002 ; Scandinavian Journal of Nutrition Volume 46 ; 46 ; 2002 ; >
@@ -859,7 +859,7 @@
     au < finished ; frozen ; 2010 ; Tellus A: Dynamic Meteorology and Oceanography Volume 62 ; 62 ; 2010 ; >
     au < finished ; frozen ; 2011 ; Tellus A: Dynamic Meteorology and Oceanography Volume 63 ; 63 ; 2011 ; >
     au < finished ; frozen ; 2012 ; Tellus A: Dynamic Meteorology and Oceanography Volume 64 ; 64 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; Tellus A: Dynamic Meteorology and Oceanography Volume 65 ; 65 ; 2013 ; >
+    au < finished ; finished ; 2013 ; Tellus A: Dynamic Meteorology and Oceanography Volume 65 ; 65 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Tellus A: Dynamic Meteorology and Oceanography Volume 66 ; 66 ; 2014 ; >
     au < crawling ; exists ; 2015 ; Tellus A: Dynamic Meteorology and Oceanography Volume 67 ; 67 ; 2015 ; >
 
@@ -899,7 +899,7 @@
     au < finished ; crawling ; 2002 ; Tellus B: Chemical and Physical Meteorology Volume 54 ; 54 ; 2002 ; >
     au < finished ; frozen ; 2003 ; Tellus B: Chemical and Physical Meteorology Volume 55 ; 55 ; 2003 ; >
     au < finished ; finished ; 2004 ; Tellus B: Chemical and Physical Meteorology Volume 56 ; 56 ; 2004 ; >
-    au < finished ; frozen ; 2005 ; Tellus B: Chemical and Physical Meteorology Volume 57 ; 57 ; 2005 ; >
+    au < finished ; finished ; 2005 ; Tellus B: Chemical and Physical Meteorology Volume 57 ; 57 ; 2005 ; >
     au < finished ; frozen ; 2006 ; Tellus B: Chemical and Physical Meteorology Volume 58 ; 58 ; 2006 ; >
     au < finished ; frozen ; 2007 ; Tellus B: Chemical and Physical Meteorology Volume 59 ; 59 ; 2007 ; >
     au < finished ; crawling ; 2008 ; Tellus B: Chemical and Physical Meteorology Volume 60 ; 60 ; 2008 ; >

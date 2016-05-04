@@ -495,7 +495,7 @@
 
     au < finished ; frozen ; 2011 ; Cell Death & Disease Volume 1 ; 2011 ; 1 ; >
     au < finished ; frozen ; 2011 ; Cell Death & Disease Volume 2 ; 2011 ; 2 ; >
-    au < finished ; frozen ; 2012 ; Cell Death & Disease Volume 3 ; 2012 ; 3 ; >
+    au < finished ; finished ; 2012 ; Cell Death & Disease Volume 3 ; 2012 ; 3 ; >
     au < crawling ; exists ; 2013 ; Cell Death & Disease Volume 4 ; 2013 ; 4 ; >
     au < finished ; crawling ; 2014 ; Cell Death & Disease Volume 5 ; 2014 ; 5 ; >
     au < crawling ; exists ; 2015 ; Cell Death & Disease Volume 6 ; 2015 ; 6 ; >
@@ -780,7 +780,7 @@
     au < finished ; crawling ; 2011 ; Experimental & Molecular Medicine Volume 43 ; 2011 ; 43 ; >
     au < crawling ; exists ; 2012 ; Experimental & Molecular Medicine Volume 44 ; 2012 ; 44 ; >
     au < crawling ; exists ; 2013 ; Experimental & Molecular Medicine Volume 45 ; 2013 ; 45 ; >
-    au < finished ; crawling ; 2014 ; Experimental & Molecular Medicine Volume 46 ; 2014 ; 46 ; >
+    au < finished ; finished ; 2014 ; Experimental & Molecular Medicine Volume 46 ; 2014 ; 46 ; >
     au < crawling ; exists ; 2015 ; Experimental & Molecular Medicine Volume 47 ; 2015 ; 47 ; >
 
 
@@ -885,7 +885,7 @@
     au < finished ; crawling ; 2008 ; Genes and Immunity Volume 9 ; 2008 ; 9 ; >
     au < finished ; crawling ; 2009 ; Genes and Immunity Volume 10 ; 2009 ; 10 ; >
     au < finished ; crawling ; 2010 ; Genes and Immunity Volume 11 ; 2010 ; 11 ; >
-    au < finished ; frozen ; 2011 ; Genes and Immunity Volume 12 ; 2011 ; 12 ; >
+    au < finished ; finished ; 2011 ; Genes and Immunity Volume 12 ; 2011 ; 12 ; >
     au < finished ; crawling ; 2012 ; Genes and Immunity Volume 13 ; 2012 ; 13 ; >
     au < finished ; crawling ; 2013 ; Genes and Immunity Volume 14 ; 2013 ; 14 ; >
     au < finished ; crawling ; 2014 ; Genes and Immunity Volume 15 ; 2014 ; 15 ; >
@@ -1169,7 +1169,7 @@
     au < finished ; crawling ; 2011 ; Immunology & Cell Biology Volume 89 ; 2011 ; 89 ; >
     au < finished ; frozen ; 2012 ; Immunology & Cell Biology Volume 90 ; 2012 ; 90 ; >
     au < finished ; finished ; 2013 ; Immunology & Cell Biology Volume 91 ; 2013 ; 91 ; >
-    au < finished ; crawling ; 2014 ; Immunology & Cell Biology Volume 92 ; 2014 ; 92 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Immunology & Cell Biology Volume 92 ; 2014 ; 92 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Immunology & Cell Biology Volume 93 ; 2015 ; 93 ; >
   }
 
@@ -1700,7 +1700,7 @@
     #moved to Elsevier
     param[journal_id] = ki
 
-    au < finished ; crawling ; 2008 ; Kidney International Volume 73 (2008) ; 2008 ; 73 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2008 ; Kidney International Volume 73 (2008) ; 2008 ; 73 ; reingest3.clockss.org:8083 >
     au < down ; exists ; 2008 ; Kidney International Volume 74 (2008) ; 2008 ; 74 ; >
     au < down ; exists ; 2009 ; Kidney International Volume 75 (2009) ; 2009 ; 75 ; >
     au < down ; exists ; 2009 ; Kidney International Volume 76 (2009) ; 2009 ; 76 ; >
@@ -1712,7 +1712,7 @@
     au < exists ; exists ; 2012 ; Kidney International Volume 82 ; 2012 ; 82 ; >
     au < down ; exists ; 2013 ; Kidney International Volume 83 ; 2013 ; 83 ; >
     au < finished ; crawling ; 2013 ; Kidney International Volume 84 ; 2013 ; 84 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2014 ; Kidney International Volume 85 ; 2014 ; 85 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Kidney International Volume 85 ; 2014 ; 85 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2014 ; Kidney International Volume 86 ; 2014 ; 86 ; reingest1.clockss.org:8082 >
     au < down ; exists ; 2015 ; Kidney International Volume 87 ; 2015 ; 87 ; >
     au < down ; exists ; 2015 ; Kidney International Volume 88 ; 2015 ; 88 ; >
@@ -1841,7 +1841,7 @@
     param[journal_id] = lsa
 
     au < finished ; finished ; 2012 ; Light: Science & Applications Volume 1 ; 2012 ; 1 ; >
-    au < finished ; crawling ; 2013 ; Light: Science & Applications Volume 2 ; 2013 ; 2 ; >
+    au < finished ; finished ; 2013 ; Light: Science & Applications Volume 2 ; 2013 ; 2 ; >
     au < finished ; crawling ; 2014 ; Light: Science & Applications Volume 3 ; 2014 ; 3 ; >
     au < crawling ; exists ; 2015 ; Light: Science & Applications Volume 4 ; 2015 ; 4 ; >
 
@@ -1867,13 +1867,13 @@
     au < doNotProcess ; doNotProcess ; 2005 ; Modern Pathology Volume 18 ; 2005 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; Modern Pathology Volume 19 ; 2006 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; Modern Pathology Volume 20 ; 2007 ; 20 ; >
-    au < finished ; frozen ; 2008 ; Modern Pathology Volume 21 ; 2008 ; 21 ; >
+    au < finished ; finished ; 2008 ; Modern Pathology Volume 21 ; 2008 ; 21 ; >
     au < finished ; frozen ; 2009 ; Modern Pathology Volume 22 ; 2009 ; 22 ; >
     au < finished ; frozen ; 2010 ; Modern Pathology Volume 23 ; 2010 ; 23 ; >
     au < finished ; crawling ; 2011 ; Modern Pathology Volume 24 ; 2011 ; 24 ; >
     au < finished ; crawling ; 2012 ; Modern Pathology Volume 25 ; 2012 ; 25 ; >
     au < finished ; crawling ; 2013 ; Modern Pathology Volume 26 ; 2013 ; 26 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; Modern Pathology Volume 27 ; 2014 ; 27 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Modern Pathology Volume 27 ; 2014 ; 27 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Modern Pathology Volume 28 ; 2015 ; 28 ; >
 
   }
@@ -1903,7 +1903,7 @@
     au < zapped ; finished ; 2008 ; Molecular Psychiatry Volume 13 ; 2008 ; 13 ; >
     au < zapped ; finished ; 2009 ; Molecular Psychiatry Volume 14 ; 2009 ; 14 ; >
     au < finished ; crawling ; 2010 ; Molecular Psychiatry Volume 15 ; 2010 ; 15 ; >
-    au < finished ; crawling ; 2011 ; Molecular Psychiatry Volume 16 ; 2011 ; 16 ; >
+    au < finished ; finished ; 2011 ; Molecular Psychiatry Volume 16 ; 2011 ; 16 ; >
     au < finished ; frozen ; 2012 ; Molecular Psychiatry Volume 17 ; 2012 ; 17 ; >
     au < finished ; crawling ; 2013 ; Molecular Psychiatry Volume 18 ; 2013 ; 18 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; Molecular Psychiatry Volume 19 ; 2014 ; 19 ; reingest2.clockss.org:8085 >
@@ -3434,7 +3434,7 @@
     comment[notReady] = not 100% agreement may need deep recrawl RU 4761
     
     au < finished ; crawling ; 2009 ; NPG Asia Materials Volume 1 ; 2009 ; 1 ; >
-    au < finished ; crawling ; 2010 ; NPG Asia Materials Volume 2 ; 2010 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2010 ; NPG Asia Materials Volume 2 ; 2010 ; 2 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2011 ; NPG Asia Materials Volume 3 ; 2011 ; 3 ; >
     au < ingNotReady ; exists ; 2012 ; NPG Asia Materials Volume 4 ; 2012 ; 4 ; >
     au < crawling ; exists ; 2013 ; NPG Asia Materials Volume 5 ; 2013 ; 5 ; >
@@ -3480,7 +3480,7 @@
     au < doesNotExist ; doesNotExist ; 0 ; Obesity Volume 13 ; 0 ; 13 ; >
     au < doesNotExist ; doesNotExist ; 0 ; Obesity Volume 14 ; 0 ; 14 ; >
     au < doesNotExist ; doesNotExist ; 0 ; Obesity Volume 15 ; 0 ; 15 ; >
-    au < down ; frozen ; 2008 ; Obesity Volume 16 ; 2008 ; 16 ; >
+    au < down ; finished ; 2008 ; Obesity Volume 16 ; 2008 ; 16 ; >
     au < down ; crawling ; 2009 ; Obesity Volume 17 ; 2009 ; 17 ; >
     au < down ; finished ; 2010 ; Obesity Volume 18 ; 2010 ; 18 ; >
     au < down ; crawling ; 2011 ; Obesity Volume 19 ; 2011 ; 19 ; >
@@ -3935,7 +3935,7 @@
     
     param[journal_id] = tp
 
-    au < finished ; crawling ; 2011 ; Translational Psychiatry Volume 1 ; 2011 ; 1 ; >
+    au < finished ; finished ; 2011 ; Translational Psychiatry Volume 1 ; 2011 ; 1 ; >
     au < finished ; crawling ; 2012 ; Translational Psychiatry Volume 2 ; 2012 ; 2 ; >
     au < finished ; crawling ; 2013 ; Translational Psychiatry Volume 3 ; 2013 ; 3 ; >
     au < finished ; crawling ; 2014 ; Translational Psychiatry Volume 4 ; 2014 ; 4 ; >

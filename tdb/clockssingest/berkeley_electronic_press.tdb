@@ -40,7 +40,7 @@
     comment[merged] = with 1538-0629, 1538-0645 and 1538-0653 into 1555-0494 in 2007
 
     au < down ; finished ; 2001 ; Advances in Economic Analysis & Policy Volume 1 ; 1 ; >
-    au < down ; crawling ; 2002 ; Advances in Economic Analysis & Policy Volume 2 ; 2 ; >
+    au < down ; finished ; 2002 ; Advances in Economic Analysis & Policy Volume 2 ; 2 ; >
     au < zapped ; finished ; 2003 ; Advances in Economic Analysis & Policy Volume 3 ; 3 ; >
     au < down ; finished ; 2004 ; Advances in Economic Analysis & Policy Volume 4 ; 4 ; >
     au < zapped ; finished ; 2005 ; Advances in Economic Analysis & Policy Volume 5 ; 5 ; >
@@ -159,7 +159,7 @@
     param[journal_abbr] = bis
 
     au < down ; crawling ; 2006 ; Basic Income Studies Volume 1 ; 1 ; >
-    au < down ; crawling ; 2007 ; Basic Income Studies Volume 2 ; 2 ; >
+    au < down ; finished ; 2007 ; Basic Income Studies Volume 2 ; 2 ; >
     au < zapped ; finished ; 2008 ; Basic Income Studies Volume 3 ; 3 ; >
     au < zapped ; finished ; 2009 ; Basic Income Studies Volume 4 ; 4 ; >
     au < zapped ; finished ; 2010 ; Basic Income Studies Volume 5 ; 5 ; >
@@ -615,7 +615,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ice
 
-    au < down ; crawling ; 2003 ; International Commentary on Evidence Volume 1 ; 1 ; >
+    au < down ; finished ; 2003 ; International Commentary on Evidence Volume 1 ; 1 ; >
     au < zapped ; finished ; 2004 ; International Commentary on Evidence Volume 2 ; 2 ; >
     au < zapped ; finished ; 2005 ; International Commentary on Evidence Volume 3 ; 3 ; >
     au < down ; crawling ; 2006 ; International Commentary on Evidence Volume 4 ; 4 ; >
@@ -735,7 +735,7 @@
     au < zapped ; finished ; 2008 ; International Journal of Nursing Education Scholarship Volume 5 ; 5 ; >
     au < zapped ; finished ; 2009 ; International Journal of Nursing Education Scholarship Volume 6 ; 6 ; >
     au < zapped ; finished ; 2010 ; International Journal of Nursing Education Scholarship Volume 7 ; 7 ; >
-    au < down ; crawling ; 2011 ; International Journal of Nursing Education Scholarship Volume 8 ; 8 ; >
+    au < down ; finished ; 2011 ; International Journal of Nursing Education Scholarship Volume 8 ; 8 ; >
 
   }
 
@@ -935,7 +935,7 @@
 
     au < zapped ; finished ; 2004 ; Journal of Homeland Security and Emergency Management Volume 1 ; 1 ; >
     au < zapped ; finished ; 2005 ; Journal of Homeland Security and Emergency Management Volume 2 ; 2 ; >
-    au < down ; crawling ; 2006 ; Journal of Homeland Security and Emergency Management Volume 3 ; 3 ; >
+    au < down ; finished ; 2006 ; Journal of Homeland Security and Emergency Management Volume 3 ; 3 ; >
     au < down ; finished ; 2007 ; Journal of Homeland Security and Emergency Management Volume 4 ; 4 ; >
     au < zapped ; finished ; 2008 ; Journal of Homeland Security and Emergency Management Volume 5 ; 5 ; >
     au < zapped ; finished ; 2009 ; Journal of Homeland Security and Emergency Management Volume 6 ; 6 ; >
@@ -1317,7 +1317,7 @@
     param[journal_abbr] = romsjournal
 
     au < zapped ; finished ; 2003 ; Review of Marketing Science Volume 1 ; 1 ; >
-    au < down ; frozen ; 2004 ; Review of Marketing Science Volume 2 ; 2 ; >
+    au < down ; finished ; 2004 ; Review of Marketing Science Volume 2 ; 2 ; >
     au < down ; finished ; 2005 ; Review of Marketing Science Volume 3 ; 3 ; >
     au < down ; finished ; 2006 ; Review of Marketing Science Volume 4 ; 4 ; >
     au < zapped ; finished ; 2007 ; Review of Marketing Science Volume 5 ; 5 ; >
@@ -1438,7 +1438,7 @@
     au < zapped ; finished ; 2008 ; Statistical Applications in Genetics and Molecular Biology Volume 7 ; 7 ; >
     au < zapped ; finished ; 2009 ; Statistical Applications in Genetics and Molecular Biology Volume 8 ; 8 ; >
     au < zapped ; finished ; 2010 ; Statistical Applications in Genetics and Molecular Biology Volume 9 ; 9 ; >
-    au < down ; crawling ; 2011 ; Statistical Applications in Genetics and Molecular Biology Volume 10 ; 10 ; >
+    au < down ; finished ; 2011 ; Statistical Applications in Genetics and Molecular Biology Volume 10 ; 10 ; >
 
   }
 
@@ -1505,7 +1505,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = snde
 
-    au < down ; crawling ; 1996 ; Studies in Nonlinear Dynamics & Econometrics Volume 1 ; 1 ; >
+    au < down ; finished ; 1996 ; Studies in Nonlinear Dynamics & Econometrics Volume 1 ; 1 ; >
     au < zapped ; finished ; 1997 ; Studies in Nonlinear Dynamics & Econometrics Volume 2 ; 2 ; >
     au < zapped ; finished ; 1998 ; Studies in Nonlinear Dynamics & Econometrics Volume 3 ; 3 ; >
     au < down ; finished ; 2000 ; Studies in Nonlinear Dynamics & Econometrics Volume 4 ; 4 ; >

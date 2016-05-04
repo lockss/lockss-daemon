@@ -116,7 +116,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < down ; exists ; 2013 ; Applied Adhesion Science Volume 1 ; 1 ; >
-        au < finished ; crawling ; 2014 ; Applied Adhesion Science Volume 2 ; 2 ; >
+        au < finished ; finished ; 2014 ; Applied Adhesion Science Volume 2 ; 2 ; >
         au < down ; exists ; 2015 ; Applied Adhesion Science Volume 3 ; 3 ; >
 
     }
@@ -2339,7 +2339,7 @@
       param[journal_issn] = 2197-8670
       comment[platform] = BioMedCentralPlugin
 
-      au < finished ; crawling ; 2014 ; Geoenvironmental Disasters Volume 1 ; 1 ; >
+      au < finished ; finished ; 2014 ; Geoenvironmental Disasters Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2015 ; Geoenvironmental Disasters Volume 2 ; 2 ; >
 
     }

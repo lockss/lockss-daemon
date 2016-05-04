@@ -61,7 +61,7 @@
     au < manifest ; exists ; 2007 ; Before Farming Volume 2007 ; 2007 ; >
     au < finished ; manifest ; 2008 ; Before Farming Volume 2008 ; 2008 ; >
     au < finished ; manifest ; 2009 ; Before Farming Volume 2009 ; 2009 ; >
-    au < finished ; crawling ; 2010 ; Before Farming Volume 2010 ; 2010 ; >
+    au < finished ; finished ; 2010 ; Before Farming Volume 2010 ; 2010 ; >
     au < finished ; crawling ; 2011 ; Before Farming Volume 2011 ; 2011 ; >
     au < finished ; manifest ; 2012 ; Before Farming Volume 2012 ; 2012 ; >
 
@@ -246,7 +246,7 @@
     au < manifest ; exists ; 2005 ; Essays in Romanticism Volume 13 ; 13 ; >
     au < manifest ; exists ; 2006 ; Essays in Romanticism Volume 14 ; 14 ; >
     au < manifest ; exists ; 2007 ; Essays in Romanticism Volume 15 ; 15 ; >
-    au < finished ; crawling ; 2008 ; Essays in Romanticism Volume 16 ; 16 ; >
+    au < finished ; finished ; 2008 ; Essays in Romanticism Volume 16 ; 16 ; >
     au < finished ; manifest ; 2009 ; Essays in Romanticism Volume 17 ; 17 ; >
     au < finished ; crawling ; 2010 ; Essays in Romanticism Volume 18 ; 18 ; >
     au < finished ; manifest ; 2012 ; Essays in Romanticism Volume 19 ; 19 ; >
@@ -568,7 +568,7 @@
 
     param[journal_id] = newsletter
 
-    au < finished ; crawling ; 2012 ; Newsletter of the Gypsy Lore Society Volume 35 ; 35 ; >
+    au < finished ; finished ; 2012 ; Newsletter of the Gypsy Lore Society Volume 35 ; 35 ; >
     au < finished ; finished ; 2013 ; Newsletter of the Gypsy Lore Society Volume 36 ; 36 ; >
     au < crawling ; exists ; 2014 ; Newsletter of the Gypsy Lore Society Volume 37 ; 37 ; >
     au < crawling ; exists ; 2015 ; Newsletter of the Gypsy Lore Society Volume 38 ; 38 ; >
@@ -649,7 +649,7 @@
     au < finished ; crawling ; 2012 ; Quebec Studies Volume 54 ; 54 ; >
     au < crawling ; exists ; 2012 ; Quebec Studies Volume Special_Issue ; Special_Issue ; >
     au < finished ; crawling ; 2013 ; Quebec Studies Volume 55 ; 55 ; >
-    au < finished ; crawling ; 2013 ; Quebec Studies Volume 56 ; 56 ; >
+    au < finished ; finished ; 2013 ; Quebec Studies Volume 56 ; 56 ; >
     au < crawling ; exists ; 2014 ; Quebec Studies Volume 57 ; 57 ; >
     au < finished ; finished ; 2014 ; Quebec Studies Volume 58 ; 58 ; >
     au < crawling ; exists ; 2015 ; Quebec Studies Volume 59 ; 59 ; >
