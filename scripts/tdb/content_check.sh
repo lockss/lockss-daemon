@@ -14,6 +14,8 @@ echo "*Status variations clockssingest: "
 scripts/tdb/tdbout -c status,status2 tdb/clockssingest/*.tdb | sort | uniq -c | sort -n | grep -vw "manifest,exists" | grep -vw "crawling,exists" | grep -vw "finished,crawling" | grep -vw "exists,exists" | grep -vw "down,crawling" | grep -vw "doNotProcess,doNotProcess" | grep -vw "expected,exists" | grep -vw "testing,exists" | grep -vw "notReady,exists" | grep -vw "ingNotReady,exists" | grep -vw "zapped,finished" | grep -vw "doesNotExist,doesNotExist"
 echo "*Status typos ibictpln: "
 scripts/tdb/tdbout -t status tdb/ibictpln/*.tdb | grep -vx manifest | grep -vx released | grep -vx expected | grep -vx exists | grep -vx testing | grep -vx wanted | grep -vx ready | grep -vx down | grep -vx superseded | grep -vx doNotProcess | grep -vx notReady | grep -vx doesNotExist
+echo "*Status typos coppulpln: "
+scripts/tdb/tdbout -t status tdb/coppulpln/*.tdb | grep -vx manifest | grep -vx released | grep -vx expected | grep -vx exists | grep -vx testing | grep -vx wanted | grep -vx ready | grep -vx down | grep -vx superseded | grep -vx doNotProcess | grep -vx notReady | grep -vx doesNotExist
 #
 # Find plugins listed in tdb files, that don't exist
 echo "---------------------"
