@@ -30055,13 +30055,13 @@
       au < manifest ; exists ; 2007 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 22 ; 22 ; >
       au < zapped ; finished ; 2008 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 23 ; 23 ; >
       au < zapped ; finished ; 2009 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 24 ; 24 ; >
-      au < finished ; finished ; 2010 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 25 ; 25 ; >
-      au < finished ; crawling ; 2011 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 26 ; 26 ; >
-      au < finished ; frozen ; 2012 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 27 ; 27 ; >
-      au < crawling ; exists ; 2013 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 28 ; 28 ; >
-      au < crawling ; exists ; 2014 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 29 ; 29 ; >
-      au < crawling ; exists ; 2015 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 30 ; 30 ; >
-      au < manifest ; exists ; 2016 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 31 ; 31 ; >
+      au < finished ; finished ; 2010 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 25 [Sage] ; 25 ; >
+      au < finished ; crawling ; 2011 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 26 [Sage] ; 26 ; >
+      au < finished ; frozen ; 2012 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 27 [Sage] ; 27 ; >
+      au < crawling ; exists ; 2013 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 28 [Sage] ; 28 ; >
+      au < crawling ; exists ; 2014 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 29 [Sage] ; 29 ; >
+      au < crawling ; exists ; 2015 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 30 [Sage] ; 30 ; >
+      au < manifest ; exists ; 2016 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 31 [Sage] ; 31 ; >
 
     }
 
@@ -30173,7 +30173,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; Management & Organizational History Volume 3 ; 3 ; >
+      au < superseded ; crawling ; 2008 ; Management & Organizational History Volume 3 [superseded] ; 3 ; >
       au < zapped ; finished ; 2009 ; Management & Organizational History Volume 4 ; 4 ; reingest1.clockss.org:8082 >
 
     }
