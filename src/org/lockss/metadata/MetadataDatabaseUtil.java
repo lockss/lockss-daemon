@@ -315,7 +315,7 @@ final public class MetadataDatabaseUtil {
 select distinct
     p.publisher_name as publisher
   , series_title.name as series_title
-  , pn0.publication_id series_proprietary_id
+  , pn0.publication_id as series_proprietary_id
   , title.name as title
   , pn1.publication_id as proprietery_id
   , coalesce(e_issn0.issn,e_issn1.issn) as e_issn
@@ -373,7 +373,7 @@ where
   static final String bibliographicItemsQuery = "select distinct"
       + "     p." + PUBLISHER_NAME_COLUMN + " as publisher"
       + "   , series_title." + NAME_COLUMN + " as series_title"
-      + "   , pi0." + PROPRIETARY_ID_COLUMN + " series_proprietary_id"
+      + "   , pi0." + PROPRIETARY_ID_COLUMN + " as series_proprietary_id"
       + "   , title." + NAME_COLUMN + " as title"
       + "   , pi1." + PROPRIETARY_ID_COLUMN + " as proprietery_id "
       + "   , coalesce(e_issn0." + ISSN_COLUMN
