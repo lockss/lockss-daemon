@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1406,14 +1402,14 @@ public class OpenUrlResolver {
       // return all related values for debugging purposes
       select.append("u." + URL_COLUMN);
       select.append(",pb." + PUBLISHER_NAME_COLUMN);
-      select.append(",n1." + NAME_COLUMN + " publication_name");
+      select.append(",n1." + NAME_COLUMN + " as publication_name");
       select.append(",i." + ISSN_COLUMN);
       select.append(",bi." + VOLUME_COLUMN);
       select.append(",bi." + ISSUE_COLUMN);
       select.append(",bi." + START_PAGE_COLUMN);
       select.append(",bi." + END_PAGE_COLUMN);
       select.append(",bi." + ITEM_NO_COLUMN);
-      select.append(",n2." + NAME_COLUMN + " article_name");
+      select.append(",n2." + NAME_COLUMN + " as article_name");
       select.append(",pv2." + PROVIDER_NAME_COLUMN);
       
       from.append(MD_ITEM_TABLE + " mi1");              // publication md_item
@@ -2364,14 +2360,14 @@ public class OpenUrlResolver {
       // return all related values for debugging purposes
       select.append("u." + URL_COLUMN);
       select.append(",pb." + PUBLISHER_NAME_COLUMN);
-      select.append(",n1." + NAME_COLUMN + " book_title");
+      select.append(",n1." + NAME_COLUMN + " as book_title");
       select.append(",i." + ISBN_COLUMN);
       select.append(",bi." + VOLUME_COLUMN);
-      select.append(",bi." + ISSUE_COLUMN + " edition");
+      select.append(",bi." + ISSUE_COLUMN + " as edition");
       select.append(",bi." + START_PAGE_COLUMN);
       select.append(",bi." + END_PAGE_COLUMN);
-      select.append(",bi." + ITEM_NO_COLUMN + " chapt_no");
-      select.append(",n2." + NAME_COLUMN + " chapt_title");
+      select.append(",bi." + ITEM_NO_COLUMN + " as chapt_no");
+      select.append(",n2." + NAME_COLUMN + " as chapt_title");
       select.append(",pv2." + PROVIDER_NAME_COLUMN);
       
       from.append(MD_ITEM_TABLE + " mi1");              // publication md_item
