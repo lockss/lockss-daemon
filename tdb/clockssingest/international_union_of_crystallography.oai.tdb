@@ -108,15 +108,15 @@
     au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Crystallographic Communications Volume 69 October ; 2013-10 ; >
     au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Crystallographic Communications Volume 69 November ; 2013-11 ; >
     au < doNotProcess ; exists ; 2013 ; 69 ; Acta Crystallographica Section E: Crystallographic Communications Volume 69 December ; 2013-12 ; >
-    au < ready ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 January ; 2014-01 ; >
+    au < crawling ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 January ; 2014-01 ; >
     au < crawling ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 February ; 2014-02 ; >
-    au < ready ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 March ; 2014-03 ; >
+    au < crawling ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 March ; 2014-03 ; >
     au < crawling ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 April ; 2014-04 ; >
     au < crawling ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 May ; 2014-05 ; >
     au < crawling ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 June ; 2014-06 ; >
     au < crawling ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 July ; 2014-07 ; >
-    au < ready ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 August ; 2014-08 ; >
-    au < ready ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 September ; 2014-09 ; >
+    au < crawling ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 August ; 2014-08 ; >
+    au < crawling ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 September ; 2014-09 ; >
     au < crawling ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 October ; 2014-10 ; >
     au < crawling ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 November ; 2014-11 ; >
     au < testing ; exists ; 2014 ; 70 ; Acta Crystallographica Section E: Crystallographic Communications Volume 70 December ; 2014-12 ; >
@@ -139,9 +139,9 @@
     
     
     au < doesNotExist ; doesNotExist ; 2014 ; 1 ; IUCrJ Volume 1 January ; 2014-01 ; >
-    au < ready ; exists ; 2014 ; 1 ; IUCrJ Volume 1 February ; 2014-02 ; >
+    au < crawling ; exists ; 2014 ; 1 ; IUCrJ Volume 1 February ; 2014-02 ; >
     au < doesNotExist ; doesNotExist ; 2014 ; 1 ; IUCrJ Volume 1 March ; 2014-03 ; >
-    au < ready ; exists ; 2014 ; 1 ; IUCrJ Volume 1 April ; 2014-04 ; >
+    au < crawling ; exists ; 2014 ; 1 ; IUCrJ Volume 1 April ; 2014-04 ; >
     au < crawling ; exists ; 2014 ; 1 ; IUCrJ Volume 1 May ; 2014-05 ; >
     au < crawling ; exists ; 2014 ; 1 ; IUCrJ Volume 1 June ; 2014-06 ; >
     au < doesNotExist ; doesNotExist ; 2014 ; 1 ; IUCrJ Volume 1 July ; 2014-07 ; > #no substance
