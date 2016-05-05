@@ -115,7 +115,8 @@ public class MetadataManagerSql {
       +       PENDING_AU_TABLE + "." + PLUGIN_ID_COLUMN
       + "," + PENDING_AU_TABLE + "." + AU_KEY_COLUMN
       + "," + PENDING_AU_TABLE + "." + PRIORITY_COLUMN
-      + ",(" + AU_MD_TABLE + "." + AU_SEQ_COLUMN + " is null) " + ISNEW_COLUMN
+      + ",(" + AU_MD_TABLE + "." + AU_SEQ_COLUMN + " is null) as "
+      + ISNEW_COLUMN
       + "," + PENDING_AU_TABLE + "." + FULLY_REINDEX_COLUMN
       + " from " + PENDING_AU_TABLE
       + "   left join " + PLUGIN_TABLE
