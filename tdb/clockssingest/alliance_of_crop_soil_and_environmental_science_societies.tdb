@@ -52,7 +52,7 @@
     param[journal_id] = aj
 
     au < crawling ; exists ; 2005 ; Agronomy Journal Volume 97 ; 97 ; >
-    au < finished ; manifest ; 2006 ; Agronomy Journal Volume 98 ; 98 ; >
+    au < finished ; crawling ; 2006 ; Agronomy Journal Volume 98 ; 98 ; >
     au < crawling ; exists ; 2007 ; Agronomy Journal Volume 99 ; 99 ; >
     au < crawling ; exists ; 2008 ; Agronomy Journal Volume 100 ; 100 ; >
     au < crawling ; exists ; 2009 ; Agronomy Journal Volume 101 ; 101 ; >
@@ -88,7 +88,7 @@
     au < doNotProcess ; exists ; 2011 ; Crops & Soils Magazine Volume 44 ; 44 ; > #no issues on manifest page.
     au < doNotProcess ; exists ; 2012 ; Crops & Soils Magazine Volume 45 ; 45 ; > #no issues on manifest page.
     au < crawling ; exists ; 2013 ; Crops & Soils Magazine Volume 46 ; 46 ; >
-    au < finished ; manifest ; 2014 ; Crops & Soils Magazine Volume 47 ; 47 ; >
+    au < finished ; crawling ; 2014 ; Crops & Soils Magazine Volume 47 ; 47 ; >
     au < crawling ; exists ; 2015 ; Crops & Soils Magazine Volume 48 ; 48 ; >
     au < manifest ; exists ; 2016 ; Crops & Soils Magazine Volume 49 ; 49 ; >
 
@@ -167,7 +167,7 @@
 
     au < crawling ; exists ; 2005 ; Journal of Environmental Quality Volume 34 ; 34 ; >
     au < crawling ; exists ; 2006 ; Journal of Environmental Quality Volume 35 ; 35 ; >
-    au < finished ; manifest ; 2007 ; Journal of Environmental Quality Volume 36 ; 36 ; >
+    au < finished ; crawling ; 2007 ; Journal of Environmental Quality Volume 36 ; 36 ; >
     au < crawling ; exists ; 2008 ; Journal of Environmental Quality Volume 37 ; 37 ; >
     au < crawling ; exists ; 2009 ; Journal of Environmental Quality Volume 38 ; 38 ; >
     au < crawling ; exists ; 2010 ; Journal of Environmental Quality Volume 39 ; 39 ; >
@@ -237,7 +237,7 @@
     param[journal_id] = nse
 
     au < doNotProcess ; exists ; 2005 ; Natural Sciences Education Volume 34 ; 34 ; > # no issues on manifest page
-    au < finished ; manifest ; 2006 ; Natural Sciences Education Volume 35 ; 35 ; >
+    au < finished ; crawling ; 2006 ; Natural Sciences Education Volume 35 ; 35 ; >
     au < crawling ; exists ; 2007 ; Natural Sciences Education Volume 36 ; 36 ; >
     au < crawling ; exists ; 2008 ; Natural Sciences Education Volume 37 ; 37 ; >
     au < crawling ; exists ; 2009 ; Natural Sciences Education Volume 38 ; 38 ; >
@@ -296,7 +296,7 @@
     au < crawling ; exists ; 2011 ; Soil Horizons Volume 52 ; 52 ; >
     au < notReady ; exists ; 2012 ; Soil Horizons Volume 53 ; 53 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/sh/articles/53/5/www.phdcomics.com/comics.php
     au < crawling ; exists ; 2013 ; Soil Horizons Volume 54 ; 54 ; >
-    au < finished ; manifest ; 2014 ; Soil Horizons Volume 55 ; 55 ; >
+    au < finished ; crawling ; 2014 ; Soil Horizons Volume 55 ; 55 ; >
     au < crawling ; exists ; 2015 ; Soil Horizons Volume 56 ; 56 ; >
     au < manifest ; exists ; 2016 ; Soil Horizons Volume 57 ; 57 ; >
 
@@ -324,7 +324,7 @@
     au < notReady ; exists ; 2010 ; Soil Science Society of America Journal Volume 74 ; 74 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/sssaj/articles/74/1/www.rothamsted.ac.uk/aen/smbweb1/methods.php?id=896
     au < notReady ; exists ; 2011 ; Soil Science Society of America Journal Volume 75 ; 75 ; > #malformed url. 403 error:   https://dl.sciencesocieties.org/publications/sssaj/articles/75/1/lter.kbs.msu.edu/about/experimental_design.php
     au < crawling ; exists ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 ; >
-    au < finished ; manifest ; 2013 ; Soil Science Society of America Journal Volume 77 ; 77 ; >
+    au < finished ; crawling ; 2013 ; Soil Science Society of America Journal Volume 77 ; 77 ; >
     au < finished ; crawling ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 ; >
     au < crawling ; exists ; 2015 ; Soil Science Society of America Journal Volume 79 ; 79 ; >
     au < manifest ; exists ; 2016 ; Soil Science Society of America Journal Volume 80 ; 80 ; >

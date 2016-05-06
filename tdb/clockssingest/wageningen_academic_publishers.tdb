@@ -22,7 +22,7 @@
       au < manifest ; exists ; 2010 ; Beneficial Microbes Volume 1 ; 1 ; >
       au < manifest ; exists ; 2011 ; Beneficial Microbes Volume 2 ; 2 ; >
       au < manifest ; exists ; 2012 ; Beneficial Microbes Volume 3 ; 3 ; >
-      au < finished ; manifest ; 2013 ; Beneficial Microbes Volume 4 ; 4 ; >
+      au < finished ; crawling ; 2013 ; Beneficial Microbes Volume 4 ; 4 ; >
       au < crawling ; exists ; 2014 ; Beneficial Microbes Volume 5 ; 5 ; >
       au < crawling ; exists ; 2015 ; Beneficial Microbes Volume 6 ; 6 ; >
       au < manifest ; exists ; 2016 ; Beneficial Microbes Volume 7 ; 7 ; >
@@ -41,7 +41,7 @@
       param[journal_id] = cep
 
       au < manifest ; exists ; 2012 ; Comparative Exercise Physiology Volume 8 ; 8 ; >
-      au < finished ; manifest ; 2013 ; Comparative Exercise Physiology Volume 9 ; 9 ; >
+      au < finished ; crawling ; 2013 ; Comparative Exercise Physiology Volume 9 ; 9 ; >
       au < crawling ; exists ; 2014 ; Comparative Exercise Physiology Volume 10 ; 10 ; >
       au < crawling ; exists ; 2015 ; Comparative Exercise Physiology Volume 11 ; 11 ; >
       au < manifest ; exists ; 2016 ; Comparative Exercise Physiology Volume 12 ; 12 ; >
@@ -85,7 +85,7 @@
       au < manifest ; exists ; 2011 ; Journal on Chain and Network Science Volume 11 ; 11 ; >
       au < manifest ; exists ; 2012 ; Journal on Chain and Network Science Volume 12 ; 12 ; >
       au < crawling ; exists ; 2013 ; Journal on Chain and Network Science Volume 13 ; 13 ; >
-      au < finished ; manifest ; 2014 ; Journal on Chain and Network Science Volume 14 ; 14 ; >
+      au < finished ; crawling ; 2014 ; Journal on Chain and Network Science Volume 14 ; 14 ; >
       au < crawling ; exists ; 2015 ; Journal on Chain and Network Science Volume 15 ; 15 ; >
       au < expected ; exists ; 2016 ; Journal on Chain and Network Science Volume 16 ; 16 ; >
 
@@ -101,7 +101,7 @@
 
       param[journal_id] = qas
 
-      au < finished ; manifest ; 2013 ; Quality Assurance and Safety of Crops & Foods Volume 5 ; 5 ; >
+      au < finished ; crawling ; 2013 ; Quality Assurance and Safety of Crops & Foods Volume 5 ; 5 ; >
       au < finished ; finished ; 2014 ; Quality Assurance and Safety of Crops & Foods Volume 6 ; 6 ; >
       au < crawling ; exists ; 2015 ; Quality Assurance and Safety of Crops & Foods Volume 7 ; 7 ; >
       au < manifest ; exists ; 2016 ; Quality Assurance and Safety of Crops & Foods Volume 8 ; 8 ; >
@@ -123,7 +123,7 @@
       au < manifest ; exists ; 2010 ; World Mycotoxin Journal Volume 3 ; 3 ; >
       au < manifest ; exists ; 2011 ; World Mycotoxin Journal Volume 4 ; 4 ; >
       au < manifest ; exists ; 2012 ; World Mycotoxin Journal Volume 5 ; 5 ; >
-      au < finished ; manifest ; 2013 ; World Mycotoxin Journal Volume 6 ; 6 ; >
+      au < finished ; crawling ; 2013 ; World Mycotoxin Journal Volume 6 ; 6 ; >
       au < crawling ; exists ; 2014 ; World Mycotoxin Journal Volume 7 ; 7 ; >
       au < crawling ; exists ; 2015 ; World Mycotoxin Journal Volume 8 ; 8 ; >
       au < manifest ; exists ; 2016 ; World Mycotoxin Journal Volume 9 ; 9 ; >
