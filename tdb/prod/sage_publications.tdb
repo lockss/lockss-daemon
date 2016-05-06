@@ -10466,6 +10466,22 @@
   }
 
     {
+  
+        title <
+          name = the Downside Review ;
+          issn = 0012-5806 ;
+          eissn = 2397-3498
+      >
+  
+      param[base_url] = http://tdr.sagepub.com/
+      pluginSuffix = HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+  
+      au < exists ; 2016 ; the Downside Review Volume 134 ; 134 >
+  
+    }
+
+    {
 
         title <
           name = Drug Information Journal ;
