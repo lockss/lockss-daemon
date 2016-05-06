@@ -47,7 +47,7 @@
     
     param[journal_id] = aj
 
-    au < manifest ; 2005 ; Agronomy Journal Volume 97 ; 97 >
+    au < ready ; 2005 ; Agronomy Journal Volume 97 ; 97 >
     au < manifest ; 2006 ; Agronomy Journal Volume 98 ; 98 >
     au < manifest ; 2007 ; Agronomy Journal Volume 99 ; 99 >
     au < manifest ; 2008 ; Agronomy Journal Volume 100 ; 100 >
@@ -105,7 +105,7 @@
     param[journal_id] = cs
 
     au < manifest ; 2005 ; Crop Science Volume 45 ; 45 >
-    au < manifest ; 2006 ; Crop Science Volume 46 ; 46 >
+    au < ready ; 2006 ; Crop Science Volume 46 ; 46 >
     au < manifest ; 2007 ; Crop Science Volume 47 ; 47 >
     au < manifest ; 2008 ; Crop Science Volume 48 ; 48 >
     au < manifest ; 2009 ; Crop Science Volume 49 ; 49 >
@@ -164,7 +164,7 @@
     au < manifest ; 2005 ; Journal of Environmental Quality Volume 34 ; 34 >
     au < manifest ; 2006 ; Journal of Environmental Quality Volume 35 ; 35 >
     au < manifest ; 2007 ; Journal of Environmental Quality Volume 36 ; 36 >
-    au < manifest ; 2008 ; Journal of Environmental Quality Volume 37 ; 37 >
+    au < ready ; 2008 ; Journal of Environmental Quality Volume 37 ; 37 >
     au < manifest ; 2009 ; Journal of Environmental Quality Volume 38 ; 38 >
     au < ready ; 2010 ; Journal of Environmental Quality Volume 39 ; 39 >
     au < manifest ; 2011 ; Journal of Environmental Quality Volume 40 ; 40 >
@@ -189,9 +189,9 @@
     
     param[journal_id] = jpr
 
-    au < manifest ; 2007 ; Journal of Plant Registrations Volume 1 ; 1 >
+    au < ready ; 2007 ; Journal of Plant Registrations Volume 1 ; 1 >
     au < manifest ; 2008 ; Journal of Plant Registrations Volume 2 ; 2 >
-    au < manifest ; 2009 ; Journal of Plant Registrations Volume 3 ; 3 >
+    au < ready ; 2009 ; Journal of Plant Registrations Volume 3 ; 3 >
     au < ready ; 2010 ; Journal of Plant Registrations Volume 4 ; 4 >
     au < manifest ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 >
     au < manifest ; 2012 ; Journal of Plant Registrations Volume 6 ; 6 >
