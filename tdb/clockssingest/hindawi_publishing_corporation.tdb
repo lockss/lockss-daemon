@@ -1189,7 +1189,7 @@
     param[journal_id] = arm
     # archived
 
-    au < finished ; crawling ; 2014 ; Advances in Regenerative Medicine Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Advances in Regenerative Medicine Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -1473,7 +1473,7 @@
 
     param[journal_id] = abb 
 
-    au < finished ; crawling ; 2014 ; Applied Bionics and Biomechanics Volume 2014 ; 2014 ; 2014 ; > 
+    au < finished ; finished ; 2014 ; Applied Bionics and Biomechanics Volume 2014 ; 2014 ; 2014 ; > 
     au < crawling ; exists ; 2015 ; Applied Bionics and Biomechanics Volume 2015 ; 2015 ; 2015 ; >
 
   }
@@ -1520,7 +1520,7 @@
     au < manifest ; exists ; 2011 ; Archaea Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Archaea Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Archaea Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Archaea Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Archaea Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Archaea Volume 2015 ; 2015 ; 2015 ; >
 
   }
@@ -1539,7 +1539,7 @@
     au < manifest ; exists ; 2011 ; Arthritis Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Arthritis Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Arthritis Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Arthritis Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Arthritis Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Arthritis Volume 2015 ; 2015 ; 2015 ; >
 
   }
@@ -3518,7 +3518,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Chemical Engineering Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Chemical Engineering Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Chemical Engineering Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; International Journal of Chemical Engineering Volume 2014 ; 2014 ; 2014 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; International Journal of Chemical Engineering Volume 2014 ; 2014 ; 2014 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; International Journal of Chemical Engineering Volume 2015 ; 2015 ; 2015 ; >
 
   }
@@ -6650,7 +6650,7 @@
     au < manifest ; exists ; 2011 ; Journal of Pathogens Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Pathogens Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Journal of Pathogens Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Journal of Pathogens Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Journal of Pathogens Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Journal of Pathogens Volume 2015 ; 2015 ; 2015 ; >
 
   }
@@ -7115,7 +7115,7 @@
     param[journal_id] = jtex
 
     au < manifest ; exists ; 2013 ; Journal of Textiles Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Journal of Textiles Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Journal of Textiles Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Journal of Textiles Volume 2015 ; 2015 ; 2015 ; >
 
   }
@@ -8067,7 +8067,7 @@
     au < manifest ; exists ; 2011 ; Psyche Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Psyche Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Psyche Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Psyche Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Psyche Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Psyche Volume 2015 ; 2015 ; 2015 ; >
 
   }
@@ -8189,7 +8189,7 @@
     au < manifest ; exists ; 2011 ; Schizophrenia Research and Treatment Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Schizophrenia Research and Treatment Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Schizophrenia Research and Treatment Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Schizophrenia Research and Treatment Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Schizophrenia Research and Treatment Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Schizophrenia Research and Treatment Volume 2015 ; 2015 ; 2015 ; >
 
   }

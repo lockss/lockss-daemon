@@ -155,7 +155,7 @@
       param[journal_id] = ces
 
       au < exists ; exists ; 2012 ; Comparative Economic Studies Volume 54 ; 2012 ; 54 ; >
-      au < finished ; crawling ; 2013 ; Comparative Economic Studies Volume 55 ; 2013 ; 55 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; Comparative Economic Studies Volume 55 ; 2013 ; 55 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Comparative Economic Studies Volume 56 ; 2014 ; 56 ; >
       au < crawling ; exists ; 2015 ; Comparative Economic Studies Volume 57 ; 2015 ; 57 ; >
 
@@ -1252,7 +1252,7 @@
       param[journal_id] = ipr
 
       au < finished ; finished ; 2013 ; International Politics Reviews Volume 1 ; 2013 ; 1 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2014 ; International Politics Reviews Volume 2 ; 2014 ; 2 ; >
+      au < finished ; finished ; 2014 ; International Politics Reviews Volume 2 ; 2014 ; 2 ; >
       au < crawling ; exists ; 2015 ; International Politics Reviews Volume 3 ; 2015 ; 3 ; >
 
     }

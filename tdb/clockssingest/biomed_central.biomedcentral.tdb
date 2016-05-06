@@ -109,7 +109,7 @@
       au < doNotProcess ; exists ; 2007 ; AIDS Research and Therapy Volume 4 ; 4 ; >
       au < down ; crawling ; 2008 ; AIDS Research and Therapy Volume 5 ; 5 ; >
       au < down ; exists ; 2009 ; AIDS Research and Therapy Volume 6 ; 6 ; >
-      au < down ; crawling ; 2010 ; AIDS Research and Therapy Volume 7 ; 7 ; >
+      au < down ; finished ; 2010 ; AIDS Research and Therapy Volume 7 ; 7 ; >
       au < down ; crawling ; 2011 ; AIDS Research and Therapy Volume 8 ; 8 ; >
       au < down ; crawling ; 2012 ; AIDS Research and Therapy Volume 9 ; 9 ; >
       au < down ; exists ; 2013 ; AIDS Research and Therapy Volume 10 ; 10 ; >
@@ -158,7 +158,7 @@
       au < down ; exists ; 2008 ; Allergy, Asthma & Clinical Immunology Volume 4 ; 4 ; >
       au < down ; exists ; 2009 ; Allergy, Asthma & Clinical Immunology Volume 5 ; 5 ; >
       au < down ; exists ; 2010 ; Allergy, Asthma & Clinical Immunology Volume 6 ; 6 ; >
-      au < down ; crawling ; 2011 ; Allergy, Asthma & Clinical Immunology Volume 7 ; 7 ; >
+      au < down ; finished ; 2011 ; Allergy, Asthma & Clinical Immunology Volume 7 ; 7 ; >
       au < down ; crawling ; 2012 ; Allergy, Asthma & Clinical Immunology Volume 8 ; 8 ; >
       au < down ; exists ; 2013 ; Allergy, Asthma & Clinical Immunology Volume 9 ; 9 ; >
       au < down ; exists ; 2014 ; Allergy, Asthma & Clinical Immunology Volume 10 ; 10 ; >
@@ -278,7 +278,7 @@
       param[journal_issn] = 1750-1164
 
       au < doNotProcess ; exists ; 2007 ; Annals of Surgical Innovation and Research Volume 1 ; 1 ; >
-      au < down ; crawling ; 2008 ; Annals of Surgical Innovation and Research Volume 2 ; 2 ; >
+      au < down ; finished ; 2008 ; Annals of Surgical Innovation and Research Volume 2 ; 2 ; >
       au < down ; exists ; 2009 ; Annals of Surgical Innovation and Research Volume 3 ; 3 ; >
       au < down ; crawling ; 2010 ; Annals of Surgical Innovation and Research Volume 4 ; 4 ; >
       au < down ; crawling ; 2011 ; Annals of Surgical Innovation and Research Volume 5 ; 5 ; >
@@ -430,7 +430,7 @@
       au < down ; exists ; 2009 ; Asia Pacific Family Medicine Volume 8 ; 8 ; >
       au < down ; exists ; 2010 ; Asia Pacific Family Medicine Volume 9 ; 9 ; >
       au < down ; finished ; 2011 ; Asia Pacific Family Medicine Volume 10 ; 10 ; >
-      au < down ; crawling ; 2012 ; Asia Pacific Family Medicine Volume 11 ; 11 ; >
+      au < down ; finished ; 2012 ; Asia Pacific Family Medicine Volume 11 ; 11 ; >
       au < down ; exists ; 2013 ; Asia Pacific Family Medicine Volume 12 ; 12 ; >
       au < down ; exists ; 2014 ; Asia Pacific Family Medicine Volume 13 ; 13 ; >
       au < down ; exists ; 2015 ; Asia Pacific Family Medicine Volume 14 ; 14 ; >
@@ -651,7 +651,7 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
       comment[moved] = to new platform
 
       au < down ; exists ; 2013 ; Biomarker Research Volume 1 ; 1 ; >
-      au < down ; crawling ; 2014 ; Biomarker Research Volume 2 ; 2 ; >
+      au < down ; finished ; 2014 ; Biomarker Research Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2015 ; Biomarker Research Volume 3 ; 3 ; >
 
     }
@@ -1060,7 +1060,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
 
       au < doNotProcess ; exists ; 2006 ; Cell Division Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2007 ; Cell Division Volume 2 ; 2 ; >
-      au < down ; crawling ; 2008 ; Cell Division Volume 3 ; 3 ; >
+      au < down ; finished ; 2008 ; Cell Division Volume 3 ; 3 ; >
       au < down ; exists ; 2009 ; Cell Division Volume 4 ; 4 ; >
       au < down ; crawling ; 2010 ; Cell Division Volume 5 ; 5 ; >
       au < down ; crawling ; 2011 ; Cell Division Volume 6 ; 6 ; >
@@ -1143,7 +1143,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < down ; crawling ; 2011 ; Child and Adolescent Psychiatry and Mental Health Volume 5 ; 5 ; >
       au < down ; exists ; 2012 ; Child and Adolescent Psychiatry and Mental Health Volume 6 ; 6 ; >
       au < down ; finished ; 2013 ; Child and Adolescent Psychiatry and Mental Health Volume 7 ; 7 ; >
-      au < down ; crawling ; 2014 ; Child and Adolescent Psychiatry and Mental Health Volume 8 ; 8 ; >
+      au < down ; finished ; 2014 ; Child and Adolescent Psychiatry and Mental Health Volume 8 ; 8 ; >
       au < down ; exists ; 2015 ; Child and Adolescent Psychiatry and Mental Health Volume 9 ; 9 ; >
 
     }
@@ -1267,7 +1267,7 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < down ; exists ; 2008 ; Clinical and Molecular Allergy Volume 6 ; 6 ; >
       au < down ; exists ; 2009 ; Clinical and Molecular Allergy Volume 7 ; 7 ; >
       au < down ; crawling ; 2010 ; Clinical and Molecular Allergy Volume 8 ; 8 ; >
-      au < down ; crawling ; 2011 ; Clinical and Molecular Allergy Volume 9 ; 9 ; >
+      au < down ; finished ; 2011 ; Clinical and Molecular Allergy Volume 9 ; 9 ; >
       au < down ; exists ; 2012 ; Clinical and Molecular Allergy Volume 10 ; 10 ; >
       au < down ; crawling ; 2013 ; Clinical and Molecular Allergy Volume 11 ; 11 ; >
       au < doesNotExist ; doesNotExist ; 0 ; Clinical and Molecular Allergy Volume 12 ; 12 ; >
