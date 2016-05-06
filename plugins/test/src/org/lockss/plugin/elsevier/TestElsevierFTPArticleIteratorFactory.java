@@ -104,13 +104,14 @@ public class TestElsevierFTPArticleIteratorFactory extends ArticleIteratorTestCa
     assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000/000000/main.pdf");
     assertNotMatchesRE(pat, "http://www.wrong.com/2012/XXX00000/0000000.tar!/0000000/000000/main.pdf");
     assertNotMatchesRE(pat, "http://www.example.com/2013/XXX00000/0000000.tar!/0000000/000000/main.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/X00000.tar!/0000000/000000/main.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/X00000/000000/main.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/000X0000/000000/main.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000X/000000/main.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/Z000000/main.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/000Z000/main.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/000000Z/main.pdf");
+    // the pattern is now much looser - based on depth, not whether all numeric
+    assertMatchesRE(pat, "http://www.example.com/2012/XXX00000/X00000.tar!/0000000/000000/main.pdf");
+    assertMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/X00000/000000/main.pdf");
+    assertMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/000X0000/000000/main.pdf");
+    assertMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000X/000000/main.pdf");
+    assertMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/Z000000/main.pdf");
+    assertMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/000Z000/main.pdf");
+    assertMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/000000Z/main.pdf");
     // these can have an X as the final character and so we allow it
     assertMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/000000X/main.pdf");
     assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/000000/wrong.pdf");

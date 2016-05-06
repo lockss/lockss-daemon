@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,17 +28,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.elsevier;
 
-import java.io.*;
 import java.util.*;
+import java.util.regex.Pattern;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.repository.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.elsevier.ElsevierTocMetadataExtractorFactory.ElsevierTocMetadataExtractor;
-import org.lockss.plugin.simulated.*;
 
 /**
  * One of the articles used to get the html source for this plugin is:
@@ -47,7 +45,6 @@ import org.lockss.plugin.simulated.*;
 public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
   static Logger log = Logger.getLogger("TestElsevierTocMetadataExtractorFactory");
 
-  private SimulatedArchivalUnit sau;	// Simulated AU to generate content
   private ArchivalUnit hau;		//Elsevier AU
   private MockLockssDaemon theDaemon;
 
@@ -55,11 +52,13 @@ public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
     "org.lockss.plugin.elsevier.ClockssElsevierSourcePlugin";
 
   private static String BASE_URL = "http://test.com/";
-  private static String SIM_ROOT = BASE_URL + "cgi/reprint/";
+  private static String YEAR = "2012";
+  // use a global cu for the dataset.toc - set contents in individual tests
+  private static MockCachedUrl DCU;
 
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = setUpDiskSpace();
+    setUpDiskSpace();
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
     theDaemon.getPluginManager().setLoadablePluginsReady(true);
@@ -67,138 +66,163 @@ public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
     theDaemon.getPluginManager().startService();
     theDaemon.getCrawlManager();
 
-    sau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,
-					     simAuConfig(tempDirPath));
     hau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, elsevierFtpAuConfig());
   }
 
   public void tearDown() throws Exception {
-    sau.deleteContentTree();
     theDaemon.stopDaemon();
     super.tearDown();
   }
 
-  Configuration simAuConfig(String rootPath) {
-    Configuration conf = ConfigManager.newConfiguration();
-    conf.put("root", rootPath);
-    conf.put("base_url", SIM_ROOT);
-    conf.put("year", "2012");
-    conf.put("depth", "2");
-    conf.put("branch", "3");
-    conf.put("numFiles", "7");
-    conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_PDF +
-				SimulatedContentGenerator.FILE_TYPE_XML));
-    conf.put("default_article_mime_type", "application/pdf");
-    conf.put("binFileSize", "7");
-    return conf;
-  }
 
   Configuration elsevierFtpAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", BASE_URL);
-    conf.put("year", "2012");
+    conf.put("year", YEAR);
     return conf;
   }
   
-	String goodVolume = "volume";
-	String goodDate = "2011-07-23";
-	String goodUrl = "http://test.com/2012/0XFAKE0X/1231231.tar!/3453453/5675675/main.pdf";
-	String goodJournal = "Journal";
-	String goodDoi = "10.1016/d.rhodes.2011.05.001";
-	String goodLanguage = "EN";
-	String goodIssue = "Issue";
-	String goodRights = "Rights";
-	String goodTitle = "This tests a title which spans two lines";
-	List<?> goodAuthors = 
-	    ListUtil.list("AuthorLongName, A.", "AuthorLongerName, B.",
-	  "AuthorEvenLongerName, C.","AuthorWantsALongName, D.",
-	  "AuthorHasALongerName, E.", "AuthorHasAnotherLongerName, F.",
-	  "AuthorHasATerriblyLongerName, G.");
-	String goodSummary = "This summary also spans several lines";
-	List<?> goodKeywords = ListUtil.list("testing1", "testing2",  "testing3");
-	String goodStart = "10";
-	String goodEnd = "20";
- 
-  //Represents a metadata section for two dummy articles structured as in dataset.toc
-  String goodContent =
-		  
-		  "_t1 Issn\n"+
-  "_t3 0XFAKE0X 1231231 3453453 5675675\n"+
-  "_ps [PS000]\n"+
-  "_ii S0000-0000(00)00000-0\n"+
-  "_ii [DOI] 55.5555/d.rhodes.2011.05.010\n"+
-  "_ty FLA\n"+
-  "_t1 Issn\n"+
-  "_pd Date\n"+
-  "_jn Journal\n"+
-  "_cr Rights\n"+ 
-  "_is Issue\n"+
-  "_la EN\n"+
-  "_ti This tests a title which\n"+
-  " spans two lines\n"+
-  "_au AuthorLongName, A.\n"+
-  "_au AuthorLongerName, B.\n"+
-  "_au AuthorEvenLongerName, C.\n"+
-  "_au AuthorWantsALongName, D.\n"+
-  "_au AuthorHasALongerName, E.\n"+
-  "_au AuthorHasAnotherLongerName, F.\n"+
-  "_au AuthorHasATerriblyLongerName, G.\n"+
-  "_ca AuthorLongName, A.\n"+
-  "_ab This summary\n"+
-  "	also spans\n"+
-  "	several lines\n"+ 
-  "_dt 20110723\n"+
-  "_la EN\n"+
-  "_ii S0000-0000(00)00000-0\n"+
-  "_vl volume\n"+
-  "_ii [DOI] 10.1016/d.rhodes.2011.05.001\n"+
-  "_ty FLA\n"+
-  "_li EN\n"+
-  "_kw testing1\n"+
-  "_kw testing2\n"+
-  "_kw testing3\n"+
-  "_pg 10-20\n"+
-  "_mf [XML JA 5.1.0 ARTICLE] main\n"+
-  "_mf [PDF 1.7 6.2 DISTILLED OPTIMIZED BOOKMARKED] main\n"+
-  "_mf [Raw ASCII] main\n"+
-  "_t3 0XFAKE0X 1231231 3453453 6786786\n"+
-  "_ps [PS000]\n"+
-  "_dt 201201\n"+
-  "_ti This tests a title which\n"+
-  " spans two lines\n"+
-  "_au Author, A.\n"+
-  "_au Author, B.\n"+
-  "_au Author, C.\n"+
-  "_au Author, D.\n"+
-  "_au Author, E.\n"+
-  "_ca Author, A.\n"+
-  "_ab This summary\n"+
-  " also spans\n"+
-  " several lines\n"+
-  "_la EN\n"+
-  "_kw test1\n"+
-  "_kw test2\n"+
-  "_kw test3\n"+
-  "_jn Journal\n"+
-  "_pg 20-30\n"+
-  "_mf [XML JA 5.1.0 ARTICLE] main\n"+
-  "_mf [PDF 1.7 6.2 DISTILLED OPTIMIZED BOOKMARKED] main\n"+
-  "_mf [Raw ASCII] main";
-
-  public void testExtractFromGoodContent() throws Exception {
-    String url = "0XFAKE0X 1231231 3453453 5675675";
-    MockCachedUrl cu = new MockCachedUrl(url, hau);
-    cu.setContent(goodContent);
-    cu.setContentSize(goodContent.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/pdf");
+  public void testFindingDataset() throws Exception {
+    String OXMurl = BASE_URL + YEAR +"/OXM30010/00029343.tar!/01250008/12000332/main.pdf";
+    String OMurl = BASE_URL + YEAR + "/OM08032A/OM08032A.tar!/00992399/003405SS/07011582/main.pdf";
+    String OXM_dataset_url= BASE_URL + YEAR + "/OXM30010/dataset.toc";
+    String OM_dataset_url = BASE_URL + YEAR + "/OM08032A/OM08032A.tar!/dataset.toc";
+   
     ElsevierTocMetadataExtractor me =
       new ElsevierTocMetadataExtractorFactory.ElsevierTocMetadataExtractor();
     assertNotNull(me);
     
+    //Make sure that the extractor will correctly find the expected dataset file
+    assertEquals(OM_dataset_url, me.getToc(OMurl));
+    assertEquals(OXM_dataset_url, me.getToc(OXMurl));   
+    
+    // Make sure the extractor will correctly find the expected PDF from the data in the 
+    // dataset.toc file, depending on what the dataset_url is
+    // use the testing extractor in order to let class know where the dataset url is
+    TestingElsevierTocMetadataExtractor tme =
+        new TestingElsevierTocMetadataExtractor();
+    assertNotNull(tme);
+    String OXM_t3 = "OXM30010 00029343 01250008 12000332";
+    String OM_t3 = "OM08032A 00992399 003405SS 07011582";
+    //Make sure that the extractor will correctly find the expected dataset file
+    assertEquals(OMurl, tme.getUrlFrom(OM_t3,OM_dataset_url));
+    assertEquals(OXMurl, tme.getUrlFrom(OXM_t3, OXM_dataset_url));   
+  }
+  
+  String goodVolume = "volume";
+  String goodDate = "2011-07-23";
+  String goodUrl = "http://test.com/2012/0XFAKE0X/1231231.tar!/3453453/5675675/main.pdf";
+  String goodJournal = "Journal";
+  String goodDoi = "10.1016/d.rhodes.2011.05.001";
+  String goodLanguage = "EN";
+  String goodIssue = "Issue";
+  String goodRights = "Rights";
+  String goodTitle = "This tests a title which spans two lines";
+  List<?> goodAuthors = 
+      ListUtil.list("AuthorLongName, A.", "AuthorLongerName, B.",
+          "AuthorEvenLongerName, C.","AuthorWantsALongName, D.",
+          "AuthorHasALongerName, E.", "AuthorHasAnotherLongerName, F.",
+          "AuthorHasATerriblyLongerName, G.");
+  String goodSummary = "This summary also spans several lines";
+  List<?> goodKeywords = ListUtil.list("testing1", "testing2",  "testing3");
+  String goodStart = "10";
+  String goodEnd = "20";
+ 
+  //Represents a metadata section for two dummy articles structured as in dataset.toc
+  String goodContent =		  
+      "_t1 Issn\n"+
+          "_t3 0XFAKE0X 1231231 3453453 5675675\n"+
+          "_ps [PS000]\n"+
+          "_ii S0000-0000(00)00000-0\n"+
+          "_ii [DOI] 55.5555/d.rhodes.2011.05.010\n"+
+          "_ty FLA\n"+
+          "_t1 Issn\n"+
+          "_pd Date\n"+
+          "_jn Journal\n"+
+          "_cr Rights\n"+ 
+          "_is Issue\n"+
+          "_la EN\n"+
+          "_ti This tests a title which\n"+
+          " spans two lines\n"+
+          "_au AuthorLongName, A.\n"+
+          "_au AuthorLongerName, B.\n"+
+          "_au AuthorEvenLongerName, C.\n"+
+          "_au AuthorWantsALongName, D.\n"+
+          "_au AuthorHasALongerName, E.\n"+
+          "_au AuthorHasAnotherLongerName, F.\n"+
+          "_au AuthorHasATerriblyLongerName, G.\n"+
+          "_ca AuthorLongName, A.\n"+
+          "_ab This summary\n"+
+          "	also spans\n"+
+          "	several lines\n"+ 
+          "_dt 20110723\n"+
+          "_la EN\n"+
+          "_ii S0000-0000(00)00000-0\n"+
+          "_vl volume\n"+
+          "_ii [DOI] 10.1016/d.rhodes.2011.05.001\n"+
+          "_ty FLA\n"+
+          "_li EN\n"+
+          "_kw testing1\n"+
+          "_kw testing2\n"+
+          "_kw testing3\n"+
+          "_pg 10-20\n"+
+          "_mf [XML JA 5.1.0 ARTICLE] main\n"+
+          "_mf [PDF 1.7 6.2 DISTILLED OPTIMIZED BOOKMARKED] main\n"+
+          "_mf [Raw ASCII] main\n"+
+          "_t3 0XFAKE0X 1231231 3453453 6786786\n"+
+          "_ps [PS000]\n"+
+          "_dt 201201\n"+
+          "_ti This tests a title which\n"+
+          " spans two lines\n"+
+          "_au Author, A.\n"+
+          "_au Author, B.\n"+
+          "_au Author, C.\n"+
+          "_au Author, D.\n"+
+          "_au Author, E.\n"+
+          "_ca Author, A.\n"+
+          "_ab This summary\n"+
+          " also spans\n"+
+          " several lines\n"+
+          "_la EN\n"+
+          "_kw test1\n"+
+          "_kw test2\n"+
+          "_kw test3\n"+
+          "_jn Journal\n"+
+          "_pg 20-30\n"+
+          "_mf [XML JA 5.1.0 ARTICLE] main\n"+
+          "_mf [PDF 1.7 6.2 DISTILLED OPTIMIZED BOOKMARKED] main\n"+
+          "_mf [Raw ASCII] main";
+
+  /* 
+   * This is hard to test because the ElsevierTocMetadataExtractor goes and finds
+   * the metadata CachedUrl - so for looking at content, use our Test version of the extractor
+   * which returns the necessary MockCachedUrl instead of looking in the AU for a real
+   * CachedUlr
+   */
+  public void testExtractFromGoodContent() throws Exception {
+    // one of possible PDFs defined by the good content
+    String url = BASE_URL + YEAR + "/0XFAKE0X/1231231.tar!/3453453/5675675/main.pdf";
+    String dataset_url = BASE_URL + YEAR + "/0XFAKE0X/dataset.toc";
+    // no need to give it content, it isn't accessed
+    MockCachedUrl cu = new MockCachedUrl(url, hau);
+    // Set up the dataset_toc info in to the global DCU returned by the test extractor
+    DCU = new MockCachedUrl(dataset_url, hau);
+    DCU.setContent(goodContent);
+    DCU.setContentSize(goodContent.length());
+    DCU.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");    
+    ElsevierTocMetadataExtractor me =
+      new TestingElsevierTocMetadataExtractor();
+    assertNotNull(me);
+    
+    //Make sure that the extractor will correctly find the expected dataset file
+    String calculated_dataset_url = me.getToc(url);
+    assertEquals(dataset_url, calculated_dataset_url);
+    
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    // this will use the pdf url to find the correctly named DCU
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
@@ -206,7 +230,7 @@ public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
     assertEquals(goodUrl, md.get(MetadataField.FIELD_ACCESS_URL));
-    assertEquals(goodJournal, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(goodJournal, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
     assertEquals(goodDoi, md.get(MetadataField.FIELD_DOI));
     assertEquals(goodLanguage, md.get(MetadataField.DC_FIELD_LANGUAGE));
     assertEquals(goodAuthors, md.getList(MetadataField.FIELD_AUTHOR));
@@ -263,14 +287,25 @@ public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
   String testPublisher = "Elsevier";
   
   public void testExtractFromTestContent() throws Exception {
-    String url = "OXH26350 02726386 005901S1 11016325";
+    //String url = "OXH26350 02726386 005901S1 11016325";
+    // the pdf defined by the test content
+    String url = BASE_URL + YEAR + "/OXH26350/02726386.tar!/005901S1/11016325/main.pdf";
+    String dataset_url = BASE_URL + YEAR + "/OXH26350/dataset.toc";
+    // no need to give the PDF contents, it's not checked
     MockCachedUrl cu = new MockCachedUrl(url, hau);
-    cu.setContent(testContent);
-    cu.setContentSize(testContent.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/pdf");
+    // create and fill the global test dataset CU
+    DCU = new MockCachedUrl(dataset_url, hau);
+    DCU.setContent(testContent);
+    DCU.setContentSize(testContent.length());
+    DCU.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");        
+
     ElsevierTocMetadataExtractor me =
-      new ElsevierTocMetadataExtractorFactory.ElsevierTocMetadataExtractor();
+      new TestingElsevierTocMetadataExtractor();
     assertNotNull(me);
+    
+    //Make sure that the extractor will correctly find the expected dataset file
+    String calculated_dataset_url = me.getToc(url);
+    assertEquals(dataset_url, calculated_dataset_url);    
     
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
@@ -283,7 +318,7 @@ public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
     assertEquals(testVolume, md.get(MetadataField.FIELD_VOLUME));
     assertEquals(testDate, md.get(MetadataField.FIELD_DATE));
     assertEquals(testUrl, md.get(MetadataField.FIELD_ACCESS_URL));
-    assertEquals(testJournal, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(testJournal, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
     assertEquals(testIssn, md.get(MetadataField.FIELD_ISSN));
     assertEquals(testDoi, md.get(MetadataField.FIELD_DOI));
     assertEquals(testLanguage, md.get(MetadataField.DC_FIELD_LANGUAGE));
@@ -307,60 +342,55 @@ public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
     goodSummary + " </div>\n";
 
   public void testExtractFromBadContent() throws Exception {
-    String url = "0XFAKEX0 234234 456456 567567";
+    String url = BASE_URL + YEAR + "/0XFAKE0X/234234.tar!/456456/567567/main.pdf";    
+    String dataset_url = BASE_URL + YEAR + "/0XFAKE0X/dataset.toc";
+
     MockCachedUrl cu = new MockCachedUrl(url, hau);
-    cu.setContent(badContent);
-    cu.setContentSize(badContent.length());
-    FileMetadataExtractor me =
-      new ElsevierTocMetadataExtractorFactory.ElsevierTocMetadataExtractor();
+    // Set up the dataset_toc info in to the global DCU returned by the test extractor
+    DCU = new MockCachedUrl(dataset_url, hau);
+    DCU.setContent(badContent);
+    DCU.setContentSize(badContent.length());
+    DCU.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");       
+    ElsevierTocMetadataExtractor me =
+      new TestingElsevierTocMetadataExtractor();
     assertNotNull(me);
+    
+    //Make sure that the extractor will correctly find the expected dataset file
+    String calculated_dataset_url = me.getToc(url);
+    assertEquals(dataset_url, calculated_dataset_url);
+    
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertEmpty(mdlist);
   }
   
-  /**
-   * Inner class that where a number of Archival Units can be created
-   *
+  /*
+   * The ElsevierTocMetadataExtractor generates the dataset.toc url inside the 
+   * extract() method and then creates a CachedUrl() and uses that. 
+   * There is no easy way to hook this in to a test framework which requires a 
+   * MockCachedUrl that we can put contents in to. So work around this by 
+   * creating a subclass of ElsevierTocMetadatExtractor and overriding the
+   * method that creates the dataset.toc 
    */
-  public static class MySimulatedPlugin extends SimulatedPlugin {
-    public ArchivalUnit createAu0(Configuration auConfig)
-	throws ArchivalUnit.ConfigurationException {
-      ArchivalUnit au = new SimulatedArchivalUnit(this);
-      au.setConfiguration(auConfig);
-      return au;
-    }
+  public static class TestingElsevierTocMetadataExtractor extends ElsevierTocMetadataExtractor  {
+    protected static Pattern DATE_PATTERN = 
+        Pattern.compile("^http://[^/]+/([^/]+)/", Pattern.CASE_INSENSITIVE);
 
-    public SimulatedContentGenerator getContentGenerator(Configuration cf, String fileRoot) {
-      return new MySimulatedContentGenerator(fileRoot);
-    }
 
-  }
-  
-  /**
-   * Inner class to create a html source code simulated content
-   */
-  public static class MySimulatedContentGenerator extends	SimulatedContentGenerator {
-    protected MySimulatedContentGenerator(String fileRoot) {
-      super(fileRoot);
-    }
-
-    public String getHtmlFileContent(String filename, int fileNum, int depth, int branchNum, boolean isAbnormal) {
-			
-      String file_content = "<HTML><HEAD><TITLE>" + filename + "</TITLE></HEAD><BODY>\n";
-			
-      file_content += "  <meta name=\"lockss.filenum\" content=\""+ fileNum + "\">\n";
-      file_content += "  <meta name=\"lockss.depth\" content=\"" + depth + "\">\n";
-      file_content += "  <meta name=\"lockss.branchnum\" content=\"" + branchNum + "\">\n";			
-
-      file_content += getHtmlContent(fileNum, depth, branchNum,	isAbnormal);
-      file_content += "\n</BODY></HTML>";
-      logger.debug2("MySimulatedContentGenerator.getHtmlFileContent: "
-		    + file_content);
-
-      return file_content;
+    @Override
+    protected CachedUrl getMetadataCU(String metadata_url_string, CachedUrl pdfCu) {
+      return DCU;
+     }
+    
+    protected String getUrlFrom(String identifier, String dataset_url)
+    {
+      
+      super.base_url = BASE_URL;
+      super.year = YEAR;
+      super.dsetInTar =  dataset_url.contains(".tar!/");
+      return super.getUrlFrom(identifier);
     }
   }
 }

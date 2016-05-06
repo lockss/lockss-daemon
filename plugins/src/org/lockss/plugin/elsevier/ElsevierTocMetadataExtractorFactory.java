@@ -161,8 +161,8 @@ implements FileMetadataExtractorFactory {
     };
 
     private int lastTag = INVALID_TAG;
-    private String base_url, year;
-    private boolean dsetInTar;
+    protected String base_url, year;
+    protected boolean dsetInTar; // protected because used for testing
     
     /**
      * Use SimpleHtmlMetaTagMetadataExtractor to extract raw metadata, map
@@ -171,16 +171,11 @@ implements FileMetadataExtractorFactory {
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
         throws IOException {
-      //This uses the pdf url matched against the PDF_PATTERN to locate its
-      // associated dataset.toc
+      //match pdf url against the PDF_PATTERN to locate associated dataset.toc
       String metadata_url_string = getToc(cu.getUrl());
-      CachedUrl metadata = cu.getArchivalUnit().makeCachedUrl(metadata_url_string);
-
-      // I'm not sure what this test is solving but this is legacy so I am leaving
-      // it for now
-      if (metadata.getUrl().equals(cu.getUrl())) {
-        metadata = cu;
-      }
+      //use a getter so testing can override this
+      CachedUrl metadata = getMetadataCU(metadata_url_string, cu);
+      
       if (metadata == null || !metadata.hasContent()) {
         log.error("The metadata file does not exist or is not readable.");
         return;
@@ -390,14 +385,22 @@ implements FileMetadataExtractorFactory {
       }
     }
 
-    /**
+    
+    protected CachedUrl getMetadataCU(String metadata_url_string, CachedUrl pdfCu) {
+     return pdfCu.getArchivalUnit().makeCachedUrl(metadata_url_string);
+    }
+    
+     /**
      * Uses a url of an article to construct its metadata file's url
      * @param url - address of an article file
      * @return the metadata file's pathname
-     */
+     */       
     protected String getToc(String url)
     {
       Matcher matcher = PDF_PATTERN.matcher(url);
+      if (!matcher.find()) {
+        return null;
+      }
       // group1 = TOP_DIR; group2= "tarball"; group3=optional extra subdirectory
       // if there is an additional subdirectory then we know the dataset is in the tarball
       // otherwise it sits unpacked in the TOP_DIR
@@ -410,7 +413,6 @@ implements FileMetadataExtractorFactory {
         //<base>/2012/OXM30010/dataset.toc <-- unpacked
         return matcher.replaceFirst("$1/dataset.toc");
       }
-      
     }
 
     /* 
@@ -431,5 +433,6 @@ implements FileMetadataExtractorFactory {
         return matcher.replaceFirst(base_url+year+"/$1/$3.tar!/$5/$7/main.pdf");
       }
     }
+ 
   }
 }
