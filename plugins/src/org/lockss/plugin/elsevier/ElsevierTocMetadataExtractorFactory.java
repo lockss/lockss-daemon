@@ -72,7 +72,18 @@ implements FileMetadataExtractorFactory {
 
   public static class ElsevierTocMetadataExtractor 
   implements FileMetadataExtractor {
+    
+    //group#1 = the top dir in which the tar lives (just under year param)
+    //group#2 - the tarball name
+    //group#3 - optional extra level between the tar and the main.pdf 
+    //       - the existence of which tells us if the dataset is in the tar
+    protected static Pattern PDF_PATTERN = 
+        Pattern.compile("(.*/[^/]+)/([^/]+\\.tar!)/([^/]+/)?[^/]+/[^/]+/main\\.pdf$", Pattern.CASE_INSENSITIVE);
 
+    //group1,3,5,7 are the space separated numletters in the _t3 value
+    protected static Pattern T3_PATTERN = 
+        Pattern.compile("([^/]+)( )([^/]+)( )([^/]+)( )([^/]+)");
+    
     private final int DOI_LEN = 6;
 
     private final int ISSN_INDEX = 0;
@@ -151,6 +162,7 @@ implements FileMetadataExtractorFactory {
 
     private int lastTag = INVALID_TAG;
     private String base_url, year;
+    private boolean dsetInTar;
     
     /**
      * Use SimpleHtmlMetaTagMetadataExtractor to extract raw metadata, map
@@ -159,8 +171,13 @@ implements FileMetadataExtractorFactory {
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
         throws IOException {
-      CachedUrl metadata = cu.getArchivalUnit().makeCachedUrl(getToc(cu.getUrl()));
+      //This uses the pdf url matched against the PDF_PATTERN to locate its
+      // associated dataset.toc
+      String metadata_url_string = getToc(cu.getUrl());
+      CachedUrl metadata = cu.getArchivalUnit().makeCachedUrl(metadata_url_string);
 
+      // I'm not sure what this test is solving but this is legacy so I am leaving
+      // it for now
       if (metadata.getUrl().equals(cu.getUrl())) {
         metadata = cu;
       }
@@ -171,6 +188,7 @@ implements FileMetadataExtractorFactory {
 
       base_url = cu.getArchivalUnit().getConfiguration().get("base_url");
       year = cu.getArchivalUnit().getConfiguration().get("year");
+      dsetInTar = metadata_url_string.contains(".tar!/");
       log.debug3("Parsing metadata from " + metadata.getUrl());
       BufferedReader bReader = new BufferedReader(metadata.openForReading());
       try {
@@ -379,16 +397,39 @@ implements FileMetadataExtractorFactory {
      */
     protected String getToc(String url)
     {
-      Pattern pattern = Pattern.compile("(.*/[^/]+/)[\\d]+[^/]+/[\\d]+/[\\dX]+/main.pdf$",Pattern.CASE_INSENSITIVE);
-      Matcher matcher = pattern.matcher(url);
-      return matcher.replaceFirst("$1dataset.toc");
+      Matcher matcher = PDF_PATTERN.matcher(url);
+      // group1 = TOP_DIR; group2= "tarball"; group3=optional extra subdirectory
+      // if there is an additional subdirectory then we know the dataset is in the tarball
+      // otherwise it sits unpacked in the TOP_DIR
+      if (matcher.group(3) != null) {
+        //dataset.toc is inside the one tarball in the directory
+        //<base>/2008/OM08032A/OM08032A.tar!/dataset.toc <--in archive        
+        return matcher.replaceFirst("$1/$2/dataset.toc");
+      } else {
+        //dataset.toc is unpacked in the directory that contains multiple tars
+        //<base>/2012/OXM30010/dataset.toc <-- unpacked
+        return matcher.replaceFirst("$1/dataset.toc");
+      }
+      
     }
 
+    /* 
+     * The string value associated with the _t3 key is four numbers
+     * separated by spaces. The pattern separates these in to groups
+     * (spaces take the even values) 
+     */
     protected String getUrlFrom(String identifier)
     {
-      Pattern pattern = Pattern.compile("([^/]+)( )([^/]+)( )([^/]+)( )([^/]+)");
-      Matcher matcher = pattern.matcher(identifier);
-      return matcher.replaceFirst(base_url+year+"/$1/$3.tar!/$5/$7/main.pdf");
+      Matcher matcher = T3_PATTERN.matcher(identifier);
+      if (dsetInTar) {
+        //the main.pdf is one layer deeper in a tar the same as the dir it is in
+        //<base>/2008/OM08032A/OM08032A.tar!/00992399/003405SS/07011582/main.pdf
+        return matcher.replaceFirst(base_url+year+"/$1/$1.tar!/$3/$5/$7/main.pdf");
+      } else {
+        //the main.pdf is in a tar of the 2nd numletter with only 2 more levels
+        //<base>/2012/OXM30010/00029343.tar!/01250008/12000332/main.pdf
+        return matcher.replaceFirst(base_url+year+"/$1/$3.tar!/$5/$7/main.pdf");
+      }
     }
   }
 }
