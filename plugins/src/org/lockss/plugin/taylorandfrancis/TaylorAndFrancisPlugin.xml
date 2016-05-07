@@ -17,7 +17,7 @@
   </entry>   
   <entry>
     <string>plugin_version</string>
-    <string>74</string>
+    <string>75</string>
   </entry>
 <!-- Now a child of BaseAtypon which lives in a different directory "atypon" -->  
   <entry>
@@ -26,7 +26,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>44</string>
+    <string>48</string>
   </entry>   
   <entry>
     <string>plugin_feature_version_map</string>
@@ -37,7 +37,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>38</string>
+        <string>39</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -138,12 +138,26 @@
     <string>Atypon Systems hosts this archival unit (AU) and requires that you &lt;a href=&apos;http://www.tandfonline.com/action/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional account as a crawler&lt;/a&gt; before allowing your LOCKSS box to harvest this AU. Failure to comply with this publisher requirement may trigger crawler traps on the Atypon Systems platform, and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. You only need to register the IP address of your LOCKSS box once for all AUs published by Taylor &amp; Francis.</string>
   </entry>
   <!-- Candidate to be hoisted into BaseAtyponPlugin -->
+  <!-- For now, because T&F is so large and we're trying to clean up some agreements, do not inherit
+       generic:  base_host +
+           - /(css|img|js)Jawr/
+           - /templates/jsp/
+           - /sda/
+         at any depth a url ending with      
+           - .fp.png$ with optional numbered version
+           - .css or .js
+         these ones should repair from peer to speed agreements on old aus, but should still be weighted
+           - /action/downloadCitation?doi=... 
+           - /<dir>/home/literatum/
+   -->
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
-    <string>://[^/]+/((css|img|js)Jawr/|templates/jsp/|[^/]+/home/literatum/|action/downloadCitation\?doi=[^&amp;]+&amp;format=|sda/|.+[.]fp[.]png_v[0-9]+$)</string>
+    <string>://[^/]+/((css|img|js)Jawr/|templates/jsp/|sda/|.+[.]fp[.]png(_v[0-9]+)?$|.*\.(css|js)$|[^/]+/home/literatum/|action/downloadCitation\?doi=[^&amp;]+&amp;format=)</string>
   </entry>
   <entry>
-    <string>au_exclude_urls_from_polls_pattern</string>
-    <string>"^%s(sda/|templates/jsp/|.*\.(css|js)$)", base_url</string>
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>"://[^/]+/((css|img|js)Jawr/|templates/jsp/|sda/|.+[.]fp[.]png(_v[0-9]+)?$|.*\.(css|js)$)", 0</string>
+    </list>
   </entry>
 </map>
