@@ -36,16 +36,17 @@
       # notReady: no permission from publisher
 
       au < exists ; ; 1 ; Revista Direito e Liberdade Volume 1 ; 0001 ; >
-      au < exists ; ; 2-4 ; Revista Direito e Liberdade Volume 2 ; 0002 ; >
-      au < exists ; ; 5-7 ; Revista Direito e Liberdade Volume 3 ; 0003 ; >
-      au < exists ; ; 8-9 ; Revista Direito e Liberdade Volume 4 ; 0004 ; >
-      au < exists ; ; 10-11 ; Revista Direito e Liberdade Volume 5 ; 0005 ; >
-      au < exists ; ; 12 ; Revista Direito e Liberdade Volume 6 ; 0006 ; >
-      au < exists ; ; 13 ; Revista Direito e Liberdade Volume 7 ; 0007 ; >
-      au < exists ; ; 14 ; Revista Direito e Liberdade Volume 8 ; 0008 ; >
-      au < exists ; ; 15 ; Revista Direito e Liberdade Volume 9 ; 0009 ; >
-      au < exists ; ; 16 ; Revista Direito e Liberdade Volume 10 ; 0010 ; >
-      au < notReady ; ; 17 ; Revista Direito e Liberdade Volume 11 ; 0011 ; >
+      au < exists ; ; 2-4 ; Revista Direito e Liberdade Volume 2-4 ; 0002 ; >
+      au < exists ; ; 5-7 ; Revista Direito e Liberdade Volume 5-7 ; 0003 ; >
+      au < exists ; ; 8-9 ; Revista Direito e Liberdade Volume 8-9 ; 0004 ; >
+      au < exists ; ; 10-11 ; Revista Direito e Liberdade Volume 10-11 ; 0005 ; >
+      au < exists ; ; 12 ; Revista Direito e Liberdade Volume 12 ; 0006 ; >
+      au < exists ; ; 13 ; Revista Direito e Liberdade Volume 13 ; 0007 ; >
+      au < exists ; ; 14 ; Revista Direito e Liberdade Volume 14 ; 0008 ; >
+      au < exists ; ; 15 ; Revista Direito e Liberdade Volume 15 ; 0009 ; >
+      au < exists ; ; 16 ; Revista Direito e Liberdade Volume 16 ; 0010 ; >
+      au < notReady ; ; 17 ; Revista Direito e Liberdade Volume 17 ; 0011 ; >
+      au < manifest ; ; 18 ; Revista Direito e Liberdade Volume 18 ; 0012 ; >
 
   }
 
