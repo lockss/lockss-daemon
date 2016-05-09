@@ -1186,8 +1186,8 @@
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
     param[base_url] = http://scholarworks.umass.edu/
     param[collection_type] = ir_etd
-    param[collection_heading] = dissertations_1
-    implicit < status ; year ; name ; param[collection] ; attr[au_coverage_depth] >  
+    param[collection] = dissertations_1
+    implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >  
 
     au < released ; 1896 ; University of Massachusetts Amherst Doctoral Dissertations 1896 ; 1896 ; fulltext >
     au < released ; 1911 ; University of Massachusetts Amherst Doctoral Dissertations 1911 ; 1911 ; fulltext >
@@ -1241,8 +1241,8 @@
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin
     param[base_url] = http://scholarworks.umass.edu/
     param[collection_type] = ir_etd
-    param[collection_heading] = dissertations_2
-    implicit < status ; year ; name ; param[collection] ; attr[au_coverage_depth] >  
+    param[collection] = dissertations_2
+    implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >  
 
     au < released ; 2013 ; University of Massachusetts Amherst Doctoral Dissertations 2013 (Part 2/2) ; 2013 ; fulltext >
     au < released ; 2014 ; University of Massachusetts Amherst Doctoral Dissertations 2014 (Part 2/2) ; 2014 ; fulltext >
