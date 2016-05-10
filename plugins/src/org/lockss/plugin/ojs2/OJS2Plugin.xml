@@ -16,7 +16,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>55</string>
+    <string>56</string>
   </entry>
 <!--
 This is a list of OJS2 Child plugins - be sure to update the child's
@@ -46,7 +46,7 @@ Note: also push this plugin to coppulpln, dkdemopln, ibictpln, italytestpln, syn
       </entry>
       <entry>
         <string>Substance</string>
-        <string>9</string>
+        <string>10</string>
       </entry>
     </map>
   </entry>
@@ -146,9 +146,11 @@ Note: also push this plugin to coppulpln, dkdemopln, ibictpln, italytestpln, syn
     <string>au_substance_url_pattern</string>
       <list>
         <!--  new - making index.php and journal_id optional -->
-        <!--  adding pdf for Electronic Journal of Combinatorics; 
-              viewFile for KwaZulu Natal Museum -->
-        <string>"^%s(?:index[.]php/)?(?:%s/)?article/(?:view(?:File)?|download)/[^/]+/[^/?#&amp;.]+$", base_url, journal_id</string>
+        <!--  adding pdf for Electronic Journal of Combinatorics; http://www.combinatorics.org/ojs/index.php/eljc/article/view/v21i1p3/pdf
+              viewFile for KwaZulu Natal Museum http://africaninvertebrates.org/ojs/index.php/AI/article/viewFile/340/316
+              pdf for https://periodicos.unifap.br/index.php/planeta/article/download/1027/LucasN6.pdf
+           -->
+        <string>"^%s(?:index[.]php/)?(?:%s/)?article/(?:view(?:File)?|download)/[^/]+/[^/?#&amp;.]+([./]pdf)?$", base_url, journal_id</string>
       </list>
   </entry>
   <entry>
