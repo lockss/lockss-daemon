@@ -49,10 +49,10 @@
       au < HighWirePressH20Plugin ; down ; 2013 ; AAP Grand Rounds Volume 29 ; 29 >
       au < HighWirePressH20Plugin ; down ; 2013 ; AAP Grand Rounds Volume 30 ; 30 >
       au < HighWirePressH20Plugin ; down ; 2014 ; AAP Grand Rounds Volume 31 ; 31 >
-      au < HWDrupalPlugin ; exists ; 2014 ; AAP Grand Rounds Volume 32 ; 32 >
-      au < HWDrupalPlugin ; exists ; 2015 ; AAP Grand Rounds Volume 33 ; 33 >
-      au < HWDrupalPlugin ; exists ; 2015 ; AAP Grand Rounds Volume 34 ; 34 >
-      au < HWDrupalPlugin ; exists ; 2016 ; AAP Grand Rounds Volume 35 ; 35 >
+      au < HWDrupalPlugin ; manifest ; 2014 ; AAP Grand Rounds Volume 32 ; 32 >
+      au < HWDrupalPlugin ; manifest ; 2015 ; AAP Grand Rounds Volume 33 ; 33 >
+      au < HWDrupalPlugin ; manifest ; 2015 ; AAP Grand Rounds Volume 34 ; 34 >
+      au < HWDrupalPlugin ; manifest ; 2016 ; AAP Grand Rounds Volume 35 ; 35 >
       au < HWDrupalPlugin ; expected ; 2016 ; AAP Grand Rounds Volume 36 ; 36 >
 
     }
@@ -132,8 +132,8 @@
       au < HighWirePressH20Plugin ; down ; 2012 ; Hospital Pediatrics Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; down ; 2013 ; Hospital Pediatrics Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; down ; 2014 ; Hospital Pediatrics Volume 4 ; 4 >
-      au < HWDrupalPlugin ; exists ; 2015 ; Hospital Pediatrics Volume 5 ; 5 >
-      au < HWDrupalPlugin ; exists ; 2016 ; Hospital Pediatrics Volume 6 ; 6 >
+      au < HWDrupalPlugin ; manifest ; 2015 ; Hospital Pediatrics Volume 5 ; 5 >
+      au < HWDrupalPlugin ; manifest ; 2016 ; Hospital Pediatrics Volume 6 ; 6 >
 
     }
     
@@ -165,10 +165,10 @@
       au < HighWirePressH20Plugin ; down ; 2010 ; NeoReviews Volume 11 ; 11 >
       au < HighWirePressH20Plugin ; down ; 2011 ; NeoReviews Volume 12 ; 12 >
       au < HighWirePressH20Plugin ; down ; 2012 ; NeoReviews Volume 13 ; 13 >
-      au < HWDrupalPlugin ; exists ; 2013 ; NeoReviews Volume 14 ; 14 >
-      au < HWDrupalPlugin ; exists ; 2014 ; NeoReviews Volume 15 ; 15 >
-      au < HWDrupalPlugin ; exists ; 2015 ; NeoReviews Volume 16 ; 16 >
-      au < HWDrupalPlugin ; exists ; 2016 ; NeoReviews Volume 17 ; 17 >
+      au < HWDrupalPlugin ; manifest ; 2013 ; NeoReviews Volume 14 ; 14 >
+      au < HWDrupalPlugin ; manifest ; 2014 ; NeoReviews Volume 15 ; 15 >
+      au < HWDrupalPlugin ; manifest ; 2015 ; NeoReviews Volume 16 ; 16 >
+      au < HWDrupalPlugin ; manifest ; 2016 ; NeoReviews Volume 17 ; 17 >
 
     }
 
@@ -321,10 +321,10 @@
       au < HighWirePressH20Plugin ; down ; 2013 ; Pediatrics Volume 131 ; 131 >
       au < HighWirePressH20Plugin ; down ; 2013 ; Pediatrics Volume 132 ; 132 >
       au < HighWirePressH20Plugin ; down ; 2014 ; Pediatrics Volume 133 ; 133 >
-      au < HWDrupalPlugin ; exists ; 2014 ; Pediatrics Volume 134 ; 134 >
-      au < HWDrupalPlugin ; exists ; 2015 ; Pediatrics Volume 135 ; 135 >
-      au < HWDrupalPlugin ; exists ; 2015 ; Pediatrics Volume 136 ; 136 >
-      au < HWDrupalPlugin ; exists ; 2016 ; Pediatrics Volume 137 ; 137 >
+      au < HWDrupalPlugin ; manifest ; 2014 ; Pediatrics Volume 134 ; 134 >
+      au < HWDrupalPlugin ; manifest ; 2015 ; Pediatrics Volume 135 ; 135 >
+      au < HWDrupalPlugin ; manifest ; 2015 ; Pediatrics Volume 136 ; 136 >
+      au < HWDrupalPlugin ; manifest ; 2016 ; Pediatrics Volume 137 ; 137 >
 
     }
 
@@ -377,10 +377,10 @@
       au < HighWirePressH20Plugin ; down ; 2010 ; Pediatrics in Review Volume 31 ; 31 >
       au < HighWirePressH20Plugin ; down ; 2011 ; Pediatrics in Review Volume 32 ; 32 >
       au < HighWirePressH20Plugin ; down ; 2012 ; Pediatrics in Review Volume 33 ; 33 >
-      au < HWDrupalPlugin ; exists ; 2013 ; Pediatrics in Review Volume 34 ; 34 >
-      au < HWDrupalPlugin ; exists ; 2014 ; Pediatrics in Review Volume 35 ; 35 >
-      au < HWDrupalPlugin ; exists ; 2015 ; Pediatrics in Review Volume 36 ; 36 >
-      au < HWDrupalPlugin ; exists ; 2016 ; Pediatrics in Review Volume 37 ; 37 >
+      au < HWDrupalPlugin ; manifest ; 2013 ; Pediatrics in Review Volume 34 ; 34 >
+      au < HWDrupalPlugin ; manifest ; 2014 ; Pediatrics in Review Volume 35 ; 35 >
+      au < HWDrupalPlugin ; manifest ; 2015 ; Pediatrics in Review Volume 36 ; 36 >
+      au < HWDrupalPlugin ; manifest ; 2016 ; Pediatrics in Review Volume 37 ; 37 >
 
     }
 

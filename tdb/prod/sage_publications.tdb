@@ -3808,8 +3808,8 @@
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2014 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 >
-      au < exists ; 2015 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 >
+      au < manifest ; 2014 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 >
+      au < manifest ; 2015 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 >
       au < expected ; 2016 ; Asian/Pacific Island Nursing Journal Volume 3 ; 3 >
 
   }
@@ -4478,8 +4478,8 @@
         param[base_url] = http://bds.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2014 ; Big Data & Society Volume 1 ; 1 >
-        au < exists ; 2015 ; Big Data & Society Volume 2 ; 2 >
+        au < manifest ; 2014 ; Big Data & Society Volume 1 ; 1 >
+        au < manifest ; 2015 ; Big Data & Society Volume 2 ; 2 >
         au < expected ; 2016 ; Big Data & Society Volume 3 ; 3 >
 
     }
@@ -8189,7 +8189,7 @@
         au < exists ; 2012 ; Contemporary Voice of Dalit Volume 5 ; 5 >
         au < exists ; 2013 ; Contemporary Voice of Dalit Volume 6 ; 6 >
         au < exists ; 2014 ; Contemporary Voice of Dalit Volume 7 ; 7 >
-        au < exists ; 2016 ; Contemporary Voice of Dalit Volume 8 ; 8 >
+        au < manifest ; 2016 ; Contemporary Voice of Dalit Volume 8 ; 8 >
   
     }
 
@@ -19446,7 +19446,7 @@
         au < exists ; 2013 ; International Journal of Micro Air Vehicles Volume 5 ; 5 >
         au < exists ; 2014 ; International Journal of Micro Air Vehicles Volume 6 ; 6 >
         au < released ; 2015 ; International Journal of Micro Air Vehicles Volume 7 ; 7 >
-        au < expected ; 2016 ; International Journal of Micro Air Vehicles Volume 8 ; 8 >
+        au < manifest ; 2016 ; International Journal of Micro Air Vehicles Volume 8 ; 8 >
 
     }
 
@@ -19969,7 +19969,7 @@
       au < exists ; 2013 ; International Journal of Spray and Combustion Dynamics Volume 5 ; 5 >
       au < released ; 2014 ; International Journal of Spray and Combustion Dynamics Volume 6 ; 6 >
       au < released ; 2015 ; International Journal of Spray and Combustion Dynamics Volume 7 ; 7 >
-      au < expected ; 2016 ; International Journal of Spray and Combustion Dynamics Volume 8 ; 8 >
+      au < manifest ; 2016 ; International Journal of Spray and Combustion Dynamics Volume 8 ; 8 >
 
     }
 
@@ -30329,7 +30329,7 @@ comment[mpj] = now published by Brill
         au < released ; 2013 ; Journal of Research on Leadership Education Volume 8 ; 8 >
         au < released ; 2014 ; Journal of Research on Leadership Education Volume 9 ; 9 >
         au < released ; 2015 ; Journal of Research on Leadership Education Volume 10 ; 10 >
-        au < expected ; 2016 ; Journal of Research on Leadership Education Volume 11 ; 11 >
+        au < manifest ; 2016 ; Journal of Research on Leadership Education Volume 11 ; 11 >
 
       }
 
@@ -33452,7 +33452,7 @@ comment[mpj] = now published by Brill
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2015 ; Literature & History Volume 24 ; 24 >
-      au < expected ; 2016 ; Literature & History Volume 25 ; 25 >
+      au < manifest ; 2016 ; Literature & History Volume 25 ; 25 >
 
     }
 
@@ -34271,7 +34271,7 @@ comment[mpj] = now published by Brill
       au < expected ; 2015 ; Media International Australia Volume 156 ; 156 >
       au < expected ; 2015 ; Media International Australia Volume 157 ; 157 >
       au < manifest ; 2016 ; Media International Australia Volume 158 ; 158 >
-      au < expected ; 2016 ; Media International Australia Volume 159 ; 159 >
+      au < manifest ; 2016 ; Media International Australia Volume 159 ; 159 >
       au < expected ; 2016 ; Media International Australia Volume 160 ; 160 >
       au < expected ; 2016 ; Media International Australia Volume 161 ; 161 >
 
@@ -40824,9 +40824,9 @@ comment[mpj] = now published by Brill
         param[base_url] = http://rap.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2014 ; Research & Politics Volume 1 ; 1 >
-        au < exists ; 2015 ; Research & Politics Volume 2 ; 2 >
-        au < expected ; 2016 ; Research & Politics Volume 3 ; 3 >
+        au < manifest ; 2014 ; Research & Politics Volume 1 ; 1 >
+        au < manifest ; 2015 ; Research & Politics Volume 2 ; 2 >
+        au < manifest ; 2016 ; Research & Politics Volume 3 ; 3 >
 
     }
 
@@ -41112,7 +41112,7 @@ comment[mpj] = now published by Brill
         au < released ; 2013 ; Research Studies in Music Education Volume 35 ; 35 >
         au < released ; 2014 ; Research Studies in Music Education Volume 36 ; 36 >
         au < released ; 2015 ; Research Studies in Music Education Volume 37 ; 37 >
-        au < expected ; 2016 ; Research Studies in Music Education Volume 38 ; 38 >
+        au < manifest ; 2016 ; Research Studies in Music Education Volume 38 ; 38 >
 
       }
 
@@ -41704,10 +41704,10 @@ comment[mpj] = now published by Brill
 
           au < doNotProcess ; 2011 ; Sage Open Volume 1 ; 1 >
           au < doNotProcess ; 2012 ; Sage Open Volume 2 ; 2 >
-          au < exists ; 2013 ; Sage Open Volume 3 ; 3 >
-          au < exists ; 2014 ; Sage Open Volume 4 ; 4 >
-          au < expected ; 2015 ; Sage Open Volume 5 ; 5 >
-          au < expected ; 2016 ; Sage Open Volume 6 ; 6 >
+          au < manifest ; 2013 ; Sage Open Volume 3 ; 3 >
+          au < manifest ; 2014 ; Sage Open Volume 4 ; 4 >
+          au < manifest ; 2015 ; Sage Open Volume 5 ; 5 >
+          au < manifest ; 2016 ; Sage Open Volume 6 ; 6 >
 
         }
 

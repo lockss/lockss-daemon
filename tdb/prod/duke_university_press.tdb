@@ -598,7 +598,7 @@
       au < HighWirePressH20Plugin ; released ; 2013 ; Comparative Studies of South Asia, Africa and the Middle East Volume 33 ; 33 >
       au < HighWirePressH20Plugin ; released ; 2014 ; Comparative Studies of South Asia, Africa and the Middle East Volume 34 ; 34 >
       au < HighWirePressH20Plugin ; released ; 2015 ; Comparative Studies of South Asia, Africa and the Middle East Volume 35 ; 35 >
-      au < HighWirePressH20Plugin ; expected ; 2016 ; Comparative Studies of South Asia, Africa and the Middle East Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; manifest ; 2016 ; Comparative Studies of South Asia, Africa and the Middle East Volume 36 ; 36 >
 
     }
 
@@ -3379,7 +3379,7 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       #move from Oxford University Press 
 
-      au < HighWirePressH20Plugin ; exists ; 2006 ; World Policy Journal Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; manifest ; 2006 ; World Policy Journal Volume 23 ; 23 >
       au < HighWirePressH20Plugin ; exists ; 2007 ; World Policy Journal Volume 24 ; 24 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; World Policy Journal Volume 25 ; 25 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; World Policy Journal Volume 26 ; 26 >

@@ -2620,7 +2620,7 @@
 
     au < manifest ; 2013 ; Chinese Journal of Engineering Volume 2013 ; 2013 ; 2013 >
     au < released ; 2014 ; Chinese Journal of Engineering Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2016 ; Chinese Journal of Engineering Volume 2016 ; 2016 ; 2016 >
+    au < manifest ; 2016 ; Chinese Journal of Engineering Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -5858,10 +5858,10 @@
     param[journal_id] = jamp
     comment[continues] = 1687-9228
 
-    au < exists ; 2009 ; Journal of Atomic, Molecular, and Optical Physics Volume 2009 ; 2009 ; 2009 >
-    au < exists ; 2010 ; Journal of Atomic, Molecular, and Optical Physics Volume 2010 ; 2010 ; 2010 >
-    au < exists ; 2011 ; Journal of Atomic, Molecular, and Optical Physics Volume 2011 ; 2011 ; 2011 >
-    au < exists ; 2012 ; Journal of Atomic, Molecular, and Optical Physics Volume 2012 ; 2012 ; 2012 >
+    au < manifest ; 2009 ; Journal of Atomic, Molecular, and Optical Physics Volume 2009 ; 2009 ; 2009 >
+    au < manifest ; 2010 ; Journal of Atomic, Molecular, and Optical Physics Volume 2010 ; 2010 ; 2010 >
+    au < manifest ; 2011 ; Journal of Atomic, Molecular, and Optical Physics Volume 2011 ; 2011 ; 2011 >
+    au < manifest ; 2012 ; Journal of Atomic, Molecular, and Optical Physics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Journal of Atomic and Molecular Physics Volume 2013 ; 2013 ; 2013 >
     au < released ; 2014 ; Journal of Atomic and Molecular Physics Volume 2014 ; 2014 ; 2014 >
 
@@ -6139,7 +6139,7 @@
     
     au < manifest ; 2013 ; Journal of Chaos Volume 2013 ; 2013 ; 2013 >
     au < released ; 2014 ; Journal of Chaos Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2016 ; Journal of Chaos Volume 2016 ; 2016 ; 2016 >
+    au < manifest ; 2016 ; Journal of Chaos Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -6329,7 +6329,7 @@
     
     au < manifest ; 2013 ; Journal of Computational Methods in Physics Volume 2013 ; 2013 ; 2013 >
     au < released ; 2014 ; Journal of Computational Methods in Physics Volume 2014 ; 2014 ; 2014 >
-    au < expected ; 2016 ; Journal of Computational Methods in Physics Volume 2016 ; 2016 ; 2016 >
+    au < manifest ; 2016 ; Journal of Computational Methods in Physics Volume 2016 ; 2016 ; 2016 >
 
   }
 
