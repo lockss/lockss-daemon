@@ -104,10 +104,10 @@
 
     param[journal_id] = cs
 
-    au < manifest ; 2005 ; Crop Science Volume 45 ; 45 >
+    au < ready ; 2005 ; Crop Science Volume 45 ; 45 >
     au < ready ; 2006 ; Crop Science Volume 46 ; 46 >
     au < manifest ; 2007 ; Crop Science Volume 47 ; 47 >
-    au < manifest ; 2008 ; Crop Science Volume 48 ; 48 >
+    au < ready ; 2008 ; Crop Science Volume 48 ; 48 >
     au < manifest ; 2009 ; Crop Science Volume 49 ; 49 >
     au < manifest ; 2010 ; Crop Science Volume 50 ; 50 >
     au < manifest ; 2011 ; Crop Science Volume 51 ; 51 >
@@ -190,7 +190,7 @@
     param[journal_id] = jpr
 
     au < ready ; 2007 ; Journal of Plant Registrations Volume 1 ; 1 >
-    au < manifest ; 2008 ; Journal of Plant Registrations Volume 2 ; 2 >
+    au < ready ; 2008 ; Journal of Plant Registrations Volume 2 ; 2 >
     au < ready ; 2009 ; Journal of Plant Registrations Volume 3 ; 3 >
     au < ready ; 2010 ; Journal of Plant Registrations Volume 4 ; 4 >
     au < manifest ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 >
@@ -234,9 +234,9 @@
 
     au < doNotProcess ; 2005 ; Natural Sciences Education Volume 34 ; 34 > # no issues on manifest page
     au < manifest ; 2006 ; Natural Sciences Education Volume 35 ; 35 >
-    au < manifest ; 2007 ; Natural Sciences Education Volume 36 ; 36 >
+    au < ready ; 2007 ; Natural Sciences Education Volume 36 ; 36 >
     au < manifest ; 2008 ; Natural Sciences Education Volume 37 ; 37 >
-    au < manifest ; 2009 ; Natural Sciences Education Volume 38 ; 38 >
+    au < ready ; 2009 ; Natural Sciences Education Volume 38 ; 38 >
     au < ready ; 2010 ; Natural Sciences Education Volume 39 ; 39 >
     au < manifest ; 2011 ; Natural Sciences Education Volume 40 ; 40 >
     au < manifest ; 2012 ; Natural Sciences Education Volume 41 ; 41 >
