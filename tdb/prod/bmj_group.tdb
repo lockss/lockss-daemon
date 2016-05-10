@@ -1262,7 +1262,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 2012 ; Heart Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Heart Volume 99 ; 99 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Heart Volume 100 ; 100 >
-    au < HighWirePressH20Plugin ; ready ; 2015 ; Heart Volume 101 ; 101 >
+    au < HighWirePressH20Plugin ; releasing ; 2015 ; Heart Volume 101 ; 101 >
     au < HighWirePressH20Plugin ; manifest ; 2016 ; Heart Volume 102 ; 102 >
 
   }
@@ -1921,7 +1921,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; released ; 2011 ; Journal of the Royal Army Medical Corps Volume 157 ; 157 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Journal of the Royal Army Medical Corps Volume 158 ; 158 >
       au < HighWirePressH20Plugin ; released ; 2013 ; Journal of the Royal Army Medical Corps Volume 159 ; 159 >
-      au < HighWirePressH20Plugin ; ready ; 2014 ; Journal of the Royal Army Medical Corps Volume 160 ; 160 >
+      au < HighWirePressH20Plugin ; releasing ; 2014 ; Journal of the Royal Army Medical Corps Volume 160 ; 160 >
       au < HighWirePressH20Plugin ; released ; 2015 ; Journal of the Royal Army Medical Corps Volume 161 ; 161 >
       au < HighWirePressH20Plugin ; manifest ; 2016 ; Journal of the Royal Army Medical Corps Volume 162 ; 162 >
 
@@ -1962,11 +1962,11 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://mh.bmj.com/
 
-    au < HighWirePressH20Plugin ; ready ; 2000 ; Medical Humanities Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; ready ; 2001 ; Medical Humanities Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; ready ; 2002 ; Medical Humanities Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; ready ; 2003 ; Medical Humanities Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; ready ; 2004 ; Medical Humanities Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; releasing ; 2000 ; Medical Humanities Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; releasing ; 2001 ; Medical Humanities Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; releasing ; 2002 ; Medical Humanities Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; releasing ; 2003 ; Medical Humanities Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; releasing ; 2004 ; Medical Humanities Volume 30 ; 30 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Medical Humanities Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; released ; 2006 ; Medical Humanities Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Medical Humanities Volume 33 ; 33 >
@@ -1998,9 +1998,9 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; testing ; 1997 ; Molecular Pathology Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; testing ; 1998 ; Molecular Pathology Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; testing ; 1999 ; Molecular Pathology Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; ready ; 2000 ; Molecular Pathology Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; ready ; 2001 ; Molecular Pathology Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; ready ; 2002 ; Molecular Pathology Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; releasing ; 2000 ; Molecular Pathology Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; releasing ; 2001 ; Molecular Pathology Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; releasing ; 2002 ; Molecular Pathology Volume 55 ; 55 >
     au < HighWirePressH20Plugin ; released ; 2003 ; Molecular Pathology Volume 56 ; 56 >
 
   }
@@ -2071,11 +2071,11 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; testing ; 1997 ; Occupational and Environmental Medicine Volume 54 ; 54 >
     au < HighWirePressH20Plugin ; testing ; 1998 ; Occupational and Environmental Medicine Volume 55 ; 55 >
     au < HighWirePressH20Plugin ; testing ; 1999 ; Occupational and Environmental Medicine Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; ready ; 2000 ; Occupational and Environmental Medicine Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; ready ; 2001 ; Occupational and Environmental Medicine Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; ready ; 2002 ; Occupational and Environmental Medicine Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; ready ; 2003 ; Occupational and Environmental Medicine Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; ready ; 2004 ; Occupational and Environmental Medicine Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; releasing ; 2000 ; Occupational and Environmental Medicine Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; releasing ; 2001 ; Occupational and Environmental Medicine Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; releasing ; 2002 ; Occupational and Environmental Medicine Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; releasing ; 2003 ; Occupational and Environmental Medicine Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; releasing ; 2004 ; Occupational and Environmental Medicine Volume 61 ; 61 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Occupational and Environmental Medicine Volume 62 ; 62 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Occupational and Environmental Medicine Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Occupational and Environmental Medicine Volume 64 ; 64 >
@@ -2176,11 +2176,11 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; testing ; 1997 ; Postgraduate Medical Journal Volume 73 ; 73 >
     au < HighWirePressH20Plugin ; testing ; 1998 ; Postgraduate Medical Journal Volume 74 ; 74 >
     au < HighWirePressH20Plugin ; testing ; 1999 ; Postgraduate Medical Journal Volume 75 ; 75 >
-    au < HighWirePressH20Plugin ; ready ; 2000 ; Postgraduate Medical Journal Volume 76 ; 76 >
-    au < HighWirePressH20Plugin ; ready ; 2001 ; Postgraduate Medical Journal Volume 77 ; 77 >
-    au < HighWirePressH20Plugin ; ready ; 2002 ; Postgraduate Medical Journal Volume 78 ; 78 >
-    au < HighWirePressH20Plugin ; ready ; 2003 ; Postgraduate Medical Journal Volume 79 ; 79 >
-    au < HighWirePressH20Plugin ; ready ; 2004 ; Postgraduate Medical Journal Volume 80 ; 80 >
+    au < HighWirePressH20Plugin ; releasing ; 2000 ; Postgraduate Medical Journal Volume 76 ; 76 >
+    au < HighWirePressH20Plugin ; releasing ; 2001 ; Postgraduate Medical Journal Volume 77 ; 77 >
+    au < HighWirePressH20Plugin ; releasing ; 2002 ; Postgraduate Medical Journal Volume 78 ; 78 >
+    au < HighWirePressH20Plugin ; releasing ; 2003 ; Postgraduate Medical Journal Volume 79 ; 79 >
+    au < HighWirePressH20Plugin ; releasing ; 2004 ; Postgraduate Medical Journal Volume 80 ; 80 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Postgraduate Medical Journal Volume 81 ; 81 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Postgraduate Medical Journal Volume 82 ; 82 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Postgraduate Medical Journal Volume 83 ; 83 >
@@ -2206,10 +2206,10 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://pn.bmj.com/
 
-    au < HighWirePressH20Plugin ; ready ; 2001 ; Practical Neurology Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; ready ; 2002 ; Practical Neurology Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; ready ; 2003 ; Practical Neurology Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; ready ; 2004 ; Practical Neurology Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; releasing ; 2001 ; Practical Neurology Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; releasing ; 2002 ; Practical Neurology Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; releasing ; 2003 ; Practical Neurology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; releasing ; 2004 ; Practical Neurology Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; released ; 2005 ; Practical Neurology Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; released ; 2006 ; Practical Neurology Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Practical Neurology Volume 7 ; 7 >
@@ -2507,11 +2507,11 @@ comment[tc15] = recursive URL structure
       au < HighWirePressH20Plugin ; testing ; 1997 ; Tobacco Control Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; testing ; 1998 ; Tobacco Control Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; testing ; 1999 ; Tobacco Control Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; ready ; 2000 ; Tobacco Control Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; ready ; 2001 ; Tobacco Control Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; ready ; 2002 ; Tobacco Control Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; ready ; 2003 ; Tobacco Control Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; ready ; 2004 ; Tobacco Control Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; releasing ; 2000 ; Tobacco Control Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; releasing ; 2001 ; Tobacco Control Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; releasing ; 2002 ; Tobacco Control Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; releasing ; 2003 ; Tobacco Control Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; releasing ; 2004 ; Tobacco Control Volume 13 ; 13 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Tobacco Control Volume 14 ; 14 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Tobacco Control Volume 15 ; 15 >
       au < HighWirePressH20Plugin ; released ; 2007 ; Tobacco Control Volume 16 ; 16 >

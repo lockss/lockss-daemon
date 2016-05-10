@@ -1000,7 +1000,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; American Journal of Hypertension Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; American Journal of Hypertension Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; American Journal of Hypertension Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; ready ; 2009 ; American Journal of Hypertension Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; releasing ; 2009 ; American Journal of Hypertension Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; released ; 2010 ; American Journal of Hypertension Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; released ; 2011 ; American Journal of Hypertension Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; released ; 2012 ; American Journal of Hypertension Volume 25 ; 25 >
@@ -2023,7 +2023,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2005 ; Archives of Clinical Neuropsychology Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; manifest ; 2006 ; Archives of Clinical Neuropsychology Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Archives of Clinical Neuropsychology Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; ready ; 2008 ; Archives of Clinical Neuropsychology Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; releasing ; 2008 ; Archives of Clinical Neuropsychology Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Archives of Clinical Neuropsychology Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Archives of Clinical Neuropsychology Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Archives of Clinical Neuropsychology Volume 26 ; 26 >
@@ -4350,7 +4350,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWireStrVolPlugin ; down ; 2006-2007 ; The Chinese Journal of International Politics Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; ready ; 2008-2009 ; The Chinese Journal of International Politics Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; releasing ; 2008-2009 ; The Chinese Journal of International Politics Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2010-2011 ; The Chinese Journal of International Politics Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Chinese Journal of International Politics Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; released ; 2012 ; The Chinese Journal of International Politics Volume 5 ; 5 >
@@ -4489,8 +4489,8 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; Clinical Infectious Diseases Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Clinical Infectious Diseases Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Clinical Infectious Diseases Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; ready ; 2008 ; Clinical Infectious Diseases Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; ready ; 2008 ; Clinical Infectious Diseases Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; releasing ; 2008 ; Clinical Infectious Diseases Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; releasing ; 2008 ; Clinical Infectious Diseases Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Clinical Infectious Diseases Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Clinical Infectious Diseases Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Clinical Infectious Diseases Volume 50 ; 50 >
@@ -4946,7 +4946,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2005 ; Current Legal Problems Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; manifest ; 2006 ; Current Legal Problems Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Current Legal Problems Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; ready ; 2008 ; Current Legal Problems Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; releasing ; 2008 ; Current Legal Problems Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Current Legal Problems Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Current Legal Problems Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Current Legal Problems Volume 64 ; 64 >
@@ -8162,10 +8162,10 @@
     au < manifest ; 2008 ; Geophysical Journal International Volume 173 ; 173 >
     au < manifest ; 2008 ; Geophysical Journal International Volume 174 ; 174 >
     au < manifest ; 2008 ; Geophysical Journal International Volume 175 ; 175 >
-    au < ready ; 2009 ; Geophysical Journal International Volume 176 ; 176 >
-    au < ready ; 2009 ; Geophysical Journal International Volume 177 ; 177 >
-    au < ready ; 2009 ; Geophysical Journal International Volume 178 ; 178 >
-    au < ready ; 2009 ; Geophysical Journal International Volume 179 ; 179 >
+    au < releasing ; 2009 ; Geophysical Journal International Volume 176 ; 176 >
+    au < releasing ; 2009 ; Geophysical Journal International Volume 177 ; 177 >
+    au < releasing ; 2009 ; Geophysical Journal International Volume 178 ; 178 >
+    au < releasing ; 2009 ; Geophysical Journal International Volume 179 ; 179 >
     au < released ; 2010 ; Geophysical Journal International Volume 180 ; 180 >
     au < released ; 2010 ; Geophysical Journal International Volume 181 ; 181 >
     au < released ; 2010 ; Geophysical Journal International Volume 182 ; 182 >
@@ -12896,7 +12896,7 @@
     au < HighWireStrVolPlugin ; superseded ; 2007 ; Journal of Experimental Botany Volume 58 [superseded] ; 58 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Experimental Botany Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; released ; 2008 ; Journal of Experimental Botany Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; ready ; 2009 ; Journal of Experimental Botany Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; releasing ; 2009 ; Journal of Experimental Botany Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Experimental Botany Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Experimental Botany Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Experimental Botany Volume 63 ; 63 >
@@ -13001,7 +13001,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; ready ; 2009 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 64A ; 64A >
+    au < HighWirePressH20Plugin ; releasing ; 2009 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 64A ; 64A >
     au < HighWirePressH20Plugin ; released ; 2010 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 65A ; 65A >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 66A ; 66A >
     au < HighWirePressH20Plugin ; released ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67A ; 67A >
@@ -13045,7 +13045,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; ready ; 2009 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 64B ; 64B >
+    au < HighWirePressH20Plugin ; releasing ; 2009 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 64B ; 64B >
     au < HighWirePressH20Plugin ; released ; 2010 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 65B ; 65B >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 66B ; 66B >
     au < HighWirePressH20Plugin ; released ; 2012 ; The Journals of Gerontology Series B: Psychological Sciences and Social Sciences Volume 67B ; 67B >
@@ -16571,7 +16571,7 @@
     au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Logic Journal of the IGPL Volume 14 ; 14 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Logic Journal of the IGPL Volume 15 ; 15 >
     au < HighWirePressPlugin ; down ; 2008 ; Logic Journal of the IGPL Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; ready ; 2009 ; Logic Journal of the IGPL Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; releasing ; 2009 ; Logic Journal of the IGPL Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Logic Journal of the IGPL Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Logic Journal of the IGPL Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Logic Journal of the IGPL Volume 20 ; 20 >
@@ -16970,7 +16970,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; Medical Mycology Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Medical Mycology Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Medical Mycology Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; ready ; 2009 ; Medical Mycology Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; releasing ; 2009 ; Medical Mycology Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Medical Mycology Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Medical Mycology Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Medical Mycology Volume 50 ; 50 >
@@ -17714,11 +17714,11 @@
     au < manifest ; 2008 ; Monthly Notices of the Royal Astronomical Society Volume 390 ; 390 >
     au < manifest ; 2008 ; Monthly Notices of the Royal Astronomical Society Volume 391 ; 391 >
     au < released ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 392 ; 392 >
-    au < ready ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 393 ; 393 >
+    au < releasing ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 393 ; 393 >
     au < released ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 394 ; 394 >
-    au < ready ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 395 ; 395 >
+    au < releasing ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 395 ; 395 >
     au < released ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 396 ; 396 >
-    au < ready ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 397 ; 397 >
+    au < releasing ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 397 ; 397 >
     au < released ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 398 ; 398 >
     au < doNotProcess ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 399 ; 399 >
     au < doNotProcess ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 400 ; 400 >
@@ -17837,9 +17837,9 @@
     au < manifest ; 2008 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 389 ; 389 >
     au < manifest ; 2008 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 390 ; 390 >
     au < manifest ; 2008 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 391 ; 391 >
-    au < ready ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 392 ; 392 >
+    au < releasing ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 392 ; 392 >
     au < released ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 393 ; 393 >
-    au < ready ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 394 ; 394 >
+    au < releasing ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 394 ; 394 >
     au < released ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 395 ; 395 >
     au < released ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 396 ; 396 >
     au < released ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 397 ; 397 >
@@ -18277,7 +18277,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; Music Theory Spectrum Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Music Theory Spectrum Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Music Theory Spectrum Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; ready ; 2009 ; Music Theory Spectrum Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; releasing ; 2009 ; Music Theory Spectrum Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Music Theory Spectrum Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Music Theory Spectrum Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Music Theory Spectrum Volume 34 ; 34 >
@@ -21328,7 +21328,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; Public Policy & Aging Report Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Public Policy & Aging Report Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Public Policy & Aging Report Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; ready ; 2009 ; Public Policy & Aging Report Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; releasing ; 2009 ; Public Policy & Aging Report Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Public Policy & Aging Report Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Public Policy & Aging Report Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Public Policy & Aging Report Volume 22 ; 22 >
@@ -21365,7 +21365,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; Publications of the Astronomical Society of Japan Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; exists ; 2007 ; Publications of the Astronomical Society of Japan Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Publications of the Astronomical Society of Japan Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; ready ; 2009 ; Publications of the Astronomical Society of Japan Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; releasing ; 2009 ; Publications of the Astronomical Society of Japan Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Publications of the Astronomical Society of Japan Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Publications of the Astronomical Society of Japan Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Publications of the Astronomical Society of Japan Volume 64 ; 64 >
@@ -24104,7 +24104,7 @@
     au < manifest ; 2006 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 100 ; 100 >
     au < manifest ; 2008 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 101 ; 101 >
     au < released ; 2009 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 102 ; 102 >
-    au < ready ; 2009 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 103 ; 103 >
+    au < releasing ; 2009 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 103 ; 103 >
     au < released ; 2010 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 104 ; 104 >
     au < released ; 2011 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 105 ; 105 >
     au < released ; 2012 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 106 ; 106 >
@@ -25160,11 +25160,11 @@
     au < manifest ; 2008 ; Progress of Theoretical Physics Supplement Volume 175 ; 175 >
     au < manifest ; 2008 ; Progress of Theoretical Physics Supplement Volume 176 ; 176 >
     au < manifest ; 2009 ; Progress of Theoretical Physics Supplement Volume 177 ; 177 >
-    au < ready ; 2009 ; Progress of Theoretical Physics Supplement Volume 178 ; 178 >
+    au < releasing ; 2009 ; Progress of Theoretical Physics Supplement Volume 178 ; 178 >
     au < released ; 2009 ; Progress of Theoretical Physics Supplement Volume 179 ; 179 >
-    au < ready ; 2009 ; Progress of Theoretical Physics Supplement Volume 180 ; 180 >
-    au < ready ; 2009 ; Progress of Theoretical Physics Supplement Volume 181 ; 181 >
-    au < ready ; 2009 ; Progress of Theoretical Physics Supplement Volume 182 ; 182 >
+    au < releasing ; 2009 ; Progress of Theoretical Physics Supplement Volume 180 ; 180 >
+    au < releasing ; 2009 ; Progress of Theoretical Physics Supplement Volume 181 ; 181 >
+    au < releasing ; 2009 ; Progress of Theoretical Physics Supplement Volume 182 ; 182 >
     au < released ; 2010 ; Progress of Theoretical Physics Supplement Volume 183 ; 183 >
     au < released ; 2010 ; Progress of Theoretical Physics Supplement Volume 184 ; 184 >
     au < released ; 2010 ; Progress of Theoretical Physics Supplement Volume 185 ; 185 >
@@ -25425,7 +25425,7 @@
       au < manifest ; 2006 ; Interacting with Computers Volume 18 ; 18 >
       au < manifest ; 2007 ; Interacting with Computers Volume 19 ; 19 >
       au < manifest ; 2008 ; Interacting with Computers Volume 20 ; 20 >
-      au < ready ; 2009 ; Interacting with Computers Volume 21 ; 21 >
+      au < releasing ; 2009 ; Interacting with Computers Volume 21 ; 21 >
       au < released ; 2010 ; Interacting with Computers Volume 22 ; 22 >
       au < released ; 2011 ; Interacting with Computers Volume 23 ; 23 >
       au < released ; 2012 ; Interacting with Computers Volume 24 ; 24 >
@@ -25829,7 +25829,7 @@
       au < manifest ; 2006 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2006 ; 2006 >
       au < manifest ; 2007 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2007 ; 2007 >
       au < manifest ; 2008 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2008 ; 2008 >
-      au < ready ; 2009 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2009 ; 2009 >
+      au < releasing ; 2009 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2009 ; 2009 >
       au < released ; 2010 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2010 ; 2010 >
       au < released ; 2011 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2011 ; 2011 >
       au < released ; 2012 ; Multimedia Manual Cardio-Thoracic Surgery Volume 2012 ; 2012 >
