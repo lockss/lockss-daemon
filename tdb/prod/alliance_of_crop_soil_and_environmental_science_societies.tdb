@@ -49,7 +49,7 @@
 
     au < ready ; 2005 ; Agronomy Journal Volume 97 ; 97 >
     au < manifest ; 2006 ; Agronomy Journal Volume 98 ; 98 >
-    au < manifest ; 2007 ; Agronomy Journal Volume 99 ; 99 >
+    au < ready ; 2007 ; Agronomy Journal Volume 99 ; 99 >
     au < manifest ; 2008 ; Agronomy Journal Volume 100 ; 100 >
     au < manifest ; 2009 ; Agronomy Journal Volume 101 ; 101 >
     au < manifest ; 2010 ; Agronomy Journal Volume 102 ; 102 >
@@ -161,8 +161,8 @@
     
     param[journal_id] = jeq
 
-    au < manifest ; 2005 ; Journal of Environmental Quality Volume 34 ; 34 >
-    au < manifest ; 2006 ; Journal of Environmental Quality Volume 35 ; 35 >
+    au < ready ; 2005 ; Journal of Environmental Quality Volume 34 ; 34 >
+    au < ready ; 2006 ; Journal of Environmental Quality Volume 35 ; 35 >
     au < manifest ; 2007 ; Journal of Environmental Quality Volume 36 ; 36 >
     au < ready ; 2008 ; Journal of Environmental Quality Volume 37 ; 37 >
     au < manifest ; 2009 ; Journal of Environmental Quality Volume 38 ; 38 >
@@ -287,7 +287,7 @@
     au < manifest ; 2006 ; Soil Horizons Volume 47 ; 47 >
     au < manifest ; 2007 ; Soil Horizons Volume 48 ; 48 >
     au < manifest ; 2008 ; Soil Horizons Volume 49 ; 49 >
-    au < manifest ; 2009 ; Soil Horizons Volume 50 ; 50 >
+    au < ready ; 2009 ; Soil Horizons Volume 50 ; 50 >
     au < manifest ; 2010 ; Soil Horizons Volume 51 ; 51 >
     au < manifest ; 2011 ; Soil Horizons Volume 52 ; 52 >
     au < manifest ; 2012 ; Soil Horizons Volume 53 ; 53 >

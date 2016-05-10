@@ -1948,7 +1948,7 @@
     au < manifest ; 2006 ; Arbitration International Volume 22 ; 22 >
     au < manifest ; 2007 ; Arbitration International Volume 23 ; 23 >
     au < manifest ; 2008 ; Arbitration International Volume 24 ; 24 >
-    au < manifest ; 2009 ; Arbitration International Volume 25 ; 25 >
+    au < ready ; 2009 ; Arbitration International Volume 25 ; 25 >
     au < ready ; 2010 ; Arbitration International Volume 26 ; 26 >
     au < ready ; 2011 ; Arbitration International Volume 27 ; 27 >
     au < ready ; 2012 ; Arbitration International Volume 28 ; 28 >
@@ -4350,7 +4350,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWireStrVolPlugin ; down ; 2006-2007 ; The Chinese Journal of International Politics Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 2008-2009 ; The Chinese Journal of International Politics Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 2008-2009 ; The Chinese Journal of International Politics Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2010-2011 ; The Chinese Journal of International Politics Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Chinese Journal of International Politics Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; released ; 2012 ; The Chinese Journal of International Politics Volume 5 ; 5 >
@@ -4489,7 +4489,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; Clinical Infectious Diseases Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Clinical Infectious Diseases Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Clinical Infectious Diseases Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; manifest ; 2008 ; Clinical Infectious Diseases Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; Clinical Infectious Diseases Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; ready ; 2008 ; Clinical Infectious Diseases Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Clinical Infectious Diseases Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Clinical Infectious Diseases Volume 49 ; 49 >
@@ -5289,7 +5289,7 @@
     au < manifest ; 2006 ; Economic Policy Volume 21 ; 21 >
     au < manifest ; 2007 ; Economic Policy Volume 22 ; 22 >
     au < manifest ; 2008 ; Economic Policy Volume 23 ; 23 >
-    au < manifest ; 2009 ; Economic Policy Volume 24 ; 24 >
+    au < ready ; 2009 ; Economic Policy Volume 24 ; 24 >
     au < ready ; 2010 ; Economic Policy Volume 25 ; 25 >
     au < ready ; 2011 ; Economic Policy Volume 26 ; 26 >
     au < ready ; 2012 ; Economic Policy Volume 27 ; 27 >
@@ -6954,7 +6954,7 @@
     au < manifest ; 2008 ; FEMS Immunology & Medical Microbiology Volume 52 ; 52 >
     au < manifest ; 2008 ; FEMS Immunology & Medical Microbiology Volume 53 ; 53 >
     au < manifest ; 2008 ; FEMS Immunology & Medical Microbiology Volume 54 ; 54 >
-    au < manifest ; 2009 ; FEMS Immunology & Medical Microbiology Volume 55 ; 55 >
+    au < ready ; 2009 ; FEMS Immunology & Medical Microbiology Volume 55 ; 55 >
     au < ready ; 2009 ; FEMS Immunology & Medical Microbiology Volume 56 ; 56 >
     au < ready ; 2009 ; FEMS Immunology & Medical Microbiology Volume 57 ; 57 >
     au < ready ; 2010 ; FEMS Immunology & Medical Microbiology Volume 58 ; 58 >
@@ -7047,10 +7047,10 @@
     au < manifest ; 2008 ; FEMS Microbiology Ecology Volume 64 ; 64 >
     au < manifest ; 2008 ; FEMS Microbiology Ecology Volume 65 ; 65 >
     au < manifest ; 2008 ; FEMS Microbiology Ecology Volume 66 ; 66 >
-    au < manifest ; 2009 ; FEMS Microbiology Ecology Volume 67 ; 67 >
+    au < ready ; 2009 ; FEMS Microbiology Ecology Volume 67 ; 67 >
     au < ready ; 2009 ; FEMS Microbiology Ecology Volume 68 ; 68 >
     au < ready ; 2009 ; FEMS Microbiology Ecology Volume 69 ; 69 >
-    au < manifest ; 2009 ; FEMS Microbiology Ecology Volume 70 ; 70 >
+    au < ready ; 2009 ; FEMS Microbiology Ecology Volume 70 ; 70 >
     au < ready ; 2010 ; FEMS Microbiology Ecology Volume 71 ; 71 >
     au < ready ; 2010 ; FEMS Microbiology Ecology Volume 72 ; 72 >
     au < ready ; 2010 ; FEMS Microbiology Ecology Volume 73 ; 73 >
@@ -7227,13 +7227,13 @@
     au < manifest ; 2008 ; FEMS Microbiology Letters Volume 289 ; 289 >
     au < manifest ; 2009 ; FEMS Microbiology Letters Volume 290 ; 290 >
     au < ready ; 2009 ; FEMS Microbiology Letters Volume 291 ; 291 >
-    au < manifest ; 2009 ; FEMS Microbiology Letters Volume 292 ; 292 >
+    au < ready ; 2009 ; FEMS Microbiology Letters Volume 292 ; 292 >
     au < ready ; 2009 ; FEMS Microbiology Letters Volume 293 ; 293 >
     au < ready ; 2009 ; FEMS Microbiology Letters Volume 294 ; 294 >
     au < manifest ; 2009 ; FEMS Microbiology Letters Volume 295 ; 295 >
-    au < manifest ; 2009 ; FEMS Microbiology Letters Volume 296 ; 296 >
+    au < ready ; 2009 ; FEMS Microbiology Letters Volume 296 ; 296 >
     au < manifest ; 2009 ; FEMS Microbiology Letters Volume 297 ; 297 >
-    au < manifest ; 2009 ; FEMS Microbiology Letters Volume 298 ; 298 >
+    au < ready ; 2009 ; FEMS Microbiology Letters Volume 298 ; 298 >
     au < manifest ; 2009 ; FEMS Microbiology Letters Volume 299 ; 299 >
     au < manifest ; 2009 ; FEMS Microbiology Letters Volume 300 ; 300 >
     au < manifest ; 2009 ; FEMS Microbiology Letters Volume 301 ; 301 >
@@ -7347,7 +7347,7 @@
     au < manifest ; 2006 ; FEMS Microbiology Reviews Volume 30 ; 30 >
     au < manifest ; 2007 ; FEMS Microbiology Reviews Volume 31 ; 31 >
     au < manifest ; 2008 ; FEMS Microbiology Reviews Volume 32 ; 32 >
-    au < manifest ; 2009 ; FEMS Microbiology Reviews Volume 33 ; 33 >
+    au < ready ; 2009 ; FEMS Microbiology Reviews Volume 33 ; 33 >
     au < ready ; 2010 ; FEMS Microbiology Reviews Volume 34 ; 34 >
     au < ready ; 2011 ; FEMS Microbiology Reviews Volume 35 ; 35 >
     au < ready ; 2012 ; FEMS Microbiology Reviews Volume 36 ; 36 >
@@ -7380,7 +7380,7 @@
     au < manifest ; 2007 ; FEMS Yeast Research Volume 7 ; 7 >
     au < ready ; 2008 ; FEMS Yeast Research Volume 8 ; 8 >
     au < ready ; 2009 ; FEMS Yeast Research Volume 9 ; 9 >
-    au < manifest ; 2009-2010 ; FEMS Yeast Research Volume 10 ; 10 >
+    au < ready ; 2009-2010 ; FEMS Yeast Research Volume 10 ; 10 >
     au < ready ; 2011 ; FEMS Yeast Research Volume 11 ; 11 >
     au < ready ; 2012 ; FEMS Yeast Research Volume 12 ; 12 >
     au < ready ; 2013 ; FEMS Yeast Research Volume 13 ; 13 >
@@ -10891,7 +10891,7 @@
 
     au < manifest ; 2007 ; International Political Sociology Volume 1 ; 1 >
     au < manifest ; 2008 ; International Political Sociology Volume 2 ; 2 >
-    au < manifest ; 2009 ; International Political Sociology Volume 3 ; 3 >
+    au < ready ; 2009 ; International Political Sociology Volume 3 ; 3 >
     au < ready ; 2010 ; International Political Sociology Volume 4 ; 4 >
     au < ready ; 2011 ; International Political Sociology Volume 5 ; 5 >
     au < ready ; 2012 ; International Political Sociology Volume 6 ; 6 >
@@ -10972,7 +10972,7 @@
     au < manifest ; 2006 ; International Studies Perspectives Volume 7 ; 7 >
     au < manifest ; 2007 ; International Studies Perspectives Volume 8 ; 8 >
     au < manifest ; 2008 ; International Studies Perspectives Volume 9 ; 9 >
-    au < manifest ; 2009 ; International Studies Perspectives Volume 10 ; 10 >
+    au < ready ; 2009 ; International Studies Perspectives Volume 10 ; 10 >
     au < ready ; 2010 ; International Studies Perspectives Volume 11 ; 11 >
     au < ready ; 2011 ; International Studies Perspectives Volume 12 ; 12 >
     au < ready ; 2012 ; International Studies Perspectives Volume 13 ; 13 >
@@ -13001,7 +13001,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 64A ; 64A >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 64A ; 64A >
     au < HighWirePressH20Plugin ; released ; 2010 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 65A ; 65A >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 66A ; 66A >
     au < HighWirePressH20Plugin ; released ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67A ; 67A >
@@ -13793,8 +13793,8 @@
     au < manifest ; 2005 ; Journal of Insect Science Volume 5 ; 5 >
     au < manifest ; 2006 ; Journal of Insect Science Volume 6 ; 6 >
     au < manifest ; 2007 ; Journal of Insect Science Volume 7 ; 7 >
-    au < manifest ; 2008 ; Journal of Insect Science Volume 8 ; 8 >
-    au < manifest ; 2009 ; Journal of Insect Science Volume 9 ; 9 >
+    au < ready ; 2008 ; Journal of Insect Science Volume 8 ; 8 >
+    au < ready ; 2009 ; Journal of Insect Science Volume 9 ; 9 >
     au < ready ; 2010 ; Journal of Insect Science Volume 10 ; 10 >
     au < ready ; 2011 ; Journal of Insect Science Volume 11 ; 11 >
     au < ready ; 2012 ; Journal of Insect Science Volume 12 ; 12 >
@@ -14457,7 +14457,7 @@
     au < manifest ; 2006 ; Journal of Medical Entomology Volume 43 ; 43 >
     au < manifest ; 2007 ; Journal of Medical Entomology Volume 44 ; 44 >
     au < manifest ; 2008 ; Journal of Medical Entomology Volume 45 ; 45 >
-    au < manifest ; 2009 ; Journal of Medical Entomology Volume 46 ; 46 >
+    au < ready ; 2009 ; Journal of Medical Entomology Volume 46 ; 46 >
     au < ready ; 2010 ; Journal of Medical Entomology Volume 47 ; 47 >
     au < ready ; 2011 ; Journal of Medical Entomology Volume 48 ; 48 >
     au < manifest ; 2012 ; Journal of Medical Entomology Volume 49 ; 49 >
@@ -16571,7 +16571,7 @@
     au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Logic Journal of the IGPL Volume 14 ; 14 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Logic Journal of the IGPL Volume 15 ; 15 >
     au < HighWirePressPlugin ; down ; 2008 ; Logic Journal of the IGPL Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Logic Journal of the IGPL Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Logic Journal of the IGPL Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Logic Journal of the IGPL Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Logic Journal of the IGPL Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Logic Journal of the IGPL Volume 20 ; 20 >
@@ -16970,7 +16970,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; Medical Mycology Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Medical Mycology Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Medical Mycology Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Medical Mycology Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Medical Mycology Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Medical Mycology Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Medical Mycology Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Medical Mycology Volume 50 ; 50 >
@@ -17573,7 +17573,7 @@
     au < manifest ; 2006 ; The Monist Volume 89 ; 89 >
     au < manifest ; 2007 ; The Monist Volume 90 ; 90 >
     au < manifest ; 2008 ; The Monist Volume 91 ; 91 >
-    au < manifest ; 2009 ; The Monist Volume 92 ; 92 >
+    au < ready ; 2009 ; The Monist Volume 92 ; 92 >
     au < ready ; 2010 ; The Monist Volume 93 ; 93 >
     au < ready ; 2011 ; The Monist Volume 94 ; 94 >
     au < ready ; 2012 ; The Monist Volume 95 ; 95 >
@@ -17839,7 +17839,7 @@
     au < manifest ; 2008 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 391 ; 391 >
     au < manifest ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 392 ; 392 >
     au < released ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 393 ; 393 >
-    au < manifest ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 394 ; 394 >
+    au < ready ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 394 ; 394 >
     au < released ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 395 ; 395 >
     au < released ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 396 ; 396 >
     au < released ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 397 ; 397 >
@@ -19157,7 +19157,7 @@
     au < manifest ; 2006 ; Nutrition Reviews Volume 64 ; 64 >
     au < manifest ; 2007 ; Nutrition Reviews Volume 65 ; 65 >
     au < manifest ; 2008 ; Nutrition Reviews Volume 66 ; 66 >
-    au < manifest ; 2009 ; Nutrition Reviews Volume 67 ; 67 >
+    au < ready ; 2009 ; Nutrition Reviews Volume 67 ; 67 >
     au < ready ; 2010 ; Nutrition Reviews Volume 68 ; 68 >
     au < ready ; 2011 ; Nutrition Reviews Volume 69 ; 69 >
     au < ready ; 2012 ; Nutrition Reviews Volume 70 ; 70 >
@@ -19895,7 +19895,7 @@
     au < manifest ; 2006 ; Pain Medicine Volume 7 ; 7 >
     au < manifest ; 2007 ; Pain Medicine Volume 8 ; 8 >
     au < manifest ; 2008 ; Pain Medicine Volume 9 ; 9 >
-    au < manifest ; 2009 ; Pain Medicine Volume 10 ;10 >
+    au < ready ; 2009 ; Pain Medicine Volume 10 ;10 >
     au < ready ; 2010 ; Pain Medicine Volume 11 ;11 >
     au < ready ; 2011 ; Pain Medicine Volume 12 ;12 >
     au < ready ; 2012 ; Pain Medicine Volume 13 ;13 >
@@ -20697,7 +20697,7 @@
     au < manifest ; 2006 ; Proceedings of the Aristotelian Society Volume 106 ; 106 >
     au < manifest ; 2007 ; Proceedings of the Aristotelian Society Volume 107 ; 107 >
     au < manifest ; 2008 ; Proceedings of the Aristotelian Society Volume 108 ; 108 >
-    au < manifest ; 2009 ; Proceedings of the Aristotelian Society Volume 109 ; 109 >
+    au < ready ; 2009 ; Proceedings of the Aristotelian Society Volume 109 ; 109 >
     au < ready ; 2010 ; Proceedings of the Aristotelian Society Volume 110 ; 110 >
     au < ready ; 2011 ; Proceedings of the Aristotelian Society Volume 111 ; 111 >
     au < ready ; 2012 ; Proceedings of the Aristotelian Society Volume 112 ; 112 >
@@ -21328,7 +21328,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; Public Policy & Aging Report Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; manifest ; 2007 ; Public Policy & Aging Report Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Public Policy & Aging Report Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Public Policy & Aging Report Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Public Policy & Aging Report Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Public Policy & Aging Report Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Public Policy & Aging Report Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Public Policy & Aging Report Volume 22 ; 22 >
@@ -21365,7 +21365,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2006 ; Publications of the Astronomical Society of Japan Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; exists ; 2007 ; Publications of the Astronomical Society of Japan Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Publications of the Astronomical Society of Japan Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Publications of the Astronomical Society of Japan Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Publications of the Astronomical Society of Japan Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Publications of the Astronomical Society of Japan Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Publications of the Astronomical Society of Japan Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Publications of the Astronomical Society of Japan Volume 64 ; 64 >
@@ -25724,7 +25724,7 @@
       au < manifest ; 2006 ; Aristotelian Society Supplementary Volume Volume 80 ; 80 >
       au < manifest ; 2007 ; Aristotelian Society Supplementary Volume Volume 81 ; 81 >
       au < manifest ; 2008 ; Aristotelian Society Supplementary Volume Volume 82 ; 82 >
-      au < manifest ; 2009 ; Aristotelian Society Supplementary Volume Volume 83 ; 83 >
+      au < ready ; 2009 ; Aristotelian Society Supplementary Volume Volume 83 ; 83 >
       au < ready ; 2010 ; Aristotelian Society Supplementary Volume Volume 84 ; 84 >
       au < ready ; 2011 ; Aristotelian Society Supplementary Volume Volume 85 ; 85 >
       au < ready ; 2012 ; Aristotelian Society Supplementary Volume Volume 86 ; 86 >
