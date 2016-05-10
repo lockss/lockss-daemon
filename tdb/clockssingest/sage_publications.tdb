@@ -1443,7 +1443,7 @@
       au < exists ; exists ; 2013 ; American Journal of Law & Medicine Volume 39 ; 39 ; >
       au < exists ; exists ; 2014 ; American Journal of Law & Medicine Volume 40 ; 40 ; >
       au < crawling ; exists ; 2015 ; American Journal of Law & Medicine Volume 41 ; 41 ; >
-      au < expected ; exists ; 2016 ; American Journal of Law & Medicine Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2016 ; American Journal of Law & Medicine Volume 42 ; 42 ; >
 
   }
 
@@ -3436,8 +3436,8 @@
       param[base_url] = http://apn.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2014 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 ; >
-      au < exists ; exists ; 2015 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2014 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2015 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 ; >
       au < expected ; exists ; 2016 ; Asian/Pacific Island Nursing Journal Volume 3 ; 3 ; >
 
   }
@@ -7786,7 +7786,7 @@
       au < finished ; finished ; 2013 ; Counseling Outcome Research and Evaluation Volume 4 ; 4 ; >
       au < finished ; finished ; 2014 ; Counseling Outcome Research and Evaluation Volume 5 ; 5 ; >
       au < crawling ; exists ; 2015 ; Counseling Outcome Research and Evaluation Volume 6 ; 6 ; >
-      au < expected ; exists ; 2016 ; Counseling Outcome Research and Evaluation Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2016 ; Counseling Outcome Research and Evaluation Volume 7 ; 7 ; >
 
     }
 
@@ -13252,7 +13252,7 @@
       au < exists ; exists ; 2013 ; German Journal of Human Resource Management Volume 27 ; 27 ; >
       au < exists ; exists ; 2014 ; German Journal of Human Resource Management Volume 28 ; 28 ; >
       au < exists ; exists ; 2015 ; German Journal of Human Resource Management Volume 29 ; 29 ; >
-      au < exists ; exists ; 2016 ; German Journal of Human Resource Management Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2016 ; German Journal of Human Resource Management Volume 30 ; 30 ; >
 
   }
 
@@ -14134,7 +14134,7 @@
       au < exists ; exists ; 2013 ; Health Information Management Journal Volume 42 ; 42 ; >
       au < exists ; exists ; 2014 ; Health Information Management Journal Volume 43 ; 43 ; >
       au < exists ; exists ; 2015 ; Health Information Management Journal Volume 44 ; 44 ; >
-      au < expected ; exists ; 2016 ; Health Information Management Journal Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2016 ; Health Information Management Journal Volume 45 ; 45 ; >
 
   }
 
@@ -17163,7 +17163,7 @@
         au < exists ; exists ; 2013 ; International Journal of Micro Air Vehicles Volume 5 ; 5 ; >
         au < exists ; exists ; 2014 ; International Journal of Micro Air Vehicles Volume 6 ; 6 ; >
         au < crawling ; exists ; 2015 ; International Journal of Micro Air Vehicles Volume 7 ; 7 ; >
-        au < expected ; exists ; 2016 ; International Journal of Micro Air Vehicles Volume 8 ; 8 ; >
+        au < manifest ; exists ; 2016 ; International Journal of Micro Air Vehicles Volume 8 ; 8 ; >
 
   }
 
@@ -17383,7 +17383,7 @@
       au < doNotProcess ; exists ; 2013 ; International Journal of Police Science & Management Volume 15 ; 15 ; >
       au < crawling ; exists ; 2014 ; International Journal of Police Science & Management Volume 16 ; 16 ; >
       au < crawling ; exists ; 2015 ; International Journal of Police Science & Management Volume 17 ; 17 ; >
-      au < expected ; exists ; 2016 ; International Journal of Police Science & Management Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Police Science & Management Volume 18 ; 18 ; >
 
   }
 
@@ -17783,7 +17783,7 @@
       au < exists ; exists ; 2013 ; International Journal of Spray and Combustion Dynamics Volume 5 ; 5 ; >
       au < finished ; crawling ; 2014 ; International Journal of Spray and Combustion Dynamics Volume 6 ; 6 ; >
       au < crawling ; exists ; 2015 ; International Journal of Spray and Combustion Dynamics Volume 7 ; 7 ; >
-      au < expected ; exists ; 2016 ; International Journal of Spray and Combustion Dynamics Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Spray and Combustion Dynamics Volume 8 ; 8 ; >
 
   }
 
@@ -19459,7 +19459,7 @@
       au < exists ; exists ; 2013 ; Journal of Algorithms & Computational Technology Volume 7 ; 7 ; >
       au < exists ; exists ; 2014 ; Journal of Algorithms & Computational Technology Volume 8 ; 8 ; >
       au < crawling ; exists ; 2015 ; Journal of Algorithms & Computational Technology Volume 9 ; 9 ; >
-      au < expected ; exists ; 2016 ; Journal of Algorithms & Computational Technology Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2016 ; Journal of Algorithms & Computational Technology Volume 10 ; 10 ; >
 
   }
 
@@ -30026,7 +30026,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2015 ; Literature & History Volume 24 ; 24 ; >
-      au < expected ; exists ; 2016 ; Literature & History Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2016 ; Literature & History Volume 25 ; 25 ; >
 
     }
 
