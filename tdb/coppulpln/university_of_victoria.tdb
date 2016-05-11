@@ -321,6 +321,7 @@
     >
     
     param[journal_id] = borderlands
+    # no manifest pages.
 
     au < released ; 1986 ; Journal of Borderlands Studies Volume 1 ; 1 ; 1986 >
     au < released ; 1987 ; Journal of Borderlands Studies Volume 2 ; 2 ; 1987 >
@@ -381,6 +382,7 @@
     
     param[journal_id] = inke
     comment[inquiry] = the 2010 AU seems to have disappeared
+    # no manifest pages. journal_id now INKE.
 
     au < released ; 2009 ; New Knowledge Environments Volume 1 (2009) ; 1 (2009) ; 2009 >
     au < down ; 2010 ; New Knowledge Environments Volume 1 (2010) ; 1 (2010) ; 2010 >

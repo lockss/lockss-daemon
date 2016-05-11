@@ -78,6 +78,7 @@
     
     param[base_url] = http://ojs.library.ubc.ca/
     param[journal_id] = cjhe
+    # moved to http://journals.sfu.ca/cjhe/
     
     au < released ; 2007 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 37 ; 37 ; 2007 >
     au < released ; 2008 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 38 ; 38 ; 2008 >
@@ -134,6 +135,7 @@
     
       param[base_url] = http://ojs.library.ubc.ca/
       param[journal_id] = criticaled
+      #moved to http://ices.library.ubc.ca/
 
       au < released ; 2010 ; Critical Education Volume 1 ; 1 ; 2010 >
       au < released ; 2011 ; Critical Education Volume 2 ; 2 ; 2011 >
@@ -305,6 +307,7 @@
 
       param[base_url] = http://ojs.library.ubc.ca/
       param[journal_id] = workplace
+      # moved to http://ices.library.ubc.ca/
 
       au < released ; 2005 ; Workplace: A Journal for Academic Labor 2005 ; 2005 ; 2005 >
       au < released ; 2006 ; Workplace: A Journal for Academic Labor 2006 ; 2006 ; 2006 >

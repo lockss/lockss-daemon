@@ -146,6 +146,7 @@
         
       param[base_url] = http://journals.sfu.ca/paideusis/
       param[journal_id] = paideusis
+      # moved to http://journals.sfu.ca/pie/
   
       au < released ; 2006 ; Paideusis Volume 15 ; 15 ; 2006 >
       au < released ; 2007 ; Paideusis Volume 16 ; 16 ; 2007 >
@@ -166,7 +167,8 @@
       param[base_url] = http://pkp.sfu.ca/ojs/demo/present/
       param[journal_id] = demojournal
   
-      comment = requires subscription and has login pages
+      # requires subscription and has login pages
+      # moved to http://journals.sfu.ca/present/
   
       au < released ; 2005 ; Simon Fraser University Demo Journal Volume 2005 ; 2005 ; 2005 >
       
