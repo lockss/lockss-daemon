@@ -47,9 +47,16 @@ public class MsHtmlHashFilterFactory implements FilterFactory {
   
   protected static NodeFilter[] infilters = new NodeFilter[] {
     // You need the main-content-container to get the manifest page listing
+    // this is also the main container for the article landing page
     HtmlNodeFilters.tagWithAttributeRegex("main", "class", "main-content-container"),
     // The renderList chunks that populate the TOC
     HtmlNodeFilters.tagWithAttributeRegex("div", "class",  "articleListContainer"),
+    // for the full-text html crawler version, you need the various article chuns
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "article-level-0"),
+    // for the figures and tables landing pages - it's a list-group of these
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "singleFigureContainer"),
+    //supp data landing page
+    HtmlNodeFilters.tagWithAttribute("div", "id", "SuppDataIndexList"),
     
     //do not need the export-list citation download links for hash filter
   };

@@ -81,18 +81,12 @@ public class MsHtmlCrawlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("span",  "class", "references"),
     HtmlNodeFilters.tagWithAttribute("ol",  "class", "references"),
     
-    //TODO: The following are from ASM examples, look for Ms equivalents
-    // shows earlier or later versions of the same article - see
-    // content/journal/ecosalplus/10.1128/(ecosalplus.5.5 & ecosalplus.ESP-0002-2013) 
-    //HtmlNodeFilters.tagWithAttribute("div",  "class", "consanguinityContainer"),   
-    //agh. In-line references to other articles from this journal
-    // content/journal/ecosalplus/10.1128/ecosalplus.ESP-0005-2013 - full text version
-    //HtmlNodeFilters.tagWithAttribute("a", "target", "xrefwindow"),
-    //don't pick up cover images for books in "ASM recommends" and "Customers also bought"
-    //at the bottom of book landing page
-    //HtmlNodeFilters.tagWithAttribute("div", "class", "crossSelling"),
-    // similar for a journal article landing page
-    //HtmlNodeFilters.tagWithAttribute("div", "id", "related"),
+    // shows corrigendum and original of the same article - see
+    // http://jmm.microbiologyresearch.org/content/journal/jmm/10.1099/jmm.0.000223 & 000059
+    HtmlNodeFilters.tagWithAttribute("div",  "class", "consanguinityContainer"),   
+    //In-line references to other articles from this journal
+    HtmlNodeFilters.tagWithAttribute("a", "target", "xrefwindow"),
+    HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent"),
     
   };
 
