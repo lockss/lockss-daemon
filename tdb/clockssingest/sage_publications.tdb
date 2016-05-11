@@ -1244,7 +1244,7 @@
       au < exists ; exists ; 2013 ; The American Journal of Cosmetic Surgery Volume 30 ; 30 ; >
       au < exists ; exists ; 2014 ; The American Journal of Cosmetic Surgery Volume 31 ; 31 ; >
       au < exists ; exists ; 2015 ; The American Journal of Cosmetic Surgery Volume 32 ; 32 ; >
-      au < expected ; exists ; 2016 ; The American Journal of Cosmetic Surgery Volume 33 ; 33 ; >
+      au < exists ; exists ; 2016 ; The American Journal of Cosmetic Surgery Volume 33 ; 33 ; >
 
   }
 
@@ -30019,16 +30019,34 @@
       eissn = 2050-4594
     >
 
-    param[base_url] = http://lah.sagepub.com/
-
-    {
-
+      param[base_url] = http://lah.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1992 ; Literature & History Volume 1 ; 1 ; >
+      au < exists ; exists ; 1993 ; Literature & History Volume 2 ; 2 ; >
+      au < exists ; exists ; 1994 ; Literature & History Volume 3 ; 3 ; >
+      au < exists ; exists ; 1995 ; Literature & History Volume 4 ; 4 ; >
+      au < exists ; exists ; 1996 ; Literature & History Volume 5 ; 5 ; >
+      au < exists ; exists ; 1997 ; Literature & History Volume 6 ; 6 ; >
+      au < exists ; exists ; 1998 ; Literature & History Volume 7 ; 7 ; >
+      au < exists ; exists ; 1999 ; Literature & History Volume 8 ; 8 ; >
+      au < exists ; exists ; 2000 ; Literature & History Volume 9 ; 9 ; >
+      au < exists ; exists ; 2001 ; Literature & History Volume 10 ; 10 ; >
+      au < exists ; exists ; 2002 ; Literature & History Volume 11 ; 11 ; >
+      au < exists ; exists ; 2003 ; Literature & History Volume 12 ; 12 ; >
+      au < exists ; exists ; 2004 ; Literature & History Volume 13 ; 13 ; >
+      au < exists ; exists ; 2005 ; Literature & History Volume 14 ; 14 ; >
+      au < exists ; exists ; 2006 ; Literature & History Volume 15 ; 15 ; >
+      au < exists ; exists ; 2007 ; Literature & History Volume 16 ; 16 ; >
+      au < exists ; exists ; 2008 ; Literature & History Volume 17 ; 17 ; >
+      au < exists ; exists ; 2009 ; Literature & History Volume 18 ; 18 ; >
+      au < exists ; exists ; 2010 ; Literature & History Volume 19 ; 19 ; >
+      au < exists ; exists ; 2011 ; Literature & History Volume 20 ; 20 ; >
+      au < exists ; exists ; 2012 ; Literature & History Volume 21 ; 21 ; >
+      au < exists ; exists ; 2013 ; Literature & History Volume 22 ; 22 ; >
+      au < exists ; exists ; 2014 ; Literature & History Volume 23 ; 23 ; >
       au < exists ; exists ; 2015 ; Literature & History Volume 24 ; 24 ; >
       au < manifest ; exists ; 2016 ; Literature & History Volume 25 ; 25 ; >
-
-    }
 
   }
 
