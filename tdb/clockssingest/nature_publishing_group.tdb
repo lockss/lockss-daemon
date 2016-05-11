@@ -80,7 +80,6 @@
 
     au < exists ; exists ; 2012 ; American Journal of Gastroenterology Supplements Volume 1 ; 2012 ; 1 ; >
     au < exists ; exists ; 2014 ; American Journal of Gastroenterology Supplements Volume 2 ; 2014 ; 2 ; >
-    au < expected ; exists ; 2015 ; American Journal of Gastroenterology Supplements Volume 3 ; 2015 ; 3 ; >
 
   }
 
@@ -289,7 +288,8 @@
     au < finished ; crawling ; 2012 ; British Dental Journal Volume 213 ; 2012 ; 213 ; >
     au < crawling ; exists ; 2013 ; British Dental Journal Volume 214 ; 2013 ; 214 ; >
     au < notReady ; exists ; 2014 ; British Dental Journal Volume 215 ; 2014 ; 215 ; > #crawl completed with no substance
-    au < expected ; exists ; 2015 ; British Dental Journal Volume 216 ; 2015 ; 216 ; > 
+    au < exists ; exists ; 2015 ; British Dental Journal Volume 216 ; 2015 ; 216 ; > 
+    au < exists ; exists ; 2016 ; British Dental Journal Volume 217 ; 2016 ; 217 ; > 
 
   }
   {
@@ -910,7 +910,8 @@
     au < finished ; frozen ; 2012 ; Genetics in Medicine Volume 14 ; 2012 ; 14 ; >
     au < finished ; crawling ; 2013 ; Genetics in Medicine Volume 15 ; 2013 ; 15 ; >
     au < finished ; crawling ; 2014 ; Genetics in Medicine Volume 16 ; 2014 ; 16 ; >
-    au < expected ; exists ; 2015 ; Genetics in Medicine Volume 17 ; 2015 ; 17 ; >
+    au < exists ; exists ; 2015 ; Genetics in Medicine Volume 17 ; 2015 ; 17 ; >
+    au < exists ; exists ; 2016 ; Genetics in Medicine Volume 18 ; 2016 ; 18 ; >
 
   }
 
@@ -1733,8 +1734,6 @@
     au < finished ; frozen ; 2011 ; Kidney International Supplements Volume 1 ; 2011 ; 1 ; >
     au < down ; exists ; 2012 ; Kidney International Supplements Volume 2 ; 2012 ; 2 ; >
     au < down ; exists ; 2013 ; Kidney International Supplements Volume 3 ; 2013 ; 3 ; >
-    au < exists ; exists ; 2014 ; Kidney International Supplements Volume 4 ; 2014 ; 4 ; >
-    au < expected ; exists ; 2015 ; Kidney International Supplements Volume 5 ; 2015 ; 5 ; >
 
   }
 
@@ -3066,6 +3065,7 @@
     au < finished ; crawling ; 2014 ; Nature Reviews Endocrinology Volume 10 ; 2014 ; 10 ; >
     au < crawling ; exists ; 2015 ; Nature Reviews Endocrinology Volume 11 ; 2015 ; 11 ; >
     au < manifest ; exists ; 2016 ; Nature Reviews Endocrinology Volume 12 ; 2016 ; 12 ; >
+    au < expected ; exists ; 2017 ; Nature Reviews Endocrinology Volume 13 ; 2017 ; 13 ; >
 
   }
 
@@ -3092,6 +3092,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Gastroenterology and Hepatology Volume 10 ; 2013 ; 10 ; >
     au < crawling ; exists ; 2014 ; Nature Reviews Gastroenterology and Hepatology Volume 11 ; 2014 ; 11 ; >
     au < crawling ; exists ; 2015 ; Nature Reviews Gastroenterology and Hepatology Volume 12 ; 2015 ; 12 ; >
+    au < expected ; exists ; 2016 ; Nature Reviews Gastroenterology and Hepatology Volume 13 ; 2016 ; 13 ; >
 
   }
 
@@ -3123,6 +3124,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Genetics Volume 14 ; 2013 ; 14 ; >
     au < notReady ; exists ; 2014 ; Nature Reviews Genetics Volume 15 ; 2014 ; 15 ; >
     au < crawling ; exists ; 2015 ; Nature Reviews Genetics Volume 16 ; 2015 ; 16 ; >
+    au < expected ; exists ; 2016 ; Nature Reviews Genetics Volume 17 ; 2016 ; 17 ; >
 
   }
 
@@ -3152,6 +3154,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Immunology Volume 13 ; 2013 ; 13 ; >
     au < finished ; crawling ; 2014 ; Nature Reviews Immunology Volume 14 ; 2014 ; 14 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Nature Reviews Immunology Volume 15 ; 2015 ; 15 ; >
+    au < expected ; exists ; 2016 ; Nature Reviews Immunology Volume 16 ; 2016 ; 16 ; >
 
   }
 
@@ -3179,6 +3182,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Microbiology Volume 11 ; 2013 ; 11 ; >
     au < finished ; crawling ; 2014 ; Nature Reviews Microbiology Volume 12 ; 2014 ; 12 ; >
     au < crawling ; exists ; 2015 ; Nature Reviews Microbiology Volume 13 ; 2015 ; 13 ; >
+    au < expected ; exists ; 2016 ; Nature Reviews Microbiology Volume 14 ; 2016 ; 14 ; >
 
   }
 
@@ -3209,6 +3213,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Molecular Cell Biology Volume 14 ; 2013 ; 14 ; >
     au < finished ; crawling ; 2014 ; Nature Reviews Molecular Cell Biology Volume 15 ; 2014 ; 15 ; >
     au < crawling ; exists ; 2015 ; Nature Reviews Molecular Cell Biology Volume 16 ; 2015 ; 16 ; >
+    au < expected ; exists ; 2016 ; Nature Reviews Molecular Cell Biology Volume 17 ; 2016 ; 17 ; >
 
   }
 
@@ -3234,6 +3239,7 @@
     au < finished ; crawling ; 2013 ; Nature Reviews Nephrology Volume 9 ; 2013 ; 9 ; >
     au < finished ; crawling ; 2014 ; Nature Reviews Nephrology Volume 10 ; 2014 ; 10 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Nature Reviews Nephrology Volume 11 ; 2015 ; 11 ; >
+    au < expected ; exists ; 2016 ; Nature Reviews Nephrology Volume 12 ; 2016 ; 12 ; >
 
   }
 
@@ -3259,6 +3265,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Neurology Volume 9 ; 2013 ; 9 ; >
     au < finished ; crawling ; 2014 ; Nature Reviews Neurology Volume 10 ; 2014 ; 10 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Nature Reviews Neurology Volume 11 ; 2015 ; 11 ; >
+    au < expected ; exists ; 2016 ; Nature Reviews Neurology Volume 12 ; 2016 ; 12 ; >
 
   }
 
@@ -3289,6 +3296,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Neuroscience Volume 14 ; 2013 ; 14 ; >
     au < crawling ; exists ; 2014 ; Nature Reviews Neuroscience Volume 15 ; 2014 ; 15 ; >
     au < crawling ; exists ; 2015 ; Nature Reviews Neuroscience Volume 16 ; 2015 ; 16 ; >
+    au < expected ; exists ; 2016 ; Nature Reviews Neuroscience Volume 17 ; 2016 ; 17 ; >
 
   }
 
@@ -3314,6 +3322,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Rheumatology Volume 9 ; 2013 ; 9 ; >
     au < finished ; crawling ; 2014 ; Nature Reviews Rheumatology Volume 10 ; 2014 ; 10 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Nature Reviews Rheumatology Volume 11 ; 2015 ; 11 ; >
+    au < expected ; exists ; 2016 ; Nature Reviews Rheumatology Volume 12 ; 2016 ; 12 ; >
 
   }
 
@@ -3340,6 +3349,7 @@
     au < crawling ; exists ; 2013 ; Nature Reviews Urology Volume 10 ; 2013 ; 10 ; >
     au < finished ; crawling ; 2014 ; Nature Reviews Urology Volume 11 ; 2014 ; 11 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Nature Reviews Urology Volume 12 ; 2015 ; 12 ; >
+    au < expected ; exists ; 2016 ; Nature Reviews Urology Volume 13 ; 2016 ; 13 ; >
 
   }
 
@@ -3376,6 +3386,7 @@
     au < crawling ; exists ; 2013 ; Nature Structural and Molecular Biology Volume 20 ; 2013 ; 20 ; >
     au < finished ; crawling ; 2014 ; Nature Structural and Molecular Biology Volume 21 ; 2014 ; 21 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Nature Structural and Molecular Biology Volume 22 ; 2015 ; 22 ; >
+    au < expected ; exists ; 2016 ; Nature Structural and Molecular Biology Volume 23 ; 2016 ; 23 ; >
 
   }
 
@@ -3420,6 +3431,7 @@
     au < crawling ; exists ; 2013 ; Neuropsychopharmacology Volume 38 ; 2013 ; 38 ; >
     au < finished ; crawling ; 2014 ; Neuropsychopharmacology Volume 39 ; 2014 ; 39 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Neuropsychopharmacology Volume 40 ; 2015 ; 40 ; >
+    au < expected ; exists ; 2016 ; Neuropsychopharmacology Volume 41 ; 2016 ; 41 ; >
 
   }
   
@@ -3440,6 +3452,7 @@
     au < crawling ; exists ; 2013 ; NPG Asia Materials Volume 5 ; 2013 ; 5 ; >
     au < crawling ; exists ; 2014 ; NPG Asia Materials Volume 6 ; 2014 ; 6 ; >
     au < crawling ; exists ; 2015 ; NPG Asia Materials Volume 7 ; 2015 ; 7 ; >
+    au < expected ; exists ; 2016 ; NPG Asia Materials Volume 8 ; 2016 ; 8 ; >
 
   }
 
@@ -3457,6 +3470,7 @@
     au < crawling ; exists ; 2013 ; Nutrition & Diabetes Volume 3 ; 2013 ; 3 ; >
     au < finished ; crawling ; 2014 ; Nutrition & Diabetes Volume 4 ; 2014 ; 4 ; >
     au < crawling ; exists ; 2015 ; Nutrition & Diabetes Volume 5 ; 2015 ; 5 ; >
+    au < expected ; exists ; 2016 ; Nutrition & Diabetes Volume 6 ; 2016 ; 6 ; >
   
   }
     
@@ -3524,6 +3538,7 @@
     au < finished ; finished ; 2013 ; Oncogene Volume 32 ; 2013 ; 32 ; >
     au < finished ; crawling ; 2014 ; Oncogene Volume 33 ; 2014 ; 33 ; >
     au < crawling ; exists ; 2015 ; Oncogene Volume 34 ; 2015 ; 34 ; >
+    au < expected ; exists ; 2016 ; Oncogene Volume 35 ; 2016 ; 35 ; >
 
   }
 
@@ -3539,6 +3554,7 @@
     au < finished ; crawling ; 2013 ; Oncogenesis Volume 2 ; 2013 ; 2 ; >
     au < finished ; crawling ; 2014 ; Oncogenesis Volume 3 ; 2014 ; 3 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Oncogenesis Volume 4 ; 2015 ; 4 ; >
+    au < expected ; exists ; 2016 ; Oncogenesis Volume 5 ; 2016 ; 5 ; >
 
   }
 
@@ -3630,6 +3646,8 @@
     au < finished ; crawling ; 2014 ; Pediatric Research Volume 76 ; 2014 ; 76 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Pediatric Research Volume 77 ; 2015 ; 77 ; >
     au < crawling ; exists ; 2015 ; Pediatric Research Volume 78 ; 2015 ; 78 ; >
+    au < expected ; exists ; 2016 ; Pediatric Research Volume 79 ; 2016 ; 79 ; >
+    au < expected ; exists ; 2016 ; Pediatric Research Volume 80 ; 2016 ; 80 ; >
 
   }
 
@@ -3659,6 +3677,7 @@
     au < finished ; finished ; 2013 ; The Pharmacogenomics Journal Volume 13 ; 2013 ; 13 ; >
     au < finished ; crawling ; 2014 ; The Pharmacogenomics Journal Volume 14 ; 2014 ; 14 ; >
     au < crawling ; exists ; 2015 ; The Pharmacogenomics Journal Volume 15 ; 2015 ; 15 ; >
+    au < expected ; exists ; 2016 ; The Pharmacogenomics Journal Volume 16 ; 2016 ; 16 ; >
 
   }
 
@@ -3682,6 +3701,7 @@
     au < finished ; finished ; 2013 ; Polymer Journal Volume 45 ; 2013 ; 45 ; >
     au < finished ; crawling ; 2014 ; Polymer Journal Volume 46 ; 2014 ; 46 ; >
     au < crawling ; exists ; 2015 ; Polymer Journal Volume 47 ; 2015 ; 47 ; >
+    au < expected ; exists ; 2016 ; Polymer Journal Volume 48 ; 2016 ; 48 ; >
 
   }
 
@@ -3715,6 +3735,7 @@
     au < crawling ; exists ; 2013 ; Prostate Cancer and Prostatic Diseases Volume 16 ; 2013 ; 16 ; >
     au < finished ; crawling ; 2014 ; Prostate Cancer and Prostatic Diseases Volume 17 ; 2014 ; 17 ; >
     au < crawling ; exists ; 2015 ; Prostate Cancer and Prostatic Diseases Volume 18 ; 2015 ; 18 ; >
+    au < expected ; exists ; 2016 ; Prostate Cancer and Prostatic Diseases Volume 19 ; 2016 ; 19 ; >
 
   }
 
@@ -3728,22 +3749,23 @@
 
     param[journal_id] = scientificamerican
 
-    au < exists ; exists ; 2008 ; Scientific American Volume 298 ; 2008 ; 298 ; >
-    au < exists ; exists ; 2008 ; Scientific American Volume 299 ; 2008 ; 299 ; >
-    au < exists ; exists ; 2009 ; Scientific American Volume 300 ; 2009 ; 300 ; >
-    au < exists ; exists ; 2009 ; Scientific American Volume 301 ; 2009 ; 301 ; >
-    au < exists ; exists ; 2010 ; Scientific American Volume 302 ; 2010 ; 302 ; >
-    au < exists ; exists ; 2010 ; Scientific American Volume 303 ; 2010 ; 303 ; >
-    au < exists ; exists ; 2011 ; Scientific American Volume 304 ; 2011 ; 304 ; >
-    au < exists ; exists ; 2011 ; Scientific American Volume 305 ; 2011 ; 305 ; >
-    au < exists ; exists ; 2012 ; Scientific American Volume 306 ; 2012 ; 306 ; >
-    au < exists ; exists ; 2012 ; Scientific American Volume 307 ; 2012 ; 307 ; >
-    au < exists ; exists ; 2013 ; Scientific American Volume 308 ; 2013 ; 308 ; >
-    au < exists ; exists ; 2013 ; Scientific American Volume 309 ; 2013 ; 309 ; >
-    au < exists ; exists ; 2014 ; Scientific American Volume 310 ; 2014 ; 310 ; >
-    au < exists ; exists ; 2014 ; Scientific American Volume 311 ; 2014 ; 311 ; >
-    au < exists ; exists ; 2015 ; Scientific American Volume 312 ; 2015 ; 312 ; >
-    au < expected ; exists ; 2015 ; Scientific American Volume 313 ; 2015 ; 313 ; >
+    au < doNotProcess ; exists ; 2008 ; Scientific American Volume 298 ; 2008 ; 298 ; >
+    au < doNotProcess ; exists ; 2008 ; Scientific American Volume 299 ; 2008 ; 299 ; >
+    au < doNotProcess ; exists ; 2009 ; Scientific American Volume 300 ; 2009 ; 300 ; >
+    au < doNotProcess ; exists ; 2009 ; Scientific American Volume 301 ; 2009 ; 301 ; >
+    au < doNotProcess ; exists ; 2010 ; Scientific American Volume 302 ; 2010 ; 302 ; >
+    au < doNotProcess ; exists ; 2010 ; Scientific American Volume 303 ; 2010 ; 303 ; >
+    au < doNotProcess ; exists ; 2011 ; Scientific American Volume 304 ; 2011 ; 304 ; >
+    au < doNotProcess ; exists ; 2011 ; Scientific American Volume 305 ; 2011 ; 305 ; >
+    au < doNotProcess ; exists ; 2012 ; Scientific American Volume 306 ; 2012 ; 306 ; >
+    au < doNotProcess ; exists ; 2012 ; Scientific American Volume 307 ; 2012 ; 307 ; >
+    au < doNotProcess ; exists ; 2013 ; Scientific American Volume 308 ; 2013 ; 308 ; >
+    au < doNotProcess ; exists ; 2013 ; Scientific American Volume 309 ; 2013 ; 309 ; >
+    au < doNotProcess ; exists ; 2014 ; Scientific American Volume 310 ; 2014 ; 310 ; >
+    au < doNotProcess ; exists ; 2014 ; Scientific American Volume 311 ; 2014 ; 311 ; >
+    au < doNotProcess ; exists ; 2015 ; Scientific American Volume 312 ; 2015 ; 312 ; >
+    au < doNotProcess ; exists ; 2015 ; Scientific American Volume 313 ; 2015 ; 313 ; >
+    au < doNotProcess ; exists ; 2016 ; Scientific American Volume 314 ; 2016 ; 314 ; >
 
   }
 
@@ -3757,18 +3779,18 @@
 
     param[journal_id] = scientificamericanmind
 
-    au < exists ; exists ; 2008 ; Scientific American Mind Volume 19 (2008) ; 2008 ; 19 ; >
-    au < exists ; exists ; 2009 ; Scientific American Mind Volume 20 (2009) ; 2009 ; 20 ; >
-    au < exists ; exists ; 2010 ; Scientific American Mind Volume 20 (2010) ; 2010 ; 20 ; >
-    au < exists ; exists ; 2010 ; Scientific American Mind Volume 21 (2010) ; 2010 ; 21 ; >
-    au < exists ; exists ; 2011 ; Scientific American Mind Volume 21 (2011) ; 2011 ; 21 ; >
-    au < exists ; exists ; 2011 ; Scientific American Mind Volume 22 (2011) ; 2011 ; 22 ; >
-    au < exists ; exists ; 2012 ; Scientific American Mind Volume 22 (2012) ; 2012 ; 22 ; >
-    au < exists ; exists ; 2012 ; Scientific American Mind Volume 23 (2012) ; 2012 ; 23 ; >
-    au < exists ; exists ; 2013 ; Scientific American Mind Volume 23 (2013) ; 2013 ; 23 ; >
-    au < exists ; exists ; 2013 ; Scientific American Mind Volume 24 (2013) ; 2013 ; 24 ; >
-    au < exists ; exists ; 2014 ; Scientific American Mind Volume 25 (2014) ; 2014 ; 25 ; >
-    au < exists ; exists ; 2015 ; Scientific American Mind Volume 26 (2015) ; 2015 ; 26 ; >
+    au < doNotProcess ; exists ; 2008 ; Scientific American Mind Volume 19 (2008) ; 2008 ; 19 ; >
+    au < doNotProcess ; exists ; 2009 ; Scientific American Mind Volume 20 (2009) ; 2009 ; 20 ; >
+    au < doNotProcess ; exists ; 2010 ; Scientific American Mind Volume 20 (2010) ; 2010 ; 20 ; >
+    au < doNotProcess ; exists ; 2010 ; Scientific American Mind Volume 21 (2010) ; 2010 ; 21 ; >
+    au < doNotProcess ; exists ; 2011 ; Scientific American Mind Volume 21 (2011) ; 2011 ; 21 ; >
+    au < doNotProcess ; exists ; 2011 ; Scientific American Mind Volume 22 (2011) ; 2011 ; 22 ; >
+    au < doNotProcess ; exists ; 2012 ; Scientific American Mind Volume 22 (2012) ; 2012 ; 22 ; >
+    au < doNotProcess ; exists ; 2012 ; Scientific American Mind Volume 23 (2012) ; 2012 ; 23 ; >
+    au < doNotProcess ; exists ; 2013 ; Scientific American Mind Volume 23 (2013) ; 2013 ; 23 ; >
+    au < doNotProcess ; exists ; 2013 ; Scientific American Mind Volume 24 (2013) ; 2013 ; 24 ; >
+    au < doNotProcess ; exists ; 2014 ; Scientific American Mind Volume 25 (2014) ; 2014 ; 25 ; >
+    au < doNotProcess ; exists ; 2015 ; Scientific American Mind Volume 26 (2015) ; 2015 ; 26 ; >
 
   }
 
@@ -3784,7 +3806,7 @@
 
     param[journal_id] = srep
 
-    au < exists ; exists ; 2015 ; Scientific Reports Volume 1 ; 2015 ; 1 ; >
+    au < doNotProcess ; exists ; 2015 ; Scientific Reports Volume 1 ; 2015 ; 1 ; >
 
   }
 
@@ -3806,7 +3828,6 @@
     au < finished ; crawling ; 2012 ; SciBX: Science-Business eXchange Volume 5 ; 2012 ; 5 ; >
     au < doNotProcess ; exists ; 2013 ; SciBX: Science-Business eXchange Volume 6 ; 2013 ; 6 ; >
     au < finished ; crawling ; 2014 ; SciBX: Science-Business eXchange Volume 7 ; 2014 ; 7 ; >
-    au < expected ; exists ; 2015 ; SciBX: Science-Business eXchange Volume 8 ; 2015 ; 8 ; >
 
   }
 
@@ -3889,6 +3910,7 @@
     au < crawling ; exists ; 2013 ; Spinal Cord Volume 51 ; 2013 ; 51 ; >
     au < finished ; crawling ; 2014 ; Spinal Cord Volume 52 ; 2014 ; 52 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Spinal Cord Volume 53 ; 2015 ; 53 ; >
+    au < expected ; exists ; 2016 ; Spinal Cord Volume 54 ; 2016 ; 54 ; >
 
   }
 
@@ -3940,6 +3962,7 @@
     au < finished ; crawling ; 2013 ; Translational Psychiatry Volume 3 ; 2013 ; 3 ; >
     au < finished ; crawling ; 2014 ; Translational Psychiatry Volume 4 ; 2014 ; 4 ; >
     au < crawling ; exists ; 2015 ; Translational Psychiatry Volume 5 ; 2015 ; 5 ; >
+    au < expected ; exists ; 2016 ; Translational Psychiatry Volume 6 ; 2016 ; 6 ; >
 
   }
 
