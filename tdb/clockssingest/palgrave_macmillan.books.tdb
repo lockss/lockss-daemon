@@ -9,7 +9,7 @@
     param[base_url] = http://www.palgraveconnect.com/
     implicit < status ; status2 ; year ; book_isbn ; doi ; param[book_isbn] ; name ; author ; hidden[proxy] >
     #notReady: publisher change url, retest later
-    #books added to SpringerLink, available through bulk content. No harvest needed.
+    #books added to SpringerLink. 
 
    {
 
