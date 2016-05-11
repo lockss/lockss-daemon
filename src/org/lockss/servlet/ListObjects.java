@@ -434,8 +434,7 @@ public class ListObjects extends LockssServlet {
 	    if (contentType == null) {
 	      contentType = "unknown";
 	    }
-	    wrtr.println(cuUrl + "\t" + contentType + "\t" + bytes);
-	    wrtr.println(url);
+	    wrtr.println(url + "\t" + contentType + "\t" + bytes);
 	    itemCnt++;
 	    break;
 	  }
