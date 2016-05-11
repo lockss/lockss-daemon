@@ -1,0 +1,69 @@
+{
+
+  publisher <
+    name = European Mathematical Society ;
+    info[tester] = 0
+  >
+  
+  plugin = org.lockss.plugin.europeanmathematicalsociety.EuropeanMathematicalSocietyPlugin
+  param[base_url] =  https://www.ems-ph.org/
+  implicit < status ; year ; name ; param[volume_name] >
+  
+  {
+  
+    title < 
+      name = Commentarii Mathematici Helvetici ;
+      issn = 0010-2571 
+      
+    >
+    
+    param[journal_issn] = 0010-2571
+    param[journal_id] = cmh
+    
+    au < expected ; 1997 ; Commentarii Mathematici Helvetici Volume 72 ; 72 >
+    au < expected ; 1998 ; Commentarii Mathematici Helvetici Volume 73 ; 73 >
+    au < expected ; 1999 ; Commentarii Mathematici Helvetici Volume 74 ; 74 >
+    au < expected ; 2000 ; Commentarii Mathematici Helvetici Volume 75 ; 75 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Portugaliae Mathematica ;
+      issn = 0032-5155 
+      
+    >
+    
+    param[journal_issn] = 0032-5155
+    param[journal_id] = pm
+    
+    au < expected ; 2007 ; Portugaliae Mathematica Volume 64 ; 64 >
+    au < expected ; 2008 ; Portugaliae Mathematica Volume 65 ; 65 >
+    au < expected ; 2009 ; Portugaliae Mathematica Volume 66 ; 66 >
+    au < expected ; 2010 ; Portugaliae Mathematica Volume 67 ; 67 >
+    au < expected ; 2011 ; Portugaliae Mathematica Volume 68 ; 68 >
+    
+  }
+
+  {
+  
+    title < 
+      name = Quantum Topology ;
+      issn = 1663-487X 
+      
+    >
+    
+    param[journal_issn] = 1663-487X
+    param[journal_id] = qt
+    
+    au < expected ; 2010 ; Quantum Topology Volume 1 ; 1 >
+    au < expected ; 2011 ; Quantum Topology Volume 2 ; 2 >
+    au < expected ; 2012 ; Quantum Topology Volume 3 ; 3 >
+    au < expected ; 2013 ; Quantum Topology Volume 4 ; 4 >
+    au < expected ; 2014 ; Quantum Topology Volume 5 ; 5 >
+    
+  }
+
+}
+

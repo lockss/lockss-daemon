@@ -1,0 +1,189 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>development - EJ</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.europeanmathematicalsociety.EuropeanMathematicalSocietyPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>European Mathematical Society Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.68.0</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"European Mathematical Society Plugin, Base URL %s, ISSN %s, ID %s, Volume %s", base_url, journal_issn, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sjournals/all_issues.php?issn=%s", base_url, journal_issn</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%sjournals/lockss.txt", base_url</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%sjournals/journal.php?jrn=%s", base_url, journal_id</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>"%sall_issues.php?issn=%s", base_url, journal_issn</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>"%sjournals/show_issue.php?issn=%s&amp;vol=%s&amp;iss=%s", base_url, journal_issn, volume_name, issue</string>
+      </entry>
+      <entry>
+        <string>au_article</string>
+        <string>"%sjournals/show_pdf.php?issn=%s&amp;vol=%s&amp;iss=%s&amp;rank=%d", base_url, journal_issn, volume_name, issue, article_num</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_issn</key>
+        <displayName>Journal ISSN</displayName>
+        <description>International Standard Serial Number.</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <!-- All content from CDN -->
+      <string>1,"^https?://.+([.]mathjax[.]org)"</string>
+      <!-- Exclude unless from base url -->
+      <string>4,"^https?://%s%s", url_host(base_url), url_path(base_url)</string>
+      <!-- All css, img, or js content -->
+      <string>1,"^https?://%s%s(css|img|js)/", url_host(base_url), url_path(base_url)</string>
+      <string>1,"^https?://%s%sjournals/show_(issue|abstract|pdf)\.php\?issn=%s&amp;vol=%s", url_host(base_url), url_path(base_url), journal_issn, volume_name</string>
+      <!-- Journal home page -->
+      <string>1,"^https?://%s%sjournals/journal\.php\?jrn=%s$", url_host(base_url), url_path(base_url), journal_id</string>
+      <!-- ??? abstract PDF https://www.ems-ph.org/journals/abstract/QT/2010-001-001/2010-001-001-01.pdf (?i) -->
+      <string>1,"^https?://%s%sjournals/abstract/%s/.+\.pdf$", url_host(base_url), url_path(base_url), journal_id</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%sjournals/show_(pdf)\.php\?issn=%s&amp;vol=%s", base_url, journal_issn, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.europeanmathematicalsociety.EuropeanMathematicalSocietyArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.europeanmathematicalsociety.EuropeanMathematicalSocietyArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.europeanmathematicalsociety.EuropeanMathematicalSocietyHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.europeanmathematicalsociety.HttpToHttpsUtil$HttpToHttpsUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.europeanmathematicalsociety.HttpToHttpsUtil$HttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts -->
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>.+\.mathjax\.org</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <list>
+      <!-- .js?config=TeX-AMS_HTML -->
+      <string>[.](css|js)(\?.+)?$</string>
+    </list>
+  </entry>
+  <entry>
+    <!-- these will not count towards poll results but will replicate from peer if above 1.69.5 -->
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>"[.](css|js)(\?.+)?$", 0</string>
+    </list>
+  </entry>
+</map>
