@@ -80,10 +80,10 @@
     au < HighWirePressH20Plugin ; down ; 2010 ; Biographical Memoirs of Fellows of the Royal Society Volume 56 ; 56 >
     au < HighWirePressH20Plugin ; down ; 2011 ; Biographical Memoirs of Fellows of the Royal Society Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Biographical Memoirs of Fellows of the Royal Society Volume 58 ; 58 >
-    au < HWDrupalPlugin ; manifest ; 2013 ; Biographical Memoirs of Fellows of the Royal Society Volume 59 ; 59 >
-    au < HWDrupalPlugin ; manifest ; 2014 ; Biographical Memoirs of Fellows of the Royal Society Volume 60 ; 60 >
-    au < HWDrupalPlugin ; manifest ; 2015 ; Biographical Memoirs of Fellows of the Royal Society Volume 61 ; 61 >
-    au < HWDrupalPlugin ; expected ; 2016 ; Biographical Memoirs of Fellows of the Royal Society Volume 62 ; 62 >
+    au < rsp.RSPDrupalPlugin ; manifest ; 2013 ; Biographical Memoirs of Fellows of the Royal Society Volume 59 ; 59 >
+    au < rsp.RSPDrupalPlugin ; manifest ; 2014 ; Biographical Memoirs of Fellows of the Royal Society Volume 60 ; 60 >
+    au < rsp.RSPDrupalPlugin ; manifest ; 2015 ; Biographical Memoirs of Fellows of the Royal Society Volume 61 ; 61 >
+    au < rsp.RSPDrupalPlugin ; expected ; 2016 ; Biographical Memoirs of Fellows of the Royal Society Volume 62 ; 62 >
 
   }
 
@@ -106,10 +106,10 @@
     au < HighWirePressH20Plugin ; down ; 2010 ; Biology Letters Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; down ; 2011 ; Biology Letters Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Biology Letters Volume 8 ; 8 >
-    au < HWDrupalPlugin ; exists ; 2013 ; Biology Letters Volume 9 ; 9 >
-    au < HWDrupalPlugin ; manifest ; 2014 ; Biology Letters Volume 10 ; 10 >
-    au < HWDrupalPlugin ; manifest ; 2015 ; Biology Letters Volume 11 ; 11 >
-    au < HWDrupalPlugin ; manifest ; 2016 ; Biology Letters Volume 12 ; 12 >
+    au < rsp.RSPDrupalPlugin ; exists ; 2013 ; Biology Letters Volume 9 ; 9 >
+    au < rsp.RSPDrupalPlugin ; manifest ; 2014 ; Biology Letters Volume 10 ; 10 >
+    au < rsp.RSPDrupalPlugin ; testing ; 2015 ; Biology Letters Volume 11 ; 11 >
+    au < rsp.RSPDrupalPlugin ; manifest ; 2016 ; Biology Letters Volume 12 ; 12 >
 
   }
 
@@ -128,10 +128,10 @@
 
     au < HighWirePressH20Plugin ; down ; 2011 ; Interface Focus Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Interface Focus Volume 2 ; 2 >
-    au < HWDrupalPlugin ; exists ; 2013 ; Interface Focus Volume 3 ; 3 >
-    au < HWDrupalPlugin ; exists ; 2014 ; Interface Focus Volume 4 ; 4 >
-    au < HWDrupalPlugin ; manifest ; 2015 ; Interface Focus Volume 5 ; 5 >
-    au < HWDrupalPlugin ; manifest ; 2016 ; Interface Focus Volume 6 ; 6 >
+    au < rsp.RSPDrupalPlugin ; exists ; 2013 ; Interface Focus Volume 3 ; 3 >
+    au < rsp.RSPDrupalPlugin ; exists ; 2014 ; Interface Focus Volume 4 ; 4 >
+    au < rsp.RSPDrupalPlugin ; manifest ; 2015 ; Interface Focus Volume 5 ; 5 >
+    au < rsp.RSPDrupalPlugin ; manifest ; 2016 ; Interface Focus Volume 6 ; 6 >
 
   }
 
@@ -155,10 +155,10 @@
     au < HighWirePressH20Plugin ; down ; 2010 ; Journal of the Royal Society Interface Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; down ; 2011 ; Journal of the Royal Society Interface Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Journal of the Royal Society Interface Volume 9 ; 9 >
-    au < HWDrupalPlugin ; exists ; 2013 ; Journal of the Royal Society Interface Volume 10 ; 10 >
-    au < HWDrupalPlugin ; exists ; 2014 ; Journal of the Royal Society Interface Volume 11 ; 11 >
-    au < HWDrupalPlugin ; expected ; 2015 ; Journal of the Royal Society Interface Volume 12 ; 12 >
-    au < HWDrupalPlugin ; expected ; 2016 ; Journal of the Royal Society Interface Volume 13 ; 13 >
+    au < rsp.RSPDrupalPlugin ; exists ; 2013 ; Journal of the Royal Society Interface Volume 10 ; 10 >
+    au < rsp.RSPDrupalPlugin ; exists ; 2014 ; Journal of the Royal Society Interface Volume 11 ; 11 >
+    au < rsp.RSPDrupalPlugin ; expected ; 2015 ; Journal of the Royal Society Interface Volume 12 ; 12 >
+    au < rsp.RSPDrupalPlugin ; expected ; 2016 ; Journal of the Royal Society Interface Volume 13 ; 13 >
 
   }
 
@@ -240,10 +240,10 @@
     au < HighWirePressH20Plugin ; down ; 2010 ; Notes and Records of the Royal Society Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; down ; 2011 ; Notes and Records of the Royal Society Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Notes and Records of the Royal Society Volume 66 ; 66 >
-    au < HWDrupalPlugin ; exists ; 2013 ; Notes and Records of the Royal Society Volume 67 ; 67 >
-    au < HWDrupalPlugin ; exists ; 2014 ; Notes and Records the Royal Society Journal of the History of Science Volume 68 ; 68 >
-    au < HWDrupalPlugin ; expected ; 2015 ; Notes and Records the Royal Society Journal of the History of Science Volume 69 ; 69 >
-    au < HWDrupalPlugin ; expected ; 2016 ; Notes and Records the Royal Society Journal of the History of Science Volume 70 ; 70 >
+    au < rsp.RSPDrupalPlugin ; exists ; 2013 ; Notes and Records of the Royal Society Volume 67 ; 67 >
+    au < rsp.RSPDrupalPlugin ; exists ; 2014 ; Notes and Records the Royal Society Journal of the History of Science Volume 68 ; 68 >
+    au < rsp.RSPDrupalPlugin ; expected ; 2015 ; Notes and Records the Royal Society Journal of the History of Science Volume 69 ; 69 >
+    au < rsp.RSPDrupalPlugin ; expected ; 2016 ; Notes and Records the Royal Society Journal of the History of Science Volume 70 ; 70 >
 
   }
 
@@ -260,10 +260,10 @@
     
     au < HighWirePressH20Plugin ; down ; 2011 ; Open Biology Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Open Biology Volume 2 ; 2 >
-    au < HWDrupalPlugin ; manifest ; 2013 ; Open Biology Volume 3 ; 3 >
-    au < HWDrupalPlugin ; manifest ; 2014 ; Open Biology Volume 4 ; 4 >
-    au < HWDrupalPlugin ; manifest ; 2015 ; Open Biology Volume 5 ; 5 >
-    au < HWDrupalPlugin ; manifest ; 2016 ; Open Biology Volume 6 ; 6 >
+    au < rsp.RSPDrupalPlugin ; manifest ; 2013 ; Open Biology Volume 3 ; 3 >
+    au < rsp.RSPDrupalPlugin ; manifest ; 2014 ; Open Biology Volume 4 ; 4 >
+    au < rsp.RSPDrupalPlugin ; testing ; 2015 ; Open Biology Volume 5 ; 5 >
+    au < rsp.RSPDrupalPlugin ; manifest ; 2016 ; Open Biology Volume 6 ; 6 >
   
   }
   
@@ -471,10 +471,10 @@
     au < HighWirePressH20Plugin ; down ; 2010 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 368 ; 368 >
     au < HighWirePressH20Plugin ; down ; 2011 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 369 ; 369 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 370 ; 370 >
-    au < HWDrupalPlugin ; exists ; 2013 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 371 ; 371 >
-    au < HWDrupalPlugin ; exists ; 2014 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 372 ; 372 >
-    au < HWDrupalPlugin ; expected ; 2015 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 373 ; 373 >
-    au < HWDrupalPlugin ; expected ; 2016 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 374 ; 374 >
+    au < rsp.RSPDrupalPlugin ; exists ; 2013 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 371 ; 371 >
+    au < rsp.RSPDrupalPlugin ; exists ; 2014 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 372 ; 372 >
+    au < rsp.RSPDrupalPlugin ; expected ; 2015 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 373 ; 373 >
+    au < rsp.RSPDrupalPlugin ; expected ; 2016 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 374 ; 374 >
 
   }
 
@@ -679,10 +679,10 @@
     au < HighWirePressH20Plugin ; down ; 2010 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 365 ; 365 >
     au < HighWirePressH20Plugin ; down ; 2011 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 366 ; 366 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 367 ; 367 >
-    au < HWDrupalPlugin ; exists ; 2013 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 368 ; 368 >
-    au < HWDrupalPlugin ; exists ; 2014 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 369 ; 369 >
-    au < HWDrupalPlugin ; expected ; 2015 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 370 ; 370 >
-    au < HWDrupalPlugin ; expected ; 2016 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 371 ; 371 >
+    au < rsp.RSPDrupalPlugin ; exists ; 2013 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 368 ; 368 >
+    au < rsp.RSPDrupalPlugin ; exists ; 2014 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 369 ; 369 >
+    au < rsp.RSPDrupalPlugin ; expected ; 2015 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 370 ; 370 >
+    au < rsp.RSPDrupalPlugin ; expected ; 2016 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 371 ; 371 >
 
   }
 
@@ -1280,10 +1280,10 @@
     au < HighWirePressH20Plugin ; down ; 2010 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 466 ; 466 >
     au < HighWirePressH20Plugin ; down ; 2011 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 467 ; 467 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 468 ; 468 >
-    au < HWDrupalPlugin ; exists ; 2013 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 469 ; 469 >
-    au < HWDrupalPlugin ; exists ; 2014 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 470 ; 470 >
-    au < HWDrupalPlugin ; manifest ; 2015 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 471 ; 471 >
-    au < HWDrupalPlugin ; manifest ; 2016 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 472 ; 472 >
+    au < rsp.RSPDrupalPlugin ; exists ; 2013 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 469 ; 469 >
+    au < rsp.RSPDrupalPlugin ; exists ; 2014 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 470 ; 470 >
+    au < rsp.RSPDrupalPlugin ; manifest ; 2015 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 471 ; 471 >
+    au < rsp.RSPDrupalPlugin ; manifest ; 2016 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 472 ; 472 >
 
   }
 
@@ -1502,10 +1502,10 @@
     au < HighWirePressH20Plugin ; down ; 2010 ; Proceedings of the Royal Society B: Biological Sciences Volume 277 ; 277 >
     au < HighWirePressH20Plugin ; down ; 2011 ; Proceedings of the Royal Society B: Biological Sciences Volume 278 ; 278 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Proceedings of the Royal Society B: Biological Sciences Volume 279 ; 279 >
-    au < HWDrupalPlugin ; exists ; 2013 ; Proceedings of the Royal Society B: Biological Sciences Volume 280 ; 280 >
-    au < HWDrupalPlugin ; exists ; 2014 ; Proceedings of the Royal Society B: Biological Sciences Volume 281 ; 281 >
-    au < HWDrupalPlugin ; expected ; 2015 ; Proceedings of the Royal Society B: Biological Sciences Volume 282 ; 282 >
-    au < HWDrupalPlugin ; expected ; 2016 ; Proceedings of the Royal Society B: Biological Sciences Volume 283 ; 283 >
+    au < rsp.RSPDrupalPlugin ; exists ; 2013 ; Proceedings of the Royal Society B: Biological Sciences Volume 280 ; 280 >
+    au < rsp.RSPDrupalPlugin ; exists ; 2014 ; Proceedings of the Royal Society B: Biological Sciences Volume 281 ; 281 >
+    au < rsp.RSPDrupalPlugin ; expected ; 2015 ; Proceedings of the Royal Society B: Biological Sciences Volume 282 ; 282 >
+    au < rsp.RSPDrupalPlugin ; expected ; 2016 ; Proceedings of the Royal Society B: Biological Sciences Volume 283 ; 283 >
 
   }
 
@@ -1607,9 +1607,9 @@
 
     param[base_url] = http://rsos.royalsocietypublishing.org/
 
-    au < HWDrupalPlugin ; exists ; 2014 ; Royal Society Open Science Volume 1 ; 1 >
-    au < HWDrupalPlugin ; expected ; 2015 ; Royal Society Open Science Volume 2 ; 2 >
-    au < HWDrupalPlugin ; expected ; 2016 ; Royal Society Open Science Volume 3 ; 3 >
+    au < rsp.RSPDrupalPlugin ; exists ; 2014 ; Royal Society Open Science Volume 1 ; 1 >
+    au < rsp.RSPDrupalPlugin ; expected ; 2015 ; Royal Society Open Science Volume 2 ; 2 >
+    au < rsp.RSPDrupalPlugin ; expected ; 2016 ; Royal Society Open Science Volume 3 ; 3 >
 
   }
 

@@ -18,15 +18,15 @@
 
     param[base_url] = http://breathe.ersjournals.com/
 
-    au < HWDrupalPlugin ; exists ; 2007-2008 ; Breathe Volume 4 ; 4 >
-    au < HWDrupalPlugin ; exists ; 2008-2009 ; Breathe Volume 5 ; 5 >
-    au < HWDrupalPlugin ; manifest ; 2009-2010 ; Breathe Volume 6 ; 6 >
-    au < HWDrupalPlugin ; manifest ; 2010-2011 ; Breathe Volume 7 ; 7 >
-    au < HWDrupalPlugin ; manifest ; 2011-2012 ; Breathe Volume 8 ; 8 >
-    au < HWDrupalPlugin ; manifest ; 2012-2013 ; Breathe Volume 9 ; 9 >
-    au < HWDrupalPlugin ; manifest ; 2014 ; Breathe Volume 10 ; 10 >
-    au < HWDrupalPlugin ; manifest ; 2015 ; Breathe Volume 11 ; 11 >
-    au < HWDrupalPlugin ; manifest ; 2016 ; Breathe Volume 12 ; 12 >
+    au < ers.ERSDrupalPlugin ; exists ; 2007-2008 ; Breathe Volume 4 ; 4 >
+    au < ers.ERSDrupalPlugin ; exists ; 2008-2009 ; Breathe Volume 5 ; 5 >
+    au < ers.ERSDrupalPlugin ; manifest ; 2009-2010 ; Breathe Volume 6 ; 6 >
+    au < ers.ERSDrupalPlugin ; manifest ; 2010-2011 ; Breathe Volume 7 ; 7 >
+    au < ers.ERSDrupalPlugin ; manifest ; 2011-2012 ; Breathe Volume 8 ; 8 >
+    au < ers.ERSDrupalPlugin ; manifest ; 2012-2013 ; Breathe Volume 9 ; 9 >
+    au < ers.ERSDrupalPlugin ; manifest ; 2014 ; Breathe Volume 10 ; 10 >
+    au < ers.ERSDrupalPlugin ; testing ; 2015 ; Breathe Volume 11 ; 11 >
+    au < ers.ERSDrupalPlugin ; manifest ; 2016 ; Breathe Volume 12 ; 12 >
     
   }
 
@@ -40,9 +40,9 @@
 
     param[base_url] = http://openres.ersjournals.com/
 
-    au < HWDrupalPlugin ; manifest ; 2015 ; ERJ Open Research Volume 1 ; 1 >
-    au < HWDrupalPlugin ; manifest ; 2016 ; ERJ Open Research Volume 2 ; 2 >
-
+    au < ers.ERSDrupalPlugin ; testing ; 2015 ; ERJ Open Research Volume 1 ; 1 >
+    au < ers.ERSDrupalPlugin ; manifest ; 2016 ; ERJ Open Research Volume 2 ; 2 >
+    
   }
 
   {
@@ -101,14 +101,14 @@
     au < HighWirePressH20Plugin ; down ; 2011 ; European Respiratory Journal Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; down ; 2012 ; European Respiratory Journal Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; down ; 2012 ; European Respiratory Journal Volume 40 ; 40 >
-    au < HWDrupalPlugin ; manifest ; 2013 ; European Respiratory Journal Volume 41 ; 41 >
-    au < HWDrupalPlugin ; manifest ; 2013 ; European Respiratory Journal Volume 42 ; 42 >
-    au < HWDrupalPlugin ; manifest ; 2014 ; European Respiratory Journal Volume 43 ; 43 >
-    au < HWDrupalPlugin ; manifest ; 2014 ; European respiratory Journal Volume 44 ; 44 >
-    au < HWDrupalPlugin ; manifest ; 2015 ; European Respiratory Journal Volume 45 ; 45 >
-    au < HWDrupalPlugin ; manifest ; 2015 ; European Respiratory Journal Volume 46 ; 46 >
-    au < HWDrupalPlugin ; manifest ; 2016 ; European Respiratory Journal Volume 47 ; 47 >
-    au < HWDrupalPlugin ; expected ; 2016 ; European Respiratory Journal Volume 48 ; 48 >
+    au < ers.ERSDrupalPlugin ; manifest ; 2013 ; European Respiratory Journal Volume 41 ; 41 >
+    au < ers.ERSDrupalPlugin ; manifest ; 2013 ; European Respiratory Journal Volume 42 ; 42 >
+    au < ers.ERSDrupalPlugin ; manifest ; 2014 ; European Respiratory Journal Volume 43 ; 43 >
+    au < ers.ERSDrupalPlugin ; manifest ; 2014 ; European respiratory Journal Volume 44 ; 44 >
+    au < ers.ERSDrupalPlugin ; manifest ; 2015 ; European Respiratory Journal Volume 45 ; 45 >
+    au < ers.ERSDrupalPlugin ; manifest ; 2015 ; European Respiratory Journal Volume 46 ; 46 >
+    au < ers.ERSDrupalPlugin ; manifest ; 2016 ; European Respiratory Journal Volume 47 ; 47 >
+    au < ers.ERSDrupalPlugin ; expected ; 2016 ; European Respiratory Journal Volume 48 ; 48 >
     
   }
 
@@ -131,11 +131,10 @@
     au < HighWirePressH20Plugin ; down ; 2010 ; European Respiratory Review Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; down ; 2011 ; European Respiratory Review Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; down ; 2012 ; European Respiratory Review Volume 21 ; 21 >
-    au < HWDrupalPlugin ; manifest ; 2013 ; European Respiratory Review Volume 22 ; 22 >
-    au < HWDrupalPlugin ; manifest ; 2014 ; European Respiratory Review Volume 23 ; 23 >
-    au < HWDrupalPlugin ; manifest ; 2015 ; European Respiratory Review Volume 24 ; 24 >
-    au < HWDrupalPlugin ; manifest ; 2016 ; European Respiratory Review Volume 25 ; 25 >
- 
+    au < ers.ERSDrupalPlugin ; manifest ; 2013 ; European Respiratory Review Volume 22 ; 22 >
+    au < ers.ERSDrupalPlugin ; manifest ; 2014 ; European Respiratory Review Volume 23 ; 23 >
+    au < ers.ERSDrupalPlugin ; manifest ; 2015 ; European Respiratory Review Volume 24 ; 24 >
+    au < ers.ERSDrupalPlugin ; manifest ; 2016 ; European Respiratory Review Volume 25 ; 25 >
 
   }
 
