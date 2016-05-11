@@ -767,11 +767,11 @@
     au < HighWirePressH20Plugin ; manifest ; 1977 ; Drug and Therapeutics Bulletin Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; manifest ; 1978 ; Drug and Therapeutics Bulletin Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; manifest ; 1979 ; Drug and Therapeutics Bulletin Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; testing ; 1980 ; Drug and Therapeutics Bulletin Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; notReady ; 1980 ; Drug and Therapeutics Bulletin Volume 18 ; 18 > #Unable to fetch probe permission page
     au < HighWirePressH20Plugin ; testing ; 1981 ; Drug and Therapeutics Bulletin Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; testing ; 1982 ; Drug and Therapeutics Bulletin Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; testing ; 1983 ; Drug and Therapeutics Bulletin Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; testing ; 1984 ; Drug and Therapeutics Bulletin Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; notReady ; 1984 ; Drug and Therapeutics Bulletin Volume 22 ; 22 > #Unable to fetch probe permission page
     au < HighWirePressH20Plugin ; testing ; 1985 ; Drug and Therapeutics Bulletin Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; testing ; 1986 ; Drug and Therapeutics Bulletin Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; testing ; 1987 ; Drug and Therapeutics Bulletin Volume 25 ; 25 >
@@ -1449,21 +1449,21 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; manifest ; 1987 ; Journal of Epidemiology & Community Health Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; manifest ; 1988 ; Journal of Epidemiology & Community Health Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; manifest ; 1989 ; Journal of Epidemiology & Community Health Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; testing ; 1990 ; Journal of Epidemiology & Community Health Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; testing ; 1991 ; Journal of Epidemiology & Community Health Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; testing ; 1992 ; Journal of Epidemiology & Community Health Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; testing ; 1993 ; Journal of Epidemiology & Community Health Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; testing ; 1994 ; Journal of Epidemiology & Community Health Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; testing ; 1995 ; Journal of Epidemiology & Community Health Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; testing ; 1996 ; Journal of Epidemiology & Community Health Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; testing ; 1997 ; Journal of Epidemiology & Community Health Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; testing ; 1998 ; Journal of Epidemiology & Community Health Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; testing ; 1999 ; Journal of Epidemiology & Community Health Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; ready ; 1990 ; Journal of Epidemiology & Community Health Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; ready ; 1991 ; Journal of Epidemiology & Community Health Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; ready ; 1992 ; Journal of Epidemiology & Community Health Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; ready ; 1993 ; Journal of Epidemiology & Community Health Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; ready ; 1994 ; Journal of Epidemiology & Community Health Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; ready ; 1995 ; Journal of Epidemiology & Community Health Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; ready ; 1996 ; Journal of Epidemiology & Community Health Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; ready ; 1997 ; Journal of Epidemiology & Community Health Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; ready ; 1998 ; Journal of Epidemiology & Community Health Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; ready ; 1999 ; Journal of Epidemiology & Community Health Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; testing ; 2000 ; Journal of Epidemiology & Community Health Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; testing ; 2001 ; Journal of Epidemiology & Community Health Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; testing ; 2002 ; Journal of Epidemiology & Community Health Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; testing ; 2003 ; Journal of Epidemiology & Community Health Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; testing ; 2004 ; Journal of Epidemiology & Community Health Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; ready ; 2001 ; Journal of Epidemiology & Community Health Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; ready ; 2002 ; Journal of Epidemiology & Community Health Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; ready ; 2003 ; Journal of Epidemiology & Community Health Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; ready ; 2004 ; Journal of Epidemiology & Community Health Volume 58 ; 58 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Epidemiology & Community Health Volume 59 ; 59 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Epidemiology & Community Health Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Epidemiology & Community Health Volume 61 ; 61 >
@@ -1488,11 +1488,11 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://jfprhc.bmj.com/
     
-    au < HighWirePressH20Plugin ; testing ; 2000 ; Journal of Family Planning and Reproductive Health Care Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; testing ; 2001 ; Journal of Family Planning and Reproductive Health Care Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; testing ; 2002 ; Journal of Family Planning and Reproductive Health Care Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; testing ; 2003 ; Journal of Family Planning and Reproductive Health Care Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; testing ; 2004 ; Journal of Family Planning and Reproductive Health Care Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; ready ; 2000 ; Journal of Family Planning and Reproductive Health Care Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; ready ; 2001 ; Journal of Family Planning and Reproductive Health Care Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; ready ; 2002 ; Journal of Family Planning and Reproductive Health Care Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; ready ; 2003 ; Journal of Family Planning and Reproductive Health Care Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; ready ; 2004 ; Journal of Family Planning and Reproductive Health Care Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; released ; 2005 ; Journal of Family Planning and Reproductive Health Care Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; released ; 2006 ; Journal of Family Planning and Reproductive Health Care Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Journal of Family Planning and Reproductive Health Care Volume 33 ; 33 >
@@ -1536,17 +1536,17 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 1990 ; Journal of Medical Ethics Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; released ; 1991 ; Journal of Medical Ethics Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; released ; 1992 ; Journal of Medical Ethics Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; testing ; 1993 ; Journal of Medical Ethics Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; testing ; 1994 ; Journal of Medical Ethics Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; testing ; 1995 ; Journal of Medical Ethics Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; testing ; 1996 ; Journal of Medical Ethics Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; testing ; 1997 ; Journal of Medical Ethics Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; testing ; 1998 ; Journal of Medical Ethics Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; testing ; 1999 ; Journal of Medical Ethics Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; testing ; 2000 ; Journal of Medical Ethics Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; testing ; 2001 ; Journal of Medical Ethics Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; testing ; 2002 ; Journal of Medical Ethics Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; testing ; 2003 ; Journal of Medical Ethics Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; ready ; 1993 ; Journal of Medical Ethics Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; ready ; 1994 ; Journal of Medical Ethics Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; ready ; 1995 ; Journal of Medical Ethics Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; ready ; 1996 ; Journal of Medical Ethics Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; ready ; 1997 ; Journal of Medical Ethics Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; ready ; 1998 ; Journal of Medical Ethics Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; ready ; 1999 ; Journal of Medical Ethics Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; ready ; 2000 ; Journal of Medical Ethics Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; ready ; 2001 ; Journal of Medical Ethics Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; ready ; 2002 ; Journal of Medical Ethics Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; ready ; 2003 ; Journal of Medical Ethics Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; testing ; 2004 ; Journal of Medical Ethics Volume 30 ; 30 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Medical Ethics Volume 31 ; 31 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Medical Ethics Volume 32 ; 32 >
@@ -1712,8 +1712,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; manifest ; 1987 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; manifest ; 1988 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; manifest ; 1989 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; testing ; 1990 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; testing ; 1991 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; ready ; 1990 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; ready ; 1991 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 54 ; 54 >
     au < HighWirePressH20Plugin ; testing ; 1992 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 55 ; 55 >
     au < HighWirePressH20Plugin ; testing ; 1993 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 56 ; 56 >
     au < HighWirePressH20Plugin ; testing ; 1994 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 57 ; 57 >
