@@ -221,6 +221,7 @@
       param[base_url] = https://ejournals.library.ualberta.ca/
       param[journal_id] = cjuce-rcepu
 
+      au < manifest ; 2005 ; Canadian Journal of University Continuing Education Volume 31 ; 2005 ; 31 >
       au < manifest ; 2006 ; Canadian Journal of University Continuing Education Volume 32 ; 2006 ; 32 >
       au < manifest ; 2007 ; Canadian Journal of University Continuing Education Volume 33 ; 2007 ; 33 >
       au < manifest ; 2008 ; Canadian Journal of University Continuing Education Volume 34 ; 2008 ; 34 >
@@ -280,6 +281,11 @@
       au < manifest ; 2008 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 35 ; 2008 ; 35 >
       au < manifest ; 2009 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 36 ; 2009 ; 36 >
       au < manifest ; 2010 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 37 ; 2010 ; 37 >
+      au < manifest ; 2011 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 38 ; 2011 ; 38 >
+      au < exists ; 2012 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 39 ; 2012 ; 39 >
+      au < exists ; 2013 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 40 ; 2013 ; 40 >
+      au < exists ; 2014 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 41 ; 2014 ; 41 >
+      au < exists ; 2015 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 42 ; 2015 ; 42 >
 
     }
 
@@ -334,6 +340,7 @@
       au < manifest ; 2012 ; Canadian Studies in Population Volume 39 ; 2012 ; 39 >
       au < manifest ; 2013 ; Canadian Studies in Population Volume 40 ; 2013 ; 40 >
       au < manifest ; 2014 ; Canadian Studies in Population Volume 41 ; 2014 ; 41 >
+      au < manifest ; 2015 ; Canadian Studies in Population Volume 42 ; 2015 ; 42 >
 
     }
 
@@ -432,6 +439,7 @@
       au < manifest ; 2013 ; Constitutional Forum / Forum constitutionnel Volume 21-22 ; 2013 ; 21-22 >
       au < manifest ; 2014 ; Constitutional Forum / Forum constitutionnel Volume 23-24 ; 2014 ; 23-24 >
       au < manifest ; 2015 ; Constitutional Forum / Forum constitutionnel Volume 25-26 ; 2015 ; 25-26 >
+      au < manifest ; 2016 ; Constitutional Forum / Forum constitutionnel Volume 27-28 ; 2016 ; 27-28 >
 
     }
 
@@ -464,6 +472,7 @@
       au < manifest ; 2013 ; The Deakin Review of Children's Literature Volume 2 (2013) ; 2013 ; 2 >
       au < manifest ; 2014 ; The Deakin Review of Children's Literature Volume 3 ; 2014 ; 3 >
       au < manifest ; 2015 ; The Deakin Review of Children's Literature Volume 4 ; 2015 ; 4 >
+      au < manifest ; 2016 ; The Deakin Review of Children's Literature Volume 5 ; 2016 ; 5 >
 
     }
 
@@ -574,6 +583,7 @@
         au < manifest ; 2013 ; Evidence Based Library and Information Practice Volume 8 ; 2013 ; 8 >
         au < manifest ; 2014 ; Evidence Based Library and Information Practice Volume 9 ; 2014 ; 9 >
         au < manifest ; 2015 ; Evidence Based Library and Information Practice Volume 10 ; 2015 ; 10 >
+        au < manifest ; 2016 ; Evidence Based Library and Information Practice Volume 11 ; 2016 ; 11 >
       
       }
 
@@ -642,6 +652,7 @@
         au < manifest ; 2012 ; Imaginations: Journal of Cross-Cultural Image Studies / Revue d'Études Interculturelles de l'Image Volume 3 ; 2012 ; 3 >
         au < manifest ; 2013 ; Imaginations: Journal of Cross-Cultural Image Studies / Revue d'Études Interculturelles de l'Image Volume 4 ; 2013 ; 4 >
         au < manifest ; 2014 ; Imaginations: Journal of Cross-Cultural Image Studies / Revue d'Études Interculturelles de l'Image Volume 5 ; 2014 ; 5 >
+        au < manifest ; 2015 ; Imaginations: Journal of Cross-Cultural Image Studies / Revue d'Études Interculturelles de l'Image Volume 6 ; 2015 ; 6 >
         
       }
 
@@ -739,6 +750,8 @@
         au < manifest ; 2011 ; Journal of Contemporary Issues in Education Volume 6 ; 2011 ; 6 >
         au < manifest ; 2012 ; Journal of Contemporary Issues in Education Volume 7 ; 2012 ; 7 >
         au < manifest ; 2013 ; Journal of Contemporary Issues in Education Volume 8 ; 2013 ; 8 >
+        au < manifest ; 2014 ; Journal of Contemporary Issues in Education Volume 9 ; 2014 ; 9 >
+        au < manifest ; 2015 ; Journal of Contemporary Issues in Education Volume 10 ; 2015 ; 10 >
 
       }
 
@@ -774,6 +787,7 @@
       au < manifest ; 2012 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 15 ; 2012 ; 15 >
       au < manifest ; 2013 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 16 ; 2013 ; 16 >
       au < manifest ; 2014 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 17 ; 2014 ; 17 >
+      au < manifest ; 2015 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 18 ; 2015 ; 18 >
 
     }
 
@@ -800,6 +814,7 @@
       au < manifest ; 2012 ; Language and Literacy Volume 14 ; 2012 ; 14 >
       au < manifest ; 2013 ; Language and Literacy Volume 15 ; 2013 ; 15 >
       au < manifest ; 2014 ; Language and Literacy Volume 16 ; 2014 ; 16 >
+      au < manifest ; 2015 ; Language and Literacy Volume 17 ; 2015 ; 17 >
 
     }
 
