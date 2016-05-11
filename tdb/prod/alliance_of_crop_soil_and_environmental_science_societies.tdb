@@ -260,7 +260,7 @@
     param[journal_id] = tpg
 
     au < manifest ; 2008 ; The Plant Genome Volume 1 ; 1 >
-    au < manifest ; 2009 ; The Plant Genome Volume 2 ; 2 >
+    au < ready ; 2009 ; The Plant Genome Volume 2 ; 2 >
     au < manifest ; 2010 ; The Plant Genome Volume 3 ; 3 >
     au < manifest ; 2011 ; The Plant Genome Volume 4 ; 4 >
     au < manifest ; 2012 ; The Plant Genome Volume 5 ; 5 >
@@ -340,11 +340,11 @@
     
     param[journal_id] = vzj
 
-    au < manifest ; 2005 ; Vadose Zone Journal Volume 4 ; 4 >
-    au < manifest ; 2006 ; Vadose Zone Journal Volume 5 ; 5 >
+    au < ready ; 2005 ; Vadose Zone Journal Volume 4 ; 4 >
+    au < ready ; 2006 ; Vadose Zone Journal Volume 5 ; 5 >
     au < manifest ; 2007 ; Vadose Zone Journal Volume 6 ; 6 >
-    au < manifest ; 2008 ; Vadose Zone Journal Volume 7 ; 7 >
-    au < manifest ; 2009 ; Vadose Zone Journal Volume 8 ; 8 >
+    au < ready ; 2008 ; Vadose Zone Journal Volume 7 ; 7 >
+    au < ready ; 2009 ; Vadose Zone Journal Volume 8 ; 8 >
     au < manifest ; 2010 ; Vadose Zone Journal Volume 9 ; 9 >
     au < manifest ; 2011 ; Vadose Zone Journal Volume 10 ; 10 >
     au < manifest ; 2012 ; Vadose Zone Journal Volume 11 ; 11 >
