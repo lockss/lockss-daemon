@@ -11,7 +11,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -142,6 +142,12 @@
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
     <string>host:base_url</string>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>503=org.lockss.plugin.scielo.SciELOHttpResponseHandler</string>
+    </list>
   </entry>
   <entry>
     <string>au_url_normalizer</string>
