@@ -1195,24 +1195,24 @@
     au < released ; 1914 ; University of Massachusetts Amherst Doctoral Dissertations 1914 ; 1914 ; fulltext >
     au < released ; 1915 ; University of Massachusetts Amherst Doctoral Dissertations 1915 ; 1915 ; fulltext >
     au < released ; 1916 ; University of Massachusetts Amherst Doctoral Dissertations 1916 ; 1916 ; fulltext >
-    au < testing ; 1917 ; University of Massachusetts Amherst Doctoral Dissertations 1917 ; 1917 ; fulltext >
+    au < ready ; 1917 ; University of Massachusetts Amherst Doctoral Dissertations 1917 ; 1917 ; fulltext >
     au < released ; 1921 ; University of Massachusetts Amherst Doctoral Dissertations 1921 ; 1921 ; fulltext >
     au < released ; 1922 ; University of Massachusetts Amherst Doctoral Dissertations 1922 ; 1922 ; fulltext >
-    au < testing ; 1923 ; University of Massachusetts Amherst Doctoral Dissertations 1923 ; 1923 ; fulltext >
-    au < testing ; 1924 ; University of Massachusetts Amherst Doctoral Dissertations 1924 ; 1924 ; fulltext >
+    au < ready ; 1923 ; University of Massachusetts Amherst Doctoral Dissertations 1923 ; 1923 ; fulltext >
+    au < ready ; 1924 ; University of Massachusetts Amherst Doctoral Dissertations 1924 ; 1924 ; fulltext >
     au < doesNotExist ; 1925 ; University of Massachusetts Amherst Doctoral Dissertations 1925 ; 1925 ; fulltext >
-    au < testing ; 1926 ; University of Massachusetts Amherst Doctoral Dissertations 1926 ; 1926 ; fulltext >
+    au < ready ; 1926 ; University of Massachusetts Amherst Doctoral Dissertations 1926 ; 1926 ; fulltext >
     au < doesNotExist ; 1927 ; University of Massachusetts Amherst Doctoral Dissertations 1927 ; 1927 ; fulltext >
-    au < testing ; 1928 ; University of Massachusetts Amherst Doctoral Dissertations 1928 ; 1928 ; fulltext >
-    au < testing ; 1929 ; University of Massachusetts Amherst Doctoral Dissertations 1929 ; 1929 ; fulltext >
-    au < testing ; 1930 ; University of Massachusetts Amherst Doctoral Dissertations 1930 ; 1930 ; fulltext >
-    au < testing ; 1931 ; University of Massachusetts Amherst Doctoral Dissertations 1931 ; 1931 ; fulltext >
+    au < ready ; 1928 ; University of Massachusetts Amherst Doctoral Dissertations 1928 ; 1928 ; fulltext >
+    au < ready ; 1929 ; University of Massachusetts Amherst Doctoral Dissertations 1929 ; 1929 ; fulltext >
+    au < ready ; 1930 ; University of Massachusetts Amherst Doctoral Dissertations 1930 ; 1930 ; fulltext >
+    au < ready ; 1931 ; University of Massachusetts Amherst Doctoral Dissertations 1931 ; 1931 ; fulltext >
     au < doesNotExist ; 1932 ; University of Massachusetts Amherst Doctoral Dissertations 1932 ; 1932 ; fulltext >
-    au < testing ; 1933 ; University of Massachusetts Amherst Doctoral Dissertations 1933 ; 1933 ; fulltext >
-    au < testing ; 1934 ; University of Massachusetts Amherst Doctoral Dissertations 1934 ; 1934 ; fulltext >
-    au < testing ; 1935 ; University of Massachusetts Amherst Doctoral Dissertations 1935 ; 1935 ; fulltext >
-    au < testing ; 1936 ; University of Massachusetts Amherst Doctoral Dissertations 1936 ; 1936 ; fulltext >
-    au < testing ; 1937 ; University of Massachusetts Amherst Doctoral Dissertations 1937 ; 1937 ; fulltext >
+    au < ready ; 1933 ; University of Massachusetts Amherst Doctoral Dissertations 1933 ; 1933 ; fulltext >
+    au < ready ; 1934 ; University of Massachusetts Amherst Doctoral Dissertations 1934 ; 1934 ; fulltext >
+    au < ready ; 1935 ; University of Massachusetts Amherst Doctoral Dissertations 1935 ; 1935 ; fulltext >
+    au < ready ; 1936 ; University of Massachusetts Amherst Doctoral Dissertations 1936 ; 1936 ; fulltext >
+    au < ready ; 1937 ; University of Massachusetts Amherst Doctoral Dissertations 1937 ; 1937 ; fulltext >
     au < manifest ; 1955 ; University of Massachusetts Amherst Doctoral Dissertations 1955 ; 1955 ; fulltext >
     au < manifest ; 1956 ; University of Massachusetts Amherst Doctoral Dissertations 1956 ; 1956 ; fulltext >
     au < manifest ; 1957 ; University of Massachusetts Amherst Doctoral Dissertations 1957 ; 1957 ; fulltext >
@@ -1288,8 +1288,8 @@
 
     au < released ; 2013 ; University of Massachusetts Amherst Doctoral Dissertations 2013 (Part 2/2) ; 2013 ; fulltext >
     au < released ; 2014 ; University of Massachusetts Amherst Doctoral Dissertations 2014 (Part 2/2) ; 2014 ; fulltext >
-    au < testing ; 2015 ; University of Massachusetts Amherst Doctoral Dissertations 2015 ; 2015 ; fulltext >
-    au < testing ; 2016 ; University of Massachusetts Amherst Doctoral Dissertations 2016 ; 2016 ; fulltext >
+    au < ready ; 2015 ; University of Massachusetts Amherst Doctoral Dissertations 2015 ; 2015 ; fulltext >
+    au < ready ; 2016 ; University of Massachusetts Amherst Doctoral Dissertations 2016 ; 2016 ; fulltext >
 
   }
 
@@ -1448,7 +1448,7 @@
     plugin = org.lockss.plugin.bepress.DigitalCommonsRepositoryThemePlugin
     param[base_url] = http://scholarworks.umass.edu/
     param[collection] = energy_21_century
-    implicit < status ; year ; name ; param[collection_theme] >  
+    implicit < status ; year ; name ; param[collection_theme] >
 
     # see note about no PDFs elsewhere
     au < notReady ; 2005 ; University of Massachusetts Amherst Energy for the 21st Century Symposium 2005 ; 2005 >
