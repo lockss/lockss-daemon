@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,7 +32,7 @@ import java.util.*;
 import org.apache.commons.lang3.builder.CompareToBuilder;
 import org.apache.commons.lang3.mutable.MutableInt;
 import org.apache.commons.collections.*;
-import org.apache.commons.collections.map.*;
+import org.apache.commons.collections4.map.*;
 import org.apache.commons.collections.bag.HashBag; // needed to disambiguate
 import org.apache.oro.text.regex.*;
 
@@ -1604,7 +1600,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   class MultiCrawlPriorityMap extends MultiValueMap {
     MultiCrawlPriorityMap() {
-      super(new HashMap(), new org.apache.commons.collections.Factory() {
+      super(new HashMap(), new org.apache.commons.collections4.Factory() {
 	  public Object create() {
 	    return new BoundedTreeSet(paramSharedQueueMax, CPC);
 	  }});
@@ -1723,7 +1719,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       }
       CrawlReq bestReq = (CrawlReq)finalSort.first();
       if (bestReq.rateKey != null) {
-	sharedRateReqs.remove(bestReq.rateKey, bestReq);
+	sharedRateReqs.removeMapping(bestReq.rateKey, bestReq);
       } else {
 	unsharedRateReqs.remove(bestReq);
       }
