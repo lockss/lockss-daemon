@@ -181,7 +181,7 @@ public class TestMaffeyPlugin extends LockssPluginTestCase {
 	  
 	  public void testGetName() throws Exception {
 	    ArchivalUnit au = createAu();
-	    assertEquals("Maffey Plugin, Base URL " + BASE_URL + ", Journal ID " + JOURNAL_ID + ", Year " + YEAR, au.getName());
+	    assertEquals("Libertas Academica Plugin, Base URL " + BASE_URL + ", Journal ID " + JOURNAL_ID + ", Year " + YEAR, au.getName());
 	  }
 
 }
