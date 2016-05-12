@@ -614,6 +614,8 @@ public class SubscriptionManagement extends LockssServlet {
    * @throws DbException
    */
   private Page populateTab(String start, String end) throws IOException, DbException {
+    // Important or some character won't display properly
+    resp.setContentType("text/html; charset=ISO-8859-1");
     
     HttpSession session = getSession();
     
