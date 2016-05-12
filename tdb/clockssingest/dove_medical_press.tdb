@@ -6,9 +6,9 @@
     info[tester] = 0
     
   >
-
-  plugin = needs.plugin
-  param[base_url] = http://www.dovepress.com/
+  
+  plugin = org.lockss.plugin.dove.ClockssDoveMedicalPressPlugin
+  param[base_url] = https://www.dovepress.com/
   implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
   comment[doNotProcess] = manifests up - waiting for plugin 
   
@@ -31,6 +31,7 @@
     au < doNotProcess ; exists ; 2012 ; Therapeutics and Clinical Risk Management Volume 8 ; 8 ; 2012 ; >
     au < doNotProcess ; exists ; 2013 ; Therapeutics and Clinical Risk Management Volume 9 ; 9 ; 2013 ; >
     au < doNotProcess ; exists ; 2014 ; Therapeutics and Clinical Risk Management Volume 10 ; 10 ; 2014 ; >
+    au < testing ; exists ; 2015 ; Therapeutics and Clinical Risk Management Volume 11 ; 11 ; 2015 ; >
     
   }
 
@@ -462,6 +463,7 @@
     au < doNotProcess ; exists ; 2012 ; Clinical, Cosmetic and Investigational Dermatology Volume 5 ; 5 ; 2012 ; >
     au < doNotProcess ; exists ; 2013 ; Clinical, Cosmetic and Investigational Dermatology Volume 6 ; 6 ; 2013 ; >
     au < doNotProcess ; exists ; 2014 ; Clinical, Cosmetic and Investigational Dermatology Volume 7 ; 7 ; 2014 ; >
+    au < testing ; exists ; 2015 ; Clinical, Cosmetic and Investigational Dermatology Volume 8 ; 8 ; 2015 ; >
     
   }
 
@@ -1939,7 +1941,7 @@
 
     au < doNotProcess ; exists ; 2012 ; Reports in Theoretical Chemistry Volume 1 ; 1 ; 2012 ; >
     au < doNotProcess ; exists ; 2013 ; Reports in Theoretical Chemistry Volume 2 ; 2 ; 2013 ; >
-    au < doNotProcess ; exists ; 2014 ; Reports in Theoretical Chemistry Volume 3 ; 3 ; 2014 ; >
+    au < testing ; exists ; 2015 ; Reports in Theoretical Chemistry Volume 3 ; 3 ; 2015 ; >
    
   }
 

@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
   <string>plugin_parent</string>
@@ -17,15 +17,16 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
+  <!-- human readable name is Libertas Academica -->
   <entry>
     <string>au_name</string>
-    <string>"Maffey Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+    <string>"Libertas Academica Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Maffey Plugin (CLOCKSS)</string>
+    <string>Libertas Academica Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_start_url</string>

@@ -1,28 +1,26 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.maffey.MaffeyPlugin</string>
+    <string>org.lockss.plugin.dove.ClockssDovePlugin</string>
   </entry>
-  <!--  rename the human readable to Libertas Academica -->
-  <!--  this plugin is a loose sibling of Dove Medical Press -->
   <entry>
     <string>plugin_name</string>
-    <string>Libertas Academica Plugin</string>
+    <string>Dove Medical Press Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>6</string>
+        <string>1</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -30,34 +28,42 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>1</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Libertas Academica Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+    <string>"Dove Medical Press Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
+  <!--  This plugin is a loose sibling of Maffey (aka Libertas Academica) -->
   <entry>
     <string>au_start_url</string>
-    <string>"%slockss.php?t=lockss&amp;pa=issue&amp;j_id=%s&amp;year=%d", base_url, journal_id, year</string>
+    <!-- https://www.dovepress.com/lockss.php?t=clockss&pa=issue&j_id=113&year=2015 -->
+    <string>"%slockss.php?t=clockss&amp;pa=issue&amp;j_id=%s&amp;year=%d", base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <!-- Libertas Academica: this image directory should have been crawl-filtered but some URLs got into extant AUs; exclude from polls -->
-      <string>2,"^%scr_data/cache/testimonial_images/", base_url</string>
-      <string>1,"^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?[0-9]+)?$", base_url</string>
-      <string>4,"^%s", base_url</string>
-      <string>1,"^%sredirect_file\.php\?.*fileType=pdf.*$", base_url</string>
-      <!--  this is not the same as the start_url; it is for articles -->
-      <string>1,"^%slockss\.php\?(t=[c]?lockss&amp;)?pa=article&amp;i_id=[0-9]+$", base_url</string>
-      <string>1,"^%s[^/]+-article-a[0-9]+$", base_url</string>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(\?[0-9]+)?$", url_host(base_url)</string>
+      <!--  and the toc -->
+      <!--  https://www.dovepress.com/reports-in-theoretical-chemistry-i1116-j129 -->
+      <!-- not allowing other way to get to volume links -->
+      <!--  https://www.dovepress.com/reports-in-theoretical-chemistry-j129-v979 -->
+      <string>1,"^%s[^/]+-i[0-9]+-j%s$", base_url,journal_id</string>
+      <!--  downloadable pdf files -->
+      <string>1,"^%sgetfile\.php\?fileID=[0-9]+$", base_url</string>
+      <!--  article abstracts and full-text html -->     
+      <!--  use ALL CAPS journal-abbr; don't be specific... -->
+      <string>1,"^%s[^/]+-article-[A-Z]+$", base_url</string>
+      <!-- images/tables in the full-text html -->
+      <!--https://www.dovepress.com/cr_data/article_fulltext/s87000/87013/img/fig1.jpg-->
+      <string>1,"^%scr_data/article_fulltext/", base_url</string>
     </list>
   </entry>
   <entry>
      <string>au_substance_url_pattern</string>
-     <string>"^%sredirect_file\.php\?.*fileType=pdf.*$", base_url</string>
+     <string>"^%sgetfile\.php\?fileID=[0-9]+$", base_url</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -93,30 +99,26 @@
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.maffey.MaffeyHtmlHashFilterFactory</string>
+    <string>org.lockss.plugin.dove.DoveHtmlHashFilterFactory</string>
   </entry>
     <entry>
     <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.maffey.MaffeyHtmlCrawlFilterFactory</string>
+    <string>org.lockss.plugin.dove.DoveHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.maffey.MaffeyArticleIteratorFactory</string>
+    <string>org.lockss.plugin.dove.DoveArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.maffey.MaffeyArticleIteratorFactory</string>
-  </entry>
-    <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.maffey.MaffeyUrlNormalizer</string>
+    <string>org.lockss.plugin.dove.DoveArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.maffey.MaffeyHtmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.dove.DoveHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
@@ -128,4 +130,13 @@
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
   </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
+  </entry>  
 </map>
