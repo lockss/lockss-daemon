@@ -6075,7 +6075,7 @@
       au < manifest ; exists ; 2006 ; Clin-Alert Volume 44 ; 44 ; >
       au < manifest ; exists ; 2007 ; Clin-Alert Volume 45 ; 45 ; >
       au < zapped ; finished ; 2008 ; Clin-Alert Volume 46 ; 46 ; >
-      au < crawling ; exists ; 2009 ; Clin-Alert Volume 47 ; 47 ; >
+      au < finished ; manifest ; 2009 ; Clin-Alert Volume 47 ; 47 ; >
       au < finished ; crawling ; 2010 ; Clin-Alert Volume 48 ; 48 ; >
       au < finished ; finished ; 2011 ; Clin-Alert Volume 49 ; 49 ; >
       au < finished ; finished ; 2012 ; Clin-Alert Volume 50 ; 50 ; >
@@ -11498,7 +11498,7 @@
       au < zapped ; finished ; 2010 ; European Journal of Industrial Relations Volume 16 ; 16 ; >
       au < finished ; finished ; 2011 ; European Journal of Industrial Relations Volume 17 ; 17 ; >
       au < finished ; finished ; 2012 ; European Journal of Industrial Relations Volume 18 ; 18 ; >
-      au < crawling ; exists ; 2013 ; European Journal of Industrial Relations Volume 19 ; 19 ; >
+      au < finished ; manifest ; 2013 ; European Journal of Industrial Relations Volume 19 ; 19 ; >
       au < finished ; finished ; 2014 ; European Journal of Industrial Relations Volume 20 ; 20 ; >
       au < crawling ; exists ; 2015 ; European Journal of Industrial Relations Volume 21 ; 21 ; >
       au < manifest ; exists ; 2016 ; European Journal of Industrial Relations Volume 22 ; 22 ; >
@@ -17514,7 +17514,7 @@
       au < crawling ; exists ; 2008 ; International Journal of Qualitative Methods Volume 7 ; 7 ; >
       au < crawling ; exists ; 2009 ; International Journal of Qualitative Methods Volume 8 ; 8 ; >
       au < crawling ; exists ; 2010 ; International Journal of Qualitative Methods Volume 9 ; 9 ; >
-      au < crawling ; exists ; 2011 ; International Journal of Qualitative Methods Volume 10 ; 10 ; >
+      au < finished ; manifest ; 2011 ; International Journal of Qualitative Methods Volume 10 ; 10 ; >
       au < crawling ; exists ; 2012 ; International Journal of Qualitative Methods Volume 11 ; 11 ; >
       au < exists ; exists ; 2013 ; International Journal of Qualitative Methods Volume 12 ; 12 ; >
       au < exists ; exists ; 2014 ; International Journal of Qualitative Methods Volume 13 ; 13 ; >
@@ -34212,7 +34212,7 @@
       au < manifest ; exists ; 2005 ; Planning Theory Volume 4 ; 4 ; >
       au < manifest ; exists ; 2006 ; Planning Theory Volume 5 ; 5 ; >
       au < manifest ; exists ; 2007 ; Planning Theory Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2008 ; Planning Theory Volume 7 ; 7 ; >
+      au < finished ; manifest ; 2008 ; Planning Theory Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Planning Theory Volume 8 ; 8 ; >
       au < zapped ; finished ; 2010 ; Planning Theory Volume 9 ; 9 ; >
       au < finished ; finished ; 2011 ; Planning Theory Volume 10 ; 10 ; >
