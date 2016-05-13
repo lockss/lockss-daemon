@@ -51,9 +51,9 @@ public class DoveHtmlHashFilterFactory implements FilterFactory {
     protected static NodeFilter[] infilters = new NodeFilter[] {
       // manifest page
       // <base>/lockss.php?t=clockss&pa=issue&j_id=#&year=#
-      HtmlNodeFilters.tagWithAttribute("div", "class", "copy-sitemap"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "copy sitemap"),
       // issue TOC: <base>/pub_title-i#-j# 
-      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "volume-issue "),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "volume-issues"),
       // article landing page and article full-text
       // <base>/article-title-article-J_ABBR
       HtmlNodeFilters.tagWithAttribute("div", "class", "articles"),

@@ -54,7 +54,14 @@ public class DoveHtmlCrawlFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    // [LA] = Libertas Academica
+    NodeFilter[] article_copy_keepers = new NodeFilter[] {
+        HtmlNodeFilters.tagWithAttribute("a", "id", "download-pdf"),
+        HtmlNodeFilters.tagWithAttribute("a", "id", "view-full-text"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "article-fulltext")
+    };
+
+    
+    
     NodeFilter[] filters = new NodeFilter[] {
       // Contain cross-links to other year issues for this journal
       // see: https://www.dovepress.com/reports-in-theoretical-chemistry-i1116-j129        
@@ -70,7 +77,16 @@ public class DoveHtmlCrawlFilterFactory implements FilterFactory {
           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "categories-bg group"),
             HtmlNodeFilters.tagWithAttributeRegex(
                    "div", "class", "volume-issues")),
-
+                   
+      // there might be in-line links at the bottom of the abstract or in the intro (abstract) of 
+      // the full-text page. For example when there is a letter to the editor or a
+      // retraction to the article - don't crawl any links in this section
+      // by excluding it but for the chunks we need (full-text, full-text link and pdf-link)
+      // ex: https://www.dovepress.com/optimizing-clopidogrel-dose-response-anbspnew-clinical-algorithm-compr-peer-reviewed-article-TCRM
+      // ex: https://www.dovepress.com/retraction-diagnosis-and-management-of-miliary-tuberculosis-curre-peer-reviewed-article-TCRM             
+     HtmlNodeFilters.allExceptSubtree(
+          HtmlNodeFilters.tagWithAttribute("div", "class", "copy"),
+          new OrFilter(article_copy_keepers)),
     };
     return new HtmlFilterInputStream(in,
         encoding,
