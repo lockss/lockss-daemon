@@ -767,20 +767,20 @@
     au < HighWirePressH20Plugin ; manifest ; 1977 ; Drug and Therapeutics Bulletin Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; manifest ; 1978 ; Drug and Therapeutics Bulletin Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; manifest ; 1979 ; Drug and Therapeutics Bulletin Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; notReady ; 1980 ; Drug and Therapeutics Bulletin Volume 18 ; 18 > #Unable to fetch probe permission page
-    au < HighWirePressH20Plugin ; testing ; 1981 ; Drug and Therapeutics Bulletin Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; testing ; 1982 ; Drug and Therapeutics Bulletin Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; testing ; 1983 ; Drug and Therapeutics Bulletin Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; notReady ; 1984 ; Drug and Therapeutics Bulletin Volume 22 ; 22 > #Unable to fetch probe permission page
+    au < HighWirePressH20Plugin ; ready ; 1980 ; Drug and Therapeutics Bulletin Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; ready ; 1981 ; Drug and Therapeutics Bulletin Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; ready ; 1982 ; Drug and Therapeutics Bulletin Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; ready ; 1983 ; Drug and Therapeutics Bulletin Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; ready ; 1984 ; Drug and Therapeutics Bulletin Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; testing ; 1985 ; Drug and Therapeutics Bulletin Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; testing ; 1986 ; Drug and Therapeutics Bulletin Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; testing ; 1987 ; Drug and Therapeutics Bulletin Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; ready ; 1986 ; Drug and Therapeutics Bulletin Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; ready ; 1987 ; Drug and Therapeutics Bulletin Volume 25 ; 25 >
     au < HighWirePressH20Plugin ; testing ; 1988 ; Drug and Therapeutics Bulletin Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; testing ; 1989 ; Drug and Therapeutics Bulletin Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; testing ; 1990 ; Drug and Therapeutics Bulletin Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; ready ; 1989 ; Drug and Therapeutics Bulletin Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; ready ; 1990 ; Drug and Therapeutics Bulletin Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; testing ; 1991 ; Drug and Therapeutics Bulletin Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; testing ; 1992 ; Drug and Therapeutics Bulletin Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; testing ; 1993 ; Drug and Therapeutics Bulletin Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; ready ; 1992 ; Drug and Therapeutics Bulletin Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; ready ; 1993 ; Drug and Therapeutics Bulletin Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; released ; 1994 ; Drug and Therapeutics Bulletin Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; released ; 1995 ; Drug and Therapeutics Bulletin Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; released ; 1996 ; Drug and Therapeutics Bulletin Volume 34 ; 34 >
@@ -1225,33 +1225,34 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; manifest ; 1988 ; Heart Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; manifest ; 1989 ; Heart Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; manifest ; 1989 ; Heart Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; testing ; 1990 ; Heart Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; testing ; 1990 ; Heart Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; testing ; 1991 ; Heart Volume 65 ; 65 >
-    au < HighWirePressH20Plugin ; testing ; 1991 ; Heart Volume 66 ; 66 >
-    au < HighWirePressH20Plugin ; testing ; 1992 ; Heart Volume 67 ; 67 >
-    au < HighWirePressH20Plugin ; testing ; 1993 ; Heart Volume 69 ; 69 >
-    au < HighWirePressH20Plugin ; testing ; 1993 ; Heart Volume 70 ; 70 >
-    au < HighWirePressH20Plugin ; testing ; 1994 ; Heart Volume 71 ; 71 >
-    au < HighWirePressH20Plugin ; testing ; 1994 ; Heart Volume 72 ; 72 >
-    au < HighWirePressH20Plugin ; testing ; 1995 ; Heart Volume 73 ; 73 >
-    au < HighWirePressH20Plugin ; testing ; 1995 ; Heart Volume 74 ; 74 >
-    au < HighWirePressH20Plugin ; testing ; 1996 ; Heart Volume 75 ; 75 >
-    au < HighWirePressH20Plugin ; testing ; 1996 ; Heart Volume 76 ; 76 >
-    au < HighWirePressH20Plugin ; testing ; 1997 ; Heart Volume 77 ; 77 >
-    au < HighWirePressH20Plugin ; testing ; 1997 ; Heart Volume 78 ; 78 >
-    au < HighWirePressH20Plugin ; testing ; 1998 ; Heart Volume 79 ; 79 >
-    au < HighWirePressH20Plugin ; testing ; 1998 ; Heart Volume 80 ; 80 >
-    au < HighWirePressH20Plugin ; testing ; 1999 ; Heart Volume 81 ; 81 >
-    au < HighWirePressH20Plugin ; testing ; 1999 ; Heart Volume 82 ; 82 >
-    au < HighWirePressH20Plugin ; testing ; 2000 ; Heart Volume 83 ; 83 >
-    au < HighWirePressH20Plugin ; testing ; 2000 ; Heart Volume 84 ; 84 >
-    au < HighWirePressH20Plugin ; testing ; 2001 ; Heart Volume 85 ; 85 >
-    au < HighWirePressH20Plugin ; testing ; 2001 ; Heart Volume 86 ; 86 >
-    au < HighWirePressH20Plugin ; testing ; 2002 ; Heart Volume 87 ; 87 >
-    au < HighWirePressH20Plugin ; testing ; 2002 ; Heart Volume 88 ; 88 >
-    au < HighWirePressH20Plugin ; testing ; 2003 ; Heart Volume 89 ; 89 >
-    au < HighWirePressH20Plugin ; testing ; 2004 ; Heart Volume 90 ; 90 >
+    au < HighWirePressH20Plugin ; ready ; 1990 ; Heart Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; ready ; 1990 ; Heart Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; ready ; 1991 ; Heart Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; ready ; 1991 ; Heart Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; ready ; 1992 ; Heart Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; Heart Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; ready ; 1993 ; Heart Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; ready ; 1993 ; Heart Volume 70 ; 70 >
+    au < HighWirePressH20Plugin ; ready ; 1994 ; Heart Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; ready ; 1994 ; Heart Volume 72 ; 72 >
+    au < HighWirePressH20Plugin ; ready ; 1995 ; Heart Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; ready ; 1995 ; Heart Volume 74 ; 74 >
+    au < HighWirePressH20Plugin ; ready ; 1996 ; Heart Volume 75 ; 75 >
+    au < HighWirePressH20Plugin ; ready ; 1996 ; Heart Volume 76 ; 76 >
+    au < HighWirePressH20Plugin ; ready ; 1997 ; Heart Volume 77 ; 77 >
+    au < HighWirePressH20Plugin ; ready ; 1997 ; Heart Volume 78 ; 78 >
+    au < HighWirePressH20Plugin ; ready ; 1998 ; Heart Volume 79 ; 79 >
+    au < HighWirePressH20Plugin ; ready ; 1998 ; Heart Volume 80 ; 80 >
+    au < HighWirePressH20Plugin ; ready ; 1999 ; Heart Volume 81 ; 81 >
+    au < HighWirePressH20Plugin ; ready ; 1999 ; Heart Volume 82 ; 82 >
+    au < HighWirePressH20Plugin ; ready ; 2000 ; Heart Volume 83 ; 83 >
+    au < HighWirePressH20Plugin ; ready ; 2000 ; Heart Volume 84 ; 84 >
+    au < HighWirePressH20Plugin ; ready ; 2001 ; Heart Volume 85 ; 85 >
+    au < HighWirePressH20Plugin ; ready ; 2001 ; Heart Volume 86 ; 86 >
+    au < HighWirePressH20Plugin ; ready ; 2002 ; Heart Volume 87 ; 87 >
+    au < HighWirePressH20Plugin ; ready ; 2002 ; Heart Volume 88 ; 88 >
+    au < HighWirePressH20Plugin ; ready ; 2003 ; Heart Volume 89 ; 89 >
+    au < HighWirePressH20Plugin ; ready ; 2004 ; Heart Volume 90 ; 90 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Heart Volume 91 ; 91 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Heart Volume 92 ; 92 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Heart Volume 93 ; 93 >
@@ -1366,20 +1367,20 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; manifest ; 1987 ; Journal of Clinical Pathology Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; manifest ; 1988 ; Journal of Clinical Pathology Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; manifest ; 1989 ; Journal of Clinical Pathology Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; testing ; 1990 ; Journal of Clinical Pathology Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; testing ; 1991 ; Journal of Clinical Pathology Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; testing ; 1992 ; Journal of Clinical Pathology Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; testing ; 1993 ; Journal of Clinical Pathology Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; testing ; 1994 ; Journal of Clinical Pathology Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; testing ; 1995 ; Journal of Clinical Pathology Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; testing ; 1996 ; Journal of Clinical Pathology Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; testing ; 1997 ; Journal of Clinical Pathology Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; testing ; 1998 ; Journal of Clinical Pathology Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; testing ; 1999 ; Journal of Clinical Pathology Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; testing ; 2000 ; Journal of Clinical Pathology Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; testing ; 2001 ; Journal of Clinical Pathology Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; testing ; 2002 ; Journal of Clinical Pathology Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; testing ; 2003 ; Journal of Clinical Pathology Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; ready ; 1990 ; Journal of Clinical Pathology Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; ready ; 1991 ; Journal of Clinical Pathology Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; ready ; 1992 ; Journal of Clinical Pathology Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; ready ; 1993 ; Journal of Clinical Pathology Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; ready ; 1994 ; Journal of Clinical Pathology Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; ready ; 1995 ; Journal of Clinical Pathology Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; ready ; 1996 ; Journal of Clinical Pathology Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; ready ; 1997 ; Journal of Clinical Pathology Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; ready ; 1998 ; Journal of Clinical Pathology Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; ready ; 1999 ; Journal of Clinical Pathology Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; ready ; 2000 ; Journal of Clinical Pathology Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; ready ; 2001 ; Journal of Clinical Pathology Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; ready ; 2002 ; Journal of Clinical Pathology Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; ready ; 2003 ; Journal of Clinical Pathology Volume 56 ; 56 >
     au < HighWirePressH20Plugin ; testing ; 2004 ; Journal of Clinical Pathology Volume 57 ; 57 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Clinical Pathology Volume 58 ; 58 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Clinical Pathology Volume 59 ; 59 >
@@ -1733,7 +1734,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; ready ; 2001 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 71 ; 71 >
     au < HighWirePressH20Plugin ; ready ; 2002 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 72 ; 72 >
     au < HighWirePressH20Plugin ; ready ; 2002 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 73 ; 73 >
-    au < HighWirePressH20Plugin ; testing ; 2003 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 74 ; 74 >
+    au < HighWirePressH20Plugin ; ready ; 2003 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 74 ; 74 >
     au < HighWirePressH20Plugin ; testing ; 2004 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 75 ; 75 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 76 ; 76 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 77 ; 77 >
@@ -2061,9 +2062,9 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; manifest ; 1987 ; Occupational and Environmental Medicine Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; manifest ; 1988 ; Occupational and Environmental Medicine Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; manifest ; 1989 ; Occupational and Environmental Medicine Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; testing ; 1990 ; Occupational and Environmental Medicine Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; testing ; 1991 ; Occupational and Environmental Medicine Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; testing ; 1992 ; Occupational and Environmental Medicine Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; ready ; 1990 ; Occupational and Environmental Medicine Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; ready ; 1991 ; Occupational and Environmental Medicine Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; ready ; 1992 ; Occupational and Environmental Medicine Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; testing ; 1993 ; Occupational and Environmental Medicine Volume 50 ; 50 >
     au < HighWirePressH20Plugin ; testing ; 1994 ; Occupational and Environmental Medicine Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; testing ; 1995 ; Occupational and Environmental Medicine Volume 52 ; 52 >
@@ -2502,11 +2503,11 @@ comment[tc15] = recursive URL structure
       au < HighWirePressH20Plugin ; ready ; 1992 ; Tobacco Control Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; ready ; 1993 ; Tobacco Control Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; ready ; 1994 ; Tobacco Control Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; testing ; 1995 ; Tobacco Control Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; testing ; 1996 ; Tobacco Control Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; testing ; 1997 ; Tobacco Control Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; testing ; 1998 ; Tobacco Control Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; testing ; 1999 ; Tobacco Control Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; ready ; 1995 ; Tobacco Control Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; ready ; 1996 ; Tobacco Control Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; ready ; 1997 ; Tobacco Control Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; ready ; 1998 ; Tobacco Control Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; ready ; 1999 ; Tobacco Control Volume 8 ; 8 >
       au < HighWirePressH20Plugin ; released ; 2000 ; Tobacco Control Volume 9 ; 9 >
       au < HighWirePressH20Plugin ; released ; 2001 ; Tobacco Control Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; released ; 2002 ; Tobacco Control Volume 11 ; 11 >
