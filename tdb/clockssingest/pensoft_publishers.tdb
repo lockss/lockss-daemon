@@ -46,7 +46,7 @@
     au < manifest ; exists ; 2010 ; 2010 ; BioRisk Volumes 4-5 ; 4-5 ; >
     au < manifest ; exists ; 2011 ; 2011 ; BioRisk Volume 6 ; 6 ; >
     au < crawling ; exists ; 2012 ; 2012 ; BioRisk Volume 7 ; 7 ; >
-    au < finished ; exists ; 2013 ; 2013 ; BioRisk Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; 2013 ; BioRisk Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2014 ; 2014 ; BioRisk Volume 9 ; 9 ; >
     au < notReady ; exists ; 2015 ; 2015 ; BioRisk Volume 10 ; 10 ; >
     au < expected ; exists ; 2016 ; 2016 ; BioRisk Volume 11 ; 11 ; >
@@ -67,9 +67,9 @@
     au < manifest ; exists ; 2009 ; 2009 ; Comparative Cytogenetics Volume 3 ; 3 ; >
     au < manifest ; exists ; 2010 ; 2010 ; Comparative Cytogenetics Volume 4 ; 4 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Comparative Cytogenetics Volume 5 ; 5 ; >
-    au < finished ; exists ; 2012 ; 2012 ; Comparative Cytogenetics Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2012 ; 2012 ; Comparative Cytogenetics Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2013 ; 2013 ; Comparative Cytogenetics Volume 7 ; 7 ; >
-    au < finished ; exists ; 2014 ; 2014 ; Comparative Cytogenetics Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2014 ; 2014 ; Comparative Cytogenetics Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; 2015 ; Comparative Cytogenetics Volume 9 ; 9 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Comparative Cytogenetics Volume 10 ; 10 ; >
   
@@ -86,7 +86,7 @@
      param[au_oai_set] = dez
      param[base_url] = http://dez.pensoft.net/
 
-     au < finished ; exists ; 2014 ; 2014 ; Deutsche Entomologische Zeitschrift Volume 61 ; 61 ; reingest1.clockss.org:8082 >
+     au < finished ; manifest ; 2014 ; 2014 ; Deutsche Entomologische Zeitschrift Volume 61 ; 61 ; reingest1.clockss.org:8082 >
      au < crawling ; exists ; 2015 ; 2015 ; Deutsche Entomologische Zeitschrift Volume 62 ; 62 ; >
      au < manifest ; exists ; 2016 ; 2016 ; Deutsche Entomologische Zeitschrift Volume 63 ; 63 ; >
 
@@ -125,7 +125,7 @@
     au < manifest ; exists ; 2011 ; 2011 ; Journal of Hymenoptera Research Volumes 20-23 ; 20-23 ; >
     au < crawling ; exists ; 2012 ; 2012 ; Journal of Hymenoptera Research Volumes 24-29 ; 24-29 ; >
     au < crawling ; exists ; 2013 ; 2013 ; Journal of Hymenoptera Research Volumes 30-35 ; 30-35 ; >
-    au < finished ; exists ; 2014 ; 2014 ; Journal of Hymenoptera Research Volumes 36-41 ; 36-41 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; 2014 ; Journal of Hymenoptera Research Volumes 36-41 ; 36-41 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 2015 ; Journal of Hymenoptera Research Volumes 42-47 ; 42-47 ; >
   
    }
@@ -144,7 +144,7 @@
     
     au < manifest ; exists ; 2011 ; 2011 ; MycoKeys Volume 1 ; 1 ; >
     au < crawling ; exists ; 2012 ; 2012 ; MycoKeys Volumes 2-5 ; 2-5 ; >
-    au < finished ; exists ; 2013 ; 2013 ; MycoKeys Volumes 6-7 ; 6-7 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2013 ; 2013 ; MycoKeys Volumes 6-7 ; 6-7 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2014 ; 2014 ; MycoKeys Volume 8 ; 8 ; >
     au < crawling ; exists ; 2015 ; 2015 ; MycoKeys Volumes 9-11 ; 9-11 ; >
   
@@ -162,7 +162,7 @@
     
     au < crawling ; exists ; 2012 ; 2012 ; Nature Conservation Volumes 1-3 ; 1-3 ; >
     au < crawling ; exists ; 2013 ; 2013 ; Nature Conservation Volumes 4-6 ; 4-6 ; >
-    au < finished ; exists ; 2014 ; 2014 ; Nature Conservation Volumes 7-9 ; 7-9 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; 2014 ; Nature Conservation Volumes 7-9 ; 7-9 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 2015 ; Nature Conservation Volumes 10-13 ; 10-13 ; >
   
    }
@@ -180,9 +180,9 @@
     param[base_url] = http://neobiota.pensoft.net/
     
     au < manifest ; exists ; 2011 ; 2011 ; NeoBiota Volumes 9-11 ; 9-11 ; >
-    au < finished ; exists ; 2012 ; 2012 ; NeoBiota Volumes 12-15 ; 12-15 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; 2012 ; NeoBiota Volumes 12-15 ; 12-15 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2013 ; 2013 ; NeoBiota Volumes 16-19 ; 16-19 ; >
-    au < finished ; exists ; 2014 ; 2014 ; NeoBiota Volumes 20-23 ; 20-23 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; 2014 ; NeoBiota Volumes 20-23 ; 20-23 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 2015 ; NeoBiota Volumes 24-27 ; 24-27 ; >
   
    }
@@ -284,7 +284,7 @@
     #V90 has substance on ingest machines? Fails on content2.
     #notReady: V91 has not substance and has a crawl error which is undefined.
 
-    au < finished ; exists ; 2014 ; 2014 ; Zoosystematics and Evolution Volume 90 ; 90 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2014 ; 2014 ; Zoosystematics and Evolution Volume 90 ; 90 ; reingest2.clockss.org:8085 >
     au < notReady ; exists ; 2015 ; 2015 ; Zoosystematics and Evolution Volume 91 ; 91 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Zoosystematics and Evolution Volume 92 ; 92 ; >
 

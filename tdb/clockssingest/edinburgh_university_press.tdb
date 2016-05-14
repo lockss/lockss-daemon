@@ -134,7 +134,7 @@
     au < finished ; finished ; 2010 ; Archives of Natural History Volume 37 ; 37 ; >
     au < finished ; finished ; 2011 ; Archives of Natural History Volume 38 ; 38 ; >
     au < finished ; finished ; 2012 ; Archives of Natural History Volume 39 ; 39 ; >
-    au < finished ; exists ; 2013 ; Archives of Natural History Volume 40 ; 40 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2013 ; Archives of Natural History Volume 40 ; 40 ; reingest3.clockss.org:8083 >
     au < down ; exists ; 2014 ; Archives of Natural History Volume 41 ; 41 ; >
     au < down ; exists ; 2015 ; Archives of Natural History Volume 42 ; 42 ; >
 
@@ -190,7 +190,7 @@
 
     au < down ; exists ; 2008-2009 ; British Scholar Volume 1 ; 1 ; >
     au < finished ; finished ; 2009-2010 ; British Scholar Volume 2 ; 2 ; >
-    au < finished ; exists ; 2010 ; British Scholar Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; British Scholar Volume 3 ; 3 ; reingest1.clockss.org:8082 >
 
     }
   }
@@ -543,7 +543,7 @@
       
       au < finished ; crawling ; 2012 ; Irish University Review Volume 42 ; 42 ; >
       au < down ; exists ; 2013 ; Irish University Review Volume 43 ; 43 ; >
-      au < finished ; exists ; 2014 ; Irish University Review Volume 44 ; 44 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; Irish University Review Volume 44 ; 44 ; reingest1.clockss.org:8082 >
       au < down ; exists ; 2015 ; Irish University Review Volume 45 ; 45 ; >
   
     }
@@ -790,7 +790,7 @@
     au < finished ; crawling ; 2011 ; Modernist Cultures Volume 6 ; 6 ; >
     au < finished ; finished ; 2012 ; Modernist Cultures Volume 7 ; 7 ; >
     au < frozen ; exists ; 2013 ; Modernist Cultures Volume 8 ; 8 ; >
-    au < finished ; exists ; 2014 ; Modernist Cultures Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Modernist Cultures Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < down ; exists ; 2015 ; Modernist Cultures Volume 10 ; 10 ; >
 
   }
@@ -894,7 +894,7 @@
       au < doNotProcess ; exists ; 2006 ; Nottingham French Studies Volume 45 ; 45 ; >
       au < doNotProcess ; exists ; 2007 ; Nottingham French Studies Volume 46 ; 46 ; >
       au < doNotProcess ; exists ; 2008 ; Nottingham French Studies Volume 47 ; 47 ; >
-      au < finished ; exists ; 2009 ; Nottingham French Studies Volume 48 ; 48 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; Nottingham French Studies Volume 48 ; 48 ; reingest5.clockss.org:8082 >
       au < down ; exists ; 2010 ; Nottingham French Studies Volume 49 ; 49 ; >
       au < finished ; crawling ; 2011 ; Nottingham French Studies Volume 50 ; 50 ; >
       au < down ; exists ; 2012 ; Nottingham French Studies Volume 51 ; 51 ; >
@@ -1297,7 +1297,7 @@
     au < finished ; finished ; 2011 ; Word Structure Volume 4 ; 4 ; >
     au < finished ; finished ; 2012 ; Word Structure Volume 5 ; 5 ; >
     au < down ; exists ; 2013 ; Word Structure Volume 6 ; 6 ; >
-    au < finished ; exists ; 2014 ; Word Structure Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Word Structure Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < down ; exists ; 2015 ; Word Structure Volume 8 ; 8 ; >
 
   }

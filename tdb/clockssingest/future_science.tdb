@@ -81,7 +81,7 @@
     au < manifest ; exists ; 2011 ; Clinical Investigation Volume 1 ; 1 ; >
     au < crawling ; exists ; 2012 ; Clinical Investigation Volume 2 ; 2 ; >
     au < crawling ; exists ; 2013 ; Clinical Investigation Volume 3 ; 3 ; >
-    au < finished ; exists ; 2014 ; Clinical Investigation Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Clinical Investigation Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Clinical Investigation Volume 5 ; 5 ; >
     au < expected ; exists ; 2016 ; Clinical Investigation Volume 6 ; 6 ; >
     
@@ -149,7 +149,7 @@
 
     au < crawling ; exists ; 2012 ; Pharmaceutical Patent Analyst Volume 1 ; 1 ; >
     au < crawling ; exists ; 2013 ; Pharmaceutical Patent Analyst Volume 2 ; 2 ; >
-    au < finished ; exists ; 2014 ; Pharmaceutical Patent Analyst Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Pharmaceutical Patent Analyst Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Pharmaceutical Patent Analyst Volume 4 ; 4 ; >
     au < manifest ; exists ; 2016 ; Pharmaceutical Patent Analyst Volume 5 ; 5 ; >
     
