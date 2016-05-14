@@ -242,7 +242,8 @@ class _TdbEditOptions(object):
     self.proxy_change = opts.from_proxy is not None
     if self.proxy_change:
       self.from_proxy = set([x.strip() for x in opts.from_proxy.split(',')])
-      self.to_proxy = [x.strip() for x in opts.to_proxy or (opts.to_proxy_random or opts.to_proxy_round_robin).split(',')]
+      if opts.to_proxy is not None: self.to_proxy = [opts.to_proxy]
+      else: self.to_proxy = [x.strip() for x in (opts.to_proxy_random or opts.to_proxy_round_robin).split(',')]
       if opts.to_proxy_random is not None: self.__proxy = self.__proxy_random()
       else: self.__proxy = self.__proxy_round_robin()
     # files
@@ -255,7 +256,8 @@ class _TdbEditOptions(object):
 
   def __proxy_random(self):
     '''Bottomless generator of strings returning random values from to_proxy.'''
-    while True: yield random.choice(self.to_proxy)
+    while True:
+      yield random.choice(self.to_proxy)
     
   def __proxy_round_robin(self):
     '''Bottomless generator over the values from to_proxy in a round robin.'''
