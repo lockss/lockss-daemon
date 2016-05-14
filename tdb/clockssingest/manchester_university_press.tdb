@@ -20,7 +20,7 @@
       param[base_url] = http://ercw.openlibrary.manchester.ac.uk/
       param[journal_id] = ercw
     
-      au < crawling ; exists ; 2009 ; 2009 ; Ethnicity and Race in a Changing World Volume 1 ; 1 ; >
+      au < finished ; exists ; 2009 ; 2009 ; Ethnicity and Race in a Changing World Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2010 ; 2010 ; Ethnicity and Race in a Changing World Volume 2 ; 2 ; >
       au < finished ; crawling ; 2011 ; 2011 ; Ethnicity and Race in a Changing World Volume 3 ; 3 ; >
       au < finished ; crawling ; 2012 ; 2012 ; Ethnicity and Race in a Changing World Volume 4 ; 4 ; >

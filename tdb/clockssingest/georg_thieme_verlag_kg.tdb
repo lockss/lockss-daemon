@@ -602,7 +602,7 @@
         au < doNotProcess ; exists ; 2009 ; 2009 ; B&G Bewegungstherapie und Gesundheitssport Volume 2009 ; 25 ; >
         au < finished ; finished ; 2010 ; 2010 ; B&G Bewegungstherapie und Gesundheitssport Volume 2010 ; 26 ; >
         au < finished ; finished ; 2011 ; 2011 ; B&G Bewegungstherapie und Gesundheitssport Volume 2011 ; 27 ; >
-        au < crawling ; exists ; 2012 ; 2012 ; B&G Bewegungstherapie und Gesundheitssport Volume 2012 ; 28 ; >
+        au < finished ; exists ; 2012 ; 2012 ; B&G Bewegungstherapie und Gesundheitssport Volume 2012 ; 28 ; reingest2.clockss.org:8085 >
         au < finished ; finished ; 2013 ; 2013 ; B&G Bewegungstherapie und Gesundheitssport Volume 2013 ; 29 ; >
         au < finished ; finished ; 2014 ; 2014 ; B&G Bewegungstherapie und Gesundheitssport Volume 2014 ; 30 ; >
         au < crawling ; exists ; 2015 ; 2015 ; B&G Bewegungstherapie und Gesundheitssport Volume 2015 ; 31 ; >
@@ -887,7 +887,7 @@
    au < doNotProcess ; exists ; 2007 ; 2007 ; Dialyse aktuell Volume 2007 ; 2 ; >
    au < doNotProcess ; exists ; 2008 ; 2008 ; Dialyse aktuell Volume 2008 ; 3 ; >
    au < doNotProcess ; exists ; 2009 ; 2009 ; Dialyse aktuell Volume 2009 ; 4 ; >
-   au < crawling ; exists ; 2010 ; 2010 ; Dialyse aktuell Volume 2010 ; 5 ; >
+   au < finished ; exists ; 2010 ; 2010 ; Dialyse aktuell Volume 2010 ; 5 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2011 ; 2011 ; Dialyse aktuell Volume 2011 ; 6 ; >
    au < finished ; finished ; 2012 ; 2012 ; Dialyse aktuell Volume 2012 ; 7 ; >
    au < finished ; finished ; 2013 ; 2013 ; Dialyse aktuell Volume 2013 ; 8 ; >
@@ -1611,7 +1611,7 @@
    au < finished ; finished ; 2010 ; 2010 ; Frauenheilkunde up2date Volume 2010 ; 4 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; Frauenheilkunde up2date Volume 2011 ; 5 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2012 ; 2012 ; Frauenheilkunde up2date Volume 2012 ; 6 ; reingest2.clockss.org:8085 >
-   au < crawling ; exists ; 2013 ; 2013 ; Frauenheilkunde up2date Volume 2013 ; 7 ; >
+   au < finished ; exists ; 2013 ; 2013 ; Frauenheilkunde up2date Volume 2013 ; 7 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2014 ; 2014 ; Frauenheilkunde up2date Volume 2014 ; 8 ; reingest3.clockss.org:8083 >
    au < crawling ; exists ; 2015 ; 2015 ; Frauenheilkunde up2date Volume 2015 ; 9 ; >
 
@@ -1731,7 +1731,7 @@
    au < finished ; finished ; 2010 ; 2010 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2010 ; 15 ; >
    au < finished ; finished ; 2011 ; 2011 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2011 ; 16 ; >
    au < finished ; finished ; 2012 ; 2012 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2012 ; 17 ; reingest2.clockss.org:8085 >
-   au < crawling ; exists ; 2013 ; 2013 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2013 ; 18 ; >
+   au < finished ; exists ; 2013 ; 2013 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2013 ; 18 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2014 ; 2014 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2014 ; 19 ; >
    au < crawling ; exists ; 2015 ; 2015 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2015 ; 20 ; >
 
@@ -1781,7 +1781,7 @@
 
    au < finished ; crawling ; 2011 ; 2011 ; Global Spine Journal Volume 2011 ; 1 ; >
    au < finished ; finished ; 2012 ; 2012 ; Global Spine Journal Volume 2012 ; 2 ; reingest1.clockss.org:8082 >
-   au < crawling ; exists ; 2013 ; 2013 ; Global Spine Journal Volume 2013 ; 3 ; >
+   au < finished ; exists ; 2013 ; 2013 ; Global Spine Journal Volume 2013 ; 3 ; reingest2.clockss.org:8085 >
    au < crawling ; exists ; 2014 ; 2014 ; Global Spine Journal Volume 2014 ; 4 ; >
    au < crawling ; exists ; 2015 ; 2015 ; Global Spine Journal Volume 2015 ; 5 ; >
 
@@ -2021,8 +2021,8 @@
    au < finished ; finished ; 2010 ; 2010 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2010 ; 42 ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2011 ; 2011 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2011 ; 43 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2012 ; 2012 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2012 ; 44 ; reingest2.clockss.org:8085 >
-   au < crawling ; exists ; 2013 ; 2013 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2013 ; 45 ; >
-   au < crawling ; exists ; 2014 ; 2014 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2014 ; 46 ; >
+   au < finished ; exists ; 2013 ; 2013 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2013 ; 45 ; reingest1.clockss.org:8082 >
+   au < finished ; exists ; 2014 ; 2014 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2014 ; 46 ; reingest3.clockss.org:8083 >
    au < crawling ; exists ; 2015 ; 2015 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2015 ; 47 ; >
 
   }
@@ -2093,7 +2093,7 @@
     au < finished ; finished ; 2010 ; 2010 ; Intensivmedizin up2date Volume 2010 ; 6 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2011 ; 2011 ; Intensivmedizin up2date Volume 2011 ; 7 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; 2012 ; Intensivmedizin up2date Volume 2012 ; 8 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2013 ; 2013 ; Intensivmedizin up2date Volume 2013 ; 9 ; >
+    au < finished ; exists ; 2013 ; 2013 ; Intensivmedizin up2date Volume 2013 ; 9 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Intensivmedizin up2date Volume 2014 ; 10 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Intensivmedizin up2date Volume 2015 ; 11 ; >
 
@@ -2112,7 +2112,7 @@
 
    au < finished ; crawling ; 2012 ; 2012 ; International Archives of Otorhinolaryngology Volume 16 ; 16 ; >
    au < crawling ; exists ; 2013 ; 2013 ; International Archives of Otorhinolaryngology Volume 17 ; 17 ; >
-   au < crawling ; exists ; 2014 ; 2014 ; International Archives of Otorhinolaryngology Volume 18 ; 18 ; >
+   au < finished ; exists ; 2014 ; 2014 ; International Archives of Otorhinolaryngology Volume 18 ; 18 ; reingest5.clockss.org:8082 >
    au < crawling ; exists ; 2015 ; 2015 ; International Archives of Otorhinolaryngology Volume 19 ; 19 ; >
 
   }
@@ -2151,7 +2151,7 @@
     au < finished ; crawling ; 2011 ; 2011 ; International Journal of Angiology Volume 2011 ; 20 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; 2012 ; International Journal of Angiology Volume 2012 ; 21 ; >
     au < finished ; finished ; 2013 ; 2013 ; International Journal of Angiology Volume 2013 ; 22 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2014 ; 2014 ; International Journal of Angiology Volume 2014 ; 23 ; >
+    au < finished ; exists ; 2014 ; 2014 ; International Journal of Angiology Volume 2014 ; 23 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; 2015 ; International Journal of Angiology Volume 2015 ; 24 ; >
 
   }
@@ -2201,7 +2201,7 @@
     au < finished ; finished ; 2010 ; 2010 ; International Journal of Sports Medicine Volume 2010 ; 31 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; International Journal of Sports Medicine Volume 2011 ; 32 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; International Journal of Sports Medicine Volume 2012 ; 33 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; International Journal of Sports Medicine Volume 2013 ; 34 ; >
+    au < finished ; exists ; 2013 ; 2013 ; International Journal of Sports Medicine Volume 2013 ; 34 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 2014 ; International Journal of Sports Medicine Volume 2014 ; 35 ; >
     au < crawling ; exists ; 2015 ; 2015 ; International Journal of Sports Medicine Volume 2015 ; 36 ; >
 
@@ -2219,8 +2219,8 @@
     param[journal_id] = 10.1055/s-00024754
     comment[years] = 2013-current
 
-    au < crawling ; exists ; 2013 ; 2013 ; Interventionelle Radiologie Scan Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Interventionelle Radiologie Scan Volume 2 ; 2 ; >
+    au < finished ; exists ; 2013 ; 2013 ; Interventionelle Radiologie Scan Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+    au < finished ; exists ; 2014 ; 2014 ; Interventionelle Radiologie Scan Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; 2015 ; Interventionelle Radiologie Scan Volume 3 ; 3 ; >
 
   }
@@ -2238,8 +2238,8 @@
     comment[years] = 2012-current
 
     au < crawling ; exists ; 2012 ; 2012 ; Journal Club AINS Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Journal Club AINS Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Journal Club AINS Volume 3 ; 3 ; >
+    au < finished ; exists ; 2013 ; 2013 ; Journal Club AINS Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    au < finished ; exists ; 2014 ; 2014 ; Journal Club AINS Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 2015 ; Journal Club AINS Volume 4 ; 4 ; >
 
   }
@@ -2256,9 +2256,9 @@
     param[journal_id] = 10.1055/s-00023618
     comment[years] = 2012-current
 
-    au < crawling ; exists ; 2012 ; 2012 ; Journal Club Schmerzmedizin Volume 1 ; 1 ; >
+    au < finished ; exists ; 2012 ; 2012 ; Journal Club Schmerzmedizin Volume 1 ; 1 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2013 ; 2013 ; Journal Club Schmerzmedizin Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Journal Club Schmerzmedizin Volume 3 ; 3 ; >
+    au < finished ; exists ; 2014 ; 2014 ; Journal Club Schmerzmedizin Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 2015 ; Journal Club Schmerzmedizin Volume 4 ; 4 ; >
 
   }
@@ -2274,7 +2274,7 @@
     >
     param[journal_id] = 10.1055/s-00028318
 
-   au < crawling ; exists ; 2014 ; 2014 ; Journal of Academic Ophtalmology Volume 2014 ; 1 ; >
+   au < finished ; exists ; 2014 ; 2014 ; Journal of Academic Ophtalmology Volume 2014 ; 1 ; reingest2.clockss.org:8085 >
    au < expected ; exists ; 2015 ; 2015 ; Journal of Academic Ophtalmology Volume 2015 ; 2 ; >
 
   }
@@ -2299,7 +2299,7 @@
    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2011 ; 6 ; >
    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2012 ; 7 ; >
    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2013 ; 8 ; >
-   au < crawling ; exists ; 2014 ; 2014 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2014 ; 9 ; >
+   au < finished ; exists ; 2014 ; 2014 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2014 ; 9 ; reingest5.clockss.org:8082 >
    au < crawling ; exists ; 2015 ; 2015 ; Journal of Brachial Plexus and Peripheral Nerve Injury Volume 2015 ; 10 ; >
 
   }
@@ -2344,7 +2344,7 @@
     au < finished ; finished ; 2011 ; 2011 ; Journal of Knee Surgery Volume 2011 ; 24 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; 2012 ; Journal of Knee Surgery Volume 2012 ; 25 ; >
     au < crawling ; exists ; 2013 ; 2013 ; Journal of Knee Surgery Volume 2013 ; 26 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Journal of Knee Surgery Volume 2014 ; 27 ; >
+    au < finished ; exists ; 2014 ; 2014 ; Journal of Knee Surgery Volume 2014 ; 27 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; 2015 ; Journal of Knee Surgery Volume 2015 ; 28 ; >
 
   }
@@ -2520,8 +2520,8 @@
     comment[years] = 2012-current
 
     au < finished ; finished ; 2012 ; 2012 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2012 ; 1 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2013 ; 2013 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2013 ; 2 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2014 ; 3 ; >
+    au < finished ; exists ; 2013 ; 2013 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2013 ; 2 ; reingest5.clockss.org:8082 >
+    au < finished ; exists ; 2014 ; 2014 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2014 ; 3 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; 2015 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2015 ; 4 ; >
 
 
@@ -2597,7 +2597,7 @@
     au < finished ; finished ; 2011 ; 2011 ; Klinikarzt Der Volume 2011 ; 40 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; 2012 ; Klinikarzt Der Volume 2012 ; 41 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2013 ; 2013 ; Klinikarzt Der Volume 2013 ; 42 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Klinikarzt Der Volume 2014 ; 43 ; >
+    au < finished ; exists ; 2014 ; 2014 ; Klinikarzt Der Volume 2014 ; 43 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 2015 ; Klinikarzt Der Volume 2015 ; 44 ; >
 
   }
@@ -2699,7 +2699,7 @@
     au < finished ; crawling ; 2011 ; 2011 ; Klinische Neurophysiologie Volume 2011 ; 42 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; 2012 ; Klinische Neurophysiologie Volume 2012 ; 43 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2013 ; 2013 ; Klinische Neurophysiologie Volume 2013 ; 44 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Klinische Neurophysiologie Volume 2014 ; 45 ; >
+    au < finished ; exists ; 2014 ; 2014 ; Klinische Neurophysiologie Volume 2014 ; 45 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 2015 ; Klinische Neurophysiologie Volume 2015 ; 46 ; >
 
   }
@@ -2748,7 +2748,7 @@
     au < finished ; finished ; 2010 ; 2010 ; Klinische Pädiatrie Volume 2010 ; 222 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; Klinische Pädiatrie Volume 2011 ; 223 ; >
     au < finished ; crawling ; 2012 ; 2012 ; Klinische Pädiatrie Volume 2012 ; 224 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2013 ; 2013 ; Klinische Pädiatrie Volume 2013 ; 225 ; >
+    au < finished ; exists ; 2013 ; 2013 ; Klinische Pädiatrie Volume 2013 ; 225 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 2014 ; Klinische Pädiatrie Volume 2014 ; 226 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; 2015 ; Klinische Pädiatrie Volume 2015 ; 227 ; >
 
@@ -2764,10 +2764,10 @@
     >
     param[journal_id] = 10.1055/s-00025515
 
-   au < crawling ; exists ; 2010 ; 2010 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2010 ; 2010 ; >
-   au < crawling ; exists ; 2011 ; 2011 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2011 ; 2011 ; >
-   au < crawling ; exists ; 2012 ; 2012 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2012 ; 2012 ; >
-   au < crawling ; exists ; 2013 ; 2013 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2013 ; 2013 ; >
+   au < finished ; exists ; 2010 ; 2010 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2010 ; 2010 ; reingest1.clockss.org:8082 >
+   au < finished ; exists ; 2011 ; 2011 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2011 ; 2011 ; reingest5.clockss.org:8082 >
+   au < finished ; exists ; 2012 ; 2012 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2012 ; 2012 ; reingest2.clockss.org:8085 >
+   au < finished ; exists ; 2013 ; 2013 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 2014 ; 2014 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2014 ; 2014 ; >
    au < crawling ; exists ; 2015 ; 2015 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2015 ; 2015 ; >
    au < manifest ; exists ; 2016 ; 2016 ; kma - Das Gesundheitswirtschaftsmagazin Volume 2016 ; 2016 ; >
@@ -3110,7 +3110,7 @@
 
     au < finished ; finished ; 2011 ; 2011 ; Neuroradiologie Scan Volume 2011 ; 1 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; 2012 ; Neuroradiologie Scan Volume 2012 ; 2 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Neuroradiologie Scan Volume 2013 ; 3 ; >
+    au < finished ; exists ; 2013 ; 2013 ; Neuroradiologie Scan Volume 2013 ; 3 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 2014 ; Neuroradiologie Scan Volume 2014 ; 4 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Neuroradiologie Scan Volume 2015 ; 5 ; >
 
@@ -3131,7 +3131,7 @@
     au < finished ; finished ; 2010 ; 2010 ; neuroreha Volume 2010 ; 2 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2011 ; 2011 ; neuroreha Volume 2011 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; 2012 ; neuroreha Volume 2012 ; 4 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; neuroreha Volume 2013 ; 5 ; >
+    au < finished ; exists ; 2013 ; 2013 ; neuroreha Volume 2013 ; 5 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 2014 ; neuroreha Volume 2014 ; 6 ; >
     au < crawling ; exists ; 2015 ; 2015 ; neuroreha Volume 2015 ; 7 ; >
 
@@ -3265,7 +3265,7 @@
     au < finished ; crawling ; 2010 ; 2010 ; Der Nuklearmediziner Volume 2010 ; 33 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; 2011 ; Der Nuklearmediziner Volume 2011 ; 34 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; 2012 ; Der Nuklearmediziner Volume 2012 ; 35 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2013 ; 2013 ; Der Nuklearmediziner Volume 2013 ; 36 ; >
+    au < finished ; exists ; 2013 ; 2013 ; Der Nuklearmediziner Volume 2013 ; 36 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2014 ; 2014 ; Der Nuklearmediziner Volume 2014 ; 37 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Der Nuklearmediziner Volume 2015 ; 38 ; >
 
@@ -3314,7 +3314,7 @@
     # coming online soon as of July 2012
 
     au < finished ; finished ; 2012 ; 2012 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2012 ; 1 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2013 ; 2 ; >
+    au < finished ; exists ; 2013 ; 2013 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2013 ; 2 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2014 ; 2014 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2014 ; 3 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2015 ; 4 ; >
 
@@ -3451,7 +3451,7 @@
     au < finished ; finished ; 2011 ; 2011 ; pferde spiegel Volume 2011 ; 14 ; >
     au < finished ; finished ; 2012 ; 2012 ; pferde spiegel Volume 2012 ; 15 ; >
     au < finished ; crawling ; 2013 ; 2013 ; pferde spiegel Volume 2013 ; 16 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2014 ; 2014 ; pferde spiegel Volume 2014 ; 17 ; >
+    au < finished ; exists ; 2014 ; 2014 ; pferde spiegel Volume 2014 ; 17 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 2015 ; pferde spiegel Volume 2015 ; 18 ; >
 
   }
@@ -3514,7 +3514,7 @@
     au < finished ; finished ; 2011 ; 2011 ; Pharmacopsychiatry Volume 2011 ; 44 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; Pharmacopsychiatry Volume 2012 ; 45 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2013 ; 2013 ; Pharmacopsychiatry Volume 2013 ; 46 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Pharmacopsychiatry Volume 2014 ; 47 ; >
+    au < finished ; exists ; 2014 ; 2014 ; Pharmacopsychiatry Volume 2014 ; 47 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 2015 ; Pharmacopsychiatry Volume 2015 ; 48 ; >
 
   }
@@ -3553,7 +3553,7 @@
     au < finished ; finished ; 2011 ; 2011 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2011 ; 21 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; 2012 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2012 ; 22 ; >
     au < finished ; finished ; 2013 ; 2013 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2013 ; 23 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2014 ; 2014 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2014 ; 24 ; >
+    au < finished ; exists ; 2014 ; 2014 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2014 ; 24 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; 2015 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 2015 ; 25 ; >
 
   }
@@ -3572,7 +3572,7 @@
     au < finished ; finished ; 2010 ; 2010 ; physiopraxis Volume 2010 ; 8 ; >
     au < crawling ; exists ; 2011 ; 2011 ; physiopraxis Volume 2011 ; 9 ; >
     au < finished ; crawling ; 2012 ; 2012 ; physiopraxis Volume 2012 ; 10 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2013 ; 2013 ; physiopraxis Volume 2013 ; 11 ; >
+    au < finished ; exists ; 2013 ; 2013 ; physiopraxis Volume 2013 ; 11 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 2014 ; physiopraxis Volume 2014 ; 12 ; >
     au < crawling ; exists ; 2015 ; 2015 ; physiopraxis Volume 2015 ; 13 ; >
 
@@ -3597,7 +3597,7 @@
     au < finished ; finished ; 2010 ; 2010 ; physioscience Volume 2010 ; 6 ; >
     au < finished ; finished ; 2011 ; 2011 ; physioscience Volume 2011 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; 2012 ; physioscience Volume 2012 ; 8 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; physioscience Volume 2013 ; 9 ; >
+    au < finished ; exists ; 2013 ; 2013 ; physioscience Volume 2013 ; 9 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; 2014 ; physioscience Volume 2014 ; 10 ; >
     au < crawling ; exists ; 2015 ; 2015 ; physioscience Volume 2015 ; 11 ; >
 
@@ -4863,7 +4863,7 @@
    au < finished ; finished ; 2010 ; 2010 ; SYNFACTS Volume 2010 ; 6 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2011 ; 2011 ; SYNFACTS Volume 2011 ; 7 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2012 ; 2012 ; SYNFACTS Volume 2012 ; 8 ; reingest2.clockss.org:8085 >
-   au < crawling ; exists ; 2013 ; 2013 ; SYNFACTS Volume 2013 ; 9 ; >
+   au < finished ; exists ; 2013 ; 2013 ; SYNFACTS Volume 2013 ; 9 ; reingest3.clockss.org:8083 >
    au < crawling ; exists ; 2014 ; 2014 ; SYNFACTS Volume 2014 ; 10 ; >
    au < crawling ; exists ; 2015 ; 2015 ; SYNFACTS Volume 2015 ; 11 ; >
 
