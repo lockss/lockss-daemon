@@ -187,7 +187,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Comma Volume 2009 ; 2009 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Comma Volume 2010 ; 2010 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Comma Volume 2011 ; 2011 ; >
-    au < crawling ; exists ; 2012 ; Comma Volume 2012 ; 2012 ; c >
+    au < crawling ; exists ; 2012 ; Comma Volume 2012 ; 2012 ; >
     au < finished ; crawling ; 2013 ; Comma Volume 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Comma Volume 2014 ; 2014 ; >
 
@@ -290,9 +290,9 @@
 
       param[journal_id] = extr
 
-      au < crawling ; exists ; 2008 ; Extrapolation Volume 49 ; 49 ; k >
+      au < crawling ; exists ; 2008 ; Extrapolation Volume 49 ; 49 ; >
       au < crawling ; exists ; 2009 ; Extrapolation Volume 50 ; 50 ; >
-      au < crawling ; exists ; 2010 ; Extrapolation Volume 51 ; 51 ; 8 >
+      au < crawling ; exists ; 2010 ; Extrapolation Volume 51 ; 51 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Extrapolation Volume 52 ; 52 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Extrapolation Volume 53 ; 53 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Extrapolation Volume 54 ; 54 ; >
@@ -473,8 +473,8 @@
 
     param[journal_id] = mb
 
-    au < crawling ; exists ; 2008 ; Modern Believing Volume 49 ; 49 ; l >
-    au < crawling ; exists ; 2009 ; Modern Believing Volume 50 ; 50 ; 8 >
+    au < crawling ; exists ; 2008 ; Modern Believing Volume 49 ; 49 ; >
+    au < crawling ; exists ; 2009 ; Modern Believing Volume 50 ; 50 ; >
     au < finished ; crawling ; 2010 ; Modern Believing Volume 51 ; 51 ; >
     au < finished ; finished ; 2011 ; Modern Believing Volume 52 ; 52 ; >
     au < finished ; crawling ; 2012 ; Modern Believing Volume 53 ; 53 ; >
@@ -586,11 +586,11 @@
 
     param[journal_id] = quaker
 
-    au < crawling ; exists ; 2010-2011 ; Quaker Studies Volume 15 ; 15 ; c >
-    au < crawling ; exists ; 2011-2012 ; Quaker Studies Volume 16 ; 16 ; 3 >
-    au < crawling ; exists ; 2012-2013 ; Quaker Studies Volume 17 ; 17 ; 2 >
-    au < crawling ; exists ; 2013-2014 ; Quaker Studies Volume 18 ; 18 ; g >
-    au < crawling ; exists ; 2014-2015 ; Quaker Studies Volume 19 ; 19 ; l >
+    au < crawling ; exists ; 2010-2011 ; Quaker Studies Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2011-2012 ; Quaker Studies Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2012-2013 ; Quaker Studies Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2013-2014 ; Quaker Studies Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2014-2015 ; Quaker Studies Volume 19 ; 19 ; >
     au < crawling ; exists ; 2015-2016 ; Quaker Studies Volume 20 ; 20 ; >
 
   }
@@ -647,7 +647,7 @@
     au < finished ; crawling ; 2011 ; Quebec Studies Volume 52 ; 52 ; >
     au < finished ; crawling ; 2012 ; Quebec Studies Volume 53 ; 53 ; >
     au < finished ; crawling ; 2012 ; Quebec Studies Volume 54 ; 54 ; >
-    au < crawling ; exists ; 2012 ; Quebec Studies Volume Special_Issue ; Special_Issue ; e >
+    au < crawling ; exists ; 2012 ; Quebec Studies Volume Special_Issue ; Special_Issue ; >
     au < finished ; crawling ; 2013 ; Quebec Studies Volume 55 ; 55 ; >
     au < finished ; finished ; 2013 ; Quebec Studies Volume 56 ; 56 ; >
     au < crawling ; exists ; 2014 ; Quebec Studies Volume 57 ; 57 ; >
