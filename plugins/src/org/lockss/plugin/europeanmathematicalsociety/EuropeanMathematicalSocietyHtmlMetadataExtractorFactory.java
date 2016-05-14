@@ -70,7 +70,8 @@ public class EuropeanMathematicalSocietyHtmlMetadataExtractorFactory implements 
       tagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
       tagMap.put("citation_doi", MetadataField.FIELD_DOI);
       tagMap.put("citation_pdf_url", MetadataField.FIELD_ACCESS_URL);
-      //
+      // The following is/are for books
+      tagMap.put("citation_isbn", MetadataField.FIELD_ISBN);
     }
     
     @Override
