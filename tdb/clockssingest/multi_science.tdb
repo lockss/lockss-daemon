@@ -54,7 +54,7 @@
     # purchased by Sage 11/15
 
     au < crawling ; exists ; 2000 ; Advances in Structural Engineering Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2001 ; Advances in Structural Engineering Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2001 ; Advances in Structural Engineering Volume 4 ; 4 ; . >
     au < crawling ; exists ; 2002 ; Advances in Structural Engineering Volume 5 ; 5 ; >
     au < crawling ; exists ; 2003 ; Advances in Structural Engineering Volume 6 ; 6 ; >
     au < crawling ; exists ; 2004 ; Advances in Structural Engineering Volume 7 ; 7 ; >
@@ -182,10 +182,10 @@
     au < crawling ; exists ; 2002 ; International Journal of Aeroacoustics Volume 1 ; 1 ; >
     au < crawling ; exists ; 2003 ; International Journal of Aeroacoustics Volume 2 ; 2 ; >
     au < crawling ; exists ; 2004 ; International Journal of Aeroacoustics Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2005 ; International Journal of Aeroacoustics Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2005 ; International Journal of Aeroacoustics Volume 4 ; 4 ; i >
     au < crawling ; exists ; 2006 ; International Journal of Aeroacoustics Volume 5 ; 5 ; >
     au < crawling ; exists ; 2007 ; International Journal of Aeroacoustics Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2008 ; International Journal of Aeroacoustics Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2008 ; International Journal of Aeroacoustics Volume 7 ; 7 ; k >
     au < crawling ; exists ; 2009 ; International Journal of Aeroacoustics Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Aeroacoustics Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Aeroacoustics Volume 10 ; 10 ; >
@@ -331,8 +331,8 @@
     au < crawling ; exists ; 2009 ; International Journal of Innovation Science Volume 1 ; 1 ; >
     au < finished ; crawling ; 2010 ; International Journal of Innovation Science Volume 2 ; 2 ; >
     au < finished ; finished ; 2011 ; International Journal of Innovation Science Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2012 ; International Journal of Innovation Science Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2013 ; International Journal of Innovation Science Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2012 ; International Journal of Innovation Science Volume 4 ; 4 ; o >
+    au < crawling ; exists ; 2013 ; International Journal of Innovation Science Volume 5 ; 5 ; i >
     au < finished ; crawling ; 2014 ; International Journal of Innovation Science Volume 6 ; 6 ; >
     au < crawling ; exists ; 2015 ; International Journal of Innovation Science Volume 7 ; 7 ; >
     au < expected ; exists ; 2016 ; International Journal of Innovation Science Volume 8 ; 8 ; >
@@ -418,7 +418,7 @@
     au < crawling ; exists ; 2002 ; International Journal of Space Structures Volume 17 ; 17 ; >
     au < crawling ; exists ; 2003 ; International Journal of Space Structures Volume 18 ; 18 ; >
     au < crawling ; exists ; 2004 ; International Journal of Space Structures Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2005 ; International Journal of Space Structures Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2005 ; International Journal of Space Structures Volume 20 ; 20 ; c >
     au < crawling ; exists ; 2006 ; International Journal of Space Structures Volume 21 ; 21 ; >
     au < crawling ; exists ; 2007 ; International Journal of Space Structures Volume 22 ; 22 ; >
     au < crawling ; exists ; 2008 ; International Journal of Space Structures Volume 23 ; 23 ; >
@@ -574,7 +574,7 @@
     param[journal_id] = jlfnvac
     # purchased by Sage 11/15
 
-    au < crawling ; exists ; 2000 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2000 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 19 ; 19 ; s >
     au < finished ; crawling ; 2001 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 20 ; 20 ; >
     au < finished ; crawling ; 2002 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 21 ; 21 ; >
     au < finished ; finished ; 2003 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 22 ; 22 ; >
@@ -656,7 +656,7 @@
     au < finished ; finished ; 2007 ; The International Journal of Multiphysics Volume 1 ; 1 ; >
     au < finished ; finished ; 2008 ; The International Journal of Multiphysics Volume 2 ; 2 ; >
     au < finished ; finished ; 2009 ; The International Journal of Multiphysics Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2010 ; The International Journal of Multiphysics Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2010 ; The International Journal of Multiphysics Volume 4 ; 4 ; n >
     au < finished ; crawling ; 2011 ; The International Journal of Multiphysics Volume 5 ; 5 ; >
     au < finished ; crawling ; 2012 ; The International Journal of Multiphysics Volume 6 ; 6 ; >
     au < finished ; crawling ; 2013 ; The International Journal of Multiphysics Volume 7 ; 7 ; >
@@ -722,7 +722,7 @@
     au < finished ; crawling ; 2001 ; Wind Engineering Volume 25 ; 25 ; >
     au < finished ; crawling ; 2002 ; Wind Engineering Volume 26 ; 26 ; >
     au < finished ; crawling ; 2003 ; Wind Engineering Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2004 ; Wind Engineering Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2004 ; Wind Engineering Volume 28 ; 28 ; k >
     au < finished ; finished ; 2005 ; Wind Engineering Volume 29 ; 29 ; >
     au < finished ; crawling ; 2006 ; Wind Engineering Volume 30 ; 30 ; >
     au < finished ; finished ; 2007 ; Wind Engineering Volume 31 ; 31 ; >
