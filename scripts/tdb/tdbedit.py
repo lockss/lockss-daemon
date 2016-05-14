@@ -143,7 +143,7 @@ backup copy is made under 'a.tdb.bak'. If that backup file already exists, it is
 overwritten.
 '''
 
-__version__ = '0.3.1'
+__version__ = '0.3.3'
 
 import cStringIO
 import optparse
@@ -355,7 +355,7 @@ class _Au(object):
     '''
     fieldindex = self.implicitmap.get(field)
     if fieldindex is None:
-      sys.stderr.write('%s:%d: KeyError' % (self.filestr, self.lineindex)) ###DEBUG
+      sys.stderr.write('%s:%d: KeyError\n' % (self.filestr, self.lineindex)) ###DEBUG
       raise KeyError, field
     if val.strip() != self.values[fieldindex].strip():
       self.values[fieldindex] = ' %s ' % (val,)
