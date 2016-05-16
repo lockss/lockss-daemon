@@ -4,18 +4,15 @@
     name = University of Alberta
   >
 
-  {
-
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
     implicit < status ; year ; name ; param[year] ; volume ; param[base_url] >
 
     {
     
       title <
-        name = aboriginal policy studies
+        name = aboriginal policy studies ;
+        eissn = 1923-3299
       >
-
-      {
 
         param[journal_id] = aps
         
@@ -25,21 +22,21 @@
         au < manifest ; 2014 ; aboriginal policy studies Volume 3 (2014) ; 2014 ; 3 ; https://ejournals.library.ualberta.ca/ >
         au < manifest ; 2015 ; aboriginal policy studies Volume 4 (2015) ; 2015 ; 4 ; https://ejournals.library.ualberta.ca/ >
         au < manifest ; 2016 ; aboriginal policy studies Volume 5 (2016) ; 2016 ; 5 ; https://ejournals.library.ualberta.ca/ >
-        
-      }
 
     }
 
     {
     
       title <
-        name = The Agora: Political Science Undergraduate Journal
+        name = The Agora: Political Science Undergraduate Journal ;
+        eissn = 1927-4793
       >
 
       param[journal_id] = ps_sandbox
 
       au < exists ; 2011 ; The Agora: Political Science Undergraduate Journal Volume 1-2 (2011) ; 2011 ; 1-2 ; https://ejournals.library.ualberta.ca/ >
       au < exists ; 2012 ; The Agora: Political Science Undergraduate Journal Volume 2-3 (2012) ; 2012 ; 2-3 ; https://ejournals.library.ualberta.ca/ >
+      au < exists ; 2013 ; The Agora: Political Science Undergraduate Journal Volume 3 (2013) ; 2013 ; 3 ; https://ejournals.library.ualberta.ca/ >
 
     }
 
@@ -47,10 +44,8 @@
     
       title <
         name = Alternative Francophone ;
-        issn = 1916-8470
+        eissn = 1916-8470
       >
-
-      {
 
         param[journal_id] = af
 
@@ -63,8 +58,18 @@
         au < manifest ; 2014 ; Alternative Francophone Volume 1 (2014) ; 2014 ; 1 ; https://ejournals.library.ualberta.ca/ >
         au < manifest ; 2015 ; Alternative Francophone Volume 1 (2015) ; 2015 ; 1 ; https://ejournals.library.ualberta.ca/ >
         au < manifest ; 2016 ; Alternative Francophone Volume 1 (2016) ; 2016 ; 1 ; https://ejournals.library.ualberta.ca/ >
-        
-      }
+
+    }
+
+    {
+    
+      title <
+        name = Art/Research International
+      >
+
+        param[journal_id] = ari
+
+        au < expected ; 2016 ; Art/Research International Volume 1 (2016) ; 2016 ; 1 ; https://ejournals.library.ualberta.ca/ >
 
     }
 
@@ -72,19 +77,14 @@
     
       title <
         name = Canadian Journal of African Studies ;
-        issn = 1923-3051
+        eissn = 1923-3051
       >
-
-      {
 
         param[journal_id] = cjas-rcea
 
-        au < released ; 2009 ; Canadian Journal of African Studies Volume 43 ; 2009 ; 43 ; http://ejournals.library.ualberta.ca/ >
-        au < released ; 2010 ; Canadian Journal of African Studies Volume 44 ; 2010 ; 44 ; http://ejournals.library.ualberta.ca/ >
-        au < released ; 2011 ; Canadian Journal of African Studies Volume 45 ; 2011 ; 45 ; http://ejournals.library.ualberta.ca/ >
-        au < expected ; 2012 ; Canadian Journal of African Studies Volume 46 ; 2012 ; 46 ; https://ejournals.library.ualberta.ca/ >
-        
-      }
+        au < down ; 2009 ; Canadian Journal of African Studies Volume 43 ; 2009 ; 43 ; http://ejournals.library.ualberta.ca/ >
+        au < down ; 2010 ; Canadian Journal of African Studies Volume 44 ; 2010 ; 44 ; http://ejournals.library.ualberta.ca/ >
+        au < down ; 2011 ; Canadian Journal of African Studies Volume 45 ; 2011 ; 45 ; http://ejournals.library.ualberta.ca/ >
 
     }
 
@@ -106,10 +106,9 @@
     {
     
       title <
-        name = Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse
+        name = Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse ;
+        eissn = 1718-9748
       >
-
-      {
 
         param[journal_id] = cjfy
 
@@ -122,17 +121,54 @@
         au < manifest ; 2015 ; Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse Volume 7 ; 2015 ; 7 ; https://ejournals.library.ualberta.ca/ >
         au < manifest ; 2016 ; Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse Volume 8 ; 2016 ; 8 ; https://ejournals.library.ualberta.ca/ >
 
-      }
+    }
+
+    {
+    
+      title <
+        name = Canadian Journal of Learning and Technology 
+      >
+
+        #stopped with 2015. Continued by jpcoe
+        param[journal_id] = cjlt
+
+        au < exists ; 1986 ; Canadian Journal of Learning and Technology Volume 1986 ; 1986 ; 15 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 1987 ; Canadian Journal of Learning and Technology Volume 1987 ; 1987 ; 16 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 1988 ; Canadian Journal of Learning and Technology Volume 1988 ; 1988 ; 17 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 1989 ; Canadian Journal of Learning and Technology Volume 1989 ; 1989 ; 18 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 1990 ; Canadian Journal of Learning and Technology Volume 1990 ; 1990 ; 19 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 1991 ; Canadian Journal of Learning and Technology Volume 1991 ; 1991 ; 20 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 1992 ; Canadian Journal of Learning and Technology Volume 1992 ; 1992 ; 21 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 1993 ; Canadian Journal of Learning and Technology Volume 1993 ; 1993 ; 22 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 1994 ; Canadian Journal of Learning and Technology Volume 1994 ; 1994 ; 23 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 1995 ; Canadian Journal of Learning and Technology Volume 1995 ; 1995 ; 24 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 1996 ; Canadian Journal of Learning and Technology Volume 1996 ; 1996 ; 25 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 1997 ; Canadian Journal of Learning and Technology Volume 1997 ; 1997 ; 26 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 1998 ; Canadian Journal of Learning and Technology Volume 1998 ; 1998 ; 27 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 1999 ; Canadian Journal of Learning and Technology Volume 1999 ; 1999 ; 27 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2002 ; Canadian Journal of Learning and Technology Volume 2002 ; 2002 ; 28 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2003 ; Canadian Journal of Learning and Technology Volume 2003 ; 2003 ; 29 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2004 ; Canadian Journal of Learning and Technology Volume 2004 ; 2004 ; 30 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2005 ; Canadian Journal of Learning and Technology Volume 2005 ; 2005 ; 31 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2006 ; Canadian Journal of Learning and Technology Volume 2006 ; 2006 ; 32 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2007 ; Canadian Journal of Learning and Technology Volume 2007 ; 2007 ; 33 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2008 ; Canadian Journal of Learning and Technology Volume 2008 ; 2008 ; 34 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2009 ; Canadian Journal of Learning and Technology Volume 2009 ; 2009 ; 35 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2010 ; Canadian Journal of Learning and Technology Volume 2010 ; 2010 ; 36 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2011 ; Canadian Journal of Learning and Technology Volume 2011 ; 2011 ; 37 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2012 ; Canadian Journal of Learning and Technology Volume 2012 ; 2012 ; 38 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2013 ; Canadian Journal of Learning and Technology Volume 2013 ; 2013 ; 39 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2014 ; Canadian Journal of Learning and Technology Volume 2014 ; 2014 ; 40 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2015 ; Canadian Journal of Learning and Technology Volume 2015 ; 2015 ; 41 ; https://ejournals.library.ualberta.ca/ >
 
     }
 
     {
     
       title <
-        name = Canadian Journal of Sociology
+        name = Canadian Journal of Sociology ;
+        eissn = 1710-1123
       >
-
-      {
 
         param[journal_id] = cjs
 
@@ -146,14 +182,13 @@
         au < manifest ; 2015 ; Canadian Journal of Sociology Volume 40 ; 2015 ; 40 ; https://ejournals.library.ualberta.ca/ >
         au < manifest ; 2016 ; Canadian Journal of Sociology Volume 41 ; 2016 ; 41 ; https://ejournals.library.ualberta.ca/ >
 
-      }
-
     }
 
     {
     
       title <
-        name = Canadian Journal of University Continuing Education
+        name = Canadian Journal of University Continuing Education ;
+        eissn = 0318-9090
       >
 
       param[journal_id] = cjuce-rcepu
@@ -175,7 +210,7 @@
     
       title <
         name = Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée ;
-        issn = 0319-051X
+        eissn = 0319-051X
       >
 
       param[journal_id] = crcl
@@ -222,6 +257,7 @@
       au < exists ; 2013 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 40 ; 2013 ; 40 ; https://ejournals.library.ualberta.ca/ >
       au < exists ; 2014 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 41 ; 2014 ; 41 ; https://ejournals.library.ualberta.ca/ >
       au < exists ; 2015 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 42 ; 2015 ; 42 ; https://ejournals.library.ualberta.ca/ >
+      au < expected ; 2016 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 43 ; 2016 ; 43 ; https://ejournals.library.ualberta.ca/ >
 
     }
 
@@ -276,16 +312,16 @@
       au < manifest ; 2013 ; Canadian Studies in Population Volume 40 ; 2013 ; 40 ; https://ejournals.library.ualberta.ca/ >
       au < manifest ; 2014 ; Canadian Studies in Population Volume 41 ; 2014 ; 41 ; https://ejournals.library.ualberta.ca/ >
       au < manifest ; 2015 ; Canadian Studies in Population Volume 42 ; 2015 ; 42 ; https://ejournals.library.ualberta.ca/ >
+      au < expected ; 2016 ; Canadian Studies in Population Volume 43 ; 2016 ; 43 ; https://ejournals.library.ualberta.ca/ >
 
     }
 
     {
     
       title <
-        name = Complicity: An International Journal of Complexity and Education
+        name = Complicity: An International Journal of Complexity and Education ;
+        eissn = 1710-5668
       >
-
-      {
 
         param[journal_id] = complicity
 
@@ -301,8 +337,7 @@
         au < manifest ; 2013 ; Complicity: An International Journal of Complexity and Education Volume 10 ; 2013 ; 10 ; https://ejournals.library.ualberta.ca/ >
         au < manifest ; 2014 ; Complicity: An International Journal of Complexity and Education Volume 11 ; 2014 ; 11 ; https://ejournals.library.ualberta.ca/ >
         au < manifest ; 2015 ; Complicity: An International Journal of Complexity and Education Volume 12 ; 2015 ; 12 ; https://ejournals.library.ualberta.ca/ >
-        
-      }
+        au < expected ; 2016 ; Complicity: An International Journal of Complexity and Education Volume 13 ; 2016 ; 13 ; https://ejournals.library.ualberta.ca/ >
 
     }
 
@@ -321,13 +356,15 @@
       au < manifest ; 2013 ; Constellations Volume 5-6 ; 2013 ; 5-6 ; https://ejournals.library.ualberta.ca/ >
       au < manifest ; 2014 ; Constellations Volume 7-8 ; 2014 ; 7-8 ; https://ejournals.library.ualberta.ca/ >
       au < manifest ; 2015 ; Constellations Volume 9-10 ; 2015 ; 9-10 ; https://ejournals.library.ualberta.ca/ >
+      au < expected ; 2016 ; Constellations Volume 11-12 ; 2016 ; 11-12 ; https://ejournals.library.ualberta.ca/ >
 
     }
 
     {
     
       title <
-        name = Constitutional Forum / Forum constitutionnel
+        name = Constitutional Forum / Forum constitutionnel ;
+        eissn = 1927-4165
       >
 
       param[journal_id] = constitutional_forum
@@ -361,7 +398,8 @@
     {
     
       title <
-        name = Cultural and Pedagogical Inquiry
+        name = Cultural and Pedagogical Inquiry ;
+        eissn = 1916-3460
       >
 
       param[journal_id] = cpi
@@ -375,7 +413,8 @@
     {
     
       title <
-        name = The Deakin Review of Children's Literature
+        name = The Deakin Review of Children's Literature ;
+        eissn = 1916-3460
       >
 
       param[journal_id] = deakinreview
@@ -392,10 +431,9 @@
     {
     
       title <
-        name = ESC: English Studies in Canada
+        name = ESC: English Studies in Canada ;
+        eissn = 1913-4835
       >
-
-      {
 
         param[journal_id] = esc
 
@@ -410,8 +448,6 @@
         au < manifest ; 2011 ; ESC: English Studies in Canada Volume 37 ; 2011 ; 37 ; https://ejournals.library.ualberta.ca/ >
         au < manifest ; 2012 ; ESC: English Studies in Canada Volume 38 ; 2012 ; 38 ; https://ejournals.library.ualberta.ca/ >
         au < manifest ; 2013 ; ESC: English Studies in Canada Volume 39 ; 2013 ; 39 ; https://ejournals.library.ualberta.ca/ >
-        
-      }
 
     }
 
@@ -421,15 +457,11 @@
         name = Eureka: The University of Alberta Science Undergraduate Research Journal
       >
 
-      {
-
         param[journal_id] = eureka
 
         au < released ; 2010 ; Eureka: The University of Alberta Science Undergraduate Research Journal Volume 1 ; 2010 ; 1 ; http://ejournals.library.ualberta.ca/ >
         au < released ; 2011 ; Eureka: The University of Alberta Science Undergraduate Research Journal Volume 2 ; 2011 ; 2 ; http://ejournals.library.ualberta.ca/ >
         au < manifest ; 2012 ; Eureka: The University of Alberta Science Undergraduate Research Journal Volume 3 ; 2012 ; 3 ; https://ejournals.library.ualberta.ca/ >
-        
-      }
 
     }
 
@@ -438,8 +470,6 @@
       title <
         name = Evidence Based Library and Information Practice
       >
-
-      {
 
         param[journal_id] = eblip
 
@@ -454,27 +484,6 @@
         au < manifest ; 2014 ; Evidence Based Library and Information Practice Volume 9 ; 2014 ; 9 ; https://ejournals.library.ualberta.ca/ >
         au < manifest ; 2015 ; Evidence Based Library and Information Practice Volume 10 ; 2015 ; 10 ; https://ejournals.library.ualberta.ca/ >
         au < manifest ; 2016 ; Evidence Based Library and Information Practice Volume 11 ; 2016 ; 11 ; https://ejournals.library.ualberta.ca/ >
-      
-      }
-
-    }
-
-    {
-    
-      title <
-        name = Exceptionality Education International
-      >
-
-      param[journal_id] = eei
-      comment[eei1] = subscription title
-      # moved to Digital Commons http://ir.lib.uwo.ca/eei/
-
-      au < exists ; 2007 ; Exceptionality Education International Volume 17 ; 2007 ; 17 ; https://ejournals.library.ualberta.ca/ >
-      au < exists ; 2008 ; Exceptionality Education International Volume 18 ; 2008 ; 18 ; https://ejournals.library.ualberta.ca/ >
-      au < exists ; 2009 ; Exceptionality Education International Volume 19 ; 2009 ; 19 ; https://ejournals.library.ualberta.ca/ >
-      au < exists ; 2010 ; Exceptionality Education International Volume 20 ; 2010 ; 20 ; https://ejournals.library.ualberta.ca/ >
-      au < exists ; 2011 ; Exceptionality Education International Volume 21 ; 2011 ; 21 ; https://ejournals.library.ualberta.ca/ >
-      au < exists ; 2012 ; Exceptionality Education International Volume 22 ; 2012 ; 22 ; https://ejournals.library.ualberta.ca/ >
 
     }
 
@@ -485,12 +494,13 @@
         eissn = 2369-775X
       >
 
+      # note base url is different: https://journals.library.ualberta.ca/hssa
       param[journal_id] = hssa
 
-      au < manifest ; 2013 ; History of Science in South Asia Volume 1 ; 2013 ; 1 ; https://ejournals.library.ualberta.ca/ >
-      au < manifest ; 2014 ; History of Science in South Asia Volume 2 ; 2014 ; 2 ; https://ejournals.library.ualberta.ca/ >
-      au < manifest ; 2015 ; History of Science in South Asia Volume 3 ; 2015 ; 3 ; https://ejournals.library.ualberta.ca/ >
-      au < expected ; 2016 ; History of Science in South Asia Volume 4 ; 2016 ; 4 ; https://ejournals.library.ualberta.ca/ >
+      au < exists ; 2013 ; History of Science in South Asia Volume 1 ; 2013 ; 1 ; https://journals.library.ualberta.ca/hssa/ >
+      au < exists ; 2014 ; History of Science in South Asia Volume 2 ; 2014 ; 2 ; https://journals.library.ualberta.ca/hssa/ >
+      au < exists ; 2015 ; History of Science in South Asia Volume 3 ; 2015 ; 3 ; https://journals.library.ualberta.ca/hssa/ >
+      au < expected ; 2016 ; History of Science in South Asia Volume 4 ; 2016 ; 4 ; https://journals.library.ualberta.ca/hssa/ >
 
     }
 
@@ -498,10 +508,8 @@
     
       title <
         name = Imaginations: Journal of Cross-Cultural Image Studies / Revue d'Études Interculturelles de l'Image ;
-        issn = 1918-8439
+        eissn = 1918-8439
       >
-
-      {
 
         param[journal_id] = imaginations
 
@@ -511,19 +519,18 @@
         au < manifest ; 2013 ; Imaginations: Journal of Cross-Cultural Image Studies / Revue d'Études Interculturelles de l'Image Volume 4 ; 2013 ; 4 ; https://ejournals.library.ualberta.ca/ >
         au < manifest ; 2014 ; Imaginations: Journal of Cross-Cultural Image Studies / Revue d'Études Interculturelles de l'Image Volume 5 ; 2014 ; 5 ; https://ejournals.library.ualberta.ca/ >
         au < manifest ; 2015 ; Imaginations: Journal of Cross-Cultural Image Studies / Revue d'Études Interculturelles de l'Image Volume 6 ; 2015 ; 6 ; https://ejournals.library.ualberta.ca/ >
-        
-      }
+        au < expected ; 2016 ; Imaginations: Journal of Cross-Cultural Image Studies / Revue d'Études Interculturelles de l'Image Volume 7 ; 2016 ; 7 ; https://ejournals.library.ualberta.ca/ >
 
     }
 
     {
     
       title <
-        name = International Journal of Qualitative Methods
+        name = International Journal of Qualitative Methods ;
+        eissn = 1609-4069
       >
 
-      {
-
+        # moved to Sage as of the end of 2015.
         param[journal_id] = ijqm
         
         au < released ; 2004 ; International Journal of Qualitative Methods Volume 3 ; 2004 ; 3 ; http://ejournals.library.ualberta.ca/ >
@@ -539,14 +546,13 @@
         au < manifest ; 2014 ; International Journal of Qualitative Methods Volume 13 ; 2014 ; 13 ; https://ejournals.library.ualberta.ca/ >
         au < manifest ; 2015 ; International Journal of Qualitative Methods Volume 14 ; 2015 ; 14 ; https://ejournals.library.ualberta.ca/ >
 
-      }
-
     }
 
     {
     
       title <
-        name = invoke
+        name = invoke ;
+        eissn = 1927-7091
       >
 
       param[journal_id] = invoke
@@ -558,10 +564,9 @@
     {
     
       title <
-        name = Journal of Contemporary Issues in Education
+        name = Journal of Contemporary Issues in Education ;
+        eissn = 1718-4770
       >
-
-      {
 
         param[journal_id] = jcie
 
@@ -575,27 +580,15 @@
         au < manifest ; 2013 ; Journal of Contemporary Issues in Education Volume 8 ; 2013 ; 8 ; https://ejournals.library.ualberta.ca/ >
         au < manifest ; 2014 ; Journal of Contemporary Issues in Education Volume 9 ; 2014 ; 9 ; https://ejournals.library.ualberta.ca/ >
         au < manifest ; 2015 ; Journal of Contemporary Issues in Education Volume 10 ; 2015 ; 10 ; https://ejournals.library.ualberta.ca/ >
-
-      }
-
-    }
-
-    {
-    
-      title <
-        name = Journal of Curriculum and Pedagogy
-      >
-
-      param[journal_id] = jcp
-
-      au < expected ; 2012 ; Journal of Curriculum and Pedagogy Volume 1 ; 2012 ; 1 ; https://ejournals.library.ualberta.ca/ >
+        au < expected ; 2016 ; Journal of Contemporary Issues in Education Volume 11 ; 2016 ; 11 ; https://ejournals.library.ualberta.ca/ >
 
     }
 
     {
     
       title <
-        name = Journal of Pharmacy & Pharmaceutical Sciences
+        name = Journal of Pharmacy & Pharmaceutical Sciences ;
+        eissn = 1482-1826
       >
 
       param[journal_id] = jpps
@@ -609,17 +602,60 @@
       au < manifest ; 2013 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 16 ; 2013 ; 16 ; https://ejournals.library.ualberta.ca/ >
       au < manifest ; 2014 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 17 ; 2014 ; 17 ; https://ejournals.library.ualberta.ca/ >
       au < manifest ; 2015 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 18 ; 2015 ; 18 ; https://ejournals.library.ualberta.ca/ >
+      au < expected ; 2016 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 19 ; 2016 ; 19 ; https://ejournals.library.ualberta.ca/ >
 
     }
 
     {
     
       title <
-        name = Language and Literacy
+        name = Journal of Professional Continuing and Online Education ;
+        eissn = 2371-0071
+      >
+
+      #continues cjuce-rcepu
+      #note different base_url https://journals.library.ualberta.ca/jpcoe/
+      param[journal_id] = jpcoe
+
+      au < expected ; 2016 ; Journal of Professional Continuing and Online Education Volume 2016 ; 2016 ; 1 ; https://journals.library.ualberta.ca/jpcoe/ >
+
+    }
+
+    {
+    
+      title <
+        name = Journal of the Canadian Health Libraries Association / Journal de l'Association des bibliothèques de la santé du Canada
+      >
+
+        param[journal_id] = jchla
+
+        au < exists ; 2004 ; Journal of the Canadian Health Libraries Association / Journal de l'Association des bibliothèques de la santé du Canada Volume 2004 ; 2004 ; 25 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2005 ; Journal of the Canadian Health Libraries Association / Journal de l'Association des bibliothèques de la santé du Canada Volume 2005 ; 2005 ; 26 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2006 ; Journal of the Canadian Health Libraries Association / Journal de l'Association des bibliothèques de la santé du Canada Volume 2006 ; 2006 ; 27 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2007 ; Journal of the Canadian Health Libraries Association / Journal de l'Association des bibliothèques de la santé du Canada Volume 2007 ; 2007 ; 28 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2008 ; Journal of the Canadian Health Libraries Association / Journal de l'Association des bibliothèques de la santé du Canada Volume 2008 ; 2008 ; 29 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2009 ; Journal of the Canadian Health Libraries Association / Journal de l'Association des bibliothèques de la santé du Canada Volume 2009 ; 2009 ; 30 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2010 ; Journal of the Canadian Health Libraries Association / Journal de l'Association des bibliothèques de la santé du Canada Volume 2010 ; 2010 ; 31 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2011 ; Journal of the Canadian Health Libraries Association / Journal de l'Association des bibliothèques de la santé du Canada Volume 2011 ; 2011 ; 32 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2012 ; Journal of the Canadian Health Libraries Association / Journal de l'Association des bibliothèques de la santé du Canada Volume 2012 ; 2012 ; 33 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2013 ; Journal of the Canadian Health Libraries Association / Journal de l'Association des bibliothèques de la santé du Canada Volume 2013 ; 2013 ; 34 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2014 ; Journal of the Canadian Health Libraries Association / Journal de l'Association des bibliothèques de la santé du Canada Volume 2014 ; 2014 ; 35 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2015 ; Journal of the Canadian Health Libraries Association / Journal de l'Association des bibliothèques de la santé du Canada Volume 2015 ; 2015 ; 36 ; https://ejournals.library.ualberta.ca/ >
+        au < expected ; 2016 ; Journal of the Canadian Health Libraries Association / Journal de l'Association des bibliothèques de la santé du Canada Volume 2016 ; 2016 ; 37 ; https://ejournals.library.ualberta.ca/ >
+
+    }
+
+    {
+    
+      title <
+        name = Language and Literacy ;
+        eissn = 1496-0974
       >
 
       param[journal_id] = langandlit
 
+      au < exists ; 1999 ; Language and Literacy Volume 1 ; 1999 ; 1 ; https://ejournals.library.ualberta.ca/ >
+      au < manifest ; 2000 ; Language and Literacy Volume 2 ; 2000 ; 2 ; https://ejournals.library.ualberta.ca/ >
       au < manifest ; 2001 ; Language and Literacy Volume 3 ; 2001 ; 3 ; https://ejournals.library.ualberta.ca/ >
       au < manifest ; 2002 ; Language and Literacy Volume 4 ; 2002 ; 4 ; https://ejournals.library.ualberta.ca/ >
       au < manifest ; 2003 ; Language and Literacy Volume 5 ; 2003 ; 5 ; https://ejournals.library.ualberta.ca/ >
@@ -635,6 +671,7 @@
       au < manifest ; 2013 ; Language and Literacy Volume 15 ; 2013 ; 15 ; https://ejournals.library.ualberta.ca/ >
       au < manifest ; 2014 ; Language and Literacy Volume 16 ; 2014 ; 16 ; https://ejournals.library.ualberta.ca/ >
       au < manifest ; 2015 ; Language and Literacy Volume 17 ; 2015 ; 17 ; https://ejournals.library.ualberta.ca/ >
+      au < manifest ; 2016 ; Language and Literacy Volume 18 ; 2016 ; 18 ; https://ejournals.library.ualberta.ca/ >
 
     }
 
@@ -653,7 +690,8 @@
     {
     
       title <
-        name = Multilingual Discourses
+        name = Multilingual Discourses ;
+        eissn = 1929-1515
       >
 
       param[journal_id] = multilingualdiscourses
@@ -667,10 +705,9 @@
     {
     
       title <
-        name = Journal of Hebrew Scriptures
+        name = Journal of Hebrew Scriptures ;
+        eissn = 1203-1542
       >
-
-      {
 
         param[journal_id] = jhs
 
@@ -688,17 +725,14 @@
         au < released ; 2012 ; Journal of Hebrew Scriptures Volume 12 ; 2012 ; 12 ; http://ejournals.library.ualberta.ca/ >
         au < manifest ; 2013 ; Journal of Hebrew Scriptures Volume 13 ; 2013 ; 13 ; https://ejournals.library.ualberta.ca/ >
 
-      }
-
     }
 
     {
     
       title <
-        name = Past Imperfect
+        name = Past Imperfect ;
+        eissn = 1718-4487
       >
-
-      {
 
         param[journal_id] = pi
 
@@ -721,29 +755,14 @@
         au < manifest ; 2011 ; Past Imperfect Volume 17 ; 2011 ; 17 ; https://ejournals.library.ualberta.ca/ >
         au < manifest ; 2012 ; Past Imperfect Volume 18 ; 2012 ; 18 ; https://ejournals.library.ualberta.ca/ >
 
-      }
-
     }
 
     {
     
       title <
-        name = Perspectives and Dialogues: From the Base of the Ivory Tower
+        name = TranscUlturAl ;
+        eissn = 1920-0323
       >
-
-      param[journal_id] = pdit
-
-      au < expected ; 2012 ; Perspectives and Dialogues: From the Base of the Ivory Tower Volume 1 ; 2012 ; 1 ; https://ejournals.library.ualberta.ca/ >
-
-    }
-
-    {
-    
-      title <
-        name = TranscUlturAl
-      >
-
-      {
 
         param[journal_id] = tc
 
@@ -753,10 +772,19 @@
         au < released ; 2011 ; TranscUlturAl Volume 1 (2011) ; 2011 ; 1 ; http://ejournals.library.ualberta.ca/ >
         au < expected ; 2012 ; TranscUlturAl Volume 1 (2012) ; 2012 ; 1 ; https://ejournals.library.ualberta.ca/ >
 
-      }
-
     }
 
-  }
+    {
+    
+      title <
+        name = Vertebrate Anatomy Morphology Palaeontology ;
+        eissn = 2292-1389
+      >
+
+      param[journal_id] = VAMP
+
+      au < exists ; 2014 ; Vertebrate Anatomy Morphology Palaeontology Volume 2014 ; 2014 ; 1 ; https://ejournals.library.ualberta.ca/ >
+
+    }
 
 }
