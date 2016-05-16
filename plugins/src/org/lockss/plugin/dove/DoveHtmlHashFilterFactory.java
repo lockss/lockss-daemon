@@ -67,6 +67,9 @@ public class DoveHtmlHashFilterFactory implements FilterFactory {
       
       HtmlNodeFilters.tag("script"),
       HtmlNodeFilters.tag("noscript"),
+      // video capture has a "views" counter
+      //https://www.dovepress.com/patient-factors-influencing-dermal-filler-complications-prevention-ass-peer-reviewed-article-CCID
+      HtmlNodeFilters.tagWithAttribute("div", "class", "video-figcaption"),
 
       };
 
