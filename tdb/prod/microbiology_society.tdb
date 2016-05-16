@@ -217,7 +217,7 @@
       au < doNotProcess ; 2012 ; International Journal of Systematic and Evolutionary Microbiology Volume 62 ; 62 >
       au < exists ; 2013 ; International Journal of Systematic and Evolutionary Microbiology Volume 63 ; 63 >
       au < exists ; 2014 ; International Journal of Systematic and Evolutionary Microbiology Volume 64 ; 64 >
-      au < testing ; 2015 ; International Journal of Systematic and Evolutionary Microbiology Volume 65 ; 65 >
+      au < exists ; 2015 ; International Journal of Systematic and Evolutionary Microbiology Volume 65 ; 65 >
       au < expected ; 2016 ; International Journal of Systematic and Evolutionary Microbiology Volume 66 ; 66 >
 
     }
@@ -741,7 +741,7 @@
       au < doNotProcess ; 2010 ; Journal of General Virology Volume 91 ; 91 >
       au < doNotProcess ; 2011 ; Journal of General Virology Volume 92 ; 92 >
       au < doNotProcess ; 2012 ; Journal of General Virology Volume 93 ; 93 >
-      au < testing ; 2013 ; Journal of General Virology Volume 94 ; 94 >
+      au < ready ; 2013 ; Journal of General Virology Volume 94 ; 94 >
       au < exists ; 2014 ; Journal of General Virology Volume 95 ; 95 >
       au < exists ; 2015 ; Journal of General Virology Volume 96 ; 96 >
       au < exists ; 2016 ; Journal of General Virology Volume 97 ; 97 >
@@ -922,7 +922,7 @@
       param[journal_id] = jmmcr
 
       au < exists ; 2014 ; JMM Case Reports Volume 1 ; 1 >
-      au < testing ; 2015 ; JMM Case Reports Volume 2 ; 2 >
+      au < ready ; 2015 ; JMM Case Reports Volume 2 ; 2 >
       au < expected ; 2016 ; JMM Case Reports Volume 3 ; 3 >
 
     }
@@ -1017,7 +1017,7 @@
       au < doNotProcess ; 2011 ; Microbiology Volume 157 ; 157 >
       au < doNotProcess ; 2012 ; Microbiology Volume 158 ; 158 >
       au < exists ; 2013 ; Microbiology Volume 159 ; 159 >
-      au < testing ; 2014 ; Microbiology Volume 160 ; 160 >
+      au < ready ; 2014 ; Microbiology Volume 160 ; 160 >
       au < exists ; 2015 ; Microbiology Volume 161 ; 161 >
       au < exists ; 2016 ; Microbiology Volume 162 ; 162 >
 
