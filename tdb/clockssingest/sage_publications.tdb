@@ -469,22 +469,22 @@
       param[base_url] = http://adt.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2000 ; Adsorption Science & Technology Volume 18 ; 18 ; >
-      au < exists ; exists ; 2001 ; Adsorption Science & Technology Volume 19 ; 19 ; >
-      au < exists ; exists ; 2002 ; Adsorption Science & Technology Volume 20 ; 20 ; >
-      au < exists ; exists ; 2003 ; Adsorption Science & Technology Volume 21 ; 21 ; >
-      au < exists ; exists ; 2004 ; Adsorption Science & Technology Volume 22 ; 22 ; >
-      au < exists ; exists ; 2005 ; Adsorption Science & Technology Volume 23 ; 23 ; >
-      au < exists ; exists ; 2006 ; Adsorption Science & Technology Volume 24 ; 24 ; >
-      au < exists ; exists ; 2007 ; Adsorption Science & Technology Volume 25 ; 25 ; >
-      au < exists ; exists ; 2008 ; Adsorption Science & Technology Volume 26 ; 26 ; >
-      au < exists ; exists ; 2009 ; Adsorption Science & Technology Volume 27 ; 27 ; >
-      au < exists ; exists ; 2010 ; Adsorption Science & Technology Volume 28 ; 28 ; >
-      au < exists ; exists ; 2011 ; Adsorption Science & Technology Volume 29 ; 29 ; >
-      au < exists ; exists ; 2012 ; Adsorption Science & Technology Volume 30 ; 30 ; >
-      au < exists ; exists ; 2013 ; Adsorption Science & Technology Volume 31 ; 31 ; >
-      au < exists ; exists ; 2014 ; Adsorption Science & Technology Volume 32 ; 32 ; >
-      au < exists ; exists ; 2015 ; Adsorption Science & Technology Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2000 ; Adsorption Science & Technology Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2001 ; Adsorption Science & Technology Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2002 ; Adsorption Science & Technology Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2003 ; Adsorption Science & Technology Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2004 ; Adsorption Science & Technology Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2005 ; Adsorption Science & Technology Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2006 ; Adsorption Science & Technology Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2007 ; Adsorption Science & Technology Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2008 ; Adsorption Science & Technology Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2009 ; Adsorption Science & Technology Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2010 ; Adsorption Science & Technology Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2011 ; Adsorption Science & Technology Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2012 ; Adsorption Science & Technology Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2013 ; Adsorption Science & Technology Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2014 ; Adsorption Science & Technology Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2015 ; Adsorption Science & Technology Volume 33 ; 33 ; >
       au < manifest ; exists ; 2016 ; Adsorption Science & Technology Volume 34 ; 34 ; >
 
   }
@@ -760,22 +760,22 @@
       param[base_url] = http://ase.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2000 ; Advances in Structural Engineering Volume 3 ; 3 ; >
-      au < exists ; exists ; 2001 ; Advances in Structural Engineering Volume 4 ; 4 ; >
-      au < exists ; exists ; 2002 ; Advances in Structural Engineering Volume 5 ; 5 ; >
-      au < exists ; exists ; 2003 ; Advances in Structural Engineering Volume 6 ; 6 ; >
-      au < exists ; exists ; 2004 ; Advances in Structural Engineering Volume 7 ; 7 ; >
-      au < exists ; exists ; 2005 ; Advances in Structural Engineering Volume 8 ; 8 ; >
-      au < exists ; exists ; 2006 ; Advances in Structural Engineering Volume 9 ; 9 ; >
-      au < exists ; exists ; 2007 ; Advances in Structural Engineering Volume 10 ; 10 ; >
-      au < exists ; exists ; 2008 ; Advances in Structural Engineering Volume 11 ; 11 ; >
-      au < exists ; exists ; 2009 ; Advances in Structural Engineering Volume 12 ; 12 ; >
-      au < exists ; exists ; 2010 ; Advances in Structural Engineering Volume 13 ; 13 ; >
-      au < exists ; exists ; 2011 ; Advances in Structural Engineering Volume 14 ; 14 ; >
-      au < exists ; exists ; 2012 ; Advances in Structural Engineering Volume 15 ; 15 ; >
-      au < exists ; exists ; 2013 ; Advances in Structural Engineering Volume 16 ; 16 ; >
-      au < exists ; exists ; 2014 ; Advances in Structural Engineering Volume 17 ; 17 ; >
-      au < exists ; exists ; 2015 ; Advances in Structural Engineering Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2000 ; Advances in Structural Engineering Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2001 ; Advances in Structural Engineering Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2002 ; Advances in Structural Engineering Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2003 ; Advances in Structural Engineering Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2004 ; Advances in Structural Engineering Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2005 ; Advances in Structural Engineering Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2006 ; Advances in Structural Engineering Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2007 ; Advances in Structural Engineering Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2008 ; Advances in Structural Engineering Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2009 ; Advances in Structural Engineering Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2010 ; Advances in Structural Engineering Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2011 ; Advances in Structural Engineering Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2012 ; Advances in Structural Engineering Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2013 ; Advances in Structural Engineering Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2014 ; Advances in Structural Engineering Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2015 ; Advances in Structural Engineering Volume 18 ; 18 ; >
       au < manifest ; exists ; 2016 ; Advances in Structural Engineering Volume 19 ; 19 ; >
 
   }
@@ -1239,12 +1239,12 @@
       param[base_url] = http://acs.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2011 ; The American Journal of Cosmetic Surgery Volume 28 ; 28 ; >
-      au < exists ; exists ; 2012 ; The American Journal of Cosmetic Surgery Volume 29 ; 29 ; >
-      au < exists ; exists ; 2013 ; The American Journal of Cosmetic Surgery Volume 30 ; 30 ; >
-      au < exists ; exists ; 2014 ; The American Journal of Cosmetic Surgery Volume 31 ; 31 ; >
-      au < exists ; exists ; 2015 ; The American Journal of Cosmetic Surgery Volume 32 ; 32 ; >
-      au < exists ; exists ; 2016 ; The American Journal of Cosmetic Surgery Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2011 ; The American Journal of Cosmetic Surgery Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2012 ; The American Journal of Cosmetic Surgery Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2013 ; The American Journal of Cosmetic Surgery Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2014 ; The American Journal of Cosmetic Surgery Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2015 ; The American Journal of Cosmetic Surgery Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2016 ; The American Journal of Cosmetic Surgery Volume 33 ; 33 ; >
 
   }
 
@@ -1354,7 +1354,7 @@
       au < doesNotExist ; doesNotExist ; 0 ; American Journal of Health Promotion Volume 27 ; 27 ; >
       au < doesNotExist ; doesNotExist ; 0 ; American Journal of Health Promotion Volume 28 ; 28 ; >
       au < doesNotExist ; doesNotExist ; 0 ; American Journal of Health Promotion Volume 29 ; 29 ; >
-      au < exists ; exists ; 2016 ; American Journal of Health Promotion Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2016 ; American Journal of Health Promotion Volume 30 ; 30 ; >
 
   }
 
@@ -2857,26 +2857,26 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://apb.sagepub.com/
 
-      au < exists ; exists ; 1996 ; Applied Biosafety Volume 1 ; 1 ; >
-      au < exists ; exists ; 1997 ; Applied Biosafety Volume 2 ; 2 ; >
-      au < exists ; exists ; 1998 ; Applied Biosafety Volume 3 ; 3 ; >
-      au < exists ; exists ; 1999 ; Applied Biosafety Volume 4 ; 4 ; >
-      au < exists ; exists ; 2000 ; Applied Biosafety Volume 5 ; 5 ; >
-      au < exists ; exists ; 2001 ; Applied Biosafety Volume 6 ; 6 ; >
-      au < exists ; exists ; 2002 ; Applied Biosafety Volume 7 ; 7 ; >
-      au < exists ; exists ; 2003 ; Applied Biosafety Volume 8 ; 8 ; >
-      au < exists ; exists ; 2004 ; Applied Biosafety Volume 9 ; 9 ; >
-      au < exists ; exists ; 2005 ; Applied Biosafety Volume 10 ; 10 ; >
-      au < exists ; exists ; 2006 ; Applied Biosafety Volume 11 ; 11 ; >
-      au < exists ; exists ; 2007 ; Applied Biosafety Volume 12 ; 12 ; >
-      au < exists ; exists ; 2008 ; Applied Biosafety Volume 13 ; 13 ; >
-      au < exists ; exists ; 2009 ; Applied Biosafety Volume 14 ; 14 ; >
-      au < exists ; exists ; 2010 ; Applied Biosafety Volume 15 ; 15 ; >
-      au < exists ; exists ; 2011 ; Applied Biosafety Volume 16 ; 16 ; >
-      au < exists ; exists ; 2012 ; Applied Biosafety Volume 17 ; 17 ; >
-      au < exists ; exists ; 2013 ; Applied Biosafety Volume 18 ; 18 ; >
-      au < exists ; exists ; 2014 ; Applied Biosafety Volume 19 ; 19 ; >
-      au < exists ; exists ; 2015 ; Applied Biosafety Volume 20 ; 20 ; >
+      au < manifest ; exists ; 1996 ; Applied Biosafety Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1997 ; Applied Biosafety Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1998 ; Applied Biosafety Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1999 ; Applied Biosafety Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2000 ; Applied Biosafety Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2001 ; Applied Biosafety Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2002 ; Applied Biosafety Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2003 ; Applied Biosafety Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2004 ; Applied Biosafety Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2005 ; Applied Biosafety Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2006 ; Applied Biosafety Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2007 ; Applied Biosafety Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2008 ; Applied Biosafety Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2009 ; Applied Biosafety Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2010 ; Applied Biosafety Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2011 ; Applied Biosafety Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2012 ; Applied Biosafety Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2013 ; Applied Biosafety Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2014 ; Applied Biosafety Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2015 ; Applied Biosafety Volume 20 ; 20 ; >
       au < expected ; exists ; 2016 ; Applied Biosafety Volume 21 ; 21 ; >
 
   }
@@ -3205,7 +3205,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://acp.sagepub.com/
 
-    au < exists ; exists ; 2016 ; Asian Journal of Comparative Politics Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2016 ; Asian Journal of Comparative Politics Volume 1 ; 1 ; >
 
   }
 
@@ -4338,8 +4338,8 @@
         au < zapped ; finished ; 2012 ; British Journal of Pain Volume 6 ; 6 ; >
         au < finished ; finished ; 2013 ; British Journal of Pain Volume 7 ; 7 ; >
         au < finished ; finished ; 2014 ; British Journal of Pain Volume 8 ; 8 ; >
-        au < exists ; exists ; 2015 ; British Journal of Pain Volume 9 ; 9 ; >
-        au < expected ; exists ; 2016 ; British Journal of Pain Volume 10 ; 10 ; >
+        au < manifest ; exists ; 2015 ; British Journal of Pain Volume 9 ; 9 ; >
+        au < manifest ; exists ; 2016 ; British Journal of Pain Volume 10 ; 10 ; >
 
       }
 
@@ -4356,23 +4356,23 @@
       param[base_url] = http://bpi.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1999 ; The British Journal of Politics and International Relations Volume 1 ; 1 ; >
-      au < exists ; exists ; 2000 ; The British Journal of Politics and International Relations Volume 2 ; 2 ; >
-      au < exists ; exists ; 2001 ; The British Journal of Politics and International Relations Volume 3 ; 3 ; >
-      au < exists ; exists ; 2002 ; The British Journal of Politics and International Relations Volume 4 ; 4 ; >
-      au < exists ; exists ; 2003 ; The British Journal of Politics and International Relations Volume 5 ; 5 ; >
-      au < exists ; exists ; 2004 ; The British Journal of Politics and International Relations Volume 6 ; 6 ; >
-      au < exists ; exists ; 2005 ; The British Journal of Politics and International Relations Volume 7 ; 7 ; >
-      au < exists ; exists ; 2006 ; The British Journal of Politics and International Relations Volume 8 ; 8 ; >
-      au < exists ; exists ; 2007 ; The British Journal of Politics and International Relations Volume 9 ; 9 ; >
-      au < exists ; exists ; 2008 ; The British Journal of Politics and International Relations Volume 10 ; 10 ; >
-      au < exists ; exists ; 2009 ; The British Journal of Politics and International Relations Volume 11 ; 11 ; >
-      au < exists ; exists ; 2010 ; The British Journal of Politics and International Relations Volume 12 ; 12 ; >
-      au < exists ; exists ; 2011 ; The British Journal of Politics and International Relations Volume 13 ; 13 ; >
-      au < exists ; exists ; 2012 ; The British Journal of Politics and International Relations Volume 14 ; 14 ; >
-      au < exists ; exists ; 2013 ; The British Journal of Politics and International Relations Volume 15 ; 15 ; >
-      au < exists ; exists ; 2014 ; The British Journal of Politics and International Relations Volume 16 ; 16 ; >
-      au < exists ; exists ; 2015 ; The British Journal of Politics and International Relations Volume 17 ; 17 ; >
+      au < manifest ; exists ; 1999 ; The British Journal of Politics and International Relations Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2000 ; The British Journal of Politics and International Relations Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2001 ; The British Journal of Politics and International Relations Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2002 ; The British Journal of Politics and International Relations Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2003 ; The British Journal of Politics and International Relations Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2004 ; The British Journal of Politics and International Relations Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2005 ; The British Journal of Politics and International Relations Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2006 ; The British Journal of Politics and International Relations Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2007 ; The British Journal of Politics and International Relations Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2008 ; The British Journal of Politics and International Relations Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2009 ; The British Journal of Politics and International Relations Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2010 ; The British Journal of Politics and International Relations Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2011 ; The British Journal of Politics and International Relations Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2012 ; The British Journal of Politics and International Relations Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2013 ; The British Journal of Politics and International Relations Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2014 ; The British Journal of Politics and International Relations Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2015 ; The British Journal of Politics and International Relations Volume 17 ; 17 ; >
       au < manifest ; exists ; 2016 ; The British Journal of Politics and International Relations Volume 18 ; 18 ; >
 
   }
@@ -5121,7 +5121,7 @@
       param[base_url] = http://cae.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2015 ; Cahiers Élisabéthains Volume 88 ; 88 ; >
+      au < manifest ; exists ; 2015 ; Cahiers Élisabéthains Volume 88 ; 88 ; >
       au < manifest ; exists ; 2016 ; Cahiers Élisabéthains Volume 89 ; 89 ; >
 
   }
@@ -5137,26 +5137,26 @@
       param[base_url] = http://cpa.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1996 ; The Canadian Journal of Psychiatry Volume 41 ; 41 ; >
-      au < exists ; exists ; 1997 ; The Canadian Journal of Psychiatry Volume 42 ; 42 ; >
-      au < exists ; exists ; 1998 ; The Canadian Journal of Psychiatry Volume 43 ; 43 ; >
-      au < exists ; exists ; 1999 ; The Canadian Journal of Psychiatry Volume 44 ; 44 ; >
-      au < exists ; exists ; 2000 ; The Canadian Journal of Psychiatry Volume 45 ; 45 ; >
-      au < exists ; exists ; 2001 ; The Canadian Journal of Psychiatry Volume 46 ; 46 ; >
-      au < exists ; exists ; 2002 ; The Canadian Journal of Psychiatry Volume 47 ; 47 ; >
-      au < exists ; exists ; 2003 ; The Canadian Journal of Psychiatry Volume 48 ; 48 ; >
-      au < exists ; exists ; 2004 ; The Canadian Journal of Psychiatry Volume 49 ; 49 ; >
-      au < exists ; exists ; 2005 ; The Canadian Journal of Psychiatry Volume 50 ; 50 ; >
-      au < exists ; exists ; 2006 ; The Canadian Journal of Psychiatry Volume 51 ; 51 ; >
-      au < exists ; exists ; 2007 ; The Canadian Journal of Psychiatry Volume 52 ; 52 ; >
-      au < exists ; exists ; 2008 ; The Canadian Journal of Psychiatry Volume 53 ; 53 ; >
-      au < exists ; exists ; 2009 ; The Canadian Journal of Psychiatry Volume 54 ; 54 ; >
-      au < exists ; exists ; 2010 ; The Canadian Journal of Psychiatry Volume 55 ; 55 ; >
-      au < exists ; exists ; 2011 ; The Canadian Journal of Psychiatry Volume 56 ; 56 ; >
-      au < exists ; exists ; 2012 ; The Canadian Journal of Psychiatry Volume 57 ; 57 ; >
-      au < exists ; exists ; 2013 ; The Canadian Journal of Psychiatry Volume 58 ; 58 ; >
-      au < exists ; exists ; 2014 ; The Canadian Journal of Psychiatry Volume 59 ; 59 ; >
-      au < exists ; exists ; 2015 ; The Canadian Journal of Psychiatry Volume 60 ; 60 ; >
+      au < manifest ; exists ; 1996 ; The Canadian Journal of Psychiatry Volume 41 ; 41 ; >
+      au < manifest ; exists ; 1997 ; The Canadian Journal of Psychiatry Volume 42 ; 42 ; >
+      au < manifest ; exists ; 1998 ; The Canadian Journal of Psychiatry Volume 43 ; 43 ; >
+      au < manifest ; exists ; 1999 ; The Canadian Journal of Psychiatry Volume 44 ; 44 ; >
+      au < manifest ; exists ; 2000 ; The Canadian Journal of Psychiatry Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2001 ; The Canadian Journal of Psychiatry Volume 46 ; 46 ; >
+      au < manifest ; exists ; 2002 ; The Canadian Journal of Psychiatry Volume 47 ; 47 ; >
+      au < manifest ; exists ; 2003 ; The Canadian Journal of Psychiatry Volume 48 ; 48 ; >
+      au < manifest ; exists ; 2004 ; The Canadian Journal of Psychiatry Volume 49 ; 49 ; >
+      au < manifest ; exists ; 2005 ; The Canadian Journal of Psychiatry Volume 50 ; 50 ; >
+      au < manifest ; exists ; 2006 ; The Canadian Journal of Psychiatry Volume 51 ; 51 ; >
+      au < manifest ; exists ; 2007 ; The Canadian Journal of Psychiatry Volume 52 ; 52 ; >
+      au < manifest ; exists ; 2008 ; The Canadian Journal of Psychiatry Volume 53 ; 53 ; >
+      au < manifest ; exists ; 2009 ; The Canadian Journal of Psychiatry Volume 54 ; 54 ; >
+      au < manifest ; exists ; 2010 ; The Canadian Journal of Psychiatry Volume 55 ; 55 ; >
+      au < manifest ; exists ; 2011 ; The Canadian Journal of Psychiatry Volume 56 ; 56 ; >
+      au < manifest ; exists ; 2012 ; The Canadian Journal of Psychiatry Volume 57 ; 57 ; >
+      au < manifest ; exists ; 2013 ; The Canadian Journal of Psychiatry Volume 58 ; 58 ; >
+      au < manifest ; exists ; 2014 ; The Canadian Journal of Psychiatry Volume 59 ; 59 ; >
+      au < manifest ; exists ; 2015 ; The Canadian Journal of Psychiatry Volume 60 ; 60 ; >
       au < manifest ; exists ; 2016 ; The Canadian Journal of Psychiatry Volume 61 ; 61 ; >
 
   }
@@ -8421,7 +8421,7 @@
       param[base_url] = http://cst.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2015 ; Critical Studies in Television Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2015 ; Critical Studies in Television Volume 10 ; 10 ; >
       au < manifest ; exists ; 2016 ; Critical Studies in Television Volume 11 ; 11 ; >
 
   }
@@ -10559,23 +10559,23 @@
       param[base_url] = http://eae.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1999 ; Energy & Environment Volume 10 ; 10 ; >
-      au < exists ; exists ; 2000 ; Energy & Environment Volume 11 ; 11 ; >
-      au < exists ; exists ; 2001 ; Energy & Environment Volume 12 ; 12 ; >
-      au < exists ; exists ; 2002 ; Energy & Environment Volume 13 ; 13 ; >
-      au < exists ; exists ; 2003 ; Energy & Environment Volume 14 ; 14 ; >
-      au < exists ; exists ; 2004 ; Energy & Environment Volume 15 ; 15 ; >
-      au < exists ; exists ; 2005 ; Energy & Environment Volume 16 ; 16 ; >
-      au < exists ; exists ; 2006 ; Energy & Environment Volume 17 ; 17 ; >
-      au < exists ; exists ; 2007 ; Energy & Environment Volume 18 ; 18 ; >
-      au < exists ; exists ; 2008 ; Energy & Environment Volume 19 ; 19 ; >
-      au < exists ; exists ; 2009 ; Energy & Environment Volume 20 ; 20 ; >
-      au < exists ; exists ; 2010 ; Energy & Environment Volume 21 ; 21 ; >
-      au < exists ; exists ; 2011 ; Energy & Environment Volume 22 ; 22 ; >
-      au < exists ; exists ; 2012 ; Energy & Environment Volume 23 ; 23 ; >
-      au < exists ; exists ; 2013 ; Energy & Environment Volume 24 ; 24 ; >
-      au < exists ; exists ; 2014 ; Energy & Environment Volume 25 ; 25 ; >
-      au < exists ; exists ; 2015 ; Energy & Environment Volume 26 ; 26 ; >
+      au < manifest ; exists ; 1999 ; Energy & Environment Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2000 ; Energy & Environment Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2001 ; Energy & Environment Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2002 ; Energy & Environment Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2003 ; Energy & Environment Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2004 ; Energy & Environment Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2005 ; Energy & Environment Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2006 ; Energy & Environment Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2007 ; Energy & Environment Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2008 ; Energy & Environment Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2009 ; Energy & Environment Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2010 ; Energy & Environment Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2011 ; Energy & Environment Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2012 ; Energy & Environment Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2013 ; Energy & Environment Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2014 ; Energy & Environment Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2015 ; Energy & Environment Volume 26 ; 26 ; >
       au < manifest ; exists ; 2016 ; Energy & Environment Volume 27 ; 27 ; >
 
   }
@@ -11910,7 +11910,7 @@
       param[base_url] = http://eso.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2016 ; European Stroke Journal Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2016 ; European Stroke Journal Volume 1 ; 1 ; >
   }
 
   {
@@ -13234,24 +13234,24 @@
       param[base_url] = http://gjh.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1998 ; German Journal of Human Resource Management Volume 12 ; 12 ; >
-      au < exists ; exists ; 1999 ; German Journal of Human Resource Management Volume 13 ; 13 ; >
-      au < exists ; exists ; 2000 ; German Journal of Human Resource Management Volume 14 ; 14 ; >
-      au < exists ; exists ; 2001 ; German Journal of Human Resource Management Volume 15 ; 15 ; >
-      au < exists ; exists ; 2002 ; German Journal of Human Resource Management Volume 16 ; 16 ; >
-      au < exists ; exists ; 2003 ; German Journal of Human Resource Management Volume 17 ; 17 ; >
-      au < exists ; exists ; 2004 ; German Journal of Human Resource Management Volume 18 ; 18 ; >
-      au < exists ; exists ; 2005 ; German Journal of Human Resource Management Volume 19 ; 19 ; >
-      au < exists ; exists ; 2006 ; German Journal of Human Resource Management Volume 20 ; 20 ; >
-      au < exists ; exists ; 2007 ; German Journal of Human Resource Management Volume 21 ; 21 ; >
-      au < exists ; exists ; 2008 ; German Journal of Human Resource Management Volume 22 ; 22 ; >
-      au < exists ; exists ; 2009 ; German Journal of Human Resource Management Volume 23 ; 23 ; >
-      au < exists ; exists ; 2010 ; German Journal of Human Resource Management Volume 24 ; 24 ; >
-      au < exists ; exists ; 2011 ; German Journal of Human Resource Management Volume 25 ; 25 ; >
-      au < exists ; exists ; 2012 ; German Journal of Human Resource Management Volume 26 ; 26 ; >
-      au < exists ; exists ; 2013 ; German Journal of Human Resource Management Volume 27 ; 27 ; >
-      au < exists ; exists ; 2014 ; German Journal of Human Resource Management Volume 28 ; 28 ; >
-      au < exists ; exists ; 2015 ; German Journal of Human Resource Management Volume 29 ; 29 ; >
+      au < manifest ; exists ; 1998 ; German Journal of Human Resource Management Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1999 ; German Journal of Human Resource Management Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2000 ; German Journal of Human Resource Management Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2001 ; German Journal of Human Resource Management Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2002 ; German Journal of Human Resource Management Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2003 ; German Journal of Human Resource Management Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2004 ; German Journal of Human Resource Management Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2005 ; German Journal of Human Resource Management Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2006 ; German Journal of Human Resource Management Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2007 ; German Journal of Human Resource Management Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2008 ; German Journal of Human Resource Management Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2009 ; German Journal of Human Resource Management Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2010 ; German Journal of Human Resource Management Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2011 ; German Journal of Human Resource Management Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2012 ; German Journal of Human Resource Management Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2013 ; German Journal of Human Resource Management Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2014 ; German Journal of Human Resource Management Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2015 ; German Journal of Human Resource Management Volume 29 ; 29 ; >
       au < manifest ; exists ; 2016 ; German Journal of Human Resource Management Volume 30 ; 30 ; >
 
   }
@@ -13618,8 +13618,8 @@
       param[base_url] = http://gph.sagepub.com/
 
       au < finished ; finished ; 2014 ; Global Pediatric Health Volume 1 ; 1 ; >
-      au < exists ; exists ; 2015 ; Global Pediatric Health Volume 2 ; 2 ; >
-      au < exists ; exists ; 2016 ; Global Pediatric Health Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2015 ; Global Pediatric Health Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2016 ; Global Pediatric Health Volume 3 ; 3 ; >
 
   }
 
@@ -14119,21 +14119,21 @@
       param[base_url] = http://him.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2002 ; Health Information Management Journal Volume 30 ; 30 ; >
-      au < exists ; exists ; 2003 ; Health Information Management Journal Volume 31 ; 31 ; >
-      au < exists ; exists ; 2004 ; Health Information Management Journal Volume 32 ; 32 ; >
-      au < exists ; exists ; 2004 ; Health Information Management Journal Volume 33 ; 33 ; >
-      au < exists ; exists ; 2005 ; Health Information Management Journal Volume 34 ; 34 ; >
-      au < exists ; exists ; 2006 ; Health Information Management Journal Volume 35 ; 35 ; >
-      au < exists ; exists ; 2007 ; Health Information Management Journal Volume 36 ; 36 ; >
-      au < exists ; exists ; 2008 ; Health Information Management Journal Volume 37 ; 37 ; >
-      au < exists ; exists ; 2009 ; Health Information Management Journal Volume 38 ; 38 ; >
-      au < exists ; exists ; 2010 ; Health Information Management Journal Volume 39 ; 39 ; >
-      au < exists ; exists ; 2011 ; Health Information Management Journal Volume 40 ; 40 ; >
-      au < exists ; exists ; 2012 ; Health Information Management Journal Volume 41 ; 41 ; >
-      au < exists ; exists ; 2013 ; Health Information Management Journal Volume 42 ; 42 ; >
-      au < exists ; exists ; 2014 ; Health Information Management Journal Volume 43 ; 43 ; >
-      au < exists ; exists ; 2015 ; Health Information Management Journal Volume 44 ; 44 ; >
+      au < manifest ; exists ; 2002 ; Health Information Management Journal Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2003 ; Health Information Management Journal Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2004 ; Health Information Management Journal Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2004 ; Health Information Management Journal Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2005 ; Health Information Management Journal Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2006 ; Health Information Management Journal Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2007 ; Health Information Management Journal Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2008 ; Health Information Management Journal Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2009 ; Health Information Management Journal Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2010 ; Health Information Management Journal Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2011 ; Health Information Management Journal Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2012 ; Health Information Management Journal Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2013 ; Health Information Management Journal Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2014 ; Health Information Management Journal Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2015 ; Health Information Management Journal Volume 44 ; 44 ; >
       au < manifest ; exists ; 2016 ; Health Information Management Journal Volume 45 ; 45 ; >
 
   }
@@ -16292,7 +16292,7 @@
       au < exists ; exists ; 2013 ; International Journal of Aeroacoustics Volume 12 ; 12 ; >
       au < finished ; crawling ; 2014 ; International Journal of Aeroacoustics Volume 13 ; 13 ; >
       au < crawling ; exists ; 2015 ; International Journal of Aeroacoustics Volume 14 ; 14 ; >
-      au < expected ; exists ; 2016 ; International Journal of Aeroacoustics Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Aeroacoustics Volume 15 ; 15 ; >
 
   }
 
@@ -18862,13 +18862,13 @@
       param[base_url] = http://irj.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2009 ; Irish Journal of Sociology Volume 17 ; 17 ; >
-      au < exists ; exists ; 2010 ; Irish Journal of Sociology Volume 18 ; 18 ; >
-      au < exists ; exists ; 2011 ; Irish Journal of Sociology Volume 19 ; 19 ; >
-      au < exists ; exists ; 2012 ; Irish Journal of Sociology Volume 20 ; 20 ; >
-      au < exists ; exists ; 2013 ; Irish Journal of Sociology Volume 21 ; 21 ; >
-      au < exists ; exists ; 2014 ; Irish Journal of Sociology Volume 22 ; 22 ; >
-      au < exists ; exists ; 2015 ; Irish Journal of Sociology Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2009 ; Irish Journal of Sociology Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2010 ; Irish Journal of Sociology Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2011 ; Irish Journal of Sociology Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2012 ; Irish Journal of Sociology Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2013 ; Irish Journal of Sociology Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2014 ; Irish Journal of Sociology Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2015 ; Irish Journal of Sociology Volume 23 ; 23 ; >
       au < manifest ; exists ; 2016 ; Irish Journal of Sociology Volume 24 ; 24 ; >
 
   }
@@ -19024,7 +19024,7 @@
       au < exists ; exists ; 2013 ; The Journal of Computational Multiphase Flows Volume 5 ; 5 ; >
       au < exists ; exists ; 2014 ; The Journal of Computational Multiphase Flows Volume 6 ; 6 ; >
       au < crawling ; exists ; 2015 ; The Journal of Computational Multiphase Flows Volume 7 ; 7 ; >
-      au < expected ; exists ; 2016 ; The Journal of Computational Multiphase Flows Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2016 ; The Journal of Computational Multiphase Flows Volume 8 ; 8 ; >
 
   }
 
@@ -19338,7 +19338,7 @@
         param[base_url] = http://adu.sagepub.com/
         pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2015 ; Journal of Adult and Continuing Education Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2015 ; Journal of Adult and Continuing Education Volume 21 ; 21 ; >
       au < manifest ; exists ; 2016 ; Journal of Adult and Continuing Education Volume 22 ; 22 ; >
 
   }
@@ -20719,22 +20719,22 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1981 volume 1 to 1999 volume 19
 
-      au < exists ; exists ; 2000 ; Journal of Cerebral Blood Flow & Metabolism Volume 20 ; 20 ; >
-      au < exists ; exists ; 2001 ; Journal of Cerebral Blood Flow & Metabolism Volume 21 ; 21 ; >
-      au < exists ; exists ; 2002 ; Journal of Cerebral Blood Flow & Metabolism Volume 22 ; 22 ; >
-      au < exists ; exists ; 2003 ; Journal of Cerebral Blood Flow & Metabolism Volume 23 ; 23 ; >
-      au < exists ; exists ; 2004 ; Journal of Cerebral Blood Flow & Metabolism Volume 24 ; 24 ; >
-      au < exists ; exists ; 2005 ; Journal of Cerebral Blood Flow & Metabolism Volume 25 ; 25 ; >
-      au < exists ; exists ; 2006 ; Journal of Cerebral Blood Flow & Metabolism Volume 26 ; 26 ; >
-      au < exists ; exists ; 2007 ; Journal of Cerebral Blood Flow & Metabolism Volume 27 ; 27 ; >
-      au < exists ; exists ; 2008 ; Journal of Cerebral Blood Flow & Metabolism Volume 28 ; 28 ; >
-      au < exists ; exists ; 2009 ; Journal of Cerebral Blood Flow & Metabolism Volume 29 ; 29 ; >
-      au < exists ; exists ; 2010 ; Journal of Cerebral Blood Flow & Metabolism Volume 30 ; 30 ; >
-      au < exists ; exists ; 2011 ; Journal of Cerebral Blood Flow & Metabolism Volume 31 ; 31 ; >
-      au < exists ; exists ; 2012 ; Journal of Cerebral Blood Flow & Metabolism Volume 32 ; 32 ; >
-      au < exists ; exists ; 2013 ; Journal of Cerebral Blood Flow & Metabolism Volume 33 ; 33 ; >
-      au < exists ; exists ; 2014 ; Journal of Cerebral Blood Flow & Metabolism Volume 34 ; 34 ; >
-      au < exists ; exists ; 2015 ; Journal of Cerebral Blood Flow & Metabolism Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2000 ; Journal of Cerebral Blood Flow & Metabolism Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2001 ; Journal of Cerebral Blood Flow & Metabolism Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2002 ; Journal of Cerebral Blood Flow & Metabolism Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2003 ; Journal of Cerebral Blood Flow & Metabolism Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2004 ; Journal of Cerebral Blood Flow & Metabolism Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2005 ; Journal of Cerebral Blood Flow & Metabolism Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2006 ; Journal of Cerebral Blood Flow & Metabolism Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2007 ; Journal of Cerebral Blood Flow & Metabolism Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2008 ; Journal of Cerebral Blood Flow & Metabolism Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2009 ; Journal of Cerebral Blood Flow & Metabolism Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2010 ; Journal of Cerebral Blood Flow & Metabolism Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2011 ; Journal of Cerebral Blood Flow & Metabolism Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2012 ; Journal of Cerebral Blood Flow & Metabolism Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2013 ; Journal of Cerebral Blood Flow & Metabolism Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2014 ; Journal of Cerebral Blood Flow & Metabolism Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2015 ; Journal of Cerebral Blood Flow & Metabolism Volume 35 ; 35 ; >
       au < manifest ; exists ; 2016 ; Journal of Cerebral Blood Flow & Metabolism Volume 36 ; 36 ; >
 
   }
@@ -21654,7 +21654,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < crawling ; exists ; 2015 ; Journal of Creating Value Volume 1 ; 1 ; >
-      au < expected ; exists ; 2016 ; Journal of Creating Value Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2016 ; Journal of Creating Value Volume 2 ; 2 ; >
 
   }
 
@@ -24044,22 +24044,22 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1980 volume 1 to 1999 volume 20
 
-      au < exists ; exists ; 1999-2000 ; Journal of Historical Research in Music Education Volume 21 ; 21 ; >
-      au < exists ; exists ; 2000-2001 ; Journal of Historical Research in Music Education Volume 22 ; 22 ; >
-      au < exists ; exists ; 2001-2002 ; Journal of Historical Research in Music Education Volume 23 ; 23 ; >
-      au < exists ; exists ; 2002-2003 ; Journal of Historical Research in Music Education Volume 24 ; 24 ; >
-      au < exists ; exists ; 2003-2004 ; Journal of Historical Research in Music Education Volume 25 ; 25 ; >
-      au < exists ; exists ; 2004-2005 ; Journal of Historical Research in Music Education Volume 26 ; 26 ; >
-      au < exists ; exists ; 2005-2006 ; Journal of Historical Research in Music Education Volume 27 ; 27 ; >
-      au < exists ; exists ; 2006-2007 ; Journal of Historical Research in Music Education Volume 28 ; 28 ; >
-      au < exists ; exists ; 2007-2008 ; Journal of Historical Research in Music Education Volume 29 ; 29 ; >
-      au < exists ; exists ; 2008-2009 ; Journal of Historical Research in Music Education Volume 30 ; 30 ; >
-      au < exists ; exists ; 2009-2010 ; Journal of Historical Research in Music Education Volume 31 ; 31 ; >
-      au < exists ; exists ; 2010-2011 ; Journal of Historical Research in Music Education Volume 32 ; 32 ; >
-      au < exists ; exists ; 2011-2012 ; Journal of Historical Research in Music Education Volume 33 ; 33 ; >
-      au < exists ; exists ; 2012-2013 ; Journal of Historical Research in Music Education Volume 34 ; 34 ; >
-      au < exists ; exists ; 2013-2014 ; Journal of Historical Research in Music Education Volume 35 ; 35 ; >
-      au < exists ; exists ; 2014-2015 ; Journal of Historical Research in Music Education Volume 36 ; 36 ; >
+      au < manifest ; exists ; 1999-2000 ; Journal of Historical Research in Music Education Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2000-2001 ; Journal of Historical Research in Music Education Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2001-2002 ; Journal of Historical Research in Music Education Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2002-2003 ; Journal of Historical Research in Music Education Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2003-2004 ; Journal of Historical Research in Music Education Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2004-2005 ; Journal of Historical Research in Music Education Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2005-2006 ; Journal of Historical Research in Music Education Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2006-2007 ; Journal of Historical Research in Music Education Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2007-2008 ; Journal of Historical Research in Music Education Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2008-2009 ; Journal of Historical Research in Music Education Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2009-2010 ; Journal of Historical Research in Music Education Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2010-2011 ; Journal of Historical Research in Music Education Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2011-2012 ; Journal of Historical Research in Music Education Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2012-2013 ; Journal of Historical Research in Music Education Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2013-2014 ; Journal of Historical Research in Music Education Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2014-2015 ; Journal of Historical Research in Music Education Volume 36 ; 36 ; >
       au < manifest ; exists ; 2015-2016 ; Journal of Historical Research in Music Education Volume 37 ; 37 ; >
       au < expected ; exists ; 2016-2017 ; Journal of Historical Research in Music Education Volume 38 ; 38 ; >
 
@@ -25169,22 +25169,22 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1973 volume 1 to 1999 volume 27
 
-      au < exists ; exists ; 2000 ; The Journal of Law, Medicine & Ethics Volume 28 ; 28 ; >
-      au < exists ; exists ; 2001 ; The Journal of Law, Medicine & Ethics Volume 29 ; 29 ; >
-      au < exists ; exists ; 2002 ; The Journal of Law, Medicine & Ethics Volume 30 ; 30 ; >
-      au < exists ; exists ; 2003 ; The Journal of Law, Medicine & Ethics Volume 31 ; 31 ; >
-      au < exists ; exists ; 2004 ; The Journal of Law, Medicine & Ethics Volume 32 ; 32 ; >
-      au < exists ; exists ; 2005 ; The Journal of Law, Medicine & Ethics Volume 33 ; 33 ; >
-      au < exists ; exists ; 2006 ; The Journal of Law, Medicine & Ethics Volume 34 ; 34 ; >
-      au < exists ; exists ; 2007 ; The Journal of Law, Medicine & Ethics Volume 35 ; 35 ; >
-      au < exists ; exists ; 2008 ; The Journal of Law, Medicine & Ethics Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2000 ; The Journal of Law, Medicine & Ethics Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2001 ; The Journal of Law, Medicine & Ethics Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2002 ; The Journal of Law, Medicine & Ethics Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2003 ; The Journal of Law, Medicine & Ethics Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2004 ; The Journal of Law, Medicine & Ethics Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2005 ; The Journal of Law, Medicine & Ethics Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2006 ; The Journal of Law, Medicine & Ethics Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2007 ; The Journal of Law, Medicine & Ethics Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2008 ; The Journal of Law, Medicine & Ethics Volume 36 ; 36 ; >
       au < exists ; exists ; 2009 ; The Journal of Law, Medicine & Ethics Volume 37 ; 37 ; >
       au < exists ; exists ; 2010 ; The Journal of Law, Medicine & Ethics Volume 38 ; 38 ; >
-      au < exists ; exists ; 2011 ; The Journal of Law, Medicine & Ethics Volume 39 ; 39 ; >
-      au < exists ; exists ; 2012 ; The Journal of Law, Medicine & Ethics Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2011 ; The Journal of Law, Medicine & Ethics Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2012 ; The Journal of Law, Medicine & Ethics Volume 40 ; 40 ; >
       au < exists ; exists ; 2013 ; The Journal of Law, Medicine & Ethics Volume 41 ; 41 ; >
-      au < exists ; exists ; 2014 ; The Journal of Law, Medicine & Ethics Volume 42 ; 42 ; >
-      au < exists ; exists ; 2015 ; The Journal of Law, Medicine & Ethics Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2014 ; The Journal of Law, Medicine & Ethics Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2015 ; The Journal of Law, Medicine & Ethics Volume 43 ; 43 ; >
       au < manifest ; exists ; 2016 ; The Journal of Law, Medicine & Ethics Volume 44 ; 44 ; >
 
   }
@@ -27308,7 +27308,7 @@
     au < finished ; crawling ; 2013 ; Journal of Research on Leadership Education Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal of Research on Leadership Education Volume 9 ; 9 ; >
     au < crawling ; exists ; 2015 ; Journal of Research on Leadership Education Volume 10 ; 10 ; >
-    au < expected ; exists ; 2016 ; Journal of Research on Leadership Education Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2016 ; Journal of Research on Leadership Education Volume 11 ; 11 ; >
 
   }
 
@@ -30022,30 +30022,30 @@
       param[base_url] = http://lah.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1992 ; Literature & History Volume 1 ; 1 ; >
-      au < exists ; exists ; 1993 ; Literature & History Volume 2 ; 2 ; >
-      au < exists ; exists ; 1994 ; Literature & History Volume 3 ; 3 ; >
-      au < exists ; exists ; 1995 ; Literature & History Volume 4 ; 4 ; >
-      au < exists ; exists ; 1996 ; Literature & History Volume 5 ; 5 ; >
-      au < exists ; exists ; 1997 ; Literature & History Volume 6 ; 6 ; >
-      au < exists ; exists ; 1998 ; Literature & History Volume 7 ; 7 ; >
-      au < exists ; exists ; 1999 ; Literature & History Volume 8 ; 8 ; >
-      au < exists ; exists ; 2000 ; Literature & History Volume 9 ; 9 ; >
-      au < exists ; exists ; 2001 ; Literature & History Volume 10 ; 10 ; >
-      au < exists ; exists ; 2002 ; Literature & History Volume 11 ; 11 ; >
-      au < exists ; exists ; 2003 ; Literature & History Volume 12 ; 12 ; >
-      au < exists ; exists ; 2004 ; Literature & History Volume 13 ; 13 ; >
-      au < exists ; exists ; 2005 ; Literature & History Volume 14 ; 14 ; >
-      au < exists ; exists ; 2006 ; Literature & History Volume 15 ; 15 ; >
-      au < exists ; exists ; 2007 ; Literature & History Volume 16 ; 16 ; >
-      au < exists ; exists ; 2008 ; Literature & History Volume 17 ; 17 ; >
-      au < exists ; exists ; 2009 ; Literature & History Volume 18 ; 18 ; >
-      au < exists ; exists ; 2010 ; Literature & History Volume 19 ; 19 ; >
-      au < exists ; exists ; 2011 ; Literature & History Volume 20 ; 20 ; >
-      au < exists ; exists ; 2012 ; Literature & History Volume 21 ; 21 ; >
-      au < exists ; exists ; 2013 ; Literature & History Volume 22 ; 22 ; >
-      au < exists ; exists ; 2014 ; Literature & History Volume 23 ; 23 ; >
-      au < exists ; exists ; 2015 ; Literature & History Volume 24 ; 24 ; >
+      au < manifest ; exists ; 1992 ; Literature & History Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1993 ; Literature & History Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1994 ; Literature & History Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1995 ; Literature & History Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1996 ; Literature & History Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1997 ; Literature & History Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1998 ; Literature & History Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1999 ; Literature & History Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2000 ; Literature & History Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2001 ; Literature & History Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2002 ; Literature & History Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2003 ; Literature & History Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2004 ; Literature & History Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2005 ; Literature & History Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2006 ; Literature & History Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2007 ; Literature & History Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2008 ; Literature & History Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2009 ; Literature & History Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2010 ; Literature & History Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2011 ; Literature & History Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2012 ; Literature & History Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2013 ; Literature & History Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2014 ; Literature & History Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2015 ; Literature & History Volume 24 ; 24 ; >
       au < manifest ; exists ; 2016 ; Literature & History Volume 25 ; 25 ; >
 
   }
@@ -30775,72 +30775,72 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1976 volume 1 to 1999 volume 93
 
-      au < exists ; exists ; 2000 ; Media International Australia Volume 94 ; 94 ; >
-      au < exists ; exists ; 2000 ; Media International Australia Volume 95 ; 95 ; >
-      au < exists ; exists ; 2000 ; Media International Australia Volume 96 ; 96 ; >
-      au < exists ; exists ; 2000 ; Media International Australia Volume 97 ; 97 ; >
-      au < exists ; exists ; 2001 ; Media International Australia Volume 98 ; 98 ; >
-      au < exists ; exists ; 2001 ; Media International Australia Volume 99 ; 99 ; >
-      au < exists ; exists ; 2001 ; Media International Australia Volume 100 ; 100 ; >
-      au < exists ; exists ; 2001 ; Media International Australia Volume 101 ; 101 ; >
-      au < exists ; exists ; 2002 ; Media International Australia Volume 102 ; 102 ; >
-      au < exists ; exists ; 2002 ; Media International Australia Volume 103 ; 103 ; >
-      au < exists ; exists ; 2002 ; Media International Australia Volume 104 ; 104 ; >
-      au < exists ; exists ; 2002 ; Media International Australia Volume 105 ; 105 ; >
-      au < exists ; exists ; 2003 ; Media International Australia Volume 106 ; 106 ; >
-      au < exists ; exists ; 2003 ; Media International Australia Volume 107 ; 107 ; >
-      au < exists ; exists ; 2003 ; Media International Australia Volume 108 ; 108 ; >
-      au < exists ; exists ; 2003 ; Media International Australia Volume 109 ; 109 ; >
-      au < exists ; exists ; 2004 ; Media International Australia Volume 110 ; 110 ; >
-      au < exists ; exists ; 2004 ; Media International Australia Volume 111 ; 111 ; >
-      au < exists ; exists ; 2004 ; Media International Australia Volume 112 ; 112 ; >
-      au < exists ; exists ; 2004 ; Media International Australia Volume 113 ; 113 ; >
-      au < exists ; exists ; 2005 ; Media International Australia Volume 114 ; 114 ; >
-      au < exists ; exists ; 2005 ; Media International Australia Volume 115 ; 115 ; >
-      au < exists ; exists ; 2005 ; Media International Australia Volume 116 ; 116 ; >
+      au < manifest ; exists ; 2000 ; Media International Australia Volume 94 ; 94 ; >
+      au < manifest ; exists ; 2000 ; Media International Australia Volume 95 ; 95 ; >
+      au < manifest ; exists ; 2000 ; Media International Australia Volume 96 ; 96 ; >
+      au < manifest ; exists ; 2000 ; Media International Australia Volume 97 ; 97 ; >
+      au < manifest ; exists ; 2001 ; Media International Australia Volume 98 ; 98 ; >
+      au < manifest ; exists ; 2001 ; Media International Australia Volume 99 ; 99 ; >
+      au < manifest ; exists ; 2001 ; Media International Australia Volume 100 ; 100 ; >
+      au < manifest ; exists ; 2001 ; Media International Australia Volume 101 ; 101 ; >
+      au < manifest ; exists ; 2002 ; Media International Australia Volume 102 ; 102 ; >
+      au < manifest ; exists ; 2002 ; Media International Australia Volume 103 ; 103 ; >
+      au < manifest ; exists ; 2002 ; Media International Australia Volume 104 ; 104 ; >
+      au < manifest ; exists ; 2002 ; Media International Australia Volume 105 ; 105 ; >
+      au < manifest ; exists ; 2003 ; Media International Australia Volume 106 ; 106 ; >
+      au < manifest ; exists ; 2003 ; Media International Australia Volume 107 ; 107 ; >
+      au < manifest ; exists ; 2003 ; Media International Australia Volume 108 ; 108 ; >
+      au < manifest ; exists ; 2003 ; Media International Australia Volume 109 ; 109 ; >
+      au < manifest ; exists ; 2004 ; Media International Australia Volume 110 ; 110 ; >
+      au < manifest ; exists ; 2004 ; Media International Australia Volume 111 ; 111 ; >
+      au < manifest ; exists ; 2004 ; Media International Australia Volume 112 ; 112 ; >
+      au < manifest ; exists ; 2004 ; Media International Australia Volume 113 ; 113 ; >
+      au < manifest ; exists ; 2005 ; Media International Australia Volume 114 ; 114 ; >
+      au < manifest ; exists ; 2005 ; Media International Australia Volume 115 ; 115 ; >
+      au < manifest ; exists ; 2005 ; Media International Australia Volume 116 ; 116 ; >
       au < exists ; exists ; 2005 ; Media International Australia Volume 117 ; 117 ; >
-      au < exists ; exists ; 2006 ; Media International Australia Volume 118 ; 118 ; >
-      au < exists ; exists ; 2006 ; Media International Australia Volume 119 ; 119 ; >
-      au < exists ; exists ; 2006 ; Media International Australia Volume 120 ; 120 ; >
-      au < exists ; exists ; 2006 ; Media International Australia Volume 121 ; 121 ; >
-      au < exists ; exists ; 2007 ; Media International Australia Volume 122 ; 122 ; >
-      au < exists ; exists ; 2007 ; Media International Australia Volume 123 ; 123 ; >
-      au < exists ; exists ; 2007 ; Media International Australia Volume 124 ; 124 ; >
-      au < exists ; exists ; 2007 ; Media International Australia Volume 125 ; 125 ; >
-      au < exists ; exists ; 2008 ; Media International Australia Volume 126 ; 126 ; >
-      au < exists ; exists ; 2008 ; Media International Australia Volume 127 ; 127 ; >
-      au < exists ; exists ; 2008 ; Media International Australia Volume 128 ; 128 ; >
-      au < exists ; exists ; 2008 ; Media International Australia Volume 129 ; 129 ; >
-      au < exists ; exists ; 2009 ; Media International Australia Volume 130 ; 130 ; >
-      au < exists ; exists ; 2009 ; Media International Australia Volume 131 ; 131 ; >
-      au < exists ; exists ; 2009 ; Media International Australia Volume 132 ; 132 ; >
-      au < exists ; exists ; 2009 ; Media International Australia Volume 133 ; 133 ; >
-      au < exists ; exists ; 2010 ; Media International Australia Volume 134 ; 134 ; >
-      au < exists ; exists ; 2010 ; Media International Australia Volume 135 ; 135 ; >
-      au < exists ; exists ; 2010 ; Media International Australia Volume 136 ; 136 ; >
-      au < exists ; exists ; 2010 ; Media International Australia Volume 137 ; 137 ; >
-      au < exists ; exists ; 2011 ; Media International Australia Volume 138 ; 138 ; >
-      au < exists ; exists ; 2011 ; Media International Australia Volume 139 ; 139 ; >
-      au < exists ; exists ; 2011 ; Media International Australia Volume 140 ; 140 ; >
-      au < exists ; exists ; 2011 ; Media International Australia Volume 141 ; 141 ; >
-      au < exists ; exists ; 2012 ; Media International Australia Volume 142 ; 142 ; >
-      au < exists ; exists ; 2012 ; Media International Australia Volume 143 ; 143 ; >
-      au < exists ; exists ; 2012 ; Media International Australia Volume 144 ; 144 ; >
-      au < exists ; exists ; 2012 ; Media International Australia Volume 145 ; 145 ; >
-      au < exists ; exists ; 2013 ; Media International Australia Volume 146 ; 146 ; >
-      au < exists ; exists ; 2013 ; Media International Australia Volume 147 ; 147 ; >
-      au < exists ; exists ; 2013 ; Media International Australia Volume 148 ; 148 ; >
-      au < exists ; exists ; 2013 ; Media International Australia Volume 149 ; 149 ; >
-      au < exists ; exists ; 2014 ; Media International Australia Volume 150 ; 150 ; >
-      au < exists ; exists ; 2014 ; Media International Australia Volume 151 ; 151 ; >
-      au < exists ; exists ; 2014 ; Media International Australia Volume 152 ; 152 ; >
+      au < manifest ; exists ; 2006 ; Media International Australia Volume 118 ; 118 ; >
+      au < manifest ; exists ; 2006 ; Media International Australia Volume 119 ; 119 ; >
+      au < manifest ; exists ; 2006 ; Media International Australia Volume 120 ; 120 ; >
+      au < manifest ; exists ; 2006 ; Media International Australia Volume 121 ; 121 ; >
+      au < manifest ; exists ; 2007 ; Media International Australia Volume 122 ; 122 ; >
+      au < manifest ; exists ; 2007 ; Media International Australia Volume 123 ; 123 ; >
+      au < manifest ; exists ; 2007 ; Media International Australia Volume 124 ; 124 ; >
+      au < manifest ; exists ; 2007 ; Media International Australia Volume 125 ; 125 ; >
+      au < manifest ; exists ; 2008 ; Media International Australia Volume 126 ; 126 ; >
+      au < manifest ; exists ; 2008 ; Media International Australia Volume 127 ; 127 ; >
+      au < manifest ; exists ; 2008 ; Media International Australia Volume 128 ; 128 ; >
+      au < manifest ; exists ; 2008 ; Media International Australia Volume 129 ; 129 ; >
+      au < manifest ; exists ; 2009 ; Media International Australia Volume 130 ; 130 ; >
+      au < manifest ; exists ; 2009 ; Media International Australia Volume 131 ; 131 ; >
+      au < manifest ; exists ; 2009 ; Media International Australia Volume 132 ; 132 ; >
+      au < manifest ; exists ; 2009 ; Media International Australia Volume 133 ; 133 ; >
+      au < manifest ; exists ; 2010 ; Media International Australia Volume 134 ; 134 ; >
+      au < manifest ; exists ; 2010 ; Media International Australia Volume 135 ; 135 ; >
+      au < manifest ; exists ; 2010 ; Media International Australia Volume 136 ; 136 ; >
+      au < manifest ; exists ; 2010 ; Media International Australia Volume 137 ; 137 ; >
+      au < manifest ; exists ; 2011 ; Media International Australia Volume 138 ; 138 ; >
+      au < manifest ; exists ; 2011 ; Media International Australia Volume 139 ; 139 ; >
+      au < manifest ; exists ; 2011 ; Media International Australia Volume 140 ; 140 ; >
+      au < manifest ; exists ; 2011 ; Media International Australia Volume 141 ; 141 ; >
+      au < manifest ; exists ; 2012 ; Media International Australia Volume 142 ; 142 ; >
+      au < manifest ; exists ; 2012 ; Media International Australia Volume 143 ; 143 ; >
+      au < manifest ; exists ; 2012 ; Media International Australia Volume 144 ; 144 ; >
+      au < manifest ; exists ; 2012 ; Media International Australia Volume 145 ; 145 ; >
+      au < manifest ; exists ; 2013 ; Media International Australia Volume 146 ; 146 ; >
+      au < manifest ; exists ; 2013 ; Media International Australia Volume 147 ; 147 ; >
+      au < manifest ; exists ; 2013 ; Media International Australia Volume 148 ; 148 ; >
+      au < manifest ; exists ; 2013 ; Media International Australia Volume 149 ; 149 ; >
+      au < manifest ; exists ; 2014 ; Media International Australia Volume 150 ; 150 ; >
+      au < manifest ; exists ; 2014 ; Media International Australia Volume 151 ; 151 ; >
+      au < manifest ; exists ; 2014 ; Media International Australia Volume 152 ; 152 ; >
       au < doesNotExist ; doesNotExist ; 0 ; Media International Australia Volume 153 ; 153 ; >
-      au < exists ; exists ; 2015 ; Media International Australia Volume 154 ; 154 ; >
-      au < exists ; exists ; 2015 ; Media International Australia Volume 155 ; 155 ; >
-      au < exists ; exists ; 2015 ; Media International Australia Volume 156 ; 156 ; >
-      au < exists ; exists ; 2015 ; Media International Australia Volume 157 ; 157 ; >
+      au < manifest ; exists ; 2015 ; Media International Australia Volume 154 ; 154 ; >
+      au < manifest ; exists ; 2015 ; Media International Australia Volume 155 ; 155 ; >
+      au < manifest ; exists ; 2015 ; Media International Australia Volume 156 ; 156 ; >
+      au < manifest ; exists ; 2015 ; Media International Australia Volume 157 ; 157 ; >
       au < manifest ; exists ; 2016 ; Media International Australia Volume 158 ; 158 ; >
-      au < expected ; exists ; 2016 ; Media International Australia Volume 159 ; 159 ; >
+      au < manifest ; exists ; 2016 ; Media International Australia Volume 159 ; 159 ; >
       au < expected ; exists ; 2016 ; Media International Australia Volume 160 ; 160 ; >
       au < expected ; exists ; 2016 ; Media International Australia Volume 161 ; 161 ; >
 
@@ -31057,98 +31057,98 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         # no issue MLST-24
 
-        au < exists ; exists ; 1903 ; Medico-Legal Journal Volume MLST-1 ; MLST-1 ; >
-        au < exists ; exists ; 1904 ; Medico-Legal Journal Volume MLST-2 ; MLST-2 ; >
-        au < exists ; exists ; 1905 ; Medico-Legal Journal Volume MLST-3 ; MLST-3 ; >
-        au < exists ; exists ; 1906 ; Medico-Legal Journal Volume MLST-4 ; MLST-4 ; >
-        au < exists ; exists ; 1907 ; Medico-Legal Journal Volume MLST-5 ; MLST-5 ; >
-        au < exists ; exists ; 1908 ; Medico-Legal Journal Volume MLST-6 ; MLST-6 ; >
-        au < exists ; exists ; 1909-1910 ; Medico-Legal Journal Volume MLST-7 ; MLST-7 ; >
-        au < exists ; exists ; 1910-1911 ; Medico-Legal Journal Volume MLST-8 ; MLST-8 ; >
-        au < exists ; exists ; 1911-1912 ; Medico-Legal Journal Volume MLST-9 ; MLST-9 ; >
-        au < exists ; exists ; 1912-1913 ; Medico-Legal Journal Volume MLST-10 ; MLST-10 ; >
-        au < exists ; exists ; 1913-1914 ; Medico-Legal Journal Volume MLST-11 ; MLST-11 ; >
-        au < exists ; exists ; 1914 ; Medico-Legal Journal Volume MLST-12 ; MLST-12 ; >
-        au < exists ; exists ; 1915-1918 ; Medico-Legal Journal Volume MLST-13 ; MLST-13 ; >
-        au < exists ; exists ; 1919-1920 ; Medico-Legal Journal Volume MLST-14 ; MLST-14 ; >
-        au < exists ; exists ; 1920-1921 ; Medico-Legal Journal Volume MLST-15 ; MLST-15 ; >
-        au < exists ; exists ; 1921-1922 ; Medico-Legal Journal Volume MLST-16 ; MLST-16 ; >
-        au < exists ; exists ; 1922-1923 ; Medico-Legal Journal Volume MLST-17 ; MLST-17 ; >
-        au < exists ; exists ; 1923-1924 ; Medico-Legal Journal Volume MLST-18 ; MLST-18 ; >
-        au < exists ; exists ; 1924-1925 ; Medico-Legal Journal Volume MLST-19 ; MLST-19 ; >
-        au < exists ; exists ; 1925-1926 ; Medico-Legal Journal Volume MLST-20 ; MLST-20 ; >
-        au < exists ; exists ; 1926 ; Medico-Legal Journal Volume MLST-21 ; MLST-21 ; >
-        au < exists ; exists ; 1927-1928 ; Medico-Legal Journal Volume MLST-22 ; MLST-22 ; >
-        au < exists ; exists ; 1928-1929 ; Medico-Legal Journal Volume MLST-23 ; MLST-23 ; >
-        au < exists ; exists ; 1930-1931 ; Medico-Legal Journal Volume MLST-25 ; MLST-25 ; >
-        au < exists ; exists ; 1931-1932 ; Medico-Legal Journal Volume MLST-26 ; MLST-26 ; >
-        au < exists ; exists ; 1933 ; Medico-Legal Journal Volume 1 ; 1 ; >
+        au < manifest ; exists ; 1903 ; Medico-Legal Journal Volume MLST-1 ; MLST-1 ; >
+        au < manifest ; exists ; 1904 ; Medico-Legal Journal Volume MLST-2 ; MLST-2 ; >
+        au < manifest ; exists ; 1905 ; Medico-Legal Journal Volume MLST-3 ; MLST-3 ; >
+        au < manifest ; exists ; 1906 ; Medico-Legal Journal Volume MLST-4 ; MLST-4 ; >
+        au < manifest ; exists ; 1907 ; Medico-Legal Journal Volume MLST-5 ; MLST-5 ; >
+        au < manifest ; exists ; 1908 ; Medico-Legal Journal Volume MLST-6 ; MLST-6 ; >
+        au < manifest ; exists ; 1909-1910 ; Medico-Legal Journal Volume MLST-7 ; MLST-7 ; >
+        au < manifest ; exists ; 1910-1911 ; Medico-Legal Journal Volume MLST-8 ; MLST-8 ; >
+        au < manifest ; exists ; 1911-1912 ; Medico-Legal Journal Volume MLST-9 ; MLST-9 ; >
+        au < manifest ; exists ; 1912-1913 ; Medico-Legal Journal Volume MLST-10 ; MLST-10 ; >
+        au < manifest ; exists ; 1913-1914 ; Medico-Legal Journal Volume MLST-11 ; MLST-11 ; >
+        au < manifest ; exists ; 1914 ; Medico-Legal Journal Volume MLST-12 ; MLST-12 ; >
+        au < manifest ; exists ; 1915-1918 ; Medico-Legal Journal Volume MLST-13 ; MLST-13 ; >
+        au < manifest ; exists ; 1919-1920 ; Medico-Legal Journal Volume MLST-14 ; MLST-14 ; >
+        au < manifest ; exists ; 1920-1921 ; Medico-Legal Journal Volume MLST-15 ; MLST-15 ; >
+        au < manifest ; exists ; 1921-1922 ; Medico-Legal Journal Volume MLST-16 ; MLST-16 ; >
+        au < manifest ; exists ; 1922-1923 ; Medico-Legal Journal Volume MLST-17 ; MLST-17 ; >
+        au < manifest ; exists ; 1923-1924 ; Medico-Legal Journal Volume MLST-18 ; MLST-18 ; >
+        au < manifest ; exists ; 1924-1925 ; Medico-Legal Journal Volume MLST-19 ; MLST-19 ; >
+        au < manifest ; exists ; 1925-1926 ; Medico-Legal Journal Volume MLST-20 ; MLST-20 ; >
+        au < manifest ; exists ; 1926 ; Medico-Legal Journal Volume MLST-21 ; MLST-21 ; >
+        au < manifest ; exists ; 1927-1928 ; Medico-Legal Journal Volume MLST-22 ; MLST-22 ; >
+        au < manifest ; exists ; 1928-1929 ; Medico-Legal Journal Volume MLST-23 ; MLST-23 ; >
+        au < manifest ; exists ; 1930-1931 ; Medico-Legal Journal Volume MLST-25 ; MLST-25 ; >
+        au < manifest ; exists ; 1931-1932 ; Medico-Legal Journal Volume MLST-26 ; MLST-26 ; >
+        au < manifest ; exists ; 1933 ; Medico-Legal Journal Volume 1 ; 1 ; >
         au < exists ; exists ; 1934 ; Medico-Legal Journal Volume 2 ; 2 ; >
-        au < exists ; exists ; 1935 ; Medico-Legal Journal Volume 3 ; 3 ; >
-        au < exists ; exists ; 1936 ; Medico-Legal Journal Volume 4 ; 4 ; >
-        au < exists ; exists ; 1937 ; Medico-Legal Journal Volume 5 ; 5 ; >
-        au < exists ; exists ; 1938 ; Medico-Legal Journal Volume 6 ; 6 ; >
-        au < exists ; exists ; 1939 ; Medico-Legal Journal Volume 7 ; 7 ; >
-        au < exists ; exists ; 1940 ; Medico-Legal Journal Volume 8 ; 8 ; >
-        au < exists ; exists ; 1941 ; Medico-Legal Journal Volume 9 ; 9 ; >
-        au < exists ; exists ; 1942 ; Medico-Legal Journal Volume 10 ; 10 ; >
-        au < exists ; exists ; 1943 ; Medico-Legal Journal Volume 11 ; 11 ; >
-        au < exists ; exists ; 1944 ; Medico-Legal Journal Volume 12 ; 12 ; >
-        au < exists ; exists ; 1945 ; Medico-Legal Journal Volume 13 ; 13 ; >
-        au < exists ; exists ; 1946 ; Medico-Legal Journal Volume 14 ; 14 ; >
-        au < exists ; exists ; 1947 ; Medico-Legal Journal Volume 15 ; 15 ; >
-        au < exists ; exists ; 1948 ; Medico-Legal Journal Volume 16 ; 16 ; >
-        au < exists ; exists ; 1949 ; Medico-Legal Journal Volume 17 ; 17 ; >
-        au < exists ; exists ; 1950 ; Medico-Legal Journal Volume 18 ; 18 ; >
-        au < exists ; exists ; 1951 ; Medico-Legal Journal Volume 19 ; 19 ; >
-        au < exists ; exists ; 1952 ; Medico-Legal Journal Volume 20 ; 20 ; >
-        au < exists ; exists ; 1953 ; Medico-Legal Journal Volume 21 ; 21 ; >
-        au < exists ; exists ; 1954 ; Medico-Legal Journal Volume 22 ; 22 ; >
-        au < exists ; exists ; 1955 ; Medico-Legal Journal Volume 23 ; 23 ; >
-        au < exists ; exists ; 1956 ; Medico-Legal Journal Volume 24 ; 24 ; >
-        au < exists ; exists ; 1957 ; Medico-Legal Journal Volume 25 ; 25 ; >
-        au < exists ; exists ; 1958 ; Medico-Legal Journal Volume 26 ; 26 ; >
-        au < exists ; exists ; 1959 ; Medico-Legal Journal Volume 27 ; 27 ; >
-        au < exists ; exists ; 1960 ; Medico-Legal Journal Volume 28 ; 28 ; >
-        au < exists ; exists ; 1961 ; Medico-Legal Journal Volume 29 ; 29 ; >
-        au < exists ; exists ; 1962 ; Medico-Legal Journal Volume 30 ; 30 ; >
-        au < exists ; exists ; 1963 ; Medico-Legal Journal Volume 31 ; 31 ; >
-        au < exists ; exists ; 1964 ; Medico-Legal Journal Volume 32 ; 32 ; >
-        au < exists ; exists ; 1965 ; Medico-Legal Journal Volume 33 ; 33 ; >
-        au < exists ; exists ; 1966 ; Medico-Legal Journal Volume 34 ; 34 ; >
-        au < exists ; exists ; 1967 ; Medico-Legal Journal Volume 35 ; 35 ; >
-        au < exists ; exists ; 1968 ; Medico-Legal Journal Volume 36 ; 36 ; >
-        au < exists ; exists ; 1969 ; Medico-Legal Journal Volume 37 ; 37 ; >
-        au < exists ; exists ; 1970 ; Medico-Legal Journal Volume 38 ; 38 ; >
-        au < exists ; exists ; 1971 ; Medico-Legal Journal Volume 39 ; 39 ; >
-        au < exists ; exists ; 1972 ; Medico-Legal Journal Volume 40 ; 40 ; >
-        au < exists ; exists ; 1973 ; Medico-Legal Journal Volume 41 ; 41 ; >
-        au < exists ; exists ; 1974 ; Medico-Legal Journal Volume 42 ; 42 ; >
-        au < exists ; exists ; 1975 ; Medico-Legal Journal Volume 43 ; 43 ; >
-        au < exists ; exists ; 1976 ; Medico-Legal Journal Volume 44 ; 44 ; >
-        au < exists ; exists ; 1977 ; Medico-Legal Journal Volume 45 ; 45 ; >
-        au < exists ; exists ; 1978 ; Medico-Legal Journal Volume 46 ; 46 ; >
-        au < exists ; exists ; 1979 ; Medico-Legal Journal Volume 47 ; 47 ; >
-        au < exists ; exists ; 1980 ; Medico-Legal Journal Volume 48 ; 48 ; >
-        au < exists ; exists ; 1981 ; Medico-Legal Journal Volume 49 ; 49 ; >
-        au < exists ; exists ; 1982 ; Medico-Legal Journal Volume 50 ; 50 ; >
-        au < exists ; exists ; 1983 ; Medico-Legal Journal Volume 51 ; 51 ; >
-        au < exists ; exists ; 1984 ; Medico-Legal Journal Volume 52 ; 52 ; >
-        au < exists ; exists ; 1985 ; Medico-Legal Journal Volume 53 ; 53 ; >
-        au < exists ; exists ; 1986 ; Medico-Legal Journal Volume 54 ; 54 ; >
-        au < exists ; exists ; 1987 ; Medico-Legal Journal Volume 55 ; 55 ; >
-        au < exists ; exists ; 1988 ; Medico-Legal Journal Volume 56 ; 56 ; >
-        au < exists ; exists ; 1989 ; Medico-Legal Journal Volume 57 ; 57 ; >
-        au < exists ; exists ; 1990 ; Medico-Legal Journal Volume 58 ; 58 ; >
-        au < exists ; exists ; 1991 ; Medico-Legal Journal Volume 59 ; 59 ; >
-        au < exists ; exists ; 1992 ; Medico-Legal Journal Volume 60 ; 60 ; >
-        au < exists ; exists ; 1993 ; Medico-Legal Journal Volume 61 ; 61 ; >
-        au < exists ; exists ; 1994 ; Medico-Legal Journal Volume 62 ; 62 ; >
-        au < exists ; exists ; 1995 ; Medico-Legal Journal Volume 63 ; 63 ; >
-        au < exists ; exists ; 1996 ; Medico-Legal Journal Volume 64 ; 64 ; >
-        au < exists ; exists ; 1997 ; Medico-Legal Journal Volume 65 ; 65 ; >
-        au < exists ; exists ; 1998 ; Medico-Legal Journal Volume 66 ; 66 ; >
-        au < exists ; exists ; 1999 ; Medico-Legal Journal Volume 67 ; 67 ; >
+        au < manifest ; exists ; 1935 ; Medico-Legal Journal Volume 3 ; 3 ; >
+        au < manifest ; exists ; 1936 ; Medico-Legal Journal Volume 4 ; 4 ; >
+        au < manifest ; exists ; 1937 ; Medico-Legal Journal Volume 5 ; 5 ; >
+        au < manifest ; exists ; 1938 ; Medico-Legal Journal Volume 6 ; 6 ; >
+        au < manifest ; exists ; 1939 ; Medico-Legal Journal Volume 7 ; 7 ; >
+        au < manifest ; exists ; 1940 ; Medico-Legal Journal Volume 8 ; 8 ; >
+        au < manifest ; exists ; 1941 ; Medico-Legal Journal Volume 9 ; 9 ; >
+        au < manifest ; exists ; 1942 ; Medico-Legal Journal Volume 10 ; 10 ; >
+        au < manifest ; exists ; 1943 ; Medico-Legal Journal Volume 11 ; 11 ; >
+        au < manifest ; exists ; 1944 ; Medico-Legal Journal Volume 12 ; 12 ; >
+        au < manifest ; exists ; 1945 ; Medico-Legal Journal Volume 13 ; 13 ; >
+        au < manifest ; exists ; 1946 ; Medico-Legal Journal Volume 14 ; 14 ; >
+        au < manifest ; exists ; 1947 ; Medico-Legal Journal Volume 15 ; 15 ; >
+        au < manifest ; exists ; 1948 ; Medico-Legal Journal Volume 16 ; 16 ; >
+        au < manifest ; exists ; 1949 ; Medico-Legal Journal Volume 17 ; 17 ; >
+        au < manifest ; exists ; 1950 ; Medico-Legal Journal Volume 18 ; 18 ; >
+        au < manifest ; exists ; 1951 ; Medico-Legal Journal Volume 19 ; 19 ; >
+        au < manifest ; exists ; 1952 ; Medico-Legal Journal Volume 20 ; 20 ; >
+        au < manifest ; exists ; 1953 ; Medico-Legal Journal Volume 21 ; 21 ; >
+        au < manifest ; exists ; 1954 ; Medico-Legal Journal Volume 22 ; 22 ; >
+        au < manifest ; exists ; 1955 ; Medico-Legal Journal Volume 23 ; 23 ; >
+        au < manifest ; exists ; 1956 ; Medico-Legal Journal Volume 24 ; 24 ; >
+        au < manifest ; exists ; 1957 ; Medico-Legal Journal Volume 25 ; 25 ; >
+        au < manifest ; exists ; 1958 ; Medico-Legal Journal Volume 26 ; 26 ; >
+        au < manifest ; exists ; 1959 ; Medico-Legal Journal Volume 27 ; 27 ; >
+        au < manifest ; exists ; 1960 ; Medico-Legal Journal Volume 28 ; 28 ; >
+        au < manifest ; exists ; 1961 ; Medico-Legal Journal Volume 29 ; 29 ; >
+        au < manifest ; exists ; 1962 ; Medico-Legal Journal Volume 30 ; 30 ; >
+        au < manifest ; exists ; 1963 ; Medico-Legal Journal Volume 31 ; 31 ; >
+        au < manifest ; exists ; 1964 ; Medico-Legal Journal Volume 32 ; 32 ; >
+        au < manifest ; exists ; 1965 ; Medico-Legal Journal Volume 33 ; 33 ; >
+        au < manifest ; exists ; 1966 ; Medico-Legal Journal Volume 34 ; 34 ; >
+        au < manifest ; exists ; 1967 ; Medico-Legal Journal Volume 35 ; 35 ; >
+        au < manifest ; exists ; 1968 ; Medico-Legal Journal Volume 36 ; 36 ; >
+        au < manifest ; exists ; 1969 ; Medico-Legal Journal Volume 37 ; 37 ; >
+        au < manifest ; exists ; 1970 ; Medico-Legal Journal Volume 38 ; 38 ; >
+        au < manifest ; exists ; 1971 ; Medico-Legal Journal Volume 39 ; 39 ; >
+        au < manifest ; exists ; 1972 ; Medico-Legal Journal Volume 40 ; 40 ; >
+        au < manifest ; exists ; 1973 ; Medico-Legal Journal Volume 41 ; 41 ; >
+        au < manifest ; exists ; 1974 ; Medico-Legal Journal Volume 42 ; 42 ; >
+        au < manifest ; exists ; 1975 ; Medico-Legal Journal Volume 43 ; 43 ; >
+        au < manifest ; exists ; 1976 ; Medico-Legal Journal Volume 44 ; 44 ; >
+        au < manifest ; exists ; 1977 ; Medico-Legal Journal Volume 45 ; 45 ; >
+        au < manifest ; exists ; 1978 ; Medico-Legal Journal Volume 46 ; 46 ; >
+        au < manifest ; exists ; 1979 ; Medico-Legal Journal Volume 47 ; 47 ; >
+        au < manifest ; exists ; 1980 ; Medico-Legal Journal Volume 48 ; 48 ; >
+        au < manifest ; exists ; 1981 ; Medico-Legal Journal Volume 49 ; 49 ; >
+        au < manifest ; exists ; 1982 ; Medico-Legal Journal Volume 50 ; 50 ; >
+        au < manifest ; exists ; 1983 ; Medico-Legal Journal Volume 51 ; 51 ; >
+        au < manifest ; exists ; 1984 ; Medico-Legal Journal Volume 52 ; 52 ; >
+        au < manifest ; exists ; 1985 ; Medico-Legal Journal Volume 53 ; 53 ; >
+        au < manifest ; exists ; 1986 ; Medico-Legal Journal Volume 54 ; 54 ; >
+        au < manifest ; exists ; 1987 ; Medico-Legal Journal Volume 55 ; 55 ; >
+        au < manifest ; exists ; 1988 ; Medico-Legal Journal Volume 56 ; 56 ; >
+        au < manifest ; exists ; 1989 ; Medico-Legal Journal Volume 57 ; 57 ; >
+        au < manifest ; exists ; 1990 ; Medico-Legal Journal Volume 58 ; 58 ; >
+        au < manifest ; exists ; 1991 ; Medico-Legal Journal Volume 59 ; 59 ; >
+        au < manifest ; exists ; 1992 ; Medico-Legal Journal Volume 60 ; 60 ; >
+        au < manifest ; exists ; 1993 ; Medico-Legal Journal Volume 61 ; 61 ; >
+        au < manifest ; exists ; 1994 ; Medico-Legal Journal Volume 62 ; 62 ; >
+        au < manifest ; exists ; 1995 ; Medico-Legal Journal Volume 63 ; 63 ; >
+        au < manifest ; exists ; 1996 ; Medico-Legal Journal Volume 64 ; 64 ; >
+        au < manifest ; exists ; 1997 ; Medico-Legal Journal Volume 65 ; 65 ; >
+        au < manifest ; exists ; 1998 ; Medico-Legal Journal Volume 66 ; 66 ; >
+        au < manifest ; exists ; 1999 ; Medico-Legal Journal Volume 67 ; 67 ; >
         au < manifest ; exists ; 2000 ; Medico-Legal Journal Volume 68 ; 68 ; >
         au < manifest ; exists ; 2001 ; Medico-Legal Journal Volume 69 ; 69 ; >
         au < manifest ; exists ; 2002 ; Medico-Legal Journal Volume 70 ; 70 ; >
@@ -31164,8 +31164,8 @@
         au < finished ; finished ; 2012 ; Medico-Legal Journal Volume 80 ; 80 ; >
         au < finished ; finished ; 2013 ; Medico-Legal Journal Volume 81 ; 81 ; >
         au < finished ; crawling ; 2014 ; Medico-Legal Journal Volume 82 ; 82 ; reingest1.clockss.org:8082 >
-        au < exists ; exists ; 2015 ; Medico-Legal Journal Volume 83 ; 83 ; >
-        au < exists ; exists ; 2016 ; Medico-Legal Journal Volume 84 ; 84 ; >
+        au < manifest ; exists ; 2015 ; Medico-Legal Journal Volume 83 ; 83 ; >
+        au < manifest ; exists ; 2016 ; Medico-Legal Journal Volume 84 ; 84 ; >
 
     }
 
@@ -31481,8 +31481,8 @@
       param[base_url] = http://mix.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2015 ; Molecular Imaging Volume 14 ; 14 ; >
-      au < exists ; exists ; 2016 ; Molecular Imaging Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2015 ; Molecular Imaging Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2016 ; Molecular Imaging Volume 15 ; 15 ; >
 
   }
 
@@ -31496,18 +31496,18 @@
       param[base_url] = http://mpx.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2005 ; Molecular Pain Volume 1 ; 1 ; >
-      au < exists ; exists ; 2006 ; Molecular Pain Volume 2 ; 2 ; >
-      au < exists ; exists ; 2007 ; Molecular Pain Volume 3 ; 3 ; >
-      au < exists ; exists ; 2008 ; Molecular Pain Volume 4 ; 4 ; >
-      au < exists ; exists ; 2009 ; Molecular Pain Volume 5 ; 5 ; >
-      au < exists ; exists ; 2010 ; Molecular Pain Volume 6 ; 6 ; >
-      au < exists ; exists ; 2011 ; Molecular Pain Volume 7 ; 7 ; >
-      au < exists ; exists ; 2012 ; Molecular Pain Volume 8 ; 8 ; >
-      au < exists ; exists ; 2013 ; Molecular Pain Volume 9 ; 9 ; >
-      au < exists ; exists ; 2014 ; Molecular Pain Volume 10 ; 10 ; >
-      au < exists ; exists ; 2015 ; Molecular Pain Volume 11 ; 11 ; >
-      au < expected ; exists ; 2016 ; Molecular Pain Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2005 ; Molecular Pain Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2006 ; Molecular Pain Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2007 ; Molecular Pain Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2008 ; Molecular Pain Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2009 ; Molecular Pain Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2010 ; Molecular Pain Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2011 ; Molecular Pain Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2012 ; Molecular Pain Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2013 ; Molecular Pain Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2014 ; Molecular Pain Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2015 ; Molecular Pain Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2016 ; Molecular Pain Volume 12 ; 12 ; >
 
   }
 
@@ -32568,23 +32568,23 @@
       param[base_url] = http://nvw.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1999 ; Noise & Vibration Worldwide Volume 30 ; 30 ; >
-      au < exists ; exists ; 2000 ; Noise & Vibration Worldwide Volume 31 ; 31 ; >
-      au < exists ; exists ; 2001 ; Noise & Vibration Worldwide Volume 32 ; 32 ; >
-      au < exists ; exists ; 2002 ; Noise & Vibration Worldwide Volume 33 ; 33 ; >
-      au < exists ; exists ; 2003 ; Noise & Vibration Worldwide Volume 34 ; 34 ; >
-      au < exists ; exists ; 2004 ; Noise & Vibration Worldwide Volume 35 ; 35 ; >
-      au < exists ; exists ; 2005 ; Noise & Vibration Worldwide Volume 36 ; 36 ; >
-      au < exists ; exists ; 2006 ; Noise & Vibration Worldwide Volume 37 ; 37 ; >
-      au < exists ; exists ; 2007 ; Noise & Vibration Worldwide Volume 38 ; 38 ; >
-      au < exists ; exists ; 2008 ; Noise & Vibration Worldwide Volume 39 ; 39 ; >
-      au < exists ; exists ; 2009 ; Noise & Vibration Worldwide Volume 40 ; 40 ; >
-      au < exists ; exists ; 2010 ; Noise & Vibration Worldwide Volume 41 ; 41 ; >
-      au < exists ; exists ; 2011 ; Noise & Vibration Worldwide Volume 42 ; 42 ; >
-      au < exists ; exists ; 2012 ; Noise & Vibration Worldwide Volume 43 ; 43 ; >
-      au < exists ; exists ; 2013 ; Noise & Vibration Worldwide Volume 44 ; 44 ; >
-      au < exists ; exists ; 2014 ; Noise & Vibration Worldwide Volume 45 ; 45 ; >
-      au < exists ; exists ; 2015 ; Noise & Vibration Worldwide Volume 46 ; 46 ; >
+      au < manifest ; exists ; 1999 ; Noise & Vibration Worldwide Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2000 ; Noise & Vibration Worldwide Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2001 ; Noise & Vibration Worldwide Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2002 ; Noise & Vibration Worldwide Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2003 ; Noise & Vibration Worldwide Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2004 ; Noise & Vibration Worldwide Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2005 ; Noise & Vibration Worldwide Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2006 ; Noise & Vibration Worldwide Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2007 ; Noise & Vibration Worldwide Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2008 ; Noise & Vibration Worldwide Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2009 ; Noise & Vibration Worldwide Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2010 ; Noise & Vibration Worldwide Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2011 ; Noise & Vibration Worldwide Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2012 ; Noise & Vibration Worldwide Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2013 ; Noise & Vibration Worldwide Volume 44 ; 44 ; >
+      au < manifest ; exists ; 2014 ; Noise & Vibration Worldwide Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2015 ; Noise & Vibration Worldwide Volume 46 ; 46 ; >
       au < expected ; exists ; 2016 ; Noise & Vibration Worldwide Volume 47 ; 47 ; >
 
   }
@@ -34406,12 +34406,12 @@
       param[base_url] = http://pli.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2010 ; Political Insight Volume 1 ; 1 ; >
-      au < exists ; exists ; 2011 ; Political Insight Volume 2 ; 2 ; >
-      au < exists ; exists ; 2012 ; Political Insight Volume 3 ; 3 ; >
-      au < exists ; exists ; 2013 ; Political Insight Volume 4 ; 4 ; >
-      au < exists ; exists ; 2014 ; Political Insight Volume 5 ; 5 ; >
-      au < exists ; exists ; 2015 ; Political Insight Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2010 ; Political Insight Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2011 ; Political Insight Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2012 ; Political Insight Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2013 ; Political Insight Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2014 ; Political Insight Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2015 ; Political Insight Volume 6 ; 6 ; >
       au < manifest ; exists ; 2016 ; Political Insight Volume 7 ; 7 ; >
 
   }
@@ -34526,22 +34526,22 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1953 volume 1 to 1999 volume 47
 
-      au < exists ; exists ; 2000 ; Political Studies Volume 48 ; 48 ; >
-      au < exists ; exists ; 2001 ; Political Studies Volume 49 ; 49 ; >
-      au < exists ; exists ; 2002 ; Political Studies Volume 50 ; 50 ; >
-      au < exists ; exists ; 2003 ; Political Studies Volume 51 ; 51 ; >
-      au < exists ; exists ; 2004 ; Political Studies Volume 52 ; 52 ; >
-      au < exists ; exists ; 2005 ; Political Studies Volume 53 ; 53 ; >
-      au < exists ; exists ; 2006 ; Political Studies Volume 54 ; 54 ; >
-      au < exists ; exists ; 2007 ; Political Studies Volume 55 ; 55 ; >
-      au < exists ; exists ; 2008 ; Political Studies Volume 56 ; 56 ; >
-      au < exists ; exists ; 2009 ; Political Studies Volume 57 ; 57 ; >
-      au < exists ; exists ; 2010 ; Political Studies Volume 58 ; 58 ; >
-      au < exists ; exists ; 2011 ; Political Studies Volume 59 ; 59 ; >
-      au < exists ; exists ; 2012 ; Political Studies Volume 60 ; 60 ; >
-      au < exists ; exists ; 2013 ; Political Studies Volume 61 ; 61 ; >
-      au < exists ; exists ; 2014 ; Political Studies Volume 62 ; 62 ; >
-      au < exists ; exists ; 2015 ; Political Studies Volume 63 ; 63 ; >
+      au < manifest ; exists ; 2000 ; Political Studies Volume 48 ; 48 ; >
+      au < manifest ; exists ; 2001 ; Political Studies Volume 49 ; 49 ; >
+      au < manifest ; exists ; 2002 ; Political Studies Volume 50 ; 50 ; >
+      au < manifest ; exists ; 2003 ; Political Studies Volume 51 ; 51 ; >
+      au < manifest ; exists ; 2004 ; Political Studies Volume 52 ; 52 ; >
+      au < manifest ; exists ; 2005 ; Political Studies Volume 53 ; 53 ; >
+      au < manifest ; exists ; 2006 ; Political Studies Volume 54 ; 54 ; >
+      au < manifest ; exists ; 2007 ; Political Studies Volume 55 ; 55 ; >
+      au < manifest ; exists ; 2008 ; Political Studies Volume 56 ; 56 ; >
+      au < manifest ; exists ; 2009 ; Political Studies Volume 57 ; 57 ; >
+      au < manifest ; exists ; 2010 ; Political Studies Volume 58 ; 58 ; >
+      au < manifest ; exists ; 2011 ; Political Studies Volume 59 ; 59 ; >
+      au < manifest ; exists ; 2012 ; Political Studies Volume 60 ; 60 ; >
+      au < manifest ; exists ; 2013 ; Political Studies Volume 61 ; 61 ; >
+      au < manifest ; exists ; 2014 ; Political Studies Volume 62 ; 62 ; >
+      au < manifest ; exists ; 2015 ; Political Studies Volume 63 ; 63 ; >
       au < manifest ; exists ; 2016 ; Political Studies Volume 64 ; 64 ; >
 
   }
@@ -34557,19 +34557,19 @@
       param[base_url] = http://psw.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2003 ; Political Studies Review Volume 1 ; 1 ; >
-      au < exists ; exists ; 2004 ; Political Studies Review Volume 2 ; 2 ; >
-      au < exists ; exists ; 2005 ; Political Studies Review Volume 3 ; 3 ; >
-      au < exists ; exists ; 2006 ; Political Studies Review Volume 4 ; 4 ; >
-      au < exists ; exists ; 2007 ; Political Studies Review Volume 5 ; 5 ; >
-      au < exists ; exists ; 2008 ; Political Studies Review Volume 6 ; 6 ; >
-      au < exists ; exists ; 2009 ; Political Studies Review Volume 7 ; 7 ; >
-      au < exists ; exists ; 2010 ; Political Studies Review Volume 8 ; 8 ; >
-      au < exists ; exists ; 2011 ; Political Studies Review Volume 9 ; 9 ; >
-      au < exists ; exists ; 2012 ; Political Studies Review Volume 10 ; 10 ; >
-      au < exists ; exists ; 2013 ; Political Studies Review Volume 11 ; 11 ; >
-      au < exists ; exists ; 2014 ; Political Studies Review Volume 12 ; 12 ; >
-      au < exists ; exists ; 2015 ; Political Studies Review Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2003 ; Political Studies Review Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2004 ; Political Studies Review Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2005 ; Political Studies Review Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2006 ; Political Studies Review Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2007 ; Political Studies Review Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2008 ; Political Studies Review Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2009 ; Political Studies Review Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2010 ; Political Studies Review Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2011 ; Political Studies Review Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2012 ; Political Studies Review Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2013 ; Political Studies Review Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2014 ; Political Studies Review Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2015 ; Political Studies Review Volume 13 ; 13 ; >
       au < manifest ; exists ; 2016 ; Political Studies Review Volume 14 ; 14 ; >
 
   }
@@ -34659,22 +34659,22 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       #content available from 1981 volume 1 to 1999 19
 
-      au < exists ; exists ; 2000 ; politics Volume 20 ; 20 ; >
-      au < exists ; exists ; 2001 ; politics Volume 21 ; 21 ; >
-      au < exists ; exists ; 2002 ; politics Volume 22 ; 22 ; >
-      au < exists ; exists ; 2003 ; politics Volume 23 ; 23 ; >
-      au < exists ; exists ; 2004 ; politics Volume 24 ; 24 ; >
-      au < exists ; exists ; 2005 ; politics Volume 25 ; 25 ; >
-      au < exists ; exists ; 2006 ; politics Volume 26 ; 26 ; >
-      au < exists ; exists ; 2007 ; politics Volume 27 ; 27 ; >
-      au < exists ; exists ; 2008 ; politics Volume 28 ; 28 ; >
-      au < exists ; exists ; 2009 ; politics Volume 29 ; 29 ; >
-      au < exists ; exists ; 2010 ; politics Volume 30 ; 30 ; >
-      au < exists ; exists ; 2011 ; politics Volume 31 ; 31 ; >
-      au < exists ; exists ; 2012 ; politics Volume 32 ; 32 ; >
-      au < exists ; exists ; 2013 ; politics Volume 33 ; 33 ; >
-      au < exists ; exists ; 2014 ; politics Volume 34 ; 34 ; >
-      au < exists ; exists ; 2015 ; politics Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2000 ; politics Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2001 ; politics Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2002 ; politics Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2003 ; politics Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2004 ; politics Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2005 ; politics Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2006 ; politics Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2007 ; politics Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2008 ; politics Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2009 ; politics Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2010 ; politics Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2011 ; politics Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2012 ; politics Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2013 ; politics Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2014 ; politics Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2015 ; politics Volume 35 ; 35 ; >
       au < manifest ; exists ; 2016 ; politics Volume 36 ; 36 ; >
 
   }
@@ -36006,27 +36006,27 @@
       param[base_url] = http://pit.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 1996 ; Progress in Transplantation Volume 6 ; 6 ; >
-      au < exists ; exists ; 1997 ; Progress in Transplantation Volume 7 ; 7 ; >
-      au < exists ; exists ; 1998 ; Progress in Transplantation Volume 8 ; 8 ; >
-      au < exists ; exists ; 1999 ; Progress in Transplantation Volume 9 ; 9 ; >
-      au < exists ; exists ; 2000 ; Progress in Transplantation Volume 10 ; 10 ; >
-      au < exists ; exists ; 2001 ; Progress in Transplantation Volume 11 ; 11 ; >
-      au < exists ; exists ; 2002 ; Progress in Transplantation Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1996 ; Progress in Transplantation Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1997 ; Progress in Transplantation Volume 7 ; 7 ; >
+      au < manifest ; exists ; 1998 ; Progress in Transplantation Volume 8 ; 8 ; >
+      au < manifest ; exists ; 1999 ; Progress in Transplantation Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2000 ; Progress in Transplantation Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2001 ; Progress in Transplantation Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2002 ; Progress in Transplantation Volume 12 ; 12 ; >
       au < exists ; exists ; 2003 ; Progress in Transplantation Volume 13 ; 13 ; >
-      au < exists ; exists ; 2004 ; Progress in Transplantation Volume 14 ; 14 ; >
-      au < exists ; exists ; 2005 ; Progress in Transplantation Volume 15 ; 15 ; >
-      au < exists ; exists ; 2006 ; Progress in Transplantation Volume 16 ; 16 ; >
-      au < exists ; exists ; 2007 ; Progress in Transplantation Volume 17 ; 17 ; >
-      au < exists ; exists ; 2008 ; Progress in Transplantation Volume 18 ; 18 ; >
-      au < exists ; exists ; 2009 ; Progress in Transplantation Volume 19 ; 19 ; >
-      au < exists ; exists ; 2010 ; Progress in Transplantation Volume 20 ; 20 ; >
-      au < exists ; exists ; 2011 ; Progress in Transplantation Volume 21 ; 21 ; >
-      au < exists ; exists ; 2012 ; Progress in Transplantation Volume 22 ; 22 ; >
-      au < exists ; exists ; 2013 ; Progress in Transplantation Volume 23 ; 23 ; >
-      au < exists ; exists ; 2014 ; Progress in Transplantation Volume 24 ; 24 ; >
-      au < exists ; exists ; 2015 ; Progress in Transplantation Volume 25 ; 25 ; >
-      au < exists ; exists ; 2016 ; Progress in Transplantation Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2004 ; Progress in Transplantation Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2005 ; Progress in Transplantation Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2006 ; Progress in Transplantation Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2007 ; Progress in Transplantation Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2008 ; Progress in Transplantation Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2009 ; Progress in Transplantation Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2010 ; Progress in Transplantation Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2011 ; Progress in Transplantation Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2012 ; Progress in Transplantation Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2013 ; Progress in Transplantation Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2014 ; Progress in Transplantation Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2015 ; Progress in Transplantation Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2016 ; Progress in Transplantation Volume 26 ; 26 ; >
 
   }
 
@@ -37702,7 +37702,7 @@
       au < finished ; finished ; 2013 ; Research Studies in Music Education Volume 35 ; 35 ; >
       au < finished ; finished ; 2014 ; Research Studies in Music Education Volume 36 ; 36 ; >
       au < crawling ; exists ; 2015 ; Research Studies in Music Education Volume 37 ; 37 ; >
-      au < expected ; exists ; 2016 ; Research Studies in Music Education Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2016 ; Research Studies in Music Education Volume 38 ; 38 ; >
 
     }
 
@@ -44036,22 +44036,22 @@
       param[base_url] = http://wie.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2000 ; Wind Engineering Volume 24 ; 24 ; >
-      au < exists ; exists ; 2001 ; Wind Engineering Volume 25 ; 25 ; >
-      au < exists ; exists ; 2002 ; Wind Engineering Volume 26 ; 26 ; >
-      au < exists ; exists ; 2003 ; Wind Engineering Volume 27 ; 27 ; >
-      au < exists ; exists ; 2004 ; Wind Engineering Volume 28 ; 28 ; >
-      au < exists ; exists ; 2005 ; Wind Engineering Volume 29 ; 29 ; >
-      au < exists ; exists ; 2006 ; Wind Engineering Volume 30 ; 30 ; >
-      au < exists ; exists ; 2007 ; Wind Engineering Volume 31 ; 31 ; >
-      au < exists ; exists ; 2008 ; Wind Engineering Volume 32 ; 32 ; >
-      au < exists ; exists ; 2009 ; Wind Engineering Volume 33 ; 33 ; >
-      au < exists ; exists ; 2010 ; Wind Engineering Volume 34 ; 34 ; >
-      au < exists ; exists ; 2011 ; Wind Engineering Volume 35 ; 35 ; >
-      au < exists ; exists ; 2012 ; Wind Engineering Volume 36 ; 36 ; >
-      au < exists ; exists ; 2013 ; Wind Engineering Volume 37 ; 37 ; >
-      au < exists ; exists ; 2014 ; Wind Engineering Volume 38 ; 38 ; >
-      au < exists ; exists ; 2015 ; Wind Engineering Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2000 ; Wind Engineering Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2001 ; Wind Engineering Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2002 ; Wind Engineering Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2003 ; Wind Engineering Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2004 ; Wind Engineering Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2005 ; Wind Engineering Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2006 ; Wind Engineering Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2007 ; Wind Engineering Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2008 ; Wind Engineering Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2009 ; Wind Engineering Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2010 ; Wind Engineering Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2011 ; Wind Engineering Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2012 ; Wind Engineering Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2013 ; Wind Engineering Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2014 ; Wind Engineering Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2015 ; Wind Engineering Volume 39 ; 39 ; >
       au < manifest ; exists ; 2016 ; Wind Engineering Volume 40 ; 40 ; >
 
   }
@@ -45628,8 +45628,8 @@
       au < finished ; finished ; 2012 ; Vision: The Journal of Business Perspective Volume 16 ; 16 ; >
       au < finished ; finished ; 2013 ; Vision: The Journal of Business Perspective Volume 17 ; 17 ; >
       au < finished ; finished ; 2014 ; Vision: The Journal of Business Perspective Volume 18 ; 18 ; >
-      au < exists ; exists ; 2015 ; Vision: The Journal of Business Perspective Volume 19 ; 19 ; >
-      au < exists ; exists ; 2016 ; Vision: The Journal of Business Perspective Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2015 ; Vision: The Journal of Business Perspective Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2016 ; Vision: The Journal of Business Perspective Volume 20 ; 20 ; >
 
   }
 
@@ -45938,7 +45938,7 @@
     au < doNotProcess ; exists ; 2013 ; Annals of the ICRP Volume 42 ; 42 ; >
     au < finished ; finished ; 2014 ; Annals of the ICRP Volume 43 ; 43 ; >
     au < crawling ; exists ; 2015 ; Annals of the ICRP Volume 44 ; 44 ; >
-    au < expected ; exists ; 2016 ; Annals of the ICRP Volume 45 ; 45 ; >
+    au < manifest ; exists ; 2016 ; Annals of the ICRP Volume 45 ; 45 ; >
 
     }
 
@@ -46195,7 +46195,7 @@
     param[base_url] = http://dsp.sagepub.com/
     
     au < finished ; finished ; 2013-2014 ; Drug Science, Policy and Law Volume 1 ; 1 ; >
-    au < exists ; exists ; 2016 ; Drug Science, Policy and Law Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2016 ; Drug Science, Policy and Law Volume 2 ; 2 ; >
 
     }
 
@@ -46347,8 +46347,8 @@
 
     au < finished ; finished ; 2013 ; Foreign Trade Review Volume 48 ; 48 ; >
     au < finished ; finished ; 2014 ; Foreign Trade Review Volume 49 ; 49 ; >
-    au < exists ; exists ; 2015 ; Foreign Trade Review Volume 50 ; 50 ; >
-    au < exists ; exists ; 2016 ; Foreign Trade Review Volume 51 ; 51 ; >
+    au < manifest ; exists ; 2015 ; Foreign Trade Review Volume 50 ; 50 ; >
+    au < manifest ; exists ; 2016 ; Foreign Trade Review Volume 51 ; 51 ; >
 
     }
 
@@ -46948,17 +46948,17 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://cet.sagepub.com/
 
-        au < exists ; exists ; 2006 ; Clinical Ethics Volume 1 ; 1 ; >
-        au < exists ; exists ; 2007 ; Clinical Ethics Volume 2 ; 2 ; >
-        au < exists ; exists ; 2008 ; Clinical Ethics Volume 3 ; 3 ; >
-        au < exists ; exists ; 2009 ; Clinical Ethics Volume 4 ; 4 ; >
-        au < exists ; exists ; 2010 ; Clinical Ethics Volume 5 ; 5 ; >
-        au < exists ; exists ; 2011 ; Clinical Ethics Volume 6 ; 6 ; >
-        au < exists ; exists ; 2012 ; Clinical Ethics Volume 7 ; 7 ; >
+        au < manifest ; exists ; 2006 ; Clinical Ethics Volume 1 ; 1 ; >
+        au < manifest ; exists ; 2007 ; Clinical Ethics Volume 2 ; 2 ; >
+        au < manifest ; exists ; 2008 ; Clinical Ethics Volume 3 ; 3 ; >
+        au < manifest ; exists ; 2009 ; Clinical Ethics Volume 4 ; 4 ; >
+        au < manifest ; exists ; 2010 ; Clinical Ethics Volume 5 ; 5 ; >
+        au < manifest ; exists ; 2011 ; Clinical Ethics Volume 6 ; 6 ; >
+        au < manifest ; exists ; 2012 ; Clinical Ethics Volume 7 ; 7 ; >
         au < finished ; finished ; 2013 ; Clinical Ethics Volume 8 ; 8 ; >
         au < finished ; finished ; 2014 ; Clinical Ethics Volume 9 ; 9 ; >
-        au < exists ; exists ; 2015 ; Clinical Ethics Volume 10 ; 10 ; >
-        au < exists ; exists ; 2016 ; Clinical Ethics Volume 11 ; 11 ; >
+        au < manifest ; exists ; 2015 ; Clinical Ethics Volume 10 ; 10 ; >
+        au < manifest ; exists ; 2016 ; Clinical Ethics Volume 11 ; 11 ; >
 
     }
 
@@ -47419,7 +47419,7 @@
         # skips 2013
         
         au < crawling ; exists ; 2014 ; International Journal of Care Coordination Volume 17 ; 17 ; >
-        au < exists ; exists ; 2015 ; International Journal of Care Coordination Volume 18 ; 18 ; >
+        au < manifest ; exists ; 2015 ; International Journal of Care Coordination Volume 18 ; 18 ; >
         au < expected ; exists ; 2016 ; International Journal of Care Coordination Volume 19 ; 19 ; >
 
     }
@@ -47578,8 +47578,8 @@
         au < finished ; finished ; 2012 ; Journal of Health Services Research & Policy Volume 17 ; 17 ; >
         au < finished ; finished ; 2013 ; Journal of Health Services Research & Policy Volume 18 ; 18 ; >
         au < finished ; finished ; 2014 ; Journal of Health Services Research & Policy Volume 19 ; 19 ; >
-        au < exists ; exists ; 2015 ; Journal of Health Services Research & Policy Volume 20 ; 20 ; >
-        au < exists ; exists ; 2016 ; Journal of Health Services Research & Policy Volume 21 ; 21 ; >
+        au < manifest ; exists ; 2015 ; Journal of Health Services Research & Policy Volume 20 ; 20 ; >
+        au < manifest ; exists ; 2016 ; Journal of Health Services Research & Policy Volume 21 ; 21 ; >
 
     }
 
@@ -47978,56 +47978,56 @@
 
         param[base_url] = http://lan.sagepub.com/
 
-        au < exists ; exists ; 1967 ; Laboratory Animals Volume 1 ; 1 ; >
-        au < exists ; exists ; 1968 ; Laboratory Animals Volume 2 ; 2 ; >
-        au < exists ; exists ; 1969 ; Laboratory Animals Volume 3 ; 3 ; >
-        au < exists ; exists ; 1970 ; Laboratory Animals Volume 4 ; 4 ; >
-        au < exists ; exists ; 1971 ; Laboratory Animals Volume 5 ; 5 ; >
-        au < exists ; exists ; 1972 ; Laboratory Animals Volume 6 ; 6 ; >
-        au < exists ; exists ; 1973 ; Laboratory Animals Volume 7 ; 7 ; >
-        au < exists ; exists ; 1974 ; Laboratory Animals Volume 8 ; 8 ; >
-        au < exists ; exists ; 1975 ; Laboratory Animals Volume 9 ; 9 ; >
-        au < exists ; exists ; 1976 ; Laboratory Animals Volume 10 ; 10 ; >
-        au < exists ; exists ; 1977 ; Laboratory Animals Volume 11 ; 11 ; >
-        au < exists ; exists ; 1978 ; Laboratory Animals Volume 12 ; 12 ; >
-        au < exists ; exists ; 1979 ; Laboratory Animals Volume 13 ; 13 ; >
-        au < exists ; exists ; 1980 ; Laboratory Animals Volume 14 ; 14 ; >
-        au < exists ; exists ; 1981 ; Laboratory Animals Volume 15 ; 15 ; >
-        au < exists ; exists ; 1982 ; Laboratory Animals Volume 16 ; 16 ; >
-        au < exists ; exists ; 1983 ; Laboratory Animals Volume 17 ; 17 ; >
-        au < exists ; exists ; 1984 ; Laboratory Animals Volume 18 ; 18 ; >
-        au < exists ; exists ; 1985 ; Laboratory Animals Volume 19 ; 19 ; >
-        au < exists ; exists ; 1986 ; Laboratory Animals Volume 20 ; 20 ; >
-        au < exists ; exists ; 1987 ; Laboratory Animals Volume 21 ; 21 ; >
-        au < exists ; exists ; 1988 ; Laboratory Animals Volume 22 ; 22 ; >
-        au < exists ; exists ; 1989 ; Laboratory Animals Volume 23 ; 23 ; >
-        au < exists ; exists ; 1990 ; Laboratory Animals Volume 24 ; 24 ; >
-        au < exists ; exists ; 1991 ; Laboratory Animals Volume 25 ; 25 ; >
-        au < exists ; exists ; 1992 ; Laboratory Animals Volume 26 ; 26 ; >
-        au < exists ; exists ; 1993 ; Laboratory Animals Volume 27 ; 27 ; >
-        au < exists ; exists ; 1994 ; Laboratory Animals Volume 28 ; 28 ; >
-        au < exists ; exists ; 1995 ; Laboratory Animals Volume 29 ; 29 ; >
-        au < exists ; exists ; 1996 ; Laboratory Animals Volume 30 ; 30 ; >
-        au < exists ; exists ; 1997 ; Laboratory Animals Volume 31 ; 31 ; >
-        au < exists ; exists ; 1998 ; Laboratory Animals Volume 32 ; 32 ; >
-        au < exists ; exists ; 1999 ; Laboratory Animals Volume 33 ; 33 ; >
-        au < exists ; exists ; 2000 ; Laboratory Animals Volume 34 ; 34 ; >
-        au < exists ; exists ; 2001 ; Laboratory Animals Volume 35 ; 35 ; >
-        au < exists ; exists ; 2002 ; Laboratory Animals Volume 36 ; 36 ; >
-        au < exists ; exists ; 2003 ; Laboratory Animals Volume 37 ; 37 ; >
-        au < exists ; exists ; 2004 ; Laboratory Animals Volume 38 ; 38 ; >
-        au < exists ; exists ; 2005 ; Laboratory Animals Volume 39 ; 39 ; >
-        au < exists ; exists ; 2006 ; Laboratory Animals Volume 40 ; 40 ; >
-        au < exists ; exists ; 2007 ; Laboratory Animals Volume 41 ; 41 ; >
-        au < exists ; exists ; 2008 ; Laboratory Animals Volume 42 ; 42 ; >
-        au < exists ; exists ; 2009 ; Laboratory Animals Volume 43 ; 43 ; >
-        au < exists ; exists ; 2010 ; Laboratory Animals Volume 44 ; 44 ; >
-        au < exists ; exists ; 2011 ; Laboratory Animals Volume 45 ; 45 ; >
-        au < exists ; exists ; 2012 ; Laboratory Animals Volume 46 ; 46 ; >
+        au < manifest ; exists ; 1967 ; Laboratory Animals Volume 1 ; 1 ; >
+        au < manifest ; exists ; 1968 ; Laboratory Animals Volume 2 ; 2 ; >
+        au < manifest ; exists ; 1969 ; Laboratory Animals Volume 3 ; 3 ; >
+        au < manifest ; exists ; 1970 ; Laboratory Animals Volume 4 ; 4 ; >
+        au < manifest ; exists ; 1971 ; Laboratory Animals Volume 5 ; 5 ; >
+        au < manifest ; exists ; 1972 ; Laboratory Animals Volume 6 ; 6 ; >
+        au < manifest ; exists ; 1973 ; Laboratory Animals Volume 7 ; 7 ; >
+        au < manifest ; exists ; 1974 ; Laboratory Animals Volume 8 ; 8 ; >
+        au < manifest ; exists ; 1975 ; Laboratory Animals Volume 9 ; 9 ; >
+        au < manifest ; exists ; 1976 ; Laboratory Animals Volume 10 ; 10 ; >
+        au < manifest ; exists ; 1977 ; Laboratory Animals Volume 11 ; 11 ; >
+        au < manifest ; exists ; 1978 ; Laboratory Animals Volume 12 ; 12 ; >
+        au < manifest ; exists ; 1979 ; Laboratory Animals Volume 13 ; 13 ; >
+        au < manifest ; exists ; 1980 ; Laboratory Animals Volume 14 ; 14 ; >
+        au < manifest ; exists ; 1981 ; Laboratory Animals Volume 15 ; 15 ; >
+        au < manifest ; exists ; 1982 ; Laboratory Animals Volume 16 ; 16 ; >
+        au < manifest ; exists ; 1983 ; Laboratory Animals Volume 17 ; 17 ; >
+        au < manifest ; exists ; 1984 ; Laboratory Animals Volume 18 ; 18 ; >
+        au < manifest ; exists ; 1985 ; Laboratory Animals Volume 19 ; 19 ; >
+        au < manifest ; exists ; 1986 ; Laboratory Animals Volume 20 ; 20 ; >
+        au < manifest ; exists ; 1987 ; Laboratory Animals Volume 21 ; 21 ; >
+        au < manifest ; exists ; 1988 ; Laboratory Animals Volume 22 ; 22 ; >
+        au < manifest ; exists ; 1989 ; Laboratory Animals Volume 23 ; 23 ; >
+        au < manifest ; exists ; 1990 ; Laboratory Animals Volume 24 ; 24 ; >
+        au < manifest ; exists ; 1991 ; Laboratory Animals Volume 25 ; 25 ; >
+        au < manifest ; exists ; 1992 ; Laboratory Animals Volume 26 ; 26 ; >
+        au < manifest ; exists ; 1993 ; Laboratory Animals Volume 27 ; 27 ; >
+        au < manifest ; exists ; 1994 ; Laboratory Animals Volume 28 ; 28 ; >
+        au < manifest ; exists ; 1995 ; Laboratory Animals Volume 29 ; 29 ; >
+        au < manifest ; exists ; 1996 ; Laboratory Animals Volume 30 ; 30 ; >
+        au < manifest ; exists ; 1997 ; Laboratory Animals Volume 31 ; 31 ; >
+        au < manifest ; exists ; 1998 ; Laboratory Animals Volume 32 ; 32 ; >
+        au < manifest ; exists ; 1999 ; Laboratory Animals Volume 33 ; 33 ; >
+        au < manifest ; exists ; 2000 ; Laboratory Animals Volume 34 ; 34 ; >
+        au < manifest ; exists ; 2001 ; Laboratory Animals Volume 35 ; 35 ; >
+        au < manifest ; exists ; 2002 ; Laboratory Animals Volume 36 ; 36 ; >
+        au < manifest ; exists ; 2003 ; Laboratory Animals Volume 37 ; 37 ; >
+        au < manifest ; exists ; 2004 ; Laboratory Animals Volume 38 ; 38 ; >
+        au < manifest ; exists ; 2005 ; Laboratory Animals Volume 39 ; 39 ; >
+        au < manifest ; exists ; 2006 ; Laboratory Animals Volume 40 ; 40 ; >
+        au < manifest ; exists ; 2007 ; Laboratory Animals Volume 41 ; 41 ; >
+        au < manifest ; exists ; 2008 ; Laboratory Animals Volume 42 ; 42 ; >
+        au < manifest ; exists ; 2009 ; Laboratory Animals Volume 43 ; 43 ; >
+        au < manifest ; exists ; 2010 ; Laboratory Animals Volume 44 ; 44 ; >
+        au < manifest ; exists ; 2011 ; Laboratory Animals Volume 45 ; 45 ; >
+        au < manifest ; exists ; 2012 ; Laboratory Animals Volume 46 ; 46 ; >
         au < finished ; finished ; 2013 ; Laboratory Animals Volume 47 ; 47 ; >
         au < finished ; crawling ; 2014 ; Laboratory Animals Volume 48 ; 48 ; >
-        au < exists ; exists ; 2015 ; Laboratory Animals Volume 49 ; 49 ; >
-        au < exists ; exists ; 2016 ; Laboratory Animals Volume 50 ; 50 ; >
+        au < manifest ; exists ; 2015 ; Laboratory Animals Volume 49 ; 49 ; >
+        au < manifest ; exists ; 2016 ; Laboratory Animals Volume 50 ; 50 ; >
 
       }
 
