@@ -652,9 +652,9 @@
     au < HighWirePressH20Plugin ; ready ; 1994 ; British Journal of Ophthalmology Volume 78 ; 78 >
     au < HighWirePressH20Plugin ; ready ; 1995 ; British Journal of Ophthalmology Volume 79 ; 79 >
     au < HighWirePressH20Plugin ; ready ; 1996 ; British Journal of Ophthalmology Volume 80 ; 80 >
-    au < HighWirePressH20Plugin ; testing ; 1997 ; British Journal of Ophthalmology Volume 81 ; 81 >
-    au < HighWirePressH20Plugin ; testing ; 1998 ; British Journal of Ophthalmology Volume 82 ; 82 >
-    au < HighWirePressH20Plugin ; testing ; 1999 ; British Journal of Ophthalmology Volume 83 ; 83 >
+    au < HighWirePressH20Plugin ; ready ; 1997 ; British Journal of Ophthalmology Volume 81 ; 81 >
+    au < HighWirePressH20Plugin ; ready ; 1998 ; British Journal of Ophthalmology Volume 82 ; 82 >
+    au < HighWirePressH20Plugin ; ready ; 1999 ; British Journal of Ophthalmology Volume 83 ; 83 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; British Journal of Ophthalmology Volume 84 ; 84 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; British Journal of Ophthalmology Volume 85 ; 85 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; British Journal of Ophthalmology Volume 86 ; 86 >
@@ -748,26 +748,26 @@
 
     param[base_url] = http://dtb.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 1962 ; DTB - Drug and Therapeutics Bulletin Volume s1-1 ; s1-1 >
-    au < HighWirePressH20Plugin ; manifest ; 1963 ; DTB - Drug and Therapeutics Bulletin Volume s1-2 ; s1-2 >
+    au < HighWirePressH20Plugin ; testing ; 1962 ; DTB - Drug and Therapeutics Bulletin Volume s1-1 ; s1-1 >
+    au < HighWirePressH20Plugin ; testing ; 1963 ; DTB - Drug and Therapeutics Bulletin Volume s1-2 ; s1-2 >
 
-    au < HighWirePressH20Plugin ; manifest ; 1963 ; Drug and Therapeutics Bulletin Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1964 ; Drug and Therapeutics Bulletin Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1965 ; Drug and Therapeutics Bulletin Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1966 ; Drug and Therapeutics Bulletin Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1967 ; Drug and Therapeutics Bulletin Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1968 ; Drug and Therapeutics Bulletin Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1969 ; Drug and Therapeutics Bulletin Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1970 ; Drug and Therapeutics Bulletin Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1971 ; Drug and Therapeutics Bulletin Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1972 ; Drug and Therapeutics Bulletin Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1962 ; Drug and Therapeutics Bulletin Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 1963 ; Drug and Therapeutics Bulletin Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; Drug and Therapeutics Bulletin Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; Drug and Therapeutics Bulletin Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 1977 ; Drug and Therapeutics Bulletin Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 1978 ; Drug and Therapeutics Bulletin Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; Drug and Therapeutics Bulletin Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; testing ; 1963 ; Drug and Therapeutics Bulletin Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; testing ; 1964 ; Drug and Therapeutics Bulletin Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; testing ; 1965 ; Drug and Therapeutics Bulletin Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; testing ; 1966 ; Drug and Therapeutics Bulletin Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; testing ; 1967 ; Drug and Therapeutics Bulletin Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; testing ; 1968 ; Drug and Therapeutics Bulletin Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; testing ; 1969 ; Drug and Therapeutics Bulletin Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; testing ; 1970 ; Drug and Therapeutics Bulletin Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; testing ; 1971 ; Drug and Therapeutics Bulletin Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; testing ; 1972 ; Drug and Therapeutics Bulletin Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; testing ; 1962 ; Drug and Therapeutics Bulletin Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; testing ; 1963 ; Drug and Therapeutics Bulletin Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; testing ; 1975 ; Drug and Therapeutics Bulletin Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; testing ; 1976 ; Drug and Therapeutics Bulletin Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; testing ; 1977 ; Drug and Therapeutics Bulletin Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; testing ; 1978 ; Drug and Therapeutics Bulletin Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; testing ; 1979 ; Drug and Therapeutics Bulletin Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; ready ; 1980 ; Drug and Therapeutics Bulletin Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; ready ; 1981 ; Drug and Therapeutics Bulletin Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; ready ; 1982 ; Drug and Therapeutics Bulletin Volume 20 ; 20 >
@@ -1195,37 +1195,37 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; manifest ; 1967 ; Heart Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; manifest ; 1968 ; Heart Volume 30 ; 30 >
     au < HighWirePressH20Plugin ; manifest ; 1969 ; Heart Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; manifest ; 1970 ; Heart Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; manifest ; 1971 ; Heart Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; manifest ; 1972 ; Heart Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; manifest ; 1973 ; Heart Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; manifest ; 1974 ; Heart Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; Heart Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; Heart Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; manifest ; 1977 ; Heart Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; manifest ; 1978 ; Heart Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; Heart Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; Heart Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; Heart Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; Heart Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; Heart Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; Heart Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; manifest ; 1982 ; Heart Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; manifest ; 1982 ; Heart Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; manifest ; 1983 ; Heart Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; manifest ; 1983 ; Heart Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; manifest ; 1984 ; Heart Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; manifest ; 1984 ; Heart Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; manifest ; 1985 ; Heart Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; manifest ; 1985 ; Heart Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; manifest ; 1986 ; Heart Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; manifest ; 1986 ; Heart Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; Heart Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; Heart Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; Heart Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; Heart Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; Heart Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; Heart Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; testing ; 1970 ; Heart Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; testing ; 1971 ; Heart Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; testing ; 1972 ; Heart Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; testing ; 1973 ; Heart Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; testing ; 1974 ; Heart Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; testing ; 1975 ; Heart Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; testing ; 1976 ; Heart Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; testing ; 1977 ; Heart Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; testing ; 1978 ; Heart Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; testing ; 1979 ; Heart Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; testing ; 1979 ; Heart Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; testing ; 1980 ; Heart Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; testing ; 1980 ; Heart Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; testing ; 1981 ; Heart Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; testing ; 1981 ; Heart Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; testing ; 1982 ; Heart Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; testing ; 1982 ; Heart Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; testing ; 1983 ; Heart Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; testing ; 1983 ; Heart Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; testing ; 1984 ; Heart Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; testing ; 1984 ; Heart Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; testing ; 1985 ; Heart Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; testing ; 1985 ; Heart Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; testing ; 1986 ; Heart Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; testing ; 1986 ; Heart Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; testing ; 1987 ; Heart Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; testing ; 1987 ; Heart Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; testing ; 1988 ; Heart Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; testing ; 1988 ; Heart Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; testing ; 1989 ; Heart Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; testing ; 1989 ; Heart Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; ready ; 1990 ; Heart Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; ready ; 1990 ; Heart Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; ready ; 1991 ; Heart Volume 65 ; 65 >
@@ -1326,48 +1326,48 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://jcp.bmj.com/
 
-    au < HighWirePressH20Plugin ; released ; 1947-1948 ; Journal of Clinical Pathology Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; released ; 1949 ; Journal of Clinical Pathology Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; released ; 1950 ; Journal of Clinical Pathology Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; released ; 1951 ; Journal of Clinical Pathology Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; released ; 1952 ; Journal of Clinical Pathology Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; released ; 1953 ; Journal of Clinical Pathology Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; released ; 1954 ; Journal of Clinical Pathology Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; released ; 1955 ; Journal of Clinical Pathology Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; released ; 1956 ; Journal of Clinical Pathology Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; released ; 1957 ; Journal of Clinical Pathology Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; released ; 1958 ; Journal of Clinical Pathology Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; released ; 1959 ; Journal of Clinical Pathology Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; released ; 1960 ; Journal of Clinical Pathology Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; released ; 1961 ; Journal of Clinical Pathology Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; released ; 1962 ; Journal of Clinical Pathology Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; released ; 1963 ; Journal of Clinical Pathology Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; released ; 1964 ; Journal of Clinical Pathology Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; manifest ; 1965 ; Journal of Clinical Pathology Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; manifest ; 1966 ; Journal of Clinical Pathology Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; manifest ; 1967 ; Journal of Clinical Pathology Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; manifest ; 1968 ; Journal of Clinical Pathology Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; manifest ; 1969 ; Journal of Clinical Pathology Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; manifest ; 1970 ; Journal of Clinical Pathology Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; manifest ; 1971 ; Journal of Clinical Pathology Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; manifest ; 1972 ; Journal of Clinical Pathology Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; manifest ; 1973 ; Journal of Clinical Pathology Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; manifest ; 1974 ; Journal of Clinical Pathology Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; Journal of Clinical Pathology Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; Journal of Clinical Pathology Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; manifest ; 1977 ; Journal of Clinical Pathology Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; manifest ; 1978 ; Journal of Clinical Pathology Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of Clinical Pathology Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of Clinical Pathology Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of Clinical Pathology Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of Clinical Pathology Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; manifest ; 1983 ; Journal of Clinical Pathology Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; manifest ; 1984 ; Journal of Clinical Pathology Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of Clinical Pathology Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of Clinical Pathology Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; Journal of Clinical Pathology Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; Journal of Clinical Pathology Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; Journal of Clinical Pathology Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; testing ; 1947-1948 ; Journal of Clinical Pathology Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; testing ; 1949 ; Journal of Clinical Pathology Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; testing ; 1950 ; Journal of Clinical Pathology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; testing ; 1951 ; Journal of Clinical Pathology Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; testing ; 1952 ; Journal of Clinical Pathology Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; testing ; 1953 ; Journal of Clinical Pathology Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; testing ; 1954 ; Journal of Clinical Pathology Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; testing ; 1955 ; Journal of Clinical Pathology Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; testing ; 1956 ; Journal of Clinical Pathology Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; testing ; 1957 ; Journal of Clinical Pathology Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; testing ; 1958 ; Journal of Clinical Pathology Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; testing ; 1959 ; Journal of Clinical Pathology Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; testing ; 1960 ; Journal of Clinical Pathology Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; testing ; 1961 ; Journal of Clinical Pathology Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; testing ; 1962 ; Journal of Clinical Pathology Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; testing ; 1963 ; Journal of Clinical Pathology Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; testing ; 1964 ; Journal of Clinical Pathology Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; testing ; 1965 ; Journal of Clinical Pathology Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; testing ; 1966 ; Journal of Clinical Pathology Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; testing ; 1967 ; Journal of Clinical Pathology Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; testing ; 1968 ; Journal of Clinical Pathology Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; testing ; 1969 ; Journal of Clinical Pathology Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; testing ; 1970 ; Journal of Clinical Pathology Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; testing ; 1971 ; Journal of Clinical Pathology Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; testing ; 1972 ; Journal of Clinical Pathology Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; testing ; 1973 ; Journal of Clinical Pathology Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; testing ; 1974 ; Journal of Clinical Pathology Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; testing ; 1975 ; Journal of Clinical Pathology Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; testing ; 1976 ; Journal of Clinical Pathology Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; testing ; 1977 ; Journal of Clinical Pathology Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; testing ; 1978 ; Journal of Clinical Pathology Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; testing ; 1979 ; Journal of Clinical Pathology Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; testing ; 1980 ; Journal of Clinical Pathology Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; testing ; 1981 ; Journal of Clinical Pathology Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; testing ; 1982 ; Journal of Clinical Pathology Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; testing ; 1983 ; Journal of Clinical Pathology Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; testing ; 1984 ; Journal of Clinical Pathology Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; testing ; 1985 ; Journal of Clinical Pathology Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; testing ; 1986 ; Journal of Clinical Pathology Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; testing ; 1987 ; Journal of Clinical Pathology Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; testing ; 1988 ; Journal of Clinical Pathology Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; testing ; 1989 ; Journal of Clinical Pathology Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; ready ; 1990 ; Journal of Clinical Pathology Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; ready ; 1991 ; Journal of Clinical Pathology Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; ready ; 1992 ; Journal of Clinical Pathology Volume 45 ; 45 >
@@ -1408,49 +1408,49 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://jech.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 1947 ; Journal of Epidemiology & Community Health Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1948 ; Journal of Epidemiology & Community Health Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1949 ; Journal of Epidemiology & Community Health Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1950 ; Journal of Epidemiology & Community Health Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1951 ; Journal of Epidemiology & Community Health Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1952 ; Journal of Epidemiology & Community Health Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1953 ; Journal of Epidemiology & Community Health Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1954 ; Journal of Epidemiology & Community Health Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1955 ; Journal of Epidemiology & Community Health Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1956 ; Journal of Epidemiology & Community Health Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1957 ; Journal of Epidemiology & Community Health Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 1958 ; Journal of Epidemiology & Community Health Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1959 ; Journal of Epidemiology & Community Health Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 1960 ; Journal of Epidemiology & Community Health Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 1961 ; Journal of Epidemiology & Community Health Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 1962 ; Journal of Epidemiology & Community Health Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 1963 ; Journal of Epidemiology & Community Health Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; manifest ; 1964 ; Journal of Epidemiology & Community Health Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; manifest ; 1965 ; Journal of Epidemiology & Community Health Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; manifest ; 1966 ; Journal of Epidemiology & Community Health Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; manifest ; 1967 ; Journal of Epidemiology & Community Health Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; manifest ; 1968 ; Journal of Epidemiology & Community Health Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; manifest ; 1969 ; Journal of Epidemiology & Community Health Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; testing ; 1970 ; Journal of Epidemiology & Community Health Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; testing ; 1971 ; Journal of Epidemiology & Community Health Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; testing ; 1972 ; Journal of Epidemiology & Community Health Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; testing ; 1973 ; Journal of Epidemiology & Community Health Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; testing ; 1974 ; Journal of Epidemiology & Community Health Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; testing ; 1975 ; Journal of Epidemiology & Community Health Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; testing ; 1976 ; Journal of Epidemiology & Community Health Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; testing ; 1977 ; Journal of Epidemiology & Community Health Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; testing ; 1978 ; Journal of Epidemiology & Community Health Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; testing ; 1979 ; Journal of Epidemiology & Community Health Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; testing ; 1980 ; Journal of Epidemiology & Community Health Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; testing ; 1981 ; Journal of Epidemiology & Community Health Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; testing ; 1982 ; Journal of Epidemiology & Community Health Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; testing ; 1983 ; Journal of Epidemiology & Community Health Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; testing ; 1984 ; Journal of Epidemiology & Community Health Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; testing ; 1985 ; Journal of Epidemiology & Community Health Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; testing ; 1986 ; Journal of Epidemiology & Community Health Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; testing ; 1987 ; Journal of Epidemiology & Community Health Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; testing ; 1988 ; Journal of Epidemiology & Community Health Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; testing ; 1989 ; Journal of Epidemiology & Community Health Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; testing ; 1947 ; Journal of Epidemiology & Community Health Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; testing ; 1948 ; Journal of Epidemiology & Community Health Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; testing ; 1949 ; Journal of Epidemiology & Community Health Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; testing ; 1950 ; Journal of Epidemiology & Community Health Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; testing ; 1951 ; Journal of Epidemiology & Community Health Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; testing ; 1952 ; Journal of Epidemiology & Community Health Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; testing ; 1953 ; Journal of Epidemiology & Community Health Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; testing ; 1954 ; Journal of Epidemiology & Community Health Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; testing ; 1955 ; Journal of Epidemiology & Community Health Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; testing ; 1956 ; Journal of Epidemiology & Community Health Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; testing ; 1957 ; Journal of Epidemiology & Community Health Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; testing ; 1958 ; Journal of Epidemiology & Community Health Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; testing ; 1959 ; Journal of Epidemiology & Community Health Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; testing ; 1960 ; Journal of Epidemiology & Community Health Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; testing ; 1961 ; Journal of Epidemiology & Community Health Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; testing ; 1962 ; Journal of Epidemiology & Community Health Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; testing ; 1963 ; Journal of Epidemiology & Community Health Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; testing ; 1964 ; Journal of Epidemiology & Community Health Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; testing ; 1965 ; Journal of Epidemiology & Community Health Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; testing ; 1966 ; Journal of Epidemiology & Community Health Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; testing ; 1967 ; Journal of Epidemiology & Community Health Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; testing ; 1968 ; Journal of Epidemiology & Community Health Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; testing ; 1969 ; Journal of Epidemiology & Community Health Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; ready ; 1970 ; Journal of Epidemiology & Community Health Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; ready ; 1971 ; Journal of Epidemiology & Community Health Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; ready ; 1972 ; Journal of Epidemiology & Community Health Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; ready ; 1973 ; Journal of Epidemiology & Community Health Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; ready ; 1974 ; Journal of Epidemiology & Community Health Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; ready ; 1975 ; Journal of Epidemiology & Community Health Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; ready ; 1976 ; Journal of Epidemiology & Community Health Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; ready ; 1977 ; Journal of Epidemiology & Community Health Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; ready ; 1978 ; Journal of Epidemiology & Community Health Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; ready ; 1979 ; Journal of Epidemiology & Community Health Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; ready ; 1980 ; Journal of Epidemiology & Community Health Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; ready ; 1981 ; Journal of Epidemiology & Community Health Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; ready ; 1982 ; Journal of Epidemiology & Community Health Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; ready ; 1983 ; Journal of Epidemiology & Community Health Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; ready ; 1984 ; Journal of Epidemiology & Community Health Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; ready ; 1985 ; Journal of Epidemiology & Community Health Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; ready ; 1986 ; Journal of Epidemiology & Community Health Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; ready ; 1987 ; Journal of Epidemiology & Community Health Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; ready ; 1988 ; Journal of Epidemiology & Community Health Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; ready ; 1989 ; Journal of Epidemiology & Community Health Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; ready ; 1990 ; Journal of Epidemiology & Community Health Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; ready ; 1991 ; Journal of Epidemiology & Community Health Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; ready ; 1992 ; Journal of Epidemiology & Community Health Volume 46 ; 46 >
@@ -1662,58 +1662,58 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://jnnp.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 1938 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1939 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1940 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1941 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1942 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1943 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1944 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1945 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1946 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1947 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1948 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 1949 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1950 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 1951 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 1952 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 1953 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 1954 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; manifest ; 1955 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; manifest ; 1956 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; manifest ; 1957 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; manifest ; 1958 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; manifest ; 1959 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; manifest ; 1960 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; manifest ; 1961 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; manifest ; 1962 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; manifest ; 1963 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; manifest ; 1964 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; manifest ; 1965 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; manifest ; 1966 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; manifest ; 1967 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; manifest ; 1968 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; manifest ; 1969 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; testing ; 1970 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; testing ; 1971 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; testing ; 1972 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; testing ; 1973 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; testing ; 1974 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; testing ; 1975 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; testing ; 1976 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; testing ; 1977 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; testing ; 1978 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; testing ; 1979 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; testing ; 1980 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; testing ; 1981 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; testing ; 1982 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; testing ; 1983 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; testing ; 1984 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; testing ; 1985 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; testing ; 1986 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; testing ; 1987 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; testing ; 1988 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; testing ; 1989 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; testing ; 1938 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; testing ; 1939 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; testing ; 1940 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; testing ; 1941 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; testing ; 1942 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; testing ; 1943 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; testing ; 1944 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; testing ; 1945 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; testing ; 1946 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; testing ; 1947 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; testing ; 1948 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; testing ; 1949 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; testing ; 1950 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; testing ; 1951 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; testing ; 1952 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; testing ; 1953 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; testing ; 1954 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; testing ; 1955 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; testing ; 1956 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; testing ; 1957 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; testing ; 1958 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; testing ; 1959 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; testing ; 1960 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; testing ; 1961 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; testing ; 1962 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; testing ; 1963 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; testing ; 1964 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; testing ; 1965 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; testing ; 1966 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; testing ; 1967 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; testing ; 1968 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; testing ; 1969 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; ready ; 1970 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; ready ; 1971 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; ready ; 1972 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; ready ; 1973 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; ready ; 1974 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; ready ; 1975 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; ready ; 1976 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; ready ; 1977 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; ready ; 1978 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; ready ; 1979 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; ready ; 1980 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; ready ; 1981 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; ready ; 1982 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; ready ; 1983 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; ready ; 1984 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; ready ; 1985 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; ready ; 1986 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; ready ; 1987 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; ready ; 1988 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; ready ; 1989 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; ready ; 1990 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; ready ; 1991 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 54 ; 54 >
     au < HighWirePressH20Plugin ; ready ; 1992 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 55 ; 55 >
@@ -1861,44 +1861,44 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; doesNotExist ; 0 ; Journal of the Royal Army Medical Corps Volume 95 ; 95 >
       au < HighWirePressH20Plugin ; doesNotExist ; 0 ; Journal of the Royal Army Medical Corps Volume 96 ; 96 >
       au < HighWirePressH20Plugin ; doesNotExist ; 0 ; Journal of the Royal Army Medical Corps Volume 97 ; 97 >
-      au < HighWirePressH20Plugin ; manifest ; 1952 ; Journal of the Royal Army Medical Corps Volume 98 ; 98 >
-      au < HighWirePressH20Plugin ; manifest ; 1953 ; Journal of the Royal Army Medical Corps Volume 99 ; 99 >
-      au < HighWirePressH20Plugin ; manifest ; 1954 ; Journal of the Royal Army Medical Corps Volume 100 ; 100 >
-      au < HighWirePressH20Plugin ; manifest ; 1955 ; Journal of the Royal Army Medical Corps Volume 101 ; 101 >
+      au < HighWirePressH20Plugin ; testing ; 1952 ; Journal of the Royal Army Medical Corps Volume 98 ; 98 >
+      au < HighWirePressH20Plugin ; testing ; 1953 ; Journal of the Royal Army Medical Corps Volume 99 ; 99 >
+      au < HighWirePressH20Plugin ; testing ; 1954 ; Journal of the Royal Army Medical Corps Volume 100 ; 100 >
+      au < HighWirePressH20Plugin ; testing ; 1955 ; Journal of the Royal Army Medical Corps Volume 101 ; 101 >
       au < HighWirePressH20Plugin ; doesNotExist ; 0 ; Journal of the Royal Army Medical Corps Volume 102 ; 102 >
-      au < HighWirePressH20Plugin ; manifest ; 1957 ; Journal of the Royal Army Medical Corps Volume 103 ; 103 >
-      au < HighWirePressH20Plugin ; manifest ; 1958 ; Journal of the Royal Army Medical Corps Volume 104 ; 104 >
-      au < HighWirePressH20Plugin ; manifest ; 1959 ; Journal of the Royal Army Medical Corps Volume 105 ; 105 >
-      au < HighWirePressH20Plugin ; manifest ; 1960 ; Journal of the Royal Army Medical Corps Volume 106 ; 106 >
-      au < HighWirePressH20Plugin ; manifest ; 1961 ; Journal of the Royal Army Medical Corps Volume 107 ; 107 >
-      au < HighWirePressH20Plugin ; manifest ; 1962 ; Journal of the Royal Army Medical Corps Volume 108 ; 108 >
-      au < HighWirePressH20Plugin ; manifest ; 1963 ; Journal of the Royal Army Medical Corps Volume 109 ; 109 >
-      au < HighWirePressH20Plugin ; manifest ; 1964 ; Journal of the Royal Army Medical Corps Volume 110 ; 110 >
-      au < HighWirePressH20Plugin ; manifest ; 1965 ; Journal of the Royal Army Medical Corps Volume 111 ; 111 >
-      au < HighWirePressH20Plugin ; manifest ; 1966 ; Journal of the Royal Army Medical Corps Volume 112 ; 112 >
-      au < HighWirePressH20Plugin ; manifest ; 1967 ; Journal of the Royal Army Medical Corps Volume 113 ; 113 >
-      au < HighWirePressH20Plugin ; manifest ; 1968 ; Journal of the Royal Army Medical Corps Volume 114 ; 114 >
-      au < HighWirePressH20Plugin ; manifest ; 1969 ; Journal of the Royal Army Medical Corps Volume 115 ; 115 >
-      au < HighWirePressH20Plugin ; testing ; 1970 ; Journal of the Royal Army Medical Corps Volume 116 ; 116 >
-      au < HighWirePressH20Plugin ; testing ; 1971 ; Journal of the Royal Army Medical Corps Volume 117 ; 117 >
-      au < HighWirePressH20Plugin ; testing ; 1972 ; Journal of the Royal Army Medical Corps Volume 118 ; 118 >
-      au < HighWirePressH20Plugin ; testing ; 1973 ; Journal of the Royal Army Medical Corps Volume 119 ; 119 >
-      au < HighWirePressH20Plugin ; testing ; 1974 ; Journal of the Royal Army Medical Corps Volume 120 ; 120 >
-      au < HighWirePressH20Plugin ; testing ; 1975 ; Journal of the Royal Army Medical Corps Volume 121 ; 121 >
-      au < HighWirePressH20Plugin ; testing ; 1976 ; Journal of the Royal Army Medical Corps Volume 122 ; 122 >
-      au < HighWirePressH20Plugin ; testing ; 1977 ; Journal of the Royal Army Medical Corps Volume 123 ; 123 >
-      au < HighWirePressH20Plugin ; testing ; 1978 ; Journal of the Royal Army Medical Corps Volume 124 ; 124 >
-      au < HighWirePressH20Plugin ; testing ; 1979 ; Journal of the Royal Army Medical Corps Volume 125 ; 125 >
-      au < HighWirePressH20Plugin ; testing ; 1980 ; Journal of the Royal Army Medical Corps Volume 126 ; 126 >
-      au < HighWirePressH20Plugin ; testing ; 1981 ; Journal of the Royal Army Medical Corps Volume 127 ; 127 >
-      au < HighWirePressH20Plugin ; testing ; 1982 ; Journal of the Royal Army Medical Corps Volume 128 ; 128 >
-      au < HighWirePressH20Plugin ; testing ; 1983 ; Journal of the Royal Army Medical Corps Volume 129 ; 129 >
-      au < HighWirePressH20Plugin ; testing ; 1984 ; Journal of the Royal Army Medical Corps Volume 130 ; 130 >
-      au < HighWirePressH20Plugin ; testing ; 1985 ; Journal of the Royal Army Medical Corps Volume 131 ; 131 >
-      au < HighWirePressH20Plugin ; testing ; 1986 ; Journal of the Royal Army Medical Corps Volume 132 ; 132 >
-      au < HighWirePressH20Plugin ; testing ; 1987 ; Journal of the Royal Army Medical Corps Volume 133 ; 133 >
-      au < HighWirePressH20Plugin ; testing ; 1988 ; Journal of the Royal Army Medical Corps Volume 134 ; 134 >
-      au < HighWirePressH20Plugin ; testing ; 1989 ; Journal of the Royal Army Medical Corps Volume 135 ; 135 >
+      au < HighWirePressH20Plugin ; testing ; 1957 ; Journal of the Royal Army Medical Corps Volume 103 ; 103 >
+      au < HighWirePressH20Plugin ; testing ; 1958 ; Journal of the Royal Army Medical Corps Volume 104 ; 104 >
+      au < HighWirePressH20Plugin ; testing ; 1959 ; Journal of the Royal Army Medical Corps Volume 105 ; 105 >
+      au < HighWirePressH20Plugin ; testing ; 1960 ; Journal of the Royal Army Medical Corps Volume 106 ; 106 >
+      au < HighWirePressH20Plugin ; testing ; 1961 ; Journal of the Royal Army Medical Corps Volume 107 ; 107 >
+      au < HighWirePressH20Plugin ; testing ; 1962 ; Journal of the Royal Army Medical Corps Volume 108 ; 108 >
+      au < HighWirePressH20Plugin ; testing ; 1963 ; Journal of the Royal Army Medical Corps Volume 109 ; 109 >
+      au < HighWirePressH20Plugin ; testing ; 1964 ; Journal of the Royal Army Medical Corps Volume 110 ; 110 >
+      au < HighWirePressH20Plugin ; testing ; 1965 ; Journal of the Royal Army Medical Corps Volume 111 ; 111 >
+      au < HighWirePressH20Plugin ; testing ; 1966 ; Journal of the Royal Army Medical Corps Volume 112 ; 112 >
+      au < HighWirePressH20Plugin ; testing ; 1967 ; Journal of the Royal Army Medical Corps Volume 113 ; 113 >
+      au < HighWirePressH20Plugin ; testing ; 1968 ; Journal of the Royal Army Medical Corps Volume 114 ; 114 >
+      au < HighWirePressH20Plugin ; testing ; 1969 ; Journal of the Royal Army Medical Corps Volume 115 ; 115 >
+      au < HighWirePressH20Plugin ; ready ; 1970 ; Journal of the Royal Army Medical Corps Volume 116 ; 116 >
+      au < HighWirePressH20Plugin ; ready ; 1971 ; Journal of the Royal Army Medical Corps Volume 117 ; 117 >
+      au < HighWirePressH20Plugin ; ready ; 1972 ; Journal of the Royal Army Medical Corps Volume 118 ; 118 >
+      au < HighWirePressH20Plugin ; ready ; 1973 ; Journal of the Royal Army Medical Corps Volume 119 ; 119 >
+      au < HighWirePressH20Plugin ; ready ; 1974 ; Journal of the Royal Army Medical Corps Volume 120 ; 120 >
+      au < HighWirePressH20Plugin ; ready ; 1975 ; Journal of the Royal Army Medical Corps Volume 121 ; 121 >
+      au < HighWirePressH20Plugin ; ready ; 1976 ; Journal of the Royal Army Medical Corps Volume 122 ; 122 >
+      au < HighWirePressH20Plugin ; ready ; 1977 ; Journal of the Royal Army Medical Corps Volume 123 ; 123 >
+      au < HighWirePressH20Plugin ; ready ; 1978 ; Journal of the Royal Army Medical Corps Volume 124 ; 124 >
+      au < HighWirePressH20Plugin ; ready ; 1979 ; Journal of the Royal Army Medical Corps Volume 125 ; 125 >
+      au < HighWirePressH20Plugin ; ready ; 1980 ; Journal of the Royal Army Medical Corps Volume 126 ; 126 >
+      au < HighWirePressH20Plugin ; ready ; 1981 ; Journal of the Royal Army Medical Corps Volume 127 ; 127 >
+      au < HighWirePressH20Plugin ; ready ; 1982 ; Journal of the Royal Army Medical Corps Volume 128 ; 128 >
+      au < HighWirePressH20Plugin ; ready ; 1983 ; Journal of the Royal Army Medical Corps Volume 129 ; 129 >
+      au < HighWirePressH20Plugin ; ready ; 1984 ; Journal of the Royal Army Medical Corps Volume 130 ; 130 >
+      au < HighWirePressH20Plugin ; ready ; 1985 ; Journal of the Royal Army Medical Corps Volume 131 ; 131 >
+      au < HighWirePressH20Plugin ; ready ; 1986 ; Journal of the Royal Army Medical Corps Volume 132 ; 132 >
+      au < HighWirePressH20Plugin ; ready ; 1987 ; Journal of the Royal Army Medical Corps Volume 133 ; 133 >
+      au < HighWirePressH20Plugin ; ready ; 1988 ; Journal of the Royal Army Medical Corps Volume 134 ; 134 >
+      au < HighWirePressH20Plugin ; ready ; 1989 ; Journal of the Royal Army Medical Corps Volume 135 ; 135 >
       au < HighWirePressH20Plugin ; ready ; 1990 ; Journal of the Royal Army Medical Corps Volume 136 ; 136 >
       au < HighWirePressH20Plugin ; ready ; 1991 ; Journal of the Royal Army Medical Corps Volume 137 ; 137 >
       au < HighWirePressH20Plugin ; ready ; 1992 ; Journal of the Royal Army Medical Corps Volume 138 ; 138 >
