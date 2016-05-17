@@ -1421,7 +1421,7 @@
         au < exists ; 2013 ; The American Journal of Cosmetic Surgery Volume 30 ; 30 >
         au < exists ; 2014 ; The American Journal of Cosmetic Surgery Volume 31 ; 31 >
         au < manifest ; 2015 ; The American Journal of Cosmetic Surgery Volume 32 ; 32 >
-        au < exists ; 2016 ; The American Journal of Cosmetic Surgery Volume 33 ; 33 >
+        au < manifest ; 2016 ; The American Journal of Cosmetic Surgery Volume 33 ; 33 >
   
     }
 
@@ -3140,7 +3140,7 @@
         au < exists ; 2013 ; The Antitrust Bulletin Volume 58 ; 58 >
         au < released ; 2014 ; The Antitrust Bulletin Volume 59 ; 59 >
         au < released ; 2015 ; The Antitrust Bulletin Volume 60 ; 60 >
-        au < expected ; 2016 ; The Antitrust Bulletin Volume 61 ; 61 >
+        au < manifest ; 2016 ; The Antitrust Bulletin Volume 61 ; 61 >
 
     }
 
@@ -4846,7 +4846,7 @@
         au < exists ; 2013 ; British Journal of Pain Volume 7 ; 7 >
         au < exists ; 2014 ; British Journal of Pain Volume 8 ; 8 >
         au < exists ; 2015 ; British Journal of Pain Volume 9 ; 9 >
-        au < expected ; 2016 ; British Journal of Pain Volume 10 ; 10 >
+        au < manifest ; 2016 ; British Journal of Pain Volume 10 ; 10 >
 
       }
 
@@ -15179,7 +15179,7 @@
 
         au < released ; 2014 ; Global Pediatric Health Volume 1 ; 1 >
         au < exists ; 2015 ; Global Pediatric Health Volume 2 ; 2 >
-        au < expected ; 2016 ; Global Pediatric Health Volume 3 ; 3 >
+        au < manifest ; 2016 ; Global Pediatric Health Volume 3 ; 3 >
 
     }
 
@@ -16158,7 +16158,7 @@
         au < exists ; 2013 ; Health Information Management Journal Volume 42 ; 42 >
         au < exists ; 2014 ; Health Information Management Journal Volume 43 ; 43 >
         au < manifest ; 2015 ; Health Information Management Journal Volume 44 ; 44 >
-        au < expected ; 2016 ; Health Information Management Journal Volume 45 ; 45 >
+        au < manifest ; 2016 ; Health Information Management Journal Volume 45 ; 45 >
   
     }
 
@@ -18541,7 +18541,7 @@
       au < exists ; 2013 ; International Journal of Aeroacoustics Volume 12 ; 12 >
       au < released ; 2014 ; International Journal of Aeroacoustics Volume 13 ; 13 >
       au < released ; 2015 ; International Journal of Aeroacoustics Volume 14 ; 14 >
-      au < expected ; 2016 ; International Journal of Aeroacoustics Volume 15 ; 15 >
+      au < manifest ; 2016 ; International Journal of Aeroacoustics Volume 15 ; 15 >
 
   }
 
@@ -19541,7 +19541,7 @@
       au < exists ; 2013 ; The International Journal of Ocean and Climate Systems Volume 4 ; 4 >
       au < released ; 2014 ; The International Journal of Ocean and Climate Systems Volume 5 ; 5 >
       au < released ; 2015 ; The International Journal of Ocean and Climate Systems Volume 6 ; 6 >
-      au < expected ; 2016 ; The International Journal of Ocean and Climate Systems Volume 7 ; 7 >
+      au < manifest ; 2016 ; The International Journal of Ocean and Climate Systems Volume 7 ; 7 >
 
   }
 
@@ -21065,7 +21065,7 @@
       au < exists ; 2013 ; The Journal of Computational Multiphase Flows Volume 5 ; 5 >
       au < exists ; 2014 ; The Journal of Computational Multiphase Flows Volume 6 ; 6 >
       au < released ; 2015 ; The Journal of Computational Multiphase Flows Volume 7 ; 7 >
-      au < expected ; 2016 ; The Journal of Computational Multiphase Flows Volume 8 ; 8 >
+      au < manifest ; 2016 ; The Journal of Computational Multiphase Flows Volume 8 ; 8 >
 
     }
 
@@ -24338,7 +24338,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 2015 ; Journal of Creating Value Volume 1 ; 1 >
-      au < expected ; 2016 ; Journal of Creating Value Volume 2 ; 2 >
+      au < manifest ; 2016 ; Journal of Creating Value Volume 2 ; 2 >
 
   }
 
@@ -34981,7 +34981,7 @@ comment[mpj] = now published by Brill
       au < exists ; 2013 ; Molecular Pain Volume 9 ; 9 >
       au < exists ; 2014 ; Molecular Pain Volume 10 ; 10 >
       au < manifest ; 2015 ; Molecular Pain Volume 11 ; 11 >
-      au < expected ; 2016 ; Molecular Pain Volume 12 ; 12 >
+      au < manifest ; 2016 ; Molecular Pain Volume 12 ; 12 >
 
     }
 
@@ -39392,7 +39392,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2013 ; Progress in Transplantation Volume 23 ; 23 >
         au < exists ; 2014 ; Progress in Transplantation Volume 24 ; 24 >
         au < exists ; 2015 ; Progress in Transplantation Volume 25 ; 25 >
-        au < exists ; 2016 ; Progress in Transplantation Volume 26 ; 26 >
+        au < manifest ; 2016 ; Progress in Transplantation Volume 26 ; 26 >
   
     }
 
@@ -43617,7 +43617,7 @@ comment[mpj] = now published by Brill
 
         au < released ; 2014 ; South Asian Journal of Human Resources Management Volume 1 ; 1 >
         au < released ; 2015 ; South Asian Journal of Human Resources Management Volume 2 ; 2 >
-        au < expected ; 2016 ; South Asian Journal of Human Resources Management Volume 3 ; 3 >
+        au < manifest ; 2016 ; South Asian Journal of Human Resources Management Volume 3 ; 3 >
 
     }
 
@@ -49561,7 +49561,7 @@ comment[mpj] = now published by Brill
     au < exists ; 2013 ; Annals of the ICRP Volume 42 ; 42 >
     au < released ; 2014 ; Annals of the ICRP Volume 43 ; 43 >
     au < released ; 2015 ; Annals of the ICRP Volume 44 ; 44 >
-    au < expected ; 2016 ; Annals of the ICRP Volume 45 ; 45 >
+    au < manifest ; 2016 ; Annals of the ICRP Volume 45 ; 45 >
 
     }
 
@@ -49824,7 +49824,7 @@ comment[mpj] = now published by Brill
     implicit < status ; year ; name ; param[volume_name] >
 
     au < released ; 2013-2014 ; Drug Science, Policy and Law Volume 1 ; 1 >
-    au < exists ; 2016 ; Drug Science, Policy and Law Volume 2 ; 2 >
+    au < manifest ; 2016 ; Drug Science, Policy and Law Volume 2 ; 2 >
 
     }
 
