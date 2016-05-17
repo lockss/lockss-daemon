@@ -144,18 +144,33 @@
         name = Paideusis
       >
         
+      {
+      param[base_url] = http://journals.sfu.ca/pie/
+      param[journal_id] = pie
+
+      au < exists ; 2006 ; Paideusis Volume 2006 ; 15 ; 2006 >
+      au < exists ; 2007 ; Paideusis Volume 2007 ; 16 ; 2007 >
+      au < exists ; 2008 ; Paideusis Volume 2008 ; 17 ; 2008 >
+      au < exists ; 2009 ; Paideusis Volume 2009 ; 18 ; 2009 >
+      au < exists ; 2010 ; Paideusis Volume 2010 ; 19 ; 2010 >
+      au < exists ; 2012 ; Paideusis Volume 2012 ; 20 ; 2012 >
+      au < exists ; 2013 ; Paideusis Volume 2013 ; 21 ; 2013 >
+      au < exists ; 2014 ; Paideusis Volume 2014 ; 21-22 ; 2014 >
+      au < exists ; 2015 ; Paideusis Volume 2015 ; 22-23 ; 2015 >
+      au < expected ; 2016 ; Paideusis Volume 2016 ; 24 ; 2016 >
+      }
+      {
       param[base_url] = http://journals.sfu.ca/paideusis/
       param[journal_id] = paideusis
-      # moved to http://journals.sfu.ca/pie/
-  
-      au < released ; 2006 ; Paideusis Volume 15 ; 15 ; 2006 >
-      au < released ; 2007 ; Paideusis Volume 16 ; 16 ; 2007 >
-      au < released ; 2008 ; Paideusis Volume 17 ; 17 ; 2008 >
-      au < released ; 2009 ; Paideusis Volume 18 ; 18 ; 2009 >
-      au < released ; 2010 ; Paideusis Volume 19 ; 19 ; 2010 >
-      au < released ; 2012 ; Paideusis Volume 20 ; 20 ; 2012 >
-      au < released ; 2013 ; Paideusis Volume 21 ; 21 ; 2013 >
-      
+
+      au < superseded ; 2006 ; Paideusis Volume 15 [superseded] ; 15 ; 2006 >
+      au < superseded ; 2007 ; Paideusis Volume 16 [superseded] ; 16 ; 2007 >
+      au < superseded ; 2008 ; Paideusis Volume 17 [superseded] ; 17 ; 2008 >
+      au < superseded ; 2009 ; Paideusis Volume 18 [superseded] ; 18 ; 2009 >
+      au < superseded ; 2010 ; Paideusis Volume 19 [superseded] ; 19 ; 2010 >
+      au < superseded ; 2012 ; Paideusis Volume 20 [superseded] ; 20 ; 2012 >
+      au < superseded ; 2013 ; Paideusis Volume 21 [superseded] ; 21 ; 2013 >
+      }
     }
 
     {
@@ -170,7 +185,7 @@
       # requires subscription and has login pages
       # moved to http://journals.sfu.ca/present/
   
-      au < released ; 2005 ; Simon Fraser University Demo Journal Volume 2005 ; 2005 ; 2005 >
+      au < down ; 2005 ; Simon Fraser University Demo Journal Volume 2005 ; 2005 ; 2005 >
       
     }
 

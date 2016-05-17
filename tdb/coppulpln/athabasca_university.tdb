@@ -70,43 +70,50 @@
   {
     
     title <
-      name = The Journal of Distance Education / Revue de l'Education à Distance
+      name = International Journal of E-Learning & Distance Education / Revue internationale de l'apprentissage en ligne et de l'enseignement à distance
     >
       
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
     param[base_url] = http://www.jofde.ca/
     param[journal_id] = jde
     implicit < status ; year ; name ; volume ; param[year] >
-      
-    au < released ; 1986 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 1 ; 1 ; 1986 >
-    au < released ; 1987 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 2 ; 2 ; 1987 >
-    au < released ; 1988 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 3 ; 3 ; 1988 >
-    au < released ; 1989 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 4 ; 4 ; 1989 >
-    au < released ; 1990 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 5 ; 5 ; 1990 >
-    au < released ; 1991 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 6 ; 6 ; 1991 >
-    au < released ; 1992 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 7 ; 7 ; 1992 >
-    au < released ; 1993 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 8 ; 8 ; 1993 >
-    au < released ; 1994 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 9 ; 9 ; 1994 >
-    au < released ; 1995 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 10 ; 10 ; 1995 >
-    au < released ; 1996 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 11 ; 11 ; 1996 >
-    au < released ; 1997 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 12 ; 12 ; 1997 >
-    au < released ; 1998 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 13 ; 13 ; 1998 >
-    au < released ; 1999 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 14 ; 14 ; 1999 >
-    au < released ; 2000 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 15 ; 15 ; 2000 >
-    au < released ; 2001 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 16 ; 16 ; 2001 >
-    au < released ; 2002 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 17 ; 17 ; 2002 >
-    au < released ; 2003 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 18 ; 18 ; 2003 >
-    au < released ; 2004 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 19 ; 19 ; 2004 >
-    au < released ; 2005 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 20 ; 20  ; 2005 >
-    au < released ; 2006 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 21 (2006) ; 21 ; 2006 >
-    au < released ; 2007 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 21-22 (2007) ; 21-22 ; 2007 >
-    au < released ; 2008 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 22 (2008) ; 22 ; 2008 >
-    au < released ; 2009 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 23 ; 23 ; 2009 >
-    au < released ; 2010 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 24 ; 24 ; 2010 >
-    au < released ; 2011 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 25 ; 25 ; 2011 >
-    au < released ; 2012 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 26 ; 26 ; 2012 >
-    au < released ; 2013 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 27 ; 27 ; 2013 >
-          
+    {
+    au < exists ; 2014 ; International Journal of E-Learning & Distance Education / Revue internationale de l'apprentissage en ligne et de l'enseignement à distance Volume 2014 ; 29 ; 2014 >
+    au < exists ; 2015 ; International Journal of E-Learning & Distance Education / Revue internationale de l'apprentissage en ligne et de l'enseignement à distance Volume 2015 ; 30 ; 2015 >
+    au < expected ; 2016 ; International Journal of E-Learning & Distance Education / Revue internationale de l'apprentissage en ligne et de l'enseignement à distance Volume 2016 ; 31 ; 2016 >
+    }
+    {
+    # changed name. Archived volumes moved to http://www.ijede.ca/index.php/jde/pages/view/jdearchive
+    au < down ; 1986 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 1 ; 1 ; 1986 >
+    au < down ; 1987 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 2 ; 2 ; 1987 >
+    au < down ; 1988 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 3 ; 3 ; 1988 >
+    au < down ; 1989 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 4 ; 4 ; 1989 >
+    au < down ; 1990 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 5 ; 5 ; 1990 >
+    au < down ; 1991 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 6 ; 6 ; 1991 >
+    au < down ; 1992 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 7 ; 7 ; 1992 >
+    au < down ; 1993 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 8 ; 8 ; 1993 >
+    au < down ; 1994 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 9 ; 9 ; 1994 >
+    au < down ; 1995 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 10 ; 10 ; 1995 >
+    au < down ; 1996 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 11 ; 11 ; 1996 >
+    au < down ; 1997 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 12 ; 12 ; 1997 >
+    au < down ; 1998 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 13 ; 13 ; 1998 >
+    au < down ; 1999 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 14 ; 14 ; 1999 >
+    au < down ; 2000 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 15 ; 15 ; 2000 >
+    au < down ; 2001 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 16 ; 16 ; 2001 >
+    au < down ; 2002 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 17 ; 17 ; 2002 >
+    au < down ; 2003 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 18 ; 18 ; 2003 >
+    au < down ; 2004 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 19 ; 19 ; 2004 >
+    au < down ; 2005 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 20 ; 20  ; 2005 >
+    au < down ; 2006 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 21 (2006) ; 21 ; 2006 >
+    au < down ; 2007 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 21-22 (2007) ; 21-22 ; 2007 >
+    au < down ; 2008 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 22 (2008) ; 22 ; 2008 >
+    au < down ; 2009 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 23 ; 23 ; 2009 >
+    au < down ; 2010 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 24 ; 24 ; 2010 >
+    au < down ; 2011 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 25 ; 25 ; 2011 >
+    au < down ; 2012 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 26 ; 26 ; 2012 >
+    au < down ; 2013 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 27 ; 27 ; 2013 >
+    au < doNotProcess ; 2014 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 28 ; 28 ; 2014 >
+    }
   }
     
   {
@@ -117,7 +124,7 @@
     
     plugin = ca.athabascau.plugin.jrp.JournalOfResearchPracticePlugin
     param[base_url] = http://jrp.icaap.org/
-    param[journal_id] = jrp    
+    param[journal_id] = jrp
     implicit < status ; year ; name ; param[year] >
     
     au < released ; 2005 ; Journal of Research Practice Volume 1 ; 2005 >
