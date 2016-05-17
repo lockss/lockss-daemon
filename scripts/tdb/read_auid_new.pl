@@ -157,10 +157,16 @@ while (my $line = <>) {
         }
         sleep(4);
 
-  } elsif ($plugin eq "OUPDrupalPlugin" || 
+  } elsif ($plugin eq "AAPDrupalPlugin" || 
+           $plugin eq "OUPDrupalPlugin" || 
            $plugin eq "APSDrupalPlugin" || 
+           $plugin eq "BiologistsDrupalPlugin" || 
            $plugin eq "BMJDrupalPlugin" || 
-           $plugin eq "HWDrupalPlugin") {
+           $plugin eq "ERSDrupalPlugin" || 
+           $plugin eq "IWADrupalPlugin" || 
+           $plugin eq "PortlandPressDrupalPlugin" || 
+           $plugin eq "HWDrupalPlugin" || 
+           $plugin eq "RSPDrupalPlugin") {
         $url = sprintf("%slockss-manifest/vol_%s_manifest.html",
             $param{base_url}, $param{volume_name});
         $man_url = uri_unescape($url);
