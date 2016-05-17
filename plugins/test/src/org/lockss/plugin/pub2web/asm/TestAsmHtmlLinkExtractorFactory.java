@@ -34,6 +34,7 @@ package org.lockss.plugin.pub2web.asm;
 import java.util.HashSet;
 import java.util.Set;
 import org.lockss.plugin.UrlNormalizer;
+import org.lockss.plugin.pub2web.Pub2WebUrlNormalizer;
 import org.lockss.extractor.JsoupHtmlLinkExtractor;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.test.LockssTestCase;
@@ -86,7 +87,7 @@ public class TestAsmHtmlLinkExtractorFactory extends LockssTestCase {
 
   //http://www.asmscience.org/content/journal/microbiolspec/2/3
   public void testTOCLinks() throws Exception {
-    UrlNormalizer normalizer = new AsmUrlNormalizer();
+    UrlNormalizer normalizer = new Pub2WebUrlNormalizer();
     expectedUrls = SetUtil.set(
         BASE_URL + "content/searchbrowse",
         BASE_URL + "images/asm/white-triangle03.png",
@@ -145,17 +146,24 @@ public class TestAsmHtmlLinkExtractorFactory extends LockssTestCase {
           "<div class=\"metadata_fullSizeImage\">microbiolspec/2/3/MGM2-0012-2013-fig1.gif</div>" +
           "<div class=\"metadata_multimediaFile\"></div>" +
           "<div class=\"metadata_multimediaFormat\"></div>" +
+          "<div id=\"itemFullTextId\" class=\"itemFullTextHtml retrieveFullTextHtml hiddenjsdiv\" " +
+          "data-fullTexturl=\"/deliver/fulltext/microbiolspec/4/2/VMBF-0022-2015.html?itemId=/content/journal/microbiolspec/10.1128/microbiolspec.VMBF-0022-2015&mimeType=html&fmt=ahah\">" +
+          "/deliver/fulltext/microbiolspec/4/2/VMBF-0022-2015.html?itemId=/content/journal/microbiolspec/10.1128/microbiolspec.VMBF-0022-2015&mimeType=html&fmt=ahah" +
+          "</div>" +          
           "</body>" +
           "</html>";
 
 
   //http://www.asmscience.org/content/journal/microbiolspec/10.1128/microbiolspec.MGM2-0012-2013
+  //  /deliver/fulltext/microbiolspec/4/2/VMBF-0022-2015.html?itemId=/content/journal/microbiolspec/10.1128/microbiolspec.VMBF-0022-2015&mimeType=html&fmt=ahah
+  // gets normalized to
+  //  /content/journal/microbiolspec/10.1128/microbiolspec.VMBF-0022-2015&crawler=true &mimeType=html
   public void testArticlePageLinks() throws Exception {
-    UrlNormalizer normalizer = new AsmUrlNormalizer();
+    UrlNormalizer normalizer = new Pub2WebUrlNormalizer();
     expectedUrls = SetUtil.set(
         BASE_URL + "content/searchbrowse",
         BASE_URL + "images/asm/white-triangle03.png",
-        BASE_URL + "content/journal/microbiolspec/10.1128/microbiolspec.MGM2-0012-2013?crawler=true",
+        BASE_URL + "content/journal/microbiolspec/10.1128/microbiolspec.VMBF-0022-2015?crawler=true&mimetype=html",
         BASE_URL + "content/microbiolspec/10.1128/microbiolspec.MGM2-0012-2013.fig1",
         BASE_URL + "docserver/fulltext/microbiolspec/2/3/MGM2-0012-2013-fig1_thmb.gif",
         BASE_URL + "docserver/fulltext/microbiolspec/2/3/MGM2-0012-2013-fig1.gif"

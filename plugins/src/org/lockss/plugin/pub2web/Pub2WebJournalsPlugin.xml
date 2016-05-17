@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -98,10 +98,8 @@
   full-text links (pdf/html)- normalized to something else but must be allowed
     http://jgv.microbiologyresearch.org/deliver/fulltext/jgv/96/11/3243_jgv000263.pdf?itemId=/content/journal/jgv/10.1099/jgv.0.000263&mimeType=pdf&isFastTrackArticle=
     http://jgv.microbiologyresearch.org/deliver/fulltext/jgv/96/1/183.html?itemId=/content/journal/jgv/10.1099/vir.0.064816-0&mimeType=html&fmt=ahah
-         …but we normalize this to the ?crawler=true version and take of the isFastTrackArticle…
+         …but we normalize this to the ?crawler=true version and take off the isFastTrackArticle…
     http://www.asmscience.org/deliver/fulltext/ecosalplus/6/1/ESP-0007-2013.pdf?itemId=/content/journal/ecosalplus/10.1128/ecosalplus.ESP-0007-2013&mimeType=pdf&isFastTrackArticle=
-  html link - NO NEED we just create the one we need and never pick up the javascript defined one...
-    http://jmm.microbiologyresearch.org/deliver/fulltext/jmm/64/11/1270.html?itemId=/content/journal/jmm/10.1099/jmm.0.000151&mimeType=html&fmt=ahah
   Other pdf links go through a one-time expiring URL which we swallow (consumer) but which must be allowed
     <otherbase>/docserver/ahah/fulltext/jmm/64/11/1270.html?expires=1455321894&id=id&accname=sgid025717&checksum=42B1AAC0FBAC08BB4EF42D7D0BED4696
     http://www.asmscience.org/docserver/fulltext/ecosalplus/6/1/ESP-0007-2013.pdf?expires=1461707510&id=id&accname=4398&checksum=4542D3794C6722983E7694ABD8C01AE0

@@ -5,27 +5,27 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.pub2web.asm.ASMscienceJournalsPlugin</string>
+    <string>org.lockss.plugin.pub2web.asm.ASMscienceBooksPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.pub2web.Pub2WebJournalsPlugin</string>
+    <string>org.lockss.plugin.pub2web.Pub2WebBooksPlugin</string>
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>12</string>
+    <string>7</string>
   </entry>      
   <entry>
     <string>plugin_name</string>
-    <string>ASMscience Journals Plugin</string>
+    <string>ASMscience Books Plugin</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"ASMscience Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"ASMscience Books Plugin, Base URL %s, DOI %s", base_url, doi</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string> 
@@ -38,5 +38,5 @@
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.pub2web.asm.AsmHtmlLinkExtractorFactory</string>
-  </entry>  
+  </entry>
 </map>

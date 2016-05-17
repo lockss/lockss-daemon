@@ -1,0 +1,177 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>down - abstract parent only</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.pub2web.Pub2WebBooksPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>7</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>7</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>7</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>7</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Pub2Web Books Plugin</string>
+  </entry>
+  <entry>
+    <!--  for the SimpleUrlConsumer -->
+    <string>required_daemon_version</string>
+    <string>1.67.5</string>
+  </entry>  
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>doi</key>
+        <displayName>DOI</displayName>
+        <description>DOI</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Pub2Web Books Plugin, Base URL %s, DOI %s", base_url, doi</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%scontent/book/%s", base_url, doi</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <!-- examples
+    
+    book manifest = book landing:
+       http://www.asmscience.org/content/book/10.1128/9781555816896
+       http://www.asmscience.org/content/book/10.1128/9781555817992
+    individual chapter links (direct links of book landing):
+       http://www.asmscience.org/content/book/10.1128/9781555817992.chap3
+       http://www.asmscience.org/content/book/10.1128/9781555816896.(fm02|pre01|ch01|index|s0-3|chap5)
+    citation files:
+       http://www.asmscience.org/content/book/10.1128/9781555816896/cite/(refworks|bibtex|plaintext|endnote)
+       http://www.asmscience.org/content/book/10.1128/9781555816896.ch05/cite/(refworks|bibtex|plaintext|endnote)
+    crawler version of full-text pdf and html (we normalize to this)
+       http://www.asmscience.org/content/book/10.1128/9781555816896.ch05?crawler=true&mimetype=(html|application/pdf)
+    originating link for full-text pdf - we capture for url normalization to crawler version
+    ALSO - possibly supplementary data or something will use this to swallow a redirect
+       /deliver/fulltext/10.1128/9781555817992/9781555812058_Chap03.pdf?itemId=/content/book/10.1128/9781555817992.chap3&mimeType=pdf&isFastTrackArticle=       
+       http://www.asmscience.org/deliver/fulltext/10.1128/9781555816896/9781555815370_Chap05.pdf
+     and the landing pages for images and tables without 'book' subdir in url 
+       http://www.asmscience.org/content/10.1128/9781555816896.ch05.ch05fig01(fig*|.tab*|.T*)
+       http://www.asmscience.org/docserver/ahah/fulltext/10.1128/9781555816896/f0101-01_thmb.gif
+     thumbnails and full-sized versions of images
+       http://www.asmscience.org/docserver/fulltext/10.1128/9781555816896/f0101-01.gif
+       http://www.asmscience.org/docserver/preview/fulltext/10.1128/9781555818289/9781555811303_Chap03-1.gif
+       eot, svg, ttf & woff are font support files
+     NOT real link for html - do not pick this one up
+       /deliver/fulltext/10.1128/9781555818265/chap1.html
+          ?itemId=/content/book/10.1128/9781555818265.chap1&mimeType=html&isFastTrackArticle=    
+     This is the link we extract and noralize to the crawler version
+       /deliver/fulltext/10.1128/9781555817992/chap3.html
+          ?itemId=/content/book/10.1128/9781555817992.chap3&mimeType=html&fmt=ahah
+    -->
+    <list>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
+      <string>1,"^%scontent/book/%s", base_url, doi</string>
+      <string>1,"^%scontent/%s", base_url, doi</string>
+      <!--  the version we allow ends in '&fmt=ahah' -->
+      <!-- <string>2,"^%sdeliver/fulltext/%s/[^?/]+\.html\?itemId=[^&amp;]+&amp;mimeType=html(&amp;isFastTrackArticle=)?$", base_url, doi</string>-->
+      <string>1,"^%sdeliver/fulltext/%s", base_url, doi</string>
+      <string>1,"^%sdocserver(/ahah)?/fulltext/%s", base_url, doi</string>
+    </list>
+  </entry>
+  <entry>
+  <!-- http://www.asmscience.org/content/book/10.1128/9781555817992.chap3?crawler=true&mimetype=application/pdf-->
+    <string>au_substance_url_pattern</string>
+    <string>"^%scontent/book/%s[^?/]*\?crawler=true&amp;mimetype=application/pdf$", base_url, doi</string>
+  </entry>
+  <!--  au_crawl_depth is default, 1...the start url is the book landing page  -->
+  <!-- repair from peer
+      non-host support files, css, fonts, support images, etc -->
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <string>(/css/.*\.css(\?[^/]+)?$|/(css|images|js)/(sgm|jp)/)</string>
+  </entry>
+  <!-- don't worry about polling for those low-importance files that will 
+       repair from peer in time (eg due to versioning, etc)  -->
+   <entry>
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>(/css/.*\.css(\?[^/]+)?$|/(css|images|js)/(sgm|jp)/), 0</string>
+    </list>
+  </entry>  
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+      <string>plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.pub2web.Pub2WebUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.pub2web.Pub2WebPdfFilterFactory</string>
+  </entry>  
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.pub2web.Pub2WebUrlNormalizer</string>
+  </entry>
+<!--  child plugins should define their own crawl filter/html filter until we see patterns -->  
+<!--  child plugins will also probably need their own link extractor  -->
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.pub2web.Pub2WebArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.pub2web.Pub2WebArticleIteratorFactory</string>
+  </entry>
+   <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.pub2web.Pub2WebHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry> 
+</map>
