@@ -17,11 +17,11 @@
         param[journal_id] = aps
         
         au < released ; 2011 ; aboriginal policy studies Volume 1 ; 2011 ; 1 ; http://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2012 ; aboriginal policy studies Volume 2 (2012) ; 2012 ; 2 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2013 ; aboriginal policy studies Volume 2 (2013) ; 2013 ; 2 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2014 ; aboriginal policy studies Volume 3 (2014) ; 2014 ; 3 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2015 ; aboriginal policy studies Volume 4 (2015) ; 2015 ; 4 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2016 ; aboriginal policy studies Volume 5 (2016) ; 2016 ; 5 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2012 ; aboriginal policy studies Volume 2 (2012) ; 2012 ; 2 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2013 ; aboriginal policy studies Volume 2 (2013) ; 2013 ; 2 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2014 ; aboriginal policy studies Volume 3 (2014) ; 2014 ; 3 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2015 ; aboriginal policy studies Volume 4 (2015) ; 2015 ; 4 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2016 ; aboriginal policy studies Volume 5 (2016) ; 2016 ; 5 ; https://ejournals.library.ualberta.ca/ >
 
     }
 
@@ -53,11 +53,11 @@
         au < released ; 2009 ; Alternative Francophone Volume 2009 ; 2009 ; 1 ; http://ejournals.library.ualberta.ca/ >
         au < released ; 2010 ; Alternative Francophone Volume 2010 ; 2010 ; 1 ; http://ejournals.library.ualberta.ca/ >
         au < released ; 2011 ; Alternative Francophone Volume 2011 ; 2011 ; 1 ; http://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2012 ; Alternative Francophone Volume 2012 ; 2012 ; 1 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2013 ; Alternative Francophone Volume 2013 ; 2013 ; 1 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2014 ; Alternative Francophone Volume 2014 ; 2014 ; 1 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2015 ; Alternative Francophone Volume 2015 ; 2015 ; 1 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2016 ; Alternative Francophone Volume 2016 ; 2016 ; 1 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2012 ; Alternative Francophone Volume 2012 ; 2012 ; 1 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2013 ; Alternative Francophone Volume 2013 ; 2013 ; 1 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2014 ; Alternative Francophone Volume 2014 ; 2014 ; 1 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2015 ; Alternative Francophone Volume 2015 ; 2015 ; 1 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2016 ; Alternative Francophone Volume 2016 ; 2016 ; 1 ; https://ejournals.library.ualberta.ca/ >
 
     }
 
@@ -116,10 +116,10 @@
         au < released ; 2009 ; Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse Volume 2002 ; 2002 ; 2 ; http://ejournals.library.ualberta.ca/ >
         au < released ; 2011 ; Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse Volume 2011 ; 2011 ; 3 ; http://ejournals.library.ualberta.ca/ >
         au < released ; 2012 ; Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse Volume 2012 ; 2012 ; 4 ; http://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2013 ; Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse Volume 2013 ; 2013 ; 5 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2014 ; Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse Volume 2014 ; 2014 ; 6 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2015 ; Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse Volume 2015 ; 2015 ; 7 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2016 ; Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse Volume 2016 ; 2016 ; 8 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2013 ; Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse Volume 2013 ; 2013 ; 5 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2014 ; Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse Volume 2014 ; 2014 ; 6 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2015 ; Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse Volume 2015 ; 2015 ; 7 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2016 ; Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse Volume 2016 ; 2016 ; 8 ; https://ejournals.library.ualberta.ca/ >
 
     }
 
@@ -132,34 +132,34 @@
         #stopped with 2015. Continued by jpcoe
         param[journal_id] = cjlt
 
-        au < manifest ; 1986 ; Canadian Journal of Learning and Technology Volume 1986 ; 1986 ; 15 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 1987 ; Canadian Journal of Learning and Technology Volume 1987 ; 1987 ; 16 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 1988 ; Canadian Journal of Learning and Technology Volume 1988 ; 1988 ; 17 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 1989 ; Canadian Journal of Learning and Technology Volume 1989 ; 1989 ; 18 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 1990 ; Canadian Journal of Learning and Technology Volume 1990 ; 1990 ; 19 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 1991 ; Canadian Journal of Learning and Technology Volume 1991 ; 1991 ; 20 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 1992 ; Canadian Journal of Learning and Technology Volume 1992 ; 1992 ; 21 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 1993 ; Canadian Journal of Learning and Technology Volume 1993 ; 1993 ; 22 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 1994 ; Canadian Journal of Learning and Technology Volume 1994 ; 1994 ; 23 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 1995 ; Canadian Journal of Learning and Technology Volume 1995 ; 1995 ; 24 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 1996 ; Canadian Journal of Learning and Technology Volume 1996 ; 1996 ; 25 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 1997 ; Canadian Journal of Learning and Technology Volume 1997 ; 1997 ; 26 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 1998 ; Canadian Journal of Learning and Technology Volume 1998 ; 1998 ; 27 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 1999 ; Canadian Journal of Learning and Technology Volume 1999 ; 1999 ; 27 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2002 ; Canadian Journal of Learning and Technology Volume 2002 ; 2002 ; 28 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2003 ; Canadian Journal of Learning and Technology Volume 2003 ; 2003 ; 29 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2004 ; Canadian Journal of Learning and Technology Volume 2004 ; 2004 ; 30 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2005 ; Canadian Journal of Learning and Technology Volume 2005 ; 2005 ; 31 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2006 ; Canadian Journal of Learning and Technology Volume 2006 ; 2006 ; 32 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2007 ; Canadian Journal of Learning and Technology Volume 2007 ; 2007 ; 33 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2008 ; Canadian Journal of Learning and Technology Volume 2008 ; 2008 ; 34 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2009 ; Canadian Journal of Learning and Technology Volume 2009 ; 2009 ; 35 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2010 ; Canadian Journal of Learning and Technology Volume 2010 ; 2010 ; 36 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2011 ; Canadian Journal of Learning and Technology Volume 2011 ; 2011 ; 37 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2012 ; Canadian Journal of Learning and Technology Volume 2012 ; 2012 ; 38 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2013 ; Canadian Journal of Learning and Technology Volume 2013 ; 2013 ; 39 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2014 ; Canadian Journal of Learning and Technology Volume 2014 ; 2014 ; 40 ; https://ejournals.library.ualberta.ca/ >
-        au < manifest ; 2015 ; Canadian Journal of Learning and Technology Volume 2015 ; 2015 ; 41 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 1986 ; Canadian Journal of Learning and Technology Volume 1986 ; 1986 ; 15 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 1987 ; Canadian Journal of Learning and Technology Volume 1987 ; 1987 ; 16 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 1988 ; Canadian Journal of Learning and Technology Volume 1988 ; 1988 ; 17 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 1989 ; Canadian Journal of Learning and Technology Volume 1989 ; 1989 ; 18 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 1990 ; Canadian Journal of Learning and Technology Volume 1990 ; 1990 ; 19 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 1991 ; Canadian Journal of Learning and Technology Volume 1991 ; 1991 ; 20 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 1992 ; Canadian Journal of Learning and Technology Volume 1992 ; 1992 ; 21 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 1993 ; Canadian Journal of Learning and Technology Volume 1993 ; 1993 ; 22 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 1994 ; Canadian Journal of Learning and Technology Volume 1994 ; 1994 ; 23 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 1995 ; Canadian Journal of Learning and Technology Volume 1995 ; 1995 ; 24 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 1996 ; Canadian Journal of Learning and Technology Volume 1996 ; 1996 ; 25 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 1997 ; Canadian Journal of Learning and Technology Volume 1997 ; 1997 ; 26 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 1998 ; Canadian Journal of Learning and Technology Volume 1998 ; 1998 ; 27 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 1999 ; Canadian Journal of Learning and Technology Volume 1999 ; 1999 ; 27 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2002 ; Canadian Journal of Learning and Technology Volume 2002 ; 2002 ; 28 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2003 ; Canadian Journal of Learning and Technology Volume 2003 ; 2003 ; 29 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2004 ; Canadian Journal of Learning and Technology Volume 2004 ; 2004 ; 30 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2005 ; Canadian Journal of Learning and Technology Volume 2005 ; 2005 ; 31 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2006 ; Canadian Journal of Learning and Technology Volume 2006 ; 2006 ; 32 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2007 ; Canadian Journal of Learning and Technology Volume 2007 ; 2007 ; 33 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2008 ; Canadian Journal of Learning and Technology Volume 2008 ; 2008 ; 34 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2009 ; Canadian Journal of Learning and Technology Volume 2009 ; 2009 ; 35 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2010 ; Canadian Journal of Learning and Technology Volume 2010 ; 2010 ; 36 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2011 ; Canadian Journal of Learning and Technology Volume 2011 ; 2011 ; 37 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2012 ; Canadian Journal of Learning and Technology Volume 2012 ; 2012 ; 38 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2013 ; Canadian Journal of Learning and Technology Volume 2013 ; 2013 ; 39 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2014 ; Canadian Journal of Learning and Technology Volume 2014 ; 2014 ; 40 ; https://ejournals.library.ualberta.ca/ >
+        au < testing ; 2015 ; Canadian Journal of Learning and Technology Volume 2015 ; 2015 ; 41 ; https://ejournals.library.ualberta.ca/ >
 
     }
 
