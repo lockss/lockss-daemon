@@ -148,15 +148,15 @@
       param[base_url] = http://journals.sfu.ca/pie/
       param[journal_id] = pie
 
-      au < exists ; 2006 ; Paideusis Volume 2006 ; 15 ; 2006 >
-      au < exists ; 2007 ; Paideusis Volume 2007 ; 16 ; 2007 >
-      au < exists ; 2008 ; Paideusis Volume 2008 ; 17 ; 2008 >
-      au < exists ; 2009 ; Paideusis Volume 2009 ; 18 ; 2009 >
-      au < exists ; 2010 ; Paideusis Volume 2010 ; 19 ; 2010 >
-      au < exists ; 2012 ; Paideusis Volume 2012 ; 20 ; 2012 >
-      au < exists ; 2013 ; Paideusis Volume 2013 ; 21 ; 2013 >
-      au < exists ; 2014 ; Paideusis Volume 2014 ; 21-22 ; 2014 >
-      au < exists ; 2015 ; Paideusis Volume 2015 ; 22-23 ; 2015 >
+      au < manifest ; 2006 ; Paideusis Volume 2006 ; 15 ; 2006 >
+      au < manifest ; 2007 ; Paideusis Volume 2007 ; 16 ; 2007 >
+      au < manifest ; 2008 ; Paideusis Volume 2008 ; 17 ; 2008 >
+      au < manifest ; 2009 ; Paideusis Volume 2009 ; 18 ; 2009 >
+      au < manifest ; 2010 ; Paideusis Volume 2010 ; 19 ; 2010 >
+      au < manifest ; 2012 ; Paideusis Volume 2012 ; 20 ; 2012 >
+      au < manifest ; 2013 ; Paideusis Volume 2013 ; 21 ; 2013 >
+      au < manifest ; 2014 ; Paideusis Volume 2014 ; 21-22 ; 2014 >
+      au < manifest ; 2015 ; Paideusis Volume 2015 ; 22-23 ; 2015 >
       au < expected ; 2016 ; Paideusis Volume 2016 ; 24 ; 2016 >
       }
       {
