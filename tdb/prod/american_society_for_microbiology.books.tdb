@@ -4,8 +4,7 @@
     name = American Society for Microbiology
 
   >
-    plugin = needs.plugin
-    #plugin = org.lockss.plugin.pub2web.asm.ASMscienceBooksPlugin
+    plugin = org.lockss.plugin.pub2web.asm.ASMscienceBooksPlugin
     param[base_url] = http://www.asmscience.org/
     implicit < status ; year ; isbn ; eisbn ; param[doi] ; name >
 
