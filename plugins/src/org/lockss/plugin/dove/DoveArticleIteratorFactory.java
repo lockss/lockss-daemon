@@ -78,6 +78,11 @@ public class DoveArticleIteratorFactory implements ArticleIteratorFactory,
   
   //Filter out all non abstract urls inside the iterator
   protected static final String PATTERN_TEMPLATE = "\"^%s[^/]+(-fulltext)?-article-[A-Z]+$\", base_url";
+  // fulltext would also match the abstract pattern so manually check inside the method 
+  // https://www.dovepress.com/the-articletitle-peer-reviewed-article-GICTT
+  // https://www.dovepress.com/the-articletitle-peer-reviewed-fulltext-article-GICTT
+  protected static Pattern ABSTRACT_PATTERN = Pattern.compile("([^/]+)-article-([A-Z]+)$", Pattern.CASE_INSENSITIVE);
+  //protected Pattern FULLTEXT_PATTERN = Pattern.compile("([^/]+)-fulltext-article-([A-Z]+)$", Pattern.CASE_INSENSITIVE);
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -91,12 +96,6 @@ public class DoveArticleIteratorFactory implements ArticleIteratorFactory,
   }
 
   protected static class DoveArticleIterator extends SubTreeArticleIterator {
-
-    // fulltext would also match the abstract pattern so manually check inside the method 
-    // https://www.dovepress.com/the-articletitle-peer-reviewed-article-GICTT
-    // https://www.dovepress.com/the-articletitle-peer-reviewed-fulltext-article-GICTT
-    protected Pattern ABSTRACT_PATTERN = Pattern.compile("([^/]+)-article-([A-Z]+)$", Pattern.CASE_INSENSITIVE);
-    //protected Pattern FULLTEXT_PATTERN = Pattern.compile("([^/]+)-fulltext-article-([A-Z]+)$", Pattern.CASE_INSENSITIVE);
    
     public DoveArticleIterator(ArchivalUnit au,
                                  SubTreeArticleIterator.Spec spec) {
@@ -107,7 +106,6 @@ public class DoveArticleIteratorFactory implements ArticleIteratorFactory,
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
       String url = cu.getUrl();
       Matcher mat = ABSTRACT_PATTERN.matcher(url);
-      /* TODO: for now don't do anything with the fulltext html */
       if (mat.find() && (!url.contains("fulltext-article"))) {
 	return processAbstract(cu, mat);
       }
