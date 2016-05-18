@@ -450,11 +450,23 @@ public class ProxyHandler extends AbstractHttpHandler {
     if (!StringUtil.isNullString(auid)) {
       au = pluginMgr.getAuFromId(auid);
       if (au == null) {
-	response.sendError(HttpResponse.__412_Precondition_Failed,
-			   "AU specified by " + Constants.X_LOCKSS_AUID +
-			   " header not found: " + auid);
-	logAccess(request, "412 AU not found: " + auid,
-		  TimeBase.msSince(reqStartTime));
+	// Requested AU not found.  Return 412, or 503 during startup
+	if (audit503UntilAusStarted && !theDaemon.areAusStarted()) {
+	  // TODO - Guesstimate remaining time and add Retry-After header
+	  String errmsg =
+	    "This LOCKSS box is starting.  Please try again in a moment.";
+	  response.sendError(HttpResponse.__503_Service_Unavailable, errmsg);
+	  request.setHandled(true);
+	  logAccess(request, "not present (no AU: " + auid + "), 503",
+		    TimeBase.msSince(reqStartTime));
+	} else {
+	  response.sendError(HttpResponse.__412_Precondition_Failed,
+			     "AU specified by " + Constants.X_LOCKSS_AUID +
+			     " header not found: " + auid);
+	  request.setHandled(true);
+	  logAccess(request, "412 AU not found: " + auid,
+		    TimeBase.msSince(reqStartTime));
+	}
 	return;
       }
       cu = au.makeCachedUrl(urlString);
