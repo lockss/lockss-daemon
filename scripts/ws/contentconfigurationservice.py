@@ -46,7 +46,7 @@ contain comments, which begin at the character '#' and extend to the end of the
 line. At least one target host is required. You will be prompted for a username
 and password unless you pass them via --username and --password.
 
-- Specify the target AUIDS. Likewise, each occurrence of --auid=AUID adds the
+- Specify the target AUIDs. Likewise, each occurrence of --auid=AUID adds the
 given AUID to the list of target AUIDs, and each occurrence of --auids=AFILE
 adds the AUIDs in the file AFILE to the list of target AUIDs. AFILE can also
 contain comments. At least one target AUID is required.
@@ -83,26 +83,44 @@ sort like in the LOCKSS daemon.
 
 EXAMPLES
 
-$ contentconfigurationservice --host=foo.university.edu:8081 --auid=aaaaa1  --add-aus
+$ scripts/ws/contentconfigurationservice --host=foo.university.edu:8081 --auid=aaaaa1  --add-aus
 
-Adds the AUID aaaaa1 to foo.university.edu:8081. Produces text output only if
-the operation does not succeed.
+Adds the AUID aaaaa1 to foo.university.edu:8081. Produces text output (the
+default) only if the operation does not succeed.
 
-$ contentconfigurationservice --hosts=mydaemons.hosts --auid=myfile.auids  --add-aus --list-by-auid
+$ scripts/ws/contentconfigurationservice --hosts=mydaemons.hosts --auids=myfile.auids  --add-aus
 
 Adds the AUIDs contained in myfile.auids to all the hosts contained in
-mydaemons.hosts. Produces text output where AUs for which the operation was
-unsuccessful are sorted by name but displayed as AUIDs.
+mydaemons.hosts. Produces text output (the default) only if some operations do
+not succeed. AUs are sorted by AU name (the default) and displayed as a
+name-AUID pair (the default).
 
-$ contentconfigurationservice --hosts=mydaemons.hosts --auid=myfile.auids  --add-aus --list-by-auid --verbose
+$ scripts/ws/contentconfigurationservice --hosts=mydaemons.hosts --auids=myfile.auids  --add-aus --verbose
 
-Same, but display successful AU operations and unsuccessful AU operations.
+Adds the AUIDs contained in myfile.auids to all the hosts contained in
+mydaemons.hosts. Produces text output (the default), both of successful
+operations and unsuccessful operations. AUs are sorted by AU name (the default)
+and displayed as a name-AUID pair (the default).
 
-$ contentconfigurationservice --hosts=mydaemons.hosts --auid=myfile.auids  --add-aus --table-output
+$ scripts/ws/contentconfigurationservice --hosts=mydaemons.hosts --auids=myfile.auids  --add-aus --list-by-name
+
+Adds the AUIDs contained in myfile.auids to all the hosts contained in
+mydaemons.hosts. Produces text output (the default) only if some operations do
+not succeed. AUs are sorted by AU name (the default) and displayed by AU name.
+
+$ scripts/ws/contentconfigurationservice --hosts=mydaemons.hosts --auids=myfile.auids  --add-aus --sort-by-auid --list-by-auid
+
+Adds the AUIDs contained in myfile.auids to all the hosts contained in
+mydaemons.hosts. Produces text output (the default) only if some operations do
+not succeed. AUs are sorted by AUID and displayed by AUID.
+
+$ scripts/ws/contentconfigurationservice --hosts=mydaemons.hosts --auids=myfile.auids  --add-aus --table-output
 
 Adds the AUIDs contained in myfile.auids to all the hosts contained in
 mydaemons.hosts. If any operation does not succeed, prints a table of
-unsuccessful operations where each row is an AU and each column is a host.'''
+unsuccessful operations where each row is an AU and each column is a host. The
+rows are sorted by AU name (the default) and displayed as a name-AUID pair (the
+default).'''
 
 __version__ = '0.1.0'
 
