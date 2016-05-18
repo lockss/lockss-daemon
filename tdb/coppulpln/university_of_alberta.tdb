@@ -201,6 +201,16 @@
 
       param[journal_id] = cjuce-rcepu
 
+      au < exists ; 1995 ; Canadian Journal of University Continuing Education Volume 1995 ; 1995 ; 21 ; https://ejournals.library.ualberta.ca/ >
+      au < exists ; 1996 ; Canadian Journal of University Continuing Education Volume 1996 ; 1996 ; 22 ; https://ejournals.library.ualberta.ca/ >
+      au < exists ; 1997 ; Canadian Journal of University Continuing Education Volume 1997 ; 1997 ; 23 ; https://ejournals.library.ualberta.ca/ >
+      au < exists ; 1998 ; Canadian Journal of University Continuing Education Volume 1998 ; 1998 ; 24 ; https://ejournals.library.ualberta.ca/ >
+      au < exists ; 1999 ; Canadian Journal of University Continuing Education Volume 1999 ; 1999 ; 25 ; https://ejournals.library.ualberta.ca/ >
+      au < exists ; 2000 ; Canadian Journal of University Continuing Education Volume 2000 ; 2000 ; 26 ; https://ejournals.library.ualberta.ca/ >
+      au < exists ; 2001 ; Canadian Journal of University Continuing Education Volume 2001 ; 2001 ; 27 ; https://ejournals.library.ualberta.ca/ >
+      au < exists ; 2002 ; Canadian Journal of University Continuing Education Volume 2002 ; 2002 ; 28 ; https://ejournals.library.ualberta.ca/ >
+      au < exists ; 2003 ; Canadian Journal of University Continuing Education Volume 2003 ; 2003 ; 29 ; https://ejournals.library.ualberta.ca/ >
+      au < manifest ; 2004 ; Canadian Journal of University Continuing Education Volume 2004 ; 2004 ; 30 ; https://ejournals.library.ualberta.ca/ >
       au < testing ; 2005 ; Canadian Journal of University Continuing Education Volume 2005 ; 2005 ; 31 ; https://ejournals.library.ualberta.ca/ >
       au < testing ; 2006 ; Canadian Journal of University Continuing Education Volume 2006 ; 2006 ; 32 ; https://ejournals.library.ualberta.ca/ >
       au < testing ; 2007 ; Canadian Journal of University Continuing Education Volume 2007 ; 2007 ; 33 ; https://ejournals.library.ualberta.ca/ >
@@ -415,6 +425,11 @@
       au < testing ; 2009 ; Cultural and Pedagogical Inquiry Volume 2009 ; 2009 ; 1 ; https://ejournals.library.ualberta.ca/ >
       au < testing ; 2010 ; Cultural and Pedagogical Inquiry Volume 2010 ; 2010 ; 2 ; https://ejournals.library.ualberta.ca/ >
       au < testing ; 2011 ; Cultural and Pedagogical Inquiry Volume 2011 ; 2011 ; 3 ; https://ejournals.library.ualberta.ca/ >
+      au < manifest ; 2012 ; Cultural and Pedagogical Inquiry Volume 2012 ; 2012 ; 4 ; https://ejournals.library.ualberta.ca/ >
+      au < exists ; 2013 ; Cultural and Pedagogical Inquiry Volume 2013 ; 2013 ; 5 ; https://ejournals.library.ualberta.ca/ >
+      au < exists ; 2014 ; Cultural and Pedagogical Inquiry Volume 2014 ; 2014 ; 6 ; https://ejournals.library.ualberta.ca/ >
+      au < exists ; 2015 ; Cultural and Pedagogical Inquiry Volume 2015 ; 2015 ; 7 ; https://ejournals.library.ualberta.ca/ >
+      au < expected ; 2016 ; Cultural and Pedagogical Inquiry Volume 2016 ; 2016 ; 8 ; https://ejournals.library.ualberta.ca/ >
 
     }
 
@@ -456,6 +471,9 @@
         au < testing ; 2011 ; ESC: English Studies in Canada Volume 2011 ; 2011 ; 37 ; https://ejournals.library.ualberta.ca/ >
         au < testing ; 2012 ; ESC: English Studies in Canada Volume 2012 ; 2012 ; 38 ; https://ejournals.library.ualberta.ca/ >
         au < testing ; 2013 ; ESC: English Studies in Canada Volume 2013 ; 2013 ; 39 ; https://ejournals.library.ualberta.ca/ >
+        au < manifest ; 2014 ; ESC: English Studies in Canada Volume 2014 ; 2014 ; 40 ; https://ejournals.library.ualberta.ca/ >
+        au < manifest ; 2015 ; ESC: English Studies in Canada Volume 2015 ; 2015 ; 41 ; https://ejournals.library.ualberta.ca/ >
+        au < expected ; 2016 ; ESC: English Studies in Canada Volume 2016 ; 2016 ; 42 ; https://ejournals.library.ualberta.ca/ >
       }
       {
         param[journal_id] = esc
@@ -563,6 +581,8 @@
         # moved to Sage as of the end of 2015.
         param[journal_id] = IJQM
         
+        au < exists ; 2002 ; International Journal of Qualitative Methods Volume 2002 ; 2002 ; 1 ; https://ejournals.library.ualberta.ca/ >
+        au < manifest ; 2003 ; International Journal of Qualitative Methods Volume 2003 ; 2003 ; 2 ; https://ejournals.library.ualberta.ca/ >
         au < testing ; 2004 ; International Journal of Qualitative Methods Volume 2004 ; 2004 ; 3 ; https://ejournals.library.ualberta.ca/ >
         au < testing ; 2005 ; International Journal of Qualitative Methods Volume 2005 ; 2005 ; 4 ; https://ejournals.library.ualberta.ca/ >
         au < testing ; 2006 ; International Journal of Qualitative Methods Volume 2006 ; 2006 ; 5 ; https://ejournals.library.ualberta.ca/ >
@@ -816,15 +836,27 @@
         name = TranscUlturAl ;
         eissn = 1920-0323
       >
+        
+      {
+        param[journal_id] = TC
 
+        au < exists ; 2008 ; TranscUlturAl Volume 2008 ; 2008 ; 1 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2009 ; TranscUlturAl Volume 2009 ; 2009 ; 2 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2010 ; TranscUlturAl Volume 2010 ; 2010 ; 3 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2011 ; TranscUlturAl Volume 2011 ; 2011 ; 4 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2013 ; TranscUlturAl Volume 2013 ; 2013 ; 5 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2014 ; TranscUlturAl Volume 2014 ; 2014 ; 6 ; https://ejournals.library.ualberta.ca/ >
+        au < exists ; 2015 ; TranscUlturAl Volume 2015 ; 2015 ; 7 ; https://ejournals.library.ualberta.ca/ >
+        au < expected ; 2016 ; TranscUlturAl Volume 2016 ; 2016 ; 8 ; https://ejournals.library.ualberta.ca/ >
+      }
+      {
         param[journal_id] = tc
 
-        au < released ; 2008 ; TranscUlturAl Volume 2008 ; 2008 ; 1 ; http://ejournals.library.ualberta.ca/ >
-        au < released ; 2009 ; TranscUlturAl Volume 2009 ; 2009 ; 1 ; http://ejournals.library.ualberta.ca/ >
-        au < released ; 2010 ; TranscUlturAl Volume 2010 ; 2010 ; 1 ; http://ejournals.library.ualberta.ca/ >
-        au < released ; 2011 ; TranscUlturAl Volume 2011 ; 2011 ; 1 ; http://ejournals.library.ualberta.ca/ >
-        au < expected ; 2012 ; TranscUlturAl Volume 2012 ; 2012 ; 1 ; https://ejournals.library.ualberta.ca/ >
-
+        au < superseded ; 2008 ; TranscUlturAl Volume 2008 ; 2008 [superseded] ; 1 ; http://ejournals.library.ualberta.ca/ >
+        au < superseded ; 2009 ; TranscUlturAl Volume 2009 ; 2009 [superseded] ; 2 ; http://ejournals.library.ualberta.ca/ >
+        au < superseded ; 2010 ; TranscUlturAl Volume 2010 ; 2010 [superseded] ; 3 ; http://ejournals.library.ualberta.ca/ >
+        au < superseded ; 2011 ; TranscUlturAl Volume 2011 ; 2011 [superseded] ; 4 ; http://ejournals.library.ualberta.ca/ >
+      }
     }
 
     {

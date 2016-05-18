@@ -80,13 +80,13 @@
     param[journal_id] = cjhe
     # moved to http://journals.sfu.ca/cjhe/
     
-    au < released ; 2007 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 37 ; 37 ; 2007 >
-    au < released ; 2008 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 38 ; 38 ; 2008 >
-    au < released ; 2009 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 39 ; 39 ; 2009 >
-    au < released ; 2010 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 40 ; 40 ; 2010 >
-    au < released ; 2011 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 41 ; 41 ; 2011 >
-    au < released ; 2012 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 42 ; 42 ; 2012 >
-    au < released ; 2013 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 43 ; 43 ; 2013 >
+    au < superseded ; 2007 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 2007 [superseded] ; 37 ; 2007 >
+    au < superseded ; 2008 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 2008 [superseded] ; 38 ; 2008 >
+    au < superseded ; 2009 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 2009 [superseded] ; 39 ; 2009 >
+    au < superseded ; 2010 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 2010 [superseded] ; 40 ; 2010 >
+    au < superseded ; 2011 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 2011 [superseded] ; 41 ; 2011 >
+    au < superseded ; 2012 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 2012 [superseded] ; 42 ; 2012 >
+    au < superseded ; 2013 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 2013 [superseded] ; 43 ; 2013 >
 
   }
 
@@ -214,6 +214,7 @@
     au < manifest ; 2013 ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 6 (2013) ; 6 ; 2013 >
     au < manifest ; 2014 ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 7 (2014) ; 7 ; 2014 >
     au < manifest ; 2015 ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 8 (2015) ; 8 ; 2015 >
+    au < manifest ; 2016 ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 9 (2016) ; 9 ; 2016 >
 
   }
 
@@ -305,6 +306,8 @@
       param[base_url] = http://ices.library.ubc.ca/
       param[journal_id] = workplace
 
+      au < exists ; 1998 ; Workplace: A Journal for Academic Labor 1998 ; 1-2 ; 1998 >
+      au < manifest ; 1999 ; Workplace: A Journal for Academic Labor 1999 ; 3-4 ; 1999 >
       au < manifest ; 2000 ; Workplace: A Journal for Academic Labor 2000 ; 5-6 ; 2000 >
       au < manifest ; 2001 ; Workplace: A Journal for Academic Labor 2001 ; 7 ; 2001 >
       au < manifest ; 2002 ; Workplace: A Journal for Academic Labor 2002 ; 8-9 ; 2002 >
