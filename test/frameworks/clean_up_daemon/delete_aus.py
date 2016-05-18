@@ -42,7 +42,7 @@ import fix_auth_failure
 
 __author__ = "Barry Hayes"
 __maintainer__ = "Barry Hayes"
-__version__ = "1.0.4"
+__version__ = "1.0.5"
 
 
 def _parser():
@@ -94,6 +94,8 @@ def _aus(auid_files):
 
 
 def main():
+    sys.stderr.write('This tool is deprecated.\nUse scripts/ws/contentconfigurationservice --delete-aus instead.\n')
+
     (options, host, port, auid_files) = _process_args()
     fix_auth_failure.fix_auth_failure()
     client = lockss_daemon.Client(host, port,
@@ -129,5 +131,4 @@ def main():
 
 
 if __name__ == '__main__':
-    print 'Warning: This script is no longer supported.'
     main()

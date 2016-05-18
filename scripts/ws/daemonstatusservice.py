@@ -3,8 +3,6 @@
 '''A library and a command line tool to interact with the LOCKSS daemon status
 service via its Web Services API.'''
 
-# $Id$
-
 __copyright__ = '''\
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -355,7 +353,7 @@ class _DaemonStatusServiceOptions(object):
 
   @staticmethod
   def make_parser():
-    usage = '%prog [OPTIONS] [--host=HOST|--hosts=HFILE]...'
+    usage = '%prog {--host=HOST|--hosts=HFILE}... [OPTIONS]'
     parser = optparse.OptionParser(version=__version__, description=__doc__, usage=usage)
     # Hosts
     group = optparse.OptionGroup(parser, 'Target hosts')
