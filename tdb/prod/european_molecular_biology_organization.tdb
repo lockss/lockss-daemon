@@ -4,7 +4,7 @@
     name = European Molecular Biology Organization
   >
 
-  plugin = org.lockss.plugin.highwire.HWDrupalPlugin
+  plugin = org.lockss.plugin.highwire.embo.EMBODrupalPlugin
   comment[platform] = HighWire Drupal
   implicit < status ; year ; name ; param[volume_name] >
 
