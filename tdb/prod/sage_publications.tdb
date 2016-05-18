@@ -5688,6 +5688,11 @@
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
   
+        au < exists ; 2010 ; Cahiers Élisabéthains Volume 83 ; 83 >
+        au < exists ; 2011 ; Cahiers Élisabéthains Volume 84 ; 84 >
+        au < exists ; 2012 ; Cahiers Élisabéthains Volume 85 ; 85 >
+        au < exists ; 2013 ; Cahiers Élisabéthains Volume 86 ; 86 >
+        au < exists ; 2014 ; Cahiers Élisabéthains Volume 87 ; 87 >
         au < manifest ; 2015 ; Cahiers Élisabéthains Volume 88 ; 88 >
         au < manifest ; 2016 ; Cahiers Élisabéthains Volume 89 ; 89 >
   
@@ -9288,6 +9293,11 @@
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
+      au < exists ; 2010 ; Critical Studies in Television Volume 5 ; 5 >
+      au < exists ; 2011 ; Critical Studies in Television Volume 6 ; 6 >
+      au < exists ; 2012 ; Critical Studies in Television Volume 7 ; 7 >
+      au < exists ; 2013 ; Critical Studies in Television Volume 8 ; 8 >
+      au < exists ; 2014 ; Critical Studies in Television Volume 9 ; 9 >
       au < manifest ; 2015 ; Critical Studies in Television Volume 10 ; 10 >
       au < manifest ; 2016 ; Critical Studies in Television Volume 11 ; 11 >
 
@@ -35679,6 +35689,9 @@ comment[mpj] = now published by Brill
         au < released ; 2015 ; National Institute Economic Review Volume 233 ; 233 >
         au < released ; 2015 ; National Institute Economic Review Volume 234 ; 234 >
         au < manifest ; 2016 ; National Institute Economic Review Volume 235 ; 235 >
+        au < manifest ; 2016 ; National Institute Economic Review Volume 236 ; 236 >
+        au < expected ; 2016 ; National Institute Economic Review Volume 237 ; 237 >
+        au < expected ; 2016 ; National Institute Economic Review Volume 238 ; 238 >
 
       }
 
