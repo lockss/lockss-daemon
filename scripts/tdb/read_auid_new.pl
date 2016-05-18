@@ -1356,18 +1356,12 @@ while (my $line = <>) {
   
   # Clockss Microbiology Society
   } elsif ($plugin eq "ClockssMicrobiologySocietyJournalsPlugin") {
-    print "ClockssMicrobiologySociety\n";
     $url = sprintf("%scontent/journal/%s/clockssissues?volume=%s", 
       $param{base_url}, $param{journal_id}, $param{volume_name});
-    print "$url\n";
     $man_url = uri_unescape($url);
-    print "$man_url\n";
     my $req = HTTP::Request->new(GET, $man_url);
-    print "$req\n";
     my $resp = $ua->request($req);
-    print "$resp\n";    
     if ($resp->is_success) {
-      print "is_success\n";
       my $man_contents = $resp->content;      
       if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
         $result = "Manifest"
