@@ -366,6 +366,29 @@ public class TestCharsetUtil extends LockssTestCase {
       assertTrue(CharsetUtil.isSpace(tab));
    }
 
+  public void testGuessCharsetNoMark() throws Exception {
+    try {
+      CharsetUtil.guessCharsetFromStream(new NoMarkStringInputStream("foo"));
+      fail("guessCharsetFromStream should require markSupported()");
+    } catch (IllegalArgumentException e) {
+    }
+    try {
+      CharsetUtil.guessCharsetName(new NoMarkStringInputStream("foo"));
+      fail("guessCharsetName should require markSupported()");
+    } catch (IllegalArgumentException e) {
+    }
+  }
+
+  static class NoMarkStringInputStream extends StringInputStream {
+    NoMarkStringInputStream(String s) {
+      super(s);
+    }
+    @Override
+    public boolean markSupported() {
+      return false;
+    }
+  }
+
   String guessCharsetName(byte[] initialBytes) throws IOException {
     byte [] conc = ArrayUtils.addAll(initialBytes,
 				     NO_CHARSET_HTML.getBytes("ISO-8859-1"));

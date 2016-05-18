@@ -353,6 +353,8 @@ public class CharsetUtil {
                                               String expected)
     throws IOException
   {
+    if(!inStream.markSupported())
+      throw new IllegalArgumentException("InputStream must support mark.");
     CharsetDetector detector = new CharsetDetector();
     if(expected != null) {
       detector.setDeclaredEncoding(expected);
