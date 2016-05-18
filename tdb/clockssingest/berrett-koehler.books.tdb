@@ -1,0 +1,29 @@
+{
+
+  publisher <
+    name = Berrett-Koehler ;
+    info[contract] = 2016 ;
+    info[back] = 1900 ;
+    info[tester] = 8
+  >
+
+  plugin = needs.plugin
+  param[base_url] = http://www.ingentaconnect.com/
+  param[api_url] = http://api.ingentaconnect.com/
+  param[graphics_url] = http://graphics.ingentaconnect.com/
+  param[publisher_id] = bkpub
+  implicit < status ; status2 ; year ; isbn ; eisbn ; param[eisbn] ; param[book_id] ; name ; hidden[proxy] >
+ 
+  {
+  
+    title <
+      name = BK Books
+    >
+
+    param[journal_id] = 2nk9qe 
+  
+    au < exists ; exists ; 1999 ;  ; 9781605092546 ; 9781605092546 ; 2nk9qe ; A Simpler Way ; >
+
+  }
+
+}
