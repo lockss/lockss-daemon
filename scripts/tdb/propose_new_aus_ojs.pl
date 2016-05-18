@@ -43,17 +43,19 @@ if ($ret != 1 || $opt_help || (int(@ARGV) < 1)) {
 
 while (my $line = <>) {
     chomp($line);
-    # Check only for HighWire plugins.
+    # Check only for OJS plugins.
     if ($line =~ m/(OJS2Plugin)/i) {
       # org|lockss|plugin|ojs2|OJS2Plugin&base_url~http%3A%2F%2Fwww%2Efaccamp%2Ebr%2Fojs%2F&journal_id~RMPE&year~2007
-      if ($line =~ m/org\|lockss\|plugin\|ojs2\|(\S+)\&base_url~(\S+)\&journal_id~(\S+)\&year~(\d+)/) {
+      if ($line =~ m/org\|lockss\|plugin\|ojs2\|(\S+)\&base_url~(https?%3A%2F%2F)(\S+)\&journal_id~(\S+)\&year~(\d+)/) {
         my $au_plugin = $1;
-        my $base_url = $2;
-        my $journal_id = $3;
-        my $year  = $4;
+        my $base_url_prefix = $2;
+        my $base_url = $3;
+        my $journal_id = $4;
+        my $year  = $5;
         if (! exists($au_volume{$base_url}{$journal_id})) {
           $au_volume{$base_url}{$journal_id}{min} = $year;
           $au_volume{$base_url}{$journal_id}{max} = $year;
+          $au_volume{$base_url}{$journal_id}{base_url_prefix} = $base_url_prefix;
           $au_volume{$base_url}{$journal_id}{start_plugin} = $au_plugin
         } else {
         if ($year < $au_volume{$base_url}{$journal_id}{min}) {
@@ -61,6 +63,7 @@ while (my $line = <>) {
         }
         if ($year > $au_volume{$base_url}{$journal_id}{max}) {
           $au_volume{$base_url}{$journal_id}{max} = $year;
+          $au_volume{$base_url}{$journal_id}{base_url_prefix} = $base_url_prefix;
           $au_volume{$base_url}{$journal_id}{start_plugin} = $au_plugin
         }
       }
@@ -71,10 +74,10 @@ while (my $line = <>) {
 foreach my $base_url (sort(keys(%au_volume))) {
     foreach my $journal_id (keys(%{$au_volume{$base_url}})) {
       for (my $x = $au_volume{$base_url}{$journal_id}{min} - $opt_pre; $x < $au_volume{$base_url}{$journal_id}{min}; ++$x) {
-        &print_au($au_volume{$base_url}{$journal_id}{start_plugin}, $base_url, $journal_id, $x) if ($x > 0);
+        &print_au($au_volume{$base_url}{$journal_id}{start_plugin}, $au_volume{$base_url}{$journal_id}{base_url_prefix}, $base_url, $journal_id, $x) if ($x > 0);
       }
       for (my $x = $au_volume{$base_url}{$journal_id}{max} + 1; $x <= $au_volume{$base_url}{$journal_id}{max} + $opt_post; ++$x) {
-        &print_au($au_volume{$base_url}{$journal_id}{start_plugin}, $base_url, $journal_id, $x) if ($x > 0);
+        &print_au($au_volume{$base_url}{$journal_id}{start_plugin}, $au_volume{$base_url}{$journal_id}{base_url_prefix}, $base_url, $journal_id, $x) if ($x > 0);
       }
     }
 }
@@ -82,9 +85,9 @@ foreach my $base_url (sort(keys(%au_volume))) {
 exit(0);
 
 sub print_au {
-    my ($plugin, $base_url, $journal_id, $year) = @_;
+    my ($plugin, $base_url_prefix, $base_url, $journal_id, $year) = @_;
     printf("%s|%s|%s|%s|%s\n", "org", "lockss", "plugin", "ojs2",
-    "${plugin}\&base_url~${base_url}\&journal_id~${journal_id}\&year~${year}");
+    "${plugin}\&base_url~${base_url_prefix}${base_url}\&journal_id~${journal_id}\&year~${year}");
     return(1);
 }
 
