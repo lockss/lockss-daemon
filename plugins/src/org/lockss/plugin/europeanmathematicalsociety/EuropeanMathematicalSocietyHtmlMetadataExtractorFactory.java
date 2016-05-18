@@ -85,8 +85,7 @@ public class EuropeanMathematicalSocietyHtmlMetadataExtractorFactory implements 
       if (url == null || url.isEmpty() || !au.makeCachedUrl(url).hasContent()) {
         url = cu.getUrl();
       }
-      am.replace(MetadataField.FIELD_ACCESS_URL,
-                 HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(au, url));
+      am.replace(MetadataField.FIELD_ACCESS_URL, url);
       emitter.emitMetadata(cu, am);
     }
   }

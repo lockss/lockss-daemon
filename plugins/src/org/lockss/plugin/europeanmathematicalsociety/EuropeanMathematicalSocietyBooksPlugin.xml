@@ -131,14 +131,6 @@
     </map>
   </entry>
   <entry>
-    <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.europeanmathematicalsociety.HttpToHttpsUtil$HttpToHttpsUrlConsumerFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_url_fetcher_factory</string>
-    <string>org.lockss.plugin.europeanmathematicalsociety.HttpToHttpsUtil$HttpToHttpsUrlFetcherFactory</string>
-  </entry>
-  <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.europeanmathematicalsociety.EuropeanMathematicalSocietyHtmlCrawlFilterFactory</string>
   </entry>

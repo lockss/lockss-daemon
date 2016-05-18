@@ -36,20 +36,17 @@ import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-public class EuropeanMathematicalSocietyUrlNormalizer extends HttpToHttpsUtil.BaseUrlHttpHttpsUrlNormalizer {
+public class EuropeanMathematicalSocietyUrlNormalizer implements UrlNormalizer {
   
   protected static final Logger log = Logger.getLogger(EuropeanMathematicalSocietyUrlNormalizer.class);
   protected static final String SEARCH_PARAM = "&srch=series|";
   protected static final String PATTERN_STR = SEARCH_PARAM + ".+$";
-// XXX NOTE: may want normalize 
-//  http://www.ems-ph.org/books/show_pdf.php?proj_nr=NN&vol=1 to 
-//  http://www.ems-ph.org/books/show_pdf.php?proj_nr=NN
   
+  // XXX NOTE: may want normalize 
+  //  http://www.ems-ph.org/books/show_pdf.php?proj_nr=NN&vol=1 to 
+  //  http://www.ems-ph.org/books/show_pdf.php?proj_nr=NN
   
-  @Override
-  public String additionalNormalization(String url, ArchivalUnit au)
-      throws PluginException {
-    
+  public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
     if (url.contains(SEARCH_PARAM)) {
       url = url.replaceFirst(PATTERN_STR, "");
     }
