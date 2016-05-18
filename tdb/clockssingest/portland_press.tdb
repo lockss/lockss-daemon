@@ -571,6 +571,7 @@
     >
 
     param[base_url] = http://www.bioscirep.org/
+    # Manifest pages have different format. See http://jira.lockss.org/browse/PD-1560
 
     au < doNotProcess ; exists ; 1981 ; Bioscience Reports Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 1982 ; Bioscience Reports Volume 2 ; 2 ; >
@@ -621,6 +622,7 @@
     >
 
     param[base_url] = http://www.clinsci.org/
+    # Manifest pages have different format. See http://jira.lockss.org/browse/PD-1560
 
     au < exists ; exists ; 2000 ; Clinical Science Volume 98 ; 98 ; >
     au < exists ; exists ; 2000 ; Clinical Science Volume 99 ; 99 ; >
