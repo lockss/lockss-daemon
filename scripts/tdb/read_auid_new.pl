@@ -1353,7 +1353,49 @@ while (my $line = <>) {
       $result = "--REQ_FAIL--"
     }
     sleep(4);
-                
+  
+  # Clockss Microbiology Society
+  } elsif ($plugin eq "ClockssMicrobiologySocietyJournalsPlugin") {
+    print "ClockssMicrobiologySociety\n";
+    $url = sprintf("%scontent/journal/%s/clockssissues?volume=%s", 
+      $param{base_url}, $param{journal_id}, $param{volume_name});
+    print "$url\n";
+    $man_url = uri_unescape($url);
+    print "$man_url\n";
+    my $req = HTTP::Request->new(GET, $man_url);
+    print "$req\n";
+    my $resp = $ua->request($req);
+    print "$resp\n";    
+    if ($resp->is_success) {
+      print "is_success\n";
+      my $man_contents = $resp->content;      
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);
+    
+  } elsif ($plugin eq "MicrobiologySocietyJournalsPlugin") {
+    $url = sprintf("%scontent/journal/%s/lockssissues?volume=%s", 
+      $param{base_url}, $param{journal_id}, $param{volume_name});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(4);         
   } elsif ($plugin eq "ClockssCopernicusPublicationsPlugin") {
     $url = sprintf("%s%s/index.html", 
       $param{base_url}, $param{volume_name});
