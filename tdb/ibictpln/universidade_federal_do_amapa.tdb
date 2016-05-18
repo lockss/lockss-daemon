@@ -21,7 +21,7 @@
       param[base_url] = https://periodicos.unifap.br/
 
       au < exists ; 2011 ; 1 ; Biota Amazônia Volume 1 ; 2011 ; >
-      au < exists ; 2012 ; 2 ; Biota Amazônia Volume 2 ; 2012 ; >
+      au < manifest ; 2012 ; 2 ; Biota Amazônia Volume 2 ; 2012 ; >
       au < exists ; 2013 ; 3 ; Biota Amazônia Volume 3 ; 2013 ; >
       au < exists ; 2014 ; 4 ; Biota Amazônia Volume 4 ; 2014 ; >
       au < exists ; 2015 ; 5 ; Biota Amazônia Volume 5 ; 2015 ; >
@@ -131,7 +131,7 @@
       param[base_url] = https://periodicos.unifap.br/
 
       au < exists ; 2009 ; 1 ; Planeta Amazônia Volume 1 ; 2009 ; >
-      au < exists ; 2010 ; 2 ; Planeta Amazônia Volume 2 ; 2010 ; >
+      au < manifest ; 2010 ; 2 ; Planeta Amazônia Volume 2 ; 2010 ; >
       au < exists ; 2011 ; 3 ; Planeta Amazônia Volume 3 ; 2011 ; >
       au < exists ; 2012 ; 4 ; Planeta Amazônia Volume 4 ; 2012 ; >
       au < exists ; 2013 ; 5 ; Planeta Amazônia Volume 5 ; 2013 ; >
