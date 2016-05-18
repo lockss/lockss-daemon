@@ -1707,6 +1707,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
     <property name="rpm.lockss.etc" value="${rpm.root}/etc/lockss" />
     <property name="protorpm.rpms" value="${protorpm.top}/RPMS" />
     <property name="rpm.rpms" value="${rpm.top}/RPMS" />
+    <mkdir dir="${rpm.rpms}" />
 
     <propertyregex property="rpmreleasename"
 		   input="${releasename}"
