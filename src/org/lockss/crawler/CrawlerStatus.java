@@ -184,6 +184,7 @@ public class CrawlerStatus {
   protected String statusMessage = null;
   protected int status = Crawler.STATUS_QUEUED;
   protected Collection startUrls = null;
+  protected String proxy = null;
   protected String auid = null;
   protected String auName = null;
   protected ArchivalUnit au = null;
@@ -512,10 +513,22 @@ public class CrawlerStatus {
     return depth;
   }
 
+  public void setProxy(String proxy) {
+    this.proxy = proxy;
+  }
+
+  public String getProxy() {
+    return proxy;
+  }
+
   // URL set stats
 
   public Collection getStartUrls() {
     return startUrls;
+  }
+
+  public void setStartUrls(Collection urls) {
+    startUrls = new ArrayList(urls);
   }
 
   // Sources

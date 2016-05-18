@@ -164,6 +164,12 @@ public class SingleCrawlStatusAccessor implements StatusAccessor {
     res.add(new StatusTable.SummaryInfo("Source",
 					ColumnDescriptor.TYPE_STRING,
 					sources));
+    String proxy = status.getProxy();
+    if (!StringUtil.isNullString(proxy)) {
+      res.add(new StatusTable.SummaryInfo("Proxy",
+					  ColumnDescriptor.TYPE_STRING,
+					  proxy));
+    }
     String startUrls = StringUtil.separatedString(status.getStartUrls());
     String startHead =
       status.getStartUrls().size() > 1 ? "Start Urls" :  "Start Url";

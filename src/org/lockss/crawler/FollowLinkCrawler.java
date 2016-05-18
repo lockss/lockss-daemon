@@ -155,6 +155,7 @@ public class FollowLinkCrawler extends BaseCrawler {
 
   public FollowLinkCrawler(ArchivalUnit au, AuState aus) {
     super(au, aus);
+    // Start URLs will be updated from CrawlSeed below
     crawlStatus = new CrawlerStatus(au, au.getStartUrls(),
         getTypeString());
     try {
@@ -490,7 +491,9 @@ public class FollowLinkCrawler extends BaseCrawler {
   // Overridable for testing
   protected void enqueueStartUrls() 
       throws ConfigurationException, PluginException, IOException {
-    for (String url : getCrawlSeed().getStartUrls()) {
+    Collection<String> startUrls = getCrawlSeed().getStartUrls();
+    crawlStatus.setStartUrls(startUrls);
+    for (String url : startUrls) {
       CrawlUrlData curl = newCrawlUrlData(url, 1);
       curl.setStartUrl(true);
       log.debug2("setStartUrl(" + curl + ")");

@@ -189,6 +189,7 @@ public abstract class BaseCrawler implements Crawler {
   protected IPAddr crawlFromAddr;
   protected String proxyHost;
   protected int proxyPort;
+  protected String proxyStatus;
   protected PermissionMap permissionMap;
   protected CrawlRateLimiter crl;
   protected String previousContentType;
@@ -281,15 +282,16 @@ public abstract class BaseCrawler implements Crawler {
     if (aupinfo.isAuOverride()) {
       if (aupinfo.getHost() == null) {
         logger.info("AU overrides crawl proxy with DIRECT");
+	proxyStatus = "Direct";
       } else {
+	proxyStatus = aupinfo.getHost() + ":" + aupinfo.getPort();
         if (logger.isDebug()) {
-          logger.debug("Using AU crawl_proxy: " + aupinfo.getHost()
-              + ":" + aupinfo.getPort());
+          logger.debug("Using AU crawl_proxy: " + proxyStatus);
         }
       }
     } else if (proxyHost != null) {
-      if (logger.isDebug()) logger.debug("Proxying through " + proxyHost
-					 + ":" + proxyPort);
+      proxyStatus = proxyHost + ":" + proxyPort;
+      if (logger.isDebug()) logger.debug("Proxying through " + proxyStatus);
     }
 
     mimeTypePauseAfter304 =
@@ -350,6 +352,7 @@ public abstract class BaseCrawler implements Crawler {
       aus.newCrawlStarted();
     }
     setCrawlConfig(ConfigManager.getCurrentConfig());
+    crawlStatus.setProxy(proxyStatus);
     // do this even if already aborted, so status doesn't get confused
     crawlStatus.signalCrawlStarted();
     try {
