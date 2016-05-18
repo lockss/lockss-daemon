@@ -667,18 +667,18 @@
     param[collection] = cie_techrpts
     implicit < status ; year ; name ; param[collection_heading] >  
 
-    au < ready ; 1972 ; University of Massachusetts Amherst Center for International Education Technical Notes 1972 ; 1972 >
+    au < releasing ; 1972 ; University of Massachusetts Amherst Center for International Education Technical Notes 1972 ; 1972 >
     au < notReady ; 1973 ; University of Massachusetts Amherst Center for International Education Technical Notes 1973 ; 1973 > # one has no substance
-    au < ready ; 1977 ; University of Massachusetts Amherst Center for International Education Technical Notes 1977 ; 1977 >
-    au < ready ; 1981 ; University of Massachusetts Amherst Center for International Education Technical Notes 1981 ; 1981 >
-    au < ready ; 1982 ; University of Massachusetts Amherst Center for International Education Technical Notes 1982 ; 1982 >
-    au < ready ; 1983 ; University of Massachusetts Amherst Center for International Education Technical Notes 1983 ; 1983 >
-    au < ready ; 1985 ; University of Massachusetts Amherst Center for International Education Technical Notes 1985 ; 1985 >
-    au < ready ; 1987 ; University of Massachusetts Amherst Center for International Education Technical Notes 1987 ; 1987 >
-    au < ready ; 1988 ; University of Massachusetts Amherst Center for International Education Technical Notes 1988 ; 1988 >
-    au < ready ; 1989 ; University of Massachusetts Amherst Center for International Education Technical Notes 1989 ; 1989 >
-    au < ready ; 1990 ; University of Massachusetts Amherst Center for International Education Technical Notes 1990 ; 1990 >
-    au < ready ; 1996 ; University of Massachusetts Amherst Center for International Education Technical Notes 1996 ; 1996 >
+    au < releasing ; 1977 ; University of Massachusetts Amherst Center for International Education Technical Notes 1977 ; 1977 >
+    au < releasing ; 1981 ; University of Massachusetts Amherst Center for International Education Technical Notes 1981 ; 1981 >
+    au < releasing ; 1982 ; University of Massachusetts Amherst Center for International Education Technical Notes 1982 ; 1982 >
+    au < releasing ; 1983 ; University of Massachusetts Amherst Center for International Education Technical Notes 1983 ; 1983 >
+    au < releasing ; 1985 ; University of Massachusetts Amherst Center for International Education Technical Notes 1985 ; 1985 >
+    au < releasing ; 1987 ; University of Massachusetts Amherst Center for International Education Technical Notes 1987 ; 1987 >
+    au < releasing ; 1988 ; University of Massachusetts Amherst Center for International Education Technical Notes 1988 ; 1988 >
+    au < releasing ; 1989 ; University of Massachusetts Amherst Center for International Education Technical Notes 1989 ; 1989 >
+    au < releasing ; 1990 ; University of Massachusetts Amherst Center for International Education Technical Notes 1990 ; 1990 >
+    au < releasing ; 1996 ; University of Massachusetts Amherst Center for International Education Technical Notes 1996 ; 1996 >
 
   }
 
@@ -1190,81 +1190,81 @@
     implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >
 
     au < released ; 1896 ; University of Massachusetts Amherst Doctoral Dissertations 1896 ; 1896 ; fulltext >
-    au < ready ; 1901 ; University of Massachusetts Amherst Doctoral Dissertations 1901 ; 1901 ; fulltext >
+    au < releasing ; 1901 ; University of Massachusetts Amherst Doctoral Dissertations 1901 ; 1901 ; fulltext >
     au < released ; 1911 ; University of Massachusetts Amherst Doctoral Dissertations 1911 ; 1911 ; fulltext >
     au < released ; 1914 ; University of Massachusetts Amherst Doctoral Dissertations 1914 ; 1914 ; fulltext >
     au < released ; 1915 ; University of Massachusetts Amherst Doctoral Dissertations 1915 ; 1915 ; fulltext >
     au < released ; 1916 ; University of Massachusetts Amherst Doctoral Dissertations 1916 ; 1916 ; fulltext >
-    au < ready ; 1917 ; University of Massachusetts Amherst Doctoral Dissertations 1917 ; 1917 ; fulltext >
+    au < releasing ; 1917 ; University of Massachusetts Amherst Doctoral Dissertations 1917 ; 1917 ; fulltext >
     au < released ; 1921 ; University of Massachusetts Amherst Doctoral Dissertations 1921 ; 1921 ; fulltext >
     au < released ; 1922 ; University of Massachusetts Amherst Doctoral Dissertations 1922 ; 1922 ; fulltext >
-    au < ready ; 1923 ; University of Massachusetts Amherst Doctoral Dissertations 1923 ; 1923 ; fulltext >
-    au < ready ; 1924 ; University of Massachusetts Amherst Doctoral Dissertations 1924 ; 1924 ; fulltext >
+    au < releasing ; 1923 ; University of Massachusetts Amherst Doctoral Dissertations 1923 ; 1923 ; fulltext >
+    au < releasing ; 1924 ; University of Massachusetts Amherst Doctoral Dissertations 1924 ; 1924 ; fulltext >
     au < doesNotExist ; 1925 ; University of Massachusetts Amherst Doctoral Dissertations 1925 ; 1925 ; fulltext >
-    au < ready ; 1926 ; University of Massachusetts Amherst Doctoral Dissertations 1926 ; 1926 ; fulltext >
+    au < releasing ; 1926 ; University of Massachusetts Amherst Doctoral Dissertations 1926 ; 1926 ; fulltext >
     au < doesNotExist ; 1927 ; University of Massachusetts Amherst Doctoral Dissertations 1927 ; 1927 ; fulltext >
-    au < ready ; 1928 ; University of Massachusetts Amherst Doctoral Dissertations 1928 ; 1928 ; fulltext >
-    au < ready ; 1929 ; University of Massachusetts Amherst Doctoral Dissertations 1929 ; 1929 ; fulltext >
-    au < ready ; 1930 ; University of Massachusetts Amherst Doctoral Dissertations 1930 ; 1930 ; fulltext >
-    au < ready ; 1931 ; University of Massachusetts Amherst Doctoral Dissertations 1931 ; 1931 ; fulltext >
+    au < releasing ; 1928 ; University of Massachusetts Amherst Doctoral Dissertations 1928 ; 1928 ; fulltext >
+    au < releasing ; 1929 ; University of Massachusetts Amherst Doctoral Dissertations 1929 ; 1929 ; fulltext >
+    au < releasing ; 1930 ; University of Massachusetts Amherst Doctoral Dissertations 1930 ; 1930 ; fulltext >
+    au < releasing ; 1931 ; University of Massachusetts Amherst Doctoral Dissertations 1931 ; 1931 ; fulltext >
     au < doesNotExist ; 1932 ; University of Massachusetts Amherst Doctoral Dissertations 1932 ; 1932 ; fulltext >
-    au < ready ; 1933 ; University of Massachusetts Amherst Doctoral Dissertations 1933 ; 1933 ; fulltext >
-    au < ready ; 1934 ; University of Massachusetts Amherst Doctoral Dissertations 1934 ; 1934 ; fulltext >
-    au < ready ; 1935 ; University of Massachusetts Amherst Doctoral Dissertations 1935 ; 1935 ; fulltext >
-    au < ready ; 1936 ; University of Massachusetts Amherst Doctoral Dissertations 1936 ; 1936 ; fulltext >
-    au < ready ; 1937 ; University of Massachusetts Amherst Doctoral Dissertations 1937 ; 1937 ; fulltext >
-    au < ready ; 1955 ; University of Massachusetts Amherst Doctoral Dissertations 1955 ; 1955 ; fulltext >
-    au < ready ; 1956 ; University of Massachusetts Amherst Doctoral Dissertations 1956 ; 1956 ; fulltext >
-    au < ready ; 1957 ; University of Massachusetts Amherst Doctoral Dissertations 1957 ; 1957 ; fulltext >
-    au < ready ; 1958 ; University of Massachusetts Amherst Doctoral Dissertations 1958 ; 1958 ; fulltext >
-    au < ready ; 1959 ; University of Massachusetts Amherst Doctoral Dissertations 1959 ; 1959 ; fulltext >
-    au < ready ; 1960 ; University of Massachusetts Amherst Doctoral Dissertations 1960 ; 1960 ; fulltext >
-    au < ready ; 1961 ; University of Massachusetts Amherst Doctoral Dissertations 1961 ; 1961 ; fulltext >
-    au < ready ; 1962 ; University of Massachusetts Amherst Doctoral Dissertations 1962 ; 1962 ; fulltext >
-    au < ready ; 1963 ; University of Massachusetts Amherst Doctoral Dissertations 1963 ; 1963 ; fulltext >
-    au < ready ; 1964 ; University of Massachusetts Amherst Doctoral Dissertations 1964 ; 1964 ; fulltext >
-    au < ready ; 1965 ; University of Massachusetts Amherst Doctoral Dissertations 1965 ; 1965 ; fulltext >
-    au < ready ; 1967 ; University of Massachusetts Amherst Doctoral Dissertations 1967 ; 1967 ; fulltext >
+    au < releasing ; 1933 ; University of Massachusetts Amherst Doctoral Dissertations 1933 ; 1933 ; fulltext >
+    au < releasing ; 1934 ; University of Massachusetts Amherst Doctoral Dissertations 1934 ; 1934 ; fulltext >
+    au < releasing ; 1935 ; University of Massachusetts Amherst Doctoral Dissertations 1935 ; 1935 ; fulltext >
+    au < releasing ; 1936 ; University of Massachusetts Amherst Doctoral Dissertations 1936 ; 1936 ; fulltext >
+    au < releasing ; 1937 ; University of Massachusetts Amherst Doctoral Dissertations 1937 ; 1937 ; fulltext >
+    au < releasing ; 1955 ; University of Massachusetts Amherst Doctoral Dissertations 1955 ; 1955 ; fulltext >
+    au < releasing ; 1956 ; University of Massachusetts Amherst Doctoral Dissertations 1956 ; 1956 ; fulltext >
+    au < releasing ; 1957 ; University of Massachusetts Amherst Doctoral Dissertations 1957 ; 1957 ; fulltext >
+    au < releasing ; 1958 ; University of Massachusetts Amherst Doctoral Dissertations 1958 ; 1958 ; fulltext >
+    au < releasing ; 1959 ; University of Massachusetts Amherst Doctoral Dissertations 1959 ; 1959 ; fulltext >
+    au < releasing ; 1960 ; University of Massachusetts Amherst Doctoral Dissertations 1960 ; 1960 ; fulltext >
+    au < releasing ; 1961 ; University of Massachusetts Amherst Doctoral Dissertations 1961 ; 1961 ; fulltext >
+    au < releasing ; 1962 ; University of Massachusetts Amherst Doctoral Dissertations 1962 ; 1962 ; fulltext >
+    au < releasing ; 1963 ; University of Massachusetts Amherst Doctoral Dissertations 1963 ; 1963 ; fulltext >
+    au < releasing ; 1964 ; University of Massachusetts Amherst Doctoral Dissertations 1964 ; 1964 ; fulltext >
+    au < releasing ; 1965 ; University of Massachusetts Amherst Doctoral Dissertations 1965 ; 1965 ; fulltext >
+    au < releasing ; 1967 ; University of Massachusetts Amherst Doctoral Dissertations 1967 ; 1967 ; fulltext >
     au < released ; 1969 ; University of Massachusetts Amherst Doctoral Dissertations 1969 ; 1969 ; fulltext >
-    au < ready ; 1970 ; University of Massachusetts Amherst Doctoral Dissertations 1970 ; 1970 ; fulltext >
+    au < releasing ; 1970 ; University of Massachusetts Amherst Doctoral Dissertations 1970 ; 1970 ; fulltext >
     au < released ; 1971 ; University of Massachusetts Amherst Doctoral Dissertations 1971 ; 1971 ; fulltext >
-    au < ready ; 1972 ; University of Massachusetts Amherst Doctoral Dissertations 1972 ; 1972 ; fulltext >
-    au < ready ; 1973 ; University of Massachusetts Amherst Doctoral Dissertations 1973 ; 1973 ; fulltext >
+    au < releasing ; 1972 ; University of Massachusetts Amherst Doctoral Dissertations 1972 ; 1972 ; fulltext >
+    au < releasing ; 1973 ; University of Massachusetts Amherst Doctoral Dissertations 1973 ; 1973 ; fulltext >
     au < released ; 1974 ; University of Massachusetts Amherst Doctoral Dissertations 1974 ; 1974 ; fulltext >
     au < released ; 1975 ; University of Massachusetts Amherst Doctoral Dissertations 1975 ; 1975 ; fulltext >
-    au < ready ; 1976 ; University of Massachusetts Amherst Doctoral Dissertations 1976 ; 1976 ; fulltext >
-    au < ready ; 1977 ; University of Massachusetts Amherst Doctoral Dissertations 1977 ; 1977 ; fulltext >
-    au < ready ; 1978 ; University of Massachusetts Amherst Doctoral Dissertations 1978 ; 1978 ; fulltext >
-    au < ready ; 1979 ; University of Massachusetts Amherst Doctoral Dissertations 1979 ; 1979 ; fulltext >
+    au < releasing ; 1976 ; University of Massachusetts Amherst Doctoral Dissertations 1976 ; 1976 ; fulltext >
+    au < releasing ; 1977 ; University of Massachusetts Amherst Doctoral Dissertations 1977 ; 1977 ; fulltext >
+    au < releasing ; 1978 ; University of Massachusetts Amherst Doctoral Dissertations 1978 ; 1978 ; fulltext >
+    au < releasing ; 1979 ; University of Massachusetts Amherst Doctoral Dissertations 1979 ; 1979 ; fulltext >
     au < released ; 1980 ; University of Massachusetts Amherst Doctoral Dissertations 1980 ; 1980 ; fulltext >
-    au < ready ; 1981 ; University of Massachusetts Amherst Doctoral Dissertations 1981 ; 1981 ; fulltext >
-    au < ready ; 1982 ; University of Massachusetts Amherst Doctoral Dissertations 1982 ; 1982 ; fulltext >
-    au < ready ; 1983 ; University of Massachusetts Amherst Doctoral Dissertations 1983 ; 1983 ; fulltext >
-    au < ready ; 1984 ; University of Massachusetts Amherst Doctoral Dissertations 1984 ; 1984 ; fulltext >
-    au < ready ; 1985 ; University of Massachusetts Amherst Doctoral Dissertations 1985 ; 1985 ; fulltext >
-    au < ready ; 1986 ; University of Massachusetts Amherst Doctoral Dissertations 1986 ; 1986 ; fulltext >
-    au < ready ; 1987 ; University of Massachusetts Amherst Doctoral Dissertations 1987 ; 1987 ; fulltext >
-    au < ready ; 1988 ; University of Massachusetts Amherst Doctoral Dissertations 1988 ; 1988 ; fulltext >
-    au < ready ; 1989 ; University of Massachusetts Amherst Doctoral Dissertations 1989 ; 1989 ; fulltext >
-    au < ready ; 1990 ; University of Massachusetts Amherst Doctoral Dissertations 1990 ; 1990 ; fulltext >
-    au < ready ; 1991 ; University of Massachusetts Amherst Doctoral Dissertations 1991 ; 1991 ; fulltext >
+    au < releasing ; 1981 ; University of Massachusetts Amherst Doctoral Dissertations 1981 ; 1981 ; fulltext >
+    au < releasing ; 1982 ; University of Massachusetts Amherst Doctoral Dissertations 1982 ; 1982 ; fulltext >
+    au < releasing ; 1983 ; University of Massachusetts Amherst Doctoral Dissertations 1983 ; 1983 ; fulltext >
+    au < releasing ; 1984 ; University of Massachusetts Amherst Doctoral Dissertations 1984 ; 1984 ; fulltext >
+    au < releasing ; 1985 ; University of Massachusetts Amherst Doctoral Dissertations 1985 ; 1985 ; fulltext >
+    au < releasing ; 1986 ; University of Massachusetts Amherst Doctoral Dissertations 1986 ; 1986 ; fulltext >
+    au < releasing ; 1987 ; University of Massachusetts Amherst Doctoral Dissertations 1987 ; 1987 ; fulltext >
+    au < releasing ; 1988 ; University of Massachusetts Amherst Doctoral Dissertations 1988 ; 1988 ; fulltext >
+    au < releasing ; 1989 ; University of Massachusetts Amherst Doctoral Dissertations 1989 ; 1989 ; fulltext >
+    au < releasing ; 1990 ; University of Massachusetts Amherst Doctoral Dissertations 1990 ; 1990 ; fulltext >
+    au < releasing ; 1991 ; University of Massachusetts Amherst Doctoral Dissertations 1991 ; 1991 ; fulltext >
     au < released ; 1992 ; University of Massachusetts Amherst Doctoral Dissertations 1992 ; 1992 ; fulltext >
     au < released ; 1993 ; University of Massachusetts Amherst Doctoral Dissertations 1993 ; 1993 ; fulltext >
     au < released ; 1994 ; University of Massachusetts Amherst Doctoral Dissertations 1994 ; 1994 ; fulltext >
     au < released ; 1995 ; University of Massachusetts Amherst Doctoral Dissertations 1995 ; 1995 ; fulltext >
     au < released ; 1996 ; University of Massachusetts Amherst Doctoral Dissertations 1996 ; 1996 ; fulltext >
-    au < ready ; 1997 ; University of Massachusetts Amherst Doctoral Dissertations 1997 ; 1997 ; fulltext >
-    au < ready ; 1998 ; University of Massachusetts Amherst Doctoral Dissertations 1998 ; 1998 ; fulltext >
-    au < ready ; 1999 ; University of Massachusetts Amherst Doctoral Dissertations 1999 ; 1999 ; fulltext >
-    au < ready ; 2000 ; University of Massachusetts Amherst Doctoral Dissertations 2000 ; 2000 ; fulltext >
-    au < ready ; 2001 ; University of Massachusetts Amherst Doctoral Dissertations 2001 ; 2001 ; fulltext >
-    au < ready ; 2002 ; University of Massachusetts Amherst Doctoral Dissertations 2002 ; 2002 ; fulltext >
-    au < ready ; 2003 ; University of Massachusetts Amherst Doctoral Dissertations 2003 ; 2003 ; fulltext >
-    au < ready ; 2004 ; University of Massachusetts Amherst Doctoral Dissertations 2004 ; 2004 ; fulltext >
-    au < ready ; 2005 ; University of Massachusetts Amherst Doctoral Dissertations 2005 ; 2005 ; fulltext >
-    au < ready ; 2006 ; University of Massachusetts Amherst Doctoral Dissertations 2006 ; 2006 ; fulltext >
-    au < ready ; 2007 ; University of Massachusetts Amherst Doctoral Dissertations 2007 ; 2007 ; fulltext >
-    au < ready ; 2008 ; University of Massachusetts Amherst Doctoral Dissertations 2008 ; 2008 ; fulltext >
+    au < releasing ; 1997 ; University of Massachusetts Amherst Doctoral Dissertations 1997 ; 1997 ; fulltext >
+    au < releasing ; 1998 ; University of Massachusetts Amherst Doctoral Dissertations 1998 ; 1998 ; fulltext >
+    au < releasing ; 1999 ; University of Massachusetts Amherst Doctoral Dissertations 1999 ; 1999 ; fulltext >
+    au < releasing ; 2000 ; University of Massachusetts Amherst Doctoral Dissertations 2000 ; 2000 ; fulltext >
+    au < releasing ; 2001 ; University of Massachusetts Amherst Doctoral Dissertations 2001 ; 2001 ; fulltext >
+    au < releasing ; 2002 ; University of Massachusetts Amherst Doctoral Dissertations 2002 ; 2002 ; fulltext >
+    au < releasing ; 2003 ; University of Massachusetts Amherst Doctoral Dissertations 2003 ; 2003 ; fulltext >
+    au < releasing ; 2004 ; University of Massachusetts Amherst Doctoral Dissertations 2004 ; 2004 ; fulltext >
+    au < releasing ; 2005 ; University of Massachusetts Amherst Doctoral Dissertations 2005 ; 2005 ; fulltext >
+    au < releasing ; 2006 ; University of Massachusetts Amherst Doctoral Dissertations 2006 ; 2006 ; fulltext >
+    au < releasing ; 2007 ; University of Massachusetts Amherst Doctoral Dissertations 2007 ; 2007 ; fulltext >
+    au < releasing ; 2008 ; University of Massachusetts Amherst Doctoral Dissertations 2008 ; 2008 ; fulltext >
     au < released ; 2009 ; University of Massachusetts Amherst Doctoral Dissertations 2009 ; 2009 ; fulltext >
     au < released ; 2010 ; University of Massachusetts Amherst Doctoral Dissertations 2010 ; 2010 ; fulltext >
     au < released ; 2011 ; University of Massachusetts Amherst Doctoral Dissertations 2011 ; 2011 ; fulltext >
@@ -1288,8 +1288,8 @@
 
     au < released ; 2013 ; University of Massachusetts Amherst Doctoral Dissertations 2013 (Part 2/2) ; 2013 ; fulltext >
     au < released ; 2014 ; University of Massachusetts Amherst Doctoral Dissertations 2014 (Part 2/2) ; 2014 ; fulltext >
-    au < ready ; 2015 ; University of Massachusetts Amherst Doctoral Dissertations 2015 ; 2015 ; fulltext >
-    au < ready ; 2016 ; University of Massachusetts Amherst Doctoral Dissertations 2016 ; 2016 ; fulltext >
+    au < releasing ; 2015 ; University of Massachusetts Amherst Doctoral Dissertations 2015 ; 2015 ; fulltext >
+    au < releasing ; 2016 ; University of Massachusetts Amherst Doctoral Dissertations 2016 ; 2016 ; fulltext >
 
   }
 
@@ -2762,8 +2762,8 @@
     param[collection] = masters_theses_2
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < ready ; 2014 ; University of Massachusetts Amherst Masters Theses 2014 ; 2014 >
-    au < ready ; 2015 ; University of Massachusetts Amherst Masters Theses 2015 ; 2015 >
+    au < releasing ; 2014 ; University of Massachusetts Amherst Masters Theses 2014 ; 2014 >
+    au < releasing ; 2015 ; University of Massachusetts Amherst Masters Theses 2015 ; 2015 >
     au < manifest ; 2016 ; University of Massachusetts Amherst Masters Theses 2016 ; 2016 >
 
   }
@@ -2860,7 +2860,7 @@
     au < released ; 2012 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2012 [abstracts only] ; 2012 ; abstracts >
     au < released ; 2013 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2013 [abstracts only] ; 2013 ; abstracts >
     au < released ; 2014 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2014 ; 2014 ; fulltext >
-    au < ready ; 2015 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2015 ; 2015 ; fulltext >
+    au < releasing ; 2015 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2015 ; 2015 ; fulltext >
     au < manifest ; 2016 ; University of Massachusetts Amherst MFA Program for Poets and Writers Masters Theses Collection 2016 ; 2016 ; fulltext >
 
   }
