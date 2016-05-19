@@ -27,22 +27,22 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>36</string>
+    <string>37</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>20</string>
+        <string>21</string>
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>5</string>
+        <string>6</string>
       </entry>
     </map>
   </entry>
@@ -116,10 +116,11 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://%s/content(?:/[^0-9][^/]+)?/[0-9]+/(?:(?:[0-9]+|bmj)(?:/[^/.]+(?:\.[0-9]+)?|\.toc|\.[^/.]+)?(?:/related)?|[^/.]+)$", url_host(base_url)</string>
-      <string>1,"^https?://%s/content(?:/[^0-9][^/]+)?/[0-9]+/(?:(?:suppl_)?([0-9]+/|bmj\.))?[^/]+\.(?:long|supplemental|data|figures-only|full(?:-text)?\.pdf)(?:\+html)?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/content/[0-9]+\.toc$", url_host(base_url)</string>
+      <string>1,"^https?://%s/content/[^/]+/(?:(?:[0-9]+|bmj)(?:/[^/.]+(?:\.[0-9]+)?|\.toc|\.[^/.]+)?(?:/related)?|[^/.]+)$", url_host(base_url)</string>
+      <string>1,"^https?://%s/content(?:/[^/]+)?/[^/]+/(?:(?:suppl_)?([^/]+/|bmj\.))?[^/]+\.(?:long|supplemental|data|figures-only|full(?:-text)?\.pdf)(?:\+html)?$", url_host(base_url)</string>
       <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
-      <string>1,"^https?://%s/content(?:/[^0-9][^/]+)?/[^/]+/suppl/", url_host(base_url)</string>
+      <string>1,"^https?://%s/content(?:/[^/]+)?/suppl/", url_host(base_url)</string>
       <string>1,"^https?://%s/[^/]+/(download-pdf|download-suppl|download-video)/", url_host(base_url)</string>
     </list>
   </entry>
@@ -194,15 +195,6 @@
   <entry>
     <string>au_def_pause_time</string>
     <long>3000</long>
-  </entry>
-  <entry>
-    <string>au_mime_rate_limiter_map</string>
-    <map>
-      <entry>
-        <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
-        <string>1/3000</string>
-      </entry>
-    </map>
   </entry>
   <entry>
     <!-- manifest to issue -->
