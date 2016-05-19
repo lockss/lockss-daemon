@@ -184,7 +184,7 @@ http://ajpregu.physiology.org/content/304/1/R23.full.pdf+html
     shouldCacheTest(ROOT_URL + "highwire/article_citation_preview/19403", false, au);
     
     shouldCacheTest(ROOT_URL + "node/34", false, au);
-    shouldCacheTest(ROOT_URL + "content/by/year", false, au);
+// XXX   shouldCacheTest(ROOT_URL + "content/by/year", false, au);
     shouldCacheTest(ROOT_URL + "highwire/powerpoint/2311", false, au);
     shouldCacheTest(ROOT_URL + "content/early/2012/11/09/ex.00163.2012", false, au);
     shouldCacheTest(ROOT_URL + "lookup/external-ref?link_type=GEN", false, au);
