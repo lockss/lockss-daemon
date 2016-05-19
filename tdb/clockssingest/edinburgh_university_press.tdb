@@ -236,7 +236,7 @@
     au < finished ; finished ; 2007 ; Corpora Volume 2 ; 2 ; >
     au < finished ; finished ; 2008 ; Corpora Volume 3 ; 3 ; >
     au < finished ; finished ; 2009 ; Corpora Volume 4 ; 4 ; >
-    au < finished ; crawling ; 2010 ; Corpora Volume 5 ; 5 ; >
+    au < finished ; finished ; 2010 ; Corpora Volume 5 ; 5 ; >
     au < finished ; crawling ; 2011 ; Corpora Volume 6 ; 6 ; >
     au < finished ; finished ; 2012 ; Corpora Volume 7 ; 7 ; >
     au < down ; exists ; 2013 ; Corpora Volume 8 ; 8 ; >
@@ -310,7 +310,7 @@
     param[journal_id] = drt
 
     au < finished ; finished ; 2008 ; Derrida Today Volume 1 ; 1 ; >
-    au < finished ; frozen ; 2009 ; Derrida Today Volume 2 ; 2 ; >
+    au < finished ; finished ; 2009 ; Derrida Today Volume 2 ; 2 ; >
     au < finished ; finished ; 2010 ; Derrida Today Volume 3 ; 3 ; >
     au < finished ; finished ; 2011 ; Derrida Today Volume 4 ; 4 ; >
     au < finished ; finished ; 2012 ; Derrida Today Volume 5 ; 5 ; >
@@ -335,7 +335,7 @@
     au < finished ; finished ; 2005 ; Edinburgh Law Review Volume 9 ; 9 ; >
     au < finished ; finished ; 2006 ; Edinburgh Law Review Volume 10 ; 10 ; >
     au < finished ; finished ; 2007 ; Edinburgh Law Review Volume 11 ; 11 ; >
-    au < finished ; frozen ; 2008 ; Edinburgh Law Review Volume 12 ; 12 ; >
+    au < finished ; finished ; 2008 ; Edinburgh Law Review Volume 12 ; 12 ; >
     au < finished ; finished ; 2009 ; Edinburgh Law Review Volume 13 ; 13 ; >
     au < finished ; finished ; 2010 ; Edinburgh Law Review Volume 14 ; 14 ; >
     au < finished ; finished ; 2011 ; Edinburgh Law Review Volume 15 ; 15 ; >
@@ -427,14 +427,14 @@
     param[journal_id] = inr
 
     au < finished ; finished ; 2004 ; The Innes Review Volume 55 ; 55 ; >
-    au < finished ; crawling ; 2005 ; The Innes Review Volume 56 ; 56 ; >
+    au < finished ; finished ; 2005 ; The Innes Review Volume 56 ; 56 ; >
     au < finished ; frozen ; 2006 ; The Innes Review Volume 57 ; 57 ; >
     au < finished ; finished ; 2007 ; The Innes Review Volume 58 ; 58 ; >
     au < finished ; crawling ; 2008 ; The Innes Review Volume 59 ; 59 ; >
     au < finished ; finished ; 2009 ; The Innes Review Volume 60 ; 60 ; >
     au < finished ; finished ; 2010 ; The Innes Review Volume 61 ; 61 ; >
     au < finished ; finished ; 2011 ; The Innes Review Volume 62 ; 62 ; >
-    au < finished ; crawling ; 2012 ; The Innes Review Volume 63 ; 63 ; >
+    au < finished ; finished ; 2012 ; The Innes Review Volume 63 ; 63 ; >
     au < down ; exists ; 2013 ; The Innes Review Volume 64 ; 64 ; >
     au < down ; exists ; 2014 ; The Innes Review Volume 65 ; 65 ; >
     au < down ; exists ; 2015 ; The Innes Review Volume 66 ; 66 ; >
@@ -517,7 +517,7 @@
 
     param[journal_id] = ircl
 
-    au < finished ; frozen ; 2008 ; International Research in Children's Literature Volume 1 ; 1 ; >
+    au < finished ; finished ; 2008 ; International Research in Children's Literature Volume 1 ; 1 ; >
     au < finished ; finished ; 2009 ; International Research in Children's Literature Volume 2 ; 2 ; >
     au < finished ; finished ; 2010 ; International Research in Children's Literature Volume 3 ; 3 ; >
     au < finished ; finished ; 2011 ; International Research in Children's Literature Volume 4 ; 4 ; >
@@ -562,7 +562,7 @@
     param[journal_id] = jobs
 
     au < finished ; frozen ; 2008 ; Journal of Beckett Studies Volume 17 ; 17 ; >
-    au < finished ; frozen ; 2009 ; Journal of Beckett Studies Volume 18 ; 18 ; >
+    au < finished ; finished ; 2009 ; Journal of Beckett Studies Volume 18 ; 18 ; >
     au < finished ; crawling ; 2010 ; Journal of Beckett Studies Volume 19 ; 19 ; >
     au < finished ; crawling ; 2011 ; Journal of Beckett Studies Volume 20 ; 20 ; >
     au < finished ; finished ; 2012 ; Journal of Beckett Studies Volume 21 ; 21 ; >
@@ -739,7 +739,7 @@
     au < finished ; finished ; 2006 ; Journal of Scottish Philosophy Volume 4 ; 4 ; >
     au < finished ; finished ; 2007 ; Journal of Scottish Philosophy Volume 5 ; 5 ; >
     au < finished ; crawling ; 2008 ; Journal of Scottish Philosophy Volume 6 ; 6 ; >
-    au < finished ; frozen ; 2009 ; Journal of Scottish Philosophy Volume 7 ; 7 ; >
+    au < finished ; finished ; 2009 ; Journal of Scottish Philosophy Volume 7 ; 7 ; >
     au < finished ; crawling ; 2010 ; Journal of Scottish Philosophy Volume 8 ; 8 ; >
     au < finished ; crawling ; 2011 ; Journal of Scottish Philosophy Volume 9 ; 9 ; >
     au < finished ; crawling ; 2012 ; Journal of Scottish Philosophy Volume 10 ; 10 ; >
@@ -807,7 +807,7 @@
     param[journal_id] = sound
 
     au < finished ; crawling ; 2011 ; The New Soundtrack Volume 1 ; 1 ; >
-    au < finished ; frozen ; 2012 ; The New Soundtrack Volume 2 ; 2 ; >
+    au < finished ; finished ; 2012 ; The New Soundtrack Volume 2 ; 2 ; >
     au < down ; exists ; 2013 ; The New Soundtrack Volume 3 ; 3 ; >
     au < down ; exists ; 2014 ; The New Soundtrack Volume 4 ; 4 ; >
     au < down ; exists ; 2015 ; The New Soundtrack Volume 5 ; 5 ; >
@@ -1183,7 +1183,7 @@
     au < finished ; crawling ; 2001 ; Scottish Archaeological Journal Volume 23 ; 23 ; >
     au < finished ; crawling ; 2002 ; Scottish Archaeological Journal Volume 24 ; 24 ; >
     au < finished ; finished ; 2003 ; Scottish Archaeological Journal Volume 25 ; 25 ; >
-    au < finished ; frozen ; 2004 ; Scottish Archaeological Journal Volume 26 ; 26 ; >
+    au < finished ; finished ; 2004 ; Scottish Archaeological Journal Volume 26 ; 26 ; >
     au < finished ; finished ; 2005 ; Scottish Archaeological Journal Volume 27 ; 27 ; >
     au < finished ; finished ; 2006 ; Scottish Archaeological Journal Volume 28 ; 28 ; >
     au < finished ; finished ; 2007 ; Scottish Archaeological Journal Volume 29 ; 29 ; >
@@ -1241,7 +1241,7 @@
     au < finished ; finished ; 2005 ; Studies in World Christianity Volume 11 ; 11 ; >
     au < finished ; finished ; 2006 ; Studies in World Christianity Volume 12 ; 12 ; >
     au < finished ; finished ; 2007 ; Studies in World Christianity Volume 13 ; 13 ; >
-    au < finished ; frozen ; 2008 ; Studies in World Christianity Volume 14 ; 14 ; >
+    au < finished ; finished ; 2008 ; Studies in World Christianity Volume 14 ; 14 ; >
     au < finished ; finished ; 2009 ; Studies in World Christianity Volume 15 ; 15 ; >
     au < finished ; finished ; 2010 ; Studies in World Christianity Volume 16 ; 16 ; >
     au < finished ; finished ; 2011 ; Studies in World Christianity Volume 17 ; 17 ; >

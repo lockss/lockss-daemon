@@ -567,7 +567,7 @@
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1963 ; American Journal of Physiology Volume 205 ; 205 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1964 ; American Journal of Physiology Volume 206 ; 206 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1964 ; American Journal of Physiology Volume 207 ; 207 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; crawling ; 1965 ; American Journal of Physiology Volume 208 ; 208 ; >
+      au < ClockssHighWirePressH20Plugin ; down ; finished ; 1965 ; American Journal of Physiology Volume 208 ; 208 ; >
       au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 1965 ; American Journal of Physiology Volume 209 ; 209 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1966 ; American Journal of Physiology Volume 210 ; 210 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1966 ; American Journal of Physiology Volume 211 ; 211 ; >
@@ -930,7 +930,7 @@
       au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; American Journal of Physiology - Endocrinology and Metabolism Volume 300 ; 300 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2011 ; American Journal of Physiology - Endocrinology and Metabolism Volume 301 ; 301 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; American Journal of Physiology - Endocrinology and Metabolism Volume 302 ; 302 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; American Journal of Physiology - Endocrinology and Metabolism Volume 303 ; 303 ; >
+      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2012 ; American Journal of Physiology - Endocrinology and Metabolism Volume 303 ; 303 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; American Journal of Physiology - Endocrinology and Metabolism Volume 304 ; 304 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; American Journal of Physiology - Endocrinology and Metabolism Volume 305 ; 305 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2014 ; American Journal of Physiology - Endocrinology and Metabolism Volume 306 ; 306 ; >
@@ -1023,7 +1023,7 @@
       au < ClockssHighWirePlugin ; zapped ; finished ; 2007 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 292 ; 292 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 2007 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 293 ; 293 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePlugin ; down ; frozen ; 2008 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 294 ; 294 ; >
-      au < ClockssHighWirePlugin ; down ; frozen ; 2008 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 295 ; 295 ; >
+      au < ClockssHighWirePlugin ; down ; finished ; 2008 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 295 ; 295 ; >
       au < ClockssHighWirePlugin ; down ; frozen ; 2009 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 296 ; 296 ; >
       au < ClockssHighWirePlugin ; down ; frozen ; 2009 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 297 ; 297 ; >
       au < ClockssHighWirePlugin ; down ; frozen ; 2010 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 298 ; 298 ; >
@@ -1103,7 +1103,7 @@
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 298 ; 298 ; >
       au < aps.ClockssAPSDrupalPlugin ; doNotProcess ; doNotProcess ; 2010 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 299 ; 299 ; >
       au < ClockssHighWirePressH20Plugin ; zapped ; finished ; 2011 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 300 ; 300 ; >
-      au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2011 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 301 ; 301 ; >
+      au < ClockssHighWirePressH20Plugin ; down ; finished ; 2011 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 301 ; 301 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 302 ; 302 ; >
       au < ClockssHighWirePressH20Plugin ; down ; frozen ; 2012 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 303 ; 303 ; >
       au < aps.ClockssAPSDrupalPlugin ; crawling ; exists ; 2013 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 304 ; 304 ; >
@@ -1867,7 +1867,7 @@
       au < ClockssHighWirePlugin ; down ; frozen ; 1998 ; Journal of Applied Physiology Volume 84 ; 84 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 1998 ; Journal of Applied Physiology Volume 85 ; 85 ; reingest3.clockss.org:8083 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 1999 ; Journal of Applied Physiology Volume 86 ; 86 ; reingest4.clockss.org:8082 >
-      au < ClockssHighWirePlugin ; down ; frozen ; 1999 ; Journal of Applied Physiology Volume 87 ; 87 ; reingest4.clockss.org:8082 >
+      au < ClockssHighWirePlugin ; down ; finished ; 1999 ; Journal of Applied Physiology Volume 87 ; 87 ; reingest4.clockss.org:8082 >
       au < ClockssHighWirePlugin ; down ; finished ; 2000 ; Journal of Applied Physiology Volume 88 ; 88 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 2000 ; Journal of Applied Physiology Volume 89 ; 89 ; reingest1.clockss.org:8082 >
       au < ClockssHighWirePlugin ; zapped ; finished ; 2001 ; Journal of Applied Physiology Volume 90 ; 90 ; reingest2.clockss.org:8085 >

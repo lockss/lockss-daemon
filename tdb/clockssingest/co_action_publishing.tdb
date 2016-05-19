@@ -73,7 +73,7 @@
     param[journal_id] = blft
 
     au < finished ; frozen ; 2010 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 1 ; 1 ; 2010 ; >
-    au < finished ; frozen ; 2011 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 2 ; 2 ; 2011 ; >
+    au < finished ; finished ; 2011 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 2 ; 2 ; 2011 ; >
     au < finished ; crawling ; 2012 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 3 ; 3 ; 2012 ; >
     au < crawling ; exists ; 2013 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 4 ; 4 ; 2013 ; >
     au < finished ; finished ; 2014 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 5 ; 5 ; 2014 ; >
@@ -341,7 +341,7 @@
     au < crawling ; exists ; 2006 ; International Journal of Qualitative Studies on Health and Well-being Volume 1 ; 1 ; 2006 ; >
     au < finished ; finished ; 2007 ; International Journal of Qualitative Studies on Health and Well-being Volume 2 ; 2 ; 2007 ; >
     au < finished ; finished ; 2008 ; International Journal of Qualitative Studies on Health and Well-being Volume 3 ; 3 ; 2008 ; >
-    au < finished ; frozen ; 2009 ; International Journal of Qualitative Studies on Health and Well-being Volume 4 ; 4 ; 2009 ; >
+    au < finished ; finished ; 2009 ; International Journal of Qualitative Studies on Health and Well-being Volume 4 ; 4 ; 2009 ; >
     au < finished ; crawling ; 2010 ; International Journal of Qualitative Studies on Health and Well-being Volume 5 ; 5 ; 2010 ; >
     au < finished ; crawling ; 2011 ; International Journal of Qualitative Studies on Health and Well-being Volume 6 ; 6 ; 2011 ; >
     au < finished ; finished ; 2012 ; International Journal of Qualitative Studies on Health and Well-being Volume 7 ; 7 ; 2012 ; >
@@ -382,7 +382,7 @@
     param[journal_id] = jchimp
 
     au < finished ; crawling ; 2011 ; Journal of Community Hospital Internal Medicine Perspectives Volume 1 ; 1 ; 2011 ; >
-    au < finished ; crawling ; 2012 ; Journal of Community Hospital Internal Medicine Perspectives Volume 2 ; 2 ; 2012 ; >
+    au < finished ; finished ; 2012 ; Journal of Community Hospital Internal Medicine Perspectives Volume 2 ; 2 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Journal of Community Hospital Internal Medicine Perspectives Volume 3 ; 3 ; 2013 ; >
     au < finished ; finished ; 2014 ; Journal of Community Hospital Internal Medicine Perspectives Volume 4 ; 4 ; 2014 ; >
     au < crawling ; exists ; 2015 ; Journal of Community Hospital Internal Medicine Perspectives Volume 5 ; 5 ; 2015 ; >
@@ -546,7 +546,7 @@
       au < finished ; crawling ; 2010 ; Medical Education Online Volume 15 ; 15 ; 2010 ; >
       au < finished ; crawling ; 2011 ; Medical Education Online Volume 16 ; 16 ; 2011 ; >
       au < finished ; finished ; 2012 ; Medical Education Online Volume 17 ; 17 ; 2012 ; >
-      au < finished ; crawling ; 2013 ; Medical Education Online Volume 18 ; 18 ; 2013 ; >
+      au < finished ; finished ; 2013 ; Medical Education Online Volume 18 ; 18 ; 2013 ; >
       au < finished ; finished ; 2014 ; Medical Education Online Volume 19 ; 19 ; 2014 ; >
       au < crawling ; exists ; 2015 ; Medical Education Online Volume 20 ; 20 ; 2015 ; >
       

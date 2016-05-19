@@ -384,7 +384,7 @@
     au < zapped ; finished ; 2001 ; Contributions to Macroeconomics Volume 1 ; 1 ; >    
     au < down ; crawling ; 2002 ; Contributions to Macroeconomics Volume 2 ; 2 ; >
     au < zapped ; finished ; 2003 ; Contributions to Macroeconomics Volume 3 ; 3 ; >    
-    au < down ; frozen ; 2004 ; Contributions to Macroeconomics Volume 4 ; 4 ; >
+    au < down ; finished ; 2004 ; Contributions to Macroeconomics Volume 4 ; 4 ; >
     au < zapped ; finished ; 2005 ; Contributions to Macroeconomics Volume 5 ; 5 ; >    
     au < zapped ; finished ; 2006 ; Contributions to Macroeconomics Volume 6 ; 6 ; > 
 
@@ -568,7 +568,7 @@
     au < down ; crawling ; 2000 ; Global Economy Journal Volume 1 ; 1 ; >
     au < zapped ; finished ; 2001 ; Global Economy Journal Volume 2 ; 2 ; >
     au < down ; finished ; 2002 ; Global Economy Journal Volume 3 ; 3 ; >
-    au < down ; crawling ; 2004 ; Global Economy Journal Volume 4 ; 4 ; >
+    au < down ; finished ; 2004 ; Global Economy Journal Volume 4 ; 4 ; >
     au < zapped ; finished ; 2005 ; Global Economy Journal Volume 5 ; 5 ; >
     au < down ; frozen ; 2006 ; Global Economy Journal Volume 6 ; 6 ; >
     au < down ; finished ; 2007 ; Global Economy Journal Volume 7 ; 7 ; >
@@ -618,7 +618,7 @@
     au < down ; finished ; 2003 ; International Commentary on Evidence Volume 1 ; 1 ; >
     au < zapped ; finished ; 2004 ; International Commentary on Evidence Volume 2 ; 2 ; >
     au < zapped ; finished ; 2005 ; International Commentary on Evidence Volume 3 ; 3 ; >
-    au < down ; crawling ; 2006 ; International Commentary on Evidence Volume 4 ; 4 ; >
+    au < down ; finished ; 2006 ; International Commentary on Evidence Volume 4 ; 4 ; >
     au < down ; crawling ; 2007 ; International Commentary on Evidence Volume 5 ; 5 ; >
     au < zapped ; finished ; 2008 ; International Commentary on Evidence Volume 6 ; 6 ; >
     au < zapped ; finished ; 2009 ; International Commentary on Evidence Volume 7 ; 7 ; >
@@ -681,7 +681,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijeeps
 
-    au < down ; crawling ; 2004 ; International Journal of Emerging Electric Power Systems Volume 1 ; 1 ; >
+    au < down ; finished ; 2004 ; International Journal of Emerging Electric Power Systems Volume 1 ; 1 ; >
     au < down ; frozen ; 2005 ; International Journal of Emerging Electric Power Systems Volume 2 ; 2 ; >
     au < zapped ; finished ; 2005 ; International Journal of Emerging Electric Power Systems Volume 3 ; 3 ; >
     au < down ; finished ; 2005 ; International Journal of Emerging Electric Power Systems Volume 4 ; 4 ; >
@@ -692,7 +692,7 @@
     au < zapped ; finished ; 2008 ; International Journal of Emerging Electric Power Systems Volume 9 ; 9 ; >
     au < zapped ; finished ; 2009 ; International Journal of Emerging Electric Power Systems Volume 10 ; 10 ; >
     au < zapped ; finished ; 2010 ; International Journal of Emerging Electric Power Systems Volume 11 ; 11 ; >
-    au < down ; crawling ; 2011 ; International Journal of Emerging Electric Power Systems Volume 12 ; 12 ; >
+    au < down ; finished ; 2011 ; International Journal of Emerging Electric Power Systems Volume 12 ; 12 ; >
 
   }
 
@@ -1181,7 +1181,7 @@
     au < down ; crawling ; 2007 ; New Global Studies Volume 1 ; 1 ; >
     au < zapped ; finished ; 2008 ; New Global Studies Volume 2 ; 2 ; >
     au < zapped ; finished ; 2009 ; New Global Studies Volume 3 ; 3 ; >
-    au < down ; crawling ; 2010 ; New Global Studies Volume 4 ; 4 ; >
+    au < down ; finished ; 2010 ; New Global Studies Volume 4 ; 4 ; >
     au < down ; finished ; 2011 ; New Global Studies Volume 5 ; 5 ; >
 
   }
@@ -1225,7 +1225,7 @@
     au < down ; finished ; 2001 ; Peace Economics, Peace Science and Public Policy Volume 7 ; 7 ; >
     au < down ; finished ; 2002 ; Peace Economics, Peace Science and Public Policy Volume 8 ; 8 ; >
     au < zapped ; finished ; 2003 ; Peace Economics, Peace Science and Public Policy Volume 9 ; 9 ; >
-    au < down ; frozen ; 2004 ; Peace Economics, Peace Science and Public Policy Volume 10 ; 10 ; >
+    au < down ; finished ; 2004 ; Peace Economics, Peace Science and Public Policy Volume 10 ; 10 ; >
     au < zapped ; finished ; 2005 ; Peace Economics, Peace Science and Public Policy Volume 11 ; 11 ; >
     au < down ; finished ; 2006 ; Peace Economics, Peace Science and Public Policy Volume 12 ; 12 ; >
     au < down ; finished ; 2007 ; Peace Economics, Peace Science and Public Policy Volume 13 ; 13 ; >

@@ -925,7 +925,7 @@
     au < manifest ; exists ; 2011 ; Advances in Operations Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Advances in Operations Research Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Advances in Operations Research Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Advances in Operations Research Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Advances in Operations Research Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Advances in Operations Research Volume 2015 ; 2015 ; 2015 ; >
 
   }
@@ -1855,7 +1855,7 @@
     au < manifest ; exists ; 2011 ; Case Reports in Anesthesiology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Anesthesiology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Case Reports in Anesthesiology Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Case Reports in Anesthesiology Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Case Reports in Anesthesiology Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Case Reports in Anesthesiology Volume 2015 ; 2015 ; 2015 ; >
 
   }
@@ -2181,7 +2181,7 @@
     au < manifest ; exists ; 2011 ; Case Reports in Ophthalmological Medicine Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Case Reports in Ophthalmological Medicine Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Case Reports in Ophthalmological Medicine Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Case Reports in Ophthalmological Medicine Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Case Reports in Ophthalmological Medicine Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Case Reports in Ophthalmological Medicine Volume 2015 ; 2015 ; 2015 ; >
 
   }
@@ -2758,7 +2758,7 @@
     au < manifest ; exists ; 2011 ; Diagnostic and Therapeutic Endoscopy Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Diagnostic and Therapeutic Endoscopy Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Diagnostic and Therapeutic Endoscopy Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Diagnostic and Therapeutic Endoscopy Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; Diagnostic and Therapeutic Endoscopy Volume 2014 ; 2014 ; 2014 ; >
     au < crawling ; exists ; 2015 ; Diagnostic and Therapeutic Endoscopy Volume 2015 ; 2015 ; 2015 ; >
 
   }
@@ -4141,7 +4141,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Microbiology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Microbiology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Microbiology Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; International Journal of Microbiology Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; International Journal of Microbiology Volume 2014 ; 2014 ; 2014 ; >
     au < crawling ; exists ; 2015 ; International Journal of Microbiology Volume 2015 ; 2015 ; 2015 ; >
 
   }
@@ -4236,7 +4236,7 @@
     au < manifest ; exists ; 2011 ; International Journal of Nephrology Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Nephrology Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; International Journal of Nephrology Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; International Journal of Nephrology Volume 2014 ; 2014 ; 2014 ; >
+    au < finished ; finished ; 2014 ; International Journal of Nephrology Volume 2014 ; 2014 ; 2014 ; >
     au < crawling ; exists ; 2015 ; International Journal of Nephrology Volume 2015 ; 2015 ; 2015 ; >
     
   }
@@ -7054,7 +7054,7 @@
     param[journal_id] = jsm
 
     au < manifest ; exists ; 2013 ; Journal of Sports Medicine Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Journal of Sports Medicine Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Journal of Sports Medicine Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Journal of Sports Medicine Volume 2015 ; 2015 ; 2015 ; >
 
   }
@@ -7278,7 +7278,7 @@
     param[journal_id] = jvm
 
     au < manifest ; exists ; 2013 ; Journal of Veterinary Medicine Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Journal of Veterinary Medicine Volume 2014 ; 2014 ; 2014 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Journal of Veterinary Medicine Volume 2014 ; 2014 ; 2014 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; Journal of Veterinary Medicine Volume 2015 ; 2015 ; 2015 ; >
 
   }
@@ -7617,7 +7617,7 @@
     au < manifest ; exists ; 2011 ; Neurology Research International Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Neurology Research International Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Neurology Research International Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Neurology Research International Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Neurology Research International Volume 2014 ; 2014 ; 2014 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Neurology Research International Volume 2015 ; 2015 ; 2015 ; >
     
   }
@@ -7633,7 +7633,7 @@
     param[journal_id] = neuroscience
 
     au < manifest ; exists ; 2013 ; Neuroscience Journal Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Neuroscience Journal Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Neuroscience Journal Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Neuroscience Journal Volume 2015 ; 2015 ; 2015 ; >
 
   }
@@ -7767,7 +7767,7 @@
     au < manifest ; exists ; 2011 ; Pain Research and Treatment Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Pain Research and Treatment Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Pain Research and Treatment Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Pain Research and Treatment Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Pain Research and Treatment Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Pain Research and Treatment Volume 2015 ; 2015 ; 2015 ; >
     
   }
@@ -8486,7 +8486,7 @@
     au < manifest ; exists ; 2011 ; Urban Studies Research Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Urban Studies Research Volume 2012 ; 2012 ; 2012 ; >
     au < manifest ; exists ; 2013 ; Urban Studies Research Volume 2013 ; 2013 ; 2013 ; >
-    au < finished ; crawling ; 2014 ; Urban Studies Research Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Urban Studies Research Volume 2014 ; 2014 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Urban Studies Research Volume 2015 ; 2015 ; 2015 ; >
 
   }

@@ -50,7 +50,7 @@
       param[journal_id] = ajcs
       
       au < finished ; finished ; 2013 ; American Journal of Cultural Sociology Volume 1 ; 2013 ; 1 ; >
-      au < finished ; crawling ; 2014 ; American Journal of Cultural Sociology Volume 2 ; 2014 ; 2 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; American Journal of Cultural Sociology Volume 2 ; 2014 ; 2 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2015 ; American Journal of Cultural Sociology Volume 3 ; 2015 ; 3 ; >
    
     }
@@ -318,7 +318,7 @@
 
       au < exists ; exists ; 2012 ; Eastern Economic Journal Volume 38 ; 2012 ; 38 ; >
       au < finished ; finished ; 2013 ; Eastern Economic Journal Volume 39 ; 2013 ; 39 ; >
-      au < finished ; crawling ; 2013 ; Eastern Economic Journal Volume 40 (2013) ; 2013 ; 40 ; >
+      au < finished ; finished ; 2013 ; Eastern Economic Journal Volume 40 (2013) ; 2013 ; 40 ; >
       au < finished ; crawling ; 2014 ; Eastern Economic Journal Volume 40 (2014) ; 2014 ; 40 ; >
       au < crawling ; exists ; 2015 ; Eastern Economic Journal Volume 41 ; 2015 ; 41 ; >
 
@@ -821,7 +821,7 @@
       au < doNotProcess ; exists ; 2009 ; Journal of Public Health Policy Volume 30 ; 2009 ; 30 ; >
       au < doNotProcess ; exists ; 2010 ; Journal of Public Health Policy Volume 31 ; 2010 ; 31 ; >
       au < doNotProcess ; exists ; 2011 ; Journal of Public Health Policy Volume 32 ; 2011 ; 32 ; >
-      au < finished ; crawling ; 2012 ; Journal of Public Health Policy Volume 33 ; 2012 ; 33 ; >
+      au < finished ; finished ; 2012 ; Journal of Public Health Policy Volume 33 ; 2012 ; 33 ; >
       au < crawling ; exists ; 2013 ; Journal of Public Health Policy Volume 34 ; 2013 ; 34 ; >
       au < finished ; finished ; 2014 ; Journal of Public Health Policy Volume 35 ; 2014 ; 35 ; >
       au < crawling ; exists ; 2015 ; Journal of Public Health Policy Volume 36 ; 2015 ; 36 ; >
@@ -1144,8 +1144,8 @@
       au < doNotProcess ; exists ; 2009 ; Security Journal Volume 22 ; 2009 ; 22 ; >
       au < doNotProcess ; exists ; 2010 ; Security Journal Volume 23 ; 2010 ; 23 ; >
       au < doNotProcess ; exists ; 2011 ; Security Journal Volume 24 ; 2011 ; 24 ; >
-      au < finished ; crawling ; 2012 ; Security Journal Volume 25 ; 2012 ; 25 ; >
-      au < finished ; crawling ; 2013 ; Security Journal Volume 26 ; 2013 ; 26 ; >
+      au < finished ; finished ; 2012 ; Security Journal Volume 25 ; 2012 ; 25 ; >
+      au < finished ; finished ; 2013 ; Security Journal Volume 26 ; 2013 ; 26 ; >
       au < finished ; finished ; 2014 ; Security Journal Volume 27 ; 2014 ; 27 ; >
       au < crawling ; exists ; 2015 ; Security Journal Volume 28 ; 2015 ; 28 ; >
  

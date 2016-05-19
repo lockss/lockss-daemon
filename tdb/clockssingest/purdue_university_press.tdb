@@ -190,7 +190,7 @@
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
     au < manifest ; exists ; 2011 ; Journal of Pre-College Engineering Education Research Volume 1 ; 1 ; >
-    au < finished ; crawling ; 2012 ; Journal of Pre-College Engineering Education Research Volume 2 ; 2 ; >
+    au < finished ; finished ; 2012 ; Journal of Pre-College Engineering Education Research Volume 2 ; 2 ; >
     au < crawling ; exists ; 2013 ; Journal of Pre-College Engineering Education Research Volume 3 ; 3 ; >
     au < finished ; finished ; 2014 ; Journal of Pre-College Engineering Education Research Volume 4 ; 4 ; >
     au < crawling ; exists ; 2015 ; Journal of Pre-College Engineering Education Research Volume 5 ; 5 ; >

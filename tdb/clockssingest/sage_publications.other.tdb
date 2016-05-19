@@ -260,7 +260,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
     attr[au_feature_key] = pdf
 
-    au < down ; crawling ; 2001 ; Graft: Organ and Cell Transplantation Volume 4 ; 4 ; >
+    au < down ; finished ; 2001 ; Graft: Organ and Cell Transplantation Volume 4 ; 4 ; >
     au < down ; crawling ; 2002 ; Graft: Organ and Cell Transplantation Volume 5 ; 5 ; >
     au < down ; crawling ; 2003 ; Graft: Organ and Cell Transplantation Volume 6 ; 6 ; >
 

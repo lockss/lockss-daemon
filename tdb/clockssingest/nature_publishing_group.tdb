@@ -134,7 +134,7 @@
 
       param[journal_id] = bcj
 
-    au < finished ; frozen ; 2011 ; Blood Cancer Journal Volume 1 ; 2011 ; 1 ; >
+    au < finished ; finished ; 2011 ; Blood Cancer Journal Volume 1 ; 2011 ; 1 ; >
     au < finished ; frozen ; 2012 ; Blood Cancer Journal Volume 2 ; 2012 ; 2 ; >
     au < crawling ; exists ; 2013 ; Blood Cancer Journal Volume 3 ; 2013 ; 3 ; >
     au < finished ; crawling ; 2014 ; Blood Cancer Journal Volume 4 ; 2014 ; 4 ; >
@@ -593,7 +593,7 @@
     au < down ; frozen ; 2009 ; Clinical Pharmacology & Therapeutics Volume 85 ; 2009 ; 85 ; >
     au < down ; frozen ; 2009 ; Clinical Pharmacology & Therapeutics Volume 86 ; 2009 ; 86 ; >
     au < down ; crawling ; 2010 ; Clinical Pharmacology & Therapeutics Volume 87 ; 2010 ; 87 ; >
-    au < down ; frozen ; 2010 ; Clinical Pharmacology & Therapeutics Volume 88 ; 2010 ; 88 ; >
+    au < down ; finished ; 2010 ; Clinical Pharmacology & Therapeutics Volume 88 ; 2010 ; 88 ; >
     au < zapped ; finished ; 2011 ; Clinical Pharmacology & Therapeutics Volume 89 ; 2011 ; 89 ; >
     au < down ; frozen ; 2011 ; Clinical Pharmacology & Therapeutics Volume 90 ; 2011 ; 90 ; >
     au < down ; crawling ; 2012 ; Clinical Pharmacology & Therapeutics Volume 91 ; 2012 ; 91 ; >
@@ -824,7 +824,7 @@
     au < finished ; crawling ; 2011 ; Eye Volume 25 ; 2011 ; 25 ; >
     au < finished ; crawling ; 2012 ; Eye Volume 26 ; 2012 ; 26 ; >
     au < crawling ; exists ; 2013 ; Eye Volume 27 ; 2013 ; 27 ; >
-    au < finished ; crawling ; 2014 ; Eye Volume 28 ; 2014 ; 28 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Eye Volume 28 ; 2014 ; 28 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Eye Volume 29 ; 2015 ; 29 ; >
 
 
@@ -1712,7 +1712,7 @@
     au < finished ; crawling ; 2012 ; Kidney International Volume 81 ; 2012 ; 81 ; >
     au < exists ; exists ; 2012 ; Kidney International Volume 82 ; 2012 ; 82 ; >
     au < down ; exists ; 2013 ; Kidney International Volume 83 ; 2013 ; 83 ; >
-    au < finished ; crawling ; 2013 ; Kidney International Volume 84 ; 2013 ; 84 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2013 ; Kidney International Volume 84 ; 2013 ; 84 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Kidney International Volume 85 ; 2014 ; 85 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2014 ; Kidney International Volume 86 ; 2014 ; 86 ; reingest1.clockss.org:8082 >
     au < down ; exists ; 2015 ; Kidney International Volume 87 ; 2015 ; 87 ; >
@@ -1973,7 +1973,7 @@
 
     au < finished ; frozen ; 2012 ; Molecular Therapy - Nucleic Acids Volume 1 ; 2012 ; 1 ; >
     au < crawling ; exists ; 2013 ; Molecular Therapy - Nucleic Acids Volume 2 ; 2013 ; 2 ; >
-    au < finished ; crawling ; 2014 ; Molecular Therapy - Nucleic Acids Volume 3 ; 2014 ; 3 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Molecular Therapy - Nucleic Acids Volume 3 ; 2014 ; 3 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Molecular Therapy - Nucleic Acids Volume 4 ; 2015 ; 4 ; >
 
   }
@@ -3959,7 +3959,7 @@
 
     au < finished ; finished ; 2011 ; Translational Psychiatry Volume 1 ; 2011 ; 1 ; >
     au < finished ; crawling ; 2012 ; Translational Psychiatry Volume 2 ; 2012 ; 2 ; >
-    au < finished ; crawling ; 2013 ; Translational Psychiatry Volume 3 ; 2013 ; 3 ; >
+    au < finished ; finished ; 2013 ; Translational Psychiatry Volume 3 ; 2013 ; 3 ; >
     au < finished ; crawling ; 2014 ; Translational Psychiatry Volume 4 ; 2014 ; 4 ; >
     au < crawling ; exists ; 2015 ; Translational Psychiatry Volume 5 ; 2015 ; 5 ; >
     au < manifest ; exists ; 2016 ; Translational Psychiatry Volume 6 ; 2016 ; 6 ; >
