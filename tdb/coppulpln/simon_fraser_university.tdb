@@ -115,6 +115,26 @@
 
     }
 
+    {
+  
+      title <
+        name = Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur ;
+        issn = 0316-1218
+      >
+    
+      param[base_url] = http://journals.sfu.ca/cjhe/
+      param[journal_id] = cjhe
+      # moved from http://ojs.library.ubc.ca/
+    
+      au < exists ; 2007 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 2007 ; 37 ; 2007 >
+      au < exists ; 2008 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 2008 ; 38 ; 2008 >
+      au < exists ; 2009 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 2009 ; 39 ; 2009 >
+      au < exists ; 2010 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 2010 ; 40 ; 2010 >
+      au < exists ; 2011 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 2011 ; 41 ; 2011 >
+      au < exists ; 2012 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 2012 ; 42 ; 2012 >
+      au < exists ; 2013 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 2013 ; 43 ; 2013 >
+
+    }
 
     {
 
@@ -428,27 +448,6 @@
       
     }
     
-  }
-
-  {
-  
-    title <
-      name = Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur ;
-      issn = 0316-1218
-    >
-    
-    param[base_url] = http://journals.sfu.ca/cjhe/
-    param[journal_id] = cjhe
-    # moved from http://ojs.library.ubc.ca/
-    
-    au < exists ; 2007 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 2007 ; 37 ; 2007 >
-    au < exists ; 2008 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 2008 ; 38 ; 2008 >
-    au < exists ; 2009 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 2009 ; 39 ; 2009 >
-    au < exists ; 2010 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 2010 ; 40 ; 2010 >
-    au < exists ; 2011 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 2011 ; 41 ; 2011 >
-    au < exists ; 2012 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 2012 ; 42 ; 2012 >
-    au < exists ; 2013 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 2013 ; 43 ; 2013 >
-
   }
 
 }
