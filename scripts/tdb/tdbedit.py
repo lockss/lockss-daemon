@@ -143,7 +143,7 @@ backup copy is made under 'a.tdb.bak'. If that backup file already exists, it is
 overwritten.
 '''
 
-__version__ = '0.3.3'
+__version__ = '0.4.0'
 
 import cStringIO
 import optparse
@@ -175,6 +175,8 @@ class _TdbEditOptions(object):
     group = optparse.OptionGroup(parser, 'Status changes')
     group.add_option('--from-status', default=None, metavar='CSSTATUS', help='status values to update from (comma-separated)')
     group.add_option('--from-status2', default=None, metavar='CSSTATUS', help='status2 values to update from (comma-separated)')
+    group.add_option('--keep-status', default=None, metavar='CSSTATUS', help='status values to leave alone (comma-separated)')
+    group.add_option('--keep-status2', default=None, metavar='CSSTATUS', help='status2 values to leave alone (comma-separated)')
     group.add_option('--to-status', default=None, metavar='STATUS', help='status value to update to')
     group.add_option('--to-status2', default=None, metavar='STATUS', help='status2 value to update to')
     parser.add_option_group(group)
@@ -219,20 +221,28 @@ class _TdbEditOptions(object):
       parser.print_help()
       print __tutorial__
       sys.exit()
-    # status_change/from_status/to_status
+    # status_change/from_status/keep_status/to_status
     if (opts.from_status is None) != (opts.to_status is None):
       parser.error('--from-status and --to-status must be specified together')
+    if opts.keep_status is not None and opts.from_status is None:
+      parser.error('--keep-status can only be specified with --from-status')
     self.status_change = opts.from_status is not None
     if self.status_change:
       self.from_status = set([x.strip() for x in opts.from_status.split(',')])
       self.to_status = opts.to_status
-    # status2_change/from_status2/to_status2
+    if opts.keep_status: self.keep_status = set([x.strip() for x in opts.keep_status.split(',')])
+    else: self.keep_status = set()
+    # status2_change/from_status2/keep_status2/to_status2
     if (opts.from_status2 is None) != (opts.to_status2 is None):
       parser.error('--from-status2 and --to-status2 must be specified together')
+    if opts.keep_status2 is not None and opts.from_status2 is None:
+      parser.error('--keep-status2 can only be specified with --from-status2')
     self.status2_change = opts.from_status2 is not None
     if self.status2_change:
       self.from_status2 = set([x.strip() for x in opts.from_status2.split(',')])
       self.to_status2 = opts.to_status2
+    if opts.keep_status2: self.keep_status2 = set([x.strip() for x in opts.keep_status2.split(',')])
+    else: self.keep_status2 = set()
     # proxy_change/from_proxy/to_proxy/__proxy
     _toproxy = [opts.to_proxy, opts.to_proxy_random, opts.to_proxy_round_robin]
     if (opts.from_proxy is None) != (not any(_toproxy)):
@@ -448,11 +458,11 @@ def _change_aus(options, auids, aus):
       continue # next AUID
     # Check that the changes are valid
     au = aus[index]
-    if options.status_change and au.get_status() not in options.from_status:
+    if options.status_change and au.get_status() not in options.from_status and au.get_status() not in options.keep_status:
       errors = errors + 1
       sys.stderr.write('%s:%s: %s: status \'%s\' is not one of %s\n' % (au.filestr, au.lineindex + 1, au.get_name(), au.get_status(), ', '.join(options.from_status)))
       continue # next AUID
-    if options.status2_change and au.get_status2() not in options.from_status2:
+    if options.status2_change and au.get_status2() not in options.from_status2 and au.get_status2() not in options.keep_status2:
       errors = errors + 1
       sys.stderr.write('%s:%s: %s: status2 \'%s\' is not one of %s\n' % (au.filestr, au.lineindex + 1, au.get_name(), au.get_status2(), ', '.join(options.from_status2)))
       continue # next AUID
@@ -463,8 +473,8 @@ def _change_aus(options, auids, aus):
         sys.stderr.write('%s:%s: %s: proxy \'%s\' is not one of %s\n' % (au.filestr, au.lineindex + 1, au.get_name(), found, ', '.join(options.from_proxy)))
         continue # next AUID
     # Perform requested changes if necessary
-    if options.status_change: au.set_status(options.to_status)
-    if options.status2_change: au.set_status2(options.to_status2)
+    if options.status_change and au.get_status() not in options.keep_status: au.set_status(options.to_status)
+    if options.status2_change and au.get_status2() not in options.keep_status2: au.set_status2(options.to_status2)
     if options.proxy_change:
       target = options.next_proxy()
       if target == _NONE: target = None
