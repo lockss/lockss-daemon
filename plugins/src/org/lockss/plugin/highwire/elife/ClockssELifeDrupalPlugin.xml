@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>23</string>
+    <string>25</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -23,7 +23,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>33</string>
+    <string>38</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -98,15 +98,6 @@
       <entry>
         <string>au_def_pause_time</string>
         <long>100</long>
-      </entry>
-      <entry>
-        <string>au_mime_rate_limiter_map</string>
-        <map>
-          <entry>
-            <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
-            <string>1/100</string>
-          </entry>
-        </map>
       </entry>
     </map>
   </entry>
