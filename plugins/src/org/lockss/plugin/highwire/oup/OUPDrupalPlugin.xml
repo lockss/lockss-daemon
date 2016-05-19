@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>18</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>36</string>
+    <string>38</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -44,6 +44,13 @@
   <entry>
     <string>au_name</string>
     <string>"Oxford University Press Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <list>
+      <string>"%slockss-manifest/vol_%s_manifest.html", to_http(base_url), volume_name</string>
+      <string>"%slockss-manifest/vol_%s_manifest.html", to_https(base_url), volume_name</string>
+    </list>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>

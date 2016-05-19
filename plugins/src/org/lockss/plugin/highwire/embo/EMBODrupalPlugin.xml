@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>36</string>
+    <string>38</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -43,10 +43,6 @@
   <entry>
     <string>au_name</string>
     <string>"EMBO Press Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>"%slockss-manifest/vol_%s_manifest.html", base_url, volume_name</string>
   </entry>
   <entry>
     <string>text/html_link_extractor_factory</string>
