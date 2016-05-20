@@ -238,12 +238,13 @@ public class SubscriptionManagement extends LockssServlet {
     // The operation to be performed.
     String action = req.getParameter(ACTION_TAG);
 
-    String start = req.getParameter("start");
-    String end = req.getParameter("end");
+    String start = req.getParameter(TAB_START_TAG);
+    String end = req.getParameter(TAB_END_TAG);
 
     try {
       if (SHOW_ADD_PAGE_ACTION.equals(action)) {
         if(start != null && end != null){
+          // Only send the tab content
           this.writePage(this.populateTab(start, end));
         }else{
           displayAddPage();

@@ -43,7 +43,6 @@ import java.util.regex.Pattern;
 import org.apache.commons.collections.*;
 import org.apache.commons.lang3.mutable.*;
 import org.apache.commons.lang3.time.FastDateFormat;
-import org.eclipse.jetty.http.HttpTester.Request;
 import org.lockss.config.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
@@ -126,6 +125,7 @@ public class ServletUtil {
   /** URL of third party logo image */
   static final String PARAM_THIRD_PARTY_LOGO_IMAGE = PREFIX + "logo.img";
   
+  /** loading spinner image for subscription management page **/
   static final String LOADING_SPINNER = "images/ajax-loader.gif";
   
   /** URL of third party logo link */
@@ -2101,6 +2101,8 @@ public class ServletUtil {
   /**
    * Creates the table-containing tabs used to divide the display of content.
    * 
+   * WP: The tabs for the subscription Add page are manages differently.
+   * 
    * @param alphabetLetterCount
    *          An int with the count of the letters of the alphabet to be used.
    * @param lettersPerTabCount
@@ -2135,6 +2137,7 @@ public class ServletUtil {
     org.mortbay.html.List tabList =
 	createTabList(lettersPerTabCount, tabLetters, tabLetterPopulationMap, tabsDiv, action);
     
+    // The SubscriptionManagement add Page 
     if(!SubscriptionManagement.SHOW_ADD_PAGE_ACTION.equals(action)){
       // Add them to the tabs container.
       tabsDiv.add(tabList);
@@ -2256,6 +2259,9 @@ public class ServletUtil {
   /**
    * Creates the spans required by jQuery to build the desired tabs.
    * 
+   * WP: Made some changes to the tabs on the add subscription page 
+   *     in order to load tabs content only when they are opened.
+   * 
    * @param lettersPerTabCount
    *          An int with the count of the letters per tab to be used.
    * @param tabLetters
@@ -2329,6 +2335,7 @@ public class ServletUtil {
       tabListItem = tabList.newItem();
       tabListItem.add(tabLink);
       
+      // Add loading spinner image
       Block loadingDiv = new Block(Block.Div, "id='ui-tabs-" + tabCount++ + "'");
       Image loadingImage = new Image(LOADING_SPINNER);
       loadingImage.alt("Loading...");
@@ -2390,6 +2397,8 @@ public class ServletUtil {
 
   /**
    * Creates the table for a tab.
+   * 
+   * WP: Need to be public to be called by SubscriptionManagement.populateTab
    * 
    * @param letter
    *          A String with the start letter of the tab group.

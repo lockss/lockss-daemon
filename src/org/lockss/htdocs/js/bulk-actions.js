@@ -1,5 +1,8 @@
 /**
- * Manage Bulk Actions button
+ * Manage Bulk Actions button on subscription page
+ * 
+ * Picks up the action in the select box and 
+ * applies it to every triboxes in the selected rows.
  */
 
 $(document).ready(function () {
@@ -15,6 +18,7 @@ $(document).ready(function () {
             $("#bulk-actions-msg-box").text("Please select an action first.");
         } else {
             var count = 0;
+            
             $(".bulk-actions-ckbox:checked").each( function(){
                 count++;
                 $(this).prop('checked', false);
@@ -44,14 +48,23 @@ $(document).ready(function () {
             });
             $("#bulk-actions-msg-box").removeClass("warning")
             $("#bulk-actions-msg-box").addClass("success")
-            $("#bulk-actions-msg-box").text(count+" selections have been "+action+".");
+            if(count > 0){
+                $("#bulk-actions-msg-box").text(count+" selections have been set for "+action+". Press the 'Add' button to apply the change.");
+            } else {
+                $("#bulk-actions-msg-box").removeClass("success")
+                $("#bulk-actions-msg-box").addClass("warning")
+                $("#bulk-actions-msg-box").text("You haven't selected any publication.")
+            }
         }
     });
     
 
-    // Toggles the ability of two subscription slave
-    // elements through the selection
-    // of a master publication subscription tribox element.
+    /* 
+     * Rewrite the code for the tribox as it needs to works slightly differently.
+     * 
+     * This function set every elements in the same row than the tribox 
+     * which has change status after the bulk action as been applied.
+     */
     function refreshPublicationSubscription(
             pubSubId,
             subscribedRangesId, 
@@ -86,8 +99,7 @@ $(document).ready(function () {
         }
 
         // Check whether the publication subscription is
-        // changing to "Unsubscribe
-        // All".
+        // changing to "Unsubscribe All".
         if (pubSub.value == "false") {
             // Yes: Disable the unsubscribed ranges.
             if (unsubscribedRanges !== undefined) {
