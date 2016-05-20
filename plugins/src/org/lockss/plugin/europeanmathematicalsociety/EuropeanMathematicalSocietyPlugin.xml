@@ -45,6 +45,7 @@
     <string>"%sjournals/all_issues.php?issn=%s", base_url, journal_issn</string>
   </entry>
   <entry>
+    <!-- FIXME remove below once manifest pages are available and contain permission statements -->
     <string>au_permission_url</string>
     <string>"%sjournals/lockss.txt", base_url</string>
   </entry>
