@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>18</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -44,10 +44,6 @@
   <entry>
     <string>au_name</string>
     <string>"American Physiological Society Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>"%slockss-manifest/vol_%s_manifest.html", base_url, volume_name</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
