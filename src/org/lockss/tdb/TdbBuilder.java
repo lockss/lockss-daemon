@@ -68,7 +68,7 @@ public class TdbBuilder extends TdbParserBaseListener {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbBuilder:0.3.0]";
+  public static final String VERSION = "[TdbBuilder:0.3.1]";
   
   /**
    * <p>
@@ -115,8 +115,6 @@ public class TdbBuilder extends TdbParserBaseListener {
    */
   public TdbBuilder() {
     this.tdb = new Tdb();
-    this.stack = new Stack<Au>();
-    this.stack.push(new Au());
   }
   
   /**
@@ -131,6 +129,20 @@ public class TdbBuilder extends TdbParserBaseListener {
     return tdb;
   }
 
+  /**
+   * <p>
+   * Does the initial setup for the top-level type tdb by resetting the stack
+   * and pushing an empty, root {@link Au} frame onto it.
+   * </p>
+   * 
+   * @since 1.71
+   */
+  @Override
+  public void enterTdb(@NotNull TdbContext tctx) {
+    this.stack = new Stack<Au>();
+    this.stack.push(new Au());
+  }
+  
   /**
    * <p>
    * If processing an abstract syntax tree of type publisherContainer, pushes a
