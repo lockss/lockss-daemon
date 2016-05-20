@@ -208,7 +208,20 @@ public class TestHighWireDrupalHtmlCrawlFilterFactory extends LockssTestCase {
       "\n" +
       "</div>";
   
+  private static final String withBreadcrumb = "<div id=\"page\">" +
+      "<div id=\"breadcrumb\">\n" + 
+      "<ul class=\"breadcrumbs\">\n" + 
+      "<li class=\"first crumb\"><a href=\"/\">Home</a></li>\n" + 
+      "<li class=\"last crumb\"><a href=\"http://www.journal.org/content/119/9\">March 1, 2012; Journal: 119 (9)</a></li>\n" + 
+      "</ul></div>\n" + 
+      "</div>";
   
+  private static final String withoutBreadcrumb = "<div id=\"page\">" +
+      "\n" +
+      "</div>";
+  
+  /*
+   */
   public void testFiltering() throws Exception {
     InputStream inA;
     String a;
@@ -248,6 +261,12 @@ public class TestHighWireDrupalHtmlCrawlFilterFactory extends LockssTestCase {
         Constants.DEFAULT_ENCODING);
     a = StringUtil.fromInputStream(inA);
     assertEquals(withoutAside, a);
+    
+    // breadcrumb
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(withBreadcrumb),
+        Constants.DEFAULT_ENCODING);
+    a = StringUtil.fromInputStream(inA);
+    assertEquals(withoutBreadcrumb, a);
     
   }
   

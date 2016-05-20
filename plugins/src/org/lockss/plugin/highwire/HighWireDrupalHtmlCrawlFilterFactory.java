@@ -61,6 +61,9 @@ public class HighWireDrupalHtmlCrawlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttributeRegex("span", "class", "next"),
     // messages now contain correction lists
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "messages"),
+    // do NOT crawl breadcrumbs
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "breadcrumb"),
+    // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "breadcrumb"), // uncomment if needed
   };
   
   @Override
