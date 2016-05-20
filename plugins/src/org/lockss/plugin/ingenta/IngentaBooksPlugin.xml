@@ -1,0 +1,187 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>development</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.ingenta.IngentaBooksPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.67.0</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Ingenta Books Plugin, Base URL %s, Publisher ID %s, ISBN %s", base_url, publisher_id, book_isbn</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Ingenta Books Plugin</string>
+  </entry>
+  <!--  without this header, html files are truncated -->
+  <entry>
+    <string>au_http_request_header</string>
+    <string>Accept-Language: en-US,en;q=0.5</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <!-- all content from CDN -->
+<!--      <string>1,"^https?://((api|graphics|docserver)[.]ingentaconnect[.]com|.+[.]cloudfront[.]net|cdn[.]mathjax[.]org)/."</string> -->
+      <string>1,"^https?://(.+[.]cloudfront[.]net|cdn[.]mathjax[.]org)/."</string>
+      <!-- all fonts, images, resources, css, js, etc. -->
+      <string>1,"^https?://%s/.*[.](css|js|eot|svg|ttf|woff.?)([?].*)?$", base_url_host</string>
+      <string>1,"^https?://%s/.*[.](bmp|gif|ico|jpe?g|png|tif?f)$", base_url_host</string>
+      <!--  these guard against unwanted variants with specific termination -->
+      <string>2,"^%scontent(one)?/%s/[^/]+/.*(/trial([?]crawler=true.*)?|/citations|[?]format=rss)$", base_url, publisher_id</string>
+      <!--  book TOC, allows for nav: http://www.ingentaconnect.com/content/bkpub/2ouacs -->
+      <string>1,"^%scontent(one)?/%s/[^/]+$", base_url, publisher_id</string>
+      <!-- book "article" http://www.ingentaconnect.com/contentone/bkpub/2ouacs/2015/00000001/00000001/art00002 -->
+      <string>1,"^%scontent(one)?/%s/[^/]+/[0-9]{4}/[0-9]+/", base_url, publisher_id</string>
+    </list>
+  </entry>
+<!-- http://www.ingentaconnect.com/content/9781605092546?format=clockss -->  
+  <entry>
+    <string>au_start_url</string>
+    <list>
+      <string>"%scontent/%s?format=lockss", base_url, book_isbn</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>book_isbn</key>
+        <displayName>Book ISBN</displayName>
+        <description>International Standard Book Number</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>      
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>publisher_id</key>
+        <displayName>Publisher Identifier</displayName>
+        <description>Identifier for publisher</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>7
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.ingenta.IngentaJournalHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.ingenta.IngentaPdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/x-research-info-systems_filter_factory</string>
+    <string>org.lockss.plugin.ingenta.IngentaRisFilterFactory</string>
+  </entry>
+<!--  BIB citations come in as text/plain -->
+  <entry>
+    <string>text/plain_filter_factory</string>
+    <string>org.lockss.plugin.ingenta.IngentaKeywordFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.ingenta.IngentaBooksHtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.ingenta.IngentaBooksUrlNormalizer</string>
+  </entry>
+  <!-- 
+  <entry>
+    <string>text/html_link_rewriter_factory</string>
+    <string>org.lockss.plugin.ingenta.IngentaHtmlLinkRewriterFactory</string>
+  </entry>
+  -->
+<!-- http://www.ingentaconnect.com/content/bkpub/2nk9qe/1999/00000001/00000001/art00001?crawler=true&mimetype=application/pdf -->  
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%scontent/%s/[^/]+/[0-9]{4}/[0-9]+/[^/]+/art[0-9]+[?]crawler=true&amp;mimetype=application/pdf", base_url, publisher_id</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.ingenta.IngentaBooksArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.ingenta.IngentaBooksArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.ingenta.IngentaBooksHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+<!-- au_refetch_depth is fine with default depth of 1 -->
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts -->
+    <string>au_permitted_host_pattern</string>
+    <string>(api|graphics|docserver)[.]ingentaconnect[.]com|.*[.]cloudfront[.]net|cdn[.]mathjax[.]org</string>
+  </entry>
+<!-- these will replicate as needed unless they are excluded above -->       
+  <entry>       
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <string>(/images/[^.]+[.](gif|ico|png)|[.](css|js|eot|svg|ttf|woff.?)([?](v|release)=[^&amp;]*)?)$</string>
+  </entry>
+<!-- these will not count towards poll results but will replicate from peer if above -->
+  <entry>
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <!-- http://www.ingentaconnect.com/css/connect/llb9.css?release=R5_1_4 -->     
+      <string>"(/images/[^.]+[.](gif|ico|png)|[.](css|js|eot|svg|ttf|woff.?)([?](v|release)=[^&amp;]*)?)$", 0</string>
+    </list>
+  </entry>   
+</map>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ONIXMessage release="3.0">
+<Header>
+<Sender>
+<SenderName>Association of Research Libraries (ARL)</SenderName>
+<ContactName>Beth Secrist</ContactName>
+<EmailAddress>beth@arl.org</EmailAddress>
+</Sender>
+<Addressee>
+<AddresseeName>CLOCKSS</AddresseeName>
+</Addressee>
+<MessageNumber>123</MessageNumber> <!-- Fix -->
+<SentDateTime>currentdate</SentDateTime> <!-- Fix -->
+<MessageNote>Sample message</MessageNote> <!-- Fix -->
+</Header>
+<!-- this is a constructed by hand xml file for Association of Research Libraries -->
+<Product>
+<!-- pdf filename (minus the ".pdf") -->
+<RecordReference>1h8lp5</RecordReference>
+<NotificationType>03</NotificationType>
+<ProductIdentifier>
+<ProductIDType>03</ProductIDType> <!-- ISBN -->
+<IDValue>978-159407-222-6</IDValue>
+</ProductIdentifier>
+<Collection>
+<CollectionType>10</CollectionType> <!-- Publisher collection -->
+<CollectionIdentifier> <!-- Identifier of publisher collection -->
+<CollectionIDType>02</CollectionIDType>
+<IDValue>1538-2222</IDValue> <!-- ISSN -->
+</CollectionIdentifier>
+</Collection>
+<DescriptiveDetail>
+<!--  book title information goes here  -->
+<TitleDetail>
+<TitleType>01</TitleType>
+<TitleElement>
+<TitleElementLevel>02</TitleElementLevel> <!-- collection level -->
+<TitleText textcase="01">ARL Academic Law Library Statistics</TitleText>
+</TitleElement>
+<TitleElement>
+<TitleElementLevel>01</TitleElementLevel> <!-- product level -->
+<PartNumber>2008-2009</PartNumber> <!-- part number of product in collection -->
+</TitleElement>
+</TitleDetail>
+</DescriptiveDetail>
+<!--  publishing specifics go here  -->
+<PublishingDetail>
+<Publisher>
+<PublisherName>Association of Research Libraries</PublisherName>
+</Publisher>
+<PublishingDate>
+<PublishingDateRole>01</PublishingDateRole>
+<Date dateformat="00">20110000</Date>
+</PublishingDate>
+<CopyrightStatement>
+<CopyrightYear>2011</CopyrightYear>
+</CopyrightStatement>
+</PublishingDetail>
+</Product>  <!-- end 1/6 -->
+</ONIXMessage>
