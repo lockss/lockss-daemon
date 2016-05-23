@@ -1871,7 +1871,7 @@
     au < finished ; frozen ; 2010 ; Modern Pathology Volume 23 ; 2010 ; 23 ; >
     au < finished ; crawling ; 2011 ; Modern Pathology Volume 24 ; 2011 ; 24 ; >
     au < finished ; crawling ; 2012 ; Modern Pathology Volume 25 ; 2012 ; 25 ; >
-    au < finished ; crawling ; 2013 ; Modern Pathology Volume 26 ; 2013 ; 26 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; Modern Pathology Volume 26 ; 2013 ; 26 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Modern Pathology Volume 27 ; 2014 ; 27 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Modern Pathology Volume 28 ; 2015 ; 28 ; >
 
@@ -3958,7 +3958,7 @@
     param[journal_id] = tp
 
     au < finished ; finished ; 2011 ; Translational Psychiatry Volume 1 ; 2011 ; 1 ; >
-    au < finished ; crawling ; 2012 ; Translational Psychiatry Volume 2 ; 2012 ; 2 ; >
+    au < finished ; finished ; 2012 ; Translational Psychiatry Volume 2 ; 2012 ; 2 ; >
     au < finished ; finished ; 2013 ; Translational Psychiatry Volume 3 ; 2013 ; 3 ; >
     au < finished ; crawling ; 2014 ; Translational Psychiatry Volume 4 ; 2014 ; 4 ; >
     au < crawling ; exists ; 2015 ; Translational Psychiatry Volume 5 ; 2015 ; 5 ; >
