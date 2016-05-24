@@ -77,16 +77,15 @@
     param[base_url] = http://revista.ibict.br/inclusao/
     param[journal_id] = inclusao
 
-    au < released ; 2005 ; 1 ; Inclusão Social Volume 1 (2005) ; 2005 ; >
-    au < released ; 2006 ; 1 ; Inclusão Social Volume 1 (2006) ; 2006 ; >
-    au < released ; 2007 ; 2 ; Inclusão Social Volume 2 ; 2007 ; >
-    au < released ; 2008 ; 3 ; Inclusão Social Volume 3 (2008) ; 2008 ; >
-    au < released ; 2010 ; 3-4 ; Inclusão Social Volume 3-4 (2010) ; 2010 ; >
-    au < released ; 2011 ; 4-5 ; Inclusão Social Volume 4-5 (2011) ; 2011 ; >
-    au < released ; 2012 ; 6-7 ; Inclusão Social Volume 6-7 (2012) ; 2012 ; >
-    au < released ; 2013 ; 8-9 ; Inclusão Social Volume 8-9 (2013) ; 2013 ; >
-    au < exists ; 2014 ; 10-11 ; Inclusão Social Volume 10-11 (2014) ; 2014 ; >
-    au < expected ; 2015 ; 12-13 ; Inclusão Social Volume 12-13 (2015) ; 2015 ; >
+    au < down ; 2005 ; 1 ; Inclusão Social Volume 2005 ; 2005 ; 404 at manifest page >
+    au < down ; 2006 ; 1 ; Inclusão Social Volume 2006 ; 2006 ; 404 at manifest page >
+    au < down ; 2007 ; 2 ; Inclusão Social Volume 2007 ; 2007 ; 404 at manifest page >
+    au < down ; 2008 ; 3 ; Inclusão Social Volume 2008 ; 2008 ; 404 at manifest page >
+    au < down ; 2010 ; 3-4 ; Inclusão Social Volume 2010 ; 2010 ; 404 at manifest page >
+    au < down ; 2011 ; 4-5 ; Inclusão Social Volume 2011 ; 2011 ; 404 at manifest page >
+    au < down ; 2012 ; 6-7 ; Inclusão Social Volume 2012 ; 2012 ; 404 at manifest page >
+    au < down ; 2013 ; 8-9 ; Inclusão Social Volume 2013 ; 2013 ; 404 at manifest page >
+    au < expected ; 2016 ; 10 ; Inclusão Social Volume 2016 ; 2016 ; >
 
   }
 

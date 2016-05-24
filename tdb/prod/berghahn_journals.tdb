@@ -12,6 +12,8 @@
   attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.BerghahnPdfTransform
   
   implicit < status ; year ; name ; param[volume_name] >
+  
+  #publisher moved from ingenta to jstor.
 
   {
   
@@ -25,14 +27,14 @@
     param[journal_id] = ajec
     param[journal_issn] = 1755-2923
     
-    au < released ; 2008 ; Anthropological Journal of European Cultures Volume 17 ; 17 >
-    au < released ; 2009 ; Anthropological Journal of European Cultures Volume 18 ; 18 >
-    au < released ; 2010 ; Anthropological Journal of European Cultures Volume 19 ; 19 >
-    au < released ; 2011 ; Anthropological Journal of European Cultures Volume 20 ; 20 >
-    au < released ; 2012 ; Anthropological Journal of European Cultures Volume 21 ; 21 >
-    au < released ; 2013 ; Anthropological Journal of European Cultures Volume 22 ; 22 >
-    au < released ; 2014 ; Anthropological Journal of European Cultures Volume 23 ; 23 >
-    au < released ; 2015 ; Anthropological Journal of European Cultures Volume 24 ; 24 >
+    au < down ; 2008 ; Anthropological Journal of European Cultures Volume 17 ; 17 >
+    au < down ; 2009 ; Anthropological Journal of European Cultures Volume 18 ; 18 >
+    au < down ; 2010 ; Anthropological Journal of European Cultures Volume 19 ; 19 >
+    au < down ; 2011 ; Anthropological Journal of European Cultures Volume 20 ; 20 >
+    au < down ; 2012 ; Anthropological Journal of European Cultures Volume 21 ; 21 >
+    au < down ; 2013 ; Anthropological Journal of European Cultures Volume 22 ; 22 >
+    au < down ; 2014 ; Anthropological Journal of European Cultures Volume 23 ; 23 >
+    au < down ; 2015 ; Anthropological Journal of European Cultures Volume 24 ; 24 >
     
   }
 
@@ -48,17 +50,17 @@
     param[journal_id] = antiac
     param[journal_issn] = 0967-201X
      
-    au < released ; 2005 ; Anthropology in Action Volume 12 ; 12 >
-    au < released ; 2006 ; Anthropology in Action Volume 13 ; 13 >
-    au < released ; 2007 ; Anthropology in Action Volume 14 ; 14 >
-    au < released ; 2008 ; Anthropology in Action Volume 15 ; 15 >
-    au < released ; 2009 ; Anthropology in Action Volume 16 ; 16 >
-    au < released ; 2010 ; Anthropology in Action Volume 17 ; 17 >
-    au < released ; 2011 ; Anthropology in Action Volume 18 ; 18 >
-    au < released ; 2012 ; Anthropology in Action Volume 19 ; 19 >
-    au < released ; 2013 ; Anthropology in Action Volume 20 ; 20 >
-    au < released ; 2014 ; Anthropology in Action Volume 21 ; 21 >
-    au < released ; 2015 ; Anthropology in Action Volume 22 ; 22 >
+    au < down ; 2005 ; Anthropology in Action Volume 12 ; 12 >
+    au < down ; 2006 ; Anthropology in Action Volume 13 ; 13 >
+    au < down ; 2007 ; Anthropology in Action Volume 14 ; 14 >
+    au < down ; 2008 ; Anthropology in Action Volume 15 ; 15 >
+    au < down ; 2009 ; Anthropology in Action Volume 16 ; 16 >
+    au < down ; 2010 ; Anthropology in Action Volume 17 ; 17 >
+    au < down ; 2011 ; Anthropology in Action Volume 18 ; 18 >
+    au < down ; 2012 ; Anthropology in Action Volume 19 ; 19 >
+    au < down ; 2013 ; Anthropology in Action Volume 20 ; 20 >
+    au < down ; 2014 ; Anthropology in Action Volume 21 ; 21 >
+    au < down ; 2015 ; Anthropology in Action Volume 22 ; 22 >
     
   }
 
@@ -74,16 +76,16 @@
     param[journal_id] = antmid
     param[journal_issn] = 1746-0719
     
-    au < released ; 2006 ; Anthropology of the Middle East Volume 1 ; 1 >
-    au < released ; 2007 ; Anthropology of the Middle East Volume 2 ; 2 >
-    au < released ; 2008 ; Anthropology of the Middle East Volume 3 ; 3 >
-    au < released ; 2009 ; Anthropology of the Middle East Volume 4 ; 4 >
-    au < released ; 2010 ; Anthropology of the Middle East Volume 5 ; 5 >
-    au < released ; 2011 ; Anthropology of the Middle East Volume 6 ; 6 >
-    au < released ; 2012 ; Anthropology of the Middle East Volume 7 ; 7 >
-    au < released ; 2013 ; Anthropology of the Middle East Volume 8 ; 8 >
-    au < released ; 2014 ; Anthropology of the Middle East Volume 9 ; 9 >
-    au < released ; 2015 ; Anthropology of the Middle East Volume 10 ; 10 >
+    au < down ; 2006 ; Anthropology of the Middle East Volume 1 ; 1 >
+    au < down ; 2007 ; Anthropology of the Middle East Volume 2 ; 2 >
+    au < down ; 2008 ; Anthropology of the Middle East Volume 3 ; 3 >
+    au < down ; 2009 ; Anthropology of the Middle East Volume 4 ; 4 >
+    au < down ; 2010 ; Anthropology of the Middle East Volume 5 ; 5 >
+    au < down ; 2011 ; Anthropology of the Middle East Volume 6 ; 6 >
+    au < down ; 2012 ; Anthropology of the Middle East Volume 7 ; 7 >
+    au < down ; 2013 ; Anthropology of the Middle East Volume 8 ; 8 >
+    au < down ; 2014 ; Anthropology of the Middle East Volume 9 ; 9 >
+    au < down ; 2015 ; Anthropology of the Middle East Volume 10 ; 10 >
     
   }
 
@@ -120,15 +122,15 @@
     param[journal_issn] = 1933-2882   
     
        
-    au < released ; 2007 ; Aspasia Volume 1 ; 1 >
-    au < released ; 2008 ; Aspasia Volume 2 ; 2 >
-    au < released ; 2009 ; Aspasia Volume 3 ; 3 >
-    au < released ; 2010 ; Aspasia Volume 4 ; 4 >
-    au < released ; 2011 ; Aspasia Volume 5 ; 5 >
-    au < released ; 2012 ; Aspasia Volume 6 ; 6 >
-    au < released ; 2013 ; Aspasia Volume 7 ; 7 >
-    au < released ; 2014 ; Aspasia Volume 8 ; 8 >
-    au < released ; 2015 ; Aspasia Volume 9 ; 9 >
+    au < down ; 2007 ; Aspasia Volume 1 ; 1 >
+    au < down ; 2008 ; Aspasia Volume 2 ; 2 >
+    au < down ; 2009 ; Aspasia Volume 3 ; 3 >
+    au < down ; 2010 ; Aspasia Volume 4 ; 4 >
+    au < down ; 2011 ; Aspasia Volume 5 ; 5 >
+    au < down ; 2012 ; Aspasia Volume 6 ; 6 >
+    au < down ; 2013 ; Aspasia Volume 7 ; 7 >
+    au < down ; 2014 ; Aspasia Volume 8 ; 8 >
+    au < down ; 2015 ; Aspasia Volume 9 ; 9 >
     
   }
 
@@ -144,10 +146,10 @@
     param[journal_id] = ca
     param[journal_issn] = 0305-7674
 
-    au < released ; 2012 ; The Cambridge Journal of Anthropology Volume 30 ; 30 >
-    au < released ; 2013 ; The Cambridge Journal of Anthropology Volume 31 ; 31 >
-    au < released ; 2014 ; The Cambridge Journal of Anthropology Volume 32 ; 32 >
-    au < released ; 2015 ; The Cambridge Journal of Anthropology Volume 33 ; 33 >
+    au < down ; 2012 ; The Cambridge Journal of Anthropology Volume 30 ; 30 >
+    au < down ; 2013 ; The Cambridge Journal of Anthropology Volume 31 ; 31 >
+    au < down ; 2014 ; The Cambridge Journal of Anthropology Volume 32 ; 32 >
+    au < down ; 2015 ; The Cambridge Journal of Anthropology Volume 33 ; 33 >
 
   }
 
@@ -163,16 +165,16 @@
     param[journal_id] = coco
     param[journal_issn] = 1807-9326
 
-    au < released ; 2005 ; Contributions to the History of Concepts Volume 1 ; 1 >
-    au < released ; 2006 ; Contributions to the History of Concepts Volume 2 ; 2 >
-    au < released ; 2007 ; Contributions to the History of Concepts Volume 3 ; 3 >
-    au < released ; 2008 ; Contributions to the History of Concepts Volume 4 ; 4 >
-    au < released ; 2009 ; Contributions to the History of Concepts Volume 5 ; 5 >
-    au < released ; 2011 ; Contributions to the History of Concepts Volume 6 ; 6 >
-    au < released ; 2012 ; Contributions to the History of Concepts Volume 7 ; 7 >
-    au < released ; 2013 ; Contributions to the History of Concepts Volume 8 ; 8 >
-    au < released ; 2014 ; Contributions to the History of Concepts Volume 9 ; 9 >
-    au < released ; 2015 ; Contributions to the History of Concepts Volume 10 ; 10 >
+    au < down ; 2005 ; Contributions to the History of Concepts Volume 1 ; 1 >
+    au < down ; 2006 ; Contributions to the History of Concepts Volume 2 ; 2 >
+    au < down ; 2007 ; Contributions to the History of Concepts Volume 3 ; 3 >
+    au < down ; 2008 ; Contributions to the History of Concepts Volume 4 ; 4 >
+    au < down ; 2009 ; Contributions to the History of Concepts Volume 5 ; 5 >
+    au < down ; 2011 ; Contributions to the History of Concepts Volume 6 ; 6 >
+    au < down ; 2012 ; Contributions to the History of Concepts Volume 7 ; 7 >
+    au < down ; 2013 ; Contributions to the History of Concepts Volume 8 ; 8 >
+    au < down ; 2014 ; Contributions to the History of Concepts Volume 9 ; 9 >
+    au < down ; 2015 ; Contributions to the History of Concepts Volume 10 ; 10 >
 
   }
 
@@ -247,8 +249,8 @@
     param[journal_id] = demt
     param[journal_issn] = 2332-8894
 
-    au < released ; 2014 ; Democratic Theory Volume 1 ; 1 >
-    au < released ; 2015 ; Democratic Theory Volume 2 ; 2 >
+    au < down ; 2014 ; Democratic Theory Volume 1 ; 1 >
+    au < down ; 2015 ; Democratic Theory Volume 2 ; 2 >
     
   }
 
@@ -264,18 +266,18 @@
     param[journal_id] = durk
     param[journal_issn] = 1362-024X
       
-    au < released ; 2003 ; Durkheimian Studies Volume 9 ; 9 >
-    au < released ; 2004 ; Durkheimian Studies Volume 10 ; 10 >
-    au < released ; 2005 ; Durkheimian Studies Volume 11 ; 11 >
-    au < released ; 2006 ; Durkheimian Studies Volume 12 ; 12 >
-    au < released ; 2007 ; Durkheimian Studies Volume 13 ; 13 >
-    au < released ; 2008 ; Durkheimian Studies Volume 14 ; 14 >
-    au < released ; 2009 ; Durkheimian Studies Volume 15 ; 15 >
-    au < released ; 2010 ; Durkheimian Studies Volume 16 ; 16 >
-    au < released ; 2011 ; Durkheimian Studies Volume 17 ; 17 >
-    au < released ; 2012 ; Durkheimian Studies Volume 18 ; 18 >
-    au < released ; 2013 ; Durkheimian Studies Volume 19 ; 19 >
-    au < released ; 2014 ; Durkheimian Studies Volume 20 ; 20 >
+    au < down ; 2003 ; Durkheimian Studies Volume 9 ; 9 >
+    au < down ; 2004 ; Durkheimian Studies Volume 10 ; 10 >
+    au < down ; 2005 ; Durkheimian Studies Volume 11 ; 11 >
+    au < down ; 2006 ; Durkheimian Studies Volume 12 ; 12 >
+    au < down ; 2007 ; Durkheimian Studies Volume 13 ; 13 >
+    au < down ; 2008 ; Durkheimian Studies Volume 14 ; 14 >
+    au < down ; 2009 ; Durkheimian Studies Volume 15 ; 15 >
+    au < down ; 2010 ; Durkheimian Studies Volume 16 ; 16 >
+    au < down ; 2011 ; Durkheimian Studies Volume 17 ; 17 >
+    au < down ; 2012 ; Durkheimian Studies Volume 18 ; 18 >
+    au < down ; 2013 ; Durkheimian Studies Volume 19 ; 19 >
+    au < down ; 2014 ; Durkheimian Studies Volume 20 ; 20 >
     
   }
 
@@ -290,12 +292,12 @@
     param[journal_id] = ares
     param[journal_issn] = 2150-6779
      
-    au < released ; 2010 ; Environment and Society Volume 1 ; 1 >
-    au < released ; 2011 ; Environment and Society Volume 2 ; 2 >
-    au < released ; 2012 ; Environment and Society Volume 3 ; 3 >
-    au < released ; 2013 ; Environment and Society Volume 4 ; 4 >
-    au < released ; 2014 ; Environment and Society Volume 5 ; 5 >
-    au < released ; 2015 ; Environment and Society Volume 6 ; 6 >
+    au < down ; 2010 ; Environment and Society Volume 1 ; 1 >
+    au < down ; 2011 ; Environment and Society Volume 2 ; 2 >
+    au < down ; 2012 ; Environment and Society Volume 3 ; 3 >
+    au < down ; 2013 ; Environment and Society Volume 4 ; 4 >
+    au < down ; 2014 ; Environment and Society Volume 5 ; 5 >
+    au < down ; 2015 ; Environment and Society Volume 6 ; 6 >
     
   }
 
@@ -313,14 +315,14 @@
     param[journal_id] = eca
     param[journal_issn] = 1754-3797
      
-    au < released ; 2008 ; European Comic Art Volume 1 ; 1 >
-    au < released ; 2009 ; European Comic Art Volume 2 ; 2 >
-    au < released ; 2010 ; European Comic Art Volume 3 ; 3 >
-    au < released ; 2011 ; European Comic Art Volume 4 ; 4 >
-    au < released ; 2012 ; European Comic Art Volume 5 ; 5 >
-    au < released ; 2013 ; European Comic Art Volume 6 ; 6 >
-    au < released ; 2014 ; European Comic Art Volume 7 ; 7 >
-    au < released ; 2015 ; European Comic Art Volume 8 ; 8 >
+    au < down ; 2008 ; European Comic Art Volume 1 ; 1 >
+    au < down ; 2009 ; European Comic Art Volume 2 ; 2 >
+    au < down ; 2010 ; European Comic Art Volume 3 ; 3 >
+    au < down ; 2011 ; European Comic Art Volume 4 ; 4 >
+    au < down ; 2012 ; European Comic Art Volume 5 ; 5 >
+    au < down ; 2013 ; European Comic Art Volume 6 ; 6 >
+    au < down ; 2014 ; European Comic Art Volume 7 ; 7 >
+    au < down ; 2015 ; European Comic Art Volume 8 ; 8 >
     
   }
 
@@ -336,23 +338,23 @@
     param[journal_id] = ejud
     param[journal_issn] = 0014-3006
    
-    au < released ; 1999 ; European Judaism Volume 32 ; 32 >
+    au < down ; 1999 ; European Judaism Volume 32 ; 32 >
     au < doesNotExist ; 0 ; European Judaism Volume 33 ; 33 >
-    au < released ; 2001 ; European Judaism Volume 34 ; 34 >
-    au < released ; 2002 ; European Judaism Volume 35 ; 35 >
-    au < released ; 2003 ; European Judaism Volume 36 ; 36 >
-    au < released ; 2004 ; European Judaism Volume 37 ; 37 >
-    au < released ; 2005 ; European Judaism Volume 38 ; 38 >
-    au < released ; 2006 ; European Judaism Volume 39 ; 39 >
-    au < released ; 2007 ; European Judaism Volume 40 ; 40 >
-    au < released ; 2008 ; European Judaism Volume 41 ; 41 >
-    au < released ; 2009 ; European Judaism Volume 42 ; 42 >
-    au < released ; 2010 ; European Judaism Volume 43 ; 43 >
-    au < released ; 2011 ; European Judaism Volume 44 ; 44 >
-    au < released ; 2012 ; European Judaism Volume 45 ; 45 >
-    au < released ; 2013 ; European Judaism Volume 46 ; 46 >
-    au < released ; 2014 ; European Judaism Volume 47 ; 47 >
-    au < released ; 2015 ; European Judaism Volume 48 ; 48 >
+    au < down ; 2001 ; European Judaism Volume 34 ; 34 >
+    au < down ; 2002 ; European Judaism Volume 35 ; 35 >
+    au < down ; 2003 ; European Judaism Volume 36 ; 36 >
+    au < down ; 2004 ; European Judaism Volume 37 ; 37 >
+    au < down ; 2005 ; European Judaism Volume 38 ; 38 >
+    au < down ; 2006 ; European Judaism Volume 39 ; 39 >
+    au < down ; 2007 ; European Judaism Volume 40 ; 40 >
+    au < down ; 2008 ; European Judaism Volume 41 ; 41 >
+    au < down ; 2009 ; European Judaism Volume 42 ; 42 >
+    au < down ; 2010 ; European Judaism Volume 43 ; 43 >
+    au < down ; 2011 ; European Judaism Volume 44 ; 44 >
+    au < down ; 2012 ; European Judaism Volume 45 ; 45 >
+    au < down ; 2013 ; European Judaism Volume 46 ; 46 >
+    au < down ; 2014 ; European Judaism Volume 47 ; 47 >
+    au < down ; 2015 ; European Judaism Volume 48 ; 48 >
   
   }
 
@@ -368,18 +370,18 @@
     param[journal_id] = focaal
     param[journal_issn] = 0920-1297
    
-    au < released ; 2004 ; Focaal Volume 2004 ; 2004 >
-    au < released ; 2005 ; Focaal Volume 2005 ; 2005 >
-    au < released ; 2006 ; Focaal Volume 2006 ; 2006 >
-    au < released ; 2007 ; Focaal Volume 2007 ; 2007 >
-    au < released ; 2008 ; Focaal Volume 2008 ; 2008 >
-    au < released ; 2009 ; Focaal Volume 2009 ; 2009 >
-    au < released ; 2010 ; Focaal Volume 2010 ; 2010 >
-    au < released ; 2011 ; Focaal Volume 2011 ; 2011 >
-    au < released ; 2012 ; Focaal Volume 2012 ; 2012 >
-    au < released ; 2013 ; Focaal Volume 2013 ; 2013 >
-    au < released ; 2014 ; Focaal Volume 2014 ; 2014 >
-    au < released ; 2015 ; Focaal Volume 2015 ; 2015 >
+    au < down ; 2004 ; Focaal Volume 2004 ; 2004 >
+    au < down ; 2005 ; Focaal Volume 2005 ; 2005 >
+    au < down ; 2006 ; Focaal Volume 2006 ; 2006 >
+    au < down ; 2007 ; Focaal Volume 2007 ; 2007 >
+    au < down ; 2008 ; Focaal Volume 2008 ; 2008 >
+    au < down ; 2009 ; Focaal Volume 2009 ; 2009 >
+    au < down ; 2010 ; Focaal Volume 2010 ; 2010 >
+    au < down ; 2011 ; Focaal Volume 2011 ; 2011 >
+    au < down ; 2012 ; Focaal Volume 2012 ; 2012 >
+    au < down ; 2013 ; Focaal Volume 2013 ; 2013 >
+    au < down ; 2014 ; Focaal Volume 2014 ; 2014 >
+    au < down ; 2015 ; Focaal Volume 2015 ; 2015 >
     
   }
 
@@ -395,23 +397,23 @@
     param[journal_id] = fpcs
     param[journal_issn] = 1537-6370
 
-    au < released ; 1999 ; French Politics, Culture & Society Volume 17 ; 17 >
-    au < released ; 2000 ; French Politics, Culture & Society Volume 18 ; 18 >
-    au < released ; 2001 ; French Politics, Culture & Society Volume 19 ; 19 >
-    au < released ; 2002 ; French Politics, Culture & Society Volume 20 ; 20 >
-    au < released ; 2003 ; French Politics, Culture & Society Volume 21 ; 21 >
-    au < released ; 2004 ; French Politics, Culture & Society Volume 22 ; 22 >
-    au < released ; 2005 ; French Politics, Culture & Society Volume 23 ; 23 >
-    au < released ; 2006 ; French Politics, Culture & Society Volume 24 ; 24 >
-    au < released ; 2007 ; French Politics, Culture & Society Volume 25 ; 25 >
-    au < released ; 2008 ; French Politics, Culture & Society Volume 26 ; 26 >
-    au < released ; 2009 ; French Politics, Culture & Society Volume 27 ; 27 >
-    au < released ; 2010 ; French Politics, Culture & Society Volume 28 ; 28 >
-    au < released ; 2011 ; French Politics, Culture & Society Volume 29 ; 29 >
-    au < released ; 2012 ; French Politics, Culture & Society Volume 30 ; 30 >
-    au < released ; 2013 ; French Politics, Culture & Society Volume 31 ; 31 >
-    au < released ; 2014 ; French Politics, Culture & Society Volume 32 ; 32 >
-    au < released ; 2015 ; French Politics, Culture & Society Volume 33 ; 33 >
+    au < down ; 1999 ; French Politics, Culture & Society Volume 17 ; 17 >
+    au < down ; 2000 ; French Politics, Culture & Society Volume 18 ; 18 >
+    au < down ; 2001 ; French Politics, Culture & Society Volume 19 ; 19 >
+    au < down ; 2002 ; French Politics, Culture & Society Volume 20 ; 20 >
+    au < down ; 2003 ; French Politics, Culture & Society Volume 21 ; 21 >
+    au < down ; 2004 ; French Politics, Culture & Society Volume 22 ; 22 >
+    au < down ; 2005 ; French Politics, Culture & Society Volume 23 ; 23 >
+    au < down ; 2006 ; French Politics, Culture & Society Volume 24 ; 24 >
+    au < down ; 2007 ; French Politics, Culture & Society Volume 25 ; 25 >
+    au < down ; 2008 ; French Politics, Culture & Society Volume 26 ; 26 >
+    au < down ; 2009 ; French Politics, Culture & Society Volume 27 ; 27 >
+    au < down ; 2010 ; French Politics, Culture & Society Volume 28 ; 28 >
+    au < down ; 2011 ; French Politics, Culture & Society Volume 29 ; 29 >
+    au < down ; 2012 ; French Politics, Culture & Society Volume 30 ; 30 >
+    au < down ; 2013 ; French Politics, Culture & Society Volume 31 ; 31 >
+    au < down ; 2014 ; French Politics, Culture & Society Volume 32 ; 32 >
+    au < down ; 2015 ; French Politics, Culture & Society Volume 33 ; 33 >
     
   }
 
@@ -427,24 +429,24 @@
     param[journal_id] = gerpol
     param[journal_issn] = 1045-0300
 
-    au < released ; 1998 ; German Politics and Society Volume 16 ; 16 >
-    au < released ; 1999 ; German Politics and Society Volume 17 ; 17 >
-    au < released ; 2000 ; German Politics and Society Volume 18 ; 18 >
-    au < released ; 2001 ; German Politics and Society Volume 19 ; 19 >
-    au < released ; 2002 ; German Politics and Society Volume 20 ; 20 >
-    au < released ; 2003 ; German Politics and Society Volume 21 ; 21 >
-    au < released ; 2004 ; German Politics and Society Volume 22 ; 22 >
-    au < released ; 2005 ; German Politics and Society Volume 23 ; 23 >
-    au < released ; 2006 ; German Politics and Society Volume 24 ; 24 >
-    au < released ; 2007 ; German Politics and Society Volume 25 ; 25 >
-    au < released ; 2008 ; German Politics and Society Volume 26 ; 26 >
-    au < released ; 2009 ; German Politics and Society Volume 27 ; 27 >
-    au < released ; 2010 ; German Politics and Society Volume 28 ; 28 >
-    au < released ; 2011 ; German Politics and Society Volume 29 ; 29 >
-    au < released ; 2012 ; German Politics and Society Volume 30 ; 30 >
-    au < released ; 2013 ; German Politics and Society Volume 31 ; 31 >
-    au < released ; 2014 ; German Politics and Society Volume 32 ; 32 >
-    au < released ; 2015 ; German Politics and Society Volume 33 ; 33 >
+    au < down ; 1998 ; German Politics and Society Volume 16 ; 16 >
+    au < down ; 1999 ; German Politics and Society Volume 17 ; 17 >
+    au < down ; 2000 ; German Politics and Society Volume 18 ; 18 >
+    au < down ; 2001 ; German Politics and Society Volume 19 ; 19 >
+    au < down ; 2002 ; German Politics and Society Volume 20 ; 20 >
+    au < down ; 2003 ; German Politics and Society Volume 21 ; 21 >
+    au < down ; 2004 ; German Politics and Society Volume 22 ; 22 >
+    au < down ; 2005 ; German Politics and Society Volume 23 ; 23 >
+    au < down ; 2006 ; German Politics and Society Volume 24 ; 24 >
+    au < down ; 2007 ; German Politics and Society Volume 25 ; 25 >
+    au < down ; 2008 ; German Politics and Society Volume 26 ; 26 >
+    au < down ; 2009 ; German Politics and Society Volume 27 ; 27 >
+    au < down ; 2010 ; German Politics and Society Volume 28 ; 28 >
+    au < down ; 2011 ; German Politics and Society Volume 29 ; 29 >
+    au < down ; 2012 ; German Politics and Society Volume 30 ; 30 >
+    au < down ; 2013 ; German Politics and Society Volume 31 ; 31 >
+    au < down ; 2014 ; German Politics and Society Volume 32 ; 32 >
+    au < down ; 2015 ; German Politics and Society Volume 33 ; 33 >
     
   }
 
@@ -460,14 +462,14 @@
     param[journal_id] = gs
     param[journal_issn] = 1938-8209
 
-    au < released ; 2008 ; Girlhood Studies Volume 1 ; 1 >
-    au < released ; 2009 ; Girlhood Studies Volume 2 ; 2 >
-    au < released ; 2010 ; Girlhood Studies Volume 3 ; 3 >
-    au < released ; 2011 ; Girlhood Studies Volume 4 ; 4 >
-    au < released ; 2012 ; Girlhood Studies Volume 5 ; 5 >
-    au < released ; 2013 ; Girlhood Studies Volume 6 ; 6 >
-    au < released ; 2014 ; Girlhood Studies Volume 7 ; 7 >
-    au < released ; 2015 ; Girlhood Studies Volume 8 ; 8 >
+    au < down ; 2008 ; Girlhood Studies Volume 1 ; 1 >
+    au < down ; 2009 ; Girlhood Studies Volume 2 ; 2 >
+    au < down ; 2010 ; Girlhood Studies Volume 3 ; 3 >
+    au < down ; 2011 ; Girlhood Studies Volume 4 ; 4 >
+    au < down ; 2012 ; Girlhood Studies Volume 5 ; 5 >
+    au < down ; 2013 ; Girlhood Studies Volume 6 ; 6 >
+    au < down ; 2014 ; Girlhood Studies Volume 7 ; 7 >
+    au < down ; 2015 ; Girlhood Studies Volume 8 ; 8 >
     
   }
 
@@ -483,14 +485,14 @@
     param[journal_id] = hisref
     param[journal_issn] = 0315-7997
       
-    au < released ; 2008 ; Historical Reflections/Reflexions Historiques Volume 34 ; 34 >
-    au < released ; 2009 ; Historical Reflections/Reflexions Historiques Volume 35 ; 35 >
-    au < released ; 2010 ; Historical Reflections/Reflexions Historiques Volume 36 ; 36 >
-    au < released ; 2011 ; Historical Reflections/Reflexions Historiques Volume 37 ; 37 >
-    au < released ; 2012 ; Historical Reflections/Reflexions Historiques Volume 38 ; 38 >
-    au < released ; 2013 ; Historical Reflections/Reflexions Historiques Volume 39 ; 39 >
-    au < released ; 2014 ; Historical Reflections/Reflexions Historiques Volume 40 ; 40 >
-    au < released ; 2015 ; Historical Reflections/Reflexions Historiques Volume 41 ; 41 >
+    au < down ; 2008 ; Historical Reflections/Reflexions Historiques Volume 34 ; 34 >
+    au < down ; 2009 ; Historical Reflections/Reflexions Historiques Volume 35 ; 35 >
+    au < down ; 2010 ; Historical Reflections/Reflexions Historiques Volume 36 ; 36 >
+    au < down ; 2011 ; Historical Reflections/Reflexions Historiques Volume 37 ; 37 >
+    au < down ; 2012 ; Historical Reflections/Reflexions Historiques Volume 38 ; 38 >
+    au < down ; 2013 ; Historical Reflections/Reflexions Historiques Volume 39 ; 39 >
+    au < down ; 2014 ; Historical Reflections/Reflexions Historiques Volume 40 ; 40 >
+    au < down ; 2015 ; Historical Reflections/Reflexions Historiques Volume 41 ; 41 >
     
   }
 
@@ -506,11 +508,11 @@
     param[journal_id] = ijsq
     param[journal_issn] = 1757-0344
     
-    au < released ; 2011 ; International Journal of Social Quality Volume 1 ; 1 >
-    au < released ; 2012 ; International Journal of Social Quality Volume 2 ; 2 >
-    au < released ; 2013 ; International Journal of Social Quality Volume 3 ; 3 >
-    au < released ; 2014 ; International Journal of Social Quality Volume 4 ; 4 >
-    au < released ; 2015 ; International Journal of Social Quality Volume 5 ; 5 >
+    au < down ; 2011 ; International Journal of Social Quality Volume 1 ; 1 >
+    au < down ; 2012 ; International Journal of Social Quality Volume 2 ; 2 >
+    au < down ; 2013 ; International Journal of Social Quality Volume 3 ; 3 >
+    au < down ; 2014 ; International Journal of Social Quality Volume 4 ; 4 >
+    au < down ; 2015 ; International Journal of Social Quality Volume 5 ; 5 >
     
   }
 
@@ -526,11 +528,11 @@
     param[journal_id] = isr
     param[journal_issn] = 2159-0389  
     
-    au < released ; 2011 ; Israel Studies Review Volume 26 ; 26 >
-    au < released ; 2012 ; Israel Studies Review Volume 27 ; 27 >
-    au < released ; 2013 ; Israel Studies Review Volume 28 ; 28 >
-    au < released ; 2014 ; Israel Studies Review Volume 29 ; 29 >
-    au < released ; 2015 ; Israel Studies Review Volume 30 ; 30 >
+    au < down ; 2011 ; Israel Studies Review Volume 26 ; 26 >
+    au < down ; 2012 ; Israel Studies Review Volume 27 ; 27 >
+    au < down ; 2013 ; Israel Studies Review Volume 28 ; 28 >
+    au < down ; 2014 ; Israel Studies Review Volume 29 ; 29 >
+    au < down ; 2015 ; Israel Studies Review Volume 30 ; 30 >
     
   }
 
@@ -545,10 +547,10 @@
     param[journal_id] = itpol
     param[journal_issn] = 1086-4946 
     
-    au < released ; 2012 ; Italian Politics Volume 27 ; 27 >
-    au < released ; 2013 ; Italian Politics Volume 28 ; 28 >
-    au < released ; 2014 ; Italian Politics Volume 29 ; 29 >
-    au < released ; 2015 ; Italian Politics Volume 30 ; 30 >
+    au < down ; 2012 ; Italian Politics Volume 27 ; 27 >
+    au < down ; 2013 ; Italian Politics Volume 28 ; 28 >
+    au < down ; 2014 ; Italian Politics Volume 29 ; 29 >
+    au < down ; 2015 ; Italian Politics Volume 30 ; 30 >
     
   }
  
@@ -564,13 +566,13 @@
     param[journal_id] = emms
     param[journal_issn] = 2041-6938
        
-    au < released ; 2009 ; Journal of Educational Media, Memory, and Society Volume 1 ; 1 >
-    au < released ; 2010 ; Journal of Educational Media, Memory, and Society Volume 2 ; 2 >
-    au < released ; 2011 ; Journal of Educational Media, Memory, and Society Volume 3 ; 3 >
-    au < released ; 2012 ; Journal of Educational Media, Memory, and Society Volume 4 ; 4 >
-    au < released ; 2013 ; Journal of Educational Media, Memory, and Society Volume 5 ; 5 >
-    au < released ; 2014 ; Journal of Educational Media, Memory, and Society Volume 6 ; 6 >
-    au < released ; 2015 ; Journal of Educational Media, Memory, and Society Volume 7 ; 7 >
+    au < down ; 2009 ; Journal of Educational Media, Memory, and Society Volume 1 ; 1 >
+    au < down ; 2010 ; Journal of Educational Media, Memory, and Society Volume 2 ; 2 >
+    au < down ; 2011 ; Journal of Educational Media, Memory, and Society Volume 3 ; 3 >
+    au < down ; 2012 ; Journal of Educational Media, Memory, and Society Volume 4 ; 4 >
+    au < down ; 2013 ; Journal of Educational Media, Memory, and Society Volume 5 ; 5 >
+    au < down ; 2014 ; Journal of Educational Media, Memory, and Society Volume 6 ; 6 >
+    au < down ; 2015 ; Journal of Educational Media, Memory, and Society Volume 7 ; 7 >
     
   }
 
@@ -587,21 +589,21 @@
     param[journal_id] = romance
     param[journal_issn] = 1473-3536
        
-    au < released ; 2001 ; Journal of Romance Studies Volume 1 ; 1 >
-    au < released ; 2002 ; Journal of Romance Studies Volume 2 ; 2 >
-    au < released ; 2003 ; Journal of Romance Studies Volume 3 ; 3 >
-    au < released ; 2004 ; Journal of Romance Studies Volume 4 ; 4 >
-    au < released ; 2005 ; Journal of Romance Studies Volume 5 ; 5 >
-    au < released ; 2006 ; Journal of Romance Studies Volume 6 ; 6 >
-    au < released ; 2007 ; Journal of Romance Studies Volume 7 ; 7 >
-    au < released ; 2008 ; Journal of Romance Studies Volume 8 ; 8 >
-    au < released ; 2009 ; Journal of Romance Studies Volume 9 ; 9 >
-    au < released ; 2010 ; Journal of Romance Studies Volume 10 ; 10 >
-    au < released ; 2011 ; Journal of Romance Studies Volume 11 ; 11 >
-    au < released ; 2012 ; Journal of Romance Studies Volume 12 ; 12 >
-    au < released ; 2013 ; Journal of Romance Studies Volume 13 ; 13 >
-    au < released ; 2014 ; Journal of Romance Studies Volume 14 ; 14 >
-    au < released ; 2015 ; Journal of Romance Studies Volume 15 ; 15 >
+    au < down ; 2001 ; Journal of Romance Studies Volume 1 ; 1 >
+    au < down ; 2002 ; Journal of Romance Studies Volume 2 ; 2 >
+    au < down ; 2003 ; Journal of Romance Studies Volume 3 ; 3 >
+    au < down ; 2004 ; Journal of Romance Studies Volume 4 ; 4 >
+    au < down ; 2005 ; Journal of Romance Studies Volume 5 ; 5 >
+    au < down ; 2006 ; Journal of Romance Studies Volume 6 ; 6 >
+    au < down ; 2007 ; Journal of Romance Studies Volume 7 ; 7 >
+    au < down ; 2008 ; Journal of Romance Studies Volume 8 ; 8 >
+    au < down ; 2009 ; Journal of Romance Studies Volume 9 ; 9 >
+    au < down ; 2010 ; Journal of Romance Studies Volume 10 ; 10 >
+    au < down ; 2011 ; Journal of Romance Studies Volume 11 ; 11 >
+    au < down ; 2012 ; Journal of Romance Studies Volume 12 ; 12 >
+    au < down ; 2013 ; Journal of Romance Studies Volume 13 ; 13 >
+    au < down ; 2014 ; Journal of Romance Studies Volume 14 ; 14 >
+    au < down ; 2015 ; Journal of Romance Studies Volume 15 ; 15 >
     
   }
 
@@ -617,22 +619,22 @@
     param[journal_id] = journ
     param[journal_issn] = 1465-2609
        
-    au < released ; 2000 ; Journeys Volume 1 ; 1 >
-    au < released ; 2001 ; Journeys Volume 2 ; 2 >
-    au < released ; 2002 ; Journeys Volume 3 ; 3 >
-    au < released ; 2003 ; Journeys Volume 4 ; 4 >
-    au < released ; 2004 ; Journeys Volume 5 ; 5 >
-    au < released ; 2005 ; Journeys Volume 6 ; 6 >
-    au < released ; 2006 ; Journeys Volume 7 ; 7 >
-    au < released ; 2007 ; Journeys Volume 8 ; 8 >
-    au < released ; 2008 ; Journeys Volume 9 ; 9 >
-    au < released ; 2009 ; Journeys Volume 10 ; 10 >
-    au < released ; 2010 ; Journeys Volume 11 ; 11 >
-    au < released ; 2011 ; Journeys Volume 12 ; 12 >
-    au < released ; 2012 ; Journeys Volume 13 ; 13 >
-    au < released ; 2013 ; Journeys Volume 14 ; 14 >
-    au < released ; 2014 ; Journeys Volume 15 ; 15 >
-    au < released ; 2015 ; Journeys Volume 16 ; 16 >
+    au < down ; 2000 ; Journeys Volume 1 ; 1 >
+    au < down ; 2001 ; Journeys Volume 2 ; 2 >
+    au < down ; 2002 ; Journeys Volume 3 ; 3 >
+    au < down ; 2003 ; Journeys Volume 4 ; 4 >
+    au < down ; 2004 ; Journeys Volume 5 ; 5 >
+    au < down ; 2005 ; Journeys Volume 6 ; 6 >
+    au < down ; 2006 ; Journeys Volume 7 ; 7 >
+    au < down ; 2007 ; Journeys Volume 8 ; 8 >
+    au < down ; 2008 ; Journeys Volume 9 ; 9 >
+    au < down ; 2009 ; Journeys Volume 10 ; 10 >
+    au < down ; 2010 ; Journeys Volume 11 ; 11 >
+    au < down ; 2011 ; Journeys Volume 12 ; 12 >
+    au < down ; 2012 ; Journeys Volume 13 ; 13 >
+    au < down ; 2013 ; Journeys Volume 14 ; 14 >
+    au < down ; 2014 ; Journeys Volume 15 ; 15 >
+    au < down ; 2015 ; Journeys Volume 16 ; 16 >
     
   }
 
@@ -647,14 +649,14 @@
     param[journal_id] = latiss
     param[journal_issn] = 1755-2273
        
-    au < released ; 2008 ; Learning and Teaching (LATISS) Volume 1 ; 1 >
-    au < released ; 2009 ; Learning and Teaching (LATISS) Volume 2 ; 2 >
-    au < released ; 2010 ; Learning and Teaching (LATISS) Volume 3 ; 3 >
-    au < released ; 2011 ; Learning and Teaching (LATISS) Volume 4 ; 4 >
-    au < released ; 2012 ; Learning and Teaching (LATISS) Volume 5 ; 5 >
-    au < released ; 2013 ; Learning and Teaching (LATISS) Volume 6 ; 6 >
-    au < released ; 2014 ; Learning and Teaching (LATISS) Volume 7 ; 7 >
-    au < released ; 2015 ; Learning and Teaching (LATISS) Volume 8 ; 8 >
+    au < down ; 2008 ; Learning and Teaching (LATISS) Volume 1 ; 1 >
+    au < down ; 2009 ; Learning and Teaching (LATISS) Volume 2 ; 2 >
+    au < down ; 2010 ; Learning and Teaching (LATISS) Volume 3 ; 3 >
+    au < down ; 2011 ; Learning and Teaching (LATISS) Volume 4 ; 4 >
+    au < down ; 2012 ; Learning and Teaching (LATISS) Volume 5 ; 5 >
+    au < down ; 2013 ; Learning and Teaching (LATISS) Volume 6 ; 6 >
+    au < down ; 2014 ; Learning and Teaching (LATISS) Volume 7 ; 7 >
+    au < down ; 2015 ; Learning and Teaching (LATISS) Volume 8 ; 8 >
     
   }
 
@@ -669,9 +671,9 @@
     param[journal_id] = mih
     param[journal_issn] = 2296-0503
 
-    au < released ; 2013 ; Mobility in History Volume 4 ; 4 >
-    au < released ; 2014 ; Mobility in History Volume 5 ; 5 >
-    au < released ; 2015 ; Mobility in History Volume 6 ; 6 >
+    au < down ; 2013 ; Mobility in History Volume 4 ; 4 >
+    au < down ; 2014 ; Mobility in History Volume 5 ; 5 >
+    au < down ; 2015 ; Mobility in History Volume 6 ; 6 >
     au < doNotProcess ; 2016 ; Mobility in History Volume 7 ; 7 >
     
   }
@@ -687,8 +689,8 @@
     param[journal_id] = armw
     param[journal_issn] = 2049-6729
 
-    au < released ; 2013 ; Museum Worlds: Advances in Research Volume 1 ; 1 >
-    au < released ; 2014 ; Museum Worlds: Advances in Research Volume 2 ; 2 >
+    au < down ; 2013 ; Museum Worlds: Advances in Research Volume 1 ; 1 >
+    au < down ; 2014 ; Museum Worlds: Advances in Research Volume 2 ; 2 >
     
   }
 
@@ -703,16 +705,16 @@
     param[journal_id] = natcult
     param[journal_issn] = 1558-6073
         
-    au < released ; 2006 ; Nature and Culture Volume 1 ; 1 >
-    au < released ; 2007 ; Nature and Culture Volume 2 ; 2 >
-    au < released ; 2008 ; Nature and Culture Volume 3 ; 3 >
-    au < released ; 2009 ; Nature and Culture Volume 4 ; 4 >
-    au < released ; 2010 ; Nature and Culture Volume 5 ; 5 >
-    au < released ; 2011 ; Nature and Culture Volume 6 ; 6 >
-    au < released ; 2012 ; Nature and Culture Volume 7 ; 7 >
-    au < released ; 2013 ; Nature and Culture Volume 8 ; 8 >
-    au < released ; 2014 ; Nature and Culture Volume 9 ; 9 >
-    au < released ; 2015 ; Nature and Culture Volume 10 ; 10 >
+    au < down ; 2006 ; Nature and Culture Volume 1 ; 1 >
+    au < down ; 2007 ; Nature and Culture Volume 2 ; 2 >
+    au < down ; 2008 ; Nature and Culture Volume 3 ; 3 >
+    au < down ; 2009 ; Nature and Culture Volume 4 ; 4 >
+    au < down ; 2010 ; Nature and Culture Volume 5 ; 5 >
+    au < down ; 2011 ; Nature and Culture Volume 6 ; 6 >
+    au < down ; 2012 ; Nature and Culture Volume 7 ; 7 >
+    au < down ; 2013 ; Nature and Culture Volume 8 ; 8 >
+    au < down ; 2014 ; Nature and Culture Volume 9 ; 9 >
+    au < down ; 2015 ; Nature and Culture Volume 10 ; 10 >
     
   }
 
@@ -761,15 +763,15 @@
     param[journal_id] = proj
     param[journal_issn] = 1934-9688
         
-    au < released ; 2007 ; Projections Volume 1 ; 1 >
-    au < released ; 2008 ; Projections Volume 2 ; 2 >
-    au < released ; 2009 ; Projections Volume 3 ; 3 >
-    au < released ; 2010 ; Projections Volume 4 ; 4 >
-    au < released ; 2011 ; Projections Volume 5 ; 5 >
-    au < released ; 2012 ; Projections Volume 6 ; 6 >
-    au < released ; 2013 ; Projections Volume 7 ; 7 >
-    au < released ; 2014 ; Projections Volume 8 ; 8 >
-    au < released ; 2015 ; Projections Volume 9 ; 9 >
+    au < down ; 2007 ; Projections Volume 1 ; 1 >
+    au < down ; 2008 ; Projections Volume 2 ; 2 >
+    au < down ; 2009 ; Projections Volume 3 ; 3 >
+    au < down ; 2010 ; Projections Volume 4 ; 4 >
+    au < down ; 2011 ; Projections Volume 5 ; 5 >
+    au < down ; 2012 ; Projections Volume 6 ; 6 >
+    au < down ; 2013 ; Projections Volume 7 ; 7 >
+    au < down ; 2014 ; Projections Volume 8 ; 8 >
+    au < down ; 2015 ; Projections Volume 9 ; 9 >
     
   }
 
@@ -785,11 +787,11 @@
     param[journal_id] = reco
     param[journal_issn] = 2152-906X
 
-    au < released ; 2011 ; Regions & Cohesion Volume 1 ; 1 >
-    au < released ; 2012 ; Regions & Cohesion Volume 2 ; 2 >
-    au < released ; 2013 ; Regions & Cohesion Volume 3 ; 3 >
-    au < released ; 2014 ; Regions & Cohesion Volume 4 ; 4 >
-    au < released ; 2015 ; Regions & Cohesion Volume 5 ; 5 >
+    au < down ; 2011 ; Regions & Cohesion Volume 1 ; 1 >
+    au < down ; 2012 ; Regions & Cohesion Volume 2 ; 2 >
+    au < down ; 2013 ; Regions & Cohesion Volume 3 ; 3 >
+    au < down ; 2014 ; Regions & Cohesion Volume 4 ; 4 >
+    au < down ; 2015 ; Regions & Cohesion Volume 5 ; 5 >
     
   }
 
@@ -805,12 +807,12 @@
     param[journal_id] = arrs
     param[journal_issn] = 2150-9298
 
-    au < released ; 2010 ; Religion and Society: Advances in Research Volume 1 ; 1 >
-    au < released ; 2011 ; Religion and Society: Advances in Research Volume 2 ; 2 >
-    au < released ; 2012 ; Religion and Society: Advances in Research Volume 3 ; 3 >
-    au < released ; 2013 ; Religion and Society: Advances in Research Volume 4 ; 4 >
-    au < released ; 2014 ; Religion and Society: Advances in Research Volume 5 ; 5 >
-    au < released ; 2015 ; Religion and Society: Advances in Research Volume 6 ; 6 >
+    au < down ; 2010 ; Religion and Society: Advances in Research Volume 1 ; 1 >
+    au < down ; 2011 ; Religion and Society: Advances in Research Volume 2 ; 2 >
+    au < down ; 2012 ; Religion and Society: Advances in Research Volume 3 ; 3 >
+    au < down ; 2013 ; Religion and Society: Advances in Research Volume 4 ; 4 >
+    au < down ; 2014 ; Religion and Society: Advances in Research Volume 5 ; 5 >
+    au < down ; 2015 ; Religion and Society: Advances in Research Volume 6 ; 6 >
   }
 
   {
@@ -824,25 +826,25 @@
     param[journal_id] = sartre
     param[journal_issn] = 1357-1559
 
-    au < released ; 1997 ; Sartre Studies International Volume 3 ; 3 >
-    au < released ; 1998 ; Sartre Studies International Volume 4 ; 4 >
-    au < released ; 1999 ; Sartre Studies International Volume 5 ; 5 >
-    au < released ; 2000 ; Sartre Studies International Volume 6 ; 6 >
-    au < released ; 2001 ; Sartre Studies International Volume 7 ; 7 >
-    au < released ; 2002 ; Sartre Studies International Volume 8 ; 8 >
-    au < released ; 2003 ; Sartre Studies International Volume 9 ; 9 >
-    au < released ; 2004 ; Sartre Studies International Volume 10 ; 10 >
-    au < released ; 2005 ; Sartre Studies International Volume 11 ; 11 >
-    au < released ; 2006 ; Sartre Studies International Volume 12 ; 12 >
-    au < released ; 2007 ; Sartre Studies International Volume 13 ; 13 >
-    au < released ; 2008 ; Sartre Studies International Volume 14 ; 14 >
-    au < released ; 2009 ; Sartre Studies International Volume 15 ; 15 >
-    au < released ; 2010 ; Sartre Studies International Volume 16 ; 16 >
-    au < released ; 2011 ; Sartre Studies International Volume 17 ; 17 >
-    au < released ; 2012 ; Sartre Studies International Volume 18 ; 18 >
-    au < released ; 2013 ; Sartre Studies International Volume 19 ; 19 >
-    au < released ; 2014 ; Sartre Studies International Volume 20 ; 20 >
-    au < released ; 2015 ; Sartre Studies International Volume 21 ; 21 >
+    au < down ; 1997 ; Sartre Studies International Volume 3 ; 3 >
+    au < down ; 1998 ; Sartre Studies International Volume 4 ; 4 >
+    au < down ; 1999 ; Sartre Studies International Volume 5 ; 5 >
+    au < down ; 2000 ; Sartre Studies International Volume 6 ; 6 >
+    au < down ; 2001 ; Sartre Studies International Volume 7 ; 7 >
+    au < down ; 2002 ; Sartre Studies International Volume 8 ; 8 >
+    au < down ; 2003 ; Sartre Studies International Volume 9 ; 9 >
+    au < down ; 2004 ; Sartre Studies International Volume 10 ; 10 >
+    au < down ; 2005 ; Sartre Studies International Volume 11 ; 11 >
+    au < down ; 2006 ; Sartre Studies International Volume 12 ; 12 >
+    au < down ; 2007 ; Sartre Studies International Volume 13 ; 13 >
+    au < down ; 2008 ; Sartre Studies International Volume 14 ; 14 >
+    au < down ; 2009 ; Sartre Studies International Volume 15 ; 15 >
+    au < down ; 2010 ; Sartre Studies International Volume 16 ; 16 >
+    au < down ; 2011 ; Sartre Studies International Volume 17 ; 17 >
+    au < down ; 2012 ; Sartre Studies International Volume 18 ; 18 >
+    au < down ; 2013 ; Sartre Studies International Volume 19 ; 19 >
+    au < down ; 2014 ; Sartre Studies International Volume 20 ; 20 >
+    au < down ; 2015 ; Sartre Studies International Volume 21 ; 21 >
     
   }
 
@@ -857,19 +859,19 @@
     param[journal_id] = sibiric
     param[journal_issn] = 1361-7362
        
-    au < released ; 2002 ; Sibirica Volume 2 ; 2 >
-    au < released ; 2003 ; Sibirica Volume 3 ; 3 >
-    au < released ; 2004 ; Sibirica Volume 4 ; 4 >
-    au < released ; 2006 ; Sibirica Volume 5 ; 5 >
-    au < released ; 2007 ; Sibirica Volume 6 ; 6 >
-    au < released ; 2008 ; Sibirica Volume 7 ; 7 >
-    au < released ; 2009 ; Sibirica Volume 8 ; 8 >
-    au < released ; 2010 ; Sibirica Volume 9 ; 9 >
-    au < released ; 2011 ; Sibirica Volume 10 ; 10 >
-    au < released ; 2012 ; Sibirica Volume 11 ; 11 >
-    au < released ; 2013 ; Sibirica Volume 12 ; 12 >
-    au < released ; 2014 ; Sibirica Volume 13 ; 13 >
-    au < released ; 2015 ; Sibirica Volume 14 ; 14 >
+    au < down ; 2002 ; Sibirica Volume 2 ; 2 >
+    au < down ; 2003 ; Sibirica Volume 3 ; 3 >
+    au < down ; 2004 ; Sibirica Volume 4 ; 4 >
+    au < down ; 2006 ; Sibirica Volume 5 ; 5 >
+    au < down ; 2007 ; Sibirica Volume 6 ; 6 >
+    au < down ; 2008 ; Sibirica Volume 7 ; 7 >
+    au < down ; 2009 ; Sibirica Volume 8 ; 8 >
+    au < down ; 2010 ; Sibirica Volume 9 ; 9 >
+    au < down ; 2011 ; Sibirica Volume 10 ; 10 >
+    au < down ; 2012 ; Sibirica Volume 11 ; 11 >
+    au < down ; 2013 ; Sibirica Volume 12 ; 12 >
+    au < down ; 2014 ; Sibirica Volume 13 ; 13 >
+    au < down ; 2015 ; Sibirica Volume 14 ; 14 >
     
   }
 
@@ -884,20 +886,20 @@
     param[journal_id] = socan
     param[journal_issn] = 0155-977X
         
-    au < released ; 2002 ; Social Analysis Volume 46 ; 46 >
-    au < released ; 2003 ; Social Analysis Volume 47 ; 47 >
-    au < released ; 2004 ; Social Analysis Volume 48 ; 48 >
-    au < released ; 2005 ; Social Analysis Volume 49 ; 49 >
-    au < released ; 2006 ; Social Analysis Volume 50 ; 50 >
-    au < released ; 2007 ; Social Analysis Volume 51 ; 51 >
-    au < released ; 2008 ; Social Analysis Volume 52 ; 52 >
-    au < released ; 2009 ; Social Analysis Volume 53 ; 53 >
-    au < released ; 2010 ; Social Analysis Volume 54 ; 54 >
-    au < released ; 2011 ; Social Analysis Volume 55 ; 55 >
-    au < released ; 2012 ; Social Analysis Volume 56 ; 56 >
-    au < released ; 2013 ; Social Analysis Volume 57 ; 57 >
-    au < released ; 2014 ; Social Analysis Volume 58 ; 58 >
-    au < released ; 2015 ; Social Analysis Volume 59 ; 59 >
+    au < down ; 2002 ; Social Analysis Volume 46 ; 46 >
+    au < down ; 2003 ; Social Analysis Volume 47 ; 47 >
+    au < down ; 2004 ; Social Analysis Volume 48 ; 48 >
+    au < down ; 2005 ; Social Analysis Volume 49 ; 49 >
+    au < down ; 2006 ; Social Analysis Volume 50 ; 50 >
+    au < down ; 2007 ; Social Analysis Volume 51 ; 51 >
+    au < down ; 2008 ; Social Analysis Volume 52 ; 52 >
+    au < down ; 2009 ; Social Analysis Volume 53 ; 53 >
+    au < down ; 2010 ; Social Analysis Volume 54 ; 54 >
+    au < down ; 2011 ; Social Analysis Volume 55 ; 55 >
+    au < down ; 2012 ; Social Analysis Volume 56 ; 56 >
+    au < down ; 2013 ; Social Analysis Volume 57 ; 57 >
+    au < down ; 2014 ; Social Analysis Volume 58 ; 58 >
+    au < down ; 2015 ; Social Analysis Volume 59 ; 59 >
     
   }
 
@@ -913,25 +915,25 @@
     param[journal_issn] = 0040-5817
 
 
-    au < released ; 1997 ; Theoria Volume 44 ; 44 >
-    au < released ; 1998 ; Theoria Volume 45 ; 45 >
-    au < released ; 1999 ; Theoria Volume 46 ; 46 >
-    au < released ; 2000 ; Theoria Volume 47 ; 47 >
-    au < released ; 2001 ; Theoria Volume 48 ; 48 >
-    au < released ; 2002 ; Theoria Volume 49 ; 49 >
-    au < released ; 2003 ; Theoria Volume 50 ; 50 >
-    au < released ; 2004 ; Theoria Volume 51 ; 51 >
-    au < released ; 2005 ; Theoria Volume 52 ; 52 >
-    au < released ; 2006 ; Theoria Volume 53 ; 53 >
-    au < released ; 2007 ; Theoria Volume 54 ; 54 >
-    au < released ; 2008 ; Theoria Volume 55 ; 55 >
-    au < released ; 2009 ; Theoria Volume 56 ; 56 >
-    au < released ; 2010 ; Theoria Volume 57 ; 57 >
-    au < released ; 2011 ; Theoria Volume 58 ; 58 >
-    au < released ; 2012 ; Theoria Volume 59 ; 59 >
-    au < released ; 2013 ; Theoria Volume 60 ; 60 >
-    au < released ; 2014 ; Theoria Volume 61 ; 61 >
-    au < released ; 2015 ; Theoria Volume 62 ; 62 >
+    au < down ; 1997 ; Theoria Volume 44 ; 44 >
+    au < down ; 1998 ; Theoria Volume 45 ; 45 >
+    au < down ; 1999 ; Theoria Volume 46 ; 46 >
+    au < down ; 2000 ; Theoria Volume 47 ; 47 >
+    au < down ; 2001 ; Theoria Volume 48 ; 48 >
+    au < down ; 2002 ; Theoria Volume 49 ; 49 >
+    au < down ; 2003 ; Theoria Volume 50 ; 50 >
+    au < down ; 2004 ; Theoria Volume 51 ; 51 >
+    au < down ; 2005 ; Theoria Volume 52 ; 52 >
+    au < down ; 2006 ; Theoria Volume 53 ; 53 >
+    au < down ; 2007 ; Theoria Volume 54 ; 54 >
+    au < down ; 2008 ; Theoria Volume 55 ; 55 >
+    au < down ; 2009 ; Theoria Volume 56 ; 56 >
+    au < down ; 2010 ; Theoria Volume 57 ; 57 >
+    au < down ; 2011 ; Theoria Volume 58 ; 58 >
+    au < down ; 2012 ; Theoria Volume 59 ; 59 >
+    au < down ; 2013 ; Theoria Volume 60 ; 60 >
+    au < down ; 2014 ; Theoria Volume 61 ; 61 >
+    au < down ; 2015 ; Theoria Volume 62 ; 62 >
     
   }
 
@@ -947,11 +949,11 @@
     param[journal_issn] = 2045-4813
 
 
-    au < released ; 2011 ; Transfers Volume 1 ; 1 >
-    au < released ; 2012 ; Transfers Volume 2 ; 2 >
-    au < released ; 2013 ; Transfers Volume 3 ; 3 >
-    au < released ; 2014 ; Transfers Volume 4 ; 4 >
-    au < released ; 2015 ; Transfers Volume 5 ; 5 >
+    au < down ; 2011 ; Transfers Volume 1 ; 1 >
+    au < down ; 2012 ; Transfers Volume 2 ; 2 >
+    au < down ; 2013 ; Transfers Volume 3 ; 3 >
+    au < down ; 2014 ; Transfers Volume 4 ; 4 >
+    au < down ; 2015 ; Transfers Volume 5 ; 5 >
     
   }
 }
