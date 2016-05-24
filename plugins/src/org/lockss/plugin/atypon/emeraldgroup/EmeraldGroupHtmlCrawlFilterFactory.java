@@ -49,9 +49,7 @@ public class EmeraldGroupHtmlCrawlFilterFactory
     // toc, abs, full - panel under breadcrubs with link to Current Issue,
     // http://www.emeraldinsight.com/toc/aaaj/26/8
     HtmlNodeFilters.tagWithAttributeRegex("li", "id", "currIssue"),
-    // toc, abs, full - previous/next issue/article
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                          "literatumBookIssueNavigation"),                                          
+                          
     // toc, abs, full -  right column
     // there are 2 data-pb-dropzone="right", one of them is part of the top ad
     // it's not unique tag, but I think it's OK for Emerald

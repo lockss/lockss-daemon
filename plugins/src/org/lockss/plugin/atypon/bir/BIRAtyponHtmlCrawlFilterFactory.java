@@ -47,20 +47,14 @@ public class BIRAtyponHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFa
       // prev/next issues
       // <td class="journalNavLeftTd">
       // <td class="journalNavRightTd">
+      // div id="relatedContent" - see  http://www.birpublications.org/doi/abs/10.1259/dmfr/24435203
       
       // toc, abs, full, ref - menu above breadcrumbs, Paper in Press links
       // to http://www.birpublications.org/toc/bjr/0/0
       // http://www.birpublications.org/toc/bjr/87/1038
       HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "menuXml"),
-      // toc - erratum section linking to Original Article
-      HtmlNodeFilters.tagWithAttribute("div", "class", "relatedLayer"),
-      // errata page linking to Original Article
-      // http://www.birpublications.org/doi/abs/10.1259/dmfr/24435203
-      HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent"),
-      // toc, abs, full, text and ref right column - most read 
-      // http://www.birpublications.org/toc/bjr/88/1052
-      HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                            "literatumMostReadWidget")    
+
+
       
   };
   @Override

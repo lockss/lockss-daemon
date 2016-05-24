@@ -45,16 +45,7 @@ public class EndocrineSocietyHtmlCrawlFilterFactory
   extends BaseAtyponHtmlCrawlFilterFactory {
   static NodeFilter[] filters = new NodeFilter[] {
    
-    // from issue toc or article: previous issue / next issue
-    HtmlNodeFilters.tagWithAttributeRegex(
-        "div", "class", "literatumBookIssueNavigation"),
-    // related content near Erratum
-    // http://press.endocrine.org/toc/endo/154/10       
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "relatedLayer"),
-    // related content from Related tab of Errata full text
-    // http://press.endocrine.org/doi/full/10.1210/en.2013-1802
-    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "relatedContent"),
-    
+
     // external links within Table figures or middle of a paragraph
     // ex: http://press.endocrine.org/doi/full/10.1210/en.2012-2254
     //     http://press.endocrine.org/doi/full/10.1210/en.2012-1768

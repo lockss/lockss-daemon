@@ -47,6 +47,7 @@ public class PracticalActionJournalsHtmlCrawlFilterFactory
   static NodeFilter[] filters = new NodeFilter[] {
     // handled by parent:
     // toc previous/next issue and article - <td class="journalNavRightTd">
+    // changed - now literatumMostRead literatumMostCited literatumBookIssueNav
     
     // toc, abs, ref - breadcrumbs
     // http://www.developmentbookshelf.com/doi/abs/10.3362/1755-1986.2014.004
@@ -61,10 +62,7 @@ public class PracticalActionJournalsHtmlCrawlFilterFactory
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "body-emphasis"),
         HtmlNodeFilters.tagWithAttributeRegex(
             "img", "alt", "Publication Cover")),
-    // toc, abs, ref - right column most read/most cited
-    HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),
-    // abs, ref - below <div class="response">, or after the main content
-    HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent")
+
 
   };
 

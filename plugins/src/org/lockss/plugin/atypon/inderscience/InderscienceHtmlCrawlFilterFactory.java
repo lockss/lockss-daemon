@@ -48,18 +48,8 @@ public class InderscienceHtmlCrawlFilterFactory
     // toc previous/next issue and article - <td class="journalNavRightTd">
     // toc, full, abs, ref - breadcrumbs
 
-    // toc, full, abs, ref - right column most read/most cited
-    // http://www.inderscienceonline.com/doi/abs/10.1504/AJAAF.2014.065176
-    // http://www.inderscienceonline.com/doi/full/10.1504/AJAAF.2014.065176
-    HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),
-    // full, abs, ref - below <div class="response">, or after the main content
-    HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent"),
-    // abs, full, ref - all right column except Citation Mgr (download citations)
-    // http://www.inderscienceonline.com/doi/full/10.1504/AJAAF.2014.065176                                      
-    HtmlNodeFilters.allExceptSubtree(
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleTools"),
-          HtmlNodeFilters.tagWithAttributeRegex(
-                 "a", "href", "/action/showCitFormats\\?")) 
+
+    // all has been moved up to parent..
   };
 
   @Override

@@ -48,17 +48,8 @@ public class MultiScienceHtmlCrawlFilterFactory
     // toc previous/next issue and article - <td class="journalNavRightTd">
     // toc, abs, ref - breadcrumbs
 
-    // toc, abs, ref - right column most read/most cited
-    // http://multi-science.atypon.com/doi/abs/10.1260/0263-6174.32.10.775
-    HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),
-    // abs, ref - below abstract keywords
-    HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent"),                                          
-    // abs - all right column except Citation Mgr (download citations)
-    // http://multi-science.atypon.com/doi/abs/10.1260/0263-6174.32.10.775                                       
-    HtmlNodeFilters.allExceptSubtree(
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleTools"),
-          HtmlNodeFilters.tagWithAttributeRegex(
-                 "a", "href", "/action/showCitFormats\\?")),   
+                               
+    //all has been moved up to parent for now... 
   };
 
   @Override

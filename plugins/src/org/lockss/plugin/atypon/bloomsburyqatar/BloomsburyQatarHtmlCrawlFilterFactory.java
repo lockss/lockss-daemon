@@ -61,6 +61,7 @@ public class BloomsburyQatarHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFi
       // do prev-next article as protection on overcrawling
       HtmlNodeFilters.tagWithAttribute("div", "class", "articleNavigation"),
       // breadcrumb which would lead back to toc as protection on overcrawling
+      // note this is not the more widely used "breadcrumbs..."
       HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumb"),
       
       // the tab with references for the article which could lead to other articles

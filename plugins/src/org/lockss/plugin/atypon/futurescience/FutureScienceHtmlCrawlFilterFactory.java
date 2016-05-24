@@ -59,9 +59,7 @@ public class FutureScienceHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilt
       // though I could verify that it is followed by <div class="header_divide"><h3>Users who read this article also read:</h3></div>
       HtmlNodeFilters.tagWithAttribute("div", "class", "full_text"),
 
-      //bibliography on an article page
-      HtmlNodeFilters.tagWithAttribute("table",  "class", "references"),
-      
+
       //overcrawling is an occasional issue with in-line references to "original article"
       //protect from further crawl by stopping "next/prev" article/TOC/issue
       //I cannot see an obvious way to stop next/prev issue on TOC, so just limit getting to wrong toc

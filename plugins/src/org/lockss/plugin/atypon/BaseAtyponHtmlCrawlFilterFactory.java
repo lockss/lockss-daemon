@@ -50,15 +50,28 @@ import org.lockss.plugin.*;
  * The basic AtyponHtmlCrawlFilterFactory
  * Child plugins can extend this class and add publisher specific crawl filters,
  * if necessary.  Common crawl filters can be easily added and be available to 
- * children.  Otherwise, this can be used by child plugins if no other crawl 
- * filters are needed.
- */
+ * children.  Otherwise, this can be used by child plugins if no other crawl filters needed
+ * NOTE - we are trending to adding more here so children are protected 
+ * automatically when they upgrade their html skins.
+ * But be sure only for tags that are specific enough as to be quite unlikely 
+ * to catch something else inadvertently
+ *  */
 
 public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
   protected static final Pattern corrections = Pattern.compile("Original Article|Corrigendum|Correction|Errata|Erratum", Pattern.CASE_INSENSITIVE);
   protected static NodeFilter[] baseAtyponFilters = new NodeFilter[] {
     
     HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
+    // toc, abs, full, text and ref right column - most read 
+    // http://www.birpublications.org/toc/bjr/88/1052
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+                                          "literatumMostReadWidget"),    
+
+    // toc - right column, current issue or book landing page
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+                                          "literatumBookIssueNavigation"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
+                                          "literatumMostCitedWidget"),                                          
     
     // Since overcrawling is a constant problem for Atypon, put common
     // next article-previous article link for safety; 
@@ -94,7 +107,25 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     // ASCE
     HtmlNodeFilters.tagWithAttribute("li",  "class", "reference"),
     //maney, future-science (also in child...will remove later)
-    HtmlNodeFilters.tagWithAttribute("table", "class", "references"),    
+    HtmlNodeFilters.tagWithAttribute("table", "class", "references"),
+
+    // abs, ref, suppl - all right column except Citation Mgr
+    // http://www.wageningenacademic.com/doi/abs/10.3920/BM2012.0069
+    HtmlNodeFilters.allExceptSubtree(
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleTools"),
+          HtmlNodeFilters.tagWithAttributeRegex(
+                 "a", "href", "/action/showCitFormats\\?")),
+    
+    // toc, abs, ref - right column most read/most cited
+    // http://www.inderscienceonline.com/doi/full/10.1504/AJAAF.2014.065176
+    HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),
+    // related content from Related tab of Errata full text
+    // http://press.endocrine.org/doi/full/10.1210/en.2013-1802
+    HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent"),
+    // toc - erratum section linking to Original Article - other flavor
+    // related content near Erratum
+    // http://press.endocrine.org/toc/endo/154/10       
+    HtmlNodeFilters.tagWithAttribute("div", "class", "relatedLayer"),
     
     // Not all Atypon plugins necessarily need this but MANY do and it is
     // an insidious source of over crawling

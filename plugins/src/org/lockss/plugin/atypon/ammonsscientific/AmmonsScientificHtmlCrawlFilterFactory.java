@@ -37,12 +37,9 @@ import java.util.regex.Pattern;
 
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.*;
 import org.htmlparser.tags.CompositeTag;
-import org.htmlparser.tags.Div;
 import org.htmlparser.tags.LinkTag;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 

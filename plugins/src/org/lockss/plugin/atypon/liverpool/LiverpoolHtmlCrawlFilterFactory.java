@@ -47,22 +47,8 @@ public class LiverpoolHtmlCrawlFilterFactory
     // handled by parent:
     // toc previous/next issue and article - <td class="journalNavRightTd">
     // toc, abs, ref - breadcrumbs
-    
-    // toc - right column most read/most cited
-    HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),
-    // abs - below abstract keywords
-    HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent"),
-    
-    //prev-next has upgraded
-    //class="widget literatumBookIssueNavigation none  widget-none  widget-compact-vertical"
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumBookIssueNavigation"),
-                                          
-    // abs - all right column except Citation Mgr (download citations)
-    // http://online.liverpooluniversitypress.co.uk/doi/abs/10.3828/bjcs.2013.2                                       
-    HtmlNodeFilters.allExceptSubtree(
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleTools"),
-          HtmlNodeFilters.tagWithAttributeRegex(
-                 "a", "href", "/action/showCitFormats\\?")),   
+                                             
+    // all has been moved up to parent
   };
 
   @Override

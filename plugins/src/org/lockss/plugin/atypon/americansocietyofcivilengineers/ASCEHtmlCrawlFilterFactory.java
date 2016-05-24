@@ -46,13 +46,14 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
 public class ASCEHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
   static NodeFilter[] filters = new NodeFilter[] {
+    //parent handles much, including...
+    // div id="relatedContent" which used to be in here...
     // left column section history
     // <div class="sessionViewed">
     // http://ascelibrary.org/toc/jaeied/18/4
     // http://ascelibrary.org/doi/full/10.1061/(ASCE)CO.1943-7862.0000372
     HtmlNodeFilters.tagWithAttribute("div", "class", "sessionViewed"),
-    // <div id="relatedContent"
-    HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent"),
+
     // on a book landing page the titleInfo leads back to the series of books and overcrawling
     // http://ascelibrary.org/doi/book/10.1061/9780784478820
     HtmlNodeFilters.tagWithAttribute("div", "class", "box-inner titleInfo"),

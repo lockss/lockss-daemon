@@ -47,6 +47,7 @@ public class AllenPressCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFacto
     //handled by BaseAtypon
     // a class="articleToolsNav"
     // div class="citedBySection"
+    // table class="references"
     // on TOC correction to article -text of "Original Article, or Erratum, or..."
 
     // div id="leftColumn"
@@ -55,8 +56,6 @@ public class AllenPressCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFacto
     // http://www.jgme.org/doi/full/10.4300/1949-8357-6.1.192
     // <a class="errata" href=...> (Original|Errata) </a> 
     HtmlNodeFilters.tagWithAttribute("a", "class", "errata"),
-    //full text page has references with links at the bottom - just being careful
-    HtmlNodeFilters.tagWithAttribute("table",  "class", "references"),
   };
 
   @Override

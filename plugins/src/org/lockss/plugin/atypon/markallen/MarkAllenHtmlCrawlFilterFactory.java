@@ -56,11 +56,7 @@ public class MarkAllenHtmlCrawlFilterFactory
     // http://www.magonlinelibrary.com/toc/bjom/21/10
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
                                           "genericSlideshow"),
-    
-    // toc, abs, full, text and ref right column - most read 
-    // http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.688
-    HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                          "literatumMostReadWidget")                     
+                     
                 
   };
 
