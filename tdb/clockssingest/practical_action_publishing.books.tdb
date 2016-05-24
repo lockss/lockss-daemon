@@ -21,6 +21,7 @@
       type = bookSeries
       >
       
+      #deactivated all crawling AUs on clockss-stanford temporarily 5/24/16 ARO
       au < finished ; crawling ; 1973 ; 978-0-903031-23-3 ; 978-1-78044-380-5 ; 9781780443805 ; Water Treatment and Sanitation (978-1-78044-380-5) ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 1973 ; 978-0-903031-82-0 ; 978-1-78044-278-5 ; 9781780442785 ; A Manual of Building Construction (978-1-78044-278-5) ; >
       au < finished ; crawling ; 1973 ; 978-1-85339-490-4 ; 978-1-78044-476-5 ; 9781780444765 ; Dictionary of Water Engineering (978-1-78044-476-5) ; reingest5.clockss.org:8082 >
