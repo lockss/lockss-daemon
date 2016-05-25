@@ -30,9 +30,9 @@
     au < doNotProcess ; 2011 ; Investigative Ophthalmology & Visual Science Volume 52 ; 2011 >
     au < doNotProcess ; 2012 ; Investigative Ophthalmology & Visual Science Volume 53 ; 2012 >
     au < doNotProcess ; 2013 ; Investigative Ophthalmology & Visual Science Volume 54 ; 2013 >
-    au < exists ; 2014 ; Investigative Ophthalmology & Visual Science Volume 55 ; 2014 >
-    au < exists ; 2015 ; Investigative Ophthalmology & Visual Science Volume 56 ; 2015 >
+
     }
+
     {
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://www.iovs.org/
@@ -47,8 +47,7 @@
     au < HighWirePressH20Plugin ; down ; 2011 ; Investigative Ophthalmology & Visual Science Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; down ; 2012 ; Investigative Ophthalmology & Visual Science Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; down ; 2013 ; Investigative Ophthalmology & Visual Science Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2014 ; Investigative Ophthalmology & Visual Science Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2015 ; Investigative Ophthalmology & Visual Science Volume 56 ; 56 >
+
     }
   }
 
