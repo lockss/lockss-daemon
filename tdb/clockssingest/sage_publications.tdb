@@ -5121,10 +5121,10 @@
       param[base_url] = http://cae.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2010 ; Cahiers Élisabéthains Volume 83 ; 83 ; >
-      au < exists ; exists ; 2011 ; Cahiers Élisabéthains Volume 84 ; 84 ; >
-      au < exists ; exists ; 2012 ; Cahiers Élisabéthains Volume 85 ; 85 ; >
-      au < exists ; exists ; 2013 ; Cahiers Élisabéthains Volume 86 ; 86 ; >
+      au < manifest ; exists ; 2010 ; Cahiers Élisabéthains Volume 83 ; 83 ; >
+      au < manifest ; exists ; 2011 ; Cahiers Élisabéthains Volume 84 ; 84 ; >
+      au < manifest ; exists ; 2012 ; Cahiers Élisabéthains Volume 85 ; 85 ; >
+      au < manifest ; exists ; 2013 ; Cahiers Élisabéthains Volume 86 ; 86 ; >
       au < manifest ; exists ; 2014 ; Cahiers Élisabéthains Volume 87 ; 87 ; >
       au < crawling ; exists ; 2015 ; Cahiers Élisabéthains Volume 88 ; 88 ; >
       au < manifest ; exists ; 2016 ; Cahiers Élisabéthains Volume 89 ; 89 ; >
@@ -8426,10 +8426,10 @@
       param[base_url] = http://cst.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2010 ; Critical Studies in Television Volume 5 ; 5 ; >
-      au < exists ; exists ; 2011 ; Critical Studies in Television Volume 6 ; 6 ; >
-      au < exists ; exists ; 2012 ; Critical Studies in Television Volume 7 ; 7 ; >
-      au < exists ; exists ; 2013 ; Critical Studies in Television Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2010 ; Critical Studies in Television Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2011 ; Critical Studies in Television Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2012 ; Critical Studies in Television Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2013 ; Critical Studies in Television Volume 8 ; 8 ; >
       au < manifest ; exists ; 2014 ; Critical Studies in Television Volume 9 ; 9 ; >
       au < crawling ; exists ; 2015 ; Critical Studies in Television Volume 10 ; 10 ; >
       au < manifest ; exists ; 2016 ; Critical Studies in Television Volume 11 ; 11 ; >
@@ -10486,7 +10486,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < crawling ; exists ; 2015 ; Emerging Economy Studies Volume 1 ; 1 ; >
-      au < expected ; exists ; 2016 ; Emerging Economy Studies Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2016 ; Emerging Economy Studies Volume 2 ; 2 ; >
 
   }
 
@@ -17279,7 +17279,7 @@
       au < exists ; exists ; 2013 ; The International Journal of Ocean and Climate Systems Volume 4 ; 4 ; >
       au < finished ; crawling ; 2014 ; The International Journal of Ocean and Climate Systems Volume 5 ; 5 ; >
       au < crawling ; exists ; 2015 ; The International Journal of Ocean and Climate Systems Volume 6 ; 6 ; >
-      au < expected ; exists ; 2016 ; The International Journal of Ocean and Climate Systems Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2016 ; The International Journal of Ocean and Climate Systems Volume 7 ; 7 ; >
 
   }
 
@@ -32225,7 +32225,7 @@
       au < crawling ; exists ; 2015 ; National Institute Economic Review Volume 233 ; 233 ; >
       au < crawling ; exists ; 2015 ; National Institute Economic Review Volume 234 ; 234 ; >
       au < manifest ; exists ; 2016 ; National Institute Economic Review Volume 235 ; 235 ; >
-      au < expected ; exists ; 2016 ; National Institute Economic Review Volume 236 ; 236 ; >
+      au < manifest ; exists ; 2016 ; National Institute Economic Review Volume 236 ; 236 ; >
       au < expected ; exists ; 2016 ; National Institute Economic Review Volume 237 ; 237 ; >
       au < expected ; exists ; 2016 ; National Institute Economic Review Volume 238 ; 238 ; >
 
@@ -33441,7 +33441,7 @@
 
     au < finished ; finished ; 2014 ; Paradigm Volume 18 ; 18 ; >
     au < crawling ; exists ; 2015 ; Paradigm Volume 19 ; 19 ; >
-    au < expected ; exists ; 2016 ; Paradigm Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2016 ; Paradigm Volume 20 ; 20 ; >
 
   }
 
@@ -40133,7 +40133,7 @@
 
       au < finished ; finished ; 2014 ; South Asian Journal of Human Resources Management Volume 1 ; 1 ; >
       au < crawling ; exists ; 2015 ; South Asian Journal of Human Resources Management Volume 2 ; 2 ; >
-      au < expected ; exists ; 2016 ; South Asian Journal of Human Resources Management Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2016 ; South Asian Journal of Human Resources Management Volume 3 ; 3 ; >
 
   }
 
@@ -47322,7 +47322,7 @@
         au < finished ; finished ; 2013 ; Health Services Management Research Volume 26 ; 26 ; >
         au < finished ; crawling ; 2014 ; Health Services Management Research Volume 27 ; 27 ; >
         au < crawling ; exists ; 2015 ; Health Services Management Research Volume 28 ; 28 ; >
-        au < expected ; exists ; 2016 ; Health Services Management Research Volume 29 ; 29 ; >
+        au < manifest ; exists ; 2016 ; Health Services Management Research Volume 29 ; 29 ; >
 
       }
 
