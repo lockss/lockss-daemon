@@ -1189,12 +1189,12 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 1961 ; Heart Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; released ; 1962 ; Heart Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; released ; 1963 ; Heart Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; manifest ; 1964 ; Heart Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; manifest ; 1965 ; Heart Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; manifest ; 1966 ; Heart Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; manifest ; 1967 ; Heart Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; manifest ; 1968 ; Heart Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; manifest ; 1969 ; Heart Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; testing ; 1964 ; Heart Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; testing ; 1965 ; Heart Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; testing ; 1966 ; Heart Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; testing ; 1967 ; Heart Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; testing ; 1968 ; Heart Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; testing ; 1969 ; Heart Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; ready ; 1970 ; Heart Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; ready ; 1971 ; Heart Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; ready ; 1972 ; Heart Volume 34 ; 34 >
@@ -1231,7 +1231,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; ready ; 1991 ; Heart Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; ready ; 1991 ; Heart Volume 66 ; 66 >
     au < HighWirePressH20Plugin ; ready ; 1992 ; Heart Volume 67 ; 67 >
-    au < HighWirePressH20Plugin ; manifest ; 1992 ; Heart Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; testing ; 1992 ; Heart Volume 68 ; 68 >
     au < HighWirePressH20Plugin ; ready ; 1993 ; Heart Volume 69 ; 69 >
     au < HighWirePressH20Plugin ; ready ; 1993 ; Heart Volume 70 ; 70 >
     au < HighWirePressH20Plugin ; ready ; 1994 ; Heart Volume 71 ; 71 >
@@ -1672,15 +1672,15 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; ready ; 1945 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; ready ; 1946 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; ready ; 1947 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1948 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 1949 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1950 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 1951 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 1952 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 1953 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 1954 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; testing ; 1948 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; testing ; 1949 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; testing ; 1950 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; testing ; 1951 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; testing ; 1952 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; testing ; 1953 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; testing ; 1954 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; ready ; 1955 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; manifest ; 1956 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; testing ; 1956 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; ready ; 1957 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; ready ; 1958 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; ready ; 1959 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 22 ; 22 >
@@ -1764,98 +1764,98 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
       param[base_url] = http://jramc.bmj.com/
 
-      au < HighWirePressH20Plugin ; testing ; 1903 ; Journal of the Royal Army Medical Corps Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; testing ; 1904 ; Journal of the Royal Army Medical Corps Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; testing ; 1904 ; Journal of the Royal Army Medical Corps Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; testing ; 1905 ; Journal of the Royal Army Medical Corps Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; testing ; 1905 ; Journal of the Royal Army Medical Corps Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; testing ; 1906 ; Journal of the Royal Army Medical Corps Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; testing ; 1906 ; Journal of the Royal Army Medical Corps Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; testing ; 1907 ; Journal of the Royal Army Medical Corps Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; testing ; 1907 ; Journal of the Royal Army Medical Corps Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; testing ; 1908 ; Journal of the Royal Army Medical Corps Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; testing ; 1908 ; Journal of the Royal Army Medical Corps Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; testing ; 1909 ; Journal of the Royal Army Medical Corps Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; testing ; 1909 ; Journal of the Royal Army Medical Corps Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; testing ; 1910 ; Journal of the Royal Army Medical Corps Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; testing ; 1910 ; Journal of the Royal Army Medical Corps Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; testing ; 1911 ; Journal of the Royal Army Medical Corps Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; testing ; 1911 ; Journal of the Royal Army Medical Corps Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; testing ; 1912 ; Journal of the Royal Army Medical Corps Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; testing ; 1912 ; Journal of the Royal Army Medical Corps Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; testing ; 1913 ; Journal of the Royal Army Medical Corps Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; testing ; 1913 ; Journal of the Royal Army Medical Corps Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; testing ; 1914 ; Journal of the Royal Army Medical Corps Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; testing ; 1914 ; Journal of the Royal Army Medical Corps Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; testing ; 1915 ; Journal of the Royal Army Medical Corps Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; testing ; 1915 ; Journal of the Royal Army Medical Corps Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; testing ; 1916 ; Journal of the Royal Army Medical Corps Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; testing ; 1916 ; Journal of the Royal Army Medical Corps Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; testing ; 1917 ; Journal of the Royal Army Medical Corps Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; testing ; 1917 ; Journal of the Royal Army Medical Corps Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; testing ; 1918 ; Journal of the Royal Army Medical Corps Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; testing ; 1918 ; Journal of the Royal Army Medical Corps Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; testing ; 1919 ; Journal of the Royal Army Medical Corps Volume 32 ; 32 >
-      au < HighWirePressH20Plugin ; testing ; 1919 ; Journal of the Royal Army Medical Corps Volume 33 ; 33 >
-      au < HighWirePressH20Plugin ; testing ; 1920 ; Journal of the Royal Army Medical Corps Volume 34 ; 34 >
-      au < HighWirePressH20Plugin ; testing ; 1920 ; Journal of the Royal Army Medical Corps Volume 35 ; 35 >
-      au < HighWirePressH20Plugin ; testing ; 1921 ; Journal of the Royal Army Medical Corps Volume 36 ; 36 >
-      au < HighWirePressH20Plugin ; testing ; 1921 ; Journal of the Royal Army Medical Corps Volume 37 ; 37 >
-      au < HighWirePressH20Plugin ; testing ; 1922 ; Journal of the Royal Army Medical Corps Volume 38 ; 38 >
-      au < HighWirePressH20Plugin ; testing ; 1922 ; Journal of the Royal Army Medical Corps Volume 39 ; 39 >
-      au < HighWirePressH20Plugin ; testing ; 1923 ; Journal of the Royal Army Medical Corps Volume 40 ; 40 >
-      au < HighWirePressH20Plugin ; testing ; 1923 ; Journal of the Royal Army Medical Corps Volume 41 ; 41 >
-      au < HighWirePressH20Plugin ; testing ; 1924 ; Journal of the Royal Army Medical Corps Volume 42 ; 42 >
-      au < HighWirePressH20Plugin ; testing ; 1924 ; Journal of the Royal Army Medical Corps Volume 43 ; 43 >
-      au < HighWirePressH20Plugin ; testing ; 1925 ; Journal of the Royal Army Medical Corps Volume 44 ; 44 >
-      au < HighWirePressH20Plugin ; testing ; 1925 ; Journal of the Royal Army Medical Corps Volume 45 ; 45 >
-      au < HighWirePressH20Plugin ; testing ; 1926 ; Journal of the Royal Army Medical Corps Volume 46 ; 46 >
-      au < HighWirePressH20Plugin ; testing ; 1926 ; Journal of the Royal Army Medical Corps Volume 47 ; 47 >
-      au < HighWirePressH20Plugin ; testing ; 1927 ; Journal of the Royal Army Medical Corps Volume 48 ; 48 >
-      au < HighWirePressH20Plugin ; testing ; 1927 ; Journal of the Royal Army Medical Corps Volume 49 ; 49 >
-      au < HighWirePressH20Plugin ; testing ; 1928 ; Journal of the Royal Army Medical Corps Volume 50 ; 50 >
-      au < HighWirePressH20Plugin ; testing ; 1928 ; Journal of the Royal Army Medical Corps Volume 51 ; 51 >
-      au < HighWirePressH20Plugin ; testing ; 1929 ; Journal of the Royal Army Medical Corps Volume 52 ; 52 >
-      au < HighWirePressH20Plugin ; testing ; 1929 ; Journal of the Royal Army Medical Corps Volume 53 ; 53 >
-      au < HighWirePressH20Plugin ; testing ; 1930 ; Journal of the Royal Army Medical Corps Volume 54 ; 54 >
-      au < HighWirePressH20Plugin ; testing ; 1930 ; Journal of the Royal Army Medical Corps Volume 55 ; 55 >
-      au < HighWirePressH20Plugin ; testing ; 1931 ; Journal of the Royal Army Medical Corps Volume 56 ; 56 >
-      au < HighWirePressH20Plugin ; testing ; 1931 ; Journal of the Royal Army Medical Corps Volume 57 ; 57 >
-      au < HighWirePressH20Plugin ; testing ; 1932 ; Journal of the Royal Army Medical Corps Volume 58 ; 58 >
-      au < HighWirePressH20Plugin ; testing ; 1932 ; Journal of the Royal Army Medical Corps Volume 59 ; 59 >
-      au < HighWirePressH20Plugin ; testing ; 1933 ; Journal of the Royal Army Medical Corps Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; ready ; 1903 ; Journal of the Royal Army Medical Corps Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; ready ; 1904 ; Journal of the Royal Army Medical Corps Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; ready ; 1904 ; Journal of the Royal Army Medical Corps Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; ready ; 1905 ; Journal of the Royal Army Medical Corps Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; ready ; 1905 ; Journal of the Royal Army Medical Corps Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; ready ; 1906 ; Journal of the Royal Army Medical Corps Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; ready ; 1906 ; Journal of the Royal Army Medical Corps Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; ready ; 1907 ; Journal of the Royal Army Medical Corps Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; ready ; 1907 ; Journal of the Royal Army Medical Corps Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; ready ; 1908 ; Journal of the Royal Army Medical Corps Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; ready ; 1908 ; Journal of the Royal Army Medical Corps Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; ready ; 1909 ; Journal of the Royal Army Medical Corps Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; ready ; 1909 ; Journal of the Royal Army Medical Corps Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; ready ; 1910 ; Journal of the Royal Army Medical Corps Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; ready ; 1910 ; Journal of the Royal Army Medical Corps Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; ready ; 1911 ; Journal of the Royal Army Medical Corps Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; ready ; 1911 ; Journal of the Royal Army Medical Corps Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; ready ; 1912 ; Journal of the Royal Army Medical Corps Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; ready ; 1912 ; Journal of the Royal Army Medical Corps Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; ready ; 1913 ; Journal of the Royal Army Medical Corps Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; ready ; 1913 ; Journal of the Royal Army Medical Corps Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; ready ; 1914 ; Journal of the Royal Army Medical Corps Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; ready ; 1914 ; Journal of the Royal Army Medical Corps Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; ready ; 1915 ; Journal of the Royal Army Medical Corps Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; ready ; 1915 ; Journal of the Royal Army Medical Corps Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; ready ; 1916 ; Journal of the Royal Army Medical Corps Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; ready ; 1916 ; Journal of the Royal Army Medical Corps Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; ready ; 1917 ; Journal of the Royal Army Medical Corps Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; ready ; 1917 ; Journal of the Royal Army Medical Corps Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; ready ; 1918 ; Journal of the Royal Army Medical Corps Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; ready ; 1918 ; Journal of the Royal Army Medical Corps Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; ready ; 1919 ; Journal of the Royal Army Medical Corps Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; ready ; 1919 ; Journal of the Royal Army Medical Corps Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; ready ; 1920 ; Journal of the Royal Army Medical Corps Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; ready ; 1920 ; Journal of the Royal Army Medical Corps Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; ready ; 1921 ; Journal of the Royal Army Medical Corps Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; ready ; 1921 ; Journal of the Royal Army Medical Corps Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; ready ; 1922 ; Journal of the Royal Army Medical Corps Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; ready ; 1922 ; Journal of the Royal Army Medical Corps Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; ready ; 1923 ; Journal of the Royal Army Medical Corps Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; ready ; 1923 ; Journal of the Royal Army Medical Corps Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; ready ; 1924 ; Journal of the Royal Army Medical Corps Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; ready ; 1924 ; Journal of the Royal Army Medical Corps Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; ready ; 1925 ; Journal of the Royal Army Medical Corps Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; ready ; 1925 ; Journal of the Royal Army Medical Corps Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; ready ; 1926 ; Journal of the Royal Army Medical Corps Volume 46 ; 46 >
+      au < HighWirePressH20Plugin ; ready ; 1926 ; Journal of the Royal Army Medical Corps Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; ready ; 1927 ; Journal of the Royal Army Medical Corps Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; ready ; 1927 ; Journal of the Royal Army Medical Corps Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; ready ; 1928 ; Journal of the Royal Army Medical Corps Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; ready ; 1928 ; Journal of the Royal Army Medical Corps Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; ready ; 1929 ; Journal of the Royal Army Medical Corps Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; ready ; 1929 ; Journal of the Royal Army Medical Corps Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; ready ; 1930 ; Journal of the Royal Army Medical Corps Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; ready ; 1930 ; Journal of the Royal Army Medical Corps Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; ready ; 1931 ; Journal of the Royal Army Medical Corps Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; ready ; 1931 ; Journal of the Royal Army Medical Corps Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; ready ; 1932 ; Journal of the Royal Army Medical Corps Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; ready ; 1932 ; Journal of the Royal Army Medical Corps Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; ready ; 1933 ; Journal of the Royal Army Medical Corps Volume 60 ; 60 >
       au < HighWirePressH20Plugin ; testing ; 1933 ; Journal of the Royal Army Medical Corps Volume 61 ; 61 >
-      au < HighWirePressH20Plugin ; testing ; 1934 ; Journal of the Royal Army Medical Corps Volume 62 ; 62 >
-      au < HighWirePressH20Plugin ; testing ; 1934 ; Journal of the Royal Army Medical Corps Volume 63 ; 63 >
-      au < HighWirePressH20Plugin ; testing ; 1935 ; Journal of the Royal Army Medical Corps Volume 64 ; 64 >
-      au < HighWirePressH20Plugin ; testing ; 1935 ; Journal of the Royal Army Medical Corps Volume 65 ; 65 >
-      au < HighWirePressH20Plugin ; testing ; 1936 ; Journal of the Royal Army Medical Corps Volume 66 ; 66 >
-      au < HighWirePressH20Plugin ; testing ; 1936 ; Journal of the Royal Army Medical Corps Volume 67 ; 67 >
-      au < HighWirePressH20Plugin ; testing ; 1937 ; Journal of the Royal Army Medical Corps Volume 68 ; 68 >
+      au < HighWirePressH20Plugin ; ready ; 1934 ; Journal of the Royal Army Medical Corps Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; ready ; 1934 ; Journal of the Royal Army Medical Corps Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; ready ; 1935 ; Journal of the Royal Army Medical Corps Volume 64 ; 64 >
+      au < HighWirePressH20Plugin ; ready ; 1935 ; Journal of the Royal Army Medical Corps Volume 65 ; 65 >
+      au < HighWirePressH20Plugin ; ready ; 1936 ; Journal of the Royal Army Medical Corps Volume 66 ; 66 >
+      au < HighWirePressH20Plugin ; ready ; 1936 ; Journal of the Royal Army Medical Corps Volume 67 ; 67 >
+      au < HighWirePressH20Plugin ; ready ; 1937 ; Journal of the Royal Army Medical Corps Volume 68 ; 68 >
       au < HighWirePressH20Plugin ; testing ; 1937 ; Journal of the Royal Army Medical Corps Volume 69 ; 69 >
-      au < HighWirePressH20Plugin ; testing ; 1938 ; Journal of the Royal Army Medical Corps Volume 70 ; 70 >
-      au < HighWirePressH20Plugin ; testing ; 1938 ; Journal of the Royal Army Medical Corps Volume 71 ; 71 >
-      au < HighWirePressH20Plugin ; testing ; 1939 ; Journal of the Royal Army Medical Corps Volume 72 ; 72 >
-      au < HighWirePressH20Plugin ; testing ; 1939 ; Journal of the Royal Army Medical Corps Volume 73 ; 73 >
-      au < HighWirePressH20Plugin ; testing ; 1940 ; Journal of the Royal Army Medical Corps Volume 74 ; 74 >
-      au < HighWirePressH20Plugin ; testing ; 1940 ; Journal of the Royal Army Medical Corps Volume 75 ; 75 >
-      au < HighWirePressH20Plugin ; testing ; 1941 ; Journal of the Royal Army Medical Corps Volume 76 ; 76 >
-      au < HighWirePressH20Plugin ; testing ; 1941 ; Journal of the Royal Army Medical Corps Volume 77 ; 77 >
-      au < HighWirePressH20Plugin ; testing ; 1942 ; Journal of the Royal Army Medical Corps Volume 78 ; 78 >
-      au < HighWirePressH20Plugin ; testing ; 1942 ; Journal of the Royal Army Medical Corps Volume 79 ; 79 >
-      au < HighWirePressH20Plugin ; testing ; 1943 ; Journal of the Royal Army Medical Corps Volume 80 ; 80 >
-      au < HighWirePressH20Plugin ; testing ; 1943 ; Journal of the Royal Army Medical Corps Volume 81 ; 81 >
-      au < HighWirePressH20Plugin ; testing ; 1944 ; Journal of the Royal Army Medical Corps Volume 82 ; 82 >
-      au < HighWirePressH20Plugin ; testing ; 1944 ; Journal of the Royal Army Medical Corps Volume 83 ; 83 >
-      au < HighWirePressH20Plugin ; testing ; 1945 ; Journal of the Royal Army Medical Corps Volume 84 ; 84 >
-      au < HighWirePressH20Plugin ; testing ; 1945 ; Journal of the Royal Army Medical Corps Volume 85 ; 85 >
-      au < HighWirePressH20Plugin ; testing ; 1946 ; Journal of the Royal Army Medical Corps Volume 86 ; 86 >
-      au < HighWirePressH20Plugin ; testing ; 1946 ; Journal of the Royal Army Medical Corps Volume 87 ; 87 >
-      au < HighWirePressH20Plugin ; testing ; 1947 ; Journal of the Royal Army Medical Corps Volume 88 ; 88 >
-      au < HighWirePressH20Plugin ; testing ; 1947 ; Journal of the Royal Army Medical Corps Volume 89 ; 89 >
-      au < HighWirePressH20Plugin ; testing ; 1948 ; Journal of the Royal Army Medical Corps Volume 90 ; 90 >
-      au < HighWirePressH20Plugin ; testing ; 1948 ; Journal of the Royal Army Medical Corps Volume 91 ; 91 >
-      au < HighWirePressH20Plugin ; testing ; 1949 ; Journal of the Royal Army Medical Corps Volume 92 ; 92 >
+      au < HighWirePressH20Plugin ; ready ; 1938 ; Journal of the Royal Army Medical Corps Volume 70 ; 70 >
+      au < HighWirePressH20Plugin ; ready ; 1938 ; Journal of the Royal Army Medical Corps Volume 71 ; 71 >
+      au < HighWirePressH20Plugin ; ready ; 1939 ; Journal of the Royal Army Medical Corps Volume 72 ; 72 >
+      au < HighWirePressH20Plugin ; ready ; 1939 ; Journal of the Royal Army Medical Corps Volume 73 ; 73 >
+      au < HighWirePressH20Plugin ; ready ; 1940 ; Journal of the Royal Army Medical Corps Volume 74 ; 74 >
+      au < HighWirePressH20Plugin ; ready ; 1940 ; Journal of the Royal Army Medical Corps Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; ready ; 1941 ; Journal of the Royal Army Medical Corps Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; ready ; 1941 ; Journal of the Royal Army Medical Corps Volume 77 ; 77 >
+      au < HighWirePressH20Plugin ; ready ; 1942 ; Journal of the Royal Army Medical Corps Volume 78 ; 78 >
+      au < HighWirePressH20Plugin ; ready ; 1942 ; Journal of the Royal Army Medical Corps Volume 79 ; 79 >
+      au < HighWirePressH20Plugin ; ready ; 1943 ; Journal of the Royal Army Medical Corps Volume 80 ; 80 >
+      au < HighWirePressH20Plugin ; ready ; 1943 ; Journal of the Royal Army Medical Corps Volume 81 ; 81 >
+      au < HighWirePressH20Plugin ; ready ; 1944 ; Journal of the Royal Army Medical Corps Volume 82 ; 82 >
+      au < HighWirePressH20Plugin ; ready ; 1944 ; Journal of the Royal Army Medical Corps Volume 83 ; 83 >
+      au < HighWirePressH20Plugin ; ready ; 1945 ; Journal of the Royal Army Medical Corps Volume 84 ; 84 >
+      au < HighWirePressH20Plugin ; ready ; 1945 ; Journal of the Royal Army Medical Corps Volume 85 ; 85 >
+      au < HighWirePressH20Plugin ; ready ; 1946 ; Journal of the Royal Army Medical Corps Volume 86 ; 86 >
+      au < HighWirePressH20Plugin ; ready ; 1946 ; Journal of the Royal Army Medical Corps Volume 87 ; 87 >
+      au < HighWirePressH20Plugin ; ready ; 1947 ; Journal of the Royal Army Medical Corps Volume 88 ; 88 >
+      au < HighWirePressH20Plugin ; ready ; 1947 ; Journal of the Royal Army Medical Corps Volume 89 ; 89 >
+      au < HighWirePressH20Plugin ; ready ; 1948 ; Journal of the Royal Army Medical Corps Volume 90 ; 90 >
+      au < HighWirePressH20Plugin ; ready ; 1948 ; Journal of the Royal Army Medical Corps Volume 91 ; 91 >
+      au < HighWirePressH20Plugin ; ready ; 1949 ; Journal of the Royal Army Medical Corps Volume 92 ; 92 >
       au < HighWirePressH20Plugin ; doesNotExist ; 0 ; Journal of the Royal Army Medical Corps Volume 93 ; 93 >
       au < HighWirePressH20Plugin ; doesNotExist ; 0 ; Journal of the Royal Army Medical Corps Volume 94 ; 94 >
       au < HighWirePressH20Plugin ; doesNotExist ; 0 ; Journal of the Royal Army Medical Corps Volume 95 ; 95 >
@@ -2017,52 +2017,52 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://oem.bmj.com/
 
-    au < HighWirePressH20Plugin ; testing ; 1944 ; Occupational and Environmental Medicine Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; testing ; 1945 ; Occupational and Environmental Medicine Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; testing ; 1946 ; Occupational and Environmental Medicine Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; testing ; 1947 ; Occupational and Environmental Medicine Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; testing ; 1948 ; Occupational and Environmental Medicine Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; testing ; 1949 ; Occupational and Environmental Medicine Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; testing ; 1950 ; Occupational and Environmental Medicine Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; testing ; 1951 ; Occupational and Environmental Medicine Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; testing ; 1952 ; Occupational and Environmental Medicine Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; testing ; 1953 ; Occupational and Environmental Medicine Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; testing ; 1954 ; Occupational and Environmental Medicine Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; testing ; 1955 ; Occupational and Environmental Medicine Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; testing ; 1956 ; Occupational and Environmental Medicine Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; testing ; 1957 ; Occupational and Environmental Medicine Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; testing ; 1958 ; Occupational and Environmental Medicine Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; testing ; 1959 ; Occupational and Environmental Medicine Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; testing ; 1960 ; Occupational and Environmental Medicine Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; testing ; 1961 ; Occupational and Environmental Medicine Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; testing ; 1962 ; Occupational and Environmental Medicine Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; testing ; 1963 ; Occupational and Environmental Medicine Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; testing ; 1964 ; Occupational and Environmental Medicine Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; testing ; 1965 ; Occupational and Environmental Medicine Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; testing ; 1966 ; Occupational and Environmental Medicine Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; testing ; 1967 ; Occupational and Environmental Medicine Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; testing ; 1968 ; Occupational and Environmental Medicine Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; testing ; 1969 ; Occupational and Environmental Medicine Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; testing ; 1970 ; Occupational and Environmental Medicine Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; testing ; 1971 ; Occupational and Environmental Medicine Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; testing ; 1972 ; Occupational and Environmental Medicine Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; testing ; 1973 ; Occupational and Environmental Medicine Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; testing ; 1974 ; Occupational and Environmental Medicine Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; testing ; 1975 ; Occupational and Environmental Medicine Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; testing ; 1976 ; Occupational and Environmental Medicine Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; testing ; 1977 ; Occupational and Environmental Medicine Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; testing ; 1978 ; Occupational and Environmental Medicine Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; testing ; 1979 ; Occupational and Environmental Medicine Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; testing ; 1980 ; Occupational and Environmental Medicine Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; testing ; 1981 ; Occupational and Environmental Medicine Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; testing ; 1982 ; Occupational and Environmental Medicine Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; testing ; 1983 ; Occupational and Environmental Medicine Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; testing ; 1984 ; Occupational and Environmental Medicine Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; testing ; 1985 ; Occupational and Environmental Medicine Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; testing ; 1986 ; Occupational and Environmental Medicine Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; testing ; 1987 ; Occupational and Environmental Medicine Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; testing ; 1988 ; Occupational and Environmental Medicine Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; testing ; 1989 ; Occupational and Environmental Medicine Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; ready ; 1944 ; Occupational and Environmental Medicine Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 1945 ; Occupational and Environmental Medicine Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 1946 ; Occupational and Environmental Medicine Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 1947 ; Occupational and Environmental Medicine Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; ready ; 1948 ; Occupational and Environmental Medicine Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; ready ; 1949 ; Occupational and Environmental Medicine Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; ready ; 1950 ; Occupational and Environmental Medicine Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; ready ; 1951 ; Occupational and Environmental Medicine Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; ready ; 1952 ; Occupational and Environmental Medicine Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; ready ; 1953 ; Occupational and Environmental Medicine Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; ready ; 1954 ; Occupational and Environmental Medicine Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; ready ; 1955 ; Occupational and Environmental Medicine Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; ready ; 1956 ; Occupational and Environmental Medicine Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; ready ; 1957 ; Occupational and Environmental Medicine Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 1958 ; Occupational and Environmental Medicine Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; ready ; 1959 ; Occupational and Environmental Medicine Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; ready ; 1960 ; Occupational and Environmental Medicine Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; ready ; 1961 ; Occupational and Environmental Medicine Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; ready ; 1962 ; Occupational and Environmental Medicine Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; ready ; 1963 ; Occupational and Environmental Medicine Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; ready ; 1964 ; Occupational and Environmental Medicine Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; ready ; 1965 ; Occupational and Environmental Medicine Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; ready ; 1966 ; Occupational and Environmental Medicine Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; ready ; 1967 ; Occupational and Environmental Medicine Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; ready ; 1968 ; Occupational and Environmental Medicine Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; ready ; 1969 ; Occupational and Environmental Medicine Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; ready ; 1970 ; Occupational and Environmental Medicine Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; ready ; 1971 ; Occupational and Environmental Medicine Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; ready ; 1972 ; Occupational and Environmental Medicine Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; ready ; 1973 ; Occupational and Environmental Medicine Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; ready ; 1974 ; Occupational and Environmental Medicine Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; ready ; 1975 ; Occupational and Environmental Medicine Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; ready ; 1976 ; Occupational and Environmental Medicine Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; ready ; 1977 ; Occupational and Environmental Medicine Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; ready ; 1978 ; Occupational and Environmental Medicine Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; ready ; 1979 ; Occupational and Environmental Medicine Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; ready ; 1980 ; Occupational and Environmental Medicine Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; ready ; 1981 ; Occupational and Environmental Medicine Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; ready ; 1982 ; Occupational and Environmental Medicine Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; ready ; 1983 ; Occupational and Environmental Medicine Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; ready ; 1984 ; Occupational and Environmental Medicine Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; ready ; 1985 ; Occupational and Environmental Medicine Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; ready ; 1986 ; Occupational and Environmental Medicine Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; ready ; 1987 ; Occupational and Environmental Medicine Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; ready ; 1988 ; Occupational and Environmental Medicine Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; ready ; 1989 ; Occupational and Environmental Medicine Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; ready ; 1990 ; Occupational and Environmental Medicine Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; ready ; 1991 ; Occupational and Environmental Medicine Volume 48 ; 48 >
     au < HighWirePressH20Plugin ; ready ; 1992 ; Occupational and Environmental Medicine Volume 49 ; 49 >
@@ -2103,71 +2103,71 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://pmj.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 1925 ; Postgraduate Medical Journal Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; manifest ; 1926 ; Postgraduate Medical Journal Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; manifest ; 1927 ; Postgraduate Medical Journal Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 1928 ; Postgraduate Medical Journal Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 1929 ; Postgraduate Medical Journal Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; manifest ; 1930 ; Postgraduate Medical Journal Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; manifest ; 1931 ; Postgraduate Medical Journal Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; manifest ; 1932 ; Postgraduate Medical Journal Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 1933 ; Postgraduate Medical Journal Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 1934 ; Postgraduate Medical Journal Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 1935 ; Postgraduate Medical Journal Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 1936 ; Postgraduate Medical Journal Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; 1937 ; Postgraduate Medical Journal Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; 1938 ; Postgraduate Medical Journal Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; 1939 ; Postgraduate Medical Journal Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; manifest ; 1940 ; Postgraduate Medical Journal Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; manifest ; 1941 ; Postgraduate Medical Journal Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; manifest ; 1942 ; Postgraduate Medical Journal Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; manifest ; 1943 ; Postgraduate Medical Journal Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; manifest ; 1944 ; Postgraduate Medical Journal Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; manifest ; 1945 ; Postgraduate Medical Journal Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; manifest ; 1946 ; Postgraduate Medical Journal Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; manifest ; 1947 ; Postgraduate Medical Journal Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; manifest ; 1948 ; Postgraduate Medical Journal Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; manifest ; 1949 ; Postgraduate Medical Journal Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; manifest ; 1950 ; Postgraduate Medical Journal Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; manifest ; 1951 ; Postgraduate Medical Journal Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; manifest ; 1952 ; Postgraduate Medical Journal Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; manifest ; 1953 ; Postgraduate Medical Journal Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; manifest ; 1954 ; Postgraduate Medical Journal Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; manifest ; 1955 ; Postgraduate Medical Journal Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; manifest ; 1956 ; Postgraduate Medical Journal Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; manifest ; 1957 ; Postgraduate Medical Journal Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; manifest ; 1958 ; Postgraduate Medical Journal Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; manifest ; 1959 ; Postgraduate Medical Journal Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; manifest ; 1960 ; Postgraduate Medical Journal Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; manifest ; 1961 ; Postgraduate Medical Journal Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; manifest ; 1962 ; Postgraduate Medical Journal Volume 38 ; 38 >
-    au < HighWirePressH20Plugin ; manifest ; 1963 ; Postgraduate Medical Journal Volume 39 ; 39 >
-    au < HighWirePressH20Plugin ; manifest ; 1964 ; Postgraduate Medical Journal Volume 40 ; 40 >
-    au < HighWirePressH20Plugin ; manifest ; 1965 ; Postgraduate Medical Journal Volume 41 ; 41 >
-    au < HighWirePressH20Plugin ; manifest ; 1966 ; Postgraduate Medical Journal Volume 42 ; 42 >
-    au < HighWirePressH20Plugin ; manifest ; 1967 ; Postgraduate Medical Journal Volume 43 ; 43 >
-    au < HighWirePressH20Plugin ; manifest ; 1968 ; Postgraduate Medical Journal Volume 44 ; 44 >
-    au < HighWirePressH20Plugin ; manifest ; 1969 ; Postgraduate Medical Journal Volume 45 ; 45 >
-    au < HighWirePressH20Plugin ; manifest ; 1970 ; Postgraduate Medical Journal Volume 46 ; 46 >
-    au < HighWirePressH20Plugin ; manifest ; 1971 ; Postgraduate Medical Journal Volume 47 ; 47 >
-    au < HighWirePressH20Plugin ; manifest ; 1972 ; Postgraduate Medical Journal Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; manifest ; 1973 ; Postgraduate Medical Journal Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; manifest ; 1974 ; Postgraduate Medical Journal Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; manifest ; 1975 ; Postgraduate Medical Journal Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; manifest ; 1976 ; Postgraduate Medical Journal Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; manifest ; 1977 ; Postgraduate Medical Journal Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; manifest ; 1978 ; Postgraduate Medical Journal Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; manifest ; 1979 ; Postgraduate Medical Journal Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; manifest ; 1980 ; Postgraduate Medical Journal Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; manifest ; 1981 ; Postgraduate Medical Journal Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; manifest ; 1982 ; Postgraduate Medical Journal Volume 58 ; 58 >
-    au < HighWirePressH20Plugin ; manifest ; 1983 ; Postgraduate Medical Journal Volume 59 ; 59 >
-    au < HighWirePressH20Plugin ; manifest ; 1984 ; Postgraduate Medical Journal Volume 60 ; 60 >
-    au < HighWirePressH20Plugin ; manifest ; 1985 ; Postgraduate Medical Journal Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; manifest ; 1986 ; Postgraduate Medical Journal Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; manifest ; 1987 ; Postgraduate Medical Journal Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; manifest ; 1988 ; Postgraduate Medical Journal Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; manifest ; 1989 ; Postgraduate Medical Journal Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; testing ; 1925 ; Postgraduate Medical Journal Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; testing ; 1926 ; Postgraduate Medical Journal Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; testing ; 1927 ; Postgraduate Medical Journal Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; testing ; 1928 ; Postgraduate Medical Journal Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; testing ; 1929 ; Postgraduate Medical Journal Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; testing ; 1930 ; Postgraduate Medical Journal Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; testing ; 1931 ; Postgraduate Medical Journal Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; testing ; 1932 ; Postgraduate Medical Journal Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; testing ; 1933 ; Postgraduate Medical Journal Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; testing ; 1934 ; Postgraduate Medical Journal Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; testing ; 1935 ; Postgraduate Medical Journal Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; testing ; 1936 ; Postgraduate Medical Journal Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; testing ; 1937 ; Postgraduate Medical Journal Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; testing ; 1938 ; Postgraduate Medical Journal Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; testing ; 1939 ; Postgraduate Medical Journal Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; testing ; 1940 ; Postgraduate Medical Journal Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; testing ; 1941 ; Postgraduate Medical Journal Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; testing ; 1942 ; Postgraduate Medical Journal Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; testing ; 1943 ; Postgraduate Medical Journal Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; testing ; 1944 ; Postgraduate Medical Journal Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; testing ; 1945 ; Postgraduate Medical Journal Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; testing ; 1946 ; Postgraduate Medical Journal Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; testing ; 1947 ; Postgraduate Medical Journal Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; testing ; 1948 ; Postgraduate Medical Journal Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; testing ; 1949 ; Postgraduate Medical Journal Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; testing ; 1950 ; Postgraduate Medical Journal Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; testing ; 1951 ; Postgraduate Medical Journal Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; testing ; 1952 ; Postgraduate Medical Journal Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; testing ; 1953 ; Postgraduate Medical Journal Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; testing ; 1954 ; Postgraduate Medical Journal Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; testing ; 1955 ; Postgraduate Medical Journal Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; testing ; 1956 ; Postgraduate Medical Journal Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; testing ; 1957 ; Postgraduate Medical Journal Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; testing ; 1958 ; Postgraduate Medical Journal Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; testing ; 1959 ; Postgraduate Medical Journal Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; testing ; 1960 ; Postgraduate Medical Journal Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; testing ; 1961 ; Postgraduate Medical Journal Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; testing ; 1962 ; Postgraduate Medical Journal Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; testing ; 1963 ; Postgraduate Medical Journal Volume 39 ; 39 >
+    au < HighWirePressH20Plugin ; testing ; 1964 ; Postgraduate Medical Journal Volume 40 ; 40 >
+    au < HighWirePressH20Plugin ; testing ; 1965 ; Postgraduate Medical Journal Volume 41 ; 41 >
+    au < HighWirePressH20Plugin ; testing ; 1966 ; Postgraduate Medical Journal Volume 42 ; 42 >
+    au < HighWirePressH20Plugin ; testing ; 1967 ; Postgraduate Medical Journal Volume 43 ; 43 >
+    au < HighWirePressH20Plugin ; testing ; 1968 ; Postgraduate Medical Journal Volume 44 ; 44 >
+    au < HighWirePressH20Plugin ; testing ; 1969 ; Postgraduate Medical Journal Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; testing ; 1970 ; Postgraduate Medical Journal Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; testing ; 1971 ; Postgraduate Medical Journal Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; testing ; 1972 ; Postgraduate Medical Journal Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; testing ; 1973 ; Postgraduate Medical Journal Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; testing ; 1974 ; Postgraduate Medical Journal Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; testing ; 1975 ; Postgraduate Medical Journal Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; testing ; 1976 ; Postgraduate Medical Journal Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; testing ; 1977 ; Postgraduate Medical Journal Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; testing ; 1978 ; Postgraduate Medical Journal Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; testing ; 1979 ; Postgraduate Medical Journal Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; testing ; 1980 ; Postgraduate Medical Journal Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; testing ; 1981 ; Postgraduate Medical Journal Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; testing ; 1982 ; Postgraduate Medical Journal Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; testing ; 1983 ; Postgraduate Medical Journal Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; testing ; 1984 ; Postgraduate Medical Journal Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; testing ; 1985 ; Postgraduate Medical Journal Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; testing ; 1986 ; Postgraduate Medical Journal Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; testing ; 1987 ; Postgraduate Medical Journal Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; testing ; 1988 ; Postgraduate Medical Journal Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; testing ; 1989 ; Postgraduate Medical Journal Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; ready ; 1990 ; Postgraduate Medical Journal Volume 66 ; 66 >
     au < HighWirePressH20Plugin ; ready ; 1991 ; Postgraduate Medical Journal Volume 67 ; 67 >
     au < HighWirePressH20Plugin ; ready ; 1992 ; Postgraduate Medical Journal Volume 68 ; 68 >
