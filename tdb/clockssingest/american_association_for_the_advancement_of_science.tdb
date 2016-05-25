@@ -28,14 +28,14 @@
       au < exists ; exists ; 2013 ; Science Volume 340 ; 340 ; >
       au < exists ; exists ; 2013 ; Science Volume 341 ; 341 ; >
       au < exists ; exists ; 2013 ; Science Volume 342 ; 342 ; >
-      au < manifest ; exists ; 2014 ; Science Volume 343 ; 343 ; >
-      au < manifest ; exists ; 2014 ; Science Volume 344 ; 344 ; >
-      au < manifest ; exists ; 2014 ; Science Volume 345 ; 345 ; >
-      au < manifest ; exists ; 2014 ; Science Volume 346 ; 346 ; >
-      au < manifest ; exists ; 2015 ; Science Volume 347 ; 347 ; >
-      au < manifest ; exists ; 2015 ; Science Volume 348 ; 348 ; >
-      au < manifest ; exists ; 2015 ; Science Volume 349 ; 349 ; >
-      au < manifest ; exists ; 2015 ; Science Volume 350 ; 350 ; >
+      au < testing ;  exists ; 2014 ; Science Volume 343 ; 343 ; >
+      au < testing ;  exists ; 2014 ; Science Volume 344 ; 344 ; >
+      au < testing ;  exists ; 2014 ; Science Volume 345 ; 345 ; >
+      au < testing ;  exists ; 2014 ; Science Volume 346 ; 346 ; >
+      au < testing ;  exists ; 2015 ; Science Volume 347 ; 347 ; >
+      au < testing ;  exists ; 2015 ; Science Volume 348 ; 348 ; >
+      au < testing ;  exists ; 2015 ; Science Volume 349 ; 349 ; >
+      au < testing ;  exists ; 2015 ; Science Volume 350 ; 350 ; >
       au < manifest ; exists ; 2016 ; Science Volume 351 ; 351 ; >
       au < manifest ; exists ; 2016 ; Science Volume 352 ; 352 ; >
       au < expected ; exists ; 2016 ; Science Volume 353 ; 353 ; >
@@ -60,7 +60,7 @@
       au < manifest ; exists ; 2012 ; Science Signaling Volume 5 ; 5 ; >
       au < testing ; exists ; 2013 ; Science Signaling Volume 6 ; 6 ; >
       au < crawling ; exists ; 2014 ; Science Signaling Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2015 ; Science Signaling Volume 8 ; 8 ; >
+      au < testing ;  exists ; 2015 ; Science Signaling Volume 8 ; 8 ; >
       au < expected ; exists ; 2016 ; Science Signaling Volume 9 ; 9 ; >
 
   }
@@ -80,7 +80,7 @@
       au < exists ; exists ; 2011 ; Science Translational Medicine Volume 3 ; 3 ; >
       au < exists ; exists ; 2012 ; Science Translational Medicine Volume 4 ; 4 ; >
       au < manifest ; exists ; 2013 ; Science Translational Medicine Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2014 ; Science Translational Medicine Volume 6 ; 6 ; >
+      au < testing ;  exists ; 2014 ; Science Translational Medicine Volume 6 ; 6 ; >
       au < crawling ; exists ; 2015 ; Science Translational Medicine Volume 7 ; 7 ; >
       au < manifest ; exists ; 2016 ; Science Translational Medicine Volume 8 ; 8 ; >
 
