@@ -52,7 +52,7 @@ public class HighWireDrupalArticleIteratorFactory
   
   // <base_url>/content/<v>/<i>/<pg>
   protected static final String PATTERN_TEMPLATE =
-    "\"^%scontent/%s/(?:[^/]+/)(?:[^./?&]+)$\", base_url, volume_name";
+    "\"^%scontent/%s/([^/]+/)([^./?&]+([.]\\d{1,3})?)$\", base_url, volume_name";
   
   // various aspects of a HighWire article
   // http://ajpcell.physiology.org/content/302/1/C1
@@ -62,6 +62,7 @@ public class HighWireDrupalArticleIteratorFactory
   // http://ajpcell.physiology.org/content/302/1/C1.full
   // http://ajpcell.physiology.org/content/302/1/C1.abstract
   // http://bjo.bmj.com/content/96/1/1.extract
+  // http://apt.rcpsych.org/content/21/2/74.1
   
   // these kinds of urls are not used as part of the AI
   // http://ajpcell.physiology.org/content/302/1/C1.full-text.pdf+html (normalized)
@@ -71,7 +72,7 @@ public class HighWireDrupalArticleIteratorFactory
   // http://bjo.bmj.com/content/96/1/1.citation (usually no links)
   
   protected static final Pattern LANDING_PATTERN = Pattern.compile(
-      "/([^./?&]+)$", Pattern.CASE_INSENSITIVE);
+      "/([^./?&]+([.]\\d{1,3})?)$", Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
   protected static final String LANDING_REPLACEMENT = "/$1";

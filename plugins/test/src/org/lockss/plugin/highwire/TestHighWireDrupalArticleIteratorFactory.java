@@ -119,7 +119,10 @@ public class TestHighWireDrupalArticleIteratorFactory extends ArticleIteratorTes
     Pattern pat = getPattern(artIter);
     
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1");
+    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.123");
     // but not to ...
+    assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.1a");
+    assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.1234");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1/1");
