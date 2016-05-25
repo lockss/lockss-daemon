@@ -640,7 +640,8 @@
       param[journal_id] = ijans
 
       au < crawling ; exists ; 2013-2014 ; International Journal of Applied Nonlinear Science Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2015 ; International Journal of Applied Nonlinear Science Volume 2 ; 2 ; >
+      au < testing ; exists ; 2015 ; International Journal of Applied Nonlinear Science Volume 2 ; 2 ; >
+      au < expected ; exists ; 2016 ; International Journal of Applied Nonlinear Science Volume 3 ; 3 ; >
 
     }
 
@@ -7264,7 +7265,8 @@
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Services, Economics and Management Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Services, Economics and Management Volume 5 ; 5 ; >
       au < crawling ; exists ; 2014 ; International Journal of Services, Economics and Management Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2015 ; International Journal of Services, Economics and Management Volume 7 ; 7 ; >
+      au < testing ; exists ; 2015 ; International Journal of Services, Economics and Management Volume 7 ; 7 ; >
+      au < expected ; exists ; 2016 ; International Journal of Services, Economics and Management Volume 8 ; 8 ; >
 
     }
 
