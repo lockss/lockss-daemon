@@ -11584,7 +11584,7 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 2015 ; Emerging Economy Studies Volume 1 ; 1 >
-      au < expected ; 2016 ; Emerging Economy Studies Volume 2 ; 2 >
+      au < manifest ; 2016 ; Emerging Economy Studies Volume 2 ; 2 >
 
   }
 
@@ -36957,7 +36957,7 @@ comment[mpj] = now published by Brill
 
       au < released ; 2014 ; Paradigm Volume 18 ; 18 >
       au < released ; 2015 ; Paradigm Volume 19 ; 19 >
-      au < expected ; 2016 ; Paradigm Volume 20 ; 20 >
+      au < manifest ; 2016 ; Paradigm Volume 20 ; 20 >
 
     }
 
@@ -51361,7 +51361,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; released ; 2013 ; Health Services Management Research Volume 26 ; 26 >
         au < HighWirePressH20Plugin ; released ; 2014 ; Health Services Management Research Volume 27 ; 27 >
         au < HighWirePressH20Plugin ; released ; 2015 ; Health Services Management Research Volume 28 ; 28 >
-        au < HighWirePressH20Plugin ; expected ; 2016 ; Health Services Management Research Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; manifest ; 2016 ; Health Services Management Research Volume 29 ; 29 >
 
       }
 

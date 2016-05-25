@@ -715,7 +715,7 @@
       au < HighWirePressH20Plugin ; released ; 2013 ; differences: A Journal of Feminist Cultural Studies Volume 24 ; 24 >
       au < HighWirePressH20Plugin ; released ; 2014 ; differences: A Journal of Feminist Cultural Studies Volume 25 ; 25 >
       au < HighWirePressH20Plugin ; released ; 2015 ; differences: A Journal of Feminist Cultural Studies Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; expected ; 2016 ; differences: A Journal of Feminist Cultural Studies Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; manifest ; 2016 ; differences: A Journal of Feminist Cultural Studies Volume 27 ; 27 >
 
     }
 
@@ -3341,7 +3341,7 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < HighWirePressH20Plugin ; manifest ; 2015 ; Twentieth-Century Literature Volume 61 ; 61 >
-      au < HighWirePressH20Plugin ; expected ; 2016 ; Twentieth-Century Literature Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; manifest ; 2016 ; Twentieth-Century Literature Volume 62 ; 62 >
 
     }
 
