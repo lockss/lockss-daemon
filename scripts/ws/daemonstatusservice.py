@@ -31,7 +31,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.0'
+__version__ = '0.4.1'
 
 import getpass
 import itertools
@@ -404,7 +404,7 @@ class _DaemonStatusServiceOptions(object):
       parser.error('--auid, --auids can only be applied to --get-au-status, --get-au-urls, --get-auids, --get-auids-names, --get-peer-agreements')
     if opts.select and not any([opts.get_au_status, opts.get_platform_configuration, opts.query_aus, opts.query_crawls]):
       parser.error('--select can only be applied to --get-au-status, --get-platform-configuration, --query-aus, --query-crawls')
-    if opts.where and not any([opts.query_au, opts.query_crawls]):
+    if opts.where and not any([opts.query_aus, opts.query_crawls]):
       parser.error('--where can only be applied to --query-aus, --query-crawls')
     if opts.group_by_field and not any([opts.get_au_status, opts.query_aus]):
       parser.error('--group-by-field can only be applied to --get-au-status, --query-aus')
