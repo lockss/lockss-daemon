@@ -142,7 +142,7 @@
     au < doNotProcess ; 2012 ; CSA News Volume 57 ; 57 > # no issues on manifest page
     au < released ; 2013 ; CSA News Volume 58 ; 58 >
     au < released ; 2014 ; CSA News Volume 59 ; 59 >
-    au < manifest ; 2015 ; CSA News Volume 60 ; 60 >
+    au < ready ; 2015 ; CSA News Volume 60 ; 60 >
     au < manifest ; 2016 ; CSA News Volume 61 ; 61 >
 
   }
@@ -168,7 +168,7 @@
     au < ready ; 2009 ; Journal of Environmental Quality Volume 38 ; 38 >
     au < released ; 2010 ; Journal of Environmental Quality Volume 39 ; 39 >
     au < manifest ; 2011 ; Journal of Environmental Quality Volume 40 ; 40 >
-    au < manifest ; 2012 ; Journal of Environmental Quality Volume 41 ; 41 >
+    au < ready ; 2012 ; Journal of Environmental Quality Volume 41 ; 41 >
     au < released ; 2013 ; Journal of Environmental Quality Volume 42 ; 42 >
     au < released ; 2014 ; Journal of Environmental Quality Volume 43 ; 43 >
     au < released ; 2015 ; Journal of Environmental Quality Volume 44 ; 44 >
@@ -193,7 +193,7 @@
     au < released ; 2008 ; Journal of Plant Registrations Volume 2 ; 2 >
     au < released ; 2009 ; Journal of Plant Registrations Volume 3 ; 3 >
     au < released ; 2010 ; Journal of Plant Registrations Volume 4 ; 4 >
-    au < manifest ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 >
+    au < ready ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 >
     au < manifest ; 2012 ; Journal of Plant Registrations Volume 6 ; 6 >
     au < released ; 2013 ; Journal of Plant Registrations Volume 7 ; 7 >
     au < released ; 2014 ; Journal of Plant Registrations Volume 8 ; 8 >
@@ -261,9 +261,9 @@
 
     au < manifest ; 2008 ; The Plant Genome Volume 1 ; 1 >
     au < ready ; 2009 ; The Plant Genome Volume 2 ; 2 >
-    au < manifest ; 2010 ; The Plant Genome Volume 3 ; 3 >
+    au < ready ; 2010 ; The Plant Genome Volume 3 ; 3 >
     au < manifest ; 2011 ; The Plant Genome Volume 4 ; 4 >
-    au < manifest ; 2012 ; The Plant Genome Volume 5 ; 5 >
+    au < ready ; 2012 ; The Plant Genome Volume 5 ; 5 >
     au < released ; 2013 ; The Plant Genome Volume 6 ; 6 >
     au < released ; 2014 ; The Plant Genome Volume 7 ; 7 >
     au < released ; 2015 ; The Plant Genome Volume 8 ; 8 >
@@ -288,8 +288,8 @@
     au < manifest ; 2007 ; Soil Horizons Volume 48 ; 48 >
     au < manifest ; 2008 ; Soil Horizons Volume 49 ; 49 >
     au < released ; 2009 ; Soil Horizons Volume 50 ; 50 >
-    au < manifest ; 2010 ; Soil Horizons Volume 51 ; 51 >
-    au < manifest ; 2011 ; Soil Horizons Volume 52 ; 52 >
+    au < ready ; 2010 ; Soil Horizons Volume 51 ; 51 >
+    au < ready ; 2011 ; Soil Horizons Volume 52 ; 52 >
     au < manifest ; 2012 ; Soil Horizons Volume 53 ; 53 >
     au < released ; 2013 ; Soil Horizons Volume 54 ; 54 >
     au < ready ; 2014 ; Soil Horizons Volume 55 ; 55 >
@@ -319,7 +319,7 @@
     au < manifest ; 2009 ; Soil Science Society of America Journal Volume 73 ; 73 >
     au < manifest ; 2010 ; Soil Science Society of America Journal Volume 74 ; 74 >
     au < manifest ; 2011 ; Soil Science Society of America Journal Volume 75 ; 75 >
-    au < manifest ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 >
+    au < ready ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 >
     au < ready ; 2013 ; Soil Science Society of America Journal Volume 77 ; 77 >
     au < released ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 >
     au < released ; 2015 ; Soil Science Society of America Journal Volume 79 ; 79 >
@@ -346,8 +346,8 @@
     au < ready ; 2008 ; Vadose Zone Journal Volume 7 ; 7 >
     au < ready ; 2009 ; Vadose Zone Journal Volume 8 ; 8 >
     au < manifest ; 2010 ; Vadose Zone Journal Volume 9 ; 9 >
-    au < manifest ; 2011 ; Vadose Zone Journal Volume 10 ; 10 >
-    au < manifest ; 2012 ; Vadose Zone Journal Volume 11 ; 11 >
+    au < ready ; 2011 ; Vadose Zone Journal Volume 10 ; 10 >
+    au < ready ; 2012 ; Vadose Zone Journal Volume 11 ; 11 >
     au < released ; 2013 ; Vadose Zone Journal Volume 12 ; 12 >
     au < released ; 2014 ; Vadose Zone Journal Volume 13 ; 13 >
     au < released ; 2015 ; Vadose Zone Journal Volume 14 ; 14 >
