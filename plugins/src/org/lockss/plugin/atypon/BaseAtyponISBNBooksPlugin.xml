@@ -5,7 +5,7 @@
   </entry>
 <!--  This plugin is exactly like BaseAtyponBooksPlugin
       with the added crawl rule restriction that uses the book_eisbn param in the 
-      doi for book landing and for chapters (with optional chapter suffix)
+      doi for book landing and for chapters 
       Publishers that follow this model should use this more restrictive parent
       to avoid overcrawling issues.
          see: PracticalAction, Emerald, Endocrine, NRC, SEG, SIAM         
