@@ -1506,6 +1506,7 @@
     au < ClockssHighWirePressH20Plugin ; down ; exists ; 2013 ; Proceedings of the Royal Society B: Biological Sciences Volume 280 ; 280 ; >
     au < rsp.ClockssRSPDrupalPlugin ; expected ; exists ; 2014 ; Proceedings of the Royal Society B: Biological Sciences Volume 281 ; 281 ; >
     au < rsp.ClockssRSPDrupalPlugin ; expected ; exists ; 2015 ; Proceedings of the Royal Society B: Biological Sciences Volume 282 ; 282 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; expected ; exists ; 2016 ; Proceedings of the Royal Society B: Biological Sciences Volume 283 ; 283 ; >
 
   }
 
@@ -1609,6 +1610,8 @@
 
     au < rsp.ClockssRSPDrupalPlugin ; exists ; exists ; 2014 ; Royal Society Open Science Volume 1 ; 1 ; >
     au < rsp.ClockssRSPDrupalPlugin ; expected ; exists ; 2015 ; Royal Society Open Science Volume 2 ; 2 ; >
+    au < rsp.ClockssRSPDrupalPlugin ; expected ; exists ; 2016 ; Royal Society Open Science Volume 3 ; 3 ; >
+
   }
 
 }
