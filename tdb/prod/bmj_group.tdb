@@ -445,8 +445,8 @@
     au < bmj.BMJDrupalPlugin ; released ; 2014 ; BMJ Volume 347 ; 347 >
     au < bmj.BMJDrupalPlugin ; testing ; 2014 ; BMJ Volume 348 ; 348 >
     au < bmj.BMJDrupalPlugin ; released ; 2014 ; BMJ Volume 349 ; 349 >
-    au < bmj.BMJDrupalPlugin ; testing ; 2015 ; BMJ Volume 350 ; 350 >
-    au < bmj.BMJDrupalPlugin ; testing ; 2015 ; BMJ Volume 351 ; 351 >
+    au < bmj.BMJDrupalPlugin ; notReady ; 2015 ; BMJ Volume 350 ; 350 > #403 Forbidden
+    au < bmj.BMJDrupalPlugin ; notReady ; 2015 ; BMJ Volume 351 ; 351 > #403 Forbidden
     au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; BMJ Volume 352 ; 352 >
     au < bmj.BMJDrupalPlugin ; manifest ; 2016 ; BMJ Volume 353 ; 353 >
 
@@ -1189,12 +1189,12 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; released ; 1961 ; Heart Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; released ; 1962 ; Heart Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; released ; 1963 ; Heart Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; testing ; 1964 ; Heart Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; testing ; 1965 ; Heart Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; testing ; 1966 ; Heart Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; testing ; 1967 ; Heart Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; testing ; 1968 ; Heart Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; testing ; 1969 ; Heart Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; ready ; 1964 ; Heart Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; ready ; 1965 ; Heart Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; ready ; 1966 ; Heart Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; ready ; 1967 ; Heart Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; ready ; 1968 ; Heart Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; ready ; 1969 ; Heart Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; ready ; 1970 ; Heart Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; ready ; 1971 ; Heart Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; ready ; 1972 ; Heart Volume 34 ; 34 >
@@ -2103,44 +2103,44 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     param[base_url] = http://pmj.bmj.com/
 
-    au < HighWirePressH20Plugin ; testing ; 1925 ; Postgraduate Medical Journal Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; testing ; 1926 ; Postgraduate Medical Journal Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; testing ; 1927 ; Postgraduate Medical Journal Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; testing ; 1928 ; Postgraduate Medical Journal Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; testing ; 1929 ; Postgraduate Medical Journal Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; testing ; 1930 ; Postgraduate Medical Journal Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; testing ; 1931 ; Postgraduate Medical Journal Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; testing ; 1932 ; Postgraduate Medical Journal Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; testing ; 1933 ; Postgraduate Medical Journal Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; testing ; 1934 ; Postgraduate Medical Journal Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; testing ; 1935 ; Postgraduate Medical Journal Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; testing ; 1936 ; Postgraduate Medical Journal Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; testing ; 1937 ; Postgraduate Medical Journal Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; testing ; 1938 ; Postgraduate Medical Journal Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; testing ; 1939 ; Postgraduate Medical Journal Volume 15 ; 15 >
-    au < HighWirePressH20Plugin ; testing ; 1940 ; Postgraduate Medical Journal Volume 16 ; 16 >
-    au < HighWirePressH20Plugin ; testing ; 1941 ; Postgraduate Medical Journal Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; testing ; 1942 ; Postgraduate Medical Journal Volume 18 ; 18 >
-    au < HighWirePressH20Plugin ; testing ; 1943 ; Postgraduate Medical Journal Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; testing ; 1944 ; Postgraduate Medical Journal Volume 20 ; 20 >
-    au < HighWirePressH20Plugin ; testing ; 1945 ; Postgraduate Medical Journal Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; testing ; 1946 ; Postgraduate Medical Journal Volume 22 ; 22 >
-    au < HighWirePressH20Plugin ; testing ; 1947 ; Postgraduate Medical Journal Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; testing ; 1948 ; Postgraduate Medical Journal Volume 24 ; 24 >
-    au < HighWirePressH20Plugin ; testing ; 1949 ; Postgraduate Medical Journal Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; testing ; 1950 ; Postgraduate Medical Journal Volume 26 ; 26 >
-    au < HighWirePressH20Plugin ; testing ; 1951 ; Postgraduate Medical Journal Volume 27 ; 27 >
-    au < HighWirePressH20Plugin ; testing ; 1952 ; Postgraduate Medical Journal Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; testing ; 1953 ; Postgraduate Medical Journal Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; testing ; 1954 ; Postgraduate Medical Journal Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; testing ; 1955 ; Postgraduate Medical Journal Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; testing ; 1956 ; Postgraduate Medical Journal Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; testing ; 1957 ; Postgraduate Medical Journal Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; testing ; 1958 ; Postgraduate Medical Journal Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; testing ; 1959 ; Postgraduate Medical Journal Volume 35 ; 35 >
-    au < HighWirePressH20Plugin ; testing ; 1960 ; Postgraduate Medical Journal Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; testing ; 1961 ; Postgraduate Medical Journal Volume 37 ; 37 >
-    au < HighWirePressH20Plugin ; testing ; 1962 ; Postgraduate Medical Journal Volume 38 ; 38 >
+    au < HighWirePressH20Plugin ; ready ; 1925 ; Postgraduate Medical Journal Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; 1926 ; Postgraduate Medical Journal Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; ready ; 1927 ; Postgraduate Medical Journal Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; ready ; 1928 ; Postgraduate Medical Journal Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; ready ; 1929 ; Postgraduate Medical Journal Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; ready ; 1930 ; Postgraduate Medical Journal Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; ready ; 1931 ; Postgraduate Medical Journal Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; ready ; 1932 ; Postgraduate Medical Journal Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; ready ; 1933 ; Postgraduate Medical Journal Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; ready ; 1934 ; Postgraduate Medical Journal Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; ready ; 1935 ; Postgraduate Medical Journal Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; ready ; 1936 ; Postgraduate Medical Journal Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; ready ; 1937 ; Postgraduate Medical Journal Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; ready ; 1938 ; Postgraduate Medical Journal Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 1939 ; Postgraduate Medical Journal Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; ready ; 1940 ; Postgraduate Medical Journal Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; ready ; 1941 ; Postgraduate Medical Journal Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; ready ; 1942 ; Postgraduate Medical Journal Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; ready ; 1943 ; Postgraduate Medical Journal Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; ready ; 1944 ; Postgraduate Medical Journal Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; ready ; 1945 ; Postgraduate Medical Journal Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; ready ; 1946 ; Postgraduate Medical Journal Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; ready ; 1947 ; Postgraduate Medical Journal Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; ready ; 1948 ; Postgraduate Medical Journal Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; ready ; 1949 ; Postgraduate Medical Journal Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; ready ; 1950 ; Postgraduate Medical Journal Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; ready ; 1951 ; Postgraduate Medical Journal Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; ready ; 1952 ; Postgraduate Medical Journal Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; ready ; 1953 ; Postgraduate Medical Journal Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; ready ; 1954 ; Postgraduate Medical Journal Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; ready ; 1955 ; Postgraduate Medical Journal Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; ready ; 1956 ; Postgraduate Medical Journal Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; ready ; 1957 ; Postgraduate Medical Journal Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; ready ; 1958 ; Postgraduate Medical Journal Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; ready ; 1959 ; Postgraduate Medical Journal Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; ready ; 1960 ; Postgraduate Medical Journal Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; ready ; 1961 ; Postgraduate Medical Journal Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; ready ; 1962 ; Postgraduate Medical Journal Volume 38 ; 38 >
     au < HighWirePressH20Plugin ; testing ; 1963 ; Postgraduate Medical Journal Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; testing ; 1964 ; Postgraduate Medical Journal Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; testing ; 1965 ; Postgraduate Medical Journal Volume 41 ; 41 >
