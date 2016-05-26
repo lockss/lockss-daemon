@@ -100,9 +100,15 @@ public class ARLXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFa
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
 
-      String filenameValue = oneAM.getRaw("RecordReference");
+      String filenameValue;
+      if (helper == ArlOnixHelper) {
+         filenameValue = oneAM.getRaw("RecordReference") + ".pdf";
+      } else {
+        // JatsSet - this has a pdf on it already
+        filenameValue = oneAM.getRaw(JatsPublishingSchemaHelper.JATS_self_uri);
+      }
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-      String fullPathFile = cuBase + filenameValue + ".pdf";
+      String fullPathFile = cuBase +filenameValue;
       List<String> returnList = new ArrayList<String>();
       returnList.add(fullPathFile);
       return returnList;
@@ -111,27 +117,23 @@ public class ARLXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFa
     
     /*
      * (non-Javadoc)
-     * WARC XML files are a little non-standard in that they store the actual access.url
-     * location in the "self-uri" field
-     * set the access_url to the self-uri 
-     * set the publisher as well. It may get replaced by the TDB value  
+     * If there was a chapter title set then this is a book chapter, not a whole book 
      */
-    /*
     @Override
     protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
         CachedUrl cu, ArticleMetadata thisAM) {
       
-      String self_uri = thisAM.getRaw(JatsPublishingSchemaHelper.JATS_self_uri);
-      if (self_uri != null) {
-        thisAM.replace(MetadataField.FIELD_ACCESS_URL, self_uri);
+      // for books, if there was an article title (Chapter) then this is a book
+      // chapter, not a whole book
+      if (schemaHelper == ArlOnixHelper) {
+        String chapter_title = thisAM.get(MetadataField.FIELD_ARTICLE_TITLE);
+        if (chapter_title != null){
+          thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKCHAPTER);
+        } else {
+          thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKVOLUME);
+        }
       }
-      String raw_pub = thisAM.getRaw(JatsPublishingSchemaHelper.JATS_pubname);
-      if (raw_pub != null) {
-        thisAM.replace(MetadataField.FIELD_PUBLISHER, raw_pub);
-      }
-
     }    
-    */
 
   }
 }

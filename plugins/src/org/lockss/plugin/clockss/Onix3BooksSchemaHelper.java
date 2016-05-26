@@ -154,7 +154,8 @@ implements SourceXmlSchemaHelper {
 
   /* 
    * TITLE INFORMATION
-   * You only get here if the TitleElementLevel=01
+   * TitleElementLevel= 01 is the book title
+   * TitleElementLevel= 03 is the chapter title and indicates this is a book chapter
    *  <TitleElement>
    *     TitleElementLevel=01 <--this is the one we want
    *     TitleText
@@ -168,7 +169,7 @@ implements SourceXmlSchemaHelper {
     @Override
     public String getValue(Node node) {
 
-      log.debug3("getValue of ONIX level 01 title");
+      log.debug3("getValue of ONIX level 01 title or level 03 chapter title ");
       NodeList elementChildren = node.getChildNodes();
       if (elementChildren == null) return null;
 
@@ -205,7 +206,7 @@ implements SourceXmlSchemaHelper {
           valbuilder.append(": " + tSubtitle);
         }
       } else {
-        log.debug3("no title found at level1");
+        log.debug3("no title found");
         return null;
       }
       log.debug3("title found: " + valbuilder.toString());
@@ -295,6 +296,8 @@ implements SourceXmlSchemaHelper {
   /* only pick up level01 title element - allow for no leading 0...(bradypus) */
   private static String ONIX_product_title =
       ONIX_product_descrip + "/TitleDetail[TitleType = '01' or TitleType = '1']/TitleElement[TitleElementLevel = '01']";
+  private static String ONIX_chapter_title =
+      ONIX_product_descrip + "/TitleDetail[TitleType = '01' or TitleType = '1']/TitleElement[TitleElementLevel = '04']";
   private static String ONIX_product_contrib =
       ONIX_product_descrip + "/Contributor";
   private static String ONIX_product_comp =
@@ -334,6 +337,7 @@ implements SourceXmlSchemaHelper {
     ONIX_articleMap.put(ONIX_idtype_doi, ONIX_ID_VALUE); 
     ONIX_articleMap.put(ONIX_product_form, XmlDomMetadataExtractor.TEXT_VALUE);
     ONIX_articleMap.put(ONIX_product_title, ONIX_TITLE_VALUE);
+    ONIX_articleMap.put(ONIX_chapter_title, ONIX_TITLE_VALUE);
     ONIX_articleMap.put(ONIX_product_contrib, ONIX_AUTHOR_VALUE);
     ONIX_articleMap.put(ONIX_product_comp, XmlDomMetadataExtractor.TEXT_VALUE);
     ONIX_articleMap.put(ONIX_pub_name, XmlDomMetadataExtractor.TEXT_VALUE);
@@ -360,6 +364,7 @@ implements SourceXmlSchemaHelper {
     cookMap.put(ONIX_idtype_isbn13, MetadataField.FIELD_ISBN);
     cookMap.put(ONIX_idtype_doi, MetadataField.FIELD_DOI);
     cookMap.put(ONIX_product_title, MetadataField.FIELD_PUBLICATION_TITLE);
+    cookMap.put(ONIX_chapter_title, MetadataField.FIELD_ARTICLE_TITLE);
     cookMap.put(ONIX_product_contrib, MetadataField.FIELD_AUTHOR);
     cookMap.put(ONIX_pub_date, MetadataField.FIELD_DATE);
     cookMap.put(ONIX_pub_name, MetadataField.FIELD_PUBLISHER);

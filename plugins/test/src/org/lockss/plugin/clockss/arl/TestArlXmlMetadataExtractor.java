@@ -55,10 +55,15 @@ public class TestArlXmlMetadataExtractor extends LockssTestCase {
   /*
    * Set up the metadata expected for each of the above tests
    */
+
   private static final String pdfUrl1 = "http://www.source.com/thezip.zip!/foo/1h8lp5.pdf";
   private static final String pdfUrl2 = "http://www.source.com/thezip.zip!/foo/17gd49.pdf";
-  private static final String pdfUrl3 = "http://www.source.com/thezip.zip!/foo/1acgvq.pdf";
-  private static String xml_url = "http://www.source.com/thezip.zip!/foo/random_onix3.xml";
+  private static final String pdfUrl3 = "http://www.source.com/thezip.zip!/foo/1grn3q.pdf";
+  private static final String pdfUrl4 = "http://www.source.com/thezip.zip!/foo/1grnc5.pdf";
+  private static final String pdfUrl5 = "http://www.source.com/thezip.zip!/foo/1grndg.pdf";
+  private static final String pdfUrl6 = "http://www.source.com/thezip.zip!/foo/1grnf3.pdf";
+  private static String xml_onix_url = "http://www.source.com/thezip.zip!/foo/random_onix3.xml";
+  private static String xml_jats_url = "http://www.source.com/thezip.zip!/foo/random_jats.xml";
 
   private static CIProperties xmlHeader = new CIProperties();
   private MockCachedUrl mcu;
@@ -81,11 +86,13 @@ public class TestArlXmlMetadataExtractor extends LockssTestCase {
 
     // the following is consistent across all tests; only content changes
     xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
-    mcu = mau.addUrl(xml_url, true, true, xmlHeader);
-    mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+
     mau.addUrl(pdfUrl1, true, true, xmlHeader);
     mau.addUrl(pdfUrl2, true, true, xmlHeader);
     mau.addUrl(pdfUrl3, true, true, xmlHeader);
+    mau.addUrl(pdfUrl4, true, true, xmlHeader);
+    mau.addUrl(pdfUrl5, true, true, xmlHeader);
+    mau.addUrl(pdfUrl6, true, true, xmlHeader);
 
     me = new ARLXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
     mle = new FileMetadataListExtractor(me);
@@ -108,16 +115,45 @@ public class TestArlXmlMetadataExtractor extends LockssTestCase {
     return conf;
   }
  
-  private static final String realXMLFile = "ArlOnixTest.xml";
-
-
+  private static final String realOnixXMLFile = "ArlOnixTest.xml";
   
-  public void testFromXMLFile() throws Exception {
+  public void testFromOnixXMLFile() throws Exception {
     InputStream file_input = null;
     try {
-      file_input = getResourceAsStream(realXMLFile);
+      file_input = getResourceAsStream(realOnixXMLFile);
       String string_input = StringUtil.fromInputStream(file_input);
       IOUtil.safeClose(file_input);
+
+      mcu = mau.addUrl(xml_onix_url, true, true, xmlHeader);
+      mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+      // set up the content for this test
+      mcu.setContent(string_input);
+      mcu.setContentSize(string_input.length());
+
+      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
+      assertNotEmpty(mdlist);
+      //assertEquals(1, mdlist.size());
+      ArticleMetadata mdRecord = mdlist.get(0);
+      assertNotNull(mdRecord);
+      //log.info(mdRecord.ppString(2));
+
+    }finally {
+      IOUtil.safeClose(file_input);
+    }
+
+  }
+  
+  private static final String realJatsXMLFile = "ArlJatsSetTest.xml";
+  
+  public void testFromJatsSetXMLFile() throws Exception {
+    InputStream file_input = null;
+    try {
+      file_input = getResourceAsStream(realJatsXMLFile);
+      String string_input = StringUtil.fromInputStream(file_input);
+      IOUtil.safeClose(file_input);
+
+      mcu = mau.addUrl(xml_jats_url, true, true, xmlHeader);
+      mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
 
       // set up the content for this test
       mcu.setContent(string_input);
