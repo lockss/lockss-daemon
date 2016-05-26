@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = European Federation of National Associations of Orthopaedics and Traumatology
+  >
+
+  {
+
+    title <
+      name = EFORT Open Reviews ;
+      issn = 2396-7544 ;
+      eissn = 2058-5241 ;
+      issnl = 2396-7544
+    >
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://www.efortopenreviews.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2016 ; EFORT Open Reviews Volume 1 ; 1 >
+
+  }
+
+}
+
