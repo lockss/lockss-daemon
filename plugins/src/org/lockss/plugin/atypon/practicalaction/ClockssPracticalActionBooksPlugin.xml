@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -17,7 +17,8 @@
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponBooksPlugin</string>
+    <!-- This parent uses the book_eisbn in the crawl rules -->
+    <string>org.lockss.plugin.atypon.BaseAtyponISBNBooksPlugin</string>
   </entry>
    <entry>
     <string>plugin_parent_version</string>

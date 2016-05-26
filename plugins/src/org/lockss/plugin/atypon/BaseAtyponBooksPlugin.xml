@@ -58,6 +58,11 @@
   </entry>  
   <entry>
     <string>au_crawlrules</string>
+    <!--
+     NOTE: any changes to the crawl rules in BaseAtyponBooksPlugin must be
+     added to BaseAtyponISBNBooksPlugin which is a child of this plugin with
+     ISBN restricted crawl rules         
+     -->  
     <!--  CRAWL COMMENT BLOCK
     support files
     images and data:<base>/na101v1/home/midtierbeta/publisher/fum/books/content/books/2011/9781780840000/ebo.11.115/production/images/large/figure1.jpeg

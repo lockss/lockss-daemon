@@ -67,6 +67,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
 
   static final String PLUGIN_ID = "org.lockss.plugin.atypon.BaseAtyponPlugin";
   static final String BOOK_PLUGIN_ID = "org.lockss.plugin.atypon.BaseAtyponBooksPlugin";
+  static final String RESTRICTED_BOOK_PLUGIN_ID = "org.lockss.plugin.atypon.BaseAtyponISBNBooksPlugin";
   static final String PluginName = "Base Atypon Plugin";
 
   public void setUp() throws Exception {
@@ -98,7 +99,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     return au;
   }
   
-  private DefinableArchivalUnit makeBookAu(URL url, String book_eisbn)
+  private DefinableArchivalUnit makeBookAu(URL url, String book_eisbn, boolean restricted)
       throws Exception {
 
     Properties props = new Properties();
@@ -109,8 +110,14 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     Configuration config = ConfigurationUtil.fromProps(props);
 
     DefinablePlugin ap = new DefinablePlugin();
-    ap.initPlugin(getMockLockssDaemon(),
-        BOOK_PLUGIN_ID);
+    // if restricted use the book plugin that limits to ISBN-based doi
+    if (restricted) {
+      ap.initPlugin(getMockLockssDaemon(),
+          RESTRICTED_BOOK_PLUGIN_ID);
+    } else {
+      ap.initPlugin(getMockLockssDaemon(),
+          BOOK_PLUGIN_ID);
+    }
     DefinableArchivalUnit au = (DefinableArchivalUnit)ap.createAu(config);
     return au;
   }  
@@ -221,6 +228,115 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
 
   }
 
+  public void testShouldCacheBookPages() throws Exception {
+    URL base = new URL(ROOT_URL);
+
+    // Run this test twice - once with a generic book plugin
+    // once with a restricted (eISBN) book plugin
+    boolean restricted;
+    for (int i=0; i < 2; i++) {
+      if (i==0) {
+        restricted = false;
+        log.debug3("testing book crawl rules using a standard parent");
+      } else {
+        restricted = true;  
+        log.debug3("testing book crawl rules using a restricted to eisbn parent");
+      }
+      ArchivalUnit aBookAu = makeBookAu(base, "9781780447636", restricted);
+      theDaemon.getLockssRepository(aBookAu);
+      theDaemon.getNodeManager(aBookAu);
+      BaseCachedUrlSet cus = new BaseCachedUrlSet(aBookAu,
+          new RangeCachedUrlSetSpec(base.toString()));
+      boolean trueIfNotRestricted = !restricted;
+
+      // Test for pages that should get crawled
+      //manifest page/book landing page
+      shouldCacheTest(ROOT_URL+"lockss/eisbn/9781780447636", true, aBookAu, cus);    
+      // images (etc.) but not as query arguments
+      shouldCacheTest(ROOT_URL+"doi/book/10.3362/9781780447636", true, aBookAu, cus);
+      shouldCacheTest("http://" + ROOT_HOST + "/foo/bar/baz/qux.js", true, aBookAu, cus);
+      shouldCacheTest("https://" + ROOT_HOST + "/foo/bar/baz/qux.js", true, aBookAu, cus);
+      //abstract forms for chapters, landing, etc
+      shouldCacheTest(ROOT_URL+"doi/abs/10.3362/9781780447636", true, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"doi/abs/10.3362/9781780447636.000", true, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"doi/abs/10.3362/9781780447636_ch03", true, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"doi/abs/10.3362/9781780447636_03", true, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"doi/abs/10.3362/9781780447636-05", true, aBookAu, cus);
+      
+      // pdf forms for landing, chapters, etc
+      shouldCacheTest(ROOT_URL+"doi/pdf/10.3362/9781780447636", true, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"doi/pdf/10.3362/9781780447636.000", true, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"doi/pdfplus/10.3362/9781780447636_ch03", true, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"doi/pdfplus/10.3362/9781780447636_03", true, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"doi/pdf/10.3362/9781780447636-05", true, aBookAu, cus);
+
+      shouldCacheTest(ROOT_URL+"doi/ref/10.3362/9781780447636", true, aBookAu, cus);
+
+      // check restrictions...
+      shouldCacheTest(ROOT_URL+"doi/abs/10.3362/9781780551234", trueIfNotRestricted, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"doi/book/10.3362/9781780551234", trueIfNotRestricted, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"doi/abs/10.3362/9781780551234_03", trueIfNotRestricted, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"doi/pdf/10.3362/9781780551234-05", trueIfNotRestricted, aBookAu, cus);
+      
+      // check allowable variants even with restricted plugin
+      // the eisbn portion of the DOI can have a prefix and/or a suffix but the eisbn
+      // must be in the second part of the doi...
+      //endocrine
+      shouldCacheTest(ROOT_URL+"doi/book/10.3362/TEAM.9781780447636", true, aBookAu, cus);
+      //siam-seg
+      shouldCacheTest(ROOT_URL+"doi/book/10.3362/1.9781780447636", true, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"doi/abs/10.3362/1.9781780447636.ch4", true, aBookAu, cus);
+      
+      
+      // these are real urls from publishers - a book landing and a "chapter" if they 
+      // support that. Keep these in to keep supporting the variations
+      //aiaa
+      shouldCacheTest(ROOT_URL+"doi/book/10.2514/4.476556", trueIfNotRestricted, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"doi/book/10.2514/4.476556", trueIfNotRestricted, aBookAu, cus);
+      //emerald
+      shouldCacheTest(ROOT_URL+"doi/book/10.1108/9780080549910", trueIfNotRestricted, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"doi/full/10.1108/9780080549910-003", trueIfNotRestricted, aBookAu, cus);
+      //endocrine
+      shouldCacheTest(ROOT_URL+"doi/book/10.1210/TEAM.9781936704071", trueIfNotRestricted, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"doi/abs/10.1210/TEAM.9781936704071.ch3", trueIfNotRestricted, aBookAu, cus);
+      //futurescience
+      shouldCacheTest(ROOT_URL+"doi/book/10.2217/9781780840628", trueIfNotRestricted, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"doi/full/10.2217/ebo.11.226", trueIfNotRestricted, aBookAu, cus);
+      //liverpool
+      shouldCacheTest(ROOT_URL+"doi/book/10.3828/978-1-84631-495-7", trueIfNotRestricted, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"doi/book/10.3828/978-1-84631-495-7", trueIfNotRestricted, aBookAu, cus);
+      //nrc
+      shouldCacheTest(ROOT_URL+"doi/book/10.1139/9780660199795", trueIfNotRestricted, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"doi/book/10.1139/9780660199795", trueIfNotRestricted, aBookAu, cus);
+      //practicalaction
+      shouldCacheTest(ROOT_URL+"doi/book/10.3362/9780855986483", trueIfNotRestricted, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"doi/abs/10.3362/9780855986483.004", trueIfNotRestricted, aBookAu, cus);
+      //siam
+      shouldCacheTest(ROOT_URL+"doi/book/10.1137/1.9780898719833", trueIfNotRestricted, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"doi/abs/10.1137/1.9780898719833.ch4", trueIfNotRestricted, aBookAu, cus);
+      //seg
+      shouldCacheTest(ROOT_URL+"doi/book/10.1190/1.9781560801795", trueIfNotRestricted, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"doi/abs/10.1190/1.9781560801795.ch3", trueIfNotRestricted, aBookAu, cus);
+      //wageningen
+      shouldCacheTest(ROOT_URL+"doi/book/10.3920/978-90-8686-805-6", trueIfNotRestricted, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"doi/abs/10.3920/978-90-8686-805-6_5", trueIfNotRestricted, aBookAu, cus);
+
+      // citation
+      shouldCacheTest(ROOT_URL+"action/downloadCitation?doi=10.1108%2F9780857245168-015&format=ris&include=cit", true, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"action/showCitFormats?doi=10.1108%2F9780857245168-001", true, aBookAu, cus);
+      // popups and images
+      shouldCacheTest(ROOT_URL+"action/showPopup?citid=citart1&id=App8-A-3&doi=10.1108%2F9780857245168-008", true, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"action/showPopup?citid=citart1&id=FN1&doi=10.1108%2F9780857245168-001", true, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"action/showPopup?citid=citart1&id=TFN6&doi=10.1108%2F9780857245168-009", true, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"action/showPopup?citid=citart1&id=eq3&doi=10.1108%2F9780857245168-008", true, aBookAu, cus);
+      shouldCacheTest(ROOT_URL+"action/showPopup?doi=10.1108%2F9780857245168-008&id=fig8-2a", true, aBookAu, cus);
+
+      // supporting stuff
+      shouldCacheTest(ROOT_URL+"na101/home/literatum/publisher/emerald/books/content/books/2007/9780857245168/9780857245168-002/20160202/images/medium/figure5.jpg", true, aBookAu, cus);   
+      shouldCacheTest(ROOT_URL+"na101/home/literatum/publisher/practical/books/content/books/2013/9781780447636/9781780447636/20150707/9781780447636.cover.gif", true, aBookAu, cus);
+
+    }
+  }
 
 
   private void shouldCacheTest(String url, boolean shouldCache,
@@ -314,7 +430,7 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
   }
   
   public void testPollSpecialBooks() throws Exception {
-    ArchivalUnit FooBookAu = makeBookAu(new URL("http://www.emeraldinsight.com/"), "9780585475226");
+    ArchivalUnit FooBookAu = makeBookAu(new URL("http://www.emeraldinsight.com/"), "9780585475226", false);
     theDaemon.getLockssRepository(FooBookAu);
     theDaemon.getNodeManager(FooBookAu);
 

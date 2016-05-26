@@ -1,0 +1,72 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>down - abstract parent only</string>
+  </entry>
+<!--  This plugin is exactly like BaseAtyponBooksPlugin
+      with the added crawl rule restriction that uses the book_eisbn param in the 
+      doi for book landing and for chapters (with optional chapter suffix)
+      Publishers that follow this model should use this more restrictive parent
+      to avoid overcrawling issues.
+         see: PracticalAction, Emerald, Endocrine, NRC, SEG, SIAM         
+      Books that do NOT, must use BaseAtyponBooksPlugin directly and be extra
+      careful with their crawl filter
+         see: AIAA, FutureScience, Liverpool and Wageningen
+     NOTE: any changes to the crawl rules in BaseAtyponBooksPlugin must be
+     added here         
+-->  
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponISBNBooksPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Base Atypon ISBN Books Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>17</string>
+  </entry>  
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponBooksPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>17</string>
+  </entry>  
+  <entry>
+    <string>au_name</string>
+    <string>"Base Atypon ISBN Books Plugin, Base URL %s, eISBN %s", base_url, book_eisbn</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <!--  CRAWL COMMENT BLOCK
+    RESTRICTED book plugin - the doi is limited to a prefix plus a 2nd section based on the book eISBN
+     - it might have a prefix and a suffix, but it contains the eisbn - such as:
+        doi/abs/10.222/1.9781780840246
+        doi/abs/10.222/TEAM.9781780840246
+        doi/abs/10.222/1.9781780840246_ch03
+        doi/abs/10.222/9781780840246-02
+    support files
+    images and data:<base>/na101v1/home/midtierbeta/publisher/fum/books/content/books/2011/9781780840000/ebo.11.115/production/images/large/figure1.jpeg
+    exclude traps
+    book landing page: <base>/doi/book/<doi> (doi is prefix/book_eisbn)
+    entire book pdf: <base>/doi/pdf/<doi> (doi is prefix/book_eisbn)
+    chapter pages: <base>/doi/(abs|full|pdf|ref)/<doi> (prefix/book_eisbn(.ch03|_5) can have more after...
+    image access: <base>/action/showPopup?citid=citart1&id=ch1-f1.1&doi=10.2217%2Febo.11.115
+    citation extraction page: <base>/action/showCitFormats?doi=10.2217%2F9781780840246
+    citation RIS page (normalized by us): <base>/action/downloadCitation?doi=10.2217/ebo.11.122&format=ris&include=cit
+     -->
+    <list>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(_v[0-9]+)?$", url_host(base_url)</string>
+      <string>1,"^%sna101/home/[a-z]+/publisher/[^/]+/books/content/books/[^/]+/%s/", base_url, book_eisbn</string>   
+      <string>1,"^https?://%s\.global\.prod\.fastly\.net/[^?]*\.(css|gif|jpe?g|js|png)$", url_host(base_url)</string>
+      <string>2,"^%sdoi/[^/]+/[0-9.]+/(null\?|[-.9]+$)", base_url</string>
+      <string>1,"^%sdoi/book/[0-9.]+/([^/]+)?%s", base_url, book_eisbn</string>
+      <string>1,"^%sdoi/(abs|full|pdf|pdfplus|ref)/[0-9.]+/([^/]+)?%s", base_url, book_eisbn</string>
+      <string>1,"^%saction/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", base_url</string>
+      <string>1,"^%saction/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", base_url</string> 
+    </list>
+  </entry>
+</map>
