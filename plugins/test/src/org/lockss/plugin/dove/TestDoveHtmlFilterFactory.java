@@ -76,9 +76,6 @@ public class TestDoveHtmlFilterFactory extends LockssTestCase {
           "</body></html>";
   private static final String toc_bit_hashfiltered = 
           "<div class=\"volume-issues issue-1010 \">      <div class=\"tab-item\">" +
-          "<div class=\"article-labels group\">" +
-          "<div class=\"tag\">Original Research</div>" +
-          "</div>" +
           "<h3>" +
           "<a href=\"https://www.dovepress.com/foo-article-TCRM\">Foo</a>" +
           "</h3>" +
@@ -293,4 +290,5 @@ public class TestDoveHtmlFilterFactory extends LockssTestCase {
     assertEquals(manifest_bit_hashfiltered, StringUtil.fromInputStream(inStream));
 
   }  
+
 }

@@ -57,6 +57,7 @@ public class DoveHtmlHashFilterFactory implements FilterFactory {
       // article landing page and article full-text
       // <base>/article-title-article-J_ABBR
       HtmlNodeFilters.tagWithAttribute("div", "class", "articles"),
+      
     };
     
     /*
@@ -70,6 +71,12 @@ public class DoveHtmlHashFilterFactory implements FilterFactory {
       // video capture has a "views" counter
       //https://www.dovepress.com/patient-factors-influencing-dermal-filler-complications-prevention-ass-peer-reviewed-article-CCID
       HtmlNodeFilters.tagWithAttribute("div", "class", "video-figcaption"),
+      // TOC page changes the labels associated with articles, adding "highly-accessed" etc
+      HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "article-labels "),
+      // article pages - just under the editor identity
+      HtmlNodeFilters.tagWithAttribute("div",  "class", "altmetric-embed"),
+      // these shouldn't be in the include, but be safe
+      HtmlNodeFilters.tagWithAttribute("span",  "class", "ticker-num"),
 
       };
 
