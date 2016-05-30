@@ -6,6 +6,10 @@
 // plain two-state check box.
 //
 // This code is applied to all the objects of class "tribox"
+//
+// W.P.: Made some modification to the JavaScript so that triboxes in a single 
+//       tab can be initialised without changing triboxes in other tabs.
+
 $(document).ready(function () {
     initTribox($('form'))
 });

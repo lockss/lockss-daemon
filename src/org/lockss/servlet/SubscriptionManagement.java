@@ -1093,7 +1093,8 @@ public class SubscriptionManagement extends LockssServlet {
         
     Block pubTitleLabel = new Block("label");
     pubTitleLabel.attribute("class", "publication-title");
-
+    
+    // Add checkboxes for bulk actions
     Input titleCheckBox = new Input(Input.Checkbox, 
         publication.getUniqueName().replaceAll(" ", "_"));
     titleCheckBox.attribute("id", "bulk-action-ckbox_" + publicationNumber);
@@ -1162,22 +1163,19 @@ public class SubscriptionManagement extends LockssServlet {
 
     Block triBoxBlock = new Block(Block.Span);
     
-    String publicationSubscriptionWidgetUniqId = 
-        publicationSubscriptionWidgetId;
-    
-    Input checkBox = new Input(Input.Checkbox, publicationSubscriptionWidgetUniqId);
+    Input checkBox = new Input(Input.Checkbox, publicationSubscriptionWidgetId);
     checkBox.attribute("class", "tribox");
-    checkBox.attribute("id", publicationSubscriptionWidgetUniqId);
+    checkBox.attribute("id", publicationSubscriptionWidgetId);
     checkBox.attribute("onchange", "publicationSubscriptionChanged('"
-	+ publicationSubscriptionWidgetUniqId + TRI_STATE_WIDGET_HIDDEN_ID_SUFFIX
+	+ publicationSubscriptionWidgetId + TRI_STATE_WIDGET_HIDDEN_ID_SUFFIX
 	+ "', '" + subscribedRangesId + "', '" + unsubscribedRangesId + "')");
     triBoxBlock.add(checkBox);
     triBoxBlock.add("&nbsp;");
 
-    triBoxBlock.add(getTriStateDisplayTextSpan(publicationSubscriptionWidgetUniqId,
+    triBoxBlock.add(getTriStateDisplayTextSpan(publicationSubscriptionWidgetId,
 	publicationSubscriptionSetting));
 
-    triBoxBlock.add(getTriStateHiddenInput(publicationSubscriptionWidgetUniqId,
+    triBoxBlock.add(getTriStateHiddenInput(publicationSubscriptionWidgetId,
 	publicationSubscriptionSetting));
 
     return triBoxBlock;
