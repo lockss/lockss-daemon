@@ -1484,14 +1484,6 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   public List<SerialPublication> getUndecidedPublications(
       Map<String, Publisher> undecidedPublicationsPublishers)
     throws DbException {
-    return getUndecidedPublications(undecidedPublicationsPublishers, 
-        "A", "Z");
-  }
-  
-  public List<SerialPublication> getUndecidedPublications(
-      Map<String, Publisher> undecidedPublicationsPublishers, 
-      String start, String end)
-          throws DbException {
     final String DEBUG_HEADER = "getUndecidedPublications(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
@@ -1515,7 +1507,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
     // Loop through all the publishers.
     for (TdbPublisher publisher :
-      TdbUtil.getTdb().getAllTdbPublishers(start, end).values()) {
+      TdbUtil.getTdb().getAllTdbPublishers().values()) {
       publisherName = publisher.getName();
       if (log.isDebug3())
 	log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);

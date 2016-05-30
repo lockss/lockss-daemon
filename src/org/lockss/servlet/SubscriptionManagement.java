@@ -400,6 +400,7 @@ public class SubscriptionManagement extends LockssServlet {
 
 	// Populate the tabs content with the publications for which no
 	// subscription decision has been made.
+	// W.P.: Removed as tabs are now populated only when clicked
 //	populateTabsPublications(publications, publishers, divTableMap);
 
 	// Save the undecided publications in the session to compare after the
@@ -652,19 +653,11 @@ public class SubscriptionManagement extends LockssServlet {
       }
     }
     
-//    // Initialize the publishers for the publications for which no
-//    // subscription decision has been made.
-//    Map<String, Publisher> publishers = new HashMap<String, Publisher>();
-//
-//    // Get the publications for which no subscription decision has been made
-//    // and populate their publishers.
-//    List<SerialPublication> publications =
-//        subManager.getUndecidedPublications(publishers, start, end);
-    
     Page page = new Page();
     
     Map<String, Table>  divTableMap = new HashMap<String, Table>();
     
+    // In order to reuse existing function, I use letter 'A'
     Table divTable = ServletUtil.createTabTable("A",
         getTabColumnHeaderNames(), "sub-row-title",
         getColumnHeaderCssClasses());    
@@ -676,11 +669,6 @@ public class SubscriptionManagement extends LockssServlet {
     Table table = divTableMap.get("A");
     
     page.add(table);
-
-//    if (subManager.isTotalSubscriptionEnabled()) {
-//      session.setAttribute(TOTAL_SUBSCRIPTION_SESSION_KEY,
-//          totalSubscriptionSetting);
-//    }
     
     return page;
   }

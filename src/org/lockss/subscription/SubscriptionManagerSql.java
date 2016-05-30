@@ -947,8 +947,7 @@ public class SubscriptionManagerSql {
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  List<Subscription> findAllSubscriptionsAndPublishers() 
-      throws DbException {
+  List<Subscription> findAllSubscriptionsAndPublishers() throws DbException {
     final String DEBUG_HEADER = "findAllSubscriptionsAndPublishers(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 

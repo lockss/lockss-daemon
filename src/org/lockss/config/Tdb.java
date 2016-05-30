@@ -1426,25 +1426,6 @@ public class Tdb {
       ? tdbPublisherMap : Collections.<String,TdbPublisher>emptyMap();
   }
 
-  public Map<String, TdbPublisher> getAllTdbPublishers(
-      String start, String end) {
-    if((tdbPublisherMap != null)){
-      Map<String, TdbPublisher> publishers = new HashMap<String, TdbPublisher>();
-      Set<String> pubNames = tdbPublisherMap.keySet();
-      Iterator<String> iterator = pubNames.iterator();
-      while (iterator.hasNext()) {
-        String pubName = iterator.next();
-        if(start.charAt(0) <= pubName.charAt(0) 
-            && pubName.charAt(0) <= end.charAt(0) ){
-          publishers.put(pubName, tdbPublisherMap.get(pubName));
-        }
-      }
-      return publishers;
-    } else {
-      return Collections.<String,TdbPublisher>emptyMap();
-    }
-  }
-
   /**
    * Get the publisher for the specified name.
    * 
