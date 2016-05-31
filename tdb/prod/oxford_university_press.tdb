@@ -98,7 +98,7 @@
     au < ready ; 2010 ; Aesthetic Surgery Journal Volume 30 ; 30 >
     au < ready ; 2011 ; Aesthetic Surgery Journal Volume 31 ; 31 >
     au < ready ; 2012 ; Aesthetic Surgery Journal Volume 32 ; 32 >
-    au < manifest ; 2013 ; Aesthetic Surgery Journal Volume 33 ; 33 >
+    au < ready ; 2013 ; Aesthetic Surgery Journal Volume 33 ; 33 >
     au < ready ; 2014 ; Aesthetic Surgery Journal Volume 34 ; 34 >
     au < ready ; 2015 ; Aesthetic Surgery Journal Volume 35 ; 35 >
     au < expected ; 2016 ; Aesthetic Surgery Journal Volume 36 ; 36 >
@@ -7283,7 +7283,7 @@
     au < ready ; 2013 ; FEMS Microbiology Letters Volume 345 ; 345 >
     au < ready ; 2013 ; FEMS Microbiology Letters Volume 346 ; 346 >
     au < ready ; 2013 ; FEMS Microbiology Letters Volume 347 ; 347 >
-    au < manifest ; 2013 ; FEMS Microbiology Letters Volume 348 ; 348 >
+    au < ready ; 2013 ; FEMS Microbiology Letters Volume 348 ; 348 >
     au < ready ; 2013 ; FEMS Microbiology Letters Volume 349 ; 349 >
     au < ready ; 2014 ; FEMS Microbiology Letters Volume 350 ; 350 >
     au < ready ; 2014 ; FEMS Microbiology Letters Volume 351 ; 351 >
@@ -19918,7 +19918,7 @@
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < manifest ; 2013 ; Pathogens and Disease Volume 67 ; 67 >
+    au < ready ; 2013 ; Pathogens and Disease Volume 67 ; 67 >
     au < ready ; 2013 ; Pathogens and Disease Volume 68 ; 68 >
     au < ready ; 2013 ; Pathogens and Disease Volume 69 ; 69 >
     au < ready ; 2014 ; Pathogens and Disease Volume 70 ; 70 >
