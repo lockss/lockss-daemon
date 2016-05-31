@@ -172,11 +172,11 @@
       {
         param[journal_id] = CJS
 
-        au < testing ; 2008 ; Canadian Journal of Sociology Volume 2008 ; 2008 ; 33 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2009 ; Canadian Journal of Sociology Volume 2009 ; 2009 ; 34 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2010 ; Canadian Journal of Sociology Volume 2010 ; 2010 ; 35 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2011 ; Canadian Journal of Sociology Volume 2011 ; 2011 ; 36 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2012 ; Canadian Journal of Sociology Volume 2012 ; 2012 ; 37 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2008 ; Canadian Journal of Sociology Volume 2008 ; 2008 ; 33 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2009 ; Canadian Journal of Sociology Volume 2009 ; 2009 ; 34 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2010 ; Canadian Journal of Sociology Volume 2010 ; 2010 ; 35 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2011 ; Canadian Journal of Sociology Volume 2011 ; 2011 ; 36 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2012 ; Canadian Journal of Sociology Volume 2012 ; 2012 ; 37 ; https://ejournals.library.ualberta.ca/ >
         au < ready ; 2013 ; Canadian Journal of Sociology Volume 2013 ; 2013 ; 38 ; https://ejournals.library.ualberta.ca/ >
         au < ready ; 2014 ; Canadian Journal of Sociology Volume 2014 ; 2014 ; 39 ; https://ejournals.library.ualberta.ca/ >
         au < ready ; 2015 ; Canadian Journal of Sociology Volume 2015 ; 2015 ; 40 ; https://ejournals.library.ualberta.ca/ >
@@ -201,16 +201,16 @@
 
       param[journal_id] = cjuce-rcepu
 
-      au < testing ; 1995 ; Canadian Journal of University Continuing Education Volume 1995 ; 1995 ; 21 ; https://ejournals.library.ualberta.ca/ >
-      au < testing ; 1996 ; Canadian Journal of University Continuing Education Volume 1996 ; 1996 ; 22 ; https://ejournals.library.ualberta.ca/ >
-      au < testing ; 1997 ; Canadian Journal of University Continuing Education Volume 1997 ; 1997 ; 23 ; https://ejournals.library.ualberta.ca/ >
-      au < testing ; 1998 ; Canadian Journal of University Continuing Education Volume 1998 ; 1998 ; 24 ; https://ejournals.library.ualberta.ca/ >
-      au < testing ; 1999 ; Canadian Journal of University Continuing Education Volume 1999 ; 1999 ; 25 ; https://ejournals.library.ualberta.ca/ >
-      au < testing ; 2000 ; Canadian Journal of University Continuing Education Volume 2000 ; 2000 ; 26 ; https://ejournals.library.ualberta.ca/ >
-      au < testing ; 2001 ; Canadian Journal of University Continuing Education Volume 2001 ; 2001 ; 27 ; https://ejournals.library.ualberta.ca/ >
-      au < testing ; 2002 ; Canadian Journal of University Continuing Education Volume 2002 ; 2002 ; 28 ; https://ejournals.library.ualberta.ca/ >
-      au < testing ; 2003 ; Canadian Journal of University Continuing Education Volume 2003 ; 2003 ; 29 ; https://ejournals.library.ualberta.ca/ >
-      au < testing ; 2004 ; Canadian Journal of University Continuing Education Volume 2004 ; 2004 ; 30 ; https://ejournals.library.ualberta.ca/ >
+      au < ready ; 1995 ; Canadian Journal of University Continuing Education Volume 1995 ; 1995 ; 21 ; https://ejournals.library.ualberta.ca/ >
+      au < ready ; 1996 ; Canadian Journal of University Continuing Education Volume 1996 ; 1996 ; 22 ; https://ejournals.library.ualberta.ca/ >
+      au < ready ; 1997 ; Canadian Journal of University Continuing Education Volume 1997 ; 1997 ; 23 ; https://ejournals.library.ualberta.ca/ >
+      au < ready ; 1998 ; Canadian Journal of University Continuing Education Volume 1998 ; 1998 ; 24 ; https://ejournals.library.ualberta.ca/ >
+      au < ready ; 1999 ; Canadian Journal of University Continuing Education Volume 1999 ; 1999 ; 25 ; https://ejournals.library.ualberta.ca/ >
+      au < ready ; 2000 ; Canadian Journal of University Continuing Education Volume 2000 ; 2000 ; 26 ; https://ejournals.library.ualberta.ca/ >
+      au < ready ; 2001 ; Canadian Journal of University Continuing Education Volume 2001 ; 2001 ; 27 ; https://ejournals.library.ualberta.ca/ >
+      au < ready ; 2002 ; Canadian Journal of University Continuing Education Volume 2002 ; 2002 ; 28 ; https://ejournals.library.ualberta.ca/ >
+      au < ready ; 2003 ; Canadian Journal of University Continuing Education Volume 2003 ; 2003 ; 29 ; https://ejournals.library.ualberta.ca/ >
+      au < ready ; 2004 ; Canadian Journal of University Continuing Education Volume 2004 ; 2004 ; 30 ; https://ejournals.library.ualberta.ca/ >
       au < ready ; 2005 ; Canadian Journal of University Continuing Education Volume 2005 ; 2005 ; 31 ; https://ejournals.library.ualberta.ca/ >
       au < ready ; 2006 ; Canadian Journal of University Continuing Education Volume 2006 ; 2006 ; 32 ; https://ejournals.library.ualberta.ca/ >
       au < ready ; 2007 ; Canadian Journal of University Continuing Education Volume 2007 ; 2007 ; 33 ; https://ejournals.library.ualberta.ca/ >
@@ -330,7 +330,7 @@
       au < ready ; 2013 ; Canadian Studies in Population Volume 2013 ; 2013 ; 40 ; https://ejournals.library.ualberta.ca/ >
       au < ready ; 2014 ; Canadian Studies in Population Volume 2014 ; 2014 ; 41 ; https://ejournals.library.ualberta.ca/ >
       au < ready ; 2015 ; Canadian Studies in Population Volume 2015 ; 2015 ; 42 ; https://ejournals.library.ualberta.ca/ >
-      au < testing ; 2016 ; Canadian Studies in Population Volume 2016 ; 2016 ; 43 ; https://ejournals.library.ualberta.ca/ >
+      au < ready ; 2016 ; Canadian Studies in Population Volume 2016 ; 2016 ; 43 ; https://ejournals.library.ualberta.ca/ >
 
     }
 
@@ -355,7 +355,7 @@
         au < ready ; 2013 ; Complicity: An International Journal of Complexity and Education Volume 2013 ; 2013 ; 10 ; https://ejournals.library.ualberta.ca/ >
         au < ready ; 2014 ; Complicity: An International Journal of Complexity and Education Volume 2014 ; 2014 ; 11 ; https://ejournals.library.ualberta.ca/ >
         au < ready ; 2015 ; Complicity: An International Journal of Complexity and Education Volume 2015 ; 2015 ; 12 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2016 ; Complicity: An International Journal of Complexity and Education Volume 2016 ; 2016 ; 13 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2016 ; Complicity: An International Journal of Complexity and Education Volume 2016 ; 2016 ; 13 ; https://ejournals.library.ualberta.ca/ >
 
     }
 
@@ -425,10 +425,10 @@
       au < ready ; 2009 ; Cultural and Pedagogical Inquiry Volume 2009 ; 2009 ; 1 ; https://ejournals.library.ualberta.ca/ >
       au < ready ; 2010 ; Cultural and Pedagogical Inquiry Volume 2010 ; 2010 ; 2 ; https://ejournals.library.ualberta.ca/ >
       au < ready ; 2011 ; Cultural and Pedagogical Inquiry Volume 2011 ; 2011 ; 3 ; https://ejournals.library.ualberta.ca/ >
-      au < testing ; 2012 ; Cultural and Pedagogical Inquiry Volume 2012 ; 2012 ; 4 ; https://ejournals.library.ualberta.ca/ >
-      au < testing ; 2013 ; Cultural and Pedagogical Inquiry Volume 2013 ; 2013 ; 5 ; https://ejournals.library.ualberta.ca/ >
-      au < testing ; 2014 ; Cultural and Pedagogical Inquiry Volume 2014 ; 2014 ; 6 ; https://ejournals.library.ualberta.ca/ >
-      au < testing ; 2015 ; Cultural and Pedagogical Inquiry Volume 2015 ; 2015 ; 7 ; https://ejournals.library.ualberta.ca/ >
+      au < ready ; 2012 ; Cultural and Pedagogical Inquiry Volume 2012 ; 2012 ; 4 ; https://ejournals.library.ualberta.ca/ >
+      au < ready ; 2013 ; Cultural and Pedagogical Inquiry Volume 2013 ; 2013 ; 5 ; https://ejournals.library.ualberta.ca/ >
+      au < ready ; 2014 ; Cultural and Pedagogical Inquiry Volume 2014 ; 2014 ; 6 ; https://ejournals.library.ualberta.ca/ >
+      au < ready ; 2015 ; Cultural and Pedagogical Inquiry Volume 2015 ; 2015 ; 7 ; https://ejournals.library.ualberta.ca/ >
       au < expected ; 2016 ; Cultural and Pedagogical Inquiry Volume 2016 ; 2016 ; 8 ; https://ejournals.library.ualberta.ca/ >
 
     }
@@ -460,19 +460,19 @@
       {
         param[journal_id] = ESC
 
-        au < testing ; 2003 ; ESC: English Studies in Canada Volume 2003 ; 2003 ; 29 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2004 ; ESC: English Studies in Canada Volume 2004 ; 2004 ; 30 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2005 ; ESC: English Studies in Canada Volume 2005 ; 2005 ; 31 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2006 ; ESC: English Studies in Canada Volume 2006 ; 2006 ; 32 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2007 ; ESC: English Studies in Canada Volume 2007 ; 2007 ; 33 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2008 ; ESC: English Studies in Canada Volume 2008 ; 2008 ; 34 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2009 ; ESC: English Studies in Canada Volume 2009 ; 2009 ; 35 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2010 ; ESC: English Studies in Canada Volume 2010 ; 2010 ; 36 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2011 ; ESC: English Studies in Canada Volume 2011 ; 2011 ; 37 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2003 ; ESC: English Studies in Canada Volume 2003 ; 2003 ; 29 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2004 ; ESC: English Studies in Canada Volume 2004 ; 2004 ; 30 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2005 ; ESC: English Studies in Canada Volume 2005 ; 2005 ; 31 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2006 ; ESC: English Studies in Canada Volume 2006 ; 2006 ; 32 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2007 ; ESC: English Studies in Canada Volume 2007 ; 2007 ; 33 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2008 ; ESC: English Studies in Canada Volume 2008 ; 2008 ; 34 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2009 ; ESC: English Studies in Canada Volume 2009 ; 2009 ; 35 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2010 ; ESC: English Studies in Canada Volume 2010 ; 2010 ; 36 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2011 ; ESC: English Studies in Canada Volume 2011 ; 2011 ; 37 ; https://ejournals.library.ualberta.ca/ >
         au < ready ; 2012 ; ESC: English Studies in Canada Volume 2012 ; 2012 ; 38 ; https://ejournals.library.ualberta.ca/ >
         au < ready ; 2013 ; ESC: English Studies in Canada Volume 2013 ; 2013 ; 39 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2014 ; ESC: English Studies in Canada Volume 2014 ; 2014 ; 40 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2015 ; ESC: English Studies in Canada Volume 2015 ; 2015 ; 41 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2014 ; ESC: English Studies in Canada Volume 2014 ; 2014 ; 40 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2015 ; ESC: English Studies in Canada Volume 2015 ; 2015 ; 41 ; https://ejournals.library.ualberta.ca/ >
         au < expected ; 2016 ; ESC: English Studies in Canada Volume 2016 ; 2016 ; 42 ; https://ejournals.library.ualberta.ca/ >
       }
       {
@@ -511,14 +511,14 @@
       {
         param[journal_id] = EBLIP
 
-        au < testing ; 2006 ; Evidence Based Library and Information Practice Volume 2006 ; 2006 ; 1 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2007 ; Evidence Based Library and Information Practice Volume 2007 ; 2007 ; 2 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2008 ; Evidence Based Library and Information Practice Volume 2008 ; 2008 ; 3 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2009 ; Evidence Based Library and Information Practice Volume 2009 ; 2009 ; 4 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2010 ; Evidence Based Library and Information Practice Volume 2010 ; 2010 ; 5 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2011 ; Evidence Based Library and Information Practice Volume 2011 ; 2011 ; 6 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2012 ; Evidence Based Library and Information Practice Volume 2012 ; 2012 ; 7 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2013 ; Evidence Based Library and Information Practice Volume 2013 ; 2013 ; 8 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2006 ; Evidence Based Library and Information Practice Volume 2006 ; 2006 ; 1 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2007 ; Evidence Based Library and Information Practice Volume 2007 ; 2007 ; 2 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2008 ; Evidence Based Library and Information Practice Volume 2008 ; 2008 ; 3 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2009 ; Evidence Based Library and Information Practice Volume 2009 ; 2009 ; 4 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2010 ; Evidence Based Library and Information Practice Volume 2010 ; 2010 ; 5 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2011 ; Evidence Based Library and Information Practice Volume 2011 ; 2011 ; 6 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2012 ; Evidence Based Library and Information Practice Volume 2012 ; 2012 ; 7 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2013 ; Evidence Based Library and Information Practice Volume 2013 ; 2013 ; 8 ; https://ejournals.library.ualberta.ca/ >
         au < ready ; 2014 ; Evidence Based Library and Information Practice Volume 2014 ; 2014 ; 9 ; https://ejournals.library.ualberta.ca/ >
         au < ready ; 2015 ; Evidence Based Library and Information Practice Volume 2015 ; 2015 ; 10 ; https://ejournals.library.ualberta.ca/ >
         au < ready ; 2016 ; Evidence Based Library and Information Practice Volume 2016 ; 2016 ; 11 ; https://ejournals.library.ualberta.ca/ >
@@ -582,18 +582,18 @@
         # moved to Sage as of the end of 2015.
         param[journal_id] = IJQM
         
-        au < testing ; 2002 ; International Journal of Qualitative Methods Volume 2002 ; 2002 ; 1 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2003 ; International Journal of Qualitative Methods Volume 2003 ; 2003 ; 2 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2004 ; International Journal of Qualitative Methods Volume 2004 ; 2004 ; 3 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2005 ; International Journal of Qualitative Methods Volume 2005 ; 2005 ; 4 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2006 ; International Journal of Qualitative Methods Volume 2006 ; 2006 ; 5 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2007 ; International Journal of Qualitative Methods Volume 2007 ; 2007 ; 6 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2008 ; International Journal of Qualitative Methods Volume 2008 ; 2008 ; 7 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2009 ; International Journal of Qualitative Methods Volume 2009 ; 2009 ; 8 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2010 ; International Journal of Qualitative Methods Volume 2010 ; 2010 ; 9 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2011 ; International Journal of Qualitative Methods Volume 2011 ; 2011 ; 10 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2012 ; International Journal of Qualitative Methods Volume 2012 ; 2012 ; 11 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2013 ; International Journal of Qualitative Methods Volume 2013 ; 2013 ; 12 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2002 ; International Journal of Qualitative Methods Volume 2002 ; 2002 ; 1 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2003 ; International Journal of Qualitative Methods Volume 2003 ; 2003 ; 2 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2004 ; International Journal of Qualitative Methods Volume 2004 ; 2004 ; 3 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2005 ; International Journal of Qualitative Methods Volume 2005 ; 2005 ; 4 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2006 ; International Journal of Qualitative Methods Volume 2006 ; 2006 ; 5 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2007 ; International Journal of Qualitative Methods Volume 2007 ; 2007 ; 6 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2008 ; International Journal of Qualitative Methods Volume 2008 ; 2008 ; 7 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2009 ; International Journal of Qualitative Methods Volume 2009 ; 2009 ; 8 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2010 ; International Journal of Qualitative Methods Volume 2010 ; 2010 ; 9 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2011 ; International Journal of Qualitative Methods Volume 2011 ; 2011 ; 10 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2012 ; International Journal of Qualitative Methods Volume 2012 ; 2012 ; 11 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2013 ; International Journal of Qualitative Methods Volume 2013 ; 2013 ; 12 ; https://ejournals.library.ualberta.ca/ >
         au < ready ; 2014 ; International Journal of Qualitative Methods Volume 2014 ; 2014 ; 13 ; https://ejournals.library.ualberta.ca/ >
         au < ready ; 2015 ; International Journal of Qualitative Methods Volume 2015 ; 2015 ; 14 ; https://ejournals.library.ualberta.ca/ >
       }
@@ -634,17 +634,17 @@
       {
         param[journal_id] = JCIE
 
-        au < testing ; 2006 ; Journal of Contemporary Issues in Education Volume 2006 ; 2006 ; 1 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2007 ; Journal of Contemporary Issues in Education Volume 2007 ; 2007 ; 2 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2008 ; Journal of Contemporary Issues in Education Volume 2008 ; 2008 ; 3 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2009 ; Journal of Contemporary Issues in Education Volume 2009 ; 2009 ; 4 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2010 ; Journal of Contemporary Issues in Education Volume 2010 ; 2010 ; 5 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2011 ; Journal of Contemporary Issues in Education Volume 2011 ; 2011 ; 6 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2006 ; Journal of Contemporary Issues in Education Volume 2006 ; 2006 ; 1 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2007 ; Journal of Contemporary Issues in Education Volume 2007 ; 2007 ; 2 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2008 ; Journal of Contemporary Issues in Education Volume 2008 ; 2008 ; 3 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2009 ; Journal of Contemporary Issues in Education Volume 2009 ; 2009 ; 4 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2010 ; Journal of Contemporary Issues in Education Volume 2010 ; 2010 ; 5 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2011 ; Journal of Contemporary Issues in Education Volume 2011 ; 2011 ; 6 ; https://ejournals.library.ualberta.ca/ >
         au < ready ; 2012 ; Journal of Contemporary Issues in Education Volume 2012 ; 2012 ; 7 ; https://ejournals.library.ualberta.ca/ >
         au < ready ; 2013 ; Journal of Contemporary Issues in Education Volume 2013 ; 2013 ; 8 ; https://ejournals.library.ualberta.ca/ >
         au < ready ; 2014 ; Journal of Contemporary Issues in Education Volume 2014 ; 2014 ; 9 ; https://ejournals.library.ualberta.ca/ >
         au < ready ; 2015 ; Journal of Contemporary Issues in Education Volume 2015 ; 2015 ; 10 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2016 ; Journal of Contemporary Issues in Education Volume 2016 ; 2016 ; 11 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2016 ; Journal of Contemporary Issues in Education Volume 2016 ; 2016 ; 11 ; https://ejournals.library.ualberta.ca/ >
       }
       {
         param[journal_id] = jcie
@@ -667,12 +667,12 @@
 
       param[journal_id] = JPPS
 
-      au < testing ; 2007 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 2007 ; 2007 ; 10 ; https://ejournals.library.ualberta.ca/ >
-      au < testing ; 2008 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 2008 ; 2008 ; 11 ; https://ejournals.library.ualberta.ca/ >
-      au < testing ; 2009 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 2009 ; 2009 ; 12 ; https://ejournals.library.ualberta.ca/ >
-      au < testing ; 2010 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 2010 ; 2010 ; 13 ; https://ejournals.library.ualberta.ca/ >
-      au < testing ; 2011 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 2011 ; 2011 ; 14 ; https://ejournals.library.ualberta.ca/ >
-      au < testing ; 2012 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 2012 ; 2012 ; 15 ; https://ejournals.library.ualberta.ca/ >
+      au < ready ; 2007 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 2007 ; 2007 ; 10 ; https://ejournals.library.ualberta.ca/ >
+      au < ready ; 2008 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 2008 ; 2008 ; 11 ; https://ejournals.library.ualberta.ca/ >
+      au < ready ; 2009 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 2009 ; 2009 ; 12 ; https://ejournals.library.ualberta.ca/ >
+      au < ready ; 2010 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 2010 ; 2010 ; 13 ; https://ejournals.library.ualberta.ca/ >
+      au < ready ; 2011 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 2011 ; 2011 ; 14 ; https://ejournals.library.ualberta.ca/ >
+      au < ready ; 2012 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 2012 ; 2012 ; 15 ; https://ejournals.library.ualberta.ca/ >
       au < ready ; 2013 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 2013 ; 2013 ; 16 ; https://ejournals.library.ualberta.ca/ >
       au < ready ; 2014 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 2014 ; 2014 ; 17 ; https://ejournals.library.ualberta.ca/ >
       au < ready ; 2015 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 2015 ; 2015 ; 18 ; https://ejournals.library.ualberta.ca/ >
@@ -690,8 +690,9 @@
       #continues cjuce-rcepu
       #note different base_url https://journals.library.ualberta.ca/jpcoe/
       param[journal_id] = jpcoe
+      # 2016 volume has no substance. Why? https://journals.library.ualberta.ca/jpcoe/index.php/jpcoe/gateway/lockss?year=2016
 
-      au < testing ; 2016 ; Journal of Professional Continuing and Online Education Volume 2016 ; 2016 ; 1 ; https://journals.library.ualberta.ca/jpcoe/ >
+      au < manifest ; 2016 ; Journal of Professional Continuing and Online Education Volume 2016 ; 2016 ; 1 ; https://journals.library.ualberta.ca/jpcoe/ >
 
     }
 
@@ -841,13 +842,13 @@
       {
         param[journal_id] = TC
 
-        au < testing ; 2008 ; TranscUlturAl Volume 2008 ; 2008 ; 1 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2009 ; TranscUlturAl Volume 2009 ; 2009 ; 2 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2010 ; TranscUlturAl Volume 2010 ; 2010 ; 3 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2011 ; TranscUlturAl Volume 2011 ; 2011 ; 4 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2013 ; TranscUlturAl Volume 2013 ; 2013 ; 5 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2014 ; TranscUlturAl Volume 2014 ; 2014 ; 6 ; https://ejournals.library.ualberta.ca/ >
-        au < testing ; 2015 ; TranscUlturAl Volume 2015 ; 2015 ; 7 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2008 ; TranscUlturAl Volume 2008 ; 2008 ; 1 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2009 ; TranscUlturAl Volume 2009 ; 2009 ; 2 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2010 ; TranscUlturAl Volume 2010 ; 2010 ; 3 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2011 ; TranscUlturAl Volume 2011 ; 2011 ; 4 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2013 ; TranscUlturAl Volume 2013 ; 2013 ; 5 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2014 ; TranscUlturAl Volume 2014 ; 2014 ; 6 ; https://ejournals.library.ualberta.ca/ >
+        au < ready ; 2015 ; TranscUlturAl Volume 2015 ; 2015 ; 7 ; https://ejournals.library.ualberta.ca/ >
         au < expected ; 2016 ; TranscUlturAl Volume 2016 ; 2016 ; 8 ; https://ejournals.library.ualberta.ca/ >
       }
       {
@@ -949,7 +950,7 @@
       au < ready ; 2009 ; Proceedings of the Annual Conference of CAIS / Actes du congrès annuel de l'ACSI Volume 2009 ; 2009 ; 2009 ; https://journals.library.ualberta.ca/ojs.cais-acsi.ca/ >
       au < ready ; 2010 ; Proceedings of the Annual Conference of CAIS / Actes du congrès annuel de l'ACSI Volume 2010 ; 2010 ; 2010 ; https://journals.library.ualberta.ca/ojs.cais-acsi.ca/ >
       au < ready ; 2011 ; Proceedings of the Annual Conference of CAIS / Actes du congrès annuel de l'ACSI Volume 2011 ; 2011 ; 2011 ; https://journals.library.ualberta.ca/ojs.cais-acsi.ca/ >
-      au < testing ; 2012 ; Proceedings of the Annual Conference of CAIS / Actes du congrès annuel de l'ACSI Volume 2012 ; 2012 ; 2012 ; https://journals.library.ualberta.ca/ojs.cais-acsi.ca/ >
+      au < ready ; 2012 ; Proceedings of the Annual Conference of CAIS / Actes du congrès annuel de l'ACSI Volume 2012 ; 2012 ; 2012 ; https://journals.library.ualberta.ca/ojs.cais-acsi.ca/ >
       au < ready ; 2013 ; Proceedings of the Annual Conference of CAIS / Actes du congrès annuel de l'ACSI Volume 2013 ; 2013 ; 2013 ; https://journals.library.ualberta.ca/ojs.cais-acsi.ca/ >
       au < ready ; 2014 ; Proceedings of the Annual Conference of CAIS / Actes du congrès annuel de l'ACSI Volume 2014 ; 2014 ; 2014 ; https://journals.library.ualberta.ca/ojs.cais-acsi.ca/ >
       au < expected ; 2015 ; Proceedings of the Annual Conference of CAIS / Actes du congrès annuel de l'ACSI Volume 2015 ; 2015 ; 2015 ; https://journals.library.ualberta.ca/ojs.cais-acsi.ca/ >
