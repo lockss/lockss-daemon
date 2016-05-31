@@ -43,6 +43,7 @@ import java.util.Set;
 import java.util.TreeMap;
 import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.app.ConfigurableManager;
+import org.lockss.app.LockssDaemon;
 import org.lockss.config.Configuration;
 import org.lockss.config.Configuration.Differences;
 import org.lockss.daemon.LockssRunnable;
@@ -210,6 +211,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   static final List<String> DEFAULT_MANDATORY_FIELDS = null;
 
   /**
+   * Determines whether metadata indexing happens only "on-demand". Set this to
+   * <code>true</code> for the metadata extraction via REST web service.
+   */
+  static final String PARAM_ON_DEMAND_METADATA_EXTRACTION_ONLY = PREFIX
+      + "onDemandMetadataExtractionOnly";
+  static final boolean DEFAULT_ON_DEMAND_METADATA_EXTRACTION_ONLY = false;
+
+  /**
    * Map of running reindexing tasks keyed by their AuIds
    */
   final Map<String, ReindexingTask> activeReindexingTasks =
@@ -312,6 +321,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
   private List<String> mandatoryMetadataFields = DEFAULT_MANDATORY_FIELDS;
 
+  private boolean onDemandMetadataExtractionOnly =
+      DEFAULT_ON_DEMAND_METADATA_EXTRACTION_ONLY;
+
   /**
    * Starts the MetadataManager service.
    */
@@ -389,7 +401,17 @@ public class MetadataManager extends BaseLockssDaemonManager implements
           config.getBoolean(PARAM_PRIORTIZE_INDEXING_NEW_AUS,
                             DEFAULT_PRIORTIZE_INDEXING_NEW_AUS);
 
-      if (isDaemonInited()) {
+      if (changedKeys.contains(PARAM_ON_DEMAND_METADATA_EXTRACTION_ONLY)) {
+	onDemandMetadataExtractionOnly =
+	    config.getBoolean(PARAM_ON_DEMAND_METADATA_EXTRACTION_ONLY,
+		DEFAULT_ON_DEMAND_METADATA_EXTRACTION_ONLY);
+
+	if (log.isDebug3())
+	  log.debug3("onDemandMetadataExtractionOnly = "
+	      + onDemandMetadataExtractionOnly);
+      }
+
+      if (isDaemonInited() && !onDemandMetadataExtractionOnly) {
 	boolean doEnable =
 	  config.getBoolean(PARAM_INDEXING_ENABLED, DEFAULT_INDEXING_ENABLED);
 	setIndexingEnabled(doEnable);
@@ -405,7 +427,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	    .getList(PARAM_INDEX_PRIORITY_AUID_MAP,
 		     DEFAULT_INDEX_PRIORITY_AUID_MAP)));
 
-	if (isInited()) {
+	if (isInited() && !onDemandMetadataExtractionOnly) {
 	  processAbortPriorities();
 	  // process queued AUs in case any are newly eligible
 	  startReindexing();
@@ -2815,6 +2837,13 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          An ArchivalUnit with the Archival Unit.
    */
   protected void notifyStartReindexingAu(ArchivalUnit au) {
+    final String DEBUG_HEADER = "notifyStartReindexingAu(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "au = " + au);
+
+    if (onDemandMetadataExtractionOnly) {
+      LockssDaemon.getLockssDaemon().getJobManager()
+      .handlePutAuJobStartEvent(au.getAuId());
+    }
   }
 
   /**
@@ -2826,7 +2855,58 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A ReindexingStatus with the status of the reindexing process.
    */
   protected void notifyFinishReindexingAu(ArchivalUnit au,
-      ReindexingStatus status) {
+      ReindexingStatus status, Exception exception) {
+    final String DEBUG_HEADER = "notifyFinishReindexingAu(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "au = " + au);
+      log.debug2(DEBUG_HEADER + "status = " + status);
+      log.debug2(DEBUG_HEADER + "exception = " + exception);
+    }
+
+    if (onDemandMetadataExtractionOnly) {
+      LockssDaemon.getLockssDaemon().getJobManager()
+      .handlePutAuJobFinishEvent(au.getAuId(), status, exception);
+    }
+  }
+
+  /**
+   * Notifies listeners that the metadata of an AU is starting to be deleted.
+   * 
+   * @param au
+   *          An ArchivalUnit with the Archival Unit.
+   */
+  protected void notifyStartAuMetadataRemoval(ArchivalUnit au) {
+    final String DEBUG_HEADER = "notifyStartAuMetadataRemoval(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "au = " + au);
+
+    if (onDemandMetadataExtractionOnly) {
+      LockssDaemon.getLockssDaemon().getJobManager()
+      .handleDeleteAuJobStartEvent(au.getAuId());
+    }
+  }
+
+  /**
+   * Notifies listeners that the metadata of an AU is has been deleted.
+   * 
+   * @param au
+   *          An ArchivalUnit with the Archival Unit.
+   * @param status
+   *          A ReindexingStatus with the status of the metadata removal
+   *          process.
+   */
+  protected void notifyFinishAuMetadataRemoval(ArchivalUnit au,
+      ReindexingStatus status, Exception exception) {
+    final String DEBUG_HEADER = "notifyFinishAuMetadataRemoval(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "au = " + au);
+      log.debug2(DEBUG_HEADER + "status = " + status);
+      log.debug2(DEBUG_HEADER + "exception = " + exception);
+    }
+
+    if (onDemandMetadataExtractionOnly) {
+      LockssDaemon.getLockssDaemon().getJobManager()
+      .handleDeleteAuJobFinishEvent(au.getAuId(), status, exception);
+    }
   }
 
   /**
@@ -4470,5 +4550,159 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = '" + result + "'");
     return result;
+  }
+
+  /**
+   * Provides the indication of whether only on-demand metadata extraction is
+   * enabled.
+   * 
+   * @return a boolean with <code>true</code> if only on-demand metadata
+   *         extraction is enabled, <code>false</code> otherwise.
+   */
+  public boolean isOnDemandMetadataExtractionOnly() {
+    return onDemandMetadataExtractionOnly;
+  }
+
+  /**
+   * Ensures that as many re-indexing tasks as possible are running if the
+   * manager is enabled.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return an int with the number of reindexing tasks started.
+   */
+  public ReindexingTask onDemandStartReindexing(String auId) {
+    final String DEBUG_HEADER = "onDemandStartReindexing(): ";
+    if (log.isDebug2()) log.debug2("Starting...");
+
+    // Get the AU.
+    ArchivalUnit au = pluginMgr.getAuFromId(auId);
+    if (log.isDebug3()) log.debug3("au = " + au);
+
+    // Check whether it does not exist.
+    if (au == null) {
+      // Yes: Report the problem.
+      String message = "Cannot find Archival Unit for auId '" + auId + "'";
+      log.error(message);
+      throw new IllegalArgumentException(message);
+    }
+
+    // No: Get the metadata extractor.
+    ArticleMetadataExtractor ae = getMetadataExtractor(au);
+
+    // Check whether it does not exist.
+    if (ae == null) {
+      // Yes: It shouldn't happen because it was checked before adding
+      // the AU to the pending AUs list.
+      String message = "No metadata extractor for AU '" + au.getName() + "'";
+      log.error(message);
+      throw new IllegalArgumentException(message);
+    }
+
+    // Schedule the pending AU.
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "Creating the reindexing task for AU: " + au.getName());
+
+    ReindexingTask task = new ReindexingTask(au, ae);
+    task.setFullReindex(true);
+
+    synchronized (activeReindexingTasks) {
+      activeReindexingTasks.put(au.getAuId(), task);
+    }
+
+    log.debug(DEBUG_HEADER + "Running the reindexing task for AU: "
+	+ au.getName());
+    runReindexingTask(task);
+
+    return task;
+  }
+
+  /**
+   * Ensures that as many re-indexing tasks as possible are running if the
+   * manager is enabled.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return an int with the number of reindexing tasks started.
+   */
+  public DeleteMetadataTask startMetadataRemoval(String auId) {
+    final String DEBUG_HEADER = "startMetadataRemoval(): ";
+    if (log.isDebug2()) log.debug2("Starting...");
+
+    // Get the AU.
+    ArchivalUnit au = pluginMgr.getAuFromId(auId);
+    if (log.isDebug3()) log.debug3("au = " + au);
+
+    // Check whether it does not exist.
+    if (au == null) {
+      // Yes: Report the problem.
+      String message = "Cannot find Archival Unit for auId '" + auId + "'";
+      log.error(message);
+      throw new IllegalArgumentException(message);
+    }
+
+    // No: Schedule the pending AU.
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "Creating the metadata removal task for AU: " + au.getName());
+
+    DeleteMetadataTask task = new DeleteMetadataTask(au);
+
+    log.debug(DEBUG_HEADER + "Running the metadata removal task for AU: "
+	+ au.getName());
+    runMetadataRemovalTask(task);
+
+    return task;
+  }
+
+  /**
+   * Runs the specified metadata removal task.
+   * <p>
+   * Temporary implementation runs as a LockssRunnable in a thread rather than
+   * using the SchedService.
+   * 
+   * @param task A DeleteMetadataTask with the metadata removal task.
+   */
+  private void runMetadataRemovalTask(final DeleteMetadataTask task) {
+    /*
+     * Temporarily running task in its own thread rather than using SchedService
+     * 
+     * @todo Update SchedService to handle this case
+     */
+    LockssRunnable runnable =
+	new LockssRunnable(AuUtil.getThreadNameFor("Removing_Metadata",
+	                                           task.getAu())) {
+	  public void lockssRun() {
+	    startWDog(WDOG_PARAM_INDEXER, WDOG_DEFAULT_INDEXER);
+	    task.setWDog(this);
+
+	    task.handleEvent(Schedule.EventType.START);
+
+	    while (!task.isFinished()) {
+	      task.step(Integer.MAX_VALUE);
+	    }
+
+	    task.handleEvent(Schedule.EventType.FINISH);
+	    stopWDog();
+	  }
+	};
+
+    Thread runThread = new Thread(runnable);
+    runThread.start();
+  }
+
+  /**
+   * Provides the metadata of an Archival Unit.
+   * 
+   * @param auId
+   *          A String with the Archival Unit text identifier.
+   * @return an AuMetadataDetail with the metadata of the Archival Unit.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public AuMetadataDetail getAuMetadataDetail(String auId) throws DbException {
+    final String DEBUG_HEADER = "getAuMetadataDetail(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
+
+    return mdManagerSql.getAuMetadataDetail(auId);
   }
 }

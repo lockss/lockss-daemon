@@ -129,6 +129,8 @@ public class ReindexingTask extends StepTask {
     }
   }
 
+  private boolean cancelled = false;
+
   /**
    * Constructor.
    * 
@@ -176,6 +178,14 @@ public class ReindexingTask extends StepTask {
    */
   @Override
   public void cancel() {
+    final String DEBUG_HEADER = "cancel(): ";
+    if (log.isDebug3()) {
+      log.debug3(DEBUG_HEADER + "isFinished() = " + isFinished());
+      log.debug3(DEBUG_HEADER + "status = " + status);
+    }
+
+    cancelled = true;
+
     if (!isFinished() && (status == ReindexingStatus.Running)) {
       status = ReindexingStatus.Failed;
       super.cancel();
@@ -279,7 +289,7 @@ public class ReindexingTask extends StepTask {
    * 
    * @return a String with the auid of the task AU.
    */
-  String getAuId() {
+  public String getAuId() {
     return auId;
   }
 
@@ -819,9 +829,17 @@ public class ReindexingTask extends StepTask {
             status = ReindexingStatus.Failed;
           } catch (DbException dbe) {
             e = dbe;
-            log.warning("Error updating metadata at FINISH for " + status
-                + " -- rescheduling", e);
-            status = ReindexingStatus.Rescheduled;
+            String message = "Error updating metadata at FINISH for " + status;
+
+            if (mdManager.isOnDemandMetadataExtractionOnly()) {
+              status = ReindexingStatus.Failed;
+              message = message + " -- NOT rescheduling";
+            } else {
+              status = ReindexingStatus.Rescheduled;
+              message = message + " -- rescheduling";
+            }
+
+            log.warning(message, e);
           } catch (RuntimeException re) {
             e = re;
             log.warning("Error updating metadata at FINISH for " + status
@@ -834,46 +852,54 @@ public class ReindexingTask extends StepTask {
           // Fall through if SQL exception occurred during update.
         case Failed:
         case Rescheduled:
-          // Reindexing not successful, so try again later if status indicates
-          // the operation should be rescheduled.
-          if (log.isDebug3()) log.debug3(DEBUG_HEADER
-              + "Reindexing task for AU '" + auName
-              + "' was unsuccessful: status = " + status);
+          if (!mdManager.isOnDemandMetadataExtractionOnly()) {
+            // Reindexing not successful, so try again later if status indicates
+            // the operation should be rescheduled.
+            if (log.isDebug3()) log.debug3(DEBUG_HEADER
+        	+ "Reindexing task for AU '" + auName
+        	+ "' was unsuccessful: status = " + status);
 
-          mdManager.addToFailedReindexingTasks(ReindexingTask.this);
+            mdManager.addToFailedReindexingTasks(ReindexingTask.this);
 
-          try {
-            // Get a connection to the database.
-            conn = dbManager.getConnection();
+            try {
+              // Get a connection to the database.
+              conn = dbManager.getConnection();
 
-            mdManagerSql.removeFromPendingAus(conn, au.getAuId());
-            mdManager.updatePendingAusCount(conn);
+              mdManagerSql.removeFromPendingAus(conn, au.getAuId());
+              mdManager.updatePendingAusCount(conn);
 
-            if (status == ReindexingStatus.Failed) {
-              if (log.isDebug3()) log.debug3(DEBUG_HEADER
-        	  + "Marking as failed the reindexing task for AU '" + auName
-        	  + "'");
+              if (status == ReindexingStatus.Failed) {
+        	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+        	    + "Marking as failed the reindexing task for AU '" + auName
+        	    + "'");
 
-            // Add the failed AU to the pending list with the right priority to
-            // avoid processing it again before the underlying problem is fixed.
-              mdManagerSql.addFailedIndexingAuToPendingAus(conn, au.getAuId());
-            } else if (status == ReindexingStatus.Rescheduled) {
-              if (log.isDebug3()) log.debug3(DEBUG_HEADER
-        	  + "Rescheduling the reindexing task AU '" + auName + "'");
+        	// Add the failed AU to the pending list with the right priority
+        	// to avoid processing it again before the underlying problem is
+        	// fixed.
+        	mdManagerSql.addFailedIndexingAuToPendingAus(conn,
+        	    au.getAuId());
+              } else if (status == ReindexingStatus.Rescheduled) {
+        	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+        	    + "Rescheduling the reindexing task AU '" + auName + "'");
 
-              // Add the re-schedulable AU to the end of the pending list.
-              mdManager.addToPendingAusIfNotThere(conn,
-        	  Collections.singleton(au), needFullReindex);
+        	// Add the re-schedulable AU to the end of the pending list.
+        	mdManager.addToPendingAusIfNotThere(conn,
+        	    Collections.singleton(au), needFullReindex);
+              }
+
+              // Complete the database transaction.
+              DbManager.commitOrRollback(conn, log);
+            } catch (DbException dbe) {
+              log.warning("Error updating pending queue at FINISH for AU '"
+        	  + auName + "', status = " + status, dbe);
+            } finally {
+              DbManager.safeRollbackAndClose(conn);
             }
-
-            // Complete the database transaction.
-            DbManager.commitOrRollback(conn, log);
-          } catch (DbException dbe) {
-            log.warning("Error updating pending queue at FINISH for AU '"
-        	+ auName + "', status = " + status, dbe);
-          } finally {
-            DbManager.safeRollbackAndClose(conn);
           }
+
+          break;
+        default:
+          log.warning("Unexpected status '" + status + "'");
       }
 
       articleIterator = null;
@@ -899,24 +925,28 @@ public class ReindexingTask extends StepTask {
       articleMetadataInfoBuffer.close();
       articleMetadataInfoBuffer = null;
 
-      synchronized (mdManager.activeReindexingTasks) {
-        mdManager.activeReindexingTasks.remove(au.getAuId());
-        mdManager.notifyFinishReindexingAu(au, status);
+      if (!mdManager.isOnDemandMetadataExtractionOnly()) {
+	synchronized (mdManager.activeReindexingTasks) {
+	  mdManager.activeReindexingTasks.remove(au.getAuId());
+	  mdManager.notifyFinishReindexingAu(au, status, task.getException());
 
-        try {
-          // Get a connection to the database.
-          conn = dbManager.getConnection();
+	  try {
+            // Get a connection to the database.
+            conn = dbManager.getConnection();
 
-          // Schedule another task if available.
-          mdManager.startReindexing(conn);
+            // Schedule another task if available.
+            mdManager.startReindexing(conn);
 
-          // Complete the database transaction.
-          DbManager.commitOrRollback(conn, log);
-        } catch (DbException dbe) {
-          log.error("Cannot restart indexing", dbe);
-        } finally {
-          DbManager.safeRollbackAndClose(conn);
+            // Complete the database transaction.
+            DbManager.commitOrRollback(conn, log);
+          } catch (DbException dbe) {
+            log.error("Cannot restart indexing", dbe);
+          } finally {
+            DbManager.safeRollbackAndClose(conn);
+          }
         }
+      } else {
+	mdManager.notifyFinishReindexingAu(au, status, task.getException());
       }
     }
   }
@@ -950,5 +980,15 @@ public class ReindexingTask extends StepTask {
    */
   public void setLastExtractTime(long time) {
     lastExtractTime = time;
+  }
+
+  /**
+   * Provides an indication of whether the task has been cancelled.
+   * 
+   * @return a boolean with <code>true</code> if the task has been cancelled,
+   *         <code>false</code> otherwise.
+   */
+  boolean isCancelled() {
+    return cancelled;
   }
 }

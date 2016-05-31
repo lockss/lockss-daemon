@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
  Copyright (c) 2014-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -165,6 +161,15 @@ public class SqlConstants {
   /** Name of the publisher subscription table. */
   public static final String PUBLISHER_SUBSCRIPTION_TABLE =
       "publisher_subscription";
+
+  /** Name of the job type table. */
+  public static final String JOB_TYPE_TABLE = "job_type";
+
+  /** Name of the job status table. */
+  public static final String JOB_STATUS_TABLE = "job_status";
+
+  /** Name of the job table. */
+  public static final String JOB_TABLE = "job";
 
   //
   // Database table column names.
@@ -422,6 +427,33 @@ public class SqlConstants {
   public static final String PUBLISHER_SUBSCRIPTION_SEQ_COLUMN =
       "publisher_subscription_seq";
 
+  /** Job type identifier column. */
+  public static final String JOB_TYPE_SEQ_COLUMN = "job_type_seq";
+
+  /** Job status identifier column. */
+  public static final String JOB_STATUS_SEQ_COLUMN = "job_status_seq";
+
+  /** Status name column. */
+  public static final String STATUS_NAME_COLUMN = "status_name";
+
+  /** Job identifier column. */
+  public static final String JOB_SEQ_COLUMN = "job_seq";
+
+  /** Description column. */
+  public static final String DESCRIPTION_COLUMN = "description";
+
+  /** Job start time column. */
+  public static final String START_TIME_COLUMN = "start_time";
+
+  /** Job end time column. */
+  public static final String END_TIME_COLUMN = "end_time";
+
+  /** Status message column. */
+  public static final String STATUS_MESSAGE_COLUMN = "status_message";
+
+  /** Owner column. */
+  public static final String OWNER_COLUMN = "owner";
+
   //
   // Maximum lengths of variable text length database columns.
   //
@@ -541,6 +573,18 @@ public class SqlConstants {
   /** Length of the publication proprietary identifier column. */
   public static final int MAX_PROPRIETARY_ID_COLUMN = 32;
 
+  /** Length of the status name column. */
+  public static final int MAX_STATUS_NAME_COLUMN = 32;
+
+  /** Length of the description column. */
+  public static final int MAX_DESCRIPTION_COLUMN = 128;
+
+  /** Length of the status message column. */
+  public static final int MAX_STATUS_MESSAGE_COLUMN = 512;
+
+  /** Length of the owner column. */
+  public static final int MAX_OWNER_COLUMN = 32;
+
   //
   //Types of metadata items.
   //
@@ -581,4 +625,20 @@ public class SqlConstants {
   public static final String L_ISSN_TYPE = "l_issn";
   public static final String P_ISBN_TYPE = "p_isbn";
   public static final String P_ISSN_TYPE = "p_issn";
+
+  /**
+   * Types of jobs.
+   */
+  public static final String JOB_TYPE_DELETE_AU = "delete_au";
+  public static final String JOB_TYPE_PUT_AU = "put_au";
+
+  /**
+   * Statuses of jobs.
+   */
+  public static final String JOB_STATUS_CREATED = "created";
+  public static final String JOB_STATUS_DELETED = "deleted";
+  public static final String JOB_STATUS_DONE = "done";
+  public static final String JOB_STATUS_RUNNING = "running";
+  public static final String JOB_STATUS_TERMINATED = "terminated";
+  public static final String JOB_STATUS_TERMINATING = "terminating";
 }

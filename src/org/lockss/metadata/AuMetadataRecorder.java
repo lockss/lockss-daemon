@@ -58,6 +58,8 @@ import org.lockss.util.TimeBase;
 
 /**
  * Writes to the database metadata related to an archival unit.
+ * 
+ * @author Fernando Garcia-Loygorri
  */
 public class AuMetadataRecorder {
   private static Logger log = Logger.getLogger(AuMetadataRecorder.class);
@@ -297,7 +299,8 @@ public class AuMetadataRecorder {
    * @param mditr
    *          An Iterator<ArticleMetadataInfo> with the metadata.
    * @throws MetadataException
-   *           if any problem is detected with the passed metadata.
+   *           if any problem is detected with the passed metadata or the task
+   *           is cancelled.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
@@ -312,6 +315,10 @@ public class AuMetadataRecorder {
 
     // Loop through the metadata for each item.
     while (mditr.hasNext()) {
+      if (task.isCancelled()) {
+	throw new MetadataException("Reindexing task cancelled");
+      }
+
       task.pokeWDog();
 
       // Get the next metadata item.
@@ -2046,16 +2053,22 @@ public class AuMetadataRecorder {
    *          A Connection with the database connection to be used.
    * @param problems
    *          A List<String> with the recorded problems for the Archival Unit.
+   * @throws MetadataException
+   *           if the reindexing task is cancelled.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private void fixUnknownPublishersAuData(Connection conn,
-      List<String> problems) throws DbException {
+      List<String> problems) throws MetadataException, DbException {
     final String DEBUG_HEADER = "fixUnknownPublishersAuData(): ";
     log.debug3(DEBUG_HEADER + "Starting...");
 
     // Loop through all the problems.
     for (String problem : problems) {
+      if (task.isCancelled()) {
+	throw new MetadataException("Reindexing task cancelled");
+      }
+
       // Consider only problems created by an unknown publisher.
       if (problem.startsWith(UNKNOWN_PUBLISHER_AU_PROBLEM)) {
 	log.debug3(DEBUG_HEADER + "Need to migrate data under publisher '"
@@ -2074,11 +2087,13 @@ public class AuMetadataRecorder {
    *          A Connection with the database connection to be used.
    * @param unknownPublisherName
    *          A String with the name of the unknown publisher.
+   * @throws MetadataException
+   *           if the reindexing task is cancelled.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private void fixUnknownPublisherAuData(Connection conn,
-      String unknownPublisherName) throws DbException {
+      String unknownPublisherName) throws MetadataException, DbException {
     final String DEBUG_HEADER = "fixUnknownPublisherAuData(): ";
     log.debug3(DEBUG_HEADER + "unknownPublisherName = " + unknownPublisherName);
 
@@ -2102,6 +2117,10 @@ public class AuMetadataRecorder {
       // Loop through all the identifiers of the metadata items of the current
       // publication.
       for (Long mdItemSeq : mdItemSeqs) {
+	if (task.isCancelled()) {
+	  throw new MetadataException("Reindexing task cancelled");
+	}
+
 	// Get allthe names of this metadata item.
 	Map<String, String> mdItemSeqNames =
 	    mdManagerSql.getMdItemNames(conn, mdItemSeq);
@@ -2115,6 +2134,10 @@ public class AuMetadataRecorder {
       // Loop though all the identifiers of any publications of the unknown
       // publisher.
       for (Long unknownPublicationSeq : unknownPublicationSeqs) {
+	if (task.isCancelled()) {
+	  throw new MetadataException("Reindexing task cancelled");
+	}
+
 	log.debug3(DEBUG_HEADER + "unknownPublicationSeq = "
 	    + unknownPublicationSeq);
 

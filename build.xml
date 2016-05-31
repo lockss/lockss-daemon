@@ -50,7 +50,7 @@ Args:
   -Dforkc=true             Run compiler in a separate jvm.
   -Dhalt=false             Run all tests in group, even if some fail.
   -Dinclude=path           Include matching tests.
-  -Djavaversion=1.7        The version of Java accepted/targeted.
+  -Djavaversion=1.8        The version of Java accepted/targeted.
   -Dkeeptempfiles=true     Don't delete temp files after tests run.
   -Dlistfiles=true         List the source files that will be compiled.  Use if
                               a compile step runs when nothing should need to
@@ -103,7 +103,7 @@ Args:
   <property file="${user.home}/.lockssprops"/>
 
   <!-- Defaults -->
-  <property name="javaversion" value="1.7" />
+  <property name="javaversion" value="1.8" />
   <property name="loglevel" value="" />
   <property name="showoutput" value="no" />
   <property name="filtertrace" value="yes" />
@@ -214,6 +214,9 @@ Args:
   <property name="protorpm.rpms" value="${protorpm.top}/RPMS" />
 
   <!-- Library jars -->
+
+  <!-- Needed by Java 8 -->
+  <property name="jdk.rt.jar" value="${env.JAVA_HOME}/jre/lib/rt.jar"/>
 
   <property name="rhino.jar"      value="${lib}/rhino.jar"/>
   <property name="js-engine.jar"  value="${lib}/js-engine.jar"/>
@@ -395,7 +398,7 @@ Args:
   <property name="ant-contrib.resource"
                           value="net/sf/antcontrib/antcontrib.properties"/>
 
-  <property name="requires-1.7" value="test/requires-1.7"/>
+  <property name="requires-1.8" value="test/requires-1.8"/>
 
   <!-- Database schema documentation. -->
   <property name="schema.doc.dir" value="${javadoc}/schemadoc"/>
@@ -600,6 +603,8 @@ Args:
     <pathelement path="${xalan-serializer.jar}" />
     <pathelement path="${xml-resolver-xml-resolver.jar}" />
     <pathelement path="${xmltooling-1.3.2.jar}" />
+    <!-- Needed by Java 8 -->
+    <pathelement path="${jdk.rt.jar}" />
   </path>
 
   <path id="run.classpath">
@@ -911,23 +916,23 @@ Test results in ${test.results}
      </or>
     </condition>
 
-    <!-- Require at least Java 1.7, but allow builds if force is set -->
+    <!-- Require at least Java 1.8, but allow builds if force is set -->
     <condition property="is-satisfy-java-min-version">
      <or>
-      <istrue value="${is-java-ge-1.7}" />
+      <istrue value="${is-java-ge-1.8}" />
       <istrue value="${force}" />
      </or>
     </condition>
 
     <fail unless="is-satisfy-java-min-version">
-Java ${my.ant.java.version} found, 1.7 required
+Java ${my.ant.java.version} found, 1.8 required
     </fail>
 
     <!-- Determine whether java version is compatible with release
 	 requirements -->
     <condition property="is-satisfy-java-max-version">
      <or>
-      <istrue value="${is-java-eq-1.7}" />
+      <istrue value="${is-java-eq-1.8}" />
      </or>
     </condition>
 
@@ -941,7 +946,7 @@ Java ${my.ant.java.version} found, 1.7 required
 
   <target name="require.release.java.version" depends="prepare">
     <fail unless="is-satisfy-java-max-version"
-          message="This target must be run with Java 1.7; you are using Java ${my.ant.java.version}"/>
+          message="This target must be run with Java 1.8; you are using Java ${my.ant.java.version}"/>
   </target>
 
   <!-- ==================================================================== -->
@@ -970,9 +975,9 @@ Java ${my.ant.java.version} found, 1.7 required
     </if>
   </target>
 
-  <target name="-check-if-1.7" depends="prepare" >
-    <fail unless="is-java-ge-1.7">
-The target you have selected requires compiling under JDK 1.7.
+  <target name="-check-if-1.8" depends="prepare" >
+    <fail unless="is-java-ge-1.8">
+The target you have selected requires compiling under JDK 1.8.
     </fail>
   </target>
 
@@ -1175,7 +1180,7 @@ The target you have selected requires compiling under JDK 1.7.
              cpid="test.compile.classpath" >
      <javacelem>
        <include name="**/*.java"/>
-       <excludesfile name="${requires-1.7}" unless="is-java-ge-1.7" />
+       <excludesfile name="${requires-1.8}" unless="is-java-ge-1.8" />
      </javacelem>
     </dojavac>
 
@@ -2456,7 +2461,7 @@ published on the Web. http://www.lockss.org
           <include name="${unit.include}" />
           <exclude name="${exclude}" />
           <excludesfile name="${excludesfile}" if="excludesfile" />
-          <excludesfile name="${requires-1.7}" unless="is-java-ge-1.7" />
+          <excludesfile name="${requires-1.8}" unless="is-java-ge-1.8" />
         </fileset>
       </batchtest>
      </junitelem>
@@ -2478,7 +2483,7 @@ published on the Web. http://www.lockss.org
           <include name="${func.include}" />
           <exclude name="${exclude}" />
           <excludesfile name="${excludesfile}" if="excludesfile" />
-          <excludesfile name="${requires-1.7}" unless="is-java-ge-1.7" />
+          <excludesfile name="${requires-1.8}" unless="is-java-ge-1.8" />
         </fileset>
       </batchtest>
      </junitelem>
@@ -2500,7 +2505,7 @@ published on the Web. http://www.lockss.org
           <include name="${plug.include}" />
           <exclude name="${exclude}" />
           <excludesfile name="${excludesfile}" if="excludesfile" />
-          <excludesfile name="${requires-1.7}" unless="is-java-ge-1.7" />
+          <excludesfile name="${requires-1.8}" unless="is-java-ge-1.8" />
         </fileset>
       </batchtest>
      </junitelem>
@@ -2570,12 +2575,12 @@ Test results in ${test.results}
       <fileset id="test.one.filesetid" dir="${test.src}">
 	 <include name="**/${class}.java" />
          <excludesfile name="${excludesfile}" if="excludesfile" />
-         <excludesfile name="${requires-1.7}" unless="is-java-ge-1.7" />
+         <excludesfile name="${requires-1.8}" unless="is-java-ge-1.8" />
       </fileset>
       <fileset id="test.one.plugin.filesetid" dir="${plugins.test.src}">
 	 <include name="**/${class}.java" />
          <excludesfile name="${excludesfile}" if="excludesfile" />
-         <excludesfile name="${requires-1.7}" unless="is-java-ge-1.7" />
+         <excludesfile name="${requires-1.8}" unless="is-java-ge-1.8" />
       </fileset>
       <!-- test whether fileset is empty by converting it to a string -->
       <pathconvert refid="test.one.filesetid" property="test.one.files"
@@ -2612,7 +2617,7 @@ Test results in ${test.results}
           <include name="**/Test*.java" />
 	  <include name="**/Func*.java"/>
           <excludesfile name="${excludesfile}" if="excludesfile" />
-          <excludesfile name="${requires-1.7}" unless="is-java-ge-1.7" />
+          <excludesfile name="${requires-1.8}" unless="is-java-ge-1.8" />
        </fileset>
       </batchtest>
      </junitelem>

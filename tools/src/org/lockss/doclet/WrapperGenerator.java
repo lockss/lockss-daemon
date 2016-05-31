@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,6 +33,7 @@ import java.util.*;
 import java.text.*;
 import java.lang.reflect.*;
 import com.sun.javadoc.*;
+import com.sun.javadoc.Parameter;
 import org.apache.oro.text.regex.*;
 import org.w3c.dom.*;
 import org.lockss.util.*;

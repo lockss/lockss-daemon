@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,6 +35,7 @@ import org.lockss.util.*;
 import java.security.*;
 import java.security.cert.*;
 
+import sun.security.tools.keytool.CertAndKeyGen;
 import sun.security.x509.*;
 
 public class KeystoreTestUtils {

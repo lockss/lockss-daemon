@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,6 +38,7 @@ import org.lockss.exporter.FetchTimeExportManager;
 import org.lockss.exporter.counter.CounterReportsManager;
 import org.lockss.account.*;
 import org.lockss.hasher.*;
+import org.lockss.job.JobManager;
 import org.lockss.scheduler.*;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.*;
@@ -154,6 +151,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String SUBSCRIPTION_MANAGER = "SubscriptionManager";
   public static final String FETCH_TIME_EXPORT_MANAGER =
       "FetchTimeExportManager";
+  public static final String JOB_MANAGER = "JobManager";
 
   // Manager descriptors.  The order of this table determines the order in
   // which managers are initialized and started.
@@ -198,6 +196,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     // Start the COUNTER reports manager.
     new ManagerDesc(FETCH_TIME_EXPORT_MANAGER,
 	"org.lockss.exporter.FetchTimeExportManager"),
+    // Start the job manager.
+    new ManagerDesc(JOB_MANAGER, "org.lockss.job.JobManager"),
     // NOTE: Any managers that are needed to decide whether a servlet is to be
     // enabled or not (through ServletDescr.isEnabled()) need to appear before
     // the AdminServletManager on the next line.
@@ -613,6 +613,17 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public FetchTimeExportManager getFetchTimeExportManager() {
     return (FetchTimeExportManager) getManager(FETCH_TIME_EXPORT_MANAGER);
+  }
+
+  /**
+   * Provides the job manager.
+   * 
+   * @return a JobManager with the job manager.
+   * @throws IllegalArgumentException
+   *           if the manager is not available.
+   */
+  public JobManager getJobManager() {
+    return (JobManager) getManager(JOB_MANAGER);
   }
 
   /**
@@ -1098,7 +1109,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * Currently supports propUrl (-p) and daemon groups (-g)
    * parameters.
    */
-  static class StartupOptions {
+  public static class StartupOptions {
 
     public static final String OPTION_PROPURL = "-p";
     public static final String OPTION_GROUP = "-g";
