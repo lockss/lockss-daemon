@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -32,7 +32,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -93,7 +93,7 @@
       or
       base_url/article.asp?issn=0022-3859;year=2013;volume=59;issue=3;spage=179;epage=185;aulast=Singh;type=2  pdf
       -->
-        <string>"^%sarticle.asp\?issn=%s;year=%d;volume=%s.*;aulast=[^;]+(;type=2)?$", base_url, journal_issn, year, volume_name</string>
+        <string>"^%s(article|downloadpdf)\.asp\?issn=%s;year=%d;volume=%s.*;aulast=[^;]+(;type=2)?$", base_url, journal_issn, year, volume_name</string>
       </list>
   </entry>  
   <entry>

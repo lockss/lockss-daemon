@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -49,7 +49,7 @@ import org.lockss.util.*;
 // This plugin test framework is set up to run the same tests in two variants - CLOCKSS and GLN
 // without having to actually duplicate any of the written tests
 //
-public class TestMedknowArchivalUnit extends LockssTestCase {
+public class TestMedknowArchivalUnit extends LockssPluginTestCase {
   private MockLockssDaemon theDaemon;
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String ISSN_KEY = ConfigParamDescr.JOURNAL_ISSN.getKey();
@@ -216,7 +216,31 @@ public class TestMedknowArchivalUnit extends LockssTestCase {
         makeAu(new URL("http://www.ajrnl.com/"), 33, "1234-5678", 2009);
     assertEquals(PluginName + ", Base URL http://www.ajrnl.com/, Issn 1234-5678, Year 2009, Volume 33", au.getName());
   }
+  
+  //<string>"^%s(article|downloadpdf)\.asp\?issn=%s;year=%d;volume=%s.*;aulast=[^;]+(;type=2)?$", base_url, journal_issn, year, volume_name</string>
 
+  public void testSubstancePatterns() throws Exception {
+    URL base = new URL("http://www.ajrnl.com/");
+    int volume = 33;
+    String issn = "1234-5678";
+    int year = 2014;
+    ArchivalUnit au = makeAu(base, volume, issn, year);
+
+    assertSubstanceUrl("http://www.ajrnl.com/article.asp?issn=1234-5678;year=2014;volume=33;issue=4;spage=355;epage=356;aulast=Jagannathan;type=2",
+        au);
+    //redirects to this:
+    assertSubstanceUrl("http://www.ajrnl.com/downloadpdf.asp?issn=1234-5678;year=2014;volume=33;issue=4;spage=355;epage=356;aulast=Jagannathan;type=2",
+        au);
+    assertSubstanceUrl("http://www.ajrnl.com/article.asp?issn=1234-5678;year=2014;volume=33;issue=3;spage=239;epage=240;aulast=Phani;type=2",
+        au);
+    assertNotSubstanceUrl("http://www.ajrnl.com/article.asp?issn=1234-5678;year=2014;volume=66;issue=4;spage=355;epage=356;aulast=Jagannathan;type=2",
+        au);
+    assertNotSubstanceUrl("http://www.ajrnl.com/downloadpdf.asp?issn=1234-1234;year=2014;volume=33;issue=4;spage=355;epage=356;aulast=Jagannathan;type=2",
+        au);
+    assertNotSubstanceUrl("http://www.ajrnl.com/article.asp?issn=1234-5678;year=2009;volume=33;issue=3;spage=239;epage=240;aulast=Phani;type=2",
+        au);
+
+  }
  
 }
 
