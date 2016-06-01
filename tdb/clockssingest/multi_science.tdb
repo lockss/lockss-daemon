@@ -20,7 +20,7 @@
     >
 
     param[journal_id] = ast
-    # purchased by Sage 11/15
+    # purchased by Sage 11/15 (moved to H20)
 
     au < down ; exists ; 2000 ; Adsorption Science & Technology Volume 18 ; 18 ; >
     au < down ; exists ; 2001 ; Adsorption Science & Technology Volume 19 ; 19 ; >
@@ -36,9 +36,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Adsorption Science & Technology Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Adsorption Science & Technology Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Adsorption Science & Technology Volume 31 ; 31 ; >
-    au < finished ; finished ; 2014 ; Adsorption Science & Technology Volume 32 ; 32 ; >
+    au < superseded ; down ; 2014 ; Adsorption Science & Technology Volume 32 [superseded] ; 32 ; >
     au < down ; exists ; 2015 ; Adsorption Science & Technology Volume 33 ; 33 ; >
-    au < expected ; exists ; 2016 ; Adsorption Science & Technology Volume 34 ; 34 ; >
 
   }
 

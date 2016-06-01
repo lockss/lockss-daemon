@@ -15,7 +15,7 @@
       issn = 0263-6174 ;
       eissn = 2048-4038
     >
-
+    # purchased by Sage 11/15 (moved to H20)
     param[journal_id] = ast
 
     au < released ; 2000 ; Adsorption Science & Technology Volume 18 ; 18 >
@@ -31,10 +31,9 @@
     au < doNotProcess ; 2010 ; Adsorption Science & Technology Volume 28 ; 28 >
     au < doNotProcess ; 2011 ; Adsorption Science & Technology Volume 29 ; 29 >
     au < doNotProcess ; 2012 ; Adsorption Science & Technology Volume 30 ; 30 >
-    au < released ; 2013 ; Adsorption Science & Technology Volume 31 ; 31 >
-    au < released ; 2014 ; Adsorption Science & Technology Volume 32 ; 32 >
+    au < superseded ; 2013 ; Adsorption Science & Technology Volume 31 [superseded] ; 31 >
+    au < superseded ; 2014 ; Adsorption Science & Technology Volume 32 [superseded] ; 32 >
     au < released ; 2015 ; Adsorption Science & Technology Volume 33 ; 33 >
-    au < expected ; 2016 ; Adsorption Science & Technology Volume 34 ; 34 >
 
   }
 
