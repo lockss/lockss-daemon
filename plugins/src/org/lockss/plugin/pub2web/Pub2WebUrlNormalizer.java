@@ -56,6 +56,7 @@ public class Pub2WebUrlNormalizer implements UrlNormalizer {
    
 /*
  * 1. Simple normalizations:
+ *   remove jsessionid=.... from any url before anythingelse
  *   remove unnecessary "&isFastTrackArticle=" from end of any url
  *   
  * 2. Complicated transformations  
@@ -94,7 +95,11 @@ public class Pub2WebUrlNormalizer implements UrlNormalizer {
  */
   @Override
   public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
-
+ 
+    if (url.contains(";jsessionid=")) {
+      url = url.replaceFirst(";jsessionid=[^?]+", "");
+    }
+    
     Matcher ftMat = FULLTEXT_URL_PATTERN.matcher(url);
     log.debug3("about to norm: " + url);
     // journals - the tocpdf doesn't have a crawler equivalent.  Pass it through for url consumption
