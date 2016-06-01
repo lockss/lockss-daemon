@@ -6,14 +6,25 @@
     info[tester] = 0 
   >
   
-    plugin = needs.plugin
-
+  {
+  
+    title <
+       name = International Society for the Advancement of Spine Surgery Source Content
+    >
+        
     {
-      title <
-        name = International Journal of Spine Surgery ;
-        issn = 2211-4599
-      >
+    
+      plugin = org.lockss.plugin.clockss.isass.ClockssIsassSourcePlugin
+      #param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/ijssurgery-released/
+      param[base_url] = http://content5.lockss.org/sourcefiles/ijssurgery-released/
+      hidden[proxy] = DIRECT
+      implicit < status ; status2 ; year ; name ; param[year] >
+    
+      au < testing ; exists ; 2016 ; International Society for the Advancement of Spine Surgery Source Content 2016 ; 2016 >
 
     }
+
+  }
+
 
 }
