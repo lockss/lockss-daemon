@@ -10877,7 +10877,7 @@
 
     au < finished ; finished ; 2010 ; Jerusalem Review of Legal Studies Volume 1 ; 1 ; >
     au < finished ; finished ; 2010 ; Jerusalem Review of Legal Studies Volume 2 ; 2 ; >
-    au < frozen ; finished ; 2011 ; Jerusalem Review of Legal Studies Volume 3 ; 3 ; >
+    au < frozen ; crawling ; 2011 ; Jerusalem Review of Legal Studies Volume 3 ; 3 ; >
     au < finished ; finished ; 2012 ; Jerusalem Review of Legal Studies Volume 4 ; 4 ; >
     au < finished ; finished ; 2012 ; Jerusalem Review of Legal Studies Volume 5 ; 5 ; >
     au < finished ; finished ; 2012 ; Jerusalem Review of Legal Studies Volume 6 ; 6 ; >
@@ -11937,7 +11937,7 @@
     param[base_url] = http://jcsl.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < superseded ; finished ; 2008 ; Journal of Conflict and Security Law Volume 13 [superseded] ; 13 ; >
+    au < superseded ; down ; 2008 ; Journal of Conflict and Security Law Volume 13 [superseded] ; 13 ; >
     au < zapped ; superseded ; 2009 ; Journal of Conflict and Security Law Volume 14 [superseded] ; 14 ; >
 
     }
@@ -19226,7 +19226,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; finished ; 2008 ; Past & Present Volume 198 ; 198 ; >
-    au < superseded ; finished ; 2008 ; Past & Present Volume 199 [superseded] ; 199 ; >
+    au < superseded ; down ; 2008 ; Past & Present Volume 199 [superseded] ; 199 ; >
     au < zapped ; finished ; 2008 ; Past & Present Volume 200 ; 200 ; >
     au < superseded ; down ; 2008 ; Past & Present Volume 201 [superseded] ; 201 ; >
     au < zapped ; finished ; 2009 ; Past & Present Volume 202 ; 202 ; >
@@ -21212,7 +21212,7 @@
     au < finished ; finished ; 2009 ; Refugee Survey Quarterly Volume 28 ; 28 ; >
     au < finished ; crawling ; 2010 ; Refugee Survey Quarterly Volume 29 ; 29 ; >
     au < finished ; crawling ; 2011 ; Refugee Survey Quarterly Volume 30 ; 30 ; >
-    au < frozen ; finished ; 2012 ; Refugee Survey Quarterly Volume 31 ; 31 ; >
+    au < frozen ; crawling ; 2012 ; Refugee Survey Quarterly Volume 31 ; 31 ; >
     au < frozen ; exists ; 2013 ; Refugee Survey Quarterly Volume 32 ; 32 ; >
     au < finished ; crawling ; 2014 ; Refugee Survey Quarterly Volume 33 ; 33 ; >
     au < crawling ; exists ; 2015 ; Refugee Survey Quarterly Volume 34 ; 34 ; >
@@ -22242,7 +22242,7 @@
     au < zapped ; finished ; 2009 ; Social History of Medicine Volume 22 ; 22 ; >
     au < finished ; frozen ; 2010 ; Social History of Medicine Volume 23 ; 23 ; >
     au < finished ; frozen ; 2011 ; Social History of Medicine Volume 24 ; 24 ; >
-    au < frozen ; finished ; 2012 ; Social History of Medicine Volume 25 ; 25 ; >
+    au < frozen ; crawling ; 2012 ; Social History of Medicine Volume 25 ; 25 ; >
     au < finished ; crawling ; 2013 ; Social History of Medicine Volume 26 ; 26 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Social History of Medicine Volume 27 ; 27 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; Social History of Medicine Volume 28 ; 28 ; >
@@ -22536,7 +22536,7 @@
     au < zapped ; finished ; 2009 ; Social Work Research Volume 33 ; 33 ; >
     au < zapped ; finished ; 2010 ; Social Work Research Volume 34 ; 34 ; >
     au < finished ; finished ; 2011 ; Social Work Research Volume 35 ; 35 ; >
-    au < frozen ; finished ; 2012 ; Social Work Research Volume 36 ; 36 ; >
+    au < frozen ; crawling ; 2012 ; Social Work Research Volume 36 ; 36 ; >
     au < frozen ; exists ; 2013 ; Social Work Research Volume 37 ; 37 ; >
     au < finished ; finished ; 2014 ; Social Work Research Volume 38 ; 38 ; >
     au < crawling ; exists ; 2015 ; Social Work Research Volume 39 ; 39 ; >
@@ -22910,7 +22910,7 @@
     au < down ; finished ; 2008 ; Toxicological Sciences Volume 102 ; 102 ; >
     au < superseded ; down ; 2008 ; Toxicological Sciences Volume 103 [superseded] ; 103 ; >
     au < zapped ; finished ; 2008 ; Toxicological Sciences Volume 104 ; 104 ; >
-    au < superseded ; finished ; 2008 ; Toxicological Sciences Volume 105 [superseded] ; 105 ; >
+    au < superseded ; down ; 2008 ; Toxicological Sciences Volume 105 [superseded] ; 105 ; >
     au < zapped ; finished ; 2008 ; Toxicological Sciences Volume 106 ; 106 ; >
     au < zapped ; finished ; 2009 ; Toxicological Sciences Volume 107 ; 107 ; reingest4.clockss.org:8082 >
     au < zapped ; finished ; 2009 ; Toxicological Sciences Volume 108 ; 108 ; reingest4.clockss.org:8082 >

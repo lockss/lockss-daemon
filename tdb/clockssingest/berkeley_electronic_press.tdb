@@ -1028,10 +1028,10 @@
     au < down ; finished ; 2005 ; Journal of Student Affairs Research and Practice Volume 42 ; 42 ; >
     au < down ; finished ; 2006 ; Journal of Student Affairs Research and Practice Volume 43 ; 43 ; >
     au < down ; finished ; 2007 ; Journal of Student Affairs Research and Practice Volume 44 ; 44 ; >
-    au < superseded ; finished ; 2008 ; Journal of Student Affairs Research and Practice Volume 45 [superseded] ; 45 ; >
-    au < superseded ; finished ; 2009 ; Journal of Student Affairs Research and Practice Volume 46 [superseded] ; 46 ; >
+    au < superseded ; down ; 2008 ; Journal of Student Affairs Research and Practice Volume 45 [superseded] ; 45 ; >
+    au < superseded ; down ; 2009 ; Journal of Student Affairs Research and Practice Volume 46 [superseded] ; 46 ; >
     au < zapped ; finished ; 2010 ; Journal of Student Affairs Research and Practice Volume 47 ; 47 ; >
-    au < superseded ; finished ; 2011 ; Journal of Student Affairs Research and Practice Volume 48 [superseded] ; 48 ; >
+    au < superseded ; down ; 2011 ; Journal of Student Affairs Research and Practice Volume 48 [superseded] ; 48 ; >
 
   }
 
@@ -1160,10 +1160,10 @@
     param[base_url] = http://journals.naspa.org/
     param[journal_abbr] = njawhe
 
-    au < superseded ; finished ; 2008 ; NASPA Journal About Women in Higher Education Volume 1 [superseded] ; 1 ; >
-    au < superseded ; finished ; 2009 ; NASPA Journal About Women in Higher Education Volume 2 [superseded] ; 2 ; >
+    au < superseded ; down ; 2008 ; NASPA Journal About Women in Higher Education Volume 1 [superseded] ; 1 ; >
+    au < superseded ; down ; 2009 ; NASPA Journal About Women in Higher Education Volume 2 [superseded] ; 2 ; >
     au < zapped ; finished ; 2010 ; NASPA Journal About Women in Higher Education Volume 3 [superseded] ; 3 ; >
-    au < superseded ; finished ; 2011 ; NASPA Journal About Women in Higher Education Volume 4 [superseded] ; 4 ; >
+    au < superseded ; down ; 2011 ; NASPA Journal About Women in Higher Education Volume 4 [superseded] ; 4 ; >
 
   }
 
