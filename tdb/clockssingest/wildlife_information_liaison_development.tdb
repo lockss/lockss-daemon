@@ -6,9 +6,8 @@
     info[tester] = 8
   >
   
-  plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+  plugin = needs.plugin
   implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
-  comment[dNP] = migrated to OJS platform Sept 2013. See http://www.threatenedtaxa.in/index.php/JoTT/issue/archive
   
   {
  
