@@ -62,7 +62,8 @@ public class Pub2WebHtmlMetadataExtractorFactory implements FileMetadataExtracto
    * <meta name="citation_doi" 
    * <meta name="citation_issn" 
    * <meta name="citation_issue" 
-   * <meta name="citation_journal_title" 
+   * <meta name="citation_journal_title" or
+   * <meta name="citation_inbook_title"
    * <meta name="citation_publication_date" 
    * <meta name="citation_publisher" 
    * <meta name="citation_reference" 
@@ -83,7 +84,9 @@ public class Pub2WebHtmlMetadataExtractorFactory implements FileMetadataExtracto
     private static MultiMap tagMap = new MultiValueMap();
     static {
       tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
+      // you'll get one but not both of these...
       tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
+      tagMap.put("citation_inbook_title", MetadataField.FIELD_PUBLICATION_TITLE);
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put("citation_date",  MetadataField.FIELD_DATE);
       tagMap.put("citation_publication_date", MetadataField.FIELD_DATE);
