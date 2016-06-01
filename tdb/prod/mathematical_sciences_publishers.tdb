@@ -4,7 +4,8 @@
     name = Mathematical Sciences Publishers
   >
 
-    plugin = org.lockss.plugin.mathematicalsciencespublishers.MathematicalSciencesPublishersPlugin
+    plugin = needs.plugin
+    #plugin = org.lockss.plugin.mathematicalsciencespublishers.MathematicalSciencesPublishersPlugin
     param[base_url] = http://msp.org/
     implicit < status ; year ; name ; volume ; param[year] >
     
