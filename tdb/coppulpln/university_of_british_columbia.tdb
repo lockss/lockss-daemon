@@ -63,9 +63,9 @@
     au < released ; 2011 ; BC Studies: The British Columbian Quarterly 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; BC Studies: The British Columbian Quarterly 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; BC Studies: The British Columbian Quarterly 2013 ; 2013 ; 2013 >
-    au < testing ; 2014 ; BC Studies: The British Columbian Quarterly 2014 ; 2014 ; 2014 >
-    au < testing ; 2015 ; BC Studies: The British Columbian Quarterly 2015 ; 2015 ; 2015 >
-    au < testing ; 2016 ; BC Studies: The British Columbian Quarterly 2016 ; 2016 ; 2016 >
+    au < ready ; 2014 ; BC Studies: The British Columbian Quarterly 2014 ; 2014 ; 2014 >
+    au < ready ; 2015 ; BC Studies: The British Columbian Quarterly 2015 ; 2015 ; 2015 >
+    au < ready ; 2016 ; BC Studies: The British Columbian Quarterly 2016 ; 2016 ; 2016 >
 
   }
 
@@ -127,13 +127,13 @@
       param[journal_id] = criticaled
       #moved to http://ices.library.ubc.ca/
 
-      au < testing ; 2010 ; Critical Education Volume 2010 ; 1 ; 2010 >
-      au < testing ; 2011 ; Critical Education Volume 2011 ; 2 ; 2011 >
-      au < testing ; 2012 ; Critical Education Volume 2012 ; 3 ; 2012 >
-      au < testing ; 2013 ; Critical Education Volume 2013 ; 4 ; 2013 >
-      au < testing ; 2014 ; Critical Education Volume 2014 ; 5 ; 2014 >
-      au < testing ; 2015 ; Critical Education Volume 2015 ; 6 ; 2015 >
-      au < testing ; 2016 ; Critical Education Volume 2016 ; 7 ; 2016 >
+      au < ready ; 2010 ; Critical Education Volume 2010 ; 1 ; 2010 >
+      au < ready ; 2011 ; Critical Education Volume 2011 ; 2 ; 2011 >
+      au < ready ; 2012 ; Critical Education Volume 2012 ; 3 ; 2012 >
+      au < ready ; 2013 ; Critical Education Volume 2013 ; 4 ; 2013 >
+      au < ready ; 2014 ; Critical Education Volume 2014 ; 5 ; 2014 >
+      au < ready ; 2015 ; Critical Education Volume 2015 ; 6 ; 2015 >
+      au < ready ; 2016 ; Critical Education Volume 2016 ; 7 ; 2016 >
 
     }
 
@@ -189,9 +189,9 @@
     au < released ; 2010 ; Ignite: Undergraduate Journal for Gender, Race, Sexuality and Social Justice Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; Ignite: Undergraduate Journal for Gender, Race, Sexuality and Social Justice Volume 3 ; 3 ; 2011 >
     au < released ; 2012 ; Ignite: Undergraduate Journal for Gender, Race, Sexuality and Social Justice Volume 4 ; 4 ; 2012 >
-    au < notReady ; 2013 ; Ignite: Undergraduate Journal for Gender, Race, Sexuality and Social Justice Volume 5 ; 5 ; 2013 >
-    au < testing ; 2014 ; Ignite: Undergraduate Journal for Gender, Race, Sexuality and Social Justice Volume 6 ; 6 ; 2014 >
-    au < testing ; 2015 ; Ignite: Undergraduate Journal for Gender, Race, Sexuality and Social Justice Volume 7 ; 7 ; 2015 >
+    au < notReady ; 2013 ; Ignite: Undergraduate Journal for Gender, Race, Sexuality and Social Justice Volume 5 ; 5 ; 2013 > # no content.
+    au < notReady ; 2014 ; Ignite: Undergraduate Journal for Gender, Race, Sexuality and Social Justice Volume 6 ; 6 ; 2014 > # no content.
+    au < notReady ; 2015 ; Ignite: Undergraduate Journal for Gender, Race, Sexuality and Social Justice Volume 7 ; 7 ; 2015 > # no content.
 
   }
 
@@ -211,10 +211,10 @@
     au < released ; 2010 ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 3-4 (2010) ; 3-4 ; 2010 >
     au < released ; 2011 ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 4-5 (2011) ; 4-5 ; 2011 >
     au < released ; 2012 ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 5 (2012) ; 5 ; 2012 >
-    au < testing ; 2013 ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 6 (2013) ; 6 ; 2013 >
-    au < testing ; 2014 ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 7 (2014) ; 7 ; 2014 >
-    au < testing ; 2015 ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 8 (2015) ; 8 ; 2015 >
-    au < testing ; 2016 ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 9 (2016) ; 9 ; 2016 >
+    au < ready ; 2013 ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 6 (2013) ; 6 ; 2013 >
+    au < ready ; 2014 ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 7 (2014) ; 7 ; 2014 >
+    au < ready ; 2015 ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 8 (2015) ; 8 ; 2015 >
+    au < ready ; 2016 ; New Proposals: Journal of Marxism and Interdisciplinary Inquiry Volume 9 (2016) ; 9 ; 2016 >
 
   }
 
@@ -228,7 +228,7 @@
     param[journal_id] = theseed
 
     au < released ; 2012 ; The Seed Volume 13 ; 13 ; 2012 >
-    au < testing ; 2013 ; The Seed Volume 14 ; 14 ; 2013 >
+    au < ready ; 2013 ; The Seed Volume 14 ; 14 ; 2013 >
 
   }
 
@@ -267,8 +267,8 @@
     au < released ; 2011 ; Transnational Curriculum Inquiry Volume 8 ; 8 ; 2011 >
     au < released ; 2012 ; Transnational Curriculum Inquiry Volume 9 ; 9 ; 2012 >
     au < released ; 2013 ; Transnational Curriculum Inquiry Volume 10 ; 10 ; 2013 >
-    au < testing ; 2014 ; Transnational Curriculum Inquiry Volume 11 ; 11 ; 2014 >
-    au < testing ; 2015 ; Transnational Curriculum Inquiry Volume 12 ; 12 ; 2015 >
+    au < ready ; 2014 ; Transnational Curriculum Inquiry Volume 11 ; 11 ; 2014 >
+    au < ready ; 2015 ; Transnational Curriculum Inquiry Volume 12 ; 12 ; 2015 >
 
   }
 
@@ -281,15 +281,15 @@
     param[base_url] = http://ojs.library.ubc.ca/
     param[journal_id] = ubcmj
     
-    comment[2012_2013] = no substance, abstracts only?
+    comment[2012_2013] = no substance, abstracts only.
 
     au < released ; 2010 ; UBC Medical Journal Volume 1-2 (2010) ; 1-2 ; 2010 >
     au < released ; 2011 ; UBC Medical Journal Volume 2-3 (2011) ; 2-3 ; 2011 >
     au < notReady ; 2012 ; UBC Medical Journal Volume 3-4 (2012) ; 3-4 ; 2012 >
     au < notReady ; 2013 ; UBC Medical Journal Volume 4-5 (2013) ; 4-5 ; 2013 >
-    au < testing ; 2014 ; UBC Medical Journal Volume 6-7 (2014) ; 6-7 ; 2014 >
-    au < testing ; 2015 ; UBC Medical Journal Volume 8-9 (2015) ; 8-9 ; 2015 >
-    au < testing ; 2016 ; UBC Medical Journal Volume 10-11 (2016) ; 10-11 ; 2016 >
+    au < notReady ; 2014 ; UBC Medical Journal Volume 6-7 (2014) ; 6-7 ; 2014 >
+    au < notReady ; 2015 ; UBC Medical Journal Volume 8-9 (2015) ; 8-9 ; 2015 >
+    au < notReady ; 2016 ; UBC Medical Journal Volume 10-11 (2016) ; 10-11 ; 2016 >
 
   }
 
@@ -306,24 +306,24 @@
       param[base_url] = http://ices.library.ubc.ca/
       param[journal_id] = workplace
 
-      au < testing ; 1998 ; Workplace: A Journal for Academic Labor 1998 ; 1-2 ; 1998 >
-      au < testing ; 1999 ; Workplace: A Journal for Academic Labor 1999 ; 3-4 ; 1999 >
-      au < testing ; 2000 ; Workplace: A Journal for Academic Labor 2000 ; 5-6 ; 2000 >
-      au < testing ; 2001 ; Workplace: A Journal for Academic Labor 2001 ; 7 ; 2001 >
-      au < testing ; 2002 ; Workplace: A Journal for Academic Labor 2002 ; 8-9 ; 2002 >
-      au < testing ; 2003 ; Workplace: A Journal for Academic Labor 2003 ; 10 ; 2003 >
-      au < testing ; 2004 ; Workplace: A Journal for Academic Labor 2004 ; 11 ; 2004 >
-      au < testing ; 2005 ; Workplace: A Journal for Academic Labor 2005 ; 12-13 ; 2005 >
-      au < testing ; 2007 ; Workplace: A Journal for Academic Labor 2007 ; 14 ; 2007 >
-      au < testing ; 2008 ; Workplace: A Journal for Academic Labor 2008 ; 15 ; 2008 >
-      au < testing ; 2009 ; Workplace: A Journal for Academic Labor 2009 ; 16 ; 2009 >
-      au < testing ; 2010 ; Workplace: A Journal for Academic Labor 2010 ; 17 ; 2010 >
-      au < testing ; 2011 ; Workplace: A Journal for Academic Labor 2011 ; 18 ; 2011 >
-      au < testing ; 2012 ; Workplace: A Journal for Academic Labor 2012 ; 19-21 ; 2012 >
-      au < testing ; 2013 ; Workplace: A Journal for Academic Labor 2013 ; 22 ; 2013 >
-      au < testing ; 2014 ; Workplace: A Journal for Academic Labor 2014 ; 23-24 ; 2014 >
-      au < testing ; 2015 ; Workplace: A Journal for Academic Labor 2015 ; 25 ; 2015 >
-      au < testing ; 2016 ; Workplace: A Journal for Academic Labor 2016 ; 26-28 ; 2016 >
+      au < ready ; 1998 ; Workplace: A Journal for Academic Labor 1998 ; 1-2 ; 1998 >
+      au < ready ; 1999 ; Workplace: A Journal for Academic Labor 1999 ; 3-4 ; 1999 >
+      au < ready ; 2000 ; Workplace: A Journal for Academic Labor 2000 ; 5-6 ; 2000 >
+      au < ready ; 2001 ; Workplace: A Journal for Academic Labor 2001 ; 7 ; 2001 >
+      au < ready ; 2002 ; Workplace: A Journal for Academic Labor 2002 ; 8-9 ; 2002 >
+      au < ready ; 2003 ; Workplace: A Journal for Academic Labor 2003 ; 10 ; 2003 >
+      au < ready ; 2004 ; Workplace: A Journal for Academic Labor 2004 ; 11 ; 2004 >
+      au < ready ; 2005 ; Workplace: A Journal for Academic Labor 2005 ; 12-13 ; 2005 >
+      au < ready ; 2007 ; Workplace: A Journal for Academic Labor 2007 ; 14 ; 2007 >
+      au < ready ; 2008 ; Workplace: A Journal for Academic Labor 2008 ; 15 ; 2008 >
+      au < ready ; 2009 ; Workplace: A Journal for Academic Labor 2009 ; 16 ; 2009 >
+      au < ready ; 2010 ; Workplace: A Journal for Academic Labor 2010 ; 17 ; 2010 >
+      au < ready ; 2011 ; Workplace: A Journal for Academic Labor 2011 ; 18 ; 2011 >
+      au < ready ; 2012 ; Workplace: A Journal for Academic Labor 2012 ; 19-21 ; 2012 >
+      au < ready ; 2013 ; Workplace: A Journal for Academic Labor 2013 ; 22 ; 2013 >
+      au < ready ; 2014 ; Workplace: A Journal for Academic Labor 2014 ; 23-24 ; 2014 >
+      au < ready ; 2015 ; Workplace: A Journal for Academic Labor 2015 ; 25 ; 2015 >
+      au < ready ; 2016 ; Workplace: A Journal for Academic Labor 2016 ; 26-28 ; 2016 >
 
     }
 

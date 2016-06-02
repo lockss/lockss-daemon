@@ -692,7 +692,7 @@
       param[journal_id] = jpcoe
       # 2016 volume has no substance. Why? https://journals.library.ualberta.ca/jpcoe/index.php/jpcoe/gateway/lockss?year=2016
 
-      au < testing ; 2016 ; Journal of Professional Continuing and Online Education Volume 2016 ; 2016 ; 1 ; https://journals.library.ualberta.ca/jpcoe/ >
+      au < ready ; 2016 ; Journal of Professional Continuing and Online Education Volume 2016 ; 2016 ; 1 ; https://journals.library.ualberta.ca/jpcoe/ >
 
     }
 
