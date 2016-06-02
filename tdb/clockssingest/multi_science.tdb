@@ -66,8 +66,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Advances in Structural Engineering Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Advances in Structural Engineering Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Advances in Structural Engineering Volume 16 ; 16 ; >
-    au < finished ; crawling ; 2014 ; Advances in Structural Engineering Volume 17 ; 17 ; >
-    au < down ; exists ; 2015 ; Advances in Structural Engineering Volume 18 ; 18 ; >
+    au < superseded ; down ; 2014 ; Advances in Structural Engineering Volume 17 [superseded] ; 17 ; >
+    au < superseded ; down ; 2015 ; Advances in Structural Engineering Volume 18 [superseded] ; 18 ; >
     au < expected ; exists ; 2016 ; Advances in Structural Engineering Volume 19 ; 19 ; >
 
   }
@@ -130,8 +130,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Energy & Environment Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Energy & Environment Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Energy & Environment Volume 24 ; 24 ; >
-    au < finished ; finished ; 2014 ; Energy & Environment Volume 25 ; 25 ; >
-    au < down ; exists ; 2015 ; Energy & Environment Volume 26 ; 26 ; >
+    au < superseded ; down ; 2014 ; Energy & Environment Volume 25 [superseded] ; 25 ; >
+    au < superseded ; exists ; 2015 ; Energy & Environment Volume 26 [superseded] ; 26 ; >
     au < expected ; exists ; 2016 ; Energy & Environment Volume 27 ; 27 ; >
 
   }
@@ -610,8 +610,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Noise & Vibration Worldwide Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Noise & Vibration Worldwide Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Noise & Vibration Worldwide Volume 44 ; 44 ; >
-    au < finished ; finished ; 2014 ; Noise & Vibration Worldwide Volume 45 ; 45 ; >
-    au < down ; exists ; 2015 ; Noise & Vibration Worldwide Volume 46 ; 46 ; >
+    au < superseded ; down ; 2014 ; Noise & Vibration Worldwide Volume 45 ; 45 ; >
+    au < superseded ; exists ; 2015 ; Noise & Vibration Worldwide Volume 46 ; 46 ; >
 
   }
 
@@ -731,8 +731,8 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Wind Engineering Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Wind Engineering Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Wind Engineering Volume 37 ; 37 ; >
-    au < finished ; crawling ; 2014 ; Wind Engineering Volume 38 ; 38 ; >
-    au < down ; exists ; 2015 ; Wind Engineering Volume 39 ; 39 ; >
+    au < superseded ; down ; 2014 ; Wind Engineering Volume 38 [superseded] ; 38 ; >
+    au < superseded ; exists ; 2015 ; Wind Engineering Volume 39 [superseded] ; 39 ; >
 
   }
 

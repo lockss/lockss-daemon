@@ -46,7 +46,8 @@
     >
 
     param[journal_id] = ase
-
+    # purchased by Sage 11/15
+    
     au < released ; 2000 ; Advances in Structural Engineering Volume 3 ; 3 >
     au < released ; 2001 ; Advances in Structural Engineering Volume 4 ; 4 >
     au < released ; 2002 ; Advances in Structural Engineering Volume 5 ; 5 >
@@ -60,10 +61,9 @@
     au < doNotProcess ; 2010 ; Advances in Structural Engineering Volume 13 ; 13 >
     au < doNotProcess ; 2011 ; Advances in Structural Engineering Volume 14 ; 14 >
     au < doNotProcess ; 2012 ; Advances in Structural Engineering Volume 15 ; 15 >
-    au < released ; 2013 ; Advances in Structural Engineering Volume 16 ; 16 >
-    au < released ; 2014 ; Advances in Structural Engineering Volume 17 ; 17 >
-    au < released ; 2015 ; Advances in Structural Engineering Volume 18 ; 18 >
-    au < expected ; 2016 ; Advances in Structural Engineering Volume 19 ; 19 >
+    au < superseded ; 2013 ; Advances in Structural Engineering Volume 16 [superseded] ; 16 >
+    au < superseded ; 2014 ; Advances in Structural Engineering Volume 17 [superseded] ; 17 >
+    au < superseded ; 2015 ; Advances in Structural Engineering Volume 18 [superseded] ; 18 >
 
   }
 
@@ -107,6 +107,7 @@
     >
 
     param[journal_id] = ee
+    # purchased by Sage 11/15
 
     au < manifest ; 1999 ; Energy & Environment Volume 10 ; 10 >
     au < released ; 2000 ; Energy & Environment Volume 11 ; 11 >
@@ -123,9 +124,8 @@
     au < doNotProcess ; 2011 ; Energy & Environment Volume 22 ; 22 >
     au < doNotProcess ; 2012 ; Energy & Environment Volume 23 ; 23 >
     au < released ; 2013 ; Energy & Environment Volume 24 ; 24 >
-    au < released ; 2014 ; Energy & Environment Volume 25 ; 25 >
-    au < released ; 2015 ; Energy & Environment Volume 26 ; 26 >
-    au < expected ; 2016 ; Energy & Environment Volume 27 ; 27 >
+    au < superseded ; 2014 ; Energy & Environment Volume 25 [superseded] ; 25 >
+    au < superseded ; 2015 ; Energy & Environment Volume 26 [superseded] ; 26 >
 
   }
 
@@ -564,6 +564,7 @@
     >
 
     param[journal_id] = nvww
+    # purchased by Sage 11/15
 
     au < manifest ; 2008 ; Noise & Vibration Worldwide Volume 39 ; 39 >
     au < manifest ; 2009 ; Noise & Vibration Worldwide Volume 40 ; 40 >
@@ -571,8 +572,8 @@
     au < doNotProcess ; 2011 ; Noise & Vibration Worldwide Volume 42 ; 42 >
     au < doNotProcess ; 2012 ; Noise & Vibration Worldwide Volume 43 ; 43 >
     au < released ; 2013 ; Noise & Vibration Worldwide Volume 44 ; 44 >
-    au < released ; 2014 ; Noise & Vibration Worldwide Volume 45 ; 45 >
-    au < released ; 2015 ; Noise & Vibration Worldwide Volume 46 ; 46 >
+    au < superseded ; 2014 ; Noise & Vibration Worldwide Volume 45 [superseded] ; 45 >
+    au < superseded ; 2015 ; Noise & Vibration Worldwide Volume 46 [superseded] ; 46 >
 
   }
 
@@ -671,6 +672,7 @@
     >
 
     param[journal_id] = we
+    # purchased by Sage 11/15
 
     au < released ; 2000 ; Wind Engineering Volume 24 ; 24 >
     au < released ; 2001 ; Wind Engineering Volume 25 ; 25 >
@@ -686,8 +688,8 @@
     au < doNotProcess ; 2011 ; Wind Engineering Volume 35 ; 35 >
     au < doNotProcess ; 2012 ; Wind Engineering Volume 36 ; 36 >
     au < released ; 2013 ; Wind Engineering Volume 37 ; 37 >
-    au < released ; 2014 ; Wind Engineering Volume 38 ; 38 >
-    au < released ; 2015 ; Wind Engineering Volume 39 ; 39 >
+    au < superseded ; 2014 ; Wind Engineering Volume 38 [superseded] ; 38 >
+    au < superseded ; 2015 ; Wind Engineering Volume 39 [superseded] ; 39 >
 
   }
 
