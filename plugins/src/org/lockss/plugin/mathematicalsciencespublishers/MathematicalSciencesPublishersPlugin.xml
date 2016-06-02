@@ -1,0 +1,144 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.mathematicalsciencespublishers.MathematicalSciencesPublishersPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Mathematical Sciences Publishers Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>7</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>4</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>4</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>2</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.63.0</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Mathematical Sciences Publishers Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%s%s/%d/manifest", base_url, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%s%s", base_url, journal_id</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>"%s%s/%s/%s-%s/index.xhtml", base_url, journal_id, year, volume_name, issue</string>
+      </entry>
+      <entry>
+        <string>au_article</string>
+        <string>"%s%s/%s/%s-%s/%s.xhtml", base_url, journal_id, year, volume_name, issue, page</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^%s.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url</string>
+      <string>2,"^%s%s/%d/[^/]+/f[^/]+[.]xhtml", base_url, journal_id, year</string>
+      <string>1,"^%s%s/%d/", base_url, journal_id, year</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%s%s/%d/[^/]+/(?:[^/]+[.]pdf|[^bfi][^/]+[.]xhtml)$", base_url, journal_id, year</string>
+    </list>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.mathematicalsciencespublishers.MathematicalSciencesPublishersHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/xhtml+xml_filter_factory</string>
+    <string>org.lockss.plugin.mathematicalsciencespublishers.MathematicalSciencesPublishersHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.mathematicalsciencespublishers.MathematicalSciencesPublishersArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.mathematicalsciencespublishers.MathematicalSciencesPublishersArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.mathematicalsciencespublishers.MathematicalSciencesPublishersHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>application/xhtml+xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.mathematicalsciencespublishers.MathematicalSciencesPublishersHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+</map>
