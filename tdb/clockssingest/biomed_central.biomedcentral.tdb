@@ -4051,8 +4051,8 @@ comment[bmr] = journal archive available, but no new volumes. Last volume is 200
       au < down ; crawling ; 2011 ; Molecular Pain Volume 7 ; 7 ; >
       au < down ; exists ; 2012 ; Molecular Pain Volume 8 ; 8 ; >
       au < down ; exists ; 2013 ; Molecular Pain Volume 9 ; 9 ; >
-      au < down ; exists ; 2014 ; Molecular Pain Volume 10 ; 10 ; >
-      #published by sage after 2015
+      au < superseded ; exists ; 2014 ; Molecular Pain Volume 10 [superseded] ; 10 ; >
+      #published by sage after 2015; base_url redirects to Sage
 
     }
 
