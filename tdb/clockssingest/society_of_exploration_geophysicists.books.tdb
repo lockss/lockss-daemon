@@ -27,7 +27,7 @@
     au < finished ; crawling ; 1994 ; ; 9781560802549 ; 9781560802549 ; Seismic Stratigraphy and Hydrocarbon Traps: Louisiana Onshore and Offshore  (9781560802549) ; >
     au < finished ; crawling ; 1997 ; ; 9781560801870 ; 9781560801870 ; Seismic Modeling and Imaging with the Complete Wave Equation  (9781560801870) ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1998 ; ; 9781560802013 ; 9781560802013 ; Model-Based Depth Imaging  (9781560802013) ; >
-    au < crawling ; exists ; 1999 ; ; 9781560802020 ; 9781560802020 ; Processing Near-Surface Seismic-Reflection Data: A Primer  (9781560802020) ; >
+    au < deepCrawl ; exists ; 1999 ; ; 9781560802020 ; 9781560802020 ; Processing Near-Surface Seismic-Reflection Data: A Primer  (9781560802020) ; >
     au < finished ; crawling ; 2005 ; ; 9781560801948 ; 9781560801948 ; Seismic Data Processing with Seismic Un*x: A 2D Seismic Data Processing Primer  (9781560801948) ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2007 ; ; 9781560801641 ; 9781560801641 ; A Practical Understanding of Pre- and Poststack Migrations: Volume 1 (Poststack)  (9781560801641) ; >
     au < finished ; crawling ; 2007 ; ; 9781560801658 ; 9781560801658 ; A Practical Understanding of Pre- and Poststack Migrations: Volume 2 (Prestack)  (9781560801658) ; reingest2.clockss.org:8085 >
@@ -84,7 +84,7 @@
     au < finished ; crawling ; 1994 ; ; 9781560802617 ; 9781560802617 ; Theory of Seismic Diffractions  (9781560802617) ; >
     au < finished ; crawling ; 1996 ; ; 9781560802693 ; 9781560802693 ; Seismic Anisotropy  (9781560802693) ; >
     au < finished ; crawling ; 2000 ; ; 9781560802327 ; 9781560802327 ; Geophysical Signal Analysis  (9781560802327) ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2011 ; ; 9781560802945 ; 9781560802945 ; SEAM Phase 1: Challenges of Subsalt Imaging in Tertiary Basins, with Emphasis on Deepwater Gulf of Mexico (9781560802945) ; >
+    au < deepCrawl ; exists ; 2011 ; ; 9781560802945 ; 9781560802945 ; SEAM Phase 1: Challenges of Subsalt Imaging in Tertiary Basins, with Emphasis on Deepwater Gulf of Mexico (9781560802945) ; >
 
   }
 
@@ -124,8 +124,8 @@
     au < finished ; crawling ; 1973 ; ; 9781560802365 ; 9781560802365 ; Pitfalls in Seismic Interpretation  (9781560802365) ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1982 ; ; 9781560802341 ; 9781560802341 ; Pitfalls Revisited  (9781560802341) ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1989 ; ; 9781560802488 ; 9781560802488 ; Analysis of Least-Squares Velocity Inversion  (9781560802488) ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 1992 ; ; 9780931830563 ; 9780931830563 ; Inversion of Magnetotelluric Data for a One-Dimensional Conductivity  (9780931830563) ; >
-    au < crawling ; exists ; 1994 ; ; 9781560802334 ; 9781560802334 ; Fundamentals of Seismic Tomography  (9781560802334) ; >
+    au < deepCrawl ; exists ; 1992 ; ; 9780931830563 ; 9780931830563 ; Inversion of Magnetotelluric Data for a One-Dimensional Conductivity  (9780931830563) ; >
+    au < deepCrawl ; exists ; 1994 ; ; 9781560802334 ; 9781560802334 ; Fundamentals of Seismic Tomography  (9781560802334) ; >
     au < finished ; crawling ; 1997 ; ; 9781560801863 ; 9781560801863 ; A Handbook for Seismic Data Acquisition in Exploration  (9781560801863) ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1998 ; ; 9781560801856 ; 9781560801856 ; Theory and Application of Spectral Induced Polarization  (9781560801856) ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2001 ; ; 9781560802112 ; 9781560802112 ; The Boundary Element Method in Geophysics  (9781560802112) ; reingest1.clockss.org:8082 >
@@ -136,7 +136,7 @@
     au < finished ; crawling ; 2009 ; ; 9781560801603 ; 9781560801603 ; The Misadventures of Interpreter Sam  (9781560801603) ; >
     au < finished ; crawling ; 2011 ; ; 9781560802938 ; 9781560802938 ; First Steps in Seismic Interpretation (9781560802938) ; >
     au < finished ; crawling ; 2012 ; ; 9781560803058 ; 9781560803058 ; Fundamentals of Gravity Exploration (9781560803058) ; >
-    au < crawling ; exists ; 2013 ; ; 9781560803218 ; 9781560803218 ; Geological Interpretation of Aeromagnetic Data (9781560803218) ; >
+    au < deepCrawl ; exists ; 2013 ; ; 9781560803218 ; 9781560803218 ; Geological Interpretation of Aeromagnetic Data (9781560803218) ; >
     au < finished ; crawling ; 2014 ; ; 9781560803140 ; 9781560803140 ; Remote Sensing in Action: The Curious Case of Sherlock Holmes and Albert Einstein  (9781560803140) ; >
 
   }
@@ -158,15 +158,15 @@
     au < finished ; crawling ; 1999 ; ; 9781560801825 ; 9781560801825 ; Tensors of Geophysics, Volume 2: Generalized Functions and Curvilinear Coordinates  (9781560801825) ; >
     au < finished ; crawling ; 2001 ; ; 9781560801788 ; 9781560801788 ; Geophysics in the Affairs of Mankind: A Personalized History of Exploration Geophysics (9781560801788) ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2002 ; ; 9781560801757 ; 9781560801757 ; 3-D Seismic Survey Design  (9781560801757) ; >
-    au < crawling ; exists ; 2002 ; ; 9781560802969 ; 9781560802969 ; Encyclopedic Dictionary of Applied Geophysics (9781560802969) ; >
-    au < crawling ; exists ; 2004 ; ; 9781560801733 ; 9781560801733 ; Problems in Exploration Seismology and their Solutions  (9781560801733) ; >
-    au < crawling ; exists ; 2006 ; ; 9781560801979 ; 9781560801979 ; Uygulamalı Jeofiziğin Ansiklopedik Sözlüğü  (9781560801979) ; >
-    au < crawling ; exists ; 2008 ; ; 9781560801610 ; 9781560801610 ; Digital Imaging and Deconvolution: The ABCs of Seismic Exploration and Processing  (9781560801610) ; >
+    au < deepCrawl ; exists ; 2002 ; ; 9781560802969 ; 9781560802969 ; Encyclopedic Dictionary of Applied Geophysics (9781560802969) ; >
+    au < deepCrawl ; exists ; 2004 ; ; 9781560801733 ; 9781560801733 ; Problems in Exploration Seismology and their Solutions  (9781560801733) ; >
+    au < deepCrawl ; exists ; 2006 ; ; 9781560801979 ; 9781560801979 ; Uygulamalı Jeofiziğin Ansiklopedik Sözlüğü  (9781560801979) ; >
+    au < deepCrawl ; exists ; 2008 ; ; 9781560801610 ; 9781560801610 ; Digital Imaging and Deconvolution: The ABCs of Seismic Exploration and Processing  (9781560801610) ; >
     au < finished ; crawling ; 2010 ; ; 9781560802273 ; 9781560802273 ; Geophysics Today: A Survey of the Field as the Journal Celebrates Its 75th Anniversary  (9781560802273) ; >
-    au < crawling ; exists ; 2011 ; ; 9781560802891 ; 9781560802891 ; Multicomponent Seismic Technology (9781560802891) ; >
+    au < deepCrawl ; exists ; 2011 ; ; 9781560802891 ; 9781560802891 ; Multicomponent Seismic Technology (9781560802891) ; >
     au < finished ; crawling ; 2011 ; ; 9781560802839 ; 9781560802839 ; Seismology of Azimuthally Anisotropic Media and Seismic Fracture Characterization  (9781560802839) ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2012 ; ; 9781560803041 ; 9781560803041 ; 3D Seismic Survey Design, Second Edition (9781560803041) ; >
-    au < crawling ; exists ; 2012 ; ; 9781560803003 ; 9781560803003 ; Seismic Signatures and Analysis of Reflection Data in Anisotropic Media, Third Edition (9781560803003) ; >
+    au < deepCrawl ; exists ; 2012 ; ; 9781560803041 ; 9781560803041 ; 3D Seismic Survey Design, Second Edition (9781560803041) ; >
+    au < deepCrawl ; exists ; 2012 ; ; 9781560803003 ; 9781560803003 ; Seismic Signatures and Analysis of Reflection Data in Anisotropic Media, Third Edition (9781560803003) ; >
     au < manifest ; exists ; 2014 ; ; 9781560803027 ; 9781560803027 ; Encyclopedia of Exploration Geophysics (9781560803027) ; >
 
   }
@@ -181,7 +181,7 @@
     au < finished ; crawling ; 2000 ; ; 9781560802471 ; 9781560802471 ; Seismic Wave Propagation: Collected Works of J. E. White  (9781560802471) ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2007 ; ; 9781560801931 ; 9781560801931 ; Classics of Elastic Wave Theory (9781560801931) ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2008 ; ; 9781560801917 ; 9781560801917 ; Prestack Depth Migration and Velocity Model Building  (9781560801917) ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2008 ; ; 9781560801924 ; 9781560801924 ; Seismic Interferometry: History and Present Status  (9781560801924) ; >
+    au < deepCrawl ; exists ; 2008 ; ; 9781560801924 ; 9781560801924 ; Seismic Interferometry: History and Present Status  (9781560801924) ; >
     au < finished ; crawling ; 2012 ; ; 9781560803089 ; 9781560803089 ; Numerical Modeling of Seismic Wave Propagation: Gridded Two-way Wave-equation Methods (9781560803089) ; >
 
   }
@@ -200,7 +200,7 @@
     au < finished ; crawling ; 1990 ; ; 9781560802594 ; 9781560802594 ; Induced Polarization Applications and Case Histories  (9781560802594) ; >
     au < finished ; crawling ; 1991 ; ; 9781560802686 ; 9781560802686 ; Electromagnetic Methods in Applied Geophysics: Volume 2, Application, Parts A and B  (9781560802686) ; >
     au < finished ; crawling ; 1991 ; ; 9781560802556 ; 9781560802556 ; Multicomponent Seismology in Petroleum Exploration  (9781560802556) ; >
-    au < crawling ; exists ; 1993 ; ; 9781560802624 ; 9781560802624 ; Offset-Dependent Reflectivity-Theory and Practice of AVO Analysis  (9781560802624) ; >
+    au < deepCrawl ; exists ; 1993 ; ; 9781560802624 ; 9781560802624 ; Offset-Dependent Reflectivity-Theory and Practice of AVO Analysis  (9781560802624) ; >
     au < finished ; crawling ; 2001 ; ; 9781560801580 ; 9781560801580 ; Seismic Data Analysis: Processing, Inversion, and Interpretation of Seismic Data (9781560801580) ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2002 ; ; 9781560802068 ; 9781560802068 ; Magnetotellurics in the Context of the Theory of Ill-Posed Problems  (9781560802068) ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2005 ; ; 9781560801702 ; 9781560801702 ; Introduction to Petroleum Seismology  (9781560801702) ; reingest2.clockss.org:8085 >
@@ -209,7 +209,7 @@
     au < finished ; crawling ; 2010 ; ; 9781560802174 ; 9781560802174 ; Methods and Applications in Reservoir Geophysics  (9781560802174) ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2011 ; ; 9781560802884 ; 9781560802884 ; Interpretation of Three-Dimensional Seismic Data (9781560802884) ; >
     au < finished ; crawling ; 2014 ; ; 9781560803201 ; 9781560803201 ; AVO (9781560803201) ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2015 ; ; 9781560803300 ; 9781560803300 ; Engineering Seismology with Applications to Geotechnical Engineering (9781560803300) ; >
+    au < deepCrawl ; exists ; 2015 ; ; 9781560803300 ; 9781560803300 ; Engineering Seismology with Applications to Geotechnical Engineering (9781560803300) ; >
 
   }
 
@@ -222,9 +222,9 @@
 
     au < finished ; crawling ; 1995 ; ; 9781560802648 ; 9781560802648 ; Modern Spectral Analysis with Geophysical Applications  (9781560802648) ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1996 ; ; 9781560801894 ; 9781560801894 ; VSP Interpretive Processing: Theory and Practice  (9781560801894) ; >
-    au < crawling ; exists ; 1998 ; ; 9781560802082 ; 9781560802082 ; Comparison of Seismic Inversion Methods on a Single Real Data Set  (9781560802082) ; >
-    au < crawling ; exists ; 2001 ; ; 9781560801795 ; 9781560801795 ; Advances in Anisotropy: Selected Theory, Modeling, and Case Studies  (9781560801795) ; >
-    au < crawling ; exists ; 2001 ; ; 9781560801771 ; 9781560801771 ; Anisotropy 2000: Fractures, Converted Waves, and Case Studies  (9781560801771) ; >
+    au < deepCrawl ; exists ; 1998 ; ; 9781560802082 ; 9781560802082 ; Comparison of Seismic Inversion Methods on a Single Real Data Set  (9781560802082) ; >
+    au < deepCrawl ; exists ; 2001 ; ; 9781560801795 ; 9781560801795 ; Advances in Anisotropy: Selected Theory, Modeling, and Case Studies  (9781560801795) ; >
+    au < deepCrawl ; exists ; 2001 ; ; 9781560801771 ; 9781560801771 ; Anisotropy 2000: Fractures, Converted Waves, and Case Studies  (9781560801771) ; >
 
   }
 
