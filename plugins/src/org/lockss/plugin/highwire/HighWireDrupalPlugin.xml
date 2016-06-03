@@ -27,7 +27,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>41</string>
+    <string>42</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -113,6 +113,7 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>2,"^https?://%s/content/by/year/?$", url_host(base_url)</string>
       <string>1,"^https?://%s/content/[0-9]+\.toc$", url_host(base_url)</string>
       <string>1,"^https?://%s/content/[^/]+/(?:(?:[0-9]+|bmj)(?:/[^/.]+(?:\.[0-9]+)?|\.toc|\.[^/.]+)?(?:/related)?|[^/.]+)$", url_host(base_url)</string>
       <string>1,"^https?://%s/content(?:/[^/]+)?/[^/]+/(?:(?:suppl_)?([^/]+/|bmj\.))?[^/]+\.(?:long|supplemental|data|figures-only|full(?:-text)?\.pdf)(?:\+html)?$", url_host(base_url)</string>

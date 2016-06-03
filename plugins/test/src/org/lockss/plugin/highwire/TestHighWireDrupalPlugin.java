@@ -212,6 +212,7 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     shouldCacheTest("http://cdn.mathjax.org/mathjax/latest/MathJax.js", false, au);
     shouldCacheTest("https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js", false, au);
     shouldCacheTest("", false, au);
+    shouldCacheTest(ROOT_URL + "content/by/year", false, au);
     
     // should not get crawled - LOCKSS
     shouldCacheTest("http://lockss.stanford.edu", false, au);
