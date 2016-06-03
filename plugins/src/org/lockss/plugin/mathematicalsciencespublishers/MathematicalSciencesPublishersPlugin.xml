@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Mathematical Sciences Publishers Plugin</string>
+    <string>Mathematical Sciences Publishers Journals Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Mathematical Sciences Publishers Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+    <string>"Mathematical Sciences Publishers Journals Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -65,6 +65,7 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^%s.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url</string>
+      <!-- comment for rule #2, /b[^/]+[.]xhtml are biliographies, so /f... may indicate formulas or figures -->
       <string>2,"^%s%s/%d/[^/]+/f[^/]+[.]xhtml", base_url, journal_id, year</string>
       <string>1,"^%s%s/%d/", base_url, journal_id, year</string>
     </list>
