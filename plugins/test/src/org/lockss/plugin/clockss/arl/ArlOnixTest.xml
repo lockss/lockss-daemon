@@ -24,6 +24,7 @@
 <ProductIDType>03</ProductIDType> <!-- ISBN -->
 <IDValue>978-159407-864-4</IDValue>
 </ProductIdentifier>
+<DescriptiveDetail>
 <Collection>
 <CollectionType>10</CollectionType> <!-- Publisher collection -->
 <CollectionIdentifier> <!-- Identifier of publisher collection -->
@@ -31,7 +32,6 @@
 <IDValue>0160-3582</IDValue> <!-- ISSN -->
 </CollectionIdentifier>
 </Collection>
-<DescriptiveDetail>
 <!--  book title information goes here  -->
 <TitleDetail>
 <TitleType>01</TitleType>
@@ -66,6 +66,7 @@
 <ProductIDType>03</ProductIDType> <!-- ISBN -->
 <IDValue>978-159407-864-4</IDValue>
 </ProductIdentifier>
+<DescriptiveDetail>
 <Collection>
 <CollectionType>10</CollectionType> <!-- Publisher collection -->
 <CollectionIdentifier> <!-- Identifier of publisher collection -->
@@ -73,7 +74,6 @@
 <IDValue>0160-3582</IDValue> <!-- ISSN -->
 </CollectionIdentifier>
 </Collection>
-<DescriptiveDetail>
 <!--  book title information goes here  -->
 <TitleDetail>
 <TitleType>01</TitleType>
@@ -108,6 +108,7 @@
 <ProductIDType>03</ProductIDType> <!-- ISBN -->
 <IDValue>978-159407-864-4</IDValue>
 </ProductIdentifier>
+<DescriptiveDetail>
 <Collection>
 <CollectionType>10</CollectionType> <!-- Publisher collection -->
 <CollectionIdentifier> <!-- Identifier of publisher collection -->
@@ -115,7 +116,6 @@
 <IDValue>0160-3582</IDValue> <!-- ISSN -->
 </CollectionIdentifier>
 </Collection>
-<DescriptiveDetail>
 <!--  book title information goes here  -->
 <TitleDetail>
 <TitleType>01</TitleType>
@@ -150,6 +150,7 @@
 <ProductIDType>03</ProductIDType> <!-- ISBN -->
 <IDValue>978-159407-864-4</IDValue>
 </ProductIdentifier>
+<DescriptiveDetail>
 <Collection>
 <CollectionType>10</CollectionType> <!-- Publisher collection -->
 <CollectionIdentifier> <!-- Identifier of publisher collection -->
@@ -157,7 +158,6 @@
 <IDValue>0160-3582</IDValue> <!-- ISSN -->
 </CollectionIdentifier>
 </Collection>
-<DescriptiveDetail>
 <!--  book title information goes here  -->
 <TitleDetail>
 <TitleType>01</TitleType>
