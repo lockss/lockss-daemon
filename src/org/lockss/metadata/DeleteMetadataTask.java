@@ -51,7 +51,7 @@ import org.lockss.util.TimeInterval;
  * 
  * @author Fernando Garcia-Loygorri
  */
-public class DeleteMetadataTask extends StepTask /*ReindexingTask*/ {
+public class DeleteMetadataTask extends StepTask {
   private static Logger log = Logger.getLogger(DeleteMetadataTask.class);
 
   // The Archival Unit for this task.

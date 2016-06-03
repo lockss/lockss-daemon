@@ -1508,8 +1508,8 @@ public class JobManagerSql {
 
     try {
       deleteJob.setLong(1, jobSeq);
-      deleteJob.setLong(1, jobStatusSeqByName.get(JOB_STATUS_RUNNING));
-      deleteJob.setLong(2, jobStatusSeqByName.get(JOB_STATUS_TERMINATING));
+      deleteJob.setLong(2, jobStatusSeqByName.get(JOB_STATUS_RUNNING));
+      deleteJob.setLong(3, jobStatusSeqByName.get(JOB_STATUS_TERMINATING));
 
       deletedCount = dbManager.executeUpdate(deleteJob);
     } catch (SQLException sqle) {
