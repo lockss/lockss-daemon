@@ -12,11 +12,11 @@
       issnl = 2160-3251
     >
     
-    plugin = org.lockss.plugin.highwire.HWDrupalPlugin 
+    plugin = org.lockss.plugin.highwire.jbjs.JBJSDrupalPlugin 
     param[base_url] = http://caseconnector.jbjs.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 1900 ; JBJS Case Connector Volume os-s1-13 ; os-s1-13 >
+    au < testing ; 1900 ; JBJS Case Connector Volume os-s1-13 ; os-s1-13 >
     au < exists ; 1901 ; JBJS Case Connector Volume os-s1-14 ; os-s1-14 >
     au < exists ; 1902 ; JBJS Case Connector Volume os-s1-15 ; os-s1-15 >
     au < exists ; 1904 ; JBJS Case Connector Volume os-s2-1 ; os-s2-1 >
@@ -127,8 +127,8 @@
     au < exists ; 2008 ; JBJS Case Connector Volume os-90 ; os-90 >
     au < exists ; 2009 ; JBJS Case Connector Volume os-91 ; os-91 >
     au < exists ; 2010 ; JBJS Case Connector Volume os-92 ; os-92 >
-    au < exists ; 2011 ; JBJS Case Connector Volume os-93 ; os-93 >
-    au < exists ; 2011 ; JBJS Case Connector Volume 1 ; 1 >
+    au < testing ; 2011 ; JBJS Case Connector Volume os-93 ; os-93 >
+    au < testing ; 2011 ; JBJS Case Connector Volume 1 ; 1 >
     au < exists ; 2012 ; JBJS Case Connector Volume 2 ; 2 >
     au < exists ; 2013 ; JBJS Case Connector Volume 3 ; 3 >
     au < exists ; 2014 ; JBJS Case Connector Volume 4 ; 4 >
@@ -143,11 +143,11 @@
       issnl = 2160-2204
     >
     
-    plugin = org.lockss.plugin.highwire.HWDrupalPlugin 
+    plugin = org.lockss.plugin.highwire.jbjs.JBJSDrupalPlugin 
     param[base_url] = http://surgicaltechniques.jbjs.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2004 ; JBJS Essential Surgical Techniques Volume os-86 ; os-86 >
+    au < testing ; 2004 ; JBJS Essential Surgical Techniques Volume os-86 ; os-86 >
     au < exists ; 2005 ; JBJS Essential Surgical Techniques Volume os-87 ; os-87 >
     au < exists ; 2006 ; JBJS Essential Surgical Techniques Volume os-88 ; os-88 >
     au < exists ; 2007 ; JBJS Essential Surgical Techniques Volume os-89 ; os-89 >
@@ -155,7 +155,7 @@
     au < exists ; 2009 ; JBJS Essential Surgical Techniques Volume os-91 ; os-91 >
     au < exists ; 2010 ; JBJS Essential Surgical Techniques Volume os-92 ; os-92 >
     au < exists ; 2011 ; JBJS Essential Surgical Techniques Volume os-93 ; os-93 >
-    au < exists ; 2011 ; JBJS Essential Surgical Techniques Volume 1 ; 1 >
+    au < testing ; 2011 ; JBJS Essential Surgical Techniques Volume 1 ; 1 >
     au < exists ; 2012 ; JBJS Essential Surgical Techniques Volume 2 ; 2 >
     au < exists ; 2013 ; JBJS Essential Surgical Techniques Volume 3 ; 3 >
     au < exists ; 2014 ; JBJS Essential Surgical Techniques Volume 4 ; 4 >
@@ -302,11 +302,11 @@
     }
     
     {
-    plugin = org.lockss.plugin.highwire.HWDrupalPlugin 
+    plugin = org.lockss.plugin.highwire.jbjs.JBJSDrupalPlugin 
     param[base_url] = http://jbjs.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 1889 ; Journal of Orthopaedic Surgery Volume s1-1 (1889) ; s1-1 >
+    au < testing ; 1889 ; Journal of Orthopaedic Surgery Volume s1-1 (1889) ; s1-1 >
     au < exists ; 1889 ; Journal of Orthopaedic Surgery Volume s1-2 (1889) ; s1-2 >
     au < exists ; 1890 ; Journal of Orthopaedic Surgery Volume s1-3 (1890) ; s1-3 >
     au < exists ; 1891 ; Journal of Orthopaedic Surgery Volume s1-4 (1891) ; s1-4 >
@@ -432,8 +432,8 @@
     au < exists ; 2011 ; The Journal of Bone & Joint Surgery Volume 93 ; 93 >
     au < exists ; 2012 ; The Journal of Bone & Joint Surgery Volume 94 ; 94 >
     au < exists ; 2013 ; The Journal of Bone & Joint Surgery Volume 95 ; 95 >
-    au < exists ; 2014 ; The Journal of Bone & Joint Surgery Volume 96 ; 96 >
-    au < exists ; 2015 ; The Journal of Bone & Joint Surgery Volume 97 ; 97 >
+    au < testing ; 2014 ; The Journal of Bone & Joint Surgery Volume 96 ; 96 >
+    au < testing ; 2015 ; The Journal of Bone & Joint Surgery Volume 97 ; 97 >
     
     }
 
