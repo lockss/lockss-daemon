@@ -910,6 +910,30 @@
   
     }
   
+    {
+      title <
+        name = mSphere ;
+        issn = 2379-5042 ;
+        issnl = 2379-5042
+      >
+      param[base_url] = http://msphere.asm.org/
+
+      au < HighWireDrupalPlugin ; exists ; 2016 ; mSphere Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
+        name = mSystems ;
+        issn = 2379-5077 ;
+        issnl = 2379-5077
+      >
+      param[base_url] = http://msystems.asm.org/
+
+      au < HighWireDrupalPlugin ; exists ; 2016 ; mSystems Volume 1 ; 1 >
+
+    }
+  
   }
 
   {
