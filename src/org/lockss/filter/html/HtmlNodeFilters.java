@@ -636,7 +636,7 @@ public class HtmlNodeFilters {
 	  !(node instanceof MetaTag)) {
 	for (int i = 0; i < attrs.length; i++) {
 	  Attribute attribute = ((TagNode)node).getAttributeEx(attrs[i]);
-	  if (attribute != null) {
+	  if (attribute != null && attribute.getValue() != null) {
 	    // Rewrite this attribute
 	    String url = attribute.getValue();
  	    if (isFilterMatch(url, pat)) {
