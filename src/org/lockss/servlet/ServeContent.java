@@ -122,6 +122,18 @@ public class ServeContent extends LockssServlet {
   public static final MissingFileAction DEFAULT_MISSING_FILE_ACTION =
       MissingFileAction.HostAuIndex;
 
+  /** Determines when to follow redirect returned by publisher.
+   * Can be set to one of:
+   *  <ul>
+   *   <li><tt>Never</tt></li>
+   *   <li><tt>Always</tt></li>
+   *   <li><tt>Missing</tt>: Only if URL is not present in cache.</li>
+   *  </ul>
+   */
+  public static final String PARAM_FOLLOW_PUBLISHER_REDIRECT =
+      PREFIX + "followPublisherRedirect";
+  public static final FollowPublisherRedirectCondition DEFAULT_FOLLOW_PUBLISHER_REDIRECT = FollowPublisherRedirectCondition.Missing;
+
   /** The log level at which to log all content server accesses.
    * To normally log all content accesses (proxy or ServeContent), set to
    * <tt>info</tt>.  To disable set to <tt>none</tt>. */
@@ -154,6 +166,20 @@ public class ServeContent extends LockssServlet {
     Redirect,
     /** Respond with a redirect to the publisher. */
     AlwaysRedirect,
+  }
+
+  /** Determines when to follow redirect returned by publisher.
+   * Can be set to one of:
+   *  <ul>
+   *   <li><tt>Never</tt></li>
+   *   <li><tt>Always</tt></li>
+   *   <li><tt>Missing</tt>: Only if URL is not present in cache.</li>
+   *  </ul>
+   */
+  public static enum FollowPublisherRedirectCondition {
+    Always,
+    Never,
+    Missing,
   }
 
   /** Determines how original URLs are represented in ServeContent URLs.
@@ -206,6 +232,12 @@ public class ServeContent extends LockssServlet {
       PREFIX + "normalizeUrlArg";
   public static final boolean DEFAULT_NORMALIZE_URL_ARG = true;
 
+  /** If true, the url forwarded to the publisher is that of the CU, i.e.,
+   * after plugin-specific normalization. */
+  public static final String PARAM_NORMALIZE_FORWARDED_URL =
+      PREFIX + "normalizeForwardedUrl";
+  public static final boolean DEFAULT_NORMALIZE_FORWARDED_URL = true;
+
   /** Include in index AUs in listed plugins.  Set only one of
    * PARAM_INCLUDE_PLUGINS or PARAM_EXCLUDE_PLUGINS */
   public static final String PARAM_INCLUDE_PLUGINS =
@@ -246,10 +278,14 @@ public class ServeContent extends LockssServlet {
 
   private static MissingFileAction missingFileAction =
       DEFAULT_MISSING_FILE_ACTION;
+  private static FollowPublisherRedirectCondition followPublisherRedirect =
+    DEFAULT_FOLLOW_PUBLISHER_REDIRECT;
   private static boolean absoluteLinks = DEFAULT_ABSOLUTE_LINKS;
   private static RewriteStyle rewriteStyle = DEFAULT_REWRITE_STYLE;
   private static boolean rewriteMementoResponses = DEFAULT_REWRITE_MEMENTO_RESPONSES;
   private static boolean normalizeUrl = DEFAULT_NORMALIZE_URL_ARG;
+  private static boolean normalizeForwardedUrl =
+    DEFAULT_NORMALIZE_FORWARDED_URL;
   private static boolean minimallyEncodeUrl = DEFAULT_MINIMALLY_ENCODE_URLS;
   private static List<String> excludePlugins = DEFAULT_EXCLUDE_PLUGINS;
   private static List<String> includePlugins = DEFAULT_INCLUDE_PLUGINS;
@@ -261,11 +297,15 @@ public class ServeContent extends LockssServlet {
     DEFAULT_ACCESS_ALERTS_ENABLED;
   private static boolean processForms = DEFAULT_PROCESS_FORMS;
   private static String candidates404Msg = DEFAULT_404_CANDIDATES_MSG;
+  private static int loginCheckerBufSize =
+    BaseUrlFetcher.DEFAULT_LOGIN_CHECKER_MARK_LIMIT;
 
 
   private ArchivalUnit au;
   private ArchivalUnit explicitAu;
   private String url;
+  private String cuUrl;	// CU's url (might differ from incoming url due to
+			// normalizaton)
   private String versionStr; // non-null iff handling a (possibly-invalid) Memento request
   private CachedUrl cu;
   private boolean enabledPluginsOnly;
@@ -316,6 +356,11 @@ public class ServeContent extends LockssServlet {
           (MissingFileAction)config.getEnum(MissingFileAction.class,
               PARAM_MISSING_FILE_ACTION,
               DEFAULT_MISSING_FILE_ACTION);
+      followPublisherRedirect =
+	(FollowPublisherRedirectCondition)
+	config.getEnum(FollowPublisherRedirectCondition.class,
+		       PARAM_FOLLOW_PUBLISHER_REDIRECT,
+		       DEFAULT_FOLLOW_PUBLISHER_REDIRECT);
       excludePlugins = config.getList(PARAM_EXCLUDE_PLUGINS,
           DEFAULT_EXCLUDE_PLUGINS);
       includePlugins = config.getList(PARAM_INCLUDE_PLUGINS,
@@ -334,6 +379,9 @@ public class ServeContent extends LockssServlet {
 						  DEFAULT_REWRITE_STYLE);
       normalizeUrl = config.getBoolean(PARAM_NORMALIZE_URL_ARG,
           DEFAULT_NORMALIZE_URL_ARG);
+      normalizeForwardedUrl = config.getBoolean(PARAM_NORMALIZE_FORWARDED_URL,
+          DEFAULT_NORMALIZE_FORWARDED_URL);
+      
       minimallyEncodeUrl = config.getBoolean(PARAM_MINIMALLY_ENCODE_URLS,
           DEFAULT_MINIMALLY_ENCODE_URLS);
       neverProxy = config.getBoolean(PARAM_NEVER_PROXY,
@@ -346,6 +394,11 @@ public class ServeContent extends LockssServlet {
       processForms = config.getBoolean(PARAM_PROCESS_FORMS,
           DEFAULT_PROCESS_FORMS);
     }
+    // XXX this is an inconsistent use of this param
+    loginCheckerBufSize =
+      config.getInt(BaseUrlFetcher.PARAM_LOGIN_CHECKER_MARK_LIMIT,
+		    BaseUrlFetcher.DEFAULT_LOGIN_CHECKER_MARK_LIMIT);
+
   }
 
   protected boolean isInCache() {
@@ -666,6 +719,7 @@ public class ServeContent extends LockssServlet {
         // it would fit so can rewrite content from publisher if necessary.
         cu = pluginMgr.findCachedUrl(url, CuContentReq.PreferContent);
         if (cu != null) {
+	  cuUrl = cu.getUrl();
           au = cu.getArchivalUnit();
           if (log.isDebug3()) log.debug3("cu: " + cu + " au: " + au);
         }
@@ -1134,11 +1188,8 @@ public class ServeContent extends LockssServlet {
 
     InputStream oldInput = input;
     // copy page to tmp file to allow login page checker to read it
-    // XXX this is an inconsistent use of this param
-    int limit =
-      CurrentConfig.getIntParam(BaseUrlFetcher.PARAM_LOGIN_CHECKER_MARK_LIMIT,
-				BaseUrlFetcher.DEFAULT_LOGIN_CHECKER_MARK_LIMIT);
-    DeferredTempFileOutputStream dos = new DeferredTempFileOutputStream(limit);
+    DeferredTempFileOutputStream dos =
+      new DeferredTempFileOutputStream(loginCheckerBufSize);
     try {
       StreamUtil.copy(input, dos);
     } finally {
@@ -1319,7 +1370,13 @@ public class ServeContent extends LockssServlet {
     String ifModified = null;
     String referer = null;
 
-    LockssUrlConnection conn = UrlUtil.openConnection(url, pool);
+    String fwdUrl;
+    if (cuUrl != null && normalizeForwardedUrl) {
+      fwdUrl = cuUrl;
+    } else {
+      fwdUrl = url;
+    }
+    LockssUrlConnection conn = UrlUtil.openConnection(fwdUrl, pool);
 
     // check connection header
     String connectionHdr = req.getHeader(HttpFields.__Connection);
@@ -1327,6 +1384,18 @@ public class ServeContent extends LockssServlet {
         (connectionHdr.equalsIgnoreCase(HttpFields.__KeepAlive)||
          connectionHdr.equalsIgnoreCase(HttpFields.__Close)))
       connectionHdr=null;
+
+    switch (followPublisherRedirect) {
+    case Always:
+      conn.setFollowRedirects(true);
+      break;
+    case Never:
+      conn.setFollowRedirects(false);
+      break;
+    case Missing:
+      conn.setFollowRedirects(!isInCache);
+      break;
+    }
 
     // copy request headers into new request
     for (Enumeration en = req.getHeaderNames();
@@ -1486,6 +1555,9 @@ public class ServeContent extends LockssServlet {
         // send that in the response in place of the original file's
         // charset.
         if (rewritten instanceof EncodedThing) {
+	  // Note; getCharset() looks at the output stream so will cause
+	  // the parser and transform to be invoked here, not where the
+	  // stream is read below
           String rewrittenCharset = ((EncodedThing)rewritten).getCharset();
           log.debug3("rewrittenCharset: " + rewrittenCharset);
           if (!StringUtil.isNullString(rewrittenCharset)) {
