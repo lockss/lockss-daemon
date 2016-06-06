@@ -149,9 +149,10 @@ public class ProxyHandler extends AbstractHttpHandler {
 				       DEFAULT_PROCESS_FORMS);
     hostname = PlatformUtil.getLocalHostname();
 
+    int connectMapSize = config.getInt(PARAM_LOOPBACK_CONNECT_MAP_MAX,
+				       DEFAULT_LOOPBACK_CONNECT_MAP_MAX);
     loopbackConnectMap =
-      new LRUMap(config.getInt(PARAM_LOOPBACK_CONNECT_MAP_MAX,
-			       DEFAULT_LOOPBACK_CONNECT_MAP_MAX));
+      Collections.synchronizedMap(new LRUMap(connectMapSize));
   }
 
   ProxyHandler(LockssDaemon daemon, LockssUrlConnectionPool pool) {
