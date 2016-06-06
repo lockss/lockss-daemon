@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -206,10 +206,6 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
         // Markup changes over time
         {"&nbsp;", " "},
         {"&amp;", "&"},
-        // Wording change over time [article block, abs/full/ref/suppl overview]
-        {"<strong>Published online:</strong>"}, // current
-        {"<strong>Available online:</strong>"}, // old
-        {"<strong>Version of record first published:</strong>"} // old
     }, true);
 
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(stringFilter,
@@ -219,6 +215,10 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
         new TagPair("<li><strong>Citations:", "</li>", true), // old?
         new TagPair("<li><strong><a href=\"/doi/citedby/", "</li>", true), // old?
         new TagPair("<li><strong>Citation information:", "</li>", true), // old?
+        // Wording change over time, and publication dates get fixed much later [article block, abs/full/ref/suppl overview]
+        new TagPair("Published online:", "</li>", true), // current
+        new TagPair("Available online:", "</li>", true), // old
+        new TagPair("Version of record first published:", "</li>", true), // old
         // Leftover commas after outgoing/SFX links removed [full/ref referencesPanel]
         new TagPair("</pub-id>", "</li>", true)
     ));
@@ -246,13 +246,5 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
       }
     };
   }
-
-//  public static void main(String[] args) throws Exception {
-//    for (String file : Arrays.asList("/tmp/e1/file-b1",
-//                                     "/tmp/e1/file-b4")) {
-//      IOUtils.copy(new TafHtmlHashFilterFactory().createFilteredInputStream(null, new FileInputStream(file), null),
-//                   new FileOutputStream(file + ".out"));
-//    }
-//  }
 
 }
