@@ -16,12 +16,12 @@
 
         param[journal_id] = aps
         
-        au < released ; 2011 ; aboriginal policy studies Volume 1 ; 2011 ; 1 ; http://ejournals.library.ualberta.ca/ >
-        au < released ; 2012 ; aboriginal policy studies Volume 2 (2012) ; 2012 ; 2 ; https://ejournals.library.ualberta.ca/ >
-        au < released ; 2013 ; aboriginal policy studies Volume 2 (2013) ; 2013 ; 2 ; https://ejournals.library.ualberta.ca/ >
-        au < released ; 2014 ; aboriginal policy studies Volume 3 (2014) ; 2014 ; 3 ; https://ejournals.library.ualberta.ca/ >
-        au < released ; 2015 ; aboriginal policy studies Volume 4 (2015) ; 2015 ; 4 ; https://ejournals.library.ualberta.ca/ >
-        au < released ; 2016 ; aboriginal policy studies Volume 5 (2016) ; 2016 ; 5 ; https://ejournals.library.ualberta.ca/ >
+        au < released ; 2011 ; aboriginal policy studies Volume 2011 ; 2011 ; 1 ; http://ejournals.library.ualberta.ca/ >
+        au < released ; 2012 ; aboriginal policy studies Volume 2012 ; 2012 ; 2 ; https://ejournals.library.ualberta.ca/ >
+        au < released ; 2013 ; aboriginal policy studies Volume 2013 ; 2013 ; 2 ; https://ejournals.library.ualberta.ca/ >
+        au < released ; 2014 ; aboriginal policy studies Volume 2014 ; 2014 ; 3 ; https://ejournals.library.ualberta.ca/ >
+        au < released ; 2015 ; aboriginal policy studies Volume 2015 ; 2015 ; 4 ; https://ejournals.library.ualberta.ca/ >
+        au < released ; 2016 ; aboriginal policy studies Volume 2016 ; 2016 ; 5 ; https://ejournals.library.ualberta.ca/ >
 
     }
 
@@ -185,10 +185,10 @@
       {
         param[journal_id] = cjs
 
-        au < superseded ; 2008 ; Canadian Journal of Sociology Volume 2008 ; 2008 [superseded] ; 33 ; http://ejournals.library.ualberta.ca/ >
-        au < superseded ; 2009 ; Canadian Journal of Sociology Volume 2009 ; 2009 [superseded] ; 34 ; http://ejournals.library.ualberta.ca/ >
-        au < superseded ; 2010 ; Canadian Journal of Sociology Volume 2010 ; 2010 [superseded] ; 35 ; http://ejournals.library.ualberta.ca/ >
-        au < superseded ; 2011 ; Canadian Journal of Sociology Volume 2011 ; 2011 [superseded] ; 36 ; http://ejournals.library.ualberta.ca/ >
+        au < superseded ; 2008 ; Canadian Journal of Sociology Volume 2008 [superseded] ; 2008 ; 33 ; http://ejournals.library.ualberta.ca/ >
+        au < superseded ; 2009 ; Canadian Journal of Sociology Volume 2009 [superseded] ; 2009 ; 34 ; http://ejournals.library.ualberta.ca/ >
+        au < superseded ; 2010 ; Canadian Journal of Sociology Volume 2010 [superseded] ; 2010 ; 35 ; http://ejournals.library.ualberta.ca/ >
+        au < superseded ; 2011 ; Canadian Journal of Sociology Volume 2011 [superseded] ; 2011 ; 36 ; http://ejournals.library.ualberta.ca/ >
       }
     }
 
