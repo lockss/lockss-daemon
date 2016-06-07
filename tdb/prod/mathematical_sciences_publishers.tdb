@@ -1,8 +1,7 @@
 {
 
   publisher <
-    name = Mathematical Sciences Publishers ;
-    info[tester] = 0
+    name = Mathematical Sciences Publishers
   >
 
     plugin = org.lockss.plugin.mathematicalsciencespublishers.MathematicalSciencesPublishersPlugin
