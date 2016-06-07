@@ -132,7 +132,8 @@ a.pub-title {
     width: 12px;
 }
 
-.publisher-icon {
+.publisher-icon,
+.title-icon {
     padding-top: 0px;
     padding-right: 5px;
     padding-left: 20px;
@@ -337,4 +338,43 @@ img.messageDivClose {
 	padding-bottom: 10px;
 	padding-top: 15px;
 	vertical-align: middle;
+}
+
+label.publication-title {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+label.publication-title > input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin:0;
+    margin-right: 15px;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+#bulk-actions {
+	margin: 15px 0;
+}
+
+#bulk-actions-menu,
+#bulk-actions-btn {
+  margin: 0 5px;
+}
+
+#bulk-actions-msg-box {
+	margin-left: 10px;
+	font-size: small;
+}
+
+.success {
+	color: blue;
+}
+.warning {
+	color: red;
 }
