@@ -27,7 +27,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>43</string>
+    <string>42</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -38,7 +38,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>22</string>
+        <string>21</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -205,12 +205,7 @@
     <int>2</int>
   </entry>
   <entry>
-    <!-- As we want to use PDFs for agreement, also some supplementary content.
-         This excludes urls that
-        1) do not have /highwire/filestream/ nor .pdf nor /content/.../suppl/ in their path
-        2) do end with html     (for urls like .../1361.full.pdf+html)
-         -->
     <string>au_exclude_urls_from_polls_pattern</string>
-    <string>^http(?!.*/highwire/filestream/.*)(?!.*\.pdf)(?!.*/content/[^/]+/suppl/.*).*|.*html$</string>
+    <string>^http(?!.*/highwire/filestream/.*)(?!.*\.pdf)(?!.*/content/[^/]+/suppl/.*)|html$</string>
   </entry>
 </map>
