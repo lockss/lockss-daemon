@@ -44,12 +44,11 @@
       type = bookSeries 
       >
       
-  }
       # Note use of journal_id for book Series Identifier, this is intentional
       # series string - /obs/
       param[journal_id] = obs
     
-     au < manifest ; exists ; 2013 ; The Open Book Series in 2013 ; 2013 ; >
+     au < manifest ; 2013 ; The Open Book Series in 2013 ; 2013 >
      
   }
 }
