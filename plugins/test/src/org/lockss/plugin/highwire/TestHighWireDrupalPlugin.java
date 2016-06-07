@@ -33,7 +33,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.highwire;
 
 import java.net.MalformedURLException;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Properties;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
@@ -43,6 +47,7 @@ import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.plugin.definable.*;
 import org.lockss.test.*;
 import org.lockss.util.ListUtil;
+import org.lockss.util.RegexpUtil;
 import org.lockss.util.urlconn.CacheException;
 import org.lockss.util.urlconn.HttpResultMap;
 
@@ -152,7 +157,7 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
   // Test the crawl rules for eLife
   public void testShouldCacheProperPages() throws Exception {
     String ROOT_URL = "http://highwire.org/";
-    String ROOT_URL_OUP = "https://highwire.org/";
+//    String ROOT_URL2 = "https://highwire.org/";
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, ROOT_URL);
     props.setProperty(VOL_KEY, "2015");
@@ -222,6 +227,107 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
   private void shouldCacheTest(String url, boolean shouldCache, ArchivalUnit au) {
     log.info ("shouldCacheTest url: " + url);
     assertEquals(shouldCache, au.shouldBeCached(url));
+  }
+  
+  // from au_exclude_urls_from_polls_pattern in plugins/src/org/lockss/plugin/highwire/HighWireDrupalPlugin.xml
+  // if it changes in the plugin, you will likely need to change the test, so verify
+  //    ^http(?!.*/highwire/filestream/.*)(?!.*\.pdf)(?!.*/content/[^/]+/suppl/.*).*|.*html$
+  
+  static final String HW_EXCLUDE_FROM_POLLS_REGEXP[] = 
+    {
+        "^http(?!.*/highwire/filestream/.*)(?!.*\\.pdf)(?!.*/content/[^/]+/suppl/.*).*|.*html$",
+    };
+  
+  
+  public void testPollSpecial() throws Exception {
+    String ROOT_URL = "http://www.example.com/";
+    Properties props = new Properties();
+    props.setProperty(VOL_KEY, "322");
+    props.setProperty(BASE_URL_KEY, ROOT_URL);
+    DefinableArchivalUnit au = makeAuFromProps(props);
+    
+    // if it changes in the plugin, you will likely need to change the test, so verify
+    assertEquals(Arrays.asList(
+        HW_EXCLUDE_FROM_POLLS_REGEXP),
+        RegexpUtil.regexpCollection(au.makeExcludeUrlsFromPollsPatterns()));
+    
+    // make sure that's the regexp that will match to the expected url string
+    // this also tests the regexp (which is the same) for the exclude from poll map
+    // Add to pattern these urls? Has not been seen as problem, yet
+    
+    List <String> excludeList = ListUtil.list(
+        ROOT_URL + "clockss-manifest/vol_114_manifest.html",
+        ROOT_URL + "content/114/1",
+        ROOT_URL + "content/114/1/1",
+        ROOT_URL + "content/114/1/1.e-letters",
+
+        ROOT_URL + "content/114/1/1.full.pdf+html",
+        ROOT_URL + "content/114/1/107",
+        ROOT_URL + "content/114/1.toc",
+        ROOT_URL + "highwire/article_citation_preview/37911",
+        ROOT_URL + "highwire/markup/97175/expansion",
+        ROOT_URL + "misc/ajax.js",
+        ROOT_URL + "panels_ajax_tab/jnl_foo_tab_data/node:37911/1",
+        ROOT_URL + "panels_ajax_tab/jnl_foo_tab_info/node:38276/1",
+        ROOT_URL + "panels_ajax_tab/jnl_foo_tab_pdf/node:37898/1",
+        ROOT_URL + "sites/all/modules/highwire/highwire/js/highwire_toggle_download_pdf.js",
+        ROOT_URL + "sites/all/modules/highwire/highwire/plugins/content_types/js/highwire_article_comments.js",
+        ROOT_URL + "sites/all/modules/highwire/highwire/plugins/highwire_markup_process/js/highwire_at_symbol.js",
+        ROOT_URL + "sites/all/modules/highwire/highwire/plugins/highwire_markup_process/js/highwire_openurl.js",
+        ROOT_URL + "css/9.2.6/print.css",
+        ROOT_URL + "js/9.3.2/lib/functional.min.js",
+        ROOT_URL + "css/8.10.4/custom-theme/images/ui-bg_flat_100_006eb2_40x100.png",
+        "http://cdn.mathjax.org/mathjax/latest/MathJax.js",
+        "http://egbdf.cloudfront.net/content/foo/114/1/107/F1.large.jpg",
+        "http://egbdf.cloudfront.net/content/foo/114/1/107/F1.medium.gif",
+        "http://egbdf.cloudfront.net/misc/draggable.png",
+        "http://egbdf.cloudfront.net/misc/progress.gif",
+        "http://egbdf.cloudfront.net/misc/ui/images/ui-bg_glass_75_e6e6e6_1x400.png",
+        "http://egbdf.cloudfront.net/sites/all/libraries/chosen/chosen-sprite.png",
+        "http://egbdf.cloudfront.net/sites/all/libraries/modernizr/modernizr.min.js",
+        "http://egbdf.cloudfront.net/sites/all/modules/contrib/colorbox/styles/default/images/loading_animation.gif",
+        "http://egbdf.cloudfront.net/sites/all/modules/contrib/ctools/images/status-active.gif",
+        "http://egbdf.cloudfront.net/sites/all/modules/contrib/nice_menus/images/arrow-right.png",
+        "http://egbdf.cloudfront.net/sites/all/modules/contrib/panels_ajax_tab/images/loading.gif",
+        "http://egbdf.cloudfront.net/sites/all/modules/highwire/highwire/highwire.style.highwire.css",
+        "http://egbdf.cloudfront.net/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.eot",
+        "http://egbdf.cloudfront.net/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.svg",
+        "http://egbdf.cloudfront.net/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.ttf",
+        "http://egbdf.cloudfront.net/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.woff",
+        "http://egbdf.cloudfront.net/sites/all/themes/contrib/omega/omega/images/button.png",
+        "http://egbdf.cloudfront.net/sites/default/files/advagg_css/css__wDWgsVUy1vHKJk5IOxMeWaglKzLoOtZILn17SMUIKNc__JeEmC_ds8zYAzXrROHaKwkPeIUtroNPLownDI-CNYj4__ZBV1Na1y5UYxD8pZQl12ZuMt0MUtDuHKkc3Rs78lmMI.css",
+        "http://egbdf.cloudfront.net/sites/default/files/advagg_js/js__1PtAOZ8x7l6QAi8D7X6Kj_Y7HcUOFzvWRvvYHUcCT98__7itiXlZly3E1jShBthrww-DLF4Hn0cFXb_K4ha96l3k__ZBV1Na1y5UYxD8pZQl12ZuMt0MUtDuHKkc3Rs78lmMI.js",
+        "http://egbdf.cloudfront.net/sites/default/files/cdn/css/http/css_-hbrzZIeBluvkRZKunL2_uBR1NG16FPt2ZxP2e8Ukss.css",
+        "http://egbdf.cloudfront.net/sites/default/files/cdn/css/http/css_C66gTr00v8C78pnyy16Gmr-Q8G3lCnOnByxK8F8i-nc_highwire.style.highwire.css.css",
+        "http://egbdf.cloudfront.net/sites/default/files/favicon_1.ico",
+        "http://egbdf.cloudfront.net/sites/default/files/highwire/foo/114/10/1451/F2/embed/mml-math-14.gif",
+        "http://egbdf.cloudfront.net/sites/default/files/js/js_-dUp1-d3TYhpxjvks0wAgzk3N1TNQRUoPuOh6OaYUig.js"
+        );
+    
+    Pattern p0 = Pattern.compile(HW_EXCLUDE_FROM_POLLS_REGEXP[0]);
+    Matcher m0;
+    for (String urlString : excludeList) {
+      m0 = p0.matcher(urlString);
+      assertEquals(urlString, true, m0.find());
+    }
+    
+    List <String> includeList = ListUtil.list(
+        ROOT_URL + "content/114/1/1.full.pdf",
+        ROOT_URL + "content/foo/114/1/1.full.pdf",
+        ROOT_URL + "content/foo/suppl/2013/01/28/fooplphysiol.01341.2012.DC1/Supplement_Table.pdf",
+        ROOT_URL + "content/foo/suppl/2013/01/28/fooplphysiol.01430.2011.DC1/tableS1.pdf",
+        ROOT_URL + "content/foo/suppl/2013/02/07/fooplphysiol.00747.2012.DC1/matlab.docx",
+        ROOT_URL + "content/foo/suppl/2013/03/21/fooplphysiol.00106.2013.DC1/tableS1.doc",
+        ROOT_URL + "highwire/filestream/108240/field_highwire_adjunct_files/0/Supplement_Table.pdf",
+        ROOT_URL + "highwire/filestream/108244/field_highwire_adjunct_files/0/tableS1.pdf",
+        ROOT_URL + "highwire/filestream/108250/field_highwire_adjunct_files/0/matlab.docx",
+        ROOT_URL + "highwire/filestream/108260/field_highwire_adjunct_files/0/tableS1.doc"
+        );
+    
+    for (String urlString : includeList) {
+      m0 = p0.matcher(urlString);
+      assertEquals(urlString, false, m0.find());
+    }
   }
   
 }
