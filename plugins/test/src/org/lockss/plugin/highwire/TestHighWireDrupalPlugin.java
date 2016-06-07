@@ -231,11 +231,11 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
   
   // from au_exclude_urls_from_polls_pattern in plugins/src/org/lockss/plugin/highwire/HighWireDrupalPlugin.xml
   // if it changes in the plugin, you will likely need to change the test, so verify
-  //    ^http(?!.*/highwire/filestream/.*)(?!.*\.pdf)(?!.*/content/[^/]+/suppl/.*).*|.*html$
+  //    ^http(?!.*/highwire/filestream/.*)(?!.*\.pdf)(?!.*/content/[^/]+/suppl/.*)|html$
   
   static final String HW_EXCLUDE_FROM_POLLS_REGEXP[] = 
     {
-        "^http(?!.*/highwire/filestream/.*)(?!.*\\.pdf)(?!.*/content/[^/]+/suppl/.*).*|.*html$",
+        "^http(?!.*/highwire/filestream/.*)(?!.*\\.pdf)(?!.*/content/[^/]+/suppl/.*)|html$",
     };
   
   
