@@ -1,12 +1,13 @@
 {
 
   publisher <
-    name = Mathematical Sciences Publishers
+    name = Mathematical Sciences Publishers ;
+    info[tester] = 0
   >
 
-    plugin = needs.plugin
+    plugin = org.lockss.plugin.mathematicalsciencespublishers.MathematicalSciencesPublishersBooksPlugin
     param[base_url] = http://msp.org/
-    implicit < status ; isbn ; eisbn ; year ; volume ; name ; param[isbn] >
+    implicit < status ; year ; name ; param[year] >
     
   {
   
@@ -16,10 +17,27 @@
       issn = 1464-8989 ;
       eissn = 1464-8997
       >
-      # series string - /gtm/
       
-  }   
+      # Note use of journal_id for book Series Identifier, this is intentional
+      # series string - /gtm/
+      param[journal_id] = gtm
     
+     au < manifest ; 1998 ; Geometry & Topology Monographs in 1998 ; 1998 >
+     au < manifest ; 1999 ; Geometry & Topology Monographs in 1999 ; 1999 >
+     au < manifest ; 2000 ; Geometry & Topology Monographs in 2000 ; 2000 >
+     au < manifest ; 2002 ; Geometry & Topology Monographs in 2002 ; 2002 >
+     au < manifest ; 2003 ; Geometry & Topology Monographs in 2003 ; 2003 >
+     au < manifest ; 2004 ; Geometry & Topology Monographs in 2004 ; 2004 >
+     au < manifest ; 2006 ; Geometry & Topology Monographs in 2006 ; 2006 >
+     au < manifest ; 2007 ; Geometry & Topology Monographs in 2007 ; 2007 >
+     au < manifest ; 2008 ; Geometry & Topology Monographs in 2008 ; 2008 >
+     au < manifest ; 2009 ; Geometry & Topology Monographs in 2009 ; 2009 >
+     au < manifest ; 2011 ; Geometry & Topology Monographs in 2011 ; 2011 >
+     au < manifest ; 2012 ; Geometry & Topology Monographs in 2012 ; 2012 >
+     au < manifest ; 2015 ; Geometry & Topology Monographs in 2015 ; 2015 >
+     
+  }
+  
   {
   
     title < 
@@ -27,5 +45,5 @@
       type = bookSeries 
       >
       
-  }   
+  }
 }

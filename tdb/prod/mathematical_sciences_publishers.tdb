@@ -1,11 +1,11 @@
 {
 
   publisher <
-    name = Mathematical Sciences Publishers
+    name = Mathematical Sciences Publishers ;
+    info[tester] = 0
   >
 
-    plugin = needs.plugin
-    #plugin = org.lockss.plugin.mathematicalsciencespublishers.MathematicalSciencesPublishersPlugin
+    plugin = org.lockss.plugin.mathematicalsciencespublishers.MathematicalSciencesPublishersPlugin
     param[base_url] = http://msp.org/
     implicit < status ; year ; name ; volume ; param[year] >
     
@@ -22,7 +22,6 @@
     
       param[journal_id] = agt
     
-     
      au < exists ; 2001 ; Algebraic & Geometric Topology Volume 1 ; 1 ; 2001 >
      au < exists ; 2002 ; Algebraic & Geometric Topology Volume 2 ; 2 ; 2002 >
      au < exists ; 2003 ; Algebraic & Geometric Topology Volume 3 ; 3 ; 2003 >

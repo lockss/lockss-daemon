@@ -1,0 +1,30 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.mathematicalsciencespublishers.ClockssMathematicalSciencesPublishersBooksPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Mathematical Sciences Publishers Journals Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.mathematicalsciencespublishers.MathematicalSciencesPublishersBooksPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Mathematical Sciences Publishers Books Plugin (CLOCKSS), Base URL %s, Series ID %s, Year %d", base_url, journal_id, year</string>
+  </entry>
+</map>
