@@ -118,7 +118,7 @@ public class TestMathematicalSciencesPublishersPlugin extends LockssTestCase {
     props.setProperty(YEAR_KEY, "2004");
     
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("Mathematical Sciences Publishers Plugin (CLOCKSS), " +
+    assertEquals("Mathematical Sciences Publishers Journals Plugin (CLOCKSS), " +
         "Base URL http://www.example.com/, " +
         "Journal ID j_id, Year 2004", au.getName());
   }
