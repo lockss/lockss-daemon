@@ -48,14 +48,14 @@
     param[journal_id] = aj
 
     au < released ; 2005 ; Agronomy Journal Volume 97 ; 97 >
-    au < releasing ; 2006 ; Agronomy Journal Volume 98 ; 98 >
+    au < released ; 2006 ; Agronomy Journal Volume 98 ; 98 >
     au < released ; 2007 ; Agronomy Journal Volume 99 ; 99 >
-    au < releasing ; 2008 ; Agronomy Journal Volume 100 ; 100 >
+    au < released ; 2008 ; Agronomy Journal Volume 100 ; 100 >
     au < manifest ; 2009 ; Agronomy Journal Volume 101 ; 101 >
     au < manifest ; 2010 ; Agronomy Journal Volume 102 ; 102 >
     au < manifest ; 2011 ; Agronomy Journal Volume 103 ; 103 >
     au < manifest ; 2012 ; Agronomy Journal Volume 104 ; 104 >
-    au < releasing ; 2013 ; Agronomy Journal Volume 105 ; 105 >
+    au < released ; 2013 ; Agronomy Journal Volume 105 ; 105 >
     au < released ; 2014 ; Agronomy Journal Volume 106 ; 106 >
     au < manifest ; 2015 ; Agronomy Journal Volume 107 ; 107 >
     au < manifest ; 2016 ; Agronomy Journal Volume 108 ; 108 >
@@ -83,8 +83,8 @@
     au < doNotProcess ; 2010 ; Crops & Soils Magazine Volume 43 ; 43 > #no issues on manifest page.
     au < doNotProcess ; 2011 ; Crops & Soils Magazine Volume 44 ; 44 > #no issues on manifest page.
     au < doNotProcess ; 2012 ; Crops & Soils Magazine Volume 45 ; 45 > #no issues on manifest page.
-    au < releasing ; 2013 ; Crops & Soils Magazine Volume 46 ; 46 >
-    au < releasing ; 2014 ; Crops & Soils Magazine Volume 47 ; 47 >
+    au < released ; 2013 ; Crops & Soils Magazine Volume 46 ; 46 >
+    au < released ; 2014 ; Crops & Soils Magazine Volume 47 ; 47 >
     au < released ; 2015 ; Crops & Soils Magazine Volume 48 ; 48 >
     au < manifest ; 2016 ; Crops & Soils Magazine Volume 49 ; 49 >
 
@@ -106,7 +106,7 @@
 
     au < released ; 2005 ; Crop Science Volume 45 ; 45 >
     au < released ; 2006 ; Crop Science Volume 46 ; 46 >
-    au < releasing ; 2007 ; Crop Science Volume 47 ; 47 >
+    au < released ; 2007 ; Crop Science Volume 47 ; 47 >
     au < released ; 2008 ; Crop Science Volume 48 ; 48 >
     au < manifest ; 2009 ; Crop Science Volume 49 ; 49 >
     au < manifest ; 2010 ; Crop Science Volume 50 ; 50 >
@@ -142,7 +142,7 @@
     au < doNotProcess ; 2012 ; CSA News Volume 57 ; 57 > # no issues on manifest page
     au < released ; 2013 ; CSA News Volume 58 ; 58 >
     au < released ; 2014 ; CSA News Volume 59 ; 59 >
-    au < releasing ; 2015 ; CSA News Volume 60 ; 60 >
+    au < released ; 2015 ; CSA News Volume 60 ; 60 >
     au < manifest ; 2016 ; CSA News Volume 61 ; 61 >
 
   }
@@ -163,12 +163,12 @@
 
     au < released ; 2005 ; Journal of Environmental Quality Volume 34 ; 34 >
     au < released ; 2006 ; Journal of Environmental Quality Volume 35 ; 35 >
-    au < releasing ; 2007 ; Journal of Environmental Quality Volume 36 ; 36 >
+    au < released ; 2007 ; Journal of Environmental Quality Volume 36 ; 36 >
     au < released ; 2008 ; Journal of Environmental Quality Volume 37 ; 37 >
-    au < releasing ; 2009 ; Journal of Environmental Quality Volume 38 ; 38 >
+    au < released ; 2009 ; Journal of Environmental Quality Volume 38 ; 38 >
     au < released ; 2010 ; Journal of Environmental Quality Volume 39 ; 39 >
     au < manifest ; 2011 ; Journal of Environmental Quality Volume 40 ; 40 >
-    au < releasing ; 2012 ; Journal of Environmental Quality Volume 41 ; 41 >
+    au < released ; 2012 ; Journal of Environmental Quality Volume 41 ; 41 >
     au < released ; 2013 ; Journal of Environmental Quality Volume 42 ; 42 >
     au < released ; 2014 ; Journal of Environmental Quality Volume 43 ; 43 >
     au < released ; 2015 ; Journal of Environmental Quality Volume 44 ; 44 >
@@ -193,8 +193,8 @@
     au < released ; 2008 ; Journal of Plant Registrations Volume 2 ; 2 >
     au < released ; 2009 ; Journal of Plant Registrations Volume 3 ; 3 >
     au < released ; 2010 ; Journal of Plant Registrations Volume 4 ; 4 >
-    au < releasing ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 >
-    au < releasing ; 2012 ; Journal of Plant Registrations Volume 6 ; 6 >
+    au < released ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 >
+    au < released ; 2012 ; Journal of Plant Registrations Volume 6 ; 6 >
     au < released ; 2013 ; Journal of Plant Registrations Volume 7 ; 7 >
     au < released ; 2014 ; Journal of Plant Registrations Volume 8 ; 8 >
     au < released ; 2015 ; Journal of Plant Registrations Volume 9 ; 9 >
@@ -233,13 +233,13 @@
     param[journal_id] = nse
 
     au < doNotProcess ; 2005 ; Natural Sciences Education Volume 34 ; 34 > # no issues on manifest page
-    au < releasing ; 2006 ; Natural Sciences Education Volume 35 ; 35 >
+    au < released ; 2006 ; Natural Sciences Education Volume 35 ; 35 >
     au < released ; 2007 ; Natural Sciences Education Volume 36 ; 36 >
-    au < releasing ; 2008 ; Natural Sciences Education Volume 37 ; 37 >
+    au < released ; 2008 ; Natural Sciences Education Volume 37 ; 37 >
     au < released ; 2009 ; Natural Sciences Education Volume 38 ; 38 >
     au < released ; 2010 ; Natural Sciences Education Volume 39 ; 39 >
     au < manifest ; 2011 ; Natural Sciences Education Volume 40 ; 40 >
-    au < releasing ; 2012 ; Natural Sciences Education Volume 41 ; 41 >
+    au < released ; 2012 ; Natural Sciences Education Volume 41 ; 41 >
     au < released ; 2013 ; Natural Sciences Education Volume 42 ; 42 >
     au < released ; 2014 ; Natural Sciences Education Volume 43 ; 43 >
     au < released ; 2015 ; Natural Sciences Education Volume 44 ; 44 >
@@ -260,10 +260,10 @@
     param[journal_id] = tpg
 
     au < manifest ; 2008 ; The Plant Genome Volume 1 ; 1 >
-    au < releasing ; 2009 ; The Plant Genome Volume 2 ; 2 >
-    au < releasing ; 2010 ; The Plant Genome Volume 3 ; 3 >
+    au < released ; 2009 ; The Plant Genome Volume 2 ; 2 >
+    au < released ; 2010 ; The Plant Genome Volume 3 ; 3 >
     au < manifest ; 2011 ; The Plant Genome Volume 4 ; 4 >
-    au < releasing ; 2012 ; The Plant Genome Volume 5 ; 5 >
+    au < released ; 2012 ; The Plant Genome Volume 5 ; 5 >
     au < released ; 2013 ; The Plant Genome Volume 6 ; 6 >
     au < released ; 2014 ; The Plant Genome Volume 7 ; 7 >
     au < released ; 2015 ; The Plant Genome Volume 8 ; 8 >
@@ -288,11 +288,11 @@
     au < manifest ; 2007 ; Soil Horizons Volume 48 ; 48 >
     au < manifest ; 2008 ; Soil Horizons Volume 49 ; 49 >
     au < released ; 2009 ; Soil Horizons Volume 50 ; 50 >
-    au < releasing ; 2010 ; Soil Horizons Volume 51 ; 51 >
-    au < releasing ; 2011 ; Soil Horizons Volume 52 ; 52 >
+    au < released ; 2010 ; Soil Horizons Volume 51 ; 51 >
+    au < released ; 2011 ; Soil Horizons Volume 52 ; 52 >
     au < manifest ; 2012 ; Soil Horizons Volume 53 ; 53 >
     au < released ; 2013 ; Soil Horizons Volume 54 ; 54 >
-    au < releasing ; 2014 ; Soil Horizons Volume 55 ; 55 >
+    au < released ; 2014 ; Soil Horizons Volume 55 ; 55 >
     au < released ; 2015 ; Soil Horizons Volume 56 ; 56 >
     au < manifest ; 2016 ; Soil Horizons Volume 57 ; 57 >
 
@@ -319,8 +319,8 @@
     au < manifest ; 2009 ; Soil Science Society of America Journal Volume 73 ; 73 >
     au < manifest ; 2010 ; Soil Science Society of America Journal Volume 74 ; 74 >
     au < manifest ; 2011 ; Soil Science Society of America Journal Volume 75 ; 75 >
-    au < releasing ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 >
-    au < releasing ; 2013 ; Soil Science Society of America Journal Volume 77 ; 77 >
+    au < released ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 >
+    au < released ; 2013 ; Soil Science Society of America Journal Volume 77 ; 77 >
     au < released ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 >
     au < released ; 2015 ; Soil Science Society of America Journal Volume 79 ; 79 >
     au < manifest ; 2016 ; Soil Science Society of America Journal Volume 80 ; 80 >
@@ -340,14 +340,14 @@
     
     param[journal_id] = vzj
 
-    au < releasing ; 2005 ; Vadose Zone Journal Volume 4 ; 4 >
-    au < releasing ; 2006 ; Vadose Zone Journal Volume 5 ; 5 >
-    au < releasing ; 2007 ; Vadose Zone Journal Volume 6 ; 6 >
-    au < releasing ; 2008 ; Vadose Zone Journal Volume 7 ; 7 >
-    au < releasing ; 2009 ; Vadose Zone Journal Volume 8 ; 8 >
+    au < released ; 2005 ; Vadose Zone Journal Volume 4 ; 4 >
+    au < released ; 2006 ; Vadose Zone Journal Volume 5 ; 5 >
+    au < released ; 2007 ; Vadose Zone Journal Volume 6 ; 6 >
+    au < released ; 2008 ; Vadose Zone Journal Volume 7 ; 7 >
+    au < released ; 2009 ; Vadose Zone Journal Volume 8 ; 8 >
     au < manifest ; 2010 ; Vadose Zone Journal Volume 9 ; 9 >
-    au < releasing ; 2011 ; Vadose Zone Journal Volume 10 ; 10 >
-    au < releasing ; 2012 ; Vadose Zone Journal Volume 11 ; 11 >
+    au < released ; 2011 ; Vadose Zone Journal Volume 10 ; 10 >
+    au < released ; 2012 ; Vadose Zone Journal Volume 11 ; 11 >
     au < released ; 2013 ; Vadose Zone Journal Volume 12 ; 12 >
     au < released ; 2014 ; Vadose Zone Journal Volume 13 ; 13 >
     au < released ; 2015 ; Vadose Zone Journal Volume 14 ; 14 >
