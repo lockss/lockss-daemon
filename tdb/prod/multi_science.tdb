@@ -26,7 +26,7 @@
     au < released ; 2005 ; Adsorption Science & Technology Volume 23 ; 23 >
     au < released ; 2006 ; Adsorption Science & Technology Volume 24 ; 24 >
     au < released ; 2007 ; Adsorption Science & Technology Volume 25 ; 25 >
-    au < ready ; 2008 ; Adsorption Science & Technology Volume 26 ; 26 >
+    au < releasing ; 2008 ; Adsorption Science & Technology Volume 26 ; 26 >
     au < released ; 2009 ; Adsorption Science & Technology Volume 27 ; 27 >
     au < doNotProcess ; 2010 ; Adsorption Science & Technology Volume 28 ; 28 >
     au < doNotProcess ; 2011 ; Adsorption Science & Technology Volume 29 ; 29 >
@@ -80,14 +80,14 @@
     au < manifest ; 1999 ; Building Acoustics Volume 6 ; 6 >
     au < released ; 2000 ; Building Acoustics Volume 7 ; 7 >
     au < released ; 2001 ; Building Acoustics Volume 8 ; 8 >
-    au < ready ; 2002 ; Building Acoustics Volume 9 ; 9 >
+    au < releasing ; 2002 ; Building Acoustics Volume 9 ; 9 >
     au < released ; 2003 ; Building Acoustics Volume 10 ; 10 >
     au < released ; 2004 ; Building Acoustics Volume 11 ; 11 >
     au < released ; 2005 ; Building Acoustics Volume 12 ; 12 >
     au < released ; 2006 ; Building Acoustics Volume 13 ; 13 >
     au < released ; 2007 ; Building Acoustics Volume 14 ; 14 >
     au < released ; 2008 ; Building Acoustics Volume 15 ; 15 >
-    au < ready ; 2009 ; Building Acoustics Volume 16 ; 16 >
+    au < releasing ; 2009 ; Building Acoustics Volume 16 ; 16 >
     au < doNotProcess ; 2010 ; Building Acoustics Volume 17 ; 17 >
     au < doNotProcess ; 2011 ; Building Acoustics Volume 18 ; 18 >
     au < doNotProcess ; 2012 ; Building Acoustics Volume 19 ; 19 >
@@ -116,7 +116,7 @@
     au < released ; 2003 ; Energy & Environment Volume 14 ; 14 >
     au < released ; 2004 ; Energy & Environment Volume 15 ; 15 >
     au < released ; 2005 ; Energy & Environment Volume 16 ; 16 >
-    au < ready ; 2006 ; Energy & Environment Volume 17 ; 17 >
+    au < releasing ; 2006 ; Energy & Environment Volume 17 ; 17 >
     au < released ; 2007 ; Energy & Environment Volume 18 ; 18 >
     au < released ; 2008 ; Energy & Environment Volume 19 ; 19 >
     au < released ; 2009 ; Energy & Environment Volume 20 ; 20 >
@@ -171,9 +171,9 @@
 
     au < released ; 2002 ; International Journal of Aeroacoustics Volume 1 ; 1 >
     au < released ; 2003 ; International Journal of Aeroacoustics Volume 2 ; 2 >
-    au < ready ; 2004 ; International Journal of Aeroacoustics Volume 3 ; 3 >
+    au < releasing ; 2004 ; International Journal of Aeroacoustics Volume 3 ; 3 >
     au < released ; 2005 ; International Journal of Aeroacoustics Volume 4 ; 4 >
-    au < ready ; 2006 ; International Journal of Aeroacoustics Volume 5 ; 5 >
+    au < releasing ; 2006 ; International Journal of Aeroacoustics Volume 5 ; 5 >
     au < released ; 2007 ; International Journal of Aeroacoustics Volume 6 ; 6 >
     au < released ; 2008 ; International Journal of Aeroacoustics Volume 7 ; 7 >
     au < released ; 2009 ; International Journal of Aeroacoustics Volume 8 ; 8 >
@@ -393,8 +393,8 @@
     au < released ; 2002 ; International Journal of Space Structures Volume 17 ; 17 >
     au < released ; 2003 ; International Journal of Space Structures Volume 18 ; 18 >
     au < released ; 2004 ; International Journal of Space Structures Volume 19 ; 19 >
-    au < ready ; 2005 ; International Journal of Space Structures Volume 20 ; 20 >
-    au < ready ; 2006 ; International Journal of Space Structures Volume 21 ; 21 >
+    au < releasing ; 2005 ; International Journal of Space Structures Volume 20 ; 20 >
+    au < releasing ; 2006 ; International Journal of Space Structures Volume 21 ; 21 >
     au < released ; 2007 ; International Journal of Space Structures Volume 22 ; 22 >
     au < released ; 2008 ; International Journal of Space Structures Volume 23 ; 23 >
     au < released ; 2009 ; International Journal of Space Structures Volume 24 ; 24 >
@@ -441,7 +441,7 @@
     param[journal_id] = ijscd
     # purchased by Sage 11/15
 
-    au < ready ; 2009 ; International Journal of Spray and Combustion Dynamics Volume 1 ; 1 >
+    au < releasing ; 2009 ; International Journal of Spray and Combustion Dynamics Volume 1 ; 1 >
     au < doNotProcess ; 2010 ; International Journal of Spray and Combustion Dynamics Volume 2 ; 2 >
     au < doNotProcess ; 2011 ; International Journal of Spray and Combustion Dynamics Volume 3 ; 3 >
     au < doNotProcess ; 2012 ; International Journal of Spray and Combustion Dynamics Volume 4 ; 4 >
