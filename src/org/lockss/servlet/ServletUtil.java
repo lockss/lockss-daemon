@@ -124,7 +124,10 @@ public class ServletUtil {
 
   /** URL of third party logo image */
   static final String PARAM_THIRD_PARTY_LOGO_IMAGE = PREFIX + "logo.img";
-
+  
+  /** loading spinner image for subscription management page **/
+  static final String LOADING_SPINNER = "images/ajax-loader.gif";
+  
   /** URL of third party logo link */
   static final String PARAM_THIRD_PARTY_LOGO_LINK = PREFIX + "logo.link";
 
@@ -2098,6 +2101,8 @@ public class ServletUtil {
   /**
    * Creates the table-containing tabs used to divide the display of content.
    * 
+   * WP: The tabs for the subscription Add page are manages differently.
+   * 
    * @param alphabetLetterCount
    *          An int with the count of the letters of the alphabet to be used.
    * @param lettersPerTabCount
@@ -2119,7 +2124,8 @@ public class ServletUtil {
   public static Map<String, Table> createTabsWithTable(int alphabetLetterCount,
       int lettersPerTabCount, List<String> columnHeaderNames,
       String rowTitleCssClass, List<String> columnHeaderCssClasses,
-      Map<String, Boolean> tabLetterPopulationMap, Block tabsDiv) {
+      Map<String, Boolean> tabLetterPopulationMap, Block tabsDiv,
+      String action) {
     final String DEBUG_HEADER = "createTabsWithTable(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
@@ -2129,10 +2135,13 @@ public class ServletUtil {
 
     // Create the spans required by jQuery to build the desired tabs.
     org.mortbay.html.List tabList =
-	createTabList(lettersPerTabCount, tabLetters, tabLetterPopulationMap);
-
-    // Add them to the tabs container.
-    tabsDiv.add(tabList);
+	createTabList(lettersPerTabCount, tabLetters, tabLetterPopulationMap, tabsDiv, action);
+    
+    // The SubscriptionManagement add Page 
+    if(!SubscriptionManagement.SHOW_ADD_PAGE_ACTION.equals(action)){
+      // Add them to the tabs container.
+      tabsDiv.add(tabList);
+    }
 
     // The start and end letters of a tab letter group.
     Map.Entry<Character, Character> letterPair;
@@ -2164,12 +2173,14 @@ public class ServletUtil {
 
       // Create the tab for this letter group.
       tabDiv = new Block("div", "id=\"" + startLetter.toString() + "\"");
-
-      // Add the table to the tab.
-      tabDiv.add(divTable);
-
-      // Add the tab to the tabs container.
-      tabsDiv.add(tabDiv);
+      
+      if(!SubscriptionManagement.SHOW_ADD_PAGE_ACTION.equals(action)){
+        // Add the table to the tab.
+        tabDiv.add(divTable);
+        
+        // Add the tab to the tabs container.
+        tabsDiv.add(tabDiv);
+      }
 
       // Map the tab table by the first letter.
       divTableMap.put(startLetter.toString(), divTable);
@@ -2248,6 +2259,9 @@ public class ServletUtil {
   /**
    * Creates the spans required by jQuery to build the desired tabs.
    * 
+   * WP: Made some changes to the tabs on the add subscription page 
+   *     in order to load tabs content only when they are opened.
+   * 
    * @param lettersPerTabCount
    *          An int with the count of the letters per tab to be used.
    * @param tabLetters
@@ -2260,7 +2274,9 @@ public class ServletUtil {
    */
   private static org.mortbay.html.List createTabList(int lettersPerTabCount,
       Map<Character, Character> tabLetters,
-      Map<String, Boolean> tabLetterPopulationMap) {
+      Map<String, Boolean> tabLetterPopulationMap,
+      Block tabsDiv,
+      String action) {
     final String DEBUG_HEADER = "createTabList(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
@@ -2278,6 +2294,9 @@ public class ServletUtil {
     Iterator<Map.Entry<Character, Character>> iterator =
 	tabLetters.entrySet().iterator();
 
+    int tabCount = 1;
+    List<Block> loadingDivs = new ArrayList<Block>();
+    
     // Loop through all the tab letter groups.
     while (iterator.hasNext()) {
       // Get the start and end letters of the tab letter group.
@@ -2305,15 +2324,35 @@ public class ServletUtil {
       }
 
       // Set up the tab link.
-      tabLink = new Link("#" + startLetter);
+      if(SubscriptionManagement.SHOW_ADD_PAGE_ACTION.equals(action)){
+        tabLink = new Link("SubscriptionManagement?lockssAction=" + action + "&start=" + startLetter + "&amp;end=" + endLetter);
+      }else{
+        tabLink = new Link("#" + startLetter);
+      }
       tabLink.add(tabSpan);
-
+      
       // Add the tab to the list.
       tabListItem = tabList.newItem();
       tabListItem.add(tabLink);
+      
+      // Add loading spinner image
+      Block loadingDiv = new Block(Block.Div, "id='ui-tabs-" + tabCount++ + "'");
+      Image loadingImage = new Image(LOADING_SPINNER);
+      loadingImage.alt("Loading...");
+      loadingDiv.add(loadingImage);
+      loadingDiv.add(" Loading...");
+      loadingDivs.add(loadingDiv);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+    
+    if(SubscriptionManagement.SHOW_ADD_PAGE_ACTION.equals(action)){
+      tabsDiv.add(tabList);
+      for(Block loadingDiv : loadingDivs){
+        tabsDiv.add(loadingDiv);
+      }
+    }
+    
     return tabList;
   }
 
@@ -2359,6 +2398,8 @@ public class ServletUtil {
   /**
    * Creates the table for a tab.
    * 
+   * WP: Need to be public to be called by SubscriptionManagement.populateTab
+   * 
    * @param letter
    *          A String with the start letter of the tab group.
    * @param columnHeaderNames
@@ -2369,7 +2410,7 @@ public class ServletUtil {
    *          A List<String> with the CSS classes to use for the column headers.
    * @return a Table to be added to the page.
    */
-  private static Table createTabTable(String letter,
+  public static Table createTabTable(String letter,
       List<String> columnHeaderNames, String rowTitleCssClass,
       List<String> columnHeaderCssClasses) {
     final String DEBUG_HEADER = "createTabTable(): ";
@@ -2377,7 +2418,6 @@ public class ServletUtil {
 
     Table divTable = new Table(0, "class=\"status-table\"");
     divTable.newRow();
-
     if (StringUtil.isNullString(rowTitleCssClass)) {
       divTable.addCell("");
     } else {

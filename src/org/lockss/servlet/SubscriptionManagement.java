@@ -52,6 +52,7 @@ import org.lockss.config.Configuration;
 import org.lockss.config.TdbPublisher;
 import org.lockss.config.TdbUtil;
 import org.lockss.db.DbException;
+import org.lockss.jetty.Button;
 import org.lockss.plugin.PluginManager;
 import org.lockss.remote.RemoteApi.BatchAuStatus.Entry;
 import org.lockss.subscription.BibliographicPeriod;
@@ -73,6 +74,7 @@ import org.mortbay.html.Image;
 import org.mortbay.html.Input;
 import org.mortbay.html.Link;
 import org.mortbay.html.Page;
+import org.mortbay.html.Select;
 import org.mortbay.html.Table;
 
 /**
@@ -236,9 +238,17 @@ public class SubscriptionManagement extends LockssServlet {
     // The operation to be performed.
     String action = req.getParameter(ACTION_TAG);
 
+    String start = req.getParameter(TAB_START_TAG);
+    String end = req.getParameter(TAB_END_TAG);
+
     try {
       if (SHOW_ADD_PAGE_ACTION.equals(action)) {
-	displayAddPage();
+        if(start != null && end != null){
+          // Only send the tab content
+          this.writePage(this.populateTab(start, end));
+        }else{
+          displayAddPage();
+        }
       } else if (SHOW_UPDATE_PAGE_ACTION.equals(action)) {
 	displayUpdatePage();
       } else if (ADD_SUBSCRIPTIONS_ACTION.equals(action)) {
@@ -341,7 +351,9 @@ public class SubscriptionManagement extends LockssServlet {
 
       if (publications.size() > 0) {
 	layoutErrorBlock(page);
-
+	
+	page.add(createBulkActionsButton());
+	
 	// Create the form.
 	Form form = ServletUtil.newForm(srvURL(myServletDescr()));
 
@@ -383,11 +395,13 @@ public class SubscriptionManagement extends LockssServlet {
 	Map<String, Table> divTableMap =
 	    ServletUtil.createTabsWithTable(LETTERS_IN_ALPHABET, lettersPerTab,
 		getTabColumnHeaderNames(), "sub-row-title",
-		getColumnHeaderCssClasses(), tabLetterPopulationMap, tabsDiv);
+		getColumnHeaderCssClasses(), tabLetterPopulationMap, tabsDiv,
+		SHOW_ADD_PAGE_ACTION);
 
 	// Populate the tabs content with the publications for which no
 	// subscription decision has been made.
-	populateTabsPublications(publications, publishers, divTableMap);
+	// W.P.: Removed as tabs are now populated only when clicked
+//	populateTabsPublications(publications, publishers, divTableMap);
 
 	// Save the undecided publications in the session to compare after the
 	// form is submitted.
@@ -409,6 +423,9 @@ public class SubscriptionManagement extends LockssServlet {
 
 	// Add the tribox javascript.
 	addFormJavaScriptLocation(form, "js/tribox.js");
+	
+	// Add the bulk actions javascript
+  addFormJavaScriptLocation(form, "js/bulk-actions.js");
 
 	// Add the form to the page.
 	page.add(form);
@@ -447,7 +464,6 @@ public class SubscriptionManagement extends LockssServlet {
 
     tsTable.addCell(triBoxLabel,
 	"class=\"" + tsClassName + "\" align=\"right\" width=\"49%\"");
-
     Input checkBox = new Input(Input.Checkbox, TOTAL_SUBSCRIPTION_WIDGET_ID);
     checkBox.attribute("class", "tribox");
     checkBox.attribute("id", TOTAL_SUBSCRIPTION_WIDGET_ID);
@@ -586,7 +602,77 @@ public class SubscriptionManagement extends LockssServlet {
 	+ "tabLetterPopulationMap.size() = " + tabLetterPopulationMap.size());
     return tabLetterPopulationMap;
   }
+  
+  /**
+   * Populate the Tab content only. 
+   * Is meant to be use with Ajax call in order avoid loading all the tabs at once.
+   * This function is using the original method but adding a start and end parameter
+   * representing the Tab range (i.e. A and C)
+   * 
+   * @param start - start of the range of the tab content (i.e. A)
+   * @param end - end of the range of the tab content (i.e. C)
+   * @return the Tab content as a Page
+   * @throws IOException
+   * @throws DbException
+   */
+  private Page populateTab(String start, String end) throws IOException, DbException {
+    // Important or some character won't display properly
+    resp.setContentType("text/html; charset=ISO-8859-1");
+    
+    HttpSession session = getSession();
+    
+    // Get the publishers presented in the form just submitted.
+    Map<String, Publisher> publishers = (Map<String, Publisher>)session
+        .getAttribute(UNDECIDED_PUBLISHERS_SESSION_KEY);
+    
+    Map<String, Publisher> tabPublishers = new  HashMap<String, Publisher>();
+    
+    // Filter publisher
+    Set<String> pubNames = publishers.keySet();
+    Iterator<String> iterator = pubNames.iterator();
+    while (iterator.hasNext()) {
+      String pubName = iterator.next();
+      if(start.charAt(0) <= pubName.charAt(0) 
+          && pubName.charAt(0) <= end.charAt(0) ){
+        tabPublishers.put(pubName, publishers.get(pubName));
+      }
+    }
 
+    // Get the undecided publications presented in the form just submitted.
+    List<SerialPublication> publications = (List<SerialPublication>)session
+        .getAttribute(UNDECIDED_TITLES_SESSION_KEY);
+    List<SerialPublication> tabPublications = new ArrayList<SerialPublication>();
+    
+    // Filter publication
+    for (SerialPublication publication : publications) {
+      // Get the publisher name.
+      String publisherName = publication.getPublisherName();
+      // Only add if in tabPublishers.
+      if(tabPublishers.get(publisherName) != null) {
+        tabPublications.add(publication);
+      }
+    }
+    
+    Page page = new Page();
+    
+    Map<String, Table>  divTableMap = new HashMap<String, Table>();
+    
+    // In order to reuse existing function, I use letter 'A'
+    Table divTable = ServletUtil.createTabTable("A",
+        getTabColumnHeaderNames(), "sub-row-title",
+        getColumnHeaderCssClasses());    
+    
+    divTableMap.put("A", divTable);
+    
+    this.populateTabsPublications(tabPublications, tabPublishers, divTableMap, start, end);
+    
+    Table table = divTableMap.get("A");
+    
+    page.add(table);
+    
+    return page;
+  }
+  
   /**
    * Populates the tabs with the publication data to be displayed.
    * 
@@ -602,6 +688,13 @@ public class SubscriptionManagement extends LockssServlet {
    */
   private void populateTabsPublications(List<SerialPublication> publications,
       Map<String, Publisher> publishers, Map<String, Table> divTableMap) {
+    populateTabsPublications(publications, publishers, divTableMap, 
+        "A", "Z");
+  }
+  
+  private void populateTabsPublications(List<SerialPublication> publications,
+      Map<String, Publisher> publishers, Map<String, Table> divTableMap,
+      String start, String end) {
     final String DEBUG_HEADER = "populateTabsPublications(): ";
     if (log.isDebug2()) {
       if (publications != null) {
@@ -663,7 +756,7 @@ public class SubscriptionManagement extends LockssServlet {
 
       // Populate a tab with the publications for this publisher.
       populateTabPublisherPublications(publisherName, publisherNumber,
-	  null, auCount, pubSet, divTableMap);
+	  null, auCount, pubSet, divTableMap, start, end);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -777,6 +870,15 @@ public class SubscriptionManagement extends LockssServlet {
   private void populateTabPublisherPublications(String publisherName,
       Long publisherNumber, Boolean publisherSubscriptionSetting, int auCount,
       TreeSet<SerialPublication> pubSet, Map<String, Table> divTableMap) {
+    populateTabPublisherPublications(publisherName,
+        publisherNumber, publisherSubscriptionSetting, auCount,
+        pubSet, divTableMap, "A", "Z");
+  }
+  
+  private void populateTabPublisherPublications(String publisherName,
+      Long publisherNumber, Boolean publisherSubscriptionSetting, int auCount,
+      TreeSet<SerialPublication> pubSet, Map<String, Table> divTableMap,
+      String start, String end) {
     final String DEBUG_HEADER = "populateTabPublisherPublications(): ";
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "publisherName = " + publisherName);
@@ -823,7 +925,7 @@ public class SubscriptionManagement extends LockssServlet {
 
     // Create in the table the title row for the publisher.
     createPublisherRow(publisherRowTitle, cleanNameString, publisherNumber,
-	publisherSubscriptionSetting, divTable);
+	publisherSubscriptionSetting, divTable, start, end);
 
     // Check whether there are any publications to show.
     if (pubSet != null) {
@@ -833,7 +935,8 @@ public class SubscriptionManagement extends LockssServlet {
       // Loop through all the publications.
       for (SerialPublication publication : pubSet) {
         // Create in the table a row for the publication.
-        createPublicationRow(publication, cleanNameString, rowIndex, divTable);
+        createPublicationRow(publication, cleanNameString, rowIndex, divTable,
+            start, end);
         rowIndex++;
       }
     }
@@ -858,6 +961,14 @@ public class SubscriptionManagement extends LockssServlet {
   private void createPublisherRow(String publisherName, String publisherId,
       Long publisherNumber, Boolean publisherSubscriptionSetting,
       Table divTable) {
+    createPublisherRow(publisherName, publisherId,
+        publisherNumber, publisherSubscriptionSetting,
+        divTable, "A", "Z");
+  }
+  
+  private void createPublisherRow(String publisherName, String publisherId,
+      Long publisherNumber, Boolean publisherSubscriptionSetting,
+      Table divTable, String start, String end) {
     final String DEBUG_HEADER = "createPublisherRow(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "publisherName = " + publisherName);
@@ -879,7 +990,7 @@ public class SubscriptionManagement extends LockssServlet {
   	+ "_Publisherimage')");
       headingLink.attribute("id=\"" + publisherId + "_id\"");
 
-      Image headingLinkImage = new Image("images/expand.png");
+      Image headingLinkImage = new Image("images/control_add.png");
       headingLinkImage.attribute("id =\"" + publisherId + "_Publisherimage\"");
       headingLinkImage.attribute("class=\"title-icon\"");
       headingLinkImage.attribute("alt", "Expand Publisher");
@@ -903,7 +1014,7 @@ public class SubscriptionManagement extends LockssServlet {
     divTable.addCell(rowHeading, "class=\"pub-title\"");
 
     divTable.addCell(getPublisherSubscriptionBlock(publisherNumber,
-	publisherSubscriptionSetting), "align=\"center\"");
+	publisherSubscriptionSetting, start, end), "align=\"center\"");
 
     // No range boxes for the publisher row.
     divTable.addCell("&nbsp;");
@@ -922,7 +1033,8 @@ public class SubscriptionManagement extends LockssServlet {
    * @return a Block representing the publisher subscription widget.
    */
   private Block getPublisherSubscriptionBlock(Long publisherNumber,
-      Boolean publisherSubscriptionSetting) {
+      Boolean publisherSubscriptionSetting,
+      String start, String end) {
     String publisherSubscriptionWidgetId =
 	PUBLISHER_SUBSCRIPTION_WIDGET_ID_PREFIX + publisherNumber;
 
@@ -958,6 +1070,12 @@ public class SubscriptionManagement extends LockssServlet {
    */
   private void createPublicationRow(SerialPublication publication,
       String publisherId, int rowIndex, Table divTable) {
+    createPublicationRow(publication,
+            publisherId, rowIndex, divTable, "A", "Z");
+  }
+  
+  private void createPublicationRow(SerialPublication publication,
+      String publisherId, int rowIndex, Table divTable, String start, String end) {
     final String DEBUG_HEADER = "createPublicationRow(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "publication = " + publication);
@@ -965,16 +1083,30 @@ public class SubscriptionManagement extends LockssServlet {
       log.debug2(DEBUG_HEADER + "rowIndex = " + rowIndex);
     }
 
+    Long publicationNumber = publication.getPublicationNumber();
+    
     divTable.newRow();
 
     Block newRow = divTable.row();
     newRow.attribute("class", publisherId + "_class hide-row "
-	+ ServletUtil.rowCss(rowIndex, 3));
+        + ServletUtil.rowCss(rowIndex, 1));
+        
+    Block pubTitleLabel = new Block("label");
+    pubTitleLabel.attribute("class", "publication-title");
+    
+    // Add checkboxes for bulk actions
+    Input titleCheckBox = new Input(Input.Checkbox, 
+        publication.getUniqueName().replaceAll(" ", "_"));
+    titleCheckBox.attribute("id", "bulk-action-ckbox_" + publicationNumber);
+    titleCheckBox.attribute("class", "shift-click-box bulk-actions-ckbox");
 
-    divTable.addCell(publication.getUniqueName() + " ("
-	+ publication.getAuCount() + " AU)", "class=\"sub-publication-name\"");
+    pubTitleLabel.add(titleCheckBox);
+    
+    pubTitleLabel.add(publication.getUniqueName() + " ("
+        + publication.getAuCount() + " AU)");
+    
+    divTable.addCell(pubTitleLabel, "class=\"sub-publication-name\"");
 
-    Long publicationNumber = publication.getPublicationNumber();
     String subscribedRangesId =
 	SUBSCRIBED_RANGES_PARAM_NAME + publicationNumber;
     String unsubscribedRangesId =
@@ -982,7 +1114,7 @@ public class SubscriptionManagement extends LockssServlet {
 
     // The publication subscription widget.
     divTable.addCell(getPublicationSubscriptionBlock(publicationNumber, null,
-	subscribedRangesId, unsubscribedRangesId));
+	subscribedRangesId, unsubscribedRangesId, start, end));
 
     // The subscribed ranges.
     Input subscribedInputBox = new Input(Input.Text, subscribedRangesId, "");
@@ -1018,11 +1150,19 @@ public class SubscriptionManagement extends LockssServlet {
   private Block getPublicationSubscriptionBlock(Long publicationNumber,
       Boolean publicationSubscriptionSetting, String subscribedRangesId,
       String unsubscribedRangesId) {
+    return getPublicationSubscriptionBlock(publicationNumber,
+        publicationSubscriptionSetting, subscribedRangesId,
+        unsubscribedRangesId, "A", "Z");
+  }
+  
+  private Block getPublicationSubscriptionBlock(Long publicationNumber,
+      Boolean publicationSubscriptionSetting, String subscribedRangesId,
+      String unsubscribedRangesId, String start, String end) {
     String publicationSubscriptionWidgetId =
 	PUBLICATION_SUBSCRIPTION_WIDGET_ID_PREFIX + publicationNumber;
 
     Block triBoxBlock = new Block(Block.Span);
-
+    
     Input checkBox = new Input(Input.Checkbox, publicationSubscriptionWidgetId);
     checkBox.attribute("class", "tribox");
     checkBox.attribute("id", publicationSubscriptionWidgetId);
@@ -1881,7 +2021,8 @@ public class SubscriptionManagement extends LockssServlet {
 	Map<String, Table> divTableMap =
 	    ServletUtil.createTabsWithTable(LETTERS_IN_ALPHABET, lettersPerTab,
 		getTabColumnHeaderNames(), "sub-row-title",
-		getColumnHeaderCssClasses(), tabLetterPopulationMap, tabsDiv);
+		getColumnHeaderCssClasses(), tabLetterPopulationMap, tabsDiv,
+		SHOW_UPDATE_PAGE_ACTION);
 
 	// Populate the tabs content with the publications for which
 	// subscription decisions have already been made.
@@ -2787,5 +2928,39 @@ public class SubscriptionManagement extends LockssServlet {
     boolean result = subsChanged || unsubsChanged;
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
     return result;
+  }
+  
+  /**
+   * Create select box to select bulk action
+   * and Button to apply action.
+   * 
+   * @return div containing components
+   */
+  private Block createBulkActionsButton(){
+    Block bulkActionDiv = new Block(Block.Div);
+    bulkActionDiv.attribute("id", "bulk-actions");
+        
+    Select filterSelect = new Select("bulk-actions-menu", false);
+    filterSelect.add("Bulk Actions", false, "");
+    filterSelect.add("Subscribe All", false, "subscribeAll");
+    filterSelect.add("Unsubscribe All", false, "unsubscribeAll");
+    filterSelect.add("Unset All", false, "unsetAll");
+    filterSelect.attribute("id", "bulk-actions-menu");
+    
+    bulkActionDiv.add(filterSelect);
+    
+    Block bulkActionBtn = new Block("button");
+    bulkActionBtn.attribute("type", "button");
+    bulkActionBtn.attribute("id", "bulk-actions-btn");
+    bulkActionBtn.add("Apply");
+
+    bulkActionDiv.add(bulkActionBtn);
+    
+    // Add span to display error message
+    Block bulkActionMessageBox = new Block(Block.Span);
+    bulkActionMessageBox.attribute("id", "bulk-actions-msg-box");
+    bulkActionDiv.add(bulkActionMessageBox);
+    
+    return bulkActionDiv;
   }
 }
