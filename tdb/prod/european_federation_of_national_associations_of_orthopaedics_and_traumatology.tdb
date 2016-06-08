@@ -13,7 +13,7 @@
       issnl = 2396-7544
     >
 
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
     param[base_url] = http://www.efortopenreviews.org/
     implicit < status ; year ; name ; param[volume_name] >
 
