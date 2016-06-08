@@ -70,6 +70,11 @@
     <long>1209600000</long>
   </entry>
   <entry>
+    <!-- manifest to issue -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
+  </entry>
+  <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,"^%s.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url</string>
