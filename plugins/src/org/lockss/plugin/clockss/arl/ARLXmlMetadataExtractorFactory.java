@@ -132,6 +132,15 @@ public class ARLXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFa
         } else {
           thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKVOLUME);
         }
+      } else if (schemaHelper == ArlJatsSetHelper) {
+        //use alternate date format to fill in the field 
+        if (thisAM.get(MetadataField.FIELD_DATE) == null) {
+          if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date) != null) {
+            thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date));
+          } else {// last chance
+            thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_edate));
+          }
+        }
       }
     }    
 
