@@ -11,12 +11,24 @@
       name = eLife ;
       eissn = 2050-084X
     >
+    {
+      param[base_url] = https://elifesciences.org/
 
-    param[base_url] = http://elifesciences.org/
-
+      au < manifest ; 2014 ; eLife January 2014 ; 2014/01 >
+      au < manifest ; 2014 ; eLife February 2014 ; 2014/02 >
+      au < manifest ; 2014 ; eLife March 2014 ; 2014/03 >
+      au < manifest ; 2014 ; eLife April 2014 ; 2014/04 >
+      au < manifest ; 2014 ; eLife May 2014 ; 2014/05 >
+      au < manifest ; 2014 ; eLife June 2014 ; 2014/06 >
+      au < manifest ; 2014 ; eLife July 2014 ; 2014/07 >
+      au < manifest ; 2014 ; eLife August 2014 ; 2014/08 >
+      au < manifest ; 2014 ; eLife September 2014 ; 2014/09 >
+      au < manifest ; 2014 ; eLife October 2014 ; 2014/10 >
+      au < manifest ; 2014 ; eLife November 2014 ; 2014/11 >
+      au < manifest ; 2014 ; eLife December 2014 ; 2014/12 >
 
       au < manifest ; 2015 ; eLife January 2015 ; 2015/01 >
-      au < ready ; 2015 ; eLife February 2015 ; 2015/02 >
+      au < manifest ; 2015 ; eLife February 2015 ; 2015/02 >
       au < manifest ; 2015 ; eLife March 2015 ; 2015/03 >
       au < manifest ; 2015 ; eLife April 2015 ; 2015/04 >
       au < manifest ; 2015 ; eLife May 2015 ; 2015/05 >
@@ -40,5 +52,11 @@
       au < expected ; 2016 ; eLife October 2016 ; 2016/10 >
       au < expected ; 2016 ; eLife November 2016 ; 2016/11 >
       au < expected ; 2016 ; eLife December 2016 ; 2016/12 >
+    }
+    {
+      param[base_url] = http://elifesciences.org/
+
+      au < doNotProcess ; 2015 ; eLife January 2015 ; 2015/01 >
+    }
   }
 }
