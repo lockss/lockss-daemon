@@ -1641,8 +1641,8 @@
       au < zapped ; finished ; 2012 ; The American Journal of Sports Medicine Volume 40 ; 40 ; >
       au < finished ; finished ; 2013 ; The American Journal of Sports Medicine Volume 41 ; 41 ; >
       au < finished ; finished ; 2014 ; The American Journal of Sports Medicine Volume 42 ; 42 ; >
-      au < exists ; exists ; 2015 ; The American Journal of Sports Medicine Volume 43 ; 43 ; >
-      au < exists ; exists ; 2016 ; The American Journal of Sports Medicine Volume 44 ; 44 ; >
+      au < manifest ; exists ; 2015 ; The American Journal of Sports Medicine Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2016 ; The American Journal of Sports Medicine Volume 44 ; 44 ; >
 
     }
 
@@ -2877,7 +2877,7 @@
       au < crawling ; exists ; 2013 ; Applied Biosafety Volume 18 ; 18 ; >
       au < crawling ; exists ; 2014 ; Applied Biosafety Volume 19 ; 19 ; >
       au < crawling ; exists ; 2015 ; Applied Biosafety Volume 20 ; 20 ; >
-      au < expected ; exists ; 2016 ; Applied Biosafety Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2016 ; Applied Biosafety Volume 21 ; 21 ; >
 
   }
 
@@ -6668,7 +6668,7 @@
       param[base_url] = http://ctp.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2016 ; Communication and the Public Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2016 ; Communication and the Public Volume 1 ; 1 ; >
 
   }
 
@@ -14412,7 +14412,7 @@
       param[base_url] = http://hci.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2016 ; Hispanic Health Care International Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2016 ; Hispanic Health Care International Volume 14 ; 14 ; >
 
   }
 
@@ -27007,7 +27007,7 @@
       au < finished ; finished ; 2013 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 14 ; 14 ; >
       au < finished ; crawling ; 2014 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 15 ; 15 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2015 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 16 ; 16 ; >
-      au < expected ; exists ; 2016 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2016 ; Journal of the Renin-Angiotensin-Aldosterone System Volume 17 ; 17 ; >
 
     }
 
@@ -40753,7 +40753,7 @@
 
         au < finished ; finished ; 2014 ; Studies in People's History Volume 1 ; 1 ; >
         au < crawling ; exists ; 2015 ; Studies in People's History Volume 2 ; 2 ; >
-        au < expected ; exists ; 2016 ; Studies in People's History Volume 3 ; 3 ; >
+        au < manifest ; exists ; 2016 ; Studies in People's History Volume 3 ; 3 ; >
 
     }
 
@@ -46665,7 +46665,7 @@
     au < finished ; finished ; 2013 ; South Asian Journal of Macroeconomics and Public Finance Volume 2 ; 2 ; >
     au < finished ; finished ; 2014 ; South Asian Journal of Macroeconomics and Public Finance Volume 3 ; 3 ; >
     au < crawling ; exists ; 2015 ; South Asian Journal of Macroeconomics and Public Finance Volume 4 ; 4 ; >
-    au < expected ; exists ; 2016 ; South Asian Journal of Macroeconomics and Public Finance Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2016 ; South Asian Journal of Macroeconomics and Public Finance Volume 5 ; 5 ; >
 
     }
 
