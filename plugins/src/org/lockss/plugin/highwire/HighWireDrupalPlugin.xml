@@ -27,14 +27,14 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>42</string>
+    <string>43</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-        <string>6</string>
+        <string>7</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -175,7 +175,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%scontent(/[^/]+)?/%s/[^/]+/[^/.?]+([.]\d{1,3})?([.]full([.]pdf)?)?$", base_url, volume_name</string>
+      <string>"^%scontent(/[^/]+)?/%s/[^/]+/[^/.?]+([.]\d{1,4})?([.]full([.]pdf)?)?$", base_url, volume_name</string>
     </list>
   </entry>
   <entry>
@@ -205,6 +205,11 @@
     <int>2</int>
   </entry>
   <entry>
+    <!-- As we want to use PDFs for agreement, also some supplementary content.
+         This excludes urls that
+        1) do not have /highwire/filestream/ nor .pdf nor /content/.../suppl/ in their path
+        2) do end with html     (for urls like .../1361.full.pdf+html)
+         -->
     <string>au_exclude_urls_from_polls_pattern</string>
     <string>^http(?!.*/highwire/filestream/.*)(?!.*\.pdf)(?!.*/content/[^/]+/suppl/.*)|html$</string>
   </entry>

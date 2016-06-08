@@ -191,6 +191,8 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "content/2015/1/2.full.pdf+html", true, au);
     shouldCacheTest(ROOT_URL + "content/2015/1/2.full-text.pdf+html", true, au);
     shouldCacheTest(ROOT_URL + "content/2015/1/DC1", true, au);
+    shouldCacheTest(ROOT_URL + "content/1/1/2005.0001", true, au);
+    shouldCacheTest(ROOT_URL + "content/1/1/2005.0001.full.pdf", true, au);
     
     shouldCacheTest(ROOT_URL + "content/2015/1/2.print", false, au);
     shouldCacheTest(ROOT_URL + "content/2015/1/2.explore", false, au);
@@ -263,6 +265,7 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
 
         ROOT_URL + "content/114/1/1.full.pdf+html",
         ROOT_URL + "content/114/1/107",
+        ROOT_URL + "content/1/1/2005.0001",
         ROOT_URL + "content/114/1.toc",
         ROOT_URL + "highwire/article_citation_preview/37911",
         ROOT_URL + "highwire/markup/97175/expansion",
@@ -314,6 +317,7 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     List <String> includeList = ListUtil.list(
         ROOT_URL + "content/114/1/1.full.pdf",
         ROOT_URL + "content/foo/114/1/1.full.pdf",
+        ROOT_URL + "content/1/1/2005.0001.full.pdf",
         ROOT_URL + "content/foo/suppl/2013/01/28/fooplphysiol.01341.2012.DC1/Supplement_Table.pdf",
         ROOT_URL + "content/foo/suppl/2013/01/28/fooplphysiol.01430.2011.DC1/tableS1.pdf",
         ROOT_URL + "content/foo/suppl/2013/02/07/fooplphysiol.00747.2012.DC1/matlab.docx",

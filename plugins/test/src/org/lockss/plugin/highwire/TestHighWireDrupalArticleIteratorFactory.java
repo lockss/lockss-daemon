@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -120,12 +120,13 @@ public class TestHighWireDrupalArticleIteratorFactory extends ArticleIteratorTes
     
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1");
     assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.123");
+    assertMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.1234");
     // but not to ...
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.1a");
-    assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.1234");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/ajpendo/1/1/1");
+    assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.12345");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.full");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.full.pdf");
     assertNotMatchesRE(pat, "http://ajpendo.physiology.org/content/1/1/1.full.pdf+html");

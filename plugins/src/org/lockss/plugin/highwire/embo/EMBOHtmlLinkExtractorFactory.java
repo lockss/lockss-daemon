@@ -58,7 +58,7 @@ public class EMBOHtmlLinkExtractorFactory implements LinkExtractorFactory {
   private static final Logger log = Logger.getLogger(EMBOHtmlLinkExtractorFactory.class);
   
   private static final Pattern LPAGE =
-      Pattern.compile("content/[0-9]+/[^/]+/[^./?&]+$");
+      Pattern.compile("content/[0-9]+/[^/]+/[^./?&]+([.]\\d{1,4})?$");
   private static final String FULL_PDF = ".full.pdf";
   
   // http://emboj.embopress.org/content/28/1/4 adds 
