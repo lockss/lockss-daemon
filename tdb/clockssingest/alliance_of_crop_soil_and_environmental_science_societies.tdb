@@ -55,13 +55,13 @@
     au < finished ; crawling ; 2006 ; Agronomy Journal Volume 98 ; 98 ; >
     au < finished ; crawling ; 2007 ; Agronomy Journal Volume 99 ; 99 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2008 ; Agronomy Journal Volume 100 ; 100 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2009 ; Agronomy Journal Volume 101 ; 101 ; >
+    au < crawling ; exists ; 2009 ; Agronomy Journal Volume 101 ; 101 ; > #malformed url. 403 error
     au < notReady ; exists ; 2010 ; Agronomy Journal Volume 102 ; 102 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/aj/articles/102/1/www.usask.ca/agriculture/plantsci/winter_cereals/Winter_wheat/CHAPT10/cvchpt10.php
     au < notReady ; exists ; 2011 ; Agronomy Journal Volume 103 ; 103 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/aj/articles/103/6/https/attra.ncat.org/attra-pub/summaries/summary.php?pub=87
-    au < testing ; exists ; 2012 ; Agronomy Journal Volume 104 ; 104 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/aj/articles/104/2/agroclimate.org/forestry/wildfire/wildfire.php   
+    au < notReady ; exists ; 2012 ; Agronomy Journal Volume 104 ; 104 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/aj/articles/104/2/agroclimate.org/forestry/wildfire/wildfire.php   
     au < finished ; crawling ; 2013 ; Agronomy Journal Volume 105 ; 105 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; Agronomy Journal Volume 106 ; 106 ; >
-    au < crawling ; exists ; 2015 ; Agronomy Journal Volume 107 ; 107 ; >
+    au < crawling ; exists ; 2015 ; Agronomy Journal Volume 107 ; 107 ; > #malformed url. 403 error
     au < manifest ; exists ; 2016 ; Agronomy Journal Volume 108 ; 108 ; >
 
   }
@@ -118,7 +118,7 @@
     au < notReady ; exists ; 2012 ; Crop Science Volume 52 ; 52 ; > #403 error. likely malformed url.
     au < finished ; crawling ; 2013 ; Crop Science Volume 53 ; 53 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; Crop Science Volume 54 ; 54 ; >
-    au < crawling ; exists ; 2015 ; Crop Science Volume 55 ; 55 ; >
+    au < crawling ; exists ; 2015 ; Crop Science Volume 55 ; 55 ; > #malformed url. 403 error
     au < manifest ; exists ; 2016 ; Crop Science Volume 56 ; 56 ; >
 
   }
