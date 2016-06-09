@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.highwire.embo;
+package org.lockss.plugin.highwire;
 
 /*
  * This will require daemon 1.62 and later for JsoupHtmlLinkExtractor support
@@ -53,9 +53,9 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
 
 // an implementation of JsoupHtmlLinkExtractor
-public class EMBOHtmlLinkExtractorFactory implements LinkExtractorFactory {
+public class HighWireDrupalHtmlLinkExtractorFactory implements LinkExtractorFactory {
   
-  private static final Logger log = Logger.getLogger(EMBOHtmlLinkExtractorFactory.class);
+  private static final Logger log = Logger.getLogger(HighWireDrupalHtmlLinkExtractorFactory.class);
   
   private static final Pattern LPAGE =
       Pattern.compile("content/[0-9]+/[^/]+/[^./?&]+([.]\\d{1,4})?$");
