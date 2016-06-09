@@ -149,10 +149,20 @@
       au < HighWirePressH20Plugin ; down ; 2011 ; Blood Volume 118 ; 118 >
       au < HighWirePressH20Plugin ; down ; 2012 ; Blood Volume 119 ; 119 >
       au < HighWirePressH20Plugin ; down ; 2012 ; Blood Volume 120 ; 120 >
-      au < HWDrupalPlugin ; exists ; 2013 ; Blood Volume 121 ; 121 >
-      au < HWDrupalPlugin ; exists ; 2013 ; Blood Volume 122 ; 122 >
-      au < HWDrupalPlugin ; exists ; 2014 ; Blood Volume 123 ; 123 >
-      au < HWDrupalPlugin ; expected ; 2014 ; Blood Volume 124 ; 124 >
+    }
+
+    {
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://www.bloodjournal.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+      au < ash.ASHDrupalPlugin ; testing ; 2013 ; Blood Volume 121 ; 121 >
+      au < ash.ASHDrupalPlugin ; testing ; 2013 ; Blood Volume 122 ; 122 >
+      au < ash.ASHDrupalPlugin ; testing ; 2014 ; Blood Volume 123 ; 123 >
+      au < ash.ASHDrupalPlugin ; testing ; 2014 ; Blood Volume 124 ; 124 >
+      au < ash.ASHDrupalPlugin ; testing ; 2015 ; Blood Volume 125 ; 125 >
+      au < ash.ASHDrupalPlugin ; testing ; 2015 ; Blood Volume 126 ; 126 >
 
     }
 
