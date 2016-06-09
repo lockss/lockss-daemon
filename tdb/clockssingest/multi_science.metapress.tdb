@@ -32,8 +32,8 @@
     au < doNotProcess ; exists ; 2009 ; Adsorption Science & Technology Volume 27 ; 27 ; >
     au < down ; finished ; 2010 ; Adsorption Science & Technology Volume 28 ; 28 ; >
     au < down ; finished ; 2011 ; Adsorption Science & Technology Volume 29 ; 29 ; >
-    au < down ; crawling ; 2012 ; Adsorption Science & Technology Volume 30 ; 30 ; >
-    au < down ; exists ; 2013 ; Adsorption Science & Technology Volume 31 ; 31 ; >
+    au < superseded ; exists ; 2012 ; Adsorption Science & Technology Volume 30 [superseded] ; 30 ; >
+    au < superseded ; exists ; 2013 ; Adsorption Science & Technology Volume 31 [superseded] ; 31 ; >
     au < doNotProcess ; exists ; 2014 ; Adsorption Science & Technology Volume 32 ; 32 ; >
     au < doNotProcess ; exists ; 2015 ; Adsorption Science & Technology Volume 33 ; 33 ; >
 
@@ -62,7 +62,7 @@
     au < down ; finished ; 2010 ; Advances in Structural Engineering Volume 13 ; 13 ; >
     au < down ; finished ; 2011 ; Advances in Structural Engineering Volume 14 ; 14 ; >
     au < down ; crawling ; 2012 ; Advances in Structural Engineering Volume 15 ; 15 ; >
-    au < down ; exists ; 2013 ; Advances in Structural Engineering Volume 16 ; 16 ; >
+    au < superseded ; exists ; 2013 ; Advances in Structural Engineering Volume 16 [superseded] ; 16 ; >
     au < doNotProcess ; exists ; 2014 ; Advances in Structural Engineering Volume 17 ; 17 ; >
     au < doNotProcess ; exists ; 2015 ; Advances in Structural Engineering Volume 18 ; 18 ; >
 
@@ -122,7 +122,7 @@
     au < down ; finished ; 2010 ; Energy & Environment Volume 21 ; 21 ; >
     au < down ; finished ; 2011 ; Energy & Environment Volume 22 ; 22 ; >
     au < down ; crawling ; 2012 ; Energy & Environment Volume 23 ; 23 ; >
-    au < down ; exists ; 2013 ; Energy & Environment Volume 24 ; 24 ; >
+    au < superseded ; exists ; 2013 ; Energy & Environment Volume 24 [superseded] ; 24 ; >
     au < doNotProcess ; exists ; 2014 ; Energy & Environment Volume 25 ; 25 ; >
     au < doNotProcess ; exists ; 2015 ; Energy & Environment Volume 26 ; 26 ; >
 
@@ -528,10 +528,11 @@
     >
 
     param[journal_issn] = 0957-4565
+    # moved to Sage
 
     au < down ; finished ; 2011 ; Noise & Vibration Worldwide Volume 42 ; 42 ; >
     au < down ; crawling ; 2012 ; Noise & Vibration Worldwide Volume 43 ; 43 ; >
-    au < down ; exists ; 2013 ; Noise & Vibration Worldwide Volume 44 ; 44 ; >
+    au < superseded ; exists ; 2013 ; Noise & Vibration Worldwide Volume 44 [superseded] ; 44 ; >
     au < doNotProcess ; exists ; 2014 ; Noise & Vibration Worldwide Volume 45 ; 45 ; >
     au < doNotProcess ; exists ; 2015 ; Noise & Vibration Worldwide Volume 46 ; 46 ; >
 
@@ -644,8 +645,8 @@
     au < doNotProcess ; exists ; 2009 ; Wind Engineering Volume 33 ; 33 ; >
     au < down ; finished ; 2010 ; Wind Engineering Volume 34 ; 34 ; >
     au < down ; finished ; 2011 ; Wind Engineering Volume 35 ; 35 ; >
-    au < down ; crawling ; 2012 ; Wind Engineering Volume 36 ; 36 ; >
-    au < down ; exists ; 2013 ; Wind Engineering Volume 37 ; 37 ; >
+    au < superseded ; down ; 2012 ; Wind Engineering Volume 36 [superseded] ; 36 ; >
+    au < superseded ; exists ; 2013 ; Wind Engineering Volume 37 [superseded] ; 37 ; >
     au < doNotProcess ; exists ; 2014 ; Wind Engineering Volume 38 ; 38 ; >
     au < doNotProcess ; exists ; 2015 ; Wind Engineering Volume 39 ; 39 ; >
 

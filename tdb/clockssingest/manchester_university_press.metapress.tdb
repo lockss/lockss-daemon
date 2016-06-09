@@ -99,7 +99,7 @@
      au < doNotProcess ; doNotProcess ; 2010 ; Critical Studies in Television Volume 5 ; 5 ; >
      au < down ; finished ; 2011 ; Critical Studies in Television Volume 6 ; 6 ; >
      au < down ; finished ; 2012 ; Critical Studies in Television Volume 7 ; 7 ; >
-     au < down ; exists ; 2013 ; Critical Studies in Television Volume 8 ; 8 ; >
+     au < superseded ; exists ; 2013 ; Critical Studies in Television Volume 8 [superseded] ; 8 ; >
      au < doNotProcess ; exists ; 2014 ; Critical Studies in Television Volume 9 ; 9 ; >
 
     }
@@ -249,7 +249,7 @@
      au < doNotProcess ; doNotProcess ; 2010 ; Irish Journal of Sociology Volume 18 ; 18 ; >
      au < down ; finished ; 2011 ; Irish Journal of Sociology Volume 19 ; 19 ; >
      au < down ; finished ; 2012 ; Irish Journal of Sociology Volume 20 ; 20 ; >
-     au < down ; exists ; 2013 ; Irish Journal of Sociology Volume 21 ; 21 ; >
+     au < superseded ; exists ; 2013 ; Irish Journal of Sociology Volume 21 [superseded] ; 21 ; >
      au < doNotProcess ; exists ; 2014 ; Irish Journal of Sociology Volume 22 ; 22 ; >
   
      }
@@ -320,6 +320,7 @@
     >
     
      param[journal_issn] = 2050-4594
+     # moved to Sage Publications
      
      au < doNotProcess ; doNotProcess ; 1999 ; Literature & History Volume 8 ; 8 ; >
      au < doNotProcess ; doNotProcess ; 2000 ; Literature & History Volume 9 ; 9 ; >
@@ -335,7 +336,7 @@
      au < doNotProcess ; doNotProcess ; 2010 ; Literature & History Volume 19 ; 19 ; >
      au < down ; finished ; 2011 ; Literature & History Volume 20 ; 20 ; >
      au < down ; finished ; 2012 ; Literature & History Volume 21 ; 21 ; >
-     au < down ; exists ; 2013 ; Literature & History Volume 22 ; 22 ; >
+     au < superseded ; exists ; 2013 ; Literature & History Volume 22 [superseded] ; 22 ; >
      au < doNotProcess ; exists ; 2014 ; Literature & History Volume 23 ; 23 ; >
 
     }
