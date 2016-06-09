@@ -1,19 +1,19 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>testing - Evan</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.highwire.embo.EMBODrupalPlugin</string>
+    <string>org.lockss.plugin.highwire.ash.ASHDrupalPlugin</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>EMBO Press Plugin</string>
+    <string>American Society of Hematology Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -28,7 +28,7 @@
     <map>
       <entry>
         <string>Substance</string>
-        <string>3</string>
+        <string>1</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -42,7 +42,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"EMBO Press Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"American Society of Hematology Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>text/html_link_extractor_factory</string>
