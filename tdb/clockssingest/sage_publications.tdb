@@ -480,7 +480,7 @@
       au < manifest ; exists ; 2008 ; Adsorption Science & Technology Volume 26 ; 26 ; >
       au < manifest ; exists ; 2009 ; Adsorption Science & Technology Volume 27 ; 27 ; >
       au < manifest ; exists ; 2010 ; Adsorption Science & Technology Volume 28 ; 28 ; >
-      au < manifest ; exists ; 2011 ; Adsorption Science & Technology Volume 29 ; 29 ; >
+      au < crawling ; exists ; 2011 ; Adsorption Science & Technology Volume 29 ; 29 ; >
       au < crawling ; exists ; 2012 ; Adsorption Science & Technology Volume 30 ; 30 ; >
       au < crawling ; exists ; 2013 ; Adsorption Science & Technology Volume 31 ; 31 ; >
       au < crawling ; exists ; 2014 ; Adsorption Science & Technology Volume 32 ; 32 ; >
@@ -772,7 +772,7 @@
       au < manifest ; exists ; 2009 ; Advances in Structural Engineering Volume 12 ; 12 ; >
       au < manifest ; exists ; 2010 ; Advances in Structural Engineering Volume 13 ; 13 ; >
       au < manifest ; exists ; 2011 ; Advances in Structural Engineering Volume 14 ; 14 ; >
-      au < manifest ; exists ; 2012 ; Advances in Structural Engineering Volume 15 ; 15 ; >
+      au < crawling ; exists ; 2012 ; Advances in Structural Engineering Volume 15 ; 15 ; >
       au < crawling ; exists ; 2013 ; Advances in Structural Engineering Volume 16 ; 16 ; >
       au < crawling ; exists ; 2014 ; Advances in Structural Engineering Volume 17 ; 17 ; >
       au < crawling ; exists ; 2015 ; Advances in Structural Engineering Volume 18 ; 18 ; >
@@ -1240,7 +1240,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 2011 ; The American Journal of Cosmetic Surgery Volume 28 ; 28 ; >
-      au < manifest ; exists ; 2012 ; The American Journal of Cosmetic Surgery Volume 29 ; 29 ; >
+      au < crawling ; exists ; 2012 ; The American Journal of Cosmetic Surgery Volume 29 ; 29 ; >
       au < crawling ; exists ; 2013 ; The American Journal of Cosmetic Surgery Volume 30 ; 30 ; >
       au < crawling ; exists ; 2014 ; The American Journal of Cosmetic Surgery Volume 31 ; 31 ; >
       au < crawling ; exists ; 2015 ; The American Journal of Cosmetic Surgery Volume 32 ; 32 ; >
@@ -1641,7 +1641,7 @@
       au < zapped ; finished ; 2012 ; The American Journal of Sports Medicine Volume 40 ; 40 ; >
       au < finished ; finished ; 2013 ; The American Journal of Sports Medicine Volume 41 ; 41 ; >
       au < finished ; finished ; 2014 ; The American Journal of Sports Medicine Volume 42 ; 42 ; >
-      au < manifest ; exists ; 2015 ; The American Journal of Sports Medicine Volume 43 ; 43 ; >
+      au < crawling ; exists ; 2015 ; The American Journal of Sports Medicine Volume 43 ; 43 ; >
       au < manifest ; exists ; 2016 ; The American Journal of Sports Medicine Volume 44 ; 44 ; >
 
     }
@@ -2873,7 +2873,7 @@
       au < manifest ; exists ; 2009 ; Applied Biosafety Volume 14 ; 14 ; >
       au < manifest ; exists ; 2010 ; Applied Biosafety Volume 15 ; 15 ; >
       au < manifest ; exists ; 2011 ; Applied Biosafety Volume 16 ; 16 ; >
-      au < manifest ; exists ; 2012 ; Applied Biosafety Volume 17 ; 17 ; >
+      au < crawling ; exists ; 2012 ; Applied Biosafety Volume 17 ; 17 ; >
       au < crawling ; exists ; 2013 ; Applied Biosafety Volume 18 ; 18 ; >
       au < crawling ; exists ; 2014 ; Applied Biosafety Volume 19 ; 19 ; >
       au < crawling ; exists ; 2015 ; Applied Biosafety Volume 20 ; 20 ; >
@@ -4368,7 +4368,7 @@
       au < manifest ; exists ; 2008 ; The British Journal of Politics and International Relations Volume 10 ; 10 ; >
       au < manifest ; exists ; 2009 ; The British Journal of Politics and International Relations Volume 11 ; 11 ; >
       au < manifest ; exists ; 2010 ; The British Journal of Politics and International Relations Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2011 ; The British Journal of Politics and International Relations Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2011 ; The British Journal of Politics and International Relations Volume 13 ; 13 ; >
       au < crawling ; exists ; 2012 ; The British Journal of Politics and International Relations Volume 14 ; 14 ; >
       au < crawling ; exists ; 2013 ; The British Journal of Politics and International Relations Volume 15 ; 15 ; >
       au < crawling ; exists ; 2014 ; The British Journal of Politics and International Relations Volume 16 ; 16 ; >
@@ -5123,7 +5123,7 @@
 
       au < manifest ; exists ; 2010 ; Cahiers Élisabéthains Volume 83 ; 83 ; >
       au < manifest ; exists ; 2011 ; Cahiers Élisabéthains Volume 84 ; 84 ; >
-      au < manifest ; exists ; 2012 ; Cahiers Élisabéthains Volume 85 ; 85 ; >
+      au < crawling ; exists ; 2012 ; Cahiers Élisabéthains Volume 85 ; 85 ; >
       au < crawling ; exists ; 2013 ; Cahiers Élisabéthains Volume 86 ; 86 ; >
       au < crawling ; exists ; 2014 ; Cahiers Élisabéthains Volume 87 ; 87 ; >
       au < crawling ; exists ; 2015 ; Cahiers Élisabéthains Volume 88 ; 88 ; >
@@ -5157,8 +5157,8 @@
       au < manifest ; exists ; 2008 ; The Canadian Journal of Psychiatry Volume 53 ; 53 ; >
       au < manifest ; exists ; 2009 ; The Canadian Journal of Psychiatry Volume 54 ; 54 ; >
       au < manifest ; exists ; 2010 ; The Canadian Journal of Psychiatry Volume 55 ; 55 ; >
-      au < manifest ; exists ; 2011 ; The Canadian Journal of Psychiatry Volume 56 ; 56 ; >
-      au < manifest ; exists ; 2012 ; The Canadian Journal of Psychiatry Volume 57 ; 57 ; >
+      au < crawling ; exists ; 2011 ; The Canadian Journal of Psychiatry Volume 56 ; 56 ; >
+      au < crawling ; exists ; 2012 ; The Canadian Journal of Psychiatry Volume 57 ; 57 ; >
       au < crawling ; exists ; 2013 ; The Canadian Journal of Psychiatry Volume 58 ; 58 ; >
       au < crawling ; exists ; 2014 ; The Canadian Journal of Psychiatry Volume 59 ; 59 ; >
       au < crawling ; exists ; 2015 ; The Canadian Journal of Psychiatry Volume 60 ; 60 ; >
@@ -8428,7 +8428,7 @@
 
       au < manifest ; exists ; 2010 ; Critical Studies in Television Volume 5 ; 5 ; >
       au < manifest ; exists ; 2011 ; Critical Studies in Television Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2012 ; Critical Studies in Television Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2012 ; Critical Studies in Television Volume 7 ; 7 ; >
       au < crawling ; exists ; 2013 ; Critical Studies in Television Volume 8 ; 8 ; >
       au < crawling ; exists ; 2014 ; Critical Studies in Television Volume 9 ; 9 ; >
       au < crawling ; exists ; 2015 ; Critical Studies in Television Volume 10 ; 10 ; >
@@ -10581,7 +10581,7 @@
       au < manifest ; exists ; 2008 ; Energy & Environment Volume 19 ; 19 ; >
       au < manifest ; exists ; 2009 ; Energy & Environment Volume 20 ; 20 ; >
       au < manifest ; exists ; 2010 ; Energy & Environment Volume 21 ; 21 ; >
-      au < manifest ; exists ; 2011 ; Energy & Environment Volume 22 ; 22 ; >
+      au < crawling ; exists ; 2011 ; Energy & Environment Volume 22 ; 22 ; >
       au < crawling ; exists ; 2012 ; Energy & Environment Volume 23 ; 23 ; >
       au < crawling ; exists ; 2013 ; Energy & Environment Volume 24 ; 24 ; >
       au < crawling ; exists ; 2014 ; Energy & Environment Volume 25 ; 25 ; >
@@ -18903,8 +18903,8 @@
 
       au < manifest ; exists ; 2009 ; Irish Journal of Sociology Volume 17 ; 17 ; >
       au < manifest ; exists ; 2010 ; Irish Journal of Sociology Volume 18 ; 18 ; >
-      au < manifest ; exists ; 2011 ; Irish Journal of Sociology Volume 19 ; 19 ; >
-      au < manifest ; exists ; 2012 ; Irish Journal of Sociology Volume 20 ; 20 ; >
+      au < crawling ; exists ; 2011 ; Irish Journal of Sociology Volume 19 ; 19 ; >
+      au < crawling ; exists ; 2012 ; Irish Journal of Sociology Volume 20 ; 20 ; >
       au < crawling ; exists ; 2013 ; Irish Journal of Sociology Volume 21 ; 21 ; >
       au < crawling ; exists ; 2014 ; Irish Journal of Sociology Volume 22 ; 22 ; >
       au < crawling ; exists ; 2015 ; Irish Journal of Sociology Volume 23 ; 23 ; >
@@ -20770,7 +20770,7 @@
       au < manifest ; exists ; 2009 ; Journal of Cerebral Blood Flow & Metabolism Volume 29 ; 29 ; >
       au < manifest ; exists ; 2010 ; Journal of Cerebral Blood Flow & Metabolism Volume 30 ; 30 ; >
       au < manifest ; exists ; 2011 ; Journal of Cerebral Blood Flow & Metabolism Volume 31 ; 31 ; >
-      au < manifest ; exists ; 2012 ; Journal of Cerebral Blood Flow & Metabolism Volume 32 ; 32 ; >
+      au < crawling ; exists ; 2012 ; Journal of Cerebral Blood Flow & Metabolism Volume 32 ; 32 ; >
       au < crawling ; exists ; 2013 ; Journal of Cerebral Blood Flow & Metabolism Volume 33 ; 33 ; >
       au < crawling ; exists ; 2014 ; Journal of Cerebral Blood Flow & Metabolism Volume 34 ; 34 ; >
       au < crawling ; exists ; 2015 ; Journal of Cerebral Blood Flow & Metabolism Volume 35 ; 35 ; >
@@ -24095,7 +24095,7 @@
       au < manifest ; exists ; 2008-2009 ; Journal of Historical Research in Music Education Volume 30 ; 30 ; >
       au < manifest ; exists ; 2009-2010 ; Journal of Historical Research in Music Education Volume 31 ; 31 ; >
       au < manifest ; exists ; 2010-2011 ; Journal of Historical Research in Music Education Volume 32 ; 32 ; >
-      au < manifest ; exists ; 2011-2012 ; Journal of Historical Research in Music Education Volume 33 ; 33 ; >
+      au < crawling ; exists ; 2011-2012 ; Journal of Historical Research in Music Education Volume 33 ; 33 ; >
       au < crawling ; exists ; 2012-2013 ; Journal of Historical Research in Music Education Volume 34 ; 34 ; >
       au < crawling ; exists ; 2013-2014 ; Journal of Historical Research in Music Education Volume 35 ; 35 ; >
       au < crawling ; exists ; 2014-2015 ; Journal of Historical Research in Music Education Volume 36 ; 36 ; >
@@ -30114,7 +30114,7 @@
       au < manifest ; exists ; 2009 ; Literature & History Volume 18 ; 18 ; >
       au < manifest ; exists ; 2010 ; Literature & History Volume 19 ; 19 ; >
       au < manifest ; exists ; 2011 ; Literature & History Volume 20 ; 20 ; >
-      au < manifest ; exists ; 2012 ; Literature & History Volume 21 ; 21 ; >
+      au < crawling ; exists ; 2012 ; Literature & History Volume 21 ; 21 ; >
       au < crawling ; exists ; 2013 ; Literature & History Volume 22 ; 22 ; >
       au < crawling ; exists ; 2014 ; Literature & History Volume 23 ; 23 ; >
       au < crawling ; exists ; 2015 ; Literature & History Volume 24 ; 24 ; >
@@ -30894,11 +30894,11 @@
       au < manifest ; exists ; 2011 ; Media International Australia Volume 138 ; 138 ; >
       au < manifest ; exists ; 2011 ; Media International Australia Volume 139 ; 139 ; >
       au < manifest ; exists ; 2011 ; Media International Australia Volume 140 ; 140 ; >
-      au < manifest ; exists ; 2011 ; Media International Australia Volume 141 ; 141 ; >
+      au < crawling ; exists ; 2011 ; Media International Australia Volume 141 ; 141 ; >
       au < crawling ; exists ; 2012 ; Media International Australia Volume 142 ; 142 ; >
-      au < manifest ; exists ; 2012 ; Media International Australia Volume 143 ; 143 ; >
-      au < manifest ; exists ; 2012 ; Media International Australia Volume 144 ; 144 ; >
-      au < manifest ; exists ; 2012 ; Media International Australia Volume 145 ; 145 ; >
+      au < crawling ; exists ; 2012 ; Media International Australia Volume 143 ; 143 ; >
+      au < crawling ; exists ; 2012 ; Media International Australia Volume 144 ; 144 ; >
+      au < crawling ; exists ; 2012 ; Media International Australia Volume 145 ; 145 ; >
       au < crawling ; exists ; 2013 ; Media International Australia Volume 146 ; 146 ; >
       au < crawling ; exists ; 2013 ; Media International Australia Volume 147 ; 147 ; >
       au < crawling ; exists ; 2013 ; Media International Australia Volume 148 ; 148 ; >
@@ -31575,7 +31575,7 @@
       au < manifest ; exists ; 2009 ; Molecular Pain Volume 5 ; 5 ; >
       au < manifest ; exists ; 2010 ; Molecular Pain Volume 6 ; 6 ; >
       au < manifest ; exists ; 2011 ; Molecular Pain Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2012 ; Molecular Pain Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2012 ; Molecular Pain Volume 8 ; 8 ; >
       au < crawling ; exists ; 2013 ; Molecular Pain Volume 9 ; 9 ; >
       au < crawling ; exists ; 2014 ; Molecular Pain Volume 10 ; 10 ; >
       au < crawling ; exists ; 2015 ; Molecular Pain Volume 11 ; 11 ; >
@@ -32656,7 +32656,7 @@
       au < manifest ; exists ; 2009 ; Noise & Vibration Worldwide Volume 40 ; 40 ; >
       au < manifest ; exists ; 2010 ; Noise & Vibration Worldwide Volume 41 ; 41 ; >
       au < manifest ; exists ; 2011 ; Noise & Vibration Worldwide Volume 42 ; 42 ; >
-      au < manifest ; exists ; 2012 ; Noise & Vibration Worldwide Volume 43 ; 43 ; >
+      au < crawling ; exists ; 2012 ; Noise & Vibration Worldwide Volume 43 ; 43 ; >
       au < crawling ; exists ; 2013 ; Noise & Vibration Worldwide Volume 44 ; 44 ; >
       au < crawling ; exists ; 2014 ; Noise & Vibration Worldwide Volume 45 ; 45 ; >
       au < crawling ; exists ; 2015 ; Noise & Vibration Worldwide Volume 46 ; 46 ; >
@@ -34629,7 +34629,7 @@
       au < manifest ; exists ; 2009 ; Political Studies Volume 57 ; 57 ; >
       au < manifest ; exists ; 2010 ; Political Studies Volume 58 ; 58 ; >
       au < manifest ; exists ; 2011 ; Political Studies Volume 59 ; 59 ; >
-      au < manifest ; exists ; 2012 ; Political Studies Volume 60 ; 60 ; >
+      au < crawling ; exists ; 2012 ; Political Studies Volume 60 ; 60 ; >
       au < crawling ; exists ; 2013 ; Political Studies Volume 61 ; 61 ; >
       au < crawling ; exists ; 2014 ; Political Studies Volume 62 ; 62 ; >
       au < crawling ; exists ; 2015 ; Political Studies Volume 63 ; 63 ; >
@@ -34657,7 +34657,7 @@
       au < manifest ; exists ; 2009 ; Political Studies Review Volume 7 ; 7 ; >
       au < manifest ; exists ; 2010 ; Political Studies Review Volume 8 ; 8 ; >
       au < manifest ; exists ; 2011 ; Political Studies Review Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2012 ; Political Studies Review Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2012 ; Political Studies Review Volume 10 ; 10 ; >
       au < crawling ; exists ; 2013 ; Political Studies Review Volume 11 ; 11 ; >
       au < crawling ; exists ; 2014 ; Political Studies Review Volume 12 ; 12 ; >
       au < crawling ; exists ; 2015 ; Political Studies Review Volume 13 ; 13 ; >
@@ -36113,7 +36113,7 @@
       au < manifest ; exists ; 2009 ; Progress in Transplantation Volume 19 ; 19 ; >
       au < manifest ; exists ; 2010 ; Progress in Transplantation Volume 20 ; 20 ; >
       au < manifest ; exists ; 2011 ; Progress in Transplantation Volume 21 ; 21 ; >
-      au < manifest ; exists ; 2012 ; Progress in Transplantation Volume 22 ; 22 ; >
+      au < crawling ; exists ; 2012 ; Progress in Transplantation Volume 22 ; 22 ; >
       au < crawling ; exists ; 2013 ; Progress in Transplantation Volume 23 ; 23 ; >
       au < crawling ; exists ; 2014 ; Progress in Transplantation Volume 24 ; 24 ; >
       au < crawling ; exists ; 2015 ; Progress in Transplantation Volume 25 ; 25 ; >
@@ -47044,8 +47044,8 @@
         au < manifest ; exists ; 2008 ; Clinical Ethics Volume 3 ; 3 ; >
         au < manifest ; exists ; 2009 ; Clinical Ethics Volume 4 ; 4 ; >
         au < manifest ; exists ; 2010 ; Clinical Ethics Volume 5 ; 5 ; >
-        au < manifest ; exists ; 2011 ; Clinical Ethics Volume 6 ; 6 ; >
-        au < manifest ; exists ; 2012 ; Clinical Ethics Volume 7 ; 7 ; >
+        au < crawling ; exists ; 2011 ; Clinical Ethics Volume 6 ; 6 ; >
+        au < crawling ; exists ; 2012 ; Clinical Ethics Volume 7 ; 7 ; >
         au < finished ; finished ; 2013 ; Clinical Ethics Volume 8 ; 8 ; >
         au < finished ; finished ; 2014 ; Clinical Ethics Volume 9 ; 9 ; >
         au < crawling ; exists ; 2015 ; Clinical Ethics Volume 10 ; 10 ; >
@@ -48114,7 +48114,7 @@
         au < manifest ; exists ; 2009 ; Laboratory Animals Volume 43 ; 43 ; >
         au < manifest ; exists ; 2010 ; Laboratory Animals Volume 44 ; 44 ; >
         au < manifest ; exists ; 2011 ; Laboratory Animals Volume 45 ; 45 ; >
-        au < manifest ; exists ; 2012 ; Laboratory Animals Volume 46 ; 46 ; >
+        au < crawling ; exists ; 2012 ; Laboratory Animals Volume 46 ; 46 ; >
         au < finished ; finished ; 2013 ; Laboratory Animals Volume 47 ; 47 ; >
         au < finished ; crawling ; 2014 ; Laboratory Animals Volume 48 ; 48 ; >
         au < crawling ; exists ; 2015 ; Laboratory Animals Volume 49 ; 49 ; >
