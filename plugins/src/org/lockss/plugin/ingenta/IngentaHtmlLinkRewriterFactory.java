@@ -1,10 +1,10 @@
 /*
- * $Id$
+  * $Id$
  */
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -55,9 +55,11 @@ import org.lockss.util.HeaderUtil;
 import org.lockss.util.Logger;
 
 /**
- * This custom link rewriter performs Ingenta joural specific rewriting to
+ * This custom link rewriter performs Ingenta  specific rewriting 
+ * for both books and journals to
  * make the PDF and HTML article files available through the button links 
- * on journal article pages. Ingenta has made the files available to LOCKSS
+ * on journal article  or chapter pages. 
+ *  * Ingenta has made the files available to LOCKSS
  * on another server, so the links must be rewritten to redirect to the
  * correct location on that other server.
  * 
@@ -66,7 +68,7 @@ import org.lockss.util.Logger;
 public class IngentaHtmlLinkRewriterFactory 
   extends NodeFilterHtmlLinkRewriterFactory {
   
-  static final Logger logger = Logger.getLogger(IngentaHtmlLinkRewriterFactory.class);
+  private static final Logger log = Logger.getLogger(IngentaHtmlLinkRewriterFactory.class);
 
   /** Pattern that matches the article PDF link */
   static Pattern infobikePat = null;
@@ -85,9 +87,18 @@ public class IngentaHtmlLinkRewriterFactory
         + ".*");
     } catch (PatternSyntaxException ex) {
       // shouldn't happen!
-      logger.error("Bad rewriter pattern", ex);
+      log.error("Bad rewriter pattern", ex);
     }
   }
+  
+  //javascript:popup('/sea...',...)
+  // group1 is whichever quote is being used just inside the open-paren
+  // group2 will be everything between the first quotemark and the matching quotemark
+  // group3 will be everything after the first argument of the javascript:popup call
+  // which is the actual link
+   static final Pattern onClickPdfPattern =
+      Pattern.compile("^javascript:popup\\(([\"'])([^\"',]*)(\\1.*)", 
+          Pattern.CASE_INSENSITIVE);
   
   /**
    * This link rewriter does special processing for article PDF and HTML 
@@ -115,6 +126,23 @@ public class IngentaHtmlLinkRewriterFactory
    * This link rewriter does only Ingenta-specific rewriting for 
    * artlcle PDF and HTML links.
    * 
+   * This now handles three possible cases:
+   * 
+   * original journals - straight href of the link
+   *     <a href="/search/download?pub=infobike%3a%2f%2figsoc%2fagl%2f2011%2f00000052%2f00000057%2fart00002&mimetype=application%2fpdf&exitTargetId=1358355690460" 
+   *        title="PDF download of title" class="no-underline contain" target="_blank”>
+   *        
+   * newer volumes of journals
+   *     <a class="fulltext pdf btn btn-general icbutton" 
+   *     data-popup='/search/download?pub=infobike%3a%2f%2figsoc%2fagl%2f2015%2f00000056%2f00000069%2fart00004&mimetype=application%2fpdf&exitTargetId=1449858096127' 
+   *     title="PDF download of title" class="no-underline contain" >
+   *     
+   * books (variant of newer version)
+   *      <a class="fulltext pdf btn btn-general icbutton" 
+   *      onclick="javascript:popup('/search/download?pub=infobike%3a%2f%2fbkpub%2f2nk9qe%2f1999%2f00000001%2f00000001%2fart00003&mimetype=application%2fpdf&exitTargetId=1463765390340','downloadWindow','900','800')" 
+   *      title="PDF download of title" class="no-underline contain" >     
+   * 
+   * 
    * @param au  the AU containing the URL
    * @param in the input stream for the URL
    * @param encoding the encoding for the input stream
@@ -135,20 +163,33 @@ public class IngentaHtmlLinkRewriterFactory
         try {
           if (node instanceof LinkTag) {
             Attribute attribute = ((TagNode)node).getAttributeEx("href");
+            // try the simplest case first. Then fall through to the other options
+            // they do not co-exist 
+            if (attribute == null) {
+              attribute = ((TagNode)node).getAttributeEx("data-popup");
+            }
+            if (attribute == null) {
+              attribute = ((TagNode)node).getAttributeEx("onclick");
+            }
             if (attribute != null) {
+              // simplest case is a straight href
               String url = attribute.getValue();
+              //rewriteUrl is extended for the books rewriter
               String newUrl = rewriteUrl(url, au);
               if (!newUrl.equals(url)) {
+                // It puts it on the attribute it came from
                 attribute.setValue(newUrl);
                 ((TagNode)node).setAttributeEx(attribute);
-                if (logger.isDebug3()) {
-                  logger.debug3("rewrote: " + url + " to " + newUrl);
+                if (log.isDebug3()) {
+                  log.debug3("rewrote: " + url + " to " + newUrl);
+                  log.debug3(node.toHtml());
+
                 }
               }
             }
           }
         } catch (Throwable ex) {
-          logger.error(node.toHtml(), ex);
+          log.error(node.toHtml(), ex);
         }
         return false;
       }
@@ -160,9 +201,15 @@ public class IngentaHtmlLinkRewriterFactory
   }
   
   /**
+   * The way we rewrite must be specific to the type (books vs. journals) of
+   * plugin because of params. 
+   * 
    * Rewrite URLs that link to the article PDF and HTML files.
    * This is similar to the "normalization" that (should) take place
-   * while crawling the article landing page. It rewrites the original
+   * while crawling the article landing page. 
+   * 
+   * For Journals: 
+   * It rewrites the original
    * link to a location on the KEY_BASE_URL server that is not collected,
    * to a location on the KEY_API_URL server where the content is collected.
    * <p>
@@ -188,62 +235,145 @@ public class IngentaHtmlLinkRewriterFactory
    * because that AU was already collected with a URL that does not include the 
    * MIME type.
    * 
+   * For books, there is only one host - the base_url
+   * and since the plugin came later, all the crawler versions have been
+   * collected with the mimetype as part of the url
+   * 
+   * 
    * @param url the original URL to rewrite
    * @param au the Archival Unit for the URL
    * @return the normalized URL
+   * @throws PluginException 
    */
-  String rewriteUrl(String url, ArchivalUnit au) {
+   protected String rewriteUrl(String url, ArchivalUnit au) throws PluginException {
+    String linkUrl;
+
+    //
+    //  The url we need to rewrite is either coming in directly or its
+    //  embedded in a javascript call and must go back inside the same call.
+    //  Currently onClick is only seen in books but leave it here in case 
+    //  this usage moves to the journals platform as well
+    //
+    boolean hadOnClick=false;
+    Matcher onClickMat = onClickPdfPattern.matcher(url);
+    if (onClickMat.matches()) {
+      hadOnClick = true;
+      linkUrl = onClickMat.group(2);  // just the link portion
+      log.debug3("pulled the link out of javascript:popup()");
+    } else {
+      linkUrl = url; 
+      log.debug3("link came directly off attribute");
+    }
 
     // ignore URLs that don't match the infobike pattern
-    Matcher matcher = infobikePat.matcher(url);
+    // even books use this pattern - with a volume/issue of 1
+    Matcher matcher = infobikePat.matcher(linkUrl);
     if (!matcher.matches()) {
-      return url;
+      return url; // not match - the original link (including javascript if there)
+    }
+
+    String plugId = au.getPluginId();
+    String newUrl;
+    if (plugId.contains("IngentaBooksPlugin")) {
+      newUrl = getRewrittenForBook(linkUrl, matcher, au);
+    } else if (plugId.contains("IngentaJournalPlugin")) {
+      newUrl = getRewrittenForJournal(linkUrl, matcher, au);
+    } else {
+      throw new PluginException("Cannot identify the plugin type in Ingenta link rewriter: " + plugId);
     }
     
-    // rewrite matching URL to one on the "api_url" server
-    // where the file is actually stored
-    String apiUrl = au.getConfiguration().get("api_url");
-    StringBuilder sb = new StringBuilder(apiUrl);
-    sb.append("content");
-    for (int i = 2; i <= 7; i++) {
-      sb.append('/');
-      sb.append(matcher.group(i));
-    }
-    sb.append("?crawler=true");
-    // create version of rewritten URL without MIME type as fall-back
-    // in case the URL we ingested didn't have the MIME type
-    String newUrlNoMime = sb.toString();
-    
-    // create version of rewritten URL with original MIME type
-    String mimeType = matcher.group(8)+ "/"+ matcher.group(9);
-    String newUrl = newUrlNoMime + "&mimetype=" + mimeType;
-    
-    // see if a matching URL with the original MIME type param
-    // exists matches original MIME type, e.g.:
-    // http://api.ingentaconnect.com/...?crawler=true&mimetype=application/pdf
-    CachedUrl cu = au.makeCachedUrl(newUrl);
-    try {
-      if ((cu == null) 
-          || !cu.hasContent()
-          || !mimeType.equalsIgnoreCase(
-            HeaderUtil.getMimeTypeFromContentType(cu.getContentType()))) {
-        // see if matching URL without the original MIME type param 
-        // exists and matches original MIME type, e.g.
-        // http://api.ingentaconnect.com/...?crawler=true 
-        AuUtil.safeRelease(cu);
-        cu = au.makeCachedUrl(newUrlNoMime);
-        if ((cu == null) 
-            || !cu.hasContent()
-            || !mimeType.equalsIgnoreCase(
-              HeaderUtil.getMimeTypeFromContentType(cu.getContentType()))) {
-          return url; 
-        }
-        newUrl = newUrlNoMime;
-      }
-    } finally {
-      AuUtil.safeRelease(cu);
+    if (linkUrl.equals(newUrl)){
+        // same as went in, didn't match or some other issue
+        return url; // the original link (including javascript if there)
     }
     
+    // We have the modified url but if it was in a javascript, put it back
+    if (hadOnClick) {
+      // (1) = first quote (of whatever type) (3) = endquote that followed in the onClick
+      String fullUrl = "javascript:popup(" + onClickMat.group(1) + newUrl + onClickMat.group(3);
+      log.debug3("put newUrl back in to javascript: " + fullUrl);
+      return fullUrl;
+    }
     return newUrl;
   }
+   
+   String getRewrittenForJournal(String origUrl, Matcher matcher, ArchivalUnit au) {
+     String apiUrl = au.getConfiguration().get("api_url");
+     if (apiUrl == null) {
+       log.warning("IngentaHtmlLinkRewriter had no api_url");
+       return origUrl; // did the books plugin inadvertently call this?
+     }
+     StringBuilder sb = new StringBuilder(apiUrl);
+     sb.append("content");
+     for (int i = 2; i <= 7; i++) {
+       sb.append('/');
+       sb.append(matcher.group(i));
+     }
+     sb.append("?crawler=true");
+     // create version of rewritten URL without MIME type as fall-back
+     // in case the URL we ingested didn't have the MIME type
+     String newUrlNoMime = sb.toString();
+     
+     // create version of rewritten URL with original MIME type
+     String mimeType = matcher.group(8)+ "/"+ matcher.group(9);
+     String newUrl = newUrlNoMime + "&mimetype=" + mimeType;
+     
+     // see if a matching URL with the original MIME type param
+     // exists matches original MIME type, e.g.:
+     // http://api.ingentaconnect.com/...?crawler=true&mimetype=application/pdf
+     CachedUrl cu = au.makeCachedUrl(newUrl);
+     try {
+       if ((cu == null) 
+           || !cu.hasContent()
+           || !mimeType.equalsIgnoreCase(
+             HeaderUtil.getMimeTypeFromContentType(cu.getContentType()))) {
+         // see if matching URL without the original MIME type param 
+         // exists and matches original MIME type, e.g.
+         // http://api.ingentaconnect.com/...?crawler=true 
+         AuUtil.safeRelease(cu);
+         cu = au.makeCachedUrl(newUrlNoMime);
+         if ((cu == null) 
+             || !cu.hasContent()
+             || !mimeType.equalsIgnoreCase(
+               HeaderUtil.getMimeTypeFromContentType(cu.getContentType()))) {
+           return origUrl; 
+         }
+         newUrl = newUrlNoMime;
+       }
+     } finally {
+       AuUtil.safeRelease(cu);
+     }
+     return newUrl;
+   }
+
+   // guaranteed to be a book plugin
+   String getRewrittenForBook(String origUrl, Matcher matcher, ArchivalUnit au) {
+     String baseUrl = au.getConfiguration().get("base_url");
+     StringBuilder sb = new StringBuilder(baseUrl);
+     // we normalize contentone to content so we can just set this
+     sb.append("content");
+     for (int i = 2; i <= 7; i++) {
+       sb.append('/');
+       sb.append(matcher.group(i));
+     }
+     sb.append("?crawler=true");
+     // create version of rewritten URL with original MIME type
+     sb.append("&mimetype=");
+     sb.append(matcher.group(8));
+     sb.append("/");
+     sb.append(matcher.group(9));
+     String newUrl = sb.toString();
+     
+     // does this url exist in the cache?
+     CachedUrl cu = au.makeCachedUrl(newUrl);
+     try {
+       if ((cu == null) 
+           || !cu.hasContent()) {
+         return origUrl; // nope - don't rewrite. This is all of the original
+       }
+     } finally {
+       AuUtil.safeRelease(cu);
+     }
+     return newUrl;
+   }
 }

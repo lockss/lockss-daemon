@@ -37,11 +37,16 @@ import java.io.*;
 import org.lockss.util.*;
 import org.lockss.config.Configuration;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
+import org.lockss.plugin.Plugin;
+import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.servlet.ServletUtil;
 import org.lockss.test.*;
 
 public class TestIngentaHtmlLinkRewriterFactory extends LockssTestCase {
   static String ENC = Constants.DEFAULT_ENCODING;
+  
+  private static final String BOOK_PLUGIN = "org.lockss.plugin.ingenta.ClockssIngentaBooksPlugin";
+  private static final String JOURNAL_PLUGIN = "org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin";
 
   IngentaHtmlLinkRewriterFactory fact;
 
@@ -55,14 +60,21 @@ public class TestIngentaHtmlLinkRewriterFactory extends LockssTestCase {
    * 
    * @return a basic Ingenta test AU
    * @throws ConfigurationException if can't set configuration
+   * @throws FileNotFoundException 
    */
-  MockArchivalUnit makeAu() throws ConfigurationException {
+  MockArchivalUnit makeAu() throws ConfigurationException, FileNotFoundException {
     MockArchivalUnit mau = new MockArchivalUnit();
     Configuration config =ConfigurationUtil.fromArgs(
         "base_url", "http://www.ingentaconnect.com/",
         "api_url", "http://api.ingentaconnect.com/",
         "graphics_url", "http://graphics.ingentaconnect.com/");
     mau.setConfiguration(config);
+    // must do this to set the pluginId which is used to differentiate books/journals
+    DefinablePlugin mp = new DefinablePlugin();
+    mp.initPlugin(getMockLockssDaemon(),
+        JOURNAL_PLUGIN);
+    mau.setPlugin(mp);
+    mau.setPluginId(JOURNAL_PLUGIN);
     mau.setUrlStems(ListUtil.list(
         "http://www.ingentaconnect.com/",
         "http://api.ingentaconnect.com/",
@@ -70,11 +82,28 @@ public class TestIngentaHtmlLinkRewriterFactory extends LockssTestCase {
         ));
     return mau;
   }
+  
+  MockArchivalUnit makeBookAu() throws ConfigurationException, FileNotFoundException {
+    MockArchivalUnit mau = new MockArchivalUnit();
+    Configuration config =ConfigurationUtil.fromArgs(
+        "base_url", "http://www.ingentaconnect.com/");
+    mau.setConfiguration(config);
+    // must do this to set the pluginId which is used to differentiate books/journals
+    DefinablePlugin mp = new DefinablePlugin();
+    mp.initPlugin(getMockLockssDaemon(),
+        BOOK_PLUGIN);
+    mau.setPlugin(mp);
+    mau.setPluginId(BOOK_PLUGIN);
+    mau.setUrlStems(ListUtil.list(
+        "http://www.ingentaconnect.com/"
+        ));
+    return mau;
+  }
 
   static final String input_1 =
-    "/org/lockss/plugin/ingenta/IngentaHtmlLinkRewriter_input_1.html";
-  static final String output_1 = 
-    "/org/lockss/plugin/ingenta/IngentaHtmlLinkRewriter_output_1.html";
+      "/org/lockss/plugin/ingenta/IngentaHtmlLinkRewriter_input_1.html";
+    static final String output_1 = 
+      "/org/lockss/plugin/ingenta/IngentaHtmlLinkRewriter_output_1.html";
   static final String output_2 = 
       "/org/lockss/plugin/ingenta/IngentaHtmlLinkRewriter_output_2.html";
   static final String output_3 = 
@@ -87,6 +116,16 @@ public class TestIngentaHtmlLinkRewriterFactory extends LockssTestCase {
     
   static final String baseOutUrl = 
       "http://api.ingentaconnect.com/content/manup/vcb/2004/00000005/00000001/art00001";
+
+  
+  static final String book_input_1 =
+      "/org/lockss/plugin/ingenta/IngentaHtmlLinkRewriter_book_input.html";
+  static final String book_output_1 = 
+      "/org/lockss/plugin/ingenta/IngentaHtmlLinkRewriter_book_output.html";
+
+  static final String bookInUrl =
+      "http://www.ingentaconnect.com/content/bkpub/2nk9qe/1999/00000001/00000001/art00003";
+  static final String bookOutSuffix = "?crawler=true&mimetype=application/pdf";
     
 
   /**
@@ -98,7 +137,7 @@ public class TestIngentaHtmlLinkRewriterFactory extends LockssTestCase {
    * @param outRes the name of the file resource to compare against
    * @throws Exception if something bad happens
    */
-  void pageRewriteTest(MockArchivalUnit mau, String inRes, String outRes) 
+  void pageRewriteTest(MockArchivalUnit mau, String inUrl, String inRes, String outRes) 
       throws Exception {
     InputStream input = null;
     InputStream filtered = null;
@@ -115,7 +154,7 @@ public class TestIngentaHtmlLinkRewriterFactory extends LockssTestCase {
       }; 
       filtered = fact.createLinkRewriter("text/html", 
         mau, input, "UTF-8", 
-        baseInUrl, 
+        inUrl, 
         xfm);
       expected = getResourceAsStream(outRes);
       String s_expected = StringUtil.fromInputStream(expected);
@@ -151,7 +190,7 @@ public class TestIngentaHtmlLinkRewriterFactory extends LockssTestCase {
                true, //shouldCache
                htmlHeaders);
 
-    pageRewriteTest(mau, input_1, output_1);
+    pageRewriteTest(mau, baseInUrl, input_1, output_1);
   }
   
   /**
@@ -174,7 +213,7 @@ public class TestIngentaHtmlLinkRewriterFactory extends LockssTestCase {
                true, //shouldCache
                htmlHeaders);
 
-    pageRewriteTest(mau, input_1, output_2);
+    pageRewriteTest(mau, baseInUrl, input_1, output_2);
   }
   
   /**
@@ -197,7 +236,7 @@ public class TestIngentaHtmlLinkRewriterFactory extends LockssTestCase {
                true, //shouldCache
                htmlHeaders);
 
-    pageRewriteTest(mau, input_1, output_3);
+    pageRewriteTest(mau, baseInUrl, input_1, output_3);
   }
   
   /**
@@ -230,7 +269,7 @@ public class TestIngentaHtmlLinkRewriterFactory extends LockssTestCase {
         true, //shouldCache
         htmlHeaders);
     
-    pageRewriteTest(mau, input_1, output_3);
+    pageRewriteTest(mau, baseInUrl, input_1, output_3);
   }
   
   /**
@@ -242,7 +281,31 @@ public class TestIngentaHtmlLinkRewriterFactory extends LockssTestCase {
    */
   public void testWithNoCus() throws Exception {
     MockArchivalUnit mau = makeAu();
-    pageRewriteTest(mau, input_1, output_4);
+    pageRewriteTest(mau, baseInUrl, input_1, output_4);
+  }
+  
+  
+  /*
+   * <div class="right-col-download contain">
+<a class="fulltext pdf btn btn-general icbutton" onclick="javascript:popup('/search/download?pub=infobike%3a%2f%2fbkpub%2f2nk9qe%2f1999%2f00000001%2f00000001%2fart00003&mimetype=application%2fpdf&exitTargetId=1465506336864','downloadWindow','900','800')" title="PDF download of Organization as Organizing" class="no-underline contain" ><i class="fa fa-arrow-circle-o-down"></i></a>&nbsp;<span class="rust"><strong>Download</strong> <br />(PDF 1,242.4 kb)</span>&nbsp;
+</div>
+   */
+  
+  /**
+   * Test when HTML CU has MIME type and PDF CU does not.
+   * @throws Exception if something goes wrong
+   */
+  public void testBookCus() throws Exception {
+    MockArchivalUnit mau = makeBookAu();
+    CIProperties pdfHeaders = new CIProperties();
+    pdfHeaders.put("X-Lockss-content-type", "application/pdf; charset=UTF-8");
+    mau.addUrl(bookInUrl + bookOutSuffix,
+               true, // exists
+               true, //shouldCache
+               pdfHeaders);
+
+    // in progress...not done yet
+    //pageRewriteTest(mau, bookInUrl, book_input_1, book_output_1);
   }
   
   /**
@@ -264,7 +327,7 @@ public class TestIngentaHtmlLinkRewriterFactory extends LockssTestCase {
                false, // exists -- false for no content
                true, //shouldCache
                pdfHeaders);
-    pageRewriteTest(mau, input_1, output_4);
+    pageRewriteTest(mau, baseInUrl, input_1, output_4);
   }
 
 }
