@@ -569,6 +569,7 @@ while (my $line = <>) {
 
   } elsif (($plugin eq "ClockssTaylorAndFrancisPlugin") ||
            ($plugin eq "ClockssAIAAPlugin") ||
+           ($plugin eq "ClockssAllenPressJournalsPlugin") ||
            ($plugin eq "ClockssAMetSocPlugin") ||
            ($plugin eq "ClockssAmmonsScientificPlugin") ||
            ($plugin eq "ClockssASCEPlugin") ||
