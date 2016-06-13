@@ -85,7 +85,10 @@ public class ProjectMuseUrlNormalizer extends HttpToHttpsUtil.BaseUrlHttpHttpsUr
   @Override
   public String additionalNormalization(String url, ArchivalUnit au) throws PluginException {
     log.debug3("in: " + url);
-    
+    if (url == null) {
+      return url;
+    }    
+
     url = StringUtils.substringBeforeLast(url, VERSION_SUFFIX);
     
     final String musehost = "://muse.jhu.edu/";
