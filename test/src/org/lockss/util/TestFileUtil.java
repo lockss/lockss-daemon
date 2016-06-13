@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import java.nio.file.*;
 import java.nio.file.attribute.*;
+import org.apache.commons.lang3.*;
 import org.apache.commons.collections.*;
 import org.lockss.test.*;
 
@@ -310,6 +311,34 @@ public class TestFileUtil extends LockssTestCase {
     File f2 = new File(dir, "missingFile");
     assertFalse(f2.exists());
     assertFalse(FileUtil.safeDeleteFile(f2));
+  }
+
+  public void testNewFileOutputStream() throws IOException {
+    File dir = getTempDir("longtest");
+    File shortName = new File(dir, "shortpath");
+    StringUtil.toOutputStream(FileUtil.newFileOutputStream(shortName),
+			       "a content");
+    assertInputStreamMatchesString("a content",
+				   FileUtil.newFileInputStream(shortName));
+    String s250 = StringUtils.repeat("1234567890", 25);
+    assertEquals(250, s250.length());
+    String longStr = StringUtils.repeat(s250 + "/", 10);
+    assertEquals(2510, longStr.length());
+    File longDir = new File(dir, longStr);
+    assertTrue(longDir.mkdirs());
+    File longName = new File(longDir, "longpath");
+    StringUtil.toOutputStream(FileUtil.newFileOutputStream(longName),
+			       "b content");
+    assertInputStreamMatchesString("b content",
+				   FileUtil.newFileInputStream(longName));
+
+    File noFile = new File(dir, "nosuchfile");
+    try {
+      FileUtil.newFileInputStream(noFile);
+      fail("FileUtil.newFileInputStream() non-existent file should throw");
+    } catch (FileNotFoundException e) {
+      assertEquals(noFile.getPath(), e.getMessage());
+    }
   }
 
   public void testSetOwnerRWX() throws IOException {

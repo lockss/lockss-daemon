@@ -311,7 +311,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
     DataInputStream is = null;
     try {
       if (m_filePeerId.exists()) {
-        is = new DataInputStream(new FileInputStream(m_filePeerId));
+        is = new DataInputStream(FileUtil.newFileInputStream(m_filePeerId));
 	readData(is);
 	m_changed = false;
       } else {
@@ -360,7 +360,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 			      m_filePeerId.getParentFile());
     try {
       // Loop until there are no IdentityParseExceptions
-      OutputStream fileOs = new FileOutputStream(filePeerIdTemp);
+      OutputStream fileOs = FileUtil.newFileOutputStream(filePeerIdTemp);
       dos = new DataOutputStream(new BufferedOutputStream(fileOs));
       writeData(dos);
       dos.close();

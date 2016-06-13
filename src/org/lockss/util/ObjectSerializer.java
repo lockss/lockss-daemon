@@ -153,7 +153,7 @@ public abstract class ObjectSerializer {
 
     protected void doCreateOutputStream() throws SerializationException, InterruptedIOException {
       try {
-        outputStream = new FileOutputStream(temporaryFile);
+        outputStream = FileUtil.newFileOutputStream(temporaryFile);
       }
       catch (IOException ioe) {
         String errorString = "IOException while setting up serialization stream";
@@ -188,7 +188,7 @@ public abstract class ObjectSerializer {
       try {
         DocumentBuilderFactory builderFactory = new LockssDocumentBuilderFactoryImpl();
         DocumentBuilder builder = builderFactory.newDocumentBuilder();
-        builder.parse(new FileInputStream(temporaryFile));
+        builder.parse(FileUtil.newFileInputStream(temporaryFile));
       }
       catch (ParserConfigurationException pce) {
         throw failSerialize(errorString,
@@ -389,14 +389,19 @@ public abstract class ObjectSerializer {
       throws SerializationException.FileNotFound,
              SerializationException,
              InterruptedIOException {
-    FileInputStream inputStream = null;
+    InputStream inputStream = null;
     try {
-      inputStream = new FileInputStream(inputFile);
+      inputStream = FileUtil.newFileInputStream(inputFile);
     }
     catch (FileNotFoundException fnfe) {
       String errorString = "File not found: " + inputFile;
       logger.debug2(errorString);
       throw new SerializationException.FileNotFound(errorString, fnfe);
+    }
+    catch (IOException ioe) {
+      String errorString = "IOException: " + inputFile;
+      logger.debug2(errorString);
+      throw new SerializationException.FileNotFound(errorString, ioe);
     }
 
     try {
@@ -727,8 +732,9 @@ public abstract class ObjectSerializer {
                         + "."
                         + Long.toString(System.currentTimeMillis());
         try {
-          InputStream inputStream = new FileInputStream(file);
-          OutputStream outputStream = new FileOutputStream(copied);
+          InputStream inputStream = FileUtil.newFileInputStream(file);
+          OutputStream outputStream =
+	    FileUtil.newFileOutputStream(new File(copied));
           StreamUtil.copy(inputStream, outputStream);
           IOUtil.safeClose(inputStream);
           outputStream.close();

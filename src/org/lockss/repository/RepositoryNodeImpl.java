@@ -33,8 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.repository;
 
 import java.io.*;
-import java.nio.file.*;
-import java.nio.channels.*;
 import java.nio.charset.*; 
 import java.net.MalformedURLException;
 import java.util.*;
@@ -962,7 +960,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       throws IOException {
     OutputStream os = null;
     try {
-      os = new BufferedOutputStream(newFileOutputStream(toFile));
+      os = new BufferedOutputStream(FileUtil.newFileOutputStream(toFile));
       props.store(os, "HTTP headers for " + url);
     } finally {
       IOUtil.safeClose(os);
@@ -1141,7 +1139,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
     try {
       curOutputStream = new BufferedOutputStream(
-          newFileOutputStream(tempCacheFile));
+          FileUtil.newFileOutputStream(tempCacheFile));
       return curOutputStream;
     } catch (IOException e) {
 //       logFailedCreate(tempCacheFile);
@@ -1172,7 +1170,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   void loadPropsInto(File propsFile, Properties props)
       throws FileNotFoundException, IOException {
-    InputStream is = new BufferedInputStream(newFileInputStream(propsFile));
+    InputStream is =
+      new BufferedInputStream(FileUtil.newFileInputStream(propsFile));
     try {
       props.load(is);
     } catch (IllegalArgumentException e) {
@@ -1700,7 +1699,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
    */
   protected void writeNodeProperties() {
     try {
-      OutputStream os = new BufferedOutputStream(newFileOutputStream(nodePropsFile));
+      OutputStream os =
+	new BufferedOutputStream(FileUtil.newFileOutputStream(nodePropsFile));
       nodeProps.store(os, "Node properties");
       os.close();
     } catch (IOException ioe) {
@@ -1860,7 +1860,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
       try {
 	InputStream is =
-	  new BufferedInputStream(newFileInputStream(tempCacheFile));
+	  new BufferedInputStream(FileUtil.newFileInputStream(tempCacheFile));
 	if (CurrentConfig.getBooleanParam(PARAM_MONITOR_INPUT_STREAMS,
 					  DEFAULT_MONITOR_INPUT_STREAMS)) {
 	  is = new MonitoringInputStream(is, tempCacheFile.toString());
@@ -2094,7 +2094,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       if (is == null) {
 	assertContent();
 	try {
-	  is = new BufferedInputStream(newFileInputStream(getContentFile()));
+	  is = new BufferedInputStream(FileUtil.newFileInputStream(getContentFile()));
 	  if (CurrentConfig.getBooleanParam(PARAM_MONITOR_INPUT_STREAMS,
 	                                    DEFAULT_MONITOR_INPUT_STREAMS)) {
 	    is = new MonitoringInputStream(is, getContentFile().toString());
@@ -2108,29 +2108,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	}
       }
     }
-  }
-
-
-  InputStream newFileInputStream(File f) throws IOException {
-    Path path = Paths.get(f.getPath());
-    try {
-      FileChannel ichan = FileChannel.open(path, StandardOpenOption.READ);
-      InputStream is = Channels.newInputStream(ichan);
-      return is;
-    } catch (NoSuchFileException e) {
-      throw new FileNotFoundException(e.getMessage());
-    }
-  }
-
-  OutputStream newFileOutputStream(File f) throws IOException {
-    Path path = Paths.get(f.getPath());
-    if (!Files.exists(path)) {
-      Files.createFile(path);
-      if (logger.isDebug3()) logger.debug3("created: " + path);
-    }
-    FileChannel ochan = FileChannel.open(path, StandardOpenOption.WRITE);
-    OutputStream os = Channels.newOutputStream(ochan);
-    return os;
   }
 
   /**

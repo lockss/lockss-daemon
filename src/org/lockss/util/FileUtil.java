@@ -32,7 +32,9 @@ package org.lockss.util;
 
 import java.io.*;
 import java.nio.file.*;
+import java.nio.file.*;
 import java.nio.file.attribute.*;
+import java.nio.channels.*;
 import java.util.*;
 import org.apache.oro.text.regex.*;
 
@@ -179,6 +181,42 @@ public class FileUtil {
         fis2.close();
       }
     }
+  }
+
+  /**
+   * Open an InputStream on an existing file.  Equivalent to<br><tt>new
+   * FileInputStream()</tt><br> but works in dirs with long paths.  In
+   * some Java versions, FileInputStream throws <tt>FileNotFoundException:
+   * File name too long</tt> opening files in dirs with paths longer than
+   * about 2K
+   */
+  public static InputStream newFileInputStream(File f) throws IOException {
+    Path path = Paths.get(f.getPath());
+    try {
+      FileChannel ichan = FileChannel.open(path, StandardOpenOption.READ);
+      InputStream is = Channels.newInputStream(ichan);
+      return is;
+    } catch (NoSuchFileException e) {
+      throw new FileNotFoundException(e.getMessage());
+    }
+  }
+
+  /**
+   * Open an OutputStream on a new or existing file.  Equivalent
+   * to<br><tt>new FileOutputStream()</tt><br> but works in dirs with long
+   * paths.  In some Java versions, FileOutputStream throws
+   * <tt>FileNotFoundException: File name too long</tt> opening files in
+   * dirs with paths longer than about 2K
+   */
+  public static OutputStream newFileOutputStream(File f) throws IOException {
+    Path path = Paths.get(f.getPath());
+    if (!Files.exists(path)) {
+      Files.createFile(path);
+      if (log.isDebug3()) log.debug3("created: " + path);
+    }
+    FileChannel ochan = FileChannel.open(path, StandardOpenOption.WRITE);
+    OutputStream os = Channels.newOutputStream(ochan);
+    return os;
   }
 
   /**
