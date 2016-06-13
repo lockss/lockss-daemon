@@ -766,28 +766,28 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.gsl.ClockssGSLDrupalPlugin
       param[base_url] = http://trned.lyellcollection.org/
 
-      au < manifest ; exists ; 1868-1871 ; Transactions of the Edinburgh Geological Society Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1872-1876 ; Transactions of the Edinburgh Geological Society Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1877-1880 ; Transactions of the Edinburgh Geological Society Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1881-1884 ; Transactions of the Edinburgh Geological Society Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1885-1889 ; Transactions of the Edinburgh Geological Society Volume 5 ; 5 ; >
-      au < manifest ; exists ; 1890-1893 ; Transactions of the Edinburgh Geological Society Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1894-1900 ; Transactions of the Edinburgh Geological Society Volume 7 ; 7 ; >
-      au < manifest ; exists ; 1901-1906 ; Transactions of the Edinburgh Geological Society Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1907-1911 ; Transactions of the Edinburgh Geological Society Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1912-1919 ; Transactions of the Edinburgh Geological Society Volume 10 ; 10 ; >
-      au < manifest ; exists ; 1920-1927 ; Transactions of the Edinburgh Geological Society Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1928-1933 ; Transactions of the Edinburgh Geological Society Volume 12 ; 12 ; >
-      au < manifest ; exists ; 1934-1944 ; Transactions of the Edinburgh Geological Society Volume 13 ; 13 ; >
-      au < manifest ; exists ; 1945-1952 ; Transactions of the Edinburgh Geological Society Volume 14 ; 14 ; >
-      au < manifest ; exists ; 1952-1953 ; Transactions of the Edinburgh Geological Society Volume 15 ; 15 ; >
-      au < manifest ; exists ; 1954-1956 ; Transactions of the Edinburgh Geological Society Volume 16 ; 16 ; >
-      au < manifest ; exists ; 1957-1959 ; Transactions of the Edinburgh Geological Society Volume 17 ; 17 ; >
-      au < manifest ; exists ; 1960-1961 ; Transactions of the Edinburgh Geological Society Volume 18 ; 18 ; >
-      au < manifest ; exists ; 1962-1963 ; Transactions of the Edinburgh Geological Society Volume 19 ; 19 ; >
+      au < exists ; exists ; 1868-1871 ; Transactions of the Edinburgh Geological Society Volume 1 ; 1 ; >
+      au < exists ; exists ; 1872-1876 ; Transactions of the Edinburgh Geological Society Volume 2 ; 2 ; >
+      au < exists ; exists ; 1877-1880 ; Transactions of the Edinburgh Geological Society Volume 3 ; 3 ; >
+      au < exists ; exists ; 1881-1884 ; Transactions of the Edinburgh Geological Society Volume 4 ; 4 ; >
+      au < exists ; exists ; 1885-1889 ; Transactions of the Edinburgh Geological Society Volume 5 ; 5 ; >
+      au < exists ; exists ; 1890-1893 ; Transactions of the Edinburgh Geological Society Volume 6 ; 6 ; >
+      au < exists ; exists ; 1894-1900 ; Transactions of the Edinburgh Geological Society Volume 7 ; 7 ; >
+      au < exists ; exists ; 1901-1906 ; Transactions of the Edinburgh Geological Society Volume 8 ; 8 ; >
+      au < exists ; exists ; 1907-1911 ; Transactions of the Edinburgh Geological Society Volume 9 ; 9 ; >
+      au < exists ; exists ; 1912-1919 ; Transactions of the Edinburgh Geological Society Volume 10 ; 10 ; >
+      au < exists ; exists ; 1920-1927 ; Transactions of the Edinburgh Geological Society Volume 11 ; 11 ; >
+      au < exists ; exists ; 1928-1933 ; Transactions of the Edinburgh Geological Society Volume 12 ; 12 ; >
+      au < exists ; exists ; 1934-1944 ; Transactions of the Edinburgh Geological Society Volume 13 ; 13 ; >
+      au < exists ; exists ; 1945-1952 ; Transactions of the Edinburgh Geological Society Volume 14 ; 14 ; >
+      au < exists ; exists ; 1952-1953 ; Transactions of the Edinburgh Geological Society Volume 15 ; 15 ; >
+      au < exists ; exists ; 1954-1956 ; Transactions of the Edinburgh Geological Society Volume 16 ; 16 ; >
+      au < exists ; exists ; 1957-1959 ; Transactions of the Edinburgh Geological Society Volume 17 ; 17 ; >
+      au < exists ; exists ; 1960-1961 ; Transactions of the Edinburgh Geological Society Volume 18 ; 18 ; >
+      au < exists ; exists ; 1962-1963 ; Transactions of the Edinburgh Geological Society Volume 19 ; 19 ; >
 
     }
 
@@ -838,21 +838,21 @@
       name = Transactions of the Geological Society of London ;
       eissn = 2042-5295 
     >
-    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+    plugin = org.lockss.plugin.highwire.gsl.ClockssGSLDrupalPlugin
     param[base_url] = http://trn.lyellcollection.org/
 
-    au < manifest ; exists ; 1811 ; Transactions of the Geological Society of London Series 1 Volume 1 ; s1-1 ; >
-    au < manifest ; exists ; 1814 ; Transactions of the Geological Society of London Series 1 Volume 2 ; s1-2 ; >
-    au < manifest ; exists ; 1816 ; Transactions of the Geological Society of London Series 1 Volume 3 ; s1-3 ; >
-    au < manifest ; exists ; 1817 ; Transactions of the Geological Society of London Series 1 Volume 4 ; s1-4 ; >
-    au < manifest ; exists ; 1821 ; Transactions of the Geological Society of London Series 1 Volume 5 ; s1-5 ; >
-    au < manifest ; exists ; 1822-1824 ; Transactions of the Geological Society of London Series 2 Volume 1 ; s2-1 ; >
-    au < manifest ; exists ; 1826-1828 ; Transactions of the Geological Society of London Series 2 Volume 2 ; s2-2 ; >
-    au < manifest ; exists ; 1829-1835 ; Transactions of the Geological Society of London Series 2 Volume 3 ; s2-3 ; >
-    au < manifest ; exists ; 1835-1836 ; Transactions of the Geological Society of London Series 2 Volume 4 ; s2-4 ; >
-    au < manifest ; exists ; 1837-1840 ; Transactions of the Geological Society of London Series 2 Volume 5 ; s2-5 ; >
-    au < manifest ; exists ; 1841-1842 ; Transactions of the Geological Society of London Series 2 Volume 6 ; s2-6 ; >
-    au < manifest ; exists ; 1845-1856 ; Transactions of the Geological Society of London Series 2 Volume 7 ; s2-7 ; >
+    au < exists ; exists ; 1811 ; Transactions of the Geological Society of London Series 1 Volume 1 ; s1-1 ; >
+    au < exists ; exists ; 1814 ; Transactions of the Geological Society of London Series 1 Volume 2 ; s1-2 ; >
+    au < exists ; exists ; 1816 ; Transactions of the Geological Society of London Series 1 Volume 3 ; s1-3 ; >
+    au < exists ; exists ; 1817 ; Transactions of the Geological Society of London Series 1 Volume 4 ; s1-4 ; >
+    au < exists ; exists ; 1821 ; Transactions of the Geological Society of London Series 1 Volume 5 ; s1-5 ; >
+    au < exists ; exists ; 1822-1824 ; Transactions of the Geological Society of London Series 2 Volume 1 ; s2-1 ; >
+    au < exists ; exists ; 1826-1828 ; Transactions of the Geological Society of London Series 2 Volume 2 ; s2-2 ; >
+    au < exists ; exists ; 1829-1835 ; Transactions of the Geological Society of London Series 2 Volume 3 ; s2-3 ; >
+    au < exists ; exists ; 1835-1836 ; Transactions of the Geological Society of London Series 2 Volume 4 ; s2-4 ; >
+    au < exists ; exists ; 1837-1840 ; Transactions of the Geological Society of London Series 2 Volume 5 ; s2-5 ; >
+    au < exists ; exists ; 1841-1842 ; Transactions of the Geological Society of London Series 2 Volume 6 ; s2-6 ; >
+    au < exists ; exists ; 1845-1856 ; Transactions of the Geological Society of London Series 2 Volume 7 ; s2-7 ; >
 
   }
 
