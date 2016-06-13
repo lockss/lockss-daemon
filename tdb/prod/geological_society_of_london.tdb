@@ -773,7 +773,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      plugin = org.lockss.plugin.highwire.gsl.GSLDrupalPlugin
       param[base_url] = http://trned.lyellcollection.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -795,7 +795,7 @@
       au < doNotProcess ; 1954-1956 ; Transactions of the Edinburgh Geological Society Volume 16 ; 16 >
       au < doNotProcess ; 1957-1959 ; Transactions of the Edinburgh Geological Society Volume 17 ; 17 >
       au < doNotProcess ; 1960-1961 ; Transactions of the Edinburgh Geological Society Volume 18 ; 18 >
-      au < doNotProcess ; 1962-1963 ; Transactions of the Edinburgh Geological Society Volume 19 ; 19 >
+      au < exists ; 1962-1963 ; Transactions of the Edinburgh Geological Society Volume 19 ; 19 >
 
     }
 
@@ -809,7 +809,7 @@
       eissn = 2052-9422 
     >
 
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    plugin = org.lockss.plugin.highwire.gsl.GSLDrupalPlugin
     param[base_url] = http://trngl.lyellcollection.org/
     implicit < status ; year ; name ; param[volume_name] >
 
@@ -837,7 +837,7 @@
     au < doNotProcess ; 1956-1957 ; Transactions of the Geological Society of Glasgow Volume 22 ; 22 >
     au < doNotProcess ; 1958 ; Transactions of the Geological Society of Glasgow Volume 23 ; 23 >
     au < doNotProcess ; 1960-1962 ; Transactions of the Geological Society of Glasgow Volume 24 ; 24 >
-    au < doNotProcess ; 1963 ; Transactions of the Geological Society of Glasgow Volume 25 ; 25 >
+    au < exists ; 1963 ; Transactions of the Geological Society of Glasgow Volume 25 ; 25 >
 
   }
 
