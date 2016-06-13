@@ -33,8 +33,12 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.repository;
 
 import java.io.*;
+import java.nio.channels.*;
+import java.nio.file.*;
 import java.net.*;
 import java.util.*;
+import org.apache.commons.lang3.StringUtils;
+
 import org.lockss.test.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
@@ -215,6 +219,68 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     return -1;
   }
 
+  void findMaxDirPath(File root) {
+    int maxName = findMaxDirname(root) - 10;
+    String one = mkstr("onedir", maxName) + "/";
+    for (int rpt = 1; rpt < 1000; rpt++) {
+      String path = StringUtils.repeat(one, rpt);
+      File dir = new File(root, path);
+      String dirstr = dir.getPath();
+      boolean res = dir.mkdirs();
+      if (!res) {
+	log.info("mkdirs failed at " + dirstr.length() + " chars");
+	break;
+      }
+      log.info("mkdirs ok: " + dirstr.length());
+      File f = new File(dir, "foobbb");
+      try {
+	OutputStream os = new FileOutputStream(f);
+	os.close();
+	log.info("file ok at " + f.getPath().length() + " chars");
+      } catch (FileNotFoundException fnfe) {
+	log.info("FNF: " + f.getPath().length(), fnfe);
+      } catch (IOException ioe) {
+	log.error("IOE: " + f.getPath().length() + ", " + ioe.getMessage());
+      }
+    }
+  }
+
+  void findMaxDirPathNio(File root) {
+    int maxName = findMaxDirname(root) - 10;
+    String one = mkstr("onedir", maxName) + "/";
+    for (int rpt = 1; rpt < 1000; rpt++) {
+      String path = StringUtils.repeat(one, rpt);
+      File dir = new File(root, path);
+      String dirstr = dir.getPath();
+      boolean res = dir.mkdirs();
+      if (!res) {
+	log.info("mkdirs failed at " + dirstr.length() + " chars");
+	break;
+      }
+      log.info("mkdirs ok: " + dirstr.length());
+      File f = new File(dir, "foobbb");
+      try {
+	Path npath = Paths.get(f.getPath());
+	Files.createFile(npath);
+	FileChannel ochan = FileChannel.open(npath, StandardOpenOption.WRITE);
+	OutputStream os = Channels.newOutputStream(ochan);
+	os.write((byte)44);
+	os.close();
+
+	FileChannel ichan = FileChannel.open(npath, StandardOpenOption.READ);
+	InputStream is = Channels.newInputStream(ichan);
+	int bb = is.read();
+	is.close();
+	assertEquals(44, bb);
+	log.info("file ok at " + npath.toString().length() + " chars");
+      } catch (FileNotFoundException fnfe) {
+	log.error("FNF: " + f.getPath().length(), fnfe);
+      } catch (IOException ioe) {
+	log.error("IOE: " + f.getPath().length() + ", " + ioe.getMessage());
+      }
+    }
+  }
+
   boolean canMkdir(File root, int len) {
     return canMkdir(root, mkstr(len));
   }
@@ -253,7 +319,10 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   }
 
   String mkstr(int len) {
-    String al = "abcdefghijklmnopqrstuvwxyz0123456789";
+    return mkstr("abcdefghijklmnopqrstuvwxyz0123456789", len);
+  }
+
+  String mkstr(String al, int len) {
     StringBuilder sb = new StringBuilder(len);
     for (int ix = 1; ix <= len / al.length(); ix++) {
       sb.append(al);
@@ -945,6 +1014,28 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     leaf.sealNewVersion();
     assertTrue(leaf.hasContent());
     assertEquals(1, leaf.getCurrentVersion());
+  }
+
+  static String LONG_URL = "http://ijs.macroeconomicsresearch.org/articles/renderlist.action?fmt=ahah&items=http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY585,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY592,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY591,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY593,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY594,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY601,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY602,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY603,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY604,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY611,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY614,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY619,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY618,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY620,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY621,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY626,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY629,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY630,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY635,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY633,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY637,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY639,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY643,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY649,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY650,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY652,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY655,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY656,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY659,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY666,http://sgm.metawrite.magenta.com/content/journal/ijsem/42.867-5309/ijsem.0.XXXYYY673";
+
+  public void testLongPath() throws Exception {
+//     findMaxDirPath(getTempDir());
+//     findMaxDirPathNio(getTempDir());
+    
+    RepositoryNode leaf =
+      repo.createNewNode(LONG_URL);
+    assertFalse(leaf.hasContent());
+    try {
+      leaf.getCurrentVersion();
+      fail("Cannot get current version if no content.");
+    } catch (UnsupportedOperationException uoe) { }
+    leaf.makeNewVersion();
+    writeToLeaf(leaf, "test stream");
+    leaf.setNewProperties(new Properties());
+    leaf.sealNewVersion();
+    assertTrue(leaf.hasContent());
+    assertEquals(1, leaf.getCurrentVersion());
+    assertEquals(LONG_URL, leaf.getNodeUrl());
   }
 
   public void testMakeNodeLocation() throws Exception {
