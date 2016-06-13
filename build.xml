@@ -1213,6 +1213,8 @@ The target you have selected requires compiling under JDK 1.7.
     <copy todir="${plugins.classes}" >
        <fileset dir="${plugins.src}" >
           <include name="**/*.xml"/>   <!-- Definable plugins -->
+          <include name="**/*.dat"/>
+          <include name="**/*.dat.gz"/>   <!-- e.g. Muse URL normalizer mapping -->
        </fileset>
        <fileset dir="${plugins.externals}" erroronmissingdir="false"> <!-- Plugin externals -->
           <include name="**/*.txt"/>

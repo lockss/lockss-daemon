@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>9</string>
+        <string>10</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -46,9 +46,10 @@
     http://muse.jhu.edu/about/reference/eliot/images/volume_1_overlay.gif -->
     <list>
       <string>2,"^https?://%s/about/reference/", url_host(base_url)</string>
-      <string>1,"^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?v=.*)?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff.?)(\?v=.*)?$", url_host(base_url)</string>
       <string>1,"^https?://%s/books/lockss_books\.html$", url_host(base_url)</string>
-      <string>1,"^https?://%s/books/%s/?", url_host(base_url), eisbn</string>
+      <string>1,"^https?://%s/lockss\?list=books$", url_host(base_url)</string>
+      <string>1,"^https?://%s/books/%s", url_host(base_url), eisbn</string>
     </list>
   </entry>
   <entry>

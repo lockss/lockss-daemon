@@ -9,6 +9,14 @@
   comment[9781587294488] = hash errors for pdfs like http://muse.jhu.edu/books/9781587294488/9781587294488-1.pdf
   comment[doNotProcess] = Publisher not moving to new platform. Can these be fixed?
   
+  # Some books are listed in
+  # https://muse.jhu.edu/about_files/uploaded/books_removed_UPCC_collections.xlsx
+  # as "Books Requested to be Removed from  MUSE/UPCC Collections by Publishers
+  # Due to Rights Issues". They are marked 'removed by publisher, see above'.
+
+  # Others that we had processed previously no longer seem to be on the Muse
+  # site. They are marked 'no longer online, see above'
+  
   {
 
     title <
@@ -244,7 +252,7 @@
       au < down ; 1988 ; 9780887067761 ; 9781438411453 ; Books on Israel, Volume I ; 9781438411453 >
       au < down ; 1988 ; 9789622092075 ; 9789882200586 ; Changing Identities of the Southeast Asian Chinese Since World War II ; 9789882200586 >
       au < down ; 1988 ; 9780879724276 ; 9780879728755 ; Elizabethan Popular Culture ; 9780879728755 >
-      au < down ; 1988 ; 9780873340496 ; 9780791496749 ; Golem!: Danger, Deliverance and Art ; 9780791496749 >
+      au < down ; 1988 ; 9780873340496 ; 9780791496749 ; Golem!: Danger, Deliverance and Art ; 9780791496749 > # removed by publisher, see above
       au < down ; 1988 ; 9780911198867 ; 9781612490618 ; Governance and Grievance: Habsburg Policy and Italian Tyrol in the Eighteenth Century ; 9781612490618 >
       au < down ; 1988 ; 9780887064593 ; 9781438401423 ; Living Tree, A: The Roots and Growth of Jewish Law ; 9781438401423 >
       au < down ; 1988 ; 9780819551283 ; 9780819572547 ; The Last American Puritan: The Life of Increase Mather, 1639-1723 ; 9780819572547 >
@@ -262,7 +270,7 @@
       au < down ; 1990 ; 9780929398136 ; 9781574414363 ; Cold Anger: A Story of Faith and Power Politics ; 9781574414363 >
       au < down ; 1990 ; 9780814758717 ; 9780814759257 ; Crown of Thorns: Political Martyrdom in America From Abraham Lincoln to Martin Luther King, Jr. ; 9780814759257 >
       au < down ; 1990 ; 9789622092587 ; 9789882203778 ; Education in Hong Kong, Pre-1841 to 1941: Fact and Opinion ; 9789882203778 >
-      au < down ; 1990 ; 9780791401606 ; 9781438407425 ; Golem: Jewish Magical and Mystical Traditions on the Artificial Anthropoid ; 9781438407425 >
+      au < down ; 1990 ; 9780791401606 ; 9781438407425 ; Golem: Jewish Magical and Mystical Traditions on the Artificial Anthropoid ; 9781438407425 > # removed by publisher, see above
       au < down ; 1990 ; 9780299125844 ; 9780299125837 ; Journeys in New Worlds: Early American Women's Narratives ; 9780299125837 >
       au < down ; 1990 ; 9780299125745 ; 9780299125738 ; Paths in the Rainforests: Toward a History of Political Tradition in Equatorial Africa ; 9780299125738 >
       au < down ; 1990 ; 9780930323684 ; 9781563681783 ; Speak to Me! ; 9781563681783 >
@@ -1596,7 +1604,7 @@
       au < down ; 2006 ; 9780812219760 ; 9780812201291 ; Creating East and West: Renaissance Humanists and the Ottoman Turks ; 9780812201291 >
       au < down ; 2006 ; 9780820326856 ; 9780820330839 ; Creating the Culture of Reform in Antebellum America ; 9780820330839 >
       au < down ; 2006 ;  ; 9780803253865 ; Crime and the Administration of Justice in Buenos Aires, 1785-1853 ; 9780803253865 >
-      au < down ; 2006 ; 9780871542892 ; 9781610441742 ; Crossing the Border: Research from the Mexican Migration Project ; 9781610441742 >
+      au < down ; 2006 ; 9780871542892 ; 9781610441742 ; Crossing the Border: Research from the Mexican Migration Project ; 9781610441742 > # no longer online, see above
       au < down ; 2006 ; 9781585445141 ; 9781603445320 ; Crossing the Rio Grande: An Immigrant's Life in the 1880s ; 9781603445320 >
       au < down ; 2006 ; 9780813925523 ; 9780813930497 ; Crucible of the Civil War: Virginia from Secession to Commemoration ; 9780813930497 >
       au < down ; 2006 ; 9780871545701 ; 9781610443906 ; Culture and Resource Conflict: Why Meanings Matter ; 9781610443906 >
@@ -1680,7 +1688,7 @@
 
       param[base_url] = https://muse.jhu.edu/
 
-      au < notReady ; 2006 ; 9780871549891 ; 9781610445719 ; New Destinations: Mexican Immigration in the United States ; 9781610445719 >
+      au < notReady ; 2006 ; 9780871549891 ; 9781610445719 ; New Destinations: Mexican Immigration in the United States ; 9781610445719 > # no longer online, see above
 
     }
 
@@ -2357,7 +2365,7 @@
       au < down ; 2008 ;  ; 9781592137022 ; Pedagogy of Democracy: Feminism and the Cold War in the U.S. Occupation of Japan ; 9781592137022 >
       au < down ; 2008 ; 9780826515940 ; 9780826592439 ; Pioneers of Cardiac Surgery ; 9780826592439 >
       au < down ; 2008 ; 9780874216950 ; 9780874216967 ; Place the Headstones Where They Belong: Thomas Neibaur, World War 1 Soldier ; 9780874216967 >
-      au < down ; 2008 ; 9780472033188 ; 9780472024711 ; Point Betsie: Lightkeeping and Lifesaving on Northeastern Lake Michigan ; 9780472024711 >
+      au < down ; 2008 ; 9780472033188 ; 9780472024711 ; Point Betsie: Lightkeeping and Lifesaving on Northeastern Lake Michigan ; 9780472024711 > # no longer online, see above
       au < down ; 2008 ; 9780813542201 ; 9780813544236 ; Poison in the Well: Radioactive Waste in the Oceans at the Dawn of the Nuclear Age ; 9780813544236 >
       au < down ; 2008 ; 9781558496248 ; 9781613761502 ; Popular History and the Literary Marketplace, 1840-1920 ; 9781613761502 >
       au < down ; 2008 ; 9781558496569 ; 9781613761113 ; Popular Print and Popular Medicine: Almanacs and Health Advice in Early America ; 9781613761113 >
@@ -2831,7 +2839,7 @@
       au < down ; 2009 ; 9780813544038 ; 9780813546483 ; The History of Modern Japanese Education: Constructing the National School System, 1872-1890 ; 9780813546483 >
       au < down ; 2009 ; 9780472034642 ; 9780472025268 ; The Information Master: Jean-Baptiste Colbert's Secret State Intelligence System ; 9780472025268 >
       au < down ; 2009 ; 9780292719958 ; 9780292795150 ; The Invention of the Jewish Gaucho: Villa Clara and the Construction of Argentine Identity ; 9780292795150 >
-      au < down ; 2009 ; 9780809329410 ; 9780809386680 ; The Journal of William Charles Macready, 1832-1851 ; 9780809386680 >
+      au < down ; 2009 ; 9780809329410 ; 9780809386680 ; The Journal of William Charles Macready, 1832-1851 ; 9780809386680 > # removed by publisher, see above
       au < down ; 2009 ; 9780821418758 ; 9780821443408 ; The Land beyond the Mists: Essays in Identity & Authority in Precolonial Congo and Rwanda ; 9780821443408 >
       au < down ; 2009 ; 9780253352149 ; 9780253003560 ; The Last Century of Sea Power, Volume 1: From Port Arthur to Chanak, 1894--1922 ; 9780253003560 >
       au < down ; 2009 ; 9780813546414 ; 9780813548289 ; The Life and Times of Richard J. Hughes: The Politics of Civility ; 9780813548289 >
@@ -3131,7 +3139,7 @@
       au < down ; 2001 ; 9780292752528 ; 9780292798946 ; The Making of the Mexican Border: The State, Capitalism, and Society in Nuevo León, 1848-1910 ; 9780292798946 >
       au < down ; 2001 ; 9789812300805 ; 9789812305077 ; Weathering the Storm: The Economies of Southeast Asia in the 1930s Depression ; 9789812305077 >
       au < down ; 2001 ; 9780262082983 ; 9780262275637 ; Wireless: From Marconi's Black-Box to the Audion ; 9780262275637 >
-      au < down ; 2002 ; 9789639241374 ; 9786155211522 ; A History of East European Jews ; 9786155211522 >
+      au < down ; 2002 ; 9789639241374 ; 9786155211522 ; A History of East European Jews ; 9786155211522 > # removed by publisher, see above
       au < down ; 2002 ; 9780809327591 ; 9780809389254 ; Judging Lincoln ; 9780809389254 >
       au < down ; 2002 ; 9789812301758 ; 9789812305145 ; Malaysia: The Making of a Nation ; 9789812305145 >
       au < down ; 2002 ; 9781574411485 ; 9781574414905 ; No More Silence: An Oral History of the Assassination of President Kennedy ; 9781574414905 >
@@ -3684,7 +3692,7 @@
       au < exists ; 2014 ; 9780268022389 ; 9780268075934 ; Victorian Reformations: Historical Fiction and Religious Controversy, 1820-1900 ; 9780268075934 >
       au < exists ; 2014 ; 9780812246087 ; 9780812206456 ; 'The Abencerraje' and 'Ozmin and Daraja': Two Sixteenth-Century Novellas from Spain ; 9780812206456 >
       au < exists ; 2014 ; 9780813935287 ; 9780813935300 ; The Life and Undeath of Autonomy in American Literature ; 9780813935300 >
-      au < exists ; 2014 ; 9781621039709 ; 9781617038709 ; Conversations with Stanley Kunitz ; 9781617038709 >
+      au < exists ; 2014 ; 9781621039709 ; 9781617038709 ; Conversations with Stanley Kunitz ; 9781617038709 > # no longer online, see above
       au < exists ; 2014 ; 9780812246131 ; 9780812209839 ; Gothic Subjects: The Transformation of Individualism in American Fiction, 1790-1861 ; 9780812209839 >
       au < notReady ; 2014 ; 9780812245882 ; 9780812209402 ; Made Flesh: Sacrament and Poetics in Post-Reformation England ; 9780812209402 >
       au < exists ; 2014 ; 9780813049267 ; 9780813048727 ; Tortured Life of Scofield Thayer ; 9780813048727 >
@@ -3710,7 +3718,7 @@
       au < exists ; 2014 ; 9781625340191 ; 9781613762738 ; 'A Bold and Hardy Race of Men': The Lives and Literature of American Whalemen ; 9781613762738 >
       au < exists ; 2014 ; 9780813935720 ; 9780813935744 ; Sounding the Break: African American and Caribbean Routes of World Literature ; 9780813935744 >
       au < exists ; 2014 ; 9781554589821 ; 9781771120098 ; Indigenous Poetics in Canada ; 9781771120098 >
-      au < exists ; 2014 ; 9780814334799 ; 9780814339732 ; Revisioning Red Riding Hood around the World: An Anthology of International Retellings ; 9780814339732 >
+      au < exists ; 2014 ; 9780814334799 ; 9780814339732 ; Revisioning Red Riding Hood around the World: An Anthology of International Retellings ; 9780814339732 > # removed by publisher, see above
       au < exists ; 2014 ; 9780813049175 ; 9780813048666 ; Boccaccio's Fabliaux: Medieval Short Stories and the Function of Reversal ; 9780813048666 >
       au < exists ; 2014 ; 9780815633532 ; 9780815652663 ; Representing the National Landscape in Irish Romanticism ; 9780815652663 >
       au < exists ; 2014 ; 9780817318352 ; 9780817387662 ; Miles of Stare: Transcendentalism and the Problem of Literary Vision in Nineteenth-Century America ; 9780817387662 >
@@ -3721,10 +3729,10 @@
       au < exists ; 2014 ; 9781611173390 ; 9781611173406 ; Understanding Michael Chabon ; 9781611173406 >
       au < exists ; 2014 ; 9780810129573 ; 9780810167568 ; Dostoevsky and the Catholic Underground ; 9780810167568 >
       au < exists ; 2014 ; 9780813049793 ; 9780813048918 ; Creole Renegades: Rhetoric of Betrayal and Guilt in the Caribbean Diaspora ; 9780813048918 >
-      au < exists ; 2014 ; 9780814212325 ; 9780814270035 ; Real Mysteries: Narrative and the Unknowable ; 9780814270035 >
+      au < exists ; 2014 ; 9780814212325 ; 9780814270035 ; Real Mysteries: Narrative and the Unknowable ; 9780814270035 > # no longer online, see above
       au < exists ; 2014 ; 9781554589807 ; 9781554589852 ; Catching the Torch: Contemporary Canadian Literary Responses to World War I ; 9781554589852 >
       au < exists ; 2014 ; 9780815633297 ; 9780815652397 ; A Chastened Communion: Modern Irish Poetry and Catholicism ; 9780815652397 >
-      au < exists ; 2014 ; 9781621039716 ; 9781617038723 ; Conversations with Edna O'Brien ; 9781617038723 >
+      au < exists ; 2014 ; 9781621039716 ; 9781617038723 ; Conversations with Edna O'Brien ; 9781617038723 > # no longer online, see above
       au < exists ; 2014 ; 9780472118779 ; 9780472029143 ; The Immaterial Book: Reading and Romance in Early Modern England ; 9780472029143 >
       au < exists ; 2014 ; 9780814212349 ; 9780814271186 ; Fama and Fiction in Vergil’s Aeneid ; 9780814271186 >
       au < exists ; 2014 ;  ; 9780472120109 ; Mediating Culture in the Seventeenth-Century German Novel: Eberhard Werner Happel, 1647-1690 ; 9780472120109 >
@@ -3756,7 +3764,7 @@
       au < exists ; 2014 ; 9781611173086 ; 9781611173093 ; Understanding Steven Millhauser ; 9781611173093 >
       au < exists ; 2014 ; 9780816530809 ; 9780816598960 ; Beyond the Page: Poetry and Performance in Spanish America ; 9780816598960 >
       au < exists ; 2014 ; 9780813935966 ; 9780813935980 ; Bodies and Bones: Feminist Rehearsal and Imagining Caribbean Belonging ; 9780813935980 >
-      au < exists ; 2014 ; 9781621039921 ; 9781617031496 ; The Origins of Comics: From William Hogarth to Winsor McCay ; 9781617031496 >
+      au < exists ; 2014 ; 9781621039921 ; 9781617031496 ; The Origins of Comics: From William Hogarth to Winsor McCay ; 9781617031496 > # no longer online, see above
       au < exists ; 2014 ; 9780814334874 ; 9780814339282 ; Fairy Tales Transformed?: Twenty-First-Century Adaptations and the Politics of Wonder ; 9780814339282 >
       au < exists ; 2014 ; 9780803240759 ; 9780803248953 ; Cherokee Sister: The Collected Writings of Catharine Brown, 1818-1823 ; 9780803248953 >
       au < exists ; 2014 ;  ; 9780820346588 ; The Adventures of Peregrine Pickle ; 9780820346588 >
@@ -3928,13 +3936,13 @@
       au < down ; 2013 ; 9780814212165 ; 9780814270141 ; Rhetorics of Literacy: The Cultivation of American Dialect Poetry ; 9780814270141 >
       au < down ; 2013 ; 9781617037818 ; 9781621039457 ; Dave Sim: Conversations ; 9781621039457 >
       au < down ; 2013 ; 9780814211960 ; 9780814270301 ; The Madwoman and the Blindman: Jayne Eyre, Discourse, Disability ; 9780814270301 >
-      au < down ; 2013 ; 9781621039808 ; 9781617038891 ; The Souls of White Folk: African American Writers Theorize Whiteness ; 9781617038891 >
+      au < down ; 2013 ; 9781621039808 ; 9781617038891 ; The Souls of White Folk: African American Writers Theorize Whiteness ; 9781617038891 > # no longer online, see above
       au < down ; 2013 ; 9780816679904 ; 9781452939445 ; Each Hour Redeem: Time and Justice in African American Literature ; 9781452939445 >
       au < down ; 2013 ; 9780814212059 ; 9780814270042 ; Preaching and the Rise of the American Novel ; 9780814270042 >
       au < down ; 2013 ; 9780271059815 ; 9780271061047 ; Chaim Potok: Confronting Modernity Through the Lens of Tradition ; 9780271061047 >
       au < down ; 2013 ; 9780822354178 ; 9780822391913 ; Writing in the Air: Heterogeneity and the Persistence of Oral Tradition in Andean Literatures ; 9780822391913 >
       au < down ; 2013 ; 9780810129269 ; 9780810167230 ; The Novel in the Age of Disintegration: Dostoevsky and the Problem of Genre in the 1870s ; 9780810167230 >
-      au < down ; 2013 ; 9781621039891 ; 9781617039034 ; Plotting Apocalypse: Reading, Agency, and Identity in the Left Behind Series ; 9781617039034 >
+      au < down ; 2013 ; 9781621039891 ; 9781617039034 ; Plotting Apocalypse: Reading, Agency, and Identity in the Left Behind Series ; 9781617039034 > # no longer online, see above
       au < down ; 2013 ; 9780253008633 ; 9780253008732 ; The Female Face of Shame ; 9780253008732 >
       au < down ; 2013 ; 9780813935058 ; 9780813935072 ; Disturbers of the Peace: Representations of Madness in Anglophone Caribbean Literature ; 9780813935072 >
       au < down ; 2013 ; 9780812244854 ; 9780812207798 ; True Relations: Reading, Literature, and Evidence in Seventeenth-Century England ; 9780812207798 >
@@ -4071,7 +4079,7 @@
       au < down ; 2013 ; 9780812218237 ; 9780812208061 ; Mortal Remains: Death in Early America ; 9780812208061 >
       au < down ; 2013 ; 9781617035968 ; 9781621039433 ; Baba Yaga: The Wild Witch of the East in Russian Fairy Tales ; 9781621039433 >
       au < down ; 2013 ; 9780776607870 ; 9780776620343 ; They Divided the Sky: A Novel by Christa Wolf ; 9780776620343 >
-      au < down ; 2013 ; 9781621039693 ; 9781617038686 ; Chester Brown: Conversations ; 9781617038686 >
+      au < down ; 2013 ; 9781621039693 ; 9781617038686 ; Chester Brown: Conversations ; 9781617038686 > # no longer online, see above
       au < down ; 2013 ; 9780810129207 ; 9780810167209 ; Silence and the Rest: Verbal Skepticism in Russian Poetry ; 9780810167209 >
       au < down ; 2013 ; 9780823255153 ; 9780823255184 ; Common Things: Romance and the Aesthetics of Belonging in Atlantic Modernity ; 9780823255184 >
       au < down ; 2013 ; 9781617031878 ; 9781621039587 ; Tell about Night Flowers: Eudora Welty's Gardening Letters, 1940-1949 ; 9781621039587 >
@@ -4163,7 +4171,7 @@
       au < down ; 2013 ; 9780814212318 ; 9780814271087 ; The Treacherous Imagination: Intimacy, Ethics, and Autobiographical Fiction ; 9780814271087 >
       au < down ; 2013 ; 9780814212288 ; 9780814271049 ; A Poetics of Unnatural Narrative ; 9780814271049 >
       au < down ; 2013 ; 9780814212295 ; 9780814271056 ; Trading Tongues: Merchants, Multilingualism, and Medieval Literature ; 9780814271056 >
-      au < down ; 2013 ; 9781621039907 ; 9781617039058 ; Drawing from Life: Memory and Subjectivity in Comic Art ; 9781617039058 >
+      au < down ; 2013 ; 9781621039907 ; 9781617039058 ; Drawing from Life: Memory and Subjectivity in Comic Art ; 9781617039058 > # no longer online, see above
       au < down ; 2013 ; 9781421411644 ; 9781421411651 ; From Little London to Little Bengal: Religion, Print, and Modernity in Early British India, 1793-1835 ; 9781421411651 >
       au < down ; 2013 ; 9780814212240 ; 9780814271070 ; The Court of Comedy: Aristophanes, Rhetoric, and Democracy in Fifth-Century Athens ; 9780814271070 >
       au < down ; 2013 ; 9781421410487 ; 9781421410494 ; Stanley Cavell and the Claim of Literature ; 9781421410494 >
@@ -4177,7 +4185,7 @@
       au < down ; 2013 ; 9781421410883 ; 9781421410890 ; Experimental Life: Vitalism in Romantic Science and Literature ; 9781421410890 >
       au < down ; 2013 ; 9781438447810 ; 9781438447827 ; Redeeming Words: Language and the Promise of Happiness in the Stories of Döblin and Sebald ; 9781438447827 >
       au < down ; 2013 ; 9780814212301 ; 9780814271100 ; National Consciousness and Literary Cosmopolitics: Postcolonial Literature in a Global Moment ; 9780814271100 >
-      au < down ; 2013 ; 9781621039938 ; 9781617039102 ; Louisiana Creole Literature: A Historical Study ; 9781617039102 >
+      au < down ; 2013 ; 9781621039938 ; 9781617039102 ; Louisiana Creole Literature: A Historical Study ; 9781617039102 > # no longer online, see above
       au < down ; 2013 ; 9780815633112 ; 9780815652045 ; Carmilla: A Critical Edition ; 9780815652045 >
       au < down ; 2013 ; 9781439910559 ; 9781439910573 ; Serial Fu Manchu: The Chinese Supervillain and the Spread of Yellow Peril Ideology ; 9781439910573 >
 
@@ -5181,7 +5189,7 @@
       au < down ; 1988 ; 9780887065958 ; 9781438405322 ; Passionate Women, Passive Men: Suicide in Yiddish Literature ; 9781438405322 >
       au < down ; 1988 ; 9780776601953 ; 9780776616834 ; Reflections: Autobiography and Canadian Literature ; 9780776616834 >
       au < down ; 1989 ; 9780877452478 ; 9781587291807 ; Hewing to Experience: Essays and Reviews on Recent American Poetry and Poetics, Nature and Culture ; 9781587291807 >
-      au < down ; 1989 ; 9780887068317 ; 9781438407449 ; Language, Torah, and Hermeneutics in Abraham Abulafia ; 9781438407449 >
+      au < down ; 1989 ; 9780887068317 ; 9781438407449 ; Language, Torah, and Hermeneutics in Abraham Abulafia ; 9781438407449 > # removed by publisher, see above
       au < down ; 1989 ; 9780887066368 ; 9781438407791 ; Poetics of Ascent, The: Theories of Language in a Rabbinic Ascent Text ; 9781438407791 >
       au < down ; 1989 ; 9780887068454 ; 9781438403151 ; Politics of Interpretation, The: Alterity and Ideology in Old Yiddish Studies ; 9781438403151 >
       au < down ; 1989 ; 9781557530646 ; 9781612490502 ; Vienna Coffeehouse Wits, 1890-1938 ; 9781612490502 >
@@ -6757,7 +6765,7 @@
       au < down ; 1995 ; 9780944318508 ; 9780944318508 ; Gaston de Latour: The Revised Text ; 9780944318508 >
       au < down ; 1996 ; 9780814325803 ; 9780814338339 ; Lost Plays of the Harlem Renaissance, 1920-1940 ; 9780814338339 >
       au < down ; 1996 ; 9780874172744 ; 9780874178999 ; Stegner: Conversations on History and Literature ; 9780874178999 >
-      au < down ; 1996 ; 9780801852473 ; 9780801896194 ; Unclaimed Experience: Trauma, Narrative and History ; 9780801896194 >
+      au < down ; 1996 ; 9780801852473 ; 9780801896194 ; Unclaimed Experience: Trauma, Narrative and History ; 9780801896194 > # no longer online, see above
       au < down ; 1997 ; 9780877455912 ; 9781587292392 ; Waking Sleeping Beauty: Feminist Voices in Children's Novels ; 9781587292392 >
       au < down ; 1999 ; 9780814327586 ; 9780814338308 ; From Court to Forest: Giambattista Basile's Lo cunto de li cunti and the Birth of the Literary Fairy Tale ; 9780814338308 >
       au < down ; 1999 ; 9780944318126 ; 9780944318607 ; Notes on 'Pilgrimage': Dorothy Richardson Annotated ; 9780944318607 >
