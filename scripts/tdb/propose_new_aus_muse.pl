@@ -39,7 +39,9 @@ my $ret = GetOptions('help|h' => \$opt_help,
    $plugin = "ProjectMusePlugin";
    $base_url = "https://muse.jhu.edu/";
 #   }
-if ($ret != 1 || $opt_help || (int(@ARGV) < 1)) {
+#if ($ret != 1 || $opt_help || (int(@ARGV) < 1)) {
+#    &usage;
+if ($opt_help) {
     &usage;
 }
 
