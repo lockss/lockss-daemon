@@ -46180,8 +46180,6 @@ comment[mpj] = now published by Brill
         eissn = 1742-9692
       >
 
-      {
-
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://thr.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
@@ -46199,8 +46197,35 @@ comment[mpj] = now published by Brill
         au < released ; 2015 ; Tourism and Hospitality Research Volume 15 ; 15 >
         au < manifest ; 2016 ; Tourism and Hospitality Research Volume 16 ; 16 >
 
-      }
+    }
 
+    {
+  
+      title <
+        name = Tourism Economics ;
+        issn = 1354-8166 ;
+        eissn = 2044-0375
+      >
+  
+        param[base_url] = http://teu.sagepub.com/
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+  
+        au < exists ; 2003 ; Tourism Economics Volume 9 ; 9 >
+        au < doesNotExist ; 2004 ; Tourism Economics Volume 10 ; 10 >
+        au < doesNotExist ; 2005 ; Tourism Economics Volume 11 ; 11 >
+        au < doesNotExist ; 2006 ; Tourism Economics Volume 12 ; 12 >
+        au < doesNotExist ; 2007 ; Tourism Economics Volume 13 ; 13 >
+        au < doesNotExist ; 2008 ; Tourism Economics Volume 14 ; 14 >
+        au < doesNotExist ; 2009 ; Tourism Economics Volume 15 ; 15 >
+        au < doesNotExist ; 2010 ; Tourism Economics Volume 16 ; 16 >
+        au < doesNotExist ; 2011 ; Tourism Economics Volume 17 ; 17 >
+        au < doesNotExist ; 2012 ; Tourism Economics Volume 18 ; 18 >
+        au < doesNotExist ; 2013 ; Tourism Economics Volume 19 ; 19 >
+        au < doesNotExist ; 2014 ; Tourism Economics Volume 20 ; 20 >
+        au < doesNotExist ; 2015 ; Tourism Economics Volume 21 ; 21 >
+        au < exists ; 2016 ; Tourism Economics Volume 22 ; 22 >
+  
     }
 
     {
