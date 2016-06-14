@@ -336,7 +336,7 @@
       eissn = 1088-9477
     >
     
-    # doNotProcess: PD-1209, no substance found
+    # RT#7568, doNotProcess: PD-1209, no substance found
     
     param[journal_id] = notices
     
