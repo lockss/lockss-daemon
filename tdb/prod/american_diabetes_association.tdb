@@ -4,8 +4,8 @@
     
   >
 
-     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin  
-     implicit < status ; year ; name ; param[volume_name] >
+     pluginPrefix = org.lockss.plugin.highwire.
+     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
      
     {
     
@@ -18,22 +18,22 @@
  
       param[base_url] = http://clinical.diabetesjournals.org/
      
-      au < released ; 2001 ; Clinical Diabetes Volume 19 ; 19 >
-      au < released ; 2002 ; Clinical Diabetes Volume 20 ; 20 >
-      au < released ; 2003 ; Clinical Diabetes Volume 21 ; 21 >
-      au < released ; 2004 ; Clinical Diabetes Volume 22 ; 22 >
-      au < released ; 2005 ; Clinical Diabetes Volume 23 ; 23 >
-      au < released ; 2006 ; Clinical Diabetes Volume 24 ; 24 >
-      au < released ; 2007 ; Clinical Diabetes Volume 25 ; 25 >
-      au < released ; 2008 ; Clinical Diabetes Volume 26 ; 26 >
-      au < released ; 2009 ; Clinical Diabetes Volume 27 ; 27 >
-      au < released ; 2010 ; Clinical Diabetes Volume 28 ; 28 >
-      au < released ; 2011 ; Clinical Diabetes Volume 29 ; 29 >
-      au < released ; 2012 ; Clinical Diabetes Volume 30 ; 30 >
-      au < released ; 2013 ; Clinical Diabetes Volume 31 ; 31 >
-      au < released ; 2014 ; Clinical Diabetes Volume 32 ; 32 >
-      au < released ; 2015 ; Clinical Diabetes Volume 33 ; 33 >
-      au < manifest ; 2016 ; Clinical Diabetes Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; down ; 2001 ; Clinical Diabetes Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; down ; 2002 ; Clinical Diabetes Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; down ; 2003 ; Clinical Diabetes Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; down ; 2004 ; Clinical Diabetes Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; down ; 2005 ; Clinical Diabetes Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; down ; 2006 ; Clinical Diabetes Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; down ; 2007 ; Clinical Diabetes Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; down ; 2008 ; Clinical Diabetes Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; down ; 2009 ; Clinical Diabetes Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; down ; 2010 ; Clinical Diabetes Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Clinical Diabetes Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Clinical Diabetes Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; down ; 2013 ; Clinical Diabetes Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; down ; 2014 ; Clinical Diabetes Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; down ; 2015 ; Clinical Diabetes Volume 33 ; 33 >
+      au < HWDrupalPlugin ; exists ; 2016 ; Clinical Diabetes Volume 34 ; 34 >
 
     }
     
@@ -53,63 +53,63 @@
       comment[supplement] = Scientific Sessions Abstract Book - this is published as a supplement to Diabetes journal
 
 
-      au < released ; 1966 ; Diabetes Volume 14 [tables of contents only] ; 14 >
-      au < released ; 1966 ; Diabetes Volume 15 [tables of contents only] ; 15 >
-      au < released ; 1967 ; Diabetes Volume 16 [tables of contents only] ; 16 >
-      au < released ; 1968 ; Diabetes Volume 17 [tables of contents only] ; 17 >
-      au < released ; 1969 ; Diabetes Volume 18 [tables of contents only] ; 18 >
-      au < released ; 1970 ; Diabetes Volume 19 [tables of contents only] ; 19 >
-      au < released ; 1971 ; Diabetes Volume 20 [tables of contents only] ; 20 >
-      au < released ; 1972 ; Diabetes Volume 21 [tables of contents only] ; 21 >
-      au < released ; 1973 ; Diabetes Volume 22 [tables of contents only] ; 22 >
-      au < released ; 1974 ; Diabetes Volume 23 [tables of contents only] ; 23 >
+      au < HighWirePressH20Plugin ; down ; 1966 ; Diabetes Volume 14 [tables of contents only] ; 14 >
+      au < HighWirePressH20Plugin ; down ; 1966 ; Diabetes Volume 15 [tables of contents only] ; 15 >
+      au < HighWirePressH20Plugin ; down ; 1967 ; Diabetes Volume 16 [tables of contents only] ; 16 >
+      au < HighWirePressH20Plugin ; down ; 1968 ; Diabetes Volume 17 [tables of contents only] ; 17 >
+      au < HighWirePressH20Plugin ; down ; 1969 ; Diabetes Volume 18 [tables of contents only] ; 18 >
+      au < HighWirePressH20Plugin ; down ; 1970 ; Diabetes Volume 19 [tables of contents only] ; 19 >
+      au < HighWirePressH20Plugin ; down ; 1971 ; Diabetes Volume 20 [tables of contents only] ; 20 >
+      au < HighWirePressH20Plugin ; down ; 1972 ; Diabetes Volume 21 [tables of contents only] ; 21 >
+      au < HighWirePressH20Plugin ; down ; 1973 ; Diabetes Volume 22 [tables of contents only] ; 22 >
+      au < HighWirePressH20Plugin ; down ; 1974 ; Diabetes Volume 23 [tables of contents only] ; 23 >
       {
 
         attr[au_coverage_depth] = abstracts
 
-        au < released ; 1975 ; Diabetes Volume 24 [abstracts only] ; 24 >
-        au < released ; 1976 ; Diabetes Volume 25 [abstracts only] ; 25 >
-        au < released ; 1977 ; Diabetes Volume 26 [abstracts only] ; 26 >
-        au < released ; 1978 ; Diabetes Volume 27 [abstracts only] ; 27 >
-        au < released ; 1979 ; Diabetes Volume 28 [abstracts only] ; 28 >
-        au < released ; 1980 ; Diabetes Volume 29 [abstracts only] ; 29 >
-        au < released ; 1981 ; Diabetes Volume 30 [abstracts only] ; 30 >
-        au < released ; 1982 ; Diabetes Volume 31 [abstracts only] ; 31 >
-        au < released ; 1983 ; Diabetes Volume 32 [abstracts only] ; 32 >
-        au < released ; 1984 ; Diabetes Volume 33 [abstracts only] ; 33 >
-        au < released ; 1985 ; Diabetes Volume 34 [abstracts only] ; 34 >
-        au < released ; 1986 ; Diabetes Volume 35 [abstracts only] ; 35 >
-        au < released ; 1987 ; Diabetes Volume 36 [abstracts only] ; 36 >
-        au < released ; 1988 ; Diabetes Volume 37 [abstracts only] ; 37 >
-        au < released ; 1989 ; Diabetes Volume 38 [abstracts only] ; 38 >
-        au < released ; 1990 ; Diabetes Volume 39 [abstracts only] ; 39 >
-        au < released ; 1991 ; Diabetes Volume 40 [abstracts only] ; 40 >
-        au < released ; 1992 ; Diabetes Volume 41 [abstracts only] ; 41 >
-        au < released ; 1993 ; Diabetes Volume 42 [abstracts only] ; 42 >
-        au < released ; 1994 ; Diabetes Volume 43 [abstracts only] ; 43 >
-        au < released ; 1995 ; Diabetes Volume 44 [abstracts only] ; 44 >
-        au < released ; 1996 ; Diabetes Volume 45 [abstracts only] ; 45 >
-        au < released ; 1997 ; Diabetes Volume 46 [abstracts only] ; 46 >
+        au < HighWirePressH20Plugin ; down ; 1975 ; Diabetes Volume 24 [abstracts only] ; 24 >
+        au < HighWirePressH20Plugin ; down ; 1976 ; Diabetes Volume 25 [abstracts only] ; 25 >
+        au < HighWirePressH20Plugin ; down ; 1977 ; Diabetes Volume 26 [abstracts only] ; 26 >
+        au < HighWirePressH20Plugin ; down ; 1978 ; Diabetes Volume 27 [abstracts only] ; 27 >
+        au < HighWirePressH20Plugin ; down ; 1979 ; Diabetes Volume 28 [abstracts only] ; 28 >
+        au < HighWirePressH20Plugin ; down ; 1980 ; Diabetes Volume 29 [abstracts only] ; 29 >
+        au < HighWirePressH20Plugin ; down ; 1981 ; Diabetes Volume 30 [abstracts only] ; 30 >
+        au < HighWirePressH20Plugin ; down ; 1982 ; Diabetes Volume 31 [abstracts only] ; 31 >
+        au < HighWirePressH20Plugin ; down ; 1983 ; Diabetes Volume 32 [abstracts only] ; 32 >
+        au < HighWirePressH20Plugin ; down ; 1984 ; Diabetes Volume 33 [abstracts only] ; 33 >
+        au < HighWirePressH20Plugin ; down ; 1985 ; Diabetes Volume 34 [abstracts only] ; 34 >
+        au < HighWirePressH20Plugin ; down ; 1986 ; Diabetes Volume 35 [abstracts only] ; 35 >
+        au < HighWirePressH20Plugin ; down ; 1987 ; Diabetes Volume 36 [abstracts only] ; 36 >
+        au < HighWirePressH20Plugin ; down ; 1988 ; Diabetes Volume 37 [abstracts only] ; 37 >
+        au < HighWirePressH20Plugin ; down ; 1989 ; Diabetes Volume 38 [abstracts only] ; 38 >
+        au < HighWirePressH20Plugin ; down ; 1990 ; Diabetes Volume 39 [abstracts only] ; 39 >
+        au < HighWirePressH20Plugin ; down ; 1991 ; Diabetes Volume 40 [abstracts only] ; 40 >
+        au < HighWirePressH20Plugin ; down ; 1992 ; Diabetes Volume 41 [abstracts only] ; 41 >
+        au < HighWirePressH20Plugin ; down ; 1993 ; Diabetes Volume 42 [abstracts only] ; 42 >
+        au < HighWirePressH20Plugin ; down ; 1994 ; Diabetes Volume 43 [abstracts only] ; 43 >
+        au < HighWirePressH20Plugin ; down ; 1995 ; Diabetes Volume 44 [abstracts only] ; 44 >
+        au < HighWirePressH20Plugin ; down ; 1996 ; Diabetes Volume 45 [abstracts only] ; 45 >
+        au < HighWirePressH20Plugin ; down ; 1997 ; Diabetes Volume 46 [abstracts only] ; 46 >
       }
-      au < released ; 1998 ; Diabetes Volume 47 ; 47 >
-      au < released ; 1999 ; Diabetes Volume 48 ; 48 >
-      au < released ; 2000 ; Diabetes Volume 49 ; 49 >
-      au < released ; 2001 ; Diabetes Volume 50 ; 50 >
-      au < released ; 2002 ; Diabetes Volume 51 ; 51 >
-      au < released ; 2003 ; Diabetes Volume 52 ; 52 >
-      au < released ; 2004 ; Diabetes Volume 53 ; 53 >
-      au < released ; 2005 ; Diabetes Volume 54 ; 54 >
-      au < released ; 2006 ; Diabetes Volume 55 ; 55 >
-      au < released ; 2007 ; Diabetes Volume 56 ; 56 >
-      au < released ; 2008 ; Diabetes Volume 57 ; 57 >
-      au < released ; 2009 ; Diabetes Volume 58 ; 58 >
-      au < released ; 2010 ; Diabetes Volume 59 ; 59 >
-      au < released ; 2011 ; Diabetes Volume 60 ; 60 >
-      au < released ; 2012 ; Diabetes Volume 61 ; 61 >
-      au < released ; 2013 ; Diabetes Volume 62 ; 62 >
-      au < released ; 2014 ; Diabetes Volume 63 ; 63 >
-      au < released ; 2015 ; Diabetes Volume 64 ; 64 >
-      au < manifest ; 2016 ; Diabetes Volume 65 ; 65 >
+      au < HighWirePressH20Plugin ; down ; 1998 ; Diabetes Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; down ; 1999 ; Diabetes Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; down ; 2000 ; Diabetes Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; down ; 2001 ; Diabetes Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; down ; 2002 ; Diabetes Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; down ; 2003 ; Diabetes Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; down ; 2004 ; Diabetes Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; down ; 2005 ; Diabetes Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; down ; 2006 ; Diabetes Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; down ; 2007 ; Diabetes Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; down ; 2008 ; Diabetes Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; down ; 2009 ; Diabetes Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; down ; 2010 ; Diabetes Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Diabetes Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Diabetes Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; down ; 2013 ; Diabetes Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; down ; 2014 ; Diabetes Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; down ; 2015 ; Diabetes Volume 64 ; 64 >
+      au < HWDrupalPlugin ; exists ; 2016 ; Diabetes Volume 65 ; 65 >
 
     }
 
@@ -132,46 +132,46 @@
 
       attr[au_coverage_depth] = abstracts
 
-        au < released ; 1978 ; Diabetes Care Volume 1 [abstracts only] ; 1 >
-        au < released ; 1979 ; Diabetes Care Volume 2 [abstracts only] ; 2 >
-        au < released ; 1980 ; Diabetes Care Volume 3 [abstracts only] ; 3 >
-        au < released ; 1981 ; Diabetes Care Volume 4 [abstracts only] ; 4 >
-        au < released ; 1982 ; Diabetes Care Volume 5 [abstracts only] ; 5 >
-        au < released ; 1983 ; Diabetes Care Volume 6 [abstracts only] ; 6 >
-        au < released ; 1984 ; Diabetes Care Volume 7 [abstracts only] ; 7 >
-        au < released ; 1985 ; Diabetes Care Volume 8 [abstracts only] ; 8 >
-        au < released ; 1986 ; Diabetes Care Volume 9 [abstracts only] ; 9 >
-        au < released ; 1987 ; Diabetes Care Volume 10 [abstracts only] ; 10 >
-        au < released ; 1988 ; Diabetes Care Volume 11 [abstracts only] ; 11 >
-        au < released ; 1989 ; Diabetes Care Volume 12 [abstracts only] ; 12 >
-        au < released ; 1990 ; Diabetes Care Volume 13 [abstracts only] ; 13 >
-        au < released ; 1991 ; Diabetes Care Volume 14 [abstracts only] ; 14 >
-        au < released ; 1992 ; Diabetes Care Volume 15 [abstracts only] ; 15 >
-        au < released ; 1993 ; Diabetes Care Volume 16 [abstracts only] ; 16 >
-        au < released ; 1994 ; Diabetes Care Volume 17 [abstracts only] ; 17 >
-        au < released ; 1995 ; Diabetes Care Volume 18 [abstracts only] ; 18 >
-        au < released ; 1996 ; Diabetes Care Volume 19 [abstracts only] ; 19 >
-        au < released ; 1997 ; Diabetes Care Volume 20 [abstracts only] ; 20 >
+        au < HighWirePressH20Plugin ; down ; 1978 ; Diabetes Care Volume 1 [abstracts only] ; 1 >
+        au < HighWirePressH20Plugin ; down ; 1979 ; Diabetes Care Volume 2 [abstracts only] ; 2 >
+        au < HighWirePressH20Plugin ; down ; 1980 ; Diabetes Care Volume 3 [abstracts only] ; 3 >
+        au < HighWirePressH20Plugin ; down ; 1981 ; Diabetes Care Volume 4 [abstracts only] ; 4 >
+        au < HighWirePressH20Plugin ; down ; 1982 ; Diabetes Care Volume 5 [abstracts only] ; 5 >
+        au < HighWirePressH20Plugin ; down ; 1983 ; Diabetes Care Volume 6 [abstracts only] ; 6 >
+        au < HighWirePressH20Plugin ; down ; 1984 ; Diabetes Care Volume 7 [abstracts only] ; 7 >
+        au < HighWirePressH20Plugin ; down ; 1985 ; Diabetes Care Volume 8 [abstracts only] ; 8 >
+        au < HighWirePressH20Plugin ; down ; 1986 ; Diabetes Care Volume 9 [abstracts only] ; 9 >
+        au < HighWirePressH20Plugin ; down ; 1987 ; Diabetes Care Volume 10 [abstracts only] ; 10 >
+        au < HighWirePressH20Plugin ; down ; 1988 ; Diabetes Care Volume 11 [abstracts only] ; 11 >
+        au < HighWirePressH20Plugin ; down ; 1989 ; Diabetes Care Volume 12 [abstracts only] ; 12 >
+        au < HighWirePressH20Plugin ; down ; 1990 ; Diabetes Care Volume 13 [abstracts only] ; 13 >
+        au < HighWirePressH20Plugin ; down ; 1991 ; Diabetes Care Volume 14 [abstracts only] ; 14 >
+        au < HighWirePressH20Plugin ; down ; 1992 ; Diabetes Care Volume 15 [abstracts only] ; 15 >
+        au < HighWirePressH20Plugin ; down ; 1993 ; Diabetes Care Volume 16 [abstracts only] ; 16 >
+        au < HighWirePressH20Plugin ; down ; 1994 ; Diabetes Care Volume 17 [abstracts only] ; 17 >
+        au < HighWirePressH20Plugin ; down ; 1995 ; Diabetes Care Volume 18 [abstracts only] ; 18 >
+        au < HighWirePressH20Plugin ; down ; 1996 ; Diabetes Care Volume 19 [abstracts only] ; 19 >
+        au < HighWirePressH20Plugin ; down ; 1997 ; Diabetes Care Volume 20 [abstracts only] ; 20 >
       }
-      au < released ; 1998 ; Diabetes Care Volume 21 ; 21 >
-      au < released ; 1999 ; Diabetes Care Volume 22 ; 22 >
-      au < released ; 2000 ; Diabetes Care Volume 23 ; 23 >
-      au < released ; 2001 ; Diabetes Care Volume 24 ; 24 >
-      au < released ; 2002 ; Diabetes Care Volume 25 ; 25 >
-      au < released ; 2003 ; Diabetes Care Volume 26 ; 26 >
-      au < released ; 2004 ; Diabetes Care Volume 27 ; 27 >
-      au < released ; 2005 ; Diabetes Care Volume 28 ; 28 >
-      au < released ; 2006 ; Diabetes Care Volume 29 ; 29 >
-      au < released ; 2007 ; Diabetes Care Volume 30 ; 30 >
-      au < released ; 2008 ; Diabetes Care Volume 31 ; 31 >
-      au < released ; 2009 ; Diabetes Care Volume 32 ; 32 >
-      au < released ; 2010 ; Diabetes Care Volume 33 ; 33 >
-      au < released ; 2011 ; Diabetes Care Volume 34 ; 34 >
-      au < released ; 2012 ; Diabetes Care Volume 35 ; 35 >
-      au < released ; 2013 ; Diabetes Care Volume 36 ; 36 >
-      au < released ; 2014 ; Diabetes Care Volume 37 ; 37 >
-      au < released ; 2015 ; Diabetes Care Volume 38 ; 38 >
-      au < manifest ; 2016 ; Diabetes Care Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; down ; 1998 ; Diabetes Care Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; down ; 1999 ; Diabetes Care Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; down ; 2000 ; Diabetes Care Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; down ; 2001 ; Diabetes Care Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; down ; 2002 ; Diabetes Care Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; down ; 2003 ; Diabetes Care Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; down ; 2004 ; Diabetes Care Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; down ; 2005 ; Diabetes Care Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; down ; 2006 ; Diabetes Care Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; down ; 2007 ; Diabetes Care Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; down ; 2008 ; Diabetes Care Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; down ; 2009 ; Diabetes Care Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; down ; 2010 ; Diabetes Care Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Diabetes Care Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Diabetes Care Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; down ; 2013 ; Diabetes Care Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; down ; 2014 ; Diabetes Care Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; down ; 2015 ; Diabetes Care Volume 38 ; 38 >
+      au < HWDrupalPlugin ; exists ; 2016 ; Diabetes Care Volume 39 ; 39 >
 
     }
 
@@ -186,22 +186,22 @@
 
       param[base_url] = http://spectrum.diabetesjournals.org/
 
-      au < released ; 2001 ; Diabetes Spectrum Volume 14 ; 14 >
-      au < released ; 2002 ; Diabetes Spectrum Volume 15 ; 15 >
-      au < released ; 2003 ; Diabetes Spectrum Volume 16 ; 16 >
-      au < released ; 2004 ; Diabetes Spectrum Volume 17 ; 17 >
-      au < released ; 2005 ; Diabetes Spectrum Volume 18 ; 18 >
-      au < released ; 2006 ; Diabetes Spectrum Volume 19 ; 19 >
-      au < released ; 2007 ; Diabetes Spectrum Volume 20 ; 20 >
-      au < released ; 2008 ; Diabetes Spectrum Volume 21 ; 21 >
-      au < released ; 2009 ; Diabetes Spectrum Volume 22 ; 22 >
-      au < released ; 2010 ; Diabetes Spectrum Volume 23 ; 23 >
-      au < released ; 2011 ; Diabetes Spectrum Volume 24 ; 24 >
-      au < released ; 2012 ; Diabetes Spectrum Volume 25 ; 25 >
-      au < released ; 2013 ; Diabetes Spectrum Volume 26 ; 26 >
-      au < released ; 2014 ; Diabetes Spectrum Volume 27 ; 27 >
-      au < released ; 2015 ; Diabetes Spectrum Volume 28 ; 28 >
-      au < manifest ; 2016 ; Diabetes Spectrum Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; down ; 2001 ; Diabetes Spectrum Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; down ; 2002 ; Diabetes Spectrum Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; down ; 2003 ; Diabetes Spectrum Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; down ; 2004 ; Diabetes Spectrum Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; down ; 2005 ; Diabetes Spectrum Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; down ; 2006 ; Diabetes Spectrum Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; down ; 2007 ; Diabetes Spectrum Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; down ; 2008 ; Diabetes Spectrum Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; down ; 2009 ; Diabetes Spectrum Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; down ; 2010 ; Diabetes Spectrum Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; down ; 2011 ; Diabetes Spectrum Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; down ; 2012 ; Diabetes Spectrum Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; down ; 2013 ; Diabetes Spectrum Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; down ; 2014 ; Diabetes Spectrum Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; down ; 2015 ; Diabetes Spectrum Volume 28 ; 28 >
+      au < HWDrupalPlugin ; exists ; 2016 ; Diabetes Spectrum Volume 29 ; 29 >
 
     }
 
@@ -216,11 +216,11 @@
       param[base_url] = http://docnews.diabetesjournals.org/
       # farewell issue Jan 2008. Journals no longer at this address.
 
-      au < down ; 2004 ; DOC News Volume 1 ; 1 >
-      au < down ; 2005 ; DOC News Volume 2 ; 2 >
-      au < down ; 2006 ; DOC News Volume 3 ; 3 >
-      au < down ; 2007 ; DOC News Volume 4 ; 4 >
-      au < down ; 2008 ; DOC News Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; down ; 2004 ; DOC News Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; down ; 2005 ; DOC News Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; down ; 2006 ; DOC News Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; down ; 2007 ; DOC News Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; down ; 2008 ; DOC News Volume 5 ; 5 >
 
     }
 
