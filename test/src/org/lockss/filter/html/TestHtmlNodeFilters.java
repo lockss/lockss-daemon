@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,12 +35,12 @@ package org.lockss.filter.html;
 import java.io.*;
 import java.util.*;
 import org.htmlparser.*;
+import org.htmlparser.filters.AndFilter;
 import org.htmlparser.tags.*;
 import org.htmlparser.util.*;
 
 import org.lockss.util.*;
 import org.lockss.test.*;
-import org.lockss.filter.html.HtmlNodeFilters.AllExceptSubtreeNodeFilter;
 import org.lockss.servlet.ServletUtil;
 
 public class TestHtmlNodeFilters extends LockssTestCase {
@@ -748,4 +748,40 @@ public class TestHtmlNodeFilters extends LockssTestCase {
     assertEquals(0, ret.size());
   }
 
+  /**
+   * @since 1.71
+   */
+  public void testAncestor() throws Exception {
+    String input = "<div class=\"bad1\">...a...<div class=\"good2\">...b...<div class=\"bad3\">...c...<div class=\"bad4\">...d...<p class=\"target\">...e...</p>...f...</div>...g...</div>...h...</div>...i...</div>";
+    NodeList nl = parse(input);
+    assertEquals(1, nl.size());
+    // With specific target
+    NodeList ret1 = new NodeList();
+    nl.elementAt(0).collectInto(ret1, new AndFilter(HtmlNodeFilters.tagWithAttribute("p", "class", "target"),
+                                                     HtmlNodeFilters.ancestor(HtmlNodeFilters.tagWithAttribute("div", "class", "good2"))));
+    assertEquals(1, ret1.size());
+    assertTrue(HtmlNodeFilters.tagWithAttribute("p", "class", "target").accept(ret1.elementAt(0)));
+  }
+
+  /**
+   * @since 1.71
+   */
+  public void testParent() throws Exception {
+    String input = "<div class=\"bad\">...a...<div class=\"parent\">...b...<p class=\"target\">...c...</p>...d...</div>...e...</div>";
+    NodeList nl = parse(input);
+    assertEquals(1, nl.size());
+    // With specific target
+    NodeList ret1 = new NodeList();
+    nl.elementAt(0).collectInto(ret1,
+                                 new AndFilter(HtmlNodeFilters.tagWithAttribute("p", "class", "target"),
+                                               HtmlNodeFilters.parent(HtmlNodeFilters.tagWithAttribute("div", "class", "parent"))));
+    assertEquals(1, ret1.size());
+    assertTrue(HtmlNodeFilters.tagWithAttribute("p", "class", "target").accept(ret1.elementAt(0)));
+    // Without specific target
+    NodeList ret2 = new NodeList();
+    nl.elementAt(0).collectInto(ret2, HtmlNodeFilters.parent(HtmlNodeFilters.tagWithAttribute("div", "class", "parent")));
+    assertEquals(1, ret2.size());
+    assertTrue(HtmlNodeFilters.tagWithAttribute("p", "class", "target").accept(ret2.elementAt(0)));
+  }
+  
 }

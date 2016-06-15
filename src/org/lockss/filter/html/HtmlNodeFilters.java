@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -174,6 +174,43 @@ public class HtmlNodeFilters {
 
   /**
    * <p>
+   * Returns a node filter that selects nodes that have an ancestor node that
+   * matches the given ancestor node filter.
+   * </p>
+   * <p>
+   * Note that this filter will match not only the node you might be thinking
+   * of but also every node between it and the ancestor you might be thinking
+   * of: you should combine it with another filter, probably an AndFilter, to
+   * select only the node you might mean.
+   * </p>
+   * 
+   * @param ancestorFilter
+   *          A node filter to be applied to ancestors.
+   * @return A node filter that returns true if and only if the examined node is
+   *         non-null and has an ancestor that matches the given ancestor node
+   *         filter.
+   * @since 1.71
+   */  public static NodeFilter ancestor(final NodeFilter ancestorFilter) {
+    return new NodeFilter() {
+      @Override
+      public boolean accept(Node node) {
+        if (node == null || !(node instanceof Tag) || ((Tag)node).isEndTag()) {
+          return false;
+        }
+        Node ancestor = node.getParent();
+        while (ancestor != null && ancestor instanceof Tag) {
+          if (ancestorFilter.accept(ancestor)) {
+            return true;
+          }
+          ancestor = ancestor.getParent();
+        }
+        return false;
+      }
+    };
+  }
+  
+  /**
+   * <p>
    * A node filter that matches any HTML comment.
    * </p>
    * 
@@ -281,6 +318,35 @@ public class HtmlNodeFilters {
     return new OrFilter(filters);
   }
 
+  /**
+   * <p>
+   * Returns a node filter that selects tags whose immediate parent tag matches
+   * the given parent node filter.
+   * </p>
+   * 
+   * @param parentFilter
+   *          A node filter to be applied to the immediate parent tag.
+   * @return A node filter that returns true if and only if the examined node is
+   *         a non-null tag and has an immediate parent tag that matches the
+   *         given parent node filter.
+   * @since 1.71
+   */
+  public static NodeFilter parent(final NodeFilter parentFilter) {
+    return new NodeFilter() {
+      @Override
+      public boolean accept(Node node) {
+        if (node == null || !(node instanceof Tag) || ((Tag)node).isEndTag()) {
+          return false; // end tags return as their parent the matching opening tag
+        }
+        Node parent = node.getParent();
+        if (parent == null || !(node instanceof Tag)) {
+          return false;
+        }
+        return parentFilter.accept(parent);
+      }
+    };
+  }
+  
   /** Create a NodeFilter that applies all of an array of StyleRegexYesXforms
    */
   public static NodeFilter styleRegexYesXforms(String[] regex,
