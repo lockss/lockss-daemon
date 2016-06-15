@@ -654,7 +654,7 @@
     au < crawling ; exists ; 2014 ; Quebec Studies Volume 57 ; 57 ; >
     au < finished ; finished ; 2014 ; Quebec Studies Volume 58 ; 58 ; >
     au < crawling ; exists ; 2015 ; Quebec Studies Volume 59 ; 59 ; >
-    au < exists ; exists ; 2015 ; Quebec Studies Volume 60 ; 60 ; >
+    au < manifest ; exists ; 2015 ; Quebec Studies Volume 60 ; 60 ; >
     au < expected ; exists ; 2016 ; Quebec Studies Volume 61 ; 61 ; >
     au < expected ; exists ; 2016 ; Quebec Studies Volume 62 ; 62 ; >
 
@@ -721,9 +721,11 @@
 
     param[journal_id] = studia
 
-    au < expected ; exists ; 2011 ; Studia Hibernica Volume 37 ; 37 ; >
-
-    au < expected ; exists ; 2015 ; Studia Hibernica Volume 41 ; 41 ; >
+    au < manifest ; exists ; 2011 ; Studia Hibernica Volume 37 ; 37 ; >
+    au < exists ; exists ; 2012 ; Studia Hibernica Volume 38 ; 38 ; >
+    au < exists ; exists ; 2013 ; Studia Hibernica Volume 39 ; 39 ; >
+    au < exists ; exists ; 2014 ; Studia Hibernica Volume 40 ; 40 ; >
+    au < manifest ; exists ; 2015 ; Studia Hibernica Volume 41 ; 41 ; >
     au < expected ; exists ; 2016 ; Studia Hibernica Volume 42 ; 42 ; >
 
   }
