@@ -931,7 +931,7 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2015 ; AERA Open Volume 1 ; 1 >
-      au < expected ; 2016 ; AERA Open Volume 2 ; 2 >
+      au < manifest ; 2016 ; AERA Open Volume 2 ; 2 >
 
   }
 
@@ -5343,7 +5343,7 @@
         au < released ; 2015 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 128 ; 128 >
         au < manifest ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 129 ; 129 >
         au < manifest ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 130 ; 130 >
-        au < expected ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 131 ; 131 >
+        au < manifest ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 131 ; 131 >
         au < expected ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 132 ; 132 >
 
       }
@@ -19194,7 +19194,7 @@
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2016 ; IThe International Journal of Entrepreneurship and Innovation Volume 17 ; 17 >
+      au < manifest ; 2016 ; IThe International Journal of Entrepreneurship and Innovation Volume 17 ; 17 >
 
     }
 
@@ -32211,7 +32211,7 @@ comment[mpj] = now published by Brill
       au < exists ; 2013 ; The Journal of Transport History Volume 34 ; 34 >
       au < exists ; 2014 ; The Journal of Transport History Volume 35 ; 35 >
       au < released ; 2015 ; The Journal of Transport History Volume 36 ; 36 >
-      au < expected ; 2016 ; The Journal of Transport History Volume 37 ; 37 >
+      au < manifest ; 2016 ; The Journal of Transport History Volume 37 ; 37 >
 
   }
 
@@ -32446,8 +32446,8 @@ comment[mpj] = now published by Brill
         au < exists ; 2012 ; Journal of Veterinary Dentistry Volume 29 ; 29 >
         au < exists ; 2013 ; Journal of Veterinary Dentistry Volume 30 ; 30 >
         au < exists ; 2014 ; Journal of Veterinary Dentistry Volume 31 ; 31 >
-        au < exists ; 2015 ; Journal of Veterinary Dentistry Volume 32 ; 32 >
-        au < exists ; 2016 ; Journal of Veterinary Dentistry Volume 33 ; 33 >
+        au < manifest ; 2015 ; Journal of Veterinary Dentistry Volume 32 ; 32 >
+        au < manifest ; 2016 ; Journal of Veterinary Dentistry Volume 33 ; 33 >
   
     }
 
@@ -36955,8 +36955,8 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
   
-        au < exists ; 2015 ; Outlook on Agriculture Volume 44 ; 44 >
-        au < expected ; 2016 ; Outlook on Agriculture Volume 45 ; 45 >
+        au < manifest ; 2015 ; Outlook on Agriculture Volume 44 ; 44 >
+        au < manifest ; 2016 ; Outlook on Agriculture Volume 45 ; 45 >
   
     }
 
@@ -43692,7 +43692,7 @@ comment[mpj] = now published by Brill
         au < released ; 2013 ; South Asian Journal of Business and Management Cases Volume 2 ; 2 >
         au < released ; 2014 ; South Asian Journal of Business and Management Cases Volume 3 ; 3 >
         au < released ; 2015 ; South Asian Journal of Business and Management Cases Volume 4 ; 4 >
-        au < expected ; 2016 ; South Asian Journal of Business and Management Cases Volume 5 ; 5 >
+        au < manifest ; 2016 ; South Asian Journal of Business and Management Cases Volume 5 ; 5 >
 
       }
 
@@ -44319,7 +44319,7 @@ comment[mpj] = now published by Brill
         au < released ; 2013 ; Studies in Indian Politics Volume 1 ; 1 >
         au < released ; 2014 ; Studies in Indian Politics Volume 2 ; 2 >
         au < released ; 2015 ; Studies in Indian Politics Volume 3 ; 3 >
-        au < expected ; 2016 ; Studies in Indian Politics Volume 4 ; 4 >
+        au < manifest ; 2016 ; Studies in Indian Politics Volume 4 ; 4 >
 
       }
 
@@ -48781,7 +48781,7 @@ comment[mpj] = now published by Brill
         au < released ; 2013 ; Political Science Volume 65 ; 65 >
         au < released ; 2014 ; Political Science Volume 66 ; 66 >
         au < released ; 2015 ; Political Science Volume 67 ; 67 >
-        au < expected ; 2016 ; Political Science Volume 68 ; 68 >
+        au < manifest ; 2016 ; Political Science Volume 68 ; 68 >
 
       }
 
