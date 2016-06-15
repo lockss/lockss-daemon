@@ -24,7 +24,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < superseded ; exists ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 [to delete] ; 40 ; >
-    au < down ; crawling ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; reingest4.clockss.org:8083 >
+    au < zapped ; frozen ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; reingest4.clockss.org:8083 >
 
     }
 
@@ -22267,7 +22267,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; finished ; 2008 ; Social Politics Volume 15 ; 15 ; >
-    au < down ; crawling ; 2009 ; Social Politics Volume 16 ; 16 ; reingest4.clockss.org:8082 >
+    au < zapped ; superseded ; 2009 ; Social Politics Volume 16 [superseded] ; 16 ; >
 
     }
 
@@ -22559,7 +22559,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; finished ; 2008 ; Socio-Economic Review Volume 6 ; 6 ; >
-    au < down ; crawling ; 2009 ; Socio-Economic Review Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+    au < zapped ; superseded ; 2009 ; Socio-Economic Review Volume 7 [superseded] ; 7 ; >
 
     }
 
@@ -22574,7 +22574,7 @@
     au < manifest ; exists ; 2006 ; Socio-Economic Review Volume 4 ; 4 ; >
     au < manifest ; exists ; 2007 ; Socio-Economic Review Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Socio-Economic Review Volume 6 ; 6 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Socio-Economic Review Volume 7 ; 7 ; >
+    au < exists ; exists ; 2009 ; Socio-Economic Review Volume 7 ; 7 ; >
     au < finished ; crawling ; 2010 ; Socio-Economic Review Volume 8 ; 8 ; >
     au < finished ; finished ; 2011 ; Socio-Economic Review Volume 9 ; 9 ; >
     au < finished ; crawling ; 2012 ; Socio-Economic Review Volume 10 ; 10 ; >
@@ -22683,7 +22683,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; finished ; 2008 ; Statute Law Review Volume 29 ; 29 ; >
-    au < down ; crawling ; 2009 ; Statute Law Review Volume 30 ; 30 ; reingest4.clockss.org:8082 >
+    au < zapped ; superseded ; 2009 ; Statute Law Review Volume 30 [superseded] ; 30 ; >
 
     }
 
@@ -22843,7 +22843,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; finished ; 2008 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 27 ; 27 ; >
-    au < down ; crawling ; 2009 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 28 ; 28 ; reingest4.clockss.org:8082 >
+    au < zapped ; superseded ; 2009 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 28 [superseded] ; 28 ; >
 
     }
 
@@ -23237,7 +23237,7 @@
     param[base_url] = http://treephys.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2009 ; Tree Physiology Volume 29 ; 29 ; reingest4.clockss.org:8082 >
+    au < zapped ; superseded ; 2009 ; Tree Physiology Volume 29 [superseded] ; 29 ; >
 
     }
 
@@ -23274,7 +23274,7 @@
     au < manifest ; exists ; 2006 ; Tree Physiology Volume 26 ; 26 ; >
     au < manifest ; exists ; 2007 ; Tree Physiology Volume 27 ; 27 ; >
     au < manifest ; exists ; 2008 ; Tree Physiology Volume 28 ; 28 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Tree Physiology Volume 29 ; 29 ; >
+    au < exists ; exists ; 2009 ; Tree Physiology Volume 29 ; 29 ; >
     au < finished ; frozen ; 2010 ; Tree Physiology Volume 30 ; 30 ; >
     au < finished ; frozen ; 2011 ; Tree Physiology Volume 31 ; 31 ; >
     au < finished ; frozen ; 2012 ; Tree Physiology Volume 32 ; 32 ; >
@@ -23353,7 +23353,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; finished ; 2008 ; Twentieth Century British History Volume 19 ; 19 ; >
-    au < zapped ; finished ; 2009 ; Twentieth Century British History Volume 20 ; 20 ; reingest4.clockss.org:8082 >
+    au < zapped ; superseded ; 2009 ; Twentieth Century British History Volume 20 [superseded] ; 20 ; >
 
     }
 
