@@ -3170,6 +3170,21 @@
     {
 
     title <
+      name = ANTYAJAA: Indian Journal of Women and Social Change ;
+      issn = 2455-6327 
+    >
+
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+        param[base_url] = http://jws.sagepub.com/
+
+        au < expected ; 2016 ; ANTYAJAA: Indian Journal of Women and Social Change Volume 1 ; 1 >
+
+    }
+
+    {
+
+    title <
       name = Applied Biosafety ;
       issn = 1535-6760 
     >
