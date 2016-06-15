@@ -137,6 +137,9 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttribute("div", "class", "options"),
             // DROP title icons (e.g. 'Routledge Open Select') [TOC overview]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "journalOverviewAds"),
+            // DROP book review subtitle (added later)
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "subtitle"), // [TOC] e.g. http://www.tandfonline.com/toc/wtsw20/33/1)
+            // ...placeholder for [abs/full/ref/suppl overview] e.g. http://www.tandfonline.com/doi/full/10.1080/08841233.2013.751003
             // DROP Google Translate artifacts [abs/full/ref/suppl overview]
             HtmlNodeFilters.tagWithAttribute("div", "id", "google_translate_element"), // current
             HtmlNodeFilters.tagWithAttribute("div", "id", "goog-gt-tt"), // old
@@ -147,6 +150,10 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttributeRegex("div", "id", "alertDiv"), // old
             // DROP "Publishing models and article dates explained" link [abs/full/ref/suppl overview]
             HtmlNodeFilters.tagWithAttributeRegex("a", "href", "models-and-dates-explained"),
+            // DROP subtitle for journal section/subject (added later) [abs/full/ref/suppl overview]
+            HtmlNodeFilters.tagWithAttribute("span", "class", "subj-group"),
+            // DROP non-access box article links (e.g. "View full text"->"Full text HTML") [abs/full/ref/suppl overview]
+            HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "top_article_links"),
             // DROP outgoing links and SFX links [article block, full, ref]
             HtmlNodeFilters.allExceptSubtree(HtmlNodeFilters.tagWithAttribute("span", "class", "referenceDiv"),
                                              HtmlNodeFilters.tagWithAttribute("a", "class", "dropDownLabel")), // popup at each inline citation [full]
@@ -206,6 +213,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
         // Markup changes over time
         {"&nbsp;", " "},
         {"&amp;", "&"},
+        {"\\", ""}, // e.g. \(, \-, present during encoding glitch (or similar)
     }, true);
 
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(stringFilter,
