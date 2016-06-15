@@ -527,6 +527,7 @@ while (my $line = <>) {
            ($plugin eq "AMetSocPlugin") ||
            ($plugin eq "ARRSPlugin") ||
            ($plugin eq "BIRAtyponPlugin") ||
+           ($plugin eq "EdinburghUniversityPressPlugin") ||
            ($plugin eq "EmeraldGroupPlugin") ||
            ($plugin eq "EndocrineSocietyPlugin") ||
            ($plugin eq "FutureSciencePlugin") ||
@@ -549,7 +550,10 @@ while (my $line = <>) {
           if ($req->url ne $resp->request->uri) {
               $vol_title = $resp->request->uri;
               $result = "Redirected";
-          } elsif (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) && (($man_contents =~ m/$param{journal_id}\/$param{volume_name}\//) || ($man_contents =~ m/$param{journal_id}\S*volume=$param{volume_name}/)))) {
+          } elsif (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) 
+                   && (($man_contents =~ m/$param{journal_id}\/$param{volume_name}\//)  
+                   || ($man_contents =~ m/\/toc/$param{journal_id}\/$param{volume_name}\"/) 
+                   || ($man_contents =~ m/$param{journal_id}\S*volume=$param{volume_name}/)))) {
               if ($man_contents =~ m/<title>\s*(.*) LOCKSS Manifest Page\s*<\/title>/si) {
                   $vol_title = $1;
                   $vol_title =~ s/\s*\n\s*/ /g;
@@ -575,6 +579,7 @@ while (my $line = <>) {
            ($plugin eq "ClockssASCEPlugin") ||
            ($plugin eq "ClockssBIRAtyponPlugin") ||
            ($plugin eq "ClockssFutureSciencePlugin") ||
+           ($plugin eq "ClockssEdinburghUniversityPressPlugin") ||
            ($plugin eq "ClockssEmeraldGroupPlugin") ||
            ($plugin eq "ClockssEndocrineSocietyPlugin") ||
            ($plugin eq "ClockssIndersciencePlugin") ||
@@ -599,7 +604,10 @@ while (my $line = <>) {
           if ($req->url ne $resp->request->uri) {
               $vol_title = $resp->request->uri;
               $result = "Redirected";
-          } elsif (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) && (($man_contents =~ m/$param{journal_id}\/$param{volume_name}\//) || ($man_contents =~ m/$param{journal_id}\S*volume=$param{volume_name}/)))) {
+          } elsif (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) && 
+                  (($man_contents =~ m/$param{journal_id}\/$param{volume_name}\//) || 
+                  ($man_contents =~ m/\/toc/$param{journal_id}\/$param{volume_name}\"/) || 
+                  ($man_contents =~ m/$param{journal_id}\S*volume=$param{volume_name}/)))) {
               if ($man_contents =~ m/<title>\s*(.*) CLOCKSS Manifest Page\s*<\/title>/si) {
                   $vol_title = $1;
                   $vol_title =~ s/\s*\n\s*/ /g;
@@ -730,57 +738,57 @@ while (my $line = <>) {
       }
         sleep(4);
 
-  } elsif ($plugin eq "EdinburghUniversityPressPlugin") {
-    $url = sprintf("%slockss/%s/%s/index.html",
-      $param{base_url}, $param{journal_id}, $param{volume_name});
-    $man_url = uri_unescape($url);
-    #printf("\nUrl: %s\n", $man_url);
-    my $req = HTTP::Request->new(GET, $man_url);
-    my $resp = $ua->request($req);
-    if ($resp->is_success) {
-      my $man_contents = $resp->content;
-      if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/)) && ($man_contents =~ m/\/$param{journal_id}\//)) {
-        if ($man_contents =~ m/<title>(.*)LOCKSS Manifest Page<\/title>/si) {
-          $vol_title = $1;
-          $vol_title =~ s/\s*\n\s*/ /g;
-          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-            $vol_title = "\"" . $vol_title . "\"";
-          }
-        }
-        $result = "Manifest";
-      } else {
-        $result = "--"
-      }
-    } else {
-      $result = "--"
-    }
-    sleep(4);
-
-  } elsif ($plugin eq "ClockssEdinburghUniversityPressPlugin") {
-    $url = sprintf("%sclockss/%s/%s/index.html",
-      $param{base_url}, $param{journal_id}, $param{volume_name});
-    $man_url = uri_unescape($url);
-    #printf("\nUrl: %s\n", $man_url);
-    my $req = HTTP::Request->new(GET, $man_url);
-    my $resp = $ua->request($req);
-    if ($resp->is_success) {
-      my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/\/$param{journal_id}\//)) {
-        if ($man_contents =~ m/<title>(.*)CLOCKSS Manifest Page<\/title>/si) {
-          $vol_title = $1;
-          $vol_title =~ s/\s*\n\s*/ /g;
-          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-            $vol_title = "\"" . $vol_title . "\"";
-          }
-        }
-        $result = "Manifest";
-      } else {
-        $result = "--"
-      }
-    } else {
-      $result = "--"
-    }
-    sleep(4);
+#  } elsif ($plugin eq "EdinburghUniversityPressPlugin") {
+#    $url = sprintf("%slockss/%s/%s/index.html",
+#      $param{base_url}, $param{journal_id}, $param{volume_name});
+#    $man_url = uri_unescape($url);
+#    #printf("\nUrl: %s\n", $man_url);
+#    my $req = HTTP::Request->new(GET, $man_url);
+#    my $resp = $ua->request($req);
+#    if ($resp->is_success) {
+#      my $man_contents = $resp->content;
+#      if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/)) && ($man_contents =~ m/\/$param{journal_id}\//)) {
+#        if ($man_contents =~ m/<title>(.*)LOCKSS Manifest Page<\/title>/si) {
+#          $vol_title = $1;
+#          $vol_title =~ s/\s*\n\s*/ /g;
+#          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+#            $vol_title = "\"" . $vol_title . "\"";
+#          }
+#        }
+#        $result = "Manifest";
+#      } else {
+#        $result = "--"
+#      }
+#    } else {
+#      $result = "--"
+#    }
+#    sleep(4);
+#
+#  } elsif ($plugin eq "ClockssEdinburghUniversityPressPlugin") {
+#    $url = sprintf("%sclockss/%s/%s/index.html",
+#      $param{base_url}, $param{journal_id}, $param{volume_name});
+#    $man_url = uri_unescape($url);
+#    #printf("\nUrl: %s\n", $man_url);
+#    my $req = HTTP::Request->new(GET, $man_url);
+#    my $resp = $ua->request($req);
+#    if ($resp->is_success) {
+#      my $man_contents = $resp->content;
+#      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/\/$param{journal_id}\//)) {
+#        if ($man_contents =~ m/<title>(.*)CLOCKSS Manifest Page<\/title>/si) {
+#          $vol_title = $1;
+#          $vol_title =~ s/\s*\n\s*/ /g;
+#          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+#            $vol_title = "\"" . $vol_title . "\"";
+#          }
+#        }
+#        $result = "Manifest";
+#      } else {
+#        $result = "--"
+#      }
+#    } else {
+#      $result = "--"
+#    }
+#    sleep(4);
 
   } elsif ($plugin eq "ClockssAmericanMathematicalSocietyPlugin") {
     $url = sprintf("%sclockssdata/?p=%s&y=%d",
