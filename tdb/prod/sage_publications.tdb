@@ -15897,13 +15897,14 @@
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
+      au < exists ; 2008 ; Irish Journal of Sociology Volume 16 ; 16 >
       au < exists ; 2009 ; Irish Journal of Sociology Volume 17 ; 17 >
       au < exists ; 2010 ; Irish Journal of Sociology Volume 18 ; 18 >
       au < exists ; 2011 ; Irish Journal of Sociology Volume 19 ; 19 >
       au < exists ; 2012 ; Irish Journal of Sociology Volume 20 ; 20 >
       au < exists ; 2013 ; Irish Journal of Sociology Volume 21 ; 21 >
       au < exists ; 2014 ; Irish Journal of Sociology Volume 22 ; 22 >
-      au < exists ; 2015 ; Irish Journal of Sociology Volume 23 ; 23 >
+      au < manifest ; 2015 ; Irish Journal of Sociology Volume 23 ; 23 >
       au < manifest ; 2016 ; Irish Journal of Sociology Volume 24 ; 24 >
 
   }
@@ -16182,6 +16183,7 @@
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
   
+        au < exists ; 2001 ; Health Information Management Journal Volume 29 ; 29 >
         au < exists ; 2002 ; Health Information Management Journal Volume 30 ; 30 >
         au < exists ; 2003 ; Health Information Management Journal Volume 31 ; 31 >
         au < exists ; 2004 ; Health Information Management Journal Volume 32 ; 32 >
@@ -21488,6 +21490,19 @@
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
+      au < exists ; 2002 ; Journal of Adult and Continuing Education Volume 8 ; 8 >
+      au < exists ; 2003 ; Journal of Adult and Continuing Education Volume 9 ; 9 >
+      au < exists ; 2004 ; Journal of Adult and Continuing Education Volume 10 ; 10 >
+      au < exists ; 2005 ; Journal of Adult and Continuing Education Volume 11 ; 11 >
+      au < exists ; 2006 ; Journal of Adult and Continuing Education Volume 12 ; 12 >
+      au < exists ; 2007 ; Journal of Adult and Continuing Education Volume 13 ; 13 >
+      au < exists ; 2008 ; Journal of Adult and Continuing Education Volume 14 ; 14 >
+      au < exists ; 2009 ; Journal of Adult and Continuing Education Volume 15 ; 15 >
+      au < exists ; 2010 ; Journal of Adult and Continuing Education Volume 16 ; 16 >
+      au < exists ; 2011 ; Journal of Adult and Continuing Education Volume 17 ; 17 >
+      au < exists ; 2012 ; Journal of Adult and Continuing Education Volume 18 ; 18 >
+      au < exists ; 2013 ; Journal of Adult and Continuing Education Volume 19 ; 19 >
+      au < exists ; 2014 ; Journal of Adult and Continuing Education Volume 20 ; 20 >
       au < manifest ; 2015 ; Journal of Adult and Continuing Education Volume 21 ; 21 >
       au < manifest ; 2016 ; Journal of Adult and Continuing Education Volume 22 ; 22 >
 
@@ -50112,6 +50127,7 @@ comment[mpj] = now published by Brill
     param[base_url] = http://ftr.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
+    au < exists ; 2012 ; Foreign Trade Review Volume 47 ; 47 >
     au < released ; 2013 ; Foreign Trade Review Volume 48 ; 48 >
     au < released ; 2014 ; Foreign Trade Review Volume 49 ; 49 >
     au < manifest ; 2015 ; Foreign Trade Review Volume 50 ; 50 >
@@ -51617,6 +51633,11 @@ comment[mpj] = now published by Brill
 
         comment[continued_by] = 2053-4354
 
+        au < HighWirePressH20Plugin ; exists ; 2000 ; International Journal of Care Pathways Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; exists ; 2001 ; International Journal of Care Pathways Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; exists ; 2002 ; International Journal of Care Pathways Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; exists ; 2003 ; International Journal of Care Pathways Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; exists ; 2004 ; International Journal of Care Pathways Volume 8 ; 8 >
         au < HighWirePressH20Plugin ; manifest ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 >
         au < HighWirePressH20Plugin ; manifest ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 >
         au < HighWirePressH20Plugin ; manifest ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 >
@@ -51780,6 +51801,7 @@ comment[mpj] = now published by Brill
 
         param[base_url] = http://hsr.sagepub.com/
 
+        au < HighWirePressH20Plugin ; manifest ; 2000 ; Journal of Health Services Research & Policy Volume 5 ; 5 >
         au < HighWirePressH20Plugin ; manifest ; 2001 ; Journal of Health Services Research & Policy Volume 6 ; 6 >
         au < HighWirePressH20Plugin ; manifest ; 2002 ; Journal of Health Services Research & Policy Volume 7 ; 7 >
         au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of Health Services Research & Policy Volume 8 ; 8 >

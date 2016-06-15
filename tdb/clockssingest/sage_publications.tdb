@@ -14157,6 +14157,7 @@
       param[base_url] = http://him.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 2001 ; Health Information Management Journal Volume 29 ; 29 ; >
       au < manifest ; exists ; 2002 ; Health Information Management Journal Volume 30 ; 30 ; >
       au < manifest ; exists ; 2003 ; Health Information Management Journal Volume 31 ; 31 ; >
       au < manifest ; exists ; 2004 ; Health Information Management Journal Volume 32 ; 32 ; >
@@ -18915,6 +18916,7 @@
       param[base_url] = http://irj.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < manifest ; exists ; 2008 ; Irish Journal of Sociology Volume 16 ; 16 ; >
       au < manifest ; exists ; 2009 ; Irish Journal of Sociology Volume 17 ; 17 ; >
       au < crawling ; exists ; 2010 ; Irish Journal of Sociology Volume 18 ; 18 ; >
       au < crawling ; exists ; 2011 ; Irish Journal of Sociology Volume 19 ; 19 ; >
@@ -19391,6 +19393,19 @@
         param[base_url] = http://adu.sagepub.com/
         pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 2002 ; Journal of Adult and Continuing Education Volume 8 ; 8 ; >
+      au < exists ; exists ; 2003 ; Journal of Adult and Continuing Education Volume 9 ; 9 ; >
+      au < exists ; exists ; 2004 ; Journal of Adult and Continuing Education Volume 10 ; 10 ; >
+      au < exists ; exists ; 2005 ; Journal of Adult and Continuing Education Volume 11 ; 11 ; >
+      au < exists ; exists ; 2006 ; Journal of Adult and Continuing Education Volume 12 ; 12 ; >
+      au < exists ; exists ; 2007 ; Journal of Adult and Continuing Education Volume 13 ; 13 ; >
+      au < exists ; exists ; 2008 ; Journal of Adult and Continuing Education Volume 14 ; 14 ; >
+      au < exists ; exists ; 2009 ; Journal of Adult and Continuing Education Volume 15 ; 15 ; >
+      au < exists ; exists ; 2010 ; Journal of Adult and Continuing Education Volume 16 ; 16 ; >
+      au < exists ; exists ; 2011 ; Journal of Adult and Continuing Education Volume 17 ; 17 ; >
+      au < exists ; exists ; 2012 ; Journal of Adult and Continuing Education Volume 18 ; 18 ; >
+      au < exists ; exists ; 2013 ; Journal of Adult and Continuing Education Volume 19 ; 19 ; >
+      au < exists ; exists ; 2014 ; Journal of Adult and Continuing Education Volume 20 ; 20 ; >
       au < crawling ; exists ; 2015 ; Journal of Adult and Continuing Education Volume 21 ; 21 ; >
       au < manifest ; exists ; 2016 ; Journal of Adult and Continuing Education Volume 22 ; 22 ; >
 
@@ -46473,6 +46488,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://ftr.sagepub.com/
 
+    au < exists ; exists ; 2012 ; Foreign Trade Review Volume 47 ; 47 ; >
     au < finished ; finished ; 2013 ; Foreign Trade Review Volume 48 ; 48 ; >
     au < finished ; finished ; 2014 ; Foreign Trade Review Volume 49 ; 49 ; >
     au < crawling ; exists ; 2015 ; Foreign Trade Review Volume 50 ; 50 ; >
@@ -47544,8 +47560,6 @@
         param[base_url] = http://icp.sagepub.com/
         comment[continues] = 2040-4026
 
-        # skips 2013
-        
         au < crawling ; exists ; 2014 ; International Journal of Care Coordination Volume 17 ; 17 ; >
         au < crawling ; exists ; 2015 ; International Journal of Care Coordination Volume 18 ; 18 ; >
         au < expected ; exists ; 2016 ; International Journal of Care Coordination Volume 19 ; 19 ; >
@@ -47567,6 +47581,11 @@
         param[base_url] = http://icp.sagepub.com/
         comment[continued_by] = 2053-4354
 
+        au < exists ; exists ; 2000 ; International Journal of Care Pathways Volume 4 ; 4 ; >
+        au < exists ; exists ; 2001 ; International Journal of Care Pathways Volume 5 ; 5 ; >
+        au < exists ; exists ; 2002 ; International Journal of Care Pathways Volume 6 ; 6 ; >
+        au < exists ; exists ; 2003 ; International Journal of Care Pathways Volume 7 ; 7 ; >
+        au < exists ; exists ; 2004 ; International Journal of Care Pathways Volume 8 ; 8 ; >
         au < manifest ; exists ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 ; >
         au < manifest ; exists ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 ; >
         au < manifest ; exists ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 ; >
@@ -47692,6 +47711,7 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://hsr.sagepub.com/
 
+        au < exists ; exists ; 2000 ; Journal of Health Services Research & Policy Volume 5 ; 5 ; >
         au < manifest ; exists ; 2001 ; Journal of Health Services Research & Policy Volume 6 ; 6 ; >
         au < manifest ; exists ; 2002 ; Journal of Health Services Research & Policy Volume 7 ; 7 ; >
         au < manifest ; exists ; 2003 ; Journal of Health Services Research & Policy Volume 8 ; 8 ; >
