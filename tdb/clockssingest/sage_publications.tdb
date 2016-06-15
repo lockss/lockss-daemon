@@ -791,7 +791,7 @@
       pluginSuffix = ClockssHWDrupalPlugin
 
       au < exists ; exists ; 2015 ; AERA Open Volume 1 ; 1 ; >
-      au < exists ; exists ; 2016 ; AERA Open Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2016 ; AERA Open Volume 2 ; 2 ; >
 
   }
 
@@ -4123,7 +4123,7 @@
       au < finished ; finished ; 2013 ; BioScope: South Asian Screen Studies Volume 4 ; 4 ; >
       au < finished ; finished ; 2014 ; BioScope: South Asian Screen Studies Volume 5 ; 5 ; >
       au < crawling ; exists ; 2015 ; BioScope: South Asian Screen Studies Volume 6 ; 6 ; >
-      au < expected ; exists ; 2016 ; BioScope: South Asian Screen Studies Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2016 ; BioScope: South Asian Screen Studies Volume 7 ; 7 ; >
 
     }
 
@@ -29080,7 +29080,7 @@
       au < exists ; exists ; 2013 ; Journal of Veterinary Dentistry Volume 30 ; 30 ; >
       au < exists ; exists ; 2014 ; Journal of Veterinary Dentistry Volume 31 ; 31 ; >
       au < exists ; exists ; 2015 ; Journal of Veterinary Dentistry Volume 32 ; 32 ; >
-      au < exists ; exists ; 2016 ; Journal of Veterinary Dentistry Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2016 ; Journal of Veterinary Dentistry Volume 33 ; 33 ; >
 
   }
 
@@ -40193,7 +40193,7 @@
       au < finished ; finished ; 2013 ; South Asian Journal of Business and Management Cases Volume 2 ; 2 ; >
       au < finished ; finished ; 2014 ; South Asian Journal of Business and Management Cases Volume 3 ; 3 ; >
       au < crawling ; exists ; 2015 ; South Asian Journal of Business and Management Cases Volume 4 ; 4 ; >
-      au < expected ; exists ; 2016 ; South Asian Journal of Business and Management Cases Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2016 ; South Asian Journal of Business and Management Cases Volume 5 ; 5 ; >
 
     }
 
@@ -40796,7 +40796,7 @@
         au < finished ; finished ; 2013 ; Studies in Indian Politics Volume 1 ; 1 ; >
         au < finished ; finished ; 2014 ; Studies in Indian Politics Volume 2 ; 2 ; >
         au < crawling ; exists ; 2015 ; Studies in Indian Politics Volume 3 ; 3 ; >
-        au < expected ; exists ; 2016 ; Studies in Indian Politics Volume 4 ; 4 ; >
+        au < manifest ; exists ; 2016 ; Studies in Indian Politics Volume 4 ; 4 ; >
 
     }
 
