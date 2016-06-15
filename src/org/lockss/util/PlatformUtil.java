@@ -66,12 +66,27 @@ public class PlatformUtil {
   // no harm if happens in two threads, so not synchronized
   public static PlatformUtil getInstance() {
     if (instance == null) {
-      String os = System.getProperty("os.name");
+      String os = System.getProperty("lockss.os.name");
+      if (StringUtil.isNullString(os)) {
+	os = System.getProperty("os.name");
+      }
       if ("linux".equalsIgnoreCase(os)) {
 	instance = new Linux();
       }
       if ("openbsd".equalsIgnoreCase(os)) {
 	instance = new OpenBSD();
+      }
+      if ("force_macos".equalsIgnoreCase(os)) {
+	instance = new MacOS();
+      }
+      if ("force_windows".equalsIgnoreCase(os)) {
+        instance = new Windows();
+      }
+      if ("force_solaris".equalsIgnoreCase(os)) {
+        instance = new Solaris();
+      }
+      if ("force_none".equalsIgnoreCase(os)) {
+	instance = new PlatformUtil();
       }
       if (SystemUtils.IS_OS_MAC_OSX) {
 	instance = new MacOS();
@@ -181,6 +196,24 @@ public class PlatformUtil {
     return true;
   }
   
+  /**
+   * Return the length of the longest filename that can be created in the
+   * filesystem.  This is the length of a single directory or filename; for
+   * the maximum pathname see maxPathname().  (This should really be
+   * filesystem-dependent, not just OS-dependent.) */
+  public int maxFilename() {
+    return 255;
+  }
+
+  /**
+   * Return the length of the longest pathname that can be created in the
+   * filesystem.  This is total length of an absolute path, including all
+   * parent dirs.  (This should really be filesystem-dependent, not just
+   * OS-dependent.) */
+  public int maxPathname() {
+    return 4096;
+  }
+
   /**
    * Return true if the platform includes scripting support */
   public boolean hasScriptingSupport() {
@@ -622,6 +655,11 @@ public class PlatformUtil {
     public boolean isCaseSensitiveFileSystem() {
       return false; // MacOS FS is not case sensitive
     }
+
+    public int maxPathname() {
+      return 1024;
+    }
+
     public DF getDF(String path) throws UnsupportedException {
       return (super.getDF(path, dfArgs));
     }
@@ -721,6 +759,10 @@ public class PlatformUtil {
       return false; // Windows FS is not case sensitive
     }
     
+    public int maxPathname() {
+      return 260;
+    }
+
     public synchronized boolean updateFileAtomically(File updated, File target) {
       try {
         File saveTarget = null;

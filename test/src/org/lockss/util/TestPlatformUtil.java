@@ -284,4 +284,29 @@ public class TestPlatformUtil extends LockssTestCase {
     } catch (NumberFormatException e) {
     }
   }
+
+  public void testLinux() {
+    PlatformUtil pi = new PlatformUtil.Linux();
+    assertTrue(pi.isCaseSensitiveFileSystem());
+    assertEquals(255, pi.maxFilename());
+    assertEquals(4096, pi.maxPathname());
+    assertTrue(pi.hasScriptingSupport());
+  }
+
+  public void testMacOS() {
+    PlatformUtil pi = new PlatformUtil.MacOS();
+    assertFalse(pi.isCaseSensitiveFileSystem());
+    assertEquals(255, pi.maxFilename());
+    assertEquals(1024, pi.maxPathname());
+    assertTrue(pi.hasScriptingSupport());
+  }
+
+  public void testWindows() {
+    PlatformUtil pi = new PlatformUtil.Windows();
+    assertFalse(pi.isCaseSensitiveFileSystem());
+    assertEquals(255, pi.maxFilename());
+    assertEquals(260, pi.maxPathname());
+    assertTrue(pi.hasScriptingSupport());
+  }
+
 }
