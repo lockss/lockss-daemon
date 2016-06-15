@@ -6,6 +6,7 @@
     info[tester] = 8
   >
   
+  #use wget
   plugin = needs.plugin
   implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
   
