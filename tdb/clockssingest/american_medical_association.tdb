@@ -222,4 +222,23 @@
   
   }
 
+  {
+
+    title <
+      name = AMA Archives of Neurology and Psychiatry ;
+      issn = 0096-6886 ;
+      issnl = 0096-6886
+    >
+
+    # This publication ceased in 1959
+    # These two AUs not available through highwire archive. Re-collected.
+
+    param[base_url] = http://archneurpsyc.jamanetwork.com/
+    param[resource_id] = 91
+
+    au < exists ; exists ; 1923 ; AMA Archives of Neurology and Psychiatry Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < exists ; exists ; 1945 ; AMA Archives of Neurology and Psychiatry Volume 53 ; 53 ; reingest4.clockss.org:8082 >
+
+  }
+
 }
