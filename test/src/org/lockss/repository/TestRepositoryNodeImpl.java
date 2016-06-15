@@ -1022,8 +1022,10 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 //     findMaxDirPath(getTempDir());
 //     findMaxDirPathNio(getTempDir());
     
+    String longUrl = trimUrlForOs(LONG_URL);
+
     RepositoryNode leaf =
-      repo.createNewNode(LONG_URL);
+      repo.createNewNode(longUrl);
     assertFalse(leaf.hasContent());
     try {
       leaf.getCurrentVersion();
@@ -1035,8 +1037,27 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     leaf.sealNewVersion();
     assertTrue(leaf.hasContent());
     assertEquals(1, leaf.getCurrentVersion());
-    assertEquals(LONG_URL, leaf.getNodeUrl());
+    assertEquals(longUrl, leaf.getNodeUrl());
+    RepositoryNode.RepositoryNodeContents rnc = leaf.getNodeContents();
+    assertInputStreamMatchesString("test stream", rnc.getInputStream());
   }
+
+  String trimUrlForOs(String url) {
+    int pad = tempDirPath.length() + 10;
+    PlatformUtil pi = PlatformUtil.getInstance();
+    log.info("pi: " + pi);
+    int max = pi.maxPathname() - pad;
+    if (url.length() <= max) {
+      return url;
+    }
+    url = trimTo(url, max);
+    if (url.endsWith("/")) {
+      url += "a";
+    }
+    log.info("Trimmmed long URL to (" + url.length() + "): " + url);
+    return url;
+  }
+
 
   public void testMakeNodeLocation() throws Exception {
     RepositoryNodeImpl leaf = (RepositoryNodeImpl)
