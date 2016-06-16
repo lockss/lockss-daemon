@@ -17,9 +17,9 @@ count=500
 # Make a list of AUids that are crawling in clockssingest, manifest in gln
    #set -x
    # Make a list of AUids from clockss
-   ./scripts/tdb/tdbout -CZLI -a -Q "year ~ '^19' and plugin ~ '$plugin' and year !~ '2016'" tdb/clockssingest/*.tdb | sort > $tpath/gr_clockss_c.txt
+   ./scripts/tdb/tdbout -CZLI -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2016'" tdb/clockssingest/*.tdb | sort > $tpath/gr_clockss_c.txt
    # Make a list of AUids from gln
-   ./scripts/tdb/tdbout -M -a -Q "year ~ '^19' and plugin ~ '$plugin' and year !~ '2016'" tdb/prod/*.tdb | sort > $tpath/gr_gln_m.txt
+   ./scripts/tdb/tdbout -M -a -Q "year ~ '^20' and plugin ~ '$plugin' and year !~ '2016'" tdb/prod/*.tdb | sort > $tpath/gr_gln_m.txt
    # Convert the gln list to clockss format
    cat $tpath/gr_gln_m.txt | sed -e 's/\(\|[^\|]*\)Plugin/Clockss\1Plugin/' > $tpath/gr_gln_mc.txt
    # Find common items on the clockss list and the clockss-formatted gln list
