@@ -60,7 +60,7 @@
     {
       param[base_url] = http://elifesciences.org/
 
-      au < down ; exists ; 2015 ; eLife January 2015 ; 2015/01 ; >
+      au < superseded ; exists ; 2015 ; eLife January 2015 [superseded] ; 2015/01 ; >
     }
   }
 }
