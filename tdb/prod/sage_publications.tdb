@@ -43879,6 +43879,27 @@ comment[mpj] = now published by Brill
     }
 
     {
+  
+      title <
+        name = South East Asia Research ;
+        issn = 0967-828X ;
+        eissn = 2043-6874
+      >
+  
+        param[base_url] = http://ser.sagepub.com/
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+  
+        au < exists ; 2011 ; South East Asia Research Volume 19 ; 19 >
+        au < doesNotExist ; 2012 ; South East Asia Research Volume 20 ; 20 >
+        au < doesNotExist ; 2013 ; South East Asia Research Volume 21 ; 21 >
+        au < doesNotExist ; 2014 ; South East Asia Research Volume 22 ; 22 >
+        au < doesNotExist ; 2015 ; South East Asia Research Volume 23 ; 23 >
+        au < exists ; 2016 ; South East Asia Research Volume 24 ; 24 >
+  
+    }
+
+    {
 
       title <
         name = Space and Culture ;
