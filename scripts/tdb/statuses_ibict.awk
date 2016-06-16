@@ -4,7 +4,11 @@
 BEGIN {
   FS="\t"
   pn = 0
+    str = "date +%m-%d-%Y";
+    str | getline date;
+    #close str;
 }
+$3>date
 
 {
   # add a loop to add line only if either [status is _not_ manifest] OR [journal year (or journal end year) is lt or eq to the current year we are testing]
@@ -102,6 +106,8 @@ END {
       }
     }
 
+  printf "\n"
+  printf "%s", date
   printf "\n"
 }
 
