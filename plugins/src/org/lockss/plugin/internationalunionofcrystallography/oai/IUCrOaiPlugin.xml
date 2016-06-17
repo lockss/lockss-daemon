@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -69,6 +69,7 @@
       <string>1,"^(%s|%s)[^/]+/issues/[^/]+/[^/]+/[^/]+/[^/]+/(.+\.pdf|index\.html|.+fig[0-9]+\.html)$", base_url, script_url</string>
       <string>1,"^(%s|%s)cgi-bin/paper\?[^/]+$", script_url, base_url</string>
       <string>1,"^(%s|%s)cgi-bin/(sendsupfiles|sendsup|sendcif)\?.+$", script_url, base_url</string>
+      <string>1,"^http://publcif.iucr.org/cifmoldb/gui/cifjmol\.php\?cifid=[^/]+$"</string>
     </list>
   </entry>
   <entry>
@@ -76,6 +77,12 @@
     <list>
       <string>"^%s[^/]+/issues/[^/]+/[^/]+/[^/]+/[^/]+/.+\.pdf$", base_url</string>
     </list>
+  </entry>
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts -->
+    <string>au_permitted_host_pattern</string>
+    <string>publcif\.iucr\.org</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>

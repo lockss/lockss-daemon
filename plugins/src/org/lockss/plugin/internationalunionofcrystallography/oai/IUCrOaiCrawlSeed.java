@@ -10,6 +10,7 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -71,20 +72,33 @@ public class IUCrOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
 	      throws ConfigurationException {
 	    try {
 	      String link;
-	      Collection<String> idList = new ArrayList<String>();
+	      int recNum = -1;
+	      String pageRecordLink = "";
+	      HashSet<String> idSet = new HashSet<String>();
 	      for (Iterator<Record> recIter = getServiceProvider().listRecords(params);
 	           recIter.hasNext();) {
 	        Record rec = recIter.next();
-	        MetadataSearch<String> metaSearch = 
-	            rec.getMetadata().getValue().searcher();
-	        if (checkMetaRules(metaSearch)) {
-	        	link = findRecordArticleLink(rec);
-	        	if(link != null) {
-	        		idList.add(link);
-	        	}
+	        recNum = recNum + 1;
+	        
+	        link = findRecordArticleLink(rec);
+	        if(!link.equals(pageRecordLink)) {
+		        MetadataSearch<String> metaSearch = 
+		            rec.getMetadata().getValue().searcher();
+		        if (checkMetaRules(metaSearch)) {
+		        	if(link != null) {
+		        		idSet.add(link);
+		        	}
+		        }
+	        } else {
+	        	return idSet;
+	        }
+	        
+	        if(recNum == 501 || recNum == 0) {
+	        	pageRecordLink = link;
+	        	recNum = 0;
 	        }
 	      }
-	      return idList;
+	      return idSet;
 	    } catch (BadArgumentException e) {
 	      throw new ConfigurationException("Incorrectly formatted OAI parameter", e);
 	    }
