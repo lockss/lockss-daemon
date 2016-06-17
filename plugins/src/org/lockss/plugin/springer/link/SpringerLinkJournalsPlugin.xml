@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>27</string>
+    <string>28</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>18</string>
+        <string>19</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -87,7 +87,18 @@
   <!-- overrides parents start url, but not used by crawl seed -->
   <entry>
     <string>au_start_url</string>
-    <string>"%s", base_url</string>
+    <string>"%s/lockss.txt", base_url</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://(%s|%s|(rd|static-content)\.springer\.com)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?config=[^/]*)?$", url_host(base_url), url_host(download_url)</string>
+      <string>2,"\?view=classic$",  url_host(base_url)</string>
+      <string>2,"^https?://%s/content/pdf/(bbm|bfm)",  url_host(base_url)</string>
+      <string>1,"^https?://%s/download/epub/",  url_host(base_url)</string>
+      <string>1,"^https?://%s/(content|article)/",  url_host(base_url)</string>
+      <string>1,"^https?://%s/static/", url_host(download_url)</string>
+    </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
@@ -96,6 +107,10 @@
     <!-- full html:  http://link.springer.com/article/10.1007/s00159-014-0071-1/fulltext.html -->
       <string>"^%s(article|content/pdf)/[.0-9]+(/|%%2F)[^\?&amp;]+(\.pdf|/fulltext\.html)$", base_url</string>
     </list>
+  </entry>
+    <entry>
+    <string>au_refetch_depth</string>
+    <int>1</int>
   </entry>
   <entry>
     <string>plugin_crawl_seed_factory</string>
@@ -121,6 +136,7 @@
     <string>au_url_poll_result_weight</string>
     <list>
       <string>"/static/[0-9]+-[0-9]+/(images|js|css|sites)/.*\.(png|css|js|gif)$", 0</string>
+      <string>"/article/[^/]/[^/.]+/fulltext.html$", 0</string>
     </list>
   </entry> 
 </map>

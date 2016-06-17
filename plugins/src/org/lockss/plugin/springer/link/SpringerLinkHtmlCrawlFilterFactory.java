@@ -47,17 +47,20 @@ public class SpringerLinkHtmlCrawlFilterFactory implements FilterFactory {
       //footer
       HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
       
-      //adds on the side
+      //adds on the side 
+      HtmlNodeFilters.tagWithAttribute("div", "class", "skyscraper-ad"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "banner-advert"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "doubleclick-ad"),
       
       //header and search box
       HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
       HtmlNodeFilters.tagWithAttribute("div", "role", "banner"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "banner"),
       
-      //non essentials like metrics and related links
+      //non essentials like metrics and related links 
       HtmlNodeFilters.tagWithAttribute("div", "role", "complementary"),
-      HtmlNodeFilters.tagWithAttribute("div", "class", "col-aside"),
+      HtmlNodeFilters.tagWithAttribute("aside", "class", "col-aside"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "article-complementary-left"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "document-aside"),
       
   };

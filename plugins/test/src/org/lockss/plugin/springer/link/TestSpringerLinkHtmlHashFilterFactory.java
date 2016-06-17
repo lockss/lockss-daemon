@@ -104,18 +104,6 @@ public class TestSpringerLinkHtmlHashFilterFactory extends LockssTestCase {
     assertEquals(withoutWhiteSpace, str);
   }
   
-  /*
-   * Compare with/without crossMark plus a whole bunch of other filters
-   */
-
-  public void testCrossMark() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withCrossMark), Constants.DEFAULT_ENCODING);
-    String str = StringUtil.fromInputStream(actIn);
-    assertEquals(withoutCrossMark, str);
-    
-  }
-  
   /* 
    * Compare with/without the body attributes
    */
@@ -125,4 +113,18 @@ public class TestSpringerLinkHtmlHashFilterFactory extends LockssTestCase {
     String str = StringUtil.fromInputStream(actIn);
     assertEquals(withoutBodyAttr, str);
   }
+  
+  /* 
+   * Compare with/without the body attributes
+   */
+//  public void testOldNewSite() throws Exception {
+//    InputStream newIn = fact.createFilteredInputStream(mau,
+//    	getResourceAsStream("New_Springer_Same.html"), Constants.DEFAULT_ENCODING);
+//    InputStream oldIn = fact.createFilteredInputStream(mau,
+//        	getResourceAsStream("Old_Springer_Same.html"), Constants.DEFAULT_ENCODING);
+//    
+//    String newStr = StringUtil.fromInputStream(newIn);
+//    String oldStr = StringUtil.fromInputStream(oldIn);
+//    assertEquals(newStr, oldStr);
+//  }
 }
