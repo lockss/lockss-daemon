@@ -27,7 +27,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>43</string>
+    <string>44</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -113,8 +113,8 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>2,"^https?://%s/content/by/year/?$", url_host(base_url)</string>
-      <string>1,"^https?://%s/content/[0-9]+\.toc$", url_host(base_url)</string>
+      <string>2,"^https?://%s/content/by/(year|volume)/?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/content/([0-9]+|%s/[^/.]+)\.toc$", url_host(base_url), volume_name</string>
       <string>1,"^https?://%s/content/[^/]+/(?:(?:[0-9]+|bmj)(?:/[^/.]+(?:\.[0-9]+)?|\.toc|\.[^/.]+)?(?:/related)?|[^/.]+)$", url_host(base_url)</string>
       <string>1,"^https?://%s/content(?:/[^/]+)?/[^/]+/(?:(?:suppl_)?([^/]+/|bmj\.))?[^/]+\.(?:long|supplemental|data|figures-only|full(?:-text)?\.pdf)(?:\+html)?$", url_host(base_url)</string>
       <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>

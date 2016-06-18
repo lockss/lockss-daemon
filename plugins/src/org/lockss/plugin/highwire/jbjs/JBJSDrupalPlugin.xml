@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>43</string>
+    <string>44</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -43,5 +43,9 @@
   <entry>
     <string>au_name</string>
     <string>"Journal of Bone and Joint Surgery Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalHtmlLinkExtractorFactory</string>
   </entry>
 </map>
