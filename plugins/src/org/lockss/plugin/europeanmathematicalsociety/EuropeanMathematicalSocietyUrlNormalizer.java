@@ -45,6 +45,7 @@ public class EuropeanMathematicalSocietyUrlNormalizer implements UrlNormalizer {
   // XXX NOTE: may want normalize 
   //  http://www.ems-ph.org/books/show_pdf.php?proj_nr=NN&vol=1 to 
   //  http://www.ems-ph.org/books/show_pdf.php?proj_nr=NN
+  // Cannot tell now, will need more experience from crawling AUs
   
   public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
     if (url.contains(SEARCH_PARAM)) {

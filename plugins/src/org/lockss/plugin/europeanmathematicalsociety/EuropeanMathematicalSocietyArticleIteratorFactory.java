@@ -53,9 +53,9 @@ public class EuropeanMathematicalSocietyArticleIteratorFactory
     "\"show_(abstract|pdf)[.]php[?]issn=%s&vol=%s\", journal_issn, volume_name";
   // various aspects of an article
   protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
-      "show_abstract([.]php[?]issn=[0-9x-]+&vol=\\d+&iss=\\d+&rank=\\d+)$", Pattern.CASE_INSENSITIVE);
+      "show_abstract([.]php[?].+)$", Pattern.CASE_INSENSITIVE);
   protected static final Pattern PDF_PATTERN = Pattern.compile(
-      "show_pdf([.]php[?]issn=[0-9x-]+&vol=\\d+&iss=\\d+&rank=\\d+)$", Pattern.CASE_INSENSITIVE);
+      "show_pdf([.]php[?].+)$", Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
   protected static final String ABSTRACT_REPLACEMENT = "show_abstract$1";

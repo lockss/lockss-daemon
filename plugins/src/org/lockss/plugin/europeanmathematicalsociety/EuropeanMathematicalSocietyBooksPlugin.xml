@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>development - EJ</string>
+    <string>testing - EJ</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -91,20 +91,14 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-    <!-- 
-     -->
       <!-- All content from CDN -->
       <string>1,"^https?://.+([.]mathjax[.]org)"</string>
       <!-- Exclude unless from base url -->
       <string>4,"^https?://%s%s", url_host(base_url), url_path(base_url)</string>
-<!--       <string>2,"^https?://%s%s((home|about|publications|book_series|ebooks|)\.php)?$", url_host(base_url), url_path(base_url)</string> -->
       <!-- All css, img, or js content -->
       <string>1,"^https?://%s%s(css|img|js)/", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s%s[^?]+\?proj_nr=%s", url_host(base_url), url_path(base_url), book_number</string>
       <string>1,"^https?://%s%sbooks/0*%s", url_host(base_url), url_path(base_url), book_number</string>
-      <!-- Series home page -->
-      <string>1,"^https?://%s%sqsearch\.php\?series=", url_host(base_url), url_path(base_url)</string>
-      <string>1,"^https?://%s%sbooks/book_series\.php", url_host(base_url), url_path(base_url)</string>
     </list>
   </entry>
   <entry>
@@ -130,10 +124,10 @@
       </entry>
     </map>
   </entry>
-  <entry>
+  <!--  entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.europeanmathematicalsociety.EuropeanMathematicalSocietyHtmlCrawlFilterFactory</string>
-  </entry>
+  </entry -->
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.europeanmathematicalsociety.EuropeanMathematicalSocietyUrlNormalizer</string>

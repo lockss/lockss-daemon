@@ -1,8 +1,7 @@
 {
 
   publisher <
-    name = European Mathematical Society ;
-    info[tester] = 0
+    name = European Mathematical Society 
   >
   
   plugin = org.lockss.plugin.europeanmathematicalsociety.EuropeanMathematicalSocietyPlugin
@@ -18,7 +17,7 @@
     >
     
     param[journal_issn] = 0010-2571
-    param[journal_id] = cmh
+    comment[journal_id] = cmh
     
     au < expected ; 1997 ; Commentarii Mathematici Helvetici Volume 72 ; 72 >
     au < expected ; 1998 ; Commentarii Mathematici Helvetici Volume 73 ; 73 >
@@ -36,7 +35,7 @@
     >
     
     param[journal_issn] = 0032-5155
-    param[journal_id] = pm
+    comment[journal_id] = pm
     
     au < expected ; 2007 ; Portugaliae Mathematica Volume 64 ; 64 >
     au < expected ; 2008 ; Portugaliae Mathematica Volume 65 ; 65 >
@@ -55,7 +54,7 @@
     >
     
     param[journal_issn] = 1663-487X
-    param[journal_id] = qt
+    comment[journal_id] = qt
     
     au < expected ; 2010 ; Quantum Topology Volume 1 ; 1 >
     au < expected ; 2011 ; Quantum Topology Volume 2 ; 2 >

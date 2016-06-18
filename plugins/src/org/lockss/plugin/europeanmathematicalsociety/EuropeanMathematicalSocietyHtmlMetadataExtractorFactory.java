@@ -54,7 +54,7 @@ public class EuropeanMathematicalSocietyHtmlMetadataExtractorFactory implements 
     return new EuropeanMathematicalSocietyHtmlMetadataExtractor();
   }
   
-  public static class EuropeanMathematicalSocietyHtmlMetadataExtractor implements FileMetadataExtractor {
+  public static class EuropeanMathematicalSocietyHtmlMetadataExtractor extends SimpleHtmlMetaTagMetadataExtractor {
     
     // Map HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
@@ -75,18 +75,11 @@ public class EuropeanMathematicalSocietyHtmlMetadataExtractorFactory implements 
     }
     
     @Override
-    public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
+    public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
         throws IOException {
-      
-      ArticleMetadata am = new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
+      ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
-      String url = am.get(MetadataField.FIELD_ACCESS_URL);
-      ArchivalUnit au = cu.getArchivalUnit();
-      if (url == null || url.isEmpty() || !au.makeCachedUrl(url).hasContent()) {
-        url = cu.getUrl();
-      }
-      am.replace(MetadataField.FIELD_ACCESS_URL, url);
-      emitter.emitMetadata(cu, am);
+      return am;
     }
   }
 }

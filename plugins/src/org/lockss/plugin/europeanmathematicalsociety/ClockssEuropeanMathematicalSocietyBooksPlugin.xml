@@ -29,10 +29,6 @@
     <string>"European Mathematical Society Books Plugin (CLOCKSS), Base URL %s, Book Project# %s", base_url, book_number</string>
   </entry>
   <entry>
-    <string>au_def_pause_time</string>
-    <long>3000</long>
-  </entry>
-  <entry>
     <string>clockss_override</string>
     <map>
       <entry>
