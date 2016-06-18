@@ -99,7 +99,7 @@ public class TestEuropeanMathematicalSocietyArchivalUnit extends LockssTestCase 
     shouldCacheTest(BASE_URL+"journals/show_issue.php?issn="+JOURNAL_ISSN+"&vol="+VOLUME+"&iss=3", true, msau, cus);
     shouldCacheTest(BASE_URL+"journals/show_abstract.php?issn="+JOURNAL_ISSN+"&vol="+VOLUME+"&iss=4&rank=4", true, msau, cus);
     shouldCacheTest(BASE_URL+"journals/show_pdf.php?issn="+JOURNAL_ISSN+"&vol="+VOLUME+"&iss=4&rank=4", true, msau, cus);
-    shouldCacheTest(BASE_URL+"journals/abstract/"+JOURNAL_ID+"/2010-001-001/2010-001-001-01.pdf", true, msau, cus);
+    // shouldCacheTest(BASE_URL+"journals/abstract/"+JOURNAL_ID+"/2010-001-001/2010-001-001-01.pdf", true, msau, cus);
     
     // images (etc.) 
     shouldCacheTest(BASE_URL+"img/libraries/cluetip/images/arrowleft.gif", true, msau, cus);
@@ -128,7 +128,7 @@ public class TestEuropeanMathematicalSocietyArchivalUnit extends LockssTestCase 
     DefinableArchivalUnit au = makeAu();
     
     assertEquals(PluginName + ", Base URL " + BASE_URL + ", ISSN " + JOURNAL_ISSN +
-        ", ID " + JOURNAL_ID + ", Volume " + VOLUME, au.getName());
+        ", Volume " + VOLUME, au.getName());
   }
   
 }
