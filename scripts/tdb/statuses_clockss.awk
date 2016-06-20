@@ -4,8 +4,8 @@
 BEGIN {
   FS="\t"
   pn = 0
-    str = "date +%m-%d-%Y";
-    str | getline date;
+    #str = "date +%m-%d-%Y";
+    #str | getline date;
     #close str;
 }
 $3>date
@@ -125,7 +125,7 @@ END {
     }
 
   printf "\n"
-  printf "%s", date
-  printf "\n"
+  #printf "%s", date
+  #printf "\n"
 }
 
