@@ -2540,6 +2540,21 @@
 
   {
     title <
+      name = Complexity ;
+      issn = 1076-2787 ;
+      eissn = 1099-0526 ;
+      issnl = 1076-2787
+    >
+
+    param[journal_id] = complexity
+    #Content published prior to 2017 is hosted on the Wiley Online Library.
+
+    au < expected ; exists ; 2017 ; Complexity Volume 2017 ; 2017 ; 2017 ; >
+
+  }
+
+  {
+    title <
       name = Computational and Mathematical Methods in Medicine ;
       issn = 1748-670X ;
       eissn = 1748-6718 ;
@@ -2621,6 +2636,21 @@
     au < manifest ; exists ; 2013 ; Conference Papers in Science Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Conference Papers in Science Volume 2014 ; 2014 ; 2014 ; >
     au < crawling ; exists ; 2015 ; Conference Papers in Science Volume 2015 ; 2015 ; 2015 ; >
+
+  }
+
+  {
+    title <
+      name = Contrast Media & Molecular Imaging ;
+      issn = 1555-4309 ;
+      eissn = 1555-4317 ;
+      issnl = 1555-4309
+    >
+
+    param[journal_id] = cmmi
+    #Content published prior to 2017 is hosted on the Wiley Online Library.
+
+    au < expected ; exists ; 2017 ; Contrast Media & Molecular Imaging Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -3023,6 +3053,21 @@
     au < manifest ; exists ; 2013 ; Genetics Research International Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; manifest ; 2014 ; Genetics Research International Volume 2014 ; 2014 ; 2014 ; >
     au < crawling ; exists ; 2015 ; Genetics Research International Volume 2015 ; 2015 ; 2015 ; >
+
+  }
+
+  {
+    title <
+      name = Geofluids ;
+      issn = 1468-8115 ;
+      eissn = 1468-8123 ;
+      issnl = 1468-8115
+    >
+
+    param[journal_id] = geofluids
+    #Content published prior to 2017 is hosted on the Wiley Online Library.
+
+    au < expected ; exists ; 2017 ; Geofluids Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -4851,6 +4896,21 @@
 
   {
     title <
+      name = Journal of Advanced Transportation ;
+      issn = 0197-6729 ;
+      eissn = 2042-3195 ;
+      issnl = 0197-6729
+    >
+
+    param[journal_id] = jat
+    #Content published prior to 2017 is hosted on the Wiley Online Library.
+
+    au < expected ; exists ; 2017 ; Journal of Advanced Transportation Volume 2017 ; 2017 ; 2017 ; >
+
+  }
+
+  {
+    title <
       name = Journal of Aerodynamics ;
       issn = 2356-7139 ;
       eissn = 2314-6206 ;
@@ -5876,6 +5936,21 @@
     
     au < deepCrawl ; exists ; 2014 ; Journal of Food Processing Volume 2014 ; 2014 ; 2014 ; >
     au < crawling ; exists ; 2015 ; Journal of Food Processing Volume 2015 ; 2015 ; 2015 ; >
+
+  }
+
+  {
+    title <
+      name = Journal of Food Quality ;
+      issn = 0146-9428 ;
+      eissn = 1745-4557 ;
+      issnl = 0146-9428
+    >
+
+    param[journal_id] = jfq
+    #Content published prior to 2017 is hosted on the Wiley Online Library.
+
+    au < expected ; exists ; 2017 ; Journal of Food Quality Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -7693,6 +7768,21 @@
 
   {
     title <
+      name = Occupational Therapy International ;
+      issn = 0966-7903 ;
+      eissn = 1557-0703 ;
+      issnl = 0966-7903
+    >
+
+    param[journal_id] = oti
+    #Content published prior to 2017 is hosted on the Wiley Online Library.
+
+    au < expected ; exists ; 2017 ; Occupational Therapy International Volume 2017 ; 2017 ; 2017 ; >
+
+  }
+
+  {
+    title <
       name = Organic Chemistry International ;
       issn = 2090-200X ;
       eissn = 2090-2018 ;
@@ -8178,6 +8268,21 @@
 
   {
     title <
+      name = Scanning ;
+      issn = 0161-0457 ;
+      eissn = 1932-8745 ;
+      issnl = 0161-0457
+    >
+
+    param[journal_id] = scanning
+    #Content published prior to 2017 is hosted on the Wiley Online Library.
+
+    au < expected ; exists ; 2017 ; Scanning Volume 2017 ; 2017 ; 2017 ; >
+
+  }
+
+  {
+    title <
       name = Schizophrenia Research and Treatment ;
       issn = 2090-2085 ;
       eissn = 2090-2093 ;
@@ -8247,6 +8352,21 @@
 
   }
   
+  {
+    title <
+      name = Security and Communication Networks ;
+      issn = 1939-0114 ;
+      eissn = 1939-0122 ;
+      issnl = 1939-0114
+    >
+
+    param[journal_id] = scn
+    #Content published prior to 2017 is hosted on the Wiley Online Library.
+
+    au < expected ; exists ; 2017 ; Security and Communication Networks Volume 2017 ; 2017 ; 2017 ; >
+
+  }
+
   {
     title <
       name = Shock and Vibration ;
@@ -8544,6 +8664,21 @@
     au < manifest ; exists ; 2013 ; VLSI Design Volume 2013 ; 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; VLSI Design Volume 2014 ; 2014 ; 2014 ; >
     au < crawling ; exists ; 2015 ; VLSI Design Volume 2015 ; 2015 ; 2015 ; >
+
+  }
+
+  {
+    title <
+      name = Wireless Communications and Mobile Computing ;
+      issn = 1530-8669 ;
+      eissn = 1530-8677 ;
+      issnl = 1530-8669
+    >
+
+    param[journal_id] = wcmc
+    #Content published prior to 2017 is hosted on the Wiley Online Library.
+
+    au < expected ; exists ; 2017 ; Wireless Communications and Mobile Computing Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
