@@ -8,7 +8,7 @@ BEGIN {
     #str | getline date;
     #close str;
 }
-$3>date
+#$3>date
 {
   # add a loop to add line only if either status is (wanted or testing) or ending year is gt or eq to contract year
   # increased to 2015 July 1 2015.
