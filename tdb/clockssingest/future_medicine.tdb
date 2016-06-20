@@ -331,7 +331,7 @@
     au < manifest ; exists ; 2010 ; Future Virology Volume 5 ; 5 ; >
     au < manifest ; exists ; 2011 ; Future Virology Volume 6 ; 6 ; >
     au < finished ; finished ; 2012 ; Future Virology Volume 7 ; 7 ; >
-    au < ingNotReady ; exists ; 2013 ; Future Virology Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2013 ; Future Virology Volume 8 ; 8 ; >
     au < finished ; crawling ; 2014 ; Future Virology Volume 9 ; 9 ; >
     au < crawling ; exists ; 2015 ; Future Virology Volume 10 ; 10 ; >
     au < manifest ; exists ; 2016 ; Future Virology Volume 11 ; 11 ; >
@@ -417,7 +417,7 @@
     au < manifest ; exists ; 2010 ; Immunotherapy Volume 2 ; 2 ; >
     au < manifest ; exists ; 2011 ; Immunotherapy Volume 3 ; 3 ; >
     au < crawling ; exists ; 2012 ; Immunotherapy Volume 4 ; 4 ; >
-    au < ingNotReady ; exists ; 2013 ; Immunotherapy Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2013 ; Immunotherapy Volume 5 ; 5 ; >
     au < crawling ; exists ; 2014 ; Immunotherapy Volume 6 ; 6 ; >
     au < notReady ; exists ; 2015 ; Immunotherapy Volume 7 ; 7 ; > #500 Error. Waiting for Atypon to fix.
     au < manifest ; exists ; 2016 ; Immunotherapy Volume 8 ; 8 ; >
@@ -759,7 +759,7 @@
     au < manifest ; exists ; 2010 ; Women's Health Volume 6 ; 6 ; >
     au < manifest ; exists ; 2011 ; Women's Health Volume 7 ; 7 ; >
     au < crawling ; exists ; 2012 ; Women's Health Volume 8 ; 8 ; >
-    au < ingNotReady ; exists ; 2013 ; Women's Health Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2013 ; Women's Health Volume 9 ; 9 ; >
     au < finished ; finished ; 2014 ; Women's Health Volume 10 ; 10 ; >
     au < crawling ; exists ; 2015 ; Women's Health Volume 11 ; 11 ; >
     au < manifest ; exists ; 2016 ; Women's Health Volume 12 ; 12 ; >
