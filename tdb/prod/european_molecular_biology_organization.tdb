@@ -19,19 +19,19 @@
 
     param[base_url] = http://emboj.embopress.org/
 
-    au < manifest ; 1997 ; The EMBO Journal Volume 16 ; 16 >
-    au < manifest ; 1998 ; The EMBO Journal Volume 17 ; 17 >
-    au < manifest ; 1999 ; The EMBO Journal Volume 18 ; 18 >
-    au < testing ; 2000 ; The EMBO Journal Volume 19 ; 19 >
-    au < testing ; 2001 ; The EMBO Journal Volume 20 ; 20 >
-    au < testing ; 2002 ; The EMBO Journal Volume 21 ; 21 >
-    au < testing ; 2003 ; The EMBO Journal Volume 22 ; 22 >
-    au < testing ; 2004 ; The EMBO Journal Volume 23 ; 23 >
-    au < testing ; 2005 ; The EMBO Journal Volume 24 ; 24 >
-    au < testing ; 2006 ; The EMBO Journal Volume 25 ; 25 >
-    au < testing ; 2007 ; The EMBO Journal Volume 26 ; 26 >
-    au < testing ; 2008 ; The EMBO Journal Volume 27 ; 27 >
-    au < testing ; 2009 ; The EMBO Journal Volume 28 ; 28 >
+    au < testing ; 1997 ; The EMBO Journal Volume 16 ; 16 >
+    au < testing ; 1998 ; The EMBO Journal Volume 17 ; 17 >
+    au < testing ; 1999 ; The EMBO Journal Volume 18 ; 18 >
+    au < ready ; 2000 ; The EMBO Journal Volume 19 ; 19 >
+    au < ready ; 2001 ; The EMBO Journal Volume 20 ; 20 >
+    au < ready ; 2002 ; The EMBO Journal Volume 21 ; 21 >
+    au < ready ; 2003 ; The EMBO Journal Volume 22 ; 22 >
+    au < ready ; 2004 ; The EMBO Journal Volume 23 ; 23 >
+    au < ready ; 2005 ; The EMBO Journal Volume 24 ; 24 >
+    au < ready ; 2006 ; The EMBO Journal Volume 25 ; 25 >
+    au < ready ; 2007 ; The EMBO Journal Volume 26 ; 26 >
+    au < ready ; 2008 ; The EMBO Journal Volume 27 ; 27 >
+    au < ready ; 2009 ; The EMBO Journal Volume 28 ; 28 >
     au < ready ; 2010 ; The EMBO Journal Volume 29 ; 29 >
     au < ready ; 2011 ; The EMBO Journal Volume 30 ; 30 >
     au < ready ; 2012 ; The EMBO Journal Volume 31 ; 31 >
@@ -70,16 +70,16 @@
     >
     param[base_url] = http://embor.embopress.org/
 
-    au < testing ; 2000 ; EMBO Reports Volume 1 ; 1 >
-    au < testing ; 2001 ; EMBO Reports Volume 2 ; 2 >
-    au < testing ; 2002 ; EMBO Reports Volume 3 ; 3 >
-    au < testing ; 2003 ; EMBO Reports Volume 4 ; 4 >
-    au < testing ; 2004 ; EMBO Reports Volume 5 ; 5 >
-    au < testing ; 2005 ; EMBO Reports Volume 6 ; 6 >
-    au < testing ; 2006 ; EMBO Reports Volume 7 ; 7 >
-    au < testing ; 2007 ; EMBO Reports Volume 8 ; 8 >
-    au < testing ; 2008 ; EMBO Reports Volume 9 ; 9 >
-    au < testing ; 2009 ; EMBO Reports Volume 10 ; 10 >
+    au < ready ; 2000 ; EMBO Reports Volume 1 ; 1 >
+    au < ready ; 2001 ; EMBO Reports Volume 2 ; 2 >
+    au < ready ; 2002 ; EMBO Reports Volume 3 ; 3 >
+    au < ready ; 2003 ; EMBO Reports Volume 4 ; 4 >
+    au < ready ; 2004 ; EMBO Reports Volume 5 ; 5 >
+    au < ready ; 2005 ; EMBO Reports Volume 6 ; 6 >
+    au < ready ; 2006 ; EMBO Reports Volume 7 ; 7 >
+    au < ready ; 2007 ; EMBO Reports Volume 8 ; 8 >
+    au < ready ; 2008 ; EMBO Reports Volume 9 ; 9 >
+    au < ready ; 2009 ; EMBO Reports Volume 10 ; 10 >
     au < ready ; 2010 ; EMBO Reports Volume 11 ; 11 >
     au < ready ; 2011 ; EMBO Reports Volume 12 ; 12 >
     au < ready ; 2012 ; EMBO Reports Volume 13 ; 13 >
@@ -97,11 +97,11 @@
     >
     param[base_url] = http://msb.embopress.org/
     
-    au < testing ; 2005 ; Molecular Systems Biology Volume 1 ; 1 >
-    au < testing ; 2006 ; Molecular Systems Biology Volume 2 ; 2 >
-    au < testing ; 2007 ; Molecular Systems Biology Volume 3 ; 3 >
-    au < testing ; 2008 ; Molecular Systems Biology Volume 4 ; 4 >
-    au < testing ; 2009 ; Molecular Systems Biology Volume 5 ; 5 >
+    au < ready ; 2005 ; Molecular Systems Biology Volume 1 ; 1 >
+    au < ready ; 2006 ; Molecular Systems Biology Volume 2 ; 2 >
+    au < ready ; 2007 ; Molecular Systems Biology Volume 3 ; 3 >
+    au < ready ; 2008 ; Molecular Systems Biology Volume 4 ; 4 >
+    au < ready ; 2009 ; Molecular Systems Biology Volume 5 ; 5 >
     au < ready ; 2010 ; Molecular Systems Biology Volume 6 ; 6 >
     au < ready ; 2011 ; Molecular Systems Biology Volume 7 ; 7 >
     au < ready ; 2012 ; Molecular Systems Biology Volume 8 ; 8 >
