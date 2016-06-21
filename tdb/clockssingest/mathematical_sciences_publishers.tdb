@@ -155,19 +155,19 @@
       
       param[journal_id] = gtm
    
-     au < ready ; exists ; 1998 ; Geometry & Topology Monographs in 1998 ; 1 ; 1998 ; >
-     au < ready ; exists ; 1999 ; Geometry & Topology Monographs in 1999 ; 2 ; 1999 ; >
-     au < ready ; exists ; 2000 ; Geometry & Topology Monographs in 2000 ; 3 ; 2000 ; >
-     au < ready ; exists ; 2002 ; Geometry & Topology Monographs in 2002 ; 4-5 ; 2002 ; >
+     au < crawling ; exists ; 1998 ; Geometry & Topology Monographs in 1998 ; 1 ; 1998 ; >
+     au < crawling ; exists ; 1999 ; Geometry & Topology Monographs in 1999 ; 2 ; 1999 ; >
+     au < crawling ; exists ; 2000 ; Geometry & Topology Monographs in 2000 ; 3 ; 2000 ; >
+     au < crawling ; exists ; 2002 ; Geometry & Topology Monographs in 2002 ; 4-5 ; 2002 ; >
      au < testing ; exists ; 2003 ; Geometry & Topology Monographs in 2003 ; 6 ; 2003 ; >
-     au < ready ; exists ; 2004 ; Geometry & Topology Monographs in 2004 ; 7 ; 2004 ; >
-     au < ready ; exists ; 2006 ; Geometry & Topology Monographs in 2006 ; 8-9 ; 2006 ; >
-     au < ready ; exists ; 2007 ; Geometry & Topology Monographs in 2007 ; 10-12 ; 2007 ; >
-     au < ready ; exists ; 2008 ; Geometry & Topology Monographs in 2008 ; 13-15 ; 2008 ; >
-     au < ready ; exists ; 2009 ; Geometry & Topology Monographs in 2009 ; 16 ; 2009 ; >
-     au < ready ; exists ; 2011 ; Geometry & Topology Monographs in 2011 ; 17 ; 2011 ; >
-     au < ready ; exists ; 2012 ; Geometry & Topology Monographs in 2012 ; 18 ; 2012 ; >
-     au < ready ; exists ; 2015 ; Geometry & Topology Monographs in 2015 ; 19 ; 2015 ; >
+     au < crawling ; exists ; 2004 ; Geometry & Topology Monographs in 2004 ; 7 ; 2004 ; >
+     au < crawling ; exists ; 2006 ; Geometry & Topology Monographs in 2006 ; 8-9 ; 2006 ; >
+     au < crawling ; exists ; 2007 ; Geometry & Topology Monographs in 2007 ; 10-12 ; 2007 ; >
+     au < crawling ; exists ; 2008 ; Geometry & Topology Monographs in 2008 ; 13-15 ; 2008 ; >
+     au < crawling ; exists ; 2009 ; Geometry & Topology Monographs in 2009 ; 16 ; 2009 ; >
+     au < crawling ; exists ; 2011 ; Geometry & Topology Monographs in 2011 ; 17 ; 2011 ; >
+     au < crawling ; exists ; 2012 ; Geometry & Topology Monographs in 2012 ; 18 ; 2012 ; >
+     au < crawling ; exists ; 2015 ; Geometry & Topology Monographs in 2015 ; 19 ; 2015 ; >
      
   }
   
@@ -262,7 +262,7 @@
       
       param[journal_id] = obs
     
-     au < ready ; exists ; 2013 ; The Open Book Series in 2013 ; 1 ; 2013 ; >
+     au < crawling ; exists ; 2013 ; The Open Book Series in 2013 ; 1 ; 2013 ; >
   }
    
   {
