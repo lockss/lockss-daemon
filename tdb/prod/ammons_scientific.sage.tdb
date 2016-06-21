@@ -11,7 +11,6 @@
   >
   
   pluginPrefix = org.lockss.plugin.highwire.
-  implicit < status ; year ; name ; param[volume_name] >
   
   {
   
@@ -23,7 +22,8 @@
     #Ammons http://www.amsci.com/journals/
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://cop.sagepub.com/
- 
+    implicit < status ; year ; name ; param[volume_name] >
+
     au < exists ; 2012 ; Comprehensive Psychology Volume 1 ; 1 >
     au < exists ; 2013 ; Comprehensive Psychology Volume 2 ; 2 >
     au < exists ; 2014 ; Comprehensive Psychology Volume 3 ; 3 >
@@ -41,7 +41,8 @@
     
     #Ammons http://www.amsci.com/journals/
     #Merged with Comprehensive Psychology in 2016.
- 
+    implicit < status ; year ; name ; param[volume_name] >
+
   }
 
   {
@@ -55,7 +56,8 @@
     #Ammons http://www.amsci.com/journals/
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://prx.sagepub.com/
- 
+    implicit < status ; year ; name ; param[volume_name] >
+
     au < exists ; 1955 ; Psychological Reports Volume 1 ; 1 >
     au < exists ; 1956 ; Psychological Reports Volume 2 ; 2 >
     au < exists ; 1957 ; Psychological Reports Volume 3 ; 3 >
@@ -188,6 +190,7 @@
     #Ammons http://www.amsci.com/journals/
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://pms.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 1949 ; Perceptual and Motor Skills Volume 1 ; 1 >
     au < exists ; 1950 ; Perceptual and Motor Skills Volume 2 ; 2 >
