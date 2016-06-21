@@ -45,10 +45,6 @@
     <string>"%sbooks/book.php?proj_nr=%s", base_url, book_number</string>
   </entry>
   <entry>
-    <string>au_permission_url</string>
-    <string>"%sbooks/lockss.txt", base_url</string>
-  </entry>
-  <entry>
     <string>au_feature_urls</string>
     <map>
       <entry>
