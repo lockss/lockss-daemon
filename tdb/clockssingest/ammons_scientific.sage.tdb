@@ -10,7 +10,7 @@
     
   >
   
-  plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+  pluginPrefix = org.lockss.plugin.highwire.
   implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
   
   {
@@ -21,6 +21,7 @@
     >
     
     #Ammons http://www.amsci.com/journals/
+    pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://cop.sagepub.com/
  
     au < doNotProcess; doNotProcess ; 2012 ; Comprehensive Psychology Volume 1 ; 1 ; >
@@ -52,6 +53,7 @@
     >
     
     #Ammons http://www.amsci.com/journals/
+    pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://prx.sagepub.com/
  
     au < doNotProcess; doNotProcess ; 1955 ; Psychological Reports Volume 1 ; 1 ; >
@@ -184,6 +186,7 @@
     >
     
     #Ammons http://www.amsci.com/journals/
+    pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://pms.sagepub.com/
 
     au < doNotProcess ; doNotProcess ; 1949 ; Perceptual and Motor Skills Volume 1 ; 1 ; >
