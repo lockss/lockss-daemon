@@ -4,7 +4,7 @@
     name = Zoo Outreach Organization 
   >
 
-    plugin = needs.plugin
+    plugin = needs.wget
     param[base_url] = http://www.zoosprint.org/
     implicit < status ; year ; name ; param[volume_name] >
      
@@ -19,7 +19,7 @@
      
     {
 
-
+    au < exists ; 2016 ; ZOO's Print Journal Volume 31 ; 31 >
 
     }
 

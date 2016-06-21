@@ -15,7 +15,7 @@
     >
     
     {
-      plugin = needs.plugin
+      plugin = needs.wget
       param[base_url] = http://museumvictoria.com.au/
       
     }

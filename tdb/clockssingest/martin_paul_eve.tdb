@@ -16,7 +16,7 @@
      >
      
      #to be captured by wget.
-     plugin = needs.plugin
+     plugin = needs.wget
      param[base_url] = http://www.alluvium-journal.org/
      implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
 

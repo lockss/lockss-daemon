@@ -7,7 +7,7 @@
   >
   
   #use wget
-  plugin = needs.plugin
+  plugin = needs.wget
   implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
   
   {
