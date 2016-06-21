@@ -58,7 +58,7 @@ public class TestEuropeanMathematicalSocietyArchivalUnit extends LockssTestCase 
   private static final Logger log = Logger.getLogger(TestEuropeanMathematicalSocietyArchivalUnit.class);
   
   static final String PLUGIN_ID = "org.lockss.plugin.europeanmathematicalsociety.EuropeanMathematicalSocietyPlugin";
-  static final String PluginName = "European Mathematical Society Plugin";
+  static final String PluginName = "European Mathematical Society Journals Plugin";
   
   
   public void setUp() throws Exception {
