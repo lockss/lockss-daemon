@@ -32,7 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin;
 
-/** Exceptions that represent validation errors on ingested content */
+/** Exceptions that represent validation errors on ingested content.
+ * ContentValidator implementations should throw this or a subclass to
+ * indicate validation failure */
 
 public class ContentValidationException extends Exception {
 
