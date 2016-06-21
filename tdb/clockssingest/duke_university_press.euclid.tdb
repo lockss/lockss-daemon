@@ -1,0 +1,416 @@
+{
+
+  publisher <
+    name = Duke University Press ;
+    info[contract] = 2012 ;
+    info[tester] = S
+  >
+
+  {
+
+    title <
+      name = Duke Mathematical Journal ;
+      issn = 0012-7094 ;
+      eissn = 1547-7398
+    >
+
+      plugin = needs.SourcePlugin
+      param[base_url] = http://projecteuclid.org/dmj/
+      param[journal_id] = dmj
+      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+
+      au < exists ; exists ; 1935 ; Duke Mathematical Journal Volume 1 ; 1 ; >
+      au < exists ; exists ; 1936 ; Duke Mathematical Journal Volume 2 ; 2 ; >
+      au < exists ; exists ; 1937 ; Duke Mathematical Journal Volume 3 ; 3 ; >
+      au < exists ; exists ; 1938 ; Duke Mathematical Journal Volume 4 ; 4 ; >
+      au < exists ; exists ; 1939 ; Duke Mathematical Journal Volume 5 ; 5 ; >
+      au < exists ; exists ; 1940 ; Duke Mathematical Journal Volume 6 ; 6 ; >
+      au < exists ; exists ; 1940 ; Duke Mathematical Journal Volume 7 ; 7 ; >
+      au < exists ; exists ; 1941 ; Duke Mathematical Journal Volume 8 ; 8 ; >
+      au < exists ; exists ; 1942 ; Duke Mathematical Journal Volume 9 ; 9 ; >
+      au < exists ; exists ; 1943 ; Duke Mathematical Journal Volume 10 ; 10 ; >
+      au < exists ; exists ; 1944 ; Duke Mathematical Journal Volume 11 ; 11 ; >
+      au < exists ; exists ; 1945 ; Duke Mathematical Journal Volume 12 ; 12 ; >
+      au < exists ; exists ; 1946 ; Duke Mathematical Journal Volume 13 ; 13 ; >
+      au < exists ; exists ; 1947 ; Duke Mathematical Journal Volume 14 ; 14 ; >
+      au < exists ; exists ; 1948 ; Duke Mathematical Journal Volume 15 ; 15 ; >
+      au < exists ; exists ; 1949 ; Duke Mathematical Journal Volume 16 ; 16 ; >
+      au < exists ; exists ; 1950 ; Duke Mathematical Journal Volume 17 ; 17 ; >
+      au < exists ; exists ; 1951 ; Duke Mathematical Journal Volume 18 ; 18 ; >
+      au < exists ; exists ; 1952 ; Duke Mathematical Journal Volume 19 ; 19 ; >
+      au < exists ; exists ; 1953 ; Duke Mathematical Journal Volume 20 ; 20 ; >
+      au < exists ; exists ; 1954 ; Duke Mathematical Journal Volume 21 ; 21 ; >
+      au < exists ; exists ; 1955 ; Duke Mathematical Journal Volume 22 ; 22 ; >
+      au < exists ; exists ; 1956 ; Duke Mathematical Journal Volume 23 ; 23 ; >
+      au < exists ; exists ; 1957 ; Duke Mathematical Journal Volume 24 ; 24 ; >
+      au < exists ; exists ; 1958 ; Duke Mathematical Journal Volume 25 ; 25 ; >
+      au < exists ; exists ; 1959 ; Duke Mathematical Journal Volume 26 ; 26 ; >
+      au < exists ; exists ; 1960 ; Duke Mathematical Journal Volume 27 ; 27 ; >
+      au < exists ; exists ; 1961 ; Duke Mathematical Journal Volume 28 ; 28 ; >
+      au < exists ; exists ; 1962 ; Duke Mathematical Journal Volume 29 ; 29 ; >
+      au < exists ; exists ; 1963 ; Duke Mathematical Journal Volume 30 ; 30 ; >
+      au < exists ; exists ; 1964 ; Duke Mathematical Journal Volume 31 ; 31 ; >
+      au < exists ; exists ; 1965 ; Duke Mathematical Journal Volume 32 ; 32 ; >
+      au < exists ; exists ; 1966 ; Duke Mathematical Journal Volume 33 ; 33 ; >
+      au < exists ; exists ; 1967 ; Duke Mathematical Journal Volume 34 ; 34 ; >
+      au < exists ; exists ; 1968 ; Duke Mathematical Journal Volume 35 ; 35 ; >
+      au < exists ; exists ; 1969 ; Duke Mathematical Journal Volume 36 ; 36 ; >
+      au < exists ; exists ; 1970 ; Duke Mathematical Journal Volume 37 ; 37 ; >
+      au < exists ; exists ; 1971 ; Duke Mathematical Journal Volume 38 ; 38 ; >
+      au < exists ; exists ; 1972 ; Duke Mathematical Journal Volume 39 ; 39 ; >
+      au < exists ; exists ; 1973 ; Duke Mathematical Journal Volume 40 ; 40 ; >
+      au < exists ; exists ; 1974 ; Duke Mathematical Journal Volume 41 ; 41 ; >
+      au < exists ; exists ; 1975 ; Duke Mathematical Journal Volume 42 ; 42 ; >
+      au < exists ; exists ; 1976 ; Duke Mathematical Journal Volume 43 ; 43 ; >
+      au < exists ; exists ; 1977 ; Duke Mathematical Journal Volume 44 ; 44 ; >
+      au < exists ; exists ; 1978 ; Duke Mathematical Journal Volume 45 ; 45 ; >
+      au < exists ; exists ; 1979 ; Duke Mathematical Journal Volume 46 ; 46 ; >
+      au < exists ; exists ; 1980 ; Duke Mathematical Journal Volume 47 ; 47 ; >
+      au < exists ; exists ; 1981 ; Duke Mathematical Journal Volume 48 ; 48 ; >
+      au < exists ; exists ; 1982 ; Duke Mathematical Journal Volume 49 ; 49 ; >
+      au < exists ; exists ; 1983 ; Duke Mathematical Journal Volume 50 ; 50 ; >
+      au < exists ; exists ; 1984 ; Duke Mathematical Journal Volume 51 ; 51 ; >
+      au < exists ; exists ; 1985 ; Duke Mathematical Journal Volume 52 ; 52 ; >
+      au < exists ; exists ; 1986 ; Duke Mathematical Journal Volume 53 ; 53 ; >
+      au < exists ; exists ; 1987 ; Duke Mathematical Journal Volume 54 ; 54 ; >
+      au < exists ; exists ; 1987 ; Duke Mathematical Journal Volume 55 ; 55 ; >
+      au < exists ; exists ; 1988 ; Duke Mathematical Journal Volume 56 ; 56 ; >
+      au < exists ; exists ; 1988 ; Duke Mathematical Journal Volume 57 ; 57 ; >
+      au < exists ; exists ; 1989 ; Duke Mathematical Journal Volume 58 ; 58 ; >
+      au < exists ; exists ; 1989 ; Duke Mathematical Journal Volume 59 ; 59 ; >
+      au < exists ; exists ; 1990 ; Duke Mathematical Journal Volume 60 ; 60 ; >
+      au < exists ; exists ; 1990 ; Duke Mathematical Journal Volume 61 ; 61 ; >
+      au < exists ; exists ; 1991 ; Duke Mathematical Journal Volume 62 ; 62 ; >
+      au < exists ; exists ; 1991 ; Duke Mathematical Journal Volume 63 ; 63 ; >
+      au < exists ; exists ; 1991 ; Duke Mathematical Journal Volume 64 ; 64 ; >
+      au < exists ; exists ; 1992 ; Duke Mathematical Journal Volume 65 ; 65 ; >
+      au < exists ; exists ; 1992 ; Duke Mathematical Journal Volume 66 ; 66 ; >
+      au < exists ; exists ; 1992 ; Duke Mathematical Journal Volume 67 ; 67 ; >
+      au < exists ; exists ; 1992 ; Duke Mathematical Journal Volume 68 ; 68 ; >
+      au < exists ; exists ; 1993 ; Duke Mathematical Journal Volume 69 ; 69 ; >
+      au < exists ; exists ; 1993 ; Duke Mathematical Journal Volume 70 ; 70 ; >
+      au < exists ; exists ; 1993 ; Duke Mathematical Journal Volume 71 ; 71 ; >
+      au < exists ; exists ; 1993 ; Duke Mathematical Journal Volume 72 ; 72 ; >
+      au < exists ; exists ; 1994 ; Duke Mathematical Journal Volume 73 ; 73 ; >
+      au < exists ; exists ; 1994 ; Duke Mathematical Journal Volume 74 ; 74 ; >
+      au < exists ; exists ; 1994 ; Duke Mathematical Journal Volume 75 ; 75 ; >
+      au < exists ; exists ; 1994 ; Duke Mathematical Journal Volume 76 ; 76 ; >
+      au < exists ; exists ; 1995 ; Duke Mathematical Journal Volume 77 ; 77 ; >
+      au < exists ; exists ; 1995 ; Duke Mathematical Journal Volume 78 ; 78 ; >
+      au < exists ; exists ; 1995 ; Duke Mathematical Journal Volume 79 ; 79 ; >
+      au < exists ; exists ; 1995 ; Duke Mathematical Journal Volume 80 ; 80 ; >
+      au < exists ; exists ; 1995-1996 ; Duke Mathematical Journal Volume 81 ; 81 ; >
+      au < exists ; exists ; 1996 ; Duke Mathematical Journal Volume 82 ; 82 ; >
+      au < exists ; exists ; 1996 ; Duke Mathematical Journal Volume 83 ; 83 ; >
+      au < exists ; exists ; 1996 ; Duke Mathematical Journal Volume 84 ; 84 ; >
+      au < exists ; exists ; 1996 ; Duke Mathematical Journal Volume 85 ; 85 ; >
+      au < exists ; exists ; 1997 ; Duke Mathematical Journal Volume 86 ; 86 ; >
+      au < exists ; exists ; 1997 ; Duke Mathematical Journal Volume 87 ; 87 ; >
+      au < exists ; exists ; 1997 ; Duke Mathematical Journal Volume 88 ; 88 ; >
+      au < exists ; exists ; 1997 ; Duke Mathematical Journal Volume 89 ; 89 ; >
+      au < exists ; exists ; 1997 ; Duke Mathematical Journal Volume 90 ; 90 ; >
+      au < exists ; exists ; 1998 ; Duke Mathematical Journal Volume 91 ; 91 ; >
+      au < exists ; exists ; 1998 ; Duke Mathematical Journal Volume 92 ; 92 ; >
+      au < exists ; exists ; 1998 ; Duke Mathematical Journal Volume 93 ; 93 ; >
+      au < exists ; exists ; 1998 ; Duke Mathematical Journal Volume 94 ; 94 ; >
+      au < exists ; exists ; 1998 ; Duke Mathematical Journal Volume 95 ; 95 ; >
+      au < exists ; exists ; 1999 ; Duke Mathematical Journal Volume 96 ; 96 ; >
+      au < exists ; exists ; 1999 ; Duke Mathematical Journal Volume 97 ; 97 ; >
+      au < exists ; exists ; 1999 ; Duke Mathematical Journal Volume 98 ; 98 ; >
+      au < exists ; exists ; 1999 ; Duke Mathematical Journal Volume 99 ; 99 ; >
+      au < exists ; exists ; 1999 ; Duke Mathematical Journal Volume 100 ; 100 ; >
+      au < exists ; exists ; 2000 ; Duke Mathematical Journal Volume 101 ; 101 ; >
+      au < exists ; exists ; 2000 ; Duke Mathematical Journal Volume 102 ; 102 ; >
+      au < exists ; exists ; 2000 ; Duke Mathematical Journal Volume 103 ; 103 ; >
+      au < exists ; exists ; 2000 ; Duke Mathematical Journal Volume 104 ; 104 ; >
+      au < exists ; exists ; 2000 ; Duke Mathematical Journal Volume 105 ; 105 ; >
+      au < exists ; exists ; 2001 ; Duke Mathematical Journal Volume 106 ; 106 ; >
+      au < exists ; exists ; 2001 ; Duke Mathematical Journal Volume 107 ; 107 ; >
+      au < exists ; exists ; 2001 ; Duke Mathematical Journal Volume 108 ; 108 ; >
+      au < exists ; exists ; 2001 ; Duke Mathematical Journal Volume 109 ; 109 ; >
+      au < exists ; exists ; 2001 ; Duke Mathematical Journal Volume 110 ; 110 ; >
+      au < exists ; exists ; 2002 ; Duke Mathematical Journal Volume 111 ; 111 ; >
+      au < exists ; exists ; 2002 ; Duke Mathematical Journal Volume 112 ; 112 ; >
+      au < exists ; exists ; 2002 ; Duke Mathematical Journal Volume 113 ; 113 ; >
+      au < exists ; exists ; 2002 ; Duke Mathematical Journal Volume 114 ; 114 ; >
+      au < exists ; exists ; 2002 ; Duke Mathematical Journal Volume 115 ; 115 ; >
+      au < exists ; exists ; 2003 ; Duke Mathematical Journal Volume 116 ; 116 ; >
+      au < exists ; exists ; 2003 ; Duke Mathematical Journal Volume 117 ; 117 ; >
+      au < exists ; exists ; 2003 ; Duke Mathematical Journal Volume 118 ; 118 ; >
+      au < exists ; exists ; 2003 ; Duke Mathematical Journal Volume 119 ; 119 ; >
+      au < exists ; exists ; 2003 ; Duke Mathematical Journal Volume 120 ; 120 ; >
+      au < exists ; exists ; 2004 ; Duke Mathematical Journal Volume 121 ; 121 ; >
+      au < exists ; exists ; 2004 ; Duke Mathematical Journal Volume 122 ; 122 ; >
+      au < exists ; exists ; 2004 ; Duke Mathematical Journal Volume 123 ; 123 ; >
+      au < exists ; exists ; 2004 ; Duke Mathematical Journal Volume 124 ; 124 ; >
+      au < exists ; exists ; 2004 ; Duke Mathematical Journal Volume 125 ; 125 ; >
+      au < exists ; exists ; 2005 ; Duke Mathematical Journal Volume 126 ; 126 ; >
+      au < exists ; exists ; 2005 ; Duke Mathematical Journal Volume 127 ; 127 ; >
+      au < exists ; exists ; 2005 ; Duke Mathematical Journal Volume 128 ; 128 ; >
+      au < exists ; exists ; 2005 ; Duke Mathematical Journal Volume 129 ; 129 ; >
+      au < exists ; exists ; 2005 ; Duke Mathematical Journal Volume 130 ; 130 ; >
+      au < exists ; exists ; 2006 ; Duke Mathematical Journal Volume 131 ; 131 ; >
+      au < exists ; exists ; 2006 ; Duke Mathematical Journal Volume 132 ; 132 ; >
+      au < exists ; exists ; 2006 ; Duke Mathematical Journal Volume 133 ; 133 ; >
+      au < exists ; exists ; 2006 ; Duke Mathematical Journal Volume 134 ; 134 ; >
+      au < exists ; exists ; 2006 ; Duke Mathematical Journal Volume 135 ; 135 ; >
+      au < exists ; exists ; 2007 ; Duke Mathematical Journal Volume 136 ; 136 ; >
+      au < exists ; exists ; 2007 ; Duke Mathematical Journal Volume 137 ; 137 ; >
+      au < exists ; exists ; 2007 ; Duke Mathematical Journal Volume 138 ; 138 ; >
+      au < exists ; exists ; 2007 ; Duke Mathematical Journal Volume 139 ; 139 ; >
+      au < exists ; exists ; 2007 ; Duke Mathematical Journal Volume 140 ; 140 ; >
+      au < exists ; exists ; 2008 ; Duke Mathematical Journal Volume 141 ; 141 ; >
+      au < exists ; exists ; 2008 ; Duke Mathematical Journal Volume 142 ; 142 ; >
+      au < exists ; exists ; 2008 ; Duke Mathematical Journal Volume 143 ; 143 ; >
+      au < exists ; exists ; 2008 ; Duke Mathematical Journal Volume 144 ; 144 ; >
+      au < exists ; exists ; 2008 ; Duke Mathematical Journal Volume 145 ; 145 ; >
+      au < exists ; exists ; 2009 ; Duke Mathematical Journal Volume 146 ; 146 ; >
+      au < exists ; exists ; 2009 ; Duke Mathematical Journal Volume 147 ; 147 ; >
+      au < exists ; exists ; 2009 ; Duke Mathematical Journal Volume 148 ; 148 ; >
+      au < exists ; exists ; 2009 ; Duke Mathematical Journal Volume 149 ; 149 ; >
+      au < exists ; exists ; 2009 ; Duke Mathematical Journal Volume 150 ; 150 ; >
+      au < exists ; exists ; 2010 ; Duke Mathematical Journal Volume 151 ; 151 ; >
+      au < exists ; exists ; 2010 ; Duke Mathematical Journal Volume 152 ; 152 ; >
+      au < exists ; exists ; 2010 ; Duke Mathematical Journal Volume 153 ; 153 ; >
+      au < exists ; exists ; 2010 ; Duke Mathematical Journal Volume 154 ; 154 ; >
+      au < exists ; exists ; 2010 ; Duke Mathematical Journal Volume 155 ; 155 ; >
+      au < exists ; exists ; 2011 ; Duke Mathematical Journal Volume 156 ; 156 ; >
+      au < exists ; exists ; 2011 ; Duke Mathematical Journal Volume 157 ; 157 ; >
+      au < exists ; exists ; 2011 ; Duke Mathematical Journal Volume 158 ; 158 ; >
+      au < exists ; exists ; 2011 ; Duke Mathematical Journal Volume 159 ; 159 ; >
+      au < exists ; exists ; 2011 ; Duke Mathematical Journal Volume 160 ; 160 ; >
+      au < exists ; exists ; 2012 ; Duke Mathematical Journal Volume 161 ; 161 ; >
+      au < exists ; exists ; 2013 ; Duke Mathematical Journal Volume 162 ; 162 ; >
+      au < exists ; exists ; 2014 ; Duke Mathematical Journal Volume 163 ; 163 ; >
+      au < expected ; exists ; 2015 ; Duke Mathematical Journal Volume 164 ; 164 ; >
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Mathematics of Kyoto University ;
+      issn = 0023-608X
+    >
+
+      comment[continued_by] = 2156-2261
+      comment[kjm_1] = title changed from The Journal of Mathematics of Kyoto University to the Kyoto Journal of Mathematics 1/2010
+
+      plugin = needs.SourcePlugin
+      param[base_url] = http://projecteuclid.org/kjm/
+      param[journal_id] = kjm_2
+      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+
+
+      au < exists ; exists ; 1961-1962 ; The Journal of Mathematics of Kyoto University Volume 1 ; 1 ; >
+      au < exists ; exists ; 1962 ; The Journal of Mathematics of Kyoto University Volume 2 ; 2 ; >
+      au < exists ; exists ; 1963 ; The Journal of Mathematics of Kyoto University Volume 3 ; 3 ; >
+      au < exists ; exists ; 1964 ; The Journal of Mathematics of Kyoto University Volume 4 ; 4 ; >
+      au < exists ; exists ; 1965 ; The Journal of Mathematics of Kyoto University Volume 5 ; 5 ; >
+      au < exists ; exists ; 1966 ; The Journal of Mathematics of Kyoto University Volume 6 ; 6 ; >
+      au < exists ; exists ; 1967 ; The Journal of Mathematics of Kyoto University Volume 7 ; 7 ; >
+      au < exists ; exists ; 1968 ; The Journal of Mathematics of Kyoto University Volume 8 ; 8 ; >
+      au < exists ; exists ; 1969 ; The Journal of Mathematics of Kyoto University Volume 9 ; 9 ; >
+      au < exists ; exists ; 1970 ; The Journal of Mathematics of Kyoto University Volume 10 ; 10 ; >
+      au < exists ; exists ; 1971 ; The Journal of Mathematics of Kyoto University Volume 11 ; 11 ; >
+      au < exists ; exists ; 1972 ; The Journal of Mathematics of Kyoto University Volume 12 ; 12 ; >
+      au < exists ; exists ; 1973 ; The Journal of Mathematics of Kyoto University Volume 13 ; 13 ; >
+      au < exists ; exists ; 1974 ; The Journal of Mathematics of Kyoto University Volume 14 ; 14 ; >
+      au < exists ; exists ; 1975 ; The Journal of Mathematics of Kyoto University Volume 15 ; 15 ; >
+      au < exists ; exists ; 1976 ; The Journal of Mathematics of Kyoto University Volume 16 ; 16 ; >
+      au < exists ; exists ; 1977 ; The Journal of Mathematics of Kyoto University Volume 17 ; 17 ; >
+      au < exists ; exists ; 1978 ; The Journal of Mathematics of Kyoto University Volume 18 ; 18 ; >
+      au < exists ; exists ; 1979 ; The Journal of Mathematics of Kyoto University Volume 19 ; 19 ; >
+      au < exists ; exists ; 1980 ; The Journal of Mathematics of Kyoto University Volume 20 ; 20 ; >
+      au < exists ; exists ; 1981 ; The Journal of Mathematics of Kyoto University Volume 21 ; 21 ; >
+      au < exists ; exists ; 1982 ; The Journal of Mathematics of Kyoto University Volume 22 ; 22 ; >
+      au < exists ; exists ; 1983 ; The Journal of Mathematics of Kyoto University Volume 23 ; 23 ; >
+      au < exists ; exists ; 1984 ; The Journal of Mathematics of Kyoto University Volume 24 ; 24 ; >
+      au < exists ; exists ; 1985 ; The Journal of Mathematics of Kyoto University Volume 25 ; 25 ; >
+      au < exists ; exists ; 1986 ; The Journal of Mathematics of Kyoto University Volume 26 ; 26 ; >
+      au < exists ; exists ; 1987 ; The Journal of Mathematics of Kyoto University Volume 27 ; 27 ; >
+      au < exists ; exists ; 1988 ; The Journal of Mathematics of Kyoto University Volume 28 ; 28 ; >
+      au < exists ; exists ; 1989 ; The Journal of Mathematics of Kyoto University Volume 29 ; 29 ; >
+      au < exists ; exists ; 1990 ; The Journal of Mathematics of Kyoto University Volume 30 ; 30 ; >
+      au < exists ; exists ; 1991 ; The Journal of Mathematics of Kyoto University Volume 31 ; 31 ; >
+      au < exists ; exists ; 1992 ; The Journal of Mathematics of Kyoto University Volume 32 ; 32 ; >
+      au < exists ; exists ; 1993 ; The Journal of Mathematics of Kyoto University Volume 33 ; 33 ; >
+      au < exists ; exists ; 1994 ; The Journal of Mathematics of Kyoto University Volume 34 ; 34 ; >
+      au < exists ; exists ; 1995 ; The Journal of Mathematics of Kyoto University Volume 35 ; 35 ; >
+      au < exists ; exists ; 1996 ; The Journal of Mathematics of Kyoto University Volume 36 ; 36 ; >
+      au < exists ; exists ; 1997 ; The Journal of Mathematics of Kyoto University Volume 37 ; 37 ; >
+      au < exists ; exists ; 1998 ; The Journal of Mathematics of Kyoto University Volume 38 ; 38 ; >
+      au < exists ; exists ; 1999 ; The Journal of Mathematics of Kyoto University Volume 39 ; 39 ; >
+      au < exists ; exists ; 2000 ; The Journal of Mathematics of Kyoto University Volume 40 ; 40 ; >
+      au < exists ; exists ; 2001 ; The Journal of Mathematics of Kyoto University Volume 41 ; 41 ; >
+      au < exists ; exists ; 2002 ; The Journal of Mathematics of Kyoto University Volume 42 ; 42 ; >
+      au < exists ; exists ; 2003 ; The Journal of Mathematics of Kyoto University Volume 43 ; 43 ; >
+      au < exists ; exists ; 2004 ; The Journal of Mathematics of Kyoto University Volume 44 ; 44 ; >
+      au < exists ; exists ; 2005 ; The Journal of Mathematics of Kyoto University Volume 45 ; 45 ; >
+      au < exists ; exists ; 2006 ; The Journal of Mathematics of Kyoto University Volume 46 ; 46 ; >
+      au < exists ; exists ; 2007 ; The Journal of Mathematics of Kyoto University Volume 47 ; 47 ; >
+      au < exists ; exists ; 2008 ; The Journal of Mathematics of Kyoto University Volume 48 ; 48 ; >
+      au < exists ; exists ; 2009 ; The Journal of Mathematics of Kyoto University Volume 49 ; 49 ; >
+
+    }
+
+    {
+
+    title <
+      name = Kyoto Journal of Mathematics ;
+      issn =  2156-2261 ;
+      eissn = 2154-3321
+    >
+
+      comment[continues] = 0023-608X
+      plugin = needs.SourcePlugin
+      param[base_url] =  http://projecteuclid.org/kjm/
+      param[journal_id] = kjm_3
+      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+      # formerly The Journal of Mathematics of Kyoto University, 1961-2009
+      comment[1] = formerly Memoirs of the College of Science, University of Kyoto. Series A: Mathematics, 1950-1961
+
+
+      au < exists ; exists ; 2010 ; Kyoto Journal of Mathematics Volume 50 ; 50 ; >
+      au < exists ; exists ; 2011 ; Kyoto Journal of Mathematics Volume 51 ; 51 ; >
+      au < exists ; exists ; 2012 ; Kyoto Journal of Mathematics Volume 52 ; 52 ; >
+      au < exists ; exists ; 2013 ; Kyoto Journal of Mathematics Volume 53 ; 53 ; >
+      au < exists ; exists ; 2014 ; Kyoto Journal of Mathematics Volume 54 ; 54 ; >
+      au < exists ; exists ; 2015 ; Kyoto Journal of Mathematics Volume 55 ; 55 ; >
+
+
+    }
+
+    {
+
+    title <
+      name = Memoirs of the College of Science, University of Kyoto. Series A: Mathematics ;
+      issn = 0368-8887
+    >
+
+      comment[continued_by] = 2156-2261
+      comment[kjm_1] = title changed from The Journal of Mathematics of Kyoto University to the Kyoto Journal of Mathematics 1/2010
+
+      plugin = needs.SourcePlugin
+      param[base_url] = http://projecteuclid.org/kjm/
+      param[journal_id] = kjm_1
+      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+
+
+      au < exists ; exists ; 1950-1951 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 26 ; 26 ; >
+      au < exists ; exists ; 1952-1953 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 27 ; 27 ; >
+      au < exists ; exists ; 1953-1954 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 28 ; 28 ; >
+      au < exists ; exists ; 1955 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 29 ; 29 ; >
+      au < exists ; exists ; 1956-1957 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 30 ; 30 ; >
+      au < exists ; exists ; 1958 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 31 ; 31 ; >
+      au < exists ; exists ; 1959-1960 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 32 ; 32 ; >
+      au < exists ; exists ; 1960-1961 ; Memoirs of the College of Science, University of Kyoto. Series A: Mathematics Volume 33 ; 33 ; >
+
+    }
+
+    {
+
+    title <
+      name = Nagoya Mathematical Journal ;
+      issn = 0027-7630 ;
+      eissn = 2152-6842
+
+     >
+      plugin = needs.SourcePlugin
+      param[base_url] = http://projecteuclid.org/euclid.nmj/
+      param[journal_id] = nmj
+      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+      #moving to Cambridge University Press in 2016
+
+      au < exists ; exists ; 2012 ; Nagoya Mathematical Journal Volume 205 ; 205 ; >
+      au < exists ; exists ; 2012 ; Nagoya Mathematical Journal Volume 206 ; 206 ; >
+      au < exists ; exists ; 2012 ; Nagoya Mathematical Journal Volume 207 ; 207 ; >
+      au < exists ; exists ; 2012 ; Nagoya Mathematical Journal Volume 208 ; 208 ; >
+      au < exists ; exists ; 2013 ; Nagoya Mathematical Journal Volume 209 ; 209 ; >
+      au < exists ; exists ; 2013 ; Nagoya Mathematical Journal Volume 210 ; 210 ; >
+      au < exists ; exists ; 2013 ; Nagoya Mathematical Journal Volume 211 ; 211 ; >
+      au < exists ; exists ; 2013 ; Nagoya Mathematical Journal Volume 212 ; 212 ; >
+      au < exists ; exists ; 2014 ; Nagoya Mathematical Journal Volume 213 ; 213 ; >
+      au < exists ; exists ; 2014 ; Nagoya Mathematical Journal Volume 214 ; 214 ; >
+      au < exists ; exists ; 2014 ; Nagoya Mathematical Journal Volume 215 ; 215 ; >
+      au < exists ; exists ; 2014 ; Nagoya Mathematical Journal Volume 216 ; 216 ; >
+      au < exists ; exists ; 2015 ; Nagoya Mathematical Journal Volume 217 ; 217 ; >
+      au < exists ; exists ; 2015 ; Nagoya Mathematical Journal Volume 218 ; 218 ; >
+      au < expected ; exists ; 2015 ; Nagoya Mathematical Journal Volume 219 ; 219 ; >
+      au < expected ; exists ; 2015 ; Nagoya Mathematical Journal Volume 220 ; 220 ; >
+
+    }
+
+    {
+
+    title <
+      name = Notre Dame Journal of Formal Logic ;
+      issn = 0029-4527 ;
+      eissn = 1939-0726
+
+>
+      plugin = needs.SourcePlugin
+      param[base_url] = http://projecteuclid.org/ndjfl/
+      param[journal_id] = ndjfl
+      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+
+      au < exists ; exists ; 1960 ; Notre Dame Journal of Formal Logic Volume 1 ; 1 ; >
+      au < exists ; exists ; 1961 ; Notre Dame Journal of Formal Logic Volume 2 ; 2 ; >
+      au < exists ; exists ; 1962 ; Notre Dame Journal of Formal Logic Volume 3 ; 3 ; >
+      au < exists ; exists ; 1963 ; Notre Dame Journal of Formal Logic Volume 4 ; 4 ; >
+      au < exists ; exists ; 1964 ; Notre Dame Journal of Formal Logic Volume 5 ; 5 ; >
+      au < exists ; exists ; 1965 ; Notre Dame Journal of Formal Logic Volume 6 ; 6 ; >
+      au < exists ; exists ; 1966 ; Notre Dame Journal of Formal Logic Volume 7 ; 7 ; >
+      au < exists ; exists ; 1967 ; Notre Dame Journal of Formal Logic Volume 8 ; 8 ; >
+      au < exists ; exists ; 1968 ; Notre Dame Journal of Formal Logic Volume 9 ; 9 ; >
+      au < exists ; exists ; 1969 ; Notre Dame Journal of Formal Logic Volume 10 ; 10 ; >
+      au < exists ; exists ; 1970 ; Notre Dame Journal of Formal Logic Volume 11 ; 11 ; >
+      au < exists ; exists ; 1971 ; Notre Dame Journal of Formal Logic Volume 12 ; 12 ; >
+      au < exists ; exists ; 1972 ; Notre Dame Journal of Formal Logic Volume 13 ; 13 ; >
+      au < exists ; exists ; 1973 ; Notre Dame Journal of Formal Logic Volume 14 ; 14 ; >
+      au < exists ; exists ; 1974 ; Notre Dame Journal of Formal Logic Volume 15 ; 15 ; >
+      au < exists ; exists ; 1975 ; Notre Dame Journal of Formal Logic Volume 16 ; 16 ; >
+      au < exists ; exists ; 1976 ; Notre Dame Journal of Formal Logic Volume 17 ; 17 ; >
+      au < exists ; exists ; 1977 ; Notre Dame Journal of Formal Logic Volume 18 ; 18 ; >
+      au < exists ; exists ; 1978 ; Notre Dame Journal of Formal Logic Volume 19 ; 19 ; >
+      au < exists ; exists ; 1979 ; Notre Dame Journal of Formal Logic Volume 20 ; 20 ; >
+      au < exists ; exists ; 1980 ; Notre Dame Journal of Formal Logic Volume 21 ; 21 ; >
+      au < exists ; exists ; 1981 ; Notre Dame Journal of Formal Logic Volume 22 ; 22 ; >
+      au < exists ; exists ; 1982 ; Notre Dame Journal of Formal Logic Volume 23 ; 23 ; >
+      au < exists ; exists ; 1983 ; Notre Dame Journal of Formal Logic Volume 24 ; 24 ; >
+      au < exists ; exists ; 1984 ; Notre Dame Journal of Formal Logic Volume 25 ; 25 ; >
+      au < exists ; exists ; 1985 ; Notre Dame Journal of Formal Logic Volume 26 ; 26 ; >
+      au < exists ; exists ; 1986 ; Notre Dame Journal of Formal Logic Volume 27 ; 27 ; >
+      au < exists ; exists ; 1987 ; Notre Dame Journal of Formal Logic Volume 28 ; 28 ; >
+      au < exists ; exists ; 1988 ; Notre Dame Journal of Formal Logic Volume 29 ; 29 ; >
+      au < exists ; exists ; 1989 ; Notre Dame Journal of Formal Logic Volume 30 ; 30 ; >
+      au < exists ; exists ; 1990 ; Notre Dame Journal of Formal Logic Volume 31 ; 31 ; >
+      au < exists ; exists ; 1991 ; Notre Dame Journal of Formal Logic Volume 32 ; 32 ; >
+      au < exists ; exists ; 1992 ; Notre Dame Journal of Formal Logic Volume 33 ; 33 ; >
+      au < exists ; exists ; 1993 ; Notre Dame Journal of Formal Logic Volume 34 ; 34 ; >
+      au < exists ; exists ; 1994 ; Notre Dame Journal of Formal Logic Volume 35 ; 35 ; >
+      au < exists ; exists ; 1995 ; Notre Dame Journal of Formal Logic Volume 36 ; 36 ; >
+      au < exists ; exists ; 1996 ; Notre Dame Journal of Formal Logic Volume 37 ; 37 ; >
+      au < exists ; exists ; 1997 ; Notre Dame Journal of Formal Logic Volume 38 ; 38 ; >
+      au < exists ; exists ; 1998 ; Notre Dame Journal of Formal Logic Volume 39 ; 39 ; >
+      au < exists ; exists ; 1999 ; Notre Dame Journal of Formal Logic Volume 40 ; 40 ; >
+      au < exists ; exists ; 2000 ; Notre Dame Journal of Formal Logic Volume 41 ; 41 ; >
+      au < exists ; exists ; 2001 ; Notre Dame Journal of Formal Logic Volume 42 ; 42 ; >
+      au < exists ; exists ; 2002 ; Notre Dame Journal of Formal Logic Volume 43 ; 43 ; >
+      au < exists ; exists ; 2003 ; Notre Dame Journal of Formal Logic Volume 44 ; 44 ; >
+      au < exists ; exists ; 2004 ; Notre Dame Journal of Formal Logic Volume 45 ; 45 ; >
+      au < exists ; exists ; 2005 ; Notre Dame Journal of Formal Logic Volume 46 ; 46 ; >
+      au < exists ; exists ; 2006 ; Notre Dame Journal of Formal Logic Volume 47 ; 47 ; >
+      au < exists ; exists ; 2007 ; Notre Dame Journal of Formal Logic Volume 48 ; 48 ; >
+      au < exists ; exists ; 2008 ; Notre Dame Journal of Formal Logic Volume 49 ; 49 ; >
+      au < exists ; exists ; 2009 ; Notre Dame Journal of Formal Logic Volume 50 ; 50 ; >
+      au < exists ; exists ; 2010 ; Notre Dame Journal of Formal Logic Volume 51 ; 51 ; >
+      au < exists ; exists ; 2011 ; Notre Dame Journal of Formal Logic Volume 52 ; 52 ; >
+      au < exists ; exists ; 2012 ; Notre Dame Journal of Formal Logic Volume 53 ; 53 ; >
+      au < exists ; exists ; 2013 ; Notre Dame Journal of Formal Logic Volume 54 ; 54 ; >
+      au < exists ; exists ; 2014 ; Notre Dame Journal of Formal Logic Volume 55 ; 55 ; >
+      au < expected ; exists ; 2015 ; Notre Dame Journal of Formal Logic Volume 56 ; 56 ; >
+
+    }
+
+}
