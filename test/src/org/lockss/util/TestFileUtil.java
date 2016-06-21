@@ -326,6 +326,26 @@ public class TestFileUtil extends LockssTestCase {
     assertInputStreamMatchesString("bee content season",
 				   FileUtil.newFileInputStream(shortName));
 
+    File noFile = new File(dir, "nosuchfile");
+    try {
+      FileUtil.newFileInputStream(noFile);
+      fail("FileUtil.newFileInputStream() non-existent file should throw");
+    } catch (FileNotFoundException e) {
+      assertEquals(noFile.getPath(), e.getMessage());
+    }
+  }
+
+  // These tests ensure correct behavior of long file and path names.  Skip
+  // them on less capable filesystems.
+  public void testNewFileOutputStreamLongPath() throws IOException {
+    File dir = getTempDir("longtest");
+    int pad = dir.getPath().length();
+    PlatformUtil pi = PlatformUtil.getInstance();
+    if (pi.maxFilename() < 251 ||
+	pi.maxPathname() < (2510 + pad)) {
+      log.debug("Skipping long path tests");
+      return;
+    }
 
     String s250 = StringUtils.repeat("1234567890", 25);
     assertEquals(250, s250.length());
@@ -335,17 +355,9 @@ public class TestFileUtil extends LockssTestCase {
     assertTrue(longDir.mkdirs());
     File longName = new File(longDir, "longpath");
     StringUtil.toOutputStream(FileUtil.newFileOutputStream(longName),
-			       "b content");
+			      "b content");
     assertInputStreamMatchesString("b content",
 				   FileUtil.newFileInputStream(longName));
-
-    File noFile = new File(dir, "nosuchfile");
-    try {
-      FileUtil.newFileInputStream(noFile);
-      fail("FileUtil.newFileInputStream() non-existent file should throw");
-    } catch (FileNotFoundException e) {
-      assertEquals(noFile.getPath(), e.getMessage());
-    }
   }
 
   public void testSetOwnerRWX() throws IOException {
