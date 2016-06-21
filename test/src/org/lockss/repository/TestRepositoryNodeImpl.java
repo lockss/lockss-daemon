@@ -1043,7 +1043,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   }
 
   String trimUrlForOs(String url) {
-    int pad = tempDirPath.length() + "/cache/xxx".length() +
+    int pad = 10 + tempDirPath.length() + "/cache/xxx".length() +
       RepositoryNodeImpl.CONTENT_DIR.length() +
       Math.max(RepositoryNodeImpl.CURRENT_FILENAME.length(),
 	       RepositoryNodeImpl.CURRENT_PROPS_FILENAME.length());

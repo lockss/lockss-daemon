@@ -232,6 +232,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return currentCacheFile.length();
   }
 
+  Object treeSizeLock = new Object();
+
   public long getTreeContentSize(CachedUrlSetSpec filter,
 				 boolean calcIfUnknown) {
     // this caches the size recursively (for unfiltered queries)
@@ -240,9 +242,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
     if (filter==null) {
       String treeSize = nodeProps.getProperty(TREE_SIZE_PROPERTY);
       if (isPropValid(treeSize)) {
-        // return if found
+	// return if found
 	logger.debug2("Found cached size at " + nodeLocation);
-        return Long.parseLong(treeSize);
+	return Long.parseLong(treeSize);
       }
     }
     logger.debug2("No cached size at " + nodeLocation);
@@ -250,28 +252,42 @@ public class RepositoryNodeImpl implements RepositoryNode {
       repository.queueSizeCalc(this);
       return -1;
     }
+    // Don't allow two threads to calculate size of same node
+    synchronized (treeSizeLock) {
+      // Check cache again when lock obtained.  Don't think this is
+      // double-checked locksing anti-pattern due to value being in
+      // Properties, but only harm would be to redundantly recalc a single
+      // node.
+      if (filter==null) {
+	String treeSize = nodeProps.getProperty(TREE_SIZE_PROPERTY);
+	if (isPropValid(treeSize)) {
+	  // return if found
+	  logger.debug2("Found cached size at " + nodeLocation);
+	  return Long.parseLong(treeSize);
+	}
+      }
+      long totalSize = 0;
+      if (hasContent()) {
+	totalSize = currentCacheFile.length();
+      }
 
-    long totalSize = 0;
-    if (hasContent()) {
-      totalSize = currentCacheFile.length();
-    }
+      // since RepositoryNodes update and cache tree size, efficient to use them
+      int children = 0;
+      for (Iterator subNodes = listChildren(filter, false); subNodes.hasNext(); ) {
+	// call recursively on all children
+	RepositoryNode subNode = (RepositoryNode)subNodes.next();
+	totalSize += subNode.getTreeContentSize(null, true);
+	children++;
+      }
 
-    // since RepositoryNodes update and cache tree size, efficient to use them
-    int children = 0;
-    for (Iterator subNodes = listChildren(filter, false); subNodes.hasNext(); ) {
-      // call recursively on all children
-      RepositoryNode subNode = (RepositoryNode)subNodes.next();
-      totalSize += subNode.getTreeContentSize(null, true);
-      children++;
+      if (filter==null) {
+	// cache values
+	nodeProps.setProperty(TREE_SIZE_PROPERTY, Long.toString(totalSize));
+	nodeProps.setProperty(CHILD_COUNT_PROPERTY, Integer.toString(children));
+	writeNodeProperties();
+      }
+      return totalSize;
     }
-
-    if (filter==null) {
-      // cache values
-      nodeProps.setProperty(TREE_SIZE_PROPERTY, Long.toString(totalSize));
-      nodeProps.setProperty(CHILD_COUNT_PROPERTY, Integer.toString(children));
-      writeNodeProperties();
-    }
-    return totalSize;
   }
 
   public boolean isLeaf() {
@@ -1234,8 +1250,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
       } catch (IOException ioe) {
         try {
           logger.error("Couldn't write properties for " +
-                       tempPropsFile.getPath()+".");
-          throw new LockssRepository.RepositoryStateException("Couldn't write properties file.");
+                       tempPropsFile.getPath()+".", ioe);
+          throw new LockssRepository.RepositoryStateException("Couldn't write properties file.", ioe);
         } finally {
           abandonNewVersion();
         }
@@ -1705,8 +1721,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
       os.close();
     } catch (IOException ioe) {
       logger.error("Couldn't write node properties for " +
-                   nodePropsFile.getPath()+".");
-      throw new LockssRepository.RepositoryStateException("Couldn't write node properties file.");
+                   nodePropsFile.getPath()+".", ioe);
+      throw new LockssRepository.RepositoryStateException("Couldn't write node properties file.", ioe);
     }
   }
 
