@@ -39,10 +39,12 @@ public interface ContentValidatorFactory {
   /** Create a ContentValidator to process CachedUrls in the AU.  The
    * lifecycle of the ContentValidator is not defined - it may be reused or
    * not.
-   * @param au
-   * @param contentType useful if the factory is registered for wildcard
-   * mime type.  (Not strictly necessary in that case as ContentValidator
-   * gets the CachedUrl and can dispatch on mime type
+   * @param au the AU whose fetched content the validator will be applied
+   * to.
+   * @param contentType Useful if the factory is registered for more than
+   * one mime type, or a wildcard mime type.  (Not strictly necessary as
+   * the ContentValidator itself can obtain the mime type at each
+   * invocation from the CachedUrl.
    * @return the ContentValidator
    */
   public ContentValidator createContentValidator(ArchivalUnit au,

@@ -39,16 +39,22 @@ import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 
+/** Demonstration ContentValidator */
 public class PdfContentValidator implements ContentValidator {
 
   public void validate(CachedUrl cu)
       throws ContentValidationException, PluginException, IOException {
+
+    // Check the response headers for an expected value, reject file if not
+    // found.
     CIProperties headers = cu.getProperties();
+    // Check some 
     String some_val = headers.getProperty("some_prop");
     if (some_val != "some_string") {
       throw new InvalidReponseHeaderException("msg");
     }
-    // may also read the content
+    // May also read the content to check type, determine if well-formed,
+    // etc.
     if (isTruncatedPdf(cu.getUnfilteredInputStream())) {
       throw new TruncatedPdfException("msg");
     }      
@@ -58,6 +64,7 @@ public class PdfContentValidator implements ContentValidator {
     return false;
   }
 
+  /** Factory class, name goes in plugin */
   public static class Factory implements ContentValidatorFactory {
     public ContentValidator createContentValidator(ArchivalUnit au,
 						   String contentType) {
@@ -66,6 +73,8 @@ public class PdfContentValidator implements ContentValidator {
     }
   }
 
+  /** Defining an exception specific to this condition facilitates custom
+   * action, specified in plugin. */
   public static class InvalidReponseHeaderException
     extends ContentValidationException {
 

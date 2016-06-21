@@ -68,4 +68,14 @@
     <string>*/*_content_validator_factory</string>
     <string>org.lockss.plugin.sample.AllContentValidator$Factory</string>
   </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>500=org.lockss.util.urlconn.CacheException$RetryableNetworkException_5_60S</string>
+      <!-- Retry header error 3 times at 10 second intervals  -->
+      <string>org.lockss.plugin.sample.PdfContentValidator$InvalidReponseHeaderException=org.lockss.util.urlconn.CacheException$RetryableNetworkException_3_10S</string>
+      <!-- Retry truncated file 5 times at 30 second intervals  -->
+      <string>org.lockss.plugin.sample.PdfContentValidator$TruncatedPdfException=org.lockss.util.urlconn.CacheException$RetryableNetworkException_5_30S</string>
+    </list>
+  </entry>
 </map>

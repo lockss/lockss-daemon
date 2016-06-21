@@ -40,14 +40,33 @@ import org.lockss.daemon.*;
  * subclass, the response to which is determined by the plugin's (and the
  * default) mapping of exceptions to CacheExceptions.  If the validator
  * throws an exception (that is mapped to CacheException with either
- * ATTRIBUTE_FAIL or ATTRIBUTE_FATAL set) then the content is not sture.
+ * ATTRIBUTE_FAIL or ATTRIBUTE_FATAL set) then the content is not stored.
  */
 public interface ContentValidator {
 
   /** Validate a received file.  Examine the headers and/or content of the
    * CachedUrl and return if acceptable or throw a
    * ContentValidationException or subclass if not.  The CachedUrl need not
-   * be released - the caller does so.
+   * be released - the caller does so.<br>The action taken depends on the
+   * attributes of the {@link org.lockss.util.urlconn#CacheException} to
+   * which the thrown ContentValidationException is mapped.  The default
+   * mappings are:<ul>
+   *
+   * <li>ContentValidationException -> UnretryableException.  (The URL is
+   * recorded as a failed fatch and not stored)</li>
+   *
+   * <li>ContentValidationException.EmptyFile -> WarningOnly.  (A warning
+   * is reported for the URL but the URL is stored and the crawl may still
+   * succeed)</li>
+   *
+   * <li>ContentValidationException.WrongLength ->
+   * RetryableNetworkException_3_10S.  (The fetch will be retried up to
+   * three times at 10 second intervals )</li>
+   *
+   * </ul> Plugins may change these mappings, or define additional
+   * subclasses of ContentValidationException and map them to
+   * CacheExceptions, using <tt>plugin_cache_result_list</tt>.
+   *
    * @param cu the CachedUrl to validate
    * @throws ContentValidationException 
    * @throws IOException propagated from reading cu, etc.
