@@ -320,6 +320,13 @@ public class TestFileUtil extends LockssTestCase {
 			       "a content");
     assertInputStreamMatchesString("a content",
 				   FileUtil.newFileInputStream(shortName));
+    // Ensure can overwrite existing file
+    StringUtil.toOutputStream(FileUtil.newFileOutputStream(shortName),
+			       "bee content season");
+    assertInputStreamMatchesString("bee content season",
+				   FileUtil.newFileInputStream(shortName));
+
+
     String s250 = StringUtils.repeat("1234567890", 25);
     assertEquals(250, s250.length());
     String longStr = StringUtils.repeat(s250 + "/", 10);

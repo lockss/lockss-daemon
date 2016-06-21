@@ -193,9 +193,7 @@ public class FileUtil {
   public static InputStream newFileInputStream(File f) throws IOException {
     Path path = Paths.get(f.getPath());
     try {
-      FileChannel ichan = FileChannel.open(path, StandardOpenOption.READ);
-      InputStream is = Channels.newInputStream(ichan);
-      return is;
+      return Files.newInputStream(path);
     } catch (NoSuchFileException e) {
       throw new FileNotFoundException(e.getMessage());
     }
@@ -210,13 +208,7 @@ public class FileUtil {
    */
   public static OutputStream newFileOutputStream(File f) throws IOException {
     Path path = Paths.get(f.getPath());
-    if (!Files.exists(path)) {
-      Files.createFile(path);
-      if (log.isDebug3()) log.debug3("created: " + path);
-    }
-    FileChannel ochan = FileChannel.open(path, StandardOpenOption.WRITE);
-    OutputStream os = Channels.newOutputStream(ochan);
-    return os;
+    return Files.newOutputStream(path);
   }
 
   /**
