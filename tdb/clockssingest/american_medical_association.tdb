@@ -237,25 +237,12 @@
     param[resource_id] = 91
 
     au < exists ; exists ; 1923 ; AMA Archives of Neurology and Psychiatry Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < exists ; exists ; 1929 ; AMA Archives of Neurology and Psychiatry Volume 21 ; 21 ; reingest4.clockss.org:8082 >
+    au < exists ; exists ; 1933 ; AMA Archives of Neurology and Psychiatry Volume 29 ; 29 ; reingest4.clockss.org:8082 >
+    au < exists ; exists ; 1939 ; AMA Archives of Neurology and Psychiatry Volume 41 ; 41 ; reingest4.clockss.org:8082 >
     au < exists ; exists ; 1945 ; AMA Archives of Neurology and Psychiatry Volume 53 ; 53 ; reingest4.clockss.org:8082 >
-
-  }
-
-  {
-
-    title <
-      name = Archives of Dermatology ;
-      issn = 0003-987X ;
-      eissn = 0096-5359 ;
-      issnl = 0003-987X
-    >
-
-    # Not available through highwire archive. Re-collected.
-
-    param[base_url] = http://archderm.jamanetwork.com/
-    param[resource_id] = 68
-
-    au < exists ; exists ; 2012 ; Archives of Dermatology Volume 148 ; 148 ; reingest4.clockss.org:8082 >
+    au < exists ; exists ; 1951 ; AMA Archives of Neurology and Psychiatry Volume 65 ; 65 ; reingest4.clockss.org:8082 >
+    au < exists ; exists ; 1957 ; AMA Archives of Neurology and Psychiatry Volume 77 ; 77 ; reingest4.clockss.org:8082 >
 
   }
 
