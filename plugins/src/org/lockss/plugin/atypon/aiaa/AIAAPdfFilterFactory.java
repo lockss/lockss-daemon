@@ -44,6 +44,13 @@ import org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory;
 public class AIAAPdfFilterFactory extends BaseAtyponScrapingPdfFilterFactory {
   
   public static final Pattern AIAA_DOWNLOAD_PATTERN = Pattern.compile("^Downloaded by");
+  
+
+  // The PDF Producer added in new information - remove it all
+  @Override
+  public boolean doRemoveAllDocumentInfo() {
+    return true;
+  }
 
   /* 
    * Turn on removal of "This article cited by:" pages - the default string is correct
@@ -61,4 +68,5 @@ public class AIAAPdfFilterFactory extends BaseAtyponScrapingPdfFilterFactory {
   public Pattern getDownloadStripPattern() {
     return AIAA_DOWNLOAD_PATTERN;
   }  
+  
 }
