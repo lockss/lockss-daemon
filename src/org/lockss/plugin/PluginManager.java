@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,8 +34,6 @@ import java.security.KeyStore;
 import java.util.*;
 import java.util.jar.*;
 import java.util.regex.*;
-
-import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.*;
 import org.lockss.alert.*;
 import org.lockss.app.*;
@@ -261,6 +255,54 @@ public class PluginManager
   public static final String AU_PARAM_REPOSITORY = AU_PARAM_RESERVED + ".repository";
   public static final String AU_PARAM_DISPLAY_NAME = AU_PARAM_RESERVED + ".displayName";
 
+  /**
+   * If true, use a web service, instead of the repository, to get the Archival
+   * Unit URLs and the content of each URL.
+   */
+  public static final String PARAM_AU_CONTENT_FROM_WS =
+      PREFIX + "auContentFromWs";
+  public static final boolean DEFAULT_AU_CONTENT_FROM_WS = false;
+
+  /**
+   * The parameters of the web service used, instead of the repository, to
+   * obtain the list of URLs for an archival unit, if so configured.
+   */
+  public static final String URL_LIST_WS_PREFIX = PARAM_AU_CONTENT_FROM_WS
+      + ".urlListWs.";
+  public static final String PARAM_URL_LIST_WS_USER_NAME =
+      URL_LIST_WS_PREFIX + "userName";
+  public static final String PARAM_URL_LIST_WS_PASSWORD =
+      URL_LIST_WS_PREFIX + "password";
+  public static final String PARAM_URL_LIST_WS_ADDRESS_LOCATION =
+      URL_LIST_WS_PREFIX + "addressLocation";
+  public static final String PARAM_URL_LIST_WS_TARGET_NAMESPACE =
+      URL_LIST_WS_PREFIX + "targetNameSpace";
+  public static final String PARAM_URL_LIST_WS_SERVICE_NAME =
+      URL_LIST_WS_PREFIX + "serviceName";
+  public static final String PARAM_URL_LIST_WS_TIMEOUT_VALUE =
+      URL_LIST_WS_PREFIX + "timeoutValue";
+  public static final int DEFAULT_URL_LIST_WS_TIMEOUT_VALUE = 600;
+
+  /**
+   * The parameters of the web service used, instead of the repository, to
+   * obtain the content of a URL for an archival unit, if so configured.
+   */
+  public static final String URL_CONTENT_WS_PREFIX = PARAM_AU_CONTENT_FROM_WS
+      + ".urlContentWs.";
+  public static final String PARAM_URL_CONTENT_WS_USER_NAME =
+      URL_CONTENT_WS_PREFIX + "userName";
+  public static final String PARAM_URL_CONTENT_WS_PASSWORD =
+      URL_CONTENT_WS_PREFIX + "password";
+  public static final String PARAM_URL_CONTENT_WS_ADDRESS_LOCATION =
+      URL_CONTENT_WS_PREFIX + "addressLocation";
+  public static final String PARAM_URL_CONTENT_WS_TARGET_NAMESPACE =
+      URL_CONTENT_WS_PREFIX + "targetNameSpace";
+  public static final String PARAM_URL_CONTENT_WS_SERVICE_NAME =
+      URL_CONTENT_WS_PREFIX + "serviceName";
+  public static final String PARAM_URL_CONTENT_WS_TIMEOUT_VALUE =
+      URL_CONTENT_WS_PREFIX + "timeoutValue";
+  public static final int DEFAULT_URL_CONTENT_WS_TIMEOUT_VALUE = 600;
+
   public static final List NON_USER_SETTABLE_AU_PARAMS =
     Collections.unmodifiableList(new ArrayList());
 
@@ -339,6 +381,10 @@ public class PluginManager
     DEFAULT_AU_SEARCH_MIN_DISK_SEARCHES_FOR_404_CACHE;
   private boolean paramPreventConcurrentSearches =
     DEFAULT_PREVENT_CONCURRENT_SEARCHES;
+
+  // The indication of whether the URLs of an archival unit should be obtained
+  // from a web service instead of the repository.
+  private boolean paramAuContentFromWs = DEFAULT_AU_CONTENT_FROM_WS;
 
   private Map titleMap = null;
   private List allTitles = null;
@@ -522,6 +568,11 @@ public class PluginManager
 	config.getBoolean(PARAM_USE_DEFAULT_PLUGIN_REGISTRIES,
 			  DEFAULT_USE_DEFAULT_PLUGIN_REGISTRIES);
 
+      // Configure the indication of whether the URLs (and their content) of an
+      // archival unit should be obtained from a web service instead of the
+      // repository.
+      paramAuContentFromWs = config.getBoolean(PARAM_AU_CONTENT_FROM_WS,
+	  DEFAULT_AU_CONTENT_FROM_WS);
     }
 
     // Process any changed TitleSets
@@ -3346,6 +3397,19 @@ public class PluginManager
     public List getRegistryUrls() {
       return registryUrls;
     }
+  }
+
+  /*
+   * Provides the indication of whether the URLs (and their content) of an
+   * archival unit should be obtained from a web service instead of the
+   * repository.
+   * 
+   * @return a boolean with <code>true</code> if the URLs (and their content) of
+   * an archival unit should be obtained from a web service, <code>false</code>
+   * otherwise.
+   */
+  public boolean isAuContentFromWs() {
+    return paramAuContentFromWs;
   }
 
   /**

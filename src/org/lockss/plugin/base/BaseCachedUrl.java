@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -36,8 +32,6 @@ import java.io.*;
 import java.util.*;
 import java.net.*;
 import de.schlichtherle.truezip.file.*;
-//import de.schlichtherle.truezip.fs.*;
-
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
@@ -78,10 +72,26 @@ public class BaseCachedUrl implements CachedUrl {
 
   public static final String DEFAULT_METADATA_CONTENT_TYPE = "text/html";
 
+  /*
+   * The indication of whether the content of an archival unit should be
+   * obtained from a web service instead of the repository.
+   */
+  protected boolean isAuContentFromWs = false;
+
+  /*
+   * The input stream of the URL content when obtained from a web service
+   * instead of the repository.
+   */
+  protected InputStream inputStreamFromWs = null;
 
   public BaseCachedUrl(ArchivalUnit owner, String url) {
+    final String DEBUG_HEADER = "BaseCachedUrl(): ";
     this.au = owner;
     this.url = url;
+
+    isAuContentFromWs = getDaemon().getPluginManager().isAuContentFromWs();
+    if (logger.isDebug3())
+      logger.debug3(DEBUG_HEADER + "isAuContentFromWs = " + isAuContentFromWs);
   }
 
   public String getUrl() {
@@ -193,6 +203,17 @@ public class BaseCachedUrl implements CachedUrl {
   }
 
   public boolean hasContent() {
+    final String DEBUG_HEADER = "hasContent(): ";
+    // Check whether the content is obtained via web services instead of the
+    // repository.
+    if (isAuContentFromWs) {
+      // Yes: It has content.
+      if (logger.isDebug2()) logger.debug2(DEBUG_HEADER
+	  + "return true because isAuUrlContentFromWs() = true");
+      return true;
+    }
+
+    // No.
     if (repository==null) {
       getRepository();
     }
@@ -204,18 +225,43 @@ public class BaseCachedUrl implements CachedUrl {
       }
     }
     if (leaf == null || !leaf.hasContent()) {
+      if (logger.isDebug2())
+	logger.debug2(DEBUG_HEADER + "hasContent(" + getUrl()
+	    + "): leaf == null || !leaf.hasContent() = true");
       return false;
     }
     if (isIncludedOnly() && !au.shouldBeCached(getUrl())) {
       logger.debug2("hasContent("+getUrl()+"): excluded by crawl rule");
       return false;
     }
+    if (logger.isDebug2()) logger.debug2(DEBUG_HEADER + "return true");
     return true;
   }
 
   public InputStream getUnfilteredInputStream() {
-    ensureRnc();
-    return rnc.getInputStream();
+    final String DEBUG_HEADER = "getUnfilteredInputStream(): ";
+    // Check whether the input stream should be coming from the repository.
+    if (!isAuContentFromWs) {
+      // Yes.
+      ensureRnc();
+      return rnc.getInputStream();
+    }
+
+    // No: Get the input stream via web services.
+    String auId = au.getAuId();
+    if (logger.isDebug3()) logger.debug3(DEBUG_HEADER + "auId = " + auId);
+
+    try {
+      inputStreamFromWs = new FetchFileClient().getUrlContent(url, auId)
+	  .getDataHandler().getInputStream();
+      if (logger.isDebug3()) logger.debug3(DEBUG_HEADER
+	  + "inputStreamFromWs = " + inputStreamFromWs);
+    } catch (Exception e) {
+      logger.error("Exception caught getting input stream for url = " + url
+	  + ", auId = " + auId, e);
+    }
+
+    return inputStreamFromWs;
   }
 
   public InputStream getUnfilteredInputStream(HashedInputStream.Hasher hasher) {
@@ -290,11 +336,37 @@ public class BaseCachedUrl implements CachedUrl {
   }
 
   public String getContentType() {
-    CIProperties props = getProperties();
-    if (props != null) {
-      return props.getProperty(PROPERTY_CONTENT_TYPE);
+    final String DEBUG_HEADER = "getContentType(): ";
+    // Check whether the content type should be coming from the repository.
+    if (!isAuContentFromWs) {
+      // Yes.
+      CIProperties props = getProperties();
+      if (props != null) {
+	return props.getProperty(PROPERTY_CONTENT_TYPE);
+      }
+      return null;
     }
-    return null;
+
+    // No: Get the content type via web services.
+    String contentType = null;
+    String auId = au.getAuId();
+    if (logger.isDebug3()) logger.debug3(DEBUG_HEADER + "auId = " + auId);
+
+    try {
+      Properties properties =
+	  new FetchFileClient().getUrlContent(url, auId).getProperties();
+      if (logger.isDebug3())
+	logger.debug3(DEBUG_HEADER + "properties = " + properties);
+
+      contentType = (String)properties.get(PROPERTY_CONTENT_TYPE.toLowerCase());
+    } catch (Exception e) {
+      logger.error("Exception caught getting properties for url = " + url
+	  + ", auId = " + auId, e);
+    }
+
+    if (logger.isDebug2())
+      logger.debug2(DEBUG_HEADER + "contentType = " + contentType);
+    return contentType;
   }
 
   public String getEncoding() {
@@ -365,9 +437,30 @@ public class BaseCachedUrl implements CachedUrl {
   }
 
   public void release() {
+    final String DEBUG_HEADER = "release(): ";
     if (rnc != null) {
       rnc.release();
       rnc = null;
+    }
+
+    // Check whether the content is obtained via web services instead of the
+    // repository.
+    if (isAuContentFromWs) {
+      // Yes: Close any open input stream to the content.
+      if (inputStreamFromWs != null) {
+	if (logger.isDebug3()) logger.debug3(DEBUG_HEADER
+	    + "Closing input stream obtained from web services...");
+
+	try {
+	  inputStreamFromWs.close();
+	  if (logger.isDebug3()) logger.debug3(DEBUG_HEADER + "Done.");
+	} catch (IOException e) {
+	  logger.warning(
+	      "Error closing input stream obtained from web services", e);
+	}
+
+	inputStreamFromWs = null;
+      }
     }
   }
 

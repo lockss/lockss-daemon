@@ -131,6 +131,10 @@ public class ReindexingTask extends StepTask {
 
   private boolean cancelled = false;
 
+  // The indication of whether the content of an archival unit should be
+  // obtained from a web service instead of the repository.
+  private boolean isAuContentFromWs = false;
+
   /**
    * Constructor.
    * 
@@ -148,6 +152,7 @@ public class ReindexingTask extends StepTask {
           null, // TaskCallback.
           null); // Object cookie.
 
+    final String DEBUG_HEADER = "ReindexingTask(): ";
     this.au = theAu;
     this.ae = theAe;
     this.auName = au.getName();
@@ -156,6 +161,11 @@ public class ReindexingTask extends StepTask {
     dbManager = LockssDaemon.getLockssDaemon().getDbManager();
     mdManager = LockssDaemon.getLockssDaemon().getMetadataManager();
     mdManagerSql = mdManager.getMetadataManagerSql();
+
+    isAuContentFromWs =
+	LockssDaemon.getLockssDaemon().getPluginManager().isAuContentFromWs();
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "isAuContentFromWs = " + isAuContentFromWs);
 
     // The accumulator of article metadata.
     emitter = new ReindexingEmitter();
@@ -447,11 +457,16 @@ public class ReindexingTask extends StepTask {
 
       md.putRaw(MetadataField.FIELD_FEATURED_URL_MAP.getKey(), roles);
 
-      // Get the earliest fetch time of the metadata items URLs.
-      long fetchTime = AuUtil.getAuUrlsEarliestFetchTime(au, roles.values());
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "fetchTime = " + fetchTime);
+      // Check whether the the archival unit content must be obtained from the
+      // repository.
+      if (!isAuContentFromWs) {
+	// Yes: Get the earliest fetch time of the metadata items URLs.
+	long fetchTime = AuUtil.getAuUrlsEarliestFetchTime(au, roles.values());
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "fetchTime = " + fetchTime);
 
-      md.put(MetadataField.FIELD_FETCH_TIME, String.valueOf(fetchTime));
+	md.put(MetadataField.FIELD_FETCH_TIME, String.valueOf(fetchTime));
+      }
 
       try {
         validateDataAgainstTdb(new ArticleMetadataInfo(md), au);
