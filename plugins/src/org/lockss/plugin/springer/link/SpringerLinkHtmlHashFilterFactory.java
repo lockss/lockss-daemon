@@ -36,6 +36,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
 import java.util.List;
+import java.util.regex.Pattern;
 
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
@@ -61,6 +62,8 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
   /**
    * TODO - remove after 1.70 when the daemon recognizes this as an html composite tag
    */
+	
+  private static final Pattern IMPACT_PATTERN = Pattern.compile("impact factor", Pattern.CASE_INSENSITIVE | Pattern.MULTILINE);
   public static class MyButtonTag extends CompositeTag {
     private static final String[] mIds = new String[] {"button"};
     public String[] getIds() { return mIds; }
@@ -131,7 +134,7 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
             String allText = ((CompositeTag)node).toPlainTextString();
             //using regex for case insensitive match on "Impact factor"
             // the "i" is for case insensitivity; the "s" is for accepting newlines
-            return allText.matches("(?is).*impact factor.*");
+            return IMPACT_PATTERN.matcher(allText).matches();
             }
         }
   };

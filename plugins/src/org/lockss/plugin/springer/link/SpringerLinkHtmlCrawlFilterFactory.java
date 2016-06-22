@@ -59,6 +59,7 @@ public class SpringerLinkHtmlCrawlFilterFactory implements FilterFactory {
       
       //non essentials like metrics and related links 
       HtmlNodeFilters.tagWithAttribute("div", "role", "complementary"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "col-aside"),
       HtmlNodeFilters.tagWithAttribute("aside", "class", "col-aside"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "article-complementary-left"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "document-aside"),
