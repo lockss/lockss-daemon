@@ -82,9 +82,8 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "overview"),
             // KEEP each article block [TOC]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "\\barticle\\b"), // avoid match on pageArticle
-            // KEEP abstract and preview [abs, full, ref]
+            // KEEP abstract [abs, full, ref]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "abstract"),
-            HtmlNodeFilters.tagWithAttribute("div", "id", "preview"),
             // KEEP active content area [abs, full, ref, suppl]
             HtmlNodeFilters.tagWithAttribute("div", "id", "informationPanel"), // article info [abs]
             HtmlNodeFilters.tagWithAttribute("div", "id", "fulltextPanel"), // full text [full]
@@ -150,6 +149,8 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttributeRegex("div", "id", "alertDiv"), // old
             // DROP "Publishing models and article dates explained" link [abs/full/ref/suppl overview]
             HtmlNodeFilters.tagWithAttributeRegex("a", "href", "models-and-dates-explained"),
+            // DROP article dates which sometimes get fixed later [abs/full/ref/suppl overview]
+            HtmlNodeFilters.tagWithAttribute("div", "class", "articleDates"),
             // DROP subtitle for journal section/subject (added later) [abs/full/ref/suppl overview]
             HtmlNodeFilters.tagWithAttribute("span", "class", "subj-group"),
             // DROP non-access box article links (e.g. "View full text"->"Full text HTML") [abs/full/ref/suppl overview]
@@ -224,9 +225,10 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
         new TagPair("<li><strong><a href=\"/doi/citedby/", "</li>", true), // old?
         new TagPair("<li><strong>Citation information:", "</li>", true), // old?
         // Wording change over time, and publication dates get fixed much later [article block, abs/full/ref/suppl overview]
-        new TagPair("Published online:", "</li>", true), // current
-        new TagPair("Available online:", "</li>", true), // old
-        new TagPair("Version of record first published:", "</li>", true), // old
+        // For older versions with plain text instead of <div class="articleDates">
+        new TagPair("Published online:", ">", true), // current
+        new TagPair("Available online:", ">", true), // old
+        new TagPair("Version of record first published:", ">", true), // old
         // Leftover commas after outgoing/SFX links removed [full/ref referencesPanel]
         new TagPair("</pub-id>", "</li>", true)
     ));
