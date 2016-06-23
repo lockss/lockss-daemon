@@ -204,7 +204,7 @@
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; NeoReviews Volume 14 ; 14 ; >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2014 ; NeoReviews Volume 15 ; 15 ; >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; NeoReviews Volume 16 ; 16 ; >
-      au < aap.ClockssAAPDrupalPlugin ; notReady ; exists ; 2016 ; NeoReviews Volume 17 ; 17 ; > #pdf stamping problem
+      au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2016 ; NeoReviews Volume 17 ; 17 ; > #pdf stamping problem
 
     }
   
@@ -442,7 +442,7 @@
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2013 ; Pediatrics in Review Volume 34 ; 34 ; >
       au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2014 ; Pediatrics in Review Volume 35 ; 35 ; >
       au < ClockssHighWirePressH20Plugin ; frozen ; exists ; 2015 ; Pediatrics in Review Volume 36 ; 36 ; >
-      au < aap.ClockssAAPDrupalPlugin ; notReady ; exists ; 2016 ; Pediatrics in Review Volume 37 ; 37 ; > #pdf stamping problem
+      au < aap.ClockssAAPDrupalPlugin ; manifest ; exists ; 2016 ; Pediatrics in Review Volume 37 ; 37 ; > #pdf stamping problem
 
     }
   
