@@ -1335,12 +1335,14 @@
     param[collection] = nursing_dnp_capstone
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < testing ; 2009 ; University of Massachusetts Amherst Doctor of Nursing Practice Capstone Projects 2009 ; 2009 >
-    au < testing ; 2010 ; University of Massachusetts Amherst Doctor of Nursing Practice Capstone Projects 2010 ; 2010 >
-    au < testing ; 2011 ; University of Massachusetts Amherst Doctor of Nursing Practice Capstone Projects 2011 ; 2011 >
-    au < testing ; 2012 ; University of Massachusetts Amherst Doctor of Nursing Practice Capstone Projects 2012 ; 2012 >
-    au < testing ; 2013 ; University of Massachusetts Amherst Doctor of Nursing Practice Capstone Projects 2013 ; 2013 >
-    au < testing ; 2014 ; University of Massachusetts Amherst Doctor of Nursing Practice Capstone Projects 2014 ; 2014 >
+    au < ready ; 2009 ; University of Massachusetts Amherst Doctor of Nursing Practice Capstone Projects 2009 ; 2009 >
+    au < ready ; 2010 ; University of Massachusetts Amherst Doctor of Nursing Practice Capstone Projects 2010 ; 2010 >
+    au < ready ; 2011 ; University of Massachusetts Amherst Doctor of Nursing Practice Capstone Projects 2011 ; 2011 >
+    au < ready ; 2012 ; University of Massachusetts Amherst Doctor of Nursing Practice Capstone Projects 2012 ; 2012 >
+    au < ready ; 2013 ; University of Massachusetts Amherst Doctor of Nursing Practice Capstone Projects 2013 ; 2013 >
+    au < ready ; 2014 ; University of Massachusetts Amherst Doctor of Nursing Practice Capstone Projects 2014 ; 2014 >
+    au < ready ; 2015 ; University of Massachusetts Amherst Doctor of Nursing Practice Capstone Projects 2015 ; 2015 >
+    au < ready ; 2016 ; University of Massachusetts Amherst Doctor of Nursing Practice Capstone Projects 2016 ; 2016 >
 
   }
 
@@ -1601,19 +1603,22 @@
     au < manifest ; 1997 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1997 [abstracts only] ; 1997 ; abstracts >
     au < manifest ; 1998 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1998 [abstracts only] ; 1998 ; abstracts >
     au < manifest ; 1999 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 1999 [abstracts only] ; 1999 ; abstracts >
-    au < testing ; 2000 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2000 [abstracts only] ; 2000 ; abstracts >
-    au < testing ; 2001 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2001 [abstracts only] ; 2001 ; abstracts >
-    au < testing ; 2002 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2002 [abstracts only] ; 2002 ; abstracts >
-    au < testing ; 2003 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2003 [abstracts only] ; 2003 ; abstracts >
-    au < testing ; 2004 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2004 [abstracts only] ; 2004 ; abstracts >
-    au < testing ; 2005 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2005 [abstracts only] ; 2005 ; abstracts >
-    au < testing ; 2006 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2006 [abstracts only] ; 2006 ; abstracts >
-    au < testing ; 2007 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2007 [abstracts only] ; 2007 ; abstracts >
-    au < testing ; 2008 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2008 [abstracts only] ; 2008 ; abstracts >
-    au < testing ; 2009 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2009 [abstracts only] ; 2009 ; abstracts >
-    au < testing ; 2010 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2010 [abstracts only] ; 2010 ; abstracts >
-    au < testing ; 2011 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2011 ; 2011 ; fulltext >
-    au < testing ; 2012 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2012 ; 2012 ; fulltext >
+    au < notReady ; 2000 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2000 [abstracts only] ; 2000 ; abstracts >
+    au < notReady ; 2001 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2001 [abstracts only] ; 2001 ; abstracts >
+    au < notReady ; 2002 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2002 [abstracts only] ; 2002 ; abstracts >
+    au < notReady ; 2003 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2003 [abstracts only] ; 2003 ; abstracts >
+    au < notReady ; 2004 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2004 [abstracts only] ; 2004 ; abstracts >
+    au < notReady ; 2005 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2005 [abstracts only] ; 2005 ; abstracts >
+    au < notReady ; 2006 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2006 [abstracts only] ; 2006 ; abstracts >
+    au < notReady ; 2007 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2007 [abstracts only] ; 2007 ; abstracts >
+    au < notReady ; 2008 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2008 [abstracts only] ; 2008 ; abstracts >
+    au < notReady ; 2009 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2009 [abstracts only] ; 2009 ; abstracts >
+    au < notReady ; 2010 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2010 [abstracts only] ; 2010 ; abstracts >
+    au < ready ; 2011 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2011 ; 2011 ; fulltext >
+    au < ready ; 2012 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2012 ; 2012 ; fulltext >
+    au < ready ; 2014 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2014 ; 2014 ; fulltext >
+    au < ready ; 2015 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2015 ; 2015 ; fulltext >
+    au < ready ; 2016 ; University of Massachusetts Amherst Environmental Conservation Faculty Publication Series 2016 ; 2016 ; fulltext >
 
   }
 
@@ -2349,7 +2354,7 @@
     param[collection] = heine_concerts_programs
     implicit < status ; year ; name ; param[collection_heading] >
 
-    au < testing ; 2005 ; University of Massachusetts Amherst Heine Lieder Concert Programs 2005 ; 2005 >
+    au < ready ; 2005 ; University of Massachusetts Amherst Heine Lieder Concert Programs 2005 ; 2005 >
 
   }
 
@@ -2396,39 +2401,40 @@
     param[collection_type] = ir_series
     param[collection] = history_faculty_pubs
     implicit < status ; year ; name ; param[collection_heading] ; attr[au_coverage_depth] >
+    #no pdfs. See left column. Tests pass because of probe link.
 
-    au < manifest ; 1979 ; University of Massachusetts Amherst History Department Faculty Publication Series 1979 [abstracts only] ; 1979 ; abstracts >
-    au < manifest ; 1980 ; University of Massachusetts Amherst History Department Faculty Publication Series 1980 [abstracts only] ; 1980 ; abstracts >
-    au < manifest ; 1981 ; University of Massachusetts Amherst History Department Faculty Publication Series 1981 [abstracts only] ; 1981 ; abstracts >
-    au < manifest ; 1982 ; University of Massachusetts Amherst History Department Faculty Publication Series 1982 [abstracts only] ; 1982 ; abstracts >
-    au < manifest ; 1983 ; University of Massachusetts Amherst History Department Faculty Publication Series 1983 [abstracts only] ; 1983 ; abstracts >
-    au < manifest ; 1984 ; University of Massachusetts Amherst History Department Faculty Publication Series 1984 [abstracts only] ; 1984 ; abstracts >
-    au < manifest ; 1985 ; University of Massachusetts Amherst History Department Faculty Publication Series 1985 [abstracts only] ; 1985 ; abstracts >
-    au < manifest ; 1986 ; University of Massachusetts Amherst History Department Faculty Publication Series 1986 [abstracts only] ; 1986 ; abstracts >
-    au < manifest ; 1987 ; University of Massachusetts Amherst History Department Faculty Publication Series 1987 [abstracts only] ; 1987 ; abstracts >
-    au < manifest ; 1988 ; University of Massachusetts Amherst History Department Faculty Publication Series 1988 [abstracts only] ; 1988 ; abstracts >
-    au < manifest ; 1989 ; University of Massachusetts Amherst History Department Faculty Publication Series 1989 [abstracts only] ; 1989 ; abstracts >
-    au < manifest ; 1990 ; University of Massachusetts Amherst History Department Faculty Publication Series 1990 [abstracts only] ; 1990 ; abstracts >
-    au < manifest ; 1991 ; University of Massachusetts Amherst History Department Faculty Publication Series 1991 [abstracts only] ; 1991 ; abstracts >
-    au < manifest ; 1992 ; University of Massachusetts Amherst History Department Faculty Publication Series 1992 [abstracts only] ; 1992 ; abstracts >
-    au < manifest ; 1993 ; University of Massachusetts Amherst History Department Faculty Publication Series 1993 [abstracts only] ; 1993 ; abstracts >
-    au < manifest ; 1994 ; University of Massachusetts Amherst History Department Faculty Publication Series 1994 [abstracts only] ; 1994 ; abstracts >
-    au < manifest ; 1995 ; University of Massachusetts Amherst History Department Faculty Publication Series 1995 [abstracts only] ; 1995 ; abstracts >
-    au < manifest ; 1996 ; University of Massachusetts Amherst History Department Faculty Publication Series 1996 [abstracts only] ; 1996 ; abstracts >
-    au < manifest ; 1997 ; University of Massachusetts Amherst History Department Faculty Publication Series 1997 [abstracts only] ; 1997 ; abstracts >
-    au < manifest ; 1998 ; University of Massachusetts Amherst History Department Faculty Publication Series 1998 [abstracts only] ; 1998 ; abstracts >
-    au < manifest ; 1999 ; University of Massachusetts Amherst History Department Faculty Publication Series 1999 [abstracts only] ; 1999 ; abstracts >
-    au < testing ; 2000 ; University of Massachusetts Amherst History Department Faculty Publication Series 2000 [abstracts only] ; 2000 ; abstracts >
-    au < testing ; 2001 ; University of Massachusetts Amherst History Department Faculty Publication Series 2001 ; 2001 ; fulltext >
-    au < testing ; 2002 ; University of Massachusetts Amherst History Department Faculty Publication Series 2002 [abstracts only] ; 2002 ; abstracts >
-    au < testing ; 2003 ; University of Massachusetts Amherst History Department Faculty Publication Series 2003 ; 2003 ; fulltext >
-    au < testing ; 2004 ; University of Massachusetts Amherst History Department Faculty Publication Series 2004 [abstracts only] ; 2004 ; abstracts >
-    au < testing ; 2005 ; University of Massachusetts Amherst History Department Faculty Publication Series 2005 [abstracts only] ; 2005 ; abstracts >
-    au < testing ; 2006 ; University of Massachusetts Amherst History Department Faculty Publication Series 2006 [abstracts only] ; 2006 ; abstracts >
-    au < testing ; 2007 ; University of Massachusetts Amherst History Department Faculty Publication Series 2007 [abstracts only] ; 2007 ; abstracts >
-    au < testing ; 2008 ; University of Massachusetts Amherst History Department Faculty Publication Series 2008 [abstracts only] ; 2008 ; abstracts >
-    au < testing ; 2009 ; University of Massachusetts Amherst History Department Faculty Publication Series 2009 [abstracts only] ; 2009 ; abstracts >
-    au < testing ; 2010 ; University of Massachusetts Amherst History Department Faculty Publication Series 2010 [abstracts only] ; 2010 ; abstracts >
+    au < notReady ; 1979 ; University of Massachusetts Amherst History Department Faculty Publication Series 1979 [abstracts only] ; 1979 ; abstracts >
+    au < notReady ; 1980 ; University of Massachusetts Amherst History Department Faculty Publication Series 1980 [abstracts only] ; 1980 ; abstracts >
+    au < notReady ; 1981 ; University of Massachusetts Amherst History Department Faculty Publication Series 1981 [abstracts only] ; 1981 ; abstracts >
+    au < notReady ; 1982 ; University of Massachusetts Amherst History Department Faculty Publication Series 1982 [abstracts only] ; 1982 ; abstracts >
+    au < notReady ; 1983 ; University of Massachusetts Amherst History Department Faculty Publication Series 1983 [abstracts only] ; 1983 ; abstracts >
+    au < notReady ; 1984 ; University of Massachusetts Amherst History Department Faculty Publication Series 1984 [abstracts only] ; 1984 ; abstracts >
+    au < notReady ; 1985 ; University of Massachusetts Amherst History Department Faculty Publication Series 1985 [abstracts only] ; 1985 ; abstracts >
+    au < notReady ; 1986 ; University of Massachusetts Amherst History Department Faculty Publication Series 1986 [abstracts only] ; 1986 ; abstracts >
+    au < notReady ; 1987 ; University of Massachusetts Amherst History Department Faculty Publication Series 1987 [abstracts only] ; 1987 ; abstracts >
+    au < notReady ; 1988 ; University of Massachusetts Amherst History Department Faculty Publication Series 1988 [abstracts only] ; 1988 ; abstracts >
+    au < notReady ; 1989 ; University of Massachusetts Amherst History Department Faculty Publication Series 1989 [abstracts only] ; 1989 ; abstracts >
+    au < notReady ; 1990 ; University of Massachusetts Amherst History Department Faculty Publication Series 1990 [abstracts only] ; 1990 ; abstracts >
+    au < notReady ; 1991 ; University of Massachusetts Amherst History Department Faculty Publication Series 1991 [abstracts only] ; 1991 ; abstracts >
+    au < notReady ; 1992 ; University of Massachusetts Amherst History Department Faculty Publication Series 1992 [abstracts only] ; 1992 ; abstracts >
+    au < notReady ; 1993 ; University of Massachusetts Amherst History Department Faculty Publication Series 1993 [abstracts only] ; 1993 ; abstracts >
+    au < notReady ; 1994 ; University of Massachusetts Amherst History Department Faculty Publication Series 1994 [abstracts only] ; 1994 ; abstracts >
+    au < notReady ; 1995 ; University of Massachusetts Amherst History Department Faculty Publication Series 1995 [abstracts only] ; 1995 ; abstracts >
+    au < notReady ; 1996 ; University of Massachusetts Amherst History Department Faculty Publication Series 1996 [abstracts only] ; 1996 ; abstracts >
+    au < notReady ; 1997 ; University of Massachusetts Amherst History Department Faculty Publication Series 1997 [abstracts only] ; 1997 ; abstracts >
+    au < notReady ; 1998 ; University of Massachusetts Amherst History Department Faculty Publication Series 1998 [abstracts only] ; 1998 ; abstracts >
+    au < notReady ; 1999 ; University of Massachusetts Amherst History Department Faculty Publication Series 1999 [abstracts only] ; 1999 ; abstracts >
+    au < notReady ; 2000 ; University of Massachusetts Amherst History Department Faculty Publication Series 2000 [abstracts only] ; 2000 ; abstracts >
+    au < ready ; 2001 ; University of Massachusetts Amherst History Department Faculty Publication Series 2001 ; 2001 ; fulltext >
+    au < notReady ; 2002 ; University of Massachusetts Amherst History Department Faculty Publication Series 2002 [abstracts only] ; 2002 ; abstracts >
+    au < ready ; 2003 ; University of Massachusetts Amherst History Department Faculty Publication Series 2003 ; 2003 ; fulltext >
+    au < notReady ; 2004 ; University of Massachusetts Amherst History Department Faculty Publication Series 2004 [abstracts only] ; 2004 ; abstracts >
+    au < notReady ; 2005 ; University of Massachusetts Amherst History Department Faculty Publication Series 2005 [abstracts only] ; 2005 ; abstracts >
+    au < notReady ; 2006 ; University of Massachusetts Amherst History Department Faculty Publication Series 2006 [abstracts only] ; 2006 ; abstracts >
+    au < notReady ; 2007 ; University of Massachusetts Amherst History Department Faculty Publication Series 2007 [abstracts only] ; 2007 ; abstracts >
+    au < notReady ; 2008 ; University of Massachusetts Amherst History Department Faculty Publication Series 2008 [abstracts only] ; 2008 ; abstracts >
+    au < notReady ; 2009 ; University of Massachusetts Amherst History Department Faculty Publication Series 2009 [abstracts only] ; 2009 ; abstracts >
+    au < notReady ; 2010 ; University of Massachusetts Amherst History Department Faculty Publication Series 2010 [abstracts only] ; 2010 ; abstracts >
 
   }
 
