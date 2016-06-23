@@ -572,6 +572,7 @@
       param[base_url] = http://adt.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
+      #content available from 1984 volume 1 to 1999 volume 17
 
       au < exists ; 2000 ; Adsorption Science & Technology Volume 18 ; 18 >
       au < exists ; 2001 ; Adsorption Science & Technology Volume 19 ; 19 >
@@ -899,6 +900,8 @@
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
+      au < exists ; 1997-1998 ; Advances in Structural Engineering Volume 1 ; 1 >
+      au < exists ; 1998-1999 ; Advances in Structural Engineering Volume 2 ; 2 >
       au < exists ; 2000 ; Advances in Structural Engineering Volume 3 ; 3 >
       au < exists ; 2001 ; Advances in Structural Engineering Volume 4 ; 4 >
       au < exists ; 2002 ; Advances in Structural Engineering Volume 5 ; 5 >
