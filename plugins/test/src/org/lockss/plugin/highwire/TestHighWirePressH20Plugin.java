@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,7 +33,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.highwire;
 
 import java.net.MalformedURLException;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Properties;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
@@ -42,6 +46,8 @@ import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.plugin.definable.*;
 import org.lockss.test.*;
 import org.lockss.util.ListUtil;
+import org.lockss.util.PatternFloatMap;
+import org.lockss.util.RegexpUtil;
 import org.lockss.util.urlconn.*;
 import org.lockss.util.urlconn.CacheException.*;
 
@@ -49,6 +55,14 @@ public class TestHighWirePressH20Plugin extends LockssTestCase {
 
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
+  
+  // from au_url_poll_result_weight in plugins/src/org/lockss/plugin/highwire/HighWirePressH20Plugin.xml
+  // if it changes in the plugin, you will likely need to change the test, so verify
+  static final String HW_REPAIR_FROM_PEER_REGEXP[] = 
+    {
+        "[.](css|js)$",
+        "://[^/]+(?!.*/content/)(/[^/]+)+[.](gif|png)$"
+    };
 
   private DefinablePlugin plugin;
 
@@ -61,7 +75,6 @@ public class TestHighWirePressH20Plugin extends LockssTestCase {
     plugin = new DefinablePlugin();
     plugin.initPlugin(getMockLockssDaemon(),
                       "org.lockss.plugin.highwire.HighWirePressH20Plugin");
-
   }
 
   public void testGetAuNullConfig()
@@ -76,8 +89,7 @@ public class TestHighWirePressH20Plugin extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     props.setProperty(VOL_KEY, "32");
-    DefinableArchivalUnit au = makeAuFromProps(props);
-
+    makeAuFromProps(props);
   }
 
   private DefinableArchivalUnit makeAuFromProps(Properties props)
@@ -138,6 +150,48 @@ public class TestHighWirePressH20Plugin extends LockssTestCase {
                                                                    500, "foo");
     assertClass(RetrySameUrlException.class, exc);
 
+  }
+  
+  public void testPollSpecial() throws Exception {
+    String ROOT_URL = "http://www.example.com/";
+    Properties props = new Properties();
+    props.setProperty(VOL_KEY, "322");
+    props.setProperty(BASE_URL_KEY, ROOT_URL);
+    DefinableArchivalUnit au = makeAuFromProps(props);
+    
+    // if it changes in the plugin, you will likely need to change the test, so verify
+    assertEquals(Arrays.asList(
+        HW_REPAIR_FROM_PEER_REGEXP),
+        RegexpUtil.regexpCollection(au.makeRepairFromPeerIfMissingUrlPatterns()));
+    
+    // make sure that's the regexp that will match to the expected url string
+    // this also tests the regexp (which is the same) for the weighted poll map
+    List <String> repairList = ListUtil.list(
+        ROOT_URL + "css/9.2.6/print.css",
+        ROOT_URL + "js/9.3.2/lib/functional.min.js",
+        ROOT_URL + "css/8.10.4/custom-theme/images/ui-bg_flat_100_006eb2_40x100.png");
+    
+    Pattern p0 = Pattern.compile(HW_REPAIR_FROM_PEER_REGEXP[0]);
+    Pattern p1 = Pattern.compile(HW_REPAIR_FROM_PEER_REGEXP[1]);
+    Matcher m0, m1;
+    for (String urlString : repairList) {
+      m0 = p0.matcher(urlString);
+      m1 = p1.matcher(urlString);
+      assertEquals(urlString, true, m0.find() || m1.find());
+    }
+    //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
+    String notString = ROOT_URL + "img/close-icon.png";
+    m0 = p0.matcher(notString);
+    m1 = p1.matcher(notString);
+    assertEquals(false, m0.find() && m1.find());
+    
+    PatternFloatMap urlPollResults = au.makeUrlPollResultWeightMap();
+    assertNotNull(urlPollResults);
+    for (String urlString : repairList) {
+      assertEquals(0.0, urlPollResults.getMatch(urlString, (float) 1), .0001);
+    }
+    assertEquals(0.0, urlPollResults.getMatch(ROOT_URL + "search?submit=yes&issue=Suppl%202&volume=101&sortspec=first-page&tocsectionid=Abstracts&FIRSTINDEX=0", (float) 1), .0001);
+    assertEquals(1.0, urlPollResults.getMatch(ROOT_URL + "search?submit=yes&sortspec=first-page&tocsectionid=Abstracts&volume=101&issue=Suppl%202", (float) 1), .0001);
   }
   
 }

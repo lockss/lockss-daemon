@@ -36,19 +36,14 @@ import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
-import java.util.Vector;
 
-import org.htmlparser.Attribute;
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
-import org.htmlparser.Tag;
 import org.htmlparser.filters.*;
 import org.htmlparser.nodes.TextNode;
 import org.htmlparser.tags.CompositeTag;
 import org.htmlparser.tags.Div;
 import org.htmlparser.util.NodeList;
-import org.htmlparser.util.ParserException;
-import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
 import org.lockss.filter.HtmlTagFilter;
@@ -124,6 +119,9 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "class", "cit-form-select"),
       // and <div id="cit-extra">
       HtmlNodeFilters.tagWithAttribute("div", "class", "cit-extra"),
+      // Extreme filtering for http://aapnews.aappublications.org/content/34/3/22.short
+      //  Some citation text changes over time
+      HtmlNodeFilters.tagWithAttribute("span", "class", "cit-extra"),
       // For JBC pages
       HtmlNodeFilters.tagWithAttribute("div", "id", "ad-top"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "ad-top2"),
@@ -220,6 +218,16 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "class", "gca-buttons"),
       // <div id="trendmd-suggestions"> http://cjasn.asnjournals.org/content/10/1/111.short
       HtmlNodeFilters.tagWithAttributeRegex("div", "id", "trend"),
+      // Extreme filtering for http://heart.bmj.com/content/101/16/1309
+      // 
+      HtmlNodeFilters.tagWithAttributeRegex("ol", "class", "eletter"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "-nav"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "cookie"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "breadcrumbs"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "oas-ad"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "rss"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "responses"),
+      HtmlNodeFilters.tagWithAttribute("div", "class", "crossmark-logo"),
       
       // There is an "Impact factor" but it is only ctext in an H3 tag
       // and the parent <div> is generic. Use a combination of the grandparent <div> plus the ctext

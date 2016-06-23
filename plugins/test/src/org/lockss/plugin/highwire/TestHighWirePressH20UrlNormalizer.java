@@ -82,6 +82,13 @@ public class TestHighWirePressH20UrlNormalizer extends LockssTestCase {
     
     assertEquals("http://www.example.com/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.tiff?-2mifpm",
         normalizer.normalizeUrl("http://www.example.com/sites/all/modules/highwire/highwire/highwire_theme_tools/fonts/hwicons.tiff?-2mifpm", m_mau));
+    
+    assertEquals("http://www.example.com/search?submit=yes&sortspec=first-page&tocsectionid=Abstracts&volume=101&issue=Suppl%202",
+        normalizer.normalizeUrl("http://www.example.com/search?submit=yes&issue=Suppl%202&volume=101&sortspec=first-page&tocsectionid=Abstracts&FIRSTINDEX=0", m_mau));
+    
+    assertEquals("http://www.example.com/search?submit=yes&sortspec=first-page&tocsectionid=Abstracts&volume=101&issue=Suppl%202&FIRSTINDEX=20",
+        normalizer.normalizeUrl("http://www.example.com/search?submit=yes&issue=Suppl%202&sortspec=first-page&volume=101&tocsectionid=Abstracts&FIRSTINDEX=20", m_mau));
+    
   }
   
 }
