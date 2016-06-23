@@ -18018,6 +18018,39 @@
     }
 
     {
+  
+      title <
+        name = Industry and Higher Education ;
+        issn = 0950-4222 ;
+        eissn = 2043-6858
+      >
+  
+        param[base_url] = http://ihe.sagepub.com/
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+  
+        au < exists ; 1999 ; Industry and Higher Education Volume 13 ; 13 >
+        au < exists ; 2000 ; Industry and Higher Education Volume 14 ; 14 >
+        au < exists ; 2001 ; Industry and Higher Education Volume 15 ; 15 >
+        au < exists ; 2002 ; Industry and Higher Education Volume 16 ; 16 >
+        au < exists ; 2003 ; Industry and Higher Education Volume 17 ; 17 >
+        au < exists ; 2004 ; Industry and Higher Education Volume 18 ; 18 >
+        au < exists ; 2005 ; Industry and Higher Education Volume 19 ; 19 >
+        au < exists ; 2006 ; Industry and Higher Education Volume 20 ; 20 >
+        au < exists ; 2007 ; Industry and Higher Education Volume 21 ; 21 >
+        au < exists ; 2008 ; Industry and Higher Education Volume 22 ; 22 >
+        au < exists ; 2009 ; Industry and Higher Education Volume 23 ; 23 >
+        au < exists ; 2010 ; Industry and Higher Education Volume 24 ; 24 >
+        au < exists ; 2011 ; Industry and Higher Education Volume 25 ; 25 >
+        au < exists ; 2012 ; Industry and Higher Education Volume 26 ; 26 >
+        au < exists ; 2013 ; Industry and Higher Education Volume 27 ; 27 >
+        au < exists ; 2014 ; Industry and Higher Education Volume 28 ; 28 >
+        au < exists ; 2015 ; Industry and Higher Education Volume 29 ; 29 >
+        au < exists ; 2016 ; Industry and Higher Education Volume 30 ; 30 >
+  
+    }
+
+    {
 
       title <
         name = ILR Review: Industrial & Labor Relations Review ;
@@ -26811,6 +26844,21 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       }
 
+    }
+
+    {
+  
+      title <
+        name = Journal of Heritage Management ;
+        issn = 2455-9296
+      >
+  
+        param[base_url] = http://hmj.sagepub.com/
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+  
+        au < expected ; 2016 ; Journal of Heritage Management Volume 1 ; 1 >
+  
     }
 
     {
