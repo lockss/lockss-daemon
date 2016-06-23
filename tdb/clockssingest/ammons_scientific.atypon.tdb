@@ -171,7 +171,7 @@
     au < down ; exists ; 2013 ; Psychological Reports Volume 113 ; 113 ; >
     au < down ; exists ; 2014 ; Psychological Reports Volume 114 ; 114 ; >
     au < down ; exists ; 2014 ; Psychological Reports Volume 115 ; 115 ; >
-    au < doNotProcess ; exists ; 2015 ; Psychological Reports Volume 116 ; 116 ; > #PD-1411 500 Internal Server Error. process after move.
+    au < doNotProcess ; doNotProcess ; 2015 ; Psychological Reports Volume 116 ; 116 ; > #PD-1411 500 Internal Server Error. process after move.
     au < down ; exists ; 2015 ; Psychological Reports Volume 117 ; 117 ; >
     
   }
@@ -188,7 +188,7 @@
 
     au < down ; exists ; 1949 ; Perceptual and Motor Skills Volume 1 ; 1 ; >
     au < down ; exists ; 1950 ; Perceptual and Motor Skills Volume 2 ; 2 ; >
-    au < notReady ; exists ; 1951 ; Perceptual and Motor Skills Volume 3 ; 3 ; > #no articles online. TOC only. See http://www.amsciepub.com/clockss/pms/3/index.html
+    au < doNotProcess ; doNotProcess ; 1951 ; Perceptual and Motor Skills Volume 3 ; 3 ; > #no articles online. TOC only. See http://www.amsciepub.com/clockss/pms/3/index.html
     au < down ; exists ; 1952 ; Perceptual and Motor Skills Volume 4 ; 4 ; >
     au < down ; exists ; 1955 ; Perceptual and Motor Skills Volume 5 ; 5 ; >
     au < down ; exists ; 1956 ; Perceptual and Motor Skills Volume 6 ; 6 ; >
@@ -305,7 +305,7 @@
     au < down ; exists ; 2013 ; Perceptual and Motor Skills Volume 117 ; 117 ; >
     au < down ; exists ; 2014 ; Perceptual and Motor Skills Volume 118 ; 118 ; >
     au < down ; exists ; 2014 ; Perceptual and Motor Skills Volume 119 ; 119 ; >
-    au < doNotProcess ; exists ; 2015 ; Perceptual and Motor Skills Volume 120 ; 120 ; > #PD-1411 500 Internal Server Error. process after move.
+    au < doNotProcess ; doNotProcess ; 2015 ; Perceptual and Motor Skills Volume 120 ; 120 ; > #PD-1411 500 Internal Server Error. process after move.
     au < down ; exists ; 2015 ; Perceptual and Motor Skills Volume 121 ; 121 ; >
 
   }
