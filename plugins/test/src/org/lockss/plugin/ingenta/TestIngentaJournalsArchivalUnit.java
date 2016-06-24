@@ -163,8 +163,10 @@ public class TestIngentaJournalsArchivalUnit extends LockssTestCase {
     PatternFloatMap urlPollResults = FooAu.makeUrlPollResultWeightMap();
     assertNotNull(urlPollResults);
     assertEquals(0.0,
-        urlPollResults.getMatch("http://www.ingentaconnect.com/css/connect/print.css?release=R5_1_4"),
+        urlPollResults.getMatch("http://www.ingentaconnect.com/css/connect/print.css?release=R5_1_4", (float) 1),
         .0001);
+    assertEquals(1.0, 
+        urlPollResults.getMatch("http://www.ingentaconnect.com/content/random", (float) 1), .0001);
   }
   
   private void shouldCacheTest(String url, boolean shouldCache,

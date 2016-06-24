@@ -284,8 +284,9 @@ public class TestPeerJ2016ArchivalUnit extends LockssTestCase {
     PatternFloatMap urlPollResults = PJAu.makeUrlPollResultWeightMap();
     assertNotNull(urlPollResults);
     for (String urlString : repairList) {
-      assertEquals(0.0, urlPollResults.getMatch(urlString), .0001);
+      assertEquals(0.0, urlPollResults.getMatch(urlString, (float) 1), .0001);
     }
+    assertEquals(1.0, urlPollResults.getMatch(notString, (float) 1), .0001);
   }
   
 }

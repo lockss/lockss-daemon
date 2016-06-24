@@ -299,9 +299,10 @@ public class TestPub2WebArchivalUnit extends LockssTestCase {
     assertNotNull(urlPollResults);
     for (String urlString : repairList) {
       assertEquals(0.0,
-          urlPollResults.getMatch(urlString),
+          urlPollResults.getMatch(urlString, (float) 1),
           .0001);
     }
+    assertEquals(1.0, urlPollResults.getMatch(notString, (float) 1), .0001);
   }
   
   public void testGetName() throws Exception {
