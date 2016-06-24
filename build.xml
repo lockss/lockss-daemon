@@ -1584,10 +1584,12 @@ Must specify output dir with -Doutdir=dir
 
     <jar destfile="${plugins.dir}/${plugin-jarfile}">
       <fileset dir="${plugin-root}">
-	<include name="titledb.xml" if="titledb"/>
-	<include name="${plugin-path}/*.class" />
-	<include name="${plugin-path}/*.xml" />
-	<include name="${plugin-path}/*.txt" /> <!-- Plugin externals -->
+        <include name="titledb.xml" if="titledb"/>
+        <include name="${plugin-path}/*.class" />
+        <include name="${plugin-path}/*.xml" />
+        <include name="${plugin-path}/*.dat" />
+        <include name="${plugin-path}/*.dat.gz" /> <!-- e.g. Muse URL normalizer mapping -->
+        <include name="${plugin-path}/*.txt" /> <!-- Plugin externals -->
       </fileset>
       <manifest>
 	<section name="${plugin-path}/${plugin-file}">
