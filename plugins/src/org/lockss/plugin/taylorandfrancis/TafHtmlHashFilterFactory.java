@@ -125,6 +125,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "social"),
             // DROP access box (changes e.g. when the article becomes free) [article block, abs/full/ref/suppl overview]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "accessmodule"),
+            HtmlNodeFilters.tagWithAttribute("div", "class", "access"), // formerly by itself
             // DROP number of article views [article block, abs/full/ref/suppl overview]
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleUsage"),
             // DROP "Related articles" variants [article block, abs/full/ref/suppl overview]
