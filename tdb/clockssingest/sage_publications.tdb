@@ -4242,10 +4242,41 @@
   {
 
       title <
+        name = British Journal of Music Therapy ;
+        issn = 1359-4575 ;
+        eissn = 2059-9773 
+      >
+
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://bjm.sagepub.com/
+        #content available from 1987 volume 1 to 1999 volume 13
+
+        au < exists ; exists ; 2000 ; British Journal of Music Therapy Volume 14 ; 14 ; >
+        au < exists ; exists ; 2001 ; British Journal of Music Therapy Volume 15 ; 15 ; >
+        au < exists ; exists ; 2002 ; British Journal of Music Therapy Volume 16 ; 16 ; >
+        au < exists ; exists ; 2003 ; British Journal of Music Therapy Volume 17 ; 17 ; >
+        au < exists ; exists ; 2004 ; British Journal of Music Therapy Volume 18 ; 18 ; >
+        au < exists ; exists ; 2005 ; British Journal of Music Therapy Volume 19 ; 19 ; >
+        au < exists ; exists ; 2006 ; British Journal of Music Therapy Volume 20 ; 20 ; >
+        au < exists ; exists ; 2007 ; British Journal of Music Therapy Volume 21 ; 21 ; >
+        au < exists ; exists ; 2008 ; British Journal of Music Therapy Volume 22 ; 22 ; >
+        au < exists ; exists ; 2009 ; British Journal of Music Therapy Volume 23 ; 23 ; >
+        au < exists ; exists ; 2010 ; British Journal of Music Therapy Volume 24 ; 24 ; >
+        au < exists ; exists ; 2011 ; British Journal of Music Therapy Volume 25 ; 25 ; >
+        au < exists ; exists ; 2012 ; British Journal of Music Therapy Volume 26 ; 26 ; >
+        au < exists ; exists ; 2013 ; British Journal of Music Therapy Volume 27 ; 27 ; >
+        au < exists ; exists ; 2014 ; British Journal of Music Therapy Volume 28 ; 28 ; >
+        au < exists ; exists ; 2015 ; British Journal of Music Therapy Volume 29 ; 29 ; >
+        au < doNotProcess ; exists ; 2016 ; British Journal of Music Therapy Volume 30 ; 30 ; >
+
+  }
+
+  {
+
+      title <
         name = The British Journal of Occupational Therapy ;
         issn = 0308-0226 ;
-        eissn = 1477-6006 ;
-        issnl = 0308-0226
+        eissn = 1477-6006 
       >
 
         pluginSuffix = ClockssHighWirePressH20Plugin
@@ -25582,8 +25613,9 @@
       eissn = 2048-4046 
     >
 
-      param[base_url] = http://lfn.sagepub.com/
+      param[base_url] = http://.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
+      #content available from 1982 volume 1 to 1999 volume 18
 
       au < exists ; exists ; 2000 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 19 ; 19 ; >
       au < exists ; exists ; 2001 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 20 ; 20 ; >
@@ -36647,6 +36679,21 @@
       au < doNotProcess ; exists ; 2016 ; Public Finance Review Volume 44 ; 44 ; >
 
     }
+
+  }
+
+  {
+
+      title <
+        name = Public Health Reports ;
+        issn = 0033-3549 ;
+        eissn = 1468-2877
+    >
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://phr.sagepub.com/
+
+      au < doNotProcess ; exists ; 2016 ; Public Health Reports Volume 131 ; 131 ; >
 
   }
 
@@ -48495,7 +48542,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://urb.sagepub.com/
 
-      au < expected ; exists ; 2016 ; Urbanisation Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2016 ; Urbanisation Volume 1 ; 1 ; >
 
     }
 
@@ -48525,6 +48572,21 @@
       au < doNotProcess ; exists ; 2016 ; Vascular Volume 24 ; 24 ; >
 
     }
+
+  {
+
+      title <
+        name = Women’s Health ;
+        issn = 1745-5057 ;
+        eissn = 1745-5065
+    >
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://whe.sagepub.com/
+
+      au < doNotProcess ; exists ; 2016 ; Women’s Health Volume 12 ; 12 ; >
+
+  }
 
   {
   
