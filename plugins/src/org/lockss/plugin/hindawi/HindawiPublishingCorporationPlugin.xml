@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>31</string>
+    <string>32</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>5000</long>
+    <long>4000</long>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -28,7 +28,7 @@
       </entry>
       <entry>
      	<string>Poll</string>
-	       <string>13</string>
+	    <string>14</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -48,7 +48,6 @@
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
   </entry>
-
   <entry>
     <string>au_start_url</string>
     <string>"%sjournals/%s/%s/", base_url, journal_id, volume_name</string>
@@ -84,7 +83,7 @@
       <string>4,"^(%s|%s)", base_url, download_url</string>
       <string>1,"^(%s|%s)lockss.html$", base_url, download_url</string>
       <string>2,"^(%s|%s)journals/%s/%s/[^/]+/citations/?$", base_url, download_url, journal_id, volume_name</string>
-      <string>1,"^(%s|%s)journals/%s/%s/", base_url, download_url, journal_id, volume_name</string>
+      <string>1,"^(%s|%s)journals/%s/%s($|/)", base_url, download_url, journal_id, volume_name</string>
       <string>1,"^%sfloats/[^/]+/figures/", base_url</string>
     </list>
   </entry>
