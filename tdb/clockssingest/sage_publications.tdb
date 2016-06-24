@@ -7217,20 +7217,6 @@
   {
 
     title <
-      name = Comprehensive Psychology ;
-      eissn = 2165-2228
-    >
-
-    param[base_url] = http://cop.sagepub.com/
-    pluginSuffix = ClockssHighWirePressH20Plugin
-
-    au < expected ; exists ; 2016 ; Comprehensive Psychology Volume 1 ; 1 ; >
-
-  }
-
-  {
-
-    title <
       name = Concurrent Engineering ;
       issn = 1063-293X ;
       eissn = 1531-2003
@@ -34112,21 +34098,6 @@
   {
 
     title <
-      name = Perceptual and Motor Skills ;
-      issn = 0031-5125 ;
-      eissn = 1558-688X
-    >
-
-      param[base_url] = http://pms.sagepub.com/
-      pluginSuffix = ClockssHighWirePressH20Plugin
-
-      au < doNotProcess ; exists ; 2016 ; Perceptual and Motor Skills Volume 122 ; 122 ; >
-
-  }
-
-  {
-
-    title <
       name = Perspectives in Public Health ;
       issn = 1757-9139 ;
       eissn = 1757-9147
@@ -36295,21 +36266,6 @@
       au < finished ; finished ; 2014 ; Prosthetics and Orthotics International Volume 38 ; 38 ; >
       au < crawling ; exists ; 2015 ; Prosthetics and Orthotics International Volume 39 ; 39 ; >
       au < doNotProcess ; exists ; 2016 ; Prosthetics and Orthotics International Volume 40 ; 40 ; >
-
-  }
-
-  {
-
-    title <
-      name = Psychological Reports ;
-      issn = 0033-2941 ;
-      eissn = 1558-691X
-    >
-
-      param[base_url] = http://prx.sagepub.com/
-      pluginSuffix = ClockssHighWirePressH20Plugin
-
-      au < doNotProcess ; exists ; 2016 ; Psychological Reports Volume 118 ; 118 ; >
 
   }
 
