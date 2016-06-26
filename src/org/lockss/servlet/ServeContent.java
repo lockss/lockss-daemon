@@ -321,6 +321,7 @@ public class ServeContent extends LockssServlet {
     accessLogInfo = null;
     requestType = AccessLogType.None;
     cu = null;
+    cuUrl = null;
     url = null;
     versionStr = null;
     au = null;
