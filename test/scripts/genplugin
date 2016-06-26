@@ -15,8 +15,9 @@ from string import split
 # Constants
 BUILD_ONLY = 0
 BUILD_AND_SIGN = 1
+validate=True
 
-validArgs = ["help", "nosign", "titledb=", "jar=", "plugin=",
+validArgs = ["help", "nosign", "novalidate", "titledb=", "jar=", "plugin=",
              "alias=", "keystore=", "password=", "plugin-root="]
 args = {}
 
@@ -78,12 +79,14 @@ buildXml = None
 #
 def usage(help):
     """ Print usage information """
-    print "Usage: genplugin [--help] [--nosign] [--jar <jarname>] [--titledb <file>]\\\n \
+    print "Usage: genplugin [--help] [--nosign] [--novalidate] \\\n \
+		 [--jar <jarname>] [--titledb <file>] \\\n \
 		 [--plugin <plugin>] [--alias <alias>] [--keystore <keystore>] \\\n \
 		 [--password <password>] [--plugin-root <directory>]"
     if (help):
 	print """
  nosign       Build a plugin jar without signing it.
+ novalidate   Suppress loading/validation of packaged plugin
 
 Used in all cases:
  jar          The name of the JAR file to create.
@@ -196,7 +199,7 @@ def prompt_for_missing_args():
 #
 def parse_options(options):
     """ Parse command-line options """
-    global mode
+    global mode, validate
     
     if len(options) == 0:
         print "For help, use the --help option."
@@ -213,6 +216,8 @@ def parse_options(options):
             exit()
         elif opt == "--nosign":
             mode = BUILD_ONLY
+        elif opt == "--novalidate":
+            validate = False
         elif opt == "--jar":
             args["jar"] = val
         elif opt == "--plugin":
@@ -240,6 +245,8 @@ def run_ant(command):
 #    print "ant " + command
     child = popen(antBin + " -f " + buildXml + " " + command)
     output = child.read()
+#    print output
+
     err = child.close()
     if err:
         print "Ant failed.  Output:"
@@ -262,7 +269,12 @@ def gen_plugin():
         
     print ("Building plugin %s..." % args["jar"])
 
-    command = "build-plugin" + \
+    if  validate:
+        command = "build-plugin-validate"
+    else:
+        command = "build-plugin"
+        
+    command = command + \
               " -Dplugin-jarfile=" + args["jar"] + \
               " -Dplugin-root=" + get_classes_dir() + \
               " -Dplugin-path=" + plugin_path + \
@@ -283,6 +295,9 @@ def gen_plugin():
             print "Plugin %s created successfully." % args["jar"]
         else:
             print "Plugin %s created and signed successfully." % args["jar"]
+        exit(0)
+    else:
+        exit(1)
 
 def main():
     """ Main entry point """

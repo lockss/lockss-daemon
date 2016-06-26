@@ -727,8 +727,9 @@ public abstract class BasePlugin
 	obj = ((Class<T>)Class.forName(className)).newInstance();
       }
     } catch (ExceptionInInitializerError e) {
-      throw auxErr("Initializer error in dynamically loaded class "
-		   + className,
+      throw auxErr("Error initializing dynamically loaded class "
+		   + className
+		   + ": " + e.getMessage(),
 		   e);
     } catch (LinkageError e) {
       throw auxErr("Linkage error in dynamically loaded class " + className,

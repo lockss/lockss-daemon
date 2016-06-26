@@ -35,6 +35,7 @@ package org.lockss.test;
 import java.io.File;
 import java.util.*;
 
+import org.apache.commons.lang3.tuple.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
@@ -106,22 +107,29 @@ public final class PluginWellformednessTests extends LockssTestCase {
     if (StringUtil.isNullString(args)) {
       return;
     }
-    List<String> failed = new ArrayList<String>();
+    List<Pair<String,String>> failed = new ArrayList<Pair<String,String>>();
     for (String pluginName : (List<String>)StringUtil.breakAt(args, ";")) {
       try {
  	System.err.println("Testing plugin: " + pluginName);
 	resetAndTest(pluginName);
       } catch (PluginFailedToLoadException e) {
 	log.error("Plugin " + pluginName + " failed");
-	failed.add(pluginName);
+	failed.add(new ImmutablePair(pluginName, e.toString()));
       } catch (Exception e) {
 	log.error("Plugin " + pluginName + " failed", e);
-	failed.add(pluginName);
+	failed.add(new ImmutablePair(pluginName, e.getMessage()));
       }
     }
     if (!failed.isEmpty()) {
-      fail(StringUtil.numberOfUnits(failed.size(), "plugin") + " failed: "
-	   + failed);
+      StringBuilder sb = new StringBuilder();
+      sb.append(StringUtil.numberOfUnits(failed.size(), "plugin") + " failed:");
+      for (Pair<String,String> f : failed) {
+	sb.append("\n  ");
+	sb.append(f.getLeft());
+	sb.append("\n    ");
+	sb.append(f.getRight());
+      }
+      fail(sb.toString());
     }
   }
 
@@ -194,6 +202,8 @@ public final class PluginWellformednessTests extends LockssTestCase {
     au.makePermissionCheckers();
     au.getLoginPageChecker();
     au.getCookiePolicy();
+
+    au.siteNormalizeUrl("http://exmaple.com/path/");
 
     AuUtil.getConfigUserMessage(au);
     AuUtil.getProtocolVersion(au);
