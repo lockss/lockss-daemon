@@ -24,7 +24,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < superseded ; exists ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 [to delete] ; 40 ; >
-    au < zapped ; frozen ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; reingest4.clockss.org:8083 >
+    au < zapped ; superseded ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 [superseded] ; 41 ; >
 
     }
 
@@ -38,7 +38,7 @@
     au < manifest ; exists ; 2006 ; Acta Biochimica et Biophysica Sinica Volume 38 ; 38 ; >
     au < manifest ; exists ; 2007 ; Acta Biochimica et Biophysica Sinica Volume 39 ; 39 ; >
     au < manifest ; exists ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; >
+    au < testing ; exists ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; >
     au < finished ; finished ; 2010 ; Acta Biochimica et Biophysica Sinica Volume 42 ; 42 ; >
     au < finished ; crawling ; 2011 ; Acta Biochimica et Biophysica Sinica Volume 43 ; 43 ; >
     au < finished ; crawling ; 2012 ; Acta Biochimica et Biophysica Sinica Volume 44 ; 44 ; >
