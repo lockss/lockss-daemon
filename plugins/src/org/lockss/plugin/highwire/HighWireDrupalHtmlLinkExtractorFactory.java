@@ -58,11 +58,12 @@ public class HighWireDrupalHtmlLinkExtractorFactory implements LinkExtractorFact
   private static final Logger log = Logger.getLogger(HighWireDrupalHtmlLinkExtractorFactory.class);
   
   private static final Pattern LPAGE =
-      Pattern.compile("content/[0-9]+/[^/]+/[^./?&]+([.]\\d{1,4})?$");
+      Pattern.compile("content(/[^/.]+)?/([^/.]+)/([^/.]*?)((?:bmj[.])?([^/.]+?|\\d+[.]\\d+))$");
   private static final String FULL_PDF = ".full.pdf";
   
   // http://emboj.embopress.org/content/28/1/4 adds 
   // http://emboj.embopress.org/content/28/1/4.full.pdf
+  // http://surgicaltechniques.jbjs.org/content/os-86/1_suppl_2/103
   
   @Override
   public LinkExtractor createLinkExtractor(String mimeType) throws PluginException {
@@ -82,14 +83,15 @@ public class HighWireDrupalHtmlLinkExtractorFactory implements LinkExtractorFact
                               @Override
                               public void foundLink(String url) {
                                 if (au != null) {
-                                  String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
-                                  if (url.contains(baseUrl)) {
+                                  if (HttpToHttpsUtil.UrlUtil.isSameHost(srcUrl, url)) {
                                     Matcher mat = LPAGE.matcher(url);
                                     if (mat.find()) {
                                       String purl = url + FULL_PDF;
+                                      purl = HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(au, purl);
                                       cb.foundLink(purl);
                                     }
                                   }
+                                  url = HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(au, url);
                                   cb.foundLink(url);
                                 }
                               }
