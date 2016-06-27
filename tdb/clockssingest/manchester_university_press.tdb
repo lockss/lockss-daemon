@@ -19,6 +19,7 @@
     
       param[base_url] = http://ercw.openlibrary.manchester.ac.uk/
       param[journal_id] = ercw
+      #From the website: The journal was cancelled after Volume 5, 2014
     
       au < finished ; crawling ; 2009 ; 2009 ; Ethnicity and Race in a Changing World Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2010 ; 2010 ; Ethnicity and Race in a Changing World Volume 2 ; 2 ; >
@@ -40,6 +41,7 @@
       param[journal_id] = jbr
     
       au < crawling ; exists ; 2015 ; 2015 ; James Baldwin Journal Volume 1 ; 1 ; >
+      au < expected ; exists ; 2016 ; 2016 ; James Baldwin Journal Volume 2 ; 2 ; >
 
   }
 
