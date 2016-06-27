@@ -167,6 +167,7 @@ http://jinsectscience.oxfordjournals.org/highwire/article_citation_preview/61258
     shouldCacheTest(ROOT_URL + "content/303/2.toc", true, au);
     // article files
     shouldCacheTest(ROOT_URL + "content/303/2/X3", true, au);
+    shouldCacheTest(ROOT_URL.replace("http:", "https:") + "content/303/2/X3", true, au);
     shouldCacheTest(ROOT_URL + "content/303/2/X3.abstract", false, au);
     shouldCacheTest(ROOT_URL + "content/303/2/X3.extract", false, au);
     shouldCacheTest(ROOT_URL + "content/303/2/X3.full", false, au);

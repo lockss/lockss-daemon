@@ -163,6 +163,7 @@ public class TestBMJDrupalPlugin extends LockssTestCase {
     // article files
     shouldCacheTest(ROOT_URL + "content/321/bmj.f6056.long", true, au);
     shouldCacheTest(ROOT_URL + "content/321/bmj.f4270", true, au);
+    shouldCacheTest(ROOT_URL.replace("http:", "https:") + "content/321/bmj.f4270", true, au);
     shouldCacheTest(ROOT_URL + "content/321/bmj.f4270.full", false, au);
     shouldCacheTest(ROOT_URL + "content/321/bmj.f4270.full.pdf", true, au);
     shouldCacheTest(ROOT_URL + "content/321/bmj.f4270.full.pdf+html", true, au);

@@ -157,7 +157,6 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
   // Test the crawl rules for eLife
   public void testShouldCacheProperPages() throws Exception {
     String ROOT_URL = "http://highwire.org/";
-//    String ROOT_URL2 = "https://highwire.org/";
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, ROOT_URL);
     props.setProperty(VOL_KEY, "2015");
@@ -172,19 +171,18 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     // Test for pages that should get crawled or not
     // permission page/start url
     shouldCacheTest(ROOT_URL + "lockss-manifest/vol_2015_manifest.html", true, au);
-//    shouldCacheTest(ROOT_URL2 + "lockss-manifest/vol_2015_manifest.html", true, au);
     shouldCacheTest(ROOT_URL + "clockss-manifest/vol_2015_manifest.html", false, au);
-//    shouldCacheTest(ROOT_URL2 + "clockss-manifest/vol_2015_manifest.html", false, au);
     shouldCacheTest(ROOT_URL + "manifest/year=2015", false, au);
     // toc page for a volume, issue
     shouldCacheTest(ROOT_URL + "content/2015", false, au);
     shouldCacheTest(ROOT_URL + "content/2015/1", true, au);
     shouldCacheTest(ROOT_URL + "content/2015/2.toc", true, au);
-//    shouldCacheTest(ROOT_URL2 + "content/2015/2.toc", true, au);
+    shouldCacheTest(ROOT_URL.replace("http:", "https:") + "content/2015/2.toc", true, au);
     // article files
     shouldCacheTest(ROOT_URL + "content/2015/1/2", true, au);
-//    shouldCacheTest(ROOT_URL2 + "content/2015/1/2", true, au);
+    shouldCacheTest(ROOT_URL.replace("http:", "https:") + "content/2015/1/2", true, au);
     shouldCacheTest(ROOT_URL + "content/2015/1/2.abstract", false, au);
+    shouldCacheTest(ROOT_URL + "content/2015/1/2.long", true, au);
     shouldCacheTest(ROOT_URL + "content/2015/1/2.extract", false, au);
     shouldCacheTest(ROOT_URL + "content/2015/1/2.full", false, au);
     shouldCacheTest(ROOT_URL + "content/2015/1/2.full.pdf", true, au);
@@ -212,7 +210,7 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "sites/default/themes/font/fontawesome-webfont.eot", false, au);
     
     shouldCacheTest(ROOT_URL + "content/hw/suppl/2014/04/23/hw.02130.DC1/hw02130_Supplemental_files.zip", true, au);
-//    shouldCacheTest(ROOT_URL2 + "content/hw/suppl/2014/04/23/hw.02130.DC1/hw02130_Supplemental_files.zip", true, au);
+    shouldCacheTest(ROOT_URL.replace("http:", "https:") + "content/hw/suppl/2014/04/23/hw.02130.DC1/hw02130_Supplemental_files.zip", true, au);
     shouldCacheTest("http://cdn.cloudfront.net/content/2015/1/3/F1.medium.gif", false, au);
     shouldCacheTest("https://cdn.cloudfront.net/content/2015/1/3/F1.medium.gif", false, au);
     shouldCacheTest("http://cdn.cloudfront.net/content/2015/1/3/F1.medium.gif?width=400", false, au);
@@ -264,7 +262,7 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
         ROOT_URL + "content/114/1/1.e-letters",
 
         ROOT_URL + "content/114/1/1.full.pdf+html",
-        ROOT_URL + "content/114/1/107",
+        ROOT_URL.replace("http:", "https:") + "content/114/1/107",
         ROOT_URL + "content/1/1/2005.0001",
         ROOT_URL + "content/114/1.toc",
         ROOT_URL + "highwire/article_citation_preview/37911",
@@ -324,7 +322,7 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
         ROOT_URL + "content/foo/suppl/2013/03/21/fooplphysiol.00106.2013.DC1/tableS1.doc",
         ROOT_URL + "highwire/filestream/108240/field_highwire_adjunct_files/0/Supplement_Table.pdf",
         ROOT_URL + "highwire/filestream/108244/field_highwire_adjunct_files/0/tableS1.pdf",
-        ROOT_URL + "highwire/filestream/108250/field_highwire_adjunct_files/0/matlab.docx",
+        ROOT_URL.replace("http:", "https:") + "highwire/filestream/108250/field_highwire_adjunct_files/0/matlab.docx",
         ROOT_URL + "highwire/filestream/108260/field_highwire_adjunct_files/0/tableS1.doc"
         );
     
