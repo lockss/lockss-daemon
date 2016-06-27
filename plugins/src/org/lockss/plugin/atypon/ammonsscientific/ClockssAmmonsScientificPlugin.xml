@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>20</string>
+    <string>21</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>20</string>
+        <string>21</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -59,7 +59,7 @@
   <!--some pdfplus files need scraping.  -->  
   <entry>
     <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponScrapingPdfFilterFactory</string>
+    <string>org.lockss.plugin.atypon.ammonsscientific.AmmonsScientificPdfFilterFactory</string>
   </entry>  
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
