@@ -43,6 +43,7 @@
     param[resource_id] = 166
 
     au < crawling ; exists ; 2015 ; Journal of Astronomical Telescopes, Instruments, and Systems Volume 1 ; 2015 ; reingest1.clockss.org:8082 >
+    au < expected ; exists ; 2016 ; Journal of Astronomical Telescopes, Instruments, and Systems Volume 2 ; 2016 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -76,6 +77,7 @@
     au < crawling ; exists ; 2013 ; Journal of Biomedical Optics Volume 18 ; 2013 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; Journal of Biomedical Optics Volume 19 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Journal of Biomedical Optics Volume 20 ; 2015 ; reingest1.clockss.org:8082 >
+    au < expected ; exists ; 2016 ; Journal of Biomedical Optics Volume 21 ; 2016 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -129,6 +131,7 @@
 
     au < crawling ; exists ; 2014 ; Journal of Medical Imaging Volume 1 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Journal of Medical Imaging Volume 2 ; 2015 ; reingest1.clockss.org:8082 >
+    au < expected ; exists ; 2016 ; Journal of Medical Imaging Volume 3 ; 2016 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -156,6 +159,7 @@
     au < crawling ; exists ; 2013 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 12 ; 2013 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 13 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 14 ; 2015 ; reingest1.clockss.org:8082 >
+    au < expected ; exists ; 2016 ; Journal of Micro/Nanolithography, MEMS, and MOEMS Volume 15 ; 2016 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -177,6 +181,7 @@
     au < crawling ; exists ; 2013 ; Journal of Nanophotonics Volume 7 ; 2013 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; Journal of Nanophotonics Volume 8 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Journal of Nanophotonics Volume 9 ; 2015 ; reingest1.clockss.org:8082 >
+    au < expected ; exists ; 2016 ; Journal of Nanophotonics Volume 10 ; 2016 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -194,6 +199,7 @@
     au < crawling ; exists ; 2013 ; Journal of Photonics for Energy Volume 3 ; 2013 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; Journal of Photonics for Energy Volume 4 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Journal of Photonics for Energy Volume 5 ; 2015 ; reingest1.clockss.org:8082 >
+    au < expected ; exists ; 2016 ; Journal of Photonics for Energy Volume 6 ; 2016 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -209,6 +215,7 @@
 
     au < crawling ; exists ; 2014 ; Neurophotonics Volume 1 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Neurophotonics Volume 2 ; 2015 ; reingest1.clockss.org:8082 >
+    au < expected ; exists ; 2016 ; Neurophotonics Volume 3 ; 2016 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -276,6 +283,7 @@
     au < crawling ; exists ; 2013 ; Optical Engineering Volume 52 ; 2013 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; Optical Engineering Volume 53 ; 2014 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Optical Engineering Volume 54 ; 2015 ; reingest1.clockss.org:8082 >
+    au < expected ; exists ; 2016 ; Optical Engineering Volume 55 ; 2016 ; reingest2.clockss.org:8085 >
 
     }
 
