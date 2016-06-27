@@ -43,7 +43,7 @@
 
     au < released ; 2012 ; 1 ; The Global Journal of Health and Physical Education Pedagogy Volume 1 ; 2012 >
     au < released ; 2013 ; 2 ; The Global Journal of Health and Physical Education Pedagogy Volume 2 ; 2013 >
-    au < testing ; 2014 ; 3 ; The Global Journal of Health and Physical Education Pedagogy Volume 3 ; 2014 >
+    au < notReady ; 2014 ; 3 ; The Global Journal of Health and Physical Education Pedagogy Volume 3 ; 2014 > # no substance. issues are 'announcements of interest' see http://js.sagamorepub.com/index.php/gjhpep/gateway/lockss?year=2014
     au < expected ; 2015 ; 4 ; The Global Journal of Health and Physical Education Pedagogy Volume 4 ; 2015 >
   }
 
@@ -225,7 +225,7 @@
     au < released ; 2012 ; 69 ; The Physical Educator Volume 69 ; 2012 >
     au < released ; 2013 ; 70 ; The Physical Educator Volume 70 ; 2013 >
     au < ready ; 2014 ; 71 ; The Physical Educator Volume 71 ; 2014 >
-    au < testing ; 2015 ; 72 ; The Physical Educator Volume 72 ; 2015 > #subscription needed?
+    au < ready ; 2015 ; 72 ; The Physical Educator Volume 72 ; 2015 > #subscription needed?
     au < manifest ; 2016 ; 73 ; The Physical Educator Volume 73 ; 2016 >
   }
 
@@ -257,7 +257,7 @@
     au < released ; 2012 ; 27 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 27 ; 2012 >
     au < released ; 2013 ; 28 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 28 ; 2013 >
     au < ready ; 2014 ; 29 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 29 ; 2014 >
-    au < testing ; 2015 ; 30 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 30 ; 2015 > #subscription needed?
+    au < ready ; 2015 ; 30 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 30 ; 2015 > #subscription needed?
     au < manifest ; 2016 ; 31 ; SCHOLE: A Journal of Leisure Studies and Recreation Education Volume 31 ; 2016 > #subscription needed?
   }
 
@@ -290,7 +290,7 @@
     au < released ; 2012 ; 46 ; Therapeutic Recreation Journal Volume 46 ; 2012 >
     au < released ; 2013 ; 47 ; Therapeutic Recreation Journal Volume 47 ; 2013 >
     au < ready ; 2014 ; 48 ; Therapeutic Recreation Journal Volume 48 ; 2014 >
-    au < testing ; 2015 ; 49 ; Therapeutic Recreation Journal Volume 49 ; 2015 > #subscription page?
+    au < ready ; 2015 ; 49 ; Therapeutic Recreation Journal Volume 49 ; 2015 > #subscription page?
     au < manifest ; 2016 ; 50 ; Therapeutic Recreation Journal Volume 50 ; 2016 > 
   }
   
@@ -303,7 +303,7 @@
     param[journal_id] = jhett
 
     au < ready ; 2014 ; 1 ; Journal of Health Education Teaching Techniques Volume 1 ; 2014 >
-    au < testing ; 2015 ; 2 ; Journal of Health Education Teaching Techniques Volume 2 ; 2015 > #subscription page?
+    au < ready ; 2015 ; 2 ; Journal of Health Education Teaching Techniques Volume 2 ; 2015 > #subscription page?
   }
   
   {
