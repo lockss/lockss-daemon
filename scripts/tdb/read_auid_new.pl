@@ -163,9 +163,12 @@ while (my $line = <>) {
            $plugin eq "BMJDrupalPlugin" ||
            $plugin eq "ERSDrupalPlugin" ||
            $plugin eq "GeneticsSocietyDrupalPlugin" ||
+           $plugin eq "GSLDrupalPlugin" ||
            $plugin eq "IWADrupalPlugin" ||
+           $plugin eq "JBJSDrupalPlugin" ||
            $plugin eq "OUPDrupalPlugin" ||
            $plugin eq "PortlandPressDrupalPlugin" ||
+           $plugin eq "RCPsychDrupalPlugin" ||
            $plugin eq "RSPDrupalPlugin" ||
            $plugin eq "HWDrupalPlugin") {
         $url = sprintf("%slockss-manifest/vol_%s_manifest.html",

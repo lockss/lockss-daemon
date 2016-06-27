@@ -918,7 +918,7 @@
       >
       param[base_url] = http://msphere.asm.org/
 
-      au < HighWireDrupalPlugin ; exists ; 2016 ; mSphere Volume 1 ; 1 >
+      au < HWDrupalPlugin ; exists ; 2016 ; mSphere Volume 1 ; 1 >
 
     }
 
@@ -930,7 +930,7 @@
       >
       param[base_url] = http://msystems.asm.org/
 
-      au < HighWireDrupalPlugin ; exists ; 2016 ; mSystems Volume 1 ; 1 >
+      au < HWDrupalPlugin ; exists ; 2016 ; mSystems Volume 1 ; 1 >
 
     }
   
