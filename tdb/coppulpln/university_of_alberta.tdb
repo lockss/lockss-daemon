@@ -126,7 +126,8 @@
     {
     
       title <
-        name = Canadian Journal of Learning and Technology 
+        name = Canadian Journal of Learning and Technology ;
+        eissn = 1499-6685
       >
 
         #stopped with 2015. Continued by jpcoe
@@ -492,7 +493,8 @@
     {
     
       title <
-        name = Eureka: The University of Alberta Science Undergraduate Research Journal
+        name = Eureka: The University of Alberta Science Undergraduate Research Journal ;
+        eissn = 1923-1520
       >
 
         param[journal_id] = eureka
@@ -506,7 +508,8 @@
     {
     
       title <
-        name = Evidence Based Library and Information Practice
+        name = Evidence Based Library and Information Practice ;
+        eissn = 1715-720X
       >
       {
         param[journal_id] = EBLIP
@@ -877,7 +880,8 @@
   {
 
       title <
-        name = Phenomenology + Pedagogy
+        name = Phenomenology + Pedagogy ;
+        eissn = 0820-9189
       >
 
       comment[publisher] = University of Alberta
@@ -961,7 +965,8 @@
   {
 
       title <
-        name = Socialist Studies/Études Socialistes
+        name = Socialist Studies/Études Socialistes ;
+        eissn = 1918-2821
       >
 
       comment[publisher] = University of Alberta
