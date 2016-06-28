@@ -70,10 +70,12 @@ public class TestHighWireDrupalHtmlLinkExtractor extends LockssTestCase {
         "    <td><a href=\"http://www.example.com/content/os-86/1_suppl_2/103\">HTML</a></td>\n" + 
         "    <td><a href=\"https://www.example.com/content/86/12/e03\">HTML</a></td>\n" + 
         "    <td><a href=\"http://www.example.com/content/321/bmj.f4270\">HTML</a></td>\n" + 
+        "    <td><a href=\"http://www.example.com/content/95/1\">HTML</a></td>\n" + 
         "  </tr>\n" + 
         "</table>\n" + 
         "</body></html>";
-    
+    // content/os-86/1_suppl_2/103
+    // content/95/1
     HighWireDrupalHtmlLinkExtractorFactory hlef = new HighWireDrupalHtmlLinkExtractorFactory();
     LinkExtractor ple = hlef.createLinkExtractor("any");
     mau.setConfiguration(ConfigurationUtil.fromArgs(
@@ -89,7 +91,8 @@ public class TestHighWireDrupalHtmlLinkExtractor extends LockssTestCase {
                                    BASE_URL1 + "content/86/12/e03.full.pdf",
                                    BASE_URL1 + "content/86/12/e03",
                                    BASE_URL1 + "content/321/bmj.f4270.full.pdf",
-                                   BASE_URL1 + "content/321/bmj.f4270"),
+                                   BASE_URL1 + "content/321/bmj.f4270",
+                                   BASE_URL1 + "content/95/1"),
                      out);
     mau.setConfiguration(ConfigurationUtil.fromArgs(
         ConfigParamDescr.BASE_URL.getKey(), BASE_URL2));
@@ -104,7 +107,8 @@ public class TestHighWireDrupalHtmlLinkExtractor extends LockssTestCase {
                                    BASE_URL2 + "content/86/12/e03.full.pdf",
                                    BASE_URL2 + "content/86/12/e03",
                                    BASE_URL2 + "content/321/bmj.f4270.full.pdf",
-                                   BASE_URL2 + "content/321/bmj.f4270"),
+                                   BASE_URL2 + "content/321/bmj.f4270",
+                                   BASE_URL2 + "content/95/1"),
                      out);
   }
   

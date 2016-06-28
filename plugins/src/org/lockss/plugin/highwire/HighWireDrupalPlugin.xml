@@ -27,7 +27,7 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>45</string>
+    <string>46</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -115,10 +115,11 @@
     <list>
       <string>1,"^https?://%s/content(/[^/]+)?/suppl/", url_host(base_url)</string>
       <string>2,"^https?://%s/content/(by/(year|volume)/?|.*/article-.*)$", url_host(base_url)</string>
-      <string>1,"^https?://%s/content(/[^/.]+)?(/[^/.]+)/([^/.]+)\.toc$", url_host(base_url)</string>
-      <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)/([^/.]*?)((?:bmj\.)?([^/.]+?|\d+\.\d+))(|/related|\.(?:long|supplemental|data|figures-only|full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url)</string>
+      <string>1,"^https?://%s/content/([^/.]+)(/[^/.]+)?/([^/.]+)\.toc$", url_host(base_url)</string>
+      <!-- after content is vol, optional issue, required page, then allowed extentions or nothing -->
+      <string>1,"^https?://%s/content/([^/.]+)(/[^/.]+)?/(((?:bmj\.)?[^/.]+?|\d+\.\d+))(|/related|\.(?:long|supplemental|data|figures-only|full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url)</string>
       <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
-      <string>1,"^https?://%s/[^/]+/(download-pdf|download-suppl|download-video)/", url_host(base_url)</string>
+      <string>1,"^https?://%s/[^/]+/(download-(pdf|suppl|video))/", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
