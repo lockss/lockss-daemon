@@ -4498,7 +4498,7 @@
 
         au < manifest ; 2014 ; Big Data & Society Volume 1 ; 1 >
         au < manifest ; 2015 ; Big Data & Society Volume 2 ; 2 >
-        au < expected ; 2016 ; Big Data & Society Volume 3 ; 3 >
+        au < manifest ; 2016 ; Big Data & Society Volume 3 ; 3 >
 
     }
 
@@ -4731,8 +4731,8 @@
         au < exists ; 2012 ; British Journal of Music Therapy Volume 26 ; 26 >
         au < exists ; 2013 ; British Journal of Music Therapy Volume 27 ; 27 >
         au < exists ; 2014 ; British Journal of Music Therapy Volume 28 ; 28 >
-        au < exists ; 2015 ; British Journal of Music Therapy Volume 29 ; 29 >
-        au < exists ; 2016 ; British Journal of Music Therapy Volume 30 ; 30 >
+        au < manifest ; 2015 ; British Journal of Music Therapy Volume 29 ; 29 >
+        au < manifest ; 2016 ; British Journal of Music Therapy Volume 30 ; 30 >
 
     }
 
@@ -17871,7 +17871,7 @@
         au < released ; 2013 ; Indian Historical Review Volume 40 ; 40 >
         au < released ; 2014 ; Indian Historical Review Volume 41 ; 41 >
         au < released ; 2015 ; Indian Historical Review Volume 42 ; 42 >
-        au < expected ; 2016 ; Indian Historical Review Volume 43 ; 43 >
+        au < manifest ; 2016 ; Indian Historical Review Volume 43 ; 43 >
 
       }
 
@@ -18067,7 +18067,7 @@
         au < exists ; 2013 ; Industry and Higher Education Volume 27 ; 27 >
         au < exists ; 2014 ; Industry and Higher Education Volume 28 ; 28 >
         au < exists ; 2015 ; Industry and Higher Education Volume 29 ; 29 >
-        au < exists ; 2016 ; Industry and Higher Education Volume 30 ; 30 >
+        au < manifest ; 2016 ; Industry and Higher Education Volume 30 ; 30 >
   
     }
 
@@ -22304,7 +22304,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2013-2014 ; Journal of Biomaterials Applications Volume 28 ; 28 >
         au < released ; 2014-2015 ; Journal of Biomaterials Applications Volume 29 ; 29 >
         au < released ; 2015-2016 ; Journal of Biomaterials Applications Volume 30 ; 30 >
-        au < expected ; 2016-2017 ; Journal of Biomaterials Applications Volume 31 ; 31 >
+        au < manifest ; 2016-2017 ; Journal of Biomaterials Applications Volume 31 ; 31 >
 
       }
 
@@ -22619,7 +22619,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2013-2014 ; Journal of Building Physics Volume 37 ; 37 >
         au < released ; 2014-2015 ; Journal of Building Physics Volume 38 ; 38 >
         au < manifest ; 2015-2016 ; Journal of Building Physics Volume 39 ; 39 >
-        au < expected ; 2016-2017 ; Journal of Building Physics Volume 40 ; 40 >
+        au < manifest ; 2016-2017 ; Journal of Building Physics Volume 40 ; 40 >
 
       }
 
@@ -40037,7 +40037,7 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
         param[base_url] = http://phr.sagepub.com/
   
-        au < exists ; 2016 ; Public Health Reports Volume 131 ; 131 >
+        au < manifest ; 2016 ; Public Health Reports Volume 131 ; 131 >
   
     }
 
@@ -40652,7 +40652,7 @@ comment[mpj] = now published by Brill
         au < released ; 2013 ; Race & Class Volume 55 ; 55 >
         au < released ; 2014 ; Race & Class Volume 56 ; 56 >
         au < released ; 2015 ; Race & Class Volume 57 ; 57 >
-        au < expected ; 2016 ; Race & Class Volume 58 ; 58 >
+        au < manifest ; 2016 ; Race & Class Volume 58 ; 58 >
 
       }
 
@@ -52816,7 +52816,7 @@ comment[mpj] = now published by Brill
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://urb.sagepub.com/
 
-      au < exists ; 2016 ; Urbanisation Volume 1 ; 1 >
+      au < manifest ; 2016 ; Urbanisation Volume 1 ; 1 >
 
     }
 
@@ -52877,7 +52877,7 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
         param[base_url] = http://whe.sagepub.com/
   
-        au < exists ; 2016 ; Women’s Health Volume 12 ; 12 >
+        au < manifest ; 2016 ; Women’s Health Volume 12 ; 12 >
   
     }
 
@@ -52897,7 +52897,7 @@ comment[mpj] = now published by Brill
     au < exists ; 2013 ; Comprehensive Psychology Volume 2 ; 2 >
     au < exists ; 2014 ; Comprehensive Psychology Volume 3 ; 3 >
     au < exists ; 2015 ; Comprehensive Psychology Volume 4 ; 4 >
-    au < exists ; 2016 ; Comprehensive Psychology Volume 5 ; 5 >
+    au < manifest ; 2016 ; Comprehensive Psychology Volume 5 ; 5 >
 
   }
 

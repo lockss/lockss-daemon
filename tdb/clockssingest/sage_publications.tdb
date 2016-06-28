@@ -2665,7 +2665,7 @@
       au < doNotProcess ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 663 ; 663 ; >
       au < doNotProcess ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 664 ; 664 ; >
       au < doNotProcess ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 665 ; 665 ; >
-      au < expected ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 666 ; 666 ; >
+      au < manifest ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 666 ; 666 ; >
       au < expected ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 667 ; 667 ; >
       au < expected ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 668 ; 668 ; >
 
@@ -4851,7 +4851,7 @@
       au < crawling ; exists ; 2015 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 128 ; 128 ; >
       au < doNotProcess ; exists ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 129 ; 129 ; >
       au < doNotProcess ; exists ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 130 ; 130 ; >
-      au < expected ; exists ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 131 ; 131 ; >
+      au < manifest ; exists ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 131 ; 131 ; >
       au < expected ; exists ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 132 ; 132 ; >
 
     }
@@ -14177,7 +14177,7 @@
       param[base_url] = http://him.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2001 ; Health Information Management Journal Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2001 ; Health Information Management Journal Volume 29 ; 29 ; >
       au < manifest ; exists ; 2002 ; Health Information Management Journal Volume 30 ; 30 ; >
       au < manifest ; exists ; 2003 ; Health Information Management Journal Volume 31 ; 31 ; >
       au < manifest ; exists ; 2004 ; Health Information Management Journal Volume 32 ; 32 ; >
@@ -15755,7 +15755,7 @@
       au < exists ; exists ; 2013 ; Indian Journal of Corporate Governance Volume 6 ; 6 ; >
       au < exists ; exists ; 2014 ; Indian Journal of Corporate Governance Volume 7 ; 7 ; >
       au < crawling ; exists ; 2015 ; Indian Journal of Corporate Governance Volume 8 ; 8 ; >
-      au < expected ; exists ; 2016 ; Indian Journal of Corporate Governance Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2016 ; Indian Journal of Corporate Governance Volume 9 ; 9 ; >
 
   }
 
@@ -16737,7 +16737,7 @@
       au < crawling ; exists ; 2013 ; International Journal of Comparative Sociology Volume 54 ; 54 ; >
       au < finished ; finished ; 2014 ; International Journal of Comparative Sociology Volume 55 ; 55 ; >
       au < crawling ; exists ; 2015 ; International Journal of Comparative Sociology Volume 56 ; 56 ; >
-      au < expected ; exists ; 2016 ; International Journal of Comparative Sociology Volume 57 ; 57 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Comparative Sociology Volume 57 ; 57 ; >
 
     }
 
@@ -17001,7 +17001,7 @@
     param[base_url] = http://iei.sagepub.com/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 2016 ; IThe International Journal of Entrepreneurship and Innovation Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2016 ; IThe International Journal of Entrepreneurship and Innovation Volume 17 ; 17 ; >
 
   }
 
@@ -17842,7 +17842,7 @@
       au < exists ; exists ; 2013 ; International Journal of Space Structures Volume 28 ; 28 ; >
       au < finished ; crawling ; 2014 ; International Journal of Space Structures Volume 29 ; 29 ; >
       au < crawling ; exists ; 2015 ; International Journal of Space Structures Volume 30 ; 30 ; >
-      au < expected ; exists ; 2016 ; International Journal of Space Structures Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Space Structures Volume 31 ; 31 ; >
 
   }
 
@@ -19445,19 +19445,19 @@
         param[base_url] = http://adu.sagepub.com/
         pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2002 ; Journal of Adult and Continuing Education Volume 8 ; 8 ; >
-      au < exists ; exists ; 2003 ; Journal of Adult and Continuing Education Volume 9 ; 9 ; >
-      au < exists ; exists ; 2004 ; Journal of Adult and Continuing Education Volume 10 ; 10 ; >
-      au < exists ; exists ; 2005 ; Journal of Adult and Continuing Education Volume 11 ; 11 ; >
-      au < exists ; exists ; 2006 ; Journal of Adult and Continuing Education Volume 12 ; 12 ; >
-      au < exists ; exists ; 2007 ; Journal of Adult and Continuing Education Volume 13 ; 13 ; >
-      au < exists ; exists ; 2008 ; Journal of Adult and Continuing Education Volume 14 ; 14 ; >
-      au < exists ; exists ; 2009 ; Journal of Adult and Continuing Education Volume 15 ; 15 ; >
-      au < exists ; exists ; 2010 ; Journal of Adult and Continuing Education Volume 16 ; 16 ; >
-      au < exists ; exists ; 2011 ; Journal of Adult and Continuing Education Volume 17 ; 17 ; >
-      au < exists ; exists ; 2012 ; Journal of Adult and Continuing Education Volume 18 ; 18 ; >
-      au < exists ; exists ; 2013 ; Journal of Adult and Continuing Education Volume 19 ; 19 ; >
-      au < exists ; exists ; 2014 ; Journal of Adult and Continuing Education Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2002 ; Journal of Adult and Continuing Education Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2003 ; Journal of Adult and Continuing Education Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2004 ; Journal of Adult and Continuing Education Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2005 ; Journal of Adult and Continuing Education Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2006 ; Journal of Adult and Continuing Education Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2007 ; Journal of Adult and Continuing Education Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2008 ; Journal of Adult and Continuing Education Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2009 ; Journal of Adult and Continuing Education Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2010 ; Journal of Adult and Continuing Education Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2011 ; Journal of Adult and Continuing Education Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2012 ; Journal of Adult and Continuing Education Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2013 ; Journal of Adult and Continuing Education Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2014 ; Journal of Adult and Continuing Education Volume 20 ; 20 ; >
       au < crawling ; exists ; 2015 ; Journal of Adult and Continuing Education Volume 21 ; 21 ; >
       au < doNotProcess ; exists ; 2016 ; Journal of Adult and Continuing Education Volume 22 ; 22 ; >
 
@@ -20094,7 +20094,7 @@
       au < finished ; crawling ; 2013-2014 ; Journal of Biomaterials Applications Volume 28 ; 28 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014-2015 ; Journal of Biomaterials Applications Volume 29 ; 29 ; >
       au < crawling ; exists ; 2015-2016 ; Journal of Biomaterials Applications Volume 30 ; 30 ; >
-      au < expected ; exists ; 2016-2017 ; Journal of Biomaterials Applications Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2016-2017 ; Journal of Biomaterials Applications Volume 31 ; 31 ; >
 
     }
 
@@ -20359,7 +20359,7 @@
       au < finished ; finished ; 2013-2014 ; Journal of Building Physics Volume 37 ; 37 ; >
       au < finished ; finished ; 2014-2015 ; Journal of Building Physics Volume 38 ; 38 ; >
       au < manifest ; exists ; 2015-2016 ; Journal of Building Physics Volume 39 ; 39 ; >
-      au < expected ; exists ; 2016-2017 ; Journal of Building Physics Volume 40 ; 40 ; >
+      au < manifest ; exists ; 2016-2017 ; Journal of Building Physics Volume 40 ; 40 ; >
 
     }
 
@@ -31649,19 +31649,19 @@
       param[base_url] = http://mix.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2002 ; Molecular Imaging Volume 1 ; 1 ; >
-      au < exists ; exists ; 2003 ; Molecular Imaging Volume 2 ; 2 ; >
-      au < exists ; exists ; 2004 ; Molecular Imaging Volume 3 ; 3 ; >
-      au < exists ; exists ; 2005 ; Molecular Imaging Volume 4 ; 4 ; >
-      au < exists ; exists ; 2006 ; Molecular Imaging Volume 5 ; 5 ; >
-      au < exists ; exists ; 2007 ; Molecular Imaging Volume 6 ; 6 ; >
-      au < exists ; exists ; 2008 ; Molecular Imaging Volume 7 ; 7 ; >
-      au < exists ; exists ; 2009 ; Molecular Imaging Volume 8 ; 8 ; >
-      au < exists ; exists ; 2010 ; Molecular Imaging Volume 9 ; 9 ; >
-      au < exists ; exists ; 2011 ; Molecular Imaging Volume 10 ; 10 ; >
-      au < exists ; exists ; 2012 ; Molecular Imaging Volume 11 ; 11 ; >
-      au < exists ; exists ; 2013 ; Molecular Imaging Volume 12 ; 12 ; >
-      au < exists ; exists ; 2014 ; Molecular Imaging Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2002 ; Molecular Imaging Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2003 ; Molecular Imaging Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2004 ; Molecular Imaging Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2005 ; Molecular Imaging Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2006 ; Molecular Imaging Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2007 ; Molecular Imaging Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2008 ; Molecular Imaging Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2009 ; Molecular Imaging Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2010 ; Molecular Imaging Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2011 ; Molecular Imaging Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2012 ; Molecular Imaging Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2013 ; Molecular Imaging Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2014 ; Molecular Imaging Volume 13 ; 13 ; >
       au < crawling ; exists ; 2015 ; Molecular Imaging Volume 14 ; 14 ; >
       au < doNotProcess ; exists ; 2016 ; Molecular Imaging Volume 15 ; 15 ; >
 
@@ -33552,7 +33552,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2015 ; Outlook on Agriculture Volume 44 ; 44 ; >
-      au < expected ; exists ; 2016 ; Outlook on Agriculture Volume 45 ; 45 ; >
+      au < manifest ; exists ; 2016 ; Outlook on Agriculture Volume 45 ; 45 ; >
 
   }
 
@@ -37221,7 +37221,7 @@
       au < crawling ; exists ; 2013 ; Race & Class Volume 55 ; 55 ; >
       au < finished ; finished ; 2014 ; Race & Class Volume 56 ; 56 ; >
       au < crawling ; exists ; 2015 ; Race & Class Volume 57 ; 57 ; >
-      au < expected ; exists ; 2016 ; Race & Class Volume 58 ; 58 ; >
+      au < manifest ; exists ; 2016 ; Race & Class Volume 58 ; 58 ; >
 
     }
 
@@ -40928,7 +40928,7 @@
         au < finished ; finished ; 2013 ; Studies in Microeconomics Volume 1 ; 1 ; >
         au < finished ; finished ; 2014 ; Studies in Microeconomics Volume 2 ; 2 ; >
         au < crawling ; exists ; 2015 ; Studies in Microeconomics Volume 3 ; 3 ; >
-        au < expected ; exists ; 2016 ; Studies in Microeconomics Volume 4 ; 4 ; >
+        au < manifest ; exists ; 2016 ; Studies in Microeconomics Volume 4 ; 4 ; >
 
     }
 
@@ -42615,7 +42615,7 @@
       au < crawling ; exists ; 2015 ; Thesis Eleven Volume 131 ; 131 ; >
       au < doNotProcess ; exists ; 2016 ; Thesis Eleven Volume 132 ; 132 ; >
       au < doNotProcess ; exists ; 2016 ; Thesis Eleven Volume 133 ; 133 ; >
-      au < expected ; exists ; 2016 ; Thesis Eleven Volume 134 ; 134 ; >
+      au < manifest ; exists ; 2016 ; Thesis Eleven Volume 134 ; 134 ; >
       au < expected ; exists ; 2016 ; Thesis Eleven Volume 135 ; 135 ; >
       au < expected ; exists ; 2016 ; Thesis Eleven Volume 136 ; 136 ; >
       au < expected ; exists ; 2016 ; Thesis Eleven Volume 137 ; 137 ; >
@@ -45289,7 +45289,7 @@
       au < crawling ; exists ; 2013 ; Political Science Volume 65 ; 65 ; >
       au < finished ; finished ; 2014 ; Political Science Volume 66 ; 66 ; >
       au < crawling ; exists ; 2015 ; Political Science Volume 67 ; 67 ; >
-      au < expected ; exists ; 2016 ; Political Science Volume 68 ; 68 ; >
+      au < manifest ; exists ; 2016 ; Political Science Volume 68 ; 68 ; >
 
     }
 
@@ -46573,7 +46573,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://ftr.sagepub.com/
 
-    au < exists ; exists ; 2012 ; Foreign Trade Review Volume 47 ; 47 ; >
+    au < manifest ; exists ; 2012 ; Foreign Trade Review Volume 47 ; 47 ; >
     au < finished ; finished ; 2013 ; Foreign Trade Review Volume 48 ; 48 ; >
     au < finished ; finished ; 2014 ; Foreign Trade Review Volume 49 ; 49 ; >
     au < crawling ; exists ; 2015 ; Foreign Trade Review Volume 50 ; 50 ; >
@@ -47666,11 +47666,11 @@
         param[base_url] = http://icp.sagepub.com/
         comment[continued_by] = 2053-4354
 
-        au < exists ; exists ; 2000 ; International Journal of Care Pathways Volume 4 ; 4 ; >
-        au < exists ; exists ; 2001 ; International Journal of Care Pathways Volume 5 ; 5 ; >
-        au < exists ; exists ; 2002 ; International Journal of Care Pathways Volume 6 ; 6 ; >
-        au < exists ; exists ; 2003 ; International Journal of Care Pathways Volume 7 ; 7 ; >
-        au < exists ; exists ; 2004 ; International Journal of Care Pathways Volume 8 ; 8 ; >
+        au < manifest ; exists ; 2000 ; International Journal of Care Pathways Volume 4 ; 4 ; >
+        au < manifest ; exists ; 2001 ; International Journal of Care Pathways Volume 5 ; 5 ; >
+        au < manifest ; exists ; 2002 ; International Journal of Care Pathways Volume 6 ; 6 ; >
+        au < manifest ; exists ; 2003 ; International Journal of Care Pathways Volume 7 ; 7 ; >
+        au < manifest ; exists ; 2004 ; International Journal of Care Pathways Volume 8 ; 8 ; >
         au < manifest ; exists ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 ; >
         au < manifest ; exists ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 ; >
         au < manifest ; exists ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 ; >
@@ -47796,7 +47796,7 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://hsr.sagepub.com/
 
-        au < exists ; exists ; 2000 ; Journal of Health Services Research & Policy Volume 5 ; 5 ; >
+        au < manifest ; exists ; 2000 ; Journal of Health Services Research & Policy Volume 5 ; 5 ; >
         au < manifest ; exists ; 2001 ; Journal of Health Services Research & Policy Volume 6 ; 6 ; >
         au < manifest ; exists ; 2002 ; Journal of Health Services Research & Policy Volume 7 ; 7 ; >
         au < manifest ; exists ; 2003 ; Journal of Health Services Research & Policy Volume 8 ; 8 ; >
@@ -48704,7 +48704,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Psychological Reports Volume 115 ; 115 ; >
     au < exists ; exists ; 2015 ; Psychological Reports Volume 116 ; 116 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Psychological Reports Volume 117 ; 117 ; >
-    au < exists; exists ; 2016 ; Psychological Reports Volume 118 ; 118 ; >
+    au < manifest ; exists ; 2016 ; Psychological Reports Volume 118 ; 118 ; >
     
   }
 
@@ -48841,7 +48841,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Perceptual and Motor Skills Volume 119 ; 119 ; >
     au < exists ; exists ; 2015 ; Perceptual and Motor Skills Volume 120 ; 120 ; > 
     au < doNotProcess ; doNotProcess ; 2015 ; Perceptual and Motor Skills Volume 121 ; 121 ; >
-    au < exists ; exists ; 2016 ; Perceptual and Motor Skills Volume 122 ; 122 ; >
+    au < manifest ; exists ; 2016 ; Perceptual and Motor Skills Volume 122 ; 122 ; >
     au < exists ; exists ; 2016 ; Perceptual and Motor Skills Volume 123 ; 123 ; >
 
   }

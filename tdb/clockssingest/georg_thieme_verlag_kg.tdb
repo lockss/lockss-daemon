@@ -1996,7 +1996,7 @@
     comment[years] =  2015-current
 
    au < crawling ; exists ; 2015 ; 2015 ; Indian Journal of Neruosurgery Volume 4 ; 4 ; >
-   au < exists ; exists ; 2016 ; 2016 ; Indian Journal of Neruosurgery Volume 5 ; 5 ; >
+   au < manifest ; exists ; 2016 ; 2016 ; Indian Journal of Neruosurgery Volume 5 ; 5 ; >
 
   }
 
@@ -2337,7 +2337,7 @@
     # https://www.thieme-connect.com/products/ejournals/journal/10.1055/s-00028776   Journal of Clinical &amp\; Academic Ophthalmology
     comment[1] = First issue online will be available soon.
 
-    au < exists ; exists ; 2016 ; 2016 ; Journal of Clinical & Academic Ophthalmology Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Journal of Clinical & Academic Ophthalmology Volume 8 ; 8 ; >
 
   }
 
@@ -2380,7 +2380,7 @@
     param[journal_id] = 10.1055/s-00025473
     comment[years] = 2015-current
 
-    au < exists ; exists ; 2015 ; 2015 ; Journal of Knee Surgery Reports Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; Journal of Knee Surgery Reports Volume 1 ; 1 ; >
     au < expected ; exists ; 2016 ; 2016 ; Journal of Knee Surgery Reports Volume 2 ; 2 ; >
 
   }
@@ -2502,7 +2502,7 @@
     param[journal_id] = 10.1055/s-00029352 
     comment[years] = 2016-current
 
-    au < exists ; exists ; 2016 ; 2016 ; Journal of Reconstructive Microsurgery Open Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Journal of Reconstructive Microsurgery Open Volume 1 ; 1 ; >
 
   }
 
@@ -4082,7 +4082,7 @@
     comment[years] = 2016-current
     # move from Scielo, May 2016
 
-   au < exists ; exists ; 2016 ; 2016 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 38 ; 38 ; >
+   au < manifest ; exists ; 2016 ; 2016 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 38 ; 38 ; >
 
   }
 
@@ -4892,7 +4892,7 @@
     comment[years] = 2015-present
 
     au < crawling ; exists ; 2015 ; 2015 ; The Surgery Journal Volume 1 ; 1 ; >
-    au < exists ; exists ; 2016 ; 2016 ; The Surgery Journal Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; The Surgery Journal Volume 2 ; 2 ; >
 
   }
 
@@ -5252,7 +5252,7 @@
     param[journal_id] = 10.1055/s-00028422
 
    au < crawling ; exists ; 2015 ; 2015 ; Ultrasound International Open Volume 1 ; 1 ; >
-   au < exists ; exists ; 2016 ; 2016 ; Ultrasound International Open Volume 2 ; 2 ; >
+   au < manifest ; exists ; 2016 ; 2016 ; Ultrasound International Open Volume 2 ; 2 ; >
 
   }
 
@@ -5366,8 +5366,8 @@
     param[journal_id] = 10.1055/s-00029347
     comment[years] = 2015-current
 
-    au < exists ; exists ; 2015 ; 2015 ; VPT Magazin Volume 1 ; 1 ; >
-    au < exists ; exists ; 2016 ; 2016 ; VPT Magazin Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; VPT Magazin Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; VPT Magazin Volume 2 ; 2 ; >
 
   }
 
