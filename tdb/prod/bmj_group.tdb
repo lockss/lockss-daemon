@@ -443,7 +443,7 @@
     au < bmj.BMJDrupalPlugin ; manifest ; 2012 ; BMJ Volume 345 ; 345 >
     au < bmj.BMJDrupalPlugin ; manifest ; 2013 ; BMJ Volume 346 ; 346 >
     au < bmj.BMJDrupalPlugin ; released ; 2014 ; BMJ Volume 347 ; 347 >
-    au < bmj.BMJDrupalPlugin ; testing ; 2014 ; BMJ Volume 348 ; 348 >
+    au < bmj.BMJDrupalPlugin ; notReady ; 2014 ; BMJ Volume 348 ; 348 > #Crawl completed with no substance
     au < bmj.BMJDrupalPlugin ; released ; 2014 ; BMJ Volume 349 ; 349 >
     au < bmj.BMJDrupalPlugin ; notReady ; 2015 ; BMJ Volume 350 ; 350 > #403 Forbidden
     au < bmj.BMJDrupalPlugin ; notReady ; 2015 ; BMJ Volume 351 ; 351 > #403 Forbidden
@@ -1825,7 +1825,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; notReady ; 1932 ; Journal of the Royal Army Medical Corps Volume 58 ; 58 >
       au < HighWirePressH20Plugin ; notReady ; 1932 ; Journal of the Royal Army Medical Corps Volume 59 ; 59 >
       au < HighWirePressH20Plugin ; notReady ; 1933 ; Journal of the Royal Army Medical Corps Volume 60 ; 60 >
-      au < HighWirePressH20Plugin ; testing ; 1933 ; Journal of the Royal Army Medical Corps Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; notReady ; 1933 ; Journal of the Royal Army Medical Corps Volume 61 ; 61 >
       au < HighWirePressH20Plugin ; notReady ; 1934 ; Journal of the Royal Army Medical Corps Volume 62 ; 62 >
       au < HighWirePressH20Plugin ; notReady ; 1934 ; Journal of the Royal Army Medical Corps Volume 63 ; 63 >
       au < HighWirePressH20Plugin ; notReady ; 1935 ; Journal of the Royal Army Medical Corps Volume 64 ; 64 >
@@ -1833,7 +1833,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; notReady ; 1936 ; Journal of the Royal Army Medical Corps Volume 66 ; 66 >
       au < HighWirePressH20Plugin ; notReady ; 1936 ; Journal of the Royal Army Medical Corps Volume 67 ; 67 >
       au < HighWirePressH20Plugin ; notReady ; 1937 ; Journal of the Royal Army Medical Corps Volume 68 ; 68 >
-      au < HighWirePressH20Plugin ; testing ; 1937 ; Journal of the Royal Army Medical Corps Volume 69 ; 69 >
+      au < HighWirePressH20Plugin ; notReady ; 1937 ; Journal of the Royal Army Medical Corps Volume 69 ; 69 >
       au < HighWirePressH20Plugin ; notReady ; 1938 ; Journal of the Royal Army Medical Corps Volume 70 ; 70 >
       au < HighWirePressH20Plugin ; notReady ; 1938 ; Journal of the Royal Army Medical Corps Volume 71 ; 71 >
       au < HighWirePressH20Plugin ; notReady ; 1939 ; Journal of the Royal Army Medical Corps Volume 72 ; 72 >
