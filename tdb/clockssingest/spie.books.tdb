@@ -9,7 +9,7 @@
 
   plugin = org.lockss.plugin.silverchair.ClockssSilverchairBooksPlugin
 
-  implicit < status ; status2 ; year ;  param[resource_id] ; eisbn ; isbn ; name ; hidden[proxy] >
+  implicit < status ; status2 ; year ; param[resource_id] ; eisbn ; isbn ; name ; hidden[proxy] >
   param[base_url] = http://ebooks.spiedigitallibrary.org/
 
   {

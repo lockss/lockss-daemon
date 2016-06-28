@@ -243,11 +243,11 @@
       param[base_url] = http://www.hthpweb.com/
       param[journal_code] = hthp
       param[short_journal_code] = H
-      # implicit < status ; status2 ; year ; name ; volume ; param[volume_name] ; hidden[proxy] >
-      # journal at this url 1995-2007, vols 27-36.
-      # moved: newer content at http://www.oldcitypublishing.com/index.html, 2008-present, vols. 37-?
+      #implicit < status ; status2 ; year ; name ; volume ; param[volume_name] ; hidden[proxy] >
+      #journal at this url 1995-2007, vols 27-36.
+      #moved: newer content at http://www.oldcitypublishing.com/index.html, 2008-present, vols. 37-?
       
-      # Waiting for Pion to fix no substance errors for V27-31, and no permission statement error or ingest3 and 4.      
+      #Waiting for Pion to fix no substance errors for V27-31, and no permission statement error or ingest3 and 4.      
 
       au < superseded ; exists ; 1995-1996 ; High Temperatures - High Pressures Volume 27/28 [superseded] ; 27 ; >
       au < superseded ; exists ; 1997 ; High Temperatures - High Pressures Volume 29 [superseded] ; 29 ; >
