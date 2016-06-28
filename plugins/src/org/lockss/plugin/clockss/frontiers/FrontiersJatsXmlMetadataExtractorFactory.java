@@ -54,10 +54,10 @@ public class FrontiersJatsXmlMetadataExtractorFactory extends SourceXmlMetadataE
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
           throws PluginException {
-    return new IsassJatsPublishingSourceXmlMetadataExtractor();
+    return new FrontiersJatsPublishingSourceXmlMetadataExtractor();
   }
 
-  public class IsassJatsPublishingSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
+  public class FrontiersJatsPublishingSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
