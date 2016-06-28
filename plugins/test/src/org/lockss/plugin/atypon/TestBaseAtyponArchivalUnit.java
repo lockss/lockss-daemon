@@ -50,7 +50,7 @@ import org.lockss.util.*;
 //
 // This plugin test framework is set up to run the same tests in two variants - CLOCKSS and GLN
 // without having to actually duplicate any of the written tests
-//
+//a
 public class TestBaseAtyponArchivalUnit extends LockssTestCase {
   private MockLockssDaemon theDaemon;
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
@@ -60,9 +60,22 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
   static final String ROOT_HOST = "www.BaseAtypon.com"; //this is not a real url
   
   // these two are currently the same, but for future possible divergence
-  static final String BASE_REPAIR_FROM_PEER_REGEXP = "(/(templates/jsp|(css|img|js)Jawr)/|/(css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$)";
-  static final String BOOK_REPAIR_FROM_PEER_REGEXP = "(/(templates/jsp|(css|img|js)Jawr)/|/(css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$)";
+  //static final String BASE_REPAIR_FROM_PEER_REGEXP = "(/(templates/jsp|(css|img|js)Jawr)/|/(css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$)";
+  //static final String BOOK_REPAIR_FROM_PEER_REGEXP = "(/(templates/jsp|(css|img|js)Jawr)/|/(css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$)";
 
+  static final String baseRepairList[] = 
+    {
+    "://[^/]+/(templates/jsp|(css|img|js)Jawr|sda)/",
+    "/(css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$",
+    };
+
+  static final String bookRepairList[] = 
+    {
+    "://[^/]+/(templates/jsp|(css|img|js)Jawr|sda)/",
+    "/(css|img|js|wro)/.+\\.(css|gif|jpe?g|js|png)(_v[0-9]+)?$",
+    };
+
+  
   private static final Logger log = Logger.getLogger(TestBaseAtyponArchivalUnit.class);
 
   static final String PLUGIN_ID = "org.lockss.plugin.atypon.BaseAtyponPlugin";
@@ -391,11 +404,9 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     theDaemon.getLockssRepository(FooAu);
     theDaemon.getNodeManager(FooAu);
 
-
     // if it changes in the plugin, you might need to change the test, so verify
-    assertEquals(ListUtil.list(
-        BASE_REPAIR_FROM_PEER_REGEXP),
-        RegexpUtil.regexpCollection(FooAu.makeRepairFromPeerIfMissingUrlPatterns()));
+  assertEquals(Arrays.asList(baseRepairList),
+    RegexpUtil.regexpCollection(FooAu.makeRepairFromPeerIfMissingUrlPatterns()));
     
     // make sure that's the regexp that will match to the expected url string
     // this also tests the regexp (which is the same) for the weighted poll map
@@ -409,15 +420,19 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
         "http://www.emeraldinsight.com/resources/page-builder/img/widget-placeholder.png",
         "http://www.emeraldinsight.com/resources/page-builder/img/playPause.gif",
         "http://www.emeraldinsight.com/pb/css/t1459270391157-v1459207566000/head_14_18_329.css");
-     Pattern p = Pattern.compile(BASE_REPAIR_FROM_PEER_REGEXP);
+     Pattern p0 = Pattern.compile(baseRepairList[0]);
+     Pattern p1 = Pattern.compile(baseRepairList[1]);
+     Matcher m0, m1;
      for (String urlString : repairList) {
-       Matcher m = p.matcher(urlString);
-       assertEquals(true, m.find());
+       m0 = p0.matcher(urlString);
+       m1 = p1.matcher(urlString);
+       assertEquals(urlString, true, m0.find() || m1.find());
      }
      //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
      String notString ="http://www.emeraldinsight.com/na101/home/literatum/publisher/emerald/books/content/books/2013/9781781902868/9781781902868-007/20160215/images/small/figure1.gif";
-     Matcher m = p.matcher(notString);
-     assertEquals(false, m.find());
+     m0 = p0.matcher(notString);
+     m1 = p1.matcher(notString);
+     assertEquals(false, m0.find() && m1.find());
 
      
     PatternFloatMap urlPollResults = FooAu.makeUrlPollResultWeightMap();
@@ -436,8 +451,8 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
     theDaemon.getNodeManager(FooBookAu);
 
 
-    assertEquals(ListUtil.list(
-        BOOK_REPAIR_FROM_PEER_REGEXP),
+    assertEquals(Arrays.asList(
+        bookRepairList),
         RegexpUtil.regexpCollection(FooBookAu.makeRepairFromPeerIfMissingUrlPatterns()));
     
     // make sure that's the regexp that will match to the expected url string
@@ -451,15 +466,19 @@ public class TestBaseAtyponArchivalUnit extends LockssTestCase {
         "http://www.emeraldinsight.com/resources/page-builder/img/widget-placeholder.png",
         "http://www.emeraldinsight.com/resources/page-builder/img/playPause.gif",
         "http://www.emeraldinsight.com/pb/css/t1459270391157-v1459207566000/head_14_18_329.css");
-     Pattern p = Pattern.compile(BOOK_REPAIR_FROM_PEER_REGEXP);
-     for (String urlString : repairList) {
-       Matcher m = p.matcher(urlString);
-       assertEquals(true, m.find());
-     }
+    Pattern p0 = Pattern.compile(baseRepairList[0]);
+    Pattern p1 = Pattern.compile(baseRepairList[1]);
+    Matcher m0, m1;
+    for (String urlString : repairList) {
+      m0 = p0.matcher(urlString);
+      m1 = p1.matcher(urlString);
+      assertEquals(urlString, true, m0.find() || m1.find());
+    }
      //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
      String notString ="http://www.emeraldinsight.com/na101/home/literatum/publisher/emerald/books/content/books/2013/9781781902868/9781781902868-007/20160215/images/small/figure1.gif";
-     Matcher m = p.matcher(notString);
-     assertEquals(false, m.find());
+     m0 = p0.matcher(notString);
+     m1 = p1.matcher(notString);
+     assertEquals(false, m0.find() && m1.find());
 
      
     PatternFloatMap urlPollResults = FooBookAu.makeUrlPollResultWeightMap();
