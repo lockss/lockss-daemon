@@ -192,6 +192,14 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "content/1/1/2005.0001", true, au);
     shouldCacheTest(ROOT_URL + "content/1/1/2005.0001.full.pdf", true, au);
     
+    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.abstract", false, au);
+    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.long", true, au);
+    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.extract", false, au);
+    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.full", false, au);
+    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.full.pdf", true, au);
+    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.full.pdf+html", true, au);
+    shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.full-text.pdf+html", true, au);
+    
     // full pdf article files with journal id
     shouldCacheTest(ROOT_URL + "content/jid/2015/1/2.full.pdf", true, au);
     shouldCacheTest(ROOT_URL + "content/jid/2015/1/2.full.pdf+html", true, au);
