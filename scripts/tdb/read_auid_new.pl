@@ -1471,8 +1471,10 @@ while (my $line = <>) {
     if ($resp_p->is_success && $resp_s->is_success) {
       my $perm_contents = $resp_p->content;
       my $start_contents = $resp_s->content;
-      if (defined($perm_contents) && defined($start_contents) && 
-         ($start_contents =~ m/$param{base_url}$param{volume_name}\//) && 
+#      if (defined($perm_contents) && defined($start_contents) && 
+#         ($start_contents =~ m/$param{base_url}$param{volume_name}\//) && 
+#         (($perm_contents =~ m/$clockss_tag/) || (($perm_contents =~ m/$cc_license_tag/) && ($perm_contents =~ m/$cc_license_url/)) )) {
+      if (defined($perm_contents) &&
          (($perm_contents =~ m/$clockss_tag/) || (($perm_contents =~ m/$cc_license_tag/) && ($perm_contents =~ m/$cc_license_url/)) )) {
         if ($perm_contents =~ m/j-name.>\s*(.*)\s*<\//si) {
           $vol_title = $1;
