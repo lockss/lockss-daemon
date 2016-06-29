@@ -4,7 +4,7 @@
     name = Advertising Research Foundation
   >
 
-    plugin = org.lockss.plugin.highwire.HWDrupalPlugin
+    plugin = org.lockss.plugin.highwire.arf.ARFDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
 
   {
@@ -32,8 +32,8 @@
     au < exists ; 2011 ; Journal of Advertising Research Volume 51 ; 51 >
     au < exists ; 2012 ; Journal of Advertising Research Volume 52 ; 52 >
     au < exists ; 2013 ; Journal of Advertising Research Volume 53 ; 53 >
-    au < exists ; 2014 ; Journal of Advertising Research Volume 54 ; 54 >
-    au < exists ; 2015 ; Journal of Advertising Research Volume 55 ; 55 >
+    au < testing ; 2014 ; Journal of Advertising Research Volume 54 ; 54 >
+    au < testing ; 2015 ; Journal of Advertising Research Volume 55 ; 55 >
     au < expected ; 2016 ; Journal of Advertising Research Volume 56 ; 56 >
 
   }

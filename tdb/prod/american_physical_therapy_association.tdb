@@ -58,7 +58,7 @@
    }
 
    {
-    plugin = org.lockss.plugin.highwire.HWDrupalPlugin
+    plugin = org.lockss.plugin.highwire.apta.APTADrupalPlugin
     param[base_url] = http://ptjournal.apta.org/
     implicit < status ; year ; name ; param[volume_name] >
 
@@ -97,7 +97,7 @@
     au < doNotProcess ; 2012 ; Physical Therapy Volume 92 ; 92 >
     au < doNotProcess ; 2013 ; Physical Therapy Volume 93 ; 93 >
     au < doNotProcess ; 2014 ; Physical Therapy Volume 94 ; 94 >
-    au < manifest ; 2015 ; Physical Therapy Volume 95 ; 95 >
+    au < testing ; 2015 ; Physical Therapy Volume 95 ; 95 >
     au < manifest ; 2016 ; Physical Therapy Volume 96 ; 96 >
    }
 

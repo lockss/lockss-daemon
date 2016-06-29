@@ -140,13 +140,13 @@
     
     comment[continues] = Journal of Bone & Joint Surgery, British Volume, issn 0301-620X, eissn 2044-5377 as of Jan 1 2013
     
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://www.bjj.boneandjoint.org.uk/
-    implicit < status ; year ; name ; param[volume_name] >
+    implicit < pluginSuffix; status ; year ; name ; param[volume_name] >
 
-    au < released ; 2013 ; The Bone & Joint Journal Volume 95 ; 95-B >
-    au < released ; 2014 ; The Bone & Joint Journal Volume 96 ; 96-B >
-    au < doNotProcess ; 2015 ; The Bone & Joint Journal Volume 97 ; 97-B >
+    au < HighWirePressH20Plugin ; released ; 2013 ; The Bone & Joint Journal Volume 95 ; 95-B >
+    au < HighWirePressH20Plugin ; released ; 2014 ; The Bone & Joint Journal Volume 96 ; 96-B >
+    au < besbjs.BESBJSDrupalPlugin ; testing ; 2015 ; The Bone & Joint Journal Volume 97 ; 97-B >
 
   }
 
