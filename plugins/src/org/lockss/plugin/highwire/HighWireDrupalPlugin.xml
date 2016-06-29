@@ -116,8 +116,10 @@
       <string>1,"^https?://%s/content(/[^/]+)?/suppl/", url_host(base_url)</string>
       <string>2,"^https?://%s/content/(by/(year|volume)/?|.*/article-.*)$", url_host(base_url)</string>
       <string>1,"^https?://%s/content/([^/.]+)(/[^/.]+)?/([^/.]+)\.toc$", url_host(base_url)</string>
-      <!-- after content is vol, optional issue, required page, then allowed extentions or nothing -->
-      <string>1,"^https?://%s/content/([^/.]+)(/[^/.]+)?/(((?:bmj\.)?[^/.]+?|\d+\.\d+))(|/related|\.(?:long|supplemental|data|figures-only|full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url)</string>
+      <!-- after content is required vol, optional issue, required page, then allowed extensions or EOL -->
+      <string>1,"^https?://%s/content/([^/.]+)(/[^/.]+)?/(((?:bmj\.)?[^/.]+?|\d+\.\d+))(|/related|\.(?:long|supplemental|data|figures-only))$", url_host(base_url)</string>
+      <!-- after content is optional jcode if full pdf, required vol, optional issue, required page, then allowed extensions  -->
+      <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:bmj\.)?[^/.]+?|\d+\.\d+))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url), volume_name</string>
       <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
       <string>1,"^https?://%s/[^/]+/(download-(pdf|suppl|video))/", url_host(base_url)</string>
     </list>
