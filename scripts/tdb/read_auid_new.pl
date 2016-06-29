@@ -1456,7 +1456,8 @@ while (my $line = <>) {
     }
     sleep(4);
 
-  } elsif ($plugin eq "ClockssCopernicusPublicationsPlugin") {
+  } elsif (($plugin eq "ClockssCopernicusPublicationsPlugin") ||
+           ($plugin eq "CopernicusPublicationsPlugin"))  {
     $url_p = sprintf("%s",
       $param{home_url});
     $url_s = sprintf("%s%s/index.html",
@@ -1465,11 +1466,11 @@ while (my $line = <>) {
       $param{base_url}, $param{volume_name});
     $man_url = uri_unescape($url_s) . " + " . uri_unescape($url_p) ;
     $man_url_p = uri_unescape($url_p);
-    printf("*man_url_p: %s\n", $man_url_p);
+#    printf("*man_url_p: %s\n", $man_url_p);
     $man_url_s = uri_unescape($url_s);
-    printf("*man_url_s: %s\n", $man_url_s);
+#    printf("*man_url_s: %s\n", $man_url_s);
     my $article_prefix = uri_unescape($url_d);
-    printf("*article_prefix: %s\n", $article_prefix);
+#    printf("*article_prefix: %s\n", $article_prefix);
     my $req_p = HTTP::Request->new(GET, $man_url_p);
     my $req_s = HTTP::Request->new(GET, $man_url_s);
     my $resp_p = $ua->request($req_p);
@@ -1477,12 +1478,11 @@ while (my $line = <>) {
     if ($resp_p->is_success && $resp_s->is_success) {
       my $perm_contents = $resp_p->content;
       my $start_contents = $resp_s->content;
-#      if (defined($perm_contents) && defined($start_contents) && 
-#         ($start_contents =~ m/$param{base_url}$param{volume_name}\//) && 
-#         (($perm_contents =~ m/$clockss_tag/) || (($perm_contents =~ m/$cc_license_tag/) && ($perm_contents =~ m/$cc_license_url/)) )) {
-      if (defined($perm_contents) && defined($start_contents) && 
-         ($start_contents =~ m/$article_prefix/) && 
-         (($perm_contents =~ m/$clockss_tag/) || (($perm_contents =~ m/$cc_license_tag/) && ($perm_contents =~ m/$cc_license_url/)) )) {
+      if ((defined($perm_contents)) && 
+          (defined($start_contents)) && 
+          ($start_contents =~ m/$article_prefix/) && 
+          ($perm_contents =~ m/$cc_license_tag/) && 
+          ($perm_contents =~ m/$cc_license_url/)) {
         if ($perm_contents =~ m/j-name.>\s*([^<]*)\s*<\//si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -1499,39 +1499,45 @@ while (my $line = <>) {
     }
     sleep(4);
 
-  } elsif ($plugin eq "CopernicusPublicationsPlugin") {
-    $url_p = sprintf("%s",
-      $param{home_url});
-    $url_s = sprintf("%s%s/index.html",
-      $param{base_url}, $param{volume_name});
-    $man_url = uri_unescape($url_s) . " + " . uri_unescape($url_p) ;
-    $man_url_p = uri_unescape($url_p);
-    $man_url_s = uri_unescape($url_s);
-    my $req_p = HTTP::Request->new(GET, $man_url_p);
-    my $req_s = HTTP::Request->new(GET, $man_url_s);
-    my $resp_p = $ua->request($req_p);
-    my $resp_s = $ua->request($req_s);
-    if ($resp_p->is_success && $resp_s->is_success) {
-      my $perm_contents = $resp_p->content;
-      my $start_contents = $resp_s->content;
-      if (defined($perm_contents) && defined($start_contents) && 
-         ($start_contents =~ m/$param{base_url}$param{volume_name}\//) && 
-         (($perm_contents =~ m/$lockss_tag/) || (($perm_contents =~ m/$cc_license_tag/) && ($perm_contents =~ m/$cc_license_url/)) )) {
-        if ($perm_contents =~ m/j-name.>\s*([^<]*)\s*<\//si) {
-          $vol_title = $1;
-          $vol_title =~ s/\s*\n\s*/ /g;
-          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-            $vol_title = "\"" . $vol_title . "\"";
-          }
-        }
-        $result = "Manifest"
-      } else {
-        $result = "--NO_TAG--"
-      }
-    } else {
-      $result = "--REQ_FAIL--"
-    }
-    sleep(4);
+#  } elsif ($plugin eq "CopernicusPublicationsPlugin") {
+#    $url_p = sprintf("%s",
+#      $param{home_url});
+#    $url_s = sprintf("%s%s/index.html",
+#      $param{base_url}, $param{volume_name});
+#    $url_d = sprintf("%s%s/",
+#      $param{base_url}, $param{volume_name});
+#    $man_url = uri_unescape($url_s) . " + " . uri_unescape($url_p) ;
+#    $man_url_p = uri_unescape($url_p);
+##    printf("*man_url_p: %s\n", $man_url_p);
+#    $man_url_s = uri_unescape($url_s);
+##    printf("*man_url_s: %s\n", $man_url_s);
+#    my $article_prefix = uri_unescape($url_d);
+##    printf("*article_prefix: %s\n", $article_prefix);
+#    my $req_p = HTTP::Request->new(GET, $man_url_p);
+#    my $req_s = HTTP::Request->new(GET, $man_url_s);
+#    my $resp_p = $ua->request($req_p);
+#    my $resp_s = $ua->request($req_s);
+#    if ($resp_p->is_success && $resp_s->is_success) {
+#      my $perm_contents = $resp_p->content;
+#      my $start_contents = $resp_s->content;
+#      if (defined($perm_contents) && defined($start_contents) && 
+#         ($start_contents =~ m/$param{base_url}$param{volume_name}\//) && 
+#         (($perm_contents =~ m/$lockss_tag/) || (($perm_contents =~ m/$cc_license_tag/) && ($perm_contents =~ m/$cc_license_url/)) )) {
+#        if ($perm_contents =~ m/j-name.>\s*([^<]*)\s*<\//si) {
+#          $vol_title = $1;
+#          $vol_title =~ s/\s*\n\s*/ /g;
+#          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+#            $vol_title = "\"" . $vol_title . "\"";
+#          }
+#        }
+#        $result = "Manifest"
+#      } else {
+#        $result = "--NO_TAG--"
+#      }
+#    } else {
+#      $result = "--REQ_FAIL--"
+#    }
+#    sleep(4);
 
   } elsif (($plugin eq "BMCPlugin") || ($plugin eq "ClockssBMCPlugin")) {
     $url = sprintf("%s%s/%s",
