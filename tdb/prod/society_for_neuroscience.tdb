@@ -10,11 +10,11 @@
       issnl = 2373-2822
     >
 
-      plugin = org.lockss.plugin.highwire.HWDrupalPlugin
+      plugin = org.lockss.plugin.highwire.sfn.SFNDrupalPlugin
       param[base_url] = http://eneuro.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2014 ; eNeuro Volume 1 ; 1 >
+      au < testing ; 2014 ; eNeuro Volume 1 ; 1 >
 
   }
   
