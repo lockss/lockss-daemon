@@ -1453,14 +1453,14 @@ while (my $line = <>) {
     sleep(4);
 
   } elsif ($plugin eq "ClockssCopernicusPublicationsPlugin") {
-    $url = sprintf("%s%s/index.html",
-      $param{base_url}, $param{volume_name});
+    $url = sprintf("%s",
+      $param{home_url});
     $man_url = uri_unescape($url);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+      if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) || (($start_contents =~ m/$cc_license_tag/) && ($start_contents =~ m/$cc_license_url/)) )) {
         if ($man_contents =~ m/farbe_auf_journalhintergrund.>\s*(.*)\s*<\/h1>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -1478,14 +1478,14 @@ while (my $line = <>) {
     sleep(4);
 
   } elsif ($plugin eq "CopernicusPublicationsPlugin") {
-    $url = sprintf("%s%s/index.html",
-      $param{base_url}, $param{volume_name});
+    $url = sprintf("%s",
+      $param{home_url});
     $man_url = uri_unescape($url);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+      if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || (($start_contents =~ m/$cc_license_tag/) && ($start_contents =~ m/$cc_license_url/)) )) {
         if ($man_contents =~ m/farbe_auf_journalhintergrund.>\s*(.*)\s*<\/h1>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
