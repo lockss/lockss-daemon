@@ -1460,7 +1460,7 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) || (($start_contents =~ m/$cc_license_tag/) && ($start_contents =~ m/$cc_license_url/)) )) {
+      if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) || (($man_contents =~ m/$cc_license_tag/) && ($man_contents =~ m/$cc_license_url/)) )) {
         if ($man_contents =~ m/farbe_auf_journalhintergrund.>\s*(.*)\s*<\/h1>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
@@ -1485,7 +1485,7 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || (($start_contents =~ m/$cc_license_tag/) && ($start_contents =~ m/$cc_license_url/)) )) {
+      if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || (($man_contents =~ m/$cc_license_tag/) && ($man_contents =~ m/$cc_license_url/)) )) {
         if ($man_contents =~ m/farbe_auf_journalhintergrund.>\s*(.*)\s*<\/h1>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
