@@ -1461,9 +1461,15 @@ while (my $line = <>) {
       $param{home_url});
     $url_s = sprintf("%s%s/index.html",
       $param{base_url}, $param{volume_name});
+    $url_d = sprintf("%s%s/",
+      $param{base_url}, $param{volume_name});
     $man_url = uri_unescape($url_s) . " + " . uri_unescape($url_p) ;
     $man_url_p = uri_unescape($url_p);
+    printf("*man_url_p: %s\n", $man_url_p);
     $man_url_s = uri_unescape($url_s);
+    printf("*man_url_s: %s\n", $man_url_s);
+    my $article_prefix = uri_unescape($url_d);
+    printf("*article_prefix: %s\n", $article_prefix);
     my $req_p = HTTP::Request->new(GET, $man_url_p);
     my $req_s = HTTP::Request->new(GET, $man_url_s);
     my $resp_p = $ua->request($req_p);
@@ -1475,7 +1481,7 @@ while (my $line = <>) {
 #         ($start_contents =~ m/$param{base_url}$param{volume_name}\//) && 
 #         (($perm_contents =~ m/$clockss_tag/) || (($perm_contents =~ m/$cc_license_tag/) && ($perm_contents =~ m/$cc_license_url/)) )) {
       if (defined($perm_contents) && defined($start_contents) && 
-         ($start_contents =~ m/$param{base_url}$param{volume_name}\//) && 
+         ($start_contents =~ m/$article_prefix/) && 
          (($perm_contents =~ m/$clockss_tag/) || (($perm_contents =~ m/$cc_license_tag/) && ($perm_contents =~ m/$cc_license_url/)) )) {
         if ($perm_contents =~ m/j-name.>\s*([^<]*)\s*<\//si) {
           $vol_title = $1;
