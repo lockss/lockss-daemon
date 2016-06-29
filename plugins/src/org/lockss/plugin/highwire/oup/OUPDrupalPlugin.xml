@@ -1,5 +1,6 @@
 <map>
   <entry>
+    <!-- Need to get Vicky/Thib to clarify the status of the plugin and which, if any, content is collected -->
     <string>plugin_status</string>
     <string>ready</string>
   </entry>
@@ -14,7 +15,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>18</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -22,7 +23,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>38</string>
+    <string>46</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
