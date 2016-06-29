@@ -48,11 +48,15 @@ while (my $line = <>) {
     }
   }
   my $url = "cant_create_url";
+  my $url_p = "cant_create_url";
+  my $url_s = "cant_create_url";
   my $url_d = "cant_create_url";
   my $url_e = "cant_create_url";
   my $url_de = "cant_create_url";
   #my $url_permission = "cant_create_url";
   my $man_url = "cant_create_url";
+  my $man_url_p = "cant_create_url";
+  my $man_url_s = "cant_create_url";
   my $man_url_d = "cant_create_url";
   my $man_url_e = "cant_create_url";
   my $man_url_de = "cant_create_url";
@@ -1453,15 +1457,24 @@ while (my $line = <>) {
     sleep(4);
 
   } elsif ($plugin eq "ClockssCopernicusPublicationsPlugin") {
-    $url = sprintf("%s",
+    $url_p = sprintf("%s",
       $param{home_url});
-    $man_url = uri_unescape($url);
-    my $req = HTTP::Request->new(GET, $man_url);
-    my $resp = $ua->request($req);
-    if ($resp->is_success) {
-      my $man_contents = $resp->content;
-      if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) || (($man_contents =~ m/$cc_license_tag/) && ($man_contents =~ m/$cc_license_url/)) )) {
-        if ($man_contents =~ m/farbe_auf_journalhintergrund.>\s*(.*)\s*<\/h1>/si) {
+    $url_s = sprintf("%s%s/index.html",
+      $param{base_url}, $param{volume_name});
+    $man_url = uri_unescape($url_s) . " + " . uri_unescape($url_p) ;
+    $man_url_p = uri_unescape($url_p);
+    $man_url_s = uri_unescape($url_s);
+    my $req_p = HTTP::Request->new(GET, $man_url_p);
+    my $req_s = HTTP::Request->new(GET, $man_url_s);
+    my $resp_p = $ua->request($req_p);
+    my $resp_s = $ua->request($req_s);
+    if ($resp_p->is_success && $resp_s->is_success) {
+      my $perm_contents = $resp_p->content;
+      my $start_contents = $resp_s->content;
+      if (defined($perm_contents) && defined($start_contents) && 
+         ($start_contents =~ m/$param{base_url}$param{volume_name}\//) && 
+         (($perm_contents =~ m/$clockss_tag/) || (($perm_contents =~ m/$cc_license_tag/) && ($perm_contents =~ m/$cc_license_url/)) )) {
+        if ($perm_contents =~ m/j-name.>\s*(.*)\s*<\//si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
           if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
@@ -1478,15 +1491,24 @@ while (my $line = <>) {
     sleep(4);
 
   } elsif ($plugin eq "CopernicusPublicationsPlugin") {
-    $url = sprintf("%s",
+    $url_p = sprintf("%s",
       $param{home_url});
-    $man_url = uri_unescape($url);
-    my $req = HTTP::Request->new(GET, $man_url);
-    my $resp = $ua->request($req);
-    if ($resp->is_success) {
-      my $man_contents = $resp->content;
-      if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || (($man_contents =~ m/$cc_license_tag/) && ($man_contents =~ m/$cc_license_url/)) )) {
-        if ($man_contents =~ m/farbe_auf_journalhintergrund.>\s*(.*)\s*<\/h1>/si) {
+    $url_s = sprintf("%s%s/index.html",
+      $param{base_url}, $param{volume_name});
+    $man_url = uri_unescape($url_s) . " + " . uri_unescape($url_p) ;
+    $man_url_p = uri_unescape($url_p);
+    $man_url_s = uri_unescape($url_s);
+    my $req_p = HTTP::Request->new(GET, $man_url_p);
+    my $req_s = HTTP::Request->new(GET, $man_url_s);
+    my $resp_p = $ua->request($req_p);
+    my $resp_s = $ua->request($req_s);
+    if ($resp_p->is_success && $resp_s->is_success) {
+      my $perm_contents = $resp_p->content;
+      my $start_contents = $resp_s->content;
+      if (defined($perm_contents) && defined($start_contents) && 
+         ($start_contents =~ m/$param{base_url}$param{volume_name}\//) && 
+         (($perm_contents =~ m/$lockss_tag/) || (($perm_contents =~ m/$cc_license_tag/) && ($perm_contents =~ m/$cc_license_url/)) )) {
+        if ($perm_contents =~ m/j-name.>\s*(.*)\s*<\//si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
           if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
