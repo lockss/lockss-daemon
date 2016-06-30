@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -89,14 +89,14 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
     }
   }
 
-  String licenseUrl;
+  boolean foundCcLicense = false;
 
   public CreativeCommonsPermissionChecker() {
   }
 
   public boolean checkPermission(Crawler.CrawlerFacade crawlFacade,
 				 Reader inputReader, String permissionUrl) {
-    licenseUrl = null;
+    foundCcLicense = false;
     logger.debug3("Checking permission on "+permissionUrl);
     if (permissionUrl == null) {
       return false;
@@ -120,28 +120,26 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
 		   ex);
       return false;
     }
-    if (licenseUrl != null) {
-      logger.debug3("Found licenseUrl "+licenseUrl);
+    if (foundCcLicense) {
+      logger.debug3("Found CC license on " + permissionUrl);
       setAuAccessType(crawlFacade, AuState.AccessType.OpenAccess);
       return true;
     }
     return false;
   }
 
-  private static class CustomHtmlLinkExtractor
+  private static final String REL = "rel";
+  private static final String LICENSE = "license";
+
+  private static Pattern CC_LICENSE_PAT =
+    Pattern.compile("https?://creativecommons.org/licenses/([^/]+)/([^/]+).*",
+		    Pattern.CASE_INSENSITIVE);
+
+  private class CustomHtmlLinkExtractor
     extends GoslingHtmlLinkExtractor {
-
-    private static final String REL = "rel";
-    private static final String LICENSE = "license";
-
-    private static Pattern CC_LICENSE_PAT =
-      Pattern.compile("https?://creativecommons.org/licenses/([^/]+)/([^/]+).*",
-		      Pattern.CASE_INSENSITIVE);
 
     protected String extractLinkFromTag(StringBuffer link, ArchivalUnit au,
 					LinkExtractor.Callback cb) {
-      String returnStr = null;
-
       switch (link.charAt(0)) {
         case 'l': //<link href="blah" rel="license">
         case 'L':
@@ -154,16 +152,16 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
 	    String relStr = getAttributeValue(REL, link);
 	    if (LICENSE.equalsIgnoreCase(relStr)) {
 	      // This tag has the rel="license" attribute
-	      String licenseURL = getAttributeValue(HREF, link);
-	      if (licenseURL == null) {
+	      String candidateUrl = getAttributeValue(HREF, link);
+	      if (candidateUrl == null) {
 	        break;
 	      }
 	      if (logger.isDebug2()) {
-		logger.debug2("CC license URL: "+licenseURL);
+		logger.debug2("CC license URL: "+candidateUrl);
 	      }
-	      Matcher mat = CC_LICENSE_PAT.matcher(licenseURL);
+	      Matcher mat = CC_LICENSE_PAT.matcher(candidateUrl);
 	      if (logger.isDebug2()) {
-		logger.debug2("Match: " + mat.matches() + ": " + licenseURL);
+		logger.debug2("Match: " + mat.matches() + ": " + candidateUrl);
 	      }
 	      if (mat.matches()) {
 		String lic = mat.group(1).toLowerCase();
@@ -175,7 +173,7 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
 		// currently acceptable.
 		if (validLicenseTypes.contains(lic)
 		    && validLicenseVersions.contains(ver)) {
-		  returnStr = licenseURL;
+		  foundCcLicense = true;
 		}
 	      }
 	    }
@@ -184,23 +182,19 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
         default:
 	  return null;
       }
-      if (logger.isDebug2()) {
-	logger.debug2("ret: " + returnStr);
-      }
-      return returnStr;
+      return null;
     }
   }
 
+  /** This may be called with URLs extracted by subsidiary extractors for
+   * other MIME types embedded in permission page (e.g., CSS), not just
+   * with the URL selected by the special purpose extractLinkFromTag()
+   * method above.  So no decisions can be made here. */
   private class MyLinkExtractorCallback implements LinkExtractor.Callback {
     public MyLinkExtractorCallback() {
     }
 
     public void foundLink(String url) {
-      if (licenseUrl != null && !licenseUrl.equalsIgnoreCase(url)) {
-	logger.warning("Multiple license URLs found on manifest page.  " +
-		       "Old: "+licenseUrl+" New: "+url);
-      }
-      licenseUrl = url;
     }
   }
 }

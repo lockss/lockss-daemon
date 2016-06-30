@@ -44,12 +44,10 @@ import org.lockss.crawler.*;
 import org.lockss.crawler.BaseCrawler.StorePermissionScheme;
 import org.lockss.daemon.ProbePermissionChecker;
 
-public class TestProbePermissionChecker extends LockssTestCase {
+public class TestProbePermissionChecker
+  extends LockssPermissionCheckerTestCase {
 
   private TestableProbePermissionChecker pc;
-  MockArchivalUnit mau;
-  MockCrawlerFacade mcf;
-  MockCrawler crawler;
 
   private static String htmlSourceWOLinkTag =
     "<html>\n"+
@@ -93,11 +91,28 @@ public class TestProbePermissionChecker extends LockssTestCase {
     "</html>\n";
 
 
+  private static String htmlSourceCssWOProbe =
+    "<html>\n"+
+    "  <head>\n"+
+    "    <title>\n"+
+    "      Human Molecular Genetics Volume 14 LOCKSS Manifest Page\n"+
+    "    </title>\n"+
+    "    <link href=\"/cgi/content/full/14/9/1109\" />\n"+
+    "  </head>\n"+
+    "    <body>\n"+
+    "      <h1>      Human Molecular Genetics Volume 14 LOCKSS Manifest Page</h1>\n"+
+    "      <ul>\n"+
+    "<style>\n" +
+    "  .box-metrics label.checked {\n" +
+    "    background-image: url('http://not.cc//foo');\n" +
+    "  }\n" +
+    "</style>\n" +
+    "    </body>\n"+
+    "</html>\n";
+
+
   public void setUp() throws Exception {
     super.setUp();
-    mau = new MockArchivalUnit();
-    crawler = new MockCrawler(mau);
-    mcf = crawler.new MockCrawlerFacade(mau);
   }
 
   public void testNoLinkTag() {
@@ -109,6 +124,19 @@ public class TestProbePermissionChecker extends LockssTestCase {
     assertFalse("Incorrectly gave permission when there was no probe",
 		pc.checkPermission(mcf,
 				   new StringReader(htmlSourceWOLinkTag),
+				   url));
+    assertNull(pc.getProbeUrl());
+  }
+
+  public void testNoLinkTagInCss() {
+    String url = "http://www.example.com";
+    mau.addUrl(url, true, true);
+    mau.addContent(url, htmlSourceCssWOProbe);
+    
+    pc = new TestableProbePermissionChecker();
+    assertFalse("Incorrectly gave permission when there was no probe",
+		pc.checkPermission(mcf,
+				   new StringReader(htmlSourceCssWOProbe),
 				   url));
     assertNull(pc.getProbeUrl());
   }

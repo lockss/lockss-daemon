@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,6 +35,7 @@ import java.util.*;
 
 import org.lockss.state.*;
 import org.lockss.clockss.*;
+import org.lockss.extractor.*;
 import org.lockss.test.*;
 import org.lockss.test.MockCrawler.MockCrawlerFacade;
 
@@ -50,6 +51,10 @@ public class LockssPermissionCheckerTestCase extends LockssTestCase {
     MockLockssDaemon daemon = getMockLockssDaemon();
     MockPlugin mplugin = new MockPlugin(daemon);
     mau = new MockArchivalUnit(mplugin);
+    // Some tests want to make sure an unrelated link extractor gets
+    // invoked.
+    LinkExtractor ue = new RegexpCssLinkExtractor();
+    mau.setLinkExtractor("text/css", ue);
     aus = new MockAuState(mau);
     MockNodeManager nm = new MockNodeManager();
     nm.setAuState(aus);

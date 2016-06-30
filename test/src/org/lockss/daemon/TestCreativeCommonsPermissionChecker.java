@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -171,6 +171,27 @@ public class TestCreativeCommonsPermissionChecker
     assertNoPerm("<a href=\"http://example.com\" rel=\"license\" />");
     assertNoPerm("<a href=\"" + lu("", "3.0") + "\" rel=\"license\" />");
     assertNoPerm("<a href=\"" + lu("by", "") + "\" rel=\"license\" />");
+  }
+
+  String cssTemplate = "<html>/n<head>/n<title>FOO</title>\n</head>\n" +
+    "<style>\n" +
+    "  .box-metrics label.checked {\n" +
+    "    background-image: url('http://not.cc//foo');\n" +
+    "  }\n" +
+    "  .box-related-articles h2.open, .box-metrics h2.open {\n" +
+    "    background: url('" + lu("by", "3.0") + "') top right no-repeat;\n" +
+    "  }\n" +
+    "</style>\n" +
+    "some text more text\n" +
+    "</body>\n</html>\n";
+
+
+  public void testCss() {
+    CreativeCommonsPermissionChecker checker =
+      new CreativeCommonsPermissionChecker();
+    assertFalse(checker.checkPermission(mcf,
+					new StringReader(cssTemplate),
+					TEST_URL));
   }
 
 }

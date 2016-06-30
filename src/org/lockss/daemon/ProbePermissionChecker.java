@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.io.*;
+import java.net.*;
 
 import org.lockss.plugin.*;
 import org.lockss.util.*;
@@ -49,12 +50,8 @@ import org.lockss.extractor.*;
 public class ProbePermissionChecker implements PermissionChecker {
   private static final Logger logger = 
       Logger.getLogger(ProbePermissionChecker.class);
-  protected String probeUrl = null;
-  protected ArchivalUnit au;
-  protected CrawlerStatus crawlStatus;
-
-  
-
+  protected String probeUrl = null;	// Set by extractLinkFromTag() if
+					// it finds a probe URL
   public ProbePermissionChecker() {
   }
   
@@ -81,8 +78,8 @@ public class ProbePermissionChecker implements PermissionChecker {
   
   private boolean checkPermission0(CrawlerFacade crawlFacade,
                                  Reader inputReader, String permissionUrl) {
-    au = crawlFacade.getAu();
-    crawlStatus = crawlFacade.getCrawlerStatus();
+    ArchivalUnit au = crawlFacade.getAu();
+    CrawlerStatus crawlStatus = crawlFacade.getCrawlerStatus();
     probeUrl = null;
     CustomHtmlLinkExtractor extractor = new CustomHtmlLinkExtractor();
     logger.debug3("Checking permission on "+permissionUrl);
@@ -118,44 +115,54 @@ public class ProbePermissionChecker implements PermissionChecker {
   }
 
 
-  private static class CustomHtmlLinkExtractor
-    extends GoslingHtmlLinkExtractor {
+  private class CustomHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
 
     private static final String LOCKSSPROBE = "lockss-probe";
 
     protected String extractLinkFromTag(StringBuffer link, ArchivalUnit au,
 					LinkExtractor.Callback cb) {
-      String returnStr = null;
+      String candidateUrl = null;
 
       switch (link.charAt(0)) {
         case 'l': //<link href=blah.css>
         case 'L':
 	  logger.debug3("Looking for probe in "+link);
 	  if (beginsWithTag(link, LINKTAG)) {
-	    returnStr = getAttributeValue(HREF, link);
+	    candidateUrl = getAttributeValue(HREF, link);
 	    String probeStr = getAttributeValue(LOCKSSPROBE, link);
-	    if (!"true".equalsIgnoreCase(probeStr)) {
-	      returnStr = null;
+	    if ("true".equalsIgnoreCase(probeStr)) {
+	      try {
+		// URL normally gets resolved when emitted, but spurious
+		// URLs may also be emitted (see below) so must handle
+		// everything here.
+		String absProbe = resolveUri(baseUrl, candidateUrl);
+		if (absProbe != null) {
+		  probeUrl = absProbe;
+		}
+	      } catch (MalformedURLException e) {
+		logger.error("foo", e);
+	      }
+	    } else {
+	      candidateUrl = null;
 	    }
 	  }
 	  break;
         default:
 	  return null;
       }
-      return returnStr;
+      return null;
     }
   }
 
+  /** This may be called with URLs extracted by subsidiary extractors for
+   * other MIME types embedded in permission page (e.g., CSS), not just
+   * with the URL selected by the special purpose extractLinkFromTag()
+   * method above.  So no decisions can be made here. */
   private class MyLinkExtractorCallback implements LinkExtractor.Callback {
     public MyLinkExtractorCallback() {
     }
 
     public void foundLink(String url) {
-      if (probeUrl != null) {
-	logger.warning("Multiple probe URLs found on manifest page.  " +
-			"Old: "+probeUrl+" New: "+url);
-      }
-      probeUrl = url;
     }
   }
 }
