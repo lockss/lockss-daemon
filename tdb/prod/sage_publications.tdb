@@ -19187,6 +19187,25 @@
 
     {
       title <
+        name = International Journal of Distributed Sensor Networks ;
+        eissn = 1550-1477 
+      >
+
+        pluginSuffix = HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+        param[base_url] = http://dsn.sagepub.com/
+
+        au < exists ; 2011 ; International Journal of Distributed Sensor Networks Volume 7 ; 7 >
+        au < exists ; 2012 ; International Journal of Distributed Sensor Networks Volume 8 ; 8 >
+        au < exists ; 2013 ; International Journal of Distributed Sensor Networks Volume 9 ; 9 >
+        au < exists ; 2014 ; International Journal of Distributed Sensor Networks Volume 10 ; 10 >
+        au < exists ; 2015 ; International Journal of Distributed Sensor Networks Volume 11 ; 11 >
+        au < exists ; 2016 ; International Journal of Distributed Sensor Networks Volume 12 ; 12 >
+
+    }
+
+    {
+      title <
         name = International Journal of Electrical Engineering Education ;
         issn = 0020-7209 ;
         eissn = 2050-4578 
