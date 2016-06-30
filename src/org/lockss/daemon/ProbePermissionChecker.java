@@ -50,8 +50,12 @@ import org.lockss.extractor.*;
 public class ProbePermissionChecker implements PermissionChecker {
   private static final Logger logger = 
       Logger.getLogger(ProbePermissionChecker.class);
+
+  protected ArchivalUnit au;		// Available to subclasses
+  protected CrawlerStatus crawlStatus;
   protected String probeUrl = null;	// Set by extractLinkFromTag() if
 					// it finds a probe URL
+
   public ProbePermissionChecker() {
   }
   
@@ -78,8 +82,8 @@ public class ProbePermissionChecker implements PermissionChecker {
   
   private boolean checkPermission0(CrawlerFacade crawlFacade,
                                  Reader inputReader, String permissionUrl) {
-    ArchivalUnit au = crawlFacade.getAu();
-    CrawlerStatus crawlStatus = crawlFacade.getCrawlerStatus();
+    au = crawlFacade.getAu();
+    crawlStatus = crawlFacade.getCrawlerStatus();
     probeUrl = null;
     CustomHtmlLinkExtractor extractor = new CustomHtmlLinkExtractor();
     logger.debug3("Checking permission on "+permissionUrl);
