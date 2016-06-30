@@ -5,7 +5,8 @@
 # must then be signed (e.g., with signplugin).
 #
 usage() {
-  echo "usage: $0 [-b basedir] -j jarfile -d plugin-dirN -p pluginN"
+  echo "usage: $0 [--novalidate] [-b basedir] -j jarfile -d plugin-dirN -p pluginN"
+  echo "  --novalidate   Suppress loading/validation of packaged plugin"
   echo "  -b basedir     top dir of plugin class hierarchy, default: ./plugins/classes"
   echo "  -j jarfile     output jar file"
   echo "  -d plugin-dirN path to plugin class dir (relative to basedir)"
@@ -21,9 +22,13 @@ basedir=plugins/classes
 plugs=""
 dirs=""
 jar=""
+validate="true"
 
 while true ; do
   case "$1" in
+    "--novalidate" )
+      validate=""
+      shift; continue;;
     "-b" )
       basedir="$2"
       shift; shift; continue;;
@@ -63,3 +68,7 @@ done
 
 rm $manifest
 rm -r $tmpdir
+
+if [ -n $validate ]; then
+  ant -s build.xml validate-plugin-jar -Dplugin.jar=$jar -Dplugin-path=`dirname $plugs` -Dplugin-file=`basename $plugs`
+fi
