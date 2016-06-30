@@ -150,7 +150,7 @@ public class ConfigManager implements LockssManager {
    * misconfigured servers. */
   public static final String PARAM_JSSE_ENABLESNIEXTENSION =
     PREFIX + "jsse.enableSNIExtension";
-  static final boolean DEFAULT_JSSE_ENABLESNIEXTENSION = false;
+  static final boolean DEFAULT_JSSE_ENABLESNIEXTENSION = true;
 
   /** Parameters whose values are more prop URLs */
   static final Set URL_PARAMS =
