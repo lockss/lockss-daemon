@@ -41,6 +41,8 @@ public class AsmHtmlHashFilterFactory implements FilterFactory {
     NodeFilter[] filters = new NodeFilter[] {
 	HtmlNodeFilters.tag("script"),
 	HtmlNodeFilters.tag("noscript"),
+	HtmlNodeFilters.tag("head"),
+	HtmlNodeFilters.tagWithAttribute("div", "id", "previewWrapper"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar_right"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
