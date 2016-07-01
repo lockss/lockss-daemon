@@ -758,6 +758,20 @@ public class ReindexingTask extends StepTask {
       if (log.isDebug2())
 	log.debug2(DEBUG_HEADER + "AU '" + auName + "': status = " + status);
 
+      if (mdManager.isOnDemandMetadataExtractionOnly()) {
+	// Get any exception thrown while getting the archival unit URLs.
+	e = GetAuUrlsClient.getAndDeleteAnyException(auId);
+        if (log.isDebug3()) log.debug3(DEBUG_HEADER + "e = " + e);
+
+        // Check whether an exception was thrown.
+        if (e != null) {
+          // Yes: If the URLs could not be obtained successfully, the process
+          // failed. This could be because, for example, the AU was never
+          // crawled.
+          status = ReindexingStatus.Failed;
+	}
+      }
+
       if (status == ReindexingStatus.Running) {
         status = ReindexingStatus.Success;
       }

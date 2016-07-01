@@ -160,9 +160,12 @@ public class JobManager extends BaseLockssDaemonManager implements
     try {
       job = jobManagerSql.createMetadataExtractionJob(auId);
       job.setAuName(auName);
+    } catch (IllegalArgumentException iae) {
+      log.error(message, iae);
+      throw iae;
     } catch (Exception e) {
       log.error(message, e);
-      throw new Exception(message, e);
+      throw e;
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "job = " + job);
@@ -235,9 +238,12 @@ public class JobManager extends BaseLockssDaemonManager implements
     try {
       job = jobManagerSql.createMetadataRemovalJob(auId);
       job.setAuName(auName);
+    } catch (IllegalArgumentException iae) {
+      log.error(message, iae);
+      throw iae;
     } catch (Exception e) {
       log.error(message, e);
-      throw new Exception(message, e);
+      throw e;
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "job = " + job);
@@ -271,6 +277,9 @@ public class JobManager extends BaseLockssDaemonManager implements
       if (job != null) {
 	job.setAuName(auName);
       }
+    } catch (IllegalArgumentException iae) {
+      log.error(message, iae);
+      throw iae;
     } catch (Exception e) {
       log.error(message, e);
       throw new Exception(message, e);
@@ -347,6 +356,7 @@ public class JobManager extends BaseLockssDaemonManager implements
 	job = removeJob(auJob.getId());
       }
     } catch (IllegalArgumentException iae) {
+      log.error(message, iae);
       throw iae;
     } catch (Exception e) {
       log.error(message, e);
@@ -403,6 +413,7 @@ public class JobManager extends BaseLockssDaemonManager implements
 
       job = removeJob(jobSeq);
     } catch (IllegalArgumentException iae) {
+      log.error(message, iae);
       throw iae;
     } catch (Exception e) {
       log.error(message, e);
@@ -445,6 +456,7 @@ public class JobManager extends BaseLockssDaemonManager implements
 
       jobAuStatus = jobManagerSql.deleteJob(jobSeq);
     } catch (IllegalArgumentException iae) {
+      log.error(message, iae);
       throw iae;
     } catch (Exception e) {
       log.error(message, e);
@@ -480,6 +492,7 @@ public class JobManager extends BaseLockssDaemonManager implements
     try {
       status = jobManagerSql.getJob(jobId);
     } catch (IllegalArgumentException iae) {
+      log.error(message, iae);
       throw iae;
     } catch (Exception e) {
       log.error(message, e);
@@ -785,7 +798,7 @@ public class JobManager extends BaseLockssDaemonManager implements
     try {
       // Get the Archival Unit.
       ArchivalUnit au =
-	  LockssDaemon.getLockssDaemon().getPluginManager().getAuFromId(auId);
+	  LockssDaemon.getLockssDaemon().getMetadataManager().getAu(auId);
       if (log.isDebug3()) log.debug3("au = " + au);
 
       // Check whether it does exist.
@@ -795,9 +808,12 @@ public class JobManager extends BaseLockssDaemonManager implements
 	if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auName = " + auName);
 	return auName;
       }
+    } catch (IllegalArgumentException iae) {
+      log.error(message, iae);
+      throw iae;
     } catch (Exception e) {
       log.error(message, e);
-      throw new Exception(message, e);
+      throw e;
     }
 
     // It does not exist: Report the problem.

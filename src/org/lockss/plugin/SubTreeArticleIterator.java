@@ -616,7 +616,7 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
 	try {
 	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "cuIter 1 = " + cuIter);
 	  if (cuIter == null || !cuIter.hasNext()) {
-	    if (!rootIter.hasNext()) {
+	    if (rootIter == null || !rootIter.hasNext()) {
 	      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "return 3 null");
 	      return null;
 	    } else {
@@ -759,20 +759,15 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
   }
 
   /**
-   * Provides the collection of URLs of the archival unit.
+   * Provides the collection of URLs of the archival unit obtained from a web
+   * service.
+   * 
    * @return a Collection<String> with the collection of archival unit URLs.
    */
   protected Collection<String> getUrlsFromWebService() {
     final String DEBUG_HEADER = "getUrlsFromWebService(): ";
-    Collection<String> auUrls = null;
-    String auId = au.getAuId();
 
-    try {
-      auUrls = new GetAuUrlsClient().getAuUrls(auId);
-    } catch (Exception e) {
-      log.error("Exception caught getting URLs for auId = " + auId, e);
-    }
-
+    Collection<String> auUrls = new GetAuUrlsClient().getAuUrls(au.getAuId());
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auUrls = " + auUrls);
     return auUrls;
   }

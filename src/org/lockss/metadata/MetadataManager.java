@@ -39,12 +39,18 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Set;
 import java.util.TreeMap;
 import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.app.ConfigurableManager;
 import org.lockss.app.LockssDaemon;
+import org.lockss.config.BaseConfigFile;
+import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
+import org.lockss.config.FileConfigFile;
+import org.lockss.config.Tdb;
+import org.lockss.config.TdbAu;
 import org.lockss.config.Configuration.Differences;
 import org.lockss.daemon.LockssRunnable;
 import org.lockss.daemon.status.StatusService;
@@ -59,6 +65,7 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.Plugin.Feature;
+import org.lockss.plugin.PluginManager.PluginInfo;
 import org.lockss.plugin.PluginManager;
 import org.lockss.scheduler.Schedule;
 import org.lockss.util.Constants;
@@ -324,6 +331,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private boolean onDemandMetadataExtractionOnly =
       DEFAULT_ON_DEMAND_METADATA_EXTRACTION_ONLY;
 
+  // The map of archival unit configurations keyed by the archival unit
+  // identifier.
+  private Map<String, Configuration> auConfigurations = null;
+
   /**
    * Starts the MetadataManager service.
    */
@@ -448,6 +459,70 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	if (log.isDebug3())
 	  log.debug3("mandatoryMetadataFields = " + mandatoryMetadataFields);
       }
+
+      // Populate the map of archival unit configurations keyed by the archival
+      // unit identifier.
+      populateAuConfigurations();
+    }
+  }
+
+  /**
+   * Populates the map of archival unit configurations keyed by the archival
+   * unit identifier.
+   */
+  private void populateAuConfigurations() {
+    final String DEBUG_HEADER = "populateAuConfigurations(): ";
+
+    auConfigurations = new HashMap<String, Configuration>();
+
+    try {
+      ConfigManager configManager = getDaemon().getConfigManager();
+      List<String> configUrlList =
+	  (List<String>)configManager.getConfigUrlList();
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "configUrlList = " + configUrlList);
+
+      for (String configUrl : configUrlList) {
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "configUrl = " + configUrl);
+
+	BaseConfigFile cf = new FileConfigFile(configUrl);
+	Tdb tdb = cf.getConfiguration().getTdb();
+	if (tdb == null) {
+	  continue;
+	}
+
+	for (String pluginId : tdb.getAllPluginsIds()) {
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+
+	  for (TdbAu.Id tdbAuId : tdb.getTdbAuIds(pluginId)) {
+	    String auId = tdbAuId.toString();
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+	    TdbAu tdbAu = tdb.getTdbAuById(tdbAuId);
+	    if (log.isDebug3()) {
+	      //log.debug3(DEBUG_HEADER + "tdbAu = " + tdbAu);
+	      //log.debug3(DEBUG_HEADER
+		  //+ "tdbAu.getAttrs() = " + tdbAu.getAttrs());
+	      log.debug3(DEBUG_HEADER
+		  + "tdbAu.getParams() = " + tdbAu.getParams());
+	      //log.debug3(DEBUG_HEADER
+		  //+ "tdbAu.getProperties() = " + tdbAu.getProperties());
+	    }
+
+	    Properties properties = new Properties();
+	    properties.putAll(tdbAu.getParams());
+
+	    Configuration auConf = ConfigManager.fromProperties(properties);
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auConf = " + auConf);
+
+	    auConfigurations.put(auId, auConf);
+	  }
+	}
+      }
+    } catch (Exception e) {
+      log.error("Error getting AU configurations", e);
     }
   }
 
@@ -4564,20 +4639,23 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
-   * Ensures that as many re-indexing tasks as possible are running if the
-   * manager is enabled.
+   * Starts the indexing of the metadata of an archival unit.
    * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @return an int with the number of reindexing tasks started.
+   * @param auId
+   *          A String with the identifier of the archival unit.
+   * @return a ReindexingTask with the metadata indexing task.
    */
   public ReindexingTask onDemandStartReindexing(String auId) {
     final String DEBUG_HEADER = "onDemandStartReindexing(): ";
-    if (log.isDebug2()) log.debug2("Starting...");
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
+
+    // Get the plugin.
+    Plugin plugin = getAuPlugin(auId);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "plugin = " + plugin);
 
     // Get the AU.
-    ArchivalUnit au = pluginMgr.getAuFromId(auId);
-    if (log.isDebug3()) log.debug3("au = " + au);
+    ArchivalUnit au = getAu(auId, plugin);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
 
     // Check whether it does not exist.
     if (au == null) {
@@ -4588,15 +4666,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     // No: Get the metadata extractor.
-    ArticleMetadataExtractor ae = getMetadataExtractor(au);
+    ArticleMetadataExtractor ae = null;
 
-    // Check whether it does not exist.
+    if (useMetadataExtractor) {
+      ae = plugin.getArticleMetadataExtractor(MetadataTarget.OpenURL(), au);
+    }
+
     if (ae == null) {
-      // Yes: It shouldn't happen because it was checked before adding
-      // the AU to the pending AUs list.
-      String message = "No metadata extractor for AU '" + au.getName() + "'";
-      log.error(message);
-      throw new IllegalArgumentException(message);
+      ae = new BaseArticleMetadataExtractor(null);
     }
 
     // Schedule the pending AU.
@@ -4606,10 +4683,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     ReindexingTask task = new ReindexingTask(au, ae);
     task.setFullReindex(true);
 
-    synchronized (activeReindexingTasks) {
-      activeReindexingTasks.put(au.getAuId(), task);
-    }
-
     log.debug(DEBUG_HEADER + "Running the reindexing task for AU: "
 	+ au.getName());
     runReindexingTask(task);
@@ -4618,19 +4691,18 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
-   * Ensures that as many re-indexing tasks as possible are running if the
-   * manager is enabled.
+   * Deletes from the database the metadata of an archival unit.
    * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @return an int with the number of reindexing tasks started.
+   * @param auId
+   *          A String with the identifier of the archival unit.
+   * @return a DeleteMetadataTask with the metadata removal task.
    */
   public DeleteMetadataTask startMetadataRemoval(String auId) {
     final String DEBUG_HEADER = "startMetadataRemoval(): ";
-    if (log.isDebug2()) log.debug2("Starting...");
+    if (log.isDebug2()) log.debug2("auId = " + auId);
 
     // Get the AU.
-    ArchivalUnit au = pluginMgr.getAuFromId(auId);
+    ArchivalUnit au = getAu(auId);
     if (log.isDebug3()) log.debug3("au = " + au);
 
     // Check whether it does not exist.
@@ -4641,7 +4713,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       throw new IllegalArgumentException(message);
     }
 
-    // No: Schedule the pending AU.
+    // No: Schedule the removal of the AU.
     if (log.isDebug3()) log.debug3(DEBUG_HEADER
 	+ "Creating the metadata removal task for AU: " + au.getName());
 
@@ -4652,6 +4724,120 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     runMetadataRemovalTask(task);
 
     return task;
+  }
+
+  /**
+   * Provides an archival unit given its identifier.
+   * 
+   * @param auId
+   *          A String with the identifier of the archival unit.
+   * @return an ArchivalUnit with the archival unit.
+   */
+  public ArchivalUnit getAu(String auId) {
+    return getAu(auId, getAuPlugin(auId));
+  }
+
+  /**
+   * Provides the plugin of an archival unit.
+   * 
+   * @param auId
+   *          A String with the identifier of the archival unit.
+   * @return a Plugin with the plugin of the archival unit.
+   */
+  private Plugin getAuPlugin(String auId) {
+    final String DEBUG_HEADER = "getAuPlugin(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
+
+    String pluginKey = PluginManager.pluginIdFromAuId(auId);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginKey = " + pluginKey);
+
+    String pluginName = "";
+    Plugin plugin = null;
+
+    try {
+      pluginName = PluginManager.pluginNameFromKey(pluginKey);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Trying to retrieve plugin " + pluginKey);
+
+      PluginInfo info =
+	  pluginMgr.loadPlugin(pluginKey, this.getClass().getClassLoader());
+
+      if (info != null) {
+	plugin = info.getPlugin();
+      } else {
+	String message = "Couldn't retrieve plugin " + pluginKey;
+	log.error(message);
+	throw new IllegalArgumentException(message);
+      }
+    } catch (Exception e) {
+      String message = "Error instantiating plugin " + pluginName;
+      log.error(message, e);
+      throw new IllegalArgumentException(message);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "plugin = " + plugin);
+    return plugin;
+  }
+
+  /**
+   * Provides an archival unit given its identifier and plugin.
+   * 
+   * @param auId
+   *          A String with the identifier of the archival unit.
+   * @param plugin
+   *          A Plugin with the archival unit plugin.
+   * @return an ArchivalUnit with the archival unit.
+   */
+  private ArchivalUnit getAu(String auId, Plugin plugin) {
+    final String DEBUG_HEADER = "getAu(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
+
+    Configuration auConf = getAuConf(auId);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auConf = " + auConf);
+
+    ArchivalUnit au = null;
+
+    try {
+      au = plugin.configureAu(auConf, null);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+    } catch (Exception e) {
+      String message = "Error instantiating archival unit " + auId;
+      log.error(message, e);
+      throw new IllegalArgumentException(message);
+    }
+
+    try {
+      getDaemon().startOrReconfigureAuManagers(au, auConf);
+    } catch (Exception e) {
+      String message = "Error configuring managers for archival unit " + auId;
+      log.error(message, e);
+      throw new IllegalArgumentException(message);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "au = " + au);
+    return au;
+  }
+
+  /**
+   * Provides the configuration of an archival unit given its identifier.
+   * 
+   * @param auId
+   *          A String with the identifier of the archival unit.
+   * @return a Configuration with the configuration of the archival unit.
+   */
+  private Configuration getAuConf(String auId) {
+    final String DEBUG_HEADER = "getAuConf(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
+
+    Configuration auConf = auConfigurations.get(auId);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auConf = " + auConf);
+
+    if (auConf == null) {
+      auConf = ConfigManager.EMPTY_CONFIGURATION;
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auConf = " + auConf);
+    }
+
+    return auConf;
   }
 
   /**

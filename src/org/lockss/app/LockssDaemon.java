@@ -28,7 +28,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.app;
 
 import java.util.*;
-
 import org.apache.commons.lang3.*;
 import org.lockss.util.*;
 import org.lockss.alert.*;
@@ -933,9 +932,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
   protected void startDaemon() throws Exception {
     startApp();
-
-    // Install loadable plugin support
-    getPluginManager().startLoadablePlugins();
 
     log.info("Started");
     ausStarted.fill();

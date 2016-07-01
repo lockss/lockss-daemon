@@ -31,6 +31,8 @@ import java.net.Authenticator;
 import java.net.PasswordAuthentication;
 import java.net.URL;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 import org.lockss.config.CurrentConfig;
@@ -45,17 +47,24 @@ public class GetAuUrlsClient {
   private static final String TIMEOUT_KEY =
       "com.sun.xml.internal.ws.request.timeout";
 
+  private static ConcurrentMap<String, Exception> exceptions =
+      new ConcurrentHashMap<String, Exception>();
+
   /**
    * Provides the URLs in an archival unit.
    * 
    * @param auId
    *          A String with the identifier (auid) of the archival unit.
    * @return a List<String> with the archival unit URLs.
-   * @throws Exception
-   *           if there are problems getting the archival unit URLs.
    */
-  public List<String> getAuUrls(String auId) throws Exception {
-    return getProxy().getAuUrls(auId, null);
+  public List<String> getAuUrls(String auId) {
+    try {
+      return getProxy().getAuUrls(auId, null);
+    } catch (Exception e) {
+      exceptions.put(auId, e);
+    }
+
+    return null;
   }
 
   /**
@@ -113,5 +122,18 @@ public class GetAuUrlsClient {
 	return new PasswordAuthentication(userName, password.toCharArray());
       }
     });
+  }
+
+  /**
+   * Provides, after deleting it, any exception thrown while getting the URLs
+   * for an archival unit.
+   * 
+   * @param auId
+   *          A String with the identifier (auid) of the archival unit.
+   * @return an Exception that was thrown while getting the URLs or null if the
+   *         URL retrieval process did not throw.
+   */
+  public static Exception getAndDeleteAnyException(String auId) {
+    return exceptions.remove(auId);
   }
 }
