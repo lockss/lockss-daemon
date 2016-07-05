@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,20 +31,16 @@ package org.lockss.servlet;
 import java.io.*;
 import java.util.*;
 import java.util.List;
-
 import javax.servlet.*;
 import javax.servlet.http.HttpSession;
-
 import org.apache.commons.collections.map.LinkedMap;
 import org.apache.commons.lang3.mutable.*;
 import org.lockss.config.*;
 import org.lockss.daemon.TitleSet;
-import org.lockss.db.DbException;
 import org.lockss.plugin.PluginManager;
 import org.lockss.remote.RemoteApi;
 import org.lockss.remote.RemoteApi.BatchAuStatus;
 import org.lockss.servlet.ServletUtil.LinkWithExplanation;
-import org.lockss.subscription.SubscriptionManager;
 import org.lockss.util.*;
 import org.mortbay.html.*;
 
@@ -123,7 +115,6 @@ public class BatchAuConfig extends LockssServlet {
 
   private PluginManager pluginMgr;
   private RemoteApi remoteApi;
-  private SubscriptionManager subManager;
 
   String action;			// action request by form
   Verb verb;
@@ -138,7 +129,6 @@ public class BatchAuConfig extends LockssServlet {
     super.init(config);
     pluginMgr = getLockssDaemon().getPluginManager();
     remoteApi = getLockssDaemon().getRemoteApi();
-    subManager = getLockssDaemon().getSubscriptionManager();
   }
 
   protected void lockssHandleRequest() throws IOException {
@@ -250,43 +240,6 @@ public class BatchAuConfig extends LockssServlet {
                                "Manual Add/Edit",
                                null,
                                "Add, Edit or Delete an individual AU"));
-
-    // Check whether to show the subscriptions links.
-    if (subManager.isReady()) {
-      // Yes: Add titles to subscription management.
-      list.add(getMenuDescriptor(AdminServletManager.SERVLET_SUB_MANAGEMENT,
-	  			 SubscriptionManagement.SHOW_ADD_PAGE_LINK_TEXT,
-	  			 ACTION
-	  			 + SubscriptionManagement.SHOW_ADD_PAGE_ACTION,
-	  			 SubscriptionManagement
-	  			 .SHOW_ADD_PAGE_HELP_TEXT));
-
-      // Only show the update link if there are subscriptions already.
-      try {
-	if (subManager.hasSubscriptionRanges()
-	    || subManager.hasPublisherSubscriptions()) {
-	  // Add titles to subscription management.
-	  list.add(getMenuDescriptor(AdminServletManager.SERVLET_SUB_MANAGEMENT,
-	      			     SubscriptionManagement
-	      			     .SHOW_UPDATE_PAGE_LINK_TEXT,
-	      			     ACTION + SubscriptionManagement
-	      			     .SHOW_UPDATE_PAGE_ACTION,
-	      			     SubscriptionManagement
-	      			     .SHOW_UPDATE_PAGE_HELP_TEXT));
-	}
-      } catch (DbException dbe) {
-	log.error("Error counting subscribed publishers or publications", dbe);
-      }
-
-      // Add titles to subscription management.
-      list.add(getMenuDescriptor(AdminServletManager.SERVLET_SUB_MANAGEMENT,
-	  			 SubscriptionManagement
-	  			 .AUTO_ADD_SUBSCRIPTIONS_LINK_TEXT,
-	  			 ACTION + SubscriptionManagement
-	  			 .AUTO_ADD_SUBSCRIPTIONS_ACTION,
-	  			 SubscriptionManagement
-	  			 .AUTO_ADD_SUBSCRIPTIONS_HELP_TEXT));
-    }
 
     return list.iterator();
   }

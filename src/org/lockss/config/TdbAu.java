@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,13 +29,11 @@ package org.lockss.config;
 
 import java.io.*;
 import java.util.*;
-
 import org.apache.commons.collections.map.Flat3Map;
 import org.lockss.config.Tdb.TdbException;
 import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.exporter.biblio.BibliographicUtil;
 import org.lockss.plugin.*;
-import org.lockss.subscription.BibliographicPeriod;
 import org.lockss.util.*;
 
 
@@ -94,8 +88,6 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
    * The key for identity testing
    */
   private final Id tdbAuId = new Id();
-
-  private List<BibliographicPeriod> publicationRanges;
 
   /**
    * This class encapsulates the key for a TdbAu.  As with
@@ -1171,33 +1163,6 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
    */
   public String toString() {
     return "[TdbAu: " + name + "]";
-  }
-
-  /**
-   * TODO: Where do the publication ranges come from?
-   * Provides a list of the publication ranges covered by this Archival Unit.
-   *
-   * @return a List<BibliographicPeriod> with the publication ranges.
-   */
-  public List<BibliographicPeriod> getPublicationRanges() {
-    // TODO: Provide a real implementation instead of this mock-up.
-    if (publicationRanges == null) {
-      publicationRanges = new ArrayList<BibliographicPeriod>();
-      publicationRanges.add(new BibliographicPeriod(getStartYear(),
-	getStartVolume(), getStartIssue(), getEndYear(), getEndVolume(),
-	getEndIssue()));
-    }
-
-    return publicationRanges;
-  }
-
-  /**
-   * TODO: Where do the publication ranges come from?
-   *
-   * At the moment this is only used for setting up tests.
-   */
-  public void setPublicationRanges(List<BibliographicPeriod> ranges) {
-    publicationRanges = ranges;
   }
 
   // TODO: Remove after testing.

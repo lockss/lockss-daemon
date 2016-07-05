@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
 Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -80,7 +76,6 @@ public class TestAdminServletManager extends LockssTestCase {
     SERVLET_AU_CONFIG,
     SERVLET_PLUGIN_CONFIG,
     SERVLET_DEBUG_PANEL,
-    SERVLET_SUB_MANAGEMENT,
     SERVLET_MD_CONTROL
 };
 

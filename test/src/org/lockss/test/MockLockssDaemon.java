@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,9 +29,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 
 import java.util.List;
-
 import org.apache.commons.collections.map.LinkedMap;
-
 import org.lockss.alert.AlertManager;
 import org.lockss.account.AccountManager;
 import org.lockss.app.*;
@@ -60,7 +54,6 @@ import org.lockss.repository.*;
 import org.lockss.scheduler.SchedService;
 import org.lockss.servlet.*;
 import org.lockss.state.*;
-import org.lockss.subscription.SubscriptionManager;
 import org.lockss.util.*;
 import org.lockss.clockss.*;
 import org.lockss.safenet.*;
@@ -99,7 +92,6 @@ public class MockLockssDaemon extends LockssDaemon {
   ClockssParams clockssParams = null;
   DbManager dbManager = null;
   CounterReportsManager counterReportsManager = null;
-  SubscriptionManager subscriptionManager = null;
   Cron cron = null;
   EntitlementRegistryClient entitlementRegistryClient = null;
   private boolean suppressStartAuManagers = true;
@@ -154,7 +146,6 @@ public class MockLockssDaemon extends LockssDaemon {
     icpManager = null;
     dbManager = null;
     counterReportsManager = null;
-    subscriptionManager = null;
     cron = null;
 
     //super.stopDaemon();
@@ -539,18 +530,6 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * return the subscription manager instance
-   * @return the SusbcriptionManager
-   */
-  public SubscriptionManager getSusbcriptionManager() {
-    if (subscriptionManager == null) {
-      subscriptionManager = (SubscriptionManager)newManager(LockssDaemon.SUBSCRIPTION_MANAGER);
-      managerMap.put(LockssDaemon.SUBSCRIPTION_MANAGER, subscriptionManager);
-    }
-    return subscriptionManager;
-  }
-
-  /**
    * return the cron instance
    * @return the Cron
    */
@@ -819,15 +798,6 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setCounterReportsManager(CounterReportsManager counterReportsMan) {
     counterReportsManager = counterReportsMan;
     managerMap.put(LockssDaemon.COUNTER_REPORTS_MANAGER, counterReportsManager);
-  }
-
-  /**
-   * Set the SubscriptionManager
-   * @param subscriptionMan the new manager
-   */
-  public void setSubscriptionManager(SubscriptionManager subscriptionMan) {
-    subscriptionManager = subscriptionMan;
-    managerMap.put(LockssDaemon.SUBSCRIPTION_MANAGER, subscriptionManager);
   }
 
   /**

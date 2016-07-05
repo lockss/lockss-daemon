@@ -47,7 +47,6 @@ import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
 import org.lockss.repository.*;
 import org.lockss.state.*;
-import org.lockss.subscription.SubscriptionManager;
 import org.lockss.proxy.*;
 import org.lockss.proxy.icp.IcpManager;
 import org.lockss.config.*;
@@ -590,17 +589,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public CounterReportsManager getCounterReportsManager() {
     return (CounterReportsManager) getManager(COUNTER_REPORTS_MANAGER);
-  }
-
-  /**
-   * Provides the subscription manager.
-   * 
-   * @return a SubscriptionManager with the subscription manager.
-   * @throws IllegalArgumentException
-   *           if the manager is not available.
-   */
-  public SubscriptionManager getSubscriptionManager() {
-    return (SubscriptionManager) getManager(SUBSCRIPTION_MANAGER);
   }
 
   /**

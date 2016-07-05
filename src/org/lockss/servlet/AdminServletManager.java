@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
  Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -49,7 +45,6 @@ import org.apache.cxf.transport.servlet.CXFServlet;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.account.*;
-import org.lockss.subscription.SubscriptionManager;
 import org.lockss.util.*;
 import org.lockss.jetty.*;
 import org.lockss.exporter.counter.CounterReportsManager;
@@ -580,21 +575,6 @@ public class AdminServletManager extends BaseServletManager {
 		       0,
 	               "JAX-WS CXF Web Services");
 
-  protected static final ServletDescr SERVLET_SUB_MANAGEMENT =
-      new ServletDescr("SubscriptionManagement",
-		       SubscriptionManagement.class,
-		       "Title Subscription Management",
-		       (ServletDescr.NEED_ROLE_AU_ADMIN),
-		       "Subscribe or unsubscribe to individual titles") {
-	public boolean isEnabled(LockssDaemon daemon) {
-	  try {
-	    SubscriptionManager mgr = daemon.getSubscriptionManager();
-	    return mgr != null && mgr.isReady();
-	  } catch (Exception e) {
-	    return false;
-	  }
-	}};
-
   protected static final ServletDescr SERVLET_MD_MONITOR =
       new ServletDescr("MetadataMonitor",
 	  	       MetadataMonitor.class,
@@ -667,7 +647,6 @@ public class AdminServletManager extends BaseServletManager {
     LINK_CONTACT,
     SERVLET_EDIT_ACCOUNT,
     SERVLET_EDIT_ACCOUNTS,
-    SERVLET_SUB_MANAGEMENT,
     LINK_HELP,
     LINK_LOGOUT,
     LOGIN_FORM,
@@ -714,7 +693,6 @@ public class AdminServletManager extends BaseServletManager {
     LINK_CONTACT,
     SERVLET_EDIT_ACCOUNT,
     SERVLET_EDIT_ACCOUNTS,
-    SERVLET_SUB_MANAGEMENT,
     LINK_HELP,
     LINK_LOGOUT,
     LOGIN_FORM,
@@ -760,7 +738,6 @@ public class AdminServletManager extends BaseServletManager {
     LINK_CONTACT,
     SERVLET_EDIT_ACCOUNT,
     SERVLET_EDIT_ACCOUNTS,
-    SERVLET_SUB_MANAGEMENT,
     LINK_HELP,
     LINK_LOGOUT,
     LOGIN_FORM,
