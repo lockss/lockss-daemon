@@ -146,7 +146,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String TRUEZIP_MANAGER = "TrueZipManager";
   public static final String DB_MANAGER = "DbManager";
   public static final String COUNTER_REPORTS_MANAGER = "CounterReportsManager";
-  public static final String SUBSCRIPTION_MANAGER = "SubscriptionManager";
   public static final String FETCH_TIME_EXPORT_MANAGER =
       "FetchTimeExportManager";
   public static final String JOB_MANAGER = "JobManager";
@@ -188,9 +187,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     // Start the COUNTER reports manager.
     new ManagerDesc(COUNTER_REPORTS_MANAGER,
 	"org.lockss.exporter.counter.CounterReportsManager"),
-    // Start the subscription manager.
-    new ManagerDesc(SUBSCRIPTION_MANAGER,
-	"org.lockss.subscription.SubscriptionManager"),
     // Start the COUNTER reports manager.
     new ManagerDesc(FETCH_TIME_EXPORT_MANAGER,
 	"org.lockss.exporter.FetchTimeExportManager"),

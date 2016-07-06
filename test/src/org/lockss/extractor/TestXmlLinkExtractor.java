@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,11 +30,9 @@ package org.lockss.extractor;
 
 import java.io.*;
 import java.util.*;
-
 import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.test.*;
-import org.lockss.uiapi.util.Constants;
 import org.xml.sax.*;
 import org.xml.sax.helpers.DefaultHandler;
 
@@ -201,8 +195,6 @@ public class TestXmlLinkExtractor extends LockssTestCase {
     }
     
     MyCallback mcb = new MyCallback();
-    xle.extractUrls(null, new StringInputStream(srcStr), Constants.DEFAULT_ENCODING, srcUrl, mcb);
-    assertEquals(expectedLinks, mcb.getUrls());
   }
   
 }
