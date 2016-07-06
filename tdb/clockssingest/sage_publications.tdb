@@ -2665,7 +2665,7 @@
       au < doNotProcess ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 663 ; 663 ; >
       au < doNotProcess ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 664 ; 664 ; >
       au < doNotProcess ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 665 ; 665 ; >
-      au < manifest ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 666 ; 666 ; >
+      au < doNotProcess ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 666 ; 666 ; >
       au < expected ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 667 ; 667 ; >
       au < expected ; exists ; 2016 ; The Annals of the American Academy of Political and Social Science Volume 668 ; 668 ; >
 
@@ -4851,7 +4851,7 @@
       au < crawling ; exists ; 2015 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 128 ; 128 ; >
       au < doNotProcess ; exists ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 129 ; 129 ; >
       au < doNotProcess ; exists ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 130 ; 130 ; >
-      au < manifest ; exists ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 131 ; 131 ; >
+      au < doNotProcess ; exists ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 131 ; 131 ; >
       au < expected ; exists ; 2016 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 132 ; 132 ; >
 
     }
@@ -15755,7 +15755,7 @@
       au < exists ; exists ; 2013 ; Indian Journal of Corporate Governance Volume 6 ; 6 ; >
       au < exists ; exists ; 2014 ; Indian Journal of Corporate Governance Volume 7 ; 7 ; >
       au < crawling ; exists ; 2015 ; Indian Journal of Corporate Governance Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2016 ; Indian Journal of Corporate Governance Volume 9 ; 9 ; >
+      au < doNotProcess ; exists ; 2016 ; Indian Journal of Corporate Governance Volume 9 ; 9 ; >
 
   }
 
@@ -16737,7 +16737,7 @@
       au < crawling ; exists ; 2013 ; International Journal of Comparative Sociology Volume 54 ; 54 ; >
       au < finished ; finished ; 2014 ; International Journal of Comparative Sociology Volume 55 ; 55 ; >
       au < crawling ; exists ; 2015 ; International Journal of Comparative Sociology Volume 56 ; 56 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Comparative Sociology Volume 57 ; 57 ; >
+      au < doNotProcess ; exists ; 2016 ; International Journal of Comparative Sociology Volume 57 ; 57 ; >
 
     }
 
@@ -17019,7 +17019,7 @@
     param[base_url] = http://iei.sagepub.com/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 2016 ; IThe International Journal of Entrepreneurship and Innovation Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 2016 ; IThe International Journal of Entrepreneurship and Innovation Volume 17 ; 17 ; >
 
   }
 
@@ -17860,7 +17860,7 @@
       au < exists ; exists ; 2013 ; International Journal of Space Structures Volume 28 ; 28 ; >
       au < finished ; crawling ; 2014 ; International Journal of Space Structures Volume 29 ; 29 ; >
       au < crawling ; exists ; 2015 ; International Journal of Space Structures Volume 30 ; 30 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Space Structures Volume 31 ; 31 ; >
+      au < doNotProcess ; exists ; 2016 ; International Journal of Space Structures Volume 31 ; 31 ; >
 
   }
 
@@ -33570,7 +33570,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < exists ; exists ; 2015 ; Outlook on Agriculture Volume 44 ; 44 ; >
-      au < manifest ; exists ; 2016 ; Outlook on Agriculture Volume 45 ; 45 ; >
+      au < doNotProcess ; exists ; 2016 ; Outlook on Agriculture Volume 45 ; 45 ; >
 
   }
 
@@ -37239,7 +37239,7 @@
       au < crawling ; exists ; 2013 ; Race & Class Volume 55 ; 55 ; >
       au < finished ; finished ; 2014 ; Race & Class Volume 56 ; 56 ; >
       au < crawling ; exists ; 2015 ; Race & Class Volume 57 ; 57 ; >
-      au < manifest ; exists ; 2016 ; Race & Class Volume 58 ; 58 ; >
+      au < doNotProcess ; exists ; 2016 ; Race & Class Volume 58 ; 58 ; >
 
     }
 
@@ -40946,7 +40946,7 @@
         au < finished ; finished ; 2013 ; Studies in Microeconomics Volume 1 ; 1 ; >
         au < finished ; finished ; 2014 ; Studies in Microeconomics Volume 2 ; 2 ; >
         au < crawling ; exists ; 2015 ; Studies in Microeconomics Volume 3 ; 3 ; >
-        au < manifest ; exists ; 2016 ; Studies in Microeconomics Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2016 ; Studies in Microeconomics Volume 4 ; 4 ; >
 
     }
 
@@ -42633,7 +42633,7 @@
       au < crawling ; exists ; 2015 ; Thesis Eleven Volume 131 ; 131 ; >
       au < doNotProcess ; exists ; 2016 ; Thesis Eleven Volume 132 ; 132 ; >
       au < doNotProcess ; exists ; 2016 ; Thesis Eleven Volume 133 ; 133 ; >
-      au < manifest ; exists ; 2016 ; Thesis Eleven Volume 134 ; 134 ; >
+      au < doNotProcess ; exists ; 2016 ; Thesis Eleven Volume 134 ; 134 ; >
       au < expected ; exists ; 2016 ; Thesis Eleven Volume 135 ; 135 ; >
       au < expected ; exists ; 2016 ; Thesis Eleven Volume 136 ; 136 ; >
       au < expected ; exists ; 2016 ; Thesis Eleven Volume 137 ; 137 ; >
@@ -45307,7 +45307,7 @@
       au < crawling ; exists ; 2013 ; Political Science Volume 65 ; 65 ; >
       au < finished ; finished ; 2014 ; Political Science Volume 66 ; 66 ; >
       au < crawling ; exists ; 2015 ; Political Science Volume 67 ; 67 ; >
-      au < manifest ; exists ; 2016 ; Political Science Volume 68 ; 68 ; >
+      au < doNotProcess ; exists ; 2016 ; Political Science Volume 68 ; 68 ; >
 
     }
 
@@ -48722,7 +48722,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Psychological Reports Volume 115 ; 115 ; >
     au < exists ; exists ; 2015 ; Psychological Reports Volume 116 ; 116 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Psychological Reports Volume 117 ; 117 ; >
-    au < manifest ; exists ; 2016 ; Psychological Reports Volume 118 ; 118 ; >
+    au < doNotProcess ; exists ; 2016 ; Psychological Reports Volume 118 ; 118 ; >
     
   }
 
@@ -48859,7 +48859,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Perceptual and Motor Skills Volume 119 ; 119 ; >
     au < exists ; exists ; 2015 ; Perceptual and Motor Skills Volume 120 ; 120 ; > 
     au < doNotProcess ; doNotProcess ; 2015 ; Perceptual and Motor Skills Volume 121 ; 121 ; >
-    au < manifest ; exists ; 2016 ; Perceptual and Motor Skills Volume 122 ; 122 ; >
+    au < doNotProcess ; exists ; 2016 ; Perceptual and Motor Skills Volume 122 ; 122 ; >
     au < exists ; exists ; 2016 ; Perceptual and Motor Skills Volume 123 ; 123 ; >
 
   }
