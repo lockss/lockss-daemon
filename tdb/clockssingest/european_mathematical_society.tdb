@@ -21,10 +21,10 @@
     param[journal_issn] = 0010-2571
     comment[journal_id] = cmh
     
-    au < testing ; exists ; 1997 ; Commentarii Mathematici Helvetici Volume 72 ; 72 ; >
-    au < testing ; exists ; 1998 ; Commentarii Mathematici Helvetici Volume 73 ; 73 ; >
-    au < testing ; exists ; 1999 ; Commentarii Mathematici Helvetici Volume 74 ; 74 ; >
-    au < testing ; exists ; 2000 ; Commentarii Mathematici Helvetici Volume 75 ; 75 ; >
+    au < ready ; exists ; 1997 ; Commentarii Mathematici Helvetici Volume 72 ; 72 ; >
+    au < ready ; exists ; 1998 ; Commentarii Mathematici Helvetici Volume 73 ; 73 ; >
+    au < ready ; exists ; 1999 ; Commentarii Mathematici Helvetici Volume 74 ; 74 ; >
+    au < ready ; exists ; 2000 ; Commentarii Mathematici Helvetici Volume 75 ; 75 ; >
     
   }
 
@@ -39,11 +39,11 @@
     param[journal_issn] = 0032-5155
     comment[journal_id] = pm
     
-    au < testing ; exists ; 2007 ; Portugaliae Mathematica Volume 64 ; 64 ; >
-    au < testing ; exists ; 2008 ; Portugaliae Mathematica Volume 65 ; 65 ; >
-    au < testing ; exists ; 2009 ; Portugaliae Mathematica Volume 66 ; 66 ; >
-    au < testing ; exists ; 2010 ; Portugaliae Mathematica Volume 67 ; 67 ; >
-    au < testing ; exists ; 2011 ; Portugaliae Mathematica Volume 68 ; 68 ; >
+    au < ready ; exists ; 2007 ; Portugaliae Mathematica Volume 64 ; 64 ; >
+    au < ready ; exists ; 2008 ; Portugaliae Mathematica Volume 65 ; 65 ; >
+    au < ready ; exists ; 2009 ; Portugaliae Mathematica Volume 66 ; 66 ; >
+    au < ready ; exists ; 2010 ; Portugaliae Mathematica Volume 67 ; 67 ; >
+    au < ready ; exists ; 2011 ; Portugaliae Mathematica Volume 68 ; 68 ; >
     
   }
 
@@ -58,11 +58,11 @@
     param[journal_issn] = 1663-487X
     comment[journal_id] = qt
     
-    au < testing ; exists ; 2010 ; Quantum Topology Volume 1 ; 1 ; >
-    au < testing ; exists ; 2011 ; Quantum Topology Volume 2 ; 2 ; >
-    au < testing ; exists ; 2012 ; Quantum Topology Volume 3 ; 3 ; >
-    au < testing ; exists ; 2013 ; Quantum Topology Volume 4 ; 4 ; >
-    au < testing ; exists ; 2014 ; Quantum Topology Volume 5 ; 5 ; >
+    au < ready ; exists ; 2010 ; Quantum Topology Volume 1 ; 1 ; >
+    au < ready ; exists ; 2011 ; Quantum Topology Volume 2 ; 2 ; >
+    au < ready ; exists ; 2012 ; Quantum Topology Volume 3 ; 3 ; >
+    au < ready ; exists ; 2013 ; Quantum Topology Volume 4 ; 4 ; >
+    au < ready ; exists ; 2014 ; Quantum Topology Volume 5 ; 5 ; >
     
   }
 
