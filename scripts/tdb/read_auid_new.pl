@@ -389,10 +389,16 @@ while (my $line = <>) {
                 }
                 $result = "Manifest"
             } else {
-                $result = "--"
+                if (!defined($man_contents)) {
+                    $result = "--NO_CONT--";
+                } elsif ((!$man_contents =~ m/$lockss_tag/) && (!$man_contents =~ m/$oa_tag/)) {
+                    $result = "--NO_TAG--";
+                } elsif ((!$man_contents =~ m/\($param{year}\)/) && (!$man_contents =~ m/: $param{year}/)) {
+                    $result = "--NO_YEAR--";
+                }
             }
         } else {
-            $result = "--"
+            $result = "--REQ_FAIL--"
         }
         sleep(4);
 
@@ -416,7 +422,7 @@ while (my $line = <>) {
         my $req_s = HTTP::Request->new(GET, $start_url);
         my $resp_s = $ua->request($req_s);
         #For reporting at the end
-        $man_url = $start_url ;
+        $man_url = $start_url . " + " . $man_url ;
         if (($resp_s->is_success) && ($resp_m->is_success)) {
             my $man_contents = $resp_m->content;
             my $start_contents = $resp_s->content;
