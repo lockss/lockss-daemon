@@ -494,6 +494,8 @@
     au < released ; 2010 ; University of South Florida Academic Resources Faculty and Staff Publications 2010 ; 2010 ; fulltext >
     au < released ; 2011 ; University of South Florida Academic Resources Faculty and Staff Publications 2011 ; 2011 ; fulltext >
     au < released ; 2012 ; University of South Florida Academic Resources Faculty and Staff Publications 2012 ; 2012 ; fulltext >
+    au < ready ; 2013 ; University of South Florida Academic Resources Faculty and Staff Publications 2013 ; 2013 ; fulltext >
+    au < manifest ; 2016 ; University of South Florida Academic Resources Faculty and Staff Publications 2016 ; 2016 ; fulltext >
 
   }
 
@@ -548,7 +550,9 @@
     au < released ; 2011 ; University of South Florida Academic Services Faculty and Staff Publications 2011 ; 2011 ; fulltext >
     au < released ; 2012 ; University of South Florida Academic Services Faculty and Staff Publications 2012 ; 2012 ; fulltext >
     au < released ; 2013 ; University of South Florida Academic Services Faculty and Staff Publications 2013 ; 2013 ; fulltext >
-    au < released ; 2014 ; University of South Florida Academic Services Faculty and Staff Publications 2014 [abstracts only] ; 2014 ; abstracts >
+    au < released ; 2014 ; University of South Florida Academic Services Faculty and Staff Publications 2014 ; 2014 ; fulltext >
+    au < ready ; 2015 ; University of South Florida Academic Services Faculty and Staff Publications 2015 ; 2015 ; fulltext >
+    au < manifest ; 2016 ; University of South Florida Academic Services Faculty and Staff Publications 2016 ; 2016 ; fulltext >
 
   }
 
@@ -671,6 +675,7 @@
     au < released ; 2008 ; University of South Florida Cell Biology, Microbiology, and Molecular Biology Faculty Publications 2008 ; 2008 >
     au < released ; 2010 ; University of South Florida Cell Biology, Microbiology, and Molecular Biology Faculty Publications 2010 ; 2010 >
     au < released ; 2012 ; University of South Florida Cell Biology, Microbiology, and Molecular Biology Faculty Publications 2012 ; 2012 >
+    au < ready ; 2014 ; University of South Florida Cell Biology, Microbiology, and Molecular Biology Faculty Publications 2014 ; 2014 >
 
   }
 
@@ -720,6 +725,7 @@
     implicit < status ; year ; name ; param[collection_heading] >  
 
     au < released ; 2013 ; University of South Florida Center for Leadership in Public Health Practice: Preparedness and Emergency Response Learning Center 2013 ; 2013 >
+    au < ready ; 2015 ; University of South Florida Center for Leadership in Public Health Practice: Preparedness and Emergency Response Learning Center 2015 ; 2015 >
 
   }
 
@@ -738,6 +744,8 @@
     au < released ; 2007 ; University of South Florida Chemistry Faculty Publications 2007 ; 2007 >
     au < released ; 2012 ; University of South Florida Chemistry Faculty Publications 2012 ; 2012 >
     au < released ; 2013 ; University of South Florida Chemistry Faculty Publications 2013 ; 2013 >
+    au < ready ; 2014 ; University of South Florida Chemistry Faculty Publications 2014 ; 2014 >
+    au < ready ; 2015 ; University of South Florida Chemistry Faculty Publications 2015 ; 2015 >
 
   }
 
@@ -1257,6 +1265,8 @@
     au < released ; 2012 ; University of South Florida Government and International Affairs Faculty Publications 2012 ; 2012 ; fulltext >
     au < released ; 2013 ; University of South Florida Government and International Affairs Faculty Publications 2013 ; 2013 ; fulltext >
     au < released ; 2014 ; University of South Florida Government and International Affairs Faculty Publications 2014 ; 2014 ; fulltext >
+    au < ready ; 2015 ; University of South Florida Government and International Affairs Faculty Publications 2015 ; 2015 ; fulltext >
+    au < manifest ; 2016 ; University of South Florida Government and International Affairs Faculty Publications 2016 ; 2016 ; fulltext >
 
   }
 
@@ -1432,6 +1442,7 @@
     au < released ; 2011 ; University of South Florida Integrative Biology Faculty and Staff Publications 2011 ; 2011 ; fulltext >
     au < released ; 2012 ; University of South Florida Integrative Biology Faculty and Staff Publications 2012 ; 2012 ; fulltext >
     au < released ; 2013 ; University of South Florida Integrative Biology Faculty and Staff Publications 2013 ; 2013 ; fulltext >
+    au < ready ; 2014 ; University of South Florida Integrative Biology Faculty and Staff Publications 2014 ; 2014 ; fulltext >
 
   }
 
@@ -1630,6 +1641,7 @@
 
     au < released ; 2010 ; University of South Florida Mathematics and Statistics Faculty Publications 2010 [abstracts only] ; 2010 ; abstracts >
     au < released ; 2011 ; University of South Florida Mathematics and Statistics Faculty Publications 2011 ; 2011 ; fulltext >
+    au < ready ; 2014 ; University of South Florida Mathematics and Statistics Faculty Publications 2014 ; 2014 ; fulltext >
 
   }
 
@@ -1670,6 +1682,7 @@
     au < released ; 2011 ; University of South Florida Mental Health Law and Policy Faculty Publications 2011 ; 2011 ; fulltext >
     au < released ; 2012 ; University of South Florida Mental Health Law and Policy Faculty Publications 2012 [abstracts only] ; 2012 ; abstracts >
     au < released ; 2013 ; University of South Florida Mental Health Law and Policy Faculty Publications 2013 ; 2013 ; fulltext >
+    au < ready ; 2014 ; University of South Florida Mental Health Law and Policy Faculty Publications 2014 ; 2014 ; fulltext >
 
   }
 
@@ -1829,6 +1842,7 @@
     au < released ; 2012 ; University of South Florida Psychological and Social Foundations Faculty Publications 2012 ; 2012 ; fulltext >
     au < released ; 2013 ; University of South Florida Psychological and Social Foundations Faculty Publications 2013 ; 2013 ; fulltext >
     au < released ; 2014 ; University of South Florida Psychological and Social Foundations Faculty Publications 2014 ; 2014 ; fulltext >
+    au < ready ; 2015 ; University of South Florida Psychological and Social Foundations Faculty Publications 2015 ; 2015 ; fulltext >
 
   }
 
@@ -1993,6 +2007,7 @@
     au < released ; 2012 ; University of South Florida Scholar Commons Projects and Publications 2012 ; 2012 >
     au < released ; 2013 ; University of South Florida Scholar Commons Projects and Publications 2013 ; 2013 >
     au < released ; 2014 ; University of South Florida Scholar Commons Projects and Publications 2014 ; 2014 >
+    au < manifest ; 2016 ; University of South Florida Scholar Commons Projects and Publications 2016 ; 2016 >
 
   }
 
@@ -2214,6 +2229,7 @@
     au < released ; 2012 ; University of South Florida Student Government Executive Branch Publications 2012 ; 2012 >
     au < released ; 2013 ; University of South Florida Student Government Executive Branch Publications 2013 ; 2013 >
     au < released ; 2014 ; University of South Florida Student Government Executive Branch Publications 2014 ; 2014 >
+    au < manifest ; 2015 ; University of South Florida Student Government Executive Branch Publications 2015 ; 2015 >
 
   }
 
@@ -2231,6 +2247,7 @@
 
     au < released ; 2013 ; University of South Florida Student Government Judicial Branch Publications 2013 ; 2013 >
     au < released ; 2014 ; University of South Florida Student Government Judicial Branch Publications 2014 ; 2014 >
+    au < manifest ; 2015 ; University of South Florida Student Government Judicial Branch Publications 2015 ; 2015 >
 
   }
 
@@ -2251,6 +2268,7 @@
     au < released ; 2012 ; University of South Florida Student Government Legislative Branch Publications 2012 ; 2012 >
     au < released ; 2013 ; University of South Florida Student Government Legislative Branch Publications 2013 ; 2013 >
     au < released ; 2014 ; University of South Florida Student Government Legislative Branch Publications 2014 ; 2014 >
+    au < manifest ; 2015 ; University of South Florida Student Government Legislative Branch Publications 2015 ; 2015 >
 
   }
 
@@ -2300,6 +2318,9 @@
     au < released ; 2010 ; University of South Florida Theatre and Dance Faculty Publications 2010 ; 2010 >
     au < released ; 2011 ; University of South Florida Theatre and Dance Faculty Publications 2011 ; 2011 >
     au < released ; 2012 ; University of South Florida Theatre and Dance Faculty Publications 2012 ; 2012 >
+    au < ready ; 2014 ; University of South Florida Theatre and Dance Faculty Publications 2014 ; 2014 >
+    au < ready ; 2015 ; University of South Florida Theatre and Dance Faculty Publications 2015 ; 2015 >
+    au < manifest ; 2016 ; University of South Florida Theatre and Dance Faculty Publications 2016 ; 2016 >
 
   }
 
@@ -2315,6 +2336,7 @@
     implicit < status ; year ; name ; param[collection_theme] >  
 
     au < manifest ; 2011 ; University of South Florida Undergraduate Research Symposium and Celebration 2011 ; 2011 >
+    #done
 
   }
 
@@ -2329,6 +2351,7 @@
     param[collection_type] = ir_series
     param[collection] = wle_facpub
     implicit < status ; year ; name ; param[collection_heading] >
+    # http://scholarcommons.usf.edu/wle_facpub/ nothing after 2013, as of 7/2016
 
     au < released ; 1995 ; University of South Florida World Languages Faculty Publications 1995 ; 1995 >
     au < released ; 1996 ; University of South Florida World Languages Faculty Publications 1996 ; 1996 >
@@ -2354,6 +2377,7 @@
     param[collection_type] = ir_series
     param[collection] = wusf_first
     implicit < status ; year ; name ; param[collection_heading] >
+    # http://scholarcommons.usf.edu/wusf_first/
 
     au < released ; 2007 ; University of South Florida WUSF Public Media First Choice Monthly Newsletter 2007 ; 2007 >
     au < released ; 2008 ; University of South Florida WUSF Public Media First Choice Monthly Newsletter 2008 ; 2008 >
@@ -2363,6 +2387,8 @@
     au < released ; 2012 ; University of South Florida WUSF Public Media First Choice Monthly Newsletter 2012 ; 2012 >
     au < released ; 2013 ; University of South Florida WUSF Public Media First Choice Monthly Newsletter 2013 ; 2013 >
     au < released ; 2014 ; University of South Florida WUSF Public Media First Choice Monthly Newsletter 2014 ; 2014 >
+    au < ready ; 2015 ; University of South Florida WUSF Public Media First Choice Monthly Newsletter 2015 ; 2015 >
+    au < manifest ; 2016 ; University of South Florida WUSF Public Media First Choice Monthly Newsletter 2016 ; 2016 >
 
   }
 
