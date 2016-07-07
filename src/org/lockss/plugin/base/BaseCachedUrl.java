@@ -39,6 +39,7 @@ import org.lockss.plugin.*;
 import org.lockss.truezip.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
+import org.lockss.ws.entities.ContentResult;
 import org.lockss.rewriter.*;
 import org.lockss.extractor.*;
 
@@ -72,17 +73,23 @@ public class BaseCachedUrl implements CachedUrl {
 
   public static final String DEFAULT_METADATA_CONTENT_TYPE = "text/html";
 
-  /*
+  /**
    * The indication of whether the content of an archival unit should be
    * obtained from a web service instead of the repository.
    */
   protected boolean isAuContentFromWs = false;
 
-  /*
+  /**
    * The input stream of the URL content when obtained from a web service
    * instead of the repository.
    */
   protected InputStream inputStreamFromWs = null;
+
+  /**
+   * The properties of the URL content when obtained from a web service instead
+   * of the repository.
+   */
+  protected Properties propertiesFromWs = null;
 
   public BaseCachedUrl(ArchivalUnit owner, String url) {
     final String DEBUG_HEADER = "BaseCachedUrl(): ";
@@ -204,6 +211,8 @@ public class BaseCachedUrl implements CachedUrl {
 
   public boolean hasContent() {
     final String DEBUG_HEADER = "hasContent(): ";
+    if (logger.isDebug3())
+      logger.debug3(DEBUG_HEADER + "isAuContentFromWs = " + isAuContentFromWs);
     // Check whether the content is obtained via web services instead of the
     // repository.
     if (isAuContentFromWs) {
@@ -248,20 +257,66 @@ public class BaseCachedUrl implements CachedUrl {
     }
 
     // No: Get the input stream via web services.
+    inputStreamFromWs = getInputStreamFromWs();
+    if (logger.isDebug2())
+      logger.debug2(DEBUG_HEADER + "inputStreamFromWs = " + inputStreamFromWs);
+    return inputStreamFromWs;
+  }
+
+  /**
+   * Provides the input stream to the content of the URL when obtained via web
+   * services.
+   * 
+   * @return an InputStream with the input stream to the content of the URL when
+   *         obtained via web services.
+   */
+  private InputStream getInputStreamFromWs() {
+    final String DEBUG_HEADER = "getInputStreamFromWs(): ";
+
+    if (logger.isDebug3())
+      logger.debug3(DEBUG_HEADER + "inputStreamFromWs = " + inputStreamFromWs);
+
+    // Check whether the input stream has not already been obtained via web
+    // services.
+    if (inputStreamFromWs == null) {
+      // Yes: Cache the URL content the via web services.
+      cacheUrlContentFromWs();
+    }
+
+    if (logger.isDebug2())
+      logger.debug2(DEBUG_HEADER + "inputStreamFromWs = " + inputStreamFromWs);
+    return inputStreamFromWs;
+  }
+
+  /**
+   * Caches the URL content after obtaining it via web services.
+   */
+  private void cacheUrlContentFromWs() {
+    final String DEBUG_HEADER = "cacheUrlContentFromWs(): ";
+
+    // Get the archival unit identifier.
     String auId = au.getAuId();
     if (logger.isDebug3()) logger.debug3(DEBUG_HEADER + "auId = " + auId);
 
     try {
-      inputStreamFromWs = new FetchFileClient().getUrlContent(url, auId)
-	  .getDataHandler().getInputStream();
+      // Get the URL content via web services.
+      ContentResult wsResult = new FetchFileClient().getUrlContent(url, auId);
+      if (logger.isDebug3())
+	logger.debug3(DEBUG_HEADER + "wsResult = " + wsResult);
+
+      // Get the URL content input stream.
+      inputStreamFromWs = wsResult.getDataHandler().getInputStream();
       if (logger.isDebug3()) logger.debug3(DEBUG_HEADER
 	  + "inputStreamFromWs = " + inputStreamFromWs);
+
+      // Get the URL content properties.
+      propertiesFromWs = wsResult.getProperties();
+      if (logger.isDebug3())
+	logger.debug3(DEBUG_HEADER + "propertiesFromWs = " + propertiesFromWs);
     } catch (Exception e) {
-      logger.error("Exception caught getting input stream for url = " + url
+      logger.error("Exception caught getting content for url = " + url
 	  + ", auId = " + auId, e);
     }
-
-    return inputStreamFromWs;
   }
 
   public InputStream getUnfilteredInputStream(HashedInputStream.Hasher hasher) {
@@ -328,11 +383,53 @@ public class BaseCachedUrl implements CachedUrl {
   }
 
   private String getProperty(String prop) {
-    CIProperties props = getProperties();
-    if (props != null) {
-      return props.getProperty(prop);
+    final String DEBUG_HEADER = "getProperty(): ";
+    if (logger.isDebug2()) logger.debug2(DEBUG_HEADER + "prop = " + prop);
+    // Check whether the content type should be coming from the repository.
+    if (!isAuContentFromWs) {
+      // Yes.
+      CIProperties props = getProperties();
+      if (props != null) {
+	return props.getProperty(prop);
+      }
+      return null;
     }
-    return null;
+
+    // No: Get the properties via web services.
+    Properties properties = getPropertiesFromWs();
+    if (logger.isDebug3())
+	logger.debug3(DEBUG_HEADER + "properties = " + properties);
+
+    // Get the requested property.
+    String property = (String)properties.get(prop.toLowerCase());
+    if (logger.isDebug2())
+      logger.debug2(DEBUG_HEADER + "property = " + property);
+    return property;
+  }
+
+  /**
+   * Provides the properties of the content of the URL when obtained via web
+   * services.
+   * 
+   * @return a Properties with the properties of the content of the URL when
+   *         obtained via web services.
+   */
+  private Properties getPropertiesFromWs() {
+    final String DEBUG_HEADER = "getPropertiesFromWs(): ";
+
+    if (logger.isDebug3())
+      logger.debug3(DEBUG_HEADER + "propertiesFromWs = " + propertiesFromWs);
+
+    // Check whether the properties have not already been obtained via web
+    // services.
+    if (propertiesFromWs == null) {
+      // Yes: Cache the URL content the via web services.
+      cacheUrlContentFromWs();
+    }
+
+    if (logger.isDebug2())
+      logger.debug2(DEBUG_HEADER + "propertiesFromWs = " + propertiesFromWs);
+    return propertiesFromWs;
   }
 
   public String getContentType() {
@@ -347,23 +444,14 @@ public class BaseCachedUrl implements CachedUrl {
       return null;
     }
 
-    // No: Get the content type via web services.
-    String contentType = null;
-    String auId = au.getAuId();
-    if (logger.isDebug3()) logger.debug3(DEBUG_HEADER + "auId = " + auId);
-
-    try {
-      Properties properties =
-	  new FetchFileClient().getUrlContent(url, auId).getProperties();
-      if (logger.isDebug3())
+    // No: Get the properties via web services.
+    Properties properties = getPropertiesFromWs();
+    if (logger.isDebug3())
 	logger.debug3(DEBUG_HEADER + "properties = " + properties);
 
-      contentType = (String)properties.get(PROPERTY_CONTENT_TYPE.toLowerCase());
-    } catch (Exception e) {
-      logger.error("Exception caught getting properties for url = " + url
-	  + ", auId = " + auId, e);
-    }
-
+    // Get the content type property.
+    String contentType =
+	(String)properties.get(PROPERTY_CONTENT_TYPE.toLowerCase());
     if (logger.isDebug2())
       logger.debug2(DEBUG_HEADER + "contentType = " + contentType);
     return contentType;

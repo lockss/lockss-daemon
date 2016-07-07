@@ -58,6 +58,12 @@ public class FetchFileClient {
    */
   public ContentResult getUrlContent(String url, String auId)
       throws Exception {
+    final String DEBUG_HEADER = "getUrlContent(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "url = " + url);
+      log.debug2(DEBUG_HEADER + "auId = " + auId);
+    }
+
     return getProxy().fetchFile(url, auId);
   }
 

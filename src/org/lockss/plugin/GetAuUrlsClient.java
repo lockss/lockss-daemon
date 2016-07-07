@@ -58,6 +58,8 @@ public class GetAuUrlsClient {
    * @return a List<String> with the archival unit URLs.
    */
   public List<String> getAuUrls(String auId) {
+    final String DEBUG_HEADER = "getAuUrls(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
     try {
       return getProxy().getAuUrls(auId, null);
     } catch (Exception e) {

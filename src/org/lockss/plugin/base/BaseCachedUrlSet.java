@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,8 +33,6 @@ import java.util.*;
 import java.security.*;
 import java.net.MalformedURLException;
 import de.schlichtherle.truezip.file.*;
-// import de.schlichtherle.truezip.fs.*;
-
 import org.lockss.plugin.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
@@ -70,18 +64,29 @@ public class BaseCachedUrlSet implements CachedUrlSet {
   protected CachedUrlSetSpec spec;
   protected long excludeFilesUnchangedAfter = 0;
 
+  /*
+   * The indication of whether the content of an archival unit should be
+   * obtained from a web service instead of the repository.
+   */
+  protected boolean isAuContentFromWs = false;
+
   /**
    * Must invoke this constructor in plugin subclass.
    * @param owner the AU to which it belongs
    * @param spec the CachedUrlSet's spec
    */
   public BaseCachedUrlSet(ArchivalUnit owner, CachedUrlSetSpec spec) {
+    final String DEBUG_HEADER = "BaseCachedUrlSet(): ";
     this.spec = spec;
     this.au = owner;
     plugin = owner.getPlugin();
     theDaemon = plugin.getDaemon();
     repository = theDaemon.getLockssRepository(owner);
     nodeManager = theDaemon.getNodeManager(owner);
+
+    isAuContentFromWs = theDaemon.getPluginManager().isAuContentFromWs();
+    if (logger.isDebug3())
+      logger.debug3(DEBUG_HEADER + "isAuContentFromWs = " + isAuContentFromWs);
   }
 
   /**
@@ -101,6 +106,18 @@ public class BaseCachedUrlSet implements CachedUrlSet {
   }
 
   public boolean hasContent() {
+    final String DEBUG_HEADER = "hasContent(): ";
+    if (logger.isDebug3())
+      logger.debug3(DEBUG_HEADER + "isAuContentFromWs = " + isAuContentFromWs);
+    // Check whether the content is obtained via web services instead of the
+    // repository.
+    if (isAuContentFromWs) {
+      // Yes: It has content.
+      if (logger.isDebug2()) logger.debug2(DEBUG_HEADER
+	  + "return true because isAuUrlContentFromWs() = true");
+      return true;
+    }
+
     try {
       RepositoryNode node = repository.getNode(getUrl());
       if (node == null) {
