@@ -7,8 +7,8 @@
   >
   
     rights = openaccess
-    implicit < status ; status2 ; year ; param[au_oai_date] ; name ; volume ; hidden[proxy] >
-    comment[old_plugin] = org.lockss.plugin.pensoft.ClockssPensoftPlugin
+    implicit < status ; status2 ; year ; volume ; name ; param[au_oai_date] ; hidden[proxy] >
+    #implicit < status ; status2 ; year ; param[au_oai_date] ; name ; volume ; hidden[proxy] >
     plugin = org.lockss.plugin.pensoft.oai.ClockssPensoftOaiPlugin
 
    {
@@ -22,10 +22,10 @@
     param[au_oai_set] = bdj
     param[base_url] = http://bdj.pensoft.net/
 
-    au < crawling ; exists ; 2013 ; 2013 ; Biodiversity Data Journal Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Biodiversity Data Journal Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; Biodiversity Data Journal Volume 3 ; 3 ; >
-    au < expected ; exists ; 2016 ; 2016 ; Biodiversity Data Journal Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2013 ; 1 ; Biodiversity Data Journal Volume 2013 ; 2013 ; >
+    au < crawling ; exists ; 2014 ; 2 ; Biodiversity Data Journal Volume 2014 ; 2014 ; >
+    au < crawling ; exists ; 2015 ; 3 ; Biodiversity Data Journal Volume 2015 ; 2015 ; >
+    au < expected ; exists ; 2016 ; 4 ; Biodiversity Data Journal Volume 2016 ; 2016 ; >
     
    }
 
@@ -41,15 +41,15 @@
     param[base_url] = http://biorisk.pensoft.net/
     #notReady: V10 no substance. 
     
-    au < manifest ; exists ; 2008 ; 2008 ; BioRisk Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; BioRisk Volumes 2-3 ; 2-3 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; BioRisk Volumes 4-5 ; 4-5 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; BioRisk Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2012 ; 2012 ; BioRisk Volume 7 ; 7 ; >
-    au < finished ; crawling ; 2013 ; 2013 ; BioRisk Volume 8 ; 8 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2014 ; 2014 ; BioRisk Volume 9 ; 9 ; >
-    au < notReady ; exists ; 2015 ; 2015 ; BioRisk Volume 10 ; 10 ; >
-    au < expected ; exists ; 2016 ; 2016 ; BioRisk Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2008 ; 1 ; BioRisk Volume 2008 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 2-3 ; BioRisk Volume 2009 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 4-5 ; BioRisk Volume 2010 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 6 ; BioRisk Volume 2011 ; 2011 ; >
+    au < crawling ; exists ; 2012 ; 7 ; BioRisk Volume 2012 ; 2012 ; >
+    au < finished ; crawling ; 2013 ; 8 ; BioRisk Volume 2013 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; 9 ; BioRisk Volume 2014 ; 2014 ; >
+    au < notReady ; exists ; 2015 ; 10 ; BioRisk Volume 2015 ; 2015 ; >
+    au < expected ; exists ; 2016 ; 11 ; BioRisk Volume 2016 ; 2016 ; >
   
    }
    
@@ -64,14 +64,14 @@
     param[au_oai_set] = compcytogen
     param[base_url] = http://compcytogen.pensoft.net/
     
-    au < manifest ; exists ; 2009 ; 2009 ; Comparative Cytogenetics Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Comparative Cytogenetics Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Comparative Cytogenetics Volume 5 ; 5 ; >
-    au < finished ; crawling ; 2012 ; 2012 ; Comparative Cytogenetics Volume 6 ; 6 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2013 ; 2013 ; Comparative Cytogenetics Volume 7 ; 7 ; >
-    au < finished ; crawling ; 2014 ; 2014 ; Comparative Cytogenetics Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2015 ; 2015 ; Comparative Cytogenetics Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Comparative Cytogenetics Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2009 ; 3 ; Comparative Cytogenetics Volume 2009 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 4 ; Comparative Cytogenetics Volume 2010 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 5 ; Comparative Cytogenetics Volume 2011 ; 2011 ; >
+    au < finished ; crawling ; 2012 ; 6 ; Comparative Cytogenetics Volume 2012 ; 2012 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 2013 ; 7 ; Comparative Cytogenetics Volume 2013 ; 2013 ; >
+    au < finished ; crawling ; 2014 ; 8 ; Comparative Cytogenetics Volume 2014 ; 2014 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 2015 ; 9 ; Comparative Cytogenetics Volume 2015 ; 2015 ; >
+    au < manifest ; exists ; 2016 ; 10 ; Comparative Cytogenetics Volume 2016 ; 2016 ; >
   
    }
 
@@ -86,9 +86,9 @@
      param[au_oai_set] = dez
      param[base_url] = http://dez.pensoft.net/
 
-     au < finished ; crawling ; 2014 ; 2014 ; Deutsche Entomologische Zeitschrift Volume 61 ; 61 ; reingest1.clockss.org:8082 >
-     au < crawling ; exists ; 2015 ; 2015 ; Deutsche Entomologische Zeitschrift Volume 62 ; 62 ; >
-     au < manifest ; exists ; 2016 ; 2016 ; Deutsche Entomologische Zeitschrift Volume 63 ; 63 ; >
+     au < finished ; crawling ; 2014 ; 61 ; Deutsche Entomologische Zeitschrift Volume 2014 ; 2014 ; reingest1.clockss.org:8082 >
+     au < crawling ; exists ; 2015 ; 62 ; Deutsche Entomologische Zeitschrift Volume 2015 ; 2015 ; >
+     au < manifest ; exists ; 2016 ; 63 ; Deutsche Entomologische Zeitschrift Volume 2016 ; 2016 ; >
 
    }
    
@@ -105,8 +105,8 @@
     param[base_url] = http://ijm.pensoft.net/
     #notReady: V2011, no substance?
     
-    au < exists ; exists ; 2011 ; 2011 ; International Journal of Myriapodology Volumes 4-6 ; 4-6 ; >
-    au < crawling ; exists ; 2012 ; 2012 ; International Journal of Myriapodology Volume 7 ; 7 ; >
+    au < exists ; exists ; 2011 ; 4-6 ; International Journal of Myriapodology Volume 2011 ; 2011 ; >
+    au < crawling ; exists ; 2012 ; 7 ; International Journal of Myriapodology Volume 2012 ; 2012 ; >
 
    }
   
@@ -122,12 +122,12 @@
     param[au_oai_set] = jhr
     param[base_url] = http://jhr.pensoft.net/
     
-    au < manifest ; exists ; 2011 ; 2011 ; Journal of Hymenoptera Research Volumes 20-23 ; 20-23 ; >
-    au < crawling ; exists ; 2012 ; 2012 ; Journal of Hymenoptera Research Volumes 24-29 ; 24-29 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Journal of Hymenoptera Research Volumes 30-35 ; 30-35 ; >
-    au < finished ; crawling ; 2014 ; 2014 ; Journal of Hymenoptera Research Volumes 36-41 ; 36-41 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2015 ; 2015 ; Journal of Hymenoptera Research Volumes 42-47 ; 42-47 ; >
-    au < expected ; exists ; 2016 ; 2016 ; Journal of Hymenoptera Research Volumes 48-53 ; 48-53 ; >
+    au < manifest ; exists ; 2011 ; 20-23 ; Journal of Hymenoptera Research Volume 2011 ; 2011 ; >
+    au < crawling ; exists ; 2012 ; 24-29 ; Journal of Hymenoptera Research Volume 2012 ; 2012 ; >
+    au < crawling ; exists ; 2013 ; 30-35 ; Journal of Hymenoptera Research Volume 2013 ; 2013 ; >
+    au < finished ; crawling ; 2014 ; 36-41 ; Journal of Hymenoptera Research Volume 2014 ; 2014 ; reingest5.clockss.org:8082 >
+    au < crawling ; exists ; 2015 ; 42-47 ; Journal of Hymenoptera Research Volume 2015 ; 2015 ; >
+    au < expected ; exists ; 2016 ; 48-53 ; Journal of Hymenoptera Research Volume 2016 ; 2016 ; >
   
    }
   
@@ -143,12 +143,12 @@
     param[au_oai_set] = mycokeys
     param[base_url] = http://mycokeys.pensoft.net/
     
-    au < manifest ; exists ; 2011 ; 2011 ; MycoKeys Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2012 ; 2012 ; MycoKeys Volumes 2-5 ; 2-5 ; >
-    au < finished ; crawling ; 2013 ; 2013 ; MycoKeys Volumes 6-7 ; 6-7 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2014 ; 2014 ; MycoKeys Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; MycoKeys Volumes 9-11 ; 9-11 ; >
-    au < expected ; exists ; 2016 ; 2016 ; MycoKeys Volumes 12-13 ; 12-13 ; >
+    au < manifest ; exists ; 2011 ; 1 ; MycoKeys Volume 2011 ; 2011 ; >
+    au < crawling ; exists ; 2012 ; 2-5 ; MycoKeys Volume 2012 ; 2012 ; >
+    au < finished ; crawling ; 2013 ; 6-7 ; MycoKeys Volume 2013 ; 2013 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 2014 ; 8 ; MycoKeys Volume 2014 ; 2014 ; >
+    au < crawling ; exists ; 2015 ; 9-11 ; MycoKeys Volume 2015 ; 2015 ; >
+    au < expected ; exists ; 2016 ; 12-13 ; MycoKeys Volume 2016 ; 2016 ; >
   
    }
   
@@ -162,10 +162,10 @@
     param[au_oai_set] = natureconservation
     param[base_url] = http://natureconservation.pensoft.net/
     
-    au < crawling ; exists ; 2012 ; 2012 ; Nature Conservation Volumes 1-3 ; 1-3 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Nature Conservation Volumes 4-6 ; 4-6 ; >
-    au < finished ; crawling ; 2014 ; 2014 ; Nature Conservation Volumes 7-9 ; 7-9 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2015 ; 2015 ; Nature Conservation Volumes 10-13 ; 10-13 ; >
+    au < crawling ; exists ; 2012 ; 1-3 ; Nature Conservation Volume 2012 ; 2012 ; >
+    au < crawling ; exists ; 2013 ; 4-6 ; Nature Conservation Volume 2013 ; 2013 ; >
+    au < finished ; crawling ; 2014 ; 7-9 ; Nature Conservation Volume 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2015 ; 10-13 ; Nature Conservation Volume 2015 ; 2015 ; >
   
    }
   
@@ -181,11 +181,11 @@
     param[au_oai_set] = neobiota
     param[base_url] = http://neobiota.pensoft.net/
     
-    au < manifest ; exists ; 2011 ; 2011 ; NeoBiota Volumes 9-11 ; 9-11 ; >
-    au < finished ; crawling ; 2012 ; 2012 ; NeoBiota Volumes 12-15 ; 12-15 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2013 ; 2013 ; NeoBiota Volumes 16-19 ; 16-19 ; >
-    au < finished ; crawling ; 2014 ; 2014 ; NeoBiota Volumes 20-23 ; 20-23 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2015 ; 2015 ; NeoBiota Volumes 24-27 ; 24-27 ; >
+    au < manifest ; exists ; 2011 ; 9-11 ; NeoBiota Volume 2011 ; 2011 ; >
+    au < finished ; crawling ; 2012 ; 12-15 ; NeoBiota Volume 2012 ; 2012 ; reingest5.clockss.org:8082 >
+    au < crawling ; exists ; 2013 ; 16-19 ; NeoBiota Volume 2013 ; 2013 ; >
+    au < finished ; crawling ; 2014 ; 20-23 ; NeoBiota Volume 2014 ; 2014 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2015 ; 24-27 ; NeoBiota Volume 2015 ; 2015 ; >
   
    }
 
@@ -201,9 +201,9 @@
     param[au_oai_set] = nl
     param[base_url] = http://nl.pensoft.net/
     
-    au < crawling ; exists ; 2014 ; 2014 ; Nota Lepidopterologica Volume 37 ; 37 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; Nota Lepidopterologica Volume 38 ; 38 ; > 
-    au < manifest ; exists ; 2016 ; 2016 ; Nota Lepidopterologica Volume 39 ; 39 ; >
+    au < crawling ; exists ; 2014 ; 37 ; Nota Lepidopterologica Volume 2014 ; 2014 ; >
+    au < crawling ; exists ; 2015 ; 38 ; Nota Lepidopterologica Volume 2015 ; 2015 ; > 
+    au < manifest ; exists ; 2016 ; 39 ; Nota Lepidopterologica Volume 2016 ; 2016 ; >
 
    }
     
@@ -219,12 +219,12 @@
     param[au_oai_set] = phytokeys
     param[base_url] = http://phytokeys.pensoft.net/
     
-    au < manifest ; exists ; 2010 ; 2010 ; PhytoKeys Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; PhytoKeys Volumes 2-7 ; 2-7 ; >
-    au < crawling ; exists ; 2012 ; 2012 ; PhytoKeys Volumes 8-19 ; 8-19 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; PhytoKeys Volumes 20-32 ; 20-32 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; PhytoKeys Volumes 33-43 ; 33-43 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; PhytoKeys Volumes 44-57 ; 44-57 ; >
+    au < manifest ; exists ; 2010 ; 1 ; PhytoKeys Volume 2010 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 2-7 ; PhytoKeys Volume 2011 ; 2011 ; >
+    au < crawling ; exists ; 2012 ; 8-19 ; PhytoKeys Volume 2012 ; 2012 ; >
+    au < crawling ; exists ; 2013 ; 20-32 ; PhytoKeys Volume 2013 ; 2013 ; >
+    au < crawling ; exists ; 2014 ; 33-43 ; PhytoKeys Volume 2014 ; 2014 ; >
+    au < crawling ; exists ; 2015 ; 44-57 ; PhytoKeys Volume 2015 ; 2015 ; >
   
    }
   
@@ -241,10 +241,10 @@
     param[au_oai_set] = subtbiol
     param[base_url] = http://subtbiol.pensoft.net/
     
-    au < manifest ; exists ; 2011 ; 2011 ; Subterranean Biology Volumes 8-9 ; 8-9 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Subterranean Biology Volumes 10-12 ; 10-12 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Subterranean Biology Volumes 13-14 ; 13-14 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; Subterranean Biology Volumes 15-16 ; 15-16 ; >
+    au < manifest ; exists ; 2011 ; 8-9 ; Subterranean Biology Volume 2011 ; 2011 ; >
+    au < crawling ; exists ; 2013 ; 10-12 ; Subterranean Biology Volume 2013 ; 2013 ; >
+    au < crawling ; exists ; 2014 ; 13-14 ; Subterranean Biology Volume 2014 ; 2014 ; >
+    au < crawling ; exists ; 2015 ; 15-16 ; Subterranean Biology Volume 2015 ; 2015 ; >
 
   
    }
@@ -261,14 +261,14 @@
     param[au_oai_set] = zookeys
     param[base_url] = http://zookeys.pensoft.net/
     
-    au < manifest ; exists ; 2008 ; 2008 ; ZooKeys Volumes 1-4 ; 1-4 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; ZooKeys Volumes 5-31 ; 5-31 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; ZooKeys Volumes 32-73 ; 32-73 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; ZooKeys Volumes 74-160 ; 74-160 ; >
-    au < crawling ; exists ; 2012 ; 2012 ; ZooKeys Volumes 161-255 ; 161-255 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; ZooKeys Volumes 256-366 ; 256-366 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; ZooKeys Volumes 367-468 ; 343-468 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; ZooKeys Volumes 469-548 ; 469-548 ; >
+    au < manifest ; exists ; 2008 ; 1-4 ; ZooKeys Volume 2008 ; 2008 ; >
+    au < manifest ; exists ; 2009 ; 5-31 ; ZooKeys Volume 2009 ; 2009 ; >
+    au < manifest ; exists ; 2010 ; 32-73 ; ZooKeys Volume 2010 ; 2010 ; >
+    au < manifest ; exists ; 2011 ; 74-160 ; ZooKeys Volume 2011 ; 2011 ; >
+    au < crawling ; exists ; 2012 ; 161-255 ; ZooKeys Volume 2012 ; 2012 ; >
+    au < crawling ; exists ; 2013 ; 256-366 ; ZooKeys Volume 2013 ; 2013 ; >
+    au < crawling ; exists ; 2014 ; 343-468 ; ZooKeys Volume 2014 ; 2014 ; >
+    au < crawling ; exists ; 2015 ; 469-548 ; ZooKeys Volume 2015 ; 2015 ; >
   
    }
    
@@ -286,9 +286,9 @@
     #V90 has substance on ingest machines? Fails on content2.
     #notReady: V91 has not substance and has a crawl error which is undefined.
 
-    au < finished ; crawling ; 2014 ; 2014 ; Zoosystematics and Evolution Volume 90 ; 90 ; reingest2.clockss.org:8085 >
-    au < notReady ; exists ; 2015 ; 2015 ; Zoosystematics and Evolution Volume 91 ; 91 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Zoosystematics and Evolution Volume 92 ; 92 ; >
+    au < finished ; crawling ; 2014 ; 90 ; Zoosystematics and Evolution Volume 2014 ; 2014 ; reingest2.clockss.org:8085 >
+    au < notReady ; exists ; 2015 ; 91 ; Zoosystematics and Evolution Volume 2015 ; 2015 ; >
+    au < manifest ; exists ; 2016 ; 92 ; Zoosystematics and Evolution Volume 2016 ; 2016 ; >
 
     }
 
