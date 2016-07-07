@@ -106,7 +106,7 @@
     au < finished ; crawling ; 2011 ; 9781600867767 ; 9781600867774 ; 9781600867774 ; Eleven Seconds Into the Unknown: A History of the Hyper-X Program (9781600867774) ; >
     au < finished ; crawling ; 2012 ; 9781600869167 ; 9781600869174 ; 9781600869174 ; Aerodynamic Principles of Flight Vehicles (9781600869174) ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2013 ; 9781624101779 ; 9781624101786 ; 9781624101786 ; The Aircraft Designers: A Grumman Historical Perspective (9781624101786) ; >
-    au < testing ; exists ; 2013 ; 9781624102035 ; 9781624102042 ; 9781624102042 ; Meeting the Challenge: The Hexagon KH-9 Reconnaissance Satellite (9781624102042) ; > #403 con content4 on permission page http://arc.aiaa.org/clockss/eisbn/9781624102042
+    au < ready ; exists ; 2013 ; 9781624102035 ; 9781624102042 ; 9781624102042 ; Meeting the Challenge: The Hexagon KH-9 Reconnaissance Satellite (9781624102042) ; > #403 con content4 on permission page http://arc.aiaa.org/clockss/eisbn/9781624102042
     au < finished ; crawling ; 2013 ; 9781624102103 ; 9781624102110 ; 9781624102110 ; Safety Management Systems for Aviation Practitioners: Real-World Lessons (9781624102110) ; >
     au < finished ; crawling ; 2013 ; 9781624102165 ; 9781624102172 ; 9781624102172 ; Space Shuttle Legacy (9781624102172) ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2014 ; 9781624102622 ; 9781624103223 ; 9781624103223 ; The Overview Effect: Space Exploration and Human Evolution, Third Edition (9781624103223) ; >
@@ -219,7 +219,7 @@
     au < deepCrawl ; exists ; 1985 ; 9780915928910 ; 9781600865695 ; 9781600865695 ; Dynamics of Shock Waves, Explosions, and Detonations (9781600865695) ; >
     au < finished ; crawling ; 1985 ; 9780915928927 ; 9781600865701 ; 9781600865701 ; Dynamics of Flames and Reactive Systems (9781600865701) ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1985 ; 9780915928941 ; 9781600865718 ; 9781600865718 ; Thermal Design of Aeroassisted Orbital Transfer Vehicles (9781600865718) ; >
-    au < testing ; exists ; 1985 ; 9780915928989 ; 9781600865725 ; 9781600865725 ; Monitoring Earth's Ocean, Land, and Atmosphere from Space-Sensors, Systems, and Applications (9781600865725) ; >
+    au < ready ; exists ; 1985 ; 9780915928989 ; 9781600865725 ; 9781600865725 ; Monitoring Earth's Ocean, Land, and Atmosphere from Space-Sensors, Systems, and Applications (9781600865725) ; >
     au < finished ; crawling ; 1985 ; 9780930403003 ; 9781600865732 ; 9781600865732 ; Thrust and Drag: Its Prediction and Verification (9781600865732) ; >
     au < finished ; crawling ; 1985 ; 9780930403010 ; 9781600865749 ; 9781600865749 ; Space Stations and Space Platforms-Concepts, Design, Infrastructure, and Uses (9781600865749) ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1986 ; 9780930403058 ; 9781600865756 ; 9781600865756 ; MHD Energy Conversion: Physicotechnical Problems (9781600865756) ; >
