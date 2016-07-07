@@ -8461,8 +8461,8 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < crawling ; exists ; 2010 ; Critical Studies in Television Volume 5 ; 5 ; >
-      au < crawling ; exists ; 2011 ; Critical Studies in Television Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2012 ; Critical Studies in Television Volume 7 ; 7 ; >
+      au < superseded ; exists ; 2011 ; Critical Studies in Television Volume 6 [superseded] ; 6 ; >
+      au < superseded ; exists ; 2012 ; Critical Studies in Television Volume 7 [superseded] ; 7 ; >
       au < crawling ; exists ; 2013 ; Critical Studies in Television Volume 8 ; 8 ; >
       au < crawling ; exists ; 2014 ; Critical Studies in Television Volume 9 ; 9 ; >
       au < crawling ; exists ; 2015 ; Critical Studies in Television Volume 10 ; 10 ; >
@@ -17011,7 +17011,7 @@
   {
 
   title <
-    name = The International Journal of Entrepreneurship and Innovation ;
+    name = International Journal of Entrepreneurship and Innovation ;
     issn = 1465-7503 ;
     eissn = 2043-6882 
   >
@@ -17019,7 +17019,7 @@
     param[base_url] = http://iei.sagepub.com/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < doNotProcess ; exists ; 2016 ; IThe International Journal of Entrepreneurship and Innovation Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 2016 ; International Journal of Entrepreneurship and Innovation Volume 17 ; 17 ; >
 
   }
 
@@ -30227,8 +30227,8 @@
       au < crawling ; exists ; 2008 ; Literature & History Volume 17 ; 17 ; >
       au < crawling ; exists ; 2009 ; Literature & History Volume 18 ; 18 ; >
       au < crawling ; exists ; 2010 ; Literature & History Volume 19 ; 19 ; >
-      au < crawling ; exists ; 2011 ; Literature & History Volume 20 ; 20 ; >
-      au < crawling ; exists ; 2012 ; Literature & History Volume 21 ; 21 ; >
+      au < superseded ; exists ; 2011 ; Literature & History Volume 20 [superseded] ; 20 ; >
+      au < superseded ; exists ; 2012 ; Literature & History Volume 21 [superseded] ; 21 ; >
       au < crawling ; exists ; 2013 ; Literature & History Volume 22 ; 22 ; >
       au < crawling ; exists ; 2014 ; Literature & History Volume 23 ; 23 ; >
       au < crawling ; exists ; 2015 ; Literature & History Volume 24 ; 24 ; >
@@ -44290,8 +44290,8 @@
       au < manifest ; exists ; 2005 ; Wind Engineering Volume 29 ; 29 ; >
       au < manifest ; exists ; 2006 ; Wind Engineering Volume 30 ; 30 ; >
       au < manifest ; exists ; 2007 ; Wind Engineering Volume 31 ; 31 ; >
-      au < crawling ; exists ; 2008 ; Wind Engineering Volume 32 ; 32 ; >
-      au < crawling ; exists ; 2009 ; Wind Engineering Volume 33 ; 33 ; >
+      au < superseded ; exists ; 2008 ; Wind Engineering Volume 32 [superseded] ; 32 ; >
+      au < superseded ; exists ; 2009 ; Wind Engineering Volume 33 [superseded] ; 33 ; >
       au < crawling ; exists ; 2010 ; Wind Engineering Volume 34 ; 34 ; >
       au < crawling ; exists ; 2011 ; Wind Engineering Volume 35 ; 35 ; >
       au < crawling ; exists ; 2012 ; Wind Engineering Volume 36 ; 36 ; >
@@ -48550,7 +48550,7 @@
   {
 
       title <
-        name = Women’s Health ;
+        name = Women's Health ;
         issn = 1745-5057 ;
         eissn = 1745-5065
     >
@@ -48558,7 +48558,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://whe.sagepub.com/
 
-      au < doNotProcess ; exists ; 2016 ; Women’s Health Volume 12 ; 12 ; >
+      au < doNotProcess ; exists ; 2016 ; Women's Health Volume 12 ; 12 ; >
 
   }
 

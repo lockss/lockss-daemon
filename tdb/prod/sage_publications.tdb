@@ -19275,7 +19275,7 @@
     {
 
     title <
-      name = The International Journal of Entrepreneurship and Innovation ;
+      name = International Journal of Entrepreneurship and Innovation ;
       issn = 1465-7503 ;
       eissn = 2043-6882 
     >
@@ -19284,7 +19284,7 @@
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 2016 ; IThe International Journal of Entrepreneurship and Innovation Volume 17 ; 17 >
+      au < manifest ; 2016 ; International Journal of Entrepreneurship and Innovation Volume 17 ; 17 >
 
     }
 
@@ -52887,7 +52887,7 @@ comment[mpj] = now published by Brill
     {
   
         title <
-          name = Women’s Health ;
+          name = Women's Health ;
           issn = 1745-5057 ;
           eissn = 1745-5065
       >
@@ -52896,7 +52896,7 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
         param[base_url] = http://whe.sagepub.com/
   
-        au < manifest ; 2016 ; Women’s Health Volume 12 ; 12 >
+        au < manifest ; 2016 ; Women's Health Volume 12 ; 12 >
   
     }
 

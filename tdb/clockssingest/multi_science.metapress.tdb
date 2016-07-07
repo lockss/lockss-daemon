@@ -30,8 +30,8 @@
     au < doNotProcess ; exists ; 2007 ; Adsorption Science & Technology Volume 25 ; 25 ; >
     au < doNotProcess ; exists ; 2008 ; Adsorption Science & Technology Volume 26 ; 26 ; >
     au < doNotProcess ; exists ; 2009 ; Adsorption Science & Technology Volume 27 ; 27 ; >
-    au < down ; finished ; 2010 ; Adsorption Science & Technology Volume 28 ; 28 ; >
-    au < down ; finished ; 2011 ; Adsorption Science & Technology Volume 29 ; 29 ; >
+    au < superseded ; finished ; 2010 ; Adsorption Science & Technology Volume 28 [superseded] ; 28 ; >
+    au < superseded ; finished ; 2011 ; Adsorption Science & Technology Volume 29 [superseded] ; 29 ; >
     au < superseded ; exists ; 2012 ; Adsorption Science & Technology Volume 30 [superseded] ; 30 ; >
     au < superseded ; exists ; 2013 ; Adsorption Science & Technology Volume 31 [superseded] ; 31 ; >
     au < doNotProcess ; exists ; 2014 ; Adsorption Science & Technology Volume 32 ; 32 ; >
@@ -59,9 +59,9 @@
     au < doNotProcess ; exists ; 2007 ; Advances in Structural Engineering Volume 10 ; 10 ; >
     au < doNotProcess ; exists ; 2008 ; Advances in Structural Engineering Volume 11 ; 11 ; >
     au < doNotProcess ; exists ; 2009 ; Advances in Structural Engineering Volume 12 ; 12 ; >
-    au < down ; finished ; 2010 ; Advances in Structural Engineering Volume 13 ; 13 ; >
-    au < down ; finished ; 2011 ; Advances in Structural Engineering Volume 14 ; 14 ; >
-    au < down ; crawling ; 2012 ; Advances in Structural Engineering Volume 15 ; 15 ; >
+    au < superseded ; finished ; 2010 ; Advances in Structural Engineering Volume 13 [superseded] ; 13 ; >
+    au < superseded ; finished ; 2011 ; Advances in Structural Engineering Volume 14 [superseded] ; 14 ; >
+    au < superseded ; crawling ; 2012 ; Advances in Structural Engineering Volume 15 [superseded] ; 15 ; >
     au < superseded ; exists ; 2013 ; Advances in Structural Engineering Volume 16 [superseded] ; 16 ; >
     au < doNotProcess ; exists ; 2014 ; Advances in Structural Engineering Volume 17 ; 17 ; >
     au < doNotProcess ; exists ; 2015 ; Advances in Structural Engineering Volume 18 ; 18 ; >
@@ -119,9 +119,9 @@
     au < doNotProcess ; exists ; 2007 ; Energy & Environment Volume 18 ; 18 ; >
     au < doNotProcess ; exists ; 2008 ; Energy & Environment Volume 19 ; 19 ; >
     au < doNotProcess ; exists ; 2009 ; Energy & Environment Volume 20 ; 20 ; >
-    au < down ; finished ; 2010 ; Energy & Environment Volume 21 ; 21 ; >
-    au < down ; finished ; 2011 ; Energy & Environment Volume 22 ; 22 ; >
-    au < down ; crawling ; 2012 ; Energy & Environment Volume 23 ; 23 ; >
+    au < superseded ; finished ; 2010 ; Energy & Environment Volume 21 [superseded] ; 21 ; >
+    au < superseded ; finished ; 2011 ; Energy & Environment Volume 22 [superseded] ; 22 ; >
+    au < superseded ; crawling ; 2012 ; Energy & Environment Volume 23 [superseded] ; 23 ; >
     au < superseded ; exists ; 2013 ; Energy & Environment Volume 24 [superseded] ; 24 ; >
     au < doNotProcess ; exists ; 2014 ; Energy & Environment Volume 25 ; 25 ; >
     au < doNotProcess ; exists ; 2015 ; Energy & Environment Volume 26 ; 26 ; >
@@ -643,8 +643,8 @@
     au < doNotProcess ; exists ; 2007 ; Wind Engineering Volume 31 ; 31 ; >
     au < doNotProcess ; exists ; 2008 ; Wind Engineering Volume 32 ; 32 ; >
     au < doNotProcess ; exists ; 2009 ; Wind Engineering Volume 33 ; 33 ; >
-    au < down ; finished ; 2010 ; Wind Engineering Volume 34 ; 34 ; >
-    au < down ; finished ; 2011 ; Wind Engineering Volume 35 ; 35 ; >
+    au < superseded ; finished ; 2010 ; Wind Engineering Volume 34 [superseded] ; 34 ; >
+    au < superseded ; finished ; 2011 ; Wind Engineering Volume 35 [superseded] ; 35 ; >
     au < superseded ; down ; 2012 ; Wind Engineering Volume 36 [superseded] ; 36 ; >
     au < superseded ; exists ; 2013 ; Wind Engineering Volume 37 [superseded] ; 37 ; >
     au < doNotProcess ; exists ; 2014 ; Wind Engineering Volume 38 ; 38 ; >
