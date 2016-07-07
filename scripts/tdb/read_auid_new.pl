@@ -30,7 +30,7 @@ my $cjar = HTTP::Cookies->new();
 
 # Create user agent.
 my $ua = LWP::UserAgent->new( cookie_jar => $cjar, agent => "LOCKSS cache" );
-$ua->proxy('http', 'http://www1.lockss.org:8888/');
+$ua->proxy('http', 'http://proxy.lockss.org:8888/');
 $ua->no_proxy('localhost', '127.0.0.1');
 
 while (my $line = <>) {
