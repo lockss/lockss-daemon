@@ -389,13 +389,14 @@ while (my $line = <>) {
                 }
                 $result = "Manifest"
             } else {
-                if (!defined($man_contents)) {
-                    $result = "--NO_CONT--";
-                } elsif ((!$man_contents =~ m/$lockss_tag/) && (!$man_contents =~ m/$oa_tag/)) {
-                    $result = "--NO_TAG--";
-                } elsif ((!$man_contents =~ m/\($param{year}\)/) && (!$man_contents =~ m/: $param{year}/)) {
-                    $result = "--NO_YEAR--";
-                }
+                $result = "--NO_TAG--"
+                #if (!defined($man_contents)) {
+                #    $result = "--NO_CONT--";
+                #} elsif ((!$man_contents =~ m/$lockss_tag/) && (!$man_contents =~ m/$oa_tag/)) {
+                #    $result = "--NO_TAG--";
+                #} elsif ((!$man_contents =~ m/\($param{year}\)/) && (!$man_contents =~ m/: $param{year}/)) {
+                #    $result = "--NO_YEAR--";
+                #}
             }
         } else {
             $result = "--REQ_FAIL--"
