@@ -149,6 +149,9 @@ public class TestCopernicusArchivalUnit extends LockssTestCase {
     shouldCacheTest(ROOT_URL+"123/14/tc-123-18-2012-metrics.html", false, ABAu, cus);
     // related articles
     shouldCacheTest(ROOT_URL+"123/14/tc-123-18-2012-relations.html", false, ABAu, cus);
+    // discussion/"peer review"
+    shouldCacheTest(ROOT_URL+"123/14/tc-123-18-2012-discussion.html", false, ABAu, cus);
+
   }
   
   private void shouldCacheTest(String url, boolean shouldCache,

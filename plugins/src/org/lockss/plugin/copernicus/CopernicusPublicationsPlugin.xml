@@ -73,6 +73,8 @@
       <string>2,"^%s%s/.*-metrics.html$",base_url,volume_name</string>
 <!--  related articles live at <filename>-relations.html -->      
       <string>2,"^%s%s/.*-relations.html$",base_url,volume_name</string>
+<!--  article level discussions/"peer review" live at <filename>-discussion.html -->
+      <string>2,"^%s%s/.*-discussion.html$",base_url,volume_name</string>
 <!--article at <base_url>/14/4/2012/<filename>.(html|.pdf|.xml|.ris|.bib) -->
 <!--issue TOC at <base_url>/14/index.html or <base_url>/68/issue2.html -->
       <string>1,"^%s%s/",base_url,volume_name</string>

@@ -89,8 +89,10 @@ public class CopernicusHtmlFilterFactory implements FilterFactory {
         // recent articles listing
         HtmlNodeFilters.tagWithAttribute("div","id","recent_paper"),
         // logos at the bottom
-        HtmlNodeFilters.tagWithAttribute("div","id","essentential-logos-carousel"),        
-          
+        HtmlNodeFilters.tagWithAttribute("div","id","essentential-logos-carousel"), 
+        // date class id differs...
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "publishedDateAndMsType*"),
+        
     };
           
     
@@ -109,6 +111,7 @@ public class CopernicusHtmlFilterFactory implements FilterFactory {
                 tag.setAttributesEx(new Vector()); //empty attribs Vector. Even clears out tag name
                 tag.setTagName("REMOVE");
                 endTag.setTagName("REMOVE");
+              } else if ("span".equals(tagName)) {
               }
             }
           });
@@ -140,9 +143,14 @@ public class CopernicusHtmlFilterFactory implements FilterFactory {
     };
     Reader stringFilter = StringFilter.makeNestedFilter(tagFilter,
                                                           findAndReplace,
-                                                          false);
+                                                          false);    
+    Reader wspaceFilter = new WhiteSpaceFilter(stringFilter);
+    // white space filter takes multiple whitespace and leaves a single space
+    // this will remove a single space left before a </span> tag
+    String[][] fAndR = new String[][] {
+      {" </span>" , "</span>"},
+    };
 
-    return new ReaderInputStream(new WhiteSpaceFilter(stringFilter));   
-    
+    return new ReaderInputStream(StringFilter.makeNestedFilter(wspaceFilter, fAndR, false));    
   }
 }
