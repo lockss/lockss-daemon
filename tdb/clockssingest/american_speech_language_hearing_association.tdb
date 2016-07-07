@@ -1,0 +1,223 @@
+{
+  publisher <
+    name = American Speech-Language-Hearing Association ;
+    info[contract] = 2016 ;
+    info[tester] = 0
+  >
+  
+  comment[moving] = Publisher moved from HighWire to Silverchair.
+
+  plugin = org.lockss.plugin.silverchair.SilverchairJournalsPlugin
+  implicit < status ; status2 ; year ; name ; param[year] ; hidden[proxy] >
+
+  {
+    title <
+      name = American Journal of Audiology ;
+      issn = 1059-0889 ;
+      eissn = 1558-9137 ;
+      issnl = 1059-0889
+    >
+
+      param[resource_id] = 140
+      param[base_url] = http://aja.pubs.asha.org/
+
+      au < exists ; exists ; 1992 ; American Journal of Audiology Volume 1 ; 1992 ; >
+      au < exists ; exists ; 1993 ; American Journal of Audiology Volume 2 ; 1993 ; >
+      au < exists ; exists ; 1994 ; American Journal of Audiology Volume 3 ; 1994 ; >
+      au < exists ; exists ; 1995 ; American Journal of Audiology Volume 4 ; 1995 ; >
+      au < exists ; exists ; 1996 ; American Journal of Audiology Volume 5 ; 1996 ; >
+      au < exists ; exists ; 1997 ; American Journal of Audiology Volume 6 ; 1997 ; >
+      au < exists ; exists ; 1998 ; American Journal of Audiology Volume 7 ; 1998 ; >
+      au < exists ; exists ; 1999 ; American Journal of Audiology Volume 8 ; 1999 ; >
+      au < exists ; exists ; 2000 ; American Journal of Audiology Volume 9 ; 2000 ; >
+      au < exists ; exists ; 2001 ; American Journal of Audiology Volume 10 ; 2001 ; >
+      au < exists ; exists ; 2002 ; American Journal of Audiology Volume 11 ; 2002 ; >
+      au < exists ; exists ; 2003 ; American Journal of Audiology Volume 12 ; 2003 ; >
+      au < exists ; exists ; 2004 ; American Journal of Audiology Volume 13 ; 2004 ; >
+      au < exists ; exists ; 2005 ; American Journal of Audiology Volume 14 ; 2005 ; >
+      au < exists ; exists ; 2006 ; American Journal of Audiology Volume 15 ; 2006 ; >
+      au < exists ; exists ; 2007 ; American Journal of Audiology Volume 16 ; 2007 ; >
+      au < exists ; exists ; 2008 ; American Journal of Audiology Volume 17 ; 2008 ; >
+      au < exists ; exists ; 2009 ; American Journal of Audiology Volume 18 ; 2009 ; >
+      au < exists ; exists ; 2010 ; American Journal of Audiology Volume 19 ; 2010 ; >
+      au < exists ; exists ; 2011 ; American Journal of Audiology Volume 20 ; 2011 ; >
+      au < exists ; exists ; 2012 ; American Journal of Audiology Volume 21 ; 2012 ; >
+      au < exists ; exists ; 2013 ; American Journal of Audiology Volume 22 ; 2013 ; >
+      au < exists ; exists ; 2014 ; American Journal of Audiology Volume 23 ; 2014 ; >
+      au < exists ; exists ; 2015 ; American Journal of Audiology Volume 24 ; 2015 ; >
+
+  }
+
+  {
+    title <
+      name = American Journal of Speech-Language Pathology ;
+      issn = 1058-0360 ;
+      eissn = 1558-9110 ;
+      issnl = 1058-0360
+    >
+
+      param[base_url] = http://ajslp.pubs.asha.org/
+      param[resource_id] = 141
+
+      au < exists ; exists ; 1992 ; American Journal of Speech-Language Pathology Volume 1 ; 1992 ; >
+      au < exists ; exists ; 1993 ; American Journal of Speech-Language Pathology Volume 2 ; 1993 ; >
+      au < exists ; exists ; 1994 ; American Journal of Speech-Language Pathology Volume 3 ; 1994 ; >
+      au < exists ; exists ; 1995 ; American Journal of Speech-Language Pathology Volume 4 ; 1995 ; >
+      au < exists ; exists ; 1996 ; American Journal of Speech-Language Pathology Volume 5 ; 1996 ; >
+      au < exists ; exists ; 1997 ; American Journal of Speech-Language Pathology Volume 6 ; 1997 ; >
+      au < exists ; exists ; 1998 ; American Journal of Speech-Language Pathology Volume 7 ; 1998 ; >
+      au < exists ; exists ; 1999 ; American Journal of Speech-Language Pathology Volume 8 ; 1999 ; >
+      au < exists ; exists ; 2000 ; American Journal of Speech-Language Pathology Volume 9 ; 2000 ; >
+      au < exists ; exists ; 2001 ; American Journal of Speech-Language Pathology Volume 10 ; 2001 ; >
+      au < exists ; exists ; 2002 ; American Journal of Speech-Language Pathology Volume 11 ; 2002 ; >
+      au < exists ; exists ; 2003 ; American Journal of Speech-Language Pathology Volume 12 ; 2003 ; >
+      au < exists ; exists ; 2004 ; American Journal of Speech-Language Pathology Volume 13 ; 2004 ; >
+      au < exists ; exists ; 2005 ; American Journal of Speech-Language Pathology Volume 14 ; 2005 ; >
+      au < exists ; exists ; 2006 ; American Journal of Speech-Language Pathology Volume 15 ; 2006 ; >
+      au < exists ; exists ; 2007 ; American Journal of Speech-Language Pathology Volume 16 ; 2007 ; >
+      au < exists ; exists ; 2008 ; American Journal of Speech-Language Pathology Volume 17 ; 2008 ; >
+      au < exists ; exists ; 2009 ; American Journal of Speech-Language Pathology Volume 18 ; 2009 ; >
+      au < exists ; exists ; 2010 ; American Journal of Speech-Language Pathology Volume 19 ; 2010 ; >
+      au < exists ; exists ; 2011 ; American Journal of Speech-Language Pathology Volume 20 ; 2011 ; >
+      au < exists ; exists ; 2012 ; American Journal of Speech-Language Pathology Volume 21 ; 2012 ; >
+      au < exists ; exists ; 2013 ; American Journal of Speech-Language Pathology Volume 22 ; 2013 ; >
+      au < exists ; exists ; 2014 ; American Journal of Speech-Language Pathology Volume 23 ; 2014 ; >
+      au < exists ; exists ; 2015 ; American Journal of Speech-Language Pathology Volume 24 ; 2015 ; >
+
+  }
+
+  {
+    title <
+      name = Journal of Speech, Language, and Hearing Research ;
+      issn = 1092-4388 ;
+      eissn = 1558-9102 ;
+      issnl = 1092-4388
+    >
+
+      comment[continues] = 0022-4677
+
+      param[base_url] = http://jslhr.pubs.asha.org/
+      param[resource_id] = 142
+
+      au < exists ; exists ; 1958 ; Journal of Speech, Language, and Hearing Research Volume 1 ; 1958 ; >
+      au < exists ; exists ; 1959 ; Journal of Speech, Language, and Hearing Research Volume 2 ; 1959 ; >
+      au < exists ; exists ; 1960 ; Journal of Speech, Language, and Hearing Research Volume 3 ; 1960 ; >
+      au < exists ; exists ; 1961 ; Journal of Speech, Language, and Hearing Research Volume 4 ; 1961 ; >
+      au < exists ; exists ; 1962 ; Journal of Speech, Language, and Hearing Research Volume 5 ; 1962 ; >
+      au < exists ; exists ; 1963 ; Journal of Speech, Language, and Hearing Research Volume 6 ; 1963 ; >
+      au < exists ; exists ; 1964 ; Journal of Speech, Language, and Hearing Research Volume 7 ; 1964 ; >
+      au < exists ; exists ; 1965 ; Journal of Speech, Language, and Hearing Research Volume 8 ; 1965 ; >
+      au < exists ; exists ; 1966 ; Journal of Speech, Language, and Hearing Research Volume 9 ; 1966 ; >
+      au < exists ; exists ; 1967 ; Journal of Speech, Language, and Hearing Research Volume 10 ; 1967 ; >
+      au < exists ; exists ; 1968 ; Journal of Speech, Language, and Hearing Research Volume 11 ; 1968 ; >
+      au < exists ; exists ; 1969 ; Journal of Speech, Language, and Hearing Research Volume 12 ; 1969 ; >
+      au < exists ; exists ; 1970 ; Journal of Speech, Language, and Hearing Research Volume 13 ; 1970 ; >
+      au < exists ; exists ; 1971 ; Journal of Speech, Language, and Hearing Research Volume 14 ; 1971 ; >
+      au < exists ; exists ; 1972 ; Journal of Speech, Language, and Hearing Research Volume 15 ; 1972 ; >
+      au < exists ; exists ; 1973 ; Journal of Speech, Language, and Hearing Research Volume 16 ; 1973 ; >
+      au < exists ; exists ; 1974 ; Journal of Speech, Language, and Hearing Research Volume 17 ; 1974 ; >
+      au < exists ; exists ; 1975 ; Journal of Speech, Language, and Hearing Research Volume 18 ; 1975 ; >
+      au < exists ; exists ; 1976 ; Journal of Speech, Language, and Hearing Research Volume 19 ; 1976 ; >
+      au < exists ; exists ; 1977 ; Journal of Speech, Language, and Hearing Research Volume 20 ; 1977 ; >
+      au < exists ; exists ; 1978 ; Journal of Speech, Language, and Hearing Research Volume 21 ; 1978 ; >
+      au < exists ; exists ; 1979 ; Journal of Speech, Language, and Hearing Research Volume 22 ; 1979 ; >
+      au < exists ; exists ; 1980 ; Journal of Speech, Language, and Hearing Research Volume 23 ; 1980 ; >
+      au < exists ; exists ; 1981 ; Journal of Speech, Language, and Hearing Research Volume 24 ; 1981 ; >
+      au < exists ; exists ; 1982 ; Journal of Speech, Language, and Hearing Research Volume 25 ; 1982 ; >
+      au < exists ; exists ; 1983 ; Journal of Speech, Language, and Hearing Research Volume 26 ; 1983 ; >
+      au < exists ; exists ; 1984 ; Journal of Speech, Language, and Hearing Research Volume 27 ; 1984 ; >
+      au < exists ; exists ; 1985 ; Journal of Speech, Language, and Hearing Research Volume 28 ; 1985 ; >
+      au < exists ; exists ; 1986 ; Journal of Speech, Language, and Hearing Research Volume 29 ; 1986 ; >
+      au < exists ; exists ; 1987 ; Journal of Speech, Language, and Hearing Research Volume 30 ; 1987 ; >
+      au < exists ; exists ; 1988 ; Journal of Speech, Language, and Hearing Research Volume 31 ; 1988 ; >
+      au < exists ; exists ; 1989 ; Journal of Speech, Language, and Hearing Research Volume 32 ; 1989 ; >
+      au < exists ; exists ; 1990 ; Journal of Speech, Language, and Hearing Research Volume 33 ; 1990 ; >
+      au < exists ; exists ; 1991 ; Journal of Speech, Language, and Hearing Research Volume 34 ; 1991 ; >
+      au < exists ; exists ; 1992 ; Journal of Speech, Language, and Hearing Research Volume 35 ; 1992 ; >
+      au < exists ; exists ; 1993 ; Journal of Speech, Language, and Hearing Research Volume 36 ; 1993 ; >
+      au < exists ; exists ; 1994 ; Journal of Speech, Language, and Hearing Research Volume 37 ; 1994 ; >
+      au < exists ; exists ; 1995 ; Journal of Speech, Language, and Hearing Research Volume 38 ; 1995 ; >
+      au < exists ; exists ; 1996 ; Journal of Speech, Language, and Hearing Research Volume 39 ; 1996 ; >
+      au < exists ; exists ; 1997 ; Journal of Speech, Language, and Hearing Research Volume 40 ; 1997 ; >
+      au < exists ; exists ; 1998 ; Journal of Speech, Language, and Hearing Research Volume 41 ; 1998 ; >
+      au < exists ; exists ; 1999 ; Journal of Speech, Language, and Hearing Research Volume 42 ; 1999 ; >
+      au < exists ; exists ; 2000 ; Journal of Speech, Language, and Hearing Research Volume 43 ; 2000 ; >
+      au < exists ; exists ; 2001 ; Journal of Speech, Language, and Hearing Research Volume 44 ; 2001 ; >
+      au < exists ; exists ; 2002 ; Journal of Speech, Language, and Hearing Research Volume 45 ; 2002 ; >
+      au < exists ; exists ; 2003 ; Journal of Speech, Language, and Hearing Research Volume 46 ; 2003 ; >
+      au < exists ; exists ; 2004 ; Journal of Speech, Language, and Hearing Research Volume 47 ; 2004 ; >
+      au < exists ; exists ; 2005 ; Journal of Speech, Language, and Hearing Research Volume 48 ; 2005 ; >
+      au < exists ; exists ; 2006 ; Journal of Speech, Language, and Hearing Research Volume 49 ; 2006 ; >
+      au < exists ; exists ; 2007 ; Journal of Speech, Language, and Hearing Research Volume 50 ; 2007 ; >
+      au < exists ; exists ; 2008 ; Journal of Speech, Language, and Hearing Research Volume 51 ; 2008 ; >
+      au < exists ; exists ; 2009 ; Journal of Speech, Language, and Hearing Research Volume 52 ; 2009 ; >
+      au < exists ; exists ; 2010 ; Journal of Speech, Language, and Hearing Research Volume 53 ; 2010 ; >
+      au < exists ; exists ; 2011 ; Journal of Speech, Language, and Hearing Research Volume 54 ; 2011 ; >
+      au < exists ; exists ; 2012 ; Journal of Speech, Language, and Hearing Research Volume 55 ; 2012 ; >
+      au < exists ; exists ; 2013 ; Journal of Speech, Language, and Hearing Research Volume 56 ; 2013 ; >
+      au < exists ; exists ; 2014 ; Journal of Speech, Language, and Hearing Research Volume 57 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Journal of Speech, Language, and Hearing Research Volume 58 ; 2015 ; >
+
+  }
+
+  {
+    title <
+      name = Language, Speech, and Hearing Services in Schools ;
+      issn = 0161-1461 ;
+      eissn = 1558-9129 ;
+      issnl = 0161-1461
+    >
+
+      param[base_url] = http://lshss.pubs.asha.org/
+      param[resource_id] = 143
+
+      au < exists ; exists ; 1970 ; Language, Speech, and Hearing Services in Schools Volume 1 ; 1970 ; >
+      au < exists ; exists ; 1972 ; Language, Speech, and Hearing Services in Schools Volume 3 ; 1972 ; >
+      au < exists ; exists ; 1973 ; Language, Speech, and Hearing Services in Schools Volume 4 ; 1973 ; >
+      au < exists ; exists ; 1974 ; Language, Speech, and Hearing Services in Schools Volume 5 ; 1974 ; >
+      au < exists ; exists ; 1975 ; Language, Speech, and Hearing Services in Schools Volume 6 ; 1975 ; >
+      au < exists ; exists ; 1976 ; Language, Speech, and Hearing Services in Schools Volume 7 ; 1976 ; >
+      au < exists ; exists ; 1977 ; Language, Speech, and Hearing Services in Schools Volume 8 ; 1977 ; >
+      au < exists ; exists ; 1978 ; Language, Speech, and Hearing Services in Schools Volume 9 ; 1978 ; >
+      au < exists ; exists ; 1979 ; Language, Speech, and Hearing Services in Schools Volume 10 ; 1979 ; >
+      au < exists ; exists ; 1980 ; Language, Speech, and Hearing Services in Schools Volume 11 ; 1980 ; >
+      au < exists ; exists ; 1981 ; Language, Speech, and Hearing Services in Schools Volume 12 ; 1981 ; >
+      au < exists ; exists ; 1982 ; Language, Speech, and Hearing Services in Schools Volume 13 ; 1982 ; >
+      au < exists ; exists ; 1983 ; Language, Speech, and Hearing Services in Schools Volume 14 ; 1983 ; >
+      au < exists ; exists ; 1984 ; Language, Speech, and Hearing Services in Schools Volume 15 ; 1984 ; >
+      au < exists ; exists ; 1985 ; Language, Speech, and Hearing Services in Schools Volume 16 ; 1985 ; >
+      au < exists ; exists ; 1986 ; Language, Speech, and Hearing Services in Schools Volume 17 ; 1986 ; >
+      au < exists ; exists ; 1987 ; Language, Speech, and Hearing Services in Schools Volume 18 ; 1987 ; >
+      au < exists ; exists ; 1988 ; Language, Speech, and Hearing Services in Schools Volume 19 ; 1988 ; >
+      au < exists ; exists ; 1989 ; Language, Speech, and Hearing Services in Schools Volume 20 ; 1989 ; >
+      au < exists ; exists ; 1990 ; Language, Speech, and Hearing Services in Schools Volume 21 ; 1990 ; >
+      au < exists ; exists ; 1991 ; Language, Speech, and Hearing Services in Schools Volume 22 ; 1991 ; >
+      au < exists ; exists ; 1992 ; Language, Speech, and Hearing Services in Schools Volume 23 ; 1992 ; >
+      au < exists ; exists ; 1993 ; Language, Speech, and Hearing Services in Schools Volume 24 ; 1993 ; >
+      au < exists ; exists ; 1994 ; Language, Speech, and Hearing Services in Schools Volume 25 ; 1994 ; >
+      au < exists ; exists ; 1995 ; Language, Speech, and Hearing Services in Schools Volume 26 ; 1995 ; >
+      au < exists ; exists ; 1996 ; Language, Speech, and Hearing Services in Schools Volume 27 ; 1996 ; >
+      au < exists ; exists ; 1997 ; Language, Speech, and Hearing Services in Schools Volume 28 ; 1997 ; >
+      au < exists ; exists ; 1998 ; Language, Speech, and Hearing Services in Schools Volume 29 ; 1998 ; >
+      au < exists ; exists ; 1999 ; Language, Speech, and Hearing Services in Schools Volume 30 ; 1999 ; >
+      au < exists ; exists ; 2000 ; Language, Speech, and Hearing Services in Schools Volume 31 ; 2000 ; >
+      au < exists ; exists ; 2001 ; Language, Speech, and Hearing Services in Schools Volume 32 ; 2001 ; >
+      au < exists ; exists ; 2002 ; Language, Speech, and Hearing Services in Schools Volume 33 ; 2002 ; >
+      au < exists ; exists ; 2003 ; Language, Speech, and Hearing Services in Schools Volume 34 ; 2003 ; >
+      au < exists ; exists ; 2004 ; Language, Speech, and Hearing Services in Schools Volume 35 ; 2004 ; >
+      au < exists ; exists ; 2005 ; Language, Speech, and Hearing Services in Schools Volume 36 ; 2005 ; >
+      au < exists ; exists ; 2006 ; Language, Speech, and Hearing Services in Schools Volume 37 ; 2006 ; >
+      au < exists ; exists ; 2007 ; Language, Speech, and Hearing Services in Schools Volume 38 ; 2007 ; >
+      au < exists ; exists ; 2008 ; Language, Speech, and Hearing Services in Schools Volume 39 ; 2008 ; >
+      au < exists ; exists ; 2009 ; Language, Speech, and Hearing Services in Schools Volume 40 ; 2009 ; >
+      au < exists ; exists ; 2010 ; Language, Speech, and Hearing Services in Schools Volume 41 ; 2010 ; >
+      au < exists ; exists ; 2011 ; Language, Speech, and Hearing Services in Schools Volume 42 ; 2011 ; >
+      au < exists ; exists ; 2012 ; Language, Speech, and Hearing Services in Schools Volume 43 ; 2012 ; >
+      au < exists ; exists ; 2013 ; Language, Speech, and Hearing Services in Schools Volume 44 ; 2013 ; >
+      au < exists ; exists ; 2014 ; Language, Speech, and Hearing Services in Schools Volume 45 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Language, Speech, and Hearing Services in Schools Volume 46 ; 2015 ; >
+
+  }
+
+}
+
