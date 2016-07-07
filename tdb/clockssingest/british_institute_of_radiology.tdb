@@ -157,7 +157,7 @@
       param[journal_id] = bjrcr
 
       au < crawling ; exists ; 2015 ; BJR|case reports Volume 1 ; 1 ; >
-      au < testing ; exists ; 2016 ; BJR|case reports Volume 2 ; 2 ; >
+      au < ready ; exists ; 2016 ; BJR|case reports Volume 2 ; 2 ; >
 
   }
 
@@ -235,7 +235,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; Dentomaxillofacial Radiology Volume 42 ; 42 ; >
       au < crawling ; exists ; 2014 ; Dentomaxillofacial Radiology Volume 43 ; 43 ; >
       au < crawling ; exists ; 2015 ; Dentomaxillofacial Radiology Volume 44 ; 44 ; >
-      au < testing ; exists ; 2016 ; Dentomaxillofacial Radiology Volume 45 ; 45 ; >
+      au < ready ; exists ; 2016 ; Dentomaxillofacial Radiology Volume 45 ; 45 ; >
 
     }
 
