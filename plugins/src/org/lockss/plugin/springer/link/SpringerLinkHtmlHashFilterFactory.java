@@ -75,6 +75,7 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tag("input"),
       HtmlNodeFilters.tag("head"),
       HtmlNodeFilters.tag("aside"),
+      HtmlNodeFilters.tag("footer"),
       // filter out comments
       HtmlNodeFilters.comment(),
 
@@ -83,6 +84,7 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
       
       //footer
       HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "footer"),
       
       //more links to pdf and article
       HtmlNodeFilters.tagWithAttribute("div", "class", "bar-dock"),
@@ -114,7 +116,7 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttribute("div", "id", "crossMark"),
       HtmlNodeFilters.tagWithAttribute("div", "class", "banner"),
       
-      HtmlNodeFilters.tagWithAttribute("p", "class", "skip-to-links"),   
+      HtmlNodeFilters.tagWithAttribute("p", "class", "skip-to-links"),
 
       // button - let's get rid of all of them...
       HtmlNodeFilters.tag("button"),
