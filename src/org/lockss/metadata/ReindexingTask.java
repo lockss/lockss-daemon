@@ -157,15 +157,21 @@ public class ReindexingTask extends StepTask {
     this.ae = theAe;
     this.auName = au.getName();
     this.auId = au.getAuId();
-    this.auNoSubstance = AuUtil.getAuState(au).hasNoSubstance();
-    dbManager = LockssDaemon.getLockssDaemon().getDbManager();
-    mdManager = LockssDaemon.getLockssDaemon().getMetadataManager();
-    mdManagerSql = mdManager.getMetadataManagerSql();
 
     isAuContentFromWs =
 	LockssDaemon.getLockssDaemon().getPluginManager().isAuContentFromWs();
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "isAuContentFromWs = " + isAuContentFromWs);
+
+    if (isAuContentFromWs) {
+      this.auNoSubstance = false;
+    } else {
+      this.auNoSubstance = AuUtil.getAuState(au).hasNoSubstance();
+    }
+
+    dbManager = LockssDaemon.getLockssDaemon().getDbManager();
+    mdManager = LockssDaemon.getLockssDaemon().getMetadataManager();
+    mdManagerSql = mdManager.getMetadataManagerSql();
 
     // The accumulator of article metadata.
     emitter = new ReindexingEmitter();

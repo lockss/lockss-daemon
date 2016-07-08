@@ -81,12 +81,15 @@ public class BaseCachedUrlSet implements CachedUrlSet {
     this.au = owner;
     plugin = owner.getPlugin();
     theDaemon = plugin.getDaemon();
-    repository = theDaemon.getLockssRepository(owner);
-    nodeManager = theDaemon.getNodeManager(owner);
 
     isAuContentFromWs = theDaemon.getPluginManager().isAuContentFromWs();
     if (logger.isDebug3())
       logger.debug3(DEBUG_HEADER + "isAuContentFromWs = " + isAuContentFromWs);
+
+    if (!isAuContentFromWs) {
+      repository = theDaemon.getLockssRepository(owner);
+      nodeManager = theDaemon.getNodeManager(owner);
+    }
   }
 
   /**
@@ -173,6 +176,17 @@ public class BaseCachedUrlSet implements CachedUrlSet {
   }
 
   public Iterator flatSetIterator() {
+    final String DEBUG_HEADER = "flatSetIterator(): ";
+    if (logger.isDebug3())
+      logger.debug3(DEBUG_HEADER + "isAuContentFromWs = " + isAuContentFromWs);
+    // Check whether the content is obtained via web services instead of the
+    // repository.
+    if (isAuContentFromWs) {
+      // Yes: It does not have children.
+      return CollectionUtil.EMPTY_ITERATOR;
+    }
+
+    // No.
     if (spec.isSingleNode()) {
       return CollectionUtil.EMPTY_ITERATOR;
     }

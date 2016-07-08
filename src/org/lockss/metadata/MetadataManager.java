@@ -72,6 +72,7 @@ import org.lockss.util.Constants;
 import org.lockss.util.KeyPair;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
+import org.lockss.util.TimeBase;
 import org.lockss.util.PatternIntMap;
 
 /**
@@ -1359,9 +1360,24 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *           if any problem occurred accessing the database.
    */
   void updateAuLastExtractionTime(ArchivalUnit au, Connection conn,
-				  Long auMdSeq)
-      throws DbException {
-    mdManagerSql.updateAuLastExtractionTime(au, conn, auMdSeq);
+      Long auMdSeq) throws DbException {
+    final String DEBUG_HEADER = "updateAuLastExtractionTime(): ";
+    // Determine whether content is obtained via web services, not from the
+    // local repository.
+    boolean isAuContentFromWs = pluginMgr.isAuContentFromWs();
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "isAuContentFromWs = " + isAuContentFromWs);
+
+    long now = TimeBase.nowMs();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "now = " + now);
+
+    // Check whether the local repository is used.
+    if (!isAuContentFromWs) {
+      // Yes.
+      AuUtil.getAuState(au).setLastMetadataIndex(now);
+    }
+
+    mdManagerSql.updateAuLastExtractionTime(conn, auMdSeq, now);
     pendingAusCount = mdManagerSql.getEnabledPendingAusCount(conn);
   }
 
@@ -4806,12 +4822,23 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       throw new IllegalArgumentException(message);
     }
 
-    try {
-      getDaemon().startOrReconfigureAuManagers(au, auConf);
-    } catch (Exception e) {
-      String message = "Error configuring managers for archival unit " + auId;
-      log.error(message, e);
-      throw new IllegalArgumentException(message);
+    // Determine whether content is obtained via web services, not from the
+    // local repository.
+    boolean isAuContentFromWs = pluginMgr.isAuContentFromWs();
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "isAuContentFromWs = " + isAuContentFromWs);
+
+    // Check whether the local repository is used.
+    if (!isAuContentFromWs) {
+      // Yes.
+      try {
+	getDaemon().startOrReconfigureAuManagers(au, auConf);
+      } catch (Exception e) {
+	String message =
+	    "Error configuring managers for archival unit " + auId;
+	log.error(message, e);
+	throw new IllegalArgumentException(message);
+      }
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "au = " + au);

@@ -50,12 +50,10 @@ import org.lockss.db.PkNamePair;
 import org.lockss.metadata.AuMetadataDetail.ArticleMetadataDetail;
 import org.lockss.metadata.MetadataManager.PrioritizedAuId;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.PluginManager;
 import org.lockss.util.KeyPair;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
-import org.lockss.util.TimeBase;
 
 public class MetadataManagerSql {
   private static final Logger log = Logger.getLogger(MetadataManagerSql.class);
@@ -2562,25 +2560,22 @@ public class MetadataManagerSql {
   /**
    * Updates the timestamp of the last extraction of an Archival Unit metadata.
    * 
-   * @param au
-   *          The ArchivalUnit whose time to update.
    * @param conn
    *          A Connection with the database connection to be used.
    * @param auMdSeq
    *          A Long with the identifier of the Archival Unit metadata.
+   * @param now
+   *          A long with the timestamp of the metadata extraction to be used.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  void updateAuLastExtractionTime(ArchivalUnit au, Connection conn,
-      Long auMdSeq) throws DbException {
+  void updateAuLastExtractionTime(Connection conn, Long auMdSeq, long now)
+      throws DbException {
     final String DEBUG_HEADER = "updateAuLastExtractionTime(): ";
     if (log.isDebug2()) {
-      log.debug2(DEBUG_HEADER + "au = " + au);
       log.debug2(DEBUG_HEADER + "auMdSeq = " + auMdSeq);
+      log.debug2(DEBUG_HEADER + "now = " + now);
     }
-
-    long now = TimeBase.nowMs();
-    AuUtil.getAuState(au).setLastMetadataIndex(now);
 
     PreparedStatement updateAuLastExtractionTime =
 	dbManager.prepareStatement(conn, UPDATE_AU_MD_EXTRACT_TIME_QUERY);
@@ -2592,10 +2587,9 @@ public class MetadataManagerSql {
     } catch (SQLException sqle) {
       String message = "Cannot update the AU extraction time";
       log.error(message, sqle);
-      log.error("au = '" + au + "'.");
       log.error("SQL = '" + UPDATE_AU_MD_EXTRACT_TIME_QUERY + "'.");
-      log.error("now = " + now + ".");
       log.error("auMdSeq = '" + auMdSeq + "'.");
+      log.error("now = " + now + ".");
       throw new DbException(message, sqle);
     } finally {
       DbManager.safeCloseStatement(updateAuLastExtractionTime);
