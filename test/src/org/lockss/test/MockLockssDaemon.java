@@ -38,7 +38,6 @@ import org.lockss.crawler.CrawlManager;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.StatusService;
 import org.lockss.db.DbManager;
-import org.lockss.exporter.counter.CounterReportsManager;
 import org.lockss.hasher.HashService;
 import org.lockss.mail.MailService;
 import org.lockss.metadata.MetadataManager;
@@ -91,7 +90,6 @@ public class MockLockssDaemon extends LockssDaemon {
   IcpManager icpManager = null;
   ClockssParams clockssParams = null;
   DbManager dbManager = null;
-  CounterReportsManager counterReportsManager = null;
   Cron cron = null;
   EntitlementRegistryClient entitlementRegistryClient = null;
   private boolean suppressStartAuManagers = true;
@@ -145,7 +143,6 @@ public class MockLockssDaemon extends LockssDaemon {
     statusService = null;
     icpManager = null;
     dbManager = null;
-    counterReportsManager = null;
     cron = null;
 
     //super.stopDaemon();
@@ -518,18 +515,6 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * return the COUNTER reports manager instance
-   * @return the CounterReportsManager
-   */
-  public CounterReportsManager getCounterReportsManager() {
-    if (counterReportsManager == null) {
-      counterReportsManager = (CounterReportsManager)newManager(LockssDaemon.COUNTER_REPORTS_MANAGER);
-      managerMap.put(LockssDaemon.COUNTER_REPORTS_MANAGER, counterReportsManager);
-    }
-    return counterReportsManager;
-  }
-
-  /**
    * return the cron instance
    * @return the Cron
    */
@@ -789,15 +774,6 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setDbManager(DbManager dbMan) {
     dbManager = dbMan;
     managerMap.put(LockssDaemon.DB_MANAGER, dbManager);
-  }
-
-  /**
-   * Set the CounterReportsManager
-   * @param counterReportsMan the new manager
-   */
-  public void setCounterReportsManager(CounterReportsManager counterReportsMan) {
-    counterReportsManager = counterReportsMan;
-    managerMap.put(LockssDaemon.COUNTER_REPORTS_MANAGER, counterReportsManager);
   }
 
   /**

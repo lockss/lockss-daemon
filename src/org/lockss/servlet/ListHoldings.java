@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,13 +39,6 @@ import org.lockss.config.*;
 import org.lockss.config.TdbUtil.ContentScope;
 import org.lockss.config.TdbUtil.ContentType;
 import org.lockss.daemon.AuHealthMetric;
-import org.lockss.exporter.biblio.BibliographicItem;
-import org.lockss.exporter.kbart.*;
-import org.lockss.exporter.kbart.KbartExporter.OutputFormat;
-import org.lockss.exporter.kbart.ReportFormat.ReportDataFormat;
-import org.lockss.exporter.kbart.CoverageNotesFormat;
-import static org.lockss.exporter.kbart.KbartExportFilter.*;
-import org.lockss.exporter.kbart.KbartTitle.Field;
 import org.lockss.metadata.MetadataDatabaseUtil;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
@@ -93,7 +82,7 @@ public class ListHoldings extends LockssServlet {
   static final String PREFIX = Configuration.PREFIX + "listHoldings.";
 
   private static final String BREAK = "<br/><br/>";
-  private static final String ENCODING = KbartExporter.DEFAULT_ENCODING;
+  private static final String ENCODING = null;
   /** Create a footnote for platforms that don't support the health metric. */
   private String notAvailFootnote;
 
@@ -163,44 +152,31 @@ public class ListHoldings extends LockssServlet {
 
   // ----------------------------- OPTION DEFAULTS -----------------------------
   // These are used in the state variables representing parameters of the export
-  /** Default output format is HTML. */
-  static final OutputFormat OUTPUT_DEFAULT = OutputFormat.HTML;
-  /** Default report format is KBART. */
-  static final ReportDataFormat REPORT_DEFAULT = ReportDataFormat.KBART;
   /** Default scope is the default in the scope enum. */
   static final ContentScope SCOPE_DEFAULT = ContentScope.DEFAULT_SCOPE;
   /** Default type is the default in the type enum. */
   static final ContentType TYPE_DEFAULT = ContentType.DEFAULT_TYPE;
-  /** Default coverage notes format is year(volume) ranges. */
-  static final CoverageNotesFormat COVERAGE_NOTES_DEFAULT = CoverageNotesFormat.YEAR_VOLUME;
 
-  /** Default field selection and ordering is KBART. */
-  static final ColumnOrdering FIELD_ORDERING_DEFAULT = CustomColumnOrdering.getDefaultOrdering();
   /** Default approach to omitting empty fields - inherited from the exporter base class. */
-  static final Boolean OMIT_EMPTY_COLUMNS_BY_DEFAULT = KbartExporter.omitEmptyFieldsByDefault;
+  static final Boolean OMIT_EMPTY_COLUMNS_BY_DEFAULT = null;
   /** Default approach to omitting header row is false (do not omit). */
-  static final Boolean OMIT_HEADER_ROW_BY_DEFAULT = KbartExporter.omitHeaderRowByDefault;
+  static final Boolean OMIT_HEADER_ROW_BY_DEFAULT = null;
   /** Default approach to excluding id-less titles. */
-  static final Boolean EXCLUDE_NOID_TITLES_BY_DEFAULT = KbartExporter.excludeNoIdTitlesByDefault;
+  static final Boolean EXCLUDE_NOID_TITLES_BY_DEFAULT = null;
   /** Default approach to showing health ratings - inherited from the exporter base class. */
-  static final Boolean SHOW_HEALTH_RATINGS_BY_DEFAULT = KbartExporter.showHealthRatingsByDefault;
+  static final Boolean SHOW_HEALTH_RATINGS_BY_DEFAULT = null;
 
   // -------------------------- STATE FOR URL PARAMS --------------------------
   // Bits of state that must be reset to defaults in resetLocals()
   /** Holdings scope option. */
   private ContentScope selectedScope = ContentScope.DEFAULT_SCOPE;
   private ContentType selectedType = ContentType.DEFAULT_TYPE;
-  private OutputFormat outputFormat = OUTPUT_DEFAULT;
-  private ReportDataFormat reportDataFormat = REPORT_DEFAULT;
-  private CoverageNotesFormat coverageNotesFormat = COVERAGE_NOTES_DEFAULT;
 
   // ---------------------------- TRANSITORY STATE ----------------------------
   // Bits of state that must be reset in resetLocals()
   /** A record of the last manual ordering which was applied to an export;
    * maintained while the servlet is handling a request. */
   private String lastManualOrdering;
-  /** Manually specified custom field list. */
-  private ColumnOrdering customColumnOrdering;
   /** Whether to do an export - set based on the submitted parameters. */
   private boolean doExport = false;
   // --------------------------------------------------------------------------
@@ -219,14 +195,10 @@ public class ListHoldings extends LockssServlet {
     errMsg = null;
     statusMsg = null;
     lastManualOrdering = null;
-    customColumnOrdering = null;
     doExport = false;
     // Reset export parameters to defaults
     selectedScope = ContentScope.DEFAULT_SCOPE;
     selectedType = ContentType.DEFAULT_TYPE;
-    outputFormat = OUTPUT_DEFAULT;
-    reportDataFormat = REPORT_DEFAULT;
-    coverageNotesFormat = COVERAGE_NOTES_DEFAULT;
     // Finally reset super locals
     super.resetLocals();
   }
@@ -287,144 +259,6 @@ public class ListHoldings extends LockssServlet {
       String fn = i18n.tr("Not available on this platform.");
       notAvailFootnote = addFootnote(fn);
     }
-    
-    // Get a set of custom opts, constructed with defaults if necessary
-    KbartCustomOptions customOpts = getSessionCustomOpts();
-
-    // ---------- Get parameters ----------
-    Properties params = getParamsAsProps();
-    // Output format parameters (from URL)
-    // Set the output format if specified (do not set a default as
-    // this param indictates whether an export has been requested).
-    outputFormat = OutputFormat.byName(params.getProperty(KEY_OUTPUT_FORMAT));
-    // Set other arguments to defaults unless specified
-    reportDataFormat = ReportDataFormat.byName(params.getProperty(KEY_REPORT_FORMAT), REPORT_DEFAULT);
-    coverageNotesFormat = CoverageNotesFormat.byName(params.getProperty(KEY_COVERAGE_NOTES_FORMAT), COVERAGE_NOTES_DEFAULT);
-    selectedScope = ContentScope.byName(params.getProperty(KEY_TITLE_SCOPE), SCOPE_DEFAULT);
-    selectedType = ContentType.byName(params.getProperty(KEY_TITLE_TYPE), TYPE_DEFAULT);
-
-    // Set compression from the output format
-    //if (outputFormat!=null) this.isCompress = outputFormat.isCompressible();
-
-    // Omit empty columns - use the option supplied from the form, or the
-    // default if one of the other outputs was chosen
-    boolean omitEmptyColumns = Boolean.valueOf(
-        params.getProperty(KEY_OMIT_EMPTY_COLS,
-            OMIT_EMPTY_COLUMNS_BY_DEFAULT.toString())
-    );
-    // Omit header - use the option supplied from the form, or the default
-    boolean omitHeader = Boolean.valueOf(
-        params.getProperty(KEY_OMIT_HEADER,
-            OMIT_HEADER_ROW_BY_DEFAULT.toString())
-    );
-    // Omit header - use the option supplied from the form, or the default
-    boolean excludeNoIdTitles = Boolean.valueOf(
-        params.getProperty(KEY_EXCLUDE_NOID_TITLES,
-            EXCLUDE_NOID_TITLES_BY_DEFAULT.toString())
-    );
-    // Show health ratings - use the option supplied from the form, or the
-    // default if one of the other outputs was chosen
-    boolean showHealthRatings = Boolean.valueOf( 
-	params.getProperty(KEY_SHOW_HEALTH,
-            SHOW_HEALTH_RATINGS_BY_DEFAULT.toString())
-    );
-    
-    // Custom HTML parameters (from custom form)
-    String action = params.getProperty(ACTION_TAG, "");
-    // Manual custom ordering received from the text area
-    String manualOrdering = params.getProperty(KEY_CUSTOM_ORDERING_LIST);
-    // Last manual ordering (only received from customisation page, as ordering_list)
-    // We set it if available, otherwise set it to the current ordering
-    lastManualOrdering = params.getProperty(KEY_CUSTOM_ORDERING_PREVIOUS_MANUAL, manualOrdering);
-    // Set lastManualOrdering unless a reset was requested, in which case we need the old value.
-    //if (!action.equals(ACTION_CUSTOM_RESET)) lastManualOrdering = manualOrdering;
-    // Set custom ordering to default
-    this.customColumnOrdering = FIELD_ORDERING_DEFAULT;
-    
-    // ---------- Interpret parameters ----------
-    // Is this a custom output? Show custom options or apply to an export.
-    // Set isCustom based on "customise" submit action
-    // or "isCustom" flag in custom form; default false.
-    boolean isCustom =
-        (!StringUtil.isNullString(action) && action.equals(ACTION_CUSTOM))
-            || Boolean.valueOf(params.getProperty(KEY_CUSTOM, "false"));
-
-    // Are we exporting? Export button pressed, or custom output and OK/cancel.
-    // OR Minimal args (outputFormat) configured and no action.
-    this.doExport = (outputFormat!=null && StringUtil.isNullString(action)) ||
-        action.equals(ACTION_EXPORT) ||
-        (isCustom &&
-            (action.equals(ACTION_CUSTOM_OK) || action.equals(ACTION_CUSTOM_CANCEL))
-        );
-
-    // ---------- Process parameters and show page ----------
-    // If custom output, set the field ordering and omit flag
-    if (isCustom) {
-      // If custom export requested (from the output page) or a customisation was 
-      // okayed, set the custom ordering to the supplied manual ordering. If an 
-      // export is validated, set the last manual ordering.
-      if (action.equals(ACTION_HIDE_CUSTOM_EXPORT)) {
-        // hide custom form
-        isCustom = false;
-      } else if (action.equals(ACTION_CUSTOM) ||
-                 action.equals(ACTION_CUSTOM_OK)) {
-        // Try and parse the manual ordering into a list of valid field names
-        setCustomColumnOrdering(manualOrdering);
-        if (doExport) lastManualOrdering = manualOrdering;
-      }
-      // Cancel the customisation and set the ordering to the previously
-      // applied value (from the session)
-      else if (action.equals(ACTION_CUSTOM_CANCEL)) {
-        setCustomColumnOrdering(manualOrdering);
-        if (doExport) manualOrdering = lastManualOrdering;
-        omitEmptyColumns = customOpts.isOmitEmptyColumns();
-        omitHeader = customOpts.isOmitHeader();
-        excludeNoIdTitles = customOpts.isExcludeNoIdTitles();
-      }
-      // Reset the ordering customisation to the previous value
-      else if (action.equals(ACTION_CUSTOM_RESET)) {
-        //customFieldOrdering = COLUMN_ORDERING_DEFAULT;
-        setCustomColumnOrdering(lastManualOrdering);
-        //omitEmptyColumns = OMIT_EMPTY_COLUMNS_BY_DEFAULT;
-      }
-      
-      // Create an object encapsulating the custom HTML options, and store it
-      // in the session.
-      customOpts = new KbartCustomOptions(omitEmptyColumns, omitHeader,
-          excludeNoIdTitles,
-          showHealthRatings, customColumnOrdering);
-
-      putSessionCustomOpts(customOpts);
-    }
-    // If this is not a valid custom or one-per-line output, reset the
-    // session customisation
-    else resetSessionOptions();
-
-    // Just display the page if there is no export happening
-    if (!doExport) {
-      log.debug("No export requested; showing "+(isCustom?"custom":"main")+" options");
-      // Show the appropriate half of the page depending on whether we are customising
-      displayPage(isCustom);
-      return;
-    }
-
-    // Start timing the export here, as more happens in createExporter than in doExport!
-    long s = TimeBase.nowMs();
-    // Now we are doing an export - create the exporter
-    KbartExporter kexp = createExporter(outputFormat, selectedScope,
-        selectedType, reportDataFormat, coverageNotesFormat);
-
-    // Make sure the exporter was properly instantiated
-    if (kexp==null) {
-      log.debug("No exporter; showing main options");
-      displayPage();
-      return;
-    }
-
-    // Do the export
-    doExport(kexp);
-    log.debug("Export took approximately "
-        + StringUtil.timeIntervalToString(TimeBase.msSince(s)));
   }
 
   /**
@@ -435,98 +269,7 @@ public class ListHoldings extends LockssServlet {
    */
   private boolean setCustomColumnOrdering(String ordering) {
     boolean success = false;
-    try {
-      this.customColumnOrdering = new CustomColumnOrdering(ordering);
-      success = true;
-    } catch (CustomColumnOrdering.CustomColumnOrderingException e) {
-      errMsg = e.getLocalizedMessage();
-      success = false;
-      doExport = false;
-    }
     return success;
-  }
-  
-  /**
-   * Make an exporter to be used in an export; this involves extracting and
-   * converting titles from the TDB and passing to the exporter's constructor.
-   * The exporter is configured with the basic settings; further configuration 
-   * may be necessary for custom exports.
-   * 
-   * @param outputFormat the output format for the exporter
-   * @param scope the scope of titles to export
-   * @param reportDataFormat the format of the report
-   * @param coverageNotesFormat the format of the coverage notes field
-   * @return a usable exporter, or null if one could not be created
-   */
-  private KbartExporter createExporter(OutputFormat outputFormat,
-                                       ContentScope scope, ContentType type,
-                                       ReportDataFormat reportDataFormat,
-                                       CoverageNotesFormat coverageNotesFormat) {
-    // The following counts the number of TdbTitles informing the export, by
-    // processing the list of AUs in the given scope. It is provided as 
-    // information in the export, but is actually a little meaningless and 
-    // should probably be omitted.
-    int numTdbTitles = TdbUtil.getNumberTdbTitles(scope, type);
-
-    KbartCustomOptions opts = getSessionCustomOpts(false);
-
-    // The list of KbartTitles to export; each title represents a TdbTitle
-    // containing particular types of AU, over a particular range of coverage.
-    List<KbartTitle> titles = null;
-    try {
-      titles = getKbartTitlesForExport(scope, type);
-    } catch (KbartConverter.ConversionException e) {
-      errMsg = i18n.tr("There was an internal error converting the titles.");
-      return null;
-    }
-    //KbartTitleIterator titles = getKbartTitlesForExport(scope);
- 
-    /*log.info(String.format("Creating exporter for %d titles in scope %s\n",
-	titles.size(), scope));*/
-    log.info(
-        i18n.tr("Creating exporter for titles of type {0} in scope {1}\n",
-            type, scope)
-    );
-    
-    // Return if there are no titles
-    errMsg = i18n.tr("No {0} titles of type {1} for export.", scope, type);
-    if (titles.isEmpty()) {
-      return null;
-    }
-
-    // Override the customisation options according to this ReportDataFormat's
-    // preferences.
-    reportDataFormat.overrideCustomOptions(opts);
-    if (reportDataFormat.hasCoverageNotesFormat())
-      coverageNotesFormat = reportDataFormat.getCoverageNotesFormat();
-    if (reportDataFormat.hasOutputFormat())
-      outputFormat = reportDataFormat.getOutputFormat();
-
-    // Process the titles using a ReportFormat, to add supplementary data or
-    // amalgamate records as required
-    titles = ReportFormat.process(titles, coverageNotesFormat, reportDataFormat);
-
-    // Create a filter
-    KbartExportFilter filter;
-    if (opts !=null) {
-      filter = new KbartExportFilter(titles, opts.getColumnOrdering(),
-          opts.isOmitEmptyColumns(), opts.isOmitHeader(),
-          opts.isExcludeNoIdTitles(),
-          opts.isShowHealthRatings());
-    } else {
-      filter = new KbartExportFilter(titles);
-    }
-
-    // Create and configure an exporter
-    KbartExporter kexp = outputFormat.makeExporter(titles, filter);
-    kexp.setTdbTitleTotal(numTdbTitles);
-    kexp.setContentScope(scope);
-    
-    // Set an HTML form for the HTML output if necessary
-    if (kexp.getOutputFormat().isHtml()) {
-      kexp.setHtmlCustomForm(makeHtmlCustomForm());
-    }
-    return kexp;
   }
   
   /**
@@ -560,68 +303,6 @@ public class ListHoldings extends LockssServlet {
   }*/
 
   /**
-   * Get the list of TdbTitles or AUs in the given scope, and turn them into
-   * KbartTitles which represent the coverage ranges available for titles in
-   * the scope. It is also now possible to specify a ContentType in order to
-   * filter the list on books or journals.
-   *
-   * @param scope the scope of titles to create
-   * @param type the type of titles to include
-   * @return a list of KbartTitles
-   * @throws ConversionException if the conversion does not successfully complete
-   */
-  private List<KbartTitle> getKbartTitlesForExport(ContentScope scope,
-                                                   ContentType type)
-      throws KbartConverter.ConversionException {
-    List<KbartTitle> titles;
-    // If we are exporting in a scope where ArchivalUnits are not available
-    // (that is, in particular, the "Available" report), act on a list of
-    // TdbTitles, with their full AU ranges.
-    if (!scope.areAusAvailable) {
-      Collection<TdbTitle> tdbTitles = TdbUtil.getTdbTitles(scope, type);
-      titles = KbartConverter.convertTitles(tdbTitles);
-      // TODO Sort the TdbTitles first if we are expecting an iterator back (??)
-      // TODO titleIterator = new KbartConverter.TdbTitleKbartTitleIterator(tdbTitles.iterator());
-    }
-    // Otherwise we need to look at the lists of individual AUs in order to
-    // calculate ranges
-    else {
-      // Whether the output will include any range fields; if there is no custom
-      // ordering, then the default will be used, which will include range fields
-      boolean rangeFieldsIncluded = KbartExportFilter.includesRangeFields(
-          getSessionCustomOpts().getColumnOrdering().getFields());
-      // If we are generating a collected report from MetadataDatabase data
-      if (scope == ContentScope.COLLECTED && useMetadataForPreserved()) {
-        // try listing collected content from the metadata database first;
-        // list of bibliographic items is assumed to be sorted by ISSN
-        // TODO (PJG) note: should return AUs from DB and
-        // show aggregate health of AU for each title
-        List<BibliographicItem> items =
-            TdbUtil.filterBibliographicItemsByType(
-                MetadataDatabaseUtil.getBibliographicItems(),
-                type);
-        log.debug2("Found bibliographic items: " + items.size());
-        if (items.size() > 0) {
-          // XXX (NM) Note I moved the conversion algorithm to KbartConverter
-          // to take advantage of parallelisation:
-          return KbartConverter.convertBibliographicItems(items);
-        }
-      }
-      // list content from the TDB title database
-      Collection<ArchivalUnit> aus = TdbUtil.getAus(scope, type);
-      Map<TdbTitle, List<ArchivalUnit>> map = TdbUtil.mapTitlesToAus(aus);
-      log.debug2("Found AUs: " + map.size());
-      titles = KbartConverter.convertTitleAus(map.values(), getShowHealthRatings(), rangeFieldsIncluded);
-      //TODO titleIterator = new KbartConverter.AuKbartTitleIterator(
-      // map.values().iterator(), getShowHealthRatings(), rangeFieldsIncluded);
-
-    }
-    // TODO Sort here if not performed in KbartConverter
-    log.debug2("Found titles: " + titles.size());
-    return titles;
-  }
-
-  /**
    * Assign an HTML form of custom options to the exporter if necessary.
    * @param kexp the exporter
    */
@@ -632,64 +313,12 @@ public class ListHoldings extends LockssServlet {
   }*/
 
   /**
-   * Use the supplied exporter to export the data to the given output stream.
-   *
-   * @param kexp an exporter to use for export
-   * @param out an output stream for the export
-   * @throws IOException
-   */
-  public void doExport(KbartExporter kexp, OutputStream out) throws IOException {
-    kexp.export(out);
-    out.flush();
-    out.close();
-  }
-
-  /**
-   * Perform an export of the data to the selected output stream. This 
-   * involves getting a TDB record from the system config, converting 
-   * the appropriate sections of it into KBART format, then emitting
-   * that title by title.
-   * 
-   * @param kexp an exporter to use for export
-   * @throws IOException
-   */
-  private void doExport(KbartExporter kexp) throws IOException {
-    OutputFormat outputFormat = kexp.getOutputFormat();
-    // Set the content to be a downloadable file if appropriate 
-    if (outputFormat.asFile()) {
-      String filename = kexp.getFilename();
-      String theFile = kexp.isCompress() ? filename+".zip" : filename;
-      resp.setHeader( "Content-Disposition", "attachment; filename=" + theFile );
-    }
-
-    // Set content headers based on the output format
-    resp.setContentType(
-        (kexp.isCompress() ? "application/zip" : outputFormat.getMimeType()) +
-            ";charset="+ENCODING);
-    resp.setCharacterEncoding(ENCODING);
-    //resp.setContentLength(  );
-
-    // Export to the response OutputStream
-    doExport(kexp, resp.getOutputStream());
-    
-    // Check errors (Note: the response has already been written by here, so
-    // there is no point setting the err/status msgs)
-    List<String> errs = kexp.getErrors();
-    log.debug("errs: " + errs);
-    if (!errs.isEmpty()) {
-      errMsg = StringUtil.separatedString(errs, "<br>");
-    } else {
-      statusMsg = "File(s) written";
-    }
-  }
-
-  /**
    * Constructs a string representing the direct update URL of the default output.
    * 
    * @return a string URL indicating the direct address for default output
    */
   public String getDefaultUpdateUrl() {
-    return srvAbsURL(myServletDescr(), "format=" + OUTPUT_DEFAULT.name());
+    return null;
   }
   
   /**
@@ -827,10 +456,6 @@ public class ListHoldings extends LockssServlet {
       }
       // Show the option to customise the export details, which are KBART by default:
       //form.add(new Input(Input.Hidden, KEY_TITLE_SCOPE, selectedScope.name()));
-      form.add(new Input(Input.Hidden, KEY_COVERAGE_NOTES_FORMAT, 
-                         COVERAGE_NOTES_DEFAULT.toString()));
-      form.add(new Input(Input.Hidden, KEY_CUSTOM_ORDERING_LIST, 
-                         getOrderingAsCustomFieldList(FIELD_ORDERING_DEFAULT)));
       form.add(new Input(Input.Hidden, KEY_OMIT_EMPTY_COLS,
           htmlInputTruthValue(false)));
       form.add(new Input(Input.Hidden, KEY_OMIT_HEADER,
@@ -864,16 +489,6 @@ public class ListHoldings extends LockssServlet {
     tab.newRow();
     tab.newCell("align=\"center\" valign=\"middle\"");
     tab.add(i18n.tr("Output: "));
-
-    for (OutputFormat fmt : OutputFormat.values()) {
-      boolean selected = outputFormat!=null ?
-          fmt==outputFormat : fmt==OUTPUT_DEFAULT;
-
-      tab.add(ServletUtil.radioButton(this, KEY_OUTPUT_FORMAT, fmt.name(),
-          fmt.getLabel(), selected));
-      tab.add(addFootnote(fmt.getFootnote()));
-      tab.add(" &nbsp; ");
-    }
   }
 
   /**
@@ -885,16 +500,6 @@ public class ListHoldings extends LockssServlet {
     tab.newRow();
     tab.newCell("align=\"center\" valign=\"middle\"");
     tab.add(i18n.tr("Format: "));
-
-    for (ReportDataFormat fmt : ReportDataFormat.values()) {
-      boolean selected = reportDataFormat!=null ?
-          fmt==reportDataFormat : fmt==REPORT_DEFAULT;
-
-      tab.add(ServletUtil.radioButton(this, KEY_REPORT_FORMAT, fmt.name(),
-          fmt.getLabel(), selected));
-      tab.add(addFootnote(fmt.getFootnote()));
-      tab.add(" &nbsp; ");
-    }
   }
 
   /**
@@ -907,18 +512,6 @@ public class ListHoldings extends LockssServlet {
     //tab.add("Format: ");
     tab.add("<br/>"+i18n.tr("Choose a format for ranges in the coverage field:")+"<br/>");
     int count = 0;
-    for (CoverageNotesFormat fmt : CoverageNotesFormat.values()) {
-      // Start a new row every 3 options
-      if (count++%3==0) {
-        tab.newRow();
-        tab.newCell("align=\"center\" valign=\"middle\"");
-      }
-      boolean selected = coverageNotesFormat!=null ?
-          fmt==coverageNotesFormat : fmt==COVERAGE_NOTES_DEFAULT;
-      tab.add(ServletUtil.radioButton(this, KEY_COVERAGE_NOTES_FORMAT, fmt.name(),
-          fmt.label, selected));
-      tab.add(" &nbsp; ");
-    }
   }
 
 
@@ -928,15 +521,6 @@ public class ListHoldings extends LockssServlet {
   private static Table getKbartFieldLegend() {
     Table tab = new Table();
     //tab.style("border: 1px solid black;");
-    for (Field f: Field.values()) {
-      tab.newRow();
-      tab.newCell("align=\"center\"");
-      //if (Field.idFields.contains(f)) tab.add(smallFont("ID"));
-      String lab = f.getLabel();
-      if (Field.idFields.contains(f)) lab = "<b>"+lab+"</b>";
-      tab.addCell(smallFont(lab));
-      tab.addCell(smallFont(f.getDescription()));
-    }
     return tab;
   }
 
@@ -1026,9 +610,6 @@ public class ListHoldings extends LockssServlet {
    * @return an HTML form 
    */
   private void layoutFormCustomOpts(Composite comp) {
-    
-    // Get the opts from the session
-    KbartCustomOptions opts = getSessionCustomOpts();
 
     // Add a format parameter
     //comp.add(new Input(Input.Hidden, KEY_FORMAT, OutputFormat.HTML.name()));
@@ -1068,20 +649,11 @@ public class ListHoldings extends LockssServlet {
     
     // Add a text area of an appropriate size
     int taCols = 25; // this should be the longest field width
-    int taLines = Field.values().length+1;
     tab.add(i18n.tr("Field ordering")+"<br/>");
-    tab.add(new TextArea(KEY_CUSTOM_ORDERING_LIST, 
-        getOrderingAsCustomFieldList(opts.getColumnOrdering())).setSize(taCols, taLines));
     // Omit empty columns option
     tab.add("<br/>");
-    tab.add(ServletUtil.checkbox(this, KEY_OMIT_EMPTY_COLS,
-        Boolean.TRUE.toString(), i18n.tr("Omit empty columns")+"<br/>",
-        opts.isOmitEmptyColumns()));
     // Omit header option
     tab.add("<br/>");
-    tab.add(ServletUtil.checkbox(this, KEY_OMIT_HEADER,
-        Boolean.TRUE.toString(), i18n.tr("Omit header row")+"<br/>",
-        opts.isOmitHeader()));
     // Exclude no-id titles option
     /*tab.add("<br/>");
     tab.add(ServletUtil.checkbox(this, KEY_EXCLUDE_NOID_TITLES,
@@ -1089,9 +661,6 @@ public class ListHoldings extends LockssServlet {
         opts.isExcludeNoIdTitles()));*/
     // Show health option if available
     if (isEnablePreserved() && getShowHealthRatings()) {
-      tab.add(ServletUtil.checkbox(this, KEY_SHOW_HEALTH,
-          Boolean.TRUE.toString(), i18n.tr("Show health ratings"),
-          opts.isShowHealthRatings(), AuHealthMetric.isSupported()));
       if (!AuHealthMetric.isSupported()) {
         tab.add(notAvailFootnote);
       } else {
@@ -1114,20 +683,6 @@ public class ListHoldings extends LockssServlet {
     
     comp.add(tab);
   }
-
-
-  /**
-   * Turn the selected ordering into a string containing a separated list of
-   * fields. Includes any custom constant field, as it uses the string labels
-   * rather than the Field list.
-   * @return
-   */
-  private static String getOrderingAsCustomFieldList(ColumnOrdering fo) {
-    return StringUtils.join(fo.getFields(),
-	CustomColumnOrdering.CUSTOM_ORDERING_FIELD_SEPARATOR);
-    /*return StringUtils.join(fo.getOrderedFields(),
-	CustomColumnOrdering.CUSTOM_ORDERING_FIELD_SEPARATOR);*/
-  }
   
   /**
    * Construct an HTML form providing a link to customisation options for output.
@@ -1141,61 +696,12 @@ public class ListHoldings extends LockssServlet {
   private Composite makeHtmlCustomForm() {
     String servletUrl = srvURL(myServletDescr());
     Composite panel = new Composite();
-    panel.add(
-        makeHtmlCustomExportFormSingleFormat(OutputFormat.HTML, I18N_ACTION_CUSTOM, ACTION_CUSTOM)
-    );
     panel.add(" &nbsp; ");
     // Provide selector for output options, and submit
-    for (OutputFormat fmt : EnumSet.complementOf(EnumSet.of(OutputFormat.HTML))) {
-      panel.add(
-          makeHtmlCustomExportFormSingleFormat(fmt, i18n.tr("Export as {0}", fmt.getLabel()), ACTION_EXPORT)
-      );
-      panel.add(" &nbsp; ");
-    }
     panel.add("<p>");
     panel.add(new Link(servletUrl, i18n.tr("Return to main title list page")));
     panel.add("</p>");
     return panel;
-  }
-
-  /**
-   * Construct an HTML form for diaply on the HTML output page, encoding all
-   * current options along with a single output format option. This
-   * provides a way to directly export the current HTML report in a different
-   * format, or to go to the customisation screen. All options are encoded as
-   * hidden parameters.
-   *
-   * @return a Jetty form
-   */
-  private Form makeHtmlCustomExportFormSingleFormat(OutputFormat outputFormat,
-                                                    String label,
-                                                    String key) {
-    // Get the opts from the session
-    KbartCustomOptions opts = getSessionCustomOpts();
-    String servletUrl = srvURL(myServletDescr());
-    Form form = ServletUtil.newForm(servletUrl);
-    form.style("margin: 0; padding: 0; display: inline");
-    // Indicate that we are expecting custom out
-    form.add(new Input(Input.Hidden, KEY_CUSTOM, "true"));
-    form.add(new Input(Input.Hidden, KEY_TITLE_SCOPE, selectedScope.name()));
-    form.add(new Input(Input.Hidden, KEY_TITLE_TYPE, selectedType.name()));
-    form.add(new Input(Input.Hidden, KEY_CUSTOM_ORDERING_LIST,
-        getOrderingAsCustomFieldList(opts.getColumnOrdering())));
-    form.add(new Input(Input.Hidden, KEY_OMIT_EMPTY_COLS,
-        htmlInputTruthValue(opts.isOmitEmptyColumns())));
-    form.add(new Input(Input.Hidden, KEY_OMIT_HEADER,
-        htmlInputTruthValue(opts.isOmitHeader())));
-    form.add(new Input(Input.Hidden, KEY_EXCLUDE_NOID_TITLES,
-        htmlInputTruthValue(opts.isExcludeNoIdTitles())));
-    form.add(new Input(Input.Hidden, KEY_SHOW_HEALTH,
-        htmlInputTruthValue(opts.isShowHealthRatings())));
-    form.add(new Input(Input.Hidden, KEY_REPORT_FORMAT, reportDataFormat.name()));
-    form.add(new Input(Input.Hidden, KEY_COVERAGE_NOTES_FORMAT, coverageNotesFormat.name()));
-    // The export format
-    form.add(new Input(Input.Hidden, KEY_OUTPUT_FORMAT, outputFormat.name()));
-    ServletUtil.layoutSubmitButton(this, form, ACTION_TAG, key, label, false, false);
-    // TODO distinguish label/value!
-    return form;
   }
 
 
@@ -1250,52 +756,13 @@ public class ListHoldings extends LockssServlet {
 
   
   protected boolean getShowHealthRatings() {
-    KbartCustomOptions opts = getSessionCustomOpts();
-    return opts == null ? SHOW_HEALTH_RATINGS_BY_DEFAULT : opts.isShowHealthRatings();
-  }
-  
-  /**
-   * Get the current custom HTML options from the session. If the cookie is not
-   * set, a new set of options is created and added to the session. This is a
-   * convenience method which does not return null.
-   * @return a CustomOptions object from the session
-   */
-  protected KbartCustomOptions getSessionCustomOpts() {
-    return getSessionCustomOpts(true); 
-  }
-
-  /**
-   * Get the current custom HTML options from the session. If the cookie is not
-   * set, then either null is returned, or a new options object is added to the 
-   * session and returned, depending on the value of <code>createIfAbsent</code>.
-   * This can be useful for testing whether custom options are available
-   *  
-   * @param createIfAbsent whether to create a new CustomOptions in the session
-   * @return a CustomOptions object from the session, or null
-   */
-  protected KbartCustomOptions getSessionCustomOpts(boolean createIfAbsent) {
-    Object o = getSession().getAttribute(SESSION_KEY_CUSTOM_OPTS);
-    if (o==null && createIfAbsent) {
-      KbartCustomOptions opts = KbartCustomOptions.getDefaultOptions();
-      putSessionCustomOpts(opts);
-      return opts;
-    }
-    return o==null ? null : (KbartCustomOptions)o;
-  }
-  
-  /**
-   * Puts the supplied custom HTML options into the session.
-   * @param opts a CustomOptions object
-   */
-  protected void putSessionCustomOpts(KbartCustomOptions opts) {
-    getSession().setAttribute(SESSION_KEY_CUSTOM_OPTS, opts);
+    return SHOW_HEALTH_RATINGS_BY_DEFAULT;
   }
 
   /**
    * Put a default set of options in the session.
    */
   protected void resetSessionOptions() {
-    putSessionCustomOpts(KbartCustomOptions.getDefaultOptions());
   }
 
 }

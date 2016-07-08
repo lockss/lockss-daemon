@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,15 +35,11 @@ import java.util.*;
 import java.util.List;
 import java.text.*;
 import org.mortbay.html.*;
-
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
 import org.lockss.daemon.*;
-import org.lockss.exporter.*;
-import org.lockss.exporter.Exporter.Type;
-import org.lockss.exporter.Exporter.FilenameTranslation;
 
 /** 
  */
@@ -73,7 +65,6 @@ public class ExportContent extends LockssServlet {
 
   /** Default export file type */
   static final String PARAM_EXPORT_TYPE = PREFIX + "defaultType";
-  static final Type DEFAULT_EXPORT_TYPE = Type.WARC_RESOURCE;
 
   /** Default export file max size */
   static final String PARAM_MAX_SIZE = PREFIX + "defaultMaxSize";
@@ -136,10 +127,8 @@ public class ExportContent extends LockssServlet {
   File exportDir;
 
   String auid;
-  Type eType;
   boolean isCompress;
   boolean isExcludeDirNodes;
-  FilenameTranslation xlateFilenames;
   String filePrefix;
   String maxSize;
   String maxVersions;
@@ -170,14 +159,9 @@ public class ExportContent extends LockssServlet {
 	return;
       }
     }
-
-    // Defaults, will be overwritten by form values if present
-    eType = (Type)config.getEnum(Type.class,
-				 PARAM_EXPORT_TYPE, DEFAULT_EXPORT_TYPE);
     isCompress = config.getBoolean(PARAM_COMPRESS, DEFAULT_COMPRESS);
     isExcludeDirNodes = config.getBoolean(PARAM_EXCLUDE_DIR_NODES,
 					  DEFAULT_EXCLUDE_DIR_NODES);
-    xlateFilenames = FilenameTranslation.XLATE_NONE;
     maxSize = config.get(PARAM_MAX_SIZE, DEFAULT_MAX_SIZE);
     maxVersions = config.get(PARAM_MAX_VERSIONS, DEFAULT_MAX_VERSIONS);
   }
@@ -199,25 +183,9 @@ public class ExportContent extends LockssServlet {
       if (!StringUtil.isNullString(action)) {
 	auid = getParameter(KEY_AUID);
 	String typename = getParameter(KEY_FILE_TYPE);
-	try {
-	  eType = Type.valueOf(typename);
-	} catch (RuntimeException e) {
-	  log.error("illtype", e);
-	  errMsg = "Illegal export file type: " + typename;
-	  displayPage();
-	  return;
-	}	
 	isCompress = (getParameter(KEY_COMPRESS) != null);
 	isExcludeDirNodes = (getParameter(KEY_EXCLUDE_DIR_NODES) != null);
 	String xlate = getParameter(KEY_XLATE);
-	try {
-	  xlateFilenames = FilenameTranslation.valueOf(xlate);
-	} catch (RuntimeException e) {
-	  log.error("illxlate", e);
-	  errMsg = "Illegal translation type: " + xlate;
-	  displayPage();
-	  return;
-	}	
 	filePrefix = getParameter(KEY_FILE_PREFIX);
 	maxSize = getParameter(KEY_MAX_SIZE);
 	maxVersions = getParameter(KEY_MAX_VERSIONS);
@@ -264,31 +232,6 @@ public class ExportContent extends LockssServlet {
 	errMsg = "Max versions must be an integer";
 	return;
       }
-    }
-
-    try {
-      Exporter exp = eType.makeExporter(daemon, au);
-      exp.setCompress(isCompress);
-      exp.setExcludeDirNodes(isExcludeDirNodes);
-      exp.setFilenameTranslation(xlateFilenames);
-      exp.setDir(exportDir);
-      exp.setPrefix(filePrefix);
-      exp.setMaxSize(size);
-      exp.setMaxVersions(versions);
-      exp.export();
-      List errs = exp.getErrors();
-      log.debug("errs: " + errs);
-      if (!errs.isEmpty()) {
-	errMsg = StringUtil.separatedString(errs, "<br>");
-      } else {
-	statusMsg = "File(s) written";
-      }
-      if (log.isDebug2()) {
-	log.debug2("Export files: " + exp.getExportFiles());
-      }
-    } catch (Exception e) {
-      errMsg = e.getMessage();
-      return;
     }
   }
 
@@ -338,9 +281,6 @@ public class ExportContent extends LockssServlet {
     tbl.newRow();
     tbl.newCell();
     Select typeSel = new Select(KEY_FILE_TYPE, false);
-    for (Type t : Type.values()) {
-      typeSel.add(t.getLabel(), t == eType, t.name());
-    }
     addElementToTable(tbl,
 		      "Export file type" + addFootnote(FILE_TYPE_FOOT),
 		      typeSel);
@@ -354,10 +294,6 @@ public class ExportContent extends LockssServlet {
 			       isExcludeDirNodes));
 
     Composite xlate = new Composite();
-    for (FilenameTranslation fx : FilenameTranslation.values()) {
-      xlate.add(radioButton(fx.getLabel() + "&nbsp;", fx.name(), KEY_XLATE,
-			    xlateFilenames == fx));
-    }
     addElementToTable(tbl,
 		      "Translate filenames" + addFootnote(XLATE_FOOT),
 		      xlate);

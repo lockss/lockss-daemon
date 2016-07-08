@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -37,10 +33,8 @@ import java.net.*;
 import java.util.*;
 import java.util.List;
 import java.util.regex.*;
-
 import javax.servlet.*;
 import javax.servlet.http.HttpServletResponse;
-
 import org.apache.commons.collections.*;
 import org.apache.commons.httpclient.util.DateParseException;
 import org.apache.commons.io.FileUtils;
@@ -53,9 +47,6 @@ import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo.ResolvedTo;
-import org.lockss.exporter.biblio.BibliographicItem;
-import org.lockss.exporter.counter.*;
-import org.lockss.exporter.counter.CounterReportsRequestRecorder.PublisherContacted;
 import org.lockss.plugin.*;
 import org.lockss.plugin.AuUtil.AuProxyInfo;
 import org.lockss.plugin.PluginManager.CuContentReq;
@@ -791,17 +782,14 @@ public class ServeContent extends LockssServlet {
 
     // display publisher, title, and link for each info result
     for (OpenUrlInfo info : multiInfo) {
-      BibliographicItem bibItem = info.getBibliographicItem();
       String openUrlQuery = info.getOpenUrlQuery();
       if (openUrlQuery != null) {
         detailTable.newRow();
         detailTable.newCell();
-        String publisherName = (bibItem == null)
-                               ? null : bibItem.getPublisherName();
+        String publisherName = null;
         if (publisherName != null) detailTable.add(publisherName);
         detailTable.newCell();
-        String title = (bibItem == null)
-                       ? null : bibItem.getPublicationTitle();
+        String title = null;
         if (title != null) detailTable.add(title);
         detailTable.newCell();
         detailTable.add(srvLink(myServletDescr(), openUrlQuery, openUrlQuery));
@@ -885,15 +873,11 @@ public class ServeContent extends LockssServlet {
     String host = UrlUtil.getHost(url);
     boolean isInCache = isInCache();
     boolean isHostDown = proxyMgr.isHostDown(host);
-    PublisherContacted pubContacted =
-	CounterReportsRequestRecorder.PublisherContacted.FALSE;
 
     if (isNeverProxyForAu(au) || isMementoRequest()) {
       if (isInCache) {
         serveFromCache();
         logAccess("200 from cache");
-        // Record the necessary information required for COUNTER reports.
-	recordRequest(url, pubContacted, 200);
       } else {
 	/*
 	 * We don't want to redirect to the publisher, so pass KnownDown below
@@ -941,15 +925,12 @@ public class ServeContent extends LockssServlet {
         }
       }
       conn.execute();
-      pubContacted = CounterReportsRequestRecorder.PublisherContacted.TRUE;
     } catch (IOException ex) {
       if (log.isDebug3()) log.debug3("conn.execute", ex);
 
       // mark host down if connection timed out
       if (ex instanceof LockssUrlConnection.ConnectionTimeoutException) {
         proxyMgr.setHostDown(host, isInCache);
-      } else {
-	pubContacted = CounterReportsRequestRecorder.PublisherContacted.TRUE;
       }
       pstate = PubState.KnownDown;
 
@@ -970,8 +951,6 @@ public class ServeContent extends LockssServlet {
           try {
             serveFromPublisher(conn);
             logAccess(present(isInCache, "200 from publisher"));
-            // Record the necessary information required for COUNTER reports.
-	    recordRequest(url, pubContacted, response);
             return;
           } catch (CacheException.PermissionException ex) {
             logAccess("login exception: " + ex.getMessage());
@@ -990,8 +969,6 @@ public class ServeContent extends LockssServlet {
     if (isInCache) {
       serveFromCache();
       logAccess("present, 200 from cache");
-      // Record the necessary information required for COUNTER reports.
-      recordRequest(url, pubContacted, response);
     } else {
       log.debug2("No content for: " + url);
       // return 404 with index
@@ -1004,18 +981,6 @@ public class ServeContent extends LockssServlet {
    */
   private boolean isMementoRequest() {
     return !StringUtil.isNullString(versionStr);
-  }
-
-  /**
-   * Record the request in COUNTER if appropriate
-   */
-  void recordRequest(String url,
-		     CounterReportsRequestRecorder.PublisherContacted contacted,
-		     int publisherCode) {
-    if (proxyMgr.isCounterCountable(req.getHeader(HttpFields.__UserAgent))) {
-      CounterReportsRequestRecorder.getInstance().recordRequest(url, contacted,
-	  publisherCode, null);
-    }
   }
 
   /**
@@ -1614,7 +1579,6 @@ public class ServeContent extends LockssServlet {
     // build block with message specific to resolved-to level
     Block block = new Block(Block.Center);
     ResolvedTo resolvedTo = info.getResolvedTo();
-    BibliographicItem bibliographicItem = info.getBibliographicItem();
     String proxySpec = info.getProxySpec();
     String proxyMsg = StringUtil.isNullString(proxySpec) ? "."
                                                          : " by proxying through '" + proxySpec + "'.";
@@ -1625,15 +1589,7 @@ public class ServeContent extends LockssServlet {
       case PUBLISHER:
 
         // display publisher page
-        if (bibliographicItem == null) {
           block.add("<h2>Found requested publisher</h2>");
-        } else {
-          block.add("<h2>");
-          block.add("Publisher: '");
-          block.add(bibliographicItem.getPublisherName());
-          block.add("'");
-          block.add("</h2>");
-        }
 
         addLink(table,
             "Additional publisher information available at the publisher.",
@@ -1644,18 +1600,7 @@ public class ServeContent extends LockssServlet {
 
       case TITLE:
         // display title page
-        if (bibliographicItem == null) {
           block.add("<h2>Found requested title</h2>");
-        } else {
-          block.add("<h2>");
-          block.add("Publication: '");
-          block.add(bibliographicItem.getPublicationTitle());
-          block.add("'");
-          block.add("</h2>");
-
-          addPublisher(table, bibliographicItem);
-          addIsbnOrIssn(table, bibliographicItem);
-        }
 
         addLink(table,
             "Additional title information available at the publisher" + proxyMsg,
@@ -1666,19 +1611,7 @@ public class ServeContent extends LockssServlet {
 
       case VOLUME:
         // display volume page
-        if (bibliographicItem == null) {
           block.add("<h2>Found requested volume</h2>");
-        } else {
-          block.add("<h2>");
-          block.add("Volume: '");
-          block.add(bibliographicItem.getName());
-          block.add("'");
-          block.add("</h2>");
-
-          addPublisher(table, bibliographicItem);
-          addIsbnOrIssn(table, bibliographicItem);
-          addVolumeAndYear(table, bibliographicItem);
-        }
 
         addLink(table,
             "Volume is available at the publisher" + proxyMsg,
@@ -1691,28 +1624,7 @@ public class ServeContent extends LockssServlet {
 
       case ISSUE:
         // display issue page
-        if (bibliographicItem == null) {
           block.add("<h2>Found requested issue</h2>");
-        } else {
-          block.add("<h2>");
-          block.add("Issue: '");
-          block.add(bibliographicItem.getName());
-          block.add("'");
-          block.add("</h2>");
-
-          addPublisher(table, bibliographicItem);
-          addIsbnOrIssn(table, bibliographicItem);
-          addVolumeAndYear(table, bibliographicItem);
-
-          String issue = bibliographicItem.getIssue();
-          if (issue != null) {
-            table.newRow(rowfmt);
-            table.newCell(labelfmt);
-            table.add("<b>Issue:</b>");
-            table.newCell();
-            table.add(issue);
-          }
-        }
 
         addLink(table,
             "Issue is available at the publisher" + proxyMsg,
@@ -1723,28 +1635,7 @@ public class ServeContent extends LockssServlet {
 
       case CHAPTER:
         // display chapter page
-        if (bibliographicItem == null) {
           block.add("<h2>Found requested chapter</h2>");
-        } else {
-          block.add("<h2>");
-          block.add("Chapter: '");
-          block.add(bibliographicItem.getName());
-          block.add("'");
-          block.add("</h2>");
-
-          addPublisher(table, bibliographicItem);
-          addIsbnOrIssn(table, bibliographicItem);
-          addVolumeAndYear(table, bibliographicItem);
-
-          String chapter = bibliographicItem.getIssue();
-          if (chapter != null) {
-            table.newRow(rowfmt);
-            table.newCell(labelfmt);
-            table.add("Chapter:");
-            table.newCell();
-            table.add(chapter);
-          }
-        }
 
         addLink(table,
             "Chapter is available at the publisher" + proxyMsg,
@@ -1756,28 +1647,7 @@ public class ServeContent extends LockssServlet {
 
       case ARTICLE:
         // display article page
-        if (bibliographicItem == null) {
           block.add("<h2>Found requested article</h2>");
-        } else {
-          block.add("<h2>");
-          block.add("Article: '");
-          block.add(bibliographicItem.getName());
-          block.add("'");
-          block.add("</h2>");
-
-          addPublisher(table, bibliographicItem);
-          addIsbnOrIssn(table, bibliographicItem);
-          addVolumeAndYear(table, bibliographicItem);
-
-          String issue = bibliographicItem.getIssue();
-          if (issue != null) {
-            table.newRow(rowfmt);
-            table.newCell(labelfmt);
-            table.add("Issue:");
-            table.newCell();
-            table.add(issue);
-          }
-        }
 
         addLink(table,
             "Article is available at the publisher" + proxyMsg,
@@ -1816,9 +1686,7 @@ public class ServeContent extends LockssServlet {
       case HostAuIndex:
       default:
         Collection<ArchivalUnit> candidateAus = Collections.emptyList();
-        if (bibliographicItem != null) {
-          candidateAus = getCandidateAus(bibliographicItem);
-        } else if (url != null) {
+        if (url != null) {
           try {
             candidateAus = pluginMgr.getCandidateAus(url);
           } catch (MalformedURLException ex) {
@@ -1844,93 +1712,6 @@ public class ServeContent extends LockssServlet {
   }
 
   /**
-   * Add publisher to the table.
-   *
-   * @param table the table
-   * @param bibliographicItem the bibliographic item
-   */
-  private void addPublisher(
-      Table table, BibliographicItem bibliographicItem) {
-    table.newRow(rowfmt);
-    table.newCell(labelfmt);
-    table.add("Publisher:");
-    table.newCell();
-    table.add(bibliographicItem.getPublisherName());
-  }
-
-  /**
-   * Add isbn or issn information to the table.
-   *
-   * @param table the Table
-   * @param bibliographicItem the bibliographic item
-   */
-  private void addIsbnOrIssn(
-      Table table, BibliographicItem bibliographicItem) {
-    String printIsbn = bibliographicItem.getIsbn();
-    String eIsbn = bibliographicItem.getEisbn();
-    String printIssn = bibliographicItem.getIssn();
-    String eIssn = bibliographicItem.getEissn();
-    if (printIsbn != null || eIsbn != null) {
-      if (printIsbn != null) {
-        table.newRow(rowfmt);
-        table.newCell(labelfmt);
-        table.add("ISBN:");
-        table.newCell();
-        table.add(printIsbn);
-      }
-      if (eIsbn != null) {
-        table.newRow(rowfmt);
-        table.newCell(labelfmt);
-        table.add("eISBN:");
-        table.newCell();
-        table.add(eIsbn);
-      }
-    } else if (printIssn != null || eIssn != null) {
-      if (printIssn != null) {
-        table.newRow(rowfmt);
-        table.newCell(labelfmt);
-        table.add("ISSN:");
-        table.newCell();
-        table.add(printIssn);
-      }
-      if (eIssn != null) {
-        table.newRow(rowfmt);
-        table.newCell(labelfmt);
-        table.add("eISSN:");
-        table.newCell();
-        table.add(eIssn);
-      }
-    }
-  }
-
-  /**
-   * Add volume and year information to the table.
-   *
-   * @param table the Table
-   * @param bibliographicItem the bibliographic item
-   */
-  private void addVolumeAndYear(
-      Table table, BibliographicItem bibliographicItem) {
-    String volume = bibliographicItem.getVolume();
-    String year = bibliographicItem.getYear();
-
-    if (volume != null) {
-      table.newRow(rowfmt);
-      table.newCell(labelfmt);
-      table.add("Volume:");
-      table.newCell();
-      table.add(volume);
-    }
-    if (year != null) {
-      table.newRow(rowfmt);
-      table.newCell(labelfmt);
-      table.add("Year:");
-      table.newCell();
-      table.add(year);
-    }
-  }
-
-  /**
    * Add link to publisher url and additional info
    * to the table if the AU for the URL is not down.
    *
@@ -1952,72 +1733,6 @@ public class ServeContent extends LockssServlet {
       Link link = new Link(url,url);
       table.add(link);
     }
-  }
-
-  /**
-   * Get candidate AUs that match the specified bibliographic item's
-   * issn, isbn, or publisher and title fields
-   *
-   * @param bibliographicItem the bibliographic item
-   * @return a collection of candidate AUs
-   */
-  protected Collection<ArchivalUnit> getCandidateAus(
-      BibliographicItem bibliographicItem) {
-    Collection<ArchivalUnit> candidateAus =
-      new TreeSet<ArchivalUnit>(new AuOrderComparator());
-
-    Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
-    String isbn = bibliographicItem.getIsbn();
-    String issn = bibliographicItem.getIssn();
-    Collection<TdbAu> tdbaus = Collections.emptySet();
-
-    if (isbn != null) {
-      // get TdbAus for books by thieir ISBN
-      tdbaus = tdb.getTdbAusByIsbn(isbn);
-
-    } else if (issn != null) {
-      // get TdbAus for journals by thieir ISBN
-      TdbTitle tdbtitle = tdb.getTdbTitleByIssn(issn);
-      if (tdbtitle != null) {
-        tdbaus = tdbtitle.getTdbAus();
-      }
-
-    } else {
-      // get TdbAus by publisher and/or title
-      String title = bibliographicItem.getPublicationTitle();
-      String publisher = bibliographicItem.getPublisherName();
-      TdbPublisher tdbpublisher = tdb.getTdbPublisher(publisher);
-      if (title != null) {
-        // get AUs for specified title
-        Collection<TdbTitle> tdbtitles;
-        if (tdbpublisher != null) {
-          tdbtitles = tdbpublisher.getTdbTitlesByName(title);
-        } else {
-          tdbtitles = tdb.getTdbTitlesByName(title);
-        }
-        tdbaus = new ArrayList<TdbAu>();
-        for (TdbTitle tdbtitle : tdbtitles) {
-          tdbaus.addAll(tdbtitle.getTdbAus());
-        }
-      } else if (tdbpublisher != null) {
-        // get AUs for specified publisher
-        Iterator<TdbAu> tdbAuItr = tdbpublisher.tdbAuIterator();
-        tdbaus = new ArrayList<TdbAu>();
-        while (tdbAuItr.hasNext()) {
-          TdbAu tdbau = tdbAuItr.next();
-          tdbaus.add(tdbau);
-        }
-      }
-    }
-
-    // get preserved AUs corresponding to TdbAus found
-    for (TdbAu tdbau : tdbaus) {
-      ArchivalUnit au = TdbUtil.getAu(tdbau);
-      if (au != null && TdbUtil.isAuPreserved(au)) {
-        candidateAus.add(au);
-      }
-    }
-    return candidateAus;
   }
 
   protected void handleMissingUrlRequest(String missingUrl, PubState pstate)

@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
  Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -48,8 +44,6 @@ import org.lockss.daemon.Cron;
 import org.lockss.daemon.PluginException;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
-import org.lockss.exporter.counter.CounterReportsManager;
-import org.lockss.exporter.counter.CounterReportsRequestAggregator;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
@@ -87,12 +81,6 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
     ConfigurationUtil.addFromArgs(MetadataManager.PARAM_INDEXING_ENABLED,
 	"true");
-    ConfigurationUtil.addFromArgs(CounterReportsManager.PARAM_COUNTER_ENABLED,
-	"true");
-    ConfigurationUtil.addFromArgs(CounterReportsManager
-	.PARAM_REPORT_BASEDIR_PATH, tempDirPath);
-    ConfigurationUtil.addFromArgs(CounterReportsRequestAggregator
-	.PARAM_COUNTER_REQUEST_AGGREGATION_TASK_FREQUENCY, "hourly");
 
     MockLockssDaemon theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
@@ -117,11 +105,6 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     theDaemon.setCron(cron);
     cron.initService(theDaemon);
     cron.startService();
-
-    CounterReportsManager counterReportsManager = new CounterReportsManager();
-    theDaemon.setCounterReportsManager(counterReportsManager);
-    counterReportsManager.initService(theDaemon);
-    counterReportsManager.startService();
 
     theDaemon.setAusStarted(true);
   }

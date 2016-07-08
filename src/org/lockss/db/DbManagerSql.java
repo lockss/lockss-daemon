@@ -42,9 +42,7 @@ import java.util.List;
 import java.util.Map;
 import javax.sql.DataSource;
 import org.lockss.app.LockssDaemon;
-import org.lockss.config.ConfigManager;
 import org.lockss.config.TdbAu;
-import org.lockss.exporter.FetchTimeExporter;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.PluginManager;
@@ -1855,12 +1853,6 @@ public class DbManagerSql {
   // SQL statement that creates a database in MySQL.
   private static final String CREATE_DATABASE_QUERY_MYSQL = "create database "
       + "--databaseName-- character set utf8 collate utf8_general_ci";
-
-  // Query to zero out a value in the table of last run items.
-  private static final String ZERO_LAST_RUN_VALUE_QUERY = "update "
-      + LAST_RUN_TABLE
-      + " set " + LAST_VALUE_COLUMN + " = '0'"
-      + " where " + LABEL_COLUMN + " = ?";
 
   // The SQL code used to add the necessary version 14 database table columns.
   private static final String[] VERSION_14_COLUMN_ADD_QUERIES = new String[] {
@@ -6154,36 +6146,6 @@ public class DbManagerSql {
 
     if (conn == null) {
       throw new IllegalArgumentException("Null connection");
-    }
-
-    // Get the label of the identifier of the last metadata item for which the
-    // fetch time has been exported.
-    String lastMdItemSeqLabel = ConfigManager.getCurrentConfig()
-	.get(FetchTimeExporter.PARAM_FETCH_TIME_EXPORT_LAST_ITEM_LABEL,
-	    FetchTimeExporter.DEFAULT_FETCH_TIME_EXPORT_LAST_ITEM_LABEL);
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "lastMdItemSeqLabel = '"
-	+ lastMdItemSeqLabel + "'.");
-
-    PreparedStatement statement = null;
-
-    try {
-      statement = prepareStatement(conn, ZERO_LAST_RUN_VALUE_QUERY);
-      statement.setString(1, lastMdItemSeqLabel);
-
-      int count = executeUpdate(statement);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count + ".");
-    } catch (SQLException sqle) {
-      log.error("Cannot update the last metadata item identifier", sqle);
-      log.error("SQL = '" + ZERO_LAST_RUN_VALUE_QUERY + "'.");
-      log.error("lastMdItemSeqLabel = '" + lastMdItemSeqLabel + "'.");
-      throw sqle;
-    } catch (RuntimeException re) {
-      log.error("Cannot update the last metadata item identifier", re);
-      log.error("SQL = '" + ZERO_LAST_RUN_VALUE_QUERY + "'.");
-      log.error("lastMdItemSeqLabel = '" + lastMdItemSeqLabel + "'.");
-      throw re;
-    } finally {
-      JdbcBridge.safeCloseStatement(statement);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");

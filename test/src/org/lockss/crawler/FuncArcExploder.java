@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2007-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2007-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,13 +31,10 @@ package org.lockss.crawler;
 import java.io.*;
 import java.util.*;
 import java.net.*;
-
 import org.apache.commons.collections.Bag;
 import org.apache.commons.collections.bag.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
-import org.lockss.exporter.FuncWarcRoundtrip.MyCrawlRule;
-import org.lockss.exporter.FuncWarcRoundtrip.MyExploderHelper;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
 import org.lockss.plugin.exploded.*;

@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -48,8 +44,6 @@ import org.apache.commons.logging.Log;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
 import org.lockss.daemon.CuUrl;
-import org.lockss.exporter.counter.CounterReportsRequestRecorder;
-import org.lockss.exporter.counter.CounterReportsRequestRecorder.PublisherContacted;
 import org.lockss.plugin.*;
 import org.lockss.state.AuState;
 import org.lockss.util.*;
@@ -508,9 +502,6 @@ public class ProxyHandler extends AbstractHttpHandler {
 			 response, cu);
 	  logAccess(request, "200 from cache", TimeBase.msSince(reqStartTime));
 	  // Record the necessary information required for COUNTER reports.
-	  CounterReportsRequestRecorder.getInstance().recordRequest(urlString,
-	      CounterReportsRequestRecorder.PublisherContacted.FALSE, 200,
-	      null);
 	  return;
 	} else {
 	  // Not found on cache and told not to forward request
@@ -743,19 +734,6 @@ public class ProxyHandler extends AbstractHttpHandler {
 		       reqElapsedTime);
   }
 
-  /**
-   * Record the request in COUNTER if appropriate
-   */
-  void recordRequest(HttpRequest request,
-		     String url,
-		     CounterReportsRequestRecorder.PublisherContacted contacted,
-		     int publisherCode) {
-    if (proxyMgr.isCounterCountable(request.getField(HttpFields.__UserAgent))) {
-      CounterReportsRequestRecorder.getInstance().recordRequest(url, contacted,
-	  publisherCode, null);
-    }
-  }
-
   /** Proxy a connection using LockssUrlConnection */
   void doLockss(String pathInContext,
                 String pathParams,
@@ -793,10 +771,6 @@ public class ProxyHandler extends AbstractHttpHandler {
 	serveFromCache(pathInContext, pathParams, request, response, cu);
 	logAccess(request, "200 from cache", TimeBase.msSince(reqStartTime));
 	// Record the necessary information required for COUNTER reports.
-	recordRequest(request,
-		      urlString,
-		      CounterReportsRequestRecorder.PublisherContacted.FALSE,
-		      200);
 	return;
       }
       if (isPubNever(cu)) {
@@ -935,9 +909,6 @@ public class ProxyHandler extends AbstractHttpHandler {
         conn.setCookiePolicy(cookiePolicy);
       }
 
-      PublisherContacted pubContacted =
-	  CounterReportsRequestRecorder.PublisherContacted.TRUE;
-
       // If we ever handle input, this is (more-or-less) the HttpClient way
       // to do it
 
@@ -957,16 +928,11 @@ public class ProxyHandler extends AbstractHttpHandler {
 	// Remember this only for hosts whose content we hold.
 	if (e instanceof LockssUrlConnection.ConnectionTimeoutException) {
 	  proxyMgr.setHostDown(request.getURI().getHost(), isInCache);
-	  pubContacted = CounterReportsRequestRecorder.PublisherContacted.FALSE;
 	}
 	// if we get any error and it's in the cache, serve it from there
 	if (isInCache) {
 	  serveFromCache(pathInContext, pathParams, request, response, cu);
 	  // Record the necessary information required for COUNTER reports.
-	  recordRequest(request,
-	      		urlString,
-	      		pubContacted,
-	      		conn.getResponseCode());
 	} else {
 	  // else generate an error page
 	  sendProxyErrorPage(e, request, response,
@@ -993,7 +959,6 @@ public class ProxyHandler extends AbstractHttpHandler {
 	serveFromCache(pathInContext, pathParams, request,
 		       response, cu);
 	// Record the necessary information required for COUNTER reports.
-	recordRequest(request, urlString, pubContacted, conn.getResponseCode());
 	return;
       }
 

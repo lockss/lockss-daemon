@@ -35,7 +35,6 @@ import java.util.zip.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
-import org.lockss.exporter.counter.CounterReportsManager;
 import org.lockss.account.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
@@ -581,13 +580,6 @@ public class RemoteApi
 	addAusToZip(zip, aus);
       }
 
-      // Add any COUNTER aggregate statistics to the zip file.
-      CounterReportsManager crMgr = getDaemon().getCounterReportsManager();
-      
-      if (crMgr != null && crMgr.isReady()) {
-	crMgr.writeAggregatesBackupToZip(zip);
-      }
-
       zip.close();
       if (permFile != null) {
 	PlatformUtil.updateAtomically(file, permFile);
@@ -723,13 +715,6 @@ public class RemoteApi
     File dir = FileUtil.createTempDir("locksscfg", "");
     try {
       ZipUtil.unzip(configBackupStream, dir);
-
-      // Restore any COUNTER aggregate statistics from the zip file.
-      CounterReportsManager crMgr = getDaemon().getCounterReportsManager();
-      
-      if (crMgr != null && crMgr.isReady()) {
-	crMgr.loadAggregatesFromBackup(dir);
-      }
 
       File autxt = new File(dir, ConfigManager.CONFIG_FILE_AU_CONFIG);
       if (!autxt.exists()) {

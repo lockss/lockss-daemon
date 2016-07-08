@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2012-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -52,16 +48,6 @@ import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import org.lockss.app.LockssDaemon;
-import org.lockss.exporter.counter.CounterReport;
-import org.lockss.exporter.counter.CounterReportsBookReport1;
-import org.lockss.exporter.counter.CounterReportsBookReport1L;
-import org.lockss.exporter.counter.CounterReportsBookReport2;
-import org.lockss.exporter.counter.CounterReportsBookReport2L;
-import org.lockss.exporter.counter.CounterReportsJournalReport1;
-import org.lockss.exporter.counter.CounterReportsJournalReport1L;
-import org.lockss.exporter.counter.CounterReportsJournalReport5;
-import org.lockss.exporter.counter.CounterReportsJournalReport5L;
-import org.lockss.exporter.counter.CounterReportsManager;
 import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.MimeUtil;
@@ -96,39 +82,11 @@ public class CounterReportsServlet extends LockssServlet {
   private static final String REPORT_TYPE_BOOK = "BOOK";
   private static final String REPORT_TYPE_JOURNAL = "JOURNAL";
 
-  private static final SortedMap<String, Class<?>> BOOK_REPORTS =
-      new TreeMap<String, Class<?>>() {
-	{
-	  put(REPORT_ID_BOOK_1, CounterReportsBookReport1.class);
-	  put(REPORT_ID_BOOK_1L, CounterReportsBookReport1L.class);
-	  put(REPORT_ID_BOOK_2, CounterReportsBookReport2.class);
-	  put(REPORT_ID_BOOK_2L, CounterReportsBookReport2L.class);
-	}
-      };
-
-  private static final SortedMap<String, Class<?>> JOURNAL_REPORTS =
-      new TreeMap<String, Class<?>>() {
-	{
-	  put(REPORT_ID_JOURNAL_1, CounterReportsJournalReport1.class);
-	  put(REPORT_ID_JOURNAL_1L, CounterReportsJournalReport1L.class);
-	  put(REPORT_ID_JOURNAL_5, CounterReportsJournalReport5.class);
-	  put(REPORT_ID_JOURNAL_5L, CounterReportsJournalReport5L.class);
-	}
-      };
-
   private static final SortedMap<String, String> REPORT_FORMATS =
       new TreeMap<String, String>() {
 	{
 	  put(REPORT_FORMAT_CSV, REPORT_FORMAT_CSV_NAME);
 	  put(REPORT_FORMAT_TSV, REPORT_FORMAT_TSV_NAME);
-	}
-      };
-
-  private static final SortedMap<String, Map<String, Class<?>>> REPORT_TYPES =
-      new TreeMap<String, Map<String, Class<?>>>() {
-	{
-	  put(REPORT_TYPE_BOOK, BOOK_REPORTS);
-	  put(REPORT_TYPE_JOURNAL, JOURNAL_REPORTS);
 	}
       };
 
@@ -141,11 +99,8 @@ public class CounterReportsServlet extends LockssServlet {
 
   private static final String FORM_ACTION = "Get Report";
 
-  private CounterReportsManager counterReportsManager;
-
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
-    counterReportsManager = getLockssDaemon().getCounterReportsManager();
   }
 
   /**
@@ -157,7 +112,6 @@ public class CounterReportsServlet extends LockssServlet {
     final String DEBUG_HEADER = "lockssHandleRequest(): ";
 
     // Check whether the COUNTER reports manager is disabled.
-    if (!counterReportsManager.isReady()) {
       // Yes: Report the problem.
       errMsg = "COUNTER reports are not enabled.";
       Page page = newPage();
@@ -166,26 +120,6 @@ public class CounterReportsServlet extends LockssServlet {
       layoutErrorBlock(page);
       endPage(page);
       return;
-    }
-
-    // The form needs to be shown when no parameters have been passed.
-    boolean showForm = !req.getParameterNames().hasMoreElements();
-    log.debug2(DEBUG_HEADER + "showForm = " + showForm);
-
-    // Check whether the form needs to be shown.
-    if (showForm) {
-      // Yes: Show the form.
-      displayForm();
-    } else {
-      // No: Stream the report back.
-      try {
-	processRequest();
-      } catch (Exception e) {
-	// Report the problem.
-	errMsg = e.getMessage();
-	displayForm();
-      }
-    }
   }
 
   /**
@@ -226,13 +160,6 @@ public class CounterReportsServlet extends LockssServlet {
     Select selType = new Select("type", false);
 
     String reportType = getReportType();
-    if (!REPORT_TYPES.containsKey(reportType)) {
-      reportType = DEFAULT_REPORT_TYPE;
-    }
-
-    for (String type : REPORT_TYPES.keySet()) {
-      selType.add(type, type.equals(reportType), type);
-    }
 
     selType.attribute("onchange", "toggleElements('bookId', 'journalId')");
     setTabOrder(selType);
@@ -245,12 +172,6 @@ public class CounterReportsServlet extends LockssServlet {
     table.newCell("align=\"right\"");
     table.add("Report Id: ");
     table.newCell("align=\"left\"");
-
-    addReportId(table, "bookId", BOOK_REPORTS.keySet(),
-		REPORT_TYPE_BOOK.equals(reportType));
-
-    addReportId(table, "journalId", JOURNAL_REPORTS.keySet(),
-		REPORT_TYPE_JOURNAL.equals(reportType));
 
     // The report period rows.
     String[] years = populateYears();
@@ -402,24 +323,9 @@ public class CounterReportsServlet extends LockssServlet {
     // covered by the report to be provided.
     String reportType = getReportType();
 
-    // Validate the report type.
-    if (!REPORT_TYPES.containsKey(reportType)) {
-      String message = "Invalid report type: " + reportType;
-      log.warning(message);
-      throw new RuntimeException(message);
-    }
-
     // Handle any incoming specification of the identifier of the report to be
     // provided.
     String reportId = getReportId();
-
-    // Validate the report identifier.
-    if (!REPORT_TYPES.get(reportType).containsKey(reportId)) {
-      String message =
-	  "Invalid " + reportType + " report identifier: " + reportId;
-      log.warning(message);
-      throw new RuntimeException(message);
-    }
 
     log.debug2(DEBUG_HEADER + "reportId = " + reportId);
 
@@ -462,59 +368,10 @@ public class CounterReportsServlet extends LockssServlet {
     log.debug2(DEBUG_HEADER + "reportFormat = " + reportFormat);
 
     LockssDaemon daemon = getLockssDaemon();
-    CounterReport report = null;
-
-    try {
-      // Check whether the report with the default period needs to be provided.
-      if (startMonth == null || startYear == null || endMonth == null
-	  || endYear == null) {
-	// Yes: Initialize the appropriate report.
-	report =
-	    (CounterReport) (REPORT_TYPES.get(reportType).get(reportId)
-		.getConstructor(LockssDaemon.class).newInstance(daemon));
-      } else {
-	// No: Initialize the appropriate book report.
-	report =
-	    (CounterReport) (REPORT_TYPES
-		.get(reportType)
-		.get(reportId)
-		.getConstructor(LockssDaemon.class, int.class, int.class,
-				int.class, int.class).newInstance(daemon,
-								  startMonth,
-								  startYear,
-								  endMonth,
-								  endYear));
-      }
-    } catch (InvocationTargetException ite) {
-      throw new RuntimeException(ite.getCause());
-    } catch (Exception e) {
-      throw new RuntimeException(e);
-    }
 
     // Populate the report with the request counts in the appropriate format.
     String contentType = null;
     File reportFile = null;
-    try {
-      if (reportFormat.equals(REPORT_FORMAT_CSV)) {
-	reportFile = report.saveCsvReport();
-	contentType =
-	    MimeUtil
-		.getMimeTypeFromExtension(CounterReportsManager.CSV_EXTENSION);
-      } else {
-	reportFile = report.saveTsvReport();
-	contentType =
-	    MimeUtil
-		.getMimeTypeFromExtension(CounterReportsManager.TSV_EXTENSION);
-      }
-    } catch (SQLException sqle) {
-      throw new RuntimeException(sqle);
-    } catch (Exception e) {
-      if (e instanceof IOException) {
-	throw (IOException) e;
-      } else {
-	throw new RuntimeException(e);
-      }
-    }
 
     log.debug2(DEBUG_HEADER + "reportFile = " + reportFile.getAbsolutePath());
 

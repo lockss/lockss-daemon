@@ -29,20 +29,17 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import static org.lockss.db.SqlConstants.*;
-
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.HttpURLConnection;
 import java.sql.*;
 import java.text.ParseException;
 import java.util.*;
-
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
 import org.lockss.daemon.AuParamType.InvalidFormatException;
 import org.lockss.db.*;
-import org.lockss.exporter.biblio.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.AuUtil.AuProxyInfo;
 import org.lockss.plugin.PluginManager.CuContentReq;
@@ -215,7 +212,7 @@ public class OpenUrlResolver {
     private String resolvedUrl;
     private String proxySpec;
     private ResolvedTo resolvedTo;
-    private BibliographicItem resolvedBibliographicItem = null;
+    private TdbAu resolvedBibliographicItem = null;
     private OpenUrlInfo nextInfo = null;
     
     private OpenUrlInfo(String resolvedUrl, 
@@ -271,7 +268,7 @@ public class OpenUrlResolver {
     public ResolvedTo getResolvedTo() {
       return resolvedTo;
     }
-    public BibliographicItem getBibliographicItem() {
+    public TdbAu getBibliographicItem() {
       return resolvedBibliographicItem;
     }
 
@@ -819,10 +816,6 @@ public class OpenUrlResolver {
                      : OpenUrlInfo.ResolvedTo.TITLE);
 
       // create bibliographic item with only title properties
-      resolved.resolvedBibliographicItem =  
-            new BibliographicItemImpl()
-              .setPublisherName(pub)
-              .setPublicationTitle(title);
       return resolved;
       
     } else  if (pub != null) {
@@ -830,9 +823,6 @@ public class OpenUrlResolver {
           null, null, OpenUrlInfo.ResolvedTo.PUBLISHER);
       
       // create bibliographic item with only publisher properties
-      resolved.resolvedBibliographicItem =  
-        new BibliographicItemImpl()
-          .setPublisherName(pub);
       return resolved;
     }
 
@@ -1187,7 +1177,7 @@ public class OpenUrlResolver {
    * @return the OpenUrl query string, or null if not available
    */
   static public String getOpenUrlQueryForBibliographicItem(
-      BibliographicItem bibitem) {
+      TdbAu bibitem) {
     StringBuffer sb = new StringBuffer();
     
     String isbn = bibitem.getIsbn();
@@ -1335,15 +1325,6 @@ public class OpenUrlResolver {
         aResolved = OpenUrlInfo.newInstance(
             null,null, OpenUrlInfo.ResolvedTo.TITLE);
           // create bibliographic item with only title properties
-        aResolved.resolvedBibliographicItem =  
-            new BibliographicItemImpl()
-              .setPublisherName(title.getPublisherName())
-              .setPublicationTitle(title.getName())
-              .setProprietaryIds(title.getProprietaryIds())
-              .setCoverageDepth(title.getCoverageDepth())
-              .setPrintIssn(title.getPrintIssn())
-              .setEissn(title.getEissn())
-              .setIssnL(title.getIssnL());
          if (resolved == null) {
            resolved = aResolved;
          } else {
@@ -1956,15 +1937,6 @@ public class OpenUrlResolver {
       if (resolved.resolvedTo != OpenUrlInfo.ResolvedTo.NONE) {
         if (resolved.resolvedTo == OpenUrlInfo.ResolvedTo.TITLE) {
           // create bibliographic item with only title properties
-          resolved.resolvedBibliographicItem =  
-            new BibliographicItemImpl()
-              .setPublisherName(tdbau.getPublisherName())
-              .setPublicationTitle(tdbau.getPublicationTitle())
-              .setProprietaryIds(tdbau.getProprietaryIds())
-              .setCoverageDepth(tdbau.getCoverageDepth())
-              .setPrintIssn(tdbau.getPrintIssn())
-              .setEissn(tdbau.getEissn())
-              .setIssnL(tdbau.getIssnL());
         } else {
           resolved.resolvedBibliographicItem = tdbau;
         }

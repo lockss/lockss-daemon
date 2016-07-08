@@ -33,8 +33,6 @@ import org.lockss.util.*;
 import org.lockss.alert.*;
 import org.lockss.daemon.*;
 import org.lockss.db.DbManager;
-import org.lockss.exporter.FetchTimeExportManager;
-import org.lockss.exporter.counter.CounterReportsManager;
 import org.lockss.account.*;
 import org.lockss.hasher.*;
 import org.lockss.job.JobManager;
@@ -574,28 +572,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public DbManager getDbManager() {
     return (DbManager) getManager(DB_MANAGER);
-  }
-
-  /**
-   * Provides the COUNTER reports manager.
-   * 
-   * @return a CounterReportsManager with the COUNTER reports manager.
-   * @throws IllegalArgumentException
-   *           if the manager is not available.
-   */
-  public CounterReportsManager getCounterReportsManager() {
-    return (CounterReportsManager) getManager(COUNTER_REPORTS_MANAGER);
-  }
-
-  /**
-   * Provides the fetch time export manager.
-   * 
-   * @return a FetchTimeExportManager with the fetch time export manager.
-   * @throws IllegalArgumentException
-   *           if the manager is not available.
-   */
-  public FetchTimeExportManager getFetchTimeExportManager() {
-    return (FetchTimeExportManager) getManager(FETCH_TIME_EXPORT_MANAGER);
   }
 
   /**

@@ -47,7 +47,6 @@ import org.lockss.config.*;
 import org.lockss.account.*;
 import org.lockss.util.*;
 import org.lockss.jetty.*;
-import org.lockss.exporter.counter.CounterReportsManager;
 import org.springframework.web.context.ContextLoaderListener;
 
 /**
@@ -554,18 +553,6 @@ public class AdminServletManager extends BaseServletManager {
           LoginForm.class,
           "LOCKSS Administration",
           ServletDescr.NO_NAV_TABLE | ServletDescr.LARGE_LOGO);
-		     
-  protected static final ServletDescr SERVLET_COUNTER_REPORTS =
-      new ServletDescr("CounterReportsServlet",
-                       CounterReportsServlet.class,
-                       "COUNTER Reports",
-		       "CounterReports",
-		       (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME),
-		       "COUNTER Report generator") {
-	public boolean isEnabled(LockssDaemon daemon) {
-	  CounterReportsManager mgr = daemon.getCounterReportsManager();
-	  return mgr != null && mgr.isReady();
-	}};
 
   protected static final ServletDescr SERVLET_CXF_WEB_SERVICES =
       new ServletDescr("CXFServlet",
@@ -634,7 +621,6 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_DEBUG_PANEL,
     SERVLET_EXPERT_CONFIG,
     SERVLET_LIST_HOLDINGS,
-    SERVLET_COUNTER_REPORTS,
     //SERVLET_OPENURL_QUERY,
     SERVLET_TIME_GATE,
     SERVLET_TIME_MAP,
@@ -680,7 +666,6 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_DEBUG_PANEL,
     SERVLET_EXPERT_CONFIG,
     SERVLET_LIST_HOLDINGS,
-    SERVLET_COUNTER_REPORTS,
     //SERVLET_OPENURL_QUERY,
     SERVLET_TIME_GATE,
     SERVLET_TIME_MAP,
@@ -727,7 +712,6 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_DEBUG_PANEL,
     SERVLET_EXPERT_CONFIG,
     SERVLET_LIST_HOLDINGS,
-    SERVLET_COUNTER_REPORTS,
     //SERVLET_OPENURL_QUERY,
     LINK_LOGS,
     LINK_ISOS,

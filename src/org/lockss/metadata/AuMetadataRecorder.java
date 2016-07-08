@@ -44,7 +44,6 @@ import java.util.Set;
 import org.lockss.app.LockssDaemon;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
-import org.lockss.exporter.counter.CounterReportsManager;
 import org.lockss.extractor.MetadataField;
 import org.lockss.metadata.ArticleMetadataBuffer.ArticleMetadataInfo;
 import org.lockss.plugin.ArchivalUnit;
@@ -2386,34 +2385,6 @@ public class AuMetadataRecorder {
 	"fixUnknownPublisherPublicationCounterReportsData(): ";
     log.debug3(DEBUG_HEADER + "unknownPublicationSeq = "
 	+ unknownPublicationSeq);
-
-    CounterReportsManager crManager =
-	LockssDaemon.getLockssDaemon().getCounterReportsManager();
-
-    // Merge the book type aggregate counts.
-    crManager.mergeBookTypeAggregates(conn, unknownPublicationSeq,
-	publicationSeq);
-
-    // Delete the book type aggregate counts for the unknown publisher
-    // publication.
-    crManager.deleteBookTypeAggregates(conn, unknownPublicationSeq);
-
-    // Merge the journal type aggregate counts.
-    crManager.mergeJournalTypeAggregates(conn, unknownPublicationSeq,
-	publicationSeq);
-
-    // Delete the journal type aggregate counts for the unknown publisher
-    // publication.
-    crManager.deleteJournalTypeAggregates(conn, unknownPublicationSeq);
-
-    // Merge the journal publication year aggregate counts.
-    crManager.mergeJournalPubYearAggregates(conn, unknownPublicationSeq,
-	publicationSeq);
-
-    // Delete the journal publication year aggregate counts for the unknown
-    // publisher
-    // publication.
-    crManager.deleteJournalPubYearAggregates(conn, unknownPublicationSeq);
 
     log.debug3(DEBUG_HEADER + "Done.");
   }

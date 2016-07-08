@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2010-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2010-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,11 +29,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.config;
 
 import java.util.*;
-
 import org.lockss.app.LockssDaemon;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.TitleConfig;
-import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
@@ -267,23 +261,6 @@ public class TdbUtil {
   public static Collection<ArchivalUnit> getAus(ContentScope scope,
                                                   ContentType type) {
     return filterAusByType(getAus(scope), type);
-  }
-
-
-  /**
-   * Filter a collection of BibliographicItems to return only those of the
-   * specified type.
-   * @param type type of content to filter for
-   * @return a list of BibliographicItems with AUs of only the specified type
-   */
-  public static List<BibliographicItem> filterBibliographicItemsByType(
-      final List<BibliographicItem> items, final ContentType type) {
-    if (type==null) return items;
-    return new ArrayList<BibliographicItem>() {{
-      for (BibliographicItem item: items) {
-        if(type.isOfType(item)) add(item);
-      }
-    }};
   }
 
   /**
@@ -670,40 +647,26 @@ public class TdbUtil {
    */
   public static enum ContentType {
     JOURNALS ("Journals") {
-      @Override
       /**
        * An AU is considered a journal if it is marked as type "journal"
        * and has no ISBN. This is complementary to the test for books.
        */
-      public boolean isOfType(BibliographicItem au) {
-        //return !BOOKS.isOfType(au); // direct complement of BOOK test
-        // Has no ISBN and is not marked as a book type
-        /*return StringUtil.isNullString(au.getIsbn()) &&
-            !"book".equals(au.getPublicationType()) &&
-            !"bookSeries".equals(au.getPublicationType());*/
-        // Is of type journal and has no ISBN (This will omit bookSeries.)
-        return "journal".equals(au.getPublicationType()) &&
-            StringUtil.isNullString(au.getIsbn())
-            ;
+      public boolean isOfType(TdbAu au) {
+	return false;
       }
     },
     BOOKS ("Books") {
-      @Override
       /**
        * An AU is considered a book if it has an ISBN or is marked as type
        * "book" or "bookSeries".
        */
-      public boolean isOfType(BibliographicItem au) {
-        return !StringUtil.isNullString(au.getIsbn()) ||
-            "book".equals(au.getPublicationType()) ||
-            "bookSeries".equals(au.getPublicationType())
-            ;
+      public boolean isOfType(TdbAu au) {
+        return false;
       }
     },
     ALL ("All types") {
-      @Override
       /** Any AU is of type all. */
-      public boolean isOfType(BibliographicItem au) { return true; }
+      public boolean isOfType(TdbAu au) { return true; }
     };
 
     /** The default fallback type. */
@@ -746,7 +709,7 @@ public class TdbUtil {
     }
 
     /** A method to establish whether a BibliographicItem is of the given type. */
-    public abstract boolean isOfType(BibliographicItem au);
+    public abstract boolean isOfType(TdbAu au);
 
     public String toString() {
       return label;

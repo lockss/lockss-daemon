@@ -38,8 +38,6 @@ import java.util.List;
 import org.lockss.app.LockssDaemon;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
-import org.lockss.exporter.biblio.BibliographicItem;
-import org.lockss.exporter.biblio.BibliographicUtil;
 import org.lockss.extractor.MetadataField;
 import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
@@ -72,7 +70,7 @@ final public class MetadataDatabaseUtil {
    * @author Philip Gust
    * 
    */
-  static class BibliographicDatabaseItem implements BibliographicItem {
+  static class BibliographicDatabaseItem {
     final String provider;
     final String publisher;
     final String seriesTitle;
@@ -115,7 +113,6 @@ final public class MetadataDatabaseUtil {
       provider = resultSet.getString(14);
     }
 
-    @Override
     public String getPublicationType() {
       if (publicationType == null) {
         return MetadataField.PUBLICATION_TYPE_JOURNAL;
@@ -124,12 +121,10 @@ final public class MetadataDatabaseUtil {
           ? MetadataField.PUBLICATION_TYPE_BOOKSERIES : publicationType;
     }
 
-    @Override
     public String getCoverageDepth() {
       return (coverageDepth == null) ? "fulltext" : coverageDepth;
     }
 
-    @Override
     public String getIsbn() {
       String isbn = getPrintIsbn();
       if (!MetadataUtil.isIsbn(isbn)) {
@@ -141,17 +136,14 @@ final public class MetadataDatabaseUtil {
       return isbn;
     }
 
-    @Override
     public String getPrintIsbn() {
       return printisbn;
     }
 
-    @Override
     public String getEisbn() {
       return eisbn;
     }
 
-    @Override
     public String getIssn() {
       String issn = getIssnL();
       if (!MetadataUtil.isIssn(issn)) {
@@ -166,140 +158,80 @@ final public class MetadataDatabaseUtil {
       return issn;
     }
 
-    @Override
     public String getPrintIssn() {
       return printissn;
     }
 
-    @Override
     public String getEissn() {
       return eissn;
     }
 
-    @Override
     public String getIssnL() {
       return null;
     }
 
-    @Override
     public String[] getProprietaryIds() {
       return proprietaryIds;
     }
 
-    @Override
     public String[] getProprietarySeriesIds() {
       return proprietarySeriesIds;
     }
 
-    @Override
     public String getPublicationTitle() {
       return publicationTitle;
     }
 
-    @Override
     public String getSeriesTitle() {
       return seriesTitle;
     }
 
-    @Override
     public String getPublisherName() {
       return publisher;
     }
 
-    @Override
     public String getProviderName() {
       return provider;
     }
 
-    @Override
     public String getName() {
       return null;
     }
 
-    @Override
     public String getVolume() {
       return volume;
     }
 
-    @Override
     public String getYear() {
       return year;
     }
 
-    @Override
     public String getIssue() {
       return null;
     }
 
-    @Override
     public String getStartVolume() {
-      return BibliographicUtil.getRangeSetStart(getVolume());
+      return null;
     }
 
-    @Override
     public String getEndVolume() {
-      return BibliographicUtil.getRangeSetEnd(getVolume());
+      return null;
     }
 
-    @Override
     public String getStartYear() {
-      return BibliographicUtil.getRangeSetStart(getYear());
+      return null;
     }
 
-    @Override
     public String getEndYear() {
-      return BibliographicUtil.getRangeSetEnd(getYear());
+      return null;
     }
 
-    @Override
     public String getStartIssue() {
       return null;
     }
 
-    @Override
     public String getEndIssue() {
       return null;
-    }
-
-    /**
-     * Provides an indication of whether there are no differences between this
-     * object and another one in anything other than proprietary identifiers.
-     * 
-     * @param other
-     *          A BibliographicItem with the other object.
-     * @return <code>true</code> if there are no differences in anything other
-     *         than their proprietary identifiers, <code>false</code> otherwise.
-     */
-    @Override
-    public boolean sameInNonProprietaryIdProperties(BibliographicItem other){
-      return other != null
-	  && areSameProperty(publisher, other.getPublisherName())
-	  && areSameProperty(seriesTitle, other.getSeriesTitle())
-	  && areSameProperty(publicationTitle, other.getPublicationTitle())
-	  && areSameProperty(eissn, other.getEissn())
-	  && areSameProperty(printissn, other.getPrintIssn())
-	  && areSameProperty(eisbn, other.getEisbn())
-	  && areSameProperty(printisbn, other.getPrintIsbn())
-	  && areSameProperty(year, other.getYear())
-	  && areSameProperty(volume, other.getVolume())
-	  && areSameProperty(coverageDepth, other.getCoverageDepth())
-	  && areSameProperty(publicationType, other.getPublicationType())
-	  && areSameProperty(provider, other.getProviderName());
-    }
-
-    /**
-     * Provides an indication of whether two properties are the same.
-     * 
-     * @param property1
-     *          A String with the first property to be compared.
-     * @param property2
-     *          A String with the second property to be compared.
-     * @return <code>true</code> if the two properties are the same,
-     *         <code>false</code> otherwise.
-     */
-    private boolean areSameProperty(String property1, String property2) {
-      return ((property1 == null && property2 == null)
-	  || (property1 != null && property1.equals(property2)));
     }
   }
     
@@ -457,68 +389,4 @@ where
       + "   , pv." + PROVIDER_NAME_COLUMN
       + "   , series_proprietary_id"
       + "   , proprietery_id";
-
-  /**
-   * Returns a list of BibliographicItems from the metadata database.
-   * 
-   * @return a list of BibliobraphicItems from the metadata database.
-   */
-  static public List<BibliographicItem> getBibliographicItems() {
-    List<BibliographicItem> items = Collections.<BibliographicItem>emptyList();
-    Connection conn = null;
-    try {
-      DbManager dbManager = getDaemon().getDbManager();
-      conn = dbManager.getConnection();
-      items = getBibliographicItems(dbManager, conn);
-    } catch (DbException ex) {
-      log.warning(ex.getMessage());
-      log.warning("bibliographicItemsQuery = " + bibliographicItemsQuery);
-    } finally {
-      DbManager.safeRollbackAndClose(conn);
-    }
-    return items;
-  }
-  
-  /**
-   * Returns a list of BibliographicItems from the metadata database.
-   * @param dbManager the database manager
-   * @param conn the database connection 
-   * @return a list of BibliobraphicItems from the metadata database.
-   */
-  static public List<BibliographicItem> getBibliographicItems(
-      DbManager dbManager, Connection conn) {
-    final String DEBUG_HEADER = "getBibliographicItems(): ";
-    BibliographicItem previousItem = null;
-    List<BibliographicItem> items = new ArrayList<BibliographicItem>();
-    PreparedStatement statement = null;
-    ResultSet resultSet = null;
-    
-    try {
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "bibliographicItemsQuery = "
-	  + bibliographicItemsQuery);
-      statement = dbManager.prepareStatement(conn, bibliographicItemsQuery);
-      resultSet = dbManager.executeQuery(statement);
-
-      while (resultSet.next()) {
-	BibliographicItem item = new BibliographicDatabaseItem(resultSet);
-	// Avoid adding items that differ only in some proprietary identifier. 
-	if (!item.sameInNonProprietaryIdProperties(previousItem)) {
-	  items.add(item);
-	}
-      }
-    } catch (IllegalArgumentException ex) {
-      log.warning(ex.getMessage());
-      log.warning("bibliographicItemsQuery = " + bibliographicItemsQuery);
-    } catch (SQLException ex) {
-      log.warning(ex.getMessage());
-      log.warning("bibliographicItemsQuery = " + bibliographicItemsQuery);
-    } catch (DbException ex) {
-      log.warning(ex.getMessage());
-      log.warning("bibliographicItemsQuery = " + bibliographicItemsQuery);
-    } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(statement);
-    }
-    return items;
-  }
 }
