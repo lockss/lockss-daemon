@@ -31,16 +31,18 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.1'
+__version__ = '0.5.0'
 
 import getpass
 import itertools
+from multiprocessing.dummy import Pool as ThreadPool
 import optparse
 import os.path
 import sys
+from threading import Thread
 
 import DaemonStatusServiceImplService_client
-from wsutil import datetimems, datems, durationms, zsiauth
+from wsutil import datems, datetimems, durationms, zsiauth
 
 #
 # Library
@@ -391,6 +393,7 @@ class _DaemonStatusServiceOptions(object):
     group.add_option('--group-by-field', action='store_true', help='group results by field instead of host')
     group.add_option('--no-special-output', action='store_true', help='no special output format for a single target host')
     group.add_option('--select', metavar='FIELDS', help='comma-separated list of fields for narrower output')
+    group.add_option('--threads', type='int', help='max outgoing connections allowed (default: no limit)')
     group.add_option('--where', help='optional WHERE clause for query operations')
     parser.add_option_group(group)
     return parser
@@ -453,6 +456,9 @@ class _DaemonStatusServiceOptions(object):
     # group_by_field/no_special_output
     self.group_by_field = opts.group_by_field
     self.no_special_output = opts.no_special_output
+    # threads
+    if opts.threads is None: self.threads = len(self.hosts)
+    else: self.threads = opts.threads
     # auth
     u = opts.username or getpass.getpass('UI username: ')
     p = opts.password or getpass.getpass('UI password: ')
@@ -479,6 +485,12 @@ def _output_table(options, data, rowheaders, lstcolkeys):
     _output_record(options, rowpart + [x[j] for x in colkeys])
   for rowkey in sorted(set([k[0] for k in data])):
     _output_record(options, list(rowkey) + [data.get((rowkey, colkey)) for colkey in colkeys])
+
+# Last modified 2015-08-31
+def _file_lines(fstr):
+  with open(os.path.expanduser(fstr)) as f: ret = filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f])
+  if len(ret) == 0: sys.exit('Error: %s contains no meaningful lines' % (fstr,))
+  return ret
 
 _AU_STATUS = {
   'accessType': ('Access type', lambda r: r.AccessType),
@@ -512,61 +524,42 @@ _AU_STATUS = {
 }
 
 def _do_get_au_status(options):
+  headlamb = [_AU_STATUS[x] for x in options.select]
   data = dict()
-  for host in options.hosts:
-    hostauids = set([r.Id for r in get_auids(host, options.auth)])
-    for auid in options.auids:
-      if auid not in hostauids: continue
-      r = get_au_status(host, options.auth, auid)
-      if r is None: continue # Probably doesn't happen
-      for x in options.select:
-        head, lamb = _AU_STATUS[x]
-        data[(auid, host, head)] = lamb(r)
-  if options.group_by_field:
-    display = dict([(((k[0],), (k[2], k[1])), v) for k, v in data.iteritems()])
-    _output_table(options, display, ['AUID'], [[_AU_STATUS[k][0] for k in options.select], sorted(options.hosts)])
-  else:
-    display = dict([(((k[0],), (k[1], k[2])), v) for k, v in data.iteritems()])
-    _output_table(options, display, ['AUID'], [sorted(options.hosts), [_AU_STATUS[k][0] for k in options.select]])
+  for host, auid, result in ThreadPool(options.threads).imap_unordered( \
+      lambda _tup: (_tup[1], _tup[0], get_au_status(_tup[1], options.auth, _tup[0])), \
+      itertools.product(options.auids, options.hosts)):
+    if result is not None:
+      for head, lamb in headlamb:
+        if options.group_by_field: colkey = (head, host)
+        else: colkey = (host, head)
+        data[((auid,), colkey)] = lamb(result)
+  _output_table(options, data, ['AUID'], [[x[0] for x in headlamb], sorted(options.hosts)] if options.group_by_field else [sorted(options.hosts), [x[0] for x in headlamb]])
 
 def _do_get_au_urls(options):
+  # Single request to a single host: unthreaded
   r = get_au_urls(options.hosts[0], options.auth, options.auids[0])
   for url in sorted(r): _output_record(options, [url])
 
 def _do_get_auids(options):
-  _do_get_auids_names(options, False)
-
-def _do_get_auids_names(options, do_names=True):
-  data = set()
-  names = dict()
-  for host in options.hosts:
-    for r in get_auids(host, options.auth):
-      data.add((r.Id, host))
-      if do_names: names.setdefault(r.Id, r.Name)
-  # Special case
-  if len(options.hosts) == 1 and len(options.auids) == 0 and not options.no_special_output:
-    if do_names:
-      for x in sorted(data): _output_record(options, [x[0], names.get(x[0])])
-    else:
-      for x in sorted(data): _output_record(options, [x[0]])
-    return
-  if len(options.auids) == 0: auids = set([x[0] for x in data])
-  else: auids = options.auids
-  if do_names:
-    display = dict([(((x[0], names.get(x[0])), (x[1],)), str(x in data)) for x in itertools.product(auids, options.hosts)])
-    _output_table(options, display, ['AUID', 'Name'], [sorted(options.hosts)])
-  else:
-    display = dict([(((x[0],), (x[1],)), str(x in data)) for x in itertools.product(auids, options.hosts)])
-    _output_table(options, display, ['AUID'], [sorted(options.hosts)])
-
-def _do_get_peer_agreements(options):
-  pa = get_peer_agreements(options.hosts[0], options.auth, options.auids[0])
-  if pa is None:
-    print 'No such AUID'
-    return
-  for pae in pa:
-    for ae in pae.Agreements.Entry:
-      _output_record(options, [pae.PeerId, ae.Key, ae.Value.PercentAgreement, datetimems(ae.Value.PercentAgreementTimestamp), ae.Value.HighestPercentAgreement, datetimems(ae.Value.HighestPercentAgreementTimestamp)])
+  if len(options.auids) > 0:
+    targetauids = set(options.auids)
+    shouldskip = lambda a: a not in targetauids
+  else: shouldskip = lambda a: False
+  data = dict()
+  auids = set()
+  for host, result in ThreadPool(options.threads).imap_unordered( \
+      lambda _host: (_host, get_auids(_host, options.auth)), \
+      options.hosts):
+    for r in result:
+      if shouldskip(r.Id): continue
+      if options.get_auids_names: rowkey = (r.Id, r.Name)
+      else: rowkey = (r.Id,)
+      data[(rowkey, (host,))] = True
+      if r.Id not in auids:
+        auids.add(r.Id)
+        for h in options.hosts: data.setdefault((rowkey, (h,)), False)
+  _output_table(options, data, ['AUID', 'Name'] if options.get_auids_names else ['AUID'], [sorted(options.hosts)])
 
 _PLATFORM_CONFIGURATION = {
   'adminEmail': ('Admin e-mail', lambda r: r.AdminEmail),
@@ -596,40 +589,35 @@ _PLATFORM_CONFIGURATION = {
   'v3Identity': ('V3 identity', lambda r: r.V3Identity)
 }
 
-def _do_get_platform_configuration(options):
-  data = dict()
-  for host in options.hosts:
-    r = get_platform_configuration(host, options.auth)
-    for x in options.select:
-      head, lamb = _PLATFORM_CONFIGURATION[x]
-      data[(head, host)] = lamb(r)
-  # Special case
-  if len(options.hosts) == 1 and not options.no_special_output:
-    for k, v in sorted(data.iteritems()): _output_record(options, [k[0], v])
+def _do_get_peer_agreements(options):
+  # Single request to a single host: unthreaded
+  pa = get_peer_agreements(options.hosts[0], options.auth, options.auids[0])
+  if pa is None:
+    print 'No such AUID'
     return
-  display = dict([(((k[0],), (k[1],)), v) for k, v in data.iteritems()])
-  _output_table(options, display, [''], [sorted(options.hosts)])
+  for pae in pa:
+    for ae in pae.Agreements.Entry:
+      _output_record(options, [pae.PeerId, ae.Key, ae.Value.PercentAgreement, datetimems(ae.Value.PercentAgreementTimestamp), ae.Value.HighestPercentAgreement, datetimems(ae.Value.HighestPercentAgreementTimestamp)])
+
+def _do_get_platform_configuration(options):
+  headlamb = [_PLATFORM_CONFIGURATION[x] for x in options.select]
+  data = dict()
+  for host, result in ThreadPool(options.threads).imap_unordered( \
+      lambda _host: (_host, get_platform_configuration(_host, options.auth)), \
+      options.hosts):
+    for head, lamb in headlamb:
+      data[((head,), (host,))] = lamb(result)
+  _output_table(options, data, [''], [sorted(options.hosts)])
 
 def _do_is_daemon_ready(options):
-  '''Outputs a table whose rows are target hosts and whose column is filled with
-  'True' is the host is ready or 'False' otherwise. (If there is a single target
-  host and single output is not disabled, only the word 'True' or 'False' is
-  displayed.)
-  '''
-  # Special case
-  if len(options.hosts) == 1 and not options.no_special_output:
-    _output_record(options, [str(is_daemon_ready(options.hosts[0], options.auth))])
-    return
-  for host in sorted(options.hosts):
-    _output_record(options, [host, str(is_daemon_ready(host, options.auth))])
-
-def _do_is_daemon_ready_quiet(options):
-  '''Outputs nothing; exits with 0 if all target hosts are ready, 1
-  otherwise.
-  '''
-  for host in options.hosts:
-    if not is_daemon_ready(host, options.auth): sys.exit(1)
-  sys.exit(0)
+  data = dict()
+  for host, result in ThreadPool(options.threads).imap_unordered( \
+      lambda _host: (_host, is_daemon_ready(_host, options.auth)), \
+      options.hosts):
+    if options.is_daemon_ready_quiet and result is False: sys.exit(1)
+    else: data[((host,), ('Daemon is ready',))] = result
+  if options.is_daemon_ready_quiet: pass
+  else: _output_table(options, data, ['Host'], [['Daemon is ready']])
 
 _QUERY_AUS = {
   'accessType': ('Access type', lambda r: r.AccessType),
@@ -673,19 +661,18 @@ _QUERY_AUS = {
 
 def _do_query_aus(options):
   select = filter(lambda x: x != 'auId', options.select)
+  auid_select = ['auId'] + select
+  headlamb = [_QUERY_AUS[x] for x in options.select]
   data = dict()
-  for host in options.hosts:
-    for r in query_aus(host, options.auth, ['auId'] + select, options.where):
-      auid = r.AuId
-      for x in select:
-        head, lamb = _QUERY_AUS[x]      
-        data[(auid, host, head)] = lamb(r)
-  if options.group_by_field:
-    display = dict([(((k[0],), (k[2], k[1])), v) for k, v in data.iteritems()])
-    _output_table(options, display, ['AUID'], [[_QUERY_AUS[k][0] for k in select], sorted(options.hosts)])
-  else:
-    display = dict([(((k[0],), (k[1], k[2])), v) for k, v in data.iteritems()])
-    _output_table(options, display, ['AUID'], [sorted(options.hosts), [_QUERY_AUS[k][0] for k in select]])
+  for host, result in ThreadPool(options.threads).imap_unordered( \
+      lambda _host: (_host, query_aus(_host, options.auth, auid_select, options.where)), \
+      options.hosts):
+    for r in result:
+      for head, lamb in headlamb:
+        if options.group_by_field: colkey = (head, host)
+        else: colkey = (host, head)
+        data[((r.AuId,), colkey)] = lamb(r)
+  _output_table(options, data, ['AUID'], [[x[0] for x in headlamb], sorted(options.hosts)] if options.group_by_field else [sorted(options.hosts), [x[0] for x in headlamb]])
 
 _QUERY_CRAWLS = {
   'auId': ('AUID', lambda r: r.AuId),
@@ -718,21 +705,26 @@ _QUERY_CRAWLS = {
 }
 
 def _do_query_crawls(options):
+  # Single request to a single host: unthreaded
   select = filter(lambda x: x != 'auId', options.select)
+  auid_select = ['auId'] + select
+  headlamb = [_QUERY_CRAWLS[x] for x in options.select]
   data = dict()
-  for r in query_crawls(options.hosts[0], options.auth, ['auId'] + select, options.where):
-    auid = r.AuId
-    for x in select:
-      head, lamb = _QUERY_CRAWLS[x]
-      data[(auid, head)] = lamb(r)
-  display = dict([(((k[0],), (k[1],)), v) for k, v in data.iteritems()])
-  _output_table(options, display, ['AUID'], [[_QUERY_CRAWLS[k][0] for k in select]])
+  for r in query_crawls(options.hosts[0], options.auth, auid_select, options.where):
+    for head, lamb in headlamb:
+      data[((r.AuId,), (head,))] = lamb(r)
+  _output_table(options, data, ['AUID'], [[x[0] for x in headlamb]])
 
-# Last modified 2015-08-31
-def _file_lines(fstr):
-  with open(os.path.expanduser(fstr)) as f: ret = filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f])
-  if len(ret) == 0: sys.exit('Error: %s contains no meaningful lines' % (fstr,))
-  return ret
+def _dispatch(options):
+  if options.get_au_status: _do_get_au_status(options)
+  elif options.get_au_urls: _do_get_au_urls(options)
+  elif options.get_auids or options.get_auids_names: _do_get_auids(options)
+  elif options.get_peer_agreements: _do_get_peer_agreements(options)
+  elif options.get_platform_configuration: _do_get_platform_configuration(options)
+  elif options.is_daemon_ready or options.is_daemon_ready_quiet: _do_is_daemon_ready(options)
+  elif options.query_aus: _do_query_aus(options)
+  elif options.query_crawls: _do_query_crawls(options)
+  else: raise RuntimeError, 'Unreachable'
 
 def _main():
   '''Main method.'''
@@ -741,18 +733,12 @@ def _main():
   (opts, args) = parser.parse_args()
   options = _DaemonStatusServiceOptions(parser, opts, args)
   # Dispatch
-  if options.get_au_status: _do_get_au_status(options)
-  elif options.get_au_urls: _do_get_au_urls(options)
-  elif options.get_auids: _do_get_auids(options)
-  elif options.get_auids_names: _do_get_auids_names(options)
-  elif options.get_peer_agreements: _do_get_peer_agreements(options)
-  elif options.get_platform_configuration: _do_get_platform_configuration(options)
-  elif options.is_daemon_ready: _do_is_daemon_ready(options)
-  elif options.is_daemon_ready_quiet: _do_is_daemon_ready_quiet(options)
-  elif options.query_aus: _do_query_aus(options)
-  elif options.query_crawls: _do_query_crawls(options)
-  else: raise RuntimeError, 'Unreachable'
+  t = Thread(target=_dispatch, args=(options,))
+  t.daemon = True
+  t.start()
+  while True:
+    t.join(1.5)
+    if not t.is_alive(): break
 
-# Main entry point
 if __name__ == '__main__': _main()
 

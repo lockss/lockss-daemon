@@ -5,7 +5,7 @@
 # $Id$
 
 __copyright__ = '''\
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 '''
 
@@ -32,7 +32,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.1.1'
+__version__ = '0.2.0'
 
 from datetime import date, datetime
 import sys
