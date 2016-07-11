@@ -134,12 +134,10 @@
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.ingenta.IngentaBooksUrlNormalizer</string>
   </entry>
-  <!-- 
   <entry>
     <string>text/html_link_rewriter_factory</string>
     <string>org.lockss.plugin.ingenta.IngentaHtmlLinkRewriterFactory</string>
   </entry>
-  -->
 <!-- http://www.ingentaconnect.com/content/bkpub/2nk9qe/1999/00000001/00000001/art00001?crawler=true&mimetype=application/pdf -->  
   <entry>
     <string>au_substance_url_pattern</string>

@@ -35,6 +35,7 @@ package org.lockss.plugin.ingenta;
 import org.apache.commons.lang.StringUtils;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 
 /*
  * With the implementation of a books version of the Ingenta plugin, take the
@@ -58,13 +59,13 @@ import org.lockss.plugin.*;
  */
 
 public class IngentaBooksUrlNormalizer implements UrlNormalizer {
-  
+  private static final Logger log = Logger.getLogger(IngentaBooksUrlNormalizer.class);
+
   public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
 
     /*
      * An Ingenta URL may have a jsessionid in it, 
      */
-    
     if (url.contains(";jsessionid=")) {
       url = url.replaceFirst(";jsessionid=[^?]+", "");
     }
@@ -110,7 +111,6 @@ public class IngentaBooksUrlNormalizer implements UrlNormalizer {
       // Now construct the URL
       url = baseUrl + "content/" + path;
     }
-    
     return url;
   }
 

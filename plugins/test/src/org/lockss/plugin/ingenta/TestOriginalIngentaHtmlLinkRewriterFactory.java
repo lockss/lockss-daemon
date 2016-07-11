@@ -37,12 +37,11 @@ import java.io.*;
 import org.lockss.util.*;
 import org.lockss.config.Configuration;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
-import org.lockss.plugin.Plugin;
 import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.servlet.ServletUtil;
 import org.lockss.test.*;
 
-public class TestIngentaHtmlLinkRewriterFactory extends LockssTestCase {
+public class TestOriginalIngentaHtmlLinkRewriterFactory extends LockssTestCase {
   static String ENC = Constants.DEFAULT_ENCODING;
   
   private static final String BOOK_PLUGIN = "org.lockss.plugin.ingenta.ClockssIngentaBooksPlugin";
@@ -83,6 +82,7 @@ public class TestIngentaHtmlLinkRewriterFactory extends LockssTestCase {
     return mau;
   }
   
+  //Books not currently tested in this file, but leave in support
   MockArchivalUnit makeBookAu() throws ConfigurationException, FileNotFoundException {
     MockArchivalUnit mau = new MockArchivalUnit();
     Configuration config =ConfigurationUtil.fromArgs(
@@ -116,17 +116,6 @@ public class TestIngentaHtmlLinkRewriterFactory extends LockssTestCase {
     
   static final String baseOutUrl = 
       "http://api.ingentaconnect.com/content/manup/vcb/2004/00000005/00000001/art00001";
-
-  
-  static final String book_input_1 =
-      "/org/lockss/plugin/ingenta/IngentaHtmlLinkRewriter_book_input.html";
-  static final String book_output_1 = 
-      "/org/lockss/plugin/ingenta/IngentaHtmlLinkRewriter_book_output.html";
-
-  static final String bookInUrl =
-      "http://www.ingentaconnect.com/content/bkpub/2nk9qe/1999/00000001/00000001/art00003";
-  static final String bookOutSuffix = "?crawler=true&mimetype=application/pdf";
-    
 
   /**
    * Paameterized test to see if links of the input resource file
@@ -284,29 +273,6 @@ public class TestIngentaHtmlLinkRewriterFactory extends LockssTestCase {
     pageRewriteTest(mau, baseInUrl, input_1, output_4);
   }
   
-  
-  /*
-   * <div class="right-col-download contain">
-<a class="fulltext pdf btn btn-general icbutton" onclick="javascript:popup('/search/download?pub=infobike%3a%2f%2fbkpub%2f2nk9qe%2f1999%2f00000001%2f00000001%2fart00003&mimetype=application%2fpdf&exitTargetId=1465506336864','downloadWindow','900','800')" title="PDF download of Organization as Organizing" class="no-underline contain" ><i class="fa fa-arrow-circle-o-down"></i></a>&nbsp;<span class="rust"><strong>Download</strong> <br />(PDF 1,242.4 kb)</span>&nbsp;
-</div>
-   */
-  
-  /**
-   * Test when HTML CU has MIME type and PDF CU does not.
-   * @throws Exception if something goes wrong
-   */
-  public void testBookCus() throws Exception {
-    MockArchivalUnit mau = makeBookAu();
-    CIProperties pdfHeaders = new CIProperties();
-    pdfHeaders.put("X-Lockss-content-type", "application/pdf; charset=UTF-8");
-    mau.addUrl(bookInUrl + bookOutSuffix,
-               true, // exists
-               true, //shouldCache
-               pdfHeaders);
-
-    // in progress...not done yet
-    //pageRewriteTest(mau, bookInUrl, book_input_1, book_output_1);
-  }
   
   /**
    * Test when both HTML and PDF CUs have no content.

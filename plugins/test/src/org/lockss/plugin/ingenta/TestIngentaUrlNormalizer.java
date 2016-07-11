@@ -38,6 +38,7 @@ import org.lockss.test.*;
 public class TestIngentaUrlNormalizer extends LockssTestCase {
 
   protected UrlNormalizer normalizer;
+  protected UrlNormalizer bnormalizer;
   
   protected MockArchivalUnit au;
   
@@ -46,6 +47,8 @@ public class TestIngentaUrlNormalizer extends LockssTestCase {
     au.setConfiguration(ConfigurationUtil.fromArgs("base_url", "http://www.example.com/",
                                                    "api_url", "http://api.example.com/"));
     normalizer = new IngentaUrlNormalizer();
+    bnormalizer = new IngentaBooksUrlNormalizer();
+    
   }
   
   public void testJsessionid() throws Exception {
@@ -55,6 +58,14 @@ public class TestIngentaUrlNormalizer extends LockssTestCase {
                  normalizer.normalizeUrl("http://www.example.com/content/bpsoc/bjp/2004/00000095/00000002/art00003;jsessionid=18t24vno4f29p.alice", au));
     assertEquals("http://www.example.com/content/bpsoc/bjp/2004/00000095/00000002/art00003?format=print&view=popup",
                  normalizer.normalizeUrl("http://www.example.com/content/bpsoc/bjp/2004/00000095/00000002/art00003;jsessionid=18t24vno4f29p.alice?format=print&view=popup", au));
+    assertEquals("http://www.example.com/content/bkpub/2nk9qe/1999/00000001/00000001/art00005",
+        bnormalizer.normalizeUrl("http://www.example.com/content/bkpub/2nk9qe/1999/00000001/00000001/art00005", au));
+    assertEquals("http://www.example.com/content/bkpub/2nk9qe/1999/00000001/00000001/art00005",
+        bnormalizer.normalizeUrl("http://www.example.com/content/bkpub/2nk9qe/1999/00000001/00000001/art00005;jsessionid=18t24vno4f29p.alice", au));
+    assertEquals("http://www.example.com/content/bkpub/2nk9qe/1999/00000001/00000001/art00005",
+        bnormalizer.normalizeUrl("http://www.example.com/contentone/bkpub/2nk9qe/1999/00000001/00000001/art00005;jsessionid=18t24vno4f29p.alice", au));
+
+  
   }
   
   public void testOneTimeUrls() throws Exception {
@@ -62,6 +73,8 @@ public class TestIngentaUrlNormalizer extends LockssTestCase {
                  normalizer.normalizeUrl("http://www.example.com/search/download?pub=infobike%3a%2f%2fpubli%2fjour%2f2005%2f00000044%2f00000003%2fart00001&mimetype=text%2fhtml&exitTargetId=1234567890123", au));
     assertEquals("http://api.example.com/content/publi/jour/2002/00000009/00000001/art00003?crawler=true",
                  normalizer.normalizeUrl("http://www.example.com/search/download?pub=infobike%3a%2f%2fpubli%2fjour%2f2002%2f00000009%2f00000001%2fart00003&mimetype=application%2fpdf", au));
+    assertEquals("http://www.example.com/content/bkpub/2nk9qe/1999/00000001/00000001/art00005?crawler=true&mimetype=application/pdf",
+        bnormalizer.normalizeUrl("http://www.example.com/search/download?pub=infobike%3a%2f%2fbkpub%2f2nk9qe%2f1999%2f00000001%2f00000001%2fart00005&mimetype=application/pdf&exitTargetId=1234567890", au));
   }
   
   public void testCaseInsensitive() throws Exception {
