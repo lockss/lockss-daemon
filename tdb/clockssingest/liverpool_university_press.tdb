@@ -190,7 +190,7 @@
     au < finished ; crawling ; 2012 ; Comma Volume 2012 ; 2012 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2013 ; Comma Volume 2013 ; 2013 ; >
     au < finished ; crawling ; 2014 ; Comma Volume 2014 ; 2014 ; >
-    au < ready ; exists ; 2015 ; Comma Volume 2015 ; 2015 ; >
+    au < crawling ; exists ; 2015 ; Comma Volume 2015 ; 2015 ; >
     au < expected ; exists ; 2016 ; Comma Volume 2016 ; 2016 ; >
 
   }
@@ -359,12 +359,12 @@
     au < manifest ; exists ; 2007 ; Historical Studies in Industrial Relations Volume 23-24 ; 23-24 ; >
     au < manifest ; exists ; 2008 ; Historical Studies in Industrial Relations Volume 25-26 ; 25-26 ; >
     au < manifest ; exists ; 2009 ; Historical Studies in Industrial Relations Volume 27-28 ; 27-28 ; >
-    au < ready ; exists ; 2010 ; Historical Studies in Industrial Relations Volume 29-30 ; 29-30 ; >
-    au < ready ; exists ; 2011 ; Historical Studies in Industrial Relations Volume 31-32 ; 31-32 ; >
-    au < ready ; exists ; 2012 ; Historical Studies in Industrial Relations Volume 33 ; 33 ; >
-    au < ready ; exists ; 2013 ; Historical Studies in Industrial Relations Volume 34 ; 34 ; >
-    au < ready ; exists ; 2014 ; Historical Studies in Industrial Relations Volume 35 ; 35 ; >
-    au < ready ; exists ; 2015 ; Historical Studies in Industrial Relations Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2010 ; Historical Studies in Industrial Relations Volume 29-30 ; 29-30 ; >
+    au < crawling ; exists ; 2011 ; Historical Studies in Industrial Relations Volume 31-32 ; 31-32 ; >
+    au < crawling ; exists ; 2012 ; Historical Studies in Industrial Relations Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2013 ; Historical Studies in Industrial Relations Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2014 ; Historical Studies in Industrial Relations Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2015 ; Historical Studies in Industrial Relations Volume 36 ; 36 ; >
     au < expected ; exists ; 2016 ; Historical Studies in Industrial Relations Volume 37 ; 37 ; >
 
   }
@@ -656,7 +656,7 @@
     au < crawling ; exists ; 2014 ; Quebec Studies Volume 57 ; 57 ; >
     au < finished ; finished ; 2014 ; Quebec Studies Volume 58 ; 58 ; >
     au < crawling ; exists ; 2015 ; Quebec Studies Volume 59 ; 59 ; >
-    au < ready ; exists ; 2015 ; Quebec Studies Volume 60 ; 60 ; >
+    au < crawling ; exists ; 2015 ; Quebec Studies Volume 60 ; 60 ; >
     au < manifest ; exists ; 2016 ; Quebec Studies Volume 61 ; 61 ; >
     au < expected ; exists ; 2016 ; Quebec Studies Volume 62 ; 62 ; >
 
@@ -723,11 +723,11 @@
 
     param[journal_id] = studia
 
-    au < ready ; exists ; 2011 ; Studia Hibernica Volume 37 ; 37 ; >
-    au < ready ; exists ; 2012 ; Studia Hibernica Volume 38 ; 38 ; >
-    au < ready ; exists ; 2013 ; Studia Hibernica Volume 39 ; 39 ; >
-    au < ready ; exists ; 2014 ; Studia Hibernica Volume 40 ; 40 ; >
-    au < ready ; exists ; 2015 ; Studia Hibernica Volume 41 ; 41 ; >
+    au < crawling ; exists ; 2011 ; Studia Hibernica Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2012 ; Studia Hibernica Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2013 ; Studia Hibernica Volume 39 ; 39 ; >
+    au < crawling ; exists ; 2014 ; Studia Hibernica Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2015 ; Studia Hibernica Volume 41 ; 41 ; >
     au < expected ; exists ; 2016 ; Studia Hibernica Volume 42 ; 42 ; >
 
   }
