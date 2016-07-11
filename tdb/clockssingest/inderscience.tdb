@@ -3672,7 +3672,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2013-2014 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2015-2016 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 4 ; 4 ; >
+      au < testing ; exists ; 2015-2016 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 4 ; 4 ; >
       au < expected ; exists ; 2016 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 5 ; 5 ; >
 
     }
@@ -4363,7 +4363,7 @@
 
       au < doNotProcess ; doNotProcess ; 2009-2012 ; International Journal of Innovation in Education Volume 1 ; 1 ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Innovation in Education Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2015-2016 ; International Journal of Innovation in Education Volume 3 ; 3 ; >
+      au < testing ; exists ; 2015-2016 ; International Journal of Innovation in Education Volume 3 ; 3 ; >
       au < expected ; exists ; 2016 ; International Journal of Innovation in Education Volume 4 ; 4 ; >
 
     }
@@ -4615,7 +4615,7 @@
       au < doNotProcess ; exists ; 2007-2008 ; International Journal of Internet Manufacturing and Services Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Internet Manufacturing and Services Volume 2 ; 2 ; >
       au < finished ; finished ; 2011-2014 ; International Journal of Internet Manufacturing and Services Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2015-2016 ; International Journal of Internet Manufacturing and Services Volume 4 ; 4 ; >
+      au < testing ; exists ; 2015-2016 ; International Journal of Internet Manufacturing and Services Volume 4 ; 4 ; >
       au < expected ; exists ; 2016 ; International Journal of Internet Manufacturing and Services Volume 5 ; 5 ; >
 
     }
@@ -8324,7 +8324,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Transitions and Innovation Systems Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Transitions and Innovation Systems Volume 2 ; 2 ; >
       au < finished ; manifest ; 2013-2014 ; International Journal of Transitions and Innovation Systems Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2015-2016 ; International Journal of Transitions and Innovation Systems Volume 4 ; 4 ; >
+      au < testing ; exists ; 2015-2016 ; International Journal of Transitions and Innovation Systems Volume 4 ; 4 ; >
       au < expected ; exists ; 2016 ; International Journal of Transitions and Innovation Systems Volume 5 ; 5 ; >
 
     }
@@ -8538,7 +8538,7 @@
       param[journal_id] = ijvp
 
       au < finished ; finished ; 2013-2014 ; International Journal of Vehicle Performance Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2015-2016 ; International Journal of Vehicle Performance Volume 2 ; 2 ; >
+      au < testing ; exists ; 2015-2016 ; International Journal of Vehicle Performance Volume 2 ; 2 ; >
 
     }
 
