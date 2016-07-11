@@ -33,7 +33,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Enterprise Development & Microfinance Volume 24 ; 24 ; >
     au < finished ; crawling ; 2014 ; Enterprise Development & Microfinance Volume 25 ; 25 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Enterprise Development & Microfinance Volume 26 ; 26 ; >
-    au < testing ; exists ; 2016 ; Enterprise Development & Microfinance Volume 27 ; 27 ; >
+    au < ready ; exists ; 2016 ; Enterprise Development & Microfinance Volume 27 ; 27 ; >
 
   }
 
@@ -128,7 +128,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Waterlines Volume 32 ; 32 ; >
     au < crawling ; exists ; 2014 ; Waterlines Volume 33 ; 33 ; >
     au < crawling ; exists ; 2015 ; Waterlines Volume 34 ; 34 ; >
-    au < testing ; exists ; 2016 ; Waterlines Volume 35 ; 35 ; >
+    au < ready ; exists ; 2016 ; Waterlines Volume 35 ; 35 ; >
 
   }
 
