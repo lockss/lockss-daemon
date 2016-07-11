@@ -61,7 +61,7 @@
     au < doNotProcess ; exists ; 2009 ; Advances in Structural Engineering Volume 12 ; 12 ; >
     au < superseded ; finished ; 2010 ; Advances in Structural Engineering Volume 13 [superseded] ; 13 ; >
     au < superseded ; finished ; 2011 ; Advances in Structural Engineering Volume 14 [superseded] ; 14 ; >
-    au < superseded ; crawling ; 2012 ; Advances in Structural Engineering Volume 15 [superseded] ; 15 ; >
+    au < superseded ; down ; 2012 ; Advances in Structural Engineering Volume 15 [superseded] ; 15 ; >
     au < superseded ; exists ; 2013 ; Advances in Structural Engineering Volume 16 [superseded] ; 16 ; >
     au < doNotProcess ; exists ; 2014 ; Advances in Structural Engineering Volume 17 ; 17 ; >
     au < doNotProcess ; exists ; 2015 ; Advances in Structural Engineering Volume 18 ; 18 ; >
@@ -121,7 +121,7 @@
     au < doNotProcess ; exists ; 2009 ; Energy & Environment Volume 20 ; 20 ; >
     au < superseded ; finished ; 2010 ; Energy & Environment Volume 21 [superseded] ; 21 ; >
     au < superseded ; finished ; 2011 ; Energy & Environment Volume 22 [superseded] ; 22 ; >
-    au < superseded ; crawling ; 2012 ; Energy & Environment Volume 23 [superseded] ; 23 ; >
+    au < superseded ; down ; 2012 ; Energy & Environment Volume 23 [superseded] ; 23 ; >
     au < superseded ; exists ; 2013 ; Energy & Environment Volume 24 [superseded] ; 24 ; >
     au < doNotProcess ; exists ; 2014 ; Energy & Environment Volume 25 ; 25 ; >
     au < doNotProcess ; exists ; 2015 ; Energy & Environment Volume 26 ; 26 ; >
@@ -530,8 +530,8 @@
     param[journal_issn] = 0957-4565
     # moved to Sage
 
-    au < down ; finished ; 2011 ; Noise & Vibration Worldwide Volume 42 ; 42 ; >
-    au < down ; crawling ; 2012 ; Noise & Vibration Worldwide Volume 43 ; 43 ; >
+    au < superseded ; finished ; 2011 ; Noise & Vibration Worldwide Volume 42 [superseded] ; 42 ; >
+    au < superseded ; crawling ; 2012 ; Noise & Vibration Worldwide Volume 43 [superseded] ; 43 ; >
     au < superseded ; exists ; 2013 ; Noise & Vibration Worldwide Volume 44 [superseded] ; 44 ; >
     au < doNotProcess ; exists ; 2014 ; Noise & Vibration Worldwide Volume 45 ; 45 ; >
     au < doNotProcess ; exists ; 2015 ; Noise & Vibration Worldwide Volume 46 ; 46 ; >
