@@ -793,7 +793,7 @@
       param[base_url] = http://ero.sagepub.com/
       pluginSuffix = ClockssHWDrupalPlugin
 
-      au < exists ; exists ; 2015 ; AERA Open Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2015 ; AERA Open Volume 1 ; 1 ; >
       au < doNotProcess ; exists ; 2016 ; AERA Open Volume 2 ; 2 ; >
 
   }
@@ -2860,7 +2860,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://jws.sagepub.com/
 
-      au < expected ; exists ; 2016 ; ANTYAJAA: Indian Journal of Women and Social Change Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2016 ; ANTYAJAA: Indian Journal of Women and Social Change Volume 1 ; 1 ; >
 
   }
 
@@ -3438,7 +3438,7 @@
       au < finished ; crawling ; 2013 ; Asia Pacific Media Educator Volume 23 ; 23 ; >
       au < finished ; finished ; 2014 ; Asia Pacific Media Educator Volume 24 ; 24 ; >
       au < crawling ; exists ; 2015 ; Asia Pacific Media Educator Volume 25 ; 25 ; >
-      au < expected ; exists ; 2016 ; Asia Pacific Media Educator Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2016 ; Asia Pacific Media Educator Volume 26 ; 26 ; >
 
     }
 
@@ -4070,7 +4070,7 @@
 
       au < manifest ; exists ; 2014 ; Big Data & Society Volume 1 ; 1 ; >
       au < manifest ; exists ; 2015 ; Big Data & Society Volume 2 ; 2 ; >
-      au < expected ; exists ; 2016 ; Big Data & Society Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2016 ; Big Data & Society Volume 3 ; 3 ; >
 
   }
 
@@ -4266,7 +4266,7 @@
         au < exists ; exists ; 2012 ; British Journal of Music Therapy Volume 26 ; 26 ; >
         au < exists ; exists ; 2013 ; British Journal of Music Therapy Volume 27 ; 27 ; >
         au < exists ; exists ; 2014 ; British Journal of Music Therapy Volume 28 ; 28 ; >
-        au < exists ; exists ; 2015 ; British Journal of Music Therapy Volume 29 ; 29 ; >
+        au < manifest ; exists ; 2015 ; British Journal of Music Therapy Volume 29 ; 29 ; >
         au < doNotProcess ; exists ; 2016 ; British Journal of Music Therapy Volume 30 ; 30 ; >
 
   }
@@ -9536,7 +9536,7 @@
       param[base_url] = http://tdr.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2016 ; The Downside Review Volume 134 ; 134 ; >
+      au < manifest ; exists ; 2016 ; The Downside Review Volume 134 ; 134 ; >
 
   }
 
@@ -15733,7 +15733,7 @@
       au < finished ; finished ; 2013 ; Indian Historical Review Volume 40 ; 40 ; >
       au < finished ; finished ; 2014 ; Indian Historical Review Volume 41 ; 41 ; >
       au < crawling ; exists ; 2015 ; Indian Historical Review Volume 42 ; 42 ; >
-      au < expected ; exists ; 2016 ; Indian Historical Review Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2016 ; Indian Historical Review Volume 43 ; 43 ; >
 
   }
 
@@ -15892,7 +15892,7 @@
       au < exists ; exists ; 2012 ; Industry and Higher Education Volume 26 ; 26 ; >
       au < exists ; exists ; 2013 ; Industry and Higher Education Volume 27 ; 27 ; >
       au < exists ; exists ; 2014 ; Industry and Higher Education Volume 28 ; 28 ; >
-      au < exists ; exists ; 2015 ; Industry and Higher Education Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2015 ; Industry and Higher Education Volume 29 ; 29 ; >
       au < doNotProcess ; exists ; 2016 ; Industry and Higher Education Volume 30 ; 30 ; >
 
   }
@@ -21509,7 +21509,7 @@
       au < finished ; finished ; 2013 ; Journal of Consumer Culture Volume 13 ; 13 ; >
       au < finished ; finished ; 2014 ; Journal of Consumer Culture Volume 14 ; 14 ; >
       au < crawling ; exists ; 2015 ; Journal of Consumer Culture Volume 15 ; 15 ; >
-      au < expected ; exists ; 2016 ; Journal of Consumer Culture Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2016 ; Journal of Consumer Culture Volume 16 ; 16 ; >
 
     }
 
@@ -23636,7 +23636,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < crawling ; exists ; 2015 ; Journal of Feline Medicine and Surgery Open Reports Volume 1 ; 1 ; >
-      au < expected ; exists ; 2016 ; Journal of Feline Medicine and Surgery Open Reports Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2016 ; Journal of Feline Medicine and Surgery Open Reports Volume 2 ; 2 ; >
 
   }
 
@@ -24719,7 +24719,7 @@
       au < finished ; finished ; 2013-2014 ; Journal of Industrial Textiles Volume 43 ; 43 ; >
       au < finished ; finished ; 2014-2015 ; Journal of Industrial Textiles Volume 44 ; 44 ; >
       au < ready ; exists ; 2015-2016 ; Journal of Industrial Textiles Volume 45 ; 45 ; >
-      au < expected ; exists ; 2016-2017 ; Journal of Industrial Textiles Volume 46 ; 46 ; >
+      au < manifest ; exists ; 2016-2017 ; Journal of Industrial Textiles Volume 46 ; 46 ; >
 
     }
 
@@ -26749,7 +26749,7 @@
       au < crawling ; exists ; 2013 ; Journal of Planning Literature Volume 28 ; 28 ; >
       au < finished ; finished ; 2014 ; Journal of Planning Literature Volume 29 ; 29 ; >
       au < crawling ; exists ; 2015 ; Journal of Planning Literature Volume 30 ; 30 ; >
-      au < expected ; exists ; 2016 ; Journal of Planning Literature Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2016 ; Journal of Planning Literature Volume 31 ; 31 ; >
 
     }
 
@@ -29193,7 +29193,7 @@
       au < exists ; exists ; 2012 ; Journal of Veterinary Dentistry Volume 29 ; 29 ; >
       au < exists ; exists ; 2013 ; Journal of Veterinary Dentistry Volume 30 ; 30 ; >
       au < exists ; exists ; 2014 ; Journal of Veterinary Dentistry Volume 31 ; 31 ; >
-      au < exists ; exists ; 2015 ; Journal of Veterinary Dentistry Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2015 ; Journal of Veterinary Dentistry Volume 32 ; 32 ; >
       au < doNotProcess ; exists ; 2016 ; Journal of Veterinary Dentistry Volume 33 ; 33 ; >
 
   }
@@ -33569,7 +33569,7 @@
       param[base_url] = http://oag.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < exists ; exists ; 2015 ; Outlook on Agriculture Volume 44 ; 44 ; >
+      au < manifest ; exists ; 2015 ; Outlook on Agriculture Volume 44 ; 44 ; >
       au < doNotProcess ; exists ; 2016 ; Outlook on Agriculture Volume 45 ; 45 ; >
 
   }
@@ -34547,7 +34547,7 @@
       au < finished ; finished ; 2013 ; Policy, Politics, & Nursing Practice Volume 14 ; 14 ; >
       au < finished ; finished ; 2014 ; Policy, Politics, & Nursing Practice Volume 15 ; 15 ; >
       au < crawling ; exists ; 2015 ; Policy, Politics, & Nursing Practice Volume 16 ; 16 ; >
-      au < expected ; exists ; 2016 ; Policy, Politics, & Nursing Practice Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2016 ; Policy, Politics, & Nursing Practice Volume 17 ; 17 ; >
 
     }
 
@@ -41187,7 +41187,7 @@
       au < doesNotExist ; doesNotExist ; 1995-1996 ; TEACHING Exceptional Children Volume 28 ; 28 ; >
       au < doesNotExist ; doesNotExist ; 1996-1997 ; TEACHING Exceptional Children Volume 29 ; 29 ; >
       au < exists ; exists ; 1997-1998 ; TEACHING Exceptional Children Volume 30 ; 30 ; >
-      au < exists ; exists ; 1998-1999 ; TEACHING Exceptional Children Volume 31 ; 31 ; >
+      au < manifest ; exists ; 1998-1999 ; TEACHING Exceptional Children Volume 31 ; 31 ; >
       au < exists ; exists ; 1999-2000 ; TEACHING Exceptional Children Volume 32 ; 32 ; >
       au < exists ; exists ; 2000-2001 ; TEACHING Exceptional Children Volume 33 ; 33 ; >
       au < exists ; exists ; 2001-2002 ; TEACHING Exceptional Children Volume 34 ; 34 ; >
@@ -45137,7 +45137,7 @@
       au < finished ; finished ; 2013 ; Journal of Infrastructure Development Volume 5 ; 5 ; >
       au < finished ; crawling ; 2014 ; Journal of Infrastructure Development Volume 6 ; 6 ; >
       au < crawling ; exists ; 2015 ; Journal of Infrastructure Development Volume 7 ; 7 ; >
-      au < expected ; exists ; 2016 ; Journal of Infrastructure Development Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2016 ; Journal of Infrastructure Development Volume 8 ; 8 ; >
 
 
     }
@@ -46263,7 +46263,7 @@
 
     au < finished ; crawling ; 2012 ; Jindal Journal of Business Research Volume 1 ; 1 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2013 ; Jindal Journal of Business Research Volume 2 ; 2 ; >
-    au < expected ; exists ; 2014 ; Jindal Journal of Business Research Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2014 ; Jindal Journal of Business Research Volume 3 ; 3 ; >
 
     }
 
@@ -48720,7 +48720,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Psychological Reports Volume 113 ; 113 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Psychological Reports Volume 114 ; 114 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Psychological Reports Volume 115 ; 115 ; >
-    au < exists ; exists ; 2015 ; Psychological Reports Volume 116 ; 116 ; >
+    au < manifest ; exists ; 2015 ; Psychological Reports Volume 116 ; 116 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Psychological Reports Volume 117 ; 117 ; >
     au < doNotProcess ; exists ; 2016 ; Psychological Reports Volume 118 ; 118 ; >
     
@@ -48857,7 +48857,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Perceptual and Motor Skills Volume 117 ; 117 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Perceptual and Motor Skills Volume 118 ; 118 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Perceptual and Motor Skills Volume 119 ; 119 ; >
-    au < exists ; exists ; 2015 ; Perceptual and Motor Skills Volume 120 ; 120 ; > 
+    au < manifest ; exists ; 2015 ; Perceptual and Motor Skills Volume 120 ; 120 ; > 
     au < doNotProcess ; doNotProcess ; 2015 ; Perceptual and Motor Skills Volume 121 ; 121 ; >
     au < doNotProcess ; exists ; 2016 ; Perceptual and Motor Skills Volume 122 ; 122 ; >
     au < exists ; exists ; 2016 ; Perceptual and Motor Skills Volume 123 ; 123 ; >

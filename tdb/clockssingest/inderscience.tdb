@@ -24,7 +24,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; African Journal of Accounting, Auditing and Finance Volume 2 ; 2 ; >
       au < crawling ; exists ; 2014 ; African Journal of Accounting, Auditing and Finance Volume 3 ; 3 ; >
       au < crawling ; exists ; 2015 ; African Journal of Accounting, Auditing and Finance Volume 4 ; 4 ; >
-      au < expected ; exists ; 2016 ; African Journal of Accounting, Auditing and Finance Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2016 ; African Journal of Accounting, Auditing and Finance Volume 5 ; 5 ; >
 
     }
 
@@ -1212,7 +1212,7 @@
       au < crawling ; exists ; 2015 ; International Journal of Business and Globalisation Volume 14 ; 14 ; >
       au < crawling ; exists ; 2015 ; International Journal of Business and Globalisation Volume 15 ; 15 ; >
       au < ready ; exists ; 2016 ; International Journal of Business and Globalisation Volume 16 ; 16 ; >
-      au < expected ; exists ; 2016 ; International Journal of Business and Globalisation Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Business and Globalisation Volume 17 ; 17 ; >
 
     }
 
@@ -1744,7 +1744,7 @@
 
       param[journal_id] = ijccia
 
-      au < expected ; exists ; 2016 ; International Journal of Computational Complexity and Intelligent Algorithms Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Computational Complexity and Intelligent Algorithms Volume 1 ; 1 ; >
 
     }
 
@@ -3986,7 +3986,7 @@
       au < crawling ; exists ; 2015 ; International Journal of Indian Culture and Business Management Volume 10 ; 10 ; >
       au < crawling ; exists ; 2015 ; International Journal of Indian Culture and Business Management Volume 11 ; 11 ; >
       au < ready ; exists ; 2016 ; International Journal of Indian Culture and Business Management Volume 12 ; 12 ; >
-      au < expected ; exists ; 2016 ; International Journal of Indian Culture and Business Management Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Indian Culture and Business Management Volume 13 ; 13 ; >
 
     }
 
@@ -4702,7 +4702,7 @@
 
       au < doNotProcess ; doNotProcess ; 2008-2011 ; International Journal of Inventory Research Volume 1 ; 1 ; >
       au < crawling ; exists ; 2013-2015 ; International Journal of Inventory Research Volume 2 ; 2 ; >
-      au < expected ; exists ; 2016-2017 ; International Journal of Inventory Research Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2016-2017 ; International Journal of Inventory Research Volume 3 ; 3 ; >
 
     }
 
@@ -5523,7 +5523,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Materials Engineering Innovation Volume 4 ; 4 ; >
       au < crawling ; exists ; 2014 ; International Journal of Materials Engineering Innovation Volume 5 ; 5 ; >
       au < crawling ; exists ; 2015 ; International Journal of Materials Engineering Innovation Volume 6 ; 6 ; >
-      au < expected ; exists ; 2016 ; International Journal of Materials Engineering Innovation Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Materials Engineering Innovation Volume 7 ; 7 ; >
 
     }
 
@@ -7836,7 +7836,7 @@
       param[journal_id] = ijsi
 
       au < finished ; finished ; 2013-2015 ; International Journal of Swarm Intelligence Volume 1 ; 1 ; >
-      au < expected ; exists ; 2016 ; International Journal of Swarm Intelligence Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Swarm Intelligence Volume 2 ; 2 ; >
 
     }
 
@@ -8522,7 +8522,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Vehicle Noise and Vibration Volume 9 ; 9 ; >
       au < finished ; finished ; 2014 ; International Journal of Vehicle Noise and Vibration Volume 10 ; 10 ; >
       au < crawling ; exists ; 2015 ; International Journal of Vehicle Noise and Vibration Volume 11 ; 11 ; >
-      au < expected ; exists ; 2016 ; International Journal of Vehicle Noise and Vibration Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2016 ; International Journal of Vehicle Noise and Vibration Volume 12 ; 12 ; >
 
     }
 
