@@ -1,23 +1,23 @@
 {
 
   publisher <
-    name = Igitur, Utrecht Publishing and Archiving Services 
+    name = Utrecht University Library 
   >
+
+      # on Ubiquity Press platform
+      implicit < status ; year ; name ; volume ; param[year] >
 
   {
   
     title <
       name = LIBER Quarterly ;
-      issn = 2213-056X 
-      
-      # moved to Ubiquity Press platform and new url https://www.liberquarterly.eu/
+      eissn = 2213-056X 
 
     >
-    
+    {
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
     param[base_url] = http://liber.library.uu.nl/
     param[journal_id] = lq
-    implicit < status ; year ; name ; volume ; param[year] >
     
     au < down ; 1999 ; LIBER Quarterly Volume 9 ; 9 ; 1999 >
     au < down ; 2000 ; LIBER Quarterly Volume 10 ; 10 ; 2000 >
@@ -37,7 +37,7 @@
     au < down ; 2014 ; LIBER Quarterly Volume 23-24 ; 23-24 ; 2014 >
     au < exists ; 2015 ; LIBER Quarterly Volume 24-25 ; 24-25 ; 2015 >
     au < exists ; 2016 ; LIBER Quarterly Volume 25-26 ; 25-26 ; 2016 >
-  
+    }
   }
 
 }

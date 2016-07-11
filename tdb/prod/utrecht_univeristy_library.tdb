@@ -1,0 +1,71 @@
+{
+
+  publisher <
+    name = Utrecht University Library 
+  >
+
+      # on Ubiquity Press platform
+      implicit < status ; year ; name ; volume ; param[year] >
+      plugin = needs.plugin
+
+  {
+  
+    title <
+      name = LIBER Quarterly ;
+      eissn = 2213-056X 
+
+    >
+    param[base_url] = https://www.liberquarterly.eu/
+    param[journal_id] = lq
+    
+    au < exists ; 1999 ; LIBER Quarterly Volume 9 ; 9 ; 1999 >
+    au < exists ; 2000 ; LIBER Quarterly Volume 10 ; 10 ; 2000 >
+    au < exists ; 2001 ; LIBER Quarterly Volume 11 ; 11 ; 2001 >
+    au < exists ; 2002 ; LIBER Quarterly Volume 12 ; 12 ; 2002 >
+    au < exists ; 2003 ; LIBER Quarterly Volume 13 ; 13 ; 2003 >
+    au < exists ; 2004 ; LIBER Quarterly Volume 14 ; 14 ; 2004 >
+    au < exists ; 2005 ; LIBER Quarterly Volume 15 ; 15 ; 2005 >
+    au < exists ; 2006 ; LIBER Quarterly Volume 16 ; 16 ; 2006 >
+    au < exists ; 2007 ; LIBER Quarterly Volume 17 ; 17 ; 2007 >
+    au < exists ; 2008 ; LIBER Quarterly Volume 18 ; 18 ; 2008 >
+    au < exists ; 2009 ; LIBER Quarterly Volume 19 ; 19 ; 2009 >
+    au < exists ; 2010 ; LIBER Quarterly Volume 19-20 ; 19-20 ; 2010 >
+    au < exists ; 2011 ; LIBER Quarterly Volume 20-21 ; 20-21 ; 2011 >
+    au < exists ; 2012 ; LIBER Quarterly Volume 21-22 ; 21-22 ; 2012 >
+    au < exists ; 2013 ; LIBER Quarterly Volume 22-23 ; 22-23 ; 2013 >
+    au < exists ; 2014 ; LIBER Quarterly Volume 23-24 ; 23-24 ; 2014 >
+    au < exists ; 2015 ; LIBER Quarterly Volume 24-25 ; 24-25 ; 2015 >
+    au < exists ; 2016 ; LIBER Quarterly Volume 25-26 ; 25-26 ; 2016 >
+  }
+
+  {
+  
+    title <
+      name = LIBER Quarterly ;
+      eissn = 2213-056X 
+
+    >
+    param[base_url] = https://www.liberquarterly.eu/
+    param[journal_id] = lq
+    
+    au < exists ; 1999 ; LIBER Quarterly Volume 9 ; 9 ; 1999 >
+    au < exists ; 2000 ; LIBER Quarterly Volume 10 ; 10 ; 2000 >
+    au < exists ; 2001 ; LIBER Quarterly Volume 11 ; 11 ; 2001 >
+    au < exists ; 2002 ; LIBER Quarterly Volume 12 ; 12 ; 2002 >
+    au < exists ; 2003 ; LIBER Quarterly Volume 13 ; 13 ; 2003 >
+    au < exists ; 2004 ; LIBER Quarterly Volume 14 ; 14 ; 2004 >
+    au < exists ; 2005 ; LIBER Quarterly Volume 15 ; 15 ; 2005 >
+    au < exists ; 2006 ; LIBER Quarterly Volume 16 ; 16 ; 2006 >
+    au < exists ; 2007 ; LIBER Quarterly Volume 17 ; 17 ; 2007 >
+    au < exists ; 2008 ; LIBER Quarterly Volume 18 ; 18 ; 2008 >
+    au < exists ; 2009 ; LIBER Quarterly Volume 19 ; 19 ; 2009 >
+    au < exists ; 2010 ; LIBER Quarterly Volume 19-20 ; 19-20 ; 2010 >
+    au < exists ; 2011 ; LIBER Quarterly Volume 20-21 ; 20-21 ; 2011 >
+    au < exists ; 2012 ; LIBER Quarterly Volume 21-22 ; 21-22 ; 2012 >
+    au < exists ; 2013 ; LIBER Quarterly Volume 22-23 ; 22-23 ; 2013 >
+    au < exists ; 2014 ; LIBER Quarterly Volume 23-24 ; 23-24 ; 2014 >
+    au < exists ; 2015 ; LIBER Quarterly Volume 24-25 ; 24-25 ; 2015 >
+    au < exists ; 2016 ; LIBER Quarterly Volume 25-26 ; 25-26 ; 2016 >
+  }
+
+}
