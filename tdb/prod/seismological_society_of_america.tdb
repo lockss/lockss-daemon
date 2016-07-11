@@ -4,8 +4,8 @@
     name = Seismological Society of America
   >
   
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    implicit < status ; year ; name ; param[volume_name] >
+    pluginPrefix = org.lockss.plugin.highwire.
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
   {
     title <
@@ -17,112 +17,112 @@
 
       param[base_url] = http://www.bssaonline.org/
 
-      au < released ; 1911 ; Bulletin of the Seismological Society of America Volume 1 ; 1 >
-      au < released ; 1912 ; Bulletin of the Seismological Society of America Volume 2 ; 2 >
-      au < released ; 1913 ; Bulletin of the Seismological Society of America Volume 3 ; 3 >
-      au < released ; 1914 ; Bulletin of the Seismological Society of America Volume 4 ; 4 >
-      au < released ; 1915 ; Bulletin of the Seismological Society of America Volume 5 ; 5 >
-      au < released ; 1916 ; Bulletin of the Seismological Society of America Volume 6 ; 6 >
-      au < released ; 1917 ; Bulletin of the Seismological Society of America Volume 7 ; 7 >
-      au < released ; 1918 ; Bulletin of the Seismological Society of America Volume 8 ; 8 >
-      au < released ; 1919 ; Bulletin of the Seismological Society of America Volume 9 ; 9 >
-      au < released ; 1920 ; Bulletin of the Seismological Society of America Volume 10 ; 10 >
-      au < released ; 1921 ; Bulletin of the Seismological Society of America Volume 11 ; 11 >
-      au < released ; 1922 ; Bulletin of the Seismological Society of America Volume 12 ; 12 >
-      au < released ; 1923 ; Bulletin of the Seismological Society of America Volume 13 ; 13 >
-      au < released ; 1924 ; Bulletin of the Seismological Society of America Volume 14 ; 14 >
-      au < released ; 1925 ; Bulletin of the Seismological Society of America Volume 15 ; 15 >
-      au < released ; 1926 ; Bulletin of the Seismological Society of America Volume 16 ; 16 >
-      au < released ; 1927 ; Bulletin of the Seismological Society of America Volume 17 ; 17 >
-      au < released ; 1928 ; Bulletin of the Seismological Society of America Volume 18 ; 18 >
-      au < released ; 1929 ; Bulletin of the Seismological Society of America Volume 19 ; 19 >
-      au < released ; 1930 ; Bulletin of the Seismological Society of America Volume 20 ; 20 >
-      au < released ; 1931 ; Bulletin of the Seismological Society of America Volume 21 ; 21 >
-      au < released ; 1932 ; Bulletin of the Seismological Society of America Volume 22 ; 22 >
-      au < released ; 1933 ; Bulletin of the Seismological Society of America Volume 23 ; 23 >
-      au < released ; 1934 ; Bulletin of the Seismological Society of America Volume 24 ; 24 >
-      au < released ; 1935 ; Bulletin of the Seismological Society of America Volume 25 ; 25 >
-      au < released ; 1936 ; Bulletin of the Seismological Society of America Volume 26 ; 26 >
-      au < released ; 1937 ; Bulletin of the Seismological Society of America Volume 27 ; 27 >
-      au < released ; 1938 ; Bulletin of the Seismological Society of America Volume 28 ; 28 >
-      au < released ; 1939 ; Bulletin of the Seismological Society of America Volume 29 ; 29 >
-      au < released ; 1940 ; Bulletin of the Seismological Society of America Volume 30 ; 30 >
-      au < released ; 1941 ; Bulletin of the Seismological Society of America Volume 31 ; 31 >
-      au < released ; 1942 ; Bulletin of the Seismological Society of America Volume 32 ; 32 >
-      au < released ; 1943 ; Bulletin of the Seismological Society of America Volume 33 ; 33 >
-      au < released ; 1944 ; Bulletin of the Seismological Society of America Volume 34 ; 34 >
-      au < released ; 1945 ; Bulletin of the Seismological Society of America Volume 35 ; 35 >
-      au < released ; 1946 ; Bulletin of the Seismological Society of America Volume 36 ; 36 >
-      au < released ; 1947 ; Bulletin of the Seismological Society of America Volume 37 ; 37 >
-      au < released ; 1948 ; Bulletin of the Seismological Society of America Volume 38 ; 38 >
-      au < released ; 1949 ; Bulletin of the Seismological Society of America Volume 39 ; 39 >
-      au < released ; 1950 ; Bulletin of the Seismological Society of America Volume 40 ; 40 >
-      au < released ; 1951 ; Bulletin of the Seismological Society of America Volume 41 ; 41 >
-      au < released ; 1952 ; Bulletin of the Seismological Society of America Volume 42 ; 42 >
-      au < released ; 1953 ; Bulletin of the Seismological Society of America Volume 43 ; 43 >
-      au < released ; 1954 ; Bulletin of the Seismological Society of America Volume 44 ; 44 >
-      au < released ; 1955 ; Bulletin of the Seismological Society of America Volume 45 ; 45 >
-      au < released ; 1956 ; Bulletin of the Seismological Society of America Volume 46 ; 46 >
-      au < released ; 1957 ; Bulletin of the Seismological Society of America Volume 47 ; 47 >
-      au < released ; 1958 ; Bulletin of the Seismological Society of America Volume 48 ; 48 >
-      au < released ; 1959 ; Bulletin of the Seismological Society of America Volume 49 ; 49 >
-      au < released ; 1960 ; Bulletin of the Seismological Society of America Volume 50 ; 50 >
-      au < released ; 1961 ; Bulletin of the Seismological Society of America Volume 51 ; 51 >
-      au < released ; 1962 ; Bulletin of the Seismological Society of America Volume 52 ; 52 >
-      au < released ; 1963 ; Bulletin of the Seismological Society of America Volume 53 ; 53 >
-      au < released ; 1964 ; Bulletin of the Seismological Society of America Volume 54 ; 54 >
-      au < released ; 1965 ; Bulletin of the Seismological Society of America Volume 55 ; 55 >
-      au < released ; 1966 ; Bulletin of the Seismological Society of America Volume 56 ; 56 >
-      au < released ; 1967 ; Bulletin of the Seismological Society of America Volume 57 ; 57 >
-      au < released ; 1968 ; Bulletin of the Seismological Society of America Volume 58 ; 58 >
-      au < released ; 1969 ; Bulletin of the Seismological Society of America Volume 59 ; 59 >
-      au < released ; 1970 ; Bulletin of the Seismological Society of America Volume 60 ; 60 >
-      au < released ; 1971 ; Bulletin of the Seismological Society of America Volume 61 ; 61 >
-      au < released ; 1972 ; Bulletin of the Seismological Society of America Volume 62 ; 62 >
-      au < released ; 1973 ; Bulletin of the Seismological Society of America Volume 63 ; 63 >
-      au < released ; 1974 ; Bulletin of the Seismological Society of America Volume 64 ; 64 >
-      au < released ; 1975 ; Bulletin of the Seismological Society of America Volume 65 ; 65 >
-      au < released ; 1976 ; Bulletin of the Seismological Society of America Volume 66 ; 66 >
-      au < released ; 1977 ; Bulletin of the Seismological Society of America Volume 67 ; 67 >
-      au < released ; 1978 ; Bulletin of the Seismological Society of America Volume 68 ; 68 >
-      au < released ; 1979 ; Bulletin of the Seismological Society of America Volume 69 ; 69 >
-      au < released ; 1980 ; Bulletin of the Seismological Society of America Volume 70 ; 70 >
-      au < released ; 1981 ; Bulletin of the Seismological Society of America Volume 71 ; 71 >
-      au < released ; 1982 ; Bulletin of the Seismological Society of America Volume 72 ; 72 >
-      au < released ; 1983 ; Bulletin of the Seismological Society of America Volume 73 ; 73 >
-      au < released ; 1984 ; Bulletin of the Seismological Society of America Volume 74 ; 74 >
-      au < released ; 1985 ; Bulletin of the Seismological Society of America Volume 75 ; 75 >
-      au < released ; 1986 ; Bulletin of the Seismological Society of America Volume 76 ; 76 >
-      au < released ; 1987 ; Bulletin of the Seismological Society of America Volume 77 ; 77 >
-      au < released ; 1988 ; Bulletin of the Seismological Society of America Volume 78 ; 78 >
-      au < released ; 1989 ; Bulletin of the Seismological Society of America Volume 79 ; 79 >
-      au < released ; 1990 ; Bulletin of the Seismological Society of America Volume 80 ; 80 >
-      au < released ; 1991 ; Bulletin of the Seismological Society of America Volume 81 ; 81 >
-      au < released ; 1992 ; Bulletin of the Seismological Society of America Volume 82 ; 82 >
-      au < released ; 1993 ; Bulletin of the Seismological Society of America Volume 83 ; 83 >
-      au < released ; 1994 ; Bulletin of the Seismological Society of America Volume 84 ; 84 >
-      au < released ; 1995 ; Bulletin of the Seismological Society of America Volume 85 ; 85 >
-      au < released ; 1996 ; Bulletin of the Seismological Society of America Volume 86 ; 86 >
-      au < released ; 1997 ; Bulletin of the Seismological Society of America Volume 87 ; 87 >
-      au < released ; 1998 ; Bulletin of the Seismological Society of America Volume 88 ; 88 >
-      au < released ; 1999 ; Bulletin of the Seismological Society of America Volume 89 ; 89 >
-      au < released ; 2000 ; Bulletin of the Seismological Society of America Volume 90 ; 90 >
-      au < released ; 2001 ; Bulletin of the Seismological Society of America Volume 91 ; 91 >
-      au < released ; 2002 ; Bulletin of the Seismological Society of America Volume 92 ; 92 >
-      au < released ; 2003 ; Bulletin of the Seismological Society of America Volume 93 ; 93 >
-      au < released ; 2004 ; Bulletin of the Seismological Society of America Volume 94 ; 94 >
-      au < released ; 2005 ; Bulletin of the Seismological Society of America Volume 95 ; 95 >
-      au < released ; 2006 ; Bulletin of the Seismological Society of America Volume 96 ; 96 >
-      au < released ; 2007 ; Bulletin of the Seismological Society of America Volume 97 ; 97 >
-      au < released ; 2008 ; Bulletin of the Seismological Society of America Volume 98 ; 98 >
-      au < released ; 2009 ; Bulletin of the Seismological Society of America Volume 99 ; 99 >
-      au < released ; 2010 ; Bulletin of the Seismological Society of America Volume 100 ; 100 >
-      au < released ; 2011 ; Bulletin of the Seismological Society of America Volume 101 ; 101 >
-      au < released ; 2012 ; Bulletin of the Seismological Society of America Volume 102 ; 102 >
-      au < released ; 2013 ; Bulletin of the Seismological Society of America Volume 103 ; 103 >
-      au < released ; 2014 ; Bulletin of the Seismological Society of America Volume 104 ; 104 >
-      au < released ; 2015 ; Bulletin of the Seismological Society of America Volume 105 ; 105 >
-      au < manifest ; 2016 ; Bulletin of the Seismological Society of America Volume 106 ; 106 >
+      au < HighWirePressH20Plugin ; released ; 1911 ; Bulletin of the Seismological Society of America Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; released ; 1912 ; Bulletin of the Seismological Society of America Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; released ; 1913 ; Bulletin of the Seismological Society of America Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; released ; 1914 ; Bulletin of the Seismological Society of America Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; released ; 1915 ; Bulletin of the Seismological Society of America Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; released ; 1916 ; Bulletin of the Seismological Society of America Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; released ; 1917 ; Bulletin of the Seismological Society of America Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; released ; 1918 ; Bulletin of the Seismological Society of America Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; released ; 1919 ; Bulletin of the Seismological Society of America Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; released ; 1920 ; Bulletin of the Seismological Society of America Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; released ; 1921 ; Bulletin of the Seismological Society of America Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; released ; 1922 ; Bulletin of the Seismological Society of America Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; released ; 1923 ; Bulletin of the Seismological Society of America Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; released ; 1924 ; Bulletin of the Seismological Society of America Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; released ; 1925 ; Bulletin of the Seismological Society of America Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; released ; 1926 ; Bulletin of the Seismological Society of America Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; released ; 1927 ; Bulletin of the Seismological Society of America Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; released ; 1928 ; Bulletin of the Seismological Society of America Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; released ; 1929 ; Bulletin of the Seismological Society of America Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; released ; 1930 ; Bulletin of the Seismological Society of America Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; released ; 1931 ; Bulletin of the Seismological Society of America Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; released ; 1932 ; Bulletin of the Seismological Society of America Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; released ; 1933 ; Bulletin of the Seismological Society of America Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; released ; 1934 ; Bulletin of the Seismological Society of America Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; released ; 1935 ; Bulletin of the Seismological Society of America Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; released ; 1936 ; Bulletin of the Seismological Society of America Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; released ; 1937 ; Bulletin of the Seismological Society of America Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; released ; 1938 ; Bulletin of the Seismological Society of America Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; released ; 1939 ; Bulletin of the Seismological Society of America Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; released ; 1940 ; Bulletin of the Seismological Society of America Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; released ; 1941 ; Bulletin of the Seismological Society of America Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; released ; 1942 ; Bulletin of the Seismological Society of America Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; released ; 1943 ; Bulletin of the Seismological Society of America Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; released ; 1944 ; Bulletin of the Seismological Society of America Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; released ; 1945 ; Bulletin of the Seismological Society of America Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; released ; 1946 ; Bulletin of the Seismological Society of America Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; released ; 1947 ; Bulletin of the Seismological Society of America Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; released ; 1948 ; Bulletin of the Seismological Society of America Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; released ; 1949 ; Bulletin of the Seismological Society of America Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; released ; 1950 ; Bulletin of the Seismological Society of America Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; released ; 1951 ; Bulletin of the Seismological Society of America Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; released ; 1952 ; Bulletin of the Seismological Society of America Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; released ; 1953 ; Bulletin of the Seismological Society of America Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; released ; 1954 ; Bulletin of the Seismological Society of America Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; released ; 1955 ; Bulletin of the Seismological Society of America Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; released ; 1956 ; Bulletin of the Seismological Society of America Volume 46 ; 46 >
+      au < HighWirePressH20Plugin ; released ; 1957 ; Bulletin of the Seismological Society of America Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; released ; 1958 ; Bulletin of the Seismological Society of America Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; released ; 1959 ; Bulletin of the Seismological Society of America Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; released ; 1960 ; Bulletin of the Seismological Society of America Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; released ; 1961 ; Bulletin of the Seismological Society of America Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; released ; 1962 ; Bulletin of the Seismological Society of America Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; released ; 1963 ; Bulletin of the Seismological Society of America Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; released ; 1964 ; Bulletin of the Seismological Society of America Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; released ; 1965 ; Bulletin of the Seismological Society of America Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; released ; 1966 ; Bulletin of the Seismological Society of America Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; released ; 1967 ; Bulletin of the Seismological Society of America Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; released ; 1968 ; Bulletin of the Seismological Society of America Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; released ; 1969 ; Bulletin of the Seismological Society of America Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; released ; 1970 ; Bulletin of the Seismological Society of America Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; released ; 1971 ; Bulletin of the Seismological Society of America Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; released ; 1972 ; Bulletin of the Seismological Society of America Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; released ; 1973 ; Bulletin of the Seismological Society of America Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; released ; 1974 ; Bulletin of the Seismological Society of America Volume 64 ; 64 >
+      au < HighWirePressH20Plugin ; released ; 1975 ; Bulletin of the Seismological Society of America Volume 65 ; 65 >
+      au < HighWirePressH20Plugin ; released ; 1976 ; Bulletin of the Seismological Society of America Volume 66 ; 66 >
+      au < HighWirePressH20Plugin ; released ; 1977 ; Bulletin of the Seismological Society of America Volume 67 ; 67 >
+      au < HighWirePressH20Plugin ; released ; 1978 ; Bulletin of the Seismological Society of America Volume 68 ; 68 >
+      au < HighWirePressH20Plugin ; released ; 1979 ; Bulletin of the Seismological Society of America Volume 69 ; 69 >
+      au < HighWirePressH20Plugin ; released ; 1980 ; Bulletin of the Seismological Society of America Volume 70 ; 70 >
+      au < HighWirePressH20Plugin ; released ; 1981 ; Bulletin of the Seismological Society of America Volume 71 ; 71 >
+      au < HighWirePressH20Plugin ; released ; 1982 ; Bulletin of the Seismological Society of America Volume 72 ; 72 >
+      au < HighWirePressH20Plugin ; released ; 1983 ; Bulletin of the Seismological Society of America Volume 73 ; 73 >
+      au < HighWirePressH20Plugin ; released ; 1984 ; Bulletin of the Seismological Society of America Volume 74 ; 74 >
+      au < HighWirePressH20Plugin ; released ; 1985 ; Bulletin of the Seismological Society of America Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; released ; 1986 ; Bulletin of the Seismological Society of America Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; released ; 1987 ; Bulletin of the Seismological Society of America Volume 77 ; 77 >
+      au < HighWirePressH20Plugin ; released ; 1988 ; Bulletin of the Seismological Society of America Volume 78 ; 78 >
+      au < HighWirePressH20Plugin ; released ; 1989 ; Bulletin of the Seismological Society of America Volume 79 ; 79 >
+      au < HighWirePressH20Plugin ; released ; 1990 ; Bulletin of the Seismological Society of America Volume 80 ; 80 >
+      au < HighWirePressH20Plugin ; released ; 1991 ; Bulletin of the Seismological Society of America Volume 81 ; 81 >
+      au < HighWirePressH20Plugin ; released ; 1992 ; Bulletin of the Seismological Society of America Volume 82 ; 82 >
+      au < HighWirePressH20Plugin ; released ; 1993 ; Bulletin of the Seismological Society of America Volume 83 ; 83 >
+      au < HighWirePressH20Plugin ; released ; 1994 ; Bulletin of the Seismological Society of America Volume 84 ; 84 >
+      au < HighWirePressH20Plugin ; released ; 1995 ; Bulletin of the Seismological Society of America Volume 85 ; 85 >
+      au < HighWirePressH20Plugin ; released ; 1996 ; Bulletin of the Seismological Society of America Volume 86 ; 86 >
+      au < HighWirePressH20Plugin ; released ; 1997 ; Bulletin of the Seismological Society of America Volume 87 ; 87 >
+      au < HighWirePressH20Plugin ; released ; 1998 ; Bulletin of the Seismological Society of America Volume 88 ; 88 >
+      au < HighWirePressH20Plugin ; released ; 1999 ; Bulletin of the Seismological Society of America Volume 89 ; 89 >
+      au < HighWirePressH20Plugin ; released ; 2000 ; Bulletin of the Seismological Society of America Volume 90 ; 90 >
+      au < HighWirePressH20Plugin ; released ; 2001 ; Bulletin of the Seismological Society of America Volume 91 ; 91 >
+      au < HighWirePressH20Plugin ; released ; 2002 ; Bulletin of the Seismological Society of America Volume 92 ; 92 >
+      au < HighWirePressH20Plugin ; released ; 2003 ; Bulletin of the Seismological Society of America Volume 93 ; 93 >
+      au < HighWirePressH20Plugin ; released ; 2004 ; Bulletin of the Seismological Society of America Volume 94 ; 94 >
+      au < HighWirePressH20Plugin ; released ; 2005 ; Bulletin of the Seismological Society of America Volume 95 ; 95 >
+      au < HighWirePressH20Plugin ; released ; 2006 ; Bulletin of the Seismological Society of America Volume 96 ; 96 >
+      au < HighWirePressH20Plugin ; released ; 2007 ; Bulletin of the Seismological Society of America Volume 97 ; 97 >
+      au < HighWirePressH20Plugin ; released ; 2008 ; Bulletin of the Seismological Society of America Volume 98 ; 98 >
+      au < HighWirePressH20Plugin ; released ; 2009 ; Bulletin of the Seismological Society of America Volume 99 ; 99 >
+      au < HighWirePressH20Plugin ; released ; 2010 ; Bulletin of the Seismological Society of America Volume 100 ; 100 >
+      au < HighWirePressH20Plugin ; released ; 2011 ; Bulletin of the Seismological Society of America Volume 101 ; 101 >
+      au < HighWirePressH20Plugin ; released ; 2012 ; Bulletin of the Seismological Society of America Volume 102 ; 102 >
+      au < HighWirePressH20Plugin ; released ; 2013 ; Bulletin of the Seismological Society of America Volume 103 ; 103 >
+      au < HighWirePressH20Plugin ; released ; 2014 ; Bulletin of the Seismological Society of America Volume 104 ; 104 >
+      au < HighWirePressH20Plugin ; released ; 2015 ; Bulletin of the Seismological Society of America Volume 105 ; 105 >
+      au < HighWirePressH20Plugin ; manifest ; 2016 ; Bulletin of the Seismological Society of America Volume 106 ; 106 >
 
     }
 
@@ -136,93 +136,93 @@
 
     param[base_url] = http://srl.geoscienceworld.org/
 
-    au < manifest ; 1929-1930 ; Seismological Research Letters Volume 1 ; 1 >
-    au < manifest ; 1930-1931 ; Seismological Research Letters Volume 2 ; 2 >
-    au < manifest ; 1931-1932 ; Seismological Research Letters Volume 3 ; 3 >
-    au < manifest ; 1932-1933 ; Seismological Research Letters Volume 4 ; 4 >
-    au < manifest ; 1933-1934 ; Seismological Research Letters Volume 5 ; 5 >
-    au < manifest ; 1934-1935 ; Seismological Research Letters Volume 6 ; 6 >
-    au < manifest ; 1935-1936 ; Seismological Research Letters Volume 7 ; 7 >
-    au < manifest ; 1936-1937 ; Seismological Research Letters Volume 8 ; 8 >
-    au < manifest ; 1937-1938 ; Seismological Research Letters Volume 9 ; 9 >
-    au < manifest ; 1938-1939 ; Seismological Research Letters Volume 10 ; 10 >
-    au < manifest ; 1939-1940 ; Seismological Research Letters Volume 11 ; 11 >
-    au < manifest ; 1940-1941 ; Seismological Research Letters Volume 12 ; 12 >
-    au < manifest ; 1941-1942 ; Seismological Research Letters Volume 13 ; 13 >
-    au < manifest ; 1942-1943 ; Seismological Research Letters Volume 14 ; 14 >
-    au < manifest ; 1943-1944 ; Seismological Research Letters Volume 15 ; 15 >
-    au < manifest ; 1944-1945 ; Seismological Research Letters Volume 16 ; 16 >
-    au < manifest ; 1945-1946 ; Seismological Research Letters Volume 17 ; 17 >
-    au < manifest ; 1946-1947 ; Seismological Research Letters Volume 18 ; 18 >
-    au < manifest ; 1947-1948 ; Seismological Research Letters Volume 19 ; 19 >
-    au < manifest ; 1948-1949 ; Seismological Research Letters Volume 20 ; 20 >
-    au < manifest ; 1950 ; Seismological Research Letters Volume 21 ; 21 >
-    au < manifest ; 1951 ; Seismological Research Letters Volume 22 ; 22 >
-    au < manifest ; 1952 ; Seismological Research Letters Volume 23 ; 23 >
-    au < manifest ; 1953 ; Seismological Research Letters Volume 24 ; 24 >
-    au < manifest ; 1954 ; Seismological Research Letters Volume 25 ; 25 >
-    au < manifest ; 1955 ; Seismological Research Letters Volume 26 ; 26 >
-    au < manifest ; 1956 ; Seismological Research Letters Volume 27 ; 27 >
-    au < manifest ; 1957 ; Seismological Research Letters Volume 28 ; 28 >
-    au < manifest ; 1958 ; Seismological Research Letters Volume 29 ; 29 >
-    au < manifest ; 1959 ; Seismological Research Letters Volume 30 ; 30 >
-    au < manifest ; 1960 ; Seismological Research Letters Volume 31 ; 31 >
-    au < manifest ; 1961 ; Seismological Research Letters Volume 32 ; 32 >
-    au < manifest ; 1962 ; Seismological Research Letters Volume 33 ; 33 >
-    au < manifest ; 1963 ; Seismological Research Letters Volume 34 ; 34 >
-    au < manifest ; 1964 ; Seismological Research Letters Volume 35 ; 35 >
-    au < manifest ; 1965 ; Seismological Research Letters Volume 36 ; 36 >
-    au < manifest ; 1966 ; Seismological Research Letters Volume 37 ; 37 >
-    au < manifest ; 1967 ; Seismological Research Letters Volume 38 ; 38 >
-    au < manifest ; 1968 ; Seismological Research Letters Volume 39 ; 39 >
-    au < manifest ; 1969 ; Seismological Research Letters Volume 40 ; 40 >
-    au < manifest ; 1970 ; Seismological Research Letters Volume 41 ; 41 >
-    au < manifest ; 1971 ; Seismological Research Letters Volume 42 ; 42 >
-    au < manifest ; 1972 ; Seismological Research Letters Volume 43 ; 43 >
-    au < manifest ; 1973 ; Seismological Research Letters Volume 44 ; 44 >
-    au < manifest ; 1974 ; Seismological Research Letters Volume 45 ; 45 >
-    au < manifest ; 1975 ; Seismological Research Letters Volume 46 ; 46 >
-    au < manifest ; 1976 ; Seismological Research Letters Volume 47 ; 47 >
-    au < manifest ; 1977 ; Seismological Research Letters Volume 48 ; 48 >
-    au < manifest ; 1978-1979 ; Seismological Research Letters Volume 49 ; 49 >
-    au < manifest ; 1979 ; Seismological Research Letters Volume 50 ; 50 >
-    au < manifest ; 1980 ; Seismological Research Letters Volume 51 ; 51 >
-    au < manifest ; 1981 ; Seismological Research Letters Volume 52 ; 52 >
-    au < manifest ; 1982 ; Seismological Research Letters Volume 53 ; 53 >
-    au < manifest ; 1983 ; Seismological Research Letters Volume 54 ; 54 >
-    au < manifest ; 1984 ; Seismological Research Letters Volume 55 ; 55 >
-    au < manifest ; 1985 ; Seismological Research Letters Volume 56 ; 56 >
-    au < manifest ; 1986 ; Seismological Research Letters Volume 57 ; 57 >
-    au < manifest ; 1987 ; Seismological Research Letters Volume 58 ; 58 >
-    au < manifest ; 1988 ; Seismological Research Letters Volume 59 ; 59 >
-    au < manifest ; 1989 ; Seismological Research Letters Volume 60 ; 60 >
-    au < manifest ; 1990 ; Seismological Research Letters Volume 61 ; 61 >
-    au < manifest ; 1991 ; Seismological Research Letters Volume 62 ; 62 >
-    au < manifest ; 1992 ; Seismological Research Letters Volume 63 ; 63 >
-    au < manifest ; 1993 ; Seismological Research Letters Volume 64 ; 64 >
-    au < manifest ; 1994 ; Seismological Research Letters Volume 65 ; 65 >
-    au < manifest ; 1995 ; Seismological Research Letters Volume 66 ; 66 >
-    au < manifest ; 1996 ; Seismological Research Letters Volume 67 ; 67 >
-    au < manifest ; 1997 ; Seismological Research Letters Volume 68 ; 68 >
-    au < manifest ; 1998 ; Seismological Research Letters Volume 69 ; 69 >
-    au < manifest ; 1999 ; Seismological Research Letters Volume 70 ; 70 >
-    au < manifest ; 2000 ; Seismological Research Letters Volume 71 ; 71 >
-    au < manifest ; 2001 ; Seismological Research Letters Volume 72 ; 72 >
-    au < manifest ; 2002 ; Seismological Research Letters Volume 73 ; 73 >
-    au < manifest ; 2003 ; Seismological Research Letters Volume 74 ; 74 >
-    au < manifest ; 2004 ; Seismological Research Letters Volume 75 ; 75 >
-    au < manifest ; 2005 ; Seismological Research Letters Volume 76 ; 76 >
-    au < manifest ; 2006 ; Seismological Research Letters Volume 77 ; 77 >
-    au < manifest ; 2007 ; Seismological Research Letters Volume 78 ; 78 >
-    au < manifest ; 2008 ; Seismological Research Letters Volume 79 ; 79 >
-    au < manifest ; 2009 ; Seismological Research Letters Volume 80 ; 80 >
-    au < manifest ; 2010 ; Seismological Research Letters Volume 81 ; 81 >
-    au < manifest ; 2011 ; Seismological Research Letters Volume 82 ; 82 >
-    au < released ; 2012 ; Seismological Research Letters Volume 83 ; 83 >
-    au < released ; 2013 ; Seismological Research Letters Volume 84 ; 84 >
-    au < released ; 2014 ; Seismological Research Letters Volume 85 ; 85 >
-    au < released ; 2015 ; Seismological Research Letters Volume 86 ; 86 >
-    au < manifest ; 2016 ; Seismological Research Letters Volume 87 ; 87 >
+    au < HWDrupalPlugin ; exists ; 1929-1930 ; Seismological Research Letters Volume 1 ; 1 >
+    au < HWDrupalPlugin ; exists ; 1930-1931 ; Seismological Research Letters Volume 2 ; 2 >
+    au < HWDrupalPlugin ; exists ; 1931-1932 ; Seismological Research Letters Volume 3 ; 3 >
+    au < HWDrupalPlugin ; exists ; 1932-1933 ; Seismological Research Letters Volume 4 ; 4 >
+    au < HWDrupalPlugin ; exists ; 1933-1934 ; Seismological Research Letters Volume 5 ; 5 >
+    au < HWDrupalPlugin ; exists ; 1934-1935 ; Seismological Research Letters Volume 6 ; 6 >
+    au < HWDrupalPlugin ; exists ; 1935-1936 ; Seismological Research Letters Volume 7 ; 7 >
+    au < HWDrupalPlugin ; exists ; 1936-1937 ; Seismological Research Letters Volume 8 ; 8 >
+    au < HWDrupalPlugin ; exists ; 1937-1938 ; Seismological Research Letters Volume 9 ; 9 >
+    au < HWDrupalPlugin ; exists ; 1938-1939 ; Seismological Research Letters Volume 10 ; 10 >
+    au < HWDrupalPlugin ; exists ; 1939-1940 ; Seismological Research Letters Volume 11 ; 11 >
+    au < HWDrupalPlugin ; exists ; 1940-1941 ; Seismological Research Letters Volume 12 ; 12 >
+    au < HWDrupalPlugin ; exists ; 1941-1942 ; Seismological Research Letters Volume 13 ; 13 >
+    au < HWDrupalPlugin ; exists ; 1942-1943 ; Seismological Research Letters Volume 14 ; 14 >
+    au < HWDrupalPlugin ; exists ; 1943-1944 ; Seismological Research Letters Volume 15 ; 15 >
+    au < HWDrupalPlugin ; exists ; 1944-1945 ; Seismological Research Letters Volume 16 ; 16 >
+    au < HWDrupalPlugin ; exists ; 1945-1946 ; Seismological Research Letters Volume 17 ; 17 >
+    au < HWDrupalPlugin ; exists ; 1946-1947 ; Seismological Research Letters Volume 18 ; 18 >
+    au < HWDrupalPlugin ; exists ; 1947-1948 ; Seismological Research Letters Volume 19 ; 19 >
+    au < HWDrupalPlugin ; exists ; 1948-1949 ; Seismological Research Letters Volume 20 ; 20 >
+    au < HWDrupalPlugin ; exists ; 1950 ; Seismological Research Letters Volume 21 ; 21 >
+    au < HWDrupalPlugin ; exists ; 1951 ; Seismological Research Letters Volume 22 ; 22 >
+    au < HWDrupalPlugin ; exists ; 1952 ; Seismological Research Letters Volume 23 ; 23 >
+    au < HWDrupalPlugin ; exists ; 1953 ; Seismological Research Letters Volume 24 ; 24 >
+    au < HWDrupalPlugin ; exists ; 1954 ; Seismological Research Letters Volume 25 ; 25 >
+    au < HWDrupalPlugin ; exists ; 1955 ; Seismological Research Letters Volume 26 ; 26 >
+    au < HWDrupalPlugin ; exists ; 1956 ; Seismological Research Letters Volume 27 ; 27 >
+    au < HWDrupalPlugin ; exists ; 1957 ; Seismological Research Letters Volume 28 ; 28 >
+    au < HWDrupalPlugin ; exists ; 1958 ; Seismological Research Letters Volume 29 ; 29 >
+    au < HWDrupalPlugin ; exists ; 1959 ; Seismological Research Letters Volume 30 ; 30 >
+    au < HWDrupalPlugin ; exists ; 1960 ; Seismological Research Letters Volume 31 ; 31 >
+    au < HWDrupalPlugin ; exists ; 1961 ; Seismological Research Letters Volume 32 ; 32 >
+    au < HWDrupalPlugin ; exists ; 1962 ; Seismological Research Letters Volume 33 ; 33 >
+    au < HWDrupalPlugin ; exists ; 1963 ; Seismological Research Letters Volume 34 ; 34 >
+    au < HWDrupalPlugin ; exists ; 1964 ; Seismological Research Letters Volume 35 ; 35 >
+    au < HWDrupalPlugin ; exists ; 1965 ; Seismological Research Letters Volume 36 ; 36 >
+    au < HWDrupalPlugin ; exists ; 1966 ; Seismological Research Letters Volume 37 ; 37 >
+    au < HWDrupalPlugin ; exists ; 1967 ; Seismological Research Letters Volume 38 ; 38 >
+    au < HWDrupalPlugin ; exists ; 1968 ; Seismological Research Letters Volume 39 ; 39 >
+    au < HWDrupalPlugin ; exists ; 1969 ; Seismological Research Letters Volume 40 ; 40 >
+    au < HWDrupalPlugin ; exists ; 1970 ; Seismological Research Letters Volume 41 ; 41 >
+    au < HWDrupalPlugin ; exists ; 1971 ; Seismological Research Letters Volume 42 ; 42 >
+    au < HWDrupalPlugin ; exists ; 1972 ; Seismological Research Letters Volume 43 ; 43 >
+    au < HWDrupalPlugin ; exists ; 1973 ; Seismological Research Letters Volume 44 ; 44 >
+    au < HWDrupalPlugin ; exists ; 1974 ; Seismological Research Letters Volume 45 ; 45 >
+    au < HWDrupalPlugin ; exists ; 1975 ; Seismological Research Letters Volume 46 ; 46 >
+    au < HWDrupalPlugin ; exists ; 1976 ; Seismological Research Letters Volume 47 ; 47 >
+    au < HWDrupalPlugin ; exists ; 1977 ; Seismological Research Letters Volume 48 ; 48 >
+    au < HWDrupalPlugin ; exists ; 1978-1979 ; Seismological Research Letters Volume 49 ; 49 >
+    au < HWDrupalPlugin ; exists ; 1979 ; Seismological Research Letters Volume 50 ; 50 >
+    au < HWDrupalPlugin ; exists ; 1980 ; Seismological Research Letters Volume 51 ; 51 >
+    au < HWDrupalPlugin ; exists ; 1981 ; Seismological Research Letters Volume 52 ; 52 >
+    au < HWDrupalPlugin ; exists ; 1982 ; Seismological Research Letters Volume 53 ; 53 >
+    au < HWDrupalPlugin ; exists ; 1983 ; Seismological Research Letters Volume 54 ; 54 >
+    au < HWDrupalPlugin ; exists ; 1984 ; Seismological Research Letters Volume 55 ; 55 >
+    au < HWDrupalPlugin ; exists ; 1985 ; Seismological Research Letters Volume 56 ; 56 >
+    au < HWDrupalPlugin ; exists ; 1986 ; Seismological Research Letters Volume 57 ; 57 >
+    au < HWDrupalPlugin ; exists ; 1987 ; Seismological Research Letters Volume 58 ; 58 >
+    au < HWDrupalPlugin ; exists ; 1988 ; Seismological Research Letters Volume 59 ; 59 >
+    au < HWDrupalPlugin ; exists ; 1989 ; Seismological Research Letters Volume 60 ; 60 >
+    au < HWDrupalPlugin ; exists ; 1990 ; Seismological Research Letters Volume 61 ; 61 >
+    au < HWDrupalPlugin ; exists ; 1991 ; Seismological Research Letters Volume 62 ; 62 >
+    au < HWDrupalPlugin ; exists ; 1992 ; Seismological Research Letters Volume 63 ; 63 >
+    au < HWDrupalPlugin ; exists ; 1993 ; Seismological Research Letters Volume 64 ; 64 >
+    au < HWDrupalPlugin ; exists ; 1994 ; Seismological Research Letters Volume 65 ; 65 >
+    au < HWDrupalPlugin ; exists ; 1995 ; Seismological Research Letters Volume 66 ; 66 >
+    au < HWDrupalPlugin ; exists ; 1996 ; Seismological Research Letters Volume 67 ; 67 >
+    au < HWDrupalPlugin ; exists ; 1997 ; Seismological Research Letters Volume 68 ; 68 >
+    au < HWDrupalPlugin ; exists ; 1998 ; Seismological Research Letters Volume 69 ; 69 >
+    au < HWDrupalPlugin ; exists ; 1999 ; Seismological Research Letters Volume 70 ; 70 >
+    au < HWDrupalPlugin ; exists ; 2000 ; Seismological Research Letters Volume 71 ; 71 >
+    au < HWDrupalPlugin ; exists ; 2001 ; Seismological Research Letters Volume 72 ; 72 >
+    au < HWDrupalPlugin ; exists ; 2002 ; Seismological Research Letters Volume 73 ; 73 >
+    au < HWDrupalPlugin ; exists ; 2003 ; Seismological Research Letters Volume 74 ; 74 >
+    au < HWDrupalPlugin ; exists ; 2004 ; Seismological Research Letters Volume 75 ; 75 >
+    au < HWDrupalPlugin ; exists ; 2005 ; Seismological Research Letters Volume 76 ; 76 >
+    au < HWDrupalPlugin ; exists ; 2006 ; Seismological Research Letters Volume 77 ; 77 >
+    au < HWDrupalPlugin ; exists ; 2007 ; Seismological Research Letters Volume 78 ; 78 >
+    au < HWDrupalPlugin ; exists ; 2008 ; Seismological Research Letters Volume 79 ; 79 >
+    au < HWDrupalPlugin ; exists ; 2009 ; Seismological Research Letters Volume 80 ; 80 >
+    au < HWDrupalPlugin ; exists ; 2010 ; Seismological Research Letters Volume 81 ; 81 >
+    au < HWDrupalPlugin ; exists ; 2011 ; Seismological Research Letters Volume 82 ; 82 >
+    au < HighWirePressH20Plugin ; released ; 2012 ; Seismological Research Letters Volume 83 ; 83 >
+    au < HighWirePressH20Plugin ; released ; 2013 ; Seismological Research Letters Volume 84 ; 84 >
+    au < HighWirePressH20Plugin ; released ; 2014 ; Seismological Research Letters Volume 85 ; 85 >
+    au < HighWirePressH20Plugin ; released ; 2015 ; Seismological Research Letters Volume 86 ; 86 >
+    au < HWDrupalPlugin ; exists ; 2016 ; Seismological Research Letters Volume 87 ; 87 >
 
   }
 
