@@ -4259,10 +4259,24 @@
     {
 
       title <
+        name = Autism & Developmental Language Impairments ;
+        eissn = 2396-9415
+      >
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://dli.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2016 ; Autism & Developmental Language Impairments Volume 1 ; 1 >
+
+    }
+
+    {
+
+      title <
         name = Behavior Modification ;
         issn = 0145-4455 ;
-        eissn = 1552-4167 ;
-        issnl = 0145-4455
+        eissn = 1552-4167 
       >
 
       {
@@ -19284,6 +19298,22 @@
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
+      au < exists ; 2000 ; The International Journal of Entrepreneurship and Innovation Volume 1 ; 1 >
+      au < doesNotExist ; 2001 ; The International Journal of Entrepreneurship and Innovation Volume 2 ; 2 >
+      au < exists ; 2002 ; The International Journal of Entrepreneurship and Innovation Volume 3 ; 3 >
+      au < exists ; 2003 ; The International Journal of Entrepreneurship and Innovation Volume 4 ; 4 >
+      au < exists ; 2004 ; The International Journal of Entrepreneurship and Innovation Volume 5 ; 5 >
+      au < exists ; 2005 ; The International Journal of Entrepreneurship and Innovation Volume 6 ; 6 >
+      au < exists ; 2006 ; The International Journal of Entrepreneurship and Innovation Volume 7 ; 7 >
+      au < exists ; 2007 ; The International Journal of Entrepreneurship and Innovation Volume 8 ; 8 >
+      au < exists ; 2008 ; The International Journal of Entrepreneurship and Innovation Volume 9 ; 9 >
+      au < exists ; 2009 ; The International Journal of Entrepreneurship and Innovation Volume 10 ; 10 >
+      au < exists ; 2010 ; The International Journal of Entrepreneurship and Innovation Volume 11 ; 11 >
+      au < exists ; 2011 ; The International Journal of Entrepreneurship and Innovation Volume 12 ; 12 >
+      au < exists ; 2012 ; The International Journal of Entrepreneurship and Innovation Volume 13 ; 13 >
+      au < exists ; 2013 ; The International Journal of Entrepreneurship and Innovation Volume 14 ; 14 >
+      au < exists ; 2014 ; The International Journal of Entrepreneurship and Innovation Volume 15 ; 15 >
+      au < exists ; 2015 ; The International Journal of Entrepreneurship and Innovation Volume 16 ; 16 >
       au < manifest ; 2016 ; International Journal of Entrepreneurship and Innovation Volume 17 ; 17 >
 
     }
@@ -37071,6 +37101,22 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
   
+        au < exists ; 1999 ; Outlook on Agriculture Volume 28 ; 28 >
+        au < exists ; 2000 ; Outlook on Agriculture Volume 29 ; 29 >
+        au < exists ; 2001 ; Outlook on Agriculture Volume 30 ; 30 >
+        au < exists ; 2002 ; Outlook on Agriculture Volume 31 ; 31 >
+        au < exists ; 2003 ; Outlook on Agriculture Volume 32 ; 32 >
+        au < exists ; 2004 ; Outlook on Agriculture Volume 33 ; 33 >
+        au < exists ; 2005 ; Outlook on Agriculture Volume 34 ; 34 >
+        au < exists ; 2006 ; Outlook on Agriculture Volume 35 ; 35 >
+        au < exists ; 2007 ; Outlook on Agriculture Volume 36 ; 36 >
+        au < exists ; 2008 ; Outlook on Agriculture Volume 37 ; 37 >
+        au < exists ; 2009 ; Outlook on Agriculture Volume 38 ; 38 >
+        au < exists ; 2010 ; Outlook on Agriculture Volume 39 ; 39 >
+        au < exists ; 2011 ; Outlook on Agriculture Volume 40 ; 40 >
+        au < exists ; 2012 ; Outlook on Agriculture Volume 41 ; 41 >
+        au < exists ; 2013 ; Outlook on Agriculture Volume 42 ; 42 >
+        au < exists ; 2014 ; Outlook on Agriculture Volume 43 ; 43 >
         au < manifest ; 2015 ; Outlook on Agriculture Volume 44 ; 44 >
         au < manifest ; 2016 ; Outlook on Agriculture Volume 45 ; 45 >
   

@@ -3774,6 +3774,49 @@
   {
 
     title <
+      name = Australasian Psychiatry ;
+      issn = 1039-8562 ;
+      eissn = 1440-1665
+    >
+
+    param[base_url] = http://apy.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 1993 ; Australasian Psychiatry Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1994 ; Australasian Psychiatry Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1995 ; Australasian Psychiatry Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1996 ; Australasian Psychiatry Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1997 ; Australasian Psychiatry Volume 5 ; 5 ; >
+      au < manifest ; exists ; 1998 ; Australasian Psychiatry Volume 6 ; 6 ; >
+      au < manifest ; exists ; 1999 ; Australasian Psychiatry Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2000 ; Australasian Psychiatry Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2001 ; Australasian Psychiatry Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2002 ; Australasian Psychiatry Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2003 ; Australasian Psychiatry Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2004 ; Australasian Psychiatry Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2005 ; Australasian Psychiatry Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2006 ; Australasian Psychiatry Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2007 ; Australasian Psychiatry Volume 15 ; 15 ; >
+      au < zapped ; finished ; 2008 ; Australasian Psychiatry Volume 16 ; 16 ; >
+      au < zapped ; finished ; 2009 ; Australasian Psychiatry Volume 17 ; 17 ; >
+      au < finished ; finished ; 2010 ; Australasian Psychiatry Volume 18 ; 18 ; >
+      au < zapped ; finished ; 2011 ; Australasian Psychiatry Volume 19 ; 19 ; >
+      au < finished ; finished ; 2012 ; Australasian Psychiatry Volume 20 ; 20 ; >
+      au < finished ; finished ; 2013 ; Australasian Psychiatry Volume 21 ; 21 ; >
+      au < finished ; finished ; 2014 ; Australasian Psychiatry Volume 22 ; 22 ; >
+      au < crawling ; exists ; 2015 ; Australasian Psychiatry Volume 23 ; 23 ; >
+      au < doNotProcess ; exists ; 2016 ; Australasian Psychiatry Volume 24 ; 24 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
       name = Autism ;
       issn = 1362-3613 ;
       eissn = 1461-7005
@@ -3823,43 +3866,14 @@
   {
 
     title <
-      name = Australasian Psychiatry ;
-      issn = 1039-8562 ;
-      eissn = 1440-1665
+      name = Autism & Developmental Language Impairments ;
+      eissn = 2396-9415
     >
 
-    param[base_url] = http://apy.sagepub.com/
-
-    {
-
       pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://dli.sagepub.com/
 
-      au < manifest ; exists ; 1993 ; Australasian Psychiatry Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1994 ; Australasian Psychiatry Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1995 ; Australasian Psychiatry Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1996 ; Australasian Psychiatry Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1997 ; Australasian Psychiatry Volume 5 ; 5 ; >
-      au < manifest ; exists ; 1998 ; Australasian Psychiatry Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1999 ; Australasian Psychiatry Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2000 ; Australasian Psychiatry Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2001 ; Australasian Psychiatry Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2002 ; Australasian Psychiatry Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2003 ; Australasian Psychiatry Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2004 ; Australasian Psychiatry Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2005 ; Australasian Psychiatry Volume 13 ; 13 ; >
-      au < manifest ; exists ; 2006 ; Australasian Psychiatry Volume 14 ; 14 ; >
-      au < manifest ; exists ; 2007 ; Australasian Psychiatry Volume 15 ; 15 ; >
-      au < zapped ; finished ; 2008 ; Australasian Psychiatry Volume 16 ; 16 ; >
-      au < zapped ; finished ; 2009 ; Australasian Psychiatry Volume 17 ; 17 ; >
-      au < finished ; finished ; 2010 ; Australasian Psychiatry Volume 18 ; 18 ; >
-      au < zapped ; finished ; 2011 ; Australasian Psychiatry Volume 19 ; 19 ; >
-      au < finished ; finished ; 2012 ; Australasian Psychiatry Volume 20 ; 20 ; >
-      au < finished ; finished ; 2013 ; Australasian Psychiatry Volume 21 ; 21 ; >
-      au < finished ; finished ; 2014 ; Australasian Psychiatry Volume 22 ; 22 ; >
-      au < crawling ; exists ; 2015 ; Australasian Psychiatry Volume 23 ; 23 ; >
-      au < doNotProcess ; exists ; 2016 ; Australasian Psychiatry Volume 24 ; 24 ; >
-
-    }
+      au < exists ; exists ; 2016 ; Autism & Developmental Language Impairments Volume 1 ; 1 ; >
 
   }
 
@@ -17011,7 +17025,7 @@
   {
 
   title <
-    name = International Journal of Entrepreneurship and Innovation ;
+    name = The International Journal of Entrepreneurship and Innovation ;
     issn = 1465-7503 ;
     eissn = 2043-6882 
   >
@@ -17019,7 +17033,23 @@
     param[base_url] = http://iei.sagepub.com/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < doNotProcess ; exists ; 2016 ; International Journal of Entrepreneurship and Innovation Volume 17 ; 17 ; >
+    au < exists ; exists ; 2000 ; The International Journal of Entrepreneurship and Innovation Volume 1 ; 1 ; >
+    au < doesNotExist ; doesNotExist ; 2001 ; The International Journal of Entrepreneurship and Innovation Volume 2 ; 2 ; >
+    au < exists ; exists ; 2002 ; The International Journal of Entrepreneurship and Innovation Volume 3 ; 3 ; >
+    au < exists ; exists ; 2003 ; The International Journal of Entrepreneurship and Innovation Volume 4 ; 4 ; >
+    au < exists ; exists ; 2004 ; The International Journal of Entrepreneurship and Innovation Volume 5 ; 5 ; >
+    au < exists ; exists ; 2005 ; The International Journal of Entrepreneurship and Innovation Volume 6 ; 6 ; >
+    au < exists ; exists ; 2006 ; The International Journal of Entrepreneurship and Innovation Volume 7 ; 7 ; >
+    au < exists ; exists ; 2007 ; The International Journal of Entrepreneurship and Innovation Volume 8 ; 8 ; >
+    au < exists ; exists ; 2008 ; The International Journal of Entrepreneurship and Innovation Volume 9 ; 9 ; >
+    au < exists ; exists ; 2009 ; The International Journal of Entrepreneurship and Innovation Volume 10 ; 10 ; >
+    au < exists ; exists ; 2010 ; The International Journal of Entrepreneurship and Innovation Volume 11 ; 11 ; >
+    au < exists ; exists ; 2011 ; The International Journal of Entrepreneurship and Innovation Volume 12 ; 12 ; >
+    au < exists ; exists ; 2012 ; The International Journal of Entrepreneurship and Innovation Volume 13 ; 13 ; >
+    au < exists ; exists ; 2013 ; The International Journal of Entrepreneurship and Innovation Volume 14 ; 14 ; >
+    au < exists ; exists ; 2014 ; The International Journal of Entrepreneurship and Innovation Volume 15 ; 15 ; >
+    au < exists ; exists ; 2015 ; The International Journal of Entrepreneurship and Innovation Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 2016 ; The International Journal of Entrepreneurship and Innovation Volume 17 ; 17 ; >
 
   }
 
@@ -33569,6 +33599,22 @@
       param[base_url] = http://oag.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
+      au < exists ; exists ; 1999 ; Outlook on Agriculture Volume 28 ; 28 ; >
+      au < exists ; exists ; 2000 ; Outlook on Agriculture Volume 29 ; 29 ; >
+      au < exists ; exists ; 2001 ; Outlook on Agriculture Volume 30 ; 30 ; >
+      au < exists ; exists ; 2002 ; Outlook on Agriculture Volume 31 ; 31 ; >
+      au < exists ; exists ; 2003 ; Outlook on Agriculture Volume 32 ; 32 ; >
+      au < exists ; exists ; 2004 ; Outlook on Agriculture Volume 33 ; 33 ; >
+      au < exists ; exists ; 2005 ; Outlook on Agriculture Volume 34 ; 34 ; >
+      au < exists ; exists ; 2006 ; Outlook on Agriculture Volume 35 ; 35 ; >
+      au < exists ; exists ; 2007 ; Outlook on Agriculture Volume 36 ; 36 ; >
+      au < exists ; exists ; 2008 ; Outlook on Agriculture Volume 37 ; 37 ; >
+      au < exists ; exists ; 2009 ; Outlook on Agriculture Volume 38 ; 38 ; >
+      au < exists ; exists ; 2010 ; Outlook on Agriculture Volume 39 ; 39 ; >
+      au < exists ; exists ; 2011 ; Outlook on Agriculture Volume 40 ; 40 ; >
+      au < exists ; exists ; 2012 ; Outlook on Agriculture Volume 41 ; 41 ; >
+      au < exists ; exists ; 2013 ; Outlook on Agriculture Volume 42 ; 42 ; >
+      au < exists ; exists ; 2014 ; Outlook on Agriculture Volume 43 ; 43 ; >
       au < manifest ; exists ; 2015 ; Outlook on Agriculture Volume 44 ; 44 ; >
       au < doNotProcess ; exists ; 2016 ; Outlook on Agriculture Volume 45 ; 45 ; >
 
