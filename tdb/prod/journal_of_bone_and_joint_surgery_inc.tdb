@@ -17,122 +17,122 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < testing ; 1900 ; JBJS Case Connector Volume os-s1-13 ; os-s1-13 >
-    au < exists ; 1901 ; JBJS Case Connector Volume os-s1-14 ; os-s1-14 >
-    au < exists ; 1902 ; JBJS Case Connector Volume os-s1-15 ; os-s1-15 >
-    au < exists ; 1904 ; JBJS Case Connector Volume os-s2-1 ; os-s2-1 >
-    au < exists ; 1904-1905 ; JBJS Case Connector Volume os-s2-2 ; os-s2-2 >
-    au < exists ; 1905-1906 ; JBJS Case Connector Volume os-s2-3 ; os-s2-3 >
-    au < exists ; 1906-1907 ; JBJS Case Connector Volume os-s2-4 ; os-s2-4 >
-    au < exists ; 1907-1908 ; JBJS Case Connector Volume os-s2-5 ; os-s2-5 >
-    au < exists ; 1908-1909 ; JBJS Case Connector Volume os-s2-6 ; os-s2-6 >
-    au < exists ; 1910 ; JBJS Case Connector Volume os-s2-7 ; os-s2-7 >
-    au < exists ; 1910-1911 ; JBJS Case Connector Volume os-s2-8 ; os-s2-8 >
-    au < exists ; 1911-1912 ; JBJS Case Connector Volume os-s2-9 ; os-s2-9 >
-    au < exists ; 1912-1913 ; JBJS Case Connector Volume os-s2-10 ; os-s2-10 >
-    au < exists ; 1914 ; JBJS Case Connector Volume os-s2-11 ; os-s2-11 >
-    au < exists ; 1914-1915 ; JBJS Case Connector Volume os-s2-12 ; os-s2-12 >
-    au < exists ; 1915 ; JBJS Case Connector Volume os-s2-13 ; os-s2-13 >
-    au < exists ; 1916 ; JBJS Case Connector Volume os-s2-14 ; os-s2-14 >
-    au < exists ; 1917 ; JBJS Case Connector Volume os-s2-15 ; os-s2-15 >
-    au < exists ; 1918 ; JBJS Case Connector Volume os-s2-16 ; os-s2-16 >
-    au < exists ; 1919 ; JBJS Case Connector Volume os-1 ; os-1 >
-    au < exists ; 1920 ; JBJS Case Connector Volume os-2 ; os-2 >
-    au < exists ; 1921 ; JBJS Case Connector Volume os-3 ; os-3 >
-    au < exists ; 1922 ; JBJS Case Connector Volume os-4 ; os-4 >
-    au < exists ; 1923 ; JBJS Case Connector Volume os-5 ; os-5 >
-    au < exists ; 1924 ; JBJS Case Connector Volume os-6 ; os-6 >
-    au < exists ; 1925 ; JBJS Case Connector Volume os-7 ; os-7 >
-    au < exists ; 1926 ; JBJS Case Connector Volume os-8 ; os-8 >
-    au < exists ; 1927 ; JBJS Case Connector Volume os-9 ; os-9 >
-    au < exists ; 1928 ; JBJS Case Connector Volume os-10 ; os-10 >
-    au < exists ; 1929 ; JBJS Case Connector Volume os-11 ; os-11 >
-    au < exists ; 1930 ; JBJS Case Connector Volume os-12 ; os-12 >
-    au < exists ; 1931 ; JBJS Case Connector Volume os-13 ; os-13 >
-    au < exists ; 1932 ; JBJS Case Connector Volume os-14 ; os-14 >
-    au < exists ; 1933 ; JBJS Case Connector Volume os-15 ; os-15 >
-    au < exists ; 1934 ; JBJS Case Connector Volume os-16 ; os-16 >
-    au < exists ; 1935 ; JBJS Case Connector Volume os-17 ; os-17 >
-    au < exists ; 1936 ; JBJS Case Connector Volume os-18 ; os-18 >
-    au < exists ; 1937 ; JBJS Case Connector Volume os-19 ; os-19 >
-    au < exists ; 1938 ; JBJS Case Connector Volume os-20 ; os-20 >
-    au < exists ; 1939 ; JBJS Case Connector Volume os-21 ; os-21 >
-    au < exists ; 1940 ; JBJS Case Connector Volume os-22 ; os-22 >
-    au < exists ; 1941 ; JBJS Case Connector Volume os-23 ; os-23 >
-    au < exists ; 1942 ; JBJS Case Connector Volume os-24 ; os-24 >
-    au < exists ; 1943 ; JBJS Case Connector Volume os-25 ; os-25 >
-    au < exists ; 1944 ; JBJS Case Connector Volume os-26 ; os-26 >
-    au < exists ; 1945 ; JBJS Case Connector Volume os-27 ; os-27 >
-    au < exists ; 1946 ; JBJS Case Connector Volume os-28 ; os-28 >
-    au < exists ; 1947 ; JBJS Case Connector Volume os-29 ; os-29 >
-    au < exists ; 1948 ; JBJS Case Connector Volume os-30 ; os-30 >
-    au < exists ; 1949 ; JBJS Case Connector Volume os-31 ; os-31 >
-    au < exists ; 1950 ; JBJS Case Connector Volume os-32 ; os-32 >
-    au < exists ; 1951 ; JBJS Case Connector Volume os-33 ; os-33 >
-    au < exists ; 1952 ; JBJS Case Connector Volume os-34 ; os-34 >
-    au < exists ; 1953 ; JBJS Case Connector Volume os-35 ; os-35 >
-    au < exists ; 1954 ; JBJS Case Connector Volume os-36 ; os-36 >
-    au < exists ; 1955 ; JBJS Case Connector Volume os-37 ; os-37 >
-    au < exists ; 1956 ; JBJS Case Connector Volume os-38 ; os-38 >
-    au < exists ; 1957 ; JBJS Case Connector Volume os-39 ; os-39 >
-    au < exists ; 1958 ; JBJS Case Connector Volume os-40 ; os-40 >
-    au < exists ; 1959 ; JBJS Case Connector Volume os-41 ; os-41 >
-    au < exists ; 1960 ; JBJS Case Connector Volume os-42 ; os-42 >
-    au < exists ; 1961 ; JBJS Case Connector Volume os-43 ; os-43 >
-    au < exists ; 1962 ; JBJS Case Connector Volume os-44 ; os-44 >
-    au < exists ; 1963 ; JBJS Case Connector Volume os-45 ; os-45 >
-    au < exists ; 1964 ; JBJS Case Connector Volume os-46 ; os-46 >
-    au < exists ; 1965 ; JBJS Case Connector Volume os-47 ; os-47 >
-    au < exists ; 1966 ; JBJS Case Connector Volume os-48 ; os-48 >
-    au < exists ; 1967 ; JBJS Case Connector Volume os-49 ; os-49 >
-    au < exists ; 1968 ; JBJS Case Connector Volume os-50 ; os-50 >
-    au < exists ; 1969 ; JBJS Case Connector Volume os-51 ; os-51 >
-    au < exists ; 1970 ; JBJS Case Connector Volume os-52 ; os-52 >
-    au < exists ; 1971 ; JBJS Case Connector Volume os-53 ; os-53 >
-    au < exists ; 1972 ; JBJS Case Connector Volume os-54 ; os-54 >
-    au < exists ; 1973 ; JBJS Case Connector Volume os-55 ; os-55 >
-    au < exists ; 1974 ; JBJS Case Connector Volume os-56 ; os-56 >
-    au < exists ; 1975 ; JBJS Case Connector Volume os-57 ; os-57 >
-    au < exists ; 1976 ; JBJS Case Connector Volume os-58 ; os-58 >
-    au < exists ; 1977 ; JBJS Case Connector Volume os-59 ; os-59 >
-    au < exists ; 1978 ; JBJS Case Connector Volume os-60 ; os-60 >
-    au < exists ; 1979 ; JBJS Case Connector Volume os-61 ; os-61 >
-    au < exists ; 1980 ; JBJS Case Connector Volume os-62 ; os-62 >
-    au < exists ; 1981 ; JBJS Case Connector Volume os-63 ; os-63 >
-    au < exists ; 1982 ; JBJS Case Connector Volume os-64 ; os-64 >
-    au < exists ; 1983 ; JBJS Case Connector Volume os-65 ; os-65 >
-    au < exists ; 1984 ; JBJS Case Connector Volume os-66 ; os-66 >
-    au < exists ; 1985 ; JBJS Case Connector Volume os-67 ; os-67 >
-    au < exists ; 1986 ; JBJS Case Connector Volume os-68 ; os-68 >
-    au < exists ; 1987 ; JBJS Case Connector Volume os-69 ; os-69 >
-    au < exists ; 1988 ; JBJS Case Connector Volume os-70 ; os-70 >
-    au < exists ; 1989 ; JBJS Case Connector Volume os-71 ; os-71 >
-    au < exists ; 1990 ; JBJS Case Connector Volume os-72 ; os-72 >
-    au < exists ; 1991 ; JBJS Case Connector Volume os-73 ; os-73 >
-    au < exists ; 1992 ; JBJS Case Connector Volume os-74 ; os-74 >
-    au < exists ; 1993 ; JBJS Case Connector Volume os-75 ; os-75 >
-    au < exists ; 1994 ; JBJS Case Connector Volume os-76 ; os-76 >
-    au < exists ; 1995 ; JBJS Case Connector Volume os-77 ; os-77 >
-    au < exists ; 1996 ; JBJS Case Connector Volume os-78 ; os-78 >
-    au < exists ; 1997 ; JBJS Case Connector Volume os-79 ; os-79 >
-    au < exists ; 1998 ; JBJS Case Connector Volume os-80 ; os-80 >
-    au < exists ; 1999 ; JBJS Case Connector Volume os-81 ; os-81 >
-    au < exists ; 2000 ; JBJS Case Connector Volume os-82 ; os-82 >
-    au < exists ; 2001 ; JBJS Case Connector Volume os-83 ; os-83 >
-    au < exists ; 2002 ; JBJS Case Connector Volume os-84 ; os-84 >
-    au < exists ; 2003 ; JBJS Case Connector Volume os-85 ; os-85 >
-    au < exists ; 2004 ; JBJS Case Connector Volume os-86 ; os-86 >
-    au < exists ; 2005 ; JBJS Case Connector Volume os-87 ; os-87 >
-    au < exists ; 2006 ; JBJS Case Connector Volume os-88 ; os-88 >
-    au < exists ; 2007 ; JBJS Case Connector Volume os-89 ; os-89 >
-    au < exists ; 2008 ; JBJS Case Connector Volume os-90 ; os-90 >
-    au < exists ; 2009 ; JBJS Case Connector Volume os-91 ; os-91 >
-    au < exists ; 2010 ; JBJS Case Connector Volume os-92 ; os-92 >
+    au < manifest ; 1901 ; JBJS Case Connector Volume os-s1-14 ; os-s1-14 >
+    au < manifest ; 1902 ; JBJS Case Connector Volume os-s1-15 ; os-s1-15 >
+    au < manifest ; 1904 ; JBJS Case Connector Volume os-s2-1 ; os-s2-1 >
+    au < manifest ; 1904-1905 ; JBJS Case Connector Volume os-s2-2 ; os-s2-2 >
+    au < manifest ; 1905-1906 ; JBJS Case Connector Volume os-s2-3 ; os-s2-3 >
+    au < manifest ; 1906-1907 ; JBJS Case Connector Volume os-s2-4 ; os-s2-4 >
+    au < manifest ; 1907-1908 ; JBJS Case Connector Volume os-s2-5 ; os-s2-5 >
+    au < manifest ; 1908-1909 ; JBJS Case Connector Volume os-s2-6 ; os-s2-6 >
+    au < manifest ; 1910 ; JBJS Case Connector Volume os-s2-7 ; os-s2-7 >
+    au < manifest ; 1910-1911 ; JBJS Case Connector Volume os-s2-8 ; os-s2-8 >
+    au < manifest ; 1911-1912 ; JBJS Case Connector Volume os-s2-9 ; os-s2-9 >
+    au < manifest ; 1912-1913 ; JBJS Case Connector Volume os-s2-10 ; os-s2-10 >
+    au < manifest ; 1914 ; JBJS Case Connector Volume os-s2-11 ; os-s2-11 >
+    au < manifest ; 1914-1915 ; JBJS Case Connector Volume os-s2-12 ; os-s2-12 >
+    au < manifest ; 1915 ; JBJS Case Connector Volume os-s2-13 ; os-s2-13 >
+    au < manifest ; 1916 ; JBJS Case Connector Volume os-s2-14 ; os-s2-14 >
+    au < manifest ; 1917 ; JBJS Case Connector Volume os-s2-15 ; os-s2-15 >
+    au < manifest ; 1918 ; JBJS Case Connector Volume os-s2-16 ; os-s2-16 >
+    au < manifest ; 1919 ; JBJS Case Connector Volume os-1 ; os-1 >
+    au < manifest ; 1920 ; JBJS Case Connector Volume os-2 ; os-2 >
+    au < manifest ; 1921 ; JBJS Case Connector Volume os-3 ; os-3 >
+    au < manifest ; 1922 ; JBJS Case Connector Volume os-4 ; os-4 >
+    au < manifest ; 1923 ; JBJS Case Connector Volume os-5 ; os-5 >
+    au < manifest ; 1924 ; JBJS Case Connector Volume os-6 ; os-6 >
+    au < manifest ; 1925 ; JBJS Case Connector Volume os-7 ; os-7 >
+    au < manifest ; 1926 ; JBJS Case Connector Volume os-8 ; os-8 >
+    au < manifest ; 1927 ; JBJS Case Connector Volume os-9 ; os-9 >
+    au < manifest ; 1928 ; JBJS Case Connector Volume os-10 ; os-10 >
+    au < manifest ; 1929 ; JBJS Case Connector Volume os-11 ; os-11 >
+    au < manifest ; 1930 ; JBJS Case Connector Volume os-12 ; os-12 >
+    au < manifest ; 1931 ; JBJS Case Connector Volume os-13 ; os-13 >
+    au < manifest ; 1932 ; JBJS Case Connector Volume os-14 ; os-14 >
+    au < manifest ; 1933 ; JBJS Case Connector Volume os-15 ; os-15 >
+    au < manifest ; 1934 ; JBJS Case Connector Volume os-16 ; os-16 >
+    au < manifest ; 1935 ; JBJS Case Connector Volume os-17 ; os-17 >
+    au < manifest ; 1936 ; JBJS Case Connector Volume os-18 ; os-18 >
+    au < manifest ; 1937 ; JBJS Case Connector Volume os-19 ; os-19 >
+    au < manifest ; 1938 ; JBJS Case Connector Volume os-20 ; os-20 >
+    au < manifest ; 1939 ; JBJS Case Connector Volume os-21 ; os-21 >
+    au < manifest ; 1940 ; JBJS Case Connector Volume os-22 ; os-22 >
+    au < manifest ; 1941 ; JBJS Case Connector Volume os-23 ; os-23 >
+    au < manifest ; 1942 ; JBJS Case Connector Volume os-24 ; os-24 >
+    au < manifest ; 1943 ; JBJS Case Connector Volume os-25 ; os-25 >
+    au < manifest ; 1944 ; JBJS Case Connector Volume os-26 ; os-26 >
+    au < manifest ; 1945 ; JBJS Case Connector Volume os-27 ; os-27 >
+    au < manifest ; 1946 ; JBJS Case Connector Volume os-28 ; os-28 >
+    au < manifest ; 1947 ; JBJS Case Connector Volume os-29 ; os-29 >
+    au < manifest ; 1948 ; JBJS Case Connector Volume os-30 ; os-30 >
+    au < manifest ; 1949 ; JBJS Case Connector Volume os-31 ; os-31 >
+    au < manifest ; 1950 ; JBJS Case Connector Volume os-32 ; os-32 >
+    au < manifest ; 1951 ; JBJS Case Connector Volume os-33 ; os-33 >
+    au < manifest ; 1952 ; JBJS Case Connector Volume os-34 ; os-34 >
+    au < manifest ; 1953 ; JBJS Case Connector Volume os-35 ; os-35 >
+    au < manifest ; 1954 ; JBJS Case Connector Volume os-36 ; os-36 >
+    au < manifest ; 1955 ; JBJS Case Connector Volume os-37 ; os-37 >
+    au < manifest ; 1956 ; JBJS Case Connector Volume os-38 ; os-38 >
+    au < manifest ; 1957 ; JBJS Case Connector Volume os-39 ; os-39 >
+    au < manifest ; 1958 ; JBJS Case Connector Volume os-40 ; os-40 >
+    au < manifest ; 1959 ; JBJS Case Connector Volume os-41 ; os-41 >
+    au < manifest ; 1960 ; JBJS Case Connector Volume os-42 ; os-42 >
+    au < manifest ; 1961 ; JBJS Case Connector Volume os-43 ; os-43 >
+    au < manifest ; 1962 ; JBJS Case Connector Volume os-44 ; os-44 >
+    au < manifest ; 1963 ; JBJS Case Connector Volume os-45 ; os-45 >
+    au < manifest ; 1964 ; JBJS Case Connector Volume os-46 ; os-46 >
+    au < manifest ; 1965 ; JBJS Case Connector Volume os-47 ; os-47 >
+    au < manifest ; 1966 ; JBJS Case Connector Volume os-48 ; os-48 >
+    au < manifest ; 1967 ; JBJS Case Connector Volume os-49 ; os-49 >
+    au < manifest ; 1968 ; JBJS Case Connector Volume os-50 ; os-50 >
+    au < manifest ; 1969 ; JBJS Case Connector Volume os-51 ; os-51 >
+    au < manifest ; 1970 ; JBJS Case Connector Volume os-52 ; os-52 >
+    au < manifest ; 1971 ; JBJS Case Connector Volume os-53 ; os-53 >
+    au < manifest ; 1972 ; JBJS Case Connector Volume os-54 ; os-54 >
+    au < manifest ; 1973 ; JBJS Case Connector Volume os-55 ; os-55 >
+    au < manifest ; 1974 ; JBJS Case Connector Volume os-56 ; os-56 >
+    au < manifest ; 1975 ; JBJS Case Connector Volume os-57 ; os-57 >
+    au < manifest ; 1976 ; JBJS Case Connector Volume os-58 ; os-58 >
+    au < manifest ; 1977 ; JBJS Case Connector Volume os-59 ; os-59 >
+    au < manifest ; 1978 ; JBJS Case Connector Volume os-60 ; os-60 >
+    au < manifest ; 1979 ; JBJS Case Connector Volume os-61 ; os-61 >
+    au < manifest ; 1980 ; JBJS Case Connector Volume os-62 ; os-62 >
+    au < manifest ; 1981 ; JBJS Case Connector Volume os-63 ; os-63 >
+    au < manifest ; 1982 ; JBJS Case Connector Volume os-64 ; os-64 >
+    au < manifest ; 1983 ; JBJS Case Connector Volume os-65 ; os-65 >
+    au < manifest ; 1984 ; JBJS Case Connector Volume os-66 ; os-66 >
+    au < manifest ; 1985 ; JBJS Case Connector Volume os-67 ; os-67 >
+    au < manifest ; 1986 ; JBJS Case Connector Volume os-68 ; os-68 >
+    au < manifest ; 1987 ; JBJS Case Connector Volume os-69 ; os-69 >
+    au < manifest ; 1988 ; JBJS Case Connector Volume os-70 ; os-70 >
+    au < manifest ; 1989 ; JBJS Case Connector Volume os-71 ; os-71 >
+    au < manifest ; 1990 ; JBJS Case Connector Volume os-72 ; os-72 >
+    au < manifest ; 1991 ; JBJS Case Connector Volume os-73 ; os-73 >
+    au < manifest ; 1992 ; JBJS Case Connector Volume os-74 ; os-74 >
+    au < manifest ; 1993 ; JBJS Case Connector Volume os-75 ; os-75 >
+    au < manifest ; 1994 ; JBJS Case Connector Volume os-76 ; os-76 >
+    au < manifest ; 1995 ; JBJS Case Connector Volume os-77 ; os-77 >
+    au < manifest ; 1996 ; JBJS Case Connector Volume os-78 ; os-78 >
+    au < manifest ; 1997 ; JBJS Case Connector Volume os-79 ; os-79 >
+    au < manifest ; 1998 ; JBJS Case Connector Volume os-80 ; os-80 >
+    au < manifest ; 1999 ; JBJS Case Connector Volume os-81 ; os-81 >
+    au < manifest ; 2000 ; JBJS Case Connector Volume os-82 ; os-82 >
+    au < manifest ; 2001 ; JBJS Case Connector Volume os-83 ; os-83 >
+    au < manifest ; 2002 ; JBJS Case Connector Volume os-84 ; os-84 >
+    au < manifest ; 2003 ; JBJS Case Connector Volume os-85 ; os-85 >
+    au < manifest ; 2004 ; JBJS Case Connector Volume os-86 ; os-86 >
+    au < manifest ; 2005 ; JBJS Case Connector Volume os-87 ; os-87 >
+    au < manifest ; 2006 ; JBJS Case Connector Volume os-88 ; os-88 >
+    au < manifest ; 2007 ; JBJS Case Connector Volume os-89 ; os-89 >
+    au < manifest ; 2008 ; JBJS Case Connector Volume os-90 ; os-90 >
+    au < manifest ; 2009 ; JBJS Case Connector Volume os-91 ; os-91 >
+    au < manifest ; 2010 ; JBJS Case Connector Volume os-92 ; os-92 >
     au < testing ; 2011 ; JBJS Case Connector Volume os-93 ; os-93 >
     au < testing ; 2011 ; JBJS Case Connector Volume 1 ; 1 >
-    au < exists ; 2012 ; JBJS Case Connector Volume 2 ; 2 >
-    au < exists ; 2013 ; JBJS Case Connector Volume 3 ; 3 >
-    au < exists ; 2014 ; JBJS Case Connector Volume 4 ; 4 >
-    au < exists ; 2015 ; JBJS Case Connector Volume 5 ; 5 >
+    au < manifest ; 2012 ; JBJS Case Connector Volume 2 ; 2 >
+    au < manifest ; 2013 ; JBJS Case Connector Volume 3 ; 3 >
+    au < manifest ; 2014 ; JBJS Case Connector Volume 4 ; 4 >
+    au < manifest ; 2015 ; JBJS Case Connector Volume 5 ; 5 >
   }
   
   {
@@ -148,18 +148,18 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < testing ; 2004 ; JBJS Essential Surgical Techniques Volume os-86 ; os-86 >
-    au < exists ; 2005 ; JBJS Essential Surgical Techniques Volume os-87 ; os-87 >
-    au < exists ; 2006 ; JBJS Essential Surgical Techniques Volume os-88 ; os-88 >
-    au < exists ; 2007 ; JBJS Essential Surgical Techniques Volume os-89 ; os-89 >
-    au < exists ; 2008 ; JBJS Essential Surgical Techniques Volume os-90 ; os-90 >
-    au < exists ; 2009 ; JBJS Essential Surgical Techniques Volume os-91 ; os-91 >
-    au < exists ; 2010 ; JBJS Essential Surgical Techniques Volume os-92 ; os-92 >
-    au < exists ; 2011 ; JBJS Essential Surgical Techniques Volume os-93 ; os-93 >
+    au < manifest ; 2005 ; JBJS Essential Surgical Techniques Volume os-87 ; os-87 >
+    au < manifest ; 2006 ; JBJS Essential Surgical Techniques Volume os-88 ; os-88 >
+    au < manifest ; 2007 ; JBJS Essential Surgical Techniques Volume os-89 ; os-89 >
+    au < manifest ; 2008 ; JBJS Essential Surgical Techniques Volume os-90 ; os-90 >
+    au < manifest ; 2009 ; JBJS Essential Surgical Techniques Volume os-91 ; os-91 >
+    au < manifest ; 2010 ; JBJS Essential Surgical Techniques Volume os-92 ; os-92 >
+    au < manifest ; 2011 ; JBJS Essential Surgical Techniques Volume os-93 ; os-93 >
     au < testing ; 2011 ; JBJS Essential Surgical Techniques Volume 1 ; 1 >
-    au < exists ; 2012 ; JBJS Essential Surgical Techniques Volume 2 ; 2 >
-    au < exists ; 2013 ; JBJS Essential Surgical Techniques Volume 3 ; 3 >
-    au < exists ; 2014 ; JBJS Essential Surgical Techniques Volume 4 ; 4 >
-    au < exists ; 2015 ; JBJS Essential Surgical Techniques Volume 5 ; 5 >
+    au < manifest ; 2012 ; JBJS Essential Surgical Techniques Volume 2 ; 2 >
+    au < manifest ; 2013 ; JBJS Essential Surgical Techniques Volume 3 ; 3 >
+    au < manifest ; 2014 ; JBJS Essential Surgical Techniques Volume 4 ; 4 >
+    au < manifest ; 2015 ; JBJS Essential Surgical Techniques Volume 5 ; 5 >
   }
   
   {
@@ -307,131 +307,131 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < testing ; 1889 ; Journal of Orthopaedic Surgery Volume s1-1 (1889) ; s1-1 >
-    au < exists ; 1889 ; Journal of Orthopaedic Surgery Volume s1-2 (1889) ; s1-2 >
-    au < exists ; 1890 ; Journal of Orthopaedic Surgery Volume s1-3 (1890) ; s1-3 >
-    au < exists ; 1891 ; Journal of Orthopaedic Surgery Volume s1-4 (1891) ; s1-4 >
-    au < exists ; 1893 ; Journal of Orthopaedic Surgery Volume s1-5 (1893) ; s1-5 >
-    au < exists ; 1894 ; Journal of Orthopaedic Surgery Volume s1-6 (1894) ; s1-6 >
-    au < exists ; 1895 ; Journal of Orthopaedic Surgery Volume s1-7 (1895) ; s1-7 >
-    au < exists ; 1896 ; Journal of Orthopaedic Surgery Volume s1-8 (1896) ; s1-8 >
-    au < exists ; 1896 ; Journal of Orthopaedic Surgery Volume s1-9 (1896) ; s1-9 >
-    au < exists ; 1897 ; Journal of Orthopaedic Surgery Volume s1-10 (1897) ; s1-10 >
-    au < exists ; 1898 ; Journal of Orthopaedic Surgery Volume s1-11 (1898) ; s1-11 >
-    au < exists ; 1899 ; Journal of Orthopaedic Surgery Volume s1-12 (1899) ; s1-12 >
-    au < exists ; 1900 ; Journal of Orthopaedic Surgery Volume s1-13 (1900) ; s1-13 >
-    au < exists ; 1901 ; Journal of Orthopaedic Surgery Volume s1-14 (1901) ; s1-14 >
-    au < exists ; 1902 ; Journal of Orthopaedic Surgery Volume s1-15 (1902) ; s1-15 >
-    au < exists ; 1903-1904 ; Journal of Orthopaedic Surgery Volume s2-1 (1903-1904) ; s2-1 >
-    au < exists ; 1904-1905 ; Journal of Orthopaedic Surgery Volume s2-2 (1904-1905) ; s2-2 >
-    au < exists ; 1905-1906 ; Journal of Orthopaedic Surgery Volume s2-3 (1905-1906) ; s2-3 >
-    au < exists ; 1906-1907 ; Journal of Orthopaedic Surgery Volume s2-4 (1906-1907) ; s2-4 >
-    au < exists ; 1907-1908 ; Journal of Orthopaedic Surgery Volume s2-5 (1907-1908) ; s2-5 >
-    au < exists ; 1908-1909 ; Journal of Orthopaedic Surgery Volume s2-6 (1908-1909) ; s2-6 >
-    au < exists ; 1909-1910 ; Journal of Orthopaedic Surgery Volume s2-7 (1909-1910) ; s2-7 >
-    au < exists ; 1910-1911 ; Journal of Orthopaedic Surgery Volume s2-8 (1910-1911) ; s2-8 >
-    au < exists ; 1911-1912 ; Journal of Orthopaedic Surgery Volume s2-9 (1911-1912) ; s2-9 >
-    au < exists ; 1912-1913 ; Journal of Orthopaedic Surgery Volume s2-10 (1912-1913) ; s2-10 >
-    au < exists ; 1913-1914 ; Journal of Orthopaedic Surgery Volume s2-11 (1913-1914) ; s2-11 >
-    au < exists ; 1914-1915 ; Journal of Orthopaedic Surgery Volume s2-12 (1914-1915) ; s2-12 >
-    au < exists ; 1915 ; Journal of Orthopaedic Surgery Volume s2-13 (1915) ; s2-13 >
-    au < exists ; 1916 ; Journal of Orthopaedic Surgery Volume s2-14 (1916) ; s2-14 >
-    au < exists ; 1917 ; Journal of Orthopaedic Surgery Volume s2-15 (1917) ; s2-15 >
-    au < exists ; 1918 ; Journal of Orthopaedic Surgery Volume s2-16 (1918) ; s2-16 >
-    au < exists ; 1919 ; Journal of Orthopaedic Surgery Volume 1 ; 1 >
-    au < exists ; 1920 ; Journal of Orthopaedic Surgery Volume 2 ; 2 >
-    au < exists ; 1921 ; Journal of Orthopaedic Surgery Volume 3 ; 3 >
-    au < exists ; 1922 ; The Journal of Bone & Joint Surgery Volume 4 ; 4 >
-    au < exists ; 1923 ; The Journal of Bone & Joint Surgery Volume 5 ; 5 >
-    au < exists ; 1924 ; The Journal of Bone & Joint Surgery Volume 6 ; 6 >
-    au < exists ; 1925 ; The Journal of Bone & Joint Surgery Volume 7 ; 7 >
-    au < exists ; 1926 ; The Journal of Bone & Joint Surgery Volume 8 ; 8 >
-    au < exists ; 1927 ; The Journal of Bone & Joint Surgery Volume 9 ; 9 >
-    au < exists ; 1928 ; The Journal of Bone & Joint Surgery Volume 10 ; 10 >
-    au < exists ; 1929 ; The Journal of Bone & Joint Surgery Volume 11 ; 11 >
-    au < exists ; 1930 ; The Journal of Bone & Joint Surgery Volume 12 ; 12 >
-    au < exists ; 1931 ; The Journal of Bone & Joint Surgery Volume 13 ; 13 >
-    au < exists ; 1932 ; The Journal of Bone & Joint Surgery Volume 14 ; 14 >
-    au < exists ; 1933 ; The Journal of Bone & Joint Surgery Volume 15 ; 15 >
-    au < exists ; 1934 ; The Journal of Bone & Joint Surgery Volume 16 ; 16 >
-    au < exists ; 1935 ; The Journal of Bone & Joint Surgery Volume 17 ; 17 >
-    au < exists ; 1936 ; The Journal of Bone & Joint Surgery Volume 18 ; 18 >
-    au < exists ; 1937 ; The Journal of Bone & Joint Surgery Volume 19 ; 19 >
-    au < exists ; 1938 ; The Journal of Bone & Joint Surgery Volume 20 ; 20 >
-    au < exists ; 1939 ; The Journal of Bone & Joint Surgery Volume 21 ; 21 >
-    au < exists ; 1940 ; The Journal of Bone & Joint Surgery Volume 22 ; 22 >
-    au < exists ; 1941 ; The Journal of Bone & Joint Surgery Volume 23 ; 23 >
-    au < exists ; 1942 ; The Journal of Bone & Joint Surgery Volume 24 ; 24 >
-    au < exists ; 1943 ; The Journal of Bone & Joint Surgery Volume 25 ; 25 >
-    au < exists ; 1944 ; The Journal of Bone & Joint Surgery Volume 26 ; 26 >
-    au < exists ; 1945 ; The Journal of Bone & Joint Surgery Volume 27 ; 27 >
-    au < exists ; 1946 ; The Journal of Bone & Joint Surgery Volume 28 ; 28 >
-    au < exists ; 1947 ; The Journal of Bone & Joint Surgery Volume 29 ; 29 >
-    au < exists ; 1948 ; The Journal of Bone & Joint Surgery Volume 30 ; 30 >
-    au < exists ; 1949 ; The Journal of Bone & Joint Surgery Volume 31 ; 31 >
-    au < exists ; 1950 ; The Journal of Bone & Joint Surgery Volume 32 ; 32 >
-    au < exists ; 1951 ; The Journal of Bone & Joint Surgery Volume 33 ; 33 >
-    au < exists ; 1952 ; The Journal of Bone & Joint Surgery Volume 34 ; 34 >
-    au < exists ; 1953 ; The Journal of Bone & Joint Surgery Volume 35 ; 35 >
-    au < exists ; 1954 ; The Journal of Bone & Joint Surgery Volume 36 ; 36 >
-    au < exists ; 1955 ; The Journal of Bone & Joint Surgery Volume 37 ; 37 >
-    au < exists ; 1956 ; The Journal of Bone & Joint Surgery Volume 38 ; 38 >
-    au < exists ; 1957 ; The Journal of Bone & Joint Surgery Volume 39 ; 39 >
-    au < exists ; 1958 ; The Journal of Bone & Joint Surgery Volume 40 ; 40 >
-    au < exists ; 1959 ; The Journal of Bone & Joint Surgery Volume 41 ; 41 >
-    au < exists ; 1960 ; The Journal of Bone & Joint Surgery Volume 42 ; 42 >
-    au < exists ; 1961 ; The Journal of Bone & Joint Surgery Volume 43 ; 43 >
-    au < exists ; 1962 ; The Journal of Bone & Joint Surgery Volume 44 ; 44 >
-    au < exists ; 1963 ; The Journal of Bone & Joint Surgery Volume 45 ; 45 >
-    au < exists ; 1964 ; The Journal of Bone & Joint Surgery Volume 46 ; 46 >
-    au < exists ; 1965 ; The Journal of Bone & Joint Surgery Volume 47 ; 47 >
-    au < exists ; 1966 ; The Journal of Bone & Joint Surgery Volume 48 ; 48 >
-    au < exists ; 1967 ; The Journal of Bone & Joint Surgery Volume 49 ; 49 >
-    au < exists ; 1968 ; The Journal of Bone & Joint Surgery Volume 50 ; 50 >
-    au < exists ; 1969 ; The Journal of Bone & Joint Surgery Volume 51 ; 51 >
-    au < exists ; 1970 ; The Journal of Bone & Joint Surgery Volume 52 ; 52 >
-    au < exists ; 1971 ; The Journal of Bone & Joint Surgery Volume 53 ; 53 >
-    au < exists ; 1972 ; The Journal of Bone & Joint Surgery Volume 54 ; 54 >
-    au < exists ; 1973 ; The Journal of Bone & Joint Surgery Volume 55 ; 55 >
-    au < exists ; 1974 ; The Journal of Bone & Joint Surgery Volume 56 ; 56 >
-    au < exists ; 1975 ; The Journal of Bone & Joint Surgery Volume 57 ; 57 >
-    au < exists ; 1976 ; The Journal of Bone & Joint Surgery Volume 58 ; 58 >
-    au < exists ; 1977 ; The Journal of Bone & Joint Surgery Volume 59 ; 59 >
-    au < exists ; 1978 ; The Journal of Bone & Joint Surgery Volume 60 ; 60 >
-    au < exists ; 1979 ; The Journal of Bone & Joint Surgery Volume 61 ; 61 >
-    au < exists ; 1980 ; The Journal of Bone & Joint Surgery Volume 62 ; 62 >
-    au < exists ; 1981 ; The Journal of Bone & Joint Surgery Volume 63 ; 63 >
-    au < exists ; 1982 ; The Journal of Bone & Joint Surgery Volume 64 ; 64 >
-    au < exists ; 1983 ; The Journal of Bone & Joint Surgery Volume 65 ; 65 >
-    au < exists ; 1984 ; The Journal of Bone & Joint Surgery Volume 66 ; 66 >
-    au < exists ; 1985 ; The Journal of Bone & Joint Surgery Volume 67 ; 67 >
-    au < exists ; 1986 ; The Journal of Bone & Joint Surgery Volume 68 ; 68 >
-    au < exists ; 1987 ; The Journal of Bone & Joint Surgery Volume 69 ; 69 >
-    au < exists ; 1988 ; The Journal of Bone & Joint Surgery Volume 70 ; 70 >
-    au < exists ; 1989 ; The Journal of Bone & Joint Surgery Volume 71 ; 71 >
-    au < exists ; 1990 ; The Journal of Bone & Joint Surgery Volume 72 ; 72 >
-    au < exists ; 1991 ; The Journal of Bone & Joint Surgery Volume 73 ; 73 >
-    au < exists ; 1992 ; The Journal of Bone & Joint Surgery Volume 74 ; 74 >
-    au < exists ; 1993 ; The Journal of Bone & Joint Surgery Volume 75 ; 75 >
-    au < exists ; 1994 ; The Journal of Bone & Joint Surgery Volume 76 ; 76 >
-    au < exists ; 1995 ; The Journal of Bone & Joint Surgery Volume 77 ; 77 >
-    au < exists ; 1996 ; The Journal of Bone & Joint Surgery Volume 78 ; 78 >
-    au < exists ; 1997 ; The Journal of Bone & Joint Surgery Volume 79 ; 79 >
-    au < exists ; 1998 ; The Journal of Bone & Joint Surgery Volume 80 ; 80 >
-    au < exists ; 1999 ; The Journal of Bone & Joint Surgery Volume 81 ; 81 >
-    au < exists ; 2000 ; The Journal of Bone & Joint Surgery Volume 82 ; 82 >
-    au < exists ; 2001 ; The Journal of Bone & Joint Surgery Volume 83 ; 83 >
-    au < exists ; 2002 ; The Journal of Bone & Joint Surgery Volume 84 ; 84 >
-    au < exists ; 2003 ; The Journal of Bone & Joint Surgery Volume 85 ; 85 >
-    au < exists ; 2004 ; The Journal of Bone & Joint Surgery Volume 86 ; 86 >
-    au < exists ; 2005 ; The Journal of Bone & Joint Surgery Volume 87 ; 87 >
-    au < exists ; 2006 ; The Journal of Bone & Joint Surgery Volume 88 ; 88 >
-    au < exists ; 2007 ; The Journal of Bone & Joint Surgery Volume 89 ; 89 >
-    au < exists ; 2008 ; The Journal of Bone & Joint Surgery Volume 90 ; 90 >
-    au < exists ; 2009 ; The Journal of Bone & Joint Surgery Volume 91 ; 91 >
-    au < exists ; 2010 ; The Journal of Bone & Joint Surgery Volume 92 ; 92 >
-    au < exists ; 2011 ; The Journal of Bone & Joint Surgery Volume 93 ; 93 >
-    au < exists ; 2012 ; The Journal of Bone & Joint Surgery Volume 94 ; 94 >
-    au < exists ; 2013 ; The Journal of Bone & Joint Surgery Volume 95 ; 95 >
+    au < manifest ; 1889 ; Journal of Orthopaedic Surgery Volume s1-2 (1889) ; s1-2 >
+    au < manifest ; 1890 ; Journal of Orthopaedic Surgery Volume s1-3 (1890) ; s1-3 >
+    au < manifest ; 1891 ; Journal of Orthopaedic Surgery Volume s1-4 (1891) ; s1-4 >
+    au < manifest ; 1893 ; Journal of Orthopaedic Surgery Volume s1-5 (1893) ; s1-5 >
+    au < manifest ; 1894 ; Journal of Orthopaedic Surgery Volume s1-6 (1894) ; s1-6 >
+    au < manifest ; 1895 ; Journal of Orthopaedic Surgery Volume s1-7 (1895) ; s1-7 >
+    au < manifest ; 1896 ; Journal of Orthopaedic Surgery Volume s1-8 (1896) ; s1-8 >
+    au < manifest ; 1896 ; Journal of Orthopaedic Surgery Volume s1-9 (1896) ; s1-9 >
+    au < manifest ; 1897 ; Journal of Orthopaedic Surgery Volume s1-10 (1897) ; s1-10 >
+    au < manifest ; 1898 ; Journal of Orthopaedic Surgery Volume s1-11 (1898) ; s1-11 >
+    au < manifest ; 1899 ; Journal of Orthopaedic Surgery Volume s1-12 (1899) ; s1-12 >
+    au < manifest ; 1900 ; Journal of Orthopaedic Surgery Volume s1-13 (1900) ; s1-13 >
+    au < manifest ; 1901 ; Journal of Orthopaedic Surgery Volume s1-14 (1901) ; s1-14 >
+    au < manifest ; 1902 ; Journal of Orthopaedic Surgery Volume s1-15 (1902) ; s1-15 >
+    au < manifest ; 1903-1904 ; Journal of Orthopaedic Surgery Volume s2-1 (1903-1904) ; s2-1 >
+    au < manifest ; 1904-1905 ; Journal of Orthopaedic Surgery Volume s2-2 (1904-1905) ; s2-2 >
+    au < manifest ; 1905-1906 ; Journal of Orthopaedic Surgery Volume s2-3 (1905-1906) ; s2-3 >
+    au < manifest ; 1906-1907 ; Journal of Orthopaedic Surgery Volume s2-4 (1906-1907) ; s2-4 >
+    au < manifest ; 1907-1908 ; Journal of Orthopaedic Surgery Volume s2-5 (1907-1908) ; s2-5 >
+    au < manifest ; 1908-1909 ; Journal of Orthopaedic Surgery Volume s2-6 (1908-1909) ; s2-6 >
+    au < manifest ; 1909-1910 ; Journal of Orthopaedic Surgery Volume s2-7 (1909-1910) ; s2-7 >
+    au < manifest ; 1910-1911 ; Journal of Orthopaedic Surgery Volume s2-8 (1910-1911) ; s2-8 >
+    au < manifest ; 1911-1912 ; Journal of Orthopaedic Surgery Volume s2-9 (1911-1912) ; s2-9 >
+    au < manifest ; 1912-1913 ; Journal of Orthopaedic Surgery Volume s2-10 (1912-1913) ; s2-10 >
+    au < manifest ; 1913-1914 ; Journal of Orthopaedic Surgery Volume s2-11 (1913-1914) ; s2-11 >
+    au < manifest ; 1914-1915 ; Journal of Orthopaedic Surgery Volume s2-12 (1914-1915) ; s2-12 >
+    au < manifest ; 1915 ; Journal of Orthopaedic Surgery Volume s2-13 (1915) ; s2-13 >
+    au < manifest ; 1916 ; Journal of Orthopaedic Surgery Volume s2-14 (1916) ; s2-14 >
+    au < manifest ; 1917 ; Journal of Orthopaedic Surgery Volume s2-15 (1917) ; s2-15 >
+    au < manifest ; 1918 ; Journal of Orthopaedic Surgery Volume s2-16 (1918) ; s2-16 >
+    au < manifest ; 1919 ; Journal of Orthopaedic Surgery Volume 1 ; 1 >
+    au < manifest ; 1920 ; Journal of Orthopaedic Surgery Volume 2 ; 2 >
+    au < manifest ; 1921 ; Journal of Orthopaedic Surgery Volume 3 ; 3 >
+    au < manifest ; 1922 ; The Journal of Bone & Joint Surgery Volume 4 ; 4 >
+    au < manifest ; 1923 ; The Journal of Bone & Joint Surgery Volume 5 ; 5 >
+    au < manifest ; 1924 ; The Journal of Bone & Joint Surgery Volume 6 ; 6 >
+    au < manifest ; 1925 ; The Journal of Bone & Joint Surgery Volume 7 ; 7 >
+    au < manifest ; 1926 ; The Journal of Bone & Joint Surgery Volume 8 ; 8 >
+    au < manifest ; 1927 ; The Journal of Bone & Joint Surgery Volume 9 ; 9 >
+    au < manifest ; 1928 ; The Journal of Bone & Joint Surgery Volume 10 ; 10 >
+    au < manifest ; 1929 ; The Journal of Bone & Joint Surgery Volume 11 ; 11 >
+    au < manifest ; 1930 ; The Journal of Bone & Joint Surgery Volume 12 ; 12 >
+    au < manifest ; 1931 ; The Journal of Bone & Joint Surgery Volume 13 ; 13 >
+    au < manifest ; 1932 ; The Journal of Bone & Joint Surgery Volume 14 ; 14 >
+    au < manifest ; 1933 ; The Journal of Bone & Joint Surgery Volume 15 ; 15 >
+    au < manifest ; 1934 ; The Journal of Bone & Joint Surgery Volume 16 ; 16 >
+    au < manifest ; 1935 ; The Journal of Bone & Joint Surgery Volume 17 ; 17 >
+    au < manifest ; 1936 ; The Journal of Bone & Joint Surgery Volume 18 ; 18 >
+    au < manifest ; 1937 ; The Journal of Bone & Joint Surgery Volume 19 ; 19 >
+    au < manifest ; 1938 ; The Journal of Bone & Joint Surgery Volume 20 ; 20 >
+    au < manifest ; 1939 ; The Journal of Bone & Joint Surgery Volume 21 ; 21 >
+    au < manifest ; 1940 ; The Journal of Bone & Joint Surgery Volume 22 ; 22 >
+    au < manifest ; 1941 ; The Journal of Bone & Joint Surgery Volume 23 ; 23 >
+    au < manifest ; 1942 ; The Journal of Bone & Joint Surgery Volume 24 ; 24 >
+    au < manifest ; 1943 ; The Journal of Bone & Joint Surgery Volume 25 ; 25 >
+    au < manifest ; 1944 ; The Journal of Bone & Joint Surgery Volume 26 ; 26 >
+    au < manifest ; 1945 ; The Journal of Bone & Joint Surgery Volume 27 ; 27 >
+    au < manifest ; 1946 ; The Journal of Bone & Joint Surgery Volume 28 ; 28 >
+    au < manifest ; 1947 ; The Journal of Bone & Joint Surgery Volume 29 ; 29 >
+    au < manifest ; 1948 ; The Journal of Bone & Joint Surgery Volume 30 ; 30 >
+    au < manifest ; 1949 ; The Journal of Bone & Joint Surgery Volume 31 ; 31 >
+    au < manifest ; 1950 ; The Journal of Bone & Joint Surgery Volume 32 ; 32 >
+    au < manifest ; 1951 ; The Journal of Bone & Joint Surgery Volume 33 ; 33 >
+    au < manifest ; 1952 ; The Journal of Bone & Joint Surgery Volume 34 ; 34 >
+    au < manifest ; 1953 ; The Journal of Bone & Joint Surgery Volume 35 ; 35 >
+    au < manifest ; 1954 ; The Journal of Bone & Joint Surgery Volume 36 ; 36 >
+    au < manifest ; 1955 ; The Journal of Bone & Joint Surgery Volume 37 ; 37 >
+    au < manifest ; 1956 ; The Journal of Bone & Joint Surgery Volume 38 ; 38 >
+    au < manifest ; 1957 ; The Journal of Bone & Joint Surgery Volume 39 ; 39 >
+    au < manifest ; 1958 ; The Journal of Bone & Joint Surgery Volume 40 ; 40 >
+    au < manifest ; 1959 ; The Journal of Bone & Joint Surgery Volume 41 ; 41 >
+    au < manifest ; 1960 ; The Journal of Bone & Joint Surgery Volume 42 ; 42 >
+    au < manifest ; 1961 ; The Journal of Bone & Joint Surgery Volume 43 ; 43 >
+    au < manifest ; 1962 ; The Journal of Bone & Joint Surgery Volume 44 ; 44 >
+    au < manifest ; 1963 ; The Journal of Bone & Joint Surgery Volume 45 ; 45 >
+    au < manifest ; 1964 ; The Journal of Bone & Joint Surgery Volume 46 ; 46 >
+    au < manifest ; 1965 ; The Journal of Bone & Joint Surgery Volume 47 ; 47 >
+    au < manifest ; 1966 ; The Journal of Bone & Joint Surgery Volume 48 ; 48 >
+    au < manifest ; 1967 ; The Journal of Bone & Joint Surgery Volume 49 ; 49 >
+    au < manifest ; 1968 ; The Journal of Bone & Joint Surgery Volume 50 ; 50 >
+    au < manifest ; 1969 ; The Journal of Bone & Joint Surgery Volume 51 ; 51 >
+    au < manifest ; 1970 ; The Journal of Bone & Joint Surgery Volume 52 ; 52 >
+    au < manifest ; 1971 ; The Journal of Bone & Joint Surgery Volume 53 ; 53 >
+    au < manifest ; 1972 ; The Journal of Bone & Joint Surgery Volume 54 ; 54 >
+    au < manifest ; 1973 ; The Journal of Bone & Joint Surgery Volume 55 ; 55 >
+    au < manifest ; 1974 ; The Journal of Bone & Joint Surgery Volume 56 ; 56 >
+    au < manifest ; 1975 ; The Journal of Bone & Joint Surgery Volume 57 ; 57 >
+    au < manifest ; 1976 ; The Journal of Bone & Joint Surgery Volume 58 ; 58 >
+    au < manifest ; 1977 ; The Journal of Bone & Joint Surgery Volume 59 ; 59 >
+    au < manifest ; 1978 ; The Journal of Bone & Joint Surgery Volume 60 ; 60 >
+    au < manifest ; 1979 ; The Journal of Bone & Joint Surgery Volume 61 ; 61 >
+    au < manifest ; 1980 ; The Journal of Bone & Joint Surgery Volume 62 ; 62 >
+    au < manifest ; 1981 ; The Journal of Bone & Joint Surgery Volume 63 ; 63 >
+    au < manifest ; 1982 ; The Journal of Bone & Joint Surgery Volume 64 ; 64 >
+    au < manifest ; 1983 ; The Journal of Bone & Joint Surgery Volume 65 ; 65 >
+    au < manifest ; 1984 ; The Journal of Bone & Joint Surgery Volume 66 ; 66 >
+    au < manifest ; 1985 ; The Journal of Bone & Joint Surgery Volume 67 ; 67 >
+    au < manifest ; 1986 ; The Journal of Bone & Joint Surgery Volume 68 ; 68 >
+    au < manifest ; 1987 ; The Journal of Bone & Joint Surgery Volume 69 ; 69 >
+    au < manifest ; 1988 ; The Journal of Bone & Joint Surgery Volume 70 ; 70 >
+    au < manifest ; 1989 ; The Journal of Bone & Joint Surgery Volume 71 ; 71 >
+    au < manifest ; 1990 ; The Journal of Bone & Joint Surgery Volume 72 ; 72 >
+    au < manifest ; 1991 ; The Journal of Bone & Joint Surgery Volume 73 ; 73 >
+    au < manifest ; 1992 ; The Journal of Bone & Joint Surgery Volume 74 ; 74 >
+    au < manifest ; 1993 ; The Journal of Bone & Joint Surgery Volume 75 ; 75 >
+    au < manifest ; 1994 ; The Journal of Bone & Joint Surgery Volume 76 ; 76 >
+    au < manifest ; 1995 ; The Journal of Bone & Joint Surgery Volume 77 ; 77 >
+    au < manifest ; 1996 ; The Journal of Bone & Joint Surgery Volume 78 ; 78 >
+    au < manifest ; 1997 ; The Journal of Bone & Joint Surgery Volume 79 ; 79 >
+    au < manifest ; 1998 ; The Journal of Bone & Joint Surgery Volume 80 ; 80 >
+    au < manifest ; 1999 ; The Journal of Bone & Joint Surgery Volume 81 ; 81 >
+    au < manifest ; 2000 ; The Journal of Bone & Joint Surgery Volume 82 ; 82 >
+    au < manifest ; 2001 ; The Journal of Bone & Joint Surgery Volume 83 ; 83 >
+    au < manifest ; 2002 ; The Journal of Bone & Joint Surgery Volume 84 ; 84 >
+    au < manifest ; 2003 ; The Journal of Bone & Joint Surgery Volume 85 ; 85 >
+    au < manifest ; 2004 ; The Journal of Bone & Joint Surgery Volume 86 ; 86 >
+    au < manifest ; 2005 ; The Journal of Bone & Joint Surgery Volume 87 ; 87 >
+    au < manifest ; 2006 ; The Journal of Bone & Joint Surgery Volume 88 ; 88 >
+    au < manifest ; 2007 ; The Journal of Bone & Joint Surgery Volume 89 ; 89 >
+    au < manifest ; 2008 ; The Journal of Bone & Joint Surgery Volume 90 ; 90 >
+    au < manifest ; 2009 ; The Journal of Bone & Joint Surgery Volume 91 ; 91 >
+    au < manifest ; 2010 ; The Journal of Bone & Joint Surgery Volume 92 ; 92 >
+    au < manifest ; 2011 ; The Journal of Bone & Joint Surgery Volume 93 ; 93 >
+    au < manifest ; 2012 ; The Journal of Bone & Joint Surgery Volume 94 ; 94 >
+    au < manifest ; 2013 ; The Journal of Bone & Joint Surgery Volume 95 ; 95 >
     au < testing ; 2014 ; The Journal of Bone & Joint Surgery Volume 96 ; 96 >
     au < testing ; 2015 ; The Journal of Bone & Joint Surgery Volume 97 ; 97 >
     

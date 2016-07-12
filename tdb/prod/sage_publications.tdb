@@ -933,7 +933,7 @@
       pluginSuffix = HWDrupalPlugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2015 ; AERA Open Volume 1 ; 1 >
+      au < manifest ; 2015 ; AERA Open Volume 1 ; 1 >
       au < manifest ; 2016 ; AERA Open Volume 2 ; 2 >
 
   }
@@ -3181,7 +3181,7 @@
         implicit < status ; year ; name ; param[volume_name] >
         param[base_url] = http://jws.sagepub.com/
 
-        au < expected ; 2016 ; ANTYAJAA: Indian Journal of Women and Social Change Volume 1 ; 1 >
+        au < manifest ; 2016 ; ANTYAJAA: Indian Journal of Women and Social Change Volume 1 ; 1 >
 
     }
 
@@ -3808,7 +3808,7 @@
         au < released ; 2013 ; Asia Pacific Media Educator Volume 23 ; 23 >
         au < released ; 2014 ; Asia Pacific Media Educator Volume 24 ; 24 >
         au < released ; 2015 ; Asia Pacific Media Educator Volume 25 ; 25 >
-        au < expected ; 2016 ; Asia Pacific Media Educator Volume 26 ; 26 >
+        au < manifest ; 2016 ; Asia Pacific Media Educator Volume 26 ; 26 >
 
       }
 
@@ -10523,7 +10523,7 @@
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
   
-      au < exists ; 2016 ; The Downside Review Volume 134 ; 134 >
+      au < manifest ; 2016 ; The Downside Review Volume 134 ; 134 >
   
     }
 
@@ -18066,7 +18066,7 @@
         au < exists ; 2012 ; Industry and Higher Education Volume 26 ; 26 >
         au < exists ; 2013 ; Industry and Higher Education Volume 27 ; 27 >
         au < exists ; 2014 ; Industry and Higher Education Volume 28 ; 28 >
-        au < exists ; 2015 ; Industry and Higher Education Volume 29 ; 29 >
+        au < manifest ; 2015 ; Industry and Higher Education Volume 29 ; 29 >
         au < manifest ; 2016 ; Industry and Higher Education Volume 30 ; 30 >
   
     }
@@ -24156,7 +24156,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2013 ; Journal of Consumer Culture Volume 13 ; 13 >
         au < released ; 2014 ; Journal of Consumer Culture Volume 14 ; 14 >
         au < released ; 2015 ; Journal of Consumer Culture Volume 15 ; 15 >
-        au < expected ; 2016 ; Journal of Consumer Culture Volume 16 ; 16 >
+        au < manifest ; 2016 ; Journal of Consumer Culture Volume 16 ; 16 >
 
       }
 
@@ -26450,7 +26450,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 2015 ; Journal of Feline Medicine and Surgery Open Reports Volume 1 ; 1 >
-      au < expected ; 2016 ; Journal of Feline Medicine and Surgery Open Reports Volume 2 ; 2 >
+      au < manifest ; 2016 ; Journal of Feline Medicine and Surgery Open Reports Volume 2 ; 2 >
 
       }
 
@@ -27674,7 +27674,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2013-2014 ; Journal of Industrial Textiles Volume 43 ; 43 >
         au < released ; 2014-2015 ; Journal of Industrial Textiles Volume 44 ; 44 >
         au < manifest ; 2015-2016 ; Journal of Industrial Textiles Volume 45 ; 45 >
-        au < expected ; 2016-2017 ; Journal of Industrial Textiles Volume 46 ; 46 >
+        au < manifest ; 2016-2017 ; Journal of Industrial Textiles Volume 46 ; 46 >
 
       }
 
@@ -29795,7 +29795,7 @@ comment[mpj] = now published by Brill
         au < released ; 2013 ; Journal of Planning Literature Volume 28 ; 28 >
         au < released ; 2014 ; Journal of Planning Literature Volume 29 ; 29 >
         au < released ; 2015 ; Journal of Planning Literature Volume 30 ; 30 >
-        au < expected ; 2016 ; Journal of Planning Literature Volume 31 ; 31 >
+        au < manifest ; 2016 ; Journal of Planning Literature Volume 31 ; 31 >
 
       }
 
@@ -37872,7 +37872,7 @@ comment[mpj] = now published by Brill
         au < released ; 2013 ; Policy, Politics, & Nursing Practice Volume 14 ; 14 >
         au < released ; 2014 ; Policy, Politics, & Nursing Practice Volume 15 ; 15 >
         au < released ; 2015 ; Policy, Politics, & Nursing Practice Volume 16 ; 16 >
-        au < expected ; 2016 ; Policy, Politics, & Nursing Practice Volume 17 ; 17 >
+        au < manifest ; 2016 ; Policy, Politics, & Nursing Practice Volume 17 ; 17 >
 
       }
 
@@ -48747,7 +48747,7 @@ comment[mpj] = now published by Brill
         au < released ; 2013 ; Journal of Infrastructure Development Volume 5 ; 5 >
         au < released ; 2014 ; Journal of Infrastructure Development Volume 6 ; 6 >
         au < released ; 2015 ; Journal of Infrastructure Development Volume 7 ; 7 >
-        au < expected ; 2016 ; Journal of Infrastructure Development Volume 8 ; 8 >
+        au < manifest ; 2016 ; Journal of Infrastructure Development Volume 8 ; 8 >
 
       }
 
@@ -49897,7 +49897,7 @@ comment[mpj] = now published by Brill
 
     au < released ; 2012 ; Jindal Journal of Business Research Volume 1 ; 1 >
     au < released ; 2013 ; Jindal Journal of Business Research Volume 2 ; 2 >
-    au < expected ; 2014 ; Jindal Journal of Business Research Volume 3 ; 3 >
+    au < manifest ; 2014 ; Jindal Journal of Business Research Volume 3 ; 3 >
 
     }
 
@@ -53061,9 +53061,9 @@ comment[mpj] = now published by Brill
     au < exists ; 2013 ; Psychological Reports Volume 113 ; 113 >
     au < exists ; 2014 ; Psychological Reports Volume 114 ; 114 >
     au < exists ; 2014 ; Psychological Reports Volume 115 ; 115 >
-    au < exists ; 2015 ; Psychological Reports Volume 116 ; 116 >
-    au < exists ; 2015 ; Psychological Reports Volume 117 ; 117 >
-    au < exists ; 2016 ; Psychological Reports Volume 118 ; 118 >
+    au < manifest ; 2015 ; Psychological Reports Volume 116 ; 116 >
+    au < manifest ; 2015 ; Psychological Reports Volume 117 ; 117 >
+    au < manifest ; 2016 ; Psychological Reports Volume 118 ; 118 >
     
   }
 
@@ -53199,9 +53199,9 @@ comment[mpj] = now published by Brill
     au < exists ; 2013 ; Perceptual and Motor Skills Volume 117 ; 117 >
     au < exists ; 2014 ; Perceptual and Motor Skills Volume 118 ; 118 >
     au < exists ; 2014 ; Perceptual and Motor Skills Volume 119 ; 119 >
-    au < exists ; 2015 ; Perceptual and Motor Skills Volume 120 ; 120 >
-    au < exists ; 2015 ; Perceptual and Motor Skills Volume 121 ; 121 >
-    au < exists ; 2016 ; Perceptual and Motor Skills Volume 122 ; 122 >
+    au < manifest ; 2015 ; Perceptual and Motor Skills Volume 120 ; 120 >
+    au < manifest ; 2015 ; Perceptual and Motor Skills Volume 121 ; 121 >
+    au < manifest ; 2016 ; Perceptual and Motor Skills Volume 122 ; 122 >
     au < exists ; 2016 ; Perceptual and Motor Skills Volume 123 ; 123 >
 
   }

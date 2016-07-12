@@ -17,7 +17,7 @@
     param[base_url] = http://www.efortopenreviews.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2016 ; EFORT Open Reviews Volume 1 ; 1 >
+    au < manifest ; 2016 ; EFORT Open Reviews Volume 1 ; 1 >
 
   }
 

@@ -54,7 +54,7 @@
     param[base_url] = http://bjpo.rcpsych.org/
 
     au < rcpsych.RCPsychDrupalPlugin ; testing ; 2015 ; BJPsych Open Volume 1 ; 1 >
-    au < rcpsych.RCPsychDrupalPlugin ; expected ; 2016 ; BJPsych Open Volume 2 ; 2 >
+    au < rcpsych.RCPsychDrupalPlugin ; manifest ; 2016 ; BJPsych Open Volume 2 ; 2 >
 
   }
 
@@ -276,7 +276,7 @@
     au < rcpsych.RCPsychDrupalPlugin ; testing ; 2015 ; The British Journal of Psychiatry Volume 206 ; 206 >
     au < rcpsych.RCPsychDrupalPlugin ; testing ; 2015 ; The British Journal of Psychiatry Volume 207 ; 207 >
     au < rcpsych.RCPsychDrupalPlugin ; manifest ; 2016 ; The British Journal of Psychiatry Volume 208 ; 208 >
-    au < rcpsych.RCPsychDrupalPlugin ; expected ; 2016 ; The British Journal of Psychiatry Volume 209 ; 209 >
+    au < rcpsych.RCPsychDrupalPlugin ; manifest ; 2016 ; The British Journal of Psychiatry Volume 209 ; 209 >
 
   }
 
