@@ -166,7 +166,7 @@
       au < finished ; finished ; 2013 ; Labour / Le Travail Volume 71-72 ; 71-72 ; 2013 ; >
       au < notReady ; exists ; 2014  ; Labour / Le Travail Volume 73-74 ; 73-74 ; 2014 ; >
       au < notReady ; exists ; 2015 ; Labour / Le Travail Volume 75-76 ; 75-76 ; 2015 ; >
-      au < testing ; exists ; 2016 ; Labour / Le Travail Volume 77-78 ; 77-78 ; 2016 ; >
+      au < notReady ; exists ; 2016 ; Labour / Le Travail Volume 77-78 ; 77-78 ; 2016 ; >
 
     }
     
@@ -183,7 +183,7 @@
     {
       param[base_url] = http://www.oralhistoryforum.ca/
       param[journal_id] = ohf
-      # V35 2015. Redirected to login page.
+      # V35-36 2015-2016. Redirected to login page.
 
       au < manifest ; exists ; 2010 ; Oral History Forum d'histoire orale Volume 30 ; 30 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Oral History Forum d'histoire orale Volume 31 ; 31 ; 2011 ; >
@@ -191,7 +191,7 @@
       au < finished ; finished ; 2013 ; Oral History Forum d'histoire orale Volume 33 ; 33 ; 2013 ; >
       au < finished ; finished ; 2014  ; Oral History Forum d'histoire orale Volume 34 ; 34 ; 2014 ; >
       au < notReady ; exists ; 2015 ; Oral History Forum d'histoire orale Volume 35 ; 35 ; 2015 ; >
-      au < testing ; exists ; 2016 ; Oral History Forum d'histoire orale Volume 36 ; 36 ; 2016 ; >
+      au < notReady ; exists ; 2016 ; Oral History Forum d'histoire orale Volume 36 ; 36 ; 2016 ; >
 
     }
     
