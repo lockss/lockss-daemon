@@ -893,6 +893,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   protected void startDaemon() throws Exception {
     startApp();
 
+    // Install loadable plugin support
+    getPluginManager().startLoadablePlugins();
+
     log.info("Started");
     ausStarted.fill();
 

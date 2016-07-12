@@ -461,9 +461,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	  log.debug3("mandatoryMetadataFields = " + mandatoryMetadataFields);
       }
 
-      // Populate the map of archival unit configurations keyed by the archival
-      // unit identifier.
-      populateAuConfigurations();
+      // Check whether the content is obtained via web services, not from the
+      // local repository.
+      if (config.getBoolean(PluginManager.PARAM_AU_CONTENT_FROM_WS,
+	  PluginManager.DEFAULT_AU_CONTENT_FROM_WS)) {
+	// Yes: Populate the map of archival unit configurations keyed by the
+	// archival unit identifier.
+	populateAuConfigurations();
+      }
     }
   }
 
@@ -4665,13 +4670,29 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     final String DEBUG_HEADER = "onDemandStartReindexing(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
 
-    // Get the plugin.
-    Plugin plugin = getAuPlugin(auId);
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "plugin = " + plugin);
+    boolean isAuContentFromWs = pluginMgr.isAuContentFromWs();
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "isAuContentFromWs = " + isAuContentFromWs);
 
-    // Get the AU.
-    ArchivalUnit au = getAu(auId, plugin);
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+    Plugin plugin = null;
+    ArchivalUnit au = null;
+
+    // Check whether the content comes from web services.
+    if (isAuContentFromWs) {
+      // Yes: Get the plugin.
+      plugin = getAuPlugin(auId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "plugin = " + plugin);
+
+      // Get the AU.
+      au = getAu(auId, plugin);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+    } else {
+      // No: Get the archival unit from the local repository.
+      au = pluginMgr.getAuFromId(auId);
+
+      // Get the plugin.
+      plugin = au.getPlugin();
+    }
 
     // Check whether it does not exist.
     if (au == null) {
@@ -4750,7 +4771,20 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @return an ArchivalUnit with the archival unit.
    */
   public ArchivalUnit getAu(String auId) {
-    return getAu(auId, getAuPlugin(auId));
+    final String DEBUG_HEADER = "getAu(): ";
+    boolean isAuContentFromWs = pluginMgr.isAuContentFromWs();
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "isAuContentFromWs = " + isAuContentFromWs);
+
+    // Check whether the content comes from web services.
+    if (isAuContentFromWs) {
+      // Yes.
+      return getAu(auId, getAuPlugin(auId));
+    }
+
+    // No: Get the archival unit from the local repository.
+    return pluginMgr.getAuFromId(auId);
+
   }
 
   /**

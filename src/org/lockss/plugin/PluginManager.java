@@ -465,7 +465,7 @@ public class PluginManager
    * in the right order.
    */
   public void startLoadablePlugins() {
-    if (loadablePluginsReady) {
+    if (loadablePluginsReady || paramAuContentFromWs) {
       return;
     }
 
