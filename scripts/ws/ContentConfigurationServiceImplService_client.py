@@ -16,7 +16,7 @@ from ZSI.generate.pyclass import pyclass_type
 
 # Locator
 class ContentConfigurationServiceImplServiceLocator:
-    ContentConfigurationServiceImplPort_address = "http://ingest2.clockss.org:8081/ws/ContentConfigurationService"
+    ContentConfigurationServiceImplPort_address = "http://localhost:8081/ws/ContentConfigurationService"
     def getContentConfigurationServiceImplPortAddress(self):
         return ContentConfigurationServiceImplServiceLocator.ContentConfigurationServiceImplPort_address
     def getContentConfigurationServiceImplPort(self, url=None, **kw):

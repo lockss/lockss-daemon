@@ -393,7 +393,7 @@ class _DaemonStatusServiceOptions(object):
     group.add_option('--group-by-field', action='store_true', help='group results by field instead of host')
     group.add_option('--no-special-output', action='store_true', help='no special output format for a single target host')
     group.add_option('--select', metavar='FIELDS', help='comma-separated list of fields for narrower output')
-    group.add_option('--threads', type='int', help='max outgoing connections allowed (default: no limit)')
+    group.add_option('--threads', type='int', help='max parallel jobs allowed (default: no limit)')
     group.add_option('--where', help='optional WHERE clause for query operations')
     parser.add_option_group(group)
     return parser

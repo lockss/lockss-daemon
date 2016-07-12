@@ -16,7 +16,7 @@ from ZSI.generate.pyclass import pyclass_type
 
 # Locator
 class DaemonStatusServiceImplServiceLocator:
-    DaemonStatusServiceImplPort_address = "http://ingest2.clockss.org:8081/ws/DaemonStatusService"
+    DaemonStatusServiceImplPort_address = "http://localhost:8081/ws/DaemonStatusService"
     def getDaemonStatusServiceImplPortAddress(self):
         return DaemonStatusServiceImplServiceLocator.DaemonStatusServiceImplPort_address
     def getDaemonStatusServiceImplPort(self, url=None, **kw):

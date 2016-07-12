@@ -6,7 +6,7 @@ service via its Web Services API.'''
 # $Id$
 
 __copyright__ = '''\
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 '''
 
@@ -33,13 +33,15 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.3.1'
+__version__ = '0.4.0'
 
 import getpass
+from multiprocessing.dummy import Pool as ThreadPool
 import optparse
 import os.path
 import sys
-from time import sleep
+import time
+from threading import Thread
 
 import HasherServiceImplService_client
 from wsutil import zsiauth
@@ -48,65 +50,56 @@ def hash_au(host, auth, auid):
   '''Returns the full hash of the given AU
   '''
   req = HasherServiceImplService_client.hash()
-  req._hasherParams = HasherServiceImplService_client.hasherParams
-  req._hasherParams._auId = auid
-  return _ws_port(host, auth).hash(req)._return
-
-def hashAu(host, auth, auid): return hash_au(host, auth, auid)
+  req.HasherParams = req.new_hasherParams()
+  req.HasherParams.AuId = auid
+  return _ws_port(host, auth).hash(req).Return
 
 def hash_au_url(host, auth, auid, url):
   '''Returns the filtered file of the given Url and AU
   '''
   req = HasherServiceImplService_client.hash()
-  req._hasherParams = HasherServiceImplService_client.hasherParams
-  req._hasherParams._auId = auid
-  req._hasherParams._url = url
-  req._hasherParams._hashType = "V3File"
-  req._hasherParams._recordFilteredStream = "True"
-  return _ws_port(host, auth, sys.stdout).hash(req)._return
-
-def hashAuUrl(host, auth, auid, url): return hash_au_url(host, auth, auid, url)
+  req.HasherParams = req.new_hasherParams()
+  req.HasherParams = HasherServiceImplService_client.hasherParams
+  req.HasherParams.AuId = auid
+  req.HasherParams.Url = url
+  req.HasherParams.HashType = "V3File"
+  req.HasherParams.RecordFilteredStream = "True"
+  return _ws_port(host, auth, sys.stdout).hash(req).Return
 
 def hash_asynchronously_au(host, auth, auid):
   '''Returns a request id for a asychrounous hash of the given AU
   '''
   req = HasherServiceImplService_client.hashAsynchronously()
-  req._hasherParams = HasherServiceImplService_client.hasherParams
-  req._hasherParams._auId = auid
-  return _ws_port(host, auth).hashAsynchronously(req)._return._requestId
-
-def hashAsynchronouslyAu(host, auth, auid): return hash_asynchronously_au(host, auth, auid)
+  req.HasherParams = req.new_hasherParams()
+  req.HasherParams.AuId = auid
+  try: return _ws_port(host, auth).hashAsynchronously(req).Return.RequestId
+  except AttributeError: return None
 
 def hash_asynchronously_au_url(host, auth, auid, url):
   '''Returns a request id for a asychrounous hash of the given url
   '''
   req = HasherServiceImplService_client.hashAsynchronously()
-  req._hasherParams = HasherServiceImplService_client.hasherParams
-  req._hasherParams._auId = auid
-  req._hasherParams._url = url
-  req._hasherParams._hashType = "V3File"
-  req._hasherParams._recordFilteredStream = True
-  return _ws_port(host, auth).hashAsynchronously(req)._return._requestId
-
-def hashAsynchronouslyAuUrl(host, auth, auid, url): return hash_asynchronously_au_url(host, auth, auid, url)
+  req.HasherParams = req.new_hasherParams()
+  req.HasherParams.AuId = auid
+  req.HasherParams.Url = url
+  req.HasherParams.HashType = "V3File"
+  req.HasherParams.RecordFilteredStream = True
+  try: return _ws_port(host, auth).hashAsynchronously(req).Return.RequestId
+  except AttributeError: return None
 
 def get_asynchronous_hash_result(host, auth, request_id):
   '''Returns a hash result for the hash associated with given request_id
   '''
   req = HasherServiceImplService_client.getAsynchronousHashResult()
-  req._requestId = request_id
-  return _ws_port(host, auth).getAsynchronousHashResult(req)._return
-
-def getAsynchronousHashResult(host, auth, request_id): return get_asynchronous_hash_result(host, auth, request_id)
+  req.RequestId = request_id
+  return _ws_port(host, auth).getAsynchronousHashResult(req).Return
 
 def remove_asynchronous_hash_request(host, auth, request_id):
   '''Removes the hash associated with given request_id
   '''
   req = HasherServiceImplService_client.removeAsynchronousHashRequest()
-  req._requestId = request_id
-  return _ws_port(host, auth).removeAsynchronousHashRequest(req)._return
-
-def removeAsynchronousHashRequest(host, auth, request_id): return remove_asynchronous_hash_request(host, auth, request_id)
+  req.RequestId = request_id
+  return _ws_port(host, auth).removeAsynchronousHashRequest(req).Return
 
 def _ws_port(host, auth, tracefile=None):
   url = 'http://%s/ws/HasherService' % (host,)
@@ -134,18 +127,19 @@ class _HasherServiceOptions(object):
     # AUID and URL
     group = optparse.OptionGroup(parser, 'AUID and URL')
     group.add_option('--auid', help='target AUID')
-    group.add_option('--url', help='target URL')
+    group.add_option('--url', help='target URL (optional)')
     parser.add_option_group(group)
     # Output
     group = optparse.OptionGroup(parser, 'Output')
-    group.add_option('--output-directory', default='.', metavar='OUTDIR', help='output directory (default: current directory)')
-    group.add_option('--output-prefix', metavar='PREFIX', help='prefix for output file names')
+    group.add_option('--output-directory', metavar='OUTDIR', default='.', help='output directory (default: current directory)')
+    group.add_option('--output-prefix', metavar='PREFIX', default='hasherservice', help='prefix for output file names (default: "hasherservice")')
     parser.add_option_group(group)
     # Other options
     group = optparse.OptionGroup(parser, 'Other options')
     group.add_option('--long-html-line', action='store_true', help='add a newline before each "<" character')
     group.add_option('--long-text-line', action='store_true', help='replace each space with a newline')
-    group.add_option('--wait', type='int', default=30, help='seconds to wait between asynchronous checks')
+    group.add_option('--threads', type='int', help='maximum number of parallel jobs allowed (default: no limit)')
+    group.add_option('--wait', type='int', help='seconds to wait between asynchronous checks (default: 10 with --url, 30 without)')
     parser.add_option_group(group)
     return parser
 
@@ -160,54 +154,61 @@ class _HasherServiceOptions(object):
     self.auid = opts.auid
     self.url = opts.url
     # output_directory/output_prefix
-    if not os.path.isdir(opts.output_directory):
-      parser.error('no such directory: %s' % (opts.output_directory,))
-    self.output_directory = opts.output_directory
+    self.output_directory = os.path.expanduser(opts.output_directory)
+    if not os.path.isdir(self.output_directory):
+      parser.error('no such directory: %s' % (self.output_directory,))
     if opts.output_prefix is None: parser.error('--output-prefix is required')
     if '/' in opts.output_prefix: parser.error('output prefix cannot contain a slash')
     self.output_prefix = opts.output_prefix
-    # long_html_line/long_text_line/wait
+    # long_html_line/long_text_line/wait/threads
     if any([opts.long_html_line, opts.long_text_line]) and self.url is None:
       parser.error('--long-html-line, --long-text-line only apply to --url')
     if opts.long_html_line and opts.long_text_line:
       parser.error('--long-html-line, --long-text-line are incompatible')
     self.long_html_line = opts.long_html_line
     self.long_text_line = opts.long_text_line
-    self.wait = opts.wait
+    if opts.wait is None: self.wait = 30 if self.url is None else 10
+    else: self.wait = opts.wait
+    if opts.threads is None: self.threads = len(self.hosts)
+    else: self.threads = opts.threads
     # auth
     u = opts.username or getpass.getpass('UI username: ')
     p = opts.password or getpass.getpass('UI password: ')
     self.auth = zsiauth(u, p)
 
-def _do_hashes(options):
-  wholeau = options.url is None
-  reqids = dict()
-  for host in options.hosts:
-    if wholeau: reqids[host] = hash_asynchronously_au(host, options.auth, options.auid)
-    else: reqids[host] = hash_asynchronously_au_url(host, options.auth, options.auid, options.url)
-  while len(reqids) > 0:
-    sleep(options.wait)
-    finished = list()
-    for host, reqid in reqids.iteritems():
-      res = get_asynchronous_hash_result(host, options.auth, reqid)
-      if res._status == 'Done':
-        if wholeau:
-          source = res._blockFileDataHandler
-          fstr = '%s.%s.hash' % (options.output_prefix, host)
-        else:
-          source = res._recordFileDataHandler
-          fstr = '%s.%s.filtered' % (options.output_prefix, host)
-        lines = [line for line in source]
-        if options.long_html_line: lines = map(lambda s: s.replace('<', '\n<'), lines)
-        if options.long_text_line: lines = map(lambda s: s.replace(' ', '\n'), lines)
-        with open(os.path.join(options.output_directory, fstr), 'w') as f: f.writelines(lines)
-        remove_asynchronous_hash_request(host, options.auth, reqid)
-        finished.append(host)
-    for host in finished: del reqids[host]
+def _do_hash(options, host):
+  if options.url is None: reqid = hash_asynchronously_au(host, options.auth, options.auid)
+  else: reqid = hash_asynchronously_au_url(host, options.auth, options.auid, options.url)
+  if reqid is None: return host, False
+  while True:
+    time.sleep(options.wait)
+    res = get_asynchronous_hash_result(host, options.auth, reqid)
+    if res._status == 'Done': break
+  if options.url is None:
+    source = res._blockFileDataHandler
+    fstr = '%s.%s.hash' % (options.output_prefix, host)
+  else:
+    source = res._recordFileDataHandler
+    fstr = '%s.%s.filtered' % (options.output_prefix, host)
+  if source is not None:
+    lines = [line for line in source]
+    if options.long_html_line: lines = map(lambda s: s.replace('<', '\n<'), lines)
+    if options.long_text_line: lines = map(lambda s: s.replace(' ', '\n'), lines)
+    with open(os.path.join(options.output_directory, fstr), 'w') as f:
+      f.writelines(lines)
+  res = remove_asynchronous_hash_request(host, options.auth, reqid)
+  return host, source is not None
 
-# Last modified 2015-08-10
+def _do_hashes(options):
+  for host, result in ThreadPool(options.threads).imap_unordered( \
+      lambda _host: _do_hash(options, _host), \
+      options.hosts):
+    if result is False:
+      sys.stderr.write('Warning: not found on %s\n' % (host,))
+
+# Last modified 2015-08-31
 def _file_lines(fstr):
-  with open(fstr) as f: ret = filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f])
+  with open(os.path.expanduser(fstr)) as f: ret = filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f])
   if len(ret) == 0: sys.exit('Error: %s contains no meaningful lines' % (fstr,))
   return ret
 
@@ -216,7 +217,12 @@ def _main():
   parser = _HasherServiceOptions.make_parser()
   (opts, args) = parser.parse_args()
   options = _HasherServiceOptions(parser, opts, args)
-  _do_hashes(options)
+  t = Thread(target=_do_hashes, args=(options,))
+  t.daemon = True
+  t.start()
+  while True:
+    t.join(1.5)
+    if not t.is_alive(): break
 
 # Main entry point
 if __name__ == '__main__': _main()
