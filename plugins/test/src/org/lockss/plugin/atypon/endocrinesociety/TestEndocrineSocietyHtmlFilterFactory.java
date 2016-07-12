@@ -335,6 +335,94 @@ public class TestEndocrineSocietyHtmlFilterFactory
           "</div></div></div></div>" +
           "</div>";     
   
+  
+  private static final String withTOCLinks = 
+      "<div class=\"art_title noLink\">" +
+          "<span class=\"hlFld-Title\">Editorial: Foo</span>" +
+          "</div>" +
+          "<div class=\"tocAuthors afterTitle\">" +
+          "<div class=\"articleEntryAuthor all\">" +
+          "<span class=\"articleEntryAuthorsLinks\">" +
+          "<a class=\"entryAuthor linkable hlFld-ContribAuthor\" href=\"/author/Schon%2C+Betty\">Betty Schon</a>" +
+          "<span class=\"entryAuthor\">" +
+          "</span>" +
+          "</span>" +
+          "</div>" +
+          "</div>" +
+          "<div class=\"art_meta citation\">" +
+          "<span class=\"issueInfo\">28(9)</span>" +
+          "<span class=\"articlePageRange\">" +
+          "<span class=\"issueInfoComma\">, </span>pp. 1403-1407</span>" +
+          "</div>" +
+          "<div class=\"tocArticleDoi\">" +
+          "<a href=\"http://dx.doi.org/10.1210/xxx\">10.1210/xxx</a>" +
+          "</div>" +
+          "<div class=\"tocListKeywords\">" +
+          "</div>" +
+          "<div class=\"tocDeliverFormatsLinks\">" +
+          "<a class=\"ref nowrap abs\" href=\"/doi/abs/10.1210/xxx\">Citation</a> " +
+          "| <a class=\"ref nowrap full\" href=\"/doi/full/10.1210/xxx\">Full Text</a> " +
+          "| <a class=\"ref nowrap references\" href=\"/doi/ref/10.1210/xxx\">References</a> " +
+          "| <a class=\"ref nowrap pdf\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdf/10.1210/xxx\">PDF (58 KB)</a> " +
+          "| <a href=\"/servlet/linkout?type=\" class=\"rightslink\" onclick=\"newWindow(this.href);return false\">Permissions</a>" +
+          " <div id=\"Absme20141230\" class=\"previewViewSection tocPreview\">" +
+          "<div class=\"closeButton\" onclick=\"showHideTocPublicationAbs('10.1210/xxx', 'Absme20141230');\">" +
+          "</div>" +
+          "<p class=\"previewContent\">" +
+          "</p>" +
+          "</div>" +
+          "</div>" +
+          "</td>";
+  
+  private static final String withTOCLinksFiltered = 
+      "<div class=\"art_title noLink\">" +
+          "<span class=\"hlFld-Title\">Editorial: Foo</span>" +
+          "</div>" +
+          "<div class=\"tocAuthors afterTitle\">" +
+          "<div class=\"articleEntryAuthor all\">" +
+          "<span class=\"articleEntryAuthorsLinks\">" +
+          "<a class=\"entryAuthor linkable hlFld-ContribAuthor\" href=\"/author/Schon%2C+Betty\">Betty Schon</a>" +
+          "<span class=\"entryAuthor\">" +
+          "</span>" +
+          "</span>" +
+          "</div>" +
+          "</div>" +
+          "<div class=\"art_meta citation\">" +
+          "<span class=\"issueInfo\">28(9)</span>" +
+          "<span class=\"articlePageRange\">" +
+          "<span class=\"issueInfoComma\">, </span>pp. 1403-1407</span>" +
+          "</div>" +
+          "<div class=\"tocArticleDoi\">" +
+          "<a href=\"http://dx.doi.org/10.1210/xxx\">10.1210/xxx</a>" +
+          "</div>" +
+          "<div class=\"tocListKeywords\">" +
+          "</div>" +
+          "</td>";
+
+
+  private static final String withReferenceLinks =
+      "<div class=\"references\" id=\"B13\">13. <span class=\"NLM_string-name\">Author Foo <span class=\"NLM_given-names\">" +
+          "A</span></span>, <span class=\"NLM_string-name\">Costa <span class=\"NLM_given-names\">RH</span>" +
+          "</span>, <span class=\"NLM_string-name\">Gannon <span class=\"NLM_given-names\">M</span></span>. " +
+          "<span class=\"NLM_article-title\">Article Title Goes here</span>. Diabetes. " +
+          "<span class=\"NLM_year\">2008</span>;57:" +
+          "<span class=\"NLM_fpage\">3069</span>–<span class=\"NLM_lpage\">3077</span>. , " +
+          "<a title=\"Google Scholar\" target=\"_blank\" href=\"/servlet/linkout?type=search&amp;url=http%3A%2F%2Fscholar.google.com%2Fscholar_lookup\">" +
+          "Google Scholar</a> " +
+          "<a href=\"/servlet/linkout?suffix=\">CrossRef</a>, " +
+          "<a href=\"/servlet/linkout?suffix=\" onclick=\"newWindow(this.href);return false\">Medline</a>" +
+          "</div>";
+  
+  private static final String withReferenceLinksFiltered =
+      "<div class=\"references\" ><span class=\"NLM_string-name\">Author Foo <span class=\"NLM_given-names\">" +
+          "A</span></span><span class=\"NLM_string-name\">Costa <span class=\"NLM_given-names\">RH</span>" +
+          "</span><span class=\"NLM_string-name\">Gannon <span class=\"NLM_given-names\">M</span></span>" +
+          "<span class=\"NLM_article-title\">Article Title Goes here</span>" +
+          "<span class=\"NLM_year\">2008</span>" +
+          "<span class=\"NLM_fpage\">3069</span><span class=\"NLM_lpage\">3077</span>" +
+          "</div>";
+  
+  
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
     return PluginTestUtil.createAndStartAu(PLUGIN_NAME,  esAuConfig());
@@ -407,6 +495,8 @@ public class TestEndocrineSocietyHtmlFilterFactory
       doFilterTest(esau, variantFact, withTwoColumnRightDropZoneColor, 
                    filteredStr);
       doFilterTest(esau, variantFact, withArticleMetaDrop, filteredStr);
+      doFilterTest(esau, variantFact, withTOCLinks, withTOCLinksFiltered);
+      doFilterTest(esau, variantFact, withReferenceLinks, withReferenceLinksFiltered);
     }
   }
   
