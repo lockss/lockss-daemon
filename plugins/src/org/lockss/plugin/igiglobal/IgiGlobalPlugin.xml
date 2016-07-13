@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>23</string>
+    <string>24</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -28,13 +28,13 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.64.0</string>
+    <string>1.70.2</string> <!-- content validation -->
   </entry>
   <entry>
     <string>au_name</string>
@@ -138,6 +138,22 @@
         <string>org.lockss.plugin.igiglobal.IgiGlobalHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>plugin_substance_predicate_factory</string>
+    <string>org.lockss.plugin.igiglobal.IgiGlobalSubstancePredicateFactory</string>
+  </entry>
+  <entry>
+    <!-- Validator factory for text MIME types -->
+    <string>text/*_content_validator_factory</string>
+    <string>org.lockss.plugin.igiglobal.IgiGlobalContentValidator$Factory</string>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <!-- Invalid content-type file; no retry. Captures cases of html returned instead of PDF  -->
+      <string>org.lockss.plugin.igiglobal.IgiGlobalContentValidator$PdfMimeTypeException=org.lockss.util.urlconn.CacheException$ExpectedNoRetryException</string>
+    </list>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
