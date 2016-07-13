@@ -56,8 +56,7 @@ public class IgiGlobalContentValidator {
     }
   }
 
-  /** This factory is used to create validators for all mime types other
-   * than pdf. */
+  /** This factory is used to create validator for all mime types other than pdf. */
   public static class Factory implements ContentValidatorFactory {
     /** 
      * May create a mime-type specific validator here, or a general
@@ -76,8 +75,8 @@ public class IgiGlobalContentValidator {
   public static class PdfMimeTypeException extends ContentValidationException {
     
     public PdfMimeTypeException(String msg) {
-      // Not including the URL in msg, too long on AU-Test display and info is captured in error page
-      super("Url mime-type mismatch");
+      // Not including the URL in msg, too long on AU-Test display and url info is displayed on error page
+      super("URL MIME type mismatch");
     }
   }
   

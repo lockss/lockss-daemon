@@ -137,7 +137,7 @@ public class IgiGlobalSubstancePredicateFactory implements SubstancePredicateFac
     private static boolean isAbstractUrl(String url) {
       Matcher mat = ABSTRACT_ONLY_PATTERN.matcher(url);
       return (mat.find());
-    }    
+    }
     
   }
   
