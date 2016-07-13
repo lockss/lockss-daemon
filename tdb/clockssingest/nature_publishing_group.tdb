@@ -115,7 +115,6 @@
     >
     
     comment[moved] = journal moved to http://www.ajandrology.com/, Medknow in 2013
-
     param[journal_id] = aja
 
     au < zapped ; finished ; 2008 ; Asian Journal of Andrology Volume 10 ; 2008 ; 10 ; >
@@ -291,11 +290,16 @@
     au < finished ; frozen ; 2012 ; British Dental Journal Volume 212 ; 2012 ; 212 ; >
     au < finished ; crawling ; 2012 ; British Dental Journal Volume 213 ; 2012 ; 213 ; >
     au < crawling ; exists ; 2013 ; British Dental Journal Volume 214 ; 2013 ; 214 ; >
-    au < notReady ; exists ; 2014 ; British Dental Journal Volume 215 ; 2014 ; 215 ; > #crawl completed with no substance
-    au < exists ; exists ; 2015 ; British Dental Journal Volume 216 ; 2015 ; 216 ; > 
-    au < exists ; exists ; 2016 ; British Dental Journal Volume 217 ; 2016 ; 217 ; > 
+    au < manifest ; exists ; 2013 ; British Dental Journal Volume 215 ; 2013 ; 215 ; >
+    au < exists ; exists ; 2014 ; British Dental Journal Volume 216 ; 2014 ; 216 ; > 
+    au < exists ; exists ; 2014 ; British Dental Journal Volume 217 ; 2014 ; 217 ; > 
+    au < exists ; exists ; 2015 ; British Dental Journal Volume 218 ; 2015 ; 218 ; >
+    au < exists ; exists ; 2015 ; British Dental Journal Volume 219 ; 2015 ; 219 ; >
+    au < exists ; exists ; 2016 ; British Dental Journal Volume 220 ; 2016 ; 220 ; >
+    au < exists ; exists ; 2016 ; British Dental Journal Volume 221 ; 2016 ; 221 ; >
 
   }
+
   {
 
     title <
@@ -576,7 +580,6 @@
     >
 
     param[journal_id] = ctg
-    comment[notReady] = no substance
 
     au < finished ; crawling ; 2010 ; Clinical and Translational Gastroenterology Volume 1 ; 2010 ; 1 ; >
     au < finished ; crawling ; 2011 ; Clinical and Translational Gastroenterology Volume 2 ; 2011 ; 2 ; >
@@ -642,7 +645,6 @@
     >
 
     param[journal_id] = emboj
-    
     comment[moving] = EMBO moved to HW/Wiley in 2014
 
     au < zapped ; finished ; 2008 ; The EMBO Journal Volume 27 ; 2008 ; 27 ; >
@@ -664,7 +666,6 @@
       issnl = 1469-221X
     >
     param[journal_id] = embor
-    
     comment[moving] = EMBO moved to HW/Wiley in 2014
 
     au < down ; frozen ; 2008 ; EMBO Reports Volume 9 ; 2008 ; 9 ; >
@@ -1344,15 +1345,14 @@
 
     comment[1] = 2010 does not exist, 2013 is the last issue as of 9/10/14. Open access through 2012.
     param[journal_id] = jidsp
+    #move to Elsevier http://www.jidsponline.org/
 
 
     au < finished ; crawling ; 2008 ; JID Symposium Proceedings Volume 13 ; 2008 ; 13 ; >
     au < finished ; crawling ; 2009 ; JID Symposium Proceedings Volume 14 ; 2009 ; 14 ; >
     au < superseded ; down ; 2010 ; JID Symposium Proceedings Volume 15 [superseded] ; 2010 ; 15 ; >
     au < finished ; finished ; 2011 ; JID Symposium Proceedings Volume 15 ; 2011 ; 15 ; >
-    au < exists ; exists ; 2013 ; JID Symposium Proceedings Volume 16 ; 2013 ; 16 ; >
     
-
   }
 
   {
@@ -1391,6 +1391,7 @@
     >
 
     param[journal_id] = jcbfm
+    #move to Sage 
 
     au < doNotProcess ; doNotProcess ; 1981 ; Journal of Cerebral Blood Flow and Metabolism Volume 1 ; 1981 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 1982 ; Journal of Cerebral Blood Flow and Metabolism Volume 2 ; 1982 ; 2 ; >
@@ -1426,8 +1427,7 @@
     au < finished ; crawling ; 2012 ; Journal of Cerebral Blood Flow and Metabolism Volume 32 ; 2012 ; 32 ; >
     au < finished ; crawling ; 2013 ; Journal of Cerebral Blood Flow and Metabolism Volume 33 ; 2013 ; 33 ; >
     au < finished ; crawling ; 2014 ; Journal of Cerebral Blood Flow and Metabolism Volume 34 ; 2014 ; 34 ; >
-    au < crawling ; exists ; 2015 ; Journal of Cerebral Blood Flow and Metabolism Volume 35 ; 2015 ; 35 ; >
-    au < expected ; exists ; 2016 ; Journal of Cerebral Blood Flow and Metabolism Volume 36 ; 2016 ; 36 ; >
+    au < down ; exists ; 2015 ; Journal of Cerebral Blood Flow and Metabolism Volume 35 ; 2015 ; 35 ; >
 
   }
 
@@ -1669,20 +1669,20 @@
     au < doNotProcess ; doNotProcess ; 1998 ; The Journal of Investigative Dermatology Volume 111 ; 1998 ; 111 ; >
     au < doNotProcess ; doNotProcess ; 1999 ; The Journal of Investigative Dermatology Volume 112 ; 1999 ; 112 ; >
     au < doNotProcess ; doNotProcess ; 1999 ; The Journal of Investigative Dermatology Volume 113 ; 1999 ; 113 ; >
-    au < manifest ; exists ; 2000 ; The Journal of Investigative Dermatology Volume 114 ; 2000 ; 114 ; >
-    au < manifest ; exists ; 2000 ; The Journal of Investigative Dermatology Volume 115 ; 2000 ; 115 ; >
-    au < manifest ; exists ; 2001 ; The Journal of Investigative Dermatology Volume 116 ; 2001 ; 116 ; >
-    au < manifest ; exists ; 2001 ; The Journal of Investigative Dermatology Volume 117 ; 2001 ; 117 ; >
-    au < manifest ; exists ; 2002 ; The Journal of Investigative Dermatology Volume 118 ; 2002 ; 118 ; >
-    au < manifest ; exists ; 2002 ; The Journal of Investigative Dermatology Volume 119 ; 2002 ; 119 ; >
-    au < manifest ; exists ; 2003 ; The Journal of Investigative Dermatology Volume 120 ; 2003 ; 120 ; >
-    au < manifest ; exists ; 2003 ; The Journal of Investigative Dermatology Volume 121 ; 2003 ; 121 ; >
-    au < manifest ; exists ; 2004 ; The Journal of Investigative Dermatology Volume 122 ; 2004 ; 122 ; >
-    au < manifest ; exists ; 2004 ; The Journal of Investigative Dermatology Volume 123 ; 2004 ; 123 ; >
-    au < manifest ; exists ; 2005 ; The Journal of Investigative Dermatology Volume 124 ; 2005 ; 124 ; >
-    au < manifest ; exists ; 2005 ; The Journal of Investigative Dermatology Volume 125 ; 2005 ; 125 ; >
-    au < manifest ; exists ; 2006 ; The Journal of Investigative Dermatology Volume 126 ; 2006 ; 126 ; >
-    au < manifest ; exists ; 2007 ; The Journal of Investigative Dermatology Volume 127 ; 2007 ; 127 ; >
+    au < down ; exists ; 2000 ; The Journal of Investigative Dermatology Volume 114 ; 2000 ; 114 ; >
+    au < down ; exists ; 2000 ; The Journal of Investigative Dermatology Volume 115 ; 2000 ; 115 ; >
+    au < down ; exists ; 2001 ; The Journal of Investigative Dermatology Volume 116 ; 2001 ; 116 ; >
+    au < down ; exists ; 2001 ; The Journal of Investigative Dermatology Volume 117 ; 2001 ; 117 ; >
+    au < down ; exists ; 2002 ; The Journal of Investigative Dermatology Volume 118 ; 2002 ; 118 ; >
+    au < down ; exists ; 2002 ; The Journal of Investigative Dermatology Volume 119 ; 2002 ; 119 ; >
+    au < down ; exists ; 2003 ; The Journal of Investigative Dermatology Volume 120 ; 2003 ; 120 ; >
+    au < down ; exists ; 2003 ; The Journal of Investigative Dermatology Volume 121 ; 2003 ; 121 ; >
+    au < down ; exists ; 2004 ; The Journal of Investigative Dermatology Volume 122 ; 2004 ; 122 ; >
+    au < down ; exists ; 2004 ; The Journal of Investigative Dermatology Volume 123 ; 2004 ; 123 ; >
+    au < down ; exists ; 2005 ; The Journal of Investigative Dermatology Volume 124 ; 2005 ; 124 ; >
+    au < down ; exists ; 2005 ; The Journal of Investigative Dermatology Volume 125 ; 2005 ; 125 ; >
+    au < down ; exists ; 2006 ; The Journal of Investigative Dermatology Volume 126 ; 2006 ; 126 ; >
+    au < down ; exists ; 2007 ; The Journal of Investigative Dermatology Volume 127 ; 2007 ; 127 ; >
     au < zapped ; finished ; 2008 ; The Journal of Investigative Dermatology Volume 128 ; 2008 ; 128 ; >
     au < zapped ; finished ; 2009 ; The Journal of Investigative Dermatology Volume 129 ; 2009 ; 129 ; >
     au < finished ; frozen ; 2010 ; The Journal of Investigative Dermatology Volume 130 ; 2010 ; 130 ; >
@@ -1690,8 +1690,7 @@
     au < finished ; frozen ; 2012 ; The Journal of Investigative Dermatology Volume 132 ; 2012 ; 132 ; >
     au < crawling ; exists ; 2013 ; The Journal of Investigative Dermatology Volume 133 ; 2013 ; 133 ; >
     au < finished ; crawling ; 2014 ; The Journal of Investigative Dermatology Volume 134 ; 2014 ; 134 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2015 ; The Journal of Investigative Dermatology Volume 135 ; 2015 ; 135 ; >
-    au < expected ; exists ; 2016 ; The Journal of Investigative Dermatology Volume 136 ; 2016 ; 136 ; >
+    au < down ; exists ; 2015 ; The Journal of Investigative Dermatology Volume 135 ; 2015 ; 135 ; >
 
   }
 
@@ -1748,7 +1747,7 @@
     au < finished ; crawling ; 2011 ; Kidney International Volume 79 ; 2011 ; 79 ; >
     au < down ; exists ; 2011 ; Kidney International Volume 80 ; 2011 ; 80 ; >
     au < finished ; crawling ; 2012 ; Kidney International Volume 81 ; 2012 ; 81 ; >
-    au < exists ; exists ; 2012 ; Kidney International Volume 82 ; 2012 ; 82 ; >
+    au < down ; exists ; 2012 ; Kidney International Volume 82 ; 2012 ; 82 ; >
     au < down ; exists ; 2013 ; Kidney International Volume 83 ; 2013 ; 83 ; >
     au < finished ; finished ; 2013 ; Kidney International Volume 84 ; 2013 ; 84 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Kidney International Volume 85 ; 2014 ; 85 ; reingest3.clockss.org:8083 >
@@ -3111,7 +3110,6 @@
     au < finished ; crawling ; 2014 ; Nature Reviews Endocrinology Volume 10 ; 2014 ; 10 ; >
     au < crawling ; exists ; 2015 ; Nature Reviews Endocrinology Volume 11 ; 2015 ; 11 ; >
     au < manifest ; exists ; 2016 ; Nature Reviews Endocrinology Volume 12 ; 2016 ; 12 ; >
-    au < expected ; exists ; 2017 ; Nature Reviews Endocrinology Volume 13 ; 2017 ; 13 ; >
 
   }
 
@@ -3692,7 +3690,7 @@
     au < crawling ; exists ; 2015 ; Pediatric Research Volume 77 ; 2015 ; 77 ; >
     au < crawling ; exists ; 2015 ; Pediatric Research Volume 78 ; 2015 ; 78 ; >
     au < manifest ; exists ; 2016 ; Pediatric Research Volume 79 ; 2016 ; 79 ; >
-    au < expected ; exists ; 2016 ; Pediatric Research Volume 80 ; 2016 ; 80 ; >
+    au < exists ; exists ; 2016 ; Pediatric Research Volume 80 ; 2016 ; 80 ; >
 
   }
 
