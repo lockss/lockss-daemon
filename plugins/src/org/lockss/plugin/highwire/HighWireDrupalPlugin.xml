@@ -27,14 +27,14 @@
    -->
   <entry>
     <string>plugin_version</string>
-    <string>46</string>
+    <string>47</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Substance</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -49,6 +49,7 @@
   <entry>
     <string>required_daemon_version</string>
     <string>1.68.4</string> <!-- plugin_fetch_rate_limiter_source title_attribute: with default -->
+    <!-- <string>1.70.2</string> content validation -->
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -115,11 +116,12 @@
     <list>
       <string>1,"^https?://%s/content(/[^/]+)?/suppl/", url_host(base_url)</string>
       <string>2,"^https?://%s/content/(by/(year|volume)/?|.*/article-.*)$", url_host(base_url)</string>
-      <string>1,"^https?://%s/content/([^/.]+)(/[^/.]+)?/([^/.]+)\.toc$", url_host(base_url)</string>
+      <!-- after content is optional jcode, required vol, optional issue, required .toc  -->
+      <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?\.toc$", url_host(base_url)</string>
       <!-- after content is required vol, optional issue, required page, then allowed extensions or EOL -->
       <string>1,"^https?://%s/content/([^/.]+)(/[^/.]+)?/(((?:bmj\.)?[^/.]+?|\d+\.\d+))(|/related|\.(?:long|supplemental|data|figures-only))$", url_host(base_url)</string>
-      <!-- after content is optional jcode if full pdf, required vol, optional issue, required page, then allowed extensions  -->
-      <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:bmj\.)?[^/.]+?|\d+\.\d+))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url), volume_name</string>
+      <!-- after content is optional jcode, required vol, optional issue, required page, then allowed extensions  -->
+      <string>1,"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:bmj\.)?[^/.]+?|\d+\.\d+))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url)</string>
       <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
       <string>1,"^https?://%s/[^/]+/(download-(pdf|suppl|video))/", url_host(base_url)</string>
     </list>
@@ -147,6 +149,8 @@
       <string>502=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
       <string>503=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
       <string>504=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+      <!-- Retry invalid content-type file 2 times at 10 second intervals  -->
+<!--       <string>org.lockss.plugin.highwire.HighWireTextContentValidator$TypeException=org.lockss.util.urlconn.CacheException$RetryableNetworkException_2_10S</string> -->
     </list>
   </entry>
   <entry>
@@ -177,7 +181,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%scontent(/[^/]+)?/%s/[^/]+/[^/.?]+([.]\d{1,4})?([.]full([.]pdf)?)?$", base_url, volume_name</string>
+      <string>"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:bmj\.)?[^/.]+?|\d+\.\d+))(\.(?:full([.]pdf)?)?)$", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
@@ -189,7 +193,7 @@
     <string>org.lockss.plugin.highwire.HighWireDrupalPermissionCheckerFactory</string>
   </entry>
 <!--   <entry> -->
-<!--     Validator factory for all text MIME types -->
+<!--     Validator factory for text MIME types -->
 <!--     <string>text/*_content_validator_factory</string> -->
 <!--     <string>org.lockss.plugin.highwire.HighWireTextContentValidator$Factory</string> -->
 <!--   </entry> -->

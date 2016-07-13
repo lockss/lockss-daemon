@@ -201,6 +201,7 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "content/os-86/1_suppl_2/2.full-text.pdf+html", true, au);
     
     // full pdf article files with journal id
+    shouldCacheTest(ROOT_URL + "content/jid/2015/1/2.full", false, au);
     shouldCacheTest(ROOT_URL + "content/jid/2015/1/2.full.pdf", true, au);
     shouldCacheTest(ROOT_URL + "content/jid/2015/1/2.full.pdf+html", true, au);
     shouldCacheTest(ROOT_URL + "content/jid/2015/1/2.full-text.pdf+html", true, au);
@@ -346,6 +347,68 @@ public class TestHighWireDrupalPlugin extends LockssTestCase {
       m0 = p0.matcher(urlString);
       assertEquals(urlString, false, m0.find());
     }
+  }
+  
+
+  public void testCheckSubstanceRules() throws Exception {
+    String ROOT_URL = "http://www.example.com/";
+    Properties props = new Properties();
+    props.setProperty(VOL_KEY, "322");
+    props.setProperty(BASE_URL_KEY, ROOT_URL);
+    DefinableArchivalUnit au = makeAuFromProps(props);
+    
+    List<String> substanceList = ListUtil.list(
+        ROOT_URL + "content/322/1/23.full.pdf",
+        ROOT_URL + "content/322/125.full",
+        ROOT_URL + "content/322/125.full.pdf",
+        ROOT_URL + "content/jid/322/1/23.full.pdf",
+        ROOT_URL + "content/jid/322/125.full",
+        ROOT_URL + "content/jid/322/125.full.pdf"
+        );
+    
+    List<String> notSubstanceList = ListUtil.list(
+        ROOT_URL + "content/322/1/23.long",
+        ROOT_URL + "content/322/1/23",
+        ROOT_URL + "content/322/1/23.figures-only",
+        ROOT_URL + "content/322/1.toc",
+        ROOT_URL + "content/322/125",
+        ROOT_URL + "content/322/125.abstract",
+        ROOT_URL + "content/322/125.article-info",
+        ROOT_URL + "content/322/1/1.full.pdf+html",
+        ROOT_URL + "highwire/filestream/57879/field_highwire_adjunct_files/0/ds147561.pdf",
+        ROOT_URL + "",
+        ROOT_URL + ""
+        );
+    
+    
+    assert(au.makeSubstanceUrlPatterns().size() == 1);
+    boolean found = false;
+    
+    // List<Pattern> pat_list = au.makeSubstanceUrlPatterns();
+    // The above Pattern is org.apache.oro.text.regex.Pattern, not compatible with java.util.regex.Pattern
+    // <string>"^https?://%s/content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:bmj\.)?[^/.]+?|\d+\.\d+))(\.(?:full([.]pdf)?)?)$",
+    
+    String strPat = "^" + ROOT_URL + "content(/[^/.]+)?/([^/.]+)(/[^/.]+)?/(((?:bmj\\.)?[^/.]+?|\\d+\\.\\d+))(\\.(?:full([.]pdf)?)?)$";
+    Pattern thisPat = Pattern.compile(strPat);
+    String lastUrl = "";
+    
+    for (String nextUrl : substanceList) {
+      log.debug("testing for substance: "+ nextUrl);
+      Matcher m = thisPat.matcher(nextUrl);
+      lastUrl = nextUrl;
+      found = m.matches();
+      if (!found) break;
+    }
+    assertEquals(lastUrl, true, found);
+    
+    for (String nextUrl : notSubstanceList) {
+      log.debug("testing for not substance: "+ nextUrl);
+      Matcher m = thisPat.matcher(nextUrl);
+      lastUrl = nextUrl;
+      found = m.matches();
+      if (found) break;
+    }
+    assertEquals(lastUrl, false, found);
   }
   
 }
