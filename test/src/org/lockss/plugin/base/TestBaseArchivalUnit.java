@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,16 +31,12 @@ package org.lockss.plugin.base;
 import java.io.*;
 import java.util.*;
 import java.net.*;
-
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
-import org.lockss.poller.*;
 import org.lockss.config.*;
-import org.lockss.crawler.*;
-import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.plugin.base.BaseArchivalUnit.*;
 import org.lockss.extractor.*;
@@ -57,7 +49,6 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
 
   PluginManager pluginMgr;
-  private PollManager pollMgr;
   private TestableBaseArchivalUnit mbau;
   private MyMockPlugin mplug;
   private CrawlRule crawlRule = null;
@@ -67,7 +58,6 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
     setUpDiskSpace();
 
-    pollMgr = getMockLockssDaemon().getPollManager();
     pluginMgr = getMockLockssDaemon().getPluginManager();
 
     mbau = makeMbau(AU_NAME, BASE_URL, START_URL);

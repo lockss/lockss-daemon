@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
  Copyright (c) 2014-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -45,7 +41,6 @@ import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrlSet;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
-import org.lockss.poller.Poll;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.state.AuState;
 import org.lockss.state.NodeManager;
@@ -226,7 +221,7 @@ public class AuHelper {
     CachedUrlSet auCus = au.getAuCachedUrlSet();
     NodeState topNode = nodeMgr.getNodeState(auCus);
 
-    if (AuUtil.getProtocolVersion(au) == Poll.V3_PROTOCOL) {
+    if (AuUtil.getProtocolVersion(au) == 1) {
       if (state.getV3Agreement() < 0) {
 	if (state.getLastCrawlTime() < 0) {
 	  result.setStatus("Waiting for Crawl");
@@ -320,8 +315,6 @@ public class AuHelper {
 
     result.setCurrentlyCrawling(theDaemon.getCrawlManager().getStatusSource()
 	.getStatus().isRunningNCCrawl(au));
-
-    result.setCurrentlyPolling(theDaemon.getPollManager().isPollRunning(au));
 
     if (theDaemon.isDetectClockssSubscription()) {
       result.setSubscriptionStatus(AuUtil.getAuState(au)

@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,13 +30,7 @@ package org.lockss.protocol;
 
 import java.util.*;
 import java.io.*;
-import java.net.*;
-
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
-import org.lockss.plugin.*;
 import org.lockss.util.*;
-import org.lockss.util.Queue;
 import org.lockss.test.*;
 
 /**
@@ -124,13 +114,7 @@ public class TestLcapRouter extends LockssTestCase {
     assertEquals(a.getPluginVersion(), b.getPluginVersion());
     assertEquals(a.getHashAlgorithm(), b.getHashAlgorithm());
     List aVoteBlocks = new ArrayList();
-    for (VoteBlocksIterator iter = a.getVoteBlockIterator(); iter.hasNext(); ) {
-      aVoteBlocks.add(iter.next());
-    }
     List bVoteBlocks = new ArrayList();
-    for (VoteBlocksIterator iter = b.getVoteBlockIterator(); iter.hasNext(); ) {
-      bVoteBlocks.add(iter.next());
-    }
     assertTrue(aVoteBlocks.equals(bVoteBlocks));
 
     // TODO: Figure out how to test time.

@@ -66,13 +66,6 @@ public class LcapMessageTestUtil {
                                           ByteArray.makeRandomBytes(20),
                                           V3LcapMessage.MSG_REPAIR_REQ,
                                           987654321, peer, tempDir, daemon);
-
-    // Set msg vote blocks.
-    if (voteBlocks != null) {
-      for (Iterator ix = voteBlocks.iterator(); ix.hasNext(); ) {
-	msg.addVoteBlock((VoteBlock)ix.next());
-      }
-    }
     
     msg.setHashAlgorithm(LcapMessage.getDefaultHashAlgorithm());
     msg.setArchivalId(m_archivalID);

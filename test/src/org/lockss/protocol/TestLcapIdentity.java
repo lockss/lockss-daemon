@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,9 +33,6 @@ import java.net.*;
 import org.mortbay.util.B64Code;
 import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.poller.*;
-
-import java.util.*;
 
 
 /** JUnitTest case for class: org.lockss.protocol.Identity */
@@ -51,10 +44,6 @@ public class TestLcapIdentity extends LockssTestCase {
   static final String uprbnd = "test3.doc";
   static final String archivalid = "testarchive 1.0";
   static final byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
-  static final ArrayList testentries =
-    (ArrayList)ListUtil.list(new PollTally.NameListEntry(true,"test1.doc"),
-			     new PollTally.NameListEntry(true,"test2.doc"),
-			     new PollTally.NameListEntry(true,"test3.doc"));
 
   LcapIdentity fakeId = null;
   IPAddr testAddress;
@@ -82,15 +71,6 @@ public class TestLcapIdentity extends LockssTestCase {
       fail("can't open test host");
     }
     testReputation = IdentityManager.INITIAL_REPUTATION;
-    PollSpec spec = new MockPollSpec(archivalid, urlstr, lwrbnd, uprbnd,
-				     Poll.V1_CONTENT_POLL);
-    testMsg = V1LcapMessage.makeRequestMsg(spec,
-					   testentries,
-					   testbytes,
-					   testbytes,
-					   V1LcapMessage.CONTENT_POLL_REQ,
-					   100000,
-					   testID);
   }
 
   /** test for method toString(..) */

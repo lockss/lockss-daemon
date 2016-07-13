@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,11 +30,9 @@ package org.lockss.test;
 
 import java.io.IOException;
 import java.util.*;
-
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.poller.*;
 import org.lockss.util.*;
 import org.lockss.state.*;
 import org.lockss.app.*;
@@ -80,23 +74,10 @@ public class MockNodeManager implements NodeManager {
     throw new UnsupportedOperationException("Not implemented");
   }
 
-  public void startPoll(CachedUrlSet cus, Tallier state, boolean isReplay) {
-    logger.debug3("starting V1 poll for cus: " + cus);
-  }
-
-  public boolean shouldStartPoll(CachedUrlSet cus, Tallier state) {
-    logger.debug3("ok to start poll");
-    return true;
-  }
-
   public void deleteNode(CachedUrlSet cus) throws IOException {
     // We actually need this mocked out for V3 poll testing.  
     // Pretend it succeeds.
     logger.info("Marking node " + cus.getUrl() + " deleted.");
-  }
-
-  public void updatePollResults(CachedUrlSet cus, Tallier results) {
-    logger.debug3("updating poll for cus " + cus + " with results " + results);
   }
 
   public NodeState getNodeState(CachedUrlSet cus) {
@@ -156,16 +137,6 @@ public class MockNodeManager implements NodeManager {
   }
 
   public void scheduleRepairs(ActivityRegulator.Lock activityLock) {
-    throw new UnsupportedOperationException("Not implemented");
-  }
-
-  public boolean checkCurrentState(PollState lastOrCurrentPoll,
-				   NodeState nodeState) {
-    throw new UnsupportedOperationException("Not implemented");
-  }
-
-  public void callNecessaryPolls(PollState lastOrCurrentPoll,
-				 NodeState nodeState) {
     throw new UnsupportedOperationException("Not implemented");
   }
 

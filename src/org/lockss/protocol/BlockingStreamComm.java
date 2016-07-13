@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,18 +33,15 @@ import java.net.*;
 import java.security.*;
 import javax.net.ssl.*;
 import java.util.*;
-
 import org.apache.commons.collections.*;
 import org.apache.commons.collections.bag.TreeBag; // needed to disambiguate
 import EDU.oswego.cs.dl.util.concurrent.*;
-
 import org.lockss.util.*;
 import org.lockss.util.Queue;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.app.*;
-import org.lockss.poller.*;
 
 /**
  * BlockingStreamComm implements the streaming mesaage protocol using
@@ -1208,7 +1201,7 @@ public class BlockingStreamComm
 
   // overridable for testing
   protected PeerIdentity getLocalPeerIdentity() {
-    return idMgr.getLocalPeerIdentity(Poll.V3_PROTOCOL);
+    return idMgr.getLocalPeerIdentity(1);
   }
 
   PeerIdentity findPeerIdentity(String idkey)

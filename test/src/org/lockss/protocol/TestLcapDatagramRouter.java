@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,7 +33,6 @@ import java.io.*;
 import java.util.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
-import org.lockss.poller.*;
 
 /** JUnitTest case for class: org.lockss.protocol.Message */
 public class TestLcapDatagramRouter extends LockssTestCase {
@@ -136,7 +131,6 @@ public class TestLcapDatagramRouter extends LockssTestCase {
     testmsg.m_verifier = testbytes;
     testmsg.m_hashed = testbytes;
     testmsg.m_opcode = V1LcapMessage.CONTENT_POLL_REQ;
-    testmsg.m_entries = testentries = TestPoll.makeEntries(1, 25);
     testmsg.m_archivalID = archivalID;
     dg = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP, testmsg.encodeMsg());
     rdg = new LockssReceivedDatagram(dg.makeSendPacket(testaddr, 0));

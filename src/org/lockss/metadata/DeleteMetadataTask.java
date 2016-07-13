@@ -356,11 +356,12 @@ public class DeleteMetadataTask extends StepTask {
       long elapsedUserTime = threadUserTime - startUserTime;
       long elapsedClockTime = currentClockTime - startClockTime;
 
-      log.info("Finished reindexing task for AU '" + auName + "': status = "
-	  + status + ", CPU time: " + elapsedCpuTime / 1.0e9 + " ("
-	  + endCpuTime / 1.0e9 + "), User time: " + elapsedUserTime / 1.0e9
-	  + " (" + endUserTime / 1.0e9 + "), Clock time: "
-	  + elapsedClockTime / 1.0e3 + " (" + endClockTime / 1.0e3 + ")");
+      log.info("Finished metadata removal task for AU '" + auName
+	  + "': status = " + status + ", CPU time: " + elapsedCpuTime / 1.0e9
+	  + " (" + endCpuTime / 1.0e9 + "), User time: "
+	  + elapsedUserTime / 1.0e9 + " (" + endUserTime / 1.0e9
+	  + "), Clock time: " + elapsedClockTime / 1.0e3 + " ("
+	  + endClockTime / 1.0e3 + ")");
 
       mdManager.notifyFinishAuMetadataRemoval(au, status, task.getException());
 

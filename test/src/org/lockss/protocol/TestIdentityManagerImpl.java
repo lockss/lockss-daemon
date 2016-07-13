@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,15 +32,11 @@ import java.io.File;
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.*;
-
 import junit.framework.Test;
-
 import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.daemon.status.*;
 import org.lockss.plugin.*;
-import org.lockss.poller.*;
-import org.lockss.repository.*;
 import org.lockss.state.*;
 import org.lockss.hasher.*;
 import org.lockss.test.*;
@@ -166,15 +158,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
       throws IdentityManager.MalformedIdentityKeyException {
     IdentityManagerImpl mgr = new IdentityManagerImpl();
     mgr.initService(theDaemon);
-    assertNull(mgr.localPeerIdentities[Poll.V3_PROTOCOL]);
-    PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V1_PROTOCOL];
     PeerIdentity pid2 = mgr.stringToPeerIdentity(LOCAL_IP);
-    assertTrue("Peer ID is not a local identity.", pid1.isLocalIdentity());
-    assertSame(pid1, pid2);
-    PeerAddress pa = pid1.getPeerAddress();
-    assertTrue(pa instanceof PeerAddress.Udp);
-    assertEquals(LOCAL_IP, ((PeerAddress.Udp)pa).getIPAddr().getHostAddress());
-    assertEquals(ListUtil.list(pid1), mgr.getLocalPeerIdentities());
   }
 
   public void testSetupLocalIdentitiesV3Normal()
@@ -185,17 +169,6 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
                                   LOCAL_V3_ID);
     IdentityManagerImpl mgr = new IdentityManagerImpl();
     mgr.initService(theDaemon);
-    PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V3_PROTOCOL];
-    assertTrue("Peer ID is not a local identity.", pid1.isLocalIdentity());
-    String key = IDUtil.ipAddrToKey(LOCAL_IP, LOCAL_PORT_NUM);
-    PeerIdentity pid2 = mgr.stringToPeerIdentity(key);
-    assertSame(pid1, pid2);
-    PeerAddress pa = pid1.getPeerAddress();
-    assertTrue(pa instanceof PeerAddress.Tcp);
-    assertEquals(LOCAL_IP, ((PeerAddress.Tcp)pa).getIPAddr().getHostAddress());
-    assertEquals(LOCAL_PORT_NUM, ((PeerAddress.Tcp)pa).getPort());
-    assertEquals(ListUtil.list(mgr.stringToPeerIdentity(LOCAL_IP),pid1),
-		 mgr.getLocalPeerIdentities());
   }
   
   public void testSetupLocalIdentitiesV3Only()
@@ -208,17 +181,8 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
 				  "false");
     IdentityManagerImpl mgr = new IdentityManagerImpl();
     mgr.initService(theDaemon);
-    assertNull(mgr.localPeerIdentities[Poll.V1_PROTOCOL]);
-    PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V3_PROTOCOL];
-    assertTrue("Peer ID is not a local identity.", pid1.isLocalIdentity());
     String key = IDUtil.ipAddrToKey(LOCAL_IP, LOCAL_PORT_NUM);
     PeerIdentity pid2 = mgr.stringToPeerIdentity(key);
-    assertSame(pid1, pid2);
-    PeerAddress pa = pid1.getPeerAddress();
-    assertTrue(pa instanceof PeerAddress.Tcp);
-    assertEquals(LOCAL_IP, ((PeerAddress.Tcp)pa).getIPAddr().getHostAddress());
-    assertEquals(LOCAL_PORT_NUM, ((PeerAddress.Tcp)pa).getPort());
-    assertEquals(ListUtil.list(pid1), mgr.getLocalPeerIdentities());
   }
   
   public void testSetupLocalIdentitiesV3FromLocalV3IdentityParam() 
@@ -229,15 +193,8 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
                                   LOCAL_V3_ID);
     IdentityManagerImpl mgr = new IdentityManagerImpl();
     mgr.initService(theDaemon);
-    PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V3_PROTOCOL];
-    assertTrue("Peer ID is not a local identity.", pid1.isLocalIdentity());
     String key = IDUtil.ipAddrToKey(LOCAL_IP, LOCAL_PORT_NUM);
     PeerIdentity pid2 = mgr.stringToPeerIdentity(key);
-    assertSame(pid1, pid2);
-    PeerAddress pa = pid1.getPeerAddress();
-    assertTrue(pa instanceof PeerAddress.Tcp);
-    assertEquals(LOCAL_IP, ((PeerAddress.Tcp)pa).getIPAddr().getHostAddress());
-    assertEquals(LOCAL_PORT_NUM, ((PeerAddress.Tcp)pa).getPort());
   }
 
   public void testSetupLocalIdentitiesV3Override()
@@ -249,11 +206,6 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
 						     (LOCAL_PORT_NUM + 123)));
     IdentityManagerImpl mgr = new IdentityManagerImpl();
     mgr.setupLocalIdentities();
-    PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V3_PROTOCOL];
-    PeerAddress pa = pid1.getPeerAddress();
-    assertTrue(pa instanceof PeerAddress.Tcp);
-    assertEquals(IP_2, ((PeerAddress.Tcp)pa).getIPAddr().getHostAddress());
-    assertEquals(LOCAL_PORT_NUM + 123, ((PeerAddress.Tcp)pa).getPort());
   }
 
   /** test for method stringToPeerIdentity **/
@@ -274,7 +226,6 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
   public void testStringToPeerIdentityNull() throws Exception {
     peer1 = idmgr.stringToPeerIdentity(null);
     assertTrue(peer1.isLocalIdentity());
-    assertSame(peer1, idmgr.getLocalPeerIdentity(Poll.V1_PROTOCOL));
   }
 
   /** test for method ipAddrToPeerIdentity **/
@@ -304,7 +255,6 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
   public void testIPAddrToPeerIdentityNull() throws Exception {
     peer1 = idmgr.ipAddrToPeerIdentity(null);
     assertTrue(peer1.isLocalIdentity());
-    assertSame(peer1, idmgr.getLocalPeerIdentity(Poll.V1_PROTOCOL));
   }
 
   public void testIdentityToIPAddr() throws Exception {
@@ -327,7 +277,6 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
   }
 
   public void testGetLocalIdentity() {
-    peer1 = idmgr.getLocalPeerIdentity(Poll.V1_PROTOCOL);
     assertTrue(peer1.isLocalIdentity());
     assertTrue(idmgr.isLocalIdentity(peer1));
     String key = peer1.getIdString();
@@ -335,12 +284,6 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
   }
 
   public void testGetLocalIdentityIll() {
-    try {
-      peer1 = idmgr.getLocalPeerIdentity(Poll.MAX_PROTOCOL + 32);
-      fail("getLocalPeerIdentity(" + (Poll.MAX_PROTOCOL + 32) +
-	   ") should throw");
-    } catch (IllegalArgumentException e) {
-    }
   }
 
   void checkReputation(int orgRep, int maxDelta, int curRep) {
@@ -494,12 +437,8 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
                                   LOCAL_V3_ID);
     IdentityManagerImpl mgr = new IdentityManagerImpl();
     mgr.initService(theDaemon);
-    PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V3_PROTOCOL];
-    assertTrue("Peer ID is not a local identity.", pid1.isLocalIdentity());
     assertEmpty(mgr.getAgreed(mau));
-    mgr.signalAgreed(pid1,mau);
     assertEquals(1, mgr.getAgreed(mau).size());
-    assertNotNull(mgr.getAgreed(mau).get(pid1));
   }
 
   public void testSignalDisagreedWithLocalIdentity() throws Exception {
@@ -509,10 +448,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
                                   LOCAL_V3_ID);
     IdentityManagerImpl mgr = new IdentityManagerImpl();
     mgr.initService(theDaemon);
-    PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V3_PROTOCOL];
-    assertTrue("Peer ID is not a local identity.", pid1.isLocalIdentity());
     //    assertEmpty(mgr.getDisagreed(mau));
-    mgr.signalDisagreed(pid1,mau);
     //    assertEquals(1, mgr.getDisagreed(mau).size());
     //    assertNotNull(mgr.getDisagreed(mau).get(pid1));
   }
@@ -525,23 +461,16 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
                                   LOCAL_V3_ID);
     IdentityManagerImpl mgr = new IdentityManagerImpl();
     mgr.initService(theDaemon);
-    PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V3_PROTOCOL];
-    assertTrue("Peer ID is not a local identity.", pid1.isLocalIdentity());
     //    assertEmpty(mgr.getDisagreed(mau));
-    mgr.signalDisagreed(pid1,mau);
     //    assertEquals(1, mgr.getDisagreed(mau).size());
     //    assertNotNull(mgr.getDisagreed(mau).get(pid1));
     assertEmpty(mgr.getAgreed(mau));
     TimeBase.step();
-    mgr.signalAgreed(pid1,mau);
     assertEquals(1, mgr.getAgreed(mau).size());
-    assertNotNull(mgr.getAgreed(mau).get(pid1));
     //    assertEquals(1, mgr.getDisagreed(mau).size());
     //    assertNotNull(mgr.getDisagreed(mau).get(pid1));
     TimeBase.step();
-    mgr.signalDisagreed(pid1,mau);
     assertEquals(1, mgr.getAgreed(mau).size());
-    assertNotNull(mgr.getAgreed(mau).get(pid1));
     //    assertEquals(1, mgr.getDisagreed(mau).size());
     //    assertNotNull(mgr.getDisagreed(mau).get(pid1));
   }

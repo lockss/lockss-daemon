@@ -1,39 +1,39 @@
 /*
- * $Id$
- */
 
-/*
- Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
+
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
  in the Software without restriction, including without limitation the rights
  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  copies of the Software, and to permit persons to whom the Software is
  furnished to do so, subject to the following conditions:
+
  The above copyright notice and this permission notice shall be included in
  all copies or substantial portions of the Software.
+
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
  STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
  IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
  Except as contained in this notice, the name of Stanford University shall not
  be used in advertising or otherwise to promote the sale, use or other dealings
  in this Software without prior written authorization from Stanford University.
+
  */
 
 package org.lockss.state;
 
 import java.util.*;
-
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
-import org.lockss.poller.*;
 import org.lockss.app.*;
 
 /**
@@ -362,21 +362,7 @@ public class NodeManagerManager
       rowMap.put("NumPolls", ref);
 
       // our most recent poll data
-      PollHistory poll_history = state.getLastPollHistory();
-      if (poll_history != null) {
-        // PollTime
-        rowMap.put("PollTime",
-                   new Long(poll_history.getStartTime()));
-        // PollType
-        rowMap.put("PollType", poll_history.getTypeString());
-        // PollRange
-        rowMap.put("PollRange", poll_history.getRangeString());
-        // PollStatus
-        rowMap.put("PollStatus", poll_history.getStatusString());
-      }
-      else {
         rowMap.put("PollTime", new Long(0));
-      }
 
       return rowMap;
     }
@@ -384,20 +370,12 @@ public class NodeManagerManager
     private ArrayList getActivePolls(NodeState state) {
       Iterator polls = state.getActivePolls();
       ArrayList activeL = new ArrayList();
-      while (polls.hasNext()) {
-        PollState poll_state = (PollState) polls.next();
-        activeL.add(poll_state);
-      }
       return activeL;
     }
 
     private ArrayList getPollHistories(NodeState state) {
       Iterator pollHistories = state.getPollHistories();
       ArrayList historiesL = new ArrayList();
-      while (pollHistories.hasNext()) {
-        PollHistory history = (PollHistory) pollHistories.next();
-        historiesL.add(history);
-      }
       return historiesL;
     }
   }
@@ -480,54 +458,11 @@ public class NodeManagerManager
       } else {
         histories = state.getPollHistories();
       }
-      while (histories.hasNext()) {
-        PollState history = (PollState) histories.next();
-        entriesL.add(makeRow(history));
-      }
       return entriesL;
     }
 
     private String getTitle(NodeState state) {
       return "Poll History at Node " + state.getCachedUrlSet().getUrl();
-    }
-
-    private Map makeRow(PollState history) {
-      HashMap rowMap = new HashMap();
-      // PollTime
-      rowMap.put("StartTime", new Long(history.getStartTime()));
-      long duration = 0;
-      if (history instanceof PollHistory) {
-        // Duration
-        duration = ((PollHistory)history).getDuration();
-      }
-      rowMap.put("Duration", new Long(duration));
-     // PollType
-      rowMap.put("Type", history.getTypeString());
-      // PollRange
-      rowMap.put("Range", history.getRangeString());
-      // PollStatus
-      rowMap.put("Status", history.getStatusString());
-
-      int agree = 0;
-      int disagree = 0;
-
-      if (history instanceof PollHistory) {
-        Iterator votes = ((PollHistory)history).getVotes();
-        while (votes.hasNext()) {
-          Vote vote = (Vote)votes.next();
-          if (vote.isAgreeVote()) {
-            agree++;
-          } else {
-            disagree++;
-          }
-        }
-      }
-      // YesVotes
-      rowMap.put("NumAgree", new Integer(agree));
-      // NoVotes
-      rowMap.put("NumDisagree", new Integer(disagree));
-
-      return rowMap;
     }
 
     // key support

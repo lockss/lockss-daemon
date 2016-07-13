@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,7 +37,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import org.lockss.app.LockssDaemon;
-import org.lockss.poller.Poll;
 import org.lockss.protocol.IdentityManager;
 import org.lockss.protocol.PeerIdentity;
 import org.lockss.protocol.PeerIdentityStatus;
@@ -119,7 +114,7 @@ public class PeerHelper {
     boolean includeV1 = false;
 
     try {
-      includeV1 = (idMgr.getLocalPeerIdentity(Poll.V1_PROTOCOL) != null);
+      includeV1 = (idMgr.getLocalPeerIdentity(0) != null);
     } catch (IllegalArgumentException e) {
       // Ignore.
     }

@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2013-2015 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -87,13 +83,11 @@ import org.lockss.ws.entities.PeerWsResult;
 import org.lockss.ws.entities.PlatformConfigurationWsResult;
 import org.lockss.ws.entities.PlatformWsResult;
 import org.lockss.ws.entities.PluginWsResult;
-import org.lockss.ws.entities.PollWsResult;
 import org.lockss.ws.entities.RepositorySpaceWsResult;
 import org.lockss.ws.entities.RepositoryWsResult;
 import org.lockss.ws.entities.TdbAuWsResult;
 import org.lockss.ws.entities.TdbPublisherWsResult;
 import org.lockss.ws.entities.TdbTitleWsResult;
-import org.lockss.ws.entities.VoteWsResult;
 import org.lockss.ws.status.DaemonStatusService;
 
 @WebService
@@ -364,66 +358,6 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
   }
 
   /**
-   * Provides the selected properties of selected votes in the system.
-   * 
-   * @param voteQuery
-   *          A String with the
-   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
-   *          used to specify what properties to retrieve from which votes.
-   * @return a List<VoteWsResult> with the results.
-   * @throws LockssWebServicesFault
-   */
-  @Override
-  public List<VoteWsResult> queryVotes(String voteQuery)
-      throws LockssWebServicesFault {
-    final String DEBUG_HEADER = "queryVotes(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "voteQuery = " + voteQuery);
-
-    VoteHelper voteHelper = new VoteHelper();
-    List<VoteWsResult> results = null;
-
-    // Create the full query.
-    String fullQuery = createFullQuery(voteQuery, VoteHelper.SOURCE_FQCN,
-	VoteHelper.PROPERTY_NAMES, VoteHelper.RESULT_FQCN);
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "fullQuery = " + fullQuery);
-
-    // Create a new JoSQL query.
-    Query q = new Query();
-
-    try {
-      // Parse the SQL-like query.
-      q.parse(fullQuery);
-
-      try {
-	// Execute the query.
-	QueryResults qr = q.execute(voteHelper.createUniverse());
-
-	// Get the query results.
-	results = (List<VoteWsResult>)qr.getResults();
-	if (log.isDebug3()) {
-	  log.debug3(DEBUG_HEADER + "results.size() = " + results.size());
-	  log.debug3(DEBUG_HEADER + "results = "
-	      + voteHelper.nonDefaultToString(results));
-	}
-      } catch (QueryExecutionException qee) {
-	log.error("Caught QueryExecuteException", qee);
-	log.error("fullQuery = '" + fullQuery + "'");
-	throw new LockssWebServicesFault(qee,
-	    new LockssWebServicesFaultInfo("voteQuery = " + voteQuery));
-      }
-    } catch (QueryParseException qpe) {
-      log.error("Caught QueryParseException", qpe);
-      log.error("fullQuery = '" + fullQuery + "'");
-	throw new LockssWebServicesFault(qpe,
-	    new LockssWebServicesFaultInfo("voteQuery = " + voteQuery));
-    }
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = "
-	+ voteHelper.nonDefaultToString(results));
-    return results;
-  }
-
-  /**
    * Provides the selected properties of selected repository spaces in the
    * system.
    * 
@@ -611,66 +545,6 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = "
 	+ crawlHelper.nonDefaultToString(results));
-    return results;
-  }
-
-  /**
-   * Provides the selected properties of selected polls in the system.
-   * 
-   * @param pollQuery
-   *          A String with the
-   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
-   *          used to specify what properties to retrieve from which polls.
-   * @return a List<PollWsResult> with the results.
-   * @throws LockssWebServicesFault
-   */
-  @Override
-  public List<PollWsResult> queryPolls(String pollQuery)
-      throws LockssWebServicesFault {
-    final String DEBUG_HEADER = "queryPolls(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "pollQuery = " + pollQuery);
-
-    PollHelper pollHelper = new PollHelper();
-    List<PollWsResult> results = null;
-
-    // Create the full query.
-    String fullQuery = createFullQuery(pollQuery, PollHelper.SOURCE_FQCN,
-	PollHelper.PROPERTY_NAMES, PollHelper.RESULT_FQCN);
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "fullQuery = " + fullQuery);
-
-    // Create a new JoSQL query.
-    Query q = new Query();
-
-    try {
-      // Parse the SQL-like query.
-      q.parse(fullQuery);
-
-      try {
-	// Execute the query.
-	QueryResults qr = q.execute(pollHelper.createUniverse());
-
-	// Get the query results.
-	results = (List<PollWsResult>)qr.getResults();
-	if (log.isDebug3()) {
-	  log.debug3(DEBUG_HEADER + "results.size() = " + results.size());
-	  log.debug3(DEBUG_HEADER + "results = "
-	      + pollHelper.nonDefaultToString(results));
-	}
-      } catch (QueryExecutionException qee) {
-	log.error("Caught QueryExecuteException", qee);
-	log.error("fullQuery = '" + fullQuery + "'");
-	throw new LockssWebServicesFault(qee,
-	    new LockssWebServicesFaultInfo("pollQuery = " + pollQuery));
-      }
-    } catch (QueryParseException qpe) {
-      log.error("Caught QueryParseException", qpe);
-      log.error("fullQuery = '" + fullQuery + "'");
-	throw new LockssWebServicesFault(qpe,
-	    new LockssWebServicesFaultInfo("pollQuery = " + pollQuery));
-    }
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = "
-	+ pollHelper.nonDefaultToString(results));
     return results;
   }
 

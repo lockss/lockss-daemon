@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,7 +38,6 @@ import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.definable.*;
-import org.lockss.poller.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
@@ -977,52 +972,21 @@ public class TestPluginManager extends LockssTestCase {
     // make a PollSpec with info from a manually created CUS, which should
     // match one of the registered AUs
     CachedUrlSet protoCus = makeCus(mpi, mauauid1, url, lower, upper);
-    PollSpec ps1 = new PollSpec(protoCus, Poll.V1_CONTENT_POLL);
 
-    // verify PluginManager can make a CUS for the PollSpec
-    CachedUrlSet cus = mgr.findCachedUrlSet(ps1);
-    assertNotNull(cus);
-    // verify the CUS's CUSS
-    CachedUrlSetSpec cuss = cus.getSpec();
-    assertEquals(url, cuss.getUrl());
-    RangeCachedUrlSetSpec rcuss = (RangeCachedUrlSetSpec)cuss;
-    assertEquals(lower, rcuss.getLowerBound());
-    assertEquals(upper, rcuss.getUpperBound());
-
-    assertEquals(mauauid1, cus.getArchivalUnit().getAuId());
     // can't test protoCus.getArchivalUnit() .equals( cus.getArchivalUnit() )
     // as we made a fake mock one to build PollSpec, and PluginManager will
     // have created & configured a real mock one.
 
     CachedUrlSet protoAuCus = makeAuCus(mpi, mauauid1);
-    PollSpec ps2 = new PollSpec(protoAuCus, Poll.V1_CONTENT_POLL);
 
-    CachedUrlSet aucus = mgr.findCachedUrlSet(ps2);
-    assertNotNull(aucus);
-    CachedUrlSetSpec aucuss = aucus.getSpec();
-    assertTrue(aucuss instanceof AuCachedUrlSetSpec);
   }
 
   public void testFindSingleNodeCus() throws Exception {
     mgr.startService();
     String url = "http://foo.bar/";
-    String lower = PollSpec.SINGLE_NODE_LWRBOUND;
 
     doConfig();
     MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
-
-    // make a PollSpec with info from a manually created CUS, which should
-    // match one of the registered AUs
-    CachedUrlSet protoCus = makeCus(mpi, mauauid1, url, lower, null);
-    PollSpec ps1 = new PollSpec(protoCus, Poll.V1_CONTENT_POLL);
-
-    // verify PluginManager can make a CUS for the PollSpec
-    CachedUrlSet cus = mgr.findCachedUrlSet(ps1);
-    assertNotNull(cus);
-    // verify the CUS's CUSS
-    CachedUrlSetSpec cuss = cus.getSpec();
-    assertTrue(cuss instanceof SingleNodeCachedUrlSetSpec);
-    assertEquals(url, cuss.getUrl());
   }
 
   public void testGetCandidateAus() throws Exception {

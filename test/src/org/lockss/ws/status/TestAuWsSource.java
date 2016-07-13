@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
- Copyright (c) 2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2014-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,13 +31,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.poller.ReputationTransfers;
 import org.lockss.protocol.AgreementType;
 import org.lockss.protocol.IdentityManagerImpl;
-import org.lockss.protocol.MockPeerIdentity;
 import org.lockss.protocol.PeerAgreement;
 import org.lockss.protocol.PeerIdentity;
-import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockLockssDaemon;
 import org.lockss.util.*;
@@ -98,8 +91,6 @@ public class TestAuWsSource extends LockssTestCase {
   public void testGetPeerAgreementsWithReputationTransfer() throws Exception {
     String xfermap = p1 + "," + p3 + ";"
       + p3 + "," + p2;
-    ConfigurationUtil.addFromArgs(
-      ReputationTransfers.PARAM_REPUTATION_TRANSFER_MAP, xfermap);
 
     AuWsSource source = new AuWsSource(null);
     List<PeerAgreementsWsResult> peerAgreements = source.getPeerAgreements();

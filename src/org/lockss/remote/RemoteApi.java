@@ -37,7 +37,6 @@ import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.account.*;
 import org.lockss.plugin.*;
-import org.lockss.poller.*;
 import org.lockss.protocol.*;
 import org.lockss.state.*;
 import org.lockss.repository.*;
@@ -539,12 +538,12 @@ public class RemoteApi
       platConfig.put(BACK_PROP_VERSION, "2");
       platConfig.put(BACK_PROP_VERSION, "2");
       try {
-	PeerIdentity p1 = idMgr.getLocalPeerIdentity(Poll.V1_PROTOCOL);
+	PeerIdentity p1 = idMgr.getLocalPeerIdentity(0);
 	platConfig.put(BACK_PROP_LOCAL_ID_V1, p1.getIdString());
       } catch (Exception e) {
       }
       try {
-	PeerIdentity p3 = idMgr.getLocalPeerIdentity(Poll.V3_PROTOCOL);
+	PeerIdentity p3 = idMgr.getLocalPeerIdentity(1);
 	platConfig.put(BACK_PROP_LOCAL_ID_V3, p3.getIdString());
       } catch (Exception e) {
       }

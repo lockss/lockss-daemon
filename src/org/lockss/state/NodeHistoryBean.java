@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,7 +29,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.util.*;
-
 import org.lockss.util.LockssSerializable;
 
 /**
@@ -70,11 +65,6 @@ public class NodeHistoryBean implements LockssSerializable {
     }
     else {
       List histBeans = new ArrayList(thePollHistories.size());
-      Iterator histIter = thePollHistories.iterator();
-      while (histIter.hasNext()) {
-        PollHistory history = (PollHistory)histIter.next();
-        histBeans.add(new PollHistoryBean(history)); // convert to a bean
-      }
       return histBeans;
     }
   }
@@ -85,11 +75,6 @@ public class NodeHistoryBean implements LockssSerializable {
       thePollHistoryBeans = new ArrayList();
     }
     List pollHistories = new ArrayList(thePollHistoryBeans.size());
-    Iterator beanIter = thePollHistoryBeans.iterator();
-    while (beanIter.hasNext()) {
-      PollHistoryBean bean = (PollHistoryBean)beanIter.next();
-      pollHistories.add(bean.getPollHistory()); // get PollHistory from bean
-    }
     return pollHistories;
   }
 

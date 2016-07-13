@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,23 +28,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
-import javax.servlet.http.*;
 import javax.servlet.*;
 import java.io.*;
 import java.util.*;
-import java.net.*;
-import java.text.*;
-import java.security.*;
 import org.mortbay.html.*;
-import org.mortbay.util.B64Code;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.alert.*;
 import org.lockss.plugin.*;
-import org.lockss.poller.*;
-import org.lockss.protocol.*;
-import org.lockss.daemon.*;
-import org.lockss.daemon.status.*;
 
 /** Raise an alert on demand.  For testing alerts
  */

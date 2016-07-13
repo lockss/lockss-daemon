@@ -43,7 +43,6 @@ import org.lockss.mail.MailService;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.*;
 import org.lockss.truezip.*;
-import org.lockss.poller.PollManager;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
 import org.lockss.proxy.ProxyManager;
@@ -70,7 +69,6 @@ public class MockLockssDaemon extends LockssDaemon {
   HashService hashService = null;
   SchedService schedService = null;
   SystemMetrics systemMetrics = null;
-  PollManager pollManager = null;
   PsmManager psmManager = null;
   LcapDatagramComm commManager = null;
   LcapStreamComm scommManager = null;
@@ -131,7 +129,6 @@ public class MockLockssDaemon extends LockssDaemon {
     wdogService = null;
     hashService = null;
     schedService = null;
-    pollManager = null;
     psmManager = null;
     commManager = null;
     scommManager = null;
@@ -308,18 +305,6 @@ public class MockLockssDaemon extends LockssDaemon {
       managerMap.put(LockssDaemon.SYSTEM_METRICS, systemMetrics);
     }
     return systemMetrics;
-  }
-
-  /**
-   * return the poll manager instance
-   * @return the PollManager
-   */
-  public PollManager getPollManager() {
-    if (pollManager == null) {
-      pollManager = (PollManager)newManager(LockssDaemon.POLL_MANAGER);
-      managerMap.put(LockssDaemon.POLL_MANAGER, pollManager);
-    }
-    return pollManager;
   }
 
   /**
@@ -729,15 +714,6 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setPluginManager(PluginManager pluginMan) {
     pluginManager = pluginMan;
     managerMap.put(LockssDaemon.PLUGIN_MANAGER, pluginManager);
-  }
-
-  /**
-   * Set the PollManager
-   * @param pollMan the new manager
-   */
-  public void setPollManager(PollManager pollMan) {
-    pollManager = pollMan;
-    managerMap.put(LockssDaemon.POLL_MANAGER, pollManager);
   }
 
   /**

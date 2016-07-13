@@ -1,38 +1,37 @@
 /*
- * $Id$
- */
 
-/*
-  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+  Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
   all rights reserved.
+
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
   in the Software without restriction, including without limitation the rights
   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
   copies of the Software, and to permit persons to whom the Software is
   furnished to do so, subject to the following conditions:
+
   The above copyright notice and this permission notice shall be included in
   all copies or substantial portions of the Software.
+
   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
   STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
   WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
   IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
   Except as contained in this notice, the name of Stanford University shall not
   be used in advertising or otherwise to promote the sale, use or other dealings
   in this Software without prior written authorization from Stanford University.
+
 */
 
 package org.lockss.protocol;
 
 import java.io.*;
 import java.util.*;
-
 import org.mortbay.util.B64Code;
-
 import org.lockss.config.CurrentConfig;
-import org.lockss.poller.*;
 import org.lockss.util.*;
 
 /**
@@ -88,7 +87,7 @@ public class V1LcapMessage extends LcapMessage {
 
   protected V1LcapMessage() throws IOException {
     m_props = new EncodedProperty();
-    m_pollProtocol = Poll.V1_PROTOCOL;
+    m_pollProtocol = 0;
     m_maxSize = CurrentConfig.getIntParam(PARAM_MAX_PKT_SIZE,
                                           DEFAULT_MAX_PKT_SIZE);
   }
@@ -101,32 +100,6 @@ public class V1LcapMessage extends LcapMessage {
       log.error("Unreadable Packet", ex);
       throw new ProtocolException("Unable to decode pkt.");
     }
-  }
-
-  protected V1LcapMessage(PollSpec ps, ArrayList entries,
-			  byte[] challenge, byte[] verifier,
-			  byte[] hashedData, int opcode)
-      throws IOException {
-    this();
-    // assign the data
-    m_targetUrl = ps.getUrl();
-    m_uprBound = ps.getUprBound();
-    m_lwrBound = ps.getLwrBound();
-    m_archivalID = ps.getAuId();
-    m_challenge = challenge;
-    m_verifier = verifier;
-    m_hashed = hashedData;
-    m_opcode = opcode;
-    m_entries = entries;
-    m_hashAlgorithm = LcapMessage.getDefaultHashAlgorithm();
-    m_pollProtocol = ps.getProtocolVersion();
-    m_pluginVersion = ps.getPluginVersion();
-    // null the remaining undefined data
-    m_startTime = 0;
-    m_stopTime = 0;
-    m_multicast = false;
-    m_originatorID = null;
-    m_hopCount = 0;
   }
 
   protected V1LcapMessage(V1LcapMessage trigger, PeerIdentity localID,
@@ -322,9 +295,6 @@ public class V1LcapMessage extends LcapMessage {
   }
 
   public String getKey() {
-    if (m_key == null) {
-      m_key = V1Poll.challengeToKey(m_challenge);
-    }
     return m_key;
   }
 
@@ -422,22 +392,6 @@ public class V1LcapMessage extends LcapMessage {
     for (entryCount = 0; entryCount < m_entries.size(); entryCount++) {
       // if the length of this entry < max buffer
       byte[] cur_bytes = m_props.encodeString(buf.toString());
-      PollTally.NameListEntry entry =
-	(PollTally.NameListEntry) m_entries.get(entryCount);
-      byte[] entry_bytes = m_props.encodeString(entry.name);
-      if (cur_bytes.length + entry_bytes.length < maxBufSize) {
-	buf.append(entry.name);
-	if (entry.hasContent) {
-	  buf.append("\r");
-	} else {
-	  buf.append("\n");
-	}
-      } else {
-	// we need to set RERemaining and break
-	m_lwrRem = entry.name;
-	m_uprRem = m_uprBound;
-	break;
-      }
     }
     log.debug3("Outgoing entries string: " + buf.toString() + " l_rem: "
 	       + m_lwrRem + " u_rem: " + m_uprRem);
@@ -455,7 +409,6 @@ public class V1LcapMessage extends LcapMessage {
       String name = tokenizer.nextToken();
       String mark = tokenizer.nextToken();
       boolean hasContent = mark.equals("\r") ? true : false;
-      entries.add(new PollTally.NameListEntry(hasContent, name));
     }
     log.debug3("Incoming entries string: " + estr + " l_rem: " + m_lwrRem
 	       + " u_rem: " + m_uprRem);
@@ -515,37 +468,7 @@ public class V1LcapMessage extends LcapMessage {
       msg.m_opcode = NO_OP;
       msg.m_hopCount = 0;
       msg.m_verifier = verifier;
-      msg.m_pollProtocol = Poll.V1_PROTOCOL;
-    }
-    msg.storeProps();
-    return msg;
-  }
-
-  /**
-   * make a message to request a poll using a pollspec
-   *
-   * @param pollspec the pollspec specifying the url and bounds of interest
-   * @param entries the array of entries found in the name poll
-   * @param challenge the challange bytes
-   * @param verifier the verifier bytes
-   * @param opcode the kind of poll being requested
-   * @param timeRemaining  the time remaining for this poll
-   * @param localID the identity of the requestor
-   * @return message the new V1LcapMessage
-   * @throws IOException if unable to create message
-   */
-  static public V1LcapMessage makeRequestMsg(PollSpec pollspec,
-					     ArrayList entries,
-					     byte[] challenge, byte[] verifier,
-					     int opcode, long timeRemaining,
-					     PeerIdentity localID)
-      throws IOException {
-    V1LcapMessage msg = new V1LcapMessage(pollspec, entries,
-					  challenge, verifier, null, opcode);
-    if (msg != null) {
-      msg.m_startTime = TimeBase.nowMs();
-      msg.m_stopTime = msg.m_startTime + timeRemaining;
-      msg.m_originatorID = localID;
+      msg.m_pollProtocol = 0;
     }
     msg.storeProps();
     return msg;

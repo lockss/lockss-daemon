@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,16 +29,13 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.crawler;
 
 import java.io.*;
-import java.net.*;
 import java.text.*;
 import java.util.*;
 import java.security.*;
-import org.apache.commons.collections.map.LRUMap;
 import org.lockss.util.*;
 import org.lockss.mail.*;
 import org.lockss.config.*;
 import org.lockss.app.*;
-import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.hasher.*;
@@ -77,11 +70,6 @@ public class CrawlEndReport {
 	      date + "\n");
     sb.append("Date = " + date + "\n");
     sb.append("Host = " + machineName + "\n");
-    PeerIdentity pid =
-      idMgr.getLocalPeerIdentity(org.lockss.poller.Poll.V3_PROTOCOL);
-    sb.append("PeerId = "
-	      + pid.getIdString()
-	      + "\n");
     sb.append("AU = " + au.getName() + "\n");
     sb.append("AUID = " + au.getAuId() + "\n");
     sb.append("Hash = " + hashAlg + "\n");

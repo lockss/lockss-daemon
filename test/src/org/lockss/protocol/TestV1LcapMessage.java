@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,16 +28,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.protocol;
 
-import java.io.DataInputStream;
-import org.lockss.util.Logger;
-import org.lockss.test.MockCachedUrlSetSpec;
 import java.net.*;
 import java.io.*;
 import java.util.*;
 import org.lockss.test.*;
 import org.lockss.config.*;
-import org.lockss.poller.*;
-import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.util.*;
 import org.lockss.app.LockssDaemon;
 
@@ -108,7 +99,6 @@ public class TestV1LcapMessage extends LockssTestCase {
     testmsg.m_verifier = testbytes;
     testmsg.m_hashed = testbytes;
     testmsg.m_opcode = V1LcapMessage.CONTENT_POLL_REQ;
-    testmsg.m_entries = testentries = TestPoll.makeEntries(1, 25);
     testmsg.m_archivalID = archivalID;
     testmsg.m_pluginVersion = "PlugVer42";
   }
@@ -116,13 +106,6 @@ public class TestV1LcapMessage extends LockssTestCase {
   private boolean hasSameEntries(List entries1, List entries2) {
     if(entries1.size() != entries2.size()) return false;
 
-    for(int i=0; i< entries1.size(); i++) {
-      PollTally.NameListEntry entry1 = (PollTally.NameListEntry)entries1.get(i);
-      PollTally.NameListEntry entry2 = (PollTally.NameListEntry)entries2.get(i);
-      if(!entry1.equals(entry2) ||
-	 (entry1.hasContent != entry2.hasContent))
-	return false;
-    }
     return true;
   }
 
@@ -141,15 +124,12 @@ public class TestV1LcapMessage extends LockssTestCase {
     encstr = testmsg.entriesToString(0);
     decoded = testmsg.stringToEntries(encstr);
     assertNull(decoded);
-    assertEquals(((PollTally.NameListEntry)testentries.get(0)).name,
-		 testmsg.m_lwrRem);
     assertEquals(testmsg.m_uprBound, testmsg.m_uprRem);
 
   }
 
   public void testStorePropsWithLargeNumberOfEntries() throws IOException {
     int original_maxsize = testmsg.m_maxSize;
-    testmsg.m_entries = TestPoll.makeEntries(1,20000);
     testmsg.storeProps();
 
     assertNotNull(testmsg.m_lwrRem);
@@ -218,17 +198,6 @@ public class TestV1LcapMessage extends LockssTestCase {
 
   public void testRequestMessageCreation() throws Exception {
     V1LcapMessage req_msg = null;
-    PollSpec spec =
-      new MockPollSpec(archivalID, urlstr, lwrbnd, uprbnd, "Plug42",
-		       Poll.V1_CONTENT_POLL);
-    req_msg = V1LcapMessage.makeRequestMsg(spec,
-					   testentries,
-					   testbytes,
-					   testbytes,
-					   V1LcapMessage.CONTENT_POLL_REQ,
-					   100000,
-					   testID);
-    assertEquals(spec.getProtocolVersion(), 1);
     assertEquals(1, req_msg.getProtocolVersion());
     assertEquals("Plug42", req_msg.getPluginVersion());
     assertTrue(testID == req_msg.m_originatorID);

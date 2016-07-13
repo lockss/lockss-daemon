@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -36,7 +32,6 @@ import java.io.*;
 import java.util.*;
 import java.text.*;
 import java.net.MalformedURLException;
-
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
@@ -45,8 +40,6 @@ import org.lockss.plugin.definable.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
 import org.lockss.crawler.*;
-import org.lockss.poller.*;
-import org.lockss.poller.v3.*;
 import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.servlet.*;
@@ -321,12 +314,10 @@ public class ArchivalUnitStatus
     private Map makeRow(ArchivalUnit au, NodeManager nodeMan, Set inclCols) {
       AuState auState = nodeMan.getAuState();
       HashMap rowMap = new HashMap();
-      PollManager.V3PollStatusAccessor v3status =
-        theDaemon.getPollManager().getV3Status();
       // If this is a v3 AU, we cannot access some of the poll 
       // status through the nodestate.  Eventually, this will be totally
       // refactored.
-      boolean isV3 = AuUtil.getProtocolVersion(au) == Poll.V3_PROTOCOL;
+      boolean isV3 = AuUtil.getProtocolVersion(au) == 1;
       //"AuID"
       rowMap.put("AuName", AuStatus.makeAuRef(au.getName(), au.getAuId()));
 //       rowMap.put("AuNodeCount", new Integer(-1));
@@ -373,8 +364,6 @@ public class ArchivalUnitStatus
       
       Object stat;
       if (isV3) {
-	int numPolls = v3status.getNumPolls(au.getAuId());
-	rowMap.put("AuPolls", pollsRef(new Integer(numPolls), au));
         // Percent damaged.  It's scary to see '0% Agreement' if there's no
         // history, so we just show a friendlier message.
         //
@@ -395,10 +384,6 @@ public class ArchivalUnitStatus
           stat = agreeStatus(auState.getHighestV3Agreement());
         }
       } else {
-        rowMap.put("AuPolls",
-                   theDaemon.getStatusService().
-                   getReference(PollerStatus.MANAGER_STATUS_TABLE_NAME,
-                                au));
 	CachedUrlSet auCus = au.getAuCachedUrlSet();
 	NodeState topNodeState = nodeMan.getNodeState(auCus);
 	stat = topNodeState.hasDamage()
@@ -448,12 +433,6 @@ public class ArchivalUnitStatus
 	}
       }
       return null;
-    }
-
-    Object pollsRef(Object val, ArchivalUnit au) {
-      return new StatusTable.Reference(val,
-				       V3PollStatus.POLLER_STATUS_TABLE_NAME,
-				       au.getAuId());
     }
 
     private List getSummaryInfo(StatusTable table, Set<String> inclCols,
@@ -983,7 +962,7 @@ public class ArchivalUnitStatus
       // Make the status string.
       Object stat = null;
       Object recentPollStat = null;
-      if (AuUtil.getProtocolVersion(au) == Poll.V3_PROTOCOL) {
+      if (AuUtil.getProtocolVersion(au) == 1) {
         if (state.getV3Agreement() < 0) {
           if (state.lastCrawlTime < 0  && !AuUtil.isPubDown(au)) {
             stat = "Waiting for Crawl";
@@ -1186,15 +1165,10 @@ public class ArchivalUnitStatus
 					    ColumnDescriptor.TYPE_DATE,
 					    new Long(lastIndex)));
       }
-      PollManager pm = theDaemon.getPollManager();
       boolean isCrawling = cmStatus.isRunningNCCrawl(au);
-      boolean isPolling = pm.isPollRunning(au);
       List lst = new ArrayList();
       if (isCrawling) {
 	lst.add(makeCrawlRef("Crawling", au));
-      }
-      if (isPolling) {
-	lst.add(makePollRef("Polling", au));
       }
       if (!lst.isEmpty()) {
 	res.add(new StatusTable.SummaryInfo("Current Activity",
@@ -1672,21 +1646,6 @@ public class ArchivalUnitStatus
         throws StatusService.NoSuchTableException {
       HistoryRepository historyRepo = theDaemon.getHistoryRepository(au);
       table.setTitle("Peers not holding " + au.getName());
-      DatedPeerIdSet noAuSet = theDaemon.getPollManager().getNoAuPeerSet(au);
-      synchronized (noAuSet) {
-	try {
-	  noAuSet.load();
-	  table.setSummaryInfo(getSummaryInfo(au, noAuSet));
-	  table.setColumnDescriptors(columnDescriptors);
-	  table.setRows(getRows(table, au, noAuSet));
-	} catch (IOException e) {
-	  String msg = "Couldn't load NoAuSet";
-	  logger.warning(msg, e);
-	  throw new StatusService.NoSuchTableException(msg, e);
-	} finally {
-	  noAuSet.release();
-	}
-      }
     }
 
 
@@ -1749,9 +1708,7 @@ public class ArchivalUnitStatus
       PeerIdentity peer;
       int totalPolls = 0;
       int agreePolls = 0;
-      Vote lastAgree;
       long lastAgreeTime = 0;
-      Vote lastDisagree;
       long lastDisagreeTime = 0;
       float highestAgreement = 0.0f;
       long highestAgreementTime = 0;
@@ -1769,11 +1726,6 @@ public class ArchivalUnitStatus
       boolean isLastAgree() {
 	return (lastAgreeTime != 0  &&
 		(lastDisagreeTime == 0 || lastAgreeTime >= lastDisagreeTime));
-      }
-
-      boolean isV3Agree() {
-	PollManager pollmgr = theDaemon.getPollManager();
-	return highestAgreement >= pollmgr.getMinPercentForRepair();
       }
     }
   }
@@ -1834,36 +1786,6 @@ public class ArchivalUnitStatus
 
     public Map buildCacheStats(ArchivalUnit au, NodeManager nodeMan) {
       Map statsMap = new HashMap();
-      NodeState node = nodeMan.getNodeState(au.getAuCachedUrlSet());
-      for (Iterator history_it = node.getPollHistories();
-	   history_it.hasNext(); ) {
-	PollHistory history = (PollHistory)history_it.next();
-	long histTime = history.getStartTime();
-	for (Iterator votes_it = history.getVotes(); votes_it.hasNext(); ) {
-	  Vote vote = (Vote)votes_it.next();
-	  PeerIdentity peer = vote.getVoterIdentity();
-	  CacheStats stats = (CacheStats)statsMap.get(peer);
-	  if (stats == null) {
-	    stats = new CacheStats(peer);
-	    statsMap.put(peer, stats);
-	  }
-	  stats.totalPolls++;
-	  if (vote.isAgreeVote()) {
-	    stats.agreePolls++;
-	    if (stats.lastAgree == null ||
-		histTime > stats.lastAgreeTime) {
-	      stats.lastAgree = vote;
-	      stats.lastAgreeTime = histTime;
-	    }
-	  } else {
-	    if (stats.lastDisagree == null ||
-		histTime > stats.lastDisagreeTime) {
-	      stats.lastDisagree = vote;
-	      stats.lastDisagreeTime = histTime;
-	    }
-	  }
-	}
-      }
       return statsMap;
     }
 
@@ -2153,11 +2075,6 @@ public class ArchivalUnitStatus
     public Map<PeerIdentity,Map<AgreementType,PeerAgreement>>
 	  buildCacheStats(ArchivalUnit au, IdentityManager idMgr) {
 
-      ReputationTransfers repXfer = null;
-      if (peerArgeementsUseReputationTransfers) {
-	repXfer = new ReputationTransfers(idMgr);
-      }
-
       Map<PeerIdentity,Map<AgreementType,PeerAgreement>> res =
 	new HashMap<PeerIdentity,Map<AgreementType,PeerAgreement>>();
       for (AgreementType type : AgreementType.allTypes()) {
@@ -2166,9 +2083,6 @@ public class ArchivalUnitStatus
 	if (peerMap != null) {
 	  for (Map.Entry<PeerIdentity,PeerAgreement> ent : peerMap.entrySet()) {
 	    PeerIdentity pid = ent.getKey();
-	    if (repXfer != null) {
-	      pid = repXfer.getPeerInheritingReputation(pid);
-	    }
 	    Map<AgreementType,PeerAgreement> typeMap = res.get(pid);
 	    if (typeMap == null) {
 	      typeMap =
@@ -2309,13 +2223,6 @@ public class ArchivalUnitStatus
 						   ArchivalUnit au) {
     return new StatusTable.Reference(value,
 				     CrawlManagerImpl.CRAWL_STATUS_TABLE_NAME,
-				     au.getAuId());
-  }
-
-  public static StatusTable.Reference makePollRef(Object value,
-						   ArchivalUnit au) {
-    return new StatusTable.Reference(value,
-				     V3PollStatus.POLLER_STATUS_TABLE_NAME,
 				     au.getAuId());
   }
 

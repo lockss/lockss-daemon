@@ -41,7 +41,6 @@ import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.definable.DefinablePlugin;
-import org.lockss.poller.PollSpec;
 import org.lockss.state.AuState;
 import org.lockss.util.*;
 
@@ -1953,34 +1952,6 @@ public class PluginManager
       }
     }
     return ret;
-  }
-
-  /**
-   * Find the CachedUrlSet from a PollSpec.
-   * @param spec the PollSpec (from an incoming message)
-   * @return a CachedUrlSet for the plugin, au and URL in the spec, or
-   * null if au not present on this cache
-   */
-  public CachedUrlSet findCachedUrlSet(PollSpec spec) {
-    if (log.isDebug3()) log.debug3(this +".findCachedUrlSet2("+spec+")");
-    String auId = spec.getAuId();
-    ArchivalUnit au = getAuFromId(auId);
-    if (log.isDebug3()) log.debug3("au: " + au);
-    if (au == null) return null;
-    String url = spec.getUrl();
-    CachedUrlSet cus;
-    if (AuUrl.isAuUrl(url)) {
-      cus = au.getAuCachedUrlSet();
-    } else if ((spec.getLwrBound() != null) &&
-	       (spec.getLwrBound().equals(PollSpec.SINGLE_NODE_LWRBOUND))) {
-      cus = au.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url));
-    } else {
-      RangeCachedUrlSetSpec rcuss =
-	new RangeCachedUrlSetSpec(url, spec.getLwrBound(), spec.getUprBound());
-      cus = au.makeCachedUrlSet(rcuss);
-    }
-    if (log.isDebug3()) log.debug3("ret cus: " + cus);
-    return cus;
   }
 
   /**

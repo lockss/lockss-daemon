@@ -1,40 +1,37 @@
 /*
- * $Id$
- */
 
-/*
- Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
+
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
  in the Software without restriction, including without limitation the rights
  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  copies of the Software, and to permit persons to whom the Software is
  furnished to do so, subject to the following conditions:
+
  The above copyright notice and this permission notice shall be included in
  all copies or substantial portions of the Software.
+
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
  STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
  IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
  Except as contained in this notice, the name of Stanford University shall not
  be used in advertising or otherwise to promote the sale, use or other dealings
  in this Software without prior written authorization from Stanford University.
+
  */
 
 package org.lockss.protocol;
 
 import java.io.*;
 import java.util.*;
-
-import org.mortbay.util.*;
-
 import org.lockss.app.*;
 import org.lockss.config.*;
-import org.lockss.plugin.*;
-import org.lockss.poller.*;
 import org.lockss.util.*;
 import org.lockss.util.StringUtil;
 
@@ -158,9 +155,6 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
 
   /** The nonce used to select URLs in a Proof of Possession poll */
   private byte[] m_sampleNonce;
-
-  /** In Vote messages: A list of vote blocks for this vote. */
-  VoteBlocks m_voteBlocks;
   
   /*
    * Note:  voteDeadline has been deprecated in favor of voteDuration.  
@@ -266,7 +260,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   public V3LcapMessage(File messageDir, LockssApp daemon) {
     m_daemon = daemon;
     m_props = new EncodedProperty();
-    m_pollProtocol = Poll.V3_PROTOCOL;
+    m_pollProtocol = 1;
     m_messageDir = messageDir;
     m_groups = ConfigManager.getPlatformGroups();
     m_repairDataThreshold =
@@ -419,8 +413,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     // Protocol minor version
     int minorVersion = dis.readByte();
 
-    if (majorVersion != Poll.V3_POLL ||
-        minorVersion != getProtocolRev()) {
+    if (minorVersion != getProtocolRev()) {
       throw new ProtocolException("Unsupported inbound protocol: " +
                 "major=" + majorVersion + ", minor=" + minorVersion);
     }
@@ -489,18 +482,6 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     int voteBlockCount = dis.readInt();
     m_repairDataLen = dis.readLong();
 
-    if (voteBlockCount > 0) {
-      // Find the directory associated with this poll's state.
-      File stateDir =
-        ((LockssDaemon)m_daemon).getPollManager().getStateDir(m_key);
-      // If no state dir, this poll has ended; don't store voteblocks.
-      // (They would get stored in the system tempdir, where they would
-      // accumulate because nothing knows to delete them.)
-      if (stateDir != null) {
-	m_voteBlocks = new DiskVoteBlocks(voteBlockCount, dis, stateDir);
-      }
-    }
-
     // Read in the Repair Data, if any
     if (m_repairDataLen > 0) {
       if (m_repairDataLen > m_repairDataThreshold) {
@@ -559,7 +540,6 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     ByteArrayOutputStream bos = new ByteArrayOutputStream();
     DataOutputStream dos = new DataOutputStream(bos);
     dos.write(signature);
-    dos.writeByte(Poll.V3_POLL);
     dos.writeByte(getProtocolRev());
     // LCAP properties hash
     dos.write(hashBytes);
@@ -567,8 +547,6 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     dos.writeInt(lcapPropBytes.length);
     // LCAP properties
     dos.write(lcapPropBytes);
-    // Number of encoded vote blocks.
-    dos.writeInt(m_voteBlocks == null ? 0 : m_voteBlocks.size());
     // Size of repair data, if any.
     dos.writeLong(m_repairDataLen);
 
@@ -577,10 +555,6 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     ByteArrayInputStream headerInputStream =
       new ByteArrayInputStream(bos.toByteArray());
     inputStreams.add(headerInputStream);
-
-    if (m_voteBlocks != null && m_voteBlocks.size() > 0) {
-      inputStreams.add(m_voteBlocks.getInputStream());
-    }
 
     if (m_repairDataLen > 0) {
       inputStreams.add(m_repairDataInputStream);
@@ -864,43 +838,6 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     return m_lastVoteBlockURL;
   }
 
-  public void addVoteBlock(VoteBlock vb) throws IOException {
-    // Do lazy initialization on our voteblocks -- only vote messages
-    // have a voteBlocks field, this lets us save some memory on non-Vote
-    // messages
-    if (m_voteBlocks == null) {
-      // Find the directory associated with this poll's state for our voteblocks
-      File stateDir =
-        ((LockssDaemon)m_daemon).getPollManager().getStateDir(m_key);
-      if (stateDir != null) {
-	m_voteBlocks = new DiskVoteBlocks(stateDir);
-      } else if (!Boolean.getBoolean("org.lockss.unitTesting")) {
-	// This happens in testing, shouldn't happen in a real poll
-	log.warning("No state dir, key: " + m_key);
-      }
-    }
-    if (m_voteBlocks != null) {
-      m_voteBlocks.addVoteBlock(vb);
-    }
-  }
-
-  /** Used for testing only */
-  VoteBlocksIterator getVoteBlockIterator() throws FileNotFoundException {
-    if (m_voteBlocks == null) {
-      return VoteBlocksIterator.EMPTY_ITERATOR;
-    } else {
-      return m_voteBlocks.iterator();
-    }
-  }
-
-  public VoteBlocks getVoteBlocks() {
-    return m_voteBlocks;
-  }
-
-  public void setVoteBlocks(VoteBlocks voteBlocks) {
-    m_voteBlocks = voteBlocks;
-  }
-
   public void setRepairProps(CIProperties props) {
     if (props != null) {
       m_repairProps = EncodedProperty.fromProps(props);
@@ -935,10 +872,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   }
 
   long getVoteBlocksLength() {
-    if (m_voteBlocks == null) {
       return 0;
-    }
-    return m_voteBlocks.getEstimatedEncodedLength();
   }
 
   /**
@@ -1012,7 +946,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     msg.m_pollerNonce = pollerNonce;
     msg.m_voterNonce = voterNonce;
     msg.m_voterNonce2 = ByteArray.EMPTY_BYTE_ARRAY;
-    msg.m_pollProtocol = Poll.V3_PROTOCOL;
+    msg.m_pollProtocol = 1;
     return msg;
   }
 
@@ -1027,7 +961,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     msg.m_pollerNonce = pollerNonce;
     msg.m_voterNonce = voterNonce;
     msg.m_voterNonce2 = voterNonce2;
-    msg.m_pollProtocol = Poll.V1_PROTOCOL;
+    msg.m_pollProtocol = 0;
     msg.m_modulus = 0;
     return msg;
   }
@@ -1045,7 +979,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     msg.m_opcode = MSG_NO_OP;
     msg.m_pollerNonce = pollerNonce;
     msg.m_voterNonce = voterNonce;
-    msg.m_pollProtocol = Poll.V1_PROTOCOL;
+    msg.m_pollProtocol = 0;
     msg.m_modulus = modulus;
     return msg;
   }
@@ -1085,10 +1019,6 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
       if (m_voterNonce != null) {
         sb.append(" VN:");
         sb.append(ByteArray.toBase64(m_voterNonce));
-      }
-      if (m_voteBlocks != null) {
-        sb.append(" B:");
-        sb.append(String.valueOf(m_voteBlocks.size()));
       }
       if (m_repairDataLen > 0) {
         sb.append(" R:");

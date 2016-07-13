@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,7 +37,6 @@ import org.mortbay.html.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.metadata.MetadataManager;
-import org.lockss.poller.*;
 import org.lockss.crawler.*;
 import org.lockss.state.*;
 import org.lockss.config.*;
@@ -112,7 +107,6 @@ public class DebugPanel extends LockssServlet {
 
   private LockssDaemon daemon;
   private PluginManager pluginMgr;
-  private PollManager pollManager;
   private CrawlManager crawlMgr;
   private ConfigManager cfgMgr;
   private DbManager dbMgr;
@@ -145,7 +139,6 @@ public class DebugPanel extends LockssServlet {
     super.init(config);
     daemon = getLockssDaemon();
     pluginMgr = daemon.getPluginManager();
-    pollManager = daemon.getPollManager();
     crawlMgr = daemon.getCrawlManager();
     cfgMgr = daemon.getConfigManager();
     rmtApi = daemon.getRemoteApi();
@@ -485,12 +478,6 @@ public class DebugPanel extends LockssServlet {
     if (au == null) return;
     try {
       callV3ContentPoll(au);
-    } catch (PollManager.NotEligibleException e) {
-      errMsg = "AU is not eligible for poll: " + e.getMessage();
-//       errMsg = "Ineligible: " + e.getMessage() +
-// 	"<br>Click again to force new poll.";
-//       showForcePoll = true;
-      return;
     } catch (Exception e) {
       log.error("Can't start poll", e);
       errMsg = "Error: " + e.toString();
@@ -508,11 +495,8 @@ public class DebugPanel extends LockssServlet {
     }
   }
 
-  private void callV3ContentPoll(ArchivalUnit au)
-      throws PollManager.NotEligibleException {
+  private void callV3ContentPoll(ArchivalUnit au) {
     log.debug("Enqueuing a V3 Content Poll on " + au.getName());
-    PollSpec spec = new PollSpec(au.getAuCachedUrlSet(), Poll.V3_POLL);
-    pollManager.enqueueHighPriorityPoll(au, spec);
     statusMsg = "Enqueued V3 poll for " + au.getName();
   }
 

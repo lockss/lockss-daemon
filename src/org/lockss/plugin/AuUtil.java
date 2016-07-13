@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -45,7 +41,6 @@ import org.lockss.daemon.*;
 import org.lockss.jetty.CuResourceHandler;
 import org.lockss.crawler.*;
 import org.lockss.state.*;
-import org.lockss.poller.*;
 import org.lockss.repository.*;
 import org.lockss.plugin.definable.*;
 import org.lockss.plugin.exploded.*;
@@ -65,8 +60,7 @@ public class AuUtil {
    */
   public static final String PARAM_POLL_PROTOCOL_VERSION =
     Configuration.PREFIX + "poll.defaultPollProtocol";
-  private static final int DEFAULT_POLL_PROTOCOL_VERSION =
-    Poll.V3_PROTOCOL;
+  private static final int DEFAULT_POLL_PROTOCOL_VERSION = 0;
 
   /** The maximum number of CachedUrl versions to search to find the
    * earliert, in order to extract the earliest fetch time.

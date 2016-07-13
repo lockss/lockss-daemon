@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,20 +31,14 @@ package org.lockss.protocol;
 import java.io.*;
 import java.net.UnknownHostException;
 import java.util.*;
-
 import org.apache.commons.collections.*;
-
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.poller.*;
-import org.lockss.protocol.IdentityManager.MalformedIdentityKeyException;
-import org.lockss.repository.*;
 import org.lockss.state.HistoryRepository;
 import org.lockss.state.AuState;
 import org.lockss.plugin.AuUtil;
 import org.lockss.util.*;
-import org.lockss.util.SerializationException.FileNotFound;
 import org.lockss.hasher.*;
 
 /**
@@ -315,7 +305,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * implement instead.</p>
    */
   protected void setupLocalIdentities() {
-    localPeerIdentities = new PeerIdentity[Poll.MAX_PROTOCOL + 1];
+    localPeerIdentities = new PeerIdentity[2];
     boolean hasLocalIdentity = false;
 
     // setConfig() has not yet run.  All references to the config must be
@@ -334,7 +324,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
 	  throw new LockssAppException("IdentityManager: " + msg);
 	}
 	try {
-	  localPeerIdentities[Poll.V1_PROTOCOL] =
+	  localPeerIdentities[0] =
 	    findLocalPeerIdentity(localV1IdentityStr);
 	} catch (MalformedIdentityKeyException e) {
 	  String msg = "Cannot start: Can't create local identity:" +
@@ -357,7 +347,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     }
     if (v3idstr != null) {
       try {
-        localPeerIdentities[Poll.V3_PROTOCOL] = findLocalPeerIdentity(v3idstr);
+        localPeerIdentities[1] = findLocalPeerIdentity(v3idstr);
       } catch (MalformedIdentityKeyException e) {
         String msg = "Cannot start: Cannot create local V3 identity: " +
 	  v3idstr;
@@ -416,16 +406,15 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
 
     reloadIdentities();
 
-    if (localPeerIdentities[Poll.V1_PROTOCOL] != null)
-      log.info("Local V1 identity: " + getLocalPeerIdentity(Poll.V1_PROTOCOL));
-    if (localPeerIdentities[Poll.V3_PROTOCOL] != null)
-      log.info("Local V3 identity: " + getLocalPeerIdentity(Poll.V3_PROTOCOL));
+    if (localPeerIdentities[0] != null)
+      log.info("Local V1 identity: " + getLocalPeerIdentity(0));
+    if (localPeerIdentities[1] != null)
+      log.info("Local V3 identity: " + getLocalPeerIdentity(1));
 
     status = makeStatusAccessor();
     getDaemon().getStatusService().registerStatusAccessor("Identities",
 							  status);
 
-    Vote.setIdentityManager(this);
     LcapMessage.setIdentityManager(this);
   }
 
@@ -444,7 +433,6 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     catch (ProtocolException ex) {}
     super.stopService();
     getDaemon().getStatusService().unregisterStatusAccessor("Identities");
-    Vote.setIdentityManager(null);
     LcapMessage.setIdentityManager(null);
   }
 
@@ -630,7 +618,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       log.warning("ipAddrToPeerIdentity(null) is deprecated.");
       log.warning("  Use getLocalPeerIdentity() to get a local identity");
       // XXX return V1 identity until all callers fixed
-      return localPeerIdentities[Poll.V1_PROTOCOL];
+      return localPeerIdentities[0];
     }
     else {
       return findPeerIdentityAndData(addr, port);
@@ -656,7 +644,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       log.warning("stringToPeerIdentity(null) is deprecated.");
       log.warning("  Use getLocalPeerIdentity() to get a local identity");
       // XXX return V1 identity until all callers fixed
-      return localPeerIdentities[Poll.V1_PROTOCOL];
+      return localPeerIdentities[0];
     }
     else {
       return findPeerIdentityAndData(idKey);

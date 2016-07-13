@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -35,11 +31,9 @@ package org.lockss.config;
 import java.io.*;
 import java.util.*;
 import java.net.*;
-
 import org.apache.commons.collections.Predicate;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.oro.text.regex.*;
-
 import org.lockss.app.*;
 import org.lockss.account.*;
 import org.lockss.clockss.*;
@@ -1334,8 +1328,6 @@ public class ConfigManager implements LockssManager {
     setIfNotSet(config, fromParam, ProxyManager.PARAM_BIND_ADDRS);
     setIfNotSet(config, fromParam, AuditProxyManager.PARAM_BIND_ADDRS);
 //     setIfNotSet(config, fromParam, IcpManager.PARAM_ICP_BIND_ADDRS);
-
-    org.lockss.poller.PollManager.processConfigMacros(config);
   }
 
   // Backward compatibility for param settings

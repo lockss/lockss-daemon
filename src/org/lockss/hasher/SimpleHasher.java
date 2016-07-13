@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,8 +40,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.lockss.servlet.ServletUtil;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
-import org.lockss.poller.Poll;
-import org.lockss.poller.PollSpec;
 import org.lockss.protocol.LcapMessage;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
@@ -706,42 +700,10 @@ public class SimpleHasher {
     }
 
     String errorMessage = null;
-    PollSpec pollSpec;
 
-    try {
-      switch (hashType) {
-      case V1File:
-	if (upper != null ||
-	    (lower != null && !lower.equals(PollSpec.SINGLE_NODE_LWRBOUND))) {
-	  errorMessage = "Upper/Lower ignored";
-	}
-	pollSpec = new PollSpec(auId, url, PollSpec.SINGLE_NODE_LWRBOUND, null,
-	    Poll.V1_CONTENT_POLL);
-	break;
-      case V3Tree:
-	pollSpec = new PollSpec(auId, url, lower, upper, Poll.V3_POLL);
-	break;
-      case V3File:
-	pollSpec = new PollSpec(auId, url, PollSpec.SINGLE_NODE_LWRBOUND, null,
-	    Poll.V3_POLL);
-	break;
-      default:
-	pollSpec = new PollSpec(auId, url, lower, upper, Poll.V1_CONTENT_POLL);
-      }
-    } catch (Exception e) {
-      errorMessage = "Error making PollSpec: " + e.toString();
-      if (log.isDebug()) log.debug("Making Pollspec", e);
-      result.setRunnerStatus(HasherStatus.Error);
-      result.setRunnerError(errorMessage);
-      return errorMessage;
-    }
-
-    if (log.isDebug()) log.debug(DEBUG_HEADER + "pollSpec = " + pollSpec);
-    result.setCus(pollSpec.getCachedUrlSet());
     if (log.isDebug()) log.debug(DEBUG_HEADER + "cus = " + result.getCus());
 
     if (result.getCus() == null) {
-      errorMessage = "No such CUS: " + pollSpec;
       result.setRunnerStatus(HasherStatus.Error);
       result.setRunnerError(errorMessage);
       return errorMessage;

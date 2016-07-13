@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,7 +29,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.util.*;
-
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.plugin.CachedUrlSet;
@@ -102,9 +97,6 @@ public class NodeStateImpl
     this.cus = cus;
     this.crawlState = new CrawlState(bean.getCrawlStateBean());
     this.polls = new ArrayList(bean.pollBeans.size());
-    for (int ii=0; ii<bean.pollBeans.size(); ii++) {
-      polls.add(ii, new PollState((PollStateBean)bean.pollBeans.get(ii)));
-    }
     this.hashDuration = bean.getAverageHashDuration();
     this.curState = bean.getState();
     this.repository = repository;
@@ -233,14 +225,6 @@ public class NodeStateImpl
     return (new ArrayList(findPollHistories())).iterator();
   }
 
-  public PollHistory getLastPollHistory() {
-    findPollHistories();
-    if (pollHistories.isEmpty()) {
-      return null;
-    }
-    return (PollHistory)pollHistories.get(0);
-  }
-
   public boolean isInternalNode() {
     return !cus.isLeaf();
   }
@@ -250,37 +234,6 @@ public class NodeStateImpl
       LockssDaemon.getStaticAuManager(LockssDaemon.NODE_MANAGER,
 				      cus.getArchivalUnit());
     return nodeMan.hasDamage(cus);
-  }
-
-  protected void addPollState(PollState new_poll) {
-    polls.add(new_poll);
-    // write-through
-    repository.storeNodeState(this);
-  }
-
-  protected synchronized void closeActivePoll(PollHistory finished_poll) {
-    findPollHistories();
-    // the list is sorted, find the right place to add
-    int pos = Collections.binarySearch(pollHistories,
-					  finished_poll,
-					  new HistoryComparator());
-    if (pos >= 0) {
-      pollHistories.add(pos, finished_poll);
-    } else {
-      pollHistories.add(-(pos + 1), finished_poll);
-    }
-    // remove this poll, and any lingering PollStates for it
-    while (polls.contains(finished_poll)) {
-//XXX concurrent
-      polls.remove(finished_poll);
-    }
-
-    // trim
-    trimHistoriesIfNeeded();
-
-    // checkpoint state, store histories
-    repository.storeNodeState(this);
-    repository.storePollHistories(this);
   }
 
   protected void setPollHistoryList(List new_histories) {
@@ -321,20 +274,6 @@ public class NodeStateImpl
       // trim any that are too old.
       int size;
       int cnt = 0;
-      while ((size = pollHistories.size()) > 0) {
-        PollHistory history = (PollHistory)pollHistories.get(size-1);
-        long pollEnd = history.getStartTime() + history.duration;
-        if (TimeBase.msSince(pollEnd) > maxHistoryAge) {
-          pollHistories.remove(size-1);
-	  changed = true;
-	  cnt++;
-        } else {
-          break;
-        }
-      }
-      if (cnt > 0) {
-	log.debug2("Poll history trimmed " + cnt + " polls due to age");
-      }
 
       // trim oldest off if exceeds max size
       if (pollHistories.size() > max) {
@@ -353,17 +292,6 @@ public class NodeStateImpl
 
     if (completedV3Polls != null && completedV3Polls.size() > 0) {
       // trim any that are too old.
-      for (int ix = 0; ix < completedV3Polls.size() - 1; ix++ ) {
-        V3PollState ps = (V3PollState)completedV3Polls.get(ix);
-        // Remove based on poll end time, not start time.  Polls are only
-        // appended to the completed list when they end.
-        if (TimeBase.msSince(ps.getEndTime()) > maxHistoryAge) {
-          completedV3Polls.remove(ix);
-          changed = true;
-        } else {
-          break; // Stop looking.
-        }
-      }
       
       // trim off oldest polls if the list exceeds max size
       if (completedV3Polls.size() > max) {
@@ -386,23 +314,7 @@ public class NodeStateImpl
   static class HistoryComparator implements Comparator {
     // sorts in reverse order, with largest startTime first
     public int compare(Object o1, Object o2) {
-      long startTime1;
-      long startTime2;
-      if ((o1 instanceof PollHistory) && (o2 instanceof PollHistory)) {
-        startTime1 = ((PollHistory)o1).getStartTime();
-        startTime2 = ((PollHistory)o2).getStartTime();
-      } else {
-        throw new IllegalStateException("Bad object in iterator: " +
-                                        o1.getClass() + "," +
-                                        o2.getClass());
-      }
-      if (startTime1>startTime2) {
-        return -1;
-      } else if (startTime1<startTime2) {
-        return 1;
-      } else {
         return 0;
-      }
     }
   }
 
@@ -424,25 +336,4 @@ public class NodeStateImpl
   public Collection getCompletedV3Polls() {
     return completedV3Polls;
   }
-  
-  public synchronized void addV3PollState(V3PollState state) {
-    activeV3Polls.add(state);
-  }
-  
-  public synchronized V3PollState getLastV3PollState() {
-    return (V3PollState)completedV3Polls.get(completedV3Polls.size() - 1);
-  }
-  
-  public synchronized void closeV3Poll(String key) {
-    if (activeV3Polls != null) {
-      Collection<V3PollState> coll = new ArrayList<V3PollState>(activeV3Polls);
-      for (V3PollState state : coll) { 
-	if (key.equals(state.getKey())) {
-	  activeV3Polls.remove(state);
-	  completedV3Polls.add(state);
-	}
-      }
-    }
-  }
-  
 }

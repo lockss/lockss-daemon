@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,23 +28,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.protocol;
 
-import java.security.*;
-import java.io.DataInputStream;
 import org.lockss.util.*;
-import org.lockss.test.MockCachedUrlSetSpec;
-import java.net.*;
 import java.io.*;
 import java.util.*;
-
 import org.lockss.test.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
-import org.lockss.poller.*;
-import org.lockss.poller.v3.V3Events;
-import org.lockss.repository.LockssRepositoryImpl;
-import org.lockss.util.*;
-import org.lockss.app.LockssDaemon;
-import org.mortbay.util.B64Code;
 
 /** JUnitTest case for class: org.lockss.protocol.Message */
 public class TestV3LcapMessage extends LockssTestCase {
@@ -59,7 +44,6 @@ public class TestV3LcapMessage extends LockssTestCase {
   private PeerIdentity m_testID;
   private V3LcapMessage m_testMsg;
   private List m_testVoteBlocks;
-  private MockPollManager mPollMgr;
 
   private MockLockssDaemon theDaemon;
 
@@ -88,8 +72,6 @@ public class TestV3LcapMessage extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
     IdentityManager idmgr = theDaemon.getIdentityManager();
     idmgr.startService();
-    mPollMgr = new MockPollManager();
-    theDaemon.setPollManager(mPollMgr);
     try {
       m_testID = idmgr.stringToPeerIdentity("127.0.0.1");
     } catch (IOException ex) {
@@ -100,7 +82,6 @@ public class TestV3LcapMessage extends LockssTestCase {
     m_repairProps.setProperty("key2", "val2");
     m_repairProps.setProperty("key3", "val3");
     
-    m_testVoteBlocks = V3TestUtils.makeVoteBlockList(10);
     m_testMsg = this.makeTestVoteMessage(m_testVoteBlocks);
   }
 
@@ -120,7 +101,6 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertEquals(m_testBytes, noopMsg.getPollerNonce());
     assertEquals(m_testBytes, noopMsg.getVoterNonce());
     assertEquals(null, noopMsg.getVoterNonce2());
-    assertEquals(null, noopMsg.getVoteBlocks());
     assertEquals(V3LcapMessage.EST_ENCODED_HEADER_LENGTH,
 		 noopMsg.getEstimatedEncodedLength());
 
@@ -130,7 +110,6 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertEquals(m_testBytes, noopMsg2.getPollerNonce());
     assertEquals(m_testBytes, noopMsg2.getVoterNonce());
     assertEquals(m_testBytes, noopMsg2.getVoterNonce2());
-    assertEquals(null, noopMsg2.getVoteBlocks());
     assertEquals(V3LcapMessage.EST_ENCODED_HEADER_LENGTH,
 		 noopMsg2.getEstimatedEncodedLength());
   }
@@ -148,8 +127,6 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertFalse(noopMsg1.getVoterNonce() == noopMsg2.getVoterNonce());
     assertEquals(null, noopMsg1.getVoterNonce2());
     assertEquals(null, noopMsg2.getVoterNonce2());
-    assertEquals(null, noopMsg1.getVoteBlocks());
-    assertEquals(null, noopMsg2.getVoteBlocks());
   }
 
   public void testNoOpMessageToString() throws IOException {
@@ -314,10 +291,6 @@ public class TestV3LcapMessage extends LockssTestCase {
                         987654321, m_testID, tempDir, theDaemon);
     reqMsg.setTargetUrl("http://foo.com/");
 
-    for (Iterator ix = m_testVoteBlocks.iterator(); ix.hasNext(); ) {
-      reqMsg.addVoteBlock((VoteBlock)ix.next());
-    }
-
     assertEquals(3, reqMsg.getProtocolVersion());
     assertEquals("Plug42", reqMsg.getPluginVersion());
     assertTrue(m_testID == reqMsg.getOriginatorId());
@@ -329,12 +302,6 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertEquals(null, reqMsg.getVoterNonce2());
     List aBlocks = new ArrayList();
     List bBlocks = new ArrayList();
-    for (VoteBlocksIterator iter = m_testMsg.getVoteBlockIterator(); iter.hasNext(); ) {
-      aBlocks.add(iter.next());
-    }
-    for (VoteBlocksIterator iter = reqMsg.getVoteBlockIterator(); iter.hasNext(); ) {
-      bBlocks.add(iter.next());
-    }
     assertEquals(aBlocks, bBlocks);
 
     // Actual size of test vote blocks is unpredictable
@@ -372,16 +339,6 @@ public class TestV3LcapMessage extends LockssTestCase {
   }
 
   public void testDiskBasedStreamEncodingTest() throws Exception {
-    // Make a list of vote blocks large enough to trigger on-disk
-    // vote message creation.
-    List testVoteBlocks = V3TestUtils.makeVoteBlockList(21);
-    V3LcapMessage testMsg = makeTestVoteMessage(testVoteBlocks);
-    assertTrue(testMsg.m_voteBlocks instanceof DiskVoteBlocks);
-    // Encode the test message.
-    InputStream is = testMsg.getInputStream();
-    V3LcapMessage decodedMsg  = new V3LcapMessage(is, tempDir, theDaemon);
-    // Ensure that the decoded message matches the test message.
-    assertEqualMessages(testMsg, decodedMsg);
     
   }
   
@@ -403,12 +360,6 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertIsomorphic(a.getNominees(), b.getNominees());
     List aBlocks = new ArrayList();
     List bBlocks = new ArrayList();
-    for (VoteBlocksIterator iter = a.getVoteBlockIterator(); iter.hasNext(); ) {
-      aBlocks.add(iter.next());
-    }
-    for (VoteBlocksIterator iter = b.getVoteBlockIterator(); iter.hasNext(); ) {
-      bBlocks.add(iter.next());
-    }
     assertTrue(aBlocks.equals(bBlocks));
 
     //  TODO: Figure out how to test time.
@@ -459,18 +410,12 @@ public class TestV3LcapMessage extends LockssTestCase {
 
   private V3LcapMessage makeTestVoteMessage(Collection voteBlocks)
       throws IOException {
-    mPollMgr.setStateDir("key", tempDir);
     V3LcapMessage msg = new V3LcapMessage("ArchivalID_2", "key", "Plug42",
                                           m_testBytes,
                                           m_testBytes,
                                           V3LcapMessage.MSG_VOTE,
                                           987654321, m_testID, tempDir,
                                           theDaemon);
-
-    // Set msg vote blocks.
-    for (Iterator ix = voteBlocks.iterator(); ix.hasNext(); ) {
-      msg.addVoteBlock((VoteBlock)ix.next());
-    }
 
     msg.setHashAlgorithm(LcapMessage.getDefaultHashAlgorithm());
     msg.setArchivalId(m_archivalID);

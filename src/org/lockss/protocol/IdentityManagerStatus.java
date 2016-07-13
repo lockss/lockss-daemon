@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,10 +29,8 @@ package org.lockss.protocol;
 
 import java.util.*;
 import org.apache.commons.collections.CollectionUtils;
-
 import org.lockss.daemon.status.*;
 import org.lockss.config.*;
-import org.lockss.poller.*;
 import org.lockss.util.*;
 
 public class IdentityManagerStatus
@@ -49,7 +43,7 @@ public class IdentityManagerStatus
   public IdentityManagerStatus(IdentityManager mgr) {
     this.mgr = mgr;
     try {
-      includeV1 = (mgr.getLocalPeerIdentity(Poll.V1_PROTOCOL) != null);
+      includeV1 = (mgr.getLocalPeerIdentity(0) != null);
     } catch (IllegalArgumentException e) {
       // ignore
     }

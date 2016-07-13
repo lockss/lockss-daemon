@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,16 +27,14 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.protocol;
+
 import java.io.*;
-import java.net.*;
 import java.util.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.poller.*;
-
 import org.apache.commons.collections.map.LRUMap;
 import org.mortbay.util.B64Code;
 
@@ -99,7 +93,6 @@ public class LcapDatagramRouter
 
   private boolean enabled = LcapDatagramComm.DEFAULT_ENABLED;
   private LcapDatagramComm comm;
-  private PollManager pollMgr;
   private IdentityManager idMgr;
   private RateLimiter fwdPktRateLimiter;
   private RateLimiter origPktRateLimiter;
@@ -122,7 +115,6 @@ public class LcapDatagramRouter
     LockssDaemon daemon = getDaemon();
     comm = daemon.getDatagramCommManager();
     idMgr = daemon.getIdentityManager();
-    pollMgr = daemon.getPollManager();
     partnerList = new PartnerList(idMgr);
     resetConfig();
     refreshPartnersAt = Deadline.in(partnerRefreshInterval);
@@ -453,7 +445,7 @@ public class LcapDatagramRouter
   void sendNoOp() {
     try {
       V1LcapMessage noOp =
-        V1LcapMessage.makeNoOpMsg(idMgr.getLocalPeerIdentity(Poll.V1_PROTOCOL),
+        V1LcapMessage.makeNoOpMsg(idMgr.getLocalPeerIdentity(0),
 				  ByteArray.makeRandomBytes(20));
       log.debug2("noop: " + noOp);
       send(noOp, null);
