@@ -13,23 +13,39 @@
         issn = 0104-5962 ;
         eissn = 2238-2097
       >
-
       # Publisher: Universidade Federal de Mato Grosso
+      {
+      param[base_url] = http://periodicoscientificos.ufmt.br/ojs/
+      param[journal_id] = educacaopublica
+
+      au < exists ; 1996 ; 5 ; Revista de Educação Pública Volume 1996 ; 1996 ; >
+      au < exists ; 2007 ; 16 ; Revista de Educação Pública Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 17 ; Revista de Educação Pública Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 18 ; Revista de Educação Pública Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 19 ; Revista de Educação Pública Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 20 ; Revista de Educação Pública Volume 2011 ; 2011 ; >
+      au < exists ; 2012 ; 21 ; Revista de Educação Pública Volume 2012 ; 2012 ; >
+      au < exists ; 2013 ; 22 ; Revista de Educação Pública Volume 2013 ; 2013 ; >
+      au < exists ; 2014 ; 23 ; Revista de Educação Pública Volume 2014 ; 2014 ; >
+      au < exists ; 2015 ; 24 ; Revista de Educação Pública Volume 2015 ; 2015 ; >
+      au < exists ; 2016 ; 25 ; Revista de Educação Pública Volume 2016 ; 2016 ; >
+      }
+      {
       param[base_url] = http://periodicoscientificos.ufmt.br/
       param[journal_id] = educacaopublica
 
-      au < released ; 1996 ; 5 ; Revista de Educação Pública Volume 1996 ; 1996 ; >
-      au < released ; 2007 ; 16 ; Revista de Educação Pública Volume 2007 ; 2007 ; >
-      au < released ; 2008 ; 17 ; Revista de Educação Pública Volume 2008 ; 2008 ; >
-      au < released ; 2009 ; 18 ; Revista de Educação Pública Volume 2009 ; 2009 ; >
-      au < released ; 2010 ; 19 ; Revista de Educação Pública Volume 2010 ; 2010 ; >
-      au < released ; 2011 ; 20 ; Revista de Educação Pública Volume 2011 ; 2011 ; >
-      au < released ; 2012 ; 21 ; Revista de Educação Pública Volume 2012 ; 2012 ; >
-      au < released ; 2013 ; 22 ; Revista de Educação Pública Volume 2013 ; 2013 ; >
-      au < released ; 2014 ; 23 ; Revista de Educação Pública Volume 2014 ; 2014 ; >
-      au < released ; 2015 ; 24 ; Revista de Educação Pública Volume 2015 ; 2015 ; >
-      au < manifest ; 2016 ; 25 ; Revista de Educação Pública Volume 2016 ; 2016 ; >
-
+      au < superseded ; 1996 ; 5 ; Revista de Educação Pública Volume 1996 [superseded] ; 1996 ; >
+      au < superseded ; 2007 ; 16 ; Revista de Educação Pública Volume 2007 [superseded] ; 2007 ; >
+      au < superseded ; 2008 ; 17 ; Revista de Educação Pública Volume 2008 [superseded] ; 2008 ; >
+      au < superseded ; 2009 ; 18 ; Revista de Educação Pública Volume 2009 [superseded] ; 2009 ; >
+      au < superseded ; 2010 ; 19 ; Revista de Educação Pública Volume 2010 [superseded] ; 2010 ; >
+      au < superseded ; 2011 ; 20 ; Revista de Educação Pública Volume 2011 [superseded] ; 2011 ; >
+      au < superseded ; 2012 ; 21 ; Revista de Educação Pública Volume 2012 [superseded] ; 2012 ; >
+      au < superseded ; 2013 ; 22 ; Revista de Educação Pública Volume 2013 [superseded] ; 2013 ; >
+      au < superseded ; 2014 ; 23 ; Revista de Educação Pública Volume 2014 [superseded] ; 2014 ; >
+      au < superseded ; 2015 ; 24 ; Revista de Educação Pública Volume 2015 [superseded] ; 2015 ; >
+      au < doNotProcess ; 2016 ; 25 ; Revista de Educação Pública Volume 2016 ; 2016 ; >
+      }
   }
 
 }

@@ -1,0 +1,799 @@
+{
+
+  publisher <
+    name = Universidade Federal de Santa Maria
+  >
+
+  plugin = org.lockss.plugin.ojs2.OJS2Plugin
+  implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
+
+  #### THIS TDB FILE IS DEPRECATED. JOURNALS ALL MOVED FROM
+  #http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+  #TO
+  #http://periodicos.ufsm.br/
+
+  {
+
+    title <
+      name = Balduinia ;
+      issn = 1808-2688 ;
+      eissn = 2358-1980
+    >
+
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+    param[journal_id] = balduinia
+
+    au < superseded ; 2005 ; 1 ; Balduinia Volume 2005 [superseded] ; 2005 ; >
+    au < superseded ; 2006 ; 2 ; Balduinia Volume 2006 [superseded] ; 2006 ; >
+    au < superseded ; 2007 ; 3 ; Balduinia Volume 2007 [superseded] ; 2007 ; >
+    au < superseded ; 2008 ; 4 ; Balduinia Volume 2008 [superseded] ; 2008 ; >
+    au < superseded ; 2009 ; 5 ; Balduinia Volume 2009 [superseded] ; 2009 ; >
+    au < superseded ; 2010 ; 6 ; Balduinia Volume 2010 [superseded] ; 2010 ; >
+    au < superseded ; 2011 ; 7 ; Balduinia Volume 2011 [superseded] ; 2011 ; >
+    au < superseded ; 2012 ; 8 ; Balduinia Volume 2012 [superseded] ; 2012 ; >
+    au < superseded ; 2013 ; 9 ; Balduinia Volume 2013 [superseded] ; 2013 ; >
+    au < superseded ; 2014 ; 10 ; Balduinia Volume 2014 [superseded] ; 2014 ; >
+    au < superseded ; 2015 ; 11 ; Balduinia Volume 2015 [superseded] ; 2015 ; >
+    au < doNotProcess ; 2016 ; 12 ; Balduinia Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Educação ;
+      issn = 0101-9031 ;
+      eissn = 1984-6444
+    >
+
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+    param[journal_id] = reveducacao
+
+    au < superseded ; 2000 ; 1 ; Educação Volume 1 [superseded] ; 2000 ; >
+    au < superseded ; 2001 ; 2 ; Educação Volume 2 [superseded] ; 2001 ; >
+    au < superseded ; 2002 ; 3 ; Educação Volume 3 [superseded] ; 2002 ; >
+    au < superseded ; 2003 ; 4 ; Educação Volume 4 [superseded] ; 2003 ; >
+    au < superseded ; 2004 ; 5 ; Educação Volume 5 [superseded] ; 2004 ; >
+    au < superseded ; 2005 ; 6 ; Educação Volume 6 [superseded] ; 2005 ; >
+    au < superseded ; 2006 ; 7 ; Educação Volume 7 [superseded] ; 2006 ; >
+    au < superseded ; 2007 ; 8 ; Educação Volume 8 [superseded] ; 2007 ; >
+    au < superseded ; 2008 ; 9 ; Educação Volume 9 [superseded] ; 2008 ; >
+    au < superseded ; 2009 ; 10 ; Educação Volume 10 [superseded] ; 2009 ; >
+    au < superseded ; 2010 ; 11 ; Educação Volume 11 [superseded] ; 2010 ; >
+    au < superseded ; 2011 ; 12 ; Educação Volume 12 [superseded] ; 2011 ; >
+    au < superseded ; 2012 ; 13 ; Educação Volume 13 [superseded] ; 2012 ; >
+    au < superseded ; 2013 ; 14 ; Educação Volume 14 [superseded] ; 2013 ; >
+    au < superseded ; 2014 ; 15 ; Educação Volume 15 [superseded] ; 2014 ; >
+    au < superseded ; 2015 ; 16 ; Educação Volume 16 [superseded] ; 2015 ; >
+    au < doNotProcess ; 2016 ; 17 ; Educação Volume 17 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Fragmentum ;
+      issn = 1519-9894 ;
+      eissn = 2179-2194
+    >
+
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+    param[journal_id] = fragmentum
+
+    au < superseded ; 2001 ; 1 ; Fragmentum Volume 1 [superseded] ; 2001 ; >
+    au < superseded ; 2002 ; 2 ; Fragmentum Volume 2 [superseded] ; 2002 ; >
+    au < superseded ; 2003 ; 3 ; Fragmentum Volume 3 [superseded] ; 2003 ; >
+    au < superseded ; 2004 ; 4 ; Fragmentum Volume 4 [superseded] ; 2004 ; >
+    au < superseded ; 2005 ; 5 ; Fragmentum Volume 5 [superseded] ; 2005 ; >
+    au < superseded ; 2006 ; 6 ; Fragmentum Volume 6 [superseded] ; 2006 ; >
+    au < superseded ; 2007 ; 7 ; Fragmentum Volume 7 [superseded] ; 2007 ; >
+    au < superseded ; 2008 ; 8 ; Fragmentum Volume 8 [superseded] ; 2008 ; >
+    au < superseded ; 2009 ; 9 ; Fragmentum Volume 9 [superseded] ; 2009 ; >
+    au < superseded ; 2010 ; 10 ; Fragmentum Volume 10 [superseded] ; 2010 ; >
+    au < superseded ; 2011 ; 11 ; Fragmentum Volume 11 [superseded] ; 2011 ; >
+    au < superseded ; 2012 ; 12 ; Fragmentum Volume 12 [superseded] ; 2012 ; >
+    au < superseded ; 2013 ; 13 ; Fragmentum Volume 13 [superseded] ; 2013 ; >
+    au < superseded ; 2014 ; 14 ; Fragmentum Volume 14 [superseded] ; 2014 ; >
+    au < superseded ; 2015 ; 15 ; Fragmentum Volume 15 [superseded] ; 2015 ; >
+    au < doNotProcess ; 2016 ; 16 ; Fragmentum Volume 16 ; 2016 ; >
+
+  }
+  
+  {
+
+    title <
+      name = Revista de Enfermagem da UFSM ;
+      eissn = 2179-7692 
+    >
+
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+    param[journal_id] = reufsm
+
+    au < superseded ; 2011 ; 1 ; Revista de Enfermagem da UFSM Volume 1 [superseded] ; 2011 ; >
+    au < superseded ; 2012 ; 2 ; Revista de Enfermagem da UFSM Volume 2 [superseded] ; 2012 ; >
+    au < superseded ; 2013 ; 3 ; Revista de Enfermagem da UFSM Volume 3 [superseded] ; 2013 ; >
+    au < superseded ; 2014 ; 4 ; Revista de Enfermagem da UFSM Volume 4 [superseded] ; 2014 ; >
+    au < superseded ; 2015 ; 5 ; Revista de Enfermagem da UFSM Volume 5 [superseded] ; 2015 ; >
+    au < doNotProcess ; 2016 ; 6 ; Revista de Enfermagem da UFSM Volume 6 ; 2016 ; >
+  }
+
+  {
+
+    title <
+      name = Revista Eletrônica do Curso de Direito da UFSM ;
+      issn = 1981-3694
+    >
+
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+    param[journal_id] = revistadireito
+
+    au < superseded ; 2006 ; 1 ; Revista Eletrônica do Curso de Direito da UFSM Volume 1 [superseded] ; 2006 ; >
+    au < superseded ; 2007 ; 2 ; Revista Eletrônica do Curso de Direito da UFSM Volume 2 [superseded] ; 2007 ; >
+    au < superseded ; 2008 ; 3 ; Revista Eletrônica do Curso de Direito da UFSM Volume 3 [superseded] ; 2008 ; >
+    au < superseded ; 2009 ; 4 ; Revista Eletrônica do Curso de Direito da UFSM Volume 4 [superseded] ; 2009 ; >
+    au < superseded ; 2010 ; 5 ; Revista Eletrônica do Curso de Direito da UFSM Volume 5 [superseded] ; 2010 ; >
+    au < superseded ; 2011 ; 6 ; Revista Eletrônica do Curso de Direito da UFSM Volume 6 [superseded] ; 2011 ; >
+    au < superseded ; 2012 ; 7 ; Revista Eletrônica do Curso de Direito da UFSM Volume 7 [superseded] ; 2012 ; >
+    au < superseded ; 2013 ; 8 ; Revista Eletrônica do Curso de Direito da UFSM Volume 8 [superseded] ; 2013 ; >
+    au < superseded ; 2014 ; 9 ; Revista Eletrônica do Curso de Direito da UFSM Volume 9 [superseded] ; 2014 ; >
+    au < superseded ; 2015 ; 10 ; Revista Eletrônica do Curso de Direito da UFSM Volume 10 [superseded] ; 2015 ; >
+    au < doNotProcess ; 2016 ; 11 ; Revista Eletrônica do Curso de Direito da UFSM Volume 11 ; 2016 ; >
+  }
+
+  {
+
+    title <
+      name = Revista Monografias Ambientais ;
+      eissn = 2236-1308 
+    >
+
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+    param[journal_id] = remoa
+
+    au < superseded ; 2010 ; 1 ; Revista Monografias Ambientais Volume 1 [superseded] ; 2010 ; >
+    au < superseded ; 2011 ; 2-4 ; Revista Monografias Ambientais Volume 2-4 ; 2011 ; >
+    au < superseded ; 2012 ; 5-10 ; Revista Monografias Ambientais Volume 5-10 ; 2012 ; >
+    au < superseded ; 2013 ; 11-12 ; Revista Monografias Ambientais Volume 11-12 ; 2013 ; >
+    au < superseded ; 2014 ; 13 ; Revista Monografias Ambientais Volume 13 [superseded] ; 2014 ; >
+    au < superseded ; 2015 ; 14 ; Revista Monografias Ambientais Volume 14 [superseded] ; 2015 ; >
+    au < doNotProcess ; 2016 ; 15 ; Revista Monografias Ambientais Volume 15 ; 2016 ; >
+  }
+
+  {
+
+    title <
+      name = Revista InterAção ;
+      issn = 2357-7975
+    >
+
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+    param[journal_id] = interacao
+
+    au < superseded ; 2010 ; 1 ; Revista InterAção Volume 1 [superseded] ; 2010 ; >
+    au < superseded ; 2011 ; 2 ; Revista InterAção Volume 2 [superseded] ; 2011 ; >
+    au < superseded ; 2012 ; 3 ; Revista InterAção Volume 3 [superseded] ; 2012 ; >
+    au < superseded ; 2013 ; 4 ; Revista InterAção Volume 4 [superseded] ; 2013 ; >
+    au < superseded ; 2014 ; 5 ; Revista InterAção Volume 5 [superseded] ; 2014 ; >
+    au < superseded ; 2015 ; 6 ; Revista InterAção Volume 6 [superseded] ; 2015 ; >
+    au < doNotProcess ; 2016 ; 7 ; Revista InterAção Volume 7 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Revista de Gestão e Avaliação Educacional ;
+      eissn = 2318-1338 
+    >
+
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+    param[journal_id] = regae
+
+    au < superseded ; 2013 ; 1 ; Revista de Gestão e Avaliação Educacional Volume 1 [superseded] ; 2013 ; >
+    au < superseded ; 2014 ; 2 ; Revista de Gestão e Avaliação Educacional Volume 2 [superseded] ; 2014 ; >
+    au < superseded ; 2015 ; 3 ; Revista de Gestão e Avaliação Educacional Volume 3 [superseded] ; 2015 ; >
+    au < doNotProcess ; 2016 ; 4 ; Revista de Gestão e Avaliação Educacional Volume 4 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Revista Direitos Emergentes na Sociedade Global ;
+      eissn = 2316-3054 
+    >
+
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+    param[journal_id] = REDESG
+
+    au < superseded ; 2012 ; 1 ; Revista Direitos Emergentes na Sociedade Global Volume 1 [superseded] ; 2012 ; >
+    au < superseded ; 2013 ; 2 ; Revista Direitos Emergentes na Sociedade Global Volume 2 [superseded] ; 2013 ; >
+    au < superseded ; 2014 ; 3 ; Revista Direitos Emergentes na Sociedade Global Volume 3 [superseded] ; 2014 ; >
+    au < superseded ; 2015 ; 4 ; Revista Direitos Emergentes na Sociedade Global Volume 4 [superseded] ; 2015 ; >
+    au < doNotProcess ; 2016 ; 5 ; Revista Direitos Emergentes na Sociedade Global Volume 5 ; 2016 ; >
+
+  }
+  
+  {
+
+    title <
+      name = Ciência Florestal ;
+      issn = 0103-9954 ;
+      eissn = 1980-5098 
+    >
+
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+    param[journal_id] = cienciaflorestal
+
+    au < superseded ; 1991 ; 1 ; Ciência Florestal Volume 1 [superseded] ; 1991 ; >
+    au < superseded ; 1992 ; 2 ; Ciência Florestal Volume 2 [superseded] ; 1992 ; >
+    au < superseded ; 1993 ; 3 ; Ciência Florestal Volume 3 [superseded] ; 1993 ; >
+    au < superseded ; 1994 ; 4 ; Ciência Florestal Volume 4 [superseded] ; 1994 ; >
+    au < superseded ; 1995 ; 5 ; Ciência Florestal Volume 5 [superseded] ; 1995 ; >
+    au < superseded ; 1996 ; 6 ; Ciência Florestal Volume 6 [superseded] ; 1996 ; >
+    au < superseded ; 1997 ; 7 ; Ciência Florestal Volume 7 [superseded] ; 1997 ; >
+    au < superseded ; 1998 ; 8 ; Ciência Florestal Volume 8 [superseded] ; 1998 ; >
+    au < superseded ; 1999 ; 9 ; Ciência Florestal Volume 9 [superseded] ; 1999 ; >
+    au < superseded ; 2000 ; 10 ; Ciência Florestal Volume 10 [superseded] ; 2000 ; >
+    au < superseded ; 2001 ; 11 ; Ciência Florestal Volume 11 [superseded] ; 2001 ; >
+    au < superseded ; 2002 ; 12 ; Ciência Florestal Volume 12 [superseded] ; 2002 ; >
+    au < superseded ; 2003 ; 13 ; Ciência Florestal Volume 13 [superseded] ; 2003 ; >
+    au < superseded ; 2004 ; 14 ; Ciência Florestal Volume 14 [superseded] ; 2004 ; >
+    au < superseded ; 2005 ; 15 ; Ciência Florestal Volume 15 [superseded] ; 2005 ; >
+    au < superseded ; 2006 ; 16 ; Ciência Florestal Volume 16 [superseded] ; 2006 ; >
+    au < superseded ; 2007 ; 17 ; Ciência Florestal Volume 17 [superseded] ; 2007 ; >
+    au < superseded ; 2008 ; 18 ; Ciência Florestal Volume 18 [superseded] ; 2008 ; >
+    au < superseded ; 2009 ; 19 ; Ciência Florestal Volume 19 [superseded] ; 2009 ; >
+    au < superseded ; 2010 ; 20 ; Ciência Florestal Volume 20 [superseded] ; 2010 ; >
+    au < superseded ; 2011 ; 21 ; Ciência Florestal Volume 21 [superseded] ; 2011 ; >
+    au < superseded ; 2012 ; 22 ; Ciência Florestal Volume 22 [superseded] ; 2012 ; >
+    au < superseded ; 2013 ; 23 ; Ciência Florestal Volume 23 [superseded] ; 2013 ; >
+    au < superseded ; 2014 ; 24 ; Ciência Florestal Volume 24 [superseded] ; 2014 ; >
+    au < superseded ; 2015 ; 25 ; Ciência Florestal Volume 25 [superseded] ; 2015 ; >
+    au < doNotProcess ; 2016 ; 26 ; Ciência Florestal Volume 26 ; 2016 ; >
+    
+  }
+  
+  {
+
+    title <
+      name = Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental ;
+      eissn = 2236-1170 
+    >
+
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+    param[journal_id] = reget
+
+    au < superseded ; 2010 ; 1 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 1 [superseded] ; 2010 ; >
+    au < superseded ; 2011 ; 2-4 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 2-4 ; 2011 ; >
+    au < superseded ; 2012 ; 5-8 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 5-8 ; 2012 ; >
+    au < superseded ; 2013 ; 9-17 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 9-17 ; 2013 ; >
+    au < superseded ; 2014 ; 18 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 18 [superseded] ; 2014 ; >
+    au < superseded ; 2015 ; 19 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 19 [superseded] ; 2015 ; >
+    au < doNotProcess ; 2016 ; 20 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 20 ; 2016 ; >
+
+  }
+  
+  {
+
+    title <
+      name = Revista Educação Especial ;
+      issn = 1984-686X
+    >
+
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+    param[journal_id] = educacaoespecial
+
+    au < superseded ; 2000 ; 13 ; Revista Educação Especial Volume 13 [superseded] ; 2000 ; >
+    au < superseded ; 2001 ; 14 ; Revista Educação Especial Volume 14 [superseded] ; 2001 ; >
+    au < superseded ; 2002 ; 15 ; Revista Educação Especial Volume 15 [superseded] ; 2002 ; >
+    au < superseded ; 2003 ; 16 ; Revista Educação Especial Volume 16 [superseded] ; 2003 ; >
+    au < superseded ; 2004 ; 17 ; Revista Educação Especial Volume 17 [superseded] ; 2004 ; >
+    au < superseded ; 2005 ; 18 ; Revista Educação Especial Volume 18 [superseded] ; 2005 ; >
+    au < superseded ; 2006 ; 19 ; Revista Educação Especial Volume 19 [superseded] ; 2006 ; >
+    au < superseded ; 2007 ; 20 ; Revista Educação Especial Volume 20 [superseded] ; 2007 ; >
+    au < superseded ; 2008 ; 21 ; Revista Educação Especial Volume 21 [superseded] ; 2008 ; >
+    au < superseded ; 2009 ; 22 ; Revista Educação Especial Volume 22 [superseded] ; 2009 ; >
+    au < superseded ; 2010 ; 23 ; Revista Educação Especial Volume 23 [superseded] ; 2010 ; >
+    au < superseded ; 2011 ; 24 ; Revista Educação Especial Volume 24 [superseded] ; 2011 ; >
+    au < superseded ; 2012 ; 25 ; Revista Educação Especial Volume 25 [superseded] ; 2012 ; >
+    au < superseded ; 2013 ; 26 ; Revista Educação Especial Volume 26 [superseded] ; 2013 ; >
+    au < superseded ; 2014 ; 27 ; Revista Educação Especial Volume 27 [superseded] ; 2014 ; >
+    au < superseded ; 2015 ; 28 ; Revista Educação Especial Volume 28 [superseded] ; 2015 ; >
+    au < doNotProcess ; 2016 ; 29 ; Revista Educação Especial Volume 29 ; 2016 ; >
+
+  }
+  
+  {
+
+    title <
+      name = Revista Digital do LAV ;
+      eissn = 1983-7348 
+    >
+
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+    param[journal_id] = revislav
+
+    au < exists ; 2008 ; 0001 ; Revista Digital do LAV Volume 1 ; 0001 ; >
+    au < exists ; 2009 ; 0002 ; Revista Digital do LAV Volume 2 ; 0002 ; >
+    au < exists ; 2010 ; 0003 ; Revista Digital do LAV Volume 3 ; 0003 ; >
+    au < exists ; 2011 ; 0004 ; Revista Digital do LAV Volume 4 ; 0004 ; >
+    au < superseded ; 2012 ; 2012 ; Revista Digital do LAV Volume 2012 [superseded] ; 2012 ; >
+    au < superseded ; 2013 ; 2013 ; Revista Digital do LAV Volume 2013 [superseded] ; 2013 ; >
+    au < superseded ; 2014 ; 2014 ; Revista Digital do LAV Volume 2014 [superseded] ; 2014 ; >
+    au < superseded ; 2015 ; 2015 ; Revista Digital do LAV Volume 2015 [superseded] ; 2015 ; >
+    au < doNotProcess ; 2016 ; 2016 ; Revista Digital do LAV Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Revista Ecologia e Nutrição Florestal - ENFLO ;
+      eissn = 2316-980X
+    >
+
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+    param[journal_id] = enflo
+
+    au < superseded ; 2013 ; 1 ; Revista Ecologia e Nutrição Florestal - ENFLO Volume 1 [superseded] ; 2013 ; >
+    au < superseded ; 2014 ; 2 ; Revista Ecologia e Nutrição Florestal - ENFLO Volume 2 [superseded] ; 2014 ; >
+    au < superseded ; 2015 ; 3 ; Revista Ecologia e Nutrição Florestal - ENFLO Volume 3 [superseded] ; 2015 ; >
+    au < doNotProcess ; 2016 ; 4 ; Revista Ecologia e Nutrição Florestal - ENFLO Volume 4 ; 2016 ; >
+
+  }
+
+  {
+
+    title <
+      name = Geografia Ensino & Pesquisa ;
+      issn = 0103-1538 ;
+      eissn = 2236-4994 
+    >
+
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+    param[journal_id] = geografia
+
+    au < superseded ; 2011 ; 15 ; Geografia Ensino & Pesquisa Volume 15 [superseded] ; 2011 ; >
+    au < superseded ; 2012 ; 16 ; Geografia Ensino & Pesquisa Volume 16 [superseded] ; 2012 ; >
+    au < superseded ; 2013 ; 17 ; Geografia Ensino & Pesquisa Volume 17 [superseded] ; 2013 ; >
+    au < superseded ; 2014 ; 18 ; Geografia Ensino & Pesquisa Volume 18 [superseded] ; 2014 ; >
+    au < superseded ; 2015 ; 19 ; Geografia Ensino & Pesquisa Volume 19 [superseded] ; 2015 ; >
+    au < doNotProcess ; 2016 ; 20 ; Geografia Ensino & Pesquisa Volume 20 ; 2016 ; >
+
+  }
+  
+  {
+
+      title <
+        name = Animus: Revista Interamericana de Comunicação Midiática ;
+        eissn = 2175-4977
+      >
+
+      # Publisher: Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+      param[journal_id] = animus
+
+      au < superseded ; 2002 ; 1 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2002 [superseded] ; 2002 ; >
+      au < superseded ; 2003 ; 2 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2003 [superseded] ; 2003 ; >
+      au < superseded ; 2004 ; 3 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2004 [superseded] ; 2004 ; >
+      au < superseded ; 2005 ; 4 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2005 [superseded] ; 2005 ; >
+      au < superseded ; 2006 ; 5 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2006 [superseded] ; 2006 ; >
+      au < superseded ; 2007 ; 6 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2007 [superseded] ; 2007 ; >
+      au < superseded ; 2008 ; 7 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2008 [superseded] ; 2008 ; >
+      au < superseded ; 2009 ; 8 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2009 [superseded] ; 2009 ; >
+      au < superseded ; 2010 ; 9 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2010 [superseded] ; 2010 ; >
+      au < superseded ; 2011 ; 10 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2011 [superseded] ; 2011 ; >
+      au < superseded ; 2012 ; 11 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2012 [superseded] ; 2012 ; >
+      au < superseded ; 2013 ; 12 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2013 [superseded] ; 2013 ; >
+      au < superseded ; 2014 ; 13 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2014 [superseded] ; 2014 ; >
+      au < superseded ; 2015 ; 14 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2015 [superseded] ; 2015 ; >
+      au < doNotProcess ; 2016 ; 15 ; Animus: Revista Interamericana de Comunicação Midiática Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Cadernos de Comunicação ;
+        issn = 1677-9061 ;
+        eissn = 2316-882X
+      >
+
+      # Publisher: Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+      param[journal_id] = ccomunicacao
+
+      au < superseded ; 1996 ; 1 ; Cadernos de Comunicação Volume 1996 [superseded] ; 1996 ; >
+      au < superseded ; 1997 ; 2 ; Cadernos de Comunicação Volume 1997 [superseded] ; 1997 ; >
+      au < superseded ; 1998 ; 3 ; Cadernos de Comunicação Volume 1998 ; 1998 ; no content >
+      au < superseded ; 1999 ; 4 ; Cadernos de Comunicação Volume 1999 [superseded] ; 1999 ; >
+      au < superseded ; 2000 ; 5 ; Cadernos de Comunicação Volume 2000 ; 2000 ; no content >
+      au < superseded ; 2001 ; 6 ; Cadernos de Comunicação Volume 2001 [superseded] ; 2001 ; >
+      au < superseded ; 2002 ; 7 ; Cadernos de Comunicação Volume 2002 [superseded] ; 2002 ; >
+      au < superseded ; 2003 ; 8 ; Cadernos de Comunicação Volume 2003 [superseded] ; 2003 ; >
+      au < superseded ; 2004 ; 9 ; Cadernos de Comunicação Volume 2004 [superseded] ; 2004 ; >
+      au < superseded ; 2005 ; 10 ; Cadernos de Comunicação Volume 2005 [superseded] ; 2005 ; >
+      au < superseded ; 2006 ; 11 ; Cadernos de Comunicação Volume 2006 ; 2006 ; no content >
+      au < superseded ; 2007 ; 12 ; Cadernos de Comunicação Volume 2007 ; 2007 ; no content >
+      au < superseded ; 2008 ; 13 ; Cadernos de Comunicação Volume 2008 ; 2008 ; no content >
+      au < superseded ; 2009 ; 14 ; Cadernos de Comunicação Volume 2009 ; 2009 ; no content >
+      au < superseded ; 2010 ; 15 ; Cadernos de Comunicação Volume 2010 ; 2010 ; no content >
+      au < superseded ; 2011 ; 16 ; Cadernos de Comunicação Volume 2011 [superseded] ; 2011 ; >
+      au < superseded ; 2012 ; 17 ; Cadernos de Comunicação Volume 2012 [superseded] ; 2012 ; >
+      au < superseded ; 2013 ; 18 ; Cadernos de Comunicação Volume 2013 [superseded] ; 2013 ; >
+      au < superseded ; 2014 ; 19 ; Cadernos de Comunicação Volume 2014 [superseded] ; 2014 ; >
+      au < superseded ; 2015 ; 20 ; Cadernos de Comunicação Volume 2015 [superseded] ; 2015 ; >
+      au < doNotProcess ; 2016 ; 21 ; Cadernos de Comunicação Volume 2115 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Gestão e Organizações Cooperativas ;
+        eissn = 2359-0432
+      >
+
+      # Publisher: Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+      param[journal_id] = rgc
+
+      au < superseded ; 2014 ; 1 ; Revista de Gestão e Organizações Cooperativasa Volume 2014 [superseded] ; 2014 ; >
+      au < superseded ; 2015 ; 2 ; Revista de Gestão e Organizações Cooperativasa Volume 2015 [superseded] ; 2015 ; >
+      au < doNotProcess ; 2016 ; 3 ; Revista de Gestão e Organizações Cooperativasa Volume 3015 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Ciência e Natura ;
+        issn = 0100-8307 ;
+        eissn = 2179-460X
+      >
+
+      # Publisher: Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+      param[journal_id] = cienciaenatura
+
+      au < superseded ; 2004 ; 1 ; Ciência e Natura Volume 2004 [superseded] ; 2004 ; >
+      au < superseded ; 2005 ; 2 ; Ciência e Natura Volume 2005 [superseded] ; 2005 ; >
+      au < superseded ; 2006 ; 3 ; Ciência e Natura Volume 2006 [superseded] ; 2006 ; >
+      au < superseded ; 2007 ; 4 ; Ciência e Natura Volume 2007 [superseded] ; 2007 ; >
+      au < superseded ; 2008 ; 5 ; Ciência e Natura Volume 2008 [superseded] ; 2008 ; >
+      au < superseded ; 2009 ; 6 ; Ciência e Natura Volume 2009 [superseded] ; 2009 ; >
+      au < superseded ; 2010 ; 7 ; Ciência e Natura Volume 2010 [superseded] ; 2010 ; >
+      au < superseded ; 2011 ; 8 ; Ciência e Natura Volume 2011 [superseded] ; 2011 ; >
+      au < superseded ; 2012 ; 9 ; Ciência e Natura Volume 2012 [superseded] ; 2012 ; >
+      au < superseded ; 2013 ; 10 ; Ciência e Natura Volume 2013 [superseded] ; 2013 ; >
+      au < superseded ; 2014 ; 11 ; Ciência e Natura Volume 2014 [superseded] ; 2014 ; >
+      au < superseded ; 2015 ; 12 ; Ciência e Natura Volume 2015 [superseded] ; 2015 ; >
+      au < doNotProcess ; 2016 ; 13 ; Ciência e Natura Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = ECONOMIA E DESENVOLVIMENTO ;
+        eissn = 1414-6509
+      >
+
+      # Publisher: Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+      param[journal_id] = eed
+
+      au < superseded ; 1999 ; 1 ; ECONOMIA E DESENVOLVIMENTO Volume 1999 [superseded] ; 1999 ; >
+      au < superseded ; 2000 ; 2 ; ECONOMIA E DESENVOLVIMENTO Volume 2000 [superseded] ; 2000 ; >
+      au < superseded ; 2001 ; 3 ; ECONOMIA E DESENVOLVIMENTO Volume 2001 [superseded] ; 2001 ; >
+      au < superseded ; 2002 ; 4 ; ECONOMIA E DESENVOLVIMENTO Volume 2002 [superseded] ; 2002 ; >
+      au < superseded ; 2003 ; 5 ; ECONOMIA E DESENVOLVIMENTO Volume 2003 [superseded] ; 2003 ; >
+      au < superseded ; 2004 ; 6 ; ECONOMIA E DESENVOLVIMENTO Volume 2004 [superseded] ; 2004 ; >
+      au < superseded ; 2005 ; 7 ; ECONOMIA E DESENVOLVIMENTO Volume 2005 [superseded] ; 2005 ; >
+      au < superseded ; 2006 ; 8 ; ECONOMIA E DESENVOLVIMENTO Volume 2006 [superseded] ; 2006 ; >
+      au < superseded ; 2007 ; 9 ; ECONOMIA E DESENVOLVIMENTO Volume 2007 [superseded] ; 2007 ; >
+      au < superseded ; 2008 ; 10 ; ECONOMIA E DESENVOLVIMENTO Volume 2008 [superseded] ; 2008 ; >
+      au < superseded ; 2009 ; 11 ; ECONOMIA E DESENVOLVIMENTO Volume 2009 [superseded] ; 2009 ; >
+      au < superseded ; 2010 ; 12 ; ECONOMIA E DESENVOLVIMENTO Volume 2010 [superseded] ; 2010 ; >
+      au < superseded ; 2011 ; 13 ; ECONOMIA E DESENVOLVIMENTO Volume 2011 [superseded] ; 2011 ; >
+      au < superseded ; 2012 ; 14 ; ECONOMIA E DESENVOLVIMENTO Volume 2012 [superseded] ; 2012 ; >
+      au < superseded ; 2013 ; 15 ; ECONOMIA E DESENVOLVIMENTO Volume 2013 [superseded] ; 2013 ; >
+      au < superseded ; 2014 ; 16 ; ECONOMIA E DESENVOLVIMENTO Volume 2014 [superseded] ; 2014 ; >
+      au < superseded ; 2015 ; 17 ; ECONOMIA E DESENVOLVIMENTO Volume 2015 [superseded] ; 2015 ; >
+      au < doNotProcess ; 2016 ; 18 ; ECONOMIA E DESENVOLVIMENTO Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Literatura e Autoritarismo ;
+        issn = 1679-849X
+      >
+
+      # Publisher: Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+      param[journal_id] = LA
+
+      au < superseded ; 2013 ; 1 ; Literatura e Autoritarismo Volume 2013 [superseded] ; 2013 ; >
+      au < superseded ; 2014 ; 2 ; Literatura e Autoritarismo Volume 2014 [superseded] ; 2014 ; >
+      au < superseded ; 2015 ; 3 ; Literatura e Autoritarismo Volume 2015 [superseded] ; 2015 ; >
+      au < doNotProcess ; 2016 ; 4 ; Literatura e Autoritarismo Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Extensão Rural ;
+        issn = 1415-7802 ;
+        eissn = 2318-1796
+      >
+
+      # Publisher: Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+      param[journal_id] = extensaorural
+
+      au < superseded ; 1993 ; 1 ; Extensão Rural Volume 1993 [superseded] ; 1993 ; >
+      au < superseded ; 1994 ; 2 ; Extensão Rural Volume 1994 [superseded] ; 1994 ; >
+      au < superseded ; 1995 ; 3 ; Extensão Rural Volume 1995 [superseded] ; 1995 ; >
+      au < superseded ; 1996 ; 4 ; Extensão Rural Volume 1996 [superseded] ; 1996 ; >
+      au < superseded ; 1997 ; 5 ; Extensão Rural Volume 1997 [superseded] ; 1997 ; >
+      au < superseded ; 1998 ; 6 ; Extensão Rural Volume 1998 [superseded] ; 1998 ; >
+      au < superseded ; 1999 ; 7 ; Extensão Rural Volume 1999 [superseded] ; 1999 ; >
+      au < superseded ; 2000 ; 8 ; Extensão Rural Volume 2000 [superseded] ; 2000 ; >
+      au < superseded ; 2001 ; 9 ; Extensão Rural Volume 2001 [superseded] ; 2001 ; >
+      au < superseded ; 2002 ; 10 ; Extensão Rural Volume 2002 [superseded] ; 2002 ; >
+      au < superseded ; 2003 ; 11 ; Extensão Rural Volume 2003 [superseded] ; 2003 ; >
+      au < superseded ; 2004 ; 12 ; Extensão Rural Volume 2004 [superseded] ; 2004 ; >
+      au < superseded ; 2005 ; 13 ; Extensão Rural Volume 2005 [superseded] ; 2005 ; >
+      au < superseded ; 2006 ; 14 ; Extensão Rural Volume 2006 [superseded] ; 2006 ; >
+      au < superseded ; 2007 ; 15 ; Extensão Rural Volume 2007 [superseded] ; 2007 ; >
+      au < superseded ; 2008 ; 16 ; Extensão Rural Volume 2008 [superseded] ; 2008 ; >
+      au < superseded ; 2009 ; 17 ; Extensão Rural Volume 2009 [superseded] ; 2009 ; >
+      au < superseded ; 2010 ; 18 ; Extensão Rural Volume 2010 [superseded] ; 2010 ; >
+      au < superseded ; 2011 ; 19 ; Extensão Rural Volume 2011 [superseded] ; 2011 ; >
+      au < superseded ; 2012 ; 20 ; Extensão Rural Volume 2012 [superseded] ; 2012 ; >
+      au < superseded ; 2013 ; 21 ; Extensão Rural Volume 2013 [superseded] ; 2013 ; >
+      au < superseded ; 2014 ; 22 ; Extensão Rural Volume 2014 [superseded] ; 2014 ; >
+      au < superseded ; 2015 ; 23 ; Extensão Rural Volume 2015 [superseded] ; 2015 ; >
+      au < doNotProcess ; 2016 ; 24 ; Extensão Rural Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Letras ;
+        issn = 1519-3985 ;
+        eissn = 2176-1485
+      >
+
+      # Publisher: Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+      param[journal_id] = letras
+
+      au < superseded ; 1991 ; 1 ; Letras Volume 1991 [superseded] ; 1991 ; >
+      au < superseded ; 1992 ; 2 ; Letras Volume 1992 [superseded] ; 1992 ; >
+      au < superseded ; 1993 ; 3 ; Letras Volume 1993 [superseded] ; 1993 ; >
+      au < superseded ; 1994 ; 4 ; Letras Volume 1994 [superseded] ; 1994 ; >
+      au < superseded ; 1995 ; 5 ; Letras Volume 1995 [superseded] ; 1995 ; >
+      au < superseded ; 1996 ; 6 ; Letras Volume 1996 [superseded] ; 1996 ; >
+      au < superseded ; 1997 ; 7 ; Letras Volume 1997 [superseded] ; 1997 ; >
+      au < superseded ; 1998 ; 8 ; Letras Volume 1998 [superseded] ; 1998 ; >
+      au < superseded ; 1999 ; 9 ; Letras Volume 1999 [superseded] ; 1999 ; >
+      au < superseded ; 2000 ; 10 ; Letras Volume 2000 [superseded] ; 2000 ; >
+      au < superseded ; 2001 ; 11 ; Letras Volume 2001 [superseded] ; 2001 ; >
+      au < superseded ; 2002 ; 12 ; Letras Volume 2002 [superseded] ; 2002 ; >
+      au < superseded ; 2003 ; 13 ; Letras Volume 2003 [superseded] ; 2003 ; >
+      au < superseded ; 2004 ; 14 ; Letras Volume 2004 [superseded] ; 2004 ; >
+      au < superseded ; 2005 ; 15 ; Letras Volume 2005 [superseded] ; 2005 ; >
+      au < superseded ; 2006 ; 16 ; Letras Volume 2006 [superseded] ; 2006 ; >
+      au < superseded ; 2007 ; 17 ; Letras Volume 2007 [superseded] ; 2007 ; >
+      au < superseded ; 2008 ; 18 ; Letras Volume 2008 [superseded] ; 2008 ; >
+      au < superseded ; 2009 ; 19 ; Letras Volume 2009 [superseded] ; 2009 ; >
+      au < superseded ; 2010 ; 20 ; Letras Volume 2010 [superseded] ; 2010 ; >
+      au < superseded ; 2011 ; 21 ; Letras Volume 2011 [superseded] ; 2011 ; >
+      au < superseded ; 2012 ; 22 ; Letras Volume 2012 [superseded] ; 2012 ; >
+      au < superseded ; 2013 ; 23 ; Letras Volume 2013 [superseded] ; 2013 ; >
+      au < superseded ; 2014 ; 24 ; Letras Volume 2014 [superseded] ; 2014 ; >
+      au < superseded ; 2015 ; 25 ; Letras Volume 2015 [superseded] ; 2015 ; >
+      au < doNotProcess ; 2016 ; 26 ; Letras Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Revista Sociais e Humanas ;
+        issn = 0103-0620 
+      >
+
+      # Publisher: Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+      param[journal_id] = sociaisehumanas
+
+      au < superseded ; 1998 ; 1 ; Revista Sociais e Humanas Volume 1998 [superseded] ; 1998 ; >
+      au < superseded ; 1999 ; 2 ; Revista Sociais e Humanas Volume 1999 [superseded] ; 1999 ; >
+      au < superseded ; 2000 ; 3 ; Revista Sociais e Humanas Volume 2000 [superseded] ; 2000 ; >
+      au < superseded ; 2001 ; 4 ; Revista Sociais e Humanas Volume 2001 [superseded] ; 2001 ; >
+      au < superseded ; 2002 ; 5 ; Revista Sociais e Humanas Volume 2002 [superseded] ; 2002 ; >
+      au < superseded ; 2003 ; 6 ; Revista Sociais e Humanas Volume 2003 [superseded] ; 2003 ; >
+      au < superseded ; 2004 ; 7 ; Revista Sociais e Humanas Volume 2004 [superseded] ; 2004 ; >
+      au < superseded ; 2005 ; 8 ; Revista Sociais e Humanas Volume 2005 [superseded] ; 2005 ; >
+      au < superseded ; 2006 ; 9 ; Revista Sociais e Humanas Volume 2006 [superseded] ; 2006 ; >
+      au < superseded ; 2007 ; 10 ; Revista Sociais e Humanas Volume 2007 [superseded] ; 2007 ; >
+      au < superseded ; 2008 ; 11 ; Revista Sociais e Humanas Volume 2008 [superseded] ; 2008 ; >
+      au < superseded ; 2009 ; 12 ; Revista Sociais e Humanas Volume 2009 [superseded] ; 2009 ; >
+      au < superseded ; 2010 ; 13 ; Revista Sociais e Humanas Volume 2010 [superseded] ; 2010 ; >
+      au < superseded ; 2011 ; 14 ; Revista Sociais e Humanas Volume 2011 [superseded] ; 2011 ; >
+      au < superseded ; 2012 ; 15 ; Revista Sociais e Humanas Volume 2012 [superseded] ; 2012 ; >
+      au < superseded ; 2013 ; 16 ; Revista Sociais e Humanas Volume 2013 [superseded] ; 2013 ; >
+      au < superseded ; 2014 ; 17 ; Revista Sociais e Humanas Volume 2014 [superseded] ; 2014 ; >
+      au < superseded ; 2015 ; 18 ; Revista Sociais e Humanas Volume 2015 [superseded] ; 2015 ; >
+      au < doNotProcess ; 2016 ; 19 ; Revista Sociais e Humanas Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Administração da UFSM ;
+        eissn = 1983-4659
+      >
+
+      # Publisher: Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+      param[journal_id] = reaufsm
+
+      au < superseded ; 2008 ; 1 ; Revista de Administração da UFSM Volume 2008 [superseded] ; 2008 ; >
+      au < superseded ; 2009 ; 2 ; Revista de Administração da UFSM Volume 2009 [superseded] ; 2009 ; >
+      au < superseded ; 2010 ; 3 ; Revista de Administração da UFSM Volume 2010 [superseded] ; 2010 ; >
+      au < superseded ; 2011 ; 4 ; Revista de Administração da UFSM Volume 2011 [superseded] ; 2011 ; >
+      au < superseded ; 2012 ; 5 ; Revista de Administração da UFSM Volume 2012 [superseded] ; 2012 ; >
+      au < superseded ; 2013 ; 6 ; Revista de Administração da UFSM Volume 2013 [superseded] ; 2013 ; >
+      au < superseded ; 2014 ; 7 ; Revista de Administração da UFSM Volume 2014 [superseded] ; 2014 ; >
+      au < superseded ; 2015 ; 8 ; Revista de Administração da UFSM Volume 2015 [superseded] ; 2015 ; >
+      au < doNotProcess ; 2016 ; 9 ; Revista de Administração da UFSM Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Revista Eletrônica de Contabilidade ;
+        eissn = 1981-0946
+      >
+
+      # Publisher: Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+      param[journal_id] = contabilidade
+
+      au < superseded ; 2004 ; 1 ; Revista Eletrônica de Contabilidade Volume 2004 [superseded] ; 2004 ; >
+      au < superseded ; 2005 ; 2 ; Revista Eletrônica de Contabilidade Volume 2005 [superseded] ; 2005 ; >
+      au < superseded ; 2006 ; 3 ; Revista Eletrônica de Contabilidade Volume 2006 [superseded] ; 2006 ; >
+      au < superseded ; 2007 ; 4 ; Revista Eletrônica de Contabilidade Volume 2007 [superseded] ; 2007 ; >
+      au < superseded ; 2008 ; 5 ; Revista Eletrônica de Contabilidade Volume 2008 [superseded] ; 2008 ; >
+      au < exists ; 2009 ; 6 ; Revista Eletrônica de Contabilidade Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 7 ; Revista Eletrônica de Contabilidade Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 8 ; Revista Eletrônica de Contabilidade Volume 2011 ; 2011 ; >
+      au < superseded ; 2012 ; 9 ; Revista Eletrônica de Contabilidade Volume 2012 [superseded] ; 2012 ; >
+      au < doNotProcess ; 2013 ; 10 ; Revista Eletrônica de Contabilidade Volume 2013 ; 2013 ; >
+      au < doNotProcess ; 2014 ; 11 ; Revista Eletrônica de Contabilidade Volume 2014 ; 2014 ; >
+
+  }
+
+  {
+
+      title <
+        name = Notas de Pesquisa ;
+        eissn = 2238-2615
+      >
+
+      # Publisher: Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+      param[journal_id] = nope
+
+      au < superseded ; 2011 ; 1 ; Notas de Pesquisa Volume 2011 [superseded] ; 2011 ; >
+
+  }
+
+  {
+
+      title <
+        name = Revista Kinesis ;
+        issn = 0102-8308 ;
+        eissn = 2316-5464
+      >
+
+      # Publisher: Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+      param[journal_id] = kinesis
+
+      au < superseded ; 1984 ; 1 ; Revista Kinesis Volume 1984 [superseded] ; 1984 ; >
+      au < superseded ; 1985 ; 2 ; Revista Kinesis Volume 1985 [superseded] ; 1985 ; >
+      au < superseded ; 1986 ; 3 ; Revista Kinesis Volume 1986 [superseded] ; 1986 ; >
+      au < superseded ; 1987 ; 4 ; Revista Kinesis Volume 1987 [superseded] ; 1987 ; >
+      au < superseded ; 1988 ; 5 ; Revista Kinesis Volume 1988 [superseded] ; 1988 ; >
+      au < superseded ; 1989 ; 6 ; Revista Kinesis Volume 1989 [superseded] ; 1989 ; >
+      au < superseded ; 1990 ; 7 ; Revista Kinesis Volume 1990 [superseded] ; 1990 ; >
+      au < superseded ; 1991 ; 8 ; Revista Kinesis Volume 1991 [superseded] ; 1991 ; >
+      au < superseded ; 1992 ; 9 ; Revista Kinesis Volume 1992 [superseded] ; 1992 ; >
+      au < superseded ; 1993 ; 10 ; Revista Kinesis Volume 1993 [superseded] ; 1993 ; >
+      au < superseded ; 1994 ; 11 ; Revista Kinesis Volume 1994 [superseded] ; 1994 ; >
+      au < superseded ; 1995 ; 12 ; Revista Kinesis Volume 1995 [superseded] ; 1995 ; >
+      au < superseded ; 1996 ; 13 ; Revista Kinesis Volume 1996 [superseded] ; 1996 ; >
+      au < superseded ; 1997 ; 14 ; Revista Kinesis Volume 1997 [superseded] ; 1997 ; >
+      au < superseded ; 1998 ; 15 ; Revista Kinesis Volume 1998 [superseded] ; 1998 ; >
+      au < superseded ; 1999 ; 16 ; Revista Kinesis Volume 1999 [superseded] ; 1999 ; >
+      au < superseded ; 2000 ; 17 ; Revista Kinesis Volume 2000 [superseded] ; 2000 ; >
+      au < superseded ; 2001 ; 18 ; Revista Kinesis Volume 2001 [superseded] ; 2001 ; >
+      au < superseded ; 2002 ; 19 ; Revista Kinesis Volume 2002 [superseded] ; 2002 ; >
+      au < superseded ; 2003 ; 20 ; Revista Kinesis Volume 2003 [superseded] ; 2003 ; >
+      au < exists ; 2004 ; 21 ; Revista Kinesis Volume 2004 ; 2004 ; >
+      au < exists ; 2005 ; 22 ; Revista Kinesis Volume 2005 ; 2005 ; >
+      au < exists ; 2006 ; 23 ; Revista Kinesis Volume 2006 ; 2006 ; >
+      au < exists ; 2007 ; 24 ; Revista Kinesis Volume 2007 ; 2007 ; >
+      au < exists ; 2008 ; 25 ; Revista Kinesis Volume 2008 ; 2008 ; >
+      au < exists ; 2009 ; 26 ; Revista Kinesis Volume 2009 ; 2009 ; >
+      au < exists ; 2010 ; 27 ; Revista Kinesis Volume 2010 ; 2010 ; >
+      au < exists ; 2011 ; 28 ; Revista Kinesis Volume 2011 ; 2011 ; >
+      au < superseded ; 2012 ; 29 ; Revista Kinesis Volume 2012 [superseded] ; 2012 ; >
+      au < superseded ; 2013 ; 30 ; Revista Kinesis Volume 2013 [superseded] ; 2013 ; >
+      au < superseded ; 2014 ; 31 ; Revista Kinesis Volume 2014 [superseded] ; 2014 ; >
+      au < superseded ; 2015 ; 32 ; Revista Kinesis Volume 2015 [superseded] ; 2015 ; >
+      au < doNotProcess ; 2016 ; 33 ; Revista Kinesis Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Revista Saúde ;
+        issn = 0103-4499 ;
+        eissn = 2236-5834
+      >
+
+      # Publisher: Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+      param[journal_id] = revistasaude
+
+      au < superseded ; 2004 ; 1 ; Revista Saúde Volume 2004 [superseded] ; 2004 ; >
+      au < superseded ; 2005 ; 2 ; Revista Saúde Volume 2005 [superseded] ; 2005 ; >
+      au < superseded ; 2006 ; 3 ; Revista Saúde Volume 2006 [superseded] ; 2006 ; >
+      au < superseded ; 2007 ; 4 ; Revista Saúde Volume 2007 [superseded] ; 2007 ; >
+      au < superseded ; 2008 ; 5 ; Revista Saúde Volume 2008 [superseded] ; 2008 ; >
+      au < superseded ; 2009 ; 6 ; Revista Saúde Volume 2009 [superseded] ; 2009 ; >
+      au < superseded ; 2010 ; 7 ; Revista Saúde Volume 2010 [superseded] ; 2010 ; >
+      au < superseded ; 2011 ; 8 ; Revista Saúde Volume 2011 [superseded] ; 2011 ; >
+      au < superseded ; 2012 ; 9 ; Revista Saúde Volume 2012 [superseded] ; 2012 ; >
+      au < superseded ; 2013 ; 10 ; Revista Saúde Volume 2013 [superseded] ; 2013 ; >
+      au < superseded ; 2014 ; 11 ; Revista Saúde Volume 2014 [superseded] ; 2014 ; >
+      au < superseded ; 2015 ; 12 ; Revista Saúde Volume 2015 [superseded] ; 2015 ; >
+      au < doNotProcess ; 2016 ; 13 ; Revista Saúde Volume 2016 ; 2016 ; >
+
+  }
+
+  {
+
+      title <
+        name = Século XXI: Revista de Ciências Sociais ;
+        issn = 2179-8095 ;
+        eissn = 2236-6725
+      >
+
+      # Publisher: Universidade Federal de Santa Maria
+      param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+      param[journal_id] = seculoxxi
+
+      au < superseded ; 2011 ; 1 ; Século XXI: Revista de Ciências Sociais Volume 2011 [superseded] ; 2011 ; >
+      au < superseded ; 2012 ; 2 ; Século XXI: Revista de Ciências Sociais Volume 2012 [superseded] ; 2012 ; >
+      au < superseded ; 2013 ; 3 ; Século XXI: Revista de Ciências Sociais Volume 2013 [superseded] ; 2013 ; >
+      au < superseded ; 2014 ; 4 ; Século XXI: Revista de Ciências Sociais Volume 2014 [superseded] ; 2014 ; >
+      au < superseded ; 2015 ; 5 ; Século XXI: Revista de Ciências Sociais Volume 2015 [superseded] ; 2015 ; >
+      au < doNotProcess ; 2016 ; 6 ; Século XXI: Revista de Ciências Sociais Volume 2016 ; 2016 ; >
+
+  }
+
+}

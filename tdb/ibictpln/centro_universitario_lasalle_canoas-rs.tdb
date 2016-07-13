@@ -122,22 +122,23 @@
       # Publisher: Centro Universitário Lasalle Canoas-RS
       param[base_url] = http://www.revistas.unilasalle.edu.br/
       param[journal_id] = interfaces
+      #gone. See http://www.revistas.unilasalle.edu.br/index.php/interfaces/gateway/lockss
 
-      au < released ; 2001 ; 1 ; Interfaces Brasil/Canadá Volume 1 ; 2001 ; >
-      au < released ; 2002 ; 2 ; Interfaces Brasil/Canadá Volume 2 ; 2002 ; >
-      au < released ; 2003 ; 3 ; Interfaces Brasil/Canadá Volume 3 ; 2003 ; >
-      au < released ; 2004 ; 4 ; Interfaces Brasil/Canadá Volume 4 ; 2004 ; >
-      au < released ; 2005 ; 5 ; Interfaces Brasil/Canadá Volume 5 ; 2005 ; >
-      au < released ; 2006 ; 6 ; Interfaces Brasil/Canadá Volume 6 ; 2006 ; >
-      au < released ; 2007 ; 7 ; Interfaces Brasil/Canadá Volume 7 ; 2007 ; >
-      au < released ; 2008 ; 8 ; Interfaces Brasil/Canadá Volume 8 ; 2008 ; >
-      au < released ; 2009 ; 9 ; Interfaces Brasil/Canadá Volume 9 ; 2009 ; >
-      au < released ; 2010 ; 10 ; Interfaces Brasil/Canadá Volume 10 ; 2010 ; >
-      au < released ; 2011 ; 11 ; Interfaces Brasil/Canadá Volume 11 ; 2011 ; >
-      au < released ; 2012 ; 12 ; Interfaces Brasil/Canadá Volume 12 ; 2012 ; >
-      au < released ; 2013 ; 13 ; Interfaces Brasil/Canadá Volume 13 ; 2013 ; >
-      au < released ; 2014 ; 14 ; Interfaces Brasil/Canadá Volume 14 ; 2014 ; >
-      au < released ; 2015 ; 15 ; Interfaces Brasil/Canadá Volume 15 ; 2015 ; >
+      au < down ; 2001 ; 1 ; Interfaces Brasil/Canadá Volume 1 ; 2001 ; >
+      au < down ; 2002 ; 2 ; Interfaces Brasil/Canadá Volume 2 ; 2002 ; >
+      au < down ; 2003 ; 3 ; Interfaces Brasil/Canadá Volume 3 ; 2003 ; >
+      au < down ; 2004 ; 4 ; Interfaces Brasil/Canadá Volume 4 ; 2004 ; >
+      au < down ; 2005 ; 5 ; Interfaces Brasil/Canadá Volume 5 ; 2005 ; >
+      au < down ; 2006 ; 6 ; Interfaces Brasil/Canadá Volume 6 ; 2006 ; >
+      au < down ; 2007 ; 7 ; Interfaces Brasil/Canadá Volume 7 ; 2007 ; >
+      au < down ; 2008 ; 8 ; Interfaces Brasil/Canadá Volume 8 ; 2008 ; >
+      au < down ; 2009 ; 9 ; Interfaces Brasil/Canadá Volume 9 ; 2009 ; >
+      au < down ; 2010 ; 10 ; Interfaces Brasil/Canadá Volume 10 ; 2010 ; >
+      au < down ; 2011 ; 11 ; Interfaces Brasil/Canadá Volume 11 ; 2011 ; >
+      au < down ; 2012 ; 12 ; Interfaces Brasil/Canadá Volume 12 ; 2012 ; >
+      au < down ; 2013 ; 13 ; Interfaces Brasil/Canadá Volume 13 ; 2013 ; >
+      au < down ; 2014 ; 14 ; Interfaces Brasil/Canadá Volume 14 ; 2014 ; >
+      au < down ; 2015 ; 15 ; Interfaces Brasil/Canadá Volume 15 ; 2015 ; >
       au < expected ; 2016 ; 16 ; Interfaces Brasil/Canadá Volume 16 ; 2016 ; >
 
   }
