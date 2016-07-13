@@ -58,6 +58,8 @@ public class TestCYSHtmlFilterFactory extends LockssTestCase {
       "org.lockss.plugin.atypon.cys.ClockssCYSPlugin";
 
   private static final String filteredStr =
+      " <div class=\"block\"> </div>";
+  private static final String filteredCrawlStr =
       "<div class=\"block\"></div>";
 
   private static final String withHead =
@@ -190,14 +192,14 @@ public class TestCYSHtmlFilterFactory extends LockssTestCase {
           + "</div>";
 
   private static final String sidebarRightFiltered =
-      "<div class=\"block\">"
-          + "<div id=\"sidebar-right\">"
-          + "<div class=\"article-tools\">"
-          + "<ul class=\"article-tools-list\">"
-          + "<li><a title=\"Download Citation\" class=\"icon-citation\""
-          + "href=\"/action/showCitFormats?blah\">Download Citation</a></li>"
-          + "</ul></div></div>"
-          + "</div>";
+      " <div class=\"block\">"
+          + " <div id=\"sidebar-right\">"
+          + " <div class=\"article-tools\">"
+          + " <ul class=\"article-tools-list\">"
+          + " <li> <a title=\"Download Citation\" class=\"icon-citation\""
+          + "href=\"/action/showCitFormats?blah\">Download Citation </a> </li>"
+          + " </ul> </div> </div>"
+          + " </div>";
 
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
@@ -242,10 +244,10 @@ public class TestCYSHtmlFilterFactory extends LockssTestCase {
   public static class TestCrawl extends TestCYSHtmlFilterFactory {
     public void testFiltering() throws Exception {
       variantFact = new CYSHtmlCrawlFilterFactory();
-      doFilterTest(cau, variantFact, withSidebarLeft, filteredStr);
-      doFilterTest(cau, variantFact, withPreviousNextArticle, filteredStr);
-      doFilterTest(cau, variantFact, withFullListIssues, filteredStr);
-      doFilterTest(cau, variantFact, withSpiderTrap, filteredStr);
+      doFilterTest(cau, variantFact, withSidebarLeft, filteredCrawlStr);
+      doFilterTest(cau, variantFact, withPreviousNextArticle, filteredCrawlStr);
+      doFilterTest(cau, variantFact, withFullListIssues, filteredCrawlStr);
+      doFilterTest(cau, variantFact, withSpiderTrap, filteredCrawlStr);
     }
   }
 

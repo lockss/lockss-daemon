@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -167,13 +167,13 @@ public class TestPracticalActionJournalsHtmlFilterFactory extends LockssTestCase
   
   // attributes separated by 1 space
   private static final String publicationToolContainerFilteredStr =
-      "<div class=\"widget tocListWidget none widget-none " +
+      " <div class=\"widget tocListWidget none widget-none " +
       "widget-compact-all\" >" +
-      "<div class=\"widget-body body body-none body-compact-all\">" +
-      "<fieldset class=\"tocListWidgetContainer\">" +
-      "</fieldset>" +
-      "</div>" +
-      "</div>";
+      " <div class=\"widget-body body body-none body-compact-all\">" +
+      " <fieldset class=\"tocListWidgetContainer\">" +
+      " </fieldset>" +
+      " </div>" +
+      " </div>";
   
   private static final String withArticleMetaDrop =
       "<div class=\"block\">" +
@@ -186,9 +186,9 @@ public class TestPracticalActionJournalsHtmlFilterFactory extends LockssTestCase
       "</div>";
   
   private static final String articleMetaDropFilteredStr =
-      "<div class=\"widget literatumPublicationContentWidget none " +
+      " <div class=\"widget literatumPublicationContentWidget none " +
       "widget-none\" >" +
-      "</div>";
+      " </div>";
   
 // ?? use this block when manifest pages are up  
 //    private static final String manifestList =

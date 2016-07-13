@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -139,12 +139,12 @@ public class TestLiverpoolJournalsHtmlFilterFactory extends LockssTestCase {
   
   // attributes separated by 1 space
   private static final String publicationToolContainerFilteredStr =
-      "<div class=\"widget tocListWidget none widget-none widget-compact-all\" >" +
-      "<div class=\"widget-body body body-none body-compact-all\">" +
-      "<fieldset class=\"tocListWidgetContainer\">" +
-      "</fieldset>" +
-      "</div>" +
-      "</div>";
+      " <div class=\"widget tocListWidget none widget-none widget-compact-all\" >" +
+      " <div class=\"widget-body body body-none body-compact-all\">" +
+      " <fieldset class=\"tocListWidgetContainer\">" +
+      " </fieldset>" +
+      " </div>" +
+      " </div>";
   
   private static final String withArticleMetaDrop =
       "<div class=\"block\">" +
@@ -155,8 +155,8 @@ public class TestLiverpoolJournalsHtmlFilterFactory extends LockssTestCase {
       "</div>";
   
   private static final String articleMetaDropFilteredStr =
-      "<div class=\"widget literatumPublicationContentWidget none widget-none\" >" +
-      "</div>";
+      " <div class=\"widget literatumPublicationContentWidget none widget-none\" >" +
+      " </div>";
             
   // ?? use this block when manifest pages are up  
   private static final String manifestList =
@@ -167,8 +167,8 @@ public class TestLiverpoolJournalsHtmlFilterFactory extends LockssTestCase {
             "</li>" +
             "</ul>";
   private static final String manifestListFilteredStr =
-        "<a href=\"http://www.example.com/toc/abcj/123/4\">" +
-            "2012 (Vol. 123 Issue 4 Page 456-789)</a>";
+        " <a href=\"http://www.example.com/toc/abcj/123/4\">" +
+            "2012 (Vol. 123 Issue 4 Page 456-789) </a>";
     
   private static final String nonManifestList1 =
         "<ul class=\"breadcrumbs\">" +

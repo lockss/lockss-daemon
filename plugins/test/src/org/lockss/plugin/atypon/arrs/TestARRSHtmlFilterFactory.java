@@ -58,7 +58,10 @@ public class TestARRSHtmlFilterFactory
   private static final String PLUGIN_ID =
       "org.lockss.plugin.atypon.arrs.ARRSPlugin";
 
+  // WS filter causes space before "<"
   private static final String filteredStr =
+      " <div class=\"block\"> </div>";
+  private static final String filteredCrawlStr =
       "<div class=\"block\"></div>";
 
   // test for pdf and pdfplus file size
@@ -205,9 +208,9 @@ public class TestARRSHtmlFilterFactory
   public static class TestCrawl extends TestARRSHtmlFilterFactory {
     public void testFiltering() throws Exception {
       variantFact = new ARRSHtmlCrawlFilterFactory();
-      doFilterTest(arrsau, variantFact, withLeftSidebar, filteredStr);
-      doFilterTest(arrsau, variantFact, withArticleToolsNav, filteredStr);
-      doFilterTest(arrsau, variantFact, withRecommendedArticles, filteredStr);
+      doFilterTest(arrsau, variantFact, withLeftSidebar, filteredCrawlStr);
+      doFilterTest(arrsau, variantFact, withArticleToolsNav, filteredCrawlStr);
+      doFilterTest(arrsau, variantFact, withRecommendedArticles, filteredCrawlStr);
     }
   }
 

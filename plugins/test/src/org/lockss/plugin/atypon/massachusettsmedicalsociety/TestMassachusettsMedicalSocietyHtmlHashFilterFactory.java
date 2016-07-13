@@ -2,7 +2,7 @@
  * $Id: TestMassachusettsMedicalSocietyHtmlHashFilterFactory.java,v 1.4 2015/01/14 23:07:10 aishizaki Exp $
  */
 /*
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,9 +32,7 @@ package org.lockss.plugin.atypon.massachusettsmedicalsociety;
 
 import java.io.*;
 
-import org.htmlparser.filters.TagNameFilter;
 import org.lockss.util.*;
-import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.test.*;
 
 public class TestMassachusettsMedicalSocietyHtmlHashFilterFactory extends LockssTestCase {
@@ -117,25 +115,25 @@ public class TestMassachusettsMedicalSocietyHtmlHashFilterFactory extends Lockss
         in = fact.createFilteredInputStream(mau, new StringInputStream(t),
                 ENC);
         String str = StringUtil.fromInputStream(in);
-        assertEquals("<html> </html>", str);
+        assertEquals(" <html> </html>", str);
     }
     for (String t : test2){
       in = fact.createFilteredInputStream(mau, new StringInputStream(t),
               ENC);
       String str = StringUtil.fromInputStream(in);
-      assertEquals("<html></html>", str);
+      assertEquals(" <html> </html>", str);
     }
     for (String t : test3){
       in = fact.createFilteredInputStream(mau, new StringInputStream(t),
               ENC);
       String str = StringUtil.fromInputStream(in);
-      assertEquals(" <html></html> ", str);
+      assertEquals(" <html> </html> ", str);
     }
     for (String t : test4){
       in = fact.createFilteredInputStream(mau, new StringInputStream(t),
               ENC);
       String str = StringUtil.fromInputStream(in);
-      assertEquals("<html><div align=\"center\" style=\"\"></div></html>", str);
+      assertEquals(" <html> <div align=\"center\" style=\"\"> </div> </html>", str);
     }
   }
     
@@ -144,7 +142,7 @@ public class TestMassachusettsMedicalSocietyHtmlHashFilterFactory extends Lockss
     private static final String modifiedHtmlHash = 
                     "<!--modified:1327018773000--><div class=\"tocContent\"><!--This is for full browser--><!--totalCount20--></div>";
     private static final String modifiedHtmlHashFiltered = 
-                    "<div class=\"tocContent\"></div>";
+                    " <div class=\"tocContent\"> </div>";
     
     private static final String citedByHtmlHash = 
                     "<dl class=\"articleTabs tabPanel lastChild\">\n" +
@@ -152,8 +150,8 @@ public class TestMassachusettsMedicalSocietyHtmlHashFilterFactory extends Lockss
                           "<dt id=\"citedbyTab\" class=\"citedby sideBySide inactive\">Citing Articles<span>(216) </span></dt>\n" +
                     "</dl>";
     private static final String citedByHtmlHashFiltered = 
-                    "<dl class=\"articleTabs tabPanel lastChild\"> " +
-                          "<dt id=\"abstractTab\" class=\"active abstract firstChild sideBySide\">Abstract</dt> " +
+                    " <dl class=\"articleTabs tabPanel lastChild\"> " +
+                          "<dt id=\"abstractTab\" class=\"active abstract firstChild sideBySide\">Abstract </dt> " +
                     "</dl>";
     
     private static final String articleActivityHtmlHash = 
@@ -162,12 +160,12 @@ public class TestMassachusettsMedicalSocietyHtmlHashFilterFactory extends Lockss
                           "<p><a class=\"articleActivity-citedby more\" href=\"#citedby\">216 articles have cited this article</a></p>\n" +
                     "</div>";
     private static final String articleActivityHtmlHashFiltered = 
-                    "<div class=\"articleMedia\"><h3 class=\"title\">Media in This Article</h3></div> ";
+                    " <div class=\"articleMedia\"> <h3 class=\"title\">Media in This Article </h3> </div> ";
     
     private static final String institutionHtmlHash = 
                     "<p>Access Provided By:<br><div id=\"institutionBox\">LANE MEDICAL LIBRARY</div></p>";
     private static final String institutionHtmlHashFiltered = 
-                    "<p>Access Provided By:<br></p>";
+                    " <p>Access Provided By: <br> </p>";
     
     private static final String commentsOpenHtmlHash = 
                     "<p class=\"citationLine\"><a href=\"/toc/nejm/366/10/\">March 8, 2012</a></p>\n" +
@@ -176,55 +174,55 @@ public class TestMassachusettsMedicalSocietyHtmlHashFilterFactory extends Lockss
                           "<a class=\"scrollDirectly\" name=\"discussion\" href=\"#discussion\">Comments</a> open through March 14, 2012\n" +
                     "</p>";
     private static final String commentsOpenHtmlHashFiltered = 
-                    "<p class=\"citationLine\"><a href=\"/toc/nejm/366/10/\">March 8, 2012</a></p> ";
+                    " <p class=\"citationLine\"> <a href=\"/toc/nejm/366/10/\">March 8, 2012 </a> </p> ";
     
     private static final String copyrightHtmlHash = 
                     "<noscript> onversion/1070139620/?label=_s1RCLTo-QEQ5JGk_gM&amp;amp;guid=ON&amp;amp; </noscript>\n" +
                     "<div id=\"copyright\"><p></p</div>Hello";
     private static final String copyrightHtmlHashFiltered = 
-                    "<noscript> onversion/1070139620/?label=_s1RCLTo-QEQ5JGk_gM&amp;amp;guid=ON&amp;amp; </noscript> " +
+                    " <noscript> onversion/1070139620/?label=_s1RCLTo-QEQ5JGk_gM&amp;amp;guid=ON&amp;amp; </noscript> " +
                     "Hello";
     
     private static final String javascriptHtmlHash = 
                     "<noscript> onversion/1070139620/?label=_s1RCLTo-QEQ5JGk_gM&amp;amp;guid=ON&amp;amp; </noscript>\n" +
                     "<script type=\"text/javascript\" src=\"http://nejm.resultspage.com/autosuggest/searchbox_suggest_v1.js\" language=\"javascript\">Hello</script>";
     private static final String javascriptHtmlHashFiltered = 
-                    "<noscript> onversion/1070139620/?label=_s1RCLTo-QEQ5JGk_gM&amp;amp;guid=ON&amp;amp; </noscript> ";
+                    " <noscript> onversion/1070139620/?label=_s1RCLTo-QEQ5JGk_gM&amp;amp;guid=ON&amp;amp; </noscript> ";
     
     private static final String recentIssueHtmlHash =
                     "<div class=\"issueArchive-recentIssue\"><a class=\"issueArchive-recentIssue\">topics</a></div>\n" +
                     "<a id=\"issueArchive-recentIssue\">Hello</div>";
     private static final String recentIssueHtmlHashFiltered =
-                    "<div class=\"issueArchive-recentIssue\"></div> " +
-                    "<a id=\"issueArchive-recentIssue\">Hello</div>";
+                    " <div class=\"issueArchive-recentIssue\"> </div> " +
+                    "<a id=\"issueArchive-recentIssue\">Hello </div>";
     
     private static final String moreInHtmlHash =
                     "<div id=\"topics\">topics</div>\n" +
                     "<div id=\"moreIn\"><h3>More In</h3><ul><li class=\"firstChild\"></li></ul></div>";
     private static final String moreInHtmlHashFiltered =
-                    "<div id=\"topics\">topics</div> ";
+                    " <div id=\"topics\">topics </div> ";
     
     private static final String layerPlayerHtmlHash =
                     "<div id=\"\" style=\"width:830px; height:600px\">\n" +
                           "<div id=\"layerPlayer_d3000e2652\"><div class=\"noFlashImgContainer\">image</div></div>\n" +
                     "</div>";
     private static final String layerPlayerHtmlHashFiltered =
-                    "<div id=\"\" style=\"width:830px; height:600px\"> " +
+                    " <div id=\"\" style=\"width:830px; height:600px\"> " +
                     "</div>";
     
     private static final String pollHtmlHash =
                     "<div class=\"notpoll\"><div class=\"poll\">poll</div></div>\n" +
                     "<div id=\"poll\"></div>";
     private static final String pollHtmlHashFiltered =
-                    "<div class=\"notpoll\"></div> " +
-                    "<div id=\"poll\"></div>";
+                    " <div class=\"notpoll\"> </div> " +
+                    "<div id=\"poll\"> </div>";
     
     private static final String submitLetterHtmlHash =
                     "<div class=\"submitLetter\"><li class=\"submitLetter\">topics</li></div>\n" +
                     "<li id=\"submitLetter\">Hello</li>";
     private static final String submitLetterHtmlHashFiltered =
-                    "<div class=\"submitLetter\"></div> " +
-                    "<li id=\"submitLetter\">Hello</li>";
+                    " <div class=\"submitLetter\"> </div> " +
+                    "<li id=\"submitLetter\">Hello </li>";
   
     public void testModifiedHtmlHashFiltering() throws Exception {
       InputStream actIn = fact.createFilteredInputStream(mau,

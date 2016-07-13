@@ -163,8 +163,8 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
             "</div>" +
             "</div>";
     private static final String tocActionsFilteredStr =
-            "<div class=\"literatumTocWidget\">" +
-            "</div>";
+            " <div class=\"literatumTocWidget\">" +
+            " </div>";
     
     // includeNodes has <div class="literatumPublicationContentWidget"
     // excludeNodes has <a class="rightslink"
@@ -186,14 +186,14 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
             "</div>";
     // id attribute also got filtered
     private static final String rightsLinkFilteredStr =
-        "<div " +
+        " <div " +
             "class=\"widget literatumPublicationContentWidget none " +
             "paddingLeft5 paddingRight5 widget-none widget-compact-all\">" +
-            "<ul class=\"tools3\">" +
-            "<li class=\"addToFav\"></li>" +
-            "<li class=\"permissions\"></li>" +
-            "</ul>" +
-            "</div>";  
+            " <ul class=\"tools3\">" +
+            " <li class=\"addToFav\"> </li>" +
+            " <li class=\"permissions\"> </li>" +
+            " </ul>" +
+            " </div>";  
     
     // includeNodes has <div class="literatumPublicationContentWidget"
     // excludeNodes has <div class="downloadsCount">
@@ -211,9 +211,9 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
             "</div>";
 
     private static final String downloadsCountFilteredStr =
-        "<div class=\"widget literatumPublicationContentWidget none " +
+        " <div class=\"widget literatumPublicationContentWidget none " +
             "paddingLeft5 paddingRight5 widget-none widget-compact-all\">" +
-            "</div>";  
+            " </div>";  
     
     private static final String withSectionJumpTo =
         "<div class=\"block\">" +
@@ -239,14 +239,14 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
             "</div>";
     
     private static final String sectionJumpToFilteredStr =
-        "<div class=\"widget literatumPublicationContentWidget " +
+        " <div class=\"widget literatumPublicationContentWidget " +
             "none widget-none widget-compact-all\">" +
-            "<div class=\"sectionInfo\">" +
-            "<div class=\"sectionHeading\">" +
-            "<h5>2. Literature review</h5>" +
-            "</div>" +
-            "</div>" +
-            "</div>";
+            " <div class=\"sectionInfo\">" +
+            " <div class=\"sectionHeading\">" +
+            " <h5>2. Literature review </h5>" +
+            " </div>" +
+            " </div>" +
+            " </div>";
     
     // for testhash
     // includeNodes has <div class="literatumPublicationContentWidget"
@@ -275,18 +275,18 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
             "</div>";  
     // id tag also got filtered
     private static final String articleOptionsFilteredStr2 = 
-        "<div class=\"widget literatumPublicationContentWidget none " +
+        " <div class=\"widget literatumPublicationContentWidget none " +
             "paddingLeft5 paddingRight5 widget-none widget-compact-all\">" +
-            "<div class=\"options\">" +
-            "<ul class=\"tools3\">" +
-            "<li class=\"citations\">" +
-            "<a class=\"ref nowrap\" target=\"_blank\" " +
+            " <div class=\"options\">" +
+            " <ul class=\"tools3\">" +
+            " <li class=\"citations\">" +
+            " <a class=\"ref nowrap\" target=\"_blank\" " +
             "href=\"/action/showCitFormats?doi=11.1111%2Fjid-1360\">" +
-            "Download Citation</a>" +
-            "</li>" +
-            "</ul>" +
-            "</div>" +
-            "</div>";
+            "Download Citation </a>" +
+            " </li>" +
+            " </ul>" +
+            " </div>" +
+            " </div>";
     
     // random class Z3988
     private static final String withRandomClassZ3988 =
@@ -299,9 +299,9 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
             "</div>";  
     
     private static final String randomClassZ3988FilteredStr =
-        "<div class=\"widget literatumPublicationContentWidget none " +
+        " <div class=\"widget literatumPublicationContentWidget none " +
             "paddingLeft5 paddingRight5 widget-none widget-compact-all\">" +
-            "</div>"; 
+            " </div>"; 
     
     private static final String withRefCitation =
         "<div class=\"block\">" +
@@ -333,9 +333,9 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
              "</div>";
     
     private static final String refCitationFilteredStr =
-        "<div class=\"widget literatumPublicationContentWidget none " +
+        " <div class=\"widget literatumPublicationContentWidget none " +
             "paddingLeft5 paddingRight5 widget-none widget-compact-all\">" +
-            "</div>";   
+            " </div>";   
 
     private static final String manifestList =
         "<ul>" +
@@ -345,8 +345,8 @@ public class TestEmeraldGroupHtmlFilterFactory extends LockssTestCase {
             "</li>" +
             "</ul>";
     private static final String manifestListFilteredStr =
-        "<a href=\"http://www.example.com/toc/abcj/123/4\">" +
-            "2012 (Vol. 123 Issue 4 Page 456-789)</a>";
+        " <a href=\"http://www.example.com/toc/abcj/123/4\">" +
+            "2012 (Vol. 123 Issue 4 Page 456-789) </a>";
     
     private static final String nonManifestList1 =
         "<ul class=\"breadcrumbs\">" +

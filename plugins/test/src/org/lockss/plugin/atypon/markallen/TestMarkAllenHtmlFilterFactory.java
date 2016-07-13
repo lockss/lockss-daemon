@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -58,8 +58,10 @@ public class TestMarkAllenHtmlFilterFactory
   private static final String PLUGIN_NAME = 
       "org.lockss.plugin.atypon.markallen.ClockssMarkAllenPlugin";
   
-  private static final String filteredStr = 
+  private static final String filteredCrawlStr = 
       "<div class=\"block\"></div>";
+  private static final String filteredStr = 
+      " <div class=\"block\"> </div>";
    
   // test for pdf and pdfplus file size
   // is in TestBaseAtyponHtmlHashFilterFactory since the html is similar
@@ -167,14 +169,14 @@ public class TestMarkAllenHtmlFilterFactory
           "</div>";
   
   private static final String ArticleToolsWidgetFiltered = 
-      "<div class=\"block\">" +
-          "<div class=\"widget literatumArticleToolsWidget\" >" +
-          "<ul class=\"linkList blockLinks separators centered\">" +
-          "<li class=\"downloadCitations\">" +
-          "<a href=\"/action/showCitFormats?" +
-          "doi=11.11111%2Fjid.2013.111\">Download citation</a></li></ul>" +
-          "</div>" +
-          "</div>";  
+      " <div class=\"block\">" +
+          " <div class=\"widget literatumArticleToolsWidget\" >" +
+          " <ul class=\"linkList blockLinks separators centered\">" +
+          " <li class=\"downloadCitations\">" +
+          " <a href=\"/action/showCitFormats?" +
+          "doi=11.11111%2Fjid.2013.111\">Download citation </a> </li> </ul>" +
+          " </div>" +
+          " </div>";  
    
   // from full text - Downloaded count
   // http://www.magonlinelibrary.com/doi/full/10.12968/bjom.2013.21.10.692
@@ -204,9 +206,9 @@ public class TestMarkAllenHtmlFilterFactory
           "</li></ul>" +
           "</div>"; 
   private static final String withoutCitedby =
-      "<div class=\"block\">" + 
-          "<ul></ul>" +
-          "</div>";  
+      " <div class=\"block\">" + 
+          " <ul> </ul>" +
+          " </div>";  
   
   protected ArchivalUnit createAu()
       throws ArchivalUnit.ConfigurationException {
@@ -251,8 +253,8 @@ public class TestMarkAllenHtmlFilterFactory
   public static class TestCrawl extends TestMarkAllenHtmlFilterFactory {
     public void testFiltering() throws Exception {
       variantFact = new MarkAllenHtmlCrawlFilterFactory();
-      doFilterTest(maau, variantFact, withGenericSlideshow, filteredStr); 
-      doFilterTest(maau, variantFact, withLiteratumMostReadWidget, filteredStr);    
+      doFilterTest(maau, variantFact, withGenericSlideshow, filteredCrawlStr); 
+      doFilterTest(maau, variantFact, withLiteratumMostReadWidget, filteredCrawlStr);    
     }    
   }
 

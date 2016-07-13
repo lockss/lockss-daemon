@@ -3,7 +3,7 @@
  */
 /*
 
- Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,7 +37,6 @@ import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.StringInputStream;
 import org.lockss.util.Constants;
-import org.lockss.util.IOUtil;
 import org.lockss.util.StringUtil;
 
 public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
@@ -60,7 +59,7 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
           "<span class=\"CbLinks\"><!--noindex--><a class=\"ref\" href=\"http://dx.doi.org/10.1002/cpa.21384\"" +
           " target=\"_blank\" title=\"Opens new window\"> CrossRef </a><!--/noindex--></span></div></div></div>";
   private static final String citedBySectionFiltered =
-      "</div>";
+      " </div>";
 
   private static final String citationEntry =
       "<div>" +
@@ -84,18 +83,18 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
           " </td>" +
           " </tr>";
   private static final String citationEntryFiltered =
-      "<div>" +
-          "<div id=\"art1\" class=\"notSelectedRow\">" +
-          "<table class=\"articleEntry\">" +
-          "<tr>" +
-          "<td valign=\"top\">" +
-          "<a class=\"ref nowrap\" href=\"/doi/abs/10.1137/x\"><div class=\"art_title\">Split</div></a>" +
-          "<strong><a class=\"entryAuthor\" href=\"/fu\">Name Cai</a></strong>" +
-          " <div class=\"doiCrossRef\"></div>" +
-          " <div class=\"pubDate\">Online Publication Date: 2009-2010</div>" +
-          " <a class=\"ref nowrap\" href=\"/doi/abs/10.1137/x\">Abstract</a> |" +
-          " <a class=\"ref nowrap\" href=\"/doi/ref/10.1137/x\">References</a> |" +
-          " <a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdf/10.1137/x\"></a>" +
+      " <div>" +
+          " <div id=\"art1\" class=\"notSelectedRow\">" +
+          " <table class=\"articleEntry\">" +
+          " <tr>" +
+          " <td valign=\"top\">" +
+          " <a class=\"ref nowrap\" href=\"/doi/abs/10.1137/x\"> <div class=\"art_title\">Split </div> </a>" +
+          " <strong> <a class=\"entryAuthor\" href=\"/fu\">Name Cai </a> </strong>" +
+          " <div class=\"doiCrossRef\"> </div>" +
+          " <div class=\"pubDate\">Online Publication Date: 2009-2010 </div>" +
+          " <a class=\"ref nowrap\" href=\"/doi/abs/10.1137/x\">Abstract </a> |" +
+          " <a class=\"ref nowrap\" href=\"/doi/ref/10.1137/x\">References </a> |" +
+          " <a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdf/10.1137/x\"> </a>" +
           " </td>" +
           " </tr>";
 
@@ -125,8 +124,8 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
           "src=\"/userimages/2939/banner\" alt=\"Stanford University\"  /></div>" +
           "</div>";
   private static final String institutionBannerFiltered =
-      "<div class=\"view-inner\">" +
-          "</div>";
+      " <div class=\"view-inner\">" +
+          " </div>";
 
 
   private static final String scriptFindIt =
@@ -140,12 +139,12 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
           "           genSfxLinks('s0', '', '10.1137/x');" +
           "       </script></td>";
   private static final String scriptFindItFiltered =
-      "<span class=\"ciationPageRange\">pp. 337-369</span><a href=\"http://dx.doi.org/10.1137/x\" class=\"ref doi\">" +
-          "http://dx.doi.org/10.1137/x</a> | Cited <b>40</b> times</div>" +
-          "<div class=\"doiCrossRef\"></div><div class=\"pubDate\">Online Publication Date: 2009-2010</div>" +
-          " <a class=\"ref nowrap\" href=\"/doi/abs/10.1137/x\">Abstract</a> | <a class=\"ref nowrap\"" +
-          "href=\"/doi/ref/10.1137/x\">References</a> | <a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\"" +
-          " href=\"/doi/pdf/10.1137/x\"></a>" +
+      " <span class=\"ciationPageRange\">pp. 337-369 </span> <a href=\"http://dx.doi.org/10.1137/x\" class=\"ref doi\">" +
+          "http://dx.doi.org/10.1137/x </a> | Cited <b>40 </b> times </div>" +
+          " <div class=\"doiCrossRef\"> </div> <div class=\"pubDate\">Online Publication Date: 2009-2010 </div>" +
+          " <a class=\"ref nowrap\" href=\"/doi/abs/10.1137/x\">Abstract </a> | <a class=\"ref nowrap\"" +
+          "href=\"/doi/ref/10.1137/x\">References </a> | <a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\"" +
+          " href=\"/doi/pdf/10.1137/x\"> </a>" +
           " </td>";
 
   private static final String footer =
@@ -166,7 +165,7 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
           "</div>" +
           "</body>";
   private static final String footerFiltered =
-      "</body>";
+      " </body>";
 
 
   private static final String leftColumn =
@@ -203,12 +202,12 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
           "  </div>" +
           "</div>";
   private static final String leftColumnFiltered =
-      "<div class=\"yui3-g \">" +
+      " <div class=\"yui3-g \">" +
           " <div class=\"yui3-u yui3-u-1-4 \" >" +
           " <div class=\"inner\">" +
           " </div>" +
           " </div>" +
-          "</div>";
+          " </div>";
 
   private static final String rightColumn =
       "<div id=\"articleContent\"><p class=\"fulltext\"></p><!-- abstract content -->" +
@@ -239,10 +238,10 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
           "</div></div>";
 
   private static final String rightColumnFiltered =
-      "<div id=\"articleContent\"><p class=\"fulltext\"></p>" +
-          "<div class=\"landSubjectHeading\"></div>" +
-          " <h1 class=\"arttitle\">A Title</h1>" +
-          "</div>";
+      " <div id=\"articleContent\"> <p class=\"fulltext\"> </p>" +
+          " <div class=\"landSubjectHeading\"> </div>" +
+          " <h1 class=\"arttitle\">A Title </h1>" +
+          " </div>";
 
   private static final String header =
       "<div id=\"header\">" +
@@ -310,30 +309,30 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
           "</div>";
 
   private static final String freeFiltered =
-      "<div><div><div id=\"art110842545\" class=\"notSelectedRow\">" +
-          "<table class=\"articleEntry\">" +
-          "<tr><td align=\"left\" valign=\"top\" width=\"18\">" +
-          "<br>" +
-          "</br>" +
-          "</td>" +
-          "<td valign=\"top\"><a class=\"ref nowrap\" href=\"/doi/abs/10.1137/110842545\">" +
-          "<div class=\"art_title\">TITLE</div>" +
-          "</a>" +
-          "<div class=\"doiCrossRef\">" +
-          "</div>" +
-          "<div class=\"pubDate\">Online Publication Date: January 2012" +
-          "</div>" +
-          "<a class=\"ref nowrap\" href=\"/doi/abs/10.1137/110842545\">Abstract" +
-          "</a> | " +
+      " <div> <div> <div id=\"art110842545\" class=\"notSelectedRow\">" +
+          " <table class=\"articleEntry\">" +
+          " <tr> <td align=\"left\" valign=\"top\" width=\"18\">" +
+          " <br>" +
+          " </br>" +
+          " </td>" +
+          " <td valign=\"top\"> <a class=\"ref nowrap\" href=\"/doi/abs/10.1137/110842545\">" +
+          " <div class=\"art_title\">TITLE </div>" +
+          " </a>" +
+          " <div class=\"doiCrossRef\">" +
+          " </div>" +
+          " <div class=\"pubDate\">Online Publication Date: January 2012" +
+          " </div>" +
+          " <a class=\"ref nowrap\" href=\"/doi/abs/10.1137/110842545\">Abstract" +
+          " </a> | " +
           "<a class=\"ref nowrap\" href=\"/doi/ref/10.1137/110842545\">References" +
-          "</a> | " +
+          " </a> | " +
           "<a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdf/10.1137/110842545\">" +
-          "</a> " +
+          " </a> " +
           "</td>" +
-          "</tr>" +
-          "</table>" +
-          "</div>" +
-          "</div>";
+          " </tr>" +
+          " </table>" +
+          " </div>" +
+          " </div>";
 
   private static final String changeableCommentsHtml =
       "<label for=\"markall\">Select All</label>" +
@@ -341,10 +340,10 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
           "<!--totalCount14--><!--modified:1368461028000--><div>" +
           "<div><div id=\"art120871894\" class=\"notSelectedRow\">";
   private static final String changeableCommentsFiltered=
-      "<label for=\"markall\">Select All</label>" +
-          "<hr/>" +
-          "<div>" +
-          "<div><div id=\"art120871894\" class=\"notSelectedRow\">";
+      " <label for=\"markall\">Select All </label>" +
+          " <hr/>" +
+          " <div>" +
+          " <div> <div id=\"art120871894\" class=\"notSelectedRow\">";
 
   private static final String adChunkHtml=
       "</div>" +
@@ -357,9 +356,9 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
           "</div>" +
           "<div id=\"footer\"></div>";
   private static final String adChunkFiltered=
-      "</div>" +
-          "</div>" +
-          "</div>";
+      " </div>" +
+          " </div>" +
+          " </div>";
 
   public void testCitations() throws Exception {
     InputStream inA;

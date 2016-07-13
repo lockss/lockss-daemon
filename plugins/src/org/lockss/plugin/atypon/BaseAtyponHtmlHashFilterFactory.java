@@ -263,7 +263,19 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
       tagFilter = new HtmlTagFilter(tagFilter, new TagPair("<", ">"));
     }
     if (doWS) {
-      return new ReaderInputStream(new WhiteSpaceFilter(tagFilter)); 
+      // first subsitute plain white space for &nbsp;   
+      // add spaces before all "<"
+      // consolidate spaces down to 1
+      // If the tags were removed above (with space added) it will not find tags
+      // to add the space before. This is fine.
+      String[][] unifySpaces = new String[][] {
+          // inconsistent use of nbsp v empty space - do this replacement first                                                                        
+          {"&nbsp;", " "},
+          {"<", " <"},
+      };
+      Reader NBSPFilter = StringFilter.makeNestedFilter(tagFilter,
+          unifySpaces, false);
+      return new ReaderInputStream(new WhiteSpaceFilter(NBSPFilter)); 
     } else { 
       return new ReaderInputStream(tagFilter); 
     }
@@ -304,8 +316,18 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
         );
     }
     if (doWSFiltering()) {
+      // first subsitute plain white space for &nbsp;                                                                                                  
+      // add spaces before all "<"
+      // consolidate spaces down to 1
+      String[][] unifySpaces = new String[][] {
+          // inconsistent use of nbsp v empty space - do this replacement first                                                                        
+          {"&nbsp;", " "},
+          {"<", " <"},
+      };
       Reader reader = FilterUtil.getReader(combinedFiltered, encoding);
-      return new ReaderInputStream(new WhiteSpaceFilter(reader)); 
+      Reader NBSPFilter = StringFilter.makeNestedFilter(reader,
+          unifySpaces, false);
+      return new ReaderInputStream(new WhiteSpaceFilter(NBSPFilter)); 
     } else { 
       return combinedFiltered;
     }
@@ -347,7 +369,9 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
    * BaseAtypon children can turn on/off extra levels of filtering
    * by overriding the getting/setter methods.
    * The BaseAtypon filter will query this method and if it is true,
-   * will remove extra WS
+   * will remove extra WS, 
+   * Specifically &nbsp; becomes ascii space, multiple spaces become one space
+   * and all "<" have a leading space before them.
    * default is false;
    */
   public boolean doWSFiltering() {

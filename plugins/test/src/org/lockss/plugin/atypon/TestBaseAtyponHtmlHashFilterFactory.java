@@ -373,11 +373,16 @@ public class TestBaseAtyponHtmlHashFilterFactory extends LockssTestCase {
       "<body><h2>  This is a title      lots of spaces   </h2>" +
       "<div>   foo</div>" +
       "</body>  </html>";
+  /* WS filtering does three things:
+   * 1. turn &nbsp; to ascii space
+   * 2. add space before any "<"
+   * 3. consolidates spaces down to 1 space
+   */
   private static final String wsVariant_withfilter = 
-  "<html>" +
-  "<body><h2> This is a title lots of spaces </h2>" +
-  "<div> foo</div>" +
-  "</body> </html>";
+  " <html>" +
+  " <body> <h2> This is a title lots of spaces </h2>" +
+  " <div> foo </div>" +
+  " </body> </html>";
 
   private static final String tagIDVariant = 
       "<div id=\"blah\">" +
@@ -394,37 +399,37 @@ public class TestBaseAtyponHtmlHashFilterFactory extends LockssTestCase {
           "</span>" +
           "</div>" +
           "</div>Hello World";
-  private static final String tagIDVariant_defaultfilter = 
-      "<div id=\"blah\">" +
-          "<div id=\"123\" class=\"mainMenu\">" +
+  private static final String tagIDVariant_defaultfilter_withWSFilter = 
+      " <div id=\"blah\">" +
+          " <div id=\"123\" class=\"mainMenu\">" +
           " <ul class=\"xxx menu\">" +
           " <li class=\"\" id=\"hoho\">"+
-          " <a href=\"/journals\">Journals</a>"+
-          "</li>" +       
-          "<li class=\"\">" +
-          " <a href=\"/ebooks\">E-Books</a>" +
-          "</li></ul>"+
-          "<span >" +
+          " <a href=\"/journals\">Journals </a>"+
+          " </li>" +       
+          " <li class=\"\">" +
+          " <a href=\"/ebooks\">E-Books </a>" +
+          " </li> </ul>"+
+          " <span >" +
           " inside the span" +
-          "</span>" +
-          "</div>" +
-          "</div>Hello World";
+          " </span>" +
+          " </div>" +
+          " </div>Hello World";
 
   private static final String tagIDVariant_allfilter = 
-      "<div >" +
-          "<div class=\"mainMenu\">" +
+      " <div >" +
+          " <div class=\"mainMenu\">" +
           " <ul class=\"xxx menu\">" +
           " <li class=\"\" >"+
-          " <a href=\"/journals\">Journals</a>"+
-          "</li>" +       
-          "<li class=\"\">" +
-          " <a href=\"/ebooks\">E-Books</a>" +
-          "</li></ul>"+
-          "<span >" +
+          " <a href=\"/journals\">Journals </a>"+
+          " </li>" +       
+          " <li class=\"\">" +
+          " <a href=\"/ebooks\">E-Books </a>" +
+          " </li> </ul>"+
+          " <span >" +
           " inside the span" +
-          "</span>" +
-          "</div>" +
-          "</div>Hello World";
+          " </span>" +
+          " </div>" +
+          " </div>Hello World";
   
   private static final String wsVariant_withWSFilter_withoutTags = 
   " This is a title lots of spaces foo ";
@@ -446,7 +451,19 @@ public class TestBaseAtyponHtmlHashFilterFactory extends LockssTestCase {
       " E-Books" +
       " inside the span" +
       " Hello World";
-      
+  
+  
+  private static final String wsNbspVariant = 
+      "<div class=\"tocContent\">" +
+      "<div class=\"art_title noLink\"> &nbsp;<span class=\"hlFld-Title\">" +
+      "<i>In Memoriam,</i> Dr. E. Cheesey, 1942 2014</span></div>" +
+      "</div>";
+  
+  private static final String wsNbspVariant_withFilter = 
+      " <div class=\"tocContent\">" +
+      " <div class=\"art_title noLink\"> <span class=\"hlFld-Title\">" +
+      " <i>In Memoriam, </i> Dr. E. Cheesey, 1942 2014 </span> </div>" +
+      " </div>";
   
   public void test_Variations() throws Exception {
     TestRigHashFilterFactory rigFact = new TestRigHashFilterFactory();
@@ -456,16 +473,25 @@ public class TestBaseAtyponHtmlHashFilterFactory extends LockssTestCase {
     actIn = rigFact.createFilteredInputStream(mau,
         new StringInputStream(wsVariant), Constants.DEFAULT_ENCODING);
     assertEquals(wsVariant, StringUtil.fromInputStream(actIn));
-    // 2. test WS - with ws filtering
+    //1b. Test space and &nbsp; variant; still just default settings
+    actIn = rigFact.createFilteredInputStream(mau,
+        new StringInputStream(wsNbspVariant), Constants.DEFAULT_ENCODING);
+    assertEquals(wsNbspVariant, StringUtil.fromInputStream(actIn));
+    
+    // 2. test WS - with ws filtering (also adds space before "<")
     rigFact.setWSFiltering(true);
     actIn = rigFact.createFilteredInputStream(mau,
         new StringInputStream(wsVariant), Constants.DEFAULT_ENCODING);
     assertEquals(wsVariant_withfilter, StringUtil.fromInputStream(actIn));
+    //2b. Test space and &nbsp; variant;
+    actIn = rigFact.createFilteredInputStream(mau,
+        new StringInputStream(wsNbspVariant), Constants.DEFAULT_ENCODING);
+    assertEquals(wsNbspVariant_withFilter, StringUtil.fromInputStream(actIn));
     
     // 3. leave WS on, now test tag ids - default behavior
     actIn = rigFact.createFilteredInputStream(mau,
         new StringInputStream(tagIDVariant), Constants.DEFAULT_ENCODING);
-    assertEquals(tagIDVariant_defaultfilter, StringUtil.fromInputStream(actIn));
+    assertEquals(tagIDVariant_defaultfilter_withWSFilter, StringUtil.fromInputStream(actIn));
 
     // 4. leave WS on, test tag ids - strips all tag ids
     rigFact.setTagFiltering(true);

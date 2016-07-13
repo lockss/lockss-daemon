@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -58,8 +58,10 @@ public class TestEndocrineSocietyHtmlFilterFactory
   private static final String PLUGIN_NAME = 
       "org.lockss.plugin.atypon.endocrinesociety.ClockssEndocrineSocietyPlugin";
   
-  private static final String filteredStr = 
+  private static final String filteredCrawlStr = 
       "<div class=\"block\"></div>";
+  private static final String filteredStr = 
+      " <div class=\"block\"> </div>";
 
   // test for pdf and pdfplus file size
   // is in TestBaseAtyponHtmlHashFilterFactory since the html is similar
@@ -193,9 +195,9 @@ public class TestEndocrineSocietyHtmlFilterFactory
           "</li></ul>" +
           "</div>"; 
   private static final String withoutCitedby =
-      "<div class=\"block\">" + 
-          "<ul></ul>" +
-          "</div>";   
+      " <div class=\"block\">" + 
+          " <ul> </ul>" +
+          " </div>";   
   
   // right column of an article - all except Download Citations
   private static final String withRightColumnExceptDownloadCitation = 
@@ -225,22 +227,22 @@ public class TestEndocrineSocietyHtmlFilterFactory
   
   // 'id' attributes also removed
   private static final String rightColumnFiltered = 
-      "<div class=\"block\">" +
-      "<div class=\"widget literatumRightSidebar none right-sidebar " +
+      " <div class=\"block\">" +
+      " <div class=\"widget literatumRightSidebar none right-sidebar " +
       "widget-none\" >" +
-      "<div class=\"sidebar sidebar-right\">" +
-      "<div data-pb-dropzone=\"main\">" +
-      "<div class=\"widget-box\" >" +
-      "<div class=\"body-box \">" +
-      "<div class=\"artTools\">" +
-      "<ul class=\"linkList\">" +
-      "<li class=\"downloadCitations\">" +
-      "<a href=\"/action/showCitFormats?doi=11.1111%2Fen.2012-1111\">" +
-      "Download Citation</a>" +
-      "</li>" +
-      "</ul>" +
-      "</div></div></div></div></div></div>" +
-      "</div>";
+      " <div class=\"sidebar sidebar-right\">" +
+      " <div data-pb-dropzone=\"main\">" +
+      " <div class=\"widget-box\" >" +
+      " <div class=\"body-box \">" +
+      " <div class=\"artTools\">" +
+      " <ul class=\"linkList\">" +
+      " <li class=\"downloadCitations\">" +
+      " <a href=\"/action/showCitFormats?doi=11.1111%2Fen.2012-1111\">" +
+      "Download Citation </a>" +
+      " </li>" +
+      " </ul>" +
+      " </div> </div> </div> </div> </div> </div>" +
+      " </div>";
   
   // related content near Erratum
   // http://press.endocrine.org/toc/endo/154/10
@@ -375,29 +377,29 @@ public class TestEndocrineSocietyHtmlFilterFactory
           "</td>";
   
   private static final String withTOCLinksFiltered = 
-      "<div class=\"art_title noLink\">" +
-          "<span class=\"hlFld-Title\">Editorial: Foo</span>" +
-          "</div>" +
-          "<div class=\"tocAuthors afterTitle\">" +
-          "<div class=\"articleEntryAuthor all\">" +
-          "<span class=\"articleEntryAuthorsLinks\">" +
-          "<a class=\"entryAuthor linkable hlFld-ContribAuthor\" href=\"/author/Schon%2C+Betty\">Betty Schon</a>" +
-          "<span class=\"entryAuthor\">" +
-          "</span>" +
-          "</span>" +
-          "</div>" +
-          "</div>" +
-          "<div class=\"art_meta citation\">" +
-          "<span class=\"issueInfo\">28(9)</span>" +
-          "<span class=\"articlePageRange\">" +
-          "<span class=\"issueInfoComma\">, </span>pp. 1403-1407</span>" +
-          "</div>" +
-          "<div class=\"tocArticleDoi\">" +
-          "<a href=\"http://dx.doi.org/10.1210/xxx\">10.1210/xxx</a>" +
-          "</div>" +
-          "<div class=\"tocListKeywords\">" +
-          "</div>" +
-          "</td>";
+      " <div class=\"art_title noLink\">" +
+          " <span class=\"hlFld-Title\">Editorial: Foo </span>" +
+          " </div>" +
+          " <div class=\"tocAuthors afterTitle\">" +
+          " <div class=\"articleEntryAuthor all\">" +
+          " <span class=\"articleEntryAuthorsLinks\">" +
+          " <a class=\"entryAuthor linkable hlFld-ContribAuthor\" href=\"/author/Schon%2C+Betty\">Betty Schon </a>" +
+          " <span class=\"entryAuthor\">" +
+          " </span>" +
+          " </span>" +
+          " </div>" +
+          " </div>" +
+          " <div class=\"art_meta citation\">" +
+          " <span class=\"issueInfo\">28(9) </span>" +
+          " <span class=\"articlePageRange\">" +
+          " <span class=\"issueInfoComma\">, </span>pp. 1403-1407 </span>" +
+          " </div>" +
+          " <div class=\"tocArticleDoi\">" +
+          " <a href=\"http://dx.doi.org/10.1210/xxx\">10.1210/xxx </a>" +
+          " </div>" +
+          " <div class=\"tocListKeywords\">" +
+          " </div>" +
+          " </td>";
 
 
   private static final String withReferenceLinks =
@@ -414,13 +416,13 @@ public class TestEndocrineSocietyHtmlFilterFactory
           "</div>";
   
   private static final String withReferenceLinksFiltered =
-      "<div class=\"references\" ><span class=\"NLM_string-name\">Author Foo <span class=\"NLM_given-names\">" +
-          "A</span></span><span class=\"NLM_string-name\">Costa <span class=\"NLM_given-names\">RH</span>" +
-          "</span><span class=\"NLM_string-name\">Gannon <span class=\"NLM_given-names\">M</span></span>" +
-          "<span class=\"NLM_article-title\">Article Title Goes here</span>" +
-          "<span class=\"NLM_year\">2008</span>" +
-          "<span class=\"NLM_fpage\">3069</span><span class=\"NLM_lpage\">3077</span>" +
-          "</div>";
+      " <div class=\"references\" > <span class=\"NLM_string-name\">Author Foo <span class=\"NLM_given-names\">" +
+          "A </span> </span> <span class=\"NLM_string-name\">Costa <span class=\"NLM_given-names\">RH </span>" +
+          " </span> <span class=\"NLM_string-name\">Gannon <span class=\"NLM_given-names\">M </span> </span>" +
+          " <span class=\"NLM_article-title\">Article Title Goes here </span>" +
+          " <span class=\"NLM_year\">2008 </span>" +
+          " <span class=\"NLM_fpage\">3069 </span> <span class=\"NLM_lpage\">3077 </span>" +
+          " </div>";
   
   
   protected ArchivalUnit createAu()
@@ -467,10 +469,10 @@ public class TestEndocrineSocietyHtmlFilterFactory
     public void testFiltering() throws Exception {
       variantFact = new EndocrineSocietyHtmlCrawlFilterFactory();
       doFilterTest(esau, variantFact, withLiteratumBookIssueNavigation, 
-          filteredStr);
-      doFilterTest(esau, variantFact, withRelatedLayer, filteredStr);      
-      doFilterTest(esau, variantFact, withRelatedContent, filteredStr);      
-      doFilterTest(esau, variantFact, withExtLink, filteredStr);      
+          filteredCrawlStr);
+      doFilterTest(esau, variantFact, withRelatedLayer, filteredCrawlStr);      
+      doFilterTest(esau, variantFact, withRelatedContent, filteredCrawlStr);      
+      doFilterTest(esau, variantFact, withExtLink, filteredCrawlStr);      
     }    
   }
 

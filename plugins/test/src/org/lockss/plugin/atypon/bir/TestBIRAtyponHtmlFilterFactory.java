@@ -57,8 +57,12 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
   private static final String PLUGIN_ID = 
       "org.lockss.plugin.atypon.bir.ClockssBIRAtyponPlugin";
   
+  //WS filter causes spaces before "<"
   private static final String filteredStr = 
+      " <div class=\"block\"> </div>";
+  private static final String filteredCrawlStr = 
       "<div class=\"block\"></div>";
+
     
   private static final String withMenuXml =
       "<div class=\"block\">" +
@@ -216,14 +220,14 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
     
     // id tag also got filtered
     private static final String articleToolsWidgetFiltered = 
-      "<div class=\"block\">" +  
-          "<div class=\"widget literatumArticleToolsWidget\" >" +
-          "<div class=\"articleTools\">" +
-          "<ul class=\"blockLinks\">" +
-          "<li class=\"downloadCitations\"><a href=\"/action/showCitFormats?" +
-          "doi=1.11111%2Fjid.2013.111\">Download Citation</a></li>" +
-          "</ul></div></div>" +
-          "</div>";
+      " <div class=\"block\">" +  
+          " <div class=\"widget literatumArticleToolsWidget\" >" +
+          " <div class=\"articleTools\">" +
+          " <ul class=\"blockLinks\">" +
+          " <li class=\"downloadCitations\"> <a href=\"/action/showCitFormats?" +
+          "doi=1.11111%2Fjid.2013.111\">Download Citation </a> </li>" +
+          " </ul> </div> </div>" +
+          " </div>";
     
     private static final String withCitedby =
       "<div class=\"block\">" + 
@@ -232,9 +236,9 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
           "</li></ul>" +
           "</div>"; 
     private static final String withoutCitedby =
-      "<div class=\"block\">" + 
-          "<ul></ul>" +
-          "</div>";    
+      " <div class=\"block\">" + 
+          " <ul> </ul>" +
+          " </div>";    
     
     private static final String withSectionJumpTo =
         "<div class=\"block\">" +
@@ -267,6 +271,8 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
             "</div></section></div></div></div>BOO</body>";                
 
     private static final String mostReadHtmlFiltered = 
+        " <body>BOO </body>";   
+    private static final String mostReadHtmlCrawlFiltered = 
         "<body>BOO</body>";   
     
   protected ArchivalUnit createAu()
@@ -312,10 +318,10 @@ public class TestBIRAtyponHtmlFilterFactory extends LockssTestCase {
   public static class TestCrawl extends TestBIRAtyponHtmlFilterFactory {
     public void testFiltering() throws Exception {
       variantFact = new BIRAtyponHtmlCrawlFilterFactory();
-      doFilterTest(bau, variantFact, withMenuXml, filteredStr); 
-      doFilterTest(bau, variantFact, withRelatedLayer, filteredStr);      
-      doFilterTest(bau, variantFact, withRelatedContent, filteredStr);      
-      doFilterTest(bau, variantFact, mostReadHtml, mostReadHtmlFiltered);      
+      doFilterTest(bau, variantFact, withMenuXml, filteredCrawlStr); 
+      doFilterTest(bau, variantFact, withRelatedLayer, filteredCrawlStr);      
+      doFilterTest(bau, variantFact, withRelatedContent, filteredCrawlStr);      
+      doFilterTest(bau, variantFact, mostReadHtml, mostReadHtmlCrawlFiltered);      
     }    
   }
 

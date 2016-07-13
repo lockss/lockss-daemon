@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -163,13 +163,13 @@ public class TestWageningenJournalsHtmlFilterFactory extends LockssTestCase {
   
   // attributes separated by 1 space
   private static final String publicationToolContainerFilteredStr =
-      "<div class=\"widget tocListWidget none widget-none " +
+      " <div class=\"widget tocListWidget none widget-none " +
       "widget-compact-all\" >" +
-      "<div class=\"widget-body body body-none body-compact-all\">" +
-      "<fieldset class=\"tocListWidgetContainer\">" +
-      "</fieldset>" +
-      "</div>" +
-      "</div>";
+      " <div class=\"widget-body body body-none body-compact-all\">" +
+      " <fieldset class=\"tocListWidgetContainer\">" +
+      " </fieldset>" +
+      " </div>" +
+      " </div>";
   
   private static final String withArticleMetaDrop =
        "<div class=\"widget literatumPublicationContentWidget none  " +
@@ -181,9 +181,9 @@ public class TestWageningenJournalsHtmlFilterFactory extends LockssTestCase {
       "</div>";
   
   private static final String articleMetaDropFilteredStr =
-      "<div class=\"widget literatumPublicationContentWidget none " +
+      " <div class=\"widget literatumPublicationContentWidget none " +
       "widget-none\" >" +
-      "</div>";
+      " </div>";
             
    private static final String withArticleToolsExceptDownloadCitation2 =
        "<div class=\"block\">" +  
@@ -203,13 +203,13 @@ public class TestWageningenJournalsHtmlFilterFactory extends LockssTestCase {
        "</div>";
   
   private static final String articleToolsFilteredStr2 = 
-      "<section class=\"widget literatumArticleToolsWidget none " +
+      " <section class=\"widget literatumArticleToolsWidget none " +
       "margin-bottom-15px widget-regular widget-border-toggle\" >" +
-      "<div class=\"articleTools\">" +
-      "<ul class=\"linkList blockLinks separators centered\">" +
-      "<li class=\"downloadCitations\">" +
-      "<a href=\"/action/showCitFormats?doi=11.1111%jid.2013.2\">" +
-      "Send to Citation Mgr</a></li></ul></div></section>";
+      " <div class=\"articleTools\">" +
+      " <ul class=\"linkList blockLinks separators centered\">" +
+      " <li class=\"downloadCitations\">" +
+      " <a href=\"/action/showCitFormats?doi=11.1111%jid.2013.2\">" +
+      "Send to Citation Mgr </a> </li> </ul> </div> </section>";
   
   private static final String tooltipHtml =
       "<div class=\"literatumPublicationContentWidget\">" +
@@ -222,8 +222,8 @@ public class TestWageningenJournalsHtmlFilterFactory extends LockssTestCase {
       "China University, Beijing 100083, China P.R.<br></div>, " +
       "</div>";
   private static final String tooltipFiltered = 
-      "<div class=\"literatumPublicationContentWidget\">" +
-      "<a class=\"entryAuthor\" href=\"/author/Ya%2C+X\"> X. Ya</a>" +
+      " <div class=\"literatumPublicationContentWidget\">" +
+      " <a class=\"entryAuthor\" href=\"/author/Ya%2C+X\"> X. Ya </a>" +
       ", " +
       "</div>";
   

@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -57,8 +57,10 @@ public class TestManeyAtyponHtmlFilterFactory extends LockssTestCase {
   private static final String PLUGIN_ID = 
       "org.lockss.plugin.atypon.maney.ClockssManeyAtyponPlugin";
   
-  private static final String filteredStr = 
+  private static final String filteredCrawlStr = 
       "<div class=\"block\"></div>";
+  private static final String filteredStr = 
+      " <div class=\"block\"> </div>";
   
   // from toc, abs, full, ref - News & alerts box near bottom
   // with About this Journal and Editors & Editorial Board tabs  
@@ -387,17 +389,17 @@ public class TestManeyAtyponHtmlFilterFactory extends LockssTestCase {
   public static class TestCrawl extends TestManeyAtyponHtmlFilterFactory {
     public void testFiltering() throws Exception {
       variantFact = new ManeyAtyponHtmlCrawlFilterFactory();
-      doFilterTest(mau, variantFact, withMigratedNews, filteredStr); 
-      doFilterTest(mau, variantFact, withMigratedAims, filteredStr); 
-      doFilterTest(mau, variantFact, withMigratedEditors, filteredStr); 
-      doFilterTest(mau, variantFact, withTableReferences, filteredStr); 
-      doFilterTest(mau, variantFact, withLiteratumMostReadWidget, filteredStr); 
+      doFilterTest(mau, variantFact, withMigratedNews, filteredCrawlStr); 
+      doFilterTest(mau, variantFact, withMigratedAims, filteredCrawlStr); 
+      doFilterTest(mau, variantFact, withMigratedEditors, filteredCrawlStr); 
+      doFilterTest(mau, variantFact, withTableReferences, filteredCrawlStr); 
+      doFilterTest(mau, variantFact, withLiteratumMostReadWidget, filteredCrawlStr); 
       doFilterTest(mau, variantFact, withLiteratumMostCitedWidget, 
-                   filteredStr); 
-      doFilterTest(mau, variantFact, withPublicationListWidget, filteredStr); 
-      doFilterTest(mau, variantFact, withCompactJournalHeader, filteredStr); 
-      doFilterTest(mau, variantFact, withRelatedLayer, filteredStr);      
-      doFilterTest(mau, variantFact, withRelatedContent, filteredStr);            
+                   filteredCrawlStr); 
+      doFilterTest(mau, variantFact, withPublicationListWidget, filteredCrawlStr); 
+      doFilterTest(mau, variantFact, withCompactJournalHeader, filteredCrawlStr); 
+      doFilterTest(mau, variantFact, withRelatedLayer, filteredCrawlStr);      
+      doFilterTest(mau, variantFact, withRelatedContent, filteredCrawlStr);            
     }    
   }
 

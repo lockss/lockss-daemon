@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -58,8 +58,10 @@ public class TestSEGHtmlFilterFactory
   private static final String PLUGIN_NAME = 
       "org.lockss.plugin.atypon.seg.ClockssSEGPlugin";
   
-  private static final String filteredStr = 
+  private static final String filteredCrawlStr = 
       "<div class=\"block\"></div>";
+  private static final String filteredStr = 
+      " <div class=\"block\"> </div>";
 
   // For crawl filtering
   // top right of issue toc - links to previous or next issue
@@ -153,6 +155,15 @@ public class TestSEGHtmlFilterFactory
           "</div>" +
           "</div>" +
           "</div>";
+  private static final String withoutLeftColumnExceptDownloadCitationHash = 
+      " <div class=\"block\">" +
+          " <div class=\"yui3-u yui3-u-1-4 leftColumn\">" +
+          " <div class=\"box-inner\">" +
+          " <div> <a href=\"/action/showCitFormats" +
+          "?doi=99.9999%2FJid99.9.999\">Download Citations </a> </div>" +
+          " </div>" +
+          " </div>" +
+          " </div>";
   
   // external links within References section
   private static final String withAbstractReferences = 
@@ -288,14 +299,14 @@ public class TestSEGHtmlFilterFactory
       variantAu = createAu();
     }    
     public void testFiltering() throws Exception {
-      doFilterTest(variantAu, variantFact, withPrevNextNav, filteredStr);
+      doFilterTest(variantAu, variantFact, withPrevNextNav, filteredCrawlStr);
       doFilterTest(variantAu, variantFact, withArticleToolsNav, articleNavFiltered);      
       doFilterTest(variantAu, variantFact, 
           withLeftColumnExceptDownloadCitation, 
           withoutLeftColumnExceptDownloadCitation);
       doFilterTest(variantAu, variantFact, 
-          withAbstractReferences, filteredStr);
-      doFilterTest(variantAu, variantFact, withExtLink, filteredStr);
+          withAbstractReferences, filteredCrawlStr);
+      doFilterTest(variantAu, variantFact, withExtLink, filteredCrawlStr);
     }    
   }
 
@@ -317,7 +328,7 @@ public class TestSEGHtmlFilterFactory
       doFilterTest(variantAu, variantFact, withTocCitation, filteredStr);
       doFilterTest(variantAu, variantFact, 
           withLeftColumnExceptDownloadCitation, 
-          withoutLeftColumnExceptDownloadCitation);
+          withoutLeftColumnExceptDownloadCitationHash);
       doFilterTest(variantAu, variantFact, withMainAd, filteredStr);
       doFilterTest(variantAu, variantFact, withFirstPage, filteredStr);
     }

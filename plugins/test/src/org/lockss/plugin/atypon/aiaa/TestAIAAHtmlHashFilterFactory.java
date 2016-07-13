@@ -3,7 +3,7 @@
  */
 /*
 
- Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -64,10 +64,10 @@ public class TestAIAAHtmlHashFilterFactory extends LockssTestCase {
           " </div></div></div><!-- /fulltext content --></div>";
 
   private static final String citedByFiltered = 
-      " <div id=\"articleContent\"> <p class=\"fulltext\"></p>" +
-          " <h1 class=\"arttitle\"> Optimal, Environmentally Friendly Departure Procedures for Civil Aircraft</h1>" +
-          " <div class=\"artAuthors\"> <span class=\"NLM_string-name\">R. Torres</span> <span class=\"NLM_x\">; </span> </div>" +
-          "</div>";
+      " <div id=\"articleContent\"> <p class=\"fulltext\"> </p>" +
+          " <h1 class=\"arttitle\"> Optimal, Environmentally Friendly Departure Procedures for Civil Aircraft </h1>" +
+          " <div class=\"artAuthors\"> <span class=\"NLM_string-name\">R. Torres </span> <span class=\"NLM_x\">; </span> </div>" +
+          " </div>";
       
   /* script call that generates institution specific thingie */
   private static final String scriptHtml = 
@@ -80,13 +80,13 @@ public class TestAIAAHtmlHashFilterFactory extends LockssTestCase {
           "<script type=\"text/javascript\">genSfxLinks('s0', '', '10.2514/1.C031282');</script>" +
           "</td></tr></table>";
   private static final String scriptFiltered = 
-      "<table border=\"0\" width=\"100%\" class=\"articleEntry\">" +
-          "<tr>" +
-          "<td align=\"right\" valign=\"top\" width=\"18\" class=\"nowrap\">1</td>" +
-          "<td valign=\"top\">" +
-          "<div class=\"art_title\">Green Aviation Papers, Call and Recognition</div>" +
-          "<br></br>" +
-          "</td></tr></table>";
+      " <table border=\"0\" width=\"100%\" class=\"articleEntry\">" +
+          " <tr>" +
+          " <td align=\"right\" valign=\"top\" width=\"18\" class=\"nowrap\">1 </td>" +
+          " <td valign=\"top\">" +
+          " <div class=\"art_title\">Green Aviation Papers, Call and Recognition </div>" +
+          " <br> </br>" +
+          " </td> </tr> </table>";
   
 
   private static final String commentModified =
@@ -101,15 +101,15 @@ public class TestAIAAHtmlHashFilterFactory extends LockssTestCase {
           "</tr></table>";
   
   private static final String commentModifiedFiltered = 
-      "<input type=\"checkbox\" name=\"markall\" id=\"markall\" onclick=\"onClickMarkAll(frmAbs)\"/>" +
-          "<label for=\"markall\">Select All</label>" +
-          "<hr/>" +
-          "<table border=\"0\" width=\"100%\" class=\"articleEntry\">" +
-          "<tr>" +
-          "<td align=\"right\" valign=\"top\" width=\"18\"><input type=\"checkbox\" name=\"doi\" value=\"10.2514/1.46304\"></input><br></br>" +
+      " <input type=\"checkbox\" name=\"markall\" id=\"markall\" onclick=\"onClickMarkAll(frmAbs)\"/>" +
+          " <label for=\"markall\">Select All </label>" +
+          " <hr/>" +
+          " <table border=\"0\" width=\"100%\" class=\"articleEntry\">" +
+          " <tr>" +
+          " <td align=\"right\" valign=\"top\" width=\"18\"> <input type=\"checkbox\" name=\"doi\" value=\"10.2514/1.46304\"> </input> <br> </br>" +
           "" +
-          "</td><td align=\"right\" valign=\"top\" width=\"18\" class=\"nowrap\">391</td>" +
-          "</tr></table>";
+          " </td> <td align=\"right\" valign=\"top\" width=\"18\" class=\"nowrap\">391 </td>" +
+          " </tr> </table>";
   
   private static final String spanIdHtml =
       "<div id=\"sec2.1\" class=\"NLM_sec NLM_sec_level_2\">" +
@@ -118,10 +118,10 @@ public class TestAIAAHtmlHashFilterFactory extends LockssTestCase {
       "<p>The Johnson distribution</p>";
   
   private static final String spanIdHtmlFiltered =
-      "<div id=\"sec2.1\" class=\"NLM_sec NLM_sec_level_2\">" +
-      "<span class=\"title2\" >" +
-      "A. Fitting the Johnson Distribution to Point Data</span> " +
-      "<p>The Johnson distribution</p>";
+      " <div id=\"sec2.1\" class=\"NLM_sec NLM_sec_level_2\">" +
+      " <span class=\"title2\" >" +
+      "A. Fitting the Johnson Distribution to Point Data </span> " +
+      "<p>The Johnson distribution </p>";
   
   private static final String adHolderDiv = 
       "<div " +
@@ -146,11 +146,11 @@ public class TestAIAAHtmlHashFilterFactory extends LockssTestCase {
           "</li>" +
           "</ul>";
   private static final String listItemCitedByFiltered =
-      "<ul> <li class=\"articleToolLi showPDFPlus\">" +
-          "<a href=\"/doi/pdfplus/10.2514/1.36414\" target=\"_blank\">" +
-          "</a>" +
-          "</li>" +
-          "</ul>";
+      " <ul> <li class=\"articleToolLi showPDFPlus\">" +
+          " <a href=\"/doi/pdfplus/10.2514/1.36414\" target=\"_blank\">" +
+          " </a>" +
+          " </li>" +
+          " </ul>";
       
 public static final String sectionsPulldown =  
   "<table width=\"50%\" cellpadding=\"0\" cellspacing=\"0\"><tr>" +
@@ -164,16 +164,16 @@ public static final String sectionsPulldown =
   "<option value=\"#citart1\">CITING ARTICLES</option></select></form>" +
   "</td></tr></table>";
 public static final String sectionsPulldownFiltered =  
-"<table width=\"50%\" cellpadding=\"0\" cellspacing=\"0\"><tr>" +
-"<td nowrap=\"\" height=\"16\" width=\"40\" align=\"left\">" +
-"<span class=\"fulltext\">Sections:</span> </td>" +
-"<td nowrap=\"\" height=\"16\" width=\"92\" align=\"left\" valign=\"middle\">" +
-"<form style=\"margin-bottom:0\">" +
-"<select name=\"select23\" class=\"fulltextdd\" onChange=\"GoTo(this, 'self')\">" +
-"<option value=\"#\" selected=\"\">Choose</option>" +
-"<option value=\"#_i16\">References</option>" +
-"</select></form>" +
-"</td></tr></table>";
+" <table width=\"50%\" cellpadding=\"0\" cellspacing=\"0\"> <tr>" +
+" <td nowrap=\"\" height=\"16\" width=\"40\" align=\"left\">" +
+" <span class=\"fulltext\">Sections: </span> </td>" +
+" <td nowrap=\"\" height=\"16\" width=\"92\" align=\"left\" valign=\"middle\">" +
+" <form style=\"margin-bottom:0\">" +
+" <select name=\"select23\" class=\"fulltextdd\" onChange=\"GoTo(this, 'self')\">" +
+" <option value=\"#\" selected=\"\">Choose </option>" +
+" <option value=\"#_i16\">References </option>" +
+" </select> </form>" +
+" </td> </tr> </table>";
 
 public static final String sectionHeading =
   "<div class=\"sectionHeadingContainer\"><div class=\"sectionHeadingContainer2\">" +
@@ -191,8 +191,8 @@ public static final String sectionHeading =
   "<img src=\"/templates/jsp/images/arrow_down.gif\" alt=\"Next section\"></img>" +
   "</a></td></tr></table></div></div>";
 public static final String sectionHeadingFiltered =
-"<div class=\"sectionHeadingContainer\"><div class=\"sectionHeadingContainer2\">" +
-"</div></div>";
+" <div class=\"sectionHeadingContainer\"> <div class=\"sectionHeadingContainer2\">" +
+" </div> </div>";
 
   
   public void testFiltering() throws Exception {
