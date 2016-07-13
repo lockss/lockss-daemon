@@ -694,10 +694,10 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Essays in Biochemistry Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Essays in Biochemistry Volume 54 ; 54 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Essays in Biochemistry Volume 55 ; 55 ; >
-    au < testing ; exists ; 2014 ; Essays in Biochemistry Volume 56 ; 56 ; >
-    au < testing ; exists ; 2014 ; Essays in Biochemistry Volume 57 ; 57 ; >
-    au < testing ; exists ; 2015 ; Essays in Biochemistry Volume 58 ; 58 ; >
-    au < crawling ; exists ; 2015 ; Essays in Biochemistry Volume 59 ; 59 ; >
+    au < notReady ; exists ; 2014 ; Essays in Biochemistry Volume 56 ; 56 ; > # this journal has no substance.
+    au < notReady ; exists ; 2014 ; Essays in Biochemistry Volume 57 ; 57 ; > # perhaps needs substance checker improvement.
+    au < notReady ; exists ; 2015 ; Essays in Biochemistry Volume 58 ; 58 ; >
+    au < crawling ; exists ; 2015 ; Essays in Biochemistry Volume 59 ; 59 ; > # this AU has no substance on ingest machines.
     au < expected ; exists ; 2016 ; Essays in Biochemistry Volume 60 ; 60 ; >
     au < expected ; exists ; 2016 ; Essays in Biochemistry Volume 61 ; 61 ; >
 
