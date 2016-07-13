@@ -1517,12 +1517,12 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
       if (goOn) {
 	try {
-	  logger.debug("Waiting until AUs started");
 	  if (paramOdc) {
 	    startOneWait.expireIn(paramStartCrawlsInitialDelay);
 	    cmStatus.setNextCrawlStarter(startOneWait);
 	    startOneWait.sleep();
 	  } else {
+	    logger.debug("Waiting until AUs started");
 	    waitUntilAusStarted();
 	    logger.debug3("AUs started");
 	    Deadline initial = Deadline.in(paramStartCrawlsInitialDelay);
@@ -1791,11 +1791,14 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   }
 
   public void rebuildQueueSoon() {
-    // Don't push forward if already expired.
-    if (!timeToRebuildCrawlQueue.expired()) {
-      timeToRebuildCrawlQueue.expireIn(paramQueueRecalcAfterNewAu);
-    }
-    if (!startOneWait.expired()) {
+    if (startOneWait.expired()) {
+      // If already time to run ensure queue gets rebuilt
+      forceQueueRebuild();
+    } else {
+      // Don't push forward if already expired.
+      if (!timeToRebuildCrawlQueue.expired()) {
+	timeToRebuildCrawlQueue.expireIn(paramQueueRecalcAfterNewAu);
+      }
       startOneWait.expireIn(paramQueueRecalcAfterNewAu);
     }
   }

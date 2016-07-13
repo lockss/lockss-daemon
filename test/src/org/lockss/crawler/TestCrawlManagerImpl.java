@@ -1504,7 +1504,6 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       crawlManager.delFromRunningRateKeys(aus[12]);
       crawlManager.delFromRunningRateKeys(aus[6]);
       PluginTestUtil.registerArchivalUnit(plugin, auPri);
-      PluginTestUtil.registerArchivalUnit(plugin, auNever);
       assertEquals(aus[7], crawlManager.nextReq().au);
       crawlManager.addToRunningRateKeys(aus[7]);
       aus[12].setShouldCrawlForNewContent(false);
@@ -1667,6 +1666,9 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       crawlManager.ausStartedSem = new OneShotSemaphore();
       crawlManager.startService();
 
+//       Uncomment to stress startup logic
+//       TimerUtil.guaranteedSleep(1000);
+
       MockArchivalUnit[] aus = makeMockAus(num);
       RegistryArchivalUnit rau = makeRegistryAu();
 
@@ -1727,6 +1729,10 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       theDaemon.setAusStarted(true);
       // now let the crawl starter proceed
       crawlManager.ausStartedSem.fill();
+      // PluginTestUtil.registerArchivalUnit() doesn't cause Create AuEvent
+      // to be signalled so must ensure CrawlManagerImpl rebuilds queue
+      // promptly
+      crawlManager.rebuildQueueSoon();
       // Ensure they all got queued
       List exe = Collections.EMPTY_LIST;
       Interrupter intr = interruptMeIn(TIMEOUT_SHOULDNT * 2, true);
