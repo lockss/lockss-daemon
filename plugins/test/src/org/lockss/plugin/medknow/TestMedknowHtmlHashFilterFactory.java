@@ -157,15 +157,15 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
 
   private static final String tocHtmlKept = 
       "<td width=\"90%\" colspan=\"2\" class=\"tochead\">EDITORIAL</td>" +
-          "<td width=\"10%\"  class=\"tochead\">&nbsp;</td>" +
+          "<td width=\"10%\" class=\"tochead\"> </td>" +
           "<td width=\"75%\" class=\"articleTitle\" style='margin:left:5px;'>Article Title for Editorial</td>" +
-          "<td class=\"sAuthor\">P Ran, NJ Goo<br><b>DOI</b>:1X.1111/0022-3859.153101&nbsp;&nbsp;<b>PMID</b>:55555555</td>" +
-          "<td width=\"90%\" colspan=\"2\"  class=\"tochead\">ORIGINAL ARTICLES</td>" +
+          "<td class=\"sAuthor\">P Ran, NJ Goo<br><b>DOI</b>:1X.1111/0022-3859.153101 <b>PMID</b>:55555555</td>" +
+          "<td width=\"90%\" colspan=\"2\" class=\"tochead\">ORIGINAL ARTICLES</td>" +
           "<td width=\"75%\" class=\"articleTitle\" style='margin:left:5px;'>Another TItle for an Original Article</td>" +
           "<td class=\"sAuthor\" style='line-height:18px;'>P Author, P Writer<br>" +
-          "     <b>DOI</b>:1X.1111/0022-3859.150442&nbsp;&nbsp;<b>PMID</b>:66666666" +
-          "    <div id='a' style='display:none;background-color:#eaeaea;border:1px solid #ddd;padding:5px;'>" +
-          "       abstract goes here </div></td>";
+          " <b>DOI</b>:1X.1111/0022-3859.150442 <b>PMID</b>:66666666" +
+          " <div id='a' style='display:none;background-color:#eaeaea;border:1px solid #ddd;padding:5px;'>" +
+          " abstract goes here </div></td>";
 
 
   private static final String articleHtml = 
@@ -399,9 +399,9 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
       "</tr>" +
       "<tr>" +
       "<td width=\"100%\" colspan=\"2\">" +
-      "<b>Year </b>: 2024&nbsp; |&nbsp; <b>Volume</b>" +
-      ": 11&nbsp;" +
-      "|&nbsp; <b>Issue</b> : 24&nbsp; |&nbsp; <b>Page</b> : 101-104</td>" +
+      "<b>Year </b>: 2024 | <b>Volume</b>" +
+      ": 11 " +
+      "| <b>Issue</b> : 24 | <b>Page</b> : 101-104</td>" +
       "</tr>" +
       "<tr>" +
       "<td width=\"100%\" colspan=\"2\">" +
@@ -462,7 +462,7 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
       "<td width=\"50%\">" +
       "<a href=\"printarticle.asp?issn=0189-6725;year=2024;volume=11;issue=24;spage=101;epage=104;aulast=FOO;type=0\" target=\"_blank\">" +
       "<img border=\"0\" src=\"templates/icon_print.gif\" alt=\"Print this article\">" +
-      "</a>&nbsp;&nbsp;&nbsp;&nbsp;" +
+      "</a> " +
       "<a href=\"emailArticle.asp?issn=0189-6725;year=2024;volume=11;issue=24;spage=101;epage=104;aulast=FOO;type=0\">" +
       "<img border=\"0\" src=\"templates/icon_mail.gif\" alt=\"Email this article\">" +
       "</a>" +
@@ -493,11 +493,11 @@ public class TestMedknowHtmlHashFilterFactory extends LockssTestCase {
   // only keep the link tags that are specific to the issues for this journals/volume
   private static final String backIssueFiltered =
       "<a title=\"Table of Contents\" href=\"showBackIssue.asp?issn=1111-0000;year=2015;volume=8;issue=6;month=yin-yang\">" +
-      "Issue 6&nbsp;(Nov-Dec)</a>" +
+      "Issue 6 (Nov-Dec)</a>" +
       "<a title=\"Table of Contents\" href=\"showBackIssue.asp?issn=1111-0000;year=2015;volume=8;issue=5;month=foo-blah\">" +
-      "Issue 6&nbsp;(Nov-Dec)</a>" +
+      "Issue 6 (Nov-Dec)</a>" +
       "<a title=\"Table of Contents\" href=\"showBackIssue.asp?issn=1111-0000;year=2015;volume=8;issue=4;month=oil-water\">" +
-      "Issue 6&nbsp;(Nov-Dec)</a>";
+      "Issue 6 (Nov-Dec)</a>";
       
   /*
    *  Compare Html and HtmlHashFiltered

@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.medknow;
 
 import java.io.InputStream;
+import java.io.Reader;
 import java.util.regex.Pattern;
 
 import org.htmlparser.Node;
@@ -44,9 +45,13 @@ import org.htmlparser.tags.TableTag;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.StringFilter;
+import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
+import org.lockss.util.ReaderInputStream;
 
 /*
  * Medknow html is very non-descriptive so pursuing a very minimalist approach
@@ -171,8 +176,18 @@ public class MedknowHtmlHashFilterFactory implements FilterFactory {
             }))
             )
         );
+    Reader reader = FilterUtil.getReader(filtered, encoding);
+    // first subsitute plain white space for &nbsp;
+    String[][] unifySpaces = new String[][] { 
+        // inconsistent use of nbsp v empty space - do this replacement first
+        {"&nbsp;", " "}, 
+    };
+    Reader NBSPFilter = StringFilter.makeNestedFilter(reader,
+        unifySpaces, false);   
 
-    return filtered;
+    //now consolidate white space before doing additional tagfilter stuff
+    Reader WSReader = new WhiteSpaceFilter(NBSPFilter);
+    return new ReaderInputStream(WSReader);
 
   }
 
