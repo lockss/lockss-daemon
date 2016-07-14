@@ -465,9 +465,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       // local repository.
       if (config.getBoolean(PluginManager.PARAM_AU_CONTENT_FROM_WS,
 	  PluginManager.DEFAULT_AU_CONTENT_FROM_WS)) {
-	// Yes: Populate the map of archival unit configurations keyed by the
-	// archival unit identifier.
-	populateAuConfigurations();
+	// Yes: Check whether the manager is being, or has been, started.
+	if (pluginMgr != null) {
+	  // Yes: Populate the map of archival unit configurations keyed by the
+	  // archival unit identifier.
+	  populateAuConfigurations();
+	}
       }
     }
   }
