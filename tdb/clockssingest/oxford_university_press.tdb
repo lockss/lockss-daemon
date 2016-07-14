@@ -4956,6 +4956,7 @@
 
     param[base_url] = http://dsh.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
+    #Change name from Literary and Linguistic Computing
 
     au < crawling ; exists ; 2015 ; Digital Scholarship in the Humanities Volume 30 ; 30 ; >
     au < manifest ; exists ; 2016 ; Digital Scholarship in the Humanities Volume 31 ; 31 ; >
@@ -7764,8 +7765,8 @@
 
     au < finished ; crawling ; 2013 ; Gastroenterology Report Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Gastroenterology Report Volume 2 ; 2 ; >
-    au < expected ; exists ; 2015 ; Gastroenterology Report Volume 3 ; 3 ; >
-    au < expected ; exists ; 2016 ; Gastroenterology Report Volume 4 ; 4 ; >
+    au < exists ; exists ; 2015 ; Gastroenterology Report Volume 3 ; 3 ; >
+    au < exists ; exists ; 2016 ; Gastroenterology Report Volume 4 ; 4 ; >
 
   }
 
@@ -8197,7 +8198,7 @@
     param[base_url] = http://globalsummitry.oxfordjournals.org/
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
-    au < expected ; exists ; 2015 ; Global Summitry Volume 1 ; 1 ; >
+    au < exists ; exists ; 2015 ; Global Summitry Volume 1 ; 1 ; >
     au < expected ; exists ; 2016 ; Global Summitry Volume 2 ; 2 ; >
 
   }
@@ -15833,6 +15834,7 @@
 
     param[base_url] = http://llc.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    #Change name to Digital Scholarship in the Humanities (DSH)
 
     au < manifest ; exists ; 1986 ; Literary and Linguistic Computing Volume 1 ; 1 ; >
     au < manifest ; exists ; 1987 ; Literary and Linguistic Computing Volume 2 ; 2 ; >
@@ -15863,8 +15865,6 @@
     au < finished ; finished ; 2012 ; Literary and Linguistic Computing Volume 27 ; 27 ; >
     au < finished ; finished ; 2013 ; Literary and Linguistic Computing Volume 28 ; 28 ; >
     au < finished ; crawling ; 2014 ; Literary and Linguistic Computing Volume 29 ; 29 ; reingest1.clockss.org:8082 >
-    au < expected ; exists ; 2015 ; Literary and Linguistic Computing Volume 30 ; 30 ; >
-    au < expected ; exists ; 2016 ; Literary and Linguistic Computing Volume 31 ; 31 ; >
 
     }
 
@@ -19109,9 +19109,7 @@
     au < crawling ; exists ; 2014 ; Pathogens and Disease Volume 71 ; 71 ; >
     au < exists ; exists ; 2014 ; Pathogens and Disease Volume 72 ; 72 ; >
     au < crawling ; exists ; 2015 ; Pathogens and Disease Volume 73 ; 73 ; >
-    au < crawling ; exists ; 2015 ; Pathogens and Disease Volume 74 ; 74 ; >
-    au < expected ; exists ; 2015 ; Pathogens and Disease Volume 75 ; 75 ; >
-    au < expected ; exists ; 2016 ; Pathogens and Disease Volume 76 ; 76 ; >
+    au < crawling ; exists ; 2016 ; Pathogens and Disease Volume 74 ; 74 ; >
 
   }
 
@@ -24007,8 +24005,8 @@
 
     au < finished ; finished ; 2013 ; London Review of International Law Volume 1 ; 1 ; >
     au < finished ; finished ; 2014 ; London Review of International Law Volume 2 ; 2 ; >
-    au < expected ; exists ; 2015 ; London Review of International Law Volume 3 ; 3 ; >
-    au < expected ; exists ; 2016 ; London Review of International Law Volume 4 ; 4 ; >
+    au < exists ; exists ; 2015 ; London Review of International Law Volume 3 ; 3 ; >
+    au < exists ; exists ; 2016 ; London Review of International Law Volume 4 ; 4 ; >
 
   }
 
@@ -24025,8 +24023,8 @@
 
       au < finished ; crawling ; 2013 ; Migration Studies Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Migration Studies Volume 2 ; 2 ; >
-      au < expected ; exists ; 2015 ; Migration Studies Volume 3 ; 3 ; >
-      au < expected ; exists ; 2016 ; Migration Studies Volume 4 ; 4 ; >
+      au < exists ; exists ; 2015 ; Migration Studies Volume 3 ; 3 ; >
+      au < exists ; exists ; 2016 ; Migration Studies Volume 4 ; 4 ; >
 
   }
 

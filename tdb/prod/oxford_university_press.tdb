@@ -3485,9 +3485,9 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; British Yearbook of International Law Volume 81 ; 81 >
     au < HighWirePressH20Plugin ; released ; 2011 ; British Yearbook of International Law Volume 82 ; 82 >
     au < HighWirePressH20Plugin ; released ; 2012 ; British Yearbook of International Law Volume 83 ; 83 >
-    au < HighWirePressH20Plugin ; released ; 2014 ; British Yearbook of International Law Volume 84 ; 84 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; British Yearbook of International Law Volume 85 ; 85 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; British Yearbook of International Law Volume 86 ; 86 >
+    au < HighWirePressH20Plugin ; released ; 2013 ; British Yearbook of International Law Volume 84 ; 84 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; British Yearbook of International Law Volume 85 ; 85 >
+    au < HighWirePressH20Plugin ; expected ; 2015 ; British Yearbook of International Law Volume 86 ; 86 >
 
   }
 
@@ -5001,6 +5001,7 @@
     param[base_url] = http://dsh.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
+    #Change name from Literary and Linguistic Computing
 
     au < ready ; 2015 ; Digital Scholarship in the Humanities Volume 30 ; 30 >
     au < manifest ; 2016 ; Digital Scholarship in the Humanities Volume 31 ; 31 >
@@ -16413,6 +16414,7 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://llc.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    #Change name to Digital Scholarship in the Humanities (DSH)
 
     au < HighWirePressH20Plugin ; manifest ; 1986 ; Literary and Linguistic Computing Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 1987 ; Literary and Linguistic Computing Volume 2 ; 2 >
@@ -16443,8 +16445,6 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; Literary and Linguistic Computing Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; released ; 2013 ; Literary and Linguistic Computing Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; released ; 2014 ; Literary and Linguistic Computing Volume 29 ; 29 >
-    au < HighWirePressH20Plugin ; expected ; 2015 ; Literary and Linguistic Computing Volume 30 ; 30 >
-    au < HighWirePressH20Plugin ; expected ; 2016 ; Literary and Linguistic Computing Volume 31 ; 31 >
 
     }
 
@@ -19943,9 +19943,7 @@
     au < ready ; 2014 ; Pathogens and Disease Volume 71 ; 71 >
     au < exists ; 2014 ; Pathogens and Disease Volume 72 ; 72 >
     au < ready ; 2015 ; Pathogens and Disease Volume 73 ; 73 >
-    au < ready ; 2015 ; Pathogens and Disease Volume 74 ; 74 >
-    au < expected ; 2015 ; Pathogens and Disease Volume 75 ; 75 >
-    au < expected ; 2016 ; Pathogens and Disease Volume 76 ; 76 >
+    au < ready ; 2016 ; Pathogens and Disease Volume 74 ; 74 >
 
   }
 
