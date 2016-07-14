@@ -43,8 +43,6 @@ import org.lockss.mail.MailService;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.*;
 import org.lockss.truezip.*;
-import org.lockss.protocol.*;
-import org.lockss.protocol.psm.*;
 import org.lockss.proxy.ProxyManager;
 import org.lockss.proxy.icp.IcpManager;
 import org.lockss.remote.RemoteApi;
@@ -69,11 +67,6 @@ public class MockLockssDaemon extends LockssDaemon {
   HashService hashService = null;
   SchedService schedService = null;
   SystemMetrics systemMetrics = null;
-  PsmManager psmManager = null;
-  LcapDatagramComm commManager = null;
-  LcapStreamComm scommManager = null;
-  LcapDatagramRouter datagramRouterManager = null;
-  LcapRouter routerManager = null;
   ProxyManager proxyManager = null;
   ServletManager servletManager = null;
   CrawlManager crawlManager = null;
@@ -81,7 +74,6 @@ public class MockLockssDaemon extends LockssDaemon {
   NodeManagerManager nodeManagerManager = null;
   PluginManager pluginManager = null;
   MetadataManager metadataManager = null;
-  IdentityManager identityManager = null;
   TrueZipManager tzipManager = null;
   StatusService statusService = null;
   RemoteApi remoteApi = null;
@@ -129,14 +121,10 @@ public class MockLockssDaemon extends LockssDaemon {
     wdogService = null;
     hashService = null;
     schedService = null;
-    psmManager = null;
-    commManager = null;
-    scommManager = null;
     proxyManager = null;
     crawlManager = null;
     pluginManager = null;
     metadataManager = null;
-    identityManager = null;
     statusService = null;
     icpManager = null;
     dbManager = null;
@@ -308,71 +296,6 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * return the psm manager instance
-   * @return the PsmManager
-   */
-  public PsmManager getPsmManager() {
-    if (psmManager == null) {
-      psmManager = (PsmManager)newManager(LockssDaemon.PSM_MANAGER);
-      managerMap.put(LockssDaemon.PSM_MANAGER, psmManager);
-    }
-    return psmManager;
-  }
-
-  /**
-   * return the datagram communication manager instance
-   * @return the LcapDatagramComm
-   */
-  public LcapDatagramComm getDatagramCommManager() {
-    if (commManager == null) {
-      commManager =
-	(LcapDatagramComm)newManager(LockssDaemon.DATAGRAM_COMM_MANAGER);
-      managerMap.put(LockssDaemon.DATAGRAM_COMM_MANAGER, commManager);
-    }
-    return commManager;
-  }
-
-  /**
-   * return the stream communication manager instance
-   * @return the LcapStreamComm
-   */
-  public LcapStreamComm getStreamCommManager() {
-    if (scommManager == null) {
-      scommManager =
-	(LcapStreamComm)newManager(LockssDaemon.STREAM_COMM_MANAGER);
-      managerMap.put(LockssDaemon.STREAM_COMM_MANAGER, scommManager);
-    }
-    return scommManager;
-  }
-
-  /**
-   * return the datagram router manager instance
-   * @return the LcapDatagramRouter
-   */
-  public LcapDatagramRouter getDatagramRouterManager() {
-    if (datagramRouterManager == null) {
-      datagramRouterManager =
-	(LcapDatagramRouter)newManager(LockssDaemon.DATAGRAM_ROUTER_MANAGER);
-      managerMap.put(LockssDaemon.DATAGRAM_ROUTER_MANAGER,
-		     datagramRouterManager);
-    }
-    return datagramRouterManager;
-  }
-
-  /**
-   * return the router manager instance
-   * @return the LcapRouter
-   */
-  public LcapRouter getRouterManager() {
-    if (routerManager == null) {
-      routerManager =
-	(LcapRouter)newManager(LockssDaemon.ROUTER_MANAGER);
-      managerMap.put(LockssDaemon.ROUTER_MANAGER, routerManager);
-    }
-    return routerManager;
-  }
-
-  /**
    * return the proxy manager instance
    * @return the ProxyManager
    */
@@ -471,23 +394,6 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * return the Identity Manager
-   * @return IdentityManager
-   */
-  public IdentityManager getIdentityManager() {
-    if (identityManager == null) {
-      identityManager =
-	(IdentityManager)newManager(LockssDaemon.IDENTITY_MANAGER);
-      managerMap.put(LockssDaemon.IDENTITY_MANAGER, identityManager);
-    }
-    return identityManager;
-  }
-
-  public boolean hasIdentityManager() {
-    return identityManager != null;
-  }
-
-  /**
    * return the database manager instance
    * @return the DbManager
    */
@@ -551,43 +457,6 @@ public class MockLockssDaemon extends LockssDaemon {
 
   public boolean isClockss() {
     return forceIsClockss || super.isClockss();
-  }
-
-  /**
-   * Set the datagram CommManager
-   * @param commMan the new manager
-   */
-  public void setDatagramCommManager(LcapDatagramComm commMan) {
-    commManager = commMan;
-    managerMap.put(LockssDaemon.DATAGRAM_COMM_MANAGER, commManager);
-  }
-
-  /**
-   * Set the stream CommManager
-   * @param scommMan the new manager
-   */
-  public void setStreamCommManager(LcapStreamComm scommMan) {
-    scommManager = scommMan;
-    managerMap.put(LockssDaemon.STREAM_COMM_MANAGER, scommManager);
-  }
-
-  /**
-   * Set the DatagramRouterManager
-   * @param datagramRouterMan the new manager
-   */
-  public void setDatagramRouterManager(LcapDatagramRouter datagramRouterMan) {
-    datagramRouterManager = datagramRouterMan;
-    managerMap.put(LockssDaemon.DATAGRAM_ROUTER_MANAGER,
-		   datagramRouterManager);
-  }
-
-  /**
-   * Set the RouterManager
-   * @param routerMan the new manager
-   */
-  public void setRouterManager(LcapRouter routerMan) {
-    routerManager = routerMan;
-    managerMap.put(LockssDaemon.ROUTER_MANAGER, routerManager);
   }
 
   /**
@@ -687,15 +556,6 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setSchedService(SchedService schedServ) {
     schedService = schedServ;
     managerMap.put(LockssDaemon.SCHED_SERVICE, schedService);
-  }
-
-  /**
-   * Set the IdentityManager
-   * @param idMan the new manager
-   */
-  public void setIdentityManager(IdentityManager idMan) {
-    identityManager = idMan;
-    managerMap.put(LockssDaemon.IDENTITY_MANAGER, identityManager);
   }
 
   /**

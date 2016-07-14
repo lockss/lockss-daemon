@@ -41,7 +41,6 @@ import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.mail.*;
 import org.lockss.plugin.*;
-import org.lockss.protocol.*;
 import org.lockss.proxy.*;
 import org.lockss.remote.*;
 import org.lockss.repository.*;
@@ -235,9 +234,6 @@ public class ConfigManager implements LockssManager {
 		  ODLD +"app\\.exit(Once|After|Immediately)$",
 		  Perl5Compiler.quotemeta(PARAM_DAEMON_GROUPS),
 		  Perl5Compiler.quotemeta(PARAM_AUX_PROP_URLS),
-		  Perl5Compiler.quotemeta(IdentityManager.PARAM_LOCAL_IP),
-		  Perl5Compiler.quotemeta(IdentityManager.PARAM_LOCAL_V3_IDENTITY),
-		  Perl5Compiler.quotemeta(IdentityManager.PARAM_LOCAL_V3_PORT),
 		  Perl5Compiler.quotemeta(IpAccessControl.PARAM_ERROR_BELOW_BITS),
 		  Perl5Compiler.quotemeta(ExportContent.PARAM_ENABLE_EXPORT),
 		  Perl5Compiler.quotemeta(PARAM_EXPERT_ALLOW),
@@ -1032,8 +1028,6 @@ public class ConfigManager implements LockssManager {
     putIf(p, "groups",
 	  StringUtil.separatedString(getPlatformGroupList(), ";"));
     putIf(p, "host", getPlatformHostname());
-    putIf(p, "peerid",
-	  currentConfig.get(IdentityManager.PARAM_LOCAL_V3_IDENTITY));
     return p;
   }
 
@@ -1396,15 +1390,9 @@ public class ConfigManager implements LockssManager {
     }
 
     conditionalPlatformOverride(config, PARAM_PLATFORM_IP_ADDRESS,
-				IdentityManager.PARAM_LOCAL_IP);
-
-    conditionalPlatformOverride(config, PARAM_PLATFORM_IP_ADDRESS,
 				ClockssParams.PARAM_INSTITUTION_SUBSCRIPTION_ADDR);
     conditionalPlatformOverride(config, PARAM_PLATFORM_SECOND_IP_ADDRESS,
 				ClockssParams.PARAM_CLOCKSS_SUBSCRIPTION_ADDR);
-
-    conditionalPlatformOverride(config, PARAM_PLATFORM_LOCAL_V3_IDENTITY,
-				IdentityManager.PARAM_LOCAL_V3_IDENTITY);
 
     conditionalPlatformOverride(config, PARAM_PLATFORM_SMTP_PORT,
 				SmtpMailService.PARAM_SMTPPORT);
@@ -1432,8 +1420,6 @@ public class ConfigManager implements LockssManager {
 		       firstSpace);
       platformOverride(config, HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
 		       firstSpace);
-      platformOverride(config, IdentityManager.PARAM_IDDB_DIR,
-		       new File(firstSpace, "iddb").toString());
       platformDefault(config,
 		      org.lockss.truezip.TrueZipManager.PARAM_CACHE_DIR,
 		      new File(firstSpace, "tfile").toString());
@@ -1701,6 +1687,15 @@ public class ConfigManager implements LockssManager {
       processExpertAllowDeny(expertAllow, expertDeny);
     }
     if (cacheConfigInited) return;
+
+    // Do not try to create the config directory if the content is obtained via
+    // web services.
+    if (Boolean.valueOf(getFromGenerations(configGenerations,
+	PluginManager.PARAM_AU_CONTENT_FROM_WS,
+	String.valueOf(PluginManager.DEFAULT_AU_CONTENT_FROM_WS)))) {
+      cacheConfigInited = true;
+      return;
+    }
     String dspace = getFromGenerations(configGenerations,
 				       PARAM_PLATFORM_DISK_SPACE_LIST,
 				       null);

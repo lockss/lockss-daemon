@@ -32,10 +32,8 @@ import java.util.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.test.*;
-import org.lockss.app.*;
 import org.lockss.util.*;
 
 public class TestNodeManagerImpl extends LockssTestCase {
@@ -47,7 +45,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
   private HistoryRepository historyRepo;
   private Random random = new Random();
   private MockLockssDaemon theDaemon;
-  private MyIdentityManager idManager;
   static Logger log = Logger.getLogger("TestNodeManagerImpl");
 
   public void setUp() throws Exception {
@@ -59,7 +56,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
     p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
     p.setProperty(NodeManagerManager.PARAM_MAX_PER_AU_CACHE_SIZE, "10");
-    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.1.2.3");
     p.setProperty(NodeManagerManager.PARAM_RECALL_DELAY, "5s");
     p.setProperty(AuUtil.PARAM_POLL_PROTOCOL_VERSION, "1");
     ConfigurationUtil.setCurrentConfigFromProps(p);
@@ -72,9 +68,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
     crawlManager = new MockCrawlManager();
     theDaemon.setCrawlManager(crawlManager);
     log.debug("Starting the Identity Manager");
-    idManager = new MyIdentityManager();
-    theDaemon.setIdentityManager(idManager);
-    idManager.initService(theDaemon);
     log.debug("Identity Manager started");
     // create au state so thread doesn't throw null pointers
     theDaemon.getLockssRepository(mau).createNewNode(TEST_URL);
@@ -84,7 +77,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
     theDaemon.setHistoryRepository(historyRepo, mau);
     nodeManager.historyRepo = historyRepo;
     historyRepo.startService();
-    idManager.startService();
     nodeManager.startService();
     theDaemon.getHashService().startService();
     loadNodeStates(mau, nodeManager);
@@ -93,7 +85,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
   public void tearDown() throws Exception {
     nodeManager.stopService();
     historyRepo.stopService();
-    idManager.stopService();
     theDaemon.getLockssRepository(mau).stopService();
     theDaemon.getHashService().stopService();
     PluginTestUtil.unregisterAllArchivalUnits();
@@ -517,83 +508,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
     String[] testCaseList = { TestNodeManagerImpl.class.getName() };
     junit.swingui.TestRunner.main(testCaseList);
   }
-
-  /**
-   * This should not extend IdentityManagerImpl, but rather MockIdentityManager
-   * However a) this is not an easy task, as the two are quite entangled
-   * and b) NodeManagerImpl is going to go away or get much simpler w/ V3
-   * so, I'm leaving this for now.
-   * TSR
-   */
-  private class  MyIdentityManager extends IdentityManagerImpl {
-    public HashMap repMap = new HashMap();
-    public HashMap idMap = null;
-
-    public Map agreeMap = new HashMap();
-
-    public MyIdentityManager() {
-      super();
-    }
-
-    public void initService(LockssDaemon daemon) throws LockssAppException {
-      log.debug("MyIdentityManager: initService");
-      super.initService(daemon);
-    }
-
-    protected String getLocalIpParam(Configuration config) {
-      String res = config.get(PARAM_LOCAL_IP);
-      if (res == null) {
-	res = "127.7.7.7";
-      }
-      return res;
-    }
-
-    public void startService() {
-      log.debug("MyIdentityManager: startService");
-      super.startService();
-      idMap = new HashMap();
-    }
-    public void stopService() {
-      log.debug("MyIdentityManager: stopService");
-      super.stopService();
-      idMap = null;
-    }
-
-    public void changeReputation(PeerIdentity id, int changeKind) {
-      idMap.put(id, new Integer(changeKind));
-    }
-
-    public int lastChange(PeerIdentity id) {
-      Integer change = (Integer)idMap.get(id);
-      if (change==null) {
-	return -1;
-      }
-      return change.intValue();
-    }
-
-    public void signalAgreed(PeerIdentity id, ArchivalUnit au) {
-      throw new UnsupportedOperationException("not implemented");
-    }
-
-    public void signalDisagreed(PeerIdentity id, ArchivalUnit au) {
-      throw new UnsupportedOperationException("not implemented");
-    }
-
-    public Map getAgreed(ArchivalUnit au) {
-      return (Map)agreeMap.get(au);
-    }
-
-  public int getReputation(PeerIdentity id) {
-    Integer rep = (Integer)repMap.get(id);
-    if (rep == null) {
-      return 0;
-    }
-    return rep.intValue();
-  }
-
-  public void setReputation(PeerIdentity id, int rep) {
-    repMap.put(id, new Integer(rep));
-  }
 //     /**
 //      * Change the the reputation of the peer
 //      * @param peer the PeerIdentity
@@ -607,9 +521,4 @@ public class TestNodeManagerImpl extends LockssTestCase {
 // 	throw new RuntimeException(e.toString());
 //       }
 //     }
-
-    public void setAgeedForAu(ArchivalUnit au, Map map) {
-      agreeMap.put(au, map);
-    }
-  }
 }

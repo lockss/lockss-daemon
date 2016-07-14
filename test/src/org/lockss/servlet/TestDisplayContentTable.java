@@ -1,10 +1,6 @@
 /*
- * $Id TestDisplayContentTable.java 2012/12/03 14:52:00 rwincewicz $
- */
 
-/*
-
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2012-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,7 +29,6 @@ package org.lockss.servlet;
 
 import java.util.*;
 import org.lockss.plugin.*;
-import org.lockss.protocol.MockIdentityManager;
 import org.lockss.test.*;
 
 /**
@@ -50,8 +45,6 @@ public class TestDisplayContentTable extends LockssTestCase {
   
   private Collection createAuList() {
     MockLockssDaemon daemon = getMockLockssDaemon(); 
-    MockIdentityManager idm = new MockIdentityManager();
-    daemon.setIdentityManager(idm);
     ArrayList<ArchivalUnit> auList = new ArrayList<ArchivalUnit>();
     au1 = MockArchivalUnit.newInited(daemon);
     MockPlugin plugin1 = new MockPlugin(daemon);

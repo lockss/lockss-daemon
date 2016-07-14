@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,16 +30,10 @@ package org.lockss.crawler;
 
 import java.util.*;
 import java.io.*;
-
-import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.config.*;
-import org.lockss.crawler.BaseCrawler.BaseCrawlerFacade;
 import org.lockss.daemon.*;
-import org.lockss.daemon.Crawler.CrawlerFacade;
-import org.lockss.protocol.*;
-import org.lockss.proxy.ProxyManager;
 import org.lockss.plugin.*;
 import org.lockss.state.*;
 
@@ -71,8 +61,6 @@ import org.lockss.state.*;
 public class RepairCrawler extends BaseCrawler {
 
   private static Logger logger = Logger.getLogger("RepairCrawler");
-
-  private IdentityManager idMgr = null;
 
   protected Collection<String> repairUrls = null;
 
@@ -258,14 +246,6 @@ public class RepairCrawler extends BaseCrawler {
     
     updateCacheStats(uf.fetch(), new CrawlUrlData(url, 1));
     crawlStatus.addSource("Publisher");
-  }
-
-  private IdentityManager getIdentityManager() {
-    if (idMgr == null) {
-      idMgr =
-	(IdentityManager)LockssDaemon.getManager(LockssDaemon.IDENTITY_MANAGER);
-    }
-    return idMgr;
   }
 
   /**

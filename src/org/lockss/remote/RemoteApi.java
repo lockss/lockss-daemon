@@ -37,7 +37,6 @@ import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.account.*;
 import org.lockss.plugin.*;
-import org.lockss.protocol.*;
 import org.lockss.state.*;
 import org.lockss.repository.*;
 import org.lockss.servlet.ServletManager;
@@ -110,7 +109,6 @@ public class RemoteApi
 
   private PluginManager pluginMgr;
   private ConfigManager configMgr;
-  private IdentityManager idMgr;
   private RepositoryManager repoMgr;
   private AccountManager acctMgr;
 
@@ -131,7 +129,6 @@ public class RemoteApi
     super.startService();
     pluginMgr = getDaemon().getPluginManager();
     configMgr = getDaemon().getConfigManager();
-    idMgr = getDaemon().getIdentityManager();
     repoMgr = getDaemon().getRepositoryManager();
     acctMgr = getDaemon().getAccountManager();
   }
@@ -537,16 +534,6 @@ public class RemoteApi
 
       platConfig.put(BACK_PROP_VERSION, "2");
       platConfig.put(BACK_PROP_VERSION, "2");
-      try {
-	PeerIdentity p1 = idMgr.getLocalPeerIdentity(0);
-	platConfig.put(BACK_PROP_LOCAL_ID_V1, p1.getIdString());
-      } catch (Exception e) {
-      }
-      try {
-	PeerIdentity p3 = idMgr.getLocalPeerIdentity(1);
-	platConfig.put(BACK_PROP_LOCAL_ID_V3, p3.getIdString());
-      } catch (Exception e) {
-      }
       addPropsToZip(zip, platConfig, BACK_FILE_PROPS,
 		    "Configuration and repair info for LOCKSS box " +
 		    machineName);
@@ -560,13 +547,6 @@ public class RemoteApi
 	} else {
 	  addCfgFileToZip(zip, cfgfile, null);
 	}
-      }
-      // add identity db
-      zip.putNextEntry(new ZipEntry(IdentityManager.IDDB_FILENAME));
-      try {
-	idMgr.writeIdentityDbTo(zip);
-      } catch (FileNotFoundException e) {
-	log.debug2("Couldn't write iddb", e);
       }
       zip.closeEntry();
       if (acctMgr.isEnabled()) {
@@ -620,13 +600,6 @@ public class RemoteApi
 
       addPropsToZip(zip, auprops, dir + BACK_FILE_AU_PROPS,
 		    "AU " + au.getName());
-      if (idMgr.hasAgreeMap(au)) {
-	zip.putNextEntry(new ZipEntry(dir + BACK_FILE_AGREE_MAP));
-	try {
-	  idMgr.writeIdentityAgreementTo(au, zip);
-	} catch (FileNotFoundException e) {}
-	zip.closeEntry();
-      }
       File auStateFile = getAuStateFile(au);
 
       if (auStateFile.exists()) {
@@ -1177,15 +1150,6 @@ public class RemoteApi
       File auBackDir = bi.getAuDir(aup.getAuId());
       if (auBackDir != null) {
 	File agreefile = new File(auBackDir, BACK_FILE_AGREE_MAP);
-	if (agreefile.exists()) {
-	  InputStream in =
-	    new BufferedInputStream(new FileInputStream(agreefile));
-	  try {
-	    idMgr.readIdentityAgreementFrom(aup.getAu(), in);
-	  } finally {
-	    IOUtil.safeClose(in);
-	  }
-	}
       }
     }
   }

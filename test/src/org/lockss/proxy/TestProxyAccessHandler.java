@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,19 +28,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy;
 
-import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.util.StringUtil;
 import org.lockss.plugin.*;
-import org.lockss.protocol.*;
 import org.mortbay.http.*;
-import org.mortbay.http.handler.*;
 import org.mortbay.util.*;
 
 public class TestProxyAccessHandler extends LockssTestCase {
   private MockLockssDaemon theDaemon;
-  private MockIdentityManager idMgr = new MockIdentityManager();
   private MyMockPluginManager pluginMgr = new MyMockPluginManager();
 
   ProxyAccessHandler handler;
@@ -54,7 +45,6 @@ public class TestProxyAccessHandler extends LockssTestCase {
     super.setUp();
     theDaemon = getMockLockssDaemon();
     theDaemon.setPluginManager(pluginMgr);
-    theDaemon.setIdentityManager(idMgr);
     theDaemon.setProxyManager(new ProxyManager());
 
     mau = new MockArchivalUnit();
@@ -135,13 +125,6 @@ public class TestProxyAccessHandler extends LockssTestCase {
        new MockCachedUrl("http://www.example.com/blah/blah.html", mau);
      mcu.setExists(true);
      pluginMgr.setCachedUrl(mcu);
-
-     Map agreedMap = new HashMap();
-     MockPeerIdentity mockPid = new MockPeerIdentity("55.0.0.1");
-     agreedMap.put(mockPid, "1010101010");
-
-     idMgr.setAgeedForAu(mau, agreedMap);
-     idMgr.addPeerIdentity("55.0.0.1", mockPid);
 
      MockHttpResponse res = new MockHttpResponse();
      handler.handle("http://www.example.com/blah/blah.html", "", req, res);

@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,14 +29,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.proxy;
 
 import java.io.*;
-import java.util.*;
 import org.mortbay.http.*;
-import org.mortbay.http.handler.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.jetty.*;
 import org.lockss.plugin.*;
-import org.lockss.protocol.*;
 
 /** Extension of IpAccessHandler that also allows fetches from any cache
  * that has proved it previous had the content it is trying to fetch. */
@@ -51,14 +44,12 @@ public class ProxyAccessHandler extends IpAccessHandler {
   private static Logger log = Logger.getLogger("ProxyAccess");
   private final LockssDaemon daemon;
   private final PluginManager pluginMgr;
-  private final IdentityManager idMgr;
   private final ProxyManager proxyMgr;
 
   public ProxyAccessHandler(LockssDaemon daemon, String serverName) {
     super(serverName);
     this.daemon = daemon;
     pluginMgr = daemon.getPluginManager();
-    idMgr = daemon.getIdentityManager();
     proxyMgr = daemon.getProxyManager();
   }
 
@@ -117,14 +108,6 @@ public class ProxyAccessHandler extends IpAccessHandler {
 	      ip = id;
 	    }
 	  }
-	  if (idMgr.hasAgreed(ip, au)) {
-	    // Allow the request to be processed by the ProxyHandler.
-	    log.debug3("Found "+ip+" in agree map");
-	    return;
-	  } else {
-	    if (log.isDebug3()) {
-	      log.debug3("Agree map: "+idMgr.getAgreed(au));
-	    }
 	    if (isLogForbidden()) {
 	      log.info("Not serving repair of " + cu + " to " + ip +
 		       " because it never agreed with us.");
@@ -132,7 +115,6 @@ public class ProxyAccessHandler extends IpAccessHandler {
 	    response.sendError(HttpResponse.__403_Forbidden);
 	    request.setHandled(true);
 	    return;
-	  }
 	} finally {
 	  AuUtil.safeRelease(cu);
 	}

@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,15 +30,11 @@ package org.lockss.hasher;
 
 import java.util.*;
 import java.io.*;
-import java.math.*;
 import java.security.*;
-import junit.framework.TestCase;
 import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
-import org.lockss.config.*;
 import org.lockss.plugin.*;
-import org.lockss.protocol.*;
 import org.lockss.repository.*;
 
 public class TestSampledBlockHasher extends LockssTestCase {
@@ -67,9 +59,7 @@ public class TestSampledBlockHasher extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    String alg =
-      CurrentConfig.getParam(LcapMessage.PARAM_HASH_ALGORITHM,
-			     LcapMessage.DEFAULT_HASH_ALGORITHM);
+    String alg = "SHA-1";
     setUpDiskSpace();
     daemon = getMockLockssDaemon();
     RepositoryManager repoMgr = daemon.getRepositoryManager();
@@ -85,9 +75,6 @@ public class TestSampledBlockHasher extends LockssTestCase {
     MockNodeManager nodeMgr = new MockNodeManager();
     daemon.setNodeManager(nodeMgr, mau);
     nodeMgr.setAuState(new MockAuState(mau));
-
-    ConfigurationUtil.addFromArgs(LcapMessage.PARAM_HASH_ALGORITHM,
-                                  LcapMessage.DEFAULT_HASH_ALGORITHM);
   }
 
   public void testConstructors() {
@@ -108,8 +95,6 @@ public class TestSampledBlockHasher extends LockssTestCase {
     cus.setHashIterator(CollectionUtil.EMPTY_ITERATOR);
     cus.setFlatIterator(null);
     cus.setEstimatedHashDuration(54321);
-    ConfigurationUtil.addFromArgs(LcapMessage.PARAM_HASH_ALGORITHM,
-                                  "BOGUS_HASH");
     RecordingEventHandler cb = new RecordingEventHandler();
     try {
       CachedUrlSetHasher hasher =

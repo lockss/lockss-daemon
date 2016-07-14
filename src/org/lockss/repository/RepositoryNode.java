@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,7 +31,6 @@ package org.lockss.repository;
 import java.io.*;
 import java.util.*;
 import org.lockss.daemon.CachedUrlSetSpec;
-import org.lockss.protocol.PeerIdentity;
 
 /**
  * RepositoryNode is used to store the contents and
@@ -247,13 +242,6 @@ public interface RepositoryNode extends RepositoryNodeVersion {
    * @param peers A collection of peers for which to signal agreement.
    */
   public void signalAgreement(Collection peers);
-  
-  /**
-   * Returns true if the PeerIdentity has ever agreed with this node during
-   * a poll.
-   * @param peer The peer to check for agreement with this node.
-   */
-  public boolean hasAgreement(PeerIdentity peer);
 
   /**
    * RepositoryNodeContents is used to obtain Properties and InputStream.

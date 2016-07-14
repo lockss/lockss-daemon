@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
  Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -52,7 +48,6 @@ import org.lockss.plugin.SubTreeArticleIterator;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
 import org.lockss.plugin.simulated.SimulatedDefinablePlugin;
-import org.lockss.protocol.IdentityManager;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockLockssDaemon;
@@ -85,9 +80,6 @@ public class TestDaemonStatusService extends LockssTestCase {
     super.setUp();
 
     tempDirPath = setUpDiskSpace();
-
-    ConfigurationUtil.addFromArgs(IdentityManager.PARAM_LOCAL_IP,
-	TEST_LOCAL_IP);
 
     theDaemon = getMockLockssDaemon();
     theDaemon.setDaemonInited(true);

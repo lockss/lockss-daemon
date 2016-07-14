@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,9 +29,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon.status;
 
 import java.util.*;
-
 import org.lockss.util.*;
-import org.lockss.protocol.*;
 import org.lockss.servlet.ServletDescr;
 
 /**
@@ -613,7 +607,6 @@ public class StatusTable {
    */
   public static class Reference implements LinkValue {
     private Object value;
-    private PeerIdentity peerId;
     private String tableName;
     private String key;
     private Properties props;
@@ -646,38 +639,6 @@ public class StatusTable {
       this.key = key;
     }
 
-    /**
-     * Create a Reference to a table on a peer
-     * @param value value to be displayed.  Any value is
-     * legal except another LinkValue
-     * @param peerId the peer whose table to link to
-     * @param tableName name of the {@link StatusTable} that this
-     * links to
-     */
-    public Reference(Object value, PeerIdentity peerId, String tableName) {
-      this(value, peerId, tableName, null);
-    }
-
-    /**
-     * Create a Reference object with an embedded value.
-     * @param value value to be displayed.  Any value is
-     * legal except another LinkValue
-     * @param peerId the peer whose table to link to
-     * @param tableName name of the {@link StatusTable} that this
-     * links to
-     * @param key object further specifying the table this links to
-     */
-    public Reference(Object value, PeerIdentity peerId,
-		     String tableName, String key) {
-      if (value instanceof LinkValue) {
-	throw new IllegalArgumentException("Value of a Reference can't be a LinkValue");
-      }
-      this.value = value;
-      this.peerId = peerId;
-      this.tableName = tableName;
-      this.key = key;
-    }
-
     public void setProperty(String key, String val) {
       if (props == null) {
 	props = new Properties();
@@ -693,10 +654,6 @@ public class StatusTable {
       return value;
     }
 
-    public PeerIdentity getPeerId() {
-      return peerId;
-    }
-
     public String getTableName() {
       return tableName;
     }
@@ -710,10 +667,6 @@ public class StatusTable {
       sb.append("[StatusTable.Reference: ");
       sb.append(value);
       sb.append(", ");
-      if (peerId != null) {
-	sb.append(peerId);
-	sb.append(", ");
-      }	
       sb.append(tableName);
       sb.append(", ");
       sb.append(key);
@@ -733,11 +686,7 @@ public class StatusTable {
 	return false;
       }
       //true iff both strings are equal or null
-      return (StringUtil.equalStrings(key, ref.getKey())
-	      && (peerId == null
-		  ? ref.getPeerId() == null
-		  : peerId.equals(ref.getPeerId())));
-      
+      return true;
     }
 
     public int hashCode() {

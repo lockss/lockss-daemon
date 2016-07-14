@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,12 +31,10 @@ package org.lockss.daemon;
 import java.io.IOException;
 import java.security.MessageDigest;
 import java.util.Hashtable;
-
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.hasher.HashService;
 import org.lockss.plugin.PluginManager;
-import org.lockss.protocol.LcapMessage;
 import org.lockss.util.*;
 
 /**
@@ -90,7 +84,6 @@ public class SystemMetrics
   private static Logger logger = Logger.getLogger("SystemMetrics");
 
   Hashtable estimateTable = new Hashtable();
-  MessageDigest defaultDigest = LcapMessage.getDefaultMessageDigest();
   HashService hashService;
   private PluginManager pluginMgr;
   int defaultSpeed = DEFAULT_DEFAULT_HASH_SPEED;
@@ -135,11 +128,7 @@ public class SystemMetrics
    * @throws NoHashEstimateAvailableException if no estimate is available
    */
   public int getBytesPerMsHashEstimate() {
-    try {
-      return getBytesPerMsHashEstimate(null, defaultDigest);
-    } catch (IOException e) {
       return defaultSpeed;
-    }
   }
 
   /**

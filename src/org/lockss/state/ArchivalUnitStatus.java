@@ -28,7 +28,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.state;
 
-import java.io.*;
 import java.util.*;
 import java.text.*;
 import java.net.MalformedURLException;
@@ -40,7 +39,6 @@ import org.lockss.plugin.definable.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
 import org.lockss.crawler.*;
-import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.servlet.*;
 
@@ -1647,35 +1645,6 @@ public class ArchivalUnitStatus
       HistoryRepository historyRepo = theDaemon.getHistoryRepository(au);
       table.setTitle("Peers not holding " + au.getName());
     }
-
-
-    private List getRows(StatusTable table, ArchivalUnit au,
-			 DatedPeerIdSet noAuSet) {
-      List rows = new ArrayList();
-      try {
-	logger.info("noAuSet.size(): " + noAuSet.size());
-      } catch (IOException e) {
-	logger.error("noAuSet.size()", e);
-      }
-      for (PeerIdentity pid : noAuSet) {
-	logger.info("pid: " + pid);
-	Map row = new HashMap();
-	row.put("Peer", pid.getIdString());
-        rows.add(row);
-      }
-      return rows;
-    }
-    private List getSummaryInfo(ArchivalUnit au, DatedPeerIdSet noAuSet) {
-      List res = new ArrayList();
-      try {
-	res.add(new StatusTable.SummaryInfo("Last cleared",
-					    ColumnDescriptor.TYPE_DATE,
-					    noAuSet.getDate()));
-      } catch (IOException e) {
-	logger.warning("Couldn't get date", e);
-      }
-      return res;
-    }
   }
 
   abstract static class BaseAgreementTable extends PerAuTable {
@@ -1686,26 +1655,7 @@ public class ArchivalUnitStatus
       super(theDaemon);
     }
 
-    protected Map makeRow(PeerIdentity peerId) {
-      Map rowMap = new HashMap();
-
-      Object str = peerId.getIdString();
-      if (peerId.isLocalIdentity()) {
-	StatusTable.DisplayedValue val =
-	  new StatusTable.DisplayedValue(str);
-	val.setBold(true);
-	str = val;
-      }
-      rowMap.put("Box", str);
-      return rowMap;
-    }
-
-    protected Map makeRow(CacheStats stats) {
-      return makeRow(stats.peer);
-    }
-
     class CacheStats {
-      PeerIdentity peer;
       int totalPolls = 0;
       int agreePolls = 0;
       long lastAgreeTime = 0;
@@ -1720,9 +1670,6 @@ public class ArchivalUnitStatus
       long highestAgreementHintTime = 0;
       long lastAgreementHintTime = 0;
 
-      CacheStats(PeerIdentity peer) {
-	this.peer = peer;
-      }
       boolean isLastAgree() {
 	return (lastAgreeTime != 0  &&
 		(lastDisagreeTime == 0 || lastAgreeTime >= lastDisagreeTime));
@@ -1766,19 +1713,6 @@ public class ArchivalUnitStatus
 	table.setDefaultSortRules(sortRules);
 	Map statsMap = buildCacheStats(au, nodeMan);
 	List rowL = new ArrayList();
-	for (Iterator iter = statsMap.entrySet().iterator(); iter.hasNext();) {
-	  Map.Entry entry = (Map.Entry)iter.next();
-	  PeerIdentity peer = (PeerIdentity)entry.getKey();
-	  CacheStats stats = (CacheStats)entry.getValue();
-	  if (! peer.isLocalIdentity()) {
-	    totalPeers++;
-	    if (stats.isLastAgree()) {
-	      totalAgreement++;
-	    }
-	  }
-	  Map row = makeRow(stats);
-	  rowL.add(row);
-	}
 	table.setRows(rowL);
       }
       table.setSummaryInfo(getSummaryInfo(au, totalPeers, totalAgreement));
@@ -1787,17 +1721,6 @@ public class ArchivalUnitStatus
     public Map buildCacheStats(ArchivalUnit au, NodeManager nodeMan) {
       Map statsMap = new HashMap();
       return statsMap;
-    }
-
-    protected Map makeRow(CacheStats stats) {
-      Map rowMap = super.makeRow(stats);
-      rowMap.put("Last",
-		 stats.isLastAgree() ? "Agree" : "Disagree");
-      rowMap.put("Polls", new Long(stats.totalPolls));
-      rowMap.put("Agree", new Long(stats.agreePolls));
-      rowMap.put("LastAgree", new Long(stats.lastAgreeTime));
-      rowMap.put("LastDisagree", new Long(stats.lastDisagreeTime));
-      return rowMap;
     }
 
     protected List getSummaryInfo(ArchivalUnit au,
@@ -1856,10 +1779,6 @@ public class ArchivalUnitStatus
 
     protected String getTitle(StatusTable table, ArchivalUnit au) {
       String polltype = getStringProp(table, POLL_TYPE);
-      AgreementType at = getAgreementType(polltype);
-      if (at != null) {
-	return at.toString() + " agreements for AU: " + au.getName();
-      }
       return "Repair candidates for AU: " + au.getName();
     }
     private static final String FOOT_TITLE =
@@ -1872,7 +1791,6 @@ public class ArchivalUnitStatus
 
     protected void populateTable(StatusTable table, ArchivalUnit au)
         throws StatusService.NoSuchTableException {
-      IdentityManager idMgr = theDaemon.getIdentityManager();
       table.setTitle(getTitle(table, au));
       table.setTitleFootnote(FOOT_TITLE);
       int totalPeers = 0;
@@ -1881,119 +1799,10 @@ public class ArchivalUnitStatus
 	table.setDefaultSortRules(sortRules);
 
 	String agmntName = getStringProp(table, POLL_TYPE);
-	AgreementType type = getAgreementType(agmntName);
-	AgreementType[] types;
-	if (type != null) {
-	  types = new AgreementType[] { type };
-	} else {
-	  types = AgreementType.primaryTypes();
-	}
-	Map statsMap = buildCacheStats(au, idMgr, types);
 	List rowL = new ArrayList();
-	for (Iterator iter = statsMap.entrySet().iterator(); iter.hasNext();) {
-	  Map.Entry entry = (Map.Entry)iter.next();
-	  PeerIdentity peer = (PeerIdentity)entry.getKey();
-	  CacheStats stats = (CacheStats)entry.getValue();
-	  if (! peer.isLocalIdentity()) {
-	    totalPeers++;
-	  }
-	  Map row = makeRow(stats);
-	  rowL.add(row);
-	}
 	table.setRows(rowL);
       }
       table.setSummaryInfo(getSummaryInfo(au, totalPeers));
-    }
-
-    AgreementType getAgreementType(String agmntName) {
-      if ("pop".equalsIgnoreCase(agmntName)) {
-	return AgreementType.POP;
-      } else if ("por".equalsIgnoreCase(agmntName)) {
-	return AgreementType.POR;
-      } else if ("symmetric_por".equalsIgnoreCase(agmntName)) {
-	return AgreementType.SYMMETRIC_POR;
-      } else if ("symmetric_pop".equalsIgnoreCase(agmntName)) {
-	return AgreementType.SYMMETRIC_POP;
-      } else {
-	return null;
-      }
-    }
-
-    public Map buildCacheStats(ArchivalUnit au, IdentityManager idMgr,
-			       AgreementType[] types) {
-      Map<PeerIdentity,CacheStats> statsMap =
-	new HashMap<PeerIdentity,CacheStats>();
-      for (AgreementType type : types) {
-	Map<PeerIdentity, PeerAgreement> amap =
-	  idMgr.getAgreements(au, type);
-	Map<PeerIdentity, PeerAgreement> ahintmap =
-	  idMgr.getAgreements(au, AgreementType.getHintType(type));
-
-	for (Map.Entry<PeerIdentity, PeerAgreement> ent : amap.entrySet()) {
-	  PeerIdentity pid = ent.getKey();
-	  CacheStats stats = statsMap.get(pid);
-	  if (stats == null) {
-	    stats = new CacheStats(pid);
-	    statsMap.put(pid, stats);
-	  }
-	  PeerAgreement pa = ent.getValue();
-	  if (pa.getHighestPercentAgreement() >= 0.0 &&
-	      pa.getHighestPercentAgreement() > stats.highestAgreement) {
-	    stats.highestAgreement = pa.getHighestPercentAgreement();
-	    stats.highestAgreementTime = pa.getHighestPercentAgreementTime();
-	  }
-	  if (pa.getPercentAgreement() >= 0.0 &&
-	      pa.getPercentAgreementTime() > stats.lastAgreementTime) {
-	    stats.lastAgreementTime = pa.getPercentAgreementTime();
-	    stats.lastAgreement = pa.getPercentAgreement();
-	  }
-	}	    
-	for (Map.Entry<PeerIdentity, PeerAgreement> ent : ahintmap.entrySet()) {
-	  PeerIdentity pid = ent.getKey();
-	  CacheStats stats = statsMap.get(pid);
-	  if (stats == null) {
-	    stats = new CacheStats(pid);
-	    statsMap.put(pid, stats);
-	  }
-	  PeerAgreement pa = ent.getValue();
-	  if (pa.getHighestPercentAgreement() >= 0.0 &&
-	      pa.getHighestPercentAgreement() > stats.highestAgreementHint) {
-	    stats.highestAgreementHint = pa.getHighestPercentAgreement();
-	    stats.highestAgreementHintTime = pa.getHighestPercentAgreementTime();
-	  }
-	  if (pa.getPercentAgreement() >= 0.0 &&
-	      pa.getPercentAgreementTime() > stats.lastAgreementHintTime) {
-	    stats.lastAgreementHintTime = pa.getPercentAgreementTime();
-	    stats.lastAgreementHint = pa.getPercentAgreement();
-	  }
-	}	    
-      }
-      return statsMap;
-    }
-
-    protected Map makeRow(CacheStats stats) {
-      Map rowMap = super.makeRow(stats);
-      if (stats.highestAgreement >= 0.0f) {
-	rowMap.put("LastPercentAgreement",
-		   new Float(stats.lastAgreement));
-	rowMap.put("LastPercentAgreementDate",
-		   new Long(stats.lastAgreementTime));
-	rowMap.put("HighestPercentAgreement",
-		   new Float(stats.highestAgreement));
-	rowMap.put("HighestPercentAgreementDate",
-		   new Long(stats.highestAgreementTime));
-      }
-      if (stats.highestAgreementHint >= 0.0f) {
-	rowMap.put("LastPercentAgreementHint",
-		   new Float(stats.lastAgreementHint));
-	rowMap.put("LastPercentAgreementHintDate",
-		   new Long(stats.lastAgreementHintTime));
-	rowMap.put("HighestPercentAgreementHint",
-		   new Float(stats.highestAgreementHint));
-	rowMap.put("HighestPercentAgreementHintDate",
-		   new Long(stats.highestAgreementHintTime));
-      }
-      return rowMap;
     }
 
     protected List getSummaryInfo(ArchivalUnit au,
@@ -2045,7 +1854,6 @@ public class ArchivalUnitStatus
 
     protected void populateTable(StatusTable table, ArchivalUnit au)
         throws StatusService.NoSuchTableException {
-      IdentityManager idMgr = theDaemon.getIdentityManager();
       table.setTitle(getTitle(au));
       int totalPeers = 0;
       if (!table.getOptions().get(StatusTable.OPTION_NO_ROWS)) {
@@ -2055,76 +1863,8 @@ public class ArchivalUnitStatus
 						new StatusTable.SortRule("Type",
 									 true)));
 	List rowL = new ArrayList();
-	for (Map.Entry<PeerIdentity,Map<AgreementType,PeerAgreement>> ent :
-	       buildCacheStats(au, idMgr).entrySet()) {
-	  PeerIdentity peer = ent.getKey();
-	  for (AgreementType type : AgreementType.primaryAndWeightedTypes()) {
-	    Map<AgreementType,PeerAgreement> typeMap = ent.getValue();
-	    PeerAgreement pa = typeMap.get(type);
-	    PeerAgreement pahint = typeMap.get(AgreementType.getHintType(type));
-	    if (pa != null || pahint != null) {
-	      rowL.add(makeRow(peer, type, pa, pahint));
-	    }
-	  }
-	}
 	table.setRows(rowL);
       }
-    }
-
-
-    public Map<PeerIdentity,Map<AgreementType,PeerAgreement>>
-	  buildCacheStats(ArchivalUnit au, IdentityManager idMgr) {
-
-      Map<PeerIdentity,Map<AgreementType,PeerAgreement>> res =
-	new HashMap<PeerIdentity,Map<AgreementType,PeerAgreement>>();
-      for (AgreementType type : AgreementType.allTypes()) {
-	Map<PeerIdentity, PeerAgreement> peerMap =
-	  idMgr.getAgreements(au, type);
-	if (peerMap != null) {
-	  for (Map.Entry<PeerIdentity,PeerAgreement> ent : peerMap.entrySet()) {
-	    PeerIdentity pid = ent.getKey();
-	    Map<AgreementType,PeerAgreement> typeMap = res.get(pid);
-	    if (typeMap == null) {
-	      typeMap =
-		new EnumMap<AgreementType,PeerAgreement>(AgreementType.class);
-	      res.put(pid, typeMap);
-	    }
-
-// 	    typeMap.put(type, ent.getValue());
- 	    typeMap.put(type, ent.getValue().mergeWith(typeMap.get(type)));
-	  }
-	}
-      }
-      return res;
-    }
-
-    public Map makeRow(PeerIdentity peerId, AgreementType type,
-		       PeerAgreement pa, PeerAgreement pahint) {
-      Map row = super.makeRow(peerId);
-      row.put("Type", type.toString());
-      if (pa != null) {
-	if (pa.getPercentAgreement() >= 0.0) {
-	  row.put("Last", new Float(pa.getPercentAgreement()));
-	  row.put("LastDate", pa.getPercentAgreementTime());
-	}
-	if (pa.getHighestPercentAgreement() >= 0.0) {
-	  row.put("Highest", new Float(pa.getHighestPercentAgreement()));
-	  row.put("HighestDate", pa.getHighestPercentAgreementTime());
-	}
-      }
-      if (pahint != null) {
-	if (pahint.getPercentAgreement() >= 0.0) {
-	  row.put("LastHint", new Float(pahint.getPercentAgreement()));
-	  row.put("LastHintDate", pahint.getPercentAgreementTime());
-	}
-	if (pahint.getHighestPercentAgreement() >= 0.0) {
-	  row.put("HighestHint",
-		  new Float(pahint.getHighestPercentAgreement()));
-	  row.put("HighestHintDate",
-		  pahint.getHighestPercentAgreementTime());
-	}
-      }
-      return row;
     }
 
     // utility method for making a Reference

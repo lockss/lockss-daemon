@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2011-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,14 +29,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.util.*;
-
 import org.lockss.test.*;
 import org.lockss.daemon.AuHealthMetric;
 import org.lockss.plugin.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
-import org.lockss.protocol.*;
-
 import static org.lockss.util.Constants.DAY;
 
 
@@ -48,7 +41,6 @@ public class TestAuHealthMetric extends LockssTestCase {
 
   MockLockssDaemon daemon;
   MockArchivalUnit au1, au2, au3, au4;
-  MockIdentityManager idm;
   
   protected void setUp() throws Exception {
     super.setUp();
@@ -60,8 +52,6 @@ public class TestAuHealthMetric extends LockssTestCase {
 					       AuHealthMetric.PARAM_HEALTH_EXPR, 
 					       AuHealthMetric.PARAM_INCLUSION_THRESHOLD));
 
-    idm = new MockIdentityManager();
-    daemon.setIdentityManager(idm);
     au1 = MockArchivalUnit.newInited(daemon);
     au2 = MockArchivalUnit.newInited(daemon);
     au3 = MockArchivalUnit.newInited(daemon);
@@ -120,11 +110,6 @@ public class TestAuHealthMetric extends LockssTestCase {
 
   void setNumRepairers(ArchivalUnit au, int n) {
     Map map = new HashMap();
-    for (int ix = 0; ix < 3; ix++) {
-      MockPeerIdentity id = new MockPeerIdentity("127.0.0."+ix);
-      map.put(id, new Long(10+ix));
-    }
-    idm.setAgeedForAu(au, map);
   }
 
   public void testAccessors() {

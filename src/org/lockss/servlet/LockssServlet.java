@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,10 +33,8 @@ import java.net.*;
 import java.util.*;
 import java.util.List;
 import java.security.Principal;
-
 import javax.servlet.*;
 import javax.servlet.http.*;
-
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.collections.*;
 import org.apache.commons.collections.bidimap.*;
@@ -48,16 +42,13 @@ import org.apache.commons.collections.iterators.*;
 import org.mortbay.html.*;
 import org.mortbay.http.*;
 import org.mortbay.servlet.MultiPartRequest;
-
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.account.*;
-import org.lockss.protocol.*;
 import org.lockss.jetty.*;
 import org.lockss.alert.*;
 import org.lockss.servlet.ServletUtil.LinkWithExplanation;
 import org.lockss.util.*;
-
 import org.xnap.commons.i18n.I18n;
 
 /** Abstract base class for LOCKSS servlets
@@ -623,10 +614,6 @@ public abstract class LockssServlet extends HttpServlet
     return srvURLFromStem(srvUrlStem(host), d, params);
   }
 
-  String srvURL(PeerIdentity peer, ServletDescr d, String params) {
-    return srvURLFromStem(peer.getUiUrlStem(reqURL.getPort()), d, params);
-  }
-
   /** Construct servlet URL, with params as necessary.  Avoid generating a
    *  hostname different from that used in the original request, or
    *  browsers will prompt again for login
@@ -707,13 +694,6 @@ public abstract class LockssServlet extends HttpServlet
   /** Return an absolute link to a servlet with params */
   String srvAbsLink(String host, ServletDescr d, String text, String params) {
     return new Link(srvURL(host, d, params),
-		    (text != null ? text : d.heading)).toString();
-  }
-
-  /** Return an absolute link to a servlet with params */
-  String srvAbsLink(PeerIdentity peer, ServletDescr d, String text,
-		    String params) {
-    return new Link(srvURL(peer, d, params),
 		    (text != null ? text : d.heading)).toString();
   }
 

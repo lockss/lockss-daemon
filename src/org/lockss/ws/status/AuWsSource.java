@@ -48,10 +48,6 @@ import org.lockss.plugin.CachedUrlSet;
 import org.lockss.plugin.CachedUrlSetNode;
 import org.lockss.plugin.CuIterator;
 import org.lockss.plugin.Plugin;
-import org.lockss.protocol.AgreementType;
-import org.lockss.protocol.IdentityManager;
-import org.lockss.protocol.PeerAgreement;
-import org.lockss.protocol.PeerIdentity;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.repository.RepositoryNode;
 import org.lockss.state.AuState;
@@ -61,11 +57,8 @@ import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.TypedEntryMap;
 import org.lockss.util.UrlUtil;
-import org.lockss.ws.entities.AgreementTypeWsResult;
 import org.lockss.ws.entities.AuConfigurationWsResult;
 import org.lockss.ws.entities.AuWsResult;
-import org.lockss.ws.entities.PeerAgreementWsResult;
-import org.lockss.ws.entities.PeerAgreementsWsResult;
 import org.lockss.ws.entities.UrlWsResult;
 
 /**
@@ -109,7 +102,6 @@ public class AuWsSource extends AuWsResult {
   private boolean newContentCrawlUrlsPopulated = false;
   private boolean urlStemsPopulated = false;
   private boolean isBulkContentPopulated = false;
-  private boolean peerAgreementsPopulated = false;
   private boolean urlsPopulated = false;
   private boolean substanceUrlsPopulated = false;
   private boolean articleUrlsPopulated = false;
@@ -588,92 +580,6 @@ public class AuWsSource extends AuWsResult {
     }
 
     return super.getIsBulkContent();
-  }
-
-  @Override
-  public List<PeerAgreementsWsResult> getPeerAgreements() {
-    if (!peerAgreementsPopulated) {
-      IdentityManager idManager = getTheDaemon().getIdentityManager();
-
-      // Initialize the the map of agreements by type by peer.
-      Map<String, Map<AgreementType, PeerAgreement>>
-      allAgreementsByPeer =
-	  new HashMap<String, Map<AgreementType, PeerAgreement>>();
-
-      // Loop through all the types of agreements.
-      for (AgreementType type : AgreementType.values()) {
-	// Get the agreements for this type.
-	Map<PeerIdentity, PeerAgreement> agreementsByPeer =
-	    idManager.getAgreements(au, type);
-
-	// Loop through the peers for the agreements.
-	for (PeerIdentity pid : agreementsByPeer.keySet()) {
-	  // Get the agreement of this type for this peer.
-	  PeerAgreement agreement = agreementsByPeer.get(pid);
-	  // Check whether there has been an agreement at some point in the
-	  // past.
-	  if (agreement != null
-	      && agreement.getHighestPercentAgreement() >= 0.0) {
-
-	    // Yes: Create the map of agreements for this peer in the map of
-	    // agreements by type by peer if it does not exist already.
-	    Map<AgreementType,PeerAgreement> typeMap =
-	      allAgreementsByPeer.get(pid.getIdString());
-	    if (typeMap == null) {
-	      typeMap = new HashMap<AgreementType, PeerAgreement>();
-	      allAgreementsByPeer.put(pid.getIdString(), typeMap);
-	    }
-
-	    // Add this type of agreement to the map of agreements for this peer
-	    // in the map of by type by peer.
-// 	    allAgreementsByPeer.get(pid.getIdString()).put(type, agreement);
-	    typeMap.put(type, agreement.mergeWith(typeMap.get(type)));
-	  }
-	}
-      }
-
-      // Initialize the results.
-      List<PeerAgreementsWsResult> results =
-	  new ArrayList<PeerAgreementsWsResult>();
-
-      // Loop through all the peer identifiers.
-      for (String pidid : allAgreementsByPeer.keySet()) {
-	// Create the result agreements by type for this peer identifier.
-	Map<AgreementTypeWsResult, PeerAgreementWsResult> resultAgreements =
-	    new HashMap<AgreementTypeWsResult, PeerAgreementWsResult>();
-
-	// Loop through all the types for this peer identifier.
-	for (AgreementType type : allAgreementsByPeer.get(pidid).keySet()) {
-	  // Get the corresponding result type.
-	  AgreementTypeWsResult resultType =
-	      AgreementTypeWsResult.values()[type.ordinal()];
-
-	  // Get the agreement for this type for this peer identifier.
-	  PeerAgreement agreement = allAgreementsByPeer.get(pidid).get(type);
-
-	  // Get the corresponding result agreement.
-	  PeerAgreementWsResult resultAgreement = new PeerAgreementWsResult(
-		Float.valueOf(agreement.getPercentAgreement()),
-		Long.valueOf(agreement.getPercentAgreementTime()),
-		Float.valueOf(agreement.getHighestPercentAgreement()),
-		Long.valueOf(agreement.getHighestPercentAgreementTime()));
-
-	  // Save this type/agreement pair for this peer identifier.
-	  resultAgreements.put(resultType, resultAgreement);
-	}
-
-	// Save the result for this peer identifier.
-	PeerAgreementsWsResult result = new PeerAgreementsWsResult();
-	result.setPeerId(pidid);
-	result.setAgreements(resultAgreements);
-	results.add(result);
-      }
-
-      setPeerAgreements(results);
-      peerAgreementsPopulated = true;
-    }
-
-    return super.getPeerAgreements();
   }
 
   @Override

@@ -1,10 +1,6 @@
 /*
- * $Id $
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,18 +31,14 @@ package org.lockss.servlet;
 import java.io.*;
 import java.text.*;
 import java.util.*;
-
 import javax.servlet.*;
-
 import org.apache.commons.lang3.time.FastDateFormat;
 import org.mortbay.html.*;
 import org.w3c.dom.Document;
-
 import org.lockss.config.*;
 import org.lockss.daemon.status.*;
 import org.lockss.plugin.PluginManager;
 import org.lockss.util.*;
-
 
 /**
  * DaemonStatus servlet
@@ -794,16 +786,9 @@ public class DaemonStatusNew extends LockssServlet {
 	sb.append(urlEncode((String)ent.getValue()));
       }
     }
-    if (ref.getPeerId() != null) {
-      return srvAbsLink(ref.getPeerId(),
-			myServletDescr(),
-			getDisplayString(ref.getValue(), type),
-			sb.toString());
-    } else {
       return srvLink(myServletDescr(),
 		     getDisplayString(ref.getValue(), type),
 		     sb.toString());
-    }
   }
 
   // turn UrlLink into html link

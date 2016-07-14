@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2011-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,12 +30,10 @@ package org.lockss.daemon;
 
 import java.util.*;
 import javax.script.*;
-
 import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
-import org.lockss.protocol.*;
 
 /**
  * Metric that represents the preservation status, or "health" of an AU or
@@ -354,8 +348,7 @@ public class AuHealthMetric {
     
   /** Return the estimated number of peers willing to repair this AU */
   public int getNumberOfRepairers() {
-    IdentityManager idMgr = AuUtil.getDaemon(au).getIdentityManager();
-    return idMgr.countCachesToRepairFrom(au);
+    return 0;
   }
 
   /** Return true if the AU has at least one successful crawl */

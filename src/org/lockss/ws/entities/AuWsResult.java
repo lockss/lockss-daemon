@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
  Copyright (c) 2014-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -70,7 +66,6 @@ public class AuWsResult {
   private List<String> newContentCrawlUrls;
   private List<String> urlStems;
   private Boolean isBulkContent;
-  private List<PeerAgreementsWsResult> peerAgreements;
   private List<UrlWsResult> urls;
   private List<String> substanceUrls;
   private List<String> articleUrls;
@@ -470,18 +465,6 @@ public class AuWsResult {
   }
 
   /**
-   * Provides the Archival Unit peer agreements.
-   * 
-   * @return a List<PeerAgreementsWsResult> with the peer agreements.
-   */
-  public List<PeerAgreementsWsResult> getPeerAgreements() {
-    return peerAgreements;
-  }
-  public void setPeerAgreements(List<PeerAgreementsWsResult> peerAgreements) {
-    this.peerAgreements = peerAgreements;
-  }
-
-  /**
    * Provides the Archival Unit URLs.
    * 
    * @return a List<UrlWsResult> with the URLs.
@@ -561,10 +544,9 @@ public class AuWsResult {
 	+ ", currentlyPolling=" + currentlyPolling + ", subscriptionStatus="
 	+ subscriptionStatus + ", auConfiguration=" + auConfiguration
 	+ ", newContentCrawlUrls=" + newContentCrawlUrls + ", urlStems="
-	+ urlStems + ", isBulkContent=" + isBulkContent + ", peerAgreements="
-	+ peerAgreements + ", urls=" + urls + ", substanceUrls=" + substanceUrls
-	+ ", articleUrls=" + articleUrls + ", journalTitle=" + journalTitle
-	+ ", tdbProvider=" + tdbProvider
+	+ urlStems + ", isBulkContent=" + isBulkContent + ", urls=" + urls
+	+ ", substanceUrls=" + substanceUrls + ", articleUrls=" + articleUrls
+	+ ", journalTitle=" + journalTitle + ", tdbProvider=" + tdbProvider
 	+ "]";
   }
 }

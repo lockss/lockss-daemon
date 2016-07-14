@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,13 +30,10 @@ package org.lockss.daemon.status;
 
 import java.util.*;
 import java.text.*;
-
 import org.apache.commons.lang3.time.FastDateFormat;
-
 import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.servlet.*;
-
 import org.w3c.dom.*;
 
 public class XmlStatusTable {
@@ -308,13 +301,6 @@ public class XmlStatusTable {
       addTextElement(refElement, XmlStatusConstants.KEY, refVal.getKey());
     }
     Properties refProps = refVal.getProperties();
-    if (refVal.getPeerId() != null) {
-      refElement.setAttribute(XmlStatusConstants.PEERID,
-			      refVal.getPeerId().getIdString());
-      // XXX 8081 shouldn't be hardwired
-      refElement.setAttribute(XmlStatusConstants.URL_STEM,
-			      refVal.getPeerId().getUiUrlStem(8081/*reqURL.getPort()*/));
-    }
     if (refProps != null) {
       for (Iterator iter = refProps.entrySet().iterator(); iter.hasNext(); ) {
 	Map.Entry ent = (Map.Entry)iter.next();

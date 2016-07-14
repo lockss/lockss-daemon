@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,12 +31,9 @@ package org.lockss.daemon.status;
 import java.io.*;
 import java.net.*;
 import java.util.*;
-
 import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.protocol.*;
 import org.lockss.servlet.*;
-
 import org.w3c.dom.*;
 
 public class TestXmlStatusTable extends LockssTestCase {
@@ -81,17 +74,9 @@ public class TestXmlStatusTable extends LockssTestCase {
     StatusTable.Reference refValue1 =
       new StatusTable.Reference("row2 string", "table2", "key2");
 
-    PeerIdentity pid = V3TestUtils.findPeerIdentity(getMockLockssDaemon(),
-						    peerKey);
-    StatusTable.Reference refValue2 =
-      new StatusTable.Reference("row3 string3", pid, "tableN", "keyN");
-    refValue2.setProperty("prop4", "val4");
-    refValue2.setProperty("prop8", "no");
-
     Object[][] rowObj = {
       {new Integer(123), "row1 string"},
       {dispValue, refValue1},
-      {dispValue, refValue2, new Date(30000000)},
       {new Integer(99960), Collections.EMPTY_LIST},
       {new Integer(99970)},		// sparse row
       {StatusTable.NO_VALUE, "missing value row"}, // elem w/ no value, sorts first

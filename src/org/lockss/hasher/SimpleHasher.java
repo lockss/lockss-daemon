@@ -40,7 +40,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.lockss.servlet.ServletUtil;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
-import org.lockss.protocol.LcapMessage;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
@@ -522,10 +521,6 @@ public class SimpleHasher {
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
     String errorMessage = null;
-
-    if (StringUtil.isNullString(params.getAlgorithm())) {
-      params.setAlgorithm(LcapMessage.getDefaultHashAlgorithm());
-    }
 
     if (result.getAu() == null) {
       errorMessage = processAuIdParam(params, result);

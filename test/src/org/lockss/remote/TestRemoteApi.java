@@ -35,7 +35,6 @@ import org.lockss.config.*;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.mail.MimeMessage;
 import org.lockss.plugin.*;
-import org.lockss.protocol.MockIdentityManager;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -49,7 +48,6 @@ public class TestRemoteApi extends LockssTestCase {
 
   MockLockssDaemon daemon;
   MyMockPluginManager mpm;
-  MyIdentityManager idMgr;
   RemoteApi rapi;
 
   public void setUp() throws Exception {
@@ -62,9 +60,6 @@ public class TestRemoteApi extends LockssTestCase {
     rapi = new RemoteApi();
     daemon.setRemoteApi(rapi);
     rapi.initService(daemon);
-    idMgr = new MyIdentityManager();
-    daemon.setIdentityManager(idMgr);
-    idMgr.initService(daemon);
     daemon.setDaemonInited(true);
     rapi.startService();
   }
@@ -284,8 +279,6 @@ public class TestRemoteApi extends LockssTestCase {
     mau2.setAuId("mau2id");
     mau3.setAuId("mau3id");
     mpm.setAllAus(ListUtil.list(mau1, mau2, mau3));
-    idMgr.setAgreeMap(mau1, "agree map 1");
-    idMgr.setAgreeMap(mau3, "agree map 3");
     MockHistoryRepository hr = new MockHistoryRepository();
     daemon.setHistoryRepository(hr, mau1);
     hr.setAuStateFile(FileTestUtil.writeTempFile("austate", "dummy austate"));
@@ -536,15 +529,12 @@ public class TestRemoteApi extends LockssTestCase {
 	addConfig.addAsSubTree(ent.getConfig(), prefix);
       }
 
-      idMgr.resetAgreeMap();
       RemoteApi.BatchAuStatus addedbas =
 	rapi.batchAddAus(RemoteApi.BATCH_ADD_ADD, addConfig, bi);
       ArchivalUnit au1 = mpm.getAuFromId(auid1);
       assertNotNull(au1);
-      assertEquals("zippity agree map 1", idMgr.getAgreeMap(au1));
       ArchivalUnit au2 = mpm.getAuFromId(auid2);
       assertNotNull(au2);
-      assertEquals("doodah agree map 2", idMgr.getAgreeMap(au2));
     } finally {
       if (bi != null) bi.delete();
     }
@@ -698,41 +688,6 @@ public class TestRemoteApi extends LockssTestCase {
     public Collection getInactiveAuIds() {
       return inactiveAuIds;
     }
-  }
-  static class MyIdentityManager extends MockIdentityManager {
-    private Map agreeMapContents = new HashMap();
-
-    void setAgreeMap(ArchivalUnit au, String content) {
-      agreeMapContents.put(au, content);
-    }
-
-    String getAgreeMap(ArchivalUnit au) {
-      return (String)agreeMapContents.get(au);
-    }
-
-    void resetAgreeMap() {
-      agreeMapContents.clear();
-    }
-
-    protected void setupLocalIdentities() {
-      // do nothing
-    }
-    public boolean hasAgreeMap(ArchivalUnit au) {
-      return agreeMapContents.containsKey(au);
-    }
-    public void writeIdentityAgreementTo(ArchivalUnit au, OutputStream out)
-	throws IOException {
-      String s = getAgreeMap(au);
-      if (s != null) {
-	StringUtil.toOutputStream(out, s);
-      }
-    }
-    public void readIdentityAgreementFrom(ArchivalUnit au, InputStream in)
-	throws IOException {
-      log.debug("Setting agreement for " + au.getName());
-      setAgreeMap(au, StringUtil.fromInputStream(in));
-    }
-
   }
 
   public void testBackupNone()

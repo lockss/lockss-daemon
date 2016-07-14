@@ -1,8 +1,4 @@
 /*
- * $Id DisplayContentStatus.java 2012/12/03 14:52:00 rwincewicz $
- */
-
-/*
 
  Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -710,16 +706,9 @@ public class DisplayContentStatus extends LockssServlet {
         sb.append(urlEncode((String) ent.getValue()));
       }
     }
-    if (ref.getPeerId() != null) {
-      return srvAbsLink(ref.getPeerId(),
-              myServletDescr(),
-              getDisplayString(ref.getValue(), type),
-              sb.toString());
-    } else {
       return srvLink(myServletDescr(),
               getDisplayString(ref.getValue(), type),
               sb.toString());
-    }
   }
 
   // turn UrlLink into html link

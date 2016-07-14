@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,16 +29,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 
 import java.io.File;
-import java.security.MessageDigest;
-
 import org.lockss.config.*;
 import org.lockss.daemon.*;
-import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
 import org.lockss.crawler.FollowLinkCrawler;
-import org.lockss.protocol.*;
-
 import java.util.Properties;
 
 public class HashSpeedTest extends LockssTestCase {
@@ -119,7 +110,6 @@ public class HashSpeedTest extends LockssTestCase {
   public void testRunSelf() throws Exception {
     createContent();
     crawlContent();
-    hashContent();
   }
 
   private void createContent() {
@@ -132,22 +122,6 @@ public class HashSpeedTest extends LockssTestCase {
     System.out.println("Crawling tree...");
     Crawler crawler = new FollowLinkCrawler(sau, new MockAuState());
     crawler.doCrawl();
-  }
-
-  private void hashContent() throws Exception {
-    MessageDigest digest = V1LcapMessage.getDefaultMessageDigest();
-    System.out.println("Hashing-");
-    System.out.println("  Algorithm: "+digest.getAlgorithm());
-    System.out.println("  Duration: "+duration+"ms");
-    System.out.println("  Byte/step: "+byteStep+"bytes");
-    CachedUrlSetHasher hasher = sau.getAuCachedUrlSet().getContentHasher(digest);
-
-    SystemMetrics metrics = theDaemon.getSystemMetrics();
-    double estimate = metrics.measureHashSpeed(hasher, digest);
-    System.out.println("Estimate-");
-    System.out.println("  Bytes/ms: "+estimate);
-    System.out.println("  GB/hr: "+
-                       ((estimate*Constants.HOUR)/(1024*1024*1024)));
   }
 }
 

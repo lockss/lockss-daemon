@@ -37,7 +37,6 @@ import org.lockss.mail.*;
 import org.lockss.config.*;
 import org.lockss.app.*;
 import org.lockss.plugin.*;
-import org.lockss.protocol.*;
 import org.lockss.hasher.*;
 
 /**
@@ -46,7 +45,6 @@ import org.lockss.hasher.*;
 public class CrawlEndReport {
   static final Logger log = Logger.getLogger("CrawlEndReport");
 
-  IdentityManager idMgr;
   LockssDaemon daemon;
   ArchivalUnit au;
   String hashAlg;
@@ -57,7 +55,6 @@ public class CrawlEndReport {
   public CrawlEndReport (LockssDaemon daemon, ArchivalUnit au) {
     this.au = au;
     this.daemon = daemon;
-    idMgr = daemon.getIdentityManager();
   }
 
   public void setHashAlgorithm(String alg) {

@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,10 +29,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.io.*;
-import java.util.List;
 import org.lockss.plugin.*;
-import org.lockss.protocol.DatedPeerIdSet;
-import org.lockss.protocol.AuAgreements;
 import org.lockss.repository.*;
 import org.lockss.app.LockssAuManager;
 
@@ -73,13 +66,6 @@ public interface HistoryRepository extends LockssAuManager {
   public void loadPollHistories(NodeState nodeState);
 
   /**
-   * Stores {@link AuAgreements}.
-   * @param auAgreements The {@link AuAgreements} for this AU.
-   */
-  public void storeIdentityAgreements(AuAgreements auAgreements)
-      throws LockssRepositoryException;
-
-  /**
    * Loads and returns the saved {@link Object} representing the agreements.
    *
    * From daemon release 1.62, the daemon saves {@link
@@ -105,11 +91,6 @@ public interface HistoryRepository extends LockssAuManager {
    * Return the date/time the au was created.
    */
   public long getAuCreationTime() throws LockssRepositoryException;
-
-  /**
-   * Return the associated DatedPeerIdSet
-   */
-  public DatedPeerIdSet getNoAuPeerSet();
   
   /**
    * Stores the AuState for this ArchivalUnit

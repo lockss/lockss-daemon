@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,14 +28,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.hasher;
 
-import java.io.*;
-import java.util.*;
 import java.security.*;
-
-import org.lockss.config.*;
 import org.lockss.plugin.*;
-import org.lockss.protocol.*;
-import org.lockss.state.SubstanceChecker;
 import org.lockss.util.*;
 
 /**
@@ -225,16 +215,7 @@ public class SampledBlockHasher extends BlockHasher {
    * @return A {@link MessageDigest} to use when none is supplied.
    */
   private static MessageDigest defaultSampleHasher() {
-    // todo: By 1.62, 
-    String alg =
-      CurrentConfig.getParam(LcapMessage.PARAM_HASH_ALGORITHM,
-			     LcapMessage.DEFAULT_HASH_ALGORITHM);
-    try {
-      return MessageDigest.getInstance(alg);
-    } catch (NoSuchAlgorithmException ex) {
-      log.error("No such hash algorithm: " + alg);
-      throw new IllegalArgumentException("No such hash algorithm: " + alg);
-    }
+    return null;
   }
 
 

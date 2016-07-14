@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,7 +31,6 @@ package org.lockss.test;
 import java.io.*;
 import java.util.*;
 import org.lockss.daemon.CachedUrlSetSpec;
-import org.lockss.protocol.PeerIdentity;
 import org.lockss.repository.*;
 import org.lockss.util.*;
 
@@ -190,13 +185,6 @@ public class MockRepositoryNode implements RepositoryNode {
   }
 
   public void signalAgreement(Collection ids) {
-    for (Iterator it = ids.iterator(); it.hasNext(); ) {
-      agreeingPeers.add((PeerIdentity)it.next());
-    }
-  }
-  
-  public boolean hasAgreement(PeerIdentity id) {
-    return agreeingPeers.contains(id);
   }
   
   public OutputStream getNewOutputStream() {

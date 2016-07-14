@@ -1,10 +1,6 @@
 /*
- * $Id DisplayContentStatus.java 2013/7/02 14:52:00 rwincewicz $
- */
 
-/*
-
- Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,7 +29,6 @@ package org.lockss.servlet;
 
 import org.apache.commons.lang3.time.FastDateFormat;
 import org.lockss.config.TdbAu;
-import org.lockss.config.TdbUtil;
 import org.lockss.daemon.TitleConfig;
 import org.lockss.daemon.TitleSet;
 import org.lockss.daemon.status.ColumnDescriptor;
@@ -44,7 +39,6 @@ import org.lockss.remote.RemoteApi;
 import org.lockss.state.AuState;
 import org.lockss.util.*;
 import org.mortbay.html.*;
-
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpSession;
@@ -637,16 +631,9 @@ public class AddContentTab extends LockssServlet {
                 sb.append(urlEncode((String) ent.getValue()));
             }
         }
-        if (ref.getPeerId() != null) {
-            return srvAbsLink(ref.getPeerId(),
-                    myServletDescr(),
-                    getDisplayString(ref.getValue(), type),
-                    sb.toString());
-        } else {
             return srvLink(myServletDescr(),
                     getDisplayString(ref.getValue(), type),
                     sb.toString());
-        }
     }
 
     // turn UrlLink into html link

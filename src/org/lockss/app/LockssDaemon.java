@@ -40,8 +40,6 @@ import org.lockss.scheduler.*;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.*;
 import org.lockss.truezip.*;
-import org.lockss.protocol.*;
-import org.lockss.protocol.psm.*;
 import org.lockss.repository.*;
 import org.lockss.state.*;
 import org.lockss.proxy.*;
@@ -113,11 +111,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String STREAM_COMM_MANAGER = "StreamCommManager";
   public static final String ROUTER_MANAGER = "RouterManager";
   public static final String DATAGRAM_ROUTER_MANAGER = "DatagramRouterManager";
-  public static final String IDENTITY_MANAGER = "IdentityManager";
   public static final String CRAWL_MANAGER = "CrawlManager";
   public static final String PLUGIN_MANAGER = "PluginManager";
   public static final String METADATA_MANAGER = "MetadataManager";
-  public static final String PSM_MANAGER = "PsmManager";
   public static final String REPOSITORY_MANAGER = "RepositoryManager";
   public static final String LOCKSS_REPOSITORY = "LockssRepository";
   public static final String HISTORY_REPOSITORY = "HistoryRepository";
@@ -141,9 +137,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String SAFENET_MANAGER = "SafenetManager";
   public static final String TRUEZIP_MANAGER = "TrueZipManager";
   public static final String DB_MANAGER = "DbManager";
-  public static final String COUNTER_REPORTS_MANAGER = "CounterReportsManager";
-  public static final String FETCH_TIME_EXPORT_MANAGER =
-      "FetchTimeExportManager";
   public static final String JOB_MANAGER = "JobManager";
 
   // Manager descriptors.  The order of this table determines the order in
@@ -165,9 +158,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(KEYSTORE_MANAGER,
                     "org.lockss.daemon.LockssKeyStoreManager"),
     new ManagerDesc(ACCOUNT_MANAGER, "org.lockss.account.AccountManager"),
-    new ManagerDesc(IDENTITY_MANAGER,
-                    "org.lockss.protocol.IdentityManagerImpl"),
-    new ManagerDesc(PSM_MANAGER, "org.lockss.protocol.psm.PsmManager"),
     new ManagerDesc(CRAWL_MANAGER, "org.lockss.crawler.CrawlManagerImpl"),
     new ManagerDesc(REPOSITORY_MANAGER,
                     "org.lockss.repository.RepositoryManager"),
@@ -179,12 +169,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(METADATA_MANAGER, "org.lockss.metadata.MetadataManager"),
     // start proxy and servlets after plugin manager
     new ManagerDesc(REMOTE_API, "org.lockss.remote.RemoteApi"),
-    // Start the COUNTER reports manager.
-    new ManagerDesc(COUNTER_REPORTS_MANAGER,
-	"org.lockss.exporter.counter.CounterReportsManager"),
-    // Start the COUNTER reports manager.
-    new ManagerDesc(FETCH_TIME_EXPORT_MANAGER,
-	"org.lockss.exporter.FetchTimeExportManager"),
     // Start the job manager.
     new ManagerDesc(JOB_MANAGER, "org.lockss.job.JobManager"),
     // NOTE: Any managers that are needed to decide whether a servlet is to be
@@ -199,14 +183,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
                     "org.lockss.proxy.FailOverProxyManager"),
     // comm after other major services so don't process messages until
     // they're ready
-    new ManagerDesc(DATAGRAM_COMM_MANAGER,
-                    "org.lockss.protocol.LcapDatagramComm"),
-    new ManagerDesc(STREAM_COMM_MANAGER,
-                    "org.lockss.protocol.BlockingStreamComm"),
-    new ManagerDesc(DATAGRAM_ROUTER_MANAGER,
-                    "org.lockss.protocol.LcapDatagramRouter"),
-    new ManagerDesc(ROUTER_MANAGER,
-                    "org.lockss.protocol.LcapRouter"),
     new ManagerDesc(NODE_MANAGER_MANAGER,
                     "org.lockss.state.NodeManagerManager"),
     new ManagerDesc(ICP_MANAGER,
@@ -368,51 +344,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   }
 
   /**
-   * return the psm manager instance
-   * @return the PsmManager
-   * @throws IllegalArgumentException if the manager is not available.
-   */
-  public PsmManager getPsmManager() {
-    return (PsmManager) getManager(PSM_MANAGER);
-  }
-
-  /**
-   * return the datagram communication manager instance
-   * @return the LcapDatagramComm
-   * @throws IllegalArgumentException if the manager is not available.
-   */
-  public LcapDatagramComm getDatagramCommManager()  {
-    return (LcapDatagramComm) getManager(DATAGRAM_COMM_MANAGER);
-  }
-
-  /**
-   * return the stream communication manager instance
-   * @return the LcapStreamComm
-   * @throws IllegalArgumentException if the manager is not available.
-   */
-  public LcapStreamComm getStreamCommManager()  {
-    return (LcapStreamComm) getManager(STREAM_COMM_MANAGER);
-  }
-
-  /**
-   * return the datagram router manager instance
-   * @return the LcapDatagramRouter
-   * @throws IllegalArgumentException if the manager is not available.
-   */
-  public LcapDatagramRouter getDatagramRouterManager()  {
-    return (LcapDatagramRouter) getManager(DATAGRAM_ROUTER_MANAGER);
-  }
-
-  /**
-   * return the communication router manager instance
-   * @return the LcapDatagramRouter
-   * @throws IllegalArgumentException if the manager is not available.
-   */
-  public LcapRouter getRouterManager()  {
-    return (LcapRouter) getManager(ROUTER_MANAGER);
-  }
-
-  /**
    * return the proxy handler instance
    * @return the ProxyManager
    * @throws IllegalArgumentException if the manager is not available.
@@ -494,16 +425,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
   public LockssKeyStoreManager getKeystoreManager() {
     return (LockssKeyStoreManager) getManager(KEYSTORE_MANAGER);
-  }
-
-  /**
-   * return the Identity Manager
-   * @return IdentityManager
-   * @throws IllegalArgumentException if the manager is not available.
-   */
-
-  public IdentityManager getIdentityManager() {
-    return (IdentityManager) getManager(IDENTITY_MANAGER);
   }
 
   /**

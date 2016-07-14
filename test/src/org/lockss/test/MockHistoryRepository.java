@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,7 +26,6 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-
 package org.lockss.test;
 
 import java.io.*;
@@ -38,8 +33,6 @@ import java.util.*;
 import org.lockss.app.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
-import org.lockss.protocol.DatedPeerIdSet;
-import org.lockss.protocol.AuAgreements;
 import org.lockss.config.Configuration;
 
 /**
@@ -132,17 +125,8 @@ public class MockHistoryRepository implements HistoryRepository {
   }
 
   @Override
-  public void storeIdentityAgreements(AuAgreements auAgreements) {
-    storedIdentityAgreement = auAgreements;
-  }
-
-  @Override
   public Object loadIdentityAgreements() {
     return loadedIdentityAgreement;
-  }
-
-  public void setLoadedIdentityAgreement(AuAgreements auAgreements) {
-    loadedIdentityAgreement = auAgreements;
   }
 
   /**
@@ -156,22 +140,4 @@ public class MockHistoryRepository implements HistoryRepository {
   public Object getStoredIdentityAgreement() {
     return storedIdentityAgreement;
   }
-
-  /*
-   * (non-Javadoc)
-   * 
-   * Note from BEE:
-   * Creating a DatedPeerIdSet requires an IdentityManager.
-   * I'm not sure how to get the IdentityManager from here:
-   *    - MockHistoryRepository is NOT an extension of BaseLockssDaemonManager, so I cannot call "getDaemon".
-   *    - MockHistoryRepository does NOT have an associated app (see getApp).
-   *    - MockHistoryRepository does not have an IdentityManager associated with it, that I see.
-   *    
-   *    Therefore, it's an unsupported operation for now.
-   * @see org.lockss.state.HistoryRepository#getDatedPeerIdSet()
-   */
-  public DatedPeerIdSet getNoAuPeerSet() {
-    throw new UnsupportedOperationException("Not implemented");
-  }
-
 }

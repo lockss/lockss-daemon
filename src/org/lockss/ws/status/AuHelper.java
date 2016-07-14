@@ -739,16 +739,6 @@ public class AuHelper {
       builder.append("isBulkContent=").append(result.getIsBulkContent());
     }
 
-    if (result.getPeerAgreements() != null) {
-      if (!isFirst) {
-	builder.append(", ");
-      } else {
-	isFirst = false;
-      }
-
-      builder.append("peerAgreements=").append(result.getPeerAgreements());
-    }
-
     if (result.getUrls() != null) {
       if (!isFirst) {
 	builder.append(", ");

@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -40,7 +36,6 @@ import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.protocol.*;
 
 /**
  * This is the test class for org.lockss.repository.RepositoryNodeImpl
@@ -55,8 +50,6 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   private MyLockssRepositoryImpl repo;
   private String tempDirPath;
   MockArchivalUnit mau;
-
-  private MockIdentityManager idmgr;
   
   Properties props;
 
@@ -70,11 +63,6 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     mau = new MockArchivalUnit();
 
     theDaemon = getMockLockssDaemon();
-    
-    // Create the identity manager...
-    idmgr = new MockIdentityManager();
-    theDaemon.setIdentityManager(idmgr);
-    idmgr.initService(theDaemon);
     
     repo = (MyLockssRepositoryImpl)MyLockssRepositoryImpl.createNewLockssRepository(mau);
     theDaemon.setAuManager(LockssDaemon.LOCKSS_REPOSITORY, mau, repo);
@@ -301,15 +289,6 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
         "http://www.example.com/testDir/branch1/leaf1");
     File testFile = new File(tempDirPath, "#agreement");
     assertFalse(testFile.exists());
-    
-    // Agreeing IDs.
-    PeerIdentity[] agreeingPeers =
-      { new MockPeerIdentity("TCP:[192.168.0.1]:9723"),
-        new MockPeerIdentity("TCP:[192.168.0.2]:9723")
-      };
-    
-    leaf.signalAgreement(ListUtil.fromArray(agreeingPeers));
-    assertTrue(testFile.exists());
   }
 
   public void testUpdateAndLoadAgreement() throws Exception {
@@ -319,33 +298,6 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     tempDirPath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
     tempDirPath = LockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
         "http://www.example.com/testDir/branch1/leaf1");
-    PeerIdentity testid_1 = new MockPeerIdentity("TCP:[192.168.0.1]:9723");
-    PeerIdentity testid_2 = new MockPeerIdentity("TCP:[192.168.0.2]:9723");
-    PeerIdentity testid_3 = new MockPeerIdentity("TCP:[192.168.0.3]:9723");
-    PeerIdentity testid_4 = new MockPeerIdentity("TCP:[192.168.0.4]:9723");
-    
-    idmgr.addPeerIdentity(testid_1.getIdString(), testid_1);
-    idmgr.addPeerIdentity(testid_2.getIdString(), testid_2);
-    idmgr.addPeerIdentity(testid_3.getIdString(), testid_3);
-    idmgr.addPeerIdentity(testid_4.getIdString(), testid_4);
-    
-    leaf.signalAgreement(ListUtil.list(testid_1, testid_3));
-
-    assertEquals(2, ((RepositoryNodeImpl)leaf).loadAgreementHistory().size());
-
-    assertTrue(leaf.hasAgreement(testid_1));
-    assertFalse(leaf.hasAgreement(testid_2));
-    assertTrue(leaf.hasAgreement(testid_3));
-    assertFalse(leaf.hasAgreement(testid_4));
-
-    leaf.signalAgreement(ListUtil.list(testid_1, testid_2, testid_3, testid_4));
-    
-    assertEquals(4, ((RepositoryNodeImpl)leaf).loadAgreementHistory().size());
-
-    assertTrue(leaf.hasAgreement(testid_1));
-    assertTrue(leaf.hasAgreement(testid_2));
-    assertTrue(leaf.hasAgreement(testid_3));
-    assertTrue(leaf.hasAgreement(testid_4));
   }
   
   public void testVersionFileLocation() throws Exception {

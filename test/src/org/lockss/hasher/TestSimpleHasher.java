@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -47,7 +43,6 @@ import org.lockss.metadata.TestMetadataManager.MySimulatedPlugin0;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
-import org.lockss.protocol.LcapMessage;
 import org.lockss.repository.*;
 
 public class TestSimpleHasher extends LockssTestCase {
@@ -401,8 +396,6 @@ public class TestSimpleHasher extends LockssTestCase {
     assertNull(errorMessage);
     // Clean up the result file.
     result.getBlockFile().delete();
-
-    assertEquals(LcapMessage.getDefaultHashAlgorithm(), params.getAlgorithm());
   }
 
   private ArchivalUnit createAndStartAu() throws Exception {
@@ -503,18 +496,17 @@ public class TestSimpleHasher extends LockssTestCase {
   public void testMakeDigest() throws Exception {
     HasherResult result = new HasherResult();
     MessageDigest digest = new SimpleHasher(null).makeDigestAndRecordStream(
-	LcapMessage.getDefaultHashAlgorithm(), false, result);
+	"SHA1", false, result);
 
     assertTrue(digest instanceof MessageDigest);
     assertFalse(digest instanceof RecordingMessageDigest);
-    assertEquals(LcapMessage.getDefaultHashAlgorithm(), digest.getAlgorithm());
     assertEquals(20, digest.getDigestLength());
     assertNull(result.getRecordFile());
     assertNull(result.getRecordStream());
 
     result = new HasherResult();
     digest = new SimpleHasher(null).makeDigestAndRecordStream(
-	LcapMessage.getDefaultHashAlgorithm(), true, result);
+	"SHA1", true, result);
 
     assertTrue(digest instanceof MessageDigest);
     assertTrue(digest instanceof RecordingMessageDigest);
@@ -599,10 +591,10 @@ public class TestSimpleHasher extends LockssTestCase {
   public void testDoV1() throws Exception {
     ArchivalUnit au = createAndStartAu();
 
-    runTestDoV1(au, LcapMessage.getDefaultHashAlgorithm(), null, null, null,
+    runTestDoV1(au, "SHA1", null, null, null,
 	"27831E7E869AF658024E1049DC1D1CF6C491F094");
 
-    runTestDoV1(au, LcapMessage.getDefaultHashAlgorithm(), null,
+    runTestDoV1(au, "SHA1", null,
 	"RmVybmFuZG8gRy4gTG95Z29ycmkK", "TXlkdW5nIFQuIFRyYW4K",
 	"578C716600A207EFC63FBFAE2DF331397A42F85D");
 
@@ -625,11 +617,11 @@ public class TestSimpleHasher extends LockssTestCase {
 	"TXlkdW5nIFQuIFRyYW4K",
 	"192B024B18D764E0A2B83624DC6A5D5307167C5363030B96C6D30F3E210E785D");
 
-    runTestDoV1(au, LcapMessage.getDefaultHashAlgorithm(),
+    runTestDoV1(au, "SHA1",
 	"http://www.example.com/003file.pdf", null, null,
 	"B3C403B58B84B18CB1D4FD34F691BD894AABB7CA");
 
-    runTestDoV1(au, LcapMessage.getDefaultHashAlgorithm(),
+    runTestDoV1(au, "SHA1",
 	"http://www.example.com/003file.pdf", "RmVybmFuZG8gRy4gTG95Z29ycmkK",
 	"TXlkdW5nIFQuIFRyYW4K", "01526544C35351819EEE11B736488B2829B7F835");
 
@@ -691,21 +683,21 @@ public class TestSimpleHasher extends LockssTestCase {
   public void testDoV3() throws Exception {
     ArchivalUnit au = createAndStartAu();
 
-    runTestDoV3(au, null, "Hex", LcapMessage.getDefaultHashAlgorithm(), null,
+    runTestDoV3(au, null, "Hex", "SHA1", null,
 	null, null, null, null,
 	"21BDE2E4107D2BE49DE1DAD4B32335E8312858B2   http://www.example.com/index.html");
 
-    runTestDoV3(au, null, "Hex", LcapMessage.getDefaultHashAlgorithm(), null,
+    runTestDoV3(au, null, "Hex", "SHA1", null,
 	"RmVybmFuZG8gRy4gTG95Z29ycmkK", "TXlkdW5nIFQuIFRyYW4K",
 	"# Poller nonce: 4665726E616E646F20472E204C6F79676F7272690A",
 	"# Voter nonce: 4D7964756E6720542E205472616E0A",
 	"1069ED623BFA4876DEFC3BA45CCEBF53E3A7676A   http://www.example.com/index.html");
 
-    runTestDoV3(au, null, "Base64", LcapMessage.getDefaultHashAlgorithm(), null,
+    runTestDoV3(au, null, "Base64", "SHA1", null,
 	null, null, null, null,
 	"Ib3i5BB9K+Sd4drUsyM16DEoWLI=   http://www.example.com/index.html");
 
-    runTestDoV3(au, null, "Base64", LcapMessage.getDefaultHashAlgorithm(), null,
+    runTestDoV3(au, null, "Base64", "SHA1", null,
 	"RmVybmFuZG8gRy4gTG95Z29ycmkK", "TXlkdW5nIFQuIFRyYW4K",
 	"# Poller nonce: RmVybmFuZG8gRy4gTG95Z29ycmkK",
 	"# Voter nonce: TXlkdW5nIFQuIFRyYW4K",
@@ -764,22 +756,22 @@ public class TestSimpleHasher extends LockssTestCase {
 	"# Voter nonce: TXlkdW5nIFQuIFRyYW4K",
 	"e/JwYH+6Xnmkf/fSs1/3rIN1XG+drsM4y/J+xWlci4A=   http://www.example.com/index.html");
 
-    runTestDoV3(au, null, "Hex", LcapMessage.getDefaultHashAlgorithm(),
+    runTestDoV3(au, null, "Hex", "SHA1",
 	"http://www.example.com/003file.pdf", null, null, null, null,
 	"DA39A3EE5E6B4B0D3255BFEF95601890AFD80709   http://www.example.com/003file.pdf");
 
-    runTestDoV3(au, null, "Hex", LcapMessage.getDefaultHashAlgorithm(),
+    runTestDoV3(au, null, "Hex", "SHA1",
 	"http://www.example.com/003file.pdf", "RmVybmFuZG8gRy4gTG95Z29ycmkK",
 	"TXlkdW5nIFQuIFRyYW4K",
 	"# Poller nonce: 4665726E616E646F20472E204C6F79676F7272690A",
 	"# Voter nonce: 4D7964756E6720542E205472616E0A",
 	"C57147E1B8AC535B0E1FF5B5BA7EB83CA02D1577   http://www.example.com/003file.pdf");
 
-    runTestDoV3(au, null, "Base64", LcapMessage.getDefaultHashAlgorithm(),
+    runTestDoV3(au, null, "Base64", "SHA1",
 	"http://www.example.com/003file.pdf", null, null, null, null,
 	"2jmj7l5rSw0yVb/vlWAYkK/YBwk=   http://www.example.com/003file.pdf");
 
-    runTestDoV3(au, null, "Base64", LcapMessage.getDefaultHashAlgorithm(),
+    runTestDoV3(au, null, "Base64", "SHA1",
 	"http://www.example.com/003file.pdf", "RmVybmFuZG8gRy4gTG95Z29ycmkK",
 	"TXlkdW5nIFQuIFRyYW4K", "# Poller nonce: RmVybmFuZG8gRy4gTG95Z29ycmkK",
 	"# Voter nonce: TXlkdW5nIFQuIFRyYW4K",
@@ -850,21 +842,21 @@ public class TestSimpleHasher extends LockssTestCase {
   public void testDoV3File() throws Exception {
     ArchivalUnit au = createAndStartAu();
 
-    runTestDoV3(au, "V3File", "Hex", LcapMessage.getDefaultHashAlgorithm(),
+    runTestDoV3(au, "V3File", "Hex", "SHA1",
 	null, null, null, null, null,
 	"21BDE2E4107D2BE49DE1DAD4B32335E8312858B2   http://www.example.com/index.html");
 
-    runTestDoV3(au, "V3File", "Hex", LcapMessage.getDefaultHashAlgorithm(),
+    runTestDoV3(au, "V3File", "Hex", "SHA1",
 	null, "RmVybmFuZG8gRy4gTG95Z29ycmkK", "TXlkdW5nIFQuIFRyYW4K",
 	"# Poller nonce: 4665726E616E646F20472E204C6F79676F7272690A",
 	"# Voter nonce: 4D7964756E6720542E205472616E0A",
 	"1069ED623BFA4876DEFC3BA45CCEBF53E3A7676A   http://www.example.com/index.html");
 
-    runTestDoV3(au, "V3File", "Base64", LcapMessage.getDefaultHashAlgorithm(),
+    runTestDoV3(au, "V3File", "Base64", "SHA1",
 	null, null, null, null, null,
 	"Ib3i5BB9K+Sd4drUsyM16DEoWLI=   http://www.example.com/index.html");
 
-    runTestDoV3(au, "V3File", "Base64", LcapMessage.getDefaultHashAlgorithm(),
+    runTestDoV3(au, "V3File", "Base64", "SHA1",
 	null, "RmVybmFuZG8gRy4gTG95Z29ycmkK", "TXlkdW5nIFQuIFRyYW4K",
 	"# Poller nonce: RmVybmFuZG8gRy4gTG95Z29ycmkK",
 	"# Voter nonce: TXlkdW5nIFQuIFRyYW4K",
@@ -924,22 +916,22 @@ public class TestSimpleHasher extends LockssTestCase {
 	"# Voter nonce: TXlkdW5nIFQuIFRyYW4K",
 	"e/JwYH+6Xnmkf/fSs1/3rIN1XG+drsM4y/J+xWlci4A=   http://www.example.com/index.html");
 
-    runTestDoV3(au, "V3File", "Hex", LcapMessage.getDefaultHashAlgorithm(),
+    runTestDoV3(au, "V3File", "Hex", "SHA1",
 	"http://www.example.com/branch1/", null, null, null, null,
 	"http://www.example.com");
 
-    runTestDoV3(au, "V3File", "Hex", LcapMessage.getDefaultHashAlgorithm(),
+    runTestDoV3(au, "V3File", "Hex", "SHA1",
 	"http://www.example.com/branch1/", "RmVybmFuZG8gRy4gTG95Z29ycmkK",
 	"TXlkdW5nIFQuIFRyYW4K",
 	"# Poller nonce: 4665726E616E646F20472E204C6F79676F7272690A",
 	"# Voter nonce: 4D7964756E6720542E205472616E0A",
 	"http://www.example.com");
 
-    runTestDoV3(au, "V3File", "Base64", LcapMessage.getDefaultHashAlgorithm(),
+    runTestDoV3(au, "V3File", "Base64", "SHA1",
 	"http://www.example.com/branch1/", null, null, null, null,
 	"http://www.example.com");
 
-    runTestDoV3(au, "V3File", "Base64", LcapMessage.getDefaultHashAlgorithm(),
+    runTestDoV3(au, "V3File", "Base64", "SHA1",
 	"http://www.example.com/branch1/", "RmVybmFuZG8gRy4gTG95Z29ycmkK",
 	"TXlkdW5nIFQuIFRyYW4K", "# Poller nonce: RmVybmFuZG8gRy4gTG95Z29ycmkK",
 	"# Voter nonce: TXlkdW5nIFQuIFRyYW4K", "http://www.example.com");

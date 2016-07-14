@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,13 +31,10 @@ package org.lockss.daemon;
 import java.io.*;
 import java.net.MalformedURLException;
 import java.util.*;
-// import java.util.Map.Entry;
-
 import org.apache.oro.text.regex.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
-import org.lockss.protocol.IdentityManager;
 import org.lockss.proxy.*;
 import org.lockss.proxy.icp.*;
 import org.lockss.util.*;
@@ -731,9 +724,7 @@ public class ProxyInfo {
   String getProxyHost() {
     if (proxyHost == null) {
       proxyHost =
-        CurrentConfig.getParam(ConfigManager.PARAM_PLATFORM_FQDN,
-                               CurrentConfig.getParam(IdentityManager.
-                                                      PARAM_LOCAL_IP));
+        CurrentConfig.getParam(ConfigManager.PARAM_PLATFORM_FQDN);
     }
     return proxyHost;
   }

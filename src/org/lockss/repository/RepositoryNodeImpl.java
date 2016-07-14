@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,12 +33,9 @@ import java.nio.charset.*;
 import java.net.MalformedURLException;
 import java.util.*;
 import java.util.Queue;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.oro.text.regex.*;
-
 import org.lockss.config.*;
-import org.lockss.protocol.*;
 import org.lockss.daemon.CachedUrlSetSpec;
 import org.lockss.plugin.AuUrl;
 import org.lockss.util.*;
@@ -1171,31 +1164,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
   }
   
-  public synchronized boolean hasAgreement(PeerIdentity id) {
-    PersistentPeerIdSet agreeingPeers = loadAgreementHistory();
-    try {
-      return agreeingPeers.contains(id);
-    } catch (IOException e) {
-      return false;
-    }
-  }
-  
   public synchronized void signalAgreement(Collection peers) {
-    PersistentPeerIdSet agreeingPeers = loadAgreementHistory();
-    for (Iterator it = peers.iterator(); it.hasNext(); ) {
-      PeerIdentity key = (PeerIdentity)it.next();
-      try {
-        agreeingPeers.add(key);
-      } catch (IOException e) {
-        logger.warning("impossible error in loaded PeerIdSet");
-        return;   /* TODO: Should this pass up an exception? */
-      }
-    }
-    try {
-      agreeingPeers.store(true);
-    } catch (IOException e) {
-      logger.error("Couldn't store node agreement: " + getNodeUrl(), e);
-    }
   }
 
   public void setNewProperties(Properties newProps) {
@@ -1315,52 +1284,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
   }
   
-  /**
-   * Return a set of PeerIdentity keys that have agreed with this node.
-   * 
-   * The previous version of this routine used 'Set<String>' (without declaring
-   * that it was a set of String)'.  This version returns a PersistentPeerIdSet.
-   */
-  PersistentPeerIdSet loadAgreementHistory() {
-    PersistentPeerIdSet ppisReturn;
- 
-     if (agreementFile == null) {
-      initAgreementFile();
-    }
-    
-    DataInputStream is = null;
-    try {
-//      ppisReturn = new PersistentPeerIdSetImpl(ppisAgreementFile, repository.getDaemon().getIdentityManager());
-      ppisReturn = new PersistentPeerIdSetImpl(agreementFile, repository.getDaemon().getIdentityManager());
-      ppisReturn.load();
-      
-    } catch (Exception e) {
-      logger.error("Error loading agreement history" + e.getMessage());
-      throw new LockssRepository.RepositoryStateException("Couldn't load agreement file.");
-    } finally {
-      IOUtil.safeClose(is);
-    }
-    
-    return ppisReturn;
-  }
-  
   
   /** Consume the input stream, decoding peer identity keys  */
   Set decodeAgreementHistory(DataInputStream is) {
     Set history = new HashSet();
-    String id;
-    try {
-      while ((id = IDUtil.decodeOneKey(is)) != null) {
-        history.add(id);
-      }
-    } catch (IdentityParseException ex) {
-      // IDUtil.decodeOneKey will do its best to leave us at the
-      // start of the next key, but there's no guarantee.  All we can
-      // do here is log the fact that there was an error, and try
-      // again.
-      logger.error("Parse error while trying to decode agreement " +
-                   "history file " + agreementFile + ": " + ex);
-    }
     return history;
   }
 

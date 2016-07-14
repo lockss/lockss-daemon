@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,16 +31,12 @@ package org.lockss.config;
 import java.io.*;
 import java.net.*;
 import java.util.*;
-
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
-import org.lockss.protocol.*;
 import org.lockss.clockss.*;
 import org.lockss.config.Configuration;
 import org.lockss.config.Tdb;
-import org.lockss.config.TdbTitle;
-import org.lockss.plugin.*;
 import org.lockss.servlet.*;
 import static org.lockss.config.ConfigManager.*;
 
@@ -730,8 +722,6 @@ public class TestConfigManager extends LockssTestCase {
 		   SetUtil.theSet(pairs));
     }
     mgr.setGroups("grouper");
-    ConfigurationUtil.addFromArgs(IdentityManager.PARAM_LOCAL_V3_IDENTITY,
-				  "tcp:[111.32.14.5]:9876");
     pairs = StringUtil.breakAt(mgr.getVersionString(), ',');
     if (release != null) {
       assertEquals(SetUtil.set("groups=grouper",

@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,13 +30,10 @@ package org.lockss.crawler;
 
 import java.io.*;
 import java.util.*;
-import java.net.*;
-
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
-import org.lockss.protocol.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
@@ -346,11 +339,6 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
   }
 
   public void testMakeUrlFetcherCrawlFromLocalAddr() {
-    ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_CRAWL_FROM_LOCAL_ADDR,
-				  "true",
-				  IdentityManager.PARAM_LOCAL_IP,
-				  "127.1.2.3");
-
     crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
     UrlFetcher uf = crawler.makeUrlFetcher(startUrl);
     assertNotNull(uf);
@@ -361,13 +349,6 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
   }
 
   public void testMakeUrlFetcherCrawlFromAddrPrecedence() {
-    ConfigurationUtil.addFromArgs(BaseCrawler.PARAM_CRAWL_FROM_ADDR,
-				  "127.3.1.4",
-				  BaseCrawler.PARAM_CRAWL_FROM_LOCAL_ADDR,
-				  "true",
-				  IdentityManager.PARAM_LOCAL_IP,
-				  "127.1.2.3");
-
     crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
     UrlFetcher uf = crawler.makeUrlFetcher(startUrl);
     assertNotNull(uf);

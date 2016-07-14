@@ -36,7 +36,6 @@ import junit.framework.Test;
 import org.lockss.config.CurrentConfig;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -86,10 +85,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
   private HistoryRepositoryImpl repository;
   private MockLockssDaemon theDaemon;
   private MockArchivalUnit mau;
-  private IdentityManager idmgr;
   private String idKey;
-  private PeerIdentity testID1 = null;
-  private PeerIdentity testID2 = null;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -102,19 +98,9 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
         HistoryRepositoryImpl.createNewHistoryRepository(mau);
     repository.initService(theDaemon);
     repository.startService();
-    if (idmgr == null) {
-      idmgr = theDaemon.getIdentityManager();
-      idmgr.startService();
-    }
-    testID1 = idmgr.stringToPeerIdentity("127.1.2.3");
-    testID2 = idmgr.stringToPeerIdentity("127.4.5.6");
   }
 
   public void tearDown() throws Exception {
-    if (idmgr != null) {
-      idmgr.stopService();
-      idmgr = null;
-    }
     repository.stopService();
     super.tearDown();
   }
@@ -660,11 +646,6 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
         },
         new SerializerFactory() {
           public ObjectSerializer makeSerializer() {
-            return repository.makeIdentityAgreementListSerializer();
-          }
-        },
-        new SerializerFactory() {
-          public ObjectSerializer makeSerializer() {
             return repository.makeNodeStateSerializer();
           }
         },
@@ -689,31 +670,13 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
                    cxSerializer.getCompatibilityMode());
     }
   }
-  
-  /**
-   *  Make sure that we have one (and only one) dated peer id set 
-   */
-  public void testGetNoAuPeerSet() {
-    DatedPeerIdSet dpis1;
-    DatedPeerIdSet dpis2;
-    
-    dpis1 = repository.getNoAuPeerSet();
-    assertNotNull(dpis1);
-    
-    dpis2 = repository.getNoAuPeerSet();
-    assertNotNull(dpis2);
-    
-    assertSame(dpis1, dpis2);
-  }
 
   public static void configHistoryParams(String rootLocation)
     throws IOException {
     ConfigurationUtil.addFromArgs(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
                                   rootLocation,
                                   LockssRepositoryImpl.PARAM_CACHE_LOCATION,
-                                  rootLocation,
-                                  IdentityManager.PARAM_LOCAL_IP,
-                                  "127.0.0.7");
+                                  rootLocation);
   }
 
   public static void main(String[] argv) {

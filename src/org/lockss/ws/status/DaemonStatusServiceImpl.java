@@ -79,7 +79,6 @@ import org.lockss.ws.entities.JavaVersionWsResult;
 import org.lockss.ws.entities.IdNamePair;
 import org.lockss.ws.entities.LockssWebServicesFault;
 import org.lockss.ws.entities.LockssWebServicesFaultInfo;
-import org.lockss.ws.entities.PeerWsResult;
 import org.lockss.ws.entities.PlatformConfigurationWsResult;
 import org.lockss.ws.entities.PlatformWsResult;
 import org.lockss.ws.entities.PluginWsResult;
@@ -294,66 +293,6 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = "
 	+ auHelper.nonDefaultToString(results));
-    return results;
-  }
-
-  /**
-   * Provides the selected properties of selected peers in the system.
-   * 
-   * @param peerQuery
-   *          A String with the
-   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
-   *          used to specify what properties to retrieve from which peers.
-   * @return a List<PeerWsResult> with the results.
-   * @throws LockssWebServicesFault
-   */
-  @Override
-  public List<PeerWsResult> queryPeers(String peerQuery)
-      throws LockssWebServicesFault {
-    final String DEBUG_HEADER = "queryPeers(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "peerQuery = " + peerQuery);
-
-    PeerHelper peerHelper = new PeerHelper();
-    List<PeerWsResult> results = null;
-
-    // Create the full query.
-    String fullQuery = createFullQuery(peerQuery, PeerHelper.SOURCE_FQCN,
-	PeerHelper.PROPERTY_NAMES, PeerHelper.RESULT_FQCN);
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "fullQuery = " + fullQuery);
-
-    // Create a new JoSQL query.
-    Query q = new Query();
-
-    try {
-      // Parse the SQL-like query.
-      q.parse(fullQuery);
-
-      try {
-	// Execute the query.
-	QueryResults qr = q.execute(peerHelper.createUniverse());
-
-	// Get the query results.
-	results = (List<PeerWsResult>)qr.getResults();
-	if (log.isDebug3()) {
-	  log.debug3(DEBUG_HEADER + "results.size() = " + results.size());
-	  log.debug3(DEBUG_HEADER + "results = "
-	      + peerHelper.nonDefaultToString(results));
-	}
-      } catch (QueryExecutionException qee) {
-	log.error("Caught QueryExecuteException", qee);
-	log.error("fullQuery = '" + fullQuery + "'");
-	throw new LockssWebServicesFault(qee,
-	    new LockssWebServicesFaultInfo("peerQuery = " + peerQuery));
-      }
-    } catch (QueryParseException qpe) {
-      log.error("Caught QueryParseException", qpe);
-      log.error("fullQuery = '" + fullQuery + "'");
-	throw new LockssWebServicesFault(qpe,
-	    new LockssWebServicesFaultInfo("peerQuery = " + peerQuery));
-    }
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = "
-	+ peerHelper.nonDefaultToString(results));
     return results;
   }
 

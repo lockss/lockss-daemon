@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,7 +31,6 @@ package org.lockss.crawler;
 import java.io.IOException;
 import java.net.*;
 import java.util.*;
-
 import org.lockss.app.*;
 import org.lockss.alert.*;
 import org.lockss.config.*;
@@ -43,7 +38,6 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.plugin.UrlFetcher.FetchResult;
-import org.lockss.protocol.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
@@ -258,12 +252,6 @@ public abstract class BaseCrawler implements Crawler {
 
 
     String crawlFrom = config.get(PARAM_CRAWL_FROM_ADDR);
-    if (StringUtil.isNullString(crawlFrom)) {
-      if (config.getBoolean(PARAM_CRAWL_FROM_LOCAL_ADDR,
-			    DEFAULT_CRAWL_FROM_LOCAL_ADDR)) {
-        crawlFrom = config.get(IdentityManager.PARAM_LOCAL_IP);
-      }
-    }
     if (crawlFrom == null) {
       crawlFromAddr = null;
     } else {

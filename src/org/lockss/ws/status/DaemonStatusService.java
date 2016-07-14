@@ -37,7 +37,6 @@ import org.lockss.ws.entities.AuWsResult;
 import org.lockss.ws.entities.CrawlWsResult;
 import org.lockss.ws.entities.IdNamePair;
 import org.lockss.ws.entities.LockssWebServicesFault;
-import org.lockss.ws.entities.PeerWsResult;
 import org.lockss.ws.entities.PlatformConfigurationWsResult;
 import org.lockss.ws.entities.PluginWsResult;
 import org.lockss.ws.entities.RepositorySpaceWsResult;
@@ -110,20 +109,6 @@ public interface DaemonStatusService {
    */
   @WebMethod
   List<AuWsResult> queryAus(@WebParam(name = "auQuery") String auQuery)
-      throws LockssWebServicesFault;
-
-  /**
-   * Provides the selected properties of selected peers in the system.
-   * 
-   * @param peerQuery
-   *          A String with the
-   *          <a href="package-summary.html#SQL-Like_Query">SQL-like query</a>
-   *          used to specify what properties to retrieve from which peers.
-   * @return a List<PeerWsResult> with the results.
-   * @throws LockssWebServicesFault
-   */
-  @WebMethod
-  List<PeerWsResult> queryPeers(@WebParam(name = "peerQuery") String peerQuery)
       throws LockssWebServicesFault;
 
   /**

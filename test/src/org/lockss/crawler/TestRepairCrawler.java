@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,20 +27,17 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.crawler;
+
 import java.util.*;
 import java.net.*;
 import java.io.*;
-
 import org.lockss.crawler.PermissionRecord.PermissionStatus;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
-import org.lockss.util.urlconn.*;
 import org.lockss.plugin.*;
-import org.lockss.protocol.*;
 import org.lockss.state.*;
 import org.lockss.test.*;
 import org.lockss.util.urlconn.CacheException;
-import org.lockss.protocol.IdentityManager.MalformedIdentityKeyException;
 
 /**
  *TODO
@@ -62,7 +55,6 @@ public class TestRepairCrawler extends LockssTestCase {
   private List startUrls = ListUtil.list(startUrl);
   private MyRepairCrawler crawler = null;
   private MockLinkExtractor extractor = new MockLinkExtractor();
-  private MockIdentityManager idm;
   private MockLockssDaemon theDaemon = getMockLockssDaemon();
   private CrawlManagerImpl crawlMgr;
 
@@ -80,9 +72,6 @@ public class TestRepairCrawler extends LockssTestCase {
     theDaemon.setCrawlManager(crawlMgr);
     crawlMgr.initService(theDaemon);
     theDaemon.getAlertManager();
-    idm = new MockIdentityManager();
-    theDaemon.setIdentityManager(idm);
-    idm.initService(theDaemon);
     mau = new MockArchivalUnit();
     mau.setAuId("MyMockTestAu");
     cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
@@ -352,21 +341,8 @@ mau.setRefetchDepth( 1);
     assertFalse(crawler.doCrawl());
   }
 
-  //these tests use TestableRepairCrawler, which overrides fetchFromCache
-  //and fetchFromPublisher; these methods should be tested separately
-
-  void setAgreeingPeers(int numPeers) throws MalformedIdentityKeyException {
-    Map map = new HashMap();
-    for (int ix = 0; ix < numPeers; ix++) {
-      MockPeerIdentity id = new MockPeerIdentity("127.0.0."+ix);
-      map.put(id, new Long(10+ix));
-    }
-    idm.setAgeedForAu(mau, map);
-  }
-
-
   public void testFetchFromPublisherOnly()
-      throws MalformedIdentityKeyException {
+      throws Exception {
     String repairUrl1 = "http://example.com/blah.html";
     String repairUrl2 = "http://example.com/flurb.html";
     TestableRepairCrawler crawler =
@@ -388,8 +364,7 @@ mau.setRefetchDepth( 1);
   }
 
   public void testFetchFromPublisherOnlyFailure()
-      throws MalformedIdentityKeyException {
-    setAgreeingPeers(3);
+      throws Exception {
 
     String repairUrl = "http://example.com/blah.html";
     TestableRepairCrawler crawler =
@@ -478,7 +453,7 @@ mau.setRefetchDepth( 1);
   }
 
   public void testFailedFetchDoesntUpdateStatus()
-      throws MalformedIdentityKeyException {
+      throws Exception {
     ConfigurationUtil.addFromArgs(RepairCrawler.PARAM_REPAIR_NEEDS_PERMISSION, "true");
 
     String repairUrl = "http://example.com/blah.html";
@@ -714,10 +689,5 @@ mau.setRefetchDepth( 1);
     protected int getProxyPort(){
       return 8080; //XXX for testing only
     }
-
-    public PeerIdentity getContentSource(String url) {
-      return (PeerIdentity)contentMap.get(url);
-    }
-
   }
 }
