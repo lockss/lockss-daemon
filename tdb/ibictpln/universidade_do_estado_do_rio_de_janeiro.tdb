@@ -124,6 +124,8 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = contemporanea
 
+      au < exists ; 2003 ; 1 ; Revista Contemporânea Volume 2003 ; 2003 ; >
+      au < manifest ; 2004 ; 2 ; Revista Contemporânea Volume 2004 ; 2004 ; >
       au < released ; 2005 ; 3 ; Revista Contemporânea Volume 2005 ; 2005 ; >
       au < released ; 2006 ; 4 ; Revista Contemporânea Volume 2006 ; 2006 ; >
       au < released ; 2007 ; 5 ; Revista Contemporânea Volume 2007 ; 2007 ; >
