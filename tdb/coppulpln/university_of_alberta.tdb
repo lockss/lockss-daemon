@@ -1056,9 +1056,9 @@
       comment[publisher] = University of Alberta
       param[journal_id] = ewjus
 
-      au < exists ; 2014 ; East/West: Journal of Ukrainian Studies Volume 2014 ; 2014 ; 1 ; http://www.ewjus.com/ >
-      au < exists ; 2015 ; East/West: Journal of Ukrainian Studies Volume 2015 ; 2015 ; 2 ; http://www.ewjus.com/ >
-      au < exists ; 2016 ; East/West: Journal of Ukrainian Studies Volume 2016 ; 2016 ; 3 ; http://www.ewjus.com/ >
+      au < testing ; 2014 ; East/West: Journal of Ukrainian Studies Volume 2014 ; 2014 ; 1 ; http://www.ewjus.com/ >
+      au < testing ; 2015 ; East/West: Journal of Ukrainian Studies Volume 2015 ; 2015 ; 2 ; http://www.ewjus.com/ >
+      au < testing ; 2016 ; East/West: Journal of Ukrainian Studies Volume 2016 ; 2016 ; 3 ; http://www.ewjus.com/ >
 
   }
 
