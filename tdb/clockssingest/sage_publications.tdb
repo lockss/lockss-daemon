@@ -5183,13 +5183,20 @@
       param[base_url] = http://cae.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < crawling ; exists ; 2010 ; Cahiers Élisabéthains Volume 83 ; 83 ; >
-      au < crawling ; exists ; 2011 ; Cahiers Élisabéthains Volume 84 ; 84 ; >
-      au < crawling ; exists ; 2012 ; Cahiers Élisabéthains Volume 85 ; 85 ; >
-      au < crawling ; exists ; 2013 ; Cahiers Élisabéthains Volume 86 ; 86 ; >
-      au < crawling ; exists ; 2014 ; Cahiers Élisabéthains Volume 87 ; 87 ; >
+      au < exists ; exists ; 2010 ; Cahiers Élisabéthains Volume 77 ; 77 ; >
+      au < exists ; exists ; 2010 ; Cahiers Élisabéthains Volume 78 ; 78 ; >
+      au < exists ; exists ; 2011 ; Cahiers Élisabéthains Volume 79 ; 79 ; >
+      au < exists ; exists ; 2011 ; Cahiers Élisabéthains Volume 80 ; 80 ; >
+      au < exists ; exists ; 2012 ; Cahiers Élisabéthains Volume 81 ; 81 ; >
+      au < exists ; exists ; 2012 ; Cahiers Élisabéthains Volume 82 ; 82 ; >
+      au < crawling ; exists ; 2013 ; Cahiers Élisabéthains Volume 83 ; 83 ; >
+      au < crawling ; exists ; 2013 ; Cahiers Élisabéthains Volume 84 ; 84 ; >
+      au < crawling ; exists ; 2014 ; Cahiers Élisabéthains Volume 85 ; 85 ; >
+      au < crawling ; exists ; 2014 ; Cahiers Élisabéthains Volume 86 ; 86 ; >
+      au < crawling ; exists ; 2015 ; Cahiers Élisabéthains Volume 87 ; 87 ; >
       au < crawling ; exists ; 2015 ; Cahiers Élisabéthains Volume 88 ; 88 ; >
       au < doNotProcess ; exists ; 2016 ; Cahiers Élisabéthains Volume 89 ; 89 ; >
+      au < doNotProcess ; exists ; 2016 ; Cahiers Élisabéthains Volume 90 ; 90 ; >
 
   }
 
