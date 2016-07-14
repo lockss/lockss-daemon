@@ -2066,8 +2066,8 @@
     au < frozen ; exists ; 2012 ; Arthropod Management Tests Volume 37 ; 37 ; >
     au < frozen ; exists ; 2013 ; Arthropod Management Tests Volume 38 ; 38 ; >
     au < crawling ; exists ; 2014 ; Arthropod Management Tests Volume 39 ; 39 ; >
-    au < expected ; exists ; 2015 ; Arthropod Management Tests Volume 40 ; 40 ; >
-    au < expected ; exists ; 2016 ; Arthropod Management Tests Volume 41 ; 41 ; >
+    au < exists ; exists ; 2015 ; Arthropod Management Tests Volume 40 ; 40 ; >
+    au < exists ; exists ; 2016 ; Arthropod Management Tests Volume 41 ; 41 ; >
 
   }
 
@@ -3468,9 +3468,9 @@
     au < finished ; finished ; 2010 ; British Yearbook of International Law Volume 81 ; 81 ; >
     au < finished ; finished ; 2011 ; British Yearbook of International Law Volume 82 ; 82 ; >
     au < finished ; finished ; 2012 ; British Yearbook of International Law Volume 83 ; 83 ; >
-    au < finished ; finished ; 2014 ; British Yearbook of International Law Volume 84 ; 84 ; >
-    au < expected ; exists ; 2015 ; British Yearbook of International Law Volume 85 ; 85 ; >
-    au < expected ; exists ; 2016 ; British Yearbook of International Law Volume 86 ; 86 ; >
+    au < finished ; finished ; 2013 ; British Yearbook of International Law Volume 84 ; 84 ; >
+    au < expected ; exists ; 2014 ; British Yearbook of International Law Volume 85 ; 85 ; >
+    au < expected ; exists ; 2015 ; British Yearbook of International Law Volume 86 ; 86 ; >
 
   }
 
@@ -4940,8 +4940,8 @@
     au < finished ; frozen ; 2012 ; Database: The Journal of Biological Databases and Curation Volume 2012 ; 2012 ; >
     au < finished ; crawling ; 2013 ; Database: The Journal of Biological Databases and Curation Volume 2013 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Database: The Journal of Biological Databases and Curation Volume 2014 ; 2014 ; >
-    au < expected ; exists ; 2015 ; Database: The Journal of Biological Databases and Curation Volume 2015 ; 2015 ; >
-    au < expected ; exists ; 2016 ; Database: The Journal of Biological Databases and Curation Volume 2016 ; 2016 ; >
+    au < exists ; exists ; 2015 ; Database: The Journal of Biological Databases and Curation Volume 2015 ; 2015 ; >
+    au < exists ; exists ; 2016 ; Database: The Journal of Biological Databases and Curation Volume 2016 ; 2016 ; >
 
   }
 
