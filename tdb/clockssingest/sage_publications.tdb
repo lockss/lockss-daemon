@@ -15828,6 +15828,19 @@
   {
 
     title <
+      name = Indian Journal of Human Development ;
+      issn = 0973-7030
+    >
+
+      param[base_url] = http://jhd.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < doNotProcess ; exists ; 2016 ; Indian Journal of Human Development Volume 1 ; 1 ; >
+  }
+
+  {
+
+    title <
       name = Indoor and Built Environment ;
       issn = 1420-326X ;
       eissn = 1423-0070
