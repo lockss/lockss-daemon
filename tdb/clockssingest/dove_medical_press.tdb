@@ -27,11 +27,11 @@
     au < doNotProcess ; exists ; 2009 ; Therapeutics and Clinical Risk Management Volume 5 ; 5 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Therapeutics and Clinical Risk Management Volume 6 ; 6 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Therapeutics and Clinical Risk Management Volume 7 ; 7 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Therapeutics and Clinical Risk Management Volume 8 ; 8 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Therapeutics and Clinical Risk Management Volume 9 ; 9 ; 2013 ; >
-    au < ready ; exists ; 2014 ; Therapeutics and Clinical Risk Management Volume 10 ; 10 ; 2014 ; >
+    au < crawling ; exists ; 2012 ; Therapeutics and Clinical Risk Management Volume 8 ; 8 ; 2012 ; >
+    au < crawling ; exists ; 2013 ; Therapeutics and Clinical Risk Management Volume 9 ; 9 ; 2013 ; >
+    au < crawling ; exists ; 2014 ; Therapeutics and Clinical Risk Management Volume 10 ; 10 ; 2014 ; >
     au < finished ; crawling ; 2015 ; Therapeutics and Clinical Risk Management Volume 11 ; 11 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Therapeutics and Clinical Risk Management Volume 12 ; 12 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Therapeutics and Clinical Risk Management Volume 12 ; 12 ; 2016 ; >
     
   }
 
@@ -51,11 +51,11 @@
     au < doNotProcess ; exists ; 2009 ; Vascular Health and Risk Management Volume 5 ; 5 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Vascular Health and Risk Management Volume 6 ; 6 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Vascular Health and Risk Management Volume 7 ; 7 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Vascular Health and Risk Management Volume 8 ; 8 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Vascular Health and Risk Management Volume 9 ; 9 ; 2013 ; >
-    au < ready ; exists ; 2014 ; Vascular Health and Risk Management Volume 10 ; 10 ; 2014 ; >
+    au < crawling ; exists ; 2012 ; Vascular Health and Risk Management Volume 8 ; 8 ; 2012 ; >
+    au < crawling ; exists ; 2013 ; Vascular Health and Risk Management Volume 9 ; 9 ; 2013 ; >
+    au < crawling ; exists ; 2014 ; Vascular Health and Risk Management Volume 10 ; 10 ; 2014 ; >
     au < finished ; crawling ; 2015 ; Vascular Health and Risk Management Volume 11 ; 11 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Vascular Health and Risk Management Volume 12 ; 12 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Vascular Health and Risk Management Volume 12 ; 12 ; 2016 ; >
     
   }
 
@@ -75,11 +75,11 @@
     au < doNotProcess ; exists ; 2009 ; Neuropsychiatric Disease and Treatment Volume 5 ; 5 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Neuropsychiatric Disease and Treatment Volume 6 ; 6 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Neuropsychiatric Disease and Treatment Volume 7 ; 7 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Neuropsychiatric Disease and Treatment Volume 8 ; 8 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Neuropsychiatric Disease and Treatment Volume 9 ; 9 ; 2013 ; >
-    au < ready ; exists ; 2014 ; Neuropsychiatric Disease and Treatment Volume 10 ; 10 ; 2014 ; >
+    au < crawling ; exists ; 2012 ; Neuropsychiatric Disease and Treatment Volume 8 ; 8 ; 2012 ; >
+    au < crawling ; exists ; 2013 ; Neuropsychiatric Disease and Treatment Volume 9 ; 9 ; 2013 ; >
+    au < crawling ; exists ; 2014 ; Neuropsychiatric Disease and Treatment Volume 10 ; 10 ; 2014 ; >
     au < finished ; crawling ; 2015 ; Neuropsychiatric Disease and Treatment Volume 11 ; 11 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Neuropsychiatric Disease and Treatment Volume 12 ; 12 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Neuropsychiatric Disease and Treatment Volume 12 ; 12 ; 2016 ; >
     
   }
 
@@ -98,11 +98,11 @@
     au < doNotProcess ; exists ; 2009 ; Clinical Interventions in Aging Volume 4 ; 4 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Clinical Interventions in Aging Volume 5 ; 5 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Clinical Interventions in Aging Volume 6 ; 6 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Clinical Interventions in Aging Volume 7 ; 7 ; 2012 ; >
-    au < ready ; exists ; 2013 ; Clinical Interventions in Aging Volume 8 ; 8 ; 2013 ; >
-    au < ready ; exists ; 2014 ; Clinical Interventions in Aging Volume 9 ; 9 ; 2014 ; >
+    au < crawling ; exists ; 2012 ; Clinical Interventions in Aging Volume 7 ; 7 ; 2012 ; >
+    au < crawling ; exists ; 2013 ; Clinical Interventions in Aging Volume 8 ; 8 ; 2013 ; >
+    au < crawling ; exists ; 2014 ; Clinical Interventions in Aging Volume 9 ; 9 ; 2014 ; >
     au < frozen ; exists ; 2015 ; Clinical Interventions in Aging Volume 10 ; 10 ; 2015 ; >
-    au < ready ; exists ; 2016 ; Clinical Interventions in Aging Volume 11 ; 11 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; Clinical Interventions in Aging Volume 11 ; 11 ; 2016 ; >
     
   }
 
@@ -121,8 +121,8 @@
     au < doNotProcess ; exists ; 2009 ; International Journal of Nanomedicine Volume 4 ; 4 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; International Journal of Nanomedicine Volume 5 ; 5 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; International Journal of Nanomedicine Volume 6 ; 6 ; 2011 ; >
-    au < ready ; exists ; 2012 ; International Journal of Nanomedicine Volume 7 ; 7 ; 2012 ; >
-    au < ready ; exists ; 2013 ; International Journal of Nanomedicine Volume 8 ; 8 ; 2013 ; >
+    au < crawling ; exists ; 2012 ; International Journal of Nanomedicine Volume 7 ; 7 ; 2012 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Nanomedicine Volume 8 ; 8 ; 2013 ; >
     au < testing ; exists ; 2014 ; International Journal of Nanomedicine Volume 9 ; 9 ; 2014 ; >
     au < frozen ; exists ; 2015 ; International Journal of Nanomedicine Volume 10 ; 10 ; 2015 ; >
     au < testing ; exists ; 2016 ; International Journal of Nanomedicine Volume 11 ; 11 ; 2016 ; >
@@ -144,11 +144,11 @@
     au < doNotProcess ; exists ; 2009 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 4 ; 4 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 5 ; 5 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 6 ; 6 ; 2011 ; >
-    au < ready ; exists ; 2012 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 7 ; 7 ; 2012 ; >
-    au < ready ; exists ; 2013 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 8 ; 8 ; 2013 ; >
-    au < ready ; exists ; 2014 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 9 ; 9 ; 2014 ; >
+    au < crawling ; exists ; 2012 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 7 ; 7 ; 2012 ; >
+    au < crawling ; exists ; 2013 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 8 ; 8 ; 2013 ; >
+    au < crawling ; exists ; 2014 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 9 ; 9 ; 2014 ; >
     au < finished ; crawling ; 2015 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 10 ; 10 ; 2015 ; >
-    au < ready ; exists ; 2016 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 11 ; 11 ; 2016 ; >
+    au < crawling ; exists ; 2016 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 11 ; 11 ; 2016 ; >
     
   }
 
@@ -165,7 +165,7 @@
     au < doNotProcess ; exists ; 2009 ; Journal of Multidisciplinary Healthcare Volume 2 ; 2 ; 2009 ; >
     au < doNotProcess ; exists ; 2010 ; Journal of Multidisciplinary Healthcare Volume 3 ; 3 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Multidisciplinary Healthcare Volume 4 ; 4 ; 2011 ; >
-    au < ready ; exists ; 2012 ; Journal of Multidisciplinary Healthcare Volume 5 ; 5 ; 2012 ; >
+    au < crawling ; exists ; 2012 ; Journal of Multidisciplinary Healthcare Volume 5 ; 5 ; 2012 ; >
     au < testing ; exists ; 2013 ; Journal of Multidisciplinary Healthcare Volume 6 ; 6 ; 2013 ; >
     au < testing ; exists ; 2014 ; Journal of Multidisciplinary Healthcare Volume 7 ; 7 ; 2014 ; >
     au < finished ; crawling ; 2015 ; Journal of Multidisciplinary Healthcare Volume 8 ; 8 ; 2015 ; >

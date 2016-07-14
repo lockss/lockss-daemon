@@ -17,6 +17,7 @@
       
       param[base_url] = http://journals.sfu.ca/archivar/
       param[journal_id] = archivaria
+      #moved to http://archivaria.ca
 
       au < exists ; 1975 ; Archivaria 1 (1975) ; 1 ; 1975 >
       au < exists ; 1976 ; Archivaria 2-3 (1976) ; 2-3 ; 1976 >

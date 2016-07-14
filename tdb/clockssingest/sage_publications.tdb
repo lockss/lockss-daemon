@@ -4280,7 +4280,7 @@
         au < exists ; exists ; 2012 ; British Journal of Music Therapy Volume 26 ; 26 ; >
         au < exists ; exists ; 2013 ; British Journal of Music Therapy Volume 27 ; 27 ; >
         au < exists ; exists ; 2014 ; British Journal of Music Therapy Volume 28 ; 28 ; >
-        au < manifest ; exists ; 2015 ; British Journal of Music Therapy Volume 29 ; 29 ; >
+        au < crawling ; exists ; 2015 ; British Journal of Music Therapy Volume 29 ; 29 ; >
         au < doNotProcess ; exists ; 2016 ; British Journal of Music Therapy Volume 30 ; 30 ; >
 
   }
@@ -15906,7 +15906,7 @@
       au < exists ; exists ; 2012 ; Industry and Higher Education Volume 26 ; 26 ; >
       au < exists ; exists ; 2013 ; Industry and Higher Education Volume 27 ; 27 ; >
       au < exists ; exists ; 2014 ; Industry and Higher Education Volume 28 ; 28 ; >
-      au < manifest ; exists ; 2015 ; Industry and Higher Education Volume 29 ; 29 ; >
+      au < crawling ; exists ; 2015 ; Industry and Higher Education Volume 29 ; 29 ; >
       au < doNotProcess ; exists ; 2016 ; Industry and Higher Education Volume 30 ; 30 ; >
 
   }
@@ -19502,11 +19502,11 @@
       au < manifest ; exists ; 2007 ; Journal of Adult and Continuing Education Volume 13 ; 13 ; >
       au < manifest ; exists ; 2008 ; Journal of Adult and Continuing Education Volume 14 ; 14 ; >
       au < manifest ; exists ; 2009 ; Journal of Adult and Continuing Education Volume 15 ; 15 ; >
-      au < manifest ; exists ; 2010 ; Journal of Adult and Continuing Education Volume 16 ; 16 ; >
-      au < manifest ; exists ; 2011 ; Journal of Adult and Continuing Education Volume 17 ; 17 ; >
-      au < manifest ; exists ; 2012 ; Journal of Adult and Continuing Education Volume 18 ; 18 ; >
-      au < manifest ; exists ; 2013 ; Journal of Adult and Continuing Education Volume 19 ; 19 ; >
-      au < manifest ; exists ; 2014 ; Journal of Adult and Continuing Education Volume 20 ; 20 ; >
+      au < crawling ; exists ; 2010 ; Journal of Adult and Continuing Education Volume 16 ; 16 ; >
+      au < crawling ; exists ; 2011 ; Journal of Adult and Continuing Education Volume 17 ; 17 ; >
+      au < crawling ; exists ; 2012 ; Journal of Adult and Continuing Education Volume 18 ; 18 ; >
+      au < crawling ; exists ; 2013 ; Journal of Adult and Continuing Education Volume 19 ; 19 ; >
+      au < crawling ; exists ; 2014 ; Journal of Adult and Continuing Education Volume 20 ; 20 ; >
       au < crawling ; exists ; 2015 ; Journal of Adult and Continuing Education Volume 21 ; 21 ; >
       au < doNotProcess ; exists ; 2016 ; Journal of Adult and Continuing Education Volume 22 ; 22 ; >
 
@@ -29224,7 +29224,7 @@
       au < exists ; exists ; 2012 ; Journal of Veterinary Dentistry Volume 29 ; 29 ; >
       au < exists ; exists ; 2013 ; Journal of Veterinary Dentistry Volume 30 ; 30 ; >
       au < exists ; exists ; 2014 ; Journal of Veterinary Dentistry Volume 31 ; 31 ; >
-      au < manifest ; exists ; 2015 ; Journal of Veterinary Dentistry Volume 32 ; 32 ; >
+      au < crawling ; exists ; 2015 ; Journal of Veterinary Dentistry Volume 32 ; 32 ; >
       au < doNotProcess ; exists ; 2016 ; Journal of Veterinary Dentistry Volume 33 ; 33 ; >
 
   }
@@ -31706,10 +31706,10 @@
       au < manifest ; exists ; 2007 ; Molecular Imaging Volume 6 ; 6 ; >
       au < manifest ; exists ; 2008 ; Molecular Imaging Volume 7 ; 7 ; >
       au < manifest ; exists ; 2009 ; Molecular Imaging Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2010 ; Molecular Imaging Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2011 ; Molecular Imaging Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2012 ; Molecular Imaging Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2013 ; Molecular Imaging Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2010 ; Molecular Imaging Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2011 ; Molecular Imaging Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2012 ; Molecular Imaging Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2013 ; Molecular Imaging Volume 12 ; 12 ; >
       au < crawling ; exists ; 2014 ; Molecular Imaging Volume 13 ; 13 ; >
       au < crawling ; exists ; 2015 ; Molecular Imaging Volume 14 ; 14 ; >
       au < doNotProcess ; exists ; 2016 ; Molecular Imaging Volume 15 ; 15 ; >
@@ -33616,7 +33616,7 @@
       au < exists ; exists ; 2012 ; Outlook on Agriculture Volume 41 ; 41 ; >
       au < exists ; exists ; 2013 ; Outlook on Agriculture Volume 42 ; 42 ; >
       au < exists ; exists ; 2014 ; Outlook on Agriculture Volume 43 ; 43 ; >
-      au < manifest ; exists ; 2015 ; Outlook on Agriculture Volume 44 ; 44 ; >
+      au < crawling ; exists ; 2015 ; Outlook on Agriculture Volume 44 ; 44 ; >
       au < doNotProcess ; exists ; 2016 ; Outlook on Agriculture Volume 45 ; 45 ; >
 
   }
@@ -46310,7 +46310,7 @@
 
     au < finished ; crawling ; 2012 ; Jindal Journal of Business Research Volume 1 ; 1 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2013 ; Jindal Journal of Business Research Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2014 ; Jindal Journal of Business Research Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2014 ; Jindal Journal of Business Research Volume 3 ; 3 ; >
 
     }
 
@@ -46638,7 +46638,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://ftr.sagepub.com/
 
-    au < manifest ; exists ; 2012 ; Foreign Trade Review Volume 47 ; 47 ; >
+    au < crawling ; exists ; 2012 ; Foreign Trade Review Volume 47 ; 47 ; >
     au < finished ; finished ; 2013 ; Foreign Trade Review Volume 48 ; 48 ; >
     au < finished ; finished ; 2014 ; Foreign Trade Review Volume 49 ; 49 ; >
     au < crawling ; exists ; 2015 ; Foreign Trade Review Volume 50 ; 50 ; >
@@ -48767,7 +48767,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Psychological Reports Volume 113 ; 113 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Psychological Reports Volume 114 ; 114 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Psychological Reports Volume 115 ; 115 ; >
-    au < manifest ; exists ; 2015 ; Psychological Reports Volume 116 ; 116 ; >
+    au < crawling ; exists ; 2015 ; Psychological Reports Volume 116 ; 116 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Psychological Reports Volume 117 ; 117 ; >
     au < doNotProcess ; exists ; 2016 ; Psychological Reports Volume 118 ; 118 ; >
     
@@ -48904,7 +48904,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; Perceptual and Motor Skills Volume 117 ; 117 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Perceptual and Motor Skills Volume 118 ; 118 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Perceptual and Motor Skills Volume 119 ; 119 ; >
-    au < manifest ; exists ; 2015 ; Perceptual and Motor Skills Volume 120 ; 120 ; > 
+    au < crawling ; exists ; 2015 ; Perceptual and Motor Skills Volume 120 ; 120 ; > 
     au < doNotProcess ; doNotProcess ; 2015 ; Perceptual and Motor Skills Volume 121 ; 121 ; >
     au < doNotProcess ; exists ; 2016 ; Perceptual and Motor Skills Volume 122 ; 122 ; >
     au < exists ; exists ; 2016 ; Perceptual and Motor Skills Volume 123 ; 123 ; >
