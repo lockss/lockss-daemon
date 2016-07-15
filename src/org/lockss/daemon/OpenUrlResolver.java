@@ -45,7 +45,6 @@ import org.lockss.plugin.AuUtil.AuProxyInfo;
 import org.lockss.plugin.PluginManager.CuContentReq;
 import org.lockss.plugin.PrintfConverter.UrlListConverter;
 import org.lockss.plugin.definable.DefinableArchivalUnit;
-import org.lockss.proxy.ProxyManager;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 
@@ -109,8 +108,6 @@ public class OpenUrlResolver {
   private final LockssDaemon daemon;
   /** the PluginManager */
   private final PluginManager pluginMgr;
-  /** the ProxyManager */
-  private final ProxyManager proxyMgr;
   
   /** maximum redirects for looking up DOI url */
   private static final int MAX_REDIRECTS = 10;
@@ -357,7 +354,6 @@ public class OpenUrlResolver {
     }
     this.daemon = daemon;
     this.pluginMgr = daemon.getPluginManager();
-    this.proxyMgr = daemon.getProxyManager();
   }
   
   /**
@@ -1062,9 +1058,6 @@ public class OpenUrlResolver {
   String resolveUrl(String aUrl, String auProxySpec) { // protected for testing
     String url = aUrl;
     try {
-      final LockssUrlConnectionPool connectionPool =
-        proxyMgr.getQuickConnectionPool();
-      
       // get proxy host and port for the proxy spec or the current config
       AuProxyInfo proxyInfo = AuUtil.getAuProxyInfo(auProxySpec);
       String proxyHost = proxyInfo.getHost();
@@ -1079,7 +1072,7 @@ public class OpenUrlResolver {
         // test URL by opening connection
         LockssUrlConnection conn = null;
         try {
-          conn = UrlUtil.openConnection(url, connectionPool);
+          conn = UrlUtil.openConnection(url, null);
           conn.setFollowRedirects(false);
           conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
 

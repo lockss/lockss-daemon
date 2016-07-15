@@ -79,8 +79,6 @@ public class TestAdminServletManager extends LockssTestCase {
 };
 
   ServletDescr contentAdminDescrs[] = {
-    SERVLET_PROXY_ACCESS_CONTROL,
-    SERVLET_PROXY_AND_CONTENT,
   };
 
   ServletDescr contentAccessDescrs[] = {

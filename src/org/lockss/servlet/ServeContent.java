@@ -37,10 +37,8 @@ import javax.servlet.*;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.collections.*;
 import org.apache.commons.httpclient.util.DateParseException;
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.apache.commons.lang3.StringEscapeUtils;
-import org.apache.commons.lang3.tuple.Pair;
 import org.lockss.alert.Alert;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
@@ -51,11 +49,9 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.AuUtil.AuProxyInfo;
 import org.lockss.plugin.PluginManager.CuContentReq;
 import org.lockss.plugin.base.BaseUrlFetcher;
-import org.lockss.proxy.ProxyManager;
 import org.lockss.rewriter.LinkRewriterFactory;
 import org.lockss.state.AuState;
 import org.lockss.util.*;
-import org.lockss.util.CloseCallbackInputStream.DeleteFileOnCloseInputStream;
 import org.lockss.util.urlconn.*;
 import org.mortbay.html.*;
 import org.mortbay.http.*;
@@ -264,7 +260,6 @@ public class ServeContent extends LockssServlet {
   private AccessLogType requestType = AccessLogType.None;
 
   private PluginManager pluginMgr;
-  private ProxyManager proxyMgr;
   private OpenUrlResolver openUrlResolver;
 
   // don't hold onto objects after request finished
@@ -283,7 +278,6 @@ public class ServeContent extends LockssServlet {
     super.init(config);
     LockssDaemon daemon = getLockssDaemon();
     pluginMgr = daemon.getPluginManager();
-    proxyMgr = daemon.getProxyManager();
     openUrlResolver = new OpenUrlResolver(daemon);
   }
 
@@ -872,7 +866,6 @@ public class ServeContent extends LockssServlet {
   protected void handleAuRequest() throws IOException {
     String host = UrlUtil.getHost(url);
     boolean isInCache = isInCache();
-    boolean isHostDown = proxyMgr.isHostDown(host);
 
     if (isNeverProxyForAu(au) || isMementoRequest()) {
       if (isInCache) {
@@ -889,28 +882,11 @@ public class ServeContent extends LockssServlet {
       return;
     }
 
-    LockssUrlConnectionPool connPool = proxyMgr.getNormalConnectionPool();
-
-    if (!isInCache && isHostDown) {
-      switch (proxyMgr.getHostDownAction()) {
-        case ProxyManager.HOST_DOWN_NO_CACHE_ACTION_504:
-          handleMissingUrlRequest(url, PubState.RecentlyDown);
-          return;
-        case ProxyManager.HOST_DOWN_NO_CACHE_ACTION_QUICK:
-          connPool = proxyMgr.getQuickConnectionPool();
-          break;
-        default:
-        case ProxyManager.HOST_DOWN_NO_CACHE_ACTION_NORMAL:
-          connPool = proxyMgr.getNormalConnectionPool();
-          break;
-      }
-    }
-
     // Send request to publisher
     LockssUrlConnection conn = null;
     PubState pstate = PubState.Unknown;
     try {
-      conn = openLockssUrlConnection(connPool);
+      conn = openLockssUrlConnection(null);
 
       // set proxy for connection if specified
       AuProxyInfo info = AuUtil.getAuProxyInfo(au);
@@ -930,7 +906,6 @@ public class ServeContent extends LockssServlet {
 
       // mark host down if connection timed out
       if (ex instanceof LockssUrlConnection.ConnectionTimeoutException) {
-        proxyMgr.setHostDown(host, isInCache);
       }
       pstate = PubState.KnownDown;
 
@@ -1232,9 +1207,6 @@ public class ServeContent extends LockssServlet {
       }
     }
 
-    resp.addHeader(HttpFields.__Via,
-        proxyMgr.makeVia(getMachineName(), reqURL.getPort()));
-
     String contentEncoding = conn.getResponseContentEncoding();
     long responseContentLength = conn.getResponseContentLength();
 
@@ -1358,15 +1330,6 @@ public class ServeContent extends LockssServlet {
     // send address of original requester
     conn.addRequestProperty(HttpFields.__XForwardedFor,
         req.getRemoteAddr());
-    conn.addRequestProperty(HttpFields.__Via,
-        proxyMgr.makeVia(getMachineName(),
-            reqURL.getPort()));
-
-    String cookiePolicy = proxyMgr.getCookiePolicy();
-    if (cookiePolicy != null &&
-        !cookiePolicy.equalsIgnoreCase(ProxyManager.COOKIE_POLICY_DEFAULT)) {
-      conn.setCookiePolicy(cookiePolicy);
-    }
 
     return conn;
   }

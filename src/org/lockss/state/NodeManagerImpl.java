@@ -87,7 +87,7 @@ public class NodeManagerImpl
       nodeCache = new UniqueRefLruCache(getNodeManagerManager().paramNodeStateCacheSize);
     }
 
-    auState = historyRepo.loadAuState();
+    auState = new AuState(managedAu, historyRepo);
 
     // damagedNodes not used for V3, avoid file lookup per AU
 //     damagedNodes = historyRepo.loadDamagedNodeSet();

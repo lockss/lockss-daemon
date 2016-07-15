@@ -35,8 +35,6 @@ import org.apache.oro.text.regex.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
-import org.lockss.proxy.*;
-import org.lockss.proxy.icp.*;
 import org.lockss.util.*;
 
 /**
@@ -218,7 +216,6 @@ public class ProxyInfo {
       buffer.append("PROXY ");
       buffer.append(getProxyHost());
       buffer.append(":");
-      buffer.append(getProxyPort());
       if (m_isDirectFirst) {
         buffer.append("\"; }\n\n");
       } else {
@@ -358,7 +355,6 @@ public class ProxyInfo {
       buffer.append("Proxy ");
       buffer.append(getProxyHost());
       buffer.append(':');
-      buffer.append(getProxyPort());
       buffer.append("\n\n");
     }
 
@@ -468,34 +464,6 @@ public class ProxyInfo {
       buffer.append(beforeCommands);
       buffer.append("cache_peer ");
       buffer.append(getProxyHost());
-      buffer.append(" parent ");
-      buffer.append(CurrentConfig.getIntParam(ProxyManager.PARAM_PORT,
-                                              ProxyManager.DEFAULT_PORT));
-      buffer.append(' ');
-      int port = CurrentConfig.getIntParam(IcpManager.PARAM_ICP_PORT,
-                                           CurrentConfig.getIntParam(IcpManager.PARAM_PLATFORM_ICP_PORT,
-                                                                     -1));
-      buffer.append(port > 0 ? Integer.toString(port) : "???");
-      buffer.append(" proxy-only\n");
-
-      // Additional explanation if ICP is not quite ready
-      IcpManager icpManager = (IcpManager)LockssDaemon.getManager(LockssDaemon.ICP_MANAGER);
-      if (!icpManager.isIcpServerAllowed()) {
-        buffer.append(beforeCommands);
-        buffer.append("# (The platform on ");
-        buffer.append(getProxyHost());
-        buffer.append(" is configured to disallow ICP.\n");
-        buffer.append(beforeCommands);
-        buffer.append("# To enable ICP you must perform a platform reconfiguration reboot.)\n");
-      }
-      else if (!(port > 0)) {
-        buffer.append(beforeCommands);
-        buffer.append("# (The ICP server is not running on ");
-        buffer.append(getProxyHost());
-        buffer.append(".\n");
-        buffer.append(beforeCommands);
-        buffer.append("# Replace \"???\" by the ICP port after setting it up.)\n");
-      }
       buffer.append(beforeCommands);
       buffer.append('\n');
 
@@ -727,24 +695,6 @@ public class ProxyInfo {
         CurrentConfig.getParam(ConfigManager.PARAM_PLATFORM_FQDN);
     }
     return proxyHost;
-  }
-
-  /** Determine the local proxy port.  Tries to get it from ProxyManager if
-   * exists, else from configuration.
-   * @return the proxy port number
-   */
-  int getProxyPort() {
-    if (proxyPort == -1) {
-      try {
-	ProxyManager mgr =
-	  (ProxyManager)LockssDaemon.getManager(LockssDaemon.PROXY_MANAGER);
-	proxyPort = mgr.getProxyPort();
-      } catch (IllegalArgumentException e) {
-	proxyPort = CurrentConfig.getIntParam(ProxyManager.PARAM_PORT,
-	                                      ProxyManager.DEFAULT_PORT);
-      }
-    }
-    return proxyPort;
   }
 
   private int getMaxCommentAus() {

@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,20 +35,15 @@ package org.lockss.jetty;
 
 import java.io.*;
 import java.util.*;
-
 import org.apache.commons.logging.Log;
 import org.mortbay.http.*;
 import org.mortbay.http.handler.*;
 import org.mortbay.log.LogFactory;
 import org.mortbay.util.*;
-
 import com.sun.jimi.core.*;
 import com.sun.jimi.core.raster.JimiRasterImage;
-
 import org.lockss.app.LockssDaemon;
-import org.lockss.config.CurrentConfig;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.proxy.ProxyManager;
 import org.lockss.util.*;
 
 /** Extension of ResourceHandler that allows flexibility in finding the
@@ -63,7 +54,6 @@ public class LockssResourceHandler extends AbstractHttpHandler {
 
     /* ----------------------------------------------------------------- */
     private LockssDaemon theDaemon = null;
-    private ProxyManager proxyMgr = null;
     private boolean _acceptRanges=true;
     private boolean _redirectWelcomeFiles ;
     private String _redirectRootTo ;
@@ -90,7 +80,6 @@ public class LockssResourceHandler extends AbstractHttpHandler {
     public LockssResourceHandler(LockssDaemon daemon)
     {
       theDaemon = daemon;
-      proxyMgr = theDaemon.getProxyManager();
     }
 
 
@@ -755,16 +744,6 @@ public class LockssResourceHandler extends AbstractHttpHandler {
 	  isHeaderKey(key, DONT_PROXY_HEADERS)) {
 	continue;
       }
-
-      // If configured to copy response props, or if this is an audit prop
-      // (repair info, checksum) that we're configured to include, store it
-      // in the response.
-      if (isHeaderKey(key, CachedUrl.LOCKSS_AUDIT_PROPERTIES)
-	  ? proxyMgr.isIncludeLockssAuditProps()
-	  : proxyMgr.isCopyStoredResponseHeaders()) {
-
-	response.setField(key, valLst.get(0));
-      }
     }
   }
 
@@ -829,11 +808,8 @@ public class LockssResourceHandler extends AbstractHttpHandler {
 
 	    InputStream in = data.getInputStream();
 	    OutputStream out = null;
-	    boolean enableRewrite =
-              CurrentConfig.getCurrentConfig().getBoolean(ProxyManager.PARAM_REWRITE_GIF_PNG,
-                                                          ProxyManager.DEFAULT_REWRITE_GIF_PNG);
-	    if (!proxyMgr.isRepairRequest(request) &&
-		enableRewrite &&
+	    boolean enableRewrite = false;
+	    if (enableRewrite &&
 		"image/gif".equals(HeaderUtil.getMimeTypeFromContentType(response.getContentType())) &&
 		"from-cache".equals(response.getField("X-Lockss"))) {
 	      try {

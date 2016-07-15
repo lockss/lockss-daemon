@@ -41,7 +41,6 @@ import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.mail.*;
 import org.lockss.plugin.*;
-import org.lockss.proxy.*;
 import org.lockss.remote.*;
 import org.lockss.repository.*;
 import org.lockss.servlet.*;
@@ -1319,8 +1318,6 @@ public class ConfigManager implements LockssManager {
     String fromParam = LockssDaemon.PARAM_BIND_ADDRS;
     setIfNotSet(config, fromParam, AdminServletManager.PARAM_BIND_ADDRS);
     setIfNotSet(config, fromParam, ContentServletManager.PARAM_BIND_ADDRS);
-    setIfNotSet(config, fromParam, ProxyManager.PARAM_BIND_ADDRS);
-    setIfNotSet(config, fromParam, AuditProxyManager.PARAM_BIND_ADDRS);
 //     setIfNotSet(config, fromParam, IcpManager.PARAM_ICP_BIND_ADDRS);
   }
 
@@ -1405,10 +1402,6 @@ public class ConfigManager implements LockssManager {
     appendPlatformAccess(config,
 			 AdminServletManager.PARAM_IP_INCLUDE,
 			 AdminServletManager.PARAM_IP_PLATFORM_SUBNET,
-			 platformSubnet);
-    appendPlatformAccess(config,
-			 ProxyManager.PARAM_IP_INCLUDE,
-			 ProxyManager.PARAM_IP_PLATFORM_SUBNET,
 			 platformSubnet);
 
     String space = config.get(PARAM_PLATFORM_DISK_SPACE_LIST);

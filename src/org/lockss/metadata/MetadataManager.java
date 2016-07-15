@@ -1370,20 +1370,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   void updateAuLastExtractionTime(ArchivalUnit au, Connection conn,
       Long auMdSeq) throws DbException {
     final String DEBUG_HEADER = "updateAuLastExtractionTime(): ";
-    // Determine whether content is obtained via web services, not from the
-    // local repository.
-    boolean isAuContentFromWs = pluginMgr.isAuContentFromWs();
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "isAuContentFromWs = " + isAuContentFromWs);
 
     long now = TimeBase.nowMs();
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "now = " + now);
-
-    // Check whether the local repository is used.
-    if (!isAuContentFromWs) {
-      // Yes.
-      AuUtil.getAuState(au).setLastMetadataIndex(now);
-    }
 
     mdManagerSql.updateAuLastExtractionTime(conn, auMdSeq, now);
     pendingAusCount = mdManagerSql.getEnabledPendingAusCount(conn);

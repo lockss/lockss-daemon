@@ -43,8 +43,6 @@ import org.lockss.mail.MailService;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.*;
 import org.lockss.truezip.*;
-import org.lockss.proxy.ProxyManager;
-import org.lockss.proxy.icp.IcpManager;
 import org.lockss.remote.RemoteApi;
 import org.lockss.repository.*;
 import org.lockss.scheduler.SchedService;
@@ -67,7 +65,6 @@ public class MockLockssDaemon extends LockssDaemon {
   HashService hashService = null;
   SchedService schedService = null;
   SystemMetrics systemMetrics = null;
-  ProxyManager proxyManager = null;
   ServletManager servletManager = null;
   CrawlManager crawlManager = null;
   RepositoryManager repositoryManager = null;
@@ -77,7 +74,6 @@ public class MockLockssDaemon extends LockssDaemon {
   TrueZipManager tzipManager = null;
   StatusService statusService = null;
   RemoteApi remoteApi = null;
-  IcpManager icpManager = null;
   ClockssParams clockssParams = null;
   DbManager dbManager = null;
   Cron cron = null;
@@ -121,12 +117,10 @@ public class MockLockssDaemon extends LockssDaemon {
     wdogService = null;
     hashService = null;
     schedService = null;
-    proxyManager = null;
     crawlManager = null;
     pluginManager = null;
     metadataManager = null;
     statusService = null;
-    icpManager = null;
     dbManager = null;
     cron = null;
 
@@ -293,18 +287,6 @@ public class MockLockssDaemon extends LockssDaemon {
       managerMap.put(LockssDaemon.SYSTEM_METRICS, systemMetrics);
     }
     return systemMetrics;
-  }
-
-  /**
-   * return the proxy manager instance
-   * @return the ProxyManager
-   */
-  public ProxyManager getProxyManager() {
-    if (proxyManager == null) {
-      proxyManager = (ProxyManager)newManager(LockssDaemon.PROXY_MANAGER);
-      managerMap.put(LockssDaemon.PROXY_MANAGER, proxyManager);
-    }
-    return proxyManager;
   }
 
   /**
@@ -577,15 +559,6 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * Set the ProxyManager
-   * @param proxyMgr the new manager
-   */
-  public void setProxyManager(ProxyManager proxyMgr) {
-    proxyManager = proxyMgr;
-    managerMap.put(LockssDaemon.PROXY_MANAGER, proxyManager);
-  }
-
-  /**
    * Set the ServletManager
    * @param servletMgr the new manager
    */
@@ -777,15 +750,6 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setHistoryRepository(HistoryRepository histRepo, ArchivalUnit au) {
     setAuManager(HISTORY_REPOSITORY, au, histRepo);
-  }
-
-  /**
-   * <p>Forcibly sets the ICP manager to a new value.</p>
-   * @param icpManager A new ICP manager to use.
-   */
-  public void setIcpManager(IcpManager icpManager) {
-    this.icpManager = icpManager;
-    managerMap.put(LockssDaemon.ICP_MANAGER, icpManager);
   }
 
   private boolean daemonInited = false;

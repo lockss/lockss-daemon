@@ -42,8 +42,6 @@ import org.lockss.plugin.*;
 import org.lockss.truezip.*;
 import org.lockss.repository.*;
 import org.lockss.state.*;
-import org.lockss.proxy.*;
-import org.lockss.proxy.icp.IcpManager;
 import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.remote.*;
@@ -119,9 +117,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String HISTORY_REPOSITORY = "HistoryRepository";
   public static final String NODE_MANAGER = "NodeManager";
   public static final String CONTENT_SERVLET_MANAGER = "ContentManager";
-  public static final String PROXY_MANAGER = "ProxyManager";
-  public static final String AUDIT_PROXY_MANAGER = "AuditProxyManager";
-  public static final String FAIL_OVER_PROXY_MANAGER = "FailOverProxyManager";
   public static final String SYSTEM_METRICS = "SystemMetrics";
   public static final String REMOTE_API = "RemoteApi";
   public static final String URL_MANAGER = "UrlManager";
@@ -177,16 +172,10 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(SERVLET_MANAGER, "org.lockss.servlet.AdminServletManager"),
     new ManagerDesc(CONTENT_SERVLET_MANAGER,
                     "org.lockss.servlet.ContentServletManager"),
-    new ManagerDesc(PROXY_MANAGER, "org.lockss.proxy.ProxyManager"),
-    new ManagerDesc(AUDIT_PROXY_MANAGER, "org.lockss.proxy.AuditProxyManager"),
-    new ManagerDesc(FAIL_OVER_PROXY_MANAGER ,
-                    "org.lockss.proxy.FailOverProxyManager"),
     // comm after other major services so don't process messages until
     // they're ready
     new ManagerDesc(NODE_MANAGER_MANAGER,
                     "org.lockss.state.NodeManagerManager"),
-    new ManagerDesc(ICP_MANAGER,
-                    "org.lockss.proxy.icp.IcpManager"),
     new ManagerDesc(PLATFORM_CONFIG_STATUS,
                     "org.lockss.config.PlatformConfigStatus"),
     new ManagerDesc(CONFIG_STATUS,
@@ -344,15 +333,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   }
 
   /**
-   * return the proxy handler instance
-   * @return the ProxyManager
-   * @throws IllegalArgumentException if the manager is not available.
-  */
-  public ProxyManager getProxyManager() {
-    return (ProxyManager) getManager(PROXY_MANAGER);
-  }
-
-  /**
    * return the crawl manager instance
    * @return the CrawlManager
    * @throws IllegalArgumentException if the manager is not available.
@@ -425,15 +405,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
   public LockssKeyStoreManager getKeystoreManager() {
     return (LockssKeyStoreManager) getManager(KEYSTORE_MANAGER);
-  }
-
-  /**
-   * <p>Retrieves the ICP manager.</p>
-   * @return The ICP manager instance.
-   * @throws IllegalArgumentException if the manager is not available.
-   */
-  public IcpManager getIcpManager() {
-    return (IcpManager)getManager(ICP_MANAGER);
   }
 
   /**

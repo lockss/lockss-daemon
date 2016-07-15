@@ -32,7 +32,6 @@ import java.util.*;
 import org.lockss.config.ConfigManager;
 import org.lockss.daemon.ProxyInfo.*;
 import org.lockss.plugin.*;
-import org.lockss.proxy.icp.IcpManager;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -260,14 +259,7 @@ public class TestProxyInfo extends LockssTestCase {
 
   public void testSquidFragmentBuilder() {
     MockLockssDaemon mockLockssDaemon = getMockLockssDaemon();
-    IcpManager testableIcpManager = new IcpManager() {
-      public boolean isIcpServerAllowed() { return true; }
-      public synchronized boolean isIcpServerRunning() { return true; }
-    };
-    mockLockssDaemon.setIcpManager(testableIcpManager);
-    testableIcpManager.initService(mockLockssDaemon);
     mockLockssDaemon.setDaemonInited(true);
-    testableIcpManager.startService();
     
     SquidFragmentBuilder builder = pi.new SquidFragmentBuilder("http://www.foobar.com/test") {
       protected void generateEntry(StringBuffer buffer, String urlStem, String comment) {}

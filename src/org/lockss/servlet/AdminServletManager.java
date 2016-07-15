@@ -334,20 +334,6 @@ public class AdminServletManager extends BaseServletManager {
           (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
           | ServletDescr.NEED_ROLE_USER_ADMIN),
           "Control access to the administrative UI");
-  protected static final ServletDescr SERVLET_PROXY_ACCESS_CONTROL =
-          new ServletDescr("ProxyIpAccess",
-          ProxyIpAccess.class,
-          "Content Access Control",
-          (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-          | ServletDescr.NEED_ROLE_CONTENT_ADMIN),
-          "Control access to the preserved content");
-  protected static final ServletDescr SERVLET_PROXY_AND_CONTENT =
-          new ServletDescr("ProxyAndContent",
-          ProxyAndContent.class,
-          "Content Access Options",
-          (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-          | ServletDescr.NEED_ROLE_CONTENT_ADMIN),
-          "Configure the audit proxy and the ICP server");
   protected static final ServletDescr SERVLET_PROXY_INFO =
           new ServletDescr("ProxyConfig",
           ProxyConfig.class,
@@ -608,8 +594,6 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_AU_CONFIG,
     SERVLET_PLUGIN_CONFIG,
     SERVLET_ADMIN_ACCESS_CONTROL,
-    SERVLET_PROXY_ACCESS_CONTROL,
-    SERVLET_PROXY_AND_CONTENT,
     SERVLET_PROXY_INFO,
     SERVLET_DAEMON_STATUS,
     SERVLET_DISPLAY_CONTENT,
@@ -649,8 +633,6 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_AU_CONFIG,
     SERVLET_PLUGIN_CONFIG,
     SERVLET_ADMIN_ACCESS_CONTROL,
-    SERVLET_PROXY_ACCESS_CONTROL,
-    SERVLET_PROXY_AND_CONTENT,
     SERVLET_PROXY_INFO,
 //    SERVLET_DAEMON_STATUS_NEW,
     SERVLET_DISPLAY_CONTENT_STATUS,
@@ -694,8 +676,6 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_AU_CONFIG,
     SERVLET_PLUGIN_CONFIG,
     SERVLET_ADMIN_ACCESS_CONTROL,
-    SERVLET_PROXY_ACCESS_CONTROL,
-    SERVLET_PROXY_AND_CONTENT,
     SERVLET_PROXY_INFO,
     SERVLET_DAEMON_STATUS,
 //    SERVLET_DAEMON_STATUS_NEW,
