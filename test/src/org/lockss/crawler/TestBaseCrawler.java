@@ -37,7 +37,6 @@ import org.lockss.plugin.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
-import org.lockss.clockss.*;
 import org.lockss.test.*;
 import org.lockss.test.MockCrawler.MockCrawlerFacade;
 import org.lockss.crawler.BaseCrawler.StorePermissionScheme;
@@ -315,8 +314,6 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
     crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
     UrlFetcher uf = crawler.makePermissionUrlFetcher(startUrl);
     assertNotNull(uf);
-    assertFalse("UrlFetcher shouldn't be a ClockssUrlFetcher",
-		uf instanceof ClockssUrlFetcher);
     MockUrlFetcher muf = (MockUrlFetcher)uf;
     assertSame(crawler.getAu(), muf.getArchivalUnit());
     assertNull(muf.getLocalAddress());
@@ -331,8 +328,6 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
     crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
     UrlFetcher uf = crawler.makeUrlFetcher(startUrl);
     assertNotNull(uf);
-    assertFalse("UrlFetcher shouldn't be a ClockssUrlFetcher",
-		uf instanceof ClockssUrlFetcher);
     MockUrlFetcher muf = (MockUrlFetcher)uf;
     assertSame(crawler.getAu(), muf.getArchivalUnit());
     assertEquals("127.3.1.4", muf.getLocalAddress().getHostAddress());
@@ -342,8 +337,6 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
     crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
     UrlFetcher uf = crawler.makeUrlFetcher(startUrl);
     assertNotNull(uf);
-    assertFalse("UrlFetcher shouldn't be a ClockssUrlFetcher",
-		uf instanceof ClockssUrlFetcher);
     MockUrlFetcher muf = (MockUrlFetcher)uf;
     assertEquals("127.1.2.3", muf.getLocalAddress().getHostAddress());
   }
@@ -352,8 +345,6 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
     crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
     UrlFetcher uf = crawler.makeUrlFetcher(startUrl);
     assertNotNull(uf);
-    assertFalse("UrlFetcher shouldn't be a ClockssUrlFetcher",
-		uf instanceof ClockssUrlFetcher);
     MockUrlFetcher muf = (MockUrlFetcher)uf;
     assertNull(muf.getPreviousContentType());
     assertEquals("127.3.1.4", muf.getLocalAddress().getHostAddress());
@@ -365,16 +356,12 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
     crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
     UrlFetcher uf = crawler.makeUrlFetcher(startUrl);
     assertNotNull(uf);
-    assertTrue("UrlFetcher should be a ClockssUrlFetcher",
-	       uf instanceof ClockssUrlFetcher);
   }
 
   public void testMakeUrlFetcherWithMimeType() {
     crawler.previousContentType = "app/foo";
     UrlFetcher uf = crawler.makeUrlFetcher(startUrl);
     assertNotNull(uf);
-    assertFalse("UrlFetcher shouldn't be a ClockssUrlFetcher",
-		uf instanceof ClockssUrlFetcher);
     MockUrlFetcher muf = (MockUrlFetcher)uf;
     assertEquals("app/foo", muf.getPreviousContentType());
     UrlFetcher uf2 = crawler.makeUrlFetcher(permissionPage);
@@ -407,17 +394,14 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
     
     crawler.setDaemonPermissionCheckers(null);
     assertTrue(hasPermission(LockssPermission.LOCKSS_PERMISSION_STRING));
-    assertFalse(hasPermission(ClockssPermission.CLOCKSS_PERMISSION_STRING));
     ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_PROJECT,
 				  "clockss");
     crawler.setDaemonPermissionCheckers(null);
     assertFalse(hasPermission(LockssPermission.LOCKSS_PERMISSION_STRING));
-    assertTrue(hasPermission(ClockssPermission.CLOCKSS_PERMISSION_STRING));
     ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_PROJECT,
 				  "lockss");
     crawler.setDaemonPermissionCheckers(null);
     assertTrue(hasPermission(LockssPermission.LOCKSS_PERMISSION_STRING));
-    assertFalse(hasPermission(ClockssPermission.CLOCKSS_PERMISSION_STRING));
   }
 
   public void testToString() {

@@ -243,12 +243,6 @@ public class ArchivalUnitStatus
     public void populateTable(StatusTable table)
         throws StatusService.NoSuchTableException {
       List cols = columnDescriptors;
-      if (theDaemon.isDetectClockssSubscription()) {
-	cols = new ArrayList(cols);
-	cols.remove(cols.size() - 1);
-	cols.add(new ColumnDescriptor("Subscribed", "Subscribed",
-				      ColumnDescriptor.TYPE_STRING));
-      }
       table.setColumnDescriptors(cols, DEFAULT_AU_SUMMARY_COLUMNS);
       table.setDefaultSortRules(sortRules);
       Set<String> inclCols = new HashSet<String>();
@@ -408,11 +402,6 @@ public class ArchivalUnitStatus
       }
 
       rowMap.put("Damaged", stat);
-
-      if (theDaemon.isDetectClockssSubscription()) {
-	rowMap.put("Subscribed",
-		   AuUtil.getAuState(au).getClockssSubscriptionStatusString());
-      }
 
       return rowMap;
     }
@@ -1172,14 +1161,6 @@ public class ArchivalUnitStatus
 	res.add(new StatusTable.SummaryInfo("Current Activity",
 					    ColumnDescriptor.TYPE_STRING,
 					    lst));
-      }
-      if (theDaemon.isDetectClockssSubscription()) {
-	String subStatus =
-	  AuUtil.getAuState(au).getClockssSubscriptionStatusString();
-	res.add(clockssPos,
-		new StatusTable.SummaryInfo("Subscribed",
-					    ColumnDescriptor.TYPE_STRING,
-					    subStatus));
       }
       Object audef = AuConfiguration.makeAuRef("AU configuration",
 					       au.getAuId());

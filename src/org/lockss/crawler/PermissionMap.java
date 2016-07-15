@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
  Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
@@ -30,9 +26,9 @@
 
  */
 package org.lockss.crawler;
+
 import java.util.*;
 import org.apache.oro.text.regex.*;
-
 import org.lockss.app.*;
 import org.lockss.alert.Alert;
 import org.lockss.alert.AlertManager;
@@ -43,8 +39,6 @@ import org.lockss.plugin.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.CacheException;
-
-import java.io.*;
 import java.net.MalformedURLException;
 
 /**
@@ -324,11 +318,7 @@ public class PermissionMap {
    * @return a PermissionRecord.PERMISSION_XXX status code
    */
   PermissionStatus probe(PermissionRecord rec) {
-    if (getDaemon().isDetectClockssSubscription()) {
-      return clockssProbe(rec);
-    } else {
       return probe0(rec);
-    }
   }
 
   // CLOCKSS subscription logic.  Should be refactored into separate class.

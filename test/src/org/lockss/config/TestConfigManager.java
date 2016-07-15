@@ -34,7 +34,6 @@ import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
-import org.lockss.clockss.*;
 import org.lockss.config.Configuration;
 import org.lockss.config.Tdb;
 import org.lockss.servlet.*;
@@ -320,22 +319,13 @@ public class TestConfigManager extends LockssTestCase {
     Properties props = new Properties();
     ConfigurationUtil.setCurrentConfigFromProps(props);
     Configuration config = ConfigManager.getCurrentConfig();
-    assertNull(config.get(ClockssParams.PARAM_CLOCKSS_SUBSCRIPTION_ADDR));
-    assertNull(config.get(ClockssParams.PARAM_INSTITUTION_SUBSCRIPTION_ADDR));
     props.put("org.lockss.platform.localIPAddress", "1.1.1.1");
     ConfigurationUtil.setCurrentConfigFromProps(props);
     config = ConfigManager.getCurrentConfig();
-    assertEquals("1.1.1.1",
-		 config.get(ClockssParams.PARAM_INSTITUTION_SUBSCRIPTION_ADDR));
-    assertNull(config.get(ClockssParams.PARAM_CLOCKSS_SUBSCRIPTION_ADDR));
 
     props.put("org.lockss.platform.secondIP", "2.2.2.2");
     ConfigurationUtil.setCurrentConfigFromProps(props);
     config = ConfigManager.getCurrentConfig();
-    assertEquals("1.1.1.1",
-		 config.get(ClockssParams.PARAM_INSTITUTION_SUBSCRIPTION_ADDR));
-    assertEquals("2.2.2.2",
-		 config.get(ClockssParams.PARAM_CLOCKSS_SUBSCRIPTION_ADDR));
   }
 
   public void testInitSocketFactoryNoKeystore() throws Exception {

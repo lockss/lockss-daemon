@@ -36,7 +36,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.oro.text.regex.*;
 import org.lockss.app.*;
 import org.lockss.account.*;
-import org.lockss.clockss.*;
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.mail.*;
@@ -1385,11 +1384,6 @@ public class ConfigManager implements LockssManager {
       platformOverride(config, FileTarget.PARAM_FILE,
 		       new File(logdir, logfile).toString());
     }
-
-    conditionalPlatformOverride(config, PARAM_PLATFORM_IP_ADDRESS,
-				ClockssParams.PARAM_INSTITUTION_SUBSCRIPTION_ADDR);
-    conditionalPlatformOverride(config, PARAM_PLATFORM_SECOND_IP_ADDRESS,
-				ClockssParams.PARAM_CLOCKSS_SUBSCRIPTION_ADDR);
 
     conditionalPlatformOverride(config, PARAM_PLATFORM_SMTP_PORT,
 				SmtpMailService.PARAM_SMTPPORT);

@@ -45,8 +45,6 @@ import org.lockss.state.*;
 import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.remote.*;
-import org.lockss.clockss.*;
-import org.lockss.safenet.*;
 import org.apache.commons.collections.map.LinkedMap;
 
 /**
@@ -128,8 +126,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String OVERVIEW_STATUS = "OverviewStatus";
   public static final String ICP_MANAGER = "IcpManager";
   public static final String CRON = "Cron";
-  public static final String CLOCKSS_PARAMS = "ClockssParams";
-  public static final String SAFENET_MANAGER = "SafenetManager";
   public static final String TRUEZIP_MANAGER = "TrueZipManager";
   public static final String DB_MANAGER = "DbManager";
   public static final String JOB_MANAGER = "JobManager";
@@ -187,14 +183,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(OVERVIEW_STATUS,
                     "org.lockss.daemon.status.OverviewStatus"),
     new ManagerDesc(CRON, "org.lockss.daemon.Cron"),
-    new ManagerDesc(CLOCKSS_PARAMS, "org.lockss.clockss.ClockssParams") {
-      public boolean shouldStart() {
-        return isClockss();
-      }},
-    new ManagerDesc(SAFENET_MANAGER, "org.lockss.safenet.CachingEntitlementRegistryClient") {
-      public boolean shouldStart() {
-        return isSafenet();
-      }},
     // watchdog last
     new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE)
   };
@@ -224,8 +212,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
       new HashMap<String,LockssAuManager.Factory>();
 
   private static LockssDaemon theDaemon;
-  private boolean isClockss;
-  private boolean isSafenet;
   protected String testingMode;
 
   protected LockssDaemon(List<String> propUrls) {
@@ -274,28 +260,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   /** Return the current testing mode. */
   public String getTestingMode() {
     return testingMode;
-  }
-
-  /**
-   * True if running as a CLOCKSS daemon
-   */
-  public boolean isClockss() {
-    return isClockss;
-  }
-
-  /**
-   * Convenience method returns {@link
-   * ClockssParams#isDetectSubscription()}
-   */
-  public boolean isDetectClockssSubscription() {
-    return isClockss() && getClockssParams().isDetectSubscription();
-  }
-
-  /**
-   * True if running as a Safenet daemon
-   */
-  public boolean isSafenet() {
-    return isSafenet;
   }
 
   /** Stop the daemon.  Currently only used in testing. */
@@ -463,24 +427,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public JobManager getJobManager() {
     return (JobManager) getManager(JOB_MANAGER);
-  }
-
-  /**
-   * return the ClockssParams instance.
-   * @return ClockssParams instance.
-   * @throws IllegalArgumentException if the manager is not available.
-   */
-  public ClockssParams getClockssParams() {
-    return (ClockssParams) getManager(CLOCKSS_PARAMS);
-  }
-
-  /**
-   * return the EntitlementRegistryClient instance.
-   * @return EntitlementRegistryClient instance.
-   * @throws IllegalArgumentException if the manager is not available.
-   */
-  public EntitlementRegistryClient getEntitlementRegistryClient() {
-    return (EntitlementRegistryClient) getManager(SAFENET_MANAGER);
   }
 
   // LockssAuManager accessors
@@ -825,9 +771,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
       Deadline.setReasonableDeadlineRange(maxInPast, maxInFuture);
     }
     testingMode = config.get(PARAM_TESTING_MODE);
-    String proj = ConfigManager.getPlatformProject();
-    isClockss = "clockss".equalsIgnoreCase(proj);
-    isSafenet = "safenet".equalsIgnoreCase(proj);
 
     super.setConfig(config, prevConfig, changedKeys);
   }

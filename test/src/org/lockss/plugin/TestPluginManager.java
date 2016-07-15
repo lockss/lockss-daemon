@@ -1251,7 +1251,6 @@ public class TestPluginManager extends LockssTestCase {
     doConfig();
     ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_PROJECT,
 				  "clockss");
-    assertTrue(theDaemon.isClockss());
 
     // get the two archival units
     MockArchivalUnit au1 = (MockArchivalUnit)mgr.getAuFromId(mauauid1);

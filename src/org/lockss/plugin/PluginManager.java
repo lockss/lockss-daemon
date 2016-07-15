@@ -41,7 +41,6 @@ import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.definable.DefinablePlugin;
-import org.lockss.state.AuState;
 import org.lockss.util.*;
 
 /**
@@ -2481,15 +2480,8 @@ public class PluginManager
     if (contentReq.wantsContent() && !hasContent) {
       res += 8;
     }
-    if (isUnsubscribed(au)) res += 2;
     if (isDamaged(cu)) res += 1;
     return res;
-  }
-
-  private boolean isUnsubscribed(ArchivalUnit au) {
-    return (getDaemon().isDetectClockssSubscription() &&
-	    (AuUtil.getAuState(au).getClockssSubscriptionStatus() !=
-	     AuState.CLOCKSS_SUB_YES));
   }
 
   // XXX

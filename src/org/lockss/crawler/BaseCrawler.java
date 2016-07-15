@@ -41,7 +41,6 @@ import org.lockss.plugin.UrlFetcher.FetchResult;
 import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
-import org.lockss.clockss.*;
 
 /**
  * The base crawler extended by repair crawler and follow link crawler contains
@@ -306,11 +305,7 @@ public abstract class BaseCrawler implements Crawler {
   }
 
   List<PermissionChecker> getDaemonPermissionCheckers() {
-    if (getDaemon().isClockss()) {
-      return new ClockssPermission().getCheckers();
-    } else {
       return new LockssPermission().getCheckers();
-    }
   }
 
   public ArchivalUnit getAu() {
@@ -602,9 +597,6 @@ public abstract class BaseCrawler implements Crawler {
    * connection pool set. */
   public UrlFetcher makeUrlFetcher(String url) {
     UrlFetcher uf = au.makeUrlFetcher(getCrawlerFacade(), url);
-    if (getDaemon().isClockss()) {
-      uf = new ClockssUrlFetcher(uf);
-    }
     uf.setConnectionPool(connectionPool);
     if (previousContentType != null) {
       uf.setPreviousContentType(previousContentType);

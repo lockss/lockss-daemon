@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,9 +30,7 @@ package org.lockss.daemon;
 
 import java.io.*;
 import java.util.*;
-
 import org.lockss.state.*;
-import org.lockss.clockss.*;
 import org.lockss.daemon.CreativeCommonsPermissionChecker;
 import org.lockss.daemon.CreativeCommonsRdfPermissionChecker;
 import org.lockss.daemon.LockssPermission;
@@ -108,10 +102,6 @@ public class TestLockssPermission extends LockssPermissionCheckerTestCase {
     assertEquals(AuState.AccessType.Subscription, aus.getAccessType());
     assertTrue(hasPermission(padding + perm + padding));
     assertEquals(AuState.AccessType.Subscription, aus.getAccessType());
-  }
-
-  public void testNoMatchClockssPermission() throws IOException {
-    assertFalse(hasPermission(ClockssPermission.CLOCKSS_PERMISSION_STRING));
   }
 
   /**

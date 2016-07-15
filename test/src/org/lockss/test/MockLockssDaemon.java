@@ -49,8 +49,6 @@ import org.lockss.scheduler.SchedService;
 import org.lockss.servlet.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
-import org.lockss.clockss.*;
-import org.lockss.safenet.*;
 
 public class MockLockssDaemon extends LockssDaemon {
   private static Logger log = Logger.getLogger("MockLockssDaemon");
@@ -74,10 +72,8 @@ public class MockLockssDaemon extends LockssDaemon {
   TrueZipManager tzipManager = null;
   StatusService statusService = null;
   RemoteApi remoteApi = null;
-  ClockssParams clockssParams = null;
   DbManager dbManager = null;
   Cron cron = null;
-  EntitlementRegistryClient entitlementRegistryClient = null;
   private boolean suppressStartAuManagers = true;
 
   /** Unit tests that need a MockLockssDaemon should use {@link
@@ -420,28 +416,6 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * return the ClockssParams instance
-   * @return the ClockssParams
-   */
-  public ClockssParams getClockssParams() {
-    if (clockssParams == null) {
-      clockssParams = (ClockssParams)newManager(LockssDaemon.CLOCKSS_PARAMS);
-      managerMap.put(LockssDaemon.CLOCKSS_PARAMS, clockssParams);
-    }
-    return clockssParams;
-  }
-
-  private boolean forceIsClockss = false;
-
-  public void setClockss(boolean val) {
-    forceIsClockss = val;
-  }
-
-  public boolean isClockss() {
-    return forceIsClockss || super.isClockss();
-  }
-
-  /**
    * Set the CrawlManager
    * @param crawlMan the new manager
    */
@@ -610,15 +584,6 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setCron(Cron cron) {
     this.cron = cron;
     managerMap.put(LockssDaemon.CRON, cron);
-  }
-
-  /**
-   * Set the EntitlementRegistryClient
-   * @param pluginMan the new manager
-   */
-  public void setEntitlementRegistryClient(EntitlementRegistryClient entitlementRegistryClient) {
-    this.entitlementRegistryClient = entitlementRegistryClient;
-    managerMap.put(LockssDaemon.SAFENET_MANAGER, entitlementRegistryClient);
   }
 
   // AU managers
