@@ -8,12 +8,16 @@
     <string>org.lockss.plugin.copernicus.CopernicusPublicationsPlugin</string>
   </entry>
   <entry>
+    <string>required_daemon_version</string>
+    <string>1.67.3</string> <!-- au_repair_from_peer_if_missing_url_pattern -->
+  </entry>
+  <entry>
     <string>plugin_name</string>
     <string>Copernicus Publications Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +28,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>9</string>
+        <string>10</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -188,6 +192,22 @@
    </entry>
   </map>
   </entry>
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <list>
+      <!-- -->
+      <string>"^%s.*[.](gif|jpe?g|png|tif?f|css|js)$", base_url</string>
+      <string>"^%s.*[.](gif|jpe?g|png|tif?f|css|js)$", home_url</string>
+      <!-- -->
+      <string>"^%s.*[.](bib|ris)$", home_url</string>     
+    </list>
+  </entry>
+  <entry>
+    <!-- these will not count towards poll results but will replicate from peer if above 1.69.5 -->
+    <string>au_url_poll_result_weight</string>
+      <string>"^%s.*[.](gif|jpe?g|png|tif?f|css|js)$", base_url</string>
+      <string>"^%s.*[.](gif|jpe?g|png|tif?f|css|js)$", home_url</string>
+  </entry> 
   <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
