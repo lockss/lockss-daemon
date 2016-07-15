@@ -108,7 +108,7 @@ public class TestCopernicusHtmlFilterFactory extends LockssTestCase {
 
   private static final String scriptsAndCommentsFiltered =
       "<div class=\"foo\" id=\"page_content_container\">" +
-      "</tr></table> " + minimumEndingFiltered;
+      " </tr> </table> " + minimumEndingFiltered;
   
   private static final String whiteSpacesV1 = 
       "<a href=\"/1/1/2003/adgeo-1-1-2003.pdf\" >" +
@@ -284,7 +284,7 @@ private static final String publishedDateIdBefore =
 
 private static final String publishedDateIdAfter = 
 "<div class=\"CMSCONTAINER j-content edt-flag\" id=\"page_content_container\">" +
-"<p>HelloWorld" +
+" <p>HelloWorld" +
 "</div>";
 
 private static final String extraSpaceWithSpanBefore = 
@@ -293,8 +293,17 @@ private static final String extraSpaceWithSpanBefore =
 "</div>";
 private static final String extraSpaceWithSpanAfter = 
 "<div class=\"CMSCONTAINER j-content edt-flag\" id=\"page_content_container\">" +
-"<span> <p>Hello World</p></span>"+
-"</div>";
+" <span> <p>Hello World</p> </span>"+
+" </div>";
+private static final String noSpaceGenericBefore=
+"<div class=\"CMSCONTAINER j-content edt-flag\" id=\"page_content_container\">" +
+"<div>  <div><span class=\"pb_toc_link\"><br /><br /><b>Citation:</b> Atlas, J. S., Bay, P. S., and Cove, R. J.: A Long Title NO<sub>2</sub> Yes It Is, Abbrev. More. Tech., 8, 3-15, doi:10.1234/amt-8-123-2015, 2015.</span></div> </div> </div>";
+private static final String extraSpaceGenericBefore=
+"<div class=\"CMSCONTAINER j-content edt-flag\" id=\"page_content_container\">" +
+"  <div>  <div>   <span class=\"pb_toc_link\"><br /><br /><b>Citation:</b> Atlas, J. S., Bay, P. S., and Cove, R. J.: A Long Title NO<sub>2</sub> Yes It Is, Abbrev. More. Tech., 8, 3-15, doi:10.1234/amt-8-123-2015, 2015.</span>  </div>  </div>  </div>";
+private static final String extraSpaceGenericAfter=
+"<div class=\"CMSCONTAINER j-content edt-flag\" id=\"page_content_container\">" +
+" <div> <div> <span class=\"pb_toc_link\"> <br /> <br /> <b>Citation:</b> Atlas, J. S., Bay, P. S., and Cove, R. J.: A Long Title NO<sub>2</sub> Yes It Is, Abbrev. More. Tech., 8, 3-15, doi:10.1234/amt-8-123-2015, 2015.</span> </div> </div> </div>";
 
   public void testHashFiltering() throws Exception {
     InputStream inA;
@@ -341,12 +350,14 @@ private static final String extraSpaceWithSpanAfter =
     
     /* remove the extra space before end of </span> and after a <span> " */
     inA = hfact.createFilteredInputStream(mau, new StringInputStream(extraSpaceWithSpanBefore), ENC);
-    String test = StringUtil.fromInputStream(inA);
-    System.out.println("after: " + test);
-    System.out.println("before: " + extraSpaceWithSpanBefore);
+    assertEquals(extraSpaceWithSpanAfter,StringUtil.fromInputStream(inA));
+   
+    /* check of adding space(s) between "><" before whitespace filter */
+    inA = hfact.createFilteredInputStream(mau, new StringInputStream(extraSpaceGenericBefore), ENC);
+    inB = hfact.createFilteredInputStream(mau, new StringInputStream(noSpaceGenericBefore), ENC);
 
-    //assertEquals(extraSpaceWithSpanAfter,StringUtil.fromInputStream(inA));
-    
+    assertEquals(StringUtil.fromInputStream(inA),StringUtil.fromInputStream(inB));
+
   }
   
   public void testCrawlFiltering() throws Exception {

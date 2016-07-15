@@ -111,7 +111,6 @@ public class CopernicusHtmlFilterFactory implements FilterFactory {
                 tag.setAttributesEx(new Vector()); //empty attribs Vector. Even clears out tag name
                 tag.setTagName("REMOVE");
                 endTag.setTagName("REMOVE");
-              } else if ("span".equals(tagName)) {
               }
             }
           });
@@ -138,8 +137,11 @@ public class CopernicusHtmlFilterFactory implements FilterFactory {
     String[][] findAndReplace = new String[][] {
         // use of &nbsp; or " " inconsistent over time
         {"&nbsp;", " "}, 
-        // out of sync - some versions have extraneous single spaces, so remove between tags
-        {"> <", "><"},
+        // out of sync - some versions have extraneous single spaces, 
+        // so ADD a space between tags then use whitespace filter
+        //{"> <", "><"},
+        {"><", "> <"},
+ 
     };
     Reader stringFilter = StringFilter.makeNestedFilter(tagFilter,
                                                           findAndReplace,
@@ -147,10 +149,14 @@ public class CopernicusHtmlFilterFactory implements FilterFactory {
     Reader wspaceFilter = new WhiteSpaceFilter(stringFilter);
     // white space filter takes multiple whitespace and leaves a single space
     // this will remove a single space left before a </span> tag
+    /*
     String[][] fAndR = new String[][] {
       {" </span>" , "</span>"},
     };
+    return new ReaderInputStream(StringFilter.makeNestedFilter(wspaceFilter, fAndR, false)); 
 
-    return new ReaderInputStream(StringFilter.makeNestedFilter(wspaceFilter, fAndR, false));    
+*/
+    return new ReaderInputStream(StringFilter.makeNestedFilter(wspaceFilter, findAndReplace, false));    
+
   }
 }
