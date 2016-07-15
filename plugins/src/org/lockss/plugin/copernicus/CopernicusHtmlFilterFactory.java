@@ -147,15 +147,7 @@ public class CopernicusHtmlFilterFactory implements FilterFactory {
                                                           findAndReplace,
                                                           false);    
     Reader wspaceFilter = new WhiteSpaceFilter(stringFilter);
-    // white space filter takes multiple whitespace and leaves a single space
-    // this will remove a single space left before a </span> tag
-    /*
-    String[][] fAndR = new String[][] {
-      {" </span>" , "</span>"},
-    };
-    return new ReaderInputStream(StringFilter.makeNestedFilter(wspaceFilter, fAndR, false)); 
 
-*/
     return new ReaderInputStream(StringFilter.makeNestedFilter(wspaceFilter, findAndReplace, false));    
 
   }
