@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -64,6 +64,8 @@ public class HighWireDrupalHtmlCrawlFilterFactory implements FilterFactory {
     // do NOT crawl breadcrumbs
     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "breadcrumb"),
     // HtmlNodeFilters.tagWithAttributeRegex("div", "class", "breadcrumb"), // uncomment if needed
+    // Do not crawl issue links (http://pediatrics.aappublications.org/content/137/2/e20154272 link to off-AU article with issue link
+    HtmlNodeFilters.tagWithAttributeRegex("a", "class", "issue-link"),
   };
   
   @Override

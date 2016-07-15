@@ -42,7 +42,7 @@ package org.lockss.plugin.highwire;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.regex.Pattern;
-import java.util.regex.Matcher; 
+import java.util.regex.Matcher;
 
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
@@ -61,7 +61,17 @@ public class HighWireDrupalHtmlLinkExtractorFactory implements LinkExtractorFact
       Pattern.compile("content(/[^/.]+|(?=.*/bmj[.]))/([^/.]+)/([^/.]*?)((?:bmj[.])?([^/.]+?|\\d+[.]\\d+))$");
   private static final String FULL_PDF = ".full.pdf";
   
-  // http://emboj.embopress.org/content/28/1/4 adds 
+  // Previously Thib deemed it acceptable that we collect pages that did not have the volume match 
+  // due to articles not appearing in any other AU and not using the same volume name.
+  // Now we find article links in the content of AAP that also do not match (in this case 137)
+  // http://pediatrics.aappublications.org/content/101/2/315         http://pediatrics.aappublications.org/content/137/2/e20154272
+  // however, we should NOT collect the TOC of said page, which causes significant over-crawl
+  // http://pediatrics.aappublications.org/content/101/2             http://pediatrics.aappublications.org/content/101/2/315
+
+  // after content is required vol, optional issue, then optional .toc
+  private static final Pattern TOC_PATTERN = Pattern.compile("/content/([^/.]+)(?:/[^/.]+)?(?:[.]toc)?$");
+  
+  // Example http://emboj.embopress.org/content/28/1/4 adds 
   // http://emboj.embopress.org/content/28/1/4.full.pdf
   // http://surgicaltechniques.jbjs.org/content/os-86/1_suppl_2/103
   
@@ -84,6 +94,17 @@ public class HighWireDrupalHtmlLinkExtractorFactory implements LinkExtractorFact
                               public void foundLink(String url) {
                                 if (au != null) {
                                   if (HttpToHttpsUtil.UrlUtil.isSameHost(srcUrl, url)) {
+                                    String volume = au.getConfiguration().get(ConfigParamDescr.VOLUME_NAME.getKey());
+                                    if ((volume != null) && !volume.isEmpty()) {
+                                      Matcher mat = TOC_PATTERN.matcher(url);
+                                      if (mat.find() && mat.group(1) != volume) {
+                                        log.warning("Not extracting TOC url that does not match AU volume: " + url);
+                                        return;
+                                      }
+                                    } else {
+                                      log.warning("No config value for volume found");
+                                    }
+                                    
                                     Matcher mat = LPAGE.matcher(url);
                                     if (mat.find()) {
                                       String purl = url + FULL_PDF;
