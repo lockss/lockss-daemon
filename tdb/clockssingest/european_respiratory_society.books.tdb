@@ -13,12 +13,11 @@
     >
     
     plugin = org.lockss.plugin.clockss.ers.ClockssEuropeanRespiratorySocietySourcePlugin 
-    param[base_url] = http://content5.lockss.org/warcfiles/eurorespsoc-released/
-    #param[base_url] = http://clockss-ingest.lockss.org/warcfiles/eurorespsoc-released/
+    param[base_url] = http://clockss-ingest.lockss.org/warcfiles/eurorespsoc-released/
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
     
-    au < testing ; exists ; 2016 ; European Respiratory Society Books Source Content 2016 ; 2016 >
+    au < exists ; exists ; 2016 ; European Respiratory Society Books Source Content 2016 ; 2016 >
         
   }
   
