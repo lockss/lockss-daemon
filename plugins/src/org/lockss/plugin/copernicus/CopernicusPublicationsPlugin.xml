@@ -196,17 +196,17 @@
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
       <!-- -->
-      <string>"^%s.*[.](gif|jpe?g|png|tif?f|css|js)$", base_url</string>
-      <string>"^%s.*[.](gif|jpe?g|png|tif?f|css|js)$", home_url</string>
-      <!-- -->
-      <string>"^%s.*[.](bib|ris)$", home_url</string>     
+      <string>"^%sinc/amt/[^/]*\.(gif|png|css|js)$", base_url</string>  <!-- short form -->
+      <string>"^%s[^/]*\.(gif|jpe?g|png|tif?f|css|js)$", home_url</string>  <!-- long form -->   
     </list>
   </entry>
   <entry>
     <!-- these will not count towards poll results but will replicate from peer if above 1.69.5 -->
     <string>au_url_poll_result_weight</string>
-      <string>"^%s.*[.](gif|jpe?g|png|tif?f|css|js)$", base_url</string>
-      <string>"^%s.*[.](gif|jpe?g|png|tif?f|css|js)$", home_url</string>
+    <list>
+      <string>"^%sinc/amt/[^/]*\.(gif|png|css|js)$", base_url, 0</string>
+      <string>"%s[^/]*\.(gif|jpe?g|png|tif?f|css|js)$", home_url, 0</string>
+    </list> 
   </entry> 
   <entry>
     <string>au_def_pause_time</string>

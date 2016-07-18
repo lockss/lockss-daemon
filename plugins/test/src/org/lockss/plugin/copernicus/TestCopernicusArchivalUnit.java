@@ -4,7 +4,7 @@
 
 /*
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,27 +32,19 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.copernicus;
 
-import java.io.File;
-import java.io.InputStream;
 import java.net.URL;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Properties;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import junit.framework.Test;
-
-import org.lockss.app.LockssDaemon;
+import org.apache.oro.text.regex.*;
 import org.lockss.config.Configuration;
-import org.lockss.crawler.CrawlRateLimiter;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.definable.*;
-import org.lockss.plugin.maffey.MaffeyHtmlCrawlFilterFactory;
-import org.lockss.plugin.maffey.TestMaffeyHtmlFilterFactory;
-import org.lockss.plugin.maffey.TestMaffeyHtmlFilterFactory.TestCrawl;
-import org.lockss.plugin.maffey.TestMaffeyHtmlFilterFactory.TestHash;
-import org.lockss.plugin.wrapper.WrapperUtil;
-import org.lockss.repository.LockssRepositoryImpl;
-import org.lockss.state.AuState;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -74,6 +66,20 @@ public class TestCopernicusArchivalUnit extends LockssTestCase {
   static final String PLUGIN_ID = "org.lockss.plugin.copernicus.CopernicusPublicationsPlugin";
   static final String PluginName = "Copernicus Publications Plugin";
   
+  // need to call quotemeta on the base/home_urls because the RegexpUtil.regexpCollection 
+  // call on the returning strings calls it (but only on the base/home_url params)
+  static final String baseRepairList[] =
+    {
+        "^"+Perl5Compiler.quotemeta(ROOT_URL)+"inc/amt/[^/]*\\.(gif|png|css|js)$",
+        "^"+Perl5Compiler.quotemeta(ROOT_HOME_URL)+"[^/]*\\.(gif|jpe?g|png|tif?f|css|js)$",
+    };
+  
+  static final String journalRepairList[] =
+    {
+        "^"+Perl5Compiler.quotemeta(ROOT_URL)+"inc/amt/[^/]*\\.(gif|png|css|js)$",
+        "^"+Perl5Compiler.quotemeta(ROOT_HOME_URL)+"[^/]*\\.(gif|jpe?g|png|tif?f|css|js)$",
+    };
+
   public void setUp() throws Exception {
     super.setUp();
     setUpDiskSpace();
@@ -188,5 +194,52 @@ public class TestCopernicusArchivalUnit extends LockssTestCase {
     assertEquals(PluginName + ", Base URL http://www.sci-dril.net/, Home URL http://www.scientific-drilling.net, Year 1989, Volume 33", au.getName());
   }
 
+  public void testRepairList() throws Exception {
+    URL base = new URL(ROOT_URL);
+    URL home = new URL(ROOT_HOME_URL);
+    ArchivalUnit ABAu = makeAu(base, home, 123, "2012");
+    theDaemon.getLockssRepository(ABAu);
+    theDaemon.getNodeManager(ABAu);
+    assertEquals(Arrays.asList(baseRepairList), RegexpUtil.regexpCollection(ABAu.makeRepairFromPeerIfMissingUrlPatterns()));
+
+    // make sure that's the regexp that will match to the expected url string
+    // this also tests the regexp (which is the same) for the weighted poll map
+    List <String> repairList = ListUtil.list(   
+      ROOT_URL+"inc/amt/xml_fulltext_icon.gif",
+      ROOT_URL+"inc/amt/xml_icon.png",
+      ROOT_URL+"inc/amt/max1140.css",
+      ROOT_URL+"inc/amt/jquery-1.9.0.min.js",
+      ROOT_HOME_URL+"AMT_figure_amt-7-4267-2014-f10_50x50.png",
+      ROOT_HOME_URL+"base_print_new.css",
+      ROOT_HOME_URL+"check-icon.png",
+      ROOT_HOME_URL+"co_auth_check.js",
+      ROOT_HOME_URL+"graphic_red_close_button.gif"
+     );
+    
+    Pattern p0 = Pattern.compile(baseRepairList[0]);
+    Pattern p1 = Pattern.compile(baseRepairList[1]);
+    Matcher m0, m1;
+    for (String urlString : repairList) {
+      m0 = p0.matcher(urlString);
+      m1 = p1.matcher(urlString);
+      assertEquals(urlString, true, m0.find() || m1.find());
+    }
+    
+    //and this one should fail - it needs to be weighted correctly and repaired from publisher if possible
+    String notString =ROOT_HOME_URL+"missing_file.html";
+    m0 = p0.matcher(notString);
+    m1 = p1.matcher(notString);
+    assertEquals(false, m0.find() && m1.find());
+
+   PatternFloatMap urlPollResults = ABAu.makeUrlPollResultWeightMap();
+   assertNotNull(urlPollResults);
+   for (String urlString : repairList) {
+     assertEquals(0.0,
+         urlPollResults.getMatch(urlString, (float) 1),
+         .0001);
+   }
+   assertEquals(1.0, urlPollResults.getMatch(notString, (float) 1), .0001);
+   
+  }
 }
 
