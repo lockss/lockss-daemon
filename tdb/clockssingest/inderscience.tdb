@@ -24,7 +24,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; African Journal of Accounting, Auditing and Finance Volume 2 ; 2 ; >
       au < crawling ; exists ; 2014 ; African Journal of Accounting, Auditing and Finance Volume 3 ; 3 ; >
       au < crawling ; exists ; 2015 ; African Journal of Accounting, Auditing and Finance Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2016 ; African Journal of Accounting, Auditing and Finance Volume 5 ; 5 ; >
+      au < testing ; exists ; 2016 ; African Journal of Accounting, Auditing and Finance Volume 5 ; 5 ; >
 
     }
 
@@ -1212,7 +1212,7 @@
       au < crawling ; exists ; 2015 ; International Journal of Business and Globalisation Volume 14 ; 14 ; >
       au < crawling ; exists ; 2015 ; International Journal of Business and Globalisation Volume 15 ; 15 ; >
       au < crawling ; exists ; 2016 ; International Journal of Business and Globalisation Volume 16 ; 16 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Business and Globalisation Volume 17 ; 17 ; >
+      au < testing ; exists ; 2016 ; International Journal of Business and Globalisation Volume 17 ; 17 ; >
 
     }
 
@@ -1744,7 +1744,7 @@
 
       param[journal_id] = ijccia
 
-      au < manifest ; exists ; 2016 ; International Journal of Computational Complexity and Intelligent Algorithms Volume 1 ; 1 ; >
+      au < testing ; exists ; 2016 ; International Journal of Computational Complexity and Intelligent Algorithms Volume 1 ; 1 ; >
 
     }
 
@@ -1876,7 +1876,7 @@
       au < crawling ; exists ; 2015 ; International Journal of Computational Science and Engineering Volume 10 ; 10 ; >
       au < crawling ; exists ; 2015 ; International Journal of Computational Science and Engineering Volume 11 ; 11 ; >
       au < crawling ; exists ; 2016 ; International Journal of Computational Science and Engineering Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Computational Science and Engineering Volume 13 ; 13 ; >
+      au < testing ; exists ; 2016 ; International Journal of Computational Science and Engineering Volume 13 ; 13 ; >
 
     }
 
@@ -1991,7 +1991,7 @@
       au < crawling ; exists ; 2015 ; International Journal of Computer Applications in Technology Volume 51 ; 51 ; >
       au < crawling ; exists ; 2015 ; International Journal of Computer Applications in Technology Volume 52 ; 52 ; >
       au < crawling ; exists ; 2016 ; International Journal of Computer Applications in Technology Volume 53 ; 53 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Computer Applications in Technology Volume 54 ; 54 ; >
+      au < testing ; exists ; 2016 ; International Journal of Computer Applications in Technology Volume 54 ; 54 ; >
 
     }
 
@@ -3047,7 +3047,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Environment and Health Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Environment and Health Volume 6 ; 6 ; >
       au < finished ; finished ; 2014-2015 ; International Journal of Environment and Health Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Environment and Health Volume 8 ; 8 ; >
+      au < testing ; exists ; 2016 ; International Journal of Environment and Health Volume 8 ; 8 ; >
 
     }
 
@@ -3986,7 +3986,7 @@
       au < crawling ; exists ; 2015 ; International Journal of Indian Culture and Business Management Volume 10 ; 10 ; >
       au < crawling ; exists ; 2015 ; International Journal of Indian Culture and Business Management Volume 11 ; 11 ; >
       au < crawling ; exists ; 2016 ; International Journal of Indian Culture and Business Management Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Indian Culture and Business Management Volume 13 ; 13 ; >
+      au < testing ; exists ; 2016 ; International Journal of Indian Culture and Business Management Volume 13 ; 13 ; >
 
     }
 
@@ -4041,7 +4041,7 @@
 
       au < finished ; manifest ; 2009-2014 ; International Journal of Industrial Electronics and Drives Volume 1 ; 1 ; >
       au < crawling ; exists ; 2015 ; International Journal of Industrial Electronics and Drives Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Industrial Electronics and Drives Volume 3 ; 3 ; >
+      au < testing ; exists ; 2016 ; International Journal of Industrial Electronics and Drives Volume 3 ; 3 ; >
 
     }
 
@@ -5523,7 +5523,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Materials Engineering Innovation Volume 4 ; 4 ; >
       au < crawling ; exists ; 2014 ; International Journal of Materials Engineering Innovation Volume 5 ; 5 ; >
       au < crawling ; exists ; 2015 ; International Journal of Materials Engineering Innovation Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Materials Engineering Innovation Volume 7 ; 7 ; >
+      au < testing ; exists ; 2016 ; International Journal of Materials Engineering Innovation Volume 7 ; 7 ; >
 
     }
 
@@ -5887,7 +5887,7 @@
       au < crawling ; exists ; 2015 ; International Journal of Modelling, Identification and Control Volume 23 ; 23 ; >
       au < crawling ; exists ; 2015 ; International Journal of Modelling, Identification and Control Volume 24 ; 24 ; >
       au < crawling ; exists ; 2016 ; International Journal of Modelling, Identification and Control Volume 25 ; 25 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Modelling, Identification and Control Volume 26 ; 26 ; >
+      au < testing ; exists ; 2016 ; International Journal of Modelling, Identification and Control Volume 26 ; 26 ; >
 
     }
 
@@ -7266,7 +7266,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Services Technology and Management Volume 19 ; 19 ; >
       au < finished ; finished ; 2014 ; International Journal of Services Technology and Management Volume 20 ; 20 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2015 ; International Journal of Services Technology and Management Volume 21 ; 21 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Services Technology and Management Volume 22 ; 22 ; >
+      au < testing ; exists ; 2016 ; International Journal of Services Technology and Management Volume 22 ; 22 ; >
 
     }
 
@@ -7836,7 +7836,7 @@
       param[journal_id] = ijsi
 
       au < finished ; finished ; 2013-2015 ; International Journal of Swarm Intelligence Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Swarm Intelligence Volume 2 ; 2 ; >
+      au < testing ; exists ; 2016 ; International Journal of Swarm Intelligence Volume 2 ; 2 ; >
 
     }
 
@@ -8522,7 +8522,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Vehicle Noise and Vibration Volume 9 ; 9 ; >
       au < finished ; finished ; 2014 ; International Journal of Vehicle Noise and Vibration Volume 10 ; 10 ; >
       au < crawling ; exists ; 2015 ; International Journal of Vehicle Noise and Vibration Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2016 ; International Journal of Vehicle Noise and Vibration Volume 12 ; 12 ; >
+      au < testing ; exists ; 2016 ; International Journal of Vehicle Noise and Vibration Volume 12 ; 12 ; >
 
     }
 
