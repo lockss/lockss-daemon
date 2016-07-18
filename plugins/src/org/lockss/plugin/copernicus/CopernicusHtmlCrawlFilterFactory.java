@@ -54,6 +54,9 @@ public class CopernicusHtmlCrawlFilterFactory implements FilterFactory {
           //     http://www.arch-anim-breed.net/58/335/2015/aab-58-335-2015.html
           // and we already have the article rom the volume/issue specific TOC
           HtmlNodeFilters.tagWithAttribute("div", "id", "recent_paper"),
+		  // It looks like the publisher renamed the "recent_paper" center section 
+		  // to "highlight_articles", causing us to collect papers from other volumes
+          HtmlNodeFilters.tagWithAttribute("div", "id", "highlight_articles"),
         };
         
         public InputStream createFilteredInputStream(ArchivalUnit au,
