@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,12 +32,9 @@ import java.io.*;
 import java.lang.reflect.Method;
 import java.text.ParseException;
 import java.util.*;
-
 import com.thoughtworks.xstream.alias.CannotResolveClassException;
 import org.lockss.app.LockssApp;
-import org.lockss.hasher.HashResult;
 import org.lockss.util.SerializationException;
-
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.alias.*;
 import com.thoughtworks.xstream.converters.*;
@@ -142,43 +135,6 @@ public class XStreamSerializer extends ObjectSerializer {
                                                                                                     4,
                                                                                                     20);
 
-  }
-  /*
-   * end PRIVATE STATIC INNER CLASS
-   * ==============================
-   */
-
-  /*
-   * begin PRIVATE STATIC INNER CLASS
-   * ================================
-   */
-  /** HashResult converter - writes & reads "alg:hash" */
-  private static class LockssHashResultConverter implements Converter {
-
-    public boolean canConvert(Class type) {
-      return HashResult.class.equals(type);
-    }
-
-    public void marshal(Object obj,
-                        HierarchicalStreamWriter writer,
-                        MarshallingContext context) {
-      
-      HashResult hr = (HashResult)obj;
-      if (hr.getAlgorithm() == null) {
-	throw new ConversionException("Can't serialize HashResult with no algorithm");
-      }
-      writer.setValue(((HashResult)obj).toString());
-    }
-
-    public Object unmarshal(HierarchicalStreamReader reader,
-                            UnmarshallingContext context) {
-      String value = reader.getValue();
-      try {
-	return HashResult.make(value);
-      } catch (Exception e) {
-	throw new ConversionException("Cannot parse HashResult: " + value);
-      }
-    }
   }
   /*
    * end PRIVATE STATIC INNER CLASS
@@ -800,7 +756,6 @@ public class XStreamSerializer extends ObjectSerializer {
       xs = new XStream(reflectionProvider, driver);
       xs.setMarshallingStrategy(new LockssReferenceByXPathMarshallingStrategy(lockssContext));
       xs.registerConverter(new LockssDateConverter());
-      xs.registerConverter(new LockssHashResultConverter());
       xs.registerConverter(new LockssConstructingConverter(xs.getClassMapper()));
       initialized = true;
     }

@@ -87,7 +87,6 @@ public class TestAdminServletManager extends LockssTestCase {
     SERVLET_DISPLAY_CONTENT,
     SERVLET_ADD_CONTENT,
     SERVLET_ADD_CONTENT_TAB,
-    SERVLET_HASH_CUS,
     SERVLET_TIME_GATE,
     SERVLET_TIME_MAP,
     LINK_EXPORTS,
@@ -95,7 +94,6 @@ public class TestAdminServletManager extends LockssTestCase {
   };
 
   ServletDescr debugDescrs[] = {
-    SERVLET_HASH_CUS,
     SERVLET_DEBUG_PANEL,
     LINK_LOGS,
     SERVLET_THREAD_DUMP,

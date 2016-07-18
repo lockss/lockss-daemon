@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -33,20 +29,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.util.*;
-import java.net.*;
-import java.io.*;
 import org.apache.oro.text.regex.*;
-
 import org.lockss.util.*;
-import org.lockss.util.urlconn.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.state.*;
-import org.lockss.hasher.*;
-import org.lockss.filter.*;
-import org.lockss.extractor.*;
-import org.lockss.alert.Alert;
 
 /** Logic to maintain substance state during a scan of URLs in an AU.
  * Typically used during a crawl or vote.

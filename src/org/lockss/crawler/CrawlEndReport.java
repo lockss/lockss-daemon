@@ -37,7 +37,6 @@ import org.lockss.mail.*;
 import org.lockss.config.*;
 import org.lockss.app.*;
 import org.lockss.plugin.*;
-import org.lockss.hasher.*;
 
 /**
  * Utility class to generate and mail a report 
@@ -75,10 +74,7 @@ public class CrawlEndReport {
 
   private File buildAuHashFile(String textPart)
       throws IOException, NoSuchAlgorithmException {
-    MessageDigest digest = MessageDigest.getInstance(hashAlg);
-    SimpleHasher hasher = new SimpleHasher(digest);
     File blockFile = FileUtil.createTempFile("auhash", ".tmp");
-    hasher.doV3Hash(au.getAuCachedUrlSet(), blockFile, textPart, null);
     return blockFile;
   }
 

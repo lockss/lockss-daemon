@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -33,9 +29,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 
 import java.io.*;
-import java.security.*;
 import java.util.*;
-
 import org.apache.oro.text.regex.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
@@ -44,7 +38,6 @@ import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.UrlFetcher.RedirectScheme;
-import org.lockss.plugin.base.*;
 import org.lockss.rewriter.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
@@ -463,16 +456,6 @@ public class NullPlugin {
       return CachedUrlSetNode.TYPE_CACHED_URL_SET;
     }
 
-    public org.lockss.daemon.CachedUrlSetHasher
-      getContentHasher(MessageDigest digest) {
-      return new CachedUrlSetHasher();
-    }
-
-    public org.lockss.daemon.CachedUrlSetHasher
-      getNameHasher(MessageDigest digest) {
-      return new CachedUrlSetHasher();
-    }
-
     public long estimatedHashDuration() {
       return 1000;
     }
@@ -749,47 +732,6 @@ public class NullPlugin {
 
     public boolean storeProbePermission() {
       return false;
-    }
-  }
-
-  /**
-   * Base class for test <code>CachedUrlSetHasher</code>s.  Default methods
-   * do nothing or return constants.
-   */
-  public static class CachedUrlSetHasher
-    implements org.lockss.daemon.CachedUrlSetHasher {
-
-    public void setFiltered(boolean val) {
-    }
-
-    public org.lockss.plugin.CachedUrlSet getCachedUrlSet() {
-      return null;
-    }
-
-    public long getEstimatedHashDuration() {
-      return 0;
-    }
-
-    public void storeActualHashDuration(long elapsed, Exception err) {
-    }
-
-    public String typeString() {
-      return null;
-    }
-
-    public MessageDigest[] getDigests() {
-      return null;
-    }
-
-    public boolean finished() {
-      return false;
-    }
-
-    public void abortHash() {
-    }
-
-    public int hashStep(int numBytes) {
-      return 0;
     }
   }
 }

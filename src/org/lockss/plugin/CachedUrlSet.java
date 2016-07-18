@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,7 +29,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.util.Iterator;
-import java.security.MessageDigest;
 import org.lockss.daemon.*;
 
 /**
@@ -70,22 +65,6 @@ public interface CachedUrlSet extends CachedUrlSetNode {
    *         i.e. is in the file set, <code>false</code> otherwise
    */
   public boolean containsUrl(String url);
-
-  // Methods used by the poller
-
-  public CachedUrlSetHasher getContentHasher(MessageDigest digest);
-
-  /**
-   * Return an object that can be used to hash the names of cached urls
-   * that match the list of {@link CachedUrlSetSpec}
-   * entries.
-   * @param digest a {@link MessageDigest} object to which the
-   *               names will be supplied.
-   * @return a {@link CachedUrlSetHasher} object that will
-   *         hash the names of cached urls matching this
-   *         <code>CachedUrlSet</code>.
-   */
-  public CachedUrlSetHasher getNameHasher(MessageDigest digest);
 
   /**
    * Return an {@link Iterator} of {@link CachedUrlSetNode}
@@ -145,12 +124,6 @@ public interface CachedUrlSet extends CachedUrlSetNode {
    * e.g., when updating metadata after a recrawl.
    */
   public void setExcludeFilesUnchangedAfter(long date);
-
-  /**
-   * Return an estimate of the time required to hash the content.
-   * @return an estimate of the time required to hash the content.
-   */
-  public long estimatedHashDuration();
 
   /**
    * Provide the measured duration of a hash attempt and an

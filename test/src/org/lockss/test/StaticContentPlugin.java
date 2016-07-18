@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,19 +30,11 @@ package org.lockss.test;
 
 import java.io.*;
 import java.util.*;
-import java.net.*;
-import java.security.MessageDigest;
-
-import org.lockss.app.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
-import org.lockss.state.*;
-import org.lockss.test.*;
-
-import java.math.BigInteger;
 
 /**
  * Minimal fully functional plugin capable of serving a little static content.
@@ -285,14 +273,6 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
     }
 
     public boolean isLeaf() {
-      throw new UnsupportedOperationException("Not implemented");
-    }
-
-    public CachedUrlSetHasher getContentHasher(MessageDigest digest) {
-      throw new UnsupportedOperationException("Not implemented");
-    }
-
-    public CachedUrlSetHasher getNameHasher(MessageDigest digest) {
       throw new UnsupportedOperationException("Not implemented");
     }
 

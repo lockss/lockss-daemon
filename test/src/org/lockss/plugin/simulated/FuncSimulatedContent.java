@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,17 +30,12 @@ package org.lockss.plugin.simulated;
 
 import java.util.*;
 import java.io.*;
-import java.security.*;
 import java.util.regex.*;
-
 import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
-import org.lockss.repository.*;
 import org.lockss.plugin.*;
-import org.lockss.crawler.FollowLinkCrawler;
-import org.lockss.state.HistoryRepositoryImpl;
 import junit.framework.*;
 
 /**
@@ -75,24 +66,18 @@ public class FuncSimulatedContent extends LockssTestCase {
     theDaemon.getAlertManager();
     theDaemon.getPluginManager().setLoadablePluginsReady(true);
     theDaemon.getHashService();
-    MockSystemMetrics metrics = new MyMockSystemMetrics();
+    SystemMetrics metrics = new SystemMetrics();
     metrics.initService(theDaemon);
     theDaemon.setSystemMetrics(metrics);
 
     theDaemon.setDaemonInited(true);
 
     Properties props = new Properties();
-    props.setProperty(SystemMetrics.PARAM_HASH_TEST_DURATION, "1000");
-    props.setProperty(SystemMetrics.PARAM_HASH_TEST_BYTE_STEP, "1024");
-    props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
-		      tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     pluginMgr = theDaemon.getPluginManager();
     pluginMgr.startService();
-    theDaemon.getHashService().startService();
     metrics.startService();
-    metrics.setHashSpeed(100);
 
     simPlugin = PluginTestUtil.findPlugin(SimulatedPlugin.class);
   }
@@ -101,7 +86,6 @@ public class FuncSimulatedContent extends LockssTestCase {
     theDaemon.getLockssRepository(sau1).stopService();
     theDaemon.getNodeManager(sau1).stopService();
     theDaemon.getPluginManager().stopService();
-    theDaemon.getHashService().stopService();
     theDaemon.getSystemMetrics().stopService();
     theDaemon.stopDaemon();
     super.tearDown();
@@ -144,28 +128,6 @@ public class FuncSimulatedContent extends LockssTestCase {
     crawlContent(sau1);
     checkContent(sau1);
     checkFilter(sau1);
-    hashContent(sau1);
-
-  }
-
-  public void testDualContentHash() throws Exception {
-    sau1 = setupSimAu(simAuConfig(tempDirPath));
-    createContent(sau1);
-    crawlContent(sau1);
-    CachedUrlSet set = sau1.getAuCachedUrlSet();
-    byte[] nameH = getHash(set, true);
-    byte[] contentH = getHash(set, false);
-
-    tempDirPath2 = getTempDir().getAbsolutePath() + File.separator;
-    SimulatedArchivalUnit sau2 = setupSimAu(simAuConfig(tempDirPath2));
-
-    createContent(sau2);
-    crawlContent(sau2);
-    set = sau2.getAuCachedUrlSet();
-    byte[] nameH2 = getHash(set, true);
-    byte[] contentH2 = getHash(set, false);
-    assertEquals(nameH, nameH2);
-    assertEquals(contentH, contentH2);
   }
 
   public void testBaseUrl() throws Exception {
@@ -288,22 +250,6 @@ public class FuncSimulatedContent extends LockssTestCase {
     return ByteArray.fromHexString(hex);
   }
 
-  protected void hashContent(SimulatedArchivalUnit sau) throws Exception {
-    log.debug("hashContent()");
-    measureHashSpeed(sau);
-
-    // If any changes are made to the contents or shape of the simulated
-    // content tree, these hash values will have to be changed
-    checkHashSet(sau, true, false,
-		 fromHex("6AB258B4E1FFD9F9B45316B4F54111FF5E5948D2"));
-    checkHashSet(sau, true, true,
-		 fromHex("6AB258B4E1FFD9F9B45316B4F54111FF5E5948D2"));
-    checkHashSet(sau, false, false,
-		 fromHex("409893F1A603F4C276632694DB1621B639BD5164"));
-    checkHashSet(sau, false, true,
-		 fromHex("85E6213C3771BEAC5A4602CAF7982C6C222800D5"));
-  }
-
   protected void checkDepth(SimulatedArchivalUnit sau) {
     log.debug("checkDepth()");
     String URL_ROOT = sau.getUrlRoot();
@@ -415,84 +361,6 @@ public class FuncSimulatedContent extends LockssTestCase {
     checkUrlContent(sau, DAMAGED_CACHED_URL, 2, 2, 2, false, false);
   }
 
-  private void measureHashSpeed(SimulatedArchivalUnit sau) throws Exception {
-    MessageDigest dig = null;
-    try {
-      dig = MessageDigest.getInstance("SHA-1");
-    } catch (NoSuchAlgorithmException ex) {
-      fail("No algorithm.");
-    }
-    CachedUrlSet set = sau.getAuCachedUrlSet();
-    CachedUrlSetHasher hasher = set.getContentHasher(dig);
-    SystemMetrics metrics = theDaemon.getSystemMetrics();
-    int estimate = metrics.getBytesPerMsHashEstimate(hasher, dig);
-    // should be protected against this being zero by MyMockSystemMetrics,
-    // but otherwise use the proper calculation.  This avoids test failure
-    // due to really slow machines
-    assertTrue(estimate > 0);
-    long estimatedTime = set.estimatedHashDuration();
-    long size = ((Long)PrivilegedAccessor.getValue(set,
-						   "totalNodeSize")).longValue();
-    assertTrue(size > 0);
-    System.out.println("b/ms: " + estimate);
-    System.out.println("size: " + size);
-    System.out.println("estimate: " + estimatedTime);
-    assertEquals(estimatedTime,
-                 theDaemon.getHashService().padHashEstimate(size / estimate));
-  }
-
-  private void checkHashSet(SimulatedArchivalUnit sau,
-			    boolean namesOnly, boolean filter,
-			    byte[] expected) throws Exception {
-    enableFilter(sau, filter);
-    CachedUrlSet set = sau.getAuCachedUrlSet();
-    byte[] hash = getHash(set, namesOnly);
-    assertEquals(expected,hash);
-
-    String parent = sau.getUrlRoot() + "/branch1";
-    CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(parent);
-    set = sau.makeCachedUrlSet(spec);
-    byte[] hash2 = getHash(set, namesOnly);
-    assertFalse(Arrays.equals(hash, hash2));
-  }
-
-  private byte[] getHash(CachedUrlSet set, boolean namesOnly) throws
-  IOException {
-    MessageDigest dig = null;
-    try {
-      dig = MessageDigest.getInstance("SHA-1");
-    } catch (NoSuchAlgorithmException ex) {
-      fail("No algorithm.");
-    }
-    hash(set, dig, namesOnly);
-    return dig.digest();
-  }
-
-  private void hash(CachedUrlSet set, MessageDigest dig, boolean namesOnly)
-      throws IOException {
-    CachedUrlSetHasher hasher = null;
-    if (namesOnly) {
-      hasher = set.getNameHasher(dig);
-    } else {
-      hasher = set.getContentHasher(dig);
-    }
-    int bytesHashed = 0;
-    long timeTaken = System.currentTimeMillis();
-    while (!hasher.finished()) {
-      bytesHashed += hasher.hashStep(256);
-    }
-    timeTaken = System.currentTimeMillis() - timeTaken;
-    if ((timeTaken > 0) && (bytesHashed > 500)) {
-      System.out.println("Bytes hashed: " + bytesHashed);
-      System.out.println("Time taken: " + timeTaken + "ms");
-      System.out.println("Bytes/sec: " + (bytesHashed * 1000 / timeTaken));
-    } else {
-      System.out.println("No time taken, or insufficient bytes hashed.");
-      System.out.println("Bytes hashed: " + bytesHashed);
-      System.out.println("Time taken: " + timeTaken + "ms");
-    }
-  }
-
   private String getUrlContent(CachedUrl url) throws IOException {
     InputStream content = url.getUnfilteredInputStream();
     ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -501,22 +369,6 @@ public class FuncSimulatedContent extends LockssTestCase {
     String contentStr = new String(baos.toByteArray());
     baos.close();
     return contentStr;
-  }
-
-  // this version doesn't fully override the 'measureHashSpeed()' function, but
-  // protects against it returning '0' by returning the set speed
-  private class MyMockSystemMetrics extends MockSystemMetrics {
-    public int measureHashSpeed(CachedUrlSetHasher hasher, MessageDigest digest)
-        throws IOException {
-      int speed = super.measureHashSpeed(hasher, digest);
-      if (speed==0) {
-        speed = getHashSpeed();
-        if (speed<=0) {
-          throw new RuntimeException("No hash speed set.");
-        }
-      }
-      return speed;
-    }
   }
 
   public static void main(String[] argv) {

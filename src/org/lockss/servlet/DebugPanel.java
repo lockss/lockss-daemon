@@ -557,10 +557,6 @@ public class DebugPanel extends LockssServlet {
     setTabOrder(crawlplug);
     frm.add(crawlplug);
     frm.add("</center>");
-    ServletDescr d1 = AdminServletManager.SERVLET_HASH_CUS;
-    if (isServletRunnable(d1)) {
-      frm.add("<br><center>"+srvLink(d1, d1.heading)+"</center>");
-    }
     Input findUrl = new Input(Input.Submit, KEY_ACTION, ACTION_FIND_URL);
     Input findUrlText = new Input(Input.Text, KEY_URL);
     findUrlText.setSize(50);

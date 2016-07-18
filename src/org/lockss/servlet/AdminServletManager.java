@@ -432,12 +432,6 @@ public class AdminServletManager extends BaseServletManager {
           new ServletDescr("ListObjects",
           ListObjects.class,
           "List Objects");
-  protected static final ServletDescr SERVLET_HASH_CUS =
-          new ServletDescr("HashCUS",
-          HashCUS.class,
-          "Hash CUS",
-          ServletDescr.NEED_ROLE_DEBUG
-          | ServletDescr.NEED_ROLE_CONTENT_ACCESS);
   
   protected static final ServletDescr SERVLET_LIST_HOLDINGS =
           new ServletDescr("TitleList",
@@ -613,7 +607,6 @@ public class AdminServletManager extends BaseServletManager {
     LINK_EXPORTS,
     SERVLET_THREAD_DUMP,
     SERVLET_RAISE_ALERT,
-    SERVLET_HASH_CUS,
     LINK_CONTACT,
     SERVLET_EDIT_ACCOUNT,
     SERVLET_EDIT_ACCOUNTS,
@@ -656,7 +649,6 @@ public class AdminServletManager extends BaseServletManager {
     LINK_EXPORTS,
     SERVLET_THREAD_DUMP,
     SERVLET_RAISE_ALERT,
-    SERVLET_HASH_CUS,
     LINK_CONTACT,
     SERVLET_EDIT_ACCOUNT,
     SERVLET_EDIT_ACCOUNTS,
@@ -698,7 +690,6 @@ public class AdminServletManager extends BaseServletManager {
     LINK_EXPORTS,
     SERVLET_THREAD_DUMP,
     SERVLET_RAISE_ALERT,
-    SERVLET_HASH_CUS,
     LINK_CONTACT,
     SERVLET_EDIT_ACCOUNT,
     SERVLET_EDIT_ACCOUNTS,

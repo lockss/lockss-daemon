@@ -79,7 +79,6 @@ public class OverviewStatus extends BaseLockssDaemonManager {
       org.lockss.repository.LockssRepositoryStatus.SPACE_TABLE_NAME,
       org.lockss.crawler.CrawlManagerImpl.CRAWL_STATUS_TABLE_NAME,
       org.lockss.metadata.MetadataManager.METADATA_STATUS_TABLE_NAME,
-      org.lockss.hasher.HashSvcSchedImpl.HASH_STATUS_TABLE,
     };
 
     private List getSummaryInfo(StatusService statusServ, StatusTable table) {

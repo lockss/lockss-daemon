@@ -30,14 +30,11 @@ package org.lockss.plugin.base;
 
 import java.io.*;
 import java.util.*;
-import java.security.*;
 import java.net.MalformedURLException;
 import de.schlichtherle.truezip.file.*;
 import org.lockss.plugin.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
-import org.lockss.hasher.*;
-import org.lockss.scheduler.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
 import org.lockss.state.*;
@@ -48,7 +45,6 @@ import org.lockss.truezip.*;
  * Plugins may extend this to get some common CachedUrlSet functionality.
  */
 public class BaseCachedUrlSet implements CachedUrlSet {
-  private static final int BYTES_PER_MS_DEFAULT = 100;
   static final double TIMEOUT_INCREASE = 1.5;
 
   private LockssDaemon theDaemon;
@@ -243,14 +239,6 @@ public class BaseCachedUrlSet implements CachedUrlSet {
     return new ArcMemIterator();
   }
 
-  public CachedUrlSetHasher getContentHasher(MessageDigest digest) {
-    return contentHasherFactory(this, digest);
-  }
-
-  public CachedUrlSetHasher getNameHasher(MessageDigest digest) {
-    return nameHasherFactory(this, digest);
-  }
-
   // Hack: the err param is
   public void storeActualHashDuration(long elapsed, Exception err) {
     //only store estimate if it was a full hash (not ranged or single node)
@@ -267,27 +255,7 @@ public class BaseCachedUrlSet implements CachedUrlSet {
 		 ", " + err + "), cur = " +
 		 StringUtil.timeIntervalToString(currentEstimate));
     if (err!=null) {
-      if (err instanceof HashService.Timeout
-	  || err instanceof SchedService.Timeout) {
-        // timed out - guess 50% longer next time
-        if (currentEstimate > elapsed) {
-          // But if the current estimate is longer than this one took, we
-          // must have already adjusted it after this one was scheduled.
-          // Don't adjust it again, to avoid it becoming huge due to a series
-          // of timeouts
-          return;
-        }
-        newEst = (long)(elapsed * TIMEOUT_INCREASE);
-      }
-      else if (err instanceof HashService.SetEstimate) {
-
-	currentEstimate = -1;	 // force newEst to be set to elapsed below
-	newEst = elapsed;	 // keep compiler from complaining that
-				 // newEst might not have been set
-      } else {
-        // other error - don't update estimate
         return;
-      }
     } else {
       //average with current estimate to minimize effect of extreme results
       if (currentEstimate > 0) {
@@ -302,70 +270,6 @@ public class BaseCachedUrlSet implements CachedUrlSet {
       logger.error("Unreasonably long hash estimate", new Throwable());
     }
     nodeManager.hashFinished(this, newEst);
-  }
-
-  public long estimatedHashDuration() {
-    return theDaemon.getHashService().padHashEstimate(makeHashEstimate());
-  }
-
-  private long makeHashEstimate() {
-    RepositoryNode node;
-    try {
-      node = repository.getNode(spec.getUrl());
-      if (node == null) {
-	return 0;
-      }
-    } catch (MalformedURLException e) {
-      return 0;
-    }
-    // if this is a single node spec, don't use standard estimation
-    if (spec.isSingleNode()) {
-      long contentSize = 0;
-      if (!node.hasContent()) {
-	return 0;
-      }
-      contentSize = node.getContentSize();
-      return estimateFromSize(contentSize);
-    }
-    NodeState state = nodeManager.getNodeState(this);
-    long lastDuration;
-    if (state!=null) {
-      lastDuration = state.getAverageHashDuration();
-      if (lastDuration>0) {
-	return lastDuration;
-      }
-    }
-    // determine total size
-    calculateNodeSize();
-    lastDuration = estimateFromSize(totalNodeSize);
-    // store hash estimate
-    nodeManager.hashFinished(this, lastDuration);
-    return lastDuration;
-  }
-
-  long estimateFromSize(long size) {
-    SystemMetrics metrics = theDaemon.getSystemMetrics();
-    long bytesPerMs = 0;
-    bytesPerMs = metrics.getBytesPerMsHashEstimate();
-    if (bytesPerMs > 0) {
-      logger.debug("Estimate from size: " + size + "/" + bytesPerMs + " = " +
-		   StringUtil.timeIntervalToString(size / bytesPerMs));
-      return (size / bytesPerMs);
-    } else {
-      logger.warning("Hash speed estimate was 0, using default: " +
-		     StringUtil.timeIntervalToString(size /
-						     BYTES_PER_MS_DEFAULT));
-      return size / BYTES_PER_MS_DEFAULT;
-    }
-  }
-
-  protected CachedUrlSetHasher contentHasherFactory(CachedUrlSet owner,
-                                                    MessageDigest digest) {
-    return new GenericContentHasher(owner, digest);
-  }
-  protected CachedUrlSetHasher nameHasherFactory(CachedUrlSet owner,
-                                                 MessageDigest digest) {
-    return new GenericNameHasher(owner, digest);
   }
 
   void calculateNodeSize() {

@@ -78,7 +78,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
     nodeManager.historyRepo = historyRepo;
     historyRepo.startService();
     nodeManager.startService();
-    theDaemon.getHashService().startService();
     loadNodeStates(mau, nodeManager);
   }
 
@@ -86,7 +85,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
     nodeManager.stopService();
     historyRepo.stopService();
     theDaemon.getLockssRepository(mau).stopService();
-    theDaemon.getHashService().stopService();
     PluginTestUtil.unregisterAllArchivalUnits();
     theDaemon.stopDaemon();
     TimeBase.setReal();

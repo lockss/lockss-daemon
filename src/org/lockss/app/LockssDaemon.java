@@ -34,7 +34,6 @@ import org.lockss.alert.*;
 import org.lockss.daemon.*;
 import org.lockss.db.DbManager;
 import org.lockss.account.*;
-import org.lockss.hasher.*;
 import org.lockss.job.JobManager;
 import org.lockss.scheduler.*;
 import org.lockss.metadata.MetadataManager;
@@ -101,7 +100,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String KEYSTORE_MANAGER = "KeystoreManager";
   public static final String ACTIVITY_REGULATOR = "ActivityRegulator";
   public static final String ALERT_MANAGER = "AlertManager";
-  public static final String HASH_SERVICE = "HashService";
   public static final String TIMER_SERVICE = "TimerService";
   public static final String DATAGRAM_COMM_MANAGER = "DatagramCommManager";
   public static final String STREAM_COMM_MANAGER = "StreamCommManager";
@@ -142,7 +140,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(URL_MANAGER, "org.lockss.daemon.UrlManager"),
     new ManagerDesc(TIMER_SERVICE, "org.lockss.util.TimerQueue$Manager"),
     new ManagerDesc(SCHED_SERVICE, DEFAULT_SCHED_SERVICE),
-    new ManagerDesc(HASH_SERVICE, "org.lockss.hasher.HashSvcQueueImpl"),
     new ManagerDesc(SYSTEM_METRICS, "org.lockss.daemon.SystemMetrics"),
     // keystore manager must be started before any others that need to
     // access managed keystores
@@ -276,15 +273,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public AlertManager getAlertManager() {
     return (AlertManager)getManager(ALERT_MANAGER);
-  }
-
-  /**
-   * return the hash service instance
-   * @return the HashService
-   * @throws IllegalArgumentException if the manager is not available.
-   */
-  public HashService getHashService() {
-    return (HashService) getManager(HASH_SERVICE);
   }
 
   /**

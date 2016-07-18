@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,7 +37,6 @@ import org.lockss.repository.*;
 import org.lockss.state.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
-import org.lockss.hasher.HashService;
 import org.lockss.scheduler.*;
 
 /**
@@ -54,7 +49,6 @@ import org.lockss.scheduler.*;
 public class TestBaseCachedUrlSet extends LockssTestCase {
   private LockssRepository repo;
   private NodeManager nodeMan;
-  private HashService hashService;
   private MockArchivalUnit mau;
   private MockLockssDaemon theDaemon;
   private MockPlugin plugin;
@@ -68,13 +62,9 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
 		      tempDirPath);
-    props.setProperty(SystemMetrics.PARAM_DEFAULT_HASH_SPEED,
-		      Integer.toString(HASH_SPEED));
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon = getMockLockssDaemon();
-    hashService = theDaemon.getHashService();
-    hashService.startService();
     metrics = theDaemon.getSystemMetrics();
     metrics.startService();
 
@@ -92,7 +82,6 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
   public void tearDown() throws Exception {
     repo.stopService();
     nodeMan.stopService();
-    hashService.stopService();
     theDaemon.getHistoryRepository(mau).stopService();
     theDaemon.stopDaemon();
     super.tearDown();
@@ -413,8 +402,6 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
 
     assertFalse(cus.isLeaf());
     assertFalse(cus.hasContent());
-    // Estimate won't be 0 because of padding.  Just ensure it doesn't throw
-    cus.estimatedHashDuration();
   }
 
   public void testHashIteratorVariations() throws Exception {
@@ -517,59 +504,6 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
     assertEquals(48, ((BaseCachedUrlSet)fileSet).totalNodeSize);
   }
 
-  public void testHashEstimation() throws Exception {
-    byte[] bytes = new byte[100];
-    Arrays.fill(bytes, (byte)1);
-    String testString = new String(bytes);
-    for (int ii=0; ii<10; ii++) {
-      createLeaf("http://www.example.com/testDir/leaf"+ii, testString, null);
-    }
-    CachedUrlSetSpec rSpec =
-        new RangeCachedUrlSetSpec("http://www.example.com/testDir");
-    CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
-    NodeState node = nodeMan.getNodeState(fileSet);
-    long estimate = fileSet.estimatedHashDuration();
-    assertTrue(estimate > 0);
-
-    assertEquals(hashService.padHashEstimate(node.getAverageHashDuration()),
-		 estimate);
-
-    // test return of stored duration
-    long estimate2 = fileSet.estimatedHashDuration();
-    assertEquals(estimate, estimate2);
-
-    // test averaging of durations
-    long lastActual = node.getAverageHashDuration();
-    fileSet.storeActualHashDuration(lastActual + 200, null);
-    assertEquals(hashService.padHashEstimate(lastActual + 100),
-		 fileSet.estimatedHashDuration());
-
-    // test special SetEstimate marker exception
-    lastActual = node.getAverageHashDuration();
-    fileSet.storeActualHashDuration(lastActual + 12345,
-				    new HashService.SetEstimate());
-    assertEquals(hashService.padHashEstimate(lastActual + 12345),
-		 fileSet.estimatedHashDuration());
-  }
-
-  public void testSingleNodeHashEstimation() throws Exception {
-    byte[] bytes = new byte[1000];
-    Arrays.fill(bytes, (byte)1);
-    String testString = new String(bytes);
-    // check that estimation is special for single nodes, and isn't stored
-    createLeaf("http://www.example.com/testDir", testString, null);
-    CachedUrlSetSpec sSpec =
-        new SingleNodeCachedUrlSetSpec("http://www.example.com/testDir");
-    CachedUrlSet fileSet = mau.makeCachedUrlSet(sSpec);
-    long estimate = fileSet.estimatedHashDuration();
-    // SystemMetrics set speed to avoid slow machine problems
-    assertTrue(estimate > 0);
-    long expectedEstimate = 1000 / HASH_SPEED;
-    assertEquals(estimate, hashService.padHashEstimate(expectedEstimate));
-    // check that estimation isn't stored for single node sets
-    assertEquals(-1, nodeMan.getNodeState(fileSet).getAverageHashDuration());
-  }
-
   public void testIrregularHashStorage() throws Exception {
     // check that estimation isn't changed for single node sets
     createLeaf("http://www.example.com/testDir", null, null);
@@ -599,9 +533,6 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
     assertEquals(100, nodeMan.getNodeState(fileSet).getAverageHashDuration());
     // simulate a timeout
     fileSet.storeActualHashDuration(200, new SchedService.Timeout("test"));
-    assertEquals(300, nodeMan.getNodeState(fileSet).getAverageHashDuration());
-    // and another,less than current estimate, shouldn't change it
-    fileSet.storeActualHashDuration(100, new HashService.Timeout("test"));
     assertEquals(300, nodeMan.getNodeState(fileSet).getAverageHashDuration());
   }
 

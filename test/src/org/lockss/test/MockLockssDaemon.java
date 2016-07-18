@@ -38,7 +38,6 @@ import org.lockss.crawler.CrawlManager;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.StatusService;
 import org.lockss.db.DbManager;
-import org.lockss.hasher.HashService;
 import org.lockss.mail.MailService;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.*;
@@ -60,7 +59,6 @@ public class MockLockssDaemon extends LockssDaemon {
   AccountManager accountManager = null;
   RandomManager randomManager = null;
   LockssKeyStoreManager keystoreManager = null;
-  HashService hashService = null;
   SchedService schedService = null;
   SystemMetrics systemMetrics = null;
   ServletManager servletManager = null;
@@ -111,7 +109,6 @@ public class MockLockssDaemon extends LockssDaemon {
     auManagerMaps.clear();
 
     wdogService = null;
-    hashService = null;
     schedService = null;
     crawlManager = null;
     pluginManager = null;
@@ -253,12 +250,8 @@ public class MockLockssDaemon extends LockssDaemon {
    * return the hash service instance
    * @return the HashService
    */
-  public HashService getHashService() {
-    if (hashService == null) {
-      hashService = (HashService)newManager(LockssDaemon.HASH_SERVICE);
-      managerMap.put(LockssDaemon.HASH_SERVICE, hashService);
-    }
-    return hashService;
+  public Object getHashService() {
+    return null;
   }
 
   /**
@@ -494,15 +487,6 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setKeystoreManager(LockssKeyStoreManager keystoreMan) {
     keystoreManager = keystoreMan;
     managerMap.put(LockssDaemon.KEYSTORE_MANAGER, keystoreManager);
-  }
-
-  /**
-   * Set the HashService
-   * @param hashServ the new service
-   */
-  public void setHashService(HashService hashServ) {
-    hashService = hashServ;
-    managerMap.put(LockssDaemon.HASH_SERVICE, hashService);
   }
 
   /**

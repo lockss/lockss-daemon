@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,7 +35,6 @@ import java.text.*;
 import java.util.*;
 import java.util.List;
 import java.util.regex.Pattern;
-
 import org.apache.commons.collections.*;
 import org.apache.commons.lang3.mutable.*;
 import org.apache.commons.lang3.time.FastDateFormat;
@@ -372,9 +367,6 @@ public class ServletUtil {
 			       Configuration.Differences diffs) {
     if (diffs.contains(ServeContent.PREFIX)) {
       ServeContent.setConfig(config, oldConfig, diffs);
-    }
-    if (diffs.contains(HashCUS.PREFIX)) {
-      HashCUS.setConfig(config, oldConfig, diffs);
     }
     if (diffs.contains(PREFIX)) {
       thirdPartyLogo = config.get(PARAM_THIRD_PARTY_LOGO_IMAGE);

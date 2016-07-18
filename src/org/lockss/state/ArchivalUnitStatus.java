@@ -1601,8 +1601,6 @@ public class ArchivalUnitStatus
 	row.put("Url", suv.getUrl());
 	row.put("Version", suv.getVersion());
 	row.put("Discovered", suv.getCreated());
-	row.put("Computed", suv.getComputedHash().toString());
-	row.put("Stored", suv.getStoredHash().toString());
 	rowL.add(row);
 	}
       return rowL;

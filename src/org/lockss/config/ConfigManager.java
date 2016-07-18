@@ -37,7 +37,6 @@ import org.apache.oro.text.regex.*;
 import org.lockss.app.*;
 import org.lockss.account.*;
 import org.lockss.daemon.*;
-import org.lockss.hasher.*;
 import org.lockss.mail.*;
 import org.lockss.plugin.*;
 import org.lockss.remote.*;
@@ -107,11 +106,6 @@ public class ConfigManager implements LockssManager {
   /** Config param written to local config files to indicate file version */
   static final String PARAM_CONFIG_FILE_VERSION =
     MYPREFIX + "fileVersion.<filename>";
-
-  /** Temporary param to enable new scheduler */
-  public static final String PARAM_NEW_SCHEDULER =
-    HashService.PREFIX + "use.scheduler";
-  static final boolean DEFAULT_NEW_SCHEDULER = true;
 
   /** Maximum number of AU config changes to to save up during a batch add
    * or remove operation, before writing them to au.txt  */
@@ -1288,14 +1282,6 @@ public class ConfigManager implements LockssManager {
   static final String DEFAULT_HASH_SVC = "org.lockss.hasher.HashSvcSchedImpl";
 
   private void inferMiscParams(Configuration config) {
-    // hack to make hash use new scheduler without directly setting
-    // org.lockss.manager.HashService, which would break old daemons.
-    // don't set if already has a value
-    if (config.get(PARAM_HASH_SVC) == null &&
-	config.getBoolean(PARAM_NEW_SCHEDULER, DEFAULT_NEW_SCHEDULER)) {
-      config.put(PARAM_HASH_SVC, DEFAULT_HASH_SVC);
-    }
-
     // If we were given a temp dir, create a subdir and use that.  This
     // ensures that * expansion in rundaemon won't exceed the maximum
     // command length.

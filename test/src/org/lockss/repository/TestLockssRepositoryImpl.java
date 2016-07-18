@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,10 +35,8 @@ import junit.framework.Test;
 import org.apache.commons.io.*;
 import org.lockss.test.*;
 import org.lockss.config.*;
-import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
-import org.lockss.hasher.*;
 import org.lockss.repository.AuSuspectUrlVersions.SuspectUrlVersion;
 
 /**
@@ -204,17 +198,6 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     assertTrue(repo.hasSuspectUrlVersions(mau));
     assertEquals(0, asuv.countCurrentSuspectVersions(mau));
 
-    HashResult res1 = HashResult.make(ByteArray.makeRandomBytes(8), "Al");
-    HashResult res2 = HashResult.make(ByteArray.makeRandomBytes(8), "Al");
-    asuv.markAsSuspect(url2, 2, res1, res2);
-    assertTrue(asuv.isSuspect(url2, 2));
-
-    // Ensure we have some with leading zeros
-    HashResult res3 = HashResult.make("SHA1:0044ff");
-    HashResult res4 = HashResult.make("SHA1:0000ff");
-    asuv.markAsSuspect(url3, 2, res3, res4);
-    assertTrue(asuv.isSuspect(url2, 2));
-
     File file = new File(location, LockssRepositoryImpl.SUSPECT_VERSIONS_FILE);
     assertFalse("Suspect file shouldn't exist: " + file, file.exists());
     repo.storeSuspectUrlVersions(mau, asuv);
@@ -246,10 +229,6 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     assertTrue(asuv2.isSuspect(url2, 0));
     assertFalse(asuv2.isSuspect(url2, 1));
     assertTrue(asuv2.isSuspect(url2, 2));
-
-    SuspectUrlVersion suv3 = findSuv(asuv2, url3, 2);
-    assertEquals("SHA1:0044FF", suv3.getComputedHash().toString());
-    assertEquals("SHA1:0000FF", suv3.getStoredHash().toString());
   }
 
   SuspectUrlVersion findSuv(AuSuspectUrlVersions asuv,
