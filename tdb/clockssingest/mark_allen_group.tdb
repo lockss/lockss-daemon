@@ -427,12 +427,12 @@
     comment[platform] = not Atypon
     #journal_uid = 63
 
-    au < exists ; exists ; 2011 ; International Paramedic Practice Volume 1 ; 1 ; >
-    au < exists ; exists ; 2012 ; International Paramedic Practice Volume 2 ; 2 ; >
-    au < exists ; exists ; 2013 ; International Paramedic Practice Volume 3 ; 3 ; >
-    au < exists ; exists ; 2014 ; International Paramedic Practice Volume 4 ; 4 ; >
-    au < exists ; exists ; 2015 ; International Paramedic Practice Volume 5 ; 5 ; >
-    au < exists ; exists ; 2016 ; International Paramedic Practice Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2011 ; International Paramedic Practice Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2012 ; International Paramedic Practice Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2013 ; International Paramedic Practice Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2014 ; International Paramedic Practice Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2015 ; International Paramedic Practice Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2016 ; International Paramedic Practice Volume 6 ; 6 ; >
 
   }
 
