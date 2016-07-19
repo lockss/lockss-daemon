@@ -19304,7 +19304,7 @@
     {
 
     title <
-      name = The International Journal of Entrepreneurship and Innovation ;
+      name = International Journal of Entrepreneurship and Innovation ;
       issn = 1465-7503 ;
       eissn = 2043-6882 
     >
@@ -19313,22 +19313,22 @@
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2000 ; The International Journal of Entrepreneurship and Innovation Volume 1 ; 1 >
-      au < doesNotExist ; 2001 ; The International Journal of Entrepreneurship and Innovation Volume 2 ; 2 >
-      au < exists ; 2002 ; The International Journal of Entrepreneurship and Innovation Volume 3 ; 3 >
-      au < exists ; 2003 ; The International Journal of Entrepreneurship and Innovation Volume 4 ; 4 >
-      au < exists ; 2004 ; The International Journal of Entrepreneurship and Innovation Volume 5 ; 5 >
-      au < exists ; 2005 ; The International Journal of Entrepreneurship and Innovation Volume 6 ; 6 >
-      au < exists ; 2006 ; The International Journal of Entrepreneurship and Innovation Volume 7 ; 7 >
-      au < exists ; 2007 ; The International Journal of Entrepreneurship and Innovation Volume 8 ; 8 >
-      au < exists ; 2008 ; The International Journal of Entrepreneurship and Innovation Volume 9 ; 9 >
-      au < exists ; 2009 ; The International Journal of Entrepreneurship and Innovation Volume 10 ; 10 >
-      au < exists ; 2010 ; The International Journal of Entrepreneurship and Innovation Volume 11 ; 11 >
-      au < exists ; 2011 ; The International Journal of Entrepreneurship and Innovation Volume 12 ; 12 >
-      au < exists ; 2012 ; The International Journal of Entrepreneurship and Innovation Volume 13 ; 13 >
-      au < exists ; 2013 ; The International Journal of Entrepreneurship and Innovation Volume 14 ; 14 >
-      au < exists ; 2014 ; The International Journal of Entrepreneurship and Innovation Volume 15 ; 15 >
-      au < exists ; 2015 ; The International Journal of Entrepreneurship and Innovation Volume 16 ; 16 >
+      au < exists ; 2000 ; International Journal of Entrepreneurship and Innovation Volume 1 ; 1 >
+      au < doesNotExist ; 2001 ; International Journal of Entrepreneurship and Innovation Volume 2 ; 2 >
+      au < exists ; 2002 ; International Journal of Entrepreneurship and Innovation Volume 3 ; 3 >
+      au < exists ; 2003 ; International Journal of Entrepreneurship and Innovation Volume 4 ; 4 >
+      au < exists ; 2004 ; International Journal of Entrepreneurship and Innovation Volume 5 ; 5 >
+      au < exists ; 2005 ; International Journal of Entrepreneurship and Innovation Volume 6 ; 6 >
+      au < exists ; 2006 ; International Journal of Entrepreneurship and Innovation Volume 7 ; 7 >
+      au < exists ; 2007 ; International Journal of Entrepreneurship and Innovation Volume 8 ; 8 >
+      au < exists ; 2008 ; International Journal of Entrepreneurship and Innovation Volume 9 ; 9 >
+      au < exists ; 2009 ; International Journal of Entrepreneurship and Innovation Volume 10 ; 10 >
+      au < exists ; 2010 ; International Journal of Entrepreneurship and Innovation Volume 11 ; 11 >
+      au < exists ; 2011 ; International Journal of Entrepreneurship and Innovation Volume 12 ; 12 >
+      au < exists ; 2012 ; International Journal of Entrepreneurship and Innovation Volume 13 ; 13 >
+      au < exists ; 2013 ; International Journal of Entrepreneurship and Innovation Volume 14 ; 14 >
+      au < exists ; 2014 ; International Journal of Entrepreneurship and Innovation Volume 15 ; 15 >
+      au < exists ; 2015 ; International Journal of Entrepreneurship and Innovation Volume 16 ; 16 >
       au < manifest ; 2016 ; International Journal of Entrepreneurship and Innovation Volume 17 ; 17 >
 
     }
@@ -50295,6 +50295,13 @@ comment[mpj] = now published by Brill
     param[base_url] = http://ftr.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
+    au < exists ; 2005 ; Foreign Trade Review Volume 40 ; 40 >
+    au < exists ; 2006 ; Foreign Trade Review Volume 41 ; 41 >
+    au < exists ; 2007 ; Foreign Trade Review Volume 42 ; 42 >
+    au < exists ; 2008 ; Foreign Trade Review Volume 43 ; 43 >
+    au < exists ; 2009 ; Foreign Trade Review Volume 44 ; 44 >
+    au < exists ; 2010 ; Foreign Trade Review Volume 45 ; 45 >
+    au < exists ; 2011 ; Foreign Trade Review Volume 46 ; 46 >
     au < exists ; 2012 ; Foreign Trade Review Volume 47 ; 47 >
     au < released ; 2013 ; Foreign Trade Review Volume 48 ; 48 >
     au < released ; 2014 ; Foreign Trade Review Volume 49 ; 49 >
@@ -51801,6 +51808,9 @@ comment[mpj] = now published by Brill
 
         comment[continued_by] = 2053-4354
 
+        au < HighWirePressH20Plugin ; exists ; 1997 ; International Journal of Care Pathways Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; exists ; 1998 ; International Journal of Care Pathways Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; exists ; 1999 ; International Journal of Care Pathways Volume 3 ; 3 >
         au < HighWirePressH20Plugin ; exists ; 2000 ; International Journal of Care Pathways Volume 4 ; 4 >
         au < HighWirePressH20Plugin ; exists ; 2001 ; International Journal of Care Pathways Volume 5 ; 5 >
         au < HighWirePressH20Plugin ; exists ; 2002 ; International Journal of Care Pathways Volume 6 ; 6 >

@@ -64,7 +64,8 @@ while (my $line = <>) {
   my $result = "Plugin Unknown";
 
 
-  if ($plugin eq "HighWirePressH20Plugin" || $plugin eq "HighWirePressPlugin") {
+  #if ($plugin eq "HighWirePressH20Plugin" || $plugin eq "HighWirePressPlugin") {
+  if ($plugin eq "HighWirePressH20Plugin") {
     $url = sprintf("%slockss-manifest/vol_%s_manifest.dtl",
       $param{base_url}, $param{volume_name});
     $url_d = sprintf("%slockss-manifest/vol_%s_manifest.html",
@@ -113,7 +114,8 @@ while (my $line = <>) {
     }
     sleep(4);
 
-  } elsif ($plugin eq "ClockssHighWirePressH20Plugin" || $plugin eq "ClockssHighWirePlugin") {
+  #} elsif ($plugin eq "ClockssHighWirePressH20Plugin" || $plugin eq "ClockssHighWirePlugin") {
+  } elsif ($plugin eq "ClockssHighWirePressH20Plugin") {
         $url = sprintf("%sclockss-manifest/vol_%s_manifest.dtl",
             $param{base_url}, $param{volume_name});
         $url_d = sprintf("%sclockss-manifest/vol_%s_manifest.html",
