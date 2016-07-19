@@ -19,16 +19,16 @@
 
     au < finished ; crawling ; 2011 ; 978-1-78084-100-7 ; 978-1-78084-000-0 ; 9781780840000 ; Human Papillomavirus Vaccines ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2011 ; 978-1-78084-102-1 ; 978-1-78084-004-8 ; 9781780840048 ; Novel Immunologic Adjuvants ; >
-    au < frozen ; exists ; 2011 ; 978-1-78084-108-3 ; 978-1-78084-016-1 ; 9781780840161 ; Advances in Neuroendocrine Tumor Management ; >
+    au < finished ; crawling ; 2011 ; 978-1-78084-108-3 ; 978-1-78084-016-1 ; 9781780840161 ; Advances in Neuroendocrine Tumor Management ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; 978-1-78084-111-3 ; 978-1-78084-022-2 ; 9781780840222 ; Current & Emerging Diagnostics, Therapeutics & Vaccines for Tuberculosis ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2011 ; 978-1-78084-109-0 ; 978-1-78084-018-5 ; 9781780840185 ; Primary Care Management of Community-Acquired Pneumonia ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2011 ; 978-1-78084-106-9 ; 978-1-78084-012-3 ; 9781780840123 ; Advances in the Management of Triple-Negative Breast Cancer ; >
-    au < frozen ; exists ; 2011 ; 978-1-78084-101-4 ; 978-1-78084-002-4 ; 9781780840024 ; Targeted Therapies for Renal Cell Carcinoma ; >
-    au < frozen ; exists ; 2011 ; 978-1-78084-107-6 ; 978-1-78084-014-7 ; 9781780840147 ; Advances in Antiepileptic Drug Development ; >
-    au < frozen ; exists ; 2011 ; 978-1-78084-127-4 ; 978-1-78084-054-3 ; 9781780840543 ; Management of Advanced Gastric Cancer ; >
+    au < finished ; crawling ; 2011 ; 978-1-78084-101-4 ; 978-1-78084-002-4 ; 9781780840024 ; Targeted Therapies for Renal Cell Carcinoma ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2011 ; 978-1-78084-107-6 ; 978-1-78084-014-7 ; 9781780840147 ; Advances in Antiepileptic Drug Development ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2011 ; 978-1-78084-127-4 ; 978-1-78084-054-3 ; 9781780840543 ; Management of Advanced Gastric Cancer ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; 978-1-78084-119-9 ; 978-1-78084-038-3 ; 9781780840383 ; Current & Emerging Treatments for Psoriasis ; reingest1.clockss.org:8082 >
     au < expected ; exists ; 0 ; 978-1-78084-105-2 ; 978-1-78084-010-9 ; 9781780840109 ; Targeted Therapies for Castration-Resistant Prostate Cancer ; >
-    au < frozen ; exists ; 2011 ; 978-1-78084-117-5 ; 978-1-78084-034-5 ; 9781780840345 ; Advances In Personalized Therapy for Lung Cancer ; >
+    au < finished ; crawling ; 2011 ; 978-1-78084-117-5 ; 978-1-78084-034-5 ; 9781780840345 ; Advances In Personalized Therapy for Lung Cancer ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 978-1-78084-146-5 ; 978-1-78084-092-5 ; 9781780840925 ; Plant-derived Vaccines. Technologies & Applications ; >
     au < frozen ; exists ; 2011 ; 978-1-78084-104-5 ; 978-1-78084-008-6 ; 9781780840086 ; Pharmacological Advances in Metastatic Colorectal Cancer Management ; >
     au < finished ; crawling ; 2011 ; 978-1-78084-134-2 ; 978-1-78084-068-0 ; 9781780840680 ; Advances in Personalized Cancer Management ; reingest1.clockss.org:8082 >
@@ -69,7 +69,7 @@
     au < finished ; crawling ; 2012 ; 978-1-78084-118-2 ; 978-1-78084-036-9 ; 9781780840369 ; Stroke Prevention in Atrial Fibrillation ; reingest5.clockss.org:8082 >
     au < notReady ; exists ; 2012 ; 978-1-78084-129-8 ; 978-1-78084-058-1 ; 9781780840581 ; New Oral Anticoagulants ; >
     au < finished ; crawling ; 2012 ; 978-1-78084-136-6 ; 978-1-78084-072-7 ; 9781780840727 ; Emerging Applications of Colloidal Noble Metals in Cancer Nanomedicine ; >
-    au < frozen ; exists ; 2013 ; 978-1-78084-158-8 ; 978-1-78084-156-4 ; 9781780841564 ; Contemporary Management of Overactive Bladder ; >
+    au < finished ; crawling ; 2013 ; 978-1-78084-158-8 ; 978-1-78084-156-4 ; 9781780841564 ; Contemporary Management of Overactive Bladder ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2013 ; 978-1-78084-170-0 ; 978-1-78084-168-7 ; 9781780841687 ; Osteoporosis ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2013 ; 978-1-78084-179-3 ; 978-1-78084-177-9 ; 9781780841779 ; Novel Insights into the Pathophysiology and Treatment of PCOS ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2013 ; 978-1-78084-182-3 ; 978-1-78084-180-9 ; 9781780841809 ; Critical Care in Spinal Cord Injury ; >

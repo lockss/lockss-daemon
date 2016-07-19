@@ -55,7 +55,7 @@
     au < finished ; crawling ; 2006 ; Agronomy Journal Volume 98 ; 98 ; >
     au < finished ; crawling ; 2007 ; Agronomy Journal Volume 99 ; 99 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2008 ; Agronomy Journal Volume 100 ; 100 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2009 ; Agronomy Journal Volume 101 ; 101 ; > #malformed url. 403 error
+    au < finished ; crawling ; 2009 ; Agronomy Journal Volume 101 ; 101 ; reingest1.clockss.org:8082 > #malformed url. 403 error
     au < notReady ; exists ; 2010 ; Agronomy Journal Volume 102 ; 102 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/aj/articles/102/1/www.usask.ca/agriculture/plantsci/winter_cereals/Winter_wheat/CHAPT10/cvchpt10.php
     au < notReady ; exists ; 2011 ; Agronomy Journal Volume 103 ; 103 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/aj/articles/103/6/https/attra.ncat.org/attra-pub/summaries/summary.php?pub=87
     au < notReady ; exists ; 2012 ; Agronomy Journal Volume 104 ; 104 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/aj/articles/104/2/agroclimate.org/forestry/wildfire/wildfire.php   
@@ -111,8 +111,8 @@
     au < crawling ; exists ; 2005 ; Crop Science Volume 45 ; 45 ; >
     au < finished ; crawling ; 2006 ; Crop Science Volume 46 ; 46 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2007 ; Crop Science Volume 47 ; 47 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2008 ; Crop Science Volume 48 ; 48 ; >
-    au < crawling ; exists ; 2009 ; Crop Science Volume 49 ; 49 ; >
+    au < finished ; crawling ; 2008 ; Crop Science Volume 48 ; 48 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2009 ; Crop Science Volume 49 ; 49 ; reingest2.clockss.org:8085 >
     au < notReady ; exists ; 2010 ; Crop Science Volume 50 ; 50 ; > #403 error. likely malformed url.
     au < notReady ; exists ; 2011 ; Crop Science Volume 51 ; 51 ; > #403 error. likely malformed url.
     au < notReady ; exists ; 2012 ; Crop Science Volume 52 ; 52 ; > #403 error. likely malformed url.
@@ -170,9 +170,9 @@
     au < finished ; crawling ; 2007 ; Journal of Environmental Quality Volume 36 ; 36 ; >
     au < finished ; crawling ; 2008 ; Journal of Environmental Quality Volume 37 ; 37 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2009 ; Journal of Environmental Quality Volume 38 ; 38 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2010 ; Journal of Environmental Quality Volume 39 ; 39 ; >
+    au < finished ; crawling ; 2010 ; Journal of Environmental Quality Volume 39 ; 39 ; >
     au < notReady ; exists ; 2011 ; Journal of Environmental Quality Volume 40 ; 40 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/jeq/articles/40/4/www.losc.lsu.edu/stations.php?Id=msy  
-    au < crawling ; exists ; 2012 ; Journal of Environmental Quality Volume 41 ; 41 ; >
+    au < finished ; crawling ; 2012 ; Journal of Environmental Quality Volume 41 ; 41 ; >
     au < finished ; crawling ; 2013 ; Journal of Environmental Quality Volume 42 ; 42 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; Journal of Environmental Quality Volume 43 ; 43 ; >
     au < crawling ; exists ; 2015 ; Journal of Environmental Quality Volume 44 ; 44 ; >
@@ -196,9 +196,9 @@
     au < finished ; crawling ; 2007 ; Journal of Plant Registrations Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2008 ; Journal of Plant Registrations Volume 2 ; 2 ; >
     au < finished ; crawling ; 2009 ; Journal of Plant Registrations Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2010 ; Journal of Plant Registrations Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2012 ; Journal of Plant Registrations Volume 6 ; 6 ; >
+    au < finished ; crawling ; 2010 ; Journal of Plant Registrations Volume 4 ; 4 ; >
+    au < finished ; crawling ; 2011 ; Journal of Plant Registrations Volume 5 ; 5 ; >
+    au < finished ; crawling ; 2012 ; Journal of Plant Registrations Volume 6 ; 6 ; >
     au < finished ; finished ; 2013 ; Journal of Plant Registrations Volume 7 ; 7 ; >
     au < finished ; crawling ; 2014 ; Journal of Plant Registrations Volume 8 ; 8 ; >
     au < crawling ; exists ; 2015 ; Journal of Plant Registrations Volume 9 ; 9 ; >
@@ -241,9 +241,9 @@
     au < finished ; crawling ; 2007 ; Natural Sciences Education Volume 36 ; 36 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2008 ; Natural Sciences Education Volume 37 ; 37 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2009 ; Natural Sciences Education Volume 38 ; 38 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2010 ; Natural Sciences Education Volume 39 ; 39 ; >
+    au < finished ; crawling ; 2010 ; Natural Sciences Education Volume 39 ; 39 ; reingest1.clockss.org:8082 >
     au < notReady ; exists ; 2011 ; Natural Sciences Education Volume 40 ; 40 ; > #malformed url. 403 Error: https://dl.sciencesocieties.org/publications/nse/articles/40/1/www.nap.edu/openbook.php?record_id=12602&;page=155   
-    au < crawling ; exists ; 2012 ; Natural Sciences Education Volume 41 ; 41 ; >
+    au < finished ; crawling ; 2012 ; Natural Sciences Education Volume 41 ; 41 ; >
     au < finished ; crawling ; 2013 ; Natural Sciences Education Volume 42 ; 42 ; >
     au < finished ; finished ; 2014 ; Natural Sciences Education Volume 43 ; 43 ; >
     au < crawling ; exists ; 2015 ; Natural Sciences Education Volume 44 ; 44 ; >
@@ -264,10 +264,10 @@
     param[journal_id] = tpg
 
     au < notReady ; exists ; 2008 ; The Plant Genome Volume 1 ; 1 ; > #403 error: https://dl.sciencesocieties.org/publications/tpg/supplements/1/1-2-p%20111b.txt
-    au < crawling ; exists ; 2009 ; The Plant Genome Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2010 ; The Plant Genome Volume 3 ; 3 ; >
+    au < finished ; crawling ; 2009 ; The Plant Genome Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2010 ; The Plant Genome Volume 3 ; 3 ; >
     au < notReady ; exists ; 2011 ; The Plant Genome Volume 4 ; 4 ; > #malformed url: https://dl.sciencesocieties.org/publications/tpg/articles/4/1/www.phytozome.net/soybean.php
-    au < crawling ; exists ; 2012 ; The Plant Genome Volume 5 ; 5 ; >
+    au < finished ; crawling ; 2012 ; The Plant Genome Volume 5 ; 5 ; >
     au < finished ; finished ; 2013 ; The Plant Genome Volume 6 ; 6 ; >
     au < crawling ; exists ; 2014 ; The Plant Genome Volume 7 ; 7 ; >
     au < crawling ; exists ; 2015 ; The Plant Genome Volume 8 ; 8 ; >
@@ -292,8 +292,8 @@
     au < manifest ; exists ; 2007 ; Soil Horizons Volume 48 ; 48 ; >
     au < manifest ; exists ; 2008 ; Soil Horizons Volume 49 ; 49 ; >
     au < finished ; crawling ; 2009 ; Soil Horizons Volume 50 ; 50 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2010 ; Soil Horizons Volume 51 ; 51 ; >
-    au < crawling ; exists ; 2011 ; Soil Horizons Volume 52 ; 52 ; >
+    au < finished ; crawling ; 2010 ; Soil Horizons Volume 51 ; 51 ; >
+    au < finished ; crawling ; 2011 ; Soil Horizons Volume 52 ; 52 ; >
     au < notReady ; exists ; 2012 ; Soil Horizons Volume 53 ; 53 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/sh/articles/53/5/www.phdcomics.com/comics.php
     au < finished ; crawling ; 2013 ; Soil Horizons Volume 54 ; 54 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2014 ; Soil Horizons Volume 55 ; 55 ; >
@@ -323,7 +323,7 @@
     au < manifest ; exists ; 2009 ; Soil Science Society of America Journal Volume 73 ; 73 ; >
     au < notReady ; exists ; 2010 ; Soil Science Society of America Journal Volume 74 ; 74 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/sssaj/articles/74/1/www.rothamsted.ac.uk/aen/smbweb1/methods.php?id=896
     au < notReady ; exists ; 2011 ; Soil Science Society of America Journal Volume 75 ; 75 ; > #malformed url. 403 error:   https://dl.sciencesocieties.org/publications/sssaj/articles/75/1/lter.kbs.msu.edu/about/experimental_design.php
-    au < crawling ; exists ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 ; >
+    au < finished ; crawling ; 2012 ; Soil Science Society of America Journal Volume 76 ; 76 ; >
     au < finished ; crawling ; 2013 ; Soil Science Society of America Journal Volume 77 ; 77 ; >
     au < finished ; crawling ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 ; >
     au < crawling ; exists ; 2015 ; Soil Science Society of America Journal Volume 79 ; 79 ; >
@@ -348,10 +348,10 @@
     au < crawling ; exists ; 2006 ; Vadose Zone Journal Volume 5 ; 5 ; >
     au < finished ; crawling ; 2007 ; Vadose Zone Journal Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2008 ; Vadose Zone Journal Volume 7 ; 7 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2009 ; Vadose Zone Journal Volume 8 ; 8 ; >
+    au < finished ; crawling ; 2009 ; Vadose Zone Journal Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < notReady ; exists ; 2010 ; Vadose Zone Journal Volume 9 ; 9 ; > #malformed url. 403 error: https://dl.sciencesocieties.org/publications/vzj/articles/9/2/www.alglib.net/eigen/symmetric/tdevd.php   
-    au < crawling ; exists ; 2011 ; Vadose Zone Journal Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2012 ; Vadose Zone Journal Volume 11 ; 11 ; >
+    au < finished ; crawling ; 2011 ; Vadose Zone Journal Volume 10 ; 10 ; >
+    au < finished ; crawling ; 2012 ; Vadose Zone Journal Volume 11 ; 11 ; >
     au < finished ; crawling ; 2013 ; Vadose Zone Journal Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2014 ; Vadose Zone Journal Volume 13 ; 13 ; >
     au < crawling ; exists ; 2015 ; Vadose Zone Journal Volume 14 ; 14 ; >

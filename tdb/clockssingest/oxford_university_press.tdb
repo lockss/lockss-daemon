@@ -458,8 +458,8 @@
     au < manifest ; exists ; 2007 ; American Entomologist Volume 53 ; 53 ; >
     au < manifest ; exists ; 2008 ; American Entomologist Volume 54 ; 54 ; >
     au < finished ; crawling ; 2009 ; American Entomologist Volume 55 ; 55 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2010 ; American Entomologist Volume 56 ; 56 ; >
-    au < crawling ; exists ; 2011 ; American Entomologist Volume 57 ; 57 ; >
+    au < finished ; crawling ; 2010 ; American Entomologist Volume 56 ; 56 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2011 ; American Entomologist Volume 57 ; 57 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; American Entomologist Volume 58 ; 58 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2013 ; American Entomologist Volume 59 ; 59 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2014 ; American Entomologist Volume 60 ; 60 ; >
@@ -603,7 +603,7 @@
     au < finished ; frozen ; 2011 ; The American Historical Review Volume 116 ; 116 ; >
     au < finished ; crawling ; 2012 ; The American Historical Review Volume 117 ; 117 ; >
     au < finished ; finished ; 2013 ; The American Historical Review Volume 118 ; 118 ; >
-    au < crawling ; exists ; 2014 ; The American Historical Review Volume 119 ; 119 ; >
+    au < finished ; crawling ; 2014 ; The American Historical Review Volume 119 ; 119 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; The American Historical Review Volume 120 ; 120 ; >
     au < manifest ; exists ; 2016 ; The American Historical Review Volume 121 ; 121 ; >
 
@@ -714,7 +714,7 @@
     au < manifest ; exists ; 2005 ; American Journal of Agricultural Economics Volume 87 ; 87 ; >
     au < manifest ; exists ; 2006 ; American Journal of Agricultural Economics Volume 88 ; 88 ; >
     au < manifest ; exists ; 2007 ; American Journal of Agricultural Economics Volume 89 ; 89 ; >
-    au < frozen ; exists ; 2008 ; American Journal of Agricultural Economics Volume 90 ; 90 ; >
+    au < finished ; crawling ; 2008 ; American Journal of Agricultural Economics Volume 90 ; 90 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2009 ; American Journal of Agricultural Economics Volume 91 ; 91 ; >
     au < finished ; finished ; 2010 ; American Journal of Agricultural Economics Volume 92 ; 92 ; >
     au < finished ; frozen ; 2011 ; American Journal of Agricultural Economics Volume 93 ; 93 ; >
@@ -1941,7 +1941,7 @@
     au < manifest ; exists ; 2006 ; Arbitration International Volume 22 ; 22 ; >
     au < manifest ; exists ; 2007 ; Arbitration International Volume 23 ; 23 ; >
     au < manifest ; exists ; 2008 ; Arbitration International Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2009 ; Arbitration International Volume 25 ; 25 ; >
+    au < finished ; crawling ; 2009 ; Arbitration International Volume 25 ; 25 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2010 ; Arbitration International Volume 26 ; 26 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2011 ; Arbitration International Volume 27 ; 27 ; >
     au < crawling ; exists ; 2012 ; Arbitration International Volume 28 ; 28 ; >
@@ -2025,7 +2025,7 @@
     au < manifest ; exists ; 2005 ; Archives of Clinical Neuropsychology Volume 20 ; 20 ; >
     au < manifest ; exists ; 2006 ; Archives of Clinical Neuropsychology Volume 21 ; 21 ; >
     au < manifest ; exists ; 2007 ; Archives of Clinical Neuropsychology Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2008 ; Archives of Clinical Neuropsychology Volume 23 ; 23 ; >
+    au < finished ; crawling ; 2008 ; Archives of Clinical Neuropsychology Volume 23 ; 23 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2009 ; Archives of Clinical Neuropsychology Volume 24 ; 24 ; >
     au < finished ; finished ; 2010 ; Archives of Clinical Neuropsychology Volume 25 ; 25 ; >
     au < finished ; crawling ; 2011 ; Archives of Clinical Neuropsychology Volume 26 ; 26 ; >
@@ -2063,7 +2063,7 @@
     au < finished ; crawling ; 2009 ; Arthropod Management Tests Volume 34 ; 34 ; >
     au < frozen ; exists ; 2010 ; Arthropod Management Tests Volume 35 ; 35 ; >
     au < crawling ; exists ; 2011 ; Arthropod Management Tests Volume 36 ; 36 ; >
-    au < frozen ; exists ; 2012 ; Arthropod Management Tests Volume 37 ; 37 ; >
+    au < finished ; crawling ; 2012 ; Arthropod Management Tests Volume 37 ; 37 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2013 ; Arthropod Management Tests Volume 38 ; 38 ; >
     au < crawling ; exists ; 2014 ; Arthropod Management Tests Volume 39 ; 39 ; >
     au < exists ; exists ; 2015 ; Arthropod Management Tests Volume 40 ; 40 ; >
@@ -4109,7 +4109,7 @@
     au < finished ; crawling ; 2011 ; Cerebral Cortex Volume 21 ; 21 ; >
     au < finished ; crawling ; 2012 ; Cerebral Cortex Volume 22 ; 22 ; >
     au < frozen ; exists ; 2013 ; Cerebral Cortex Volume 23 ; 23 ; >
-    au < frozen ; exists ; 2014 ; Cerebral Cortex Volume 24 ; 24 ; >
+    au < finished ; crawling ; 2014 ; Cerebral Cortex Volume 24 ; 24 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Cerebral Cortex Volume 25 ; 25 ; >
     au < manifest ; exists ; 2016 ; Cerebral Cortex Volume 26 ; 26 ; >
 
@@ -4639,7 +4639,7 @@
     au < finished ; crawling ; 2011 ; Community Development Journal Volume 46 ; 46 ; >
     au < finished ; frozen ; 2012 ; Community Development Journal Volume 47 ; 47 ; >
     au < frozen ; exists ; 2013 ; Community Development Journal Volume 48 ; 48 ; >
-    au < frozen ; exists ; 2014 ; Community Development Journal Volume 49 ; 49 ; >
+    au < finished ; crawling ; 2014 ; Community Development Journal Volume 49 ; 49 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Community Development Journal Volume 50 ; 50 ; >
     au < manifest ; exists ; 2016 ; Community Development Journal Volume 51 ; 51 ; >
 
@@ -5010,7 +5010,7 @@
     au < manifest ; exists ; 2008 ; Diplomatic History Volume 32 ; 32 ; >
     au < finished ; finished ; 2009 ; Diplomatic History Volume 33 ; 33 ; >
     au < finished ; crawling ; 2010 ; Diplomatic History Volume 34 ; 34 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2011 ; Diplomatic History Volume 35 ; 35 ; >
+    au < finished ; crawling ; 2011 ; Diplomatic History Volume 35 ; 35 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2012 ; Diplomatic History Volume 36 ; 36 ; >
     au < finished ; finished ; 2013 ; Diplomatic History Volume 37 ; 37 ; >
     au < finished ; finished ; 2014 ; Diplomatic History Volume 38 ; 38 ; >
@@ -5136,7 +5136,7 @@
     au < finished ; crawling ; 2011 ; Early Music Volume 39 ; 39 ; >
     au < finished ; finished ; 2012 ; Early Music Volume 40 ; 40 ; >
     au < finished ; crawling ; 2013 ; Early Music Volume 41 ; 41 ; >
-    au < frozen ; exists ; 2014 ; Early Music Volume 42 ; 42 ; >
+    au < finished ; crawling ; 2014 ; Early Music Volume 42 ; 42 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Early Music Volume 43 ; 43 ; >
     au < manifest ; exists ; 2016 ; Early Music Volume 44 ; 44 ; >
 
@@ -6152,7 +6152,7 @@
     au < frozen ; exists ; 2013 ; European Journal of Cardio-Thoracic Surgery Volume 43 ; 43 ; >
     au < finished ; crawling ; 2013 ; European Journal of Cardio-Thoracic Surgery Volume 44 ; 44 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 45 ; 45 ; >
-    au < crawling ; exists ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 46 ; 46 ; >
+    au < finished ; crawling ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 46 ; 46 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; European Journal of Cardio-Thoracic Surgery Volume 47 ; 47 ; >
     au < crawling ; exists ; 2015 ; European Journal of Cardio-Thoracic Surgery Volume 48 ; 48 ; >
     au < manifest ; exists ; 2016 ; European Journal of Cardio-Thoracic Surgery Volume 49 ; 49 ; >
@@ -6199,7 +6199,7 @@
     au < manifest ; exists ; 2007 ; European Journal of Echocardiography Volume 8 ; 8 ; >
     au < crawling ; exists ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 ; >
     au < frozen ; exists ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 ; >
+    au < finished ; crawling ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; European Heart Journal - Cardiovascular Imaging Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; European Heart Journal - Cardiovascular Imaging Volume 14 ; 14 ; >
@@ -6827,13 +6827,13 @@
     au < manifest ; exists ; 2008 ; FEMS Immunology & Medical Microbiology Volume 54 ; 54 ; >
     au < frozen ; exists ; 2009 ; FEMS Immunology & Medical Microbiology Volume 55 ; 55 ; >
     au < frozen ; exists ; 2009 ; FEMS Immunology & Medical Microbiology Volume 56 ; 56 ; >
-    au < crawling ; exists ; 2009 ; FEMS Immunology & Medical Microbiology Volume 57 ; 57 ; >
+    au < finished ; crawling ; 2009 ; FEMS Immunology & Medical Microbiology Volume 57 ; 57 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2010 ; FEMS Immunology & Medical Microbiology Volume 58 ; 58 ; >
     au < crawling ; exists ; 2010 ; FEMS Immunology & Medical Microbiology Volume 59 ; 59 ; >
     au < frozen ; exists ; 2010 ; FEMS Immunology & Medical Microbiology Volume 60 ; 60 ; >
     au < frozen ; exists ; 2011 ; FEMS Immunology & Medical Microbiology Volume 61 ; 61 ; >
     au < crawling ; exists ; 2011 ; FEMS Immunology & Medical Microbiology Volume 62 ; 62 ; >
-    au < frozen ; exists ; 2011 ; FEMS Immunology & Medical Microbiology Volume 63 ; 63 ; >
+    au < finished ; crawling ; 2011 ; FEMS Immunology & Medical Microbiology Volume 63 ; 63 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2012 ; FEMS Immunology & Medical Microbiology Volume 64 ; 64 ; >
     au < crawling ; exists ; 2012 ; FEMS Immunology & Medical Microbiology Volume 65 ; 65 ; >
     au < frozen ; exists ; 2012 ; FEMS Immunology & Medical Microbiology Volume 66 ; 66 ; >
@@ -6925,7 +6925,7 @@
     au < frozen ; exists ; 2010 ; FEMS Microbiology Ecology Volume 72 ; 72 ; >
     au < crawling ; exists ; 2010 ; FEMS Microbiology Ecology Volume 73 ; 73 ; >
     au < crawling ; exists ; 2010 ; FEMS Microbiology Ecology Volume 74 ; 74 ; >
-    au < crawling ; exists ; 2011 ; FEMS Microbiology Ecology Volume 75 ; 75 ; >
+    au < finished ; crawling ; 2011 ; FEMS Microbiology Ecology Volume 75 ; 75 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; FEMS Microbiology Ecology Volume 76 ; 76 ; >
     au < frozen ; exists ; 2011 ; FEMS Microbiology Ecology Volume 77 ; 77 ; >
     au < frozen ; exists ; 2011 ; FEMS Microbiology Ecology Volume 78 ; 78 ; >
@@ -7095,7 +7095,7 @@
     au < manifest ; exists ; 2008 ; FEMS Microbiology Letters Volume 289 ; 289 ; >
     au < frozen ; exists ; 2009 ; FEMS Microbiology Letters Volume 290 ; 290 ; >
     au < crawling ; exists ; 2009 ; FEMS Microbiology Letters Volume 291 ; 291 ; >
-    au < crawling ; exists ; 2009 ; FEMS Microbiology Letters Volume 292 ; 292 ; >
+    au < finished ; crawling ; 2009 ; FEMS Microbiology Letters Volume 292 ; 292 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2009 ; FEMS Microbiology Letters Volume 293 ; 293 ; >
     au < crawling ; exists ; 2009 ; FEMS Microbiology Letters Volume 294 ; 294 ; >
     au < frozen ; exists ; 2009 ; FEMS Microbiology Letters Volume 295 ; 295 ; >
@@ -7143,7 +7143,7 @@
     au < frozen ; exists ; 2012 ; FEMS Microbiology Letters Volume 337 ; 337 ; >
     au < frozen ; exists ; 2013 ; FEMS Microbiology Letters Volume 338 ; 338 ; >
     au < crawling ; exists ; 2013 ; FEMS Microbiology Letters Volume 339 ; 339 ; >
-    au < frozen ; exists ; 2013 ; FEMS Microbiology Letters Volume 340 ; 340 ; >
+    au < finished ; crawling ; 2013 ; FEMS Microbiology Letters Volume 340 ; 340 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2013 ; FEMS Microbiology Letters Volume 341 ; 341 ; >
     au < frozen ; exists ; 2013 ; FEMS Microbiology Letters Volume 342 ; 342 ; >
     au < crawling ; exists ; 2013 ; FEMS Microbiology Letters Volume 343 ; 343 ; >
@@ -10001,7 +10001,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Epidemiology Volume 40 ; 40 ; >
     au < finished ; crawling ; 2012 ; International Journal of Epidemiology Volume 41 ; 41 ; >
     au < frozen ; exists ; 2013 ; International Journal of Epidemiology Volume 42 ; 42 ; >
-    au < crawling ; exists ; 2014 ; International Journal of Epidemiology Volume 43 ; 43 ; >
+    au < finished ; crawling ; 2014 ; International Journal of Epidemiology Volume 43 ; 43 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; International Journal of Epidemiology Volume 44 ; 44 ; >
     au < manifest ; exists ; 2016 ; International Journal of Epidemiology Volume 45 ; 45 ; >
 
@@ -10587,7 +10587,7 @@
     au < manifest ; exists ; 2008 ; International Political Sociology Volume 2 ; 2 ; >
     au < finished ; crawling ; 2009 ; International Political Sociology Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; International Political Sociology Volume 4 ; 4 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2011 ; International Political Sociology Volume 5 ; 5 ; >
+    au < finished ; crawling ; 2011 ; International Political Sociology Volume 5 ; 5 ; >
     au < finished ; crawling ; 2012 ; International Political Sociology Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2013 ; International Political Sociology Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; International Political Sociology Volume 8 ; 8 ; reingest1.clockss.org:8082 >
@@ -10666,7 +10666,7 @@
     au < finished ; crawling ; 2010 ; International Studies Perspectives Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; International Studies Perspectives Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; International Studies Perspectives Volume 13 ; 13 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2013 ; International Studies Perspectives Volume 14 ; 14 ; >
+    au < finished ; crawling ; 2013 ; International Studies Perspectives Volume 14 ; 14 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; International Studies Perspectives Volume 15 ; 15 ; >
     au < crawling ; exists ; 2015 ; International Studies Perspectives Volume 16 ; 16 ; >
     au < manifest ; exists ; 2016 ; International Studies Perspectives Volume 17 ; 17 ; >
@@ -10699,7 +10699,7 @@
     au < crawling ; exists ; 2010 ; International Studies Quarterly Volume 54 ; 54 ; >
     au < finished ; crawling ; 2011 ; International Studies Quarterly Volume 55 ; 55 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; International Studies Quarterly Volume 56 ; 56 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2013 ; International Studies Quarterly Volume 57 ; 57 ; >
+    au < finished ; crawling ; 2013 ; International Studies Quarterly Volume 57 ; 57 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2014 ; International Studies Quarterly Volume 58 ; 58 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; International Studies Quarterly Volume 59 ; 59 ; >
     au < manifest ; exists ; 2016 ; International Studies Quarterly Volume 60 ; 60 ; >
@@ -10728,11 +10728,11 @@
     au < manifest ; exists ; 2006 ; International Studies Review Volume 8 ; 8 ; >
     au < manifest ; exists ; 2007 ; International Studies Review Volume 9 ; 9 ; >
     au < manifest ; exists ; 2008 ; International Studies Review Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2009 ; International Studies Review Volume 11 ; 11 ; >
+    au < finished ; crawling ; 2009 ; International Studies Review Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2010 ; International Studies Review Volume 12 ; 12 ; >
     au < finished ; crawling ; 2011 ; International Studies Review Volume 13 ; 13 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2012 ; International Studies Review Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2013 ; International Studies Review Volume 15 ; 15 ; >
+    au < finished ; crawling ; 2013 ; International Studies Review Volume 15 ; 15 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; International Studies Review Volume 16 ; 16 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; International Studies Review Volume 17 ; 17 ; >
     au < manifest ; exists ; 2016 ; International Studies Review Volume 18 ; 18 ; >
@@ -10858,7 +10858,7 @@
     au < finished ; crawling ; 2011 ; Japanese Journal of Clinical Oncology Volume 41 ; 41 ; >
     au < finished ; crawling ; 2012 ; Japanese Journal of Clinical Oncology Volume 42 ; 42 ; >
     au < finished ; crawling ; 2013 ; Japanese Journal of Clinical Oncology Volume 43 ; 43 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2014 ; Japanese Journal of Clinical Oncology Volume 44 ; 44 ; >
+    au < finished ; crawling ; 2014 ; Japanese Journal of Clinical Oncology Volume 44 ; 44 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; Japanese Journal of Clinical Oncology Volume 45 ; 45 ; >
     au < manifest ; exists ; 2016 ; Japanese Journal of Clinical Oncology Volume 46 ; 46 ; >
 
@@ -11345,7 +11345,7 @@
     au < manifest ; exists ; 2007 ; The Journal of Applied Poultry Research Volume 16 ; 16 ; >
     au < manifest ; exists ; 2008 ; The Journal of Applied Poultry Research Volume 17 ; 17 ; >
     au < finished ; crawling ; 2009 ; The Journal of Applied Poultry Research Volume 18 ; 18 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2010 ; The Journal of Applied Poultry Research Volume 19 ; 19 ; >
+    au < finished ; crawling ; 2010 ; The Journal of Applied Poultry Research Volume 19 ; 19 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; The Journal of Applied Poultry Research Volume 20 ; 20 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2012 ; The Journal of Applied Poultry Research Volume 21 ; 21 ; >
     au < finished ; finished ; 2013 ; The Journal of Applied Poultry Research Volume 22 ; 22 ; >
@@ -11855,7 +11855,7 @@
     au < manifest ; exists ; 2006 ; Journal of Competition Law & Economics Volume 2 ; 2 ; >
     au < manifest ; exists ; 2007 ; Journal of Competition Law & Economics Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Competition Law & Economics Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2009 ; Journal of Competition Law & Economics Volume 5 ; 5 ; >
+    au < finished ; crawling ; 2009 ; Journal of Competition Law & Economics Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; Journal of Competition Law & Economics Volume 6 ; 6 ; >
     au < finished ; frozen ; 2011 ; Journal of Competition Law & Economics Volume 7 ; 7 ; >
     au < finished ; crawling ; 2012 ; Journal of Competition Law & Economics Volume 8 ; 8 ; >
@@ -11920,7 +11920,7 @@
     au < finished ; crawling ; 2011-2012 ; Journal of Consumer Research Volume 38 ; 38 ; >
     au < notReady ; exists ; 2012-2013 ; Journal of Consumer Research Volume 39 ; 39 ; >
     au < crawling ; exists ; 2013-2014 ; Journal of Consumer Research Volume 40 ; 40 ; >
-    au < crawling ; exists ; 2014-2015 ; Journal of Consumer Research Volume 41 ; 41 ; >
+    au < finished ; crawling ; 2014-2015 ; Journal of Consumer Research Volume 41 ; 41 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2015-2016 ; Journal of Consumer Research Volume 42 ; 42 ; >
     au < manifest ; exists ; 2016-2017 ; Journal of Consumer Research Volume 43 ; 43 ; >
     
@@ -12204,7 +12204,7 @@
     au < manifest ; exists ; 2006 ; Journal of Economic Geography Volume 6 ; 6 ; >
     au < manifest ; exists ; 2007 ; Journal of Economic Geography Volume 7 ; 7 ; >
     au < manifest ; exists ; 2008 ; Journal of Economic Geography Volume 8 ; 8 ; >
-    au < frozen ; exists ; 2009 ; Journal of Economic Geography Volume 9 ; 9 ; >
+    au < finished ; crawling ; 2009 ; Journal of Economic Geography Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; Journal of Economic Geography Volume 10 ; 10 ; >
     au < finished ; crawling ; 2011 ; Journal of Economic Geography Volume 11 ; 11 ; >
     au < finished ; crawling ; 2012 ; Journal of Economic Geography Volume 12 ; 12 ; >
@@ -12601,7 +12601,7 @@
     au < manifest ; exists ; 2006 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 61 ; 61 ; >
     au < manifest ; exists ; 2007 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 62 ; 62 ; >
     au < manifest ; exists ; 2008 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 63 ; 63 ; >
-    au < frozen ; exists ; 2009 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 64A ; 64A ; >
+    au < finished ; crawling ; 2009 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 64A ; 64A ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2010 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 65A ; 65A ; >
     au < finished ; frozen ; 2011 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 66A ; 66A ; >
     au < finished ; finished ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67A ; 67A ; >
@@ -13301,7 +13301,7 @@
     au < finished ; finished ; 2012 ; Journal of Infectious Diseases Volume 206 ; 206 ; >
     au < frozen ; exists ; 2013 ; Journal of Infectious Diseases Volume 207 ; 207 ; >
     au < frozen ; exists ; 2013 ; Journal of Infectious Diseases Volume 208 ; 208 ; >
-    au < crawling ; exists ; 2014 ; Journal of Infectious Diseases Volume 209 ; 209 ; >
+    au < finished ; crawling ; 2014 ; Journal of Infectious Diseases Volume 209 ; 209 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2014 ; Journal of Infectious Diseases Volume 210 ; 210 ; >
     au < crawling ; exists ; 2015 ; Journal of Infectious Diseases Volume 211 ; 211 ; >
     au < crawling ; exists ; 2015 ; Journal of Infectious Diseases Volume 212 ; 212 ; >
@@ -13646,7 +13646,7 @@
     au < finished ; crawling ; 2010 ; Journal of Law, Economics, and Organization Volume 26 ; 26 ; >
     au < finished ; frozen ; 2011 ; Journal of Law, Economics, and Organization Volume 27 ; 27 ; >
     au < finished ; frozen ; 2012 ; Journal of Law, Economics, and Organization Volume 28 ; 28 ; >
-    au < frozen ; exists ; 2013 ; Journal of Law, Economics, and Organization Volume 29 ; 29 ; >
+    au < finished ; crawling ; 2013 ; Journal of Law, Economics, and Organization Volume 29 ; 29 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; Journal of Law, Economics, and Organization Volume 30 ; 30 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2015 ; Journal of Law, Economics, and Organization Volume 31 ; 31 ; >
     au < manifest ; exists ; 2016 ; Journal of Law, Economics, and Organization Volume 32 ; 32 ; >
@@ -13948,9 +13948,9 @@
     au < manifest ; exists ; 2007 ; Journal of Mammalogy Volume 88 ; 88 ; >
     au < manifest ; exists ; 2008 ; Journal of Mammalogy Volume 89 ; 89 ; >
     au < finished ; crawling ; 2009 ; Journal of Mammalogy Volume 90 ; 90 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2010 ; Journal of Mammalogy Volume 91 ; 91 ; >
+    au < finished ; crawling ; 2010 ; Journal of Mammalogy Volume 91 ; 91 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; Journal of Mammalogy Volume 92 ; 92 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2012 ; Journal of Mammalogy Volume 93 ; 93 ; >
+    au < finished ; crawling ; 2012 ; Journal of Mammalogy Volume 93 ; 93 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2013 ; Journal of Mammalogy Volume 94 ; 94 ; >
     au < crawling ; exists ; 2014 ; Journal of Mammalogy Volume 95 ; 95 ; >
     au < crawling ; exists ; 2015 ; Journal of Mammalogy Volume 96 ; 96 ; >
@@ -13981,7 +13981,7 @@
     au < manifest ; exists ; 2007 ; Journal of Medical Entomology Volume 44 ; 44 ; >
     au < manifest ; exists ; 2008 ; Journal of Medical Entomology Volume 45 ; 45 ; >
     au < crawling ; exists ; 2009 ; Journal of Medical Entomology Volume 46 ; 46 ; >
-    au < crawling ; exists ; 2010 ; Journal of Medical Entomology Volume 47 ; 47 ; >
+    au < finished ; crawling ; 2010 ; Journal of Medical Entomology Volume 47 ; 47 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2011 ; Journal of Medical Entomology Volume 48 ; 48 ; reingest1.clockss.org:8082 >
     au < ready ; exists ; 2012 ; Journal of Medical Entomology Volume 49 ; 49 ; >
     au < ready ; exists ; 2013 ; Journal of Medical Entomology Volume 50 ; 50 ; >
@@ -14466,7 +14466,7 @@
     au < finished ; frozen ; 2011 ; Journal of Pediatric Psychology Volume 36 ; 36 ; >
     au < finished ; finished ; 2012 ; Journal of Pediatric Psychology Volume 37 ; 37 ; >
     au < finished ; finished ; 2013 ; Journal of Pediatric Psychology Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2014 ; Journal of Pediatric Psychology Volume 39 ; 39 ; >
+    au < finished ; crawling ; 2014 ; Journal of Pediatric Psychology Volume 39 ; 39 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2015 ; Journal of Pediatric Psychology Volume 40 ; 40 ; >
     au < manifest ; exists ; 2016 ; Journal of Pediatric Psychology Volume 41 ; 41 ; >
 
@@ -16952,10 +16952,10 @@
     au < manifest ; exists ; 2008 ; The Monist Volume 91 ; 91 ; >
     au < finished ; crawling ; 2009 ; The Monist Volume 92 ; 92 ; >
     au < crawling ; exists ; 2010 ; The Monist Volume 93 ; 93 ; >
-    au < crawling ; exists ; 2011 ; The Monist Volume 94 ; 94 ; >
+    au < finished ; crawling ; 2011 ; The Monist Volume 94 ; 94 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2012 ; The Monist Volume 95 ; 95 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2013 ; The Monist Volume 96 ; 96 ; >
-    au < crawling ; exists ; 2014 ; The Monist Volume 97 ; 97 ; >
+    au < finished ; crawling ; 2014 ; The Monist Volume 97 ; 97 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; The Monist Volume 98 ; 98 ; >
     au < manifest ; exists ; 2016 ; The Monist Volume 99 ; 99 ; >
 
@@ -17123,7 +17123,7 @@
     au < frozen ; exists ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 424 ; 424 ; >
     au < frozen ; exists ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 425 ; 425 ; >
     au < frozen ; exists ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 426 ; 426 ; >
-    au < frozen ; exists ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 427 ; 427 ; >
+    au < finished ; crawling ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 427 ; 427 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Monthly Notices of the Royal Astronomical Society Volume 428 ; 428 ; >
     au < finished ; finished ; 2013 ; Monthly Notices of the Royal Astronomical Society Volume 429 ; 429 ; >
     au < frozen ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society Volume 430 ; 430 ; >
@@ -17232,10 +17232,10 @@
     au < frozen ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 411 ; 411 ; >
     au < frozen ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 412 ; 412 ; >
     au < finished ; finished ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 413 ; 413 ; >
-    au < frozen ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 414 ; 414 ; >
+    au < finished ; crawling ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 414 ; 414 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 415 ; 415 ; >
     au < frozen ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 416 ; 416 ; >
-    au < frozen ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 417 ; 417 ; >
+    au < finished ; crawling ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 417 ; 417 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 418 ; 418 ; >
     au < finished ; finished ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 419 ; 419 ; >
     au < finished ; finished ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 420 ; 420 ; >
@@ -17525,10 +17525,10 @@
     au < manifest ; exists ; 2006 ; Music Therapy Perspectives Volume 24 ; 24 ; >
     au < manifest ; exists ; 2007 ; Music Therapy Perspectives Volume 25 ; 25 ; >
     au < manifest ; exists ; 2008 ; Music Therapy Perspectives Volume 26 ; 26 ; >
-    au < frozen ; exists ; 2009 ; Music Therapy Perspectives Volume 27 ; 27 ; >
+    au < finished ; crawling ; 2009 ; Music Therapy Perspectives Volume 27 ; 27 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2010 ; Music Therapy Perspectives Volume 28 ; 28 ; >
     au < finished ; finished ; 2011 ; Music Therapy Perspectives Volume 29 ; 29 ; >
-    au < frozen ; exists ; 2012 ; Music Therapy Perspectives Volume 30 ; 30 ; >
+    au < finished ; crawling ; 2012 ; Music Therapy Perspectives Volume 30 ; 30 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Music Therapy Perspectives Volume 31 ; 31 ; >
     au < crawling ; exists ; 2014 ; Music Therapy Perspectives Volume 32 ; 32 ; >
     au < crawling ; exists ; 2015 ; Music Therapy Perspectives Volume 33 ; 33 ; >
@@ -17583,7 +17583,7 @@
     au < manifest ; exists ; 2007 ; Music Theory Spectrum Volume 29 ; 29 ; >
     au < manifest ; exists ; 2008 ; Music Theory Spectrum Volume 30 ; 30 ; >
     au < finished ; crawling ; 2009 ; Music Theory Spectrum Volume 31 ; 31 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; Music Theory Spectrum Volume 32 ; 32 ; >
+    au < finished ; crawling ; 2010 ; Music Theory Spectrum Volume 32 ; 32 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2011 ; Music Theory Spectrum Volume 33 ; 33 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2012 ; Music Theory Spectrum Volume 34 ; 34 ; >
     au < finished ; finished ; 2013 ; Music Theory Spectrum Volume 35 ; 35 ; >
@@ -17861,7 +17861,7 @@
     au < finished ; crawling ; 2011 ; Nephrology Dialysis Transplantation Volume 26 ; 26 ; >
     au < frozen ; exists ; 2012 ; Nephrology Dialysis Transplantation Volume 27 ; 27 ; >
     au < frozen ; exists ; 2013 ; Nephrology Dialysis Transplantation Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2014 ; Nephrology Dialysis Transplantation Volume 29 ; 29 ; >
+    au < finished ; crawling ; 2014 ; Nephrology Dialysis Transplantation Volume 29 ; 29 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Nephrology Dialysis Transplantation Volume 30 ; 30 ; >
     au < manifest ; exists ; 2016 ; Nephrology Dialysis Transplantation Volume 31 ; 31 ; >
 
@@ -19103,8 +19103,8 @@
     pluginSuffix = oup.ClockssOUPDrupalPlugin
 
     au < crawling ; exists ; 2013 ; Pathogens and Disease Volume 67 ; 67 ; >
-    au < frozen ; exists ; 2013 ; Pathogens and Disease Volume 68 ; 68 ; >
-    au < frozen ; exists ; 2013 ; Pathogens and Disease Volume 69 ; 69 ; >
+    au < finished ; crawling ; 2013 ; Pathogens and Disease Volume 68 ; 68 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2013 ; Pathogens and Disease Volume 69 ; 69 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2014 ; Pathogens and Disease Volume 70 ; 70 ; >
     au < crawling ; exists ; 2014 ; Pathogens and Disease Volume 71 ; 71 ; >
     au < exists ; exists ; 2014 ; Pathogens and Disease Volume 72 ; 72 ; >
@@ -19457,7 +19457,7 @@
     au < finished ; finished ; 2012 ; Past & Present Volume 216 ; 216 ; >
     au < finished ; finished ; 2012 ; Past & Present Volume 217 ; 217 ; >
     au < finished ; crawling ; 2013 ; Past & Present Volume 218 ; 218 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2013 ; Past & Present Volume 219 ; 219 ; >
+    au < finished ; crawling ; 2013 ; Past & Present Volume 219 ; 219 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2013 ; Past & Present Volume 220 ; 220 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Past & Present Volume 221 ; 221 ; >
     au < finished ; finished ; 2014 ; Past & Present Volume 222 ; 222 ; >
@@ -20413,7 +20413,7 @@
     au < finished ; frozen ; 2010 ; Public Opinion Quarterly Volume 74 ; 74 ; >
     au < finished ; crawling ; 2011 ; Public Opinion Quarterly Volume 75 ; 75 ; >
     au < frozen ; exists ; 2012 ; Public Opinion Quarterly Volume 76 ; 76 ; >
-    au < frozen ; exists ; 2013 ; Public Opinion Quarterly Volume 77 ; 77 ; >
+    au < finished ; crawling ; 2013 ; Public Opinion Quarterly Volume 77 ; 77 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Public Opinion Quarterly Volume 78 ; 78 ; >
     au < crawling ; exists ; 2015 ; Public Opinion Quarterly Volume 79 ; 79 ; >
     au < manifest ; exists ; 2016 ; Public Opinion Quarterly Volume 80 ; 80 ; >
@@ -21213,7 +21213,7 @@
     au < finished ; finished ; 2009 ; Refugee Survey Quarterly Volume 28 ; 28 ; >
     au < finished ; crawling ; 2010 ; Refugee Survey Quarterly Volume 29 ; 29 ; >
     au < finished ; crawling ; 2011 ; Refugee Survey Quarterly Volume 30 ; 30 ; >
-    au < frozen ; crawling ; 2012 ; Refugee Survey Quarterly Volume 31 ; 31 ; >
+    au < finished ; crawling ; 2012 ; Refugee Survey Quarterly Volume 31 ; 31 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2013 ; Refugee Survey Quarterly Volume 32 ; 32 ; >
     au < finished ; crawling ; 2014 ; Refugee Survey Quarterly Volume 33 ; 33 ; >
     au < crawling ; exists ; 2015 ; Refugee Survey Quarterly Volume 34 ; 34 ; >
@@ -21740,7 +21740,7 @@
     au < finished ; frozen ; 2011 ; The Review of Financial Studies Volume 24 ; 24 ; >
     au < frozen ; exists ; 2012 ; The Review of Financial Studies Volume 25 ; 25 ; >
     au < finished ; crawling ; 2013 ; The Review of Financial Studies Volume 26 ; 26 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2014 ; The Review of Financial Studies Volume 27 ; 27 ; >
+    au < finished ; crawling ; 2014 ; The Review of Financial Studies Volume 27 ; 27 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; The Review of Financial Studies Volume 28 ; 28 ; >
     au < manifest ; exists ; 2016 ; The Review of Financial Studies Volume 29 ; 29 ; >
 
@@ -22188,7 +22188,7 @@
     au < finished ; finished ; 2010 ; Social Forces Volume 89 ; 89 ; >
     au < finished ; crawling ; 2011 ; Social Forces Volume 90 ; 90 ; >
     au < finished ; finished ; 2012 ; Social Forces Volume 91 ; 91 ; >
-    au < frozen ; exists ; 2013 ; Social Forces Volume 92 ; 92 ; >
+    au < finished ; crawling ; 2013 ; Social Forces Volume 92 ; 92 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2014 ; Social Forces Volume 93 ; 93 ; >
     au < crawling ; exists ; 2015 ; Social Forces Volume 94 ; 94 ; >
     au < expected ; exists ; 2016 ; Social Forces Volume 95 ; 95 ; >
@@ -22295,7 +22295,7 @@
     au < zapped ; finished ; 2009 ; Social Politics Volume 16 ; 16 ; >
     au < finished ; finished ; 2010 ; Social Politics Volume 17 ; 17 ; >
     au < finished ; frozen ; 2011 ; Social Politics Volume 18 ; 18 ; >
-    au < frozen ; exists ; 2012 ; Social Politics Volume 19 ; 19 ; >
+    au < finished ; crawling ; 2012 ; Social Politics Volume 19 ; 19 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2013 ; Social Politics Volume 20 ; 20 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Social Politics Volume 21 ; 21 ; >
     au < crawling ; exists ; 2015 ; Social Politics Volume 22 ; 22 ; >
@@ -22375,7 +22375,7 @@
     au < doNotProcess ; doNotProcess ; 2010 ; Social Problems Volume 57 ; 57 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Social Problems Volume 58 ; 58 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Social Problems Volume 59 ; 59 ; >
-    au < crawling ; exists ; 2013 ; Social Problems Volume 60 ; 60 ; >
+    au < finished ; crawling ; 2013 ; Social Problems Volume 60 ; 60 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2014 ; Social Problems Volume 61 ; 61 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2015 ; Social Problems Volume 62 ; 62 ; >
     au < manifest ; exists ; 2016 ; Social Problems Volume 63 ; 63 ; >
@@ -22421,7 +22421,7 @@
     au < finished ; finished ; 2010 ; Social Science Japan Journal Volume 13 ; 13 ; >
     au < finished ; frozen ; 2011 ; Social Science Japan Journal Volume 14 ; 14 ; >
     au < frozen ; exists ; 2012 ; Social Science Japan Journal Volume 15 ; 15 ; >
-    au < frozen ; exists ; 2013 ; Social Science Japan Journal Volume 16 ; 16 ; >
+    au < finished ; crawling ; 2013 ; Social Science Japan Journal Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Social Science Japan Journal Volume 17 ; 17 ; >
     au < crawling ; exists ; 2015 ; Social Science Japan Journal Volume 18 ; 18 ; >
     au < manifest ; exists ; 2016 ; Social Science Japan Journal Volume 19 ; 19 ; >
@@ -23057,9 +23057,9 @@
     au < finished ; finished ; 2012 ; Toxicological Sciences Volume 129 ; 129 ; >
     au < finished ; frozen ; 2012 ; Toxicological Sciences Volume 130 ; 130 ; >
     au < finished ; finished ; 2013 ; Toxicological Sciences Volume 131 ; 131 ; >
-    au < frozen ; exists ; 2013 ; Toxicological Sciences Volume 132 ; 132 ; >
-    au < frozen ; exists ; 2013 ; Toxicological Sciences Volume 133 ; 133 ; >
-    au < frozen ; exists ; 2013 ; Toxicological Sciences Volume 134 ; 134 ; >
+    au < finished ; crawling ; 2013 ; Toxicological Sciences Volume 132 ; 132 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Toxicological Sciences Volume 133 ; 133 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; Toxicological Sciences Volume 134 ; 134 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Toxicological Sciences Volume 135 ; 135 ; >
     au < frozen ; exists ; 2013 ; Toxicological Sciences Volume 136 ; 136 ; >
     au < finished ; crawling ; 2014 ; Toxicological Sciences Volume 137 ; 137 ; reingest4.clockss.org:8082 >
@@ -24224,12 +24224,12 @@
     au < finished ; crawling ; 2009 ; Progress of Theoretical Physics Supplement Volume 177 ; 177 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2009 ; Progress of Theoretical Physics Supplement Volume 178 ; 178 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2009 ; Progress of Theoretical Physics Supplement Volume 179 ; 179 ; >
-    au < frozen ; exists ; 2009 ; Progress of Theoretical Physics Supplement Volume 180 ; 180 ; >
+    au < finished ; crawling ; 2009 ; Progress of Theoretical Physics Supplement Volume 180 ; 180 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2009 ; Progress of Theoretical Physics Supplement Volume 181 ; 181 ; >
-    au < frozen ; exists ; 2009 ; Progress of Theoretical Physics Supplement Volume 182 ; 182 ; >
+    au < finished ; crawling ; 2009 ; Progress of Theoretical Physics Supplement Volume 182 ; 182 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2010 ; Progress of Theoretical Physics Supplement Volume 183 ; 183 ; >
     au < finished ; crawling ; 2010 ; Progress of Theoretical Physics Supplement Volume 184 ; 184 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; Progress of Theoretical Physics Supplement Volume 185 ; 185 ; >
+    au < finished ; crawling ; 2010 ; Progress of Theoretical Physics Supplement Volume 185 ; 185 ; >
     au < frozen ; exists ; 2010 ; Progress of Theoretical Physics Supplement Volume 186 ; 186 ; >
     au < finished ; finished ; 2011 ; Progress of Theoretical Physics Supplement Volume 187 ; 187 ; >
     au < finished ; finished ; 2011 ; Progress of Theoretical Physics Supplement Volume 188 ; 188 ; >
@@ -24240,7 +24240,7 @@
     au < finished ; finished ; 2012 ; Progress of Theoretical Physics Supplement Volume 193 ; 193 ; >
     au < finished ; finished ; 2012 ; Progress of Theoretical Physics Supplement Volume 194 ; 194 ; >
     au < finished ; finished ; 2012 ; Progress of Theoretical Physics Supplement Volume 195 ; 195 ; >
-    au < frozen ; exists ; 2012 ; Progress of Theoretical Physics Supplement Volume 196 ; 196 ; >
+    au < finished ; crawling ; 2012 ; Progress of Theoretical Physics Supplement Volume 196 ; 196 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Progress of Theoretical Physics Supplement Volume 197 ; 197 ; >
 
     }
@@ -24815,8 +24815,8 @@
       au < manifest ; exists ; 2008 ; Critical Values Volume 1 ; 1 ; >
       au < finished ; crawling ; 2009 ; Critical Values Volume 2 ; 2 ; >
       au < finished ; crawling ; 2010 ; Critical Values Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2011 ; Critical Values Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2012 ; Critical Values Volume 5 ; 5 ; >
+      au < finished ; crawling ; 2011 ; Critical Values Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; Critical Values Volume 5 ; 5 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2013 ; Critical Values Volume 6 ; 6 ; >
       au < finished ; crawling ; 2014 ; Critical Values Volume 7 ; 7 ; >
       au < crawling ; exists ; 2015 ; Critical Values Volume 8 ; 8 ; >
@@ -24982,7 +24982,7 @@
       au < manifest ; exists ; 2008 ; Journal of Travel Medicine Volume 15 ; 15 ; >
       au < finished ; crawling ; 2009 ; Journal of Travel Medicine Volume 16 ; 16 ; >
       au < crawling ; exists ; 2010 ; Journal of Travel Medicine Volume 17 ; 17 ; >
-      au < crawling ; exists ; 2011 ; Journal of Travel Medicine Volume 18 ; 18 ; >
+      au < finished ; crawling ; 2011 ; Journal of Travel Medicine Volume 18 ; 18 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2012 ; Journal of Travel Medicine Volume 19 ; 19 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2013 ; Journal of Travel Medicine Volume 20 ; 20 ; >
       au < crawling ; exists ; 2014 ; Journal of Travel Medicine Volume 21 ; 21 ; >
@@ -25064,9 +25064,9 @@
       au < manifest ; exists ; 2007 ; Pain Medicine Volume 8 ; 8 ; >
       au < manifest ; exists ; 2008 ; Pain Medicine Volume 9 ; 9 ; >
       au < crawling ; exists ; 2009 ; Pain Medicine Volume 10 ; 10 ; >
-      au < crawling ; exists ; 2010 ; Pain Medicine Volume 11 ; 11 ; >
+      au < finished ; crawling ; 2010 ; Pain Medicine Volume 11 ; 11 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2011 ; Pain Medicine Volume 12 ; 12 ; >
-      au < crawling ; exists ; 2012 ; Pain Medicine Volume 13 ; 13 ; >
+      au < finished ; crawling ; 2012 ; Pain Medicine Volume 13 ; 13 ; >
       au < crawling ; exists ; 2013 ; Pain Medicine Volume 14 ; 14 ; >
       au < crawling ; exists ; 2014 ; Pain Medicine Volume 15 ; 15 ; >
       au < crawling ; exists ; 2015 ; Pain Medicine Volume 16 ; 16 ; >
@@ -25097,7 +25097,7 @@
       au < manifest ; exists ; 2008 ; Proceedings of the Aristotelian Society Volume 108 ; 108 ; >
       au < finished ; crawling ; 2009 ; Proceedings of the Aristotelian Society Volume 109 ; 109 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2010 ; Proceedings of the Aristotelian Society Volume 110 ; 110 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2011 ; Proceedings of the Aristotelian Society Volume 111 ; 111 ; >
+      au < finished ; crawling ; 2011 ; Proceedings of the Aristotelian Society Volume 111 ; 111 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2012 ; Proceedings of the Aristotelian Society Volume 112 ; 112 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2013 ; Proceedings of the Aristotelian Society Volume 113 ; 113 ; >
       au < finished ; crawling ; 2014 ; Proceedings of the Aristotelian Society Volume 114 ; 114 ; reingest1.clockss.org:8082 >
