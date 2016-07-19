@@ -95,7 +95,8 @@ public class TestHighWireDrupalHtmlLinkExtractor extends LockssTestCase {
                                    BASE_URL1 + "content/os-86/12/e03.full.pdf",
                                    BASE_URL1 + "content/os-86/12/e03",
                                    BASE_URL1 + "content/123/bmj.f4270.full.pdf",
-                                   BASE_URL1 + "content/123/bmj.f4270"),
+                                   BASE_URL1 + "content/123/bmj.f4270",
+                                   BASE_URL1 + "content/123/789"),
                      out);
     props.setProperty(ConfigParamDescr.BASE_URL.getKey(), BASE_URL1);
     props.setProperty(ConfigParamDescr.VOLUME_NAME.getKey(), "os-86");
@@ -128,7 +129,8 @@ public class TestHighWireDrupalHtmlLinkExtractor extends LockssTestCase {
                                    BASE_URL2 + "content/os-86/12/e03.full.pdf",
                                    BASE_URL2 + "content/os-86/12/e03",
                                    BASE_URL2 + "content/123/bmj.f4270.full.pdf",
-                                   BASE_URL2 + "content/123/bmj.f4270"),
+                                   BASE_URL2 + "content/123/bmj.f4270",
+                                   BASE_URL2 + "content/123/789"),
                      out);
   }
   
