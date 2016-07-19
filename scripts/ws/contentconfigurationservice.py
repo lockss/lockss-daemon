@@ -122,13 +122,15 @@ unsuccessful operations where each row is an AU and each column is a host. The
 rows are sorted by AU name (the default) and displayed as a name-AUID pair (the
 default).'''
 
-__version__ = '0.1.0'
+__version__ = '0.2.0'
 
 import getpass
 import itertools
+from multiprocessing.dummy import Pool as ThreadPool
 from optparse import OptionGroup, OptionParser
 import os.path
 import sys
+from threading import Thread
 
 import ContentConfigurationServiceImplService_client
 from wsutil import zsiauth
@@ -341,6 +343,10 @@ class _ContentConfigurationServiceOptions(object):
     group.add_option('--text-output', action='store_true', help='produce text output (default)')
     group.add_option('--verbose', action='store_true', default=False, help='make --text-output verbose (default: False)')
     parser.add_option_group(group)
+    # Other options
+    group = OptionGroup(parser, 'Other options')
+    group.add_option('--threads', type='int', help='max parallel jobs allowed (default: no limit)')
+    parser.add_option_group(group)
     return parser
 
   def __init__(self, parser, opts, args):
@@ -391,28 +397,14 @@ class _ContentConfigurationServiceOptions(object):
       self.verbose = opts.verbose
     elif opts.verbose:
       parser.error('--verbose can only be specified with --text-output')
+    # threads
+    self.threads = opts.threads or len(self.hosts)
     # errors
     self.errors = 0
     # auth
     u = opts.username or getpass.getpass('UI username: ')
     p = opts.password or getpass.getpass('UI password: ')
     self.auth = zsiauth(u, p)
-
-# Last modified 2015-08-05
-def _output_record(options, lst):
-  '''Internal method to display a single record.'''
-  print '\t'.join([str(x or '') for x in lst])
-
-# Last modified 2016-05-16
-def _output_table(options, data, rowheaders, lstcolkeys, rowsort=None):
-  '''Internal method to display tabular output. (Should be refactored.)'''
-  colkeys = [x for x in itertools.product(*lstcolkeys)]
-  for j in xrange(len(lstcolkeys)):
-    if j < len(lstcolkeys) - 1: rowpart = [''] * len(rowheaders)
-    else: rowpart = rowheaders
-    _output_record(options, rowpart + [x[j] for x in colkeys])
-  for rowkey in sorted(set([k[0] for k in data]), key=rowsort):
-    _output_record(options, list(rowkey) + [data.get((rowkey, colkey)) for colkey in colkeys])
 
 def _do_operation(options):
   '''Performs the requested operation.'''
@@ -422,8 +414,9 @@ def _do_operation(options):
   elif options.reactivate_aus: f_operation = reactivate_aus_by_id_list
   else: sys.exit('internal error') # should never happen
   data = dict()
-  for host in options.hosts:
-    ret = f_operation(host, options.auth, options.auids)
+  for host, result in ThreadPool(options.threads).imap_unordered( \
+      lambda _host: (_host, f_operation(_host, options.auth, options.auids)), \
+      options.hosts):
     okay, errors, msgs = list(), list(), list()
     for r in ret:
       if r.IsSuccess:
@@ -450,6 +443,22 @@ def _do_operation(options):
   if options.table_output:
     _output_table(options, data, options.keydisplay(None), [options.hosts])
 
+# Last modified 2015-08-05
+def _output_record(options, lst):
+  '''Internal method to display a single record.'''
+  print '\t'.join([str(x or '') for x in lst])
+
+# Last modified 2016-05-16
+def _output_table(options, data, rowheaders, lstcolkeys, rowsort=None):
+  '''Internal method to display tabular output. (Should be refactored.)'''
+  colkeys = [x for x in itertools.product(*lstcolkeys)]
+  for j in xrange(len(lstcolkeys)):
+    if j < len(lstcolkeys) - 1: rowpart = [''] * len(rowheaders)
+    else: rowpart = rowheaders
+    _output_record(options, rowpart + [x[j] for x in colkeys])
+  for rowkey in sorted(set([k[0] for k in data]), key=rowsort):
+    _output_record(options, list(rowkey) + [data.get((rowkey, colkey)) for colkey in colkeys])
+
 # Last modified 2015-08-31
 def _file_lines(fstr):
   with open(os.path.expanduser(fstr)) as f: ret = filter(lambda y: len(y) > 0, [x.partition('#')[0].strip() for x in f])
@@ -463,7 +472,12 @@ def _main():
   (opts, args) = parser.parse_args()
   options = _ContentConfigurationServiceOptions(parser, opts, args)
   # Dispatch
-  _do_operation(options)
+  t = Thread(target=_do_operation, args=(options,))
+  t.daemon = True
+  t.start()
+  while True:
+    t.join(1.5)
+    if not t.is_alive(): break
   # Errors
   if options.errors > 0: sys.exit('%d %s; exiting' % (options.errors, 'error' if options.errors == 1 else 'errors'))
 

@@ -31,7 +31,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.5.0'
+__version__ = '0.5.1'
 
 import getpass
 import itertools
@@ -388,7 +388,7 @@ class _DaemonStatusServiceOptions(object):
     group = optparse.OptionGroup(parser, 'Crawl operations')
     group.add_option('--query-crawls', action='store_true', help='perform crawl query (with optional --where clause) with --select list chosen among %s' % (', '.join(sorted(_QUERY_CRAWLS)),))
     parser.add_option_group(group)
-    # Other
+    # Other options
     group = optparse.OptionGroup(parser, 'Other options')
     group.add_option('--group-by-field', action='store_true', help='group results by field instead of host')
     group.add_option('--no-special-output', action='store_true', help='no special output format for a single target host')
@@ -457,8 +457,7 @@ class _DaemonStatusServiceOptions(object):
     self.group_by_field = opts.group_by_field
     self.no_special_output = opts.no_special_output
     # threads
-    if opts.threads is None: self.threads = len(self.hosts)
-    else: self.threads = opts.threads
+    self.threads = opts.threads or len(self.hosts)
     # auth
     u = opts.username or getpass.getpass('UI username: ')
     p = opts.password or getpass.getpass('UI password: ')

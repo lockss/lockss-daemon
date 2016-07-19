@@ -33,7 +33,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.0'
+__version__ = '0.4.1'
 
 import getpass
 from multiprocessing.dummy import Pool as ThreadPool
@@ -169,8 +169,8 @@ class _HasherServiceOptions(object):
     self.long_text_line = opts.long_text_line
     if opts.wait is None: self.wait = 30 if self.url is None else 10
     else: self.wait = opts.wait
-    if opts.threads is None: self.threads = len(self.hosts)
-    else: self.threads = opts.threads
+    # threads
+    self.threads = opts.threads or len(self.hosts)
     # auth
     u = opts.username or getpass.getpass('UI username: ')
     p = opts.password or getpass.getpass('UI password: ')
